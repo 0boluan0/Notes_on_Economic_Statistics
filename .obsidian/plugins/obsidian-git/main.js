@@ -29274,6 +29274,7 @@ var DEFAULT_SETTINGS = {
   disablePush: false,
   pullBeforePush: true,
   disablePopups: false,
+  disablePopupsForNoChanges: false,
   listChangedFilesInMessageBody: false,
   showStatusBar: true,
   updateSubmodules: false,
@@ -29754,10 +29755,14 @@ var SimpleGit = class extends GitManager {
     dispatchEvent(new CustomEvent("git-head-update"));
     return res.summary.changes;
   }
-  async commit(message) {
+  async commit({
+    message,
+    amend
+  }) {
     this.plugin.setState(4 /* commit */);
     const res = (await this.git.commit(
       await this.formatCommitMessage(message),
+      amend ? ["--amend"] : [],
       (err) => this.onError(err)
     )).summary.changes;
     dispatchEvent(new CustomEvent("git-head-update"));
@@ -31279,13 +31284,15 @@ var IsomorphicGit = class extends GitManager {
     try {
       await this.checkAuthorInfo();
       await this.stageAll({ status: status2, unstagedFiles });
-      return this.commit(message);
+      return this.commit({ message });
     } catch (error) {
       this.plugin.displayError(error);
       throw error;
     }
   }
-  async commit(message) {
+  async commit({
+    message
+  }) {
     try {
       await this.checkAuthorInfo();
       this.plugin.setState(4 /* commit */);
@@ -32305,14 +32312,14 @@ var ObsidianGitSettingsTab = class extends import_obsidian8.PluginSettingTab {
           plugin.saveSettings();
         })
       );
-      new import_obsidian8.Setting(containerEl).setName("{{date}} placeholder format").setDesc(
-        `Specify custom date format. E.g. "${DATE_TIME_FORMAT_SECONDS}"`
-      ).addText(
+      const datePlaceholderSetting = new import_obsidian8.Setting(containerEl).setName("{{date}} placeholder format").addText(
         (text2) => text2.setPlaceholder(plugin.settings.commitDateFormat).setValue(plugin.settings.commitDateFormat).onChange(async (value) => {
           plugin.settings.commitDateFormat = value;
           await plugin.saveSettings();
         })
       );
+      datePlaceholderSetting.descEl.innerHTML = `
+            Specify custom date format. E.g. "${DATE_TIME_FORMAT_SECONDS}. See <a href="https://momentjs.com">Moment.js</a> for more formats.`;
       new import_obsidian8.Setting(containerEl).setName("{{hostname}} placeholder replacement").setDesc("Specify custom hostname for every device.").addText(
         (text2) => {
           var _a2;
@@ -32408,9 +32415,19 @@ var ObsidianGitSettingsTab = class extends import_obsidian8.PluginSettingTab {
     ).addToggle(
       (toggle) => toggle.setValue(plugin.settings.disablePopups).onChange((value) => {
         plugin.settings.disablePopups = value;
+        this.display();
         plugin.saveSettings();
       })
     );
+    if (!plugin.settings.disablePopups)
+      new import_obsidian8.Setting(containerEl).setName("Hide notifications for no changes").setDesc(
+        "Don't show notifications when there are no changes to commit/push"
+      ).addToggle(
+        (toggle) => toggle.setValue(plugin.settings.disablePopupsForNoChanges).onChange((value) => {
+          plugin.settings.disablePopupsForNoChanges = value;
+          plugin.saveSettings();
+        })
+      );
     new import_obsidian8.Setting(containerEl).setName("Show status bar").setDesc(
       "Obsidian must be restarted for the changes to take affect"
     ).addToggle(
@@ -40062,7 +40079,7 @@ function create_else_block3(ctx) {
       append2(div7, t6);
       current = true;
       if (!mounted) {
-        dispose = listen(div7, "click", click_handler_3);
+        dispose = listen(div7, "click", stop_propagation(click_handler_3));
         mounted = true;
       }
     },
@@ -42607,7 +42624,7 @@ function instance9($$self, $$props, $$invalidate) {
           plugin.setState(0 /* idle */);
           return false;
         }
-        plugin.promiseQueue.addTask(() => plugin.gitManager.commit(commitMessage).then(() => {
+        plugin.promiseQueue.addTask(() => plugin.gitManager.commit({ message: commitMessage }).then(() => {
           if (commitMessage !== plugin.settings.commitMessage) {
             $$invalidate(2, commitMessage = "");
           }
@@ -43166,6 +43183,20 @@ var ObsidianGit = class extends import_obsidian30.Plugin {
         })
       )
     });
+    if (import_obsidian30.Platform.isDesktopApp) {
+      this.addCommand({
+        id: "commit-amend-staged-specified-message",
+        name: "Commit Amend",
+        callback: () => this.promiseQueue.addTask(
+          () => this.commit({
+            fromAutoBackup: false,
+            requestCustomMessage: true,
+            onlyStaged: true,
+            amend: true
+          })
+        )
+      });
+    }
     this.addCommand({
       id: "commit-staged-specified-message",
       name: "Commit staged with specific message",
@@ -43710,7 +43741,8 @@ var ObsidianGit = class extends import_obsidian30.Plugin {
     fromAutoBackup,
     requestCustomMessage = false,
     onlyStaged = false,
-    commitMessage
+    commitMessage,
+    amend = false
   }) {
     if (!await this.isAllInitialized())
       return false;
@@ -43778,12 +43810,16 @@ var ObsidianGit = class extends import_obsidian30.Plugin {
       }
       let committedFiles;
       if (onlyStaged) {
-        committedFiles = await this.gitManager.commit(cmtMessage);
+        committedFiles = await this.gitManager.commit({
+          message: cmtMessage,
+          amend
+        });
       } else {
         committedFiles = await this.gitManager.commitAll({
           message: cmtMessage,
           status: status2,
-          unstagedFiles
+          unstagedFiles,
+          amend
         });
       }
       if (this.gitManager instanceof SimpleGit) {
@@ -44306,7 +44342,9 @@ I strongly recommend to use "Source mode" for viewing the conflicted files. For 
     var _a2;
     (_a2 = this.statusBar) == null ? void 0 : _a2.displayMessage(message.toLowerCase(), timeout);
     if (!this.settings.disablePopups) {
-      new import_obsidian30.Notice(message, 5 * 1e3);
+      if (!this.settings.disablePopupsForNoChanges || !message.startsWith("No changes")) {
+        new import_obsidian30.Notice(message, 5 * 1e3);
+      }
     }
     console.log(`git obsidian message: ${message}`);
   }

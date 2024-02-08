@@ -1,52 +1,73 @@
 {
   "main": {
-    "id": "4d7f2d56ae25ecb1",
+    "id": "5acd4a3c6696af5a",
     "type": "split",
     "children": [
       {
-        "id": "a1810f0c358293a3",
+        "id": "511f83290f6d0863",
         "type": "tabs",
         "children": [
           {
-            "id": "3afe15f77af8a807",
+            "id": "be280598f336b343",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "econometrics/01_单方程回归模型/01_回归分析的性质.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
-            "id": "da4757c36e1f3409",
+            "id": "e7052093cc9e0ea3",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "ca7fbc79a8f3fcec",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "9e1f8df621988db8",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "57d1db6889b800c4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "econometrics/01_单方程回归模型/01_回归分析的性质.md",
+                "file": "99_学习情况记录/2024-02-08——星期四.md",
                 "mode": "source",
+                "backlinks": true,
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "6ac319438b5aed48",
+    "id": "986ad7381b4aa76c",
     "type": "split",
     "children": [
       {
-        "id": "310c30a382275a6c",
+        "id": "525ffc1865f10858",
         "type": "tabs",
         "children": [
           {
-            "id": "493df8ebba88c07f",
+            "id": "8ef6c153e7a4ed38",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -56,7 +77,7 @@
             }
           },
           {
-            "id": "d2b0975ce1e5e470",
+            "id": "68e022ef2943b75b",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -71,10 +92,18 @@
             }
           },
           {
-            "id": "56020e2a92edae4e",
+            "id": "58e4b33a026fad29",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "2a658727394b251b",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
               "state": {}
             }
           }
@@ -82,23 +111,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
-    "id": "41736eddd367235b",
+    "id": "e65120feb84dace3",
     "type": "split",
     "children": [
       {
-        "id": "7330f4c861a89963",
+        "id": "e0fa6f818c861393",
         "type": "tabs",
         "children": [
           {
-            "id": "d90d4c9da938478f",
+            "id": "d5dd85784b1fe9ec",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "econometrics/01_单方程回归模型/01_回归分析的性质.md",
+                "file": "99_学习情况记录/2024-02-08——星期四.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,48 +139,44 @@
             }
           },
           {
-            "id": "7bf119bc72370fee",
+            "id": "89566e4ae967dd41",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "econometrics/01_单方程回归模型/01_回归分析的性质.md",
+                "file": "99_学习情况记录/2024-02-08——星期四.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "1ba22a5c2805c8f3",
+            "id": "e5d9deda3bdad2bf",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "frequency",
                 "useHierarchy": true
               }
             }
           },
           {
-            "id": "354ea14ed2f9de0c",
+            "id": "a0580e7d1cb5a5c4",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "econometrics/01_单方程回归模型/01_回归分析的性质.md"
+                "file": "99_学习情况记录/2024-02-08——星期四.md"
               }
             }
           },
           {
-            "id": "abbe6b264a6406fa",
+            "id": "2c9ca742cf90c221",
             "type": "leaf",
             "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              }
+              "type": "calendar",
+              "state": {}
             }
           }
         ],
@@ -159,30 +184,69 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 264.5
   },
   "left-ribbon": {
     "hiddenItems": {
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
       "workspaces:管理工作区布局": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "remotely-save:Remotely Save": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "publish:发布更改": false,
-      "markdown-importer:打开 Markdown 格式转换器": false
+      "obsidian-memos:Memos": false
     }
   },
-  "active": "da4757c36e1f3409",
+  "active": "57d1db6889b800c4",
   "lastOpenFiles": [
-    "econometrics/01_单方程回归模型",
-    "econometrics/01_单方程回归模型/01_回归分析的性质.md",
-    "attachment",
-    "00_inbox",
-    "未命名 1.md",
-    "Welcome.md",
-    "create a link.md"
+    "99_学习情况记录/2024-02-08——星期四.md",
+    "00_inbox/日记模版.md",
+    "未命名",
+    "99_学习情况记录",
+    "99_学习情况记录/2024-02-06——星期二.md",
+    "01_数学建模算法/01_评价类问题/04_熵权-秩和比法.md",
+    "01_数学建模算法/00_大纲/01_赛题类型及建模流程.md",
+    "01_数学建模算法/00_大纲/00_数学建模是什么.md",
+    "99_学习情况记录/2024-02-04——星期日.md",
+    "01_数学建模算法/02_预测类问题/08_马尔科夫预测模型.md",
+    "01_数学建模算法/03_优化类问题/01_规划问题/02_整数规划.md",
+    "01_数学建模算法/01_评价类问题/01_层次分析法(AHP).md",
+    "00_inbox/obsidian基础操作.md",
+    "01_数学建模算法/03_优化类问题/01_规划问题/01_线性规划.md",
+    "01_数学建模算法/03_优化类问题/01_规划问题",
+    "01_数学建模算法/00_大纲/02_算法匹配速查表.md",
+    "01_数学建模算法/01_评价类问题/03_灰色关联分析法.md",
+    "01_数学建模算法/01_评价类问题/02_TOPSIS.md",
+    "01_数学建模算法/01_评价类问题",
+    "01_数学建模算法/03_优化类问题",
+    "02_Matlab知识/01_matlab基础.md",
+    "02_Matlab知识/02_Matlab计算.md",
+    "99_学习情况记录/2024-02-03——星期六.md",
+    "03_数学建模实操/01_数据预处理/01_数据预处理索引.md",
+    "99_学习情况记录/2024-02-02——星期五.md",
+    "神经网络算法/01_BP神经网络.md",
+    "神经网络算法/00_神经网络算法总纲.md",
+    "98_attachment/Pasted image 20240201134540.png",
+    "98_attachment/Pasted image 20240201134527.png",
+    "98_attachment/Pasted image 20240201134148.png",
+    "98_attachment/Pasted image 20240201133436.png",
+    "98_attachment/Pasted image 20240201133353.png",
+    "98_attachment/Pasted image 20240201133316.png",
+    "98_attachment/Pasted image 20240201132925.png",
+    "神经网络算法",
+    "98_attachment/Pasted image 20240201003059.png",
+    "98_attachment/Pasted image 20240201002605.png",
+    "98_attachment/Pasted image 20240201002206.png",
+    "99_学习情况记录/2024-01-30——星期二.md",
+    "02_Matlab知识/02_matlab计算",
+    "01_数学建模算法/02_预测类问题",
+    "99_学习情况记录/2024-01-26——星期五.md",
+    "99_学习情况记录/2024-01-27——星期六.md",
+    "mathematical_modeling",
+    "03_数学建模实操/01_数据预处理"
   ]
 }

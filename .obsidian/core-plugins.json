@@ -7,7 +7,6 @@
   "canvas",
   "outgoing-link",
   "tag-pane",
-  "properties",
   "page-preview",
   "daily-notes",
   "templates",
@@ -19,7 +18,7 @@
   "markdown-importer",
   "outline",
   "word-count",
+  "slides",
   "workspaces",
-  "file-recovery",
-  "publish"
+  "file-recovery"
 ]
