@@ -4,48 +4,29 @@
     "type": "split",
     "children": [
       {
-        "id": "511f83290f6d0863",
+        "id": "7288165b217f1031",
         "type": "tabs",
         "children": [
           {
-            "id": "be280598f336b343",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "e7052093cc9e0ea3",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "ca7fbc79a8f3fcec",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "9e1f8df621988db8",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "57d1db6889b800c4",
+            "id": "e73adac6fc47e44e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2024-02-08——星期四.md",
+                "file": "99_学习情况记录/2024-02-26——星期一.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "87114362c65b1a58",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/01_导论.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -53,7 +34,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -127,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "99_学习情况记录/2024-02-08——星期四.md",
+                "file": "00_inbox/01_导论.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "99_学习情况记录/2024-02-08——星期四.md",
+                "file": "00_inbox/01_导论.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2024-02-08——星期四.md"
+                "file": "00_inbox/01_导论.md"
               }
             }
           },
@@ -201,11 +182,17 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "57d1db6889b800c4",
+  "active": "87114362c65b1a58",
   "lastOpenFiles": [
+    "99_学习情况记录/2024-02-26——星期一.md",
+    "00_inbox/01_导论.md",
+    "99_学习情况记录/2024-02-15——星期四.md",
+    "02_game theory/00_导论，五个入门结论.md",
+    "02_game theory",
+    "01_Econometrics",
+    "99_学习情况记录/2024-02-14——星期三.md",
     "99_学习情况记录/2024-02-08——星期四.md",
     "00_inbox/日记模版.md",
-    "未命名",
     "99_学习情况记录",
     "99_学习情况记录/2024-02-06——星期二.md",
     "01_数学建模算法/01_评价类问题/04_熵权-秩和比法.md",
@@ -229,7 +216,6 @@
     "03_数学建模实操/01_数据预处理/01_数据预处理索引.md",
     "99_学习情况记录/2024-02-02——星期五.md",
     "神经网络算法/01_BP神经网络.md",
-    "神经网络算法/00_神经网络算法总纲.md",
     "98_attachment/Pasted image 20240201134540.png",
     "98_attachment/Pasted image 20240201134527.png",
     "98_attachment/Pasted image 20240201134148.png",
@@ -241,12 +227,8 @@
     "98_attachment/Pasted image 20240201003059.png",
     "98_attachment/Pasted image 20240201002605.png",
     "98_attachment/Pasted image 20240201002206.png",
-    "99_学习情况记录/2024-01-30——星期二.md",
     "02_Matlab知识/02_matlab计算",
     "01_数学建模算法/02_预测类问题",
-    "99_学习情况记录/2024-01-26——星期五.md",
-    "99_学习情况记录/2024-01-27——星期六.md",
-    "mathematical_modeling",
-    "03_数学建模实操/01_数据预处理"
+    "mathematical_modeling"
   ]
 }
