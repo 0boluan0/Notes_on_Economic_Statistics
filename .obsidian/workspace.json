@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/零散知识点.md",
+                "file": "01_Econometrics/零散知识点.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -65,7 +65,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_货币银行学/1_总览.md",
+                "file": "01_Econometrics/02_一元线性回归.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -147,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_货币银行学/1_总览.md",
+                "file": "01_Econometrics/02_一元线性回归.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_货币银行学/1_总览.md",
+                "file": "01_Econometrics/02_一元线性回归.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +187,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_货币银行学/1_总览.md"
+                "file": "01_Econometrics/02_一元线性回归.md"
               }
             }
           },
@@ -223,24 +223,25 @@
   },
   "active": "22567cdd92e6636c",
   "lastOpenFiles": [
-    "04_货币银行学/0_在这节课开始之前，导论.md",
-    "04_货币银行学/1_总览.md",
-    "04_货币银行学",
-    "00_inbox/零散知识点.md",
+    "01_Econometrics/零散知识点.md",
     "01_Econometrics/02_一元线性回归.md",
-    "98_attachment/Pasted image 20240228132651.png",
-    "98_attachment/Pasted image 20240228131447.png",
-    "98_attachment/Pasted image 20240228131159.png",
-    "98_attachment/Pasted image 20240228131000.png",
-    "02_game theory/01_导论.md",
-    "02_game theory/02_初步认识博弈.md",
     "01_Econometrics/01_导论.md",
-    "99_学习情况记录/2024-02-28——星期三.md",
-    "日记模版.md",
-    "99_学习情况记录/2024-02-27——星期二.md",
+    "98_attachment/Pasted image 20240228131447.png",
+    "98_attachment/Pasted image 20240228132651.png",
+    "98_attachment/Pasted image 20240228202716.png",
+    "98_attachment/Pasted image 20240228131159.png",
     "03_public finance/1_导论/01_导论.md",
     "03_public finance/1_导论/02_实证分析工具.md",
     "03_public finance/1_导论/00_财政学课程内容分布.md",
+    "04_货币银行学/1_总览.md",
+    "04_货币银行学/0_在这节课开始之前，导论.md",
+    "04_货币银行学",
+    "98_attachment/Pasted image 20240228131000.png",
+    "02_game theory/01_导论.md",
+    "02_game theory/02_初步认识博弈.md",
+    "99_学习情况记录/2024-02-28——星期三.md",
+    "日记模版.md",
+    "99_学习情况记录/2024-02-27——星期二.md",
     "03_public finance/5_其他重要内容",
     "03_public finance/4_预算收支管理体系",
     "03_public finance/3_财政收入",
@@ -262,12 +263,10 @@
     "99_学习情况记录/2024-02-04——星期日.md",
     "01_数学建模算法/02_预测类问题/08_马尔科夫预测模型.md",
     "01_数学建模算法/03_优化类问题/01_规划问题/02_整数规划.md",
-    "01_数学建模算法/01_评价类问题/01_层次分析法(AHP).md",
     "98_attachment/Pasted image 20240201134540.png",
     "98_attachment/Pasted image 20240201134527.png",
     "98_attachment/Pasted image 20240201134148.png",
     "98_attachment/Pasted image 20240201133436.png",
-    "98_attachment/Pasted image 20240201133353.png",
-    "98_attachment/Pasted image 20240201133316.png"
+    "98_attachment/Pasted image 20240201133353.png"
   ]
 }
