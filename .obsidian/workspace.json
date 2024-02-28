@@ -4,37 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "7288165b217f1031",
+        "id": "efa80cd6c4e70521",
         "type": "tabs",
         "children": [
           {
-            "id": "f23e47b894f456bd",
+            "id": "0a56cd40d6a650a7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_game theory/01_导论.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a080f48a4e3f210b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00_inbox/02_初步认识博弈.md",
+                "file": "99_学习情况记录/2024-02-28——星期三.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -108,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00_inbox/02_初步认识博弈.md",
+                "file": "99_学习情况记录/2024-02-28——星期三.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00_inbox/02_初步认识博弈.md",
+                "file": "99_学习情况记录/2024-02-28——星期三.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/02_初步认识博弈.md"
+                "file": "99_学习情况记录/2024-02-28——星期三.md"
               }
             }
           },
@@ -182,8 +168,11 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "a080f48a4e3f210b",
+  "active": "0a56cd40d6a650a7",
   "lastOpenFiles": [
+    "00_inbox/日记模版.md",
+    "99_学习情况记录/2024-02-28——星期三.md",
+    "99_学习情况记录/2024-02-27——星期二.md",
     "02_game theory/01_导论.md",
     "00_inbox/02_初步认识博弈.md",
     "03_public finance/1_导论/01_导论.md",
@@ -197,14 +186,12 @@
     "01_Econometrics/01_导论.md",
     "03_public finance",
     "econometrics/01_单方程回归模型/01_回归分析的性质.md",
-    "99_学习情况记录/2024-02-27——星期二.md",
     "99_学习情况记录/2024-02-26——星期一.md",
     "99_学习情况记录/2024-02-15——星期四.md",
     "02_game theory",
     "01_Econometrics",
     "99_学习情况记录/2024-02-14——星期三.md",
     "99_学习情况记录/2024-02-08——星期四.md",
-    "00_inbox/日记模版.md",
     "99_学习情况记录",
     "99_学习情况记录/2024-02-06——星期二.md",
     "01_数学建模算法/01_评价类问题/04_熵权-秩和比法.md",
@@ -219,7 +206,6 @@
     "01_数学建模算法/03_优化类问题/01_规划问题",
     "01_数学建模算法/00_大纲/02_算法匹配速查表.md",
     "01_数学建模算法/01_评价类问题/03_灰色关联分析法.md",
-    "01_数学建模算法/01_评价类问题/02_TOPSIS.md",
     "98_attachment/Pasted image 20240201134540.png",
     "98_attachment/Pasted image 20240201134527.png",
     "98_attachment/Pasted image 20240201134148.png",
