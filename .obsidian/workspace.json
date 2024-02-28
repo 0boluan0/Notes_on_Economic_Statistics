@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e73adac6fc47e44e",
+            "id": "f23e47b894f456bd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2024-02-26——星期一.md",
+                "file": "02_game theory/01_导论.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,12 @@
             }
           },
           {
-            "id": "87114362c65b1a58",
+            "id": "a080f48a4e3f210b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/01_导论.md",
+                "file": "00_inbox/02_初步认识博弈.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00_inbox/01_导论.md",
+                "file": "00_inbox/02_初步认识博弈.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00_inbox/01_导论.md",
+                "file": "00_inbox/02_初步认识博弈.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/01_导论.md"
+                "file": "00_inbox/02_初步认识博弈.md"
               }
             }
           },
@@ -182,12 +182,24 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "87114362c65b1a58",
+  "active": "a080f48a4e3f210b",
   "lastOpenFiles": [
+    "02_game theory/01_导论.md",
+    "00_inbox/02_初步认识博弈.md",
+    "03_public finance/1_导论/01_导论.md",
+    "03_public finance/1_导论/02_实证分析工具.md",
+    "03_public finance/1_导论/00_财政学课程内容分布.md",
+    "03_public finance/5_其他重要内容",
+    "03_public finance/4_预算收支管理体系",
+    "03_public finance/3_财政收入",
+    "03_public finance/1_导论",
+    "03_public finance/2_财政支出",
+    "01_Econometrics/01_导论.md",
+    "03_public finance",
+    "econometrics/01_单方程回归模型/01_回归分析的性质.md",
+    "99_学习情况记录/2024-02-27——星期二.md",
     "99_学习情况记录/2024-02-26——星期一.md",
-    "00_inbox/01_导论.md",
     "99_学习情况记录/2024-02-15——星期四.md",
-    "02_game theory/00_导论，五个入门结论.md",
     "02_game theory",
     "01_Econometrics",
     "99_学习情况记录/2024-02-14——星期三.md",
@@ -208,14 +220,6 @@
     "01_数学建模算法/00_大纲/02_算法匹配速查表.md",
     "01_数学建模算法/01_评价类问题/03_灰色关联分析法.md",
     "01_数学建模算法/01_评价类问题/02_TOPSIS.md",
-    "01_数学建模算法/01_评价类问题",
-    "01_数学建模算法/03_优化类问题",
-    "02_Matlab知识/01_matlab基础.md",
-    "02_Matlab知识/02_Matlab计算.md",
-    "99_学习情况记录/2024-02-03——星期六.md",
-    "03_数学建模实操/01_数据预处理/01_数据预处理索引.md",
-    "99_学习情况记录/2024-02-02——星期五.md",
-    "神经网络算法/01_BP神经网络.md",
     "98_attachment/Pasted image 20240201134540.png",
     "98_attachment/Pasted image 20240201134527.png",
     "98_attachment/Pasted image 20240201134148.png",
@@ -223,12 +227,8 @@
     "98_attachment/Pasted image 20240201133353.png",
     "98_attachment/Pasted image 20240201133316.png",
     "98_attachment/Pasted image 20240201132925.png",
-    "神经网络算法",
     "98_attachment/Pasted image 20240201003059.png",
     "98_attachment/Pasted image 20240201002605.png",
-    "98_attachment/Pasted image 20240201002206.png",
-    "02_Matlab知识/02_matlab计算",
-    "01_数学建模算法/02_预测类问题",
-    "mathematical_modeling"
+    "98_attachment/Pasted image 20240201002206.png"
   ]
 }
