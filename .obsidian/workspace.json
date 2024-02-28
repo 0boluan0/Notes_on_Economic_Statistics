@@ -13,14 +13,41 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2024-02-28——星期三.md",
+                "file": "01_Econometrics/01_导论.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "53e3a2aeb1ac9c3f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Econometrics/02_一元线性回归.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1d18569ea359a0f4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/零散知识点.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -94,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "99_学习情况记录/2024-02-28——星期三.md",
+                "file": "00_inbox/零散知识点.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "99_学习情况记录/2024-02-28——星期三.md",
+                "file": "00_inbox/零散知识点.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2024-02-28——星期三.md"
+                "file": "00_inbox/零散知识点.md"
               }
             }
           },
@@ -168,13 +195,20 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "0a56cd40d6a650a7",
+  "active": "1d18569ea359a0f4",
   "lastOpenFiles": [
-    "00_inbox/日记模版.md",
-    "99_学习情况记录/2024-02-28——星期三.md",
-    "99_学习情况记录/2024-02-27——星期二.md",
+    "01_Econometrics/02_一元线性回归.md",
+    "00_inbox/零散知识点.md",
+    "98_attachment/Pasted image 20240228132651.png",
+    "98_attachment/Pasted image 20240228131447.png",
+    "98_attachment/Pasted image 20240228131159.png",
+    "98_attachment/Pasted image 20240228131000.png",
     "02_game theory/01_导论.md",
-    "00_inbox/02_初步认识博弈.md",
+    "02_game theory/02_初步认识博弈.md",
+    "01_Econometrics/01_导论.md",
+    "99_学习情况记录/2024-02-28——星期三.md",
+    "00_inbox/日记模版.md",
+    "99_学习情况记录/2024-02-27——星期二.md",
     "03_public finance/1_导论/01_导论.md",
     "03_public finance/1_导论/02_实证分析工具.md",
     "03_public finance/1_导论/00_财政学课程内容分布.md",
@@ -183,7 +217,6 @@
     "03_public finance/3_财政收入",
     "03_public finance/1_导论",
     "03_public finance/2_财政支出",
-    "01_Econometrics/01_导论.md",
     "03_public finance",
     "econometrics/01_单方程回归模型/01_回归分析的性质.md",
     "99_学习情况记录/2024-02-26——星期一.md",
@@ -204,17 +237,11 @@
     "00_inbox/obsidian基础操作.md",
     "01_数学建模算法/03_优化类问题/01_规划问题/01_线性规划.md",
     "01_数学建模算法/03_优化类问题/01_规划问题",
-    "01_数学建模算法/00_大纲/02_算法匹配速查表.md",
-    "01_数学建模算法/01_评价类问题/03_灰色关联分析法.md",
     "98_attachment/Pasted image 20240201134540.png",
     "98_attachment/Pasted image 20240201134527.png",
     "98_attachment/Pasted image 20240201134148.png",
     "98_attachment/Pasted image 20240201133436.png",
     "98_attachment/Pasted image 20240201133353.png",
-    "98_attachment/Pasted image 20240201133316.png",
-    "98_attachment/Pasted image 20240201132925.png",
-    "98_attachment/Pasted image 20240201003059.png",
-    "98_attachment/Pasted image 20240201002605.png",
-    "98_attachment/Pasted image 20240201002206.png"
+    "98_attachment/Pasted image 20240201133316.png"
   ]
 }
