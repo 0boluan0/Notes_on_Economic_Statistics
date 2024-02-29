@@ -117,10 +117,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06_大创/结构性货币政策.md",
+                "file": "99_学习情况记录/2024-02-29——星期四.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "9b229f6b7c9269cc",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.8"
               }
             }
           }
@@ -199,7 +209,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "06_大创/结构性货币政策.md",
+                "file": "99_学习情况记录/2024-02-29——星期四.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -216,7 +226,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "06_大创/结构性货币政策.md",
+                "file": "99_学习情况记录/2024-02-29——星期四.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -239,7 +249,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "06_大创/结构性货币政策.md"
+                "file": "99_学习情况记录/2024-02-29——星期四.md"
               }
             }
           },
