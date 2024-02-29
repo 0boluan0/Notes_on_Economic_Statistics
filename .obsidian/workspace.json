@@ -117,7 +117,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_game theory/02_初步认识博弈.md",
+                "file": "06_大创/结构性货币政策.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -199,7 +199,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_game theory/02_初步认识博弈.md",
+                "file": "06_大创/结构性货币政策.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -216,7 +216,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02_game theory/02_初步认识博弈.md",
+                "file": "06_大创/结构性货币政策.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -239,7 +239,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_game theory/02_初步认识博弈.md"
+                "file": "06_大创/结构性货币政策.md"
               }
             }
           },
@@ -275,6 +275,8 @@
   },
   "active": "a6245cd13f457d94",
   "lastOpenFiles": [
+    "02_game theory/02_初步认识博弈.md",
+    "98_attachment/Pasted image 20240229224615.png",
     "98_attachment/Pasted image 20240229220513.png",
     "98_attachment/Pasted image 20240229220125.png",
     "98_attachment/Pasted image 20240229215900.png",
@@ -306,8 +308,6 @@
     "03_public finance/1_导论/02_实证分析工具.md",
     "03_public finance/1_导论/00_财政学课程内容分布.md",
     "04_货币银行学",
-    "98_attachment/Pasted image 20240228131000.png",
-    "02_game theory/02_初步认识博弈.md",
     "03_public finance/5_其他重要内容",
     "03_public finance/4_预算收支管理体系",
     "03_public finance/3_财政收入",
@@ -319,7 +319,6 @@
     "99_学习情况记录/2024-02-15——星期四.md",
     "02_game theory",
     "99_学习情况记录/2024-02-08——星期四.md",
-    "99_学习情况记录/2024-02-06——星期二.md",
-    "98_attachment/Pasted image 20240201134540.png"
+    "99_学习情况记录/2024-02-06——星期二.md"
   ]
 }
