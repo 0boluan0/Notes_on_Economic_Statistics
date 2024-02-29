@@ -73,12 +73,12 @@
             }
           },
           {
-            "id": "39ea77da3878cf1d",
+            "id": "9fbdb157be6c6af5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/01_课程介绍.md",
+                "file": "05_经济思想史/02_前资本主义社会.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,12 +86,38 @@
             }
           },
           {
-            "id": "9fbdb157be6c6af5",
+            "id": "88c509c6efe47591",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/02_前资本主义社会.md",
+                "file": "06_大创/01_目录.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "94937c82a2f382e5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "06_大创/结构性货币政策.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a6245cd13f457d94",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02_game theory/02_初步认识博弈.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -99,7 +125,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -173,7 +199,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00_inbox/02_前资本主义社会.md",
+                "file": "02_game theory/02_初步认识博弈.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,7 +216,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00_inbox/02_前资本主义社会.md",
+                "file": "02_game theory/02_初步认识博弈.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -213,7 +239,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/02_前资本主义社会.md"
+                "file": "02_game theory/02_初步认识博弈.md"
               }
             }
           },
@@ -247,10 +273,25 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "9fbdb157be6c6af5",
+  "active": "a6245cd13f457d94",
   "lastOpenFiles": [
+    "98_attachment/Pasted image 20240229220513.png",
+    "98_attachment/Pasted image 20240229220125.png",
+    "98_attachment/Pasted image 20240229215900.png",
+    "98_attachment/Pasted image 20240229215711.png",
+    "02_game theory/01_导论.md",
+    "04_货币银行学/1_总览.md",
+    "04_货币银行学/0_在这节课开始之前，导论.md",
+    "05_经济思想史/01_导论.md",
+    "05_经济思想史/02_前资本主义社会.md",
+    "06_大创/01_目录.md",
+    "06_大创/结构性货币政策.md",
+    "01_Econometrics/01_导论.md",
+    "01_Econometrics/02_一元线性回归.md",
+    "01_Econometrics/零散知识点.md",
+    "98_attachment/Pasted image 20240229211911.png",
     "00_inbox/01_课程介绍.md",
-    "00_inbox/02_前资本主义社会.md",
+    "06_大创",
     "99_学习情况记录/2024-02-29——星期四.md",
     "05_经济思想史",
     "99_学习情况记录/2024-02-28——星期三.md",
@@ -258,20 +299,14 @@
     "99_学习情况记录/2024-02-14——星期三.md",
     "98_attachment/Pasted image 20240228202716.png",
     "98_attachment/Pasted image 20240228131447.png",
-    "04_货币银行学/0_在这节课开始之前，导论.md",
-    "04_货币银行学/1_总览.md",
     "98_attachment/Pasted image 20240228132651.png",
-    "01_Econometrics/02_一元线性回归.md",
     "00_inbox/日记模版.md",
-    "01_Econometrics/01_导论.md",
-    "01_Econometrics/零散知识点.md",
     "98_attachment/Pasted image 20240228131159.png",
     "03_public finance/1_导论/01_导论.md",
     "03_public finance/1_导论/02_实证分析工具.md",
     "03_public finance/1_导论/00_财政学课程内容分布.md",
     "04_货币银行学",
     "98_attachment/Pasted image 20240228131000.png",
-    "02_game theory/01_导论.md",
     "02_game theory/02_初步认识博弈.md",
     "03_public finance/5_其他重要内容",
     "03_public finance/4_预算收支管理体系",
@@ -283,17 +318,8 @@
     "99_学习情况记录/2024-02-26——星期一.md",
     "99_学习情况记录/2024-02-15——星期四.md",
     "02_game theory",
-    "01_Econometrics",
     "99_学习情况记录/2024-02-08——星期四.md",
     "99_学习情况记录/2024-02-06——星期二.md",
-    "01_数学建模算法/01_评价类问题/04_熵权-秩和比法.md",
-    "01_数学建模算法/00_大纲/01_赛题类型及建模流程.md",
-    "01_数学建模算法/00_大纲/00_数学建模是什么.md",
-    "99_学习情况记录/2024-02-04——星期日.md",
-    "98_attachment/Pasted image 20240201134540.png",
-    "98_attachment/Pasted image 20240201134527.png",
-    "98_attachment/Pasted image 20240201134148.png",
-    "98_attachment/Pasted image 20240201133436.png",
-    "98_attachment/Pasted image 20240201133353.png"
+    "98_attachment/Pasted image 20240201134540.png"
   ]
 }
