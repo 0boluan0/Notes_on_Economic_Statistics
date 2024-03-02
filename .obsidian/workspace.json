@@ -117,7 +117,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2024-03-02——星期六.md",
+                "file": "03_public finance/1_导论/02_实证分析——positive analysis.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cd907d0f78ed61c8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_public finance/1_导论/03_规范分析——Negative analysis.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -135,7 +148,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -209,7 +222,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "99_学习情况记录/2024-03-02——星期六.md",
+                "file": "03_public finance/1_导论/03_规范分析——Negative analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -226,7 +239,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "99_学习情况记录/2024-03-02——星期六.md",
+                "file": "03_public finance/1_导论/03_规范分析——Negative analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -249,7 +262,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2024-03-02——星期六.md"
+                "file": "03_public finance/1_导论/03_规范分析——Negative analysis.md"
               }
             }
           },
@@ -283,10 +296,16 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "a6245cd13f457d94",
+  "active": "cd907d0f78ed61c8",
   "lastOpenFiles": [
-    "99_学习情况记录/2024-03-01——星期五.md",
+    "03_public finance/1_导论/02_实证分析——positive analysis.md",
+    "03_public finance/1_导论/03_规范分析——Negative analysis.md",
+    "03_public finance/1_导论/00_财政学课程内容分布.md",
+    "03_public finance/1_导论/01_导论.md",
+    "98_attachment/Pasted image 20240302224751.png",
+    "98_attachment/Pasted image 20240302224711.png",
     "99_学习情况记录/2024-03-02——星期六.md",
+    "99_学习情况记录/2024-03-01——星期五.md",
     "99_学习情况记录/2024-02-29——星期四.md",
     "99_学习情况记录/2024-02-28——星期三.md",
     "02_game theory/02_初步认识博弈.md",
@@ -313,12 +332,7 @@
     "99_学习情况记录/2024-02-14——星期三.md",
     "98_attachment/Pasted image 20240228202716.png",
     "98_attachment/Pasted image 20240228131447.png",
-    "98_attachment/Pasted image 20240228132651.png",
     "00_inbox/日记模版.md",
-    "98_attachment/Pasted image 20240228131159.png",
-    "03_public finance/1_导论/01_导论.md",
-    "03_public finance/1_导论/02_实证分析工具.md",
-    "03_public finance/1_导论/00_财政学课程内容分布.md",
     "04_货币银行学",
     "03_public finance/5_其他重要内容",
     "03_public finance/4_预算收支管理体系",
@@ -329,7 +343,6 @@
     "econometrics/01_单方程回归模型/01_回归分析的性质.md",
     "99_学习情况记录/2024-02-26——星期一.md",
     "99_学习情况记录/2024-02-15——星期四.md",
-    "02_game theory",
-    "99_学习情况记录/2024-02-08——星期四.md"
+    "02_game theory"
   ]
 }
