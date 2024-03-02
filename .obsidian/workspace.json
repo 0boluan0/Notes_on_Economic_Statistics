@@ -130,7 +130,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_public finance/1_导论/03_规范分析——Negative analysis.md",
+                "file": "99_学习情况记录/2024-03-03——星期日.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -222,7 +222,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03_public finance/1_导论/03_规范分析——Negative analysis.md",
+                "file": "99_学习情况记录/2024-03-03——星期日.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -239,7 +239,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03_public finance/1_导论/03_规范分析——Negative analysis.md",
+                "file": "99_学习情况记录/2024-03-03——星期日.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -262,7 +262,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_public finance/1_导论/03_规范分析——Negative analysis.md"
+                "file": "99_学习情况记录/2024-03-03——星期日.md"
               }
             }
           },
@@ -298,17 +298,21 @@
   },
   "active": "cd907d0f78ed61c8",
   "lastOpenFiles": [
+    "99_学习情况记录/2024-03-02——星期六.md",
+    "99_学习情况记录/2024-03-03——星期日.md",
+    "99_学习情况记录/2024-02-15——星期四.md",
+    "99_学习情况记录/2024-02-14——星期三.md",
+    "99_学习情况记录/2024-03-01——星期五.md",
     "03_public finance/1_导论/02_实证分析——positive analysis.md",
     "03_public finance/1_导论/03_规范分析——Negative analysis.md",
+    "03_public finance/6_先前知识点速览",
+    "02_game theory/02_初步认识博弈.md",
     "03_public finance/1_导论/00_财政学课程内容分布.md",
     "03_public finance/1_导论/01_导论.md",
     "98_attachment/Pasted image 20240302224751.png",
     "98_attachment/Pasted image 20240302224711.png",
-    "99_学习情况记录/2024-03-02——星期六.md",
-    "99_学习情况记录/2024-03-01——星期五.md",
     "99_学习情况记录/2024-02-29——星期四.md",
     "99_学习情况记录/2024-02-28——星期三.md",
-    "02_game theory/02_初步认识博弈.md",
     "06_大创/01_目录.md",
     "06_大创/结构性货币政策.md",
     "98_attachment/Pasted image 20240229224615.png",
@@ -329,7 +333,6 @@
     "06_大创",
     "05_经济思想史",
     "99_学习情况记录/2024-02-27——星期二.md",
-    "99_学习情况记录/2024-02-14——星期三.md",
     "98_attachment/Pasted image 20240228202716.png",
     "98_attachment/Pasted image 20240228131447.png",
     "00_inbox/日记模版.md",
@@ -340,9 +343,6 @@
     "03_public finance/1_导论",
     "03_public finance/2_财政支出",
     "03_public finance",
-    "econometrics/01_单方程回归模型/01_回归分析的性质.md",
-    "99_学习情况记录/2024-02-26——星期一.md",
-    "99_学习情况记录/2024-02-15——星期四.md",
-    "02_game theory"
+    "econometrics/01_单方程回归模型/01_回归分析的性质.md"
   ]
 }
