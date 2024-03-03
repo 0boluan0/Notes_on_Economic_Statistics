@@ -5,6 +5,22 @@
       "path": "99_学习情况记录/2024-03-03——星期日.md"
     },
     {
+      "basename": "00_网课大概了解",
+      "path": "01_Econometrics/00_数学基础/00_网课大概了解.md"
+    },
+    {
+      "basename": "01",
+      "path": "01_Econometrics/00_数学基础/01.md"
+    },
+    {
+      "basename": "02_一元线性回归",
+      "path": "01_Econometrics/02_一元线性回归.md"
+    },
+    {
+      "basename": "01_导论",
+      "path": "01_Econometrics/01_导论.md"
+    },
+    {
       "basename": "2024-03-02——星期六",
       "path": "99_学习情况记录/2024-03-02——星期六.md"
     },
@@ -75,14 +91,6 @@
     {
       "basename": "02_前资本主义社会",
       "path": "05_经济思想史/02_前资本主义社会.md"
-    },
-    {
-      "basename": "01_导论",
-      "path": "01_Econometrics/01_导论.md"
-    },
-    {
-      "basename": "02_一元线性回归",
-      "path": "01_Econometrics/02_一元线性回归.md"
     },
     {
       "basename": "零散知识点",
@@ -191,14 +199,6 @@
     {
       "basename": "01_BP神经网络",
       "path": "神经网络算法/01_BP神经网络.md"
-    },
-    {
-      "basename": "00_神经网络算法总纲",
-      "path": "神经网络算法/00_神经网络算法总纲.md"
-    },
-    {
-      "basename": "2024-01-30——星期二",
-      "path": "99_学习情况记录/2024-01-30——星期二.md"
     }
   ],
   "omittedPaths": [],
