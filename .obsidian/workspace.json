@@ -39,7 +39,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_货币银行学/1_总览.md",
+                "file": "02_game theory/02_初步认识博弈.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4598cdc93af9dc1d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02_game theory/03_囚徒困境.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -121,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_货币银行学/1_总览.md",
+                "file": "02_game theory/03_囚徒困境.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_货币银行学/1_总览.md",
+                "file": "02_game theory/03_囚徒困境.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_货币银行学/1_总览.md"
+                "file": "02_game theory/03_囚徒困境.md"
               }
             }
           },
@@ -195,8 +208,12 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "c29e22f282d91bd5",
+  "active": "4598cdc93af9dc1d",
   "lastOpenFiles": [
+    "02_game theory/02_初步认识博弈.md",
+    "02_game theory/03_囚徒困境.md",
+    "06_大创/结构性货币政策.md",
+    "04_货币银行学/1_总览.md",
     "04_货币银行学/0_在这节课开始之前，导论.md",
     "99_学习情况记录/2024-03-03——星期日.md",
     "01_Econometrics/02_一元线性回归.md",
@@ -208,7 +225,6 @@
     "03_public finance/6_先前知识点速览/收入效应与替代效应.md",
     "03_public finance/1_导论/01_导论.md",
     "00_inbox/sh.md",
-    "02_game theory/02_初步认识博弈.md",
     "98_attachment/Pasted image 20240303163217.png",
     "98_attachment/Pasted image 20240303163055.png",
     "98_attachment/Pasted image 20240303163023.png",
@@ -229,12 +245,9 @@
     "99_学习情况记录/2024-02-29——星期四.md",
     "99_学习情况记录/2024-02-28——星期三.md",
     "06_大创/01_目录.md",
-    "06_大创/结构性货币政策.md",
     "98_attachment/Pasted image 20240229224615.png",
     "02_game theory/01_导论.md",
-    "04_货币银行学/1_总览.md",
     "05_经济思想史/01_导论.md",
-    "05_经济思想史/02_前资本主义社会.md",
     "06_大创",
     "05_经济思想史",
     "04_货币银行学",
