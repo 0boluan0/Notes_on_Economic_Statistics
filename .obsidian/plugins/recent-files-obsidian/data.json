@@ -5,12 +5,24 @@
       "path": "01_Econometrics/02_一元线性回归.md"
     },
     {
-      "basename": "2024-03-04——星期一",
-      "path": "99_学习情况记录/2024-03-04——星期一.md"
-    },
-    {
       "basename": "01_导论",
       "path": "01_Econometrics/01_导论.md"
+    },
+    {
+      "basename": "00_网课大概了解",
+      "path": "01_Econometrics/00_数学基础/00_网课大概了解.md"
+    },
+    {
+      "basename": "01",
+      "path": "01_Econometrics/00_数学基础/01.md"
+    },
+    {
+      "basename": "零散知识点",
+      "path": "01_Econometrics/零散知识点.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "00_inbox/未命名.md"
     },
     {
       "basename": "03_囚徒困境",
@@ -21,8 +33,8 @@
       "path": "03_public finance/1_导论/02_实证分析——positive analysis.md"
     },
     {
-      "basename": "2024-2-26至3-3第一周",
-      "path": "99_学习情况记录/2024-2-26至3-3第一周.md"
+      "basename": "01_导论",
+      "path": "03_public finance/1_导论/01_导论.md"
     },
     {
       "basename": "03_规范分析——Negative analysis",
@@ -33,16 +45,28 @@
       "path": "03_public finance/6_先前知识点速览/收入效应与替代效应.md"
     },
     {
+      "basename": "1_为什么研究货币，银行与金融市场",
+      "path": "04_货币银行学/1_为什么研究货币，银行与金融市场.md"
+    },
+    {
+      "basename": "2024-2-26至3-3第一周",
+      "path": "99_学习情况记录/2024-2-26至3-3第一周.md"
+    },
+    {
+      "basename": "2024-03-05——星期二",
+      "path": "99_学习情况记录/2024-03-05——星期二.md"
+    },
+    {
+      "basename": "2024-03-04——星期一",
+      "path": "99_学习情况记录/2024-03-04——星期一.md"
+    },
+    {
       "basename": "02_前资本主义社会",
       "path": "05_经济思想史/02_前资本主义社会.md"
     },
     {
       "basename": "01_导论",
       "path": "05_经济思想史/01_导论.md"
-    },
-    {
-      "basename": "1_为什么研究货币，银行与金融市场",
-      "path": "04_货币银行学/1_为什么研究货币，银行与金融市场.md"
     },
     {
       "basename": "0_在这节课开始之前，导论",
@@ -91,22 +115,6 @@
     {
       "basename": "结构性货币政策",
       "path": "06_大创/结构性货币政策.md"
-    },
-    {
-      "basename": "零散知识点",
-      "path": "01_Econometrics/零散知识点.md"
-    },
-    {
-      "basename": "00_网课大概了解",
-      "path": "01_Econometrics/00_数学基础/00_网课大概了解.md"
-    },
-    {
-      "basename": "01",
-      "path": "01_Econometrics/00_数学基础/01.md"
-    },
-    {
-      "basename": "01_导论",
-      "path": "03_public finance/1_导论/01_导论.md"
     },
     {
       "basename": "2024-02-14——星期三",
@@ -191,14 +199,6 @@
     {
       "basename": "02_TOPSIS",
       "path": "01_数学建模算法/01_评价类问题/02_TOPSIS.md"
-    },
-    {
-      "basename": "01_matlab基础",
-      "path": "02_Matlab知识/01_matlab基础.md"
-    },
-    {
-      "basename": "02_Matlab计算",
-      "path": "02_Matlab知识/02_Matlab计算.md"
     }
   ],
   "omittedPaths": [],
