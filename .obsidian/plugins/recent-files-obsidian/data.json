@@ -5,20 +5,24 @@
       "path": "01_Econometrics/02_一元线性回归.md"
     },
     {
-      "basename": "01_导论",
-      "path": "01_Econometrics/01_导论.md"
+      "basename": "零散知识点",
+      "path": "01_Econometrics/零散知识点.md"
     },
     {
-      "basename": "00_网课大概了解",
-      "path": "01_Econometrics/00_数学基础/00_网课大概了解.md"
+      "basename": "00_目录",
+      "path": "00_inbox/00_目录.md"
+    },
+    {
+      "basename": "01_导论",
+      "path": "01_Econometrics/01_导论.md"
     },
     {
       "basename": "01",
       "path": "01_Econometrics/00_数学基础/01.md"
     },
     {
-      "basename": "零散知识点",
-      "path": "01_Econometrics/零散知识点.md"
+      "basename": "00_网课大概了解",
+      "path": "01_Econometrics/00_数学基础/00_网课大概了解.md"
     },
     {
       "basename": "未命名",
@@ -195,10 +199,6 @@
     {
       "basename": "03_灰色关联分析法",
       "path": "01_数学建模算法/01_评价类问题/03_灰色关联分析法.md"
-    },
-    {
-      "basename": "02_TOPSIS",
-      "path": "01_数学建模算法/01_评价类问题/02_TOPSIS.md"
     }
   ],
   "omittedPaths": [],
