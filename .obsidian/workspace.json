@@ -104,7 +104,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_public finance/1_导论/03_规范分析——Negative analysis.md",
+                "file": "03_public finance/6_先前知识点速览/收入效应与替代效应.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6484faf6dc8a328e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/埃奇沃思框图.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -112,7 +125,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -186,7 +199,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03_public finance/1_导论/03_规范分析——Negative analysis.md",
+                "file": "00_inbox/埃奇沃思框图.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +216,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03_public finance/1_导论/03_规范分析——Negative analysis.md",
+                "file": "00_inbox/埃奇沃思框图.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -226,7 +239,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_public finance/1_导论/03_规范分析——Negative analysis.md"
+                "file": "00_inbox/埃奇沃思框图.md"
               }
             }
           },
@@ -260,8 +273,11 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "7ef4f4a586ee3138",
+  "active": "6484faf6dc8a328e",
   "lastOpenFiles": [
+    "03_public finance/6_先前知识点速览/收入效应与替代效应.md",
+    "00_inbox/埃奇沃思框图.md",
+    "03_public finance/1_导论/03_规范分析——Negative analysis.md",
     "99_学习情况记录/2024-03-05——星期二.md",
     "02_game theory/03_囚徒困境与纳什均衡.md",
     "98_attachment/Pasted image 20240305234504.png",
@@ -275,7 +291,6 @@
     "98_attachment/Pasted image 20240305232147.png",
     "98_attachment/Pasted image 20240305232048.png",
     "00_inbox/未命名 1.md",
-    "03_public finance/1_导论/03_规范分析——Negative analysis.md",
     "04_货币银行学/1_为什么研究货币，银行与金融市场.md",
     "05_经济思想史/02_前资本主义社会.md",
     "01_Econometrics/零散知识点.md",
@@ -287,7 +302,6 @@
     "00_inbox/未命名.md",
     "03_public finance/1_导论/02_实证分析——positive analysis.md",
     "03_public finance/1_导论/01_导论.md",
-    "03_public finance/6_先前知识点速览/收入效应与替代效应.md",
     "99_学习情况记录/2024-2-26至3-3第一周.md",
     "99_学习情况记录/2024-03-04——星期一.md",
     "05_经济思想史/01_导论.md",

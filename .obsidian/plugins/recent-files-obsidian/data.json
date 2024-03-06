@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "埃奇沃思框图",
+      "path": "00_inbox/埃奇沃思框图.md"
+    },
+    {
+      "basename": "收入效应与替代效应",
+      "path": "03_public finance/6_先前知识点速览/收入效应与替代效应.md"
+    },
+    {
       "basename": "03_规范分析——Negative analysis",
       "path": "03_public finance/1_导论/03_规范分析——Negative analysis.md"
     },
@@ -59,10 +67,6 @@
     {
       "basename": "01_导论",
       "path": "03_public finance/1_导论/01_导论.md"
-    },
-    {
-      "basename": "收入效应与替代效应",
-      "path": "03_public finance/6_先前知识点速览/收入效应与替代效应.md"
     },
     {
       "basename": "2024-2-26至3-3第一周",
@@ -195,10 +199,6 @@
     {
       "basename": "01_线性规划",
       "path": "01_数学建模算法/03_优化类问题/01_规划问题/01_线性规划.md"
-    },
-    {
-      "basename": "02_算法匹配速查表",
-      "path": "01_数学建模算法/00_大纲/02_算法匹配速查表.md"
     }
   ],
   "omittedPaths": [],
