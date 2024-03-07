@@ -8,124 +8,19 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3ed12c1f16057a24",
+            "id": "9b7afc81da9c3b2b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/00_数学基础/00_网课大概了解.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d75beaf4649863c2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_public finance/1_导论/02_实证分析——positive analysis.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c29e22f282d91bd5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02_game theory/02_初步认识博弈.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4598cdc93af9dc1d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/已复盘/2024-03-03——星期日.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "885b538835d9acab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Econometrics/02_一元线性回归.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "21f193006a69d64f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Econometrics/01_导论.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "df75bcebc13948c3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_public finance/1_导论/03_规范分析——Negative analysis.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7ef4f4a586ee3138",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_public finance/6_先前知识点速览/收入效应与替代效应.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6484faf6dc8a328e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Econometrics/零散知识点.md",
+                "file": "03_public finance/6_先前知识点速览/埃奇沃斯框图.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 8
+        ]
       }
     ],
     "direction": "vertical"
@@ -199,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/零散知识点.md",
+                "file": "03_public finance/6_先前知识点速览/埃奇沃斯框图.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -216,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/零散知识点.md",
+                "file": "03_public finance/6_先前知识点速览/埃奇沃斯框图.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -239,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/零散知识点.md"
+                "file": "03_public finance/6_先前知识点速览/埃奇沃斯框图.md"
               }
             }
           },
@@ -273,18 +168,34 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "6484faf6dc8a328e",
+  "active": "9b7afc81da9c3b2b",
   "lastOpenFiles": [
-    "98_attachment/Pasted image 20240306174741.png",
+    "98_attachment/Pasted image 20240307092836.png",
+    "03_public finance/1_导论/03_规范分析——Negative analysis.md",
+    "03_public finance/6_先前知识点速览/埃奇沃斯框图.md",
+    "98_attachment/Pasted image 20240307092808.png",
+    "03_public finance/6_先前知识点速览/契约曲线.md",
+    "03_public finance/6_先前知识点速览/帕累托.md",
     "01_Econometrics/02_一元线性回归.md",
-    "98_attachment/Pasted image 20240306174325.png",
-    "98_attachment/Pasted image 20240306174249.png",
-    "01_Econometrics/零散知识点.md",
-    "01_Econometrics/01_导论.md",
+    "01_Econometrics/00_目录.md",
+    "00_inbox/日记模版.md",
     "00_inbox/埃奇沃思框图.md",
     "03_public finance/6_先前知识点速览/收入效应与替代效应.md",
-    "03_public finance/1_导论/03_规范分析——Negative analysis.md",
+    "03_public finance/1_导论/02_实证分析——positive analysis.md",
+    "04_货币银行学/1_为什么研究货币，银行与金融市场.md",
+    "05_经济思想史/02_前资本主义社会.md",
+    "06_大创/01_目录.md",
+    "06_大创/结构性货币政策.md",
+    "99_学习情况记录/2024-03-07——星期四.md",
+    "99_学习情况记录/2024-03-06——星期三.md",
     "99_学习情况记录/2024-03-05——星期二.md",
+    "99_学习情况记录/2024-2-26至3-3第一周.md",
+    "99_学习情况记录/2024-03-04——星期一.md",
+    "01_Econometrics/零散知识点.md",
+    "98_attachment/Pasted image 20240306174741.png",
+    "98_attachment/Pasted image 20240306174325.png",
+    "98_attachment/Pasted image 20240306174249.png",
+    "01_Econometrics/01_导论.md",
     "02_game theory/03_囚徒困境与纳什均衡.md",
     "98_attachment/Pasted image 20240305234504.png",
     "98_attachment/Pasted image 20240305234344.png",
@@ -292,25 +203,9 @@
     "98_attachment/Pasted image 20240305234013.png",
     "98_attachment/Pasted image 20240305233917.png",
     "98_attachment/Pasted image 20240305233856.png",
-    "98_attachment/Pasted image 20240305233643.png",
-    "98_attachment/Pasted image 20240305233410.png",
     "00_inbox/未命名 1.md",
-    "04_货币银行学/1_为什么研究货币，银行与金融市场.md",
-    "05_经济思想史/02_前资本主义社会.md",
-    "00_inbox/00_目录.md",
     "01_Econometrics/00_数学基础/01.md",
     "01_Econometrics/00_数学基础/00_网课大概了解.md",
-    "00_inbox/未命名.md",
-    "03_public finance/1_导论/02_实证分析——positive analysis.md",
-    "03_public finance/1_导论/01_导论.md",
-    "99_学习情况记录/2024-2-26至3-3第一周.md",
-    "99_学习情况记录/2024-03-04——星期一.md",
-    "05_经济思想史/01_导论.md",
-    "04_货币银行学/0_在这节课开始之前，导论.md",
-    "99_学习情况记录/已复盘/2024-03-03——星期日.md",
-    "99_学习情况记录/已复盘/2024-02-26——星期一.md",
-    "99_学习情况记录/已复盘/2024-02-27——星期二.md",
-    "99_学习情况记录/已复盘/2024-03-02——星期六.md",
     "99_学习情况记录/已复盘",
     "01_Econometrics/00_数学基础",
     "03_public finance/6_先前知识点速览",
