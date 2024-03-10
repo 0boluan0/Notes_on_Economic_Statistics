@@ -26,7 +26,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2024-03-09——星期六.md",
+                "file": "02_game theory/03_囚徒困境与纳什均衡.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "20ff65a019b16e8a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_public finance/2_财政支出/公共物品public goods.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -108,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "99_学习情况记录/2024-03-09——星期六.md",
+                "file": "03_public finance/2_财政支出/公共物品public goods.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "99_学习情况记录/2024-03-09——星期六.md",
+                "file": "03_public finance/2_财政支出/公共物品public goods.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2024-03-09——星期六.md"
+                "file": "03_public finance/2_财政支出/公共物品public goods.md"
               }
             }
           },
@@ -165,7 +178,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 264.5
+    "width": 264.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,21 +196,24 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "dfa6863232f8be78",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
-    "03_public finance/1_导论/03_规范分析——Negative analysis.md",
+    "02_game theory/03_囚徒困境与纳什均衡.md",
+    "03_public finance/2_财政支出/公共物品public goods.md",
+    "01_Econometrics/02_一元线性回归.md",
+    "99_学习情况记录/2024-03-10——星期日.md",
+    "99_学习情况记录/2024-03-08——星期五.md",
     "99_学习情况记录/2024-03-09——星期六.md",
+    "99_学习情况记录/2024-2-26至3-3第一周.md",
+    "03_public finance/1_导论/03_规范分析——Negative analysis.md",
     "03_public finance/6_先前知识点速览/MRS边际替代率.md",
     "98_attachment/Pasted image 20240308143632.png",
     "98_attachment/Pasted image 20240308143620.png",
     "03_public finance/6_先前知识点速览/契约曲线.md",
     "98_attachment/Pasted image 20240308143543.png",
-    "02_game theory/03_囚徒困境与纳什均衡.md",
     "02_game theory/02_初步认识博弈.md",
     "02_game theory/01_导论.md",
     "01_Econometrics/零散知识点.md",
-    "01_Econometrics/02_一元线性回归.md",
-    "99_学习情况记录/2024-03-08——星期五.md",
     "99_学习情况记录/2024-03-07——星期四.md",
     "03_public finance/6_先前知识点速览/埃奇沃斯框图.md",
     "98_attachment/Pasted image 20240307092836.png",
@@ -212,9 +229,6 @@
     "06_大创/01_目录.md",
     "06_大创/结构性货币政策.md",
     "99_学习情况记录/2024-03-06——星期三.md",
-    "99_学习情况记录/2024-03-05——星期二.md",
-    "99_学习情况记录/2024-2-26至3-3第一周.md",
-    "99_学习情况记录/2024-03-04——星期一.md",
     "98_attachment/Pasted image 20240306174741.png",
     "98_attachment/Pasted image 20240306174325.png",
     "98_attachment/Pasted image 20240306174249.png",
