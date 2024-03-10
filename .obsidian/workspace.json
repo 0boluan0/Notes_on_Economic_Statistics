@@ -39,7 +39,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_public finance/2_财政支出/公共物品public goods.md",
+                "file": "99_学习情况记录/2-26至3-3第一周.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6e10389a11281057",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "99_学习情况记录/3-4至3-10第二周.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -121,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03_public finance/2_财政支出/公共物品public goods.md",
+                "file": "99_学习情况记录/3-4至3-10第二周.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03_public finance/2_财政支出/公共物品public goods.md",
+                "file": "99_学习情况记录/3-4至3-10第二周.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_public finance/2_财政支出/公共物品public goods.md"
+                "file": "99_学习情况记录/3-4至3-10第二周.md"
               }
             }
           },
@@ -198,13 +211,14 @@
   },
   "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
-    "02_game theory/03_囚徒困境与纳什均衡.md",
-    "03_public finance/2_财政支出/公共物品public goods.md",
-    "01_Econometrics/02_一元线性回归.md",
+    "99_学习情况记录/2-26至3-3第一周.md",
+    "99_学习情况记录/3-4至3-10第二周.md",
     "99_学习情况记录/2024-03-10——星期日.md",
+    "03_public finance/2_财政支出/公共物品public goods.md",
+    "02_game theory/03_囚徒困境与纳什均衡.md",
+    "01_Econometrics/02_一元线性回归.md",
     "99_学习情况记录/2024-03-08——星期五.md",
     "99_学习情况记录/2024-03-09——星期六.md",
-    "99_学习情况记录/2024-2-26至3-3第一周.md",
     "03_public finance/1_导论/03_规范分析——Negative analysis.md",
     "03_public finance/6_先前知识点速览/MRS边际替代率.md",
     "98_attachment/Pasted image 20240308143632.png",
@@ -228,7 +242,6 @@
     "05_经济思想史/02_前资本主义社会.md",
     "06_大创/01_目录.md",
     "06_大创/结构性货币政策.md",
-    "99_学习情况记录/2024-03-06——星期三.md",
     "98_attachment/Pasted image 20240306174741.png",
     "98_attachment/Pasted image 20240306174325.png",
     "98_attachment/Pasted image 20240306174249.png",
