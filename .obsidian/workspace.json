@@ -4,23 +4,50 @@
     "type": "split",
     "children": [
       {
-        "id": "efa80cd6c4e70521",
+        "id": "f370f1197758c9c4",
         "type": "tabs",
         "children": [
           {
-            "id": "6e10389a11281057",
+            "id": "c69e55a348e8a037",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_game theory/03_囚徒困境与纳什均衡.md",
+                "file": "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c567d16f0cf4469e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7889b8a0bba63b00",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -94,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_game theory/03_囚徒困境与纳什均衡.md",
+                "file": "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02_game theory/03_囚徒困境与纳什均衡.md",
+                "file": "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_game theory/03_囚徒困境与纳什均衡.md"
+                "file": "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md"
               }
             }
           },
@@ -168,8 +195,24 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "6e10389a11281057",
+  "active": "7889b8a0bba63b00",
   "lastOpenFiles": [
+    "98_attachment/Pasted image 20240311233008.png",
+    "03_public finance财政学/6_先前知识点速览/MRT边际转换率.md",
+    "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
+    "00_inbox/生产可能性曲线.md",
+    "98_attachment/Pasted image 20240311232621.png",
+    "03_public finance财政学/6_先前知识点速览/MRS边际替代率.md",
+    "03_public finance财政学/2_财政支出/公共物品public goods.md",
+    "03_public finance财政学/6_先前知识点速览/收入效应与替代效应.md",
+    "03_public finance财政学/6_先前知识点速览/契约曲线.md",
+    "03_public finance财政学/6_先前知识点速览/帕累托.md",
+    "98_attachment/Pasted image 20240311232403.png",
+    "03_public finance财政学/6_先前知识点速览/埃奇沃斯框图.md",
+    "02_game theory/04_非纯策略的纳什均衡.md",
+    "02_game theory/03_囚徒困境与纳什均衡.md",
+    "02_game theory/02_初步认识博弈.md",
+    "98_attachment/Pasted image 20240311231715.png",
     "98_attachment/Pasted image 20240311215251.png",
     "98_attachment/Pasted image 20240311215053.png",
     "98_attachment/Pasted image 20240311214936.png",
@@ -182,39 +225,23 @@
     "01_Econometrics/02_一元线性回归.md",
     "98_attachment/Pasted image 20240310190123.png",
     "98_attachment/Pasted image 20240310190106.png",
-    "98_attachment/Pasted image 20240310185642.png",
-    "98_attachment/Pasted image 20240310185423.png",
-    "98_attachment/Pasted image 20240310184955.png",
     "01_Econometrics/零散知识点.md",
-    "98_attachment/Pasted image 20240310184421.png",
     "01_Econometrics/00_目录.md",
     "01_Econometrics/01_导论.md",
     "00_inbox/未命名 1.md",
-    "03_public finance/2_财政支出/公共物品public goods.md",
-    "02_game theory/03_囚徒困境与纳什均衡.md",
     "99_学习情况记录/已复盘/2024-03-08——星期五.md",
     "99_学习情况记录/已复盘/2024-03-09——星期六.md",
-    "03_public finance/1_导论/03_规范分析——Negative analysis.md",
-    "03_public finance/6_先前知识点速览/MRS边际替代率.md",
-    "03_public finance/6_先前知识点速览/契约曲线.md",
-    "02_game theory/02_初步认识博弈.md",
     "02_game theory/01_导论.md",
     "99_学习情况记录/已复盘/2024-03-07——星期四.md",
-    "03_public finance/6_先前知识点速览/埃奇沃斯框图.md",
-    "03_public finance/6_先前知识点速览/帕累托.md",
-    "00_inbox/日记模版.md",
-    "00_inbox/埃奇沃思框图.md",
-    "03_public finance/6_先前知识点速览/收入效应与替代效应.md",
-    "03_public finance/1_导论/02_实证分析——positive analysis.md",
     "99_学习情况记录/已复盘",
     "01_Econometrics/00_数学基础",
-    "03_public finance/6_先前知识点速览",
+    "03_public finance财政学/6_先前知识点速览",
     "06_大创",
     "05_经济思想史",
     "04_货币银行学",
-    "03_public finance/5_其他重要内容",
-    "03_public finance/4_预算收支管理体系",
-    "03_public finance/3_财政收入",
-    "03_public finance/1_导论"
+    "03_public finance财政学/5_其他重要内容",
+    "03_public finance财政学/4_预算收支管理体系",
+    "03_public finance财政学/3_财政收入",
+    "03_public finance财政学/1_导论"
   ]
 }
