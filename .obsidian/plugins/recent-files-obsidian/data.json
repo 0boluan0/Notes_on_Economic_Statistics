@@ -1,8 +1,36 @@
 {
   "recentFiles": [
     {
+      "basename": "02_一元线性回归",
+      "path": "01_Econometrics/02_一元线性回归.md"
+    },
+    {
+      "basename": "01_导论",
+      "path": "01_Econometrics/01_导论.md"
+    },
+    {
+      "basename": "00_目录",
+      "path": "01_Econometrics/00_目录.md"
+    },
+    {
+      "basename": "04_混合策略的纳什均衡",
+      "path": "02_game theory/04_混合策略的纳什均衡.md"
+    },
+    {
       "basename": "2024-03-13——星期三",
       "path": "99_学习情况记录/2024-03-13——星期三.md"
+    },
+    {
+      "basename": "2024-03-12——星期二",
+      "path": "99_学习情况记录/2024-03-12——星期二.md"
+    },
+    {
+      "basename": "2024-03-11——星期一",
+      "path": "99_学习情况记录/2024-03-11——星期一.md"
+    },
+    {
+      "basename": "3-4至3-10第二周",
+      "path": "99_学习情况记录/3-4至3-10第二周.md"
     },
     {
       "basename": "03_规范分析——Negative analysis",
@@ -15,10 +43,6 @@
     {
       "basename": "01_公共物品public goods",
       "path": "03_public finance财政学/2_财政支出/01_公共物品public goods.md"
-    },
-    {
-      "basename": "04_非纯策略的纳什均衡",
-      "path": "02_game theory/04_非纯策略的纳什均衡.md"
     },
     {
       "basename": "02_前资本主义社会",
@@ -61,32 +85,16 @@
       "path": "02_game theory/02_初步认识博弈.md"
     },
     {
-      "basename": "3-4至3-10第二周",
-      "path": "99_学习情况记录/3-4至3-10第二周.md"
-    },
-    {
       "basename": "2-26至3-3第一周",
       "path": "99_学习情况记录/2-26至3-3第一周.md"
     },
     {
       "basename": "2024-03-10——星期日",
-      "path": "99_学习情况记录/2024-03-10——星期日.md"
-    },
-    {
-      "basename": "02_一元线性回归",
-      "path": "01_Econometrics/02_一元线性回归.md"
+      "path": "99_学习情况记录/已复盘/2024-03-10——星期日.md"
     },
     {
       "basename": "零散知识点",
       "path": "01_Econometrics/零散知识点.md"
-    },
-    {
-      "basename": "00_目录",
-      "path": "01_Econometrics/00_目录.md"
-    },
-    {
-      "basename": "01_导论",
-      "path": "01_Econometrics/01_导论.md"
     },
     {
       "basename": "未命名 1",
@@ -191,14 +199,6 @@
     {
       "basename": "2024-02-15——星期四",
       "path": "99_学习情况记录/已复盘/2024-02-15——星期四.md"
-    },
-    {
-      "basename": "2024-02-08——星期四",
-      "path": "99_学习情况记录/已复盘/2024-02-08——星期四.md"
-    },
-    {
-      "basename": "2024-02-14——星期三",
-      "path": "99_学习情况记录/已复盘/2024-02-14——星期三.md"
     }
   ],
   "omittedPaths": [],

@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
+                "file": "01_Econometrics/02_一元线性回归.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
+                "file": "01_Econometrics/02_一元线性回归.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
+                "file": "01_Econometrics/02_一元线性回归.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md"
+                "file": "01_Econometrics/02_一元线性回归.md"
               }
             }
           },
@@ -197,11 +197,19 @@
   },
   "active": "196ad8d14a6a0a0d",
   "lastOpenFiles": [
+    "98_attachment/Pasted image 20240313092834.png",
+    "98_attachment/Pasted image 20240313092346.png",
+    "01_Econometrics/01_导论.md",
+    "01_Econometrics/00_目录.md",
+    "02_game theory/04_混合策略的纳什均衡.md",
+    "99_学习情况记录/2024-03-13——星期三.md",
+    "99_学习情况记录/2024-03-12——星期二.md",
+    "99_学习情况记录/2024-03-11——星期一.md",
+    "99_学习情况记录/3-4至3-10第二周.md",
+    "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
     "03_public finance财政学/2_财政支出/02_外部性.md",
     "03_public finance财政学/2_财政支出/01_公共物品public goods.md",
     "98_attachment/Pasted image 20240312133200.png",
-    "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
-    "02_game theory/04_非纯策略的纳什均衡.md",
     "98_attachment/Pasted image 20240312124813.png",
     "98_attachment/Pasted image 20240312124803.png",
     "98_attachment/Pasted image 20240312093106.png",
@@ -220,19 +228,11 @@
     "03_public finance财政学/6_先前知识点速览/埃奇沃斯框图.md",
     "02_game theory/03_囚徒困境与纳什均衡.md",
     "02_game theory/02_初步认识博弈.md",
-    "98_attachment/Pasted image 20240311231715.png",
-    "99_学习情况记录/3-4至3-10第二周.md",
     "99_学习情况记录/2-26至3-3第一周.md",
-    "99_学习情况记录/2024-03-10——星期日.md",
+    "99_学习情况记录/已复盘/2024-03-10——星期日.md",
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/零散知识点.md",
-    "01_Econometrics/00_目录.md",
-    "01_Econometrics/01_导论.md",
     "00_inbox/未命名 1.md",
-    "99_学习情况记录/已复盘/2024-03-08——星期五.md",
-    "99_学习情况记录/已复盘/2024-03-09——星期六.md",
-    "02_game theory/01_导论.md",
-    "99_学习情况记录/已复盘/2024-03-07——星期四.md",
     "99_学习情况记录/已复盘",
     "01_Econometrics/00_数学基础",
     "03_public finance财政学/6_先前知识点速览",
