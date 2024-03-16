@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归.md",
+                "file": "01_Econometrics/03_多元线性回归.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归.md",
+                "file": "01_Econometrics/03_多元线性回归.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归.md",
+                "file": "01_Econometrics/03_多元线性回归.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归.md"
+                "file": "01_Econometrics/03_多元线性回归.md"
               }
             }
           },
@@ -197,9 +197,14 @@
   },
   "active": "690c2fc82cf49e52",
   "lastOpenFiles": [
+    "98_attachment/Pasted image 20240316170125.png",
+    "98_attachment/Pasted image 20240316170040.png",
+    "01_Econometrics/02_一元线性回归.md",
+    "01_Econometrics/03_多元线性回归.md",
+    "98_attachment/Pasted image 20240316134412.png",
+    "01_Econometrics/零散知识点.md",
     "02_game theory/03_囚徒困境与纳什均衡.md",
     "02_game theory/02_初步认识博弈.md",
-    "01_Econometrics/02_一元线性回归.md",
     "98_attachment/Pasted image 20240316121914.png",
     "98_attachment/Pasted image 20240316121557.png",
     "98_attachment/Pasted image 20240316120634.png",
@@ -207,16 +212,12 @@
     "98_attachment/Pasted image 20240316113446.png",
     "98_attachment/Pasted image 20240316113415.png",
     "98_attachment/Pasted image 20240316113034.png",
-    "01_Econometrics/03_多元线性回归.md",
     "03_public finance财政学/2_财政支出/02_外部性Externality.md",
     "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
     "03_public finance财政学/1_导论/02_实证分析——positive analysis.md",
     "03_public finance财政学/1_导论/01_导论.md",
     "03_public finance财政学/1_导论/00_财政学课程内容分布.md",
     "98_attachment/Pasted image 20240316112531.png",
-    "01_Econometrics/零散知识点.md",
-    "98_attachment/Pasted image 20240316111724.png",
-    "98_attachment/Pasted image 20240316111643.png",
     "99_学习情况记录/2024-03-16——星期六.md",
     "99_学习情况记录/2024-03-15——星期五.md",
     "99_学习情况记录/2024-03-14——星期四.md",

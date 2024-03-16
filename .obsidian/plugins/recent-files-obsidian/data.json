@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "03_多元线性回归",
+      "path": "01_Econometrics/03_多元线性回归.md"
+    },
+    {
       "basename": "02_一元线性回归",
       "path": "01_Econometrics/02_一元线性回归.md"
+    },
+    {
+      "basename": "零散知识点",
+      "path": "01_Econometrics/零散知识点.md"
     },
     {
       "basename": "03_囚徒困境与纳什均衡",
@@ -11,10 +19,6 @@
     {
       "basename": "02_初步认识博弈",
       "path": "02_game theory/02_初步认识博弈.md"
-    },
-    {
-      "basename": "03_多元线性回归",
-      "path": "01_Econometrics/03_多元线性回归.md"
     },
     {
       "basename": "02_外部性Externality",
@@ -35,10 +39,6 @@
     {
       "basename": "00_财政学课程内容分布",
       "path": "03_public finance财政学/1_导论/00_财政学课程内容分布.md"
-    },
-    {
-      "basename": "零散知识点",
-      "path": "01_Econometrics/零散知识点.md"
     },
     {
       "basename": "2024-03-16——星期六",
