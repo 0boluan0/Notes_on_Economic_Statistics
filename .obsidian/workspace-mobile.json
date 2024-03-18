@@ -1,0 +1,167 @@
+{
+  "main": {
+    "id": "32ec72fa0f264d0c",
+    "type": "split",
+    "children": [
+      {
+        "id": "097a8137195a619d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3917eb72f3d50838",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Econometrics/零散知识点.md",
+                "mode": "preview",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "56525a37842dc697",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "1ac827bf88583728",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "8f44486061247c16",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "8d174e4a033d1841",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "ee1a2f89b52c12a7",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      },
+      {
+        "id": "925a204b51cb3eca",
+        "type": "leaf",
+        "state": {
+          "type": "recent-files",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "3888594eb367e8e6",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "22b07f9f0008b5c8",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "01_Econometrics/零散知识点.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "047a1faaf30a4751",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "01_Econometrics/零散知识点.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "4464d913b7ee0f9c",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "01_Econometrics/零散知识点.md"
+          }
+        }
+      },
+      {
+        "id": "1ff0953407191d6f",
+        "type": "leaf",
+        "state": {
+          "type": "calendar",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "remotely-save:Remotely Save": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "workspaces:管理工作区布局": false,
+      "obsidian-memos:Memos": false
+    }
+  },
+  "active": "3917eb72f3d50838",
+  "lastOpenFiles": [
+    "01_Econometrics/02_一元线性回归.md",
+    "01_Econometrics/00_目录.md",
+    "03_public finance财政学/1_导论/02_实证分析——positive analysis.md",
+    "03_public finance财政学/1_导论/01_导论.md",
+    "03_public finance财政学/1_导论/00_财政学课程内容分布.md",
+    "03_public finance财政学/2_财政支出/03_财政支出总论.md",
+    "99_学习情况记录/2024-03-18——星期一.md",
+    "03_public finance"
+  ]
+}
