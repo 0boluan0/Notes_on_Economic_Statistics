@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "097a8137195a619d",
+        "id": "38de5cca533e0612",
         "type": "tabs",
         "children": [
           {
-            "id": "3917eb72f3d50838",
+            "id": "c41ae8b47f611280",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Econometrics/零散知识点.md",
-                "mode": "preview",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -94,7 +89,6 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "01_Econometrics/零散知识点.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -111,7 +105,6 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "01_Econometrics/零散知识点.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -122,9 +115,7 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {
-            "file": "01_Econometrics/零散知识点.md"
-          }
+          "state": {}
         }
       },
       {
@@ -153,15 +144,22 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "3917eb72f3d50838",
+  "active": "1ac827bf88583728",
   "lastOpenFiles": [
+    "98_attachment/Pasted image 20240319151125.png",
+    "98_attachment/Pasted image 20240319151140.png",
+    "98_attachment/Pasted image 20240319150509.png",
+    "98_attachment/Pasted image 20240319151039.png",
+    "98_attachment/Pasted image 20240319151114.png",
+    "99_学习情况记录/2024-03-19——星期二.md",
+    "03_public finance",
+    "01_Econometrics/零散知识点.md",
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/00_目录.md",
     "03_public finance财政学/1_导论/02_实证分析——positive analysis.md",
     "03_public finance财政学/1_导论/01_导论.md",
     "03_public finance财政学/1_导论/00_财政学课程内容分布.md",
     "03_public finance财政学/2_财政支出/03_财政支出总论.md",
-    "99_学习情况记录/2024-03-18——星期一.md",
-    "03_public finance"
+    "99_学习情况记录/2024-03-18——星期一.md"
   ]
 }
