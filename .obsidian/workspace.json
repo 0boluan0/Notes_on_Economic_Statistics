@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_game theory/03_囚徒困境与纳什均衡.md",
+                "file": "04_货币银行学/1_引言/02_金融体系概览.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -45,22 +45,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "6e4cc9a13fbebecf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "04_货币银行学/1_引言/02_金融体系概览.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -191,7 +178,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 264.5
+    "width": 442.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,25 +195,25 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "d8a634b925331606",
+  "active": "943b5cb6f53500fd",
   "lastOpenFiles": [
+    "04_货币银行学/2_金融市场/04_理解利率.md",
+    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
+    "02_game theory/03_囚徒困境与纳什均衡.md",
+    "04_货币银行学/1_引言/02_金融体系概览.md",
     "04_货币银行学/1_引言/01_为什么研究货币，银行与金融市场.md",
     "04_货币银行学/1_引言/03_什么是货币.md",
-    "00_inbox/04_囚徒困境与纳什均衡案例.md",
     "98_attachment/Pasted image 20240320212701.png",
     "98_attachment/Pasted image 20240320212508.png",
     "98_attachment/Pasted image 20240320212438.png",
-    "02_game theory/03_囚徒困境与纳什均衡.md",
     "01_Econometrics/03_多元线性回归.md",
     "04_货币银行学/0_补充/01_4-7章-基础金融数学和估值.md",
     "99_学习情况记录/2024-03-20——星期三.md",
-    "04_货币银行学/1_引言/02_金融体系概览.md",
     "99_学习情况记录/3-4至3-10第二周.md",
     "03_public finance财政学/2_财政支出/03_财政支出总论.md",
     "98_attachment/Pasted image 20240320172326.png",
     "98_attachment/Pasted image 20240320172313.png",
     "98_attachment/Pasted image 20240320172241.png",
-    "04_货币银行学/2_金融市场/04_理解利率.md",
     "99_学习情况记录/2024-03-19——星期二.md",
     "99_学习情况记录/2024-03-18——星期一.md",
     "99_学习情况记录/3-11至3-17第三周.md",
