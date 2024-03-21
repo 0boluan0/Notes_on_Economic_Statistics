@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_货币银行学/1_引言/02_金融体系概览.md",
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_货币银行学/1_引言/02_金融体系概览.md",
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_货币银行学/1_引言/02_金融体系概览.md",
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_货币银行学/1_引言/02_金融体系概览.md"
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
               }
             }
           },
@@ -197,14 +197,16 @@
   },
   "active": "943b5cb6f53500fd",
   "lastOpenFiles": [
+    "04_货币银行学/1_引言/03_什么是货币.md",
+    "04_货币银行学/1_引言/02_金融体系概览.md",
+    "98_attachment/Pasted image 20240321200947.png",
+    "98_attachment/Pasted image 20240321200942.png",
     "03_public finance财政学/2_财政支出/03_财政支出总论.md",
     "03_public finance财政学/2_财政支出/04_经常性支出.md",
     "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
-    "04_货币银行学/1_引言/02_金融体系概览.md",
     "04_货币银行学/2_金融市场/04_理解利率.md",
     "02_game theory/03_囚徒困境与纳什均衡.md",
     "04_货币银行学/1_引言/01_为什么研究货币，银行与金融市场.md",
-    "04_货币银行学/1_引言/03_什么是货币.md",
     "98_attachment/Pasted image 20240320212701.png",
     "98_attachment/Pasted image 20240320212508.png",
     "98_attachment/Pasted image 20240320212438.png",
@@ -220,8 +222,6 @@
     "99_学习情况记录/3-11至3-17第三周.md",
     "98_attachment/Pasted image 20240319151140.png",
     "98_attachment/Pasted image 20240319151125.png",
-    "98_attachment/Pasted image 20240319151114.png",
-    "98_attachment/Pasted image 20240319151039.png",
     "03_public finance财政学/2_财政支出/02_外部性Externality.md",
     "03_public finance",
     "01_Econometrics/02_一元线性回归.md",
