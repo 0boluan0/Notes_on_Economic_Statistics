@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_货币银行学/1_引言/03_什么是货币.md",
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_货币银行学/1_引言/03_什么是货币.md",
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_货币银行学/1_引言/03_什么是货币.md",
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_货币银行学/1_引言/03_什么是货币.md"
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
               }
             }
           },
@@ -161,7 +161,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -184,8 +184,10 @@
   },
   "active": "5b82ecbde03db3cb",
   "lastOpenFiles": [
-    "04_货币银行学/1_引言/02_金融体系概览.md",
+    "98_attachment/Pasted image 20240322213743.png",
     "04_货币银行学/1_引言/03_什么是货币.md",
+    "98_attachment/Pasted image 20240322211634.png",
+    "04_货币银行学/1_引言/02_金融体系概览.md",
     "04_货币银行学/2_金融市场/05_利率行为.md",
     "04_货币银行学/2_金融市场/04_理解利率.md",
     "03_public finance财政学/2_财政支出/03_财政支出总论.md",
@@ -216,10 +218,8 @@
     "98_attachment/Pasted image 20240321230352.png",
     "98_attachment/Pasted image 20240321224444.png",
     "98_attachment/Pasted image 20240321214842.png",
-    "98_attachment/Pasted image 20240321200947.png",
     "02_game theory/03_囚徒困境与纳什均衡.md",
     "01_Econometrics/03_多元线性回归.md",
-    "99_学习情况记录/3-4至3-10第二周.md",
     "03_public finance",
     "04_货币银行学/6_货币理论",
     "04_货币银行学/5_国际金融与货币政策",
