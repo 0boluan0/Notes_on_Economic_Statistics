@@ -5,6 +5,14 @@
       "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
     },
     {
+      "basename": "03_多元线性回归",
+      "path": "01_Econometrics/03_多元线性回归.md"
+    },
+    {
+      "basename": "Pasted image 20240228131447",
+      "path": "98_attachment/Pasted image 20240228131447.png"
+    },
+    {
       "basename": "03_囚徒困境与纳什均衡",
       "path": "02_game theory/03_囚徒困境与纳什均衡.md"
     },
@@ -35,10 +43,6 @@
     {
       "basename": "02_金融体系概览",
       "path": "04_货币银行学/1_引言/02_金融体系概览.md"
-    },
-    {
-      "basename": "03_多元线性回归",
-      "path": "01_Econometrics/03_多元线性回归.md"
     },
     {
       "basename": "零散知识点",
@@ -195,10 +199,6 @@
     {
       "basename": "01_概率统计相关概念",
       "path": "01_Econometrics/00_数学基础/01_概率统计相关概念.md"
-    },
-    {
-      "basename": "01_导论",
-      "path": "02_game theory/01_导论.md"
     }
   ],
   "omittedPaths": [],
