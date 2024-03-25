@@ -19,22 +19,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "5b82ecbde03db3cb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -108,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
+                "file": "03_public finance财政学/2_财政支出/04_经常性支出.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -125,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
+                "file": "03_public finance财政学/2_财政支出/04_经常性支出.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
+                "file": "03_public finance财政学/2_财政支出/04_经常性支出.md"
               }
             }
           },
@@ -182,25 +168,30 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "5b82ecbde03db3cb",
+  "active": "687ed7ebc81d1b4e",
   "lastOpenFiles": [
+    "98_attachment/Pasted image 20240325162156.png",
+    "98_attachment/Pasted image 20240325162140.png",
+    "98_attachment/Pasted image 20240325162128.png",
+    "98_attachment/Pasted image 20240325162111.png",
+    "03_public finance财政学/2_财政支出/05_投资性支出.md",
+    "04_货币银行学/2_金融市场/04_理解利率.md",
+    "04_货币银行学/0_补充/01_4-7章-基础金融数学和估值.md",
+    "04_货币银行学/1_引言/03_什么是货币.md",
+    "03_public finance财政学/2_财政支出/04_经常性支出.md",
+    "04_货币银行学/2_金融市场/05_利率行为.md",
+    "04_货币银行学/1_引言/02_金融体系概览.md",
+    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "01_Econometrics/03_多元线性回归.md",
     "98_attachment/Pasted image 20240325145241.png",
     "01_Econometrics/零散知识点.md",
-    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "99_学习情况记录/3-18至3-24第四周.md",
     "99_学习情况记录/2024-03-25——星期一.md",
     "04_货币银行学/1_引言/00_在这节课开始之前，导论.md",
     "99_学习情况记录/2024-03-24——星期日.md",
     "98_attachment/Pasted image 20240322213743.png",
-    "04_货币银行学/1_引言/03_什么是货币.md",
     "98_attachment/Pasted image 20240322211634.png",
-    "04_货币银行学/1_引言/02_金融体系概览.md",
-    "04_货币银行学/2_金融市场/05_利率行为.md",
-    "04_货币银行学/2_金融市场/04_理解利率.md",
     "03_public finance财政学/2_财政支出/03_财政支出总论.md",
-    "03_public finance财政学/2_财政支出/04_经常性支出.md",
-    "03_public finance财政学/2_财政支出/05_投资性支出.md",
     "99_学习情况记录/2024-03-22——星期五.md",
     "05_经济思想史/01_导论.md",
     "03_public finance财政学/6_先前知识点速览/埃奇沃斯框图.md",
@@ -211,15 +202,10 @@
     "99_学习情况记录/2024-03-20——星期三.md",
     "99_学习情况记录/2024-03-21——星期四.md",
     "99_学习情况记录/2024-03-19——星期二.md",
-    "99_学习情况记录/2024-03-18——星期一.md",
     "98_attachment/Pasted image 20240322160944.png",
-    "05_经济思想史/02_前资本主义社会.md",
     "98_attachment/Pasted image 20240322160549.png",
     "98_attachment/Pasted image 20240322151609.png",
     "98_attachment/Pasted image 20240322145638.png",
-    "98_attachment/Pasted image 20240322141305.png",
-    "98_attachment/Pasted image 20240322141037.png",
-    "98_attachment/Pasted image 20240321230352.png",
     "03_public finance",
     "04_货币银行学/6_货币理论",
     "04_货币银行学/5_国际金融与货币政策",
