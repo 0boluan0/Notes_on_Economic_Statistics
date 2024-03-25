@@ -11,8 +11,13 @@
             "id": "c41ae8b47f611280",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "02_game theory/03_囚徒困境与纳什均衡.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +94,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "00_inbox/日记模版.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -105,6 +111,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "00_inbox/日记模版.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -115,7 +122,9 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {}
+          "state": {
+            "file": "00_inbox/日记模版.md"
+          }
         }
       },
       {
@@ -146,13 +155,18 @@
   },
   "active": "1ac827bf88583728",
   "lastOpenFiles": [
+    "99_学习情况记录/3-18至3-24第四周.md",
+    "00_inbox/日记模版.md",
+    "02_game theory/03_囚徒困境与纳什均衡.md",
+    "01_Econometrics/03_多元线性回归.md",
+    "99_学习情况记录/2024-03-25——星期一.md",
+    "03_public finance",
     "98_attachment/Pasted image 20240319151125.png",
     "98_attachment/Pasted image 20240319151140.png",
     "98_attachment/Pasted image 20240319150509.png",
     "98_attachment/Pasted image 20240319151039.png",
     "98_attachment/Pasted image 20240319151114.png",
-    "99_学习情况记录/2024-03-19——星期二.md",
-    "03_public finance",
+    "99_学习情况记录/已复盘/2024-03-19——星期二.md",
     "01_Econometrics/零散知识点.md",
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/00_目录.md",
@@ -160,6 +174,6 @@
     "03_public finance财政学/1_导论/01_导论.md",
     "03_public finance财政学/1_导论/00_财政学课程内容分布.md",
     "03_public finance财政学/2_财政支出/03_财政支出总论.md",
-    "99_学习情况记录/2024-03-18——星期一.md"
+    "99_学习情况记录/已复盘/2024-03-18——星期一.md"
   ]
 }
