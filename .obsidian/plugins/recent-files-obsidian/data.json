@@ -1,8 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "03_多元线性回归",
+      "path": "01_Econometrics/03_多元线性回归.md"
+    },
+    {
+      "basename": "02_一元线性回归",
+      "path": "01_Econometrics/02_一元线性回归.md"
+    },
+    {
+      "basename": "04_模型设定",
+      "path": "01_Econometrics/04_模型设定.md"
+    },
+    {
+      "basename": "零散知识点",
+      "path": "01_Econometrics/零散知识点.md"
+    },
+    {
       "basename": "04_案例（囚徒困境与纳什均衡）",
       "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
+    },
+    {
+      "basename": "05_贝叶斯",
+      "path": "02_game theory/05_贝叶斯.md"
+    },
+    {
+      "basename": "2024-03-27——星期三",
+      "path": "99_学习情况记录/2024-03-27——星期三.md"
     },
     {
       "basename": "2024-03-26——星期二",
@@ -73,10 +97,6 @@
       "path": "99_学习情况记录/2024-03-25——星期一.md"
     },
     {
-      "basename": "03_多元线性回归",
-      "path": "01_Econometrics/03_多元线性回归.md"
-    },
-    {
       "basename": "Pasted image 20240228131447",
       "path": "98_attachment/Pasted image 20240228131447.png"
     },
@@ -91,10 +111,6 @@
     {
       "basename": "02_金融体系概览",
       "path": "04_货币银行学/1_引言/02_金融体系概览.md"
-    },
-    {
-      "basename": "零散知识点",
-      "path": "01_Econometrics/零散知识点.md"
     },
     {
       "basename": "2024-03-24——星期日",
@@ -161,10 +177,6 @@
       "path": "98_attachment/Pasted image 20240319140638.png"
     },
     {
-      "basename": "02_一元线性回归",
-      "path": "01_Econometrics/02_一元线性回归.md"
-    },
-    {
       "basename": "01_导论",
       "path": "03_public finance财政学/1_导论/01_导论.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "2024-03-14——星期四",
       "path": "99_学习情况记录/已复盘/2024-03-14——星期四.md"
-    },
-    {
-      "basename": "2024-03-13——星期三",
-      "path": "99_学习情况记录/已复盘/2024-03-13——星期三.md"
-    },
-    {
-      "basename": "2024-03-12——星期二",
-      "path": "99_学习情况记录/已复盘/2024-03-12——星期二.md"
-    },
-    {
-      "basename": "2024-03-11——星期一",
-      "path": "99_学习情况记录/已复盘/2024-03-11——星期一.md"
     }
   ],
   "omittedPaths": [],

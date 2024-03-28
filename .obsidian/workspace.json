@@ -32,9 +32,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d8ab212624b8882f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Econometrics/03_多元线性回归.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "40816842834fb023",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Econometrics/03_多元线性回归.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -108,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
+                "file": "01_Econometrics/03_多元线性回归.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -125,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
+                "file": "01_Econometrics/03_多元线性回归.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
+                "file": "01_Econometrics/03_多元线性回归.md"
               }
             }
           },
@@ -182,8 +208,16 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "00ebf34b735e7f2e",
+  "active": "40816842834fb023",
   "lastOpenFiles": [
+    "01_Econometrics/02_一元线性回归.md",
+    "01_Econometrics/03_多元线性回归.md",
+    "01_Econometrics/04_模型设定.md",
+    "01_Econometrics/零散知识点.md",
+    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
+    "02_game theory/05_贝叶斯.md",
+    "99_学习情况记录/2024-03-27——星期三.md",
+    "99_学习情况记录/2024-03-26——星期二.md",
     "06_大创/结构性货币政策.md",
     "05_经济思想史/02_前资本主义社会.md",
     "04_货币银行学/2_金融市场/04_理解利率.md",
@@ -192,7 +226,6 @@
     "04_货币银行学/0_补充/01_4-7章-基础金融数学和估值.md",
     "04_货币银行学/1_引言/00_在这节课开始之前，导论.md",
     "00_inbox/日记模版.md",
-    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "98_attachment/Pasted image 20240326150334.png",
     "03_public finance财政学/2_财政支出/05_投资性支出.md",
     "03_public finance财政学/2_财政支出/06_社会保障支出.md",
@@ -202,7 +235,6 @@
     "99_学习情况记录/3-11至3-17第三周.md",
     "99_学习情况记录/3-4至3-10第二周.md",
     "99_学习情况记录/2-26至3-3第一周.md",
-    "99_学习情况记录/2024-03-26——星期二.md",
     "99_学习情况记录/2024-03-25——星期一.md",
     "98_attachment/Pasted image 20240326140722.png",
     "98_attachment/Pasted image 20240326140657.png",
@@ -212,14 +244,8 @@
     "98_attachment/Pasted image 20240326134452.png",
     "98_attachment/Pasted image 20240326132416.png",
     "98_attachment/Pasted image 20240326132253.png",
-    "01_Econometrics/03_多元线性回归.md",
     "02_game theory/03_囚徒困境与纳什均衡.md",
     "03_public finance财政学/2_财政支出/04_经常性支出.md",
-    "04_货币银行学/1_引言/02_金融体系概览.md",
-    "01_Econometrics/零散知识点.md",
-    "99_学习情况记录/2024-03-24——星期日.md",
-    "03_public finance财政学/2_财政支出/03_财政支出总论.md",
-    "99_学习情况记录/2024-03-22——星期五.md",
     "03_public finance",
     "04_货币银行学/6_货币理论",
     "04_货币银行学/5_国际金融与货币政策",
