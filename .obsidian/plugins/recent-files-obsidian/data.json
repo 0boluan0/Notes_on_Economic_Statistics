@@ -1,20 +1,84 @@
 {
   "recentFiles": [
     {
-      "basename": "01_为什么研究货币，银行与金融市场",
-      "path": "04_货币银行学/1_引言/01_为什么研究货币，银行与金融市场.md"
+      "basename": "04_案例（囚徒困境与纳什均衡）",
+      "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
     },
     {
-      "basename": "02_金融体系概览",
-      "path": "04_货币银行学/1_引言/02_金融体系概览.md"
+      "basename": "03_多元线性回归",
+      "path": "01_Econometrics/03_多元线性回归.md"
+    },
+    {
+      "basename": "04_模型设定",
+      "path": "01_Econometrics/04_模型设定.md"
+    },
+    {
+      "basename": "02_一元线性回归",
+      "path": "01_Econometrics/02_一元线性回归.md"
+    },
+    {
+      "basename": "01_导论",
+      "path": "01_Econometrics/01_导论.md"
+    },
+    {
+      "basename": "01_概率统计相关概念",
+      "path": "01_Econometrics/00_数学基础/01_概率统计相关概念.md"
+    },
+    {
+      "basename": "00_网课大概了解",
+      "path": "01_Econometrics/00_数学基础/00_网课大概了解.md"
+    },
+    {
+      "basename": "01_财政收入总论",
+      "path": "03_public finance财政学/3_财政收入/01_财政收入总论.md"
+    },
+    {
+      "basename": "01_公共物品public goods",
+      "path": "03_public finance财政学/2_财政支出/01_公共物品public goods.md"
+    },
+    {
+      "basename": "02_外部性Externality",
+      "path": "03_public finance财政学/2_财政支出/02_外部性Externality.md"
+    },
+    {
+      "basename": "04_经常性支出",
+      "path": "03_public finance财政学/2_财政支出/04_经常性支出.md"
+    },
+    {
+      "basename": "05_投资性支出",
+      "path": "03_public finance财政学/2_财政支出/05_投资性支出.md"
+    },
+    {
+      "basename": "06_社会保障支出",
+      "path": "03_public finance财政学/2_财政支出/06_社会保障支出.md"
+    },
+    {
+      "basename": "零散知识点",
+      "path": "01_Econometrics/零散知识点.md"
+    },
+    {
+      "basename": "00_目录",
+      "path": "01_Econometrics/00_目录.md"
+    },
+    {
+      "basename": "01_4&7章-基础金融数学和估值",
+      "path": "04_货币银行学/0_补充/01_4&7章-基础金融数学和估值.md"
+    },
+    {
+      "basename": "03_什么是货币",
+      "path": "04_货币银行学/1_引言/03_什么是货币.md"
     },
     {
       "basename": "00_在这节课开始之前，导论",
       "path": "04_货币银行学/1_引言/00_在这节课开始之前，导论.md"
     },
     {
-      "basename": "01_4-7章-基础金融数学和估值",
-      "path": "04_货币银行学/0_补充/01_4-7章-基础金融数学和估值.md"
+      "basename": "01_为什么研究货币，银行与金融市场",
+      "path": "04_货币银行学/1_引言/01_为什么研究货币，银行与金融市场.md"
+    },
+    {
+      "basename": "02_金融体系概览",
+      "path": "04_货币银行学/1_引言/02_金融体系概览.md"
     },
     {
       "basename": "04_理解利率",
@@ -25,32 +89,12 @@
       "path": "04_货币银行学/2_金融市场/05_利率行为.md"
     },
     {
-      "basename": "04_案例（囚徒困境与纳什均衡）",
-      "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
-    },
-    {
       "basename": "05_贝叶斯",
       "path": "02_game theory/05_贝叶斯.md"
     },
     {
       "basename": "2024-03-28——星期四",
       "path": "99_学习情况记录/2024-03-28——星期四.md"
-    },
-    {
-      "basename": "03_多元线性回归",
-      "path": "01_Econometrics/03_多元线性回归.md"
-    },
-    {
-      "basename": "02_一元线性回归",
-      "path": "01_Econometrics/02_一元线性回归.md"
-    },
-    {
-      "basename": "04_模型设定",
-      "path": "01_Econometrics/04_模型设定.md"
-    },
-    {
-      "basename": "零散知识点",
-      "path": "01_Econometrics/零散知识点.md"
     },
     {
       "basename": "2024-03-27——星期三",
@@ -69,20 +113,8 @@
       "path": "05_经济思想史/02_前资本主义社会.md"
     },
     {
-      "basename": "03_什么是货币",
-      "path": "04_货币银行学/1_引言/03_什么是货币.md"
-    },
-    {
       "basename": "日记模版",
       "path": "00_inbox/日记模版.md"
-    },
-    {
-      "basename": "05_投资性支出",
-      "path": "03_public finance财政学/2_财政支出/05_投资性支出.md"
-    },
-    {
-      "basename": "06_社会保障支出",
-      "path": "03_public finance财政学/2_财政支出/06_社会保障支出.md"
     },
     {
       "basename": "2024-03-03——星期日",
@@ -117,10 +149,6 @@
       "path": "02_game theory/03_囚徒困境与纳什均衡.md"
     },
     {
-      "basename": "04_经常性支出",
-      "path": "03_public finance财政学/2_财政支出/04_经常性支出.md"
-    },
-    {
       "basename": "2024-03-24——星期日",
       "path": "99_学习情况记录/已复盘/2024-03-24——星期日.md"
     },
@@ -139,14 +167,6 @@
     {
       "basename": "埃奇沃斯框图",
       "path": "03_public finance财政学/6_先前知识点速览/埃奇沃斯框图.md"
-    },
-    {
-      "basename": "02_外部性Externality",
-      "path": "03_public finance财政学/2_财政支出/02_外部性Externality.md"
-    },
-    {
-      "basename": "01_公共物品public goods",
-      "path": "03_public finance财政学/2_财政支出/01_公共物品public goods.md"
     },
     {
       "basename": "03_规范分析——Negative analysis",
@@ -173,32 +193,12 @@
       "path": "99_学习情况记录/已复盘/2024-03-18——星期一.md"
     },
     {
-      "basename": "00_目录",
-      "path": "01_Econometrics/00_目录.md"
-    },
-    {
       "basename": "Pasted image 20240319140638",
       "path": "98_attachment/Pasted image 20240319140638.png"
     },
     {
       "basename": "01_导论",
       "path": "03_public finance财政学/1_导论/01_导论.md"
-    },
-    {
-      "basename": "00_财政学课程内容分布",
-      "path": "03_public finance财政学/1_导论/00_财政学课程内容分布.md"
-    },
-    {
-      "basename": "2024-03-17——星期日",
-      "path": "99_学习情况记录/已复盘/2024-03-17——星期日.md"
-    },
-    {
-      "basename": "2024-03-16——星期六",
-      "path": "99_学习情况记录/已复盘/2024-03-16——星期六.md"
-    },
-    {
-      "basename": "2024-03-15——星期五",
-      "path": "99_学习情况记录/已复盘/2024-03-15——星期五.md"
     }
   ],
   "omittedPaths": [],
