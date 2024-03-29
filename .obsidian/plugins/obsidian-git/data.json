@@ -2,7 +2,7 @@
   "commitMessage": "手动: {{date}}。{{numFiles}}",
   "commitDateFormat": "YYYY-MM-DD HH:mm",
   "autoSaveInterval": 30,
-  "autoPushInterval": 0,
+  "autoPushInterval": 300,
   "autoPullInterval": 0,
   "autoPullOnBoot": false,
   "disablePush": false,

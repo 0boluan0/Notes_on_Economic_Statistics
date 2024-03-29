@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
+                "file": "04_货币银行学/0_补充/01_4-7章-基础金融数学和估值.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
+                "file": "04_货币银行学/0_补充/01_4-7章-基础金融数学和估值.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
+                "file": "04_货币银行学/0_补充/01_4-7章-基础金融数学和估值.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
+                "file": "04_货币银行学/0_补充/01_4-7章-基础金融数学和估值.md"
               }
             }
           },
@@ -210,19 +210,24 @@
   },
   "active": "40816842834fb023",
   "lastOpenFiles": [
+    "99_学习情况记录/2024-03-29——星期五.md",
+    "98_attachment/Pasted image 20240329132754.png",
+    "98_attachment/Pasted image 20240329132646.png",
+    "98_attachment/Pasted image 20240329132633.png",
+    "98_attachment/Pasted image 20240329132125.png",
+    "04_货币银行学/2_金融市场/04_理解利率.md",
+    "04_货币银行学/2_金融市场/05_利率行为.md",
+    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "98_attachment/Pasted image 20240328215330.png",
     "98_attachment/Pasted image 20240328215317.png",
     "98_attachment/Pasted image 20240328212230.png",
     "02_game theory/05_贝叶斯.md",
     "99_学习情况记录/2024-03-28——星期四.md",
     "04_货币银行学/0_补充/01_4-7章-基础金融数学和估值.md",
-    "04_货币银行学/2_金融市场/04_理解利率.md",
-    "04_货币银行学/2_金融市场/05_利率行为.md",
     "01_Econometrics/03_多元线性回归.md",
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/04_模型设定.md",
     "01_Econometrics/零散知识点.md",
-    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "99_学习情况记录/2024-03-27——星期三.md",
     "99_学习情况记录/2024-03-26——星期二.md",
     "06_大创/结构性货币政策.md",
@@ -241,11 +246,6 @@
     "99_学习情况记录/2-26至3-3第一周.md",
     "99_学习情况记录/2024-03-25——星期一.md",
     "98_attachment/Pasted image 20240326140722.png",
-    "98_attachment/Pasted image 20240326140657.png",
-    "98_attachment/Pasted image 20240326135931.png",
-    "98_attachment/Pasted image 20240326135813.png",
-    "98_attachment/Pasted image 20240326135751.png",
-    "98_attachment/Pasted image 20240326134452.png",
     "03_public finance",
     "04_货币银行学/6_货币理论",
     "04_货币银行学/5_国际金融与货币政策",
