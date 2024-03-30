@@ -1,20 +1,40 @@
 {
   "recentFiles": [
     {
-      "basename": "04_案例（囚徒困境与纳什均衡）",
-      "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
+      "basename": "博弈论",
+      "path": "02_game theory/博弈论.md"
     },
     {
-      "basename": "05_贝叶斯",
-      "path": "02_game theory/05_贝叶斯.md"
+      "basename": "2024-03-30——星期六",
+      "path": "99_学习情况记录/2024-03-30——星期六.md"
+    },
+    {
+      "basename": "03_多元线性回归",
+      "path": "01_Econometrics/03_多元线性回归.md"
+    },
+    {
+      "basename": "02_一元线性回归",
+      "path": "01_Econometrics/02_一元线性回归.md"
+    },
+    {
+      "basename": "04_模型设定",
+      "path": "01_Econometrics/04_模型设定.md"
     },
     {
       "basename": "计量经济学OKR",
       "path": "01_Econometrics/计量经济学OKR.md"
     },
     {
-      "basename": "03_多元线性回归",
-      "path": "01_Econometrics/03_多元线性回归.md"
+      "basename": "05_贝叶斯博弈",
+      "path": "02_game theory/05_贝叶斯博弈.md"
+    },
+    {
+      "basename": "04_案例（囚徒困境与纳什均衡）",
+      "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
+    },
+    {
+      "basename": "2024-03-29——星期五",
+      "path": "99_学习情况记录/2024-03-29——星期五.md"
     },
     {
       "basename": "01_公共物品public goods",
@@ -25,36 +45,12 @@
       "path": "03_public finance财政学/2_财政支出/05_投资性支出.md"
     },
     {
-      "basename": "2024-03-30——星期六",
-      "path": "99_学习情况记录/2024-03-30——星期六.md"
-    },
-    {
-      "basename": "Drawing 2024-03-30 15.31.04.excalidraw",
-      "path": "Excalidraw/Drawing 2024-03-30 15.31.04.excalidraw.md"
-    },
-    {
-      "basename": "Drawing 2024-03-30 15.31.00.excalidraw",
-      "path": "Excalidraw/Drawing 2024-03-30 15.31.00.excalidraw.md"
-    },
-    {
-      "basename": "2024-03-29——星期五",
-      "path": "99_学习情况记录/2024-03-29——星期五.md"
-    },
-    {
       "basename": "2024-03-26——星期二",
       "path": "99_学习情况记录/2024-03-26——星期二.md"
     },
     {
       "basename": "2024-03-28——星期四",
       "path": "99_学习情况记录/2024-03-28——星期四.md"
-    },
-    {
-      "basename": "04_模型设定",
-      "path": "01_Econometrics/04_模型设定.md"
-    },
-    {
-      "basename": "02_一元线性回归",
-      "path": "01_Econometrics/02_一元线性回归.md"
     },
     {
       "basename": "01_导论",
@@ -195,10 +191,6 @@
     {
       "basename": "02_实证分析——positive analysis",
       "path": "03_public finance财政学/1_导论/02_实证分析——positive analysis.md"
-    },
-    {
-      "basename": "2024-03-20——星期三",
-      "path": "99_学习情况记录/已复盘/2024-03-20——星期三.md"
     }
   ],
   "omittedPaths": [],
