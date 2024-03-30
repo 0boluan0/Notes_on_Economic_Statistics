@@ -10,6 +10,8 @@
   "dataview",
   "media-extended",
   "mx-bili-plugin",
-  "remotely-save",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-tasks-plugin",
+  "obsidian-emoji-toolbar",
+  "obsidian-kanban"
 ]
