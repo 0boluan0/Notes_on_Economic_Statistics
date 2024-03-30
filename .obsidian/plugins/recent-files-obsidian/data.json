@@ -1,8 +1,40 @@
 {
   "recentFiles": [
     {
+      "basename": "04_案例（囚徒困境与纳什均衡）",
+      "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
+    },
+    {
+      "basename": "05_贝叶斯",
+      "path": "02_game theory/05_贝叶斯.md"
+    },
+    {
+      "basename": "计量经济学OKR",
+      "path": "01_Econometrics/计量经济学OKR.md"
+    },
+    {
+      "basename": "03_多元线性回归",
+      "path": "01_Econometrics/03_多元线性回归.md"
+    },
+    {
+      "basename": "01_公共物品public goods",
+      "path": "03_public finance财政学/2_财政支出/01_公共物品public goods.md"
+    },
+    {
+      "basename": "05_投资性支出",
+      "path": "03_public finance财政学/2_财政支出/05_投资性支出.md"
+    },
+    {
       "basename": "2024-03-30——星期六",
       "path": "99_学习情况记录/2024-03-30——星期六.md"
+    },
+    {
+      "basename": "Drawing 2024-03-30 15.31.04.excalidraw",
+      "path": "Excalidraw/Drawing 2024-03-30 15.31.04.excalidraw.md"
+    },
+    {
+      "basename": "Drawing 2024-03-30 15.31.00.excalidraw",
+      "path": "Excalidraw/Drawing 2024-03-30 15.31.00.excalidraw.md"
     },
     {
       "basename": "2024-03-29——星期五",
@@ -15,14 +47,6 @@
     {
       "basename": "2024-03-28——星期四",
       "path": "99_学习情况记录/2024-03-28——星期四.md"
-    },
-    {
-      "basename": "04_案例（囚徒困境与纳什均衡）",
-      "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
-    },
-    {
-      "basename": "03_多元线性回归",
-      "path": "01_Econometrics/03_多元线性回归.md"
     },
     {
       "basename": "04_模型设定",
@@ -49,20 +73,12 @@
       "path": "03_public finance财政学/3_财政收入/01_财政收入总论.md"
     },
     {
-      "basename": "01_公共物品public goods",
-      "path": "03_public finance财政学/2_财政支出/01_公共物品public goods.md"
-    },
-    {
       "basename": "02_外部性Externality",
       "path": "03_public finance财政学/2_财政支出/02_外部性Externality.md"
     },
     {
       "basename": "04_经常性支出",
       "path": "03_public finance财政学/2_财政支出/04_经常性支出.md"
-    },
-    {
-      "basename": "05_投资性支出",
-      "path": "03_public finance财政学/2_财政支出/05_投资性支出.md"
     },
     {
       "basename": "06_社会保障支出",
@@ -103,10 +119,6 @@
     {
       "basename": "05_利率行为",
       "path": "04_货币银行学/2_金融市场/05_利率行为.md"
-    },
-    {
-      "basename": "05_贝叶斯",
-      "path": "02_game theory/05_贝叶斯.md"
     },
     {
       "basename": "2024-03-27——星期三",
@@ -187,18 +199,6 @@
     {
       "basename": "2024-03-20——星期三",
       "path": "99_学习情况记录/已复盘/2024-03-20——星期三.md"
-    },
-    {
-      "basename": "2024-03-21——星期四",
-      "path": "99_学习情况记录/已复盘/2024-03-21——星期四.md"
-    },
-    {
-      "basename": "2024-03-19——星期二",
-      "path": "99_学习情况记录/已复盘/2024-03-19——星期二.md"
-    },
-    {
-      "basename": "2024-03-18——星期一",
-      "path": "99_学习情况记录/已复盘/2024-03-18——星期一.md"
     }
   ],
   "omittedPaths": [],

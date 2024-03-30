@@ -52,20 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_public finance财政学/2_财政支出/01_公共物品public goods.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c47dd38bb7f78f2c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/2024-03-30——星期六.md",
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -73,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -147,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "99_学习情况记录/2024-03-30——星期六.md",
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -164,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "99_学习情况记录/2024-03-30——星期六.md",
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2024-03-30——星期六.md"
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
               }
             }
           },
@@ -220,14 +207,23 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "c47dd38bb7f78f2c",
+  "active": "40816842834fb023",
   "lastOpenFiles": [
-    "99_学习情况记录/2024-03-29——星期五.md",
+    "98_attachment/Pasted image 20240330160407.png",
+    "02_game theory/05_贝叶斯.md",
+    "01_Econometrics/计量经济学OKR.md",
+    "01_Econometrics/03_多元线性回归.md",
+    "03_public finance财政学/2_财政支出/01_公共物品public goods.md",
+    "Tasks Plugin - Review and check your Statuses 2024-03-30 15-31-44.md",
+    "03_public finance财政学/2_财政支出/05_投资性支出.md",
     "99_学习情况记录/2024-03-30——星期六.md",
+    "Excalidraw/Drawing 2024-03-30 15.31.04.excalidraw.md",
+    "Excalidraw/Drawing 2024-03-30 15.31.00.excalidraw.md",
+    "Excalidraw",
+    "99_学习情况记录/2024-03-29——星期五.md",
     "99_学习情况记录/2024-03-26——星期二.md",
     "99_学习情况记录/2024-03-28——星期四.md",
     "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
-    "01_Econometrics/03_多元线性回归.md",
     "98_attachment/Pasted image 20240329171704.png",
     "98_attachment/Pasted image 20240329171645.png",
     "01_Econometrics/04_模型设定.md",
@@ -236,26 +232,18 @@
     "01_Econometrics/00_数学基础/01_概率统计相关概念.md",
     "01_Econometrics/00_数学基础/00_网课大概了解.md",
     "03_public finance财政学/3_财政收入/01_财政收入总论.md",
-    "03_public finance财政学/2_财政支出/01_公共物品public goods.md",
     "03_public finance财政学/2_财政支出/02_外部性Externality.md",
     "03_public finance财政学/2_财政支出/04_经常性支出.md",
-    "03_public finance财政学/2_财政支出/05_投资性支出.md",
     "03_public finance财政学/2_财政支出/06_社会保障支出.md",
     "01_Econometrics/零散知识点.md",
     "01_Econometrics/00_目录.md",
     "04_货币银行学/0_补充/01_4&7章-基础金融数学和估值.md",
     "98_attachment/Pasted image 20240329162413.png",
     "98_attachment/Pasted image 20240329162358.png",
-    "04_货币银行学/1_引言/03_什么是货币.md",
-    "04_货币银行学/1_引言/00_在这节课开始之前，导论.md",
-    "04_货币银行学/1_引言/01_为什么研究货币，银行与金融市场.md",
-    "04_货币银行学/1_引言/02_金融体系概览.md",
     "98_attachment/Pasted image 20240329132754.png",
     "98_attachment/Pasted image 20240329132646.png",
     "98_attachment/Pasted image 20240329132633.png",
     "98_attachment/Pasted image 20240329132125.png",
-    "04_货币银行学/2_金融市场/04_理解利率.md",
-    "04_货币银行学/2_金融市场/05_利率行为.md",
     "98_attachment/Pasted image 20240328215330.png",
     "98_attachment/Pasted image 20240328215317.png",
     "03_public finance",
@@ -266,7 +254,6 @@
     "04_货币银行学/2_金融市场",
     "04_货币银行学/1_引言",
     "01_Econometrics/99_补充知识",
-    "04_货币银行学/0_补充",
-    "99_学习情况记录/已复盘"
+    "04_货币银行学/0_补充"
   ]
 }
