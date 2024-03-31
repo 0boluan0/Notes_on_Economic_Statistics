@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
+                "file": "99_学习情况记录/2024-03-31——星期日.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
+                "file": "99_学习情况记录/2024-03-31——星期日.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
+                "file": "99_学习情况记录/2024-03-31——星期日.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md"
+                "file": "99_学习情况记录/2024-03-31——星期日.md"
               }
             }
           },
@@ -197,6 +197,10 @@
   },
   "active": "d8ab212624b8882f",
   "lastOpenFiles": [
+    "01_Econometrics/计量经济学.md",
+    "01_Econometrics/零散知识点.md",
+    "01_Econometrics/太白金星v计量.pdf",
+    "01_Econometrics/03_多元线性回归.md",
     "98_attachment/Pasted image 20240331205225.png",
     "98_attachment/Pasted image 20240331201029.png",
     "98_attachment/Pasted image 20240331201000.png",
@@ -205,7 +209,6 @@
     "04_货币银行学/2_金融市场/05_利率行为.md",
     "04_货币银行学/1_引言/03_什么是货币.md",
     "04_货币银行学/1_引言/02_金融体系概览.md",
-    "01_Econometrics/03_多元线性回归.md",
     "01_Econometrics/04_模型设定.md",
     "98_attachment/Pasted image 20240331161930.png",
     "98_attachment/Pasted image 20240331160623.png",
@@ -216,14 +219,10 @@
     "98_attachment/Pasted image 20240331150638.png",
     "98_attachment/Pasted image 20240331150609.png",
     "98_attachment/Pasted image 20240331150552.png",
-    "01_Econometrics/太白金星v计量.pdf",
-    "01_Econometrics/零散知识点.md",
     "99_学习情况记录/2024-03-31——星期日.md",
-    "01_Econometrics/计量经济学.md",
     "02_game theory/05_贝叶斯博弈.md",
     "02_game theory/博弈论.md",
     "99_学习情况记录/2024-03-30——星期六.md",
-    "98_attachment/Pasted image 20240330183327.png",
     "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "99_学习情况记录/2024-03-29——星期五.md",
     "03_public finance财政学/2_财政支出/01_公共物品public goods.md",
