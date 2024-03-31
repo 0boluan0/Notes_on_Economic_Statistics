@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "03_多元线性回归",
+      "path": "01_Econometrics/03_多元线性回归.md"
+    },
+    {
       "basename": "04_理解利率",
       "path": "04_货币银行学/2_金融市场/04_理解利率.md"
     },
@@ -15,10 +19,6 @@
     {
       "basename": "02_金融体系概览",
       "path": "04_货币银行学/1_引言/02_金融体系概览.md"
-    },
-    {
-      "basename": "03_多元线性回归",
-      "path": "01_Econometrics/03_多元线性回归.md"
     },
     {
       "basename": "04_模型设定",

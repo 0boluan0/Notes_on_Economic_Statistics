@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_货币银行学/2_金融市场/04_理解利率.md",
+                "file": "01_Econometrics/03_多元线性回归.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_货币银行学/2_金融市场/04_理解利率.md",
+                "file": "01_Econometrics/03_多元线性回归.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_货币银行学/2_金融市场/04_理解利率.md",
+                "file": "01_Econometrics/03_多元线性回归.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_货币银行学/2_金融市场/04_理解利率.md"
+                "file": "01_Econometrics/03_多元线性回归.md"
               }
             }
           },
@@ -197,6 +197,10 @@
   },
   "active": "d8ab212624b8882f",
   "lastOpenFiles": [
+    "98_attachment/Pasted image 20240331201029.png",
+    "98_attachment/Pasted image 20240331201000.png",
+    "98_attachment/Pasted image 20240331200913.png",
+    "04_货币银行学/2_金融市场/04_理解利率.md",
     "04_货币银行学/2_金融市场/05_利率行为.md",
     "04_货币银行学/1_引言/03_什么是货币.md",
     "04_货币银行学/1_引言/02_金融体系概览.md",
@@ -230,11 +234,7 @@
     "Excalidraw",
     "99_学习情况记录/2024-03-26——星期二.md",
     "99_学习情况记录/2024-03-28——星期四.md",
-    "98_attachment/Pasted image 20240329171704.png",
-    "98_attachment/Pasted image 20240329171645.png",
     "01_Econometrics/01_导论.md",
-    "01_Econometrics/00_数学基础/00_网课大概了解.md",
-    "03_public finance财政学/3_财政收入/01_财政收入总论.md",
     "03_public finance",
     "04_货币银行学/6_货币理论",
     "04_货币银行学/5_国际金融与货币政策",
