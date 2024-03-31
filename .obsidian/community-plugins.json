@@ -1,7 +1,6 @@
 [
   "file-explorer-note-count",
   "recent-files-obsidian",
-  "obsidian-pandoc",
   "obsidian-mind-map",
   "calendar",
   "obsidian-memos",
@@ -13,5 +12,6 @@
   "obsidian-git",
   "obsidian-tasks-plugin",
   "obsidian-emoji-toolbar",
-  "obsidian-kanban"
+  "obsidian-kanban",
+  "omnisearch"
 ]
