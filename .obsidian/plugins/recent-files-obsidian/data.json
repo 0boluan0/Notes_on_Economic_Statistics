@@ -1,8 +1,60 @@
 {
   "recentFiles": [
     {
+      "basename": "2024-04-01——星期一",
+      "path": "99_学习情况记录/2024-04-01——星期一.md"
+    },
+    {
       "basename": "05_贝叶斯博弈",
       "path": "02_game theory/05_贝叶斯博弈.md"
+    },
+    {
+      "basename": "04_案例（囚徒困境与纳什均衡）",
+      "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
+    },
+    {
+      "basename": "03_囚徒困境与纳什均衡",
+      "path": "02_game theory/03_囚徒困境与纳什均衡.md"
+    },
+    {
+      "basename": "01_导论",
+      "path": "02_game theory/01_导论.md"
+    },
+    {
+      "basename": "00-看板-博弈论",
+      "path": "02_game theory/00-看板-博弈论.md"
+    },
+    {
+      "basename": "00-看板-计量经济学",
+      "path": "01_Econometrics/00-看板-计量经济学.md"
+    },
+    {
+      "basename": "货币银行学",
+      "path": "04_货币银行学/货币银行学.md"
+    },
+    {
+      "basename": "4-1至4-7第六周",
+      "path": "99_学习情况记录/4-1至4-7第六周.md"
+    },
+    {
+      "basename": "3-18至3-24第四周",
+      "path": "99_学习情况记录/3-18至3-24第四周.md"
+    },
+    {
+      "basename": "3-25至3-31第五周",
+      "path": "99_学习情况记录/3-25至3-31第五周.md"
+    },
+    {
+      "basename": "3-11至3-17第三周",
+      "path": "99_学习情况记录/3-11至3-17第三周.md"
+    },
+    {
+      "basename": "3-4至3-10第二周",
+      "path": "99_学习情况记录/3-4至3-10第二周.md"
+    },
+    {
+      "basename": "零散知识点",
+      "path": "01_Econometrics/零散知识点.md"
     },
     {
       "basename": "03_多元线性回归",
@@ -11,22 +63,6 @@
     {
       "basename": "04_模型设定",
       "path": "01_Econometrics/04_模型设定.md"
-    },
-    {
-      "basename": "计量经济学",
-      "path": "01_Econometrics/计量经济学.md"
-    },
-    {
-      "basename": "零散知识点",
-      "path": "01_Econometrics/零散知识点.md"
-    },
-    {
-      "basename": "3-25至3-31第五周",
-      "path": "99_学习情况记录/3-25至3-31第五周.md"
-    },
-    {
-      "basename": "4-1至4-7第六周",
-      "path": "99_学习情况记录/4-1至4-7第六周.md"
     },
     {
       "basename": "2024-03-28——星期四",
@@ -69,16 +105,8 @@
       "path": "01_Econometrics/00_数学基础/01_概率统计相关概念.md"
     },
     {
-      "basename": "博弈论",
-      "path": "02_game theory/博弈论.md"
-    },
-    {
       "basename": "2024-03-30——星期六",
       "path": "99_学习情况记录/已复盘/2024-03-30——星期六.md"
-    },
-    {
-      "basename": "04_案例（囚徒困境与纳什均衡）",
-      "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
     },
     {
       "basename": "2024-03-29——星期五",
@@ -153,28 +181,12 @@
       "path": "99_学习情况记录/已复盘/2024-03-03——星期日.md"
     },
     {
-      "basename": "3-18至3-24第四周",
-      "path": "99_学习情况记录/3-18至3-24第四周.md"
-    },
-    {
-      "basename": "3-11至3-17第三周",
-      "path": "99_学习情况记录/3-11至3-17第三周.md"
-    },
-    {
-      "basename": "3-4至3-10第二周",
-      "path": "99_学习情况记录/3-4至3-10第二周.md"
-    },
-    {
       "basename": "2024-03-25——星期一",
       "path": "99_学习情况记录/已复盘/2024-03-25——星期一.md"
     },
     {
       "basename": "Pasted image 20240228131447",
       "path": "98_attachment/Pasted image 20240228131447.png"
-    },
-    {
-      "basename": "03_囚徒困境与纳什均衡",
-      "path": "02_game theory/03_囚徒困境与纳什均衡.md"
     },
     {
       "basename": "2024-03-24——星期日",
@@ -187,18 +199,6 @@
     {
       "basename": "2024-03-22——星期五",
       "path": "99_学习情况记录/已复盘/2024-03-22——星期五.md"
-    },
-    {
-      "basename": "01_导论",
-      "path": "05_经济思想史/01_导论.md"
-    },
-    {
-      "basename": "埃奇沃斯框图",
-      "path": "03_public finance财政学/6_先前知识点速览/埃奇沃斯框图.md"
-    },
-    {
-      "basename": "03_规范分析——Negative analysis",
-      "path": "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md"
     }
   ],
   "omittedPaths": [],

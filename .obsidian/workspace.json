@@ -4,63 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "36d50593a4366088",
+        "id": "112a8b41ca378289",
         "type": "tabs",
         "children": [
           {
-            "id": "9af0c82eb8055c3b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_public finance财政学/2_财政支出/05_投资性支出.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "00ebf34b735e7f2e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d8ab212624b8882f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/已复盘/2024-03-31——星期日.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3628c8805403f09b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/已复盘/2024-03-28——星期四.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fa7b4851ba7083f3",
+            "id": "36f6ac8011793d61",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -72,8 +20,7 @@
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -221,14 +168,24 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "fa7b4851ba7083f3",
+  "active": "36f6ac8011793d61",
   "lastOpenFiles": [
+    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
+    "02_game theory/03_囚徒困境与纳什均衡.md",
+    "02_game theory/01_导论.md",
+    "02_game theory/00-看板-博弈论.md",
+    "01_Econometrics/00-看板-计量经济学.md",
+    "04_货币银行学/货币银行学.md",
+    "99_学习情况记录/4-1至4-7第六周.md",
+    "99_学习情况记录/3-18至3-24第四周.md",
+    "99_学习情况记录/3-25至3-31第五周.md",
+    "99_学习情况记录/3-11至3-17第三周.md",
+    "99_学习情况记录/3-4至3-10第二周.md",
+    "01_Econometrics/零散知识点.md",
+    "02_game theory/05_贝叶斯博弈.md",
+    "98_attachment/Pasted image 20240401183224.png",
     "01_Econometrics/03_多元线性回归.md",
     "01_Econometrics/04_模型设定.md",
-    "01_Econometrics/计量经济学.md",
-    "01_Econometrics/零散知识点.md",
-    "99_学习情况记录/3-25至3-31第五周.md",
-    "99_学习情况记录/4-1至4-7第六周.md",
     "99_学习情况记录/已复盘/2024-03-28——星期四.md",
     "99_学习情况记录/2-26至3-3第一周.md",
     "99_学习情况记录/已复盘/2024-03-31——星期日.md",
@@ -249,17 +206,7 @@
     "01_Econometrics/00_目录.md",
     "98_attachment/Pasted image 20240331150638.png",
     "98_attachment/Pasted image 20240331150609.png",
-    "98_attachment/Pasted image 20240331150552.png",
-    "02_game theory/05_贝叶斯博弈.md",
-    "02_game theory/博弈论.md",
     "99_学习情况记录/已复盘/2024-03-30——星期六.md",
-    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
-    "99_学习情况记录/已复盘/2024-03-29——星期五.md",
-    "03_public finance财政学/2_财政支出/01_公共物品public goods.md",
-    "Tasks Plugin - Review and check your Statuses 2024-03-30 15-31-44.md",
-    "03_public finance财政学/2_财政支出/05_投资性支出.md",
-    "Excalidraw/Drawing 2024-03-30 15.31.04.excalidraw.md",
-    "Excalidraw/Drawing 2024-03-30 15.31.00.excalidraw.md",
     "Excalidraw",
     "03_public finance",
     "04_货币银行学/6_货币理论",
