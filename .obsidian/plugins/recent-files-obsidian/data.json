@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "2024-04-01——星期一",
-      "path": "99_学习情况记录/2024-04-01——星期一.md"
-    },
-    {
       "basename": "05_贝叶斯博弈",
       "path": "02_game theory/05_贝叶斯博弈.md"
+    },
+    {
+      "basename": "00-看板-博弈论",
+      "path": "02_game theory/00-看板-博弈论.md"
+    },
+    {
+      "basename": "01_导论",
+      "path": "02_game theory/01_导论.md"
+    },
+    {
+      "basename": "日记模版",
+      "path": "00_inbox/日记模版.md"
+    },
+    {
+      "basename": "2024-04-01——星期一",
+      "path": "99_学习情况记录/2024-04-01——星期一.md"
     },
     {
       "basename": "04_案例（囚徒困境与纳什均衡）",
@@ -15,14 +27,6 @@
     {
       "basename": "03_囚徒困境与纳什均衡",
       "path": "02_game theory/03_囚徒困境与纳什均衡.md"
-    },
-    {
-      "basename": "01_导论",
-      "path": "02_game theory/01_导论.md"
-    },
-    {
-      "basename": "00-看板-博弈论",
-      "path": "02_game theory/00-看板-博弈论.md"
     },
     {
       "basename": "00-看板-计量经济学",
@@ -171,10 +175,6 @@
     {
       "basename": "02_前资本主义社会",
       "path": "05_经济思想史/02_前资本主义社会.md"
-    },
-    {
-      "basename": "日记模版",
-      "path": "00_inbox/日记模版.md"
     },
     {
       "basename": "2024-03-03——星期日",
