@@ -16,8 +16,22 @@
                 "file": "01_Econometrics/太白金星v计量.pdf"
               }
             }
+          },
+          {
+            "id": "bdc7093ae73baf98",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02_game theory/05_贝叶斯博弈.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -91,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/太白金星v计量.pdf",
+                "file": "02_game theory/05_贝叶斯博弈.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -108,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/太白金星v计量.pdf",
+                "file": "02_game theory/05_贝叶斯博弈.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/太白金星v计量.pdf"
+                "file": "02_game theory/05_贝叶斯博弈.md"
               }
             }
           },
@@ -165,8 +179,17 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "36f6ac8011793d61",
+  "active": "bdc7093ae73baf98",
   "lastOpenFiles": [
+    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
+    "03_public finance财政学/2_财政支出/04_经常性支出.md",
+    "03_public finance财政学/2_财政支出/05_投资性支出.md",
+    "03_public finance财政学/2_财政支出/06_社会保障支出.md",
+    "03_public finance财政学/3_财政收入/01_财政收入总论.md",
+    "05_经济思想史/02_前资本主义社会.md",
+    "06_大创/结构性货币政策.md",
+    "99_学习情况记录/4-1至4-7第六周.md",
+    "99_学习情况记录/已复盘/2024-04-06——星期六.md",
     "01_Econometrics/零散知识点.md",
     "01_Econometrics/03_多元线性回归.md",
     "01_Econometrics/02_一元线性回归.md",
@@ -176,29 +199,21 @@
     "02_game theory/00-看板-博弈论.md",
     "02_game theory/01_导论.md",
     "00_inbox/日记模版.md",
-    "99_学习情况记录/2024-04-01——星期一.md",
-    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
+    "99_学习情况记录/已复盘/2024-04-01——星期一.md",
     "02_game theory/03_囚徒困境与纳什均衡.md",
     "01_Econometrics/00-看板-计量经济学.md",
     "04_货币银行学/货币银行学.md",
-    "99_学习情况记录/4-1至4-7第六周.md",
     "99_学习情况记录/3-18至3-24第四周.md",
     "99_学习情况记录/3-25至3-31第五周.md",
     "99_学习情况记录/3-11至3-17第三周.md",
     "99_学习情况记录/3-4至3-10第二周.md",
     "98_attachment/Pasted image 20240401183224.png",
     "99_学习情况记录/已复盘/2024-03-28——星期四.md",
-    "99_学习情况记录/2-26至3-3第一周.md",
-    "99_学习情况记录/已复盘/2024-03-31——星期日.md",
     "01_Econometrics/太白金星v计量.pdf",
     "98_attachment/Pasted image 20240331205225.png",
     "98_attachment/Pasted image 20240331201029.png",
     "98_attachment/Pasted image 20240331201000.png",
     "98_attachment/Pasted image 20240331200913.png",
-    "04_货币银行学/2_金融市场/04_理解利率.md",
-    "04_货币银行学/2_金融市场/05_利率行为.md",
-    "04_货币银行学/1_引言/03_什么是货币.md",
-    "04_货币银行学/1_引言/02_金融体系概览.md",
     "98_attachment/Pasted image 20240331161930.png",
     "98_attachment/Pasted image 20240331160623.png",
     "98_attachment/Pasted image 20240331150722.png",
