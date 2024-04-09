@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_game theory/05_贝叶斯博弈.md",
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_game theory/05_贝叶斯博弈.md",
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02_game theory/05_贝叶斯博弈.md",
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_game theory/05_贝叶斯博弈.md"
+                "file": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
               }
             }
           },
@@ -181,6 +181,8 @@
   },
   "active": "bdc7093ae73baf98",
   "lastOpenFiles": [
+    "02_game theory/03_囚徒困境与纳什均衡.md",
+    "02_game theory/05_贝叶斯博弈.md",
     "98_attachment/Pasted image 20240409111916.png",
     "98_attachment/Pasted image 20240409105306.png",
     "98_attachment/Pasted image 20240409104615.png",
@@ -191,7 +193,6 @@
     "98_attachment/Pasted image 20240408161943.png",
     "02_game theory/00-看板-博弈论.md",
     "99_学习情况记录/2024-04-08——星期一.md",
-    "02_game theory/05_贝叶斯博弈.md",
     "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "03_public finance财政学/2_财政支出/04_经常性支出.md",
     "03_public finance财政学/2_财政支出/05_投资性支出.md",
@@ -209,7 +210,6 @@
     "02_game theory/01_导论.md",
     "00_inbox/日记模版.md",
     "99_学习情况记录/已复盘/2024-04-01——星期一.md",
-    "02_game theory/03_囚徒困境与纳什均衡.md",
     "01_Econometrics/00-看板-计量经济学.md",
     "04_货币银行学/货币银行学.md",
     "99_学习情况记录/3-18至3-24第四周.md",
@@ -217,7 +217,6 @@
     "99_学习情况记录/3-11至3-17第三周.md",
     "98_attachment/Pasted image 20240401183224.png",
     "01_Econometrics/太白金星v计量.pdf",
-    "98_attachment/Pasted image 20240331205225.png",
     "Excalidraw",
     "03_public finance",
     "04_货币银行学/6_货币理论",
