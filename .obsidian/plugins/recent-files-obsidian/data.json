@@ -1,20 +1,48 @@
 {
   "recentFiles": [
     {
+      "basename": "05_贝叶斯博弈",
+      "path": "02_game theory/05_贝叶斯博弈.md"
+    },
+    {
+      "basename": "01_财政收入总论",
+      "path": "03_public finance财政学/3_财政收入/01_财政收入总论.md"
+    },
+    {
+      "basename": "0_财政学看板",
+      "path": "03_public finance财政学/0_财政学看板.md"
+    },
+    {
+      "basename": "06_社会保障支出",
+      "path": "03_public finance财政学/2_财政支出/06_社会保障支出.md"
+    },
+    {
+      "basename": "00_财政学课程内容分布",
+      "path": "03_public finance财政学/1_导论/00_财政学课程内容分布.md"
+    },
+    {
+      "basename": "01_目录",
+      "path": "06_大创/01_目录.md"
+    },
+    {
+      "basename": "0_货币银行学看板",
+      "path": "04_货币银行学/0_货币银行学看板.md"
+    },
+    {
+      "basename": "00-看板-博弈论",
+      "path": "02_game theory/00-看板-博弈论.md"
+    },
+    {
+      "basename": "2024-04-09——星期二",
+      "path": "99_学习情况记录/2024-04-09——星期二.md"
+    },
+    {
       "basename": "04_案例（囚徒困境与纳什均衡）",
       "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
     },
     {
       "basename": "03_囚徒困境与纳什均衡",
       "path": "02_game theory/03_囚徒困境与纳什均衡.md"
-    },
-    {
-      "basename": "05_贝叶斯博弈",
-      "path": "02_game theory/05_贝叶斯博弈.md"
-    },
-    {
-      "basename": "00-看板-博弈论",
-      "path": "02_game theory/00-看板-博弈论.md"
     },
     {
       "basename": "2024-04-08——星期一",
@@ -29,20 +57,8 @@
       "path": "03_public finance财政学/2_财政支出/05_投资性支出.md"
     },
     {
-      "basename": "06_社会保障支出",
-      "path": "03_public finance财政学/2_财政支出/06_社会保障支出.md"
-    },
-    {
-      "basename": "01_财政收入总论",
-      "path": "03_public finance财政学/3_财政收入/01_财政收入总论.md"
-    },
-    {
       "basename": "02_前资本主义社会",
       "path": "05_经济思想史/02_前资本主义社会.md"
-    },
-    {
-      "basename": "结构性货币政策",
-      "path": "06_大创/结构性货币政策.md"
     },
     {
       "basename": "4-1至4-7第六周",
@@ -87,10 +103,6 @@
     {
       "basename": "00-看板-计量经济学",
       "path": "01_Econometrics/00-看板-计量经济学.md"
-    },
-    {
-      "basename": "货币银行学",
-      "path": "04_货币银行学/货币银行学.md"
     },
     {
       "basename": "3-18至3-24第四周",
@@ -187,18 +199,6 @@
     {
       "basename": "2024-03-03——星期日",
       "path": "99_学习情况记录/已复盘/2024-03-03——星期日.md"
-    },
-    {
-      "basename": "2024-03-25——星期一",
-      "path": "99_学习情况记录/已复盘/2024-03-25——星期一.md"
-    },
-    {
-      "basename": "Pasted image 20240228131447",
-      "path": "98_attachment/Pasted image 20240228131447.png"
-    },
-    {
-      "basename": "2024-03-24——星期日",
-      "path": "99_学习情况记录/已复盘/2024-03-24——星期日.md"
     }
   ],
   "omittedPaths": [],
