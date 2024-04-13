@@ -8,22 +8,51 @@
         "type": "tabs",
         "children": [
           {
-            "id": "36f6ac8011793d61",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "01_Econometrics/太白金星v计量.pdf"
-              }
-            }
-          },
-          {
             "id": "bdc7093ae73baf98",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_game theory/05_贝叶斯博弈.md",
+                "file": "01_Econometrics/04_模型设定.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b48697f53bcb3bdb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_public finance财政学/3_财政收入/01_财政收入总论.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c692605678002cdc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_public finance财政学/6_先前知识点速览/MRT边际转换率.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a671c565a6734f66",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "99_学习情况记录/2024-04-13——星期六.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -31,7 +60,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -105,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_game theory/05_贝叶斯博弈.md",
+                "file": "99_学习情况记录/2024-04-13——星期六.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -122,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02_game theory/05_贝叶斯博弈.md",
+                "file": "99_学习情况记录/2024-04-13——星期六.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_game theory/05_贝叶斯博弈.md"
+                "file": "99_学习情况记录/2024-04-13——星期六.md"
               }
             }
           },
@@ -179,52 +208,53 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "bdc7093ae73baf98",
+  "active": "a671c565a6734f66",
   "lastOpenFiles": [
-    "03_public finance财政学/3_财政收入/01_财政收入总论.md",
-    "03_public finance财政学/0_财政学看板.md",
+    "02_game theory/06_扩展性博弈.md",
+    "99_学习情况记录/2024-04-13——星期六.md",
+    "02_game theory/05_贝叶斯博弈.md",
+    "03_public finance财政学/3_财政收入/03_税收与经济效率.md",
+    "03_public finance财政学/6_先前知识点速览/消费者剩余.md",
+    "03_public finance财政学/6_先前知识点速览/MRT边际转换率.md",
+    "98_attachment/Pasted image 20240412165943.png",
+    "03_public finance财政学/2_财政支出/05_投资性支出.md",
+    "03_public finance财政学/2_财政支出/03_财政支出总论.md",
+    "98_attachment/Pasted image 20240412163417.png",
+    "98_attachment/Pasted image 20240412162752.png",
+    "98_attachment/Pasted image 20240412162419.png",
+    "03_public finance财政学/2_财政支出/04_经常性支出.md",
+    "03_public finance财政学/2_财政支出/01_公共物品public goods.md",
+    "03_public finance财政学/2_财政支出/02_外部性Externality.md",
     "03_public finance财政学/2_财政支出/06_社会保障支出.md",
+    "03_public finance财政学/3_财政收入/01_财政收入总论.md",
+    "03_public finance财政学/3_财政收入/02_税收与收入分布.md",
+    "01_Econometrics/太白金星v计量.pdf",
+    "01_Econometrics/04_模型设定.md",
+    "01_Econometrics/零散知识点.md",
+    "01_Econometrics/03_多元线性回归.md",
+    "02_game theory/00-看板-博弈论.md",
+    "99_学习情况记录/2024-04-11——星期四.md",
+    "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
+    "03_public finance财政学/1_导论/02_实证分析——positive analysis.md",
+    "98_attachment/Pasted image 20240411200217.png",
+    "98_attachment/Pasted image 20240411195529.png",
+    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
+    "02_game theory/第2次作业.pdf",
+    "02_game theory/第1次作业.pdf",
+    "02_game theory/第1次作业补充.pdf",
+    "01_Econometrics/00-看板-计量经济学.md",
+    "04_货币银行学/0_补充/01_4&7章-基础金融数学和估值.md",
+    "04_货币银行学/2_金融市场/04_理解利率.md",
+    "04_货币银行学/2_金融市场/05_利率行为.md",
     "98_attachment/Pasted image 20240409151358.png",
     "98_attachment/Pasted image 20240409151210.png",
     "98_attachment/Pasted image 20240409151150.png",
     "98_attachment/Pasted image 20240409151059.png",
-    "98_attachment/Pasted image 20240409150632.png",
-    "98_attachment/Pasted image 20240409150610.png",
-    "98_attachment/Pasted image 20240409145800.png",
-    "98_attachment/Pasted image 20240409145313.png",
-    "98_attachment/Pasted image 20240409140958.png",
-    "98_attachment/Pasted image 20240409140807.png",
-    "03_public finance财政学/1_导论/00_财政学课程内容分布.md",
-    "06_大创/01_目录.md",
-    "06_大创/结构性货币政策.md",
-    "04_货币银行学/0_货币银行学看板.md",
-    "02_game theory/00-看板-博弈论.md",
-    "02_game theory/05_贝叶斯博弈.md",
-    "99_学习情况记录/2024-04-09——星期二.md",
-    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
-    "02_game theory/03_囚徒困境与纳什均衡.md",
-    "99_学习情况记录/2024-04-08——星期一.md",
-    "03_public finance财政学/2_财政支出/04_经常性支出.md",
-    "03_public finance财政学/2_财政支出/05_投资性支出.md",
-    "05_经济思想史/02_前资本主义社会.md",
-    "99_学习情况记录/4-1至4-7第六周.md",
-    "99_学习情况记录/已复盘/2024-04-06——星期六.md",
-    "01_Econometrics/零散知识点.md",
-    "01_Econometrics/03_多元线性回归.md",
-    "01_Econometrics/02_一元线性回归.md",
-    "01_Econometrics/04_模型设定.md",
-    "02_game theory/01_导论.md",
-    "00_inbox/日记模版.md",
-    "99_学习情况记录/已复盘/2024-04-01——星期一.md",
-    "01_Econometrics/太白金星v计量.pdf",
     "Excalidraw",
     "03_public finance",
     "04_货币银行学/6_货币理论",
     "04_货币银行学/5_国际金融与货币政策",
     "04_货币银行学/4_中央银行与货币政策的实施",
-    "04_货币银行学/3_金融机构",
-    "04_货币银行学/2_金融市场",
-    "04_货币银行学/1_引言",
-    "01_Econometrics/99_补充知识"
+    "04_货币银行学/3_金融机构"
   ]
 }
