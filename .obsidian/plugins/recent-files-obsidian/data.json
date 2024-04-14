@@ -1,8 +1,52 @@
 {
   "recentFiles": [
     {
+      "basename": "0_货币银行学看板",
+      "path": "04_货币银行学/0_货币银行学看板.md"
+    },
+    {
+      "basename": "0_财政学看板",
+      "path": "03_public finance财政学/0_财政学看板.md"
+    },
+    {
+      "basename": "第2次作业",
+      "path": "02_game theory/第2次作业.pdf"
+    },
+    {
+      "basename": "第1次作业补充",
+      "path": "02_game theory/第1次作业补充.pdf"
+    },
+    {
+      "basename": "第1次作业",
+      "path": "02_game theory/第1次作业.pdf"
+    },
+    {
+      "basename": "01_财政收入总论",
+      "path": "03_public finance财政学/3_财政收入/01_财政收入总论.md"
+    },
+    {
+      "basename": "MRT边际转换率",
+      "path": "03_public finance财政学/6_先前知识点速览/MRT边际转换率.md"
+    },
+    {
+      "basename": "2024-04-08——星期一",
+      "path": "99_学习情况记录/已复盘/2024-04-08——星期一.md"
+    },
+    {
+      "basename": "2024-04-09——星期二",
+      "path": "99_学习情况记录/已复盘/2024-04-09——星期二.md"
+    },
+    {
+      "basename": "2024-04-11——星期四",
+      "path": "99_学习情况记录/已复盘/2024-04-11——星期四.md"
+    },
+    {
       "basename": "2024-04-13——星期六",
-      "path": "99_学习情况记录/2024-04-13——星期六.md"
+      "path": "99_学习情况记录/已复盘/2024-04-13——星期六.md"
+    },
+    {
+      "basename": "4-8至4-14第七周",
+      "path": "99_学习情况记录/4-8至4-14第七周.md"
     },
     {
       "basename": "06_扩展性博弈",
@@ -19,10 +63,6 @@
     {
       "basename": "消费者剩余",
       "path": "03_public finance财政学/6_先前知识点速览/消费者剩余.md"
-    },
-    {
-      "basename": "MRT边际转换率",
-      "path": "03_public finance财政学/6_先前知识点速览/MRT边际转换率.md"
     },
     {
       "basename": "05_投资性支出",
@@ -47,10 +87,6 @@
     {
       "basename": "06_社会保障支出",
       "path": "03_public finance财政学/2_财政支出/06_社会保障支出.md"
-    },
-    {
-      "basename": "01_财政收入总论",
-      "path": "03_public finance财政学/3_财政收入/01_财政收入总论.md"
     },
     {
       "basename": "02_税收与收入分布",
@@ -89,18 +125,6 @@
       "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
     },
     {
-      "basename": "第2次作业",
-      "path": "02_game theory/第2次作业.pdf"
-    },
-    {
-      "basename": "第1次作业",
-      "path": "02_game theory/第1次作业.pdf"
-    },
-    {
-      "basename": "第1次作业补充",
-      "path": "02_game theory/第1次作业补充.pdf"
-    },
-    {
       "basename": "00-看板-计量经济学",
       "path": "01_Econometrics/00-看板-计量经济学.md"
     },
@@ -117,10 +141,6 @@
       "path": "04_货币银行学/2_金融市场/05_利率行为.md"
     },
     {
-      "basename": "0_货币银行学看板",
-      "path": "04_货币银行学/0_货币银行学看板.md"
-    },
-    {
       "basename": "01_导论",
       "path": "01_Econometrics/01_导论.md"
     },
@@ -129,24 +149,12 @@
       "path": "02_game theory/03_囚徒困境与纳什均衡.md"
     },
     {
-      "basename": "0_财政学看板",
-      "path": "03_public finance财政学/0_财政学看板.md"
-    },
-    {
       "basename": "00_财政学课程内容分布",
       "path": "03_public finance财政学/1_导论/00_财政学课程内容分布.md"
     },
     {
       "basename": "01_目录",
       "path": "06_大创/01_目录.md"
-    },
-    {
-      "basename": "2024-04-09——星期二",
-      "path": "99_学习情况记录/2024-04-09——星期二.md"
-    },
-    {
-      "basename": "2024-04-08——星期一",
-      "path": "99_学习情况记录/2024-04-08——星期一.md"
     },
     {
       "basename": "02_前资本主义社会",
@@ -191,14 +199,6 @@
     {
       "basename": "3-4至3-10第二周",
       "path": "99_学习情况记录/3-4至3-10第二周.md"
-    },
-    {
-      "basename": "2024-03-28——星期四",
-      "path": "99_学习情况记录/已复盘/2024-03-28——星期四.md"
-    },
-    {
-      "basename": "2-26至3-3第一周",
-      "path": "99_学习情况记录/2-26至3-3第一周.md"
     }
   ],
   "omittedPaths": [],
