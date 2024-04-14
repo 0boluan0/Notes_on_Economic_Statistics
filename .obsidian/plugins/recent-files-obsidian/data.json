@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "02_一元线性回归",
+      "path": "01_Econometrics/02_一元线性回归.md"
+    },
+    {
       "basename": "2024-04-14——星期日",
       "path": "99_学习情况记录/2024-04-14——星期日.md"
+    },
+    {
+      "basename": "06_扩展性博弈",
+      "path": "02_game theory/06_扩展性博弈.md"
+    },
+    {
+      "basename": "05_贝叶斯博弈",
+      "path": "02_game theory/05_贝叶斯博弈.md"
     },
     {
       "basename": "0_货币银行学看板",
@@ -51,14 +63,6 @@
     {
       "basename": "4-8至4-14第七周",
       "path": "99_学习情况记录/4-8至4-14第七周.md"
-    },
-    {
-      "basename": "06_扩展性博弈",
-      "path": "02_game theory/06_扩展性博弈.md"
-    },
-    {
-      "basename": "05_贝叶斯博弈",
-      "path": "02_game theory/05_贝叶斯博弈.md"
     },
     {
       "basename": "03_税收与经济效率",
@@ -171,10 +175,6 @@
     {
       "basename": "2024-04-06——星期六",
       "path": "99_学习情况记录/已复盘/2024-04-06——星期六.md"
-    },
-    {
-      "basename": "02_一元线性回归",
-      "path": "01_Econometrics/02_一元线性回归.md"
     },
     {
       "basename": "01_导论",
