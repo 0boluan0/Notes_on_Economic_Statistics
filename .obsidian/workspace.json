@@ -24,9 +24,12 @@
             "id": "b48697f53bcb3bdb",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "04_货币银行学/0_货币银行学看板.md"
+                "file": "99_学习情况记录/2024-04-14——星期日.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -105,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_货币银行学/0_货币银行学看板.md",
+                "file": "99_学习情况记录/2024-04-14——星期日.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -122,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_货币银行学/0_货币银行学看板.md",
+                "file": "99_学习情况记录/2024-04-14——星期日.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_货币银行学/0_货币银行学看板.md"
+                "file": "99_学习情况记录/2024-04-14——星期日.md"
               }
             }
           },
@@ -181,6 +184,8 @@
   },
   "active": "b48697f53bcb3bdb",
   "lastOpenFiles": [
+    "04_货币银行学/0_货币银行学看板.md",
+    "99_学习情况记录/2024-04-14——星期日.md",
     "03_public finance财政学/0_财政学看板.md",
     "02_game theory/第2次作业.pdf",
     "02_game theory/第1次作业补充.pdf",
@@ -213,10 +218,8 @@
     "01_Econometrics/03_多元线性回归.md",
     "02_game theory/00-看板-博弈论.md",
     "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
-    "03_public finance财政学/1_导论/02_实证分析——positive analysis.md",
     "98_attachment/Pasted image 20240411200217.png",
     "98_attachment/Pasted image 20240411195529.png",
-    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "98_attachment/Pasted image 20240409151358.png",
     "98_attachment/Pasted image 20240409151210.png",
     "98_attachment/Pasted image 20240409151150.png",
