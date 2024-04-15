@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "0_货币银行学看板",
+      "path": "04_货币银行学/0_货币银行学看板.md"
+    },
+    {
+      "basename": "0_财政学看板",
+      "path": "03_public finance财政学/0_财政学看板.md"
+    },
+    {
+      "basename": "00-看板-博弈论",
+      "path": "02_game theory/00-看板-博弈论.md"
+    },
+    {
+      "basename": "00-看板-计量经济学",
+      "path": "01_Econometrics/00-看板-计量经济学.md"
+    },
+    {
+      "basename": "03_多元线性回归",
+      "path": "01_Econometrics/03_多元线性回归.md"
+    },
+    {
       "basename": "02_一元线性回归",
       "path": "01_Econometrics/02_一元线性回归.md"
     },
@@ -15,14 +35,6 @@
     {
       "basename": "2024-04-14——星期日",
       "path": "99_学习情况记录/2024-04-14——星期日.md"
-    },
-    {
-      "basename": "0_货币银行学看板",
-      "path": "04_货币银行学/0_货币银行学看板.md"
-    },
-    {
-      "basename": "0_财政学看板",
-      "path": "03_public finance财政学/0_财政学看板.md"
     },
     {
       "basename": "第2次作业",
@@ -113,14 +125,6 @@
       "path": "01_Econometrics/零散知识点.md"
     },
     {
-      "basename": "03_多元线性回归",
-      "path": "01_Econometrics/03_多元线性回归.md"
-    },
-    {
-      "basename": "00-看板-博弈论",
-      "path": "02_game theory/00-看板-博弈论.md"
-    },
-    {
       "basename": "03_规范分析——Negative analysis",
       "path": "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md"
     },
@@ -131,10 +135,6 @@
     {
       "basename": "04_案例（囚徒困境与纳什均衡）",
       "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
-    },
-    {
-      "basename": "00-看板-计量经济学",
-      "path": "01_Econometrics/00-看板-计量经济学.md"
     },
     {
       "basename": "01_4&7章-基础金融数学和估值",

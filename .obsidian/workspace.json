@@ -24,12 +24,9 @@
             "id": "b48697f53bcb3bdb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "04_货币银行学/0_货币银行学看板.md"
               }
             }
           }
@@ -108,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归.md",
+                "file": "04_货币银行学/0_货币银行学看板.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -125,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归.md",
+                "file": "04_货币银行学/0_货币银行学看板.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归.md"
+                "file": "04_货币银行学/0_货币银行学看板.md"
               }
             }
           },
@@ -184,12 +181,16 @@
   },
   "active": "b48697f53bcb3bdb",
   "lastOpenFiles": [
+    "03_public finance财政学/0_财政学看板.md",
+    "02_game theory/00-看板-博弈论.md",
+    "01_Econometrics/00-看板-计量经济学.md",
+    "01_Econometrics/03_多元线性回归.md",
+    "01_Econometrics/02_一元线性回归.md",
     "02_game theory/06_扩展性博弈.md",
     "98_attachment/Pasted image 20240414104320.png",
     "02_game theory/05_贝叶斯博弈.md",
     "99_学习情况记录/2024-04-14——星期日.md",
     "04_货币银行学/0_货币银行学看板.md",
-    "03_public finance财政学/0_财政学看板.md",
     "02_game theory/第2次作业.pdf",
     "02_game theory/第1次作业补充.pdf",
     "02_game theory/第1次作业.pdf",
@@ -215,9 +216,6 @@
     "03_public finance财政学/3_财政收入/02_税收与收入分布.md",
     "01_Econometrics/太白金星v计量.pdf",
     "01_Econometrics/04_模型设定.md",
-    "01_Econometrics/零散知识点.md",
-    "01_Econometrics/03_多元线性回归.md",
-    "02_game theory/00-看板-博弈论.md",
     "98_attachment/Pasted image 20240411200217.png",
     "98_attachment/Pasted image 20240411195529.png",
     "98_attachment/Pasted image 20240409151358.png",
