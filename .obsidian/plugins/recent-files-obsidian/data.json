@@ -1,16 +1,40 @@
 {
   "recentFiles": [
     {
+      "basename": "06_扩展性博弈",
+      "path": "02_game theory/06_扩展性博弈.md"
+    },
+    {
+      "basename": "03_策略式博弈",
+      "path": "02_game theory/03_策略式博弈.md"
+    },
+    {
+      "basename": "02_初步认识博弈",
+      "path": "02_game theory/02_初步认识博弈.md"
+    },
+    {
+      "basename": "05_贝叶斯博弈",
+      "path": "02_game theory/05_贝叶斯博弈.md"
+    },
+    {
+      "basename": "第1次作业",
+      "path": "02_game theory/第1次作业.pdf"
+    },
+    {
+      "basename": "第1次作业补充",
+      "path": "02_game theory/第1次作业补充.pdf"
+    },
+    {
+      "basename": "第2次作业",
+      "path": "02_game theory/第2次作业.pdf"
+    },
+    {
       "basename": "2024-04-16——星期二",
       "path": "99_学习情况记录/2024-04-16——星期二.md"
     },
     {
       "basename": "03_税收与经济效率",
       "path": "03_public finance财政学/3_财政收入/03_税收与经济效率.md"
-    },
-    {
-      "basename": "06_扩展性博弈",
-      "path": "02_game theory/06_扩展性博弈.md"
     },
     {
       "basename": "0_财政学看板",
@@ -37,24 +61,8 @@
       "path": "01_Econometrics/02_一元线性回归.md"
     },
     {
-      "basename": "05_贝叶斯博弈",
-      "path": "02_game theory/05_贝叶斯博弈.md"
-    },
-    {
       "basename": "2024-04-14——星期日",
       "path": "99_学习情况记录/2024-04-14——星期日.md"
-    },
-    {
-      "basename": "第2次作业",
-      "path": "02_game theory/第2次作业.pdf"
-    },
-    {
-      "basename": "第1次作业补充",
-      "path": "02_game theory/第1次作业补充.pdf"
-    },
-    {
-      "basename": "第1次作业",
-      "path": "02_game theory/第1次作业.pdf"
     },
     {
       "basename": "01_财政收入总论",
@@ -157,10 +165,6 @@
       "path": "01_Econometrics/01_导论.md"
     },
     {
-      "basename": "03_囚徒困境与纳什均衡",
-      "path": "02_game theory/03_囚徒困境与纳什均衡.md"
-    },
-    {
       "basename": "00_财政学课程内容分布",
       "path": "03_public finance财政学/1_导论/00_财政学课程内容分布.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "3-18至3-24第四周",
       "path": "99_学习情况记录/3-18至3-24第四周.md"
-    },
-    {
-      "basename": "3-25至3-31第五周",
-      "path": "99_学习情况记录/3-25至3-31第五周.md"
     }
   ],
   "omittedPaths": [],
