@@ -24,9 +24,12 @@
             "id": "b48697f53bcb3bdb",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "04_货币银行学/0_货币银行学看板.md"
+                "file": "02_game theory/06_扩展性博弈.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -105,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_货币银行学/0_货币银行学看板.md",
+                "file": "02_game theory/06_扩展性博弈.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -122,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_货币银行学/0_货币银行学看板.md",
+                "file": "02_game theory/06_扩展性博弈.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_货币银行学/0_货币银行学看板.md"
+                "file": "02_game theory/06_扩展性博弈.md"
               }
             }
           },
@@ -183,6 +186,7 @@
   "lastOpenFiles": [
     "03_public finance财政学/0_财政学看板.md",
     "02_game theory/00-看板-博弈论.md",
+    "04_货币银行学/0_货币银行学看板.md",
     "01_Econometrics/00-看板-计量经济学.md",
     "01_Econometrics/03_多元线性回归.md",
     "01_Econometrics/02_一元线性回归.md",
@@ -190,7 +194,6 @@
     "98_attachment/Pasted image 20240414104320.png",
     "02_game theory/05_贝叶斯博弈.md",
     "99_学习情况记录/2024-04-14——星期日.md",
-    "04_货币银行学/0_货币银行学看板.md",
     "02_game theory/第2次作业.pdf",
     "02_game theory/第1次作业补充.pdf",
     "02_game theory/第1次作业.pdf",

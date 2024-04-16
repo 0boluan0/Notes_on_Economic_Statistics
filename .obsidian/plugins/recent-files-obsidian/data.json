@@ -1,8 +1,8 @@
 {
   "recentFiles": [
     {
-      "basename": "0_货币银行学看板",
-      "path": "04_货币银行学/0_货币银行学看板.md"
+      "basename": "06_扩展性博弈",
+      "path": "02_game theory/06_扩展性博弈.md"
     },
     {
       "basename": "0_财政学看板",
@@ -11,6 +11,10 @@
     {
       "basename": "00-看板-博弈论",
       "path": "02_game theory/00-看板-博弈论.md"
+    },
+    {
+      "basename": "0_货币银行学看板",
+      "path": "04_货币银行学/0_货币银行学看板.md"
     },
     {
       "basename": "00-看板-计量经济学",
@@ -23,10 +27,6 @@
     {
       "basename": "02_一元线性回归",
       "path": "01_Econometrics/02_一元线性回归.md"
-    },
-    {
-      "basename": "06_扩展性博弈",
-      "path": "02_game theory/06_扩展性博弈.md"
     },
     {
       "basename": "05_贝叶斯博弈",
