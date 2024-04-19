@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归.md",
+                "file": "02_game theory/06_扩展性博弈.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -94,7 +94,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "01_Econometrics/02_一元线性回归.md",
+            "file": "02_game theory/06_扩展性博弈.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "01_Econometrics/02_一元线性回归.md",
+            "file": "02_game theory/06_扩展性博弈.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -123,7 +123,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "01_Econometrics/02_一元线性回归.md"
+            "file": "02_game theory/06_扩展性博弈.md"
           }
         }
       },
@@ -140,6 +140,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "audio-recorder:开始/结束录音": false,
       "omnisearch:Omnisearch": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
       "switcher:打开快速切换": false,
@@ -155,8 +156,12 @@
   },
   "active": "c41ae8b47f611280",
   "lastOpenFiles": [
-    "99_学习情况记录/2024-04-14——星期日.md",
+    "02_game theory/07_子博弈不完全信息.md",
+    "99_学习情况记录/2024-04-18——星期四.md",
+    "02_game theory/06_扩展性博弈.md",
+    "02_game theory/05_贝叶斯博弈.md",
     "01_Econometrics/02_一元线性回归.md",
+    "99_学习情况记录/2024-04-14——星期日.md",
     "03_public finance财政学/2_财政支出/01_公共物品public goods.md",
     "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
     "03_public finance财政学/6_先前知识点速览/契约曲线.md",
