@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "7f8cdf7760d1d799",
+        "id": "eeab6439f80a54c5",
         "type": "tabs",
         "children": [
           {
-            "id": "8c443c6b2cf3c7bb",
+            "id": "5af5c6a2f87b7ec3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/2024-04-19——星期五.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -94,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "99_学习情况记录/2024-04-19——星期五.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -111,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "99_学习情况记录/2024-04-19——星期五.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "99_学习情况记录/2024-04-19——星期五.md"
-              }
+              "state": {}
             }
           },
           {
@@ -169,10 +160,10 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "8c443c6b2cf3c7bb",
+  "active": "5af5c6a2f87b7ec3",
   "lastOpenFiles": [
-    "02_game theory/06_扩展性博弈.md",
     "99_学习情况记录/2024-04-19——星期五.md",
+    "02_game theory/06_扩展性博弈.md",
     "01_Econometrics/03_多元线性回归.md",
     "98_attachment/Recording 20240418200059.webm",
     "01_Econometrics/零散知识点.md",
