@@ -1,56 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "0_财政学看板",
-      "path": "03_public finance财政学/0_财政学看板.md"
+      "basename": "05_贝叶斯博弈",
+      "path": "02_game theory/05_贝叶斯博弈.md"
     },
     {
-      "basename": "08_税收",
-      "path": "03_public finance财政学/3_财政收入/08_税收.md"
-    },
-    {
-      "basename": "03_税收与经济效率",
-      "path": "03_public finance财政学/3_财政收入/03_税收与经济效率.md"
-    },
-    {
-      "basename": "01_财政收入总论",
-      "path": "03_public finance财政学/3_财政收入/01_财政收入总论.md"
-    },
-    {
-      "basename": "02_税收与收入分布",
-      "path": "03_public finance财政学/3_财政收入/02_税收与收入分布.md"
-    },
-    {
-      "basename": "06_社会保障支出",
-      "path": "03_public finance财政学/2_财政支出/06_社会保障支出.md"
-    },
-    {
-      "basename": "05_投资性支出",
-      "path": "03_public finance财政学/2_财政支出/05_投资性支出.md"
-    },
-    {
-      "basename": "04_经常性支出",
-      "path": "03_public finance财政学/2_财政支出/04_经常性支出.md"
-    },
-    {
-      "basename": "03_财政支出总论",
-      "path": "03_public finance财政学/2_财政支出/03_财政支出总论.md"
-    },
-    {
-      "basename": "05_利率行为",
-      "path": "04_货币银行学/2_金融市场/05_利率行为.md"
-    },
-    {
-      "basename": "02_一元线性回归(网课)",
-      "path": "01_Econometrics/02_一元线性回归(网课).md"
-    },
-    {
-      "basename": "03_多元线性回归(上课)",
-      "path": "01_Econometrics/03_多元线性回归(上课).md"
-    },
-    {
-      "basename": "04_模型设定",
-      "path": "01_Econometrics/04_模型设定.md"
+      "basename": "06_扩展性博弈",
+      "path": "02_game theory/06_扩展性博弈.md"
     },
     {
       "basename": "07_子博弈不完全信息",
@@ -61,20 +17,92 @@
       "path": "02_game theory/00-看板-博弈论.md"
     },
     {
+      "basename": "0_财政学看板",
+      "path": "03_public finance财政学/0_财政学看板.md"
+    },
+    {
+      "basename": "0_货币银行学看板",
+      "path": "04_货币银行学/0_货币银行学看板.md"
+    },
+    {
+      "basename": "2024-04-23——星期二",
+      "path": "99_学习情况记录/2024-04-23——星期二.md"
+    },
+    {
+      "basename": "2024-04-22——星期一",
+      "path": "99_学习情况记录/2024-04-22——星期一.md"
+    },
+    {
+      "basename": "4-15至4-21第八周",
+      "path": "99_学习情况记录/4-15至4-21第八周.md"
+    },
+    {
+      "basename": "08_税收",
+      "path": "03_public finance财政学/3_财政收入/08_税收.md"
+    },
+    {
+      "basename": "03_税收与经济效率",
+      "path": "03_public finance财政学/3_财政收入/03_税收与经济效率.md"
+    },
+    {
+      "basename": "02_税收与收入分布",
+      "path": "03_public finance财政学/3_财政收入/02_税收与收入分布.md"
+    },
+    {
+      "basename": "05_投资性支出",
+      "path": "03_public finance财政学/2_财政支出/05_投资性支出.md"
+    },
+    {
+      "basename": "02_一元线性回归(网课)",
+      "path": "01_Econometrics/02_一元线性回归(网课).md"
+    },
+    {
+      "basename": "03_多元线性回归(上课)",
+      "path": "01_Econometrics/03_多元线性回归(上课).md"
+    },
+    {
+      "basename": "01_公共物品public goods",
+      "path": "03_public finance财政学/2_财政支出/01_公共物品public goods.md"
+    },
+    {
+      "basename": "02_外部性Externality",
+      "path": "03_public finance财政学/2_财政支出/02_外部性Externality.md"
+    },
+    {
+      "basename": "06_社会保障支出",
+      "path": "03_public finance财政学/2_财政支出/06_社会保障支出.md"
+    },
+    {
+      "basename": "04_经常性支出",
+      "path": "03_public finance财政学/2_财政支出/04_经常性支出.md"
+    },
+    {
+      "basename": "05_利率行为",
+      "path": "04_货币银行学/2_金融市场/05_利率行为.md"
+    },
+    {
+      "basename": "04_理解利率",
+      "path": "04_货币银行学/2_金融市场/04_理解利率.md"
+    },
+    {
+      "basename": "01_财政收入总论",
+      "path": "03_public finance财政学/3_财政收入/01_财政收入总论.md"
+    },
+    {
+      "basename": "03_财政支出总论",
+      "path": "03_public finance财政学/2_财政支出/03_财政支出总论.md"
+    },
+    {
+      "basename": "04_模型设定",
+      "path": "01_Econometrics/04_模型设定.md"
+    },
+    {
       "basename": "01_导论",
       "path": "02_game theory/01_导论.md"
     },
     {
       "basename": "02_初步认识博弈",
       "path": "02_game theory/02_初步认识博弈.md"
-    },
-    {
-      "basename": "06_扩展性博弈",
-      "path": "02_game theory/06_扩展性博弈.md"
-    },
-    {
-      "basename": "05_贝叶斯博弈",
-      "path": "02_game theory/05_贝叶斯博弈.md"
     },
     {
       "basename": "零散知识点",
@@ -118,11 +146,11 @@
     },
     {
       "basename": "2024-04-20——星期六",
-      "path": "99_学习情况记录/2024-04-20——星期六.md"
+      "path": "99_学习情况记录/已复盘/2024-04-20——星期六.md"
     },
     {
       "basename": "2024-04-19——星期五",
-      "path": "99_学习情况记录/2024-04-19——星期五.md"
+      "path": "99_学习情况记录/已复盘/2024-04-19——星期五.md"
     },
     {
       "basename": "太白金星v计量",
@@ -130,15 +158,11 @@
     },
     {
       "basename": "2024-04-18——星期四",
-      "path": "99_学习情况记录/2024-04-18——星期四.md"
+      "path": "99_学习情况记录/已复盘/2024-04-18——星期四.md"
     },
     {
       "basename": "02_金融体系概览",
       "path": "04_货币银行学/1_引言/02_金融体系概览.md"
-    },
-    {
-      "basename": "04_理解利率",
-      "path": "04_货币银行学/2_金融市场/04_理解利率.md"
     },
     {
       "basename": "01_导论",
@@ -154,15 +178,11 @@
     },
     {
       "basename": "2024-04-16——星期二",
-      "path": "99_学习情况记录/2024-04-16——星期二.md"
-    },
-    {
-      "basename": "0_货币银行学看板",
-      "path": "04_货币银行学/0_货币银行学看板.md"
+      "path": "99_学习情况记录/已复盘/2024-04-16——星期二.md"
     },
     {
       "basename": "2024-04-14——星期日",
-      "path": "99_学习情况记录/2024-04-14——星期日.md"
+      "path": "99_学习情况记录/已复盘/2024-04-14——星期日.md"
     },
     {
       "basename": "MRT边际转换率",
@@ -179,26 +199,6 @@
     {
       "basename": "2024-04-11——星期四",
       "path": "99_学习情况记录/已复盘/2024-04-11——星期四.md"
-    },
-    {
-      "basename": "2024-04-13——星期六",
-      "path": "99_学习情况记录/已复盘/2024-04-13——星期六.md"
-    },
-    {
-      "basename": "4-8至4-14第七周",
-      "path": "99_学习情况记录/4-8至4-14第七周.md"
-    },
-    {
-      "basename": "消费者剩余",
-      "path": "03_public finance财政学/6_先前知识点速览/消费者剩余.md"
-    },
-    {
-      "basename": "01_公共物品public goods",
-      "path": "03_public finance财政学/2_财政支出/01_公共物品public goods.md"
-    },
-    {
-      "basename": "02_外部性Externality",
-      "path": "03_public finance财政学/2_财政支出/02_外部性Externality.md"
     }
   ],
   "omittedPaths": [],
