@@ -1,0 +1,201 @@
+{
+  "workspaces": {
+    "计量经济学网课": {
+      "main": {
+        "id": "5acd4a3c6696af5a",
+        "type": "split",
+        "children": [
+          {
+            "id": "eeab6439f80a54c5",
+            "type": "tabs",
+            "dimension": 42.1656050955414,
+            "children": [
+              {
+                "id": "5af5c6a2f87b7ec3",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "01_Econometrics/02_一元线性回归(上课).md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "d7fcae976f0fa185",
+            "type": "tabs",
+            "dimension": 57.8343949044586,
+            "children": [
+              {
+                "id": "2935ca31d1ca79ba",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "01_Econometrics/02_一元线性回归(网课).md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "986ad7381b4aa76c",
+        "type": "split",
+        "children": [
+          {
+            "id": "525ffc1865f10858",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "8ef6c153e7a4ed38",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "68e022ef2943b75b",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "tag:#必考",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "58e4b33a026fad29",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {}
+                }
+              },
+              {
+                "id": "2a658727394b251b",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 200
+      },
+      "right": {
+        "id": "e65120feb84dace3",
+        "type": "split",
+        "children": [
+          {
+            "id": "e0fa6f818c861393",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "d5dd85784b1fe9ec",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "01_Econometrics/02_一元线性回归(网课).md",
+                    "collapseAll": false,
+                    "extraContext": true,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "89566e4ae967dd41",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "01_Econometrics/02_一元线性回归(网课).md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "e5d9deda3bdad2bf",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "a0580e7d1cb5a5c4",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "01_Econometrics/02_一元线性回归(网课).md"
+                  }
+                }
+              },
+              {
+                "id": "2c9ca742cf90c221",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {}
+                }
+              }
+            ],
+            "currentTab": 3
+          }
+        ],
+        "direction": "horizontal",
+        "width": 200,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "switcher:打开快速切换": false,
+          "graph:查看关系图谱": false,
+          "canvas:新建白板": false,
+          "templates:插入模板": false,
+          "command-palette:打开命令面板": false,
+          "markdown-importer:打开 Markdown 格式转换器": false,
+          "workspaces:管理工作区布局": false,
+          "daily-notes:打开/创建今天的日记": false,
+          "obsidian-excalidraw-plugin:新建绘图文件": false,
+          "omnisearch:Omnisearch": false,
+          "audio-recorder:开始/结束录音": false,
+          "obsidian-memos:Memos": false
+        }
+      },
+      "active": "2935ca31d1ca79ba",
+      "mtime": "2024-04-23T11:12:52+08:00"
+    }
+  },
+  "active": "计量经济学网课"
+}

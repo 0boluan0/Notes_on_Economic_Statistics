@@ -4,29 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "eeab6439f80a54c5",
-        "type": "tabs",
-        "dimension": 42.1656050955414,
-        "children": [
-          {
-            "id": "5af5c6a2f87b7ec3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Econometrics/02_一元线性回归(上课).md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "d7fcae976f0fa185",
         "type": "tabs",
-        "dimension": 57.8343949044586,
         "children": [
           {
             "id": "2935ca31d1ca79ba",
@@ -34,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归(网课).md",
+                "file": "02_game theory/07_子博弈不完全信息.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -115,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归(网课).md",
+                "file": "02_game theory/07_子博弈不完全信息.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -132,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归(网课).md",
+                "file": "02_game theory/07_子博弈不完全信息.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归(网课).md"
+                "file": "02_game theory/07_子博弈不完全信息.md"
               }
             }
           },
@@ -193,23 +172,30 @@
   },
   "active": "2935ca31d1ca79ba",
   "lastOpenFiles": [
-    "00_inbox/[.md",
-    "01_Econometrics/02_一元线性回归(网课).md",
-    "01_Econometrics/02_一元线性回归(上课).md",
+    "02_game theory/00-看板-博弈论.md",
+    "02_game theory/01_导论.md",
+    "02_game theory/02_初步认识博弈.md",
+    "02_game theory/06_扩展性博弈.md",
+    "02_game theory/05_贝叶斯博弈.md",
     "01_Econometrics/零散知识点.md",
+    "01_Econometrics/02_一元线性回归(网课).md",
+    "02_game theory/07_子博弈不完全信息.md",
+    "01_Econometrics/03_多元线性回归(上课).md",
+    "98_attachment/Pasted image 20240423105633.png",
+    "01_Econometrics/02_一元线性回归(上课).md",
+    "98_attachment/Pasted image 20240423104326.png",
+    "98_attachment/Pasted image 20240423104253.png",
+    "98_attachment/Pasted image 20240423103831.png",
+    "98_attachment/Pasted image 20240423103721.png",
+    "98_attachment/Pasted image 20240423103232.png",
+    "00_inbox/[.md",
     "01_Econometrics/04_模型设定.md",
     "98_attachment/Pasted image 20240228132651.png",
-    "01_Econometrics/03_多元线性回归.md",
-    "02_game theory/06_扩展性博弈.md",
-    "02_game theory/07_子博弈不完全信息.md",
     "01_Econometrics/00-看板-计量经济学.md",
     "01_Econometrics/01_导论.md",
-    "02_game theory/05_贝叶斯博弈.md",
     "02_game theory/03_策略式博弈.md",
-    "02_game theory/02_初步认识博弈.md",
     "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "05_经济思想史/02_前资本主义社会.md",
-    "02_game theory/01_导论.md",
     "02_game theory/第2次作业.pdf",
     "02_game theory/第1次作业.pdf",
     "99_学习情况记录/2024-04-20——星期六.md",
@@ -225,14 +211,6 @@
     "05_经济思想史/01_导论.md",
     "06_大创/01_目录.md",
     "98_attachment/Pasted image 20240418081825.png",
-    "98_attachment/Pasted image 20240418081616.png",
-    "98_attachment/Pasted image 20240418081550.png",
-    "98_attachment/Pasted image 20240417210200.png",
-    "98_attachment/Pasted image 20240417205745.png",
-    "98_attachment/Pasted image 20240417205505.png",
-    "98_attachment/Pasted image 20240417203557.png",
-    "02_game theory/00-看板-博弈论.md",
-    "03_public finance财政学/3_财政收入/01_财政收入总论.md",
     "02_game theory/第1次作业补充.pdf",
     "Excalidraw",
     "03_public finance",
