@@ -6,6 +6,7 @@
       {
         "id": "eeab6439f80a54c5",
         "type": "tabs",
+        "dimension": 42.1656050955414,
         "children": [
           {
             "id": "5af5c6a2f87b7ec3",
@@ -13,7 +14,27 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
+                "file": "01_Econometrics/02_一元线性回归(上课).md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "d7fcae976f0fa185",
+        "type": "tabs",
+        "dimension": 57.8343949044586,
+        "children": [
+          {
+            "id": "2935ca31d1ca79ba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Econometrics/02_一元线性回归(网课).md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -94,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
+                "file": "01_Econometrics/02_一元线性回归(网课).md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -111,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
+                "file": "01_Econometrics/02_一元线性回归(网课).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md"
+                "file": "01_Econometrics/02_一元线性回归(网课).md"
               }
             }
           },
@@ -151,7 +172,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 268.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -169,14 +191,18 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "5af5c6a2f87b7ec3",
+  "active": "2935ca31d1ca79ba",
   "lastOpenFiles": [
+    "00_inbox/[.md",
+    "01_Econometrics/02_一元线性回归(网课).md",
+    "01_Econometrics/02_一元线性回归(上课).md",
+    "01_Econometrics/零散知识点.md",
     "01_Econometrics/04_模型设定.md",
+    "98_attachment/Pasted image 20240228132651.png",
     "01_Econometrics/03_多元线性回归.md",
     "02_game theory/06_扩展性博弈.md",
     "02_game theory/07_子博弈不完全信息.md",
     "01_Econometrics/00-看板-计量经济学.md",
-    "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/01_导论.md",
     "02_game theory/05_贝叶斯博弈.md",
     "02_game theory/03_策略式博弈.md",
@@ -189,7 +215,6 @@
     "99_学习情况记录/2024-04-20——星期六.md",
     "99_学习情况记录/2024-04-19——星期五.md",
     "98_attachment/Recording 20240418200059.webm",
-    "01_Econometrics/零散知识点.md",
     "01_Econometrics/太白金星v计量.pdf",
     "99_学习情况记录/2024-04-18——星期四.md",
     "98_attachment/Pasted image 20240418083634.png",
@@ -206,12 +231,9 @@
     "98_attachment/Pasted image 20240417205745.png",
     "98_attachment/Pasted image 20240417205505.png",
     "98_attachment/Pasted image 20240417203557.png",
-    "98_attachment/Pasted image 20240417202820.png",
     "02_game theory/00-看板-博弈论.md",
     "03_public finance财政学/3_财政收入/01_财政收入总论.md",
     "02_game theory/第1次作业补充.pdf",
-    "99_学习情况记录/2024-04-16——星期二.md",
-    "03_public finance财政学/3_财政收入/03_税收与经济效率.md",
     "Excalidraw",
     "03_public finance",
     "04_货币银行学/6_货币理论",

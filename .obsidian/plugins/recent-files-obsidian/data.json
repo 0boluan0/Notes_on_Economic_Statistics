@@ -1,12 +1,28 @@
 {
   "recentFiles": [
     {
-      "basename": "03_多元线性回归",
-      "path": "01_Econometrics/03_多元线性回归.md"
+      "basename": "02_一元线性回归(网课)",
+      "path": "01_Econometrics/02_一元线性回归(网课).md"
+    },
+    {
+      "basename": "02_一元线性回归(上课)",
+      "path": "01_Econometrics/02_一元线性回归(上课).md"
+    },
+    {
+      "basename": "零散知识点",
+      "path": "01_Econometrics/零散知识点.md"
     },
     {
       "basename": "04_模型设定",
       "path": "01_Econometrics/04_模型设定.md"
+    },
+    {
+      "basename": "Pasted image 20240228132651",
+      "path": "98_attachment/Pasted image 20240228132651.png"
+    },
+    {
+      "basename": "03_多元线性回归",
+      "path": "01_Econometrics/03_多元线性回归.md"
     },
     {
       "basename": "06_扩展性博弈",
@@ -19,10 +35,6 @@
     {
       "basename": "00-看板-计量经济学",
       "path": "01_Econometrics/00-看板-计量经济学.md"
-    },
-    {
-      "basename": "02_一元线性回归",
-      "path": "01_Econometrics/02_一元线性回归.md"
     },
     {
       "basename": "01_导论",
@@ -67,10 +79,6 @@
     {
       "basename": "2024-04-19——星期五",
       "path": "99_学习情况记录/2024-04-19——星期五.md"
-    },
-    {
-      "basename": "零散知识点",
-      "path": "01_Econometrics/零散知识点.md"
     },
     {
       "basename": "太白金星v计量",
@@ -187,18 +195,6 @@
     {
       "basename": "02_税收与收入分布",
       "path": "03_public finance财政学/3_财政收入/02_税收与收入分布.md"
-    },
-    {
-      "basename": "03_规范分析——Negative analysis",
-      "path": "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md"
-    },
-    {
-      "basename": "02_实证分析——positive analysis",
-      "path": "03_public finance财政学/1_导论/02_实证分析——positive analysis.md"
-    },
-    {
-      "basename": "01_4&7章-基础金融数学和估值",
-      "path": "04_货币银行学/0_补充/01_4&7章-基础金融数学和估值.md"
     }
   ],
   "omittedPaths": [],
