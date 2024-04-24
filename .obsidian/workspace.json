@@ -37,9 +37,12 @@
             "id": "6250da123dd2ff3f",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "02_game theory/第三次作业.pdf"
+                "file": "02_game theory/05_贝叶斯博弈.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -118,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_game theory/第三次作业.pdf",
+                "file": "02_game theory/05_贝叶斯博弈.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -135,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02_game theory/第三次作业.pdf",
+                "file": "02_game theory/05_贝叶斯博弈.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_game theory/第三次作业.pdf"
+                "file": "02_game theory/05_贝叶斯博弈.md"
               }
             }
           },
@@ -196,14 +199,14 @@
   },
   "active": "6250da123dd2ff3f",
   "lastOpenFiles": [
+    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
+    "02_game theory/第三次作业.pdf",
     "02_game theory/第1次作业补充.pdf",
     "02_game theory/第1次作业.pdf",
     "02_game theory/第2次作业.pdf",
-    "02_game theory/第三次作业.pdf",
     "02_game theory/00-看板-博弈论.md",
     "02_game theory/01_导论.md",
     "02_game theory/05_贝叶斯博弈.md",
-    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "02_game theory/03_策略式博弈.md",
     "02_game theory/06_扩展性博弈.md",
     "02_game theory/07_子博弈不完全信息.md",
@@ -240,7 +243,6 @@
     "Excalidraw",
     "03_public finance",
     "04_货币银行学/6_货币理论",
-    "04_货币银行学/5_国际金融与货币政策",
-    "04_货币银行学/4_中央银行与货币政策的实施"
+    "04_货币银行学/5_国际金融与货币政策"
   ]
 }
