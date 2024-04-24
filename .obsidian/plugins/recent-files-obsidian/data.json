@@ -9,28 +9,16 @@
       "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
     },
     {
-      "basename": "第三次作业",
-      "path": "02_game theory/第三次作业.pdf"
+      "basename": "03_策略式博弈",
+      "path": "02_game theory/03_策略式博弈.md"
     },
     {
-      "basename": "第1次作业",
-      "path": "02_game theory/第1次作业.pdf"
-    },
-    {
-      "basename": "第2次作业",
-      "path": "02_game theory/第2次作业.pdf"
-    },
-    {
-      "basename": "00-看板-博弈论",
-      "path": "02_game theory/00-看板-博弈论.md"
+      "basename": "02_初步认识博弈",
+      "path": "02_game theory/02_初步认识博弈.md"
     },
     {
       "basename": "01_导论",
       "path": "02_game theory/01_导论.md"
-    },
-    {
-      "basename": "03_策略式博弈",
-      "path": "02_game theory/03_策略式博弈.md"
     },
     {
       "basename": "06_扩展性博弈",
@@ -39,6 +27,34 @@
     {
       "basename": "07_子博弈不完全信息",
       "path": "02_game theory/07_子博弈不完全信息.md"
+    },
+    {
+      "basename": "第1次作业",
+      "path": "02_game theory/第1次作业.pdf"
+    },
+    {
+      "basename": "第1次作业补充",
+      "path": "02_game theory/第1次作业补充.pdf"
+    },
+    {
+      "basename": "第3次作业",
+      "path": "02_game theory/第3次作业.pdf"
+    },
+    {
+      "basename": "第2次作业",
+      "path": "02_game theory/第2次作业.pdf"
+    },
+    {
+      "basename": "03_财政支出总论",
+      "path": "03_public finance财政学/2_财政支出/03_财政支出总论.md"
+    },
+    {
+      "basename": "02_外部性Externality",
+      "path": "03_public finance财政学/2_财政支出/02_外部性Externality.md"
+    },
+    {
+      "basename": "00-看板-博弈论",
+      "path": "02_game theory/00-看板-博弈论.md"
     },
     {
       "basename": "0_财政学看板",
@@ -89,10 +105,6 @@
       "path": "03_public finance财政学/2_财政支出/01_公共物品public goods.md"
     },
     {
-      "basename": "02_外部性Externality",
-      "path": "03_public finance财政学/2_财政支出/02_外部性Externality.md"
-    },
-    {
       "basename": "06_社会保障支出",
       "path": "03_public finance财政学/2_财政支出/06_社会保障支出.md"
     },
@@ -113,16 +125,8 @@
       "path": "03_public finance财政学/3_财政收入/01_财政收入总论.md"
     },
     {
-      "basename": "03_财政支出总论",
-      "path": "03_public finance财政学/2_财政支出/03_财政支出总论.md"
-    },
-    {
       "basename": "04_模型设定",
       "path": "01_Econometrics/04_模型设定.md"
-    },
-    {
-      "basename": "02_初步认识博弈",
-      "path": "02_game theory/02_初步认识博弈.md"
     },
     {
       "basename": "零散知识点",
@@ -195,10 +199,6 @@
     {
       "basename": "2024-04-09——星期二",
       "path": "99_学习情况记录/已复盘/2024-04-09——星期二.md"
-    },
-    {
-      "basename": "2024-04-11——星期四",
-      "path": "99_学习情况记录/已复盘/2024-04-11——星期四.md"
     }
   ],
   "omittedPaths": [],
