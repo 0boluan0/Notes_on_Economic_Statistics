@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "01_政府预算",
+      "path": "03_public finance财政学/4_预算收支管理体系/01_政府预算.md"
+    },
+    {
       "basename": "07_子博弈不完全信息",
       "path": "02_game theory/07_子博弈不完全信息.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "MRT边际转换率",
       "path": "03_public finance财政学/6_先前知识点速览/MRT边际转换率.md"
-    },
-    {
-      "basename": "2024-04-08——星期一",
-      "path": "99_学习情况记录/已复盘/2024-04-08——星期一.md"
     }
   ],
   "omittedPaths": [],

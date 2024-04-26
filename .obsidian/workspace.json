@@ -45,9 +45,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7d9a20bd9eab3f2d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_public finance财政学/4_预算收支管理体系/01_政府预算.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -121,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_game theory/07_子博弈不完全信息.md",
+                "file": "03_public finance财政学/4_预算收支管理体系/01_政府预算.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -138,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02_game theory/07_子博弈不完全信息.md",
+                "file": "03_public finance财政学/4_预算收支管理体系/01_政府预算.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_game theory/07_子博弈不完全信息.md"
+                "file": "03_public finance财政学/4_预算收支管理体系/01_政府预算.md"
               }
             }
           },
@@ -196,13 +209,14 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "6250da123dd2ff3f",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
+    "02_game theory/07_子博弈不完全信息.md",
+    "03_public finance财政学/4_预算收支管理体系/01_政府预算.md",
     "02_game theory/06_扩展性博弈.md",
     "02_game theory/05_贝叶斯博弈.md",
     "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "03_public finance财政学/3_财政收入/08_税收.md",
-    "02_game theory/07_子博弈不完全信息.md",
     "98_attachment/Pasted image 20240425201613.png",
     "98_attachment/Pasted image 20240425201549.png",
     "98_attachment/Pasted image 20240425201142.png",
