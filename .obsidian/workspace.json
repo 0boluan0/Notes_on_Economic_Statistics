@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_public finance财政学/4_预算收支管理体系/01_政府预算.md",
+                "file": "02_game theory/07_子博弈不完全信息.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03_public finance财政学/4_预算收支管理体系/01_政府预算.md",
+                "file": "02_game theory/07_子博弈不完全信息.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03_public finance财政学/4_预算收支管理体系/01_政府预算.md",
+                "file": "02_game theory/07_子博弈不完全信息.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_public finance财政学/4_预算收支管理体系/01_政府预算.md"
+                "file": "02_game theory/07_子博弈不完全信息.md"
               }
             }
           },
@@ -209,11 +209,11 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "7d9a20bd9eab3f2d",
   "lastOpenFiles": [
-    "02_game theory/07_子博弈不完全信息.md",
-    "03_public finance财政学/4_预算收支管理体系/01_政府预算.md",
     "02_game theory/06_扩展性博弈.md",
+    "03_public finance财政学/4_预算收支管理体系/01_政府预算.md",
+    "02_game theory/07_子博弈不完全信息.md",
     "02_game theory/05_贝叶斯博弈.md",
     "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "03_public finance财政学/3_财政收入/08_税收.md",
