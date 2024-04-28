@@ -1,24 +1,40 @@
 {
   "recentFiles": [
     {
-      "basename": "07_子博弈不完全信息",
-      "path": "02_game theory/07_子博弈不完全信息.md"
+      "basename": "05_贝叶斯博弈",
+      "path": "02_game theory/05_贝叶斯博弈.md"
     },
     {
       "basename": "06_扩展性博弈",
       "path": "02_game theory/06_扩展性博弈.md"
     },
     {
-      "basename": "01_政府预算",
-      "path": "03_public finance财政学/4_预算收支管理体系/01_政府预算.md"
-    },
-    {
-      "basename": "05_贝叶斯博弈",
-      "path": "02_game theory/05_贝叶斯博弈.md"
+      "basename": "03_策略式博弈",
+      "path": "02_game theory/03_策略式博弈.md"
     },
     {
       "basename": "04_案例（囚徒困境与纳什均衡）",
       "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
+    },
+    {
+      "basename": "07_子博弈不完全信息",
+      "path": "02_game theory/07_子博弈不完全信息.md"
+    },
+    {
+      "basename": "第3次作业",
+      "path": "02_game theory/第3次作业.pdf"
+    },
+    {
+      "basename": "第2次作业",
+      "path": "02_game theory/第2次作业.pdf"
+    },
+    {
+      "basename": "2024-04-28——星期日",
+      "path": "99_学习情况记录/2024-04-28——星期日.md"
+    },
+    {
+      "basename": "01_政府预算",
+      "path": "03_public finance财政学/4_预算收支管理体系/01_政府预算.md"
     },
     {
       "basename": "08_税收",
@@ -33,10 +49,6 @@
       "path": "99_学习情况记录/2024-04-25——星期四.md"
     },
     {
-      "basename": "03_策略式博弈",
-      "path": "02_game theory/03_策略式博弈.md"
-    },
-    {
       "basename": "02_初步认识博弈",
       "path": "02_game theory/02_初步认识博弈.md"
     },
@@ -47,14 +59,6 @@
     {
       "basename": "第1次作业",
       "path": "02_game theory/第1次作业.pdf"
-    },
-    {
-      "basename": "第3次作业",
-      "path": "02_game theory/第3次作业.pdf"
-    },
-    {
-      "basename": "第2次作业",
-      "path": "02_game theory/第2次作业.pdf"
     },
     {
       "basename": "03_财政支出总论",
@@ -195,10 +199,6 @@
     {
       "basename": "2024-04-14——星期日",
       "path": "99_学习情况记录/已复盘/2024-04-14——星期日.md"
-    },
-    {
-      "basename": "MRT边际转换率",
-      "path": "03_public finance财政学/6_先前知识点速览/MRT边际转换率.md"
     }
   ],
   "omittedPaths": [],
