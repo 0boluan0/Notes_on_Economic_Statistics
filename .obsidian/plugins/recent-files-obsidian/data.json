@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "第3次作业",
+      "path": "02_game theory/第3次作业.pdf"
+    },
+    {
+      "basename": "05_贝叶斯博弈",
+      "path": "02_game theory/05_贝叶斯博弈.md"
+    },
+    {
+      "basename": "第1次作业补充",
+      "path": "02_game theory/第1次作业补充.pdf"
+    },
+    {
       "basename": "07_子博弈不完全信息",
       "path": "02_game theory/07_子博弈不完全信息.md"
+    },
+    {
+      "basename": "第1次作业",
+      "path": "02_game theory/第1次作业.pdf"
     },
     {
       "basename": "06_扩展性博弈",
@@ -49,14 +65,6 @@
       "path": "99_学习情况记录/2024-04-28——星期日.md"
     },
     {
-      "basename": "05_贝叶斯博弈",
-      "path": "02_game theory/05_贝叶斯博弈.md"
-    },
-    {
-      "basename": "第3次作业",
-      "path": "02_game theory/第3次作业.pdf"
-    },
-    {
       "basename": "03_策略式博弈",
       "path": "02_game theory/03_策略式博弈.md"
     },
@@ -77,10 +85,6 @@
       "path": "03_public finance财政学/3_财政收入/08_税收.md"
     },
     {
-      "basename": "第1次作业补充",
-      "path": "02_game theory/第1次作业补充.pdf"
-    },
-    {
       "basename": "2024-04-25——星期四",
       "path": "99_学习情况记录/2024-04-25——星期四.md"
     },
@@ -91,10 +95,6 @@
     {
       "basename": "01_导论",
       "path": "02_game theory/01_导论.md"
-    },
-    {
-      "basename": "第1次作业",
-      "path": "02_game theory/第1次作业.pdf"
     },
     {
       "basename": "03_财政支出总论",
@@ -195,10 +195,6 @@
     {
       "basename": "太白金星v计量",
       "path": "01_Econometrics/太白金星v计量.pdf"
-    },
-    {
-      "basename": "2024-04-18——星期四",
-      "path": "99_学习情况记录/已复盘/2024-04-18——星期四.md"
     }
   ],
   "omittedPaths": [],
