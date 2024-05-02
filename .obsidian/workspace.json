@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_货币银行学/2_金融市场/04_理解利率.md",
+                "file": "04_货币银行学/2_金融市场/05_利率行为.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_货币银行学/2_金融市场/04_理解利率.md",
+                "file": "04_货币银行学/2_金融市场/05_利率行为.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_货币银行学/2_金融市场/04_理解利率.md",
+                "file": "04_货币银行学/2_金融市场/05_利率行为.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_货币银行学/2_金融市场/04_理解利率.md"
+                "file": "04_货币银行学/2_金融市场/05_利率行为.md"
               }
             }
           },
@@ -212,8 +212,10 @@
   "active": "7d9a20bd9eab3f2d",
   "lastOpenFiles": [
     "04_货币银行学/1_引言/03_什么是货币.md",
-    "04_货币银行学/1_引言/02_金融体系概览.md",
     "04_货币银行学/1_引言/01_为什么研究货币，银行与金融市场.md",
+    "04_货币银行学/1_引言/02_金融体系概览.md",
+    "04_货币银行学/1_引言/00_在这节课开始之前，导论.md",
+    "04_货币银行学/2_金融市场/04_理解利率.md",
     "03_public finance财政学/2_财政支出/05_投资性支出.md",
     "03_public finance财政学/2_财政支出/06_社会保障支出.md",
     "02_game theory/07_子博弈不完全信息.md",
@@ -236,8 +238,6 @@
     "03_public finance财政学/2_财政支出/03_财政支出总论.md",
     "03_public finance财政学/2_财政支出/04_经常性支出.md",
     "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
-    "03_public finance财政学/1_导论/02_实证分析——positive analysis.md",
-    "02_game theory/03_策略式博弈.md",
     "02_game theory/第1次作业.pdf",
     "02_game theory/第1次作业补充.pdf",
     "02_game theory/第3次作业.pdf",
