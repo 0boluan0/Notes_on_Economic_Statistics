@@ -50,9 +50,12 @@
             "id": "7d9a20bd9eab3f2d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "02_game theory/第2次作业.pdf"
+                "file": "04_货币银行学/2_金融市场/04_理解利率.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -86,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "二级",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -131,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_game theory/第2次作业.pdf",
+                "file": "04_货币银行学/2_金融市场/04_理解利率.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -148,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02_game theory/第2次作业.pdf",
+                "file": "04_货币银行学/2_金融市场/04_理解利率.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_game theory/第2次作业.pdf"
+                "file": "04_货币银行学/2_金融市场/04_理解利率.md"
               }
             }
           },
@@ -208,47 +211,48 @@
   },
   "active": "7d9a20bd9eab3f2d",
   "lastOpenFiles": [
-    "02_game theory/第1次作业补充.pdf",
-    "02_game theory/05_贝叶斯博弈.md",
-    "02_game theory/第2次作业.pdf",
+    "04_货币银行学/1_引言/03_什么是货币.md",
+    "04_货币银行学/1_引言/02_金融体系概览.md",
+    "04_货币银行学/1_引言/01_为什么研究货币，银行与金融市场.md",
+    "03_public finance财政学/2_财政支出/05_投资性支出.md",
+    "03_public finance财政学/2_财政支出/06_社会保障支出.md",
     "02_game theory/07_子博弈不完全信息.md",
-    "05_经济思想史/02_前资本主义社会.md",
     "02_game theory/06_扩展性博弈.md",
-    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
+    "01_Econometrics/03_多元线性回归(上课).md",
+    "01_Econometrics/04_模型设定.md",
+    "01_Econometrics/02_一元线性回归(上课).md",
+    "01_Econometrics/02_一元线性回归(网课).md",
+    "01_Econometrics/零散知识点.md",
+    "01_Econometrics/太白金星v计量.pdf",
+    "99_学习情况记录/4-8至4-14第七周.md",
+    "99_学习情况记录/4-1至4-7第六周.md",
+    "99_学习情况记录/3-18至3-24第四周.md",
+    "99_学习情况记录/2-26至3-3第一周.md",
+    "99_学习情况记录/4-15至4-21第八周.md",
+    "99_学习情况记录/2024-04-23——星期二.md",
+    "03_public finance财政学/3_财政收入/03_税收与经济效率.md",
+    "03_public finance财政学/3_财政收入/02_税收与收入分布.md",
+    "03_public finance财政学/3_财政收入/01_财政收入总论.md",
+    "03_public finance财政学/2_财政支出/03_财政支出总论.md",
+    "03_public finance财政学/2_财政支出/04_经常性支出.md",
+    "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
+    "03_public finance财政学/1_导论/02_实证分析——positive analysis.md",
     "02_game theory/03_策略式博弈.md",
-    "02_game theory/02_初步认识博弈.md",
     "02_game theory/第1次作业.pdf",
+    "02_game theory/第1次作业补充.pdf",
+    "02_game theory/第3次作业.pdf",
+    "02_game theory/第2次作业.pdf",
     "98_attachment/Pasted image 20240501165047.png",
     "98_attachment/Pasted image 20240501165038.png",
-    "02_game theory/第3次作业.pdf",
     "98_attachment/Pasted image 20240501153522.png",
     "98_attachment/Pasted image 20240501153253.png",
     "98_attachment/Pasted image 20240501153106.png",
     "98_attachment/Pasted image 20240430170207.png",
-    "02_game theory/Drawing 2024-04-30 16.44.05.excalidraw.md",
     "98_attachment/Pasted image 20240430161327.png",
-    "04_货币银行学/2_金融市场/05_利率行为.md",
-    "04_货币银行学/2_金融市场/04_理解利率.md",
-    "04_货币银行学/1_引言/03_什么是货币.md",
-    "04_货币银行学/0_补充/01_4&7章-基础金融数学和估值.md",
-    "04_货币银行学/1_引言/02_金融体系概览.md",
-    "04_货币银行学/1_引言/01_为什么研究货币，银行与金融市场.md",
-    "05_经济思想史/01_导论.md",
-    "04_货币银行学/0_货币银行学看板.md",
-    "99_学习情况记录/2024-04-28——星期日.md",
-    "03_public finance财政学/4_预算收支管理体系/01_政府预算.md",
-    "03_public finance财政学/3_财政收入/08_税收.md",
     "98_attachment/Pasted image 20240425201613.png",
     "98_attachment/Pasted image 20240425201549.png",
     "98_attachment/Pasted image 20240425201142.png",
-    "99_学习情况记录/2024-04-25——星期四.md",
-    "02_game theory/01_导论.md",
-    "03_public finance财政学/2_财政支出/03_财政支出总论.md",
-    "03_public finance财政学/2_财政支出/02_外部性Externality.md",
-    "02_game theory/00-看板-博弈论.md",
-    "03_public finance财政学/0_财政学看板.md",
     "98_attachment/Recording 20240418200059.webm",
-    "01_Econometrics/太白金星v计量.pdf",
     "Excalidraw",
     "03_public finance",
     "04_货币银行学/6_货币理论",
