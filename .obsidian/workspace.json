@@ -52,7 +52,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_货币银行学/2_金融市场/04_理解利率.md",
+                "file": "01_Econometrics/02_一元线性回归(网课).md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_货币银行学/2_金融市场/04_理解利率.md",
+                "file": "01_Econometrics/02_一元线性回归(网课).md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_货币银行学/2_金融市场/04_理解利率.md",
+                "file": "01_Econometrics/02_一元线性回归(网课).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_货币银行学/2_金融市场/04_理解利率.md"
+                "file": "01_Econometrics/02_一元线性回归(网课).md"
               }
             }
           },
@@ -211,8 +211,8 @@
   },
   "active": "7d9a20bd9eab3f2d",
   "lastOpenFiles": [
-    "04_货币银行学/0_货币银行学看板.md",
     "04_货币银行学/2_金融市场/04_理解利率.md",
+    "04_货币银行学/0_货币银行学看板.md",
     "04_货币银行学/2_金融市场/05_利率行为.md",
     "04_货币银行学/1_引言/03_什么是货币.md",
     "04_货币银行学/0_补充/01_4&7章-基础金融数学和估值.md",
