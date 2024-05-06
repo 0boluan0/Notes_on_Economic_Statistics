@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_game theory/07_子博弈不完全信息.md",
+                "file": "99_学习情况记录/2024-05-06——星期一.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -94,7 +94,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "02_game theory/07_子博弈不完全信息.md",
+            "file": "99_学习情况记录/2024-05-06——星期一.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "02_game theory/07_子博弈不完全信息.md",
+            "file": "99_学习情况记录/2024-05-06——星期一.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -123,7 +123,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "02_game theory/07_子博弈不完全信息.md"
+            "file": "99_学习情况记录/2024-05-06——星期一.md"
           }
         }
       },
@@ -156,12 +156,13 @@
   },
   "active": "c41ae8b47f611280",
   "lastOpenFiles": [
+    "02_game theory/07_子博弈不完全信息.md",
+    "99_学习情况记录/2024-05-06——星期一.md",
     "02_game theory/03_策略式博弈.md",
     "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "02_game theory/02_初步认识博弈.md",
     "99_学习情况记录/2024-05-03——星期五.md",
     "99_学习情况记录/2024-04-25——星期四.md",
-    "02_game theory/07_子博弈不完全信息.md",
     "02_game theory/05_贝叶斯博弈.md",
     "02_game theory/06_扩展性博弈.md",
     "99_学习情况记录/2024-04-23——星期二.md",
@@ -187,7 +188,6 @@
     "98_attachment/Pasted image 20240319151140.png",
     "98_attachment/Pasted image 20240319150509.png",
     "98_attachment/Pasted image 20240319151039.png",
-    "98_attachment/Pasted image 20240319151114.png",
-    "99_学习情况记录/已复盘/2024-03-19——星期二.md"
+    "98_attachment/Pasted image 20240319151114.png"
   ]
 }

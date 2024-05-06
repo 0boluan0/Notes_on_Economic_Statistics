@@ -5,6 +5,30 @@
       "path": "04_货币银行学/2_金融市场/04_理解利率.md"
     },
     {
+      "basename": "05_利率行为",
+      "path": "04_货币银行学/2_金融市场/05_利率行为.md"
+    },
+    {
+      "basename": "07_子博弈不完全信息",
+      "path": "02_game theory/07_子博弈不完全信息.md"
+    },
+    {
+      "basename": "06_扩展性博弈",
+      "path": "02_game theory/06_扩展性博弈.md"
+    },
+    {
+      "basename": "05_贝叶斯博弈",
+      "path": "02_game theory/05_贝叶斯博弈.md"
+    },
+    {
+      "basename": "04_案例（囚徒困境与纳什均衡）",
+      "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
+    },
+    {
+      "basename": "第2次作业",
+      "path": "02_game theory/第2次作业.pdf"
+    },
+    {
       "basename": "02_一元线性回归(网课)",
       "path": "01_Econometrics/02_一元线性回归(网课).md"
     },
@@ -13,16 +37,8 @@
       "path": "01_Econometrics/04_模型设定.md"
     },
     {
-      "basename": "第2次作业",
-      "path": "02_game theory/第2次作业.pdf"
-    },
-    {
       "basename": "0_货币银行学看板",
       "path": "04_货币银行学/0_货币银行学看板.md"
-    },
-    {
-      "basename": "05_利率行为",
-      "path": "04_货币银行学/2_金融市场/05_利率行为.md"
     },
     {
       "basename": "03_什么是货币",
@@ -55,14 +71,6 @@
     {
       "basename": "06_社会保障支出",
       "path": "03_public finance财政学/2_财政支出/06_社会保障支出.md"
-    },
-    {
-      "basename": "07_子博弈不完全信息",
-      "path": "02_game theory/07_子博弈不完全信息.md"
-    },
-    {
-      "basename": "06_扩展性博弈",
-      "path": "02_game theory/06_扩展性博弈.md"
     },
     {
       "basename": "03_多元线性回归(上课)",
@@ -135,14 +143,6 @@
     {
       "basename": "02_初步认识博弈",
       "path": "02_game theory/02_初步认识博弈.md"
-    },
-    {
-      "basename": "04_案例（囚徒困境与纳什均衡）",
-      "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
-    },
-    {
-      "basename": "05_贝叶斯博弈",
-      "path": "02_game theory/05_贝叶斯博弈.md"
     },
     {
       "basename": "第1次作业",
