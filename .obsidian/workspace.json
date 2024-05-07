@@ -11,12 +11,9 @@
             "id": "97266e4421195398",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归(网课).md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "04_货币银行学/0_货币银行学看板.md"
               }
             }
           }
@@ -78,7 +75,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 294.50312423706055
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -94,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归(网课).md",
+                "file": "04_货币银行学/0_货币银行学看板.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -111,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归(网课).md",
+                "file": "04_货币银行学/0_货币银行学看板.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归(网课).md"
+                "file": "04_货币银行学/0_货币银行学看板.md"
               }
             }
           },
@@ -171,8 +168,23 @@
   },
   "active": "97266e4421195398",
   "lastOpenFiles": [
-    "01_Econometrics/02_一元线性回归(上课).md",
+    "03_public finance财政学/0_财政学看板.md",
+    "03_public finance财政学/3_财政收入/03_税收与经济效率.md",
+    "03_public finance财政学/3_财政收入/02_税收与收入分布.md",
+    "03_public finance财政学/3_财政收入/01_财政收入总论.md",
+    "98_attachment/Pasted image 20240507174125.png",
+    "98_attachment/Pasted image 20240507174108.png",
+    "98_attachment/Pasted image 20240507173735.png",
+    "98_attachment/Pasted image 20240507173329.png",
+    "03_public finance财政学/2_财政支出/06_社会保障支出.md",
+    "03_public finance财政学/2_财政支出/05_投资性支出.md",
+    "03_public finance财政学/2_财政支出/04_经常性支出.md",
+    "03_public finance财政学/2_财政支出/03_财政支出总论.md",
+    "03_public finance财政学/2_财政支出/02_外部性Externality.md",
+    "03_public finance财政学/2_财政支出/01_公共物品public goods.md",
     "01_Econometrics/02_一元线性回归(网课).md",
+    "01_Econometrics/02_一元线性回归(上课).md",
+    "01_Econometrics/03_多元线性回归(上课).md",
     "04_货币银行学/2_金融市场/05_利率行为.md",
     "04_货币银行学/2_金融市场/04_理解利率.md",
     "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md",
@@ -183,22 +195,11 @@
     "02_game theory/07_子博弈不完全信息.md",
     "04_货币银行学/1_引言/03_什么是货币.md",
     "03_public finance财政学/4_预算收支管理体系/01_政府预算.md",
-    "03_public finance财政学/3_财政收入/01_财政收入总论.md",
-    "03_public finance财政学/3_财政收入/02_税收与收入分布.md",
-    "03_public finance财政学/3_财政收入/03_税收与经济效率.md",
     "03_public finance财政学/3_财政收入/08_税收.md",
     "02_game theory/00-看板-博弈论.md",
     "99_学习情况记录/已复盘/2024-05-06——星期一.md",
-    "99_学习情况记录/4-22至4-28第九周.md",
     "98_attachment/Pasted image 20240507132957.png",
-    "02_game theory/06_扩展性博弈.md",
-    "02_game theory/05_贝叶斯博弈.md",
-    "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "02_game theory/第2次作业.pdf",
-    "01_Econometrics/04_模型设定.md",
-    "04_货币银行学/0_货币银行学看板.md",
-    "04_货币银行学/0_补充/01_4&7章-基础金融数学和估值.md",
-    "04_货币银行学/1_引言/02_金融体系概览.md",
     "01_Econometrics/太白金星v计量.pdf",
     "02_game theory/第1次作业.pdf",
     "02_game theory/第1次作业补充.pdf",
@@ -208,10 +209,6 @@
     "98_attachment/Pasted image 20240501153522.png",
     "98_attachment/Pasted image 20240501153253.png",
     "98_attachment/Pasted image 20240501153106.png",
-    "98_attachment/Pasted image 20240430170207.png",
-    "98_attachment/Pasted image 20240430161327.png",
-    "98_attachment/Pasted image 20240425201613.png",
-    "98_attachment/Pasted image 20240425201549.png",
     "98_attachment/Recording 20240418200059.webm",
     "Excalidraw",
     "03_public finance",
