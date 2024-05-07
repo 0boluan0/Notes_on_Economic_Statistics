@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "02_一元线性回归(网课)",
+      "path": "01_Econometrics/02_一元线性回归(网课).md"
+    },
+    {
+      "basename": "02_一元线性回归(上课)",
+      "path": "01_Econometrics/02_一元线性回归(上课).md"
+    },
+    {
       "basename": "05_利率行为",
       "path": "04_货币银行学/2_金融市场/05_利率行为.md"
+    },
+    {
+      "basename": "04_理解利率",
+      "path": "04_货币银行学/2_金融市场/04_理解利率.md"
     },
     {
       "basename": "06_利率的风险结构与期限结构",
@@ -27,10 +39,6 @@
     {
       "basename": "07_子博弈不完全信息",
       "path": "02_game theory/07_子博弈不完全信息.md"
-    },
-    {
-      "basename": "04_理解利率",
-      "path": "04_货币银行学/2_金融市场/04_理解利率.md"
     },
     {
       "basename": "03_什么是货币",
@@ -85,10 +93,6 @@
       "path": "02_game theory/第2次作业.pdf"
     },
     {
-      "basename": "02_一元线性回归(网课)",
-      "path": "01_Econometrics/02_一元线性回归(网课).md"
-    },
-    {
       "basename": "04_模型设定",
       "path": "01_Econometrics/04_模型设定.md"
     },
@@ -127,10 +131,6 @@
     {
       "basename": "03_多元线性回归(上课)",
       "path": "01_Econometrics/03_多元线性回归(上课).md"
-    },
-    {
-      "basename": "02_一元线性回归(上课)",
-      "path": "01_Econometrics/02_一元线性回归(上课).md"
     },
     {
       "basename": "零散知识点",

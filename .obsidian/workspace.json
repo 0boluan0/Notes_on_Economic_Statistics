@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_货币银行学/2_金融市场/05_利率行为.md",
+                "file": "01_Econometrics/02_一元线性回归(网课).md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_货币银行学/2_金融市场/05_利率行为.md",
+                "file": "01_Econometrics/02_一元线性回归(网课).md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_货币银行学/2_金融市场/05_利率行为.md",
+                "file": "01_Econometrics/02_一元线性回归(网课).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_货币银行学/2_金融市场/05_利率行为.md"
+                "file": "01_Econometrics/02_一元线性回归(网课).md"
               }
             }
           },
@@ -171,14 +171,16 @@
   },
   "active": "97266e4421195398",
   "lastOpenFiles": [
-    "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md",
+    "01_Econometrics/02_一元线性回归(上课).md",
+    "01_Econometrics/02_一元线性回归(网课).md",
     "04_货币银行学/2_金融市场/05_利率行为.md",
+    "04_货币银行学/2_金融市场/04_理解利率.md",
+    "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md",
     "99_学习情况记录/4-29至5-5第十周.md",
     "99_学习情况记录/已复盘/2024-04-23——星期二.md",
     "99_学习情况记录/已复盘/2024-04-22——星期一.md",
     "99_学习情况记录/2024-05-07——星期二.md",
     "02_game theory/07_子博弈不完全信息.md",
-    "04_货币银行学/2_金融市场/04_理解利率.md",
     "04_货币银行学/1_引言/03_什么是货币.md",
     "03_public finance财政学/4_预算收支管理体系/01_政府预算.md",
     "03_public finance财政学/3_财政收入/01_财政收入总论.md",
@@ -193,12 +195,10 @@
     "02_game theory/05_贝叶斯博弈.md",
     "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "02_game theory/第2次作业.pdf",
-    "01_Econometrics/02_一元线性回归(网课).md",
     "01_Econometrics/04_模型设定.md",
     "04_货币银行学/0_货币银行学看板.md",
     "04_货币银行学/0_补充/01_4&7章-基础金融数学和估值.md",
     "04_货币银行学/1_引言/02_金融体系概览.md",
-    "04_货币银行学/1_引言/01_为什么研究货币，银行与金融市场.md",
     "01_Econometrics/太白金星v计量.pdf",
     "02_game theory/第1次作业.pdf",
     "02_game theory/第1次作业补充.pdf",
