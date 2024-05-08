@@ -11,12 +11,9 @@
             "id": "97266e4421195398",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "04_货币银行学/2_金融市场/05_利率行为.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "02_game theory/第3次作业.pdf"
               }
             }
           }
@@ -94,7 +91,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_货币银行学/2_金融市场/05_利率行为.md",
+                "file": "02_game theory/第3次作业.pdf",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -111,7 +108,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_货币银行学/2_金融市场/05_利率行为.md",
+                "file": "02_game theory/第3次作业.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +131,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_货币银行学/2_金融市场/05_利率行为.md"
+                "file": "02_game theory/第3次作业.pdf"
               }
             }
           },
@@ -171,14 +168,14 @@
   },
   "active": "97266e4421195398",
   "lastOpenFiles": [
+    "02_game theory/07_子博弈不完全信息.md",
+    "02_game theory/05_贝叶斯博弈.md",
+    "02_game theory/06_扩展性博弈.md",
+    "04_货币银行学/2_金融市场/05_利率行为.md",
     "98_attachment/Pasted image 20240507195103.png",
     "98_attachment/Pasted image 20240507194141.png",
-    "02_game theory/07_子博弈不完全信息.md",
-    "02_game theory/06_扩展性博弈.md",
-    "02_game theory/05_贝叶斯博弈.md",
     "02_game theory/04_案例（囚徒困境与纳什均衡）.md",
     "02_game theory/第3次作业.pdf",
-    "04_货币银行学/2_金融市场/05_利率行为.md",
     "98_attachment/Pasted image 20240507190329.png",
     "98_attachment/Pasted image 20240507185322.png",
     "98_attachment/Pasted image 20240507185308.png",
@@ -211,7 +208,6 @@
     "01_Econometrics/太白金星v计量.pdf",
     "02_game theory/第1次作业.pdf",
     "02_game theory/第1次作业补充.pdf",
-    "98_attachment/Pasted image 20240501165047.png",
     "98_attachment/Recording 20240418200059.webm",
     "Excalidraw",
     "03_public finance",
