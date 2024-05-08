@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "第3次作业",
-      "path": "02_game theory/第3次作业.pdf"
+      "basename": "第2次作业",
+      "path": "02_game theory/第2次作业.pdf"
+    },
+    {
+      "basename": "第1次作业补充",
+      "path": "02_game theory/第1次作业补充.pdf"
     },
     {
       "basename": "07_子博弈不完全信息",
       "path": "02_game theory/07_子博弈不完全信息.md"
+    },
+    {
+      "basename": "2024-05-08——星期三",
+      "path": "99_学习情况记录/2024-05-08——星期三.md"
+    },
+    {
+      "basename": "第3次作业",
+      "path": "02_game theory/第3次作业.pdf"
     },
     {
       "basename": "05_贝叶斯博弈",
@@ -137,10 +149,6 @@
       "path": "99_学习情况记录/4-22至4-28第九周.md"
     },
     {
-      "basename": "第2次作业",
-      "path": "02_game theory/第2次作业.pdf"
-    },
-    {
       "basename": "04_模型设定",
       "path": "01_Econometrics/04_模型设定.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "02_实证分析——positive analysis",
       "path": "03_public finance财政学/1_导论/02_实证分析——positive analysis.md"
-    },
-    {
-      "basename": "02_初步认识博弈",
-      "path": "02_game theory/02_初步认识博弈.md"
-    },
-    {
-      "basename": "第1次作业",
-      "path": "02_game theory/第1次作业.pdf"
     }
   ],
   "omittedPaths": [],

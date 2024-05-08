@@ -11,12 +11,9 @@
             "id": "c41ae8b47f611280",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "99_学习情况记录/2024-05-06——星期一.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "02_game theory/第1次作业补充.pdf"
               }
             }
           }
@@ -94,7 +91,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "99_学习情况记录/2024-05-06——星期一.md",
+            "file": "02_game theory/第1次作业补充.pdf",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -111,7 +108,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "99_学习情况记录/2024-05-06——星期一.md",
+            "file": "02_game theory/第1次作业补充.pdf",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -123,7 +120,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "99_学习情况记录/2024-05-06——星期一.md"
+            "file": "02_game theory/第1次作业补充.pdf"
           }
         }
       },
@@ -156,6 +153,8 @@
   },
   "active": "c41ae8b47f611280",
   "lastOpenFiles": [
+    "99_学习情况记录/2024-05-08——星期三 2.md",
+    "99_学习情况记录/2024-05-08——星期三.md",
     "02_game theory/07_子博弈不完全信息.md",
     "99_学习情况记录/2024-05-06——星期一.md",
     "02_game theory/03_策略式博弈.md",
@@ -181,8 +180,6 @@
     "99_学习情况记录/3-18至3-24第四周.md",
     "00_inbox/日记模版.md",
     "02_game theory/03_囚徒困境与纳什均衡.md",
-    "01_Econometrics/03_多元线性回归.md",
-    "99_学习情况记录/2024-03-25——星期一.md",
     "03_public finance",
     "98_attachment/Pasted image 20240319151125.png",
     "98_attachment/Pasted image 20240319151140.png",
