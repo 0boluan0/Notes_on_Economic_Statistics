@@ -1,6 +1,46 @@
 {
   "recentFiles": [
     {
+      "basename": "05_利率行为",
+      "path": "04_货币银行学/2_金融市场/05_利率行为.md"
+    },
+    {
+      "basename": "04_理解利率",
+      "path": "04_货币银行学/2_金融市场/04_理解利率.md"
+    },
+    {
+      "basename": "06_利率的风险结构与期限结构",
+      "path": "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md"
+    },
+    {
+      "basename": "01_政府预算",
+      "path": "03_public finance财政学/4_预算收支管理体系/01_政府预算.md"
+    },
+    {
+      "basename": "08_税收",
+      "path": "03_public finance财政学/3_财政收入/08_税收.md"
+    },
+    {
+      "basename": "03_税收与经济效率",
+      "path": "03_public finance财政学/3_财政收入/03_税收与经济效率.md"
+    },
+    {
+      "basename": "02_税收与收入分布",
+      "path": "03_public finance财政学/3_财政收入/02_税收与收入分布.md"
+    },
+    {
+      "basename": "05_投资性支出",
+      "path": "03_public finance财政学/2_财政支出/05_投资性支出.md"
+    },
+    {
+      "basename": "01_财政收入总论",
+      "path": "03_public finance财政学/3_财政收入/01_财政收入总论.md"
+    },
+    {
+      "basename": "第1次作业",
+      "path": "02_game theory/第1次作业.pdf"
+    },
+    {
       "basename": "第2次作业",
       "path": "02_game theory/第2次作业.pdf"
     },
@@ -29,16 +69,8 @@
       "path": "02_game theory/06_扩展性博弈.md"
     },
     {
-      "basename": "05_利率行为",
-      "path": "04_货币银行学/2_金融市场/05_利率行为.md"
-    },
-    {
       "basename": "04_案例（囚徒困境与纳什均衡）",
       "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
-    },
-    {
-      "basename": "04_理解利率",
-      "path": "04_货币银行学/2_金融市场/04_理解利率.md"
     },
     {
       "basename": "01_为什么研究货币，银行与金融市场",
@@ -57,24 +89,8 @@
       "path": "03_public finance财政学/0_财政学看板.md"
     },
     {
-      "basename": "03_税收与经济效率",
-      "path": "03_public finance财政学/3_财政收入/03_税收与经济效率.md"
-    },
-    {
-      "basename": "02_税收与收入分布",
-      "path": "03_public finance财政学/3_财政收入/02_税收与收入分布.md"
-    },
-    {
-      "basename": "01_财政收入总论",
-      "path": "03_public finance财政学/3_财政收入/01_财政收入总论.md"
-    },
-    {
       "basename": "06_社会保障支出",
       "path": "03_public finance财政学/2_财政支出/06_社会保障支出.md"
-    },
-    {
-      "basename": "05_投资性支出",
-      "path": "03_public finance财政学/2_财政支出/05_投资性支出.md"
     },
     {
       "basename": "04_经常性支出",
@@ -105,10 +121,6 @@
       "path": "01_Econometrics/03_多元线性回归(上课).md"
     },
     {
-      "basename": "06_利率的风险结构与期限结构",
-      "path": "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md"
-    },
-    {
       "basename": "4-29至5-5第十周",
       "path": "99_学习情况记录/4-29至5-5第十周.md"
     },
@@ -127,14 +139,6 @@
     {
       "basename": "03_什么是货币",
       "path": "04_货币银行学/1_引言/03_什么是货币.md"
-    },
-    {
-      "basename": "01_政府预算",
-      "path": "03_public finance财政学/4_预算收支管理体系/01_政府预算.md"
-    },
-    {
-      "basename": "08_税收",
-      "path": "03_public finance财政学/3_财政收入/08_税收.md"
     },
     {
       "basename": "00-看板-博弈论",
@@ -195,10 +199,6 @@
     {
       "basename": "03_规范分析——Negative analysis",
       "path": "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md"
-    },
-    {
-      "basename": "02_实证分析——positive analysis",
-      "path": "03_public finance财政学/1_导论/02_实证分析——positive analysis.md"
     }
   ],
   "omittedPaths": [],
