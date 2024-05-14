@@ -13,5 +13,6 @@
   "obsidian-emoji-toolbar",
   "obsidian-kanban",
   "omnisearch",
-  "quick-latex"
+  "quick-latex",
+  "obsidian-pandoc"
 ]
