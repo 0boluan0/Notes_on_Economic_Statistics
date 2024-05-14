@@ -11,16 +11,25 @@
             "id": "97266e4421195398",
             "type": "leaf",
             "state": {
+              "type": "memos_view",
+              "state": {}
+            }
+          },
+          {
+            "id": "ccb1304b38d84577",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "04_货币银行学/2_金融市场/05_利率行为.md",
+                "file": "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_货币银行学/2_金融市场/05_利率行为.md",
+                "file": "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -111,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_货币银行学/2_金融市场/05_利率行为.md",
+                "file": "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_货币银行学/2_金融市场/05_利率行为.md"
+                "file": "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md"
               }
             }
           },
@@ -169,8 +178,17 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "97266e4421195398",
+  "active": "ccb1304b38d84577",
   "lastOpenFiles": [
+    "04_货币银行学/2_金融市场/05_利率行为.md",
+    "98_attachment/Pasted image 20240514170715.png",
+    "98_attachment/Pasted image 20240514170657.png",
+    "98_attachment/Pasted image 20240514170636.png",
+    "98_attachment/Pasted image 20240514164228.png",
+    "98_attachment/Pasted image 20240514164122.png",
+    "98_attachment/Pasted image 20240514164052.png",
+    "Excalidraw/Drawing 2024-05-14 16.38.55.excalidraw.md",
+    "Excalidraw",
     "98_attachment/Pasted image 20240514155913.png",
     "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md",
     "04_货币银行学/0_货币银行学看板.md",
@@ -180,7 +198,6 @@
     "05_经济思想史/02_前资本主义社会.md",
     "01_Econometrics/02_一元线性回归(网课).md",
     "04_货币银行学/2_金融市场/04_理解利率.md",
-    "04_货币银行学/2_金融市场/05_利率行为.md",
     "04_货币银行学/1_引言/02_金融体系概览.md",
     "04_货币银行学/1_引言/03_什么是货币.md",
     "04_货币银行学/1_引言/01_为什么研究货币，银行与金融市场.md",
@@ -201,21 +218,12 @@
     "05_经济思想史/ppt/01第一讲古希腊和罗马经济思想.ppt",
     "05_经济思想史/ppt/00第零讲西方经济思想史导言.ppt",
     "05_经济思想史/ppt",
-    "05_经济思想史/未命名文件夹",
     "98_attachment/Pasted image 20240511150513.png",
     "99_学习情况记录/2024-05-11——星期六.md",
     "99_学习情况记录/已复盘/2024-05-08——星期三.md",
     "99_学习情况记录/已复盘/2024-05-07——星期二.md",
     "99_学习情况记录/2024-05-08——星期三 2.md",
-    "03_public finance财政学/4_预算收支管理体系/01_政府预算.md",
     "98_attachment/Pasted image 20240507195103.png",
-    "98_attachment/Pasted image 20240507194141.png",
-    "98_attachment/Pasted image 20240507190329.png",
-    "98_attachment/Pasted image 20240507185322.png",
-    "98_attachment/Pasted image 20240507185308.png",
-    "98_attachment/Pasted image 20240507174125.png",
-    "98_attachment/Pasted image 20240507174108.png",
-    "98_attachment/Pasted image 20240507173735.png",
-    "98_attachment/Pasted image 20240507173329.png"
+    "98_attachment/Pasted image 20240507194141.png"
   ]
 }
