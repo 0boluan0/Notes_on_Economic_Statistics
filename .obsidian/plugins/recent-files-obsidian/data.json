@@ -1,14 +1,6 @@
 {
   "recentFiles": [
     {
-      "basename": "02_税收与收入分布",
-      "path": "03_public finance财政学/3_财政收入/02_税收与收入分布.md"
-    },
-    {
-      "basename": "01_财政收入总论",
-      "path": "03_public finance财政学/3_财政收入/01_财政收入总论.md"
-    },
-    {
       "basename": "06_社会保障支出",
       "path": "03_public finance财政学/2_财政支出/06_社会保障支出.md"
     },
@@ -25,12 +17,20 @@
       "path": "03_public finance财政学/2_财政支出/03_财政支出总论.md"
     },
     {
+      "basename": "01_公共物品public goods",
+      "path": "03_public finance财政学/2_财政支出/01_公共物品public goods.md"
+    },
+    {
       "basename": "02_外部性Externality",
       "path": "03_public finance财政学/2_财政支出/02_外部性Externality.md"
     },
     {
-      "basename": "01_公共物品public goods",
-      "path": "03_public finance财政学/2_财政支出/01_公共物品public goods.md"
+      "basename": "01_导论",
+      "path": "03_public finance财政学/1_导论/01_导论.md"
+    },
+    {
+      "basename": "契约曲线",
+      "path": "03_public finance财政学/6_先前知识点速览/契约曲线.md"
     },
     {
       "basename": "03_规范分析——Negative analysis",
@@ -39,6 +39,26 @@
     {
       "basename": "02_实证分析——positive analysis",
       "path": "03_public finance财政学/1_导论/02_实证分析——positive analysis.md"
+    },
+    {
+      "basename": "00_财政学课程内容分布",
+      "path": "03_public finance财政学/1_导论/00_财政学课程内容分布.md"
+    },
+    {
+      "basename": "08_税收",
+      "path": "03_public finance财政学/3_财政收入/08_税收.md"
+    },
+    {
+      "basename": "03_税收与经济效率",
+      "path": "03_public finance财政学/3_财政收入/03_税收与经济效率.md"
+    },
+    {
+      "basename": "02_税收与收入分布",
+      "path": "03_public finance财政学/3_财政收入/02_税收与收入分布.md"
+    },
+    {
+      "basename": "01_财政收入总论",
+      "path": "03_public finance财政学/3_财政收入/01_财政收入总论.md"
     },
     {
       "basename": "06_利率的风险结构与期限结构",
@@ -69,24 +89,8 @@
       "path": "02_game theory/05_贝叶斯博弈.md"
     },
     {
-      "basename": "03_税收与经济效率",
-      "path": "03_public finance财政学/3_财政收入/03_税收与经济效率.md"
-    },
-    {
       "basename": "01_政府预算",
       "path": "03_public finance财政学/4_预算收支管理体系/01_政府预算.md"
-    },
-    {
-      "basename": "08_税收",
-      "path": "03_public finance财政学/3_财政收入/08_税收.md"
-    },
-    {
-      "basename": "01_导论",
-      "path": "03_public finance财政学/1_导论/01_导论.md"
-    },
-    {
-      "basename": "00_财政学课程内容分布",
-      "path": "03_public finance财政学/1_导论/00_财政学课程内容分布.md"
     },
     {
       "basename": "05_利率行为",
@@ -195,10 +199,6 @@
     {
       "basename": "0_财政学看板",
       "path": "03_public finance财政学/0_财政学看板.md"
-    },
-    {
-      "basename": "02_一元线性回归(上课)",
-      "path": "01_Econometrics/02_一元线性回归(上课).md"
     }
   ],
   "omittedPaths": [],
