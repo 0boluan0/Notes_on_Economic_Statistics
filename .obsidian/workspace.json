@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_public finance财政学/3_财政收入/02_税收与收入分布.md",
+                "file": "03_public finance财政学/3_财政收入/03_税收与经济效率.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "55d1e700d22d4abf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03_public finance财政学/3_财政收入/03_税收与经济效率.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03_public finance财政学/3_财政收入/02_税收与收入分布.md",
+                "file": "03_public finance财政学/3_财政收入/03_税收与经济效率.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -111,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03_public finance财政学/3_财政收入/02_税收与收入分布.md",
+                "file": "03_public finance财政学/3_财政收入/03_税收与经济效率.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_public finance财政学/3_财政收入/02_税收与收入分布.md"
+                "file": "03_public finance财政学/3_财政收入/03_税收与经济效率.md"
               }
             }
           },
@@ -170,8 +184,13 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "ccb1304b38d84577",
+  "active": "55d1e700d22d4abf",
   "lastOpenFiles": [
+    "03_public finance财政学/3_财政收入/04_有效且公平地课税.md",
+    "03_public finance财政学/3_财政收入/03_税收与经济效率.md",
+    "03_public finance财政学/3_财政收入/02_税收与收入分布.md",
+    "03_public finance财政学/4_预算收支管理体系/01_政府预算.md",
+    "03_public finance财政学/3_财政收入/08_税收.md",
     "98_attachment/Pasted image 20240519170738.png",
     "98_attachment/Pasted image 20240519170631.png",
     "98_attachment/Pasted image 20240519170600.png",
@@ -182,10 +201,6 @@
     "98_attachment/Pasted image 20240519140230.png",
     "98_attachment/Pasted image 20240519140220.png",
     "98_attachment/Pasted image 20240519135523.png",
-    "03_public finance财政学/3_财政收入/03_税收与经济效率.md",
-    "03_public finance财政学/3_财政收入/08_税收.md",
-    "03_public finance财政学/4_预算收支管理体系/01_政府预算.md",
-    "03_public finance财政学/3_财政收入/02_税收与收入分布.md",
     "03_public finance财政学/3_财政收入/01_财政收入总论.md",
     "03_public finance财政学/2_财政支出/06_社会保障支出.md",
     "03_public finance财政学/2_财政支出/03_财政支出总论.md",
@@ -210,7 +225,6 @@
     "02_game theory/05_贝叶斯博弈.md",
     "05_经济思想史/~$方经济思想史.docx",
     "05_经济思想史/西方经济思想史.docx",
-    "98_attachment/Pasted image 20240514170715.png",
     "Excalidraw",
     "05_经济思想史/ppt/07马歇尔经济学与马歇尔以后的微观经济学发展.ppt",
     "05_经济思想史/ppt/06 边际革命.ppt",

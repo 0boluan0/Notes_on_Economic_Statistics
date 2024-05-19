@@ -1,16 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "02_税收与收入分布",
-      "path": "03_public finance财政学/3_财政收入/02_税收与收入分布.md"
-    },
-    {
       "basename": "03_税收与经济效率",
       "path": "03_public finance财政学/3_财政收入/03_税收与经济效率.md"
     },
     {
-      "basename": "08_税收",
-      "path": "03_public finance财政学/3_财政收入/08_税收.md"
+      "basename": "04_有效且公平地课税",
+      "path": "03_public finance财政学/3_财政收入/04_有效且公平地课税.md"
+    },
+    {
+      "basename": "02_税收与收入分布",
+      "path": "03_public finance财政学/3_财政收入/02_税收与收入分布.md"
     },
     {
       "basename": "01_政府预算",
@@ -195,10 +195,6 @@
     {
       "basename": "06_扩展性博弈",
       "path": "02_game theory/06_扩展性博弈.md"
-    },
-    {
-      "basename": "04_案例（囚徒困境与纳什均衡）",
-      "path": "02_game theory/04_案例（囚徒困境与纳什均衡）.md"
     }
   ],
   "omittedPaths": [],
