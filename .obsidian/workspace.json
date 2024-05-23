@@ -26,7 +26,41 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_货币银行学/1_引言/02_金融体系概览.md",
+                "file": "04_货币银行学/1_引言/03_什么是货币.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8bb447a0bf4e5cc8",
+            "type": "leaf",
+            "state": {
+              "type": "thino_view",
+              "state": {}
+            }
+          },
+          {
+            "id": "86ab03a6868b911a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "04_货币银行学/0_补充/01_4&7章-基础金融数学和估值.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "284b2b5d4e8dd131",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/00_知识点划重点.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -108,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04_货币银行学/1_引言/02_金融体系概览.md",
+                "file": "00_inbox/00_知识点划重点.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -125,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04_货币银行学/1_引言/02_金融体系概览.md",
+                "file": "00_inbox/00_知识点划重点.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_货币银行学/1_引言/02_金融体系概览.md"
+                "file": "00_inbox/00_知识点划重点.md"
               }
             }
           },
@@ -184,14 +218,20 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "0b9a21a0f8dc7b99",
+  "active": "284b2b5d4e8dd131",
   "lastOpenFiles": [
+    "04_货币银行学/0_补充/01_4&7章-基础金融数学和估值.md",
+    "00_inbox/00_知识点划重点.md",
+    "04_货币银行学/1_引言/02_金融体系概览.md",
+    "04_货币银行学/1_引言/03_什么是货币.md",
     "04_货币银行学/1_引言/01_为什么研究货币，银行与金融市场.md",
+    "99_学习情况记录/2024-05-23——星期四.md",
+    "04_货币银行学/1_引言/未命名.canvas",
+    "Excalidraw/Drawing 2024-05-23 15.15.19.excalidraw.md",
     "04_货币银行学/1_引言/00_在这节课开始之前，导论.md",
     "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md",
     "04_货币银行学/2_金融市场/05_利率行为.md",
     "04_货币银行学/3_金融机构/08_金融结构的经济学分析.md",
-    "99_学习情况记录/2024-05-23——星期四.md",
     "04_货币银行学/3_金融机构/12_金融危机.md",
     "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
     "03_public finance财政学/3_财政收入/04_有效且公平地课税.md",
@@ -217,11 +257,6 @@
     "03_public finance财政学/1_导论/01_导论.md",
     "03_public finance财政学/1_导论/02_实证分析——positive analysis.md",
     "03_public finance财政学/6_先前知识点速览/帕累托.md",
-    "03_public finance财政学/2_财政支出/05_投资性支出.md",
-    "03_public finance财政学/2_财政支出/01_公共物品public goods.md",
-    "00_inbox/日记模版.md",
-    "00_inbox/03_中世纪经院哲学中的经济思想.md",
-    "03_public finance财政学/1_导论/00_财政学课程内容分布.md",
     "02_game theory/第2次作业.pdf",
     "05_经济思想史/~$方经济思想史.docx",
     "05_经济思想史/西方经济思想史.docx",
