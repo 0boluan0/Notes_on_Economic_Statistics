@@ -11,9 +11,12 @@
             "id": "55d1e700d22d4abf",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "01_Econometrics/太白金星v计量.pdf"
+                "file": "01_Econometrics/02_一元线性回归(上课).md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -91,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/太白金星v计量.pdf",
+                "file": "01_Econometrics/02_一元线性回归(上课).md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -108,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/太白金星v计量.pdf",
+                "file": "01_Econometrics/02_一元线性回归(上课).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/太白金星v计量.pdf"
+                "file": "01_Econometrics/02_一元线性回归(上课).md"
               }
             }
           },
@@ -169,12 +172,23 @@
   },
   "active": "55d1e700d22d4abf",
   "lastOpenFiles": [
-    "01_Econometrics/00_计量经济学看板.md",
+    "99_学习情况记录/已复盘/2024-05-30——星期四.md",
+    "99_学习情况记录/已复盘/2024-05-24——星期五.md",
+    "99_学习情况记录/已复盘/2024-05-23——星期四.md",
+    "99_学习情况记录/已复盘/2024-05-16——星期四.md",
+    "99_学习情况记录/已复盘/2024-05-15——星期三.md",
+    "99_学习情况记录/已复盘/2024-05-14——星期二.md",
+    "99_学习情况记录/已复盘/2024-05-13——星期一.md",
+    "99_学习情况记录/已复盘/2024-05-11——星期六.md",
     "01_Econometrics/02_一元线性回归(网课).md",
+    "01_Econometrics/03_多元线性回归(上课).md",
+    "01_Econometrics/零散知识点.md",
+    "99_学习情况记录/2024-06-04——星期二.md",
+    "01_Econometrics/太白金星v计量.pdf",
+    "01_Econometrics/00_计量经济学看板.md",
     "01_Econometrics/00-看板-计量经济学.md",
     "98_attachment/Pasted image 20240604153950.png",
     "01_Econometrics/02_一元线性回归(上课).md",
-    "01_Econometrics/03_多元线性回归(上课).md",
     "04_货币银行学/5_国际金融与货币政策/17_外汇市场.md",
     "04_货币银行学/4_中央银行与货币政策的实施/15_货币政策工具.md",
     "04_货币银行学/4_中央银行与货币政策的实施/14_货币供给过程.md",
@@ -186,12 +200,6 @@
     "04_货币银行学/2_金融市场/07_股票市场,理性预期理论与有效市场假说.md",
     "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md",
     "04_货币银行学/2_金融市场/05_利率行为.md",
-    "04_货币银行学/2_金融市场/04_理解利率.md",
-    "04_货币银行学/1_引言/03_什么是货币.md",
-    "04_货币银行学/1_引言/02_金融体系概览.md",
-    "04_货币银行学/1_引言/01_为什么研究货币，银行与金融市场.md",
-    "04_货币银行学/1_引言/00_在这节课开始之前，导论.md",
-    "04_货币银行学/0_补充/01_4&7章-基础金融数学和估值.md",
     "98_attachment/Pasted image 20240528085133.png",
     "98_attachment/Pasted image 20240528084844.png",
     "98_attachment/Pasted image 20240528084539.png",
@@ -201,13 +209,8 @@
     "98_attachment/Pasted image 20240528083848.png",
     "98_attachment/Pasted image 20240528083215.png",
     "98_attachment/Pasted image 20240528082921.png",
-    "04_货币银行学/0_货币银行学看板.md",
-    "04_货币银行学/0_补充/00_知识点划重点.md",
     "02_game theory/第3次作业.pdf",
     "02_game theory/第2次作业.pdf",
-    "02_game theory/07_子博弈不完全信息.md",
-    "01_Econometrics/太白金星v计量.pdf",
-    "01_Econometrics/零散知识点.md",
     "04_货币银行学/1_引言/未命名.canvas",
     "05_经济思想史/~$方经济思想史.docx",
     "05_经济思想史/西方经济思想史.docx",
