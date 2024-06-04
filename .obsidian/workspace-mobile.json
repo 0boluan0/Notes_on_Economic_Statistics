@@ -11,12 +11,9 @@
             "id": "c41ae8b47f611280",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "99_学习情况记录/2024-05-23——星期四.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "01_Econometrics/太白金星v计量.pdf"
               }
             }
           }
@@ -94,7 +91,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "99_学习情况记录/2024-05-23——星期四.md",
+            "file": "01_Econometrics/太白金星v计量.pdf",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -111,7 +108,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "99_学习情况记录/2024-05-23——星期四.md",
+            "file": "01_Econometrics/太白金星v计量.pdf",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -123,7 +120,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "99_学习情况记录/2024-05-23——星期四.md"
+            "file": "01_Econometrics/太白金星v计量.pdf"
           }
         }
       },
@@ -156,6 +153,15 @@
   },
   "active": "c41ae8b47f611280",
   "lastOpenFiles": [
+    "01_Econometrics/零散知识点.md",
+    "01_Econometrics/02_一元线性回归(上课).md",
+    "99_学习情况记录/6-3至6-9第十五周.md",
+    "99_学习情况记录/5-27至6-2第十四周.md",
+    "99_学习情况记录/5-20至5-26第十三周.md",
+    "99_学习情况记录/2024-06-04——星期二.md",
+    "99_学习情况记录/5-13至5-19第十二周.md",
+    "99_学习情况记录/5-6至5-12第十一周.md",
+    "99_学习情况记录/已复盘/2024-06-04——星期二.md",
     "02_game theory/第1次作业补充.pdf",
     "99_学习情况记录/2024-05-13——星期一.md",
     "99_学习情况记录/2024-05-08——星期三 2.md",
@@ -175,14 +181,6 @@
     "01_Econometrics/02_一元线性回归.md",
     "99_学习情况记录/2024-04-14——星期日.md",
     "03_public finance财政学/2_财政支出/01_公共物品public goods.md",
-    "03_public finance财政学/1_导论/03_规范分析——Negative analysis.md",
-    "03_public finance财政学/6_先前知识点速览/契约曲线.md",
-    "03_public finance财政学/1_导论/02_实证分析——positive analysis.md",
-    "03_public finance财政学/6_先前知识点速览/埃奇沃斯框图.md",
-    "99_学习情况记录/2024-04-11——星期四.md",
-    "99_学习情况记录/2024-04-09——星期二.md",
-    "99_学习情况记录/2024-03-26——星期二.md",
-    "99_学习情况记录/3-18至3-24第四周.md",
     "03_public finance",
     "98_attachment/Pasted image 20240319151125.png",
     "98_attachment/Pasted image 20240319151140.png",
