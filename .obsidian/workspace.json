@@ -76,9 +76,12 @@
             "id": "96f16d8c1bea934f",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "01_Econometrics/太白金星v计量.pdf"
+                "file": "99_学习情况记录/2024-06-05——星期三.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -157,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/太白金星v计量.pdf",
+                "file": "99_学习情况记录/2024-06-05——星期三.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -174,7 +177,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/太白金星v计量.pdf",
+                "file": "99_学习情况记录/2024-06-05——星期三.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -197,7 +200,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/太白金星v计量.pdf"
+                "file": "99_学习情况记录/2024-06-05——星期三.md"
               }
             }
           },
