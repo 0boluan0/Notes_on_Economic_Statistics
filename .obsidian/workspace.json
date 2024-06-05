@@ -78,7 +78,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2024-06-05——星期三.md",
+                "file": "01_Econometrics/03_多元线性回归.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -160,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "99_学习情况记录/2024-06-05——星期三.md",
+                "file": "01_Econometrics/03_多元线性回归.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -177,7 +177,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "99_学习情况记录/2024-06-05——星期三.md",
+                "file": "01_Econometrics/03_多元线性回归.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -200,7 +200,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2024-06-05——星期三.md"
+                "file": "01_Econometrics/03_多元线性回归.md"
               }
             }
           },
@@ -238,9 +238,10 @@
   },
   "active": "96f16d8c1bea934f",
   "lastOpenFiles": [
-    "01_Econometrics/02_一元线性回归(上课).md",
+    "01_Econometrics/02_一元线性回归.md",
+    "01_Econometrics/03_多元线性回归.md",
+    "01_Econometrics/02_一元线性回归(网课).md",
     "99_学习情况记录/2024-06-05——星期三.md",
-    "01_Econometrics/03_多元线性回归(上课).md",
     "99_学习情况记录/6-3至6-9第十五周.md",
     "99_学习情况记录/5-27至6-2第十四周.md",
     "99_学习情况记录/5-20至5-26第十三周.md",
@@ -263,7 +264,6 @@
     "99_学习情况记录/已复盘/2024-05-14——星期二.md",
     "99_学习情况记录/已复盘/2024-05-13——星期一.md",
     "99_学习情况记录/已复盘/2024-05-11——星期六.md",
-    "01_Econometrics/02_一元线性回归(网课).md",
     "01_Econometrics/太白金星v计量.pdf",
     "98_attachment/Pasted image 20240604153950.png",
     "98_attachment/Pasted image 20240528085133.png",
