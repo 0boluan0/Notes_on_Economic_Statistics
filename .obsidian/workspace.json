@@ -78,7 +78,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
+                "file": "01_Econometrics/02_一元线性回归.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -160,7 +160,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
+                "file": "01_Econometrics/02_一元线性回归.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -177,7 +177,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
+                "file": "01_Econometrics/02_一元线性回归.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -200,7 +200,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md"
+                "file": "01_Econometrics/02_一元线性回归.md"
               }
             }
           },
@@ -238,10 +238,10 @@
   },
   "active": "96f16d8c1bea934f",
   "lastOpenFiles": [
+    "01_Econometrics/03_多元线性回归.md",
     "99_学习情况记录/2024-06-06——星期四.md",
     "98_attachment/Pasted image 20240606151938.png",
     "01_Econometrics/02_一元线性回归.md",
-    "01_Econometrics/03_多元线性回归.md",
     "98_attachment/Pasted image 20240606123443.png",
     "98_attachment/Pasted image 20240606122411.png",
     "98_attachment/Pasted image 20240606122324.png",
