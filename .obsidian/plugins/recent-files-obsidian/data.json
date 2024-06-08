@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "04_模型设定",
+      "path": "01_Econometrics/04_模型设定.md"
+    },
+    {
       "basename": "03_多元线性回归",
       "path": "01_Econometrics/03_多元线性回归.md"
     },
     {
-      "basename": "太白金星v计量",
-      "path": "01_Econometrics/太白金星v计量.pdf"
-    },
-    {
       "basename": "05_多元回归模型的矩阵表达",
       "path": "01_Econometrics/05_多元回归模型的矩阵表达.md"
+    },
+    {
+      "basename": "太白金星v计量",
+      "path": "01_Econometrics/太白金星v计量.pdf"
     },
     {
       "basename": "09_银行业与金融机构的管理",
@@ -175,10 +179,6 @@
     {
       "basename": "07_子博弈不完全信息",
       "path": "02_game theory/07_子博弈不完全信息.md"
-    },
-    {
-      "basename": "04_模型设定",
-      "path": "01_Econometrics/04_模型设定.md"
     },
     {
       "basename": "03_规范分析——Negative analysis",

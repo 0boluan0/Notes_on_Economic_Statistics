@@ -91,7 +91,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
+                "file": "01_Econometrics/04_模型设定.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -173,7 +173,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
+                "file": "01_Econometrics/04_模型设定.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -190,7 +190,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
+                "file": "01_Econometrics/04_模型设定.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -213,7 +213,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md"
+                "file": "01_Econometrics/04_模型设定.md"
               }
             }
           },
@@ -251,14 +251,21 @@
   },
   "active": "94244bf387c92072",
   "lastOpenFiles": [
+    "98_attachment/Pasted image 20240608201559.png",
+    "98_attachment/Pasted image 20240608200412.png",
+    "98_attachment/Pasted image 20240608200403 1.png",
+    "98_attachment/Pasted image 20240608200403.png",
+    "01_Econometrics/03_多元线性回归.md",
+    "01_Econometrics/04_模型设定.md",
+    "01_Econometrics/05_多元回归模型的矩阵表达.md",
+    "98_attachment/Pasted image 20240608200200.png",
+    "98_attachment/Pasted image 20240608195613.png",
     "98_attachment/Pasted image 20240608193612.png",
     "98_attachment/Pasted image 20240608190012.png",
     "98_attachment/Pasted image 20240608164501.png",
     "98_attachment/Pasted image 20240608163139.png",
     "98_attachment/Pasted image 20240608154123.png",
     "01_Econometrics/太白金星v计量.pdf",
-    "01_Econometrics/03_多元线性回归.md",
-    "01_Econometrics/05_多元回归模型的矩阵表达.md",
     "04_货币银行学/3_金融机构/09_银行业与金融机构的管理.md",
     "04_货币银行学/3_金融机构/10_金融监管的经济学分析.md",
     "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md",
@@ -266,10 +273,6 @@
     "03_public finance财政学/2_财政支出/01_公共物品public goods.md",
     "01_Econometrics/02_一元线性回归.md",
     "99_学习情况记录/2024-06-06——星期四.md",
-    "98_attachment/Pasted image 20240606151938.png",
-    "98_attachment/Pasted image 20240606123443.png",
-    "98_attachment/Pasted image 20240606122411.png",
-    "98_attachment/Pasted image 20240606122324.png",
     "01_Econometrics/02_一元线性回归(网课).md",
     "99_学习情况记录/2024-06-05——星期三.md",
     "99_学习情况记录/6-3至6-9第十五周.md",
@@ -285,9 +288,6 @@
     "99_学习情况记录/4-15至4-21第八周.md",
     "99_学习情况记录/4-22至4-28第九周.md",
     "99_学习情况记录/已复盘/2024-06-04——星期二.md",
-    "00_inbox/日记模版.md",
-    "98_attachment/Pasted image 20240604153950.png",
-    "98_attachment/Pasted image 20240528085133.png",
     "02_game theory/第3次作业.pdf",
     "02_game theory/第2次作业.pdf",
     "04_货币银行学/1_引言/未命名.canvas",
