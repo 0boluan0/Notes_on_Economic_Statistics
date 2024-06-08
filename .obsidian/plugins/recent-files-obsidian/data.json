@@ -5,6 +5,14 @@
       "path": "01_Econometrics/03_多元线性回归.md"
     },
     {
+      "basename": "太白金星v计量",
+      "path": "01_Econometrics/太白金星v计量.pdf"
+    },
+    {
+      "basename": "05_多元回归模型的矩阵表达",
+      "path": "01_Econometrics/05_多元回归模型的矩阵表达.md"
+    },
+    {
       "basename": "09_银行业与金融机构的管理",
       "path": "04_货币银行学/3_金融机构/09_银行业与金融机构的管理.md"
     },
@@ -31,10 +39,6 @@
     {
       "basename": "2024-06-05——星期三",
       "path": "99_学习情况记录/2024-06-05——星期三.md"
-    },
-    {
-      "basename": "太白金星v计量",
-      "path": "01_Econometrics/太白金星v计量.pdf"
     },
     {
       "basename": "6-3至6-9第十五周",
@@ -195,10 +199,6 @@
     {
       "basename": "01_政府预算",
       "path": "03_public finance财政学/4_预算收支管理体系/01_政府预算.md"
-    },
-    {
-      "basename": "01_财政收入总论",
-      "path": "03_public finance财政学/3_财政收入/01_财政收入总论.md"
     }
   ],
   "omittedPaths": [],

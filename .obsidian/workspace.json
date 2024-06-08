@@ -84,9 +84,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "94244bf387c92072",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Econometrics/03_多元线性回归.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -236,14 +249,17 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "96f16d8c1bea934f",
+  "active": "94244bf387c92072",
   "lastOpenFiles": [
+    "98_attachment/Pasted image 20240608154123.png",
+    "01_Econometrics/太白金星v计量.pdf",
+    "01_Econometrics/03_多元线性回归.md",
+    "01_Econometrics/05_多元回归模型的矩阵表达.md",
     "04_货币银行学/3_金融机构/09_银行业与金融机构的管理.md",
     "04_货币银行学/3_金融机构/10_金融监管的经济学分析.md",
     "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md",
     "04_货币银行学/2_金融市场/07_股票市场,理性预期理论与有效市场假说.md",
     "03_public finance财政学/2_财政支出/01_公共物品public goods.md",
-    "01_Econometrics/03_多元线性回归.md",
     "01_Econometrics/02_一元线性回归.md",
     "99_学习情况记录/2024-06-06——星期四.md",
     "98_attachment/Pasted image 20240606151938.png",
@@ -266,9 +282,6 @@
     "99_学习情况记录/4-22至4-28第九周.md",
     "99_学习情况记录/已复盘/2024-06-04——星期二.md",
     "00_inbox/日记模版.md",
-    "99_学习情况记录/已复盘/2024-05-30——星期四.md",
-    "99_学习情况记录/已复盘/2024-05-24——星期五.md",
-    "01_Econometrics/太白金星v计量.pdf",
     "98_attachment/Pasted image 20240604153950.png",
     "98_attachment/Pasted image 20240528085133.png",
     "98_attachment/Pasted image 20240528084844.png",
