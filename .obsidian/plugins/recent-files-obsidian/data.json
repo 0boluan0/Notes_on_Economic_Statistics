@@ -5,6 +5,22 @@
       "path": "01_Econometrics/05_多元回归模型的矩阵表达.md"
     },
     {
+      "basename": "03_多元线性回归",
+      "path": "01_Econometrics/03_多元线性回归.md"
+    },
+    {
+      "basename": "04_模型设定",
+      "path": "01_Econometrics/04_模型设定.md"
+    },
+    {
+      "basename": "02_一元线性回归",
+      "path": "01_Econometrics/02_一元线性回归.md"
+    },
+    {
+      "basename": "01_导论",
+      "path": "01_Econometrics/01_导论.md"
+    },
+    {
       "basename": "5-13至5-19第十二周",
       "path": "99_学习情况记录/5-13至5-19第十二周.md"
     },
@@ -19,18 +35,6 @@
     {
       "basename": "2024-06-09——星期日",
       "path": "99_学习情况记录/2024-06-09——星期日.md"
-    },
-    {
-      "basename": "04_模型设定",
-      "path": "01_Econometrics/04_模型设定.md"
-    },
-    {
-      "basename": "03_多元线性回归",
-      "path": "01_Econometrics/03_多元线性回归.md"
-    },
-    {
-      "basename": "02_一元线性回归",
-      "path": "01_Econometrics/02_一元线性回归.md"
     },
     {
       "basename": "2024-06-08——星期六",
@@ -195,10 +199,6 @@
     {
       "basename": "04_有效且公平地课税",
       "path": "03_public finance财政学/3_财政收入/04_有效且公平地课税.md"
-    },
-    {
-      "basename": "03_税收与经济效率",
-      "path": "03_public finance财政学/3_财政收入/03_税收与经济效率.md"
     }
   ],
   "omittedPaths": [],
