@@ -8,85 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "55d1e700d22d4abf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/4-29至5-5第十周.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "658481b17eb6ebaf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/5-6至5-12第十一周.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a9edf4176e262116",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/5-13至5-19第十二周.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c9851295da105f2e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/5-20至5-26第十三周.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "767575005bf8d583",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/5-27至6-2第十四周.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "96f16d8c1bea934f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "94244bf387c92072",
+            "id": "2bef7deb9936621b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -98,8 +20,7 @@
               }
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -249,8 +170,17 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "94244bf387c92072",
+  "active": "2bef7deb9936621b",
   "lastOpenFiles": [
+    "98_attachment/Pasted image 20240609204327.png",
+    "98_attachment/Pasted image 20240609204031.png",
+    "99_学习情况记录/5-13至5-19第十二周.md",
+    "99_学习情况记录/5-27至6-2第十四周.md",
+    "01_Econometrics/05_多元回归模型的矩阵表达.md",
+    "98_attachment/Pasted image 20240609203958.png",
+    "98_attachment/Pasted image 20240609203308.png",
+    "01_Econometrics/零散知识点.md",
+    "99_学习情况记录/2024-06-09——星期日.md",
     "98_attachment/Pasted image 20240609194204.png",
     "01_Econometrics/04_模型设定.md",
     "98_attachment/Pasted image 20240609192317.png",
@@ -259,14 +189,9 @@
     "98_attachment/Pasted image 20240609173653.png",
     "98_attachment/Pasted image 20240609170011.png",
     "98_attachment/Pasted image 20240609165951.png",
-    "98_attachment/Pasted image 20240609165939.png",
-    "98_attachment/Pasted image 20240609164311.png",
-    "98_attachment/Pasted image 20240609152826.png",
-    "98_attachment/Pasted image 20240608214848.png",
     "01_Econometrics/03_多元线性回归.md",
     "01_Econometrics/02_一元线性回归.md",
     "99_学习情况记录/2024-06-08——星期六.md",
-    "01_Econometrics/05_多元回归模型的矩阵表达.md",
     "01_Econometrics/太白金星v计量.pdf",
     "04_货币银行学/3_金融机构/09_银行业与金融机构的管理.md",
     "04_货币银行学/3_金融机构/10_金融监管的经济学分析.md",
@@ -277,17 +202,13 @@
     "01_Econometrics/02_一元线性回归(网课).md",
     "99_学习情况记录/2024-06-05——星期三.md",
     "99_学习情况记录/6-3至6-9第十五周.md",
-    "99_学习情况记录/5-27至6-2第十四周.md",
     "99_学习情况记录/5-20至5-26第十三周.md",
-    "99_学习情况记录/5-13至5-19第十二周.md",
     "99_学习情况记录/5-6至5-12第十一周.md",
     "99_学习情况记录/4-29至5-5第十周.md",
     "99_学习情况记录/3-18至3-24第四周.md",
     "99_学习情况记录/3-25至3-31第五周.md",
     "99_学习情况记录/4-1至4-7第六周.md",
     "99_学习情况记录/4-8至4-14第七周.md",
-    "99_学习情况记录/4-15至4-21第八周.md",
-    "99_学习情况记录/4-22至4-28第九周.md",
     "02_game theory/第3次作业.pdf",
     "02_game theory/第2次作业.pdf",
     "04_货币银行学/1_引言/未命名.canvas",
