@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
+                "file": "01_Econometrics/05_多元回归模型的矩阵表达.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6c04aa71ad8cc28d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/06_多重共线性.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
+                "file": "00_inbox/06_多重共线性.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -111,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md",
+                "file": "00_inbox/06_多重共线性.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/03_多元线性回归.md"
+                "file": "00_inbox/06_多重共线性.md"
               }
             }
           },
@@ -170,12 +184,13 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "2bef7deb9936621b",
+  "active": "6c04aa71ad8cc28d",
   "lastOpenFiles": [
-    "98_attachment/Pasted image 20240610154140.png",
     "01_Econometrics/05_多元回归模型的矩阵表达.md",
-    "01_Econometrics/04_模型设定.md",
+    "00_inbox/06_多重共线性.md",
     "01_Econometrics/03_多元线性回归.md",
+    "98_attachment/Pasted image 20240610154140.png",
+    "01_Econometrics/04_模型设定.md",
     "01_Econometrics/零散知识点.md",
     "98_attachment/Pasted image 20240609233222.png",
     "98_attachment/Pasted image 20240609232244.png",
@@ -186,7 +201,6 @@
     "98_attachment/Pasted image 20240609211509.png",
     "98_attachment/Pasted image 20240609211500.png",
     "98_attachment/Pasted image 20240609211142.png",
-    "98_attachment/Pasted image 20240609211130.png",
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/01_导论.md",
     "99_学习情况记录/5-13至5-19第十二周.md",
