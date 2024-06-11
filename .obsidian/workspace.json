@@ -32,9 +32,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "ea47877da848efbf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Econometrics/07_异方差.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -108,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/06_多重共线性.md",
+                "file": "01_Econometrics/07_异方差.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -125,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/06_多重共线性.md",
+                "file": "01_Econometrics/07_异方差.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/06_多重共线性.md"
+                "file": "01_Econometrics/07_异方差.md"
               }
             }
           },
@@ -184,14 +197,15 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "6c04aa71ad8cc28d",
+  "active": "ea47877da848efbf",
   "lastOpenFiles": [
+    "01_Econometrics/06_多重共线性.md",
+    "01_Econometrics/07_异方差.md",
     "98_attachment/Pasted image 20240611111758.png",
     "01_Econometrics/05_多元回归模型的矩阵表达.md",
     "01_Econometrics/零散知识点.md",
     "01_Econometrics/04_模型设定.md",
     "01_Econometrics/03_多元线性回归.md",
-    "01_Econometrics/06_多重共线性.md",
     "98_attachment/Pasted image 20240611103409.png",
     "98_attachment/Pasted image 20240611102142.png",
     "98_attachment/Pasted image 20240610232330.png",
@@ -201,7 +215,6 @@
     "98_attachment/Pasted image 20240610154140.png",
     "98_attachment/Pasted image 20240609233222.png",
     "98_attachment/Pasted image 20240609232244.png",
-    "98_attachment/Pasted image 20240609231956.png",
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/01_导论.md",
     "99_学习情况记录/5-13至5-19第十二周.md",
