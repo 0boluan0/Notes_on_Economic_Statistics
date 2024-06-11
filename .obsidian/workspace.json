@@ -45,9 +45,35 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "873b295ac3e301d8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/未命名.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c7c341b19afd17af",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Econometrics/07_异方差.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -197,10 +223,13 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "ea47877da848efbf",
+  "active": "c7c341b19afd17af",
   "lastOpenFiles": [
-    "01_Econometrics/06_多重共线性.md",
+    "01_Econometrics/08_自相关.md",
+    "00_inbox/未命名.md",
     "01_Econometrics/07_异方差.md",
+    "98_attachment/Pasted image 20240611192343.png",
+    "01_Econometrics/06_多重共线性.md",
     "98_attachment/Pasted image 20240611111758.png",
     "01_Econometrics/05_多元回归模型的矩阵表达.md",
     "01_Econometrics/零散知识点.md",
@@ -214,7 +243,6 @@
     "98_attachment/Pasted image 20240610205624.png",
     "98_attachment/Pasted image 20240610154140.png",
     "98_attachment/Pasted image 20240609233222.png",
-    "98_attachment/Pasted image 20240609232244.png",
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/01_导论.md",
     "99_学习情况记录/5-13至5-19第十二周.md",
@@ -234,8 +262,6 @@
     "99_学习情况记录/5-20至5-26第十三周.md",
     "99_学习情况记录/5-6至5-12第十一周.md",
     "99_学习情况记录/4-29至5-5第十周.md",
-    "99_学习情况记录/3-18至3-24第四周.md",
-    "99_学习情况记录/3-25至3-31第五周.md",
     "02_game theory/第3次作业.pdf",
     "02_game theory/第2次作业.pdf",
     "04_货币银行学/1_引言/未命名.canvas",
