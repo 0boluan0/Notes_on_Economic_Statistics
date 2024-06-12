@@ -4,16 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "38de5cca533e0612",
+        "id": "c53922a33b0f56e1",
         "type": "tabs",
         "children": [
           {
-            "id": "c41ae8b47f611280",
+            "id": "d24ceef6546ab39b",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "01_Econometrics/太白金星v计量.pdf"
+                "file": "99_学习情况记录/2024-06-12——星期三.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -91,7 +94,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "01_Econometrics/太白金星v计量.pdf",
+            "file": "99_学习情况记录/2024-06-12——星期三.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -108,7 +111,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "01_Econometrics/太白金星v计量.pdf",
+            "file": "99_学习情况记录/2024-06-12——星期三.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -120,7 +123,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "01_Econometrics/太白金星v计量.pdf"
+            "file": "99_学习情况记录/2024-06-12——星期三.md"
           }
         }
       },
@@ -151,8 +154,13 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "c41ae8b47f611280",
+  "active": "d24ceef6546ab39b",
   "lastOpenFiles": [
+    "01_Econometrics/07_异方差.md",
+    "01_Econometrics/08_自相关.md",
+    "01_Econometrics/05_多元回归模型的矩阵表达.md",
+    "99_学习情况记录/2024-06-12——星期三.md",
+    "01_Econometrics/太白金星v计量.pdf",
     "01_Econometrics/零散知识点.md",
     "01_Econometrics/02_一元线性回归(上课).md",
     "99_学习情况记录/6-3至6-9第十五周.md",
@@ -177,10 +185,6 @@
     "02_game theory/06_扩展性博弈.md",
     "99_学习情况记录/2024-04-23——星期二.md",
     "02_game theory/第三次作业.pdf",
-    "99_学习情况记录/2024-04-18——星期四.md",
-    "01_Econometrics/02_一元线性回归.md",
-    "99_学习情况记录/2024-04-14——星期日.md",
-    "03_public finance财政学/2_财政支出/01_公共物品public goods.md",
     "03_public finance",
     "98_attachment/Pasted image 20240319151125.png",
     "98_attachment/Pasted image 20240319151140.png",
