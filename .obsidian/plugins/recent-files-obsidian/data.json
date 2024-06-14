@@ -5,6 +5,10 @@
       "path": "01_Econometrics/08_自相关.md"
     },
     {
+      "basename": "09_离散选择模型",
+      "path": "01_Econometrics/09_离散选择模型.md"
+    },
+    {
       "basename": "15_货币政策工具",
       "path": "04_货币银行学/4_中央银行与货币政策的实施/15_货币政策工具.md"
     },
@@ -47,10 +51,6 @@
     {
       "basename": "07_异方差",
       "path": "01_Econometrics/07_异方差.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "00_inbox/未命名.md"
     },
     {
       "basename": "太白金星v计量",
