@@ -5,6 +5,14 @@
       "path": "01_Econometrics/08_自相关.md"
     },
     {
+      "basename": "太白金星v计量",
+      "path": "01_Econometrics/太白金星v计量.pdf"
+    },
+    {
+      "basename": "2024-06-14——星期五",
+      "path": "99_学习情况记录/2024-06-14——星期五.md"
+    },
+    {
       "basename": "07_异方差",
       "path": "01_Econometrics/07_异方差.md"
     },
@@ -55,10 +63,6 @@
     {
       "basename": "2024-06-08——星期六",
       "path": "99_学习情况记录/2024-06-08——星期六.md"
-    },
-    {
-      "basename": "太白金星v计量",
-      "path": "01_Econometrics/太白金星v计量.pdf"
     },
     {
       "basename": "09_银行业与金融机构的管理",
@@ -195,10 +199,6 @@
     {
       "basename": "00_知识点划重点",
       "path": "04_货币银行学/0_补充/00_知识点划重点.md"
-    },
-    {
-      "basename": "第3次作业",
-      "path": "02_game theory/第3次作业.pdf"
     }
   ],
   "omittedPaths": [],
