@@ -8,58 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2bef7deb9936621b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Econometrics/05_多元回归模型的矩阵表达.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6c04aa71ad8cc28d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Econometrics/06_多重共线性.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ea47877da848efbf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Econometrics/07_异方差.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "873b295ac3e301d8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00_inbox/未命名.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "c7c341b19afd17af",
             "type": "leaf",
             "state": {
@@ -72,8 +20,7 @@
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -225,12 +172,24 @@
   },
   "active": "c7c341b19afd17af",
   "lastOpenFiles": [
+    "01_Econometrics/06_多重共线性.md",
+    "04_货币银行学/3_金融机构/09_银行业与金融机构的管理.md",
+    "04_货币银行学/3_金融机构/10_金融监管的经济学分析.md",
+    "04_货币银行学/3_金融机构/12_金融危机.md",
+    "04_货币银行学/2_金融市场/07_股票市场,理性预期理论与有效市场假说.md",
+    "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md",
+    "04_货币银行学/1_引言/01_为什么研究货币，银行与金融市场.md",
+    "04_货币银行学/1_引言/02_金融体系概览.md",
+    "01_Econometrics/08_自相关.md",
+    "01_Econometrics/05_多元回归模型的矩阵表达.md",
+    "01_Econometrics/07_异方差.md",
+    "00_inbox/未命名.md",
+    "98_attachment.zip",
+    "04_货币银行学.zip",
     "01_Econometrics/太白金星v计量.pdf",
     "99_学习情况记录/2024-06-14——星期五.md",
-    "01_Econometrics/08_自相关.md",
     "98_attachment/Pasted image 20240613170503.png",
     "98_attachment/Pasted image 20240613134707.png",
-    "01_Econometrics/07_异方差.md",
     "99_学习情况记录/2024-06-12——星期三.md",
     "98_attachment/Pasted image 20240611215442.png",
     "98_attachment/Pasted image 20240611215153.png",
@@ -240,9 +199,6 @@
     "98_attachment/Pasted image 20240611210334.png",
     "98_attachment/Pasted image 20240611210213.png",
     "98_attachment/Pasted image 20240611205745.png",
-    "00_inbox/未命名.md",
-    "01_Econometrics/06_多重共线性.md",
-    "01_Econometrics/05_多元回归模型的矩阵表达.md",
     "01_Econometrics/零散知识点.md",
     "01_Econometrics/04_模型设定.md",
     "01_Econometrics/03_多元线性回归.md",
@@ -252,15 +208,9 @@
     "99_学习情况记录/5-27至6-2第十四周.md",
     "99_学习情况记录/2024-06-09——星期日.md",
     "99_学习情况记录/2024-06-08——星期六.md",
-    "04_货币银行学/3_金融机构/09_银行业与金融机构的管理.md",
-    "04_货币银行学/3_金融机构/10_金融监管的经济学分析.md",
-    "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md",
-    "04_货币银行学/2_金融市场/07_股票市场,理性预期理论与有效市场假说.md",
     "03_public finance财政学/2_财政支出/01_公共物品public goods.md",
     "99_学习情况记录/2024-06-06——星期四.md",
     "01_Econometrics/02_一元线性回归(网课).md",
-    "99_学习情况记录/2024-06-05——星期三.md",
-    "99_学习情况记录/6-3至6-9第十五周.md",
     "02_game theory/第3次作业.pdf",
     "02_game theory/第2次作业.pdf",
     "04_货币银行学/1_引言/未命名.canvas",
@@ -268,8 +218,6 @@
     "05_经济思想史/西方经济思想史.docx",
     "Excalidraw",
     "05_经济思想史/ppt/07马歇尔经济学与马歇尔以后的微观经济学发展.ppt",
-    "05_经济思想史/ppt/06 边际革命.ppt",
-    "05_经济思想史/ppt/05第五讲亚当斯密之后的古典经济学.ppt",
-    "05_经济思想史/ppt/04第四讲亚当斯密的经济学.ppt"
+    "05_经济思想史/ppt/06 边际革命.ppt"
   ]
 }
