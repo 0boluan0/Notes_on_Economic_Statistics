@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/09_内生性与IV.md",
+                "file": "01_Econometrics/09_联立方程模型(内生性).md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/09_内生性与IV.md",
+                "file": "01_Econometrics/09_联立方程模型(内生性).md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/09_内生性与IV.md",
+                "file": "01_Econometrics/09_联立方程模型(内生性).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/09_内生性与IV.md"
+                "file": "01_Econometrics/09_联立方程模型(内生性).md"
               }
             }
           },
@@ -174,7 +174,7 @@
   "lastOpenFiles": [
     "01_Econometrics/08_自相关.md",
     "99_学习情况记录/2024-06-15——星期六.md",
-    "01_Econometrics/09_内生性与IV.md",
+    "01_Econometrics/09_联立方程模型(内生性).md",
     "04_货币银行学/4_中央银行与货币政策的实施/15_货币政策工具.md",
     "01_Econometrics/06_多重共线性.md",
     "04_货币银行学/3_金融机构/09_银行业与金融机构的管理.md",
