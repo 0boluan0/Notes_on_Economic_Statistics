@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/08_自相关.md",
+                "file": "01_Econometrics/09_内生性与IV.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/08_自相关.md",
+                "file": "01_Econometrics/09_内生性与IV.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/08_自相关.md",
+                "file": "01_Econometrics/09_内生性与IV.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/08_自相关.md"
+                "file": "01_Econometrics/09_内生性与IV.md"
               }
             }
           },
@@ -172,8 +172,8 @@
   },
   "active": "c7c341b19afd17af",
   "lastOpenFiles": [
-    "01_Econometrics/09_离散选择模型.md",
     "01_Econometrics/08_自相关.md",
+    "01_Econometrics/09_内生性与IV.md",
     "04_货币银行学/4_中央银行与货币政策的实施/15_货币政策工具.md",
     "01_Econometrics/06_多重共线性.md",
     "04_货币银行学/3_金融机构/09_银行业与金融机构的管理.md",
