@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "10_虚拟变量",
+      "path": "01_Econometrics/10_虚拟变量.md"
+    },
+    {
       "basename": "09_联立方程模型(内生性)",
       "path": "01_Econometrics/09_联立方程模型(内生性).md"
     },
@@ -15,10 +19,6 @@
     {
       "basename": "零散知识点",
       "path": "01_Econometrics/零散知识点.md"
-    },
-    {
-      "basename": "10_虚拟变量",
-      "path": "00_inbox/10_虚拟变量.md"
     },
     {
       "basename": "07_异方差",

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/09_联立方程模型(内生性).md",
+                "file": "01_Econometrics/10_虚拟变量.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/09_联立方程模型(内生性).md",
+                "file": "01_Econometrics/10_虚拟变量.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/09_联立方程模型(内生性).md",
+                "file": "01_Econometrics/10_虚拟变量.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/09_联立方程模型(内生性).md"
+                "file": "01_Econometrics/10_虚拟变量.md"
               }
             }
           },
@@ -183,13 +183,13 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "c7c341b19afd17af",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
+    "01_Econometrics/09_联立方程模型(内生性).md",
     "01_Econometrics/03_多元线性回归.md",
     "00_inbox/未命名.md",
-    "01_Econometrics/09_联立方程模型(内生性).md",
     "01_Econometrics/零散知识点.md",
-    "00_inbox/10_虚拟变量.md",
+    "01_Econometrics/10_虚拟变量.md",
     "98_attachment/Pasted image 20240617190037.png",
     "01_Econometrics/07_异方差.md",
     "01_Econometrics/08_自相关.md",
