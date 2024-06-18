@@ -1,20 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "03_多元线性回归",
-      "path": "01_Econometrics/03_多元线性回归.md"
-    },
-    {
-      "basename": "10_虚拟变量",
-      "path": "00_inbox/10_虚拟变量.md"
-    },
-    {
       "basename": "09_联立方程模型(内生性)",
       "path": "01_Econometrics/09_联立方程模型(内生性).md"
     },
     {
+      "basename": "03_多元线性回归",
+      "path": "01_Econometrics/03_多元线性回归.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "00_inbox/未命名.md"
+    },
+    {
       "basename": "零散知识点",
       "path": "01_Econometrics/零散知识点.md"
+    },
+    {
+      "basename": "10_虚拟变量",
+      "path": "00_inbox/10_虚拟变量.md"
     },
     {
       "basename": "07_异方差",
@@ -195,10 +199,6 @@
     {
       "basename": "00_在这节课开始之前，导论",
       "path": "04_货币银行学/1_引言/00_在这节课开始之前，导论.md"
-    },
-    {
-      "basename": "01_4&7章-基础金融数学和估值",
-      "path": "04_货币银行学/0_补充/01_4&7章-基础金融数学和估值.md"
     }
   ],
   "omittedPaths": [],
