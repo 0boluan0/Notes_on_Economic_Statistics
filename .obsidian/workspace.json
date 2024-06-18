@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/10_虚拟变量.md",
+                "file": "01_Econometrics/03_多元线性回归.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -63,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "f检验",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -88,7 +88,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -108,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00_inbox/10_虚拟变量.md",
+                "file": "01_Econometrics/03_多元线性回归.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -125,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00_inbox/10_虚拟变量.md",
+                "file": "01_Econometrics/03_多元线性回归.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/10_虚拟变量.md"
+                "file": "01_Econometrics/03_多元线性回归.md"
               }
             }
           },
@@ -186,8 +187,8 @@
   },
   "active": "11fa349351248aec",
   "lastOpenFiles": [
-    "01_Econometrics/09_联立方程模型(内生性).md",
     "00_inbox/10_虚拟变量.md",
+    "01_Econometrics/09_联立方程模型(内生性).md",
     "98_attachment/Pasted image 20240617190037.png",
     "01_Econometrics/零散知识点.md",
     "01_Econometrics/07_异方差.md",

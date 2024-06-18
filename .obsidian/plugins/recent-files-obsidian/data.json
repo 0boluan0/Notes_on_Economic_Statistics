@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "03_多元线性回归",
+      "path": "01_Econometrics/03_多元线性回归.md"
+    },
+    {
       "basename": "10_虚拟变量",
       "path": "00_inbox/10_虚拟变量.md"
     },
@@ -75,10 +79,6 @@
     {
       "basename": "04_模型设定",
       "path": "01_Econometrics/04_模型设定.md"
-    },
-    {
-      "basename": "03_多元线性回归",
-      "path": "01_Econometrics/03_多元线性回归.md"
     },
     {
       "basename": "02_一元线性回归",
