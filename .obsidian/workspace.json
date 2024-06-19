@@ -21,6 +21,19 @@
             }
           },
           {
+            "id": "04f7df024ef8b00e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Econometrics/11_平稳时间序列模型.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "f83fe6e2dc9657e6",
             "type": "leaf",
             "state": {
@@ -33,7 +46,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -107,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/10_虚拟变量.md",
+                "file": "01_Econometrics/11_平稳时间序列模型.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -124,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/10_虚拟变量.md",
+                "file": "01_Econometrics/11_平稳时间序列模型.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/10_虚拟变量.md"
+                "file": "01_Econometrics/11_平稳时间序列模型.md"
               }
             }
           },
@@ -183,14 +197,16 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "c7c341b19afd17af",
+  "active": "04f7df024ef8b00e",
   "lastOpenFiles": [
-    "98_attachment/Pasted image 20240618203604.png",
+    "01_Econometrics/10_虚拟变量.md",
     "01_Econometrics/09_联立方程模型(内生性).md",
+    "01_Econometrics/11_平稳时间序列模型.md",
+    "未命名",
+    "98_attachment/Pasted image 20240618203604.png",
     "01_Econometrics/03_多元线性回归.md",
     "00_inbox/未命名.md",
     "01_Econometrics/零散知识点.md",
-    "01_Econometrics/10_虚拟变量.md",
     "98_attachment/Pasted image 20240617190037.png",
     "01_Econometrics/07_异方差.md",
     "01_Econometrics/08_自相关.md",
@@ -218,7 +234,6 @@
     "98_attachment/Pasted image 20240611212841.png",
     "98_attachment/Pasted image 20240611212410.png",
     "98_attachment/Pasted image 20240611210334.png",
-    "98_attachment/Pasted image 20240611210213.png",
     "01_Econometrics/04_模型设定.md",
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/01_导论.md",
@@ -230,7 +245,6 @@
     "05_经济思想史/~$方经济思想史.docx",
     "05_经济思想史/西方经济思想史.docx",
     "Excalidraw",
-    "05_经济思想史/ppt/07马歇尔经济学与马歇尔以后的微观经济学发展.ppt",
-    "05_经济思想史/ppt/06 边际革命.ppt"
+    "05_经济思想史/ppt/07马歇尔经济学与马歇尔以后的微观经济学发展.ppt"
   ]
 }

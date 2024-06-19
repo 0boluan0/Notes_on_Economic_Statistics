@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "11_平稳时间序列模型",
+      "path": "01_Econometrics/11_平稳时间序列模型.md"
+    },
+    {
       "basename": "10_虚拟变量",
       "path": "01_Econometrics/10_虚拟变量.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "03_什么是货币",
       "path": "04_货币银行学/1_引言/03_什么是货币.md"
-    },
-    {
-      "basename": "00_在这节课开始之前，导论",
-      "path": "04_货币银行学/1_引言/00_在这节课开始之前，导论.md"
     }
   ],
   "omittedPaths": [],
