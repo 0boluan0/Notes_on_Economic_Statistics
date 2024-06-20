@@ -5,6 +5,14 @@
       "path": "01_Econometrics/11_平稳时间序列模型.md"
     },
     {
+      "basename": "08_自相关",
+      "path": "01_Econometrics/08_自相关.md"
+    },
+    {
+      "basename": "07_异方差",
+      "path": "01_Econometrics/07_异方差.md"
+    },
+    {
       "basename": "10_虚拟变量",
       "path": "01_Econometrics/10_虚拟变量.md"
     },
@@ -23,14 +31,6 @@
     {
       "basename": "零散知识点",
       "path": "01_Econometrics/零散知识点.md"
-    },
-    {
-      "basename": "07_异方差",
-      "path": "01_Econometrics/07_异方差.md"
-    },
-    {
-      "basename": "08_自相关",
-      "path": "01_Econometrics/08_自相关.md"
     },
     {
       "basename": "2024-06-15——星期六",

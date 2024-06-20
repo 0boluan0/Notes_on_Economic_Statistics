@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "信息准则",
+                "query": "广义",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -172,18 +173,18 @@
   },
   "active": "c7c341b19afd17af",
   "lastOpenFiles": [
+    "01_Econometrics/08_自相关.md",
+    "01_Econometrics/11_平稳时间序列模型.md",
+    "01_Econometrics/07_异方差.md",
     "98_attachment/Pasted image 20240620201617.png",
     "01_Econometrics/10_虚拟变量.md",
     "01_Econometrics/03_多元线性回归.md",
-    "01_Econometrics/11_平稳时间序列模型.md",
     "01_Econometrics/09_联立方程模型(内生性).md",
     "未命名",
     "98_attachment/Pasted image 20240618203604.png",
     "00_inbox/未命名.md",
     "01_Econometrics/零散知识点.md",
     "98_attachment/Pasted image 20240617190037.png",
-    "01_Econometrics/07_异方差.md",
-    "01_Econometrics/08_自相关.md",
     "99_学习情况记录/2024-06-15——星期六.md",
     "04_货币银行学/4_中央银行与货币政策的实施/15_货币政策工具.md",
     "01_Econometrics/06_多重共线性.md",
@@ -207,7 +208,6 @@
     "98_attachment/Pasted image 20240611214041.png",
     "98_attachment/Pasted image 20240611212841.png",
     "98_attachment/Pasted image 20240611212410.png",
-    "98_attachment/Pasted image 20240611210334.png",
     "01_Econometrics/04_模型设定.md",
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/01_导论.md",
