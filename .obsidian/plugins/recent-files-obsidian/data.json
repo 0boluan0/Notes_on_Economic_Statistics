@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "12_非平稳时间序列",
+      "path": "00_inbox/12_非平稳时间序列.md"
+    },
+    {
       "basename": "11_平稳时间序列模型",
       "path": "01_Econometrics/11_平稳时间序列模型.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "04_理解利率",
       "path": "04_货币银行学/2_金融市场/04_理解利率.md"
-    },
-    {
-      "basename": "03_什么是货币",
-      "path": "04_货币银行学/1_引言/03_什么是货币.md"
     }
   ],
   "omittedPaths": [],
