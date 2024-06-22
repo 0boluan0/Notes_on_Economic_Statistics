@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/11_平稳时间序列模型.md",
+                "file": "01_Econometrics/12_非平稳时间序列.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -26,15 +26,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/12_非平稳时间序列.md",
+                "file": "01_Econometrics/11_平稳时间序列模型.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -63,7 +62,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "广义",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -108,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00_inbox/12_非平稳时间序列.md",
+                "file": "01_Econometrics/12_非平稳时间序列.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -125,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00_inbox/12_非平稳时间序列.md",
+                "file": "01_Econometrics/12_非平稳时间序列.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/12_非平稳时间序列.md"
+                "file": "01_Econometrics/12_非平稳时间序列.md"
               }
             }
           },
@@ -184,13 +183,13 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "f69d0473d8fb4eee",
+  "active": "c7c341b19afd17af",
   "lastOpenFiles": [
+    "01_Econometrics/11_平稳时间序列模型.md",
+    "01_Econometrics/12_非平稳时间序列.md",
     "98_attachment/Pasted image 20240621195025.png",
     "98_attachment/Pasted image 20240621193942.png",
     "98_attachment/Pasted image 20240621170721.png",
-    "01_Econometrics/11_平稳时间序列模型.md",
-    "00_inbox/12_非平稳时间序列.md",
     "01_Econometrics/08_自相关.md",
     "01_Econometrics/07_异方差.md",
     "98_attachment/Pasted image 20240620201617.png",
@@ -222,7 +221,6 @@
     "99_学习情况记录/2024-06-12——星期三.md",
     "98_attachment/Pasted image 20240611215442.png",
     "98_attachment/Pasted image 20240611215153.png",
-    "98_attachment/Pasted image 20240611214041.png",
     "01_Econometrics/04_模型设定.md",
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/01_导论.md",
