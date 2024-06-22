@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "13_面板数据模型",
+      "path": "00_inbox/13_面板数据模型.md"
+    },
+    {
       "basename": "12_非平稳时间序列",
       "path": "01_Econometrics/12_非平稳时间序列.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "05_利率行为",
       "path": "04_货币银行学/2_金融市场/05_利率行为.md"
-    },
-    {
-      "basename": "04_理解利率",
-      "path": "04_货币银行学/2_金融市场/04_理解利率.md"
     }
   ],
   "omittedPaths": [],

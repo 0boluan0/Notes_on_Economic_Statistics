@@ -21,6 +21,19 @@
             }
           },
           {
+            "id": "9854a125b0482f41",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/13_面板数据模型.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
             "id": "f69d0473d8fb4eee",
             "type": "leaf",
             "state": {
@@ -33,7 +46,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -107,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/12_非平稳时间序列.md",
+                "file": "00_inbox/13_面板数据模型.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -124,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/12_非平稳时间序列.md",
+                "file": "00_inbox/13_面板数据模型.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/12_非平稳时间序列.md"
+                "file": "00_inbox/13_面板数据模型.md"
               }
             }
           },
@@ -183,10 +197,11 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "c7c341b19afd17af",
+  "active": "9854a125b0482f41",
   "lastOpenFiles": [
-    "01_Econometrics/11_平稳时间序列模型.md",
     "01_Econometrics/12_非平稳时间序列.md",
+    "00_inbox/13_面板数据模型.md",
+    "01_Econometrics/11_平稳时间序列模型.md",
     "98_attachment/Pasted image 20240621195025.png",
     "98_attachment/Pasted image 20240621193942.png",
     "98_attachment/Pasted image 20240621170721.png",
