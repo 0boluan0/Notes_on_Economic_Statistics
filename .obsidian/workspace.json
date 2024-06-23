@@ -76,7 +76,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "mu",
+                "query": "组内",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -101,7 +101,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -197,7 +198,7 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "9854a125b0482f41",
+  "active": "68e022ef2943b75b",
   "lastOpenFiles": [
     "01_Econometrics/太白金星v计量.pdf",
     "01_Econometrics/零散知识点.md",
