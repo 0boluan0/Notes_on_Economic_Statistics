@@ -5,10 +5,6 @@
       "path": "01_Econometrics/13_面板数据模型.md"
     },
     {
-      "basename": "太白金星v计量",
-      "path": "01_Econometrics/太白金星v计量.pdf"
-    },
-    {
       "basename": "零散知识点",
       "path": "01_Econometrics/零散知识点.md"
     },
@@ -17,20 +13,24 @@
       "path": "01_Econometrics/12_非平稳时间序列.md"
     },
     {
-      "basename": "11_平稳时间序列模型",
-      "path": "01_Econometrics/11_平稳时间序列模型.md"
+      "basename": "09_联立方程模型(内生性)",
+      "path": "01_Econometrics/09_联立方程模型(内生性).md"
     },
     {
       "basename": "10_虚拟变量",
       "path": "01_Econometrics/10_虚拟变量.md"
     },
     {
-      "basename": "09_联立方程模型(内生性)",
-      "path": "01_Econometrics/09_联立方程模型(内生性).md"
-    },
-    {
       "basename": "08_自相关",
       "path": "01_Econometrics/08_自相关.md"
+    },
+    {
+      "basename": "太白金星v计量",
+      "path": "01_Econometrics/太白金星v计量.pdf"
+    },
+    {
+      "basename": "11_平稳时间序列模型",
+      "path": "01_Econometrics/11_平稳时间序列模型.md"
     },
     {
       "basename": "07_异方差",

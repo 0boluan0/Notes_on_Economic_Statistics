@@ -76,7 +76,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "组内",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -101,8 +101,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -198,16 +197,16 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "68e022ef2943b75b",
+  "active": "9854a125b0482f41",
   "lastOpenFiles": [
-    "01_Econometrics/太白金星v计量.pdf",
     "01_Econometrics/零散知识点.md",
     "01_Econometrics/13_面板数据模型.md",
     "01_Econometrics/12_非平稳时间序列.md",
-    "01_Econometrics/11_平稳时间序列模型.md",
-    "01_Econometrics/10_虚拟变量.md",
     "01_Econometrics/09_联立方程模型(内生性).md",
+    "01_Econometrics/10_虚拟变量.md",
     "01_Econometrics/08_自相关.md",
+    "01_Econometrics/太白金星v计量.pdf",
+    "01_Econometrics/11_平稳时间序列模型.md",
     "01_Econometrics/07_异方差.md",
     "01_Econometrics/06_多重共线性.md",
     "01_Econometrics/05_多元回归模型的矩阵表达.md",
