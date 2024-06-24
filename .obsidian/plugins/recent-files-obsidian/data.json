@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "08_自相关",
+      "path": "01_Econometrics/08_自相关.md"
+    },
+    {
+      "basename": "07_异方差",
+      "path": "01_Econometrics/07_异方差.md"
+    },
+    {
       "basename": "03_多元线性回归",
       "path": "01_Econometrics/03_多元线性回归.md"
     },
@@ -25,20 +33,12 @@
       "path": "01_Econometrics/10_虚拟变量.md"
     },
     {
-      "basename": "08_自相关",
-      "path": "01_Econometrics/08_自相关.md"
-    },
-    {
       "basename": "太白金星v计量",
       "path": "01_Econometrics/太白金星v计量.pdf"
     },
     {
       "basename": "11_平稳时间序列模型",
       "path": "01_Econometrics/11_平稳时间序列模型.md"
-    },
-    {
-      "basename": "07_异方差",
-      "path": "01_Econometrics/07_异方差.md"
     },
     {
       "basename": "06_多重共线性",
