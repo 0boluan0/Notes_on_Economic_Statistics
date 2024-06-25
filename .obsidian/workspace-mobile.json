@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/12_非平稳时间序列.md",
+                "file": "01_Econometrics/04_模型设定.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -94,7 +94,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "01_Econometrics/12_非平稳时间序列.md",
+            "file": "01_Econometrics/04_模型设定.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "01_Econometrics/12_非平稳时间序列.md",
+            "file": "01_Econometrics/04_模型设定.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -123,7 +123,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "01_Econometrics/12_非平稳时间序列.md"
+            "file": "01_Econometrics/04_模型设定.md"
           }
         }
       },
@@ -156,17 +156,20 @@
   },
   "active": "d24ceef6546ab39b",
   "lastOpenFiles": [
+    "01_Econometrics/03_多元线性回归.md",
+    "01_Econometrics/05_多元回归模型的矩阵表达.md",
+    "01_Econometrics/06_多重共线性.md",
+    "01_Econometrics/04_模型设定.md",
+    "01_Econometrics/02_一元线性回归.md",
+    "01_Econometrics/13_面板数据模型.md",
+    "01_Econometrics/12_非平稳时间序列.md",
     "01_Econometrics/11_平稳时间序列模型.md",
     "01_Econometrics/10_虚拟变量.md",
     "01_Econometrics/09_联立方程模型(内生性).md",
     "01_Econometrics/08_自相关.md",
     "01_Econometrics/07_异方差.md",
-    "01_Econometrics/06_多重共线性.md",
-    "01_Econometrics/12_非平稳时间序列.md",
-    "01_Econometrics/13_面板数据模型.md",
     "99_学习情况记录/2024-06-25——星期二.md",
     "99_学习情况记录/2024-06-12——星期三.md",
-    "01_Econometrics/05_多元回归模型的矩阵表达.md",
     "01_Econometrics/太白金星v计量.pdf",
     "01_Econometrics/零散知识点.md",
     "01_Econometrics/02_一元线性回归(上课).md",
@@ -181,9 +184,6 @@
     "99_学习情况记录/2024-05-13——星期一.md",
     "99_学习情况记录/2024-05-08——星期三 2.md",
     "99_学习情况记录/2024-05-08——星期三.md",
-    "02_game theory/07_子博弈不完全信息.md",
-    "99_学习情况记录/2024-05-06——星期一.md",
-    "02_game theory/03_策略式博弈.md",
     "02_game theory/第三次作业.pdf",
     "03_public finance",
     "98_attachment/Pasted image 20240319151125.png",
