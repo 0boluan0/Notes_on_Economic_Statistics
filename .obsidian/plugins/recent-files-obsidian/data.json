@@ -1,20 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "08_自相关",
-      "path": "01_Econometrics/08_自相关.md"
-    },
-    {
-      "basename": "13_面板数据模型",
-      "path": "01_Econometrics/13_面板数据模型.md"
+      "basename": "11_平稳时间序列模型",
+      "path": "01_Econometrics/11_平稳时间序列模型.md"
     },
     {
       "basename": "12_非平稳时间序列",
       "path": "01_Econometrics/12_非平稳时间序列.md"
     },
     {
-      "basename": "11_平稳时间序列模型",
-      "path": "01_Econometrics/11_平稳时间序列模型.md"
+      "basename": "13_面板数据模型",
+      "path": "01_Econometrics/13_面板数据模型.md"
+    },
+    {
+      "basename": "08_自相关",
+      "path": "01_Econometrics/08_自相关.md"
     },
     {
       "basename": "10_虚拟变量",
