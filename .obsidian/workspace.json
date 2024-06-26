@@ -13,41 +13,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/12_非平稳时间序列.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9854a125b0482f41",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Econometrics/08_自相关.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f69d0473d8fb4eee",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Econometrics/11_平稳时间序列模型.md",
+                "file": "01_Econometrics/07_异方差.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -121,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/08_自相关.md",
+                "file": "01_Econometrics/07_异方差.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -138,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/08_自相关.md",
+                "file": "01_Econometrics/07_异方差.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/08_自相关.md"
+                "file": "01_Econometrics/07_异方差.md"
               }
             }
           },
@@ -197,23 +170,23 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "9854a125b0482f41",
+  "active": "c7c341b19afd17af",
   "lastOpenFiles": [
+    "01_Econometrics/05_多元回归模型的矩阵表达.md",
+    "01_Econometrics/07_异方差.md",
+    "01_Econometrics/06_多重共线性.md",
     "01_Econometrics/04_模型设定.md",
     "01_Econometrics/03_多元线性回归.md",
     "01_Econometrics/02_一元线性回归.md",
+    "01_Econometrics/13_面板数据模型.md",
     "01_Econometrics/11_平稳时间序列模型.md",
+    "01_Econometrics/12_非平稳时间序列.md",
+    "01_Econometrics/08_自相关.md",
     "01_Econometrics/09_联立方程模型(内生性).md",
     "01_Econometrics/10_虚拟变量.md",
-    "01_Econometrics/08_自相关.md",
     "99_学习情况记录/2024-06-25——星期二.md",
-    "01_Econometrics/06_多重共线性.md",
-    "01_Econometrics/07_异方差.md",
-    "01_Econometrics/13_面板数据模型.md",
     "01_Econometrics/零散知识点.md",
-    "01_Econometrics/12_非平稳时间序列.md",
     "01_Econometrics/太白金星v计量.pdf",
-    "01_Econometrics/05_多元回归模型的矩阵表达.md",
     "98_attachment/Pasted image 20240621195025.png",
     "98_attachment/Pasted image 20240621193942.png",
     "98_attachment/Pasted image 20240621170721.png",

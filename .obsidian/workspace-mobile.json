@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/13_面板数据模型.md",
+                "file": "01_Econometrics/09_联立方程模型(内生性).md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -94,7 +94,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "01_Econometrics/13_面板数据模型.md",
+            "file": "01_Econometrics/09_联立方程模型(内生性).md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "01_Econometrics/13_面板数据模型.md",
+            "file": "01_Econometrics/09_联立方程模型(内生性).md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -123,7 +123,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "01_Econometrics/13_面板数据模型.md"
+            "file": "01_Econometrics/09_联立方程模型(内生性).md"
           }
         }
       },
@@ -156,10 +156,11 @@
   },
   "active": "d24ceef6546ab39b",
   "lastOpenFiles": [
-    "01_Econometrics/12_非平稳时间序列.md",
-    "01_Econometrics/11_平稳时间序列模型.md",
-    "01_Econometrics/09_联立方程模型(内生性).md",
     "01_Econometrics/08_自相关.md",
+    "01_Econometrics/09_联立方程模型(内生性).md",
+    "01_Econometrics/12_非平稳时间序列.md",
+    "01_Econometrics/13_面板数据模型.md",
+    "01_Econometrics/11_平稳时间序列模型.md",
     "01_Econometrics/03_多元线性回归.md",
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/07_异方差.md",
@@ -167,7 +168,6 @@
     "01_Econometrics/06_多重共线性.md",
     "01_Econometrics/05_多元回归模型的矩阵表达.md",
     "01_Econometrics/04_模型设定.md",
-    "01_Econometrics/13_面板数据模型.md",
     "01_Econometrics/10_虚拟变量.md",
     "99_学习情况记录/2024-06-25——星期二.md",
     "99_学习情况记录/2024-06-12——星期三.md",

@@ -1,24 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "13_面板数据模型",
-      "path": "01_Econometrics/13_面板数据模型.md"
-    },
-    {
-      "basename": "12_非平稳时间序列",
-      "path": "01_Econometrics/12_非平稳时间序列.md"
-    },
-    {
-      "basename": "11_平稳时间序列模型",
-      "path": "01_Econometrics/11_平稳时间序列模型.md"
-    },
-    {
       "basename": "09_联立方程模型(内生性)",
       "path": "01_Econometrics/09_联立方程模型(内生性).md"
     },
     {
       "basename": "08_自相关",
       "path": "01_Econometrics/08_自相关.md"
+    },
+    {
+      "basename": "12_非平稳时间序列",
+      "path": "01_Econometrics/12_非平稳时间序列.md"
+    },
+    {
+      "basename": "13_面板数据模型",
+      "path": "01_Econometrics/13_面板数据模型.md"
+    },
+    {
+      "basename": "11_平稳时间序列模型",
+      "path": "01_Econometrics/11_平稳时间序列模型.md"
     },
     {
       "basename": "03_多元线性回归",
