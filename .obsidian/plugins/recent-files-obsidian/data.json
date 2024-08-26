@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "2024-08-26——星期一",
+      "path": "99_学习情况记录/2024-08-26——星期一.md"
+    },
+    {
+      "basename": "03_多元线性回归",
+      "path": "01_Econometrics/03_多元线性回归.md"
+    },
+    {
+      "basename": "05_多元回归模型的矩阵表达",
+      "path": "01_Econometrics/05_多元回归模型的矩阵表达.md"
+    },
+    {
+      "basename": "2024-08-09——星期五",
+      "path": "99_学习情况记录/2024-08-09——星期五.md"
+    },
+    {
       "basename": "13_面板数据模型",
       "path": "01_Econometrics/13_面板数据模型.md"
     },
@@ -33,16 +49,8 @@
       "path": "01_Econometrics/06_多重共线性.md"
     },
     {
-      "basename": "05_多元回归模型的矩阵表达",
-      "path": "01_Econometrics/05_多元回归模型的矩阵表达.md"
-    },
-    {
       "basename": "04_模型设定",
       "path": "01_Econometrics/04_模型设定.md"
-    },
-    {
-      "basename": "03_多元线性回归",
-      "path": "01_Econometrics/03_多元线性回归.md"
     },
     {
       "basename": "02_一元线性回归",
@@ -191,14 +199,6 @@
     {
       "basename": "4-22至4-28第九周",
       "path": "99_学习情况记录/4-22至4-28第九周.md"
-    },
-    {
-      "basename": "2024-06-04——星期二",
-      "path": "99_学习情况记录/已复盘/2024-06-04——星期二.md"
-    },
-    {
-      "basename": "日记模版",
-      "path": "00_inbox/日记模版.md"
     }
   ],
   "omittedPaths": [],
