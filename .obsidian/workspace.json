@@ -4,50 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "d7fcae976f0fa185",
+        "id": "c670a8bad9498d2e",
         "type": "tabs",
         "children": [
           {
-            "id": "c7c341b19afd17af",
+            "id": "762c26f5d8be1dd4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/2024-07-03——星期三.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6362801a82904604",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "07_随机过程/01.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "43f35e27bc541a21",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/2024-08-26——星期一.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -121,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "99_学习情况记录/2024-08-26——星期一.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "99_学习情况记录/2024-08-26——星期一.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "99_学习情况记录/2024-08-26——星期一.md"
-              }
+              "state": {}
             }
           },
           {
@@ -197,10 +161,13 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "43f35e27bc541a21",
+  "active": "762c26f5d8be1dd4",
   "lastOpenFiles": [
-    "01_Econometrics/03_多元线性回归.md",
+    "99_学习情况记录/2024-07-03——星期三.md",
+    "07_随机过程/01.md",
+    "99_学习情况记录/2024-08-29——星期四.md",
     "99_学习情况记录/2024-08-26——星期一.md",
+    "01_Econometrics/03_多元线性回归.md",
     "01_Econometrics/05_多元回归模型的矩阵表达.md",
     "99_学习情况记录/2024-08-09——星期五.md",
     "01_Econometrics/13_面板数据模型.md",
@@ -215,10 +182,8 @@
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/01_导论.md",
     "99_学习情况记录/2024-08-03——星期六.md",
-    "99_学习情况记录/2024-07-03——星期三.md",
     "99_学习情况记录/2024-07-06——星期六.md",
     "07_随机过程",
-    "07_随机过程/01.md",
     "99_学习情况记录/2024-06-28——星期五.md",
     "01_Econometrics/零散知识点.md",
     "99_学习情况记录/2024-06-27——星期四.md",
@@ -232,7 +197,6 @@
     "98_attachment/Pasted image 20240618203604.png",
     "00_inbox/未命名.md",
     "98_attachment/Pasted image 20240617190037.png",
-    "99_学习情况记录/2024-06-15——星期六.md",
     "98_attachment.zip",
     "04_货币银行学.zip",
     "98_attachment/Pasted image 20240613170503.png",
