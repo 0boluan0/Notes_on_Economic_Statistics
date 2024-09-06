@@ -11,8 +11,13 @@
             "id": "762c26f5d8be1dd4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "01_Econometrics/08_自相关.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "01_Econometrics/08_自相关.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "01_Econometrics/08_自相关.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "01_Econometrics/08_自相关.md"
+              }
             }
           },
           {
@@ -163,6 +172,8 @@
   },
   "active": "762c26f5d8be1dd4",
   "lastOpenFiles": [
+    "01_Econometrics/06_多重共线性.md",
+    "99_学习情况记录/2024-09-04——星期三.md",
     "99_学习情况记录/2024-07-03——星期三.md",
     "07_随机过程/01.md",
     "99_学习情况记录/2024-08-29——星期四.md",
@@ -177,7 +188,6 @@
     "01_Econometrics/09_联立方程模型(内生性).md",
     "01_Econometrics/08_自相关.md",
     "01_Econometrics/07_异方差.md",
-    "01_Econometrics/06_多重共线性.md",
     "01_Econometrics/04_模型设定.md",
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/01_导论.md",
@@ -195,7 +205,6 @@
     "98_attachment/Pasted image 20240621170721.png",
     "98_attachment/Pasted image 20240620201617.png",
     "98_attachment/Pasted image 20240618203604.png",
-    "00_inbox/未命名.md",
     "98_attachment/Pasted image 20240617190037.png",
     "98_attachment.zip",
     "04_货币银行学.zip",

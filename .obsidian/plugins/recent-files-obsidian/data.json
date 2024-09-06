@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "08_自相关",
+      "path": "01_Econometrics/08_自相关.md"
+    },
+    {
+      "basename": "06_多重共线性",
+      "path": "01_Econometrics/06_多重共线性.md"
+    },
+    {
       "basename": "2024-09-04——星期三",
       "path": "99_学习情况记录/2024-09-04——星期三.md"
     },
@@ -53,16 +61,8 @@
       "path": "01_Econometrics/09_联立方程模型(内生性).md"
     },
     {
-      "basename": "08_自相关",
-      "path": "01_Econometrics/08_自相关.md"
-    },
-    {
       "basename": "07_异方差",
       "path": "01_Econometrics/07_异方差.md"
-    },
-    {
-      "basename": "06_多重共线性",
-      "path": "01_Econometrics/06_多重共线性.md"
     },
     {
       "basename": "04_模型设定",
