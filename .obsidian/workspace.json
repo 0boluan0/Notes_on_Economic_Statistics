@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/08_自相关.md",
+                "file": "01_Econometrics/02_一元线性回归.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "p值",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +74,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -94,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Econometrics/08_自相关.md",
+                "file": "01_Econometrics/02_一元线性回归.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Econometrics/08_自相关.md",
+                "file": "01_Econometrics/02_一元线性回归.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/08_自相关.md"
+                "file": "01_Econometrics/02_一元线性回归.md"
               }
             }
           },
@@ -172,6 +173,8 @@
   },
   "active": "762c26f5d8be1dd4",
   "lastOpenFiles": [
+    "99_学习情况记录/2024-09-06——星期五.md",
+    "01_Econometrics/08_自相关.md",
     "01_Econometrics/06_多重共线性.md",
     "99_学习情况记录/2024-09-04——星期三.md",
     "99_学习情况记录/2024-07-03——星期三.md",
@@ -186,7 +189,6 @@
     "01_Econometrics/11_平稳时间序列模型.md",
     "01_Econometrics/10_虚拟变量.md",
     "01_Econometrics/09_联立方程模型(内生性).md",
-    "01_Econometrics/08_自相关.md",
     "01_Econometrics/07_异方差.md",
     "01_Econometrics/04_模型设定.md",
     "01_Econometrics/02_一元线性回归.md",
@@ -198,7 +200,6 @@
     "01_Econometrics/零散知识点.md",
     "99_学习情况记录/2024-06-27——星期四.md",
     "99_学习情况记录/2024-06-26——星期三.md",
-    "99_学习情况记录/2024-06-25——星期二.md",
     "01_Econometrics/太白金星v计量.pdf",
     "98_attachment/Pasted image 20240621195025.png",
     "98_attachment/Pasted image 20240621193942.png",
