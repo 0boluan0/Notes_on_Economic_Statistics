@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "09_财务管理/01_财务管理概述.md",
+                "file": "09_财务管理/1_财务管理/01_财务管理概述.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -121,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "09_财务管理/01_财务管理概述.md",
+                "file": "09_财务管理/1_财务管理/01_财务管理概述.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "09_财务管理/01_财务管理概述.md",
+                "file": "09_财务管理/1_财务管理/01_财务管理概述.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "09_财务管理/01_财务管理概述.md"
+                "file": "09_财务管理/1_财务管理/01_财务管理概述.md"
               }
             }
           },
@@ -197,10 +197,14 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "cbea0d78bf30f249",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
+    "09_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
+    "99_学习情况记录/2024-09-12——星期四.md",
+    "09_财务管理/2_成本计算",
+    "09_财务管理/1_财务管理",
+    "09_财务管理/1_财务管理/01_财务管理概述.md",
     "99_学习情况记录/2024-09-11——星期三.md",
-    "09_财务管理/01_财务管理概述.md",
     "05_经济思想史/02_前资本主义社会.md",
     "05_经济思想史/01_导论.md",
     "00_inbox/日记模版.md",
@@ -226,8 +230,6 @@
     "01_Econometrics/03_多元线性回归.md",
     "99_学习情况记录/2024-08-09——星期五.md",
     "01_Econometrics/13_面板数据模型.md",
-    "01_Econometrics/12_非平稳时间序列.md",
-    "01_Econometrics/11_平稳时间序列模型.md",
     "07_随机过程",
     "01_Econometrics/太白金星v计量.pdf",
     "98_attachment/Pasted image 20240621195025.png",
@@ -243,8 +245,6 @@
     "98_attachment/Pasted image 20240611215442.png",
     "02_game theory/第3次作业.pdf",
     "02_game theory/第2次作业.pdf",
-    "04_货币银行学/1_引言/未命名.canvas",
-    "05_经济思想史/~$方经济思想史.docx",
-    "05_经济思想史/西方经济思想史.docx"
+    "04_货币银行学/1_引言/未命名.canvas"
   ]
 }
