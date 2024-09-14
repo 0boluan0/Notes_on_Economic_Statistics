@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "08_财务管理/1_财务管理/01_财务管理概述.md",
+                "file": "99_学习情况记录/2024-09-14——星期六.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "08_财务管理/1_财务管理/01_财务管理概述.md",
+                "file": "99_学习情况记录/2024-09-14——星期六.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "08_财务管理/1_财务管理/01_财务管理概述.md",
+                "file": "99_学习情况记录/2024-09-14——星期六.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "08_财务管理/1_财务管理/01_财务管理概述.md"
+                "file": "99_学习情况记录/2024-09-14——星期六.md"
               }
             }
           },
@@ -183,13 +183,14 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "cbea0d78bf30f249",
   "lastOpenFiles": [
+    "08_财务管理/1_财务管理/01_财务管理概述.md",
+    "99_学习情况记录/2024-09-14——星期六.md",
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "99_学习情况记录/2024-09-12——星期四.md",
     "08_财务管理/2_成本计算",
     "08_财务管理/1_财务管理",
-    "08_财务管理/1_财务管理/01_财务管理概述.md",
     "99_学习情况记录/2024-09-11——星期三.md",
     "05_经济思想史/02_前资本主义社会.md",
     "05_经济思想史/01_导论.md",
@@ -230,7 +231,6 @@
     "98_attachment/Pasted image 20240613134707.png",
     "98_attachment/Pasted image 20240611215442.png",
     "02_game theory/第3次作业.pdf",
-    "02_game theory/第2次作业.pdf",
     "04_货币银行学/1_引言/未命名.canvas"
   ]
 }
