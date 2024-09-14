@@ -8,25 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "762c26f5d8be1dd4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "08_机器学习牛津课/01_introduce.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "cbea0d78bf30f249",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "09_财务管理/1_财务管理/01_财务管理概述.md",
+                "file": "08_财务管理/1_财务管理/01_财务管理概述.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -46,8 +33,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -121,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "09_财务管理/1_财务管理/01_财务管理概述.md",
+                "file": "08_财务管理/1_财务管理/01_财务管理概述.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -138,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "09_财务管理/1_财务管理/01_财务管理概述.md",
+                "file": "08_财务管理/1_财务管理/01_财务管理概述.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -161,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "09_财务管理/1_财务管理/01_财务管理概述.md"
+                "file": "08_财务管理/1_财务管理/01_财务管理概述.md"
               }
             }
           },
@@ -199,18 +185,18 @@
   },
   "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
-    "09_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
+    "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "99_学习情况记录/2024-09-12——星期四.md",
-    "09_财务管理/2_成本计算",
-    "09_财务管理/1_财务管理",
-    "09_财务管理/1_财务管理/01_财务管理概述.md",
+    "08_财务管理/2_成本计算",
+    "08_财务管理/1_财务管理",
+    "08_财务管理/1_财务管理/01_财务管理概述.md",
     "99_学习情况记录/2024-09-11——星期三.md",
     "05_经济思想史/02_前资本主义社会.md",
     "05_经济思想史/01_导论.md",
     "00_inbox/日记模版.md",
     "99_学习情况记录/2024-09-10——星期二.md",
     "08_机器学习牛津课/01_introduce.md",
-    "09_财务管理",
+    "08_财务管理",
     "99_学习情况记录/2024-09-09——星期一.md",
     "Excalidraw/Drawing 2024-09-08 16.30.17.excalidraw.md",
     "Excalidraw/Drawing 2024-09-08 16.30.17.excalidraw.png",
