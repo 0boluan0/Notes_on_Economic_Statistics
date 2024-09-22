@@ -8,25 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cbea0d78bf30f249",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/2024-09-16——星期一.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
             "id": "b1079760c7c728cb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2024-09-09——星期一.md",
+                "file": "99_学习情况记录/2024-09-22——星期日.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -62,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "金融市场的",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -107,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "99_学习情况记录/2024-09-16——星期一.md",
+                "file": "99_学习情况记录/2024-09-22——星期日.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "99_学习情况记录/2024-09-16——星期一.md",
+                "file": "99_学习情况记录/2024-09-22——星期日.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2024-09-16——星期一.md"
+                "file": "99_学习情况记录/2024-09-22——星期日.md"
               }
             }
           },
@@ -183,11 +170,16 @@
       "obsidian-memos:Thino": false
     }
   },
-  "active": "cbea0d78bf30f249",
+  "active": "b1079760c7c728cb",
   "lastOpenFiles": [
     "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
-    "99_学习情况记录/2024-09-16——星期一.md",
+    "99_学习情况记录/2024-09-22——星期日.md",
+    "99_学习情况记录/2024-09-20——星期五.md",
+    "99_学习情况记录/2024-09-18——星期三.md",
     "08_财务管理/1_财务管理/01_财务管理概述.md",
+    "99_学习情况记录/2024-09-09——星期一.md",
+    "04_货币银行学/1_引言/02_金融体系概览.md",
+    "99_学习情况记录/2024-09-16——星期一.md",
     "00_inbox/日记模版.md",
     "05_经济思想史/01_导论.md",
     "05_经济思想史/02_前资本主义社会.md",
@@ -202,7 +194,6 @@
     "99_学习情况记录/2024-09-10——星期二.md",
     "08_机器学习牛津课/01_introduce.md",
     "08_财务管理",
-    "99_学习情况记录/2024-09-09——星期一.md",
     "Excalidraw/Drawing 2024-09-08 16.30.17.excalidraw.md",
     "Excalidraw/Drawing 2024-09-08 16.30.17.excalidraw.png",
     "99_学习情况记录/2024-09-06——星期五.md",
@@ -213,10 +204,6 @@
     "01_Econometrics/07_异方差.md",
     "01_Econometrics/05_多元回归模型的矩阵表达.md",
     "01_Econometrics/08_自相关.md",
-    "99_学习情况记录/2024-09-04——星期三.md",
-    "99_学习情况记录/2024-07-03——星期三.md",
-    "99_学习情况记录/2024-08-29——星期四.md",
-    "99_学习情况记录/2024-08-26——星期一.md",
     "07_随机过程",
     "01_Econometrics/太白金星v计量.pdf",
     "98_attachment/Pasted image 20240621195025.png",
