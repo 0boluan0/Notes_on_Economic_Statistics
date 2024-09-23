@@ -1,8 +1,36 @@
 {
   "recentFiles": [
     {
+      "basename": "13_面板数据模型",
+      "path": "01_Econometrics/13_面板数据模型.md"
+    },
+    {
+      "basename": "05_多元回归模型的矩阵表达",
+      "path": "01_Econometrics/05_多元回归模型的矩阵表达.md"
+    },
+    {
       "basename": "2024-09-22——星期日",
       "path": "99_学习情况记录/2024-09-22——星期日.md"
+    },
+    {
+      "basename": "00_计量经济学看板",
+      "path": "01_Econometrics/00_计量经济学看板.md"
+    },
+    {
+      "basename": "02_一元线性回归",
+      "path": "01_Econometrics/02_一元线性回归.md"
+    },
+    {
+      "basename": "04_模型设定",
+      "path": "01_Econometrics/04_模型设定.md"
+    },
+    {
+      "basename": "07_异方差",
+      "path": "01_Econometrics/07_异方差.md"
+    },
+    {
+      "basename": "10_虚拟变量",
+      "path": "01_Econometrics/10_虚拟变量.md"
     },
     {
       "basename": "02_财务报表分析和财务预测",
@@ -73,24 +101,8 @@
       "path": "99_学习情况记录/2024-09-06——星期五.md"
     },
     {
-      "basename": "02_一元线性回归",
-      "path": "01_Econometrics/02_一元线性回归.md"
-    },
-    {
-      "basename": "04_模型设定",
-      "path": "01_Econometrics/04_模型设定.md"
-    },
-    {
       "basename": "06_多重共线性",
       "path": "01_Econometrics/06_多重共线性.md"
-    },
-    {
-      "basename": "07_异方差",
-      "path": "01_Econometrics/07_异方差.md"
-    },
-    {
-      "basename": "05_多元回归模型的矩阵表达",
-      "path": "01_Econometrics/05_多元回归模型的矩阵表达.md"
     },
     {
       "basename": "08_自相关",
@@ -121,20 +133,12 @@
       "path": "99_学习情况记录/2024-08-09——星期五.md"
     },
     {
-      "basename": "13_面板数据模型",
-      "path": "01_Econometrics/13_面板数据模型.md"
-    },
-    {
       "basename": "12_非平稳时间序列",
       "path": "01_Econometrics/12_非平稳时间序列.md"
     },
     {
       "basename": "11_平稳时间序列模型",
       "path": "01_Econometrics/11_平稳时间序列模型.md"
-    },
-    {
-      "basename": "10_虚拟变量",
-      "path": "01_Econometrics/10_虚拟变量.md"
     },
     {
       "basename": "09_联立方程模型(内生性)",
@@ -195,10 +199,6 @@
     {
       "basename": "06_利率的风险结构与期限结构",
       "path": "04_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md"
-    },
-    {
-      "basename": "01_为什么研究货币，银行与金融市场",
-      "path": "04_货币银行学/1_引言/01_为什么研究货币，银行与金融市场.md"
     }
   ],
   "omittedPaths": [],
