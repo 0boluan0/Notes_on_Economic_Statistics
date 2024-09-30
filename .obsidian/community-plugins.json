@@ -3,7 +3,6 @@
   "recent-files-obsidian",
   "obsidian-mind-map",
   "calendar",
-  "obsidian-memos",
   "obsidian-excalidraw-plugin",
   "quick-explorer",
   "dataview",
@@ -15,5 +14,6 @@
   "omnisearch",
   "quick-latex",
   "obsidian-pandoc",
-  "obsidian-tasks-plugin"
+  "obsidian-tasks-plugin",
+  "smart-second-brain"
 ]
