@@ -1,29 +1,45 @@
 {
   "isChatComfy": true,
-  "isUsingRag": true,
-  "assistantLanguage": "zh",
+  "isUsingRag": false,
+  "assistantLanguage": "en",
   "initialAssistantMessageContent": "Hello, I am your assistant. How can I help you?",
   "isIncognitoMode": true,
   "ollamaGenModel": {
     "model": "gemma",
     "baseUrl": "http://localhost:11434",
     "temperature": 0.5,
-    "contextWindow": 8000
+    "contextWindow": 7900,
+    "lcModel": {
+      "lc": 1,
+      "type": "constructor",
+      "id": [
+        "langchain",
+        "chat_models",
+        "ollama",
+        "ChatOllama"
+      ],
+      "kwargs": {
+        "model": "gemma",
+        "base_url": "http://localhost:11434",
+        "temperature": 0.5,
+        "context_window": 7900
+      }
+    }
   },
   "ollamaEmbedModel": {
-    "model": "llama3.1",
+    "model": "gemma",
     "baseUrl": "http://localhost:11434",
     "similarityThreshold": 0.75,
-    "k": 2000
+    "k": 100
   },
   "openAIGenModel": {
     "model": "gpt-3.5-turbo",
-    "openAIApiKey": "sk-aGU7DE5eS9eBpGSP5731289b25304dC4B73aA80e9dCe0b48",
+    "openAIApiKey": "",
     "temperature": 0.5
   },
   "openAIEmbedModel": {
     "model": "text-embedding-ada-002",
-    "openAIApiKey": "sk-aGU7DE5eS9eBpGSP5731289b25304dC4B73aA80e9dCe0b48",
+    "openAIApiKey": "",
     "similarityThreshold": 0.75,
     "k": 100
   },
@@ -31,13 +47,11 @@
   "defaultChatName": "New Chat",
   "excludeFF": [
     "Chats",
-    "*.excalidraw.md",
-    "99_学习情况记录",
-    "98_attachment"
+    "*.excalidraw.md"
   ],
   "isQuickSettingsOpen": true,
   "isVerbose": false,
   "isOnboarded": true,
   "hideIncognitoWarning": false,
-  "isAutostart": true
+  "isAutostart": false
 }

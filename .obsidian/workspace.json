@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2024-09-30——星期一.md",
+                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -94,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Chats/New Chat.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Chats/New Chat.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -131,39 +133,61 @@
             "type": "leaf",
             "state": {
               "type": "outline",
+              "state": {
+                "file": "Chats/New Chat.md"
+              }
+            }
+          },
+          {
+            "id": "1656c20a752bbc04",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
               "state": {}
             }
           },
           {
-            "id": "bb434db4b5988963",
+            "id": "32ee5dab7db3b0ac",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "99_学习情况记录/2024-09-30——星期一.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           },
           {
-            "id": "3156760c6096eaed",
+            "id": "7c85453af04ed54e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "01_Econometrics/11_平稳时间序列模型.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           },
           {
-            "id": "13b513cd6f56056f",
+            "id": "2eeed7f14a44fc7b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "chat-view",
+              "state": {
+                "file": "Chats/New Chat.md"
+              }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
-    "width": 1024.5
+    "width": 479.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -179,16 +203,16 @@
       "audio-recorder:开始/结束录音": false,
       "media-extended:Open media": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "obsidian-memos:Thino": false,
-      "smart-second-brain:打开 S2B 聊天": false,
-      "copilot:Copilot Chat": false
+      "smart-second-brain:打开 S2B 聊天": false
     }
   },
-  "active": "bb434db4b5988963",
+  "active": "2eeed7f14a44fc7b",
   "lastOpenFiles": [
-    "Chats/New Chat.md",
+    "01_Econometrics/11_平稳时间序列模型.md",
     "99_学习情况记录/2024-09-30——星期一.md",
+    "Chats/New Chat.md",
     "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
+    "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "Chats",
     "99_学习情况记录/2024-09-28——星期六.md",
     "08_财务管理/1_财务管理/01_财务管理概述.md",
@@ -212,8 +236,6 @@
     "99_学习情况记录/已复盘/2024-08-03——星期六.md",
     "99_学习情况记录/已复盘/2024-07-06——星期六.md",
     "99_学习情况记录/已复盘/2024-07-03——星期三.md",
-    "99_学习情况记录/已复盘/2024-06-28——星期五.md",
-    "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "08_财务管理/2_成本计算",
     "08_财务管理/1_财务管理",
     "08_财务管理",
