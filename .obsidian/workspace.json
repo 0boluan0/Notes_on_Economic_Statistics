@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chats/New Chat.md",
+                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Chats/New Chat.md",
+                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Chats/New Chat.md"
+                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md"
               }
             }
           },
@@ -203,14 +203,15 @@
       "audio-recorder:开始/结束录音": false,
       "media-extended:Open media": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
-      "smart-second-brain:打开 S2B 聊天": false
+      "smart-second-brain:打开 S2B 聊天": false,
+      "copilot:Copilot Chat": false
     }
   },
-  "active": "2eeed7f14a44fc7b",
+  "active": "b1079760c7c728cb",
   "lastOpenFiles": [
+    "Chats/New Chat.md",
     "01_Econometrics/11_平稳时间序列模型.md",
     "99_学习情况记录/2024-09-30——星期一.md",
-    "Chats/New Chat.md",
     "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "Chats",
