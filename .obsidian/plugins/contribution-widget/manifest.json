@@ -1,0 +1,11 @@
+{
+	"id": "contribution-widget",
+	"name": "Contribution Widget",
+	"version": "9999.0.309",
+	"minAppVersion": "0.14.0",
+	"description": "create widgts for your obsidian",
+	"author": "vran",
+	"authorUrl": "https://github.com/vran-dev",
+	"isDesktopOnly": false,
+	"fundingUrl": "https://www.buymeacoffee.com/vran"
+}
