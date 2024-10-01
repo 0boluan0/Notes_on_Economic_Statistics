@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
+                "file": "Chats/New Chat.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
+                "file": "Chats/New Chat.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md"
+                "file": "Chats/New Chat.md"
               }
             }
           },
@@ -181,9 +181,17 @@
                 "file": "Chats/New Chat.md"
               }
             }
+          },
+          {
+            "id": "5fdecbc4ae7bd4f2",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
@@ -207,12 +215,15 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "b1079760c7c728cb",
+  "active": "5fdecbc4ae7bd4f2",
   "lastOpenFiles": [
+    "copilot-conversations/helllo@20241001_145020.md",
+    "copilot-conversations/hello@20241001_144731.md",
+    "copilot-conversations",
+    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "Chats/New Chat.md",
     "01_Econometrics/11_平稳时间序列模型.md",
     "99_学习情况记录/2024-09-30——星期一.md",
-    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "Chats",
     "99_学习情况记录/2024-09-28——星期六.md",
@@ -235,8 +246,6 @@
     "99_学习情况记录/已复盘/2024-08-26——星期一.md",
     "99_学习情况记录/已复盘/2024-08-09——星期五.md",
     "99_学习情况记录/已复盘/2024-08-03——星期六.md",
-    "99_学习情况记录/已复盘/2024-07-06——星期六.md",
-    "99_学习情况记录/已复盘/2024-07-03——星期三.md",
     "08_财务管理/2_成本计算",
     "08_财务管理/1_财务管理",
     "08_财务管理",
@@ -251,7 +260,6 @@
     "98_attachment/Pasted image 20240618203604.png",
     "98_attachment/Pasted image 20240617190037.png",
     "98_attachment.zip",
-    "04_货币银行学.zip",
     "98_attachment/Pasted image 20240613170503.png",
     "98_attachment/Pasted image 20240613134707.png",
     "98_attachment/Pasted image 20240611215442.png",
