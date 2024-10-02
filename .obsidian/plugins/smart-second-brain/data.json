@@ -1,14 +1,14 @@
 {
   "isChatComfy": true,
-  "isUsingRag": false,
+  "isUsingRag": true,
   "assistantLanguage": "en",
   "initialAssistantMessageContent": "Hello, I am your assistant. How can I help you?",
   "isIncognitoMode": true,
   "ollamaGenModel": {
-    "model": "gemma",
+    "model": "qwen2.5:32b",
     "baseUrl": "http://localhost:11434",
     "temperature": 0.5,
-    "contextWindow": 7900,
+    "contextWindow": 1948,
     "lcModel": {
       "lc": 1,
       "type": "constructor",
@@ -19,10 +19,42 @@
         "ChatOllama"
       ],
       "kwargs": {
-        "model": "gemma",
+        "model": "qwen2.5:32b",
         "base_url": "http://localhost:11434",
         "temperature": 0.5,
-        "context_window": 7900
+        "context_window": 1948,
+        "lc_model": {
+          "lc": 1,
+          "type": "constructor",
+          "id": [
+            "langchain",
+            "chat_models",
+            "ollama",
+            "ChatOllama"
+          ],
+          "kwargs": {
+            "model": "gemma",
+            "base_url": "http://localhost:11434",
+            "temperature": 0.5,
+            "context_window": 7800,
+            "lc_model": {
+              "lc": 1,
+              "type": "constructor",
+              "id": [
+                "langchain",
+                "chat_models",
+                "ollama",
+                "ChatOllama"
+              ],
+              "kwargs": {
+                "model": "gemma",
+                "base_url": "http://localhost:11434",
+                "temperature": 0.5,
+                "context_window": 7900
+              }
+            }
+          }
+        }
       }
     }
   },
@@ -35,7 +67,8 @@
   "openAIGenModel": {
     "model": "gpt-3.5-turbo",
     "openAIApiKey": "",
-    "temperature": 0.5
+    "temperature": 0.5,
+    "contextWindow": 1948
   },
   "openAIEmbedModel": {
     "model": "text-embedding-ada-002",
