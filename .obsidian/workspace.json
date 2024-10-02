@@ -157,13 +157,21 @@
                 "searchQuery": ""
               }
             }
+          },
+          {
+            "id": "a99ab6e2475ea038",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 806.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,13 +191,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "446e54bd8939d40e",
+  "active": "a99ab6e2475ea038",
   "lastOpenFiles": [
     "00_inbox/日记模版.md",
     "00_inbox/大三上绩点课程.md",
     "99_学习情况记录/2024-10-02——星期三.md",
-    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "99_学习情况记录/2024-10-01——星期二.md",
+    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "00_inbox/未命名看板.md",
     "08_财务管理/1_财务管理/01_财务管理概述.md",
