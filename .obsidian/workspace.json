@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2024-10-02——星期三.md",
+                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "99_学习情况记录/2024-10-02——星期三.md",
+                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "99_学习情况记录/2024-10-02——星期三.md",
+                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2024-10-02——星期三.md"
+                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md"
               }
             }
           },
@@ -152,6 +152,18 @@
             "state": {
               "type": "copilot-chat-view",
               "state": {}
+            }
+          },
+          {
+            "id": "f004a8247c6cf59c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
             }
           }
         ],
@@ -181,13 +193,13 @@
   },
   "active": "446e54bd8939d40e",
   "lastOpenFiles": [
+    "99_学习情况记录/2024-10-03——星期四.md",
+    "99_学习情况记录/2024-10-02——星期三.md",
     "00_inbox/大三上绩点课程.md",
     "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
-    "99_学习情况记录/2024-10-02——星期三.md",
     "Chats/New Chat.md",
     "00_inbox/日记模版.md",
     "99_学习情况记录/2024-10-01——星期二.md",
-    "99_学习情况记录/2024-10-03——星期四.md",
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "00_inbox/未命名看板.md",
     "08_财务管理/1_财务管理/01_财务管理概述.md",
