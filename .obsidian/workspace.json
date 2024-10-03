@@ -4,19 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "ebaf312235248fe7",
+        "id": "2574e9248c7ba747",
         "type": "tabs",
         "children": [
           {
-            "id": "446e54bd8939d40e",
+            "id": "8206dbf7dbe8402d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "00_inbox/大三上绩点课程.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ]
+                }
               }
             }
           }
@@ -94,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
+                "file": "00_inbox/大三上绩点课程.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -111,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
+                "file": "00_inbox/大三上绩点课程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md"
+                "file": "00_inbox/大三上绩点课程.md"
               }
             }
           },
@@ -165,9 +171,17 @@
                 "searchQuery": ""
               }
             }
+          },
+          {
+            "id": "947ff9c8fc940254",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
@@ -191,12 +205,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "446e54bd8939d40e",
+  "active": "8206dbf7dbe8402d",
   "lastOpenFiles": [
+    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "99_学习情况记录/2024-10-03——星期四.md",
     "99_学习情况记录/2024-10-02——星期三.md",
     "00_inbox/大三上绩点课程.md",
-    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "Chats/New Chat.md",
     "00_inbox/日记模版.md",
     "99_学习情况记录/2024-10-01——星期二.md",
