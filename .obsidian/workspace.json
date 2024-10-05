@@ -11,18 +11,12 @@
             "id": "8206dbf7dbe8402d",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "00_inbox/大三上绩点课程.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "99_学习情况记录/2024-10-03——星期四.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -100,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00_inbox/大三上绩点课程.md",
+                "file": "99_学习情况记录/2024-10-03——星期四.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -117,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00_inbox/大三上绩点课程.md",
+                "file": "99_学习情况记录/2024-10-03——星期四.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/大三上绩点课程.md"
+                "file": "99_学习情况记录/2024-10-03——星期四.md"
               }
             }
           },
@@ -191,7 +185,6 @@
     "hiddenItems": {
       "obsidian-kanban:创建新看板": false,
       "media-extended:Open media": false,
-      "smart-second-brain:打开 S2B 聊天": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "templates:插入模板": false,
@@ -207,10 +200,10 @@
   },
   "active": "8206dbf7dbe8402d",
   "lastOpenFiles": [
+    "00_inbox/大三上绩点课程.md",
     "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "99_学习情况记录/2024-10-03——星期四.md",
     "99_学习情况记录/2024-10-02——星期三.md",
-    "00_inbox/大三上绩点课程.md",
     "Chats/New Chat.md",
     "00_inbox/日记模版.md",
     "99_学习情况记录/2024-10-01——星期二.md",
