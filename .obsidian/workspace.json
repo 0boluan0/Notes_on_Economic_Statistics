@@ -19,8 +19,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e2e5ef48f748218c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -198,14 +212,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f9b2587b92779c76",
+  "active": "e2e5ef48f748218c",
   "lastOpenFiles": [
+    "08_财务管理/1_财务管理/03_财务预测的步骤和方法.md",
+    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "08_财务管理/1_财务管理/01_财务管理概述.md",
+    "00_inbox/大三上绩点课程看板.md",
+    "98_attachment/Pasted image 20241011223809.png",
+    "98_attachment/Pasted image 20241011223628.png",
+    "98_attachment/截屏 2024-10-11 22.32.26.jpeg",
+    "98_attachment/Pasted image 20241011222855.png",
     "00_inbox/日记模版.md",
     "00_inbox/日历视图.md",
     "99_学习情况记录/2024-10-11——星期五.md",
-    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
-    "00_inbox/大三上绩点课程看板.md",
     "98_attachment/截屏 2024-10-10 20.04.51.jpeg",
     "99_学习情况记录/已复盘/2024-10-10——星期四.md",
     "99_学习情况记录/已复盘/2024-10-05——星期六.md",
@@ -231,7 +250,6 @@
     "99_学习情况记录/已复盘/2024-09-26——星期四.md",
     "99_学习情况记录/已复盘/2024-09-23——星期一.md",
     "99_学习情况记录/已复盘/2024-09-22——星期日.md",
-    "99_学习情况记录/已复盘/2024-09-20——星期五.md",
     "08_财务管理/2_成本计算",
     "08_财务管理/1_财务管理",
     "08_财务管理",
@@ -243,10 +261,6 @@
     "98_attachment/Pasted image 20240621193942.png",
     "98_attachment/Pasted image 20240621170721.png",
     "98_attachment/Pasted image 20240620201617.png",
-    "98_attachment/Pasted image 20240618203604.png",
-    "98_attachment/Pasted image 20240617190037.png",
-    "98_attachment/Pasted image 20240613170503.png",
-    "98_attachment/Pasted image 20240613134707.png",
     "04_货币银行学/1_引言/未命名.canvas"
   ]
 }
