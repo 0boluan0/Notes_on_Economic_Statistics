@@ -24,19 +24,12 @@
             "id": "e2e5ef48f748218c",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "00_inbox/大三上绩点课程看板.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "99_学习情况记录/2024-10-18——星期五.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
             }
           }
@@ -115,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00_inbox/大三上绩点课程看板.md",
+                "file": "99_学习情况记录/2024-10-18——星期五.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -132,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00_inbox/大三上绩点课程看板.md",
+                "file": "99_学习情况记录/2024-10-18——星期五.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/大三上绩点课程看板.md"
+                "file": "99_学习情况记录/2024-10-18——星期五.md"
               }
             }
           },
@@ -221,12 +214,13 @@
   },
   "active": "e2e5ef48f748218c",
   "lastOpenFiles": [
+    "00_inbox/大三上绩点课程看板.md",
+    "99_学习情况记录/2024-10-18——星期五.md",
     "99_学习情况记录/2024-10-16——星期三.md",
     "99_学习情况记录/2024-10-15——星期二.md",
     "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "08_财务管理/1_财务管理/01_财务管理概述.md",
-    "00_inbox/大三上绩点课程看板.md",
     "00_inbox/日记模版.md",
     "99_学习情况记录/2024-10-12——星期六.md",
     "98_attachment/截屏 2024-10-12 13.14.44.jpeg",
@@ -258,7 +252,6 @@
     "99_学习情况记录/已复盘/2024-09-30——星期一.md",
     "copilot-conversations",
     "Chats",
-    "99_学习情况记录/已复盘/2024-09-28——星期六.md",
     "08_财务管理/2_成本计算",
     "08_财务管理/1_财务管理",
     "08_财务管理",
