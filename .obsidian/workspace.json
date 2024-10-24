@@ -8,52 +8,21 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f9b2587b92779c76",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "02_财务报表分析和财务预测"
-            }
-          },
-          {
             "id": "e2e5ef48f748218c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2024-10-24——星期四.md",
+                "file": "09_线性代数/00_perface.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-10-24——星期四"
-            }
-          },
-          {
-            "id": "89ae4a0e1e9f316e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00_inbox/日记模版.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "日记模版"
+              "title": "00_perface"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -135,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00_inbox/日记模版.md",
+                "file": "09_线性代数/00_perface.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -145,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "日记模版 的反向链接列表"
+              "title": "00_perface 的反向链接列表"
             }
           },
           {
@@ -154,12 +123,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00_inbox/日记模版.md",
+                "file": "09_线性代数/00_perface.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "日记模版 的出链列表"
+              "title": "00_perface 的出链列表"
             }
           },
           {
@@ -181,10 +150,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/日记模版.md"
+                "file": "09_线性代数/00_perface.md"
               },
               "icon": "lucide-list",
-              "title": "日记模版 的大纲"
+              "title": "00_perface 的大纲"
             }
           },
           {
@@ -193,8 +162,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           },
           {
@@ -203,8 +172,8 @@
             "state": {
               "type": "copilot-chat-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "message-square",
+              "title": "Copilot"
             }
           },
           {
@@ -232,7 +201,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -255,14 +224,18 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "89ae4a0e1e9f316e",
+  "active": "e2e5ef48f748218c",
   "lastOpenFiles": [
-    "00_inbox/大三上绩点课程看板.md",
-    "99_学习情况记录/2024-10-24——星期四.md",
-    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
-    "09_线性代数/Introduction_to_Linear_Algebra(Strang).pdf",
     "09_线性代数/linear_algebra_and_its_applications_4th.pdf",
+    "99_学习情况记录/2024-10-24——星期四.md",
+    "09_线性代数/Introduction_to_Linear_Algebra(Strang).pdf",
     "09_线性代数/00_perface.md",
+    "01_Econometrics/02_一元线性回归.md",
+    "01_Econometrics/03_多元线性回归.md",
+    "00_inbox/日历视图.md",
+    "00_inbox/日记模版.md",
+    "00_inbox/大三上绩点课程看板.md",
+    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "09_线性代数",
     "99_学习情况记录/2024-10-22——星期二.md",
     "99_学习情况记录/2024-10-21——星期一.md",
@@ -272,10 +245,8 @@
     "99_学习情况记录/2024-10-15——星期二.md",
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "08_财务管理/1_财务管理/01_财务管理概述.md",
-    "00_inbox/日记模版.md",
     "99_学习情况记录/2024-10-12——星期六.md",
     "98_attachment/截屏 2024-10-12 13.14.44.jpeg",
-    "00_inbox/日历视图.md",
     "98_attachment/Pasted image 20241011234007.png",
     "08_财务管理/1_财务管理/03_财务预测的步骤和方法.md",
     "98_attachment/Pasted image 20241011223809.png",
@@ -291,8 +262,6 @@
     "Chats/New Chat.md",
     "99_学习情况记录/已复盘/2024-10-01——星期二.md",
     "00_inbox/未命名看板.md",
-    "01_Econometrics/06_多重共线性.md",
-    "copilot-conversations/hello@20241001_145250.md",
     "01_Econometrics/未命名.canvas",
     "98_attachment/Recording 20241001150650.webm",
     "copilot-conversations",
