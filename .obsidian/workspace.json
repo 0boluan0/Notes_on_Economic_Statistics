@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2024-10-25——星期五.md",
+                "file": "09_线性代数/00_perface.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-10-25——星期五"
+              "title": "00_perface"
             }
           }
         ]
@@ -201,11 +201,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 343.5
+    "width": 318.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -226,8 +226,11 @@
   },
   "active": "e2e5ef48f748218c",
   "lastOpenFiles": [
-    "09_线性代数/00_perface.md",
+    "08_财务管理/1_财务管理/01_财务管理概述.md",
+    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
+    "01_Econometrics/00_计量经济学看板.md",
     "99_学习情况记录/2024-10-25——星期五.md",
+    "09_线性代数/00_perface.md",
     "09_线性代数/linear_algebra_and_its_applications_4th.pdf",
     "99_学习情况记录/2024-10-24——星期四.md",
     "09_线性代数/Introduction_to_Linear_Algebra(Strang).pdf",
@@ -236,7 +239,6 @@
     "00_inbox/日历视图.md",
     "00_inbox/日记模版.md",
     "00_inbox/大三上绩点课程看板.md",
-    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "09_线性代数",
     "99_学习情况记录/2024-10-22——星期二.md",
     "99_学习情况记录/2024-10-21——星期一.md",
@@ -245,7 +247,6 @@
     "99_学习情况记录/2024-10-16——星期三.md",
     "99_学习情况记录/2024-10-15——星期二.md",
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
-    "08_财务管理/1_财务管理/01_财务管理概述.md",
     "99_学习情况记录/2024-10-12——星期六.md",
     "98_attachment/截屏 2024-10-12 13.14.44.jpeg",
     "98_attachment/Pasted image 20241011234007.png",
@@ -262,7 +263,6 @@
     "99_学习情况记录/已复盘/2024-10-02——星期三.md",
     "Chats/New Chat.md",
     "99_学习情况记录/已复盘/2024-10-01——星期二.md",
-    "00_inbox/未命名看板.md",
     "01_Econometrics/未命名.canvas",
     "98_attachment/Recording 20241001150650.webm",
     "copilot-conversations",
