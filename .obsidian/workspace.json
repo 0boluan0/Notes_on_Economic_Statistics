@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2574e9248c7ba747",
+        "id": "8b89ac0d650f15c8",
         "type": "tabs",
         "children": [
           {
-            "id": "e2e5ef48f748218c",
+            "id": "712744e14a3578a0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -205,7 +205,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318.5
+    "width": 318.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -224,16 +225,53 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "e2e5ef48f748218c",
+  "floating": {
+    "id": "9cb38c91397ea4bb",
+    "type": "floating",
+    "children": [
+      {
+        "id": "da7bf21d2c368bb2",
+        "type": "window",
+        "children": [
+          {
+            "id": "8a0a963d497c916d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "e2e5ef48f748218c",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "09_线性代数/linear_algebra_and_its_applications_4th.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "linear_algebra_and_its_applications_4th"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 1104,
+        "y": 532,
+        "width": 808,
+        "height": 492,
+        "maximize": false,
+        "zoom": -1
+      }
+    ]
+  },
+  "active": "712744e14a3578a0",
   "lastOpenFiles": [
+    "09_线性代数/linear_algebra_and_its_applications_4th.pdf",
+    "09_线性代数/00_perface.md",
+    "09_线性代数/Introduction_to_Linear_Algebra(Strang).pdf",
+    "99_学习情况记录/2024-10-25——星期五.md",
     "08_财务管理/1_财务管理/01_财务管理概述.md",
     "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "01_Econometrics/00_计量经济学看板.md",
-    "99_学习情况记录/2024-10-25——星期五.md",
-    "09_线性代数/00_perface.md",
-    "09_线性代数/linear_algebra_and_its_applications_4th.pdf",
     "99_学习情况记录/2024-10-24——星期四.md",
-    "09_线性代数/Introduction_to_Linear_Algebra(Strang).pdf",
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/03_多元线性回归.md",
     "00_inbox/日历视图.md",
@@ -262,7 +300,6 @@
     "99_学习情况记录/已复盘/2024-10-03——星期四.md",
     "99_学习情况记录/已复盘/2024-10-02——星期三.md",
     "Chats/New Chat.md",
-    "99_学习情况记录/已复盘/2024-10-01——星期二.md",
     "01_Econometrics/未命名.canvas",
     "98_attachment/Recording 20241001150650.webm",
     "copilot-conversations",
