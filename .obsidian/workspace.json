@@ -225,43 +225,6 @@
       "copilot:Copilot Chat": false
     }
   },
-  "floating": {
-    "id": "9cb38c91397ea4bb",
-    "type": "floating",
-    "children": [
-      {
-        "id": "da7bf21d2c368bb2",
-        "type": "window",
-        "children": [
-          {
-            "id": "8a0a963d497c916d",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "e2e5ef48f748218c",
-                "type": "leaf",
-                "state": {
-                  "type": "pdf",
-                  "state": {
-                    "file": "09_线性代数/linear_algebra_and_its_applications_4th.pdf"
-                  },
-                  "icon": "lucide-file-text",
-                  "title": "linear_algebra_and_its_applications_4th"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 1104,
-        "y": 532,
-        "width": 808,
-        "height": 492,
-        "maximize": false,
-        "zoom": -1
-      }
-    ]
-  },
   "active": "712744e14a3578a0",
   "lastOpenFiles": [
     "09_线性代数/linear_algebra_and_its_applications_4th.pdf",
