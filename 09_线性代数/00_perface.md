@@ -4,8 +4,11 @@
 方程为:
 
 $$
-
-
+\begin{cases} 
+2x-y=0\\
+ -x+2y-z=-1\\
+ -3y+4z=4 \\
+\end{cases}
 $$
 
 ## Row picture
@@ -27,7 +30,6 @@ A=
 $$
 
 找到方程的解就是在寻找Ax=B的x(x是个列向量)
-
 
 ## column picture
 
@@ -64,4 +66,36 @@ $$
 使用左侧的向量线性组合找到右侧的向量.最终令等式成立的系数就是XYZ的答案.
 
 是否能够一定有解,就是在讨论是否三个向量是否能够完全覆盖所有的线性空间.
+
+## 方程组的矩阵形式
+
+Ax=b
+
+$$
+\begin{bmatrix} 
+2&5 \\
+1&3 \\ 
+\end{bmatrix}
+\begin{bmatrix} 
+ 1\\
+ 2 \\ 
+\end{bmatrix}
+=
+1\begin{bmatrix} 
+ 2\\
+ 1 \\ 
+\end{bmatrix}
++2\begin{bmatrix} 
+ 5 \\ 
+ 3 \\ 
+\end{bmatrix}
+=
+\begin{bmatrix} 
+ 12\\
+ 7 \\ 
+\end{bmatrix}
+$$
+
+将Ax看成A的column combination.
+
 
