@@ -28,7 +28,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/01_matrices and Gaussian Elimination.md",
+                "file": "09_线性代数/01_matrices and Gaussian Elimination.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -166,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/01_matrices and Gaussian Elimination.md"
+                "file": "09_线性代数/01_matrices and Gaussian Elimination.md"
               },
               "icon": "lucide-list",
               "title": "01_matrices and Gaussian Elimination 的大纲"
@@ -221,8 +221,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318.5,
-    "collapsed": true
+    "width": 318.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -243,9 +242,9 @@
   },
   "active": "0de2be9b9b2080e7",
   "lastOpenFiles": [
-    "99_学习情况记录/2024-10-28——星期一.md",
     "09_线性代数/00_perface.md",
-    "00_inbox/01_matrices and Gaussian Elimination.md",
+    "09_线性代数/01_matrices and Gaussian Elimination.md",
+    "99_学习情况记录/2024-10-28——星期一.md",
     "09_线性代数/linear_algebra_and_its_applications_4th.pdf",
     "09_线性代数/Introduction_to_Linear_Algebra(Strang).pdf",
     "99_学习情况记录/2024-10-25——星期五.md",

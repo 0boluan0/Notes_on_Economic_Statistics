@@ -4,7 +4,7 @@
   "attachmentFolderPath": "98_attachment",
   "newFileLocation": "folder",
   "newFileFolderPath": "00_inbox",
-  "strictLineBreaks": true,
+  "strictLineBreaks": false,
   "propertiesInDocument": "visible",
   "alwaysUpdateLinks": true,
   "pdfExportSettings": {
@@ -12,5 +12,6 @@
     "landscape": false,
     "margin": "0",
     "downscalePercent": 100
-  }
+  },
+  "readableLineLength": false
 }
