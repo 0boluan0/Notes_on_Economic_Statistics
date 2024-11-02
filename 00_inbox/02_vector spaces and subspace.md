@@ -16,4 +16,4 @@ A=\begin{bmatrix} 1&3\\2&3 \\ 4&1 \\ \end{bmatrix}
 $$
 其是有两个列向量组合而来的.这也就意味着,两个列向量的线性组合构成了R3的一个subspace.又叫做column space C(A).
 
-两个subspace的组合反而不是subspace了.但是两个subspace的交集是subspace.
+	两个subspace的组合反而不是subspace了.但是两个subspace的交集是subspace.
