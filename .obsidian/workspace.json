@@ -43,13 +43,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/02_vector spaces.md",
+                "file": "00_inbox/02_vector spaces and subspace.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_vector spaces"
+              "title": "02_vector spaces and subspace"
             }
           }
         ],
@@ -181,10 +181,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/02_vector spaces.md"
+                "file": "00_inbox/02_vector spaces and subspace.md"
               },
               "icon": "lucide-list",
-              "title": "02_vector spaces 的大纲"
+              "title": "02_vector spaces and subspace 的大纲"
             }
           },
           {
@@ -258,7 +258,7 @@
   "active": "6827b5bb74fd6eb8",
   "lastOpenFiles": [
     "09_线性代数/01_matrices and Gaussian Elimination.md",
-    "00_inbox/02_vector spaces.md",
+    "00_inbox/02_vector spaces and subspace.md",
     "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "08_财务管理/1_财务管理/01_财务管理概述.md",
     "07_随机过程/01_预备知识.md",
