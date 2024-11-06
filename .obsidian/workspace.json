@@ -4,71 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "8b89ac0d650f15c8",
+        "id": "a96e89e24af81f59",
         "type": "tabs",
         "children": [
           {
-            "id": "712744e14a3578a0",
+            "id": "1c728ef0993ebbf9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "09_线性代数/00_perface.md",
+                "file": "08_财务管理/1_财务管理/01_财务管理概述.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00_perface"
-            }
-          },
-          {
-            "id": "0de2be9b9b2080e7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "09_线性代数/01_matrices and Gaussian Elimination.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "01_matrices and Gaussian Elimination"
-            }
-          },
-          {
-            "id": "6827b5bb74fd6eb8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "07_随机过程/01_预备知识.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "01_预备知识"
-            }
-          },
-          {
-            "id": "7f351da22edcb877",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00_inbox/02_随机过程的概念和分类.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "02_随机过程的概念和分类"
+              "title": "01_财务管理概述"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -196,10 +150,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/02_随机过程的概念和分类.md"
+                "file": "08_财务管理/1_财务管理/01_财务管理概述.md"
               },
               "icon": "lucide-list",
-              "title": "02_随机过程的概念和分类 的大纲"
+              "title": "01_财务管理概述 的大纲"
             }
           },
           {
@@ -270,14 +224,23 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "7f351da22edcb877",
+  "active": "1c728ef0993ebbf9",
   "lastOpenFiles": [
+    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
+    "00_inbox/日记模版.md",
+    "00_inbox/日历视图.md",
+    "00_inbox/大三上绩点课程看板.md",
+    "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
+    "10_多元统计分析",
+    "07_随机过程/06_平稳随机过程.md",
+    "07_随机过程/05_连续时间的马尔可夫链.md",
+    "07_随机过程/04_马尔可夫链.md",
+    "07_随机过程/03_泊松过程.md",
+    "07_随机过程/02_随机过程的概念和分类.md",
     "07_随机过程/01_预备知识.md",
-    "00_inbox/02_随机过程的概念和分类.md",
     "08_财务管理/1_财务管理/01_财务管理概述.md",
     "09_线性代数/02_vector spaces and subspace.md",
     "09_线性代数/01_matrices and Gaussian Elimination.md",
-    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "09_线性代数/Introduction_to_Linear_Algebra(Strang).pdf",
     "09_线性代数/linear_algebra_and_its_applications_4th.pdf",
     "09_线性代数/00_perface.md",
@@ -287,35 +250,25 @@
     "99_学习情况记录/2024-10-24——星期四.md",
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/03_多元线性回归.md",
-    "00_inbox/日历视图.md",
-    "00_inbox/日记模版.md",
-    "00_inbox/大三上绩点课程看板.md",
     "09_线性代数",
     "99_学习情况记录/2024-10-22——星期二.md",
     "99_学习情况记录/2024-10-21——星期一.md",
     "99_学习情况记录/2024-10-20——星期日.md",
     "99_学习情况记录/2024-10-18——星期五.md",
-    "99_学习情况记录/2024-10-16——星期三.md",
-    "99_学习情况记录/2024-10-15——星期二.md",
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
-    "99_学习情况记录/2024-10-12——星期六.md",
     "98_attachment/截屏 2024-10-12 13.14.44.jpeg",
     "98_attachment/Pasted image 20241011234007.png",
-    "08_财务管理/1_财务管理/03_财务预测的步骤和方法.md",
     "98_attachment/Pasted image 20241011223809.png",
     "98_attachment/Pasted image 20241011223628.png",
     "98_attachment/截屏 2024-10-11 22.32.26.jpeg",
     "98_attachment/Pasted image 20241011222855.png",
-    "99_学习情况记录/2024-10-11——星期五.md",
     "98_attachment/截屏 2024-10-10 20.04.51.jpeg",
-    "99_学习情况记录/已复盘/2024-10-10——星期四.md",
     "01_Econometrics/未命名.canvas",
     "98_attachment/Recording 20241001150650.webm",
     "copilot-conversations",
     "Chats",
     "08_财务管理/2_成本计算",
     "08_财务管理/1_财务管理",
-    "08_财务管理",
     "Excalidraw/Drawing 2024-09-08 16.30.17.excalidraw.png",
     "98_attachment/Pasted image 20240621195025.png",
     "98_attachment/Pasted image 20240621193942.png",
