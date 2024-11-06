@@ -43,17 +43,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "08_财务管理/1_财务管理/01_财务管理概述.md",
+                "file": "07_随机过程/01_预备知识.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01_财务管理概述"
+              "title": "01_预备知识"
+            }
+          },
+          {
+            "id": "7f351da22edcb877",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/02_随机过程的概念和分类.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "02_随机过程的概念和分类"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -181,10 +196,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "08_财务管理/1_财务管理/01_财务管理概述.md"
+                "file": "00_inbox/02_随机过程的概念和分类.md"
               },
               "icon": "lucide-list",
-              "title": "01_财务管理概述 的大纲"
+              "title": "02_随机过程的概念和分类 的大纲"
             }
           },
           {
@@ -255,13 +270,14 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "6827b5bb74fd6eb8",
+  "active": "7f351da22edcb877",
   "lastOpenFiles": [
+    "07_随机过程/01_预备知识.md",
+    "00_inbox/02_随机过程的概念和分类.md",
+    "08_财务管理/1_财务管理/01_财务管理概述.md",
     "09_线性代数/02_vector spaces and subspace.md",
     "09_线性代数/01_matrices and Gaussian Elimination.md",
     "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
-    "08_财务管理/1_财务管理/01_财务管理概述.md",
-    "07_随机过程/01_预备知识.md",
     "09_线性代数/Introduction_to_Linear_Algebra(Strang).pdf",
     "09_线性代数/linear_algebra_and_its_applications_4th.pdf",
     "09_线性代数/00_perface.md",
@@ -293,7 +309,6 @@
     "99_学习情况记录/2024-10-11——星期五.md",
     "98_attachment/截屏 2024-10-10 20.04.51.jpeg",
     "99_学习情况记录/已复盘/2024-10-10——星期四.md",
-    "99_学习情况记录/已复盘/2024-10-05——星期六.md",
     "01_Econometrics/未命名.canvas",
     "98_attachment/Recording 20241001150650.webm",
     "copilot-conversations",
