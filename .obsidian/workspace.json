@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2024-11-07——星期四.md",
+                "file": "08_财务管理/1_财务管理/01_财务管理概述.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-11-07——星期四"
+              "title": "01_财务管理概述"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -150,10 +151,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2024-11-07——星期四.md"
+                "file": "08_财务管理/1_财务管理/01_财务管理概述.md"
               },
               "icon": "lucide-list",
-              "title": "2024-11-07——星期四 的大纲"
+              "title": "01_财务管理概述 的大纲"
             }
           },
           {
@@ -205,7 +206,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -224,11 +225,12 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "1c728ef0993ebbf9",
+  "active": "a0580e7d1cb5a5c4",
   "lastOpenFiles": [
-    "08_财务管理/1_财务管理/01_财务管理概述.md",
-    "99_学习情况记录/2024-11-07——星期四.md",
     "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
+    "08_财务管理/1_财务管理/01_财务管理概述.md",
+    "99_学习情况记录/2024-11-08——星期五.md",
+    "99_学习情况记录/2024-11-07——星期四.md",
     "00_inbox/日记模版.md",
     "00_inbox/日历视图.md",
     "00_inbox/大三上绩点课程看板.md",
@@ -255,7 +257,6 @@
     "99_学习情况记录/2024-10-22——星期二.md",
     "99_学习情况记录/2024-10-21——星期一.md",
     "99_学习情况记录/2024-10-20——星期日.md",
-    "99_学习情况记录/2024-10-18——星期五.md",
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "98_attachment/截屏 2024-10-12 13.14.44.jpeg",
     "98_attachment/Pasted image 20241011234007.png",
