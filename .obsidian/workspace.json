@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07_随机过程/01_预备知识.md",
+                "file": "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01_预备知识"
+              "title": "06_比较多个均值矩阵comparisons of multivariate mean vectors"
             }
           }
         ]
@@ -151,10 +151,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_随机过程/01_预备知识.md"
+                "file": "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md"
               },
               "icon": "lucide-list",
-              "title": "01_预备知识 的大纲"
+              "title": "06_比较多个均值矩阵comparisons of multivariate mean vectors 的大纲"
             }
           },
           {
@@ -227,6 +227,12 @@
   },
   "active": "1c728ef0993ebbf9",
   "lastOpenFiles": [
+    "00_inbox/大三上绩点课程看板.md",
+    "00_inbox/日记模版.md",
+    "00_inbox/日历视图.md",
+    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
+    "08_财务管理/1_财务管理/01_财务管理概述.md",
+    "07_随机过程/01_预备知识.md",
     "98_attachment/Pasted image 20241111111833.png",
     "98_attachment/Pasted image 20241111111744.png",
     "98_attachment/Pasted image 20241111111314.png",
@@ -235,13 +241,8 @@
     "98_attachment/Pasted image 20241111105815.png",
     "98_attachment/Pasted image 20241111105805.png",
     "98_attachment/Pasted image 20241111104407.png",
-    "08_财务管理/1_财务管理/01_财务管理概述.md",
-    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "99_学习情况记录/2024-11-08——星期五.md",
     "99_学习情况记录/2024-11-07——星期四.md",
-    "00_inbox/日记模版.md",
-    "00_inbox/日历视图.md",
-    "00_inbox/大三上绩点课程看板.md",
     "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
     "10_多元统计分析",
     "07_随机过程/06_平稳随机过程.md",
@@ -249,7 +250,6 @@
     "07_随机过程/04_马尔可夫链.md",
     "07_随机过程/03_泊松过程.md",
     "07_随机过程/02_随机过程的概念和分类.md",
-    "07_随机过程/01_预备知识.md",
     "09_线性代数/02_vector spaces and subspace.md",
     "09_线性代数/01_matrices and Gaussian Elimination.md",
     "09_线性代数/Introduction_to_Linear_Algebra(Strang).pdf",
@@ -267,7 +267,6 @@
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "98_attachment/截屏 2024-10-12 13.14.44.jpeg",
     "98_attachment/Pasted image 20241011234007.png",
-    "98_attachment/Pasted image 20241011223809.png",
     "01_Econometrics/未命名.canvas",
     "98_attachment/Recording 20241001150650.webm",
     "copilot-conversations",
