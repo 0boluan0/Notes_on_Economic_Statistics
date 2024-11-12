@@ -28,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_多元统计分析/07_multivariate linear regression.md",
+                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "07_multivariate linear regression"
+              "title": "02_财务报表分析和财务预测"
             }
           }
         ],
@@ -96,11 +96,12 @@
             "state": {
               "type": "recent-files",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "clock",
+              "title": "Recent Files"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -167,10 +168,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_多元统计分析/07_multivariate linear regression.md"
+                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md"
               },
               "icon": "lucide-list",
-              "title": "07_multivariate linear regression 的大纲"
+              "title": "02_财务报表分析和财务预测 的大纲"
             }
           },
           {
@@ -243,15 +244,15 @@
   },
   "active": "e4241f0ae656d27c",
   "lastOpenFiles": [
-    "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
+    "08_财务管理/1_财务管理/01_财务管理概述.md",
     "10_多元统计分析/07_multivariate linear regression.md",
+    "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
     "09_线性代数/02_vector spaces and subspace.md",
     "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "07_随机过程/01_预备知识.md",
     "00_inbox/大三上绩点课程看板.md",
     "00_inbox/日记模版.md",
     "00_inbox/日历视图.md",
-    "08_财务管理/1_财务管理/01_财务管理概述.md",
     "98_attachment/Pasted image 20241111111833.png",
     "98_attachment/Pasted image 20241111111744.png",
     "98_attachment/Pasted image 20241111111314.png",
