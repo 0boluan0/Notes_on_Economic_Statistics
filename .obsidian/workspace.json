@@ -28,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
+                "file": "08_财务管理/1_财务管理/01_财务管理概述.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_财务报表分析和财务预测"
+              "title": "01_财务管理概述"
             }
           }
         ],
@@ -69,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "投资组合",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -101,12 +101,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -168,10 +167,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md"
+                "file": "08_财务管理/1_财务管理/01_财务管理概述.md"
               },
               "icon": "lucide-list",
-              "title": "02_财务报表分析和财务预测 的大纲"
+              "title": "01_财务管理概述 的大纲"
             }
           },
           {
@@ -242,13 +241,13 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "e4241f0ae656d27c",
+  "active": "68e022ef2943b75b",
   "lastOpenFiles": [
+    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "08_财务管理/1_财务管理/01_财务管理概述.md",
     "10_多元统计分析/07_multivariate linear regression.md",
     "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
     "09_线性代数/02_vector spaces and subspace.md",
-    "08_财务管理/1_财务管理/02_财务报表分析和财务预测.md",
     "07_随机过程/01_预备知识.md",
     "00_inbox/大三上绩点课程看板.md",
     "00_inbox/日记模版.md",
