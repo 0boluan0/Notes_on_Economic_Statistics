@@ -36,9 +36,39 @@
               "icon": "lucide-file",
               "title": "03_价值评估基准"
             }
+          },
+          {
+            "id": "d7c62c84ff00ebbb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/06_债券和股票估价.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "06_债券和股票估价"
+            }
+          },
+          {
+            "id": "306f9e15d45c459c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/06_债券和股票估价.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "06_债券和股票估价"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -166,10 +196,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "08_财务管理/03_价值评估基准.md"
+                "file": "00_inbox/06_债券和股票估价.md"
               },
               "icon": "lucide-list",
-              "title": "03_价值评估基准 的大纲"
+              "title": "06_债券和股票估价 的大纲"
             }
           },
           {
@@ -240,12 +270,14 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "8f77bd42d2d9eb72",
+  "active": "d7c62c84ff00ebbb",
   "lastOpenFiles": [
+    "08_财务管理/03_价值评估基准.md",
+    "00_inbox/06_债券和股票估价.md",
+    "98_attachment/Pasted image 20241115215349.png",
     "98_attachment/Pasted image 20241115213839.png",
     "98_attachment/Pasted image 20241115213614.png",
     "08_财务管理/02_财务报表分析和财务预测.md",
-    "08_财务管理/03_价值评估基准.md",
     "98_attachment/Pasted image 20241114223917.png",
     "08_财务管理/01_财务管理概述.md",
     "10_多元统计分析/07_multivariate linear regression.md",
@@ -261,8 +293,6 @@
     "98_attachment/Pasted image 20241111110745.png",
     "98_attachment/Pasted image 20241111110612.png",
     "98_attachment/Pasted image 20241111105815.png",
-    "98_attachment/Pasted image 20241111105805.png",
-    "98_attachment/Pasted image 20241111104407.png",
     "99_学习情况记录/2024-11-08——星期五.md",
     "99_学习情况记录/2024-11-07——星期四.md",
     "10_多元统计分析",
