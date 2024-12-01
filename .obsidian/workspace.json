@@ -28,32 +28,32 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2024-12-01——星期日.md",
+                "file": "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-12-01——星期日"
+              "title": "06_比较多个均值矩阵comparisons of multivariate mean vectors"
             }
           },
           {
-            "id": "72e8e502faa875a7",
+            "id": "63c559db338b43d2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "08_财务管理/03_价值评估基准.md",
+                "file": "10_多元统计分析/01_introduction简介.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03_价值评估基准"
+              "title": "01_introduction简介"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -181,10 +181,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2024-12-01——星期日.md"
+                "file": "10_多元统计分析/01_introduction简介.md"
               },
               "icon": "lucide-list",
-              "title": "2024-12-01——星期日 的大纲"
+              "title": "01_introduction简介 的大纲"
             }
           },
           {
@@ -255,10 +255,14 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "f6a938c5099c2e2e",
+  "active": "63c559db338b43d2",
   "lastOpenFiles": [
-    "07_随机过程/02_随机过程的概念和分类.md",
+    "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
+    "10_多元统计分析/01_introduction简介.md",
+    "08_财务管理/01_财务管理概述.md",
+    "07_随机过程/01_预备知识.md",
     "99_学习情况记录/2024-12-01——星期日.md",
+    "07_随机过程/02_随机过程的概念和分类.md",
     "99_学习情况记录/2024-11-20——星期三.md",
     "08_财务管理/03_价值评估基准.md",
     "08_财务管理/02_财务报表分析和财务预测.md",
@@ -274,11 +278,8 @@
     "98_attachment/Pasted image 20241115213839.png",
     "98_attachment/Pasted image 20241115213614.png",
     "98_attachment/Pasted image 20241114223917.png",
-    "08_财务管理/01_财务管理概述.md",
     "10_多元统计分析/07_multivariate linear regression.md",
-    "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
     "09_线性代数/02_vector spaces and subspace.md",
-    "07_随机过程/01_预备知识.md",
     "00_inbox/大三上绩点课程看板.md",
     "00_inbox/日记模版.md",
     "00_inbox/日历视图.md",
@@ -295,7 +296,6 @@
     "09_线性代数/00_perface.md",
     "99_学习情况记录/2024-10-28——星期一.md",
     "99_学习情况记录/2024-10-25——星期五.md",
-    "01_Econometrics/00_计量经济学看板.md",
     "09_线性代数",
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "01_Econometrics/未命名.canvas",
