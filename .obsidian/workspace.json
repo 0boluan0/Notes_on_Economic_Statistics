@@ -28,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2024-11-20——星期三.md",
+                "file": "99_学习情况记录/2024-12-01——星期日.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2024-11-20——星期三"
+              "title": "2024-12-01——星期日"
             }
           },
           {
@@ -84,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "费用化",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -115,13 +115,11 @@
               "title": "Recent Files"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -183,10 +181,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2024-11-20——星期三.md"
+                "file": "99_学习情况记录/2024-12-01——星期日.md"
               },
               "icon": "lucide-list",
-              "title": "2024-11-20——星期三 的大纲"
+              "title": "2024-12-01——星期日 的大纲"
             }
           },
           {
@@ -259,6 +257,8 @@
   },
   "active": "f6a938c5099c2e2e",
   "lastOpenFiles": [
+    "07_随机过程/02_随机过程的概念和分类.md",
+    "99_学习情况记录/2024-12-01——星期日.md",
     "99_学习情况记录/2024-11-20——星期三.md",
     "08_财务管理/03_价值评估基准.md",
     "08_财务管理/02_财务报表分析和财务预测.md",
@@ -289,7 +289,6 @@
     "07_随机过程/05_连续时间的马尔可夫链.md",
     "07_随机过程/04_马尔可夫链.md",
     "07_随机过程/03_泊松过程.md",
-    "07_随机过程/02_随机过程的概念和分类.md",
     "09_线性代数/01_matrices and Gaussian Elimination.md",
     "09_线性代数/Introduction_to_Linear_Algebra(Strang).pdf",
     "09_线性代数/linear_algebra_and_its_applications_4th.pdf",
@@ -297,7 +296,6 @@
     "99_学习情况记录/2024-10-28——星期一.md",
     "99_学习情况记录/2024-10-25——星期五.md",
     "01_Econometrics/00_计量经济学看板.md",
-    "99_学习情况记录/2024-10-24——星期四.md",
     "09_线性代数",
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "01_Econometrics/未命名.canvas",
