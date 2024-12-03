@@ -43,13 +43,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/02_矩阵代数和随机向量.md",
+                "file": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_矩阵代数和随机向量"
+              "title": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors"
             }
           }
         ],
@@ -181,10 +181,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/02_矩阵代数和随机向量.md"
+                "file": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
               },
               "icon": "lucide-list",
-              "title": "02_矩阵代数和随机向量 的大纲"
+              "title": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors 的大纲"
             }
           },
           {
@@ -258,7 +258,7 @@
   "active": "0790a723d6f420f4",
   "lastOpenFiles": [
     "10_多元统计分析/01_introduction简介.md",
-    "00_inbox/02_矩阵代数和随机向量.md",
+    "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "07_随机过程/01_预备知识.md",
     "07_随机过程/02_随机过程的概念和分类.md",
     "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
