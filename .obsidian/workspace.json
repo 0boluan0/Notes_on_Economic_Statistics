@@ -43,13 +43,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/学习计划.md",
+                "file": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "学习计划"
+              "title": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors"
             }
           },
           {
@@ -130,8 +130,7 @@
               "title": "Recent Files"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -197,10 +196,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/学习计划.md"
+                "file": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
               },
               "icon": "lucide-list",
-              "title": "学习计划 的大纲"
+              "title": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors 的大纲"
             }
           },
           {
@@ -271,15 +270,15 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "68e022ef2943b75b",
+  "active": "5de8e4b8a380cc2b",
   "lastOpenFiles": [
+    "10_多元统计分析/01_introduction简介.md",
+    "10_多元统计分析/学习计划.md",
     "98_attachment/Pasted image 20241204151200.png",
     "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
-    "00_inbox/学习计划.md",
     "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
     "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
     "10_多元统计分析/07_multivariate linear regression.md",
-    "10_多元统计分析/01_introduction简介.md",
     "07_随机过程/01_预备知识.md",
     "07_随机过程/02_随机过程的概念和分类.md",
     "09_线性代数/linear_algebra_and_its_applications_4th.pdf",
@@ -301,7 +300,6 @@
     "98_attachment/Pasted image 20241116132435.png",
     "98_attachment/Pasted image 20241116132324.png",
     "98_attachment/Pasted image 20241115215349.png",
-    "98_attachment/Pasted image 20241115213839.png",
     "00_inbox/大三上绩点课程看板.md",
     "00_inbox/日记模版.md",
     "00_inbox/日历视图.md",
