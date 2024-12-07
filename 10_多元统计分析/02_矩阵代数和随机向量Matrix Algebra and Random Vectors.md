@@ -182,6 +182,40 @@
      则 $B$ 是 $A$ 的逆，记为 $A^{-1}$。
    - $A$ 的逆存在的条件：列向量线性无关，即 $A$ 非奇异。
 
+对角矩阵的逆矩阵好求：
+
+$$  
+D = \begin{bmatrix}
+
+d_1 & 0 & 0 & \cdots & 0 \\
+
+0 & d_2 & 0 & \cdots & 0 \\
+
+0 & 0 & d_3 & \cdots & 0 \\
+
+\vdots & \vdots & \vdots & \ddots & 0 \\
+
+0 & 0 & 0 & \cdots & d_n
+
+\end{bmatrix}$$
+
+逆矩阵为:$$  
+
+D^{-1} = \begin{bmatrix}
+
+\frac{1}{d_1} & 0 & 0 & \cdots & 0 \\
+
+0 & \frac{1}{d_2} & 0 & \cdots & 0 \\
+
+0 & 0 & \frac{1}{d_3} & \cdots & 0 \\
+
+\vdots & \vdots & \vdots & \ddots & 0 \\
+
+0 & 0 & 0 & \cdots & \frac{1}{d_n}
+
+\end{bmatrix}$$
+对角线上元素的倒数
+
 ## 6. **正交矩阵 (Orthogonal Matrix)**
   
    - 矩阵 $Q$ 满足：
