@@ -154,7 +154,7 @@
    - **矩阵乘法 (Matrix Multiplication)**:
      若 $A_{n \times p}$ 和 $B_{p \times m}$，则 $C = A \cdot B$，$C_{n \times m}$ 的元素为：
      $$c_{ik} = \sum_{j=1}^p a_{ij} b_{jk}$$
-
+ 
 ## 4. **矩阵的转置**
    
    - 矩阵转置将行变为列：
