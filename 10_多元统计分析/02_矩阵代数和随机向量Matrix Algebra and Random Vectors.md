@@ -214,7 +214,7 @@ D^{-1} = \begin{bmatrix}
 0 & 0 & 0 & \cdots & \frac{1}{d_n}
 
 \end{bmatrix}$$
-对角线上元素的倒数
+对角线上元素的倒数x z
 ## 6. **正交矩阵 (Orthogonal Matrix)**
   
    - 矩阵 $Q$ 满足：
