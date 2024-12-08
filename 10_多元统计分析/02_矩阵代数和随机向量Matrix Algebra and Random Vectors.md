@@ -215,7 +215,7 @@ D^{-1} = \begin{bmatrix}
 
 \end{bmatrix}$$
 对角线上元素的倒数
-
+,吗.///////
 ## 6. **正交矩阵 (Orthogonal Matrix)**
   
    - 矩阵 $Q$ 满足：
