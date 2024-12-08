@@ -151,29 +151,18 @@ $$
 
   
 
-**例子**
-
-  
+**例子**  
 
 **二维空间**
-
-  
 
 假设 $\mathbf{u} = (1, 2)$，$\mathbf{v} = (-2, 1)$，计算其内积：
 
 $$
-
 \mathbf{u} \cdot \mathbf{v} = 1 \cdot (-2) + 2 \cdot 1 = -2 + 2 = 0
-
 $$
-
 因此，$\mathbf{u}$ 和 $\mathbf{v}$ 是正交的。
 
-  
-
 **三维空间**
-
-  
 
 假设 $\mathbf{u} = (1, -1, 0)$，$\mathbf{v} = (1, 1, 2)$，计算内积：
 
@@ -184,28 +173,6 @@ $$
 $$
 
 因此，$\mathbf{u}$ 和 $\mathbf{v}$ 是正交的。
-
-  
-
-**应用**
-
-  
-
-1. **正交分解**：
-
-任意向量可以分解为沿正交向量的分量。例如，$\mathbf{a}$ 可以分解为 $\mathbf{a}_{\parallel}$ 和 $\mathbf{a}_{\perp}$，分别表示 $\mathbf{a}$ 在某个方向上的投影和平行方向的分量。
-
-2. **信号处理**：
-
-在信号处理中，正交基被广泛用于表示信号，例如傅里叶变换使用正交的正弦和余弦函数作为基。
-
-3. **机器学习**：
-
-在降维算法中，如主成分分析（PCA），正交基用于确保降维后的向量彼此无关。
-
-  
-
-如果需要进一步举例或者更详细的说明，请随时告诉我！
 
 ---
 
@@ -324,6 +291,9 @@ D^{-1} = \begin{bmatrix}
 
 \end{bmatrix}$$
 对角线上元素的倒数
+
+==总体协方差矩阵一定可逆,但是样本协方差矩阵不一定有逆.==
+
 ## 6. **正交矩阵 (Orthogonal Matrix)**
   
    - 矩阵 $Q$ 满足：
@@ -331,10 +301,143 @@ D^{-1} = \begin{bmatrix}
      则称 $Q$ 为正交矩阵。
    - 正交矩阵的列向量和行向量均为单位正交向量。
 
-7. **矩阵的秩 (Rank of a Matrix)**
+Q的转置等于他的逆.他的行和列都是正交的.
+
+## 7. **矩阵的秩 (Rank of a Matrix)**
+   
    - 矩阵 $A_{n \times p}$ 的秩是其线性无关列向量的最大数目，记为 $\text{rank}(A)$，满足：
      $$\text{rank}(A) \leq \min(n, p)$$
    - 当 $\text{rank}(A) = \min(n, p)$ 时，$A$ 为满秩矩阵；否则为秩亏矩阵。
+
+## 8.**矩阵的迹**
+
+矩阵的**迹（trace）**是一个方阵的对角线元素之和。对于一个 $n \times n$ 的方阵 $\mathbf{A}$：
+$$
+
+\mathbf{A} =
+
+\begin{bmatrix}
+
+a_{11} & a_{12} & \cdots & a_{1n} \\
+
+a_{21} & a_{22} & \cdots & a_{2n} \\
+
+\vdots & \vdots & \ddots & \vdots \\
+
+a_{n1} & a_{n2} & \cdots & a_{nn}
+
+\end{bmatrix}
+
+$$
+
+矩阵的迹记为 $\text{tr}(\mathbf{A})$，其定义为：
+
+$$
+
+\text{tr}(\mathbf{A}) = \sum_{i=1}^n a_{ii} = a_{11} + a_{22} + \cdots + a_{nn}
+
+$$
+
+**矩阵的迹的求法**
+
+1. **确定矩阵为方阵**：只有方阵才定义有迹。
+2. **提取对角线元素**：将矩阵的主对角线元素取出。
+3. **计算对角线元素的和**：将这些元素相加，得到迹。
+
+**例子**
+
+**例子 1: 二阶矩阵**
+
+$$
+\mathbf{A} =
+
+\begin{bmatrix}
+
+1 & 2 \\
+
+3 & 4
+
+\end{bmatrix}
+$$
+
+矩阵的对角线元素为 $1, 4$，因此：
+
+$$
+
+\text{tr}(\mathbf{A}) = 1 + 4 = 5
+
+$$
+
+  
+
+**例子 2: 三阶矩阵**
+
+  
+
+$$
+
+\mathbf{B} =
+
+\begin{bmatrix}
+
+2 & 5 & 1 \\
+
+0 & 3 & -1 \\
+
+4 & 2 & 6
+
+\end{bmatrix}
+
+$$
+
+矩阵的对角线元素为 $2, 3, 6$，因此：
+
+$$
+
+\text{tr}(\mathbf{B}) = 2 + 3 + 6 = 11
+
+$$
+
+  
+
+**矩阵的迹的性质**
+
+1. **可加性**：
+$$
+
+\text{tr}(\mathbf{A} + \mathbf{B}) = \text{tr}(\mathbf{A}) + \text{tr}(\mathbf{B})
+
+$$
+2. **数乘分配性**：
+$$
+
+\text{tr}(c\mathbf{A}) = c \cdot \text{tr}(\mathbf{A}), \quad c \in \mathbb{R}
+
+$$
+3. **转置不变性**：
+$$
+
+\text{tr}(\mathbf{A}) = \text{tr}(\mathbf{A}^\top)
+
+$$
+
+4. **相似矩阵的迹相等**：
+
+如果 $\mathbf{B} = \mathbf{P}^{-1} \mathbf{A} \mathbf{P}$，则：
+
+$$
+
+\text{tr}(\mathbf{B}) = \text{tr}(\mathbf{A})
+
+$$
+
+5. **矩阵乘积的迹交换性**（但注意 $\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}$ 时迹仍然相等）：
+
+$$
+
+\text{tr}(\mathbf{A}\mathbf{B}) = \text{tr}(\mathbf{B}\mathbf{A})
+
+$$
 
 ---
 
@@ -631,7 +734,7 @@ D^{-1} = \begin{bmatrix}
 
 ---
 
-# Random Vectors and Random Matrices (详细解析)
+# Random Vectors and Random Matrices 
 
 ## 1. **随机向量 (Random Vectors)**
    
