@@ -28,13 +28,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
+                "file": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors"
+              "title": "03_样本几何与随机抽样Sample Geometry and Random Sampling"
+            }
+          },
+          {
+            "id": "0efcd51eac8d2a46",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10_多元统计分析/07_多元线性回归multivariate linear regression.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "07_多元线性回归multivariate linear regression"
             }
           },
           {
@@ -68,7 +83,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -196,10 +211,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
+                "file": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
               },
               "icon": "lucide-list",
-              "title": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors 的大纲"
+              "title": "07_多元线性回归multivariate linear regression 的大纲"
             }
           },
           {
@@ -270,17 +285,18 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "9f729c7cccc6c6bf",
+  "active": "0efcd51eac8d2a46",
   "lastOpenFiles": [
-    "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
-    "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
+    "10_多元统计分析/07_多元线性回归multivariate linear regression.md",
+    "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
+    "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
+    "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
     "07_随机过程/05_连续时间的马尔可夫链.md",
     "07_随机过程/06_平稳随机过程.md",
     "07_随机过程/04_马尔可夫链.md",
     "10_多元统计分析/学习计划.md",
     "10_多元统计分析/01_introduction简介.md",
-    "10_多元统计分析/07_multivariate linear regression.md",
     "07_随机过程/01_预备知识.md",
     "98_attachment/Pasted image 20241204151200.png",
     "07_随机过程/02_随机过程的概念和分类.md",
