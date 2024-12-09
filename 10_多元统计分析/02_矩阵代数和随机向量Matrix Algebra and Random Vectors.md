@@ -575,26 +575,19 @@ $$
 • $\mathbf{\Lambda}$ 是一个对角矩阵，其对角元素是矩阵 $\mathbf{A}$ 的特征值。
 
 #### 2. **谱分解的具体形式**
-wa
-假设 $\mathbf{A}$ 是一个对称矩阵，其特征值为 $\lambda_1, \lambda_2, \dots, \lambda_n$，对应的特征向量为 $\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n$。那么：$$
 
+假设 $\mathbf{A}$ 是一个对称矩阵，其特征值为 $\lambda_1, \lambda_2, \dots, \lambda_n$，对应的特征向量为 $\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n$。那么：
+$$
 \mathbf{A} = \sum_{i=1}^n \lambda_i \mathbf{v}_i \mathbf{v}_i^\top
-
 $$
 
 其中：
-
 • $\lambda_i$ 是特征值；
-
 • $\mathbf{v}_i$ 是单位化的特征向量，即 $||\mathbf{v}_i|| = 1$；
-
 • $\mathbf{v}_i \mathbf{v}_i^\top$ 是一个秩为 1 的矩阵。
 
-  
 
 **谱分解的步骤**
-
-  
 
 1. **求特征值和特征向量**：
 
@@ -610,15 +603,9 @@ $$
 
 利用 $\mathbf{A} = \mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^\top$，完成分解。
 
-  
-
-**例子**
-
-  
+#### 3.  **谱分解例子**
 
 **示例 1: 二阶对称矩阵**
-
-  
 
 给定矩阵：
 
@@ -626,7 +613,7 @@ $$
 
 \mathbf{A} = \begin{bmatrix}
 
-4 & 1 \
+4 & 1 \\
 
 1 & 3
 
@@ -642,7 +629,7 @@ $$
 
 \det\begin{bmatrix}
 
-4-\lambda & 1 \
+4-\lambda & 1 \\
 
 1 & 3-\lambda
 
@@ -660,7 +647,7 @@ $$
 
 (\mathbf{A} - 5\mathbf{I}) = \begin{bmatrix}
 
--1 & 1 \
+-1 & 1 \\
 
 1 & -2
 
@@ -676,7 +663,7 @@ $$
 
 (\mathbf{A} - 2\mathbf{I}) = \begin{bmatrix}
 
-2 & 1 \
+2 & 1 \\
 
 1 & 1
 
@@ -692,7 +679,7 @@ $$
 
 \mathbf{\Lambda} = \begin{bmatrix}
 
-5 & 0 \
+5 & 0 \\
 
 0 & 2
 
@@ -700,7 +687,7 @@ $$
 
 \mathbf{Q} = \begin{bmatrix}
 
-\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \
+\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\
 
 \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
 
@@ -719,8 +706,6 @@ $$
   
 
 **谱分解的性质**
-
-  
 
 1. **对称矩阵的谱定理**：
 
@@ -757,44 +742,6 @@ $$
 \mathbf{A}^k = \mathbf{Q} \mathbf{\Lambda}^k \mathbf{Q}^\top
 
 $$
-
-  
-
-**应用场景**
-
-  
-
-1. **主成分分析（PCA）**：
-
-协方差矩阵的谱分解用于找到数据的主方向。
-
-2. **图论**：
-
-拉普拉斯矩阵的谱分解用于谱聚类等图分析任务。
-
-3. **微分方程**：
-
-线性微分方程的解可以通过谱分解来表示。
-
-4. **量子力学**：
-
-哈密顿矩阵的谱分解决定了系统的能级和状态。
-
-  
-
-如果有更多问题，或者需要详细解释某一部分，请告诉我！
-
-
-
-
-
-
-
-
-
-
-
-
    
    - **迹和行列式的关系**：
      - 矩阵的迹等于特征值之和：
@@ -852,7 +799,7 @@ $$
 ## 4. **二次型 (Quadratic Form)**
    
    - $x'Ax$ 被称为一个关于 $p$ 个变量 $x_1, x_2, \cdots, x_p$ 的二次型：
-     $$
+    $$
      x'Ax = \sum_{i=1}^p \sum_{j=1}^p a_{ij}x_ix_j
      $$
    - 在正定矩阵的情况下，二次型 $x'Ax > 0$ 表示该函数无论 $x$ 如何变化，其值总为正。
