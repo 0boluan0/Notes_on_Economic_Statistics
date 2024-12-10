@@ -211,10 +211,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/未命名.md"
+                "file": "07_随机过程/01_预备知识.md"
               },
               "icon": "lucide-list",
-              "title": "未命名 的大纲"
+              "title": "01_预备知识 的大纲"
             }
           },
           {
@@ -285,10 +285,10 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "0efcd51eac8d2a46",
   "lastOpenFiles": [
-    "07_随机过程/01_预备知识.md",
     "00_inbox/未命名.md",
+    "07_随机过程/01_预备知识.md",
     "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "10_多元统计分析/01_introduction简介.md",
     "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
