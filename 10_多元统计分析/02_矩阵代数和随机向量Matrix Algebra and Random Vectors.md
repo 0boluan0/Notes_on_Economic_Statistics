@@ -313,29 +313,19 @@ Q的转置等于他的逆.他的行和列都是正交的.
 
 矩阵的**迹（trace）**是一个方阵的对角线元素之和。对于一个 $n \times n$ 的方阵 $\mathbf{A}$：
 $$
-
 \mathbf{A} =
-
 \begin{bmatrix}
-
 a_{11} & a_{12} & \cdots & a_{1n} \\
-
 a_{21} & a_{22} & \cdots & a_{2n} \\
-
 \vdots & \vdots & \ddots & \vdots \\
-
 a_{n1} & a_{n2} & \cdots & a_{nn}
-
 \end{bmatrix}
-
 $$
 
 矩阵的迹记为 $\text{tr}(\mathbf{A})$，其定义为：
 
 $$
-
 \text{tr}(\mathbf{A}) = \sum_{i=1}^n a_{ii} = a_{11} + a_{22} + \cdots + a_{nn}
-
 $$
 
 **矩阵的迹的求法**
@@ -350,29 +340,19 @@ $$
 
 $$
 \mathbf{A} =
-
-\begin{bmatrix}
-
+\begin{bmatrix} 
 1 & 2 \\
-
 3 & 4
-
 \end{bmatrix}
 $$
 
 矩阵的对角线元素为 $1, 4$，因此：
 
 $$
-
 \text{tr}(\mathbf{A}) = 1 + 4 = 5
-
 $$
 
-  
-
 **例子 2: 三阶矩阵**
-
-  
 
 $$
 
@@ -393,32 +373,21 @@ $$
 矩阵的对角线元素为 $2, 3, 6$，因此：
 
 $$
-
 \text{tr}(\mathbf{B}) = 2 + 3 + 6 = 11
-
-$$
-
-  
-
+$$ 
 **矩阵的迹的性质**
 
 1. **可加性**：
 $$
-
 \text{tr}(\mathbf{A} + \mathbf{B}) = \text{tr}(\mathbf{A}) + \text{tr}(\mathbf{B})
-
 $$
 2. **数乘分配性**：
 $$
-
 \text{tr}(c\mathbf{A}) = c \cdot \text{tr}(\mathbf{A}), \quad c \in \mathbb{R}
-
 $$
 3. **转置不变性**：
 $$
-
 \text{tr}(\mathbf{A}) = \text{tr}(\mathbf{A}^\top)
-
 $$
 
 4. **相似矩阵的迹相等**：
@@ -434,9 +403,7 @@ $$
 5. **矩阵乘积的迹交换性**（但注意 $\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}$ 时迹仍然相等）：
 
 $$
-
 \text{tr}(\mathbf{A}\mathbf{B}) = \text{tr}(\mathbf{B}\mathbf{A})
-
 $$
 
 ---
@@ -849,7 +816,7 @@ $$
 
 ---
 
-# Square Root of a Matrix (详细解析)
+# Square Root of a Matrix 
 
 ## 1. **定义**
    
