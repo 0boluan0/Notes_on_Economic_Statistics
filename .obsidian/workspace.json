@@ -235,16 +235,6 @@
               "icon": "lucide-file",
               "title": "插件不再活动"
             }
-          },
-          {
-            "id": "c160d2fd15b90126",
-            "type": "leaf",
-            "state": {
-              "type": "copilot-chat-view",
-              "state": {},
-              "icon": "message-square",
-              "title": "Copilot"
-            }
           }
         ],
         "currentTab": 3
