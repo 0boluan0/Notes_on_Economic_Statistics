@@ -874,15 +874,13 @@ $$
      1. 所有特征值 $\lambda_i \geq 0$。
      2. 对任意非零向量 $x$，$x'Ax \geq 0$。
 
-## 6. **应用**
-  
-   - **协方差矩阵**：
-     - 协方差矩阵 $\Sigma$ 是典型的半正定矩阵，满足 $x'\Sigma x \geq 0$。
-     - 当变量之间存在冗余或线性相关时，$\Sigma$ 的某些特征值可能为零。
-   - **最优化问题**：
-     - 在二次规划问题中，目标函数的 Hessian 矩阵需要是正定的，以保证目标函数为凸函数。
-   - **稳定性分析**：
-     - 正定矩阵在动力系统中常用于构造 Lyapunov 函数，以分析系统的稳定性。
+**证明**
+
+ 如果$A$是对称矩阵，可以对$A$进行谱分解：$$ A = Q \Lambda Q^\top $$其中$Q$是正交矩阵，$\Lambda$是对角矩阵，对角线上是$A$的特征值$\lambda_1, \lambda_2, \dots, \lambda_n$。
+
+对于任意非零向量$x$，有：$$x^\top A x = x^\top (Q \Lambda Q^\top) x = (Q^\top x)^\top \Lambda (Q^\top x) $$令$y = Q^\top x$，因$Q$是正交矩阵，其列向量组成正交基，满足$Q^\top Q = I$，因此$x \neq 0 \implies y \neq 0$。于是： $$x^\top A x = y^\top \Lambda y = \sum_{i=1}^n \lambda_i y_i^2$$
+若$\lambda_i > 0$，则$x^\top A x > 0$。
+则证明: 当且仅当所有特征值$\lambda_i > 0$时，$x^\top A x > 0$对任意$x \neq 0$成立。因此，矩阵$A$是正定矩阵。
 
 ## 7. **例子与直观理解**
    
