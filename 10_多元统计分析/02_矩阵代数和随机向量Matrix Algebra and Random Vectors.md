@@ -1122,6 +1122,180 @@ $$
 
 ---
 
+# **Quadratic Transformation**
+
+## **1. 定义**
+
+一个 **Quadratic Transformation** 表示为：
+
+$$
+y = Q(x) = x^T A x + b^T x + c,
+$$
+其中：
+
+• $x \in \mathbb{R}^n$ 是一个 $n \times 1$ 的向量。
+• $A \in \mathbb{R}^{n \times n}$ 是对称矩阵（通常要求）。
+• $b \in \mathbb{R}^n$ 是线性变换的系数向量。
+• $c \in \mathbb{R}$ 是常数项。
+
+## **2. 几何意义**
+
+二次变换的几何意义在于它可以生成二次曲线或曲面：
+
+1. **二次型的作用：**
+
+• $x^T A x$ 描述输入变量 $x$ 的二次关系，决定了曲线或曲面的形状。
+• 矩阵 $A$ 的正定性或不定性决定几何性质：
+• $A$ 正定：生成椭圆或椭球。
+• $A$ 不定：生成双曲线或双曲面。
+
+2. **线性部分 $b^T x$：**
+
+• $b^T x$ 表示线性变换，决定几何的偏移方向。
+
+3. **常数项 $c$：**
+
+• $c$ 是整体的平移量，影响曲线或曲面的位置。
+
+## **3. 常见形式**
+
+### **3.1 简化形式**
+
+最简单的二次变换为：
+$$
+y = x^T A x,
+$$
+
+其中没有线性项和常数项。这种变换仅包含二次型部分。
+
+### **3.2 标准形式**
+
+对于二维变量 $x = (x_1, x_2)^T$，二次变换可以写为：
+
+$$
+
+Q(x) = ax_1^2 + bx_1x_2 + cx_2^2 + dx_1 + ex_2 + f,
+
+$$
+
+这可转换为矩阵形式：
+
+$$
+
+Q(x) = x^T A x + b^T x + c,
+
+$$
+
+其中 $x = \begin{pmatrix} x_1 \ x_2 \end{pmatrix}$，$A$ 是对称矩阵。
+
+  
+## 4.**正定矩阵 Rayleigh 商的最大值与最小值**
+
+### 4.1结论：
+
+1. $\max_{x \neq 0} \frac{x^T B x}{x^T x} = \lambda_1$，当 $x = e_1$。
+2. $\min_{x \neq 0} \frac{x^T B x}{x^T x} = \lambda_p$，当 $x = e_p$。
+
+其中：
+• $B$ 是一个 $p \times p$ 的正定矩阵。
+• $\lambda_1 \geq \lambda_2 \geq \dots \geq \lambda_p$ 是 $B$ 的特征值。
+• $e_1, e_2, \dots, e_p$ 是 $B$ 的单位正交特征向量（即 $e_i^T e_i = 1$）。
+• $x$ 是任意的非零向量（$x \neq 0$）。
+
+### **4.2. 预备知识**
+
+• 任意向量 $x \in \mathbb{R}^p$ 可以表示为矩阵 $B$ 的特征向量的线性组合：
+
+$$
+
+x = \sum_{i=1}^p c_i e_i, \quad \text{其中 } c_i = e_i^T x.
+
+$$
+• 特征向量 $e_i$ 是正交归一化的，即：
+
+$$
+e_i^T e_j = \begin{cases}
+1, & \text{若 } i = j,  \\
+0, & \text{若 } i \neq j.
+\end{cases}
+$$
+
+• 正定矩阵的特征值 $\lambda_i$ 均为正实数。
+
+### **4.3 Rayleigh 商的展开**
+
+Rayleigh 商定义为：
+
+$$
+R(x) = \frac{x^T B x}{x^T x}.
+$$
+
+将 $x$ 展开为 $x = \sum_{i=1}^p c_i e_i$，代入 $R(x)$ 中，得到：
+
+$$
+
+x^T B x = \left( \sum_{i=1}^p c_i e_i \right)^T B \left( \sum_{j=1}^p c_j e_j \right).
+
+$$
+
+由于 $B e_i = \lambda_i e_i$，有：
+
+$$
+B \left( \sum_{j=1}^p c_j e_j \right) = \sum_{j=1}^p c_j \lambda_j e_j.
+$$
+
+因此：
+$$
+x^T B x = \left( \sum_{i=1}^p c_i e_i \right)^T \left( \sum_{j=1}^p c_j \lambda_j e_j \right) = \sum_{i=1}^p \lambda_i c_i^2.
+$$
+
+同时，$x^T x$ 为：
+$$
+x^T x = \left( \sum_{i=1}^p c_i e_i \right)^T \left( \sum_{j=1}^p c_j e_j \right) = \sum_{i=1}^p c_i^2.
+$$
+
+将 $x^T B x$ 和 $x^T x$ 代入 Rayleigh 商，得到
+$$
+R(x) = \frac{x^T B x}{x^T x} = \frac{\sum_{i=1}^p \lambda_i c_i^2}{\sum_{i=1}^p c_i^2}.
+$$
+
+### **4.4 最大值、最小值的证明**
+
+要最大化 $R(x)$，观察到：
+• 在分子 $\sum_{i=1}^p \lambda_i c_i^2$ 中，$\lambda_i$ 按降序排列，且 $\lambda_1 \geq \lambda_2 \geq \dots \geq \lambda_p$。
+• 当 $c_1 = 1$ 且 $c_2 = c_3 = \dots = c_p = 0$ 时，$x$ 完全沿着特征向量 $e_1$ 的方向。
+
+此时：
+$$
+R(x) = \frac{\lambda_1 \cdot 1^2}{1} = \lambda_1.
+$$  
+
+因此，Rayleigh 商的最大值为：
+
+$$
+\max_{x \neq 0} \frac{x^T B x}{x^T x} = \lambda_1, \quad \text{当 } x = e_1.
+$$
+
+要最小化 $R(x)$，同理可得：
+• 在分子 $\sum_{i=1}^p \lambda_i c_i^2$ 中，$\lambda_p$ 是最小的特征值。
+• 当 $c_p = 1$ 且 $c_1 = c_2 = \dots = c_{p-1} = 0$ 时，$x$ 完全沿着特征向量 $e_p$ 的方向。
+
+此时：
+$$
+R(x) = \frac{\lambda_p \cdot 1^2}{1} = \lambda_p.
+$$
+
+因此，Rayleigh 商的最小值为：
+
+$$
+
+\min_{x \neq 0} \frac{x^T B x}{x^T x} = \lambda_p, \quad \text{当 } x = e_p.
+
+$$
+
+------------
+
+
 # Random Vectors and Random Matrices 
 
 ## 1. **随机向量 (Random Vectors)**
@@ -1285,16 +1459,6 @@ $$
        $$
 
 ---
-
- 
-
-
-
-
-
-
-
-
 
 
 
