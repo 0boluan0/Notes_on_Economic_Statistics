@@ -62,8 +62,6 @@ x_{n1} & x_{n2} & \cdots & x_{np}
 $$
 其中每一行表示一个样本（Sample），每一列表示一个变量（Variable）。通过数据矩阵，我们可以对多变量样本进行统一表示。
 
----
-
 ## 1.2 Mean-Corrected Vector and Deviation Vector 均值修正向量与偏差向量
 
 - 对于第 $i$ 个变量，其观测值组成向量 $y_i$，表示为：
