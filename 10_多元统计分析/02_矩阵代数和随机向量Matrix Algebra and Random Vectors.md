@@ -830,7 +830,7 @@ $$
        - 负的特征值表示方向翻转；
        - 特征值的绝对值越大，拉伸或压缩程度越显著。
 
-## 奇异值分解
+## 5.奇异值分解
 
 我们对一个 $2 \times 2$ 矩阵 $A$ 进行 **奇异值分解**，即将矩阵分解为：
 
@@ -876,137 +876,92 @@ $$
 A A^T = \begin{pmatrix} 9 & 12  \\  12 & 16 \end{pmatrix}.
 $$
 
-  
-
 **3. 计算奇异值**
-
-  
 
 奇异值是 $A^T A$ 或 $A A^T$ 的 **特征值的平方根**。
 
 1. 从 $A^T A$：
 
 $$
-
-A^T A = \begin{pmatrix} 25 & 0 \ 0 & 0 \end{pmatrix}.
-
+A^T A = \begin{pmatrix} 25 & 0  \\  0 & 0 \end{pmatrix}.
 $$
 
 特征值为：
 
 $$
-
 \lambda_1 = 25, \quad \lambda_2 = 0.
-
 $$
 
 2. 奇异值为特征值的平方根：
 
 $$
-
 \sigma_1 = \sqrt{25} = 5, \quad \sigma_2 = \sqrt{0} = 0.
-
 $$
-
-  
 
 因此，奇异值矩阵为：
 
 $$
-
-\Sigma = \begin{pmatrix} 5 & 0 \ 0 & 0 \end{pmatrix}.
-
+\Sigma = \begin{pmatrix} 5 & 0  \\  0 & 0 \end{pmatrix}.
 $$
 
-  
-
 **4. 计算 $V$ 和 $U$**
-
-  
 
 1. **求右奇异向量矩阵 $V$：**
 
 • $V$ 是 $A^T A$ 的特征向量组成的矩阵。
-
-• $A^T A = \begin{pmatrix} 25 & 0 \ 0 & 0 \end{pmatrix}$，对应特征值 $\lambda_1 = 25$ 和 $\lambda_2 = 0$。
+• $A^T A = \begin{pmatrix} 25 & 0  \\  0 & 0 \end{pmatrix}$，对应特征值 $\lambda_1 = 25$ 和 $\lambda_2 = 0$。
 
 • 对应的特征向量为：
 
 $$
-
-v_1 = \begin{pmatrix} 1 \ 0 \end{pmatrix}, \quad v_2 = \begin{pmatrix} 0 \ 1 \end{pmatrix}.
-
+v_1 = \begin{pmatrix} 1  \\  0 \end{pmatrix}, \quad v_2 = \begin{pmatrix} 0  \\  1 \end{pmatrix}.
 $$
 
 所以：
 
 $$
-
-V = \begin{pmatrix} 1 & 0 \ 0 & 1 \end{pmatrix}.
-
+V = \begin{pmatrix} 1 & 0  \\  0 & 1 \end{pmatrix}.
 $$
 
 2. **求左奇异向量矩阵 $U$：**
 
 • $U$ 是 $A A^T$ 的特征向量组成的矩阵。
-
-• $A A^T = \begin{pmatrix} 9 & 12 \ 12 & 16 \end{pmatrix}$。
-
+• $A A^T = \begin{pmatrix} 9 & 12  \\  12 & 16 \end{pmatrix}$。
 • 通过计算可知，$A A^T$ 的特征值为 $\lambda_1 = 25$ 和 $\lambda_2 = 0$：
-
 • 对应特征值 $\lambda_1 = 25$，特征向量为：
 
 $$
-
-u_1 = \begin{pmatrix} \frac{3}{5} \ \frac{4}{5} \end{pmatrix}.
-
+u_1 = \begin{pmatrix} \frac{3}{5}  \\  \frac{4}{5} \end{pmatrix}.
 $$
 
 • 对应特征值 $\lambda_2 = 0$，特征向量为：
 
 $$
-
-u_2 = \begin{pmatrix} -\frac{4}{5} \ \frac{3}{5} \end{pmatrix}.
-
+u_2 = \begin{pmatrix} -\frac{4}{5}  \\  \frac{3}{5} \end{pmatrix}.
 $$
 
 所以：
 
 $$
-
-U = \begin{pmatrix} \frac{3}{5} & -\frac{4}{5} \ \frac{4}{5} & \frac{3}{5} \end{pmatrix}.
-
+U = \begin{pmatrix} \frac{3}{5} & -\frac{4}{5}  \\  \frac{4}{5} & \frac{3}{5} \end{pmatrix}.
 $$
 
-  
-
 **5. 组合奇异值分解**
-
-  
 
 将 $U$、$\Sigma$、$V$ 组合起来，得到矩阵 $A$ 的奇异值分解：
 
 $$
-
 A = U \Sigma V^T.
-
 $$
 
 具体为：
 
 $$
-
-\begin{pmatrix} 3 & 0 \ 4 & 0 \end{pmatrix} =
-
-\begin{pmatrix} \frac{3}{5} & -\frac{4}{5} \ \frac{4}{5} & \frac{3}{5} \end{pmatrix}
-
-\begin{pmatrix} 5 & 0 \ 0 & 0 \end{pmatrix}
-
-\begin{pmatrix} 1 & 0 \ 0 & 1 \end{pmatrix}^T.
-
+\begin{pmatrix} 3 & 0  \\  4 & 0 \end{pmatrix} =
+\begin{pmatrix} \frac{3}{5} & -\frac{4}{5}  \\  \frac{4}{5} & \frac{3}{5} \end{pmatrix}
+\begin{pmatrix} 5 & 0  \\  0 & 0 \end{pmatrix}
+\begin{pmatrix} 1 & 0  \\  0 & 1 \end{pmatrix}^T.
 $$
-
-  
 
 **6. 小结**
 
@@ -1015,23 +970,12 @@ $$
 通过奇异值分解：
 
 1. 计算奇异值 $\sigma_1$ 和 $\sigma_2$，构造 $\Sigma$。
-
 2. 求解 $A^T A$ 的特征向量，构造 $V$。
-
 3. 求解 $A A^T$ 的特征向量，构造 $U$。
-
 4. 最终将矩阵 $A$ 表示为：
-
 $$
-
 A = U \Sigma V^T.
-
 $$
-
-  
-
-如有进一步问题，欢迎继续讨论！ 😊
-
 
 ---
 

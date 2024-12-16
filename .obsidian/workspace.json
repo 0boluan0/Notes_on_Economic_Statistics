@@ -43,13 +43,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
+                "file": "01_Econometrics/07_异方差.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors"
+              "title": "07_异方差"
             }
           }
         ],
@@ -119,8 +119,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -182,10 +181,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
+                "file": "01_Econometrics/07_异方差.md"
               },
               "icon": "lucide-list",
-              "title": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors 的大纲"
+              "title": "07_异方差 的大纲"
             }
           },
           {
@@ -248,8 +247,14 @@
   },
   "active": "0efcd51eac8d2a46",
   "lastOpenFiles": [
-    "07_随机过程/01_预备知识.md",
+    "01_Econometrics/08_自相关.md",
+    "01_Econometrics/09_联立方程模型(内生性).md",
+    "01_Econometrics/11_平稳时间序列模型.md",
+    "01_Econometrics/10_虚拟变量.md",
+    "01_Econometrics/13_面板数据模型.md",
+    "01_Econometrics/06_多重共线性.md",
     "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
+    "07_随机过程/01_预备知识.md",
     "10_多元统计分析/01_introduction简介.md",
     "00_inbox/未命名.md",
     "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
@@ -273,7 +278,6 @@
     "08_财务管理/03_价值评估基准.md",
     "08_财务管理/02_财务报表分析和财务预测.md",
     "08_财务管理/05_投资项目资本预算.md",
-    "08_财务管理/06_债券和股票估价.md",
     "98_attachment/Pasted image 20241116152534.png",
     "98_attachment/Pasted image 20241116152226.png",
     "98_attachment/Pasted image 20241116152159.png",
@@ -281,11 +285,6 @@
     "98_attachment/Pasted image 20241116132435.png",
     "98_attachment/Pasted image 20241116132324.png",
     "98_attachment/Pasted image 20241115215349.png",
-    "00_inbox/大三上绩点课程看板.md",
-    "00_inbox/日记模版.md",
-    "00_inbox/日历视图.md",
-    "99_学习情况记录/2024-11-08——星期五.md",
-    "99_学习情况记录/2024-11-07——星期四.md",
     "10_多元统计分析",
     "09_线性代数",
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
