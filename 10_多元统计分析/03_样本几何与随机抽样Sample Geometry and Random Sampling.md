@@ -38,12 +38,6 @@
 - **Relationship Between Covariance and Correlation Matrices**
   - Conversion formulas using diagonal scaling matrices.
 
-## 6. Summary and Applications
-- **Importance in Statistical Analysis**
-  - Role of covariance and correlation matrices in understanding data relationships.
-- **Considerations for High-Dimensional Data**
-  - Challenges and strategies for analyzing data when $p > n$.
-
 -----
 
 # 1. The Geometry of the Sample 样本的几何结构

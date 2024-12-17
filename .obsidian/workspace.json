@@ -28,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
+                "file": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors"
+              "title": "03_样本几何与随机抽样Sample Geometry and Random Sampling"
             }
           },
           {
@@ -182,10 +182,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
+                "file": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
               },
               "icon": "lucide-list",
-              "title": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors 的大纲"
+              "title": "03_样本几何与随机抽样Sample Geometry and Random Sampling 的大纲"
             }
           },
           {
@@ -248,11 +248,12 @@
   },
   "active": "9f729c7cccc6c6bf",
   "lastOpenFiles": [
+    "00_inbox/大三上绩点课程看板.md",
+    "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
+    "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
     "10_多元统计分析/05_ 总体平均向量的推论.md",
     "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
-    "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
-    "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "07_随机过程/01_预备知识.md",
     "01_Econometrics/07_异方差.md",
     "01_Econometrics/08_自相关.md",
@@ -278,7 +279,6 @@
     "99_学习情况记录/2024-12-01——星期日.md",
     "99_学习情况记录/2024-11-20——星期三.md",
     "08_财务管理/03_价值评估基准.md",
-    "08_财务管理/02_财务报表分析和财务预测.md",
     "98_attachment/Pasted image 20241116152534.png",
     "98_attachment/Pasted image 20241116152226.png",
     "98_attachment/Pasted image 20241116152159.png",
