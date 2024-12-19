@@ -90,7 +90,7 @@ $$
 
 变量的总体变异性可以通过偏差平方和（Sum of Squared Deviations）来表示，其定义为：
 $$
-L_2(d_i) = \sum_{j=1}^n (x_{ji} - \bar{x}_i)^2
+L^2(d_i) = \sum_{j=1}^n (x_{ji} - \bar{x}_i)^2
 $$
 这一指标反映了变量值相对于其均值的总偏离程度，数值越大，说明变量的分散程度越高。
 
@@ -106,7 +106,7 @@ $$
 
 - 偏差向量之间的夹角（Angle Between Vectors）$\theta_{ik}$ 的余弦值（Cosine Value）表示为：
   $$
-  \cos(\theta_{ik}) = \frac{d_i' d_k}{L_2(d_i) L_2(d_k)} = \frac{s_{ik}}{\sqrt{s_{ii}s_{kk}}} = r_{ik}
+  \cos(\theta_{ik}) = \frac{d_i' d_k}{L(d_i) L(d_k)} = \frac{s_{ik}}{\sqrt{s_{ii}s_{kk}}} = r_{ik}
   $$
   其中：
   - $s_{ik}$ 是样本协方差（Sample Covariance）。
@@ -125,7 +125,7 @@ $$
 
 样本协方差矩阵（Sample Covariance Matrix）用于衡量变量之间的线性关系，其定义为：
 $$
-S = (s_{ik}),
+S = ((s_{ik})),
 $$
 其中协方差 $s_{ik}$ 的计算公式为：
 $$
@@ -137,6 +137,16 @@ $$
 - $d_i$ 和 $d_k$ 是均值修正向量（Mean-Corrected Vectors）。
 
 样本协方差矩阵 $S$ 包含 $p$ 个变量的样本方差（对角线元素）和 $\binom{p}{2} = \frac{p(p - 1)}{2}$ 个不同的样本协方差（非对角线元素）。
+
+==这个做法及其麻烦,横竖看不懂.看下面的这个就行==
+
+$$
+S = \frac{1}{n-1} D^T D.
+$$
+
+D是Deviation Matrix
+
+
 
 ---
 
