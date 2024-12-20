@@ -144,9 +144,7 @@ $$
 S = \frac{1}{n-1} D^T D.
 $$
 
-D是Deviation Matrix
-
-
+D是Deviation Matrix(偏差矩阵)
 
 ---
 
