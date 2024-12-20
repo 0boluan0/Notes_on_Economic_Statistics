@@ -145,7 +145,7 @@ S = \frac{1}{n-1} D^T D.
 $$
 
 D是Deviation Matrix(偏差矩阵)
-    
+		
 ---
 
 ## 2.2 Generalized Variance 推广方差
