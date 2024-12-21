@@ -48,23 +48,6 @@
 - 许多统计和机器学习技术，例如 **主成分分析 (Principal Component Analysis, PCA)**、**线性判别分析 (Linear Discriminant Analysis, LDA)** 和 **高斯混合模型 (Gaussian Mixture Models, GMM)** 都假设数据遵循多元正态分布。
 - 即使真实数据并不完全服从正态分布，根据 **中心极限定理 (Central Limit Theorem, CLT)**，独立随机变量的和趋近正态分布，因此多元正态分布通常是实际分布的合理近似。
 
-## 1.2 使用场景：多元正态分布的假设和适用情境
-- **统计建模 (Statistical Modeling)**：
-  - 多元正态分布广泛用于建模包含多个相关变量的数据。
-  - 例如，在金融领域，资产收益率 (Asset Returns) 的建模通常涉及资产间的相关性 (Correlation)。
-
-- **降维 (Dimensionality Reduction)**：
-  - 像 **主成分分析 (PCA)** 这样的技术，假设数据可以投影到低维空间，同时保留其结构，这通常基于多元正态分布的假设。
-
-- **假设检验 (Hypothesis Testing)**：
-  - 许多多元假设检验方法，例如 **多元方差分析 (Multivariate Analysis of Variance, MANOVA)**，要求数据遵循多元正态分布。
-
-- **预测建模 (Predictive Modeling)**：
-  - 概率模型，如 **高斯过程 (Gaussian Processes)** 或 **贝叶斯网络 (Bayesian Networks)**，经常使用多元正态分布来实现计算上的可行性和解释性。
-
-- **实际案例 (Real-world Example)**：
-  - 在环境研究中，不同地点的污染物浓度可能遵循多元正态分布，因为它们共享污染源并受大气混合的影响。
-
 ---
 
 # 2. The Multivariate Normal Density and Its Properties
