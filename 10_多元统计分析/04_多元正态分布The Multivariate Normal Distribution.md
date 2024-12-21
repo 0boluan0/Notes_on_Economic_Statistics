@@ -208,6 +208,10 @@
     D^2 = Z'Z = Z_1^2 + Z_2^2 + \dots + Z_p^2
     $$
     其中每个 $Z_i \sim N(0, 1)$。
+所以得到:
+$$
+  D^2 \sim \chi^2_p
+  $$
 
 ## 4.2 标准化 (Standardization)
 
