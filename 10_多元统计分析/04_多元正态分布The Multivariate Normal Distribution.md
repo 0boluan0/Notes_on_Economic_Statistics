@@ -97,7 +97,7 @@
     1. 如果协方差矩阵 $\Sigma$ 是正定矩阵 (Positive Definite Matrix)，则 PDF 为正常定义。
     2. 分布中心由均值向量 $\\mu$ 确定。
 
-### 2.2.2 特例：二维正态分布 (Special Case: Bivariate Normal Distribution)
+### 2.2.2 特例：二维正态分布 (Bivariate Normal Distribution)
 
 - 当 $p = 2$ 时，$X = (X_1, X_2)'$ 的多元正态分布公式可以写为：
   $$
@@ -105,7 +105,7 @@
   $$
 - 其中协方差矩阵：
   $$
-  \Sigma = \begin{pmatrix} \sigma_1^2 & \rho\sigma_1\sigma_2 \\ \rho\sigma_1\sigma_2 & \sigma_2^2 \end{pmatrix}
+  \Sigma =\begin{pmatrix} \sigma_{11} & \sigma_{12} \\ \sigma_{12} & \sigma_{22} \end{pmatrix}=\begin{pmatrix} \sigma_1^2 & \rho\sigma_1\sigma_2 \\ \rho\sigma_1\sigma_2 & \sigma_2^2 \end{pmatrix}
   $$
   这里：
   - $\rho$ 是两个随机变量之间的相关系数 (Correlation Coefficient)。
