@@ -154,6 +154,8 @@
   $$
 
 ## 3.4 条件分布 (Conditional Distributions)
+
+==考试的时候不考==
 ### 3.4.1 条件分布定义
 - 若随机向量 $X$ 可以分解为 $X = \begin{pmatrix} X_1 \\ X_2 \end{pmatrix}$，其中：
   - $X_1$ 是 $q \times 1$ 的随机向量，
@@ -184,6 +186,8 @@
 # 4. Quadratic Forms and Related Distributions
 
 ## 4.1 平方形式的分布 (Distribution of Quadratic Forms)
+
+==很重要的内容.是后面很多知识点的基础,但是没说这个考不考==
 
 - 若随机向量 $X \sim N_p(\mu, \Sigma)$，定义平方形式：
   $$
