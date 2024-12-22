@@ -257,7 +257,7 @@ $$
     $$
     \hat{\mu} = \bar{X} = \frac{1}{n} \sum_{j=1}^n X_j
     $$
-    其中 $\\bar{X}$ 是样本均值。
+    其中 $\bar{X}$ 是样本均值。
   - **协方差矩阵的估计**：
     $$
     \hat{\Sigma} = \frac{1}{n} \sum_{j=1}^n (X_j - \bar{X})(X_j - \bar{X})'
