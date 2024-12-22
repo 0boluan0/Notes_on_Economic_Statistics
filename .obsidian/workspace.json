@@ -59,8 +59,7 @@
               "title": "大三上绩点课程看板"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -189,10 +188,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/大三上绩点课程看板.md"
+                "file": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
               },
               "icon": "lucide-list",
-              "title": "大三上绩点课程看板 的大纲"
+              "title": "04_多元正态分布The Multivariate Normal Distribution 的大纲"
             }
           },
           {
@@ -253,11 +252,12 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "737d51ef6e779c6d",
+  "active": "9f729c7cccc6c6bf",
   "lastOpenFiles": [
+    "README.md",
+    "00_inbox/大三上绩点课程看板.md",
     "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
     "10_多元统计分析/05_ 总体平均向量的推论.md",
-    "00_inbox/大三上绩点课程看板.md",
     "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
     "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "07_随机过程/01_预备知识.md",
@@ -285,7 +285,6 @@
     "08_财务管理/01_财务管理概述.md",
     "99_学习情况记录/2024-12-01——星期日.md",
     "99_学习情况记录/2024-11-20——星期三.md",
-    "08_财务管理/03_价值评估基准.md",
     "98_attachment/Pasted image 20241116152534.png",
     "98_attachment/Pasted image 20241116152226.png",
     "98_attachment/Pasted image 20241116152159.png",
