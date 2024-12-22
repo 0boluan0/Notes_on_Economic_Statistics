@@ -248,7 +248,7 @@ $$
   $$
 - **解释**：
   - 联合密度函数描述了 $n$ 个样本的联合概率。
-  - 总体均值为 $\\mu$，协方差矩阵为 $\\Sigma$。
+  - 总体均值为 $\mu$，协方差矩阵为 $\Sigma$。
 
 ## 5.2 最大似然估计 (Maximum Likelihood Estimation)
 
@@ -262,7 +262,7 @@ $$
     其中 $\bar{X}$ 是样本均值。
   - **协方差矩阵的估计**：
     $$
-    \hat{\Sigma} = \frac{1}{n} \sum_{j=1}^n (X_j - \bar{X})(X_j - \bar{X})'
+    \hat{\Sigma} = \frac{1}{n} \sum_{j=1}^n (X_j - \bar{X})(X_j - \bar{X})'=\frac{n-1}{n}S
     $$
 
 - **样本协方差矩阵的性质**：
