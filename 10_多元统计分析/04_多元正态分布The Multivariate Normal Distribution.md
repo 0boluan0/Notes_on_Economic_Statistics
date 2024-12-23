@@ -101,37 +101,25 @@
 
 假设有两个随机变量，$X$ 和 $Y$，它们服从二维正态分布，均值向量和协方差矩阵设定如下：
 
-1. **均值向量**
-
-**$$
-
+1. 均值向量
+$$
 \boldsymbol{\mu} =
-
 \begin{pmatrix}
-
 \mu_X \\
-
 \mu_Y
-
 \end{pmatrix}
-
 =
-
 \begin{pmatrix}
-
 2 \\
-
 3
-
 \end{pmatrix}.
-
 $$
 
 2. **协方差矩阵**
 
 **为了体现相关性，设相关系数为 $\rho = 0.5$；再设 $X$ 的标准差为 $\sigma_X = 1$，$Y$ 的标准差为 $\sigma_Y = 2$，则**
 
-**$$
+$$
 \Sigma
 \begin{pmatrix}
 \sigma_X^2 & \rho,\sigma_X \sigma_Y \\
@@ -212,46 +200,19 @@ $$
      - 主轴长度与特征值 (Eigenvalues) 成正比。
   3. 当协方差矩阵为对角矩阵时，等概率密度曲线为圆形。
 
-**前置示例设定**
 
-我们先给出一个**二维**（即 $p=2$）的随机向量 $X$：
 
-$$
-X
-= \begin{pmatrix} X_1 \ X_2 \end{pmatrix}
-\sim N_2!\Bigl(
-\begin{pmatrix} \mu_1 \\ \mu_2 \end{pmatrix},
-\Sigma
-\Bigr),
-$$
 
-其中
 
-$$
 
-\mu_1 = 2,\quad \mu_2 = 3,
 
-$$
 
-  
 
-$$
-\Sigma
-= \begin{pmatrix}
-1 & 0.5 \\
-0.5 & 2
-\end{pmatrix}.
-$$
 
-这样，$X$ 的均值向量是$\begin{pmatrix}2\\3\end{pmatrix},$
 
-协方差矩阵是
-$$
-\begin{pmatrix}
-1 & 0.5\\
-0.5 & 2
-\end{pmatrix}.
-$$
+
+
+
 
 **(a) 若 $X \sim N_p(\mu,\Sigma)$，则 $a’X \sim N(a’\mu,; a’\Sigma a)$**
 
@@ -296,7 +257,7 @@ a’\mu
 
 = \begin{pmatrix}2 & 1\end{pmatrix}
 
-\begin{pmatrix}2\3\end{pmatrix}
+\begin{pmatrix}2\\3\end{pmatrix}
 
 = 2 \times 2 + 1 \times 3
 
@@ -847,6 +808,41 @@ $$
 
 # 3. Properties of Multivariate Normal Distribution
 
+**前置示例设定**
+
+我们先给出一个**二维**（即 $p=2$）的随机向量 $X$：
+
+$$
+X
+= \begin{pmatrix} X_1 \ X_2 \end{pmatrix}
+\sim N_2!\Bigl(
+\begin{pmatrix} \mu_1 \\ \mu_2 \end{pmatrix},
+\Sigma
+\Bigr),
+$$
+
+其中
+
+$$
+
+\mu_1 = 2,\quad \mu_2 = 3,
+
+$$
+
+  
+
+$$
+\Sigma
+= \begin{pmatrix}
+1 & 0.5 \\
+0.5 & 2
+\end{pmatrix}.
+$$
+
+这样，$X$ 的均值向量是$\begin{pmatrix}2\\3\end{pmatrix},$
+
+协方差矩阵是
+
 ## 3.1 线性组合 (Linear Combinations)
 - 如果 $X \sim N_p(\mu, \Sigma)$ 且 $a$ 是 $p \times 1$ 的常数向量，则 $a'X$ 的分布为：
   $$
@@ -857,6 +853,14 @@ $$
     $$
     X \sim N_p(\mu, \Sigma)
     $$
+
+$$
+\begin{pmatrix}
+1 & 0.5\\
+0.5 & 2
+\end{pmatrix}.
+$$
+
 
 ## 3.2 仿射变换 (Affine Transformations)
 - 若 $X \sim N_p(\mu, \Sigma)$，$A$ 是 $q \times p$ 的矩阵，则仿射变换 $AX$ 的分布为：
