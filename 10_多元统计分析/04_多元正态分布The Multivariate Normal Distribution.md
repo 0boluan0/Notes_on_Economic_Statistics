@@ -157,6 +157,77 @@ $$
   - $\rho$ 是两个随机变量之间的相关系数 (Correlation Coefficient)。
   - $\sigma_1$ 和 $\sigma_2$ 是 $X_1$ 和 $X_2$ 的标准差 (Standard Deviation)。
 
+写作:$y\sim BN(\mu_1,\mu_2,\sigma_1^2,\sigma_2^2,\rho_{12})$
+
+二元正态分布的概率密度函数公式如下：
+
+$$
+
+f(x, y) = \frac{1}{2\pi \sigma_x \sigma_y \sqrt{1-\rho^2}} \exp\left(-\frac{1}{2(1-\rho^2)}\left[\frac{(x-\mu_x)^2}{\sigma_x^2} + \frac{(y-\mu_y)^2}{\sigma_y^2} - \frac{2\rho(x-\mu_x)(y-\mu_y)}{\sigma_x \sigma_y}\right]\right)
+
+$$
+
+
+
+
+  
+
+对于二元正态分布：
+
+协方差矩阵 $\Sigma$ 的行列式为：
+
+$$
+|\Sigma| = \begin{vmatrix}
+\sigma_x^2 & \rho \sigma_x \sigma_y \\
+\rho \sigma_x \sigma_y & \sigma_y^2
+\end{vmatrix}
+= \sigma_x^2 \sigma_y^2 (1 - \rho^2)
+$$
+
+协方差矩阵 $\Sigma$ 的逆矩阵为：
+
+$$
+\Sigma^{-1} = \frac{1}{|\Sigma|} \begin{bmatrix}
+\sigma_y^2 & -\rho \sigma_x \sigma_y \\
+-\rho \sigma_x \sigma_y & \sigma_x^2
+\end{bmatrix}
+= \frac{1}{\sigma_x^2 \sigma_y^2 (1-\rho^2)} \begin{bmatrix}
+\sigma_y^2 & -\rho \sigma_x \sigma_y \\
+-\rho \sigma_x \sigma_y & \sigma_x^2
+\end{bmatrix}
+$$
+
+将这些代入多元正态分布的公式：
+
+1. $\mathbf{X} - \mu = \begin{bmatrix} x - \mu_x \\ y - \mu_y \end{bmatrix}$；
+
+2. 二次型 $(\mathbf{X} - \mu)^\top \Sigma^{-1} (\mathbf{X} - \mu)$ 展开为：
+
+$$
+(\mathbf{X} - \mu)^\top \Sigma^{-1} (\mathbf{X} - \mu)
+= \frac{1}{1-\rho^2} \left[
+\frac{(x - \mu_x)^2}{\sigma_x^2} +
+\frac{(y - \mu_y)^2}{\sigma_y^2} -
+\frac{2\rho (x - \mu_x)(y - \mu_y)}{\sigma_x \sigma_y}
+\right]
+$$
+
+最终得到二元正态分布的概率密度函数：
+
+$$
+
+f(x, y) = \frac{1}{2\pi \sigma_x \sigma_y \sqrt{1-\rho^2}} \exp\left(-\frac{1}{2(1-\rho^2)}\left[
+
+\frac{(x - \mu_x)^2}{\sigma_x^2} +
+
+\frac{(y - \mu_y)^2}{\sigma_y^2} -
+
+\frac{2\rho (x - \mu_x)(y - \mu_y)}{\sigma_x \sigma_y}
+
+\right]\right)
+
+$$
+
 ## 2.3 等概率密度曲线 (Equi-probability Density Contours)
 
 - **定义 (Definition)**：
@@ -208,17 +279,76 @@ $$
 
 
 
+**(d) 分块向量、条件分布与独立性**
+
+  
 
 
 
 
 
 
-**(a) 若 $X \sim N_p(\mu,\Sigma)$，则 $a’X \sim N(a’\mu,; a’\Sigma a)$**
 
-• **含义**：对一个 $p$ 维正态分布随机向量 $X$，任取一个常数向量 $a$，做内积（线性组合）后得到的一维随机变量 $a’X$ 依然服从**一维正态**分布。
 
-• 反之，**如果对所有 $a$ 都有 $a’X \sim N(a’\mu,; a’\Sigma a)$，则 $X$ 必为多元正态**。
+
+
+
+--------
+
+# 3. Properties of Multivariate Normal Distribution
+
+**前置示例设定**
+
+我们先给出一个**二维**（即 $p=2$）的随机向量 $X$：
+
+$$
+X
+= \begin{pmatrix} X_1 \ X_2 \end{pmatrix}
+\sim N_2!\Bigl(
+\begin{pmatrix} \mu_1 \\ \mu_2 \end{pmatrix},
+\Sigma
+\Bigr),
+$$
+
+其中
+
+$$
+
+\mu_1 = 2,\quad \mu_2 = 3,
+
+$$
+
+  
+
+$$
+\Sigma
+= \begin{pmatrix}
+1 & 0.5 \\
+0.5 & 2
+\end{pmatrix}.
+$$
+
+这样，$X$ 的均值向量是$\begin{pmatrix}2\\3\end{pmatrix},$
+
+协方差矩阵是
+$$
+\begin{pmatrix}
+1 & 0.5\\
+0.5 & 2
+\end{pmatrix}.
+$$
+
+## 3.1 线性组合 (Linear Combinations)
+
+- 如果 $X \sim N_p(\mu, \Sigma)$ 且 $a$ 是 $p \times 1$ 的常数向量，则 $a'X$ 的分布为：
+  $$
+  a'X \sim N(a'\mu, a'\Sigma a)
+  $$
+- **反向推导**：
+  - 如果对于任意向量 $a$，$a'X \sim N(a'\mu, a'\Sigma a)$ 都成立，那么可以证明：
+    $$
+    X \sim N_p(\mu, \Sigma)
+    $$
 
 **数值示例**
 
@@ -247,8 +377,6 @@ a’X \sim N\bigl(a’\mu,; a’\Sigma a\bigr).
 
 $$
 
-  
-
 先计算 $a’\mu$：
 
 $$
@@ -269,408 +397,156 @@ $$
 
 再计算 $a’\Sigma a$：
 
-  
-
 先做 $\Sigma a$：
 
 $$
-
 \Sigma a
-
 = \begin{pmatrix}
-
-1 & 0.5\
-
+1 & 0.5\\
 0.5 & 2
-
 \end{pmatrix}
-
 \begin{pmatrix}
-
-2 \
-
+2 \\
 1
-
 \end{pmatrix}
-
 = \begin{pmatrix}
-
-1 \times 2 + 0.5 \times 1\[4pt]
-
+1 \times 2 + 0.5 \times 1\\[4pt]
 0.5 \times 2 + 2 \times 1
-
 \end{pmatrix}
-
 = \begin{pmatrix}
-
-2.5\
-
+2.5\\
 3
-
 \end{pmatrix}.
-
 $$
-
-  
 
 然后
-
 $$
-
 a’\Sigma a
-
 = \begin{pmatrix}2 & 1\end{pmatrix}
-
 \begin{pmatrix}
-
-2.5\
-
+2.5\\
 3
-
 \end{pmatrix}
-
 = 2 \times 2.5 + 1 \times 3
-
 = 5 + 3
-
 = 8.
-
 $$
-
-  
-
 因此
-
 $$
-
 a’X \sim N(7,;8).
-
 $$
 
-  
 
-**(b) 若 $X \sim N_p(\mu,\Sigma)$，则 $AX \sim N_q(A\mu,,A\Sigma A’)$**
-
-  
-
-• **含义**：对一个多元正态随机向量 $X$ 施加任何线性变换（矩阵 $A$），得到的新向量 $AX$ 仍然服从多元正态分布。
-
-• 若 $A$ 大小为 $q \times p$，则 $AX$ 就是 $q$ 维向量，分布参数相应变为 $A\mu$ 和 $A\Sigma A’$。
-
-  
+## 3.2 仿射变换 (Affine Transformations)
+- 若 $X \sim N_p(\mu, \Sigma)$，$A$ 是 $q \times p$ 的矩阵，则仿射变换 $AX$ 的分布为：
+  $$
+  AX \sim N_q(A\mu, A\Sigma A')
+  $$
 
 **数值示例**
 
-  
-
 令
-
 $$
-
 A
-
 = \begin{pmatrix}
-
-1 & 2\
-
+1 & 2\\
 0 & 1
-
 \end{pmatrix}.
-
 $$
-
-  
-
 则
-
-  
-
 $$
-
 AX
-
 = \begin{pmatrix}
-
-1 & 2\
-
+1 & 2\\
 0 & 1
-
 \end{pmatrix}
-
 \begin{pmatrix}
-
-X_1\
-
+X_1\\
 X_2
-
 \end{pmatrix}
-
 = \begin{pmatrix}
-
-X_1 + 2X_2\
-
+X_1 + 2X_2\\
 X_2
-
 \end{pmatrix}.
-
 $$
-
-  
 
 根据结论：
-
 $$
-
 AX \sim N_2(A\mu,; A\Sigma A’).
-
 $$
-
 • 均值向量：
 
 $$
-
 A\mu
-
 = \begin{pmatrix}
-
-1 & 2\
-
+1 & 2\\
 0 & 1
-
 \end{pmatrix}
-
 \begin{pmatrix}
-
-2\
-
+2\\
 3
-
 \end{pmatrix}
-
 = \begin{pmatrix}
-
-2 + 2 \times 3\
-
+2 + 2 \times 3\\
 3
-
 \end{pmatrix}
-
 = \begin{pmatrix}
-
-8\
-
+8\\
 3
-
 \end{pmatrix}.
-
 $$
 
 • 协方差矩阵 $A\Sigma A’$ 可以照常做矩阵乘法即可，结果依然是一个 $2\times2$ 的对称、正定矩阵。
 
-  
+## 3.3 平移 (Translation)
+- 若 $X \sim N_p(\mu, \Sigma)$ 且 $d$ 是 $p \times 1$ 的常量向量，则平移后的分布为：
+  $$
+  X + d \sim N_p(\mu + d, \Sigma)
+  $$
 
-**(c) 若 $X \sim N_p(\mu,\Sigma)$，则 $X + d \sim N_p(\mu + d,;\Sigma)$**
+## 3.4 条件分布 (Conditional Distributions)
 
-  
+==考试的时候不考==
 
-• **含义**：给随机向量 $X$ 加一个常数向量 $d$，会让新随机向量的均值**平移**到 $\mu + d$，而协方差矩阵保持不变。
-
-• **几何上**：就是整体把分布在空间里“平移”到新的中心。
-
-  
-
-**数值示例**
-
-  
-
-令
-
-$$
-
-d
-
-= \begin{pmatrix}
-
-3\
-
--1
-
-\end{pmatrix}.
-
-$$
-
-  
-
-则
-
-$$
-
-X + d
-
-= \begin{pmatrix}
-
-X_1\
-
-X_2
-
-\end{pmatrix}
-
-• \begin{pmatrix}
-
-3\
-
--1
-
-\end{pmatrix}
-
-= \begin{pmatrix}
-
-X_1 + 3\
-
-X_2 - 1
-
-\end{pmatrix}.
-
-$$
-
-  
-
-根据结论：
-
-$$
-
-X + d \sim N_2(\mu + d,;\Sigma).
-
-$$
-
-  
-
-也就是
-
-  
-
-$$
-
-\mu + d
-
-= \begin{pmatrix}
-
-2\
-
-3
-
-\end{pmatrix}
-
-• \begin{pmatrix}
-
-3\
-
--1
-
-\end{pmatrix}
-
-= \begin{pmatrix}
-
-5\
-
-2
-
-\end{pmatrix},
-
-$$
-
-  
-
-而协方差矩阵仍是
-
-$$
-
-\begin{pmatrix}
-
-1 & 0.5\
-
-0.5 & 2
-
-\end{pmatrix}.
-
-$$
-
-  
-
-**(d) 分块向量、条件分布与独立性**
-
-  
 
 设
 
 $$
-
 X
-
 = \begin{pmatrix}
-
-X_1\
-
+X_1\\
 X_2
-
 \end{pmatrix}
-
-\sim N_p!\Bigl(
-
+\sim N_p\Bigl(
 \begin{pmatrix}
-
-\mu_1\
-
+\mu_1\\
 \mu_2
-
 \end{pmatrix},
-
 \begin{pmatrix}
-
-\Sigma_{11} & \Sigma_{12}\
-
+\Sigma_{11} & \Sigma_{12}\\
 \Sigma_{21} & \Sigma_{22}
-
 \end{pmatrix}
-
 \Bigr),
-
 $$
-
-  
-
 其中：
-
 • $X_1$ 为 $q\times1$，$X_2$ 为 $(p-q)\times1$；
-
 • $\Sigma_{11}$ 是 $q\times q$，$\Sigma_{22}$ 是 $(p-q)\times(p-q)$，$\Sigma_{12} = \Sigma_{21}’$。
-
-  
 
 那么我们有两个重要的结论：
 
 1. **独立性**
 
 $X_1$ 与 $X_2$ 相互独立 $\iff$ $\Sigma_{12}=0$。
-
-（在多元正态中，“零协方差” 与 “独立” 等价，但这是正态分布特有的性质。）
+（==在多元正态中，“零协方差” 与 “独立” 等价，但这是正态分布特有的性质。==）
 
 2. **条件分布**
 
 已知 $X_2=x_2$ 时，$X_1$ 依然服从正态分布，记作
-
 $$
-
 X_1 \mid X_2 = x_2
-
 \sim
-
 N\Bigl(\mu_1 + \Sigma_{12}\Sigma_{22}^{-1}(x_2-\mu_2),;\Sigma_{11} - \Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}\Bigr).
-
 $$
-
-  
-
 **数值示例（继续我们的二维场景）**
 
   
@@ -746,162 +622,10 @@ $$
 $$
 
 $$
-
 \text{条件方差}
-
 = 1 - 0.125
-
 = 0.875.
-
 $$
-
-  
-
-**总结**
-
-  
-
-• **(a) 线性组合保持正态**：任何多元正态向量的任意线性组合 ($a’X$) 都是一维正态。
-
-• **(b) 线性变换仍是正态**：多元正态向量在经历矩阵变换 ($AX$) 后，依旧保持多元正态性，新的均值、协方差可用 $A\mu,, A\Sigma A’$ 表示。
-
-• **(c) 加常数向量只平移分布**：$X+d$ 仍是多元正态，只是均值从 $\mu$ 变为 $\mu+d$，协方差不变。
-
-• **(d) 分块与条件分布**
-
-• 独立性：在多元正态中，“零协方差” 等价于 “相互独立”。
-
-• 条件分布：在已知另一部分后，仍保持正态，条件均值与条件协方差有明确公式。
-
-  
-
-这些性质使多元正态分布在理论和应用中（如金融、信号处理、机器学习等领域）极具重要性和便利性。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---------
-
-# 3. Properties of Multivariate Normal Distribution
-
-**前置示例设定**
-
-我们先给出一个**二维**（即 $p=2$）的随机向量 $X$：
-
-$$
-X
-= \begin{pmatrix} X_1 \ X_2 \end{pmatrix}
-\sim N_2!\Bigl(
-\begin{pmatrix} \mu_1 \\ \mu_2 \end{pmatrix},
-\Sigma
-\Bigr),
-$$
-
-其中
-
-$$
-
-\mu_1 = 2,\quad \mu_2 = 3,
-
-$$
-
-  
-
-$$
-\Sigma
-= \begin{pmatrix}
-1 & 0.5 \\
-0.5 & 2
-\end{pmatrix}.
-$$
-
-这样，$X$ 的均值向量是$\begin{pmatrix}2\\3\end{pmatrix},$
-
-协方差矩阵是
-
-## 3.1 线性组合 (Linear Combinations)
-- 如果 $X \sim N_p(\mu, \Sigma)$ 且 $a$ 是 $p \times 1$ 的常数向量，则 $a'X$ 的分布为：
-  $$
-  a'X \sim N(a'\mu, a'\Sigma a)
-  $$
-- **反向推导**：
-  - 如果对于任意向量 $a$，$a'X \sim N(a'\mu, a'\Sigma a)$ 都成立，那么可以证明：
-    $$
-    X \sim N_p(\mu, \Sigma)
-    $$
-
-$$
-\begin{pmatrix}
-1 & 0.5\\
-0.5 & 2
-\end{pmatrix}.
-$$
-
-
-## 3.2 仿射变换 (Affine Transformations)
-- 若 $X \sim N_p(\mu, \Sigma)$，$A$ 是 $q \times p$ 的矩阵，则仿射变换 $AX$ 的分布为：
-  $$
-  AX \sim N_q(A\mu, A\Sigma A')
-  $$
-
-## 3.3 平移 (Translation)
-- 若 $X \sim N_p(\mu, \Sigma)$ 且 $d$ 是 $p \times 1$ 的常量向量，则平移后的分布为：
-  $$
-  X + d \sim N_p(\mu + d, \Sigma)
-  $$
-
-## 3.4 条件分布 (Conditional Distributions)
-
-==考试的时候不考==
-### 3.4.1 条件分布定义
-- 若随机向量 $X$ 可以分解为 $X = \begin{pmatrix} X_1 \\ X_2 \end{pmatrix}$，其中：
-  - $X_1$ 是 $q \times 1$ 的随机向量，
-  - $X_2$ 是 $(p-q) \times 1$ 的随机向量，
-  - 均值向量 $\\mu$ 和协方差矩阵 $\\Sigma$ 分别为：
-    $$
-    \mu = \begin{pmatrix} \mu_1 \\ \mu_2 \end{pmatrix}, \quad
-    \Sigma = \begin{pmatrix} \Sigma_{11} & \Sigma_{12} \\ \Sigma_{21} & \Sigma_{22} \end{pmatrix}
-    $$
-- 则 $X_1 | X_2 \sim N_q(\mu_{1|2}, \Sigma_{1|2})$，其中：
-  - 条件均值 (Conditional Mean)：
-    $$
-    \mu_{1|2} = \mu_1 + \Sigma_{12}\Sigma_{22}^{-1}(X_2 - \mu_2)
-    $$
-  - 条件协方差 (Conditional Covariance)：
-    $$
-    \Sigma_{1|2} = \Sigma_{11} - \Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}
-    $$
-
-### 3.4.2 条件独立性
-- 如果 $\\Sigma_{12} = 0$，则 $X_1$ 和 $X_2$ 是独立的，且：
-  $$
-  X_1 \perp X_2 \implies X_1 \sim N_q(\mu_1, \Sigma_{11}), \quad X_2 \sim N_{p-q}(\mu_2, \Sigma_{22})
-  $$
-
 ---------------
 
 # 4. Quadratic Forms and Related Distributions
