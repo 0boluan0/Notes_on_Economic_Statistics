@@ -125,8 +125,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -256,9 +255,10 @@
   "lastOpenFiles": [
     "10_多元统计分析/05_ 总体平均向量的推论.md",
     "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
+    "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
+    "10_多元统计分析/08_主成分分析principal component.md",
     "00_inbox/大三上绩点课程看板.md",
     "README.md",
-    "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
     "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "07_随机过程/01_预备知识.md",
     "07_随机过程/02_随机过程的概念和分类.md",
@@ -284,7 +284,6 @@
     "98_attachment/Pasted image 20241202143143.png",
     "08_财务管理/01_财务管理概述.md",
     "99_学习情况记录/2024-12-01——星期日.md",
-    "99_学习情况记录/2024-11-20——星期三.md",
     "98_attachment/Pasted image 20241116152534.png",
     "98_attachment/Pasted image 20241116152226.png",
     "98_attachment/Pasted image 20241116152159.png",

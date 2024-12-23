@@ -1,4 +1,6 @@
 
+==证明不要求掌握.但是要知道本章提到过的各个性质,会在选择题中出现== 
+
 # Chapter 4: The Multivariate Normal Distribution
 
 ## 1. Introduction
@@ -220,13 +222,13 @@ $$
     $$
     Z = \Sigma^{-1/2}(X - \mu)
     $$
-    其中 $\\Sigma^{-1/2}$ 是协方差矩阵 $\\Sigma$ 的平方根逆矩阵。
+    其中 $\Sigma^{-1/2}$ 是协方差矩阵 $\Sigma$ 的平方根逆矩阵。
 - **标准化后的性质**：
   1. $Z$ 服从标准正态分布 (Standard Normal Distribution)：
      $$
      Z \sim N_p(0, I)
      $$
-     其中 $I$ 是 $p \\times p$ 的单位矩阵。
+     其中 $I$ 是 $p \times p$ 的单位矩阵。
   2. 标准化后的变量之间独立。
 
 - **应用**：
@@ -331,17 +333,17 @@ $$
 
 ## 7.2 样本协方差矩阵的渐近分布 (Asymptotic Distribution of Sample Covariance Matrix)
 
-- 假设样本协方差矩阵为 $S = \\frac{1}{n-1} \\sum_{j=1}^n (X_j - \\bar{X})(X_j - \\bar{X})'$，当 $n$ 很大时：
+- 假设样本协方差矩阵为 $S = \frac{1}{n-1} \sum_{j=1}^n (X_j - \bar{X})(X_j - \bar{X})'$，当 $n$ 很大时：
   - $(n-1)S$ 的分布趋于 **Wishart 分布 (Wishart Distribution)**：
     $$
-    (n-1)S \sim W_p(\\Sigma, n-1)
+    (n-1)S \sim W_p(\Sigma, n-1)
     $$
 
 ## 7.3 卡方分布性质 (Chi-square Distribution Approximation)
 
 - 当样本量较大时，样本均值的平方形式：
   $$
-  n(\bar{X} - \mu)' \\Sigma^{-1} (\bar{X} - \mu) \sim \chi^2_p
+  n(\bar{X} - \mu)' \Sigma^{-1} (\bar{X} - \mu) \sim \chi^2_p
   $$
   - 自由度为 $p$。
 - 如果使用样本协方差矩阵 $S$ 代替总体协方差矩阵 $\\Sigma$：
@@ -390,7 +392,7 @@ $$
      - $d_j^2$ 应近似服从自由度为 $p$ 的 $\\chi^2_p$ 分布。
   2. **绘制卡方分布图 (Chi-square Plot)**：
      - 将卡方距离从小到大排序为 $d_{(1)}^2, d_{(2)}^2, \dots, d_{(n)}^2$。
-     - 绘制卡方距离 $\\sqrt{d_{(j)}^2}$ 与理论 $\\chi^2_p$ 分布的分位数 $\\sqrt{q_j}$ 的散点图，检查是否接近直线。
+     - 绘制卡方距离 $\sqrt{d_{(j)}^2}$ 与理论 $\chi^2_p$ 分布的分位数 $\sqrt{q_j}$ 的散点图，检查是否接近直线。
 ## 8.3 注意事项 (Cautions)
 
 1. **单变量正态性不保证联合正态性**：
