@@ -63,16 +63,16 @@
     x \sim N(\mu, \sigma^2)
     $$
     其中：
-    - $\\mu$ 是均值 (Mean)，表示分布的中心。
-    - $\\sigma^2$ 是方差 (Variance)，描述分布的宽度。
+    - $\mu$ 是均值 (Mean)，表示分布的中心。
+    - $\sigma^2$ 是方差 (Variance)，描述分布的宽度。
 - **概率密度函数 (Probability Density Function, PDF)**：
   - 单变量正态分布的 PDF 表达式为：
     $$
     f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{1}{2} \left( \frac{x-\mu}{\sigma} \right)^2}, \quad -\infty < x < \infty
     $$
     该函数具有以下性质：
-    1. 对称性：以 $\\mu$ 为中心对称。
-    2. 范围：概率密度函数的定义域为 $(-\\infty, \\infty)$。
+    1. 对称性：以 $\mu$ 为中心对称。
+    2. 范围：概率密度函数的定义域为 $(-\infty, \infty)$。
     3. 面积：曲线下的总面积为 1。
 
 ## 2.2 多元正态分布 (Multivariate Normal Distribution)
@@ -96,8 +96,64 @@
     - $|\Sigma|$ 是协方差矩阵的行列式 (Determinant)。
     - $\Sigma^{-1}$ 是协方差矩阵的逆矩阵 (Inverse Matrix)。
   - **性质**：
-    1. 如果协方差矩阵 $\Sigma$ 是正定矩阵 (Positive Definite Matrix)，则 PDF 为正常定义。
-    2. 分布中心由均值向量 $\\mu$ 确定。
+    1. 协方差矩阵 $\Sigma$ 是正定矩阵 (Positive Definite Matrix)
+    2. 分布中心由均值向量 $\mu$ 确定。
+
+假设有两个随机变量，$X$ 和 $Y$，它们服从二维正态分布，均值向量和协方差矩阵设定如下：
+
+1. **均值向量**
+
+**$$
+
+\boldsymbol{\mu} =
+
+\begin{pmatrix}
+
+\mu_X \\
+
+\mu_Y
+
+\end{pmatrix}
+
+=
+
+\begin{pmatrix}
+
+2 \\
+
+3
+
+\end{pmatrix}.
+
+$$
+
+2. **协方差矩阵**
+
+**为了体现相关性，设相关系数为 $\rho = 0.5$；再设 $X$ 的标准差为 $\sigma_X = 1$，$Y$ 的标准差为 $\sigma_Y = 2$，则**
+
+**$$
+\Sigma
+\begin{pmatrix}
+\sigma_X^2 & \rho,\sigma_X \sigma_Y \\
+\rho,\sigma_X \sigma_Y & \sigma_Y^2
+\end{pmatrix}
+\begin{pmatrix}
+1^2 & 0.5 \times 1 \times 2 \\
+0.5 \times 1 \times 2 & 2^2
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 1 \\
+1 & 4
+\end{pmatrix}.
+$$
+
+这样，$(X, Y)$ 的二维正态分布可记为
+
+$$
+(X, Y) \sim \mathcal{N}\bigl(\boldsymbol{\mu}, \Sigma\bigr).
+$$
+
 
 ### 2.2.2 特例：二维正态分布 (Bivariate Normal Distribution)
 
