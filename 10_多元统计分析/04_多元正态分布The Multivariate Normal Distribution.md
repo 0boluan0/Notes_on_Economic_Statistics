@@ -786,6 +786,8 @@ $$
 
 ==考试不会考证明==
 
+### 5.2.1 多元正态分布的最大似然估计
+
 多元正态分布（Multivariate Normal）的似然函数（Likelihood）。如果我们假设有 $n$ 个观测向量 $X_1, X_2, \dots, X_n$，它们都是从 $N_p(\mu, \Sigma)$（维度为 $p$ 的多元正态分布，均值为 $p \times 1$ 向量 $\mu$，协方差矩阵为 $p \times p$ 的对称正定矩阵 $\Sigma$）中独立同分布采样而来，则它们的联合概率密度函数写成一个乘积形式。具体来说：
 
   $$
@@ -834,6 +836,102 @@ $$
 $$
 
 因为上面提到的 $x^\prime A x = \mathrm{tr}(Axx^\prime)$。
+
+### **5.2.2. 不变性 (Invariance property)**
+
+**结论**：如果$\hat{\theta}$是$\theta$的最大似然估计（MLE），并且$h(\theta)$是关于参数$\theta$的某个函数，那么
+$$
+h(\hat{\theta})
+$$
+
+就是$h(\theta)$的最大似然估计。
+
+换句话说，**先估计参数$\theta$，再对估计结果$\hat{\theta}$做函数变换$h(\hat{\theta})$**，就等价于**先对$\theta$做函数变换$h(\theta)$，再对$h(\theta)$做最大似然估计**。这就是MLE的不变性原理。
+
+一个简单的一维例子是：
+
+• 若我们有单参数正态分布$N(\mu,\sigma^2)$，其均值$\mu$的最大似然估计为
+$$
+\hat{\mu} = \overline{X}.
+$$
+• 若我们关心$e^\mu$，根据不变性，$e^\mu$的MLE就是
+$$
+e^{\hat{\mu}}.
+$$
+在多元正态分布中也是同理：只要将$\hat{\theta}$代入$h(\theta)$即可得到$h(\theta)$的MLE。
+
+### **5.2.3. 多元正态分布中的一些 MLE 举例**
+
+1. MLE of $\mu\Sigma^{-1}\mu$
+
+对于多元正态分布$N(\mu,\Sigma)$，假设已知
+
+• 均值向量的MLE：$\hat{\mu}$
+• 协方差矩阵的MLE：$\hat{\Sigma}$
+
+那么对于函数
+$$
+\mu \Sigma^{-1} \mu,
+$$
+根据不变性原理，它的MLE即为
+$$
+\hat{\mu},\hat{\Sigma}^{-1},\hat{\mu}.
+$$
+2. MLE of $\sqrt{\sigma_{ii}}$
+
+如果我们只关心协方差矩阵中的对角线元素$\sigma_{ii}$，其最大似然估计（在某些定义下）是
+
+$$
+\hat{\sigma}_{ii}= \frac{1}{n} \sum_{j=1}^n \bigl(X_{ji} - \overline{X}_i\bigr)^2.
+
+$$
+
+那么要估计$\sqrt{\sigma_{ii}}$，根据不变性原理，直接取
+$$
+\sqrt{\hat{\sigma}_{ii}}.
+$$
+### **5.2.4. 充足性 (Sufficiency)**
+
+**结论**：在多元正态分布$N(\mu,\Sigma)$中，样本均值向量$\overline{X}$和样本协方差矩阵（或与之成比例的$(n-1)S$）是关于$\mu$和$\Sigma$的**充分统计量**。
+
+直观理解：给定充分统计量$T(X)$后，原始样本数据所包含的关于参数的信息就“浓缩”在$T(X)$里；在多元正态情形下：
+
+• 关于均值向量$\mu$的全部信息都在样本均值$\overline{X}$中，
+• 关于协方差矩阵$\Sigma$的全部信息都在样本协方差矩阵$S$中。
+
+因此，无论样本容量$n$如何变化，只要知道了$\overline{X}$与$S$（或$(n-1)S$），就已经掌握了样本中关于$\mu$、$\Sigma$的全部信息  
+
+**示例**
+
+假设有二维正态分布$N(\mu,\Sigma)$，其中
+$$
+\mu =
+\begin{pmatrix}
+\mu_1 \\
+\mu_2
+\end{pmatrix},
+\quad
+\Sigma =
+\begin{pmatrix}
+\sigma_{11} & \sigma_{12} \\
+\sigma_{21} & \sigma_{22}
+\end{pmatrix}.
+$$
+从中抽样得到$n$个观测值
+$$
+X_1, X_2, \ldots, X_n \quad (\text{每个 }X_i \in \mathbb{R}^2).
+$$
+• 样本均值向量为
+$$
+\overline{X}
+= \frac{1}{n} \sum_{i=1}^n X_i.
+$$
+• 若按MLE的定义（分母取$n$）得到的样本协方差矩阵为
+$$
+\hat{\Sigma}
+= \frac{1}{n} \sum_{i=1}^n (X_i - \overline{X})(X_i - \overline{X})^\top.
+$$
+此时，任何与$\mu$、$\Sigma$相关的量（例如$\mu \Sigma^{-1}\mu$或$\sqrt{\sigma_{ii}}$等）的估计，都可以只依赖$\overline{X}$和$\hat{\Sigma}$来完成，而不再需要回到原始样本点。
 
 ----------------------
 
