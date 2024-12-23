@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
+                "file": "07_随机过程/01_预备知识.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "04_多元正态分布The Multivariate Normal Distribution"
+              "title": "01_预备知识"
             }
           },
           {
@@ -187,10 +187,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
+                "file": "07_随机过程/01_预备知识.md"
               },
               "icon": "lucide-list",
-              "title": "04_多元正态分布The Multivariate Normal Distribution 的大纲"
+              "title": "01_预备知识 的大纲"
             }
           },
           {
@@ -253,15 +253,22 @@
   },
   "active": "9f729c7cccc6c6bf",
   "lastOpenFiles": [
-    "10_多元统计分析/05_ 总体平均向量的推论.md",
+    "07_随机过程/02_随机过程的概念和分类.md",
+    "07_随机过程/01_预备知识.md",
+    "08_财务管理/03_价值评估基准.md",
+    "08_财务管理/05_投资项目资本预算.md",
+    "08_财务管理/06_债券和股票估价.md",
+    "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
+    "08_财务管理/02_财务报表分析和财务预测.md",
+    "08_财务管理/01_财务管理概述.md",
+    "10_多元统计分析/学习计划.md",
     "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
     "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
+    "10_多元统计分析/05_ 总体平均向量的推论.md",
     "10_多元统计分析/08_主成分分析principal component.md",
     "00_inbox/大三上绩点课程看板.md",
     "README.md",
     "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
-    "07_随机过程/01_预备知识.md",
-    "07_随机过程/02_随机过程的概念和分类.md",
     "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
     "01_Econometrics/07_异方差.md",
     "01_Econometrics/08_自相关.md",
@@ -273,17 +280,11 @@
     "10_多元统计分析/01_introduction简介.md",
     "10_多元统计分析/07_多元线性回归multivariate linear regression.md",
     "07_随机过程/05_连续时间的马尔可夫链.md",
-    "07_随机过程/06_平稳随机过程.md",
-    "07_随机过程/04_马尔可夫链.md",
-    "10_多元统计分析/学习计划.md",
     "98_attachment/Pasted image 20241204151200.png",
     "09_线性代数/linear_algebra_and_its_applications_4th.pdf",
     "09_线性代数/Introduction_to_Linear_Algebra(Strang).pdf",
-    "09_线性代数/02_vector spaces and subspace.md",
     "98_attachment/Pasted image 20241202153134.png",
     "98_attachment/Pasted image 20241202143143.png",
-    "08_财务管理/01_财务管理概述.md",
-    "99_学习情况记录/2024-12-01——星期日.md",
     "98_attachment/Pasted image 20241116152534.png",
     "98_attachment/Pasted image 20241116152226.png",
     "98_attachment/Pasted image 20241116152159.png",
@@ -293,7 +294,6 @@
     "98_attachment/Pasted image 20241115215349.png",
     "10_多元统计分析",
     "09_线性代数",
-    "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "01_Econometrics/未命名.canvas",
     "98_attachment/Recording 20241001150650.webm",
     "copilot-conversations",
