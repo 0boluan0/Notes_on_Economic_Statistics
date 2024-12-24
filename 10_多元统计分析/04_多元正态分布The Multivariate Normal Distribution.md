@@ -162,15 +162,8 @@ $$
 二元正态分布的概率密度函数公式如下：
 
 $$
-
 f(x, y) = \frac{1}{2\pi \sigma_x \sigma_y \sqrt{1-\rho^2}} \exp\left(-\frac{1}{2(1-\rho^2)}\left[\frac{(x-\mu_x)^2}{\sigma_x^2} + \frac{(y-\mu_y)^2}{\sigma_y^2} - \frac{2\rho(x-\mu_x)(y-\mu_y)}{\sigma_x \sigma_y}\right]\right)
-
 $$
-
-
-
-
-  
 
 对于二元正态分布：
 
@@ -215,17 +208,11 @@ $$
 最终得到二元正态分布的概率密度函数：
 
 $$
-
 f(x, y) = \frac{1}{2\pi \sigma_x \sigma_y \sqrt{1-\rho^2}} \exp\left(-\frac{1}{2(1-\rho^2)}\left[
-
 \frac{(x - \mu_x)^2}{\sigma_x^2} +
-
 \frac{(y - \mu_y)^2}{\sigma_y^2} -
-
 \frac{2\rho (x - \mu_x)(y - \mu_y)}{\sigma_x \sigma_y}
-
 \right]\right)
-
 $$
 
 ## 2.3 等概率密度曲线 (Equi-probability Density Contours)
