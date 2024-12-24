@@ -125,8 +125,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -254,6 +253,9 @@
   },
   "active": "9f729c7cccc6c6bf",
   "lastOpenFiles": [
+    "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
+    "10_多元统计分析/学习计划.md",
+    "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
     "07_随机过程/06_平稳随机过程.md",
     "README.md",
     "07_随机过程/01_预备知识.md",
@@ -264,9 +266,6 @@
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "08_财务管理/02_财务报表分析和财务预测.md",
     "08_财务管理/01_财务管理概述.md",
-    "10_多元统计分析/学习计划.md",
-    "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
-    "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
     "10_多元统计分析/05_ 总体平均向量的推论.md",
     "10_多元统计分析/08_主成分分析principal component.md",
     "00_inbox/大三上绩点课程看板.md",
