@@ -437,7 +437,7 @@ $$
 
 根据结论：
 $$
-AX \sim N_2(A\mu,; A\Sigma A’).
+AX \sim N_2(A\mu,A\Sigma A’).
 $$
 • 均值向量：
 
