@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_多元统计分析/05_ 总体平均向量的推论.md",
+                "file": "10_多元统计分析/学习计划.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05_ 总体平均向量的推论"
+              "title": "学习计划"
             }
           },
           {
@@ -172,10 +172,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_多元统计分析/05_ 总体平均向量的推论.md"
+                "file": "10_多元统计分析/学习计划.md"
               },
               "icon": "lucide-list",
-              "title": "05_ 总体平均向量的推论 的大纲"
+              "title": "学习计划 的大纲"
             }
           },
           {
@@ -238,17 +238,19 @@
   },
   "active": "9f729c7cccc6c6bf",
   "lastOpenFiles": [
-    "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
+    "10_多元统计分析/01_introduction简介.md",
+    "10_多元统计分析/学习计划.md",
     "10_多元统计分析/08_主成分分析principal component.md",
     "10_多元统计分析/07_多元线性回归multivariate linear regression.md",
-    "10_多元统计分析/学习计划.md",
+    "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
     "10_多元统计分析/05_ 总体平均向量的推论.md",
+    "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
     "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
+    "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "00_inbox/大三上绩点课程看板.md",
     "00_inbox/日记模版.md",
     "00_inbox/日历视图.md",
     "99_学习情况记录/2024-12-24——星期二.md",
-    "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
     "07_随机过程/06_平稳随机过程.md",
     "README.md",
     "07_随机过程/01_预备知识.md",
@@ -259,12 +261,10 @@
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "08_财务管理/02_财务报表分析和财务预测.md",
     "08_财务管理/01_财务管理概述.md",
-    "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "01_Econometrics/07_异方差.md",
     "01_Econometrics/08_自相关.md",
     "01_Econometrics/09_联立方程模型(内生性).md",
     "01_Econometrics/11_平稳时间序列模型.md",
-    "01_Econometrics/10_虚拟变量.md",
     "98_attachment/Pasted image 20241204151200.png",
     "09_线性代数/linear_algebra_and_its_applications_4th.pdf",
     "09_线性代数/Introduction_to_Linear_Algebra(Strang).pdf",
