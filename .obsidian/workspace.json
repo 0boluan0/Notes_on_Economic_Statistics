@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a96e89e24af81f59",
+        "id": "84861f7f6201f53a",
         "type": "tabs",
         "children": [
           {
-            "id": "9f729c7cccc6c6bf",
+            "id": "e9430bf006acca49",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,26 +20,6 @@
               },
               "icon": "lucide-file",
               "title": "00_随机过程考点梳理"
-            }
-          },
-          {
-            "id": "20515ed40b34aa1e",
-            "type": "leaf",
-            "state": {
-              "type": "kanban",
-              "state": {
-                "file": "00_inbox/大三上绩点课程看板.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false
-                  ]
-                }
-              },
-              "icon": "lucide-trello",
-              "title": "大三上绩点课程看板"
             }
           }
         ]
@@ -234,15 +214,15 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "e9430bf006acca49",
   "lastOpenFiles": [
+    "00_inbox/大三上绩点课程看板.md",
+    "07_随机过程/00_随机过程考点梳理.md",
     "07_随机过程/02_随机过程的概念和分类.md",
     "07_随机过程/01_预备知识.md",
     "07_随机过程/03_泊松过程.md",
     "07_随机过程/04_马尔可夫链.md",
-    "07_随机过程/00_随机过程考点梳理.md",
     "07_随机过程/随机过程考点梳理.md",
-    "00_inbox/大三上绩点课程看板.md",
     "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
     "10_多元统计分析/05_ 总体平均向量的推论.md",
     "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
