@@ -42,7 +42,8 @@
               "title": "大三上绩点课程看板"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -170,10 +171,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_随机过程/02_随机过程的概念和分类.md"
+                "file": "00_inbox/大三上绩点课程看板.md"
               },
               "icon": "lucide-list",
-              "title": "02_随机过程的概念和分类 的大纲"
+              "title": "大三上绩点课程看板 的大纲"
             }
           },
           {
@@ -234,20 +235,20 @@
       "copilot:Copilot Chat": false
     }
   },
-  "active": "9f729c7cccc6c6bf",
+  "active": "20515ed40b34aa1e",
   "lastOpenFiles": [
-    "07_随机过程/01_预备知识.md",
+    "07_随机过程/02_随机过程的概念和分类.md",
+    "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
+    "10_多元统计分析/05_ 总体平均向量的推论.md",
     "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
-    "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
-    "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
+    "07_随机过程/03_泊松过程.md",
     "07_随机过程/04_马尔可夫链.md",
     "07_随机过程/05_连续时间的马尔可夫链.md",
     "07_随机过程/06_平稳随机过程.md",
-    "07_随机过程/02_随机过程的概念和分类.md",
-    "07_随机过程/03_泊松过程.md",
-    "10_多元统计分析/05_ 总体平均向量的推论.md",
+    "07_随机过程/01_预备知识.md",
+    "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
+    "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "10_多元统计分析/学习计划.md",
-    "10_多元统计分析/06_比较多个均值矩阵comparisons of multivariate mean vectors.md",
     "00_inbox/大三上绩点课程看板.md",
     "10_多元统计分析/01_introduction简介.md",
     "99_学习情况记录/2024-12-26——星期四.md",
