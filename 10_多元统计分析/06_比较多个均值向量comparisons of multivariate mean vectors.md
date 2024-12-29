@@ -257,3 +257,159 @@ $$
 
 # 比较来自两个总体的均值向量
 
+## 协方差矩阵相等的情况
+
+
+• **Population 1**: $x_{11}, x_{12}, \dots, x_{1n_1} \sim N_p(\mu_1, \Sigma_1)$
+• **Population 2**: $x_{21}, x_{22}, \dots, x_{2n_2} \sim N_p(\mu_2, \Sigma_2)$
+
+• 假设两总体均值和协方差矩阵如下：
+
+• $\mu_1$ 和 $\mu_2$ 为均值向量；
+• $\Sigma_1 = \Sigma_2 = \Sigma$（假设协方差矩阵相等）。
+
+**2. 样本统计量定义**
+
+  
+
+• **样本均值向量：**
+
+$$
+
+\bar{X}_1 = \frac{1}{n_1} \sum_{j=1}^{n_1} x_{1j}, \quad \bar{X}_2 = \frac{1}{n_2} \sum_{j=1}^{n_2} x_{2j}.
+
+$$
+
+• **样本协方差矩阵：**
+
+$$
+
+S_1 = \frac{1}{n_1 - 1} \sum_{j=1}^{n_1} (x_{1j} - \bar{X}_1)(x_{1j} - \bar{X}_1)’,_
+
+_$$_
+
+_$$_
+
+_S_2 = \frac{1}{n_2 - 1} \sum_{j=1}^{n_2} (x_{2j} - \bar{X}_2)(x_{2j} - \bar{X}_2)’.
+
+$$
+
+• **合并样本协方差矩阵（Pooled Covariance Matrix）：**
+
+$$
+
+S_{pooled} = S = \frac{(n_1 - 1)S_1 + (n_2 - 1)S_2}{n_1 + n_2 - 2}.
+
+$$
+
+  
+
+**3. 假设检验**
+
+  
+
+• 检验均值向量差异：
+
+$$
+
+H_0 : \mu_1 = \mu_2 \quad \text{对比} \quad H_1 : \mu_1 \neq \mu_2,
+
+$$
+
+或：
+
+$$
+
+H_0 : \mu_1 - \mu_2 = \delta_0 \quad \text{对比} \quad H_1 : \mu_1 - \mu_2 \neq \delta_0.
+
+$$
+
+• **均值差的期望与方差：**
+
+$$
+
+E(\bar{X}_1 - \bar{X}_2) = \mu_1 - \mu_2, \quad \text{Var}(\bar{X}_1 - \bar{X}_2) = \left(\frac{1}{n_1} + \frac{1}{n_2}\right)\Sigma.
+
+$$
+
+• $\Sigma$ 使用 $S_{pooled}$ 估计。
+
+• **Hotelling $T^2$ 统计量：**
+
+$$
+
+T^2 = (\bar{X}_1 - \bar{X}_2 - \delta_0)’ \left(\frac{1}{n_1} + \frac{1}{n_2}\right) S_{pooled}^{-1} (\bar{X}_1 - \bar{X}_2 - \delta_0).
+
+$$
+
+• **$T^2$ 的分布：**
+
+$$
+
+T^2 \sim \frac{p(n_1 + n_2 - 2)}{n_1 + n_2 - 1 - p} F_{p, n_1 + n_2 - 1 - p}.
+
+$$
+
+  
+
+**4. 拒绝域与置信区间**
+
+  
+
+• **拒绝域：**
+
+$$
+
+H_0 \text{ 被拒绝当且仅当 } T^2 > \frac{p(n_1 + n_2 - 2)}{n_1 + n_2 - 1 - p} F_{p, n_1 + n_2 - 1 - p}(\alpha).
+
+$$
+
+• **$T^2$ 同时置信区间：**
+
+对于任意向量 $a$，线性组合的置信区间为：
+
+$$
+
+a’(\bar{X}_1 - \bar{X}2) \pm C\alpha \sqrt{a’\left(\frac{1}{n_1} + \frac{1}{n_2}\right)S_{pooled}a},
+
+$$
+
+其中：
+
+$$
+
+C_\alpha^2 = \frac{p(n_1 + n_2 - 2)}{n_1 + n_2 - 1 - p} F_{p, n_1 + n_2 - 1 - p}(\alpha).
+
+$$
+
+• **每个均值差的置信区间：**
+
+对于第 $i$ 个变量：
+
+$$
+
+(\mu_{1i} - \mu_{2i}) \in (\bar{x}_{1i} - \bar{x}_{2i}) \pm C_\alpha \sqrt{\left(\frac{1}{n_1} + \frac{1}{n_2}\right)s_{ii, pooled}},
+
+$$
+
+其中 $s_{ii, pooled}$ 是 $S_{pooled}$ 的第 $i$ 行第 $i$ 列元素。
+
+• **Bonferroni 同时置信区间：**
+
+$$
+
+(\mu_{1i} - \mu_{2i}) \in (\bar{x}_{1i} - \bar{x}_{2i}) \pm t_{n_1 + n_2 - 2}\left(\frac{\alpha}{2p}\right)\sqrt{\left(\frac{1}{n_1} + \frac{1}{n_2}\right)s_{ii, pooled}}.
+
+$$
+
+  
+
+**5. 总结**
+
+  
+
+1. 使用 Hotelling $T^2$ 统计量比较两总体均值向量，假设协方差矩阵相等。
+
+2. $T^2$ 检验用于多元均值向量的显著性差异分析，分布近似 F 分布。
+
+3. 提供了同时置信区间和 Bonferroni 校正，用于更精确地估计均值差异范围。
