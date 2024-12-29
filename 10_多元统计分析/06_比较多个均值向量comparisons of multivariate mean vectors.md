@@ -410,7 +410,7 @@ $$
 (\mu_1 - \mu_2)_i \in (\bar{x}_{1i} - \bar{x}_{2i}) \pm C_\alpha \sqrt{\left( \frac{S_1}{n_1} + \frac{S_2}{n_2} \right)_{ii}},
 $$
 
-_其中 $C_\alpha$ 为临界值，通常基于 $\chi^2$ 或重抽样方法。
+其中 $C_\alpha$ 为临界值，通常基于 $\chi^2$ 或重抽样方法。
 
 # 比较多个多变量总体均值（单因子多元方差分析）
 
