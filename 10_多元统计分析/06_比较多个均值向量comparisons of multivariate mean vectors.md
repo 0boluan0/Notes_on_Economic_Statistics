@@ -412,6 +412,91 @@ $$
 
 其中 $C_\alpha$ 为临界值，通常基于 $\chi^2$ 或重抽样方法。
 
-# 比较多个多变量总体均值（单因子多元方差分析）
+# 3.比较多个多变量总体均值(单因子多元方差分析-One-Way MANOVA )
 
+## **3.1. 背景**
 
+• **问题**：比较多个多元正态分布总体的均值向量是否相等。
+• **假设**：有 $g$ 个多元正态分布总体，每个总体为：
+$$
+x_{l1}, x_{l2}, \dots, x_{ln_l} \sim N_p(\mu_l, \Sigma) \quad (l = 1, 2, \dots, g)。
+$$
+
+假设这些总体：
+==• 具有相同的协方差矩阵 $\Sigma$；==
+• 相互独立。
+• **检验目标**：
+$$
+H_0: \mu_1 = \mu_2 = \cdots = \mu_g \quad \text{对比} \quad H_1: \text{至少有一个均值不同}。
+$$
+
+## **3.2. 模型表达**
+
+• **观测值模型：**
+$$
+x_{lj} = \mu + \gamma_e + e_{lj},
+$$
+其中：
+• $\mu$ 是总体均值；
+• $\gamma_e$ 是第 $l$ 个总体的处理效应；
+• $e_{lj} \sim N_p(0, \Sigma)$ 是残差，满足 $\sum_{l=1}^g n_e \gamma_e = 0$。
+• **分解形式：**
+$$
+x_{lj} = \bar{X} + (\bar{X}_l - \bar{X}) + (x_{lj} - \bar{X}_l),
+$$
+其中：
+• $\bar{X}$：总体样本均值；
+• $\bar{X}_l - \bar{X}$：处理效应的估计；
+• $x_{lj} - \bar{X}_l$：残差。
+
+## **3.3 平方和与交叉积矩阵（SSP）**
+
+• 总平方和与交叉积：
+$$
+\sum_{l=1}^g \sum_{j=1}^{n_g} (x_{lj} - \bar{X})(x_{lj} - \bar{X})’。
+$$
+• 分解为：
+• **处理平方和与交叉积矩阵（Between）：**
+$$
+B = \sum_{l=1}^g n_l (\bar{X}_l - \bar{X})(\bar{X}_l - \bar{X})’。
+$$
+• **残差平方和与交叉积矩阵（Within）：**
+$$
+W = \sum_{l=1}^g \sum_{j=1}^{n_g} (x_{lj} - \bar{X}_l)(x_{lj} - \bar{X}_l)’。
+$$
+• **总平方和与交叉积矩阵：**
+$$
+T = B + W。
+$$
+
+## **3.4. Wilks Lambda 检验**
+
+• **统计量：**
+$$
+\Delta^* = \frac{|W|}{|T|}。
+$$
+• $\Delta^*$ 称为 Wilks Lambda，值越小表明组间差异越显著。
+• **自由度与显著性检验：**
+
+如果样本量较大：
+$$
+\left(n - 1 - \frac{p + g}{2}\right)\ln\Delta^* \sim \chi^2_{p(g-1)}。
+$$
+拒绝域：
+$$
+\left(n - 1 - \frac{p + g}{2}\right)\ln\Delta^* > \chi^2_{p(g-1)}(\alpha)。
+$$
+
+## **3.5. MANOVA 表**
+
+| **Source of Variation** | **SSP 矩阵**                                                                    | **自由度**                |
+| ----------------------- | ----------------------------------------------------------------------------- | ---------------------- |
+| Treatment (Between)     | $B = \sum_{l=1}^g n_l (\bar{X}_l - \bar{X})(\bar{X}_l - \bar{X})'$            | $g-1$                  |
+| Residual (Within)       | $W = \sum_{l=1}^g \sum_{j=1}^{n_g} (x_{lj} - \bar{X}_l)(x_{lj} - \bar{X}_l)'$ | $\sum_{l=1}^g n_l - g$ |
+| Total (Corrected)       | $T = B + W$                                                                   | $\sum_{l=1}^g n_l - 1$ |
+
+## **3.6. 采样分布**
+
+• $\Delta^*$ 的采样分布基于 Wilks Lambda 的分布，取决于变量数 $p$ 和组数 $g$：
+• 当 $p = 1, g \geq 2$：$\Delta^* \sim F_{g-1, \sum n_e - g}$；
+• 当 $p = 2, g \geq 2$：$\Delta^* \sim F_{2(g-1), 2(\sum n_e - g)}$。
