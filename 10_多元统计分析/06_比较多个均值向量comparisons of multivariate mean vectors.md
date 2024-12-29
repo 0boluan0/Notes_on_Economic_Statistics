@@ -440,17 +440,12 @@ x_{lj} = \mu + \gamma_e + e_{lj},
 $$
 其中：
 • $\mu$ 是总体均值；
-• $\gamma_e$ 是第 $l$ 个总体的处理效应；
-• $e_{lj} \sim N_p(0, \Sigma)$ 是残差，满足 $\sum_{l=1}^g n_e \gamma_e = 0$。
+• $\gamma_e$ 是第 $l$ 个总体的处理效应.就是这个组的均值和总均值的差值.
+• $e_{lj} \sim N_p(0, \Sigma)$ 是残差，是个体和组均值的差值.
 • **分解形式：**
 $$
 x_{lj} = \bar{X} + (\bar{X}_l - \bar{X}) + (x_{lj} - \bar{X}_l),
 $$
-其中：
-• $\bar{X}$：总体样本均值；
-• $\bar{X}_l - \bar{X}$：处理效应的估计；
-• $x_{lj} - \bar{X}_l$：残差。
-
 ## **3.3 平方和与交叉积矩阵（SSP）**
 
 • 总平方和与交叉积：
@@ -458,7 +453,7 @@ $$
 \sum_{l=1}^g \sum_{j=1}^{n_g} (x_{lj} - \bar{X})(x_{lj} - \bar{X})’。
 $$
 • 分解为：
-• **处理平方和与交叉积矩阵（Between）：**
+• **处理平方和与交叉积矩阵（Behrens）treatment：**
 $$
 B = \sum_{l=1}^g n_l (\bar{X}_l - \bar{X})(\bar{X}_l - \bar{X})’。
 $$
