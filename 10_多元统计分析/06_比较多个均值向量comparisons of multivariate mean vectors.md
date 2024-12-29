@@ -285,37 +285,21 @@ $$
 $$
 S_{pooled} = S = \frac{(n_1 - 1)S_1 + (n_2 - 1)S_2}{n_1 + n_2 - 2}.
 $$
-
 **3. 假设检验**
 
-  
-
 • 检验均值向量差异：
-
 $$
-
 H_0 : \mu_1 = \mu_2 \quad \text{对比} \quad H_1 : \mu_1 \neq \mu_2,
-
 $$
-
 或：
-
 $$
-
 H_0 : \mu_1 - \mu_2 = \delta_0 \quad \text{对比} \quad H_1 : \mu_1 - \mu_2 \neq \delta_0.
-
 $$
-
 • **均值差的期望与方差：**
-
 $$
-
 E(\bar{X}_1 - \bar{X}_2) = \mu_1 - \mu_2, \quad \text{Var}(\bar{X}_1 - \bar{X}_2) = \left(\frac{1}{n_1} + \frac{1}{n_2}\right)\Sigma.
-
 $$
-
 • $\Sigma$ 使用 $S_{pooled}$ 估计。
-
 • **Hotelling $T^2$ 统计量：**
 
 $$
