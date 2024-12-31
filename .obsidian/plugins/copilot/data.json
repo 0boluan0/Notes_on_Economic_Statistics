@@ -11,11 +11,11 @@
   "azureOpenAIApiEmbeddingDeploymentName": "",
   "googleApiKey": "",
   "openRouterAiApiKey": "",
-  "defaultModelKey": "gpt-3.5-turbo|3rd party (openai-format)",
+  "defaultModelKey": "gpt-4o|openai",
   "embeddingModelKey": "text-embedding-3-small|openai",
-  "temperature": 0.05,
-  "maxTokens": 13000,
-  "contextTurns": 50,
+  "temperature": 0.1,
+  "maxTokens": 4000,
+  "contextTurns": 30,
   "userSystemPrompt": "",
   "openAIProxyBaseUrl": "",
   "openAIEmbeddingProxyBaseUrl": "",
@@ -48,70 +48,6 @@
       "enabled": true,
       "isBuiltIn": true,
       "core": true,
-      "baseUrl": "",
-      "apiKey": ""
-    },
-    {
-      "name": "gpt-4-turbo",
-      "provider": "openai",
-      "enabled": true,
-      "isBuiltIn": true,
-      "baseUrl": "",
-      "apiKey": ""
-    },
-    {
-      "name": "claude-3-5-sonnet-20240620",
-      "provider": "anthropic",
-      "enabled": true,
-      "isBuiltIn": true,
-      "baseUrl": "",
-      "apiKey": ""
-    },
-    {
-      "name": "claude-3-haiku-20240307",
-      "provider": "anthropic",
-      "enabled": true,
-      "isBuiltIn": true,
-      "baseUrl": "",
-      "apiKey": ""
-    },
-    {
-      "name": "command-r",
-      "provider": "cohereai",
-      "enabled": true,
-      "isBuiltIn": true,
-      "baseUrl": "",
-      "apiKey": ""
-    },
-    {
-      "name": "command-r-plus",
-      "provider": "cohereai",
-      "enabled": true,
-      "isBuiltIn": true,
-      "baseUrl": "",
-      "apiKey": ""
-    },
-    {
-      "name": "gemini-1.5-pro",
-      "provider": "google",
-      "enabled": true,
-      "isBuiltIn": true,
-      "baseUrl": "",
-      "apiKey": ""
-    },
-    {
-      "name": "gemini-1.5-flash",
-      "provider": "google",
-      "enabled": true,
-      "isBuiltIn": true,
-      "baseUrl": "",
-      "apiKey": ""
-    },
-    {
-      "name": "azure-openai",
-      "provider": "azure openai",
-      "enabled": true,
-      "isBuiltIn": true,
       "baseUrl": "",
       "apiKey": ""
     },
