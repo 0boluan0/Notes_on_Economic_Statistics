@@ -28,13 +28,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07_随机过程/06_平稳随机过程.md",
+                "file": "07_随机过程/03_泊松过程.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06_平稳随机过程"
+              "title": "03_泊松过程"
             }
           }
         ],
@@ -139,12 +139,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "07_随机过程/06_平稳随机过程.md",
+                "file": "07_随机过程/03_泊松过程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "06_平稳随机过程 的出链列表"
+              "title": "03_泊松过程 的出链列表"
             }
           },
           {
@@ -166,10 +166,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_随机过程/06_平稳随机过程.md"
+                "file": "07_随机过程/03_泊松过程.md"
               },
               "icon": "lucide-list",
-              "title": "06_平稳随机过程 的大纲"
+              "title": "03_泊松过程 的大纲"
             }
           },
           {
@@ -212,14 +212,14 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "07_随机过程/06_平稳随机过程.md"
+                "file": "07_随机过程/03_泊松过程.md"
               },
               "icon": "lucide-info",
-              "title": "06_平稳随机过程的笔记属性"
+              "title": "03_泊松过程的笔记属性"
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -243,13 +243,13 @@
       "smart-second-brain:打开 S2B 聊天": false
     }
   },
-  "active": "73c6a8f36ce60b01",
+  "active": "d276ca2f7ec6838c",
   "lastOpenFiles": [
+    "07_随机过程/06_平稳随机过程.md",
+    "Chats/New Chat.md",
     "copilot-conversations/你是什么模型@20241231_100337.md",
     "copilot-conversations/hello@20241231_100143.md",
     "copilot-conversations/hello@20241231_095418.md",
-    "Chats/New Chat.md",
-    "07_随机过程/06_平稳随机过程.md",
     "07_随机过程/02_随机过程的概念和分类.md",
     "07_随机过程/01_预备知识.md",
     "07_随机过程/00_随机过程考点梳理.md",
