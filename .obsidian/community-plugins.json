@@ -15,9 +15,9 @@
   "quick-latex",
   "obsidian-pandoc",
   "obsidian-tasks-plugin",
-  "copilot",
   "contribution-graph",
   "contribution-widget",
   "tars",
-  "multi-column-markdown"
+  "multi-column-markdown",
+  "obsidian-chartsview-plugin"
 ]
