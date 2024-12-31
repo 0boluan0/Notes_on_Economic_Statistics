@@ -222,7 +222,7 @@ $$
 “**多元正态分布的等概率密度曲线（或曲面）**”是由满足
 
 $$
-(X - \mu)’,\Sigma^{-1},(X - \mu) = c^2
+(X - \mu)’\Sigma^{-1}(X - \mu) = c^2
 $$
 
 的所有点 $X$ 组成的。这里：
@@ -269,7 +269,7 @@ $$
 $$
 X
 = \begin{pmatrix} X_1 \ X_2 \end{pmatrix}
-\sim N_2!\Bigl(
+\sim N_2\Bigl(
 \begin{pmatrix} \mu_1 \\ \mu_2 \end{pmatrix},
 \Sigma
 \Bigr),
@@ -398,7 +398,7 @@ a’\Sigma a
 $$
 因此
 $$
-a’X \sim N(7,;8).
+a’X \sim N(7,8).
 $$
 
 
