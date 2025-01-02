@@ -115,7 +115,8 @@
               "title": "Recent Files"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -258,7 +259,7 @@
       "smart-second-brain:打开 S2B 聊天": false
     }
   },
-  "active": "3d179d2ac852e0c8",
+  "active": "a0580e7d1cb5a5c4",
   "lastOpenFiles": [
     "07_随机过程/01_预备知识.html",
     "07_随机过程/03_泊松过程.md",
