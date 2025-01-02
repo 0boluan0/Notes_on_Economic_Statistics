@@ -13,11 +13,11 @@
   "obsidian-kanban",
   "omnisearch",
   "quick-latex",
-  "obsidian-pandoc",
   "obsidian-tasks-plugin",
   "contribution-graph",
   "contribution-widget",
   "tars",
   "multi-column-markdown",
-  "obsidian-chartsview-plugin"
+  "obsidian-chartsview-plugin",
+  "obsidian-pandoc"
 ]

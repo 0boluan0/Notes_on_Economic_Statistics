@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "02_随机过程的概念和分类",
+      "path": "07_随机过程/02_随机过程的概念和分类.md"
+    },
+    {
+      "basename": "2025-01-02——星期四",
+      "path": "99_学习情况记录/2025-01-02——星期四.md"
+    },
+    {
+      "basename": "01_预备知识",
+      "path": "07_随机过程/01_预备知识.md"
+    },
+    {
       "basename": "02_财务报表分析和财务预测",
       "path": "08_财务管理/02_财务报表分析和财务预测.md"
     },
@@ -187,21 +199,11 @@
     {
       "basename": "零散知识点",
       "path": "01_Econometrics/零散知识点.md"
-    },
-    {
-      "basename": "太白金星v计量",
-      "path": "01_Econometrics/太白金星v计量.pdf"
-    },
-    {
-      "basename": "15_货币政策工具",
-      "path": "04_货币银行学/4_中央银行与货币政策的实施/15_货币政策工具.md"
-    },
-    {
-      "basename": "09_银行业与金融机构的管理",
-      "path": "04_货币银行学/3_金融机构/09_银行业与金融机构的管理.md"
     }
   ],
   "omittedPaths": [],
+  "omittedTags": [],
+  "omitBookmarks": false,
   "maxLength": null,
   "openType": "tab"
 }
