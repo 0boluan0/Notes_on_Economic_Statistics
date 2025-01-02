@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "05_ 总体平均向量的推论",
+      "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
+    },
+    {
+      "basename": "04_多元正态分布The Multivariate Normal Distribution",
+      "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
+    },
+    {
       "basename": "04_马尔可夫链",
       "path": "07_随机过程/04_马尔可夫链.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "02_前资本主义社会",
       "path": "05_经济思想史/02_前资本主义社会.md"
-    },
-    {
-      "basename": "01_目录",
-      "path": "06_大创/01_目录.md"
-    },
-    {
-      "basename": "08_自相关",
-      "path": "01_Econometrics/08_自相关.md"
     }
   ],
   "omittedPaths": [],
