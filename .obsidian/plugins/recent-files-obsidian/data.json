@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "04_马尔可夫链",
+      "path": "07_随机过程/04_马尔可夫链.md"
+    },
+    {
+      "basename": "03_泊松过程",
+      "path": "07_随机过程/03_泊松过程.md"
+    },
+    {
+      "basename": "05_连续时间的马尔可夫链",
+      "path": "07_随机过程/05_连续时间的马尔可夫链.md"
+    },
+    {
+      "basename": "06_平稳随机过程",
+      "path": "07_随机过程/06_平稳随机过程.md"
+    },
+    {
+      "basename": "随机模拟卷",
+      "path": "07_随机过程/随机模拟卷.md"
+    },
+    {
       "basename": "11_分类与判别Discrimination and Classifications",
       "path": "10_多元统计分析/11_分类与判别Discrimination and Classifications.md"
     },
@@ -17,14 +37,6 @@
       "path": "10_多元统计分析/WechatIMG1755.jpg"
     },
     {
-      "basename": "04_马尔可夫链",
-      "path": "07_随机过程/04_马尔可夫链.md"
-    },
-    {
-      "basename": "05_连续时间的马尔可夫链",
-      "path": "07_随机过程/05_连续时间的马尔可夫链.md"
-    },
-    {
       "basename": "07_布朗运动与鞅",
       "path": "07_随机过程/07_布朗运动与鞅.md"
     },
@@ -35,10 +47,6 @@
     {
       "basename": "04_多元正态分布The Multivariate Normal Distribution",
       "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
-    },
-    {
-      "basename": "03_泊松过程",
-      "path": "07_随机过程/03_泊松过程.md"
     },
     {
       "basename": "02_随机过程的概念和分类",
@@ -191,14 +199,6 @@
     {
       "basename": "02_一元线性回归",
       "path": "01_Econometrics/02_一元线性回归.md"
-    },
-    {
-      "basename": "04_模型设定",
-      "path": "01_Econometrics/04_模型设定.md"
-    },
-    {
-      "basename": "07_异方差",
-      "path": "01_Econometrics/07_异方差.md"
     }
   ],
   "omittedPaths": [],
