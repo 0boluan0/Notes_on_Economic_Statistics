@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "11_分类与判别Discrimination and Classifications",
+      "path": "10_多元统计分析/11_分类与判别Discrimination and Classifications.md"
+    },
+    {
+      "basename": "10_不考,跳过",
+      "path": "10_多元统计分析/10_不考,跳过.md"
+    },
+    {
+      "basename": "08_主成分分析principal component",
+      "path": "10_多元统计分析/08_主成分分析principal component.md"
+    },
+    {
+      "basename": "WechatIMG1755",
+      "path": "10_多元统计分析/WechatIMG1755.jpg"
+    },
+    {
       "basename": "04_马尔可夫链",
       "path": "07_随机过程/04_马尔可夫链.md"
     },
@@ -19,14 +35,6 @@
     {
       "basename": "04_多元正态分布The Multivariate Normal Distribution",
       "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
-    },
-    {
-      "basename": "11_分类与判别Discrimination and Classifications",
-      "path": "00_inbox/11_分类与判别Discrimination and Classifications.md"
-    },
-    {
-      "basename": "08_主成分分析principal component",
-      "path": "10_多元统计分析/08_主成分分析principal component.md"
     },
     {
       "basename": "03_泊松过程",
@@ -191,14 +199,6 @@
     {
       "basename": "07_异方差",
       "path": "01_Econometrics/07_异方差.md"
-    },
-    {
-      "basename": "10_虚拟变量",
-      "path": "01_Econometrics/10_虚拟变量.md"
-    },
-    {
-      "basename": "02_金融体系概览",
-      "path": "04_货币银行学/1_引言/02_金融体系概览.md"
     }
   ],
   "omittedPaths": [],
