@@ -71,20 +71,15 @@
             "id": "39ffbe4a0f7580fd",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "00_inbox/大三上绩点课程看板.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false
-                  ]
-                }
+                "file": "07_随机过程/03_泊松过程.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               },
-              "icon": "lucide-trello",
-              "title": "大三上绩点课程看板"
+              "icon": "lucide-file",
+              "title": "03_泊松过程"
             }
           }
         ],
@@ -216,10 +211,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/大三上绩点课程看板.md"
+                "file": "07_随机过程/03_泊松过程.md"
               },
               "icon": "lucide-list",
-              "title": "大三上绩点课程看板 的大纲"
+              "title": "03_泊松过程 的大纲"
             }
           },
           {
@@ -293,12 +288,14 @@
   },
   "active": "39ffbe4a0f7580fd",
   "lastOpenFiles": [
+    "00_inbox/00_随机过程考点梳理.md",
+    "07_随机过程/03_泊松过程.md",
+    "07_随机过程/06_平稳随机过程.md",
+    "07_随机过程/05_连续时间的马尔可夫链.md",
+    "00_inbox/大三上绩点课程看板.md",
     "10_多元统计分析/11_分类与判别Discrimination and Classifications.md",
     "10_多元统计分析/10_不考,跳过.md",
     "07_随机过程/04_马尔可夫链.md",
-    "07_随机过程/03_泊松过程.md",
-    "07_随机过程/05_连续时间的马尔可夫链.md",
-    "07_随机过程/06_平稳随机过程.md",
     "07_随机过程/随机模拟卷.md",
     "10_多元统计分析/08_主成分分析principal component.md",
     "10_多元统计分析/WechatIMG1755.jpg",
@@ -322,8 +319,6 @@
     "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md",
     "10_多元统计分析/07_多元线性回归multivariate linear regression.md",
     "10_多元统计分析/学习计划.md",
-    "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
-    "10_多元统计分析/01_introduction简介.md",
     "07_随机过程/随机过程信息提取.docx",
     "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "98_attachment/Pasted image 20241204151200.png",
