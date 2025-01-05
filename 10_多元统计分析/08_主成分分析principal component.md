@@ -88,16 +88,11 @@ $$ \frac{\sum_{i=1}^k \lambda_i}{\text{trace}(S)} $$
 $$ \frac{\sum_{i=1}^k \lambda_i}{p} $$
 • **Scree Plot**（碎石图）：绘制特征值 $\lambda_i$ 与索引 $i$ 的关系图，通过观察“肘部”确定主成分数量。
 
-**大样本性质**
-
-  
+# **大样本性质**
 
 • 当样本量 $n$ 足够大时，特征值和特征向量的分布性质：
-
 • $\sqrt{n}(\lambda_i - \hat{\lambda}_i) \sim N(0, 2\lambda_i^2)$。
-
 • 特征值和特征向量之间独立分布。
-
 • 特征值 $\lambda_i$ 的置信区间：
-
 $$ \hat{\lambda}_i \pm Z_{\alpha/2} \sqrt{\frac{2\lambda_i^2}{n}} $$
+==大样本性质不考==
