@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "05_连续时间的马尔可夫链",
+      "path": "07_随机过程/05_连续时间的马尔可夫链.md"
+    },
+    {
+      "basename": "06_平稳随机过程",
+      "path": "07_随机过程/06_平稳随机过程.md"
+    },
+    {
+      "basename": "07_布朗运动与鞅",
+      "path": "07_随机过程/07_布朗运动与鞅.md"
+    },
+    {
       "basename": "04_多元正态分布The Multivariate Normal Distribution",
       "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
     },
@@ -17,14 +29,6 @@
       "path": "07_随机过程/04_马尔可夫链.md"
     },
     {
-      "basename": "05_连续时间的马尔可夫链",
-      "path": "07_随机过程/05_连续时间的马尔可夫链.md"
-    },
-    {
-      "basename": "06_平稳随机过程",
-      "path": "07_随机过程/06_平稳随机过程.md"
-    },
-    {
       "basename": "03_泊松过程",
       "path": "07_随机过程/03_泊松过程.md"
     },
@@ -35,10 +39,6 @@
     {
       "basename": "00_随机考点",
       "path": "07_随机过程/00_随机考点.md"
-    },
-    {
-      "basename": "07_布朗运动与鞅",
-      "path": "07_随机过程/07_布朗运动与鞅.md"
     },
     {
       "basename": "01_预备知识",
