@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "05_连续时间的马尔可夫链",
-      "path": "07_随机过程/05_连续时间的马尔可夫链.md"
+      "basename": "04_多元正态分布The Multivariate Normal Distribution",
+      "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
+    },
+    {
+      "basename": "03_样本几何与随机抽样Sample Geometry and Random Sampling",
+      "path": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
+    },
+    {
+      "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
+      "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
     },
     {
       "basename": "04_马尔可夫链",
       "path": "07_随机过程/04_马尔可夫链.md"
+    },
+    {
+      "basename": "05_连续时间的马尔可夫链",
+      "path": "07_随机过程/05_连续时间的马尔可夫链.md"
     },
     {
       "basename": "06_平稳随机过程",
@@ -37,24 +49,12 @@
       "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
     },
     {
-      "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
-      "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
-    },
-    {
       "basename": "07_多元线性回归multivariate linear regression",
       "path": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
     },
     {
       "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
       "path": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
-    },
-    {
-      "basename": "03_样本几何与随机抽样Sample Geometry and Random Sampling",
-      "path": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
-    },
-    {
-      "basename": "04_多元正态分布The Multivariate Normal Distribution",
-      "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
     },
     {
       "basename": "00_随机过程考点梳理",
