@@ -73,13 +73,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_多元统计分析/07_多元线性回归multivariate linear regression.md",
+                "file": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "07_多元线性回归multivariate linear regression"
+              "title": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors"
             }
           }
         ],
@@ -211,10 +211,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
+                "file": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
               },
               "icon": "lucide-list",
-              "title": "07_多元线性回归multivariate linear regression 的大纲"
+              "title": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors 的大纲"
             }
           },
           {
@@ -288,10 +288,10 @@
   },
   "active": "39ffbe4a0f7580fd",
   "lastOpenFiles": [
-    "10_多元统计分析/08_主成分分析principal component.md",
-    "10_多元统计分析/07_多元线性回归multivariate linear regression.md",
-    "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
     "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md",
+    "10_多元统计分析/07_多元线性回归multivariate linear regression.md",
+    "10_多元统计分析/08_主成分分析principal component.md",
+    "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
     "07_随机过程/05_连续时间的马尔可夫链.md",
     "07_随机过程/06_平稳随机过程.md",
     "07_随机过程/07_布朗运动与鞅.md",

@@ -525,7 +525,7 @@ $$|Q|^2 = 1.$$
        其中 $I$ 是单位矩阵，$\lambda$ 是特征值。
    - 特征向量的求解：
      - 对每个特征值 $\lambda$，解线性方程组：
-       $$(A - \lambda I)x = 0$$
+       $$(A - \lambda I)\begin{pmatrix} x \\ x \end{pmatrix} = 0$$
      - 注意：$x$ 必须是非零解。
 
    **举例**：设 $A = \begin{pmatrix} 2 & -3 \\ -3 & 2 \end{pmatrix}$。
