@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "08_主成分分析principal component",
+      "path": "10_多元统计分析/08_主成分分析principal component.md"
+    },
+    {
       "basename": "07_多元线性回归multivariate linear regression",
       "path": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
     },
@@ -11,10 +15,6 @@
     {
       "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
       "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
-    },
-    {
-      "basename": "08_主成分分析principal component",
-      "path": "10_多元统计分析/08_主成分分析principal component.md"
     },
     {
       "basename": "05_连续时间的马尔可夫链",

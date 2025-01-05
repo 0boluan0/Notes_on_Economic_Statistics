@@ -33,43 +33,25 @@
 
 ---
 
-
-**Principal Component Analysis (PCA) 笔记**
-
-  
+**Principal Component Analysis (PCA) **
 
 **简介**
-
-  
 
 PCA 是一种通过变量的线性组合解释变量的方差-协方差结构的统计方法，主要目标包括：
 
 1. **数据降维**：减少变量数量，同时保留大部分信息。
-
 2. **结果解释**：通过少量主成分解释大部分数据变异。
-
-  
 
 **关键点**
 
-  
-
 • $k$ 是主成分的数量，通常较小（例如 $k = 3$ 或 $k = 4$）。
-
 • 前 $k$ 个主成分通常解释了 80%-90% 的总变异。
 
-  
+# **2. Population Principal Components**
 
-**Population Principal Components**
-
-  
-
-• 给定 $X = \begin{pmatrix}X_1 \ X_2 \ \vdots \ X_p\end{pmatrix}$，具有均值 $\mu$ 和协方差矩阵 $\Sigma$。
-
+• 给定 $X = \begin{pmatrix}X_1  \\ X_2  \\  \vdots  \\  X_p\end{pmatrix}$，具有均值 $\mu$ 和协方差矩阵 $\Sigma$。
 • 特征值：$\lambda_1 \geq \lambda_2 \geq \dots \geq \lambda_p$。
-
 • 特征向量：$e_1, e_2, \dots, e_p$。
-
 • 主成分定义为：
 
 $$ Y_i = e_i’X = \sum_{j=1}^p e_{ij}X_j, \quad i = 1, 2, \dots, p $$
@@ -77,16 +59,11 @@ $$ Y_i = e_i’X = \sum_{j=1}^p e_{ij}X_j, \quad i = 1, 2, \dots, p $$
 • 相关性质：
 
 • $E(Y_i) = e_i’\mu$
-
 • $\text{Var}(Y_i) = e_i’\Sigma e_i = \lambda_i$
-
 • $\text{Cov}(Y_i, Y_k) = 0, \quad \text{for } i \neq k$
-
 • 总变异：$\text{tr}(\Sigma) = \sum_{i=1}^p \lambda_i = \sum_{i=1}^p \text{Var}(Y_i)$
 
-  
-
-**总变异比例**
+# **总变异比例**
 
   
 
