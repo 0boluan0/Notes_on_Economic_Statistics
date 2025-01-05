@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "05_ 总体平均向量的推论",
+      "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
+    },
+    {
+      "basename": "07_多元线性回归multivariate linear regression",
+      "path": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
+    },
+    {
+      "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
+      "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
+    },
+    {
+      "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
+      "path": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
+    },
+    {
+      "basename": "03_样本几何与随机抽样Sample Geometry and Random Sampling",
+      "path": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
+    },
+    {
       "basename": "01_预备知识",
       "path": "07_随机过程/01_预备知识.md"
     },
@@ -23,10 +43,6 @@
     {
       "basename": "02_随机过程的概念和分类",
       "path": "07_随机过程/02_随机过程的概念和分类.md"
-    },
-    {
-      "basename": "05_ 总体平均向量的推论",
-      "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
     },
     {
       "basename": "04_多元正态分布The Multivariate Normal Distribution",
@@ -183,22 +199,6 @@
     {
       "basename": "2024-09-30——星期一",
       "path": "99_学习情况记录/已复盘/2024-09-30——星期一.md"
-    },
-    {
-      "basename": "2024-09-28——星期六",
-      "path": "99_学习情况记录/已复盘/2024-09-28——星期六.md"
-    },
-    {
-      "basename": "2024-09-26——星期四",
-      "path": "99_学习情况记录/已复盘/2024-09-26——星期四.md"
-    },
-    {
-      "basename": "01",
-      "path": "07_随机过程/01.md"
-    },
-    {
-      "basename": "05_多元回归模型的矩阵表达",
-      "path": "01_Econometrics/05_多元回归模型的矩阵表达.md"
     }
   ],
   "omittedPaths": [],
