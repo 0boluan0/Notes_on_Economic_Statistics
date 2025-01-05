@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
-      "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
-    },
-    {
       "basename": "07_多元线性回归multivariate linear regression",
       "path": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
+    },
+    {
+      "basename": "04_多元正态分布The Multivariate Normal Distribution",
+      "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
+    },
+    {
+      "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
+      "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
     },
     {
       "basename": "08_主成分分析principal component",
@@ -23,10 +27,6 @@
     {
       "basename": "07_布朗运动与鞅",
       "path": "07_随机过程/07_布朗运动与鞅.md"
-    },
-    {
-      "basename": "04_多元正态分布The Multivariate Normal Distribution",
-      "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
     },
     {
       "basename": "03_样本几何与随机抽样Sample Geometry and Random Sampling",
