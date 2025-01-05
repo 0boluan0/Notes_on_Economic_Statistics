@@ -63,7 +63,7 @@ $$ Y_i = e_i’X = \sum_{j=1}^p e_{ij}X_j, \quad i = 1, 2, \dots, p $$
 • $\text{Cov}(Y_i, Y_k) = 0, \quad \text{for } i \neq k$
 • 总变异：$\text{tr}(\Sigma) = \sum_{i=1}^p \lambda_i = \sum_{i=1}^p \text{Var}(Y_i)$
 
-# **总变异比例**
+#必考 **总变异比例**
 
   
 
