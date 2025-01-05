@@ -1,16 +1,36 @@
 {
   "recentFiles": [
     {
+      "basename": "05_连续时间的马尔可夫链",
+      "path": "07_随机过程/05_连续时间的马尔可夫链.md"
+    },
+    {
+      "basename": "06_平稳随机过程",
+      "path": "07_随机过程/06_平稳随机过程.md"
+    },
+    {
+      "basename": "04_马尔可夫链",
+      "path": "07_随机过程/04_马尔可夫链.md"
+    },
+    {
+      "basename": "07_布朗运动与鞅",
+      "path": "07_随机过程/07_布朗运动与鞅.md"
+    },
+    {
+      "basename": "01_预备知识",
+      "path": "07_随机过程/01_预备知识.md"
+    },
+    {
+      "basename": "05_ 总体平均向量的推论",
+      "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
+    },
+    {
       "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
       "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
     },
     {
       "basename": "07_多元线性回归multivariate linear regression",
       "path": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
-    },
-    {
-      "basename": "05_ 总体平均向量的推论",
-      "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
     },
     {
       "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
@@ -21,24 +41,8 @@
       "path": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
     },
     {
-      "basename": "01_预备知识",
-      "path": "07_随机过程/01_预备知识.md"
-    },
-    {
       "basename": "00_随机考点",
       "path": "07_随机过程/00_随机考点.md"
-    },
-    {
-      "basename": "05_连续时间的马尔可夫链",
-      "path": "07_随机过程/05_连续时间的马尔可夫链.md"
-    },
-    {
-      "basename": "04_马尔可夫链",
-      "path": "07_随机过程/04_马尔可夫链.md"
-    },
-    {
-      "basename": "06_平稳随机过程",
-      "path": "07_随机过程/06_平稳随机过程.md"
     },
     {
       "basename": "02_随机过程的概念和分类",
@@ -79,10 +83,6 @@
     {
       "basename": "WechatIMG1755",
       "path": "10_多元统计分析/WechatIMG1755.jpg"
-    },
-    {
-      "basename": "07_布朗运动与鞅",
-      "path": "07_随机过程/07_布朗运动与鞅.md"
     },
     {
       "basename": "2025-01-02——星期四",
