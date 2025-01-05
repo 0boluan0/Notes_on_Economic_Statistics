@@ -154,7 +154,6 @@ $$
 $$
 \delta_1 : \bar{d}_1 \pm \sqrt{c_\alpha \cdot \frac{S_{d,11}}{n}} = -9.36 \pm \sqrt{9.47 \cdot \frac{199.26}{11}} = (-22.46, 3.74),
 $$
-
 $$
 \delta_2 : \bar{d}_2 \pm \sqrt{c_\alpha \cdot \frac{S_{d,22}}{n}} = 13.27 \pm \sqrt{9.47 \cdot \frac{418.61}{11}} = (-5.71, 32.25).
 $$
