@@ -1,14 +1,6 @@
 {
   "recentFiles": [
     {
-      "basename": "05_连续时间的马尔可夫链",
-      "path": "07_随机过程/05_连续时间的马尔可夫链.md"
-    },
-    {
-      "basename": "06_平稳随机过程",
-      "path": "07_随机过程/06_平稳随机过程.md"
-    },
-    {
       "basename": "09_因子分析Factor Analysis and Inference for Structured",
       "path": "10_多元统计分析/09_因子分析Factor Analysis and Inference for Structured.md"
     },
@@ -21,8 +13,40 @@
       "path": "10_多元统计分析/10_不考,跳过.md"
     },
     {
+      "basename": "04_马尔可夫链",
+      "path": "07_随机过程/04_马尔可夫链.md"
+    },
+    {
+      "basename": "11_分类与判别Discrimination and Classifications",
+      "path": "10_多元统计分析/11_分类与判别Discrimination and Classifications.md"
+    },
+    {
+      "basename": "03_泊松过程",
+      "path": "07_随机过程/03_泊松过程.md"
+    },
+    {
+      "basename": "01_预备知识",
+      "path": "07_随机过程/01_预备知识.md"
+    },
+    {
+      "basename": "02_随机过程的概念和分类",
+      "path": "07_随机过程/02_随机过程的概念和分类.md"
+    },
+    {
+      "basename": "05_ 总体平均向量的推论",
+      "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
+    },
+    {
       "basename": "04_多元正态分布The Multivariate Normal Distribution",
       "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
+    },
+    {
+      "basename": "05_连续时间的马尔可夫链",
+      "path": "07_随机过程/05_连续时间的马尔可夫链.md"
+    },
+    {
+      "basename": "06_平稳随机过程",
+      "path": "07_随机过程/06_平稳随机过程.md"
     },
     {
       "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
@@ -61,36 +85,12 @@
       "path": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
     },
     {
-      "basename": "04_马尔可夫链",
-      "path": "07_随机过程/04_马尔可夫链.md"
-    },
-    {
-      "basename": "03_泊松过程",
-      "path": "07_随机过程/03_泊松过程.md"
-    },
-    {
-      "basename": "02_随机过程的概念和分类",
-      "path": "07_随机过程/02_随机过程的概念和分类.md"
-    },
-    {
       "basename": "00_随机考点",
       "path": "07_随机过程/00_随机考点.md"
     },
     {
-      "basename": "01_预备知识",
-      "path": "07_随机过程/01_预备知识.md"
-    },
-    {
-      "basename": "05_ 总体平均向量的推论",
-      "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
-    },
-    {
       "basename": "大三上绩点课程看板",
       "path": "00_inbox/大三上绩点课程看板.md"
-    },
-    {
-      "basename": "11_分类与判别Discrimination and Classifications",
-      "path": "10_多元统计分析/11_分类与判别Discrimination and Classifications.md"
     },
     {
       "basename": "WechatIMG1755",
