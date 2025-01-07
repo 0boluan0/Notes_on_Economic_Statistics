@@ -9,16 +9,24 @@
       "path": "10_多元统计分析/12_层次聚类和K-means聚类.md"
     },
     {
+      "basename": "10_不考,跳过",
+      "path": "10_多元统计分析/10_不考,跳过.md"
+    },
+    {
+      "basename": "考试内容",
+      "path": "10_多元统计分析/考试内容.md"
+    },
+    {
+      "basename": "07_多元线性回归multivariate linear regression",
+      "path": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
+    },
+    {
       "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
       "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
     },
     {
       "basename": "05_ 总体平均向量的推论",
       "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
-    },
-    {
-      "basename": "10_不考,跳过",
-      "path": "10_多元统计分析/10_不考,跳过.md"
     },
     {
       "basename": "09_因子分析Factor Analysis and Inference for Structured",
@@ -31,14 +39,6 @@
     {
       "basename": "08_主成分分析principal component",
       "path": "10_多元统计分析/08_主成分分析principal component.md"
-    },
-    {
-      "basename": "07_多元线性回归multivariate linear regression",
-      "path": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
-    },
-    {
-      "basename": "学习计划",
-      "path": "10_多元统计分析/学习计划.md"
     },
     {
       "basename": "04_多元正态分布The Multivariate Normal Distribution",
