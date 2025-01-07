@@ -5,20 +5,56 @@
       "path": "10_多元统计分析/09_因子分析Factor Analysis and Inference for Structured.md"
     },
     {
+      "basename": "05_ 总体平均向量的推论",
+      "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
+    },
+    {
       "basename": "08_主成分分析principal component",
       "path": "10_多元统计分析/08_主成分分析principal component.md"
+    },
+    {
+      "basename": "07_多元线性回归multivariate linear regression",
+      "path": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
+    },
+    {
+      "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
+      "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
+    },
+    {
+      "basename": "11_分类与判别Discrimination and Classifications",
+      "path": "10_多元统计分析/11_分类与判别Discrimination and Classifications.md"
     },
     {
       "basename": "10_不考,跳过",
       "path": "10_多元统计分析/10_不考,跳过.md"
     },
     {
-      "basename": "04_马尔可夫链",
-      "path": "07_随机过程/04_马尔可夫链.md"
+      "basename": "学习计划",
+      "path": "10_多元统计分析/学习计划.md"
     },
     {
-      "basename": "11_分类与判别Discrimination and Classifications",
-      "path": "10_多元统计分析/11_分类与判别Discrimination and Classifications.md"
+      "basename": "04_多元正态分布The Multivariate Normal Distribution",
+      "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
+    },
+    {
+      "basename": "03_样本几何与随机抽样Sample Geometry and Random Sampling",
+      "path": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
+    },
+    {
+      "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
+      "path": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
+    },
+    {
+      "basename": "01_introduction简介",
+      "path": "10_多元统计分析/01_introduction简介.md"
+    },
+    {
+      "basename": "07_布朗运动与鞅",
+      "path": "07_随机过程/07_布朗运动与鞅.md"
+    },
+    {
+      "basename": "04_马尔可夫链",
+      "path": "07_随机过程/04_马尔可夫链.md"
     },
     {
       "basename": "03_泊松过程",
@@ -33,24 +69,12 @@
       "path": "07_随机过程/02_随机过程的概念和分类.md"
     },
     {
-      "basename": "05_ 总体平均向量的推论",
-      "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
-    },
-    {
-      "basename": "04_多元正态分布The Multivariate Normal Distribution",
-      "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
-    },
-    {
       "basename": "05_连续时间的马尔可夫链",
       "path": "07_随机过程/05_连续时间的马尔可夫链.md"
     },
     {
       "basename": "06_平稳随机过程",
       "path": "07_随机过程/06_平稳随机过程.md"
-    },
-    {
-      "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
-      "path": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
     },
     {
       "basename": "2025-01-06——星期一",
@@ -67,22 +91,6 @@
     {
       "basename": "2025-01-05——星期日",
       "path": "99_学习情况记录/2025-01-05——星期日.md"
-    },
-    {
-      "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
-      "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
-    },
-    {
-      "basename": "07_多元线性回归multivariate linear regression",
-      "path": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
-    },
-    {
-      "basename": "07_布朗运动与鞅",
-      "path": "07_随机过程/07_布朗运动与鞅.md"
-    },
-    {
-      "basename": "03_样本几何与随机抽样Sample Geometry and Random Sampling",
-      "path": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
     },
     {
       "basename": "00_随机考点",
@@ -191,14 +199,6 @@
     {
       "basename": "2024-10-05——星期六",
       "path": "99_学习情况记录/已复盘/2024-10-05——星期六.md"
-    },
-    {
-      "basename": "2024-10-03——星期四",
-      "path": "99_学习情况记录/已复盘/2024-10-03——星期四.md"
-    },
-    {
-      "basename": "2024-10-02——星期三",
-      "path": "99_学习情况记录/已复盘/2024-10-02——星期三.md"
     }
   ],
   "omittedPaths": [],
