@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
+      "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
+    },
+    {
+      "basename": "05_ 总体平均向量的推论",
+      "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
+    },
+    {
       "basename": "11_分类与判别Discrimination and Classifications",
       "path": "10_多元统计分析/11_分类与判别Discrimination and Classifications.md"
     },
@@ -21,20 +29,12 @@
       "path": "00_inbox/未命名.md"
     },
     {
-      "basename": "05_ 总体平均向量的推论",
-      "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
-    },
-    {
       "basename": "08_主成分分析principal component",
       "path": "10_多元统计分析/08_主成分分析principal component.md"
     },
     {
       "basename": "07_多元线性回归multivariate linear regression",
       "path": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
-    },
-    {
-      "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
-      "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
     },
     {
       "basename": "学习计划",

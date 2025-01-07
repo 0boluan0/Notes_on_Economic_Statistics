@@ -12,7 +12,6 @@
 
 - 差值向量定义： $$D_j = \begin{pmatrix} D_{j1} \\ D_{j2} \\ \vdots \\ D_{jp} \end{pmatrix} = \begin{pmatrix} x_{1j1} - x_{2j1} \\ x_{1j2} - x_{2j2} \\ \vdots \\ x_{1jp} - x_{2jp} \end{pmatrix}$$
 - 差值向量的期望和协方差： $$(D_j) = \delta = \begin{pmatrix} \delta_1 \\ \delta_2 \\ \vdots \\ \delta_p \end{pmatrix}, \quad Cov(D_j) = \Sigma_d$$
-
 ## 1.3. **Hotelling $T^2$ 检验**
 
 - 目标：对比 $\delta = 0$ 的假设 $H_0$（无显著差异）。
