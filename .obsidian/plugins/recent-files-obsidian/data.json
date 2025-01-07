@@ -1,20 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "12_",
-      "path": "10_多元统计分析/12_.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "00_inbox/未命名.md"
-    },
-    {
       "basename": "11_分类与判别Discrimination and Classifications",
       "path": "10_多元统计分析/11_分类与判别Discrimination and Classifications.md"
     },
     {
+      "basename": "12_",
+      "path": "10_多元统计分析/12_.md"
+    },
+    {
+      "basename": "10_不考,跳过",
+      "path": "10_多元统计分析/10_不考,跳过.md"
+    },
+    {
       "basename": "09_因子分析Factor Analysis and Inference for Structured",
       "path": "10_多元统计分析/09_因子分析Factor Analysis and Inference for Structured.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "00_inbox/未命名.md"
     },
     {
       "basename": "05_ 总体平均向量的推论",
@@ -31,10 +35,6 @@
     {
       "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
       "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
-    },
-    {
-      "basename": "10_不考,跳过",
-      "path": "10_多元统计分析/10_不考,跳过.md"
     },
     {
       "basename": "学习计划",
