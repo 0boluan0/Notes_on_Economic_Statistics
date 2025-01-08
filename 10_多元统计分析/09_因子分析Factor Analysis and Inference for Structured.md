@@ -79,7 +79,7 @@ $$
 请使用“主成分法”（Principal Components，简称PC法）来做因子分析，假设我们希望提取$m=2$个因子。请完成以下步骤：
 1. 对矩阵$S$做特征值分解，得到其特征值$\lambda_j$和对应的特征向量$e_j$。
 2. 从大到小选取最大的2个特征值，得到对应的特征向量，并计算因子载荷矩阵
-$$L = \big[\sqrt{\lambda_1} , e_1,; \sqrt{\lambda_2} , e_2\big].$$
+$$L = \big[\sqrt{\lambda_1}  e_1; \sqrt{\lambda_2}  e_2\big].$$
 3. 给出近似分解
 $$\Sigma \approx LL’,$$
 并计算各变量的特殊方差

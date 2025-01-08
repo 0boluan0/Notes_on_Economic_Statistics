@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "05_ 总体平均向量的推论",
-      "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
+      "basename": "09_因子分析Factor Analysis and Inference for Structured",
+      "path": "10_多元统计分析/09_因子分析Factor Analysis and Inference for Structured.md"
+    },
+    {
+      "basename": "08_主成分分析principal component",
+      "path": "10_多元统计分析/08_主成分分析principal component.md"
+    },
+    {
+      "basename": "10_不考,跳过",
+      "path": "10_多元统计分析/10_不考,跳过.md"
+    },
+    {
+      "basename": "11_分类与判别Discrimination and Classifications",
+      "path": "10_多元统计分析/11_分类与判别Discrimination and Classifications.md"
+    },
+    {
+      "basename": "12_层次聚类和K-means聚类",
+      "path": "10_多元统计分析/12_层次聚类和K-means聚类.md"
     },
     {
       "basename": "07_多元线性回归multivariate linear regression",
@@ -11,6 +27,30 @@
     {
       "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
       "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
+    },
+    {
+      "basename": "第3次作业",
+      "path": "02_game theory/第3次作业.pdf"
+    },
+    {
+      "basename": "第2次作业",
+      "path": "02_game theory/第2次作业.pdf"
+    },
+    {
+      "basename": "第1次作业补充",
+      "path": "02_game theory/第1次作业补充.pdf"
+    },
+    {
+      "basename": "第1次作业",
+      "path": "02_game theory/第1次作业.pdf"
+    },
+    {
+      "basename": "07_子博弈不完全信息",
+      "path": "02_game theory/07_子博弈不完全信息.md"
+    },
+    {
+      "basename": "05_ 总体平均向量的推论",
+      "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
     },
     {
       "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
@@ -41,32 +81,12 @@
       "path": "10_多元统计分析/01_introduction简介.md"
     },
     {
-      "basename": "10_不考,跳过",
-      "path": "10_多元统计分析/10_不考,跳过.md"
-    },
-    {
-      "basename": "11_分类与判别Discrimination and Classifications",
-      "path": "10_多元统计分析/11_分类与判别Discrimination and Classifications.md"
-    },
-    {
-      "basename": "12_层次聚类和K-means聚类",
-      "path": "10_多元统计分析/12_层次聚类和K-means聚类.md"
-    },
-    {
       "basename": "考试内容",
       "path": "10_多元统计分析/考试内容.md"
     },
     {
-      "basename": "09_因子分析Factor Analysis and Inference for Structured",
-      "path": "10_多元统计分析/09_因子分析Factor Analysis and Inference for Structured.md"
-    },
-    {
       "basename": "未命名",
       "path": "00_inbox/未命名.md"
-    },
-    {
-      "basename": "08_主成分分析principal component",
-      "path": "10_多元统计分析/08_主成分分析principal component.md"
     },
     {
       "basename": "07_布朗运动与鞅",
@@ -179,26 +199,6 @@
     {
       "basename": "2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library)",
       "path": "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf"
-    },
-    {
-      "basename": "05_利率行为",
-      "path": "04_货币银行学/2_金融市场/05_利率行为.md"
-    },
-    {
-      "basename": "日记模版",
-      "path": "00_inbox/日记模版.md"
-    },
-    {
-      "basename": "2024-10-12——星期六",
-      "path": "99_学习情况记录/2024-10-12——星期六.md"
-    },
-    {
-      "basename": "日历视图",
-      "path": "00_inbox/日历视图.md"
-    },
-    {
-      "basename": "2024-10-10——星期四",
-      "path": "99_学习情况记录/已复盘/2024-10-10——星期四.md"
     }
   ],
   "omittedPaths": [],
