@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
+                "file": "10_多元统计分析/05_ 总体平均向量的推论.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03_样本几何与随机抽样Sample Geometry and Random Sampling"
+              "title": "05_ 总体平均向量的推论"
             }
           },
           {
@@ -180,10 +180,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
+                "file": "10_多元统计分析/05_ 总体平均向量的推论.md"
               },
               "icon": "lucide-list",
-              "title": "03_样本几何与随机抽样Sample Geometry and Random Sampling 的大纲"
+              "title": "05_ 总体平均向量的推论 的大纲"
             }
           },
           {
@@ -257,8 +257,9 @@
   },
   "active": "3d179d2ac852e0c8",
   "lastOpenFiles": [
-    "10_多元统计分析/01_introduction简介.md",
+    "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
     "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
+    "10_多元统计分析/01_introduction简介.md",
     "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "10_多元统计分析/07_多元线性回归multivariate linear regression.md",
     "10_多元统计分析/10_不考,跳过.md",
@@ -270,7 +271,6 @@
     "10_多元统计分析/09_因子分析Factor Analysis and Inference for Structured.md",
     "00_inbox/未命名.md",
     "10_多元统计分析/08_主成分分析principal component.md",
-    "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
     "07_随机过程/07_布朗运动与鞅.md",
     "07_随机过程/04_马尔可夫链.md",
     "07_随机过程/03_泊松过程.md",

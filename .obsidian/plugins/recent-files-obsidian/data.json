@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "05_ 总体平均向量的推论",
+      "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
+    },
+    {
+      "basename": "04_多元正态分布The Multivariate Normal Distribution",
+      "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
+    },
+    {
       "basename": "03_样本几何与随机抽样Sample Geometry and Random Sampling",
       "path": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
     },
@@ -37,10 +45,6 @@
       "path": "10_多元统计分析/考试内容.md"
     },
     {
-      "basename": "05_ 总体平均向量的推论",
-      "path": "10_多元统计分析/05_ 总体平均向量的推论.md"
-    },
-    {
       "basename": "09_因子分析Factor Analysis and Inference for Structured",
       "path": "10_多元统计分析/09_因子分析Factor Analysis and Inference for Structured.md"
     },
@@ -51,10 +55,6 @@
     {
       "basename": "08_主成分分析principal component",
       "path": "10_多元统计分析/08_主成分分析principal component.md"
-    },
-    {
-      "basename": "04_多元正态分布The Multivariate Normal Distribution",
-      "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
     },
     {
       "basename": "07_布朗运动与鞅",
