@@ -635,55 +635,35 @@ $$
 
 $$
 
-解得特征向量 $\mathbf{v}_1 = \begin{bmatrix} 1 \ 1 \end{bmatrix}$。
+解得特征向量 $\mathbf{v}_1 = \begin{bmatrix} 1  \\  1 \end{bmatrix}$。
 
 对 $\lambda_2 = 2$，解 $(\mathbf{A} - 2\mathbf{I})\mathbf{v} = 0$：
 
 $$
-
 (\mathbf{A} - 2\mathbf{I}) = \begin{bmatrix}
-
 2 & 1 \\
-
 1 & 1
-
 \end{bmatrix}
-
 $$
 
-解得特征向量 $\mathbf{v}_2 = \begin{bmatrix} -1 \ 1 \end{bmatrix}$。
+解得特征向量 $\mathbf{v}_2 = \begin{bmatrix} -1  \\  1 \end{bmatrix}$。
 
 3. **构造 $\mathbf{\Lambda}$ 和 $\mathbf{Q}$**：
 
 $$
-
 \mathbf{\Lambda} = \begin{bmatrix}
-
 5 & 0 \\
-
 0 & 2
-
 \end{bmatrix}, \quad
-
 \mathbf{Q} = \begin{bmatrix}
-
 \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\
-
 \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
-
 \end{bmatrix}
-
 $$
-
 4. **谱分解结果**：
-
 $$
-
 \mathbf{A} = \mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^\top
-
 $$
-
-  
 
 #### 4.**谱分解的性质**
 

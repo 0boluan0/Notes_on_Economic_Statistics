@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "03_样本几何与随机抽样Sample Geometry and Random Sampling",
+      "path": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
+    },
+    {
+      "basename": "01_introduction简介",
+      "path": "10_多元统计分析/01_introduction简介.md"
+    },
+    {
       "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
       "path": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
     },
     {
       "basename": "07_多元线性回归multivariate linear regression",
       "path": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
+    },
+    {
+      "basename": "10_不考,跳过",
+      "path": "10_多元统计分析/10_不考,跳过.md"
     },
     {
       "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
@@ -19,10 +31,6 @@
     {
       "basename": "12_层次聚类和K-means聚类",
       "path": "10_多元统计分析/12_层次聚类和K-means聚类.md"
-    },
-    {
-      "basename": "10_不考,跳过",
-      "path": "10_多元统计分析/10_不考,跳过.md"
     },
     {
       "basename": "考试内容",
@@ -47,14 +55,6 @@
     {
       "basename": "04_多元正态分布The Multivariate Normal Distribution",
       "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
-    },
-    {
-      "basename": "03_样本几何与随机抽样Sample Geometry and Random Sampling",
-      "path": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
-    },
-    {
-      "basename": "01_introduction简介",
-      "path": "10_多元统计分析/01_introduction简介.md"
     },
     {
       "basename": "07_布朗运动与鞅",
