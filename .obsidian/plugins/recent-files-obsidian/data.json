@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
+      "path": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
+    },
+    {
+      "basename": "07_多元线性回归multivariate linear regression",
+      "path": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
+    },
+    {
+      "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
+      "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
+    },
+    {
       "basename": "11_分类与判别Discrimination and Classifications",
       "path": "10_多元统计分析/11_分类与判别Discrimination and Classifications.md"
     },
@@ -15,14 +27,6 @@
     {
       "basename": "考试内容",
       "path": "10_多元统计分析/考试内容.md"
-    },
-    {
-      "basename": "07_多元线性回归multivariate linear regression",
-      "path": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
-    },
-    {
-      "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
-      "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
     },
     {
       "basename": "05_ 总体平均向量的推论",
@@ -47,10 +51,6 @@
     {
       "basename": "03_样本几何与随机抽样Sample Geometry and Random Sampling",
       "path": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
-    },
-    {
-      "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
-      "path": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
     },
     {
       "basename": "01_introduction简介",
