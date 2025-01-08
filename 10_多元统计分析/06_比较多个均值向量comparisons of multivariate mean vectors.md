@@ -324,7 +324,7 @@ $$
 • **$T^2$ 同时置信区间：**
 对于任意向量 $a$，线性组合的置信区间为：
 $$
-a’(\bar{X}_1 - \bar{X}2) \pm C\alpha \sqrt{a’\left(\frac{1}{n_1} + \frac{1}{n_2}\right)S_{pooled}a},
+a’(\bar{X}_1 - \bar{X}2) \pm C\sqrt{a’\left(\frac{1}{n_1} + \frac{1}{n_2}\right)S_{pooled}a},
 $$
 其中：
 $$
