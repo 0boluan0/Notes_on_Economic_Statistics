@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "2025-01-09——星期四",
+      "path": "99_学习情况记录/2025-01-09——星期四.md"
+    },
+    {
+      "basename": "03_泊松过程",
+      "path": "07_随机过程/03_泊松过程.md"
+    },
+    {
       "basename": "11_分类与判别Discrimination and Classifications",
       "path": "10_多元统计分析/11_分类与判别Discrimination and Classifications.md"
     },
@@ -63,10 +71,6 @@
     {
       "basename": "04_多元正态分布The Multivariate Normal Distribution",
       "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
-    },
-    {
-      "basename": "03_泊松过程",
-      "path": "07_随机过程/03_泊松过程.md"
     },
     {
       "basename": "02_随机过程的概念和分类",
@@ -195,10 +199,6 @@
     {
       "basename": "11_平稳时间序列模型",
       "path": "01_Econometrics/11_平稳时间序列模型.md"
-    },
-    {
-      "basename": "2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library)",
-      "path": "08_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf"
     }
   ],
   "omittedPaths": [],
