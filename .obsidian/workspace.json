@@ -13,13 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2025-01-09——星期四.md",
+                "file": "07_随机过程/03_泊松过程.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2025-01-09——星期四"
+              "title": "03_泊松过程"
             }
           },
           {
@@ -83,7 +83,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "伽马",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -257,6 +257,11 @@
   },
   "active": "3d179d2ac852e0c8",
   "lastOpenFiles": [
+    "07_随机过程/06_平稳随机过程.md",
+    "07_随机过程/07_布朗运动与鞅.md",
+    "07_随机过程/01_预备知识.md",
+    "07_随机过程/02_随机过程的概念和分类.md",
+    "07_随机过程/03_泊松过程.md",
     "99_学习情况记录/2025-01-09——星期四.md",
     "10_多元统计分析/11_分类与判别Discrimination and Classifications.md",
     "10_多元统计分析/12_层次聚类和K-means聚类.md",
@@ -274,15 +279,10 @@
     "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
     "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
-    "07_随机过程/03_泊松过程.md",
-    "07_随机过程/02_随机过程的概念和分类.md",
-    "07_随机过程/06_平稳随机过程.md",
     "10_多元统计分析/01_introduction简介.md",
     "10_多元统计分析/考试内容.md",
     "00_inbox/未命名.md",
-    "07_随机过程/07_布朗运动与鞅.md",
     "07_随机过程/04_马尔可夫链.md",
-    "07_随机过程/01_预备知识.md",
     "07_随机过程/05_连续时间的马尔可夫链.md",
     "99_学习情况记录/2025-01-06——星期一.md",
     "07_随机过程/随机模拟卷.md",
