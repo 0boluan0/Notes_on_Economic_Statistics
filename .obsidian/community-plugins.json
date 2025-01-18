@@ -20,5 +20,6 @@
   "multi-column-markdown",
   "obsidian-chartsview-plugin",
   "obsidian-pandoc",
-  "obsidian-charts"
+  "obsidian-charts",
+  "templater-obsidian"
 ]

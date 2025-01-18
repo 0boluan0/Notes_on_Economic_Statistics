@@ -1413,8 +1413,3 @@ $$
        \frac{1}{\sqrt{8}} & \frac{1}{\sqrt{6}} & 1 
        \end{pmatrix}
        $$
-
----
-
-
-
