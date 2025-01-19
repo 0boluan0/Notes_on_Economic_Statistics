@@ -1,0 +1,44 @@
+/* 鱼先生的模块化Obsidian 批注样式 */
+:root {
+  --aside-width: 200px;
+  --aside-offset: 16px;
+  --block-spacing: 0.75rem;
+}
+.sidenote-container {
+  position: relative;
+  overflow: visible;
+}
+.sidenote {
+  position: absolute;
+  width: var(--aside-width);
+  margin: 0;
+  padding: 8px;
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: row;
+  font-size: calc(var(--font-text-size) * 0.7);
+  transform: translateX(calc(var(--file-line-width) + var(--aside-offset))) translateY(-40px);
+  word-break: break-word; 
+  white-space: normal;   
+}
+.markdown-preview-view .sidenote {
+  transform: translateX(calc(var(--file-line-width) + var(--aside-offset)));
+}
+.markdown-reading-view .sidenote {
+  transform: translateX(calc(var(--file-line-width) + var(--aside-offset)));
+  position: absolute !important;
+  right: auto !important;
+}
+.theme-light .sidenote {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.theme-dark .sidenote {
+  background-color: var(--background-secondary);
+  border: 1px solid #646363;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
