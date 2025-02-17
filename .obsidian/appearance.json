@@ -2,5 +2,8 @@
   "accentColor": "#fff700",
   "theme": "obsidian",
   "cssTheme": "",
-  "baseFontSize": 16
+  "baseFontSize": 16,
+  "enabledCssSnippets": [
+    "sidenotes"
+  ]
 }

@@ -7,5 +7,14 @@
       ],
       "key": "\\"
     }
+  ],
+  "templater-obsidian:00_inbox/插入批注.md": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
+    }
   ]
 }
