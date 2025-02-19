@@ -8,27 +8,30 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3d179d2ac852e0c8",
+            "id": "cba9778e96d1764d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "10_多元统计分析/05_ 总体平均向量的推论.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "11_证券投资学/证券投资学.pdf"
               },
-              "icon": "lucide-file",
-              "title": "05_ 总体平均向量的推论"
+              "icon": "lucide-file-text",
+              "title": "证券投资学"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "55f9ea3f444bac31",
+        "type": "tabs",
+        "children": [
           {
-            "id": "1b158bfc160ff882",
+            "id": "8e49eaa5ff4fe35a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10_多元统计分析/11_分类与判别Discrimination and Classifications.md",
+                "file": "11_证券投资学/00_导论.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -43,19 +46,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "11_分类与判别Discrimination and Classifications"
+              "title": "00_导论"
             }
           },
           {
-            "id": "cba9778e96d1764d",
+            "id": "f094bdef7b42fecd",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "11_证券投资学/证券投资学.pdf"
+                "file": "11_证券投资学/01_证券投资工具.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "证券投资学"
+              "icon": "lucide-file",
+              "title": "01_证券投资工具"
             }
           }
         ],
@@ -116,7 +131,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -178,13 +194,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10_多元统计分析/11_分类与判别Discrimination and Classifications.md",
+                "file": "11_证券投资学/01_证券投资工具.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "11_分类与判别Discrimination and Classifications 的大纲"
+              "title": "01_证券投资工具 的大纲"
             }
           },
           {
@@ -255,12 +271,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1b158bfc160ff882",
+  "active": "f094bdef7b42fecd",
   "lastOpenFiles": [
+    "11_证券投资学/证券投资学.pdf",
+    "11_证券投资学/01_证券投资工具.md",
+    "98_attachment/Pasted image 20250219152017.png",
+    "11_证券投资学/00_导论.md",
+    "10_多元统计分析/05_ 总体平均向量的推论.md",
+    "10_多元统计分析/11_分类与判别Discrimination and Classifications.md",
     "99_学习情况记录/2025-02-17——星期一.md",
     "00_inbox/未命名.md",
-    "11_证券投资学/证券投资学.pdf",
-    "11_证券投资学/00_导论.md",
     "13_时间序列分析/00_导论.md",
     "00_inbox/日记模版.md",
     "99_学习情况记录/2025-02-19——星期三.md",
@@ -272,8 +292,6 @@
     "02_game theory/02_初步认识博弈.md",
     "00_inbox/插入批注.md",
     "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
-    "10_多元统计分析/11_分类与判别Discrimination and Classifications.md",
-    "10_多元统计分析/05_ 总体平均向量的推论.md",
     "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md",
     "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
     "10_多元统计分析/考试内容.md",
@@ -288,7 +306,6 @@
     "99_学习情况记录/2025-01-16——星期四.md",
     "07_随机过程/05_连续时间的马尔可夫链.md",
     "07_随机过程/06_平稳随机过程.md",
-    "07_随机过程/07_布朗运动与鞅.md",
     "02_game theory/第3次作业.pdf",
     "02_game theory/第2次作业.pdf",
     "02_game theory/第1次作业补充.pdf",
@@ -301,7 +318,6 @@
     "98_attachment/Pasted image 20241116152226.png",
     "98_attachment/Pasted image 20241116152159.png",
     "98_attachment/Pasted image 20241116132803.png",
-    "98_attachment/Pasted image 20241116132435.png",
     "01_Econometrics/未命名.canvas",
     "04_货币银行学/1_引言/未命名.canvas"
   ]
