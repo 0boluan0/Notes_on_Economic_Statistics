@@ -71,15 +71,12 @@
             "id": "cba9778e96d1764d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "13_时间序列分析/00_导论.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "13_时间序列分析/lecture-dual.pdf"
               },
-              "icon": "lucide-file",
-              "title": "00_导论"
+              "icon": "lucide-file-text",
+              "title": "lecture-dual"
             }
           }
         ],
@@ -211,10 +208,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/00_导论.md"
+                "file": "13_时间序列分析/lecture-dual.pdf"
               },
               "icon": "lucide-list",
-              "title": "00_导论 的大纲"
+              "title": "lecture-dual 的大纲"
             }
           },
           {
@@ -287,15 +284,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "cba9778e96d1764d",
   "lastOpenFiles": [
+    "00_inbox/日记模版.md",
+    "00_inbox/未命名.md",
+    "00_inbox/日历视图.md",
+    "13_时间序列分析/00_导论.md",
     "13_时间序列分析/lecture-dual.pdf",
     "11_证券投资学/00_导论.md",
-    "13_时间序列分析/00_导论.md",
-    "00_inbox/未命名.md",
     "98_attachment/Pasted image 20250217162227.png",
-    "00_inbox/日记模版.md",
-    "00_inbox/日历视图.md",
     "13_时间序列分析",
     "99_学习情况记录/2025-02-17——星期一.md",
     "99_学习情况记录/2025-01-19——星期日.md",
@@ -326,7 +323,6 @@
     "02_game theory/第1次作业.pdf",
     "07_随机过程/~$_随机过程的概念和分类.docx",
     "07_随机过程/02_随机过程的概念和分类.docx",
-    "00_output",
     "98_attachment/Pasted image 20241204151200.png",
     "98_attachment/Pasted image 20241202153134.png",
     "98_attachment/Pasted image 20241202143143.png",
