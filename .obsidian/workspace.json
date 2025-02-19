@@ -71,12 +71,15 @@
             "id": "cba9778e96d1764d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/lecture-dual.pdf"
+                "file": "11_证券投资学/00_导论.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "lecture-dual"
+              "icon": "lucide-file",
+              "title": "00_导论"
             }
           }
         ],
@@ -208,10 +211,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/lecture-dual.pdf"
+                "file": "11_证券投资学/00_导论.md"
               },
               "icon": "lucide-list",
-              "title": "lecture-dual 的大纲"
+              "title": "00_导论 的大纲"
             }
           },
           {
@@ -284,13 +287,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "cba9778e96d1764d",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
+    "11_证券投资学/证券投资学.pdf",
+    "13_时间序列分析/lecture-dual.pdf",
     "00_inbox/日记模版.md",
     "00_inbox/未命名.md",
     "00_inbox/日历视图.md",
     "13_时间序列分析/00_导论.md",
-    "13_时间序列分析/lecture-dual.pdf",
     "11_证券投资学/00_导论.md",
     "98_attachment/Pasted image 20250217162227.png",
     "13_时间序列分析",
