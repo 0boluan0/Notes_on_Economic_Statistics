@@ -73,13 +73,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/00_导论.md",
+                "file": "99_学习情况记录/2025-02-19——星期三.md",
                 "mode": "source",
+                "source": false,
                 "backlinks": true,
-                "source": false
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
               "icon": "lucide-file",
-              "title": "00_导论"
+              "title": "2025-02-19——星期三"
             }
           }
         ],
@@ -102,7 +111,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -123,16 +133,6 @@
               },
               "icon": "lucide-search",
               "title": "搜索"
-            }
-          },
-          {
-            "id": "58e4b33a026fad29",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "书签"
             }
           },
           {
@@ -211,10 +211,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/00_导论.md"
+                "file": "99_学习情况记录/2025-02-19——星期三.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "00_导论 的大纲"
+              "title": "2025-02-19——星期三 的大纲"
             }
           },
           {
@@ -272,11 +275,9 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "markdown-importer:打开 Markdown 格式转换器": false,
       "workspaces:管理工作区布局": false,
       "daily-notes:打开/创建今天的日记": false,
       "obsidian-excalidraw-plugin:新建绘图文件": false,
@@ -287,15 +288,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "cba9778e96d1764d",
   "lastOpenFiles": [
+    "11_证券投资学/00_导论.md",
+    "99_学习情况记录/2025-02-19——星期三.md",
     "11_证券投资学/证券投资学.pdf",
     "13_时间序列分析/lecture-dual.pdf",
     "00_inbox/日记模版.md",
     "00_inbox/未命名.md",
     "00_inbox/日历视图.md",
     "13_时间序列分析/00_导论.md",
-    "11_证券投资学/00_导论.md",
     "98_attachment/Pasted image 20250217162227.png",
     "13_时间序列分析",
     "99_学习情况记录/2025-02-17——星期一.md",
@@ -326,7 +328,6 @@
     "02_game theory/第1次作业补充.pdf",
     "02_game theory/第1次作业.pdf",
     "07_随机过程/~$_随机过程的概念和分类.docx",
-    "07_随机过程/02_随机过程的概念和分类.docx",
     "98_attachment/Pasted image 20241204151200.png",
     "98_attachment/Pasted image 20241202153134.png",
     "98_attachment/Pasted image 20241202143143.png",
