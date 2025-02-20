@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/00_导论与概率论复习.md",
+                "file": "00_inbox/未命名.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -46,7 +46,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00_导论与概率论复习"
+              "title": "未命名"
             }
           }
         ]
@@ -106,8 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -169,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/00_导论与概率论复习.md",
+                "file": "00_inbox/未命名.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "00_导论与概率论复习 的大纲"
+              "title": "未命名 的大纲"
             }
           },
           {
@@ -248,11 +247,13 @@
   },
   "active": "8e49eaa5ff4fe35a",
   "lastOpenFiles": [
-    "13_时间序列分析/lecture-dual.pdf",
-    "13_时间序列分析/00_导论与概率论复习.md",
-    "11_证券投资学/01_证券投资工具.md",
-    "14_发展经济学/00_导论和考试相关.md",
+    "00_inbox/日历视图.md",
+    "00_inbox/日记模版.md",
     "00_inbox/未命名.md",
+    "11_证券投资学/01_证券投资工具.md",
+    "13_时间序列分析/00_导论与概率论复习.md",
+    "13_时间序列分析/lecture-dual.pdf",
+    "14_发展经济学/00_导论和考试相关.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "11_证券投资学/00_导论.md",
     "11_证券投资学/证券投资学.pdf",
@@ -261,9 +262,7 @@
     "10_多元统计分析/05_ 总体平均向量的推论.md",
     "10_多元统计分析/11_分类与判别Discrimination and Classifications.md",
     "99_学习情况记录/2025-02-17——星期一.md",
-    "00_inbox/日记模版.md",
     "99_学习情况记录/2025-02-19——星期三.md",
-    "00_inbox/日历视图.md",
     "98_attachment/Pasted image 20250217162227.png",
     "13_时间序列分析",
     "99_学习情况记录/2025-01-19——星期日.md",
