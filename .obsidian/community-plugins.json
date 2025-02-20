@@ -12,7 +12,6 @@
   "obsidian-emoji-toolbar",
   "obsidian-kanban",
   "omnisearch",
-  "quick-latex",
   "obsidian-tasks-plugin",
   "contribution-graph",
   "contribution-widget",
@@ -21,5 +20,6 @@
   "obsidian-chartsview-plugin",
   "obsidian-pandoc",
   "obsidian-charts",
-  "templater-obsidian"
+  "templater-obsidian",
+  "obsidian-tikzjax"
 ]
