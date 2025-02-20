@@ -4,24 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "84861f7f6201f53a",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "cba9778e96d1764d",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "13_时间序列分析/lecture-dual.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "lecture-dual"
-            }
-          }
-        ]
-      },
-      {
         "id": "55f9ea3f444bac31",
         "type": "tabs",
         "children": [
@@ -31,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/未命名.md",
+                "file": "11_证券投资学/01_证券投资工具.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -46,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "01_证券投资工具"
             }
           }
         ]
@@ -168,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/未命名.md",
+                "file": "11_证券投资学/01_证券投资工具.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "未命名 的大纲"
+              "title": "01_证券投资工具 的大纲"
             }
           },
           {
@@ -247,15 +229,17 @@
   },
   "active": "8e49eaa5ff4fe35a",
   "lastOpenFiles": [
+    "11_证券投资学/00_导论.md",
+    "14_发展经济学/00_导论和考试相关.md",
+    "13_时间序列分析/00_导论与概率论复习.md",
+    "99_学习情况记录/2025-02-20——星期四.md",
+    "00_inbox/插入批注.md",
+    "00_inbox/未命名.md",
     "00_inbox/日历视图.md",
     "00_inbox/日记模版.md",
-    "00_inbox/未命名.md",
     "11_证券投资学/01_证券投资工具.md",
-    "13_时间序列分析/00_导论与概率论复习.md",
     "13_时间序列分析/lecture-dual.pdf",
-    "14_发展经济学/00_导论和考试相关.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
-    "11_证券投资学/00_导论.md",
     "11_证券投资学/证券投资学.pdf",
     "14_发展经济学",
     "98_attachment/Pasted image 20250219152017.png",
@@ -267,7 +251,6 @@
     "13_时间序列分析",
     "99_学习情况记录/2025-01-19——星期日.md",
     "02_game theory/02_初步认识博弈.md",
-    "00_inbox/插入批注.md",
     "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md",
     "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
