@@ -72,9 +72,33 @@
               "icon": "lucide-file",
               "title": "01_证券投资工具"
             }
+          },
+          {
+            "id": "88668901c938ef46",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "14_发展经济学/00_导论和考试相关.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00_导论和考试相关"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -193,13 +217,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/01_证券投资工具.md",
+                "file": "14_发展经济学/00_导论和考试相关.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01_证券投资工具 的大纲"
+              "title": "00_导论和考试相关 的大纲"
             }
           },
           {
@@ -270,10 +294,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f094bdef7b42fecd",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
-    "11_证券投资学/证券投资学.pdf",
     "11_证券投资学/01_证券投资工具.md",
+    "14_发展经济学/00_导论和考试相关.md",
+    "14_发展经济学",
+    "11_证券投资学/证券投资学.pdf",
     "98_attachment/Pasted image 20250219152017.png",
     "11_证券投资学/00_导论.md",
     "10_多元统计分析/05_ 总体平均向量的推论.md",
@@ -309,7 +335,6 @@
     "02_game theory/第2次作业.pdf",
     "02_game theory/第1次作业补充.pdf",
     "02_game theory/第1次作业.pdf",
-    "07_随机过程/~$_随机过程的概念和分类.docx",
     "98_attachment/Pasted image 20241204151200.png",
     "98_attachment/Pasted image 20241202153134.png",
     "98_attachment/Pasted image 20241202143143.png",
