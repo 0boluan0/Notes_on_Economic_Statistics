@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "13_时间序列分析/lecture-dual.pdf"
+                "file": "11_证券投资学/证券投资学.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "lecture-dual"
+              "title": "证券投资学"
             }
           }
         ]
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/00_导论与概率论复习.md",
+                "file": "11_证券投资学/01_证券投资工具.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -46,7 +46,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00_导论与概率论复习"
+              "title": "01_证券投资工具"
             }
           }
         ]
@@ -106,8 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -169,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/00_导论与概率论复习.md",
+                "file": "11_证券投资学/01_证券投资工具.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "00_导论与概率论复习 的大纲"
+              "title": "01_证券投资工具 的大纲"
             }
           },
           {
@@ -248,16 +247,16 @@
   },
   "active": "2480cb1c2734d142",
   "lastOpenFiles": [
+    "11_证券投资学/证券投资学.pdf",
+    "11_证券投资学/01_证券投资工具.md",
+    "14_发展经济学/00_导论和考试相关.md",
+    "13_时间序列分析/00_导论与概率论复习.md",
     "14_发展经济学/01_什么是发展经济学.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "13_时间序列分析/01_介绍时间序列.md",
     "99_学习情况记录/2025-02-25——星期二.md",
-    "13_时间序列分析/00_导论与概率论复习.md",
-    "11_证券投资学/01_证券投资工具.md",
-    "14_发展经济学/00_导论和考试相关.md",
     "11_证券投资学/00_导论.md",
     "13_时间序列分析/lecture-dual.pdf",
-    "11_证券投资学/证券投资学.pdf",
     "08_财务管理/02_财务报表分析和财务预测.md",
     "08_财务管理/01_财务管理概述.md",
     "00_inbox/未命名.md",
