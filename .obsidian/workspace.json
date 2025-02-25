@@ -4,16 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "55f9ea3f444bac31",
+        "id": "dce055f76a215cc3",
         "type": "tabs",
         "children": [
           {
-            "id": "8e49eaa5ff4fe35a",
+            "id": "1fc710ecc0775bc8",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "14_发展经济学/发展经济学拍屏ppt.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "发展经济学拍屏ppt"
+            }
+          }
+        ]
+      },
+      {
+        "id": "5e319fb5ea0d1658",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2480cb1c2734d142",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/01_证券投资工具.md",
+                "file": "14_发展经济学/01_什么是发展经济学.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +46,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_证券投资工具"
+              "title": "01_什么是发展经济学"
             }
           }
         ]
@@ -88,7 +106,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -150,13 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/01_证券投资工具.md",
+                "file": "14_发展经济学/01_什么是发展经济学.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01_证券投资工具 的大纲"
+              "title": "01_什么是发展经济学 的大纲"
             }
           },
           {
@@ -227,20 +246,23 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8e49eaa5ff4fe35a",
+  "active": "2480cb1c2734d142",
   "lastOpenFiles": [
-    "11_证券投资学/00_导论.md",
+    "14_发展经济学/发展经济学拍屏ppt.pdf",
+    "14_发展经济学/01_什么是发展经济学.md",
     "14_发展经济学/00_导论和考试相关.md",
+    "11_证券投资学/证券投资学.pdf",
+    "11_证券投资学/01_证券投资工具.md",
     "13_时间序列分析/00_导论与概率论复习.md",
+    "11_证券投资学/00_导论.md",
+    "08_财务管理/02_财务报表分析和财务预测.md",
+    "08_财务管理/01_财务管理概述.md",
+    "00_inbox/未命名.md",
     "99_学习情况记录/2025-02-20——星期四.md",
     "00_inbox/插入批注.md",
-    "00_inbox/未命名.md",
     "00_inbox/日历视图.md",
     "00_inbox/日记模版.md",
-    "11_证券投资学/01_证券投资工具.md",
     "13_时间序列分析/lecture-dual.pdf",
-    "14_发展经济学/发展经济学拍屏ppt.pdf",
-    "11_证券投资学/证券投资学.pdf",
     "14_发展经济学",
     "98_attachment/Pasted image 20250219152017.png",
     "10_多元统计分析/05_ 总体平均向量的推论.md",
@@ -261,10 +283,6 @@
     "08_财务管理/06_债券和股票估价.md",
     "12_金融机构与风险管理",
     "11_证券投资学",
-    "Excalidraw/Drawing 2025-01-16 23.08.22.excalidraw.md",
-    "00_inbox/大三上绩点课程看板.md",
-    "99_学习情况记录/2025-01-16——星期四.md",
-    "07_随机过程/05_连续时间的马尔可夫链.md",
     "02_game theory/第3次作业.pdf",
     "02_game theory/第2次作业.pdf",
     "02_game theory/第1次作业补充.pdf",
