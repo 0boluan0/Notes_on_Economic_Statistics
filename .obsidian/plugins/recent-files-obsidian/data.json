@@ -5,6 +5,10 @@
       "path": "13_时间序列分析/00_导论与概率论复习.md"
     },
     {
+      "basename": "lecture-dual",
+      "path": "13_时间序列分析/lecture-dual.pdf"
+    },
+    {
       "basename": "01_什么是发展经济学",
       "path": "14_发展经济学/01_什么是发展经济学.md"
     },
@@ -15,10 +19,6 @@
     {
       "basename": "证券投资学",
       "path": "11_证券投资学/证券投资学.pdf"
-    },
-    {
-      "basename": "lecture-dual",
-      "path": "13_时间序列分析/lecture-dual.pdf"
     },
     {
       "basename": "01_证券投资工具",
