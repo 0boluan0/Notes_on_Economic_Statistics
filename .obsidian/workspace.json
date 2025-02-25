@@ -106,8 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -169,13 +168,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14_发展经济学/01_什么是发展经济学.md",
+                "file": "14_发展经济学/发展经济学拍屏ppt.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01_什么是发展经济学 的大纲"
+              "title": "发展经济学拍屏ppt 的大纲"
             }
           },
           {
@@ -246,10 +245,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2480cb1c2734d142",
+  "active": "1fc710ecc0775bc8",
   "lastOpenFiles": [
-    "14_发展经济学/发展经济学拍屏ppt.pdf",
     "14_发展经济学/01_什么是发展经济学.md",
+    "14_发展经济学/发展经济学拍屏ppt.pdf",
     "14_发展经济学/00_导论和考试相关.md",
     "11_证券投资学/证券投资学.pdf",
     "11_证券投资学/01_证券投资工具.md",
