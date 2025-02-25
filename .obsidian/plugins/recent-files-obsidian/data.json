@@ -1,16 +1,36 @@
 {
   "recentFiles": [
     {
+      "basename": "2025-02-25——星期二",
+      "path": "99_学习情况记录/2025-02-25——星期二.md"
+    },
+    {
+      "basename": "01_介绍时间序列",
+      "path": "13_时间序列分析/01_介绍时间序列.md"
+    },
+    {
       "basename": "00_导论与概率论复习",
       "path": "13_时间序列分析/00_导论与概率论复习.md"
     },
     {
-      "basename": "lecture-dual",
-      "path": "13_时间序列分析/lecture-dual.pdf"
+      "basename": "01_证券投资工具",
+      "path": "11_证券投资学/01_证券投资工具.md"
     },
     {
       "basename": "01_什么是发展经济学",
       "path": "14_发展经济学/01_什么是发展经济学.md"
+    },
+    {
+      "basename": "00_导论和考试相关",
+      "path": "14_发展经济学/00_导论和考试相关.md"
+    },
+    {
+      "basename": "00_导论",
+      "path": "11_证券投资学/00_导论.md"
+    },
+    {
+      "basename": "lecture-dual",
+      "path": "13_时间序列分析/lecture-dual.pdf"
     },
     {
       "basename": "发展经济学拍屏ppt",
@@ -19,18 +39,6 @@
     {
       "basename": "证券投资学",
       "path": "11_证券投资学/证券投资学.pdf"
-    },
-    {
-      "basename": "01_证券投资工具",
-      "path": "11_证券投资学/01_证券投资工具.md"
-    },
-    {
-      "basename": "00_导论",
-      "path": "11_证券投资学/00_导论.md"
-    },
-    {
-      "basename": "00_导论和考试相关",
-      "path": "14_发展经济学/00_导论和考试相关.md"
     },
     {
       "basename": "02_财务报表分析和财务预测",
@@ -191,14 +199,6 @@
     {
       "basename": "04_多元正态分布The Multivariate Normal Distribution",
       "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
-    },
-    {
-      "basename": "01_introduction简介",
-      "path": "10_多元统计分析/01_introduction简介.md"
-    },
-    {
-      "basename": "2025-01-06——星期一",
-      "path": "99_学习情况记录/2025-01-06——星期一.md"
     }
   ],
   "omittedPaths": [],

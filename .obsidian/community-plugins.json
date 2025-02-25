@@ -21,5 +21,6 @@
   "obsidian-pandoc",
   "obsidian-charts",
   "templater-obsidian",
-  "obsidian-tikzjax"
+  "obsidian-tikzjax",
+  "code-emitter"
 ]

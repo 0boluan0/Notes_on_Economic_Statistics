@@ -300,8 +300,33 @@
                   "icon": "lucide-file",
                   "title": "00_导论与概率论复习"
                 }
+              },
+              {
+                "id": "4f9fa9f2ca4732c6",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "00_inbox/01_介绍时间序列.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "01_介绍时间序列"
+                }
               }
-            ]
+            ],
+            "currentTab": 1
           }
         ],
         "direction": "vertical"
@@ -420,13 +445,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "13_时间序列分析/00_导论与概率论复习.md",
+                    "file": "00_inbox/01_介绍时间序列.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "00_导论与概率论复习 的大纲"
+                  "title": "01_介绍时间序列 的大纲"
                 }
               },
               {
@@ -497,8 +522,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "2480cb1c2734d142",
-      "mtime": "2025-02-25T08:44:16+08:00"
+      "active": "4f9fa9f2ca4732c6",
+      "mtime": "2025-02-25T10:50:24+08:00"
     },
     "证券投资学": {
       "main": {
