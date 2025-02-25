@@ -1,32 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "发展经济学拍屏ppt",
-      "path": "14_发展经济学/发展经济学拍屏ppt.pdf"
-    },
-    {
-      "basename": "01_什么是发展经济学",
-      "path": "14_发展经济学/01_什么是发展经济学.md"
-    },
-    {
-      "basename": "00_导论和考试相关",
-      "path": "14_发展经济学/00_导论和考试相关.md"
+      "basename": "00_导论与概率论复习",
+      "path": "13_时间序列分析/00_导论与概率论复习.md"
     },
     {
       "basename": "证券投资学",
       "path": "11_证券投资学/证券投资学.pdf"
     },
     {
+      "basename": "lecture-dual",
+      "path": "13_时间序列分析/lecture-dual.pdf"
+    },
+    {
       "basename": "01_证券投资工具",
       "path": "11_证券投资学/01_证券投资工具.md"
     },
     {
-      "basename": "00_导论与概率论复习",
-      "path": "13_时间序列分析/00_导论与概率论复习.md"
-    },
-    {
       "basename": "00_导论",
       "path": "11_证券投资学/00_导论.md"
+    },
+    {
+      "basename": "01_什么是发展经济学",
+      "path": "14_发展经济学/01_什么是发展经济学.md"
+    },
+    {
+      "basename": "发展经济学拍屏ppt",
+      "path": "14_发展经济学/发展经济学拍屏ppt.pdf"
+    },
+    {
+      "basename": "00_导论和考试相关",
+      "path": "14_发展经济学/00_导论和考试相关.md"
     },
     {
       "basename": "02_财务报表分析和财务预测",
@@ -51,10 +55,6 @@
     {
       "basename": "日记模版",
       "path": "00_inbox/日记模版.md"
-    },
-    {
-      "basename": "lecture-dual",
-      "path": "13_时间序列分析/lecture-dual.pdf"
     },
     {
       "basename": "05_ 总体平均向量的推论",

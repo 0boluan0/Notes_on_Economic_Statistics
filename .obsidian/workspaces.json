@@ -1,46 +1,54 @@
 {
   "workspaces": {
-    "计量经济学网课": {
+    "发展经济学": {
       "main": {
         "id": "5acd4a3c6696af5a",
         "type": "split",
         "children": [
           {
-            "id": "eeab6439f80a54c5",
+            "id": "dce055f76a215cc3",
             "type": "tabs",
-            "dimension": 42.1656050955414,
             "children": [
               {
-                "id": "5af5c6a2f87b7ec3",
+                "id": "1fc710ecc0775bc8",
                 "type": "leaf",
                 "state": {
-                  "type": "markdown",
+                  "type": "pdf",
                   "state": {
-                    "file": "01_Econometrics/02_一元线性回归(上课).md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
+                    "file": "14_发展经济学/发展经济学拍屏ppt.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "发展经济学拍屏ppt"
                 }
               }
             ]
           },
           {
-            "id": "d7fcae976f0fa185",
+            "id": "5e319fb5ea0d1658",
             "type": "tabs",
-            "dimension": 57.8343949044586,
             "children": [
               {
-                "id": "2935ca31d1ca79ba",
+                "id": "2480cb1c2734d142",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "01_Econometrics/02_一元线性回归(网课).md",
+                    "file": "14_发展经济学/01_什么是发展经济学.md",
                     "mode": "source",
+                    "source": false,
                     "backlinks": true,
-                    "source": false
-                  }
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "01_什么是发展经济学"
                 }
               }
             ]
@@ -62,8 +70,11 @@
                 "state": {
                   "type": "file-explorer",
                   "state": {
-                    "sortOrder": "alphabetical"
-                  }
+                    "sortOrder": "alphabetical",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "文件列表"
                 }
               },
               {
@@ -72,21 +83,15 @@
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "tag:#必考",
+                    "query": "大的",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
                     "extraContext": false,
                     "sortOrder": "alphabetical"
-                  }
-                }
-              },
-              {
-                "id": "58e4b33a026fad29",
-                "type": "leaf",
-                "state": {
-                  "type": "bookmarks",
-                  "state": {}
+                  },
+                  "icon": "lucide-search",
+                  "title": "搜索"
                 }
               },
               {
@@ -94,7 +99,9 @@
                 "type": "leaf",
                 "state": {
                   "type": "recent-files",
-                  "state": {}
+                  "state": {},
+                  "icon": "clock",
+                  "title": "Recent Files"
                 }
               }
             ]
@@ -117,7 +124,7 @@
                 "state": {
                   "type": "backlink",
                   "state": {
-                    "file": "01_Econometrics/02_一元线性回归(网课).md",
+                    "file": "09_线性代数/00_perface.md",
                     "collapseAll": false,
                     "extraContext": true,
                     "sortOrder": "alphabetical",
@@ -125,7 +132,9 @@
                     "searchQuery": "",
                     "backlinkCollapsed": false,
                     "unlinkedCollapsed": true
-                  }
+                  },
+                  "icon": "links-coming-in",
+                  "title": "00_perface 的反向链接列表"
                 }
               },
               {
@@ -134,10 +143,12 @@
                 "state": {
                   "type": "outgoing-link",
                   "state": {
-                    "file": "01_Econometrics/02_一元线性回归(网课).md",
+                    "file": "07_随机过程/01_预备知识.md",
                     "linksCollapsed": false,
                     "unlinkedCollapsed": true
-                  }
+                  },
+                  "icon": "links-going-out",
+                  "title": "01_预备知识 的出链列表"
                 }
               },
               {
@@ -148,7 +159,9 @@
                   "state": {
                     "sortOrder": "frequency",
                     "useHierarchy": true
-                  }
+                  },
+                  "icon": "lucide-tags",
+                  "title": "标签"
                 }
               },
               {
@@ -157,8 +170,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "01_Econometrics/02_一元线性回归(网课).md"
-                  }
+                    "file": "14_发展经济学/01_什么是发展经济学.md",
+                    "followCursor": false,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-list",
+                  "title": "01_什么是发展经济学 的大纲"
                 }
               },
               {
@@ -166,7 +184,45 @@
                 "type": "leaf",
                 "state": {
                   "type": "calendar",
-                  "state": {}
+                  "state": {},
+                  "icon": "calendar-with-checkmark",
+                  "title": "Calendar"
+                }
+              },
+              {
+                "id": "f004a8247c6cf59c",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-archive",
+                  "title": "添加笔记属性"
+                }
+              },
+              {
+                "id": "947ff9c8fc940254",
+                "type": "leaf",
+                "state": {
+                  "type": "git-view",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "插件不再活动"
+                }
+              },
+              {
+                "id": "73c6a8f36ce60b01",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "07_随机过程/01_预备知识.md"
+                  },
+                  "icon": "lucide-info",
+                  "title": "01_预备知识的笔记属性"
                 }
               }
             ],
@@ -174,28 +230,526 @@
           }
         ],
         "direction": "horizontal",
-        "width": 200,
-        "collapsed": true
+        "width": 237.5
       },
       "left-ribbon": {
         "hiddenItems": {
-          "switcher:打开快速切换": false,
           "graph:查看关系图谱": false,
-          "canvas:新建白板": false,
           "templates:插入模板": false,
           "command-palette:打开命令面板": false,
-          "markdown-importer:打开 Markdown 格式转换器": false,
           "workspaces:管理工作区布局": false,
           "daily-notes:打开/创建今天的日记": false,
           "obsidian-excalidraw-plugin:新建绘图文件": false,
+          "media-extended:Open media": false,
+          "obsidian-git:Open Git source control": false,
+          "obsidian-kanban:创建新看板": false,
           "omnisearch:Omnisearch": false,
-          "audio-recorder:开始/结束录音": false,
-          "obsidian-memos:Memos": false
+          "templater-obsidian:Templater": false
         }
       },
-      "active": "2935ca31d1ca79ba",
-      "mtime": "2024-04-23T11:12:52+08:00"
+      "active": "8ef6c153e7a4ed38",
+      "mtime": "2025-02-25T08:43:56+08:00"
+    },
+    "时间序列分析": {
+      "main": {
+        "id": "5acd4a3c6696af5a",
+        "type": "split",
+        "children": [
+          {
+            "id": "dce055f76a215cc3",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1fc710ecc0775bc8",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "13_时间序列分析/lecture-dual.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "lecture-dual"
+                }
+              }
+            ]
+          },
+          {
+            "id": "5e319fb5ea0d1658",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "2480cb1c2734d142",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "13_时间序列分析/00_导论与概率论复习.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "00_导论与概率论复习"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "986ad7381b4aa76c",
+        "type": "split",
+        "children": [
+          {
+            "id": "525ffc1865f10858",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "8ef6c153e7a4ed38",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "文件列表"
+                }
+              },
+              {
+                "id": "68e022ef2943b75b",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "大的",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  },
+                  "icon": "lucide-search",
+                  "title": "搜索"
+                }
+              },
+              {
+                "id": "2a658727394b251b",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {},
+                  "icon": "clock",
+                  "title": "Recent Files"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 200
+      },
+      "right": {
+        "id": "e65120feb84dace3",
+        "type": "split",
+        "children": [
+          {
+            "id": "e0fa6f818c861393",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "d5dd85784b1fe9ec",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "09_线性代数/00_perface.md",
+                    "collapseAll": false,
+                    "extraContext": true,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-coming-in",
+                  "title": "00_perface 的反向链接列表"
+                }
+              },
+              {
+                "id": "89566e4ae967dd41",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "07_随机过程/01_预备知识.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-going-out",
+                  "title": "01_预备知识 的出链列表"
+                }
+              },
+              {
+                "id": "e5d9deda3bdad2bf",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  },
+                  "icon": "lucide-tags",
+                  "title": "标签"
+                }
+              },
+              {
+                "id": "a0580e7d1cb5a5c4",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "13_时间序列分析/00_导论与概率论复习.md",
+                    "followCursor": false,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-list",
+                  "title": "00_导论与概率论复习 的大纲"
+                }
+              },
+              {
+                "id": "2c9ca742cf90c221",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {},
+                  "icon": "calendar-with-checkmark",
+                  "title": "Calendar"
+                }
+              },
+              {
+                "id": "f004a8247c6cf59c",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-archive",
+                  "title": "添加笔记属性"
+                }
+              },
+              {
+                "id": "947ff9c8fc940254",
+                "type": "leaf",
+                "state": {
+                  "type": "git-view",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "插件不再活动"
+                }
+              },
+              {
+                "id": "73c6a8f36ce60b01",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "07_随机过程/01_预备知识.md"
+                  },
+                  "icon": "lucide-info",
+                  "title": "01_预备知识的笔记属性"
+                }
+              }
+            ],
+            "currentTab": 3
+          }
+        ],
+        "direction": "horizontal",
+        "width": 237.5
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "graph:查看关系图谱": false,
+          "templates:插入模板": false,
+          "command-palette:打开命令面板": false,
+          "workspaces:管理工作区布局": false,
+          "daily-notes:打开/创建今天的日记": false,
+          "obsidian-excalidraw-plugin:新建绘图文件": false,
+          "media-extended:Open media": false,
+          "obsidian-git:Open Git source control": false,
+          "obsidian-kanban:创建新看板": false,
+          "omnisearch:Omnisearch": false,
+          "templater-obsidian:Templater": false
+        }
+      },
+      "active": "2480cb1c2734d142",
+      "mtime": "2025-02-25T08:44:16+08:00"
+    },
+    "证券投资学": {
+      "main": {
+        "id": "5acd4a3c6696af5a",
+        "type": "split",
+        "children": [
+          {
+            "id": "dce055f76a215cc3",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1fc710ecc0775bc8",
+                "type": "leaf",
+                "state": {
+                  "type": "pdf",
+                  "state": {
+                    "file": "11_证券投资学/证券投资学.pdf"
+                  },
+                  "icon": "lucide-file-text",
+                  "title": "证券投资学"
+                }
+              }
+            ]
+          },
+          {
+            "id": "5e319fb5ea0d1658",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "2480cb1c2734d142",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "11_证券投资学/01_证券投资工具.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "01_证券投资工具"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "986ad7381b4aa76c",
+        "type": "split",
+        "children": [
+          {
+            "id": "525ffc1865f10858",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "8ef6c153e7a4ed38",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "文件列表"
+                }
+              },
+              {
+                "id": "68e022ef2943b75b",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "大的",
+                    "matchingCase": false,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  },
+                  "icon": "lucide-search",
+                  "title": "搜索"
+                }
+              },
+              {
+                "id": "2a658727394b251b",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {},
+                  "icon": "clock",
+                  "title": "Recent Files"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 200
+      },
+      "right": {
+        "id": "e65120feb84dace3",
+        "type": "split",
+        "children": [
+          {
+            "id": "e0fa6f818c861393",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "d5dd85784b1fe9ec",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "09_线性代数/00_perface.md",
+                    "collapseAll": false,
+                    "extraContext": true,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-coming-in",
+                  "title": "00_perface 的反向链接列表"
+                }
+              },
+              {
+                "id": "89566e4ae967dd41",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "07_随机过程/01_预备知识.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-going-out",
+                  "title": "01_预备知识 的出链列表"
+                }
+              },
+              {
+                "id": "e5d9deda3bdad2bf",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  },
+                  "icon": "lucide-tags",
+                  "title": "标签"
+                }
+              },
+              {
+                "id": "a0580e7d1cb5a5c4",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "11_证券投资学/证券投资学.pdf",
+                    "followCursor": false,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-list",
+                  "title": "证券投资学 的大纲"
+                }
+              },
+              {
+                "id": "2c9ca742cf90c221",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {},
+                  "icon": "calendar-with-checkmark",
+                  "title": "Calendar"
+                }
+              },
+              {
+                "id": "f004a8247c6cf59c",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-archive",
+                  "title": "添加笔记属性"
+                }
+              },
+              {
+                "id": "947ff9c8fc940254",
+                "type": "leaf",
+                "state": {
+                  "type": "git-view",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "插件不再活动"
+                }
+              },
+              {
+                "id": "73c6a8f36ce60b01",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "07_随机过程/01_预备知识.md"
+                  },
+                  "icon": "lucide-info",
+                  "title": "01_预备知识的笔记属性"
+                }
+              }
+            ],
+            "currentTab": 3
+          }
+        ],
+        "direction": "horizontal",
+        "width": 237.5
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "graph:查看关系图谱": false,
+          "templates:插入模板": false,
+          "command-palette:打开命令面板": false,
+          "workspaces:管理工作区布局": false,
+          "daily-notes:打开/创建今天的日记": false,
+          "obsidian-excalidraw-plugin:新建绘图文件": false,
+          "media-extended:Open media": false,
+          "obsidian-git:Open Git source control": false,
+          "obsidian-kanban:创建新看板": false,
+          "omnisearch:Omnisearch": false,
+          "templater-obsidian:Templater": false
+        }
+      },
+      "active": "1fc710ecc0775bc8",
+      "mtime": "2025-02-25T08:44:46+08:00"
     }
   },
-  "active": "计量经济学网课"
+  "active": "时间序列分析"
 }
