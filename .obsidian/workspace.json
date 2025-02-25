@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "14_发展经济学/发展经济学拍屏ppt.pdf"
+                "file": "13_时间序列分析/lecture-dual.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "发展经济学拍屏ppt"
+              "title": "lecture-dual"
             }
           }
         ]
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14_发展经济学/01_什么是发展经济学.md",
+                "file": "13_时间序列分析/00_导论与概率论复习.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -46,7 +46,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_什么是发展经济学"
+              "title": "00_导论与概率论复习"
             }
           }
         ]
@@ -169,13 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14_发展经济学/01_什么是发展经济学.md",
+                "file": "13_时间序列分析/00_导论与概率论复习.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01_什么是发展经济学 的大纲"
+              "title": "00_导论与概率论复习 的大纲"
             }
           },
           {
@@ -248,8 +248,8 @@
   },
   "active": "2480cb1c2734d142",
   "lastOpenFiles": [
-    "14_发展经济学/发展经济学拍屏ppt.pdf",
     "14_发展经济学/01_什么是发展经济学.md",
+    "14_发展经济学/发展经济学拍屏ppt.pdf",
     "13_时间序列分析/01_介绍时间序列.md",
     "99_学习情况记录/2025-02-25——星期二.md",
     "13_时间序列分析/00_导论与概率论复习.md",
