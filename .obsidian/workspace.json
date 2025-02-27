@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "14_发展经济学/发展经济学拍屏ppt.pdf"
+                "file": "13_时间序列分析/lecture-dual.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "发展经济学拍屏ppt"
+              "title": "lecture-dual"
             }
           }
         ]
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14_发展经济学/01_什么是发展经济学.md",
+                "file": "13_时间序列分析/00_导论与概率论复习.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -46,16 +46,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_什么是发展经济学"
+              "title": "00_导论与概率论复习"
             }
           },
           {
-            "id": "8c1c4cda16e085f4",
+            "id": "4f9fa9f2ca4732c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14_发展经济学/02_不同国家的经济发展模式.md",
+                "file": "13_时间序列分析/01_介绍时间序列.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -70,11 +70,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "02_不同国家的经济发展模式"
+              "title": "01_介绍时间序列"
+            }
+          },
+          {
+            "id": "bce08cf682e0d78d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/02_差分方程Difference Equation.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "02_差分方程Difference Equation"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -194,13 +218,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14_发展经济学/02_不同国家的经济发展模式.md",
+                "file": "00_inbox/02_差分方程Difference Equation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "02_不同国家的经济发展模式 的大纲"
+              "title": "02_差分方程Difference Equation 的大纲"
             }
           },
           {
@@ -271,11 +295,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8c1c4cda16e085f4",
+  "active": "bce08cf682e0d78d",
   "lastOpenFiles": [
-    "14_发展经济学/发展经济学拍屏ppt.pdf",
-    "14_发展经济学/02_不同国家的经济发展模式.md",
+    "13_时间序列分析/lecture-dual.pdf",
+    "00_inbox/02_差分方程Difference Equation.md",
+    "13_时间序列分析/01_介绍时间序列.md",
     "14_发展经济学/01_什么是发展经济学.md",
+    "99_学习情况记录/2025-02-27——星期四.md",
+    "14_发展经济学/02_不同国家的经济发展模式.md",
+    "14_发展经济学/发展经济学拍屏ppt.pdf",
     "11_证券投资学/01_证券投资工具.md",
     "11_证券投资学/00_导论.md",
     "98_attachment/Pasted image 20250226152919.png",
@@ -283,9 +311,7 @@
     "11_证券投资学/证券投资学.pdf",
     "14_发展经济学/00_导论和考试相关.md",
     "13_时间序列分析/00_导论与概率论复习.md",
-    "13_时间序列分析/01_介绍时间序列.md",
     "99_学习情况记录/2025-02-25——星期二.md",
-    "13_时间序列分析/lecture-dual.pdf",
     "08_财务管理/02_财务报表分析和财务预测.md",
     "08_财务管理/01_财务管理概述.md",
     "00_inbox/未命名.md",
@@ -305,8 +331,6 @@
     "02_game theory/02_初步认识博弈.md",
     "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md",
-    "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
-    "10_多元统计分析/考试内容.md",
     "10_多元统计分析/WechatIMG1755.jpg",
     "12_金融机构与风险管理",
     "11_证券投资学",

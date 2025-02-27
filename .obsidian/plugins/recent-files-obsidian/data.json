@@ -1,16 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "02_",
+      "path": "00_inbox/02_.md"
+    },
+    {
+      "basename": "lecture-dual",
+      "path": "13_时间序列分析/lecture-dual.pdf"
+    },
+    {
+      "basename": "01_介绍时间序列",
+      "path": "13_时间序列分析/01_介绍时间序列.md"
+    },
+    {
+      "basename": "01_什么是发展经济学",
+      "path": "14_发展经济学/01_什么是发展经济学.md"
+    },
+    {
+      "basename": "2025-02-27——星期四",
+      "path": "99_学习情况记录/2025-02-27——星期四.md"
+    },
+    {
       "basename": "02_不同国家的经济发展模式",
       "path": "14_发展经济学/02_不同国家的经济发展模式.md"
     },
     {
       "basename": "发展经济学拍屏ppt",
       "path": "14_发展经济学/发展经济学拍屏ppt.pdf"
-    },
-    {
-      "basename": "01_什么是发展经济学",
-      "path": "14_发展经济学/01_什么是发展经济学.md"
     },
     {
       "basename": "01_证券投资工具",
@@ -33,16 +49,8 @@
       "path": "13_时间序列分析/00_导论与概率论复习.md"
     },
     {
-      "basename": "01_介绍时间序列",
-      "path": "13_时间序列分析/01_介绍时间序列.md"
-    },
-    {
       "basename": "2025-02-25——星期二",
       "path": "99_学习情况记录/2025-02-25——星期二.md"
-    },
-    {
-      "basename": "lecture-dual",
-      "path": "13_时间序列分析/lecture-dual.pdf"
     },
     {
       "basename": "02_财务报表分析和财务预测",
@@ -191,14 +199,6 @@
     {
       "basename": "第1次作业补充",
       "path": "02_game theory/第1次作业补充.pdf"
-    },
-    {
-      "basename": "第1次作业",
-      "path": "02_game theory/第1次作业.pdf"
-    },
-    {
-      "basename": "07_子博弈不完全信息",
-      "path": "02_game theory/07_子博弈不完全信息.md"
     }
   ],
   "omittedPaths": [],
