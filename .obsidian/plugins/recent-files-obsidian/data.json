@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "02_不同国家的经济发展模式",
+      "path": "14_发展经济学/02_不同国家的经济发展模式.md"
+    },
+    {
+      "basename": "发展经济学拍屏ppt",
+      "path": "14_发展经济学/发展经济学拍屏ppt.pdf"
+    },
+    {
+      "basename": "01_什么是发展经济学",
+      "path": "14_发展经济学/01_什么是发展经济学.md"
+    },
+    {
       "basename": "01_证券投资工具",
       "path": "11_证券投资学/01_证券投资工具.md"
+    },
+    {
+      "basename": "00_导论",
+      "path": "11_证券投资学/00_导论.md"
     },
     {
       "basename": "证券投资学",
@@ -17,24 +33,12 @@
       "path": "13_时间序列分析/00_导论与概率论复习.md"
     },
     {
-      "basename": "01_什么是发展经济学",
-      "path": "14_发展经济学/01_什么是发展经济学.md"
-    },
-    {
-      "basename": "发展经济学拍屏ppt",
-      "path": "14_发展经济学/发展经济学拍屏ppt.pdf"
-    },
-    {
       "basename": "01_介绍时间序列",
       "path": "13_时间序列分析/01_介绍时间序列.md"
     },
     {
       "basename": "2025-02-25——星期二",
       "path": "99_学习情况记录/2025-02-25——星期二.md"
-    },
-    {
-      "basename": "00_导论",
-      "path": "11_证券投资学/00_导论.md"
     },
     {
       "basename": "lecture-dual",
@@ -195,10 +199,6 @@
     {
       "basename": "07_子博弈不完全信息",
       "path": "02_game theory/07_子博弈不完全信息.md"
-    },
-    {
-      "basename": "04_多元正态分布The Multivariate Normal Distribution",
-      "path": "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
     }
   ],
   "omittedPaths": [],

@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "11_证券投资学/证券投资学.pdf"
+                "file": "14_发展经济学/发展经济学拍屏ppt.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "证券投资学"
+              "title": "发展经济学拍屏ppt"
             }
           }
         ]
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/01_证券投资工具.md",
+                "file": "14_发展经济学/01_什么是发展经济学.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -46,10 +46,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_证券投资工具"
+              "title": "01_什么是发展经济学"
+            }
+          },
+          {
+            "id": "8c1c4cda16e085f4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "14_发展经济学/02_不同国家的经济发展模式.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "02_不同国家的经济发展模式"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -169,13 +194,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/01_证券投资工具.md",
+                "file": "14_发展经济学/02_不同国家的经济发展模式.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01_证券投资工具 的大纲"
+              "title": "02_不同国家的经济发展模式 的大纲"
             }
           },
           {
@@ -246,19 +271,20 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2480cb1c2734d142",
+  "active": "8c1c4cda16e085f4",
   "lastOpenFiles": [
+    "14_发展经济学/发展经济学拍屏ppt.pdf",
+    "14_发展经济学/02_不同国家的经济发展模式.md",
+    "14_发展经济学/01_什么是发展经济学.md",
+    "11_证券投资学/01_证券投资工具.md",
+    "11_证券投资学/00_导论.md",
     "98_attachment/Pasted image 20250226152919.png",
     "98_attachment/Pasted image 20250226150044.png",
     "11_证券投资学/证券投资学.pdf",
-    "11_证券投资学/01_证券投资工具.md",
     "14_发展经济学/00_导论和考试相关.md",
     "13_时间序列分析/00_导论与概率论复习.md",
-    "14_发展经济学/01_什么是发展经济学.md",
-    "14_发展经济学/发展经济学拍屏ppt.pdf",
     "13_时间序列分析/01_介绍时间序列.md",
     "99_学习情况记录/2025-02-25——星期二.md",
-    "11_证券投资学/00_导论.md",
     "13_时间序列分析/lecture-dual.pdf",
     "08_财务管理/02_财务报表分析和财务预测.md",
     "08_财务管理/01_财务管理概述.md",
@@ -282,7 +308,6 @@
     "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
     "10_多元统计分析/考试内容.md",
     "10_多元统计分析/WechatIMG1755.jpg",
-    "10_多元统计分析/07_多元线性回归multivariate linear regression.md",
     "12_金融机构与风险管理",
     "11_证券投资学",
     "02_game theory/第3次作业.pdf",
@@ -293,7 +318,6 @@
     "98_attachment/Pasted image 20241202143143.png",
     "98_attachment/Pasted image 20241116152534.png",
     "98_attachment/Pasted image 20241116152226.png",
-    "98_attachment/Pasted image 20241116152159.png",
     "01_Econometrics/未命名.canvas",
     "04_货币银行学/1_引言/未命名.canvas"
   ]
