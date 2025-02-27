@@ -1,8 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "02_",
-      "path": "00_inbox/02_.md"
+      "basename": "未命名 1",
+      "path": "00_inbox/未命名 1.md"
+    },
+    {
+      "basename": "02_差分方程Difference Equation",
+      "path": "00_inbox/02_差分方程Difference Equation.md"
     },
     {
       "basename": "lecture-dual",
@@ -195,10 +199,6 @@
     {
       "basename": "第2次作业",
       "path": "02_game theory/第2次作业.pdf"
-    },
-    {
-      "basename": "第1次作业补充",
-      "path": "02_game theory/第1次作业补充.pdf"
     }
   ],
   "omittedPaths": [],
