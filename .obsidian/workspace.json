@@ -103,7 +103,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/00_GPT笔记.md",
+                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -118,7 +118,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00_GPT笔记"
+              "title": "02_差分方程Difference Equation"
             }
           }
         ],
@@ -241,13 +241,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/00_GPT笔记.md",
+                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "00_GPT笔记 的大纲"
+              "title": "02_差分方程Difference Equation 的大纲"
             }
           },
           {
@@ -320,8 +320,8 @@
   },
   "active": "bac6eeeba650ed47",
   "lastOpenFiles": [
-    "13_时间序列分析/02_差分方程Difference Equation.md",
     "00_inbox/00_GPT笔记.md",
+    "13_时间序列分析/02_差分方程Difference Equation.md",
     "13_时间序列分析/lecture-dual.pdf",
     "13_时间序列分析/01_介绍时间序列.md",
     "14_发展经济学/01_什么是发展经济学.md",
