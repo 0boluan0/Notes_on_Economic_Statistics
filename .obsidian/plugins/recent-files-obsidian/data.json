@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "证券投资学",
+      "path": "11_证券投资学/证券投资学.pdf"
+    },
+    {
+      "basename": "01_证券投资工具",
+      "path": "11_证券投资学/01_证券投资工具.md"
+    },
+    {
+      "basename": "02_证券市场",
+      "path": "11_证券投资学/02_证券市场.md"
+    },
+    {
       "basename": "02_差分方程Difference Equation",
       "path": "13_时间序列分析/02_差分方程Difference Equation.md"
     },
@@ -33,16 +45,8 @@
       "path": "14_发展经济学/发展经济学拍屏ppt.pdf"
     },
     {
-      "basename": "01_证券投资工具",
-      "path": "11_证券投资学/01_证券投资工具.md"
-    },
-    {
       "basename": "00_导论",
       "path": "11_证券投资学/00_导论.md"
-    },
-    {
-      "basename": "证券投资学",
-      "path": "11_证券投资学/证券投资学.pdf"
     },
     {
       "basename": "00_导论和考试相关",
@@ -195,10 +199,6 @@
     {
       "basename": "第3次作业",
       "path": "02_game theory/第3次作业.pdf"
-    },
-    {
-      "basename": "第2次作业",
-      "path": "02_game theory/第2次作业.pdf"
     }
   ],
   "omittedPaths": [],

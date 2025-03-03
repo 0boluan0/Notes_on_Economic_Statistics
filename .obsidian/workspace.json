@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "13_时间序列分析/lecture-dual.pdf"
+                "file": "11_证券投资学/证券投资学.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "lecture-dual"
+              "title": "证券投资学"
             }
           }
         ]
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/00_导论与概率论复习.md",
+                "file": "11_证券投资学/01_证券投资工具.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -46,16 +46,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00_导论与概率论复习"
+              "title": "01_证券投资工具"
             }
           },
           {
-            "id": "4f9fa9f2ca4732c6",
+            "id": "58b6aa2b9b514b8d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/01_介绍时间序列.md",
+                "file": "11_证券投资学/01_证券投资工具.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -70,59 +70,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_介绍时间序列"
-            }
-          },
-          {
-            "id": "bce08cf682e0d78d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "02_差分方程Difference Equation"
-            }
-          },
-          {
-            "id": "bac6eeeba650ed47",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "02_差分方程Difference Equation"
+              "title": "01_证券投资工具"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -154,7 +106,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "大的",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -241,13 +193,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
+                "file": "11_证券投资学/证券投资学.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "02_差分方程Difference Equation 的大纲"
+              "title": "证券投资学 的大纲"
             }
           },
           {
@@ -318,21 +270,22 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "bac6eeeba650ed47",
+  "active": "1fc710ecc0775bc8",
   "lastOpenFiles": [
-    "00_inbox/00_GPT笔记.md",
+    "11_证券投资学/01_证券投资工具.md",
+    "11_证券投资学/02_证券市场.md",
+    "11_证券投资学/证券投资学.pdf",
     "13_时间序列分析/02_差分方程Difference Equation.md",
+    "00_inbox/00_GPT笔记.md",
     "13_时间序列分析/lecture-dual.pdf",
     "13_时间序列分析/01_介绍时间序列.md",
     "14_发展经济学/01_什么是发展经济学.md",
     "99_学习情况记录/2025-02-27——星期四.md",
     "14_发展经济学/02_不同国家的经济发展模式.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
-    "11_证券投资学/01_证券投资工具.md",
     "11_证券投资学/00_导论.md",
     "98_attachment/Pasted image 20250226152919.png",
     "98_attachment/Pasted image 20250226150044.png",
-    "11_证券投资学/证券投资学.pdf",
     "14_发展经济学/00_导论和考试相关.md",
     "13_时间序列分析/00_导论与概率论复习.md",
     "99_学习情况记录/2025-02-25——星期二.md",
@@ -354,7 +307,6 @@
     "99_学习情况记录/2025-01-19——星期日.md",
     "02_game theory/02_初步认识博弈.md",
     "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
-    "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md",
     "10_多元统计分析/WechatIMG1755.jpg",
     "12_金融机构与风险管理",
     "11_证券投资学",
