@@ -575,8 +575,33 @@
                   "icon": "lucide-file",
                   "title": "01_证券投资工具"
                 }
+              },
+              {
+                "id": "58b6aa2b9b514b8d",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "11_证券投资学/01_证券投资工具.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "01_证券投资工具"
+                }
               }
-            ]
+            ],
+            "currentTab": 1
           }
         ],
         "direction": "vertical"
@@ -608,7 +633,7 @@
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "大的",
+                    "query": "",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
@@ -695,13 +720,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "11_证券投资学/证券投资学.pdf",
+                    "file": "11_证券投资学/01_证券投资工具.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "证券投资学 的大纲"
+                  "title": "01_证券投资工具 的大纲"
                 }
               },
               {
@@ -772,8 +797,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "1fc710ecc0775bc8",
-      "mtime": "2025-02-25T08:44:46+08:00"
+      "active": "58b6aa2b9b514b8d",
+      "mtime": "2025-03-03T20:57:57+08:00"
     }
   },
   "active": "证券投资学"

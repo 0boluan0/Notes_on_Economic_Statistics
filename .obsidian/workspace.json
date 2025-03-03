@@ -11,10 +11,12 @@
             "id": "1fc710ecc0775bc8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
+              "type": "pdf",
+              "state": {
+                "file": "11_证券投资学/证券投资学.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "证券投资学"
             }
           }
         ]
@@ -191,12 +193,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "11_证券投资学/01_证券投资工具.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "01_证券投资工具 的大纲"
             }
           },
           {
@@ -267,7 +270,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1fc710ecc0775bc8",
+  "active": "58b6aa2b9b514b8d",
   "lastOpenFiles": [
     "11_证券投资学/证券投资学.pdf",
     "11_证券投资学/01_证券投资工具.md",
