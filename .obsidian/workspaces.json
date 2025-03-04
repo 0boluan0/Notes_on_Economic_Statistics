@@ -307,7 +307,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "00_inbox/01_介绍时间序列.md",
+                    "file": "13_时间序列分析/02_差分方程Difference Equation.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -322,7 +322,7 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "01_介绍时间序列"
+                  "title": "02_差分方程Difference Equation"
                 }
               }
             ],
@@ -445,13 +445,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "00_inbox/01_介绍时间序列.md",
+                    "file": "13_时间序列分析/02_差分方程Difference Equation.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "01_介绍时间序列 的大纲"
+                  "title": "02_差分方程Difference Equation 的大纲"
                 }
               },
               {
@@ -523,7 +523,7 @@
         }
       },
       "active": "4f9fa9f2ca4732c6",
-      "mtime": "2025-02-25T10:50:24+08:00"
+      "mtime": "2025-03-04T10:15:39+08:00"
     },
     "证券投资学": {
       "main": {
@@ -801,5 +801,5 @@
       "mtime": "2025-03-03T20:57:57+08:00"
     }
   },
-  "active": "发展经济学"
+  "active": "时间序列分析"
 }
