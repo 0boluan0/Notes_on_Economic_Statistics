@@ -22,5 +22,6 @@
   "obsidian-charts",
   "templater-obsidian",
   "obsidian-tikzjax",
-  "code-emitter"
+  "code-emitter",
+  "obsidian-latex-suite"
 ]
