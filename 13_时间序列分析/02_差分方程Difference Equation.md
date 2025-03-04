@@ -7,7 +7,6 @@
 
 ## 1.2术语:差分算子Difference operator
 
-
 >[!NOTE] 差分算子 $\Delta$的定义
 > 定义一阶差分为 $\Delta y_t \equiv y_t - y_{t-1}$，表示变量在相邻两个时期的变化量。例如，如果 $y_t$ 是某期的值，那么 $\Delta y_t$ 就是 $y_t$ 与前一期 $y_{t-1}$ 之差。 
 > 
@@ -34,8 +33,7 @@ $$T_t = 1 + 0.1 t, \quad S_t = 1.6 \sin\left(\frac{t\pi}{6}\right), \quad I_t = 
 2. **季节成分（Seasonal Component）$S_t$**  
    季节项 $S_t = 1.6 \sin(t\pi/6)$ 采用正弦函数，表示 $y_t$ 随着时间 $t$ 具有周期性变化。周期为 $12$（因为 $\sin$ 函数的周期是 $2\pi$，即 $t\pi/6 = 2\pi$ 对应 $t=12$），说明该数据可能有**年度季节性**（比如按月变化的经济指标）。
 3. **不规则成分（Irregular Component）$I_t$**  
-   不规则项 $I_t$ 由一阶自回归模型（AR(1) 过程）给出：
-   $$I_t = 0.7 I_{t-1} + \varepsilon_t$$
+   不规则项 $I_t$ 由一阶自回归模型（AR(1) 过程）给出：$$I_t = 0.7 I_{t-1} + \varepsilon_t$$
    其中 $\varepsilon_t$ 是随机扰动，表示无法预测的随机变化。这个方程表示 $I_t$ 依赖于其前一期值 $I_{t-1}$，并受到随机冲击的影响。这是一种**平稳时间序列模型**，如果 $|\phi| < 1$（这里 $\phi = 0.7$），则该过程是均值回归的，不会发散。
 4. **差分方程（Difference Equation）**  
    差分方程本质上是描述变量如何通过**过去的滞后值**和**当前时间点的信息**来决定当前值的方程。在这里：
@@ -128,6 +126,8 @@ $$y_t = a_0 + \sum_{i=1}^n a_i \, y_{t-i} + x_t$$
 # 3.蛛网模型 Cobweb Model
 
 # 4. 解齐次微分方程Solving Homogeneous Difference Equations
+
+
 
 # 5. 找特解Finding Particular Solution
 
