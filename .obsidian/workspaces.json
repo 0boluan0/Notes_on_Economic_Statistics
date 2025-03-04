@@ -33,7 +33,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "14_发展经济学/01_什么是发展经济学.md",
+                    "file": "14_发展经济学/02_不同国家的经济发展模式.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -48,7 +48,7 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "01_什么是发展经济学"
+                  "title": "02_不同国家的经济发展模式"
                 }
               }
             ]
@@ -170,13 +170,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "14_发展经济学/发展经济学拍屏ppt.pdf",
+                    "file": "14_发展经济学/02_不同国家的经济发展模式.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "01_什么是发展经济学 的大纲"
+                  "title": "02_不同国家的经济发展模式 的大纲"
                 }
               },
               {
@@ -247,8 +247,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "8ef6c153e7a4ed38",
-      "mtime": "2025-02-25T08:43:56+08:00"
+      "active": "2480cb1c2734d142",
+      "mtime": "2025-03-04T08:02:49+08:00"
     },
     "时间序列分析": {
       "main": {
@@ -801,5 +801,5 @@
       "mtime": "2025-03-03T20:57:57+08:00"
     }
   },
-  "active": "证券投资学"
+  "active": "发展经济学"
 }
