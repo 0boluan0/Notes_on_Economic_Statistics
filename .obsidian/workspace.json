@@ -73,7 +73,8 @@
               "title": "02_证券市场"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -193,13 +194,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/01_证券投资工具.md",
+                "file": "11_证券投资学/02_证券市场.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01_证券投资工具 的大纲"
+              "title": "02_证券市场 的大纲"
             }
           },
           {
@@ -270,10 +271,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2480cb1c2734d142",
+  "active": "58b6aa2b9b514b8d",
   "lastOpenFiles": [
-    "11_证券投资学/02_证券市场.md",
     "11_证券投资学/01_证券投资工具.md",
+    "11_证券投资学/02_证券市场.md",
     "14_发展经济学/02_不同国家的经济发展模式.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "98_attachment/Pasted image 20250304201431.png",
