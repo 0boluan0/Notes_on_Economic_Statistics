@@ -582,7 +582,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "11_证券投资学/01_证券投资工具.md",
+                    "file": "11_证券投资学/02_证券市场.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -597,11 +597,10 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "01_证券投资工具"
+                  "title": "02_证券市场"
                 }
               }
-            ],
-            "currentTab": 1
+            ]
           }
         ],
         "direction": "vertical"
@@ -658,7 +657,8 @@
           }
         ],
         "direction": "horizontal",
-        "width": 200
+        "width": 200,
+        "collapsed": true
       },
       "right": {
         "id": "e65120feb84dace3",
@@ -797,9 +797,9 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "58b6aa2b9b514b8d",
-      "mtime": "2025-03-03T20:57:57+08:00"
+      "active": "2480cb1c2734d142",
+      "mtime": "2025-03-05T11:00:08+08:00"
     }
   },
-  "active": "发展经济学"
+  "active": "证券投资学"
 }
