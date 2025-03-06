@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14_发展经济学/02_不同国家的经济发展模式.md",
+                "file": "99_学习情况记录/2025-03-06——星期四.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -46,7 +46,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "02_不同国家的经济发展模式"
+              "title": "2025-03-06——星期四"
             }
           }
         ]
@@ -169,13 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14_发展经济学/发展经济学拍屏ppt.pdf",
+                "file": "99_学习情况记录/2025-03-06——星期四.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "发展经济学拍屏ppt 的大纲"
+              "title": "2025-03-06——星期四 的大纲"
             }
           },
           {
@@ -246,9 +246,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1fc710ecc0775bc8",
+  "active": "2480cb1c2734d142",
   "lastOpenFiles": [
     "14_发展经济学/02_不同国家的经济发展模式.md",
+    "99_学习情况记录/2025-03-06——星期四.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "13_时间序列分析/02_差分方程Difference Equation.md",
     "11_证券投资学/01_证券投资工具.md",
