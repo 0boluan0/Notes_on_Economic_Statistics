@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "14_发展经济学/发展经济学拍屏ppt.pdf"
+                "file": "13_时间序列分析/lecture-dual.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "发展经济学拍屏ppt"
+              "title": "lecture-dual"
             }
           }
         ]
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2025-03-06——星期四.md",
+                "file": "13_时间序列分析/00_导论与概率论复习.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -46,10 +46,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-03-06——星期四"
+              "title": "00_导论与概率论复习"
+            }
+          },
+          {
+            "id": "4f9fa9f2ca4732c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "02_差分方程Difference Equation"
+            }
+          },
+          {
+            "id": "d5e69d98f05694f8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/03_平稳时间序列模型.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "03_平稳时间序列模型"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -169,13 +218,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2025-03-06——星期四.md",
+                "file": "13_时间序列分析/03_平稳时间序列模型.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025-03-06——星期四 的大纲"
+              "title": "03_平稳时间序列模型 的大纲"
             }
           },
           {
@@ -246,12 +295,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2480cb1c2734d142",
+  "active": "d5e69d98f05694f8",
   "lastOpenFiles": [
-    "14_发展经济学/02_不同国家的经济发展模式.md",
-    "99_学习情况记录/2025-03-06——星期四.md",
-    "14_发展经济学/发展经济学拍屏ppt.pdf",
     "13_时间序列分析/02_差分方程Difference Equation.md",
+    "00_inbox/未命名 1.md",
+    "14_发展经济学/发展经济学拍屏ppt.pdf",
+    "99_学习情况记录/2025-03-06——星期四.md",
+    "14_发展经济学/02_不同国家的经济发展模式.md",
     "11_证券投资学/01_证券投资工具.md",
     "11_证券投资学/02_证券市场.md",
     "98_attachment/Pasted image 20250304201431.png",
@@ -267,7 +317,6 @@
     "00_inbox/未命名 2.md",
     "13_时间序列分析/01_介绍时间序列.md",
     "13_时间序列分析/00_导论与概率论复习.md",
-    "00_inbox/未命名 1.md",
     "14_发展经济学/01_什么是发展经济学.md",
     "13_时间序列分析/lecture-dual.pdf",
     "99_学习情况记录/2025-02-27——星期四.md",
@@ -283,7 +332,6 @@
     "14_发展经济学",
     "98_attachment/Pasted image 20250219152017.png",
     "10_多元统计分析/05_ 总体平均向量的推论.md",
-    "10_多元统计分析/11_分类与判别Discrimination and Classifications.md",
     "98_attachment/Pasted image 20250217162227.png",
     "13_时间序列分析",
     "10_多元统计分析/WechatIMG1755.jpg",
