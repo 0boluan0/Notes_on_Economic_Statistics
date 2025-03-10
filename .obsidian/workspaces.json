@@ -348,6 +348,30 @@
                   "icon": "lucide-file",
                   "title": "02_差分方程Difference Equation"
                 }
+              },
+              {
+                "id": "9ad310617bbd94af",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "13_时间序列分析/03_平稳时间序列模型.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "03_平稳时间序列模型"
+                }
               }
             ]
           }
@@ -406,8 +430,7 @@
           }
         ],
         "direction": "horizontal",
-        "width": 200,
-        "collapsed": true
+        "width": 200
       },
       "right": {
         "id": "e65120feb84dace3",
@@ -469,13 +492,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "13_时间序列分析/lecture.pdf",
+                    "file": "13_时间序列分析/00_导论与概率论复习.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "lecture 的大纲"
+                  "title": "00_导论与概率论复习 的大纲"
                 }
               },
               {
@@ -546,8 +569,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "1fc710ecc0775bc8",
-      "mtime": "2025-03-10T14:49:13+08:00"
+      "active": "2480cb1c2734d142",
+      "mtime": "2025-03-10T18:15:37+08:00"
     },
     "证券投资学": {
       "main": {
@@ -850,5 +873,5 @@
       "mtime": "2025-03-10T14:53:45+08:00"
     }
   },
-  "active": "证券投资学"
+  "active": "时间序列分析"
 }
