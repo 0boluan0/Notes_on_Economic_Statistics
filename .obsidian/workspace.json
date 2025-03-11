@@ -121,7 +121,8 @@
               "title": "03_平稳时间序列模型"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -241,13 +242,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/00_导论与概率论复习.md",
+                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "00_导论与概率论复习 的大纲"
+              "title": "02_差分方程Difference Equation 的大纲"
             }
           },
           {
@@ -318,10 +319,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2480cb1c2734d142",
+  "active": "4f9fa9f2ca4732c6",
   "lastOpenFiles": [
-    "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/00_导论与概率论复习.md",
+    "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/02_差分方程Difference Equation.md",
     "13_时间序列分析/01_介绍时间序列.md",
     "14_发展经济学/02_不同国家的经济发展模式.md",
