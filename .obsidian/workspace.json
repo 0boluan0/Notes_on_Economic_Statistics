@@ -73,8 +73,7 @@
               "title": "未命名 1"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -194,13 +193,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/未命名 1.md",
+                "file": "14_发展经济学/02_不同国家的经济发展模式.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "未命名 1 的大纲"
+              "title": "02_不同国家的经济发展模式 的大纲"
             }
           },
           {
@@ -271,10 +270,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "fb9989cd3a3faab3",
+  "active": "2480cb1c2734d142",
   "lastOpenFiles": [
-    "14_发展经济学/02_不同国家的经济发展模式.md",
     "00_inbox/未命名 1.md",
+    "14_发展经济学/02_不同国家的经济发展模式.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "13_时间序列分析/00_导论与概率论复习.md",
     "13_时间序列分析/lecture.pdf",
