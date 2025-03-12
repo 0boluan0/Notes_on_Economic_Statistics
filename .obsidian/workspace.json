@@ -96,8 +96,33 @@
               "icon": "lucide-file",
               "title": "03_资产定价理论及其发展"
             }
+          },
+          {
+            "id": "fcc38c45a70c818f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/04_宏观经济分析.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "04_宏观经济分析"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -217,13 +242,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/01_证券投资工具.md",
+                "file": "00_inbox/04_宏观经济分析.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01_证券投资工具 的大纲"
+              "title": "04_宏观经济分析 的大纲"
             }
           },
           {
@@ -294,12 +319,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2480cb1c2734d142",
+  "active": "fcc38c45a70c818f",
   "lastOpenFiles": [
     "11_证券投资学/证券投资学.pdf",
+    "00_inbox/04_宏观经济分析.md",
+    "11_证券投资学/03_资产定价理论及其发展.md",
     "11_证券投资学/01_证券投资工具.md",
     "11_证券投资学/02_证券市场.md",
-    "11_证券投资学/03_资产定价理论及其发展.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
     "13_时间序列分析/00_导论与概率论复习.md",
     "13_时间序列分析/lecture.pdf",
@@ -319,7 +345,6 @@
     "00_inbox/00_GPT笔记.md",
     "98_attachment/Pasted image 20250304114830.png",
     "00_inbox/日记模版.md",
-    "00_inbox/未命名 2.md",
     "14_发展经济学/01_什么是发展经济学.md",
     "99_学习情况记录/2025-02-27——星期四.md",
     "11_证券投资学/00_导论.md",

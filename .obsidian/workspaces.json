@@ -670,9 +670,33 @@
                   "icon": "lucide-file",
                   "title": "03_资产定价理论及其发展"
                 }
+              },
+              {
+                "id": "fcc38c45a70c818f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "00_inbox/04_宏观经济分析.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "04_宏观经济分析"
+                }
               }
             ],
-            "currentTab": 2
+            "currentTab": 3
           }
         ],
         "direction": "vertical"
@@ -792,13 +816,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "11_证券投资学/03_资产定价理论及其发展.md",
+                    "file": "00_inbox/04_宏观经济分析.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "03_资产定价理论及其发展 的大纲"
+                  "title": "04_宏观经济分析 的大纲"
                 }
               },
               {
@@ -869,8 +893,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "1ee6eaa4960fee09",
-      "mtime": "2025-03-10T14:53:45+08:00"
+      "active": "fcc38c45a70c818f",
+      "mtime": "2025-03-12T14:22:59+08:00"
     }
   },
   "active": "证券投资学"
