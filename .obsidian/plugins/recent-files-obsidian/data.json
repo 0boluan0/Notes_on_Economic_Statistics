@@ -5,12 +5,12 @@
       "path": "13_时间序列分析/02_差分方程Difference Equation.md"
     },
     {
-      "basename": "03_平稳时间序列模型",
-      "path": "13_时间序列分析/03_平稳时间序列模型.md"
-    },
-    {
       "basename": "lecture",
       "path": "13_时间序列分析/lecture.pdf"
+    },
+    {
+      "basename": "03_平稳时间序列模型",
+      "path": "13_时间序列分析/03_平稳时间序列模型.md"
     },
     {
       "basename": "00_导论与概率论复习",
