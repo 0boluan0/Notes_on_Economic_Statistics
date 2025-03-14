@@ -6,6 +6,7 @@
       {
         "id": "dce055f76a215cc3",
         "type": "tabs",
+        "dimension": 33.38278931750742,
         "children": [
           {
             "id": "1fc710ecc0775bc8",
@@ -24,6 +25,7 @@
       {
         "id": "5e319fb5ea0d1658",
         "type": "tabs",
+        "dimension": 33.30860534124629,
         "children": [
           {
             "id": "2480cb1c2734d142",
@@ -123,6 +125,37 @@
           }
         ],
         "currentTab": 2
+      },
+      {
+        "id": "de3549b3722e2316",
+        "type": "tabs",
+        "dimension": 33.30860534124629,
+        "children": [
+          {
+            "id": "8f9e28181804ebe3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "02_差分方程Difference Equation"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -319,7 +352,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4f9fa9f2ca4732c6",
+  "active": "8f9e28181804ebe3",
   "lastOpenFiles": [
     "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/02_差分方程Difference Equation.md",
