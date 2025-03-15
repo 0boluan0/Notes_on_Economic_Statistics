@@ -399,6 +399,37 @@
                   "title": "03_平稳时间序列模型"
                 }
               }
+            ],
+            "currentTab": 2
+          },
+          {
+            "id": "5b75566d730c400b",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "aeec949217ff58d2",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "13_时间序列分析/02_差分方程Difference Equation.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "02_差分方程Difference Equation"
+                }
+              }
             ]
           }
         ],
@@ -518,13 +549,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "13_时间序列分析/00_导论与概率论复习.md",
+                    "file": "13_时间序列分析/02_差分方程Difference Equation.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "00_导论与概率论复习 的大纲"
+                  "title": "02_差分方程Difference Equation 的大纲"
                 }
               },
               {
@@ -595,8 +626,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "2480cb1c2734d142",
-      "mtime": "2025-03-10T18:15:37+08:00"
+      "active": "aeec949217ff58d2",
+      "mtime": "2025-03-15T20:03:16+08:00"
     },
     "证券投资学": {
       "main": {

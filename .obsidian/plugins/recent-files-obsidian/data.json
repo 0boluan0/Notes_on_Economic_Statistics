@@ -1,10 +1,6 @@
 {
   "recentFiles": [
     {
-      "basename": "lecture",
-      "path": "13_时间序列分析/lecture.pdf"
-    },
-    {
       "basename": "02_差分方程Difference Equation",
       "path": "13_时间序列分析/02_差分方程Difference Equation.md"
     },
@@ -15,6 +11,26 @@
     {
       "basename": "00_导论与概率论复习",
       "path": "13_时间序列分析/00_导论与概率论复习.md"
+    },
+    {
+      "basename": "01_证券投资工具",
+      "path": "11_证券投资学/01_证券投资工具.md"
+    },
+    {
+      "basename": "02_证券市场",
+      "path": "11_证券投资学/02_证券市场.md"
+    },
+    {
+      "basename": "03_资产定价理论及其发展",
+      "path": "11_证券投资学/03_资产定价理论及其发展.md"
+    },
+    {
+      "basename": "01_介绍时间序列",
+      "path": "13_时间序列分析/01_介绍时间序列.md"
+    },
+    {
+      "basename": "lecture",
+      "path": "13_时间序列分析/lecture.pdf"
     },
     {
       "basename": "02_人口增长与经济发展",
@@ -35,22 +51,6 @@
     {
       "basename": "证券投资学",
       "path": "11_证券投资学/证券投资学.pdf"
-    },
-    {
-      "basename": "03_资产定价理论及其发展",
-      "path": "11_证券投资学/03_资产定价理论及其发展.md"
-    },
-    {
-      "basename": "01_证券投资工具",
-      "path": "11_证券投资学/01_证券投资工具.md"
-    },
-    {
-      "basename": "02_证券市场",
-      "path": "11_证券投资学/02_证券市场.md"
-    },
-    {
-      "basename": "01_介绍时间序列",
-      "path": "13_时间序列分析/01_介绍时间序列.md"
     },
     {
       "basename": "lecture-dual",
