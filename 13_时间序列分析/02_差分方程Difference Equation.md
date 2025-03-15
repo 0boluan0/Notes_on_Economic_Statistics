@@ -528,10 +528,39 @@ $$y_t = \frac{a_0}{,1-a_1,} + \sum_{i=0}^{\infty} a_1^i \varepsilon_{t-i},,$$
 
 
 
+```tikz
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}[scale=3]
+    \def \n {6}                
+    \def \radius {1.5cm}        
+    \def \angle {360/\n}        
+    \foreach \r in {0.5,1,...,1.5} {
+      \draw[gray, thin] (0,0) circle (\r cm);
+    }
+    \foreach \i in {1,...,\n} {
+      \draw[gray, thin] (0,0) -- (\i*\angle: \radius);
+    }
+    \node at (1*\angle: \radius + 0.2cm) {$x_1$};
+    \node at (2*\angle: \radius + 0.2cm) {$x_2$};
+    \node at (3*\angle: \radius + 0.2cm) {$x_3$};
+    \node at (4*\angle: \radius + 0.2cm) {$x_4$};
+    \node at (5*\angle: \radius + 0.2cm) {$x_5$};
+    \node at (6*\angle: \radius + 0.2cm) {$x_6$};
 
+    \draw[red, thick, fill=red!20, fill opacity=0.3] 
+      (1*\angle:1.2cm) -- 
+      (2*\angle:1.4cm) -- 
+      (3*\angle:0.8cm) -- 
+      (4*\angle:1.6cm) -- 
+      (5*\angle:1.0cm) -- 
+      (6*\angle:1.2cm) -- cycle;
+\end{tikzpicture}
+\end{document}
 
-
-
+```
 
 
 
