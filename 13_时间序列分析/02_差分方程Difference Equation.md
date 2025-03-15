@@ -792,10 +792,6 @@ $$y_t = \frac{a_0}{,1-a_1,} + \sum_{i=0}^{\infty} a_1^i \varepsilon_{t-i},,$$
 
 
 
-
-  
-
-
 **线性差分方程**
 
   
