@@ -275,13 +275,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
+                "file": "13_时间序列分析/lecture.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "02_差分方程Difference Equation 的大纲"
+              "title": "lecture 的大纲"
             }
           },
           {
@@ -352,10 +352,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8f9e28181804ebe3",
+  "active": "1fc710ecc0775bc8",
   "lastOpenFiles": [
-    "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/02_差分方程Difference Equation.md",
+    "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/03_平稳时间序列模型.md",
     "13_时间序列分析/00_导论与概率论复习.md",
     "14_发展经济学/02_人口增长与经济发展.md",
