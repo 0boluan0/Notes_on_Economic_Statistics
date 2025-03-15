@@ -186,9 +186,6 @@ $$y_t = a_0 \sum_{i=0}^{\,t+m} a_1^i \;+\; \sum_{i=0}^{\,t+m} a_1^i \, \varepsil
 
 <span style="color: yellow;">是上面特征方程法推广至n阶的应用</span>
 
-
-
-
 它描述了某些市场中**价格与供给-需求**的动态调整过程。当供给对过去价格的反应存在滞后时，市场价格会呈现振荡收敛或发散的行为，形成类似蜘蛛网的轨迹。
 整个市场由三个方程构成
 
@@ -525,54 +522,6 @@ $$y_t = \frac{a_0}{,1-a_1,} + \sum_{i=0}^{\infty} a_1^i \varepsilon_{t-i},,$$
   
 
 综合而言，未定系数法和滞后算子法是求解含随机项差分方程的两种主要技巧。两者本质等价：都是寻找满足方程的冲击响应序列，只是表达形式不同。运用这些方法，我们可以将线性差分方程转化为对冲击的加权和表示，从而更方便地分析其统计性质。
-
-
-
-```tikz
-\documentclass{standalone}
-\usepackage{tikz}
-\usetikzlibrary{calc}
-\begin{document}
-\begin{tikzpicture}[scale=3]
-    \def \n {6}                
-    \def \radius {1.5cm}        
-    \def \angle {360/\n}        
-    \foreach \r in {0.5,1,...,1.5} {
-      \draw[gray, thin] (0,0) circle (\r cm);
-    }
-    \foreach \i in {1,...,\n} {
-      \draw[gray, thin] (0,0) -- (\i*\angle: \radius);
-    }
-    \node at (1*\angle: \radius + 0.2cm) {$x_1$};
-    \node at (2*\angle: \radius + 0.2cm) {$x_2$};
-    \node at (3*\angle: \radius + 0.2cm) {$x_3$};
-    \node at (4*\angle: \radius + 0.2cm) {$x_4$};
-    \node at (5*\angle: \radius + 0.2cm) {$x_5$};
-    \node at (6*\angle: \radius + 0.2cm) {$x_6$};
-
-    \draw[red, thick, fill=red!20, fill opacity=0.3] 
-      (1*\angle:1.2cm) -- 
-      (2*\angle:1.4cm) -- 
-      (3*\angle:0.8cm) -- 
-      (4*\angle:1.6cm) -- 
-      (5*\angle:1.0cm) -- 
-      (6*\angle:1.2cm) -- cycle;
-\end{tikzpicture}
-\end{document}
-
-```
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 **3. 蜘蛛网模型**
