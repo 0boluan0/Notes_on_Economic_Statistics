@@ -190,7 +190,7 @@ $$y_t = a_0 \sum_{i=0}^{\,t+m} a_1^i \;+\; \sum_{i=0}^{\,t+m} a_1^i \, \varepsil
 整个市场由三个方程构成
 • **需求方程：**
 
-$$d_t = a - \gamma p_t, \tag{11}$$
+$$d_t = a - \gamma p_t$$
 
 表示第$t$期商品的需求量$d_t$随当期市场价格$p_t$的降低而增加（$\gamma>0$，价格上升导致需求下降）。
 • **供给方程：**
@@ -198,9 +198,13 @@ $$s_t = b + \beta p_{t}^* + \varepsilon_t$$
 表示第$t$期的供给量$s_t$取决于农民对价格的预期$p_{t}^*$以及一个随机供给冲击$\varepsilon_t$。<span style="color: yellow;">在此处,我们设定</span>$p_{t}^*=p_{t-1}$.<span style="color: yellow;">即本期的供给依据的是上一期的价格.</span>其中$b$为价格为零时的基准供给，$\beta>0$表示预期价格对供给的影响程度，$\varepsilon_t$是均值为零的随机扰动项（如天气导致的产量波动）。
 • **市场出清条件：**
 
-$$s_t = d_t. \tag{13}$$
+$$s_t = d_t$$
 
 在每一期，供给和需求通过价格调整达到均衡。
+
+![[Pasted image 20250316150336.png]]
+
+
 
 # 4. 解齐次微分方程Solving Homogeneous Difference Equations
 
