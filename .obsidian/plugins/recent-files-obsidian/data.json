@@ -5,6 +5,10 @@
       "path": "13_时间序列分析/02_差分方程Difference Equation.md"
     },
     {
+      "basename": "lecture",
+      "path": "13_时间序列分析/lecture.pdf"
+    },
+    {
       "basename": "03_平稳时间序列模型",
       "path": "13_时间序列分析/03_平稳时间序列模型.md"
     },
@@ -27,10 +31,6 @@
     {
       "basename": "01_介绍时间序列",
       "path": "13_时间序列分析/01_介绍时间序列.md"
-    },
-    {
-      "basename": "lecture",
-      "path": "13_时间序列分析/lecture.pdf"
     },
     {
       "basename": "02_人口增长与经济发展",
