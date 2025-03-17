@@ -247,11 +247,7 @@ $$A = p_0 - \frac{a - b}{\gamma + \beta} + \frac{1}{\gamma} \sum_{i=0}^{\infty} 
 
 **4. 齐次差分方程的求解 (Solving Homogeneous Difference Equations)**
 
-  
-
 在上一节，我们已经多次用到**特征根法**求解齐次差分方程。现在对这一方法进行总结和推广。
-
-  
 
 一般地，考虑 $n$阶齐次线性差分方程：
 

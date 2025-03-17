@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "11_证券投资学/证券投资学.pdf"
+                "file": "13_时间序列分析/lecture.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "证券投资学"
+              "title": "lecture"
             }
           }
         ]
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/01_证券投资工具.md",
+                "file": "13_时间序列分析/00_导论与概率论复习.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -46,16 +46,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_证券投资工具"
+              "title": "00_导论与概率论复习"
             }
           },
           {
-            "id": "58b6aa2b9b514b8d",
+            "id": "06a485155c33403c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/02_证券市场.md",
+                "file": "13_时间序列分析/01_介绍时间序列.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -70,16 +70,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "02_证券市场"
+              "title": "01_介绍时间序列"
             }
           },
           {
-            "id": "1ee6eaa4960fee09",
+            "id": "4f9fa9f2ca4732c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/03_资产定价理论及其发展.md",
+                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -94,16 +94,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "03_资产定价理论及其发展"
+              "title": "02_差分方程Difference Equation"
             }
           },
           {
-            "id": "fcc38c45a70c818f",
+            "id": "9ad310617bbd94af",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/04_宏观经济分析.md",
+                "file": "13_时间序列分析/03_平稳时间序列模型.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -118,11 +118,41 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "04_宏观经济分析"
+              "title": "03_平稳时间序列模型"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
+      },
+      {
+        "id": "5b75566d730c400b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aeec949217ff58d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "02_差分方程Difference Equation"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -154,7 +184,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "大的",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -242,13 +272,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/04_宏观经济分析.md",
+                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "04_宏观经济分析 的大纲"
+              "title": "02_差分方程Difference Equation 的大纲"
             }
           },
           {
@@ -319,13 +349,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "fcc38c45a70c818f",
+  "active": "aeec949217ff58d2",
   "lastOpenFiles": [
+    "11_证券投资学/04_宏观经济分析.md",
     "98_attachment/Pasted image 20250317142849.png",
     "98_attachment/Pasted image 20250317141737.png",
     "11_证券投资学/03_资产定价理论及其发展.md",
     "03_public finance财政学/6_先前知识点速览/埃奇沃斯框图.md",
-    "11_证券投资学/04_宏观经济分析.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
     "13_时间序列分析/lecture.pdf",
     "98_attachment/Pasted image 20250316150336.png",
@@ -362,7 +392,6 @@
     "98_attachment/Pasted image 20250219152017.png",
     "98_attachment/Pasted image 20250217162227.png",
     "13_时间序列分析",
-    "10_多元统计分析/WechatIMG1755.jpg",
     "12_金融机构与风险管理",
     "11_证券投资学",
     "02_game theory/第3次作业.pdf",
