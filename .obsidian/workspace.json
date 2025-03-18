@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "13_时间序列分析/lecture.pdf"
+                "file": "14_发展经济学/发展经济学拍屏ppt.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "lecture"
+              "title": "发展经济学拍屏ppt"
             }
           }
         ]
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/00_导论与概率论复习.md",
+                "file": "14_发展经济学/01_不同国家的经济发展模式.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -46,16 +46,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00_导论与概率论复习"
+              "title": "01_不同国家的经济发展模式"
             }
           },
           {
-            "id": "06a485155c33403c",
+            "id": "533203c0de33b546",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/01_介绍时间序列.md",
+                "file": "14_发展经济学/02_人口增长与经济发展.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -70,89 +70,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_介绍时间序列"
-            }
-          },
-          {
-            "id": "4f9fa9f2ca4732c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "02_差分方程Difference Equation"
-            }
-          },
-          {
-            "id": "9ad310617bbd94af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/03_平稳时间序列模型.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "03_平稳时间序列模型"
+              "title": "02_人口增长与经济发展"
             }
           }
         ],
-        "currentTab": 2
-      },
-      {
-        "id": "5b75566d730c400b",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "aeec949217ff58d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "02_差分方程Difference Equation"
-            }
-          }
-        ]
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -272,13 +194,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
+                "file": "14_发展经济学/02_人口增长与经济发展.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "02_差分方程Difference Equation 的大纲"
+              "title": "02_人口增长与经济发展 的大纲"
             }
           },
           {
@@ -349,14 +271,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "aeec949217ff58d2",
+  "active": "533203c0de33b546",
   "lastOpenFiles": [
+    "14_发展经济学/发展经济学拍屏ppt.pdf",
+    "14_发展经济学/02_人口增长与经济发展.md",
+    "13_时间序列分析/02_差分方程Difference Equation.md",
     "11_证券投资学/04_宏观经济分析.md",
     "98_attachment/Pasted image 20250317142849.png",
     "98_attachment/Pasted image 20250317141737.png",
     "11_证券投资学/03_资产定价理论及其发展.md",
     "03_public finance财政学/6_先前知识点速览/埃奇沃斯框图.md",
-    "13_时间序列分析/02_差分方程Difference Equation.md",
     "13_时间序列分析/lecture.pdf",
     "98_attachment/Pasted image 20250316150336.png",
     "13_时间序列分析/03_平稳时间序列模型.md",
@@ -364,8 +288,6 @@
     "11_证券投资学/01_证券投资工具.md",
     "11_证券投资学/02_证券市场.md",
     "13_时间序列分析/01_介绍时间序列.md",
-    "14_发展经济学/02_人口增长与经济发展.md",
-    "14_发展经济学/发展经济学拍屏ppt.pdf",
     "14_发展经济学/01_不同国家的经济发展模式.md",
     "00_inbox/未命名 1.md",
     "14_发展经济学/01_什么是发展经济学.md",
