@@ -209,7 +209,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -348,7 +349,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "aeec949217ff58d2",
+  "active": "4f9fa9f2ca4732c6",
   "lastOpenFiles": [
     "14_发展经济学/02_人口增长与经济发展.md",
     "98_attachment/Pasted image 20250318093842.png",

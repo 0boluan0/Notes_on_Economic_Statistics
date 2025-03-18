@@ -254,6 +254,8 @@ $$y_t^h = A_1 {\alpha_1}^t + A_2t{\alpha_1}^t$$
 
 # 5. 找特解Finding Particular Solution
 
+
+
 ## 5.1 确定性过程的特解 (Particular Solution for Deterministic Process)
 
 
