@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "02_差分方程Difference Equation",
+      "path": "13_时间序列分析/02_差分方程Difference Equation.md"
+    },
+    {
+      "basename": "lecture",
+      "path": "13_时间序列分析/lecture.pdf"
+    },
+    {
+      "basename": "02_证券市场",
+      "path": "11_证券投资学/02_证券市场.md"
+    },
+    {
+      "basename": "2025-03-19——星期三",
+      "path": "99_学习情况记录/2025-03-19——星期三.md"
+    },
+    {
+      "basename": "03_资产定价理论及其发展",
+      "path": "11_证券投资学/03_资产定价理论及其发展.md"
+    },
+    {
+      "basename": "04_宏观经济分析",
+      "path": "11_证券投资学/04_宏观经济分析.md"
+    },
+    {
       "basename": "证券投资学第三次作业",
       "path": "11_证券投资学/证券投资学第三次作业.md"
     },
@@ -9,24 +33,8 @@
       "path": "11_证券投资学/证券投资学.pdf"
     },
     {
-      "basename": "04_宏观经济分析",
-      "path": "11_证券投资学/04_宏观经济分析.md"
-    },
-    {
-      "basename": "03_资产定价理论及其发展",
-      "path": "11_证券投资学/03_资产定价理论及其发展.md"
-    },
-    {
       "basename": "证券投资学第二次作业",
       "path": "11_证券投资学/证券投资学第二次作业.md"
-    },
-    {
-      "basename": "02_证券市场",
-      "path": "11_证券投资学/02_证券市场.md"
-    },
-    {
-      "basename": "02_差分方程Difference Equation",
-      "path": "13_时间序列分析/02_差分方程Difference Equation.md"
     },
     {
       "basename": "未命名",
@@ -47,10 +55,6 @@
     {
       "basename": "埃奇沃斯框图",
       "path": "03_public finance财政学/6_先前知识点速览/埃奇沃斯框图.md"
-    },
-    {
-      "basename": "lecture",
-      "path": "13_时间序列分析/lecture.pdf"
     },
     {
       "basename": "00_导论与概率论复习",
@@ -195,10 +199,6 @@
     {
       "basename": "06_平稳随机过程",
       "path": "07_随机过程/06_平稳随机过程.md"
-    },
-    {
-      "basename": "07_布朗运动与鞅",
-      "path": "07_随机过程/07_布朗运动与鞅.md"
     }
   ],
   "omittedPaths": [],
