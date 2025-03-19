@@ -6,6 +6,7 @@
       {
         "id": "dce055f76a215cc3",
         "type": "tabs",
+        "dimension": 33.33333333333333,
         "children": [
           {
             "id": "1fc710ecc0775bc8",
@@ -24,6 +25,7 @@
       {
         "id": "5e319fb5ea0d1658",
         "type": "tabs",
+        "dimension": 37.0919881305638,
         "children": [
           {
             "id": "2480cb1c2734d142",
@@ -127,6 +129,7 @@
       {
         "id": "5b75566d730c400b",
         "type": "tabs",
+        "dimension": 29.574678536102866,
         "children": [
           {
             "id": "aeec949217ff58d2",
@@ -349,7 +352,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "aeec949217ff58d2",
+  "active": "4f9fa9f2ca4732c6",
   "lastOpenFiles": [
     "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/02_差分方程Difference Equation.md",
