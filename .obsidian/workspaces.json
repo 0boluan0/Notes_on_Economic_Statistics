@@ -284,6 +284,7 @@
           {
             "id": "dce055f76a215cc3",
             "type": "tabs",
+            "dimension": 33.33333333333333,
             "children": [
               {
                 "id": "1fc710ecc0775bc8",
@@ -302,6 +303,7 @@
           {
             "id": "5e319fb5ea0d1658",
             "type": "tabs",
+            "dimension": 37.0919881305638,
             "children": [
               {
                 "id": "2480cb1c2734d142",
@@ -400,11 +402,12 @@
                 }
               }
             ],
-            "currentTab": 2
+            "currentTab": 3
           },
           {
             "id": "5b75566d730c400b",
             "type": "tabs",
+            "dimension": 29.574678536102866,
             "children": [
               {
                 "id": "aeec949217ff58d2",
@@ -429,8 +432,33 @@
                   "icon": "lucide-file",
                   "title": "02_差分方程Difference Equation"
                 }
+              },
+              {
+                "id": "813e4da595edd296",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "13_时间序列分析/03_平稳时间序列模型.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "03_平稳时间序列模型"
+                }
               }
-            ]
+            ],
+            "currentTab": 1
           }
         ],
         "direction": "vertical"
@@ -487,7 +515,8 @@
           }
         ],
         "direction": "horizontal",
-        "width": 200
+        "width": 200,
+        "collapsed": true
       },
       "right": {
         "id": "e65120feb84dace3",
@@ -549,13 +578,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "13_时间序列分析/02_差分方程Difference Equation.md",
+                    "file": "13_时间序列分析/03_平稳时间序列模型.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "02_差分方程Difference Equation 的大纲"
+                  "title": "03_平稳时间序列模型 的大纲"
                 }
               },
               {
@@ -626,8 +655,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "aeec949217ff58d2",
-      "mtime": "2025-03-15T20:03:16+08:00"
+      "active": "813e4da595edd296",
+      "mtime": "2025-03-19T19:59:21+08:00"
     },
     "证券投资学": {
       "main": {

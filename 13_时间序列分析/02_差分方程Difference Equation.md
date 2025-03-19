@@ -362,27 +362,3 @@ $$\frac{1}{1 - a_1 L} = 1 + a_1 L + a_1^2 L^2 + a_1^3 L^3 + \cdots.$$（这类�
 > 	再次展开各部分：$$\frac{a_0}{1 - b_2} \cdot \frac{1}{1 - b_1 L} = \frac{a_0}{1 - b_2} (1 + b_1 L + b_1^2 L^2 + \cdots) = \frac{a_0}{1 - b_2} \frac{1}{1 - b_1}$$（这里我们用到了$\frac{1}{1 - b_1 L} a_0 = a_0 (1 + b_1 + b_1^2 + \cdots) = \frac{a_0}{1 - b_1}$，适用$|b_1|<1$）。
 > 	第二部分：$$\frac{1}{1 - b_1 L} \sum_{i=0}^{\infty} b_2^i \varepsilon_{t-i} = \sum_{i=0}^{\infty} b_2^i \frac{1}{1 - b_1 L} \varepsilon_{t-i} = \sum_{i=0}^{\infty} b_2^i \sum_{j=0}^{\infty} b_1^j \varepsilon_{t-i-j}.$$调整求和顺序并让$k = i+j$，上式实际上会重排为类似$\sum_{k=0}^{\infty} (\text{某系数}) \varepsilon_{t-k}$形式，不用深入展开，我们知道它代表了$\varepsilon$的某种线性滤波。**重要的是**，这个结果依然是$\varepsilon$的冲击序列的加权和形式，因此整个$y_t$解可表示为：$$y_t = \frac{a_0}{(1 - b_1)(1 - b_2)} + \sum_{i=0}^{\infty} \tilde{\alpha}_i \varepsilon_{t-i},$$ 
 > 	其中$\tilde{\alpha}_i$是由$b_1, b_2$共同作用得到的冲击权重。注意$(1 - b_1)(1 - b_2)$其实等于$1 - (b_1+b_2) + b_1 b_2$，而$b_1+b_2 = a_1, b_1 b_2 = -a_2$，所以$\frac{a_0}{(1 - b_1)(1 - b_2)} = \frac{a_0}{1 - a_1 - a_2}$，这正是我们未定系数法情形1中得到的常数解（假设$1 - a_1 - a_2 \neq 0$）。
-
-# **SIR模型简介：** _（课外拓展）_
-
-易感-感染-移除 (Susceptible-Infective-Removal, **SIR**) 模型【Kermack and McKendrick (1927)】是流行病学中的基本模型，用来描述传染病在人群中的传播和消退过程。连续时间形式的SIR模型由三条微分方程构成：
-
-$$
-\frac{dS(t)}{dt} = -\beta \frac{I(t) S(t)}{N},
-$$
-
-$$
-\frac{dI(t)}{dt} = \beta \frac{I(t) S(t)}{N} - \gamma I(t),
-$$
-
-$$
-\frac{dR(t)}{dt} = \gamma I(t).
-$$
-
-  
-
-其中，$S(t)$是易感者人数，$I(t)$是感染者人数，$R(t)$是移除（康复或死亡且不再传染）人数，$N$是总人口数（假设恒定）。参数$\beta$表示传染率，$\gamma$表示移除率。通过这个模型可以得到许多重要信息，例如基本再生数 $R_0 = \frac{\beta}{\gamma} \cdot D$（通常$D=1/\gamma$是平均感染持续时间）。如果$R_0 > 1$，疾病会扩散；$R_0 < 1$则最终停止传播。SIR模型有许多推广版本（比如考虑出生死亡、疫苗接种等），但以上方程抓住了流行病传播的核心动力学。
-
-  
-
-_思考：试将SIR模型离散化为差分方程形式，并分析其稳定性或动态特征。_
