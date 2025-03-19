@@ -124,7 +124,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       },
       {
         "id": "5b75566d730c400b",
@@ -154,8 +154,33 @@
               "icon": "lucide-file",
               "title": "02_差分方程Difference Equation"
             }
+          },
+          {
+            "id": "813e4da595edd296",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/03_平稳时间序列模型.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "03_平稳时间序列模型"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -275,13 +300,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
+                "file": "13_时间序列分析/03_平稳时间序列模型.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "02_差分方程Difference Equation 的大纲"
+              "title": "03_平稳时间序列模型 的大纲"
             }
           },
           {
@@ -352,10 +377,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4f9fa9f2ca4732c6",
+  "active": "813e4da595edd296",
   "lastOpenFiles": [
-    "13_时间序列分析/lecture.pdf",
+    "13_时间序列分析/03_平稳时间序列模型.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
+    "13_时间序列分析/lecture.pdf",
     "11_证券投资学/02_证券市场.md",
     "99_学习情况记录/2025-03-19——星期三.md",
     "11_证券投资学/03_资产定价理论及其发展.md",
@@ -364,7 +390,6 @@
     "11_证券投资学/证券投资学.pdf",
     "11_证券投资学/证券投资学第二次作业.md",
     "00_inbox/未命名.md",
-    "13_时间序列分析/03_平稳时间序列模型.md",
     "14_发展经济学/02_人口增长与经济发展.md",
     "98_attachment/Pasted image 20250318093842.png",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
