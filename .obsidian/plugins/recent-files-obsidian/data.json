@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "03_平稳时间序列模型",
-      "path": "13_时间序列分析/03_平稳时间序列模型.md"
-    },
-    {
       "basename": "lecture",
       "path": "13_时间序列分析/lecture.pdf"
+    },
+    {
+      "basename": "03_平稳时间序列模型",
+      "path": "13_时间序列分析/03_平稳时间序列模型.md"
     },
     {
       "basename": "02_差分方程Difference Equation",

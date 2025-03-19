@@ -300,13 +300,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/03_平稳时间序列模型.md",
+                "file": "13_时间序列分析/lecture.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "03_平稳时间序列模型 的大纲"
+              "title": "lecture 的大纲"
             }
           },
           {
@@ -377,10 +377,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9ad310617bbd94af",
+  "active": "1fc710ecc0775bc8",
   "lastOpenFiles": [
-    "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/03_平稳时间序列模型.md",
+    "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/02_差分方程Difference Equation.md",
     "11_证券投资学/02_证券市场.md",
     "99_学习情况记录/2025-03-19——星期三.md",
