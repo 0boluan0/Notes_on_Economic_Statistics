@@ -122,12 +122,12 @@
             }
           },
           {
-            "id": "0f53f9650e144bcd",
+            "id": "f4884474fc21c0b5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/证券投资学第二次作业.md",
+                "file": "00_inbox/证券投资学第三次作业.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -142,7 +142,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "证券投资学第二次作业"
+              "title": "证券投资学第三次作业"
             }
           }
         ],
@@ -203,8 +203,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -266,13 +265,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/证券投资学第二次作业.md",
+                "file": "00_inbox/证券投资学第三次作业.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "证券投资学第二次作业 的大纲"
+              "title": "证券投资学第三次作业 的大纲"
             }
           },
           {
@@ -343,10 +342,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "0f53f9650e144bcd",
+  "active": "f4884474fc21c0b5",
   "lastOpenFiles": [
+    "00_inbox/证券投资学第三次作业.md",
+    "11_证券投资学/证券投资学第二次作业.md",
     "11_证券投资学/02_证券市场.md",
-    "00_inbox/证券投资学第二次作业.md",
     "11_证券投资学/04_宏观经济分析.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
     "00_inbox/未命名.md",
