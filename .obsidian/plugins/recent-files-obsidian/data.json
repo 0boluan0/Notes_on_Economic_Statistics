@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "04_波动建模 Modeling Volatility",
+      "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
+    },
+    {
       "basename": "03_平稳时间序列模型",
       "path": "13_时间序列分析/03_平稳时间序列模型.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "2025-01-16——星期四",
       "path": "99_学习情况记录/2025-01-16——星期四.md"
-    },
-    {
-      "basename": "05_连续时间的马尔可夫链",
-      "path": "07_随机过程/05_连续时间的马尔可夫链.md"
     }
   ],
   "omittedPaths": [],

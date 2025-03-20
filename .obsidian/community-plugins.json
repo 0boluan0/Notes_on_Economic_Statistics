@@ -23,5 +23,6 @@
   "templater-obsidian",
   "obsidian-tikzjax",
   "code-emitter",
-  "obsidian-latex-suite"
+  "obsidian-latex-suite",
+  "better-reading-mode"
 ]

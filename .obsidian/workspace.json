@@ -122,9 +122,33 @@
               "icon": "lucide-file",
               "title": "03_平稳时间序列模型"
             }
+          },
+          {
+            "id": "bf982dd4984a22d9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/04_波动建模 Modeling Volatility.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "04_波动建模 Modeling Volatility"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       },
       {
         "id": "5b75566d730c400b",
@@ -178,9 +202,33 @@
               "icon": "lucide-file",
               "title": "03_平稳时间序列模型"
             }
+          },
+          {
+            "id": "d360eda9177ac061",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/04_波动建模 Modeling Volatility.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "04_波动建模 Modeling Volatility"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -300,13 +348,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/03_平稳时间序列模型.md",
+                "file": "13_时间序列分析/04_波动建模 Modeling Volatility.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "03_平稳时间序列模型 的大纲"
+              "title": "04_波动建模 Modeling Volatility 的大纲"
             }
           },
           {
@@ -377,11 +425,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "432976b9a105683d",
+  "active": "d360eda9177ac061",
   "lastOpenFiles": [
+    "13_时间序列分析/04_波动建模 Modeling Volatility.md",
+    "13_时间序列分析/03_平稳时间序列模型.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
     "99_学习情况记录/2025-03-20——星期四.md",
-    "13_时间序列分析/03_平稳时间序列模型.md",
     "14_发展经济学/02_人口增长与经济发展.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "98_attachment/Pasted image 20250320082523.png",
@@ -418,7 +467,6 @@
     "00_inbox/00_GPT笔记.md",
     "00_inbox/日记模版.md",
     "99_学习情况记录/2025-02-27——星期四.md",
-    "11_证券投资学/00_导论.md",
     "14_发展经济学",
     "13_时间序列分析",
     "12_金融机构与风险管理",
