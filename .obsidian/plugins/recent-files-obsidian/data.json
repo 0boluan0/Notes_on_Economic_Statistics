@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "03_平稳时间序列模型",
+      "path": "13_时间序列分析/03_平稳时间序列模型.md"
+    },
+    {
+      "basename": "02_差分方程Difference Equation",
+      "path": "13_时间序列分析/02_差分方程Difference Equation.md"
+    },
+    {
       "basename": "02_人口增长与经济发展",
       "path": "14_发展经济学/02_人口增长与经济发展.md"
     },
@@ -13,16 +21,8 @@
       "path": "14_发展经济学/00_导论和考试相关.md"
     },
     {
-      "basename": "03_平稳时间序列模型",
-      "path": "13_时间序列分析/03_平稳时间序列模型.md"
-    },
-    {
       "basename": "lecture",
       "path": "13_时间序列分析/lecture.pdf"
-    },
-    {
-      "basename": "02_差分方程Difference Equation",
-      "path": "13_时间序列分析/02_差分方程Difference Equation.md"
     },
     {
       "basename": "02_证券市场",
