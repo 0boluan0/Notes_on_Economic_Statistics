@@ -1,20 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "04_波动建模 Modeling Volatility",
-      "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
-    },
-    {
       "basename": "03_平稳时间序列模型",
       "path": "13_时间序列分析/03_平稳时间序列模型.md"
     },
     {
-      "basename": "lecture",
-      "path": "13_时间序列分析/lecture.pdf"
+      "basename": "04_波动建模 Modeling Volatility",
+      "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
     },
     {
       "basename": "02_差分方程Difference Equation",
       "path": "13_时间序列分析/02_差分方程Difference Equation.md"
+    },
+    {
+      "basename": "lecture",
+      "path": "13_时间序列分析/lecture.pdf"
     },
     {
       "basename": "2025-03-20——星期四",
