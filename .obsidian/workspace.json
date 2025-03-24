@@ -425,11 +425,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "813e4da595edd296",
+  "active": "9ad310617bbd94af",
   "lastOpenFiles": [
-    "13_时间序列分析/04_波动建模 Modeling Volatility.md",
-    "13_时间序列分析/03_平稳时间序列模型.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
+    "13_时间序列分析/01_介绍时间序列.md",
+    "13_时间序列分析/00_导论与概率论复习.md",
+    "13_时间序列分析/03_平稳时间序列模型.md",
+    "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "11_证券投资学/证券投资学第三次作业.md",
     "11_证券投资学/证券投资学第四次作业.md",
     "11_证券投资学/04_宏观经济分析.md",
@@ -453,9 +455,7 @@
     "98_attachment/Pasted image 20250317141737.png",
     "03_public finance财政学/6_先前知识点速览/埃奇沃斯框图.md",
     "98_attachment/Pasted image 20250316150336.png",
-    "13_时间序列分析/00_导论与概率论复习.md",
     "11_证券投资学/01_证券投资工具.md",
-    "13_时间序列分析/01_介绍时间序列.md",
     "14_发展经济学/01_不同国家的经济发展模式.md",
     "14_发展经济学/01_什么是发展经济学.md",
     "13_时间序列分析/lecture-dual.pdf",
