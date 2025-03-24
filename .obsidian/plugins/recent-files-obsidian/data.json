@@ -5,6 +5,18 @@
       "path": "13_时间序列分析/03_平稳时间序列模型.md"
     },
     {
+      "basename": "未命名",
+      "path": "00_inbox/未命名.md"
+    },
+    {
+      "basename": "lecture",
+      "path": "13_时间序列分析/lecture.pdf"
+    },
+    {
+      "basename": "04_波动建模 Modeling Volatility",
+      "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
+    },
+    {
       "basename": "02_差分方程Difference Equation",
       "path": "13_时间序列分析/02_差分方程Difference Equation.md"
     },
@@ -15,10 +27,6 @@
     {
       "basename": "00_导论与概率论复习",
       "path": "13_时间序列分析/00_导论与概率论复习.md"
-    },
-    {
-      "basename": "04_波动建模 Modeling Volatility",
-      "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
     },
     {
       "basename": "证券投资学第三次作业",
@@ -35,10 +43,6 @@
     {
       "basename": "证券投资学",
       "path": "11_证券投资学/证券投资学.pdf"
-    },
-    {
-      "basename": "lecture",
-      "path": "13_时间序列分析/lecture.pdf"
     },
     {
       "basename": "2025-03-20——星期四",
@@ -71,10 +75,6 @@
     {
       "basename": "证券投资学第二次作业",
       "path": "11_证券投资学/证券投资学第二次作业.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "00_inbox/未命名.md"
     },
     {
       "basename": "埃奇沃斯框图",
