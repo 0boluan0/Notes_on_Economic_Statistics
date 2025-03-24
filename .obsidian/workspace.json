@@ -6,7 +6,7 @@
       {
         "id": "dce055f76a215cc3",
         "type": "tabs",
-        "dimension": 47.331460674157306,
+        "dimension": 33.33333333333333,
         "children": [
           {
             "id": "1fc710ecc0775bc8",
@@ -25,7 +25,7 @@
       {
         "id": "5e319fb5ea0d1658",
         "type": "tabs",
-        "dimension": 52.66853932584271,
+        "dimension": 37.0919881305638,
         "children": [
           {
             "id": "2480cb1c2734d142",
@@ -100,7 +100,7 @@
             }
           },
           {
-            "id": "432976b9a105683d",
+            "id": "9ad310617bbd94af",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -122,14 +122,22 @@
               "icon": "lucide-file",
               "title": "03_平稳时间序列模型"
             }
-          },
+          }
+        ],
+        "currentTab": 3
+      },
+      {
+        "id": "5b75566d730c400b",
+        "type": "tabs",
+        "dimension": 29.574678536102866,
+        "children": [
           {
-            "id": "bf982dd4984a22d9",
+            "id": "aeec949217ff58d2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/04_波动建模 Modeling Volatility.md",
+                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -144,11 +152,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "04_波动建模 Modeling Volatility"
+              "title": "02_差分方程Difference Equation"
+            }
+          },
+          {
+            "id": "813e4da595edd296",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/03_平稳时间序列模型.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "03_平稳时间序列模型"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -345,7 +377,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "432976b9a105683d",
+  "active": "813e4da595edd296",
   "lastOpenFiles": [
     "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/03_平稳时间序列模型.md",
