@@ -6,7 +6,6 @@
       {
         "id": "dce055f76a215cc3",
         "type": "tabs",
-        "dimension": 33.33333333333333,
         "children": [
           {
             "id": "1fc710ecc0775bc8",
@@ -14,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "13_时间序列分析/lecture.pdf"
+                "file": "11_证券投资学/证券投资学.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "lecture"
+              "title": "证券投资学"
             }
           }
         ]
@@ -25,7 +24,6 @@
       {
         "id": "5e319fb5ea0d1658",
         "type": "tabs",
-        "dimension": 37.0919881305638,
         "children": [
           {
             "id": "2480cb1c2734d142",
@@ -33,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/00_导论与概率论复习.md",
+                "file": "11_证券投资学/01_证券投资工具.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -48,16 +46,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00_导论与概率论复习"
+              "title": "01_证券投资工具"
             }
           },
           {
-            "id": "06a485155c33403c",
+            "id": "58b6aa2b9b514b8d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/01_介绍时间序列.md",
+                "file": "11_证券投资学/02_证券市场.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -72,16 +70,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_介绍时间序列"
+              "title": "02_证券市场"
             }
           },
           {
-            "id": "4f9fa9f2ca4732c6",
+            "id": "1ee6eaa4960fee09",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
+                "file": "11_证券投资学/03_资产定价理论及其发展.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -96,16 +94,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "02_差分方程Difference Equation"
+              "title": "03_资产定价理论及其发展"
             }
           },
           {
-            "id": "9ad310617bbd94af",
+            "id": "fcc38c45a70c818f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/03_平稳时间序列模型.md",
+                "file": "11_证券投资学/04_宏观经济分析.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -120,67 +118,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "03_平稳时间序列模型"
+              "title": "04_宏观经济分析"
+            }
+          },
+          {
+            "id": "5dafc1244a4bc84f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "11_证券投资学/证券投资学第四次作业.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "证券投资学第四次作业"
             }
           }
         ],
-        "currentTab": 3
-      },
-      {
-        "id": "5b75566d730c400b",
-        "type": "tabs",
-        "dimension": 29.574678536102866,
-        "children": [
-          {
-            "id": "aeec949217ff58d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "02_差分方程Difference Equation"
-            }
-          },
-          {
-            "id": "813e4da595edd296",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/03_平稳时间序列模型.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "03_平稳时间序列模型"
-            }
-          }
-        ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -212,7 +178,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "大的",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -237,8 +203,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -300,13 +265,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/03_平稳时间序列模型.md",
+                "file": "11_证券投资学/证券投资学第四次作业.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "03_平稳时间序列模型 的大纲"
+              "title": "证券投资学第四次作业 的大纲"
             }
           },
           {
@@ -377,10 +342,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "813e4da595edd296",
+  "active": "5dafc1244a4bc84f",
   "lastOpenFiles": [
-    "13_时间序列分析/lecture.pdf",
+    "11_证券投资学/证券投资学.pdf",
+    "11_证券投资学/证券投资学第四次作业.md",
+    "11_证券投资学/04_宏观经济分析.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
+    "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
     "99_学习情况记录/2025-03-20——星期四.md",
@@ -394,9 +362,7 @@
     "11_证券投资学/02_证券市场.md",
     "99_学习情况记录/2025-03-19——星期三.md",
     "11_证券投资学/03_资产定价理论及其发展.md",
-    "11_证券投资学/04_宏观经济分析.md",
     "11_证券投资学/证券投资学第三次作业.md",
-    "11_证券投资学/证券投资学.pdf",
     "11_证券投资学/证券投资学第二次作业.md",
     "00_inbox/未命名.md",
     "98_attachment/Pasted image 20250318093842.png",
@@ -417,7 +383,6 @@
     "99_学习情况记录/2025-03-04——星期二.md",
     "00_inbox/插入批注.md",
     "00_inbox/00_GPT笔记.md",
-    "00_inbox/日记模版.md",
     "14_发展经济学",
     "13_时间序列分析",
     "12_金融机构与风险管理",
