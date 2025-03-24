@@ -6,7 +6,7 @@
       {
         "id": "dce055f76a215cc3",
         "type": "tabs",
-        "dimension": 33.33333333333333,
+        "dimension": 47.331460674157306,
         "children": [
           {
             "id": "1fc710ecc0775bc8",
@@ -25,7 +25,7 @@
       {
         "id": "5e319fb5ea0d1658",
         "type": "tabs",
-        "dimension": 37.0919881305638,
+        "dimension": 52.66853932584271,
         "children": [
           {
             "id": "2480cb1c2734d142",
@@ -149,86 +149,6 @@
           }
         ],
         "currentTab": 3
-      },
-      {
-        "id": "5b75566d730c400b",
-        "type": "tabs",
-        "dimension": 29.574678536102866,
-        "children": [
-          {
-            "id": "aeec949217ff58d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "02_差分方程Difference Equation"
-            }
-          },
-          {
-            "id": "813e4da595edd296",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/03_平稳时间序列模型.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "03_平稳时间序列模型"
-            }
-          },
-          {
-            "id": "d360eda9177ac061",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/04_波动建模 Modeling Volatility.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "04_波动建模 Modeling Volatility"
-            }
-          }
-        ],
-        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -429,8 +349,8 @@
   "lastOpenFiles": [
     "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/03_平稳时间序列模型.md",
-    "13_时间序列分析/02_差分方程Difference Equation.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
+    "13_时间序列分析/02_差分方程Difference Equation.md",
     "99_学习情况记录/2025-03-20——星期四.md",
     "14_发展经济学/02_人口增长与经济发展.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
