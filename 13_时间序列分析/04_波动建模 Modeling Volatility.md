@@ -56,9 +56,22 @@ Volatility 就是条件二阶矩.
 
 ARCH的N要取得比较大.所以发明了GARCH模型,在保持对条件异方差性建模能力的同时，用更少的参数捕捉长期的波动影响。
 
+## 2.4 侦测ARCH/GARCH效应
 
+## 2.5 
+
+## 2.6 评估拟合
+
+## 2.7 预测方差
 
 # 3. 扩展
+
+## 3.1 IGARCH
+
+金融时间序列的一个典型特征是波动性的**高度持久**（persistent）。实证中，对许多资产回报率拟合GARCH(1,1)模型时，常常发现估计得到的$\hat{\alpha}_1 + \hat{\beta}_1$非常接近1。
+>[!note] **积分GARCH模型**（Integrated GARCH，简称IGARCH）。
+>$\alpha_1 + \beta_1 = 1$的GARCH模型.
+>IGARCH(1,1)实际上就是$\alpha_1 + \beta_1 = 1$的GARCH(1,1)模型。
 
 # 4. 预测 NYSE U.S.100
 
