@@ -129,7 +129,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/04_波动建模 Modeling Volatility.md",
+                "file": "99_学习情况记录/2025-03-26——星期三.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -144,7 +144,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "04_波动建模 Modeling Volatility"
+              "title": "2025-03-26——星期三"
             }
           }
         ],
@@ -348,13 +348,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/04_波动建模 Modeling Volatility.md",
+                "file": "99_学习情况记录/2025-03-26——星期三.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "04_波动建模 Modeling Volatility 的大纲"
+              "title": "2025-03-26——星期三 的大纲"
             }
           },
           {
@@ -427,8 +427,9 @@
   },
   "active": "35bdc1ef0d05c206",
   "lastOpenFiles": [
-    "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
+    "99_学习情况记录/2025-03-26——星期三.md",
+    "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/03_平稳时间序列模型.md",
     "14_发展经济学/03_人口迁移理论.md",
     "98_attachment/Pasted image 20250325083306.png",
