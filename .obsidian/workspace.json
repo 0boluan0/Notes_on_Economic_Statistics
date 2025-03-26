@@ -129,7 +129,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2025-03-26——星期三.md",
+                "file": "13_时间序列分析/04_波动建模 Modeling Volatility.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -144,11 +144,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-03-26——星期三"
+              "title": "04_波动建模 Modeling Volatility"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       },
       {
         "id": "5b75566d730c400b",
@@ -228,7 +228,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -348,13 +348,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2025-03-26——星期三.md",
+                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025-03-26——星期三 的大纲"
+              "title": "02_差分方程Difference Equation 的大纲"
             }
           },
           {
@@ -425,12 +425,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "35bdc1ef0d05c206",
+  "active": "4f9fa9f2ca4732c6",
   "lastOpenFiles": [
-    "13_时间序列分析/04_波动建模 Modeling Volatility.md",
-    "99_学习情况记录/2025-03-26——星期三.md",
-    "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/03_平稳时间序列模型.md",
+    "13_时间序列分析/02_差分方程Difference Equation.md",
+    "99_学习情况记录/2025-03-26——星期三.md",
+    "13_时间序列分析/04_波动建模 Modeling Volatility.md",
+    "13_时间序列分析/lecture.pdf",
     "14_发展经济学/03_人口迁移理论.md",
     "98_attachment/Pasted image 20250325083306.png",
     "98_attachment/Pasted image 20250325083213.png",
@@ -439,7 +440,6 @@
     "11_证券投资学/证券投资学作业",
     "14_发展经济学/02_人口增长与经济发展.md",
     "00_inbox/未命名.md",
-    "13_时间序列分析/02_差分方程Difference Equation.md",
     "13_时间序列分析/01_介绍时间序列.md",
     "13_时间序列分析/00_导论与概率论复习.md",
     "11_证券投资学/证券投资学作业/证券投资学第三次作业.md",
