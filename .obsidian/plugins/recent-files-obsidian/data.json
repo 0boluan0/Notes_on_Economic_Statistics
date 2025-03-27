@@ -1,12 +1,8 @@
 {
   "recentFiles": [
     {
-      "basename": "03_人口迁移理论",
-      "path": "14_发展经济学/03_人口迁移理论.md"
-    },
-    {
-      "basename": "发展经济学拍屏ppt",
-      "path": "14_发展经济学/发展经济学拍屏ppt.pdf"
+      "basename": "05_多方程模型Multi-equation Time Series Models",
+      "path": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md"
     },
     {
       "basename": "04_波动建模 Modeling Volatility",
@@ -15,6 +11,14 @@
     {
       "basename": "03_平稳时间序列模型",
       "path": "13_时间序列分析/03_平稳时间序列模型.md"
+    },
+    {
+      "basename": "03_人口迁移理论",
+      "path": "14_发展经济学/03_人口迁移理论.md"
+    },
+    {
+      "basename": "发展经济学拍屏ppt",
+      "path": "14_发展经济学/发展经济学拍屏ppt.pdf"
     },
     {
       "basename": "02_差分方程Difference Equation",
@@ -195,10 +199,6 @@
     {
       "basename": "WechatIMG1755",
       "path": "10_多元统计分析/WechatIMG1755.jpg"
-    },
-    {
-      "basename": "07_多元线性回归multivariate linear regression",
-      "path": "10_多元统计分析/07_多元线性回归multivariate linear regression.md"
     }
   ],
   "omittedPaths": [],
