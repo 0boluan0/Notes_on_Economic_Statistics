@@ -614,32 +614,19 @@ $$
 
   
 
-**向量自回归(Vector Autoregression, VAR)** 模型是Sims（1980）提出的一种多元时间序列模型，把所有变量都看作平等的内生变量，通过它们各自的滞后值相互影响来描述系统动态。以**二维VAR(1)为例，考虑内生变量向量 $\mathbf{x}_t =**
-
-**\begin{pmatrix} y_t \ z_t \end{pmatrix}$，一个结构化形式**可以写作：
+**向量自回归(Vector Autoregression, VAR)** 模型是Sims（1980）提出的一种多元时间序列模型，把所有变量都看作平等的内生变量，通过它们各自的滞后值相互影响来描述系统动态。以**二维VAR(1)为例，考虑内生变量向量 $\mathbf{x}_t =\begin{pmatrix} y_t \ z_t \end{pmatrix}$，一个结构化形式**可以写作：
 
   
 
-**$$**
-
-**\begin{pmatrix} 1 & -b_{12} \ -b_{21} & 1 \end{pmatrix}**
-
-**\begin{pmatrix} y_t \ z_t \end{pmatrix}**
-
-  
-
+$$
+\begin{pmatrix} 1 & -b_{12} \ -b_{21} & 1 \end{pmatrix}
+\begin{pmatrix} y_t \ z_t \end{pmatrix}
 \begin{pmatrix} b_{10} \ b_{20} \end{pmatrix}
-
 +
-
 \begin{pmatrix} \gamma_{11} & \gamma_{12} \ \gamma_{21} & \gamma_{22} \end{pmatrix}
-
 \begin{pmatrix} y_{t-1} \ z_{t-1} \end{pmatrix}
-
 +
-
 \begin{pmatrix} \varepsilon^y_t \ \varepsilon^z_t \end{pmatrix}。
-
 $$
 
   
@@ -1180,9 +1167,9 @@ $$
 
   
 
-**预测误差**即实际值减去预测值：$\mathbf{u}_{t+n} = \mathbf{x}_{t+n} - E[\mathbf{x}_{t+n}|\mathcal{F}t]$。利用VAR动态，可将这一误差表示成未来冲击的组合：_
+**预测误差**即实际值减去预测值：$\mathbf{u}_{t+n} = \mathbf{x}_{t+n} - E[\mathbf{x}_{t+n}|\mathcal{F}t]$。利用VAR动态，可将这一误差表示成未来冲击的组合：
 
-_$$
+$$
 \begin{aligned}
 \mathbf{u}{t+n} &= \mathbf{x}_{t+n} - \Big(\sum_{i=0}^{n-1}A_1^i\Big)A_0 - A_1^n \mathbf{x}_t \
 &= e_{t+n} + A_1 e_{t+n-1} + \cdots + A_1^{,n-1} e_{t+1}
@@ -1228,9 +1215,7 @@ $$
 具体地，对于$y$分量，第1行方差为：
 
 $$
-
-\mathrm{Var}(u^y_{t+n}) = \sigma_y^2 \sum_{i=0}^{n-1} [\psi_{11}(i)]^2 + \sigma_z^2 \sum_{i=0}^{n-1} [\psi_{12}(i)]^2 + \cdots，
-
+\mathrm{Var}(u^y_{t+n}) = \sigma_y^2 \sum_{i=0}^{n-1} [\psi_{11}(i)]^2 + \sigma_z^2 \sum_{i=0}^{n-1} [\psi_{12}(i)]^2 + \cdots
 $$
 
   
@@ -1363,7 +1348,6 @@ $$
 • **结构VAR**：为赋予VAR经济解释，需要对简约模型施加识别限制。递归（Cholesky）分解是一种简单方式，但更一般的结构VAR会利用经济理论（如当期零限制、长期约束、符号约束、外生事件等）来识别**结构冲击**。结构VAR综合了理论和数据，在政策分析中极为有用。冲击响应函数(IRF)和预测误差方差分解(FEVD)是VAR分析的核心工具：前者描绘冲击影响随时间的传播路径，后者量化各冲击对变量波动的相对贡献。
 
 总之，多元时间序列模型拓展了单变量分析的范围，使我们能够分析**变量之间的动态关系和相互影响**。通过干预分析可以衡量政策的效果，通过ADL模型可以刻画外生变量的传导效应，而VAR模型及其结构化拓展则为我们提供了发现经济变量内在联系、检验因果关系和进行情景模拟的一套强大框架。掌握这些方法，对于深入理解经济系统运行和评估政策冲击具有重要意义。
-
 
 # 断点
 
