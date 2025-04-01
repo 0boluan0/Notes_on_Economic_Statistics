@@ -96,9 +96,33 @@
               "icon": "lucide-file",
               "title": "03_人口迁移理论"
             }
+          },
+          {
+            "id": "e5b615319a67f3e1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "14_发展经济学/06_经济增长理论.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "06_经济增长理论"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -155,8 +179,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -218,13 +241,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14_发展经济学/03_人口迁移理论.md",
+                "file": "14_发展经济学/06_经济增长理论.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "03_人口迁移理论 的大纲"
+              "title": "06_经济增长理论 的大纲"
             }
           },
           {
@@ -295,9 +318,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "5143962e1d539b64",
+  "active": "e5b615319a67f3e1",
   "lastOpenFiles": [
+    "98_attachment/Pasted image 20250401092229.png",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
+    "14_发展经济学/06_经济增长理论.md",
+    "00_inbox/k mo i.md",
     "14_发展经济学/03_人口迁移理论.md",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
@@ -334,9 +360,7 @@
     "03_public finance财政学/6_先前知识点速览/埃奇沃斯框图.md",
     "11_证券投资学/01_证券投资工具.md",
     "14_发展经济学/01_不同国家的经济发展模式.md",
-    "14_发展经济学/01_什么是发展经济学.md",
     "13_时间序列分析/lecture-dual.pdf",
-    "99_学习情况记录/2025-03-10——星期一.md",
     "14_发展经济学",
     "13_时间序列分析",
     "12_金融机构与风险管理",

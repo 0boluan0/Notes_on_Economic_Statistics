@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "03_人口迁移理论",
-      "path": "14_发展经济学/03_人口迁移理论.md"
+      "basename": "06_经济增长理论",
+      "path": "14_发展经济学/06_经济增长理论.md"
     },
     {
       "basename": "发展经济学拍屏ppt",
       "path": "14_发展经济学/发展经济学拍屏ppt.pdf"
+    },
+    {
+      "basename": "k mo i",
+      "path": "00_inbox/k mo i.md"
+    },
+    {
+      "basename": "03_人口迁移理论",
+      "path": "14_发展经济学/03_人口迁移理论.md"
     },
     {
       "basename": "05_多方程模型Multi-equation Time Series Models",
@@ -191,14 +199,6 @@
     {
       "basename": "03_样本几何与随机抽样Sample Geometry and Random Sampling",
       "path": "10_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
-    },
-    {
-      "basename": "考试内容",
-      "path": "10_多元统计分析/考试内容.md"
-    },
-    {
-      "basename": "WechatIMG1755",
-      "path": "10_多元统计分析/WechatIMG1755.jpg"
     }
   ],
   "omittedPaths": [],
