@@ -1,20 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "03_平稳时间序列模型",
+      "path": "13_时间序列分析/03_平稳时间序列模型.md"
+    },
+    {
       "basename": "06_经济增长理论",
       "path": "14_发展经济学/06_经济增长理论.md"
     },
     {
-      "basename": "发展经济学拍屏ppt",
-      "path": "14_发展经济学/发展经济学拍屏ppt.pdf"
-    },
-    {
-      "basename": "k mo i",
-      "path": "00_inbox/k mo i.md"
-    },
-    {
       "basename": "03_人口迁移理论",
       "path": "14_发展经济学/03_人口迁移理论.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "00_inbox/未命名.md"
+    },
+    {
+      "basename": "发展经济学拍屏ppt",
+      "path": "14_发展经济学/发展经济学拍屏ppt.pdf"
     },
     {
       "basename": "05_多方程模型Multi-equation Time Series Models",
@@ -23,10 +27,6 @@
     {
       "basename": "04_波动建模 Modeling Volatility",
       "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
-    },
-    {
-      "basename": "03_平稳时间序列模型",
-      "path": "13_时间序列分析/03_平稳时间序列模型.md"
     },
     {
       "basename": "02_差分方程Difference Equation",
@@ -47,10 +47,6 @@
     {
       "basename": "02_人口增长与经济发展",
       "path": "14_发展经济学/02_人口增长与经济发展.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "00_inbox/未命名.md"
     },
     {
       "basename": "01_介绍时间序列",
