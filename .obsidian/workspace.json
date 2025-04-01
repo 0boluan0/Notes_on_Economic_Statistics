@@ -348,13 +348,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/03_平稳时间序列模型.md",
+                "file": "13_时间序列分析/lecture.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "03_平稳时间序列模型 的大纲"
+              "title": "lecture 的大纲"
             }
           },
           {
@@ -425,8 +425,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "813e4da595edd296",
+  "active": "1fc710ecc0775bc8",
   "lastOpenFiles": [
+    "13_时间序列分析/03_平稳时间序列模型.md",
     "14_发展经济学/06_经济增长理论.md",
     "14_发展经济学/03_人口迁移理论.md",
     "00_inbox/未命名.md",
@@ -435,7 +436,6 @@
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
-    "13_时间序列分析/03_平稳时间序列模型.md",
     "98_attachment/Pasted image 20250327091329.png",
     "98_attachment/Pasted image 20250327090402.png",
     "13_时间序列分析/02_差分方程Difference Equation.md",

@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "lecture",
+      "path": "13_时间序列分析/lecture.pdf"
+    },
+    {
       "basename": "03_平稳时间序列模型",
       "path": "13_时间序列分析/03_平稳时间序列模型.md"
     },
@@ -35,10 +39,6 @@
     {
       "basename": "2025-03-26——星期三",
       "path": "99_学习情况记录/2025-03-26——星期三.md"
-    },
-    {
-      "basename": "lecture",
-      "path": "13_时间序列分析/lecture.pdf"
     },
     {
       "basename": "README",
