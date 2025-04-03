@@ -4,9 +4,26 @@
     "type": "split",
     "children": [
       {
+        "id": "dce055f76a215cc3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1fc710ecc0775bc8",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "14_发展经济学/发展经济学拍屏ppt.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "发展经济学拍屏ppt"
+            }
+          }
+        ]
+      },
+      {
         "id": "5e319fb5ea0d1658",
         "type": "tabs",
-        "dimension": 31.2540192926045,
         "children": [
           {
             "id": "2480cb1c2734d142",
@@ -14,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/00_导论与概率论复习.md",
+                "file": "14_发展经济学/01_不同国家的经济发展模式.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,16 +46,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00_导论与概率论复习"
+              "title": "01_不同国家的经济发展模式"
             }
           },
           {
-            "id": "06a485155c33403c",
+            "id": "533203c0de33b546",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/01_介绍时间序列.md",
+                "file": "14_发展经济学/02_人口增长与经济发展.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -53,16 +70,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_介绍时间序列"
+              "title": "02_人口增长与经济发展"
             }
           },
           {
-            "id": "4f9fa9f2ca4732c6",
+            "id": "5143962e1d539b64",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
+                "file": "14_发展经济学/03_人口迁移理论.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -77,16 +94,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "02_差分方程Difference Equation"
+              "title": "03_人口迁移理论"
             }
           },
           {
-            "id": "9ad310617bbd94af",
+            "id": "d153770856f38a58",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/03_平稳时间序列模型.md",
+                "file": "14_发展经济学/06_经济增长理论.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -101,162 +118,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "03_平稳时间序列模型"
-            }
-          },
-          {
-            "id": "35bdc1ef0d05c206",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/04_波动建模 Modeling Volatility.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "04_波动建模 Modeling Volatility"
-            }
-          },
-          {
-            "id": "c1ebb2fa2c097e51",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "05_多方程模型Multi-equation Time Series Models"
+              "title": "06_经济增长理论"
             }
           }
         ],
-        "currentTab": 2
-      },
-      {
-        "id": "5b75566d730c400b",
-        "type": "tabs",
-        "dimension": 68.74598070739549,
-        "children": [
-          {
-            "id": "aeec949217ff58d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "02_差分方程Difference Equation"
-            }
-          },
-          {
-            "id": "813e4da595edd296",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/03_平稳时间序列模型.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "03_平稳时间序列模型"
-            }
-          },
-          {
-            "id": "d35a8cc2b93244a5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/04_波动建模 Modeling Volatility.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "04_波动建模 Modeling Volatility"
-            }
-          },
-          {
-            "id": "32fd68b1957b6643",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "05_多方程模型Multi-equation Time Series Models"
-            }
-          }
-        ]
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -309,8 +175,7 @@
               "title": "Recent Files"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -377,13 +242,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
+                "file": "14_发展经济学/06_经济增长理论.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "02_差分方程Difference Equation 的大纲"
+              "title": "06_经济增长理论 的大纲"
             }
           },
           {
@@ -437,7 +302,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 215.5
+    "width": 237.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -454,21 +319,21 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "aeec949217ff58d2",
+  "active": "d153770856f38a58",
   "lastOpenFiles": [
+    "14_发展经济学/03_人口迁移理论.md",
+    "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
+    "13_时间序列分析/04_波动建模 Modeling Volatility.md",
+    "13_时间序列分析/02_差分方程Difference Equation.md",
     "99_学习情况记录/2025-04-01——星期二.md",
     "13_时间序列分析/lecture.pdf",
-    "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
-    "13_时间序列分析/02_差分方程Difference Equation.md",
     "13_时间序列分析/00_导论与概率论复习.md",
     "14_发展经济学/06_经济增长理论.md",
-    "14_发展经济学/03_人口迁移理论.md",
     "00_inbox/未命名.md",
     "00_inbox/k mo i.md",
     "98_attachment/Pasted image 20250401092229.png",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
-    "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "98_attachment/Pasted image 20250327091329.png",
     "98_attachment/Pasted image 20250327090402.png",
     "99_学习情况记录/2025-03-26——星期三.md",
