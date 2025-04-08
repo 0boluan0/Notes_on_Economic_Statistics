@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "14_发展经济学/发展经济学拍屏ppt.pdf"
+                "file": "11_证券投资学/证券投资学.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "发展经济学拍屏ppt"
+              "title": "证券投资学"
             }
           }
         ]
@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14_发展经济学/01_不同国家的经济发展模式.md",
+                "file": "11_证券投资学/01_证券投资工具.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -46,16 +46,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_不同国家的经济发展模式"
+              "title": "01_证券投资工具"
             }
           },
           {
-            "id": "533203c0de33b546",
+            "id": "58b6aa2b9b514b8d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14_发展经济学/02_人口增长与经济发展.md",
+                "file": "11_证券投资学/02_证券市场.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -70,16 +70,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "02_人口增长与经济发展"
+              "title": "02_证券市场"
             }
           },
           {
-            "id": "5143962e1d539b64",
+            "id": "1ee6eaa4960fee09",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14_发展经济学/03_人口迁移理论.md",
+                "file": "11_证券投资学/03_资产定价理论及其发展.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -94,16 +94,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "03_人口迁移理论"
+              "title": "03_资产定价理论及其发展"
             }
           },
           {
-            "id": "d153770856f38a58",
+            "id": "fcc38c45a70c818f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14_发展经济学/06_经济增长理论.md",
+                "file": "11_证券投资学/04_宏观经济分析.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -118,11 +118,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "06_经济增长理论"
+              "title": "04_宏观经济分析"
+            }
+          },
+          {
+            "id": "354f0fa0929963d9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/证券投资学第五次作业.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "证券投资学第五次作业"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -154,7 +178,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "大的",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -242,13 +266,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14_发展经济学/06_经济增长理论.md",
+                "file": "00_inbox/证券投资学第五次作业.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "06_经济增长理论 的大纲"
+              "title": "证券投资学第五次作业 的大纲"
             }
           },
           {
@@ -319,13 +343,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "d153770856f38a58",
+  "active": "354f0fa0929963d9",
   "lastOpenFiles": [
+    "11_证券投资学/证券投资学.pdf",
+    "00_inbox/证券投资学第五次作业.md",
+    "11_证券投资学/04_宏观经济分析.md",
+    "14_发展经济学/06_经济增长理论.md",
     "99_学习情况记录/2025-04-08——星期二.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
     "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/02_差分方程Difference Equation.md",
-    "14_发展经济学/06_经济增长理论.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "99_学习情况记录/2025-04-03——星期四.md",
     "13_时间序列分析/00_导论与概率论复习.md",
@@ -348,8 +375,6 @@
     "13_时间序列分析/01_介绍时间序列.md",
     "11_证券投资学/证券投资学作业/证券投资学第三次作业.md",
     "11_证券投资学/证券投资学作业/证券投资学第四次作业.md",
-    "11_证券投资学/04_宏观经济分析.md",
-    "11_证券投资学/证券投资学.pdf",
     "99_学习情况记录/2025-03-20——星期四.md",
     "98_attachment/Pasted image 20250320082523.png",
     "98_attachment/Pasted image 20250320081321.png",
@@ -359,8 +384,6 @@
     "11_证券投资学/02_证券市场.md",
     "99_学习情况记录/2025-03-19——星期三.md",
     "11_证券投资学/03_资产定价理论及其发展.md",
-    "11_证券投资学/证券投资学作业/证券投资学第二次作业.md",
-    "03_public finance财政学/6_先前知识点速览/埃奇沃斯框图.md",
     "13_时间序列分析/lecture-dual.pdf",
     "14_发展经济学",
     "13_时间序列分析",
