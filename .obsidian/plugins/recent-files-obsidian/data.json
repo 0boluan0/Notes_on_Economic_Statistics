@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "06_经济增长理论",
+      "path": "14_发展经济学/06_经济增长理论.md"
+    },
+    {
+      "basename": "2025-04-08——星期二",
+      "path": "99_学习情况记录/2025-04-08——星期二.md"
+    },
+    {
       "basename": "03_平稳时间序列模型",
       "path": "13_时间序列分析/03_平稳时间序列模型.md"
     },
@@ -11,10 +19,6 @@
     {
       "basename": "02_差分方程Difference Equation",
       "path": "13_时间序列分析/02_差分方程Difference Equation.md"
-    },
-    {
-      "basename": "06_经济增长理论",
-      "path": "14_发展经济学/06_经济增长理论.md"
     },
     {
       "basename": "发展经济学拍屏ppt",
@@ -195,10 +199,6 @@
     {
       "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
       "path": "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
-    },
-    {
-      "basename": "06_比较多个均值向量comparisons of multivariate mean vectors",
-      "path": "10_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md"
     }
   ],
   "omittedPaths": [],
