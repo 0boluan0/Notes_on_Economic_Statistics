@@ -103,30 +103,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/04_宏观经济分析.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "04_宏观经济分析"
-            }
-          },
-          {
-            "id": "354f0fa0929963d9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "14_发展经济学/发展pre 话题6.md",
                 "mode": "source",
                 "source": false,
@@ -146,7 +122,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -203,8 +179,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -343,18 +318,20 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "354f0fa0929963d9",
+  "active": "fcc38c45a70c818f",
   "lastOpenFiles": [
+    "11_证券投资学/04_宏观经济分析.md",
+    "11_证券投资学/证券投资学.pdf",
+    "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
+    "03_public finance财政学/1_导论/02_实证分析——positive analysis.md",
+    "14_发展经济学/发展pre 话题6.md",
     "11_证券投资学/证券投资学作业/证券投资学第五次作业.md",
     "11_证券投资学/证券投资学作业/证券投资学第六次作业.md",
     "11_证券投资学/证券投资学作业/证券投资学第四次作业.md",
     "11_证券投资学/证券投资学作业/证券投资学第三次作业.md",
     "11_证券投资学/证券投资学作业/证券投资学第二次作业.md",
     "14_发展经济学/发展pre 话题1.md",
-    "14_发展经济学/发展pre 话题6.md",
     "98_attachment/Pasted image 20250408213917.png",
-    "11_证券投资学/证券投资学.pdf",
-    "11_证券投资学/04_宏观经济分析.md",
     "14_发展经济学/06_经济增长理论.md",
     "99_学习情况记录/2025-04-08——星期二.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
@@ -364,7 +341,6 @@
     "99_学习情况记录/2025-04-03——星期四.md",
     "13_时间序列分析/00_导论与概率论复习.md",
     "14_发展经济学/03_人口迁移理论.md",
-    "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "99_学习情况记录/2025-04-01——星期二.md",
     "00_inbox/未命名.md",
@@ -380,11 +356,9 @@
     "11_证券投资学/证券投资学作业",
     "14_发展经济学/02_人口增长与经济发展.md",
     "13_时间序列分析/01_介绍时间序列.md",
-    "99_学习情况记录/2025-03-20——星期四.md",
     "98_attachment/Pasted image 20250320082523.png",
     "98_attachment/Pasted image 20250320081321.png",
     "98_attachment/Pasted image 20250320081141.png",
-    "14_发展经济学/00_导论和考试相关.md",
     "13_时间序列分析/lecture-dual.pdf",
     "14_发展经济学",
     "13_时间序列分析",
