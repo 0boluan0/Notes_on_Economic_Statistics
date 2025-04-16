@@ -5,6 +5,10 @@
       "path": "00_inbox/证券投资学第七,八次作业.md"
     },
     {
+      "basename": "证券投资学",
+      "path": "11_证券投资学/证券投资学.pdf"
+    },
+    {
       "basename": "04_宏观经济分析",
       "path": "11_证券投资学/04_宏观经济分析.md"
     },
@@ -35,10 +39,6 @@
     {
       "basename": "发展pre 话题6",
       "path": "14_发展经济学/发展pre 话题6.md"
-    },
-    {
-      "basename": "证券投资学",
-      "path": "11_证券投资学/证券投资学.pdf"
     },
     {
       "basename": "05_多方程模型Multi-equation Time Series Models",
