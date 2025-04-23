@@ -265,13 +265,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/证券投资学.pdf",
+                "file": "00_inbox/证券投资学第九章第十章.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "证券投资学 的大纲"
+              "title": "证券投资学第九章第十章 的大纲"
             }
           },
           {
@@ -342,15 +342,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1fc710ecc0775bc8",
+  "active": "bf5aa63d750a3ca0",
   "lastOpenFiles": [
+    "11_证券投资学/证券投资学.pdf",
     "00_inbox/证券投资学第九章第十章.md",
     "11_证券投资学/04_宏观经济分析.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
     "13_时间序列分析/01_介绍时间序列.md",
-    "11_证券投资学/证券投资学.pdf",
     "11_证券投资学/证券投资学作业/证券投资学第七,八次作业.md",
     "11_证券投资学/03_资产定价理论及其发展.md",
     "99_学习情况记录/2025-04-14——星期一.md",
@@ -373,7 +373,6 @@
     "13_时间序列分析/00_导论与概率论复习.md",
     "14_发展经济学/03_人口迁移理论.md",
     "99_学习情况记录/2025-04-01——星期二.md",
-    "00_inbox/未命名.md",
     "98_attachment/Pasted image 20250401092229.png",
     "98_attachment/Pasted image 20250327091329.png",
     "98_attachment/Pasted image 20250327090402.png",
