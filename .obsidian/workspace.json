@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/01_证券投资工具.md",
+                "file": "11_证券投资学/证券投资学作业/证券投资学第九章第十章.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -46,7 +46,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_证券投资工具"
+              "title": "证券投资学第九章第十章"
             }
           },
           {
@@ -127,7 +127,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/证券投资学第九章第十章.md",
+                "file": "11_证券投资学/证券投资学作业/证券投资学第九章第十章.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -151,7 +151,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/证券投资学划重点.md",
+                "file": "11_证券投资学/证券投资学划重点.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -226,8 +226,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -289,13 +288,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/01_证券投资工具.md",
+                "file": "11_证券投资学/证券投资学作业/证券投资学第九章第十章.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01_证券投资工具 的大纲"
+              "title": "证券投资学第九章第十章 的大纲"
             }
           },
           {
@@ -366,12 +365,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2480cb1c2734d142",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
-    "00_inbox/证券投资学划重点.md",
     "11_证券投资学/01_证券投资工具.md",
+    "11_证券投资学/证券投资学划重点.md",
     "11_证券投资学/证券投资学.pdf",
-    "00_inbox/证券投资学第九章第十章.md",
+    "11_证券投资学/证券投资学作业/证券投资学第九章第十章.md",
     "11_证券投资学/04_宏观经济分析.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
