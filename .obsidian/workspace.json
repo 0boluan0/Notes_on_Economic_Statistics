@@ -177,7 +177,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "考点",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -198,12 +198,12 @@
               "title": "Recent Files"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -342,7 +342,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2480cb1c2734d142",
+  "active": "68e022ef2943b75b",
   "lastOpenFiles": [
     "11_证券投资学/证券投资学划重点.md",
     "11_证券投资学/01_证券投资工具.md",
