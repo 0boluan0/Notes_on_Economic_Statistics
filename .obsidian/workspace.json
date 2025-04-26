@@ -127,7 +127,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/05_.md",
+                "file": "11_证券投资学/05_.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -143,6 +143,36 @@
               },
               "icon": "lucide-file",
               "title": "05_"
+            }
+          }
+        ]
+      },
+      {
+        "id": "abad9ac204809cbf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "777cb21909ef1e4f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "11_证券投资学/00_仅划重点.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00_仅划重点"
             }
           }
         ]
@@ -265,13 +295,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/01_证券投资工具.md",
+                "file": "11_证券投资学/00_仅划重点.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01_证券投资工具 的大纲"
+              "title": "00_仅划重点 的大纲"
             }
           },
           {
@@ -342,19 +372,24 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2480cb1c2734d142",
+  "active": "777cb21909ef1e4f",
   "lastOpenFiles": [
-    "00_inbox/05_.md",
-    "11_证券投资学/01_证券投资工具.md",
+    "99_学习情况记录/2025-04-26——星期六.md",
+    "11_证券投资学/05_.md",
     "11_证券投资学/04_宏观经济分析.md",
+    "11_证券投资学/证券投资学.pdf",
+    "11_证券投资学/07_.md",
+    "11_证券投资学/06_.md",
+    "11_证券投资学/03_资产定价理论及其发展.md",
+    "11_证券投资学/02_证券市场.md",
+    "11_证券投资学/01_证券投资工具.md",
+    "11_证券投资学/00_仅划重点.md",
+    "11_证券投资学/证券投资学划重点.md",
+    "11_证券投资学/00_导论.md",
     "14_发展经济学/06_经济增长理论.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
-    "11_证券投资学/证券投资学划重点.md",
-    "11_证券投资学/证券投资学.pdf",
-    "11_证券投资学/02_证券市场.md",
     "11_证券投资学/证券投资学作业/证券投资学第九章第十章.md",
-    "11_证券投资学/03_资产定价理论及其发展.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "13_时间序列分析/01_介绍时间序列.md",
     "11_证券投资学/证券投资学作业/证券投资学第七,八次作业.md",
@@ -366,14 +401,8 @@
     "03_public finance财政学/1_导论/02_实证分析——positive analysis.md",
     "11_证券投资学/证券投资学作业/证券投资学第五次作业.md",
     "11_证券投资学/证券投资学作业/证券投资学第六次作业.md",
-    "11_证券投资学/证券投资学作业/证券投资学第四次作业.md",
-    "11_证券投资学/证券投资学作业/证券投资学第三次作业.md",
-    "11_证券投资学/证券投资学作业/证券投资学第二次作业.md",
-    "14_发展经济学/发展pre 话题1.md",
     "98_attachment/Pasted image 20250408213917.png",
-    "99_学习情况记录/2025-04-08——星期二.md",
     "13_时间序列分析/lecture.pdf",
-    "99_学习情况记录/2025-04-03——星期四.md",
     "98_attachment/Pasted image 20250401092229.png",
     "98_attachment/Pasted image 20250327091329.png",
     "98_attachment/Pasted image 20250327090402.png",
