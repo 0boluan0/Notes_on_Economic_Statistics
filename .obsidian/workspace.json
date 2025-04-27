@@ -151,7 +151,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/06_.md",
+                "file": "11_证券投资学/06_公司财务分析.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -166,7 +166,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "06_"
+              "title": "06_公司财务分析"
             }
           },
           {
@@ -175,7 +175,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/07_.md",
+                "file": "99_学习情况记录/2025-04-27——星期日.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -190,7 +190,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "07_"
+              "title": "2025-04-27——星期日"
             }
           },
           {
@@ -290,7 +290,7 @@
             }
           }
         ],
-        "currentTab": 10
+        "currentTab": 6
       },
       {
         "id": "abad9ac204809cbf",
@@ -440,13 +440,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/11_.md",
+                "file": "99_学习情况记录/2025-04-27——星期日.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "11_ 的大纲"
+              "title": "2025-04-27——星期日 的大纲"
             }
           },
           {
@@ -517,14 +517,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "4da2a33f571e3909",
+  "active": "9811c85fb2349ef8",
   "lastOpenFiles": [
-    "11_证券投资学/10_.md",
+    "11_证券投资学/07_公司基本素质分析.md",
+    "99_学习情况记录/2025-04-27——星期日.md",
+    "11_证券投资学/06_公司财务分析.md",
     "11_证券投资学/11_.md",
+    "11_证券投资学/10_.md",
     "11_证券投资学/09_.md",
     "11_证券投资学/08_证券投资技术分析概述.md",
-    "11_证券投资学/07_.md",
-    "11_证券投资学/06_.md",
     "11_证券投资学/05_行业分析.md",
     "11_证券投资学/01_证券投资工具.md",
     "11_证券投资学/00_仅划重点.md",
@@ -545,7 +546,6 @@
     "13_时间序列分析/01_介绍时间序列.md",
     "11_证券投资学/证券投资学作业/证券投资学第七,八次作业.md",
     "99_学习情况记录/2025-04-14——星期一.md",
-    "99_学习情况记录/2025-04-10——星期四.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "98_attachment/Pasted image 20250408213917.png",
     "13_时间序列分析/lecture.pdf",
