@@ -878,12 +878,12 @@
                 }
               },
               {
-                "id": "2ae627b1ca30e2e2",
+                "id": "dff6d0db17bb610d",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "11_证券投资学/05_.md",
+                    "file": "11_证券投资学/05_行业分析.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -898,10 +898,83 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "05_"
+                  "title": "05_行业分析"
+                }
+              },
+              {
+                "id": "f387fabf21e096c4",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "11_证券投资学/06_公司财务分析.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "06_公司财务分析"
+                }
+              },
+              {
+                "id": "9f5e3d3ccba075bd",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "11_证券投资学/07_公司基本素质分析.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "07_公司基本素质分析"
+                }
+              },
+              {
+                "id": "4538908a87df1f37",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "11_证券投资学/08_证券投资技术分析概述.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "08_证券投资技术分析概述"
                 }
               }
-            ]
+            ],
+            "currentTab": 4
           },
           {
             "id": "abad9ac204809cbf",
@@ -1051,13 +1124,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "11_证券投资学/00_仅划重点.md",
+                    "file": "11_证券投资学/05_行业分析.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "00_仅划重点 的大纲"
+                  "title": "05_行业分析 的大纲"
                 }
               },
               {
@@ -1128,8 +1201,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "777cb21909ef1e4f",
-      "mtime": "2025-04-26T16:53:16+08:00"
+      "active": "dff6d0db17bb610d",
+      "mtime": "2025-04-27T17:12:01+08:00"
     },
     "时序复习": {
       "main": {
