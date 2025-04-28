@@ -6,6 +6,7 @@
       {
         "id": "dce055f76a215cc3",
         "type": "tabs",
+        "dimension": 33.33333333333333,
         "children": [
           {
             "id": "1fc710ecc0775bc8",
@@ -24,6 +25,7 @@
       {
         "id": "5e319fb5ea0d1658",
         "type": "tabs",
+        "dimension": 39.726027397260275,
         "children": [
           {
             "id": "2480cb1c2734d142",
@@ -217,11 +219,13 @@
               "title": "08_证券投资技术分析概述"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "abad9ac204809cbf",
         "type": "tabs",
+        "dimension": 26.94063926940639,
         "children": [
           {
             "id": "777cb21909ef1e4f",
@@ -300,7 +304,8 @@
               "title": "Recent Files"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -367,13 +372,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/01_证券投资工具.md",
+                "file": "11_证券投资学/00_仅划重点.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01_证券投资工具 的大纲"
+              "title": "00_仅划重点 的大纲"
             }
           },
           {
@@ -444,10 +449,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2480cb1c2734d142",
+  "active": "777cb21909ef1e4f",
   "lastOpenFiles": [
-    "11_证券投资学/证券投资学.pdf",
+    "11_证券投资学/02_证券市场.md",
     "11_证券投资学/00_仅划重点.md",
+    "11_证券投资学/03_资产定价理论及其发展.md",
+    "11_证券投资学/证券投资学.pdf",
     "11_证券投资学/01_证券投资工具.md",
     "11_证券投资学/08_证券投资技术分析概述.md",
     "11_证券投资学/07_公司基本素质分析.md",
@@ -459,8 +466,6 @@
     "11_证券投资学/10_.md",
     "11_证券投资学/09_.md",
     "12_金融机构与风险管理/01_引言.md",
-    "11_证券投资学/03_资产定价理论及其发展.md",
-    "11_证券投资学/02_证券市场.md",
     "12_金融机构与风险管理/00_金融风险划重点.md",
     "99_学习情况记录/2025-04-26——星期六.md",
     "11_证券投资学/证券投资学划重点.md",
