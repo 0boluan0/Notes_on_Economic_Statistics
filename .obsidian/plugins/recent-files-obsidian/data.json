@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "06_",
+      "path": "13_时间序列分析/06_.md"
+    },
+    {
+      "basename": "05_多方程模型Multi-equation Time Series Models",
+      "path": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md"
+    },
+    {
+      "basename": "03_平稳时间序列模型",
+      "path": "13_时间序列分析/03_平稳时间序列模型.md"
+    },
+    {
       "basename": "lecture",
       "path": "13_时间序列分析/lecture.pdf"
     },
     {
       "basename": "04_波动建模 Modeling Volatility",
       "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
-    },
-    {
-      "basename": "03_平稳时间序列模型",
-      "path": "13_时间序列分析/03_平稳时间序列模型.md"
     },
     {
       "basename": "2025-04-29——星期二",
@@ -125,10 +133,6 @@
       "path": "14_发展经济学/发展pre 话题6.md"
     },
     {
-      "basename": "05_多方程模型Multi-equation Time Series Models",
-      "path": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md"
-    },
-    {
       "basename": "02_实证分析——positive analysis",
       "path": "03_public finance财政学/1_导论/02_实证分析——positive analysis.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "2025-03-20——星期四",
       "path": "99_学习情况记录/2025-03-20——星期四.md"
-    },
-    {
-      "basename": "00_导论和考试相关",
-      "path": "14_发展经济学/00_导论和考试相关.md"
     }
   ],
   "omittedPaths": [],

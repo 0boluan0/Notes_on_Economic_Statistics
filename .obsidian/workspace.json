@@ -148,17 +148,55 @@
             }
           },
           {
-            "id": "fc366e43eb04a50e",
+            "id": "dc2aab8b65f1d121",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "05_多方程模型Multi-equation Time Series Models"
+            }
+          },
+          {
+            "id": "5a25f027b57898b1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/06_.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "06_"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       },
       {
         "id": "5b75566d730c400b",
@@ -236,9 +274,81 @@
               "icon": "lucide-file",
               "title": "04_波动建模 Modeling Volatility"
             }
+          },
+          {
+            "id": "ece76350032490a4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "05_多方程模型Multi-equation Time Series Models"
+            }
+          },
+          {
+            "id": "63bc8a41319194c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/06_.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "06_"
+            }
+          },
+          {
+            "id": "eaad0032ec8ce7de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/06_.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "06_"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -358,13 +468,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/lecture.pdf",
+                "file": "13_时间序列分析/06_.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "lecture 的大纲"
+              "title": "06_ 的大纲"
             }
           },
           {
@@ -435,11 +545,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1fc710ecc0775bc8",
+  "active": "eaad0032ec8ce7de",
   "lastOpenFiles": [
-    "13_时间序列分析/04_波动建模 Modeling Volatility.md",
-    "13_时间序列分析/lecture.pdf",
+    "13_时间序列分析/06_.md",
+    "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
+    "未命名",
     "13_时间序列分析/03_平稳时间序列模型.md",
+    "13_时间序列分析/lecture.pdf",
+    "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "99_学习情况记录/2025-04-29——星期二.md",
     "11_证券投资学/00_仅划重点.md",
     "11_证券投资学/01_证券投资工具.md",
@@ -463,7 +576,6 @@
     "14_发展经济学/06_经济增长理论.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
     "11_证券投资学/证券投资学作业/证券投资学第九章第十章.md",
-    "13_时间序列分析/01_介绍时间序列.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "98_attachment/Pasted image 20250408213917.png",
     "98_attachment/Pasted image 20250401092229.png",
@@ -481,7 +593,6 @@
     "13_时间序列分析",
     "12_金融机构与风险管理",
     "11_证券投资学",
-    "02_game theory/第3次作业.pdf",
     "01_Econometrics/未命名.canvas",
     "04_货币银行学/1_引言/未命名.canvas"
   ]
