@@ -1,8 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "lecture",
+      "path": "13_时间序列分析/lecture.pdf"
+    },
+    {
+      "basename": "04_波动建模 Modeling Volatility",
+      "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
+    },
+    {
+      "basename": "03_平稳时间序列模型",
+      "path": "13_时间序列分析/03_平稳时间序列模型.md"
+    },
+    {
+      "basename": "2025-04-29——星期二",
+      "path": "99_学习情况记录/2025-04-29——星期二.md"
+    },
+    {
       "basename": "00_仅划重点",
       "path": "11_证券投资学/00_仅划重点.md"
+    },
+    {
+      "basename": "01_证券投资工具",
+      "path": "11_证券投资学/01_证券投资工具.md"
     },
     {
       "basename": "02_证券市场",
@@ -15,10 +35,6 @@
     {
       "basename": "证券投资学",
       "path": "11_证券投资学/证券投资学.pdf"
-    },
-    {
-      "basename": "01_证券投资工具",
-      "path": "11_证券投资学/01_证券投资工具.md"
     },
     {
       "basename": "08_证券投资技术分析概述",
@@ -81,16 +97,8 @@
       "path": "13_时间序列分析/02_差分方程Difference Equation.md"
     },
     {
-      "basename": "03_平稳时间序列模型",
-      "path": "13_时间序列分析/03_平稳时间序列模型.md"
-    },
-    {
       "basename": "证券投资学第九章第十章",
       "path": "11_证券投资学/证券投资学作业/证券投资学第九章第十章.md"
-    },
-    {
-      "basename": "04_波动建模 Modeling Volatility",
-      "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
     },
     {
       "basename": "01_介绍时间序列",
@@ -153,10 +161,6 @@
       "path": "99_学习情况记录/2025-04-08——星期二.md"
     },
     {
-      "basename": "lecture",
-      "path": "13_时间序列分析/lecture.pdf"
-    },
-    {
       "basename": "2025-04-03——星期四",
       "path": "99_学习情况记录/2025-04-03——星期四.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "00_导论和考试相关",
       "path": "14_发展经济学/00_导论和考试相关.md"
-    },
-    {
-      "basename": "2025-03-19——星期三",
-      "path": "99_学习情况记录/2025-03-19——星期三.md"
     }
   ],
   "omittedPaths": [],
