@@ -305,7 +305,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "应付",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -326,7 +326,8 @@
               "title": "Recent Files"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -473,6 +474,7 @@
   "lastOpenFiles": [
     "11_证券投资学/证券投资学.pdf",
     "00_inbox/证券投资学第十一章作业.md",
+    "98_attachment/Pasted image 20250430201022.png",
     "99_学习情况记录/2025-04-30——星期三.md",
     "11_证券投资学/00_仅划重点.md",
     "11_证券投资学/02_证券市场.md",
@@ -510,7 +512,6 @@
     "11_证券投资学/证券投资学作业",
     "98_attachment/Pasted image 20250320082523.png",
     "98_attachment/Pasted image 20250320081321.png",
-    "98_attachment/Pasted image 20250320081141.png",
     "13_时间序列分析/lecture-dual.pdf",
     "14_发展经济学",
     "13_时间序列分析",
