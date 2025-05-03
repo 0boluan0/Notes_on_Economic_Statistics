@@ -368,13 +368,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/00_仅划重点.md",
+                "file": "11_证券投资学/03_资产定价理论及其发展.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "00_仅划重点 的大纲"
+              "title": "03_资产定价理论及其发展 的大纲"
             }
           },
           {
@@ -445,8 +445,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "777cb21909ef1e4f",
+  "active": "1ee6eaa4960fee09",
   "lastOpenFiles": [
+    "11_证券投资学/00_仅划重点.md",
     "11_证券投资学/03_资产定价理论及其发展.md",
     "11_证券投资学/02_证券市场.md",
     "11_证券投资学/05_行业分析.md",
@@ -454,7 +455,6 @@
     "00_inbox/证券投资学第十一章作业.md",
     "98_attachment/Pasted image 20250430201022.png",
     "99_学习情况记录/2025-04-30——星期三.md",
-    "11_证券投资学/00_仅划重点.md",
     "13_时间序列分析/06_.md",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
     "未命名",
