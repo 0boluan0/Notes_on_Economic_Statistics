@@ -368,13 +368,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/证券投资学.pdf",
+                "file": "11_证券投资学/05_行业分析.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "证券投资学 的大纲"
+              "title": "05_行业分析 的大纲"
             }
           },
           {
@@ -445,12 +445,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1fc710ecc0775bc8",
+  "active": "dff6d0db17bb610d",
   "lastOpenFiles": [
+    "11_证券投资学/证券投资学.pdf",
     "11_证券投资学/05_行业分析.md",
     "11_证券投资学/00_仅划重点.md",
     "11_证券投资学/04_宏观经济分析.md",
-    "11_证券投资学/证券投资学.pdf",
     "98_attachment/Pasted image 20250506214031.png",
     "98_attachment/Pasted image 20250506205015.png",
     "11_证券投资学/03_资产定价理论及其发展.md",
