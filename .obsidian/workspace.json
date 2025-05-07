@@ -218,7 +218,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       },
       {
         "id": "abad9ac204809cbf",
@@ -368,13 +368,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/05_行业分析.md",
+                "file": "11_证券投资学/06_公司财务分析.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "05_行业分析 的大纲"
+              "title": "06_公司财务分析 的大纲"
             }
           },
           {
@@ -445,10 +445,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "dff6d0db17bb610d",
+  "active": "f387fabf21e096c4",
   "lastOpenFiles": [
-    "11_证券投资学/证券投资学.pdf",
     "11_证券投资学/05_行业分析.md",
+    "11_证券投资学/证券投资学.pdf",
     "11_证券投资学/00_仅划重点.md",
     "11_证券投资学/04_宏观经济分析.md",
     "98_attachment/Pasted image 20250506214031.png",
