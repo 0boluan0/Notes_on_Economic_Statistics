@@ -1092,9 +1092,67 @@
                   "icon": "lucide-file",
                   "title": "08_证券投资技术分析概述"
                 }
+              },
+              {
+                "id": "b5721e72055d8e84",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "11_证券投资学/09_.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "09_"
+                }
+              },
+              {
+                "id": "af8256dfaa4da873",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "11_证券投资学/10斌_组合投资理论.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "10斌_组合投资理论"
+                }
+              },
+              {
+                "id": "4be95426bee5880e",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "新标签页"
+                }
               }
             ],
-            "currentTab": 4
+            "currentTab": 10
           },
           {
             "id": "abad9ac204809cbf",
@@ -1244,13 +1302,12 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "11_证券投资学/05_行业分析.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "05_行业分析 的大纲"
+                  "title": "大纲"
                 }
               },
               {
@@ -1304,7 +1361,7 @@
           }
         ],
         "direction": "horizontal",
-        "width": 237.5
+        "width": 200
       },
       "left-ribbon": {
         "hiddenItems": {
@@ -1321,8 +1378,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "dff6d0db17bb610d",
-      "mtime": "2025-04-27T17:12:01+08:00"
+      "active": "4be95426bee5880e",
+      "mtime": "2025-05-08T17:21:23+08:00"
     },
     "时序复习": {
       "main": {
