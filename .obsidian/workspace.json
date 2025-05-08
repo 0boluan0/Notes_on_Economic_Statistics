@@ -175,7 +175,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/07_公司基本素质分析.md",
+                "file": "11_证券投资学/07_公司价值分析.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -190,7 +190,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "07_公司基本素质分析"
+              "title": "07_公司价值分析"
             }
           },
           {
@@ -276,7 +276,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       },
       {
         "id": "abad9ac204809cbf",
@@ -426,13 +426,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/06_公司财务分析.md",
+                "file": "11_证券投资学/00_仅划重点.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "06_公司财务分析 的大纲"
+              "title": "00_仅划重点 的大纲"
             }
           },
           {
@@ -503,8 +503,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "f387fabf21e096c4",
+  "active": "777cb21909ef1e4f",
   "lastOpenFiles": [
+    "11_证券投资学/07_公司价值分析.md",
+    "98_attachment/Pasted image 20250508213959.png",
     "11_证券投资学/00_仅划重点.md",
     "11_证券投资学/06_公司财务分析.md",
     "98_attachment/Pasted image 20250508195521.png",
@@ -532,7 +534,6 @@
     "99_学习情况记录/2025-04-29——星期二.md",
     "11_证券投资学/01_证券投资工具.md",
     "11_证券投资学/08_证券投资技术分析概述.md",
-    "11_证券投资学/07_公司基本素质分析.md",
     "99_学习情况记录/2025-04-27——星期日.md",
     "11_证券投资学/11_.md",
     "11_证券投资学/10_.md",
@@ -543,7 +544,6 @@
     "98_attachment/Pasted image 20250408213917.png",
     "98_attachment/Pasted image 20250401092229.png",
     "98_attachment/Pasted image 20250327091329.png",
-    "98_attachment/Pasted image 20250327090402.png",
     "11_证券投资学/证券投资学作业",
     "13_时间序列分析/lecture-dual.pdf",
     "14_发展经济学",
