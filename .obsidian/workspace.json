@@ -292,7 +292,7 @@
             }
           }
         ],
-        "currentTab": 9
+        "currentTab": 10
       },
       {
         "id": "abad9ac204809cbf",
@@ -443,13 +443,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/10_组合投资理论.md",
+                "file": "11_证券投资学/11_.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "10_组合投资理论 的大纲"
+              "title": "11_ 的大纲"
             }
           },
           {
@@ -520,14 +520,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "151737cbb67ad967",
+  "active": "69b2c10bd0fdf44d",
   "lastOpenFiles": [
-    "11_证券投资学/00_仅划重点.md",
     "11_证券投资学/10_组合投资理论.md",
+    "11_证券投资学/11_.md",
+    "11_证券投资学/00_仅划重点.md",
     "11_证券投资学/证券投资学.pdf",
     "11_证券投资学/09_技术分析理论和方法.md",
     "11_证券投资学/07_公司价值分析.md",
-    "11_证券投资学/11_.md",
     "00_inbox/未命名 1.md",
     "98_attachment/Pasted image 20250509163712.png",
     "98_attachment/Pasted image 20250509163705.png",
