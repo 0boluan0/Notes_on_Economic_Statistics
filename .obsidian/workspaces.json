@@ -1051,7 +1051,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "11_证券投资学/07_公司基本素质分析.md",
+                    "file": "11_证券投资学/07_公司价值分析.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -1066,7 +1066,7 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "07_公司基本素质分析"
+                  "title": "07_公司价值分析"
                 }
               },
               {
@@ -1152,7 +1152,7 @@
                 }
               }
             ],
-            "currentTab": 10
+            "currentTab": 6
           },
           {
             "id": "abad9ac204809cbf",
@@ -1239,8 +1239,7 @@
           }
         ],
         "direction": "horizontal",
-        "width": 200,
-        "collapsed": true
+        "width": 200
       },
       "right": {
         "id": "e65120feb84dace3",
@@ -1302,12 +1301,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
+                    "file": "11_证券投资学/07_公司价值分析.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "大纲"
+                  "title": "07_公司价值分析 的大纲"
                 }
               },
               {
@@ -1378,8 +1378,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "4be95426bee5880e",
-      "mtime": "2025-05-08T17:21:23+08:00"
+      "active": "9f5e3d3ccba075bd",
+      "mtime": "2025-05-09T10:30:47+08:00"
     },
     "时序复习": {
       "main": {
