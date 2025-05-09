@@ -175,7 +175,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/07_公司价值分析.md",
+                "file": "99_学习情况记录/2025-05-09——星期五.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -190,7 +190,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "07_公司价值分析"
+              "title": "2025-05-09——星期五"
             }
           },
           {
@@ -338,7 +338,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "capm",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -359,12 +359,12 @@
               "title": "Recent Files"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -426,13 +426,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/07_公司价值分析.md",
+                "file": "11_证券投资学/03_资产定价理论及其发展.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "07_公司价值分析 的大纲"
+              "title": "03_资产定价理论及其发展 的大纲"
             }
           },
           {
@@ -505,8 +505,8 @@
   },
   "active": "9f5e3d3ccba075bd",
   "lastOpenFiles": [
-    "11_证券投资学/证券投资学.pdf",
     "11_证券投资学/07_公司价值分析.md",
+    "11_证券投资学/证券投资学.pdf",
     "11_证券投资学/00_仅划重点.md",
     "98_attachment/Pasted image 20250508213959.png",
     "11_证券投资学/06_公司财务分析.md",
