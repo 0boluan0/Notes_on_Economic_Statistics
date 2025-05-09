@@ -4,151 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "dce055f76a215cc3",
+        "id": "abad9ac204809cbf",
         "type": "tabs",
-        "dimension": 74.52229299363057,
         "children": [
           {
-            "id": "1fc710ecc0775bc8",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "11_证券投资学/证券投资学.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "证券投资学"
-            }
-          }
-        ]
-      },
-      {
-        "id": "5e319fb5ea0d1658",
-        "type": "tabs",
-        "dimension": 12.738853503184714,
-        "children": [
-          {
-            "id": "2480cb1c2734d142",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11_证券投资学/01_证券投资工具.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "01_证券投资工具"
-            }
-          },
-          {
-            "id": "58b6aa2b9b514b8d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11_证券投资学/02_证券市场.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "02_证券市场"
-            }
-          },
-          {
-            "id": "1ee6eaa4960fee09",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11_证券投资学/03_资产定价理论及其发展.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "03_资产定价理论及其发展"
-            }
-          },
-          {
-            "id": "fcc38c45a70c818f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11_证券投资学/04_宏观经济分析.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "04_宏观经济分析"
-            }
-          },
-          {
-            "id": "dff6d0db17bb610d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11_证券投资学/05_行业分析.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "05_行业分析"
-            }
-          },
-          {
-            "id": "f387fabf21e096c4",
+            "id": "777cb21909ef1e4f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -169,158 +29,6 @@
               },
               "icon": "lucide-file",
               "title": "06_公司财务分析"
-            }
-          },
-          {
-            "id": "9f5e3d3ccba075bd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11_证券投资学/07_公司价值分析.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "07_公司价值分析"
-            }
-          },
-          {
-            "id": "4538908a87df1f37",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11_证券投资学/08_证券投资技术分析概述.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "08_证券投资技术分析概述"
-            }
-          },
-          {
-            "id": "b5721e72055d8e84",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11_证券投资学/09_技术分析理论和方法.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "09_技术分析理论和方法"
-            }
-          },
-          {
-            "id": "151737cbb67ad967",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11_证券投资学/10_组合投资理论.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "10_组合投资理论"
-            }
-          },
-          {
-            "id": "69b2c10bd0fdf44d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11_证券投资学/11_风险资产的定价.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "11_风险资产的定价"
-            }
-          }
-        ],
-        "currentTab": 10
-      },
-      {
-        "id": "abad9ac204809cbf",
-        "type": "tabs",
-        "dimension": 12.738853503184714,
-        "children": [
-          {
-            "id": "777cb21909ef1e4f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11_证券投资学/00_仅划重点.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "00_仅划重点"
             }
           }
         ]
@@ -355,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "成本费用",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -376,12 +84,12 @@
               "title": "Recent Files"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -443,13 +151,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/证券投资学.pdf",
+                "file": "11_证券投资学/06_公司财务分析.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "证券投资学 的大纲"
+              "title": "06_公司财务分析 的大纲"
             }
           },
           {
@@ -520,16 +228,25 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1fc710ecc0775bc8",
+  "active": "68e022ef2943b75b",
   "lastOpenFiles": [
-    "11_证券投资学/11_风险资产的定价.md",
-    "11_证券投资学/09_技术分析理论和方法.md",
+    "11_证券投资学/05_行业分析.md",
+    "11_证券投资学/04_宏观经济分析.md",
+    "11_证券投资学/03_资产定价理论及其发展.md",
+    "11_证券投资学/证券投资学作业/证券投资学第五次作业.md",
+    "11_证券投资学/证券投资学作业/证券投资学第四次作业.md",
+    "11_证券投资学/证券投资学作业/证券投资学第三次作业.md",
+    "11_证券投资学/证券投资学作业/证券投资学第二次作业.md",
+    "11_证券投资学/00_仅划重点.md",
+    "11_证券投资学/01_证券投资工具.md",
+    "11_证券投资学/02_证券市场.md",
     "11_证券投资学/06_公司财务分析.md",
     "11_证券投资学/07_公司价值分析.md",
     "11_证券投资学/08_证券投资技术分析概述.md",
-    "11_证券投资学/证券投资学.pdf",
+    "11_证券投资学/09_技术分析理论和方法.md",
     "11_证券投资学/10_组合投资理论.md",
-    "11_证券投资学/00_仅划重点.md",
+    "11_证券投资学/11_风险资产的定价.md",
+    "11_证券投资学/证券投资学.pdf",
     "00_inbox/未命名 1.md",
     "98_attachment/Pasted image 20250509163712.png",
     "98_attachment/Pasted image 20250509163705.png",
@@ -542,12 +259,7 @@
     "98_attachment/Pasted image 20250509145950.png",
     "98_attachment/Pasted image 20250509145941.png",
     "98_attachment/Pasted image 20250509145846.png",
-    "11_证券投资学/03_资产定价理论及其发展.md",
-    "11_证券投资学/01_证券投资工具.md",
     "99_学习情况记录/2025-05-08——星期四.md",
-    "11_证券投资学/05_行业分析.md",
-    "11_证券投资学/04_宏观经济分析.md",
-    "11_证券投资学/02_证券市场.md",
     "11_证券投资学/证券投资学作业/证券投资学第十一章作业.md",
     "99_学习情况记录/2025-04-30——星期三.md",
     "13_时间序列分析/06_.md",
@@ -557,9 +269,6 @@
     "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "99_学习情况记录/2025-04-29——星期二.md",
-    "99_学习情况记录/2025-04-27——星期日.md",
-    "11_证券投资学/10_.md",
-    "12_金融机构与风险管理/01_引言.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "11_证券投资学/证券投资学作业",
     "13_时间序列分析/lecture-dual.pdf",
