@@ -292,7 +292,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       },
       {
         "id": "abad9ac204809cbf",
@@ -443,13 +443,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/09_技术分析理论和方法.md",
+                "file": "11_证券投资学/10_组合投资理论.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "09_技术分析理论和方法 的大纲"
+              "title": "10_组合投资理论 的大纲"
             }
           },
           {
@@ -520,15 +520,20 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b5721e72055d8e84",
+  "active": "151737cbb67ad967",
   "lastOpenFiles": [
-    "11_证券投资学/证券投资学.pdf",
     "11_证券投资学/09_技术分析理论和方法.md",
+    "11_证券投资学/00_仅划重点.md",
+    "11_证券投资学/07_公司价值分析.md",
+    "11_证券投资学/10_组合投资理论.md",
+    "11_证券投资学/证券投资学.pdf",
+    "11_证券投资学/11_.md",
+    "00_inbox/未命名 1.md",
+    "98_attachment/Pasted image 20250509163712.png",
+    "98_attachment/Pasted image 20250509163705.png",
+    "98_attachment/Pasted image 20250509162820.png",
     "11_证券投资学/06_公司财务分析.md",
     "99_学习情况记录/2025-05-09——星期五.md",
-    "00_inbox/10_组合投资理论.md",
-    "11_证券投资学/10_组合投资理论.md",
-    "11_证券投资学/00_仅划重点.md",
     "98_attachment/Pasted image 20250509153639.png",
     "98_attachment/Pasted image 20250509152632.png",
     "98_attachment/Pasted image 20250509150003.png",
@@ -536,19 +541,14 @@
     "98_attachment/Pasted image 20250509145950.png",
     "98_attachment/Pasted image 20250509145941.png",
     "98_attachment/Pasted image 20250509145846.png",
-    "98_attachment/Pasted image 20250509145838.png",
-    "98_attachment/Pasted image 20250509145816.png",
-    "98_attachment/Pasted image 20250509145808.png",
     "11_证券投资学/03_资产定价理论及其发展.md",
-    "11_证券投资学/11_.md",
     "11_证券投资学/08_证券投资技术分析概述.md",
-    "11_证券投资学/07_公司价值分析.md",
     "11_证券投资学/01_证券投资工具.md",
     "99_学习情况记录/2025-05-08——星期四.md",
     "11_证券投资学/05_行业分析.md",
     "11_证券投资学/04_宏观经济分析.md",
     "11_证券投资学/02_证券市场.md",
-    "00_inbox/证券投资学第十一章作业.md",
+    "11_证券投资学/证券投资学作业/证券投资学第十一章作业.md",
     "99_学习情况记录/2025-04-30——星期三.md",
     "13_时间序列分析/06_.md",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
