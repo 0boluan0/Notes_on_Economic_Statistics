@@ -273,7 +273,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/11_.md",
+                "file": "11_证券投资学/11_风险资产的定价.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -288,7 +288,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "11_"
+              "title": "11_风险资产的定价"
             }
           }
         ],
@@ -443,13 +443,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/11_.md",
+                "file": "11_证券投资学/11_风险资产的定价.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "11_ 的大纲"
+              "title": "11_风险资产的定价 的大纲"
             }
           },
           {
@@ -522,10 +522,10 @@
   },
   "active": "69b2c10bd0fdf44d",
   "lastOpenFiles": [
-    "11_证券投资学/10_组合投资理论.md",
-    "11_证券投资学/11_.md",
-    "11_证券投资学/00_仅划重点.md",
     "11_证券投资学/证券投资学.pdf",
+    "11_证券投资学/11_风险资产的定价.md",
+    "11_证券投资学/10_组合投资理论.md",
+    "11_证券投资学/00_仅划重点.md",
     "11_证券投资学/09_技术分析理论和方法.md",
     "11_证券投资学/07_公司价值分析.md",
     "00_inbox/未命名 1.md",
