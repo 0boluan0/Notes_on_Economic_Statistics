@@ -244,30 +244,6 @@
             }
           },
           {
-            "id": "151737cbb67ad967",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "11_证券投资学/10_组合投资理论.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "10_组合投资理论"
-            }
-          },
-          {
             "id": "69b2c10bd0fdf44d",
             "type": "leaf",
             "state": {
@@ -290,9 +266,33 @@
               "icon": "lucide-file",
               "title": "11_"
             }
+          },
+          {
+            "id": "fa8905a89d70c026",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "99_学习情况记录/2025-05-09——星期五.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2025-05-09——星期五"
+            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 10
       },
       {
         "id": "abad9ac204809cbf",
@@ -443,13 +443,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/09_技术分析理论和方法.md",
+                "file": "99_学习情况记录/2025-05-09——星期五.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "09_技术分析理论和方法 的大纲"
+              "title": "2025-05-09——星期五 的大纲"
             }
           },
           {
@@ -520,8 +520,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b5721e72055d8e84",
+  "active": "fa8905a89d70c026",
   "lastOpenFiles": [
+    "00_inbox/10_组合投资理论.md",
+    "11_证券投资学/09_技术分析理论和方法.md",
+    "11_证券投资学/10_组合投资理论.md",
+    "11_证券投资学/证券投资学.pdf",
+    "11_证券投资学/00_仅划重点.md",
+    "98_attachment/Pasted image 20250509153639.png",
+    "98_attachment/Pasted image 20250509152632.png",
     "98_attachment/Pasted image 20250509150003.png",
     "98_attachment/Pasted image 20250509145956.png",
     "98_attachment/Pasted image 20250509145950.png",
@@ -530,15 +537,8 @@
     "98_attachment/Pasted image 20250509145838.png",
     "98_attachment/Pasted image 20250509145816.png",
     "98_attachment/Pasted image 20250509145808.png",
-    "98_attachment/Pasted image 20250509145614.png",
-    "98_attachment/Pasted image 20250509144458.png",
     "11_证券投资学/03_资产定价理论及其发展.md",
-    "11_证券投资学/09_技术分析理论和方法.md",
-    "98_attachment/Pasted image 20250509144030.png",
-    "11_证券投资学/证券投资学.pdf",
-    "11_证券投资学/10_组合投资理论.md",
     "11_证券投资学/11_.md",
-    "11_证券投资学/00_仅划重点.md",
     "11_证券投资学/08_证券投资技术分析概述.md",
     "11_证券投资学/07_公司价值分析.md",
     "11_证券投资学/01_证券投资工具.md",
