@@ -4,16 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "abad9ac204809cbf",
+        "id": "dce055f76a215cc3",
         "type": "tabs",
         "children": [
           {
-            "id": "777cb21909ef1e4f",
+            "id": "1fc710ecc0775bc8",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "14_发展经济学/发展经济学拍屏ppt.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "发展经济学拍屏ppt"
+            }
+          }
+        ]
+      },
+      {
+        "id": "5e319fb5ea0d1658",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2480cb1c2734d142",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/证券投资学划重点.md",
+                "file": "14_发展经济学/01_不同国家的经济发展模式.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,16 +46,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "证券投资学划重点"
+              "title": "01_不同国家的经济发展模式"
             }
           },
           {
-            "id": "795691496e388439",
+            "id": "533203c0de33b546",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "11_证券投资学/10_组合投资理论.md",
+                "file": "14_发展经济学/02_人口增长与经济发展.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +70,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "10_组合投资理论"
+              "title": "02_人口增长与经济发展"
+            }
+          },
+          {
+            "id": "5143962e1d539b64",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "14_发展经济学/03_人口迁移理论.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "03_人口迁移理论"
+            }
+          },
+          {
+            "id": "d153770856f38a58",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "14_发展经济学/06_经济增长理论.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "06_经济增长理论"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -88,7 +154,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "大的",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -113,7 +179,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -175,13 +242,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "11_证券投资学/10_组合投资理论.md",
+                "file": "14_发展经济学/06_经济增长理论.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "10_组合投资理论 的大纲"
+              "title": "06_经济增长理论 的大纲"
             }
           },
           {
@@ -235,7 +302,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 237.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -252,8 +319,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "795691496e388439",
+  "active": "d153770856f38a58",
   "lastOpenFiles": [
+    "99_学习情况记录/2025-05-11——星期日.md",
+    "11_证券投资学/10_组合投资理论.md",
     "11_证券投资学/09_技术分析理论和方法.md",
     "11_证券投资学/08_证券投资技术分析概述.md",
     "99_学习情况记录/2025-05-10——星期六.md",
@@ -265,7 +334,6 @@
     "11_证券投资学/证券投资学作业/证券研报.md",
     "11_证券投资学/11_风险资产的定价.md",
     "11_证券投资学/证券投资学.pdf",
-    "11_证券投资学/10_组合投资理论.md",
     "11_证券投资学/07_公司价值分析.md",
     "11_证券投资学/证券投资学作业/证券投资学第二次作业.md",
     "11_证券投资学/证券投资学作业/证券投资学第三次作业.md",
@@ -290,7 +358,6 @@
     "11_证券投资学/证券投资学作业/证券投资学第十一章作业.md",
     "99_学习情况记录/2025-04-30——星期三.md",
     "13_时间序列分析/06_.md",
-    "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
     "未命名",
     "13_时间序列分析/lecture.pdf",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
