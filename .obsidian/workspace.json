@@ -79,7 +79,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14_发展经济学/03_人口迁移理论.md",
+                "file": "14_发展经济学/00_导论和考试相关.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -94,7 +94,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "03_人口迁移理论"
+              "title": "00_导论和考试相关"
             }
           },
           {
@@ -179,8 +179,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -242,13 +241,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14_发展经济学/03_人口迁移理论.md",
+                "file": "14_发展经济学/00_导论和考试相关.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "03_人口迁移理论 的大纲"
+              "title": "00_导论和考试相关 的大纲"
             }
           },
           {
@@ -321,11 +320,11 @@
   },
   "active": "5143962e1d539b64",
   "lastOpenFiles": [
+    "14_发展经济学/03_人口迁移理论.md",
     "14_发展经济学/06_经济增长理论.md",
     "14_发展经济学/发展pre 话题6.md",
     "14_发展经济学/发展pre 话题1.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
-    "14_发展经济学/03_人口迁移理论.md",
     "14_发展经济学/00_导论和考试相关.md",
     "14_发展经济学/01_不同国家的经济发展模式.md",
     "14_发展经济学/02_人口增长与经济发展.md",
