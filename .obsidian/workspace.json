@@ -6,7 +6,6 @@
       {
         "id": "dce055f76a215cc3",
         "type": "tabs",
-        "dimension": 33.333333333333336,
         "children": [
           {
             "id": "1fc710ecc0775bc8",
@@ -25,7 +24,6 @@
       {
         "id": "5e319fb5ea0d1658",
         "type": "tabs",
-        "dimension": 37.18199608610568,
         "children": [
           {
             "id": "2480cb1c2734d142",
@@ -100,7 +98,7 @@
             }
           },
           {
-            "id": "46a71ebfc6dc54ee",
+            "id": "d153770856f38a58",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -126,17 +124,16 @@
         ]
       },
       {
-        "id": "bd4afe036aba842a",
+        "id": "c59e735a5f70929a",
         "type": "tabs",
-        "dimension": 29.484670580560998,
         "children": [
           {
-            "id": "cab207f93cabf58e",
+            "id": "e44bc1c134d4b755",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "14_发展经济学/00_导论和考试相关.md",
+                "file": "14_发展经济学/发展经济学考试内容.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -151,35 +148,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00_导论和考试相关"
-            }
-          },
-          {
-            "id": "b815c5b1a37bb63e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/2025-05-12——星期一.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2025-05-12——星期一"
+              "title": "发展经济学考试内容"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -299,13 +271,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2025-05-12——星期一.md",
+                "file": "14_发展经济学/01_不同国家的经济发展模式.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025-05-12——星期一 的大纲"
+              "title": "01_不同国家的经济发展模式 的大纲"
             }
           },
           {
@@ -376,13 +348,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b815c5b1a37bb63e",
+  "active": "2480cb1c2734d142",
   "lastOpenFiles": [
     "14_发展经济学/发展经济学考试内容.md",
+    "14_发展经济学/06_经济增长理论.md",
     "99_学习情况记录/2025-05-12——星期一.md",
     "14_发展经济学/01_不同国家的经济发展模式.md",
     "14_发展经济学/00_导论和考试相关.md",
-    "14_发展经济学/06_经济增长理论.md",
     "14_发展经济学/03_人口迁移理论.md",
     "14_发展经济学/02_人口增长与经济发展.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
