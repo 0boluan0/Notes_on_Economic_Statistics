@@ -4,12 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "dce055f76a215cc3",
+        "id": "675c5e4262ac7be4",
         "type": "tabs",
-        "dimension": 35.8974358974359,
         "children": [
           {
-            "id": "1fc710ecc0775bc8",
+            "id": "bee3d71d595159e0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -33,286 +32,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "5e319fb5ea0d1658",
-        "type": "tabs",
-        "dimension": 32.05128205128205,
-        "children": [
-          {
-            "id": "2480cb1c2734d142",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/00_导论与概率论复习.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "00_导论与概率论复习"
-            }
-          },
-          {
-            "id": "06a485155c33403c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/01_介绍时间序列.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "01_介绍时间序列"
-            }
-          },
-          {
-            "id": "4f9fa9f2ca4732c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "02_差分方程Difference Equation"
-            }
-          },
-          {
-            "id": "9ad310617bbd94af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/03_平稳时间序列模型.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "03_平稳时间序列模型"
-            }
-          },
-          {
-            "id": "35bdc1ef0d05c206",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/04_波动建模 Modeling Volatility.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "04_波动建模 Modeling Volatility"
-            }
-          },
-          {
-            "id": "dc2aab8b65f1d121",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "05_多方程模型Multi-equation Time Series Models"
-            }
-          },
-          {
-            "id": "5a25f027b57898b1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/2025-05-13——周二.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2025-05-13——周二"
-            }
-          }
-        ],
-        "currentTab": 6
-      },
-      {
-        "id": "5b75566d730c400b",
-        "type": "tabs",
-        "dimension": 32.05128205128205,
-        "children": [
-          {
-            "id": "aeec949217ff58d2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "02_差分方程Difference Equation"
-            }
-          },
-          {
-            "id": "813e4da595edd296",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/03_平稳时间序列模型.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "03_平稳时间序列模型"
-            }
-          },
-          {
-            "id": "d35a8cc2b93244a5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/04_波动建模 Modeling Volatility.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "04_波动建模 Modeling Volatility"
-            }
-          },
-          {
-            "id": "ece76350032490a4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "05_多方程模型Multi-equation Time Series Models"
-            }
-          }
-        ],
-        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -369,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -509,10 +227,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1fc710ecc0775bc8",
+  "active": "bee3d71d595159e0",
   "lastOpenFiles": [
-    "99_学习情况记录/2025-05-13——周二.md",
     "00_inbox/add_done_item.md",
+    "13_时间序列分析/00_导论与概率论复习.md",
+    "13_时间序列分析/01_介绍时间序列.md",
+    "99_学习情况记录/2025-05-13——周二.md",
     "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/06_.md",
     "99_学习情况记录/周记",
@@ -535,7 +255,6 @@
     "99_学习情况记录/2025-05-13——星期二.md",
     "2025-05-13——星期二1.md",
     "2025-05-13——星期二.md",
-    "13_时间序列分析/00_导论与概率论复习.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "99_学习情况记录/2025-05-12——星期一.md",
     "14_发展经济学/01_不同国家的经济发展模式.md",
