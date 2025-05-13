@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/add_done_item.md",
+                "file": "99_学习情况记录/2025-05-13——周二.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "add_done_item"
+              "title": "2025-05-13——周二"
+            }
+          },
+          {
+            "id": "661778cfa6179801",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/weekly_rollup.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "weekly_rollup"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -150,13 +175,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/add_done_item.md",
+                "file": "00_inbox/weekly_rollup.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "add_done_item 的大纲"
+              "title": "weekly_rollup 的大纲"
             }
           },
           {
@@ -227,12 +252,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "bee3d71d595159e0",
+  "active": "661778cfa6179801",
   "lastOpenFiles": [
+    "99_学习情况记录/2025-05-13——周二.md",
+    "00_inbox/weekly_rollup.md",
     "00_inbox/add_done_item.md",
     "13_时间序列分析/00_导论与概率论复习.md",
     "13_时间序列分析/01_介绍时间序列.md",
-    "99_学习情况记录/2025-05-13——周二.md",
     "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/06_.md",
     "99_学习情况记录/周记",
@@ -259,7 +285,6 @@
     "99_学习情况记录/2025-05-12——星期一.md",
     "14_发展经济学/01_不同国家的经济发展模式.md",
     "11_证券投资学/证券投资学作业/证券投资学第四次作业 2.md",
-    "14_发展经济学/发展经济学考试内容.md",
     "11_证券投资学/证券投资学.pdf",
     "98_attachment/Pasted image 20250509163712.png",
     "98_attachment/Pasted image 20250509163705.png",
