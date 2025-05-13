@@ -30,33 +30,8 @@
               "icon": "lucide-file",
               "title": "2025-05-13——周二"
             }
-          },
-          {
-            "id": "661778cfa6179801",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00_inbox/weekly_rollup.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "weekly_rollup"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -175,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/weekly_rollup.md",
+                "file": "99_学习情况记录/2025-05-13——周二.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "weekly_rollup 的大纲"
+              "title": "2025-05-13——周二 的大纲"
             }
           },
           {
@@ -252,7 +227,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "661778cfa6179801",
+  "active": "bee3d71d595159e0",
   "lastOpenFiles": [
     "99_学习情况记录/2025-05-13——周二.md",
     "00_inbox/weekly_rollup.md",

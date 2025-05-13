@@ -25,5 +25,6 @@
   "code-emitter",
   "obsidian-latex-suite",
   "better-reading-mode",
-  "quickadd"
+  "quickadd",
+  "cron"
 ]
