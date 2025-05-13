@@ -25,7 +25,7 @@
       {
         "id": "5e319fb5ea0d1658",
         "type": "tabs",
-        "dimension": 37.0919881305638,
+        "dimension": 37.09981167608286,
         "children": [
           {
             "id": "2480cb1c2734d142",
@@ -177,7 +177,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/06_.md",
+                "file": "99_学习情况记录/2025-05-13——周二.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -192,15 +192,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "06_"
+              "title": "2025-05-13——周二"
             }
           }
-        ]
+        ],
+        "currentTab": 6
       },
       {
         "id": "5b75566d730c400b",
         "type": "tabs",
-        "dimension": 29.574678536102866,
+        "dimension": 29.566854990583803,
         "children": [
           {
             "id": "aeec949217ff58d2",
@@ -304,7 +305,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/06_.md",
+                "file": "00_inbox/add_done_item.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -319,34 +320,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "06_"
-            }
-          },
-          {
-            "id": "eaad0032ec8ce7de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/06_.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "06_"
+              "title": "add_done_item"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -403,8 +381,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -466,13 +443,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/00_导论与概率论复习.md",
+                "file": "99_学习情况记录/2025-05-13——周二.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "00_导论与概率论复习 的大纲"
+              "title": "2025-05-13——周二 的大纲"
             }
           },
           {
@@ -543,35 +520,38 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2480cb1c2734d142",
+  "active": "5a25f027b57898b1",
   "lastOpenFiles": [
-    "13_时间序列分析/02_差分方程Difference Equation.md",
-    "13_时间序列分析/00_导论与概率论复习.md",
+    "00_inbox/add_done_item.md",
     "13_时间序列分析/06_.md",
+    "99_学习情况记录/周记",
+    "99_学习情况记录/2025-05-13——周二.md",
+    "2025-05-13——周二.md",
+    "99_学习情况记录/完成任务的日期/2025-05-13——周二.md",
+    "13_时间序列分析/lecture.pdf",
+    "99_学习情况记录/完成任务的日期",
+    "99_学习情况记录/已复盘",
+    "99_学习情况记录/2025-05-13——周二1.md",
+    "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
+    "13_时间序列分析/02_差分方程Difference Equation.md",
+    "2025-05-13——周二1.md",
+    "2025-05-13——周二2.md",
+    "00_inbox/日记模版.md",
+    "2025-05-13——周二6.md",
+    "2025-05-13——周二5.md",
+    "00_inbox/日历视图.md",
+    "2025-05-13——周二4.md",
+    "2025-05-13——周二3.md",
+    "00_inbox/未命名.md",
     "99_学习情况记录/2025-05-13——星期二.md",
+    "2025-05-13——星期二1.md",
+    "2025-05-13——星期二.md",
+    "13_时间序列分析/00_导论与概率论复习.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "99_学习情况记录/2025-05-12——星期一.md",
     "14_发展经济学/01_不同国家的经济发展模式.md",
     "11_证券投资学/证券投资学作业/证券投资学第四次作业 2.md",
     "14_发展经济学/发展经济学考试内容.md",
-    "14_发展经济学/00_导论和考试相关.md",
-    "14_发展经济学/06_经济增长理论.md",
-    "14_发展经济学/03_人口迁移理论.md",
-    "14_发展经济学/02_人口增长与经济发展.md",
-    "14_发展经济学/发展pre 话题6.md",
-    "14_发展经济学/发展pre 话题1.md",
-    "99_学习情况记录/2025-05-11——星期日.md",
-    "11_证券投资学/10_组合投资理论.md",
-    "11_证券投资学/09_技术分析理论和方法.md",
-    "11_证券投资学/08_证券投资技术分析概述.md",
-    "99_学习情况记录/2025-05-10——星期六.md",
-    "11_证券投资学/00_仅划重点.md",
-    "11_证券投资学/05_行业分析.md",
-    "11_证券投资学/04_宏观经济分析.md",
-    "11_证券投资学/01_证券投资工具.md",
-    "11_证券投资学/证券投资学划重点.md",
-    "11_证券投资学/证券投资学作业/证券研报.md",
-    "11_证券投资学/11_风险资产的定价.md",
     "11_证券投资学/证券投资学.pdf",
     "98_attachment/Pasted image 20250509163712.png",
     "98_attachment/Pasted image 20250509163705.png",
@@ -583,14 +563,10 @@
     "98_attachment/Pasted image 20250509145950.png",
     "98_attachment/Pasted image 20250509145941.png",
     "98_attachment/Pasted image 20250509145846.png",
-    "未命名",
-    "13_时间序列分析/lecture.pdf",
     "11_证券投资学/证券投资学作业",
     "13_时间序列分析/lecture-dual.pdf",
     "14_发展经济学",
     "13_时间序列分析",
-    "12_金融机构与风险管理",
-    "11_证券投资学",
     "01_Econometrics/未命名.canvas",
     "04_货币银行学/1_引言/未命名.canvas"
   ]

@@ -16,5 +16,22 @@
       ],
       "key": "P"
     }
+  ],
+  "quickadd:choice:58db1465-6e65-4e2c-8e2d-2c456683f1b6": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Enter"
+    }
+  ],
+  "editor:open-link-in-new-leaf": [],
+  "quickadd:choice:dfe82076-62de-4f20-8a5e-f4b5055e9330": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Enter"
+    }
   ]
 }
