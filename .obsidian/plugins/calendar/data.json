@@ -4,7 +4,7 @@
   "wordsPerDot": 250,
   "showWeeklyNote": true,
   "weeklyNoteFormat": "",
-  "weeklyNoteTemplate": "",
+  "weeklyNoteTemplate": "00_inbox\\周记模版",
   "weeklyNoteFolder": "",
   "localeOverride": "system-default"
 }

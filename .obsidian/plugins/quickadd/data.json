@@ -32,12 +32,12 @@
     }
   ],
   "macros": [],
-  "inputPrompt": "single-line",
+  "inputPrompt": "multi-line",
   "devMode": false,
   "templateFolderPath": "",
   "announceUpdates": true,
   "version": "1.13.2",
-  "disableOnlineFeatures": true,
+  "disableOnlineFeatures": false,
   "enableRibbonIcon": false,
   "ai": {
     "defaultModel": "Ask me",

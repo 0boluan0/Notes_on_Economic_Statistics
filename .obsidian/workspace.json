@@ -4,16 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "675c5e4262ac7be4",
+        "id": "dce055f76a215cc3",
         "type": "tabs",
         "children": [
           {
-            "id": "bee3d71d595159e0",
+            "id": "1fc710ecc0775bc8",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "14_发展经济学/发展经济学拍屏ppt.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "发展经济学拍屏ppt"
+            }
+          }
+        ]
+      },
+      {
+        "id": "5e319fb5ea0d1658",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2480cb1c2734d142",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2025-05-13——周二.md",
+                "file": "14_发展经济学/01_不同国家的经济发展模式.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +46,110 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-05-13——周二"
+              "title": "01_不同国家的经济发展模式"
+            }
+          },
+          {
+            "id": "533203c0de33b546",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "14_发展经济学/02_人口增长与经济发展.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "02_人口增长与经济发展"
+            }
+          },
+          {
+            "id": "5143962e1d539b64",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "14_发展经济学/03_人口迁移理论.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "03_人口迁移理论"
+            }
+          },
+          {
+            "id": "d153770856f38a58",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "14_发展经济学/06_经济增长理论.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "06_经济增长理论"
+            }
+          }
+        ],
+        "currentTab": 3
+      },
+      {
+        "id": "c59e735a5f70929a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e44bc1c134d4b755",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "14_发展经济学/发展经济学考试内容.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "发展经济学考试内容"
             }
           }
         ]
@@ -88,7 +209,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -150,23 +272,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2025-05-13——周二.md",
+                "file": "14_发展经济学/发展经济学考试内容.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025-05-13——周二 的大纲"
-            }
-          },
-          {
-            "id": "2c9ca742cf90c221",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "title": "发展经济学考试内容 的大纲"
             }
           },
           {
@@ -207,6 +319,22 @@
           }
         ],
         "currentTab": 3
+      },
+      {
+        "id": "144db70e1b95d4ae",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2c9ca742cf90c221",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
@@ -227,15 +355,23 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "bee3d71d595159e0",
+  "active": "e44bc1c134d4b755",
   "lastOpenFiles": [
+    "14_发展经济学/03_人口迁移理论.md",
+    "00_inbox/未命名.md",
+    "99_学习情况记录/2025-05-14——周三.md",
     "99_学习情况记录/2025-05-13——周二.md",
+    "14_发展经济学/发展经济学考试内容.md",
+    "00_inbox/周记模版.md",
+    "14_发展经济学/06_经济增长理论.md",
+    "13_时间序列分析/02_差分方程Difference Equation.md",
+    "13_时间序列分析/01_介绍时间序列.md",
+    "13_时间序列分析/06_.md",
+    "00_inbox/日记模版.md",
     "00_inbox/weekly_rollup.md",
     "00_inbox/add_done_item.md",
     "13_时间序列分析/00_导论与概率论复习.md",
-    "13_时间序列分析/01_介绍时间序列.md",
     "13_时间序列分析/lecture.pdf",
-    "13_时间序列分析/06_.md",
     "99_学习情况记录/周记",
     "2025-05-13——周二.md",
     "99_学习情况记录/完成任务的日期/2025-05-13——周二.md",
@@ -243,23 +379,15 @@
     "99_学习情况记录/已复盘",
     "99_学习情况记录/2025-05-13——周二1.md",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
-    "13_时间序列分析/02_差分方程Difference Equation.md",
     "2025-05-13——周二1.md",
     "2025-05-13——周二2.md",
-    "00_inbox/日记模版.md",
     "2025-05-13——周二6.md",
     "2025-05-13——周二5.md",
     "00_inbox/日历视图.md",
     "2025-05-13——周二4.md",
     "2025-05-13——周二3.md",
-    "00_inbox/未命名.md",
     "99_学习情况记录/2025-05-13——星期二.md",
-    "2025-05-13——星期二1.md",
-    "2025-05-13——星期二.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
-    "99_学习情况记录/2025-05-12——星期一.md",
-    "14_发展经济学/01_不同国家的经济发展模式.md",
-    "11_证券投资学/证券投资学作业/证券投资学第四次作业 2.md",
     "11_证券投资学/证券投资学.pdf",
     "98_attachment/Pasted image 20250509163712.png",
     "98_attachment/Pasted image 20250509163705.png",

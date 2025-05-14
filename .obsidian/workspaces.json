@@ -284,16 +284,6 @@
                 }
               },
               {
-                "id": "2c9ca742cf90c221",
-                "type": "leaf",
-                "state": {
-                  "type": "calendar",
-                  "state": {},
-                  "icon": "calendar-with-checkmark",
-                  "title": "Calendar"
-                }
-              },
-              {
                 "id": "f004a8247c6cf59c",
                 "type": "leaf",
                 "state": {
@@ -331,6 +321,22 @@
               }
             ],
             "currentTab": 3
+          },
+          {
+            "id": "144db70e1b95d4ae",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "2c9ca742cf90c221",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {},
+                  "icon": "calendar-with-checkmark",
+                  "title": "Calendar"
+                }
+              }
+            ]
           }
         ],
         "direction": "horizontal",
@@ -352,7 +358,7 @@
         }
       },
       "active": "e44bc1c134d4b755",
-      "mtime": "2025-05-12T14:44:01+08:00"
+      "mtime": "2025-05-13T20:06:34+08:00"
     },
     "时间序列分析": {
       "main": {
@@ -552,7 +558,7 @@
                 }
               }
             ],
-            "currentTab": 6
+            "currentTab": 1
           },
           {
             "id": "5b75566d730c400b",
@@ -703,8 +709,7 @@
                   "title": "06_"
                 }
               }
-            ],
-            "currentTab": 5
+            ]
           }
         ],
         "direction": "vertical"
@@ -824,23 +829,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "13_时间序列分析/06_.md",
+                    "file": "13_时间序列分析/02_差分方程Difference Equation.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "06_ 的大纲"
-                }
-              },
-              {
-                "id": "2c9ca742cf90c221",
-                "type": "leaf",
-                "state": {
-                  "type": "calendar",
-                  "state": {},
-                  "icon": "calendar-with-checkmark",
-                  "title": "Calendar"
+                  "title": "02_差分方程Difference Equation 的大纲"
                 }
               },
               {
@@ -881,6 +876,22 @@
               }
             ],
             "currentTab": 3
+          },
+          {
+            "id": "b6e2d525de78b465",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "2c9ca742cf90c221",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {},
+                  "icon": "calendar-with-checkmark",
+                  "title": "Calendar"
+                }
+              }
+            ]
           }
         ],
         "direction": "horizontal",
@@ -901,8 +912,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "eaad0032ec8ce7de",
-      "mtime": "2025-04-29T10:56:11+08:00"
+      "active": "aeec949217ff58d2",
+      "mtime": "2025-05-13T20:06:02+08:00"
     },
     "时序复习": {
       "main": {
@@ -1597,5 +1608,5 @@
       "mtime": "2025-04-27T10:58:35+08:00"
     }
   },
-  "active": "时间序列分析"
+  "active": "发展经济学"
 }
