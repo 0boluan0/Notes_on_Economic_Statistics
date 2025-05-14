@@ -122,7 +122,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       },
       {
         "id": "c59e735a5f70929a",
@@ -150,6 +150,30 @@
               },
               "icon": "lucide-file",
               "title": "发展经济学考试内容"
+            }
+          },
+          {
+            "id": "d391e4c0aa39994d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "14_发展经济学/00_导论和考试相关.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00_导论和考试相关"
             }
           }
         ]
@@ -272,13 +296,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14_发展经济学/发展经济学考试内容.md",
+                "file": "14_发展经济学/02_人口增长与经济发展.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "发展经济学考试内容 的大纲"
+              "title": "02_人口增长与经济发展 的大纲"
             }
           },
           {
@@ -355,10 +379,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e44bc1c134d4b755",
+  "active": "533203c0de33b546",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "14_发展经济学/发展经济学考试内容.md",
+    "14_发展经济学/00_导论和考试相关.md",
+    "99_学习情况记录/完成任务的日期/2025-05-14——周三.md",
+    "conflict-files-obsidian-git.md",
     "14_发展经济学/03_人口迁移理论.md",
     "00_inbox/未命名.md",
     "99_学习情况记录/2025-05-14——周三.md",
@@ -385,8 +411,6 @@
     "2025-05-13——周二6.md",
     "2025-05-13——周二5.md",
     "00_inbox/日历视图.md",
-    "2025-05-13——周二4.md",
-    "2025-05-13——周二3.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "11_证券投资学/证券投资学.pdf",
     "98_attachment/Pasted image 20250509163712.png",
