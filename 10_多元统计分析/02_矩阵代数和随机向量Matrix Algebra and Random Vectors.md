@@ -525,7 +525,7 @@ $$|Q|^2 = 1.$$
        其中 $I$ 是单位矩阵，$\lambda$ 是特征值。
    - 特征向量的求解：
      - 对每个特征值 $\lambda$，解线性方程组：
-       $$(A - \lambda I)x = 0$$
+       $$(A - \lambda I)\begin{pmatrix} x \\ x \end{pmatrix} = 0$$
      - 注意：$x$ 必须是非零解。
 
    **举例**：设 $A = \begin{pmatrix} 2 & -3 \\ -3 & 2 \end{pmatrix}$。
@@ -635,55 +635,35 @@ $$
 
 $$
 
-解得特征向量 $\mathbf{v}_1 = \begin{bmatrix} 1 \ 1 \end{bmatrix}$。
+解得特征向量 $\mathbf{v}_1 = \begin{bmatrix} 1  \\  1 \end{bmatrix}$。
 
 对 $\lambda_2 = 2$，解 $(\mathbf{A} - 2\mathbf{I})\mathbf{v} = 0$：
 
 $$
-
 (\mathbf{A} - 2\mathbf{I}) = \begin{bmatrix}
-
 2 & 1 \\
-
 1 & 1
-
 \end{bmatrix}
-
 $$
 
-解得特征向量 $\mathbf{v}_2 = \begin{bmatrix} -1 \ 1 \end{bmatrix}$。
+解得特征向量 $\mathbf{v}_2 = \begin{bmatrix} -1  \\  1 \end{bmatrix}$。
 
 3. **构造 $\mathbf{\Lambda}$ 和 $\mathbf{Q}$**：
 
 $$
-
 \mathbf{\Lambda} = \begin{bmatrix}
-
 5 & 0 \\
-
 0 & 2
-
 \end{bmatrix}, \quad
-
 \mathbf{Q} = \begin{bmatrix}
-
 \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\
-
 \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
-
 \end{bmatrix}
-
 $$
-
 4. **谱分解结果**：
-
 $$
-
 \mathbf{A} = \mathbf{Q} \mathbf{\Lambda} \mathbf{Q}^\top
-
 $$
-
-  
 
 #### 4.**谱分解的性质**
 
@@ -1369,7 +1349,7 @@ $$
 
 ## 1. **定义**
    
-   - 相关矩阵描述随机向量中各变量之间的相关性                                                                                                                                                                                                                                                                                                                  。
+   - 相关矩阵描述随机向量中各变量之间的相关性
    - 若随机向量 $x = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_p \end{pmatrix}$，其相关矩阵为：
      $$
      \rho = \begin{pmatrix} 
@@ -1433,8 +1413,3 @@ $$
        \frac{1}{\sqrt{8}} & \frac{1}{\sqrt{6}} & 1 
        \end{pmatrix}
        $$
-
----
-
-
-

@@ -12,7 +12,6 @@
 
 - 差值向量定义： $$D_j = \begin{pmatrix} D_{j1} \\ D_{j2} \\ \vdots \\ D_{jp} \end{pmatrix} = \begin{pmatrix} x_{1j1} - x_{2j1} \\ x_{1j2} - x_{2j2} \\ \vdots \\ x_{1jp} - x_{2jp} \end{pmatrix}$$
 - 差值向量的期望和协方差： $$(D_j) = \delta = \begin{pmatrix} \delta_1 \\ \delta_2 \\ \vdots \\ \delta_p \end{pmatrix}, \quad Cov(D_j) = \Sigma_d$$
-
 ## 1.3. **Hotelling $T^2$ 检验**
 
 - 目标：对比 $\delta = 0$ 的假设 $H_0$（无显著差异）。
@@ -325,7 +324,7 @@ $$
 • **$T^2$ 同时置信区间：**
 对于任意向量 $a$，线性组合的置信区间为：
 $$
-a’(\bar{X}_1 - \bar{X}2) \pm C\alpha \sqrt{a’\left(\frac{1}{n_1} + \frac{1}{n_2}\right)S_{pooled}a},
+a’(\bar{X}_1 - \bar{X}2) \pm C\sqrt{a’\left(\frac{1}{n_1} + \frac{1}{n_2}\right)S_{pooled}a},
 $$
 其中：
 $$
@@ -377,8 +376,9 @@ $$
 $T^2$ 统计量的分布在小样本情况下不再严格服从 $F$ 分布。可以使用以下方法：
 
 • **渐近方法**：当样本量足够大时，$T^2$ 统计量近似服从 $\chi^2_p$ 分布（$p$ 是变量数）。
+
 • **Multivariate Behrens-Fisher Problem**
-	当比较两个总体的均值向量时，如果两个总体的协方差矩阵不相等（$\Sigma_1 \neq \Sigma_2$）且样本量较小，这属于**多变量 Behrens-Fisher 问题**。
+		当比较两个总体的均值向量时，如果两个总体的协方差矩阵不相等（$\Sigma_1 \neq \Sigma_2$）且样本量较小，这属§于**多变量 Behrens-Fisher 问题**。
 • **分布：**
 $$
 T^2 \sim \frac{\nu p}{\nu - p + 1} F_{p, \nu - p + 1}，

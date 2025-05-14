@@ -58,4 +58,3 @@
 
 - 在大样本下，$\hat{\boldsymbol{\beta}}$ 的分布近似为正态分布： $$\hat{\boldsymbol{\beta}} \sim N(\boldsymbol{\beta}, \sigma^2 (\mathbf{X}'\mathbf{X})^{-1})$$
 
-# 

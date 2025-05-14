@@ -12,12 +12,19 @@
   "obsidian-emoji-toolbar",
   "obsidian-kanban",
   "omnisearch",
-  "quick-latex",
   "obsidian-tasks-plugin",
   "contribution-graph",
   "contribution-widget",
   "tars",
   "multi-column-markdown",
   "obsidian-chartsview-plugin",
-  "obsidian-pandoc"
+  "obsidian-pandoc",
+  "obsidian-charts",
+  "templater-obsidian",
+  "obsidian-tikzjax",
+  "code-emitter",
+  "obsidian-latex-suite",
+  "better-reading-mode",
+  "quickadd",
+  "cron"
 ]
