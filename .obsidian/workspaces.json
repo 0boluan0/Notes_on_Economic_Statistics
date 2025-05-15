@@ -79,28 +79,14 @@
                 "id": "5143962e1d539b64",
                 "type": "leaf",
                 "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "14_发展经济学/03_人口迁移理论.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
-                  },
+                  "type": "empty",
+                  "state": {},
                   "icon": "lucide-file",
-                  "title": "03_人口迁移理论"
+                  "title": "新标签页"
                 }
               },
               {
-                "id": "d153770856f38a58",
+                "id": "548937f25fbc2e48",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
@@ -124,7 +110,7 @@
                 }
               }
             ],
-            "currentTab": 3
+            "currentTab": 1
           },
           {
             "id": "c59e735a5f70929a",
@@ -153,8 +139,33 @@
                   "icon": "lucide-file",
                   "title": "发展经济学考试内容"
                 }
+              },
+              {
+                "id": "ce6976fadf72a644",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "14_发展经济学/00_导论和考试相关.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "00_导论和考试相关"
+                }
               }
-            ]
+            ],
+            "currentTab": 1
           }
         ],
         "direction": "vertical"
@@ -186,7 +197,7 @@
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "大的",
+                    "query": "",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
@@ -274,13 +285,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "14_发展经济学/发展经济学考试内容.md",
+                    "file": "14_发展经济学/02_人口增长与经济发展.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "发展经济学考试内容 的大纲"
+                  "title": "02_人口增长与经济发展 的大纲"
                 }
               },
               {
@@ -357,8 +368,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "e44bc1c134d4b755",
-      "mtime": "2025-05-13T20:06:34+08:00"
+      "active": "533203c0de33b546",
+      "mtime": "2025-05-15T16:17:01+08:00"
     },
     "时间序列分析": {
       "main": {
