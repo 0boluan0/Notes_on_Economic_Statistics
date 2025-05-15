@@ -177,7 +177,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/06_.md",
+                "file": "13_时间序列分析/06_含趋势的模型.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -192,10 +192,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "06_"
+              "title": "06_含趋势的模型"
+            }
+          },
+          {
+            "id": "e559c0d6dcaeb780",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/未命名 1.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "未命名 1"
             }
           }
-        ]
+        ],
+        "currentTab": 7
       },
       {
         "id": "5b75566d730c400b",
@@ -466,13 +491,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/00_导论与概率论复习.md",
+                "file": "00_inbox/未命名 1.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "00_导论与概率论复习 的大纲"
+              "title": "未命名 1 的大纲"
             }
           },
           {
@@ -549,14 +574,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2480cb1c2734d142",
+  "active": "e559c0d6dcaeb780",
   "lastOpenFiles": [
-    "13_时间序列分析/06_.md",
+    "00_inbox/未命名 1.md",
+    "13_时间序列分析/06_含趋势的模型.md",
+    "13_时间序列分析/00_导论与概率论复习.md",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
-    "13_时间序列分析/00_导论与概率论复习.md",
     "14_发展经济学/发展经济学考试内容.md",
     "99_学习情况记录/完成任务的日期/2025-05-15——周四.md",
     "14_发展经济学/01_不同国家的经济发展模式.md",
@@ -579,7 +605,6 @@
     "13_时间序列分析/lecture.pdf",
     "99_学习情况记录/周记",
     "2025-05-13——周二.md",
-    "99_学习情况记录/完成任务的日期/2025-05-13——周二.md",
     "99_学习情况记录/完成任务的日期",
     "99_学习情况记录/已复盘",
     "11_证券投资学/证券投资学.pdf",
