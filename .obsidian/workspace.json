@@ -201,7 +201,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/未命名 1.md",
+                "file": "00_inbox/07_协整和误差修正模型.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -216,11 +216,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "未命名 1"
+              "title": "07_协整和误差修正模型"
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 6
       },
       {
         "id": "5b75566d730c400b",
@@ -491,13 +491,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/未命名 1.md",
+                "file": "13_时间序列分析/06_含趋势的模型.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "未命名 1 的大纲"
+              "title": "06_含趋势的模型 的大纲"
             }
           },
           {
@@ -574,9 +574,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e559c0d6dcaeb780",
+  "active": "5a25f027b57898b1",
   "lastOpenFiles": [
-    "00_inbox/未命名 1.md",
+    "00_inbox/07_协整和误差修正模型.md",
     "13_时间序列分析/06_含趋势的模型.md",
     "13_时间序列分析/00_导论与概率论复习.md",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
