@@ -227,6 +227,30 @@
         "dimension": 29.574678536102866,
         "children": [
           {
+            "id": "eaad0032ec8ce7de",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/00_导论与概率论复习.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00_导论与概率论复习"
+            }
+          },
+          {
             "id": "aeec949217ff58d2",
             "type": "leaf",
             "state": {
@@ -326,48 +350,10 @@
             "id": "63bc8a41319194c2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/06_.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "06_"
-            }
-          },
-          {
-            "id": "eaad0032ec8ce7de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/06_.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "06_"
+              "title": "新标签页"
             }
           }
         ]
@@ -575,9 +561,10 @@
   },
   "active": "2480cb1c2734d142",
   "lastOpenFiles": [
+    "13_时间序列分析/01_介绍时间序列.md",
+    "13_时间序列分析/00_导论与概率论复习.md",
     "13_时间序列分析/06_含趋势的模型.md",
     "00_inbox/07_协整和误差修正模型.md",
-    "13_时间序列分析/00_导论与概率论复习.md",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
@@ -597,7 +584,6 @@
     "99_学习情况记录/2025-05-14——周三.md",
     "99_学习情况记录/2025-05-13——周二.md",
     "00_inbox/周记模版.md",
-    "13_时间序列分析/01_介绍时间序列.md",
     "00_inbox/日记模版.md",
     "00_inbox/weekly_rollup.md",
     "00_inbox/add_done_item.md",
