@@ -33,7 +33,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/00_导论与概率论复习.md",
+                "file": "99_学习情况记录/2025-05-15——周四.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -48,7 +48,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00_导论与概率论复习"
+              "title": "2025-05-15——周四"
             }
           },
           {
@@ -476,13 +476,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/00_导论与概率论复习.md",
+                "file": "99_学习情况记录/2025-05-15——周四.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "00_导论与概率论复习 的大纲"
+              "title": "2025-05-15——周四 的大纲"
             }
           },
           {
@@ -561,8 +561,8 @@
   },
   "active": "2480cb1c2734d142",
   "lastOpenFiles": [
-    "13_时间序列分析/01_介绍时间序列.md",
     "13_时间序列分析/00_导论与概率论复习.md",
+    "13_时间序列分析/01_介绍时间序列.md",
     "13_时间序列分析/06_含趋势的模型.md",
     "00_inbox/07_协整和误差修正模型.md",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
