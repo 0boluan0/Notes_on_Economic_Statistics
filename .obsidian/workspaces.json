@@ -617,7 +617,7 @@
                 }
               }
             ],
-            "currentTab": 8
+            "currentTab": 2
           },
           {
             "id": "5b75566d730c400b",
@@ -768,8 +768,7 @@
                   "title": "07_协整和误差修正模型"
                 }
               }
-            ],
-            "currentTab": 5
+            ]
           }
         ],
         "direction": "vertical"
@@ -836,6 +835,7 @@
           {
             "id": "e0fa6f818c861393",
             "type": "tabs",
+            "dimension": 72.15189873417721,
             "children": [
               {
                 "id": "d5dd85784b1fe9ec",
@@ -889,13 +889,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "13_时间序列分析/时序复习.md",
+                    "file": "13_时间序列分析/02_差分方程Difference Equation.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "时序复习 的大纲"
+                  "title": "02_差分方程Difference Equation 的大纲"
                 }
               },
               {
@@ -940,6 +940,7 @@
           {
             "id": "b6e2d525de78b465",
             "type": "tabs",
+            "dimension": 27.848101265822784,
             "children": [
               {
                 "id": "2c9ca742cf90c221",
@@ -972,8 +973,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "d219a0b9ad497725",
-      "mtime": "2025-05-16T19:52:40+08:00"
+      "active": "4f9fa9f2ca4732c6",
+      "mtime": "2025-05-16T20:56:36+08:00"
     },
     "时序复习": {
       "main": {
