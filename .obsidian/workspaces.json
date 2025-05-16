@@ -550,7 +550,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "13_时间序列分析/06_.md",
+                    "file": "13_时间序列分析/06_含趋势的模型.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -565,11 +565,59 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "06_"
+                  "title": "06_含趋势的模型"
+                }
+              },
+              {
+                "id": "9617601d4620375a",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "13_时间序列分析/07_协整和误差修正模型.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "07_协整和误差修正模型"
+                }
+              },
+              {
+                "id": "d219a0b9ad497725",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "13_时间序列分析/时序复习.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "时序复习"
                 }
               }
             ],
-            "currentTab": 1
+            "currentTab": 8
           },
           {
             "id": "5b75566d730c400b",
@@ -678,7 +726,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "13_时间序列分析/06_.md",
+                    "file": "13_时间序列分析/06_含趋势的模型.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -693,7 +741,7 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "06_"
+                  "title": "06_含趋势的模型"
                 }
               },
               {
@@ -702,7 +750,7 @@
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "13_时间序列分析/06_.md",
+                    "file": "13_时间序列分析/07_协整和误差修正模型.md",
                     "mode": "source",
                     "source": false,
                     "backlinks": true,
@@ -717,10 +765,11 @@
                     }
                   },
                   "icon": "lucide-file",
-                  "title": "06_"
+                  "title": "07_协整和误差修正模型"
                 }
               }
-            ]
+            ],
+            "currentTab": 5
           }
         ],
         "direction": "vertical"
@@ -840,13 +889,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "13_时间序列分析/02_差分方程Difference Equation.md",
+                    "file": "13_时间序列分析/时序复习.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "02_差分方程Difference Equation 的大纲"
+                  "title": "时序复习 的大纲"
                 }
               },
               {
@@ -923,8 +972,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "aeec949217ff58d2",
-      "mtime": "2025-05-13T20:06:02+08:00"
+      "active": "d219a0b9ad497725",
+      "mtime": "2025-05-16T19:52:40+08:00"
     },
     "时序复习": {
       "main": {

@@ -177,7 +177,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/06_.md",
+                "file": "13_时间序列分析/06_含趋势的模型.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -192,7 +192,55 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "06_"
+              "title": "06_含趋势的模型"
+            }
+          },
+          {
+            "id": "9617601d4620375a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/07_协整和误差修正模型.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "07_协整和误差修正模型"
+            }
+          },
+          {
+            "id": "d219a0b9ad497725",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/时序复习.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "时序复习"
             }
           }
         ],
@@ -305,7 +353,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/06_.md",
+                "file": "13_时间序列分析/06_含趋势的模型.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -320,7 +368,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "06_"
+              "title": "06_含趋势的模型"
             }
           },
           {
@@ -329,7 +377,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/06_.md",
+                "file": "13_时间序列分析/07_协整和误差修正模型.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -344,7 +392,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "06_"
+              "title": "07_协整和误差修正模型"
             }
           }
         ]
@@ -552,17 +600,24 @@
   },
   "active": "4f9fa9f2ca4732c6",
   "lastOpenFiles": [
-    "99_学习情况记录/2025-05-16——周五.md",
+    "98_attachment/Pasted image 20250516202556.png",
+    "98_attachment/Pasted image 20250516202553.png",
+    "98_attachment/Pasted image 20250516202520.png",
+    "98_attachment/Pasted image 20250516202456.png",
+    "13_时间序列分析/03_平稳时间序列模型.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
-    "99_学习情况记录/完成任务的日期/2025-05-16——周五.md",
+    "13_时间序列分析/时序复习.md",
     "13_时间序列分析/01_介绍时间序列.md",
-    "13_时间序列分析/00_导论与概率论复习.md",
     "13_时间序列分析/07_协整和误差修正模型.md",
     "13_时间序列分析/06_含趋势的模型.md",
+    "13_时间序列分析/lecture-dual.pdf",
+    "13_时间序列分析/lecture.pdf",
+    "99_学习情况记录/2025-05-16——周五.md",
+    "99_学习情况记录/完成任务的日期/2025-05-16——周五.md",
+    "13_时间序列分析/00_导论与概率论复习.md",
     "00_inbox/07_协整和误差修正模型.md",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
-    "13_时间序列分析/03_平稳时间序列模型.md",
     "14_发展经济学/发展经济学考试内容.md",
     "99_学习情况记录/完成任务的日期/2025-05-15——周四.md",
     "14_发展经济学/01_不同国家的经济发展模式.md",
@@ -577,9 +632,6 @@
     "00_inbox/未命名.md",
     "99_学习情况记录/2025-05-14——周三.md",
     "99_学习情况记录/2025-05-13——周二.md",
-    "00_inbox/周记模版.md",
-    "00_inbox/日记模版.md",
-    "13_时间序列分析/lecture.pdf",
     "99_学习情况记录/周记",
     "99_学习情况记录/完成任务的日期",
     "99_学习情况记录/已复盘",
@@ -591,11 +643,7 @@
     "98_attachment/Pasted image 20250509152632.png",
     "98_attachment/Pasted image 20250509150003.png",
     "98_attachment/Pasted image 20250509145956.png",
-    "98_attachment/Pasted image 20250509145950.png",
-    "98_attachment/Pasted image 20250509145941.png",
-    "98_attachment/Pasted image 20250509145846.png",
     "11_证券投资学/证券投资学作业",
-    "13_时间序列分析/lecture-dual.pdf",
     "14_发展经济学",
     "13_时间序列分析",
     "01_Econometrics/未命名.canvas",
