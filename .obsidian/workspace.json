@@ -177,7 +177,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/06_.md",
+                "file": "13_时间序列分析/06_含趋势的模型.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -192,7 +192,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "06_"
+              "title": "06_含趋势的模型"
             }
           }
         ]
@@ -203,7 +203,7 @@
         "dimension": 29.574678536102866,
         "children": [
           {
-            "id": "768df21c49b42563",
+            "id": "eaad0032ec8ce7de",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -326,48 +326,10 @@
             "id": "63bc8a41319194c2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/06_含趋势的模型.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "06_含趋势的模型"
-            }
-          },
-          {
-            "id": "eaad0032ec8ce7de",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13_时间序列分析/07_协整和误差修正模型.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "07_协整和误差修正模型"
+              "title": "新标签页"
             }
           }
         ]
@@ -573,18 +535,17 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "768df21c49b42563",
+  "active": "eaad0032ec8ce7de",
   "lastOpenFiles": [
-    "13_时间序列分析/lecture.pdf",
-    "13_时间序列分析/00_导论与概率论复习.md",
     "13_时间序列分析/07_协整和误差修正模型.md",
-    "13_时间序列分析/06_含趋势的模型.md",
-    "13_时间序列分析/02_差分方程Difference Equation.md",
-    "99_学习情况记录/2025-05-15——周四.md",
     "13_时间序列分析/01_介绍时间序列.md",
+    "13_时间序列分析/00_导论与概率论复习.md",
+    "13_时间序列分析/06_含趋势的模型.md",
+    "00_inbox/07_协整和误差修正模型.md",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
+    "13_时间序列分析/02_差分方程Difference Equation.md",
     "14_发展经济学/发展经济学考试内容.md",
     "99_学习情况记录/完成任务的日期/2025-05-15——周四.md",
     "14_发展经济学/01_不同国家的经济发展模式.md",
@@ -592,6 +553,7 @@
     "14_发展经济学/00_导论和考试相关.md",
     "14_发展经济学/02_人口增长与经济发展.md",
     "14_发展经济学/06_经济增长理论.md",
+    "99_学习情况记录/2025-05-15——周四.md",
     "99_学习情况记录/完成任务的日期/2025-05-14——周三.md",
     "conflict-files-obsidian-git.md",
     "14_发展经济学/03_人口迁移理论.md",
@@ -602,6 +564,7 @@
     "00_inbox/日记模版.md",
     "00_inbox/weekly_rollup.md",
     "00_inbox/add_done_item.md",
+    "13_时间序列分析/lecture.pdf",
     "99_学习情况记录/周记",
     "99_学习情况记录/完成任务的日期",
     "99_学习情况记录/已复盘",
