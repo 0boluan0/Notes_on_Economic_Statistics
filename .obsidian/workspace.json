@@ -195,7 +195,8 @@
               "title": "06_含趋势的模型"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "5b75566d730c400b",
@@ -332,7 +333,8 @@
               "title": "新标签页"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -452,13 +454,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/00_导论与概率论复习.md",
+                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "00_导论与概率论复习 的大纲"
+              "title": "02_差分方程Difference Equation 的大纲"
             }
           },
           {
@@ -535,11 +537,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "eaad0032ec8ce7de",
+  "active": "aeec949217ff58d2",
   "lastOpenFiles": [
-    "13_时间序列分析/07_协整和误差修正模型.md",
     "13_时间序列分析/01_介绍时间序列.md",
     "13_时间序列分析/00_导论与概率论复习.md",
+    "13_时间序列分析/07_协整和误差修正模型.md",
     "13_时间序列分析/06_含趋势的模型.md",
     "00_inbox/07_协整和误差修正模型.md",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
