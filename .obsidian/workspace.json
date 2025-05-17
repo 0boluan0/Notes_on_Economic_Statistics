@@ -81,7 +81,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2025-05-17——周六.md",
+                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -96,7 +96,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-05-17——周六"
+              "title": "02_差分方程Difference Equation"
             }
           },
           {
@@ -516,13 +516,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2025-05-17——周六.md",
+                "file": "13_时间序列分析/02_差分方程Difference Equation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025-05-17——周六 的大纲"
+              "title": "02_差分方程Difference Equation 的大纲"
             }
           },
           {
@@ -602,13 +602,13 @@
   },
   "active": "4f9fa9f2ca4732c6",
   "lastOpenFiles": [
-    "13_时间序列分析/02_差分方程Difference Equation.md",
     "99_学习情况记录/2025-05-17——周六.md",
     "98_attachment/Pasted image 20250516202556.png",
     "98_attachment/Pasted image 20250516202553.png",
     "98_attachment/Pasted image 20250516202520.png",
     "98_attachment/Pasted image 20250516202456.png",
     "13_时间序列分析/03_平稳时间序列模型.md",
+    "13_时间序列分析/02_差分方程Difference Equation.md",
     "13_时间序列分析/时序复习.md",
     "13_时间序列分析/01_介绍时间序列.md",
     "13_时间序列分析/07_协整和误差修正模型.md",
