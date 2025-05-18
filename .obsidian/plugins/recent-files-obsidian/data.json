@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "00_导论与概率论复习",
+      "path": "13_时间序列分析/00_导论与概率论复习.md"
+    },
+    {
+      "basename": "02_差分方程Difference Equation",
+      "path": "13_时间序列分析/02_差分方程Difference Equation.md"
+    },
+    {
       "basename": "03_平稳时间序列模型",
       "path": "13_时间序列分析/03_平稳时间序列模型.md"
     },
@@ -11,10 +19,6 @@
     {
       "basename": "07_协整和误差修正模型",
       "path": "13_时间序列分析/07_协整和误差修正模型.md"
-    },
-    {
-      "basename": "02_差分方程Difference Equation",
-      "path": "13_时间序列分析/02_差分方程Difference Equation.md"
     },
     {
       "basename": "2025-05-18——周日",
@@ -39,10 +43,6 @@
     {
       "basename": "01_介绍时间序列",
       "path": "13_时间序列分析/01_介绍时间序列.md"
-    },
-    {
-      "basename": "00_导论与概率论复习",
-      "path": "13_时间序列分析/00_导论与概率论复习.md"
     },
     {
       "basename": "2025-05-17——周六",

@@ -243,8 +243,7 @@
               "title": "时序复习"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "5b75566d730c400b",
@@ -517,13 +516,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/03_平稳时间序列模型.md",
+                "file": "13_时间序列分析/00_导论与概率论复习.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "03_平稳时间序列模型 的大纲"
+              "title": "00_导论与概率论复习 的大纲"
             }
           },
           {
@@ -601,12 +600,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9ad310617bbd94af",
+  "active": "2480cb1c2734d142",
   "lastOpenFiles": [
-    "13_时间序列分析/lecture.pdf",
-    "13_时间序列分析/03_平稳时间序列模型.md",
-    "13_时间序列分析/07_协整和误差修正模型.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
+    "13_时间序列分析/03_平稳时间序列模型.md",
+    "98_attachment/Pasted image 20250518153606.png",
+    "98_attachment/Pasted image 20250518153535.png",
+    "98_attachment/Pasted image 20250518153528.png",
+    "13_时间序列分析/lecture.pdf",
+    "13_时间序列分析/07_协整和误差修正模型.md",
     "99_学习情况记录/完成任务的日期/2025-05-18——周日.md",
     "99_学习情况记录/2025-05-18——周日.md",
     "99_学习情况记录/2025-05-17——周六.md",
@@ -642,9 +644,6 @@
     "98_attachment/Pasted image 20250509163712.png",
     "98_attachment/Pasted image 20250509163705.png",
     "98_attachment/Pasted image 20250509162820.png",
-    "98_attachment/Pasted image 20250509153639.png",
-    "98_attachment/Pasted image 20250509152632.png",
-    "98_attachment/Pasted image 20250509150003.png",
     "11_证券投资学/证券投资学作业",
     "14_发展经济学",
     "13_时间序列分析",
