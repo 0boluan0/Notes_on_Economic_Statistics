@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "03_平稳时间序列模型",
+      "path": "13_时间序列分析/03_平稳时间序列模型.md"
+    },
+    {
       "basename": "02_差分方程Difference Equation",
       "path": "13_时间序列分析/02_差分方程Difference Equation.md"
+    },
+    {
+      "basename": "2025-05-18——周日",
+      "path": "99_学习情况记录/2025-05-18——周日.md"
     },
     {
       "basename": "发展经济学考试内容",
@@ -19,10 +27,6 @@
     {
       "basename": "04_波动建模 Modeling Volatility",
       "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
-    },
-    {
-      "basename": "03_平稳时间序列模型",
-      "path": "13_时间序列分析/03_平稳时间序列模型.md"
     },
     {
       "basename": "01_介绍时间序列",
@@ -195,10 +199,6 @@
     {
       "basename": "02_证券市场",
       "path": "11_证券投资学/02_证券市场.md"
-    },
-    {
-      "basename": "证券投资学第十一章作业",
-      "path": "11_证券投资学/证券投资学作业/证券投资学第十一章作业.md"
     }
   ],
   "omittedPaths": [],
