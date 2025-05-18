@@ -105,7 +105,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2025-05-18——周日.md",
+                "file": "13_时间序列分析/03_平稳时间序列模型.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -120,7 +120,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-05-18——周日"
+              "title": "03_平稳时间序列模型"
             }
           },
           {
@@ -517,13 +517,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2025-05-18——周日.md",
+                "file": "13_时间序列分析/03_平稳时间序列模型.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025-05-18——周日 的大纲"
+              "title": "03_平稳时间序列模型 的大纲"
             }
           },
           {
@@ -601,8 +601,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9ad310617bbd94af",
+  "active": "813e4da595edd296",
   "lastOpenFiles": [
+    "99_学习情况记录/2025-05-18——周日.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
     "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/02_差分方程Difference Equation.md",
@@ -610,7 +611,6 @@
     "14_发展经济学/02_人口增长与经济发展.md",
     "00_inbox/周记模版.md",
     "2025-W20.md",
-    "99_学习情况记录/2025-05-18——周日.md",
     "13_时间序列分析/00_导论与概率论复习.md",
     "98_attachment/Pasted image 20250518153606.png",
     "98_attachment/Pasted image 20250518153535.png",
