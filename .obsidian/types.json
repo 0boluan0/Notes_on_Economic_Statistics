@@ -44,6 +44,9 @@
     "TQ_show_tags": "checkbox",
     "TQ_show_task_count": "checkbox",
     "TQ_show_tree": "checkbox",
-    "TQ_show_urgency": "checkbox"
+    "TQ_show_urgency": "checkbox",
+    "周一": "date",
+    "周日": "date",
+    "总学习时长": "number"
   }
 }

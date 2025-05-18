@@ -617,7 +617,7 @@
                 }
               }
             ],
-            "currentTab": 2
+            "currentTab": 3
           },
           {
             "id": "5b75566d730c400b",
@@ -768,7 +768,8 @@
                   "title": "07_协整和误差修正模型"
                 }
               }
-            ]
+            ],
+            "currentTab": 1
           }
         ],
         "direction": "vertical"
@@ -889,13 +890,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "13_时间序列分析/02_差分方程Difference Equation.md",
+                    "file": "13_时间序列分析/03_平稳时间序列模型.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "02_差分方程Difference Equation 的大纲"
+                  "title": "03_平稳时间序列模型 的大纲"
                 }
               },
               {
@@ -973,8 +974,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "4f9fa9f2ca4732c6",
-      "mtime": "2025-05-16T20:56:36+08:00"
+      "active": "813e4da595edd296",
+      "mtime": "2025-05-18T19:30:47+08:00"
     },
     "时序复习": {
       "main": {
