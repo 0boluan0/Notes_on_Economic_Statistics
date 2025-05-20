@@ -5,24 +5,24 @@
       "path": "14_发展经济学/发展经济学考试内容.md"
     },
     {
-      "basename": "发展经济学拍屏ppt",
-      "path": "14_发展经济学/发展经济学拍屏ppt.pdf"
-    },
-    {
       "basename": "02_人口增长与经济发展",
       "path": "14_发展经济学/02_人口增长与经济发展.md"
+    },
+    {
+      "basename": "03_平稳时间序列模型",
+      "path": "13_时间序列分析/03_平稳时间序列模型.md"
     },
     {
       "basename": "04_波动建模 Modeling Volatility",
       "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
     },
     {
-      "basename": "lecture",
-      "path": "13_时间序列分析/lecture.pdf"
+      "basename": "发展经济学拍屏ppt",
+      "path": "14_发展经济学/发展经济学拍屏ppt.pdf"
     },
     {
-      "basename": "03_平稳时间序列模型",
-      "path": "13_时间序列分析/03_平稳时间序列模型.md"
+      "basename": "lecture",
+      "path": "13_时间序列分析/lecture.pdf"
     },
     {
       "basename": "时序复习",
