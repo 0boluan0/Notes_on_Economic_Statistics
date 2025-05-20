@@ -423,6 +423,16 @@
             }
           },
           {
+            "id": "2a658727394b251b",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {},
+              "icon": "clock",
+              "title": "Recent Files"
+            }
+          },
+          {
             "id": "68e022ef2943b75b",
             "type": "leaf",
             "state": {
@@ -437,16 +447,6 @@
               },
               "icon": "lucide-search",
               "title": "搜索"
-            }
-          },
-          {
-            "id": "2a658727394b251b",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
             }
           }
         ]
@@ -601,22 +601,22 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "813e4da595edd296",
+  "active": "9ad310617bbd94af",
   "lastOpenFiles": [
+    "13_时间序列分析/时序复习.md",
+    "13_时间序列分析/03_平稳时间序列模型.md",
     "99_学习情况记录/2025-05-20——周二.md",
     "99_学习情况记录/完成任务的日期/2025-05-20——周二.md",
     "99_学习情况记录/2025-05-16——周五.md",
     "99_学习情况记录/2025-05-17——周六.md",
     "99_学习情况记录/2025-05-18——周日.md",
     "99_学习情况记录/2025-05-19——周一.md",
-    "13_时间序列分析/03_平稳时间序列模型.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "98_attachment/Pasted image 20250519203554.png",
     "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/07_协整和误差修正模型.md",
     "13_时间序列分析/06_含趋势的模型.md",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
-    "13_时间序列分析/时序复习.md",
     "14_发展经济学/发展经济学考试内容.md",
     "99_学习情况记录/完成任务的日期/2025-05-19——周一.md",
     "14_发展经济学/02_人口增长与经济发展.md",
