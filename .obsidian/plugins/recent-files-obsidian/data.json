@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "04_波动建模 Modeling Volatility",
+      "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
+    },
+    {
       "basename": "03_平稳时间序列模型",
       "path": "13_时间序列分析/03_平稳时间序列模型.md"
+    },
+    {
+      "basename": "lecture",
+      "path": "13_时间序列分析/lecture.pdf"
     },
     {
       "basename": "时序复习",
@@ -31,14 +39,6 @@
     {
       "basename": "2025-05-19——周一",
       "path": "99_学习情况记录/2025-05-19——周一.md"
-    },
-    {
-      "basename": "04_波动建模 Modeling Volatility",
-      "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
-    },
-    {
-      "basename": "lecture",
-      "path": "13_时间序列分析/lecture.pdf"
     },
     {
       "basename": "07_协整和误差修正模型",

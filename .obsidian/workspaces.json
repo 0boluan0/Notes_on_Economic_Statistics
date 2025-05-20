@@ -617,7 +617,7 @@
                 }
               }
             ],
-            "currentTab": 3
+            "currentTab": 4
           },
           {
             "id": "5b75566d730c400b",
@@ -769,7 +769,7 @@
                 }
               }
             ],
-            "currentTab": 1
+            "currentTab": 2
           }
         ],
         "direction": "vertical"
@@ -796,6 +796,16 @@
                 }
               },
               {
+                "id": "2a658727394b251b",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {},
+                  "icon": "clock",
+                  "title": "Recent Files"
+                }
+              },
+              {
                 "id": "68e022ef2943b75b",
                 "type": "leaf",
                 "state": {
@@ -810,16 +820,6 @@
                   },
                   "icon": "lucide-search",
                   "title": "搜索"
-                }
-              },
-              {
-                "id": "2a658727394b251b",
-                "type": "leaf",
-                "state": {
-                  "type": "recent-files",
-                  "state": {},
-                  "icon": "clock",
-                  "title": "Recent Files"
                 }
               }
             ]
@@ -890,13 +890,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "13_时间序列分析/03_平稳时间序列模型.md",
+                    "file": "13_时间序列分析/04_波动建模 Modeling Volatility.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "03_平稳时间序列模型 的大纲"
+                  "title": "04_波动建模 Modeling Volatility 的大纲"
                 }
               },
               {
@@ -974,8 +974,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "813e4da595edd296",
-      "mtime": "2025-05-18T19:30:47+08:00"
+      "active": "d35a8cc2b93244a5",
+      "mtime": "2025-05-20T18:38:29+08:00"
     },
     "时序复习": {
       "main": {
