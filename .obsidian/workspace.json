@@ -466,6 +466,39 @@
         "dimension": 72.15189873417721,
         "children": [
           {
+            "id": "d5dd85784b1fe9ec",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "09_线性代数/00_perface.md",
+                "collapseAll": false,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "00_perface 的反向链接列表"
+            }
+          },
+          {
+            "id": "89566e4ae967dd41",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "07_随机过程/01_预备知识.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "01_预备知识 的出链列表"
+            }
+          },
+          {
             "id": "e5d9deda3bdad2bf",
             "type": "leaf",
             "state": {
@@ -506,9 +539,31 @@
               "icon": "lucide-archive",
               "title": "添加笔记属性"
             }
+          },
+          {
+            "id": "947ff9c8fc940254",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "插件不再活动"
+            }
+          },
+          {
+            "id": "73c6a8f36ce60b01",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "07_随机过程/01_预备知识.md"
+              },
+              "icon": "lucide-info",
+              "title": "01_预备知识的笔记属性"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       },
       {
         "id": "b6e2d525de78b465",
@@ -546,10 +601,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9ad310617bbd94af",
+  "active": "813e4da595edd296",
   "lastOpenFiles": [
-    "99_学习情况记录/完成任务的日期/2025-05-20——周二.md",
     "99_学习情况记录/2025-05-20——周二.md",
+    "99_学习情况记录/完成任务的日期/2025-05-20——周二.md",
+    "99_学习情况记录/2025-05-16——周五.md",
+    "99_学习情况记录/2025-05-17——周六.md",
+    "99_学习情况记录/2025-05-18——周日.md",
+    "99_学习情况记录/2025-05-19——周一.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "98_attachment/Pasted image 20250519203554.png",
@@ -558,12 +617,10 @@
     "13_时间序列分析/06_含趋势的模型.md",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
     "13_时间序列分析/时序复习.md",
-    "99_学习情况记录/2025-05-19——周一.md",
     "14_发展经济学/发展经济学考试内容.md",
     "99_学习情况记录/完成任务的日期/2025-05-19——周一.md",
     "14_发展经济学/02_人口增长与经济发展.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
-    "99_学习情况记录/2025-05-18——周日.md",
     "00_inbox/周记模版.md",
     "2025-W20.md",
     "13_时间序列分析/00_导论与概率论复习.md",
@@ -571,14 +628,12 @@
     "98_attachment/Pasted image 20250518153535.png",
     "98_attachment/Pasted image 20250518153528.png",
     "99_学习情况记录/完成任务的日期/2025-05-18——周日.md",
-    "99_学习情况记录/2025-05-17——周六.md",
     "98_attachment/Pasted image 20250516202556.png",
     "98_attachment/Pasted image 20250516202553.png",
     "98_attachment/Pasted image 20250516202520.png",
     "98_attachment/Pasted image 20250516202456.png",
     "13_时间序列分析/01_介绍时间序列.md",
     "13_时间序列分析/lecture-dual.pdf",
-    "99_学习情况记录/2025-05-16——周五.md",
     "99_学习情况记录/完成任务的日期/2025-05-16——周五.md",
     "00_inbox/07_协整和误差修正模型.md",
     "99_学习情况记录/完成任务的日期/2025-05-15——周四.md",
