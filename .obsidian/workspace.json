@@ -74,16 +74,6 @@
             }
           },
           {
-            "id": "5143962e1d539b64",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
-            }
-          },
-          {
             "id": "548937f25fbc2e48",
             "type": "leaf",
             "state": {
@@ -108,7 +98,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "c59e735a5f70929a",
@@ -219,7 +209,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -367,9 +358,9 @@
   "active": "e44bc1c134d4b755",
   "lastOpenFiles": [
     "14_发展经济学/06_经济增长理论.md",
-    "14_发展经济学/00_导论和考试相关.md",
-    "14_发展经济学/发展经济学考试内容.md",
     "14_发展经济学/02_人口增长与经济发展.md",
+    "14_发展经济学/发展经济学考试内容.md",
+    "14_发展经济学/00_导论和考试相关.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "98_attachment/Pasted image 20250520193300.png",
