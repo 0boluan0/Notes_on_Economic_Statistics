@@ -74,30 +74,6 @@
             }
           },
           {
-            "id": "548937f25fbc2e48",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "14_发展经济学/06_经济增长理论.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "06_经济增长理论"
-            }
-          },
-          {
             "id": "8ba4e71bf3734eab",
             "type": "leaf",
             "state": {
@@ -119,6 +95,30 @@
               },
               "icon": "lucide-file",
               "title": "03_人口迁移理论"
+            }
+          },
+          {
+            "id": "548937f25fbc2e48",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "14_发展经济学/06_经济增长理论.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "06_经济增长理论"
             }
           }
         ],
@@ -233,7 +233,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -295,13 +296,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14_发展经济学/发展经济学考试内容.md",
+                "file": "14_发展经济学/06_经济增长理论.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "发展经济学考试内容 的大纲"
+              "title": "06_经济增长理论 的大纲"
             }
           },
           {
@@ -378,11 +379,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e44bc1c134d4b755",
+  "active": "548937f25fbc2e48",
   "lastOpenFiles": [
-    "14_发展经济学/03_人口迁移理论.md",
     "14_发展经济学/发展经济学考试内容.md",
     "14_发展经济学/06_经济增长理论.md",
+    "14_发展经济学/03_人口迁移理论.md",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "98_attachment/Pasted image 20250521151158.png",
     "98_attachment/Pasted image 20250521151149.png",
