@@ -271,13 +271,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "14_发展经济学/发展经济学考试内容.md",
+                "file": "14_发展经济学/06_经济增长理论.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "发展经济学考试内容 的大纲"
+              "title": "06_经济增长理论 的大纲"
             }
           },
           {
@@ -354,11 +354,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e44bc1c134d4b755",
+  "active": "548937f25fbc2e48",
   "lastOpenFiles": [
+    "14_发展经济学/发展经济学考试内容.md",
     "14_发展经济学/06_经济增长理论.md",
     "14_发展经济学/02_人口增长与经济发展.md",
-    "14_发展经济学/发展经济学考试内容.md",
     "14_发展经济学/00_导论和考试相关.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
