@@ -74,12 +74,22 @@
             }
           },
           {
+            "id": "5143962e1d539b64",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          },
+          {
             "id": "548937f25fbc2e48",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2025-05-21——周三.md",
+                "file": "14_发展经济学/06_经济增长理论.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -94,11 +104,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-05-21——周三"
+              "title": "06_经济增长理论"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "c59e735a5f70929a",
@@ -209,7 +219,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -271,13 +282,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2025-05-21——周三.md",
+                "file": "14_发展经济学/发展经济学考试内容.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025-05-21——周三 的大纲"
+              "title": "发展经济学考试内容 的大纲"
             }
           },
           {
@@ -354,17 +365,19 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "548937f25fbc2e48",
+  "active": "e44bc1c134d4b755",
   "lastOpenFiles": [
+    "14_发展经济学/发展经济学拍屏ppt.pdf",
+    "14_发展经济学/发展经济学考试内容.md",
+    "98_attachment/Pasted image 20250521090613.png",
+    "14_发展经济学/02_人口增长与经济发展.md",
+    "13_时间序列分析/03_平稳时间序列模型.md",
+    "13_时间序列分析/02_差分方程Difference Equation.md",
+    "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "14_发展经济学/06_经济增长理论.md",
     "99_学习情况记录/2025-05-21——周三.md",
-    "14_发展经济学/发展经济学考试内容.md",
-    "14_发展经济学/02_人口增长与经济发展.md",
     "14_发展经济学/00_导论和考试相关.md",
-    "13_时间序列分析/03_平稳时间序列模型.md",
-    "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "98_attachment/Pasted image 20250520193300.png",
-    "14_发展经济学/发展经济学拍屏ppt.pdf",
     "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/时序复习.md",
     "99_学习情况记录/2025-05-20——周二.md",
@@ -378,7 +391,6 @@
     "13_时间序列分析/06_含趋势的模型.md",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
     "99_学习情况记录/完成任务的日期/2025-05-19——周一.md",
-    "13_时间序列分析/02_差分方程Difference Equation.md",
     "00_inbox/周记模版.md",
     "2025-W20.md",
     "13_时间序列分析/00_导论与概率论复习.md",
@@ -393,12 +405,10 @@
     "13_时间序列分析/01_介绍时间序列.md",
     "13_时间序列分析/lecture-dual.pdf",
     "99_学习情况记录/完成任务的日期/2025-05-16——周五.md",
-    "00_inbox/07_协整和误差修正模型.md",
     "99_学习情况记录/周记",
     "99_学习情况记录/完成任务的日期",
     "99_学习情况记录/已复盘",
     "11_证券投资学/证券投资学.pdf",
-    "98_attachment/Pasted image 20250509163712.png",
     "11_证券投资学/证券投资学作业",
     "14_发展经济学",
     "13_时间序列分析",
