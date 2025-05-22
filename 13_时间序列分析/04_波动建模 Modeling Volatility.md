@@ -111,7 +111,13 @@ GARCH模型通常能够用更少的滞后项达到与高阶ARCH模型同样的�
 
 ## 2.5 极大似然估计MLE
 
+根据正态密度函数写出条件似然：
 
+$L = \prod_{t=1}^T \left( \frac{1}{\sqrt{2\pi h_t}} \exp\left( -\frac{\varepsilon_t^2}{2h_t} \right) \right)$
+对数似然为：
+$\log L = -\frac{T}{2} \log(2\pi) - \frac{1}{2} \sum_{t=1}^T \log h_t - \frac{1}{2} \sum_{t=1}^T \frac{\varepsilon_t^2}{h_t}$
+
+总之原理是这么个原理.不能手动算的.别管了
 
 ## 2.6 评估拟合
 
