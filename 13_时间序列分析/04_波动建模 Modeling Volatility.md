@@ -50,8 +50,7 @@ Volatility 就是条件二阶矩.
 关键: 在ARCH(1)中，$\epsilon_t$的条件方差为$\alpha_0 + \alpha_1 \epsilon_{t-1}^2$。
 
 >[!quote] $\epsilon_t$的条件方差计算
-
-==其中,常数项$\alpha_{0}$不能被删除.因为,如果给$\epsilon_{1}=\alpha_1 \epsilon_{t-1}^2$两侧同时取期望,最后算出来$\alpha_{1}$的值一定为1==
+>==其中,常数项$\alpha_{0}$不能被删除.因为,如果给$\epsilon_{1}=\alpha_1 \epsilon_{t-1}^2$两侧同时取期望,最后算出来$\alpha_{1}$的值一定为1==
 
 ## 2.3 GARCH
 
