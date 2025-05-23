@@ -617,7 +617,7 @@
                 }
               }
             ],
-            "currentTab": 4
+            "currentTab": 5
           },
           {
             "id": "5b75566d730c400b",
@@ -769,7 +769,7 @@
                 }
               }
             ],
-            "currentTab": 2
+            "currentTab": 3
           }
         ],
         "direction": "vertical"
@@ -890,13 +890,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "13_时间序列分析/04_波动建模 Modeling Volatility.md",
+                    "file": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "04_波动建模 Modeling Volatility 的大纲"
+                  "title": "05_多方程模型Multi-equation Time Series Models 的大纲"
                 }
               },
               {
@@ -974,8 +974,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "d35a8cc2b93244a5",
-      "mtime": "2025-05-20T18:38:29+08:00"
+      "active": "ece76350032490a4",
+      "mtime": "2025-05-23T21:02:26+08:00"
     },
     "时序复习": {
       "main": {
