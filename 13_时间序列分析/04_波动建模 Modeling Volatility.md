@@ -121,11 +121,15 @@ $\log L = -\frac{T}{2} \log(2\pi) - \frac{1}{2} \sum_{t=1}^T \log h_t - \frac{1}
 
 ## 2.6 评估拟合
 
-AIC和SBC.
+### (1)模型拟合优度的评估:AIC和SBC.
 
 • AIC 定义为：$\displaystyle \text{AIC} = -2\ln L_{\text{max}} + 2k$，其中$L_{\text{max}}$是模型最大化后的似然值，$k$是模型中估计参数的个数 。$-2\ln L$衡量了模型残差的不可解释程度（越小表示模型拟合越好），而$2k$是对模型复杂度的惩罚（参数越多惩罚越大）。
 
 • BIC 定义为：$\displaystyle \text{BIC} = -2\ln L_{\text{max}} + k \ln T$，其中$T$为样本容量 。相比AIC，BIC对参数个数的惩罚更严厉（乘以$\ln T$因子），在大样本下倾向于选择更简洁的模型。
+
+### (2)模型诊断
+
+
 
 ## 2.7 预测方差
 
