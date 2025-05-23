@@ -207,6 +207,8 @@ $$\hat{y}_{t+1|t} \pm 1.96 \sqrt{\hat{h}_{t+1|t}} $$
 >[!note] EGARCH 指数GARCH模型 Exponential GARCH
 >
 
+
+
 # 作业
 
 
