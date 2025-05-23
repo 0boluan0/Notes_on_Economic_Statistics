@@ -5,6 +5,10 @@
       "path": "13_时间序列分析/03_平稳时间序列模型.md"
     },
     {
+      "basename": "02_差分方程Difference Equation",
+      "path": "13_时间序列分析/02_差分方程Difference Equation.md"
+    },
+    {
       "basename": "04_波动建模 Modeling Volatility",
       "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
     },
@@ -55,10 +59,6 @@
     {
       "basename": "00_导论和考试相关",
       "path": "14_发展经济学/00_导论和考试相关.md"
-    },
-    {
-      "basename": "02_差分方程Difference Equation",
-      "path": "13_时间序列分析/02_差分方程Difference Equation.md"
     },
     {
       "basename": "2025-05-21——周三",
