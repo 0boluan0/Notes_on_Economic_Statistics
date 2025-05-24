@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "2025-05-24——周六",
+      "path": "99_学习情况记录/2025-05-24——周六.md"
+    },
+    {
+      "basename": "2025-05-23——周五",
+      "path": "99_学习情况记录/2025-05-23——周五.md"
+    },
+    {
       "basename": "05_多方程模型Multi-equation Time Series Models",
       "path": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md"
     },
@@ -23,10 +31,6 @@
     {
       "basename": "02_差分方程Difference Equation",
       "path": "13_时间序列分析/02_差分方程Difference Equation.md"
-    },
-    {
-      "basename": "2025-05-23——周五",
-      "path": "99_学习情况记录/2025-05-23——周五.md"
     },
     {
       "basename": "lecture",
@@ -195,10 +199,6 @@
     {
       "basename": "证券投资学第二次作业",
       "path": "11_证券投资学/证券投资学作业/证券投资学第二次作业.md"
-    },
-    {
-      "basename": "证券投资学第三次作业",
-      "path": "11_证券投资学/证券投资学作业/证券投资学第三次作业.md"
     }
   ],
   "omittedPaths": [],
