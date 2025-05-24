@@ -438,7 +438,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "大的",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -449,7 +449,8 @@
               "title": "搜索"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -603,12 +604,13 @@
   },
   "active": "ece76350032490a4",
   "lastOpenFiles": [
-    "13_时间序列分析/04_波动建模 Modeling Volatility.md",
+    "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
+    "99_学习情况记录/完成任务的日期/2025-05-24——周六.md",
+    "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "13_时间序列分析/07_协整和误差修正模型.md",
     "13_时间序列分析/06_含趋势的模型.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
-    "13_时间序列分析/lecture.pdf",
     "99_学习情况记录/2025-05-24——Sat.md",
     "99_学习情况记录/2025-05-24——周六.md",
     "99_学习情况记录/2025-05-23——周五.md",
@@ -638,7 +640,6 @@
     "99_学习情况记录/2025-05-18——周日.md",
     "99_学习情况记录/2025-05-19——周一.md",
     "98_attachment/Pasted image 20250519203554.png",
-    "99_学习情况记录/完成任务的日期/2025-05-19——周一.md",
     "98_attachment/Pasted image 20250518153606.png",
     "13_时间序列分析/lecture-dual.pdf",
     "99_学习情况记录/周记",
