@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "09_线性代数/00_perface.md",
+                "file": "99_学习情况记录/2025-05-24——Sat.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00_perface"
+              "title": "2025-05-24——Sat"
             }
           }
         ]
@@ -46,10 +46,11 @@
         "state": {
           "type": "file-explorer",
           "state": {
-            "sortOrder": "alphabetical"
+            "sortOrder": "alphabetical",
+            "autoReveal": false
           },
           "icon": "lucide-folder-closed",
-          "title": "文件列表"
+          "title": "Files"
         }
       },
       {
@@ -129,7 +130,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "09_线性代数/00_perface.md",
+            "file": "99_学习情况记录/2025-05-24——Sat.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -139,7 +140,7 @@
             "unlinkedCollapsed": true
           },
           "icon": "links-coming-in",
-          "title": "反向链接"
+          "title": "Backlinks"
         }
       },
       {
@@ -197,8 +198,9 @@
   },
   "active": "c54aa921b2ccf57b",
   "lastOpenFiles": [
-    "99_学习情况记录/2024-10-28——星期一.md",
     "09_线性代数/00_perface.md",
+    "99_学习情况记录/2025-05-24——Sat.md",
+    "99_学习情况记录/2024-10-28——星期一.md",
     "01_Econometrics/13_面板数据模型.md",
     "01_Econometrics/09_联立方程模型(内生性).md",
     "99_学习情况记录/2024-10-16——星期三.md",
@@ -225,7 +227,6 @@
     "01_Econometrics/零散知识点.md",
     "01_Econometrics/02_一元线性回归(上课).md",
     "99_学习情况记录/6-3至6-9第十五周.md",
-    "99_学习情况记录/5-27至6-2第十四周.md",
     "02_game theory/第1次作业补充.pdf",
     "02_game theory/第三次作业.pdf",
     "03_public finance",
