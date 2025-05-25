@@ -1,10 +1,6 @@
 {
   "recentFiles": [
     {
-      "basename": "05_多方程模型Multi-equation Time Series Models",
-      "path": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md"
-    },
-    {
       "basename": "06_含趋势的模型",
       "path": "13_时间序列分析/06_含趋势的模型.md"
     },
@@ -15,6 +11,10 @@
     {
       "basename": "07_协整和误差修正模型",
       "path": "13_时间序列分析/07_协整和误差修正模型.md"
+    },
+    {
+      "basename": "05_多方程模型Multi-equation Time Series Models",
+      "path": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md"
     },
     {
       "basename": "时序复习",
