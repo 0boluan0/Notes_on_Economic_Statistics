@@ -107,7 +107,9 @@ $$
 
 >[!note] 自回归分布滞后模型
 >
-> **自回归分布滞后模型**（Autoregressive Distributed Lag Model, 简称 **ADL 模型**）就是干预模型的自然延伸。在 ADL 模型中，$z_t$ 可以是随机的外生变量序列.
+> **自回归分布滞后模型**（Autoregressive Distributed Lag Model, 简称 **ADL 模型**）就是干预模型的自然延伸。在 ADL 模型中，$z_t$ 可以是随机的外生变量序列.在上面的模型的基础上当我们忽略$B(L)$（设$B(L)=1$）时，就得到**自回归分布滞后（ADL）模型**：
+$$y_t = a_0 + A(L)y_{t-1} + C(L) z_t + \varepsilon_t$$
+
 
 
 
