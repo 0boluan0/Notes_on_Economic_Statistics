@@ -5,16 +5,16 @@
       "path": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md"
     },
     {
-      "basename": "06_含趋势的模型",
-      "path": "13_时间序列分析/06_含趋势的模型.md"
-    },
-    {
       "basename": "lecture",
       "path": "13_时间序列分析/lecture.pdf"
     },
     {
       "basename": "04_波动建模 Modeling Volatility",
       "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
+    },
+    {
+      "basename": "06_含趋势的模型",
+      "path": "13_时间序列分析/06_含趋势的模型.md"
     },
     {
       "basename": "07_协整和误差修正模型",
