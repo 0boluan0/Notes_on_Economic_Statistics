@@ -617,7 +617,7 @@
                 }
               }
             ],
-            "currentTab": 5
+            "currentTab": 7
           },
           {
             "id": "5b75566d730c400b",
@@ -769,7 +769,7 @@
                 }
               }
             ],
-            "currentTab": 3
+            "currentTab": 5
           }
         ],
         "direction": "vertical"
@@ -811,7 +811,7 @@
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "大的",
+                    "query": "",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
@@ -890,13 +890,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
+                    "file": "13_时间序列分析/07_协整和误差修正模型.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "05_多方程模型Multi-equation Time Series Models 的大纲"
+                  "title": "07_协整和误差修正模型 的大纲"
                 }
               },
               {
@@ -974,8 +974,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "ece76350032490a4",
-      "mtime": "2025-05-23T21:02:26+08:00"
+      "active": "eaad0032ec8ce7de",
+      "mtime": "2025-05-26T09:58:43+08:00"
     },
     "时序复习": {
       "main": {
