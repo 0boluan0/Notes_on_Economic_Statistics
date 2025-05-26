@@ -985,7 +985,7 @@
           {
             "id": "5e319fb5ea0d1658",
             "type": "tabs",
-            "dimension": 31.2540192926045,
+            "dimension": 31.254019292604504,
             "children": [
               {
                 "id": "2480cb1c2734d142",
@@ -1063,24 +1063,12 @@
                 "id": "9ad310617bbd94af",
                 "type": "leaf",
                 "state": {
-                  "type": "markdown",
+                  "type": "pdf",
                   "state": {
-                    "file": "13_时间序列分析/03_平稳时间序列模型.md",
-                    "mode": "source",
-                    "source": false,
-                    "backlinks": true,
-                    "backlinkOpts": {
-                      "collapseAll": false,
-                      "extraContext": false,
-                      "sortOrder": "alphabetical",
-                      "showSearch": false,
-                      "searchQuery": "",
-                      "backlinkCollapsed": false,
-                      "unlinkedCollapsed": true
-                    }
+                    "file": "13_时间序列分析/lecture.pdf"
                   },
-                  "icon": "lucide-file",
-                  "title": "03_平稳时间序列模型"
+                  "icon": "lucide-file-text",
+                  "title": "lecture"
                 }
               },
               {
@@ -1137,7 +1125,7 @@
           {
             "id": "5b75566d730c400b",
             "type": "tabs",
-            "dimension": 68.74598070739549,
+            "dimension": 68.7459807073955,
             "children": [
               {
                 "id": "aeec949217ff58d2",
@@ -1234,9 +1222,57 @@
                   "icon": "lucide-file",
                   "title": "05_多方程模型Multi-equation Time Series Models"
                 }
+              },
+              {
+                "id": "31cd1fe733120d36",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "13_时间序列分析/06_含趋势的模型.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "06_含趋势的模型"
+                }
+              },
+              {
+                "id": "c2f659505febe55f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "13_时间序列分析/07_协整和误差修正模型.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "07_协整和误差修正模型"
+                }
               }
             ],
-            "currentTab": 1
+            "currentTab": 3
           }
         ],
         "direction": "vertical"
@@ -1289,8 +1325,7 @@
                   "title": "Recent Files"
                 }
               }
-            ],
-            "currentTab": 2
+            ]
           }
         ],
         "direction": "horizontal",
@@ -1357,13 +1392,13 @@
                 "state": {
                   "type": "outline",
                   "state": {
-                    "file": "13_时间序列分析/03_平稳时间序列模型.md",
+                    "file": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
                     "followCursor": false,
                     "showSearch": false,
                     "searchQuery": ""
                   },
                   "icon": "lucide-list",
-                  "title": "03_平稳时间序列模型 的大纲"
+                  "title": "05_多方程模型Multi-equation Time Series Models 的大纲"
                 }
               },
               {
@@ -1434,8 +1469,8 @@
           "templater-obsidian:Templater": false
         }
       },
-      "active": "813e4da595edd296",
-      "mtime": "2025-04-01T11:43:20+08:00"
+      "active": "32fd68b1957b6643",
+      "mtime": "2025-05-26T20:26:46+08:00"
     },
     "金融风险管理": {
       "main": {
@@ -1670,5 +1705,5 @@
       "mtime": "2025-04-27T10:58:35+08:00"
     }
   },
-  "active": "时间序列分析"
+  "active": "时序复习"
 }
