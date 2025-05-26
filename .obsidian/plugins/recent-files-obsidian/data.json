@@ -5,6 +5,10 @@
       "path": "13_时间序列分析/07_协整和误差修正模型.md"
     },
     {
+      "basename": "05_多方程模型Multi-equation Time Series Models",
+      "path": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md"
+    },
+    {
       "basename": "lecture",
       "path": "13_时间序列分析/lecture.pdf"
     },
@@ -43,10 +47,6 @@
     {
       "basename": "00_perface",
       "path": "09_线性代数/00_perface.md"
-    },
-    {
-      "basename": "05_多方程模型Multi-equation Time Series Models",
-      "path": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md"
     },
     {
       "basename": "2025-05-24——周六",

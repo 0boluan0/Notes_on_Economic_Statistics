@@ -438,7 +438,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "特征值",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -449,12 +449,12 @@
               "title": "搜索"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -601,10 +601,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "eaad0032ec8ce7de",
+  "active": "68e022ef2943b75b",
   "lastOpenFiles": [
-    "13_时间序列分析/lecture.pdf",
+    "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
     "13_时间序列分析/07_协整和误差修正模型.md",
+    "13_时间序列分析/lecture.pdf",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
@@ -622,7 +623,6 @@
     "00_inbox/周记模版.md",
     "99_学习情况记录/周记/2025-W21.md",
     "99_学习情况记录/周记/2025-W20.md",
-    "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
     "98_attachment/Pasted image 20250525194802.png",
     "98_attachment/Pasted image 20250525194752.png",
     "98_attachment/Pasted image 20250525194732.png",
