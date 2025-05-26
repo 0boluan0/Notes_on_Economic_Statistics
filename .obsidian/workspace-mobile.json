@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2025-05-26——Mon.md",
+                "file": "13_时间序列分析/06_含趋势的模型.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-05-26——Mon"
+              "title": "06_含趋势的模型"
             }
           }
         ]
@@ -198,8 +198,8 @@
   },
   "active": "c54aa921b2ccf57b",
   "lastOpenFiles": [
-    "13_时间序列分析/06_含趋势的模型.md",
     "99_学习情况记录/2025-05-26——Mon.md",
+    "13_时间序列分析/06_含趋势的模型.md",
     "99_学习情况记录/2025-05-24——Sat.md",
     "98_attachment/Pasted image 20250525194711.png",
     "09_线性代数/00_perface.md",
