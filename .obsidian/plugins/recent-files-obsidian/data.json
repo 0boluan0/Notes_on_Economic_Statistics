@@ -5,6 +5,10 @@
       "path": "13_时间序列分析/07_协整和误差修正模型.md"
     },
     {
+      "basename": "lecture",
+      "path": "13_时间序列分析/lecture.pdf"
+    },
+    {
       "basename": "04_波动建模 Modeling Volatility",
       "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
     },
@@ -23,10 +27,6 @@
     {
       "basename": "00_导论与概率论复习",
       "path": "13_时间序列分析/00_导论与概率论复习.md"
-    },
-    {
-      "basename": "lecture",
-      "path": "13_时间序列分析/lecture.pdf"
     },
     {
       "basename": "2025-05-26——Mon",
