@@ -26,5 +26,6 @@
   "obsidian-latex-suite",
   "better-reading-mode",
   "quickadd",
-  "cron"
+  "cron",
+  "obsidian-textgenerator-plugin"
 ]
