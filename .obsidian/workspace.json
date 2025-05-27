@@ -4,9 +4,28 @@
     "type": "split",
     "children": [
       {
+        "id": "dce055f76a215cc3",
+        "type": "tabs",
+        "dimension": 33.33333333333333,
+        "children": [
+          {
+            "id": "1fc710ecc0775bc8",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "13_时间序列分析/lecture.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "lecture"
+            }
+          }
+        ]
+      },
+      {
         "id": "5e319fb5ea0d1658",
         "type": "tabs",
-        "dimension": 31.254019292604504,
+        "dimension": 37.0919881305638,
         "children": [
           {
             "id": "2480cb1c2734d142",
@@ -84,12 +103,24 @@
             "id": "9ad310617bbd94af",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/lecture.pdf"
+                "file": "13_时间序列分析/03_平稳时间序列模型.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "lecture"
+              "icon": "lucide-file",
+              "title": "03_平稳时间序列模型"
             }
           },
           {
@@ -117,7 +148,7 @@
             }
           },
           {
-            "id": "c1ebb2fa2c097e51",
+            "id": "dc2aab8b65f1d121",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -139,14 +170,86 @@
               "icon": "lucide-file",
               "title": "05_多方程模型Multi-equation Time Series Models"
             }
+          },
+          {
+            "id": "5a25f027b57898b1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/06_含趋势的模型.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "06_含趋势的模型"
+            }
+          },
+          {
+            "id": "9617601d4620375a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/07_协整和误差修正模型.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "07_协整和误差修正模型"
+            }
+          },
+          {
+            "id": "d219a0b9ad497725",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/时序复习.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "时序复习"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 8
       },
       {
         "id": "5b75566d730c400b",
         "type": "tabs",
-        "dimension": 68.7459807073955,
+        "dimension": 29.574678536102866,
         "children": [
           {
             "id": "aeec949217ff58d2",
@@ -221,7 +324,7 @@
             }
           },
           {
-            "id": "32fd68b1957b6643",
+            "id": "ece76350032490a4",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -245,7 +348,7 @@
             }
           },
           {
-            "id": "31cd1fe733120d36",
+            "id": "63bc8a41319194c2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -269,7 +372,7 @@
             }
           },
           {
-            "id": "c2f659505febe55f",
+            "id": "eaad0032ec8ce7de",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -293,7 +396,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -320,12 +423,22 @@
             }
           },
           {
+            "id": "2a658727394b251b",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {},
+              "icon": "clock",
+              "title": "Recent Files"
+            }
+          },
+          {
             "id": "68e022ef2943b75b",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "大的",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -335,22 +448,13 @@
               "icon": "lucide-search",
               "title": "搜索"
             }
-          },
-          {
-            "id": "2a658727394b251b",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -359,6 +463,7 @@
       {
         "id": "e0fa6f818c861393",
         "type": "tabs",
+        "dimension": 72.15189873417721,
         "children": [
           {
             "id": "d5dd85784b1fe9ec",
@@ -412,23 +517,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "13_时间序列分析/07_协整和误差修正模型.md",
+                "file": "13_时间序列分析/时序复习.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "07_协整和误差修正模型 的大纲"
-            }
-          },
-          {
-            "id": "2c9ca742cf90c221",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "title": "时序复习 的大纲"
             }
           },
           {
@@ -469,13 +564,32 @@
           }
         ],
         "currentTab": 3
+      },
+      {
+        "id": "b6e2d525de78b465",
+        "type": "tabs",
+        "dimension": 27.848101265822784,
+        "children": [
+          {
+            "id": "2c9ca742cf90c221",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 215.5
+    "width": 237.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
       "graph:查看关系图谱": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
@@ -486,13 +600,14 @@
       "obsidian-git:Open Git source control": false,
       "obsidian-kanban:创建新看板": false,
       "omnisearch:Omnisearch": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "c2f659505febe55f",
+  "active": "d219a0b9ad497725",
   "lastOpenFiles": [
+    "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
+    "13_时间序列分析/时序复习.md",
+    "13_时间序列分析/07_协整和误差修正模型.md",
     "textgenerator/templates/default/simplify.md",
     "textgenerator/templates/default/getOutline.md",
     "textgenerator/templates/default/getEmailPos.md",
@@ -508,11 +623,8 @@
     "textgenerator/templates",
     "textgenerator",
     "13_时间序列分析/06_含趋势的模型.md",
-    "13_时间序列分析/07_协整和误差修正模型.md",
-    "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
     "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "13_时间序列分析/lecture.pdf",
-    "13_时间序列分析/时序复习.md",
     "13_时间序列分析/03_平稳时间序列模型.md",
     "10_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
