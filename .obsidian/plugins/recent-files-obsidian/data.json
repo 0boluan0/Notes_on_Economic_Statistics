@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "02_一元线性回归",
+      "path": "01_Econometrics/02_一元线性回归.md"
+    },
+    {
+      "basename": "最小二乘法",
+      "path": "00_factor/最小二乘法.md"
+    },
+    {
+      "basename": "01_导论",
+      "path": "01_Econometrics/01_导论.md"
+    },
+    {
       "basename": "02_实证分析——positive analysis",
       "path": "03_public finance财政学/1_导论/02_实证分析——positive analysis.md"
     },
     {
       "basename": "00_财政学课程内容分布",
       "path": "03_public finance财政学/1_导论/00_财政学课程内容分布.md"
-    },
-    {
-      "basename": "02_一元线性回归",
-      "path": "01_Econometrics/02_一元线性回归.md"
     },
     {
       "basename": "残差",
@@ -23,10 +31,6 @@
     {
       "basename": "大样本与小样本",
       "path": "00_factor/大样本与小样本.md"
-    },
-    {
-      "basename": "01_导论",
-      "path": "01_Econometrics/01_导论.md"
     },
     {
       "basename": "插入批注",
