@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/12_非平稳时间序列.md",
+                "file": "01_Econometrics/02_一元线性回归.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "12_非平稳时间序列"
+              "title": "02_一元线性回归"
             }
           }
         ]
@@ -151,13 +151,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/12_非平稳时间序列.md",
+                "file": "01_Econometrics/02_一元线性回归.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "12_非平稳时间序列 的大纲"
+              "title": "02_一元线性回归 的大纲"
             }
           },
           {
@@ -239,9 +239,12 @@
   },
   "active": "e4f53fc4db8fe441",
   "lastOpenFiles": [
+    "98_attachment/Pasted image 20240310184421.png",
+    "01_Econometrics/02_一元线性回归.md",
+    "01_Econometrics/01_导论.md",
+    "01_Econometrics/12_非平稳时间序列.md",
     "99_学习情况记录/2025-06-19——周四.md",
     "01_Econometrics/13_面板数据模型.md",
-    "01_Econometrics/02_一元线性回归.md",
     "00_factor/最小二乘法.md",
     "98_attachment/Pasted image 20240305131708.png",
     "98_attachment/Pasted image 20240304203122.png",
@@ -250,7 +253,6 @@
     "98_attachment/Pasted image 20240306174325.png",
     "98_attachment/Pasted image 20240306174249.png",
     "98_attachment/Pasted image 20240305133741.png",
-    "01_Econometrics/01_导论.md",
     "03_public finance财政学/1_导论/02_实证分析——positive analysis.md",
     "03_public finance财政学/6_先前知识点速览/收入效应与替代效应.md",
     "00_factor/MRT边际转换率.md",
@@ -272,8 +274,6 @@
     "98_attachment/Pasted image 20240228132651.png",
     "00_inbox/插入批注.md",
     "01_Econometrics/00_计量经济学看板.md",
-    "00_inbox/日记模版.md",
-    "00_inbox/算子operator.md",
     "13_时间序列分析/lecture.pdf",
     "textgenerator/templates/default",
     "textgenerator/templates",
