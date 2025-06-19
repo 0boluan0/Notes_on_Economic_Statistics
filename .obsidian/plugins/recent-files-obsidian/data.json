@@ -1,64 +1,40 @@
 {
   "recentFiles": [
     {
-      "basename": "02_一元线性回归",
-      "path": "01_Econometrics/02_一元线性回归.md"
+      "basename": "2025-06-19——周四",
+      "path": "99_学习情况记录/2025-06-19——周四.md"
     },
     {
-      "basename": "最小二乘法",
-      "path": "00_factor/最小二乘法.md"
-    },
-    {
-      "basename": "01_导论",
-      "path": "01_Econometrics/01_导论.md"
-    },
-    {
-      "basename": "02_实证分析——positive analysis",
-      "path": "03_public finance财政学/1_导论/02_实证分析——positive analysis.md"
-    },
-    {
-      "basename": "00_财政学课程内容分布",
-      "path": "03_public finance财政学/1_导论/00_财政学课程内容分布.md"
-    },
-    {
-      "basename": "残差",
-      "path": "00_factor/残差.md"
-    },
-    {
-      "basename": "零散知识点",
-      "path": "01_Econometrics/零散知识点.md"
-    },
-    {
-      "basename": "大样本与小样本",
-      "path": "00_factor/大样本与小样本.md"
-    },
-    {
-      "basename": "插入批注",
-      "path": "00_inbox/插入批注.md"
-    },
-    {
-      "basename": "日记模版",
-      "path": "00_inbox/日记模版.md"
-    },
-    {
-      "basename": "周记模版",
-      "path": "00_inbox/周记模版.md"
-    },
-    {
-      "basename": "add_done_item",
-      "path": "00_inbox/add_done_item.md"
-    },
-    {
-      "basename": "07_协整和误差修正模型",
-      "path": "13_时间序列分析/07_协整和误差修正模型.md"
+      "basename": "02_差分方程Difference Equation",
+      "path": "13_时间序列分析/02_差分方程Difference Equation.md"
     },
     {
       "basename": "06_含趋势的模型",
       "path": "13_时间序列分析/06_含趋势的模型.md"
     },
     {
+      "basename": "算子operator",
+      "path": "00_inbox/算子operator.md"
+    },
+    {
+      "basename": "时序复习",
+      "path": "13_时间序列分析/时序复习.md"
+    },
+    {
+      "basename": "2025-06-07——周六",
+      "path": "99_学习情况记录/2025-06-07——周六.md"
+    },
+    {
+      "basename": "07_协整和误差修正模型",
+      "path": "13_时间序列分析/07_协整和误差修正模型.md"
+    },
+    {
       "basename": "05_多方程模型Multi-equation Time Series Models",
       "path": "13_时间序列分析/05_多方程模型Multi-equation Time Series Models.md"
+    },
+    {
+      "basename": "lecture",
+      "path": "13_时间序列分析/lecture.pdf"
     },
     {
       "basename": "04_波动建模 Modeling Volatility",
@@ -69,28 +45,8 @@
       "path": "13_时间序列分析/03_平稳时间序列模型.md"
     },
     {
-      "basename": "02_差分方程Difference Equation",
-      "path": "13_时间序列分析/02_差分方程Difference Equation.md"
-    },
-    {
-      "basename": "时序复习",
-      "path": "13_时间序列分析/时序复习.md"
-    },
-    {
       "basename": "01_介绍时间序列",
       "path": "13_时间序列分析/01_介绍时间序列.md"
-    },
-    {
-      "basename": "2025-06-16——周一",
-      "path": "99_学习情况记录/2025-06-16——周一.md"
-    },
-    {
-      "basename": "2025-06-07——周六",
-      "path": "99_学习情况记录/2025-06-07——周六.md"
-    },
-    {
-      "basename": "lecture",
-      "path": "13_时间序列分析/lecture.pdf"
     },
     {
       "basename": "00_导论与概率论复习",
@@ -181,6 +137,10 @@
       "path": "99_学习情况记录/2025-05-19——周一.md"
     },
     {
+      "basename": "周记模版",
+      "path": "00_inbox/周记模版.md"
+    },
+    {
       "basename": "2025-W20",
       "path": "2025-W20.md"
     },
@@ -191,6 +151,54 @@
     {
       "basename": "01_不同国家的经济发展模式",
       "path": "14_发展经济学/01_不同国家的经济发展模式.md"
+    },
+    {
+      "basename": "2025-05-15——周四",
+      "path": "99_学习情况记录/2025-05-15——周四.md"
+    },
+    {
+      "basename": "未命名",
+      "path": "00_inbox/未命名.md"
+    },
+    {
+      "basename": "2025-05-14——周三",
+      "path": "99_学习情况记录/2025-05-14——周三.md"
+    },
+    {
+      "basename": "2025-05-13——周二",
+      "path": "99_学习情况记录/2025-05-13——周二.md"
+    },
+    {
+      "basename": "日记模版",
+      "path": "00_inbox/日记模版.md"
+    },
+    {
+      "basename": "add_done_item",
+      "path": "00_inbox/add_done_item.md"
+    },
+    {
+      "basename": "发展pre 话题6",
+      "path": "14_发展经济学/发展pre 话题6.md"
+    },
+    {
+      "basename": "发展pre 话题1",
+      "path": "14_发展经济学/发展pre 话题1.md"
+    },
+    {
+      "basename": "10_组合投资理论",
+      "path": "11_证券投资学/10_组合投资理论.md"
+    },
+    {
+      "basename": "09_技术分析理论和方法",
+      "path": "11_证券投资学/09_技术分析理论和方法.md"
+    },
+    {
+      "basename": "08_证券投资技术分析概述",
+      "path": "11_证券投资学/08_证券投资技术分析概述.md"
+    },
+    {
+      "basename": "00_仅划重点",
+      "path": "11_证券投资学/00_仅划重点.md"
     }
   ],
   "omittedPaths": [],
