@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12_金融机构与风险管理/00_金融风险划重点.md",
+                "file": "12_金融机构与风险管理/01_引言.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00_金融风险划重点"
+              "title": "01_引言"
             }
           }
         ]
@@ -151,13 +151,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12_金融机构与风险管理/00_金融风险划重点.md",
+                "file": "12_金融机构与风险管理/01_引言.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "00_金融风险划重点 的大纲"
+              "title": "01_引言 的大纲"
             }
           },
           {
@@ -239,6 +239,7 @@
   },
   "active": "e4f53fc4db8fe441",
   "lastOpenFiles": [
+    "12_金融机构与风险管理/00_金融风险划重点.md",
     "01_Econometrics/02_一元线性回归.md",
     "01_Econometrics/零散知识点.md",
     "00_factor/大样本与小样本.md",
@@ -272,7 +273,6 @@
     "00_factor/生产可能性曲线.md",
     "00_factor/契约曲线.md",
     "00_factor/帕累托.md",
-    "00_factor/埃奇沃斯框图.md",
     "98_attachment/Pasted image 20240305130551.png",
     "98_attachment/Pasted image 20240228132651.png",
     "13_时间序列分析/lecture.pdf",
