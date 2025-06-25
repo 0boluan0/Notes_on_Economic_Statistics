@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归.md",
+                "file": "12_金融机构与风险管理/00_金融风险划重点.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "02_一元线性回归"
+              "title": "00_金融风险划重点"
             }
           }
         ]
@@ -151,13 +151,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Econometrics/02_一元线性回归.md",
+                "file": "12_金融机构与风险管理/00_金融风险划重点.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "02_一元线性回归 的大纲"
+              "title": "00_金融风险划重点 的大纲"
             }
           },
           {
@@ -239,10 +239,20 @@
   },
   "active": "e4f53fc4db8fe441",
   "lastOpenFiles": [
-    "98_attachment/Pasted image 20240310184421.png",
     "01_Econometrics/02_一元线性回归.md",
+    "01_Econometrics/零散知识点.md",
+    "00_factor/大样本与小样本.md",
     "01_Econometrics/01_导论.md",
+    "01_Econometrics/09_联立方程模型(内生性).md",
     "01_Econometrics/12_非平稳时间序列.md",
+    "13_时间序列分析/04_波动建模 Modeling Volatility.md",
+    "13_时间序列分析/02_差分方程Difference Equation.md",
+    "13_时间序列分析/06_含趋势的模型.md",
+    "13_时间序列分析/01_介绍时间序列.md",
+    "11_证券投资学/07_公司价值分析.md",
+    "11_证券投资学/08_证券投资技术分析概述.md",
+    "11_证券投资学/06_公司财务分析.md",
+    "98_attachment/Pasted image 20240310184421.png",
     "99_学习情况记录/2025-06-19——周四.md",
     "01_Econometrics/13_面板数据模型.md",
     "00_factor/最小二乘法.md",
@@ -263,22 +273,12 @@
     "00_factor/契约曲线.md",
     "00_factor/帕累托.md",
     "00_factor/埃奇沃斯框图.md",
-    "03_public finance财政学/6_先前知识点速览/埃奇沃斯框图.md",
-    "03_public finance财政学/6_先前知识点速览/帕累托.md",
-    "03_public finance财政学/1_导论/00_财政学课程内容分布.md",
-    "00_factor/残差.md",
-    "01_Econometrics/零散知识点.md",
-    "00_factor/大样本和小样本.md",
-    "00_factor/大样本与小样本.md",
     "98_attachment/Pasted image 20240305130551.png",
     "98_attachment/Pasted image 20240228132651.png",
-    "00_inbox/插入批注.md",
-    "01_Econometrics/00_计量经济学看板.md",
     "13_时间序列分析/lecture.pdf",
     "textgenerator/templates/default",
     "textgenerator/templates",
     "textgenerator",
-    "98_attachment/Pasted image 20250526094212.png",
     "14_发展经济学/发展经济学拍屏ppt.pdf",
     "13_时间序列分析/lecture-dual.pdf",
     "99_学习情况记录/周记",
