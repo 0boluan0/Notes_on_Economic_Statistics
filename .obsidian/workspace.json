@@ -30,8 +30,33 @@
               "icon": "lucide-file",
               "title": "01_引言"
             }
+          },
+          {
+            "id": "8301f92ee2d2bcd8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_factor/07_定价与情景分析.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "07_定价与情景分析"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -151,13 +176,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12_金融机构与风险管理/01_引言.md",
+                "file": "00_factor/07_定价与情景分析.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01_引言 的大纲"
+              "title": "07_定价与情景分析 的大纲"
             }
           },
           {
@@ -237,10 +262,16 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e4f53fc4db8fe441",
+  "active": "8301f92ee2d2bcd8",
   "lastOpenFiles": [
-    "00_factor/资本市场线.md",
     "12_金融机构与风险管理/01_引言.md",
+    "00_factor/07_定价与情景分析.md",
+    "00_factor/阿尔法值.md",
+    "00_factor/资本资产定价模型.md",
+    "99_学习情况记录/2025-06-26——周四.md",
+    "98_attachment/Pasted image 20250626171727.png",
+    "00_factor/资本金持有率.md",
+    "00_factor/资本市场线.md",
     "98_attachment/Pasted image 20250625184140.png",
     "00_factor/两个随机变量线性组合.md",
     "12_金融机构与风险管理/00_金融风险划重点.md",
@@ -269,12 +300,6 @@
     "98_attachment/Pasted image 20240306174249.png",
     "98_attachment/Pasted image 20240305133741.png",
     "03_public finance财政学/1_导论/02_实证分析——positive analysis.md",
-    "03_public finance财政学/6_先前知识点速览/收入效应与替代效应.md",
-    "00_factor/MRT边际转换率.md",
-    "00_factor/MRS边际替代率.md",
-    "00_factor/消费者剩余.md",
-    "00_factor/收入效应与替代效应.md",
-    "98_attachment/Pasted image 20240305130551.png",
     "13_时间序列分析/lecture.pdf",
     "textgenerator/templates/default",
     "textgenerator/templates",
