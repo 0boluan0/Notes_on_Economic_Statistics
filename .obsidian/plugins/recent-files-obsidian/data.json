@@ -5,12 +5,32 @@
       "path": "12_金融机构与风险管理/10_波动率.md"
     },
     {
-      "basename": "EWMA",
-      "path": "00_factor/EWMA.md"
+      "basename": "04_波动建模 Modeling Volatility",
+      "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
     },
     {
       "basename": "00_金融风险划重点",
       "path": "12_金融机构与风险管理/00_金融风险划重点.md"
+    },
+    {
+      "basename": "ARCH",
+      "path": "00_factor/ARCH.md"
+    },
+    {
+      "basename": "GARCH",
+      "path": "00_factor/GARCH.md"
+    },
+    {
+      "basename": "EGARCH",
+      "path": "00_factor/EGARCH.md"
+    },
+    {
+      "basename": "TARCH",
+      "path": "00_factor/TARCH.md"
+    },
+    {
+      "basename": "EWMA",
+      "path": "00_factor/EWMA.md"
     },
     {
       "basename": "已实现波动率",
@@ -179,26 +199,6 @@
     {
       "basename": "09_联立方程模型(内生性)",
       "path": "01_Econometrics/09_联立方程模型(内生性).md"
-    },
-    {
-      "basename": "12_非平稳时间序列",
-      "path": "01_Econometrics/12_非平稳时间序列.md"
-    },
-    {
-      "basename": "04_波动建模 Modeling Volatility",
-      "path": "13_时间序列分析/04_波动建模 Modeling Volatility.md"
-    },
-    {
-      "basename": "06_含趋势的模型",
-      "path": "13_时间序列分析/06_含趋势的模型.md"
-    },
-    {
-      "basename": "01_介绍时间序列",
-      "path": "13_时间序列分析/01_介绍时间序列.md"
-    },
-    {
-      "basename": "07_公司价值分析",
-      "path": "11_证券投资学/07_公司价值分析.md"
     }
   ],
   "omittedPaths": [],

@@ -222,6 +222,30 @@
               "icon": "lucide-file",
               "title": "13_历史模拟法和极值理论"
             }
+          },
+          {
+            "id": "f26527e496dee472",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "13_时间序列分析/04_波动建模 Modeling Volatility.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "04_波动建模 Modeling Volatility"
+            }
           }
         ],
         "currentTab": 5
@@ -277,8 +301,7 @@
               "title": "搜索"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -433,10 +456,16 @@
   },
   "active": "505120a4f45b14b2",
   "lastOpenFiles": [
-    "00_factor/EWMA.md",
-    "12_金融机构与风险管理/10_波动率.md",
-    "98_attachment/Pasted image 20250627191641.png",
+    "98_attachment/Pasted image 20250627201244.png",
+    "13_时间序列分析/04_波动建模 Modeling Volatility.md",
     "12_金融机构与风险管理/00_金融风险划重点.md",
+    "12_金融机构与风险管理/10_波动率.md",
+    "00_factor/ARCH.md",
+    "00_factor/GARCH.md",
+    "00_factor/EGARCH.md",
+    "00_factor/TARCH.md",
+    "00_factor/EWMA.md",
+    "98_attachment/Pasted image 20250627191641.png",
     "00_factor/已实现波动率.md",
     "00_factor/隐含波动率.md",
     "00_factor/历史波动率.md",
@@ -457,11 +486,6 @@
     "99_学习情况记录/2025-06-27——周五.md",
     "99_学习情况记录/完成任务的日期/2025-06-27——周五.md",
     "98_attachment/Pasted image 20250627115537.png",
-    "00_factor/Vega.md",
-    "00_factor/Delta.md",
-    "00_factor/Rho.md",
-    "00_factor/Theta.md",
-    "00_factor/Gamma.md",
     "98_attachment/Pasted image 20250626171727.png",
     "98_attachment/Pasted image 20250625184140.png",
     "98_attachment/Pasted image 20240310184421.png",
