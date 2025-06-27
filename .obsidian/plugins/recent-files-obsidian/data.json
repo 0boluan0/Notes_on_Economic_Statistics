@@ -5,6 +5,10 @@
       "path": "12_金融机构与风险管理/12_VAR风险.md"
     },
     {
+      "basename": "一致性风险度量",
+      "path": "00_factor/一致性风险度量.md"
+    },
+    {
       "basename": "08_操作员如何管理风险暴露",
       "path": "12_金融机构与风险管理/08_操作员如何管理风险暴露.md"
     },
@@ -119,10 +123,6 @@
     {
       "basename": "边际VaR",
       "path": "00_factor/边际VaR.md"
-    },
-    {
-      "basename": "一致性风险度量",
-      "path": "00_factor/一致性风险度量.md"
     },
     {
       "basename": "VaR",
