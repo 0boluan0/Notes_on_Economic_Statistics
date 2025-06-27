@@ -224,7 +224,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -344,13 +344,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12_金融机构与风险管理/08_操作员如何管理风险暴露.md",
+                "file": "12_金融机构与风险管理/12_VAR风险.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "08_操作员如何管理风险暴露 的大纲"
+              "title": "12_VAR风险 的大纲"
             }
           },
           {
@@ -430,8 +430,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "fa75631d25f79019",
+  "active": "99a5f6b69eeb58e9",
   "lastOpenFiles": [
+    "12_金融机构与风险管理/08_操作员如何管理风险暴露.md",
     "12_金融机构与风险管理/12_VAR风险.md",
     "00_factor/VaR.md",
     "12_金融机构与风险管理/11_相关系数与copula函数.md",
@@ -439,7 +440,6 @@
     "12_金融机构与风险管理/00_金融风险划重点.md",
     "12_金融机构与风险管理/09_利率风险.md",
     "99_学习情况记录/2025-06-27——周五.md",
-    "12_金融机构与风险管理/08_操作员如何管理风险暴露.md",
     "99_学习情况记录/完成任务的日期/2025-06-27——周五.md",
     "98_attachment/Pasted image 20250627115537.png",
     "12_金融机构与风险管理/01_引言.md",
