@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "10_波动率",
+      "path": "12_金融机构与风险管理/10_波动率.md"
+    },
+    {
+      "basename": "GARCH",
+      "path": "00_factor/GARCH.md"
+    },
+    {
       "basename": "12_VAR风险",
       "path": "12_金融机构与风险管理/12_VAR风险.md"
     },
@@ -37,10 +45,6 @@
       "path": "12_金融机构与风险管理/14_VaR参数法和模拟法.md"
     },
     {
-      "basename": "10_波动率",
-      "path": "12_金融机构与风险管理/10_波动率.md"
-    },
-    {
       "basename": "09_利率风险",
       "path": "12_金融机构与风险管理/09_利率风险.md"
     },
@@ -75,10 +79,6 @@
     {
       "basename": "ARCH",
       "path": "00_factor/ARCH.md"
-    },
-    {
-      "basename": "GARCH",
-      "path": "00_factor/GARCH.md"
     },
     {
       "basename": "EGARCH",
