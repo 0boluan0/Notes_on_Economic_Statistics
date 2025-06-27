@@ -223,7 +223,8 @@
               "title": "13_历史模拟法和极值理论"
             }
           }
-        ]
+        ],
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -343,13 +344,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12_金融机构与风险管理/00_金融风险划重点.md",
+                "file": "12_金融机构与风险管理/12_VAR风险.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "00_金融风险划重点 的大纲"
+              "title": "12_VAR风险 的大纲"
             }
           },
           {
@@ -429,12 +430,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "38e4365a0d03587b",
+  "active": "99a5f6b69eeb58e9",
   "lastOpenFiles": [
+    "98_attachment/Pasted image 20250627174644.png",
+    "12_金融机构与风险管理/00_金融风险划重点.md",
     "12_金融机构与风险管理/12_VAR风险.md",
     "12_金融机构与风险管理/09_利率风险.md",
     "12_金融机构与风险管理/01_引言.md",
-    "12_金融机构与风险管理/00_金融风险划重点.md",
     "00_factor/成分VaR.md",
     "00_factor/递增VaR.md",
     "00_factor/边际VaR.md",
@@ -458,7 +460,6 @@
     "11_证券投资学/02_证券市场.md",
     "10_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
     "13_时间序列分析/02_差分方程Difference Equation.md",
-    "12_金融机构与风险管理/07_定价与情景分析.md",
     "98_attachment/Pasted image 20250626171727.png",
     "98_attachment/Pasted image 20250625184140.png",
     "98_attachment/Pasted image 20240310184421.png",
