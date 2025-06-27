@@ -1,16 +1,48 @@
 {
   "recentFiles": [
     {
-      "basename": "12_VAR风险",
-      "path": "12_金融机构与风险管理/12_VAR风险.md"
+      "basename": "10_波动率",
+      "path": "12_金融机构与风险管理/10_波动率.md"
+    },
+    {
+      "basename": "EWMA",
+      "path": "00_factor/EWMA.md"
     },
     {
       "basename": "00_金融风险划重点",
       "path": "12_金融机构与风险管理/00_金融风险划重点.md"
     },
     {
+      "basename": "已实现波动率",
+      "path": "00_factor/已实现波动率.md"
+    },
+    {
+      "basename": "隐含波动率",
+      "path": "00_factor/隐含波动率.md"
+    },
+    {
+      "basename": "历史波动率",
+      "path": "00_factor/历史波动率.md"
+    },
+    {
+      "basename": "12_VAR风险",
+      "path": "12_金融机构与风险管理/12_VAR风险.md"
+    },
+    {
+      "basename": "11_相关系数与copula函数",
+      "path": "12_金融机构与风险管理/11_相关系数与copula函数.md"
+    },
+    {
+      "basename": "ES",
+      "path": "00_factor/ES.md"
+    },
+    {
       "basename": "09_利率风险",
       "path": "12_金融机构与风险管理/09_利率风险.md"
+    },
+    {
+      "basename": "13_历史模拟法和极值理论",
+      "path": "12_金融机构与风险管理/13_历史模拟法和极值理论.md"
     },
     {
       "basename": "01_引言",
@@ -37,20 +69,8 @@
       "path": "12_金融机构与风险管理/08_操作员如何管理风险暴露.md"
     },
     {
-      "basename": "ES",
-      "path": "00_factor/ES.md"
-    },
-    {
       "basename": "VaR",
       "path": "00_factor/VaR.md"
-    },
-    {
-      "basename": "11_相关系数与copula函数",
-      "path": "12_金融机构与风险管理/11_相关系数与copula函数.md"
-    },
-    {
-      "basename": "10_波动率",
-      "path": "12_金融机构与风险管理/10_波动率.md"
     },
     {
       "basename": "2025-06-27——周五",
@@ -117,10 +137,6 @@
       "path": "11_证券投资学/09_技术分析理论和方法.md"
     },
     {
-      "basename": "13_历史模拟法和极值理论",
-      "path": "12_金融机构与风险管理/13_历史模拟法和极值理论.md"
-    },
-    {
       "basename": "阿尔法值",
       "path": "00_factor/阿尔法值.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "07_公司价值分析",
       "path": "11_证券投资学/07_公司价值分析.md"
-    },
-    {
-      "basename": "08_证券投资技术分析概述",
-      "path": "11_证券投资学/08_证券投资技术分析概述.md"
-    },
-    {
-      "basename": "06_公司财务分析",
-      "path": "11_证券投资学/06_公司财务分析.md"
-    },
-    {
-      "basename": "2025-06-19——周四",
-      "path": "99_学习情况记录/2025-06-19——周四.md"
-    },
-    {
-      "basename": "算子operator",
-      "path": "00_inbox/算子operator.md"
     }
   ],
   "omittedPaths": [],
