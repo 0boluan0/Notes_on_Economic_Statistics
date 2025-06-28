@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
-      "basename": "00_金融风险划重点",
-      "path": "12_金融机构与风险管理/00_金融风险划重点.md"
-    },
-    {
       "basename": "13_历史模拟法和极值理论",
       "path": "12_金融机构与风险管理/13_历史模拟法和极值理论.md"
+    },
+    {
+      "basename": "压力VaR",
+      "path": "00_factor/压力VaR.md"
+    },
+    {
+      "basename": "00_金融风险划重点",
+      "path": "12_金融机构与风险管理/00_金融风险划重点.md"
     },
     {
       "basename": "11_相关系数与copula函数",
@@ -195,10 +199,6 @@
     {
       "basename": "头寸",
       "path": "00_factor/头寸.md"
-    },
-    {
-      "basename": "01_证券投资工具",
-      "path": "11_证券投资学/01_证券投资工具.md"
     }
   ],
   "omittedPaths": [],

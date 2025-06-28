@@ -271,7 +271,8 @@
               "title": "15_银行管理条约新巴塞尔协议和偿付能力法案"
             }
           }
-        ]
+        ],
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -391,13 +392,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12_金融机构与风险管理/00_金融风险划重点.md",
+                "file": "12_金融机构与风险管理/13_历史模拟法和极值理论.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "00_金融风险划重点 的大纲"
+              "title": "13_历史模拟法和极值理论 的大纲"
             }
           },
           {
@@ -477,13 +478,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "cff59a61ad2703ed",
+  "active": "ad43c29d7e8edbbf",
   "lastOpenFiles": [
+    "00_factor/压力VaR.md",
     "12_金融机构与风险管理/13_历史模拟法和极值理论.md",
+    "12_金融机构与风险管理/00_金融风险划重点.md",
     "12_金融机构与风险管理/11_相关系数与copula函数.md",
     "12_金融机构与风险管理/12_VAR风险.md",
     "12_金融机构与风险管理/01_引言.md",
-    "12_金融机构与风险管理/00_金融风险划重点.md",
     "98_attachment/Pasted image 20250628132927.png",
     "12_金融机构与风险管理/15_银行管理条约新巴塞尔协议和偿付能力法案.md",
     "12_金融机构与风险管理/16_巴塞尔协议.md",
