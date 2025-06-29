@@ -173,8 +173,6 @@ NRR-theta-EAD-RAW-节省百分比
 **对比**：如果走标准法，很多中小行常被算出 >$30 m；因此只要模型合格，IMA 省资本显著。
 
 
-
-
 ## 5. 偿付能力法案II框架简介，三大支柱与Basel II的对比，保险业资本监管指标（MCR与SCR）
 
 偿付能力II（Solvency II）是欧盟于2016年实施的保险业资本监管框架，也采用“三支柱”结构：**第一支柱**为量化资本要求（资产负债的市场价值评估及资本计量），**第二支柱**为治理与监管（包括风险管理和内部偿付能力评估ORSA），**第三支柱**为市场披露与透明度.第一支柱下的资本要求包括两种阈值：**偿付能力资本要求**（SCR）和**最低资本要求**（MCR）。SCR可通过标准公式或内部模型计算，涵盖承保风险、市场风险等；MCR则为更低的最低门槛，根据公式设定并限制在SCR的25%至45%范围内 [oai_citation:32‡lloyds.com](https://www.lloyds.com/conducting-business/regulatory-information/solvency-ii/about/what-is-solvency-ii#:~:text=%2A%20Two%20thresholds%3A%20,the%20valuation%20of%20assets%20and)。常考知识点包括计算MCR的上下限（25%–45% SCR） [oai_citation:33‡lloyds.com](https://www.lloyds.com/conducting-business/regulatory-information/solvency-ii/about/what-is-solvency-ii#:~:text=%2A%20Two%20thresholds%3A%20,the%20valuation%20of%20assets%20and)。Solvency II与Basel II类似重视风险敏感度，但针对保险业风险（如承保风险、精算假设）制定了不同的资本指标，强调ORSA等内部风险管理要求 [oai_citation:34‡lloyds.com](https://www.lloyds.com/conducting-business/regulatory-information/solvency-ii/about/what-is-solvency-ii#:~:text=%2A%20Two%20thresholds%3A%20,the%20valuation%20of%20assets%20and) [oai_citation:35‡investopedia.com](https://www.investopedia.com/terms/b/baselii.asp#:~:text=Basel%20II%20is%20the%20second,weighted%20assets)。
