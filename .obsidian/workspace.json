@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12_金融机构与风险管理/15_银行管理条约新巴塞尔协议和偿付能力法案.md",
+                "file": "12_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "15_银行管理条约新巴塞尔协议和偿付能力法案"
+              "title": "15_《巴塞尔协议I II》和 偿付能力法案II"
             }
           },
           {
@@ -176,7 +176,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -296,13 +296,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12_金融机构与风险管理/14_VaR参数法和模拟法.md",
+                "file": "12_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "14_VaR参数法和模拟法 的大纲"
+              "title": "15_《巴塞尔协议I II》和 偿付能力法案II 的大纲"
             }
           },
           {
@@ -382,12 +382,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "1301ffa969216a0e",
+  "active": "235d6a2112791d7f",
   "lastOpenFiles": [
+    "12_金融机构与风险管理/00_金融风险划重点.md",
+    "12_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
+    "12_金融机构与风险管理/14_VaR参数法和模拟法.md",
     "98_attachment/Pasted image 20250629104152.png",
     "98_attachment/Pasted image 20250629104144.png",
-    "12_金融机构与风险管理/00_金融风险划重点.md",
-    "12_金融机构与风险管理/14_VaR参数法和模拟法.md",
     "12_金融机构与风险管理/21_信用在险价值.md",
     "12_金融机构与风险管理/22_情景分析和压力测试.md",
     "12_金融机构与风险管理/20_CVA,DVA衍生产品中的对手信用风险.md",
@@ -406,7 +407,6 @@
     "00_factor/隐含期权风险.md",
     "00_factor/基差风险.md",
     "00_factor/重新定价风险.md",
-    "12_金融机构与风险管理/15_银行管理条约新巴塞尔协议和偿付能力法案.md",
     "98_attachment/Pasted image 20250628212933.png",
     "03_public finance财政学/0_财政学看板.md",
     "98_attachment/Pasted image 20250628205522.png",
@@ -419,7 +419,6 @@
     "98_attachment/Pasted image 20250627210154.png",
     "98_attachment/Pasted image 20250627203615.png",
     "98_attachment/Pasted image 20250627201244.png",
-    "98_attachment/Pasted image 20250627191641.png",
     "13_时间序列分析/lecture.pdf",
     "textgenerator/templates/default",
     "textgenerator/templates",

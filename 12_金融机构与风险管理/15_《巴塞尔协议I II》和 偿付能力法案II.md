@@ -1,7 +1,15 @@
 
-# 第十五章：银行管理条约、新巴塞尔协议与偿付能力法案
+# 1. 对银行资本进行监管的原因
 
-## 1. 1988年巴塞尔协议的历史背景与主要内容（资本充足率、风险加权资产）
+防破产,防止一连串破产
+
+1. **降低破产概率，稳住信心** —— 完全杜绝银行破产并不现实，但足额资本能把破产概率压到极低，从而维持公众与企业对金融体系的信任 。
+    
+2. **抑制存款保险诱发的道德风险** —— 有了存款保险，银行容易“拿别人的钱去冒更大的险”；强制资本缓冲把“肆意加杠杆”变得代价高昂 。
+    
+3. **防范系统性风险** —— 一家巨型银行倒下可能连锁拖垮同业；监管部门关注整个体系的“火灾隔断”效果，而资本要求正是防火墙 。
+
+# 1. 1988年巴塞尔协议的历史背景与主要内容（资本充足率、风险加权资产）
 1988年巴塞尔协议（Basel I）由G10国家的央行官员在国际清算银行（BIS）推动下制定，旨在建立统一的银行资本监管标准 [oai_citation:0‡investopedia.com](https://www.investopedia.com/terms/b/basel_accord.asp#:~:text=Under%20Basel%20I%2C%20banks%20that,of%20capital%20to%20meet%20obligations) [oai_citation:1‡analystprep.com](https://analystprep.com/study-notes/frm/part-2/operational-and-integrated-risk-management/basel-1-basel-2-and-solvency-2/#:~:text=The%20first%20attempt%20of%20an,innovation%20in%20the%201988%20accord)。协议规定银行需至少持有相当于风险加权资产（RWA）8%的资本 [oai_citation:2‡investopedia.com](https://www.investopedia.com/terms/b/basel_accord.asp#:~:text=Under%20Basel%20I%2C%20banks%20that,of%20capital%20to%20meet%20obligations) [oai_citation:3‡analystprep.com](https://analystprep.com/study-notes/frm/part-2/operational-and-integrated-risk-management/basel-1-basel-2-and-solvency-2/#:~:text=Capital%20Requirement)，即资本充足率（Capital Adequacy Ratio, CAR）满足 
 $$CAR=\frac{\text{资本（一级资本+二级资本）}}{\text{风险加权资产（RWA）}}\ge8\%.$$ 
 资产按信用风险类别分为0%、10%、20%、50%、100%五类 [oai_citation:4‡investopedia.com](https://www.investopedia.com/terms/b/basel_accord.asp#:~:text=risk%20,and%20100)，通过风险权重计算RWA，如
@@ -46,6 +54,10 @@ $$\text{VaR}_{10\text{天}} \approx \sqrt{10}\times \text{VaR}_{1\text{天}},$$
 **答案:** 根据Solvency II，MCR为SCR的25%~45%。1. MCR最低值$=1000\times25\%=250$万元；2. MCR最高值$=1000\times45\%=450$万元 [oai_citation:36‡lloyds.com](https://www.lloyds.com/conducting-business/regulatory-information/solvency-ii/about/what-is-solvency-ii#:~:text=%2A%20Two%20thresholds%3A%20,the%20valuation%20of%20assets%20and)。因此，该公司MCR范围为250万至450万元。
 
 # 作业
+
+## 15.1
+
+
 
 ## 15.6
 
