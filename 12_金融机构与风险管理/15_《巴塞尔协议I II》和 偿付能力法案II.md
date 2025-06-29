@@ -9,16 +9,13 @@
     
 3. **防范系统性风险** —— 一家巨型银行倒下可能连锁拖垮同业；监管部门关注整个体系的“火灾隔断”效果，而资本要求正是防火墙 。
 
-# 1. 1988年巴塞尔协议的历史背景与主要内容（资本充足率、风险加权资产）
-1988年巴塞尔协议（Basel I）由G10国家的央行官员在国际清算银行（BIS）推动下制定，旨在建立统一的银行资本监管标准 [oai_citation:0‡investopedia.com](https://www.investopedia.com/terms/b/basel_accord.asp#:~:text=Under%20Basel%20I%2C%20banks%20that,of%20capital%20to%20meet%20obligations) [oai_citation:1‡analystprep.com](https://analystprep.com/study-notes/frm/part-2/operational-and-integrated-risk-management/basel-1-basel-2-and-solvency-2/#:~:text=The%20first%20attempt%20of%20an,innovation%20in%20the%201988%20accord)。协议规定银行需至少持有相当于风险加权资产（RWA）8%的资本 [oai_citation:2‡investopedia.com](https://www.investopedia.com/terms/b/basel_accord.asp#:~:text=Under%20Basel%20I%2C%20banks%20that,of%20capital%20to%20meet%20obligations) [oai_citation:3‡analystprep.com](https://analystprep.com/study-notes/frm/part-2/operational-and-integrated-risk-management/basel-1-basel-2-and-solvency-2/#:~:text=Capital%20Requirement)，即资本充足率（Capital Adequacy Ratio, CAR）满足 
-$$CAR=\frac{\text{资本（一级资本+二级资本）}}{\text{风险加权资产（RWA）}}\ge8\%.$$ 
-资产按信用风险类别分为0%、10%、20%、50%、100%五类 [oai_citation:4‡investopedia.com](https://www.investopedia.com/terms/b/basel_accord.asp#:~:text=risk%20,and%20100)，通过风险权重计算RWA，如
-$$RWA=\sum_i w_i L_i+\sum_j W_j^* C_j$$
-其中$w_i$为资产$i$的风险权重，$L_i$为其本金金额，$C_j$为表外项目的信用等价额，$W_j^*$为对应的对手方风险权重 [oai_citation:5‡analystprep.com](https://analystprep.com/study-notes/frm/part-2/operational-and-integrated-risk-management/basel-1-basel-2-and-solvency-2/#:~:text=A%20bank%20with%20%5C%28N%5C%29%20on,weighted%20assets%20computed%20as%20follows)。需要注意，巴塞尔协议还要求至少50%的所需资本为一级资本 [oai_citation:6‡analystprep.com](https://analystprep.com/study-notes/frm/part-2/operational-and-integrated-risk-management/basel-1-basel-2-and-solvency-2/#:~:text=At%20least%2050,a%20requirement%20by%20the%20accord)，以提高资本质量。
+# 2. basel I
 
-**例题:** 某银行拥有政府债券50亿元（风险权重0%）、企业贷款30亿元（风险权重100%）和住房抵押贷款20亿元（风险权重50%），一级资本为3.5亿元，二级资本为0.5亿元。试计算该行的风险加权资产(RWA)和资本充足率，并判断是否符合巴塞尔I的8%要求。
 
-**答案:** 1. 计算RWA：政府债券$50\times0\%=0$，企业贷款$30\times100\%=30$，住房贷款$20\times50\%=10$，故$RWA=0+30+10=40$（亿元） [oai_citation:7‡investopedia.com](https://www.investopedia.com/terms/b/basel_accord.asp#:~:text=risk%20,and%20100) [oai_citation:8‡analystprep.com](https://analystprep.com/study-notes/frm/part-2/operational-and-integrated-risk-management/basel-1-basel-2-and-solvency-2/#:~:text=A%20bank%20with%20%5C%28N%5C%29%20on,weighted%20assets%20computed%20as%20follows)。2. 资本总额$=3.5+0.5=4.0$（亿元），资本充足率$CAR=4.0/40=0.10=10\%\ge8\%$，满足要求 [oai_citation:9‡investopedia.com](https://www.investopedia.com/terms/b/basel_accord.asp#:~:text=Under%20Basel%20I%2C%20banks%20that,of%20capital%20to%20meet%20obligations) [oai_citation:10‡analystprep.com](https://analystprep.com/study-notes/frm/part-2/operational-and-integrated-risk-management/basel-1-basel-2-and-solvency-2/#:~:text=Capital%20Requirement)；一级资本占比$=3.5/4.0=87.5\%\ge50\%$，也符合一级资本比例要求 [oai_citation:11‡analystprep.com](https://analystprep.com/study-notes/frm/part-2/operational-and-integrated-risk-management/basel-1-basel-2-and-solvency-2/#:~:text=At%20least%2050,a%20requirement%20by%20the%20accord)。
+
+
+
+
 
 ## 2. 库克比率的计算公式与应用示例
 库克比率（Cooke Ratio）是巴塞尔I提出的资本充足度指标，定义为银行资本与风险加权资产的比率 [oai_citation:12‡analystprep.com](https://analystprep.com/study-notes/frm/part-2/operational-and-integrated-risk-management/basel-1-basel-2-and-solvency-2/#:~:text=The%20first%20attempt%20of%20an,innovation%20in%20the%201988%20accord)。其计算公式为 
