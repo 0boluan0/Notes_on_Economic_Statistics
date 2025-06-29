@@ -176,7 +176,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -296,13 +296,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
+                "file": "12_金融机构与风险管理/19_违约风险.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "15_《巴塞尔协议I II》和 偿付能力法案II 的大纲"
+              "title": "19_违约风险 的大纲"
             }
           },
           {
@@ -382,10 +382,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "235d6a2112791d7f",
+  "active": "2b55e82887d371bd",
   "lastOpenFiles": [
-    "12_金融机构与风险管理/00_金融风险划重点.md",
     "12_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
+    "12_金融机构与风险管理/00_金融风险划重点.md",
     "12_金融机构与风险管理/14_VaR参数法和模拟法.md",
     "98_attachment/Pasted image 20250629104152.png",
     "98_attachment/Pasted image 20250629104144.png",
