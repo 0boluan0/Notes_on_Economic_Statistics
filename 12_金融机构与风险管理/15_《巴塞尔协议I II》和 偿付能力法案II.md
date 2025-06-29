@@ -105,68 +105,74 @@ $$\text{库克比率}=\frac{\text{资本（一级资本+二级资本）}}{\text{
     
     $\text{RWA} = \text{EAD}\, \times \text{对手权重}$
 
-## 4.3 PPT例题
+NRR-theta-EAD-RAW-节省百分比
 
-> **互换组合**：
-> +24 m、–17 m、+8 m  （货币：USD）
-> **Add-on 合计**：110 m（监管表给定）
-> **对手评级**：OECD 银行，权重 20 %
+# 5.1996修正案
 
-> **任务**：某组合 5 笔互换，正价值 +40/+15，负价值 –25/–18/–12（单位 mUSD）；总 add-on 200 m，交易对手权重 50 %。
+> **目标**：把“VaR × 惩罚系数 mc”资本公式拆开讲，直到你能自己算出一家银行的市场风险资本。
 
-1. > 计算无净额 EAD、RWA。
-    
-2. > 计算 NRR、EADnet、RWAnet。
-    
-3. > 比较资本节省率 (%)。
+ **1️⃣ 为什么 Basle I 之后还需要“1996 修正案”？**
+
+|**隐患**|**Basel I 没覆盖**|**危险在哪**|
+|---|---|---|
+|**交易簿波动**|Basel I 只针对贷款等“银行簿”|做市业务持仓大、价格日内跳动剧烈|
+|**债券利差 & 股票价格**|权重 100 % 太粗糙|一条利率曲线扭一扭，债券亏几千万|
+|**衍生品敏感度**|仅算信用 Add-on|市场价格波动对期权、期货影响巨大|
+
+**结论**：需要一套**量化市场风险**且能接入日常风控的资本工具——于是《1996 市场风险修正案》诞生。
+
+ **2️⃣ 两条路线：**
+
+**标准法** **vs** **内部模型法 (IMA)**
+
+| **路线**    | **监管给的公式**                      | **银行要做什么**                    |
+| --------- | ------------------------------- | ----------------------------- |
+| **标准法**   | 为各资产类别设“久期-区段”或“贝塔权数”，逐块加总      | 会计科目+表格填报，简单但资本通常较高           |
+| **内部模型法** | **VaR10d, 99 % × mc** + SRC特定风险 | 自己搭 VaR 引擎，满足 **模型验证 & 回溯测试** |
+
+> 后来 Basel 2.5 / FRTB 继续演化 IMA，但 1996 版是第一代。
+
+ **3️⃣ 公式拆解（IMA 路线）**
+
+1. **每日计算 1-day VaR(99 %)**——取过去 ≥ 1 年历史数据或蒙特卡洛。
+2. **换算 10 天**：
+    $VaR_{10d}=VaR_{1d}\times\sqrt{10}$
+3. **惩罚系数 mc（模型校准）**
+    $\text{Capital}{MR}= \max\bigl(VaR{t-1},\; mc\times \overline{VaR}_{60}\bigr)$
+    - $VaR_{t-1}：昨日最新 10d VaR$
+    - $\overline{VaR}_{60}：过去 60 天 10d VaR 均值$
+    - **mc** 取值 3.0–4.0，由 **250 天回溯测试**“超越次数”决定（见下表）
+
+| **例外次数 (12 月)** | **mc** |
+| --------------- | ------ |
+| 0–4             | 3.0    |
+| 5–9             | 3.4    |
+| 10–14           | 3.5    |
+| 15+             | 4.0    |
+
+4. **SRC（Specific Risk Capital）**——弥补 VaR 对债券违约/股票单一持仓过度分散带来的盲点（可用标准法或经批准的内部模型）。
     
 
   
 
-可把答案发给我或自行对照脚本检查 —— 练会 NRR 公式才算真正掌握！
+> **最终市场风险资本** = VaR × mc **+ SRC**。
 
 ---
 
-## **6️⃣ 延伸阅读 & 工具**
+### **4️⃣ 慢速算一遍“小行示例”**
 
-1. **ISDA® 2021 Definitions** —— 最新净额条款范本。
-    
-2. **BIS “Capital Treatment for Bilateral Netting” (1995)** —— NRR 公式官方文件。
-    
-3. **Python Notebook** —— 用 pandas + numpy 写一个 calc_EAD(netting_set) 函数，循环遍历交易对手，做资本敏感度分析。
-    
+| **数据**                | **数值**                                            | **步骤**              |
+| --------------------- | ------------------------------------------------- | ------------------- |
+| 1-day VaR(99 %)       | $2 m                                              | 蒙特卡洛 or 历史          |
+| **① 10-day VaR**      | 2 ×√10 ≈ \$6.32 m                                 | 扩⻓持有期               |
+| 回溯测试 250 天 **例外 6 次** | mc = 3.4                                          | 查表                  |
+| **② Capital core**    | $\max(6.32,\; 3.4×6.00)=\max(6.32,20.4)=\$20.4 m$ | 假设 60-日均 VaR = $6 m |
+| **③ SRC**             | $4 m                                              | 用债券久期表法算            |
+| **总市场风险资本**           | **$24.4 m**                                       | ② + ③               |
 
----
+**对比**：如果走标准法，很多中小行常被算出 >$30 m；因此只要模型合格，IMA 省资本显著。
 
-### **⏭️ 下一节预告 ——** 
 
-### **15.6 1996 市场风险修正案**
-
-- 引入 **VaR(10d, 99 %) × 惩罚系数 mc** 的资本公式
-    
-- 解释市场风险资本与信用资本如何拼成“总 RWA”
-    
-
-  
-
-如果对净额、NRR 或案例数字还有疑惑，请直接提问；否则回复“继续”，我们马上上车！
-
-## 3. 1996年《市场风险修正案》的新增资本要求（VaR方法）
-
-1996年巴塞尔委员会发布了市场风险修正案，为交易账簿引入了市场风险资本要求。修正案规定两种计算方法：**标准化方法**（对外汇、商品等头寸按固定比例计提资本）和**内部模型方法**（以VaR为基础）。内部模型方法要求银行计算99%置信度下的10天持有期VaR，并以此确定资本要求。通常使用平方根法将日VaR转换为10天VaR：
-$$\text{VaR}_{10\text{天}} \approx \sqrt{10}\times \text{VaR}_{1\text{天}},$$
-然后乘以监管乘数（如3倍）以计算最终资本。掌握VaR的计算与持有期调整是重点。
-
-**例题:** 某银行交易组合计算出1天99%VaR为10亿元（假设收益正态且独立）。试计算该组合的10天99%VaR（使用平方根法），并在监管乘数为3的情况下计算所需市场风险资本。
-
-**答案:** 1. 将1天VaR转换为10天：$\text{VaR}_{10}=10\times\sqrt{10}\approx10\times3.162=31.62$（亿元）。2. 乘以监管乘数：资本要求$=3\times31.62\approx94.9$（亿元）。因此，该行需计提约94.9亿元的市场风险资本 。
-
-## 4. 《巴塞尔协议II》的三大支柱结构及与Basel I的比较
-巴塞尔II（2004年）采用了“三支柱”框架：**第一支柱**（最低资本要求）、**第二支柱**（监管审查）和**第三支柱**（市场约束/信息披露） [oai_citation:22‡investopedia.com](https://www.investopedia.com/terms/b/basel_accord.asp#:~:text=The%20second%20Basel%20Accord%2C%20called,known%20as%20the%20three%20pillars) [oai_citation:23‡investopedia.com](https://www.investopedia.com/terms/b/baselii.asp#:~:text=Basel%20II%20is%20the%20second,weighted%20assets)。第一支柱仍要求资本充足率不低于8% [oai_citation:24‡investopedia.com](https://www.investopedia.com/terms/b/baselii.asp#:~:text=Building%20on%20Basel%20I%2C%20Basel,weighted%20assets)，但信用风险权重更精细，引入了内部评级（IRB）方法，评级越高的资产风险权重越低 [oai_citation:25‡investopedia.com](https://www.investopedia.com/terms/b/baselii.asp#:~:text=weighting%20is%20intended%20to%20discourage,the%20lower%20the%20risk%20weight)。此外，巴塞尔II首次引入了操作风险的资本要求。第二、三支柱分别强化了监管机构的审查要求和信息披露，以提高监管效力和市场透明度。与Basel I相比，Basel II提高了风险敏感度，并明确了监管和市场约束机制 [oai_citation:26‡investopedia.com](https://www.investopedia.com/terms/b/baselii.asp#:~:text=weighting%20is%20intended%20to%20discourage,the%20lower%20the%20risk%20weight) [oai_citation:27‡investopedia.com](https://www.investopedia.com/terms/b/basel_accord.asp#:~:text=The%20second%20Basel%20Accord%2C%20called,known%20as%20the%20three%20pillars)。
-
-**例题:** 某银行在巴塞尔II框架下风险加权资产为800亿元，一级资本50亿元，二级资本20亿元。计算该银行的资本充足率，并判断是否满足第一支柱8%的要求；同时检查一级资本比例是否满足“至少50%”的要求。
-
-**答案:** 1. 总资本$=50+20=70$（亿元），资本充足率$=70/800=8.75\%\ge8\%$ [oai_citation:28‡investopedia.com](https://www.investopedia.com/terms/b/baselii.asp#:~:text=Building%20on%20Basel%20I%2C%20Basel,weighted%20assets)；2. 一级资本占比$=50/70=71.4\%\ge50\%$ [oai_citation:29‡analystprep.com](https://analystprep.com/study-notes/frm/part-2/operational-and-integrated-risk-management/basel-1-basel-2-and-solvency-2/#:~:text=At%20least%2050,a%20requirement%20by%20the%20accord)。因此，该银行既满足最低资本率要求，也符合一级资本比例要求。
 
 ## 5. 偿付能力法案II框架简介，三大支柱与Basel II的对比，保险业资本监管指标（MCR与SCR）
 
