@@ -128,6 +128,30 @@
             }
           },
           {
+            "id": "1061d002677712fa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "12_金融机构与风险管理/19_违约风险.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "19_违约风险"
+            }
+          },
+          {
             "id": "2b55e82887d371bd",
             "type": "leaf",
             "state": {
@@ -181,7 +205,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "12_金融机构与风险管理/14_VaR参数法和模拟法.md",
+                "file": "12_金融机构与风险管理/22_情景分析和压力测试.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -196,11 +220,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "14_VaR参数法和模拟法"
+              "title": "22_情景分析和压力测试"
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -320,13 +344,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12_金融机构与风险管理/14_VaR参数法和模拟法.md",
+                "file": "12_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "14_VaR参数法和模拟法 的大纲"
+              "title": "15_《巴塞尔协议I II》和 偿付能力法案II 的大纲"
             }
           },
           {
@@ -406,27 +430,28 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "62ddc8df98ecbf47",
+  "active": "235d6a2112791d7f",
   "lastOpenFiles": [
+    "12_金融机构与风险管理/17_OTC衍生产品市场的监管.md",
+    "12_金融机构与风险管理/16_巴塞尔协议.md",
+    "12_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
+    "12_金融机构与风险管理/00_金融风险划重点.md",
+    "00_factor/库克比率.md",
+    "12_金融机构与风险管理/20_CVA,DVA衍生产品中的对手信用风险.md",
+    "12_金融机构与风险管理/19_违约风险.md",
+    "12_金融机构与风险管理/22_情景分析和压力测试.md",
+    "12_金融机构与风险管理/14_VaR参数法和模拟法.md",
     "12_金融机构与风险管理/09_利率风险.md",
     "00_factor/收益率曲线风险.md",
     "12_金融机构与风险管理/13_历史模拟法和极值理论.md",
     "12_金融机构与风险管理/11_相关系数与copula函数.md",
-    "12_金融机构与风险管理/20_CVA,DVA衍生产品中的对手信用风险.md",
-    "12_金融机构与风险管理/19_违约风险.md",
-    "12_金融机构与风险管理/16_巴塞尔协议.md",
-    "12_金融机构与风险管理/17_OTC衍生产品市场的监管.md",
-    "12_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
     "12_金融机构与风险管理/21_信用在险价值.md",
     "12_金融机构与风险管理/10_波动率.md",
     "12_金融机构与风险管理/12_VAR风险.md",
-    "12_金融机构与风险管理/14_VaR参数法和模拟法.md",
     "12_金融机构与风险管理/08_操作员如何管理风险暴露.md",
     "12_金融机构与风险管理/01_引言.md",
-    "12_金融机构与风险管理/00_金融风险划重点.md",
     "98_attachment/Pasted image 20250629104152.png",
     "98_attachment/Pasted image 20250629104144.png",
-    "12_金融机构与风险管理/22_情景分析和压力测试.md",
     "12_金融机构与风险管理/07_定价与情景分析.md",
     "00_factor/隐含期权风险.md",
     "00_factor/基差风险.md",
