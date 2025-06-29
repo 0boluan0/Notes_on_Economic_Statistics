@@ -224,7 +224,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -266,7 +266,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "久期",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -277,7 +277,8 @@
               "title": "搜索"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -344,13 +345,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "12_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
+                "file": "12_金融机构与风险管理/17_OTC衍生产品市场的监管.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "15_《巴塞尔协议I II》和 偿付能力法案II 的大纲"
+              "title": "17_OTC衍生产品市场的监管 的大纲"
             }
           },
           {
@@ -430,19 +431,19 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "235d6a2112791d7f",
+  "active": "ef259ff12831d2fd",
   "lastOpenFiles": [
-    "12_金融机构与风险管理/07_定价与情景分析.md",
-    "12_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
+    "12_金融机构与风险管理/19_违约风险.md",
+    "12_金融机构与风险管理/17_OTC衍生产品市场的监管.md",
     "12_金融机构与风险管理/00_金融风险划重点.md",
+    "12_金融机构与风险管理/16_巴塞尔协议.md",
+    "12_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
     "12_金融机构与风险管理/22_情景分析和压力测试.md",
     "12_金融机构与风险管理/21_信用在险价值.md",
-    "12_金融机构与风险管理/17_OTC衍生产品市场的监管.md",
-    "12_金融机构与风险管理/16_巴塞尔协议.md",
     "12_金融机构与风险管理/20_CVA,DVA衍生产品中的对手信用风险.md",
-    "12_金融机构与风险管理/19_违约风险.md",
-    "00_factor/库克比率.md",
     "12_金融机构与风险管理/14_VaR参数法和模拟法.md",
+    "12_金融机构与风险管理/07_定价与情景分析.md",
+    "00_factor/库克比率.md",
     "12_金融机构与风险管理/09_利率风险.md",
     "00_factor/收益率曲线风险.md",
     "12_金融机构与风险管理/13_历史模拟法和极值理论.md",

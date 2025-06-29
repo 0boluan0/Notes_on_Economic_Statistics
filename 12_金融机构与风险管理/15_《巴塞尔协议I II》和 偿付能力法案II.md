@@ -1,3 +1,97 @@
+**SmartEcon – “巴塞尔资本知识点一张网”**
+
+## **⬇️ 第一层：监管演进时间线（**
+
+## **知道“谁管什么”**
+
+## **）**
+
+```
+Basel I(1988)        只看信用风险 + 8 % 规则
+   └─1996 修正案     加入交易簿市场风险（VaR × mc 或标准法）
+Basel II(2004)       三支柱：最低资本 + 监管审查 + 市场披露
+   ├─信用风险   SA / IRB
+   ├─市场风险   承接 1996
+   └─操作风险   BIA / SA / AMA
+Basel III (略)       引入杠杆率、资本缓冲、LCR/NSFR
+```
+
+---
+
+## **⬇️ 第二层：两本账的“分水岭”**
+
+|**维度**|**银行簿 (Banking Book)**|**交易簿 (Trading Book)**|
+|---|---|---|
+|定位|长期持有赚息差|短期买卖赚价差/流动性|
+|会计|摊余成本 or FVOCI|Fair Value through P&L|
+|**风险类别**|_信用风险为主_|_市场风险为主_ (+ Specific)|
+|资本公式|权重 × 余额 × 8 %|VaR×mc + SRC _or_ 标准法表格|
+|常见业务|贷款、HTM债|债券做市、利率互换、期权|
+
+> **口诀：**“长留进银行簿，短炒进交易簿；信用吃权重，市场看 VaR。”
+
+---
+
+## **⬇️ 第三层：三大风险的** 
+
+## **核心公式 & 查表口径**
+
+|**风险块**|**你要准备的输入**|**一行公式**|**表格/参数从哪查**|
+|---|---|---|---|
+|**信用风险**|余额、评级 or PD/LGD|RWA = 余额 × 权重 (或 12.5 K EAD)|Basel SA 权重表 or IRB ρ-PD 函数|
+|**市场风险**|交易簿 P&L 历史|**VaR10d,99% × mc** (+SRC)|回溯测试 mc 表；SRC 权数表|
+|**操作风险**|毛收入 or 损失数据库|BIA: -|15 %×Gross|
+
+---
+
+## **⬇️ 第四层：常考“流程图”**
+
+  
+
+### **1. 衍生品（无净额）——CEM**
+
+```
+现期敞口  = max(V,0)
+Add-on    = Notional × α(按类别+期限查表)
+EAD       = 现期敞口 + Add-on
+RWA       = EAD × 对手权重
+资本金    = RWA × 8 %
+```
+
+> α 速记：利率 0 / 0.5 / 1.5；商品 10 / 12 / 15（≤1y / 1-5y / >5y）
+
+### **2. 有净额——再加两步**
+
+```
+NRR = Σ正值 / Σ绝对值
+θ   = 0.4 + 0.6×NRR
+Add-on 改为 θ×ΣAdd-on
+```
+
+### **3. 交易簿 VaR 路**
+
+```
+1-day VaR(99%)
+↓ ×√10
+10-day VaR
+↓ 回溯测试 → mc
+VaR × mc
+↓ + SRC
+市场风险资本
+```
+
+---
+
+## **🔑 记忆小抄（只背这 6 条）**
+
+1. **总资本 = 8 % × RWA**（核心）
+2. **银行簿 RWA = 余额 × 权重**
+3. **交易簿 VaR 用 10 d × mc**
+4. **mc 表：红叉 0-4→3.0，5-9→3.4，10-14→3.5，15+→4.0**
+5. **NRR 折扣：θ = 0.4 + 0.6 η**
+6. **利率 Add-on 0 | 0.5 | 1.5 %**
+
+
 
 # 1. 对银行资本进行监管的原因
 
@@ -188,14 +282,17 @@ NRR-theta-EAD-RAW-节省百分比
 
 ## 6.2 最低资本金要求
 
-|**路线**|**关键词**|**资本敏感度**|**你要做什么**|
-|---|---|---|---|
-|**标准法 (SA)**|外部评级、风险权重表|★☆☆|直接查表：AAA 20 %、BB 150 %… ）|
-|**内部评级法 – 基础 (F-IRB)**|自估 PD，监管给 LGD|★★☆|建 PD 模型，评级系统须通过监督检查。|
-|**内部评级法 – 高级 (A-IRB)**|自估 PD+LGD+EAD+M|★★★|全套自估，最省资本，但门槛高。|
+抵押品风险:
+
+| **路线**                 | **关键词**         | **资本敏感度** | **你要做什么**                 |
+| ---------------------- | --------------- | --------- | ------------------------- |
+| **标准法 (SA)**           | 外部评级、风险权重表      | ★☆☆       | 直接查表：AAA 20 %、BB 150 %… ） |
+| **内部评级法 – 基础 (F-IRB)** | 自估 PD，监管给 LGD   | ★★☆       | 建 PD 模型，评级系统须通过监督检查。      |
+| **内部评级法 – 高级 (A-IRB)** | 自估 PD+LGD+EAD+M | ★★★       | 全套自估，最省资本，但门槛高。           |
 
 > **公式（简化）**：
-> $\text{K} = f(\text{PD},\text{LGD},\text{EAD},M)\quad\Longrightarrow\quad RWA = 12.5 \times K \times EAD$
+> $K = LGD \Bigl[\,N\!\bigl(\tfrac{1}{\sqrt{1-R}}\,G(PD) + \sqrt{\tfrac{R}{1-R}}\;G(0.999)\bigr) - PD \Bigr]$$\quad\Longrightarrow\quad RWA = 12.5 \times K \times EAD$
+
 
 市场风险
 
@@ -218,7 +315,7 @@ NRR-theta-EAD-RAW-节省百分比
 
 > 若答得敷衍，监管可以“Pillar 2 加层压舱石”——让你比公式多放资本或直接砍仓。
 
-## 6.4披露清单（“晾晒”文化）
+## 6.4披露清单
 
 - **量化表**：RWA 分布、平均 PD、违约资产回收率。
 - **质化文字**：风险管理组织架构、VaR 模型假设、应急流动性计划。
@@ -226,14 +323,98 @@ NRR-theta-EAD-RAW-节省百分比
 
 **好处**：投资者、评级机构用脚投票 → 让银行“怕丢脸、怕股价跌”。
 
+# 7. 偿付能力法案 II
 
-## 5. 偿付能力法案II框架简介，三大支柱与Basel II的对比，保险业资本监管指标（MCR与SCR）
+## **0. 为什么银行“巴塞尔”、保险“偿二代”要分家？**
 
-偿付能力II（Solvency II）是欧盟于2016年实施的保险业资本监管框架，也采用“三支柱”结构：**第一支柱**为量化资本要求（资产负债的市场价值评估及资本计量），**第二支柱**为治理与监管（包括风险管理和内部偿付能力评估ORSA），**第三支柱**为市场披露与透明度.第一支柱下的资本要求包括两种阈值：**偿付能力资本要求**（SCR）和**最低资本要求**（MCR）。SCR可通过标准公式或内部模型计算，涵盖承保风险、市场风险等；MCR则为更低的最低门槛，根据公式设定并限制在SCR的25%至45%范围内 [oai_citation:32‡lloyds.com](https://www.lloyds.com/conducting-business/regulatory-information/solvency-ii/about/what-is-solvency-ii#:~:text=%2A%20Two%20thresholds%3A%20,the%20valuation%20of%20assets%20and)。常考知识点包括计算MCR的上下限（25%–45% SCR） [oai_citation:33‡lloyds.com](https://www.lloyds.com/conducting-business/regulatory-information/solvency-ii/about/what-is-solvency-ii#:~:text=%2A%20Two%20thresholds%3A%20,the%20valuation%20of%20assets%20and)。Solvency II与Basel II类似重视风险敏感度，但针对保险业风险（如承保风险、精算假设）制定了不同的资本指标，强调ORSA等内部风险管理要求 [oai_citation:34‡lloyds.com](https://www.lloyds.com/conducting-business/regulatory-information/solvency-ii/about/what-is-solvency-ii#:~:text=%2A%20Two%20thresholds%3A%20,the%20valuation%20of%20assets%20and) [oai_citation:35‡investopedia.com](https://www.investopedia.com/terms/b/baselii.asp#:~:text=Basel%20II%20is%20the%20second,weighted%20assets)。
+|**行业**|**典型风险**|**资产负债特征**|**监管思路**|
+|---|---|---|---|
+|**银行**|信贷违约、市场波动、操作|负债随时可被提走（存款）|**流动性 + 短期价格冲击**|
+|**保险**|赔付不确定、市场波动|负债久、资产久（保单 10–20 年）|**承保波动 + 市场波动**|
 
-**例题:** 某保险公司计算出偿付能力资本要求（SCR）为1000万元。根据Solvency II规定，求该公司的最低资本要求（MCR）范围。
+🔑 **关键词对照**
 
-**答案:** 根据Solvency II，MCR为SCR的25%~45%。1. MCR最低值$=1000\times25\%=250$万元；2. MCR最高值$=1000\times45\%=450$万元 [oai_citation:36‡lloyds.com](https://www.lloyds.com/conducting-business/regulatory-information/solvency-ii/about/what-is-solvency-ii#:~:text=%2A%20Two%20thresholds%3A%20,the%20valuation%20of%20assets%20and)。因此，该公司MCR范围为250万至450万元。
+- **Basel 的 VaR 99 % ×10d** → 捕捉“10 天里面的最坏亏损”
+    
+- **Solvency II 的 VaR 99.5 % ×1 y** → 问“一年之内活不过去的概率≤0.5 %”
+
+## **1. Solvency II 三层结构（和 Basel 三支柱对着背）**
+
+|**Solvency II**|**Basel “对应物”**|**口语速记**|
+|---|---|---|
+|**1. SCR / MCR 最低资本**|Pillar 1 最低资本|保险版“8 %”——但用 VaR_{99.5\%,1y}|
+|**2. 监管审查（ORSA）**|Pillar 2 ICAAP|保险自己写“活下来”剧本，监管可加资本|
+|**3. 公开披露（SFCR）**|Pillar 3 披露|年度“体检报告”给市场看|
+
+> **公式感**
+
+- > **MCR**（Minimum Capital Requirement）≈ “警戒线”；低于就立刻干预
+- > **SCR**（Solvency Capital Requirement）≈ “安全垫”；要保持在上方
+
+
+## **2. 怎么算** 
+
+## **SCR**
+
+## **？──两条路线**
+
+|**路线**|**用什么表**|**适合谁**|**思路一句话**|
+|---|---|---|---|
+|**标准公式**|EIOPA 给的模块权数|中小保险|像拼乐高：市场 + 承保 + 信用 + 操作|
+|**内部模型**|监管批准后自算|大型跨国险企|类似银行 VaR 模型，能省资本|
+
+### **标准公式 6 块乐高**
+
+1. **市场风险**（利率、股指、汇率、房地产）
+2. **寿险承保风险**（死亡、长寿、费用、Lapse）
+3. **非寿险承保风险**（赔付波动、灾变）
+4. **健康险风险**
+5. **信用/对手风险**
+6. **操作风险**
+    
+
+  
+
+> **组合公式**：
+
+> $SCR = \sqrt{\sum_i \sum_j Corr_{ij} \, SCR_i \, SCR_j}$
+
+> （监管提供相关矩阵 Corr_{ij}）
+
+---
+
+## **3. 1 分钟例子（用标准公式里的“单模块”口感）**
+
+  
+
+> **简化假设**：一家寿险公司
+
+- > 市场风险模块 SCR_M = 300 m
+- > 寿险承保风险 SCR_S = 250 m
+- > 两模块相关系数 Corr = 25 %
+
+计算：
+
+$SCR = \sqrt{300^2 + 250^2 + 2×0.25×300×250} \approx \sqrt{90{,}000 + 62{,}500 + 37{,}500} = \sqrt{190{,}000} ≈ 436 m$
+
+- **最低资本** = 436 m
+- **Tier 1 要占 ≥ 50 %** → ≥218 m
+- **Tier 2/3** 可以补剩下的一部分（监管上限 50 %）
+    
+> **对比**：Basel 里我们先算 RWA，再 ×8 %；Solvency II 直接给出“需要多少自己资本额”。
+
+---
+
+## **4. 和 Basel 数字对着看，更易记！**
+
+|**项目**|**Basel 8 %**|**Solvency II**|
+|---|---|---|
+|信用 / 市场 VaR|99 % ×10d|99.5 % ×1y|
+|操作风险|BIA/SA/AMA|专门模块|
+|模型惩罚系数|mc (回溯)|“Model change buffer” + 监管校准|
+|核心资本比例|Tier 1 ≥50 % 总资本|同（Tier 1 ≥50 % SCR）|
+
+告诉我你想 dive 的主题，我再按“超慢速”模式开下一节！
 
 # 作业
 
