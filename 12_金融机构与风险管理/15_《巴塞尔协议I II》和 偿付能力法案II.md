@@ -635,7 +635,6 @@ $$\Delta K = K_{\text{trading}} - K_{\text{loan}} = 300\,000 - 800\,000 = -\$500
      + 0.16\!\left[1-\frac{1-e^{-35\text{PD}}}{1-e^{-35}}\right]
      \approx 0.1216
   $$
-
 2. **资本系数 \(K\)**  
   $$
    K = \text{LGD}\Bigl[
@@ -644,7 +643,6 @@ $$\Delta K = K_{\text{trading}} - K_{\text{loan}} = 300\,000 - 800\,000 = -\$500
        \Bigr]
      \approx 0.0573
   $$
-
 3. **风险加权资产**  
 $$
    \text{RWA} = 12.5 \times K \times \text{EAD}
