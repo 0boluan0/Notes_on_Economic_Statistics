@@ -646,8 +646,7 @@ $$\Delta K = K_{\text{trading}} - K_{\text{loan}} = 300\,000 - 800\,000 = -\$500
   $$
 
 3. **风险加权资产**  
-
-  $$
+$$
    \text{RWA} = 12.5 \times K \times \text{EAD}
               = 12.5 \times 0.0573 \times \$200\text{m}
               \approx \$143.2\text{m}
