@@ -181,7 +181,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2025-07-06——周日.md",
+                "file": "99_学习情况记录/2025-07-11——周五.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -196,7 +196,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-07-06——周日"
+              "title": "2025-07-11——周五"
             }
           }
         ],
@@ -320,13 +320,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2025-07-06——周日.md",
+                "file": "99_学习情况记录/2025-07-11——周五.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025-07-06——周日 的大纲"
+              "title": "2025-07-11——周五 的大纲"
             }
           },
           {
@@ -408,8 +408,9 @@
   },
   "active": "249042fbc11aa943",
   "lastOpenFiles": [
-    "06_大创/01_目录.md",
     "99_学习情况记录/2025-07-06——周日.md",
+    "99_学习情况记录/2025-07-11——周五.md",
+    "06_大创/01_目录.md",
     "12_金融机构与风险管理/19_违约风险.md",
     "12_金融机构与风险管理/17_OTC衍生产品市场的监管.md",
     "12_金融机构与风险管理/16_巴塞尔协议.md",
@@ -435,7 +436,6 @@
     "98_attachment/Pasted image 20250629104144.png",
     "00_factor/隐含期权风险.md",
     "00_factor/基差风险.md",
-    "00_factor/重新定价风险.md",
     "98_attachment/Pasted image 20250628212933.png",
     "98_attachment/Pasted image 20250628205522.png",
     "98_attachment/Pasted image 20250628204657.png",
