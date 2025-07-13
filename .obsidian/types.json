@@ -47,6 +47,7 @@
     "TQ_show_urgency": "checkbox",
     "周一": "date",
     "周日": "date",
-    "总学习时长": "number"
+    "总学习时长": "number",
+    "date": "date"
   }
 }

@@ -181,7 +181,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2025-07-11——周五.md",
+                "file": "00_inbox/日记模版.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -196,11 +196,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-07-11——周五"
+              "title": "日记模版"
+            }
+          },
+          {
+            "id": "7cda2eadaecfec22",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_factor/库克比率.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "库克比率"
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -320,13 +344,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2025-07-11——周五.md",
+                "file": "00_factor/库克比率.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025-07-11——周五 的大纲"
+              "title": "库克比率 的大纲"
             }
           },
           {
@@ -406,10 +430,23 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "249042fbc11aa943",
+  "active": "7cda2eadaecfec22",
   "lastOpenFiles": [
-    "99_学习情况记录/2025-07-06——周日.md",
-    "99_学习情况记录/2025-07-11——周五.md",
+    "00_factor/绝对额久期.md",
+    "00_factor/局部久期.md",
+    "00_factor/久期.md",
+    "00_factor/基差风险.md",
+    "00_factor/独立性与不相关.md",
+    "00_factor/递增VaR.md",
+    "00_factor/边际VaR.md",
+    "00_factor/埃奇沃斯框图.md",
+    "00_factor/阿尔法值.md",
+    "00_inbox/新建模版.md",
+    "00_inbox/日记模版.md",
+    "99_学习情况记录/2025-07-13——周日.md",
+    "00_inbox/周记模版.md",
+    "99_学习情况记录/已复盘/2025-07-11——周五.md",
+    "99_学习情况记录/已复盘/2025-07-06——周日.md",
     "06_大创/01_目录.md",
     "12_金融机构与风险管理/19_违约风险.md",
     "12_金融机构与风险管理/17_OTC衍生产品市场的监管.md",
@@ -421,21 +458,8 @@
     "12_金融机构与风险管理/07_定价与情景分析.md",
     "12_金融机构与风险管理/21_信用在险价值.md",
     "12_金融机构与风险管理/22_情景分析和压力测试.md",
-    "12_金融机构与风险管理/08_操作员如何管理风险暴露.md",
-    "12_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
-    "12_金融机构与风险管理/14_VaR参数法和模拟法.md",
-    "12_金融机构与风险管理/09_利率风险.md",
-    "12_金融机构与风险管理/10_波动率.md",
-    "12_金融机构与风险管理/12_VAR风险.md",
-    "00_factor/GPD.md",
-    "00_factor/VaR标准误.md",
-    "00_factor/库克比率.md",
-    "00_factor/收益率曲线风险.md",
-    "12_金融机构与风险管理/01_引言.md",
     "98_attachment/Pasted image 20250629104152.png",
     "98_attachment/Pasted image 20250629104144.png",
-    "00_factor/隐含期权风险.md",
-    "00_factor/基差风险.md",
     "98_attachment/Pasted image 20250628212933.png",
     "98_attachment/Pasted image 20250628205522.png",
     "98_attachment/Pasted image 20250628204657.png",
