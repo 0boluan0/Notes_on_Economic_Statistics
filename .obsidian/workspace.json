@@ -198,33 +198,9 @@
               "icon": "lucide-file",
               "title": "日记模版"
             }
-          },
-          {
-            "id": "7cda2eadaecfec22",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00_factor/头寸.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "头寸"
-            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -344,13 +320,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_factor/头寸.md",
+                "file": "textgenerator/templates/default/summarizeLarge.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "头寸 的大纲"
+              "title": "summarizeLarge 的大纲"
             }
           },
           {
@@ -432,10 +408,19 @@
   },
   "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
+    "textgenerator/templates/default/summarize.md",
+    "textgenerator/templates/default/simplify.md",
+    "textgenerator/templates/default/rewrite.md",
+    "textgenerator/templates/default/getTags.md",
+    "textgenerator/templates/default/getOutline.md",
+    "textgenerator/templates/default/getIdeas.md",
+    "textgenerator/templates/default/getEmailPos.md",
+    "textgenerator/templates/default/getEmailNeg.md",
+    "00_factor/头寸.md",
     "00_factor/未命名.md",
-    "Economy",
+    "02_Economy",
     "00_factor/库克比率.md",
-    "Math",
+    "01_Math",
     "00_factor/绝对额久期.md",
     "00_factor/局部久期.md",
     "00_factor/久期.md",
@@ -451,14 +436,6 @@
     "00_inbox/周记模版.md",
     "99_学习情况记录/已复盘/2025-07-11——周五.md",
     "99_学习情况记录/已复盘/2025-07-06——周日.md",
-    "06_大创/01_目录.md",
-    "12_金融机构与风险管理/19_违约风险.md",
-    "12_金融机构与风险管理/17_OTC衍生产品市场的监管.md",
-    "12_金融机构与风险管理/16_巴塞尔协议.md",
-    "12_金融机构与风险管理/13_历史模拟法和极值理论.md",
-    "12_金融机构与风险管理/11_相关系数与copula函数.md",
-    "12_金融机构与风险管理/00_金融风险划重点.md",
-    "12_金融机构与风险管理/20_CVA,DVA衍生产品中的对手信用风险.md",
     "98_attachment/Pasted image 20250629104152.png",
     "98_attachment/Pasted image 20250629104144.png",
     "98_attachment/Pasted image 20250628212933.png",
@@ -469,12 +446,12 @@
     "98_attachment/Pasted image 20250627210154.png",
     "98_attachment/Pasted image 20250627203615.png",
     "98_attachment/Pasted image 20250627201244.png",
-    "13_时间序列分析/lecture.pdf",
+    "01_Math/13_时间序列分析/lecture.pdf",
     "textgenerator/templates/default",
     "textgenerator/templates",
     "textgenerator",
-    "14_发展经济学/发展经济学拍屏ppt.pdf",
-    "13_时间序列分析/lecture-dual.pdf",
+    "02_Economy/14_发展经济学/发展经济学拍屏ppt.pdf",
+    "01_Math/13_时间序列分析/lecture-dual.pdf",
     "99_学习情况记录/周记",
     "99_学习情况记录/完成任务的日期",
     "01_Econometrics/未命名.canvas",
