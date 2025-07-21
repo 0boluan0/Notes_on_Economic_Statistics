@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "03_策略式博弈",
+      "path": "01_Math/03_game theory/03_策略式博弈.md"
+    },
+    {
+      "basename": "02_初步认识博弈",
+      "path": "01_Math/03_game theory/02_初步认识博弈.md"
+    },
+    {
+      "basename": "策略式表达",
+      "path": "00_factor/策略式表达.md"
+    },
+    {
+      "basename": "效用",
+      "path": "00_factor/效用.md"
+    },
+    {
+      "basename": "策略",
+      "path": "00_factor/策略.md"
+    },
+    {
+      "basename": "局中人",
+      "path": "00_factor/局中人.md"
+    },
+    {
       "basename": "README",
       "path": "README.md"
     },
@@ -39,14 +63,6 @@
     {
       "basename": "04_案例（囚徒困境与纳什均衡）",
       "path": "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md"
-    },
-    {
-      "basename": "03_策略式博弈",
-      "path": "01_Math/03_game theory/03_策略式博弈.md"
-    },
-    {
-      "basename": "02_初步认识博弈",
-      "path": "01_Math/03_game theory/02_初步认识博弈.md"
     },
     {
       "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
@@ -183,22 +199,6 @@
     {
       "basename": "21_信用在险价值",
       "path": "02_Economy/12_金融机构与风险管理/21_信用在险价值.md"
-    },
-    {
-      "basename": "22_情景分析和压力测试",
-      "path": "02_Economy/12_金融机构与风险管理/22_情景分析和压力测试.md"
-    },
-    {
-      "basename": "15_《巴塞尔协议I II》和 偿付能力法案II",
-      "path": "02_Economy/12_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md"
-    },
-    {
-      "basename": "14_VaR参数法和模拟法",
-      "path": "02_Economy/12_金融机构与风险管理/14_VaR参数法和模拟法.md"
-    },
-    {
-      "basename": "09_利率风险",
-      "path": "02_Economy/12_金融机构与风险管理/09_利率风险.md"
     }
   ],
   "omittedPaths": [],
