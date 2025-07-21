@@ -181,7 +181,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/日记模版.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -196,7 +196,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "日记模版"
+              "title": "README"
             }
           }
         ],
@@ -320,13 +320,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "textgenerator/templates/default/summarizeLarge.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "summarizeLarge 的大纲"
+              "title": "README 的大纲"
             }
           },
           {
@@ -406,8 +406,32 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "249042fbc11aa943",
   "lastOpenFiles": [
+    "02_Economy/14_发展经济学/00_导论和考试相关.md",
+    "02_Economy/12_金融机构与风险管理/08_操作员如何管理风险暴露.md",
+    "02_Economy/12_金融机构与风险管理/07_定价与情景分析.md",
+    "02_Economy/12_金融机构与风险管理/01_引言.md",
+    "02_Economy/05_经济思想史/01_导论.md",
+    "01_Math/03_game theory/01_导论.md",
+    "01_Math/03_game theory/05_贝叶斯博弈.md",
+    "01_Math/03_game theory/06_扩展性博弈.md",
+    "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md",
+    "01_Math/03_game theory/03_策略式博弈.md",
+    "01_Math/03_game theory/02_初步认识博弈.md",
+    "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
+    "01_Math/03_game theory/第1次作业补充.pdf",
+    "01_Math/03_game theory/第3次作业.pdf",
+    "01_Math/03_game theory/第2次作业.pdf",
+    "01_Math/03_game theory/第1次作业.pdf",
+    "01_Math/03_game theory/07_子博弈不完全信息.md",
+    "01_Math/02_线性代数/02_vector spaces and subspace.md",
+    "01_Math/03_game theory/00-看板-博弈论.md",
+    "01_Math/02_线性代数/01_matrices and Gaussian Elimination.md",
+    "01_Math/02_线性代数/00_perface.md",
+    "00_inbox/add_done_item.md",
+    "01_Math/01_微积分",
+    "textgenerator/templates/default/summarizeLarge.md",
     "textgenerator/templates/default/summarize.md",
     "textgenerator/templates/default/simplify.md",
     "textgenerator/templates/default/rewrite.md",
@@ -415,27 +439,8 @@
     "textgenerator/templates/default/getOutline.md",
     "textgenerator/templates/default/getIdeas.md",
     "textgenerator/templates/default/getEmailPos.md",
-    "textgenerator/templates/default/getEmailNeg.md",
-    "00_factor/头寸.md",
-    "00_factor/未命名.md",
     "02_Economy",
-    "00_factor/库克比率.md",
     "01_Math",
-    "00_factor/绝对额久期.md",
-    "00_factor/局部久期.md",
-    "00_factor/久期.md",
-    "00_factor/基差风险.md",
-    "00_factor/独立性与不相关.md",
-    "00_factor/递增VaR.md",
-    "00_factor/边际VaR.md",
-    "00_factor/埃奇沃斯框图.md",
-    "00_factor/阿尔法值.md",
-    "00_inbox/新建模版.md",
-    "00_inbox/日记模版.md",
-    "99_学习情况记录/2025-07-13——周日.md",
-    "00_inbox/周记模版.md",
-    "99_学习情况记录/已复盘/2025-07-11——周五.md",
-    "99_学习情况记录/已复盘/2025-07-06——周日.md",
     "98_attachment/Pasted image 20250629104152.png",
     "98_attachment/Pasted image 20250629104144.png",
     "98_attachment/Pasted image 20250628212933.png",
@@ -446,14 +451,9 @@
     "98_attachment/Pasted image 20250627210154.png",
     "98_attachment/Pasted image 20250627203615.png",
     "98_attachment/Pasted image 20250627201244.png",
-    "01_Math/13_时间序列分析/lecture.pdf",
+    "01_Math/06_时间序列分析/lecture.pdf",
     "textgenerator/templates/default",
     "textgenerator/templates",
-    "textgenerator",
-    "02_Economy/14_发展经济学/发展经济学拍屏ppt.pdf",
-    "01_Math/13_时间序列分析/lecture-dual.pdf",
-    "99_学习情况记录/周记",
-    "99_学习情况记录/完成任务的日期",
     "01_Econometrics/未命名.canvas",
     "04_货币银行学/1_引言/未命名.canvas"
   ]
