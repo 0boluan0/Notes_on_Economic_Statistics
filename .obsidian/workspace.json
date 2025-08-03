@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2025-07-29——周二.md",
+                "file": "01_Math/04_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-07-29——周二"
+              "title": "03_样本几何与随机抽样Sample Geometry and Random Sampling"
             }
           }
         ]
@@ -151,13 +151,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2025-07-29——周二.md",
+                "file": "01_Math/04_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2025-07-29——周二 的大纲"
+              "title": "03_样本几何与随机抽样Sample Geometry and Random Sampling 的大纲"
             }
           },
           {
@@ -239,36 +239,37 @@
   },
   "active": "c42f8863c7380006",
   "lastOpenFiles": [
+    "01_Math/04_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
+    "01_Math/04_多元统计分析/05_ 总体平均向量的推论.md",
+    "01_Math/04_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md",
+    "01_Math/04_多元统计分析/07_多元线性回归multivariate linear regression.md",
+    "01_Math/04_多元统计分析/08_主成分分析principal component.md",
+    "01_Math/04_多元统计分析/09_因子分析Factor Analysis and Inference for Structured.md",
+    "01_Math/04_多元统计分析/10_不考,跳过.md",
+    "01_Math/04_多元统计分析/11_分类与判别Discrimination and Classifications.md",
+    "01_Math/06_时间序列分析/02_差分方程Difference Equation.md",
+    "01_Math/04_多元统计分析/12_层次聚类和K-means聚类.md",
+    "01_Math/04_多元统计分析/01_introduction简介.md",
+    "00_factor/MRS边际替代率.md",
+    "00_factor/EWMA.md",
+    "00_factor/EGARCH.md",
+    "00_factor/埃奇沃斯框图.md",
+    "00_factor/递增VaR.md",
+    "00_factor/历史波动率.md",
+    "00_factor/局中人.md",
+    "00_factor/策略式表达.md",
+    "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
+    "99_学习情况记录/2025-07-29——周二.md",
     "00_factor/未命名.md",
     "03_ComputerScience",
-    "99_学习情况记录/2025-07-29——周二.md",
     "01_Math/02_线性代数/00_perface.md",
     "01_Math/03_game theory/02_初步认识博弈.md",
     "01_Math/03_game theory/03_策略式博弈.md",
-    "00_factor/策略式表达.md",
     "00_factor/效用.md",
-    "00_factor/策略.md",
-    "00_factor/局中人.md",
-    "README.md",
-    "02_Economy/14_发展经济学/00_导论和考试相关.md",
-    "02_Economy/12_金融机构与风险管理/08_操作员如何管理风险暴露.md",
-    "02_Economy/12_金融机构与风险管理/07_定价与情景分析.md",
-    "02_Economy/12_金融机构与风险管理/01_引言.md",
-    "02_Economy/05_经济思想史/01_导论.md",
-    "01_Math/03_game theory/01_导论.md",
-    "01_Math/03_game theory/05_贝叶斯博弈.md",
-    "01_Math/03_game theory/06_扩展性博弈.md",
-    "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md",
-    "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "01_Math/03_game theory/第1次作业补充.pdf",
     "01_Math/03_game theory/第3次作业.pdf",
     "01_Math/03_game theory/第2次作业.pdf",
     "01_Math/03_game theory/第1次作业.pdf",
-    "01_Math/03_game theory/07_子博弈不完全信息.md",
-    "01_Math/02_线性代数/02_vector spaces and subspace.md",
-    "01_Math/03_game theory/00-看板-博弈论.md",
-    "01_Math/02_线性代数/01_matrices and Gaussian Elimination.md",
-    "00_inbox/add_done_item.md",
     "01_Math/01_微积分",
     "02_Economy",
     "01_Math",
