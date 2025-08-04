@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "02_regression",
+      "path": "00_factor/02_regression.md"
+    },
+    {
+      "basename": "01_AI and machine learning applications",
+      "path": "03_ComputerScience/01_Oxford-ai/01_AI and machine learning applications.md"
+    },
+    {
       "basename": "最小二乘法",
       "path": "00_factor/最小二乘法.md"
     },
@@ -43,10 +51,6 @@
     {
       "basename": "00_导论与概率论复习",
       "path": "01_Math/06_时间序列分析/00_导论与概率论复习.md"
-    },
-    {
-      "basename": "01_AI and machine learning applications",
-      "path": "03_ComputerScience/01_Oxford-ai/01_AI and machine learning applications.md"
     },
     {
       "basename": "00_导论",
@@ -195,10 +199,6 @@
     {
       "basename": "06_扩展性博弈",
       "path": "01_Math/03_game theory/06_扩展性博弈.md"
-    },
-    {
-      "basename": "04_案例（囚徒困境与纳什均衡）",
-      "path": "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md"
     }
   ],
   "omittedPaths": [],
