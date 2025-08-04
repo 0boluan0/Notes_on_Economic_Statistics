@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_ComputerScience/01_Oxford-ai/01_AI and machine learning applications.md",
+                "file": "02_Economy/01_Econometrics/02_一元线性回归.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,11 +76,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_AI and machine learning applications"
+              "title": "02_一元线性回归"
+            }
+          },
+          {
+            "id": "25c1fc9eb63f08e9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_factor/最小二乘法.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "最小二乘法"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -122,7 +146,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "风险中性",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -200,13 +224,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_ComputerScience/01_Oxford-ai/01_AI and machine learning applications.md",
+                "file": "00_factor/最小二乘法.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "01_AI and machine learning applications 的大纲"
+              "title": "最小二乘法 的大纲"
             }
           },
           {
@@ -286,10 +310,20 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "526fc18a1dbae468",
+  "active": "25c1fc9eb63f08e9",
   "lastOpenFiles": [
-    "03_ComputerScience/01_Oxford-ai/00_导论.md",
+    "00_factor/未命名.md",
+    "02_Economy/01_Econometrics/02_一元线性回归.md",
+    "02_Economy/01_Econometrics/07_异方差.md",
+    "02_Economy/01_Econometrics/06_多重共线性.md",
+    "02_Economy/01_Econometrics/05_多元回归模型的矩阵表达.md",
+    "01_Math/06_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
+    "02_Economy/01_Econometrics/04_模型设定.md",
+    "01_Math/06_时间序列分析/03_平稳时间序列模型.md",
+    "02_Economy/01_Econometrics/03_多元线性回归.md",
+    "01_Math/06_时间序列分析/00_导论与概率论复习.md",
     "03_ComputerScience/01_Oxford-ai/01_AI and machine learning applications.md",
+    "03_ComputerScience/01_Oxford-ai/00_导论.md",
     "01_Math/04_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
     "03_ComputerScience/01_Oxford-ai",
     "01_Math/04_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
@@ -305,17 +339,7 @@
     "01_Math/04_多元统计分析/01_introduction简介.md",
     "00_factor/MRS边际替代率.md",
     "00_factor/EWMA.md",
-    "00_factor/EGARCH.md",
-    "00_factor/埃奇沃斯框图.md",
-    "00_factor/递增VaR.md",
-    "00_factor/历史波动率.md",
-    "00_factor/局中人.md",
-    "00_factor/策略式表达.md",
-    "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
-    "99_学习情况记录/2025-07-29——周二.md",
     "03_ComputerScience",
-    "01_Math/02_线性代数/00_perface.md",
-    "01_Math/03_game theory/02_初步认识博弈.md",
     "01_Math/03_game theory/第1次作业补充.pdf",
     "01_Math/03_game theory/第3次作业.pdf",
     "01_Math/03_game theory/第2次作业.pdf",
