@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "01_AI and machine learning applications",
+      "path": "03_ComputerScience/01_Oxford-ai/01_AI and machine learning applications.md"
+    },
+    {
+      "basename": "00_导论",
+      "path": "03_ComputerScience/01_Oxford-ai/00_导论.md"
+    },
+    {
       "basename": "03_样本几何与随机抽样Sample Geometry and Random Sampling",
       "path": "01_Math/04_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "绝对额久期",
       "path": "00_factor/绝对额久期.md"
-    },
-    {
-      "basename": "局部久期",
-      "path": "00_factor/局部久期.md"
-    },
-    {
-      "basename": "久期",
-      "path": "00_factor/久期.md"
     }
   ],
   "omittedPaths": [],
