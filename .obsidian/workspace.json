@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_ComputerScience/01_Oxford-ai/01_AI and machine learning applications.md",
+                "file": "03_ComputerScience/01_Oxford-ai/01_AI and machine learning applications&regression.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_AI and machine learning applications"
+              "title": "01_AI and machine learning applications&regression"
             }
           },
           {
@@ -109,7 +109,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_factor/02_regression.md",
+                "file": "03_ComputerScience/01_Oxford-ai/02_logistics regression.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "02_regression"
+              "title": "02_logistics regression"
             }
           }
         ],
@@ -248,13 +248,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_factor/02_regression.md",
+                "file": "03_ComputerScience/01_Oxford-ai/02_logistics regression.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "02_regression 的大纲"
+              "title": "02_logistics regression 的大纲"
             }
           },
           {
@@ -336,8 +336,8 @@
   },
   "active": "32cee75e7a682cf9",
   "lastOpenFiles": [
-    "03_ComputerScience/01_Oxford-ai/01_AI and machine learning applications.md",
-    "00_factor/02_regression.md",
+    "03_ComputerScience/01_Oxford-ai/01_AI and machine learning applications&regression.md",
+    "03_ComputerScience/01_Oxford-ai/02_logistics regression.md",
     "00_factor/最小二乘法.md",
     "00_factor/未命名.md",
     "02_Economy/01_Econometrics/02_一元线性回归.md",

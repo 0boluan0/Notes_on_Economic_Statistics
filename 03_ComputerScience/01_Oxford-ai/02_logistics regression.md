@@ -1,0 +1,6 @@
+
+实际上是一个classification
+
+使用regression不能解决二分类问题
+
+在linear regression的基础上将输出过一遍sigmoid函数,归到0-1之间.
