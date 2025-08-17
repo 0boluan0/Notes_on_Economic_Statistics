@@ -133,7 +133,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_factor/VaR标准误.md",
+                "file": "00_factor/GARCH.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -148,7 +148,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "VaR标准误"
+              "title": "GARCH"
             }
           }
         ],
@@ -272,13 +272,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_factor/VaR标准误.md",
+                "file": "00_factor/GARCH.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "VaR标准误 的大纲"
+              "title": "GARCH 的大纲"
             }
           },
           {
@@ -360,6 +360,12 @@
   },
   "active": "d6c16c9407cf1839",
   "lastOpenFiles": [
+    "00_factor/EWMA.md",
+    "00_factor/ES.md",
+    "00_factor/EGARCH.md",
+    "00_factor/Delta.md",
+    "00_factor/ARCH.md",
+    "00_factor/VaR标准误.md",
     "00_factor/久期.md",
     "02_Economy/11_证券投资学/00_仅划重点.md",
     "03_ComputerScience/01_Oxford-ai/01_AI and machine learning applications&regression.md",
@@ -380,13 +386,7 @@
     "01_Math/06_时间序列分析/03_平稳时间序列模型.md",
     "02_Economy/01_Econometrics/03_多元线性回归.md",
     "01_Math/06_时间序列分析/00_导论与概率论复习.md",
-    "01_Math/04_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
     "03_ComputerScience/01_Oxford-ai",
-    "01_Math/04_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
-    "01_Math/04_多元统计分析/05_ 总体平均向量的推论.md",
-    "01_Math/04_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md",
-    "01_Math/04_多元统计分析/07_多元线性回归multivariate linear regression.md",
-    "01_Math/04_多元统计分析/08_主成分分析principal component.md",
     "03_ComputerScience",
     "01_Math/03_game theory/第1次作业补充.pdf",
     "01_Math/03_game theory/第3次作业.pdf",
