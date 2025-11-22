@@ -157,7 +157,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2025-09-14——Sun.md",
+                "file": "02_Economy/11_证券投资学/05_行业分析.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -172,7 +172,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-09-14——Sun"
+              "title": "05_行业分析"
             }
           }
         ],
@@ -296,13 +296,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2025-09-14——Sun.md",
+                "file": "02_Economy/11_证券投资学/05_行业分析.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025-09-14——Sun"
+              "title": "Outline of 05_行业分析"
             }
           },
           {
@@ -385,32 +385,32 @@
   },
   "active": "fc6a5eaf0c0d640c",
   "lastOpenFiles": [
-    "99_学习情况记录/2025-09-13——Sat.md",
-    "99_学习情况记录/2025-09-14——Sun.md",
-    "03_ComputerScience/01_Oxford-ai/00_导论.md",
-    "03_ComputerScience/01_Oxford-ai/01_AI and machine learning applications&regression.md",
-    "03_ComputerScience/01_Oxford-ai/02_logistics regression.md",
-    "03_ComputerScience/01_Oxford-ai/03_NN.md",
-    "99_学习情况记录/2025-09-13——周六.md",
-    "99_学习情况记录/2025-08-29——周五.md",
-    "00_factor/未命名 1.md",
-    "02_Economy/12_金融机构与风险管理/01_引言.md",
-    "02_Economy/08_财务管理/06_债券和股票估价.md",
-    "02_Economy/08_财务管理/05_投资项目资本预算.md",
-    "02_Economy/01_Econometrics/13_面板数据模型.md",
-    "02_Economy/04_货币银行学/未命名看板.md",
-    "02_Economy/01_Econometrics/08_自相关.md",
-    "02_Economy/01_Econometrics/10_虚拟变量.md",
-    "99_学习情况记录/2025-08-25——周一.md",
-    "99_学习情况记录/2025-08-22——周五.md",
+    "02_Economy/11_证券投资学/03_资产定价理论及其发展.md",
     "02_Economy/01_Econometrics/02_一元线性回归.md",
-    "00_factor/残差.md",
-    "00_factor/大样本与小样本.md",
+    "02_Economy/01_Econometrics/03_多元线性回归.md",
+    "02_Economy/01_Econometrics/04_模型设定.md",
     "02_Economy/01_Econometrics/01_导论.md",
-    "00_factor/GARCH.md",
-    "00_factor/EWMA.md",
-    "00_factor/ES.md",
-    "00_factor/EGARCH.md",
+    "02_Economy/12_金融机构与风险管理/20_CVA,DVA衍生产品中的对手信用风险.md",
+    "02_Economy/12_金融机构与风险管理/21_信用在险价值.md",
+    "02_Economy/12_金融机构与风险管理/19_违约风险.md",
+    "02_Economy/12_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
+    "02_Economy/12_金融机构与风险管理/13_历史模拟法和极值理论.md",
+    "02_Economy/12_金融机构与风险管理/14_VaR参数法和模拟法.md",
+    "02_Economy/12_金融机构与风险管理/12_VAR风险.md",
+    "02_Economy/12_金融机构与风险管理/11_相关系数与copula函数.md",
+    "02_Economy/12_金融机构与风险管理/10_波动率.md",
+    "02_Economy/12_金融机构与风险管理/00_金融风险划重点.md",
+    "02_Economy/12_金融机构与风险管理/01_引言.md",
+    "02_Economy/11_证券投资学/09_技术分析理论和方法.md",
+    "02_Economy/11_证券投资学/10_组合投资理论.md",
+    "02_Economy/11_证券投资学/08_证券投资技术分析概述.md",
+    "02_Economy/11_证券投资学/05_行业分析.md",
+    "02_Economy/11_证券投资学/07_公司价值分析.md",
+    "02_Economy/11_证券投资学/06_公司财务分析.md",
+    "02_Economy/11_证券投资学/04_宏观经济分析.md",
+    "02_Economy/11_证券投资学/02_证券市场.md",
+    "02_Economy/04_货币银行学/2_金融市场/04_理解利率.md",
+    "02_Economy/04_货币银行学/2_金融市场/05_利率行为.md",
     "03_ComputerScience/01_Oxford-ai",
     "03_ComputerScience",
     "01_Math/03_game theory/第1次作业补充.pdf",
