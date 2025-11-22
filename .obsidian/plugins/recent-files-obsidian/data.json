@@ -1,6 +1,42 @@
 {
   "recentFiles": [
     {
+      "basename": "Overview & Study Record",
+      "path": "03_Computer_Science/00_CSdiy/Overview & Study Record.md"
+    },
+    {
+      "basename": "2025-11-22——Sat",
+      "path": "99_学习情况记录/2025-11-22——Sat.md"
+    },
+    {
+      "basename": "日记模版",
+      "path": "00_inbox/日记模版.md"
+    },
+    {
+      "basename": "马考利久期",
+      "path": "00_factor/马考利久期.md"
+    },
+    {
+      "basename": "ARCH",
+      "path": "00_factor/ARCH.md"
+    },
+    {
+      "basename": "Delta",
+      "path": "00_factor/Delta.md"
+    },
+    {
+      "basename": "ES",
+      "path": "00_factor/ES.md"
+    },
+    {
+      "basename": "Gamma",
+      "path": "00_factor/Gamma.md"
+    },
+    {
+      "basename": "GARCH",
+      "path": "00_factor/GARCH.md"
+    },
+    {
       "basename": "05_行业分析",
       "path": "02_Economy/11_证券投资学/05_行业分析.md"
     },
@@ -105,46 +141,6 @@
       "path": "02_Economy/04_货币银行学/2_金融市场/05_利率行为.md"
     },
     {
-      "basename": "2025-10-03——Fri",
-      "path": "99_学习情况记录/2025-10-03——Fri.md"
-    },
-    {
-      "basename": "2025-09-14——Sun",
-      "path": "99_学习情况记录/2025-09-14——Sun.md"
-    },
-    {
-      "basename": "2025-09-13——Sat",
-      "path": "99_学习情况记录/2025-09-13——Sat.md"
-    },
-    {
-      "basename": "00_导论",
-      "path": "03_ComputerScience/01_Oxford-ai/00_导论.md"
-    },
-    {
-      "basename": "01_AI and machine learning applications&regression",
-      "path": "03_ComputerScience/01_Oxford-ai/01_AI and machine learning applications&regression.md"
-    },
-    {
-      "basename": "02_logistics regression",
-      "path": "03_ComputerScience/01_Oxford-ai/02_logistics regression.md"
-    },
-    {
-      "basename": "03_NN",
-      "path": "03_ComputerScience/01_Oxford-ai/03_NN.md"
-    },
-    {
-      "basename": "2025-09-13——周六",
-      "path": "99_学习情况记录/2025-09-13——周六.md"
-    },
-    {
-      "basename": "2025-08-29——周五",
-      "path": "99_学习情况记录/2025-08-29——周五.md"
-    },
-    {
-      "basename": "未命名 1",
-      "path": "00_factor/未命名 1.md"
-    },
-    {
       "basename": "06_债券和股票估价",
       "path": "02_Economy/08_财务管理/06_债券和股票估价.md"
     },
@@ -165,40 +161,12 @@
       "path": "02_Economy/01_Econometrics/10_虚拟变量.md"
     },
     {
-      "basename": "2025-08-25——周一",
-      "path": "99_学习情况记录/2025-08-25——周一.md"
-    },
-    {
-      "basename": "2025-08-22——周五",
-      "path": "99_学习情况记录/2025-08-22——周五.md"
-    },
-    {
       "basename": "残差",
       "path": "00_factor/残差.md"
     },
     {
       "basename": "大样本与小样本",
       "path": "00_factor/大样本与小样本.md"
-    },
-    {
-      "basename": "GARCH",
-      "path": "00_factor/GARCH.md"
-    },
-    {
-      "basename": "EWMA",
-      "path": "00_factor/EWMA.md"
-    },
-    {
-      "basename": "ES",
-      "path": "00_factor/ES.md"
-    },
-    {
-      "basename": "EGARCH",
-      "path": "00_factor/EGARCH.md"
-    },
-    {
-      "basename": "Delta",
-      "path": "00_factor/Delta.md"
     }
   ],
   "omittedPaths": [],
