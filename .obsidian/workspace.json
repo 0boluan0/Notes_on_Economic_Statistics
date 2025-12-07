@@ -399,8 +399,6 @@
       "bases:Create new base": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian-kanban:Create new board": false,
-      "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
       "media-extended:Open media": false,
       "obsidian-git:Open Git source control": false,
       "omnisearch:Omnisearch": false,
