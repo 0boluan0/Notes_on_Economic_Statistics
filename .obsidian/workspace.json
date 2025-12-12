@@ -181,7 +181,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2025-12-10——Wed.md",
+                "file": "03_Computer_Science/the_missing_semester.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -196,7 +196,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2025-12-10——Wed"
+              "title": "the_missing_semester"
             }
           }
         ],
@@ -320,13 +320,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2025-12-10——Wed.md",
+                "file": "03_Computer_Science/the_missing_semester.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2025-12-10——Wed"
+              "title": "Outline of the_missing_semester"
             }
           },
           {
@@ -407,13 +407,14 @@
   },
   "active": "55027eda82288b66",
   "lastOpenFiles": [
-    "02_Economy/14_发展经济学/00_导论和考试相关.md",
+    "03_Computer_Science/01_CS61A/01_building abstractions with functions.md",
+    "03_Computer_Science/00_CSdiy/Overview & Study Record.md",
+    "99_学习情况记录/2025-12-12——Fri.md",
     "99_学习情况记录/2025-12-10——Wed.md",
+    "02_Economy/14_发展经济学/00_导论和考试相关.md",
     "99_学习情况记录/2025-12-07——Sun.md",
     "99_学习情况记录/2025-11-24——Mon.md",
-    "03_Computer_Science/01_CS61A/01_building abstractions with functions.md",
     "03_Computer_Science/the_missing_semester.md",
-    "03_Computer_Science/00_CSdiy/Overview & Study Record.md",
     "99_学习情况记录/2025-11-23——Sun.md",
     "03_Computer_Science/01_CS61A",
     "99_学习情况记录/2025-11-22——Sat.md",
@@ -434,7 +435,6 @@
     "02_Economy/01_Econometrics/04_模型设定.md",
     "02_Economy/01_Econometrics/01_导论.md",
     "02_Economy/12_金融机构与风险管理/20_CVA,DVA衍生产品中的对手信用风险.md",
-    "02_Economy/12_金融机构与风险管理/21_信用在险价值.md",
     "03_Computer_Science/01_Oxford-ai",
     "03_Computer_Science",
     "01_Math/03_game theory/第1次作业补充.pdf",
