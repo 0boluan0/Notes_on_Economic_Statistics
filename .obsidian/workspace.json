@@ -198,33 +198,9 @@
               "icon": "lucide-file",
               "title": "0_Scratch"
             }
-          },
-          {
-            "id": "eeefd5972fd888be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_Computer_Science/01_CS50/0_Scratch.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "0_Scratch"
-            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -429,7 +405,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "eeefd5972fd888be",
+  "active": "a68e55eeae045e77",
   "lastOpenFiles": [
     "03_Computer_Science/00_CSdiy/Overview & Study Record.md",
     "03_Computer_Science/01_CS50/1_C.md",

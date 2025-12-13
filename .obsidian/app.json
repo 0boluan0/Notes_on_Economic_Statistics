@@ -1,6 +1,6 @@
 {
   "showLineNumber": true,
-  "vimMode": false,
+  "vimMode": true,
   "attachmentFolderPath": "98_attachment",
   "newFileLocation": "folder",
   "newFileFolderPath": "00_inbox",
