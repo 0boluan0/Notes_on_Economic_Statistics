@@ -1,16 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "0_Scratch",
+      "path": "03_Computer_Science/01_CS50/0_Scratch.md"
+    },
+    {
+      "basename": "Overview & Study Record",
+      "path": "03_Computer_Science/00_CSdiy/Overview & Study Record.md"
+    },
+    {
+      "basename": "1_C",
+      "path": "03_Computer_Science/01_CS50/1_C.md"
+    },
+    {
       "basename": "the_missing_semester",
       "path": "03_Computer_Science/the_missing_semester.md"
     },
     {
       "basename": "01_building abstractions with functions",
-      "path": "03_Computer_Science/01_CS61A/01_building abstractions with functions.md"
+      "path": "03_Computer_Science/02_CS61A/01_building abstractions with functions.md"
     },
     {
-      "basename": "Overview & Study Record",
-      "path": "03_Computer_Science/00_CSdiy/Overview & Study Record.md"
+      "basename": "Pasted image 20250629104152",
+      "path": "98_attachment/Pasted image 20250629104152.png"
     },
     {
       "basename": "2025-12-12——Fri",
@@ -187,18 +199,6 @@
     {
       "basename": "08_自相关",
       "path": "02_Economy/01_Econometrics/08_自相关.md"
-    },
-    {
-      "basename": "10_虚拟变量",
-      "path": "02_Economy/01_Econometrics/10_虚拟变量.md"
-    },
-    {
-      "basename": "残差",
-      "path": "00_factor/残差.md"
-    },
-    {
-      "basename": "大样本与小样本",
-      "path": "00_factor/大样本与小样本.md"
     }
   ],
   "omittedPaths": [],
