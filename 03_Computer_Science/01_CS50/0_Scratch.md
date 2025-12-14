@@ -1,2 +1,2 @@
 
- what language
+computer use binary to represent numbers
