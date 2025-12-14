@@ -1,2 +1,5 @@
 
-computer use binary to represent numbers
+computer use binary to represent numbers.
+
+a byte contain 8 bits
+
