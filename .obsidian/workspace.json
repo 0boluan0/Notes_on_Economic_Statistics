@@ -181,7 +181,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Computer_Science/01_CS50/0_Scratch.md",
+                "file": "03_Computer_Science/01_CS50/main.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -196,7 +196,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "0_Scratch"
+              "title": "main"
             }
           }
         ],
@@ -320,13 +320,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Computer_Science/01_CS50/0_Scratch.md",
+                "file": "03_Computer_Science/01_CS50/main.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 0_Scratch"
+              "title": "Outline of main"
             }
           },
           {
@@ -409,7 +409,7 @@
   "lastOpenFiles": [
     "03_Computer_Science/00_CSdiy/Overview & Study Record.md",
     "03_Computer_Science/01_CS50/1_C.md",
-    "03_Computer_Science/01_CS50/0_Scratch.md",
+    "03_Computer_Science/01_CS50/main.md",
     "03_Computer_Science/the_missing_semester.md",
     "03_Computer_Science/02_CS61A/01_building abstractions with functions.md",
     "03_Computer_Science/01_CS50",
