@@ -181,7 +181,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Computer_Science/01_CS50/main.md",
+                "file": "03_Computer_Science/the_missing_semester.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -196,7 +196,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "main"
+              "title": "the_missing_semester"
             }
           }
         ],
@@ -320,13 +320,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Computer_Science/01_CS50/main.md",
+                "file": "03_Computer_Science/the_missing_semester.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of main"
+              "title": "Outline of the_missing_semester"
             }
           },
           {
@@ -407,9 +407,9 @@
   },
   "active": "a68e55eeae045e77",
   "lastOpenFiles": [
+    "03_Computer_Science/01_CS50/main.md",
     "03_Computer_Science/00_CSdiy/Overview & Study Record.md",
     "03_Computer_Science/01_CS50/1_C.md",
-    "03_Computer_Science/01_CS50/main.md",
     "03_Computer_Science/the_missing_semester.md",
     "03_Computer_Science/02_CS61A/01_building abstractions with functions.md",
     "03_Computer_Science/01_CS50",
