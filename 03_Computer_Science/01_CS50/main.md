@@ -30,28 +30,3 @@ in terminal , type: code hello.c
 also in terminal  , type make hello ,no .c. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-11k
