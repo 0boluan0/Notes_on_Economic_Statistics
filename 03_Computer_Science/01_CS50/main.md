@@ -19,13 +19,13 @@ the device we use to achieve this is called complier
 3. style: is your code easy to read
 
 
-# write your first C code
+## write your first C code
 
-## create a file 
+### create a file 
 
 in terminal , type: code hello.c
 
-## 编译文件
+### 编译文件
 
 also in terminal  , type make hello ,no .c. 
 
