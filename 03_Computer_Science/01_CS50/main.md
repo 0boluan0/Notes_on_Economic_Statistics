@@ -29,5 +29,18 @@ in terminal , type: code hello.c
 
 also in terminal  , type make hello ,no .c. 
 
+### run the file
 
+./<filename(no c, just file name)>
+
+### print
+
+```c
+printf("hello,world\n");
+```
+
+f means :formatted ,按照指定格式输出
+\n change the line 
+
+C force that if you have a string , it should be in one line, changing the line by yourself is not allowed.
 
