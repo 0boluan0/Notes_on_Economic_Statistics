@@ -1,20 +1,52 @@
 {
   "recentFiles": [
     {
-      "basename": "main",
-      "path": "03_Computer_Science/01_CS50/main.md"
+      "basename": "derivative",
+      "path": "00_factor/derivative.md"
     },
     {
-      "basename": "03_样本几何与随机抽样Sample Geometry and Random Sampling",
-      "path": "01_Math/04_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
+      "basename": "马考利久期",
+      "path": "00_factor/马考利久期.md"
+    },
+    {
+      "basename": "geometric interpretation of derivative",
+      "path": "00_factor/geometric interpretation of derivative.md"
+    },
+    {
+      "basename": "00_perface",
+      "path": "01_Math/02_linear algebra/00_perface.md"
+    },
+    {
+      "basename": "1-7",
+      "path": "01_Math/01_calculus/MIT18.01/Lecture_notes/1-7.pdf"
+    },
+    {
+      "basename": "MIT18.01_Single-Variable-Calculus",
+      "path": "01_Math/01_calculus/MIT18.01/MIT18.01_Single-Variable-Calculus.md"
+    },
+    {
+      "basename": "26-38",
+      "path": "01_Math/01_calculus/MIT18.01/Lecture_notes/26-38.pdf"
+    },
+    {
+      "basename": "18-25",
+      "path": "01_Math/01_calculus/MIT18.01/Lecture_notes/18-25.pdf"
+    },
+    {
+      "basename": "9-16",
+      "path": "01_Math/01_calculus/MIT18.01/Lecture_notes/9-16.pdf"
     },
     {
       "basename": "the_missing_semester",
       "path": "03_Computer_Science/the_missing_semester.md"
     },
     {
-      "basename": "MIT18.01_Single-Variable-Calculus",
-      "path": "00_inbox/MIT18.01_Single-Variable-Calculus.md"
+      "basename": "main",
+      "path": "03_Computer_Science/01_CS50/main.md"
+    },
+    {
+      "basename": "03_样本几何与随机抽样Sample Geometry and Random Sampling",
+      "path": "01_Math/04_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md"
     },
     {
       "basename": "09_因子分析Factor Analysis and Inference for Structured",
@@ -83,10 +115,6 @@
     {
       "basename": "日记模版",
       "path": "00_inbox/日记模版.md"
-    },
-    {
-      "basename": "马考利久期",
-      "path": "00_factor/马考利久期.md"
     },
     {
       "basename": "ARCH",
@@ -171,34 +199,6 @@
     {
       "basename": "09_技术分析理论和方法",
       "path": "02_Economy/11_证券投资学/09_技术分析理论和方法.md"
-    },
-    {
-      "basename": "10_组合投资理论",
-      "path": "02_Economy/11_证券投资学/10_组合投资理论.md"
-    },
-    {
-      "basename": "08_证券投资技术分析概述",
-      "path": "02_Economy/11_证券投资学/08_证券投资技术分析概述.md"
-    },
-    {
-      "basename": "07_公司价值分析",
-      "path": "02_Economy/11_证券投资学/07_公司价值分析.md"
-    },
-    {
-      "basename": "06_公司财务分析",
-      "path": "02_Economy/11_证券投资学/06_公司财务分析.md"
-    },
-    {
-      "basename": "04_宏观经济分析",
-      "path": "02_Economy/11_证券投资学/04_宏观经济分析.md"
-    },
-    {
-      "basename": "02_证券市场",
-      "path": "02_Economy/11_证券投资学/02_证券市场.md"
-    },
-    {
-      "basename": "04_理解利率",
-      "path": "02_Economy/04_货币银行学/2_金融市场/04_理解利率.md"
     }
   ],
   "omittedPaths": [],
