@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "main",
+      "path": "03_Computer_Science/01_CS50/main.md"
+    },
+    {
+      "basename": "Overview & Study Record",
+      "path": "03_Computer_Science/00_CSdiy/Overview & Study Record.md"
+    },
+    {
       "basename": "derivative",
       "path": "00_factor/derivative.md"
+    },
+    {
+      "basename": "1-7",
+      "path": "01_Math/01_calculus/MIT18.01/Lecture_notes/1-7.pdf"
+    },
+    {
+      "basename": "MIT18.01_Single-Variable-Calculus",
+      "path": "01_Math/01_calculus/MIT18.01/MIT18.01_Single-Variable-Calculus.md"
     },
     {
       "basename": "马考利久期",
@@ -15,14 +31,6 @@
     {
       "basename": "00_perface",
       "path": "01_Math/02_linear algebra/00_perface.md"
-    },
-    {
-      "basename": "1-7",
-      "path": "01_Math/01_calculus/MIT18.01/Lecture_notes/1-7.pdf"
-    },
-    {
-      "basename": "MIT18.01_Single-Variable-Calculus",
-      "path": "01_Math/01_calculus/MIT18.01/MIT18.01_Single-Variable-Calculus.md"
     },
     {
       "basename": "26-38",
@@ -39,10 +47,6 @@
     {
       "basename": "the_missing_semester",
       "path": "03_Computer_Science/the_missing_semester.md"
-    },
-    {
-      "basename": "main",
-      "path": "03_Computer_Science/01_CS50/main.md"
     },
     {
       "basename": "03_样本几何与随机抽样Sample Geometry and Random Sampling",
@@ -71,10 +75,6 @@
     {
       "basename": "周记模版",
       "path": "00_inbox/周记模版.md"
-    },
-    {
-      "basename": "Overview & Study Record",
-      "path": "03_Computer_Science/00_CSdiy/Overview & Study Record.md"
     },
     {
       "basename": "01_building abstractions with functions",
