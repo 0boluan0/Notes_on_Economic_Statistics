@@ -2,17 +2,16 @@
 
 - [x] 所选择论文的参考文献内容,APA格式 ✅ 2025-12-24
 
-Estimation of Out-of-Sample Sharpe Ratio for High Dimensional Portfolio Optimization
-
-Meng, X., Cao, Y., & Wang, W. (2025). _Estimation of out-of-sample Sharpe ratio for high dimensional portfolio optimization_. _Journal of the American Statistical Association_, 1–21. https://doi.org/10.1080/01621459.2025.2535757
-
 ```latex
-@article{Meng2025Sharpe,
-  author  = {Meng, Xuran and Cao, Yuan and Wang, Weichen},
-  title   = {Estimation of Out-of-Sample Sharpe Ratio for High Dimensional Portfolio Optimization},
-  journal = {Journal of the American Statistical Association},
+@article{Hansen2025SEDiD,
+  author  = {Hansen, Bruce E.},
+  title   = {Standard Errors for Difference-in-Difference Regression},
+  journal = {Journal of Applied Econometrics},
   year    = {2025},
-  doi     = {10.1080/01621459.2025.2535757}
+  volume  = {40},
+  number  = {3},
+  pages   = {291--309},
+  doi     = {10.1002/jae.3110}
 }
 ```
 
