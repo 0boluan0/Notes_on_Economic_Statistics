@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/日记模版.md",
+                "file": "99_学习情况记录/2025-12-24——Wed.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "日记模版"
+              "title": "2025-12-24——Wed"
             }
           }
         ],
@@ -176,13 +176,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/日记模版.md",
+                "file": "99_学习情况记录/2025-12-24——Wed.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 日记模版"
+              "title": "Outline of 2025-12-24——Wed"
             }
           },
           {
@@ -261,8 +261,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "08e9fc1d58a490f1",
   "lastOpenFiles": [
+    "00_inbox/日记模版.md",
+    "99_学习情况记录/2025-12-24——Wed.md",
     "04_method/Learning method.md",
     "04_method",
     "03_Computer_Science/01_CS50/main.md",
@@ -298,7 +300,6 @@
     "99_学习情况记录/完成任务的日期/2025-12-12——Fri.md",
     "99_学习情况记录/2025-12-12——Fri.md",
     "99_学习情况记录/2025-12-10——Wed.md",
-    "02_Economy/14_发展经济学/00_导论和考试相关.md",
     "98_attachment/Pasted image 20250629104144.png",
     "98_attachment/Pasted image 20250628212933.png",
     "98_attachment/Pasted image 20250628205522.png",
