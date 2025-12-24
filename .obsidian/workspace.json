@@ -54,33 +54,9 @@
               "icon": "lucide-file",
               "title": "2025-12-24——Wed"
             }
-          },
-          {
-            "id": "557e6c8911a5cf1c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02_Economy/7_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "essay of Advanced Econometrics"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -200,13 +176,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Economy/7_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
+                "file": "99_学习情况记录/2025-12-24——Wed.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of essay of Advanced Econometrics"
+              "title": "Outline of 2025-12-24——Wed"
             }
           },
           {
@@ -285,12 +261,13 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "557e6c8911a5cf1c",
+  "active": "08e9fc1d58a490f1",
   "lastOpenFiles": [
-    "02_Economy/7_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
     "99_学习情况记录/完成任务的日期/2025-12-24——Wed.md",
-    "02_Economy/7_Advanced Econometrics    Untitled",
     "99_学习情况记录/2025-12-24——Wed.md",
+    "99_学习情况记录/2025-12-12——Fri.md",
+    "02_Economy/7_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
+    "02_Economy/7_Advanced Econometrics    Untitled",
     "00_inbox/日记模版.md",
     "04_method/Learning method.md",
     "04_method",
@@ -323,7 +300,6 @@
     "03_Computer_Science/01_CS61A/01_building abstractions with functions.md",
     "98_attachment/Pasted image 20250629104152.png",
     "03_Computer_Science/01_CS61A/UCB-CS61A-Textbook-1.0.0/README.md",
-    "99_学习情况记录/完成任务的日期/2025-12-12——Fri.md",
     "98_attachment/Pasted image 20250629104144.png",
     "98_attachment/Pasted image 20250628212933.png",
     "98_attachment/Pasted image 20250628205522.png",
