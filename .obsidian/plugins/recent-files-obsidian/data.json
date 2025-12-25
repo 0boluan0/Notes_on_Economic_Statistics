@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "Learning method",
+      "path": "04_method/Learning method.md"
+    },
+    {
       "basename": "DID",
       "path": "00_inbox/DID.md"
     },
     {
-      "basename": "Learning method",
-      "path": "04_method/Learning method.md"
+      "basename": "derivative",
+      "path": "00_factor/concept/derivative.md"
     },
     {
       "basename": "essay of Advanced Econometrics",
@@ -39,10 +43,6 @@
     {
       "basename": "Overview & Study Record",
       "path": "03_Computer_Science/00_CSdiy/Overview & Study Record.md"
-    },
-    {
-      "basename": "derivative",
-      "path": "00_factor/derivative.md"
     },
     {
       "basename": "1-7",

@@ -104,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -146,7 +146,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "li z",
+                "query": "tag:#definition  ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -224,13 +224,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/DID.md",
+                "file": "04_method/Learning method.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of DID"
+              "title": "Outline of Learning method"
             }
           },
           {
@@ -310,10 +310,17 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "d1257ecf53444b15",
+  "active": "2eca70ec6179eb91",
   "lastOpenFiles": [
-    "04_method/Learning method.md",
     "00_inbox/DID.md",
+    "00_factor/concept/derivative.md",
+    "04_method/Learning method.md",
+    "00_factor/system",
+    "00_factor/writing",
+    "00_factor/proof",
+    "00_factor/procedure",
+    "00_factor/framework",
+    "00_factor/concept",
     "02_Economy/7_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
     "03_Computer_Science/01_CS50/CS50_main.md",
     "99_学习情况记录/2025-12-25——Thu.md",
@@ -325,7 +332,6 @@
     "00_inbox/日记模版.md",
     "04_method",
     "03_Computer_Science/00_CSdiy/Overview & Study Record.md",
-    "00_factor/derivative.md",
     "01_Math/01_calculus/MIT18.01/Lecture_notes/1-7.pdf",
     "01_Math/01_calculus/MIT18.01/MIT18.01_Single-Variable-Calculus.md",
     "00_factor/马考利久期.md",
@@ -333,11 +339,7 @@
     "01_Math/02_linear algebra/00_perface.md",
     "99_学习情况记录/完成任务的日期/2025-12-18——Thu.md",
     "01_Math/01_calculus/MIT18.01/Lecture_notes/26-38.pdf",
-    "01_Math/01_calculus/MIT18.01/Lecture_notes/18-25.pdf",
-    "01_Math/01_calculus/MIT18.01/Lecture_notes/9-16.pdf",
     "03_Computer_Science/the_missing_semester.md",
-    "01_Math/01_calculus/MIT18.01/Lecture_notes",
-    "01_Math/01_calculus/MIT18.01",
     "01_Math/04_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
     "01_Math/04_多元统计分析/09_因子分析Factor Analysis and Inference for Structured.md",
     "02_Economy/12_金融机构与风险管理/01_引言.md",
@@ -345,9 +347,6 @@
     "01_Math/04_多元统计分析/10_不考,跳过.md",
     "00_inbox/add_done_item.md",
     "00_inbox/周记模版.md",
-    "03_Computer_Science/01_CS50/1_C.md",
-    "03_Computer_Science/01_CS50",
-    "03_Computer_Science/02_CS61A/UCB-CS61A-Textbook-1.0.0/Composing Programs - John DeNero.epub",
     "98_attachment/Pasted image 20250629104152.png",
     "98_attachment/Pasted image 20250629104144.png",
     "98_attachment/Pasted image 20250628212933.png",
