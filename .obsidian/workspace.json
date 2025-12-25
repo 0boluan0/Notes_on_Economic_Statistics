@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_method/Learning method.md",
+                "file": "99_学习情况记录/2025-12-25——Thu.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Learning method"
+              "title": "2025-12-25——Thu"
             }
           }
         ],
@@ -224,13 +224,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_method/Learning method.md",
+                "file": "99_学习情况记录/2025-12-25——Thu.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Learning method"
+              "title": "Outline of 2025-12-25——Thu"
             }
           },
           {
@@ -291,8 +291,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -312,9 +311,9 @@
   },
   "active": "2eca70ec6179eb91",
   "lastOpenFiles": [
+    "04_method/Learning method.md",
     "00_inbox/DID.md",
     "00_factor/concept/derivative.md",
-    "04_method/Learning method.md",
     "00_factor/system",
     "00_factor/writing",
     "00_factor/proof",
