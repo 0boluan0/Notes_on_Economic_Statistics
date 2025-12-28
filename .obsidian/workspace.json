@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Economy/7_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
+                "file": "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_factor/concept/DID(concept).md",
+                "file": "04_method/Learning method.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +100,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "DID(concept)"
+              "title": "Learning method"
+            }
+          },
+          {
+            "id": "9b9a134cf41ec6c7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/经济预测与决策大作业.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "经济预测与决策大作业"
             }
           },
           {
@@ -128,7 +152,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -248,13 +272,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_factor/concept/DID(concept).md",
+                "file": "00_inbox/经济预测与决策大作业.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of DID(concept)"
+              "title": "Outline of 经济预测与决策大作业"
             }
           },
           {
@@ -333,10 +357,14 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "83fe9f45a93e6cd6",
+  "active": "9b9a134cf41ec6c7",
   "lastOpenFiles": [
-    "00_factor/00_hub/DID-hub.md",
+    "04_method/Learning method.md",
+    "00_inbox/经济预测与决策大作业.md",
+    "经济预测与决策大作业",
+    "02_Economy/08_经济预测与决策",
     "00_factor/concept/DID(concept).md",
+    "00_factor/00_hub/DID-hub.md",
     "00_factor/concept/derivative.md",
     "00_factor/undefined/马考利久期.md",
     "00_factor/undefined/非线性产品.md",
@@ -359,8 +387,6 @@
     "00_factor/undefined/消费者剩余.md",
     "00_factor/undefined/残差.md",
     "00_factor/undefined/有效久期.md",
-    "00_factor/undefined/曲率.md",
-    "00_factor/undefined/效用.md",
     "00_factor/undefined",
     "00_factor/00_hub",
     "00_factor/system",
@@ -369,8 +395,6 @@
     "00_factor/procedure",
     "00_factor/framework",
     "00_factor/concept",
-    "02_Economy/7_Advanced Econometrics    Untitled",
-    "04_method",
     "98_attachment/Pasted image 20250629104152.png",
     "98_attachment/Pasted image 20250629104144.png",
     "98_attachment/Pasted image 20250628212933.png",
