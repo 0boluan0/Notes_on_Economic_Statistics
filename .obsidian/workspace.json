@@ -109,7 +109,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/经济预测与决策大作业.md",
+                "file": "99_学习情况记录/2026-01-02——Fri.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "经济预测与决策大作业"
+              "title": "2026-01-02——Fri"
             }
           },
           {
@@ -272,13 +272,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/经济预测与决策大作业.md",
+                "file": "99_学习情况记录/2026-01-02——Fri.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 经济预测与决策大作业"
+              "title": "Outline of 2026-01-02——Fri"
             }
           },
           {
@@ -359,8 +359,9 @@
   },
   "active": "9b9a134cf41ec6c7",
   "lastOpenFiles": [
-    "04_method/Learning method.md",
     "00_inbox/经济预测与决策大作业.md",
+    "99_学习情况记录/2026-01-02——Fri.md",
+    "04_method/Learning method.md",
     "经济预测与决策大作业",
     "02_Economy/08_经济预测与决策",
     "00_factor/concept/DID(concept).md",
@@ -386,7 +387,6 @@
     "00_factor/undefined/独立性与不相关.md",
     "00_factor/undefined/消费者剩余.md",
     "00_factor/undefined/残差.md",
-    "00_factor/undefined/有效久期.md",
     "00_factor/undefined",
     "00_factor/00_hub",
     "00_factor/system",
