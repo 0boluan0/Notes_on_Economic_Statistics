@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_factor/concept/DID(concept).md",
+                "file": "99_学习情况记录/2026-01-03——Sat.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "DID(concept)"
+              "title": "2026-01-03——Sat"
             }
           },
           {
@@ -248,13 +248,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_factor/concept/DID(concept).md",
+                "file": "99_学习情况记录/2026-01-03——Sat.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of DID(concept)"
+              "title": "Outline of 2026-01-03——Sat"
             }
           },
           {
@@ -335,9 +335,10 @@
   },
   "active": "83fe9f45a93e6cd6",
   "lastOpenFiles": [
+    "00_factor/concept/DID(concept).md",
+    "99_学习情况记录/2026-01-03——Sat.md",
     "00_factor/00_hub/DID-hub.md",
     "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
-    "00_factor/concept/DID(concept).md",
     "04_method/Learning method.md",
     "99_学习情况记录/2026-01-02——Fri.md",
     "99_学习情况记录/2025-12-27——Sat.md",
@@ -362,7 +363,6 @@
     "00_factor/undefined/策略.md",
     "00_factor/undefined/相关系数.md",
     "00_factor/undefined/生产可能性曲线.md",
-    "00_factor/undefined/独立性与不相关.md",
     "00_factor/undefined",
     "00_factor/00_hub",
     "00_factor/system",
