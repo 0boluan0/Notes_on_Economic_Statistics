@@ -109,7 +109,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
+                "file": "99_学习情况记录/2026-01-23——Fri.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "essay of Advanced Econometrics"
+              "title": "2026-01-23——Fri"
             }
           }
         ],
@@ -248,13 +248,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
+                "file": "99_学习情况记录/2026-01-23——Fri.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of essay of Advanced Econometrics"
+              "title": "Outline of 2026-01-23——Fri"
             }
           },
           {
@@ -335,6 +335,8 @@
   },
   "active": "9b9a134cf41ec6c7",
   "lastOpenFiles": [
+    "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
+    "99_学习情况记录/2026-01-23——Fri.md",
     "99_学习情况记录/2026-01-02——Fri.md",
     "毕业论文/选题要求.md",
     "99_学习情况记录/2026-01-06——Tue.md",
@@ -342,7 +344,6 @@
     "99_学习情况记录/2026-01-03——Sat.md",
     "00_factor/concept/DID(concept).md",
     "00_factor/00_hub/DID-hub.md",
-    "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
     "04_method/Learning method.md",
     "99_学习情况记录/2025-12-27——Sat.md",
     "00_inbox/经济预测与决策大作业.md",
@@ -363,7 +364,6 @@
     "00_factor/undefined/绝对额久期.md",
     "00_factor/undefined/线性产品.md",
     "00_factor/undefined/策略式表达.md",
-    "00_factor/undefined/策略.md",
     "00_factor/undefined",
     "00_factor/00_hub",
     "00_factor/system",
