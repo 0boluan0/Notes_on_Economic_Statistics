@@ -1,6 +1,5 @@
 {
   "folder": "99_学习情况记录",
   "template": "00_inbox/日记模版",
-  "format": "YYYY-MM-DD——ddd",
-  "autorun": true
+  "format": "YYYY-MM-DD——ddd"
 }
