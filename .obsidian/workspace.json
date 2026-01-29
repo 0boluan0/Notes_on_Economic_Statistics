@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ac226bb00a271fbd",
+        "id": "98fe1617c8de2b2e",
         "type": "tabs",
         "children": [
           {
-            "id": "2aba9a991706d31d",
+            "id": "1e8cdccd7773f04d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_method/Learning method.md",
+                "file": "00_factor/concept/GMM.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Learning method"
+              "title": "GMM"
             }
           }
         ]
@@ -104,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "00_factor/concept/GMM.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -113,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for GMM"
             }
           },
           {
@@ -149,12 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "00_factor/concept/GMM.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of GMM"
             }
           },
           {
@@ -186,9 +188,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "00_factor/concept/GMM.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for GMM"
             }
           },
           {
@@ -238,7 +242,7 @@
                 }
               },
               "icon": "terminal",
-              "title": "Terminal: ⠂ Obsidian 笔记库重构"
+              "title": "Terminal: ⠐ Obsidian 笔记库重构"
             }
           }
         ],
@@ -265,34 +269,36 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "144ad142088a1142",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
-    "04_method/Learning method.md",
-    "00_factor/concept/EGARCH.md",
-    "00_factor/concept/EWMA.md",
-    "00_factor/concept/GARCH.md",
-    "00_factor/concept/derivative.md",
-    "00_factor/concept/DID(concept).md",
+    "00_factor/concept/2SLS.md",
+    "00_factor/concept/ADL.md",
     "00_factor/00_hub/DID-hub.md",
-    "00_factor/concept/ARCH.md",
-    "00_factor/procedure/相关系数.md",
-    "00_factor/procedure/最小二乘法.md",
-    "00_factor/framework/资本资产定价模型.md",
-    "00_factor/framework/帕累托.md",
-    "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
-    "00_factor/concept/ES.md",
-    "02_Economy/02_public finance财政学/2_财政支出/02_外部性Externality.md",
-    "00_factor/concept/geometric interpretation of derivative.md",
-    "00_factor/system/库克比率.md",
-    "00_factor/system/资本金持有率.md",
-    "00_factor/concept/大样本与小样本.md",
-    "00_factor/concept/曲率.md",
-    "00_factor/concept/残差.md",
-    "00_factor/concept/两个随机变量线性组合.md",
-    "00_factor/concept/独立性与不相关.md",
-    "00_factor/concept/策略式表达.md",
-    "00_factor/concept/局中人.md",
-    "00_factor/concept/策略.md",
+    "02_Economy/04_经济思想史/01_导论.md",
+    "00_factor/concept/违约风险.md",
+    "00_factor/concept/DVA.md",
+    "00_factor/concept/CVA.md",
+    "00_factor/concept/操作风险.md",
+    "00_factor/concept/市场风险.md",
+    "00_factor/concept/信用风险.md",
+    "00_factor/concept/巴塞尔协议.md",
+    "00_factor/concept/格兰杰因果检验.md",
+    "00_factor/concept/一阶差分.md",
+    "00_factor/concept/LPM模型.md",
+    "00_factor/concept/probit模型.md",
+    "00_factor/concept/logit模型.md",
+    "00_factor/concept/极大似然估计.md",
+    "00_factor/concept/F检验.md",
+    "00_factor/concept/联立方程模型.md",
+    "00_factor/concept/面板数据模型.md",
+    "00_factor/concept/随机效应.md",
+    "00_factor/concept/固定效应.md",
+    "00_factor/concept/条件指数.md",
+    "00_factor/concept/方差膨胀因子.md",
+    "00_factor/concept/多重共线性.md",
+    "00_factor/concept/内生性.md",
+    "00_factor_factor/concept",
+    "00_factor_factor",
     "毕业论文",
     "经济预测与决策大作业",
     "02_Economy/08_经济预测与决策",
@@ -301,8 +307,6 @@
     "00_factor/system",
     "00_factor/writing",
     "00_factor/proof",
-    "00_factor/procedure",
-    "00_factor/framework",
     "98_attachment/Pasted image 20250629104152.png",
     "98_attachment/Pasted image 20250629104144.png",
     "98_attachment/Pasted image 20250628212933.png",
