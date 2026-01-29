@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Math/03_game theory/03_策略式博弈.md",
+                "file": "00_factor/concept/Hotelling模型.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "03_策略式博弈"
+              "title": "Hotelling模型"
             }
           }
         ]
@@ -104,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "00_factor/concept/Hotelling模型.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -113,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Hotelling模型"
             }
           },
           {
@@ -149,12 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "00_factor/concept/Hotelling模型.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Hotelling模型"
             }
           },
           {
@@ -186,9 +188,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "00_factor/concept/Hotelling模型.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for Hotelling模型"
             }
           },
           {
@@ -265,34 +269,34 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "144ad142088a1142",
+  "active": "1e8cdccd7773f04d",
   "lastOpenFiles": [
-    "00_factor/concept/Johansen检验.md",
-    "00_factor/concept/EG两步检验法.md",
-    "00_factor/concept/误差纠正机制(ECM).md",
-    "00_factor/concept/伪回归.md",
-    "00_factor/concept/PP检验.md",
+    "00_factor/concept/Hausman检验.md",
+    "00_factor/concept/Hotelling模型.md",
+    "00_factor/concept/2SLS.md",
+    "00_factor/concept/沉没成本.md",
     "00_factor/concept/ADF检验.md",
-    "00_factor/concept/过度识别.md",
-    "00_factor/concept/恰好识别.md",
-    "00_factor/concept/参数识别.md",
-    "00_factor/concept/简约式方程.md",
-    "00_factor/concept/结构方程.md",
-    "00_factor/concept/联立性偏误.md",
-    "00_factor/concept/机会比率.md",
-    "00_factor/concept/离散选择模型.md",
-    "00_factor/concept/加权最小二乘法(WLS).md",
-    "00_factor/concept/怀特检验.md",
-    "00_factor/concept/异方差.md",
-    "00_factor/concept/中等收入陷阱.md",
-    "01_Math/03_game theory/03_策略式博弈.md",
-    "00_factor/concept/罗斯托经济增长阶段论.md",
-    "00_factor/concept/库兹涅茨现代经济增长理论.md",
-    "00_factor/concept/稳态分析.md",
-    "00_factor/concept/索罗增长模型.md",
-    "00_factor/concept/哈罗德-多玛模型.md",
-    "00_factor/concept/李嘉图模型.md",
-    "00_factor/concept/马尔萨斯人口陷阱.md",
+    "00_factor/concept/机会成本.md",
+    "00_factor/concept/内含增长率.md",
+    "00_factor/concept/基准利率.md",
+    "00_factor/concept/宏观经济理论先驱.md",
+    "00_factor/concept/马歇尔经济学.md",
+    "00_factor/concept/边际革命.md",
+    "00_factor/concept/古典经济学.md",
+    "00_factor/concept/亚当斯密经济学.md",
+    "00_factor/concept/重农学派.md",
+    "00_factor/concept/重商主义.md",
+    "00_factor/concept/微积分基本定理.md",
+    "00_factor/concept/微分方程.md",
+    "00_factor/concept/级数.md",
+    "00_factor/concept/极限.md",
+    "00_factor/concept/积分.md",
+    "00_factor/concept/导数.md",
+    "00_factor/concept/年金.md",
+    "00_factor/concept/货币时间价值.md",
+    "00_factor/concept/股票估价模型.md",
+    "00_factor/concept/债券估价模型.md",
+    "00_factor/concept/内涵报酬率.md",
     "00_factorization/concept",
     "00_factorization",
     "00_factor_factor/concept",
