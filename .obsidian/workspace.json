@@ -4,107 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "869e028558261b8d",
+        "id": "84be64b82a2cb65d",
         "type": "tabs",
         "children": [
           {
-            "id": "70c0343f5ae25f5e",
+            "id": "cbca87ce6af2b42d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_Computer_Science/01_CS50/CS50_main.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "CS50_main"
-            }
-          },
-          {
-            "id": "08e9fc1d58a490f1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "essay of Advanced Econometrics"
-            }
-          },
-          {
-            "id": "d1257ecf53444b15",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/2026-01-28——Wed.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2026-01-28——Wed"
-            }
-          },
-          {
-            "id": "a5a20fec53f7a798",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00_factor/concept/derivative.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "derivative"
+              "title": "New tab"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -311,7 +224,7 @@
                 }
               },
               "icon": "terminal",
-              "title": "Terminal: ⠐ 笔记重构分类"
+              "title": "Terminal: ✳ Obsidian 笔记库重构"
             }
           }
         ],
@@ -338,11 +251,11 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "144ad142088a1142",
+  "active": "cbca87ce6af2b42d",
   "lastOpenFiles": [
+    "00_factor/00_hub/DID-hub.md",
     "00_factor/concept/derivative.md",
     "00_factor/concept/DID(concept).md",
-    "00_factor/00_hub/DID-hub.md",
     "CLAUDE.md",
     "99_学习情况记录/2026-01-28——Wed.md",
     "99_学习情况记录/2026-01-06——Tue.md",

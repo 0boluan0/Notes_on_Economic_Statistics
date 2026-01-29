@@ -1,16 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "DID-hub",
+      "path": "00_factor/00_hub/DID-hub.md"
+    },
+    {
       "basename": "derivative",
       "path": "00_factor/concept/derivative.md"
     },
     {
       "basename": "DID(concept)",
       "path": "00_factor/concept/DID(concept).md"
-    },
-    {
-      "basename": "DID-hub",
-      "path": "00_factor/00_hub/DID-hub.md"
     },
     {
       "basename": "CLAUDE",
