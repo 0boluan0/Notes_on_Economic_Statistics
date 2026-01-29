@@ -21,3 +21,8 @@ h_t = \alpha_0 + \alpha_1 \varepsilon_{t-1}^2
 <span style="color: yellow;">关键</span>: 在ARCH(1)中，$\epsilon_t$的t-1期条件方差为$\alpha_0 + \alpha_1 \epsilon_{t-1}^2$。(无条件方差就是对条件方差再取一次期望,得到$\bar{h} = \frac{\alpha_0}{1-\alpha_1}$ )
 
 ==其中,常数项$\alpha_{0}$不能被删除.因为,如果给$\epsilon_{1}=\alpha_1 \epsilon_{t-1}^2$两侧同时取期望,最后算出来$\alpha_{1}$的值一定为1
+
+## 相关链接
+
+- 扩展模型：[[GARCH]], [[TARCH]], [[EGARCH]]
+- 相关概念：[[波动聚集]], [[条件异方差]], [[历史波动率]], [[隐含波动率]], [[已实现波动率]]

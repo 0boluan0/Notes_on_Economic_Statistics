@@ -22,5 +22,10 @@ $$
 f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp\left( -\frac{(x-\mu)^2}{2\sigma^2} \right)
 $$
 
+## 相关链接
+
+- 基础概念：[[VaR]]
+- 应用：用于评估[[VaR]]估计的精度，以及[[回溯检验]]
+
 
 
