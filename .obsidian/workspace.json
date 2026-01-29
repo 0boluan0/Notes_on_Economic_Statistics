@@ -104,7 +104,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Math/02_linear algebra/00_perface.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -114,7 +113,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 00_perface"
+              "title": "Backlinks"
             }
           },
           {
@@ -150,13 +149,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Math/02_linear algebra/00_perface.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 00_perface"
+              "title": "Outline"
             }
           },
           {
@@ -188,11 +186,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "01_Math/02_linear algebra/00_perface.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for 00_perface"
+              "title": "File properties"
             }
           },
           {
@@ -242,7 +238,7 @@
                 }
               },
               "icon": "terminal",
-              "title": "Terminal: ✳ Obsidian 笔记库重构"
+              "title": "Terminal: ⠂ Obsidian 笔记库重构"
             }
           }
         ],
@@ -269,8 +265,11 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "144ad142088a1142",
   "lastOpenFiles": [
+    "00_factor/concept/公开市场操作.md",
+    "00_factor/concept/收益率曲线.md",
+    "01_Math/02_linear algebra/00_perface.md",
     "00_factor/concept/货币乘数.md",
     "00_factor/concept/基础货币.md",
     "00_factor/concept/利率的风险结构.md",
@@ -296,9 +295,6 @@
     "00_factor/concept/马哈拉诺比斯距离.md",
     "00_factor/concept/Wishart分布.md",
     "00_factor/concept/多元正态分布.md",
-    "00_factor/concept/子博弈.md",
-    "00_factor/concept/信息集.md",
-    "00_factor/concept/混合均衡.md",
     "00_factor_factor/concept",
     "00_factor_factor",
     "毕业论文",
