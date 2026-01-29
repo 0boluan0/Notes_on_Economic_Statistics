@@ -84,8 +84,7 @@
               "title": "Search"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -105,7 +104,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00_factor/concept/ADL.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -115,7 +113,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for ADL"
+              "title": "Backlinks"
             }
           },
           {
@@ -151,13 +149,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_factor/concept/ADL.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ADL"
+              "title": "Outline"
             }
           },
           {
@@ -189,11 +186,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "00_factor/concept/ADL.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for ADL"
+              "title": "File properties"
             }
           },
           {
@@ -243,7 +238,7 @@
                 }
               },
               "icon": "terminal",
-              "title": "Terminal: ⠐ ultrathink 任务"
+              "title": "Terminal: ⠂ 课程笔记优化"
             }
           }
         ],
@@ -270,8 +265,9 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "68e022ef2943b75b",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
+    "00_factor/concept/ADL.md",
     "00_factor/00_hub/线性代数-hub.md",
     "00_factor/00_hub/增长理论-hub.md",
     "00_factor/00_hub/财务管理-hub.md",
@@ -297,7 +293,6 @@
     "00_factor/system/模型验证.md",
     "00_factor/system/NSFR.md",
     "00_factor/system/LCR.md",
-    "00_factor/system/压力测试.md",
     "00_factorization/concept",
     "00_factorization",
     "00_factor_factor/concept",
