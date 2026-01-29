@@ -84,7 +84,8 @@
               "title": "Search"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -104,6 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "00_factor/concept/ADL.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -113,7 +115,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for ADL"
             }
           },
           {
@@ -149,12 +151,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "00_factor/concept/ADL.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of ADL"
             }
           },
           {
@@ -186,9 +189,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "00_factor/concept/ADL.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for ADL"
             }
           },
           {
@@ -238,7 +243,7 @@
                 }
               },
               "icon": "terminal",
-              "title": "Terminal: ✳ ultrathink 任务"
+              "title": "Terminal: ⠐ ultrathink 任务"
             }
           }
         ],
@@ -265,7 +270,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "144ad142088a1142",
+  "active": "68e022ef2943b75b",
   "lastOpenFiles": [
     "00_factor/00_hub/线性代数-hub.md",
     "00_factor/00_hub/增长理论-hub.md",
