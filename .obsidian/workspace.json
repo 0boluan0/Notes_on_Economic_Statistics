@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_factor/concept/DID(concept).md",
+                "file": "99_学习情况记录/2026-01-28——Wed.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,11 +76,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "DID(concept)"
+              "title": "2026-01-28——Wed"
+            }
+          },
+          {
+            "id": "a5a20fec53f7a798",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_factor/concept/derivative.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "derivative"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -146,7 +170,6 @@
       {
         "id": "e0fa6f818c861393",
         "type": "tabs",
-        "dimension": 61.49425287356321,
         "children": [
           {
             "id": "d5dd85784b1fe9ec",
@@ -154,7 +177,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "09_线性代数/00_perface.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -164,7 +186,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "00_perface 的反向链接列表"
+              "title": "Backlinks"
             }
           },
           {
@@ -200,13 +222,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_factor/concept/DID(concept).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of DID(concept)"
+              "title": "Outline"
             }
           },
           {
@@ -229,8 +250,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           },
           {
@@ -238,21 +259,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "07_随机过程/01_预备知识.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "01_预备知识的笔记属性"
+              "title": "File properties"
             }
-          }
-        ],
-        "currentTab": 3
-      },
-      {
-        "id": "b6e2d525de78b465",
-        "type": "tabs",
-        "dimension": 38.50574712643678,
-        "children": [
+          },
           {
             "id": "2c9ca742cf90c221",
             "type": "leaf",
@@ -262,12 +273,53 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
+          },
+          {
+            "id": "144ad142088a1142",
+            "type": "leaf",
+            "state": {
+              "type": "terminal:terminal",
+              "state": {
+                "terminal:terminal": {
+                  "cwd": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic",
+                  "focus": false,
+                  "profile": {
+                    "args": [
+                      "--login"
+                    ],
+                    "executable": "/bin/zsh",
+                    "followTheme": true,
+                    "name": "",
+                    "platforms": {
+                      "darwin": true
+                    },
+                    "pythonExecutable": "python3",
+                    "restoreHistory": false,
+                    "rightClickAction": "copyPaste",
+                    "successExitCodes": [
+                      "0",
+                      "SIGINT",
+                      "SIGTERM"
+                    ],
+                    "terminalOptions": {
+                      "documentOverride": null
+                    },
+                    "type": "integrated",
+                    "useWin32Conhost": true
+                  },
+                  "serial": null
+                }
+              },
+              "icon": "terminal",
+              "title": "Terminal: ⠐ 笔记重构分类"
+            }
           }
-        ]
+        ],
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
-    "width": 262.5
+    "width": 881.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -282,12 +334,17 @@
       "media-extended:Open media": false,
       "obsidian-git:Open Git source control": false,
       "omnisearch:Omnisearch": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "terminal:Open terminal": false
     }
   },
-  "active": "d1257ecf53444b15",
+  "active": "144ad142088a1142",
   "lastOpenFiles": [
+    "00_factor/concept/derivative.md",
+    "00_factor/concept/DID(concept).md",
     "00_factor/00_hub/DID-hub.md",
+    "CLAUDE.md",
+    "99_学习情况记录/2026-01-28——Wed.md",
     "99_学习情况记录/2026-01-06——Tue.md",
     "99_学习情况记录/2026-01-23——Fri.md",
     "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
@@ -295,13 +352,11 @@
     "毕业论文/选题要求.md",
     "毕业论文",
     "99_学习情况记录/2026-01-03——Sat.md",
-    "00_factor/concept/DID(concept).md",
     "04_method/Learning method.md",
     "99_学习情况记录/2025-12-27——Sat.md",
     "00_inbox/经济预测与决策大作业.md",
     "经济预测与决策大作业",
     "02_Economy/08_经济预测与决策",
-    "00_factor/concept/derivative.md",
     "00_factor/undefined/马考利久期.md",
     "00_factor/undefined/非线性产品.md",
     "00_factor/undefined/隐含波动率.md",
@@ -314,8 +369,6 @@
     "00_factor/undefined/资本资产定价模型.md",
     "00_factor/undefined/资本市场线.md",
     "00_factor/undefined/绝对额久期.md",
-    "00_factor/undefined/线性产品.md",
-    "00_factor/undefined/策略式表达.md",
     "00_factor/undefined",
     "00_factor/00_hub",
     "00_factor/system",
