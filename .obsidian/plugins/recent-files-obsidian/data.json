@@ -1,12 +1,68 @@
 {
   "recentFiles": [
     {
-      "basename": "DID-hub",
-      "path": "00_factor/00_hub/DID-hub.md"
+      "basename": "Learning method",
+      "path": "04_method/Learning method.md"
+    },
+    {
+      "basename": "essay of Advanced Econometrics",
+      "path": "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md"
+    },
+    {
+      "basename": "ES",
+      "path": "00_factor/concept/ES.md"
+    },
+    {
+      "basename": "02_外部性Externality",
+      "path": "02_Economy/02_public finance财政学/2_财政支出/02_外部性Externality.md"
+    },
+    {
+      "basename": "最小二乘法",
+      "path": "00_factor/procedure/最小二乘法.md"
+    },
+    {
+      "basename": "相关系数",
+      "path": "00_factor/procedure/相关系数.md"
+    },
+    {
+      "basename": "ARCH",
+      "path": "00_factor/concept/ARCH.md"
     },
     {
       "basename": "derivative",
       "path": "00_factor/concept/derivative.md"
+    },
+    {
+      "basename": "EWMA",
+      "path": "00_factor/concept/EWMA.md"
+    },
+    {
+      "basename": "GPD",
+      "path": "00_factor/concept/GPD.md"
+    },
+    {
+      "basename": "VaR",
+      "path": "00_factor/concept/VaR.md"
+    },
+    {
+      "basename": "一致性风险度量",
+      "path": "00_factor/concept/一致性风险度量.md"
+    },
+    {
+      "basename": "修正久期",
+      "path": "00_factor/concept/修正久期.md"
+    },
+    {
+      "basename": "VaR标准误",
+      "path": "00_factor/concept/VaR标准误.md"
+    },
+    {
+      "basename": "Rho",
+      "path": "00_factor/concept/Rho.md"
+    },
+    {
+      "basename": "DID-hub",
+      "path": "00_factor/00_hub/DID-hub.md"
     },
     {
       "basename": "DID(concept)",
@@ -29,20 +85,12 @@
       "path": "99_学习情况记录/2026-01-23——Fri.md"
     },
     {
-      "basename": "essay of Advanced Econometrics",
-      "path": "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md"
-    },
-    {
       "basename": "2026-01-02——Fri",
       "path": "99_学习情况记录/2026-01-02——Fri.md"
     },
     {
       "basename": "2026-01-03——Sat",
       "path": "99_学习情况记录/2026-01-03——Sat.md"
-    },
-    {
-      "basename": "Learning method",
-      "path": "04_method/Learning method.md"
     },
     {
       "basename": "2025-12-27——Sat",
@@ -151,54 +199,6 @@
     {
       "basename": "2025-12-10——Wed",
       "path": "99_学习情况记录/2025-12-10——Wed.md"
-    },
-    {
-      "basename": "00_导论和考试相关",
-      "path": "02_Economy/10_发展经济学/00_导论和考试相关.md"
-    },
-    {
-      "basename": "2025-12-07——Sun",
-      "path": "99_学习情况记录/2025-12-07——Sun.md"
-    },
-    {
-      "basename": "2025-11-24——Mon",
-      "path": "99_学习情况记录/2025-11-24——Mon.md"
-    },
-    {
-      "basename": "2025-11-23——Sun",
-      "path": "99_学习情况记录/2025-11-23——Sun.md"
-    },
-    {
-      "basename": "2025-11-22——Sat",
-      "path": "99_学习情况记录/2025-11-22——Sat.md"
-    },
-    {
-      "basename": "05_行业分析",
-      "path": "02_Economy/06_证券投资学/05_行业分析.md"
-    },
-    {
-      "basename": "03_资产定价理论及其发展",
-      "path": "02_Economy/06_证券投资学/03_资产定价理论及其发展.md"
-    },
-    {
-      "basename": "03_多元线性回归",
-      "path": "02_Economy/01_Econometrics/03_多元线性回归.md"
-    },
-    {
-      "basename": "04_模型设定",
-      "path": "02_Economy/01_Econometrics/04_模型设定.md"
-    },
-    {
-      "basename": "01_导论",
-      "path": "02_Economy/01_Econometrics/01_导论.md"
-    },
-    {
-      "basename": "20_CVA,DVA衍生产品中的对手信用风险",
-      "path": "02_Economy/07_金融机构与风险管理/20_CVA,DVA衍生产品中的对手信用风险.md"
-    },
-    {
-      "basename": "21_信用在险价值",
-      "path": "02_Economy/07_金融机构与风险管理/21_信用在险价值.md"
     }
   ],
   "omittedPaths": [],

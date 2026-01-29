@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "84be64b82a2cb65d",
+        "id": "ac226bb00a271fbd",
         "type": "tabs",
         "children": [
           {
-            "id": "cbca87ce6af2b42d",
+            "id": "2aba9a991706d31d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "04_method/Learning method.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Learning method"
             }
           }
         ]
@@ -90,6 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "04_method/Learning method.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -99,7 +114,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Learning method"
             }
           },
           {
@@ -135,12 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "04_method/Learning method.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Learning method"
             }
           },
           {
@@ -172,9 +188,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "04_method/Learning method.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for Learning method"
             }
           },
           {
@@ -224,7 +242,7 @@
                 }
               },
               "icon": "terminal",
-              "title": "Terminal: ✳ Obsidian 笔记库重构"
+              "title": "Terminal: ⠂ Obsidian 笔记库重构"
             }
           }
         ],
@@ -251,37 +269,37 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "144ad142088a1142",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
-    "00_factor/00_hub/DID-hub.md",
-    "00_factor/concept/derivative.md",
-    "00_factor/concept/DID(concept).md",
-    "CLAUDE.md",
-    "99_学习情况记录/2026-01-28——Wed.md",
-    "99_学习情况记录/2026-01-06——Tue.md",
-    "99_学习情况记录/2026-01-23——Fri.md",
     "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
-    "99_学习情况记录/2026-01-02——Fri.md",
-    "毕业论文/选题要求.md",
+    "00_factor/concept/ES.md",
+    "02_Economy/02_public finance财政学/2_财政支出/02_外部性Externality.md",
+    "00_factor/procedure/最小二乘法.md",
+    "00_factor/procedure/相关系数.md",
+    "00_factor/concept/ARCH.md",
+    "00_factor/concept/geometric interpretation of derivative.md",
+    "00_factor/system/库克比率.md",
+    "00_factor/system/资本金持有率.md",
+    "00_factor/framework/资本资产定价模型.md",
+    "00_factor/framework/帕累托.md",
+    "00_factor/concept/大样本与小样本.md",
+    "00_factor/concept/曲率.md",
+    "00_factor/concept/残差.md",
+    "00_factor/concept/两个随机变量线性组合.md",
+    "00_factor/concept/独立性与不相关.md",
+    "00_factor/concept/策略式表达.md",
+    "00_factor/concept/局中人.md",
+    "00_factor/concept/策略.md",
+    "00_factor/concept/derivative.md",
+    "00_factor/concept/EWMA.md",
+    "00_factor/concept/收入效应与替代效应.md",
+    "00_factor/concept/消费者剩余.md",
+    "00_factor/concept/效用.md",
+    "00_factor/concept/MRS边际替代率.md",
+    "00_factor/concept/MRT边际转换率.md",
     "毕业论文",
-    "99_学习情况记录/2026-01-03——Sat.md",
-    "04_method/Learning method.md",
-    "99_学习情况记录/2025-12-27——Sat.md",
-    "00_inbox/经济预测与决策大作业.md",
     "经济预测与决策大作业",
     "02_Economy/08_经济预测与决策",
-    "00_factor/undefined/马考利久期.md",
-    "00_factor/undefined/非线性产品.md",
-    "00_factor/undefined/隐含波动率.md",
-    "00_factor/undefined/隐含期权风险.md",
-    "00_factor/undefined/阿尔法值.md",
-    "00_factor/undefined/重新定价风险.md",
-    "00_factor/undefined/递增VaR.md",
-    "00_factor/undefined/边际VaR.md",
-    "00_factor/undefined/资本金持有率.md",
-    "00_factor/undefined/资本资产定价模型.md",
-    "00_factor/undefined/资本市场线.md",
-    "00_factor/undefined/绝对额久期.md",
     "00_factor/undefined",
     "00_factor/00_hub",
     "00_factor/system",
