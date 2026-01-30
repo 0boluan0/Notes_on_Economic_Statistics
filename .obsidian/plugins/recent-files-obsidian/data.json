@@ -1,16 +1,64 @@
 {
   "recentFiles": [
     {
+      "basename": "增长理论-hub",
+      "path": "00_factor/00_hub/增长理论-hub.md"
+    },
+    {
+      "basename": "波动率建模-hub",
+      "path": "00_factor/00_hub/波动率建模-hub.md"
+    },
+    {
+      "basename": "VaR-hub",
+      "path": "00_factor/00_hub/VaR-hub.md"
+    },
+    {
+      "basename": "2SLS",
+      "path": "00_factor/concept/2SLS.md"
+    },
+    {
+      "basename": "ADF检验",
+      "path": "00_factor/concept/ADF检验.md"
+    },
+    {
+      "basename": "资本资产定价模型",
+      "path": "00_factor/framework/资本资产定价模型.md"
+    },
+    {
+      "basename": "库兹涅茨现代经济增长理论",
+      "path": "00_factor/framework/库兹涅茨现代经济增长理论.md"
+    },
+    {
+      "basename": "刘易斯模型",
+      "path": "00_factor/framework/刘易斯模型.md"
+    },
+    {
+      "basename": "人口迁移理论",
+      "path": "00_inbox/人口迁移理论.md"
+    },
+    {
+      "basename": "03_策略式博弈",
+      "path": "01_Math/03_game theory/03_策略式博弈.md"
+    },
+    {
+      "basename": "02_初步认识博弈",
+      "path": "01_Math/03_game theory/02_初步认识博弈.md"
+    },
+    {
+      "basename": "01_导论",
+      "path": "01_Math/03_game theory/01_导论.md"
+    },
+    {
+      "basename": "07_子博弈不完全信息",
+      "path": "01_Math/03_game theory/07_子博弈不完全信息.md"
+    },
+    {
       "basename": "05_贝叶斯博弈",
       "path": "01_Math/03_game theory/05_贝叶斯博弈.md"
     },
     {
       "basename": "06_扩展性博弈",
       "path": "01_Math/03_game theory/06_扩展性博弈.md"
-    },
-    {
-      "basename": "07_子博弈不完全信息",
-      "path": "01_Math/03_game theory/07_子博弈不完全信息.md"
     },
     {
       "basename": "第1次作业",
@@ -55,26 +103,6 @@
     {
       "basename": "Hausman检验",
       "path": "00_factor/concept/Hausman检验.md"
-    },
-    {
-      "basename": "2SLS",
-      "path": "00_factor/concept/2SLS.md"
-    },
-    {
-      "basename": "ADF检验",
-      "path": "00_factor/concept/ADF检验.md"
-    },
-    {
-      "basename": "03_策略式博弈",
-      "path": "01_Math/03_game theory/03_策略式博弈.md"
-    },
-    {
-      "basename": "02_初步认识博弈",
-      "path": "01_Math/03_game theory/02_初步认识博弈.md"
-    },
-    {
-      "basename": "01_导论",
-      "path": "01_Math/03_game theory/01_导论.md"
     },
     {
       "basename": "00_perface",
@@ -171,34 +199,6 @@
     {
       "basename": "EWMA",
       "path": "00_factor/concept/EWMA.md"
-    },
-    {
-      "basename": "GARCH",
-      "path": "00_factor/concept/GARCH.md"
-    },
-    {
-      "basename": "ARCH",
-      "path": "00_factor/concept/ARCH.md"
-    },
-    {
-      "basename": "资本资产定价模型",
-      "path": "00_factor/framework/资本资产定价模型.md"
-    },
-    {
-      "basename": "帕累托",
-      "path": "00_factor/framework/帕累托.md"
-    },
-    {
-      "basename": "essay of Advanced Econometrics",
-      "path": "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md"
-    },
-    {
-      "basename": "ES",
-      "path": "00_factor/concept/ES.md"
-    },
-    {
-      "basename": "02_外部性Externality",
-      "path": "02_Economy/02_public finance财政学/2_财政支出/02_外部性Externality.md"
     }
   ],
   "omittedPaths": [],
