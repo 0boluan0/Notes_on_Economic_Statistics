@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
+      "path": "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
+    },
+    {
+      "basename": "01_财务管理概述",
+      "path": "02_Economy/05_财务管理/01_财务管理概述.md"
+    },
+    {
       "basename": "Learning method",
       "path": "04_method/Learning method.md"
     },
@@ -191,10 +199,6 @@
     {
       "basename": "derivative",
       "path": "00_factor/concept/derivative.md"
-    },
-    {
-      "basename": "Delta",
-      "path": "00_factor/concept/Delta.md"
     }
   ],
   "omittedPaths": [],
