@@ -1,12 +1,13 @@
 ---
 aliases:
-  - Generalized Method of Moments
-  - 广义矩估计
+- Generalized Method of Moments
+- 广义矩估计
+- GMM
 tags:
-  - 计量经济学
-  - 估计方法
+- 计量经济学
+- 估计方法
+- concept
 ---
-
 GMM（Generalized Method of Moments，广义矩估计）是一种基于矩条件的参数估计方法，是OLS、2SLS、MLE等估计方法的统一框架。
 
 ## 基本思想

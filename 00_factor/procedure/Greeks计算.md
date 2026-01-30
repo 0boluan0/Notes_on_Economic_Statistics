@@ -1,12 +1,13 @@
 ---
 aliases:
-  - Greeks Calculation
-  - 期权Greeks计算
+- Greeks Calculation
+- 期权Greeks计算
+- Greeks计算
+- Greeks
 tags:
-  - procedure
-  - 07_金融机构与风险管理
+- procedure
+- 07_金融机构与风险管理
 ---
-
 # Greeks计算
 
 ## 适用场景

@@ -1,3 +1,9 @@
+---
+aliases:
+- Delta
+tags:
+- concept
+---
 # 定义
 
 - **Delta（$\Delta$）**：衡量一个组合价值对标的资产价格微小变动的敏感度。

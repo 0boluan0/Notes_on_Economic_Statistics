@@ -1,3 +1,9 @@
+---
+aliases:
+- Theta
+tags:
+- concept
+---
 
 - **定义：** $\Theta$（希腊字母西塔）是交易产品价值对**时间流逝**的敏感度，定义为在其他条件不变时，产品价值随时间每减少一单位的变化率：$\displaystyle \Theta = \frac{\partial V}{\partial t}$（通常$t$表示剩余到期时间）。$\Theta$也称为组合的“时间损耗”（time decay）。
     

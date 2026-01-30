@@ -1,14 +1,15 @@
 ---
 aliases:
-  - Weighted Least Squares
-  - WLS
-  - GLS
-  - Generalized Least Squares
+- Weighted Least Squares
+- WLS
+- GLS
+- Generalized Least Squares
+- 加权最小二乘法(WLS)
 tags:
-  - 计量经济学
-  - 估计方法
+- 计量经济学
+- 估计方法
+- concept
 ---
-
 加权最小二乘法（Weighted Least Squares，WLS）是处理异方差的一种方法，通过对观测值赋予权重，使变换后的模型满足同方差假设。广义最小二乘法（GLS）是其一般形式。
 
 ## 基本思想

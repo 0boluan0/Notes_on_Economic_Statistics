@@ -1,13 +1,14 @@
 ---
 aliases:
-  - Bertrand Competition
-  - Bertrand Model
-  - Bertrand Paradox
+- Bertrand Competition
+- Bertrand Model
+- Bertrand Paradox
+- Bertrand竞争
+- Bertrand
 tags:
-  - concept
-  - game theory
+- concept
+- game theory
 ---
-
 # Bertrand 竞争
 
 ## 定义

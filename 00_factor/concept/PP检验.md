@@ -1,13 +1,15 @@
 ---
 aliases:
-  - Phillips-Perron Test
-  - 菲利普斯-佩龙检验
+- Phillips-Perron Test
+- 菲利普斯-佩龙检验
+- PP检验
+- PP
 tags:
-  - 计量经济学
-  - 时间序列
-  - 单位根检验
+- 计量经济学
+- 时间序列
+- 单位根检验
+- concept
 ---
-
 PP检验（Phillips-Perron Test）是Phillips和Perr提出的单位根检验方法，通过直接修正DF检验统计量的标准误来处理自相关和异方差问题。
 
 ## 基本思想

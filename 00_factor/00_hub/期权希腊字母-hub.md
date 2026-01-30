@@ -1,11 +1,12 @@
 ---
 aliases:
-  - Option Greeks
-  - 期权希腊字母
+- Option Greeks
+- 期权希腊字母
+- 期权希腊字母-hub
+- hub
 tags:
-  - hub
+- hub
 ---
-
 # 期权希腊字母 Hub
 
 ## 核心概念

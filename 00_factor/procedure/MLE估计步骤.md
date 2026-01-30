@@ -1,13 +1,13 @@
 ---
 aliases:
-  - MLE Estimation Steps
-  - 极大似然估计步骤
-
+- MLE Estimation Steps
+- 极大似然估计步骤
+- MLE
+- MLE估计步骤
 tags:
-  - procedure
-  - 01_Econometrics
+- procedure
+- 01_Econometrics
 ---
-
 # MLE估计步骤
 
 ## 适用场景

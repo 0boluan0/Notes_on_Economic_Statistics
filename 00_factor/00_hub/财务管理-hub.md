@@ -1,11 +1,12 @@
 ---
 aliases:
-  - Financial Management
-  - 财务管理
+- Financial Management
+- 财务管理
+- 财务管理-hub
+- hub
 tags:
-  - hub
+- hub
 ---
-
 # 财务管理 Hub
 
 ## 核心概念

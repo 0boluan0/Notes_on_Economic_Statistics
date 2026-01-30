@@ -1,12 +1,13 @@
 ---
 aliases:
-  - Vector Moving Average
-  - 向量移动平均
+- Vector Moving Average
+- 向量移动平均
+- VMA
 tags:
-  - 时间序列
-  - 多变量模型
+- 时间序列
+- 多变量模型
+- concept
 ---
-
 VMA（Vector Moving Average，向量移动平均）是VAR向量自回归模型的可逆表示形式，将当前值表示为当前和过去冲击的函数。
 
 ## 模型形式

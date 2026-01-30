@@ -1,12 +1,14 @@
 ---
 aliases:
-  - OLS unbiasedness
-  - OLS 无偏性
+- OLS unbiasedness
+- OLS 无偏性
+- OLS估计量的无偏性
+- OLS
 tags:
-  - proof
-  - 01_Econometrics
+- proof
+- 01_Econometrics
+- concept
 ---
-
 # OLS 估计量的无偏性
 
 ## 定理内容

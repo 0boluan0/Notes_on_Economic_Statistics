@@ -1,12 +1,13 @@
 ---
 aliases:
-  - Cochrane-Orcutt Iteration
-  - CO迭代
+- Cochrane-Orcutt Iteration
+- CO迭代
+- Cochrane-Orcutt
+- Cochrane
 tags:
-  - system
-  - 计量经济学
+- system
+- 计量经济学
 ---
-
 # Cochrane-Orcutt 迭代
 
 ## 诊断目的

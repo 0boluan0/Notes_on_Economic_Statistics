@@ -1,12 +1,12 @@
 ---
 aliases:
-  - Value at Risk
-  - 风险价值
-  - VaR
+- Value at Risk
+- 风险价值
+- VaR
+- VaR-hub
 tags:
-  - hub
+- hub
 ---
-
 # VaR（风险价值）Hub
 
 ## 核心概念

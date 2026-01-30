@@ -1,11 +1,13 @@
 ---
 aliases:
-  - Interest Rate Risk Management
-  - 利率风险
+- Interest Rate Risk Management
+- 利率风险
+- 利率风险管理-hub
+- hub
 tags:
-  - hub
+- hub
+- 金融
 ---
-
 # 利率风险管理 Hub
 
 ## 核心概念

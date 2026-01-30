@@ -1,12 +1,13 @@
 ---
 aliases:
-  - Historical Simulation VaR
-  - 历史模拟法VaR
+- Historical Simulation VaR
+- 历史模拟法VaR
+- VaR
+- 历史模拟法VaR计算
 tags:
-  - procedure
-  - 07_金融机构与风险管理
+- procedure
+- 07_金融机构与风险管理
 ---
-
 # 历史模拟法VaR计算
 
 ## 适用场景

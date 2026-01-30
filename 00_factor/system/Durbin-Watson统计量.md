@@ -1,12 +1,14 @@
 ---
 aliases:
-  - Durbin-Watson Statistic
-  - DW检验
+- Durbin-Watson Statistic
+- DW检验
+- Durbin
+- Durbin-Watson统计量
 tags:
-  - system
-  - 计量经济学
+- system
+- 计量经济学
+- 数学
 ---
-
 # Durbin-Watson 统量
 
 ## 诊断目的

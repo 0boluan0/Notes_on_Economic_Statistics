@@ -1,8 +1,9 @@
 ---
 aliases:
-  - 导数
+- 导数
+- derivative
 tags:
-  - concept
+- concept
 ---
 use $f'(x_{0})$ to  represent the derivative of $f(x)$ at $x_{0}$.
 

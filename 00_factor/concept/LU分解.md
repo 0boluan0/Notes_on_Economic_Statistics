@@ -1,12 +1,14 @@
 ---
 aliases:
-  - LU Decomposition
-  - LU Factorization
+- LU Decomposition
+- LU Factorization
+- LU
+- LU分解
 tags:
-  - 线性代数
-  - 矩阵分解
+- 线性代数
+- 矩阵分解
+- concept
 ---
-
 LU分解是将矩阵A分解为一个下三角矩阵L和一个上三角矩阵U的乘积：A = LU。
 
 ## 定义

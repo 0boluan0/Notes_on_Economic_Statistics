@@ -1,11 +1,12 @@
 ---
 aliases:
-  - Game Theory
-  - 博弈论
+- Game Theory
+- 博弈论
+- hub
+- 博弈论-hub
 tags:
-  - hub
+- hub
 ---
-
 # 博弈论 Hub
 
 ## 核心概念

@@ -1,3 +1,10 @@
+---
+aliases:
+- Marginal VaR
+- 边际VaR
+tags:
+- concept
+---
 
 
 边际VaR定义为组合VaR对某资产头寸的变化率，直观上是**组合VaR对单个资产头寸的偏导数**。边际VaR表示在当前组合中，若第$i$项资产持仓增加一微小单位，组合VaR增加多少。公式上，资产$i$的边际VaR = $\partial \text{VaR}_{\text{组合}} / \partial w_i$（$w_i$为资产权重或金额）。边际VaR反映了每增加一元资产$i$所带来的风险增量。

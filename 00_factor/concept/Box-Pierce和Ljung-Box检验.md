@@ -1,14 +1,16 @@
 ---
 aliases:
-  - Box-Pierce Q statistic
-  - Ljung-Box test
-  - Box-Pierce Q 统计量
-  - Ljung-Box 检验
+- Box-Pierce Q statistic
+- Ljung-Box test
+- Box-Pierce Q 统计量
+- Ljung-Box 检验
+- Box-Pierce和Ljung-Box检验
+- Box
 tags:
-  - proof
-  - 06_时间序列分析
+- proof
+- 06_时间序列分析
+- concept
 ---
-
 # Box-Pierce 和 Ljung-Box 检验
 
 ## 定理内容

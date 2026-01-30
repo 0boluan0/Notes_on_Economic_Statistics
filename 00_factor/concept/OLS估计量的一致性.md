@@ -1,12 +1,14 @@
 ---
 aliases:
-  - OLS consistency
-  - OLS 一致性
+- OLS consistency
+- OLS 一致性
+- OLS
+- OLS估计量的一致性
 tags:
-  - proof
-  - 01_Econometrics
+- proof
+- 01_Econometrics
+- concept
 ---
-
 # OLS 估计量的一致性
 
 ## 定理内容

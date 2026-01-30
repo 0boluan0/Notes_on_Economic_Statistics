@@ -1,13 +1,14 @@
 ---
 aliases:
-  - Bayesian Information Criterion
-  - Schwarz Criterion
-  - 施瓦茨准则
+- Bayesian Information Criterion
+- Schwarz Criterion
+- 施瓦茨准则
+- BIC
 tags:
-  - 统计学
-  - 模型选择
+- 统计学
+- 模型选择
+- concept
 ---
-
 BIC（Bayesian Information Criterion，贝叶斯信息准则）又称施瓦茨准则（Schwarz Criterion），是衡量统计模型拟合优度与模型复杂度之间权衡的信息准则。
 
 ## 定义

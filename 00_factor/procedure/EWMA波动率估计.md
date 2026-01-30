@@ -1,12 +1,12 @@
 ---
 aliases:
-  - EWMA Volatility Estimation
-  - EWMA波动率估计
+- EWMA Volatility Estimation
+- EWMA波动率估计
+- EWMA
 tags:
-  - procedure
-  - 07_金融机构与风险管理
+- procedure
+- 07_金融机构与风险管理
 ---
-
 # EWMA波动率估计
 
 ## 适用场景

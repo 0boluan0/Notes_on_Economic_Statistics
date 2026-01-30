@@ -1,12 +1,15 @@
 ---
 aliases:
-  - Linear Probability Model
-  - 线性概率模型
+- Linear Probability Model
+- 线性概率模型
+- LPM模型
+- LPM
 tags:
-  - 计量经济学
-  - 离散选择模型
+- 计量经济学
+- 离散选择模型
+- 经济
+- concept
 ---
-
 LPM模型（Linear Probability Model，线性概率模型）是用OLS估计二元被解释变量（取值为0或1）的模型。
 
 ## 模型形式

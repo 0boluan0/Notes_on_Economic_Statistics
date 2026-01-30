@@ -1,12 +1,13 @@
 ---
 aliases:
-  - Box-Jenkins Method
-  - Box-Jenkins建模方法
+- Box-Jenkins Method
+- Box-Jenkins建模方法
+- Box-Jenkins方法
+- Box
 tags:
-  - procedure
-  - 06_时间序列分析
+- procedure
+- 06_时间序列分析
 ---
-
 # Box-Jenkins方法
 
 ## 适用场景

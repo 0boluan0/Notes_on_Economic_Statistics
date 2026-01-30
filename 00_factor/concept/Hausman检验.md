@@ -1,11 +1,13 @@
 ---
 aliases:
-  - Hausman Test
+- Hausman Test
+- Hausman
+- Hausman检验
 tags:
-  - 计量经济学
-  - 统计检验
+- 计量经济学
+- 统计检验
+- concept
 ---
-
 Hausman检验用于检验变量是否内生，以及比较OLS和IV（或2SLS）估计量是否有显著差异。
 
 ## 基本原理

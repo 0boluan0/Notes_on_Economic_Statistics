@@ -1,12 +1,13 @@
 ---
 aliases:
-  - F-test
-  - F统计量
+- F-test
+- F统计量
+- F
+- F检验
 tags:
-  - system
-  - 计量经济学
+- system
+- 计量经济学
 ---
-
 # F检验
 
 ## 诊断目的

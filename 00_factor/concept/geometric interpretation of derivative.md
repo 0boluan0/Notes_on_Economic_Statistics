@@ -1,8 +1,11 @@
 ---
 aliases:
-  - 导数的几何意义
+- 导数的几何意义
+- geometric
+- geometric interpretation of derivative
+tags:
+- concept
 ---
-
 Is to finding the tangent line to $y=f(x)$at$P(x_{0},y_{0})$. 
 
 # The way to find tangent line

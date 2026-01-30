@@ -1,13 +1,15 @@
 ---
 aliases:
-  - Johansen Cointegration Test
-  - 约翰森协整检验
+- Johansen Cointegration Test
+- 约翰森协整检验
+- Johansen
+- Johansen检验
 tags:
-  - 计量经济学
-  - 时间序列
-  - 协整检验
+- 计量经济学
+- 时间序列
+- 协整检验
+- concept
 ---
-
 Johansen检验是Johansen提出的基于向量自回归模型（VAR）的协整检验方法，可以同时检验多个协整关系并估计协整向量。
 
 ## 基本思想

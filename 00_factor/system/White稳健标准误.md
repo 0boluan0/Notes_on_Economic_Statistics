@@ -1,12 +1,13 @@
 ---
 aliases:
-  - White Robust Standard Errors
-  - HC标准误
+- White Robust Standard Errors
+- HC标准误
+- White
+- White稳健标准误
 tags:
-  - system
-  - 计量经济学
+- system
+- 计量经济学
 ---
-
 # White 稳健标准误
 
 ## 诊断目的

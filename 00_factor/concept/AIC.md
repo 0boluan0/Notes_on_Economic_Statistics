@@ -1,12 +1,13 @@
 ---
 aliases:
-  - Akaike Information Criterion
-  - 赤池信息准则
+- Akaike Information Criterion
+- 赤池信息准则
+- AIC
 tags:
-  - 统计学
-  - 模型选择
+- 统计学
+- 模型选择
+- concept
 ---
-
 AIC（Akaike Information Criterion，赤池信息准则）是衡量统计模型拟合优度与模型复杂度之间权衡的信息准则。
 
 ## 定义

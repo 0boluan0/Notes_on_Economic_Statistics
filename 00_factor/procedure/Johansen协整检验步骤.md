@@ -1,13 +1,13 @@
 ---
 aliases:
-  - Johansen Cointegration Test Steps
-  - Johansen协整检验步骤
+- Johansen Cointegration Test Steps
+- Johansen协整检验步骤
+- Johansen
 tags:
-  - procedure
-  - 01_Econometrics
-  - 06_时间序列分析
+- procedure
+- 01_Econometrics
+- 06_时间序列分析
 ---
-
 # Johansen协整检验步骤
 
 ## 适用场景

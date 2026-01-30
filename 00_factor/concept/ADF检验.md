@@ -1,13 +1,15 @@
 ---
 aliases:
-  - Augmented Dickey-Fuller Test
-  - 增广迪基-福勒检验
+- Augmented Dickey-Fuller Test
+- 增广迪基-福勒检验
+- ADF检验
+- ADF
 tags:
-  - 计量经济学
-  - 时间序列
-  - 单位根检验
+- 计量经济学
+- 时间序列
+- 单位根检验
+- concept
 ---
-
 ADF检验（Augmented Dickey-Fuller Test）是DF检验的扩展版本，通过在检验回归中加入滞后项来处理误差项的自相关问题。
 
 ## 为什么需要ADF检验

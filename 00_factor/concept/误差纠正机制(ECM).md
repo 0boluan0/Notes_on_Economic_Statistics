@@ -1,14 +1,15 @@
 ---
 aliases:
-  - Error Correction Model
-  - ECM
-  - 误差修正模型
+- Error Correction Model
+- ECM
+- 误差修正模型
+- 误差纠正机制(ECM)
 tags:
-  - 计量经济学
-  - 时间序列
-  - 协整
+- 计量经济学
+- 时间序列
+- 协整
+- concept
 ---
-
 误差纠正机制（Error Correction Model，ECM）是描述协整时间序列之间长期均衡关系和短期动态调整过程的模型，将水平关系和差分关系结合在一起。
 
 ## 基本思想

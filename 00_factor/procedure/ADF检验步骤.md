@@ -1,14 +1,14 @@
 ---
 aliases:
-  - ADF Test Steps
-  - ADF检验步骤
-  - Augmented Dickey-Fuller检验
+- ADF Test Steps
+- ADF检验步骤
+- Augmented Dickey-Fuller检验
+- ADF
 tags:
-  - procedure
-  - 01_Econometrics
-  - 06_时间序列分析
+- procedure
+- 01_Econometrics
+- 06_时间序列分析
 ---
-
 # ADF检验步骤
 
 ## 适用场景

@@ -1,12 +1,13 @@
 ---
 aliases:
-  - OLS Estimation Steps
-  - 最小二乘估计步骤
+- OLS Estimation Steps
+- 最小二乘估计步骤
+- OLS估计步骤
+- OLS
 tags:
-  - procedure
-  - 01_Econometrics
+- procedure
+- 01_Econometrics
 ---
-
 # OLS估计步骤
 
 ## 适用场景

@@ -1,12 +1,13 @@
 ---
 aliases:
-  - GARCH Model Estimation Steps
-  - GARCH模型估计步骤
+- GARCH Model Estimation Steps
+- GARCH模型估计步骤
+- GARCH
 tags:
-  - procedure
-  - 06_时间序列分析
+- procedure
+- 06_时间序列分析
+- 经济
 ---
-
 # GARCH模型估计步骤
 
 ## 适用场景

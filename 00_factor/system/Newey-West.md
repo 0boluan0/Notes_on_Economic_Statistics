@@ -1,12 +1,13 @@
 ---
 aliases:
-  - Newey-West Standard Errors
-  - HAC标准误
+- Newey-West Standard Errors
+- HAC标准误
+- Newey-West
+- Newey
 tags:
-  - system
-  - 计量经济学
+- system
+- 计量经济学
 ---
-
 # Newey-West 标准误
 
 ## 诊断目的

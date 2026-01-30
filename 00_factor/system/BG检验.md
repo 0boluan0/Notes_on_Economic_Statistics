@@ -1,12 +1,13 @@
 ---
 aliases:
-  - Breusch-Godfrey Test
-  - LM自相关检验
+- Breusch-Godfrey Test
+- LM自相关检验
+- BG检验
+- BG
 tags:
-  - system
-  - 计量经济学
+- system
+- 计量经济学
 ---
-
 # BG 检验（Breusch-Godfrey 检验）
 
 ## 诊断目的

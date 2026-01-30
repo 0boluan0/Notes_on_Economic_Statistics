@@ -1,11 +1,13 @@
 ---
 aliases:
-  - Linear Algebra
-  - 线性代数
+- Linear Algebra
+- 线性代数
+- 线性代数-hub
+- hub
 tags:
-  - hub
+- hub
+- 数学
 ---
-
 # 线性代数 Hub
 
 ## 核心概念

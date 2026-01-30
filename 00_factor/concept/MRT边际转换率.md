@@ -1,3 +1,10 @@
+---
+aliases:
+- MRT
+- MRT边际转换率
+tags:
+- concept
+---
 边际转换率（Marginal Rate of Transformation，简称MRT）是经济学中的一个概念，它描述了在生产可能性曲线（Production Possibility Frontier，简称PPF）上，为了增加一种商品的生产量而必须减少另一种商品生产量的比例。简而言之，MRT衡量了在资源有限的情况下，生产两种不同商品之间的转换成本。
 
 具体来说，边际转换率是指在生产可能性边界上，增加一单位商品X的生产所需要减少的商品Y的生产数量。

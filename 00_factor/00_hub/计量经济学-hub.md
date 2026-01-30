@@ -1,11 +1,13 @@
 ---
 aliases:
-  - Econometrics
-  - 计量经济学
+- Econometrics
+- 计量经济学
+- 计量经济学-hub
+- hub
 tags:
-  - hub
+- hub
+- 经济
 ---
-
 ## 计量经济学 Hub
 
 ## 核心概念

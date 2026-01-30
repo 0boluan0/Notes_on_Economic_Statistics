@@ -1,12 +1,13 @@
 ---
 aliases:
-  - Credit Valuation Adjustment
-  - 信用估值调整
+- Credit Valuation Adjustment
+- 信用估值调整
+- CVA
 tags:
-  - 风险管理
-  - 衍生品
+- 风险管理
+- 衍生品
+- concept
 ---
-
 CVA（Credit Valuation Adjustment，信用估值调整）是衡量衍生品交易对手违约风险的调整值，是对衍生品无违约价值的信用风险调整。
 
 ## 定义

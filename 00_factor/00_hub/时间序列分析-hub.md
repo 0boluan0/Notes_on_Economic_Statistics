@@ -1,11 +1,12 @@
 ---
 aliases:
-  - Time Series Analysis
-  - 时间序列分析
+- Time Series Analysis
+- 时间序列分析
+- 时间序列分析-hub
+- hub
 tags:
-  - hub
+- hub
 ---
-
 # 时间序列分析 Hub
 
 ## 核心概念

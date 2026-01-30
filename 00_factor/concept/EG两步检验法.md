@@ -1,14 +1,16 @@
 ---
 aliases:
-  - Engle-Granger Two-Step Test
-  - EG两步法
-  - Engle-Granger Cointegration Test
+- Engle-Granger Two-Step Test
+- EG两步法
+- Engle-Granger Cointegration Test
+- EG两步检验法
+- EG
 tags:
-  - 计量经济学
-  - 时间序列
-  - 协整检验
+- 计量经济学
+- 时间序列
+- 协整检验
+- concept
 ---
-
 EG两步检验法（Engle-Granger Two-Step Test）是Engle和Granger提出的检验协整关系的两步方法，基于残差平稳性检验协整关系。
 
 ## 基本思想

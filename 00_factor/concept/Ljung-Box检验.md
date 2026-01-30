@@ -1,12 +1,14 @@
 ---
 aliases:
-  - Ljung-Box Test
-  - Box-Pierce Test
+- Ljung-Box Test
+- Box-Pierce Test
+- Ljung-Box检验
+- Ljung
 tags:
-  - 时间序列
-  - 统计检验
+- 时间序列
+- 统计检验
+- concept
 ---
-
 Ljung-Box检验是用于检验时间序列是否存在自相关的统计方法，常用于检验残差序列是否为白噪声。
 
 ## 检验统计量

@@ -1,12 +1,14 @@
 ---
 aliases:
-  - Two-Stage Least Squares
-  - 两阶段最小二乘法
+- Two-Stage Least Squares
+- 两阶段最小二乘法
+- 2SLS
+- SLS
 tags:
-  - 计量经济学
-  - 估计方法
+- 计量经济学
+- 估计方法
+- concept
 ---
-
 2SLS（Two-Stage Least Squares，两阶段最小二乘法）是解决内生性问题的常用估计方法。
 
 ## 估计步骤

@@ -1,13 +1,16 @@
 ---
 aliases:
-  - Fundamental Theorem of Calculus
-  - FTC
-  - 微积分基本定理
+- Fundamental Theorem of Calculus
+- FTC
+- 微积分基本定理
+- proof
+- 微积分基本定理-proof
 tags:
-  - proof
-  - 01_calculus
+- proof
+- 01_calculus
+- 数学
+- concept
 ---
-
 # 微积分基本定理（FTC）
 
 ## 定理内容

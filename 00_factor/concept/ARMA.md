@@ -1,12 +1,13 @@
 ---
 aliases:
-  - Autoregressive Moving Average Model
-  - 自回归移动平均模型
+- Autoregressive Moving Average Model
+- 自回归移动平均模型
+- ARMA
 tags:
-  - 时间序列
-  - 波动建模
+- 时间序列
+- 波动建模
+- concept
 ---
-
 ARMA(p,q)模型是自回归移动平均模型，结合了AR(p)和MA(q)两种模型的特点，用于描述平稳时间序列。
 
 ## 模型形式

@@ -1,3 +1,10 @@
+---
+aliases:
+- VaR标准误
+- VaR Standard Error
+tags:
+- concept
+---
 
 **VaR标准误差的公式**
 VaR的标准误差（以分位数估计的标准误为例）：

@@ -1,12 +1,12 @@
 ---
 aliases:
-  - Debt Valuation Adjustment
-
+- Debt Valuation Adjustment
+- DVA
 tags:
-  - 风险管理
-  - 衍生品
+- 风险管理
+- 衍生品
+- concept
 ---
-
 DVA（Debt Valuation Adjustment，债务估值调整）是指当银行自身违约时，从交易对手角度看银行衍生品负债价值的变化，对银行构成的一种收益调整。
 
 ## 定义

@@ -1,12 +1,13 @@
 ---
 aliases:
-  - Autoregressive Distributed Lag Model
-  - 自回归分布滞后模型
+- Autoregressive Distributed Lag Model
+- 自回归分布滞后模型
+- ADL
 tags:
-  - 计量经济学
-  - 时间序列
+- 计量经济学
+- 时间序列
+- concept
 ---
-
 ADL（Autoregressive Distributed Lag，自回归分布滞后）模型是包含被解释变量滞后项和解释变量滞后项的动态回归模型。
 
 ## 模型形式

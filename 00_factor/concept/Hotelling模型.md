@@ -1,13 +1,15 @@
 ---
 aliases:
-  - Hotelling Model
-  - Hotelling Competition
-  - Linear City Model
+- Hotelling Model
+- Hotelling Competition
+- Linear City Model
+- Hotelling模型
+- Hotelling
 tags:
-  - concept
-  - game theory
+- concept
+- game theory
+- 经济
 ---
-
 # Hotelling 模型
 
 ## 定义

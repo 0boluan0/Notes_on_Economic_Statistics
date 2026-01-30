@@ -1,13 +1,15 @@
 ---
 aliases:
-  - Chapman-Kolmogorov equation
-  - C-K 方程
-  - CK 方程
+- Chapman-Kolmogorov equation
+- C-K 方程
+- CK 方程
+- Chapman-Kolmogorov方程
+- Chapman
 tags:
-  - proof
-  - 05_随机过程
+- proof
+- 05_随机过程
+- concept
 ---
-
 # Chapman-Kolmogorov 方程
 
 ## 定理内容

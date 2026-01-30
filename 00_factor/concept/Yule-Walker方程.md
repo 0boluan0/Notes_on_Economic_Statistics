@@ -1,12 +1,14 @@
 ---
 aliases:
-  - Yule-Walker 方程
-  - Yule-Walker equations
+- Yule-Walker 方程
+- Yule-Walker equations
+- Yule-Walker方程
+- Yule
 tags:
-  - proof
-  - 06_时间序列分析
+- proof
+- 06_时间序列分析
+- concept
 ---
-
 # Yule-Walker 方程
 
 ## 定理内容

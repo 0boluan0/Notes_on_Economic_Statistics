@@ -1,11 +1,12 @@
 ---
 aliases:
-  - Volatility Modeling
-  - 波动建模
+- Volatility Modeling
+- 波动建模
+- 波动率建模-hub
+- hub
 tags:
-  - hub
+- hub
 ---
-
 # 波动率建模 Hub
 
 ## 核心概念

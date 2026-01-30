@@ -1,3 +1,10 @@
+---
+aliases:
+- 成分VaR
+- Component VaR
+tags:
+- concept
+---
 成分VaR又称风险贡献度，是将组合总VaR划分到各组成资产的一种分摊，使各部分成分VaR之和等于整体VaR。成分VaR旨在回答：“组合总VaR中有多少是由资产$i$贡献的？” 根据风险分配理论，若风险度量满足正齐次性，可应用**欧拉分解法（Euler’s Theorem）**：对于组合风险$V$，如果对任意$\lambda>0$有$V(\lambda \mathbf{x}) = \lambda V(\mathbf{x})$（线性齐次），则
   $$
   V(\mathbf{x}) = \sum_{i=1}^{N} x_i \frac{\partial V}{\partial x_i}(\mathbf{x}),

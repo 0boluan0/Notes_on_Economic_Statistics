@@ -1,3 +1,9 @@
+---
+aliases:
+- Gamma
+tags:
+- concept
+---
 # **一、定义**
 
 **Gamma**（$\Gamma$）是期权定价理论中的一个希腊字母参数，是衡量期权头寸**Delta变动速度**的指标。

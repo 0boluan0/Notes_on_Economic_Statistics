@@ -1,12 +1,13 @@
 ---
 aliases:
-  - EVT VaR Calculation
-  - 极值理论VaR计算
+- EVT VaR Calculation
+- 极值理论VaR计算
+- VaR
 tags:
-  - procedure
-  - 07_金融机构与风险管理
+- procedure
+- 07_金融机构与风险管理
+- 经济
 ---
-
 # 极值理论VaR计算
 
 ## 适用场景

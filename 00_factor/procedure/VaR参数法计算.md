@@ -1,13 +1,14 @@
 ---
 aliases:
-  - VaR Parametric Method
-  - VaR Parameter Calculation
-  - 方差-协方差法VaR
+- VaR Parametric Method
+- VaR Parameter Calculation
+- 方差-协方差法VaR
+- VaR
+- VaR参数法计算
 tags:
-  - procedure
-  - 07_金融机构与风险管理
+- procedure
+- 07_金融机构与风险管理
 ---
-
 # VaR参数法计算
 
 ## 适用场景

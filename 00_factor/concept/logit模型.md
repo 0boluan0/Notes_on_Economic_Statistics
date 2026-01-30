@@ -1,12 +1,15 @@
 ---
 aliases:
-  - Logit Model
-  - Logistic Regression
+- Logit Model
+- Logistic Regression
+- logit
+- logit模型
 tags:
-  - 计量经济学
-  - 离散选择模型
+- 计量经济学
+- 离散选择模型
+- 经济
+- concept
 ---
-
 logit模型（Logit Model）是用于分析二元被解释变量（取值为0或1）的回归模型，使用逻辑分布作为潜在变量的分布。
 
 ## 模型形式

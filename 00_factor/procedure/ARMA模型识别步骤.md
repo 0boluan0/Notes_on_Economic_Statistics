@@ -1,12 +1,14 @@
 ---
 aliases:
-  - ARMA Model Identification Steps
-  - ARMA模型定阶步骤
+- ARMA Model Identification Steps
+- ARMA模型定阶步骤
+- ARMA
+- ARMA模型识别步骤
 tags:
-  - procedure
-  - 06_时间序列分析
+- procedure
+- 06_时间序列分析
+- 经济
 ---
-
 # ARMA模型识别步骤
 
 ## 适用场景

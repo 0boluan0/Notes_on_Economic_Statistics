@@ -1,12 +1,13 @@
 ---
 aliases:
-  - Monte Carlo Simulation VaR
-  - 蒙特卡罗模拟法VaR
+- Monte Carlo Simulation VaR
+- 蒙特卡罗模拟法VaR
+- VaR
+- 蒙特卡罗模拟法VaR计算
 tags:
-  - procedure
-  - 07_金融机构与风险管理
+- procedure
+- 07_金融机构与风险管理
 ---
-
 # 蒙特卡罗模拟法VaR计算
 
 ## 适用场景

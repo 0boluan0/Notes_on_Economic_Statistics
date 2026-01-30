@@ -1,12 +1,12 @@
 ---
 aliases:
-  - Wishart Distribution
-  - Wishart
+- Wishart Distribution
+- Wishart
+- Wishart分布
 tags:
-  - concept
-  - multivariate statistics
+- concept
+- multivariate statistics
 ---
-
 # Wishart 分布
 
 ## 定义
