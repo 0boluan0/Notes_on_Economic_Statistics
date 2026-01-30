@@ -4,34 +4,89 @@
     "type": "split",
     "children": [
       {
-        "id": "98fe1617c8de2b2e",
-        "type": "tabs",
+        "id": "c8960ad3a16934f9",
+        "type": "split",
         "children": [
           {
-            "id": "1e8cdccd7773f04d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "04_method/Learning method.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
+            "id": "98fe1617c8de2b2e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "1e8cdccd7773f04d",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "04_method/Learning method.md",
+                    "mode": "source",
+                    "source": false,
+                    "backlinks": true,
+                    "backlinkOpts": {
+                      "collapseAll": false,
+                      "extraContext": false,
+                      "sortOrder": "alphabetical",
+                      "showSearch": false,
+                      "searchQuery": "",
+                      "backlinkCollapsed": false,
+                      "unlinkedCollapsed": true
+                    }
+                  },
+                  "icon": "lucide-file",
+                  "title": "Learning method"
                 }
-              },
-              "icon": "lucide-file",
-              "title": "Learning method"
-            }
+              }
+            ]
+          },
+          {
+            "id": "5c0eec04a2c3a11a",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "07b9d1f0507f8479",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "terminal:terminal",
+                  "state": {
+                    "terminal:terminal": {
+                      "cwd": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic",
+                      "focus": false,
+                      "profile": {
+                        "args": [
+                          "--login"
+                        ],
+                        "executable": "/bin/zsh",
+                        "followTheme": true,
+                        "name": "",
+                        "platforms": {
+                          "darwin": true
+                        },
+                        "pythonExecutable": "python3",
+                        "restoreHistory": false,
+                        "rightClickAction": "copyPaste",
+                        "successExitCodes": [
+                          "0",
+                          "SIGINT",
+                          "SIGTERM"
+                        ],
+                        "terminalOptions": {
+                          "documentOverride": null
+                        },
+                        "type": "integrated",
+                        "useWin32Conhost": true
+                      },
+                      "serial": null
+                    }
+                  },
+                  "pinned": true,
+                  "icon": "terminal",
+                  "title": "Terminal: ✳ 知识点分类方式"
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -249,10 +304,10 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "144ad142088a1142",
+  "active": "07b9d1f0507f8479",
   "lastOpenFiles": [
-    "99_学习情况记录/2026-01-30——Fri.md",
     "04_method/Learning method.md",
+    "99_学习情况记录/2026-01-30——Fri.md",
     "00_factor/concept/ARMA.md",
     "00_factor/concept/ARCH.md",
     "00_factor/concept/2SLS.md",
