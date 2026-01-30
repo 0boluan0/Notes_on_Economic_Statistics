@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/日记模版.md",
+                "file": "00_inbox/周记模版.md",
                 "mode": "source",
-                "source": false,
+                "source": true,
                 "backlinks": true,
                 "backlinkOpts": {
                   "collapseAll": false,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "日记模版"
+              "title": "周记模版"
             }
           }
         ]
@@ -168,7 +168,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "添加笔记属性"
+              "title": "All properties"
             }
           },
           {
@@ -202,33 +202,8 @@
             }
           },
           {
-            "id": "144ad142088a1142",
+            "id": "6d450be93ca9360d",
             "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/2026-01-30——Fri.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2026-01-30——Fri"
-            }
-          },
-          {
-            "id": "07b9d1f0507f8479",
-            "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "terminal:terminal",
               "state": {
@@ -262,17 +237,16 @@
                   "serial": null
                 }
               },
-              "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: ✳ Dataview编译失败"
+              "title": "Terminal: ✳ 周记模版规划"
             }
           }
         ],
-        "currentTab": 9
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
-    "width": 881.5
+    "width": 784.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -291,9 +265,14 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "07b9d1f0507f8479",
+  "active": "6d450be93ca9360d",
   "lastOpenFiles": [
+    "00_inbox/周记模版.md",
+    "99_学习情况记录/周记/2026-W05.md",
     "00_inbox/日记模版.md",
+    "99_学习情况记录/周记",
+    "99_学习情况记录",
+    "99_学习情况记录/2026-01-30——Fri.md",
     "99_学习情况记录/完成任务的日期/2026-01-30——Fri.md",
     "04_method/任务管理系统说明.md",
     "00_inbox/新建模版.md",
@@ -307,7 +286,6 @@
     "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "02_Economy/05_财务管理/01_财务管理概述.md",
     "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
-    "99_学习情况记录/2026-01-30——Fri.md",
     "00_factor/concept/ARMA.md",
     "00_factor/concept/ARCH.md",
     "00_factor/concept/2SLS.md",
@@ -318,8 +296,6 @@
     "00_factor/00_hub/计量经济学-hub.md",
     "00_factor/00_hub/波动率建模-hub.md",
     "00_factor/00_hub/时间序列分析-hub.md",
-    "00_factor/00_hub/增长理论-hub.md",
-    "00_factor/00_hub/博弈论-hub.md",
     "optimize_frontmatter.py",
     "01_Math/03_game theory/第1次作业.pdf",
     "00_factorization/concept",
@@ -327,8 +303,6 @@
     "00_factor_factor/concept",
     "00_factor_factor",
     "毕业论文",
-    "经济预测与决策大作业",
-    "02_Economy/08_经济预测与决策",
     "98_attachment/Pasted image 20250629104152.png",
     "98_attachment/Pasted image 20250629104144.png",
     "98_attachment/Pasted image 20250628212933.png",

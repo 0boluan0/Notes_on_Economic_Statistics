@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "周记模版",
+      "path": "00_inbox/周记模版.md"
+    },
+    {
       "basename": "日记模版",
       "path": "00_inbox/日记模版.md"
     },
@@ -39,10 +43,6 @@
     {
       "basename": "01_财务管理概述",
       "path": "02_Economy/05_财务管理/01_财务管理概述.md"
-    },
-    {
-      "basename": "2026-01-30——Fri",
-      "path": "99_学习情况记录/2026-01-30——Fri.md"
     },
     {
       "basename": "ARMA",
@@ -195,10 +195,6 @@
     {
       "basename": "GMM",
       "path": "00_factor/concept/GMM.md"
-    },
-    {
-      "basename": "格兰杰因果检验",
-      "path": "00_factor/concept/格兰杰因果检验.md"
     }
   ],
   "omittedPaths": [],
