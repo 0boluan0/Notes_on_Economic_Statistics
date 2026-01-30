@@ -29,6 +29,14 @@
       "openFileInMode": "default",
       "fileExistsMode": "Append to the bottom of the file",
       "setFileExistsBehavior": true
+    },
+    {
+      "id": "add-task",
+      "name": "添加任务",
+      "type": "Macro",
+      "command": true,
+      "script": "00_inbox/quickadd任务添加.js",
+      "arguments": []
     }
   ],
   "macros": [],

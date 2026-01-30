@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
+                "file": "00_inbox/日记模版.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors"
+              "title": "日记模版"
             }
           }
         ]
@@ -264,7 +264,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: ✳ 知识点分类方式"
+              "title": "Terminal: ✳ Dataview编译失败"
             }
           }
         ],
@@ -291,10 +291,21 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "1e8cdccd7773f04d",
+  "active": "07b9d1f0507f8479",
   "lastOpenFiles": [
-    "02_Economy/05_财务管理/01_财务管理概述.md",
+    "00_inbox/日记模版.md",
+    "99_学习情况记录/完成任务的日期/2026-01-30——Fri.md",
+    "04_method/任务管理系统说明.md",
+    "00_inbox/新建模版.md",
+    "00_inbox/新建任务模板.md",
     "04_method/Learning method.md",
+    "00_inbox/quickadd任务添加.js",
+    "00_factor/concept/Delta.md",
+    "00_factor/concept/BIC.md",
+    "02_Economy/02_public finance财政学/2_财政支出/02_外部性Externality.md",
+    "01_Math/04_多元统计分析/07_多元线性回归multivariate linear regression.md",
+    "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
+    "02_Economy/05_财务管理/01_财务管理概述.md",
     "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
     "99_学习情况记录/2026-01-30——Fri.md",
     "00_factor/concept/ARMA.md",
@@ -309,17 +320,7 @@
     "00_factor/00_hub/时间序列分析-hub.md",
     "00_factor/00_hub/增长理论-hub.md",
     "00_factor/00_hub/博弈论-hub.md",
-    "00_factor/00_hub/利率风险管理-hub.md",
-    "00_factor/00_hub/VaR-hub.md",
-    "00_factor/00_hub/DID-hub.md",
     "optimize_frontmatter.py",
-    "00_factor/concept/ADF检验.md",
-    "00_factor/framework/资本资产定价模型.md",
-    "00_factor/framework/库兹涅茨现代经济增长理论.md",
-    "00_factor/framework/刘易斯模型.md",
-    "00_inbox/人口迁移理论.md",
-    "01_Math/03_game theory/03_策略式博弈.md",
-    "01_Math/03_game theory/02_初步认识博弈.md",
     "01_Math/03_game theory/第1次作业.pdf",
     "00_factorization/concept",
     "00_factorization",
@@ -328,7 +329,6 @@
     "毕业论文",
     "经济预测与决策大作业",
     "02_Economy/08_经济预测与决策",
-    "00_factor/undefined",
     "98_attachment/Pasted image 20250629104152.png",
     "98_attachment/Pasted image 20250629104144.png",
     "98_attachment/Pasted image 20250628212933.png",

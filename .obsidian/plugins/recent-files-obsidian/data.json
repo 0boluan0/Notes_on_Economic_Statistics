@@ -1,16 +1,44 @@
 {
   "recentFiles": [
     {
+      "basename": "日记模版",
+      "path": "00_inbox/日记模版.md"
+    },
+    {
+      "basename": "新建模版",
+      "path": "00_inbox/新建模版.md"
+    },
+    {
+      "basename": "新建任务模板",
+      "path": "00_inbox/新建任务模板.md"
+    },
+    {
+      "basename": "Learning method",
+      "path": "04_method/Learning method.md"
+    },
+    {
+      "basename": "Delta",
+      "path": "00_factor/concept/Delta.md"
+    },
+    {
+      "basename": "BIC",
+      "path": "00_factor/concept/BIC.md"
+    },
+    {
+      "basename": "02_外部性Externality",
+      "path": "02_Economy/02_public finance财政学/2_财政支出/02_外部性Externality.md"
+    },
+    {
+      "basename": "07_多元线性回归multivariate linear regression",
+      "path": "01_Math/04_多元统计分析/07_多元线性回归multivariate linear regression.md"
+    },
+    {
       "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
       "path": "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
     },
     {
       "basename": "01_财务管理概述",
       "path": "02_Economy/05_财务管理/01_财务管理概述.md"
-    },
-    {
-      "basename": "Learning method",
-      "path": "04_method/Learning method.md"
     },
     {
       "basename": "2026-01-30——Fri",
@@ -171,34 +199,6 @@
     {
       "basename": "格兰杰因果检验",
       "path": "00_factor/concept/格兰杰因果检验.md"
-    },
-    {
-      "basename": "有效久期",
-      "path": "00_factor/concept/有效久期.md"
-    },
-    {
-      "basename": "曲率",
-      "path": "00_factor/concept/曲率.md"
-    },
-    {
-      "basename": "方差分解",
-      "path": "00_factor/concept/方差分解.md"
-    },
-    {
-      "basename": "效用",
-      "path": "00_factor/concept/效用.md"
-    },
-    {
-      "basename": "单位根检验",
-      "path": "00_factor/concept/单位根检验.md"
-    },
-    {
-      "basename": "协整",
-      "path": "00_factor/concept/协整.md"
-    },
-    {
-      "basename": "derivative",
-      "path": "00_factor/concept/derivative.md"
     }
   ],
   "omittedPaths": [],
