@@ -15,8 +15,15 @@ A : What is a  derivative
 * importance of derivatives to all measurements
 B : How to differentiate any function you know
 
+# 2. Applications of Differentiation
 
+# 3. The Definite Integral and its Applications
 
+# 4. Techniques of  Integration
+
+# 5. Exploring the Infinite
+
+# Exam
 
 
 

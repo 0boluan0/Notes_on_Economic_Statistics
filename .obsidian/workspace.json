@@ -11,12 +11,24 @@
             "id": "1e8cdccd7773f04d",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "01_Math/01_calculus/MIT18.01/Lecture_notes/1-7.pdf"
+                "file": "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "1-7"
+              "icon": "lucide-file",
+              "title": "MIT18.01_Single-Variable-Calculus"
             }
           }
         ]
@@ -85,6 +97,7 @@
       {
         "id": "e0fa6f818c861393",
         "type": "tabs",
+        "dimension": 75,
         "children": [
           {
             "id": "d5dd85784b1fe9ec",
@@ -132,21 +145,6 @@
             }
           },
           {
-            "id": "a0580e7d1cb5a5c4",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "01_Math/01_calculus/MIT18.01/Lecture_notes/1-7.pdf",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of 1-7"
-            }
-          },
-          {
             "id": "f004a8247c6cf59c",
             "type": "leaf",
             "state": {
@@ -176,10 +174,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "01_Math/01_calculus/MIT18.01/Lecture_notes/1-7.pdf"
+                "file": "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for 1-7"
+              "title": "File properties for MIT18.01_Single-Variable-Calculus"
             }
           },
           {
@@ -233,7 +231,29 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 7
+      },
+      {
+        "id": "8532e59675ffc5f1",
+        "type": "tabs",
+        "dimension": 25,
+        "children": [
+          {
+            "id": "a0580e7d1cb5a5c4",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of MIT18.01_Single-Variable-Calculus"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
@@ -258,10 +278,24 @@
   },
   "active": "1e8cdccd7773f04d",
   "lastOpenFiles": [
+    "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
+    "01_Math/01_calculus/Lecture_notes/9-16.pdf",
+    "01_Math/01_calculus/Lecture_notes/26-38.pdf",
+    "01_Math/01_calculus/Lecture_notes/18-25.pdf",
+    "01_Math/01_calculus/Lecture_notes/1-7.pdf",
+    "01_Math/01_calculus/Lecture_notes",
+    "01_Math/01_calculus/MIT18.01/MIT18.01_Single-Variable-Calculus.md",
+    "01_Math/01_calculus/MIT18.01/Lecture_notes/1-7.pdf",
+    "01_Math/02_linear algebra/Introduction_to_Linear_Algebra(Strang).pdf",
+    "01_Math/02_linear algebra/linear_algebra_and_its_applications_4th.pdf",
+    "01_Math/02_linear algebra/02_vector spaces and subspace.md",
+    "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md",
+    "01_Math/02_linear algebra/00_perface.md",
+    "01_Math/03_game theory/02_初步认识博弈.md",
+    "01_Math/03_game theory/01_导论.md",
+    "00_factor/concept/geometric interpretation of derivative.md",
     "01_Math/01_calculus/MIT18.01/Lecture_notes/9-16.pdf",
     "01_Math/01_calculus/MIT18.01/Lecture_notes/18-25.pdf",
-    "01_Math/01_calculus/MIT18.01/Lecture_notes/26-38.pdf",
-    "01_Math/01_calculus/MIT18.01/Lecture_notes/1-7.pdf",
     "00_factor/concept/AIC.md",
     "00_factor/concept/ADF检验.md",
     "00_factor/concept/ADL.md",
@@ -274,26 +308,12 @@
     "2026-W05.md",
     "00_factor/concept/F检验.md",
     "99_学习情况记录/周记/2026-W05.md",
-    "99_学习情况记录/周记",
-    "99_学习情况记录",
     "99_学习情况记录/2026-01-30——Fri.md",
     "99_学习情况记录/完成任务的日期/2026-01-30——Fri.md",
     "04_method/任务管理系统说明.md",
     "04_method/Learning method.md",
-    "00_inbox/quickadd任务添加.js",
     "00_factor/concept/Delta.md",
     "00_factor/concept/BIC.md",
-    "02_Economy/02_public finance财政学/2_财政支出/02_外部性Externality.md",
-    "01_Math/04_多元统计分析/07_多元线性回归multivariate linear regression.md",
-    "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
-    "02_Economy/05_财务管理/01_财务管理概述.md",
-    "02_Economy/09_Advanced Econometrics    Untitled/essay of Advanced Econometrics.md",
-    "00_factor/concept/ARMA.md",
-    "00_factor/concept/ARCH.md",
-    "optimize_frontmatter.py",
-    "01_Math/03_game theory/第1次作业.pdf",
-    "00_factorization/concept",
-    "00_factorization",
     "98_attachment/Pasted image 20250629104152.png",
     "98_attachment/Pasted image 20250629104144.png",
     "98_attachment/Pasted image 20250628212933.png",

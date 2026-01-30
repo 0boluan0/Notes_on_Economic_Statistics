@@ -1,20 +1,40 @@
 {
   "recentFiles": [
     {
-      "basename": "1-7",
-      "path": "01_Math/01_calculus/MIT18.01/Lecture_notes/1-7.pdf"
+      "basename": "MIT18.01_Single-Variable-Calculus",
+      "path": "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md"
     },
     {
-      "basename": "9-16",
-      "path": "01_Math/01_calculus/MIT18.01/Lecture_notes/9-16.pdf"
+      "basename": "Introduction_to_Linear_Algebra(Strang)",
+      "path": "01_Math/02_linear algebra/Introduction_to_Linear_Algebra(Strang).pdf"
     },
     {
-      "basename": "18-25",
-      "path": "01_Math/01_calculus/MIT18.01/Lecture_notes/18-25.pdf"
+      "basename": "linear_algebra_and_its_applications_4th",
+      "path": "01_Math/02_linear algebra/linear_algebra_and_its_applications_4th.pdf"
     },
     {
-      "basename": "26-38",
-      "path": "01_Math/01_calculus/MIT18.01/Lecture_notes/26-38.pdf"
+      "basename": "02_vector spaces and subspace",
+      "path": "01_Math/02_linear algebra/02_vector spaces and subspace.md"
+    },
+    {
+      "basename": "01_matrices and Gaussian Elimination",
+      "path": "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md"
+    },
+    {
+      "basename": "00_perface",
+      "path": "01_Math/02_linear algebra/00_perface.md"
+    },
+    {
+      "basename": "02_初步认识博弈",
+      "path": "01_Math/03_game theory/02_初步认识博弈.md"
+    },
+    {
+      "basename": "01_导论",
+      "path": "01_Math/03_game theory/01_导论.md"
+    },
+    {
+      "basename": "geometric interpretation of derivative",
+      "path": "00_factor/concept/geometric interpretation of derivative.md"
     },
     {
       "basename": "AIC",
@@ -149,14 +169,6 @@
       "path": "01_Math/03_game theory/03_策略式博弈.md"
     },
     {
-      "basename": "02_初步认识博弈",
-      "path": "01_Math/03_game theory/02_初步认识博弈.md"
-    },
-    {
-      "basename": "01_导论",
-      "path": "01_Math/03_game theory/01_导论.md"
-    },
-    {
       "basename": "07_子博弈不完全信息",
       "path": "01_Math/03_game theory/07_子博弈不完全信息.md"
     },
@@ -171,34 +183,6 @@
     {
       "basename": "第1次作业",
       "path": "01_Math/03_game theory/第1次作业.pdf"
-    },
-    {
-      "basename": "Bertrand竞争",
-      "path": "00_factor/concept/Bertrand竞争.md"
-    },
-    {
-      "basename": "最小二乘法",
-      "path": "00_factor/procedure/最小二乘法.md"
-    },
-    {
-      "basename": "相关系数",
-      "path": "00_factor/procedure/相关系数.md"
-    },
-    {
-      "basename": "09_利率风险",
-      "path": "02_Economy/07_金融机构与风险管理/09_利率风险.md"
-    },
-    {
-      "basename": "Hotelling模型",
-      "path": "00_factor/concept/Hotelling模型.md"
-    },
-    {
-      "basename": "Hausman检验",
-      "path": "00_factor/concept/Hausman检验.md"
-    },
-    {
-      "basename": "00_perface",
-      "path": "01_Math/02_linear algebra/00_perface.md"
     }
   ],
   "omittedPaths": [],
