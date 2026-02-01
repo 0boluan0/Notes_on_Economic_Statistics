@@ -11,17 +11,17 @@
 
 ### 2. Matrices
 - Definition and Notation
-- Identity Matrix
-- Diagonal Matrix
+- Identity Matrix (单位矩阵)
+- Diagonal Matrix (对角矩阵)
 - Matrix Operations:
-  - Scalar Multiplication
-  - Matrix Addition
-  - Matrix Multiplication
-- Matrix Inverse
-- Orthogonal Matrices
-- Rank of a Matrix
+  - Scalar Multiplication (标量乘法)
+  - Matrix Addition (矩阵加法)
+  - Matrix Multiplication (矩阵乘法)
+- Matrix Inverse (矩阵逆)
+- Orthogonal Matrices (正交矩阵)
+- Rank of a Matrix (矩阵的秩)
 
-### 3. Determinants
+### 3. Determinants (行列式)
 - Definition of Determinants
 - Properties:
   - Determinant of Product of Matrices
@@ -29,27 +29,27 @@
   - Determinant of Diagonal Matrices
   - Determinants and Orthogonal Matrices
 
-### 4. Eigenvalues and Eigenvectors
+### 4. Eigenvalues and Eigenvectors (特征值与特征向量)
 - Definitions
 - Properties:
-  - Spectral Representation
+  - Spectral Representation (谱表示)
   - Trace and Determinant Using Eigenvalues
 
 ### 5. Positive Definite and Non-Negative Definite Matrices
 - Definitions and Properties
-- Quadratic Forms
+- Quadratic Forms (二次型)
 
 ### 6. Square Root of a Matrix
 - Definition
 - Symmetry and Properties
 - Transformation of Quadratic Forms
 
-### 7. Random Vectors and Random Matrices
+### 7. Random Vectors and Random Matrices (随机向量与随机矩阵)
 - Definitions
-- Mean and Variance-Covariance Matrix
+- Mean and Variance-Covariance Matrix (均值和方差-协方差矩阵)
 - Linear Functions of Random Vectors
 
-### 8. Correlation Matrix
+### 8. Correlation Matrix (相关系数矩阵)
 - Definition and Properties
 - Relationship with Variance-Covariance Matrix
 

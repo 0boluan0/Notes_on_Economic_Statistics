@@ -1,5 +1,5 @@
 
-# 多变量分析Multivariate analysis
+# 多变量分析(Multivariate analysis)
 
 # 多元方法的目标
 
@@ -11,21 +11,21 @@
 
 # 数据的组织
 
-## data 
+## data (数据)
 
-对多个变量或特征进行的测量
+对多个变量(variable)或特征(feature)进行的测量
 
-## array
+## array (数组)
 
 数组：每当调查人员寻求理解社会或物理现象时，选择数量 p ≥ 1 的变量或字符进行记录，就会出现多变量。
 
-# 描述性统计Descriptive Statistics
+# 描述性统计(Descriptive Statistics)
 
-## 样本均值 
+## 样本均值 (Sample Mean)
 
  计算过程略
 
-##  样本方差
+##  样本方差 (Sample Variance)
 
 对于样本 ${x_1, x_2, \dots, x_n}$，样本方差的计算公式为：
 
@@ -37,12 +37,12 @@ $$
 
 其中：
 
-• $n$ 是样本数。
+• $n$ 是样本数(sample size)。
 
-• $\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i$ 是样本均值。
+• $\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i$ 是样本均值(sample mean)。
 
-• $S^2_x$ 是样本方差。
-## 样本协方差
+• $S^2_x$ 是样本方差(sample variance)。
+## 样本协方差 (Sample Covariance)
 
 对于样本 ${(x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)}$，样本协方差的计算公式为：
 
@@ -55,9 +55,9 @@ $$
 其中：
 
 • $\bar{x}$ 和 $\bar{y}$ 分别是 $x$ 和 $y$ 的样本均值。
-• $S_{xy}$ 是样本协方差。
+• $S_{xy}$ 是样本协方差(sample covariance)。
 
-## 样本相关系数
+## 样本相关系数 (Sample Correlation Coefficient)
 
 $$
 
@@ -68,7 +68,7 @@ $$
 其中：
 
 • $S_{xy}$ 是样本协方差。
-• $S_x$ 和 $S_y$ 分别是 $x$ 和 $y$ 的样本标准差，$S_x = \sqrt{S^2_x}, S_y = \sqrt{S^2_y}$。
+• $S_x$ 和 $S_y$ 分别是 $x$ 和 $y$ 的样本标准差(sample standard deviation)，$S_x = \sqrt{S^2_x}, S_y = \sqrt{S^2_y}$。
 
 # 基本描述统计矩阵
 

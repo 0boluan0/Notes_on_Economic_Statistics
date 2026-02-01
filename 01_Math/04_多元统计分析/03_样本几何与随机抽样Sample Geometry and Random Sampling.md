@@ -1,41 +1,41 @@
 
-# Chapter 3: Sample Geometry and Random Sampling
+# Chapter 3: Sample Geometry and Random Sampling (样本几何与随机抽样)
 
-## 1. The Geometry of the Sample
-- **Data Matrix Representation**
+## 1. The Geometry of the Sample (样本的几何结构)
+- **Data Matrix Representation (数据矩阵表示)**
   - Structure and notation of the data matrix.
-- **Mean-Corrected Vector and Deviation Vector**
+- **Mean-Corrected Vector and Deviation Vector (均值修正向量与偏差向量)**
   - Definitions and mathematical representations.
-- **Angles Between Deviation Vectors**
+- **Angles Between Deviation Vectors (偏差向量之间的夹角)**
   - Relationship between cosine of angles and correlation coefficients.
 
 ## 2. Random Sample and the Expected Values of the Sample Mean and Covariance Matrix
-- **Definition of the Sample Covariance Matrix**
+- **Definition of the Sample Covariance Matrix (样本协方差矩阵的定义)**
   - Formula and its components.
-- **Generalized Variance**
+- **Generalized Variance (广义方差)**
   - Interpretation using determinant of the covariance matrix.
   - Trace of the covariance matrix as a measure of total variability.
 
 ## 3. Geometric Interpretation of Generalized Variance
-- **Area and Volume**
+- **Area and Volume (面积与体积)**
   - Calculation of areas and volumes in low-dimensional and high-dimensional spaces.
-- **High-Dimensional Covariance Characteristics**
+- **High-Dimensional Covariance Characteristics (高维协方差特征)**
   - Implications when the sample size ($n$) is less than the number of variables ($p$).
 
 ## 4. Matrix Representation of the Sample Covariance Matrix
-- **Matrix Representation**
+- **Matrix Representation (矩阵表示)**
   - Deviation matrix and its role in computing the covariance matrix.
-- **Determinant and Eigenvalues**
+- **Determinant and Eigenvalues (行列式与特征值)**
   - Use of eigenvalues to interpret data variability in $p$-space.
-- **Rank-Deficient Cases**
+- **Rank-Deficient Cases (秩亏缺情况)**
   - Handling cases where the covariance matrix determinant is zero.
 
 ## 5. Standardized Covariance Matrix and Correlation Matrix
-- **Standardization**
+- **Standardization (标准化)**
   - Transforming variables to obtain the correlation matrix.
-- **Correlation Matrix Representation**
+- **Correlation Matrix Representation (相关系数矩阵表示)**
   - Mathematical formulation of the sample correlation matrix.
-- **Relationship Between Covariance and Correlation Matrices**
+- **Relationship Between Covariance and Correlation Matrices (协方差矩阵与相关系数矩阵的关系)**
   - Conversion formulas using diagonal scaling matrices.
 
 -----
