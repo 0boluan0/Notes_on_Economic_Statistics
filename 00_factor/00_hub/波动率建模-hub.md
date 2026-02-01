@@ -40,5 +40,5 @@ tags:
 
 ## 课程笔记
 
-- [[../02_Economy/07_金融机构与风险管理/10_波动率.md]]
-- [[../01_Math/06_时间序列分析/04_波动建模 Modeling Volatility.md]]
+- [[10_波动率]]
+- [[04_波动建模 Modeling Volatility]]

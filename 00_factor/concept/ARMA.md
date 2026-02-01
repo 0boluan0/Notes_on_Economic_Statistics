@@ -52,3 +52,7 @@ $$1 - \phi_1 z - \phi_2 z^2 - \cdots - \phi_p z^p = 0$$
 - **BIC**：-2ln(L) + k·ln(T)
 
 相关链接: [[自相关函数]], [[偏自相关函数]], [[ARCH]], [[GARCH]], [[平稳性]], [[AIC]], [[BIC]]
+
+## source_notes
+
+- [[03_平稳时间序列模型#1.1 自回归移动平均模型ARMA(p,q) model]]
