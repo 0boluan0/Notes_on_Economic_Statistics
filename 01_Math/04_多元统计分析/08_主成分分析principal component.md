@@ -47,14 +47,14 @@
 • 主成分定义为：
 $$ Y_i = e_i’X = \sum_{j=1}^p e_{ij}X_j, \quad i = 1, 2, \dots, p $$
 
-就是按从大到小的顺序对特征值排序,然后第一个特征值对应的特征向量乘以x1,x2……xn得到第一个主成分Y1.以此类推.
+按特征值从大到小排序；第一个主成分对应的特征向量为 $e_1$，$Y_1=e_1'X$，以此类推。~~就是按从大到小的顺序对特征值排序,然后第一个特征值对应的特征向量乘以x1,x2……xn得到第一个主成分Y1.以此类推.~~
 
 • 相关性质：
 
 • $E(Y_i) = e_i’\mu$
-• $\text{Var}(Y_i) = e_i’\Sigma e_i = \lambda_i$==每个主成分对应的var就是对应的特征值==
-• $\text{Cov}(Y_i, Y_k) = 0, \quad \text{for } i \neq k$所有主成分正交
-• 总变异：$\text{tr}(\Sigma) = \sum_{i=1}^p \lambda_i = \sum_{i=1}^p \text{Var}(Y_i)$意思是所有的变异都能被新的变量解释.但是实际上还是选尽可能少的.
+• $\text{Var}(Y_i) = e_i’\Sigma e_i = \lambda_i$（每个主成分的方差等于相应特征值）
+• $\text{Cov}(Y_i, Y_k) = 0, \quad i \neq k$（主成分两两不相关）
+• 总变异：$\text{tr}(\Sigma) = \sum_{i=1}^p \lambda_i = \sum_{i=1}^p \text{Var}(Y_i)$。~~意思是所有的变异都能被新的变量解释.但是实际上还是选尽可能少的.~~ 实务中通常选取前几个主成分以达到较高的累计方差解释率。
 
 ==课后题考到了$\rho_{Y_iZ_j} = w_{ij} \cdot \sqrt{\lambda_i}$,但是上课没教==
 
@@ -68,7 +68,7 @@ $$ \frac{\lambda_k}{\sum_{i=1}^p \lambda_i} $$
 
 ## **2.2Principal Components of Standardized Variables**
 
-用协方差矩阵算和用相关系数矩阵算出来的不一样.效果也不一样.
+基于协方差矩阵与基于相关矩阵的 PCA 结果不同；前者受量纲影响，后者在标准化后消除量纲差异。~~用协方差矩阵算和用相关系数矩阵算出来的不一样.效果也不一样.~~
 
 • 标准化变量：$Z_j = \frac{X_j - \mu_j}{\sqrt{\sigma_{jj}}}$。
 • 标准化后的协方差矩阵为相关矩阵 $\rho$。
@@ -90,9 +90,9 @@ $$ \frac{\sum_{i=1}^k \lambda_i}{p} $$
 
 # **大样本性质**
 
-• 当样本量 $n$ 足够大时，特征值和特征向量的分布性质：
-• $\sqrt{n}(\lambda_i - \hat{\lambda}_i) \sim N(0, 2\lambda_i^2)$。
-• 特征值和特征向量之间独立分布。
-• 特征值 $\lambda_i$ 的置信区间：
-$$ \hat{\lambda}_i \pm Z_{\alpha/2} \sqrt{\frac{2\lambda_i^2}{n}} $$
+• 当样本量 $n$ 足够大且在正态等正则条件下，样本特征值具备渐近正态性：
+• $\sqrt{n}(\hat{\lambda}_i - \lambda_i) \overset{a}{\sim} N\!\big(0,\,2\lambda_i^2\big)$。~~$\sqrt{n}(\lambda_i - \hat{\lambda}_i) \sim N(0, 2\lambda_i^2)$~~
+• 特征值/特征向量的联合性质依赖分布假设，独立性一般需额外条件。~~特征值和特征向量之间独立分布。~~
+• $\lambda_i$ 的近似置信区间：
+$$ \hat{\lambda}_i \pm Z_{\alpha/2} \sqrt{\tfrac{2\lambda_i^2}{n}} $$
 ==大样本性质不考==
