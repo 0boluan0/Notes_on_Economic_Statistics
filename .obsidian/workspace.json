@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Computer_Science/01_CS50/CS50_main.md",
+                "file": "03_Computer_Science/00_CSdiy/Overview & Study Record.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "CS50_main"
+              "title": "Overview & Study Record"
             }
           }
         ]
@@ -173,9 +173,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "03_Computer_Science/00_CSdiy/Overview & Study Record.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for Overview & Study Record"
             }
           },
           {
@@ -242,12 +244,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "03_Computer_Science/00_CSdiy/Overview & Study Record.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Overview & Study Record"
             }
           }
         ]
@@ -273,7 +276,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "6d450be93ca9360d",
+  "active": "1e8cdccd7773f04d",
   "lastOpenFiles": [
     "03_Computer_Science/01_CS50/CS50_main.md",
     "03_Computer_Science/00_CSdiy/Overview & Study Record.md",
