@@ -197,7 +197,7 @@ Phase 2｜把课程“结构化为可排程大纲”
 
 1. MIT 6.100L（Python）
     
-    讲次：YouTube playlist 提供 Lecture 1..26（标题可见）
+    讲次：YouTube playlist 提供 Lecture 1–26（标题可见）
     
     排程粒度：每次 1 讲（必要时拆半讲）。
     
@@ -223,7 +223,7 @@ Phase 2｜把课程“结构化为可排程大纲”
     
 4. SQLBolt
     
-    Lessons 列表在 Review 页可见：Lesson 1..（含 joins/null/expressions/aggregates…）
+    Lessons 列表在 Review 页可见：Lesson 1–N（含 joins/null/expressions/aggregates 等）
     
     排程粒度：每天 1 个 lesson 或 1 个 review + 10 道变体题（同一库）。
     
@@ -247,19 +247,19 @@ Phase 2｜把课程“结构化为可排程大纲”
     
 7. D2L（DL, PyTorch）
     
-    官方 TOC 完整列出章节（2.1 Data Manipulation、3.4 Linear Regression from Scratch、4.4 Softmax from Scratch、5 MLP、6 Modules…）
+    官方 TOC 完整列出章节（2.1 Data Manipulation、3.4 Linear Regression from Scratch、4.4 Softmax from Scratch、5 MLP、6 Modules 等）
     
     排程粒度：每天 1–2 小节（保证“从零实现”与“简洁实现”都写一遍）。
     
 8. FPP3（时间序列/预测）
     
-    官方目录页列出 Chapter 1..13 及每节标题，适合按章排周
+    官方目录页列出 Chapter 1–13 及每节标题，适合按章排周
     
     排程粒度：每周 1 章（或半章）+ Python 等价实现 + 滚动 CV。
     
 9. CS224W（图 ML）
     
-    公开 schedule（Lecture 1..19）+ 作业/colab节点齐全
+    公开 schedule（Lecture 1–19）+ 作业/colab 节点齐全
     
     排程粒度：每周 2 个 lecture + 1 次 coding（Colab/自写）+ 1 次从零实现（不依赖 PyG 的核心层）。
     

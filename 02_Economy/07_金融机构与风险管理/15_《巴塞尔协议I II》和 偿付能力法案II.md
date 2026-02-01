@@ -13,7 +13,7 @@ Basel II(2004)       三支柱：最低资本 + 监管审查 + 市场披露
    ├─信用风险   SA / IRB
    ├─市场风险   承接 1996
    └─操作风险   BIA / SA / AMA
-Basel III            引入杠杆率、资本缓冲、LCR/NSFR~~ (略)~~
+Basel III            引入杠杆率、资本缓冲、LCR/NSFR
 ```
 
 ---

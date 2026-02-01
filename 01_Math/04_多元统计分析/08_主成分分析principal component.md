@@ -35,7 +35,7 @@
 
 # **1.Principal Component Analysis (PCA)**
 
-简介略
+本节概览 PCA 的目的与应用场景（降维与解释），形式化推导见后续小节。~~简介略~~
 
 # **2. Population Principal Components**
 

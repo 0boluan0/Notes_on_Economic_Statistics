@@ -763,7 +763,7 @@ $$
 x^\prime A x= \mathrm{tr} \bigl(x^\prime A x\bigr) = \mathrm{tr}\bigl(A  x x^\prime\bigr),
 $$
 这里 $A$ 是 $k \times k$ 的对称矩阵，$x$ 是 $k \times 1$ 的向量。
-• 为啥可以写成迹？因为标量（即 $1 \times 1$ 矩阵）的迹就是它本身，而且使用迹可以帮助在推导、化简中做“循环换位”，比如 $\mathrm{tr}(ABC) = \mathrm{tr}(BCA) = \mathrm{tr}(CAB)$，经常用来简化带有二次型的式子。
+• 为什么可以写成迹？因为标量（$1\times1$ 矩阵）的迹等于其本身；使用迹可在推导中做“循环换位”简化，如 $\mathrm{tr}(ABC)=\mathrm{tr}(BCA)=\mathrm{tr}(CAB)$，常用于二次型化简。~~为啥~~
 
 **一个简单例子：**
 
