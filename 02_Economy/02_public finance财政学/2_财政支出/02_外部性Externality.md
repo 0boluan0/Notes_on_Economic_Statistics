@@ -2,10 +2,10 @@
 * Bart有一个工厂，并向一条没有主人的河流里排放污水
 * Lisa靠在这条河里捕鱼维生。
 
-# 定义
+# 定义(Definition)
 
 * Externality : An activity of one entity that affects the welfare of another entity in a way that is outside the market mechanism。
-* 某一实体的活动以没有反映在市场价格中的某种方式直接影响他人福利，这种影响被称为外部性。
+* 某一实体的活动以没有反映在市场价格中的某种方式直接影响他人福利，这种影响被称为外部性(externality)。
 eg：Bart向河中排放了污水，他本应支付排污的成本但是他事实上并未支付，而是产生了负的外部性。
 
 # 对于负外部性的处理

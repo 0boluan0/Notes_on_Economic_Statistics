@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Computer_Science/00_CSdiy/Overview & Study Record.md",
+                "file": "AGENTS.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Overview & Study Record"
+              "title": "AGENTS"
             }
           }
         ]
@@ -97,7 +97,7 @@
       {
         "id": "e0fa6f818c861393",
         "type": "tabs",
-        "dimension": 54.64759959141981,
+        "dimension": 79.57099080694586,
         "children": [
           {
             "id": "d5dd85784b1fe9ec",
@@ -173,11 +173,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "03_Computer_Science/00_CSdiy/Overview & Study Record.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for Overview & Study Record"
+              "title": "File properties"
             }
           },
           {
@@ -229,14 +227,66 @@
               "icon": "terminal",
               "title": "Terminal: ✳ Single Character Message"
             }
+          },
+          {
+            "id": "79b9de9e77650e91",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "terminal:terminal",
+              "state": {
+                "terminal:terminal": {
+                  "cwd": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic",
+                  "focus": false,
+                  "profile": {
+                    "args": [
+                      "--login"
+                    ],
+                    "executable": "/bin/zsh",
+                    "followTheme": true,
+                    "name": "",
+                    "platforms": {
+                      "darwin": true
+                    },
+                    "pythonExecutable": "python3",
+                    "restoreHistory": false,
+                    "rightClickAction": "copyPaste",
+                    "successExitCodes": [
+                      "0",
+                      "SIGINT",
+                      "SIGTERM"
+                    ],
+                    "terminalOptions": {
+                      "documentOverride": null
+                    },
+                    "type": "integrated",
+                    "useWin32Conhost": true
+                  },
+                  "serial": null
+                }
+              },
+              "pinned": true,
+              "icon": "terminal",
+              "title": "Terminal: zsh"
+            }
+          },
+          {
+            "id": "8c987148f8ae855b",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {},
+              "icon": "lucide-file-signature",
+              "title": "Footnotes"
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       },
       {
         "id": "8532e59675ffc5f1",
         "type": "tabs",
-        "dimension": 45.35240040858019,
+        "dimension": 20.42900919305414,
         "children": [
           {
             "id": "a0580e7d1cb5a5c4",
@@ -244,13 +294,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Computer_Science/00_CSdiy/Overview & Study Record.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Overview & Study Record"
+              "title": "Outline"
             }
           }
         ]
@@ -273,13 +322,27 @@
       "obsidian-git:Open Git source control": false,
       "omnisearch:Omnisearch": false,
       "templater-obsidian:Templater": false,
-      "terminal:Open terminal": false
+      "terminal:Open terminal": false,
+      "canvas:Create new canvas": false,
+      "markdown-importer:Open format converter": false
     }
   },
-  "active": "1e8cdccd7773f04d",
+  "active": "79b9de9e77650e91",
   "lastOpenFiles": [
-    "03_Computer_Science/01_CS50/CS50_main.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "00_inbox/add_done_item.md",
+    "99_学习情况记录/2026-02-01——Sun.md",
+    "Tasks Plugin - Review and check your Statuses 2025-12-25 22-10-20.md",
+    "README.md",
+    "99_学习情况记录/每日大事件/2026-01-31——金融.md",
+    "99_学习情况记录/每日大事件",
+    "scripts/today.py",
+    "scripts",
+    "untitled folder",
+    "obsidian-skills-main.zip",
     "03_Computer_Science/00_CSdiy/Overview & Study Record.md",
+    "03_Computer_Science/01_CS50/CS50_main.md",
     "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
     "00_inbox/PINNs.md",
     "00_factor/00_hub/VaR-hub.md",
@@ -298,23 +361,11 @@
     "01_Math/04_多元统计分析/10_不考,跳过.md",
     "01_Math/04_多元统计分析/08_主成分分析principal component.md",
     "01_Math/04_多元统计分析/09_因子分析Factor Analysis and Inference for Structured.md",
-    "01_Math/04_多元统计分析/07_多元线性回归multivariate linear regression.md",
-    "01_Math/04_多元统计分析/05_ 总体平均向量的推论.md",
-    "01_Math/04_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
-    "01_Math/04_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
-    "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
-    "01_Math/04_多元统计分析/01_introduction简介.md",
     "01_Math/03_game theory/第1次作业补充.pdf",
     "01_Math/03_game theory/第1次作业.pdf",
-    "01_Math/03_game theory/06_扩展性博弈.md",
     "00_inbox/术语翻译对照表.csv",
     "01_Math/01_calculus/Lecture_notes/9-16.pdf",
     "01_Math/01_calculus/Lecture_notes/26-38.pdf",
-    "01_Math/01_calculus/Lecture_notes/18-25.pdf",
-    "01_Math/01_calculus/Lecture_notes/1-7.pdf",
-    "01_Math/01_calculus/Lecture_notes",
-    "01_Math/01_calculus/MIT18.01/Lecture_notes/1-7.pdf",
-    "01_Math/02_linear algebra/Introduction_to_Linear_Algebra(Strang).pdf",
     "98_attachment/Pasted image 20250629104152.png",
     "98_attachment/Pasted image 20250629104144.png",
     "98_attachment/Pasted image 20250628212933.png",
