@@ -1,6 +1,5 @@
 ---
 aliases:
-- Discrete Choice Model
 - 定性选择模型
 - 离散选择模型
 tags:

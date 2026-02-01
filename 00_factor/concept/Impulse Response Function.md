@@ -1,8 +1,7 @@
 ---
 aliases:
-- Impulse Response Function
-- IRF
 - 脉冲响应函数
+- IRF
 tags:
 - 时间序列
 - VAR模型

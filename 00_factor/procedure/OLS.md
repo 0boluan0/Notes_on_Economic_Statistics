@@ -1,8 +1,7 @@
 ---
 aliases:
-- OLS
-- Ordinary least square
 - 最小二乘法
+- Ordinary least square
 tags:
 - procedure
 ---

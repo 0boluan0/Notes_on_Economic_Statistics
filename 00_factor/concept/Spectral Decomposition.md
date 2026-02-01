@@ -1,9 +1,8 @@
 ---
 aliases:
-- Spectral Decomposition
+- 谱分解
 - Eigenvalue Decomposition
 - Spectral Theorem
-- 谱分解
 tags:
 - concept
 - linear algebra

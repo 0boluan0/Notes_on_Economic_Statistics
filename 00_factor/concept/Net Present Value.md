@@ -1,8 +1,7 @@
 ---
 aliases:
-- Net Present Value
-- NPV
 - 净现值法
+- NPV
 tags:
 - 财务管理
 - 投资决策

@@ -1,6 +1,5 @@
 ---
 aliases:
-- Gauss-Markov theorem
 - Gauss-Markov 定理
 - OLS 最优性
 - 高斯-马尔可夫定理

@@ -1,6 +1,5 @@
 ---
 aliases:
-- Marshall's Economics
 - 剑桥学派
 - 马歇尔经济学
 tags:

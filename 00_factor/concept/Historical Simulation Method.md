@@ -1,6 +1,5 @@
 ---
 aliases:
-- Historical Simulation Method
 - 历史模拟法
 - Historical Simulation
 tags:

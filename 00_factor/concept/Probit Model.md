@@ -1,6 +1,5 @@
 ---
 aliases:
-- Probit Model
 - probit模型
 - probit
 tags:

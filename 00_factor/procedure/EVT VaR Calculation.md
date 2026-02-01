@@ -1,6 +1,5 @@
 ---
 aliases:
-- EVT VaR Calculation
 - 极值理论VaR计算
 - VaR
 tags:

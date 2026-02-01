@@ -1,8 +1,7 @@
 ---
 aliases:
-- Vector Moving Average
 - 向量移动平均
-- VMA
+- Vector Moving Average
 tags:
 - 时间序列
 - 多变量模型

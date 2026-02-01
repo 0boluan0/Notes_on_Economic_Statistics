@@ -1,7 +1,5 @@
 ---
 aliases:
-- duration
-- Duration
 - 久期
 tags:
 - concept

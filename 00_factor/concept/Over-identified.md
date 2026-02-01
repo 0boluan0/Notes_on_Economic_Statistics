@@ -1,6 +1,5 @@
 ---
 aliases:
-- Over-identified
 - 过度识别
 tags:
 - 计量经济学

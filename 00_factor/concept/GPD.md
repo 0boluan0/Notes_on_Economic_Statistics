@@ -1,6 +1,5 @@
 ---
 aliases:
-- GPD
 tags:
 - concept
 ---

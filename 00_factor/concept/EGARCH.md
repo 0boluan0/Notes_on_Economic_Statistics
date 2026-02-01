@@ -1,6 +1,5 @@
 ---
 aliases:
-- EGARCH
 tags:
 - concept
 ---

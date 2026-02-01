@@ -1,6 +1,5 @@
 ---
 aliases:
-- NPV Calculation
 - 净现值计算步骤
 - 净现值计算
 tags:

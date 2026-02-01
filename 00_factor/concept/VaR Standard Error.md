@@ -1,7 +1,6 @@
 ---
 aliases:
 - VaR标准误
-- VaR Standard Error
 tags:
 - concept
 ---

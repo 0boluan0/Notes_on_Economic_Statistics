@@ -1,8 +1,7 @@
 ---
 aliases:
-- Rostow Stages of Economic Growth
-- Rostow's Take-off
 - 罗斯托经济增长阶段论
+- Rostow's Take-off
 tags:
 - development-economics
 - economic-growth

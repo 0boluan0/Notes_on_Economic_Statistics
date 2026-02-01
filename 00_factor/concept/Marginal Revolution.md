@@ -1,6 +1,5 @@
 ---
 aliases:
-- Marginal Revolution
 - 边际主义
 - 边际革命
 tags:

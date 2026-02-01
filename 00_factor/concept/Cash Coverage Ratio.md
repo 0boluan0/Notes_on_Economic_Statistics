@@ -1,6 +1,5 @@
 ---
 aliases:
-- Cash Coverage Ratio
 - 现金利息保障倍数
 - 现金流量利息保障倍数
 tags:

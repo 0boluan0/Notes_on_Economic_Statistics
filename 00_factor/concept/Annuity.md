@@ -1,6 +1,5 @@
 ---
 aliases:
-- Annuity
 - 年金终值
 - 年金现值
 - 年金

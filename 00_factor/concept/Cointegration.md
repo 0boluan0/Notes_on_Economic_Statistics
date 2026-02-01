@@ -1,6 +1,5 @@
 ---
 aliases:
-- Cointegration
 - 协积
 - 协整
 tags:

@@ -1,6 +1,5 @@
 ---
 aliases:
-- VaR
 tags:
 - concept
 ---

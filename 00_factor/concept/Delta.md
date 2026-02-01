@@ -1,6 +1,5 @@
 ---
 aliases:
-- Delta
 tags:
 - concept
 ---

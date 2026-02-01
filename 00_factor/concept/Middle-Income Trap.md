@@ -1,6 +1,5 @@
 ---
 aliases:
-- Middle-Income Trap
 - 中收入陷阱
 - 中等收入陷阱
 tags:

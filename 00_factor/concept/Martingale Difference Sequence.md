@@ -1,8 +1,7 @@
 ---
 aliases:
-- Martingale Difference Sequence
-- MDS
 - 鞅差序列
+- MDS
 tags:
 - 时间序列
 - 概率论

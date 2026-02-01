@@ -1,6 +1,5 @@
 ---
 aliases:
-- Spurious Regression
 - 虚假回归
 - 伪回归
 tags:

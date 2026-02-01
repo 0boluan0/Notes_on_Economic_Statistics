@@ -1,6 +1,5 @@
 ---
 aliases:
-- Mixed Strategy Nash Equilibrium
 - 混合策略纳什均衡
 tags:
 - concept

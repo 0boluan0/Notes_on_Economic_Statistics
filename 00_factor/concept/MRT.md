@@ -1,6 +1,5 @@
 ---
 aliases:
-- MRT
 - MRT边际转换率
 tags:
 - concept

@@ -1,6 +1,5 @@
 ---
 aliases:
-- OLS Estimation Steps
 - 最小二乘估计步骤
 - OLS估计步骤
 - OLS

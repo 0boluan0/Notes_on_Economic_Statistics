@@ -1,6 +1,5 @@
 ---
 aliases:
-- Debt-to-Asset Ratio
 - 负债比率
 - 资产负债率
 tags:

@@ -1,8 +1,8 @@
 ---
 aliases:
-- Derivative
 - 微分
 - 导数
+- Derivative
 tags:
 - 数学
 - 微积分

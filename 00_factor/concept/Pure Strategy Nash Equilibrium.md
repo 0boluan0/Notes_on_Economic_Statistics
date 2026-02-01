@@ -1,6 +1,5 @@
 ---
 aliases:
-- Pure Strategy Nash Equilibrium
 - 纯策略纳什均衡
 tags:
 - concept

@@ -1,6 +1,5 @@
 ---
 aliases:
-- Random Effects Model
 - 随机效应模型
 - 随机效应
 tags:

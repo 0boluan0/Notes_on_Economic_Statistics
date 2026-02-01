@@ -1,6 +1,5 @@
 ---
 aliases:
-- Basel Accords
 - 巴塞尔资本协议
 - 巴塞尔协议
 tags:

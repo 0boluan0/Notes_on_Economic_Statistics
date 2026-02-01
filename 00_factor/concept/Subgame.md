@@ -1,6 +1,5 @@
 ---
 aliases:
-- Subgame
 - 子博弈
 tags:
 - concept

@@ -1,6 +1,5 @@
 ---
 aliases:
-- ARIMA
 - 自回归积分移动平均模型
 - ARIMA模型
 tags:

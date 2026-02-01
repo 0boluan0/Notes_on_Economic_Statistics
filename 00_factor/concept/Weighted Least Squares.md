@@ -1,10 +1,9 @@
 ---
 aliases:
-- Weighted Least Squares
+- 加权最小二乘法(WLS)
 - WLS
 - GLS
 - Generalized Least Squares
-- 加权最小二乘法(WLS)
 tags:
 - 计量经济学
 - 估计方法

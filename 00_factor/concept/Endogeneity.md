@@ -1,6 +1,5 @@
 ---
 aliases:
-- Endogeneity
 - 内生性问题
 - 内生性
 tags:

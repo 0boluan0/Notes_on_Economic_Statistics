@@ -1,6 +1,5 @@
 ---
 aliases:
-- Chapman-Kolmogorov equation
 - C-K 方程
 - CK 方程
 - Chapman-Kolmogorov方程

@@ -1,6 +1,5 @@
 ---
 aliases:
-- Times Interest Earned Ratio
 - 利息倍数
 - 利息保障倍数
 tags:

@@ -1,9 +1,8 @@
 ---
 aliases:
-- Interest Rate Risk Management
 - 利率风险
 - 利率风险管理-hub
-- hub
+- Interest Rate Risk Management
 tags:
 - hub
 - 金融

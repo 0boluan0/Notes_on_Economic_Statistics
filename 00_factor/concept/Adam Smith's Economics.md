@@ -1,6 +1,5 @@
 ---
 aliases:
-- Adam Smith's Economics
 - 斯密经济学
 - 亚当斯密经济学
 tags:

@@ -1,8 +1,7 @@
 ---
 aliases:
-- Cochrane-Orcutt Iteration
 - CO迭代
-- Cochrane-Orcutt
+- Cochrane-Orcutt Iteration
 - Cochrane
 tags:
 - system

@@ -1,9 +1,8 @@
 ---
 aliases:
-- White Robust Standard Errors
 - HC标准误
-- White
 - White稳健标准误
+- White
 tags:
 - system
 - 计量经济学

@@ -1,6 +1,5 @@
 ---
 aliases:
-- Backtesting
 - VaR回溯测试
 - 回溯检验
 tags:

@@ -1,9 +1,8 @@
 ---
 aliases:
-- Game Theory
 - 博弈论
-- hub
 - 博弈论-hub
+- Game Theory
 tags:
 - hub
 ---

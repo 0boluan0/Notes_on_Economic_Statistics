@@ -1,6 +1,5 @@
 ---
 aliases:
-- Quick Ratio
 - 酸性测试比率
 - 速动比率
 tags:

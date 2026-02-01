@@ -1,6 +1,5 @@
 ---
 aliases:
-- Lewis Dual Sector Model
 - 刘易斯二元经济模型
 - 刘易斯模型
 tags:

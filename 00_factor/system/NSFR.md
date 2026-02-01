@@ -1,8 +1,7 @@
 ---
 aliases:
-- Net Stable Funding Ratio
 - 净稳定资金比率
-- NSFR
+- Net Stable Funding Ratio
 tags:
 - system
 - 金融机构与风险管理

@@ -1,8 +1,7 @@
 ---
 aliases:
-- Bunching
-- Exception Clustering
 - 聚束效应
+- Exception Clustering
 tags:
 - 风险管理
 - VaR模型

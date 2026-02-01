@@ -1,8 +1,7 @@
 ---
 aliases:
-- White Test
-- White Heteroskedasticity Test
 - 怀特检验
+- White Heteroskedasticity Test
 tags:
 - 计量经济学
 - 统计检验

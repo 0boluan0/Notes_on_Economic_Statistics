@@ -1,8 +1,7 @@
 ---
 aliases:
-- ARCH LM Test
-- McLeod–Li Test
 - 侦测ARCH/GARCH效应
+- McLeod–Li Test
 tags:
 - system
 - 时间序列

@@ -1,9 +1,8 @@
 ---
 aliases:
-- Difference-in-Difference
 - 双重差分
+- Difference-in-Difference
 - DID
-- DID-hub
 tags:
 - hub
 ---

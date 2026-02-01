@@ -1,6 +1,5 @@
 ---
 aliases:
-- Condition Number
 - 条件指数
 tags:
 - 计量经济学

@@ -1,6 +1,5 @@
 ---
 aliases:
-- Strictly Dominated Strategy
 - 严格占优策略
 tags:
 - concept

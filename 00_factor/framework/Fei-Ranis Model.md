@@ -1,8 +1,7 @@
 ---
 aliases:
-- Fei-Ranis Model
-- Fei-Ranis Dual Economy Model
 - 费景汉-拉尼斯模型
+- Fei-Ranis Dual Economy Model
 tags:
 - development-economics
 - labor-transfer

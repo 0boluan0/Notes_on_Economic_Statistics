@@ -1,9 +1,8 @@
 ---
 aliases:
-- Return on Assets
 - 资产回报率
-- ROA
 - 总资产净利率
+- ROA
 tags:
 - 财务管理
 - 财务比率

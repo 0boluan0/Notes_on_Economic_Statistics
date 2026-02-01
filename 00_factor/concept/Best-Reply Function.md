@@ -1,8 +1,7 @@
 ---
 aliases:
-- Best-Reply Function
-- Best Response Function
 - 最优反应函数
+- Best Response Function
 tags:
 - concept
 - game theory

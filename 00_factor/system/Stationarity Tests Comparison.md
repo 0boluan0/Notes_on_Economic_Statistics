@@ -2,7 +2,6 @@
 aliases:
 - 平稳性检验对比
 - DF/ADF/KPSS 对比
-- Stationarity Tests Comparison
 tags:
 - system
 - 时间序列

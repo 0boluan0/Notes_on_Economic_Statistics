@@ -1,6 +1,5 @@
 ---
 aliases:
-- CAPM Estimation
 - CAPM参数估计步骤
 - CAPM参数估计
 - CAPM

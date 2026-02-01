@@ -1,6 +1,5 @@
 ---
 aliases:
-- Harrod-Domar Model
 - 哈罗德-多玛增长模型
 - 哈罗德-多玛模型
 tags:

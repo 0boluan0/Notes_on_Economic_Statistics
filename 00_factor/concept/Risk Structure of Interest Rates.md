@@ -1,9 +1,8 @@
 ---
 aliases:
-- Risk Structure of Interest Rates
+- 利率的风险结构
 - Risk Premium
 - Default Risk
-- 利率的风险结构
 tags:
 - concept
 - money and banking

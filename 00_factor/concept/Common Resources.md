@@ -1,9 +1,8 @@
 ---
 aliases:
-- Common Resources
+- 公共资源
 - Common-Pool Resources
 - CPR
-- 公共资源
 tags:
 - concept
 - public finance

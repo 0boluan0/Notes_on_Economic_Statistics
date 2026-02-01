@@ -1,6 +1,5 @@
 ---
 aliases:
-- Augmented Dickey-Fuller Test
 - 增广迪基-福勒检验
 - ADF检验
 - ADF

@@ -1,6 +1,5 @@
 ---
 aliases:
-- Fundamental Theorem of Calculus
 - 牛顿-莱布尼茨公式
 - 微积分基本定理
 tags:

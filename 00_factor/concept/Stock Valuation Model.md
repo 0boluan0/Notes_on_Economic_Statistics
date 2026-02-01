@@ -1,6 +1,5 @@
 ---
 aliases:
-- Stock Valuation Model
 - 股票定价模型
 - 股票估价模型
 tags:

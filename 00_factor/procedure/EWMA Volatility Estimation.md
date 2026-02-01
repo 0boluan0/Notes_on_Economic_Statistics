@@ -1,6 +1,5 @@
 ---
 aliases:
-- EWMA Volatility Estimation
 - EWMA波动率估计
 - EWMA
 tags:

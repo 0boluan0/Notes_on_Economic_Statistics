@@ -1,9 +1,8 @@
 ---
 aliases:
-- Cointegration theorem
+- 协整定理
 - Granger representation theorem
 - Engle-Granger representation theorem
-- 协整定理
 tags:
 - proof
 - 06_时间序列分析

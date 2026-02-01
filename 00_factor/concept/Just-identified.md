@@ -1,6 +1,5 @@
 ---
 aliases:
-- Just-identified
 - 恰好识别
 tags:
 - 计量经济学

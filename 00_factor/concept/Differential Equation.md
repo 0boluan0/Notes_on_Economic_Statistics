@@ -1,6 +1,5 @@
 ---
 aliases:
-- Differential Equation
 - 常微分方程
 - 微分方程
 tags:

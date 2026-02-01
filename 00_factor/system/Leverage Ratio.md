@@ -1,6 +1,5 @@
 ---
 aliases:
-- Leverage Ratio
 - 巴塞尔杠杆率
 - 杠杆率
 tags:

@@ -1,9 +1,8 @@
 ---
 aliases:
-- Bertrand Competition
+- Bertrand竞争
 - Bertrand Model
 - Bertrand Paradox
-- Bertrand竞争
 - Bertrand
 tags:
 - concept

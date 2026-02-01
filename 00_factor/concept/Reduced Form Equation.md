@@ -1,9 +1,8 @@
 ---
 aliases:
-- Reduced Form Equation
 - 简约式
-- Reduced Form
 - 简约式方程
+- Reduced Form
 tags:
 - 计量经济学
 - 联立方程

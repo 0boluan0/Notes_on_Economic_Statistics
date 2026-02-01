@@ -1,8 +1,7 @@
 ---
 aliases:
-- Ljung-Box Test
-- Box-Pierce Test
 - Ljung-Box检验
+- Box-Pierce Test
 - Ljung
 tags:
 - 时间序列

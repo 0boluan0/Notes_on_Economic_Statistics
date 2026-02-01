@@ -1,6 +1,5 @@
 ---
 aliases:
-- Debt-to-Equity Ratio
 - 负债权益比率
 - 产权比率
 tags:

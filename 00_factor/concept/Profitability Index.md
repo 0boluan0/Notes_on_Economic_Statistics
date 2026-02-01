@@ -1,9 +1,8 @@
 ---
 aliases:
-- Profitability Index
-- PI
 - 获利指数
 - 现值指数
+- PI
 tags:
 - 财务管理
 - 投资决策

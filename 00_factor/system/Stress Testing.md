@@ -1,6 +1,5 @@
 ---
 aliases:
-- Stress Testing
 - 压力情景分析
 - 压力测试
 tags:

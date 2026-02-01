@@ -1,9 +1,8 @@
 ---
 aliases:
-- White Test Steps
 - White异方差检验步骤
-- White
 - White检验步骤
+- White
 tags:
 - procedure
 - 01_Econometrics

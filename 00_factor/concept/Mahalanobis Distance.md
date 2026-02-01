@@ -1,6 +1,5 @@
 ---
 aliases:
-- Mahalanobis Distance
 - 马哈拉诺比斯距离
 tags:
 - concept

@@ -1,6 +1,5 @@
 ---
 aliases:
-- White Noise Test
 - 白噪声检验
 tags:
 - 时间序列

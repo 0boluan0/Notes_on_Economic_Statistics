@@ -1,6 +1,5 @@
 ---
 aliases:
-- Physiocrats
 - 重农主义
 - 重农学派
 tags:

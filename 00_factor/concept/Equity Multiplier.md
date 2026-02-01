@@ -1,6 +1,5 @@
 ---
 aliases:
-- Equity Multiplier
 - 杠杆乘数
 - 权益乘数
 tags:

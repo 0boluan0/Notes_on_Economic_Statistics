@@ -1,6 +1,5 @@
 ---
 aliases:
-- TARCH
 tags:
 - concept
 ---

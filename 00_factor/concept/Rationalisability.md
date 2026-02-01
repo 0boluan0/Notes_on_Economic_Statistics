@@ -1,8 +1,7 @@
 ---
 aliases:
-- Rationalisability
-- Rationalizable Strategies
 - 可理性化
+- Rationalizable Strategies
 tags:
 - concept
 - game theory

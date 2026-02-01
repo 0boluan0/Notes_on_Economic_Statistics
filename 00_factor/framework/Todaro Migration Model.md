@@ -1,6 +1,5 @@
 ---
 aliases:
-- Todaro Migration Model
 - 托达罗人口迁移模型
 - 托达罗模型
 tags:

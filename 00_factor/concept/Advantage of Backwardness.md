@@ -1,6 +1,5 @@
 ---
 aliases:
-- Advantage of Backwardness
 - 后发优势
 - 后发优势理论
 tags:

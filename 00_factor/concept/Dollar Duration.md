@@ -1,7 +1,5 @@
 ---
 aliases:
-- Dollar Duration
-- dollar duration
 - 绝对额久期
 tags:
 - concept

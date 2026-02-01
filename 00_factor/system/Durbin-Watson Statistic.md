@@ -1,9 +1,8 @@
 ---
 aliases:
-- Durbin-Watson Statistic
 - DW检验
-- Durbin
 - Durbin-Watson统计量
+- Durbin
 tags:
 - system
 - 计量经济学

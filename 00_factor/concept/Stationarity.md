@@ -1,6 +1,5 @@
 ---
 aliases:
-- Stationarity
 - 平稳性
 tags:
 - 时间序列

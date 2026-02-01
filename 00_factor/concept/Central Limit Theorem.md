@@ -1,8 +1,7 @@
 ---
 aliases:
-- Central Limit Theorem
-- CLT
 - 中心极限定理
+- CLT
 tags:
 - proof
 - 数学基础

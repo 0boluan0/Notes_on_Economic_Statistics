@@ -1,6 +1,5 @@
 ---
 aliases:
-- GARCH Model Estimation Steps
 - GARCH模型估计步骤
 - GARCH
 tags:

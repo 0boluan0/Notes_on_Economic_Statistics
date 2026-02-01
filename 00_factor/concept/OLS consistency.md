@@ -1,9 +1,8 @@
 ---
 aliases:
-- OLS consistency
 - OLS 一致性
-- OLS
 - OLS估计量的一致性
+- OLS
 tags:
 - proof
 - 01_Econometrics

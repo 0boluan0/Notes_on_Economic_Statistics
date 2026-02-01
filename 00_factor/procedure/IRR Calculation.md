@@ -1,6 +1,5 @@
 ---
 aliases:
-- IRR Calculation
 - 内部收益率计算步骤
 - 内部收益率计算
 tags:

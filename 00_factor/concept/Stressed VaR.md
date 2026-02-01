@@ -1,7 +1,6 @@
 ---
 aliases:
 - 压力VaR
-- Stressed VaR
 tags:
 - concept
 ---

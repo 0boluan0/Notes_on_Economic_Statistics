@@ -1,6 +1,5 @@
 ---
 aliases:
-- Mercantilism
 - 商业主义
 - 重商主义
 tags:

@@ -1,8 +1,7 @@
 ---
 aliases:
-- Generalized Method of Moments
 - 广义矩估计
-- GMM
+- Generalized Method of Moments
 tags:
 - 计量经济学
 - 估计方法

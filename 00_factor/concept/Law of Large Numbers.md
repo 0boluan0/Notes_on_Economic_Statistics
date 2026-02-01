@@ -1,8 +1,7 @@
 ---
 aliases:
-- Law of Large Numbers
-- LLN
 - 大数定律
+- LLN
 tags:
 - proof
 - 数学基础

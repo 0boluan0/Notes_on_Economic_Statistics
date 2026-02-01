@@ -1,8 +1,7 @@
 ---
 aliases:
-- Pigouvian Tax
-- Externality Tax
 - 庇古税
+- Externality Tax
 tags:
 - concept
 - public finance

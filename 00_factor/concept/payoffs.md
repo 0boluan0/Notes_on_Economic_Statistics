@@ -1,8 +1,7 @@
 ---
 aliases:
-- payoffs
-- payoff
 - 效用
+- payoff
 tags:
 - concept
 ---

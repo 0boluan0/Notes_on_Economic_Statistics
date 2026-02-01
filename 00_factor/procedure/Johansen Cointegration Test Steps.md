@@ -1,6 +1,5 @@
 ---
 aliases:
-- Johansen Cointegration Test Steps
 - Johansen协整检验步骤
 - Johansen
 tags:

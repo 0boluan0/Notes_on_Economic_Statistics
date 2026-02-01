@@ -1,6 +1,5 @@
 ---
 aliases:
-- Malthusian Trap
 - 马尔萨斯理论
 - 马尔萨斯人口陷阱
 tags:

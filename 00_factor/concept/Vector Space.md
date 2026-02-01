@@ -1,6 +1,5 @@
 ---
 aliases:
-- Vector Space
 - 线性空间
 - 向量空间
 tags:

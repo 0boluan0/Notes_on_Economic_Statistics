@@ -1,6 +1,5 @@
 ---
 aliases:
-- Rho
 tags:
 - concept
 ---

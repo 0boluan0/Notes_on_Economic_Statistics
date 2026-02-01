@@ -1,6 +1,5 @@
 ---
 aliases:
-- Steady State Analysis
 - 稳定状态
 - 稳态分析
 tags:

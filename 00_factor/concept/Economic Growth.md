@@ -1,6 +1,5 @@
 ---
 aliases:
-- Economic Growth
 - 经济增长
 tags:
 - 发展经济学

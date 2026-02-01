@@ -1,8 +1,7 @@
 ---
 aliases:
-- Akaike Information Criterion
 - 赤池信息准则
-- AIC
+- Akaike Information Criterion
 tags:
 - 统计学
 - 模型选择

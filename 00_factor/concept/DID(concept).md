@@ -1,6 +1,5 @@
 ---
 aliases:
-- DID(concept)
 - DID
 tags:
 - concept

@@ -1,8 +1,7 @@
 ---
 aliases:
-- Monetary Base
-- High-Powered Money
 - 基础货币
+- High-Powered Money
 tags:
 - concept
 - money and banking

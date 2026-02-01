@@ -1,8 +1,7 @@
 ---
 aliases:
-- Integrated GARCH
 - 积整GARCH
-- IGARCH
+- Integrated GARCH
 tags:
 - 时间序列
 - 波动建模

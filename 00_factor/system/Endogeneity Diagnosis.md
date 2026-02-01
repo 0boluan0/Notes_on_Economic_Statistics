@@ -1,6 +1,5 @@
 ---
 aliases:
-- Endogeneity Diagnosis
 - 内生性问题诊断
 - 内生性诊断
 tags:

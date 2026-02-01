@@ -1,7 +1,6 @@
 ---
 aliases:
 - Yule-Walker 方程
-- Yule-Walker equations
 - Yule-Walker方程
 - Yule
 tags:

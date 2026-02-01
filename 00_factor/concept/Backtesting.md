@@ -1,8 +1,7 @@
 ---
 aliases:
-- Backtesting
-- Back-Testing
 - 回溯检验
+- Back-Testing
 tags:
 - 风险管理
 - 模型验证

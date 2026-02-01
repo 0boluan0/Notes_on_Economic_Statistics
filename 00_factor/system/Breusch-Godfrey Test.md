@@ -1,6 +1,5 @@
 ---
 aliases:
-- Breusch-Godfrey Test
 - LM自相关检验
 - BG检验
 - BG

@@ -1,8 +1,7 @@
 ---
 aliases:
-- Variance Inflation Factor
-- VIF
 - 方差膨胀因子
+- VIF
 tags:
 - 计量经济学
 - 统计学

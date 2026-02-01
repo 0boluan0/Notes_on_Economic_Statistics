@@ -1,6 +1,5 @@
 ---
 aliases:
-- Markov Chain
 - 马尔可夫链
 tags:
 - concept

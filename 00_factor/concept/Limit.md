@@ -1,6 +1,5 @@
 ---
 aliases:
-- Limit
 - 收敛
 - 极限
 tags:

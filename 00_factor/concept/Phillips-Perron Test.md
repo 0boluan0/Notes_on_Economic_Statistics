@@ -1,6 +1,5 @@
 ---
 aliases:
-- Phillips-Perron Test
 - 菲利普斯-佩龙检验
 - PP检验
 - PP

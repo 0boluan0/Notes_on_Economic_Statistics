@@ -1,6 +1,5 @@
 ---
 aliases:
-- Linear Probability Model
 - 线性概率模型
 - LPM模型
 - LPM

@@ -1,8 +1,7 @@
 ---
 aliases:
-- Price-to-Earnings Ratio
-- P/E Ratio
 - 市盈率
+- P/E Ratio
 tags:
 - 财务管理
 - 财务比率

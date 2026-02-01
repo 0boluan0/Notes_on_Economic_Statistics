@@ -1,6 +1,5 @@
 ---
 aliases:
-- Variance Decomposition
 - 方差分解
 tags:
 - 时间序列

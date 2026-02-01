@@ -1,8 +1,7 @@
 ---
 aliases:
-- Price-to-Sales Ratio
-- P/S Ratio
 - 市销率
+- P/S Ratio
 tags:
 - 财务管理
 - 财务比率

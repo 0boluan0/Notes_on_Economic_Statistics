@@ -1,6 +1,5 @@
 ---
 aliases:
-- Information Set
 - 信息集
 tags:
 - concept

@@ -1,8 +1,7 @@
 ---
 aliases:
-- Lagrange Mean Value Theorem
-- LMVT
 - 拉格朗日中值定理
+- LMVT
 tags:
 - proof
 - 01_calculus

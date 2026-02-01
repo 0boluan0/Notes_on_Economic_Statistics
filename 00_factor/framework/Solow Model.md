@@ -1,9 +1,8 @@
 ---
 aliases:
-- Solow Model
-- Solow Growth Model
 - 新古典索罗模型
 - 索罗模型
+- Solow Growth Model
 tags:
 - development-economics
 - economic-growth

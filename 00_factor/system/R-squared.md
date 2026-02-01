@@ -1,8 +1,7 @@
 ---
 aliases:
-- R-squared
-- Coefficient of Determination
 - 判定系数
+- Coefficient of Determination
 tags:
 - system
 - 计量经济学

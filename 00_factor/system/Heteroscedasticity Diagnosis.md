@@ -1,6 +1,5 @@
 ---
 aliases:
-- Heteroscedasticity Diagnosis
 - 异方差检验
 - 异方差诊断
 tags:

@@ -1,8 +1,7 @@
 ---
 aliases:
-- Partial Autocorrelation Function
-- PACF
 - 偏自相关函数
+- PACF
 tags:
 - 时间序列
 - 统计学

@@ -1,6 +1,5 @@
 ---
 aliases:
-- Inventory Turnover Ratio
 - 存货周转次数
 - 存货周转率
 tags:

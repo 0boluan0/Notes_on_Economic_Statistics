@@ -1,6 +1,5 @@
 ---
 aliases:
-- Permutation Matrix
 - 排列矩阵
 - 置换矩阵
 tags:

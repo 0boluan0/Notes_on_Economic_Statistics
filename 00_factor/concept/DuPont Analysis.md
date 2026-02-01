@@ -1,6 +1,5 @@
 ---
 aliases:
-- DuPont Analysis
 - 杜邦分析法
 - 杜邦分析
 tags:

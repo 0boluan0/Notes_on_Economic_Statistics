@@ -1,6 +1,5 @@
 ---
 aliases:
-- Continuous Mapping Theorem
 - 连续映射定理
 tags:
 - 概率论

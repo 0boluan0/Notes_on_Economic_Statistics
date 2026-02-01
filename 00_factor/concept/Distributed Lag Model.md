@@ -1,8 +1,7 @@
 ---
 aliases:
-- Distributed Lag Model
-- DLM
 - 分布滞后模型
+- DLM
 tags:
 - 计量经济学
 - 时间序列

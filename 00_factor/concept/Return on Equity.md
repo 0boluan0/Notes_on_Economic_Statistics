@@ -1,9 +1,8 @@
 ---
 aliases:
-- Return on Equity
 - 净资产收益率
-- ROE
 - 权益净利率
+- ROE
 tags:
 - 财务管理
 - 财务比率

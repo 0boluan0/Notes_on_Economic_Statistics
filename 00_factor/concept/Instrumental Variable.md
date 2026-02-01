@@ -1,8 +1,7 @@
 ---
 aliases:
-- Instrumental Variable
-- IV
 - 工具变量
+- IV
 tags:
 - 计量经济学
 - 估计方法

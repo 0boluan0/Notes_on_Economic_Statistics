@@ -1,6 +1,5 @@
 ---
 aliases:
-- Current Ratio
 - 流动性比率
 - 流动比率
 tags:

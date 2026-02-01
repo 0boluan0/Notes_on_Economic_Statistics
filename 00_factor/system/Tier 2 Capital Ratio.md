@@ -1,6 +1,5 @@
 ---
 aliases:
-- Tier 2 Capital Ratio
 - 附属资本比率
 - 二级资本比率
 tags:

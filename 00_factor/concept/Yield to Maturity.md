@@ -1,10 +1,9 @@
 ---
 aliases:
-- Yield to Maturity
+- 到期收益率
 - YTM
 - Holding Period Return
 - Interest Rate Risk
-- 到期收益率
 tags:
 - concept
 - money and banking

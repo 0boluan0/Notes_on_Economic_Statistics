@@ -1,6 +1,5 @@
 ---
 aliases:
-- OLS unbiasedness
 - OLS 无偏性
 - OLS估计量的无偏性
 - OLS

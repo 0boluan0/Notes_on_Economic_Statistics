@@ -1,9 +1,8 @@
 ---
 aliases:
-- Price-to-Book Ratio
-- P/B Ratio
 - 市账率
 - 市净率
+- P/B Ratio
 tags:
 - 财务管理
 - 财务比率

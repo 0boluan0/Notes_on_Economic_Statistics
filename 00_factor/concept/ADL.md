@@ -1,8 +1,7 @@
 ---
 aliases:
-- Autoregressive Distributed Lag Model
 - 自回归分布滞后模型
-- ADL
+- Autoregressive Distributed Lag Model
 tags:
 - 计量经济学
 - 时间序列

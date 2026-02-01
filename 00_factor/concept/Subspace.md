@@ -1,6 +1,5 @@
 ---
 aliases:
-- Subspace
 - 线性子空间
 - 子空间
 tags:

@@ -1,8 +1,7 @@
 ---
 aliases:
-- Subgame Perfect Nash Equilibrium
-- SPNE
 - 子博弈精炼纳什均衡
+- SPNE
 tags:
 - concept
 - game theory

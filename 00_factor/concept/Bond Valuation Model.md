@@ -1,6 +1,5 @@
 ---
 aliases:
-- Bond Valuation Model
 - 债券定价模型
 - 债券估价模型
 tags:

@@ -1,6 +1,5 @@
 ---
 aliases:
-- Integral
 - 求原函数
 - 积分
 tags:

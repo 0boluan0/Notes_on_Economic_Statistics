@@ -1,6 +1,5 @@
 ---
 aliases:
-- Autocorrelation Diagnosis
 - 序列相关诊断
 - 自相关诊断
 tags:

@@ -1,8 +1,7 @@
 ---
 aliases:
-- Time Value of Money
-- TVM
 - 货币时间价值
+- TVM
 tags:
 - 财务管理
 - 基础概念

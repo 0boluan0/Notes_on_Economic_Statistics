@@ -1,8 +1,7 @@
 ---
 aliases:
-- Wishart Distribution
-- Wishart
 - Wishart分布
+- Wishart
 tags:
 - concept
 - multivariate statistics

@@ -1,6 +1,5 @@
 ---
 aliases:
-- Panel Data Model
 - 面板数据模型
 tags:
 - 计量经济学

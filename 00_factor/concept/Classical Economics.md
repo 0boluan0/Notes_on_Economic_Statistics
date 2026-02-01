@@ -1,6 +1,5 @@
 ---
 aliases:
-- Classical Economics
 - 古典学派
 - 古典经济学
 tags:

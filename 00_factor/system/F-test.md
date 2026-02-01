@@ -1,9 +1,8 @@
 ---
 aliases:
-- F-test
 - F统计量
-- F
 - F检验
+- F
 tags:
 - system
 - 计量经济学

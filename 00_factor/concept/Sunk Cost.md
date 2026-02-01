@@ -1,6 +1,5 @@
 ---
 aliases:
-- Sunk Cost
 - 沉没费用
 - 沉没成本
 tags:

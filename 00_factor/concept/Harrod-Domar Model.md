@@ -1,8 +1,7 @@
 ---
 aliases:
-- Harrod-Domar Model
-- Harrod Domar Growth Model
 - 哈罗德-多玛模型
+- Harrod Domar Growth Model
 tags:
 - 发展经济学
 - 经济增长理论

@@ -1,6 +1,5 @@
 ---
 aliases:
-- Structural Equation
 - 结构式
 - 结构方程
 tags:

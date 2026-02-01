@@ -1,6 +1,5 @@
 ---
 aliases:
-- Mean-Variance Portfolio Optimization
 - 均值-方差组合优化步骤
 - 均值-方差组合优化
 tags:

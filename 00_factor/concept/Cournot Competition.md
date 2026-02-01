@@ -1,8 +1,7 @@
 ---
 aliases:
-- Cournot Competition
-- Cournot Duopoly
 - 古诺竞争
+- Cournot Duopoly
 tags:
 - concept
 - game theory

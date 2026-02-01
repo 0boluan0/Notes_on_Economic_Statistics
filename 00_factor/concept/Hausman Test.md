@@ -1,8 +1,7 @@
 ---
 aliases:
-- Hausman Test
-- Hausman
 - Hausman检验
+- Hausman
 tags:
 - 计量经济学
 - 统计检验

@@ -1,6 +1,5 @@
 ---
 aliases:
-- Working Capital
 - 净营运资本
 - 营运资本
 tags:

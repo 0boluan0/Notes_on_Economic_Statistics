@@ -1,6 +1,5 @@
 ---
 aliases:
-- Economic Development
 - 经济发展
 tags:
 - 发展经济学

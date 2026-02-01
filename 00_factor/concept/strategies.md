@@ -1,7 +1,5 @@
 ---
 aliases:
-- strategies
-- Strategies
 - 策略
 tags:
 - concept

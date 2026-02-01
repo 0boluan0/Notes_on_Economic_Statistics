@@ -1,6 +1,5 @@
 ---
 aliases:
-- Odds Ratio
 - 机会比
 - 胜算比
 - 机会比率

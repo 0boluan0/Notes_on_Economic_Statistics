@@ -1,6 +1,5 @@
 ---
 aliases:
-- Internal Growth Rate
 - 内部增长率
 - 内含增长率
 tags:

@@ -1,9 +1,8 @@
 ---
 aliases:
-- Yield Curve
+- 收益率曲线
 - Term Structure of Interest Rates
 - Interest Rate Term Structure
-- 收益率曲线
 tags:
 - concept
 - money and banking

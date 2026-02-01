@@ -1,6 +1,5 @@
 ---
 aliases:
-- Tier 1 Capital Ratio
 - 核心一级资本比率
 - 一级资本比率
 tags:

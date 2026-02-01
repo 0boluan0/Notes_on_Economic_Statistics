@@ -1,6 +1,5 @@
 ---
 aliases:
-- Bond Pricing Calculation
 - 债券定价计算步骤
 - 债券定价计算
 tags:

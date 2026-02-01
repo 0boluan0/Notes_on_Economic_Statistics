@@ -1,6 +1,5 @@
 ---
 aliases:
-- Box-Jenkins Method
 - Box-Jenkins建模方法
 - Box-Jenkins方法
 - Box

@@ -1,6 +1,5 @@
 ---
 aliases:
-- player
 - 局中人
 tags:
 - concept

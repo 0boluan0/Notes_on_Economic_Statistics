@@ -1,6 +1,5 @@
 ---
 aliases:
-- First Difference
 - 一阶差分
 tags:
 - 时间序列

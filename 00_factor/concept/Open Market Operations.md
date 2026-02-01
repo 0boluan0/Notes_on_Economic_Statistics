@@ -1,8 +1,7 @@
 ---
 aliases:
-- Open Market Operations
-- OMO
 - 公开市场操作
+- OMO
 tags:
 - concept
 - money and

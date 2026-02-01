@@ -1,8 +1,7 @@
 ---
 aliases:
-- Two-Stage Least Squares
 - 两阶段最小二乘法
-- 2SLS
+- Two-Stage Least Squares
 - SLS
 tags:
 - 计量经济学

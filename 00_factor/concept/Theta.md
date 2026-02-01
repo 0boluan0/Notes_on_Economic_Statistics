@@ -1,6 +1,5 @@
 ---
 aliases:
-- Theta
 tags:
 - concept
 ---

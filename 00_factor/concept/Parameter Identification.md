@@ -1,6 +1,5 @@
 ---
 aliases:
-- Parameter Identification
 - 识别问题
 - 参数识别
 tags:

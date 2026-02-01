@@ -2,7 +2,6 @@
 aliases:
 - 导数的几何意义
 - geometric
-- geometric interpretation of derivative
 tags:
 - concept
 ---

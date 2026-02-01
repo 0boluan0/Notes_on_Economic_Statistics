@@ -1,9 +1,8 @@
 ---
 aliases:
-- Externality
+- 外部性
 - External Effects
 - Externalities
-- 外部性
 tags:
 - concept
 - public finance

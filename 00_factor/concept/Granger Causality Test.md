@@ -1,6 +1,5 @@
 ---
 aliases:
-- Granger Causality Test
 - 格兰杰因果关系检验
 - 格兰杰因果检验
 tags:

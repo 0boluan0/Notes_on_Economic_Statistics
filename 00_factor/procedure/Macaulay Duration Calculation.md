@@ -1,6 +1,5 @@
 ---
 aliases:
-- Macaulay Duration Calculation
 - 马考利久期计算步骤
 - 马考利久期计算
 tags:

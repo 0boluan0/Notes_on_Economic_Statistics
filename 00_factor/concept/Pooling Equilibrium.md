@@ -1,6 +1,5 @@
 ---
 aliases:
-- Pooling Equilibrium
 - 混合均衡
 tags:
 - concept

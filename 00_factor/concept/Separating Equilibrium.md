@@ -1,6 +1,5 @@
 ---
 aliases:
-- Separating Equilibrium
 - 分离均衡
 tags:
 - concept

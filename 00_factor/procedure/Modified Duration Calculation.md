@@ -1,6 +1,5 @@
 ---
 aliases:
-- Modified Duration Calculation
 - 修正久期计算步骤
 - 修正久期计算
 tags:

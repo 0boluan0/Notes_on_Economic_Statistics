@@ -1,6 +1,5 @@
 ---
 aliases:
-- Net Profit Margin
 - 销售净利率
 - 营业净利率
 tags:

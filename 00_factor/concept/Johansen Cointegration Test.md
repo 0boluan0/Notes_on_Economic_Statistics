@@ -1,9 +1,8 @@
 ---
 aliases:
-- Johansen Cointegration Test
 - 约翰森协整检验
-- Johansen
 - Johansen检验
+- Johansen
 tags:
 - 计量经济学
 - 时间序列

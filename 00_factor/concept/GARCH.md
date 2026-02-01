@@ -1,7 +1,6 @@
 ---
 aliases:
 - 广义自回归条件异方差
-- GARCH
 tags:
 - concept
 ---

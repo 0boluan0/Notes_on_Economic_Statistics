@@ -1,6 +1,5 @@
 ---
 aliases:
-- Symmetric Matrix
 - 对称矩阵
 tags:
 - 线性代数

@@ -1,6 +1,5 @@
 ---
 aliases:
-- Simultaneity Bias
 - 联立性偏误
 - 同时性偏误
 tags:

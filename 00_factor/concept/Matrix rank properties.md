@@ -1,9 +1,8 @@
 ---
 aliases:
-- Matrix rank properties
-- Rank properties
 - 矩阵秩定理
 - 矩阵秩的性质
+- Rank properties
 tags:
 - proof
 - 02_linear algebra

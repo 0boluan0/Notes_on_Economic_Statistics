@@ -1,6 +1,5 @@
 ---
 aliases:
-- Accounts Receivable Turnover Ratio
 - 应收账款周转次数
 - 应收账款周转率
 tags:

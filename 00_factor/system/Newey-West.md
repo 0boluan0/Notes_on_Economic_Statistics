@@ -1,8 +1,7 @@
 ---
 aliases:
-- Newey-West Standard Errors
 - HAC标准误
-- Newey-West
+- Newey-West Standard Errors
 - Newey
 tags:
 - system

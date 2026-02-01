@@ -1,6 +1,5 @@
 ---
 aliases:
-- F-test
 - F检验
 - F
 tags:

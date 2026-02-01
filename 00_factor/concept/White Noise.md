@@ -1,6 +1,5 @@
 ---
 aliases:
-- White Noise
 - 白噪声
 - 白噪声过程
 tags:

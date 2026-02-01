@@ -1,6 +1,5 @@
 ---
 aliases:
-- Pioneers of Macroeconomics
 - 早期宏观经济学
 - 宏观经济理论先驱
 tags:

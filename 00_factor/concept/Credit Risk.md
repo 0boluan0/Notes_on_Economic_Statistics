@@ -1,6 +1,5 @@
 ---
 aliases:
-- Credit Risk
 - 信用风险
 tags:
 - 风险管理

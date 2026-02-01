@@ -1,9 +1,8 @@
 ---
 aliases:
-- Linear Algebra
 - 线性代数
 - 线性代数-hub
-- hub
+- Linear Algebra
 tags:
 - hub
 - 数学

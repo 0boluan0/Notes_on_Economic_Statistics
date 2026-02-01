@@ -1,6 +1,5 @@
 ---
 aliases:
-- Basel Capital Adequacy Ratio
 - 资本充足率
 - 巴塞尔资本充足率
 tags:

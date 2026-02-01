@@ -1,6 +1,5 @@
 ---
 aliases:
-- Fixed Effects Model
 - 固定效应模型
 - 固定效应
 tags:

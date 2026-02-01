@@ -1,10 +1,9 @@
 ---
 aliases:
-- Poisson process memoryless property
-- Exponential distribution memoryless property
 - 泊松过程无记忆性
 - 指数分布无记忆性
 - 泊松过程的无记忆性
+- Exponential distribution memoryless property
 tags:
 - proof
 - 05_随机过程

@@ -134,6 +134,8 @@ def main(apply: bool = True) -> int:
         '两个随机变量线性组合': 'Linear Combination of Two Random Variables',
         '埃奇沃斯框图': 'Edgeworth Box',
         '净现值': 'Net Present Value',
+        '导数': 'Derivative',
+        '重新定价风险': 'Repricing Risk',
         '资本市场线': 'Capital Market Line',
         '有效久期': 'Effective Duration',
         '基差风险': 'Basis Risk',
@@ -210,15 +212,22 @@ def main(apply: bool = True) -> int:
         if new_base and new_base != stem:
             new_name = new_base + ".md"
             new_path = md.with_name(new_name)
-            if not new_path.exists():
-                planned.append((md, new_path))
+            planned.append((md, new_path))
 
     # Apply renames
     for old, new in planned:
         if apply:
             new = Path(new)
-            old.rename(new)
-        print(f"RENAMED: {old.relative_to(ROOT)} -> {new.relative_to(ROOT)}")
+            # handle name collision by suffixing
+            cand = new
+            if cand.exists():
+                base = cand.stem
+                suf = 2
+                while cand.exists():
+                    cand = cand.with_name(f"{base} ({suf}){cand.suffix}")
+                    suf += 1
+            old.rename(cand)
+        print(f"RENAMED: {old.relative_to(ROOT)} -> {cand.relative_to(ROOT)}")
 
     print(f"Total renamed: {len(planned)}")
     return 0

@@ -1,6 +1,5 @@
 ---
 aliases:
-- Market Risk
 - 市场风险
 tags:
 - 风险管理

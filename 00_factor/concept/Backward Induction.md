@@ -1,6 +1,5 @@
 ---
 aliases:
-- Backward Induction
 - 逆向归纳法
 tags:
 - concept

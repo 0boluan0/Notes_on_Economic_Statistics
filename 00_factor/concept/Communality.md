@@ -1,8 +1,7 @@
 ---
 aliases:
-- Communality
-- Common Variance
 - 公共度
+- Common Variance
 tags:
 - concept
 - multivariate statistics

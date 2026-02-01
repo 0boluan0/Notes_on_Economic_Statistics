@@ -1,6 +1,5 @@
 ---
 aliases:
-- Model Validation
 - 模型风险管理
 - 模型验证
 tags:

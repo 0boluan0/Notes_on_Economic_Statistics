@@ -1,6 +1,5 @@
 ---
 aliases:
-- CAPM
 - 资本资产定价模型
 tags:
 - 经济

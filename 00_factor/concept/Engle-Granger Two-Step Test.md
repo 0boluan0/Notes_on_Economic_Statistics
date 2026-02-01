@@ -1,9 +1,8 @@
 ---
 aliases:
-- Engle-Granger Two-Step Test
 - EG两步法
-- Engle-Granger Cointegration Test
 - EG两步检验法
+- Engle-Granger Cointegration Test
 - EG
 tags:
 - 计量经济学

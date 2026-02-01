@@ -1,9 +1,8 @@
 ---
 aliases:
-- Internal Rate of Return
-- IRR
 - 内部收益率
 - 内涵报酬率
+- IRR
 tags:
 - 财务管理
 - 投资决策

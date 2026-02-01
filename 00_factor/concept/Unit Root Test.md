@@ -1,6 +1,5 @@
 ---
 aliases:
-- Unit Root Test
 - 平稳性检验
 - 单位根检验
 tags:

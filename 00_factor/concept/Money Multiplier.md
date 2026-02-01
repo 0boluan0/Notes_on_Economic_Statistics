@@ -1,8 +1,7 @@
 ---
 aliases:
-- Money Multiplier
-- Deposit Multiplier
 - 货币乘数
+- Deposit Multiplier
 tags:
 - concept
 - money and banking

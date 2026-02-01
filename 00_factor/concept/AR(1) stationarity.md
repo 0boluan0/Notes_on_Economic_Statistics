@@ -1,9 +1,8 @@
 ---
 aliases:
-- AR(1) stationarity
 - AR(1) 平稳性条件
-- AR
 - AR(1)过程的平稳性
+- AR
 tags:
 - proof
 - 06_时间序列分析

@@ -1,6 +1,5 @@
 ---
 aliases:
-- Matrix Rank
 - 秩
 - 矩阵的秩
 tags:

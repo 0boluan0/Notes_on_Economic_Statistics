@@ -1,6 +1,5 @@
 ---
 aliases:
-- Long-term Debt Ratio
 - 长期资本中负债比率
 - 长期资本负债率
 tags:

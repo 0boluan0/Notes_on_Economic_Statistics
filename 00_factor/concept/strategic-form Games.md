@@ -1,6 +1,5 @@
 ---
 aliases:
-- strategic-form Games
 - 策略式表达
 tags:
 - concept

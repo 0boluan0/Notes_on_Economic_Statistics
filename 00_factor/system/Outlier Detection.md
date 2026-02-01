@@ -1,6 +1,5 @@
 ---
 aliases:
-- Outlier Detection
 - 离群值检测
 - 异常值检测
 tags:

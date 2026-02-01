@@ -1,7 +1,6 @@
 ---
 aliases:
 - 递增VaR
-- Incremental VaR
 tags:
 - concept
 ---

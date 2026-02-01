@@ -1,6 +1,5 @@
 ---
 aliases:
-- Rostow's Stages of Growth
 - 经济发展阶段论
 - 起飞理论
 - 罗斯托经济增长阶段论

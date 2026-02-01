@@ -1,8 +1,7 @@
 ---
 aliases:
-- Compound Poisson Process
-- Compound Poisson
 - 复合泊松过程
+- Compound Poisson
 tags:
 - concept
 - stochastic processes

@@ -1,9 +1,8 @@
 ---
 aliases:
-- Hotelling Model
+- Hotelling模型
 - Hotelling Competition
 - Linear City Model
-- Hotelling模型
 - Hotelling
 tags:
 - concept

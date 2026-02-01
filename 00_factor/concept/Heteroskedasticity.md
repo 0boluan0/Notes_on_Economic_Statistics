@@ -1,6 +1,5 @@
 ---
 aliases:
-- Heteroskedasticity
 - 异方差性
 - 异方差
 tags:

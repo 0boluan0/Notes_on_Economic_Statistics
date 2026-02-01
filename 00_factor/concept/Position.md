@@ -1,7 +1,5 @@
 ---
 aliases:
-- Position
-- position
 - 头寸
 tags:
 - concept

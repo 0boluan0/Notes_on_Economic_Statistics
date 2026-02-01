@@ -1,9 +1,8 @@
 ---
 aliases:
-- Econometrics
 - 计量经济学
 - 计量经济学-hub
-- hub
+- Econometrics
 tags:
 - hub
 - 经济

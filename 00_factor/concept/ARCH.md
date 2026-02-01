@@ -1,7 +1,6 @@
 ---
 aliases:
 - 自回归条件异方差
-- ARCH
 tags:
 - concept
 ---

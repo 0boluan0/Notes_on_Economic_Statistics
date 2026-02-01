@@ -1,6 +1,5 @@
 ---
 aliases:
-- Series
 - 无穷级数
 - 级数
 tags:

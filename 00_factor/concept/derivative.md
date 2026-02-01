@@ -1,7 +1,6 @@
 ---
 aliases:
 - 导数
-- derivative
 tags:
 - concept
 ---

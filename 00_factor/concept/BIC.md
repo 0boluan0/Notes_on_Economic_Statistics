@@ -1,9 +1,8 @@
 ---
 aliases:
+- 施瓦茨准则
 - Bayesian Information Criterion
 - Schwarz Criterion
-- 施瓦茨准则
-- BIC
 tags:
 - 统计学
 - 模型选择

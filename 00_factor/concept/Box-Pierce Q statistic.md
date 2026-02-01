@@ -1,10 +1,9 @@
 ---
 aliases:
-- Box-Pierce Q statistic
-- Ljung-Box test
 - Box-Pierce Q 统计量
 - Ljung-Box 检验
 - Box-Pierce和Ljung-Box检验
+- Ljung-Box test
 - Box
 tags:
 - proof

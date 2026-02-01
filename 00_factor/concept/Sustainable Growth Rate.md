@@ -1,6 +1,5 @@
 ---
 aliases:
-- Sustainable Growth Rate
 - 可持续增长
 - 可持续增长率
 tags:

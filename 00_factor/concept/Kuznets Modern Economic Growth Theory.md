@@ -1,6 +1,5 @@
 ---
 aliases:
-- Kuznets Modern Economic Growth Theory
 - 库兹涅茨增长理论
 - 库兹涅茨现代经济增长理论
 tags:

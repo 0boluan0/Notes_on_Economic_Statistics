@@ -1,10 +1,9 @@
 ---
 aliases:
-- Growth Theory
 - 经济增长理论
 - 增长理论
 - 增长理论-hub
-- hub
+- Growth Theory
 tags:
 - hub
 - 经济
