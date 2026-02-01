@@ -13,7 +13,7 @@ the code we write is called source code
 computer only recognise  machine code :the binary 0-1 list. so there is a system to transcript the source code to the machine code .
 the device we use to achieve this is called complier
 
-3 dimensions to analyse you code:
+3 dimensions(方面) to analyse you code:
 1. correctness
 2. design :often run faster when the code is well designed 
 3. style: is your code easy to read
@@ -25,14 +25,14 @@ the device we use to achieve this is called complier
 
 in terminal , type: code hello.c
 
-### 编译文件
+### 编译(compile)文件
 
-also in terminal  , type make hello ,no .c. 
+also in terminal  , type make hello    ,no .c. 
 
 ### run the file
 
 ./<filename(no c, just file name)>
-
+eg : ./hello
 ### print
 
 ```c
