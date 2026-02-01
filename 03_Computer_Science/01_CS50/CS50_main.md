@@ -27,7 +27,7 @@ in terminal , type: code hello.c
 
 ### 编译(compile)文件
 
-also in terminal  , type make hello    ,no .c. 
+also in terminal~~  ,~~ type `make hello`~~    ,no .c.~~（直接运行 `make hello`，无需写扩展名 `.c`）
 
 ### run the file
 
@@ -43,4 +43,3 @@ f means :formatted ,按照指定格式输出
 \n change the line 
 
 C force that if you have a string , it should be in one line, changing the line by yourself is not allowed.
-
