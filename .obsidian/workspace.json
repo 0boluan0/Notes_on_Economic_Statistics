@@ -173,11 +173,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for MIT18.01_Single-Variable-Calculus"
+              "title": "File properties"
             }
           },
           {
@@ -227,7 +225,7 @@
                 }
               },
               "icon": "terminal",
-              "title": "Terminal: ✳ 周记模版规划"
+              "title": "Terminal: ✳ 笔记翻译完善计划"
             }
           }
         ],
@@ -244,13 +242,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of MIT18.01_Single-Variable-Calculus"
+              "title": "Outline"
             }
           }
         ]
@@ -276,8 +273,9 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "1e8cdccd7773f04d",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
+    "00_inbox/术语翻译对照表.csv",
     "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
     "01_Math/01_calculus/Lecture_notes/9-16.pdf",
     "01_Math/01_calculus/Lecture_notes/26-38.pdf",
@@ -313,7 +311,6 @@
     "04_method/任务管理系统说明.md",
     "04_method/Learning method.md",
     "00_factor/concept/Delta.md",
-    "00_factor/concept/BIC.md",
     "98_attachment/Pasted image 20250629104152.png",
     "98_attachment/Pasted image 20250629104144.png",
     "98_attachment/Pasted image 20250628212933.png",
