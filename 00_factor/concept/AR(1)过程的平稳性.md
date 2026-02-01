@@ -75,11 +75,16 @@ $$
 计算方差：
 $$
 \begin{aligned}
-\text{Var}(y_t) &= E[(y_t - \mu)^2] \\
-&= E\left[\left(\sum_{i=0}^{\infty} a_1^i \varepsilon_{t-i}\right)^2\right] \\
-&= E\left[\sum_{i=0}^{\infty} a_1^{2i} \varepsilon_{t-i}^2 + \sum_{i \neq j} a_1^{i+j} (k}\varepsilon_{t-i} \varepsilon_{t-j}\right]
+\operatorname{Var}(y_t)
+&= \mathbb{E}\big[(y_t-\mu)^2\big] \\
+&= \mathbb{E}\left[\left(\sum_{i=0}^{\infty} a_1^{i}\varepsilon_{t-i}\right)^2\right] \\
+&= \mathbb{E}\left[
+\sum_{i=0}^{\infty} a_1^{2i}\varepsilon_{t-i}^2
++ \sum_{\substack{i,j\ge 0\\ i\ne j}} a_1^{i+j}\varepsilon_{t-i}\varepsilon_{t-j}
+\right].
 \end{aligned}
 $$
+
 
 由于白噪声不相关，$\varepsilon_{t-i} \varepsilon_{t-j} = 0$ 当 $i \neq j$，只保留对角项：
 $$

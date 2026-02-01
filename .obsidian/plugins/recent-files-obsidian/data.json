@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "Untitled",
+      "path": "Untitled.canvas"
+    },
+    {
+      "basename": "Overview & Study Record",
+      "path": "03_Computer_Science/00_CSdiy/Overview & Study Record.md"
+    },
+    {
+      "basename": "AR(1)过程的平稳性",
+      "path": "00_factor/concept/AR(1)过程的平稳性.md"
+    },
+    {
       "basename": "时间序列分析-hub",
       "path": "00_factor/00_hub/时间序列分析-hub.md"
     },
@@ -59,10 +71,6 @@
     {
       "basename": "README",
       "path": "README.md"
-    },
-    {
-      "basename": "Overview & Study Record",
-      "path": "03_Computer_Science/00_CSdiy/Overview & Study Record.md"
     },
     {
       "basename": "CS50_main",
@@ -191,14 +199,6 @@
     {
       "basename": "linear_algebra_and_its_applications_4th",
       "path": "01_Math/02_linear algebra/linear_algebra_and_its_applications_4th.pdf"
-    },
-    {
-      "basename": "02_vector spaces and subspace",
-      "path": "01_Math/02_linear algebra/02_vector spaces and subspace.md"
-    },
-    {
-      "basename": "01_matrices and Gaussian Elimination",
-      "path": "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md"
     }
   ],
   "omittedPaths": [],

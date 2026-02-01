@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_factor/00_hub/时间序列分析-hub.md",
+                "file": "03_Computer_Science/00_CSdiy/Overview & Study Record.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "时间序列分析-hub"
+              "title": "Overview & Study Record"
             }
           }
         ]
@@ -189,7 +189,7 @@
             }
           },
           {
-            "id": "6d450be93ca9360d",
+            "id": "79b9de9e77650e91",
             "type": "leaf",
             "state": {
               "type": "terminal:terminal",
@@ -225,11 +225,11 @@
                 }
               },
               "icon": "terminal",
-              "title": "Terminal: ✳ Single Character Message"
+              "title": "Terminal: zsh"
             }
           },
           {
-            "id": "79b9de9e77650e91",
+            "id": "36db59183709d800",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -267,11 +267,11 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: zsh"
+              "title": "Terminal: ✳ Claude Code"
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 7
       },
       {
         "id": "8532e59675ffc5f1",
@@ -296,7 +296,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 784.5
+    "width": 540.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -312,13 +312,16 @@
       "obsidian-git:Open Git source control": false,
       "omnisearch:Omnisearch": false,
       "templater-obsidian:Templater": false,
-      "terminal:Open terminal": false,
       "canvas:Create new canvas": false,
+      "terminal:Open terminal": false,
       "markdown-importer:Open format converter": false
     }
   },
   "active": "79b9de9e77650e91",
   "lastOpenFiles": [
+    "Untitled.canvas",
+    "03_Computer_Science/00_CSdiy/Overview & Study Record.md",
+    "00_factor/concept/AR(1)过程的平稳性.md",
     "00_factor/00_hub/时间序列分析-hub.md",
     "00_factor/system/平稳性检验对比(DF-ADF-KPSS).md",
     "00_factor/concept/连续映射定理.md",
@@ -344,9 +347,6 @@
     "CLAUDE.md",
     "00_inbox/add_done_item.md",
     "99_学习情况记录/2026-02-01——Sun.md",
-    "Tasks Plugin - Review and check your Statuses 2025-12-25 22-10-20.md",
-    "README.md",
-    "99_学习情况记录/每日大事件/2026-01-31——金融.md",
     "99_学习情况记录/每日大事件",
     "scripts/today.py",
     "untitled folder",
