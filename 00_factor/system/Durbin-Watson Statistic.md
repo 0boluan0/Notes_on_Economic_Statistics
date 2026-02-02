@@ -65,6 +65,6 @@ $$DW \approx 2(1 - \hat{\rho})$$
 
 ## 相关概念
 [[Autocorrelation|自相关]]
-[[BG检验]]
+[[00_factor/system/Breusch-Godfrey Test|BG检验]]
 [[Q Test|Q检验]]
 [[Newey-West]]

@@ -79,9 +79,9 @@ $$ a^* \in \arg\max_{a} E_\theta[U(\theta, m, a)] $$
 
 ## 相关概念
 
-- [[分离均衡]]
-- [[完美贝叶斯均衡]]
-- [[贝叶斯博弈]]
+- [[00_factor/concept/Separating Equilibrium|分离均衡]]
+- [[00_factor/concept/Perfect Bayesian Equilibrium|完美贝叶斯均衡]]
+- [[00_factor/concept/Bayesian Game|贝叶斯博弈]]
 
 ## 应用
 

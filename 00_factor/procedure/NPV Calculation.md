@@ -101,6 +101,6 @@ $$ EAC = \frac{NPV}{\frac{1 - (1+r)^{-n}}{r}} $$
 4. **现金流量时点**：现金流发生时间假设不准确。
 
 ## 相关概念
-[[内部收益率]]
-[[现值指数]]
+[[00_factor/concept/Internal Rate of Return|内部收益率]]
+[[00_factor/concept/Profitability Index|现值指数]]
 [[Discounted Payback Period|折现回收期]]

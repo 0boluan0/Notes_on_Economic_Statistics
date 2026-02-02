@@ -59,5 +59,5 @@ $$x = 期末杜邦权益净利率 \times 利润留存率$$
 4. **风险管理**：防范增长过快的风险
 
 ## 相关链接
-[[权益净利率]]
-[[杜邦分析]]
+[[00_factor/concept/Return on Equity|权益净利率]]
+[[00_factor/concept/DuPont Analysis|杜邦分析]]

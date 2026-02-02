@@ -41,4 +41,4 @@ $$
 ## 相关链接
 
 - 相关模型：[[ARCH]], [[GARCH]]
-- 相关概念：[[Volatility Clustering|波动聚集]], [[历史波动率]], [[隐含波动率]], [[已实现波动率]]
+- 相关概念：[[Volatility Clustering|波动聚集]], [[00_factor/concept/Historical Volatility|历史波动率]], [[00_factor/concept/Implied Volatility|隐含波动率]], [[00_factor/concept/Realized Volatility|已实现波动率]]

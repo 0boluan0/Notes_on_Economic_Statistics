@@ -78,4 +78,4 @@ $$\text{VIF} = \text{diag}[(R(X) R(X)']^{-1}$$
 | VIF | 标准化指标，便于判断 |
 | 条件指数 | 考虑所有变量相关 |
 
-相关链接: [[多重共线性]], [[条件指数]]
+相关链接: [[00_factor/concept/Multicollinearity|多重共线性]], [[00_factor/system/Condition Index|条件指数]]

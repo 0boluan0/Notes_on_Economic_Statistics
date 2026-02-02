@@ -135,4 +135,4 @@ $$EL = PD \times LGD \times EAD$$
    - 跨行业分散
    - 跨地区分散
 
-相关链接: [[信用风险]], [[Credit VaR|信用VaR]], [[Merton Model|Merton模型]], [[巴塞尔协议]]
+相关链接: [[00_factor/concept/Credit Risk|信用风险]], [[Credit VaR|信用VaR]], [[Merton Model|Merton模型]], [[00_factor/concept/Basel Accords|巴塞尔协议]]

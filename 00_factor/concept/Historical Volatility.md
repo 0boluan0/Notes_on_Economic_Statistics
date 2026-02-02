@@ -16,5 +16,5 @@ tags:
 
 ## 相关链接
 
-- 其他波动率度量：[[隐含波动率]], [[已实现波动率]]
+- 其他波动率度量：[[00_factor/concept/Implied Volatility|隐含波动率]], [[00_factor/concept/Realized Volatility|已实现波动率]]
 - 波动率模型：[[ARCH]], [[GARCH]], [[EWMA]]

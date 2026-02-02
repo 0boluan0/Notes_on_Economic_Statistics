@@ -128,6 +128,6 @@ $$\Delta x_t = \pi_0 + \alpha e_{t-1} + \sum_{i=1}^{p-1} \pi_i \Delta x_{t-i} + 
 2. **Johansen 方法**：基于 VAR 的最大似然估计，通过 $\pi$ 矩阵的特征值检验秩 $r$
 
 ## 相关概念
-[[EG两步检验法]]
-[[ADF检验]]
-[[ARMA模型]]
+[[00_factor/concept/Engle-Granger Two-Step Test|EG两步检验法]]
+[[00_factor/concept/Augmented Dickey-Fuller Test|ADF检验]]
+[[00_factor/concept/ARMA|ARMA模型]]

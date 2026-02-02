@@ -48,9 +48,9 @@ $$ \sigma_i = (p_1, p_2, ..., p_k) $$
 
 ## 相关概念
 
-- [[纯策略纳什均衡]]
-- [[最优反应函数]]
-- [[可理性化]]
+- [[00_factor/concept/Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
+- [[00_factor/concept/Best-Reply Function|最优反应函数]]
+- [[00_factor/concept/Rationalisability|可理性化]]
 
 ## 典型例子
 
@@ -59,6 +59,6 @@ $$ \sigma_i = (p_1, p_2, ..., p_k) $$
 
 ## 纳什均衡的类型
 
-- [[纯策略纳什均衡]]
+- [[00_factor/concept/Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
 - 混合策略纳什均衡
-- [[子博弈精炼纳什均衡]]
+- [[00_factor/concept/Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]

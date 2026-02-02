@@ -108,7 +108,7 @@ $$ \sqrt{n}(\hat{\theta}_{\text{MLE}} - \theta_0) \xrightarrow{d} N(0, I(\theta_
 4. **收敛困难**：参数过多或数据不足时优化困难。
 
 ## 相关概念
-[[OLS估计步骤]]
+[[00_factor/procedure/OLS Estimation Steps|OLS估计步骤]]
 [[Likelihood Ratio Test|似然比检验]]
-[[ARMA模型识别]]
-[[GARCH模型估计]]
+[[00_factor/procedure/ARMA Model Identification Steps|ARMA模型识别]]
+[[00_factor/procedure/GARCH Model Estimation Steps|GARCH模型估计]]

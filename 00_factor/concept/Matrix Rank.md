@@ -103,4 +103,4 @@ rank(A) + rank(B) - n ≤ rank(AB) ≤ min(rank(A), rank(B))
 
 rank(AB) ≥ rank(A) + rank(B) - n
 
-相关链接: [[零空间]], [[子空间]], [[奇异矩阵]]
+相关链接: [[00_factor/concept/Null Space|零空间]], [[00_factor/concept/Subspace|子空间]], [[00_factor/concept/Singular Matrix|奇异矩阵]]

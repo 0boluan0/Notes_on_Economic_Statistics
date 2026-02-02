@@ -112,4 +112,4 @@ $$选择方案 \text{ iff 收益 > 机会成本}$$
 
 ## 相关链接
 
-[[沉没成本]]
+[[00_factor/concept/Sunk Cost|沉没成本]]

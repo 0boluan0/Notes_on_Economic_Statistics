@@ -20,11 +20,11 @@ tags:
 
 ## 关系
 
-- i.i.d.（零均值） ⇒ [[鞅差序列]] ⇒ [[白噪声过程]]（一般情形下，不可逆）
+- i.i.d.（零均值） ⇒ [[00_factor/concept/Martingale Difference Sequence|鞅差序列]] ⇒ [[00_factor/concept/White Noise|白噪声过程]]（一般情形下，不可逆）
 
 ## Connections
 
-- 相关：[[独立性与不相关]]
+- 相关：[[00_factor/concept/Independence vs. Uncorrelated|独立性与不相关]]
 
 ## source_notes
 

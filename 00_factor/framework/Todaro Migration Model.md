@@ -75,6 +75,6 @@ $$
 3. **信息透明**：提供准确的城市就业信息，避免盲目迁移
 
 ## 相关链接
-[[刘易斯模型]]
-[[费景汉-拉尼斯模型]]
+[[00_factor/framework/Lewis Dual Sector Model|刘易斯模型]]
+[[00_factor/framework/Fei-Ranis Model|费景汉-拉尼斯模型]]
 [[Population Migration Theory|人口迁移理论]]

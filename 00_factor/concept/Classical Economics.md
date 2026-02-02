@@ -133,5 +133,5 @@ tags:
 4. **后续发展**：为后续经济学发展奠定基础
 
 ## 相关链接
-[[亚当斯密经济学]]
-[[边际革命]]
+[[00_factor/concept/Adam Smith's Economics|亚当斯密经济学]]
+[[00_factor/concept/Marginal Revolution|边际革命]]

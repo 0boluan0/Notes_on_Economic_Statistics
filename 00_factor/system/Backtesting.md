@@ -57,5 +57,5 @@ $$LR_{ind} = -2 \ln\left[\frac{(1-p)^{N_{00}}p^{N_{01}}(1-p)^{N_{10}}p^{N_{11}}}
 
 ## 相关概念
 [[VaR]]
-[[聚束效应]]
-[[VaR标准误]]
+[[00_factor/concept/Bunching|聚束效应]]
+[[00_factor/concept/VaR Standard Error|VaR标准误]]

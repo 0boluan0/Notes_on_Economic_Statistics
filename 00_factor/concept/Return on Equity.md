@@ -54,6 +54,6 @@ $$权益净利率 = \frac{净利润}{营业收入} \times \frac{营业收入}{�
 - 要关注盈利的可持续性
 
 ## 相关链接
-[[营业净利率]]
-[[总资产净利率]]
-[[权益乘数]]
+[[00_factor/concept/Net Profit Margin|营业净利率]]
+[[00_factor/concept/Return on Assets|总资产净利率]]
+[[00_factor/concept/Equity Multiplier|权益乘数]]

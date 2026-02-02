@@ -117,7 +117,7 @@ $$ \lambda_{\text{max}}(r) = -T \ln(1 - \hat{\lambda}_{r+1}) \xrightarrow{d} \ch
 4. **结构断点**：样本期间存在结构变化时，检验结论可能不可靠。
 
 ## 相关概念
-[[协整]]
+[[00_factor/concept/Cointegration|协整]]
 [[Error Correction Model|误差纠正模型]]
-[[单位根]]
-[[ADF检验步骤]]
+[[00_factor/concept/Unit Root Test|单位根]]
+[[00_factor/procedure/ADF Test Steps|ADF检验步骤]]

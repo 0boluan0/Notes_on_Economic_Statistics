@@ -104,8 +104,8 @@ $$ r_{long} = \frac{E[r_1] + \dots + E[r_n]}{n} + \text{流动性溢价} $$
 
 ## 相关概念
 
-- [[到期收益率]]
-- [[利率的风险结构]]
+- [[00_factor/concept/Yield to Maturity|到期收益率]]
+- [[00_factor/concept/Risk Structure of Interest Rates|利率的风险结构]]
 - [[Expectations Theory|预期理论]]
 
 ## 重要意义

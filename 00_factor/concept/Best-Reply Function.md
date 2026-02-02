@@ -44,9 +44,9 @@ $$ BR_1(s_2) = \arg\max_{s_1 \in S_1} u_1(s_1, s_2) $$
 ## 相关概念
 
 - [[Nash Equilibrium|纳什均衡]]
-- [[纯策略纳什均衡]]
-- [[混合策略纳什均衡]]
-- [[古诺竞争]]
+- [[00_factor/concept/Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
+- [[00_factor/concept/Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
+- [[00_factor/concept/Cournot Competition|古诺竞争]]
 
 ## 典型例子
 

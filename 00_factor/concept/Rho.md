@@ -12,4 +12,4 @@ tags:
 ## 相关链接
 
 - 其他希腊字母：[[Delta]], [[Gamma]], [[Vega]], [[Theta]]
-- 利率风险：[[久期]], [[曲率]]
+- 利率风险：[[00_factor/concept/duration|久期]], [[00_factor/concept/Curvature|曲率]]

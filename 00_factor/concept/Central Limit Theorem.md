@@ -140,6 +140,6 @@ $$\sqrt{n}\left(\frac{\bar{X}_n - \mu}{\sigma}\right) \xrightarrow{d} N(0, 1)$$
 - **平稳过程 CLT**：处理弱相关序列
 
 ## 相关概念
-[[大数定律]]
-[[OLS估计量的一致性]]
+[[00_factor/concept/Law of Large Numbers|大数定律]]
+[[00_factor/concept/OLS consistency|OLS估计量的一致性]]
 [[Asymptotic Theory|渐近理论]]

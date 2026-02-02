@@ -89,9 +89,9 @@ $$ \sum_{i=1}^n MRS_i = MRT $$
 
 ## 相关概念
 
-- [[外部性]]
-- [[俱乐部物品]]
-- [[公共资源]]
+- [[00_factor/concept/Externality|外部性]]
+- [[00_factor/concept/Club Goods|俱乐部物品]]
+- [[00_factor/concept/Common Resources|公共资源]]
 - [[Free-rider Problem|搭便车问题]]
 
 ## 应用

@@ -61,8 +61,8 @@ $$ p_1^* = p_2^* = ... = p_n^* = c $$
 
 ## 相关概念
 
-- [[古诺竞争]]
-- [[Hotelling 模型]]
+- [[00_factor/concept/Cournot Competition|古诺竞争]]
+- [[00_factor/concept/Hotelling Model|Hotelling 模型]]
 
 ## 应用
 

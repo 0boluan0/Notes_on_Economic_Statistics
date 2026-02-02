@@ -64,4 +64,4 @@ $$\text增长率} = \frac{\Delta y_t}{y_{t-1}} \approx \ln(y_t) - \ln(y_{t-1}) =
 2. 差分改变经济含义（从水平值变为变化率）
 3. 过度差分可能导致过度差分（过度平稳）
 
-相关链接: [[单位根检验]], [[平稳性]], [[随机游走]]
+相关链接: [[00_factor/concept/Unit Root Test|单位根检验]], [[00_factor/concept/Stationarity|平稳性]], [[00_factor/concept/Random Walk|随机游走]]

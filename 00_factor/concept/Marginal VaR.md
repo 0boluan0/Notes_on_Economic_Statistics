@@ -13,5 +13,5 @@ tags:
 ## 相关链接
 
 - 基础风险度量：[[VaR]]
-- VaR分解：[[递增VaR]], [[成分VaR]]
-- 应用：用于[[成分VaR]]的计算（成分VaR = 持仓 × 边际VaR）
+- VaR分解：[[00_factor/concept/Incremental VaR|递增VaR]], [[00_factor/concept/Component VaR|成分VaR]]
+- 应用：用于[[00_factor/concept/Component VaR|成分VaR]]的计算（成分VaR = 持仓 × 边际VaR）

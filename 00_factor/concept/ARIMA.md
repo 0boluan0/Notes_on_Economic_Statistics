@@ -18,7 +18,7 @@ ARIMA 模型（Autoregressive Integrated Moving Average）在 ARMA 基础上引�
 
 ## Connections
 
-- 相关：[[ARMA]]、[[单位根检验]]、[[平稳性]]
+- 相关：[[ARMA]]、[[00_factor/concept/Unit Root Test|单位根检验]]、[[00_factor/concept/Stationarity|平稳性]]
 
 ## source_notes
 

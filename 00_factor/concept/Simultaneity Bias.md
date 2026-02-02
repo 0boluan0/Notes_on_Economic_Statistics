@@ -193,4 +193,4 @@ $Q_d = \beta_0 + \beta_1 P + \beta_2 Y + \epsilon_2$
 
 当工具变量多于内生变量时，检验工具变量的外生性。
 
-相关链接: [[内生性]], [[联立方程模型]], [[2SLS]], [[参数识别]]
+相关链接: [[00_factor/concept/Endogeneity|内生性]], [[00_factor/concept/Simultaneous Equations Model|联立方程模型]], [[2SLS]], [[00_factor/concept/Parameter Identification|参数识别]]

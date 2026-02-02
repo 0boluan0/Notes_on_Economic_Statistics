@@ -39,9 +39,9 @@ $$\hat{\rho}_k = \frac{\sum_{t=k+1}^{T} (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum
 1. 检验序列相关性
 2. 识别ARMA模型阶数
 3. 评估模型拟合效果
-4. [[白噪声检验]]
+4. [[00_factor/concept/White Noise Test|白噪声检验]]
 
-相关链接: [[偏自相关函数]], [[ARMA]], [[白噪声检验]]
+相关链接: [[00_factor/concept/Partial Autocorrelation Function|偏自相关函数]], [[ARMA]], [[00_factor/concept/White Noise Test|白噪声检验]]
 
 ## source_notes
 

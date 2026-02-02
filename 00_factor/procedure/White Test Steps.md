@@ -95,6 +95,6 @@ $$ \text{Critical Value} = \chi^2_{\alpha}(df) $$
 4. **多重共线性**：辅助回归中的高次项可能高度相关。
 
 ## 相关概念
-[[异方差]]
+[[00_factor/concept/Heteroskedasticity|异方差]]
 [[Weighted Least Squares Estimation|加权最小二乘估计]]
-[[稳健标准误]]
+[[00_factor/system/White Robust Standard Errors|稳健标准误]]

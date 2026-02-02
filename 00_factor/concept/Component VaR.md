@@ -21,4 +21,4 @@ tags:
 ## 相关链接
 
 - 基础风险度量：[[VaR]]
-- VaR分解：[[边际VaR]], [[递增VaR]]
+- VaR分解：[[00_factor/concept/Marginal VaR|边际VaR]], [[00_factor/concept/Incremental VaR|递增VaR]]

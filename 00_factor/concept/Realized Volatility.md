@@ -14,5 +14,5 @@ tags:
 
 ## 相关链接
 
-- 其他波动率度量：[[历史波动率]], [[隐含波动率]]
+- 其他波动率度量：[[00_factor/concept/Historical Volatility|历史波动率]], [[00_factor/concept/Implied Volatility|隐含波动率]]
 - 波动率模型：[[ARCH]], [[GARCH]]

@@ -18,7 +18,7 @@ DF/ADF 与 KPSS 检验相互补充：前者原假设为“存在单位根（非�
 
 ## Connections
 
-- 相关：[[单位根检验]]、[[平稳性]]、[[随机游走]]、[[ARIMA模型]]
+- 相关：[[00_factor/concept/Unit Root Test|单位根检验]]、[[00_factor/concept/Stationarity|平稳性]]、[[00_factor/concept/Random Walk|随机游走]]、[[00_factor/concept/ARIMA|ARIMA模型]]
 
 ## source_notes
 

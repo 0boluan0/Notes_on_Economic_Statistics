@@ -75,4 +75,4 @@ U₁ + U₂ = {u₁ + u₂ : u₁∈U₁, u₂∈U₂}也是子空间。
 如果U₁和U₂是有限维子空间，则：
 dim(U₁ ∩ U₂) + dim(U₁ + U₂) = dim(U₁) + dim(U₂)
 
-相关链接: [[向量空间]], [[零空间]], [[Column Space|列空间]]
+相关链接: [[00_factor/concept/Vector Space|向量空间]], [[00_factor/concept/Null Space|零空间]], [[Column Space|列空间]]

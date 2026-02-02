@@ -65,5 +65,5 @@ $$
 4. 假设过于严格，与现实差距较大
 
 ## 相关链接
-[[索罗模型]]
-[[库兹涅茨现代经济增长理论]]
+[[00_factor/framework/Solow Model|索罗模型]]
+[[00_factor/concept/Kuznets Modern Economic Growth Theory|库兹涅茨现代经济增长理论]]

@@ -87,6 +87,6 @@ $$ D^2 = \frac{1}{1-\rho^2}\left[\frac{(X_1-\mu_1)^2}{\sigma_1^2} + \frac{(X_2-\
 
 ## 相关概念
 
-- [[多元正态分布]]
-- [[Wishart 分布]]
+- [[00_factor/concept/Multivariate Normal Distribution|多元正态分布]]
+- [[00_factor/concept/Wishart Distribution|Wishart 分布]]
 - [[Hotelling T2 Test|Hotelling T² 检验]]

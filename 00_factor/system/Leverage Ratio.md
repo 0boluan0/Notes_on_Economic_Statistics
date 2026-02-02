@@ -58,6 +58,6 @@ $$\text{杠杆率} = \frac{\text{Tier 1 资本}}{\text{总风险暴露}} \times 
 | 衍生品暴露计量复杂 | 潜在未来风险不准确 | 使用保守的附加系数、净额结算 |
 
 ## 相关概念
-[[巴塞尔资本充足率]]
-[[Tier 1 Capital]]
+[[00_factor/system/Basel Capital Adequacy Ratio|巴塞尔资本充足率]]
+[[00_factor/system/Tier 1 Capital Ratio|Tier 1 Capital]]
 [[NSFR]]

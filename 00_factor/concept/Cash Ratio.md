@@ -37,5 +37,5 @@ $$现金比率 = \frac{现金及现金等价物}{流动负债}$$
 - 过度保守可能导致企业错失投资机会
 
 ## 相关链接
-[[流动比率]]
-[[速动比率]]
+[[00_factor/concept/Current Ratio|流动比率]]
+[[00_factor/concept/Quick Ratio|速动比率]]

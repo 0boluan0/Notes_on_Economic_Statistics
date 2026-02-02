@@ -139,5 +139,5 @@ $$E[\hat{\beta}_{OLS}] \neq \beta$$
    - 内生解释变量与误差项相关
 
 ## 相关概念
-[[高斯-马尔可夫定理]]
+[[00_factor/concept/Gauss-Markov theorem|高斯-马尔可夫定理]]
 [[Linear Regression Model|线性回归模型]]

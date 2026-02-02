@@ -13,4 +13,4 @@ tags:
 ## 相关链接
 
 - 基础概念：[[VaR]]
-- 相关概念：[[压力测试]]
+- 相关概念：[[00_factor/system/Stress Testing|压力测试]]

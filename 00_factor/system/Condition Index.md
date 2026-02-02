@@ -49,6 +49,6 @@ $$\pi_{jk} = \frac{\phi_{jk}^2}{\sum_{i=1}^{p} \phi_{ji}^2}$$
 | CI波动大 | 样本不稳定 | 增大样本、使用滚动窗口分析 |
 
 ## 相关概念
-[[方差膨胀因子]]
-[[多重共线性]]
+[[00_factor/concept/Variance Inflation Factor|方差膨胀因子]]
+[[00_factor/concept/Multicollinearity|多重共线性]]
 [[Eigenvalues|特征值]]

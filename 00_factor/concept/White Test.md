@@ -181,4 +181,4 @@ $LM = n \cdot R^2 \sim \chi^2(2k)$
 - 说明异方差处理方法
 - 确保结论稳健
 
-相关链接: [[异方差]], [[OLS]], [[加权最小二乘法(WLS)]]
+相关链接: [[00_factor/concept/Heteroskedasticity|异方差]], [[OLS]], [[00_factor/concept/Weighted Least Squares|加权最小二乘法(WLS)]]

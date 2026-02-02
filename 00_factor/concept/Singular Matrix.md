@@ -123,4 +123,4 @@ diag(1, 2, 0)是奇异矩阵，因为包含零对角元。
 - 使用正则化方法
 - 使用伪逆（Moore-Penrose逆）
 
-相关链接: [[矩阵的秩]], [[零空间]], [[LU分解]]
+相关链接: [[00_factor/concept/Matrix Rank|矩阵的秩]], [[00_factor/concept/Null Space|零空间]], [[00_factor/concept/LU Decomposition|LU分解]]

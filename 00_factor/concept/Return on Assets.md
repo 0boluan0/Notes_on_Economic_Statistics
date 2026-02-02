@@ -55,5 +55,5 @@ $$总资产净利率 = 营业净利率 \times 总资产周转次数$$
 - 没有区分金融活动和经营活动
 
 ## 相关链接
-[[营业净利率]]
-[[权益净利率]]
+[[00_factor/concept/Net Profit Margin|营业净利率]]
+[[00_factor/concept/Return on Equity|权益净利率]]

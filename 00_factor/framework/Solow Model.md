@@ -76,5 +76,5 @@ $$
 3. **收敛性**：不同经济体的稳态可能不同，但都会收敛到各自的稳态
 
 ## 相关链接
-[[哈罗德-多玛模型]]
-[[库兹涅茨现代经济增长理论]]
+[[00_factor/concept/Harrod-Domar Model|哈罗德-多玛模型]]
+[[00_factor/concept/Kuznets Modern Economic Growth Theory|库兹涅茨现代经济增长理论]]

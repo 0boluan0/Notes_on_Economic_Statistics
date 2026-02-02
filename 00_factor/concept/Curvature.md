@@ -72,5 +72,5 @@ $$
 
 ## 相关链接
 
-- 一阶风险：[[久期]], [[马考利久期]], [[修正久期]]
+- 一阶风险：[[00_factor/concept/duration|久期]], [[00_factor/concept/Macaulay Duration|马考利久期]], [[00_factor/concept/Modified Duration|修正久期]]
 - 完整利率风险框架：久期（一阶）+ 曲率（二阶）

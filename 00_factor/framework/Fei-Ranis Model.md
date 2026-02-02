@@ -60,5 +60,5 @@ tags:
 3. **资本积累**：工业部门的资本积累是推动劳动力转移的关键动力
 
 ## 相关链接
-[[刘易斯模型]]
-[[托达罗模型]]
+[[00_factor/framework/Lewis Dual Sector Model|刘易斯模型]]
+[[00_factor/framework/Todaro Migration Model|托达罗模型]]

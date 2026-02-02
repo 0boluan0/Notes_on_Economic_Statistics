@@ -18,6 +18,6 @@ tags:
 
 ## 关联卡片
 - [[Time Series Analysis-hub]]
-- [[脉冲响应函数]]
-- [[方差分解]]
-- [[Johansen协整检验步骤]]
+- [[00_factor/concept/Impulse Response Function|脉冲响应函数]]
+- [[00_factor/concept/Variance Decomposition|方差分解]]
+- [[00_factor/procedure/Johansen Cointegration Test Steps|Johansen协整检验步骤]]

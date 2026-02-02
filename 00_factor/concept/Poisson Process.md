@@ -104,8 +104,8 @@ $$ P\{N(t) = n\} = \frac{[m_X(t)]^n}{n!} e^{-m_X(t)}, \quad n \ge 0 $$
 
 ## 相关概念
 
-- [[复合泊松过程]]
-- [[更新过程]]
+- [[00_factor/concept/Compound Poisson Process|复合泊松过程]]
+- [[00_factor/concept/Renewal Process|更新过程]]
 - [[Exponential Distribution|指数分布]]
 
 ## 性质总结

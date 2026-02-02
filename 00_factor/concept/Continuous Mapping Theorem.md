@@ -15,10 +15,10 @@ tags:
 
 ## Connections
 
-- 相关：[[中心极限定理]]、[[大数定律]]、Slutsky 定理
+- 相关：[[00_factor/concept/Central Limit Theorem|中心极限定理]]、[[00_factor/concept/Law of Large Numbers|大数定律]]、Slutsky 定理
 
 ## source_notes
 
 - [[12_非平稳时间序列#3 中心极限定理Central Limit Theorem]]（同章引用）
-- [[OLS估计量的一致性#步骤 4：应用连续映射定理]]
+- [[00_factor/concept/OLS consistency#步骤 4：应用连续映射定理|OLS估计量的一致性]]
 

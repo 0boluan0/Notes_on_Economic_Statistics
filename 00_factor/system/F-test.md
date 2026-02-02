@@ -64,6 +64,6 @@ $$F = \frac{R^2/k}{(1-R^2)/(n-k-1)}$$
 
 ## 相关概念
 [[t Test|t检验]]
-[[判定系数]]
-[[多重共线性]]
-[[方差膨胀因子]]
+[[00_factor/system/R-squared|判定系数]]
+[[00_factor/concept/Multicollinearity|多重共线性]]
+[[00_factor/concept/Variance Inflation Factor|方差膨胀因子]]

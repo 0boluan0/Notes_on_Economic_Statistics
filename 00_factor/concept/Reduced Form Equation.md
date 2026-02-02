@@ -212,4 +212,4 @@ $\nu_i = \sum_j c_j \epsilon_j$
 
 正确识别外生变量对估计至关重要。
 
-相关链接: [[结构方程]], [[联立方程模型]], [[参数识别]]
+相关链接: [[00_factor/concept/Structural Equation|结构方程]], [[00_factor/concept/Simultaneous Equations Model|联立方程模型]], [[00_factor/concept/Parameter Identification|参数识别]]

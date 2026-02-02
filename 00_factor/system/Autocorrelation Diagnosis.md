@@ -68,8 +68,8 @@ $$Q = T \sum_{j=1}^p r_j^2 \sim \chi^2(p)$$
 | 滞后因变量导致DW失效 | 动态模型设定 | 使用工具变量、估计动态面板模型 |
 
 ## 相关概念
-[[Durbin-Watson统计量]]
-[[BG检验]]
+[[00_factor/system/Durbin-Watson Statistic|Durbin-Watson统计量]]
+[[00_factor/system/Breusch-Godfrey Test|BG检验]]
 [[Q Test|Q检验]]
 [[Newey-West]]
 [[Cochrane-Orcutt]]

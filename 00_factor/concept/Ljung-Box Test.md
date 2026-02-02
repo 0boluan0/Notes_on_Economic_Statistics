@@ -62,4 +62,4 @@ $$Q = T(T+2) \sum_{k=1}^{m} \frac{r_k^2}{T-k}$$
 
 其中r_k是平方序列的自相关系数。
 
-相关链接: [[白噪声检验]], [[ARCH]], [[自相关函数]]
+相关链接: [[00_factor/concept/White Noise Test|白噪声检验]], [[ARCH]], [[00_factor/concept/Autocorrelation Function|自相关函数]]

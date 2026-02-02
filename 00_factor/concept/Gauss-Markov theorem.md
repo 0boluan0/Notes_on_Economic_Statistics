@@ -176,5 +176,5 @@ $$\text{Var}(\hat{\beta}_{OLS}) = \sigma^2 (X'X)^{-1}$$
 ## 相关概念
 [[OLS Estimator|OLS估计量]]
 [[Linear Regression Model|线性回归模型]]
-[[OLS估计步骤]]
-[[异方差]]
+[[00_factor/procedure/OLS Estimation Steps|OLS估计步骤]]
+[[00_factor/concept/Heteroskedasticity|异方差]]

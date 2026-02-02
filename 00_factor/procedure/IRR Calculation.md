@@ -109,6 +109,6 @@ $$ 1 + MIRR = \left[\sum_{t=1}^n \frac{CF_t}{(1+IRR)^t} \left(\sum_{k=0}^{t-1} (
 4.与NPV冲突**：不同折现率下IRR和NPV结论可能冲突。
 
 ## 相关概念
-[[净现值]]
+[[00_factor/concept/Net Present Value (2)|净现值]]
 [[MIRR|修正内部收益率]]
 [[Payback Period|回收期]]

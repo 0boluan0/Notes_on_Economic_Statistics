@@ -81,9 +81,9 @@ SPNE 是最强的均衡概念之一。
 ## 相关概念
 
 - [[Nash Equilibrium|纳什均衡]]
-- [[完美贝叶斯均衡]]
-- [[逆向归纳法]]
-- [[子博弈]]
+- [[00_factor/concept/Perfect Bayesian Equilibrium|完美贝叶斯均衡]]
+- [[00_factor/concept/Backward Induction|逆向归纳法]]
+- [[00_factor/concept/Subgame|子博弈]]
 
 ## 应用
 

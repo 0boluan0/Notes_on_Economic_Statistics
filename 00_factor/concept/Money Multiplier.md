@@ -108,7 +108,7 @@ $$ M = m \times MB $$
 
 ## 相关概念
 
-- [[基础货币]]
+- [[00_factor/concept/Monetary Base|基础货币]]
 - [[Deposit Creation|存款创造]]
 - [[Required Reserves|准备金]]
 

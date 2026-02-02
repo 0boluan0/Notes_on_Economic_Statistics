@@ -22,7 +22,7 @@ $$ E(\varepsilon_t\mid \mathcal{F}_{t-1})=0, $$
 
 ## Connections
 
-- 相关：[[白噪声过程]]、独立同分布（i.i.d.）、[[ARCH]]
+- 相关：[[00_factor/concept/White Noise|白噪声过程]]、独立同分布（i.i.d.）、[[ARCH]]
 - 经济含义：在弱式有效市场中，收益超均值部分常被建模为 MDS。
 
 ## source_notes

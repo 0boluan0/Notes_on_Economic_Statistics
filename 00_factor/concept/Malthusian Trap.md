@@ -129,4 +129,4 @@ g(P) = f(Y/N)
 3. **制度建设**：完善社会保障
 4. **计划生育**：控制人口增长
 
-相关链接: [[Population Growth and Economic Development|人口增长与经济发展]], [[李嘉图模型]], [[索罗增长模型]]
+相关链接: [[Population Growth and Economic Development|人口增长与经济发展]], [[00_factor/concept/Ricardian Model|李嘉图模型]], [[00_factor/concept/Solow Model|索罗增长模型]]

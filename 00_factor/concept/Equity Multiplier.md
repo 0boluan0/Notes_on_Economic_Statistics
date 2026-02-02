@@ -49,5 +49,5 @@ $$权益乘数 = 1 + 产权比率$$
 3. **企业角度**：需要在杠杆收益和财务风险之间平衡
 
 ## 相关链接
-[[产权比率]]
-[[资产负债率]]
+[[00_factor/concept/Debt-to-Equity Ratio|产权比率]]
+[[00_factor/concept/Debt-to-Asset Ratio|资产负债率]]

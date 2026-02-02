@@ -13,6 +13,6 @@ $$
 
 ## 相关链接
 
-- 一般久期：[[久期]], [[修正久期]], [[有效久期]]
-- 利率风险：[[收益率曲线风险]]
-- 应用：用于管理[[收益率曲线风险]]
+- 一般久期：[[00_factor/concept/duration|久期]], [[00_factor/concept/Modified Duration|修正久期]], [[00_factor/concept/Effective Duration|有效久期]]
+- 利率风险：[[00_factor/concept/Yield Curve Risk|收益率曲线风险]]
+- 应用：用于管理[[00_factor/concept/Yield Curve Risk|收益率曲线风险]]

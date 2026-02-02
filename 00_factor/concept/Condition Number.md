@@ -85,4 +85,4 @@ $$\kappa(A) = \|A\| \cdot \|A^{-1}\|$$
 
 其中\|·\|是矩阵范数。
 
-相关链接: [[多重共线性]], [[方差膨胀因子]]
+相关链接: [[00_factor/concept/Multicollinearity|多重共线性]], [[00_factor/concept/Variance Inflation Factor|方差膨胀因子]]

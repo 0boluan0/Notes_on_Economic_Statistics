@@ -20,7 +20,7 @@ tags:
 
 ## Connections
 
-- 相关：[[Ljung-Box检验]]、[[白噪声检验]]、[[ARCH]]、[[GARCH]]
+- 相关：[[00_factor/concept/Ljung-Box Test|Ljung-Box检验]]、[[00_factor/concept/White Noise Test|白噪声检验]]、[[ARCH]]、[[GARCH]]
 
 ## source_notes
 

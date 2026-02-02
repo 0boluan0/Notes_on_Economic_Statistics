@@ -114,4 +114,4 @@ $$OpCapital = \sum_{i=1}^{8} \beta_i \times BI_i$$
 - Basel III：强化操作风险，特别关注模型风险
 - 资本要求：OpCapital × 12个月平均值
 
-相关链接: [[巴塞尔协议]], [[VaR]], [[EVT|极值理论]]
+相关链接: [[00_factor/concept/Basel Accords|巴塞尔协议]], [[VaR]], [[EVT|极值理论]]

@@ -101,13 +101,13 @@ $$ \hat{\beta} = (X'X)^{-1}X'y $$
 4. **内生性**：自变量与误差项相关，参数估计有偏且不一致。
 
 ## 相关概念
-[[多重共线性]]
-[[异方差]]
+[[00_factor/concept/Multicollinearity|多重共线性]]
+[[00_factor/concept/Heteroskedasticity|异方差]]
 [[Autocorrelation|自相关]]
-[[内生性]]
-[[MLE估计步骤]]
+[[00_factor/concept/Endogeneity|内生性]]
+[[00_factor/procedure/MLE Estimation Steps|MLE估计步骤]]
 
 ## 相关链接
 
-- OLS性质：[[高斯-马尔可夫定理]]
-- 违反假设的后果：[[异方差]], [[多重共线性]], [[Autocorrelation|自相关]]
+- OLS性质：[[00_factor/concept/Gauss-Markov theorem|高斯-马尔可夫定理]]
+- 违反假设的后果：[[00_factor/concept/Heteroskedasticity|异方差]], [[00_factor/concept/Multicollinearity|多重共线性]], [[Autocorrelation|自相关]]

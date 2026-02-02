@@ -115,4 +115,4 @@ MLE是GMM的特例，使用期望和样本矩的差作为矩条件。
 2. **模型估计**：logit、probit、GARCH等模型的估计
 3. **假设检验**：似然比检验、Wald检验、LM检验
 
-相关链接: [[F检验]], [[logit模型]], [[probit模型]]
+相关链接: [[00_factor/concept/F-test|F检验]], [[00_factor/concept/Logit Model|logit模型]], [[00_factor/concept/Probit Model|probit模型]]

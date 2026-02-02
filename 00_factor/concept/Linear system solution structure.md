@@ -133,5 +133,5 @@ $$A(x_1 - x_2) = Ax_1 - Ax_2 = b - b = 0$$
 - 差分方程的迭代求解
 
 ## 相关概念
-[[矩阵秩的性质]]
+[[00_factor/concept/Matrix rank properties|矩阵秩的性质]]
 [[Matrix Inverse|矩阵的逆]]

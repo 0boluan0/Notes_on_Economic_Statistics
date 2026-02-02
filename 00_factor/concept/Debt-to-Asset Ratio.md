@@ -39,11 +39,11 @@ $$资产负债率 = \frac{总负债}{总资产} \times 100\%$$
 
 ## 相关比率
 
-- [[产权比率]]：总负债/股东权益
-- [[权益乘数]]：总资产/股东权益
-- [[长期资本负债率]]：长期资本中长期负债的占比
+- [[00_factor/concept/Debt-to-Equity Ratio|产权比率]]：总负债/股东权益
+- [[00_factor/concept/Equity Multiplier|权益乘数]]：总资产/股东权益
+- [[00_factor/concept/Long-term Debt Ratio|长期资本负债率]]：长期资本中长期负债的占比
 
 ## 相关链接
-[[产权比率]]
-[[权益乘数]]
-[[长期资本负债率]]
+[[00_factor/concept/Debt-to-Equity Ratio|产权比率]]
+[[00_factor/concept/Equity Multiplier|权益乘数]]
+[[00_factor/concept/Long-term Debt Ratio|长期资本负债率]]

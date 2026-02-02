@@ -64,4 +64,4 @@ Hausman检验也用于：
 2. 如果方差差矩阵非正定，检验可能无法进行
 3. 检验结果对工具变量选择敏感
 
-相关链接: [[2SLS]], [[工具变量]], [[内生性]], [[面板数据模型]]
+相关链接: [[2SLS]], [[00_factor/concept/Instrumental Variable|工具变量]], [[00_factor/concept/Endogeneity|内生性]], [[00_factor/concept/Panel Data Model|面板数据模型]]

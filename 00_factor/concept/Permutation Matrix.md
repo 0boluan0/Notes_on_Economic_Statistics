@@ -88,4 +88,4 @@ P = [[0, 1, 0],
 3. **求解线性方程组**：避免数值不稳定
 4. **行列式计算**：通过行交换确定符号
 
-相关链接: [[LU分解]], [[奇异矩阵]], [[矩阵的秩]]
+相关链接: [[00_factor/concept/LU Decomposition|LU分解]], [[00_factor/concept/Singular Matrix|奇异矩阵]], [[00_factor/concept/Matrix Rank|矩阵的秩]]

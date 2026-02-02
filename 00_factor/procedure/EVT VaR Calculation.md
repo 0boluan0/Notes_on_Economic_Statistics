@@ -132,5 +132,5 @@ $$
 
 ## 相关概念
 [[VaR]]
-[[历史模拟法VaR计算]]
+[[00_factor/procedure/Historical Simulation VaR|历史模拟法VaR计算]]
 [[GPD]]

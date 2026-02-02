@@ -74,10 +74,10 @@ tags:
 
 ## 相关概念
 
-- [[子博弈精炼纳什均衡]]
+- [[00_factor/concept/Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]
 - [[Extensive-form Game|扩展性博弈]]
-- [[信息集]]
-- [[逆向归纳法]]
+- [[00_factor/concept/Information Set|信息集]]
+- [[00_factor/concept/Backward Induction|逆向归纳法]]
 
 ## 典型例子
 

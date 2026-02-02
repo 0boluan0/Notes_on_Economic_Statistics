@@ -236,4 +236,4 @@ $\min \sum w_i(y_i - X_i\beta)^2$
 2. **权重设定**：错误权重可能比不处理更差
 3. **异方差形式**：理解异方差来源有助于选择方法
 
-相关链接: [[OLS]], [[Hausman检验]], [[多重共线性]], [[高斯-马尔可夫定理]]
+相关链接: [[OLS]], [[00_factor/concept/Hausman Test|Hausman检验]], [[00_factor/concept/Multicollinearity|多重共线性]], [[00_factor/concept/Gauss-Markov theorem|高斯-马尔可夫定理]]

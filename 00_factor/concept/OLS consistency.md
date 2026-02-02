@@ -122,6 +122,6 @@ OLS 估计量是一致的，只要满足以下条件：
 3. **动态面板数据的短期系数估计**
 
 ## 相关概念
-[[OLS估计量的无偏性]]
-[[高斯-马尔可夫定理]]
-[[中心极限定理]]
+[[00_factor/concept/OLS unbiasedness|OLS估计量的无偏性]]
+[[00_factor/concept/Gauss-Markov theorem|高斯-马尔可夫定理]]
+[[00_factor/concept/Central Limit Theorem|中心极限定理]]

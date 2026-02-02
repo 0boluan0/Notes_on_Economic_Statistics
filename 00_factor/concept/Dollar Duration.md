@@ -22,5 +22,5 @@ $$
 
 ## 相关链接
 
-- 一般久期：[[久期]], [[修正久期]]
-- 应用：用于利率风险管理，与[[曲率]]一起构成利率风险度量的完整框架
+- 一般久期：[[00_factor/concept/duration|久期]], [[00_factor/concept/Modified Duration|修正久期]]
+- 应用：用于利率风险管理，与[[00_factor/concept/Curvature|曲率]]一起构成利率风险度量的完整框架

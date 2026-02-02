@@ -51,7 +51,7 @@ $$\text{RWA} = 12.5 \times K \times \text{EAD}$$
 | 衍生品RWA计算复杂 | 潜在未来风险估计不准确 | 定期重估衍生品风险暴露，使用净额结算协议 |
 
 ## 相关概念
-[[巴塞尔资本充足率]]
+[[00_factor/system/Basel Capital Adequacy Ratio|巴塞尔资本充足率]]
 [[PD]]
 [[LGD]]
 [[EAD]]

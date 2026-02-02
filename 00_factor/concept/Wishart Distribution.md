@@ -77,7 +77,7 @@ $$ CAC' \sim W_m(C\Sigma C') $$
 
 ## 相关概念
 
-- [[多元正态分布]]
+- [[00_factor/concept/Multivariate Normal Distribution|多元正态分布]]
 - [[Hotelling T2 Test|Hotelling T² 检验]]
 - [[Chi-square Distribution|卡方分布]]
 

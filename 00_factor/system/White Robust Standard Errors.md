@@ -61,6 +61,6 @@ $$Var(\hat{\beta})_{White} = (X'X)^{-1} \left[ \sum_{i=1}^n x_i x_i' e_i^2 \righ
 | 小样本下结果不稳定 | 样本量小 | 使用HC2或HC3、或自助法（Bootstrap） |
 
 ## 相关概念
-[[异方差诊断]]
+[[00_factor/system/Heteroscedasticity Diagnosis|异方差诊断]]
 [[Newey-West]]
 [[FGLS]]

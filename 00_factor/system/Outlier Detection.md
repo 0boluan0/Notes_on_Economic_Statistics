@@ -71,5 +71,5 @@ $$\text{DFFITS}_i = \frac{\hat{y}_i - \hat{y}_{i(i)}}{\sqrt{\hat{\sigma}^2_{(i)}
 | 难以区分异常值与真实极值 | 样本量小、领域知识不足 | 咨询领域专家、使用敏感性分析 |
 
 ## 相关概念
-[[多重共线性]]
+[[00_factor/concept/Multicollinearity|多重共线性]]
 [[Robust Regression|稳健回归]]

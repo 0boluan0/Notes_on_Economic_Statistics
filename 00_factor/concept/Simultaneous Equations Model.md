@@ -123,4 +123,4 @@ $$y_i = \pi_{i1}x_1 + \cdots + \pi_{ik}x_k + v_i$$
 - R：systemfit包
 - EViews：System对象
 
-相关链接: [[内生性]], [[工具变量]], [[2SLS]]
+相关链接: [[00_factor/concept/Endogeneity|内生性]], [[00_factor/concept/Instrumental Variable|工具变量]], [[2SLS]]

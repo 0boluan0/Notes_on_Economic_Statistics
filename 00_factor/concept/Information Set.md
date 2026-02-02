@@ -66,8 +66,8 @@ tags:
 ## 相关概念
 
 - [[Extensive-form Game|扩展性博弈]]
-- [[完美贝叶斯均衡]]
-- [[子博弈]]
+- [[00_factor/concept/Perfect Bayesian Equilibrium|完美贝叶斯均衡]]
+- [[00_factor/concept/Subgame|子博弈]]
 
 ## 典型例子
 

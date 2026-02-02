@@ -22,7 +22,7 @@ tags:
 
 ### 步骤 1：获取马考利久期
 
-若未计算马考利久期，先计算 $D_M$。参见[[马考利久期计算]]。
+若未计算马考利久期，先计算 $D_M$。参见[[00_factor/procedure/Macaulay Duration Calculation|马考利久期计算]]。
 
 **注意点**：确保 $D_M$ 的单位（年或周期）与后续计算一致。
 
@@ -82,6 +82,6 @@ $$ \Delta P \approx -D_{\text{mod}} \times P \times 0.0001 $$
 4. **含期权债券**：修正久期不准确，需用有效久期。
 
 ## 相关概念
-[[久期]]
-[[马考利久期]]
+[[00_factor/concept/duration|久期]]
+[[00_factor/concept/Macaulay Duration|马考利久期]]
 [[Convexity|凸性]]

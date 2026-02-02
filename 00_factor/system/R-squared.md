@@ -56,8 +56,8 @@ $$\bar{R}^2 = 1 - \frac{RSS/(n-k-1)}{TSS/(n-1)} = 1 - (1-R^2)\frac{n-1}{n-k-1}$$
 | R²无法用于比较不同模型 | 因变量尺度不同 | 使用标准化R²或信息准则（AIC/BIC） |
 
 ## 相关概念
-[[F检验]]
+[[00_factor/concept/F-test|F检验]]
 [[t Test|t检验]]
-[[多重共线性]]
+[[00_factor/concept/Multicollinearity|多重共线性]]
 [[AIC]]
 [[BIC]]

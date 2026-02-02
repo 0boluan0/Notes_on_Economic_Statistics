@@ -122,8 +122,8 @@ $$ P = AC $$
 
 ## 相关概念
 
-- [[公共物品]]
-- [[公共资源]]
+- [[00_factor/concept/Public Goods|公共物品]]
+- [[00_factor/concept/Common Resources|公共资源]]
 - [[Natural Monopoly|自然垄断]]
 
 ## 政策考虑

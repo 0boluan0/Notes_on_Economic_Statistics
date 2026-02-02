@@ -57,7 +57,7 @@ $$CI = \sqrt{\lambda_{\max} / \lambda_{\min}}$$
 | VIF变化大 | 样本不稳定 | 增大样本、检查异常值 |
 
 ## 相关概念
-[[多重共线性]]
-[[条件指数]]
+[[00_factor/concept/Multicollinearity|多重共线性]]
+[[00_factor/system/Condition Index|条件指数]]
 [[t Test|t检验]]
-[[F检验]]
+[[00_factor/concept/F-test|F检验]]

@@ -195,4 +195,4 @@ $\text{rank}(B_i\Gamma_i) = g - 1$
 - 可用外生变量不多
 - 恰好够用
 
-相关链接: [[过度识别]], [[参数识别]], [[2SLS]]
+相关链接: [[00_factor/concept/Over-identified|过度识别]], [[00_factor/concept/Parameter Identification|参数识别]], [[2SLS]]

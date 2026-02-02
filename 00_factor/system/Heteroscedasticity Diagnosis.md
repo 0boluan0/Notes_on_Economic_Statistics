@@ -70,6 +70,6 @@ $$LM = n \cdot R^2 \sim \chi^2(k)$$
 | 怀疑遗漏变量导致异方差 | 模型设定错误 | 重新考虑模型设定、增加变量 |
 
 ## 相关概念
-[[White稳健标准误]]
-[[加权最小二乘法]]
+[[00_factor/system/White Robust Standard Errors|White稳健标准误]]
+[[00_factor/concept/Weighted Least Squares|加权最小二乘法]]
 [[FGLS]]

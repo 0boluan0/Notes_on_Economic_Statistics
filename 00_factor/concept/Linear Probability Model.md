@@ -78,4 +78,4 @@ LPM适用于：
 
 通常使用logit或probit模型替代LPM。
 
-相关链接: [[logit模型]], [[probit模型]]
+相关链接: [[00_factor/concept/Logit Model|logit模型]], [[00_factor/concept/Probit Model|probit模型]]

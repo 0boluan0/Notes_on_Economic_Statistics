@@ -257,4 +257,4 @@ tags:
    - 深化改革
    - 扩大开放
 
-相关链接: [[经济发展]], [[后发优势理论]], [[经济增长]]
+相关链接: [[00_factor/concept/Economic Development|经济发展]], [[00_factor/concept/Advantage of Backwardness|后发优势理论]], [[00_factor/concept/Economic Growth|经济增长]]

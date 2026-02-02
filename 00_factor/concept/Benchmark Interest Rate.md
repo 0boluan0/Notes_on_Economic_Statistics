@@ -99,4 +99,4 @@ $$r = r^* + RP = r^* + IP + DRP + LRP + MRP$$
 
 ## 相关链接
 
-[[到期收益率]]
+[[00_factor/concept/Yield to Maturity|到期收益率]]

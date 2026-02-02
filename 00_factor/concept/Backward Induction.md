@@ -63,7 +63,7 @@ tags:
 
 ## 相关概念
 
-- [[子博弈精炼纳什均衡]]
+- [[00_factor/concept/Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]
 - [[Nash Equilibrium|纳什均衡]]
 - [[Extensive-form Game|扩展性博弈]]
 

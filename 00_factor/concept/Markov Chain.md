@@ -124,7 +124,7 @@ $$ P = \begin{pmatrix} P_1 & 0 & \cdots & 0 \\ 0 & P_2 & \cdots & 0 \\ \vdots & 
 ## 相关概念
 
 - [[CTMC|连续时间马尔可夫链]]
-- [[平稳分布]]
+- [[00_factor/concept/Stationary Distribution|平稳分布]]
 
 ## 性质总结
 

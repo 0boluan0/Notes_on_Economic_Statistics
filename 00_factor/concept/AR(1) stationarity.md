@@ -141,6 +141,6 @@ $$\rho_s = \frac{\gamma_s}{\gamma_0} = \frac{\frac{\sigma^2 a_1^s}{1 - a_1^2}}{\
 特征方程：$1 - \phi_1 z - \phi_2 z^2 - \cdots - \phi_p z^p = 0$
 
 ## 相关概念
-[[Yule-Walker方程]]
-[[ARMA模型]]
+[[00_factor/concept/Yule-Walker equations|Yule-Walker方程]]
+[[00_factor/concept/ARMA|ARMA模型]]
 [[Difference Equation|差分方程]]

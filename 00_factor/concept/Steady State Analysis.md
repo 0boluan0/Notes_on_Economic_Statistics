@@ -178,4 +178,4 @@ $\dot{k} = sf(k) - (n + \delta)k = 0$
 - 制度变迁模型
 - 技术扩散模型
 
-相关链接: [[索罗增长模型]], [[哈罗德-多玛模型]], [[经济增长]]
+相关链接: [[00_factor/concept/Solow Model|索罗增长模型]], [[00_factor/concept/Harrod-Domar Model|哈罗德-多玛模型]], [[00_factor/concept/Economic Growth|经济增长]]

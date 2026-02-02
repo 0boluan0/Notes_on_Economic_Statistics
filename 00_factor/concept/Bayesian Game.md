@@ -63,11 +63,11 @@ $$ \sigma_i^*(\theta_i) \in \arg\max_{a_i} E_{\theta_{-i}|\theta_i}[u_i(a_i, \si
 
 ## 相关概念
 
-- [[纯策略纳什均衡]]
-- [[混合策略纳什均衡]]
-- [[完美贝叶斯均衡]]
-- [[分离均衡]]
-- [[混合均衡]]
+- [[00_factor/concept/Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
+- [[00_factor/concept/Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
+- [[00_factor/concept/Perfect Bayesian Equilibrium|完美贝叶斯均衡]]
+- [[00_factor/concept/Separating Equilibrium|分离均衡]]
+- [[00_factor/concept/Pooling Equilibrium|混合均衡]]
 
 ## 典型例子
 

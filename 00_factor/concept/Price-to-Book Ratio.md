@@ -54,5 +54,5 @@ $$每股净资产 = \frac{普通股股东权益}{流通在外的普通股股数}
 - 对于亏损企业，市盈率失效，市净率仍可使用
 
 ## 相关链接
-[[市盈率]]
-[[市销率]]
+[[00_factor/concept/Price-to-Earnings Ratio|市盈率]]
+[[00_factor/concept/Price-to-Sales Ratio|市销率]]

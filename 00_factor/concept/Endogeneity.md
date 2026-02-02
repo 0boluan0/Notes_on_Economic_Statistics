@@ -88,4 +88,4 @@ tags:
 - 在需求方程中，P与$\varepsilon_D$相关（内生）
 - W可以作为需求方程中P的工具变量
 
-相关链接: [[工具变量]], [[2SLS]], [[Hausman检验]], [[联立方程模型]]
+相关链接: [[00_factor/concept/Instrumental Variable|工具变量]], [[2SLS]], [[00_factor/concept/Hausman Test|Hausman检验]], [[00_factor/concept/Simultaneous Equations Model|联立方程模型]]

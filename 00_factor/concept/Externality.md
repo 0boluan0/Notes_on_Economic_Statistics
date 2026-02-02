@@ -126,9 +126,9 @@ $$ MSC = MPC + MEC $$
 
 ## 相关概念
 
-- [[公共物品]]
-- [[庇古税]]
-- [[科斯定理]]
+- [[00_factor/concept/Public Goods|公共物品]]
+- [[00_factor/concept/Pigouvian Tax|庇古税]]
+- [[00_factor/concept/Coase Theorem|科斯定理]]
 
 ## 政策选择比较
 

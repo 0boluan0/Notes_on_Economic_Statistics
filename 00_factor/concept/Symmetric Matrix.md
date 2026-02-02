@@ -116,4 +116,4 @@ Q(x) = xᵀAx
 - 协方差矩阵是对称正定矩阵
 - 相关矩阵
 
-相关链接: [[矩阵的秩]], [[LU分解]]
+相关链接: [[00_factor/concept/Matrix Rank|矩阵的秩]], [[00_factor/concept/LU Decomposition|LU分解]]

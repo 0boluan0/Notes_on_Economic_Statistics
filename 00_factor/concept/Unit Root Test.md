@@ -72,4 +72,4 @@ $$\Delta y_t = \alpha + \beta t + \phi y_{t-1} + \sum_{i=1}^{p} \gamma_i \Delta 
 2. **样本量要求**：小样本下检验功效较低
 3. **结构突变**：存在结构突变时，传统检验可能失效
 
-相关链接: [[协整]], [[平稳性]], [[Error Correction Model|误差修正模型]]
+相关链接: [[00_factor/concept/Cointegration|协整]], [[00_factor/concept/Stationarity|平稳性]], [[Error Correction Model|误差修正模型]]

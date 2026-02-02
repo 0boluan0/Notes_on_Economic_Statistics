@@ -148,5 +148,5 @@ $$ \text{Half-life} = \frac{\ln(0.5)}{\ln(\alpha + \beta)} $$
 ## 相关概念
 [[Conditional Heteroskedasticity|条件异方差]]
 [[Volatility Clustering|波动率聚集]]
-[[EWMA波动率估计]]
+[[00_factor/procedure/EWMA Volatility Estimation|EWMA波动率估计]]
 [[ARCH]]

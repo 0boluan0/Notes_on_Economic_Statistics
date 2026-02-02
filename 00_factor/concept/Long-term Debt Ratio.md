@@ -45,5 +45,5 @@ $$长期资本负债率 = \frac{非流动负债}{非流动负债 + 股东权益}
 3. **投资者角度**：分析企业长期财务状况
 
 ## 相关链接
-[[资产负债率]]
-[[产权比率]]
+[[00_factor/concept/Debt-to-Asset Ratio|资产负债率]]
+[[00_factor/concept/Debt-to-Equity Ratio|产权比率]]

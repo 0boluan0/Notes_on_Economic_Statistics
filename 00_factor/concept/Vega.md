@@ -12,4 +12,4 @@ tags:
 ## 相关链接
 
 - 其他希腊字母：[[Delta]], [[Gamma]], [[Theta]], [[Rho]]
-- 波动率概念：[[历史波动率]], [[隐含波动率]], [[已实现波动率]]
+- 波动率概念：[[00_factor/concept/Historical Volatility|历史波动率]], [[00_factor/concept/Implied Volatility|隐含波动率]], [[00_factor/concept/Realized Volatility|已实现波动率]]

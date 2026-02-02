@@ -236,4 +236,4 @@ $J = n \cdot g(\hat{\beta})' W g(\hat{\beta}) \sim \chi^2(m - k)$
 - 通过GMM优化估计
 - 提高估计精度
 
-相关链接: [[恰好识别]], [[参数识别]], [[2SLS]], [[GMM]]
+相关链接: [[00_factor/concept/Just-identified|恰好识别]], [[00_factor/concept/Parameter Identification|参数识别]], [[2SLS]], [[GMM]]

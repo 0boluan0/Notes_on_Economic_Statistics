@@ -70,8 +70,8 @@ $$ X_1 | X_2 = x_2 \sim N(\mu_1 + \Sigma_{12}\Sigma_{22}^{-1}(x_2 - \mu_2), \Sig
 
 ## 相关概念
 
-- [[Wishart 分布]]
-- [[马哈拉诺比斯距离]]
+- [[00_factor/concept/Wishart Distribution|Wishart 分布]]
+- [[00_factor/concept/Mahalanobis Distance|马哈拉诺比斯距离]]
 - [[Hotelling T2 Test|Hotelling T² 检验]]
 
 ## 应用

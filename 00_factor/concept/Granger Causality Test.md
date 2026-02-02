@@ -57,4 +57,4 @@ $$F = \frac{(RSS_R - RSS_U)/q}{RSS_U/(T-p-q)}$$
 2. **市场研究**：分析市场之间的信息传导
 3. **宏观分析**：研究经济变量的因果关系
 
-相关链接: [[VAR Model|VAR]], [[脉冲响应函数]], [[协整]]
+相关链接: [[VAR Model|VAR]], [[00_factor/concept/Impulse Response Function|脉冲响应函数]], [[00_factor/concept/Cointegration|协整]]

@@ -121,6 +121,6 @@ $$
 4. **特殊情况处理**：到期日、流通债、含权债需特殊处理。
 
 ## 相关概念
-[[久期]]
-[[马考利久期]]
-[[到期收益率]]
+[[00_factor/concept/duration|久期]]
+[[00_factor/concept/Macaulay Duration|马考利久期]]
+[[00_factor/concept/Yield to Maturity|到期收益率]]

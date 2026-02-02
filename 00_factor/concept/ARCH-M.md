@@ -26,7 +26,7 @@ $$
 ## Connections
 
 - 相关：[[ARCH]]、[[GARCH]]、[[TARCH]]、[[EGARCH]]
-- 估计：[[极大似然估计]]
+- 估计：[[00_factor/concept/Maximum Likelihood Estimation|极大似然估计]]
 
 ## source_notes
 

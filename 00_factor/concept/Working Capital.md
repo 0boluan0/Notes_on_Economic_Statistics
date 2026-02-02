@@ -52,5 +52,5 @@ $$营运资本 = 流动资产 - 流动负债$$
 3. **投资决策**：判断企业是否有短期投资能力
 
 ## 相关链接
-[[流动比率]]
-[[速动比率]]
+[[00_factor/concept/Current Ratio|流动比率]]
+[[00_factor/concept/Quick Ratio|速动比率]]

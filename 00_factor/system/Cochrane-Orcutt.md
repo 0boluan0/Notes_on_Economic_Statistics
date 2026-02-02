@@ -79,6 +79,6 @@ tags:
 | Newey-West | 任意自相关 | 非参数方法 |
 
 ## 相关概念
-[[自相关诊断]]
+[[00_factor/system/Autocorrelation Diagnosis|自相关诊断]]
 [[Newey-West]]
 [[FGLS]]

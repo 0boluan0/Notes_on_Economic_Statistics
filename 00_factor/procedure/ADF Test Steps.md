@@ -114,7 +114,7 @@ $$ Z_\gamma = \frac{\tau \cdot \sigma^2 - T \cdot \hat{\gamma}^2}{\sigma \sqrt{T
 4. **低功效**：小样本下，ADF检验容易接受原假设（第二类错误）。
 
 ## 相关概念
-[[单位根]]
-[[协整]]
-[[PP检验]]
-[[平稳性检验]]
+[[00_factor/concept/Unit Root Test|单位根]]
+[[00_factor/concept/Cointegration|协整]]
+[[00_factor/concept/Phillips-Perron Test|PP检验]]
+[[00_factor/concept/Unit Root Test|平稳性检验]]

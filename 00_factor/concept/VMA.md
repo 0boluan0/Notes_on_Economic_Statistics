@@ -45,8 +45,8 @@ $$\mathbf{\Psi}_j = \sum_{i=1}^{p} \mathbf{A}_i \mathbf{\Psi}_{ji}$$
 
 ## 应用
 
-1. **[[脉冲响应函数]]**：通过$\mathbf{\Psi}_j$绘制脉冲响应图
+1. **[[00_factor/concept/Impulse Response Function|脉冲响应函数]]**：通过$\mathbf{\Psi}_j$绘制脉冲响应图
 2. **冲击分析**：分析一个冲击对系统中所有变量的动态影响
 3. **方差分解**：计算各变量冲击对预测误差方差的贡献
 
-相关链接: [[VAR Model|VAR]], [[脉冲响应函数]], [[方差分解]]
+相关链接: [[VAR Model|VAR]], [[00_factor/concept/Impulse Response Function|脉冲响应函数]], [[00_factor/concept/Variance Decomposition|方差分解]]

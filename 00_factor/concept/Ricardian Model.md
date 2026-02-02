@@ -167,4 +167,4 @@ Y = F(K, N)
    - 节约资源使用
    - 国际贸易缓解约束
 
-相关链接: [[马尔萨斯人口陷阱]], [[经济增长]], [[级差地租]]
+相关链接: [[00_factor/concept/Malthusian Trap|马尔萨斯人口陷阱]], [[00_factor/concept/Economic Growth|经济增长]], [[00_factor/concept/Differential Rent|级差地租]]

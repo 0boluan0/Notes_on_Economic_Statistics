@@ -97,9 +97,9 @@ $$ M = m \times MB $$
 
 ## 相关概念
 
-- [[货币乘数]]
+- [[00_factor/concept/Money Multiplier|货币乘数]]
 - [[Required Reserves|准备金]]
-- [[公开市场操作]]
+- [[00_factor/concept/Open Market Operations|公开市场操作]]
 
 ## 重要性
 

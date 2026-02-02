@@ -61,4 +61,4 @@ $$存货与收入比 = \frac{存货{营业收入}$$
 3. **供应链分析**：评估整个运营流程
 
 ## 相关链接
-[[应收账款周转率]]
+[[00_factor/concept/Accounts Receivable Turnover Ratio|应收账款周转率]]

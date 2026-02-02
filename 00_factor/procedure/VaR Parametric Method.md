@@ -96,6 +96,6 @@ $$ \text{VaR}_{\alpha,T} = z_{\alpha} \times \sigma_p \times \sqrt{T} $$
 
 ## 相关概念
 [[VaR]]
-[[历史模拟法]]
-[[蒙特卡罗模拟法]]
-[[久期]]
+[[00_factor/concept/Historical Simulation Method|历史模拟法]]
+[[00_factor/concept/Monte Carlo Simulation Method|蒙特卡罗模拟法]]
+[[00_factor/concept/duration|久期]]

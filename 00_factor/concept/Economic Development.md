@@ -125,4 +125,4 @@ tags:
 | 范围 | 经济产出 | 经济、社会、制度 |
 | 时间尺度 | 短期可测量 | 长期演进过程 |
 
-相关链接: [[经济增长]], [[马尔萨斯人口陷阱]], [[后发优势理论]]
+相关链接: [[00_factor/concept/Economic Growth|经济增长]], [[00_factor/concept/Malthusian Trap|马尔萨斯人口陷阱]], [[00_factor/concept/Advantage of Backwardness|后发优势理论]]

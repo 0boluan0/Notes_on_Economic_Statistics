@@ -84,8 +84,8 @@ $$ R = i_c + g $$
 ## 相关概念
 
 - [[Present Value|现值]]
-- [[到期收益率]]
-- [[久期]]
+- [[00_factor/concept/Yield to Maturity|到期收益率]]
+- [[00_factor/concept/duration|久期]]
 
 ## 注意事项
 

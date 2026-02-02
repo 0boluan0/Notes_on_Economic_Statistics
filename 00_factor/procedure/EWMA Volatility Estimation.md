@@ -126,6 +126,6 @@ $$
 5. **数据缺口**：缺失值需要插值处理。
 
 ## 相关概念
-[[历史波动率]]
+[[00_factor/concept/Historical Volatility|历史波动率]]
 [[GARCH]]
 [[Volatility Clustering|波动率聚集]]

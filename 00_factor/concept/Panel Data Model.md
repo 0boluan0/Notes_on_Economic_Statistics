@@ -96,4 +96,4 @@ $$y_{it} = \rho y_{i,t-1} + x_{it}'\beta + \alpha_i + \varepsilon_{it}$$
 - R：plm包
 - Python：linearmodels包
 
-相关链接: [[固定效应]], [[随机效应]], [[豪斯曼检验]]
+相关链接: [[00_factor/concept/Fixed Effects Model|固定效应]], [[00_factor/concept/Random Effects Model|随机效应]], [[00_factor/concept/Hausman Test|豪斯曼检验]]

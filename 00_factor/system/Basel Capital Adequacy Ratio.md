@@ -49,7 +49,7 @@ $$\text{资本充足率} = \frac{\text{总资本（Tier 1 + Tier 2）}}{\text{�
 | 资本缓冲不足 | 信贷周期繁荣期未积累缓冲 | 在经济上行期主动增加资本 |
 
 ## 相关概念
-[[库克比率]]
-[[风险加权资产]]
-[[Tier 1 Capital]]
-[[Tier 2 Capital]]
+[[00_factor/system/Cook's Ratio|库克比率]]
+[[00_factor/system/Risk-Weighted Assets|风险加权资产]]
+[[00_factor/system/Tier 1 Capital Ratio|Tier 1 Capital]]
+[[00_factor/system/Tier 2 Capital Ratio|Tier 2 Capital]]

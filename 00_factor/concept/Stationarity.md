@@ -50,7 +50,7 @@ F(y_{t1}, y_{t2}, ..., y_{tn}) = F(y_{t1+k}, y_{t2+k}, ..., y_{tn+k})
 ## 检验方法
 
 1. **图示法**：观察时间序列图、ACF图
-2. **[[单位根检验]]**：DF检验、ADF检验、PP检验
+2. **[[00_factor/concept/Unit Root Test|单位根检验]]**：DF检验、ADF检验、PP检验
 3. **KPSS检验**：原假设为序列平稳
 
 ## 应用
@@ -59,7 +59,7 @@ F(y_{t1}, y_{t2}, ..., y_{tn}) = F(y_{t1+k}, y_{t2+k}, ..., y_{tn+k})
 - 协整分析需要序列具有相同阶数的非平稳性
 - 预测模型通常要求序列平稳
 
-相关链接: [[单位根检验]], [[ADF检验]], [[协整]], [[随机游走]], [[ARMA]]
+相关链接: [[00_factor/concept/Unit Root Test|单位根检验]], [[00_factor/concept/Augmented Dickey-Fuller Test|ADF检验]], [[00_factor/concept/Cointegration|协整]], [[00_factor/concept/Random Walk|随机游走]], [[ARMA]]
 
 ## source_notes
 

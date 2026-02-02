@@ -48,5 +48,5 @@ $$\text{净现金流出} = \sum \text{现金流出} \times \text{流失率} - \s
 
 ## 相关概念
 [[NSFR]]
-[[压力测试]]
-[[巴塞尔资本充足率]]
+[[00_factor/system/Stress Testing|压力测试]]
+[[00_factor/system/Basel Capital Adequacy Ratio|巴塞尔资本充足率]]

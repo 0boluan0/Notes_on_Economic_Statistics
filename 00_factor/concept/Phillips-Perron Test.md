@@ -226,4 +226,4 @@ $Z_t = \frac{\hat{\gamma}}{SE(\hat{\gamma})_{\text{corrected}}} - \frac{1}{2}\le
 - 报告检验形式
 - 报告关键参数（滞后阶数、截断等）
 
-相关链接: [[ADF检验]], [[单位根检验]], [[伪回归]]
+相关链接: [[00_factor/concept/Augmented Dickey-Fuller Test|ADF检验]], [[00_factor/concept/Unit Root Test|单位根检验]], [[00_factor/concept/Spurious Regression|伪回归]]

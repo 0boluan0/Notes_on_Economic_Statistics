@@ -103,9 +103,9 @@ $$ MSC = MSB $$
 
 ## 相关概念
 
-- [[外部性]]
+- [[00_factor/concept/Externality|外部性]]
 - [[Emissions Trading|排放许可交易]]
-- [[科斯定理]]
+- [[00_factor/concept/Coase Theorem|科斯定理]]
 
 ## 实施要点
 

@@ -74,4 +74,4 @@ $$FVA = \text{资金成本} - \text{资金收益}$$
 3. **资本计量**：计算CVA风险相关的监管资本要求
 4. **交易决策**：考虑信用风险成本的交易评估
 
-相关链接: [[信用风险]], [[违约风险]], [[VaR]], [[DVA]], [[巴塞尔协议]]
+相关链接: [[00_factor/concept/Credit Risk|信用风险]], [[00_factor/concept/Default Risk|违约风险]], [[VaR]], [[DVA]], [[00_factor/concept/Basel Accords|巴塞尔协议]]

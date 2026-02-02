@@ -40,4 +40,4 @@ $$\begin{pmatrix} \rho_1 \\ \rho_2 \\ \vdots \\ \rho_k \end{pmatrix} = \begin{pm
 - [[03_平稳时间序列模型#0.回忆用]]（PACF 计算提示）
 3. 评估时间序列的自相关结构
 
-相关链接: [[自相关函数]], [[ARMA]]
+相关链接: [[00_factor/concept/Autocorrelation Function|自相关函数]], [[ARMA]]

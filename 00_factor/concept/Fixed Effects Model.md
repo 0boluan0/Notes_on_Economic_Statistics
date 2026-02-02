@@ -92,4 +92,4 @@ $$R^2_{within} = 1 - \frac{\sum_{i,t} \hat{\varepsilon}_{it}^2}{\sum_{i,t} (y_{i
 | 一致性 | 总是有效 | 假设正确时更有效 |
 | 适用 | α_i与x相关 | α_i与x不相关，样本代表总体 |
 
-相关链接: [[随机效应]], [[豪斯曼检验]], [[面板数据模型]]
+相关链接: [[00_factor/concept/Random Effects Model|随机效应]], [[00_factor/concept/Hausman Test|豪斯曼检验]], [[00_factor/concept/Panel Data Model|面板数据模型]]

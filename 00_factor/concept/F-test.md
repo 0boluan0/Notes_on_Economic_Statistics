@@ -97,4 +97,4 @@ $$F = t^2$$
 
 $$F = \frac{[SSR - (SSR_1 + SSR_2)] / k}{(SSR_1 + SSR_2) / (n_1 + n_2 - 2k)}$$
 
-相关链接: [[t Test|t检验]], [[Chi-square Test|卡方检验]], [[判定系数]]
+相关链接: [[t Test|t检验]], [[Chi-square Test|卡方检验]], [[00_factor/system/R-squared|判定系数]]

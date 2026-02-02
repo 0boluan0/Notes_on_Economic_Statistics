@@ -56,4 +56,4 @@ $$\Delta y_t = \Pi y_{t-1} + \sum_{i=1}^{p-1} \Gamma_i \Delta y_{t-i} + \varepsi
 2. **政策分析**：评估政策冲击的短期和长期效应
 3. **预测模型**：结合长期均衡和短期动态进行预测
 
-相关链接: [[协整]], [[VAR Model|VAR]], [[格兰杰因果检验]]
+相关链接: [[00_factor/concept/Cointegration|协整]], [[VAR Model|VAR]], [[00_factor/concept/Granger Causality Test|格兰杰因果检验]]

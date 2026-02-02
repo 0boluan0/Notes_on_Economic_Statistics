@@ -257,4 +257,4 @@ $LR = -2(\ln L_{\text{restricted}} - \ln L_{\text{unrestricted}})$
    - 治疗效果
    - 疾病诊断
 
-相关链接: [[Dummy Variable|虚拟变量]], [[LPM模型]], [[logit模型]], [[probit模型]]
+相关链接: [[Dummy Variable|虚拟变量]], [[00_factor/concept/Linear Probability Model|LPM模型]], [[00_factor/concept/Logit Model|logit模型]], [[00_factor/concept/Probit Model|probit模型]]

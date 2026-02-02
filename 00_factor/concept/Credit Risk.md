@@ -102,4 +102,4 @@ $$CVA = \sum_{i} PD_i \times EAD_i \times (1-R_i) \times LGD_i$$
 
 考虑资产价值和负债结构的模型。
 
-相关链接: [[VaR]], [[CVA]], [[DVA]], [[违约风险]], [[巴塞尔协议]]
+相关链接: [[VaR]], [[CVA]], [[DVA]], [[00_factor/concept/Default Risk|违约风险]], [[00_factor/concept/Basel Accords|巴塞尔协议]]

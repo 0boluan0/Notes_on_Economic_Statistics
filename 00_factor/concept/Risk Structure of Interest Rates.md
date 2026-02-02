@@ -68,8 +68,8 @@ $$ \text{公司债券利率} = \text{无风险利率} + \text{违约风险溢价
 
 ## 相关概念
 
-- [[到期收益率]]
-- [[收益率曲线]]
+- [[00_factor/concept/Yield to Maturity|到期收益率]]
+- [[00_factor/concept/Yield Curve|收益率曲线]]
 - [[Risk-free Rate|无风险利率]]
 
 ## 市见风险溢价

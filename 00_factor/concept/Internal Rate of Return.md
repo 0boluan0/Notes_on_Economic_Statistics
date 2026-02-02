@@ -59,5 +59,5 @@ $$NPV = \sum_{t=0}^{n} \frac{CF_t}{(1+IRR)^t} = 0$$
 3. **资本预算**：制定投资计划
 
 ## 相关链接
-[[净现值法]]
-[[现值指数]]
+[[00_factor/concept/Net Present Value|净现值法]]
+[[00_factor/concept/Profitability Index|现值指数]]

@@ -76,4 +76,4 @@ $$\hat{\beta}_{2SLS} = (X^T P_Z X)^{-1} X^T P_Z y$$
 2. **内生性检验**：Hausman检验
 3. **弱工具变量检验**：第一阶段F检验
 
-相关链接: [[工具变量]], [[GMM]], [[Hausman检验]], [[内生性]]
+相关链接: [[00_factor/concept/Instrumental Variable|工具变量]], [[GMM]], [[00_factor/concept/Hausman Test|Hausman检验]], [[00_factor/concept/Endogeneity|内生性]]

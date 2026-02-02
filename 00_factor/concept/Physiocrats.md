@@ -84,5 +84,5 @@ tags:
 3. **宏观经济思想**：宏观经济分析的最早尝试
 
 ## 相关链接
-[[重商主义]]
-[[亚当斯密经济学]]
+[[00_factor/concept/Mercantilism|重商主义]]
+[[00_factor/concept/Adam Smith's Economics|亚当斯密经济学]]

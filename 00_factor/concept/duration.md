@@ -20,6 +20,6 @@ $$
 
 ## 相关链接
 
-- 久期类型：[[马考利久期]], [[修正久期]], [[有效久期]], [[绝对额久期]], [[局部久期]]
-- 二阶风险：[[曲率]]
-- 利率风险：[[重新定价风险]], [[基差风险]], [[收益率曲线风险]], [[隐含期权风险]]
+- 久期类型：[[00_factor/concept/Macaulay Duration|马考利久期]], [[00_factor/concept/Modified Duration|修正久期]], [[00_factor/concept/Effective Duration|有效久期]], [[00_factor/concept/Dollar Duration|绝对额久期]], [[00_factor/concept/Key Rate Duration|局部久期]]
+- 二阶风险：[[00_factor/concept/Curvature|曲率]]
+- 利率风险：[[00_factor/concept/Repricing Risk|重新定价风险]], [[00_factor/concept/Basis Risk|基差风险]], [[00_factor/concept/Yield Curve Risk|收益率曲线风险]], [[00_factor/concept/Implied Option Risk|隐含期权风险]]

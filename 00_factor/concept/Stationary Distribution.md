@@ -120,6 +120,6 @@ $$ \begin{cases} \pi_1 = 0.9\pi_1 + 0.2\pi_2 \\ \pi_2 = 0.1\pi_1 + 0.8\pi_2 \\ \
 
 ## 相关概念
 
-- [[马尔可夫链]]
+- [[00_factor/concept/Markov Chain|马尔可夫链]]
 - [[Limiting Distribution|极限分布]]
 - [[Irreducible Markov Chain|不可约链]]

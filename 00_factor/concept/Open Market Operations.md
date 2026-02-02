@@ -120,10 +120,10 @@ $$ MB_n = MB - BR $$
 
 ## 相关概念
 
-- [[基础货币]]
+- [[00_factor/concept/Monetary Base|基础货币]]
 - [[Required Reserves|准备金]]
 - [[Discount Rate|贴现率]]
-- [[货币乘数]]
+- [[00_factor/concept/Money Multiplier|货币乘数]]
 
 ## 在货币政策中的地位
 

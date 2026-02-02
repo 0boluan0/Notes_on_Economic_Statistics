@@ -66,5 +66,5 @@ $$\int u dv = uv - \int v du$$
 5. **经济学应用**：消费者剩余、生产者剩余
 
 ## 相关链接
-[[导数]]
-[[微积分基本定理]]
+[[00_factor/concept/Derivative (2)|导数]]
+[[00_factor/concept/Fundamental Theorem of Calculus|微积分基本定理]]

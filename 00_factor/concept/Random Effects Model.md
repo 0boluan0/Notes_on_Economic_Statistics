@@ -91,4 +91,4 @@ $$\hat{\sigma}_{\alpha}^2 = \frac{1}{n-k-1} \sum_{i=1}^{N} (T_i \cdot \bar{u}_i^
 | 有效性 | 假设正确时更有效 | 总是一致 |
 | 适用 | α_i与x不相关 | α_i与x相关 |
 
-相关链接: [[固定效应]], [[豪斯曼检验]], [[面板数据模型]]
+相关链接: [[00_factor/concept/Fixed Effects Model|固定效应]], [[00_factor/concept/Hausman Test|豪斯曼检验]], [[00_factor/concept/Panel Data Model|面板数据模型]]

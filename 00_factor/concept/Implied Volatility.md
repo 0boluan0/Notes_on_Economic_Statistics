@@ -14,5 +14,5 @@ tags:
 
 ## 相关链接
 
-- 其他波动率度量：[[历史波动率]], [[已实现波动率]]
+- 其他波动率度量：[[00_factor/concept/Historical Volatility|历史波动率]], [[00_factor/concept/Realized Volatility|已实现波动率]]
 - 相关概念：波动率微笑，VIX指数

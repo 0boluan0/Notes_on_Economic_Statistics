@@ -77,5 +77,5 @@ Hotelling 和古诺的辨析：
 
 ## 相关概念
 
-- [[古诺竞争]]
-- [[Bertrand 竞争]]
+- [[00_factor/concept/Cournot Competition|古诺竞争]]
+- [[00_factor/concept/Bertrand Competition|Bertrand 竞争]]

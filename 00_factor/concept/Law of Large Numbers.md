@@ -138,5 +138,5 @@ $$\frac{1}{T}\sum_{t=1}^T g(X_t) \xrightarrow{p} E[g(X_t)]$$
 3. **非平稳**：参数随时间变化
 
 ## 相关概念
-[[中心极限定理]]
+[[00_factor/concept/Central Limit Theorem|中心极限定理]]
 [[Convergence in Probability|依概率收敛]]

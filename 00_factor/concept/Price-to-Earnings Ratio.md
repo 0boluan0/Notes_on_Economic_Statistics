@@ -53,5 +53,5 @@ $$每股收益 = \frac{净利润 - 优先股股息}{流通在外的普通股加�
 3. **行业对比**：分析行业估值水平
 
 ## 相关链接
-[[市净率]]
-[[市销率]]
+[[00_factor/concept/Price-to-Book Ratio|市净率]]
+[[00_factor/concept/Price-to-Sales Ratio|市销率]]

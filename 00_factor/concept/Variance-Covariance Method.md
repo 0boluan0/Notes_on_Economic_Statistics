@@ -61,7 +61,7 @@ $$\sigma_p^2 = \sum_{i,j} w_i w_j \sigma_{ij} = \mathbf{w}^T \Sigma \mathbf{w}$$
 2. **Cornish-Fisher展开**：考虑分布的偏度和峰度
 3. **使用其他分布假设**：如t分布、混合正态分布等
 
-相关链接: [[VaR]], [[历史模拟法]], [[蒙特卡罗模拟方法]], [[Delta]], [[Gamma]]
+相关链接: [[VaR]], [[00_factor/concept/Historical Simulation Method|历史模拟法]], [[00_factor/concept/Monte Carlo Simulation Method|蒙特卡罗模拟方法]], [[Delta]], [[Gamma]]
 
 ## source_notes
 

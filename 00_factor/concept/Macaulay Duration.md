@@ -18,5 +18,5 @@ $$
 
 ## 相关链接
 
-- 一般久期：[[久期]]
-- 修正久期：[[修正久期]] = 马考利久期 / (1 + y/m)
+- 一般久期：[[00_factor/concept/duration|久期]]
+- 修正久期：[[00_factor/concept/Modified Duration|修正久期]] = 马考利久期 / (1 + y/m)

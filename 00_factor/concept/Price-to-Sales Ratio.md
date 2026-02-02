@@ -55,5 +55,5 @@ $$每股营业收入 = \frac{营业收入}{流通在外普通股加权平均股�
 | 市销率 | 营业收入 | 亏损企业、高成长企业 |
 
 ## 相关链接
-[[市盈率]]
-[[市净率]]
+[[00_factor/concept/Price-to-Earnings Ratio|市盈率]]
+[[00_factor/concept/Price-to-Book Ratio|市净率]]

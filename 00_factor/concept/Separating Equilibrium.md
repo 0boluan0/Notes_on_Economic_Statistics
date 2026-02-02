@@ -59,9 +59,9 @@ $$ U(\theta, m(\theta)) \geq U(\theta, m(\theta')) \quad \forall \theta \neq \th
 
 ## 相关概念
 
-- [[混合均衡]]
-- [[完美贝叶斯均衡]]
-- [[贝叶斯博弈]]
+- [[00_factor/concept/Pooling Equilibrium|混合均衡]]
+- [[00_factor/concept/Perfect Bayesian Equilibrium|完美贝叶斯均衡]]
+- [[00_factor/concept/Bayesian Game|贝叶斯博弈]]
 
 ## 应用
 

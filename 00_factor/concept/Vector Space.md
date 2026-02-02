@@ -64,4 +64,4 @@ c₁v₁ + c₂v₂ + ... + cₖvₖ
 4. 对任意向量u，0·u = 0
 5. 若αu = 0，则α = 0或u = 0
 
-相关链接: [[子空间]], [[Linear Combination|线性组合]], [[矩阵的秩]]
+相关链接: [[00_factor/concept/Subspace|子空间]], [[Linear Combination|线性组合]], [[00_factor/concept/Matrix Rank|矩阵的秩]]

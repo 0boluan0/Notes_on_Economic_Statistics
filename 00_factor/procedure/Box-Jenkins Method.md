@@ -177,6 +177,6 @@ $$
 
 ## 相关概念
 [[Stationary Time Series|平稳时间序列]]
-[[ARMA模型识别步骤]]
-[[GARCH模型估计步骤]]
-[[单位根]]
+[[00_factor/procedure/ARMA Model Identification Steps|ARMA模型识别步骤]]
+[[00_factor/procedure/GARCH Model Estimation Steps|GARCH模型估计步骤]]
+[[00_factor/concept/Unit Root Test|单位根]]

@@ -99,5 +99,5 @@ $$ \text{SE}(\text{VaR}) \propto \frac{1}{\sqrt{N_{sim}}} $$
 
 ## 相关概念
 [[VaR]]
-[[VaR参数法计算]]
-[[历史模拟法VaR计算]]
+[[00_factor/procedure/VaR Parametric Method|VaR参数法计算]]
+[[00_factor/procedure/Historical Simulation VaR|历史模拟法VaR计算]]

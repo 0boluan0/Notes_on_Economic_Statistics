@@ -105,4 +105,4 @@ $$\textAccuracy} = \frac{TP + TN}{TP + FP + TN + FN}$$
 3. **市场营销**：客户购买行为预测
 4. **社会科学**：投票行为、政策支持度
 
-相关链接: [[logit模型]], [[LPM模型]], [[极大似然估计]]
+相关链接: [[00_factor/concept/Logit Model|logit模型]], [[00_factor/concept/Linear Probability Model|LPM模型]], [[00_factor/concept/Maximum Likelihood Estimation|极大似然估计]]

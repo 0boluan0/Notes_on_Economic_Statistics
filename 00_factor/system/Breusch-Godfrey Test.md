@@ -65,6 +65,6 @@ $$F = \frac{R^2/p}{(1-R^2)/(T-k-p-1)} \sim F(p, T-k-p-1)$$
 | 有滞后因变量时DW失效 | 模型动态 | 必须使用BG检验 |
 
 ## 相关概念
-[[自相关诊断]]
+[[00_factor/system/Autocorrelation Diagnosis|自相关诊断]]
 [[Q Test|Q检验]]
-[[Durbin-Watson统计量]]
+[[00_factor/system/Durbin-Watson Statistic|Durbin-Watson统计量]]

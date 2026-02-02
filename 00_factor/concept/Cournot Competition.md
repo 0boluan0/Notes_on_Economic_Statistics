@@ -67,9 +67,9 @@ $$ p^* = \frac{a + nc}{n + 1} $$
 
 ## 相关概念
 
-- [[Bertrand 竞争]]
-- [[Hotelling 模型]]
-- [[最优反应函数]]
+- [[00_factor/concept/Bertrand Competition|Bertrand 竞争]]
+- [[00_factor/concept/Hotelling Model|Hotelling 模型]]
+- [[00_factor/concept/Best-Reply Function|最优反应函数]]
 
 ## 应用
 

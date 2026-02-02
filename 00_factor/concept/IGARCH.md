@@ -26,7 +26,7 @@ $$
 ## Connections
 
 - 相关：[[GARCH]]、[[ARCH]]、[[TARCH]]、[[EGARCH]]
-- 估计与检验：[[极大似然估计]]、[[ARCH Effects Test|ARCH效应检验]]
+- 估计与检验：[[00_factor/concept/Maximum Likelihood Estimation|极大似然估计]]、[[ARCH Effects Test|ARCH效应检验]]
 
 ## source_notes
 

@@ -84,4 +84,4 @@ Hausman检验：比较OLS和IV估计量是否显著不同。
 2. **工具变量对结果敏感**：不同工具可能得到不同估计
 3. **弱工具变量问题**：弱工具导致估计有偏且标准误错误
 
-相关链接: [[2SLS]], [[GMM]], [[Hausman检验]], [[内生性]]
+相关链接: [[2SLS]], [[GMM]], [[00_factor/concept/Hausman Test|Hausman检验]], [[00_factor/concept/Endogeneity|内生性]]

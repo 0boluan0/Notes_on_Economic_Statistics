@@ -147,4 +147,4 @@ tags:
 
 ## 相关链接
 
-[[机会成本]]
+[[00_factor/concept/Opportunity Cost|机会成本]]

@@ -141,5 +141,5 @@ $$\text{rank}(A+B) \leq \text{rank}(A) + \text{rank}(B)$$
   - 通过 $\pi$ 矩阵的秩判断协整关系数量
 
 ## 相关概念
-[[线性方程组解的结构]]
+[[00_factor/concept/Linear system solution structure|线性方程组解的结构]]
 [[Matrix Inverse|矩阵的逆]]

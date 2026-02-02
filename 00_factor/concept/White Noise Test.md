@@ -64,4 +64,4 @@ $$Q = T(T+2) \sum_{k=1}^{m} \frac{r_k^2}{T-k}$$
 2. **小样本问题**：小样本下检验分布近似较差
 3. **多重检验**：检验多个滞后阶数时需考虑多重比较问题
 
-相关链接: [[自相关函数]], [[ARCH]], [[GARCH]], [[Ljung-Box检验]], [[偏自相关函数]]
+相关链接: [[00_factor/concept/Autocorrelation Function|自相关函数]], [[ARCH]], [[GARCH]], [[00_factor/concept/Ljung-Box Test|Ljung-Box检验]], [[00_factor/concept/Partial Autocorrelation Function|偏自相关函数]]

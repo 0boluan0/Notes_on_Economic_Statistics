@@ -219,4 +219,4 @@ FGLS在样本量趋于无穷时：
 - 某些形式的条件异方差
 - ARCH/GARCH模型更合适
 
-相关链接: [[异方差]], [[OLS]], [[怀特检验]], [[GMM]]
+相关链接: [[00_factor/concept/Heteroskedasticity|异方差]], [[OLS]], [[00_factor/concept/White Test|怀特检验]], [[GMM]]

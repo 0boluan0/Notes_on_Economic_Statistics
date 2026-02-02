@@ -54,7 +54,7 @@ tags:
 ## 相关概念
 
 - [[Prisoner's Dilemma|囚徒困境]]
-- [[子博弈精炼纳什均衡]]
+- [[00_factor/concept/Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]
 
 ## 关键定理
 

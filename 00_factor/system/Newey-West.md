@@ -67,6 +67,6 @@ $$\omega_j = 1 - \frac{j}{L+1}$$
 | 计算缓慢 | 样本量很大、带宽大 | 限制最大滞后阶数 |
 
 ## 相关概念
-[[White稳健标准误]]
-[[自相关诊断]]
-[[异方差诊断]]
+[[00_factor/system/White Robust Standard Errors|White稳健标准误]]
+[[00_factor/system/Autocorrelation Diagnosis|自相关诊断]]
+[[00_factor/system/Heteroscedasticity Diagnosis|异方差诊断]]

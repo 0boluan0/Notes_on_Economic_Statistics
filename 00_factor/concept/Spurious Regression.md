@@ -236,4 +236,4 @@ $\Delta y_t = \alpha + \beta \Delta x_t + \gamma \epsilon_{t-1} + u_t$
 - 报度协整检验
 - 说明数据处理方法
 
-相关链接: [[ADF检验]], [[PP检验]], [[协整]], [[Error Correction Model|误差纠正机制(ECM)]]
+相关链接: [[00_factor/concept/Augmented Dickey-Fuller Test|ADF检验]], [[00_factor/concept/Phillips-Perron Test|PP检验]], [[00_factor/concept/Cointegration|协整]], [[Error Correction Model|误差纠正机制(ECM)]]

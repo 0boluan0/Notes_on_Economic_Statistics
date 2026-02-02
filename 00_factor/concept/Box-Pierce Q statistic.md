@@ -113,6 +113,6 @@ $$df = s - p - q$$
 - **模型选择**：Box-Jenkins 三阶段建模法的诊断检验阶段
 
 ## 相关概念
-[[白噪声过程]]
-[[自相关函数 ACF]]
-[[ARMA模型]]
+[[00_factor/concept/White Noise|白噪声过程]]
+[[00_factor/concept/Autocorrelation Function|自相关函数 ACF]]
+[[00_factor/concept/ARMA|ARMA模型]]

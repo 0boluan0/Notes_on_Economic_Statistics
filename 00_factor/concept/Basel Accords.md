@@ -85,4 +85,4 @@ $$\text{监管资本} = \text{RWA} \times 8\%$$
 - 中国版巴塞尔协议III：2013年发布
 - 核心监管框架：银保会《商业银行资本管理办法》
 
-相关链接: [[信用风险]], [[市场风险]], [[操作风险]], [[VaR]], [[资本金持有率]]
+相关链接: [[00_factor/concept/Credit Risk|信用风险]], [[00_factor/concept/Market Risk|市场风险]], [[00_factor/concept/Operational Risk|操作风险]], [[VaR]], [[00_factor/system/Capital Holding Ratio|资本金持有率]]

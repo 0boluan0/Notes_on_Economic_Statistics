@@ -93,6 +93,6 @@ Yule-Walker 方程建立了 AR 参数 $\{\phi_i\}$ 与自相关系数 $\{\rho_k\
 3. **白噪声不相关**：$\varepsilon_t$ 与所有过去 $y_{t-k}$ 不相关
 
 ## 相关概念
-[[ARMA模型]]
-[[自相关函数 ACF]]
-[[白噪声过程]]
+[[00_factor/concept/ARMA|ARMA模型]]
+[[00_factor/concept/Autocorrelation Function|自相关函数 ACF]]
+[[00_factor/concept/White Noise|白噪声过程]]

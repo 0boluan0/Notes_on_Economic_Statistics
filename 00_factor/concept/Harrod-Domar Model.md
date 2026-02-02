@@ -213,4 +213,4 @@ $Vs = n$
 - 需要更灵活的增长模型
 - 索罗模型解决了要素替代问题
 
-相关链接: [[索罗增长模型]], [[经济增长]], [[马尔萨斯人口陷阱]]
+相关链接: [[00_factor/concept/Solow Model|索罗增长模型]], [[00_factor/concept/Economic Growth|经济增长]], [[00_factor/concept/Malthusian Trap|马尔萨斯人口陷阱]]

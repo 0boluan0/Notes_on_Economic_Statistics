@@ -88,7 +88,7 @@ $$ \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T X(t)X(t+\tau) dt = R_X(\tau) $$
 
 ## 相关概念
 
-- [[宽平稳过程]]
+- [[00_factor/concept/Wide-Sense Stationary Process|宽平稳过程]]
 - [[Ergodicity|各态历经性]]
 | 特征 | 严平稳 | 宽平稳 |
 |------|---------|---------|

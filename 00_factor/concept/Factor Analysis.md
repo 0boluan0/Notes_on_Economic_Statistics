@@ -139,5 +139,5 @@ $$ L^* = LT $$
 ## 相关概念
 
 - [[PCA|主成分分析]]
-- [[公共度]]
+- [[00_factor/concept/Communality|公共度]]
 - [[Factor Loadings|因子载荷]]

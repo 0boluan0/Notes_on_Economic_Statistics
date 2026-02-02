@@ -49,9 +49,9 @@ $$现值指数 = \frac{未来现金流入的现值}{未来现金流出的现值}
 
 ## 与其他方法的配合
 
-- [[净现值法]]：提供绝对收益信息
-- [[内涵报酬率]]：提供收益率信息
+- [[00_factor/concept/Net Present Value|净现值法]]：提供绝对收益信息
+- [[00_factor/concept/Internal Rate of Return|内涵报酬率]]：提供收益率信息
 
 ## 相关链接
-[[净现值法]]
-[[内涵报酬率]]
+[[00_factor/concept/Net Present Value|净现值法]]
+[[00_factor/concept/Internal Rate of Return|内涵报酬率]]

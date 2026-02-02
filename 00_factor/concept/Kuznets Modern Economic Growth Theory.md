@@ -186,4 +186,4 @@ tags:
    - 经济增长是全面发展
    - 包括结构、制度、观念
 
-相关链接: [[经济增长]], [[索罗增长模型]], [[罗斯托经济增长阶段论]]
+相关链接: [[00_factor/concept/Economic Growth|经济增长]], [[00_factor/concept/Solow Model|索罗增长模型]], [[00_factor/concept/Rostow's Stages of Growth|罗斯托经济增长阶段论]]

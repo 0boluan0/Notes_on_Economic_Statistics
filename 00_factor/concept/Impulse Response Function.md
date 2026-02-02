@@ -49,4 +49,4 @@ $$\varepsilon_t = P u_t$$
 - 冲击的衰减或放大过程
 - 冲击的方向（正或负）
 
-相关链接: [[VAR Model|VAR]], [[方差分解]], [[格兰杰因果检验]]
+相关链接: [[VAR Model|VAR]], [[00_factor/concept/Variance Decomposition|方差分解]], [[00_factor/concept/Granger Causality Test|格兰杰因果检验]]

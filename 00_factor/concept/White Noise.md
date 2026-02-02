@@ -24,8 +24,8 @@ tags:
 
 ## Connections
 
-- 用途：[[ARMA]] 创新项、[[白噪声检验]] 残差诊断
-- 相关：[[自相关函数]]、[[偏自相关函数]]
+- 用途：[[ARMA]] 创新项、[[00_factor/concept/White Noise Test|白噪声检验]] 残差诊断
+- 相关：[[00_factor/concept/Autocorrelation Function|自相关函数]]、[[00_factor/concept/Partial Autocorrelation Function|偏自相关函数]]
 
 ## source_notes
 

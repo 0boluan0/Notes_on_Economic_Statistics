@@ -80,6 +80,6 @@ $$ \frac{\Delta P}{P} \approx -D_M \times \Delta y $$
 4. **收益率变化**：久期随收益率变化而变化（凸性效应）。
 
 ## 相关概念
-[[久期]]
-[[修正久期]]
+[[00_factor/concept/duration|久期]]
+[[00_factor/concept/Modified Duration|修正久期]]
 [[Convexity|凸性]]

@@ -105,8 +105,8 @@ $$ C \leq \text{支付} \leq D $$
 
 ## 相关概念
 
-- [[外部性]]
-- [[庇古税]]
+- [[00_factor/concept/Externality|外部性]]
+- [[00_factor/concept/Pigouvian Tax|庇古税]]
 - [[Property Rights|产权]]
 
 ## 应用场景

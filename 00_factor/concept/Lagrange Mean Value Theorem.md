@@ -137,6 +137,6 @@ $$R_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x-a)^{n+1}, \quad \xi \in (a, x)$$
 如果你在 $a$ 点出发，以某个恒定速度到达 $b$ 点，则你必然在中间某个时刻 $c$ 的瞬时速度等于这个恒定速度。
 
 ## 相关概念
-[[微积分基本定理]]
+[[00_factor/concept/Fundamental Theorem of Calculus|微积分基本定理]]
 [[Rolle's Theorem|罗尔定理]]
 [[Taylor Expansion|泰勒公式]]

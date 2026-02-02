@@ -107,5 +107,5 @@ tags:
 - 理论体系不够完善
 
 ## 相关链接
-[[重商主义]]
-[[重农学派]]
+[[00_factor/concept/Mercantilism|重商主义]]
+[[00_factor/concept/Physiocrats|重农学派]]

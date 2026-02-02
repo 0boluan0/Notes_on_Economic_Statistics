@@ -54,7 +54,7 @@ $$1 - \phi_1 z - \phi_2 z^2 - \cdots - \phi_p z^p = 0$$
 - **AIC**：-2ln(L) + 2k
 - **BIC**：-2ln(L) + k·ln(T)
 
-相关链接: [[自相关函数]], [[偏自相关函数]], [[ARCH]], [[GARCH]], [[平稳性]], [[AIC]], [[BIC]]
+相关链接: [[00_factor/concept/Autocorrelation Function|自相关函数]], [[00_factor/concept/Partial Autocorrelation Function|偏自相关函数]], [[ARCH]], [[GARCH]], [[00_factor/concept/Stationarity|平稳性]], [[AIC]], [[BIC]]
 
 ## source_notes
 

@@ -78,8 +78,8 @@ $$ D[X(t)] = Var[X(t)] = \lambda t \cdot E[Y_1^2] $$
 
 ## 相关概念
 
-- [[泊松过程]]
-- [[更新过程]]
+- [[00_factor/concept/Poisson Process|泊松过程]]
+- [[00_factor/concept/Renewal Process|更新过程]]
 
 ## 计算示例
 

@@ -166,4 +166,4 @@ tags:
 - 动态分析不足
 
 ## 相关链接
-[[边际革命]]
+[[00_factor/concept/Marginal Revolution|边际革命]]

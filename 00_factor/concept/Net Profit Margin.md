@@ -51,5 +51,5 @@ $$权益净利率 = 营业净利率 \times 总资产周转次数 \times 权益�
 3. **行业对比**：分析竞争优势
 
 ## 相关链接
-[[权益净利率]]
-[[总资产净利率]]
+[[00_factor/concept/Return on Equity|权益净利率]]
+[[00_factor/concept/Return on Assets|总资产净利率]]

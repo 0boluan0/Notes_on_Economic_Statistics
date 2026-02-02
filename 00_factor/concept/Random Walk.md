@@ -60,4 +60,4 @@ $$dy_t = \mu dt + \sigma dW_t$$
 1. **AR(1)过程**：y_t = φy_{t-1} + ε_t，当φ=1时为随机游走
 2. **带趋势的随机游走**：y_t = α + βt + y_{t-1} + ε_t
 
-相关链接: [[单位根检验]], [[平稳性]], [[有效市场假说]]
+相关链接: [[00_factor/concept/Unit Root Test|单位根检验]], [[00_factor/concept/Stationarity|平稳性]], [[00_factor/concept/Efficient Market Hypothesis|有效市场假说]]

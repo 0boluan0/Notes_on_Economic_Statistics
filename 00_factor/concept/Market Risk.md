@@ -100,4 +100,4 @@ $$VaR_{total} = \sqrt{\sum_{i,j} \rho_{ij}VaR_iVaR_j}$$
 - **压力VaR要求**：10日99%压力VaR
 - **资本要求**：max(10日VaR, 压力VaR) + 乘数因子
 
-相关链接: [[VaR]], [[ES]], [[压力VaR]], [[久期]], [[巴塞尔协议]]
+相关链接: [[VaR]], [[ES]], [[00_factor/concept/Stressed VaR|压力VaR]], [[00_factor/concept/duration|久期]], [[00_factor/concept/Basel Accords|巴塞尔协议]]

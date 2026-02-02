@@ -92,6 +92,6 @@ $$ \text{SE}(\text{VaR}_\alpha) \approx \frac{\sqrt{\alpha(1-\alpha)}}{\sqrt{N} 
 
 ## 相关概念
 [[VaR]]
-[[VaR参数法计算]]
-[[蒙特卡罗模拟法VaR计算]]
+[[00_factor/procedure/VaR Parametric Method|VaR参数法计算]]
+[[00_factor/procedure/Monte Carlo Simulation VaR|蒙特卡罗模拟法VaR计算]]
 [[EVT|极端值理论]]

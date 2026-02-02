@@ -18,7 +18,7 @@ tags:
 
 **含义**：
 - 技术分析无法获得超额收益
-- 价格变化遵循[[随机游走]]
+- 价格变化遵循[[00_factor/concept/Random Walk|随机游走]]
 
 **检验方法**：
 - 游程检验
@@ -65,5 +65,5 @@ tags:
 - **羊群效应**：跟随他人行为
 - **损失厌恶**：对损失比收益更敏感
 
-相关链接: [[随机游走]], [[资本资产定价模型]], [[Behavioral Finance|行为金融学]]
+相关链接: [[00_factor/concept/Random Walk|随机游走]], [[00_factor/framework/CAPM|资本资产定价模型]], [[Behavioral Finance|行为金融学]]
 ]]

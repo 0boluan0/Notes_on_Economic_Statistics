@@ -126,5 +126,5 @@ $$F(s+t) = F(s) \cdot F(t)$$
 - 网络请求到达时间
 
 ## 相关概念
-[[泊松过程]]
+[[00_factor/concept/Poisson Process|泊松过程]]
 [[Stochastic Processes Overview|随机过程的概念和分类]]

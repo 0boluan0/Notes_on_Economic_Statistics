@@ -211,4 +211,4 @@ $y^* = [\frac{s}{n + \delta}]^{\frac{\alpha}{1-\alpha}}$
 3. **增长收敛**
    - 预测落后国家赶超发达国家
 
-相关链接: [[哈罗德-多玛模型]], [[经济增长]], [[库兹涅茨现代经济增长理论]]
+相关链接: [[00_factor/concept/Harrod-Domar Model|哈罗德-多玛模型]], [[00_factor/concept/Economic Growth|经济增长]], [[00_factor/concept/Kuznets Modern Economic Growth Theory|库兹涅茨现代经济增长理论]]

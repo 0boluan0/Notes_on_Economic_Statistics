@@ -75,7 +75,7 @@ $$ L = \begin{pmatrix}
 ## 相关概念
 
 - [[Specific Variance|特殊方差]]
-- [[因子分析]]
+- [[00_factor/concept/Factor Analysis|因子分析]]
 - [[Factor Loadings|因子载荷]]
 
 ## 性质

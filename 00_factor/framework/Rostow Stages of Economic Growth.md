@@ -42,5 +42,5 @@ tags:
 3. **制度重要性**：政治、社会和制度结构对经济增长阶段转换至关重要
 
 ## 相关链接
-[[库兹涅茨现代经济增长理论]]
-[[后发优势理论]]
+[[00_factor/concept/Kuznets Modern Economic Growth Theory|库兹涅茨现代经济增长理论]]
+[[00_factor/concept/Advantage of Backwardness|后发优势理论]]

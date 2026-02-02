@@ -72,7 +72,7 @@ $$Sargan = n \cdot R^2 \sim \chi^2(m-k)$$
 | 找不到有效工具变量 | 数据限制 | 使用替代方法（匹配、断点回归、双重差分） |
 
 ## 相关概念
-[[工具变量]]
+[[00_factor/concept/Instrumental Variable|工具变量]]
 [[2SLS]]
 [[GMM]]
-[[Hausman检验]]
+[[00_factor/concept/Hausman Test|Hausman检验]]

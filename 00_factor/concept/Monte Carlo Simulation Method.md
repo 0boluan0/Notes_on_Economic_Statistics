@@ -44,7 +44,7 @@ tags:
 | 历史模拟法 | 直观易行，无需分布假设 | 依赖历史数据，数据量要求高 | 一般组合，历史数据充分 |
 | 蒙特卡罗模拟法 | 适用复杂，分布灵活 | 计算量大，模型风险 | 复杂衍生品，高维组合 |
 
-相关链接: [[VaR]], [[历史模拟法]], [[方差-协方差法]]
+相关链接: [[VaR]], [[00_factor/concept/Historical Simulation Method|历史模拟法]], [[00_factor/concept/Variance-Covariance Method|方差-协方差法]]
 
 ## source_notes
 

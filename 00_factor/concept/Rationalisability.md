@@ -42,8 +42,8 @@ tags:
 ## 相关概念
 
 - [[Nash Equilibrium|纳什均衡]]
-- [[纯策略纳什均衡]]
-- [[严格占优策略]]
+- [[00_factor/concept/Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
+- [[00_factor/concept/Strictly Dominated Strategy|严格占优策略]]
 
 ## 应用
 

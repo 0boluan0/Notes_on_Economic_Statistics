@@ -79,4 +79,4 @@ $$外部融资销售增长比 = 经营资产销售百分比 - 经营负债销售
 
 ## 相关链接
 
-[[可持续增长率]]
+[[00_factor/concept/Sustainable Growth Rate|可持续增长率]]

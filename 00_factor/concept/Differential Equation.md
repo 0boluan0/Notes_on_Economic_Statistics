@@ -114,5 +114,5 @@ $$y'' + ay' + by = f(x)$$
 3. **定性分析**：不求解，分析解的性质
 
 ## 相关链接
-[[导数]]
-[[积分]]
+[[00_factor/concept/Derivative (2)|导数]]
+[[00_factor/concept/Integral|积分]]

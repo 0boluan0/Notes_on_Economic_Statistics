@@ -176,4 +176,4 @@ $\pi_0, \pi_1, \pi_2$等是简约参数（Reduced Form Parameters）：
 
 误差项的假设影响识别和估计。
 
-相关链接: [[简约式方程]], [[联立方程模型]], [[参数识别]], [[2SLS]]
+相关链接: [[00_factor/concept/Reduced Form Equation|简约式方程]], [[00_factor/concept/Simultaneous Equations Model|联立方程模型]], [[00_factor/concept/Parameter Identification|参数识别]], [[2SLS]]

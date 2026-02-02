@@ -65,6 +65,6 @@ $$\int_a^b f(x)dx = F(b) - F(a)$$
 - 使微积分成为统一的理论体系
 
 ## 相关链接
-[[导数]]
-[[积分]]
-[[极限]]
+[[00_factor/concept/Derivative (2)|导数]]
+[[00_factor/concept/Integral|积分]]
+[[00_factor/concept/Limit|极限]]

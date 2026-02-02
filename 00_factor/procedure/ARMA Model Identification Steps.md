@@ -139,8 +139,8 @@ $$ Q = T(T+2) \sum_{k=1}^s \frac{\hat{\rho}_k^2}{T-k} $$
 4. **非平稳序列**：非平稳序列的ACF和PACF行为异常。
 
 ## 相关概念
-[[自相关函数]]
-[[偏自相关函数]]
+[[00_factor/concept/Autocorrelation Function|自相关函数]]
+[[00_factor/concept/Partial Autocorrelation Function|偏自相关函数]]
 [[Stationary Time Series|平稳时间序列]]
-[[GARCH模型估计步骤]]
-[[Box-Jenkins方法]]
+[[00_factor/procedure/GARCH Model Estimation Steps|GARCH模型估计步骤]]
+[[00_factor/procedure/Box-Jenkins Method|Box-Jenkins方法]]
