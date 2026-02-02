@@ -109,6 +109,6 @@ $$ \sqrt{n}(\hat{\theta}_{\text{MLE}} - \theta_0) \xrightarrow{d} N(0, I(\theta_
 
 ## 相关概念
 [[OLS估计步骤]]
-[[似然比检验]]
+[[Likelihood Ratio Test|似然比检验]]
 [[ARMA模型识别]]
 [[GARCH模型估计]]

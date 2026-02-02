@@ -64,7 +64,7 @@ $$DW \approx 2(1 - \hat{\rho})$$
 | 滞后因变量导致DW失效 | 模型存在内生性 | 使用工具变量法、估计动态面板模型 |
 
 ## 相关概念
-[[自相关]]
+[[Autocorrelation|自相关]]
 [[BG检验]]
-[[Q检验]]
+[[Q Test|Q检验]]
 [[Newey-West]]

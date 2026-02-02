@@ -178,4 +178,4 @@ $[e^{\hat{\beta}_j - z_{\alpha/2}\cdot SE}, e^{\hat{\beta}_j + z_{\alpha/2}\cdot
 - 购买决策因素
 - 品牌选择分析
 
-相关链接: [[logit模型]], [[虚拟变量]]
+相关链接: [[logit模型]], [[Dummy Variable|虚拟变量]]

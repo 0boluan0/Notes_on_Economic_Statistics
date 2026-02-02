@@ -16,8 +16,8 @@ tags:
 ## 货币时间价值
 
 [[货币时间价值]]
-[[终值]]
-[[现值]]
+[[Future Value|终值]]
+[[Present Value|现值]]
 [[年金]]
 
 ## 投资决策
@@ -89,12 +89,12 @@ tags:
 
 [[资本资产定价模型]]
 [[资本市场线]]
-[[委托-代理问题]]
+[[Principal-Agent Problem|委托-代理问题]]
 [[阿尔法值]]
 
 ## 课程笔记
 
-- [[01_货币时间价值]]
-- [[02_投资决策]]
-- [[03_债券与股票估值]]
-- [[04_财务比率分析]]
+- [[01_Time Value of Money|01_货币时间价值]]
+- [[02_Investment Decisions|02_投资决策]]
+- [[03_Bond and Stock Valuation|03_债券与股票估值]]
+- [[04_Financial Ratio Analysis|04_财务比率分析]]

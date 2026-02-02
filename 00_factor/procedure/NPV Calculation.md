@@ -103,4 +103,4 @@ $$ EAC = \frac{NPV}{\frac{1 - (1+r)^{-n}}{r}} $$
 ## 相关概念
 [[内部收益率]]
 [[现值指数]]
-[[折现回收期]]
+[[Discounted Payback Period|折现回收期]]

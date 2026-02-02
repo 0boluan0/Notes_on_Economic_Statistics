@@ -24,4 +24,4 @@ h_t = \alpha_0 + \alpha_1 \varepsilon_{t-1}^2
 ## 相关链接
 
 - 扩展模型：[[GARCH]], [[TARCH]], [[EGARCH]]
-- 相关概念：[[波动聚集]], [[条件异方差]], [[历史波动率]], [[隐含波动率]], [[已实现波动率]]
+- 相关概念：[[Volatility Clustering|波动聚集]], [[Conditional Heteroskedasticity|条件异方差]], [[历史波动率]], [[隐含波动率]], [[已实现波动率]]

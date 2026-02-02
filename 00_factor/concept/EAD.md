@@ -1,12 +1,15 @@
 ---
-aliases: []
+aliases:
+- Exposure at Default
+- EAD
+- 违约暴露
 tags:
 - concept
 ---
-# EAD
+# Exposure at Default (EAD)
 
 ## 它是什么
-- 「EAD」是一个待补充定义的核心概念卡片。
+- 「Exposure at Default (EAD)」是一个待补充定义的核心概念卡片。
 
 ## 最小可检索信息
 - 定义：待补充

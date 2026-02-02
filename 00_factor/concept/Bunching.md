@@ -45,4 +45,4 @@ P(异常_t | 异常_{t-1}) > P(异常_t | 正常_{t-1})
 3. **动态调整模型**：根据市场状态变化及时更新参数
 4. **提高置信水平**：在模型表现不佳时使用更保守的设置
 
-相关链接: [[VaR]], [[回溯检验]], [[Christoffersen检验]], [[GARCH]], [[波动聚集]]
+相关链接: [[VaR]], [[回溯检验]], [[Christoffersen Test|Christoffersen检验]], [[GARCH]], [[Volatility Clustering|波动聚集]]

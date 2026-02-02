@@ -140,4 +140,4 @@ $$E[\hat{\beta}_{OLS}] \neq \beta$$
 
 ## 相关概念
 [[高斯-马尔可夫定理]]
-[[线性回归模型]]
+[[Linear Regression Model|线性回归模型]]

@@ -127,4 +127,4 @@ $$F(s+t) = F(s) \cdot F(t)$$
 
 ## 相关概念
 [[泊松过程]]
-[[随机过程的概念和分类]]
+[[Stochastic Processes Overview|随机过程的概念和分类]]

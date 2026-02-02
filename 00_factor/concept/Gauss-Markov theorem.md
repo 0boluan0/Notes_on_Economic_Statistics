@@ -174,7 +174,7 @@ $$\text{Var}(\hat{\beta}_{OLS}) = \sigma^2 (X'X)^{-1}$$
 - 若违反无自相关（序列相关），应使用 Newey-West 标准误
 
 ## 相关概念
-[[OLS估计量]]
-[[线性回归模型]]
+[[OLS Estimator|OLS估计量]]
+[[Linear Regression Model|线性回归模型]]
 [[OLS估计步骤]]
 [[异方差]]

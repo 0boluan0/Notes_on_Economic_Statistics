@@ -119,7 +119,7 @@ $$ \mu_p = R_f + \frac{\mu_m - R_f}{\sigma_m^2} \sigma_p $$
 4. **交易成本**：理论最优组合未考虑交易成本和流动性。
 
 ## 相关概念
-[[有效前沿]]
-[[分离定理]]
-[[夏普比率]]
+[[Efficient Frontier|有效前沿]]
+[[Separation Theorem (Finance)|分离定理]]
+[[Sharpe Ratio|夏普比率]]
 [[CAPM]]

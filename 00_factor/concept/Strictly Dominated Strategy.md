@@ -29,8 +29,8 @@ $$ u_i(s_i', s_{-i}) > u_i(s_i, s_{-i}) $$
 
 ## 相关概念
 
-- [[弱占优策略]]
-- [[纳什均衡]]
+- [[Weakly Dominated Strategy|弱占优策略]]
+- [[Nash Equilibrium|纳什均衡]]
 - [[可理性化]]
 
 ## 混合策略中的严格占优

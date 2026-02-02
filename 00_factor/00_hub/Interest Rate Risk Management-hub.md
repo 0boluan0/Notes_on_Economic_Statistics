@@ -33,8 +33,8 @@ tags:
 
 ## 利率敏感性指标
 
-[[利率敏感性缺口]]
-[[基点价值]]
+[[Interest Rate Sensitivity Gap|利率敏感性缺口]]
+[[Basis Point Value (BPV)|基点价值]]
 
 ## 课程笔记
 

@@ -46,7 +46,7 @@ $$\text{StdErr}(\hat{x}_q) \approx \frac{\sqrt{q(1-q)}}{\sqrt{n}f(x_q)}$$
 2. **波动率更新的历史模拟**：根据当前波动率水平缩放历史收益
 3. **Bootstrap自助法**：通过重复抽样增强VaR估计稳定性
 
-相关链接: [[VaR]], [[极值理论]], [[加权历史模拟]], [[自助法模拟]]
+相关链接: [[VaR]], [[EVT|极值理论]], [[Weighted Historical Simulation|加权历史模拟]], [[Bootstrap Simulation|自助法模拟]]
 
 ## source_notes
 

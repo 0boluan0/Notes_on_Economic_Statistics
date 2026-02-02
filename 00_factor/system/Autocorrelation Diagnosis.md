@@ -70,6 +70,6 @@ $$Q = T \sum_{j=1}^p r_j^2 \sim \chi^2(p)$$
 ## 相关概念
 [[Durbin-Watson统计量]]
 [[BG检验]]
-[[Q检验]]
+[[Q Test|Q检验]]
 [[Newey-West]]
 [[Cochrane-Orcutt]]

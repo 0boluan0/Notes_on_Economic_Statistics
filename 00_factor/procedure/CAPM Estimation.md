@@ -130,7 +130,7 @@ $$
 5. **流动性差异**：资产与指数流动性不同影响相关性。
 
 ## 相关概念
-[[系统风险]]
-[[非系统风险]]
-[[有效前沿]]
-[[夏普比率]]
+[[Systematic Risk|系统风险]]
+[[Unsystematic Risk|非系统风险]]
+[[Efficient Frontier|有效前沿]]
+[[Sharpe Ratio|夏普比率]]

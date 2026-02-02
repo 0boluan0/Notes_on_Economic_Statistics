@@ -50,7 +50,7 @@ tags:
 
 ## 自相关问题
 
-[[自相关]]
+[[Autocorrelation|自相关]]
 [[Durbin-Watson统计量]]
 [[BG检验]]
 [[Cochrane-Orcutt]]
@@ -73,7 +73,7 @@ tags:
 
 ## 模型设定
 
-[[模型设定偏误]]
+[[Model Misspecification|模型设定偏误]]
 [[分布滞后模型]]
 [[ADL]]
 [[模型验证]]
@@ -101,7 +101,7 @@ tags:
 
 ## 课程笔记
 
-- [[01_OLS基础]]
-- [[02_异方差与自相关]]
-- [[03_多重共线性与内生性]]
-- [[04_联立方程模型]]
+- [[01_OLS Basics|01_OLS基础]]
+- [[02_Heteroskedasticity and Autocorrelation|02_异方差与自相关]]
+- [[03_Multicollinearity and Endogeneity|03_多重共线性与内生性]]
+- [[04_Simultaneous Equations Model|04_联立方程模型]]

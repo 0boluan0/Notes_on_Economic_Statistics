@@ -84,4 +84,4 @@ $$ \Delta P \approx -D_{\text{mod}} \times P \times 0.0001 $$
 ## 相关概念
 [[久期]]
 [[马考利久期]]
-[[凸性]]
+[[Convexity|凸性]]

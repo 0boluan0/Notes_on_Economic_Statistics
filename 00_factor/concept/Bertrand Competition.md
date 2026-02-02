@@ -5,6 +5,7 @@ aliases:
 - Bertrand Paradox
 - Bertrand
 - Bertrand 竞争
+- Bertrand Competition
 tags:
 - concept
 - game theory

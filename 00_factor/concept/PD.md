@@ -1,12 +1,15 @@
 ---
-aliases: []
+aliases:
+- Probability of Default
+- PD
+- 违约概率
 tags:
 - concept
 ---
-# PD
+# Probability of Default (PD)
 
 ## 它是什么
-- 「PD」是一个待补充定义的核心概念卡片。
+- 「Probability of Default (PD)」是一个待补充定义的核心概念卡片。
 
 ## 最小可检索信息
 - 定义：待补充

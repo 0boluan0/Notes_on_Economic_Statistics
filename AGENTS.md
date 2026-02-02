@@ -30,6 +30,7 @@
   - 去掉步骤还能成立 → framework；去掉解释仍可执行 → procedure。
   - 关键词是诊断/稳健/排错 → system；必须逐步推导才成立 → proof。
   - 能直接粘进报告的表达资产 → writing；仅定义级信息 → concept。
+- 命名规范（知识点卡片）：`00_factor` 的 concept/framework/procedure/system/proof/writing 优先使用**英文文件名**；英文名过长则用**常见缩写**。在 `aliases` 中补**英文全称**与**中文译名**（必要时含常用缩写）。
 - 命名与位置：`增长理论-hub.md`、`VaR.md`、`OLS估计步骤.md` 等放入对应子目录。
 - Frontmatter 建议：
   - 所有卡片含 `aliases: []`、`tags: []`；一般笔记可含 `date`, `科目`。
@@ -38,7 +39,9 @@
 - Markdown notes:
   - Begin with YAML frontmatter bounded by `---`.
   - Required fields in `00_factor`: `aliases: []`, `tags: []` (script helps keep consistent).
-  - Filenames: concise Chinese titles; use hyphens for suffix types, e.g., `增长理论-hub.md`.
+  - Filenames:
+    - `00_factor` 知识点卡片（concept/framework/procedure/system/proof/writing）：优先英文命名；过长则用缩写，并在 `aliases` 写全称与中文译名。
+    - 其它笔记（课程/Hub 等）：保持现有命名风格；后缀类型用连字符，例如 `增长理论-hub.md`。
   - Headings start at `#` with sentence‑case titles; prefer short sections.
 - Python utilities: `snake_case` filenames, 4‑space indentation, Black-compatible style.
 

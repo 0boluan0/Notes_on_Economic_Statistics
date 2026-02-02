@@ -56,4 +56,4 @@ $$BIC \approx -2 \ln(P(M|data)) + C$$
 - BIC是模型选择的**相合估计量**：当样本量趋于无穷时，BIC会选择真实模型（如果真实模型在备选集中）
 - AIC不是相合的，但渐近极小化Kullback-Leibler散度（预测准确度）
 
-相关链接: [[AIC]], [[ARMA]], [[VAR]]
+相关链接: [[AIC]], [[ARMA]], [[VAR Model|VAR]]

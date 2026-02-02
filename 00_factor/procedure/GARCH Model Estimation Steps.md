@@ -3,6 +3,7 @@ aliases:
 - GARCH模型估计步骤
 - GARCH
 - GARCH模型估计
+- GARCH Model Estimation Steps
 tags:
 - procedure
 - 06_时间序列分析
@@ -145,7 +146,7 @@ $$ \text{Half-life} = \frac{\ln(0.5)}{\ln(\alpha + \beta)} $$
 4. **残差非正态**：标准化残差常表现出厚尾，需用t分布。
 
 ## 相关概念
-[[条件异方差]]
-[[波动率聚集]]
+[[Conditional Heteroskedasticity|条件异方差]]
+[[Volatility Clustering|波动率聚集]]
 [[EWMA波动率估计]]
 [[ARCH]]

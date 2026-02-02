@@ -4,6 +4,7 @@ aliases:
 - ARMA模型识别步骤
 - ARMA
 - ARMA模型识别
+- ARMA Model Identification Steps
 tags:
 - procedure
 - 06_时间序列分析
@@ -140,6 +141,6 @@ $$ Q = T(T+2) \sum_{k=1}^s \frac{\hat{\rho}_k^2}{T-k} $$
 ## 相关概念
 [[自相关函数]]
 [[偏自相关函数]]
-[[平稳时间序列]]
+[[Stationary Time Series|平稳时间序列]]
 [[GARCH模型估计步骤]]
 [[Box-Jenkins方法]]

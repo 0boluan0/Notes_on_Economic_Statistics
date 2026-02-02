@@ -3,6 +3,7 @@ aliases:
 - Wishart分布
 - Wishart
 - Wishart 分布
+- Wishart Distribution
 tags:
 - concept
 - multivariate statistics
@@ -77,8 +78,8 @@ $$ CAC' \sim W_m(C\Sigma C') $$
 ## 相关概念
 
 - [[多元正态分布]]
-- [[Hotelling T² 检验]]
-- [[卡方分布]]
+- [[Hotelling T2 Test|Hotelling T² 检验]]
+- [[Chi-square Distribution|卡方分布]]
 
 ## 性质总结
 

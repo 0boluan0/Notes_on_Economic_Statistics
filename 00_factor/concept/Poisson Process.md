@@ -106,7 +106,7 @@ $$ P\{N(t) = n\} = \frac{[m_X(t)]^n}{n!} e^{-m_X(t)}, \quad n \ge 0 $$
 
 - [[复合泊松过程]]
 - [[更新过程]]
-- [[指数分布]]
+- [[Exponential Distribution|指数分布]]
 
 ## 性质总结
 

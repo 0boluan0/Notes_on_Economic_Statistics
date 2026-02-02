@@ -5,6 +5,7 @@ aliases:
 - Linear City Model
 - Hotelling
 - Hotelling 模型
+- Hotelling Model
 tags:
 - concept
 - game theory

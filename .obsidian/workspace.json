@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_factor/concept/VAR（向量自回归模型）.md",
+                "file": "00_factor/00_hub/Game Theory-hub.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "VAR（向量自回归模型）"
+              "title": "Game Theory-hub"
             }
           }
         ]
@@ -173,11 +173,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "00_factor/concept/VAR（向量自回归模型）.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for VAR（向量自回归模型）"
+              "title": "File properties"
             }
           },
           {
@@ -286,13 +284,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_factor/concept/VAR（向量自回归模型）.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of VAR（向量自回归模型）"
+              "title": "Outline"
             }
           }
         ]
@@ -320,34 +317,34 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "f1cd9ef1908beb07",
+  "active": "ed6edb2cedb20524",
   "lastOpenFiles": [
-    "00_factor/concept/VaR.md",
-    "00_factor/undefined/01_OLS基础.md",
-    "00_factor/undefined/03_多重共线性与内生性.md",
-    "00_factor/undefined/04_多元正态分布.md",
-    "00_factor/undefined/04_经济增长理论.md",
-    "00_factor/undefined/04_财务比率分析.md",
-    "00_factor/concept/VAR（向量自回归模型）.md",
-    "00_factor/concept/马尔可夫过程.md",
-    "00_factor/concept/预期理论.md",
-    "00_factor/concept/非系统风险.md",
-    "00_factor/concept/随机过程的概念和分类.md",
-    "00_factor/concept/逆矩阵.md",
-    "00_factor/concept/连续时间马尔可夫链.md",
-    "00_factor/concept/贴现率.md",
-    "00_factor/concept/误差纠正模型.md",
-    "00_factor/concept/观察期.md",
-    "00_factor/concept/行列式.md",
-    "00_factor/concept/行为金融学.md",
-    "00_factor/concept/自然垄断.md",
-    "00_factor/concept/自助法模拟.md",
-    "00_factor/concept/聚束效应检验.md",
-    "00_factor/concept/置信水平.md",
-    "00_factor/concept/罗尔定理.md",
-    "00_factor/concept/绝对VaR.md",
-    "00_factor/concept/终值.md",
-    "00_factor/concept/线性组合.md",
+    "00_factor/00_hub/Game Theory-hub.md",
+    "00_factor/concept/Wishart Distribution.md",
+    "00_factor/concept/Yield Curve.md",
+    "00_factor/concept/Working Capital.md",
+    "00_factor/concept/Yield Curve Risk.md",
+    "00_factor/concept/Yield to Maturity.md",
+    "00_factor/concept/Backward Induction.md",
+    "00_factor/concept/Autocorrelation.md",
+    "00_factor/concept/Asymptotic Theory.md",
+    "00_factor/concept/ADL.md",
+    "00_factor/concept/Adam Smith's Economics.md",
+    "99_学习情况记录/2026-02-02——Mon.md",
+    "00_factor/undefined/05_Solow Model.md",
+    "00_factor/undefined/04_Financial Ratio Analysis.md",
+    "00_factor/undefined/04_Simultaneous Equations Model.md",
+    "00_factor/undefined/04_Growth Theory.md",
+    "00_factor/undefined/04_Multivariate Normal Distribution.md",
+    "00_factor/undefined/03_Repeated Games and Mixed Strategies.md",
+    "00_factor/undefined/03_Linear Systems.md",
+    "00_factor/undefined/03_Multicollinearity and Endogeneity.md",
+    "00_factor/undefined/03_Bond and Stock Valuation.md",
+    "00_factor/undefined/02_Nash Equilibrium.md",
+    "00_factor/undefined/02_Matrix Operations.md",
+    "00_factor/undefined/02_Investment Decisions.md",
+    "00_factor/undefined/02_Heteroskedasticity and Autocorrelation.md",
+    "00_factor/undefined/01_Time Value of Money.md",
     "scripts/clean_aliases.py",
     "scripts/rename_to_english.py",
     "Untitled.canvas",

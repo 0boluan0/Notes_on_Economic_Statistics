@@ -110,5 +110,5 @@ $$ 1 + MIRR = \left[\sum_{t=1}^n \frac{CF_t}{(1+IRR)^t} \left(\sum_{k=0}^{t-1} (
 
 ## 相关概念
 [[净现值]]
-[[修正内部收益率]]
-[[回收期]]
+[[MIRR|修正内部收益率]]
+[[Payback Period|回收期]]

@@ -3,6 +3,9 @@ aliases:
 - 自回归移动平均模型
 - Autoregressive Moving Average Model
 - ARMA模型
+- Autoregressive Moving Average (ARMA) Model
+- ARMA
+- 自回归滑动平均模型
 tags:
 - 时间序列
 - 波动建模

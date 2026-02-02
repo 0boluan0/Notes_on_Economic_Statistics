@@ -66,5 +66,5 @@ $$F = \frac{R^2/p}{(1-R^2)/(T-k-p-1)} \sim F(p, T-k-p-1)$$
 
 ## 相关概念
 [[自相关诊断]]
-[[Q检验]]
+[[Q Test|Q检验]]
 [[Durbin-Watson统计量]]

@@ -15,8 +15,8 @@ tags:
 ## 扩展概念
 
 ### VaR 类型
-[[绝对VaR]]
-[[相对VaR]]
+[[Absolute VaR|绝对VaR]]
+[[Relative VaR|相对VaR]]
 
 ### VaR 组件
 [[边际VaR]]
@@ -26,7 +26,7 @@ tags:
 ### 相关风险度量
 [[ES]] (Expected Shortfall / 条件VaR)
 [[一致性风险度量]]
-[[光谱风险度量]]
+[[Spectral Risk Measure|光谱风险度量]]
 
 ## VaR 计算方法
 
@@ -36,15 +36,15 @@ tags:
 
 ## VaR 检验与验证
 
-[[Kupiec检验]]
-[[聚束效应检验]]
+[[Kupiec Test|Kupiec检验]]
+[[Clustering Test|聚束效应检验]]
 [[VaR标准误]]
 
 ## 相关参数
 
-[[置信水平]]
-[[持有期]]
-[[观察期]]
+[[Confidence Level|置信水平]]
+[[Holding Period|持有期]]
+[[Observation Window|观察期]]
 
 ## 课程笔记
 

@@ -118,6 +118,6 @@ $$ \lambda_{\text{max}}(r) = -T \ln(1 - \hat{\lambda}_{r+1}) \xrightarrow{d} \ch
 
 ## 相关概念
 [[协整]]
-[[误差纠正模型]]
+[[Error Correction Model|误差纠正模型]]
 [[单位根]]
 [[ADF检验步骤]]

@@ -72,4 +72,4 @@ $$\text{DFFITS}_i = \frac{\hat{y}_i - \hat{y}_{i(i)}}{\sqrt{\hat{\sigma}^2_{(i)}
 
 ## 相关概念
 [[多重共线性]]
-[[稳健回归]]
+[[Robust Regression|稳健回归]]

@@ -139,4 +139,4 @@ $$\frac{1}{T}\sum_{t=1}^T g(X_t) \xrightarrow{p} E[g(X_t)]$$
 
 ## 相关概念
 [[中心极限定理]]
-[[依概率收敛]]
+[[Convergence in Probability|依概率收敛]]

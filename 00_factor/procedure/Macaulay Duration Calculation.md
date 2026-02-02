@@ -82,4 +82,4 @@ $$ \frac{\Delta P}{P} \approx -D_M \times \Delta y $$
 ## 相关概念
 [[久期]]
 [[修正久期]]
-[[凸性]]
+[[Convexity|凸性]]

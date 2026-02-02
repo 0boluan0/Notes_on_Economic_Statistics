@@ -138,5 +138,5 @@ $$R_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x-a)^{n+1}, \quad \xi \in (a, x)$$
 
 ## 相关概念
 [[微积分基本定理]]
-[[罗尔定理]]
-[[泰勒公式]]
+[[Rolle's Theorem|罗尔定理]]
+[[Taylor Expansion|泰勒公式]]

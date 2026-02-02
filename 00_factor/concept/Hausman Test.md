@@ -3,6 +3,7 @@ aliases:
 - Hausman检验
 - Hausman
 - 豪斯曼检验
+- Hausman Test
 tags:
 - 计量经济学
 - 统计检验

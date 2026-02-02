@@ -53,4 +53,4 @@ $$AIC = -2 \ln(L_{max}) + 2k$$
 - 比较准则：[[BIC]]
 - 应用：[[ARMA]]模型选择
 
-相关链接: [[BIC]], [[ARMA]], [[VAR]]
+相关链接: [[BIC]], [[ARMA]], [[VAR Model|VAR]]

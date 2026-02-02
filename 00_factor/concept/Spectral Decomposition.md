@@ -104,9 +104,9 @@ $$ \min_{x \neq 0} \frac{x^T A x}{x^T x} = \lambda_n $$
 
 ## 相关概念
 
-- [[特征值]]
-- [[特征向量]]
-- [[正定矩阵]]
+- [[Eigenvalues|特征值]]
+- [[Eigenvectors|特征向量]]
+- [[Positive Definite Matrix|正定矩阵]]
 
 ## 示例
 

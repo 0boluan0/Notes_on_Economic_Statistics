@@ -115,7 +115,7 @@ $$ \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T |R_X(\tau) - m_X^2| d\tau = 0 $$
 
 - [[严平稳过程]]
 - [[自相关函数]]
-- [[功率谱密度]]
+- [[Power Spectral Density|功率谱密度]]
 
 ## 重要性
 

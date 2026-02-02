@@ -113,6 +113,7 @@ Located in `00_inbox/`:
 - Zettelkasten-style atomic notes
 - Hub notes connect related concepts
 - Covers financial concepts, risk metrics, economic theory, statistical concepts
+ - 命名规范（知识点卡片）：`00_factor` 下的 concept/framework/procedure/system/proof/writing 以**英文文件名**为主；英文过长用**常见缩写**。在 `aliases` 中补**英文全称**与**中文译名**（可含常用缩写）。
 
 ### Learning Records
 - Daily logs track activities, plans, and reflections

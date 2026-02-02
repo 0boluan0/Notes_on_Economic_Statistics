@@ -3,6 +3,7 @@ aliases:
 - 蒙特卡罗模拟方法
 - Monte Carlo Simulation
 - 蒙特卡罗模拟法
+- Monte Carlo Simulation Method
 tags:
 - 风险管理
 - VaR计算

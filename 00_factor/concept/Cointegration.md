@@ -64,4 +64,4 @@ $$\Delta y_t = \Pi y_{t-1} + \sum_{i=1}^{p-1} \Gamma_i \Delta y_{t-i} + \varepsi
 2. **长期和短期分析**：分离长期均衡和短期动态
 3. **政策分析**：分析政策冲击的长期和短期效应
 
-相关链接: [[误差修正模型]], [[单位根检验]], [[VAR]]
+相关链接: [[Error Correction Model|误差修正模型]], [[单位根检验]], [[VAR Model|VAR]]

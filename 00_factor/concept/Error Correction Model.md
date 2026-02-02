@@ -2,6 +2,10 @@
 aliases:
 - ECM
 - 误差修正模型
+- Error Correction Model
+- 误差纠正模型
+- 误差纠正机制
+- Error Correction Mechanism
 tags:
   - 时间序列
   - 计量经济学
@@ -52,4 +56,4 @@ $$\Delta y_t = \Pi y_{t-1} + \sum_{i=1}^{p-1} \Gamma_i \Delta y_{t-i} + \varepsi
 2. **政策分析**：评估政策冲击的短期和长期效应
 3. **预测模型**：结合长期均衡和短期动态进行预测
 
-相关链接: [[协整]], [[VAR]], [[格兰杰因果检验]]
+相关链接: [[协整]], [[VAR Model|VAR]], [[格兰杰因果检验]]

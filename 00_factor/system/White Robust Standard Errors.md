@@ -4,6 +4,8 @@ aliases:
 - White稳健标准误
 - White
 - 稳健标准误
+- White Robust Standard Errors
+- White Robust SE
 tags:
 - system
 - 计量经济学

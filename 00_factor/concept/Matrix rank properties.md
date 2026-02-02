@@ -142,4 +142,4 @@ $$\text{rank}(A+B) \leq \text{rank}(A) + \text{rank}(B)$$
 
 ## 相关概念
 [[线性方程组解的结构]]
-[[矩阵的逆]]
+[[Matrix Inverse|矩阵的逆]]

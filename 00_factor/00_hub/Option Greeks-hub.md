@@ -32,9 +32,9 @@ tags:
 
 ## 近似方法
 
-[[Delta近似法]]
-[[Delta-Gamma近似法]]
-[[Cornish-Fisher展开]]
+[[Delta Approximation|Delta近似法]]
+[[Delta-Gamma Approximation|Delta-Gamma近似法]]
+[[Cornish-Fisher Expansion|Cornish-Fisher展开]]
 
 ## 产品分类
 

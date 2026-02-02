@@ -121,5 +121,5 @@ $$p_{ij}(s+t) = \sum_{k \in S} p_{ik}(s) p_{kj}(t)$$
 其中 $Q = (q_{ij})$ 为生成矩阵（或强度矩阵）。
 
 ## 相关概念
-[[马尔可夫过程]]
-[[平稳随机过程]]
+[[Markov Process|马尔可夫过程]]
+[[Stationary Stochastic Process|平稳随机过程]]

@@ -1,12 +1,15 @@
 ---
-aliases: []
+aliases:
+- Loss Given Default
+- LGD
+- 违约损失率
 tags:
 - concept
 ---
-# LGD
+# Loss Given Default (LGD)
 
 ## 它是什么
-- 「LGD」是一个待补充定义的核心概念卡片。
+- 「Loss Given Default (LGD)」是一个待补充定义的核心概念卡片。
 
 ## 最小可检索信息
 - 定义：待补充

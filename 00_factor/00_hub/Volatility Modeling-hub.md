@@ -16,8 +16,8 @@ tags:
 [[已实现波动率]]
 
 ### 波动聚集特征
-[[波动聚集]]
-[[条件异方差]]
+[[Volatility Clustering|波动聚集]]
+[[Conditional Heteroskedasticity|条件异方差]]
 
 ## 波动率模型
 
@@ -34,8 +34,8 @@ tags:
 
 ## 相关检验
 
-[[McLeod-Li检验]]
-[[ARCH-LM检验]]
+[[McLeod-Li Test|McLeod-Li检验]]
+[[ARCH LM Test|ARCH-LM检验]]
 
 ## 课程笔记
 

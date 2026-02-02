@@ -238,4 +238,4 @@ $y_t = \alpha + \beta x_t + \gamma z_t + \epsilon_t$
 - 报告第二步检验统计量
 - 说明临界值来源
 
-相关链接: [[协整]], [[Johansen检验]], [[误差纠正机制(ECM)]]
+相关链接: [[协整]], [[Johansen检验]], [[Error Correction Model|误差纠正机制(ECM)]]

@@ -20,7 +20,7 @@ tags:
 [[ARMA]]
 
 ### 向量自回归
-[[VAR]]
+[[VAR Model|VAR]]
 [[VMA]]
 
 ## 平稳性与单位根
@@ -42,7 +42,7 @@ tags:
 [[Yule-Walker方程]]
 [[白噪声过程]]
 [[鞅差序列]]
-[[独立同分布（i.i.d.）]]
+[[IID|独立同分布（i.i.d.）]]
 
 ## 波动率建模
 
@@ -75,8 +75,8 @@ tags:
 [[协整]]
 [[协整定理]]
 [[Johansen检验]]
-[[误差修正模型]]
-[[误差纠正机制(ECM)]]
+[[Error Correction Model|误差修正模型]]
+[[Error Correction Model|误差纠正机制(ECM)]]
 [[伪回归]]
 
 ## 课程笔记

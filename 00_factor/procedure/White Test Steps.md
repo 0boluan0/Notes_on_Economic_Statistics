@@ -96,5 +96,5 @@ $$ \text{Critical Value} = \chi^2_{\alpha}(df) $$
 
 ## 相关概念
 [[异方差]]
-[[加权最小二乘估计]]
+[[Weighted Least Squares Estimation|加权最小二乘估计]]
 [[稳健标准误]]

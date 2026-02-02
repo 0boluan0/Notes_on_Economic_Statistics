@@ -143,4 +143,4 @@ $$\rho_s = \frac{\gamma_s}{\gamma_0} = \frac{\frac{\sigma^2 a_1^s}{1 - a_1^2}}{\
 ## 相关概念
 [[Yule-Walker方程]]
 [[ARMA模型]]
-[[差分方程]]
+[[Difference Equation|差分方程]]

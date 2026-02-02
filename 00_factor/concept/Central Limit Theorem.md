@@ -142,4 +142,4 @@ $$\sqrt{n}\left(\frac{\bar{X}_n - \mu}{\sigma}\right) \xrightarrow{d} N(0, 1)$$
 ## 相关概念
 [[大数定律]]
 [[OLS估计量的一致性]]
-[[渐近理论]]
+[[Asymptotic Theory|渐近理论]]
