@@ -4,31 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "98fe1617c8de2b2e",
+        "id": "69f35238fcf8987b",
         "type": "tabs",
         "children": [
           {
-            "id": "1e8cdccd7773f04d",
+            "id": "f1cd9ef1908beb07",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/2026-02-02——Mon.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2026-02-02——Mon"
+              "title": "New tab"
             }
           }
         ]
@@ -173,11 +159,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "99_学习情况记录/2026-02-02——Mon.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for 2026-02-02——Mon"
+              "title": "File properties"
             }
           },
           {
@@ -231,7 +215,7 @@
             }
           },
           {
-            "id": "6a6af666cf5d5697",
+            "id": "ed6edb2cedb20524",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -286,13 +270,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2026-02-02——Mon.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-02-02——Mon"
+              "title": "Outline"
             }
           }
         ]
@@ -320,7 +303,7 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "1e8cdccd7773f04d",
+  "active": "ed6edb2cedb20524",
   "lastOpenFiles": [
     "Overview & Study Record.md",
     "99_学习情况记录/2026-02-02——Mon.md",
