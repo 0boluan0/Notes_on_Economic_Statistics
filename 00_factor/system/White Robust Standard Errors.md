@@ -3,6 +3,7 @@ aliases:
 - HC标准误
 - White稳健标准误
 - White
+- 稳健标准误
 tags:
 - system
 - 计量经济学

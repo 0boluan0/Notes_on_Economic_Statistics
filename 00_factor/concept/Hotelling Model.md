@@ -4,6 +4,7 @@ aliases:
 - Hotelling Competition
 - Linear City Model
 - Hotelling
+- Hotelling 模型
 tags:
 - concept
 - game theory

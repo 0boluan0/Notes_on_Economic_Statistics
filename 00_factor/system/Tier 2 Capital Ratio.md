@@ -2,6 +2,7 @@
 aliases:
 - 附属资本比率
 - 二级资本比率
+- Tier 2 Capital
 tags:
 - system
 - 金融机构与风险管理

@@ -11,10 +11,24 @@
             "id": "f1cd9ef1908beb07",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "00_factor/concept/VAR（向量自回归模型）.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "VAR（向量自回归模型）"
             }
           }
         ]
@@ -159,9 +173,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "00_factor/concept/VAR（向量自回归模型）.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for VAR（向量自回归模型）"
             }
           },
           {
@@ -270,12 +286,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "00_factor/concept/VAR（向量自回归模型）.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of VAR（向量自回归模型）"
             }
           }
         ]
@@ -303,35 +320,35 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "ed6edb2cedb20524",
+  "active": "f1cd9ef1908beb07",
   "lastOpenFiles": [
-    "Overview & Study Record.md",
-    "99_学习情况记录/2026-02-02——Mon.md",
-    "00_inbox/日记模版.md",
-    "00_inbox/新建模版.md",
-    "00_inbox/SQL：SELECT 基础与可测试性.md",
-    "00_factor/00_hub/Volatility Modeling-hub.md",
-    "00_inbox/历史波动率.md",
-    "00_factor/00_hub/VaR-hub.md",
-    "99_学习情况记录/2026-02-01——Sun.md",
-    "00_factor/concept/AIC.md",
-    "00_factor/concept/Accounts Receivable Turnover Ratio.md",
-    "00_factor/concept/Adam Smith's Economics.md",
-    "00_factor/concept/Advantage of Backwardness.md",
-    "00_factor/concept/Wide-Sense Stationary Process.md",
+    "00_factor/concept/VaR.md",
+    "00_factor/undefined/01_OLS基础.md",
+    "00_factor/undefined/03_多重共线性与内生性.md",
+    "00_factor/undefined/04_多元正态分布.md",
+    "00_factor/undefined/04_经济增长理论.md",
+    "00_factor/undefined/04_财务比率分析.md",
+    "00_factor/concept/VAR（向量自回归模型）.md",
+    "00_factor/concept/马尔可夫过程.md",
+    "00_factor/concept/预期理论.md",
+    "00_factor/concept/非系统风险.md",
+    "00_factor/concept/随机过程的概念和分类.md",
+    "00_factor/concept/逆矩阵.md",
+    "00_factor/concept/连续时间马尔可夫链.md",
+    "00_factor/concept/贴现率.md",
+    "00_factor/concept/误差纠正模型.md",
+    "00_factor/concept/观察期.md",
+    "00_factor/concept/行列式.md",
+    "00_factor/concept/行为金融学.md",
+    "00_factor/concept/自然垄断.md",
+    "00_factor/concept/自助法模拟.md",
+    "00_factor/concept/聚束效应检验.md",
+    "00_factor/concept/置信水平.md",
+    "00_factor/concept/罗尔定理.md",
+    "00_factor/concept/绝对VaR.md",
+    "00_factor/concept/终值.md",
+    "00_factor/concept/线性组合.md",
     "scripts/clean_aliases.py",
-    "00_factor/concept/重新定价风险.md",
-    "00_factor/concept/Net Present Value (2).md",
-    "00_factor/concept/Derivative (2).md",
-    "00_factor/concept/Repricing Risk.md",
-    "00_factor/concept/净现值.md",
-    "00_factor/concept/导数.md",
-    "00_factor/concept/Nonhomogeneous Poisson Process.md",
-    "00_factor/concept/Multi-Factor Model.md",
-    "00_factor/concept/Income and Substitution Effects.md",
-    "00_factor/concept/Key Rate Duration.md",
-    "00_factor/concept/Marshall's Economics.md",
-    "00_factor/concept/Historical Volatility.md",
     "scripts/rename_to_english.py",
     "Untitled.canvas",
     "scripts/audit_kcs.py",

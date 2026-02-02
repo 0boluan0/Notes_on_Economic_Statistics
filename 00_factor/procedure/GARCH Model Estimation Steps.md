@@ -2,6 +2,7 @@
 aliases:
 - GARCH模型估计步骤
 - GARCH
+- GARCH模型估计
 tags:
 - procedure
 - 06_时间序列分析

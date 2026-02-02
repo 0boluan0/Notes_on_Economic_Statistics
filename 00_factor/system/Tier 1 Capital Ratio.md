@@ -2,6 +2,9 @@
 aliases:
 - 核心一级资本比率
 - 一级资本比率
+- Tier 1 Capital
+- AT1
+- CET1
 tags:
 - system
 - 金融机构与风险管理

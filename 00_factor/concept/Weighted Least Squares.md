@@ -4,6 +4,7 @@ aliases:
 - WLS
 - GLS
 - Generalized Least Squares
+- 加权最小二乘法
 tags:
 - 计量经济学
 - 估计方法

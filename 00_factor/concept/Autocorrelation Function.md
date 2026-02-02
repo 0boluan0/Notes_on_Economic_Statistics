@@ -2,6 +2,7 @@
 aliases:
 - 自相关函数
 - ACF
+- 自相关函数 ACF
 tags:
 - 时间序列
 - 统计学
