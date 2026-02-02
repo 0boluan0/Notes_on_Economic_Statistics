@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f3470fcb5540ff2c",
+        "id": "c680c76ee233f410",
         "type": "tabs",
         "children": [
           {
-            "id": "46231ef8bf1a54a7",
+            "id": "1c2b586eb8eaad22",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Computer_Science/the_missing_semester.md",
+                "file": "99_学习情况记录/2026-02-02——Mon.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "the_missing_semester"
-            }
-          },
-          {
-            "id": "a3e23499e1c6afb8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "01_Introduction"
+              "title": "2026-02-02——Mon"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -309,13 +284,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 01_Introduction"
+              "title": "Outline"
             }
           }
         ]
@@ -342,8 +316,10 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "a3e23499e1c6afb8",
+  "active": "ed6edb2cedb20524",
   "lastOpenFiles": [
+    "99_学习情况记录/2026-02-02——Mon.md",
+    "99_学习情况记录/2026-02-01——Sun.md",
     "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec01.pdf",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_f22_lec01.pdf",
@@ -358,7 +334,6 @@
     "03_Computer_Science/03_MIT 6.100L/code/Intro-to-Computation-and-Programming/cover.jpg",
     "03_Computer_Science/03_MIT 6.100L/code/Intro-to-Computation-and-Programming/README.md",
     "03_Computer_Science/the_missing_semester.md",
-    "99_学习情况记录/2026-02-02——Mon.md",
     "04_method/Learning method.md",
     "04_method/任务管理系统说明.md",
     "00_factor/concept/2SLS.md",
