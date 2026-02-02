@@ -64,7 +64,7 @@ tags:
 [[Pigouvian Tax|庇古税]]
 
 ## 课程笔记
-[[01_Game Theory Basics|01_博弈论基础]]
-- [[01_Game Theory Basics|01_博弈论基础]]
-- [[02_Nash Equilibrium|02_纳什均衡]]
-- [[03_Repeated Games and Mixed Strategies|03_重复博弈与混合策略]]
+[[00_factor/framework/Game Theory|01_博弈论基础]]
+- [[00_factor/framework/Game Theory|01_博弈论基础]]
+- [[00_factor/concept/Nash Equilibrium|02_纳什均衡]]
+- [[00_factor/concept/Repeated Games and Mixed Strategies|03_重复博弈与混合策略]]

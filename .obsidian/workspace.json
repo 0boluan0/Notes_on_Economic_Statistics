@@ -11,24 +11,10 @@
             "id": "f1cd9ef1908beb07",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00_factor/concept/Adam Smith's Economics.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Adam Smith's Economics"
+              "title": "New tab"
             }
           }
         ]
@@ -173,11 +159,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "00_factor/concept/Adam Smith's Economics.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for Adam Smith's Economics"
+              "title": "File properties"
             }
           },
           {
@@ -286,13 +270,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_factor/concept/Adam Smith's Economics.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Adam Smith's Economics"
+              "title": "Outline"
             }
           }
         ]
@@ -320,12 +303,27 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "f1cd9ef1908beb07",
+  "active": "ed6edb2cedb20524",
   "lastOpenFiles": [
+    "00_factor/framework/Dual Economy Model.md",
+    "00_factor/framework/Growth Theory.md",
+    "00_factor/procedure/Financial Ratio Analysis.md",
+    "00_factor/procedure/Bond and Stock Valuation.md",
+    "00_factor/concept/Repeated Games and Mixed Strategies.md",
+    "00_factor/system/Multicollinearity and Endogeneity.md",
+    "00_factor/concept/Linear Systems.md",
+    "00_factor/concept/Matrix Operations.md",
+    "00_factor/procedure/Investment Decisions.md",
+    "00_factor/system/Heteroskedasticity and Autocorrelation.md",
+    "00_factor/concept/OLS Basics.md",
+    "00_factor/framework/Game Theory.md",
+    "00_factor/undefined/02_Matrix Operations.md",
+    "00_factor/undefined/03_Repeated Games and Mixed Strategies.md",
+    "00_factor/undefined/01_Dual Economy Model.md",
+    "00_factor/writing/DID Writing Template.md",
     "00_factor/concept/Adam Smith's Economics.md",
     "00_factor/00_hub/DID-hub.md",
     "AGENTS.md",
-    "00_factor/writing/DID Writing Template.md",
     "00_factor/proof/DID Identification Proof.md",
     "00_factor/system/DID Diagnostics.md",
     "00_factor/procedure/DID Estimation Steps.md",
@@ -333,21 +331,6 @@
     "00_factor/concept/DID.md",
     "00_factor/concept/Accounts Receivable Turnover Ratio.md",
     "00_factor/00_hub/Econometrics-hub.md",
-    "00_factor/00_hub/Capital and Risk Management-hub.md",
-    "00_factor/concept/OLS consistency.md",
-    "00_factor/00_hub/Game Theory-hub.md",
-    "00_factor/concept/Wishart Distribution.md",
-    "00_factor/concept/Yield Curve.md",
-    "00_factor/concept/Working Capital.md",
-    "00_factor/concept/Yield Curve Risk.md",
-    "00_factor/concept/Yield to Maturity.md",
-    "00_factor/concept/Backward Induction.md",
-    "00_factor/concept/Autocorrelation.md",
-    "00_factor/concept/Asymptotic Theory.md",
-    "00_factor/concept/ADL.md",
-    "99_学习情况记录/2026-02-02——Mon.md",
-    "00_factor/undefined/05_Solow Model.md",
-    "00_factor/undefined/04_Financial Ratio Analysis.md",
     "scripts/clean_aliases.py",
     "scripts/rename_to_english.py",
     "Untitled.canvas",

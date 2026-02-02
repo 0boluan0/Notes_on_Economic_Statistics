@@ -101,7 +101,7 @@ tags:
 
 ## 课程笔记
 
-- [[01_OLS Basics|01_OLS基础]]
-- [[02_Heteroskedasticity and Autocorrelation|02_异方差与自相关]]
-- [[03_Multicollinearity and Endogeneity|03_多重共线性与内生性]]
-- [[04_Simultaneous Equations Model|04_联立方程模型]]
+- [[00_factor/concept/OLS Basics|01_OLS基础]]
+- [[00_factor/system/Heteroskedasticity and Autocorrelation|02_异方差与自相关]]
+- [[00_factor/system/Multicollinearity and Endogeneity|03_多重共线性与内生性]]
+- [[00_factor/concept/Simultaneous Equations Model|04_联立方程模型]]

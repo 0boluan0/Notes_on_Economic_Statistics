@@ -94,7 +94,7 @@ tags:
 
 ## 课程笔记
 
-- [[01_Time Value of Money|01_货币时间价值]]
-- [[02_Investment Decisions|02_投资决策]]
-- [[03_Bond and Stock Valuation|03_债券与股票估值]]
-- [[04_Financial Ratio Analysis|04_财务比率分析]]
+- [[00_factor/concept/Time Value of Money|01_货币时间价值]]
+- [[00_factor/procedure/Investment Decisions|02_投资决策]]
+- [[00_factor/procedure/Bond and Stock Valuation|03_债券与股票估值]]
+- [[00_factor/procedure/Financial Ratio Analysis|04_财务比率分析]]

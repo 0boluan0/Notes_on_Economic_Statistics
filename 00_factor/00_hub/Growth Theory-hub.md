@@ -51,6 +51,6 @@ tags:
 
 ## 课程笔记
 
-- [[04_Growth Theory|04_经济增长理论]]
-- [[05_Solow Model|05_索洛模型]]
-- [[01_Dual Economy Model|01_二元经济模型]]
+- [[00_factor/framework/Growth Theory|04_经济增长理论]]
+- [[00_factor/framework/Solow Model|05_索洛模型]]
+- [[00_factor/framework/Dual Economy Model|01_二元经济模型]]
