@@ -95,8 +95,7 @@ def mark_tasks_moved(
             task_text = match.group(2).strip()
             if task_text not in task_set:
                 continue
-            prefix = match.group(1)
-            lines[idx] = f"{prefix}~~{task_text}~~（转移至 {target_date:%Y-%m-%d}）"
+            lines[idx] = f"- ~~{task_text}~~（转移至 {target_date:%Y-%m-%d}）"
             moved_count[note.name] = moved_count.get(note.name, 0) + 1
             changed = True
 
