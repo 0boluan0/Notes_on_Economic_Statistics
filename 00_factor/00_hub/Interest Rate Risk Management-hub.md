@@ -13,23 +13,23 @@ tags:
 
 ## 利率风险类型
 
-[[重新定价风险]]
-[[基差风险]]
-[[收益率曲线风险]]
-[[隐含期权风险]]
+[[Repricing Risk|重新定价风险]]
+[[Basis Risk|基差风险]]
+[[Yield Curve Risk|收益率曲线风险]]
+[[Implied Option Risk|隐含期权风险]]
 
 ## 久期（Duration）
 
-[[久期]]
-[[马考利久期]]
-[[修正久期]]
-[[绝对额久期]]
-[[有效久期]]
-[[局部久期]]
+[[duration|久期]]
+[[Macaulay Duration|马考利久期]]
+[[Modified Duration|修正久期]]
+[[Dollar Duration|绝对额久期]]
+[[Effective Duration|有效久期]]
+[[Key Rate Duration|局部久期]]
 
 ## 曲率与凸性
 
-[[曲率]]
+[[Curvature|曲率]]
 
 ## 利率敏感性指标
 

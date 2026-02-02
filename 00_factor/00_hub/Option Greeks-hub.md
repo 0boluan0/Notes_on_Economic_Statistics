@@ -38,8 +38,8 @@ tags:
 
 ## 产品分类
 
-[[线性产品]]
-[[非线性产品]]
+[[Linear Products|线性产品]]
+[[Nonlinear Products|非线性产品]]
 
 ## 课程笔记
 

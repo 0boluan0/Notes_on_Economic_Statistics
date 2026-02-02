@@ -11,51 +11,51 @@ tags:
 
 ## 核心概念
 
-[[向量空间]]
-[[矩阵的秩]]
+[[Vector Space|向量空间]]
+[[Matrix Rank|矩阵的秩]]
 
 ## 向量空间
 
-[[向量空间]]
-[[子空间]]
+[[Vector Space|向量空间]]
+[[Subspace|子空间]]
 [[Linear Independence|线性无关]]
 
 ## 矩阵运算与分解
 
 ### 矩阵的秩
-[[矩阵的秩]]
-[[矩阵秩的性质]]
-[[零空间]]
+[[Matrix Rank|矩阵的秩]]
+[[Matrix rank properties|矩阵秩的性质]]
+[[Null Space|零空间]]
 
 ### 矩阵分解
-[[LU分解]]
-[[置换矩阵]]
-[[谱分解]]
+[[LU Decomposition|LU分解]]
+[[Permutation Matrix|置换矩阵]]
+[[Spectral Decomposition|谱分解]]
 
 ### 特殊矩阵
-[[对称矩阵]]
-[[奇异矩阵]]
-[[Wishart分布]]
+[[Symmetric Matrix|对称矩阵]]
+[[Singular Matrix|奇异矩阵]]
+[[Wishart Distribution|Wishart分布]]
 
 ## 线性方程组
 
-[[线性方程组解的结构]]
+[[Linear system solution structure|线性方程组解的结构]]
 [[Determinant|行列式]]
 [[Matrix Inverse|逆矩阵]]
 
 ## 多变量统计
 
 ### 随机向量
-[[两个随机变量线性组合]]
-[[多元正态分布]]
+[[Linear Combination of Two Random Variables|两个随机变量线性组合]]
+[[Multivariate Normal Distribution|多元正态分布]]
 
 ### 距离度量
-[[马哈拉诺比斯距离]]
+[[Mahalanobis Distance|马哈拉诺比斯距离]]
 
 ### 因子分析
-[[因子分析]]
-[[单因子模型]]
-[[多因子模型]]
+[[Factor Analysis|因子分析]]
+[[Single-Factor Model|单因子模型]]
+[[Multi-Factor Model|多因子模型]]
 [[PCA|主成分分析]]
 
 ## 课程笔记

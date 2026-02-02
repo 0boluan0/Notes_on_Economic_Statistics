@@ -13,31 +13,31 @@ tags:
 
 ## 风险类型
 
-[[市场风险]]
-[[信用风险]]
-[[操作风险]]
+[[Market Risk|市场风险]]
+[[Credit Risk|信用风险]]
+[[Operational Risk|操作风险]]
 
 ## 信用风险相关
 
-[[违约风险]]
+[[Default Risk|违约风险]]
 [[CVA]] (信用估值调整)
 [[DVA]] (债务估值调整)
 [[Credit VaR|信用在险价值]]
 
 ## 监管与资本
 
-[[巴塞尔协议]]
-[[库克比率]]
-[[资本金持有率]]
+[[Basel Accords|巴塞尔协议]]
+[[Cook's Ratio|库克比率]]
+[[Capital Holding Ratio|资本金持有率]]
 
 ## 风险暴露管理
 
-[[头寸]]
+[[Position|头寸]]
 [[Netting|净额结算]]
 
 ## 压力测试
 
-[[压力VaR]]
+[[Stressed VaR|压力VaR]]
 [[Scenario Analysis|情景分析]]
 
 ## 课程笔记

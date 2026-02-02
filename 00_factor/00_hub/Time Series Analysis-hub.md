@@ -11,8 +11,8 @@ tags:
 ## 核心概念
 
 [[ARMA]]
-[[平稳性]]
-[[随机游走]]
+[[Stationarity|平稳性]]
+[[Random Walk|随机游走]]
 
 ## 基础模型
 
@@ -25,23 +25,23 @@ tags:
 
 ## 平稳性与单位根
 
-[[平稳性]]
-[[严平稳过程]]
-[[宽平稳过程]]
-[[随机游走]]
-[[单位根检验]]
-[[ADF检验]]
-[[PP检验]]
-[[EG两步检验法]]
-[[一阶差分]]
+[[Stationarity|平稳性]]
+[[Strict-Sense Stationary Process|严平稳过程]]
+[[Wide-Sense Stationary Process|宽平稳过程]]
+[[Random Walk|随机游走]]
+[[Unit Root Test|单位根检验]]
+[[Augmented Dickey-Fuller Test|ADF检验]]
+[[Phillips-Perron Test|PP检验]]
+[[Engle-Granger Two-Step Test|EG两步检验法]]
+[[First Difference|一阶差分]]
 
 ## 相关函数分析
 
-[[自相关函数]]
-[[偏自相关函数]]
-[[Yule-Walker方程]]
-[[白噪声过程]]
-[[鞅差序列]]
+[[Autocorrelation Function|自相关函数]]
+[[Partial Autocorrelation Function|偏自相关函数]]
+[[Yule-Walker equations|Yule-Walker方程]]
+[[White Noise|白噪声过程]]
+[[Martingale Difference Sequence|鞅差序列]]
 [[IID|独立同分布（i.i.d.）]]
 
 ## 波动率建模
@@ -53,31 +53,31 @@ tags:
 [[EGARCH]]
 
 ### 波动率估计
-[[历史波动率]]
-[[隐含波动率]]
-[[已实现波动率]]
+[[Historical Volatility|历史波动率]]
+[[Implied Volatility|隐含波动率]]
+[[Realized Volatility|已实现波动率]]
 [[EWMA]]
 
 ## 检验方法
 
-[[Box-Pierce和Ljung-Box检验]]
-[[Ljung-Box检验]]
-[[白噪声检验]]
+[[Box-Pierce Q statistic|Box-Pierce和Ljung-Box检验]]
+[[Ljung-Box Test|Ljung-Box检验]]
+[[White Noise Test|白噪声检验]]
 
 ## 模型识别与估计
 
-[[Box-Jenkins方法]]
-[[ARMA模型识别步骤]]
-[[ARIMA模型]]
+[[Box-Jenkins Method|Box-Jenkins方法]]
+[[ARMA Model Identification Steps|ARMA模型识别步骤]]
+[[ARIMA|ARIMA模型]]
 
 ## 协整与长期关系
 
-[[协整]]
-[[协整定理]]
-[[Johansen检验]]
+[[Cointegration|协整]]
+[[Cointegration theorem|协整定理]]
+[[Johansen Cointegration Test|Johansen检验]]
 [[Error Correction Model|误差修正模型]]
 [[Error Correction Model|误差纠正机制(ECM)]]
-[[伪回归]]
+[[Spurious Regression|伪回归]]
 
 ## 课程笔记
 

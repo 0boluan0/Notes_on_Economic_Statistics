@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_factor/00_hub/Game Theory-hub.md",
+                "file": "AGENTS.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Game Theory-hub"
+              "title": "AGENTS"
             }
           }
         ]
@@ -173,9 +173,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "AGENTS.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for AGENTS"
             }
           },
           {
@@ -284,12 +286,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "AGENTS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of AGENTS"
             }
           }
         ]
@@ -317,8 +320,19 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "ed6edb2cedb20524",
+  "active": "f1cd9ef1908beb07",
   "lastOpenFiles": [
+    "00_factor/writing/DID Writing Template.md",
+    "00_factor/proof/DID Identification Proof.md",
+    "00_factor/system/DID Diagnostics.md",
+    "00_factor/procedure/DID Estimation Steps.md",
+    "00_factor/framework/DID Framework.md",
+    "00_factor/concept/DID.md",
+    "00_factor/concept/Accounts Receivable Turnover Ratio.md",
+    "00_factor/00_hub/DID-hub.md",
+    "00_factor/00_hub/Econometrics-hub.md",
+    "00_factor/00_hub/Capital and Risk Management-hub.md",
+    "00_factor/concept/OLS consistency.md",
     "00_factor/00_hub/Game Theory-hub.md",
     "00_factor/concept/Wishart Distribution.md",
     "00_factor/concept/Yield Curve.md",
@@ -334,17 +348,6 @@
     "00_factor/undefined/05_Solow Model.md",
     "00_factor/undefined/04_Financial Ratio Analysis.md",
     "00_factor/undefined/04_Simultaneous Equations Model.md",
-    "00_factor/undefined/04_Growth Theory.md",
-    "00_factor/undefined/04_Multivariate Normal Distribution.md",
-    "00_factor/undefined/03_Repeated Games and Mixed Strategies.md",
-    "00_factor/undefined/03_Linear Systems.md",
-    "00_factor/undefined/03_Multicollinearity and Endogeneity.md",
-    "00_factor/undefined/03_Bond and Stock Valuation.md",
-    "00_factor/undefined/02_Nash Equilibrium.md",
-    "00_factor/undefined/02_Matrix Operations.md",
-    "00_factor/undefined/02_Investment Decisions.md",
-    "00_factor/undefined/02_Heteroskedasticity and Autocorrelation.md",
-    "00_factor/undefined/01_Time Value of Money.md",
     "scripts/clean_aliases.py",
     "scripts/rename_to_english.py",
     "Untitled.canvas",

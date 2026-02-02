@@ -11,9 +11,9 @@ tags:
 ## 核心概念
 
 ### 波动率类型
-[[历史波动率]]
-[[隐含波动率]]
-[[已实现波动率]]
+[[Historical Volatility|历史波动率]]
+[[Implied Volatility|隐含波动率]]
+[[Realized Volatility|已实现波动率]]
 
 ### 波动聚集特征
 [[Volatility Clustering|波动聚集]]
