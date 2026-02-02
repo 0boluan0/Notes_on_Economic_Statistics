@@ -1,6 +1,8 @@
 ---
 aliases:
 - 基差风险
+- Basis Risk
+- Basis
 tags:
 - 金融
 - concept

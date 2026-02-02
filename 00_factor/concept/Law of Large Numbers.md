@@ -2,6 +2,8 @@
 aliases:
 - 大数定律
 - LLN
+- Law
+- Law of Large Numbers
 tags:
 - proof
 - 数学基础

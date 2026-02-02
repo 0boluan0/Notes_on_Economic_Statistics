@@ -4,6 +4,8 @@ aliases:
 - DID robust checks
 - DID稳健性
 - DID validity checklist
+- DID
+- DID Diagnostics
 tags:
 - system
 ---

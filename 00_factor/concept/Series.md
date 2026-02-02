@@ -2,6 +2,7 @@
 aliases:
 - 无穷级数
 - 级数
+- Series
 tags:
 - 数学
 - 微积分

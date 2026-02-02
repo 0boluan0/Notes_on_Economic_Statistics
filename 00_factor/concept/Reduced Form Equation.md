@@ -3,6 +3,8 @@ aliases:
 - 简约式
 - 简约式方程
 - Reduced Form
+- Reduced Form Equation
+- Reduced
 tags:
 - 计量经济学
 - 联立方程

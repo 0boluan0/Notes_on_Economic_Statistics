@@ -2,6 +2,7 @@
 aliases:
 - 协积
 - 协整
+- Cointegration
 tags:
 - 时间序列
 - 计量经济学

@@ -2,6 +2,7 @@
 aliases:
 - Solow-Swan Model
 - 索洛-斯旺模型
+- Solow
 tags:
 - concept
 ---

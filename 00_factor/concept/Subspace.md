@@ -2,6 +2,7 @@
 aliases:
 - 线性子空间
 - 子空间
+- Subspace
 tags:
 - 线性代数
 - 线性空间

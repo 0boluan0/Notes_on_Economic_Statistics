@@ -2,6 +2,7 @@
 aliases:
 - F检验
 - F
+- F-test
 tags:
 - 统计学
 - 假设检验

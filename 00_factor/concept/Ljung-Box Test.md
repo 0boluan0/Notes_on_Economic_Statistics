@@ -3,6 +3,7 @@ aliases:
 - Ljung-Box检验
 - Box-Pierce Test
 - Ljung
+- Ljung-Box Test
 tags:
 - 时间序列
 - 统计检验

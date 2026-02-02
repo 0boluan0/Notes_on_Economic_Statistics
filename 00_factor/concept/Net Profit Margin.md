@@ -2,6 +2,8 @@
 aliases:
 - 销售净利率
 - 营业净利率
+- Net Profit Margin
+- Net
 tags:
 - 财务管理
 - 财务比率

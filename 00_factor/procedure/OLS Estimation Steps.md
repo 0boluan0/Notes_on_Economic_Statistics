@@ -3,6 +3,7 @@ aliases:
 - 最小二乘估计步骤
 - OLS估计步骤
 - OLS
+- OLS Estimation Steps
 tags:
 - procedure
 - 01_Econometrics

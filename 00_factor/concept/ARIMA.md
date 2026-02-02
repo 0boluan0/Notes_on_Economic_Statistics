@@ -2,6 +2,7 @@
 aliases:
 - 自回归积分移动平均模型
 - ARIMA模型
+- ARIMA
 tags:
 - 时间序列
 - concept

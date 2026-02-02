@@ -1,11 +1,12 @@
 ---
 aliases:
 - 资本市场线
+- Capital
+- Capital Market Line
 tags:
 - 金融
 - concept
 ---
-
 当投资组合**在有效边界上并包含无风险资产**时，投资组合的预期收益 $\mu_p$ 和标准差 $\sigma_p$ 之间满足如下关系：
 
 $$

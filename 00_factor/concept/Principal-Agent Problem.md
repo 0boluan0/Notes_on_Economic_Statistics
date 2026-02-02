@@ -2,6 +2,7 @@
 aliases:
 - Principal-Agent Problem
 - 委托-代理问题
+- Principal
 tags:
 - concept
 ---

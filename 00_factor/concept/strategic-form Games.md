@@ -1,6 +1,8 @@
 ---
 aliases:
 - 策略式表达
+- strategic-form Games
+- strategic
 tags:
 - concept
 科目: 博弈论

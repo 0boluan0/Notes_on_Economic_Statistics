@@ -2,6 +2,7 @@
 aliases:
 - Relative VaR
 - 相对VaR
+- Relative
 tags:
 - concept
 ---

@@ -3,6 +3,7 @@ aliases:
 - F统计量
 - F检验
 - F
+- F-test
 tags:
 - system
 - 计量经济学

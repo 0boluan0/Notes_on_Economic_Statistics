@@ -1,6 +1,8 @@
 ---
 aliases:
 - 隐含波动率
+- Implied Volatility
+- Implied
 tags:
 - concept
 ---

@@ -3,6 +3,8 @@ aliases:
 - 时间序列分析
 - 时间序列分析-hub
 - Time Series Analysis
+- Time Series Analysis-hub
+- Time
 tags:
 - hub
 ---

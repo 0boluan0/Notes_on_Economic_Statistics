@@ -2,6 +2,7 @@
 aliases:
 - 净稳定资金比率
 - Net Stable Funding Ratio
+- NSFR
 tags:
 - system
 - 金融机构与风险管理

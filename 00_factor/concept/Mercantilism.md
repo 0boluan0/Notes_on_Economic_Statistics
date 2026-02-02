@@ -2,6 +2,7 @@
 aliases:
 - 商业主义
 - 重商主义
+- Mercantilism
 tags:
 - 经济思想史
 - 经济学派

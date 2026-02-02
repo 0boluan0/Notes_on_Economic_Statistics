@@ -4,6 +4,7 @@ aliases:
 - ACF
 - 自相关函数 ACF
 - Autocorrelation Function
+- Autocorrelation
 tags:
 - 时间序列
 - 统计学

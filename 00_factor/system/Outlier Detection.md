@@ -2,6 +2,8 @@
 aliases:
 - 离群值检测
 - 异常值检测
+- Outlier Detection
+- Outlier
 tags:
 - system
 - 计量经济学

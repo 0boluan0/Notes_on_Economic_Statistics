@@ -3,6 +3,7 @@ aliases:
 - HAC标准误
 - Newey-West Standard Errors
 - Newey
+- Newey-West
 tags:
 - system
 - 计量经济学

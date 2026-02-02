@@ -2,6 +2,7 @@
 aliases:
 - Unsystematic Risk
 - 非系统风险
+- Unsystematic
 tags:
 - concept
 ---

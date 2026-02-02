@@ -2,6 +2,7 @@
 aliases:
 - Rolle's Theorem
 - 罗尔定理
+- Rolle
 tags:
 - concept
 ---

@@ -4,6 +4,8 @@ aliases:
 - DID framework
 - 双重差分框架
 - DID使用条件
+- DID Framework
+- DID
 tags:
 - framework
 ---

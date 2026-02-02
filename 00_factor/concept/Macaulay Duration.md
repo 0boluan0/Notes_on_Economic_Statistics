@@ -1,6 +1,8 @@
 ---
 aliases:
 - 马考利久期
+- Macaulay Duration
+- Macaulay
 tags:
 - concept
 ---

@@ -4,6 +4,7 @@ aliases:
 - Difference-in-Differences
 - 双重差分
 - 差分中的差分
+- DID-hub
 tags:
 - hub
 ---

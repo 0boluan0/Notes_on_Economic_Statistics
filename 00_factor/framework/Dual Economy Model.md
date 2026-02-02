@@ -2,6 +2,7 @@
 aliases:
 - Dual Economy Model
 - 二元经济模型
+- Dual
 tags:
 - framework
 ---

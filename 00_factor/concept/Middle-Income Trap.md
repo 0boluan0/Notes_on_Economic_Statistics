@@ -2,6 +2,8 @@
 aliases:
 - 中收入陷阱
 - 中等收入陷阱
+- Middle-Income Trap
+- Middle
 tags:
 - 发展经济学
 - 经济增长理论

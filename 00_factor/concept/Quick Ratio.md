@@ -2,6 +2,8 @@
 aliases:
 - 酸性测试比率
 - 速动比率
+- Quick
+- Quick Ratio
 tags:
 - 财务管理
 - 财务比率

@@ -2,6 +2,8 @@
 aliases:
 - 白噪声
 - 白噪声过程
+- White
+- White Noise
 tags:
 - 时间序列
 - 概率论

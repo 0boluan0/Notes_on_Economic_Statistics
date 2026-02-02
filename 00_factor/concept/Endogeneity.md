@@ -2,6 +2,7 @@
 aliases:
 - 内生性问题
 - 内生性
+- Endogeneity
 tags:
 - 计量经济学
 - 估计问题

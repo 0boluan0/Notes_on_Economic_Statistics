@@ -2,6 +2,7 @@
 aliases:
 - Multicollinearity and Endogeneity
 - 多重共线性与内生性
+- Multicollinearity
 tags:
 - system
 ---

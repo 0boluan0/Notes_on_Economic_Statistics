@@ -2,6 +2,7 @@
 aliases:
 - Specific Variance
 - 特殊方差
+- Specific
 tags:
 - concept
 ---

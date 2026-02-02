@@ -2,6 +2,8 @@
 aliases:
 - 马考利久期计算步骤
 - 马考利久期计算
+- Macaulay Duration Calculation
+- Macaulay
 tags:
 - procedure
 - 07_金融机构与风险管理

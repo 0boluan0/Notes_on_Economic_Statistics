@@ -3,6 +3,7 @@ aliases:
 - 独立同分布
 - 独立同分布（i.i.d.）
 - i.i.d.
+- IID
 tags:
 - 概率论
 - 统计学

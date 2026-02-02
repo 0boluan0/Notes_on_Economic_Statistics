@@ -2,6 +2,7 @@
 aliases:
 - Delta-Gamma Approximation
 - Delta-Gamma近似法
+- Delta
 tags:
 - concept
 ---

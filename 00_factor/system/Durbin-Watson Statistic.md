@@ -3,6 +3,7 @@ aliases:
 - DW检验
 - Durbin-Watson统计量
 - Durbin
+- Durbin-Watson Statistic
 tags:
 - system
 - 计量经济学

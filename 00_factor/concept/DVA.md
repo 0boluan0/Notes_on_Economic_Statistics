@@ -1,6 +1,7 @@
 ---
 aliases:
 - Debt Valuation Adjustment
+- DVA
 tags:
 - 风险管理
 - 衍生品

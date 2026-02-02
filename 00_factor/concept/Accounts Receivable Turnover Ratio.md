@@ -2,6 +2,8 @@
 aliases:
 - 应收账款周转次数
 - 应收账款周转率
+- Accounts
+- Accounts Receivable Turnover Ratio
 tags:
 - 财务管理
 - 财务比率

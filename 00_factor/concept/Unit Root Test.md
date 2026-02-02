@@ -4,6 +4,7 @@ aliases:
 - 单位根检验
 - 单位根
 - Unit Root Test
+- Unit
 tags:
 - 时间序列
 - 计量经济学

@@ -2,6 +2,8 @@
 aliases:
 - 判定系数
 - Coefficient of Determination
+- R-squared
+- R
 tags:
 - system
 - 计量经济学

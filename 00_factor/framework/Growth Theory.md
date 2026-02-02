@@ -3,6 +3,7 @@ aliases:
 - Growth Theory
 - 经济增长理论
 - 增长理论
+- Growth
 tags:
 - framework
 ---

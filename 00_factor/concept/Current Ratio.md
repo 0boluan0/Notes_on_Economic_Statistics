@@ -2,6 +2,8 @@
 aliases:
 - 流动性比率
 - 流动比率
+- Current
+- Current Ratio
 tags:
 - 财务管理
 - 财务比率

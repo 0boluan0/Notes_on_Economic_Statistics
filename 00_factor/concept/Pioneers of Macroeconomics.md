@@ -2,6 +2,8 @@
 aliases:
 - 早期宏观经济学
 - 宏观经济理论先驱
+- Pioneers of Macroeconomics
+- Pioneers
 tags:
 - 经济思想史
 - 经济学派

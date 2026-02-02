@@ -1,5 +1,6 @@
 ---
 aliases:
+- Vega
 tags:
 - concept
 ---

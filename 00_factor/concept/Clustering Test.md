@@ -3,6 +3,7 @@ aliases:
 - Clustering Test
 - Clustered Violations Test
 - 聚束效应检验
+- Clustering
 tags:
 - concept
 ---

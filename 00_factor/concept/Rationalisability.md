@@ -2,6 +2,7 @@
 aliases:
 - 可理性化
 - Rationalizable Strategies
+- Rationalisability
 tags:
 - concept
 - game theory

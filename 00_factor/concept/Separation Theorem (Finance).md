@@ -3,6 +3,8 @@ aliases:
 - Separation Theorem
 - Two-Fund Separation Theorem
 - 分离定理
+- Separation Theorem (Finance)
+- Separation
 tags:
 - concept
 ---

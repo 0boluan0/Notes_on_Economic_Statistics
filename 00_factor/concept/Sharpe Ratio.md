@@ -2,6 +2,7 @@
 aliases:
 - Sharpe Ratio
 - 夏普比率
+- Sharpe
 tags:
 - concept
 ---

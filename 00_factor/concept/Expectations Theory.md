@@ -2,6 +2,7 @@
 aliases:
 - Expectations Theory
 - 预期理论
+- Expectations
 tags:
 - concept
 ---

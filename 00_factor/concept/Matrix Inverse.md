@@ -4,6 +4,7 @@ aliases:
 - Inverse Matrix
 - 矩阵的逆
 - 逆矩阵
+- Matrix
 tags:
 - concept
 ---

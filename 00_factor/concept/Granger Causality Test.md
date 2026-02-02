@@ -2,6 +2,8 @@
 aliases:
 - 格兰杰因果关系检验
 - 格兰杰因果检验
+- Granger
+- Granger Causality Test
 tags:
 - 时间序列
 - 计量经济学

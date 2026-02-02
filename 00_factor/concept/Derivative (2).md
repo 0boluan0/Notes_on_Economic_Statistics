@@ -3,6 +3,7 @@ aliases:
 - 微分
 - 导数
 - Derivative
+- Derivative (2)
 tags:
 - 数学
 - 微积分

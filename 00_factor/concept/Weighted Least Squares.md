@@ -6,6 +6,7 @@ aliases:
 - Generalized Least Squares
 - 加权最小二乘法
 - Weighted Least Squares
+- Weighted
 tags:
 - 计量经济学
 - 估计方法

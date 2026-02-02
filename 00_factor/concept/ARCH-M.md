@@ -2,6 +2,8 @@
 aliases:
 - ARCH-in-Mean
 - ARCHM
+- ARCH-M
+- ARCH
 tags:
 - 时间序列
 - 波动建模

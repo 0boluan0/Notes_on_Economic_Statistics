@@ -2,6 +2,7 @@
 aliases:
 - 聚束效应
 - Exception Clustering
+- Bunching
 tags:
 - 风险管理
 - VaR模型

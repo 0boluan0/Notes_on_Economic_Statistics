@@ -1,6 +1,8 @@
 ---
 aliases:
 - 成分VaR
+- Component
+- Component VaR
 tags:
 - concept
 ---

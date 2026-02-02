@@ -1,6 +1,8 @@
 ---
 aliases:
 - 相关系数
+- Correlation
+- Correlation Coefficient
 tags:
 - procedure
 ---

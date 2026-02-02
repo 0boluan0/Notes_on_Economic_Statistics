@@ -1,11 +1,12 @@
 ---
 aliases:
 - 一致性风险度量
+- Coherent
+- Coherent Risk Measure
 tags:
 - 金融
 - concept
 ---
-
 - 风险度量就是用数学函数$\varrho(\cdot)$，把资产组合（或损失、收益的分布）映射为一个**衡量风险的数值**。
     
 - Artzner等人提出：**“合理”的风险度量模型，必须同时满足以下四个公理**，也就是“一致性”要求。

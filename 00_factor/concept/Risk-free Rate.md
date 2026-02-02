@@ -2,6 +2,7 @@
 aliases:
 - Risk-free Rate
 - 无风险利率
+- Risk
 tags:
 - concept
 ---

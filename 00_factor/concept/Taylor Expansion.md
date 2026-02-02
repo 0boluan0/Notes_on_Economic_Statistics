@@ -3,6 +3,7 @@ aliases:
 - Taylor Expansion
 - Taylor Formula
 - 泰勒公式
+- Taylor
 tags:
 - concept
 ---

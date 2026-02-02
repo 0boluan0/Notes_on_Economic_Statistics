@@ -2,6 +2,8 @@
 aliases:
 - 沉没费用
 - 沉没成本
+- Sunk Cost
+- Sunk
 tags:
 - 经济学
 - 基础概念

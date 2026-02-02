@@ -2,6 +2,8 @@
 aliases:
 - 泊松过程
 - Poisson Counting Process
+- Poisson
+- Poisson Process
 tags:
 - concept
 - stochastic processes

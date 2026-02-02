@@ -1,5 +1,6 @@
 ---
 aliases:
+- Gamma
 tags:
 - concept
 ---

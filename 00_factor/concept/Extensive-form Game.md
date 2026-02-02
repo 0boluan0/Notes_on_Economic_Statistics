@@ -2,6 +2,7 @@
 aliases:
 - Extensive-form Game
 - 扩展性博弈
+- Extensive
 tags:
 - concept
 ---

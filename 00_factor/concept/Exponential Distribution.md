@@ -2,6 +2,7 @@
 aliases:
 - Exponential Distribution
 - 指数分布
+- Exponential
 tags:
 - concept
 ---

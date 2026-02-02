@@ -2,6 +2,8 @@
 aliases:
 - 古典学派
 - 古典经济学
+- Classical Economics
+- Classical
 tags:
 - 经济思想史
 - 经济学派

@@ -1,6 +1,8 @@
 ---
 aliases:
 - 恰好识别
+- Just-identified
+- Just
 tags:
 - 计量经济学
 - 联立方程

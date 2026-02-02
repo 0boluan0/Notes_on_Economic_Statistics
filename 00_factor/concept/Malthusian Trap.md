@@ -2,6 +2,8 @@
 aliases:
 - 马尔萨斯理论
 - 马尔萨斯人口陷阱
+- Malthusian Trap
+- Malthusian
 tags:
 - 发展经济学
 - 经济增长理论

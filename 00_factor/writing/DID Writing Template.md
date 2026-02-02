@@ -3,6 +3,8 @@ aliases:
 - DID写作模板
 - DID reporting template
 - 双重差分写作
+- DID
+- DID Writing Template
 tags:
 - writing
 ---

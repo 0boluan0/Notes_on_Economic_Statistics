@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "2SLS",
+      "path": "00_factor/concept/2SLS.md"
+    },
+    {
+      "basename": "DID-hub",
+      "path": "00_factor/00_hub/DID-hub.md"
+    },
+    {
+      "basename": "Capital and Risk Management-hub",
+      "path": "00_factor/00_hub/Capital and Risk Management-hub.md"
+    },
+    {
       "basename": "DID Writing Template",
       "path": "00_factor/writing/DID Writing Template.md"
     },
     {
       "basename": "Adam Smith's Economics",
       "path": "00_factor/concept/Adam Smith's Economics.md"
-    },
-    {
-      "basename": "DID-hub",
-      "path": "00_factor/00_hub/DID-hub.md"
     },
     {
       "basename": "AGENTS",
@@ -23,10 +31,6 @@
     {
       "basename": "Econometrics-hub",
       "path": "00_factor/00_hub/Econometrics-hub.md"
-    },
-    {
-      "basename": "Capital and Risk Management-hub",
-      "path": "00_factor/00_hub/Capital and Risk Management-hub.md"
     },
     {
       "basename": "OLS consistency",

@@ -1,11 +1,12 @@
 ---
 aliases:
 - 单因子模型
+- Single-Factor Model
+- Single
 tags:
 - 经济
 - concept
 ---
-
 **单因子模型：**假设存在一个公共因子 $F$，以及每个变量各自的独立特异因素 $Z_i$。令 $U_i$ 表示标准化后的第 $i$ 个变量（均值0，方差1，例如资产收益的标准化），模型表示为：
 $$
 U_i = a_i\,F \;+\; \sqrt{\,1 - a_i^2\,}\;Z_i \,, \qquad i=1,2,\dots,N,

@@ -2,6 +2,8 @@
 aliases:
 - 内部收益率计算步骤
 - 内部收益率计算
+- IRR
+- IRR Calculation
 tags:
 - procedure
 - 05_财务管理

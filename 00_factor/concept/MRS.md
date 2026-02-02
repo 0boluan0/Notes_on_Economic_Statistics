@@ -1,6 +1,7 @@
 ---
 aliases:
 - MRS边际替代率
+- MRS
 tags:
 - concept
 ---

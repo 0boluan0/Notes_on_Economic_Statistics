@@ -2,6 +2,8 @@
 aliases:
 - 公共物品
 - Public Utilities
+- Public
+- Public Goods
 tags:
 - concept
 - public finance

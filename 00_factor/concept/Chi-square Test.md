@@ -3,6 +3,7 @@ aliases:
 - Chi-square Test
 - Chi-Square Test
 - 卡方检验
+- Chi
 tags:
 - concept
 ---

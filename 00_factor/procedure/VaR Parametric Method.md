@@ -4,6 +4,7 @@ aliases:
 - VaR参数法计算
 - VaR Parameter Calculation
 - VaR
+- VaR Parametric Method
 tags:
 - procedure
 - 07_金融机构与风险管理

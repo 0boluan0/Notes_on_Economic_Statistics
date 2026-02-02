@@ -3,6 +3,7 @@ aliases:
 - CO迭代
 - Cochrane-Orcutt Iteration
 - Cochrane
+- Cochrane-Orcutt
 tags:
 - system
 - 计量经济学

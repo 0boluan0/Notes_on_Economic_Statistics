@@ -2,6 +2,8 @@
 aliases:
 - 有效市场假说
 - EMH
+- Efficient
+- Efficient Market Hypothesis
 tags:
 - 金融学
 - 资产定价

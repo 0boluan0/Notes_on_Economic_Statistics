@@ -2,6 +2,7 @@
 aliases:
 - Positive Definite Matrix
 - 正定矩阵
+- Positive
 tags:
 - concept
 ---

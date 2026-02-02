@@ -2,6 +2,7 @@
 aliases:
 - 最小二乘法
 - Ordinary least square
+- OLS
 tags:
 - procedure
 ---

@@ -3,6 +3,8 @@ aliases:
 - 菲利普斯-佩龙检验
 - PP检验
 - PP
+- Phillips
+- Phillips-Perron Test
 tags:
 - 计量经济学
 - 时间序列

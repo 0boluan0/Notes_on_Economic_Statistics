@@ -2,6 +2,8 @@
 aliases:
 - 压力情景分析
 - 压力测试
+- Stress
+- Stress Testing
 tags:
 - system
 - 金融机构与风险管理

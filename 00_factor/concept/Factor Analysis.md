@@ -2,6 +2,8 @@
 aliases:
 - 因子分析
 - FA
+- Factor
+- Factor Analysis
 tags:
 - concept
 - multivariate statistics

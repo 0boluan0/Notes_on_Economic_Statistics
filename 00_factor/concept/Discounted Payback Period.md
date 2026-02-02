@@ -2,6 +2,7 @@
 aliases:
 - Discounted Payback Period
 - 折现回收期
+- Discounted
 tags:
 - concept
 ---

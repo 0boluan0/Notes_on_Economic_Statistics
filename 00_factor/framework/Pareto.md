@@ -1,6 +1,7 @@
 ---
 aliases:
 - 帕累托
+- Pareto
 tags:
 - framework
 ---

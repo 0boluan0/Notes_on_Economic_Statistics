@@ -3,6 +3,7 @@ aliases:
 - Bootstrap Simulation
 - Bootstrap Method
 - 自助法模拟
+- Bootstrap
 tags:
 - concept
 ---

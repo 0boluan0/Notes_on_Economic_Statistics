@@ -2,6 +2,7 @@
 aliases:
 - 积整GARCH
 - Integrated GARCH
+- IGARCH
 tags:
 - 时间序列
 - 波动建模

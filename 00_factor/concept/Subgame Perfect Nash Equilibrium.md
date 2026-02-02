@@ -2,6 +2,8 @@
 aliases:
 - 子博弈精炼纳什均衡
 - SPNE
+- Subgame
+- Subgame Perfect Nash Equilibrium
 tags:
 - concept
 - game theory

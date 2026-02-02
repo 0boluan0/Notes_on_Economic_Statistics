@@ -2,6 +2,8 @@
 aliases:
 - 极值理论VaR计算
 - VaR
+- EVT
+- EVT VaR Calculation
 tags:
 - procedure
 - 07_金融机构与风险管理

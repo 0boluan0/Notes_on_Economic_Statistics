@@ -4,6 +4,7 @@ aliases:
 - CK 方程
 - Chapman-Kolmogorov方程
 - Chapman
+- Chapman-Kolmogorov equation
 tags:
 - proof
 - 05_随机过程

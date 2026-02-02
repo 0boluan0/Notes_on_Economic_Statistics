@@ -1,6 +1,8 @@
 ---
 aliases:
 - 重新定价风险
+- Repricing
+- Repricing Risk
 tags:
 - 金融
 - concept

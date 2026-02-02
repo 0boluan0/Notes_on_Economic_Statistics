@@ -3,6 +3,7 @@ aliases:
 - McLeod-Li Portmanteau Test
 - McLeod-Li Test
 - McLeod-Li检验
+- McLeod
 tags:
 - concept
 ---

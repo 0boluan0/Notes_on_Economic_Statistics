@@ -2,6 +2,8 @@
 aliases:
 - 风险加权资产
 - RWA
+- Risk-Weighted Assets
+- Risk
 tags:
 - system
 - 金融机构与风险管理

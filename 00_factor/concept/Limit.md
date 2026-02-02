@@ -2,6 +2,7 @@
 aliases:
 - 收敛
 - 极限
+- Limit
 tags:
 - 数学
 - 微积分

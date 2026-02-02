@@ -1,6 +1,8 @@
 ---
 aliases:
 - 信息集
+- Information
+- Information Set
 tags:
 - concept
 - game theory

@@ -2,6 +2,7 @@
 aliases:
 - Asymptotic Theory
 - 渐近理论
+- Asymptotic
 tags:
 - concept
 ---

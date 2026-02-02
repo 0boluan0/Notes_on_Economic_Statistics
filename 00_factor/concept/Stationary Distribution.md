@@ -3,6 +3,8 @@ aliases:
 - 平稳分布
 - Invariant Distribution
 - Steady State Distribution
+- Stationary
+- Stationary Distribution
 tags:
 - concept
 - stochastic processes

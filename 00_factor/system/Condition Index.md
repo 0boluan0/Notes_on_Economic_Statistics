@@ -2,6 +2,8 @@
 aliases:
 - 条件指数
 - CI
+- Condition Index
+- Condition
 tags:
 - system
 - 计量经济学

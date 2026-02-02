@@ -3,6 +3,7 @@ aliases:
 - 极大似然估计步骤
 - MLE估计步骤
 - MLE
+- MLE Estimation Steps
 tags:
 - procedure
 - 01_Econometrics

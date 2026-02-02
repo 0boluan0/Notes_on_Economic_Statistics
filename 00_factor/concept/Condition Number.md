@@ -1,6 +1,8 @@
 ---
 aliases:
 - 条件指数
+- Condition Number
+- Condition
 tags:
 - 计量经济学
 - 线性代数

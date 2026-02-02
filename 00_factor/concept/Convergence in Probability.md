@@ -2,6 +2,7 @@
 aliases:
 - Convergence in Probability
 - 依概率收敛
+- Convergence
 tags:
 - concept
 ---

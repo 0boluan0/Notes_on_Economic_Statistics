@@ -3,6 +3,7 @@ aliases:
 - Vector Autoregression
 - VAR
 - 向量自回归模型
+- VAR Model
 tags:
 - concept
 ---

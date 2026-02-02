@@ -2,6 +2,7 @@
 aliases:
 - Nash Equilibrium
 - 纳什均衡
+- Nash
 tags:
 - concept
 ---

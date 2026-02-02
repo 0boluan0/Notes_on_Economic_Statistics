@@ -3,6 +3,7 @@ aliases:
 - Christoffersen Conditional Coverage Test
 - Christoffersen Test
 - Christoffersen检验
+- Christoffersen
 tags:
 - concept
 ---

@@ -2,6 +2,7 @@
 aliases:
 - Ridge Regression
 - 岭回归
+- Ridge
 tags:
 - concept
 ---

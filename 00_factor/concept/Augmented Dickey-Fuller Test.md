@@ -3,6 +3,8 @@ aliases:
 - 增广迪基-福勒检验
 - ADF检验
 - ADF
+- Augmented Dickey-Fuller Test
+- Augmented
 tags:
 - 计量经济学
 - 时间序列

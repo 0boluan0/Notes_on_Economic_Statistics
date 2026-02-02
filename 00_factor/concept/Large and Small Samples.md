@@ -1,10 +1,11 @@
 ---
 aliases:
 - 大样本与小样本
+- Large and Small Samples
+- Large
 tags:
 - concept
 ---
-
 # 大样本与小样本
 
 * 大小不由数量决定，而是由其数字特征与总体的数字特征的相似程度决定。

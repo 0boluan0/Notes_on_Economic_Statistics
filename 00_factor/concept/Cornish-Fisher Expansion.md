@@ -2,6 +2,7 @@
 aliases:
 - Cornish-Fisher Expansion
 - Cornish-Fisher展开
+- Cornish
 tags:
 - concept
 ---

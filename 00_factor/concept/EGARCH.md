@@ -1,9 +1,9 @@
 ---
 aliases:
+- EGARCH
 tags:
 - concept
 ---
-
 >[!note] EGARCH 指数GARCH模型 Exponential GARCH
 >指数GARCH模型采用对数形式的方差方程，形式例如EGARCH(1,1)：
 > 

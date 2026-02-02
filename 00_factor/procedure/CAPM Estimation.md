@@ -3,6 +3,7 @@ aliases:
 - CAPM参数估计步骤
 - CAPM参数估计
 - CAPM
+- CAPM Estimation
 tags:
 - procedure
 - 06_证券投资学

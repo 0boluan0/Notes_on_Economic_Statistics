@@ -2,6 +2,7 @@
 aliases:
 - 信用估值调整
 - Credit Valuation Adjustment
+- CVA
 tags:
 - 风险管理
 - 衍生品

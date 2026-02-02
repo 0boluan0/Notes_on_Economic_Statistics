@@ -4,6 +4,8 @@ aliases:
 - DID estimation steps
 - Difference-in-Differences estimation
 - 双重差分步骤
+- DID Estimation Steps
+- DID
 tags:
 - procedure
 ---

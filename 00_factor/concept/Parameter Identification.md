@@ -2,6 +2,8 @@
 aliases:
 - 识别问题
 - 参数识别
+- Parameter Identification
+- Parameter
 tags:
 - 计量经济学
 - 联立方程

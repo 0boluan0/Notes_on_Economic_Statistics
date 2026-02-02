@@ -3,6 +3,7 @@ aliases:
 - Box-Jenkins建模方法
 - Box-Jenkins方法
 - Box
+- Box-Jenkins Method
 tags:
 - procedure
 - 06_时间序列分析

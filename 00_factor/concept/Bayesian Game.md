@@ -3,6 +3,8 @@ aliases:
 - 贝叶斯博弈
 - Bayesian Nash Equilibrium
 - Games of Incomplete Information
+- Bayesian Game
+- Bayesian
 tags:
 - concept
 - game theory

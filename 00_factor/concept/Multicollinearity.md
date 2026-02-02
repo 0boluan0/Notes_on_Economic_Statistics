@@ -1,6 +1,7 @@
 ---
 aliases:
 - 多重共线性
+- Multicollinearity
 tags:
 - 计量经济学
 - 估计问题

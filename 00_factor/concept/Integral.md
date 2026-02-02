@@ -2,6 +2,7 @@
 aliases:
 - 求原函数
 - 积分
+- Integral
 tags:
 - 数学
 - 微积分

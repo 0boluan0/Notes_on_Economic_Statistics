@@ -3,6 +3,8 @@ aliases:
 - Gauss-Markov 定理
 - OLS 最优性
 - 高斯-马尔可夫定理
+- Gauss
+- Gauss-Markov theorem
 tags:
 - proof
 - 01_Econometrics

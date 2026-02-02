@@ -3,6 +3,7 @@ aliases:
 - 两阶段最小二乘法
 - Two-Stage Least Squares
 - SLS
+- 2SLS
 tags:
 - 计量经济学
 - 估计方法

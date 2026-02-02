@@ -2,6 +2,7 @@
 aliases:
 - ARCH Effects Test
 - ARCH效应检验
+- ARCH
 tags:
 - concept
 ---

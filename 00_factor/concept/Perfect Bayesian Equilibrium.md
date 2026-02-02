@@ -2,6 +2,8 @@
 aliases:
 - 完美贝叶斯均衡
 - PBE
+- Perfect
+- Perfect Bayesian Equilibrium
 tags:
 - concept
 - game theory

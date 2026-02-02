@@ -3,6 +3,7 @@ aliases:
 - 约翰森协整检验
 - Johansen检验
 - Johansen
+- Johansen Cointegration Test
 tags:
 - 计量经济学
 - 时间序列

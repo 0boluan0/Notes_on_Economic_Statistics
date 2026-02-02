@@ -2,6 +2,8 @@
 aliases:
 - 最优反应函数
 - Best Response Function
+- Best-Reply Function
+- Best
 tags:
 - concept
 - game theory

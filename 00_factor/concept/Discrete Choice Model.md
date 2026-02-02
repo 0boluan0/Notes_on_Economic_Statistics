@@ -2,6 +2,8 @@
 aliases:
 - 定性选择模型
 - 离散选择模型
+- Discrete Choice Model
+- Discrete
 tags:
 - 计量经济学
 - 回归分析

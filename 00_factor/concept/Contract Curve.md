@@ -1,6 +1,8 @@
 ---
 aliases:
 - 契约曲线
+- Contract
+- Contract Curve
 tags:
 - concept
 ---

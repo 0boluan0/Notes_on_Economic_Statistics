@@ -2,6 +2,7 @@
 aliases:
 - VaR回溯测试
 - 回溯检验
+- Backtesting
 tags:
 - system
 - 金融机构与风险管理

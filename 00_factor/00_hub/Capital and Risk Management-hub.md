@@ -3,6 +3,8 @@ aliases:
 - 资本与风险管理
 - 资本与风险管理-hub
 - Capital and Risk Management
+- Capital and Risk Management-hub
+- Capital
 tags:
 - hub
 - 金融

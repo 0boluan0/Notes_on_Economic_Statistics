@@ -3,6 +3,7 @@ aliases:
 - 期权Greeks计算
 - Greeks计算
 - Greeks
+- Greeks Calculation
 tags:
 - procedure
 - 07_金融机构与风险管理

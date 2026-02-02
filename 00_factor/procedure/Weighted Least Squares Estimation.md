@@ -3,6 +3,7 @@ aliases:
 - Weighted Least Squares Estimation
 - WLS Estimation
 - 加权最小二乘估计
+- Weighted
 tags:
 - procedure
 ---

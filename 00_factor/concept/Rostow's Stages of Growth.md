@@ -3,6 +3,8 @@ aliases:
 - 经济发展阶段论
 - 起飞理论
 - 罗斯托经济增长阶段论
+- Rostow's Stages of Growth
+- Rostow
 tags:
 - 发展经济学
 - 经济增长理论

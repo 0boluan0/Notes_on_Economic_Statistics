@@ -2,6 +2,8 @@
 aliases:
 - 市盈率
 - P/E Ratio
+- Price-to-Earnings Ratio
+- Price
 tags:
 - 财务管理
 - 财务比率

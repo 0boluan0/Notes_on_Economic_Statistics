@@ -2,6 +2,8 @@
 aliases:
 - 级差地租
 - Ricardian Rent
+- Differential
+- Differential Rent
 tags:
 - development-economics
 - land-rent

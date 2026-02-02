@@ -2,6 +2,8 @@
 aliases:
 - 货币时间价值
 - TVM
+- Time Value of Money
+- Time
 tags:
 - 财务管理
 - 基础概念

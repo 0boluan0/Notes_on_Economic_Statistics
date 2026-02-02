@@ -2,6 +2,8 @@
 aliases:
 - 极大似然估计
 - MLE
+- Maximum
+- Maximum Likelihood Estimation
 tags:
 - 统计学
 - 估计方法

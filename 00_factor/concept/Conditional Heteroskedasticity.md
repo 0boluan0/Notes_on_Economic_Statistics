@@ -2,6 +2,7 @@
 aliases:
 - Conditional Heteroskedasticity
 - 条件异方差
+- Conditional
 tags:
 - concept
 ---

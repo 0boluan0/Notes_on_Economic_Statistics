@@ -1,6 +1,7 @@
 ---
 aliases:
 - 阿尔法值
+- Alpha
 tags:
 - concept
 ---

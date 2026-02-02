@@ -1,6 +1,8 @@
 ---
 aliases:
 - 随机游走
+- Random
+- Random Walk
 tags:
 - 时间序列
 - 统计学

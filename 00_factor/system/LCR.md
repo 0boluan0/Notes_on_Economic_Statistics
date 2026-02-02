@@ -2,6 +2,7 @@
 aliases:
 - 流动性覆盖率
 - Liquidity Coverage Ratio
+- LCR
 tags:
 - system
 - 金融机构与风险管理

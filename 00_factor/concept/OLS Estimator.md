@@ -3,6 +3,7 @@ aliases:
 - Ordinary Least Squares Estimator
 - OLS Estimator
 - OLS估计量
+- OLS
 tags:
 - concept
 ---

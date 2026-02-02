@@ -2,6 +2,8 @@
 aliases:
 - 剑桥学派
 - 马歇尔经济学
+- Marshall's Economics
+- Marshall
 tags:
 - 经济思想史
 - 经济学派

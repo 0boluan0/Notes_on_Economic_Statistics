@@ -3,6 +3,7 @@ aliases:
 - Yule-Walker 方程
 - Yule-Walker方程
 - Yule
+- Yule-Walker equations
 tags:
 - proof
 - 06_时间序列分析

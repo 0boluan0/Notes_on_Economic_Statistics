@@ -2,6 +2,8 @@
 aliases:
 - 利息倍数
 - 利息保障倍数
+- Times
+- Times Interest Earned Ratio
 tags:
 - 财务管理
 - 财务比率

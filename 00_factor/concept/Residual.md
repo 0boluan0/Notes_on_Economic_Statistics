@@ -1,6 +1,7 @@
 ---
 aliases:
 - 残差
+- Residual
 tags:
 - concept
 ---

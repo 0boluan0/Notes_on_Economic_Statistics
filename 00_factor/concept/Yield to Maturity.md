@@ -4,6 +4,8 @@ aliases:
 - YTM
 - Holding Period Return
 - Interest Rate Risk
+- Yield
+- Yield to Maturity
 tags:
 - concept
 - money and banking

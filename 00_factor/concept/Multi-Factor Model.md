@@ -1,6 +1,8 @@
 ---
 aliases:
 - 多因子模型
+- Multi-Factor Model
+- Multi
 tags:
 - 经济
 - concept

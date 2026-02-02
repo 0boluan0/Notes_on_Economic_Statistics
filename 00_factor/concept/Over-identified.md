@@ -1,6 +1,8 @@
 ---
 aliases:
 - 过度识别
+- Over-identified
+- Over
 tags:
 - 计量经济学
 - 联立方程

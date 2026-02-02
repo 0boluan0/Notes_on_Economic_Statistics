@@ -2,6 +2,7 @@
 aliases:
 - Limiting Distribution
 - 极限分布
+- Limiting
 tags:
 - concept
 ---

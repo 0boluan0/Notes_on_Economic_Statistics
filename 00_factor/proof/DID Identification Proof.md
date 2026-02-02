@@ -4,6 +4,8 @@ aliases:
 - Difference-in-Differences proof
 - Parallel trends proof
 - 双重差分识别
+- DID Identification Proof
+- DID
 tags:
 - proof
 ---

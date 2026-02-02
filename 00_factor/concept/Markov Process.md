@@ -2,6 +2,7 @@
 aliases:
 - Markov Process
 - 马尔可夫过程
+- Markov
 tags:
 - concept
 ---

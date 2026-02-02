@@ -2,6 +2,7 @@
 aliases:
 - 重农主义
 - 重农学派
+- Physiocrats
 tags:
 - 经济思想史
 - 经济学派

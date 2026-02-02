@@ -3,6 +3,7 @@ aliases:
 - 风险价值
 - Value at Risk
 - VaR
+- VaR-hub
 tags:
 - hub
 ---

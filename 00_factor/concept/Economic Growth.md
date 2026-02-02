@@ -1,6 +1,8 @@
 ---
 aliases:
 - 经济增长
+- Economic
+- Economic Growth
 tags:
 - 发展经济学
 - 宏观经济

@@ -2,6 +2,7 @@
 aliases:
 - Factor Loadings
 - 因子载荷
+- Factor
 tags:
 - concept
 ---

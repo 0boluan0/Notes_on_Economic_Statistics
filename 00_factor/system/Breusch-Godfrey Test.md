@@ -3,6 +3,8 @@ aliases:
 - LM自相关检验
 - BG检验
 - BG
+- Breusch-Godfrey Test
+- Breusch
 tags:
 - system
 - 计量经济学

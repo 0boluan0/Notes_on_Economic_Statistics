@@ -2,6 +2,8 @@
 aliases:
 - 秩
 - 矩阵的秩
+- Matrix Rank
+- Matrix
 tags:
 - 线性代数
 - 矩阵

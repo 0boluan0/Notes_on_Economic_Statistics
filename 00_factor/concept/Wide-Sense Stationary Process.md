@@ -3,6 +3,8 @@ aliases:
 - 宽平稳过程
 - WSS Process
 - Covariance Stationary Process
+- Wide-Sense Stationary Process
+- Wide
 tags:
 - concept
 - stochastic processes

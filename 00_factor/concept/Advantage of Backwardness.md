@@ -2,6 +2,8 @@
 aliases:
 - 后发优势
 - 后发优势理论
+- Advantage of Backwardness
+- Advantage
 tags:
 - development-economics
 - economic-growth

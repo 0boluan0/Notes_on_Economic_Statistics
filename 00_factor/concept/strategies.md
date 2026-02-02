@@ -1,6 +1,7 @@
 ---
 aliases:
 - 策略
+- strategies
 tags:
 - concept
 科目: 博弈论

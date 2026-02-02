@@ -3,6 +3,8 @@ aliases:
 - 期权希腊字母
 - 期权希腊字母-hub
 - Option Greeks
+- Option Greeks-hub
+- Option
 tags:
 - hub
 ---

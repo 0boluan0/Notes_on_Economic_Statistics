@@ -4,6 +4,7 @@ aliases:
 - Merton structural model
 - 默顿模型
 - Merton模型
+- Merton
 tags:
 - concept
 ---

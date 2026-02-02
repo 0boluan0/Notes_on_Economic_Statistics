@@ -2,6 +2,8 @@
 aliases:
 - 边际主义
 - 边际革命
+- Marginal Revolution
+- Marginal
 tags:
 - 经济思想史
 - 经济学派

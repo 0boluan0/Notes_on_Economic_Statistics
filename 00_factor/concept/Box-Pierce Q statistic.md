@@ -5,6 +5,7 @@ aliases:
 - Box-Pierce和Ljung-Box检验
 - Ljung-Box test
 - Box
+- Box-Pierce Q statistic
 tags:
 - proof
 - 06_时间序列分析

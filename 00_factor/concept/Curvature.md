@@ -1,10 +1,10 @@
 ---
 aliases:
 - 曲率
+- Curvature
 tags:
 - concept
 ---
-
 ## 一、公式说明
 
 - $C$ 是凸性（曲率），$D$ 是久期，$B$ 是债券价格，$y$ 是到期收益率

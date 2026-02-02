@@ -3,6 +3,8 @@ aliases:
 - logit模型
 - Logistic Regression
 - logit
+- Logit Model
+- Logit
 tags:
 - 计量经济学
 - 离散选择模型

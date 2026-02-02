@@ -3,6 +3,7 @@ aliases:
 - LU分解
 - LU Factorization
 - LU
+- LU Decomposition
 tags:
 - 线性代数
 - 矩阵分解

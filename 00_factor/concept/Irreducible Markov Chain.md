@@ -2,6 +2,7 @@
 aliases:
 - Irreducible Markov Chain
 - 不可约链
+- Irreducible
 tags:
 - concept
 ---

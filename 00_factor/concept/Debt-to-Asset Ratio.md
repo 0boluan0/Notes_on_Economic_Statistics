@@ -2,6 +2,8 @@
 aliases:
 - 负债比率
 - 资产负债率
+- Debt
+- Debt-to-Asset Ratio
 tags:
 - 财务管理
 - 财务比率

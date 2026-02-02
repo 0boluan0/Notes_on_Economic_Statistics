@@ -3,6 +3,8 @@ aliases:
 - 收益率曲线
 - Term Structure of Interest Rates
 - Interest Rate Term Structure
+- Yield
+- Yield Curve
 tags:
 - concept
 - money and banking

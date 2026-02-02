@@ -2,6 +2,8 @@
 aliases:
 - 虚假回归
 - 伪回归
+- Spurious Regression
+- Spurious
 tags:
 - 计量经济学
 - 时间序列

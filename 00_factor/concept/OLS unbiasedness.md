@@ -3,6 +3,7 @@ aliases:
 - OLS 无偏性
 - OLS估计量的无偏性
 - OLS
+- OLS unbiasedness
 tags:
 - proof
 - 01_Econometrics

@@ -3,6 +3,8 @@ aliases:
 - 蒙特卡罗模拟法VaR
 - 蒙特卡罗模拟法VaR计算
 - VaR
+- Monte
+- Monte Carlo Simulation VaR
 tags:
 - procedure
 - 07_金融机构与风险管理

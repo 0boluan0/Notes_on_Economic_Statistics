@@ -3,6 +3,8 @@ aliases:
 - ARCH Lagrange Multiplier Test
 - ARCH-LM Test
 - ARCH-LM检验
+- ARCH LM Test
+- ARCH
 tags:
 - concept
 ---

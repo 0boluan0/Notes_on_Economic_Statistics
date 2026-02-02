@@ -2,6 +2,8 @@
 aliases:
 - 随机效应模型
 - 随机效应
+- Random Effects Model
+- Random
 tags:
 - 计量经济学
 - 面板数据

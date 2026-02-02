@@ -2,6 +2,8 @@
 aliases:
 - 拉格朗日中值定理
 - LMVT
+- Lagrange
+- Lagrange Mean Value Theorem
 tags:
 - proof
 - 01_calculus

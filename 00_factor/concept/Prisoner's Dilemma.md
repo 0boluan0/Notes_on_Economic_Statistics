@@ -2,6 +2,7 @@
 aliases:
 - Prisoner's Dilemma
 - 囚徒困境
+- Prisoner
 tags:
 - concept
 ---

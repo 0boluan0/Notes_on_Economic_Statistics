@@ -2,6 +2,8 @@
 aliases:
 - 严平稳过程
 - Strictly Stationary Process
+- Strict
+- Strict-Sense Stationary Process
 tags:
 - concept
 - stochastic processes

@@ -3,6 +3,7 @@ aliases:
 - Model Misspecification
 - Model Specification Error
 - 模型设定偏误
+- Model
 tags:
 - concept
 ---

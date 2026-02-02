@@ -2,6 +2,7 @@
 aliases:
 - 广义矩估计
 - Generalized Method of Moments
+- GMM
 tags:
 - 计量经济学
 - 估计方法

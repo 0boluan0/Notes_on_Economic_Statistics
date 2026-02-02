@@ -1,5 +1,6 @@
 ---
 aliases:
+- ES
 tags:
 - concept
 ---

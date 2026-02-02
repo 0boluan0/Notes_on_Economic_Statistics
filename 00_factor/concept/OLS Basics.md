@@ -4,6 +4,7 @@ aliases:
 - Ordinary Least Squares
 - OLS基础
 - 最小二乘法基础
+- OLS
 tags:
 - concept
 ---

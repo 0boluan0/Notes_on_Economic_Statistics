@@ -4,6 +4,8 @@ aliases:
 - EG两步检验法
 - Engle-Granger Cointegration Test
 - EG
+- Engle
+- Engle-Granger Two-Step Test
 tags:
 - 计量经济学
 - 时间序列

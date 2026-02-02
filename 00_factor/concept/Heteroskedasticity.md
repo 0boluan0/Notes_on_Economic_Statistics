@@ -2,6 +2,7 @@
 aliases:
 - 异方差性
 - 异方差
+- Heteroskedasticity
 tags:
 - 计量经济学
 - 假设检验

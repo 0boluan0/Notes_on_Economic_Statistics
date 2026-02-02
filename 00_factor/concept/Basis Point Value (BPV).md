@@ -4,6 +4,8 @@ aliases:
 - BPV
 - PV01
 - 基点价值
+- Basis
+- Basis Point Value (BPV)
 tags:
 - concept
 ---

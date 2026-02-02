@@ -2,6 +2,8 @@
 aliases:
 - 哈罗德-多玛增长模型
 - 哈罗德-多玛模型
+- Harrod
+- Harrod-Domar Model
 tags:
 - development-economics
 - economic-growth

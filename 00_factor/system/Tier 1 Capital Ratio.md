@@ -6,6 +6,7 @@ aliases:
 - AT1
 - CET1
 - Tier 1 Capital Ratio
+- Tier
 tags:
 - system
 - 金融机构与风险管理

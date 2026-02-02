@@ -2,6 +2,8 @@
 aliases:
 - 长期资本中负债比率
 - 长期资本负债率
+- Long
+- Long-term Debt Ratio
 tags:
 - 财务管理
 - 财务比率

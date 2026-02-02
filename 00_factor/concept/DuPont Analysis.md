@@ -2,6 +2,8 @@
 aliases:
 - 杜邦分析法
 - 杜邦分析
+- DuPont Analysis
+- DuPont
 tags:
 - 财务管理
 - 分析框架

@@ -2,6 +2,7 @@
 aliases:
 - 回溯检验
 - Back-Testing
+- Backtesting
 tags:
 - 风险管理
 - 模型验证

@@ -1,6 +1,7 @@
 ---
 aliases:
 - 指数加权移动平均模型
+- EWMA
 tags:
 - concept
 ---

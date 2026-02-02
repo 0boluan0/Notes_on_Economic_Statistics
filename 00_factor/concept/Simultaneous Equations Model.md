@@ -1,6 +1,8 @@
 ---
 aliases:
 - 联立方程模型
+- Simultaneous Equations Model
+- Simultaneous
 tags:
 - 计量经济学
 - 计量方法

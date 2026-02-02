@@ -2,6 +2,8 @@
 aliases:
 - 均值-方差组合优化步骤
 - 均值-方差组合优化
+- Mean-Variance Portfolio Optimization
+- Mean
 tags:
 - procedure
 - 06_证券投资学

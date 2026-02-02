@@ -2,6 +2,8 @@
 aliases:
 - 债券定价计算步骤
 - 债券定价计算
+- Bond Pricing Calculation
+- Bond
 tags:
 - procedure
 - 06_证券投资学

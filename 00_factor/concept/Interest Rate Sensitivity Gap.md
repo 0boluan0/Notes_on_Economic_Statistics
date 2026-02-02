@@ -3,6 +3,7 @@ aliases:
 - Interest Rate Sensitivity Gap
 - Repricing Gap
 - 利率敏感性缺口
+- Interest
 tags:
 - concept
 ---

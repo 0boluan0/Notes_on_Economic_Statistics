@@ -1,6 +1,7 @@
 ---
 aliases:
 - 子博弈
+- Subgame
 tags:
 - concept
 - game theory

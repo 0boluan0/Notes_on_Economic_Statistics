@@ -2,6 +2,7 @@
 aliases:
 - Robust Regression
 - 稳健回归
+- Robust
 tags:
 - concept
 ---

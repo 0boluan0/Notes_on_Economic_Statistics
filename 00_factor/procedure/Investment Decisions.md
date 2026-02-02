@@ -2,6 +2,7 @@
 aliases:
 - Investment Decisions
 - 投资决策
+- Investment
 tags:
 - procedure
 ---

@@ -3,6 +3,7 @@ aliases:
 - 计量经济学
 - 计量经济学-hub
 - Econometrics
+- Econometrics-hub
 tags:
 - hub
 - 经济

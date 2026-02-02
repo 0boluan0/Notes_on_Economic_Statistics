@@ -3,6 +3,8 @@ aliases:
 - 参数法
 - 方差-协方差法
 - Parametric Method
+- Variance
+- Variance-Covariance Method
 tags:
 - 风险管理
 - VaR计算

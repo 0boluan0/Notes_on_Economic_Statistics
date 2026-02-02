@@ -2,6 +2,7 @@
 aliases:
 - 效用
 - payoff
+- payoffs
 tags:
 - concept
 ---

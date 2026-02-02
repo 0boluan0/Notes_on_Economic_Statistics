@@ -3,6 +3,7 @@ aliases:
 - Stochastic Processes Overview
 - Classification of Stochastic Processes
 - 随机过程的概念和分类
+- Stochastic
 tags:
 - concept
 ---

@@ -2,6 +2,8 @@
 aliases:
 - 模型风险管理
 - 模型验证
+- Model Validation
+- Model
 tags:
 - system
 - 金融机构与风险管理

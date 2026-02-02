@@ -1,6 +1,8 @@
 ---
 aliases:
 - 纯策略纳什均衡
+- Pure Strategy Nash Equilibrium
+- Pure
 tags:
 - concept
 - game theory

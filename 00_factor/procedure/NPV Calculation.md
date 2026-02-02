@@ -2,6 +2,8 @@
 aliases:
 - 净现值计算步骤
 - 净现值计算
+- NPV
+- NPV Calculation
 tags:
 - procedure
 - 05_财务管理

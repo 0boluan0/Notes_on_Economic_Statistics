@@ -3,6 +3,7 @@ aliases:
 - Population Migration Theory
 - Migration Theory
 - 人口迁移理论
+- Population
 tags:
 - concept
 ---

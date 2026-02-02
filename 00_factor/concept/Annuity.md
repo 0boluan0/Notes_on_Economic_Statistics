@@ -3,6 +3,7 @@ aliases:
 - 年金终值
 - 年金现值
 - 年金
+- Annuity
 tags:
 - 财务管理
 - 基础概念

@@ -2,6 +2,7 @@
 aliases:
 - Free-rider Problem
 - 搭便车问题
+- Free
 tags:
 - concept
 ---

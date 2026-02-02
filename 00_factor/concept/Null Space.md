@@ -3,6 +3,8 @@ aliases:
 - 核
 - 零空间
 - Kernel
+- Null Space
+- 'Null'
 tags:
 - 线性代数
 - 矩阵

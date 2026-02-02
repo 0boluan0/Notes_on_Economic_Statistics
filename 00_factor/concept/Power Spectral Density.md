@@ -3,6 +3,7 @@ aliases:
 - Power Spectral Density
 - PSD
 - 功率谱密度
+- Power
 tags:
 - concept
 ---

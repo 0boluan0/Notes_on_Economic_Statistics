@@ -1,11 +1,12 @@
 ---
 aliases:
 - 两个随机变量线性组合
+- Linear
+- Linear Combination of Two Random Variables
 tags:
 - 数学
 - concept
 ---
-
 假设有两个随机变量 $X$ 和 $Y$，它们的方差分别为 $\mathrm{Var}(X)$ 和 $\mathrm{Var}(Y)$，协方差为 $\mathrm{Cov}(X, Y)$。考虑它们的线性组合：
 
 $$

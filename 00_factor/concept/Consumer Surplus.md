@@ -1,6 +1,8 @@
 ---
 aliases:
 - 消费者剩余
+- Consumer Surplus
+- Consumer
 tags:
 - concept
 ---

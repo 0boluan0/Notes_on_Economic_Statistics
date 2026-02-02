@@ -1,9 +1,9 @@
 ---
 aliases:
+- TARCH
 tags:
 - concept
 ---
-
 >[!note] TARCH ,门限GARCH效应 Threshold GARCH
 > TARCH通过在方差方程中引入一个针对负残差的指示变量来实现非对称效应。以TARCH(1,1)为例，其形式可写为：
 > 

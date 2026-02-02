@@ -3,6 +3,7 @@ aliases:
 - Likelihood Ratio Test
 - LR Test
 - 似然比检验
+- Likelihood
 tags:
 - concept
 ---

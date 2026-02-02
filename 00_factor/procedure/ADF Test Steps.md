@@ -3,6 +3,7 @@ aliases:
 - ADF检验步骤
 - Augmented Dickey-Fuller检验
 - ADF
+- ADF Test Steps
 tags:
 - procedure
 - 01_Econometrics
