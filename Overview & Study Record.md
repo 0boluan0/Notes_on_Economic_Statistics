@@ -364,7 +364,7 @@ Phase 3｜26周×按天计划（每周一表）
 
 下面开始从 第1周 周一 起排。
 
-  
+  第一周第一天是2026/2/2 后续以此类推,
 
 # **============================================================**
 
@@ -798,15 +798,3 @@ CS224N schedule 中：Transformers、Pretraining、NLG 等条目公开
     
 
   
-
-────────────────────────────────
-
-English (short, practical)
-
-────────────────────────────────
-
-This 26-week plan keeps at most two “main courses” at any time, while embedding SQL/MySQL, engineering habits (tests/debugging), and 6h/week math as fixed slots. Each day includes: (1) a specific lecture/chapter, (2) exercises, (3) a from-scratch MVP with sanity checks/tests, (4) an Obsidian note (bilingual terms), and (5) two acceptance checks: “explain clearly” + “run successfully with a reproducible command”.
-
-  
-
-如果你希望我把每周表格“再对齐到更具体的讲次编号”（例如 MIT 6.100L L1–L26 每天精确分配到哪一讲、Data100 精确到每个 Lab/HW 的 Q1–Qk），我可以继续把第1–12周先加密到“题号级别”；但为了不编造你本地作业题号，我需要你把你下载到本地的 Data100 / CS229 / D2L 作业目录结构（文件名列表即可）贴一份出来。

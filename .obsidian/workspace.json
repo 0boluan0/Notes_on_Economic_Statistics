@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/日记模版.md",
+                "file": "Overview & Study Record.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "日记模版"
+              "title": "Overview & Study Record"
             }
           }
         ]
@@ -227,9 +227,51 @@
               "icon": "terminal",
               "title": "Terminal: ✳ Obsidian Tasks skills"
             }
+          },
+          {
+            "id": "6a6af666cf5d5697",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "terminal:terminal",
+              "state": {
+                "terminal:terminal": {
+                  "cwd": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic",
+                  "focus": false,
+                  "profile": {
+                    "args": [
+                      "--login"
+                    ],
+                    "executable": "/bin/zsh",
+                    "followTheme": true,
+                    "name": "",
+                    "platforms": {
+                      "darwin": true
+                    },
+                    "pythonExecutable": "python3",
+                    "restoreHistory": false,
+                    "rightClickAction": "copyPaste",
+                    "successExitCodes": [
+                      "0",
+                      "SIGINT",
+                      "SIGTERM"
+                    ],
+                    "terminalOptions": {
+                      "documentOverride": null
+                    },
+                    "type": "integrated",
+                    "useWin32Conhost": true
+                  },
+                  "serial": null
+                }
+              },
+              "pinned": true,
+              "icon": "terminal",
+              "title": "Terminal: zsh"
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       },
       {
         "id": "8532e59675ffc5f1",
@@ -275,8 +317,9 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "36db59183709d800",
+  "active": "6a6af666cf5d5697",
   "lastOpenFiles": [
+    "Overview & Study Record.md",
     "00_inbox/日记模版.md",
     "99_学习情况记录/2026-02-02——Mon.md",
     "00_inbox/新建模版.md",
@@ -303,7 +346,6 @@
     "00_factor/concept/Key Rate Duration.md",
     "00_factor/concept/Marshall's Economics.md",
     "00_factor/concept/Historical Volatility.md",
-    "00_factor/concept/Basis Risk.md",
     "scripts/rename_to_english.py",
     "Untitled.canvas",
     "scripts/audit_kcs.py",
