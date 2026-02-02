@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Overview & Study Record.md",
+                "file": "99_学习情况记录/2026-02-02——Mon.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Overview & Study Record"
+              "title": "2026-02-02——Mon"
             }
           }
         ]
@@ -173,9 +173,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "99_学习情况记录/2026-02-02——Mon.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for 2026-02-02——Mon"
             }
           },
           {
@@ -284,12 +286,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "99_学习情况记录/2026-02-02——Mon.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 2026-02-02——Mon"
             }
           }
         ]
@@ -317,11 +320,11 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "6a6af666cf5d5697",
+  "active": "1e8cdccd7773f04d",
   "lastOpenFiles": [
     "Overview & Study Record.md",
-    "00_inbox/日记模版.md",
     "99_学习情况记录/2026-02-02——Mon.md",
+    "00_inbox/日记模版.md",
     "00_inbox/新建模版.md",
     "00_inbox/SQL：SELECT 基础与可测试性.md",
     "00_factor/00_hub/Volatility Modeling-hub.md",

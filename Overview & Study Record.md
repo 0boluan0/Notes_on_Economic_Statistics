@@ -380,15 +380,15 @@ Phase 3｜26周×按天计划（每周一表）
 
 第1周（主课：MIT 6.100L L1–L4；Missing Semester L1）
 
-|**日程**|**时长/时间块**|**听课任务**|**练习任务**|**从零实现（含测试/调试）**|**Obsidian笔记 & 当日验收**|
-|---|---|---|---|---|---|
-|周一|5h：90m课/60m练/60m实现/30m测/30m记/30m复盘|6.100L L1|写 3 个 I/O 小程序变体|实现 cli_sumstats.py：读 stdin 数字→输出均值/方差；pytest 2例|笔记：Python 输入输出（I/O）|
-|周二|5h|Missing Semester L1 Shell|shell 基础：ls/cd/grep 20条命令|写 run_all.sh 批量运行本周脚本；检查返回码|笔记：Shell 命令行（Shell Basics）|
-|周三|5h|6.100L L2|10道字符串/分支小题（自拟）|实现 parse_prices.py：解析“symbol,price”→清洗异常；pytest 3例|笔记：分支（Branching）|
-|周四|5h|SQLBolt Lesson 1–2|完成 Lesson1–2 + 自改 10 查询|用 sqlite 或本地 MySQL（先用 sqlite）建 movies 表并导入样例|笔记：SELECT 与约束（Constraints）|
-|周五|5h|6.100L L3–L4|循环题 15 道（含 off-by-one）|实现 rolling_mean.py（窗口均值）+ 2个sanity checks（常数序列/窗口=1）|笔记：迭代（Iteration）|
-|周六|4–6h（毕业设计主）+45m DS|复盘本周 6.100L 任意1讲|SQLBolt Review: Simple SELECT（做完）|在毕业设计仓库加 pytest 与 1 个测试（最小）|笔记：复盘（Weekly Review #1）|
-|周日|4–6h（毕业设计主）+45m DS|18.06 Linear Algebra L1（几何直观）|线代题：向量/线性组合 5题|实现 proj_onto_vector(a,b) 并验证投影性质（正交残差）|笔记：投影（Projection）|
+| **日程** | **时长/时间块**                         | **听课任务**                      | **练习任务**                          | **从零实现（含测试/调试）**                                     | **Obsidian笔记 & 当日验收**      |
+| ------ | ---------------------------------- | ----------------------------- | --------------------------------- | ---------------------------------------------------- | -------------------------- |
+| 周一     | 5h：90m课/60m练/60m实现/30m测/30m记/30m复盘 | 6.100L L1                     | 写 3 个 I/O 小程序变体                   | 实现 cli_sumstats.py：读 stdin 数字→输出均值/方差；pytest 2例      | 笔记：Python 输入输出（I/O）        |
+| 周二     | 5h                                 | Missing Semester L1 Shell     | shell 基础：ls/cd/grep 20条命令         | 写 run_all.sh 批量运行本周脚本；检查返回码                          | 笔记：Shell 命令行（Shell Basics） |
+| 周三     | 5h                                 | 6.100L L2                     | 10道字符串/分支小题（自拟）                   | 实现 parse_prices.py：解析“symbol,price”→清洗异常；pytest 3例   | 笔记：分支（Branching）           |
+| 周四     | 5h                                 | SQLBolt Lesson 1–2            | 完成 Lesson1–2 + 自改 10 查询           | 用 sqlite 或本地 MySQL（先用 sqlite）建 movies 表并导入样例         | 笔记：SELECT 与约束（Constraints） |
+| 周五     | 5h                                 | 6.100L L3–L4                  | 循环题 15 道（含 off-by-one）            | 实现 rolling_mean.py（窗口均值）+ 2个sanity checks（常数序列/窗口=1） | 笔记：迭代（Iteration）           |
+| 周六     | 4–6h（毕业设计主）+45m DS                 | 复盘本周 6.100L 任意1讲              | SQLBolt Review: Simple SELECT（做完） | 在毕业设计仓库加 pytest 与 1 个测试（最小）                          | 笔记：复盘（Weekly Review #1）    |
+| 周日     | 4–6h（毕业设计主）+45m DS                 | 18.06 Linear Algebra L1（几何直观） | 线代题：向量/线性组合 5题                    | 实现 proj_onto_vector(a,b) 并验证投影性质（正交残差）               | 笔记：投影（Projection）          |
 
 第2周（主课：6.100L L5–L8；Missing Semester L2；SQLBolt L3–4）
 
