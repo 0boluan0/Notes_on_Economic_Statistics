@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c680c76ee233f410",
+        "id": "d3b7c682f1252787",
         "type": "tabs",
         "children": [
           {
-            "id": "1c2b586eb8eaad22",
+            "id": "4c2929970ed2bd74",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -181,6 +181,7 @@
           {
             "id": "36db59183709d800",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "terminal:terminal",
               "state": {
@@ -214,6 +215,7 @@
                   "serial": null
                 }
               },
+              "pinned": true,
               "icon": "terminal",
               "title": "Terminal: ✳ Claude Code"
             }
@@ -259,51 +261,9 @@
               "icon": "terminal",
               "title": "Terminal: zsh"
             }
-          },
-          {
-            "id": "9674df9c3d7e7c65",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "terminal:terminal",
-              "state": {
-                "terminal:terminal": {
-                  "cwd": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic",
-                  "focus": false,
-                  "profile": {
-                    "args": [
-                      "--login"
-                    ],
-                    "executable": "/bin/zsh",
-                    "followTheme": true,
-                    "name": "",
-                    "platforms": {
-                      "darwin": true
-                    },
-                    "pythonExecutable": "python3",
-                    "restoreHistory": false,
-                    "rightClickAction": "copyPaste",
-                    "successExitCodes": [
-                      "0",
-                      "SIGINT",
-                      "SIGTERM"
-                    ],
-                    "terminalOptions": {
-                      "documentOverride": null
-                    },
-                    "type": "integrated",
-                    "useWin32Conhost": true
-                  },
-                  "serial": null
-                }
-              },
-              "pinned": true,
-              "icon": "terminal",
-              "title": "Terminal: zsh"
-            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 7
       },
       {
         "id": "8532e59675ffc5f1",
@@ -358,11 +318,11 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "9674df9c3d7e7c65",
+  "active": "ed6edb2cedb20524",
   "lastOpenFiles": [
     "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
-    "99_学习情况记录/2026-02-03——Tue.md",
     "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf",
+    "99_学习情况记录/2026-02-03——Tue.md",
     "99_学习情况记录/2026-02-02——Mon.md",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec01.pdf",
     "99_学习情况记录/2026-02-01——Sun.md",
