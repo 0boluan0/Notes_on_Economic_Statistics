@@ -97,7 +97,7 @@
       {
         "id": "e0fa6f818c861393",
         "type": "tabs",
-        "dimension": 79.57099080694586,
+        "dimension": 66.90500510725231,
         "children": [
           {
             "id": "d5dd85784b1fe9ec",
@@ -176,16 +176,6 @@
               "state": {},
               "icon": "lucide-info",
               "title": "File properties"
-            }
-          },
-          {
-            "id": "2c9ca742cf90c221",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
             }
           },
           {
@@ -269,6 +259,48 @@
               "icon": "terminal",
               "title": "Terminal: zsh"
             }
+          },
+          {
+            "id": "ba7959820fdece06",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "terminal:terminal",
+              "state": {
+                "terminal:terminal": {
+                  "cwd": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic",
+                  "focus": false,
+                  "profile": {
+                    "args": [
+                      "--login"
+                    ],
+                    "executable": "/bin/zsh",
+                    "followTheme": true,
+                    "name": "",
+                    "platforms": {
+                      "darwin": true
+                    },
+                    "pythonExecutable": "python3",
+                    "restoreHistory": false,
+                    "rightClickAction": "copyPaste",
+                    "successExitCodes": [
+                      "0",
+                      "SIGINT",
+                      "SIGTERM"
+                    ],
+                    "terminalOptions": {
+                      "documentOverride": null
+                    },
+                    "type": "integrated",
+                    "useWin32Conhost": true
+                  },
+                  "serial": null
+                }
+              },
+              "pinned": true,
+              "icon": "terminal",
+              "title": "Terminal: zsh"
+            }
           }
         ],
         "currentTab": 8
@@ -276,7 +308,7 @@
       {
         "id": "8532e59675ffc5f1",
         "type": "tabs",
-        "dimension": 20.42900919305414,
+        "dimension": 33.09499489274771,
         "children": [
           {
             "id": "a0580e7d1cb5a5c4",
@@ -284,15 +316,27 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 01_Introduction"
+            }
+          },
+          {
+            "id": "2c9ca742cf90c221",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -316,15 +360,15 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "ed6edb2cedb20524",
+  "active": "1c2b586eb8eaad22",
   "lastOpenFiles": [
-    "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf",
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec01.pdf",
+    "99_学习情况记录/2026-02-02——Mon.md",
     "99_学习情况记录/2026-02-03——Tue.md",
+    "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
+    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec01.pdf",
     "99_学习情况记录/2026-02-01——Sun.md",
     "99_学习情况记录/已复盘",
-    "99_学习情况记录/2026-02-02——Mon.md",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_f22_lec01.pdf",
     "03_Computer_Science/03_MIT 6.100L/mit6_100l_f22_lec01.pdf",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides",
