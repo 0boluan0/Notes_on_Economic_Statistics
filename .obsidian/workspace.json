@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
+                "file": "99_学习情况记录/2026-02-03——Tue.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_Introduction"
+              "title": "2026-02-03——Tue"
             }
           }
         ]
@@ -276,13 +276,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
+                "file": "99_学习情况记录/2026-02-03——Tue.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 01_Introduction"
+              "title": "Outline of 2026-02-03——Tue"
             }
           },
           {
@@ -321,12 +321,12 @@
   },
   "active": "4c2929970ed2bd74",
   "lastOpenFiles": [
+    "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec02.pdf",
     "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf",
     "99_学习情况记录/2026-02-03——Tue.md",
     "00_inbox/日记模版.md",
     "99_学习情况记录/2026-02-02——Mon.md",
-    "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "99_学习情况记录/完成任务的日期/2026-02-03——Tue.md",
     "99_学习情况记录/完成任务的日期",
     "00_inbox/MIT6.100L kanban.md",
@@ -338,7 +338,6 @@
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides",
     "03_Computer_Science/03_MIT 6.100L/untitled folder",
     "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V.-dual.pdf",
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-code/chapter 26/bm_results2012.csv",
     "03_Computer_Science/03_MIT 6.100L/code/Intro-to-Computation-and-Programming/cover.jpg",
     "03_Computer_Science/03_MIT 6.100L/code/Intro-to-Computation-and-Programming/README.md",
     "03_Computer_Science/the_missing_semester.md",
