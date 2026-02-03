@@ -3,7 +3,7 @@ date: 2026-02-02
 科目: MIT 6.100L
 ---
 
- # 知识类型与算法
+# 知识类型与算法
 - Declarative knowledge：事实陈述（what is true）
 - Imperative knowledge：步骤与配方（how to）
 - 编程的核心：写“配方”来生成事实
@@ -65,10 +65,8 @@ date: 2026-02-02
 - 字典
 
 ```python
->>> type(5)
-int
->>> type(3.0)
-float
+print(type(5))
+print(type(3.0))
 ```
 
 ### 类型转换（Casting）

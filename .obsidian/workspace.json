@@ -284,13 +284,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 01_Introduction"
+              "title": "Outline"
             }
           }
         ]
@@ -317,15 +316,15 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "1c2b586eb8eaad22",
+  "active": "ed6edb2cedb20524",
   "lastOpenFiles": [
+    "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec01.pdf",
     "99_学习情况记录/2026-02-03——Tue.md",
     "99_学习情况记录/2026-02-01——Sun.md",
     "99_学习情况记录/已复盘",
     "99_学习情况记录/2026-02-02——Mon.md",
-    "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_f22_lec01.pdf",
     "03_Computer_Science/03_MIT 6.100L/mit6_100l_f22_lec01.pdf",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides",
@@ -333,7 +332,6 @@
     "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V.-dual.pdf",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-code/chapter 26/bm_results2012.csv",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-code/chapter 26/chapter26.py",
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-code/chapter 26/TitanicPassengers.csv",
     "03_Computer_Science/03_MIT 6.100L/code/Intro-to-Computation-and-Programming/cover.jpg",
     "03_Computer_Science/03_MIT 6.100L/code/Intro-to-Computation-and-Programming/README.md",
     "03_Computer_Science/the_missing_semester.md",

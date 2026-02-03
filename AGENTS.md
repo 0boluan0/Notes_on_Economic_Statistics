@@ -45,6 +45,43 @@
   - Headings start at `#` with sentence‑case titles; prefer short sections.
 - Python utilities: `snake_case` filenames, 4‑space indentation, Black-compatible style.
 
+## 可执行代码块（Code Emitter）规范
+- 代码块仍然使用标准 fenced code block：三反引号包裹，并写语言标签（如 `python` / `javascript` / `typescript` / `html`）。
+- 只写源码，不要粘贴 REPL 记录（例如 `>>>` 不是合法 Python 源码）。
+- 想展示结果就显式输出：Python 用 `print(...)`（或该语言的标准输出方式），不要把运行结果文本混在代码里。
+- 语言安全边界：只有 Python/TypeScript/JavaScript 在本地沙盒执行；其他语言会发送到第三方网站执行，禁止放敏感源码/密钥。
+
+### Python import 要点（Pyodide）
+- Code Emitter 的 Python 是 WebAssembly 的 Pyodide，不是本机 Python。
+- 标准库（`math`/`os` 等）通常可直接 import。
+- 第三方库需按 README 用 `micropip` 安装，并且是异步 `await`。
+
+### 可复用模板
+```python
+print(type(5))
+print(type(3.0))
+```
+
+```python
+import micropip
+await micropip.install("numpy")
+import numpy as np
+
+a = np.random.rand(3, 2)
+b = np.random.rand(2, 5)
+print(a @ b)
+```
+
+```python
+import micropip
+await micropip.install("matplotlib")
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots()
+ax.plot([1, 2, 3, 4], [1, 4, 2, 3])
+plt.show()
+```
+
 ## Testing Guidelines
 - No unit tests. Validate content changes manually:
   - After running the script, inspect with `git diff`.
