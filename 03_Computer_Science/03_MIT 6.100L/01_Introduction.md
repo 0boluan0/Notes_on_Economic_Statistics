@@ -3,18 +3,7 @@ date: 2026-02-02
 科目: MIT 6.100L
 ---
 
-## 本节主题
-- Course info 与学习方式
-- 什么是计算（computation）
-- Python 基础与数学运算
-- 变量、类型、表达式
-
-## 为什么来上课
-- 学习效果取决于投入：需要大量练习
-- 课堂重点：概念直觉 + 例子 + 现场练习
-- 反复练习：PSET、考试、指法练习、Office Hours、Piazza
-
-## 知识类型与算法
+ # 知识类型与算法
 - Declarative knowledge：事实陈述（what is true）
 - Imperative knowledge：步骤与配方（how to）
 - 编程的核心：写“配方”来生成事实

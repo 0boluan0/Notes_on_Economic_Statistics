@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2026-02-03——Tue.md",
+                "file": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-02-03——Tue"
+              "title": "01_Introduction"
             }
           }
         ]
@@ -284,12 +284,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 01_Introduction"
             }
           }
         ]
@@ -316,14 +317,15 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "ed6edb2cedb20524",
+  "active": "1c2b586eb8eaad22",
   "lastOpenFiles": [
+    "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf",
+    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec01.pdf",
     "99_学习情况记录/2026-02-03——Tue.md",
     "99_学习情况记录/2026-02-01——Sun.md",
     "99_学习情况记录/已复盘",
     "99_学习情况记录/2026-02-02——Mon.md",
     "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec01.pdf",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_f22_lec01.pdf",
     "03_Computer_Science/03_MIT 6.100L/mit6_100l_f22_lec01.pdf",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides",
