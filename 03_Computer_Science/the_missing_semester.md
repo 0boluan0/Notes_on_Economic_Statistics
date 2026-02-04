@@ -719,3 +719,440 @@ if [ $CPU -gt 80 ]; then
     echo "High CPU usage: ${CPU}%" | mailx -s "Warning: High CPU Usage" admin@example.com
 fi
 ```
+
+---
+
+## 十、Shell语法详细介绍
+
+### 1. 变量
+
+#### 变量定义与赋值
+```bash
+# 基本变量定义
+name="John"
+age=30
+
+# 变量名规则：只能包含字母、数字和下划线，不能以数字开头
+# 错误示例：2name="John" 或 name@john="John"
+
+# 变量引用
+echo "My name is $name"
+echo "I am ${age} years old"  # 推荐使用${}格式，避免歧义
+```
+
+#### 变量类型
+```bash
+# 字符串变量
+str1="Hello World"
+str2='Single quote string'  # 单引号内的内容原样输出
+
+# 数值变量
+num1=10
+num2=20
+
+# 命令替换
+current_dir=$(pwd)
+# 或使用反引号
+current_dir=`pwd`
+
+# 变量运算
+sum=$((num1 + num2))
+echo "Sum: $sum"  # 输出：Sum: 30
+```
+
+#### 只读变量
+```bash
+readonly PI=3.14159
+PI=3.14  # 会报错：PI: readonly variable
+```
+
+#### 删除变量
+```bash
+unset name
+echo $name  # 输出空值
+```
+
+### 2. 字符串操作
+
+#### 字符串长度
+```bash
+str="Hello World"
+echo "Length: ${#str}"  # 输出：11
+```
+
+#### 字符串截取
+```bash
+str="abcdefghijklmnopqrstuvwxyz"
+echo "${str:0:5}"    # 从第0位开始，取5个字符：abcde
+echo "${str:5}"      # 从第5位开始，取剩余所有字符：fghijklmnopqrstuvwxyz
+echo "${str: -5}"    # 取最后5个字符：vwxyz
+echo "${str:(-5)}"   # 同上，取最后5个字符：vwxyz
+```
+
+#### 字符串替换
+```bash
+str="Hello World"
+echo "${str/World/Universe}"    # 替换第一个匹配的World：Hello Universe
+echo "${str//l/L}"              # 替换所有的l为L：HeLLo WorLD
+echo "${str/#Hello/Hi}"         # 替换开头的Hello：Hi World
+echo "${str/%World/Earth}"      # 替换结尾的World：Hello Earth
+```
+
+#### 字符串大小写转换
+```bash
+str="Hello World"
+echo "${str^^}"   # 全部大写：HELLO WORLD
+echo "${str,,}"   # 全部小写：hello world
+```
+
+### 3. 数组
+
+#### 数组定义与操作
+```bash
+# 数组定义
+arr=("apple" "banana" "orange" "grape")
+
+# 数组长度
+echo "Array length: ${#arr[@]}"  # 输出：4
+
+# 访问数组元素
+echo "First element: ${arr[0]}"       # 输出：apple
+echo "Second element: ${arr[1]}"      # 输出：banana
+
+# 添加元素
+arr[4]="watermelon"
+arr+=("pineapple")  # 追加元素
+
+# 删除元素
+unset arr[2]
+echo "${arr[@]}"  # 输出：apple banana grape watermelon pineapple
+
+# 数组切片
+echo "${arr[@]:1:3}"  # 从索引1开始，取3个元素：banana grape watermelon
+```
+
+#### 关联数组（键值对）
+```bash
+# 声明关联数组
+declare -A colors
+colors["red"]="#FF0000"
+colors["green"]="#00FF00"
+colors["blue"]="#0000FF"
+
+# 访问关联数组
+echo "Red color: ${colors["red"]}"  # 输出：#FF0000
+
+# 遍历关联数组
+for key in "${!colors[@]}"; do
+    echo "Key: $key, Value: ${colors[$key]}"
+done
+```
+
+### 4. 条件判断
+
+#### `if` 语句结构
+`if` 语句是Shell条件判断的基础语法，使用 `fi` 作为结束标记：
+```bash
+# 基本语法
+if [ condition ]; then
+    # 条件成立时执行的命令
+elif [ another_condition ]; then
+    # 另一个条件成立时执行的命令
+else
+    # 所有条件都不成立时执行的命令
+fi
+```
+
+#### 文件判断
+```bash
+# 判断文件是否存在
+if [ -e "file.txt" ]; then
+    echo "File exists"
+else
+    echo "File not exists"
+fi
+
+# 判断是否为普通文件
+if [ -f "file.txt" ]; then
+    echo "It's a regular file"
+fi
+
+# 判断是否为目录
+if [ -d "dir" ]; then
+    echo "It's a directory"
+fi
+
+# 判断文件是否可读
+if [ -r "file.txt" ]; then
+    echo "File is readable"
+fi
+
+# 判断文件是否可写
+if [ -w "file.txt" ]; then
+    echo "File is writable"
+fi
+
+# 判断文件是否可执行
+if [ -x "script.sh" ]; then
+    echo "File is executable"
+fi
+```
+
+#### 数值比较
+```bash
+num1=10
+num2=20
+
+# 等于
+if [ $num1 -eq $num2 ]; then
+    echo "Equal"
+fi
+
+# 不等于
+if [ $num1 -ne $num2 ]; then
+    echo "Not equal"
+fi
+
+# 小于
+if [ $num1 -lt $num2 ]; then
+    echo "Less than"
+fi
+
+# 小于等于
+if [ $num1 -le $num2 ]; then
+    echo "Less than or equal"
+fi
+
+# 大于
+if [ $num1 -gt $num2 ]; then
+    echo "Greater than"
+fi
+
+# 大于等于
+if [ $num1 -ge $num2 ]; then
+    echo "Greater than or equal"
+fi
+```
+
+#### 字符串比较
+```bash
+str1="hello"
+str2="world"
+
+# 字符串相等
+if [ "$str1" = "$str2" ]; then
+    echo "Strings are equal"
+fi
+
+# 字符串不相等
+if [ "$str1" != "$str2" ]; then
+    echo "Strings are not equal"
+fi
+
+# 字符串长度为0
+if [ -z "$empty_str" ]; then
+    echo "String is empty"
+fi
+
+# 字符串长度不为0
+if [ -n "$str1" ]; then
+    echo "String is not empty"
+fi
+```
+
+### 5. 循环结构
+
+#### for循环
+```bash
+# 遍历数组
+fruits=("apple" "banana" "orange")
+for fruit in "${fruits[@]}"; do
+    echo "Fruit: $fruit"
+done
+
+# 遍历数字范围
+for ((i=1; i<=5; i++)); do
+    echo "Number: $i"
+done
+
+# 遍历文件
+for file in *.txt; do
+    echo "File: $file"
+done
+```
+
+#### while循环
+```bash
+# 基本while循环
+count=1
+while [ $count -le 5 ]; do
+    echo "Count: $count"
+    ((count++))
+done
+
+# 读取文件内容
+while read -r line; do
+    echo "Line: $line"
+done < file.txt
+
+# 无限循环
+while true; do
+    echo "This is an infinite loop"
+    sleep 1
+done
+```
+
+#### until循环
+```bash
+count=1
+until [ $count -gt 5 ]; do
+    echo "Count: $count"
+    ((count++))
+done
+```
+
+### 6. 函数
+
+#### 函数定义与调用
+```bash
+# 基本函数定义
+greet() {
+    echo "Hello, world!"
+}
+
+# 调用函数
+greet  # 输出：Hello, world!
+
+# 带参数的函数
+greet_person() {
+    local name=$1
+    echo "Hello, $name!"
+}
+
+greet_person "John"  # 输出：Hello, John!
+greet_person "Jane"  # 输出：Hello, Jane!
+```
+
+#### 函数返回值
+```bash
+# 使用return返回值
+add() {
+    local num1=$1
+    local num2=$2
+    local sum=$((num1 + num2))
+    return $sum
+}
+
+add 10 20
+echo "Sum: $?"  # 输出：Sum: 30
+
+# 使用输出返回值
+multiply() {
+    local num1=$1
+    local num2=$2
+    echo $((num1 * num2))
+}
+
+result=$(multiply 10 20)
+echo "Product: $result"  # 输出：Product: 200
+```
+
+#### 函数变量作用域
+```bash
+# 全局变量
+global_var="global"
+
+show_var() {
+    # 局部变量
+    local local_var="local"
+    echo "Local variable: $local_var"
+    echo "Global variable: $global_var"
+}
+
+show_var
+echo "Global variable outside: $global_var"
+# echo "Local variable outside: $local_var"  # 会报错：local_var: not found
+```
+
+---
+
+## 十一、高级Shell编程技巧
+
+### 1. 输入输出处理
+
+#### 读取用户输入
+```bash
+# 简单输入
+echo -n "Enter your name: "
+read name
+echo "Hello, $name!"
+
+# 带默认值的输入
+read -p "Enter your age: " age
+age=${age:-18}  # 如果没有输入，默认值为18
+echo "Your age is $age"
+
+# 隐藏输入（密码输入）
+read -p "Enter your password: " -s password
+echo
+echo "Password entered: $password"
+```
+
+#### 格式化输出
+```bash
+# 使用printf
+printf "Name: %-10s Age: %3d\n" "John" 30
+printf "Price: $%.2f\n" 19.99
+printf "Date: %04d-%02d-%02d\n" 2023 10 5
+```
+
+### 2. 错误处理
+
+#### 错误检查
+```bash
+# 检查命令执行是否成功
+if ls /nonexistent >/dev/null 2>&1; then
+    echo "Command succeeded"
+else
+    echo "Command failed"
+    echo "Exit code: $?"
+fi
+
+# 强制脚本在错误时退出
+set -e  # 启用错误检查
+command1  # 命令失败时脚本会立即退出
+command2
+```
+
+#### 错误陷阱
+```bash
+# 设置错误陷阱
+cleanup() {
+    echo "Script interrupted, cleaning up..."
+    # 执行清理操作
+}
+
+trap cleanup INT TERM EXIT
+
+# 主程序
+echo "Running..."
+sleep 10
+```
+
+### 3. 正则表达式
+
+#### 基本正则表达式
+```bash
+# 使用grep进行正则匹配
+grep -E "^[0-9]+$" file.txt  # 匹配纯数字行
+grep -E "^[a-zA-Z]+$" file.txt  # 匹配纯字母行
+grep -E "^[a-zA-Z0-9_]+$" file.txt  # 匹配字母、数字、下划线
+```
+
+#### 正则表达式替换
+```bash
+# 使用sed进行正则替换
+sed 's/[0-9]\+/NUMBER/g' file.txt  # 将所有数字替换为NUMBER
+sed 's/^ *//g' file.txt  # 去除行首空格
+sed 's/ *$//g' file.txt  # 去除行尾空格
+```

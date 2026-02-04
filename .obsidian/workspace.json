@@ -242,7 +242,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: ⠐ Shell语法添加"
+              "title": "Terminal: ✳ 循环结构补全"
             }
           },
           {
@@ -329,8 +329,7 @@
               "title": "Graph view"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
