@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Computer_Science/the_missing_semester.md",
+                "file": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "the_missing_semester"
+              "title": "02_Strings,Input-Output and Branching"
             }
           },
           {
@@ -288,7 +288,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       },
       {
         "id": "8532e59675ffc5f1",
@@ -353,15 +353,16 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "36db59183709d800",
+  "active": "ed6edb2cedb20524",
   "lastOpenFiles": [
+    "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
+    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec02.pdf",
+    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec01.pdf",
     "03_Computer_Science/the_missing_semester.md",
     "99_学习情况记录/2026-02-04——Wed.md",
-    "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
     "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "03_Computer_Science/03_MIT 6.100L/02_Strings,Input/Output and Branching.md",
     "03_Computer_Science/03_MIT 6.100L/02_Strings,Input",
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec02.pdf",
     "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf",
     "99_学习情况记录/2026-02-03——Tue.md",
     "99_学习情况记录/2026-02-02——Mon.md",
@@ -373,7 +374,6 @@
     "00_inbox/日记模版.md",
     "99_学习情况记录/完成任务的日期",
     "00_inbox/MIT6.100L kanban.md",
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec01.pdf",
     "99_学习情况记录/2026-02-01——Sun.md",
     "99_学习情况记录/已复盘",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_f22_lec01.pdf",
@@ -391,7 +391,6 @@
     "00_factor/framework/Growth Theory.md",
     "00_factor/procedure/Financial Ratio Analysis.md",
     "00_factor/procedure/Bond and Stock Valuation.md",
-    "00_factor/concept/Repeated Games and Mixed Strategies.md",
     "Untitled.canvas",
     "01_Math/04_多元统计分析/WechatIMG1755.jpg",
     "98_attachment/Pasted image 20250629104152.png",
