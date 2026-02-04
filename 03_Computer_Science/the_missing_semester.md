@@ -18,4 +18,4 @@
 16. rm: remove
 17. rmdir: remove a directory , but only work when the directory is empty
 18. man: show the menu page of the function  
-19. | : pipe 用左边的输出当作右边的输.
+19. | : pipe 用左边的输出当作右边的输入.
