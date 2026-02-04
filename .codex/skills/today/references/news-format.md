@@ -20,24 +20,24 @@ Use this rubric for module 1 in the daily note.
 > 时间窗口：{start_time} ~ {end_time}
 
 ### 世界（World）
-- 中文：...
-  EN: ...
+- 中文：...（含简短内容摘要）
+  EN: ... (with a brief content summary)
   来源：...（YYYY-MM-DD HH:mm, local time）
 
 ### 金融（Finance）
-- 中文：...
-  EN: ...
+- 中文：...（含简短内容摘要）
+  EN: ... (with a brief content summary)
   来源：...（YYYY-MM-DD HH:mm, local time）
 
 ### 科技（Technology）
-- 中文：...
-  EN: ...
+- 中文：...（含简短内容摘要）
+  EN: ... (with a brief content summary)
   来源：...（YYYY-MM-DD HH:mm, local time）
 ```
 
 ## Quality Rules
 
-- Keep each item to 1-2 concise lines per language.
+- Keep each item to 1-2 concise lines per language (headline + short summary).
 - Prefer primary and high-credibility outlets.
 - Do not fabricate details when sources conflict or are incomplete.
 - If an item is developing, mark it as "持续更新 / developing".

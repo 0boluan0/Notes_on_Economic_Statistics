@@ -29,7 +29,7 @@ Use this workflow every time the user asks for `/today`.
      - Finance
      - Technology
    - Keep 3 items per category.
-   - For each item, write one Chinese line and one English line.
+   - For each item, write one short Chinese line and one short English line that include a brief content summary (not just the headline).
    - Include publish time and source.
    - Follow `references/news-format.md`.
 
