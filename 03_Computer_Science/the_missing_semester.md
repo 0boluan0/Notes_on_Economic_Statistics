@@ -17,12 +17,13 @@
 15. tail: 尾 同理
 16. grep: search IN files  grep 你要找的 你要在哪找  或者 grep -r 你要找的 这将会在整个文件夹的内容中寻找你要的
 17. Sed 有自己的编程语言,但是一般不用,就让他进行一些替换和查找工作
-18. ~: bring to the home directory
-19. -: cd - back to the previous directory
-20. mv: 既可以转移文件也可以重命名文件vv
-21. cp: copy 需要两个参数,复制的东西和复制到的地点
-22. rm: remove
-23. rmdir: remove a directory , but only work when the directory is empty
-24. man: show the menu page of the function  
-25. | : pipe 用左边的输出当作右边的输入.
+18. find: 寻找文件
+19. ~: bring to the home directory
+20. -: cd - back to the previous directory
+21. mv: 既可以转移文件也可以重命名文件vv
+22. cp: copy 需要两个参数,复制的东西和复制到的地点
+23. rm: remove
+24. rmdir: remove a directory , but only work when the directory is empty
+25. man: show the menu page of the function  
+26. | : pipe 用左边的输出当作右边的输入.
 

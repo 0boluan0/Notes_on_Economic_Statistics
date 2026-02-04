@@ -30,6 +30,30 @@
               "icon": "lucide-file",
               "title": "the_missing_semester"
             }
+          },
+          {
+            "id": "7753fb3dc8dc90cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "99_学习情况记录/2026-02-04——Wed.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-02-04——Wed"
+            }
           }
         ]
       }
@@ -333,13 +357,13 @@
   "active": "ed6edb2cedb20524",
   "lastOpenFiles": [
     "03_Computer_Science/the_missing_semester.md",
+    "99_学习情况记录/2026-02-04——Wed.md",
     "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
     "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "03_Computer_Science/03_MIT 6.100L/02_Strings,Input/Output and Branching.md",
     "03_Computer_Science/03_MIT 6.100L/02_Strings,Input",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec02.pdf",
     "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf",
-    "99_学习情况记录/2026-02-04——Wed.md",
     "99_学习情况记录/2026-02-03——Tue.md",
     "99_学习情况记录/2026-02-02——Mon.md",
     "CLAUDE.md",
