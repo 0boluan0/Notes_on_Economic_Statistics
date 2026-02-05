@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Economy/01_Econometrics/02_一元线性回归.md",
+                "file": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "02_一元线性回归"
+              "title": "02_Strings,Input-Output and Branching"
             }
           }
         ],
@@ -130,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02_Economy/01_Econometrics/02_一元线性回归.md",
+                "file": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 02_一元线性回归"
+              "title": "Backlinks for 02_Strings,Input-Output and Branching"
             }
           },
           {
@@ -149,12 +149,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02_Economy/01_Econometrics/02_一元线性回归.md",
+                "file": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 02_一元线性回归"
+              "title": "Outgoing links from 02_Strings,Input-Output and Branching"
             }
           },
           {
@@ -202,10 +202,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "02_Economy/01_Econometrics/02_一元线性回归.md"
+                "file": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for 02_一元线性回归"
+              "title": "File properties for 02_Strings,Input-Output and Branching"
             }
           },
           {
@@ -306,13 +306,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Economy/01_Econometrics/02_一元线性回归.md",
+                "file": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 02_一元线性回归"
+              "title": "Outline of 02_Strings,Input-Output and Branching"
             }
           },
           {
@@ -361,6 +361,9 @@
   },
   "active": "7753fb3dc8dc90cc",
   "lastOpenFiles": [
+    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec02.pdf",
+    "99_学习情况记录/2026-02-05——Thu.md",
+    "02_Economy/01_Econometrics/02_一元线性回归.md",
     "scripts/ocr_replace_images.py",
     "98_attachment/Pasted image 20250327091329.png",
     "98_attachment/Pasted image 20250327090402.png",
@@ -374,7 +377,6 @@
     "98_attachment/Pasted image 20240229220125.png",
     "02_Economy/01_Econometrics/01_导论.md",
     "02_Economy/01_Econometrics/01_Econometrics.canvas",
-    "02_Economy/01_Econometrics/02_一元线性回归.md",
     "02_Economy/10_发展经济学/00_导论和考试相关.md",
     "00_factor/procedure/OLS.md",
     "00_inbox/最小二乘法(Ordinary Least Squares, OLS).md",
@@ -398,11 +400,9 @@
     "02_Economy/02_public finance财政学/2_财政支出/03_财政支出总论.md",
     "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
     "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec02.pdf",
     "03_Computer_Science/99_Miscellaneous/SQL.md",
     "Overview & Study Record.md",
     "03_Computer_Science/99_Miscellaneous",
-    "99_学习情况记录/2026-02-05——Thu.md",
     "99_学习情况记录/2026-02-04——Wed.md",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec01.pdf",
     "03_Computer_Science/99_Miscellaneous/the_missing_semester.md",
@@ -415,7 +415,6 @@
     "99_学习情况记录/完成任务的日期",
     "99_学习情况记录/已复盘",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_f22_lec01.pdf",
-    "03_Computer_Science/03_MIT 6.100L/mit6_100l_f22_lec01.pdf",
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides"
+    "03_Computer_Science/03_MIT 6.100L/mit6_100l_f22_lec01.pdf"
   ]
 }

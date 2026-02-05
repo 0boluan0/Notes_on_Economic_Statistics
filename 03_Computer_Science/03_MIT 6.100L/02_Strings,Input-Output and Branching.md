@@ -61,6 +61,7 @@ print(s[4:1:-2])  # ec
 > s = "car"
 > # s[0] = 'b'  # 报错
 > s = 'b' + s[1:]
+> print (s)
 > ```
 
 > [!tip] Big Idea
