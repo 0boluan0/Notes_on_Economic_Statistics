@@ -1,0 +1,231 @@
+{
+  "nodes": [
+    {
+      "id": "53d0c59c6fe8437d",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/06_时间序列分析/00_导论与概率论复习.md"
+    },
+    {
+      "id": "e818b8fa8e354acb",
+      "type": "text",
+      "x": 400,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 0.回忆用\n- 1.1 概率空间\n- 1.2  **Probability densities and distributions (pmf/pdf, CDF)**\n- 1.3 **Expectation and population moments**期望值与总体矩"
+    },
+    {
+      "id": "de3dbca23e1a49b0",
+      "type": "file",
+      "x": 840,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/06_时间序列分析/01_介绍时间序列.md"
+    },
+    {
+      "id": "dfe773d348034da2",
+      "type": "text",
+      "x": 1240,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 1. 数据类型"
+    },
+    {
+      "id": "0263db010db74737",
+      "type": "file",
+      "x": 1680,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/06_时间序列分析/02_差分方程Difference Equation.md"
+    },
+    {
+      "id": "28d8136835664698",
+      "type": "text",
+      "x": 2080,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 0. 回忆用问题\n- 1.1 术语：算子（operator）\n- 1.2 术语：差分算子（Difference operator）\n- 1.3 术语：滞后算子（Lag operator）"
+    },
+    {
+      "id": "a7a4110ceb394008",
+      "type": "file",
+      "x": 0,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/06_时间序列分析/03_平稳时间序列模型.md"
+    },
+    {
+      "id": "88c338aa13f94019",
+      "type": "text",
+      "x": 400,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 0.回忆用\n- 1.1 自回归移动平均模型ARMA(p,q) model\n- 1.2 三种‘没有关系’的辨析\n- 2.1 平稳性定义"
+    },
+    {
+      "id": "ffaed8a241324926",
+      "type": "file",
+      "x": 840,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/06_时间序列分析/04_波动建模 Modeling Volatility.md"
+    },
+    {
+      "id": "ad0fcb39e4a5455c",
+      "type": "text",
+      "x": 1240,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 0. 回忆用\n- 1.1 为什么要进行波动建模\n- 1.2 经济学领域的特征事实\n- 2.1 初步分析"
+    },
+    {
+      "id": "59e2e6cb23024759",
+      "type": "file",
+      "x": 1680,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/06_时间序列分析/05_多方程模型Multi-equation Time Series Models.md"
+    },
+    {
+      "id": "3749393e776b4b8c",
+      "type": "text",
+      "x": 2080,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 0.回忆用\n- 1.1 干预分析\n- 1.2 脉冲响应函数 IRF Impulse Response Analysis\n- 1.3 干预效应的识别与估计步骤"
+    },
+    {
+      "id": "2ada5c4a2387470d",
+      "type": "file",
+      "x": 0,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/06_时间序列分析/06_含趋势的模型.md"
+    },
+    {
+      "id": "2e8f10f6b2c34e8a",
+      "type": "text",
+      "x": 400,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "text": "# 0.回忆用\n- 3.1 定义\n- 3.2 举例\n- 3.3 差分"
+    },
+    {
+      "id": "f3f94d7ae35f49e6",
+      "type": "file",
+      "x": 840,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/06_时间序列分析/07_协整和误差修正模型.md"
+    },
+    {
+      "id": "c6c86c19dff54d7a",
+      "type": "text",
+      "x": 1240,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "text": "# 1. 引言\n- 2.1 协整的定义\n- 2.2 协整与共同随机趋势\n- 2.3 协整与误差修正模型"
+    },
+    {
+      "id": "fa328dfeca7e4c72",
+      "type": "file",
+      "x": 1680,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/06_时间序列分析/时序复习.md"
+    },
+    {
+      "id": "7e902efb401a4e47",
+      "type": "text",
+      "x": 2080,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "text": "# 1.差分方程"
+    }
+  ],
+  "edges": [
+    {
+      "id": "0c845b582be64268",
+      "fromNode": "53d0c59c6fe8437d",
+      "fromSide": "right",
+      "toNode": "e818b8fa8e354acb",
+      "toSide": "left"
+    },
+    {
+      "id": "e485cd74aed045cc",
+      "fromNode": "de3dbca23e1a49b0",
+      "fromSide": "right",
+      "toNode": "dfe773d348034da2",
+      "toSide": "left"
+    },
+    {
+      "id": "5833b69cef0747b2",
+      "fromNode": "0263db010db74737",
+      "fromSide": "right",
+      "toNode": "28d8136835664698",
+      "toSide": "left"
+    },
+    {
+      "id": "2c0f7cb4bd484bf0",
+      "fromNode": "a7a4110ceb394008",
+      "fromSide": "right",
+      "toNode": "88c338aa13f94019",
+      "toSide": "left"
+    },
+    {
+      "id": "287d393efb574677",
+      "fromNode": "ffaed8a241324926",
+      "fromSide": "right",
+      "toNode": "ad0fcb39e4a5455c",
+      "toSide": "left"
+    },
+    {
+      "id": "5ae70d697264476d",
+      "fromNode": "59e2e6cb23024759",
+      "fromSide": "right",
+      "toNode": "3749393e776b4b8c",
+      "toSide": "left"
+    },
+    {
+      "id": "673c003f9b214f0a",
+      "fromNode": "2ada5c4a2387470d",
+      "fromSide": "right",
+      "toNode": "2e8f10f6b2c34e8a",
+      "toSide": "left"
+    },
+    {
+      "id": "da3d97c5977843fc",
+      "fromNode": "f3f94d7ae35f49e6",
+      "fromSide": "right",
+      "toNode": "c6c86c19dff54d7a",
+      "toSide": "left"
+    },
+    {
+      "id": "415beee01b654930",
+      "fromNode": "fa328dfeca7e4c72",
+      "fromSide": "right",
+      "toNode": "7e902efb401a4e47",
+      "toSide": "left"
+    }
+  ]
+}

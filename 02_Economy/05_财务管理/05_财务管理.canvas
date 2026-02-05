@@ -1,0 +1,131 @@
+{
+  "nodes": [
+    {
+      "id": "6dde67a2fbe94afd",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/05_财务管理/01_财务管理概述.md"
+    },
+    {
+      "id": "4eaf8b7d191d4b2b",
+      "type": "text",
+      "x": 400,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 第一节.企业组织形式和财务管理内容(Forms of Business Organization and Content of Financial Management)\n- 一.企业组织形式(Forms of Business Organization)\n- 二.财务管理的主要内容(Main Content of Financial Management)\n- 一.财务管理的目标"
+    },
+    {
+      "id": "8ce784a118f94e6f",
+      "type": "file",
+      "x": 840,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/05_财务管理/02_财务报表分析和财务预测.md"
+    },
+    {
+      "id": "f6ce5a5e70484f7f",
+      "type": "text",
+      "x": 1240,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 第一节 财务报表分析的框架和方法(Framework and Methods of Financial Statement Analysis)\n- 一.财务报表分析的目的(Purpose of Financial Statement Analysis)\n- 二.财务报表分析的方法(Methods of Financial Statement Analysis)\n- 三.财务报表分析的局限性(Limitations of Financial Statement Analysis)"
+    },
+    {
+      "id": "cec4c455f735438f",
+      "type": "file",
+      "x": 1680,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/05_财务管理/03_价值评估基准.md"
+    },
+    {
+      "id": "ad3378817c7e42e4",
+      "type": "text",
+      "x": 2080,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 第一节 利率(Interest Rate)\n- 一.基准利率及特征(Benchmark Interest Rate and Characteristics)\n- 二.利率的期限结构(Term Structure of Interest Rates)\n- 三.市场利率的影响因素(Influencing Factors of Market Interest Rates)"
+    },
+    {
+      "id": "bcf220f9403246b3",
+      "type": "file",
+      "x": 0,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/05_财务管理/05_投资项目资本预算.md"
+    },
+    {
+      "id": "2668805b4267452e",
+      "type": "text",
+      "x": 400,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 第二节 投资项目评估方法(Investment Project Evaluation Methods)\n- 一.净现值法(Net Present Value Method)\n- 二.投资项目现金流量的估计方法"
+    },
+    {
+      "id": "07b0b74224584596",
+      "type": "file",
+      "x": 840,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/05_财务管理/06_债券和股票估价.md"
+    },
+    {
+      "id": "505ace74e5d54d97",
+      "type": "text",
+      "x": 1240,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 第一节 债券估价(Bond Valuation)\n- 一. 债券的有关概念(Relevant Concepts of Bonds)\n- 二.债券的价值(Bond Value)\n- 三.债券的收益率"
+    }
+  ],
+  "edges": [
+    {
+      "id": "ed8de07766f9412e",
+      "fromNode": "6dde67a2fbe94afd",
+      "fromSide": "right",
+      "toNode": "4eaf8b7d191d4b2b",
+      "toSide": "left"
+    },
+    {
+      "id": "f3ea0e9232a64e6f",
+      "fromNode": "8ce784a118f94e6f",
+      "fromSide": "right",
+      "toNode": "f6ce5a5e70484f7f",
+      "toSide": "left"
+    },
+    {
+      "id": "7d8d71b59ef247cd",
+      "fromNode": "cec4c455f735438f",
+      "fromSide": "right",
+      "toNode": "ad3378817c7e42e4",
+      "toSide": "left"
+    },
+    {
+      "id": "aa1a42117332402d",
+      "fromNode": "bcf220f9403246b3",
+      "fromSide": "right",
+      "toNode": "2668805b4267452e",
+      "toSide": "left"
+    },
+    {
+      "id": "f03f3aef321c4efd",
+      "fromNode": "07b0b74224584596",
+      "fromSide": "right",
+      "toNode": "505ace74e5d54d97",
+      "toSide": "left"
+    }
+  ]
+}

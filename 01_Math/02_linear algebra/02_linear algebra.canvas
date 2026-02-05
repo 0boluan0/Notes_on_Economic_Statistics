@@ -1,0 +1,81 @@
+{
+  "nodes": [
+    {
+      "id": "821586ff491249fc",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/02_linear algebra/00_perface.md"
+    },
+    {
+      "id": "7facb4acb7174388",
+      "type": "text",
+      "x": 400,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 方程组的不同记法\n- Row picture\n- column picture\n- 方程组的矩阵形式"
+    },
+    {
+      "id": "7b7e8748f04e4bd3",
+      "type": "file",
+      "x": 840,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md"
+    },
+    {
+      "id": "74acddafb45944d1",
+      "type": "text",
+      "x": 1240,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# introduction\n- 方程消元\n- 矩阵消元(Matrix Elimination)\n- 矩阵乘法的四种表示"
+    },
+    {
+      "id": "6bd296381dff41a8",
+      "type": "file",
+      "x": 1680,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/02_linear algebra/02_vector spaces and subspace.md"
+    },
+    {
+      "id": "6706f6ab01d84752",
+      "type": "text",
+      "x": 2080,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 向量空间(Vector Space)\n- 向量空间的定义\n- 子空间(subspace)\n- 矩阵的秩(rank)"
+    }
+  ],
+  "edges": [
+    {
+      "id": "06181381c4084205",
+      "fromNode": "821586ff491249fc",
+      "fromSide": "right",
+      "toNode": "7facb4acb7174388",
+      "toSide": "left"
+    },
+    {
+      "id": "145623de6ebb49e3",
+      "fromNode": "7b7e8748f04e4bd3",
+      "fromSide": "right",
+      "toNode": "74acddafb45944d1",
+      "toSide": "left"
+    },
+    {
+      "id": "75ca2f844c4543fe",
+      "fromNode": "6bd296381dff41a8",
+      "fromSide": "right",
+      "toNode": "6706f6ab01d84752",
+      "toSide": "left"
+    }
+  ]
+}

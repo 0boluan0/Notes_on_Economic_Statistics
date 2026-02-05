@@ -1,0 +1,431 @@
+{
+  "nodes": [
+    {
+      "id": "76855e9e0f414b02",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/00_金融风险划重点.md"
+    },
+    {
+      "id": "00320ef42cac4502",
+      "type": "text",
+      "x": 400,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 除计算题外部分\n- 第一章 引言\n- 第八章"
+    },
+    {
+      "id": "5411b85191464f56",
+      "type": "file",
+      "x": 840,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/01_引言.md"
+    },
+    {
+      "id": "27df69d2fd754951",
+      "type": "text",
+      "x": 1240,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 1.金融风险管理的重要性\n- 1.15\n- 1.16\n- 1.17"
+    },
+    {
+      "id": "25fa9da95b364eb7",
+      "type": "file",
+      "x": 1680,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/07_定价与情景分析.md"
+    },
+    {
+      "id": "96067a16f4d94cd4",
+      "type": "text",
+      "x": 2080,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 1. 波动和资产价格\n- 7.2 风险中性定价\n- 7.3 情景分析\n- 7.4 同时使用真实世界和风险中性情景"
+    },
+    {
+      "id": "be32f1300ca640b1",
+      "type": "file",
+      "x": 0,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/08_操作员如何管理风险暴露.md"
+    },
+    {
+      "id": "12d9bf8fcd2d4a00",
+      "type": "text",
+      "x": 400,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 1.交易产品的风险度量指标\n- 1.1 Delta\n- 1.2 Gamma\n- 1.3 Vega"
+    },
+    {
+      "id": "f4b5a0e9f014455a",
+      "type": "file",
+      "x": 840,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/09_利率风险.md"
+    },
+    {
+      "id": "0b2ae9fc9a374b7d",
+      "type": "text",
+      "x": 1240,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 1. 利率与利率风险\n- 1.1 利率的种类、利率决定理论；利率期限结构与收益率曲线\n- 1.2 利率风险的基本概念及分类\n- 1.3. 净利息收入的构成，资产负债匹配策略"
+    },
+    {
+      "id": "11f7b47a2f04426a",
+      "type": "file",
+      "x": 1680,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/10_波动率.md"
+    },
+    {
+      "id": "04d4de77740c4551",
+      "type": "text",
+      "x": 2080,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 1.波动率定义与方差概念\n- 1.1 波动率,方差定义\n- 1.2波动率研究发展（阶段与层次）\n- 1.3波动率的估计方法"
+    },
+    {
+      "id": "48fee58a87de43a4",
+      "type": "file",
+      "x": 0,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/11_相关系数与copula函数.md"
+    },
+    {
+      "id": "f34bcae2080641b0",
+      "type": "text",
+      "x": 400,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "text": "# 1. 相关与协方差的定义与计算\n- 1.1 相关系数与协方差定义\n- 1.2 EWMA更新协方差和相关系数\n- 1.3[[独立性与不相关]]的区别"
+    },
+    {
+      "id": "06cf428f06e5444e",
+      "type": "file",
+      "x": 840,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/12_VAR风险.md"
+    },
+    {
+      "id": "af2df9bca6ef467d",
+      "type": "text",
+      "x": 1240,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "text": "# 1. VaR 定义及解释\n- 2.1 [[方差-协方差法]]（正态分布假设法）\n- 2.2 [[历史模拟法]]\n- 2.3 [[蒙特卡罗模拟方法]]"
+    },
+    {
+      "id": "ddb26717e7f9492b",
+      "type": "file",
+      "x": 1680,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/13_历史模拟法和极值理论.md"
+    },
+    {
+      "id": "5e5b57e6ed964d3d",
+      "type": "text",
+      "x": 2080,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "text": "# 1. **历史模拟法（Historical Simulation Method）**\n- **历史模拟法练习题**\n- 13.3\n- 13.8"
+    },
+    {
+      "id": "403cac03aac34072",
+      "type": "file",
+      "x": 0,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/14_VaR参数法和模拟法.md"
+    },
+    {
+      "id": "7b1de1e94f284652",
+      "type": "text",
+      "x": 400,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "text": "# 1. VaR的定义与方差-协方差法原理（含正态分布假设）\n- 5. 非线性资产（期权等）的VaR估算方法：Delta近似法、二次模型与Cornish-Fisher展开\n- 6. 蒙特卡罗模拟法：原理、步骤与优缺点\n- 7. 不同VaR方法的对比分析（优劣、适用场景）"
+    },
+    {
+      "id": "1b75999b0fbd4066",
+      "type": "file",
+      "x": 840,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md"
+    },
+    {
+      "id": "41bbc9a740d7439d",
+      "type": "text",
+      "x": 1240,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "text": "# 15_《巴塞尔协议I II》和 偿付能力法案II\n- **⬇️ 第一层：监管演进时间线（**\n- **知道“谁管什么”**\n- **）**"
+    },
+    {
+      "id": "e02fbc04c1ea4521",
+      "type": "file",
+      "x": 1680,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/16_巴塞尔协议.md"
+    },
+    {
+      "id": "1b5b8db68a794e71",
+      "type": "text",
+      "x": 2080,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "text": "# 1. **巴塞尔协议 2.5 主要内容**\n- 1.1 压力VaR sVaR\n- 1.2 IRC增量风险计提\n- 1.3 CRM 综合风险计量"
+    },
+    {
+      "id": "f36cf657a9974f17",
+      "type": "file",
+      "x": 0,
+      "y": 1200,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/17_OTC衍生产品市场的监管.md"
+    },
+    {
+      "id": "89afcaa5dda74f7a",
+      "type": "text",
+      "x": 400,
+      "y": 1200,
+      "width": 360,
+      "height": 220,
+      "text": "# **OTC衍生产品清算与监管学习笔记**\n- **1. OTC衍生品清算机制**\n- **2. 保证金制度**\n- **3. CCP 结构与风险承担**"
+    },
+    {
+      "id": "5d883b34153f40fd",
+      "type": "file",
+      "x": 840,
+      "y": 1200,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/19_违约风险.md"
+    },
+    {
+      "id": "38d0d14481d64b63",
+      "type": "text",
+      "x": 1240,
+      "y": 1200,
+      "width": 360,
+      "height": 220,
+      "text": "# **1.信用风险**\n- 1.1**信用评级**\n- 1.2**历史违约概率**\n- 1.3**回收率**"
+    },
+    {
+      "id": "a5077a2b1b25476b",
+      "type": "file",
+      "x": 1680,
+      "y": 1200,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/20_CVA,DVA衍生产品中的对手信用风险.md"
+    },
+    {
+      "id": "41c45aa2c4e74ac8",
+      "type": "text",
+      "x": 2080,
+      "y": 1200,
+      "width": 360,
+      "height": 220,
+      "text": "# 1. 衍生产品信用风险的特点与基本概念\n- 1.1 动态风险敞口\n- 1.2 信用风险缓释机制\n- 2.1 CVA（信用价值调整）"
+    },
+    {
+      "id": "a3018df774504f44",
+      "type": "file",
+      "x": 0,
+      "y": 1500,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/21_信用在险价值.md"
+    },
+    {
+      "id": "10eaa3640e24489e",
+      "type": "text",
+      "x": 400,
+      "y": 1500,
+      "width": 360,
+      "height": 220,
+      "text": "# 21_信用在险价值\n- **信用VaR简介**\n- **信用评级迁移矩阵**\n- **Vasicek模型**"
+    },
+    {
+      "id": "351897e031bd4dc4",
+      "type": "file",
+      "x": 840,
+      "y": 1500,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/07_金融机构与风险管理/22_情景分析和压力测试.md"
+    },
+    {
+      "id": "b578347786b54cba",
+      "type": "text",
+      "x": 1240,
+      "y": 1500,
+      "width": 360,
+      "height": 220,
+      "text": "# **情境分析和压力测试**\n- **VaR与预期亏损（ES）的关系**\n- **单变量压力测试**\n- **多变量情景分析**"
+    }
+  ],
+  "edges": [
+    {
+      "id": "ad2e04d5a7614f40",
+      "fromNode": "76855e9e0f414b02",
+      "fromSide": "right",
+      "toNode": "00320ef42cac4502",
+      "toSide": "left"
+    },
+    {
+      "id": "84b034cfc26f4297",
+      "fromNode": "5411b85191464f56",
+      "fromSide": "right",
+      "toNode": "27df69d2fd754951",
+      "toSide": "left"
+    },
+    {
+      "id": "b0475885b5cc4d09",
+      "fromNode": "25fa9da95b364eb7",
+      "fromSide": "right",
+      "toNode": "96067a16f4d94cd4",
+      "toSide": "left"
+    },
+    {
+      "id": "92c6c2a6d9ee4c91",
+      "fromNode": "be32f1300ca640b1",
+      "fromSide": "right",
+      "toNode": "12d9bf8fcd2d4a00",
+      "toSide": "left"
+    },
+    {
+      "id": "7caae3aea93e451c",
+      "fromNode": "f4b5a0e9f014455a",
+      "fromSide": "right",
+      "toNode": "0b2ae9fc9a374b7d",
+      "toSide": "left"
+    },
+    {
+      "id": "c1ac52e94be44d14",
+      "fromNode": "11f7b47a2f04426a",
+      "fromSide": "right",
+      "toNode": "04d4de77740c4551",
+      "toSide": "left"
+    },
+    {
+      "id": "9f5a650c9fce41fb",
+      "fromNode": "48fee58a87de43a4",
+      "fromSide": "right",
+      "toNode": "f34bcae2080641b0",
+      "toSide": "left"
+    },
+    {
+      "id": "9bab67b5ffee46b0",
+      "fromNode": "06cf428f06e5444e",
+      "fromSide": "right",
+      "toNode": "af2df9bca6ef467d",
+      "toSide": "left"
+    },
+    {
+      "id": "375d1e6ecd3f48fd",
+      "fromNode": "ddb26717e7f9492b",
+      "fromSide": "right",
+      "toNode": "5e5b57e6ed964d3d",
+      "toSide": "left"
+    },
+    {
+      "id": "7d85efc1ad3f400e",
+      "fromNode": "403cac03aac34072",
+      "fromSide": "right",
+      "toNode": "7b1de1e94f284652",
+      "toSide": "left"
+    },
+    {
+      "id": "40fce34a96004bd7",
+      "fromNode": "1b75999b0fbd4066",
+      "fromSide": "right",
+      "toNode": "41bbc9a740d7439d",
+      "toSide": "left"
+    },
+    {
+      "id": "3989779723494132",
+      "fromNode": "e02fbc04c1ea4521",
+      "fromSide": "right",
+      "toNode": "1b5b8db68a794e71",
+      "toSide": "left"
+    },
+    {
+      "id": "2b2ead0a37384cc1",
+      "fromNode": "f36cf657a9974f17",
+      "fromSide": "right",
+      "toNode": "89afcaa5dda74f7a",
+      "toSide": "left"
+    },
+    {
+      "id": "1037a1df76584edd",
+      "fromNode": "5d883b34153f40fd",
+      "fromSide": "right",
+      "toNode": "38d0d14481d64b63",
+      "toSide": "left"
+    },
+    {
+      "id": "7d537b179867456b",
+      "fromNode": "a5077a2b1b25476b",
+      "fromSide": "right",
+      "toNode": "41c45aa2c4e74ac8",
+      "toSide": "left"
+    },
+    {
+      "id": "1dde0fa078f54095",
+      "fromNode": "a3018df774504f44",
+      "fromSide": "right",
+      "toNode": "10eaa3640e24489e",
+      "toSide": "left"
+    },
+    {
+      "id": "d30acb53059f4eae",
+      "fromNode": "351897e031bd4dc4",
+      "fromSide": "right",
+      "toNode": "b578347786b54cba",
+      "toSide": "left"
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "nodes": [
+    {
+      "id": "78266a1a73c6483c",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/01_Econometrics/01_导论.md"
+    },
+    {
+      "id": "3e8296f8a97c46cc",
+      "type": "text",
+      "x": 400,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 课程总论 (Course Introduction)"
+    },
+    {
+      "id": "8039a8a2e2e844a7",
+      "type": "file",
+      "x": 840,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/01_Econometrics/02_一元线性回归.md"
+    },
+    {
+      "id": "2826feba05c046a4",
+      "type": "text",
+      "x": 1240,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 0.回归(regression)：从身高问题的分析讲起\n- 0.1起源\n- 0.2意义\n- 1.1总体回归方程(Population Regression Equation)"
+    },
+    {
+      "id": "095080a9a3ec4b69",
+      "type": "file",
+      "x": 1680,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/01_Econometrics/03_多元线性回归.md"
+    },
+    {
+      "id": "413003dde02144a1",
+      "type": "text",
+      "x": 2080,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 多元线性回归(Multiple Linear Regression)的两个例子\n- CD生产函数(Cobb-Douglas Production Function)\n- 新凯恩斯混合菲利普斯曲线\n- 多元线性回归的一般形式"
+    },
+    {
+      "id": "a210baffb19148e0",
+      "type": "file",
+      "x": 0,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/01_Econometrics/04_模型设定.md"
+    },
+    {
+      "id": "6dc1b81dd0ba4d07",
+      "type": "text",
+      "x": 400,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 计量经济学模型的设定偏误(Model Specification Error)\n- 模型设定偏误\n- 模型设定偏误的类型\n- 模型拟合不足"
+    },
+    {
+      "id": "9082dc6ad19e4495",
+      "type": "file",
+      "x": 840,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/01_Econometrics/05_多元回归模型的矩阵表达.md"
+    },
+    {
+      "id": "b0cef07af2cc49d4",
+      "type": "text",
+      "x": 1240,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 多元线性回归模型的向量表达\n- OLE\n- 西格玛方\n- OLS估计量的方差协方差"
+    },
+    {
+      "id": "fe71b888f23943ba",
+      "type": "file",
+      "x": 1680,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/01_Econometrics/06_多重共线性.md"
+    },
+    {
+      "id": "44fa986ef4964d04",
+      "type": "text",
+      "x": 2080,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 多重共线性(Multicollinearity)的概念\n- 完全的多重共线性\n- 不完全的多重共线性\n- 经济变量的共同趋势"
+    },
+    {
+      "id": "9e6697d6fe5d4469",
+      "type": "file",
+      "x": 0,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/01_Econometrics/07_异方差.md"
+    },
+    {
+      "id": "81db51c8cc4a41b8",
+      "type": "text",
+      "x": 400,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "text": "# 异方差对最小二乘估计量的影响\n- 异方差的本质\n- 异方差的来源\n- 画图"
+    },
+    {
+      "id": "32a3772e1e504863",
+      "type": "file",
+      "x": 840,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/01_Econometrics/08_自相关.md"
+    },
+    {
+      "id": "167c3713be2f44a4",
+      "type": "text",
+      "x": 1240,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "text": "# 自相关(Autocorrelation)的含义和表现形式\n- 含义\n- 表现形式\n- 惯性"
+    },
+    {
+      "id": "c700101d2aa74d0c",
+      "type": "file",
+      "x": 1680,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/01_Econometrics/09_联立方程模型(内生性).md"
+    },
+    {
+      "id": "e287030759244549",
+      "type": "text",
+      "x": 2080,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "text": "# 联立方程模型(Simultaneous Equations Model)\n- 举例:**牛奶市场的供求模型**\n- **内生性问题的产生**\n- 思想原理"
+    },
+    {
+      "id": "4dae451d407e4b1f",
+      "type": "file",
+      "x": 0,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/01_Econometrics/10_虚拟变量.md"
+    },
+    {
+      "id": "1af4abdfbb33475e",
+      "type": "text",
+      "x": 400,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "text": "# 虚拟解释变量\n- 什么是虚拟变量\n- 处理\n- 描述"
+    },
+    {
+      "id": "90ca972895984397",
+      "type": "file",
+      "x": 840,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/01_Econometrics/11_平稳时间序列模型.md"
+    },
+    {
+      "id": "68846ee515cb4ca6",
+      "type": "text",
+      "x": 1240,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "text": "# **分布滞后模型Distributed Lag Model DLM**\n- 含义\n- **分布滞后模型的基本形式**\n- **分布滞后模型的特性**"
+    },
+    {
+      "id": "3c817441e440477f",
+      "type": "file",
+      "x": 1680,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/01_Econometrics/12_非平稳时间序列.md"
+    },
+    {
+      "id": "299864a822a1485b",
+      "type": "text",
+      "x": 2080,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "text": "# 数据平稳性(Stationarity)\n- 协方差平稳(Covariance Stationarity)\n- 随机趋势:单位根过程(Unit Root Process)\n- 高阶积分过程"
+    },
+    {
+      "id": "20b1b300d9d74bca",
+      "type": "file",
+      "x": 0,
+      "y": 1200,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/01_Econometrics/13_面板数据模型.md"
+    },
+    {
+      "id": "9b94722b698148d5",
+      "type": "text",
+      "x": 400,
+      "y": 1200,
+      "width": 360,
+      "height": 220,
+      "text": "# 面板数据模型(Panel Data Model)\n- 模型内容\n- 面板数据的混合估计\n- **模型形式**"
+    },
+    {
+      "id": "ac72c825e2fd4ce8",
+      "type": "file",
+      "x": 840,
+      "y": 1200,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/01_Econometrics/零散知识点.md"
+    },
+    {
+      "id": "215918d29c8c402e",
+      "type": "text",
+      "x": 1240,
+      "y": 1200,
+      "width": 360,
+      "height": 220,
+      "text": "# 残差\n- 统计量\n- 随机变量\n- 协方差定义"
+    }
+  ],
+  "edges": [
+    {
+      "id": "92c673e2374d40c6",
+      "fromNode": "78266a1a73c6483c",
+      "fromSide": "right",
+      "toNode": "3e8296f8a97c46cc",
+      "toSide": "left"
+    },
+    {
+      "id": "14bf1e6107ce4984",
+      "fromNode": "8039a8a2e2e844a7",
+      "fromSide": "right",
+      "toNode": "2826feba05c046a4",
+      "toSide": "left"
+    },
+    {
+      "id": "73bb8c5c34f24cac",
+      "fromNode": "095080a9a3ec4b69",
+      "fromSide": "right",
+      "toNode": "413003dde02144a1",
+      "toSide": "left"
+    },
+    {
+      "id": "0fa6ec3b69e34314",
+      "fromNode": "a210baffb19148e0",
+      "fromSide": "right",
+      "toNode": "6dc1b81dd0ba4d07",
+      "toSide": "left"
+    },
+    {
+      "id": "b435e92ffbaf446b",
+      "fromNode": "9082dc6ad19e4495",
+      "fromSide": "right",
+      "toNode": "b0cef07af2cc49d4",
+      "toSide": "left"
+    },
+    {
+      "id": "e919d2c597854424",
+      "fromNode": "fe71b888f23943ba",
+      "fromSide": "right",
+      "toNode": "44fa986ef4964d04",
+      "toSide": "left"
+    },
+    {
+      "id": "307a0d8f69e74961",
+      "fromNode": "9e6697d6fe5d4469",
+      "fromSide": "right",
+      "toNode": "81db51c8cc4a41b8",
+      "toSide": "left"
+    },
+    {
+      "id": "6ad99b91439c44c2",
+      "fromNode": "32a3772e1e504863",
+      "fromSide": "right",
+      "toNode": "167c3713be2f44a4",
+      "toSide": "left"
+    },
+    {
+      "id": "5b1dad06cd6b4c36",
+      "fromNode": "c700101d2aa74d0c",
+      "fromSide": "right",
+      "toNode": "e287030759244549",
+      "toSide": "left"
+    },
+    {
+      "id": "6afc7b1c792e4b80",
+      "fromNode": "4dae451d407e4b1f",
+      "fromSide": "right",
+      "toNode": "1af4abdfbb33475e",
+      "toSide": "left"
+    },
+    {
+      "id": "3c3a4649123d45e8",
+      "fromNode": "90ca972895984397",
+      "fromSide": "right",
+      "toNode": "68846ee515cb4ca6",
+      "toSide": "left"
+    },
+    {
+      "id": "a32b6c8cbac94885",
+      "fromNode": "3c817441e440477f",
+      "fromSide": "right",
+      "toNode": "299864a822a1485b",
+      "toSide": "left"
+    },
+    {
+      "id": "778198dd8276433e",
+      "fromNode": "20b1b300d9d74bca",
+      "fromSide": "right",
+      "toNode": "9b94722b698148d5",
+      "toSide": "left"
+    },
+    {
+      "id": "a9a94a4d7f664cee",
+      "fromNode": "ac72c825e2fd4ce8",
+      "fromSide": "right",
+      "toNode": "215918d29c8c402e",
+      "toSide": "left"
+    }
+  ]
+}

@@ -35,24 +35,17 @@
             "id": "67accecec96784a3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
+                "file": "02_Economy/01_Econometrics/01_Econometrics.canvas",
+                "viewState": {
+                  "x": 452.1686859601464,
+                  "y": 766.9332471357809,
+                  "zoom": -0.9655946672984744
                 }
               },
-              "icon": "lucide-file",
-              "title": "02_Strings,Input-Output and Branching"
+              "icon": "lucide-layout-dashboard",
+              "title": "01_Econometrics"
             }
           },
           {
@@ -380,6 +373,18 @@
   },
   "active": "ed6edb2cedb20524",
   "lastOpenFiles": [
+    "02_Economy/01_Econometrics/01_Econometrics.canvas",
+    "02_Economy/02_public finance财政学/2_财政支出/04_经常性支出.md",
+    "02_Economy/02_public finance财政学/2_财政支出/03_财政支出总论.md",
+    "02_Economy/02_public finance财政学/02_public finance财政学.canvas",
+    "02_Economy/10_发展经济学/10_发展经济学.canvas",
+    "02_Economy/08_经济预测与决策/08_经济预测与决策.canvas",
+    "02_Economy/07_金融机构与风险管理/07_金融机构与风险管理.canvas",
+    "02_Economy/06_证券投资学/06_证券投资学.canvas",
+    "02_Economy/05_财务管理/05_财务管理.canvas",
+    "02_Economy/04_经济思想史/04_经济思想史.canvas",
+    "02_Economy/03_货币银行学/03_货币银行学.canvas",
+    "01_Math/06_时间序列分析/06_时间序列分析.canvas",
     "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
     "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec02.pdf",
@@ -414,9 +419,6 @@
     "00_factor/concept/2SLS.md",
     "00_factor/00_hub/DID-hub.md",
     "00_factor/00_hub/Capital and Risk Management-hub.md",
-    "00_factor/framework/Dual Economy Model.md",
-    "00_factor/framework/Growth Theory.md",
-    "Untitled.canvas",
     "01_Math/04_多元统计分析/WechatIMG1755.jpg",
     "98_attachment/Pasted image 20250629104152.png",
     "98_attachment/Pasted image 20250629104144.png",
@@ -425,8 +427,6 @@
     "98_attachment/Pasted image 20250628204657.png",
     "98_attachment/Pasted image 20250628201348.png",
     "98_attachment/Pasted image 20250628132927.png",
-    "98_attachment/Pasted image 20250627210154.png",
-    "01_Econometrics/未命名.canvas",
-    "04_货币银行学/1_引言/未命名.canvas"
+    "98_attachment/Pasted image 20250627210154.png"
   ]
 }

@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "01_Econometrics",
+      "path": "02_Economy/01_Econometrics/01_Econometrics.canvas"
+    },
+    {
+      "basename": "04_经常性支出",
+      "path": "02_Economy/02_public finance财政学/2_财政支出/04_经常性支出.md"
+    },
+    {
+      "basename": "03_财政支出总论",
+      "path": "02_Economy/02_public finance财政学/2_财政支出/03_财政支出总论.md"
+    },
+    {
+      "basename": "02_public finance财政学",
+      "path": "02_Economy/02_public finance财政学/02_public finance财政学.canvas"
+    },
+    {
       "basename": "02_Strings,Input-Output and Branching",
       "path": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "01_介绍时间序列",
       "path": "01_Math/06_时间序列分析/01_介绍时间序列.md"
-    },
-    {
-      "basename": "00_导论与概率论复习",
-      "path": "01_Math/06_时间序列分析/00_导论与概率论复习.md"
-    },
-    {
-      "basename": "周记模版",
-      "path": "00_inbox/周记模版.md"
-    },
-    {
-      "basename": "插入批注",
-      "path": "00_inbox/插入批注.md"
-    },
-    {
-      "basename": "01_导论",
-      "path": "01_Math/03_game theory/01_导论.md"
     }
   ],
   "omittedPaths": [],

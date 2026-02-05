@@ -1,0 +1,31 @@
+{
+  "nodes": [
+    {
+      "id": "74029ec8fa254614",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/04_经济思想史/01_导论.md"
+    },
+    {
+      "id": "fe955359c28744b2",
+      "type": "text",
+      "x": 400,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 研究基本方法论"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e13f74c23df543ec",
+      "fromNode": "74029ec8fa254614",
+      "fromSide": "right",
+      "toNode": "fe955359c28744b2",
+      "toSide": "left"
+    }
+  ]
+}

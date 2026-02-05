@@ -1,0 +1,181 @@
+{
+  "nodes": [
+    {
+      "id": "861b765032b04b4d",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/03_game theory/01_导论.md"
+    },
+    {
+      "id": "fe2bfba0bfe04594",
+      "type": "text",
+      "x": 400,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 一个案例\n- 1.完全竞争(Perfect Competition)\n- 2.寡头(Oligopoly)\n- 3.垄断(Monopoly)"
+    },
+    {
+      "id": "7f36f6cc7a204919",
+      "type": "file",
+      "x": 840,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/03_game theory/02_初步认识博弈.md"
+    },
+    {
+      "id": "6df203b3b07243f1",
+      "type": "text",
+      "x": 1240,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 1.描述博弈的两个方法\n- 1.1.[[策略式表达]] strategic-form Games\n- 1.2规范式表达(Normal Form Representation)\n- 1.2规范式表达"
+    },
+    {
+      "id": "670b841d8cce470a",
+      "type": "file",
+      "x": 1680,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/03_game theory/03_策略式博弈.md"
+    },
+    {
+      "id": "4256795c1d814df0",
+      "type": "text",
+      "x": 2080,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 1.囚徒困境The Prisoners’ Dilemma\n- 定义definition\n- 延伸：严格占优策略中的连续剔除 Iterated Deletion of Strictly Dominated Strategies\n- 如何走出囚徒困境"
+    },
+    {
+      "id": "5783115724f84114",
+      "type": "file",
+      "x": 0,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md"
+    },
+    {
+      "id": "8f5ca46c73f74c16",
+      "type": "text",
+      "x": 400,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 垄断\n- 基本信息\n- 分析\n- 分类"
+    },
+    {
+      "id": "fd097c0704a743bc",
+      "type": "file",
+      "x": 840,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/03_game theory/05_贝叶斯博弈.md"
+    },
+    {
+      "id": "818c69450f844cb8",
+      "type": "text",
+      "x": 1240,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 贝叶斯博弈\n- 基本信息\n- 求解纳什均衡\n- 五元素"
+    },
+    {
+      "id": "bbee0e2f49e84577",
+      "type": "file",
+      "x": 1680,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/03_game theory/06_扩展性博弈.md"
+    },
+    {
+      "id": "98ead626c8404edc",
+      "type": "text",
+      "x": 2080,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# entry Deterrence\n- 基本内容\n- 扩展性博弈\n- 将扩展性博弈转化为策略式博弈"
+    },
+    {
+      "id": "629cec2fb2234068",
+      "type": "file",
+      "x": 0,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "file": "01_Math/03_game theory/07_子博弈不完全信息.md"
+    },
+    {
+      "id": "662be90078594df8",
+      "type": "text",
+      "x": 400,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "text": "# 案例\n- 改变的内容\n- 分析\n- 定义"
+    }
+  ],
+  "edges": [
+    {
+      "id": "86040d2a127648e4",
+      "fromNode": "861b765032b04b4d",
+      "fromSide": "right",
+      "toNode": "fe2bfba0bfe04594",
+      "toSide": "left"
+    },
+    {
+      "id": "a6debee5c7d74861",
+      "fromNode": "7f36f6cc7a204919",
+      "fromSide": "right",
+      "toNode": "6df203b3b07243f1",
+      "toSide": "left"
+    },
+    {
+      "id": "3429e2cc00404cf8",
+      "fromNode": "670b841d8cce470a",
+      "fromSide": "right",
+      "toNode": "4256795c1d814df0",
+      "toSide": "left"
+    },
+    {
+      "id": "66d79e511c1c4dac",
+      "fromNode": "5783115724f84114",
+      "fromSide": "right",
+      "toNode": "8f5ca46c73f74c16",
+      "toSide": "left"
+    },
+    {
+      "id": "17cabd8aa50d411b",
+      "fromNode": "fd097c0704a743bc",
+      "fromSide": "right",
+      "toNode": "818c69450f844cb8",
+      "toSide": "left"
+    },
+    {
+      "id": "61b9e5b5222643df",
+      "fromNode": "bbee0e2f49e84577",
+      "fromSide": "right",
+      "toNode": "98ead626c8404edc",
+      "toSide": "left"
+    },
+    {
+      "id": "e7c7a96ad9a148dc",
+      "fromNode": "629cec2fb2234068",
+      "fromSide": "right",
+      "toNode": "662be90078594df8",
+      "toSide": "left"
+    }
+  ]
+}

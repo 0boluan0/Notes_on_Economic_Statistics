@@ -1,0 +1,331 @@
+{
+  "nodes": [
+    {
+      "id": "30db051f93e1457c",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/06_证券投资学/00_仅划重点.md"
+    },
+    {
+      "id": "b8e3671899b842d8",
+      "type": "text",
+      "x": 400,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 1.证券投资工具(Securities Investment Tools)\n- (1)\n- (2)\n- (3)"
+    },
+    {
+      "id": "f9c952fc11b64aab",
+      "type": "file",
+      "x": 840,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/06_证券投资学/01_证券投资工具.md"
+    },
+    {
+      "id": "aaf89633abb642a2",
+      "type": "text",
+      "x": 1240,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 0. 考点,记忆用(Key Points for Exam, Memory Aid)\n- 1.1证券及其特征(Securities and Their Characteristics)\n- 1.2 证券分类(Classification of Securities)\n- 1.3 投资与证券投资(Investment and Securities Investment)"
+    },
+    {
+      "id": "d74cfebbe1284037",
+      "type": "file",
+      "x": 1680,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/06_证券投资学/02_证券市场.md"
+    },
+    {
+      "id": "51f9f2d192824a18",
+      "type": "text",
+      "x": 2080,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 1. 证券市场概述\n- 1.1 证券市场的特征\n- 1.2 证券市场分类与结构\n- 1.3 证券市场发展阶段"
+    },
+    {
+      "id": "9d77d1ef3eab4f39",
+      "type": "file",
+      "x": 0,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/06_证券投资学/03_资产定价理论及其发展.md"
+    },
+    {
+      "id": "3f04c5edee3a4009",
+      "type": "text",
+      "x": 400,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 1. 1950’ 以前的资产定价理论\n- 1.1 威廉姆斯的研究\n- 1.2 考尔斯的研究结论\n- 2.1 基础资产定价理论"
+    },
+    {
+      "id": "72e342e119ac4b93",
+      "type": "file",
+      "x": 840,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/06_证券投资学/04_宏观经济分析.md"
+    },
+    {
+      "id": "026ba96b1df8406b",
+      "type": "text",
+      "x": 1240,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 1. 宏观分析方法\n- 1.1 宏观经济分析框架\n- 1.2 宏观经济分析的AD-AS方法\n- 2.1 宏观经济运行对证券市场的影响"
+    },
+    {
+      "id": "52c61898e83c4f1a",
+      "type": "file",
+      "x": 1680,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/06_证券投资学/05_行业分析.md"
+    },
+    {
+      "id": "e1c53ed7719b4c73",
+      "type": "text",
+      "x": 2080,
+      "y": 300,
+      "width": 360,
+      "height": 220,
+      "text": "# 1 行业分析概述\n- 1.1行业与产业的含义\n- 2.1行业的基本经济特性分析\n- 2.2行业环境分析"
+    },
+    {
+      "id": "bdc9257d5c114753",
+      "type": "file",
+      "x": 0,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/06_证券投资学/06_公司财务分析.md"
+    },
+    {
+      "id": "fb05dbdba1954f40",
+      "type": "text",
+      "x": 400,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "text": "# 1.公司会计数据分析任务\n- 1.2会计数据分析的步骤\n- 2.2**资产负债表**\n- 2.2**损益表**"
+    },
+    {
+      "id": "9b079fb3ce084747",
+      "type": "file",
+      "x": 840,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/06_证券投资学/07_公司价值分析.md"
+    },
+    {
+      "id": "aaadca67d8f348c7",
+      "type": "text",
+      "x": 1240,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "text": "# 1.公司基本素质分析\n- 1.1公司基本情况分析\n- 1.2公司竞争地位分析\n- 1.3公司盈利能力分析"
+    },
+    {
+      "id": "3ceecd7ecb404af5",
+      "type": "file",
+      "x": 1680,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/06_证券投资学/08_证券投资技术分析概述.md"
+    },
+    {
+      "id": "c48a9bba7c154794",
+      "type": "text",
+      "x": 2080,
+      "y": 600,
+      "width": 360,
+      "height": 220,
+      "text": "# 1 证券投资分析的信息"
+    },
+    {
+      "id": "ecb04ad5f0f740c5",
+      "type": "file",
+      "x": 0,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/06_证券投资学/09_技术分析理论和方法.md"
+    },
+    {
+      "id": "9a3ba9b5c6ec496f",
+      "type": "text",
+      "x": 400,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "text": "# 1.道氏理论\n- 1.1基本内容\n- 1.2 道氏理论的缺陷\n- 2.1. 锤子线,上吊线"
+    },
+    {
+      "id": "3628b74b3d2a49f0",
+      "type": "file",
+      "x": 840,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/06_证券投资学/10_组合投资理论.md"
+    },
+    {
+      "id": "c59db21a765b4c4f",
+      "type": "text",
+      "x": 1240,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "text": "# 1.组合投资概述\n- 2.1 单个资产的收益,风险和资产间的相互关系"
+    },
+    {
+      "id": "1317828b5fac4e11",
+      "type": "file",
+      "x": 1680,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/06_证券投资学/11_风险资产的定价.md"
+    },
+    {
+      "id": "1f11dcdb0efa4b1c",
+      "type": "text",
+      "x": 2080,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "text": "# 第十一章 风险资产的定价\n- 一、CAPM 的基本假设\n- 二、资本市场线（Capital Market Line, CML）\n- 三、资产组合的投资选择"
+    },
+    {
+      "id": "6d03798b16614ab7",
+      "type": "file",
+      "x": 0,
+      "y": 1200,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/06_证券投资学/证券投资学划重点.md"
+    },
+    {
+      "id": "c8b5fe103fd94c12",
+      "type": "text",
+      "x": 400,
+      "y": 1200,
+      "width": 360,
+      "height": 220,
+      "text": "# 第一章"
+    }
+  ],
+  "edges": [
+    {
+      "id": "f62f69941b40475e",
+      "fromNode": "30db051f93e1457c",
+      "fromSide": "right",
+      "toNode": "b8e3671899b842d8",
+      "toSide": "left"
+    },
+    {
+      "id": "9e88321b39eb4869",
+      "fromNode": "f9c952fc11b64aab",
+      "fromSide": "right",
+      "toNode": "aaf89633abb642a2",
+      "toSide": "left"
+    },
+    {
+      "id": "61f9b6a07369428a",
+      "fromNode": "d74cfebbe1284037",
+      "fromSide": "right",
+      "toNode": "51f9f2d192824a18",
+      "toSide": "left"
+    },
+    {
+      "id": "54c1f55f4d104170",
+      "fromNode": "9d77d1ef3eab4f39",
+      "fromSide": "right",
+      "toNode": "3f04c5edee3a4009",
+      "toSide": "left"
+    },
+    {
+      "id": "2d28dae28b784d4f",
+      "fromNode": "72e342e119ac4b93",
+      "fromSide": "right",
+      "toNode": "026ba96b1df8406b",
+      "toSide": "left"
+    },
+    {
+      "id": "f7e3ede0c3c841f1",
+      "fromNode": "52c61898e83c4f1a",
+      "fromSide": "right",
+      "toNode": "e1c53ed7719b4c73",
+      "toSide": "left"
+    },
+    {
+      "id": "2e65f0b4b4f34008",
+      "fromNode": "bdc9257d5c114753",
+      "fromSide": "right",
+      "toNode": "fb05dbdba1954f40",
+      "toSide": "left"
+    },
+    {
+      "id": "b1fd4fafdde24b7b",
+      "fromNode": "9b079fb3ce084747",
+      "fromSide": "right",
+      "toNode": "aaadca67d8f348c7",
+      "toSide": "left"
+    },
+    {
+      "id": "490349422bbe42ad",
+      "fromNode": "3ceecd7ecb404af5",
+      "fromSide": "right",
+      "toNode": "c48a9bba7c154794",
+      "toSide": "left"
+    },
+    {
+      "id": "f2508e60c9e7481a",
+      "fromNode": "ecb04ad5f0f740c5",
+      "fromSide": "right",
+      "toNode": "9a3ba9b5c6ec496f",
+      "toSide": "left"
+    },
+    {
+      "id": "0680f835b5fa45ce",
+      "fromNode": "3628b74b3d2a49f0",
+      "fromSide": "right",
+      "toNode": "c59db21a765b4c4f",
+      "toSide": "left"
+    },
+    {
+      "id": "d098a54e223346b9",
+      "fromNode": "1317828b5fac4e11",
+      "fromSide": "right",
+      "toNode": "1f11dcdb0efa4b1c",
+      "toSide": "left"
+    },
+    {
+      "id": "ea0759a638e14db2",
+      "fromNode": "6d03798b16614ab7",
+      "fromSide": "right",
+      "toNode": "c8b5fe103fd94c12",
+      "toSide": "left"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "nodes": [
+    {
+      "id": "c7aeb07de5d04533",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "file": "02_Economy/03_货币银行学/0_货币银行学看板.md"
+    },
+    {
+      "id": "4bbadc6d03a94447",
+      "type": "text",
+      "x": 400,
+      "y": 0,
+      "width": 360,
+      "height": 220,
+      "text": "# 0_货币银行学看板\n- 未完成(Todo)\n- 未听课(Unattended Classes)\n- 已完成(Completed)"
+    }
+  ],
+  "edges": [
+    {
+      "id": "b276783b5b5e461e",
+      "fromNode": "c7aeb07de5d04533",
+      "fromSide": "right",
+      "toNode": "4bbadc6d03a94447",
+      "toSide": "left"
+    }
+  ]
+}
