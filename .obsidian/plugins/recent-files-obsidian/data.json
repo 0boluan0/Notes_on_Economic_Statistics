@@ -5,6 +5,18 @@
       "path": "02_Economy/01_Econometrics/01_Econometrics.canvas"
     },
     {
+      "basename": "05_多元回归模型的矩阵表达",
+      "path": "02_Economy/01_Econometrics/05_多元回归模型的矩阵表达.md"
+    },
+    {
+      "basename": "06_多重共线性",
+      "path": "02_Economy/01_Econometrics/06_多重共线性.md"
+    },
+    {
+      "basename": "07_异方差",
+      "path": "02_Economy/01_Econometrics/07_异方差.md"
+    },
+    {
       "basename": "04_经常性支出",
       "path": "02_Economy/02_public finance财政学/2_财政支出/04_经常性支出.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "Advantage of Backwardness",
       "path": "00_factor/concept/Advantage of Backwardness.md"
-    },
-    {
-      "basename": "Wide-Sense Stationary Process",
-      "path": "00_factor/concept/Wide-Sense Stationary Process.md"
-    },
-    {
-      "basename": "03_平稳时间序列模型",
-      "path": "01_Math/06_时间序列分析/03_平稳时间序列模型.md"
-    },
-    {
-      "basename": "01_介绍时间序列",
-      "path": "01_Math/06_时间序列分析/01_介绍时间序列.md"
     }
   ],
   "omittedPaths": [],

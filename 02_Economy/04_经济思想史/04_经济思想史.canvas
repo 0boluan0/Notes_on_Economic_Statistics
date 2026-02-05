@@ -1,30 +1,245 @@
 {
   "nodes": [
     {
-      "id": "74029ec8fa254614",
-      "type": "file",
-      "x": 0,
-      "y": 0,
-      "width": 360,
-      "height": 220,
-      "file": "02_Economy/04_经济思想史/01_导论.md"
+      "id": "3fc77ad192d74edc",
+      "type": "text",
+      "x": -130,
+      "y": -60,
+      "width": 260,
+      "height": 120,
+      "text": "# 04_经济思想史\n\n课程知识地图",
+      "color": "5"
     },
     {
-      "id": "fe955359c28744b2",
+      "id": "3753163a24544cd3",
+      "type": "group",
+      "x": -399,
+      "y": -1189,
+      "width": 800,
+      "height": 380,
+      "label": "concept",
+      "color": "3"
+    },
+    {
+      "id": "16b7a527fb5a4990",
       "type": "text",
-      "x": 400,
-      "y": 0,
-      "width": 360,
+      "x": -359,
+      "y": -1149,
+      "width": 220,
+      "height": 80,
+      "text": "**Classical Economics**"
+    },
+    {
+      "id": "a086cbffd3b044f8",
+      "type": "text",
+      "x": -109,
+      "y": -1149,
+      "width": 220,
+      "height": 80,
+      "text": "**Marginal Revolution**"
+    },
+    {
+      "id": "1f97ab689b904a14",
+      "type": "text",
+      "x": 141,
+      "y": -1149,
+      "width": 220,
+      "height": 80,
+      "text": "**Mercantilism**"
+    },
+    {
+      "id": "06bebf4e98c94689",
+      "type": "text",
+      "x": -359,
+      "y": -1039,
+      "width": 220,
+      "height": 80,
+      "text": "**Null Space**"
+    },
+    {
+      "id": "a473ae7f69574958",
+      "type": "text",
+      "x": -109,
+      "y": -1039,
+      "width": 220,
+      "height": 80,
+      "text": "**Physiocrats**"
+    },
+    {
+      "id": "47ca5237c6654b97",
+      "type": "text",
+      "x": 141,
+      "y": -1039,
+      "width": 220,
+      "height": 80,
+      "text": "**成绩及考核方式**"
+    },
+    {
+      "id": "5d19c1b29ca142bd",
+      "type": "text",
+      "x": -359,
+      "y": -929,
+      "width": 220,
+      "height": 80,
+      "text": "**授课内容及课时安排**"
+    },
+    {
+      "id": "ac51af7ea51d46cc",
+      "type": "text",
+      "x": -109,
+      "y": -929,
+      "width": 220,
+      "height": 80,
+      "text": "**研究基本方法论**"
+    },
+    {
+      "id": "9d53438c768f44ab",
+      "type": "group",
+      "x": 466,
+      "y": -609,
+      "width": 800,
       "height": 220,
-      "text": "# 研究基本方法论"
+      "label": "framework",
+      "color": "3"
+    },
+    {
+      "id": "68744679b4b64363",
+      "type": "group",
+      "x": 466,
+      "y": 389,
+      "width": 800,
+      "height": 220,
+      "label": "procedure",
+      "color": "3"
+    },
+    {
+      "id": "7c29b59f952a4c98",
+      "type": "group",
+      "x": -399,
+      "y": 889,
+      "width": 800,
+      "height": 220,
+      "label": "system",
+      "color": "3"
+    },
+    {
+      "id": "b5f93fac06124f51",
+      "type": "group",
+      "x": -1266,
+      "y": 390,
+      "width": 800,
+      "height": 220,
+      "label": "proof",
+      "color": "3"
+    },
+    {
+      "id": "2c9c789d0744409a",
+      "type": "group",
+      "x": -1266,
+      "y": -610,
+      "width": 800,
+      "height": 220,
+      "label": "writing",
+      "color": "3"
     }
   ],
   "edges": [
     {
-      "id": "e13f74c23df543ec",
-      "fromNode": "74029ec8fa254614",
+      "id": "5877fa8426da4adf",
+      "fromNode": "3fc77ad192d74edc",
       "fromSide": "right",
-      "toNode": "fe955359c28744b2",
+      "toNode": "3753163a24544cd3",
+      "toSide": "left"
+    },
+    {
+      "id": "5cff0469dee04576",
+      "fromNode": "3753163a24544cd3",
+      "fromSide": "right",
+      "toNode": "16b7a527fb5a4990",
+      "toSide": "left"
+    },
+    {
+      "id": "b1bc437de8224ac7",
+      "fromNode": "3753163a24544cd3",
+      "fromSide": "right",
+      "toNode": "a086cbffd3b044f8",
+      "toSide": "left"
+    },
+    {
+      "id": "52e80c71a8b84e94",
+      "fromNode": "3753163a24544cd3",
+      "fromSide": "right",
+      "toNode": "1f97ab689b904a14",
+      "toSide": "left"
+    },
+    {
+      "id": "988dad043fbc4a98",
+      "fromNode": "3753163a24544cd3",
+      "fromSide": "right",
+      "toNode": "06bebf4e98c94689",
+      "toSide": "left"
+    },
+    {
+      "id": "2dd8ab7a8de94ac7",
+      "fromNode": "3753163a24544cd3",
+      "fromSide": "right",
+      "toNode": "a473ae7f69574958",
+      "toSide": "left"
+    },
+    {
+      "id": "63a4a7f79846491c",
+      "fromNode": "3753163a24544cd3",
+      "fromSide": "right",
+      "toNode": "47ca5237c6654b97",
+      "toSide": "left"
+    },
+    {
+      "id": "9821cf913c6a41a0",
+      "fromNode": "3753163a24544cd3",
+      "fromSide": "right",
+      "toNode": "5d19c1b29ca142bd",
+      "toSide": "left"
+    },
+    {
+      "id": "1ff22d27062f46d0",
+      "fromNode": "3753163a24544cd3",
+      "fromSide": "right",
+      "toNode": "ac51af7ea51d46cc",
+      "toSide": "left"
+    },
+    {
+      "id": "4f2e7164836d47d0",
+      "fromNode": "3fc77ad192d74edc",
+      "fromSide": "right",
+      "toNode": "9d53438c768f44ab",
+      "toSide": "left"
+    },
+    {
+      "id": "c03eafca764447ff",
+      "fromNode": "3fc77ad192d74edc",
+      "fromSide": "right",
+      "toNode": "68744679b4b64363",
+      "toSide": "left"
+    },
+    {
+      "id": "08f9d8aaaf1a40f3",
+      "fromNode": "3fc77ad192d74edc",
+      "fromSide": "right",
+      "toNode": "7c29b59f952a4c98",
+      "toSide": "left"
+    },
+    {
+      "id": "67df133108f54375",
+      "fromNode": "3fc77ad192d74edc",
+      "fromSide": "right",
+      "toNode": "b5f93fac06124f51",
+      "toSide": "left"
+    },
+    {
+      "id": "4fbcbf1da25f4cc8",
+      "fromNode": "3fc77ad192d74edc",
+      "fromSide": "right",
+      "toNode": "2c9c789d0744409a",
       "toSide": "left"
     }
   ]

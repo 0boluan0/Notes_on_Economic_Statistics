@@ -1,30 +1,405 @@
 {
   "nodes": [
     {
-      "id": "c7aeb07de5d04533",
-      "type": "file",
-      "x": 0,
-      "y": 0,
-      "width": 360,
-      "height": 220,
-      "file": "02_Economy/03_货币银行学/0_货币银行学看板.md"
+      "id": "e21515ece1b04f4f",
+      "type": "text",
+      "x": -130,
+      "y": -60,
+      "width": 260,
+      "height": 120,
+      "text": "# 03_货币银行学\n\n课程知识地图",
+      "color": "5"
     },
     {
-      "id": "4bbadc6d03a94447",
+      "id": "65341b092f6e4449",
+      "type": "group",
+      "x": -399,
+      "y": -1354,
+      "width": 800,
+      "height": 710,
+      "label": "concept",
+      "color": "3"
+    },
+    {
+      "id": "5d485d757c5e45ea",
       "type": "text",
-      "x": 400,
-      "y": 0,
-      "width": 360,
+      "x": -359,
+      "y": -1314,
+      "width": 220,
+      "height": 80,
+      "text": "**Central Limit Theorem**"
+    },
+    {
+      "id": "c63c037f21b24fc0",
+      "type": "text",
+      "x": -109,
+      "y": -1314,
+      "width": 220,
+      "height": 80,
+      "text": "**Economic Development**"
+    },
+    {
+      "id": "2f5b671c93034bc3",
+      "type": "text",
+      "x": 141,
+      "y": -1314,
+      "width": 220,
+      "height": 80,
+      "text": "**Efficient Frontier**"
+    },
+    {
+      "id": "2365037177204841",
+      "type": "text",
+      "x": -359,
+      "y": -1204,
+      "width": 220,
+      "height": 80,
+      "text": "**Efficient Market Hypothesis**"
+    },
+    {
+      "id": "f837839b2b5b43ed",
+      "type": "text",
+      "x": -109,
+      "y": -1204,
+      "width": 220,
+      "height": 80,
+      "text": "**Expectations Theory**"
+    },
+    {
+      "id": "c6de82d8a86c4086",
+      "type": "text",
+      "x": 141,
+      "y": -1204,
+      "width": 220,
+      "height": 80,
+      "text": "**Interest Rate Sensitivity Gap**"
+    },
+    {
+      "id": "7c4c3c20d2d54667",
+      "type": "text",
+      "x": -359,
+      "y": -1094,
+      "width": 220,
+      "height": 80,
+      "text": "**Market Risk**"
+    },
+    {
+      "id": "7bd8169c916049bf",
+      "type": "text",
+      "x": -109,
+      "y": -1094,
+      "width": 220,
+      "height": 80,
+      "text": "**Monetary Base**"
+    },
+    {
+      "id": "eef27000b2734662",
+      "type": "text",
+      "x": 141,
+      "y": -1094,
+      "width": 220,
+      "height": 80,
+      "text": "**Money Multiplier**"
+    },
+    {
+      "id": "ae71f59903524122",
+      "type": "text",
+      "x": -359,
+      "y": -984,
+      "width": 220,
+      "height": 80,
+      "text": "**Risk Structure of Interest Rates**"
+    },
+    {
+      "id": "5bcf393facbb4c1b",
+      "type": "text",
+      "x": -109,
+      "y": -984,
+      "width": 220,
+      "height": 80,
+      "text": "**Stock Valuation Model**"
+    },
+    {
+      "id": "87af64f8ea8d4e56",
+      "type": "text",
+      "x": 141,
+      "y": -984,
+      "width": 220,
+      "height": 80,
+      "text": "**strategies**"
+    },
+    {
+      "id": "fcd8ab3bb99b46ee",
+      "type": "text",
+      "x": -359,
+      "y": -874,
+      "width": 220,
+      "height": 80,
+      "text": "**Yield Curve**"
+    },
+    {
+      "id": "b59d67ce91994666",
+      "type": "text",
+      "x": -109,
+      "y": -874,
+      "width": 220,
+      "height": 80,
+      "text": "**完成**"
+    },
+    {
+      "id": "840c35ec47fc4e73",
+      "type": "text",
+      "x": 141,
+      "y": -874,
+      "width": 220,
+      "height": 80,
+      "text": "**已完成(Completed)**"
+    },
+    {
+      "id": "36a82fdb087f42cb",
+      "type": "text",
+      "x": -359,
+      "y": -764,
+      "width": 220,
+      "height": 80,
+      "text": "**未听课(Unattended Classes)**"
+    },
+    {
+      "id": "748480d433924e80",
+      "type": "text",
+      "x": -109,
+      "y": -764,
+      "width": 220,
+      "height": 80,
+      "text": "**未完成(Todo)**"
+    },
+    {
+      "id": "317012ab239949cc",
+      "type": "group",
+      "x": 466,
+      "y": -609,
+      "width": 800,
       "height": 220,
-      "text": "# 0_货币银行学看板\n- 未完成(Todo)\n- 未听课(Unattended Classes)\n- 已完成(Completed)"
+      "label": "framework",
+      "color": "3"
+    },
+    {
+      "id": "2a0df629f0bf465d",
+      "type": "group",
+      "x": 466,
+      "y": 389,
+      "width": 800,
+      "height": 220,
+      "label": "procedure",
+      "color": "3"
+    },
+    {
+      "id": "162374c547d14507",
+      "type": "text",
+      "x": 506,
+      "y": 429,
+      "width": 220,
+      "height": 80,
+      "text": "**Financial Ratio Analysis**"
+    },
+    {
+      "id": "c6aa96a196d4481f",
+      "type": "group",
+      "x": -399,
+      "y": 889,
+      "width": 800,
+      "height": 220,
+      "label": "system",
+      "color": "3"
+    },
+    {
+      "id": "5c5598f315434919",
+      "type": "group",
+      "x": -1266,
+      "y": 390,
+      "width": 800,
+      "height": 220,
+      "label": "proof",
+      "color": "3"
+    },
+    {
+      "id": "9bf6585d61c64223",
+      "type": "group",
+      "x": -1266,
+      "y": -610,
+      "width": 800,
+      "height": 220,
+      "label": "writing",
+      "color": "3"
     }
   ],
   "edges": [
     {
-      "id": "b276783b5b5e461e",
-      "fromNode": "c7aeb07de5d04533",
+      "id": "1b1d8003efcb43da",
+      "fromNode": "e21515ece1b04f4f",
       "fromSide": "right",
-      "toNode": "4bbadc6d03a94447",
+      "toNode": "65341b092f6e4449",
+      "toSide": "left"
+    },
+    {
+      "id": "6cfa231c624f4fec",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "5d485d757c5e45ea",
+      "toSide": "left"
+    },
+    {
+      "id": "c70ffe15f4ac451c",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "c63c037f21b24fc0",
+      "toSide": "left"
+    },
+    {
+      "id": "c36167836e864d01",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "2f5b671c93034bc3",
+      "toSide": "left"
+    },
+    {
+      "id": "6902ed80306f4b92",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "2365037177204841",
+      "toSide": "left"
+    },
+    {
+      "id": "64d5b63749f643c7",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "f837839b2b5b43ed",
+      "toSide": "left"
+    },
+    {
+      "id": "f1e35160cadc4d71",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "c6de82d8a86c4086",
+      "toSide": "left"
+    },
+    {
+      "id": "69ab660967fc409b",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "7c4c3c20d2d54667",
+      "toSide": "left"
+    },
+    {
+      "id": "33a2efe41f774746",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "7bd8169c916049bf",
+      "toSide": "left"
+    },
+    {
+      "id": "62bb6b08fa5c43a2",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "eef27000b2734662",
+      "toSide": "left"
+    },
+    {
+      "id": "6853f3f4368a4693",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "ae71f59903524122",
+      "toSide": "left"
+    },
+    {
+      "id": "2d3476c8f41b4f75",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "5bcf393facbb4c1b",
+      "toSide": "left"
+    },
+    {
+      "id": "ab545fa582e34c21",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "87af64f8ea8d4e56",
+      "toSide": "left"
+    },
+    {
+      "id": "d4debbb9513e4cc0",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "fcd8ab3bb99b46ee",
+      "toSide": "left"
+    },
+    {
+      "id": "a352f59c20da4c9e",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "b59d67ce91994666",
+      "toSide": "left"
+    },
+    {
+      "id": "a55890b8c6e44d23",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "840c35ec47fc4e73",
+      "toSide": "left"
+    },
+    {
+      "id": "7894e25455e047f5",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "36a82fdb087f42cb",
+      "toSide": "left"
+    },
+    {
+      "id": "530d2e4907914708",
+      "fromNode": "65341b092f6e4449",
+      "fromSide": "right",
+      "toNode": "748480d433924e80",
+      "toSide": "left"
+    },
+    {
+      "id": "30d011c8376241ac",
+      "fromNode": "e21515ece1b04f4f",
+      "fromSide": "right",
+      "toNode": "317012ab239949cc",
+      "toSide": "left"
+    },
+    {
+      "id": "e99a63555b3a469e",
+      "fromNode": "e21515ece1b04f4f",
+      "fromSide": "right",
+      "toNode": "2a0df629f0bf465d",
+      "toSide": "left"
+    },
+    {
+      "id": "ee7dd59c86f4456c",
+      "fromNode": "2a0df629f0bf465d",
+      "fromSide": "right",
+      "toNode": "162374c547d14507",
+      "toSide": "left"
+    },
+    {
+      "id": "ec6cb8835af44438",
+      "fromNode": "e21515ece1b04f4f",
+      "fromSide": "right",
+      "toNode": "c6aa96a196d4481f",
+      "toSide": "left"
+    },
+    {
+      "id": "c67d4905e40149f7",
+      "fromNode": "e21515ece1b04f4f",
+      "fromSide": "right",
+      "toNode": "5c5598f315434919",
+      "toSide": "left"
+    },
+    {
+      "id": "0376674e89124b94",
+      "fromNode": "e21515ece1b04f4f",
+      "fromSide": "right",
+      "toNode": "9bf6585d61c64223",
       "toSide": "left"
     }
   ]

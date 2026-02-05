@@ -1,80 +1,933 @@
 {
   "nodes": [
     {
-      "id": "821586ff491249fc",
-      "type": "file",
-      "x": 0,
-      "y": 0,
-      "width": 360,
-      "height": 220,
-      "file": "01_Math/02_linear algebra/00_perface.md"
-    },
-    {
-      "id": "7facb4acb7174388",
+      "id": "5ff7abcc31264873",
       "type": "text",
-      "x": 400,
-      "y": 0,
-      "width": 360,
-      "height": 220,
-      "text": "# 方程组的不同记法\n- Row picture\n- column picture\n- 方程组的矩阵形式"
+      "x": -130,
+      "y": -60,
+      "width": 260,
+      "height": 120,
+      "text": "# 02_linear algebra\n\n课程知识地图",
+      "color": "5"
     },
     {
-      "id": "7b7e8748f04e4bd3",
-      "type": "file",
-      "x": 840,
-      "y": 0,
-      "width": 360,
-      "height": 220,
-      "file": "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md"
+      "id": "f09112edda514c51",
+      "type": "group",
+      "x": -399,
+      "y": -2519,
+      "width": 800,
+      "height": 1920,
+      "label": "concept",
+      "color": "3"
     },
     {
-      "id": "74acddafb45944d1",
+      "id": "76364b0ee4b44936",
       "type": "text",
-      "x": 1240,
-      "y": 0,
-      "width": 360,
-      "height": 220,
-      "text": "# introduction\n- 方程消元\n- 矩阵消元(Matrix Elimination)\n- 矩阵乘法的四种表示"
+      "x": -359,
+      "y": -2479,
+      "width": 220,
+      "height": 80,
+      "text": "**Augmented Dickey-Fuller Test**"
     },
     {
-      "id": "6bd296381dff41a8",
-      "type": "file",
-      "x": 1680,
-      "y": 0,
-      "width": 360,
-      "height": 220,
-      "file": "01_Math/02_linear algebra/02_vector spaces and subspace.md"
-    },
-    {
-      "id": "6706f6ab01d84752",
+      "id": "bab4bb4b7baa4c99",
       "type": "text",
-      "x": 2080,
-      "y": 0,
-      "width": 360,
+      "x": -109,
+      "y": -2479,
+      "width": 220,
+      "height": 80,
+      "text": "**Column Space**"
+    },
+    {
+      "id": "59a648d8baf64ebd",
+      "type": "text",
+      "x": 141,
+      "y": -2479,
+      "width": 220,
+      "height": 80,
+      "text": "**Determinant**"
+    },
+    {
+      "id": "2f0f292404ab457d",
+      "type": "text",
+      "x": -359,
+      "y": -2369,
+      "width": 220,
+      "height": 80,
+      "text": "**Linear Combination**"
+    },
+    {
+      "id": "9c85fc35b24d4da8",
+      "type": "text",
+      "x": -109,
+      "y": -2369,
+      "width": 220,
+      "height": 80,
+      "text": "**Linear Combination of Two Random Variables**"
+    },
+    {
+      "id": "18d1df00d32f467f",
+      "type": "text",
+      "x": 141,
+      "y": -2369,
+      "width": 220,
+      "height": 80,
+      "text": "**Linear Systems**"
+    },
+    {
+      "id": "74ae9da957864703",
+      "type": "text",
+      "x": -359,
+      "y": -2259,
+      "width": 220,
+      "height": 80,
+      "text": "**LU Decomposition**"
+    },
+    {
+      "id": "c67d7ce7a2654157",
+      "type": "text",
+      "x": -109,
+      "y": -2259,
+      "width": 220,
+      "height": 80,
+      "text": "**Matrix Inverse**"
+    },
+    {
+      "id": "35d352a75163435a",
+      "type": "text",
+      "x": 141,
+      "y": -2259,
+      "width": 220,
+      "height": 80,
+      "text": "**Matrix Rank**"
+    },
+    {
+      "id": "5302b57130094c04",
+      "type": "text",
+      "x": -359,
+      "y": -2149,
+      "width": 220,
+      "height": 80,
+      "text": "**Null Space**"
+    },
+    {
+      "id": "78e3b4cc7e864545",
+      "type": "text",
+      "x": -109,
+      "y": -2149,
+      "width": 220,
+      "height": 80,
+      "text": "**Permutation Matrix**"
+    },
+    {
+      "id": "1d3c552f5a544448",
+      "type": "text",
+      "x": 141,
+      "y": -2149,
+      "width": 220,
+      "height": 80,
+      "text": "**Singular Matrix**"
+    },
+    {
+      "id": "34b3aaff010346a4",
+      "type": "text",
+      "x": -359,
+      "y": -2039,
+      "width": 220,
+      "height": 80,
+      "text": "**Subspace**"
+    },
+    {
+      "id": "bb031d5877ad4218",
+      "type": "text",
+      "x": -109,
+      "y": -2039,
+      "width": 220,
+      "height": 80,
+      "text": "**Symmetric Matrix**"
+    },
+    {
+      "id": "8885b681fb304cb0",
+      "type": "text",
+      "x": 141,
+      "y": -2039,
+      "width": 220,
+      "height": 80,
+      "text": "**Vector Space**"
+    },
+    {
+      "id": "1897dd2306614edb",
+      "type": "text",
+      "x": -359,
+      "y": -1929,
+      "width": 220,
+      "height": 80,
+      "text": "**column picture**"
+    },
+    {
+      "id": "8bb89ffc41de48c8",
+      "type": "text",
+      "x": -109,
+      "y": -1929,
+      "width": 220,
+      "height": 80,
+      "text": "**introduction**"
+    },
+    {
+      "id": "3cdc8f2c9d894346",
+      "type": "text",
+      "x": 141,
+      "y": -1929,
+      "width": 220,
+      "height": 80,
+      "text": "**Row picture**"
+    },
+    {
+      "id": "74c2cb1261ba4fba",
+      "type": "text",
+      "x": -359,
+      "y": -1819,
+      "width": 220,
+      "height": 80,
+      "text": "**举例**"
+    },
+    {
+      "id": "1c284b9445e6439c",
+      "type": "text",
+      "x": -109,
+      "y": -1819,
+      "width": 220,
+      "height": 80,
+      "text": "**乘积的转置**"
+    },
+    {
+      "id": "c9cf894364534315",
+      "type": "text",
+      "x": 141,
+      "y": -1819,
+      "width": 220,
+      "height": 80,
+      "text": "**乘积的逆**"
+    },
+    {
+      "id": "ddbd2bf3f8774a51",
+      "type": "text",
+      "x": -359,
+      "y": -1709,
+      "width": 220,
+      "height": 80,
+      "text": "**分块乘法(Block Multiplication)**"
+    },
+    {
+      "id": "4c39e5a850b94bf3",
+      "type": "text",
+      "x": -109,
+      "y": -1709,
+      "width": 220,
+      "height": 80,
+      "text": "**列表示(Column Representation)**"
+    },
+    {
+      "id": "95283fff5ef7474a",
+      "type": "text",
+      "x": 141,
+      "y": -1709,
+      "width": 220,
+      "height": 80,
+      "text": "**原理**"
+    },
+    {
+      "id": "f9326abde0844608",
+      "type": "text",
+      "x": -359,
+      "y": -1599,
+      "width": 220,
+      "height": 80,
+      "text": "**向量空间(Vector Space)**"
+    },
+    {
+      "id": "825c5efcd90b479d",
+      "type": "text",
+      "x": -109,
+      "y": -1599,
+      "width": 220,
+      "height": 80,
+      "text": "**向量空间的定义**"
+    },
+    {
+      "id": "65c6b7d0364b486b",
+      "type": "text",
+      "x": 141,
+      "y": -1599,
+      "width": 220,
+      "height": 80,
+      "text": "**奇异矩阵(Singular Matrix)**"
+    },
+    {
+      "id": "693c36761fce427a",
+      "type": "text",
+      "x": -359,
+      "y": -1489,
+      "width": 220,
+      "height": 80,
+      "text": "**子空间(subspace)**"
+    },
+    {
+      "id": "d1e126d10b2c4008",
+      "type": "text",
+      "x": -109,
+      "y": -1489,
+      "width": 220,
+      "height": 80,
+      "text": "**对称矩阵(Symmetric Matrix)**"
+    },
+    {
+      "id": "275a3a00753b4826",
+      "type": "text",
+      "x": 141,
+      "y": -1489,
+      "width": 220,
+      "height": 80,
+      "text": "**常规(Conventional)**"
+    },
+    {
+      "id": "d30cc4f034fc4cc0",
+      "type": "text",
+      "x": -359,
+      "y": -1379,
+      "width": 220,
+      "height": 80,
+      "text": "**方程消元**"
+    },
+    {
+      "id": "c4131b57d0a2403e",
+      "type": "text",
+      "x": -109,
+      "y": -1379,
+      "width": 220,
+      "height": 80,
+      "text": "**方程组的不同记法**"
+    },
+    {
+      "id": "0d0d556b44ee437c",
+      "type": "text",
+      "x": 141,
+      "y": -1379,
+      "width": 220,
+      "height": 80,
+      "text": "**方程组的矩阵形式**"
+    },
+    {
+      "id": "f5bcac4e2962459d",
+      "type": "text",
+      "x": -359,
+      "y": -1269,
+      "width": 220,
+      "height": 80,
+      "text": "**有解的条件**"
+    },
+    {
+      "id": "2c60be292ef045fb",
+      "type": "text",
+      "x": -109,
+      "y": -1269,
+      "width": 220,
+      "height": 80,
+      "text": "**求解**"
+    },
+    {
+      "id": "f9495212ea7b416b",
+      "type": "text",
+      "x": 141,
+      "y": -1269,
+      "width": 220,
+      "height": 80,
+      "text": "**求解矩阵的零空间**"
+    },
+    {
+      "id": "fa170c871a5b4cff",
+      "type": "text",
+      "x": -359,
+      "y": -1159,
+      "width": 220,
+      "height": 80,
+      "text": "**矩阵乘法和矩阵的逆**"
+    },
+    {
+      "id": "53a8479fbbcb4624",
+      "type": "text",
+      "x": -109,
+      "y": -1159,
+      "width": 220,
+      "height": 80,
+      "text": "**矩阵乘法的四种表示**"
+    },
+    {
+      "id": "cb9957530ba342da",
+      "type": "text",
+      "x": 141,
+      "y": -1159,
+      "width": 220,
+      "height": 80,
+      "text": "**矩阵消元(Matrix Elimination)**"
+    },
+    {
+      "id": "df393ab6efa747b3",
+      "type": "text",
+      "x": -359,
+      "y": -1049,
+      "width": 220,
+      "height": 80,
+      "text": "**矩阵消元的拆分形式**"
+    },
+    {
+      "id": "2753461ee57e4979",
+      "type": "text",
+      "x": -109,
+      "y": -1049,
+      "width": 220,
+      "height": 80,
+      "text": "**矩阵的秩(rank)**"
+    },
+    {
+      "id": "cb9c9738f4bd438e",
+      "type": "text",
+      "x": 141,
+      "y": -1049,
+      "width": 220,
+      "height": 80,
+      "text": "**置换矩阵(Permutation Matrix)**"
+    },
+    {
+      "id": "a86b2101812742a3",
+      "type": "text",
+      "x": -359,
+      "y": -939,
+      "width": 220,
+      "height": 80,
+      "text": "**行表示(Row Representation)**"
+    },
+    {
+      "id": "b4a56913a5954d83",
+      "type": "text",
+      "x": -109,
+      "y": -939,
+      "width": 220,
+      "height": 80,
+      "text": "**解方程Ax=b**"
+    },
+    {
+      "id": "426fc1545a6b4435",
+      "type": "text",
+      "x": 141,
+      "y": -939,
+      "width": 220,
+      "height": 80,
+      "text": "**转置矩阵(Transpose Matrix)**"
+    },
+    {
+      "id": "7c28af1fbe374f77",
+      "type": "text",
+      "x": -359,
+      "y": -829,
+      "width": 220,
+      "height": 80,
+      "text": "**逆矩阵(Inverse Matrix, 方阵)**"
+    },
+    {
+      "id": "4bfff0a41fd44878",
+      "type": "text",
+      "x": -109,
+      "y": -829,
+      "width": 220,
+      "height": 80,
+      "text": "**逆矩阵的计算**"
+    },
+    {
+      "id": "dbc83fe885d04b8c",
+      "type": "text",
+      "x": 141,
+      "y": -829,
+      "width": 220,
+      "height": 80,
+      "text": "**零空间(null space)**"
+    },
+    {
+      "id": "b70b28635fa043ff",
+      "type": "text",
+      "x": -359,
+      "y": -719,
+      "width": 220,
+      "height": 80,
+      "text": "**高斯消元法(Gaussian Elimination)**"
+    },
+    {
+      "id": "7ec5615820f9444d",
+      "type": "group",
+      "x": 950,
+      "y": -889,
+      "width": 800,
       "height": 220,
-      "text": "# 向量空间(Vector Space)\n- 向量空间的定义\n- 子空间(subspace)\n- 矩阵的秩(rank)"
+      "label": "framework",
+      "color": "3"
+    },
+    {
+      "id": "f6962b8e33ea4b17",
+      "type": "group",
+      "x": 950,
+      "y": 669,
+      "width": 800,
+      "height": 220,
+      "label": "procedure",
+      "color": "3"
+    },
+    {
+      "id": "add27cb1f61e44a0",
+      "type": "group",
+      "x": -399,
+      "y": 1449,
+      "width": 800,
+      "height": 220,
+      "label": "system",
+      "color": "3"
+    },
+    {
+      "id": "67ea29ce5bfa4e75",
+      "type": "text",
+      "x": -359,
+      "y": 1489,
+      "width": 220,
+      "height": 80,
+      "text": "**F-test**"
+    },
+    {
+      "id": "2fc36b60f59446f6",
+      "type": "text",
+      "x": -109,
+      "y": 1489,
+      "width": 220,
+      "height": 80,
+      "text": "**R-squared**"
+    },
+    {
+      "id": "0a2fe9155cdd4565",
+      "type": "group",
+      "x": -1750,
+      "y": 670,
+      "width": 800,
+      "height": 220,
+      "label": "proof",
+      "color": "3"
+    },
+    {
+      "id": "1eba0a8f838b4fd6",
+      "type": "group",
+      "x": -1750,
+      "y": -890,
+      "width": 800,
+      "height": 220,
+      "label": "writing",
+      "color": "3"
     }
   ],
   "edges": [
     {
-      "id": "06181381c4084205",
-      "fromNode": "821586ff491249fc",
+      "id": "93fe258f76d34a30",
+      "fromNode": "5ff7abcc31264873",
       "fromSide": "right",
-      "toNode": "7facb4acb7174388",
+      "toNode": "f09112edda514c51",
       "toSide": "left"
     },
     {
-      "id": "145623de6ebb49e3",
-      "fromNode": "7b7e8748f04e4bd3",
+      "id": "7ce2a4c108f84412",
+      "fromNode": "f09112edda514c51",
       "fromSide": "right",
-      "toNode": "74acddafb45944d1",
+      "toNode": "76364b0ee4b44936",
       "toSide": "left"
     },
     {
-      "id": "75ca2f844c4543fe",
-      "fromNode": "6bd296381dff41a8",
+      "id": "6aff1325affc48e4",
+      "fromNode": "f09112edda514c51",
       "fromSide": "right",
-      "toNode": "6706f6ab01d84752",
+      "toNode": "bab4bb4b7baa4c99",
+      "toSide": "left"
+    },
+    {
+      "id": "28974b340b2a4f7e",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "59a648d8baf64ebd",
+      "toSide": "left"
+    },
+    {
+      "id": "49351bcec6bb45e4",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "2f0f292404ab457d",
+      "toSide": "left"
+    },
+    {
+      "id": "a9d8d98b3b8e4a25",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "9c85fc35b24d4da8",
+      "toSide": "left"
+    },
+    {
+      "id": "9693fb491a0244f6",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "18d1df00d32f467f",
+      "toSide": "left"
+    },
+    {
+      "id": "e72599cb10894072",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "74ae9da957864703",
+      "toSide": "left"
+    },
+    {
+      "id": "8765e6008f2b44d8",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "c67d7ce7a2654157",
+      "toSide": "left"
+    },
+    {
+      "id": "ffbc374ab7c746bf",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "35d352a75163435a",
+      "toSide": "left"
+    },
+    {
+      "id": "669e5827a287400b",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "5302b57130094c04",
+      "toSide": "left"
+    },
+    {
+      "id": "cffaef8325ff4fa3",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "78e3b4cc7e864545",
+      "toSide": "left"
+    },
+    {
+      "id": "0e621c4178294fd1",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "1d3c552f5a544448",
+      "toSide": "left"
+    },
+    {
+      "id": "c4d6e44a8a8c4746",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "34b3aaff010346a4",
+      "toSide": "left"
+    },
+    {
+      "id": "630754281df8401a",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "bb031d5877ad4218",
+      "toSide": "left"
+    },
+    {
+      "id": "83ba05d4fb254cce",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "8885b681fb304cb0",
+      "toSide": "left"
+    },
+    {
+      "id": "d7421aa168c34fa1",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "1897dd2306614edb",
+      "toSide": "left"
+    },
+    {
+      "id": "2598eb0a4a4a42a8",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "8bb89ffc41de48c8",
+      "toSide": "left"
+    },
+    {
+      "id": "c18fc3563a8c4728",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "3cdc8f2c9d894346",
+      "toSide": "left"
+    },
+    {
+      "id": "370f6f551f4942aa",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "74c2cb1261ba4fba",
+      "toSide": "left"
+    },
+    {
+      "id": "211c88e7868641c1",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "1c284b9445e6439c",
+      "toSide": "left"
+    },
+    {
+      "id": "c3d83ca062b0422c",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "c9cf894364534315",
+      "toSide": "left"
+    },
+    {
+      "id": "bdd29cd99b934b97",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "ddbd2bf3f8774a51",
+      "toSide": "left"
+    },
+    {
+      "id": "0cefa024b1f64c42",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "4c39e5a850b94bf3",
+      "toSide": "left"
+    },
+    {
+      "id": "3a4357f0389a4a03",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "95283fff5ef7474a",
+      "toSide": "left"
+    },
+    {
+      "id": "6cf4a246e02d4f18",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "f9326abde0844608",
+      "toSide": "left"
+    },
+    {
+      "id": "f1d1d84ab7a74aa3",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "825c5efcd90b479d",
+      "toSide": "left"
+    },
+    {
+      "id": "d1bef0b5a0d74860",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "65c6b7d0364b486b",
+      "toSide": "left"
+    },
+    {
+      "id": "eeaedfe605064b3b",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "693c36761fce427a",
+      "toSide": "left"
+    },
+    {
+      "id": "bff0dc2234984b65",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "d1e126d10b2c4008",
+      "toSide": "left"
+    },
+    {
+      "id": "99a297c960564348",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "275a3a00753b4826",
+      "toSide": "left"
+    },
+    {
+      "id": "b69c2acc5d7b4fe1",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "d30cc4f034fc4cc0",
+      "toSide": "left"
+    },
+    {
+      "id": "210dcdc9690a43ff",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "c4131b57d0a2403e",
+      "toSide": "left"
+    },
+    {
+      "id": "390b81b991ae48fb",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "0d0d556b44ee437c",
+      "toSide": "left"
+    },
+    {
+      "id": "947463978b4e422c",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "f5bcac4e2962459d",
+      "toSide": "left"
+    },
+    {
+      "id": "e711ad9e4b644c44",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "2c60be292ef045fb",
+      "toSide": "left"
+    },
+    {
+      "id": "8e970324e75d49b5",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "f9495212ea7b416b",
+      "toSide": "left"
+    },
+    {
+      "id": "6e475bd1c78e4468",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "fa170c871a5b4cff",
+      "toSide": "left"
+    },
+    {
+      "id": "61b54144d180461c",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "53a8479fbbcb4624",
+      "toSide": "left"
+    },
+    {
+      "id": "724fb32e330540c3",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "cb9957530ba342da",
+      "toSide": "left"
+    },
+    {
+      "id": "2d887fb40be94ed8",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "df393ab6efa747b3",
+      "toSide": "left"
+    },
+    {
+      "id": "3651fa86fce746c2",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "2753461ee57e4979",
+      "toSide": "left"
+    },
+    {
+      "id": "99125ff4e19e4ecf",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "cb9c9738f4bd438e",
+      "toSide": "left"
+    },
+    {
+      "id": "6d42c3caa6de45c2",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "a86b2101812742a3",
+      "toSide": "left"
+    },
+    {
+      "id": "f3d21757160e499f",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "b4a56913a5954d83",
+      "toSide": "left"
+    },
+    {
+      "id": "626693cd14124317",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "426fc1545a6b4435",
+      "toSide": "left"
+    },
+    {
+      "id": "b241fe2139b04a03",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "7c28af1fbe374f77",
+      "toSide": "left"
+    },
+    {
+      "id": "d5107d0668434b58",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "4bfff0a41fd44878",
+      "toSide": "left"
+    },
+    {
+      "id": "7c6e9b9428af4aa9",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "dbc83fe885d04b8c",
+      "toSide": "left"
+    },
+    {
+      "id": "09fc1b8338834a05",
+      "fromNode": "f09112edda514c51",
+      "fromSide": "right",
+      "toNode": "b70b28635fa043ff",
+      "toSide": "left"
+    },
+    {
+      "id": "012fe29d5fd245b0",
+      "fromNode": "5ff7abcc31264873",
+      "fromSide": "right",
+      "toNode": "7ec5615820f9444d",
+      "toSide": "left"
+    },
+    {
+      "id": "c915507510d54664",
+      "fromNode": "5ff7abcc31264873",
+      "fromSide": "right",
+      "toNode": "f6962b8e33ea4b17",
+      "toSide": "left"
+    },
+    {
+      "id": "5c84ab95dde3433e",
+      "fromNode": "5ff7abcc31264873",
+      "fromSide": "right",
+      "toNode": "add27cb1f61e44a0",
+      "toSide": "left"
+    },
+    {
+      "id": "2b36485b7d6c44fe",
+      "fromNode": "add27cb1f61e44a0",
+      "fromSide": "right",
+      "toNode": "67ea29ce5bfa4e75",
+      "toSide": "left"
+    },
+    {
+      "id": "00f1a89cc4d1440b",
+      "fromNode": "add27cb1f61e44a0",
+      "fromSide": "right",
+      "toNode": "2fc36b60f59446f6",
+      "toSide": "left"
+    },
+    {
+      "id": "491dc5c5ebdf42f9",
+      "fromNode": "5ff7abcc31264873",
+      "fromSide": "right",
+      "toNode": "0a2fe9155cdd4565",
+      "toSide": "left"
+    },
+    {
+      "id": "f1b65a9fe6174281",
+      "fromNode": "5ff7abcc31264873",
+      "fromSide": "right",
+      "toNode": "1eba0a8f838b4fd6",
       "toSide": "left"
     }
   ]

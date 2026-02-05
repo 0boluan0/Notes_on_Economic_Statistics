@@ -1,230 +1,7589 @@
 {
   "nodes": [
     {
-      "id": "768ff8432d8d44a7",
-      "type": "file",
-      "x": 0,
-      "y": 0,
-      "width": 360,
-      "height": 220,
-      "file": "02_Economy/10_发展经济学/00_导论和考试相关.md"
-    },
-    {
-      "id": "c6843eb8437047b4",
+      "id": "9fee3392fd044789",
       "type": "text",
-      "x": 400,
-      "y": 0,
-      "width": 360,
-      "height": 220,
-      "text": "# 考试划重点\n- 前两道\n- 后两道"
+      "x": -130,
+      "y": -60,
+      "width": 260,
+      "height": 120,
+      "text": "# 10_发展经济学\n\n课程知识地图",
+      "color": "5"
     },
     {
-      "id": "d64226e161114ca0",
-      "type": "file",
-      "x": 840,
-      "y": 0,
-      "width": 360,
-      "height": 220,
-      "file": "02_Economy/10_发展经济学/01_不同国家的经济发展模式.md"
+      "id": "362ae0db6aae49f5",
+      "type": "group",
+      "x": -399,
+      "y": -16709,
+      "width": 800,
+      "height": 16110,
+      "label": "concept",
+      "color": "3"
     },
     {
-      "id": "71fdc9eef8c74ece",
+      "id": "35bf8ce5e79f41a4",
       "type": "text",
-      "x": 1240,
-      "y": 0,
-      "width": 360,
-      "height": 220,
-      "text": "# 1. 经济学发展历史\n- 1.1古典时期:经济学和社会学的分野\n- 1.2新古典时期:边际革命\n- 1.3现代经济学"
+      "x": -359,
+      "y": -16669,
+      "width": 220,
+      "height": 80,
+      "text": "**Advantage of Backwardness**"
     },
     {
-      "id": "43f0bd5b97fe4b09",
-      "type": "file",
-      "x": 1680,
-      "y": 0,
-      "width": 360,
-      "height": 220,
-      "file": "02_Economy/10_发展经济学/02_人口增长与经济发展.md"
-    },
-    {
-      "id": "00344fc8ef6447f8",
+      "id": "c2a4bbf473a94d0e",
       "type": "text",
-      "x": 2080,
-      "y": 0,
-      "width": 360,
-      "height": 220,
-      "text": "# 1. 解析人口发展的阶段\n- 2.1 两个假设\n- 2.2 论点\n- 2.3 模型解读"
+      "x": -109,
+      "y": -16669,
+      "width": 220,
+      "height": 80,
+      "text": "**Classical Economics**"
     },
     {
-      "id": "5be88c94cf6c455c",
-      "type": "file",
-      "x": 0,
-      "y": 300,
-      "width": 360,
-      "height": 220,
-      "file": "02_Economy/10_发展经济学/03_人口迁移理论 2.md"
-    },
-    {
-      "id": "f3ba58073dd14124",
+      "id": "de07d2a7038f4317",
       "type": "text",
-      "x": 400,
-      "y": 300,
-      "width": 360,
-      "height": 220,
-      "text": "# 1. 刘易斯模型\n- **1. 1. 刘易斯模型的基本思路**\n- **1.2. 图形的常见画法及含义**\n- **1.3. 数学表述(示意)**"
+      "x": 141,
+      "y": -16669,
+      "width": 220,
+      "height": 80,
+      "text": "**Common Resources**"
     },
     {
-      "id": "67364ffeecdf469a",
-      "type": "file",
-      "x": 840,
-      "y": 300,
-      "width": 360,
-      "height": 220,
-      "file": "02_Economy/10_发展经济学/03_人口迁移理论.md"
-    },
-    {
-      "id": "af8091c8eba04764",
+      "id": "0f508110b1fe4ed5",
       "type": "text",
-      "x": 1240,
-      "y": 300,
-      "width": 360,
-      "height": 220,
-      "text": "# 1. 刘易斯模型\n- **1. 1. 刘易斯模型的基本思路**\n- **1.2. 图形的常见画法及含义**\n- **1.3. 数学表述(示意)**"
+      "x": -359,
+      "y": -16559,
+      "width": 220,
+      "height": 80,
+      "text": "**Delta Approximation**"
     },
     {
-      "id": "4c2194db95d847f4",
-      "type": "file",
-      "x": 1680,
-      "y": 300,
-      "width": 360,
-      "height": 220,
-      "file": "02_Economy/10_发展经济学/06_经济增长理论.md"
-    },
-    {
-      "id": "f67248efa02945fd",
+      "id": "9ab05dea30024f74",
       "type": "text",
-      "x": 2080,
-      "y": 300,
-      "width": 360,
-      "height": 220,
-      "text": "# 1. 马克思的资本积累模型\n- 2.1 假设条件\n- 2.2 模型内容\n- 3.1 假设条件"
+      "x": -109,
+      "y": -16559,
+      "width": 220,
+      "height": 80,
+      "text": "**Derivative (2)**"
     },
     {
-      "id": "642989f4fdd7423f",
-      "type": "file",
-      "x": 0,
-      "y": 600,
-      "width": 360,
-      "height": 220,
-      "file": "02_Economy/10_发展经济学/发展pre 话题1.md"
-    },
-    {
-      "id": "dc7fe6f566ac4291",
+      "id": "3db3314439234d9c",
       "type": "text",
-      "x": 400,
-      "y": 600,
-      "width": 360,
-      "height": 220,
-      "text": "# 发展pre 话题1"
+      "x": 141,
+      "y": -16559,
+      "width": 220,
+      "height": 80,
+      "text": "**Differential Equation**"
     },
     {
-      "id": "e36c15a2ee434e88",
-      "type": "file",
-      "x": 840,
-      "y": 600,
-      "width": 360,
-      "height": 220,
-      "file": "02_Economy/10_发展经济学/发展pre 话题6.md"
-    },
-    {
-      "id": "eee7cefc42df40c0",
+      "id": "efceb133d2c24306",
       "type": "text",
-      "x": 1240,
-      "y": 600,
-      "width": 360,
-      "height": 220,
-      "text": "# 第一轮产出:"
+      "x": -359,
+      "y": -16449,
+      "width": 220,
+      "height": 80,
+      "text": "**Differential Rent**"
     },
     {
-      "id": "805faf2cdeae4749",
-      "type": "file",
-      "x": 1680,
-      "y": 600,
-      "width": 360,
-      "height": 220,
-      "file": "02_Economy/10_发展经济学/发展经济学考试内容.md"
-    },
-    {
-      "id": "4d267e14ba7d4ebc",
+      "id": "b13a0dfafdf14dc8",
       "type": "text",
-      "x": 2080,
-      "y": 600,
-      "width": 360,
+      "x": -109,
+      "y": -16449,
+      "width": 220,
+      "height": 80,
+      "text": "**Economic Development**"
+    },
+    {
+      "id": "e7afff504ad84d93",
+      "type": "text",
+      "x": 141,
+      "y": -16449,
+      "width": 220,
+      "height": 80,
+      "text": "**Economic Growth**"
+    },
+    {
+      "id": "1f564fab476b4f58",
+      "type": "text",
+      "x": -359,
+      "y": -16339,
+      "width": 220,
+      "height": 80,
+      "text": "**First Difference**"
+    },
+    {
+      "id": "4561579c82c445ae",
+      "type": "text",
+      "x": -109,
+      "y": -16339,
+      "width": 220,
+      "height": 80,
+      "text": "**Limit**"
+    },
+    {
+      "id": "59b5e82b048042fc",
+      "type": "text",
+      "x": 141,
+      "y": -16339,
+      "width": 220,
+      "height": 80,
+      "text": "**Malthusian Trap**"
+    },
+    {
+      "id": "9da2fa8eba704424",
+      "type": "text",
+      "x": -359,
+      "y": -16229,
+      "width": 220,
+      "height": 80,
+      "text": "**Marginal Revolution**"
+    },
+    {
+      "id": "fcb400fbb4ef4dd2",
+      "type": "text",
+      "x": -109,
+      "y": -16229,
+      "width": 220,
+      "height": 80,
+      "text": "**Matrix Rank**"
+    },
+    {
+      "id": "1255690e0a2a4a66",
+      "type": "text",
+      "x": 141,
+      "y": -16229,
+      "width": 220,
+      "height": 80,
+      "text": "**Middle-Income Trap**"
+    },
+    {
+      "id": "5cd693230f1541bb",
+      "type": "text",
+      "x": -359,
+      "y": -16119,
+      "width": 220,
+      "height": 80,
+      "text": "**Model Misspecification**"
+    },
+    {
+      "id": "ec78df2ea4584942",
+      "type": "text",
+      "x": -109,
+      "y": -16119,
+      "width": 220,
+      "height": 80,
+      "text": "**Null Space**"
+    },
+    {
+      "id": "ac9e6e6da6e64da4",
+      "type": "text",
+      "x": 141,
+      "y": -16119,
+      "width": 220,
+      "height": 80,
+      "text": "**Opportunity Cost**"
+    },
+    {
+      "id": "0d7d77a1afc44321",
+      "type": "text",
+      "x": -359,
+      "y": -16009,
+      "width": 220,
+      "height": 80,
+      "text": "**Partial Autocorrelation Function**"
+    },
+    {
+      "id": "caafb240ea8c4470",
+      "type": "text",
+      "x": -109,
+      "y": -16009,
+      "width": 220,
+      "height": 80,
+      "text": "**payoffs**"
+    },
+    {
+      "id": "914caf62794c4b5f",
+      "type": "text",
+      "x": 141,
+      "y": -16009,
+      "width": 220,
+      "height": 80,
+      "text": "**Property Rights**"
+    },
+    {
+      "id": "9509e2572a594ed2",
+      "type": "text",
+      "x": -359,
+      "y": -15899,
+      "width": 220,
+      "height": 80,
+      "text": "**Q Test**"
+    },
+    {
+      "id": "2d6a6a880a494060",
+      "type": "text",
+      "x": -109,
+      "y": -15899,
+      "width": 220,
+      "height": 80,
+      "text": "**Ricardian Model**"
+    },
+    {
+      "id": "8353da1a4cf14f9b",
+      "type": "text",
+      "x": 141,
+      "y": -15899,
+      "width": 220,
+      "height": 80,
+      "text": "**Risk Structure of Interest Rates**"
+    },
+    {
+      "id": "abfe82c968da49f2",
+      "type": "text",
+      "x": -359,
+      "y": -15789,
+      "width": 220,
+      "height": 80,
+      "text": "**Series**"
+    },
+    {
+      "id": "fb10d1d0e8544c92",
+      "type": "text",
+      "x": -109,
+      "y": -15789,
+      "width": 220,
+      "height": 80,
+      "text": "**Steady State Analysis**"
+    },
+    {
+      "id": "1e271576879b4d68",
+      "type": "text",
+      "x": 141,
+      "y": -15789,
+      "width": 220,
+      "height": 80,
+      "text": "**strategies**"
+    },
+    {
+      "id": "ce180cdfe73640d0",
+      "type": "text",
+      "x": -359,
+      "y": -15679,
+      "width": 220,
+      "height": 80,
+      "text": "**Sustainable Growth Rate**"
+    },
+    {
+      "id": "dc4a24b6ba094868",
+      "type": "text",
+      "x": -109,
+      "y": -15679,
+      "width": 220,
+      "height": 80,
+      "text": "**t Test**"
+    },
+    {
+      "id": "535012c309ed4e3e",
+      "type": "text",
+      "x": 141,
+      "y": -15679,
+      "width": 220,
+      "height": 80,
+      "text": "**Times Interest Earned Ratio**"
+    },
+    {
+      "id": "c912b58a9ca1448f",
+      "type": "text",
+      "x": -359,
+      "y": -15569,
+      "width": 220,
+      "height": 80,
+      "text": "**(1).产出与资本的关系：**"
+    },
+    {
+      "id": "824a7f4b27a444b0",
+      "type": "text",
+      "x": -109,
+      "y": -15569,
+      "width": 220,
+      "height": 80,
+      "text": "**(1)李嘉图**"
+    },
+    {
+      "id": "f0dd12347ced4745",
+      "type": "text",
+      "x": 141,
+      "y": -15569,
+      "width": 220,
+      "height": 80,
+      "text": "**(1)经济发展的巨大差异**"
+    },
+    {
+      "id": "481f37b8b66f4ae1",
+      "type": "text",
+      "x": -359,
+      "y": -15459,
+      "width": 220,
+      "height": 80,
+      "text": "**(1)韩国和朝鲜对创新的态度**"
+    },
+    {
+      "id": "32d155d2915641a0",
+      "type": "text",
+      "x": -109,
+      "y": -15459,
+      "width": 220,
+      "height": 80,
+      "text": "**(2) 本章探究问题**"
+    },
+    {
+      "id": "3e45dedc777e456a",
+      "type": "text",
+      "x": 141,
+      "y": -15459,
+      "width": 220,
+      "height": 80,
+      "text": "**(2).产出与劳动的关系：**"
+    },
+    {
+      "id": "10d3d522495c4e75",
+      "type": "text",
+      "x": -359,
+      "y": -15349,
+      "width": 220,
+      "height": 80,
+      "text": "**(2)哈罗德多玛**"
+    },
+    {
+      "id": "605fb9dcea6842f1",
+      "type": "text",
+      "x": -109,
+      "y": -15349,
+      "width": 220,
+      "height": 80,
+      "text": "**(2)费景汉**"
+    },
+    {
+      "id": "537ef40be539418f",
+      "type": "text",
+      "x": 141,
+      "y": -15349,
+      "width": 220,
+      "height": 80,
+      "text": "**(3)一个经济最核心的力量是需求**"
+    },
+    {
+      "id": "b50101236eef4b65",
+      "type": "text",
+      "x": -359,
+      "y": -15239,
+      "width": 220,
+      "height": 80,
+      "text": "**(3)托达罗**"
+    },
+    {
+      "id": "5c98d2642d4d430f",
+      "type": "text",
+      "x": -109,
+      "y": -15239,
+      "width": 220,
+      "height": 80,
+      "text": "**(3)索罗**"
+    },
+    {
+      "id": "11d6aea4a73943a2",
+      "type": "text",
+      "x": 141,
+      "y": -15239,
+      "width": 220,
+      "height": 80,
+      "text": "**(4)分析发展经济学的时候不能照搬西方**"
+    },
+    {
+      "id": "0fcf6a4b38b44584",
+      "type": "text",
+      "x": -359,
+      "y": -15129,
+      "width": 220,
+      "height": 80,
+      "text": "****1. 4. 用一个简单的例子来理解****"
+    },
+    {
+      "id": "8267da9e3a1e45df",
+      "type": "text",
+      "x": -109,
+      "y": -15129,
+      "width": 220,
+      "height": 80,
+      "text": "****1.2. 图形的常见画法及含义****"
+    },
+    {
+      "id": "1d6a690d02cf4d95",
+      "type": "text",
+      "x": 141,
+      "y": -15129,
+      "width": 220,
+      "height": 80,
+      "text": "****1.3. 数学表述(示意)****"
+    },
+    {
+      "id": "3bdaa0ff076a42be",
+      "type": "text",
+      "x": -359,
+      "y": -15019,
+      "width": 220,
+      "height": 80,
+      "text": "****2.1 图形的主要构成与含义****"
+    },
+    {
+      "id": "14b8891fe85540ad",
+      "type": "text",
+      "x": -109,
+      "y": -15019,
+      "width": 220,
+      "height": 80,
+      "text": "**06_经济增长理论**"
+    },
+    {
+      "id": "2d48701536cd4b3a",
+      "type": "text",
+      "x": 141,
+      "y": -15019,
+      "width": 220,
+      "height": 80,
+      "text": "**1  马来西亚:高经济增长国家**"
+    },
+    {
+      "id": "9f7b38b7504b4a87",
+      "type": "text",
+      "x": -359,
+      "y": -14909,
+      "width": 220,
+      "height": 80,
+      "text": "**1 两个假设**"
+    },
+    {
+      "id": "652d13d6f2474a5f",
+      "type": "text",
+      "x": -109,
+      "y": -14909,
+      "width": 220,
+      "height": 80,
+      "text": "**1 假设条件**"
+    },
+    {
+      "id": "4eb552b4a58f4444",
+      "type": "text",
+      "x": 141,
+      "y": -14909,
+      "width": 220,
+      "height": 80,
+      "text": "**1 图形的主要构成与含义**"
+    },
+    {
+      "id": "57c83618f6804fed",
+      "type": "text",
+      "x": -359,
+      "y": -14799,
+      "width": 220,
+      "height": 80,
+      "text": "**1 基本假设**"
+    },
+    {
+      "id": "0ff44d95c17245fd",
+      "type": "text",
+      "x": -109,
+      "y": -14799,
+      "width": 220,
+      "height": 80,
+      "text": "**1 库兹涅茨的现代经济增长理论**"
+    },
+    {
+      "id": "238d8bfa4126430f",
+      "type": "text",
+      "x": 141,
+      "y": -14799,
+      "width": 220,
+      "height": 80,
+      "text": "**1 荷兰的崛起**"
+    },
+    {
+      "id": "510b22dccefa4e6e",
+      "type": "text",
+      "x": -359,
+      "y": -14689,
+      "width": 220,
+      "height": 80,
+      "text": "**1.1 三个问题**"
+    },
+    {
+      "id": "45edf0a9ae35432e",
+      "type": "text",
+      "x": -109,
+      "y": -14689,
+      "width": 220,
+      "height": 80,
+      "text": "**1.二元经济结构形成的历史背景**"
+    },
+    {
+      "id": "9a6de80b78e54742",
+      "type": "text",
+      "x": 141,
+      "y": -14689,
+      "width": 220,
+      "height": 80,
+      "text": "**104%**"
+    },
+    {
+      "id": "f32669d8c82a40c6",
+      "type": "text",
+      "x": -359,
+      "y": -14579,
+      "width": 220,
+      "height": 80,
+      "text": "**1100亿美元**"
+    },
+    {
+      "id": "1168e2964e7a450f",
+      "type": "text",
+      "x": -109,
+      "y": -14579,
+      "width": 220,
+      "height": 80,
+      "text": "**1235亿美元**"
+    },
+    {
+      "id": "bd310780fc0e475f",
+      "type": "text",
+      "x": 141,
+      "y": -14579,
+      "width": 220,
+      "height": 80,
+      "text": "**1366亿美元**"
+    },
+    {
+      "id": "d7074cd92fbd4b42",
+      "type": "text",
+      "x": -359,
+      "y": -14469,
+      "width": 220,
+      "height": 80,
+      "text": "**1958年**"
+    },
+    {
+      "id": "c3de096113f844bc",
+      "type": "text",
+      "x": -109,
+      "y": -14469,
+      "width": 220,
+      "height": 80,
+      "text": "**1959-60年**"
+    },
+    {
+      "id": "9f6e99d2c5454a19",
+      "type": "text",
+      "x": 141,
+      "y": -14469,
+      "width": 220,
+      "height": 80,
+      "text": "**1960年**"
+    },
+    {
+      "id": "370b4ebbf0b549c0",
+      "type": "text",
+      "x": -359,
+      "y": -14359,
+      "width": 220,
+      "height": 80,
+      "text": "**1960年代中期**"
+    },
+    {
+      "id": "28d67c2207954c6e",
+      "type": "text",
+      "x": -109,
+      "y": -14359,
+      "width": 220,
+      "height": 80,
+      "text": "**1962-1966年**"
+    },
+    {
+      "id": "76ee1c3578c0484a",
+      "type": "text",
+      "x": 141,
+      "y": -14359,
+      "width": 220,
+      "height": 80,
+      "text": "**1963年**"
+    },
+    {
+      "id": "04dbf1672e304437",
+      "type": "text",
+      "x": -359,
+      "y": -14249,
+      "width": 220,
+      "height": 80,
+      "text": "**1964年**"
+    },
+    {
+      "id": "bdbb35a4abfa4bdb",
+      "type": "text",
+      "x": -109,
+      "y": -14249,
+      "width": 220,
+      "height": 80,
+      "text": "**1965年**"
+    },
+    {
+      "id": "6e1353e8b1974dcd",
+      "type": "text",
+      "x": 141,
+      "y": -14249,
+      "width": 220,
+      "height": 80,
+      "text": "**1967年**"
+    },
+    {
+      "id": "ffd4ee1865b54285",
+      "type": "text",
+      "x": -359,
+      "y": -14139,
+      "width": 220,
+      "height": 80,
+      "text": "**1古典时期:经济学和社会学的分野**"
+    },
+    {
+      "id": "3d18872db940494e",
+      "type": "text",
+      "x": -109,
+      "y": -14139,
+      "width": 220,
+      "height": 80,
+      "text": "**1悲观结论的基础:两个假设**"
+    },
+    {
+      "id": "1d80ef40a7e5461e",
+      "type": "text",
+      "x": 141,
+      "y": -14139,
+      "width": 220,
+      "height": 80,
+      "text": "**2 破解方法**"
+    },
+    {
+      "id": "f5d0bdd572014d92",
+      "type": "text",
+      "x": -359,
+      "y": -14029,
+      "width": 220,
+      "height": 80,
+      "text": "**2 罗斯托的经济增长阶段论**"
+    },
+    {
+      "id": "5938b68d4f4047e1",
+      "type": "text",
+      "x": -109,
+      "y": -14029,
+      "width": 220,
+      "height": 80,
+      "text": "**2 论点**"
+    },
+    {
+      "id": "1e582c10de714c2d",
+      "type": "text",
+      "x": 141,
+      "y": -14029,
+      "width": 220,
+      "height": 80,
+      "text": "**2. 图形的常见画法及含义**"
+    },
+    {
+      "id": "b283efff95f04925",
+      "type": "text",
+      "x": -359,
+      "y": -13919,
+      "width": 220,
+      "height": 80,
+      "text": "**2016–2025年中美关税战时间线及分析**"
+    },
+    {
+      "id": "d4fb60842ec14405",
+      "type": "text",
+      "x": -109,
+      "y": -13919,
+      "width": 220,
+      "height": 80,
+      "text": "**2016中美贸易战的过程梳理和每一步政策分析.**"
+    },
+    {
+      "id": "0392295400784840",
+      "type": "text",
+      "x": 141,
+      "y": -13919,
+      "width": 220,
+      "height": 80,
+      "text": "**2017–2018年初：贸易战酝酿与初步交锋**"
+    },
+    {
+      "id": "f4522e73129c45ad",
+      "type": "text",
+      "x": -359,
+      "y": -13809,
+      "width": 220,
+      "height": 80,
+      "text": "**2017年8月**"
+    },
+    {
+      "id": "a3ca77a30fbd420c",
+      "type": "text",
+      "x": -109,
+      "y": -13809,
+      "width": 220,
+      "height": 80,
+      "text": "**2018年12月**"
+    },
+    {
+      "id": "ef2ce6c792a94b08",
+      "type": "text",
+      "x": 141,
+      "y": -13809,
+      "width": 220,
+      "height": 80,
+      "text": "**2018年3月**"
+    },
+    {
+      "id": "59c0425e07ef49c9",
+      "type": "text",
+      "x": -359,
+      "y": -13699,
+      "width": 220,
+      "height": 80,
+      "text": "**2018年4月4日**"
+    },
+    {
+      "id": "60d6886febb444e8",
+      "type": "text",
+      "x": -109,
+      "y": -13699,
+      "width": 220,
+      "height": 80,
+      "text": "**2018年4月初**"
+    },
+    {
+      "id": "03884dc3d76f43c0",
+      "type": "text",
+      "x": 141,
+      "y": -13699,
+      "width": 220,
+      "height": 80,
+      "text": "**2018年7月6日**"
+    },
+    {
+      "id": "91d9feea6147483f",
+      "type": "text",
+      "x": -359,
+      "y": -13589,
+      "width": 220,
+      "height": 80,
+      "text": "**2018年8月23日**"
+    },
+    {
+      "id": "0f0eb03e240247db",
+      "type": "text",
+      "x": -109,
+      "y": -13589,
+      "width": 220,
+      "height": 80,
+      "text": "**2018年9月24日**"
+    },
+    {
+      "id": "ff0dfa3eb0ac40fc",
+      "type": "text",
+      "x": 141,
+      "y": -13589,
+      "width": 220,
+      "height": 80,
+      "text": "**2018年中期：关税战正式爆发（第一轮加税）**"
+    },
+    {
+      "id": "1df50840a89a4d63",
+      "type": "text",
+      "x": -359,
+      "y": -13479,
+      "width": 220,
+      "height": 80,
+      "text": "**2018年末：暂缓与再起（扩大范围的关税威胁）**"
+    },
+    {
+      "id": "22e2cfc2ac0a4639",
+      "type": "text",
+      "x": -109,
+      "y": -13479,
+      "width": 220,
+      "height": 80,
+      "text": "**2019年5月**"
+    },
+    {
+      "id": "fc2273d6e05a4f51",
+      "type": "text",
+      "x": 141,
+      "y": -13479,
+      "width": 220,
+      "height": 80,
+      "text": "**2019年8月**"
+    },
+    {
+      "id": "1f6409cb8b66469c",
+      "type": "text",
+      "x": -359,
+      "y": -13369,
+      "width": 220,
+      "height": 80,
+      "text": "**2020年1月15日**"
+    },
+    {
+      "id": "eeb7ab5a9a534ff1",
+      "type": "text",
+      "x": -109,
+      "y": -13369,
+      "width": 220,
+      "height": 80,
+      "text": "**2020年2月**"
+    },
+    {
+      "id": "e6d3d03be5844e0f",
+      "type": "text",
+      "x": 141,
+      "y": -13369,
+      "width": 220,
+      "height": 80,
+      "text": "**2020年下半年**"
+    },
+    {
+      "id": "5da5d54acf0a4222",
+      "type": "text",
+      "x": -359,
+      "y": -13259,
+      "width": 220,
+      "height": 80,
+      "text": "**2020年：第一阶段协议与短暂缓和**"
+    },
+    {
+      "id": "210c863dd2db495f",
+      "type": "text",
+      "x": -109,
+      "y": -13259,
+      "width": 220,
+      "height": 80,
+      "text": "**2021–2022年**"
+    },
+    {
+      "id": "263fa708f7074ec4",
+      "type": "text",
+      "x": 141,
+      "y": -13259,
+      "width": 220,
+      "height": 80,
+      "text": "**2021–2024年：关税战效应延续与政策调整**"
+    },
+    {
+      "id": "0bb50116a8424893",
+      "type": "text",
+      "x": -359,
+      "y": -13149,
+      "width": 220,
+      "height": 80,
+      "text": "**2021年1月**"
+    },
+    {
+      "id": "633640af57554fa6",
+      "type": "text",
+      "x": -109,
+      "y": -13149,
+      "width": 220,
+      "height": 80,
+      "text": "**2022–2023年贸易**"
+    },
+    {
+      "id": "144a06e6fe87402f",
+      "type": "text",
+      "x": 141,
+      "y": -13149,
+      "width": 220,
+      "height": 80,
+      "text": "**2025年1月**"
+    },
+    {
+      "id": "368dc9ac35f940f8",
+      "type": "text",
+      "x": -359,
+      "y": -13039,
+      "width": 220,
+      "height": 80,
+      "text": "**2025年2月4日**"
+    },
+    {
+      "id": "84e53510db184dc2",
+      "type": "text",
+      "x": -109,
+      "y": -13039,
+      "width": 220,
+      "height": 80,
+      "text": "**2025年3月4日**"
+    },
+    {
+      "id": "908d9b1b8aea43af",
+      "type": "text",
+      "x": 141,
+      "y": -13039,
+      "width": 220,
+      "height": 80,
+      "text": "**2025年4月3日**"
+    },
+    {
+      "id": "18eb53c82498400e",
+      "type": "text",
+      "x": -359,
+      "y": -12929,
+      "width": 220,
+      "height": 80,
+      "text": "**2025年4月4日**"
+    },
+    {
+      "id": "7a72060d2d4f4ea8",
+      "type": "text",
+      "x": -109,
+      "y": -12929,
+      "width": 220,
+      "height": 80,
+      "text": "**2025年：特朗普第二任期的关税战全面升级**"
+    },
+    {
+      "id": "bb996ee41ddd486f",
+      "type": "text",
+      "x": 141,
+      "y": -12929,
+      "width": 220,
+      "height": 80,
+      "text": "**2025新关税的分析**"
+    },
+    {
+      "id": "eae208521a504285",
+      "type": "text",
+      "x": -359,
+      "y": -12819,
+      "width": 220,
+      "height": 80,
+      "text": "**280亿美元**"
+    },
+    {
+      "id": "38322fa33606467a",
+      "type": "text",
+      "x": -109,
+      "y": -12819,
+      "width": 220,
+      "height": 80,
+      "text": "**2中国二元经济结构的演变过程与动因.**"
+    },
+    {
+      "id": "4c484a6fdcc74bc1",
+      "type": "text",
+      "x": 141,
+      "y": -12819,
+      "width": 220,
+      "height": 80,
+      "text": "**2埃塞俄比亚 经济停滞国家**"
+    },
+    {
+      "id": "503b4cb8c9364305",
+      "type": "text",
+      "x": -359,
+      "y": -12709,
+      "width": 220,
+      "height": 80,
+      "text": "**2新古典时期:边际革命**"
+    },
+    {
+      "id": "35f9332c0a4346a5",
+      "type": "text",
+      "x": -109,
+      "y": -12709,
+      "width": 220,
+      "height": 80,
+      "text": "**3 乌克兰-经济转型国家**"
+    },
+    {
+      "id": "f6f1e1dcfd674194",
+      "type": "text",
+      "x": 141,
+      "y": -12709,
+      "width": 220,
+      "height": 80,
+      "text": "**3 格申克龙的后发优势理论及其发展**"
+    },
+    {
+      "id": "08e3b2324d0a467e",
+      "type": "text",
+      "x": -359,
+      "y": -12599,
+      "width": 220,
+      "height": 80,
+      "text": "**3. 乡城劳动力转移的过程和主要特征**"
+    },
+    {
+      "id": "5765fbe2253848b1",
+      "type": "text",
+      "x": -109,
+      "y": -12599,
+      "width": 220,
+      "height": 80,
+      "text": "**3. 数学表述(示意)**"
+    },
+    {
+      "id": "a51a97aac6ac411e",
+      "type": "text",
+      "x": 141,
+      "y": -12599,
+      "width": 220,
+      "height": 80,
+      "text": "**3现代经济学**"
+    },
+    {
+      "id": "fe491d65e7fc4aa0",
+      "type": "text",
+      "x": -359,
+      "y": -12489,
+      "width": 220,
+      "height": 80,
+      "text": "**4. 用一个简单的例子来理解**"
+    },
+    {
+      "id": "7478b746ca5f426a",
+      "type": "text",
+      "x": -109,
+      "y": -12489,
+      "width": 220,
+      "height": 80,
+      "text": "**4中等收入陷阱**"
+    },
+    {
+      "id": "40595d3ba4104744",
+      "type": "text",
+      "x": 141,
+      "y": -12489,
+      "width": 220,
+      "height": 80,
+      "text": "**4经济学方法论的演化**"
+    },
+    {
+      "id": "73d24bc5c8f243f4",
+      "type": "text",
+      "x": -359,
+      "y": -12379,
+      "width": 220,
+      "height": 80,
+      "text": "**5500亿美元**"
+    },
+    {
+      "id": "ad84711f1dd843eb",
+      "type": "text",
+      "x": -109,
+      "y": -12379,
+      "width": 220,
+      "height": 80,
+      "text": "**5月10日起**"
+    },
+    {
+      "id": "f01535a711ae4df2",
+      "type": "text",
+      "x": 141,
+      "y": -12379,
+      "width": 220,
+      "height": 80,
+      "text": "**5罗宾斯的比喻**"
+    },
+    {
+      "id": "d174f06df0774c08",
+      "type": "text",
+      "x": -359,
+      "y": -12269,
+      "width": 220,
+      "height": 80,
+      "text": "**82%**"
+    },
+    {
+      "id": "d558c09054bf41e8",
+      "type": "text",
+      "x": -109,
+      "y": -12269,
+      "width": 220,
+      "height": 80,
+      "text": "**IT**"
+    },
+    {
+      "id": "1b8fd3dd32aa4684",
+      "type": "text",
+      "x": 141,
+      "y": -12269,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250320080254.png**"
+    },
+    {
+      "id": "46f993a766064df1",
+      "type": "text",
+      "x": -359,
+      "y": -12159,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250320081141.png**"
+    },
+    {
+      "id": "f1d2aedb34d24cdc",
+      "type": "text",
+      "x": -109,
+      "y": -12159,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250320081321.png**"
+    },
+    {
+      "id": "a60c6552cc0c4de5",
+      "type": "text",
+      "x": 141,
+      "y": -12159,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250320082523.png**"
+    },
+    {
+      "id": "664c6508395744c6",
+      "type": "text",
+      "x": -359,
+      "y": -12049,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250325082547.png**"
+    },
+    {
+      "id": "f22c71bd41414d24",
+      "type": "text",
+      "x": -109,
+      "y": -12049,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250325083213.png**"
+    },
+    {
+      "id": "220c118194f84d4d",
+      "type": "text",
+      "x": 141,
+      "y": -12049,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250325083306.png**"
+    },
+    {
+      "id": "6bcd4ca2e26741ec",
+      "type": "text",
+      "x": -359,
+      "y": -11939,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250327090402.png**"
+    },
+    {
+      "id": "0a6688a733394c94",
+      "type": "text",
+      "x": -109,
+      "y": -11939,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250327091329.png**"
+    },
+    {
+      "id": "05bd82b130d4422e",
+      "type": "text",
+      "x": 141,
+      "y": -11939,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250401092229.png**"
+    },
+    {
+      "id": "c1667fdf45cb48b9",
+      "type": "text",
+      "x": -359,
+      "y": -11829,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250408213917.png**"
+    },
+    {
+      "id": "405f470a22d940ed",
+      "type": "text",
+      "x": -109,
+      "y": -11829,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250520193300.png**"
+    },
+    {
+      "id": "3d1b3e0b15594d52",
+      "type": "text",
+      "x": 141,
+      "y": -11829,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250521090613.png**"
+    },
+    {
+      "id": "f875d01e62894a00",
+      "type": "text",
+      "x": -359,
+      "y": -11719,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250521092735.png**"
+    },
+    {
+      "id": "de64d6001b4740ff",
+      "type": "text",
+      "x": -109,
+      "y": -11719,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250521151138.png**"
+    },
+    {
+      "id": "80f830578f674e69",
+      "type": "text",
+      "x": 141,
+      "y": -11719,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250521151149.png**"
+    },
+    {
+      "id": "b914a622aff0417a",
+      "type": "text",
+      "x": -359,
+      "y": -11609,
+      "width": 220,
+      "height": 80,
+      "text": "**Pasted image 20250521151158.png**"
+    },
+    {
+      "id": "078f5d9c8a304bd0",
+      "type": "text",
+      "x": -109,
+      "y": -11609,
+      "width": 220,
+      "height": 80,
+      "text": "**subsistence**"
+    },
+    {
+      "id": "43f475b14a11417f",
+      "type": "text",
+      "x": 141,
+      "y": -11609,
+      "width": 220,
+      "height": 80,
+      "text": "**“保护”不是目的，“发展”才是目的**"
+    },
+    {
+      "id": "da23348b6878469c",
+      "type": "text",
+      "x": -359,
+      "y": -11499,
+      "width": 220,
+      "height": 80,
+      "text": "**“借道套利”**"
+    },
+    {
+      "id": "7d544203bb174e67",
+      "type": "text",
+      "x": -109,
+      "y": -11499,
+      "width": 220,
+      "height": 80,
+      "text": "**“出口连带进口”奖励**"
+    },
+    {
+      "id": "937b80b4135d4012",
+      "type": "text",
+      "x": 141,
+      "y": -11499,
+      "width": 220,
+      "height": 80,
+      "text": "**“十大建设”**"
+    },
+    {
+      "id": "b2f32c00c5e549c5",
+      "type": "text",
+      "x": -359,
+      "y": -11389,
+      "width": 220,
+      "height": 80,
+      "text": "**“外向导向+选择保护”**"
+    },
+    {
+      "id": "8ec8fb18170c44d4",
+      "type": "text",
+      "x": -109,
+      "y": -11389,
+      "width": 220,
+      "height": 80,
+      "text": "**“对等关税”**"
+    },
+    {
+      "id": "ab76b12e57c947eb",
+      "type": "text",
+      "x": 141,
+      "y": -11389,
+      "width": 220,
+      "height": 80,
+      "text": "**“脱钩”**"
+    },
+    {
+      "id": "6bb5e31e2f40415f",
+      "type": "text",
+      "x": -359,
+      "y": -11279,
+      "width": 220,
+      "height": 80,
+      "text": "**“贸易核弹”**"
+    },
+    {
+      "id": "9f5d08c0ce3d4a6c",
+      "type": "text",
+      "x": -109,
+      "y": -11279,
+      "width": 220,
+      "height": 80,
+      "text": "**“转折点”**"
+    },
+    {
+      "id": "838ad03830a943b9",
+      "type": "text",
+      "x": 141,
+      "y": -11279,
+      "width": 220,
+      "height": 80,
+      "text": "**“进口替代后遗症”**"
+    },
+    {
+      "id": "305d677dd28c4302",
+      "type": "text",
+      "x": -359,
+      "y": -11169,
+      "width": 220,
+      "height": 80,
+      "text": "**……**"
+    },
+    {
+      "id": "73ac44d5f93249b9",
+      "type": "text",
+      "x": -109,
+      "y": -11169,
+      "width": 220,
+      "height": 80,
+      "text": "**一、中美贸易战的关税政策演变与经济影响**"
+    },
+    {
+      "id": "3b37b8e94dc34a86",
+      "type": "text",
+      "x": 141,
+      "y": -11169,
+      "width": 220,
+      "height": 80,
+      "text": "**一、储蓄率提高对稳态的影响（图20-6与图20-7）**"
+    },
+    {
+      "id": "e3903883789343a8",
+      "type": "text",
+      "x": -359,
+      "y": -11059,
+      "width": 220,
+      "height": 80,
+      "text": "**一、战后经济背景与初期产业结构**"
+    },
+    {
+      "id": "ba5d2b1c2c984458",
+      "type": "text",
+      "x": -109,
+      "y": -11059,
+      "width": 220,
+      "height": 80,
+      "text": "**三**"
+    },
+    {
+      "id": "b0914ef5b01f4832",
+      "type": "text",
+      "x": 141,
+      "y": -11059,
+      "width": 220,
+      "height": 80,
+      "text": "**三、关键结论总结：**"
+    },
+    {
+      "id": "4a13045602aa4ad2",
+      "type": "text",
+      "x": -359,
+      "y": -10949,
+      "width": 220,
+      "height": 80,
+      "text": "**三、南美国家的关税政策调整与经济适应措施**"
+    },
+    {
+      "id": "b1592d4483c94507",
+      "type": "text",
+      "x": -109,
+      "y": -10949,
+      "width": 220,
+      "height": 80,
+      "text": "**三、图中关键点的含义**"
+    },
+    {
+      "id": "742b904656fd448b",
+      "type": "text",
+      "x": 141,
+      "y": -10949,
+      "width": 220,
+      "height": 80,
+      "text": "**三、库兹涅茨理论的实质与贡献（补充说明）**"
+    },
+    {
+      "id": "984ff9c961754c18",
+      "type": "text",
+      "x": -359,
+      "y": -10839,
+      "width": 220,
+      "height": 80,
+      "text": "**三、政策演变的阶段历程**"
+    },
+    {
+      "id": "e0b6130737de4ccc",
+      "type": "text",
+      "x": -109,
+      "y": -10839,
+      "width": 220,
+      "height": 80,
+      "text": "**三个例子**"
+    },
+    {
+      "id": "e4379f03ef0e4a49",
+      "type": "text",
+      "x": 141,
+      "y": -10839,
+      "width": 220,
+      "height": 80,
+      "text": "**不同人均收入水平$Y_1, Y_2, Y_3, Y_4$**"
+    },
+    {
+      "id": "561161f241084835",
+      "type": "text",
+      "x": -359,
+      "y": -10729,
+      "width": 220,
+      "height": 80,
+      "text": "**东亚选择性保护工业化战略分析：以韩国和台湾为中心 (20世纪中后期)**"
+    },
+    {
+      "id": "032ad0de616a44bf",
+      "type": "text",
+      "x": -109,
+      "y": -10729,
+      "width": 220,
+      "height": 80,
+      "text": "**东亚选择性保护的成功**"
+    },
+    {
+      "id": "a9914678c4464119",
+      "type": "text",
+      "x": 141,
+      "y": -10729,
+      "width": 220,
+      "height": 80,
+      "text": "**两个假设**"
+    },
+    {
+      "id": "50f19d7a35d340cc",
+      "type": "text",
+      "x": -359,
+      "y": -10619,
+      "width": 220,
+      "height": 80,
+      "text": "**两个论点**"
+    },
+    {
+      "id": "e4c6d110f3554ca7",
+      "type": "text",
+      "x": -109,
+      "y": -10619,
+      "width": 220,
+      "height": 80,
+      "text": "**两年额外采购目标仅完成约60%**"
+    },
+    {
+      "id": "3b154f843ebb40e8",
+      "type": "text",
+      "x": 141,
+      "y": -10619,
+      "width": 220,
+      "height": 80,
+      "text": "**两条需求曲线：$d_0$ 与 $d_1$**"
+    },
+    {
+      "id": "64af164e1a774c33",
+      "type": "text",
+      "x": -359,
+      "y": -10509,
+      "width": 220,
+      "height": 80,
+      "text": "**严查产地证造假和转运**"
+    },
+    {
+      "id": "f371394f3f564996",
+      "type": "text",
+      "x": -109,
+      "y": -10509,
+      "width": 220,
+      "height": 80,
+      "text": "**个人的发展应该在哪里**"
+    },
+    {
+      "id": "eedf0cc207e44900",
+      "type": "text",
+      "x": 141,
+      "y": -10509,
+      "width": 220,
+      "height": 80,
+      "text": "**中国的二元经济结构**"
+    },
+    {
+      "id": "51cdd7ed579545fc",
+      "type": "text",
+      "x": -359,
+      "y": -10399,
+      "width": 220,
+      "height": 80,
+      "text": "**中国钢铁公司**"
+    },
+    {
+      "id": "74a88638940d4698",
+      "type": "text",
+      "x": -109,
+      "y": -10399,
+      "width": 220,
+      "height": 80,
+      "text": "**中油石化园区**"
+    },
+    {
+      "id": "65a95a4488bc44c3",
+      "type": "text",
+      "x": 141,
+      "y": -10399,
+      "width": 220,
+      "height": 80,
+      "text": "**临时免征**"
+    },
+    {
+      "id": "2872b5bdc6b34246",
+      "type": "text",
+      "x": -359,
+      "y": -10289,
+      "width": 220,
+      "height": 80,
+      "text": "**主要经济影响：**"
+    },
+    {
+      "id": "01f96bbc06064e1b",
+      "type": "text",
+      "x": -109,
+      "y": -10289,
+      "width": 220,
+      "height": 80,
+      "text": "**举例理解：**"
+    },
+    {
+      "id": "95656ddf9e2f456e",
+      "type": "text",
+      "x": 141,
+      "y": -10289,
+      "width": 220,
+      "height": 80,
+      "text": "**习惯于“拿政策红利”**"
+    },
+    {
+      "id": "361b671959cc4b44",
+      "type": "text",
+      "x": -359,
+      "y": -10179,
+      "width": 220,
+      "height": 80,
+      "text": "**乡村振兴**"
+    },
+    {
+      "id": "5d29d38422164ff4",
+      "type": "text",
+      "x": -109,
+      "y": -10179,
+      "width": 220,
+      "height": 80,
+      "text": "**二、东南亚国家的关税调整与供应链转移承接**"
+    },
+    {
+      "id": "a315a063354c4a7f",
+      "type": "text",
+      "x": 141,
+      "y": -10179,
+      "width": 220,
+      "height": 80,
+      "text": "**二、人口增长率提高对稳态的影响（图20-8）**"
+    },
+    {
+      "id": "5ad5793f693a4bd2",
+      "type": "text",
+      "x": -359,
+      "y": -10069,
+      "width": 220,
+      "height": 80,
+      "text": "**二、现代经济增长理论的特征（图片2）**"
+    },
+    {
+      "id": "71bd6bf2801346bd",
+      "type": "text",
+      "x": -109,
+      "y": -10069,
+      "width": 220,
+      "height": 80,
+      "text": "**二、选择性保护政策类型及特点**"
+    },
+    {
+      "id": "a7afbbc295214d1a",
+      "type": "text",
+      "x": 141,
+      "y": -10069,
+      "width": 220,
+      "height": 80,
+      "text": "**五、举例说明（数字化示例）**"
+    },
+    {
+      "id": "a6ddd699e2e04361",
+      "type": "text",
+      "x": -359,
+      "y": -9959,
+      "width": 220,
+      "height": 80,
+      "text": "**五、理论意义与应用（补充图片3内容）**"
+    },
+    {
+      "id": "c19021acb6fb4e55",
+      "type": "text",
+      "x": -109,
+      "y": -9959,
+      "width": 220,
+      "height": 80,
+      "text": "**五、选择性保护下的问题与挑战**"
+    },
+    {
+      "id": "1cf292ac58604c4b",
+      "type": "text",
+      "x": 141,
+      "y": -9959,
+      "width": 220,
+      "height": 80,
+      "text": "**产业结构迅速升级：**"
+    },
+    {
+      "id": "9974765f729a4bb0",
+      "type": "text",
+      "x": -359,
+      "y": -9849,
+      "width": 220,
+      "height": 80,
+      "text": "**产量水平：$Q_0$ 与 $Q_1$**"
+    },
+    {
+      "id": "50e6a059786c477d",
+      "type": "text",
+      "x": -109,
+      "y": -9849,
+      "width": 220,
+      "height": 80,
+      "text": "**人口增长抵消了收入增长**"
+    },
+    {
+      "id": "add27a1cd8e04e8d",
+      "type": "text",
+      "x": 141,
+      "y": -9849,
+      "width": 220,
+      "height": 80,
+      "text": "**人口增长率$n$、技术进步率（此处先假设为零）和折旧率$\\delta$均为外生变量**"
+    },
+    {
+      "id": "c2cb5c4eea9541c8",
+      "type": "text",
+      "x": -359,
+      "y": -9739,
+      "width": 220,
+      "height": 80,
+      "text": "**人口增长率$n$提高：**"
+    },
+    {
+      "id": "b5daa63be6d64898",
+      "type": "text",
+      "x": -109,
+      "y": -9739,
+      "width": 220,
+      "height": 80,
+      "text": "**人口增长率的增加降低了稳态水平的人均资本和人均产出**"
+    },
+    {
+      "id": "7aa57407f2b84ea7",
+      "type": "text",
+      "x": 141,
+      "y": -9739,
+      "width": 220,
+      "height": 80,
+      "text": "**人均产出迅速增长**"
+    },
+    {
+      "id": "918e69ce3f714663",
+      "type": "text",
+      "x": -359,
+      "y": -9629,
+      "width": 220,
+      "height": 80,
+      "text": "**从需求变动看地租如何产生**"
+    },
+    {
+      "id": "e12f65b0ce5f457b",
+      "type": "text",
+      "x": -109,
+      "y": -9629,
+      "width": 220,
+      "height": 80,
+      "text": "**以牙还牙**"
+    },
+    {
+      "id": "9281ad0240ae4d4b",
+      "type": "text",
+      "x": 141,
+      "y": -9629,
+      "width": 220,
+      "height": 80,
+      "text": "**价格水平：$P_0$ 与 $P_1$**"
+    },
+    {
+      "id": "90d1af0ba3674798",
+      "type": "text",
+      "x": -359,
+      "y": -9519,
+      "width": 220,
+      "height": 80,
+      "text": "**企业对政府保护的依赖与腐败风险:**"
+    },
+    {
+      "id": "060e612d8ee14c40",
+      "type": "text",
+      "x": -109,
+      "y": -9519,
+      "width": 220,
+      "height": 80,
+      "text": "**传统农业部门**"
+    },
+    {
+      "id": "737e7b7386884eb7",
+      "type": "text",
+      "x": 141,
+      "y": -9519,
+      "width": 220,
+      "height": 80,
+      "text": "**佐证观点的数据与经济学解释**"
+    },
+    {
+      "id": "807a1dae7a904a1a",
+      "type": "text",
+      "x": -359,
+      "y": -9409,
+      "width": 220,
+      "height": 80,
+      "text": "**供给曲线：呈阶梯状或分段水平的“粮食供给曲线”**"
+    },
+    {
+      "id": "f73474c6a34d43c7",
+      "type": "text",
+      "x": -109,
+      "y": -9409,
+      "width": 220,
+      "height": 80,
+      "text": "**供给量**"
+    },
+    {
+      "id": "045c774db95b4182",
+      "type": "text",
+      "x": 141,
+      "y": -9409,
+      "width": 220,
+      "height": 80,
+      "text": "**保留**"
+    },
+    {
+      "id": "c0c15547374d41e0",
+      "type": "text",
+      "x": -359,
+      "y": -9299,
+      "width": 220,
+      "height": 80,
+      "text": "**保证增长率$G_W = Vs$**"
+    },
+    {
+      "id": "32e337f8617e401c",
+      "type": "text",
+      "x": -109,
+      "y": -9299,
+      "width": 220,
+      "height": 80,
+      "text": "**倒U形曲线：人口增长率随人均收入变化的关系**"
+    },
+    {
+      "id": "33c99943ff0e4f5b",
+      "type": "text",
+      "x": 141,
+      "y": -9299,
+      "width": 220,
+      "height": 80,
+      "text": "**停战止损**"
+    },
+    {
+      "id": "8aaccb5080b543e0",
+      "type": "text",
+      "x": -359,
+      "y": -9189,
+      "width": 220,
+      "height": 80,
+      "text": "**储蓄率$s$提高：**"
+    },
+    {
+      "id": "7302cb60e14943ca",
+      "type": "text",
+      "x": -109,
+      "y": -9189,
+      "width": 220,
+      "height": 80,
+      "text": "**储蓄率增加仅导致稳态产出水平一次性提高，但长期增长率并未改变**"
+    },
+    {
+      "id": "8e6750ebd29847e5",
+      "type": "text",
+      "x": 141,
+      "y": -9189,
+      "width": 220,
+      "height": 80,
+      "text": "**储蓄率提升**"
+    },
+    {
+      "id": "cff977b89443484a",
+      "type": "text",
+      "x": -359,
+      "y": -9079,
+      "width": 220,
+      "height": 80,
+      "text": "**储蓄率的提高提升了稳态的人均资本水平和人均产出水平**"
+    },
+    {
+      "id": "e0ca9eefe069440d",
+      "type": "text",
+      "x": -109,
+      "y": -9079,
+      "width": 220,
+      "height": 80,
+      "text": "**僵持期**"
+    },
+    {
+      "id": "c0033fe180aa430e",
+      "type": "text",
+      "x": 141,
+      "y": -9079,
+      "width": 220,
+      "height": 80,
+      "text": "**允许人民币贬值**"
+    },
+    {
+      "id": "d6819bfebb594268",
+      "type": "text",
+      "x": -359,
+      "y": -8969,
+      "width": 220,
+      "height": 80,
+      "text": "**全球供应链与产业转移效应**"
+    },
+    {
+      "id": "74722b3f409f40a2",
+      "type": "text",
+      "x": -109,
+      "y": -8969,
+      "width": 220,
+      "height": 80,
+      "text": "**全球供应链并未与中国真正脱钩**"
+    },
+    {
+      "id": "f49d888f91524b82",
+      "type": "text",
+      "x": 141,
+      "y": -8969,
+      "width": 220,
+      "height": 80,
+      "text": "**全面保护主义**"
+    },
+    {
+      "id": "971361ead3a54e5a",
+      "type": "text",
+      "x": -359,
+      "y": -8859,
+      "width": 220,
+      "height": 80,
+      "text": "**六、与拉美ISI策略的比较：选择性保护 vs 全面保护**"
+    },
+    {
+      "id": "02ab61917f9d44b6",
+      "type": "text",
+      "x": -109,
+      "y": -8859,
+      "width": 220,
+      "height": 80,
+      "text": "**六、经济含义总结**"
+    },
+    {
+      "id": "7c494378d03242bc",
+      "type": "text",
+      "x": 141,
+      "y": -8859,
+      "width": 220,
+      "height": 80,
+      "text": "**共同对外关税**"
+    },
+    {
+      "id": "ef6a7f9b89c041f8",
+      "type": "text",
+      "x": -359,
+      "y": -8749,
+      "width": 220,
+      "height": 80,
+      "text": "**关税与政策调整：**"
+    },
+    {
+      "id": "f0fa36c93bae48f2",
+      "type": "text",
+      "x": -109,
+      "y": -8749,
+      "width": 220,
+      "height": 80,
+      "text": "**关税政策演变：**"
+    },
+    {
+      "id": "569cb3815a2f4a6b",
+      "type": "text",
+      "x": 141,
+      "y": -8749,
+      "width": 220,
+      "height": 80,
+      "text": "**关税政策调整：**"
+    },
+    {
+      "id": "24c615bda9cf4f0a",
+      "type": "text",
+      "x": -359,
+      "y": -8639,
+      "width": 220,
+      "height": 80,
+      "text": "**关税降级**"
+    },
+    {
+      "id": "db44c0dc56c241bf",
+      "type": "text",
+      "x": -109,
+      "y": -8639,
+      "width": 220,
+      "height": 80,
+      "text": "**关键假设：**"
+    },
+    {
+      "id": "7e57166c0643434b",
+      "type": "text",
+      "x": 141,
+      "y": -8639,
+      "width": 220,
+      "height": 80,
+      "text": "**内容**"
+    },
+    {
+      "id": "90735c450be64faf",
+      "type": "text",
+      "x": -359,
+      "y": -8529,
+      "width": 220,
+      "height": 80,
+      "text": "**内需市场饱和**"
+    },
+    {
+      "id": "31409496398b48c6",
+      "type": "text",
+      "x": -109,
+      "y": -8529,
+      "width": 220,
+      "height": 80,
+      "text": "**写在章节前面的**"
+    },
+    {
+      "id": "fe79b492069c48d2",
+      "type": "text",
+      "x": 141,
+      "y": -8529,
+      "width": 220,
+      "height": 80,
+      "text": "**农业部门存在大量剩余劳动力**"
+    },
+    {
+      "id": "a895fb2f10034d17",
+      "type": "text",
+      "x": -359,
+      "y": -8419,
+      "width": 220,
+      "height": 80,
+      "text": "**农业部门的劳动投入与产出(或边际产量)关系**"
+    },
+    {
+      "id": "f3789f73f87b406d",
+      "type": "text",
+      "x": -109,
+      "y": -8419,
+      "width": 220,
+      "height": 80,
+      "text": "**农业部门的工资或生存工资**"
+    },
+    {
+      "id": "1a644e3f860649a9",
+      "type": "text",
+      "x": 141,
+      "y": -8419,
+      "width": 220,
+      "height": 80,
+      "text": "**出口加工区（EPZ）**"
+    },
+    {
+      "id": "b5d3e5bc2df5440d",
+      "type": "text",
+      "x": -359,
+      "y": -8309,
+      "width": 220,
+      "height": 80,
+      "text": "**出口大幅增长与国际竞争力提高：**"
+    },
+    {
+      "id": "dab18a0a5b0c4aff",
+      "type": "text",
+      "x": -109,
+      "y": -8309,
+      "width": 220,
+      "height": 80,
+      "text": "**出口导向型战略**"
+    },
+    {
+      "id": "c82f2881f68241a8",
+      "type": "text",
+      "x": 141,
+      "y": -8309,
+      "width": 220,
+      "height": 80,
+      "text": "**出口导向转型阶段（1960年代）**"
+    },
+    {
+      "id": "4737b81f1ff34deb",
+      "type": "text",
+      "x": -359,
+      "y": -8199,
+      "width": 220,
+      "height": 80,
+      "text": "**出口管制**"
+    },
+    {
+      "id": "a1d35bc16d3f4729",
+      "type": "text",
+      "x": -109,
+      "y": -8199,
+      "width": 220,
+      "height": 80,
+      "text": "**刚投入生产的边际土地**"
+    },
+    {
+      "id": "c3ba4e9de0974c27",
+      "type": "text",
+      "x": 141,
+      "y": -8199,
+      "width": 220,
+      "height": 80,
+      "text": "**初始均衡：需求曲线$d_0$与供给曲线交于$(Q_0, P_0)$**"
+    },
+    {
+      "id": "7f1184d78a4d494d",
+      "type": "text",
+      "x": -359,
+      "y": -8089,
+      "width": 220,
+      "height": 80,
+      "text": "**制度、观念与意识形态的调整是技术进步和经济增长实现的重要条件**"
+    },
+    {
+      "id": "298c3735ed0c488e",
+      "type": "text",
+      "x": -109,
+      "y": -8089,
+      "width": 220,
+      "height": 80,
+      "text": "**前三最重要**"
+    },
+    {
+      "id": "337d6b0df4e14b32",
+      "type": "text",
+      "x": 141,
+      "y": -8089,
+      "width": 220,
+      "height": 80,
+      "text": "**前两道**"
+    },
+    {
+      "id": "7710e9f198ed4b6c",
+      "type": "text",
+      "x": -359,
+      "y": -7979,
+      "width": 220,
+      "height": 80,
+      "text": "**前两道题**"
+    },
+    {
+      "id": "8fe7402448ae4d21",
+      "type": "text",
+      "x": -109,
+      "y": -7979,
+      "width": 220,
+      "height": 80,
+      "text": "**劳动力供给曲线**"
+    },
+    {
+      "id": "8f057a6ab4a44b43",
+      "type": "text",
+      "x": 141,
+      "y": -7979,
+      "width": 220,
+      "height": 80,
+      "text": "**区域一体化**"
+    },
+    {
+      "id": "7cfd47b4149a4c6b",
+      "type": "text",
+      "x": -359,
+      "y": -7869,
+      "width": 220,
+      "height": 80,
+      "text": "**半导体**"
+    },
+    {
+      "id": "92840f049fa84a9f",
+      "type": "text",
+      "x": -109,
+      "y": -7869,
+      "width": 220,
+      "height": 80,
+      "text": "**参考文献：**"
+    },
+    {
+      "id": "62e478d9ebde4d80",
+      "type": "text",
+      "x": 141,
+      "y": -7869,
+      "width": 220,
+      "height": 80,
+      "text": "**双边贸易与全球影响：**"
+    },
+    {
+      "id": "bd2d252e6f724c47",
+      "type": "text",
+      "x": -359,
+      "y": -7759,
+      "width": 220,
+      "height": 80,
+      "text": "**发展与全球化**"
+    },
+    {
+      "id": "08c70ceab182402e",
+      "type": "text",
+      "x": -109,
+      "y": -7759,
+      "width": 220,
+      "height": 80,
+      "text": "**发展的途径**"
+    },
+    {
+      "id": "15e834f549cd481d",
+      "type": "text",
+      "x": 141,
+      "y": -7759,
+      "width": 220,
+      "height": 80,
+      "text": "**台湾初期产业结构：**"
+    },
+    {
+      "id": "536bfeb81c054ddc",
+      "type": "text",
+      "x": -359,
+      "y": -7649,
+      "width": 220,
+      "height": 80,
+      "text": "**同日**"
+    },
+    {
+      "id": "10a20e2a669e43cf",
+      "type": "text",
+      "x": -109,
+      "y": -7649,
+      "width": 220,
+      "height": 80,
+      "text": "**同时**"
+    },
+    {
+      "id": "b5fceeb704ba4a65",
+      "type": "text",
+      "x": 141,
+      "y": -7649,
+      "width": 220,
+      "height": 80,
+      "text": "**后两道**"
+    },
+    {
+      "id": "9310530c6c814c86",
+      "type": "text",
+      "x": -359,
+      "y": -7539,
+      "width": 220,
+      "height": 80,
+      "text": "**后两道题**"
+    },
+    {
+      "id": "d0c6c77502494a86",
+      "type": "text",
+      "x": -109,
+      "y": -7539,
+      "width": 220,
+      "height": 80,
+      "text": "**向上倾斜的红线**"
+    },
+    {
+      "id": "7f4297d3c7f44270",
+      "type": "text",
+      "x": 141,
+      "y": -7539,
+      "width": 220,
+      "height": 80,
+      "text": "**四、图形理解（图片中的图示）**"
+    },
+    {
+      "id": "f8dbc8377e544206",
+      "type": "text",
+      "x": -359,
+      "y": -7429,
+      "width": 220,
+      "height": 80,
+      "text": "**四、提高经济弹性和维护出口竞争力的策略分析**"
+    },
+    {
+      "id": "f86aaf16f5454e6e",
+      "type": "text",
+      "x": -109,
+      "y": -7429,
+      "width": 220,
+      "height": 80,
+      "text": "**四、政策效果分析：产业升级与经济腾飞**"
+    },
+    {
+      "id": "eb743092cd2044d3",
+      "type": "text",
+      "x": 141,
+      "y": -7429,
+      "width": 220,
+      "height": 80,
+      "text": "**国家投资大型项目+引进外资技术+扶植民营升级**"
+    },
+    {
+      "id": "b8347c51b6ec4df5",
+      "type": "text",
+      "x": -359,
+      "y": -7319,
+      "width": 220,
+      "height": 80,
+      "text": "**国有企业**"
+    },
+    {
+      "id": "a4597f98a14c4fb5",
+      "type": "text",
+      "x": -109,
+      "y": -7319,
+      "width": 220,
+      "height": 80,
+      "text": "**国际经济扩张迅速**"
+    },
+    {
+      "id": "bf586e6782124b62",
+      "type": "text",
+      "x": 141,
+      "y": -7319,
+      "width": 220,
+      "height": 80,
+      "text": "**图1：美中关税争端间接促成的出口增量（“谁受益？”）**"
+    },
+    {
+      "id": "4519dc027fc94872",
+      "type": "text",
+      "x": -359,
+      "y": -7209,
+      "width": 220,
+      "height": 80,
+      "text": "**土地改革**"
+    },
+    {
+      "id": "14304654df85483f",
+      "type": "text",
+      "x": -109,
+      "y": -7209,
+      "width": 220,
+      "height": 80,
+      "text": "**在拉美较为缺乏：许多拉美工业由于政治原因被长期保护，即使效率低下仍难以触动，拖累了整体经济。也有学者指出，东亚国家政府**"
+    },
+    {
+      "id": "85336a0c35824020",
+      "type": "text",
+      "x": 141,
+      "y": -7209,
+      "width": 220,
+      "height": 80,
+      "text": "**地租来自于土地肥力（或资源禀赋）的差异**"
+    },
+    {
+      "id": "dd60a8c2914a4513",
+      "type": "text",
+      "x": -359,
+      "y": -7099,
+      "width": 220,
+      "height": 80,
+      "text": "**培育—竞争—升级**"
+    },
+    {
+      "id": "cb63836e80814dd7",
+      "type": "text",
+      "x": -109,
+      "y": -7099,
+      "width": 220,
+      "height": 80,
+      "text": "**基本假设**"
+    },
+    {
+      "id": "ed69be5c5122404a",
+      "type": "text",
+      "x": 141,
+      "y": -7099,
+      "width": 220,
+      "height": 80,
+      "text": "**增长与发展**"
+    },
+    {
+      "id": "982eec0b6b9d487e",
+      "type": "text",
+      "x": -359,
+      "y": -6989,
+      "width": 220,
+      "height": 80,
+      "text": "**大幅提高报复关税和管制战略物资出口**"
+    },
+    {
+      "id": "270fb1aa4a5c479c",
+      "type": "text",
+      "x": -109,
+      "y": -6989,
+      "width": 220,
+      "height": 80,
+      "text": "**大范围商品清单**"
+    },
+    {
+      "id": "83cb480b96b24655",
+      "type": "text",
+      "x": 141,
+      "y": -6989,
+      "width": 220,
+      "height": 80,
+      "text": "**大豆对华出口当年同比暴跌约75%**"
+    },
+    {
+      "id": "fe0edfd4c8f74130",
+      "type": "text",
+      "x": -359,
+      "y": -6879,
+      "width": 220,
+      "height": 80,
+      "text": "**大豆贸易**"
+    },
+    {
+      "id": "719464197d3d4a56",
+      "type": "text",
+      "x": -109,
+      "y": -6879,
+      "width": 220,
+      "height": 80,
+      "text": "**定向信贷**"
+    },
+    {
+      "id": "f4b83f7b39a94ffb",
+      "type": "text",
+      "x": 141,
+      "y": -6879,
+      "width": 220,
+      "height": 80,
+      "text": "**实现了经济腾飞，被誉为“东亚奇迹”。所谓**"
+    },
+    {
+      "id": "d653519d74894b35",
+      "type": "text",
+      "x": -359,
+      "y": -6769,
+      "width": 220,
+      "height": 80,
+      "text": "**实际新增购买几乎为零**"
+    },
+    {
+      "id": "c4c36b56bdca4325",
+      "type": "text",
+      "x": -109,
+      "y": -6769,
+      "width": 220,
+      "height": 80,
+      "text": "**富国与穷国**"
+    },
+    {
+      "id": "586c805b46a94bb5",
+      "type": "text",
+      "x": 141,
+      "y": -6769,
+      "width": 220,
+      "height": 80,
+      "text": "**对中国商品征收超高关税**"
+    },
+    {
+      "id": "627edc9adc734aaa",
+      "type": "text",
+      "x": -359,
+      "y": -6659,
+      "width": 220,
+      "height": 80,
+      "text": "**对出口企业给予进口投入品免税、退税、出口所得减免税50%等优惠**"
+    },
+    {
+      "id": "620179072f3e4f64",
+      "type": "text",
+      "x": -109,
+      "y": -6659,
+      "width": 220,
+      "height": 80,
+      "text": "**对北美及其他贸易伙伴的新关税措施**"
+    },
+    {
+      "id": "ece2955611214b15",
+      "type": "text",
+      "x": 141,
+      "y": -6659,
+      "width": 220,
+      "height": 80,
+      "text": "**对等关税公式及其变化**"
+    },
+    {
+      "id": "358507281f8e477f",
+      "type": "text",
+      "x": -359,
+      "y": -6549,
+      "width": 220,
+      "height": 80,
+      "text": "**对等同步**"
+    },
+    {
+      "id": "fe57a4a985a140e5",
+      "type": "text",
+      "x": -109,
+      "y": -6549,
+      "width": 220,
+      "height": 80,
+      "text": "**对等报复升级**"
+    },
+    {
+      "id": "4f8761cfb1d84c93",
+      "type": "text",
+      "x": 141,
+      "y": -6549,
+      "width": 220,
+      "height": 80,
+      "text": "**局部保护争取时间，全面竞争提升效率**"
+    },
+    {
+      "id": "edebd50910a34d65",
+      "type": "text",
+      "x": -359,
+      "y": -6439,
+      "width": 220,
+      "height": 80,
+      "text": "**工业增加值占GDP比重**"
+    },
+    {
+      "id": "f3eaa4a9f3c244f8",
+      "type": "text",
+      "x": -109,
+      "y": -6439,
+      "width": 220,
+      "height": 80,
+      "text": "**工业工资固定**"
+    },
+    {
+      "id": "a7903ed1097040f8",
+      "type": "text",
+      "x": 141,
+      "y": -6439,
+      "width": 220,
+      "height": 80,
+      "text": "**工业部门以略高于农业“生存工资(或传统部门工资)”的水平吸收劳动力**"
+    },
+    {
+      "id": "36b6b307bdd34e8d",
+      "type": "text",
+      "x": -359,
+      "y": -6329,
+      "width": 220,
+      "height": 80,
+      "text": "**工业部门对劳动力的需求**"
+    },
+    {
+      "id": "036e59d697444b27",
+      "type": "text",
+      "x": -109,
+      "y": -6329,
+      "width": 220,
+      "height": 80,
+      "text": "**工业部门愿意提供的工资**"
+    },
+    {
+      "id": "11facfcd9fc94900",
+      "type": "text",
+      "x": 141,
+      "y": -6329,
+      "width": 220,
+      "height": 80,
+      "text": "**工业部门的劳动力需求与工资水平**"
+    },
+    {
+      "id": "d551a56f4c334d0f",
+      "type": "text",
+      "x": -359,
+      "y": -6219,
+      "width": 220,
+      "height": 80,
+      "text": "**工业革命后的英国**"
+    },
+    {
+      "id": "4cce40384d194c65",
+      "type": "text",
+      "x": -109,
+      "y": -6219,
+      "width": 220,
+      "height": 80,
+      "text": "**差异化处理**"
+    },
+    {
+      "id": "a861f3547d034337",
+      "type": "text",
+      "x": 141,
+      "y": -6219,
+      "width": 220,
+      "height": 80,
+      "text": "**巴西**"
+    },
+    {
+      "id": "cc0ebd19d79c43da",
+      "type": "text",
+      "x": -359,
+      "y": -6109,
+      "width": 220,
+      "height": 80,
+      "text": "**市场价格由边际土地决定**"
+    },
+    {
+      "id": "865e0f8ed68843a0",
+      "type": "text",
+      "x": -109,
+      "y": -6109,
+      "width": 220,
+      "height": 80,
+      "text": "**市场反应及经济影响**"
+    },
+    {
+      "id": "bfd2be6762694696",
+      "type": "text",
+      "x": 141,
+      "y": -6109,
+      "width": 220,
+      "height": 80,
+      "text": "**并非不可克服**"
+    },
+    {
+      "id": "bcca7d562ef74135",
+      "type": "text",
+      "x": -359,
+      "y": -5999,
+      "width": 220,
+      "height": 80,
+      "text": "**引言**"
+    },
+    {
+      "id": "edaf71b52ed44b03",
+      "type": "text",
+      "x": -109,
+      "y": -5999,
+      "width": 220,
+      "height": 80,
+      "text": "**引言 (Introduction)**"
+    },
+    {
+      "id": "ac468c6489ac46df",
+      "type": "text",
+      "x": 141,
+      "y": -5999,
+      "width": 220,
+      "height": 80,
+      "text": "**强化市场机制**"
+    },
+    {
+      "id": "27a4665cec744c3a",
+      "type": "text",
+      "x": -359,
+      "y": -5889,
+      "width": 220,
+      "height": 80,
+      "text": "**当剩余劳动力被逐渐吸收，工资开始上升**"
+    },
+    {
+      "id": "180ccc82e6304eda",
+      "type": "text",
+      "x": -109,
+      "y": -5889,
+      "width": 220,
+      "height": 80,
+      "text": "**成果对比：**"
+    },
+    {
+      "id": "076556ce52d34f73",
+      "type": "text",
+      "x": 141,
+      "y": -5889,
+      "width": 220,
+      "height": 80,
+      "text": "**所有肥沃土地**"
+    },
+    {
+      "id": "1bb7db33d61645b7",
+      "type": "text",
+      "x": -359,
+      "y": -5779,
+      "width": 220,
+      "height": 80,
+      "text": "**扩大报复**"
+    },
+    {
+      "id": "2db13b47174c4c18",
+      "type": "text",
+      "x": -109,
+      "y": -5779,
+      "width": 220,
+      "height": 80,
+      "text": "**技术水平**"
+    },
+    {
+      "id": "381d8c6c7f14481f",
+      "type": "text",
+      "x": 141,
+      "y": -5779,
+      "width": 220,
+      "height": 80,
+      "text": "**技术进步**"
+    },
+    {
+      "id": "60a6ecdb71b54012",
+      "type": "text",
+      "x": -359,
+      "y": -5669,
+      "width": 220,
+      "height": 80,
+      "text": "**技术进步是经济增长的基础和源泉**"
+    },
+    {
+      "id": "f2eecc88193a4757",
+      "type": "text",
+      "x": -109,
+      "y": -5669,
+      "width": 220,
+      "height": 80,
+      "text": "**技术进步的作用**"
+    },
+    {
+      "id": "da995a53575e495f",
+      "type": "text",
+      "x": 141,
+      "y": -5669,
+      "width": 220,
+      "height": 80,
+      "text": "**技术进步的重要性**"
+    },
+    {
+      "id": "1896fca4a3864db3",
+      "type": "text",
+      "x": -359,
+      "y": -5559,
+      "width": 220,
+      "height": 80,
+      "text": "**投资与产业影响**"
+    },
+    {
+      "id": "d444880ab8714d44",
+      "type": "text",
+      "x": -109,
+      "y": -5559,
+      "width": 220,
+      "height": 80,
+      "text": "**拉美传统ISI的教训**"
+    },
+    {
+      "id": "adaae6b46fae4123",
+      "type": "text",
+      "x": 141,
+      "y": -5559,
+      "width": 220,
+      "height": 80,
+      "text": "**收入与人口之间的关系**"
+    },
+    {
+      "id": "cf51b285b3e749f3",
+      "type": "text",
+      "x": -359,
+      "y": -5449,
+      "width": 220,
+      "height": 80,
+      "text": "**政府指导投资与信贷：国家通过五年计划等手段选择战略产业**"
+    },
+    {
+      "id": "222f577d8b184939",
+      "type": "text",
+      "x": -109,
+      "y": -5449,
+      "width": 220,
+      "height": 80,
+      "text": "**政策覆盖范围：拉美国家（如巴西、阿根廷、墨西哥）在中期采用的ISI往往对几乎所有制造业**"
+    },
+    {
+      "id": "1106ae39f3d945fc",
+      "type": "text",
+      "x": 141,
+      "y": -5449,
+      "width": 220,
+      "height": 80,
+      "text": "**新一轮关税政策的核心数据**"
+    },
+    {
+      "id": "53f2d72ab09b478f",
+      "type": "text",
+      "x": -359,
+      "y": -5339,
+      "width": 220,
+      "height": 80,
+      "text": "**方面**"
+    },
+    {
+      "id": "4d969d312a7440f9",
+      "type": "text",
+      "x": -109,
+      "y": -5339,
+      "width": 220,
+      "height": 80,
+      "text": "**更高层次的选择性保护**"
+    },
+    {
+      "id": "40f37ed0406e4913",
+      "type": "text",
+      "x": 141,
+      "y": -5339,
+      "width": 220,
+      "height": 80,
+      "text": "**最大的**"
+    },
+    {
+      "id": "9a4844f197ba4341",
+      "type": "text",
+      "x": -359,
+      "y": -5229,
+      "width": 220,
+      "height": 80,
+      "text": "**最好土地**"
+    },
+    {
+      "id": "5e832600ee084790",
+      "type": "text",
+      "x": -109,
+      "y": -5229,
+      "width": 220,
+      "height": 80,
+      "text": "**有效政府**"
+    },
+    {
+      "id": "613c1590680f47f9",
+      "type": "text",
+      "x": 141,
+      "y": -5229,
+      "width": 220,
+      "height": 80,
+      "text": "**有进有退、动态优化**"
+    },
+    {
+      "id": "8a07bf45e76e41ab",
+      "type": "text",
+      "x": -359,
+      "y": -5119,
+      "width": 220,
+      "height": 80,
+      "text": "**有选择的产业政策组合**"
+    },
+    {
+      "id": "455987fdce6a4ae2",
+      "type": "text",
+      "x": -109,
+      "y": -5119,
+      "width": 220,
+      "height": 80,
+      "text": "**未**"
+    },
+    {
+      "id": "ae5e74309c434fd8",
+      "type": "text",
+      "x": 141,
+      "y": -5119,
+      "width": 220,
+      "height": 80,
+      "text": "**李嘉图和马尔萨斯增长的悲观结论和破解**"
+    },
+    {
+      "id": "78add62f57ed4d54",
+      "type": "text",
+      "x": -359,
+      "y": -5009,
+      "width": 220,
+      "height": 80,
+      "text": "**横轴**"
+    },
+    {
+      "id": "987fb88f0dea46d3",
+      "type": "text",
+      "x": -109,
+      "y": -5009,
+      "width": 220,
+      "height": 80,
+      "text": "**横轴：人均收入**"
+    },
+    {
+      "id": "bcb2df7fe2704e78",
+      "type": "text",
+      "x": 141,
+      "y": -5009,
+      "width": 220,
+      "height": 80,
+      "text": "**横轴：工业劳动力数量（与农业转出对称）**"
+    },
+    {
+      "id": "2118c1c1fb914bb6",
+      "type": "text",
+      "x": -359,
+      "y": -4899,
+      "width": 220,
+      "height": 80,
+      "text": "**横轴：粮食产量**"
+    },
+    {
+      "id": "9628d86893c74ca5",
+      "type": "text",
+      "x": -109,
+      "y": -4899,
+      "width": 220,
+      "height": 80,
+      "text": "**次好土地**"
+    },
+    {
+      "id": "5a77e530255b4896",
+      "type": "text",
+      "x": 141,
+      "y": -4899,
+      "width": 220,
+      "height": 80,
+      "text": "**次日**"
+    },
+    {
+      "id": "0ec55f8a4fd54f4d",
+      "type": "text",
+      "x": -359,
+      "y": -4789,
+      "width": 220,
+      "height": 80,
+      "text": "**水平的红线**"
+    },
+    {
+      "id": "04822148784f4261",
+      "type": "text",
+      "x": -109,
+      "y": -4789,
+      "width": 220,
+      "height": 80,
+      "text": "**汇率与贸易政策配合：**"
+    },
+    {
+      "id": "b909b7e100804a3a",
+      "type": "text",
+      "x": 141,
+      "y": -4789,
+      "width": 220,
+      "height": 80,
+      "text": "**泰国、马来西亚**"
+    },
+    {
+      "id": "eb6a558b11f04e93",
+      "type": "text",
+      "x": -359,
+      "y": -4679,
+      "width": 220,
+      "height": 80,
+      "text": "**消费品价格上升压力**"
+    },
+    {
+      "id": "d2a5b5a6abc24aac",
+      "type": "text",
+      "x": -109,
+      "y": -4679,
+      "width": 220,
+      "height": 80,
+      "text": "**深化对华经贸合作**"
+    },
+    {
+      "id": "1081a0ef6a884a71",
+      "type": "text",
+      "x": 141,
+      "y": -4679,
+      "width": 220,
+      "height": 80,
+      "text": "**点$A$**"
+    },
+    {
+      "id": "2a64b553f5354b5c",
+      "type": "text",
+      "x": -359,
+      "y": -4569,
+      "width": 220,
+      "height": 80,
+      "text": "**点$B$**"
+    },
+    {
+      "id": "e45e6c395e984cb3",
+      "type": "text",
+      "x": -109,
+      "y": -4569,
+      "width": 220,
+      "height": 80,
+      "text": "**点$C$**"
+    },
+    {
+      "id": "34127e6593544c86",
+      "type": "text",
+      "x": 141,
+      "y": -4569,
+      "width": 220,
+      "height": 80,
+      "text": "**现代工业部门**"
+    },
+    {
+      "id": "0105a1bec64a4edd",
+      "type": "text",
+      "x": -359,
+      "y": -4459,
+      "width": 220,
+      "height": 80,
+      "text": "**现代意义**"
+    },
+    {
+      "id": "6dc508327a95407f",
+      "type": "text",
+      "x": -109,
+      "y": -4459,
+      "width": 220,
+      "height": 80,
+      "text": "**生产具有规模报酬不变**"
+    },
+    {
+      "id": "3befa64494564d81",
+      "type": "text",
+      "x": 141,
+      "y": -4459,
+      "width": 220,
+      "height": 80,
+      "text": "**生产率高速增长**"
+    },
+    {
+      "id": "3ae9d829830147fd",
+      "type": "text",
+      "x": -359,
+      "y": -4349,
+      "width": 220,
+      "height": 80,
+      "text": "**用一个小例子来理解**"
+    },
+    {
+      "id": "777297d78ba14e2c",
+      "type": "text",
+      "x": -109,
+      "y": -4349,
+      "width": 220,
+      "height": 80,
+      "text": "**直观解释：**"
+    },
+    {
+      "id": "eee6b17857be4b53",
+      "type": "text",
+      "x": 141,
+      "y": -4349,
+      "width": 220,
+      "height": 80,
+      "text": "**社会、政治和意识形态快速变革**"
+    },
+    {
+      "id": "36859e593742469c",
+      "type": "text",
+      "x": -359,
+      "y": -4239,
+      "width": 220,
+      "height": 80,
+      "text": "**社会储蓄函数**"
+    },
+    {
+      "id": "1a26fb76984c4aba",
+      "type": "text",
+      "x": -109,
+      "y": -4239,
+      "width": 220,
+      "height": 80,
+      "text": "**税收减免**"
+    },
+    {
+      "id": "12bcd82b6cb44ffd",
+      "type": "text",
+      "x": 141,
+      "y": -4239,
+      "width": 220,
+      "height": 80,
+      "text": "**第一段水平**"
+    },
+    {
+      "id": "b4c009ac4e32430a",
+      "type": "text",
+      "x": -359,
+      "y": -4129,
+      "width": 220,
+      "height": 80,
+      "text": "**第一轮产出:**"
+    },
+    {
+      "id": "85c496640527442d",
+      "type": "text",
+      "x": -109,
+      "y": -4129,
+      "width": 220,
+      "height": 80,
+      "text": "**第二段水平**"
+    },
+    {
+      "id": "2ff01bfa51f24ea7",
+      "type": "text",
+      "x": 141,
+      "y": -4129,
+      "width": 220,
+      "height": 80,
+      "text": "**等额反制**"
+    },
+    {
+      "id": "35252d20817e48bf",
+      "type": "text",
+      "x": -359,
+      "y": -4019,
+      "width": 220,
+      "height": 80,
+      "text": "**红色上升部分**"
+    },
+    {
+      "id": "b57e7b52f80b4f5d",
+      "type": "text",
+      "x": -109,
+      "y": -4019,
+      "width": 220,
+      "height": 80,
+      "text": "**红色水平线**"
+    },
+    {
+      "id": "a396079e5aad4873",
+      "type": "text",
+      "x": 141,
+      "y": -4019,
+      "width": 220,
+      "height": 80,
+      "text": "**约三分之二**"
+    },
+    {
+      "id": "f5e2e56f169444ab",
+      "type": "text",
+      "x": -359,
+      "y": -3909,
+      "width": 220,
+      "height": 80,
+      "text": "**纵轴**"
+    },
+    {
+      "id": "42e19e957d864d22",
+      "type": "text",
+      "x": -109,
+      "y": -3909,
+      "width": 220,
+      "height": 80,
+      "text": "**纵轴：人口增长率**"
+    },
+    {
+      "id": "07615de01acb4a8c",
+      "type": "text",
+      "x": 141,
+      "y": -3909,
+      "width": 220,
+      "height": 80,
+      "text": "**纵轴：工资 or 边际产出**"
+    },
+    {
+      "id": "3a8ed1ff9e9745a6",
+      "type": "text",
+      "x": -359,
+      "y": -3799,
+      "width": 220,
+      "height": 80,
+      "text": "**纵轴：粮食价格**"
+    },
+    {
+      "id": "4d48768e7c084770",
+      "type": "text",
+      "x": -109,
+      "y": -3799,
+      "width": 220,
+      "height": 80,
+      "text": "**经济增长在世界范围内有限扩散**"
+    },
+    {
+      "id": "f2f6817678cb4494",
+      "type": "text",
+      "x": 141,
+      "y": -3799,
+      "width": 220,
+      "height": 80,
+      "text": "**经济增长的历史分析**"
+    },
+    {
+      "id": "7752ab9306ee46e0",
+      "type": "text",
+      "x": -359,
+      "y": -3689,
+      "width": 220,
+      "height": 80,
+      "text": "**经济学发展历史**"
+    },
+    {
+      "id": "2a005f17ec654dd3",
+      "type": "text",
+      "x": -109,
+      "y": -3689,
+      "width": 220,
+      "height": 80,
+      "text": "**经济弹性**"
+    },
+    {
+      "id": "0e4cf2707f9248b8",
+      "type": "text",
+      "x": 141,
+      "y": -3689,
+      "width": 220,
+      "height": 80,
+      "text": "**经济成熟的标志**"
+    },
+    {
+      "id": "542d8ec836304cd0",
+      "type": "text",
+      "x": -359,
+      "y": -3579,
+      "width": 220,
+      "height": 80,
+      "text": "**经济是封闭的**"
+    },
+    {
+      "id": "0036a280e9924008",
+      "type": "text",
+      "x": -109,
+      "y": -3579,
+      "width": 220,
+      "height": 80,
+      "text": "**经济由单一部门构成**"
+    },
+    {
+      "id": "cda7090f7e8a4881",
+      "type": "text",
+      "x": 141,
+      "y": -3579,
+      "width": 220,
+      "height": 80,
+      "text": "**经济结构快速变革**"
+    },
+    {
+      "id": "65979fde5e6a4ba1",
+      "type": "text",
+      "x": -359,
+      "y": -3469,
+      "width": 220,
+      "height": 80,
+      "text": "**经济适应与区域合作：**"
+    },
+    {
+      "id": "a5b124db0a124696",
+      "type": "text",
+      "x": -109,
+      "y": -3469,
+      "width": 220,
+      "height": 80,
+      "text": "**经济高速增长与居民收入提高：**"
+    },
+    {
+      "id": "4519b56b85fc40b1",
+      "type": "text",
+      "x": 141,
+      "y": -3469,
+      "width": 220,
+      "height": 80,
+      "text": "**结构性改革**"
+    },
+    {
+      "id": "14c7add473914dac",
+      "type": "text",
+      "x": -359,
+      "y": -3359,
+      "width": 220,
+      "height": 80,
+      "text": "**结果**"
+    },
+    {
+      "id": "0061f9170e164dc7",
+      "type": "text",
+      "x": -109,
+      "y": -3359,
+      "width": 220,
+      "height": 80,
+      "text": "**结果：**"
+    },
+    {
+      "id": "0645262f15fa49f0",
+      "type": "text",
+      "x": 141,
+      "y": -3359,
+      "width": 220,
+      "height": 80,
+      "text": "**结论**"
+    },
+    {
+      "id": "183afad457e243af",
+      "type": "text",
+      "x": -359,
+      "y": -3249,
+      "width": 220,
+      "height": 80,
+      "text": "**绩效约束**"
+    },
+    {
+      "id": "f21068288b504748",
+      "type": "text",
+      "x": -109,
+      "y": -3249,
+      "width": 220,
+      "height": 80,
+      "text": "**美国从中国进口占比**"
+    },
+    {
+      "id": "6e48adcb612b45fa",
+      "type": "text",
+      "x": 141,
+      "y": -3249,
+      "width": 220,
+      "height": 80,
+      "text": "**美国对华出口恢复迟滞**"
+    },
+    {
+      "id": "27e102cbfd064cfc",
+      "type": "text",
+      "x": -359,
+      "y": -3139,
+      "width": 220,
+      "height": 80,
+      "text": "**考试划重点**"
+    },
+    {
+      "id": "e80c9bea9aa94803",
+      "type": "text",
+      "x": -109,
+      "y": -3139,
+      "width": 220,
+      "height": 80,
+      "text": "**聚焦高科技和中小企业**"
+    },
+    {
+      "id": "7a791d3e4db149b3",
+      "type": "text",
+      "x": 141,
+      "y": -3139,
+      "width": 220,
+      "height": 80,
+      "text": "**股市大幅波动**"
+    },
+    {
+      "id": "8849f8c167164ac3",
+      "type": "text",
+      "x": -359,
+      "y": -3029,
+      "width": 220,
+      "height": 80,
+      "text": "**自发调节**"
+    },
+    {
+      "id": "664855da7d954ec9",
+      "type": "text",
+      "x": -109,
+      "y": -3029,
+      "width": 220,
+      "height": 80,
+      "text": "**自工业革命以来出现的一种国家经济持续快速增长的现象。**"
+    },
+    {
+      "id": "03b951675dfd44f6",
+      "type": "text",
+      "x": 141,
+      "y": -3029,
+      "width": 220,
+      "height": 80,
+      "text": "**自然增长率$G_N = n$**"
+    },
+    {
+      "id": "a20ee7f9c2ed40ea",
+      "type": "text",
+      "x": -359,
+      "y": -2919,
+      "width": 220,
+      "height": 80,
+      "text": "**自然资源**"
+    },
+    {
+      "id": "1cf998bf59314c33",
+      "type": "text",
+      "x": -109,
+      "y": -2919,
+      "width": 220,
+      "height": 80,
+      "text": "**蓝色弧线**"
+    },
+    {
+      "id": "8dcf760baf654a5e",
+      "type": "text",
+      "x": 141,
+      "y": -2919,
+      "width": 220,
+      "height": 80,
+      "text": "**补贴与财政激励：两国政府向重点产业提供直接或间接补贴，以降低其成本、提高竞争力。其中出口补贴**"
+    },
+    {
+      "id": "041eea6e36ed4f9a",
+      "type": "text",
+      "x": -359,
+      "y": -2809,
+      "width": 220,
+      "height": 80,
+      "text": "**解析人口发展的阶段**"
+    },
+    {
+      "id": "75d9f2c4ad3d46a6",
+      "type": "text",
+      "x": -109,
+      "y": -2809,
+      "width": 220,
+      "height": 80,
+      "text": "**课后阅读**"
+    },
+    {
+      "id": "6f990a73b79b4a6d",
+      "type": "text",
+      "x": 141,
+      "y": -2809,
+      "width": 220,
+      "height": 80,
+      "text": "**调整与自由化阶段（1980-1990年代）**"
+    },
+    {
+      "id": "ebc4fa2f43b04ba6",
+      "type": "text",
+      "x": -359,
+      "y": -2699,
+      "width": 220,
+      "height": 80,
+      "text": "**财政与金融负担：**"
+    },
+    {
+      "id": "c62793c12d97466c",
+      "type": "text",
+      "x": -109,
+      "y": -2699,
+      "width": 220,
+      "height": 80,
+      "text": "**财阀**"
+    },
+    {
+      "id": "aa2a215a196b4a4b",
+      "type": "text",
+      "x": 141,
+      "y": -2699,
+      "width": 220,
+      "height": 80,
+      "text": "**贸易战带来的机遇与挑战：**"
+    },
+    {
+      "id": "9a79f403eb224f32",
+      "type": "text",
+      "x": -359,
+      "y": -2589,
+      "width": 220,
+      "height": 80,
+      "text": "**贸易摩擦与市场压力：**"
+    },
+    {
+      "id": "e6e67b7576c84aff",
+      "type": "text",
+      "x": -109,
+      "y": -2589,
+      "width": 220,
+      "height": 80,
+      "text": "**贸易极限施压**"
+    },
+    {
+      "id": "79b74857ed6448d8",
+      "type": "text",
+      "x": 141,
+      "y": -2589,
+      "width": 220,
+      "height": 80,
+      "text": "**贸易转移与出口激增：**"
+    },
+    {
+      "id": "4413a726125d4033",
+      "type": "text",
+      "x": -359,
+      "y": -2479,
+      "width": 220,
+      "height": 80,
+      "text": "**资本密集型和技术密集型产业**"
+    },
+    {
+      "id": "c654160ba1594953",
+      "type": "text",
+      "x": -109,
+      "y": -2479,
+      "width": 220,
+      "height": 80,
+      "text": "**资源错配与低效风险：**"
+    },
+    {
+      "id": "771632c43b30497a",
+      "type": "text",
+      "x": 141,
+      "y": -2479,
+      "width": 220,
+      "height": 80,
+      "text": "**起步的进口替代阶段（1950年代）**"
+    },
+    {
+      "id": "2de99f95797844ee",
+      "type": "text",
+      "x": -359,
+      "y": -2369,
+      "width": 220,
+      "height": 80,
+      "text": "**超100%关税**"
+    },
+    {
+      "id": "58739c252af74980",
+      "type": "text",
+      "x": -109,
+      "y": -2369,
+      "width": 220,
+      "height": 80,
+      "text": "**越南**"
+    },
+    {
+      "id": "1d22bd51c0144c8a",
+      "type": "text",
+      "x": 141,
+      "y": -2369,
+      "width": 220,
+      "height": 80,
+      "text": "**越南对美出口**"
+    },
+    {
+      "id": "8d03ba3cfa4d4560",
+      "type": "text",
+      "x": -359,
+      "y": -2259,
+      "width": 220,
+      "height": 80,
+      "text": "**转移过程的三个阶段**"
+    },
+    {
+      "id": "869f7d1990fb43ce",
+      "type": "text",
+      "x": -109,
+      "y": -2259,
+      "width": 220,
+      "height": 80,
+      "text": "**近似无限弹性**"
+    },
+    {
+      "id": "689625694bb54b82",
+      "type": "text",
+      "x": 141,
+      "y": -2259,
+      "width": 220,
+      "height": 80,
+      "text": "**近六成**"
+    },
+    {
+      "id": "37c36046a3ec4465",
+      "type": "text",
+      "x": -359,
+      "y": -2149,
+      "width": 220,
+      "height": 80,
+      "text": "**适时开放**"
+    },
+    {
+      "id": "675e60ef43a74009",
+      "type": "text",
+      "x": -109,
+      "y": -2149,
+      "width": 220,
+      "height": 80,
+      "text": "**选择性保护+出口纪律**"
+    },
+    {
+      "id": "6c9dcabec8ef410d",
+      "type": "text",
+      "x": 141,
+      "y": -2149,
+      "width": 220,
+      "height": 80,
+      "text": "**选择性保护政策**"
+    },
+    {
+      "id": "3b909d5218774dff",
+      "type": "text",
+      "x": -359,
+      "y": -2039,
+      "width": 220,
+      "height": 80,
+      "text": "**选择性和阶段性的保护**"
+    },
+    {
+      "id": "c9b73fcfdd14480c",
+      "type": "text",
+      "x": -109,
+      "y": -2039,
+      "width": 220,
+      "height": 80,
+      "text": "**重化工业化战略（HCI）**"
+    },
+    {
+      "id": "ace4c2831c504b99",
+      "type": "text",
+      "x": 141,
+      "y": -2039,
+      "width": 220,
+      "height": 80,
+      "text": "**重化工业推进阶段（1970年代）**"
+    },
+    {
+      "id": "148f63da829d4a64",
+      "type": "text",
+      "x": -359,
+      "y": -1929,
+      "width": 220,
+      "height": 80,
+      "text": "**重要的推论与现实局限：**"
+    },
+    {
+      "id": "9052d1040e854b3e",
+      "type": "text",
+      "x": -109,
+      "y": -1929,
+      "width": 220,
+      "height": 80,
+      "text": "**长期效应**"
+    },
+    {
+      "id": "e0d6808e5f9043d9",
+      "type": "text",
+      "x": 141,
+      "y": -1929,
+      "width": 220,
+      "height": 80,
+      "text": "**长期稳定增长**"
+    },
+    {
+      "id": "a112f069383d4587",
+      "type": "text",
+      "x": -359,
+      "y": -1819,
+      "width": 220,
+      "height": 80,
+      "text": "**阶段1：完全剩余劳动力阶段**"
+    },
+    {
+      "id": "6008a8a8428f44b5",
+      "type": "text",
+      "x": -109,
+      "y": -1819,
+      "width": 220,
+      "height": 80,
+      "text": "**阶段1：转移开始**"
+    },
+    {
+      "id": "e5a44938c86f401f",
+      "type": "text",
+      "x": 141,
+      "y": -1819,
+      "width": 220,
+      "height": 80,
+      "text": "**阶段2：剩余劳动力逐渐减少**"
+    },
+    {
+      "id": "13d5395f94804506",
+      "type": "text",
+      "x": -359,
+      "y": -1709,
+      "width": 220,
+      "height": 80,
+      "text": "**阶段2：边际产量由0开始上升，但仍有剩余**"
+    },
+    {
+      "id": "e5534dd89c16407e",
+      "type": "text",
+      "x": -109,
+      "y": -1709,
+      "width": 220,
+      "height": 80,
+      "text": "**阶段3：农业部门“剩余”完全吸收，转移不再免费**"
+    },
+    {
+      "id": "c1be8b378be347a7",
+      "type": "text",
+      "x": 141,
+      "y": -1709,
+      "width": 220,
+      "height": 80,
+      "text": "**阶段3：剩余被吸收殆尽**"
+    },
+    {
+      "id": "08b8fec95d9c4ada",
+      "type": "text",
+      "x": -359,
+      "y": -1599,
+      "width": 220,
+      "height": 80,
+      "text": "**阿根廷**"
+    },
+    {
+      "id": "155fb5c247b3431f",
+      "type": "text",
+      "x": -109,
+      "y": -1599,
+      "width": 220,
+      "height": 80,
+      "text": "**降低关税、取消出口税**"
+    },
+    {
+      "id": "b7177c1208c5439c",
+      "type": "text",
+      "x": 141,
+      "y": -1599,
+      "width": 220,
+      "height": 80,
+      "text": "**降低进口关税**"
+    },
+    {
+      "id": "5262755ff1d64634",
+      "type": "text",
+      "x": -359,
+      "y": -1489,
+      "width": 220,
+      "height": 80,
+      "text": "**降低部分关税、放宽进口管制**"
+    },
+    {
+      "id": "4b9d4ff63bd04c2e",
+      "type": "text",
+      "x": -109,
+      "y": -1489,
+      "width": 220,
+      "height": 80,
+      "text": "**需求上升：需求曲线从$d_0$移至$d_1$**"
+    },
+    {
+      "id": "0d160db29d894db7",
+      "type": "text",
+      "x": 141,
+      "y": -1489,
+      "width": 220,
+      "height": 80,
+      "text": "**预期目标难以实现**"
+    },
+    {
+      "id": "3319b640d5ed4189",
+      "type": "text",
+      "x": -359,
+      "y": -1379,
+      "width": 220,
+      "height": 80,
+      "text": "**首次允许进口阿根廷豆粕（豆粉）**"
+    },
+    {
+      "id": "e184eda6730e40b5",
+      "type": "text",
+      "x": -109,
+      "y": -1379,
+      "width": 220,
+      "height": 80,
+      "text": "**马克思**"
+    },
+    {
+      "id": "0e4b3f008b9a4a12",
+      "type": "text",
+      "x": 141,
+      "y": -1379,
+      "width": 220,
+      "height": 80,
+      "text": "**马尔萨斯陷阱的含义**"
+    },
+    {
+      "id": "fb3306e5306741ff",
+      "type": "text",
+      "x": -359,
+      "y": -1269,
+      "width": 220,
+      "height": 80,
+      "text": "**马来西亚、泰国**"
+    },
+    {
+      "id": "d0bb75aae5da4b00",
+      "type": "text",
+      "x": -109,
+      "y": -1269,
+      "width": 220,
+      "height": 80,
+      "text": "**高关税与进口管制：**"
+    },
+    {
+      "id": "7621bb56d752443f",
+      "type": "text",
+      "x": 141,
+      "y": -1269,
+      "width": 220,
+      "height": 80,
+      "text": "**高科技**"
+    },
+    {
+      "id": "9c96574c62664b88",
+      "type": "text",
+      "x": -359,
+      "y": -1159,
+      "width": 220,
+      "height": 80,
+      "text": "**高素质人力资本**"
+    },
+    {
+      "id": "030af295c2df457a",
+      "type": "text",
+      "x": -109,
+      "y": -1159,
+      "width": 220,
+      "height": 80,
+      "text": "**（1）人口增长率增加对稳态人均资本和人均产出的影响：**"
+    },
+    {
+      "id": "9f0d8efaaf644454",
+      "type": "text",
+      "x": 141,
+      "y": -1159,
+      "width": 220,
+      "height": 80,
+      "text": "**（1）储蓄率提高对稳态人均资本和人均产量的影响：**"
+    },
+    {
+      "id": "980e6ce27156475e",
+      "type": "text",
+      "x": -359,
+      "y": -1049,
+      "width": 220,
+      "height": 80,
+      "text": "**（1）市场多元化与贸易重组：**"
+    },
+    {
+      "id": "a905c3ef11854303",
+      "type": "text",
+      "x": -109,
+      "y": -1049,
+      "width": 220,
+      "height": 80,
+      "text": "**（1）经济量扩张**"
+    },
+    {
+      "id": "38b8af8cc0cf49af",
+      "type": "text",
+      "x": 141,
+      "y": -1049,
+      "width": 220,
+      "height": 80,
+      "text": "**（2）人口增长的经济含义：**"
+    },
+    {
+      "id": "33457d1e83254e96",
+      "type": "text",
+      "x": -359,
+      "y": -939,
+      "width": 220,
+      "height": 80,
+      "text": "**（2）参与自由贸易协定与降低关税壁垒：**"
+    },
+    {
+      "id": "132de9793df1440d",
+      "type": "text",
+      "x": -109,
+      "y": -939,
+      "width": 220,
+      "height": 80,
+      "text": "**（2）短期和长期效应（图20-7）：**"
+    },
+    {
+      "id": "97db019a3938485b",
+      "type": "text",
+      "x": 141,
+      "y": -939,
+      "width": 220,
+      "height": 80,
+      "text": "**（2）经济社会结构变化**"
+    },
+    {
+      "id": "a84f39c5838d4c25",
+      "type": "text",
+      "x": -359,
+      "y": -829,
+      "width": 220,
+      "height": 80,
+      "text": "**（3）吸引投资与本地产业升级：**"
+    },
+    {
+      "id": "bdb2cd03cdd54f49",
+      "type": "text",
+      "x": -109,
+      "y": -829,
+      "width": 220,
+      "height": 80,
+      "text": "**（3）增长的国际贸易**"
+    },
+    {
+      "id": "40f4039a8b554f7f",
+      "type": "text",
+      "x": 141,
+      "y": -829,
+      "width": 220,
+      "height": 80,
+      "text": "**（4）财政金融支持与社会保障：**"
+    },
+    {
+      "id": "0bd9b9c2afa1487a",
+      "type": "text",
+      "x": -359,
+      "y": -719,
+      "width": 220,
+      "height": 80,
+      "text": "**，在引导经济方面“不亚于拉美国家政府的介入深度，但更具有效性” 。因此，选择性保护不是不干预，而是**"
+    },
+    {
+      "id": "ae0c066d85da43a9",
+      "type": "text",
+      "x": -109,
+      "y": -719,
+      "width": 220,
+      "height": 80,
+      "text": "**，如韩国90年代几乎完全开放市场 ，台湾取消大部分补贴和管制。这种**"
+    },
+    {
+      "id": "530910b89b354bcb",
+      "type": "group",
+      "x": 7095,
+      "y": -4792,
+      "width": 800,
+      "height": 930,
+      "label": "framework",
+      "color": "3"
+    },
+    {
+      "id": "afeaaf3800a54ea1",
+      "type": "text",
+      "x": 7135,
+      "y": -4752,
+      "width": 220,
+      "height": 80,
+      "text": "**Fei-Ranis Model**"
+    },
+    {
+      "id": "d4290a65a5ec43ec",
+      "type": "text",
+      "x": 7385,
+      "y": -4752,
+      "width": 220,
+      "height": 80,
+      "text": "**Growth Theory**"
+    },
+    {
+      "id": "52d450a3a1bc4e46",
+      "type": "text",
+      "x": 7635,
+      "y": -4752,
+      "width": 220,
+      "height": 80,
+      "text": "**Kuznets Modern Economic Growth Theory**"
+    },
+    {
+      "id": "f729f9c73e154402",
+      "type": "text",
+      "x": 7135,
+      "y": -4642,
+      "width": 220,
+      "height": 80,
+      "text": "**Lewis Dual Sector Model**"
+    },
+    {
+      "id": "339d1449611042bb",
+      "type": "text",
+      "x": 7385,
+      "y": -4642,
+      "width": 220,
+      "height": 80,
+      "text": "**Solow Model**"
+    },
+    {
+      "id": "a5a8a40907f043a6",
+      "type": "text",
+      "x": 7635,
+      "y": -4642,
+      "width": 220,
+      "height": 80,
+      "text": "**Todaro Migration Model**"
+    },
+    {
+      "id": "cf65a17cf067498f",
+      "type": "text",
+      "x": 7135,
+      "y": -4532,
+      "width": 220,
+      "height": 80,
+      "text": "**(1)刘易斯模型**"
+    },
+    {
+      "id": "2b46a952f8fd4513",
+      "type": "text",
+      "x": 7385,
+      "y": -4532,
+      "width": 220,
+      "height": 80,
+      "text": "**(2)中国的消费为什么跟不上**"
+    },
+    {
+      "id": "a2077ea4928844ac",
+      "type": "text",
+      "x": 7635,
+      "y": -4532,
+      "width": 220,
+      "height": 80,
+      "text": "**(5)为什么会发生贫穷**"
+    },
+    {
+      "id": "f15773e662494e55",
+      "type": "text",
+      "x": 7135,
+      "y": -4422,
+      "width": 220,
+      "height": 80,
+      "text": "****1. 1. 刘易斯模型的基本思路****"
+    },
+    {
+      "id": "bdb863670d774222",
+      "type": "text",
+      "x": 7385,
+      "y": -4422,
+      "width": 220,
+      "height": 80,
+      "text": "**1. 刘易斯模型的基本思路**"
+    },
+    {
+      "id": "027eb8e408e046d3",
+      "type": "text",
+      "x": 7635,
+      "y": -4422,
+      "width": 220,
+      "height": 80,
+      "text": "**2 模型内容**"
+    },
+    {
+      "id": "df232489f68e4bf9",
+      "type": "text",
+      "x": 7135,
+      "y": -4312,
+      "width": 220,
+      "height": 80,
+      "text": "**3 模型的稳态分析**"
+    },
+    {
+      "id": "c2c0198873aa458a",
+      "type": "text",
+      "x": 7385,
+      "y": -4312,
+      "width": 220,
+      "height": 80,
+      "text": "**3 模型解读**"
+    },
+    {
+      "id": "5a3a885b65874b3f",
+      "type": "text",
+      "x": 7635,
+      "y": -4312,
+      "width": 220,
+      "height": 80,
+      "text": "**3 模型解释**"
+    },
+    {
+      "id": "cc7f26fb3e04434a",
+      "type": "text",
+      "x": 7135,
+      "y": -4202,
+      "width": 220,
+      "height": 80,
+      "text": "**为什么从农业进入工业,经济可以实现快速的增长**"
+    },
+    {
+      "id": "abb2aa9a67d24e92",
+      "type": "text",
+      "x": 7385,
+      "y": -4202,
+      "width": 220,
+      "height": 80,
+      "text": "**为什么从工业进入服务业,发达国家的经济增长都下降**"
+    },
+    {
+      "id": "c2deb0bea071450c",
+      "type": "text",
+      "x": 7635,
+      "y": -4202,
+      "width": 220,
+      "height": 80,
+      "text": "**劳动力迁移模型**"
+    },
+    {
+      "id": "a4f017cf443a4843",
+      "type": "text",
+      "x": 7135,
+      "y": -4092,
+      "width": 220,
+      "height": 80,
+      "text": "**哈罗德-多玛经济增长模型**"
+    },
+    {
+      "id": "3607d5905a1e47fd",
+      "type": "text",
+      "x": 7385,
+      "y": -4092,
+      "width": 220,
+      "height": 80,
+      "text": "**四、库兹涅茨理论与索罗模型的区别（对比补充）**"
+    },
+    {
+      "id": "0ff3416dd47b4f86",
+      "type": "text",
+      "x": 7635,
+      "y": -4092,
+      "width": 220,
+      "height": 80,
+      "text": "**新古典索罗增长模型**"
+    },
+    {
+      "id": "84bf3740438744f8",
+      "type": "text",
+      "x": 7135,
+      "y": -3982,
+      "width": 220,
+      "height": 80,
+      "text": "**模型的基本假设：**"
+    },
+    {
+      "id": "c1ed0292499c47c6",
+      "type": "text",
+      "x": 7385,
+      "y": -3982,
+      "width": 220,
+      "height": 80,
+      "text": "**经济增长模型**"
+    },
+    {
+      "id": "74b74b5d0e6e4d62",
+      "type": "text",
+      "x": 7635,
+      "y": -3982,
+      "width": 220,
+      "height": 80,
+      "text": "**马克思的资本积累模型**"
+    },
+    {
+      "id": "8379d99121c74d31",
+      "type": "group",
+      "x": 7095,
+      "y": 4217,
+      "width": 800,
       "height": 220,
-      "text": "# 1.前两道题\n- 1.经济增长模型\n- 2. 劳动力迁移模型\n- (1)韩国和朝鲜对创新的态度"
+      "label": "procedure",
+      "color": "3"
+    },
+    {
+      "id": "570f25dbcacf47ad",
+      "type": "text",
+      "x": 7135,
+      "y": 4257,
+      "width": 220,
+      "height": 80,
+      "text": "**步骤1：新古典生产函数的设定**"
+    },
+    {
+      "id": "f10cecf22df34bb1",
+      "type": "text",
+      "x": 7385,
+      "y": 4257,
+      "width": 220,
+      "height": 80,
+      "text": "**步骤2：资本积累方程的推导**"
+    },
+    {
+      "id": "c73ab44febce42cd",
+      "type": "text",
+      "x": 7635,
+      "y": 4257,
+      "width": 220,
+      "height": 80,
+      "text": "**步骤3：考虑人口增长**"
+    },
+    {
+      "id": "9b31af9ded0f4685",
+      "type": "group",
+      "x": -399,
+      "y": 8544,
+      "width": 800,
+      "height": 220,
+      "label": "system",
+      "color": "3"
+    },
+    {
+      "id": "4470dcb6755f4b9e",
+      "type": "text",
+      "x": -359,
+      "y": 8584,
+      "width": 220,
+      "height": 80,
+      "text": "**F-test**"
+    },
+    {
+      "id": "0a5d5b66ebb14471",
+      "type": "text",
+      "x": -109,
+      "y": 8584,
+      "width": 220,
+      "height": 80,
+      "text": "**R-squared**"
+    },
+    {
+      "id": "62d64d7808104a79",
+      "type": "group",
+      "x": -7895,
+      "y": 4217,
+      "width": 800,
+      "height": 220,
+      "label": "proof",
+      "color": "3"
+    },
+    {
+      "id": "243955f73f1f4db6",
+      "type": "text",
+      "x": -7855,
+      "y": 4257,
+      "width": 220,
+      "height": 80,
+      "text": "**2 模型的基本方程与推导过程**"
+    },
+    {
+      "id": "3044b27bdb774fa5",
+      "type": "group",
+      "x": -7895,
+      "y": -4437,
+      "width": 800,
+      "height": 220,
+      "label": "writing",
+      "color": "3"
     }
   ],
   "edges": [
     {
-      "id": "77b22f1828ff4a79",
-      "fromNode": "768ff8432d8d44a7",
+      "id": "14e8fdc4e56b452c",
+      "fromNode": "9fee3392fd044789",
       "fromSide": "right",
-      "toNode": "c6843eb8437047b4",
+      "toNode": "362ae0db6aae49f5",
       "toSide": "left"
     },
     {
-      "id": "58d79aea300e4cbd",
-      "fromNode": "d64226e161114ca0",
+      "id": "d5b10772aab94a6a",
+      "fromNode": "362ae0db6aae49f5",
       "fromSide": "right",
-      "toNode": "71fdc9eef8c74ece",
+      "toNode": "35bf8ce5e79f41a4",
       "toSide": "left"
     },
     {
-      "id": "b8afd9b92f8c44bd",
-      "fromNode": "43f0bd5b97fe4b09",
+      "id": "0d425352e2624775",
+      "fromNode": "362ae0db6aae49f5",
       "fromSide": "right",
-      "toNode": "00344fc8ef6447f8",
+      "toNode": "c2a4bbf473a94d0e",
       "toSide": "left"
     },
     {
-      "id": "cb7f20bac8894cb5",
-      "fromNode": "5be88c94cf6c455c",
+      "id": "96c3b8627d174b35",
+      "fromNode": "362ae0db6aae49f5",
       "fromSide": "right",
-      "toNode": "f3ba58073dd14124",
+      "toNode": "de07d2a7038f4317",
       "toSide": "left"
     },
     {
-      "id": "33c1b99f891349bc",
-      "fromNode": "67364ffeecdf469a",
+      "id": "65bd8bfbb1e54bb3",
+      "fromNode": "362ae0db6aae49f5",
       "fromSide": "right",
-      "toNode": "af8091c8eba04764",
+      "toNode": "0f508110b1fe4ed5",
       "toSide": "left"
     },
     {
-      "id": "273c5228c18a434e",
-      "fromNode": "4c2194db95d847f4",
+      "id": "e8e9a36f65af4469",
+      "fromNode": "362ae0db6aae49f5",
       "fromSide": "right",
-      "toNode": "f67248efa02945fd",
+      "toNode": "9ab05dea30024f74",
       "toSide": "left"
     },
     {
-      "id": "2e1f6a2beab042a7",
-      "fromNode": "642989f4fdd7423f",
+      "id": "c8e4835f02a44893",
+      "fromNode": "362ae0db6aae49f5",
       "fromSide": "right",
-      "toNode": "dc7fe6f566ac4291",
+      "toNode": "3db3314439234d9c",
       "toSide": "left"
     },
     {
-      "id": "c4636d1aff024438",
-      "fromNode": "e36c15a2ee434e88",
+      "id": "c018c249052a4e69",
+      "fromNode": "362ae0db6aae49f5",
       "fromSide": "right",
-      "toNode": "eee7cefc42df40c0",
+      "toNode": "efceb133d2c24306",
       "toSide": "left"
     },
     {
-      "id": "f704f5cfe2f34242",
-      "fromNode": "805faf2cdeae4749",
+      "id": "9192f3d6700b45ad",
+      "fromNode": "362ae0db6aae49f5",
       "fromSide": "right",
-      "toNode": "4d267e14ba7d4ebc",
+      "toNode": "b13a0dfafdf14dc8",
+      "toSide": "left"
+    },
+    {
+      "id": "ea99d6183ee94c1e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "e7afff504ad84d93",
+      "toSide": "left"
+    },
+    {
+      "id": "ced3676384754e0a",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1f564fab476b4f58",
+      "toSide": "left"
+    },
+    {
+      "id": "fd20a75ea1174972",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "4561579c82c445ae",
+      "toSide": "left"
+    },
+    {
+      "id": "26d0587124ee49a6",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "59b5e82b048042fc",
+      "toSide": "left"
+    },
+    {
+      "id": "f427579f2ad54200",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "9da2fa8eba704424",
+      "toSide": "left"
+    },
+    {
+      "id": "b462303584fe4e93",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "fcb400fbb4ef4dd2",
+      "toSide": "left"
+    },
+    {
+      "id": "f553c5aeb06a4c13",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1255690e0a2a4a66",
+      "toSide": "left"
+    },
+    {
+      "id": "dbb6f1cb52494b62",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "5cd693230f1541bb",
+      "toSide": "left"
+    },
+    {
+      "id": "c3afe463d5774c04",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ec78df2ea4584942",
+      "toSide": "left"
+    },
+    {
+      "id": "e794e75bbe314724",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ac9e6e6da6e64da4",
+      "toSide": "left"
+    },
+    {
+      "id": "9bc6182a04a64589",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0d7d77a1afc44321",
+      "toSide": "left"
+    },
+    {
+      "id": "d7bc0ae29015472b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "caafb240ea8c4470",
+      "toSide": "left"
+    },
+    {
+      "id": "f7f6525606de48e1",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "914caf62794c4b5f",
+      "toSide": "left"
+    },
+    {
+      "id": "d702c882164f4b1b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "9509e2572a594ed2",
+      "toSide": "left"
+    },
+    {
+      "id": "1f426ef104244843",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "2d6a6a880a494060",
+      "toSide": "left"
+    },
+    {
+      "id": "eb1fbeaaaf7e409a",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "8353da1a4cf14f9b",
+      "toSide": "left"
+    },
+    {
+      "id": "a275583a61534f93",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "abfe82c968da49f2",
+      "toSide": "left"
+    },
+    {
+      "id": "f37ec368fb4c4d5b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "fb10d1d0e8544c92",
+      "toSide": "left"
+    },
+    {
+      "id": "a8a2ab78058140ac",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1e271576879b4d68",
+      "toSide": "left"
+    },
+    {
+      "id": "6cdd2c616e844d6c",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ce180cdfe73640d0",
+      "toSide": "left"
+    },
+    {
+      "id": "2df9d6ac92a04247",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "dc4a24b6ba094868",
+      "toSide": "left"
+    },
+    {
+      "id": "9091d21506a24f64",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "535012c309ed4e3e",
+      "toSide": "left"
+    },
+    {
+      "id": "cc1bb04d6d0e45b0",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "c912b58a9ca1448f",
+      "toSide": "left"
+    },
+    {
+      "id": "ed9f5a4d17434de4",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "824a7f4b27a444b0",
+      "toSide": "left"
+    },
+    {
+      "id": "2a5cceec3da4486f",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f0dd12347ced4745",
+      "toSide": "left"
+    },
+    {
+      "id": "e9f3311f686145ea",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "481f37b8b66f4ae1",
+      "toSide": "left"
+    },
+    {
+      "id": "bf77c9cead8641e6",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "32d155d2915641a0",
+      "toSide": "left"
+    },
+    {
+      "id": "277d3bf4321d40c1",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "3e45dedc777e456a",
+      "toSide": "left"
+    },
+    {
+      "id": "908e80af307c43e5",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "10d3d522495c4e75",
+      "toSide": "left"
+    },
+    {
+      "id": "90d77ed3d68546a0",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "605fb9dcea6842f1",
+      "toSide": "left"
+    },
+    {
+      "id": "60a70cbdec634ebd",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "537ef40be539418f",
+      "toSide": "left"
+    },
+    {
+      "id": "295afda0c00c4928",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "b50101236eef4b65",
+      "toSide": "left"
+    },
+    {
+      "id": "3cc87ed67ab844f6",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "5c98d2642d4d430f",
+      "toSide": "left"
+    },
+    {
+      "id": "8cf5cbedcca342bc",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "11d6aea4a73943a2",
+      "toSide": "left"
+    },
+    {
+      "id": "50424af7774b4c79",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0fcf6a4b38b44584",
+      "toSide": "left"
+    },
+    {
+      "id": "90821821275a455e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "8267da9e3a1e45df",
+      "toSide": "left"
+    },
+    {
+      "id": "d1c37c80379f48a6",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1d6a690d02cf4d95",
+      "toSide": "left"
+    },
+    {
+      "id": "453d36434e7f4126",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "3bdaa0ff076a42be",
+      "toSide": "left"
+    },
+    {
+      "id": "111f3b72c9e34f4b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "14b8891fe85540ad",
+      "toSide": "left"
+    },
+    {
+      "id": "241c7aa40ea74439",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "2d48701536cd4b3a",
+      "toSide": "left"
+    },
+    {
+      "id": "deea6a7b559d4778",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "9f7b38b7504b4a87",
+      "toSide": "left"
+    },
+    {
+      "id": "8d2b54f65f024ac6",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "652d13d6f2474a5f",
+      "toSide": "left"
+    },
+    {
+      "id": "cdf7e017192e451b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "4eb552b4a58f4444",
+      "toSide": "left"
+    },
+    {
+      "id": "fc017d42cc7b44df",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "57c83618f6804fed",
+      "toSide": "left"
+    },
+    {
+      "id": "680d919678ed4331",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0ff44d95c17245fd",
+      "toSide": "left"
+    },
+    {
+      "id": "fee64760ab4147ed",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "238d8bfa4126430f",
+      "toSide": "left"
+    },
+    {
+      "id": "9a13fcd9f4c946be",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "510b22dccefa4e6e",
+      "toSide": "left"
+    },
+    {
+      "id": "82c141fbb2614fee",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "45edf0a9ae35432e",
+      "toSide": "left"
+    },
+    {
+      "id": "f57d5c48c0c44c91",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "9a6de80b78e54742",
+      "toSide": "left"
+    },
+    {
+      "id": "c557a731caee4cbd",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f32669d8c82a40c6",
+      "toSide": "left"
+    },
+    {
+      "id": "2cb0a3d5244d4c95",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1168e2964e7a450f",
+      "toSide": "left"
+    },
+    {
+      "id": "0dd11cc1d7dc4234",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "bd310780fc0e475f",
+      "toSide": "left"
+    },
+    {
+      "id": "d228fbc7787d480d",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "d7074cd92fbd4b42",
+      "toSide": "left"
+    },
+    {
+      "id": "d780d2b29cd24d92",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "c3de096113f844bc",
+      "toSide": "left"
+    },
+    {
+      "id": "e9829a813c154052",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "9f6e99d2c5454a19",
+      "toSide": "left"
+    },
+    {
+      "id": "845732eacc2c4941",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "370b4ebbf0b549c0",
+      "toSide": "left"
+    },
+    {
+      "id": "752da6d0026046bc",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "28d67c2207954c6e",
+      "toSide": "left"
+    },
+    {
+      "id": "2fac9cfb45d443d9",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "76ee1c3578c0484a",
+      "toSide": "left"
+    },
+    {
+      "id": "91fa95dd0d7c4ca9",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "04dbf1672e304437",
+      "toSide": "left"
+    },
+    {
+      "id": "3c349dc6e3744561",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "bdbb35a4abfa4bdb",
+      "toSide": "left"
+    },
+    {
+      "id": "d3b150a45b5f4d57",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "6e1353e8b1974dcd",
+      "toSide": "left"
+    },
+    {
+      "id": "7bcf931701ae46c0",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ffd4ee1865b54285",
+      "toSide": "left"
+    },
+    {
+      "id": "1b5739727d974f2b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "3d18872db940494e",
+      "toSide": "left"
+    },
+    {
+      "id": "abf0d45919e44d95",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1d80ef40a7e5461e",
+      "toSide": "left"
+    },
+    {
+      "id": "72db6516c83842ad",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f5d0bdd572014d92",
+      "toSide": "left"
+    },
+    {
+      "id": "44e1d40dfa074cb0",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "5938b68d4f4047e1",
+      "toSide": "left"
+    },
+    {
+      "id": "6e0d6bcbd1fe4621",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1e582c10de714c2d",
+      "toSide": "left"
+    },
+    {
+      "id": "e3b5db529c8a466e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "b283efff95f04925",
+      "toSide": "left"
+    },
+    {
+      "id": "146a3a29534544b3",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "d4fb60842ec14405",
+      "toSide": "left"
+    },
+    {
+      "id": "001bf4c078e6443f",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0392295400784840",
+      "toSide": "left"
+    },
+    {
+      "id": "1cb7c7e6e0824ee4",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f4522e73129c45ad",
+      "toSide": "left"
+    },
+    {
+      "id": "5665a40482254225",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a3ca77a30fbd420c",
+      "toSide": "left"
+    },
+    {
+      "id": "7e8132601eeb4eb5",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ef2ce6c792a94b08",
+      "toSide": "left"
+    },
+    {
+      "id": "e140c2446a5444c0",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "59c0425e07ef49c9",
+      "toSide": "left"
+    },
+    {
+      "id": "ecefd181746f4ea1",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "60d6886febb444e8",
+      "toSide": "left"
+    },
+    {
+      "id": "c87ebbe76c1e4a3e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "03884dc3d76f43c0",
+      "toSide": "left"
+    },
+    {
+      "id": "2f50bc9d1ec649f3",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "91d9feea6147483f",
+      "toSide": "left"
+    },
+    {
+      "id": "b325bbe852c74c3e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0f0eb03e240247db",
+      "toSide": "left"
+    },
+    {
+      "id": "081d3b72e2f54dee",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ff0dfa3eb0ac40fc",
+      "toSide": "left"
+    },
+    {
+      "id": "2728343bf7c74c71",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1df50840a89a4d63",
+      "toSide": "left"
+    },
+    {
+      "id": "a5d48d3d1f124079",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "22e2cfc2ac0a4639",
+      "toSide": "left"
+    },
+    {
+      "id": "6a36bf97fc704f87",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "fc2273d6e05a4f51",
+      "toSide": "left"
+    },
+    {
+      "id": "7cac8d816a434fd3",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1f6409cb8b66469c",
+      "toSide": "left"
+    },
+    {
+      "id": "62aa80cee24c40bf",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "eeb7ab5a9a534ff1",
+      "toSide": "left"
+    },
+    {
+      "id": "ac56dcea9f064f79",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "e6d3d03be5844e0f",
+      "toSide": "left"
+    },
+    {
+      "id": "51685e6aa47f4d6c",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "5da5d54acf0a4222",
+      "toSide": "left"
+    },
+    {
+      "id": "9121183ceb104c96",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "210c863dd2db495f",
+      "toSide": "left"
+    },
+    {
+      "id": "618694ee87054414",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "263fa708f7074ec4",
+      "toSide": "left"
+    },
+    {
+      "id": "9b29f036e7314228",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0bb50116a8424893",
+      "toSide": "left"
+    },
+    {
+      "id": "5692d0f6c64649fe",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "633640af57554fa6",
+      "toSide": "left"
+    },
+    {
+      "id": "250b9b64c9914620",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "144a06e6fe87402f",
+      "toSide": "left"
+    },
+    {
+      "id": "903ebe734e024cb2",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "368dc9ac35f940f8",
+      "toSide": "left"
+    },
+    {
+      "id": "87340e499f1d4d24",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "84e53510db184dc2",
+      "toSide": "left"
+    },
+    {
+      "id": "658255484a364297",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "908d9b1b8aea43af",
+      "toSide": "left"
+    },
+    {
+      "id": "50835462e14a4151",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "18eb53c82498400e",
+      "toSide": "left"
+    },
+    {
+      "id": "08faaf868b5d44e4",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "7a72060d2d4f4ea8",
+      "toSide": "left"
+    },
+    {
+      "id": "1ffd26fe8b8b4f7c",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "bb996ee41ddd486f",
+      "toSide": "left"
+    },
+    {
+      "id": "1e1af446c9e84098",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "eae208521a504285",
+      "toSide": "left"
+    },
+    {
+      "id": "d6da6fde90254381",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "38322fa33606467a",
+      "toSide": "left"
+    },
+    {
+      "id": "d60f2ca1bfb64e73",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "4c484a6fdcc74bc1",
+      "toSide": "left"
+    },
+    {
+      "id": "25d12e6b510c457c",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "503b4cb8c9364305",
+      "toSide": "left"
+    },
+    {
+      "id": "e411f6e845344d47",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "35f9332c0a4346a5",
+      "toSide": "left"
+    },
+    {
+      "id": "af6540e39db7419a",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f6f1e1dcfd674194",
+      "toSide": "left"
+    },
+    {
+      "id": "9b7629d7324c4b97",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "08e3b2324d0a467e",
+      "toSide": "left"
+    },
+    {
+      "id": "cb85ad7bb79b43c1",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "5765fbe2253848b1",
+      "toSide": "left"
+    },
+    {
+      "id": "5a386ea87df84c08",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a51a97aac6ac411e",
+      "toSide": "left"
+    },
+    {
+      "id": "1a5b7e6ffc9948cf",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "fe491d65e7fc4aa0",
+      "toSide": "left"
+    },
+    {
+      "id": "e19e8b74eccf43ea",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "7478b746ca5f426a",
+      "toSide": "left"
+    },
+    {
+      "id": "f60e476667904735",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "40595d3ba4104744",
+      "toSide": "left"
+    },
+    {
+      "id": "28a12b4375734678",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "73d24bc5c8f243f4",
+      "toSide": "left"
+    },
+    {
+      "id": "4c2b6a0172cd4e83",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ad84711f1dd843eb",
+      "toSide": "left"
+    },
+    {
+      "id": "5423712dcbbc470c",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f01535a711ae4df2",
+      "toSide": "left"
+    },
+    {
+      "id": "b8d95933dc314f7a",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "d174f06df0774c08",
+      "toSide": "left"
+    },
+    {
+      "id": "9d3eda173bf74054",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "d558c09054bf41e8",
+      "toSide": "left"
+    },
+    {
+      "id": "6f822cc214004484",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1b8fd3dd32aa4684",
+      "toSide": "left"
+    },
+    {
+      "id": "f7a104902e754d2b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "46f993a766064df1",
+      "toSide": "left"
+    },
+    {
+      "id": "5666e9179e444b12",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f1d2aedb34d24cdc",
+      "toSide": "left"
+    },
+    {
+      "id": "557763f06aec4031",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a60c6552cc0c4de5",
+      "toSide": "left"
+    },
+    {
+      "id": "f61c4065c8be4366",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "664c6508395744c6",
+      "toSide": "left"
+    },
+    {
+      "id": "e6ee7471fee5491f",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f22c71bd41414d24",
+      "toSide": "left"
+    },
+    {
+      "id": "b31ba539a87045ee",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "220c118194f84d4d",
+      "toSide": "left"
+    },
+    {
+      "id": "a5c92690a5444ff4",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "6bcd4ca2e26741ec",
+      "toSide": "left"
+    },
+    {
+      "id": "844930f3c6c4417a",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0a6688a733394c94",
+      "toSide": "left"
+    },
+    {
+      "id": "cfe8af928d1d456d",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "05bd82b130d4422e",
+      "toSide": "left"
+    },
+    {
+      "id": "62b4cf21ae914964",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "c1667fdf45cb48b9",
+      "toSide": "left"
+    },
+    {
+      "id": "a29f6c5618d549e7",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "405f470a22d940ed",
+      "toSide": "left"
+    },
+    {
+      "id": "4b5b061c3b724fc1",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "3d1b3e0b15594d52",
+      "toSide": "left"
+    },
+    {
+      "id": "49f5c0d15d9f4822",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f875d01e62894a00",
+      "toSide": "left"
+    },
+    {
+      "id": "f14468487b2a4905",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "de64d6001b4740ff",
+      "toSide": "left"
+    },
+    {
+      "id": "717893d3ccf54ec5",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "80f830578f674e69",
+      "toSide": "left"
+    },
+    {
+      "id": "457f63698bdb44fd",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "b914a622aff0417a",
+      "toSide": "left"
+    },
+    {
+      "id": "7fa8828b1e4c47cf",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "078f5d9c8a304bd0",
+      "toSide": "left"
+    },
+    {
+      "id": "4a7e11dcb78d4ad4",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "43f475b14a11417f",
+      "toSide": "left"
+    },
+    {
+      "id": "6baf7893e0164d27",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "da23348b6878469c",
+      "toSide": "left"
+    },
+    {
+      "id": "64c7a674950d43a8",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "7d544203bb174e67",
+      "toSide": "left"
+    },
+    {
+      "id": "a12d7b1224da45ae",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "937b80b4135d4012",
+      "toSide": "left"
+    },
+    {
+      "id": "657f297340134987",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "b2f32c00c5e549c5",
+      "toSide": "left"
+    },
+    {
+      "id": "3b857d3975a042af",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "8ec8fb18170c44d4",
+      "toSide": "left"
+    },
+    {
+      "id": "85ab9b45c6464035",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ab76b12e57c947eb",
+      "toSide": "left"
+    },
+    {
+      "id": "8462babdbed142d0",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "6bb5e31e2f40415f",
+      "toSide": "left"
+    },
+    {
+      "id": "3acb7f408ab446cb",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "9f5d08c0ce3d4a6c",
+      "toSide": "left"
+    },
+    {
+      "id": "3041d652d2f1410e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "838ad03830a943b9",
+      "toSide": "left"
+    },
+    {
+      "id": "835f6a3476a04b65",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "305d677dd28c4302",
+      "toSide": "left"
+    },
+    {
+      "id": "8f3d5c82bfd6471f",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "73ac44d5f93249b9",
+      "toSide": "left"
+    },
+    {
+      "id": "5616b6a33af34e30",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "3b37b8e94dc34a86",
+      "toSide": "left"
+    },
+    {
+      "id": "be3f263796fd4834",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "e3903883789343a8",
+      "toSide": "left"
+    },
+    {
+      "id": "93c3fe6b9c714042",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ba5d2b1c2c984458",
+      "toSide": "left"
+    },
+    {
+      "id": "469d98c574114092",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "b0914ef5b01f4832",
+      "toSide": "left"
+    },
+    {
+      "id": "2d40a1b6a5454320",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "4a13045602aa4ad2",
+      "toSide": "left"
+    },
+    {
+      "id": "d6508ec99bd641a1",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "b1592d4483c94507",
+      "toSide": "left"
+    },
+    {
+      "id": "07d7399ab6f64730",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "742b904656fd448b",
+      "toSide": "left"
+    },
+    {
+      "id": "74ffaaaa301440c8",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "984ff9c961754c18",
+      "toSide": "left"
+    },
+    {
+      "id": "d23925f2bcfd4a95",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "e0b6130737de4ccc",
+      "toSide": "left"
+    },
+    {
+      "id": "49c19217e63540a9",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "e4379f03ef0e4a49",
+      "toSide": "left"
+    },
+    {
+      "id": "73f76247b0bc4356",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "561161f241084835",
+      "toSide": "left"
+    },
+    {
+      "id": "22780ec8f03440ef",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "032ad0de616a44bf",
+      "toSide": "left"
+    },
+    {
+      "id": "79b43e18e92b455e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a9914678c4464119",
+      "toSide": "left"
+    },
+    {
+      "id": "3f3e12d9e88c46cf",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "50f19d7a35d340cc",
+      "toSide": "left"
+    },
+    {
+      "id": "9d97359f8a7d4c17",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "e4c6d110f3554ca7",
+      "toSide": "left"
+    },
+    {
+      "id": "98901dcfbbc14d62",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "3b154f843ebb40e8",
+      "toSide": "left"
+    },
+    {
+      "id": "1cc68bf8e4db41ff",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "64af164e1a774c33",
+      "toSide": "left"
+    },
+    {
+      "id": "27eb09e2b81b42ac",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f371394f3f564996",
+      "toSide": "left"
+    },
+    {
+      "id": "824db5a9c8904a52",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "eedf0cc207e44900",
+      "toSide": "left"
+    },
+    {
+      "id": "7f6b6557588e46ea",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "51cdd7ed579545fc",
+      "toSide": "left"
+    },
+    {
+      "id": "d9aa632345044caa",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "74a88638940d4698",
+      "toSide": "left"
+    },
+    {
+      "id": "de4a7db879ac481e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "65a95a4488bc44c3",
+      "toSide": "left"
+    },
+    {
+      "id": "3d80516b67a14570",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "2872b5bdc6b34246",
+      "toSide": "left"
+    },
+    {
+      "id": "f30618051dae428f",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "01f96bbc06064e1b",
+      "toSide": "left"
+    },
+    {
+      "id": "88875d1eb4de47a6",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "95656ddf9e2f456e",
+      "toSide": "left"
+    },
+    {
+      "id": "ef95c1c97ecc441b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "361b671959cc4b44",
+      "toSide": "left"
+    },
+    {
+      "id": "09462a94fcde40a2",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "5d29d38422164ff4",
+      "toSide": "left"
+    },
+    {
+      "id": "ab38ad21cd064b16",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a315a063354c4a7f",
+      "toSide": "left"
+    },
+    {
+      "id": "a00129d6ef1b44f0",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "5ad5793f693a4bd2",
+      "toSide": "left"
+    },
+    {
+      "id": "b21e79880c8e4a6f",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "71bd6bf2801346bd",
+      "toSide": "left"
+    },
+    {
+      "id": "20529a435a534c93",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a7afbbc295214d1a",
+      "toSide": "left"
+    },
+    {
+      "id": "760f37a6706f4a5d",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a6ddd699e2e04361",
+      "toSide": "left"
+    },
+    {
+      "id": "593aca801a434bda",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "c19021acb6fb4e55",
+      "toSide": "left"
+    },
+    {
+      "id": "005d36d5d96d4cb7",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1cf292ac58604c4b",
+      "toSide": "left"
+    },
+    {
+      "id": "a8f5c36343814052",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "9974765f729a4bb0",
+      "toSide": "left"
+    },
+    {
+      "id": "63961e2ef19e49d5",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "50e6a059786c477d",
+      "toSide": "left"
+    },
+    {
+      "id": "8696eef444c24e7a",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "add27a1cd8e04e8d",
+      "toSide": "left"
+    },
+    {
+      "id": "227d7f8799f749bb",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "c2cb5c4eea9541c8",
+      "toSide": "left"
+    },
+    {
+      "id": "58c4c7cc66bd4db1",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "b5daa63be6d64898",
+      "toSide": "left"
+    },
+    {
+      "id": "4a495d8755e34fd9",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "7aa57407f2b84ea7",
+      "toSide": "left"
+    },
+    {
+      "id": "eb69bace8f30444b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "918e69ce3f714663",
+      "toSide": "left"
+    },
+    {
+      "id": "045602a1472a4a76",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "e12f65b0ce5f457b",
+      "toSide": "left"
+    },
+    {
+      "id": "884c62328ccf4965",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "9281ad0240ae4d4b",
+      "toSide": "left"
+    },
+    {
+      "id": "e7773be790154297",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "90d1af0ba3674798",
+      "toSide": "left"
+    },
+    {
+      "id": "f60e79f6125e4bf8",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "060e612d8ee14c40",
+      "toSide": "left"
+    },
+    {
+      "id": "08b8cdff0189453c",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "737e7b7386884eb7",
+      "toSide": "left"
+    },
+    {
+      "id": "f32bb8ac82344c40",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "807a1dae7a904a1a",
+      "toSide": "left"
+    },
+    {
+      "id": "f0ded13fd36547ab",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f73474c6a34d43c7",
+      "toSide": "left"
+    },
+    {
+      "id": "1282d55a5b9341d0",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "045c774db95b4182",
+      "toSide": "left"
+    },
+    {
+      "id": "a44a8bb112114aa9",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "c0c15547374d41e0",
+      "toSide": "left"
+    },
+    {
+      "id": "cea0b910a9ca4e3e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "32e337f8617e401c",
+      "toSide": "left"
+    },
+    {
+      "id": "2a376195ccdd40c2",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "33c99943ff0e4f5b",
+      "toSide": "left"
+    },
+    {
+      "id": "d6b90c4747c040c3",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "8aaccb5080b543e0",
+      "toSide": "left"
+    },
+    {
+      "id": "0738ef71693b4c35",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "7302cb60e14943ca",
+      "toSide": "left"
+    },
+    {
+      "id": "78149174ee1e4435",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "8e6750ebd29847e5",
+      "toSide": "left"
+    },
+    {
+      "id": "1ee5f690282540c8",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "cff977b89443484a",
+      "toSide": "left"
+    },
+    {
+      "id": "2c69119432f64463",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "e0ca9eefe069440d",
+      "toSide": "left"
+    },
+    {
+      "id": "96cf2cd89f414369",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "c0033fe180aa430e",
+      "toSide": "left"
+    },
+    {
+      "id": "61e1407dafa541fc",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "d6819bfebb594268",
+      "toSide": "left"
+    },
+    {
+      "id": "9c1f076bdac14bc1",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "74722b3f409f40a2",
+      "toSide": "left"
+    },
+    {
+      "id": "276d098739814faa",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f49d888f91524b82",
+      "toSide": "left"
+    },
+    {
+      "id": "758486ffb802448e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "971361ead3a54e5a",
+      "toSide": "left"
+    },
+    {
+      "id": "a89213f9c5cb4612",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "02ab61917f9d44b6",
+      "toSide": "left"
+    },
+    {
+      "id": "76b396fc46bc4784",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "7c494378d03242bc",
+      "toSide": "left"
+    },
+    {
+      "id": "0447182bd186488d",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ef6a7f9b89c041f8",
+      "toSide": "left"
+    },
+    {
+      "id": "b5a0873362c84432",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f0fa36c93bae48f2",
+      "toSide": "left"
+    },
+    {
+      "id": "3cf5971a60874a46",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "569cb3815a2f4a6b",
+      "toSide": "left"
+    },
+    {
+      "id": "4fcf5bc625c6411d",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "24c615bda9cf4f0a",
+      "toSide": "left"
+    },
+    {
+      "id": "1645d4c95345486f",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "db44c0dc56c241bf",
+      "toSide": "left"
+    },
+    {
+      "id": "8cd3113ee3384bd7",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "7e57166c0643434b",
+      "toSide": "left"
+    },
+    {
+      "id": "5f7298c3aeb94ef2",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "90735c450be64faf",
+      "toSide": "left"
+    },
+    {
+      "id": "36625050613c4cd3",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "31409496398b48c6",
+      "toSide": "left"
+    },
+    {
+      "id": "a720bdb0ba0943c6",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "fe79b492069c48d2",
+      "toSide": "left"
+    },
+    {
+      "id": "87d66c5b19d343f3",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a895fb2f10034d17",
+      "toSide": "left"
+    },
+    {
+      "id": "417e5e46426a481f",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f3789f73f87b406d",
+      "toSide": "left"
+    },
+    {
+      "id": "d1ad516cbd45459e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1a644e3f860649a9",
+      "toSide": "left"
+    },
+    {
+      "id": "87cff8e5d3154d63",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "b5d3e5bc2df5440d",
+      "toSide": "left"
+    },
+    {
+      "id": "9becea02b1154497",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "dab18a0a5b0c4aff",
+      "toSide": "left"
+    },
+    {
+      "id": "d0eb44c3fffc4b72",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "c82f2881f68241a8",
+      "toSide": "left"
+    },
+    {
+      "id": "b256a21f4d7948f2",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "4737b81f1ff34deb",
+      "toSide": "left"
+    },
+    {
+      "id": "fc74d2784f9a4a62",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a1d35bc16d3f4729",
+      "toSide": "left"
+    },
+    {
+      "id": "a9b211d8bbf54c89",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "c3ba4e9de0974c27",
+      "toSide": "left"
+    },
+    {
+      "id": "e141e779fc6e4377",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "7f1184d78a4d494d",
+      "toSide": "left"
+    },
+    {
+      "id": "f030481757a64326",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "298c3735ed0c488e",
+      "toSide": "left"
+    },
+    {
+      "id": "3843f8f741ba464b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "337d6b0df4e14b32",
+      "toSide": "left"
+    },
+    {
+      "id": "21956db28b394cc3",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "7710e9f198ed4b6c",
+      "toSide": "left"
+    },
+    {
+      "id": "c8225016579a4bd5",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "8fe7402448ae4d21",
+      "toSide": "left"
+    },
+    {
+      "id": "e819c7664d9b4793",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "8f057a6ab4a44b43",
+      "toSide": "left"
+    },
+    {
+      "id": "400b00d88b0a44ed",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "7cfd47b4149a4c6b",
+      "toSide": "left"
+    },
+    {
+      "id": "d6d9b723b2a24ad8",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "92840f049fa84a9f",
+      "toSide": "left"
+    },
+    {
+      "id": "e6060995f2ae4d0e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "62e478d9ebde4d80",
+      "toSide": "left"
+    },
+    {
+      "id": "032ae3c567674093",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "bd2d252e6f724c47",
+      "toSide": "left"
+    },
+    {
+      "id": "dd65249437524883",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "08c70ceab182402e",
+      "toSide": "left"
+    },
+    {
+      "id": "caaeb3c40d924db6",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "15e834f549cd481d",
+      "toSide": "left"
+    },
+    {
+      "id": "acea4839885d472a",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "536bfeb81c054ddc",
+      "toSide": "left"
+    },
+    {
+      "id": "49c9fbe29cb84600",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "10a20e2a669e43cf",
+      "toSide": "left"
+    },
+    {
+      "id": "a6a1261803af45ec",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "b5fceeb704ba4a65",
+      "toSide": "left"
+    },
+    {
+      "id": "990a9ea9f35f46cc",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "9310530c6c814c86",
+      "toSide": "left"
+    },
+    {
+      "id": "19f175c095d046cb",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "d0c6c77502494a86",
+      "toSide": "left"
+    },
+    {
+      "id": "47008a178c1f493b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "7f4297d3c7f44270",
+      "toSide": "left"
+    },
+    {
+      "id": "1965dd4bc79341fa",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f8dbc8377e544206",
+      "toSide": "left"
+    },
+    {
+      "id": "539909151b194070",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f86aaf16f5454e6e",
+      "toSide": "left"
+    },
+    {
+      "id": "6317ec88f29246d6",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "eb743092cd2044d3",
+      "toSide": "left"
+    },
+    {
+      "id": "398d6e0fe0634f0e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "b8347c51b6ec4df5",
+      "toSide": "left"
+    },
+    {
+      "id": "219dffbf3d774c9a",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a4597f98a14c4fb5",
+      "toSide": "left"
+    },
+    {
+      "id": "c779ebba9c184f1a",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "bf586e6782124b62",
+      "toSide": "left"
+    },
+    {
+      "id": "616bd8cce61d4d58",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "4519dc027fc94872",
+      "toSide": "left"
+    },
+    {
+      "id": "d83a35b98d19462f",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "14304654df85483f",
+      "toSide": "left"
+    },
+    {
+      "id": "5d74b07719834b76",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "85336a0c35824020",
+      "toSide": "left"
+    },
+    {
+      "id": "850868313c0845fb",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "dd60a8c2914a4513",
+      "toSide": "left"
+    },
+    {
+      "id": "1b48011a7fb74ee0",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "cb63836e80814dd7",
+      "toSide": "left"
+    },
+    {
+      "id": "59916cb1533b4e08",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ed69be5c5122404a",
+      "toSide": "left"
+    },
+    {
+      "id": "90d8198303b241c4",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "982eec0b6b9d487e",
+      "toSide": "left"
+    },
+    {
+      "id": "7a85d0ac7ce9427d",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "270fb1aa4a5c479c",
+      "toSide": "left"
+    },
+    {
+      "id": "d003fb0e530b4bd3",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "83cb480b96b24655",
+      "toSide": "left"
+    },
+    {
+      "id": "6f89017557214c42",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "fe0edfd4c8f74130",
+      "toSide": "left"
+    },
+    {
+      "id": "45b3ebbe419441aa",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "719464197d3d4a56",
+      "toSide": "left"
+    },
+    {
+      "id": "ff84a4accb0943e9",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f4b83f7b39a94ffb",
+      "toSide": "left"
+    },
+    {
+      "id": "9dc897ad6ff94b02",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "d653519d74894b35",
+      "toSide": "left"
+    },
+    {
+      "id": "d4be04ba8d6d4c36",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "c4c36b56bdca4325",
+      "toSide": "left"
+    },
+    {
+      "id": "8b555527c7374b78",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "586c805b46a94bb5",
+      "toSide": "left"
+    },
+    {
+      "id": "b56e5b7b1a534944",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "627edc9adc734aaa",
+      "toSide": "left"
+    },
+    {
+      "id": "19da0d4115cc40ff",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "620179072f3e4f64",
+      "toSide": "left"
+    },
+    {
+      "id": "aa3de388253343c3",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ece2955611214b15",
+      "toSide": "left"
+    },
+    {
+      "id": "23a3698b39a44a28",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "358507281f8e477f",
+      "toSide": "left"
+    },
+    {
+      "id": "e91da1f304fb4eab",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "fe57a4a985a140e5",
+      "toSide": "left"
+    },
+    {
+      "id": "29eb34371d314d99",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "4f8761cfb1d84c93",
+      "toSide": "left"
+    },
+    {
+      "id": "150d0da8d2154572",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "edebd50910a34d65",
+      "toSide": "left"
+    },
+    {
+      "id": "cdc0a8f18eee4f6b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f3eaa4a9f3c244f8",
+      "toSide": "left"
+    },
+    {
+      "id": "f4593dac9c224f0c",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a7903ed1097040f8",
+      "toSide": "left"
+    },
+    {
+      "id": "a2ca2f8ed8f54c6b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "36b6b307bdd34e8d",
+      "toSide": "left"
+    },
+    {
+      "id": "b3fbbfa6a35442ff",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "036e59d697444b27",
+      "toSide": "left"
+    },
+    {
+      "id": "b035b1bedb734d53",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "11facfcd9fc94900",
+      "toSide": "left"
+    },
+    {
+      "id": "84c801db720e4751",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "d551a56f4c334d0f",
+      "toSide": "left"
+    },
+    {
+      "id": "01b43992e7954cf1",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "4cce40384d194c65",
+      "toSide": "left"
+    },
+    {
+      "id": "e4b38f272f3f4022",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a861f3547d034337",
+      "toSide": "left"
+    },
+    {
+      "id": "bcfc29ee4114444c",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "cc0ebd19d79c43da",
+      "toSide": "left"
+    },
+    {
+      "id": "182aad97f8b5453e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "865e0f8ed68843a0",
+      "toSide": "left"
+    },
+    {
+      "id": "02ff17269c364d8f",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "bfd2be6762694696",
+      "toSide": "left"
+    },
+    {
+      "id": "f7a5f1415dde4356",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "bcca7d562ef74135",
+      "toSide": "left"
+    },
+    {
+      "id": "d384657bd9b34ab0",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "edaf71b52ed44b03",
+      "toSide": "left"
+    },
+    {
+      "id": "ea21064f875f4c74",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ac468c6489ac46df",
+      "toSide": "left"
+    },
+    {
+      "id": "88be2a41fd4f4c32",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "27a4665cec744c3a",
+      "toSide": "left"
+    },
+    {
+      "id": "d0b5c7e8064a4246",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "180ccc82e6304eda",
+      "toSide": "left"
+    },
+    {
+      "id": "36998f78ce0d4ea7",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "076556ce52d34f73",
+      "toSide": "left"
+    },
+    {
+      "id": "f21c6167efa64a47",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1bb7db33d61645b7",
+      "toSide": "left"
+    },
+    {
+      "id": "27b7a3679e1f4387",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "2db13b47174c4c18",
+      "toSide": "left"
+    },
+    {
+      "id": "a99149014acb40f7",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "381d8c6c7f14481f",
+      "toSide": "left"
+    },
+    {
+      "id": "98f435fcc7cb4332",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "60a6ecdb71b54012",
+      "toSide": "left"
+    },
+    {
+      "id": "ba5cc08483554e8d",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f2eecc88193a4757",
+      "toSide": "left"
+    },
+    {
+      "id": "129f2f15b5344066",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "da995a53575e495f",
+      "toSide": "left"
+    },
+    {
+      "id": "fa26ceb14a4f41e3",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1896fca4a3864db3",
+      "toSide": "left"
+    },
+    {
+      "id": "578a65d4f79a4785",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "d444880ab8714d44",
+      "toSide": "left"
+    },
+    {
+      "id": "eeacb2ae0b524cfa",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "adaae6b46fae4123",
+      "toSide": "left"
+    },
+    {
+      "id": "0a3687b3ebce47b8",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "cf51b285b3e749f3",
+      "toSide": "left"
+    },
+    {
+      "id": "60410f586b164879",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "222f577d8b184939",
+      "toSide": "left"
+    },
+    {
+      "id": "c98f5f87ff4541c8",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1106ae39f3d945fc",
+      "toSide": "left"
+    },
+    {
+      "id": "57d7544a9ed94423",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "53f2d72ab09b478f",
+      "toSide": "left"
+    },
+    {
+      "id": "b2a17ed062414347",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "4d969d312a7440f9",
+      "toSide": "left"
+    },
+    {
+      "id": "73ccb7b1a7524aa5",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "40f37ed0406e4913",
+      "toSide": "left"
+    },
+    {
+      "id": "4dce920d7ce543c3",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "9a4844f197ba4341",
+      "toSide": "left"
+    },
+    {
+      "id": "f2d4c60bfd4347f3",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "5e832600ee084790",
+      "toSide": "left"
+    },
+    {
+      "id": "75df56611214478c",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "613c1590680f47f9",
+      "toSide": "left"
+    },
+    {
+      "id": "b25164bde5984aa7",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "8a07bf45e76e41ab",
+      "toSide": "left"
+    },
+    {
+      "id": "ea8e2c71319046a7",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "455987fdce6a4ae2",
+      "toSide": "left"
+    },
+    {
+      "id": "97f16933761549c7",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ae5e74309c434fd8",
+      "toSide": "left"
+    },
+    {
+      "id": "e57f41a5c7bc452e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "78add62f57ed4d54",
+      "toSide": "left"
+    },
+    {
+      "id": "1d25d4163a254e13",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "987fb88f0dea46d3",
+      "toSide": "left"
+    },
+    {
+      "id": "7c24f5435ff240ae",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "bcb2df7fe2704e78",
+      "toSide": "left"
+    },
+    {
+      "id": "b825aeafe7bf49bb",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "2118c1c1fb914bb6",
+      "toSide": "left"
+    },
+    {
+      "id": "3d05c69876004f31",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "9628d86893c74ca5",
+      "toSide": "left"
+    },
+    {
+      "id": "f5ce3b12b04d4564",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "5a77e530255b4896",
+      "toSide": "left"
+    },
+    {
+      "id": "61bdeeb1e80444b7",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0ec55f8a4fd54f4d",
+      "toSide": "left"
+    },
+    {
+      "id": "1d27b3e828f24f63",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "04822148784f4261",
+      "toSide": "left"
+    },
+    {
+      "id": "5a8e88aa952c4a40",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "b909b7e100804a3a",
+      "toSide": "left"
+    },
+    {
+      "id": "80daa092bc834085",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "eb6a558b11f04e93",
+      "toSide": "left"
+    },
+    {
+      "id": "8d8a76b588c84b19",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "d2a5b5a6abc24aac",
+      "toSide": "left"
+    },
+    {
+      "id": "d8971d0766e348b1",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1081a0ef6a884a71",
+      "toSide": "left"
+    },
+    {
+      "id": "5aa666bee513408e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "2a64b553f5354b5c",
+      "toSide": "left"
+    },
+    {
+      "id": "9a0ce64ae80e4c4e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "e45e6c395e984cb3",
+      "toSide": "left"
+    },
+    {
+      "id": "993698254fee4393",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "34127e6593544c86",
+      "toSide": "left"
+    },
+    {
+      "id": "92404e27636c4e03",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0105a1bec64a4edd",
+      "toSide": "left"
+    },
+    {
+      "id": "f1c4f9f6eb9d47c2",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "6dc508327a95407f",
+      "toSide": "left"
+    },
+    {
+      "id": "9c3b3df2f7ce4b07",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "3befa64494564d81",
+      "toSide": "left"
+    },
+    {
+      "id": "0e19726847d04958",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "3ae9d829830147fd",
+      "toSide": "left"
+    },
+    {
+      "id": "940e5083eb8b46c1",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "777297d78ba14e2c",
+      "toSide": "left"
+    },
+    {
+      "id": "281fdd09287b49f6",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "eee6b17857be4b53",
+      "toSide": "left"
+    },
+    {
+      "id": "e158ab88bb3f4f5f",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "36859e593742469c",
+      "toSide": "left"
+    },
+    {
+      "id": "e4b5faff17394218",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1a26fb76984c4aba",
+      "toSide": "left"
+    },
+    {
+      "id": "335472fa26bb4d5f",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "12bcd82b6cb44ffd",
+      "toSide": "left"
+    },
+    {
+      "id": "f0a836fde0df46b5",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "b4c009ac4e32430a",
+      "toSide": "left"
+    },
+    {
+      "id": "99b4b2672ee4442a",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "85c496640527442d",
+      "toSide": "left"
+    },
+    {
+      "id": "c0d1ffe73c964561",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "2ff01bfa51f24ea7",
+      "toSide": "left"
+    },
+    {
+      "id": "2d6fb5bdf2bc4165",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "35252d20817e48bf",
+      "toSide": "left"
+    },
+    {
+      "id": "ea770b1553c44ef8",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "b57e7b52f80b4f5d",
+      "toSide": "left"
+    },
+    {
+      "id": "6aa36bf34ce047bc",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a396079e5aad4873",
+      "toSide": "left"
+    },
+    {
+      "id": "deefa253a6884506",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f5e2e56f169444ab",
+      "toSide": "left"
+    },
+    {
+      "id": "c86d34ea8d194ecd",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "42e19e957d864d22",
+      "toSide": "left"
+    },
+    {
+      "id": "883199084ef5498e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "07615de01acb4a8c",
+      "toSide": "left"
+    },
+    {
+      "id": "b29e4823deae456e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "3a8ed1ff9e9745a6",
+      "toSide": "left"
+    },
+    {
+      "id": "341674ad6b174299",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "4d48768e7c084770",
+      "toSide": "left"
+    },
+    {
+      "id": "82d79364c0064fa5",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f2f6817678cb4494",
+      "toSide": "left"
+    },
+    {
+      "id": "033293077ace49b7",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "7752ab9306ee46e0",
+      "toSide": "left"
+    },
+    {
+      "id": "7a2a8b1fa0774200",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "2a005f17ec654dd3",
+      "toSide": "left"
+    },
+    {
+      "id": "bf260e5b676d450c",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0e4cf2707f9248b8",
+      "toSide": "left"
+    },
+    {
+      "id": "be4fd424816040b4",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "542d8ec836304cd0",
+      "toSide": "left"
+    },
+    {
+      "id": "5bc4466215c24721",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0036a280e9924008",
+      "toSide": "left"
+    },
+    {
+      "id": "ca77951ef9d841c0",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "cda7090f7e8a4881",
+      "toSide": "left"
+    },
+    {
+      "id": "837eccb64c024475",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "65979fde5e6a4ba1",
+      "toSide": "left"
+    },
+    {
+      "id": "7cf4873899b74cba",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a5b124db0a124696",
+      "toSide": "left"
+    },
+    {
+      "id": "535e3343338640ed",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "4519b56b85fc40b1",
+      "toSide": "left"
+    },
+    {
+      "id": "15e4227b6be64a08",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "14c7add473914dac",
+      "toSide": "left"
+    },
+    {
+      "id": "1aec4cc0d8044ab0",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0061f9170e164dc7",
+      "toSide": "left"
+    },
+    {
+      "id": "d0c4c38410074995",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0645262f15fa49f0",
+      "toSide": "left"
+    },
+    {
+      "id": "e9753d12cc6e438e",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "183afad457e243af",
+      "toSide": "left"
+    },
+    {
+      "id": "a112da844e814ddd",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "f21068288b504748",
+      "toSide": "left"
+    },
+    {
+      "id": "905272f622cd4c24",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "6e48adcb612b45fa",
+      "toSide": "left"
+    },
+    {
+      "id": "9931e1025e4746dd",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "27e102cbfd064cfc",
+      "toSide": "left"
+    },
+    {
+      "id": "6f04d213ca8c4bdf",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "e80c9bea9aa94803",
+      "toSide": "left"
+    },
+    {
+      "id": "62a4c5a2362549be",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "7a791d3e4db149b3",
+      "toSide": "left"
+    },
+    {
+      "id": "cfd030a8db1d4791",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "8849f8c167164ac3",
+      "toSide": "left"
+    },
+    {
+      "id": "c2e63cc2ab80498a",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "664855da7d954ec9",
+      "toSide": "left"
+    },
+    {
+      "id": "10438c32cd64484d",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "03b951675dfd44f6",
+      "toSide": "left"
+    },
+    {
+      "id": "13eb3c1183e743d3",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a20ee7f9c2ed40ea",
+      "toSide": "left"
+    },
+    {
+      "id": "6fce058cdf934a99",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1cf998bf59314c33",
+      "toSide": "left"
+    },
+    {
+      "id": "212e945751fa457b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "8dcf760baf654a5e",
+      "toSide": "left"
+    },
+    {
+      "id": "5c5e564aea31446a",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "041eea6e36ed4f9a",
+      "toSide": "left"
+    },
+    {
+      "id": "92c6549aa8384936",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "75d9f2c4ad3d46a6",
+      "toSide": "left"
+    },
+    {
+      "id": "b8eb69c4ef634b6d",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "6f990a73b79b4a6d",
+      "toSide": "left"
+    },
+    {
+      "id": "bc8cff7ba51e4cc8",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ebc4fa2f43b04ba6",
+      "toSide": "left"
+    },
+    {
+      "id": "bcfda5c29eb34a2a",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "c62793c12d97466c",
+      "toSide": "left"
+    },
+    {
+      "id": "8aaba65cce244187",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "aa2a215a196b4a4b",
+      "toSide": "left"
+    },
+    {
+      "id": "e6fb8548fcd649e5",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "9a79f403eb224f32",
+      "toSide": "left"
+    },
+    {
+      "id": "d254267b95a84bb6",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "e6e67b7576c84aff",
+      "toSide": "left"
+    },
+    {
+      "id": "cdd303b02de4467f",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "79b74857ed6448d8",
+      "toSide": "left"
+    },
+    {
+      "id": "d073d21209344ea3",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "4413a726125d4033",
+      "toSide": "left"
+    },
+    {
+      "id": "3f392306058140ae",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "c654160ba1594953",
+      "toSide": "left"
+    },
+    {
+      "id": "e712bd1f337744f4",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "771632c43b30497a",
+      "toSide": "left"
+    },
+    {
+      "id": "03f2c54acdd74c30",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "2de99f95797844ee",
+      "toSide": "left"
+    },
+    {
+      "id": "bd3eee36f30a4965",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "58739c252af74980",
+      "toSide": "left"
+    },
+    {
+      "id": "3e6538d6178f436b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "1d22bd51c0144c8a",
+      "toSide": "left"
+    },
+    {
+      "id": "0c7d48ddb3184ce3",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "8d03ba3cfa4d4560",
+      "toSide": "left"
+    },
+    {
+      "id": "e75705a110114061",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "869f7d1990fb43ce",
+      "toSide": "left"
+    },
+    {
+      "id": "f320f9092fc24a19",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "689625694bb54b82",
+      "toSide": "left"
+    },
+    {
+      "id": "6de908ee39674414",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "37c36046a3ec4465",
+      "toSide": "left"
+    },
+    {
+      "id": "ce03636a30f7474d",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "675e60ef43a74009",
+      "toSide": "left"
+    },
+    {
+      "id": "77d1f124947e4175",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "6c9dcabec8ef410d",
+      "toSide": "left"
+    },
+    {
+      "id": "9e55eb29a3034145",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "3b909d5218774dff",
+      "toSide": "left"
+    },
+    {
+      "id": "68f45a9627554b53",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "c9b73fcfdd14480c",
+      "toSide": "left"
+    },
+    {
+      "id": "f447328b9c144caa",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ace4c2831c504b99",
+      "toSide": "left"
+    },
+    {
+      "id": "fa0b58caae904a02",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "148f63da829d4a64",
+      "toSide": "left"
+    },
+    {
+      "id": "828d41e3cddf485a",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "9052d1040e854b3e",
+      "toSide": "left"
+    },
+    {
+      "id": "915a776accbe4338",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "e0d6808e5f9043d9",
+      "toSide": "left"
+    },
+    {
+      "id": "00dcd17f2e084e10",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a112f069383d4587",
+      "toSide": "left"
+    },
+    {
+      "id": "f1534fffc1104d85",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "6008a8a8428f44b5",
+      "toSide": "left"
+    },
+    {
+      "id": "3a568a74e6ed4da4",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "e5a44938c86f401f",
+      "toSide": "left"
+    },
+    {
+      "id": "67194b7bd91d46e8",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "13d5395f94804506",
+      "toSide": "left"
+    },
+    {
+      "id": "3415dbfacdc0420c",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "e5534dd89c16407e",
+      "toSide": "left"
+    },
+    {
+      "id": "17c9a301cdb3436d",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "c1be8b378be347a7",
+      "toSide": "left"
+    },
+    {
+      "id": "6eeb21de404b4b00",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "08b8fec95d9c4ada",
+      "toSide": "left"
+    },
+    {
+      "id": "8f199fb96c404131",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "155fb5c247b3431f",
+      "toSide": "left"
+    },
+    {
+      "id": "0ee62fd632c74a98",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "b7177c1208c5439c",
+      "toSide": "left"
+    },
+    {
+      "id": "027bcda76c2944e1",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "5262755ff1d64634",
+      "toSide": "left"
+    },
+    {
+      "id": "c1573114de0f49d7",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "4b9d4ff63bd04c2e",
+      "toSide": "left"
+    },
+    {
+      "id": "1c78be3b9f11414d",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0d160db29d894db7",
+      "toSide": "left"
+    },
+    {
+      "id": "c0dfea53f50c4a41",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "3319b640d5ed4189",
+      "toSide": "left"
+    },
+    {
+      "id": "1972d060cd7446f7",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "e184eda6730e40b5",
+      "toSide": "left"
+    },
+    {
+      "id": "67e3c137b95c48cc",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0e4b3f008b9a4a12",
+      "toSide": "left"
+    },
+    {
+      "id": "983754b53ace4701",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "fb3306e5306741ff",
+      "toSide": "left"
+    },
+    {
+      "id": "cf5409aa41ec4032",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "d0bb75aae5da4b00",
+      "toSide": "left"
+    },
+    {
+      "id": "ed363b5f60074cc7",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "7621bb56d752443f",
+      "toSide": "left"
+    },
+    {
+      "id": "bb7a157e3d454985",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "9c96574c62664b88",
+      "toSide": "left"
+    },
+    {
+      "id": "9da9a08d0f194b99",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "030af295c2df457a",
+      "toSide": "left"
+    },
+    {
+      "id": "c5204617d3b34384",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "9f0d8efaaf644454",
+      "toSide": "left"
+    },
+    {
+      "id": "bc09f2e47c314940",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "980e6ce27156475e",
+      "toSide": "left"
+    },
+    {
+      "id": "afac0fa547464ddb",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a905c3ef11854303",
+      "toSide": "left"
+    },
+    {
+      "id": "d15c6a813c60435f",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "38b8af8cc0cf49af",
+      "toSide": "left"
+    },
+    {
+      "id": "fc76755aed0547fb",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "33457d1e83254e96",
+      "toSide": "left"
+    },
+    {
+      "id": "be9bce8e696347b2",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "132de9793df1440d",
+      "toSide": "left"
+    },
+    {
+      "id": "dc950e94abd94f9d",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "97db019a3938485b",
+      "toSide": "left"
+    },
+    {
+      "id": "9f99e9e13e6e4cc6",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "a84f39c5838d4c25",
+      "toSide": "left"
+    },
+    {
+      "id": "71e4787e2aa1432f",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "bdb2cd03cdd54f49",
+      "toSide": "left"
+    },
+    {
+      "id": "b6c27993582a4233",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "40f4039a8b554f7f",
+      "toSide": "left"
+    },
+    {
+      "id": "38896644bc4d4c8b",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "0bd9b9c2afa1487a",
+      "toSide": "left"
+    },
+    {
+      "id": "e1e9317a8be2413d",
+      "fromNode": "362ae0db6aae49f5",
+      "fromSide": "right",
+      "toNode": "ae0c066d85da43a9",
+      "toSide": "left"
+    },
+    {
+      "id": "936766af9dcf44fe",
+      "fromNode": "9fee3392fd044789",
+      "fromSide": "right",
+      "toNode": "530910b89b354bcb",
+      "toSide": "left"
+    },
+    {
+      "id": "8c6684aa78864aed",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "afeaaf3800a54ea1",
+      "toSide": "left"
+    },
+    {
+      "id": "7f463bfdbb2d4c89",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "d4290a65a5ec43ec",
+      "toSide": "left"
+    },
+    {
+      "id": "a40626aecacd4211",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "52d450a3a1bc4e46",
+      "toSide": "left"
+    },
+    {
+      "id": "68b9cc770d854bf8",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "f729f9c73e154402",
+      "toSide": "left"
+    },
+    {
+      "id": "e224bec4e5094053",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "339d1449611042bb",
+      "toSide": "left"
+    },
+    {
+      "id": "406c3b47e9c64e4c",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "a5a8a40907f043a6",
+      "toSide": "left"
+    },
+    {
+      "id": "03bcfeb5861b4b04",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "cf65a17cf067498f",
+      "toSide": "left"
+    },
+    {
+      "id": "97565d301f4c4431",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "2b46a952f8fd4513",
+      "toSide": "left"
+    },
+    {
+      "id": "160ff338bf4e4d0e",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "a2077ea4928844ac",
+      "toSide": "left"
+    },
+    {
+      "id": "43533c5898ce4cc5",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "f15773e662494e55",
+      "toSide": "left"
+    },
+    {
+      "id": "dc21dfdec47f497e",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "bdb863670d774222",
+      "toSide": "left"
+    },
+    {
+      "id": "754898724ce0442e",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "027eb8e408e046d3",
+      "toSide": "left"
+    },
+    {
+      "id": "1ec191fd84804d5e",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "df232489f68e4bf9",
+      "toSide": "left"
+    },
+    {
+      "id": "cb5c2cf44e21474b",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "c2c0198873aa458a",
+      "toSide": "left"
+    },
+    {
+      "id": "f50e3f3d6fe941c6",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "5a3a885b65874b3f",
+      "toSide": "left"
+    },
+    {
+      "id": "ffff937a2c884e38",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "cc7f26fb3e04434a",
+      "toSide": "left"
+    },
+    {
+      "id": "fa929557b6f04a87",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "abb2aa9a67d24e92",
+      "toSide": "left"
+    },
+    {
+      "id": "4f431300f1ec40db",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "c2deb0bea071450c",
+      "toSide": "left"
+    },
+    {
+      "id": "c8089be414d64fae",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "a4f017cf443a4843",
+      "toSide": "left"
+    },
+    {
+      "id": "93666bce3aea4a70",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "3607d5905a1e47fd",
+      "toSide": "left"
+    },
+    {
+      "id": "57bde356c6064315",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "0ff3416dd47b4f86",
+      "toSide": "left"
+    },
+    {
+      "id": "9599a82e531e49a0",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "84bf3740438744f8",
+      "toSide": "left"
+    },
+    {
+      "id": "79ce47661b074ce7",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "c1ed0292499c47c6",
+      "toSide": "left"
+    },
+    {
+      "id": "f5482a20e7824354",
+      "fromNode": "530910b89b354bcb",
+      "fromSide": "right",
+      "toNode": "74b74b5d0e6e4d62",
+      "toSide": "left"
+    },
+    {
+      "id": "a4a438faeb24465e",
+      "fromNode": "9fee3392fd044789",
+      "fromSide": "right",
+      "toNode": "8379d99121c74d31",
+      "toSide": "left"
+    },
+    {
+      "id": "f8b0c3857a304caa",
+      "fromNode": "8379d99121c74d31",
+      "fromSide": "right",
+      "toNode": "570f25dbcacf47ad",
+      "toSide": "left"
+    },
+    {
+      "id": "64f37b3d408e4d49",
+      "fromNode": "8379d99121c74d31",
+      "fromSide": "right",
+      "toNode": "f10cecf22df34bb1",
+      "toSide": "left"
+    },
+    {
+      "id": "85339ba727bc47eb",
+      "fromNode": "8379d99121c74d31",
+      "fromSide": "right",
+      "toNode": "c73ab44febce42cd",
+      "toSide": "left"
+    },
+    {
+      "id": "e36f55c939164cac",
+      "fromNode": "9fee3392fd044789",
+      "fromSide": "right",
+      "toNode": "9b31af9ded0f4685",
+      "toSide": "left"
+    },
+    {
+      "id": "d46e01263fed4aae",
+      "fromNode": "9b31af9ded0f4685",
+      "fromSide": "right",
+      "toNode": "4470dcb6755f4b9e",
+      "toSide": "left"
+    },
+    {
+      "id": "8f4ceb3757e045d8",
+      "fromNode": "9b31af9ded0f4685",
+      "fromSide": "right",
+      "toNode": "0a5d5b66ebb14471",
+      "toSide": "left"
+    },
+    {
+      "id": "4b39150a767841b1",
+      "fromNode": "9fee3392fd044789",
+      "fromSide": "right",
+      "toNode": "62d64d7808104a79",
+      "toSide": "left"
+    },
+    {
+      "id": "e08cf4324e524b13",
+      "fromNode": "62d64d7808104a79",
+      "fromSide": "right",
+      "toNode": "243955f73f1f4db6",
+      "toSide": "left"
+    },
+    {
+      "id": "7c262a9f89c6402f",
+      "fromNode": "9fee3392fd044789",
+      "fromSide": "right",
+      "toNode": "3044b27bdb774fa5",
       "toSide": "left"
     }
   ]
