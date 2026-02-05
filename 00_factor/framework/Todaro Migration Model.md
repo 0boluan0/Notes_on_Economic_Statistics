@@ -43,7 +43,7 @@ E(W_u) = P \cdot W_u + (1-P) \cdot W_r
 $$
 
 其中：
-- $E(W_u)$ 为期望的城市收入
+- $E($W_u$)$ 为期望的城市收入
 - $W_u$ 为城市实际工资
 - $P$ 为在城市找到工作的概率
 - $W_r$ 为农村收入（或迁移到城市的成本）
@@ -77,6 +77,6 @@ $$
 3. **信息透明**：提供准确的城市就业信息，避免盲目迁移
 
 ## 相关链接
-[[00_factor/framework/Lewis Dual Sector Model|刘易斯模型]]
-[[00_factor/framework/Fei-Ranis Model|费景汉-拉尼斯模型]]
+[[Lewis Dual Sector Model|刘易斯模型]]
+[[Fei-Ranis Model|费景汉-拉尼斯模型]]
 [[Population Migration Theory|人口迁移理论]]

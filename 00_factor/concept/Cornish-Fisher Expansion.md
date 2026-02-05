@@ -9,12 +9,12 @@ tags:
 # Cornish-Fisher Expansion
 
 ## 它是什么
-- 「Cornish-Fisher Expansion」是一个待补充定义的核心概念卡片。
+- 「Cornish-Fisher Expansion」是指用偏度和峰度对正态分位点进行修正的近似方法。
 
 ## 最小可检索信息
-- 定义：待补充
-- 符号/公式：待补充
-- 最小例子：待补充
+- 定义：用偏度和峰度对正态分位点进行修正的近似方法。
+- 符号/公式：$z_{cf}=z+\frac{1}{6}(z^2-1)S+\frac{1}{24}(z^3-3z)K-\frac{1}{36}(2z^3-5z)S^2。$
+- 最小例子：对收益分布的VaR分位点进行偏度修正。
 
 ## 关联卡片
 - [[Option Greeks-hub]]

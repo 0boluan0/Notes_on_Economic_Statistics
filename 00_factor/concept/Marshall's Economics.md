@@ -168,4 +168,4 @@ tags:
 - 动态分析不足
 
 ## 相关链接
-[[00_factor/concept/Marginal Revolution|边际革命]]
+[[Marginal Revolution|边际革命]]

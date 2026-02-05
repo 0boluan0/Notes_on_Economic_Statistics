@@ -30,10 +30,10 @@ tags:
 ### 2. White检验
 
 构造辅助回归：
-$$e_i^2 = \alpha_0 + \alpha_1 x_{1i} + \alpha_2 x_{2i} + \cdots + \alpha_k x_{ki} + \alpha_{k+1} x_{1i}^2 + \cdots + \alpha_m x_{ki}^2 + \varepsilon_i$$
+$e_i^2 = \alpha_0 + \alpha_1 x_{1i} + \alpha_2 x_{2i} + \cdots + \alpha_k x_{ki} + \alpha_{k+1} x_{1i}^2 + \cdots + \alpha_m x_{ki}^2 + \varepsilon_i$
 
 检验统计量：
-$$LM = n \cdot R^2 \sim \chi^2(m)$$
+$LM = n \cdot R^2 \sim \chi^2(m)$
 
 | 判断标准 | p ≤ 0.05 | p > 0.05 |
 |----------|----------|----------|
@@ -41,10 +41,10 @@ $$LM = n \cdot R^2 \sim \chi^2(m)$$
 
 ### 3. Breusch-Pagan检验（简化White检验）
 
-$$e_i^2 = \alpha_0 + \alpha_1 x_{1i} + \cdots + \alpha_k x_{ki} + \varepsilon_i$$
+$e_i^2 = \alpha_0 + \alpha_1 x_{1i} + \cdots + \alpha_k x_{ki} + \varepsilon_i$
 
 检验统计量：
-$$LM = n \cdot R^2 \sim \chi^2(k)$$
+$LM = n \cdot R^2 \sim \chi^2(k)$
 
 ### 4. Goldfeld-Quandt检验
 
@@ -72,6 +72,6 @@ $$LM = n \cdot R^2 \sim \chi^2(k)$$
 | 怀疑遗漏变量导致异方差 | 模型设定错误 | 重新考虑模型设定、增加变量 |
 
 ## 相关概念
-[[00_factor/system/White Robust Standard Errors|White稳健标准误]]
-[[00_factor/concept/Weighted Least Squares|加权最小二乘法]]
+[[White Robust Standard Errors|White稳健标准误]]
+[[Weighted Least Squares|加权最小二乘法]]
 [[FGLS]]

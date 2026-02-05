@@ -20,7 +20,7 @@ tags:
 
 ## 计算方法
 
-$$\text{Tier 1 比率} = \frac{\text{Tier 1 资本}}{\text{风险加权资产（RWA）}} \times 100\%$$
+$\text{Tier 1 比率} = \frac{\text{Tier 1 资本}}{\text{风险加权资产（RWA）}} \times 100\%$
 
 Tier 1 资本构成：
 - **CET1（普通股权一级资本）**：普通股、留存收益、少数股权
@@ -50,6 +50,6 @@ Tier 1 资本构成：
 | CET1 与 Tier 1 差距过大 | AT1 工具占比过高 | 限制 AT1 发行，增加股权资本 |
 
 ## 相关概念
-[[00_factor/system/Basel Capital Adequacy Ratio|巴塞尔资本充足率]]
-[[00_factor/system/Tier 1 Capital Ratio|CET1]]
-[[00_factor/system/Tier 1 Capital Ratio|AT1]]
+[[Basel Capital Adequacy Ratio|巴塞尔资本充足率]]
+[[Tier 1 Capital Ratio|CET1]]
+[[Tier 1 Capital Ratio|AT1]]

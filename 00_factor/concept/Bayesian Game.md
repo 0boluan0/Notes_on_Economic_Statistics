@@ -52,7 +52,7 @@ tags:
 ### 定义
 策略组合 σ* 使得对于每个玩家 i 的每个类型 θ_i：
 
-$$ \sigma_i^*(\theta_i) \in \arg\max_{a_i} E_{\theta_{-i}|\theta_i}[u_i(a_i, \sigma_{-i}^*(\theta_{-i}), \theta)] $$
+$ \sigma_i^*(\theta_i) \in \arg\max_{a_i} E_{\theta_{-i}|\theta_i}[u_i(a_i, \sigma_{-i}^*(\theta_{-i}), \theta)] $
 
 即：给定类型 θ_i，选择最优策略，最大化期望收益（期望是对对手类型的分布）。
 
@@ -65,11 +65,11 @@ $$ \sigma_i^*(\theta_i) \in \arg\max_{a_i} E_{\theta_{-i}|\theta_i}[u_i(a_i, \si
 
 ## 相关概念
 
-- [[00_factor/concept/Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
-- [[00_factor/concept/Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
-- [[00_factor/concept/Perfect Bayesian Equilibrium|完美贝叶斯均衡]]
-- [[00_factor/concept/Separating Equilibrium|分离均衡]]
-- [[00_factor/concept/Pooling Equilibrium|混合均衡]]
+- [[Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
+- [[Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
+- [[Perfect Bayesian Equilibrium|完美贝叶斯均衡]]
+- [[Separating Equilibrium|分离均衡]]
+- [[Pooling Equilibrium|混合均衡]]
 
 ## 典型例子
 

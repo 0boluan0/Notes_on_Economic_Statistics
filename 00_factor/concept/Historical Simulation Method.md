@@ -26,9 +26,9 @@ tags:
 
 使用历史模拟法估计的VaR存在标准误，公式为：
 
-$$\text{StdErr}(\hat{x}_q) \approx \frac{\sqrt{q(1-q)}}{\sqrt{n}f(x_q)}$$
+$\text{StdErr}(\hat{x}_q) \approx \frac{\sqrt{q(1-q)}}{\sqrt{n}f(x_q)}$
 
-其中q为置信水平，n为样本数量，f(x_q)为真实分布在VaR处的概率密度。
+其中q为置信水平，n为样本数量，f($x_q$)为真实分布在VaR处的概率密度。
 
 ## 优点
 
@@ -50,6 +50,6 @@ $$\text{StdErr}(\hat{x}_q) \approx \frac{\sqrt{q(1-q)}}{\sqrt{n}f(x_q)}$$
 
 相关链接: [[VaR]], [[EVT|极值理论]], [[Weighted Historical Simulation|加权历史模拟]], [[Bootstrap Simulation|自助法模拟]]
 
-## source_notes
+## $source_notes$
 
 - [[12_VAR风险#2.2 历史模拟法]]

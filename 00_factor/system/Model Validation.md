@@ -83,5 +83,5 @@ tags:
 
 ## 相关概念
 [[00_factor/system/Backtesting|回溯检验]]
-[[00_factor/system/Stress Testing|压力测试]]
+[[Stress Testing|压力测试]]
 [[VaR]]

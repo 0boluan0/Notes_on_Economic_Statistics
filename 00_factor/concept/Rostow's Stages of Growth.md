@@ -240,4 +240,4 @@ tags:
    - 营商环境改善
    - 制度创新
 
-相关链接: [[00_factor/concept/Economic Growth|经济增长]], [[00_factor/concept/Kuznets Modern Economic Growth Theory|库兹涅茨现代经济增长理论]], [[00_factor/concept/Advantage of Backwardness|后发优势理论]]
+相关链接: [[Economic Growth|经济增长]], [[00_factor/concept/Kuznets Modern Economic Growth Theory|库兹涅茨现代经济增长理论]], [[Advantage of Backwardness|后发优势理论]]

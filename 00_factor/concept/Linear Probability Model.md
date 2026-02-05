@@ -15,23 +15,23 @@ LPM模型（Linear Probability Model，线性概率模型）是用OLS估计二�
 
 ## 模型形式
 
-$$y_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_k x_{ik} + \varepsilon_i$$
+$y_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_k x_{ik} + \varepsilon_i$
 
-其中y_i ∈ {0, 1}是二元变量。
+其中$y_i$ ∈ {0, 1}是二元变量。
 
 ## 解释
 
-在给定x_i条件下，y_i的条件期望为：
+在给定$x_i$条件下，$y_i$的条件期望为：
 
-$$E(y_i | x_i) = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_k x_{ik}$$
+$E(y_i | x_i) = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_k x_{ik}$
 
 这是事件发生的概率：
-$$P(y_i = 1 | x_i) = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_k x_{ik}$$
+$P(y_i = 1 | x_i) = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_k x_{ik}$
 
 ## 优点
 
 1. **简单直观**：OLS估计，易于理解和计算
-2. **边际效应直接**：系数直接表示x_j变化1个单位对概率的影响
+2. **边际效应直接**：系数直接表示$x_j$变化1个单位对概率的影响
 
 ## 缺点
 
@@ -41,17 +41,17 @@ $$P(y_i = 1 | x_i) = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_k x_{ik}$$
 
 ### 2. 误差项非正态
 
-y_i只能取0或1，因此ε_i只能取两个值：
-- 当y_i = 1时，ε_i = 1 - X_iβ
-- 当y_i = 0时，ε_i = -X_iβ
+$y_i$只能取0或1，因此ε_i只能取两个值：
+- $当y_i = 1时，ε_i = 1 - X_iβ$
+- $当y_i = 0时，ε_i = -X_iβ$
 
 不服从正态分布。
 
 ### 3. 异方差
 
-$$\textVar}(\varepsilon_i | x_i) = P(y_i=1)P(y_i=0) = P(y_i=1)[1-P(y_i=1)] = X_i\beta[1-X_i\beta]$$
+$\text{Var}(\varepsilon_i | x_i) = P(y_i=1)P(y_i=0) = P(y_i=1)[1-P(y_i=1)] = X_i\beta[1-X_i\beta]$
 
-方差依赖于x_i，存在异方差。
+方差依赖于$x_i$，存在异方差。
 
 ### 4. 不可能存在完全预测
 
@@ -67,9 +67,9 @@ $$\textVar}(\varepsilon_i | x_i) = P(y_i=1)P(y_i=0) = P(y_i=1)[1-P(y_i=1)] = X_i
 
 使用1/[Xβ(1-Xβ)]作为权重。
 
-### 3. 检验能力度量：R_p²
+### 3. 检验能力度量：$R_p$²
 
-$$R_p^2 = \frac{1}{\sum y_i} \sum (y_i - \hat{y}_i)^2 + \frac{1}{\sum (1-y_i)} \sum (y_i - \hat{y}_i)^2$$
+$R_p^2 = \frac{1}{\sum y_i} \sum (y_i - \hat{y}_i)^2 + \frac{1}{\sum (1-y_i)} \sum (y_i - \hat{y}_i)^2$
 
 ## 模型选择
 
@@ -80,4 +80,4 @@ LPM适用于：
 
 通常使用logit或probit模型替代LPM。
 
-相关链接: [[00_factor/concept/Logit Model|logit模型]], [[00_factor/concept/Probit Model|probit模型]]
+相关链接: [[Logit Model|logit模型]], [[Probit Model|probit模型]]

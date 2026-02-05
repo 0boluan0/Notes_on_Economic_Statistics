@@ -37,7 +37,7 @@ tags:
 ## 相关检验
 
 [[McLeod-Li Test|McLeod-Li检验]]
-[[ARCH LM Test|ARCH-LM检验]]
+[[00_factor/concept/ARCH LM Test|ARCH-LM检验]]
 
 ## 课程笔记
 

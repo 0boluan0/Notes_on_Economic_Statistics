@@ -22,9 +22,9 @@ tags:
 3. 均衡条件：$Q_s = Q_d = Q$
 
 其中：
-- $Q$和$P$是内生变量（由系统决定）
-- $X$和$Z$是外生变量
-- $\epsilon_1$和$\epsilon_2$是误差项
+- Q和P是内生变量（由系统决定）
+- X和Z是外生变量
+- $\epsilon_1和\epsilon_2是误差项$
 
 ### 内生变量的定义
 
@@ -39,8 +39,8 @@ tags:
    - 无法控制一个变量观察另一个
 
 2. **内生性**
-   - 在需求方程中，$P$与$\epsilon_2$相关
-   - 在供给方程中，$P$与$\epsilon_1$相关
+   - 在需求方程中，P与\epsilon_2相关
+   - 在供给方程中，P与\epsilon_1相关
 
 ### 后果
 
@@ -85,19 +85,19 @@ $Q = f(X, Z, \epsilon_1, \epsilon_2)$
 ### 模型设定
 
 1. **供给方程**
-   $Q_s = \alpha_0 + \alpha_1 P + \epsilon_1$
+$Q_s = \alpha_0 + \alpha_1 P + \epsilon_1$
 
 2. **需求方程**
-   $Q_d = \beta_0 + \beta_1 P + \beta_2 Y + \epsilon_2$
+$Q_d = \beta_0 + \beta_1 P + \beta_2 Y + \epsilon_2$
 
 3. **均衡**
-   $Q_s = Q_d$
+$Q_s = Q_d$
 
 ### 内生性问题
 
 - $P$和$Q$由两个方程同时决定
 - 观测数据只有均衡时的$(Q, P)$对
-- 需求方程中：$P$与$\epsilon_2$相关
+- 需求方程中：P与\epsilon_2相关
 - 单独估计需求方程有偏误
 
 ## 解决方法
@@ -124,23 +124,23 @@ $Q = f(X, Z, \epsilon_1, \epsilon_2)$
 
 #### 给需求方程加工具变量
 
-在供给方程中加入影响供给但不直接影响需求的变量$W$：
+在供给方程中加入影响供给但不直接影响需求的变量W：
 $Q_s = \alpha_0 + \alpha_1 P + \alpha_2 W + \epsilon_1$
 
 则：
-- $W$是需求方程中$P$的工具变量
-- $W$与$P$相关（影响供给）
-- $W$与$\epsilon_2$不相关（外生）
+- W是需求方程中P的工具变量
+- W与P相关（影响供给）
+- W与\epsilon_2不相关（外生）
 
 #### 给供给方程加工具变量
 
-在需求方程中加入影响需求但不直接影响供给的变量$Y$：
+在需求方程中加入影响需求但不直接影响供给的变量Y：
 $Q_d = \beta_0 + \beta_1 P + \beta_2 Y + \epsilon_2$
 
 则：
-- $Y$是供给方程中$P$的工具变量
-- $Y$与$P$相关（影响需求）
-- $Y$与$\epsilon_1$不相关（外生）
+- Y是供给方程中P的工具变量
+- Y与P相关（影响需求）
+- Y与\epsilon_1不相关（外生）
 
 ### 3. 两阶段最小二乘法（2SLS）
 
@@ -160,8 +160,8 @@ $Q_d = \beta_0 + \beta_1 P + \beta_2 Y + \epsilon_2$
 
 内生性的传染性极强：
 
-- 如果$x_1$与误差项相关
-- $x_2$与误差项不相关
+- 如果x_1与误差项相关
+- x_2与误差项不相关
 - 但$x_1$与$x_2$相关
 - 则$x_2$也会因$x_1$而有偏误
 
@@ -195,4 +195,4 @@ $Q_d = \beta_0 + \beta_1 P + \beta_2 Y + \epsilon_2$
 
 当工具变量多于内生变量时，检验工具变量的外生性。
 
-相关链接: [[00_factor/concept/Endogeneity|内生性]], [[00_factor/concept/Simultaneous Equations Model|联立方程模型]], [[2SLS]], [[00_factor/concept/Parameter Identification|参数识别]]
+相关链接: [[Endogeneity|内生性]], [[Simultaneous Equations Model|联立方程模型]], [[2SLS]], [[Parameter Identification|参数识别]]

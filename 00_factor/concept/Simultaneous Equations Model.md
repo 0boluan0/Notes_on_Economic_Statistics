@@ -15,14 +15,14 @@ tags:
 
 一个包含m个方程的SEM：
 
-$$y_1 = \beta_{12}y_2 + \gamma_{11}x_1 + \cdots + \gamma_{1k}x_k + \varepsilon_1$$
-$$y_2 = \beta_{21}y_1 + \gamma_{21}x_1 + \cdots + \gamma_{2k}x_k + \varepsilon_2$$
-$$\vdots$$
-$$y_m = \beta_{m1}y_1 + \cdots + \gamma_{m1}x_1 + \cdots + \gamma_{mk}x_k + \varepsilon_m$$
+$y_1 = \beta_{12}y_2 + \gamma_{11}x_1 + \cdots + \gamma_{1k}x_k + \varepsilon_1$
+$y_2 = \beta_{21}y_1 + \gamma_{21}x_1 + \cdots + \gamma_{2k}x_k + \varepsilon_2$
+$\vdots$
+$y_m = \beta_{m1}y_1 + \cdots + \gamma_{m1}x_1 + \cdots + \gamma_{mk}x_k + \varepsilon_m$
 
 其中：
-- y₁, ..., y_m：内生变量（m个）
-- x₁, ..., x_k：外生变量（k个）
+- y₁, ..., $y_m$：内生变量（m个）
+- x₁, ..., $x_k$：外生变量（k个）
 - β_ij：内生变量系数
 - γ_ij：外生变量系数
 - ε_i：误差项
@@ -60,7 +60,7 @@ $$y_m = \beta_{m1}y_1 + \cdots + \gamma_{m1}x_1 + \cdots + \gamma_{mk}x_k + \var
 
 方程可识别的必要条件：
 
-$$k \geq m-1$$
+$k \geq m-1$
 
 其中k是方程中不包含的外生变量数，m是内生变量总数。
 
@@ -105,7 +105,7 @@ $$k \geq m-1$$
 
 ### 简化式（Reduced Form）
 
-$$y_i = \pi_{i1}x_1 + \cdots + \pi_{ik}x_k + v_i$$
+$y_i = \pi_{i1}x_1 + \cdots + \pi_{ik}x_k + v_i$
 
 内生变量仅表示为外生变量的函数。
 
@@ -125,4 +125,4 @@ $$y_i = \pi_{i1}x_1 + \cdots + \pi_{ik}x_k + v_i$$
 - R：systemfit包
 - EViews：System对象
 
-相关链接: [[00_factor/concept/Endogeneity|内生性]], [[00_factor/concept/Instrumental Variable|工具变量]], [[2SLS]]
+相关链接: [[Endogeneity|内生性]], [[Instrumental Variable|工具变量]], [[2SLS]]

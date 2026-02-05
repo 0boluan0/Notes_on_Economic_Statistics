@@ -33,7 +33,7 @@ tags:
 
 ## 核心结论
 
-$$ \text{产权初始分配} \xrightarrow{\text{交易成本} = 0} \text{社会最优配置} $$
+$ \text{产权初始分配} \xrightarrow{\text{交易成本} = 0} \text{社会最优配置} $
 
 无论产权初始给谁，最终资源配置都相同（但财富分配不同）。
 
@@ -68,7 +68,7 @@ $$ \text{产权初始分配} \xrightarrow{\text{交易成本} = 0} \text{社会�
 
 谈判区间（Bart 减污的支付范围）：
 
-$$ C \leq \text{支付} \leq D $$
+$ C \leq \text{支付} \leq D $
 
 只要 D ≥ C，就有讨价空间，可以达成协议。
 
@@ -107,8 +107,8 @@ $$ C \leq \text{支付} \leq D $$
 
 ## 相关概念
 
-- [[00_factor/concept/Externality|外部性]]
-- [[00_factor/concept/Pigouvian Tax|庇古税]]
+- [[Externality|外部性]]
+- [[Pigouvian Tax|庇古税]]
 - [[Property Rights|产权]]
 
 ## 应用场景

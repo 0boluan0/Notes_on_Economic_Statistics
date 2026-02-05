@@ -44,4 +44,4 @@ tags:
 - [[Endogeneity|内生性]]
 - [[Endogeneity Diagnosis|内生性诊断]]
 - [[00_factor/system/Variance Inflation Factor|方差膨胀因子]]
-- [[00_factor/system/Condition Index|条件指数]]
+- [[Condition Index|条件指数]]

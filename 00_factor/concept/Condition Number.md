@@ -14,7 +14,7 @@ tags:
 
 对于矩阵X（n×k），条件指数κ定义为：
 
-$$\kappa = \frac{\lambda_{max}}{\lambda_{min}}$$
+$\kappa = \frac{\lambda_{max}}{\lambda_{min}}$
 
 其中：
 - λ_max：X'X的最大特征值
@@ -65,9 +65,19 @@ $$\kappa = \frac{\lambda_{max}}{\lambda_{min}}$$
 
 考虑两个高度相关的变量：
 
-$$X = \begin{pmatrix} 1 & 1 \\ 1 & 1.1 \\ 1 & 0.9 \end{pmatrix}$$
+$$
+X =
+\begin{pmatrix}
+ 1 & 1 \\ 1 & 1.1 \\ 1 & 0.9
+\end{pmatrix}
+$$
 
-$$X'X = \begin{pmatrix} 3 & 3 \\ 3 & 3.02 \end{pmatrix}$$
+$$
+X'X =
+\begin{pmatrix}
+ 3 & 3 \\ 3 & 3.02
+\end{pmatrix}
+$$
 
 计算特征值并求条件指数，会发现κ很大。
 
@@ -83,8 +93,8 @@ $$X'X = \begin{pmatrix} 3 & 3 \\ 3 & 3.02 \end{pmatrix}$$
 
 对于一般矩阵A，条件数定义为：
 
-$$\kappa(A) = \|A\| \cdot \|A^{-1}\|$$
+$\kappa(A) = \|A\| \cdot \|A^{-1}\|$
 
-其中\|·\|是矩阵范数。
+其中 $\| \cdot \|$ 是矩阵范数。
 
-相关链接: [[00_factor/concept/Multicollinearity|多重共线性]], [[00_factor/concept/Variance Inflation Factor|方差膨胀因子]]
+相关链接: [[Multicollinearity|多重共线性]], [[00_factor/concept/Variance Inflation Factor|方差膨胀因子]]

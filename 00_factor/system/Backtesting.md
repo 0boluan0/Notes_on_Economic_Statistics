@@ -17,17 +17,17 @@ tags:
 
 ### Kupiec 比例检验（POF）
 
-$$LR_{POF} = -2 \ln\left[\frac{(1-p)^{(n-X)}p^X}{(1-\hat{p})^{(n-X)}\hat{p}^X}\right] \sim \chi^2(1)$$
+$LR_{POF} = -2 \ln\left[\frac{(1-p)^{(n-X)}p^X}{(1-\hat{p})^{(n-X)}\hat{p}^X}\right] \sim \chi^2(1)$
 
 其中：
 - n：回溯测试天数（通常250天）
 - X：实际例外（超VaR）次数
 - p：理论例外率（如1%）
-- $\hat{p} = X/n$：观测例外率
+- $\hat{p} = X/n$：$观测例外率$
 
 ### Christoffersen 独立性检验
 
-$$LR_{ind} = -2 \ln\left[\frac{(1-p)^{N_{00}}p^{N_{01}}(1-p)^{N_{10}}p^{N_{11}}}{(1-\hat{p}_0)^{N_{00}} \hat{p}_0^{N_{01}}(1-\hat{p}_1)^{N_{10}} \hat{p}_1^{N_{11}}}\right] \sim \chi^2(1)$$
+$LR_{ind} = -2 \ln\left[\frac{(1-p)^{N_{00}}p^{N_{01}}(1-p)^{N_{10}}p^{N_{11}}}{(1-\hat{p}_0)^{N_{00}} \hat{p}_0^{N_{01}}(1-\hat{p}_1)^{N_{10}} \hat{p}_1^{N_{11}}}\right] \sim \chi^2(1)$
 
 ## 判断标准
 
@@ -58,5 +58,5 @@ $$LR_{ind} = -2 \ln\left[\frac{(1-p)^{N_{00}}p^{N_{01}}(1-p)^{N_{10}}p^{N_{11}}}
 
 ## 相关概念
 [[VaR]]
-[[00_factor/concept/Bunching|聚束效应]]
-[[00_factor/concept/VaR Standard Error|VaR标准误]]
+[[Bunching|聚束效应]]
+[[VaR Standard Error|VaR标准误]]

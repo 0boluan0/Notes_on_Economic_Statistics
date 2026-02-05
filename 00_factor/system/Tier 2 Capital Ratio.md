@@ -18,7 +18,7 @@ tags:
 
 ## 计算方法
 
-$$\text{Tier 2 比率} = \frac{\text{Tier 2 资本}}{\text{风险加权资产（RWA）}} \times 100\%$$
+$\text{Tier 2 比率} = \frac{\text{Tier 2 资本}}{\text{风险加权资产（RWA）}} \times 100\%$
 
 Tier 2 资本构成：
 - 未公开储备
@@ -36,7 +36,7 @@ Tier 2 资本构成：
 
 ### 资本质量指标
 
-$$\text{资本质量} = \frac{\text{CET1}}{\text{总资本}}$$
+$\text{资本质量} = \frac{\text{CET1}}{\text{总资本}}$
 
 | 等级 | CET1占比 | 评价 |
 |------|----------|------|
@@ -54,5 +54,5 @@ $$\text{资本质量} = \frac{\text{CET1}}{\text{总资本}}$$
 | Tier 2 到期集中 | 资本管理不当 | 错开到期日，建立资本续作计划 |
 
 ## 相关概念
-[[00_factor/system/Tier 1 Capital Ratio|一级资本比率]]
-[[00_factor/system/Basel Capital Adequacy Ratio|巴塞尔资本充足率]]
+[[Tier 1 Capital Ratio|一级资本比率]]
+[[Basel Capital Adequacy Ratio|巴塞尔资本充足率]]

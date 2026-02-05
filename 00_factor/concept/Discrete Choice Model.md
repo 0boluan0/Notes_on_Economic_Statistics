@@ -16,25 +16,25 @@ tags:
 
 ### 因变量
 
-$y_i$是离散变量，取有限个值：
+$y_i$ 是离散变量，取有限个值：
 - 二元：$y_i \in \{0, 1\}$
 - 多元：$y_i \in \{1, 2, \dots, m\}$
 
 ### 潜在变量
 
-引入不可观测的潜在变量$y_i^*$：
+引入不可观测的潜在变量 $y_i^*$：
 $y_i^* = \beta_0 + \beta_1 x_{1i} + \dots + \beta_k x_{ki} + \epsilon_i$
 
 观测变量与潜在变量的关系：
-- 若$y_i^* > 0$，则$y_i = 1$
-- 若$y_i^* \leq 0$，则$y_i = 0$
+- 若 $y_i^* > 0$，则 $y_i = 1$
+- 若 $y_i^* \leq 0$，则 $y_i = 0$
 
 ### 效用最大化
 
 个体选择效用最大的选项：
 $y_i = \arg\max_{j \in \{1, \dots, m\}} U_{ij}$
 
-其中$U_{ij}$是选择选项$j$的效用。
+其中 $U_{ij}$ 是选择选项 $j$ 的效用。
 
 ## 二元选择模型
 
@@ -67,7 +67,7 @@ OLS估计。
 
 $P(y_i = 1|x_i) = \frac{1}{1 + e^{-Z_i}}$
 
-其中$Z_i = \beta_0 + \beta_1 x_{1i} + \dots + \beta_k x_{ki}$
+其中 $Z_i = \beta_0 + \beta_1 x_{1i} + \dots + \beta_k x_{ki}$
 
 #### S形曲线性质
 
@@ -83,12 +83,14 @@ $\frac{P}{1-P} = e^{Z_i}$
 
 $\ln\left(\frac{P}{1-P}\right) = \beta_0 + \beta_1 x_{1i} + \dots + \beta_k x_{ki}$
 
-解释变量每增加一单位，对数机会比率变化$\beta_j$。
+解释变量每增加一单位，对数机会比率变化 $\beta_j$。
 
 #### 边际效应
 
-$x_j$的边际效应：
-$\frac{\partial P}{\partial x_j} = \frac{e^{Z_i}}{(1 + e^{Z_i})^2} \cdot \beta_j$
+$x_j$ 的边际效应：
+$$
+\frac{\partial P}{\partial x_j} = \frac{e^{Z_i}}{(1 + e^{Z_i})^2} \cdot \beta_j
+$$
 
 边际效应随$Z_i$变化，不是常数。
 
@@ -105,8 +107,8 @@ $\ell(\beta) = \sum_{i=1}^n [y_i \ln P_i + (1-y_i)\ln(1-P_i)]$
 
 #### 参数解释
 
-- $\beta_j > 0$：$x_j$增加提高选择1的概率
-- $\beta_j < 0$：$x_j$增加降低选择1的概率
+- $\beta_j > 0$：$x_j$ 增加提高选择 1 的概率
+- $\beta_j < 0$：$x_j$ 增加降低选择 1 的概率
 
 ### 3. Probit模型
 
@@ -114,7 +116,7 @@ $\ell(\beta) = \sum_{i=1}^n [y_i \ln P_i + (1-y_i)\ln(1-P_i)]$
 
 $P(y_i = 1|x_i) = \Phi(Z_i)$
 
-其中$\Phi$是标准正态分布的累积分布函数。
+其中 $\Phi$ 是标准正态分布的累积分布函数。
 
 #### S形曲线性质
 
@@ -133,9 +135,11 @@ $L(\beta) = \prod_{i=1}^n [\Phi(Z_i)]^{y_i} [1-\Phi(Z_i)]^{1-y_i}$
 
 #### 边际效应
 
-$\frac{\partial P}{\partial x_j} = \phi(Z_i) \cdot \beta_j$
+$$
+\frac{\partial P}{\partial x_j} = \phi(Z_i) \cdot \beta_j
+$$
 
-其中$\phi$是标准正态概率密度函数。
+其中 $\phi$ 是标准正态概率密度函数。
 
 ## Logit vs Probit
 
@@ -162,7 +166,7 @@ $\frac{\partial P}{\partial x_j} = \phi(Z_i) \cdot \beta_j$
 
 #### 模型设定
 
-选择选项$j$的概率：
+选择选项j的概率：
 $P(y_i = j|x_i) = \frac{e^{Z_{ij}}}{\sum_{l=1}^m e^{Z_{il}}}$
 
 #### IIA假设（无关选项独立性）
@@ -259,4 +263,4 @@ $LR = -2(\ln L_{\text{restricted}} - \ln L_{\text{unrestricted}})$
    - 治疗效果
    - 疾病诊断
 
-相关链接: [[Dummy Variable|虚拟变量]], [[00_factor/concept/Linear Probability Model|LPM模型]], [[00_factor/concept/Logit Model|logit模型]], [[00_factor/concept/Probit Model|probit模型]]
+相关链接: [[Dummy Variable|虚拟变量]], [[Linear Probability Model|LPM模型]], [[Logit Model|logit模型]], [[Probit Model|probit模型]]

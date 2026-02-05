@@ -9,12 +9,12 @@ tags:
 # Linear Regression Model
 
 ## 它是什么
-- 「Linear Regression Model」是一个待补充定义的核心概念卡片。
+- 「Linear Regression Model」是指用线性关系描述因变量与自变量的模型。
 
 ## 最小可检索信息
-- 定义：待补充
-- 符号/公式：待补充
-- 最小例子：待补充
+- 定义：用线性关系描述因变量与自变量的模型。
+- 符号/公式：$y=X\beta+\varepsilon。$
+- 最小例子：工资对教育年限的线性回归。
 
 ## 关联卡片
 - [[Gauss-Markov theorem]]

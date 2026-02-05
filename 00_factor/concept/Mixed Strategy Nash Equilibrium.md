@@ -15,13 +15,14 @@ tags:
 
 ## 形式化表示
 
-对于玩家 i，如果纯策略集合为 S_i = {s_i1, s_i2, ..., s_ik}，则混合策略为：
+对于玩家 i，如果纯策略集合为 $S_i$ = {$s_i1$, $s_i2$, ..., $s_ik$}，则混合策略为：
+$$
 
-$$ \sigma_i = (p_1, p_2, ..., p_k) $$
+$ \sigma_i = (p_1, p_2, ..., p_k) $
 
 其中：
-- p_j ≥ 0，且 p_1 + p_2 + ... + p_k = 1
-- p_j 表示选择纯策略 s_ij 的概率
+- $p_j ≥ 0，且 p_1 + p_2 + ... + p_k = 1$
+- $p_j$ 表示选择纯策略 $s_ij$ 的概率
 
 ## 关键性质
 
@@ -50,9 +51,9 @@ $$ \sigma_i = (p_1, p_2, ..., p_k) $$
 
 ## 相关概念
 
-- [[00_factor/concept/Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
-- [[00_factor/concept/Best-Reply Function|最优反应函数]]
-- [[00_factor/concept/Rationalisability|可理性化]]
+- [[Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
+- [[Best-Reply Function|最优反应函数]]
+- [[Rationalisability|可理性化]]
 
 ## 典型例子
 
@@ -61,6 +62,6 @@ $$ \sigma_i = (p_1, p_2, ..., p_k) $$
 
 ## 纳什均衡的类型
 
-- [[00_factor/concept/Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
+- [[Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
 - 混合策略纳什均衡
-- [[00_factor/concept/Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]
+- [[Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]

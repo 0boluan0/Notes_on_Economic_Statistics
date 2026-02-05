@@ -28,7 +28,7 @@ tags:
 
 ### 2. Durbin-Watson检验
 
-$$DW = \frac{\sum_{t=2}^n (e_t - e_{t-1})^2}{\sum_{t=1}^n e_t^2} \approx 2(1 - \hat{\rho})$$
+$DW = \frac{\sum_{t=2}^n (e_t - e_{t-1})^2}{\sum_{t=1}^n e_t^2} \approx 2(1 - \hat{\rho})$
 
 | DW值范围 | 诊断 |
 |----------|------|
@@ -39,14 +39,14 @@ $$DW = \frac{\sum_{t=2}^n (e_t - e_{t-1})^2}{\sum_{t=1}^n e_t^2} \approx 2(1 - \
 ### 3. Breusch-Godfrey检验（LM检验）
 
 构造辅助回归：
-$$\hat{e}_t = \rho_1 \hat{e}_{t-1} + \rho_2 \hat{e}_{t-2} + \cdots + \rho_p \hat{e}_{t-p} + u_t$$
+$\hat{e}_t = \rho_1 \hat{e}_{t-1} + \rho_2 \hat{e}_{t-2} + \cdots + \rho_p \hat{e}_{t-p} + u_t$
 
 检验统计量：
-$$LM = (T-p) \cdot R^2 \sim \chi^2(p)$$
+$LM = (T-p) \cdot R^2 \sim \chi^2(p)$
 
 ### 4. Ljung-Box Q检验
 
-$$Q = T \sum_{j=1}^p r_j^2 \sim \chi^2(p)$$
+$Q = T \sum_{j=1}^p r_j^2 \sim \chi^2(p)$
 
 其中 $r_j$ 是滞后j阶的样本自相关系数。
 
@@ -70,8 +70,8 @@ $$Q = T \sum_{j=1}^p r_j^2 \sim \chi^2(p)$$
 | 滞后因变量导致DW失效 | 动态模型设定 | 使用工具变量、估计动态面板模型 |
 
 ## 相关概念
-[[00_factor/system/Durbin-Watson Statistic|Durbin-Watson统计量]]
-[[00_factor/system/Breusch-Godfrey Test|BG检验]]
+[[Durbin-Watson Statistic|Durbin-Watson统计量]]
+[[Breusch-Godfrey Test|BG检验]]
 [[Q Test|Q检验]]
 [[Newey-West]]
 [[Cochrane-Orcutt]]

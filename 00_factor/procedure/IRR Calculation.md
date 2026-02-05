@@ -16,7 +16,7 @@ tags:
 
 ## 所需数据/条件
 
-- 项目现金流量序列 $\{CF_t\}_{t=0}^n$
+- $项目现金流量序列 \{CF_t\}_{t=0}^n$
 - $CF_0$ 通常为负值（初始投资），后续现金流量有正有负
 
 ## 计算步骤
@@ -24,15 +24,15 @@ tags:
 ### 步骤 1：整理现金流量
 
 确保现金流量符号正确：
-- $CF_0 < 0$（投资流出）
-- 至少有一个 $CF_t > 0$（后续流入）
+- CF_0 < 0（投资流出）
+- 至少有一个 $CF_t$ > 0（后续流入）
 
 **注意点**：现金流量按时间顺序排列，不能错位。
 
 ### 步骤 2：列出IRR方程
 
 IRR是使净现值为零的折现率：
-$$ NPV(r) = \sum_{t=0}^n \frac{CF_t}{(1+r)^t} = 0 $$
+$ NPV(r) = \sum_{t=0}^n \frac{CF_t}{(1+r)^t} = 0 $
 
 **注意点**：此方程无法直接求解，需要用数值方法。
 
@@ -47,23 +47,23 @@ $$ NPV(r) = \sum_{t=0}^n \frac{CF_t}{(1+r)^t} = 0 $$
 
 ### 步骤 4：使用二分法求IRR（推荐）
 
-设定初始搜索区间 $[r_l, r_u]$：
+设定初始搜索区间 [$r_l$, $r_u$]：
 1. 检查 $NPV(r_l) \times NPV(r_u)$ 符号必须为负（一正一负）
 2. 迭代：$r_{\text{mid}} = (r_l + r_u)/2$
 3. 计算 $NPV(r_{\text{mid}})$
 4. 若 $|NPV| < \epsilon$，停止（收敛）
-5. 若 $NPV > 0$，IRR在左侧：$r_u = r_{\text{mid}}$
-6. 若 $NPV < 0$，IRR在右侧：$r_l = r_{\text{mid}}$
+5. 若 NPV > 0，IRR在左侧：$r_u = r_{\text{mid}}$
+6. 若 NPV < 0，IRR在右侧：$r_l = r_{\text{mid}}$
 7. 重复2-6直到收敛
 
-**注意点**：典型初始区间为 $[0\%, 100\%]$。
+**注意点**：典型初始区间为 [0\%, 100\%]。
 
 ### 步骤 5：使用牛顿迭代法（可选）
 
-$$ r_{k+1} = r_k - \frac{NPV(r_k)}{NPV'(r_k)} $$
+$r_{k+1} = r_k - \frac{NPV(r_k)}{NPV'(r_k)}$
 
 其中导数：
-$$ NPV'(r) = -\sum_{t=1}^n \frac{t \cdot CF_t}{(1+r)^{t+1}} $$
+$NPV'(r) = -\sum_{t=1}^n \frac{t \cdot CF_t}{(1+r)^{t+1}}$
 
 **注意点**：牛顿法收敛快但可能发散，需要好的初始猜测。
 
@@ -95,13 +95,13 @@ $$ NPV'(r) = -\sum_{t=1}^n \frac{t \cdot CF_t}{(1+r)^{t+1}} $$
 ## 关键公式
 
 **IRR定义方程**：
-$$ \sum_{t=0}^n \frac{CF_t}{(1+IRR)^t} = 0 $$
+$\sum_{t=0}^n \frac{CF_t}{(1+IRR)^t} = 0$
 
 **牛顿迭代公式**：
-$$ r_{k+1} = r_k - \frac{\sum_{t=0}^n \frac{CF_t}{(1+r_k)^t}}{-\sum_{t=1}^n \frac{t \cdot CF_t}{(1+r_k)^{t+1}}} $$
+$r_{k+1} = r_k - \frac{\sum_{t=0}^n \frac{CF_t}{(1+r_k)^t}}{-\sum_{t=1}^n \frac{t \cdot CF_t}{(1+r_k)^{t+1}}}$
 
 **修正MIRR（现金流量再投资）**：
-$$ 1 + MIRR = \left[\sum_{t=1}^n \frac{CF_t}{(1+IRR)^t} \left(\sum_{k=0}^{t-1} (1+IRR)^k\right)\right]^{1/n} $$
+$1 + MIRR = \left[\sum_{t=1}^n \frac{CF_t}{(1+IRR)^t} \left(\sum_{k=0}^{t-1} (1+IRR)^k\right)\right]^{1/n}$
 
 ## 常见问题
 
@@ -111,6 +111,6 @@ $$ 1 + MIRR = \left[\sum_{t=1}^n \frac{CF_t}{(1+IRR)^t} \left(\sum_{k=0}^{t-1} (
 4.与NPV冲突**：不同折现率下IRR和NPV结论可能冲突。
 
 ## 相关概念
-[[00_factor/concept/Net Present Value (2)|净现值]]
+[[Net Present Value (2)|净现值]]
 [[MIRR|修正内部收益率]]
 [[Payback Period|回收期]]

@@ -56,7 +56,7 @@ tags:
 
 将投资组合价值映射到基础市场风险因子（如利率、汇率等）。
 
-$$V = f(\Delta S_1, \Delta S_2, ..., \Delta S_k)$$
+$V = f(\Delta S_1, \Delta S_2, ..., \Delta S_k)$
 
 ## 方差-协方差方法
 
@@ -64,19 +64,19 @@ $$V = f(\Delta S_1, \Delta S_2, ..., \Delta S_k)$$
 
 ### 单资产VaR
 
-$$VaR = z_{\alpha} \sigma \sqrt{T}$$
+$VaR = z_{\alpha} \sigma \sqrt{T}$
 
 ### 组合VaR
 
-$$\sigma_p^2 = \sum_{i,j} w_i w_jw \sigma_{ij}$$
+$\sigma_p^2 = \sum_{i,j} w_i w_jw \sigma_{ij}$
 
-$$VaR = z_{\alpha} \sigma_p \sqrt{T}$$
+$VaR = z_{\alpha} \sigma_p \sqrt{T}$
 
 ## VaR聚合
 
 考虑不同业务单元风险的相关性：
 
-$$VaR_{total} = \sqrt{\sum_{i,j} \rho_{ij}VaR_iVaR_j}$$
+$VaR_{total} = \sqrt{\sum_{i,j} \rho_{ij}VaR_iVaR_j}$
 
 ## 市场风险管理
 
@@ -102,4 +102,4 @@ $$VaR_{total} = \sqrt{\sum_{i,j} \rho_{ij}VaR_iVaR_j}$$
 - **压力VaR要求**：10日99%压力VaR
 - **资本要求**：max(10日VaR, 压力VaR) + 乘数因子
 
-相关链接: [[VaR]], [[ES]], [[00_factor/concept/Stressed VaR|压力VaR]], [[00_factor/concept/duration|久期]], [[00_factor/concept/Basel Accords|巴塞尔协议]]
+相关链接: [[VaR]], [[ES]], [[Stressed VaR|压力VaR]], [[duration|久期]], [[Basel Accords|巴塞尔协议]]

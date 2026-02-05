@@ -22,9 +22,9 @@ tags:
 
 ### 收入标准
 
-- **低收入**：人均GNI < $1,135（2024年）
-- **中等收入**：$1,136 ≤ 人均GNI < $13,845
-- **高收入**：人均GNI ≥ $13,845
+- **低收入**：人均GNI < USD 1,135（2024年）
+- **中等收入**：USD 1,136 ≤ 人均GNI < USD 13,845
+- **高收入**：人均GNI ≥ USD 13,845
 
 ## 陷阱的成因
 
@@ -259,4 +259,4 @@ tags:
    - 深化改革
    - 扩大开放
 
-相关链接: [[00_factor/concept/Economic Development|经济发展]], [[00_factor/concept/Advantage of Backwardness|后发优势理论]], [[00_factor/concept/Economic Growth|经济增长]]
+相关链接: [[Economic Development|经济发展]], [[Advantage of Backwardness|后发优势理论]], [[Economic Growth|经济增长]]

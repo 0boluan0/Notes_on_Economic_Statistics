@@ -16,30 +16,30 @@ tags:
 
 ## 模型设定
 
-- n 个厂商同时选择产量 q_i
-- 市场价格：p = a - Q，其中 Q = q_1 + q_2 + ... + q_n
-- 厂商 i 的成本：C_i(q_i)
-- 厂商 i 的利润：π_i = p × q_i - C_i(q_i)
+- n 个厂商同时选择产量 $q_i$
+- 市场价格：$p = a - Q，其中 Q = q_1 + q_2 + ... + q_n$
+- 厂商 i 的成本：$C_i$($q_i$)
+- 厂商 i 的利润：$π_i = p × q_i - C_i(q_i)$
 
 ## 最优反应函数
 
 对于线性需求 p = a - Q 和边际成本 c 的对称情形：
 
-$$ q_i^* = \max\left\{0, \frac{a - c - Q_{-i}}{2}\right\} $$
+$ q_i^* = \max\left\{0, \frac{a - c - Q_{-i}}{2}\right\} $
 
 其中 Q_{-i} 是其他厂商的总产量。
 
 ## 纳什均衡
 
 ### 双寡头情形
-$$ q_1^* = q_2^* = \frac{a - c}{3} $$
-$$ Q^* = \frac{2(a - c)}{3} $$
-$$ p^* = \frac{a + 2c}{3} $$
+$ q_1^* = q_2^* = \frac{a - c}{3} $
+$ Q^* = \frac{2(a - c)}{3} $
+$ p^* = \frac{a + 2c}{3} $
 
 ### n 个厂商情形
-$$ q_i^* = \frac{a - c}{n + 1} $$
-$$ Q^* = \frac{n(a - c)}{n + 1} $$
-$$ p^* = \frac{a + nc}{n + 1} $$
+$ q_i^* = \frac{a - c}{n + 1} $
+$ Q^* = \frac{n(a - c)}{n + 1} $
+$ p^* = \frac{a + nc}{n + 1} $
 
 ## 性质
 
@@ -69,9 +69,9 @@ $$ p^* = \frac{a + nc}{n + 1} $$
 
 ## 相关概念
 
-- [[00_factor/concept/Bertrand Competition|Bertrand 竞争]]
-- [[00_factor/concept/Hotelling Model|Hotelling 模型]]
-- [[00_factor/concept/Best-Reply Function|最优反应函数]]
+- [[Bertrand Competition|Bertrand 竞争]]
+- [[Hotelling Model|Hotelling 模型]]
+- [[Best-Reply Function|最优反应函数]]
 
 ## 应用
 

@@ -64,4 +64,4 @@ tags:
 2. **异常聚集显著**：引入时变风险因子模型（如GARCH）
 3. **系统性偏差**：调整模型参数或更换模型方法
 
-相关链接: [[VaR]], [[00_factor/concept/VaR Standard Error|VaR标准误]], [[Kupiec Test|Kupiec检验]], [[Christoffersen Test|Christoffersen检验]], [[GARCH]]
+相关链接: [[VaR]], [[VaR Standard Error|VaR标准误]], [[Kupiec Test|Kupiec检验]], [[Christoffersen Test|Christoffersen检验]], [[GARCH]]

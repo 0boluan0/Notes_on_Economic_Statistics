@@ -33,11 +33,11 @@ tags:
 
 1. **激励相容**：每种类型都愿意选择共同信号 m，而不是偏离
 
-$$ U(\theta, m) \geq U(\theta, m') \quad \forall \theta, m' $$
+$ U(\theta, m) \geq U(\theta, m') \quad \forall \theta, m' $
 
 2. **最优反应**：给定先验信念，接收者的行动是最优的
 
-$$ a^* \in \arg\max_{a} E_\theta[U(\theta, m, a)] $$
+$ a^* \in \arg\max_{a} E_\theta[U(\theta, m, a)] $
 
 ## 非均衡路径上的信念
 
@@ -81,9 +81,9 @@ $$ a^* \in \arg\max_{a} E_\theta[U(\theta, m, a)] $$
 
 ## 相关概念
 
-- [[00_factor/concept/Separating Equilibrium|分离均衡]]
-- [[00_factor/concept/Perfect Bayesian Equilibrium|完美贝叶斯均衡]]
-- [[00_factor/concept/Bayesian Game|贝叶斯博弈]]
+- [[Separating Equilibrium|分离均衡]]
+- [[Perfect Bayesian Equilibrium|完美贝叶斯均衡]]
+- [[Bayesian Game|贝叶斯博弈]]
 
 ## 应用
 

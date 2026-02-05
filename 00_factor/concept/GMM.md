@@ -18,7 +18,7 @@ GMM（Generalized Method of Moments，广义矩估计）是一种基于矩条件
 
 理论矩条件：$E[m(x_t, \theta)] = 0$
 
-其中m(x_t, θ)是矩条件函数向量。
+其中m($x_t$, θ)是矩条件函数向量。
 
 样本矩条件：$\bar{m}(\theta) = \frac{1}{n} \sum_{t=1}^{n} m(x_t, \theta)$
 
@@ -26,7 +26,7 @@ GMM（Generalized Method of Moments，广义矩估计）是一种基于矩条件
 
 选择θ最小化二次型：
 
-$$J(\theta) = \bar{m}(\theta)' W \bar{m}(\theta)$$
+$J(\theta) = \bar{m}(\theta)' W \bar{m}(\theta)$
 
 其中W是权重矩阵。
 
@@ -39,13 +39,13 @@ $$J(\theta) = \bar{m}(\theta)' W \bar{m}(\theta)$$
 
 ## 最优GMM估计量
 
-$$\hat{\theta}_{GMM} = \arg\min_{\theta} \bar{m}(\theta)' \hat{S}^{-1} \bar{m}(\theta)$$
+$\hat{\theta}_{GMM} = \arg\min_{\theta} \bar{m}(\theta)' \hat{S}^{-1} \bar{m}(\theta)$
 
 其中$\hat{S}$是S的一致估计量。
 
 ## 与其他方法的关系
 
-1. **OLS**：矩条件E[x_t'(y) = x_t'β] = 0
+1. **OLS**：$矩条件E[x_t'(y) = x_t'β] = 0$
 2. **2SLS/IV**：矩条件E[Z'(y) = X'β] = 0
 3. **MLE**：在正态假设下，MLE等价于GMM
 4. **GMM**：上述方法的统一框架
@@ -58,4 +58,4 @@ $$\hat{\theta}_{GMM} = \arg\min_{\theta} \bar{m}(\theta)' \hat{S}^{-1} \bar{m}(\
 
 在H₀（模型正确设定）下，J ~ χ²(k-p)
 
-相关链接: [[2SLS]], [[00_factor/concept/Instrumental Variable|工具变量]], [[00_factor/concept/Maximum Likelihood Estimation|极大似然估计]]
+相关链接: [[2SLS]], [[Instrumental Variable|工具变量]], [[Maximum Likelihood Estimation|极大似然估计]]

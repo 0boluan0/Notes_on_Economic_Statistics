@@ -16,7 +16,7 @@ tags:
 
 ## 所需数据/条件
 
-- $m$ 个时间序列 $\mathbf{y}_t = (y_{1t}, y_{2t}, \dots, y_{mt})'$，样本量 $t=1,\dots,T$
+- $m 个时间序列 \mathbf{y}_t = (y_{1t}, y_{2t}, \dots, y_{mt})'，样本量 t=1,\dots,T$
 - 所有序列均为 $I(1)$ 过程（需先通过单位根检验确认）
 - 滞后阶数 $p$（需预先确定）
 
@@ -26,8 +26,8 @@ tags:
 
 使用信息准则确定最优滞后阶数 $p$：
 
-$$ \text{AIC}(p) = T \ln(\hat{\sigma}_p^2) + 2(m^2 p + m) $$
-$$ \text{SBC}(p) = T \ln(\hat{\sigma}_p^2) + (m^2 p + m) \ln T $$
+$ \text{AIC}(p) = T \ln(\hat{\sigma}_p^2) + 2(m^2 p + m) $
+$ \text{SBC}(p) = T \ln(\hat{\sigma}_p^2) + (m^2 p + m) \ln T $
 
 选择使信息准则最小的 $p$ 值。
 
@@ -35,7 +35,7 @@ $$ \text{SBC}(p) = T \ln(\hat{\sigma}_p^2) + (m^2 p + m) \ln T $$
 
 ### 步骤 2：构建VAR(p)模型
 
-$$ \Delta \mathbf{y}_t = \Pi \mathbf{y}_{t-1} + \sum_{i=1}^{p-1} \Gamma_i \Delta \mathbf{y}_{t-i} + \mathbf{\epsilon}_t $$
+$ \Delta \mathbf{y}_t = \Pi \mathbf{y}_{t-1} + \sum_{i=1}^{p-1} \Gamma_i \Delta \mathbf{y}_{t-i} + \mathbf{\epsilon}_t $
 
 其中 $\Pi$ 是 $m \times m$ 系数矩阵，$\mathbf{\epsilon}_t$ 为白噪声向量。
 
@@ -43,14 +43,14 @@ $$ \Delta \mathbf{y}_t = \Pi \mathbf{y}_{t-1} + \sum_{i=1}^{p-1} \Gamma_i \Delta
 
 ### 步骤 3：估计VAR模型参数
 
-使用最大似然法或OLS估计 $\Pi$ 和 $\Gamma_i$ 矩阵。
+使用最大似然法或 OLS 估计 $\Pi$ 和 $\Gamma_i$ 矩阵。
 
 **注意点**：Johansen方法使用完全信息最大似然估计。
 
 ### 步骤 4：计算协整矩阵的特征值
 
 对矩阵 $\Pi$ 进行特征值分解：
-$$ \text{det}(\Pi - \lambda I) = 0 $$
+$\text{det}(\Pi - \lambda I) = 0$
 
 得到 $m$ 个特征值 $\lambda_1 \ge \lambda_2 \ge \cdots \ge \lambda_m$。
 
@@ -61,14 +61,14 @@ $$ \text{det}(\Pi - \lambda I) = 0 $$
 **迹检验（Trace Test）**：
 检验 $H_0: \text{rank}(\Pi) \le r$ 对 $H_1: \text{rank}(\Pi) > r$
 
-$$ \lambda_{\text{trace}}(r) = -T \sum_{i=r+1}^{m} \ln(1 - \hat{\lambda}_i) $$
+$ \lambda_{\text{trace}}(r) = -T \sum_{i=r+1}^{m} \ln(1 - \hat{\lambda}_i) $
 
 **最大特征值检验（Max-Eigen Test）**：
 检验 $H_0: \text{rank}(\Pi) = r$ 对 $H_1: \text{rank}(\Pi) = r+1$
 
-$$ \lambda_{\text{max}}(r) = -T \ln(1 - \hat{\lambda}_{r+1}) $$
+$ \lambda_{\text{max}}(r) = -T \ln(1 - \hat{\lambda}_{r+1}) $
 
-**注意点**：两种检验从 $r=0$ 开始依次检验。
+**注意点**：两种检验从 r=0 开始依次检验。
 
 ### 步骤 6：确定协整关系数量
 
@@ -83,7 +83,9 @@ $$ \lambda_{\text{max}}(r) = -T \ln(1 - \hat{\lambda}_{r+1}) $$
 ### 步骤 7：估计协整向量（若 $\hat{r} > 0$）
 
 将 $\Pi$ 矩阵分解为：
-$$ \Pi = \alpha \beta' $$
+$$
+\Pi = \alpha \beta'
+$$
 
 其中 $\beta$ 为 $m \times \hat{r}$ 协整向量矩阵，$\alpha$ 为调整速度矩阵。
 
@@ -91,24 +93,27 @@ $$ \Pi = \alpha \beta' $$
 
 ### 步骤 8：构建协整方程
 
-对于每个协整关系 $j=1,\dots,\hat{r}$：
-$$ \beta_{1j} y_{1t} + \beta_{2j} y_{2t} + \cdots + \beta_{mj} y_{mt} = \text{长期均衡项} $$
-
+对于每个协整关系 $j=1,\ldots,\hat{r}$：
+$$
+\beta_{1j} y_{1t} + \beta_{2j} y_{2t} + \cdots + \beta_{mj} y_{mt} = \text{长期均衡项}
+$$
 或写成误差修正项：
-$$ \text{ECT}_{j,t-1} = \beta_j' \mathbf{y}_{t-1} $$
+$$
+\text{ECT}_{j,t-1} = \beta_j' \mathbf{y}_{t-1}
+$$
 
 **注意点**：ECT项反映系统向均衡调整的力度。
 
 ## 关键公式
 
 **VAR(p)误差修正表示**：
-$$ \Delta \mathbf{y}_t = \Pi \mathbf{y}_{t-1} + \sum_{i=1}^{p-1} \Gamma_i \Delta \mathbf{y}_{t-i} + \mathbf{\epsilon}_t $$
+$ \Delta \mathbf{y}_t = \Pi \mathbf{y}_{t-1} + \sum_{i=1}^{p-1} \Gamma_i \Delta \mathbf{y}_{t-i} + \mathbf{\epsilon}_t $
 
 **迹检验统计量**：
-$$ \lambda_{\text{trace}}(r) = -T \sum_{i=r+1}^{m} \ln(1 - \hat{\lambda}_i) \xrightarrow{d} \chi^2(m-r) $$
+$ \lambda_{\text{trace}}(r) = -T \sum_{i=r+1}^{m} \ln(1 - \hat{\lambda}_i) \xrightarrow{d} \chi^2(m-r) $
 
 **最大特征值检验统计量**：
-$$ \lambda_{\text{max}}(r) = -T \ln(1 - \hat{\lambda}_{r+1}) \xrightarrow{d} \chi^2(1) $$
+$ \lambda_{\text{max}}(r) = -T \ln(1 - \hat{\lambda}_{r+1}) \xrightarrow{d} \chi^2(1) $
 
 ## 常见问题
 
@@ -118,7 +123,7 @@ $$ \lambda_{\text{max}}(r) = -T \ln(1 - \hat{\lambda}_{r+1}) \xrightarrow{d} \ch
 4. **结构断点**：样本期间存在结构变化时，检验结论可能不可靠。
 
 ## 相关概念
-[[00_factor/concept/Cointegration|协整]]
+[[Cointegration|协整]]
 [[Error Correction Model|误差纠正模型]]
-[[00_factor/concept/Unit Root Test|单位根]]
-[[00_factor/procedure/ADF Test Steps|ADF检验步骤]]
+[[Unit Root Test|单位根]]
+[[ADF Test Steps|ADF检验步骤]]

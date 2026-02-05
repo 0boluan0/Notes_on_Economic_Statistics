@@ -10,15 +10,15 @@ tags:
 是表达博弈的两种方式之一.
 
 策略式表达有三要素
-### 1.player [[00_factor/concept/player|局中人]]
+### 1.player [[player|局中人]]
 
 A set of agents who play the game。N，局中人的集合：i，具体的某个人。
 
-### 2.strategies [[00_factor/concept/strategies|策略]]
+### 2.strategies [[strategies|策略]]
 
 针对每一个player（局中人）的可选的选择范围。Si表示这个人能选的策略的集合. 
 
-### 3.payoffs [[00_factor/concept/payoffs|效用]]
+### 3.payoffs [[payoffs|效用]]
 
 所有的策略组合之和，事实上在博弈的过程中，参与博弈的各方都要从自己的可选的strategies中选择一个并将所有人的选择汇总得出最后博弈的结果，这就产生了一个payoff，所有的payoff之和就是一个效用的集合。注意，同一份策略的组合对于不同人来说产生的收益完全独立，每个人都有自己的一套对与payoffs的排序。
 

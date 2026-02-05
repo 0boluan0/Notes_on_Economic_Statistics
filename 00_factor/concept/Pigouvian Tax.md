@@ -18,7 +18,7 @@ tags:
 
 通过税收使**私人边际成本**（MPC）等于**社会边际成本**（MSC），从而将外部性内部化。
 
-$$ \text{Tax} = MSC - MPC $$
+$ \text{Tax} = MSC - MPC $
 
 ## 工作原理
 
@@ -26,7 +26,7 @@ $$ \text{Tax} = MSC - MPC $$
 
 对于产生负外部性的活动：
 
-$$ MSC = MPC + MEC $$
+$ MSC = MPC + MEC $
 
 其中：
 - MSC：边际社会成本
@@ -35,15 +35,15 @@ $$ MSC = MPC + MEC $$
 
 ### 2. 税率设定
 
-$$ t = MEC = MSC - MPC $$
+$ t = MEC = MSC - MPC $
 
 ### 3. 最优条件
 
 征税后，私人决策满足：
 
-$$ MPC + t = MSC $$
+$ MPC + t = MSC $
 
-$$ MSC = MSB $$
+$ MSC = MSB $
 
 （社会边际成本 = 社会边际收益）
 
@@ -105,9 +105,9 @@ $$ MSC = MSB $$
 
 ## 相关概念
 
-- [[00_factor/concept/Externality|外部性]]
+- [[Externality|外部性]]
 - [[Emissions Trading|排放许可交易]]
-- [[00_factor/concept/Coase Theorem|科斯定理]]
+- [[Coase Theorem|科斯定理]]
 
 ## 实施要点
 

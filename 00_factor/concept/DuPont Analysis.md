@@ -13,15 +13,15 @@ tags:
 
 ## 核心比率
 
-$$权益净利率$$
+$权益净利率$
 
 因为企业是股东的企业，股东最关心的最直接的比率就是权益净利率。
 
 ## 基本公式
 
-$$权益净利率 = 营业净利率 \times 总资产周转次数 \times 权益乘数$$
+$权益净利率 = 营业净利率 \times 总资产周转次数 \times 权益乘数$
 
-$$权益净利率 = \frac{净利润}{营业收入} \times \frac{营业收入}{总资产} \times \frac{总资产}{股东权益}$$
+$权益净利率 = \frac{净利润}{营业收入} \times \frac{营业收入}{总资产} \times \frac{总资产}{股东权益}$
 
 ## 驱动因素分解
 
@@ -74,7 +74,7 @@ $$权益净利率 = \frac{净利润}{营业收入} \times \frac{营业收入}{�
 - 实体现金流量 = 税后经营净利润 - 净经营资产增加
 
 ## 相关链接
-[[00_factor/concept/Return on Equity|权益净利率]]
-[[00_factor/concept/Net Profit Margin|营业净利率]]
-[[00_factor/concept/Return on Assets|总资产净利率]]
-[[00_factor/concept/Equity Multiplier|权益乘数]]
+[[Return on Equity|权益净利率]]
+[[Net Profit Margin|营业净利率]]
+[[Return on Assets|总资产净利率]]
+[[Equity Multiplier|权益乘数]]

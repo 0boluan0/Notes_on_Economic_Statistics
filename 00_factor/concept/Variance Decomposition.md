@@ -18,7 +18,7 @@ tags:
 
 对于h步预测，变量i的预测误差方差为：
 
-$$\text{Var}(y_{i,t+h} - E[y_{i,t+h}|\mathcal{F}_t]) = \sum_{j=1}^{n} \sum_{k=0}^{h-1} (\Psi_k)_{ij}^2$$
+$\text{Var}(y_{i,t+h} - E[y_{i,t+h}|\mathcal{F}_t]) = \sum_{j=1}^{n} \sum_{k=0}^{h-1} (\Psi_k)_{ij}^2$
 
 其中n是变量个数，Ψ_k是脉冲响应矩阵。
 
@@ -26,7 +26,7 @@ $$\text{Var}(y_{i,t+h} - E[y_{i,t+h}|\mathcal{F}_t]) = \sum_{j=1}^{n} \sum_{k=0}
 
 变量j对变量i的h步预测误差方差的贡献比例为：
 
-$$\frac{\sum_{k=0}^{h-1} (\Psi_k)_{ij}^2}{\sum_{j=1}^{n} \sum_{k=0}^{h-1} (\Psi_k)_{ij}^2}$$
+$\frac{\sum_{k=0}^{h-1} (\Psi_k)_{ij}^2}{\sum_{j=1}^{n} \sum_{k=0}^{h-1} (\Psi_k)_{ij}^2}$
 
 ## 性质
 
@@ -46,4 +46,4 @@ $$\frac{\sum_{k=0}^{h-1} (\Psi_k)_{ij}^2}{\sum_{j=1}^{n} \sum_{k=0}^{h-1} (\Psi_
 2. **线性假设**：基于线性VAR模型
 3. **结构识别**：需要额外的约束条件进行结构识别
 
-相关链接: [[00_factor/concept/Impulse Response Function|脉冲响应函数]], [[VAR Model|VAR]], [[00_factor/concept/Granger Causality Test|格兰杰因果检验]]
+相关链接: [[Impulse Response Function|脉冲响应函数]], [[VAR Model|VAR]], [[Granger Causality Test|格兰杰因果检验]]

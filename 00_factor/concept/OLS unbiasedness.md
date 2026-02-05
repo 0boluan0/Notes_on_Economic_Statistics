@@ -14,7 +14,7 @@ tags:
 ## 定理内容
 
 考虑线性回归模型：
-$$y = X\beta + \varepsilon$$
+$y = X\beta + \varepsilon$
 
 其中：
 - $y$ 为 $n \times 1$ 观测向量
@@ -27,10 +27,10 @@ $$y = X\beta + \varepsilon$$
 2. **设计矩阵满秩**：$\text{rank}(X) = k$（无完全多重共线性）
 
 **OLS 估计量**：
-$$\hat{\beta}_{OLS} = (X'X)^{-1}X'y$$
+$\hat{\beta}_{OLS} = (X'X)^{-1}X'y$
 
 **无偏性定理**：
-$$E[\hat{\beta}_{OLS}] = \beta$$
+$E[\hat{\beta}_{OLS}] = \beta$
 
 ## 证明思路
 
@@ -41,9 +41,11 @@ $$E[\hat{\beta}_{OLS}] = \beta$$
 ### 步骤 1：写出 OLS 估计量
 
 从正规方程组 $X'X\hat{\beta} = X'y$ 解得：
-$$\hat{\beta}_{OLS} = (X'X)^{-1}X'y$$
+$$
+\hat{\beta}_{OLS} = (X'X)^{-1}X'y
+$$
 
-### 步骤 2：将 $y$ 用模型表示
+### 步骤 2：将 y 用模型表示
 
 代入 $y = X\beta + \varepsilon$：
 $$
@@ -87,7 +89,9 @@ $$
 **情形 2：无条件期望（弱外生性）**
 
 假设 $E[\varepsilon] = 0$ 且 $X$ 与 $\varepsilon$ 不相关（或 $X$ 非随机）：
-$$E[(X'X)^{-1}X'\varepsilon] = (X'X)^{-1}X'E[\varepsilon] = (X'X)^{-1}X' \cdot 0 = 0$$
+$$
+E[(X'X)^{-1}X'\varepsilon] = (X'X)^{-1}X'E[\varepsilon] = (X'X)^{-1}X' \cdot 0 = 0
+$$
 
 ### 步骤 5：结论
 
@@ -102,7 +106,7 @@ $$
 ## 结论
 
 OLS 估计量是无偏的，即：
-$$E[\hat{\beta}_{OLS}] = \beta$$
+$E[\hat{\beta}_{OLS}] = \beta$
 
 **外生性条件的必要性**：
 
@@ -122,7 +126,7 @@ $$E[\hat{\beta}_{OLS}] = \beta$$
 **违反外生性的后果**：
 
 若外生性不成立（如遗漏变量偏差、测量误差、联立性），则：
-$$E[\hat{\beta}_{OLS}] \neq \beta$$
+$E[\hat{\beta}_{OLS}] \neq \beta$
 
 估计量是**有偏的**（biased）。
 
@@ -140,5 +144,5 @@ $$E[\hat{\beta}_{OLS}] \neq \beta$$
    - 内生解释变量与误差项相关
 
 ## 相关概念
-[[00_factor/concept/Gauss-Markov theorem|高斯-马尔可夫定理]]
+[[Gauss-Markov theorem|高斯-马尔可夫定理]]
 [[Linear Regression Model|线性回归模型]]

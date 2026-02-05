@@ -50,5 +50,5 @@ tags:
 5. 要积极参与国际经济交流，利用国际贸易扩大经济规模和提高技术水平
 
 ## 相关链接
-[[00_factor/framework/Solow Model|索罗模型]]
-[[00_factor/concept/Rostow's Stages of Growth|罗斯托经济增长阶段论]]
+[[00_factor/concept/Solow Model|索罗模型]]
+[[Rostow's Stages of Growth|罗斯托经济增长阶段论]]

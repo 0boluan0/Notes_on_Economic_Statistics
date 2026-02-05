@@ -20,7 +20,7 @@ tags:
 
 内涵报酬率是使净现值等于零的折现率：
 
-$$NPV = \sum_{t=0}^{n} \frac{CF_t}{(1+IRR)^t} = 0$$
+$NPV = \sum_{t=0}^{n} \frac{CF_t}{(1+IRR)^t} = 0$
 
 通常需要使用试错法或计算器求解。
 
@@ -61,5 +61,5 @@ $$NPV = \sum_{t=0}^{n} \frac{CF_t}{(1+IRR)^t} = 0$$
 3. **资本预算**：制定投资计划
 
 ## 相关链接
-[[00_factor/concept/Net Present Value|净现值法]]
-[[00_factor/concept/Profitability Index|现值指数]]
+[[Net Present Value|净现值法]]
+[[Profitability Index|现值指数]]

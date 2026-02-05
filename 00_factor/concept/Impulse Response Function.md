@@ -19,7 +19,7 @@ tags:
 
 对于VAR(p)模型，可以将其转换为VMA(∞)形式：
 
-$$y_t = \sum_{j=0}^{\infty} \Psi_j \varepsilon_{t-j}$$
+$y_t = \sum_{j=0}^{\infty} \Psi_j \varepsilon_{t-j}$
 
 其中Ψ_j是脉冲响应矩阵，表示第j期后系统对冲击的反应。
 
@@ -33,9 +33,9 @@ $$y_t = \sum_{j=0}^{\infty} \Psi_j \varepsilon_{t-j}$$
 
 由于VAR模型中误差项可能相关，需要通过Cholesky分解进行正交化：
 
-$$\varepsilon_t = P u_t$$
+$\varepsilon_t = P u_t$
 
-其中P是Cholesky分解得到的下三角矩阵，u_t是正交化的冲击。
+其中P是Cholesky分解得到的下三角矩阵，$u_t$是正交化的冲击。
 
 ## 应用
 
@@ -51,4 +51,4 @@ $$\varepsilon_t = P u_t$$
 - 冲击的衰减或放大过程
 - 冲击的方向（正或负）
 
-相关链接: [[VAR Model|VAR]], [[00_factor/concept/Variance Decomposition|方差分解]], [[00_factor/concept/Granger Causality Test|格兰杰因果检验]]
+相关链接: [[VAR Model|VAR]], [[Variance Decomposition|方差分解]], [[Granger Causality Test|格兰杰因果检验]]

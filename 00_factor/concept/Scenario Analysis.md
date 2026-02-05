@@ -9,12 +9,12 @@ tags:
 # Scenario Analysis
 
 ## 它是什么
-- 「Scenario Analysis」是一个待补充定义的核心概念卡片。
+- 「Scenario Analysis」是指在设定的宏观或市场情景下评估损益或风险。
 
 ## 最小可检索信息
-- 定义：待补充
-- 符号/公式：待补充
-- 最小例子：待补充
+- 定义：在设定的宏观或市场情景下评估损益或风险。
+- 符号/公式：无固定符号。
+- 最小例子：利率上升200bp情景下的组合损失。
 
 ## 关联卡片
 - [[Capital and Risk Management-hub]]

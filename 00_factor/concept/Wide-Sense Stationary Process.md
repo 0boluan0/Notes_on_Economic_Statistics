@@ -15,45 +15,45 @@ tags:
 
 宽平稳过程（Wide-Sense Stationary Process）又称为协方差平稳过程，满足：
 
-1. **均值常数**：$E[X(t)] = m_X$（常数，不随时间变化）
-2. **相关函数仅与时间差有关**：$E[X(t)X(t+\tau)] = R_X(\tau)$（仅取决于 τ）
+1. **均值常数**：$E[X(t)] = m_X（常数，不随时间变化）$
+2. **相关函数仅与时间差有关**：$E[X(t)X(t+\tau)] = R_X(\tau)（仅取决于 τ）$
 
 数学表达：
 
-$$ E[X(t)] = \mu \quad (\text{常数}) $$
-$$ R_X(t_1, t_2) = R_X(t_2 - t_1) \quad (\text{仅与时间差有关}) $$
+$ E[X(t)] = \mu \quad (\text{常数}) $
+$R_X(t_1, t_2) = R_X(t_2 - t_1) \quad (\text{仅与时间差有关})$
 
 ## 相关函数性质
 
 ### 1. 非负性
 
-$$ R_X(0) \ge 0 $$
+$ $R_X$(0) \ge 0 $
 
 自相关函数在零点的取值是非负的。
 
 ### 2. 对称性
 
-$$ R_X(\tau) = R_X(-\tau) $$
+$R_X(\tau) = R_X(-\tau)$
 
 自相关函数是偶函数，时间反转不影响相关性。
 
 ### 3. 最大值
 
-$$ |R_X(\tau)| \le R_X(0) $$
+$ |$R_X$(\tau)| \le $R_X$(0) $
 
 自相关函数在零点取最大值。
 
 ### 4. 非负定性
 
-对于任意实数 t_1, t_2, ..., t_n 和复数 a_1, a_2, ..., a_n：
+对于任意实数 $t_1$, $t_2$, ..., $t_n$ 和复数 $a_1$, $a_2$, ..., $a_n$：
 
-$$ \sum_{i=1}^n \sum_{j=1}^n R_X(t_i - t_j) a_i \overline{a_j} \ge 0 $$
+$\sum_{i=1}^n \sum_{j=1}^n R_X(t_i - t_j) a_i \overline{a_j} \ge 0$
 
 ### 5. 周期性
 
 对于周期为 T 的平稳过程：
 
-$$ R_X(\tau) = R_X(\tau + T) $$
+$R_X(\tau) = R_X(\tau + T)$
 
 ## 联合平稳过程
 
@@ -63,7 +63,7 @@ $$ R_X(\tau) = R_X(\tau + T) $$
 
 ### 互相关函数
 
-$$ R_{XY}(\tau) = E[X(t)Y(t+\tau)] $$
+$ R_{XY}(\tau) = E[X(t)Y(t+\tau)] $
 
 衡量两个随机过程在不同时间点的相关程度。
 
@@ -71,11 +71,11 @@ $$ R_{XY}(\tau) = E[X(t)Y(t+\tau)] $$
 
 1. **互相关函数幅值界限**：
 
-$$ |R_{XY}(\tau)|^2 \le R_{XX}(0)R_{YY}(0) $$
+$ |R_{XY}(\tau)|^2 \le R_{XX}(0)R_{YY}(0) $
 
 2. **互相关函数对称性**：
 
-$$ R_{XY}(-\tau) = R_{YX}(\tau) $$
+$ R_{XY}(-\tau) = R_{YX}(\tau) $
 
 ## 与严平稳过程的关系
 
@@ -98,13 +98,13 @@ $$ R_{XY}(-\tau) = R_{YX}(\tau) $$
 
 ### 均值各态历经性
 
-$$ \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T X(t) dt = m_X $$
+$\lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T X(t) dt = m_X$
 
 时间平均等于统计平均。
 
 ### 相关函数各态历经性
 
-$$ \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T |R_X(\tau) - m_X^2| d\tau = 0 $$
+$\lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T |R_X(\tau) - m_X^2| d\tau = 0$
 
 ## 应用
 
@@ -115,8 +115,8 @@ $$ \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T |R_X(\tau) - m_X^2| d\tau = 0 $$
 
 ## 相关概念
 
-- [[00_factor/concept/Strict-Sense Stationary Process|严平稳过程]]
-- [[00_factor/concept/Autocorrelation Function|自相关函数]]
+- [[Strict-Sense Stationary Process|严平稳过程]]
+- [[Autocorrelation Function|自相关函数]]
 - [[Power Spectral Density|功率谱密度]]
 
 ## 重要性

@@ -36,7 +36,7 @@ tags:
 
 ## 相关链接
 
-- [[00_factor/system/Heteroscedasticity Diagnosis|异方差诊断]]
-- [[00_factor/system/Autocorrelation Diagnosis|自相关诊断]]
+- [[Heteroscedasticity Diagnosis|异方差诊断]]
+- [[Autocorrelation Diagnosis|自相关诊断]]
 - [[White Robust Standard Errors|White稳健标准误]]
 - [[Newey-West]]

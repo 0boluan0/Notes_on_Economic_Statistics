@@ -16,15 +16,15 @@ tags:
 
 ## 计算方法
 
-$$VIF_j = \frac{1}{1 - R_j^2}$$
+$VIF_j = \frac{1}{1 - R_j^2}$
 
-其中 $R_j^2$ 是将第j个解释变量对其他所有解释变量回归的决定系数。
+其中 R_j^2 是将第j个解释变量对其他所有解释变量回归的决定系数。
 
 ### VIF 与标准误的关系
 
-$$\text{Var}(\hat{\beta}_j) = \frac{\sigma^2}{\sum (x_{ij} - \bar{x}_j)^2} \times VIF_j$$
+$\text{Var}(\hat{\beta}_j) = \frac{\sigma^2}{\sum (x_{ij} - \bar{x}_j)^2} \times VIF_j$
 
-$$\text{SE}(\hat{\beta}_j) = \sqrt{\text{Var}(\hat{\beta}_j)}$$
+$\text{SE}(\hat{\beta}_j) = \sqrt{\text{Var}(\hat{\beta}_j)}$
 
 VIF越大，参数估计的标准误越大。
 
@@ -39,7 +39,7 @@ VIF越大，参数估计的标准误越大。
 
 ### 条件指数（Condition Index）
 
-$$CI = \sqrt{\lambda_{\max} / \lambda_{\min}}$$
+$CI = \sqrt{\lambda_{\max} / \lambda_{\min}}$
 
 其中 $\lambda_{\max}$ 和 $\lambda_{\min}$ 分别是X'X矩阵的最大和最小特征值。
 
@@ -59,7 +59,7 @@ $$CI = \sqrt{\lambda_{\max} / \lambda_{\min}}$$
 | VIF变化大 | 样本不稳定 | 增大样本、检查异常值 |
 
 ## 相关概念
-[[00_factor/concept/Multicollinearity|多重共线性]]
-[[00_factor/system/Condition Index|条件指数]]
+[[Multicollinearity|多重共线性]]
+[[Condition Index|条件指数]]
 [[t Test|t检验]]
-[[00_factor/concept/F-test|F检验]]
+[[00_factor/system/F-test|F检验]]

@@ -13,7 +13,7 @@ tags:
 
 ## 定义
 
-$$产权比率 = \frac{总负债}{股东权益}$$
+$产权比率 = \frac{总负债}{股东权益}$
 
 ## 计算方法
 
@@ -40,13 +40,13 @@ $$产权比率 = \frac{总负债}{股东权益}$$
 
 ## 相关比率
 
-- [[00_factor/concept/Debt-to-Asset Ratio|资产负债率]]：总负债/总资产
-- [[00_factor/concept/Equity Multiplier|权益乘数]]：总资产/股东权益
+- [[Debt-to-Asset Ratio|资产负债率]]：总负债/总资产
+- [[Equity Multiplier|权益乘数]]：总资产/股东权益
 
 ## 与权益乘数的关系
 
-$$权益乘数 = 1 + 产权比率$$
+$权益乘数 = 1 + 产权比率$
 
 ## 相关链接
-[[00_factor/concept/Debt-to-Asset Ratio|资产负债率]]
-[[00_factor/concept/Equity Multiplier|权益乘数]]
+[[Debt-to-Asset Ratio|资产负债率]]
+[[Equity Multiplier|权益乘数]]

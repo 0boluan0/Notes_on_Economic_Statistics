@@ -11,14 +11,14 @@ tags:
 # t Test
 
 ## 它是什么
-- 「t Test」是一个待补充定义的核心概念卡片。
+- 「t Test」是指基于t分布的均值或系数显著性检验。
 
 ## 最小可检索信息
-- 定义：待补充
-- 符号/公式：待补充
-- 最小例子：待补充
+- 定义：基于t分布的均值或系数显著性检验。
+- 符号/公式：$t=\frac{\bar x-\mu_0}{s/\sqrt{n}}。$
+- 最小例子：检验样本均值是否为0。
 
 ## 关联卡片
-- [[F-test]]
+- [[00_factor/concept/F-test|F-test]]
 - [[R-squared]]
-- [[Variance Inflation Factor]]
+- [[00_factor/concept/Variance Inflation Factor|Variance Inflation Factor]]

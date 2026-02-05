@@ -47,7 +47,7 @@ tags:
 
 ### 基本指标法（Basic Indicator Approach, BIA）
 
-$$OpCapital = \alpha \times BI$$
+$OpCapital = \alpha \times BI$
 
 其中：
 - α：巴塞尔委员会规定的比例（15%）
@@ -55,11 +55,11 @@ $$OpCapital = \alpha \times BI$$
 
 ### 标准化法（Standardized Approach, SA）
 
-$$OpCapital = \sum_{i=1}^{8} \beta_i \times BI_i$$
+$OpCapital = \sum_{i=1}^{8} \beta_i \times BI_i$
 
 其中：
 - β_i：各业务线的固定比例（12%, 15%, 18%等）
-- BI_i：各业务线的收入指标
+- $BI_i$：各业务线的收入指标
 
 ### 高级计量法（Advanced Measurement Approach, AMA）
 
@@ -116,4 +116,4 @@ $$OpCapital = \sum_{i=1}^{8} \beta_i \times BI_i$$
 - Basel III：强化操作风险，特别关注模型风险
 - 资本要求：OpCapital × 12个月平均值
 
-相关链接: [[00_factor/concept/Basel Accords|巴塞尔协议]], [[VaR]], [[EVT|极值理论]]
+相关链接: [[Basel Accords|巴塞尔协议]], [[VaR]], [[EVT|极值理论]]

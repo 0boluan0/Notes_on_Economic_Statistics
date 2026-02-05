@@ -20,13 +20,13 @@ tags:
 
 ### 一般形式
 
-对于$m$个内生变量$y_1, y_2, \dots, y_m$和$k$个外生变量$x_1, x_2, \dots, x_k$：
+对于 $m$ 个内生变量 $y_1, y_2, \ldots, y_m$ 和 $k$ 个外生变量 $x_1, x_2, \ldots, x_k$：
 
 $y_i = \pi_{i0} + \pi_{i1}x_1 + \pi_{i2}x_2 + \dots + \pi_{ik}x_k + \nu_i$
 
 其中：
 - $\pi_{ij}$是简约参数
-- $\nu_i$是简约误差项
+- $\nu_i$ 是简约误差项
 
 ## 例子：供求模型
 
@@ -122,11 +122,11 @@ $\beta = g(\pi)$
 
 ### 得到简约参数
 
-OLS估计得到$\hat{\pi}_{ij}$。
+OLS 估计得到 $\hat{\pi}_{ij}$。
 
 ### 恢复结构参数
 
-从$\hat{\pi}_{ij}$计算结构参数估计量$\hat{\beta}$和$\hat{\alpha}$。
+从 $\hat{\pi}_{ij}$ 计算结构参数估计量 $\hat{\beta}$ 和 $\hat{\alpha}$。
 
 ## 与结构方程的关系
 
@@ -191,12 +191,12 @@ OLS估计得到$\hat{\pi}_{ij}$。
 
 ### 简约误差项
 
-$\nu_i$是结构误差项的线性组合：
+\nu_i是结构误差项的线性组合：
 $\nu_i = \sum_j c_j \epsilon_j$
 
 ### 性质
 
-1. **期望为0**：$E(\nu_i) = 0$
+1. **期望为0**：E(\nu_i) = 0
 2. **可能相关**：不同简约式的误差项可能相关
 3. **方差**：是结构误差项方差-协方差矩阵的函数
 
@@ -214,4 +214,4 @@ $\nu_i = \sum_j c_j \epsilon_j$
 
 正确识别外生变量对估计至关重要。
 
-相关链接: [[00_factor/concept/Structural Equation|结构方程]], [[00_factor/concept/Simultaneous Equations Model|联立方程模型]], [[00_factor/concept/Parameter Identification|参数识别]]
+相关链接: [[Structural Equation|结构方程]], [[Simultaneous Equations Model|联立方程模型]], [[Parameter Identification|参数识别]]

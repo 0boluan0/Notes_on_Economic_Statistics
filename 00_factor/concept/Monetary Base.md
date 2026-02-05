@@ -14,7 +14,7 @@ tags:
 
 基础货币（Monetary Base）又称高能货币（High-Powered Money），是中央银行的负债。
 
-$$ MB = C + R $$
+$ MB = C + R $
 
 其中：
 - C：流通中的现金（Currency in Circulation）
@@ -71,7 +71,7 @@ $$ MB = C + R $$
 
 ### 1. 可控部分（非借入准备金）
 
-$$ MB_n = MB - BR $$
+$ MB_n = MB - BR $
 
 这部分美联储能够完全控制（公开市场操作）。
 
@@ -93,15 +93,15 @@ $$ MB_n = MB - BR $$
 
 ## 货币乘数关系
 
-$$ M = m \times MB $$
+$ M = m \times MB $
 
 货币供应量 M 等于货币乘数 m 乘以基础货币 MB。
 
 ## 相关概念
 
-- [[00_factor/concept/Money Multiplier|货币乘数]]
+- [[Money Multiplier|货币乘数]]
 - [[Required Reserves|准备金]]
-- [[00_factor/concept/Open Market Operations|公开市场操作]]
+- [[Open Market Operations|公开市场操作]]
 
 ## 重要性
 

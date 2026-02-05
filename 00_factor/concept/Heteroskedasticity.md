@@ -18,12 +18,12 @@ tags:
 $y_i = \beta_0 + \beta_1 x_{1i} + \epsilon_i$
 
 同方差假设要求：
-$Var(\epsilon_i) = \sigma^2$（对所有i）
+$Var(\epsilon_i) = \sigma^2（对所有i）$
 
 ### 异方差
 
 异方差存在时：
-$Var(\epsilon_i) = \sigma_i^2$（因i而异）
+$Var(\epsilon_i) = \sigma_i^2（因i而异）$
 
 即随机扰动项的方差随观测值变化。
 
@@ -178,7 +178,7 @@ $w_i = \frac{1}{\sigma_i^2}$
 #### 估计
 
 最小化加权残差平方和：
-$\min \sum w_i(y_i - X_i\beta)^2$
+$\min \sum $w_i$($y_i$ - $X_i$\beta)^2$
 
 ### 2. 可行加权最小二乘法（FGLS）
 
@@ -237,4 +237,4 @@ $\min \sum w_i(y_i - X_i\beta)^2$
 2. **权重设定**：错误权重可能比不处理更差
 3. **异方差形式**：理解异方差来源有助于选择方法
 
-相关链接: [[OLS]], [[00_factor/concept/Hausman Test|Hausman检验]], [[00_factor/concept/Multicollinearity|多重共线性]], [[00_factor/concept/Gauss-Markov theorem|高斯-马尔可夫定理]]
+相关链接: [[OLS]], [[Hausman Test|Hausman检验]], [[Multicollinearity|多重共线性]], [[Gauss-Markov theorem|高斯-马尔可夫定理]]

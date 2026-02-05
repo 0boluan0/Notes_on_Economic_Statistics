@@ -29,31 +29,31 @@ tags:
 
 借款人选择违约当且仅当：
 
-$$V_{continue} < V_{default}$$
+$V_{continue} < V_{default}$
 
 其中：
-- V_continue：继续偿债的价值
-- V_default：违约的价值
+- $V_continue$：继续偿债的价值
+- $V_default$：违约的价值
 
 ## Merton违约模型
 
 基于期权定价理论的违约模型。
 
-$$V_{assets} = D + E$$
+$V_{assets} = D + E$
 
 其中：
-- V_assets：公司资产价值
+- $V_assets$：公司资产价值
 - D：债务面值
 - E：股权价值
 
-违约条件：当V_assets < D时，公司违约。
+违约条件：当$V_assets$ < D时，公司违约。
 
 ### 违约概率
 
-$$P(\text{违约}) = P(V_T < D) = N\left(\frac{\ln(D/V_0) - (\mu - 0.5\sigma^2)T}{\sigma\sqrt{T}}\right)$$
+$P(\text{违约}) = P(V_T < D) = N\left(\frac{\ln(D/V_0) - (\mu - 0.5\sigma^2)T}{\sigma\sqrt{T}}\right)$
 
 其中：
-- V_0：当前资产价值
+- $V_0$：当前资产价值
 - μ：资产收益率期望
 - σ：资产收益率波动率
 - T：债务期限
@@ -62,7 +62,7 @@ $$P(\text{违约}) = P(V_T < D) = N\left(\frac{\ln(D/V_0) - (\mu - 0.5\sigma^2)T
 
 ### 1. 历史违约频率
 
-$$PD = \frac{\text{违约数}}{\text{总数}}$$
+$PD = \frac{\text{违约数}}{\text{总数}}$
 
 ### 2. 信用评级映射
 
@@ -80,17 +80,17 @@ $$PD = \frac{\text{违约数}}{\text{总数}}$$
 
 ### 3. 评分模型
 
-$$PD = f(\text{财务比率}, \text{经济指标}, \dots)$$
+$PD = f(\text{财务比率}, \text{经济指标}, \dots)$
 
 ## 违约损失率（LGD）
 
-$$LGD = 1 - R$$
+$LGD = 1 - R$
 
 其中R是回收率。
 
 ## 预期损失（EL）
 
-$$EL = PD \times LGD \times EAD$$
+$EL = PD \times LGD \times EAD$
 
 其中：
 - EAD：违约暴露
@@ -137,4 +137,4 @@ $$EL = PD \times LGD \times EAD$$
    - 跨行业分散
    - 跨地区分散
 
-相关链接: [[00_factor/concept/Credit Risk|信用风险]], [[Credit VaR|信用VaR]], [[Merton Model|Merton模型]], [[00_factor/concept/Basel Accords|巴塞尔协议]]
+相关链接: [[Credit Risk|信用风险]], [[Credit VaR|信用VaR]], [[Merton Model|Merton模型]], [[Basel Accords|巴塞尔协议]]

@@ -56,7 +56,7 @@ tags:
 ## 经济特性
 
 ### 1. 边际成本为零
-$$ MC = 0 $$
+$ MC = 0 $
 
 在未拥挤的范围内，增加一个消费者的边际成本为零。
 
@@ -90,7 +90,7 @@ $$ MC = 0 $$
 ## 定价策略
 
 ### 1. 平均成本定价
-$$ P = AC $$
+$ P = AC $
 
 能覆盖成本，但产生无谓损失。
 
@@ -124,8 +124,8 @@ $$ P = AC $$
 
 ## 相关概念
 
-- [[00_factor/concept/Public Goods|公共物品]]
-- [[00_factor/concept/Common Resources|公共资源]]
+- [[Public Goods|公共物品]]
+- [[Common Resources|公共资源]]
 - [[Natural Monopoly|自然垄断]]
 
 ## 政策考虑

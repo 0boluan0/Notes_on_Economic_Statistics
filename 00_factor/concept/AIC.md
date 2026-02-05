@@ -12,7 +12,7 @@ AIC（Akaike Information Criterion，赤池信息准则）是衡量统计模型�
 
 ## 定义
 
-$$AIC = -2 \ln(L_{max}) + 2k$$
+$AIC = -2 \ln(L_{max}) + 2k$
 
 其中：
 - $L_{max}$：模型的最大化似然值
@@ -37,7 +37,7 @@ $$AIC = -2 \ln(L_{max}) + 2k$$
 
 ## AIC的变体
 
-- **AICc**：小样本修正的AIC：$AICc = AIC + \frac{2k(k+1)}{n-k-1}$
+- **AICc**：$小样本修正的AIC：AICc = AIC + \frac{2k(k+1)}{n-k-1}$
 - **HQIC**（Hannan-Quinn Information Criterion）：另一种信息准则
 
 ## 与BIC的比较

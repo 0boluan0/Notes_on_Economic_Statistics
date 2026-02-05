@@ -4,7 +4,7 @@ aliases:
 tags:
 - concept
 ---
-- **定义：** $Rho$（罗）是交易产品价值对**利率**变化的敏感度，通常指对无风险利率$r$变化的偏导数：$\displaystyle Rho = \frac{\partial V}{\partial r}$。对于涉及多个货币的衍生品（如外汇期权），会存在两个$Rho$，即分别对本国利率和外国利率的敏感度。
+- **定义：$** Rho（罗）是交易产品价值对**利率**变化的敏感度，通常指对无风险利率r变化的偏导数：\displaystyle Rho = \frac{\partial V}{\partial r}。对于涉及多个货币的衍生品（如外汇期权），会存在两个Rho，即分别对本国利率和外国利率的敏感度。$
     
 - **意义：** $Rho$衡量利率波动对衍生品定价的影响。一般来说，看涨期权对无风险利率的$Rho$为正（利率上升使得折现的行权价价值降低，因而看涨期权价值上升），看跌期权$Rho$为负（利率上升使看跌期权价值下降）。然而，$Rho$的影响相对$\Delta$、$\Gamma$、$Vega$通常较小，因为短期内利率波动幅度通常不大。
     
@@ -13,4 +13,4 @@ tags:
 ## 相关链接
 
 - 其他希腊字母：[[Delta]], [[Gamma]], [[Vega]], [[Theta]]
-- 利率风险：[[00_factor/concept/duration|久期]], [[00_factor/concept/Curvature|曲率]]
+- 利率风险：[[duration|久期]], [[Curvature|曲率]]

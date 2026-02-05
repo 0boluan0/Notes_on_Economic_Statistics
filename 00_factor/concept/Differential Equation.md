@@ -20,10 +20,10 @@ tags:
 ### 按自变量个数
 
 1. **常微分方程**：只有一个自变量
-   $$y' = f(x, y)$$
+   $y' = f(x, y)$
 
 2. **偏微分方程**：有多个自变量
-   $$\frac{\partial u}{\partial x} + \frac{\partial u}{\partial y} = 0$$
+   $\frac{\partial u}{\partial x} + \frac{\partial u}{\partial y} = 0$
 
 ### 按阶数
 
@@ -36,7 +36,7 @@ tags:
 ### 按线性
 
 1. **线性微分方程**：未知函数及其导数都是一次的
-   $$a_n(x)y^{(n)} + a_{n-1}(x)y^{(n-1)} + \cdots + a_0(x)y = f(x)$$
+   $a_n(x)y^{(n)} + a_{n-1}(x)y^{(n-1)} + \cdots + a_0(x)y = f(x)$
 
 2. **非线性微分方程**：未知函数或其导数不是一次的
 
@@ -50,20 +50,20 @@ tags:
 
 ### 可分离变量方程
 
-$$y' = f(x)g(y)$$
+$y' = f(x)g(y)$
 
 解法：分离变量后积分
-$$\int \frac{dy}{g(y)} = \int f(x)dx$$
+$\int \frac{dy}{g(y)} = \int f(x)dx$
 
 ### 齐次方程
 
-$$y' = f(\frac{y}{x})$$
+$y' = f(\frac{y}{x})$
 
 解法：设 $u = y/x$，转化为可分离变量方程
 
 ### 一阶线性方程
 
-$$y' + P(x)y = Q(x)$$
+$y' + P(x)y = Q(x)$
 
 解法：积分因子法
 
@@ -71,17 +71,17 @@ $$y' + P(x)y = Q(x)$$
 
 ### 齐次方程
 
-$$y'' + ay' + by = 0$$
+$y'' + ay' + by = 0$
 
 特征方程：$r^2 + ar + b = 0$
 
-1. 两个不同实根 $r_1, r_2$：$y = C_1e^{r_1x} + C_2e^{r_2x}$
+1. 两个不同实根 $r_1$, $r_2$：$y = C_1e^{r_1x} + C_2e^{r_2x}$
 2. 一个重根 r：$y = (C_1 + C_2x)e^{rx}$
 3. 共轭复根 $α ± iβ$：$y = e^{αx}(C_1\cos βx + C_2\sin βx)$
 
 ### 非齐次方程
 
-$$y'' + ay' + by = f(x)$$
+$y'' + ay' + by = f(x)$
 
 解的结构：通解 = 齐次方程通解 + 特解
 
@@ -116,5 +116,5 @@ $$y'' + ay' + by = f(x)$$
 3. **定性分析**：不求解，分析解的性质
 
 ## 相关链接
-[[00_factor/concept/Derivative (2)|导数]]
-[[00_factor/concept/Integral|积分]]
+[[Derivative (2)|导数]]
+[[Integral|积分]]

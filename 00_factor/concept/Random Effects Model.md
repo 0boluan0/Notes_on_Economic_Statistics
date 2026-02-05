@@ -13,7 +13,7 @@ tags:
 
 ## 模型形式
 
-$$y_{it} = \beta_0 + x_{it}'\beta + \alpha_i + \varepsilon_{it}$$
+$y_{it} = \beta_0 + x_{it}'\beta + \alpha_i + \varepsilon_{it}$
 
 其中：
 - y_{it}：个体i在时期t的观测值
@@ -33,17 +33,17 @@ $$y_{it} = \beta_0 + x_{it}'\beta + \alpha_i + \varepsilon_{it}$$
 
 定义复合误差项：v_{it} = α_i + ε_{it}
 
-$$\text{Var}(v_{it}) = \text{Var}(\alpha_i) + \text{Var}(\varepsilon_{it}) = \sigma_{\alpha}^2 + \sigma_{\varepsilon}^2$$
+$\text{Var}(v_{it}) = \text{Var}(\alpha_i) + \text{Var}(\varepsilon_{it}) = \sigma_{\alpha}^2 + \sigma_{\varepsilon}^2$
 
 个体内自相关：
 
-$$\text{Cov}(v_{it}, v_{is}) = \sigma_{\alpha}^2, \quad t \neq s$$
+$\text{Cov}(v_{it}, v_{is}) = \sigma_{\alpha}^2, \quad t \neq s$
 
 ## 估计方法：GLS
 
 由于误差项存在异方差和自相关，使用广义最小二乘（GLS）：
 
-$$\hat{\beta}_{RE} = (X'\Omega^{-1} X)^{-1} X'\Omega^{-1} y$$
+$\hat{\beta}_{RE} = (X'\Omega^{-1} X)^{-1} X'\Omega^{-1} y$
 
 其中Ω是v的协方差矩阵。
 
@@ -63,7 +63,7 @@ $$\hat{\beta}_{RE} = (X'\Omega^{-1} X)^{-1} X'\Omega^{-1} y$$
 
 ### 估计σ_α²
 
-$$\hat{\sigma}_{\alpha}^2 = \frac{1}{n-k-1} \sum_{i=1}^{N} (T_i \cdot \bar{u}_i^2) - \hat{\sigma}_{\varepsilon}^2$$
+$\hat{\sigma}_{\alpha}^2 = \frac{1}{n-k-1} \sum_{i=1}^{N} (T_i \cdot \bar{u}_i^2) - \hat{\sigma}_{\varepsilon}^2$
 
 ## 性质
 
@@ -93,4 +93,4 @@ $$\hat{\sigma}_{\alpha}^2 = \frac{1}{n-k-1} \sum_{i=1}^{N} (T_i \cdot \bar{u}_i^
 | 有效性 | 假设正确时更有效 | 总是一致 |
 | 适用 | α_i与x不相关 | α_i与x相关 |
 
-相关链接: [[00_factor/concept/Fixed Effects Model|固定效应]], [[00_factor/concept/Hausman Test|豪斯曼检验]], [[00_factor/concept/Panel Data Model|面板数据模型]]
+相关链接: [[Fixed Effects Model|固定效应]], [[Hausman Test|豪斯曼检验]], [[Panel Data Model|面板数据模型]]

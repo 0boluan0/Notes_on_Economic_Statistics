@@ -19,7 +19,7 @@ Hausman检验用于检验变量是否内生，以及比较OLS和IV（或2SLS）�
 
 ## 检验统计量
 
-$$H = (\hat{\beta}_{IV} - \hat{\beta}_{OLS})' [\text{Var}(\hat{\beta}_{IV}) - \text{Var}(\hat{\beta}_{OLS})]^{-1} (\hat{\beta}_{IV} - \hat{\beta}_{OLS})$$
+$H = (\hat{\beta}_{IV} - \hat{\beta}_{OLS})' [\text{Var}(\hat{\beta}_{IV}) - \text{Var}(\hat{\beta}_{OLS})]^{-1} (\hat{\beta}_{IV} - \hat{\beta}_{OLS})$
 
 在H₀（变量外生）下，H ~ χ²(k)
 
@@ -64,4 +64,4 @@ Hausman检验也用于：
 2. 如果方差差矩阵非正定，检验可能无法进行
 3. 检验结果对工具变量选择敏感
 
-相关链接: [[2SLS]], [[00_factor/concept/Instrumental Variable|工具变量]], [[00_factor/concept/Endogeneity|内生性]], [[00_factor/concept/Panel Data Model|面板数据模型]]
+相关链接: [[2SLS]], [[Instrumental Variable|工具变量]], [[Endogeneity|内生性]], [[Panel Data Model|面板数据模型]]

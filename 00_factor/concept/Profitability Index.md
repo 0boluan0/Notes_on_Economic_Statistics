@@ -18,7 +18,7 @@ tags:
 
 ## 计算公式
 
-$$现值指数 = \frac{未来现金流入的现值}{未来现金流出的现值}$$
+$现值指数 = \frac{未来现金流入的现值}{未来现金流出的现值}$
 
 ## 决策原则
 
@@ -51,9 +51,9 @@ $$现值指数 = \frac{未来现金流入的现值}{未来现金流出的现值}
 
 ## 与其他方法的配合
 
-- [[00_factor/concept/Net Present Value|净现值法]]：提供绝对收益信息
-- [[00_factor/concept/Internal Rate of Return|内涵报酬率]]：提供收益率信息
+- [[Net Present Value|净现值法]]：提供绝对收益信息
+- [[Internal Rate of Return|内涵报酬率]]：提供收益率信息
 
 ## 相关链接
-[[00_factor/concept/Net Present Value|净现值法]]
-[[00_factor/concept/Internal Rate of Return|内涵报酬率]]
+[[Net Present Value|净现值法]]
+[[Internal Rate of Return|内涵报酬率]]

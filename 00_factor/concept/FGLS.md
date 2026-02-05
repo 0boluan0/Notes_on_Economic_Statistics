@@ -9,12 +9,12 @@ tags:
 # Feasible Generalized Least Squares (FGLS)
 
 ## 它是什么
-- 「Feasible Generalized Least Squares (FGLS)」是一个待补充定义的核心概念卡片。
+- 「FGLS」是指在误差协方差未知时，用估计的协方差进行GLS的估计方法。
 
 ## 最小可检索信息
-- 定义：待补充
-- 符号/公式：待补充
-- 最小例子：待补充
+- 定义：在误差协方差未知时，用估计的协方差进行GLS的估计方法。
+- 符号/公式：$\hat\beta_{FGLS}=(X'\hat\Omega^{-1}X)^{-1}X'\hat\Omega^{-1}y。$
+- 最小例子：先用OLS估计异方差结构，再做GLS。
 
 ## 关联卡片
 - [[Cochrane-Orcutt]]

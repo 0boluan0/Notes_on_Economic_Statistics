@@ -12,31 +12,31 @@ VMA（Vector Moving Average，向量移动平均）是VAR向量自回归模型�
 
 ## 模型形式
 
-$$\mathbf{y}_t = \sum_{j=0}^{\infty} \mathbf{\Psi}_j \mathbf{\varepsilon}_{tj}$$
+$\mathbf{y}_t = \sum_{j=0}^{\infty} \mathbf{\Psi}_j \mathbf{\varepsilon}_{tj}$
 
 其中：
 - $\mathbf{y}_t$：n×1维的变量向量
-- $\mathbf{\Psi}_j$：n×n维的脉冲响应矩阵，$\mathbf{\Psi}_0 = \mathbf{I}$
+- $\mathbf{\Psi}_j$：$n×n维的脉冲响应矩阵，\mathbf{\Psi}_0 = \mathbf{I}$
 - $\mathbf{\varepsilon}_t$：n×1维的误差项向量
 
 ## 从VAR到VMA的转换
 
 对于VAR(p)模型：
 
-$$\mathbf{y}_t = \mathbf{c} + \sum_{i=1}^{p} \mathbf{A}_i \mathbf{y}_{ti} + \mathbf{\varepsilon}_t$$
+$\mathbf{y}_t = \mathbf{c} + \sum_{i=1}^{p} \mathbf{A}_i \mathbf{y}_{ti} + \mathbf{\varepsilon}_t$
 
 通过迭代可以得到VMA(∞)表示：
 
-$$\mathbf{y}_t = \mu + \sum_{j=0}^{\infty} \mathbf{\Psi}_j \mathbf{\varepsilon}_{tj}$$
+$\mathbf{y}_t = \mu + \sum_{j=0}^{\infty} \mathbf{\Psi}_j \mathbf{\varepsilon}_{tj}$
 
 ## 脉冲响应矩阵
 
 脉冲响应矩阵$\mathbf{\Psi}_j$的计算：
 
-$$\mathbf{\Psi}_0 = \mathbf{I}$$
-$$\mathbf{\Psi}_1 = \mathbf{A}_1$$
-$$\mathbf{\Psi}_2 = \mathbf{A}_1\mathbf{\Psi}_1 + \mathbf{A}_2$$
-$$\mathbf{\Psi}_j = \sum_{i=1}^{p} \mathbf{A}_i \mathbf{\Psi}_{ji}$$
+$\mathbf{\Psi}_0 = \mathbf{I}$
+$\mathbf{\Psi}_1 = \mathbf{A}_1$
+$\mathbf{\Psi}_2 = \mathbf{A}_1\mathbf{\Psi}_1 + \mathbf{A}_2$
+$\mathbf{\Psi}_j = \sum_{i=1}^{p} \mathbf{A}_i \mathbf{\Psi}_{ji}$
 
 ## 性质
 
@@ -46,8 +46,8 @@ $$\mathbf{\Psi}_j = \sum_{i=1}^{p} \mathbf{A}_i \mathbf{\Psi}_{ji}$$
 
 ## 应用
 
-1. **[[00_factor/concept/Impulse Response Function|脉冲响应函数]]**：通过$\mathbf{\Psi}_j$绘制脉冲响应图
+1. **[[Impulse Response Function|脉冲响应函数]]**：通过$\mathbf{\Psi}_j$绘制脉冲响应图
 2. **冲击分析**：分析一个冲击对系统中所有变量的动态影响
 3. **方差分解**：计算各变量冲击对预测误差方差的贡献
 
-相关链接: [[VAR Model|VAR]], [[00_factor/concept/Impulse Response Function|脉冲响应函数]], [[00_factor/concept/Variance Decomposition|方差分解]]
+相关链接: [[VAR Model|VAR]], [[Impulse Response Function|脉冲响应函数]], [[Variance Decomposition|方差分解]]

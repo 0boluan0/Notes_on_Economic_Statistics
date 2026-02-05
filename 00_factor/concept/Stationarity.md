@@ -11,17 +11,17 @@ tags:
 
 ## 协方差平稳（Covariance Stationarity）
 
-时间序列{y_t}是协方差平稳的，当且仅当满足：
+时间序列{$y_t$}是协方差平稳的，当且仅当满足：
 
-1. **常数均值**：E(y_t) = μ，对所有t
-2. **常数方差**：Var(y_t) = σ²，对所有t
-3. **协方差仅依赖于时间间隔**：Cov(y_t, y_{t+k}) = γ_k，对所有t和k
+1. **常数均值**：$E(y_t) = μ，对所有t$
+2. **常数方差**：$Var(y_t) = σ²，对所有t$
+3. **协方差仅依赖于时间间隔**：$Cov(y_t, y_{t+k}) = γ_k，对所有t和k$
 
 其中γ_k是滞后k阶的自协方差函数。
 
 ## 严平稳（Strict Stationarity）
 
-时间序列{y_t}是严平稳的，当且仅当其联合分布在时间平移下保持不变：
+时间序列{$y_t$}是严平稳的，当且仅当其联合分布在时间平移下保持不变：
 
 F(y_{t1}, y_{t2}, ..., y_{tn}) = F(y_{t1+k}, y_{t2+k}, ..., y_{tn+k})
 
@@ -32,26 +32,26 @@ F(y_{t1}, y_{t2}, ..., y_{tn}) = F(y_{t1+k}, y_{t2+k}, ..., y_{tn+k})
 
 ## 非平稳序列示例
 
-1. **随机游走（Random Walk）**：y_t = y_{t-1} + ε_t
-2. **带漂移的随机游走**：y_t = μ + y_{t-1} + ε_t
-3. **趋势性序列**：y_t = α + βt + ε_t
+1. **随机游走（Random Walk）**：$y_t = y_{t-1} + ε_t$
+2. **带漂移的随机游走**：$y_t = μ + y_{t-1} + ε_t$
+3. **趋势性序列**：$y_t = α + βt + ε_t$
 4. **随机趋势（单位根过程）**：I(1)过程
 
 ## 平稳化方法
 
 1. **差分**：对非平稳序列进行差分
-   - 一阶差分：Δy_t = y_t - y_{t-1}
-   - d阶差分：Δ^d y_t
+   - 一阶差分：$Δy_t = y_t - y_{t-1}$
+   - d阶差分：Δ^d $y_t$
 
 2. **去趋势**：移除确定性趋势
-   - 线性去趋势：y_t' = y_t - (α + βt)
+   - 线性去趋势：$y_t' = y_t - (α + βt)$
 
 3. **对数变换**：对具有指数增长趋势的序列取对数
 
 ## 检验方法
 
 1. **图示法**：观察时间序列图、ACF图
-2. **[[00_factor/concept/Unit Root Test|单位根检验]]**：DF检验、ADF检验、PP检验
+2. **[[Unit Root Test|单位根检验]]**：DF检验、ADF检验、PP检验
 3. **KPSS检验**：原假设为序列平稳
 
 ## 应用
@@ -60,8 +60,8 @@ F(y_{t1}, y_{t2}, ..., y_{tn}) = F(y_{t1+k}, y_{t2+k}, ..., y_{tn+k})
 - 协整分析需要序列具有相同阶数的非平稳性
 - 预测模型通常要求序列平稳
 
-相关链接: [[00_factor/concept/Unit Root Test|单位根检验]], [[00_factor/concept/Augmented Dickey-Fuller Test|ADF检验]], [[00_factor/concept/Cointegration|协整]], [[00_factor/concept/Random Walk|随机游走]], [[ARMA]]
+相关链接: [[Unit Root Test|单位根检验]], [[Augmented Dickey-Fuller Test|ADF检验]], [[Cointegration|协整]], [[Random Walk|随机游走]], [[ARMA]]
 
-## source_notes
+## $source_notes$
 
 - [[03_平稳时间序列模型#2. 平稳性]]（弱/严平稳）

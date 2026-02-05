@@ -31,7 +31,7 @@ tags:
 [[00_factor/concept/Harrod-Domar Model|哈罗德-多玛模型]]
 
 ### 索洛模型
-[[00_factor/framework/Solow Model|索罗模型]]
+[[00_factor/concept/Solow Model|索罗模型]]
 [[00_factor/concept/Solow Model|索罗增长模型]]
 [[Solow-Swan Model|索洛-斯旺模型]]
 
@@ -53,6 +53,6 @@ tags:
 
 ## 课程笔记
 
-- [[00_factor/framework/Growth Theory|04_经济增长理论]]
-- [[00_factor/framework/Solow Model|05_索洛模型]]
-- [[00_factor/framework/Dual Economy Model|01_二元经济模型]]
+- [[Growth Theory|04_经济增长理论]]
+- [[00_factor/concept/Solow Model|05_索洛模型]]
+- [[Dual Economy Model|01_二元经济模型]]

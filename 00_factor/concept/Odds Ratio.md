@@ -34,7 +34,7 @@ $\text{Odds} = \frac{P}{1-P}$
 Logit模型：
 $P(y_i = 1|x_i) = \frac{1}{1 + e^{-Z_i}}$
 
-其中$Z_i = \beta_0 + \beta_1 x_{1i} + \dots + \beta_k x_{ki}$
+$其中Z_i = \beta_0 + \beta_1 x_{1i} + \dots + \beta_k x_{ki}$
 
 ### 线性化形式
 
@@ -49,23 +49,23 @@ $\frac{P}{1-P} = e^{Z_i} = e^{\beta_0 + \beta_1 x_{1i} + \dots + \beta_k x_{ki}}
 
 ### 机会比率与系数的关系
 
-对于第$j$个解释变量，机会比率为：
+对于第j个解释变量，机会比率为：
 $OR_j = e^{\beta_j}$
 
 即：系数的指数值即为机会比率。
 
 ### 解释
 
-1. **若$OR_j > 1$**
-   - $\beta_j > 0$
+1. **若$OR_j$ > 1**
+   - \beta_j > 0
    - $x_j$增加增加事件发生的概率
 
-2. **若$OR_j = 1$**
+2. $**若OR_j = 1**$
    - $\beta_j = 0$
    - $x_j$不影响事件发生的概率
 
-3. **若$OR_j < 1$**
-   - $\beta_j < 0$
+3. **若$OR_j$ < 1**
+   - \beta_j < 0
    - $x_j$增加减少事件发生的概率
 
 ### 具体解释
@@ -75,9 +75,9 @@ $OR_j$表示：
 
 #### 例子
 
-若$log(y) = \beta_0 + \beta_1 \cdot \text{educ} + \epsilon$
+$若log(y) = \beta_0 + \beta_1 \cdot \text{educ} + \epsilon$
 
-估计得$\beta_1 = 0.05$，则：
+估计得 $\beta_1 = 0.05$，则：
 $OR = e^{0.05} \approx 1.05$
 
 解释：受教育年限每增加一年，就业机会是原来的1.05倍（增加5%）。
@@ -93,7 +93,7 @@ $\frac{\partial P}{\partial x_j} = \frac{e^{Z_i}}{(1 + e^{Z_i})^2} \cdot \beta_j
 在解释变量均值处计算边际效应：
 $\frac{\partial P}{\partial x_j}\bigg|_{\bar{x}} = \frac{e^{\bar{Z}}}{(1 + e^{\bar{Z}})^2} \cdot \beta_j$
 
-其中$\bar{Z}$是在$\bar{x}$处的$Z$值。
+其中 $\bar{Z}$ 是在 $\bar{x}$ 处的 $Z$ 值。
 
 ### 与机会比率的关系
 
@@ -104,16 +104,16 @@ $\frac{\partial P}{\partial x_j}\bigg|_{\bar{x}} = \frac{e^{\bar{Z}}}{(1 + e^{\b
 
 ### 二元解释变量
 
-若$x_j$是二元变量（0或1）：
-- $x_j = 0$时：机会为$\frac{P_0}{1-P_0} = e^{\beta_0 + \sum_{l \neq j}\beta_l x_l}$
-- $x_j = 1$时：机会为$\frac{P_1}{1-P_1} = e^{\beta_0 + \beta_j + \sum_{l \neq j}\beta_l x_l}$
+若 $x_j$ 是二元变量（0 或 1）：
+- $x_j = 0$ 时：机会为 $\frac{P_0}{1-P_0} = e^{\beta_0 + \sum_{l \neq j}\beta_l x_l}$
+- $x_j = 1$ 时：机会为 $\frac{P_1}{1-P_1} = e^{\beta_0 + \beta_j + \sum_{l \neq j}\beta_l x_l}$
 
 机会比率：
 $OR_j = \frac{P_1/(1-P_1)}{P_0/(1-P_0)} = e^{\beta_j}$
 
 ### 解释
 
-$x_j = 1$组的机会是$x_j = 0$组的$e^{\beta_j}$倍。
+$x_j = 1$ 组的机会是 $x_j = 0$ 组的 $e^{\beta_j}$ 倍。
 
 ## 优势
 
@@ -153,7 +153,7 @@ $x_j = 1$组的机会是$x_j = 0$组的$e^{\beta_j}$倍。
 
 ### 机会比率的置信区间
 
-$\beta_j$的置信区间：$[\hat{\beta}_j - z_{\alpha/2}\cdot SE, \hat{\beta}_j + z_{\alpha/2}\cdot SE]$
+$\beta_j$ 的置信区间：$[\hat{\beta}_j - z_{\alpha/2}\cdot SE, \hat{\beta}_j + z_{\alpha/2}\cdot SE]$
 
 机会比率的置信区间：
 $[e^{\hat{\beta}_j - z_{\alpha/2}\cdot SE}, e^{\hat{\beta}_j + z_{\alpha/2}\cdot SE}]$
@@ -180,4 +180,4 @@ $[e^{\hat{\beta}_j - z_{\alpha/2}\cdot SE}, e^{\hat{\beta}_j + z_{\alpha/2}\cdot
 - 购买决策因素
 - 品牌选择分析
 
-相关链接: [[00_factor/concept/Logit Model|logit模型]], [[Dummy Variable|虚拟变量]]
+相关链接: [[Logit Model|logit模型]], [[Dummy Variable|虚拟变量]]

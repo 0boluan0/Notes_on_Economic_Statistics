@@ -38,7 +38,7 @@ tags:
 
 储蓄函数：$S = sY$
 
-其中$s$是储蓄率，外生给定。
+其中 $s$ 是储蓄率，外生给定。
 
 ## 生产函数
 
@@ -50,8 +50,10 @@ $Y = F(N, K)$
 
 ### 人均形式
 
-设$\lambda = \frac{1}{N}$，则：
-$\frac{Y}{N} = F(1, \frac{K}{N})$
+设 $\lambda = \frac{1}{N}$，则：
+$$
+\frac{Y}{N} = F(1, \frac{K}{N})
+$$
 
 定义人均变量：
 - 人均产量：$y = \frac{Y}{N}$
@@ -63,16 +65,21 @@ $\frac{Y}{N} = F(1, \frac{K}{N})$
 
 ### 资本变动
 
-$\dot{K} = I - \delta K = sY - \delta K$
+$$
+\dot{K} = I - \delta K = sY - \delta K
+$$
 
 ### 人均资本变动
 
 $k = \frac{K}{N}$，对时间求导：
-$\dot{k} = \frac{\dot{K}}{N} - nk$
+$$
+\dot{k} = \frac{\dot{K}}{N} - nk
+$$
 
-代入$\frac{\dot{K}}{N} = sy - \delta k$，得：
-
-$$\dot{k} = sf(k) - (n + \delta)k$$
+代入 $\frac{\dot{K}}{N} = sy - \delta k$，得：
+$$
+\dot{k} = sf(k) - (n + \delta)k
+$$
 
 这是索罗模型的核心方程。
 
@@ -93,17 +100,17 @@ $$\dot{k} = sf(k) - (n + \delta)k$$
 
 ### 稳态值
 
-在稳态点$k^*$：
-- 人均资本$k^*$保持不变
-- 人均产出$y^* = f(k^*)$保持不变
-- 总产出$Y$以速率$n$增长
-- 总资本$K$以速率$n$增长
+在稳态点 $k^*$：
+- 人均资本 $k^*$ 保持不变
+- 人均产出 $y^* = f(k^*)$ 保持不变
+- 总产出 $Y$ 以速率 $n$ 增长
+- 总资本 $K$ 以速率 $n$ 增长
 
 ### 收敛性
 
-- 若$k < k^*$，则$sf(k) > (n + \delta)k$，资本积累
-- 若$k > k^*$，则$sf(k) < (n + \delta)k$，资本减少
-- 经济收敛到稳态$k^*$
+- 若 $k < k^*$，则 $sf(k) > (n + \delta)k$，资本积累
+- 若 $k > k^*$，则 $sf(k) < (n + \delta)k$，资本减少
+- 经济收敛到稳态k^*
 
 ## 比较静态分析
 
@@ -112,20 +119,20 @@ $$\dot{k} = sf(k) - (n + \delta)k$$
 
 
 1. **对稳态水平的影响**
-   - 储蓄率$s$上升，投资曲线$sf(k)$上移
-   - 新稳态$k'$更高
+   - 储蓄率 $s$ 上升，投资曲线 $sf(k)$ 上移
+   - 新稳态 $k'$ 更高
    - 人均产出提高
 
 2. **对增长率的影响**
    - 短期：增长率上升
-   - 长期：增长率回到$n$
+   - 长期：增长率回到 $n$
    - 储蓄率提高只影响水平，不影响长期增长率
 
 ### 人口增长率提高
 
 1. **对稳态水平的影响**
-   - 人口增长率$n$上升，盈亏平衡投资线$(n + \delta)k$变陡
-   - 新稳态$k'$更低
+   - 人口增长率 $n$ 上升，盈亏平衡投资线 $(n + \delta)k$ 变陡
+   - 新稳态 $k'$ 更低
    - 人均产出下降
 
 2. **经济含义**
@@ -138,12 +145,12 @@ $$\dot{k} = sf(k) - (n + \delta)k$$
 
 **无技术进步时**：
 - 人均产出和人均资本长期不变
-- 只有总产出以人口增长率$n$增长
+- 只有总产出以人口增长率 $n$ 增长
 
 **有技术进步时**：
-- 引入技术进步率$g$
-- 人均产出长期以速率$g$增长
-- 总产出以速率$n + g$增长
+- 引入技术进步率 $g$
+- 人均产出长期以速率 $g$ 增长
+- 总产出以速率 $n + g$ 增长
 
 ### 增长源泉
 
@@ -159,24 +166,30 @@ $$\dot{k} = sf(k) - (n + \delta)k$$
 
 ### 生产函数
 
-$Y = K^\alpha N^{1-\alpha}$
+$$
+Y = K^\alpha N^{1-\alpha}
+$$
 
 ### 人均形式
 
-$y = k^\alpha$
+$$
+y = k^\alpha
+$$
 
 ### 稳态
 
-由$s k^\alpha = (n + \delta)k$，得：
-
-$k^* = [\frac{s}{n + \delta}]^{\frac{1}{1-\alpha}}$
-
-$y^* = [\frac{s}{n + \delta}]^{\frac{\alpha}{1-\alpha}}$
+由 $s k^\alpha = (n + \delta)k$，得：
+$$
+k^* = \left[\frac{s}{n + \delta}\right]^{\frac{1}{1-\alpha}}
+$$
+$$
+y^* = \left[\frac{s}{n + \delta}\right]^{\frac{\alpha}{1-\alpha}}
+$$
 
 ### 含义
 
-- 储蓄率$s$越高，稳态人均资本和产出越高
-- 人口增长率$n$和折旧率$\delta$越高，稳态水平越低
+- 储蓄率 $s$ 越高，稳态人均资本和产出越高
+- 人口增长率 $n$ 和折旧率 $\delta$ 越高，稳态水平越低
 
 ## 与哈罗德-多玛模型比较
 
@@ -213,4 +226,4 @@ $y^* = [\frac{s}{n + \delta}]^{\frac{\alpha}{1-\alpha}}$
 3. **增长收敛**
    - 预测落后国家赶超发达国家
 
-相关链接: [[00_factor/concept/Harrod-Domar Model|哈罗德-多玛模型]], [[00_factor/concept/Economic Growth|经济增长]], [[00_factor/concept/Kuznets Modern Economic Growth Theory|库兹涅茨现代经济增长理论]]
+相关链接: [[00_factor/concept/Harrod-Domar Model|哈罗德-多玛模型]], [[Economic Growth|经济增长]], [[00_factor/concept/Kuznets Modern Economic Growth Theory|库兹涅茨现代经济增长理论]]

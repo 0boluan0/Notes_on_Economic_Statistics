@@ -13,17 +13,17 @@ DVA（Debt Valuation Adjustment，债务估值调整）是指当银行自身违�
 
 DVA是银行自身违约风险的价值调整，反映了银行违约时对衍生品交易对手的潜在收益。
 
-$$DVA = E[\text{银行违约时的收益}]$$
+$DVA = E[\text{银行违约时的收益}]$
 
 ## 计算公式
 
-$$DVA = \sum_{i=1}^{n} PD_{bank}(t_{i-1}, t_i) \cdot EAD_{counterparty}(t_i) \cdot (1-R_{bank}) \cdot DF(t_i)$$
+$DVA = \sum_{i=1}^{n} PD_{bank}(t_{i-1}, t_i) \cdot EAD_{counterparty}(t_i) \cdot (1-R_{bank}) \cdot DF(t_i)$
 
 其中：
-- PD_bank(t_{i-1}, t_i)：银行在时间区间[t_{i-1}, t_i]的违约概率
-- EAD_counterparty(t_i)：从交易对手角度看，t_i时刻的违约暴露
-- R_bank：银行的回收率
-- DF(t_i)：t_i时刻的折现因子
+- $PD_bank$(t_{i-1}, $t_i$)：银行在时间区间[t_{i-1}, $t_i$]的违约概率
+- $EAD_counterparty$($t_i$)：从交易对手角度看，$t_i$时刻的违约暴露
+- $R_bank$：银行的回收率
+- DF($t_i$)：$t_i$时刻的折现因子
 
 ## 与CVA的关系
 
@@ -36,7 +36,7 @@ $$DVA = \sum_{i=1}^{n} PD_{bank}(t_{i-1}, t_i) \cdot EAD_{counterparty}(t_i) \cd
 
 ## 净信用调整（FCA）
 
-$$FCA = CVA + DVA$$
+$FCA = CVA + DVA$
 
 ## DVA风险
 
@@ -63,4 +63,4 @@ DVA也是一种风险，因为：
 2. **风险管理**：管理银行自身信用风险对衍生品的影响
 3. **资本管理**：考虑净信用调整的资本配置
 
-相关链接: [[CVA]], [[00_factor/concept/Credit Risk|信用风险]], [[00_factor/concept/Default Risk|违约风险]], [[VaR]]
+相关链接: [[CVA]], [[Credit Risk|信用风险]], [[Default Risk|违约风险]], [[VaR]]

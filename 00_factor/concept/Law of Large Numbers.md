@@ -16,24 +16,28 @@ tags:
 **弱大数定律（WLLN）**：
 
 设 $\{X_n\}_{n=1}^{\infty}$ 为独立同分布（i.i.d.）随机变量序列，满足：
-$$E[|X_n|] < \infty \quad \text{（期望存在有限）}$$
+$$
+E[|X_n|] < \infty \quad \text{（期望存在有限）}
+$$
 
 记 $\mu = E[X_n]$ 为共同期望。定义样本均值：
-$$\bar{X}_n = \frac{1}{n}\sum_{i=1}^n X_i$$
+$$
+\bar{X}_n = \frac{1}{n}\sum_{i=1}^n X_i
+$$
 
 则样本均值**依概率收敛**到真实期望：
-$$\bar{X}_n \xrightarrow{p} \mu$$
+$\bar{X}_n \xrightarrow{p} \mu$
 
 即对于任意 $\varepsilon > 0$：
-$$\lim_{n \to \infty} P\{|\bar{X}_n - \mu| < \varepsilon\} = 1$$
+$\lim_{n \to \infty} P\{|\bar{X}_n - \mu| < \varepsilon\} = 1$
 
 **强大数定律（SLLN）**（Kolmogorov）：
 
 若进一步满足 $E[X_n^2] < \infty$（方差有限），则样本均值**几乎处处收敛**到真实期望：
-$$\bar{X}_n \xrightarrow{a.s.} \mu$$
+$\bar{X}_n \xrightarrow{a.s.} \mu$
 
 即：
-$$P\left(\lim_{n \to \infty} \bar{X}_n = \mu\right) = 1$$
+$P\left(\lim_{n \to \infty} \bar{X}_n = \mu\right) = 1$
 
 ## 证明思路
 
@@ -44,7 +48,7 @@ $$P\left(\lim_{n \to \infty} \bar{X}_n = \mu\right) = 1$$
 ### 步骤 1：写出切比雪夫不等式
 
 对于随机变量 $Z$ 和任意 $\varepsilon > 0$：
-$$P\{|Z - E[Z]| \geq \varepsilon\} \leq \frac{\text{Var}(Z)}{\varepsilon^2}$$
+$P\{|Z - E[Z]| \geq \varepsilon\} \leq \frac{\text{Var}(Z)}{\varepsilon^2}$
 
 ### 步骤 2：计算样本均值的期望和方差
 
@@ -80,33 +84,39 @@ $$
 $$
 
 因此：
-$$\lim_{n \to \infty} P\{|\bar{X}_n - \mu| < \varepsilon\} = 1$$
+$\lim_{n \to \infty} P\{|\bar{X}_n - \mu| < \varepsilon\} = 1$
 
 这证明了弱大数定律：
-$$\bar{X}_n \xrightarrow{p} \mu$$
+$\bar{X}_n \xrightarrow{p} \mu$
 
 ### 步骤 5：依概率收敛的定义
 
 $\bar{X}_n \xrightarrow{p} \mu$ 意味着：
-$$\forall \varepsilon > 0, \quad \lim_{n \to \infty} P\{|\bar{X}_n - \mu| > \varepsilon\} = 0$$
+$\forall \varepsilon > 0, \quad \lim_{n \to \infty} P\{|\bar{X}_n - \mu| > \varepsilon\} = 0$
 
 即随着样本量增大，样本均值与真实期望的距离超过任意小的正数的概率趋近于 0。
 
 ## 推广：矩阵形式的大数定律
 
 设 $\{X_i\}_{i=1}^n$ 为独立同分布 $k \times 1$ 随机向量序列，满足：
-$$E[X_i] = \mu, \quad \text{Var}(X_i) = \Sigma \text{（有限）}$$
-
+$$
+E[X_i] = \mu, \quad \text{Var}(X_i) = \Sigma \text{（有限）}
+$$
 则：
-$$\frac{1}{n}\sum_{i=1}^n X_i \xrightarrow{p} \mu$$
-
+$$
+\frac{1}{n}\sum_{i=1}^n X_i \xrightarrow{p} \mu
+$$
 更一般地，对于标量函数 $g(X_i)$：
-$$\frac{1}{n}\sum_{i=1}^n g(X_i) \xrightarrow{p} E[g(X_i)]$$
+$$
+\frac{1}{n}\sum_{i=1}^n g(X_i) \xrightarrow{p} E[g(X_i)]
+$$
 
 **遍历性假设**：
 
 对于平稳过程 $\{X_t\}$，大数定律要求**遍历性**（ergodicity）：
-$$\frac{1}{T}\sum_{t=1}^T g(X_t) \xrightarrow{p} E[g(X_t)]$$
+$$
+\frac{1}{T}\sum_{t=1}^T g(X_t) \xrightarrow{p} E[g(X_t)]
+$$
 
 遍历性保证了时间平均收敛到空间平均。
 
@@ -140,5 +150,5 @@ $$\frac{1}{T}\sum_{t=1}^T g(X_t) \xrightarrow{p} E[g(X_t)]$$
 3. **非平稳**：参数随时间变化
 
 ## 相关概念
-[[00_factor/concept/Central Limit Theorem|中心极限定理]]
+[[Central Limit Theorem|中心极限定理]]
 [[Convergence in Probability|依概率收敛]]

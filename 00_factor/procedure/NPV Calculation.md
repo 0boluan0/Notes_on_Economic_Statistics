@@ -26,7 +26,7 @@ tags:
 
 列出项目所有相关现金流量：
 - 初始投资（$t=0$）：通常为负值
-- 营运期现金流入/流出（$t=1,\dots,n$）：收入-成本-税收
+- 营运期现金流入/流出（$t=1,\dots,n$）：$收入-成本-税收$
 
 **注意点**：只考虑增量现金流量（因项目决策而产生的变化）。
 
@@ -42,7 +42,7 @@ tags:
 ### 步骤 3：处理不同期数
 
 - 现金流量：直接使用 $r$
-- 名义利率：实际折现率 $r_{\text{实际}} = (1+r)^m - 1$
+- 名义利率：$实际折现率 r_{\text{实际}} = (1+r)^m - 1$
 
 - 永续年金：简化公式，见步骤5
 
@@ -50,16 +50,16 @@ tags:
 
 ### 步骤 4：计算每期现值
 
-$$ PV_t = \frac{CF_t}{(1+r)^t} $$
+$ PV_t = \frac{CF_t}{(1+r)^t} $
 
-**注意点**：$t=0$ 时现值即为 $CF_0$（无需折现）。
+**注意点**：$t=0 时现值即为 CF_0（无需折现）。$
 
 ### 步骤 5：计算净现值
 
-$$ NPV = \sum_{t=0}^n \frac{CF_t}{(1+r)^t} = \sum_{t=0}^n PV_t $$
+$ NPV = \sum_{t=0}^n \frac{CF_t}{(1+r)^t} = \sum_{t=0}^n PV_t $
 
 **永续年金的简化公式**：
-$$ NPV = \sum_{t=1}^{\infty} \frac{CF}{(1+r)^t} + CF_0 = \frac{CF}{r} + CF_0 $$
+$ NPV = \sum_{t=1}^{\infty} \frac{CF}{(1+r)^t} + CF_0 = \frac{CF}{r} + CF_0 $
 
 **注意点**：$CF$ 为每期固定现金流量，$r > 0$ 。
 
@@ -73,7 +73,7 @@ $$ NPV = \sum_{t=1}^{\infty} \frac{CF}{(1+r)^t} + CF_0 = \frac{CF}{r} + CF_0 $$
 
 ### 步骤 7：计算盈利能力指数（可选）
 
-$$ PI = \frac{PV_{\text{流入}}}{|PV_{\text{流出}}|} = 1 + \frac{NPV}{|CF_0|} $$
+$ PI = \frac{PV_{\text{流入}}}{|PV_{\text{流出}}|} = 1 + \frac{NPV}{|CF_0|} $
 
 其中 $PV_{\text{流入}}$ 为所有正现值和，$PV_{\text{流出}}$ 为所有负现值和的绝对值。
 
@@ -82,18 +82,18 @@ $$ PI = \frac{PV_{\text{流入}}}{|PV_{\text{流出}}|} = 1 + \frac{NPV}{|CF_0|}
 ## 关键公式
 
 **净现值一般公式**：
-$$ NPV = \sum_{t=0}^n \frac{CF_t}{(1+r)^t} $$
+$ NPV = \sum_{t=0}^n \frac{CF_t}{(1+r)^t} $
 
 **永续年金NPV**：
-$$ NPV = \frac{A}{r} + I_0 $$
+$ NPV = \frac{A}{r} + I_0 $
 
 其中 $A$ 为每期年金，$I_0$ 为初始投资。
 
 **折现回收期**：
-找到最小的 $T$ 使得 $\sum_{t=0}^T \frac{CF_t}{(1+r)^t} \ge 0$。
+$找到最小的 T 使得 \sum_{t=0}^T \frac{CF_t}{(1+r)^t} \ge 0。$
 
 **等额年成本**：
-$$ EAC = \frac{NPV}{\frac{1 - (1+r)^{-n}}{r}} $$
+$ EAC = \frac{NPV}{\frac{1 - (1+r)^{-n}}{r}} $
 
 ## 常见问题
 
@@ -103,6 +103,6 @@ $$ EAC = \frac{NPV}{\frac{1 - (1+r)^{-n}}{r}} $$
 4. **现金流量时点**：现金流发生时间假设不准确。
 
 ## 相关概念
-[[00_factor/concept/Internal Rate of Return|内部收益率]]
-[[00_factor/concept/Profitability Index|现值指数]]
+[[Internal Rate of Return|内部收益率]]
+[[Profitability Index|现值指数]]
 [[Discounted Payback Period|折现回收期]]

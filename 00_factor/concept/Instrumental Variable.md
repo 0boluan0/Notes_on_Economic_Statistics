@@ -31,7 +31,7 @@ tags:
 
 用工具变量Z对内生变量X回归：
 
-$$X = \gamma_0 + \gamma_1 Z + v$$
+$X = \gamma_0 + \gamma_1 Z + v$
 
 得到预测值：$\hat{X} = \hat{\gamma}_0 + \hat{\gamma}_1 Z$
 
@@ -39,7 +39,7 @@ $$X = \gamma_0 + \gamma_1 Z + v$$
 
 用预测值$\hat{X}$对y回归：
 
-$$y = \beta_0 + \beta_1 \hat{X} + \varepsilon$$
+$y = \beta_0 + \beta_1 \hat{X} + \varepsilon$
 
 2SLS估计量：$\hat{\beta}_{2SLS} = \frac{\text{Cov}(\hat{X}, y)}{\text{Var}(\hat{X})}$
 
@@ -47,7 +47,7 @@ $$y = \beta_0 + \beta_1 \hat{X} + \varepsilon$$
 
 对于简单回归y = β_0 + β_1X + ε：
 
-$$\hat{\beta}_{IV} = \frac{\text{Cov}(Z, y)}{\text{Cov}(Z, X)}$$
+$\hat{\beta}_{IV} = \frac{\text{Cov}(Z, y)}{\text{Cov}(Z, X)}$
 
 ## 工具变量过多时的估计
 
@@ -86,4 +86,4 @@ Hausman检验：比较OLS和IV估计量是否显著不同。
 2. **工具变量对结果敏感**：不同工具可能得到不同估计
 3. **弱工具变量问题**：弱工具导致估计有偏且标准误错误
 
-相关链接: [[2SLS]], [[GMM]], [[00_factor/concept/Hausman Test|Hausman检验]], [[00_factor/concept/Endogeneity|内生性]]
+相关链接: [[2SLS]], [[GMM]], [[Hausman Test|Hausman检验]], [[Endogeneity|内生性]]

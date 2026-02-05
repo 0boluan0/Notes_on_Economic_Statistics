@@ -16,9 +16,10 @@ tags:
 
 **协整定义**（Engle-Granger, 1987）：
 
-设 $n$ 维向量时间序列 $x_t = (x_{1t}, x_{2t}, \ldots, x_{nt})'$，其中每个分量都是 $I(1)$ 过程（一阶单整）。如果存在 $n \times 1$ 的常数向量 $\beta$（$\beta \neq 0$），使得线性组合：
-$$e_t = \beta' x_t$$
-
+设 n 维向量时间序列 $x_t = (x_{1t}, x_{2t}, \ldots, x_{nt})'$，其中每个分量都是 $I(1)$ 过程（一阶单整）。如果存在 $n \times 1$ 的常数向量 $\beta$（$\beta \neq 0$），使得线性组合：
+$$
+e_t = \beta' x_t
+$$
 是 $I(0)$ 平稳过程，则称 $x_t$ 的各分量是**协整的**，记为 $x_t \sim CI(1,1)$。
 
 **Granger 表示定理**：
@@ -33,31 +34,37 @@ $$e_t = \beta' x_t$$
 
 ### 步骤 1：写出 VAR(p) 模型
 
-考虑 $n$ 个 $I(1)$ 变量的 $p$ 阶向量自回归模型：
-$$x_t = A_1 x_{t-1} + A_2 x_{t-2} + \cdots + A_p x_{t-p} + \varepsilon_t$$
-
+考虑 n 个 $I(1)$ 变量的 p 阶向量自回归模型：
+$$
+x_t = A_1 x_{t-1} + A_2 x_{t-2} + \cdots + A_p x_{t-p} + \varepsilon_t
+$$
 其中 $A_i$ 为 $n \times n$ 系数矩阵，$\varepsilon_t$ 为 $n \times 1$ 白噪声向量。
 
 ### 步骤 2：引入差分和滞后算子
 
-使用滞后算子 $L$（$L^i x_t) = x_{t-i}$）：
-$$x_t = (A_1 L + A_2 L^2 + \cdots + A_p L^p) x_t + \varepsilon_t$$
-
+使用滞后算子 $L$（$L^i x_t = x_{t-i}$）：
+$$
+x_t = (A_1 L + A_2 L^2 + \cdots + A_p L^p) x_t + \varepsilon_t
+$$
 移项得：
-$$(I - A_1 L - A_2 L^2 - \cdots - A_p L^p) x_t = \varepsilon_t$$
+$$
+(I - A_1 L - A_2 L^2 - \cdots - A_p L^p) x_t = \varepsilon_t
+$$
 
 ### 步骤 3：展开为差分形式
 
 利用恒等式 $(1 - L) = \Delta$，将算子多项式重新组合：
-
-$$I - A_1 L - A_2 L^2 - \cdots - A_p L^p = \pi_0(I - L) + \pi (I - L) + \sum_{i=1}^{p-1} \pi_i (L^i - L^{i+1})$$
-
+$$
+I - A_1 L - A_2 L^2 - \cdots - A_p L^p = \pi_0(I - L) + \pi (I - L) + \sum_{i=1}^{p-1} \pi_i (L^i - L^{i+1})
+$$
 其中：
 - $\pi_0 = I - \sum_{i=1}^p A_i$
 - $\pi = -\pi_0 = \sum_{i=1}^p A_i - I$
 
 整理后得到误差修正形式：
-$$\Delta x_t = \pi_0 + \pi x_{t-1} + \sum_{i=1}^{p-1} \pi_i \Delta x_{t-i} + \varepsilon_t$$
+$$
+\Delta x_t = \pi_0 + \pi x_{t-1} + \sum_{i=1}^{p-1} \pi_i \Delta x_{t-i} + \varepsilon_t
+$$
 
 ### 步骤 4：分析 $\pi$ 矩阵的秩
 
@@ -66,7 +73,9 @@ $$\Delta x_t = \pi_0 + \pi x_{t-1} + \sum_{i=1}^{p-1} \pi_i \Delta x_{t-i} + \va
 **情形 1：$r = 0$**
 
 $\pi$ 为零矩阵，VECM 退化为纯差分形式：
-$$\Delta x_t = \pi_0 + \sum_{i=1}^{p-1} \pi_i \Delta x_{t-i} + \varepsilon_t$$
+$$
+\Delta x_t = \pi_0 + \sum_{i=1}^{p-1} \pi_i \Delta x_{t-i} + \varepsilon_t
+$$
 
 这意味着没有协整关系，所有变量都是独立的随机游走。
 
@@ -77,21 +86,23 @@ $\pi$ 满秩，$x_{t-1}$ 可以用 $\Delta x_{t-1}, \ldots$ 表示，意味着 $
 **情形 3：$0 < r < n$**
 
 $\pi$ 的秩为 $r$，可以进行秩分解：
-$$\pi = \alpha \beta'$$
+$\pi = \alpha \beta'$
 
 其中：
 - $\alpha$ 为 $n \times r$ 矩阵（调整系数矩阵）
 - $\beta$ 为 $n \times r$ 矩阵（协整向量矩阵）
 
 此时 VECM 为：
-$$\Delta x_t = \pi_0 + \alpha (\beta' x_{t-1}) + \sum_{i=1}^{p-1} \pi_i \Delta x_{t-i} + \varepsilon_t$$
+$$
+\Delta x_t = \pi_0 + \alpha (\beta' x_{t-1}) + \sum_{i=1}^{p-1} \pi_i \Delta x_{t-i} + \varepsilon_t
+$$
 
 ### 步骤 5：证明 $\beta$ 为协整向量
 
 项 $\beta' x_{t-1}$ 是 $r \times 1$ 向量。由于 $\Delta x_t$ 是 $I(0)$ 平稳的（差分阶数减 1），而 $\sum_{i=1}^{p-1} \pi_i \Delta x_{t-i}$ 也是 $I(0)$，因此 $\alpha (\beta' x_{t-1})$ 必须是平稳的。
 
 因为 $\alpha$ 满秩（$n \times r$，秩为 $r$），这意味着：
-$$\beta' x_t \text{ 是 } I(0) \text{ 平稳向量}$$
+$\beta' x_t$ 是 $I(0)$ 平稳向量。
 
 这正是协整的定义！$\beta$ 的每一列都是一个协整向量。
 
@@ -107,12 +118,14 @@ $\pi$ 矩阵的秩 $r$ 等于独立的协整关系数量。
 
 VECM 解释了协整的经济学含义：
 
-$$\Delta x_t = \pi_0 + \alpha e_{t-1} + \sum_{i=1}^{p-1} \pi_i \Delta x_{t-i} + \varepsilon_t$$
+$$
+\Delta x_t = \pi_0 + \alpha e_{t-1} + \sum_{i=1}^{p-1} \pi_i \Delta x_{t-i} + \varepsilon_t
+$$
 
 其中 $e_t = \beta' x_t$ 是**长期均衡误差**。
 
 - 如果 $e_{t-1} > 0$（变量组合偏离均衡上方），调整系数 $\alpha$ 将拉动 $\Delta x_t$ 向负方向调整
-- 如果 $e_{t-1} < 0$，调整系数将拉动 $\Delta x_t$ 向正方向调整
+- 如果 $e_{t-1} < 0$，调整系数 $\alpha$ 将拉动 $\Delta x_t$ 向正方向调整
 
 这体现了误差修正机制：当系统偏离长期均衡时，会逐步回到均衡。
 
@@ -130,6 +143,6 @@ $$\Delta x_t = \pi_0 + \alpha e_{t-1} + \sum_{i=1}^{p-1} \pi_i \Delta x_{t-i} + 
 2. **Johansen 方法**：基于 VAR 的最大似然估计，通过 $\pi$ 矩阵的特征值检验秩 $r$
 
 ## 相关概念
-[[00_factor/concept/Engle-Granger Two-Step Test|EG两步检验法]]
-[[00_factor/concept/Augmented Dickey-Fuller Test|ADF检验]]
-[[00_factor/concept/ARMA|ARMA模型]]
+[[Engle-Granger Two-Step Test|EG两步检验法]]
+[[Augmented Dickey-Fuller Test|ADF检验]]
+[[ARMA|ARMA模型]]

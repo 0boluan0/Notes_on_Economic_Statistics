@@ -10,12 +10,12 @@ tags:
 # Chi-square Distribution
 
 ## 它是什么
-- 「Chi-square Distribution」是一个待补充定义的核心概念卡片。
+- 「Chi-square Distribution」是指若标准正态变量平方和，则该和的分布。
 
 ## 最小可检索信息
-- 定义：待补充
-- 符号/公式：待补充
-- 最小例子：待补充
+- 定义：若标准正态变量平方和，则该和的分布。
+- 符号/公式：$\sum_{i=1}^k Z_i^2 \sim \chi^2_k。$
+- 最小例子：样本方差的分布与卡方相关。
 
 ## 关联卡片
 - [[Wishart Distribution]]

@@ -149,4 +149,4 @@ tags:
 
 ## 相关链接
 
-[[00_factor/concept/Opportunity Cost|机会成本]]
+[[Opportunity Cost|机会成本]]

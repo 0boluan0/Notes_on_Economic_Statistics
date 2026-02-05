@@ -50,7 +50,7 @@ tags:
 
 公司债券利率与国债利率的差异主要由以下部分构成：
 
-$$ \text{公司债券利率} = \text{无风险利率} + \text{违约风险溢价} + \text{流动性溢价} + \text{税收调整} $$
+$ \text{公司债券利率} = \text{无风险利率} + \text{违约风险溢价} + \text{流动性溢价} + \text{税收调整} $
 
 ## 应用
 
@@ -70,8 +70,8 @@ $$ \text{公司债券利率} = \text{无风险利率} + \text{违约风险溢价
 
 ## 相关概念
 
-- [[00_factor/concept/Yield to Maturity|到期收益率]]
-- [[00_factor/concept/Yield Curve|收益率曲线]]
+- [[Yield to Maturity|到期收益率]]
+- [[Yield Curve|收益率曲线]]
 - [[Risk-free Rate|无风险利率]]
 
 ## 市见风险溢价

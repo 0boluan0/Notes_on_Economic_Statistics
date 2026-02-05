@@ -34,11 +34,11 @@ tags:
 
 ### 4. 预期损失（EL, Expected Loss）
 
-$$EL = PD \times LGD \times EAD$$
+$EL = PD \times LGD \times EAD$
 
 ### 5. 非预期损失（UL, Unexpected Loss）
 
-$$UL = ECL - EL$$
+$UL = ECL - EL$
 
 其中ECL是给定置信水平下的条件预期损失。
 
@@ -50,9 +50,9 @@ $$UL = ECL - EL$$
 
 ### 2. 信用VaR调整（Credit VaR Adjustment）
 
-$$CVA = \sum_{i} PD_i \times EAD_i \times (1-R_i) \times LGD_i$$
+$CVA = \sum_{i} PD_i \times EAD_i \times (1-R_i) \times LGD_i$
 
-其中R_i是回收率。
+其中$R_i$是回收率。
 
 ### 3. 债务VaR调整（DVA）
 
@@ -104,4 +104,4 @@ $$CVA = \sum_{i} PD_i \times EAD_i \times (1-R_i) \times LGD_i$$
 
 考虑资产价值和负债结构的模型。
 
-相关链接: [[VaR]], [[CVA]], [[DVA]], [[00_factor/concept/Default Risk|违约风险]], [[00_factor/concept/Basel Accords|巴塞尔协议]]
+相关链接: [[VaR]], [[CVA]], [[DVA]], [[Default Risk|违约风险]], [[Basel Accords|巴塞尔协议]]

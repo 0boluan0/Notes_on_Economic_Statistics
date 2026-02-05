@@ -13,7 +13,7 @@ tags:
 
 ## 定义
 
-$$速动比率 = \frac{速动资产}{流动负债}$$
+$速动比率 = \frac{速动资产}{流动负债}$
 
 ## 速动资产
 
@@ -47,5 +47,5 @@ $$速动比率 = \frac{速动资产}{流动负债}$$
 3. 更真实反映企业的即时偿债能力
 
 ## 相关链接
-[[00_factor/concept/Current Ratio|流动比率]]
-[[00_factor/concept/Cash Ratio|现金比率]]
+[[Current Ratio|流动比率]]
+[[Cash Ratio|现金比率]]

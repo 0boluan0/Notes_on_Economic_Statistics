@@ -13,7 +13,7 @@ tags:
 
 ## 定义
 
-$$流动比率 = \frac{流动资产}{流动负债}$$
+$流动比率 = \frac{流动资产}{流动负债}$
 
 ## 计算方法
 
@@ -35,10 +35,10 @@ $$流动比率 = \frac{流动资产}{流动负债}$$
 
 ## 相关比率
 
-- [[00_factor/concept/Quick Ratio|速动比率]]：扣除存货等难以变现的资产
-- [[00_factor/concept/Cash Ratio|现金比率]]：仅考虑现金及现金等价物
-- [[00_factor/concept/Working Capital|营运资本]]：流动资产与流动负债的差额
+- [[Quick Ratio|速动比率]]：扣除存货等难以变现的资产
+- [[Cash Ratio|现金比率]]：仅考虑现金及现金等价物
+- [[Working Capital|营运资本]]：流动资产与流动负债的差额
 
 ## 相关链接
-[[00_factor/concept/Quick Ratio|速动比率]]
-[[00_factor/concept/Cash Ratio|现金比率]]
+[[Quick Ratio|速动比率]]
+[[Cash Ratio|现金比率]]

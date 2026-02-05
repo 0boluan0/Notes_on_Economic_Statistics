@@ -16,9 +16,9 @@ tags:
 
 ## 最小可检索信息
 - 两组两期估计量：
-  $$\text{DID}=(\bar Y_{T,post}-\bar Y_{T,pre})-(\bar Y_{C,post}-\bar Y_{C,pre})$$
+  $\text{DID}=(\bar Y_{T,post}-\bar Y_{T,pre})-(\bar Y_{C,post}-\bar Y_{C,pre})$
 - 回归形式：
-  $$Y_{it}=\alpha+\beta(Treat_i\times Post_t)+\gamma Treat_i+\delta Post_t+\varepsilon_{it}$$
+  $Y_{it}=\alpha+\beta(Treat_i\times Post_t)+\gamma Treat_i+\delta Post_t+\varepsilon_{it}$
   其中 $\beta$ 为 DID 效应。
 - 关键识别：平行趋势（未处理潜在结果的趋势相同）。
 

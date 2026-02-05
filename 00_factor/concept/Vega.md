@@ -4,7 +4,7 @@ aliases:
 tags:
 - concept
 ---
-- **定义：** $Vega$（韦加）是交易产品价值对标的资产**波动率**变化的敏感度，即 $\displaystyle Vega = \frac{\partial V}{\partial \sigma}$，其中$\sigma$是标的资产的隐含波动率。
+- **定义：$** Vega（韦加）是交易产品价值对标的资产**波动率**变化的敏感度，即 \displaystyle Vega = \frac{\partial V}{\partial \sigma}，其中\sigma是标的资产的隐含波动率。$
     
 - **意义：** $Vega$衡量期权价格受市场预期波动率变化的影响程度。对于现货、远期、期货、互换等线性产品而言，其价值不直接依赖标的波动率，$Vega \approx 0$。但**期权及多数结构化衍生品**对波动率高度敏感（$Vega \neq 0$）：标的波动率上升会提高看涨看跌期权的价值（因为高波动意味着更大的不确定性和期权更高的时间价值），$Vega$通常为正值（对于期权多头）。$Vega$的量级也取决于期权距到期的时间长短、平衡程度（平值期权Vega最大）。
     
@@ -13,4 +13,4 @@ tags:
 ## 相关链接
 
 - 其他希腊字母：[[Delta]], [[Gamma]], [[Theta]], [[Rho]]
-- 波动率概念：[[00_factor/concept/Historical Volatility|历史波动率]], [[00_factor/concept/Implied Volatility|隐含波动率]], [[00_factor/concept/Realized Volatility|已实现波动率]]
+- 波动率概念：[[Historical Volatility|历史波动率]], [[Implied Volatility|隐含波动率]], [[Realized Volatility|已实现波动率]]

@@ -11,11 +11,11 @@ tags:
 
 ## 定义
 
-对于玩家 i，如果存在策略 s_i'，使得对于对手的所有可能策略组合 s_{-i}，都有：
+对于玩家 i，如果存在策略 $s_i$'，使得对于对手的所有可能策略组合 s_{-i}，都有：
 
-$$ u_i(s_i', s_{-i}) > u_i(s_i, s_{-i}) $$
+$ u_i(s_i', s_{-i}) > u_i(s_i, s_{-i}) $
 
-那么策略 s_i 是严格被占优的，s_i' 是严格占优策略。
+那么策略 $s_i$ 是严格被占优的，$s_i$' 是严格占优策略。
 
 ## 直观理解
 
@@ -33,7 +33,7 @@ $$ u_i(s_i', s_{-i}) > u_i(s_i, s_{-i}) $$
 
 - [[Weakly Dominated Strategy|弱占优策略]]
 - [[Nash Equilibrium|纳什均衡]]
-- [[00_factor/concept/Rationalisability|可理性化]]
+- [[Rationalisability|可理性化]]
 
 ## 混合策略中的严格占优
 

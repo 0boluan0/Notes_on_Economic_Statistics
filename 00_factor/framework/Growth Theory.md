@@ -39,6 +39,6 @@ tags:
 
 ## 相关链接
 
-- [[00_factor/framework/Solow Model|索洛模型]]
+- [[00_factor/concept/Solow Model|索洛模型]]
 - [[00_factor/concept/Harrod-Domar Model|哈罗德-多玛模型]]
-- [[00_factor/framework/Rostow Stages of Economic Growth|罗斯托经济增长阶段论]]
+- [[Rostow Stages of Economic Growth|罗斯托经济增长阶段论]]

@@ -32,45 +32,45 @@ tags:
 
 ### 步骤 2：计算各期现金流现值
 
-对每期现金流 $t$，计算现值：
-$$ PV_t = \frac{CF_t}{(1 + y/m)^{t}} $$
+对每期现金流 t，计算现值：
+$ PV_t = \frac{CF_t}{(1 + y/m)^{t}} $
 
-**注意点**：使用年化收益率，分母需除以 $m$。
+**注意点**：使用年化收益率，分母需除以 m。
 
 ### 步骤 3：计算总现值（债券价格）
 
-$$ P = \sum_{t=1}^{n} PV_t $$
+$ P = \sum_{t=1}^{n} PV_t $
 
 ### 步骤 4：计算时间加权的现值
 
-$$ \text{加权和} = \sum_{t=1}^{n} t \times PV_t $$
+$ \text{加权和} = \sum_{t=1}^{n} t \times PV_t $
 
-**注意点**：若为年付息，$t$ 直接为期数；若为半年付息，$t$ 为半期数。
+**注意点**：若为年付息，t 直接为期数；若为半年付息，t 为半期数。
 
 ### 步骤 5：计算马考利久期
 
-$$ D_M = \frac{\text{加权和}}{P} = \frac{\sum_{t=1}^{n} t \cdot CF_t / (1 + y/m)^t}{\sum_{t=1}^{n} CF_t / (1 + y/m)^t} $$
+$ D_M = \frac{\text{加权和}}{P} = \frac{\sum_{t=1}^{n} t \cdot CF_t / (1 + y/m)^t}{\sum_{t=1}^{n} CF_t / (1 + y/m)^t} $
 
-**注意点**：久期单位与现金流周期单位相同。若用半期，需除以 $m$ 转换为年。
+**注意点**：久期单位与现金流周期单位相同。若用半期，需除以 m 转换为年。
 
 ### 步骤 6：转换为年久期（如需）
 
-$$ D_M^{\text{年}} = \frac{D_M}{m} $$
+$ D_M^{\text{年}} = \frac{D_M}{m} $
 
 ## 关键公式
 
 **马考利久期**：
-$$ D_M = \frac{\sum_{t=1}^{n} t \cdot \frac{CF_t}{(1 + y/m)^t}}{\sum_{t=1}^{n} \frac{CF_t}{(1 + y/m)^t}} $$
+$ D_M = \frac{\sum_{t=1}^{n} t \cdot \frac{CF_t}{(1 + y/m)^t}}{\sum_{t=1}^{n} \frac{CF_t}{(1 + y/m)^t}} $
 
 **永续债券久期**：
-$$ D_M = \frac{1 + y/m}{y/m} $$
+$ D_M = \frac{1 + y/m}{y/m} $
 
 **零息债券久期**：
-$$ D_M = n/m \text{（剩余期限）} $$
+$ D_M = n/m \text{（剩余期限）} $
 
 ## 债券价格估计（久期近似）
 
-$$ \frac{\Delta P}{P} \approx -D_M \times \Delta y $$
+$ \frac{\Delta P}{P} \approx -D_M \times \Delta y $
 
 **注意点**：此为线性近似，利率大幅变动时误差较大，需加入凸性修正。
 
@@ -82,6 +82,6 @@ $$ \frac{\Delta P}{P} \approx -D_M \times \Delta y $$
 4. **收益率变化**：久期随收益率变化而变化（凸性效应）。
 
 ## 相关概念
-[[00_factor/concept/duration|久期]]
-[[00_factor/concept/Modified Duration|修正久期]]
+[[duration|久期]]
+[[Modified Duration|修正久期]]
 [[Convexity|凸性]]

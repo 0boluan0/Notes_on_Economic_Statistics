@@ -34,12 +34,24 @@ $$
 2x+y=1\\
 x-y=0
 \end{cases}
-\Rightarrow
-A=\begin{bmatrix}2&1\\1&-1\end{bmatrix},\quad b=\begin{bmatrix}1\\0\end{bmatrix}
+$$
+$\Rightarrow$
+$$
+A =
+\begin{bmatrix}
+2&1\\1&-1
+\end{bmatrix}
+$$
+\quad
+$$
+b =
+\begin{bmatrix}
+1\\0
+\end{bmatrix}
 $$
 
 ## 相关链接
 
-- [[00_factor/concept/Linear system solution structure|线性方程组解的结构]]
-- [[00_factor/concept/Matrix Inverse|逆矩阵]]
-- [[00_factor/concept/Matrix Rank|矩阵的秩]]
+- [[Linear system solution structure|线性方程组解的结构]]
+- [[Matrix Inverse|逆矩阵]]
+- [[Matrix Rank|矩阵的秩]]

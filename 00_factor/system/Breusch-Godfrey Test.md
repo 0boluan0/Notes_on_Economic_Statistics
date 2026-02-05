@@ -20,11 +20,11 @@ tags:
 ### 辅助回归
 
 将残差对其滞后项回归：
-$$\hat{e}_t = \rho_1 \hat{e}_{t-1} + \rho_2 \hat{e}_{t-2} + \cdots + \rho_p \hat{e}_{t-p} + u_t$$
+$\hat{e}_t = \rho_1 \hat{e}_{t-1} + \rho_2 \hat{e}_{t-2} + \cdots + \rho_p \hat{e}_{t-p} + u_t$
 
 ### LM检验统计量
 
-$$LM = (T-p) \cdot R^2 \sim \chi^2(p)$$
+$LM = (T-p) \cdot R^2 \sim \chi^2(p)$
 
 其中：
 - T：样本量
@@ -33,7 +33,7 @@ $$LM = (T-p) \cdot R^2 \sim \chi^2(p)$$
 
 ### F检验版本
 
-$$F = \frac{R^2/p}{(1-R^2)/(T-k-p-1)} \sim F(p, T-k-p-1)$$
+$F = \frac{R^2/p}{(1-R^2)/(T-k-p-1)} \sim F(p, T-k-p-1)$
 
 ## 滞后期数选择
 
@@ -67,6 +67,6 @@ $$F = \frac{R^2/p}{(1-R^2)/(T-k-p-1)} \sim F(p, T-k-p-1)$$
 | 有滞后因变量时DW失效 | 模型动态 | 必须使用BG检验 |
 
 ## 相关概念
-[[00_factor/system/Autocorrelation Diagnosis|自相关诊断]]
+[[Autocorrelation Diagnosis|自相关诊断]]
 [[Q Test|Q检验]]
-[[00_factor/system/Durbin-Watson Statistic|Durbin-Watson统计量]]
+[[Durbin-Watson Statistic|Durbin-Watson统计量]]

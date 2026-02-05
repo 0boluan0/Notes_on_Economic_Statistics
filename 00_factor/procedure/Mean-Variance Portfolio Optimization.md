@@ -16,7 +16,7 @@ tags:
 
 ## 所需数据/条件
 
-- $N$ 个资产的预期收益率向量 $\mu = (\mu_1, \dots, \mu_N)'$
+- $N 个资产的预期收益率向量 \mu = (\mu_1, \dots, \mu_N)'$
 - $N \times N$ 协方差矩阵 $\Sigma$
 - 无风险利率 $R_f$（如包含无风险资产）
 
@@ -34,12 +34,12 @@ tags:
 ### 步骤 2：定义最小方差组合问题
 
 仅含风险资产时：
-$$ \min_w w' \Sigma w $$
-$$ \text{s.t. } w' \mathbf{1} = 1, \quad w \ge 0 $$
+$ \min_w w' \Sigma w $
+$ \text{s.t. } w' \mathbf{1} = 1, \quad w \ge 0 $
 
 包含无风险资产时：
-$$ \min_w w' \Sigma w $$
-$$ \text{.s.t. } w' \mathbf{1} = 1 $$
+$ \min_w w' \Sigma w $
+$ \text{.s.t. } w' \mathbf{1} = 1 $
 其中权重向量包含无风险资产权重。
 
 **注意点**：这是全局最小方差组合，风险最低。
@@ -47,26 +47,26 @@ $$ \text{.s.t. } w' \mathbf{1} = 1 $$
 ### 步骤 3：求解最小方差组合
 
 使用拉格矩阵日法：
-$$ L = w' \Sigma w - \lambda (w' \mathbf{1} - 1) - \gamma' w $$
+$ L = w' \Sigma w - \lambda (w' \mathbf{1} - 1) - \gamma' w $
 
 一阶条件：
-$$ \Sigma w - \lambda \mathbf{1} = 0 $$
+$ \Sigma w - \lambda \mathbf{1} = 0 $
 
 **封闭解**：
-$$ w^* = \frac{\Sigma^{-1} \mathbf{1}}{\mathbf{1}' \Sigma^{-1} \mathbf{1}} $$
+$ w^* = \frac{\Sigma^{-1} \mathbf{1}}{\mathbf{1}' \Sigma^{-1} \mathbf{1}} $
 
 **注意点**：若有非负约束，需用二次规划求解。
 
 ### 步骤 4：计算有效前沿
 
-对一系列目标收益率 $\mu_p$，求解：
+对一系列目标收益率 \mu_p，求解：
 
-$$ \min_w w' \Sigma w $$
-$$ \text{s.t. } w' \mu = \mu_p, \quad w' \mathbf{1} = 1 $$
+$ \min_w w' \Sigma w $
+$\text{s.t. } w' \mu = \mu_p, \quad w' \mathbf{1} = 1$
 
-得到有效前沿上的组合 $(w_p, \sigma_p, \mu_p)$。
+得到有效前沿上的组合 $($w_p$, \sigma_p, \mu_p)$。
 
-**注意点**：$\sigma_p = \sqrt{w_p' \Sigma w_p}$ 为组合标准差。
+**注意点**：$\sigma_p = \sqrt{w_p' \Sigma w_p} 为组合标准差。$
 
 ### 步骤 5：绘制有效前沿
 
@@ -81,7 +81,7 @@ $$ \text{s.t. } w' \mu = \mu_p, \quad w' \mathbf{1} = 1 $$
 给定无风险利率 $R_f$，有效前沿与资本市场线（CAL）相切的组合为最优：
 
 CAL方程：
-$$ E[R_p] = R_f + \frac{E[R_m] - R_f}{\sigma_m^2} \sigma_p $$
+$E[R_p] = R_f + \frac{E[R_m] - R_f}{\sigma_m^2} \sigma_p$
 
 求切点使斜率相等，得到最优组合权重。
 
@@ -99,19 +99,19 @@ $$ E[R_p] = R_f + \frac{E[R_m] - R_f}{\sigma_m^2} \sigma_p $$
 ## 关键公式
 
 **组合预期收益**：
-$$ \mu_p = \sum_{i=1}^N w_i \mu_i $$
+$\mu_p = \sum_{i=1}^N w_i \mu_i$
 
 **组合方差**：
-$$ \sigma_p^2 = \sum_{i=1}^N \sum_{j=1}^N w_i w_j \sigma_{ij} $$
+$\sigma_p^2 = \sum_{i=1}^N \sum_{j=1}^N w_i w_j \sigma_{ij}$
 
 **全局最小方差组合权重**：
-$$ w_{\text{min}} = \frac{A \mathbf{1}}{\mathbf{1}' A \mathbf{1}}, \quad A = \Sigma^{-1} $$
+$ w_{\text{min}} = \frac{A \mathbf{1}}{\mathbf{1}' A \mathbf{1}}, \quad A = \Sigma^{-1} $
 
 **有效前沿关系**：
-$$ \sigma_p^2 = \frac{a \mu_p^2 + b \mu_p + c}{d \mu_p^2 + e \mu_p + f} $$
+$\sigma_p^2 = \frac{a \mu_p^2 + b \mu_p + c}{d \mu_p^2 + e \mu_p + f}$
 
 **资本市场线**：
-$$ \mu_p = R_f + \frac{\mu_m - R_f}{\sigma_m^2} \sigma_p $$
+$\mu_p = R_f + \frac{\mu_m - R_f}{\sigma_m^2} \sigma_p$
 
 ## 常见问题
 

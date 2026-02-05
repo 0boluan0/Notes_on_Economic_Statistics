@@ -13,7 +13,7 @@ BIC（Bayesian Information Criterion，贝叶斯信息准则）又称施瓦茨�
 
 ## 定义
 
-$$BIC = -2 \ln(L_{max}) + k \ln(T)$$
+$BIC = -2 \ln(L_{max}) + k \ln(T)$
 
 其中：
 - $L_{maxmax}$：模型的最大化似然值
@@ -35,7 +35,7 @@ $$BIC = -2 \ln(L_{max}) + k \ln(T)$$
 
 BIC近似等于模型后验概率的对数的负值减去常数：
 
-$$BIC \approx -2 \ln(P(M|data)) + C$$
+$BIC \approx -2 \ln(P(M|data)) + C$
 
 因此，选择BIC最小的模型等价于选择后验概率最大的模型。
 

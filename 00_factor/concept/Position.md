@@ -24,12 +24,12 @@ tags:
 
 - **多头头寸的到期收益：**
     $$
-    \text{Profit}_{\text{Long}} = (S_T - P) \times Q
+\text{Profit}_{\text{Long}} = (S_T - P) \times Q
     $$
     
 - **空头头寸的到期收益：**
     $$
-    \text{Profit}_{\text{Short}} = (P - S_T) \times Q
+\text{Profit}_{\text{Short}} = (P - S_T) \times Q
     $$
 
 # 为什么每个头寸有正有负

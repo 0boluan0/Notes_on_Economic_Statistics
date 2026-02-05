@@ -8,12 +8,18 @@ tags:
 # Determinant
 
 ## 它是什么
-- 「Determinant」是一个待补充定义的核心概念卡片。
+- 「Determinant」是指描述线性变换体积缩放与可逆性的标量。
 
 ## 最小可检索信息
-- 定义：待补充
-- 符号/公式：待补充
-- 最小例子：待补充
+- 定义：描述线性变换体积缩放与可逆性的标量。
+- 符号/公式：$\det(A)$，如
+$$
+\det\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix} = ad - bc。
+$$
+- 最小例子：二维线性变换面积缩放为 $|\det(A)|$。
 
 ## 关联卡片
 - [[Linear Algebra-hub]]

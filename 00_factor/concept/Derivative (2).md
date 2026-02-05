@@ -15,7 +15,7 @@ tags:
 
 函数 f(x) 在点 x₀ 处的导数定义为：
 
-$$f'(x_0) = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}$$
+$f'(x_0) = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}$
 
 如果该极限存在，则称函数在 x₀ 处可导。
 
@@ -36,7 +36,7 @@ $$f'(x_0) = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}$$
 3. **和的导数**：$(u + v)' = u' + v'$
 4. **积的导数**：$(uv)' = u'v + uv'$
 5. **商的导数**：$(u/v)' = \frac{u'v - uv'}{v^2}$
-6. **链式法则**：如果 $y = f(g(x))$，则 $y' = f'(g(x)) \cdot g'(x)$
+6. **链式法则**：$如果 y = f(g(x))，则 y' = f'(g(x)) \cdot g'(x)$
 
 ## 可导性与连续性
 
@@ -59,4 +59,4 @@ $$f'(x_0) = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}$$
 
 ## 相关链接
 [[geometric interpretation of derivative]]
-[[00_factor/concept/Integral|积分]]
+[[Integral|积分]]

@@ -30,66 +30,71 @@ tags:
 ### 步骤 1：准备数据矩阵
 
 构造包含常数项的自变量矩阵：
-$$ X = \begin{pmatrix} 1 & x_{11} & \cdots & x_{1,k-1} \\ 1 & x_{21} & \cdots & x_{2,k-1} \\ \vdots & \vdots & \ddots & \vdots \\ 1 & x_{n1} & \cdots & x_{n,k-1} \end{pmatrix} $$
+$$
+X =
+\begin{pmatrix}
+ 1 & x_{11} & \cdots & x_{1,k-1} \\ 1 & x_{21} & \cdots & x_{2,k-1} \\ \vdots & \vdots & \ddots & \vdots \\ 1 & x_{n1} & \cdots & x_{n,k-1} 
+\end{pmatrix}
+$$
 
 **注意点**：检查 $X$ 是否满秩，避免完全多重共线性导致不可估计。
 
 ### 步骤 2：计算X'X和X'y
 
-$$ X'X = \sum_{i=1}^{n} x_i x_i' $$
-$$ X'y = \sum_{i=1}^{n} x_i y_i $$
+$ X'X = \sum_{i=1}^{n} x_i x_i' $
+$ X'y = \sum_{i=1}^{n} x_i y_i $
 
 **注意点**：这些是 $k \times k$ 和 $k \times 1$ 矩阵。
 
 ### 步骤 3：求解参数估计量
 
-$$ \hat{\beta} = (X'X)^{-1}X'y $$
+$ \hat{\beta} = (X'X)^{-1}X'y $
 
 **注意点**：需要矩阵求逆，若 $X'X$ 接近奇异，考虑岭回归或删除相关变量。
 
 ### 步骤 4：计算拟合值和残差
 
-$$ \hat{y} = X\hat{\beta} $$
-$$ \hat{\epsilon} = y - \hat{y} $$
+$ \hat{y} = X\hat{\beta} $
+$ \hat{\epsilon} = y - \hat{y} $
 
 ### 步骤 5：估计误差方差
 
-$$ \hat{\sigma}^2 = \frac{\hat{\epsilon}'\hat{\epsilon}}{n-k} $$
+$ \hat{\sigma}^2 = \frac{\hat{\epsilon}'\hat{\epsilon}}{n-k} $
 
 **注意点**：自由度为 $n-k$（样本量减参数数）。
 
 ### 步骤 6：计算参数估计量的协方差矩阵
 
-$$ \text{Var}(\hat{\beta}) = \hat{\sigma}^2 (X'X)^{-1} $$
+$ \text{Var}(\hat{\beta}) = \hat{\sigma}^2 (X'X)^{-1} $
 
 **注意点**：对角线元素为各参数估计量的方差，用于标准误计算。
 
 ### 步骤 7：计算拟合优度
 
 **总平方和（TSS）**：
-$$ \text{TSS} = (y - \bar{y}1)'(y - \bar{y}1) $$
+$ \text{TSS} = (y - \bar{y}1)'(y - \bar{y}1) $
 
 **回归平方和（ESS）**：
-$$ \text{ESS} = (\hat{y} - \bar{y}1)'(\hat{y} - \bar{y}1) $$
+$ \text{ESS} = (\hat{y} - \bar{y}1)'(\hat{y} - \bar{y}1) $
 
 **残差平方和（RSS）**：
-$$ \text{RSS} = \hat{\epsilon}'\hat{\epsilon} $$
+$ \text{RSS} = \hat{\epsilon}'\hat{\epsilon} $
 
 **判定系数 $R^2$**：
-$$ R^2 = \frac{\text{ESS}}{\text{TSS}} = 1 - \frac{\text{RSS}}{\text{TSS}} $$
+$ R^2 = \frac{\text{ESS}}{\text{TSS}} = 1 - \frac{\text{RSS}}{\text{TSS}} $
 
 **调整 $R^2$**：
-$$ \bar{R}^2 = 1 - \frac{\text{RSS}/(n-k)}{\text{TSS}/(n-1)} $$
+$ \bar{R}^2 = 1 - \frac{\text{RSS}/(n-k)}{\text{TSS}/(n-1)} $
 
 **注意点**：$R^2$ 随自变量增加而单调递增，$\bar{R}^2$ 考虑了自由度惩罚。
 
 ## 关键公式
 
 **正规方程组**：
-$$ X'X\hat{\beta} = X'y $$
+$ X'X\hat{\beta} = X'y $
 
 **参数估计量**：
-$$ \hat{\beta} = (X'X)^{-1}X'y $$
+$ \hat{\beta} = (X'X)^{-1}X'y $
 
 **BLUE性质**：
 在满足高斯-马尔可夫假设下，$\hat{\beta}$ 是最佳线性无偏估计量（BLUE）。
@@ -102,13 +107,13 @@ $$ \hat{\beta} = (X'X)^{-1}X'y $$
 4. **内生性**：自变量与误差项相关，参数估计有偏且不一致。
 
 ## 相关概念
-[[00_factor/concept/Multicollinearity|多重共线性]]
-[[00_factor/concept/Heteroskedasticity|异方差]]
+[[Multicollinearity|多重共线性]]
+[[Heteroskedasticity|异方差]]
 [[Autocorrelation|自相关]]
-[[00_factor/concept/Endogeneity|内生性]]
-[[00_factor/procedure/MLE Estimation Steps|MLE估计步骤]]
+[[Endogeneity|内生性]]
+[[MLE Estimation Steps|MLE估计步骤]]
 
 ## 相关链接
 
-- OLS性质：[[00_factor/concept/Gauss-Markov theorem|高斯-马尔可夫定理]]
-- 违反假设的后果：[[00_factor/concept/Heteroskedasticity|异方差]], [[00_factor/concept/Multicollinearity|多重共线性]], [[Autocorrelation|自相关]]
+- OLS性质：[[Gauss-Markov theorem|高斯-马尔可夫定理]]
+- 违反假设的后果：[[Heteroskedasticity|异方差]], [[Multicollinearity|多重共线性]], [[Autocorrelation|自相关]]

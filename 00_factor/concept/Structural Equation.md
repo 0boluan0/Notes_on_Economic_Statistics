@@ -88,7 +88,7 @@ $Q = \lambda_0 + \lambda_1 Y + \lambda_2 W + \nu_Q$
 
 ### 简约参数
 
-$\pi_0, \pi_1, \pi_2$等是简约参数（Reduced Form Parameters）：
+$\pi_0$, \pi_1$, \pi_2$等是简约参数（Reduced Form Parameters）：
 - 可以用OLS估计
 - 反映外生变量的最终影响
 - 不直接反映结构参数
@@ -178,4 +178,4 @@ $\pi_0, \pi_1, \pi_2$等是简约参数（Reduced Form Parameters）：
 
 误差项的假设影响识别和估计。
 
-相关链接: [[00_factor/concept/Reduced Form Equation|简约式方程]], [[00_factor/concept/Simultaneous Equations Model|联立方程模型]], [[00_factor/concept/Parameter Identification|参数识别]], [[2SLS]]
+相关链接: [[Reduced Form Equation|简约式方程]], [[Simultaneous Equations Model|联立方程模型]], [[Parameter Identification|参数识别]], [[2SLS]]

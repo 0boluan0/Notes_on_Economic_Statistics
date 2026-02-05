@@ -17,10 +17,10 @@ $$
 
   
 
-其中 $CF_t$ 是第 $t$ 期现金流（利息或本金），$y$ 是每期到期收益率，$\text{PV}(CF_t)$表示该现金流按收益率折现到当前的现值。这一定义得到一个以年为单位的久期值。**Macaulay久期**即上述按实际现金流计算的久期。在商业银行资产负债管理中，常用久期来衡量资产和负债的平均期限差异（即**久期缺口**），用于分析利率变动对经济价值的影响。
+其中 $CF_t$ 是第 $t$ 期现金流（利息或本金），$y$ 是每期到期收益率，$\text{PV}($CF_t$)$表示该现金流按收益率折现到当前的现值。这一定义得到一个以年为单位的久期值。**Macaulay久期**即上述按实际现金流计算的久期。在商业银行资产负债管理中，常用久期来衡量资产和负债的平均期限差异（即**久期缺口**），用于分析利率变动对经济价值的影响。
 
 ## 相关链接
 
-- 久期类型：[[00_factor/concept/Macaulay Duration|马考利久期]], [[00_factor/concept/Modified Duration|修正久期]], [[00_factor/concept/Effective Duration|有效久期]], [[00_factor/concept/Dollar Duration|绝对额久期]], [[00_factor/concept/Key Rate Duration|局部久期]]
-- 二阶风险：[[00_factor/concept/Curvature|曲率]]
-- 利率风险：[[00_factor/concept/Repricing Risk|重新定价风险]], [[00_factor/concept/Basis Risk|基差风险]], [[00_factor/concept/Yield Curve Risk|收益率曲线风险]], [[00_factor/concept/Implied Option Risk|隐含期权风险]]
+- 久期类型：[[Macaulay Duration|马考利久期]], [[Modified Duration|修正久期]], [[Effective Duration|有效久期]], [[Dollar Duration|绝对额久期]], [[Key Rate Duration|局部久期]]
+- 二阶风险：[[Curvature|曲率]]
+- 利率风险：[[Repricing Risk|重新定价风险]], [[Basis Risk|基差风险]], [[Yield Curve Risk|收益率曲线风险]], [[Implied Option Risk|隐含期权风险]]

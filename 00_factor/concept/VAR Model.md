@@ -10,15 +10,15 @@ tags:
 # VAR Model
 
 ## 它是什么
-- 「VAR Model」是一个待补充定义的核心概念卡片。
+- 「VAR Model」是指多变量自回归模型，用自身与其他变量的滞后来解释当前值。
 
 ## 最小可检索信息
-- 定义：待补充
-- 符号/公式：待补充
-- 最小例子：待补充
+- 定义：多变量自回归模型，用自身与其他变量的滞后来解释当前值。
+- 符号/公式：$y_t=c+\sum_{i=1}^p A_i y_{t-i}+\varepsilon_t。$
+- 最小例子：用GDP与通胀的滞后预测当前值。
 
 ## 关联卡片
 - [[Time Series Analysis-hub]]
-- [[00_factor/concept/Impulse Response Function|脉冲响应函数]]
-- [[00_factor/concept/Variance Decomposition|方差分解]]
-- [[00_factor/procedure/Johansen Cointegration Test Steps|Johansen协整检验步骤]]
+- [[Impulse Response Function|脉冲响应函数]]
+- [[Variance Decomposition|方差分解]]
+- [[Johansen Cointegration Test Steps|Johansen协整检验步骤]]

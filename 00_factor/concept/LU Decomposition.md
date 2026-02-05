@@ -94,4 +94,4 @@ det(A) = det(L) × det(U) = det(U)
 - 当矩阵病态时，分解可能不稳定
 - 对于对称正定矩阵，可以分解为LLᵀ（Cholesky分解）
 
-相关链接: [[00_factor/concept/Singular Matrix|奇异矩阵]], [[00_factor/concept/Permutation Matrix|置换矩阵]], [[00_factor/concept/Matrix Rank|矩阵的秩]]
+相关链接: [[Singular Matrix|奇异矩阵]], [[Permutation Matrix|置换矩阵]], [[Matrix Rank|矩阵的秩]]

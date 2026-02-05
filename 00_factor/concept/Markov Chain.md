@@ -11,19 +11,19 @@ tags:
 
 ## 定义
 
-马尔可夫链是一个随机过程 {X_n, n∈T}，其中 T 是离散的时间集合，且满足马尔可夫性（无后效性）。
+马尔可夫链是一个随机过程 {$X_n$, n∈T}，其中 T 是离散的时间集合，且满足马尔可夫性（无后效性）。
 
 ### 马尔可夫性
 
 在已知当前状态的条件下，未来的状态与过去的状态无关：
 
-$$ P(X_{n+1} = i_{n+1} | X_0 = i_0, X_1 = i_1, ..., X_n = i_n) = P(X_{n+1} = i_{n+1} | X_n = i_n) $$
+$ P(X_{n+1} = i_{n+1} | X_0 = i_0, X_1 = i_1, ..., X_n = i_n) = P(X_{n+1} = i_{n+1} | X_n = i_n) $
 
 ## 关键概念
 
 ### 1. 一步转移概率
 
-$$ p_{ij} = P(X_{n+1} = j | X_n = i) $$
+$ p_{ij} = P(X_{n+1} = j | X_n = i) $
 
 - **齐次马尔可夫链**：转移概率与时间 n 无关
 
@@ -35,13 +35,13 @@ $$ p_{ij} = P(X_{n+1} = j | X_n = i) $$
 
 ### 3. n 步转移概率
 
-$$ p_{ij}(n) = P(X_{m+n} = j | X_m = i) $$
-$$ P(n) = P^n $$
+$ p_{ij}(n) = P(X_{m+n} = j | X_m = i) $
+$ P(n) = P^n $
 
 ### 4. Chapman-Kolmogorov 方程
 
-$$ p_{ij}(n) = \sum_{k} p_{ik}(l) p_{kj}(n-l) $$
-$$ P(n) = P(l)P(n-l) $$
+$ p_{ij}(n) = \sum_{k} p_{ik}(l) p_{kj}(n-l) $
+$ P(n) = P(l)P(n-l) $
 
 ## 状态分类
 
@@ -49,7 +49,7 @@ $$ P(n) = P(l)P(n-l) $$
 
 状态 i 的周期：
 
-$$ d(i) = \gcd\{n : P\{X_n = i | X_0 = i\} > 0\} $$
+$ d(i) = \gcd\{n : P\{X_n = i | X_0 = i\} > 0\} $
 
 - d(i) = 1：非周期状态（aperiodic）
 - d(i) > 1：具有周期性
@@ -90,11 +90,16 @@ $$ d(i) = \gcd\{n : P\{X_n = i | X_0 = i\} > 0\} $$
 
 对于有限状态的不可约且非周期的马尔可夫链，存在唯一的平稳分布 π 满足：
 
-$$ \pi P = \pi, \quad \sum_{j=1}^n \pi_j = 1, \quad \pi_j \ge 0 $$
+$ \pi P = \pi, \quad \sum_{j=1}^n \pi_j = 1, \quad \pi_j \ge 0 $
 
 ### 极限分布
 
-$$ \lim_{n \to \infty} P^n = \begin{pmatrix} \pi \\ \pi \\ \vdots \\ \pi \end{pmatrix} $$
+$$
+\lim_{n \to \infty} P^n =
+\begin{pmatrix}
+ \pi \\ \pi \\ \vdots \\ \pi 
+\end{pmatrix}
+$$
 
 即 $P^n$ 的各行都会收敛到同一个向量 π。
 
@@ -119,14 +124,19 @@ $$ \lim_{n \to \infty} P^n = \begin{pmatrix} \pi \\ \pi \\ \vdots \\ \pi \end{pm
 
 转移矩阵可写成准上三角形式：
 
-$$ P = \begin{pmatrix} P_1 & 0 & \cdots & 0 \\ 0 & P_2 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ R_1 & R_2 & \cdots & Q \end{pmatrix} $$
+$$
+P =
+\begin{pmatrix}
+ P_1 & 0 & \cdots & 0 \\ 0 & P_2 & \cdots & 0 \\ \vdots & \ddots & \vdots \\ R_1 & R_2 & \cdots & Q 
+\end{pmatrix}
+$$
 
-其中 Q 描述非常返状态之间的转移，R_i 表示从非常返状态到吸收态的转移。
+其中 Q 描述非常返状态之间的转移，$R_i$ 表示从非常返状态到吸收态的转移。
 
 ## 相关概念
 
 - [[CTMC|连续时间马尔可夫链]]
-- [[00_factor/concept/Stationary Distribution|平稳分布]]
+- [[Stationary Distribution|平稳分布]]
 
 ## 性质总结
 

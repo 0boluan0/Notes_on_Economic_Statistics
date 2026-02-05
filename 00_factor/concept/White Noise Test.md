@@ -24,7 +24,7 @@ tags:
 
 **统计量：**
 
-$$Q = T(T+2) \sum_{k=1}^{m} \frac{\hat{\rho}_k^2}{T-k}$$
+$Q = T(T+2) \sum_{k=1}^{m} \frac{\hat{\rho}_k^2}{T-k}$
 
 其中：
 - T：样本量
@@ -39,9 +39,9 @@ $$Q = T(T+2) \sum_{k=1}^{m} \frac{\hat{\rho}_k^2}{T-k}$$
 
 用于检验平方序列的自相关，检测ARCH效应：
 
-$$Q = T(T+2) \sum_{k=1}^{m} \frac{r_k^2}{T-k}$$
+$Q = T(T+2) \sum_{k=1}^{m} \frac{r_k^2}{T-k}$
 
-其中r_k是平方序列的自相关系数。
+其中$r_k$是平方序列的自相关系数。
 
 ### 3. ARCH-LM检验
 
@@ -49,7 +49,7 @@ $$Q = T(T+2) \sum_{k=1}^{m} \frac{r_k^2}{T-k}$$
 
 ## 检验步骤
 
-1. **计算样本自相关函数**：计算$\hat{\rho}_k$，k = 1, 2, ..., m
+1. **计算样本自相关函数**：$计算\hat{\rho}_k，k = 1, 2, ..., m$
 2. **计算检验统计量**：使用Ljung-Box或Box-Pierce统计量
 3. **比较临界值**：比较统计量与χ²(m)分布的临界值
 4. **判断**：若统计量显著，拒绝白噪声假设
@@ -66,4 +66,4 @@ $$Q = T(T+2) \sum_{k=1}^{m} \frac{r_k^2}{T-k}$$
 2. **小样本问题**：小样本下检验分布近似较差
 3. **多重检验**：检验多个滞后阶数时需考虑多重比较问题
 
-相关链接: [[00_factor/concept/Autocorrelation Function|自相关函数]], [[ARCH]], [[GARCH]], [[00_factor/concept/Ljung-Box Test|Ljung-Box检验]], [[00_factor/concept/Partial Autocorrelation Function|偏自相关函数]]
+相关链接: [[Autocorrelation Function|自相关函数]], [[ARCH]], [[GARCH]], [[Ljung-Box Test|Ljung-Box检验]], [[Partial Autocorrelation Function|偏自相关函数]]

@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
+                "file": "99_学习情况记录/2026-02-05——Thu.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "02_Strings,Input-Output and Branching"
+              "title": "2026-02-05——Thu"
             }
           }
         ],
@@ -287,9 +287,51 @@
               "icon": "terminal",
               "title": "Terminal: zsh"
             }
+          },
+          {
+            "id": "b3535002684673d1",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "terminal:terminal",
+              "state": {
+                "terminal:terminal": {
+                  "cwd": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic",
+                  "focus": false,
+                  "profile": {
+                    "args": [
+                      "--login"
+                    ],
+                    "executable": "/bin/zsh",
+                    "followTheme": true,
+                    "name": "",
+                    "platforms": {
+                      "darwin": true
+                    },
+                    "pythonExecutable": "python3",
+                    "restoreHistory": false,
+                    "rightClickAction": "copyPaste",
+                    "successExitCodes": [
+                      "0",
+                      "SIGINT",
+                      "SIGTERM"
+                    ],
+                    "terminalOptions": {
+                      "documentOverride": null
+                    },
+                    "type": "integrated",
+                    "useWin32Conhost": true
+                  },
+                  "serial": null
+                }
+              },
+              "pinned": true,
+              "icon": "terminal",
+              "title": "Terminal: zsh"
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 6
       },
       {
         "id": "8532e59675ffc5f1",
@@ -354,17 +396,27 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "b63aa4b85fa0dcb1",
+  "active": "36db59183709d800",
   "lastOpenFiles": [
-    "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
-    "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf",
+    "99_学习情况记录/2026-02-05——Thu.md",
     "03_Computer_Science/99_Miscellaneous/SQL.md",
+    "98_attachment/dashboards",
+    "99_学习情况记录/2026-02-04——Wed.md",
+    "03_Computer_Science/99_Miscellaneous/the_missing_semester.md",
+    "00_factor/procedure/CAPM Estimation.md",
+    "00_factor/procedure/ADF Test Steps.md",
+    "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
+    "00_factor/_link_check_report.md",
+    "99_学习情况记录/2026-02-02——Mon.md",
+    "99_学习情况记录/2026-02-03——Tue.md",
+    "00_factor/concept/Absolute VaR.md",
+    "00_factor/concept/2SLS.md",
+    "02_Economy/01_Econometrics/02_一元线性回归.md",
+    "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf",
     "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "02_Economy/01_Econometrics/03_多元线性回归.md",
     "02_Economy/01_Econometrics/01_导论.md",
-    "99_学习情况记录/2026-02-05——Thu.md",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec02.pdf",
-    "02_Economy/01_Econometrics/02_一元线性回归.md",
     "scripts/ocr_replace_images.py",
     "98_attachment/Pasted image 20250327091329.png",
     "98_attachment/Pasted image 20250327090402.png",
@@ -395,21 +447,11 @@
     "02_Economy/01_Econometrics/05_多元回归模型的矩阵表达.md",
     "02_Economy/01_Econometrics/06_多重共线性.md",
     "02_Economy/01_Econometrics/07_异方差.md",
-    "02_Economy/02_public finance财政学/2_财政支出/04_经常性支出.md",
-    "02_Economy/02_public finance财政学/2_财政支出/03_财政支出总论.md",
-    "Overview & Study Record.md",
     "03_Computer_Science/99_Miscellaneous",
-    "99_学习情况记录/2026-02-04——Wed.md",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec01.pdf",
-    "03_Computer_Science/99_Miscellaneous/the_missing_semester.md",
-    "03_Computer_Science/03_MIT 6.100L/02_Strings,Input/Output and Branching.md",
     "03_Computer_Science/03_MIT 6.100L/02_Strings,Input",
-    "99_学习情况记录/2026-02-03——Tue.md",
-    "99_学习情况记录/2026-02-02——Mon.md",
-    "CLAUDE.md",
     "99_学习情况记录/完成任务的日期",
     "99_学习情况记录/已复盘",
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_f22_lec01.pdf",
-    "03_Computer_Science/03_MIT 6.100L/mit6_100l_f22_lec01.pdf"
+    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_f22_lec01.pdf"
   ]
 }

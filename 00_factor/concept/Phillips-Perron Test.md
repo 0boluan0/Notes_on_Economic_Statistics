@@ -51,8 +51,8 @@ $\Delta y_t = \alpha + \beta t + \gamma y_{t-1} + \epsilon_t$
 ### 1. 基本DF统计量
 
 估计基本DF回归，得到：
-- $\hat{\gamma}$：$\gamma$的OLS估计量
-- $SE(\hat{\gamma})$：$\hat{\gamma}$的OLS标准误
+- $\hat{\gamma}$：$\gamma$ 的 OLS 估计量
+- $SE(\hat{\gamma})$：$\hat{\gamma}$ 的 OLS 标准误
 
 计算t统计量：
 $t_{\gamma} = \frac{\hat{\gamma}}{SE(\hat{\gamma})}$
@@ -63,7 +63,7 @@ PP检验修正标准误以考虑自相关和异方差：
 
 $SE(\hat{\gamma})_{\text{corrected}} = \sqrt{\frac{\hat{\sigma}^2_{\text{long}}}{\sum_{t=1}^T y_{t-1}^2}}$
 
-其中$\hat{\sigma}^2_{\text{long}}$是长方差估计。
+其中 $\hat{\sigma}^2_{\text{long}}$ 是长方差估计。
 
 ### 长方差估计
 
@@ -72,18 +72,18 @@ $SE(\hat{\gamma})_{\text{corrected}} = \sqrt{\frac{\hat{\sigma}^2_{\text{long}}}
 $\hat{\sigma}^2_{\text{long}} = \hat{\sigma}^2 \left[1 + 2\sum_{j=1}^l w_j \hat{\rho}_j\right]$
 
 其中：
-- $\hat{\sigma}^2$是误差项方差的OLS估计
-- $\hat{\rho}_j$是误差项的j阶自相关系数
+- $\hat{\sigma}^2$ 是误差项方差的 OLS 估计
+- $\hat{\rho}_j$ 是误差项的 $j$ 阶自相关系数
 - $w_j$是权重（通常用Bartlett权重）
-- $l$是截断滞后
+- l是截断滞后
 
 ### 3. 修正统计量
 
-#### Z_alpha统计量
+#### $Z_alpha$统计量
 
 $Z_{\alpha} = T \hat{\gamma} - \frac{1}{2}\left[T^2 \frac{SE(\hat{\gamma})_{\text{corrected}}^2 - SE(\hat{\gamma})^2}{\hat{\sigma}^2}\right]$
 
-#### Z_t统计量
+#### $Z_t$统计量
 
 $Z_t = \frac{\hat{\gamma}}{SE(\hat{\gamma})_{\text{corrected}}} - \frac{1}{2}\left[\frac{T^2 \cdot SE(\hat{\gamma})_{\text{corrected}}^2 - \sum_{t=1}^T \hat{\epsilon}_t^2}{\sum_{t=1}^T y_{t-1}^2}\right]\frac{SE(\hat{\gamma})_{\text{corrected}}}{SE(\hat{\gamma})}$
 
@@ -201,8 +201,8 @@ $Z_t = \frac{\hat{\gamma}}{SE(\hat{\gamma})_{\text{corrected}}} - \frac{1}{2}\le
 
 ### 输出内容
 
-- Z_alpha统计量
-- Z_t统计量
+- $Z_alpha$统计量
+- $Z_t$统计量
 - p值
 - 滞后截断
 - 检验形式
@@ -228,4 +228,4 @@ $Z_t = \frac{\hat{\gamma}}{SE(\hat{\gamma})_{\text{corrected}}} - \frac{1}{2}\le
 - 报告检验形式
 - 报告关键参数（滞后阶数、截断等）
 
-相关链接: [[00_factor/concept/Augmented Dickey-Fuller Test|ADF检验]], [[00_factor/concept/Unit Root Test|单位根检验]], [[00_factor/concept/Spurious Regression|伪回归]]
+相关链接: [[Augmented Dickey-Fuller Test|ADF检验]], [[Unit Root Test|单位根检验]], [[Spurious Regression|伪回归]]

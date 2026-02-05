@@ -26,6 +26,6 @@ tags:
 
 ## 相关链接
 
-- [[00_factor/concept/Repeated Games|重复博弈]]
-- [[00_factor/concept/Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
-- [[00_factor/concept/Nash Equilibrium|纳什均衡]]
+- [[Repeated Games|重复博弈]]
+- [[Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
+- [[Nash Equilibrium|纳什均衡]]

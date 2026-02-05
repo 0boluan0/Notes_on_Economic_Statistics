@@ -15,7 +15,7 @@ tags:
 
 ## 计算方法
 
-$$\text{NSFR} = \frac{\text{可得稳定资金（ASF）}}{\text{所需稳定资金（RSF）}} \geq 100\%$$
+$\text{NSFR} = \frac{\text{可得稳定资金（ASF）}}{\text{所需稳定资金（RSF）}} \geq 100\%$
 
 ### ASF 因子（负债与资本）
 
@@ -57,5 +57,5 @@ $$\text{NSFR} = \frac{\text{可得稳定资金（ASF）}}{\text{所需稳定资�
 
 ## 相关概念
 [[LCR]]
-[[00_factor/system/Stress Testing|压力测试]]
-[[00_factor/system/Basel Capital Adequacy Ratio|巴塞尔资本充足率]]
+[[Stress Testing|压力测试]]
+[[Basel Capital Adequacy Ratio|巴塞尔资本充足率]]

@@ -30,7 +30,7 @@ tags:
 
 ## 市场利率的影响因素
 
-$$r = r^* + RP = r^* + IP + DRP + LRP + MRP$$
+$r = r^* + RP = r^* + IP + DRP + LRP + MRP$
 
 其中：
 - $r^*$：纯粹利率，使用一年期国债的利率计量
@@ -101,4 +101,4 @@ $$r = r^* + RP = r^* + IP + DRP + LRP + MRP$$
 
 ## 相关链接
 
-[[00_factor/concept/Yield to Maturity|到期收益率]]
+[[Yield to Maturity|到期收益率]]

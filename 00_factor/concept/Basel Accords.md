@@ -71,15 +71,15 @@ tags:
 
 ## 风险加权资产（RWA）
 
-$$RWA = \sum_{i} \text{资产}_i \times \text{风险权重}_i$$
+$RWA = \sum_{i} \text{资产}_i \times \text{风险权重}_i$
 
 ## 资本充足率
 
-$$\text{资本充足率} = \frac{\text{资本}}{\text{RWA}} \times 100\%$$
+$\text{资本充足率} = \frac{\text{资本}}{\text{RWA}} \times 100\%$
 
 ## 监管资本要求
 
-$$\text{监管资本} = \text{RWA} \times 8\%$$
+$\text{监管资本} = \text{RWA} \times 8\%$
 
 ## 中国实施
 
@@ -87,4 +87,4 @@ $$\text{监管资本} = \text{RWA} \times 8\%$$
 - 中国版巴塞尔协议III：2013年发布
 - 核心监管框架：银保会《商业银行资本管理办法》
 
-相关链接: [[00_factor/concept/Credit Risk|信用风险]], [[00_factor/concept/Market Risk|市场风险]], [[00_factor/concept/Operational Risk|操作风险]], [[VaR]], [[00_factor/system/Capital Holding Ratio|资本金持有率]]
+相关链接: [[Credit Risk|信用风险]], [[Market Risk|市场风险]], [[Operational Risk|操作风险]], [[VaR]], [[Capital Holding Ratio|资本金持有率]]

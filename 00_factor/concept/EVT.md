@@ -10,12 +10,12 @@ tags:
 # Extreme Value Theory (EVT)
 
 ## 它是什么
-- 「Extreme Value Theory (EVT)」是一个待补充定义的核心概念卡片。
+- 「EVT」是指研究分布尾部极值行为的统计理论。
 
 ## 最小可检索信息
-- 定义：待补充
-- 符号/公式：待补充
-- 最小例子：待补充
+- 定义：研究分布尾部极值行为的统计理论。
+- 符号/公式：极值分布（GEV）或超越阈值的广义帕累托分布（GPD）。
+- 最小例子：用GPD拟合损失分布尾部计算VaR。
 
 ## 关联卡片
 - [[Historical Simulation Method]]

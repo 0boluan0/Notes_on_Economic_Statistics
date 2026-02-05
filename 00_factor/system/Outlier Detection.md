@@ -18,7 +18,7 @@ tags:
 
 ### 1. 学生化残差（Studentized Residual）
 
-$$r_i = \frac{e_i}{\sqrt{\hat{\sigma}^2(1-h_{ii})}}$$
+$r_i = \frac{e_i}{\sqrt{\hat{\sigma}^2(1-h_{ii})}}$
 
 其中：
 - $e_i$：普通残差
@@ -31,15 +31,15 @@ $$r_i = \frac{e_i}{\sqrt{\hat{\sigma}^2(1-h_{ii})}}$$
 
 ### 2. Cook距离（Cook's Distance）
 
-$$D_i = \frac{e_i^2}{k\hat{\sigma}^2} \cdot \frac{h_{ii}}{(1-h_{ii})^2}$$
+$D_i = \frac{e_i^2}{k\hat{\sigma}^2} \cdot \frac{h_{ii}}{(1-h_{ii})^2}$
 
-| 判断标准 | D_i > 0.5 | D_i > 1.0 |
+| 判断标准 | $D_i$ > 0.5 | $D_i$ > 1.0 |
 |----------|----------|----------|
 | 诊断 | 有影响点 | 强影响点 |
 
 ### 3. 杠杆值（Leverage）
 
-$$h_{ii} = x_i' (X'X)^{-1} x_i$$
+$h_{ii} = x_i' (X'X)^{-1} x_i$
 
 | 判断标准 | h_{ii} > 2(k+1)/n | h_{ii} > 3(k+1)/n |
 |----------|-------------------|-------------------|
@@ -47,7 +47,7 @@ $$h_{ii} = x_i' (X'X)^{-1} x_i$$
 
 ### 4. DFFITS
 
-$$\text{DFFITS}_i = \frac{\hat{y}_i - \hat{y}_{i(i)}}{\sqrt{\hat{\sigma}^2_{(i)} h_{ii}}}$$
+$\text{DFFITS}_i = \frac{\hat{y}_i - \hat{y}_{i(i)}}{\sqrt{\hat{\sigma}^2_{(i)} h_{ii}}}$
 
 其中 $\hat{y}_{i(i)}$ 是删除第i个观测后的预测值。
 
@@ -73,5 +73,5 @@ $$\text{DFFITS}_i = \frac{\hat{y}_i - \hat{y}_{i(i)}}{\sqrt{\hat{\sigma}^2_{(i)}
 | 难以区分异常值与真实极值 | 样本量小、领域知识不足 | 咨询领域专家、使用敏感性分析 |
 
 ## 相关概念
-[[00_factor/concept/Multicollinearity|多重共线性]]
+[[Multicollinearity|多重共线性]]
 [[Robust Regression|稳健回归]]

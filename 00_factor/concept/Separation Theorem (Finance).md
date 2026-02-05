@@ -11,12 +11,12 @@ tags:
 # Separation Theorem (Finance)
 
 ## 它是什么
-- 「Separation Theorem (Finance)」是一个待补充定义的核心概念卡片。
+- 「Separation Theorem (Finance)」是指均值-方差框架下最优组合可分解为无风险资产与切点组合的两基金分离。
 
 ## 最小可检索信息
-- 定义：待补充
-- 符号/公式：待补充
-- 最小例子：待补充
+- 定义：均值-方差框架下最优组合可分解为无风险资产与切点组合的两基金分离。
+- 符号/公式：$w^*=w_f\mathbf{1}+w_t。$
+- 最小例子：不同风险偏好仅调整无风险与市场组合的比例。
 
 ## 关联卡片
 - [[Mean-Variance Portfolio Optimization]]

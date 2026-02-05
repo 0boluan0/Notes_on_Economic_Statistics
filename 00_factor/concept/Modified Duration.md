@@ -15,5 +15,5 @@ $$
 
 ## 相关链接
 
-一般久期：[[00_factor/concept/duration|久期]]
-马考利久期：[[00_factor/concept/Macaulay Duration|马考利久期]]
+一般久期：[[duration|久期]]
+马考利久期：[[Macaulay Duration|马考利久期]]

@@ -30,18 +30,18 @@ tags:
 
 收集所需的基础数据：
 - 单一资产：市值 $V$、日波动率 $\sigma$
-- 多资产组合：各资产市值 $V_i$、波动率 $\sigma_i$、相关系数 $\rho_{ij}$
+- 多资产组合：各资产市值 V_i、波动率 \sigma_i、相关系数 \rho_{ij}
 
 **注意点**：短期常用 $\mu \approx 0$，长期需考虑期望收益。
 
 ### 步骤 2：计算组合标准差
 
 **单一资产**：
-$$ \sigma_p = \sigma \times V $$
+$\sigma_p = \sigma \times V$
 
 **多资产组合**：
-$$ \sigma_p^2 = \sum_{i=1}^{n}\sum_{j=1}^{n} V_i V_j \sigma_i \sigma_j \rho_{ij} $$
-$$ \sigma_p = \sqrt{\sigma_p^2} $$
+$\sigma_p^2 = \sum_{i=1}^{n}\sum_{j=1}^{n} V_i V_j \sigma_i \sigma_j \rho_{ij}$
+$\sigma_p = \sqrt{\sigma_p^2}$
 
 **注意点**：确保协方差矩阵正定，避免完全多重共线性。
 
@@ -54,25 +54,25 @@ $$ \sigma_p = \sqrt{\sigma_p^2} $$
 
 ### 步骤 4：计算单日VaR
 
-$$ \text{VaR}_{1天} = -(\mu + z_{\alpha}\sigma_p) $$
+$\text{VaR}_{1天} = -(\mu + z_{\alpha}\sigma_p)$
 
 当 $\mu \approx 0$ 时：
-$$ \text{VaR}_{1天} \approx z_{\alpha}\sigma_p $$
+$ \text{VaR}_{1天} \approx z_{\alpha}\sigma_p $
 
 **注意点**：VaR取正值，表示最大可能损失金额。
 
 ### 步骤 5：调整持有期
 
 当持有期 $T > 1$ 天时：
-$$ \text{VaR}_{T天} = \text{VaR}_{1天} \times \sqrt{T} $$
+$ \text{VaR}_{T天} = \text{VaR}_{1天} \times \sqrt{T} $
 
 **注意点**：此公式假设每日收益独立同分布。若存在自相关，需修正：
-$$ \sigma_{T} = \sqrt{\sigma^2(T + 2\sum_{k=1}^{T-1}(T-k)\rho^k)} $$
+$ \sigma_{T} = \sqrt{\sigma^2(T + 2\sum_{k=1}^{T-1}(T-k)\rho^k)} $
 
 ### 步骤 6：处理非线性资产（可选）
 
 对于期权等衍生品，使用Delta近似：
-$$ \Delta P \approx \delta \times \Delta S $$
+$ \Delta P \approx \delta \times \Delta S $
 将期权头寸等效为 $\delta$ 股标的资产，重复步骤2-5。
 
 更精确可使用Delta-Gamma-Cornish Fisher展开。
@@ -80,13 +80,13 @@ $$ \Delta P \approx \delta \times \Delta S $$
 ## 关键公式
 
 **单资产单日VaR**：
-$$ \text{VaR}_{\alpha} = z_{\alpha} \times \sigma \times V $$
+$ \text{VaR}_{\alpha} = z_{\alpha} \times \sigma \times V $
 
 **双资产组合标准差**：
-$$ \sigma_p = \sqrt{(V_1\sigma_1)^2 + (V_2\sigma_2)^2 + 2\rho V_1\sigma_1 V_2\sigma_2} $$
+$\sigma_p = \sqrt{(V_1\sigma_1)^2 + (V_2\sigma_2)^2 + 2\rho V_1\sigma_1 V_2\sigma_2}$
 
 **多日VaR（独立假设）**：
-$$ \text{VaR}_{\alpha,T} = z_{\alpha} \times \sigma_p \times \sqrt{T} $$
+$\text{VaR}_{\alpha,T} = z_{\alpha} \times \sigma_p \times \sqrt{T}$
 
 ## 常见问题
 
@@ -97,6 +97,6 @@ $$ \text{VaR}_{\alpha,T} = z_{\alpha} \times \sigma_p \times \sqrt{T} $$
 
 ## 相关概念
 [[VaR]]
-[[00_factor/concept/Historical Simulation Method|历史模拟法]]
-[[00_factor/concept/Monte Carlo Simulation Method|蒙特卡罗模拟法]]
-[[00_factor/concept/duration|久期]]
+[[Historical Simulation Method|历史模拟法]]
+[[Monte Carlo Simulation Method|蒙特卡罗模拟法]]
+[[duration|久期]]

@@ -20,11 +20,11 @@ tags:
     —— 组合风险不会超过各自单独风险之和，体现分散投资有益。
     
 3. **正齐次性（Positive Homogeneity）**
-    对任意$h>0$，$\varrho(hX) = h\varrho(X)$。
+$对任意h>0，\varrho(hX) = h\varrho(X)。$
     —— 投资规模变$h$倍，风险也变$h$倍。
     
 4. **平移不变性（Translational Invariance）**
-    对任意常数$K$，$\varrho(X+K) = \varrho(X) - K$。
+$对任意常数K，\varrho(X+K) = \varrho(X) - K。$
     —— 账户里直接加/减现金，只会减少/增加风险值$K$，风险结构本质不变。
 
 VaR不是一致度量标准.标准差和方差也不是.

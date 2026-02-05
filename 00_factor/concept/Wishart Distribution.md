@@ -18,19 +18,19 @@ Wishart 分布是多元情形下的卡方分布（$\chi^2$ 分布）的推广，
 
 ### 记号
 
-$$ (n-1)S \sim W_p(n-1, \Sigma) $$
+$(n-1)S \sim W_p(n-1, \Sigma)$
 
 其中：
 - $(n-1)S$：样本协方差矩阵的无缩放版本
 - $n-1$：自由度（degrees of freedom）
 - $\Sigma$：底层正态分布的真实协方差矩阵
-- p：维度
+- $p$：维度
 
 ## 形成原理
 
-如果 $Z_1, \dots, Z_m$ 是相互独立的 $N_p(0, \Sigma)$ 随机向量：
+如果 $Z_1, \ldots, Z_m$ 是相互独立的 $N_p(0, \Sigma)$ 随机向量：
 
-$$ \sum_{j=1}^m Z_j Z_j' \sim W_p(m, \Sigma) $$
+$\sum_{j=1}^m Z_j Z_j' \sim W_p(m, \Sigma)$
 
 ## 性质
 
@@ -42,14 +42,14 @@ $$ \sum_{j=1}^m Z_j Z_j' \sim W_p(m, \Sigma) $$
 ### 2. 可加性
 如果 $A_1 \sim W_{m_1}(\Sigma)$、$A_2 \sim W_{m_2}(\Sigma)$ 且相互独立：
 
-$$ A_1 + A_2 \sim W_{m_1 + m_2}(\Sigma) $$
+$(A_1 + A_2) \sim W_{m_1 + m_2}(\Sigma)$
 
 这与一维 $\chi^2$ 分布的可加性类似。
 
 ### 3. 矩阵变换保持形式
-如果 $A \sim W_m(\Sigma)$ 且 C 是可逆矩阵：
+如果 $A \sim W_m(\Sigma)$ 且 $C$ 是可逆矩阵：
 
-$$ CAC' \sim W_m(C\Sigma C') $$
+$CAC' \sim W_m(C\Sigma C')$
 
 ## 与 $\chi^2$ 分布的关系
 
@@ -58,7 +58,7 @@ $$ CAC' \sim W_m(C\Sigma C') $$
 | $\chi^2$ | 一元 | 一维样本方差 |
 | Wishart | 多元 | 多维样本协方差矩阵 |
 
-- 当 p = 1 时，Wishart 分布退化为 $\chi^2$ 分布
+- $当 p = 1 时，Wishart 分布退化为 \chi^2 分布$
 - Wishart 是多维情形下的"卡方分布矩阵版"
 
 ## 应用场景
@@ -77,7 +77,7 @@ $$ CAC' \sim W_m(C\Sigma C') $$
 
 ## 相关概念
 
-- [[00_factor/concept/Multivariate Normal Distribution|多元正态分布]]
+- [[Multivariate Normal Distribution|多元正态分布]]
 - [[Hotelling T2 Test|Hotelling T² 检验]]
 - [[Chi-square Distribution|卡方分布]]
 

@@ -53,9 +53,9 @@ $\Delta y_t = \alpha + \beta t + \gamma y_{t-1} + \sum_{i=1}^k \alpha_i \Delta y
 备择假设：$H_1: \gamma < 0$
 
 其中：
-- $k$是滞后阶数
-- $\alpha_i$是滞后差分项的系数
-- $\epsilon_t$是白噪声
+- k是滞后阶数
+- \alpha_i是滞后差分项的系数
+- \epsilon_t是白噪声
 
 ## 滞后阶数的选择
 
@@ -95,7 +95,7 @@ $BIC(k) = \ln\left(\frac{\text{SSR}}{T}\right) + \frac{k \ln T}{T}$
 
 3. **估计ADF回归**
    - OLS估计ADF方程
-   - 得到$\hat{\gamma}$及其标准误
+   - 得到 $\hat{\gamma}$ 及其标准误
 
 4. **计算t统计量**
    - $t = \frac{\hat{\gamma}}{SE(\hat{\gamma})}$
@@ -116,7 +116,7 @@ ADF检验的统计量服从τ分布，而非标准t分布。
 
 ### 原因
 
-- 在单位根假设下，$y_{t-1}$是随机游走
+- 在单位根假设下，y_{t-1}是随机游走
 - 与普通回归变量性质不同
 - 统计量分布左偏
 
@@ -131,7 +131,7 @@ ADF检验的统计量服从τ分布，而非标准t分布。
 | 特征 | DF检验 | ADF检验 |
 |------|--------|----------|
 | 误差项假设 | 白噪声 | 允许自相关 |
-| 滞后项 | 无 | 有$\Delta y_{t-i}$ |
+| 滞后项 | 无 | 有 $\Delta y_{t-i}$ |
 | 适用性 | 理想情况 | 实际数据 |
 | 检验能力 | 自相关时低 | 更强 |
 
@@ -204,4 +204,4 @@ ADF检验的统计量服从τ分布，而非标准t分布。
 
 数据存在结构断点时需要特殊处理。
 
-相关链接: [[00_factor/concept/Unit Root Test|单位根检验]], [[00_factor/concept/Phillips-Perron Test|PP检验]], [[00_factor/concept/Cointegration|协整]], [[00_factor/concept/Spurious Regression|伪回归]], [[AIC]], [[BIC]]
+相关链接: [[Unit Root Test|单位根检验]], [[Phillips-Perron Test|PP检验]], [[Cointegration|协整]], [[Spurious Regression|伪回归]], [[AIC]], [[BIC]]

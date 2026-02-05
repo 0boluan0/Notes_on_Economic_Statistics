@@ -13,7 +13,7 @@ tags:
 
 ## 模型形式
 
-$$y_{it} = \alpha_i + x_{it}'\beta + \varepsilon_{it}$$
+$y_{it} = \alpha_i + x_{it}'\beta + \varepsilon_{it}$
 
 其中：
 - y_{it}：个体i在时期t的观测值
@@ -32,7 +32,7 @@ $$y_{it} = \alpha_i + x_{it}'\beta + \varepsilon_{it}$$
 
 通过引入个体虚拟变量直接估计：
 
-$$y_{it} = \sum_{j=1}^{n} \alpha_j D_{jt} + x_{it}'\beta + \varepsilon_{it}$$
+$y_{it} = \sum_{j=1}^{n} \alpha_j D_{jt} + x_{it}'\beta + \varepsilon_{it}$
 
 其中D_{jt}是个体j的虚拟变量。
 
@@ -40,11 +40,11 @@ $$y_{it} = \sum_{j=1}^{n} \alpha_j D_{jt} + x_{it}'\beta + \varepsilon_{it}$$
 
 对每个个体i，计算均值：
 
-$$\bar{y}_i = \alpha_i + \bar{x}_i'\beta + \bar{\varepsilon}_i$$
+$\bar{y}_i = \alpha_i + \bar{x}_i'\beta + \bar{\varepsilon}_i$
 
 组内变换（去均值）：
 
-$$y_{it} - \bar{y}_i = (x_{it} - \bar{x}_i)'\beta + (\varepsilon_{it} - \bar{\varepsilon}_i)$$
+$y_{it} - \bar{y}_i = (x_{it} - \bar{x}_i)'\beta + (\varepsilon_{it} - \bar{\varepsilon}_i)$
 
 消除了α_i，然后用OLS估计。
 
@@ -58,13 +58,13 @@ $$y_{it} - \bar{y}_i = (x_{it} - \bar{x}_i)'\beta + (\varepsilon_{it} - \bar{\va
 
 可以同时包含个体固定效应和时间固定效应：
 
-$$y_{it} = \alpha_i + \lambda_t + x_{it}'\beta + \varepsilon_{it}$$
+$y_{it} = \alpha_i + \lambda_t + x_{it}'\beta + \varepsilon_{it}$
 
 ## R²计算
 
 组内R²（Within R²）：
 
-$$R^2_{within} = 1 - \frac{\sum_{i,t} \hat{\varepsilon}_{it}^2}{\sum_{i,t} (y_{it} - \bar{y}_i)^2}$$
+$R^2_{within} = 1 - \frac{\sum_{i,t} \hat{\varepsilon}_{it}^2}{\sum_{i,t} (y_{it} - \bar{y}_i)^2}$
 
 ## 豪斯曼检验
 
@@ -94,4 +94,4 @@ $$R^2_{within} = 1 - \frac{\sum_{i,t} \hat{\varepsilon}_{it}^2}{\sum_{i,t} (y_{i
 | 一致性 | 总是有效 | 假设正确时更有效 |
 | 适用 | α_i与x相关 | α_i与x不相关，样本代表总体 |
 
-相关链接: [[00_factor/concept/Random Effects Model|随机效应]], [[00_factor/concept/Hausman Test|豪斯曼检验]], [[00_factor/concept/Panel Data Model|面板数据模型]]
+相关链接: [[Random Effects Model|随机效应]], [[Hausman Test|豪斯曼检验]], [[Panel Data Model|面板数据模型]]

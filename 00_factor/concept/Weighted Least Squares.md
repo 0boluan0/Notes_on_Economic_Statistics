@@ -19,7 +19,7 @@ tags:
 ### 异方差问题
 
 当模型存在异方差时：
-$Var(\epsilon_i) = \sigma_i^2$（不同观测值方差不同）
+$Var(\epsilon_i) = \sigma_i^2（不同观测值方差不同）$
 
 ### 解决思路
 
@@ -50,7 +50,7 @@ $\min_{\beta} \sum_{i=1}^n w_i (y_i - X_i\beta)^2$
 
 ### 矩阵形式
 
-设$W$是对角权重矩阵：
+设W是对角权重矩阵：
 $W = \text{diag}(w_1, w_2, \dots, w_n)$
 
 WLS估计量为：
@@ -60,7 +60,7 @@ $\hat{\beta}_{WLS} = (X'WX)^{-1}X'Wy$
 
 ### 一般形式
 
-对于误差项协方差矩阵为$\Sigma$的模型：
+对于误差项协方差矩阵为 $\Sigma$ 的模型：
 $Var(\epsilon) = \Sigma$
 
 GLS估计量为：
@@ -68,13 +68,13 @@ $\hat{\beta}_{GLS} = (X'\Sigma^{-1}X)^{-1}X'\Sigma^{-1}y$
 
 ### 与WLS的关系
 
-当$\Sigma = \text{diag}(\sigma_1^2, \sigma_2^2, \dots, \sigma_n^2)$时：
+当 $\Sigma = \text{diag}(\sigma_1^2, \sigma_2^2, \dots, \sigma_n^2)$ 时：
 - $\Sigma^{-1} = W$
-- GLS退化为WLS
+- GLS 退化为 WLS
 
 ### P变换法
 
-设$\Sigma = PP'$，定义变换矩阵$P^{-1}$：
+设 $\Sigma = PP'$，定义变换矩阵 $P^{-1}$：
 
 变换后的模型：
 $P^{-1}y = P^{-1}X\beta + P^{-1}\epsilon$
@@ -88,22 +88,22 @@ $Var(P^{-1}\epsilon) = P^{-1}\Sigma(P^{-1})' = I$
 
 ### 问题
 
-实际中通常不知道真实的$\sigma_i^2$，需要估计。
+实际中通常不知道真实的 $\sigma_i^2$，需要估计。
 
 ### FGLS步骤
 
 #### 第一阶段
 
-1. 用OLS估计原模型，得到残差$\hat{\epsilon}_i$
-2. 对$\hat{\epsilon}_i^2$建模，拟合方差函数
+1. 用 OLS 估计原模型，得到残差 $\hat{\epsilon}_i$
+2. 对 $\hat{\epsilon}_i^2$ 建模，拟合方差函数
 
 常见方差函数：
 - $\sigma_i^2 = \alpha_0 + \alpha_1 z_i$
 - $\sigma_i^2 = \alpha_0 + \alpha_1 z_i + \alpha_2 z_i^2$
 
-其中$z_i$是影响方差的变量（可能是原解释变量）。
+其中 $z_i$ 是影响方差的变量（可能是原解释变量）。
 
-3. 得到方差估计$\hat{\sigma}_i^2$
+3. 得到方差估计 $\hat{\sigma}_i^2$
 
 #### 第二阶段
 
@@ -220,4 +220,4 @@ FGLS在样本量趋于无穷时：
 - 某些形式的条件异方差
 - ARCH/GARCH模型更合适
 
-相关链接: [[00_factor/concept/Heteroskedasticity|异方差]], [[OLS]], [[00_factor/concept/White Test|怀特检验]], [[GMM]]
+相关链接: [[Heteroskedasticity|异方差]], [[OLS]], [[White Test|怀特检验]], [[GMM]]

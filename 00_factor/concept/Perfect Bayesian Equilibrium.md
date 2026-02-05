@@ -78,10 +78,10 @@ tags:
 
 ## 相关概念
 
-- [[00_factor/concept/Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]
-- [[00_factor/concept/Bayesian Game|贝叶斯博弈]]
-- [[00_factor/concept/Separating Equilibrium|分离均衡]]
-- [[00_factor/concept/Pooling Equilibrium|混合均衡]]
+- [[Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]
+- [[Bayesian Game|贝叶斯博弈]]
+- [[Separating Equilibrium|分离均衡]]
+- [[Pooling Equilibrium|混合均衡]]
 
 ## 典型例子
 

@@ -73,5 +73,5 @@ tags:
 - 零和博弈思想限制了贸易发展
 
 ## 相关链接
-[[00_factor/concept/Physiocrats|重农学派]]
-[[00_factor/concept/Adam Smith's Economics|亚当斯密经济学]]
+[[Physiocrats|重农学派]]
+[[Adam Smith's Economics|亚当斯密经济学]]

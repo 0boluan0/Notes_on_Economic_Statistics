@@ -31,6 +31,6 @@ tags:
 
 ## 相关链接
 
-- [[00_factor/framework/Lewis Dual Sector Model|刘易斯模型]]
-- [[00_factor/framework/Fei-Ranis Model|费景汉-拉尼斯模型]]
-- [[00_factor/framework/Todaro Migration Model|托达罗模型]]
+- [[Lewis Dual Sector Model|刘易斯模型]]
+- [[Fei-Ranis Model|费景汉-拉尼斯模型]]
+- [[Todaro Migration Model|托达罗模型]]

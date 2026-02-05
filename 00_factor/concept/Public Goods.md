@@ -46,7 +46,7 @@ tags:
 
 ### 最优提供条件
 
-$$ \sum_{i=1}^n MRS_i = MRT $$
+$ \sum_{i=1}^n MRS_i = MRT $
 
 即：所有人的边际替代率之和等于边际转换率。
 
@@ -91,9 +91,9 @@ $$ \sum_{i=1}^n MRS_i = MRT $$
 
 ## 相关概念
 
-- [[00_factor/concept/Externality|外部性]]
-- [[00_factor/concept/Club Goods|俱乐部物品]]
-- [[00_factor/concept/Common Resources|公共资源]]
+- [[Externality|外部性]]
+- [[Club Goods|俱乐部物品]]
+- [[Common Resources|公共资源]]
 - [[Free-rider Problem|搭便车问题]]
 
 ## 应用

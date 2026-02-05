@@ -22,9 +22,8 @@ tags:
 
 ## Connections
 
-- 相关：[[00_factor/concept/Ljung-Box Test|Ljung-Box检验]]、[[00_factor/concept/White Noise Test|白噪声检验]]、[[ARCH]]、[[GARCH]]
+- 相关：[[Ljung-Box Test|Ljung-Box检验]]、[[White Noise Test|白噪声检验]]、[[ARCH]]、[[GARCH]]
 
-## source_notes
+## $source_notes$
 
-- [[04_波动建模 Modeling Volatility#4 侦测ARCH/GARCH效应]]
-
+- [[04_波动建模 Modeling Volatility#2.4 侦测ARCH/GARCH效应]]

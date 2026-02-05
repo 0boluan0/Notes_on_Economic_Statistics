@@ -16,7 +16,7 @@ tags:
 
 当 x 无限趋近于 a 时，f(x) 无限趋近于 L，记作：
 
-$$\lim_{x \to a} f(x) = L$$
+$\lim_{x \to a} f(x) = L$
 
 严格定义（ε-δ定义）：
 对任意 ε > 0，存在 δ > 0，使得当 0 < |x - a| < δ 时，有 |f(x) - L| < ε
@@ -30,7 +30,7 @@ $$\lim_{x \to a} f(x) = L$$
 
 $\lim_{x \to a} f(x)$ 存在的充要条件是左右极限都存在且相等：
 
-$$\lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x)$$
+$\lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x)$
 
 ## 无穷极限
 
@@ -41,7 +41,7 @@ $$\lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x)$$
 
 1. $\lim [f(x) ± g(x)] = \lim f(x) ± \lim g(x)$
 2. $\lim [f(x) · g(x)] = \lim f(x) · \lim g(x)$
-3. $\lim \frac{f(x)}{g(x)} = \frac{\lim f(x)}{\lim g(x)}$（分母不为零）
+3. $\lim \frac{f(x)}{g(x)} = \frac{\lim f(x)}{\lim g(x)}（分母不为零）$
 4. $\lim [f(x)]^n = [\lim f(x)]^n$
 
 ## 重要极限
@@ -77,5 +77,5 @@ $$\lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x)$$
 4. **连续性判定**：用极限判断函数连续性
 
 ## 相关链接
-[[00_factor/concept/Derivative (2)|导数]]
-[[00_factor/concept/Integral|积分]]
+[[Derivative (2)|导数]]
+[[Integral|积分]]

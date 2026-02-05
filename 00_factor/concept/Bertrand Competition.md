@@ -18,7 +18,7 @@ Bertrand 竞争是静态的寡头竞争模型，厂商针对价格进行竞争�
 
 ## 模型设定
 
-- n 个厂商同时选择价格 p_i
+- n 个厂商同时选择价格 $p_i$
 - 产品同质
 - 边际成本 c 相同
 - 市场需求：Q = D(p)
@@ -27,7 +27,7 @@ Bertrand 竞争是静态的寡头竞争模型，厂商针对价格进行竞争�
 
 在基本模型中：
 
-$$ p_1^* = p_2^* = ... = p_n^* = c $$
+$ p_1^* = p_2^* = ... = p_n^* = c $
 
 所有厂商的价格都等于边际成本，获得零利润。
 
@@ -61,8 +61,8 @@ $$ p_1^* = p_2^* = ... = p_n^* = c $$
 
 ## 相关概念
 
-- [[00_factor/concept/Cournot Competition|古诺竞争]]
-- [[00_factor/concept/Hotelling Model|Hotelling 模型]]
+- [[Cournot Competition|古诺竞争]]
+- [[Hotelling Model|Hotelling 模型]]
 
 ## 应用
 

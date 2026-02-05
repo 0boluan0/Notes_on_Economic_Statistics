@@ -66,11 +66,11 @@ rank(A) + nullity(A) = n
 ### Ax = b的解
 
 当b∈C(A)时，方程Ax = b的解为：
-x = x_p + x_n
+$x = x_p + x_n$
 
 其中：
-- x_p是特解
-- x_n∈N(A)是零空间中的任意向量
+- $x_p$是特解
+- $x_n$∈N(A)是零空间中的任意向量
 
 ## 重要性质
 
@@ -79,4 +79,4 @@ x = x_p + x_n
 3. 可逆矩阵的零空间只有零向量
 4. 奇异矩阵的零空间维数大于0
 
-相关链接: [[00_factor/concept/Subspace|子空间]], [[Column Space|列空间]], [[00_factor/concept/Matrix Rank|矩阵的秩]]
+相关链接: [[Subspace|子空间]], [[Column Space|列空间]], [[Matrix Rank|矩阵的秩]]

@@ -35,7 +35,7 @@ tags:
 ### 逆向压力测试
 
 从预定损失水平反推可能的市场变动：
-$$\min_{\Delta X} \sum_{i} w_i \Delta X_i \quad \text{s.t.} \quad \text{Loss} \geq L_{threshold}$$
+$\min_{\Delta X} \sum_{i} w_i \Delta X_i \quad \text{s.t.} \quad \text{Loss} \geq L_{threshold}$
 
 ## 判断标准
 

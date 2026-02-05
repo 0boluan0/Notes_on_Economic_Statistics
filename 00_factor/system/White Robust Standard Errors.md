@@ -20,16 +20,16 @@ tags:
 
 ### White 异方差一致协方差矩阵（HC0）
 
-$$Var(\hat{\beta})_{White} = (X'X)^{-1} \left[ \sum_{i=1}^n x_i x_i' e_i^2 \right] (X'X)^{-1}$$
+$Var(\hat{\beta})_{White} = (X'X)^{-1} \left[ \sum_{i=1}^n x_i x_i' e_i^2 \right] (X'X)^{-1}$
 
 ### 改进的White估计量
 
 | 类型 | 公式 | 特点 |
 |------|------|------|
-| HC0 | $(X'X)^{-1} (\sum x_i x_i' e_i^2) (X'X)^{-1}$ | 基本White估计 |
-| HC1 | $\frac{n}{n-k}(X'X)^{-1} (\sum x_i x_i' e_i^2) (X'X)^{-1}$ | 小样本调整 |
-| HC2 | $(X'X)^{-1} (\sum \frac{n}{n-k}(1-h_{ii})^{-1} x_i x_i' e_i^2) (X'X)^{-1}$ | 杠杆值调整 |
-| HC3 | $(X'X)^{-1} (\sum (1-h_{ii})^{-2} x_i x_i' e_i^2) (X'X)^{-1}$ | 更激进调整 |
+| HC0 | $(X'X)^{-1} \left(\sum x_i x_i' e_i^2\right) (X'X)^{-1}$ | 基本White估计 |
+| HC1 | $\frac{n}{n-k}(X'X)^{-1} \left(\sum x_i x_i' e_i^2\right) (X'X)^{-1}$ | 小样本调整 |
+| HC2 | $(X'X)^{-1} \left(\sum \frac{n}{n-k}(1-h_{ii})^{-1} x_i x_i' e_i^2\right) (X'X)^{-1}$ | 杠杆值调整 |
+| HC3 | $(X'X)^{-1} \left(\sum (1-h_{ii})^{-2} x_i x_i' e_i^2\right) (X'X)^{-1}$ | 更激进调整 |
 
 其中 $h_{ii}$ 是帽子矩阵对角元素。
 
@@ -61,6 +61,6 @@ $$Var(\hat{\beta})_{White} = (X'X)^{-1} \left[ \sum_{i=1}^n x_i x_i' e_i^2 \righ
 | 小样本下结果不稳定 | 样本量小 | 使用HC2或HC3、或自助法（Bootstrap） |
 
 ## 相关概念
-[[00_factor/system/Heteroscedasticity Diagnosis|异方差诊断]]
+[[Heteroscedasticity Diagnosis|异方差诊断]]
 [[Newey-West]]
 [[FGLS]]

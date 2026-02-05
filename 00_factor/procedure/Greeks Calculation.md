@@ -28,18 +28,18 @@ tags:
 
 ### 步骤 1：计算基础参数
 
-$$ d_1 = \frac{\ln(S/K) + (r + \sigma^2/2)T}{\sigma\sqrt{T}} $$
-$$ d_2 = d_1 - \sigma\sqrt{T} $$
+$ d_1 = \frac{\ln(S/K) + (r + \sigma^2/2)T}{\sigma\sqrt{T}} $
+$ d_2 = d_1 - \sigma\sqrt{T} $
 
 **注意点**：确保所有参数单位一致（时间单位与利率匹配）。
 
 ### 步骤 2：计算Delta
 
 **看涨期权**：
-$$ \Delta_c = \frac{\partial c}{\partial S} = N(d_1) $$
+$ \Delta_c = \frac{\partial c}{\partial S} = N(d_1) $
 
 **看跌期权**：
-$$ \Delta_p = \frac{\partial p}{\partial S} = N(d_1) - 1 $$
+$ \Delta_p = \frac{\partial p}{\partial S} = N(d_1) - 1 $
 
 其中 $N(\cdot)$ 为标准正态分布累积函数。
 
@@ -47,7 +47,7 @@ $$ \Delta_p = \frac{\partial p}{\partial S} = N(d_1) - 1 $$
 
 ### 步骤 3：计算Gamma
 
-$$ \Gamma = \frac{\partial^2 V}{\partial S^2} = \frac{N'(d_1)}{S\sigma\sqrt{T}} $$
+$ \Gamma = \frac{\partial^2 V}{\partial S^2} = \frac{N'(d_1)}{S\sigma\sqrt{T}} $
 
 其中 $N'(\cdot)$ 为标准正态密度函数。
 
@@ -56,39 +56,39 @@ $$ \Gamma = \frac{\partial^2 V}{\partial S^2} = \frac{N'(d_1)}{S\sigma\sqrt{T}} 
 ### 步骤 4：计算Theta
 
 **看涨期权**：
-$$ \Theta_c = -\frac{S N'(d_1)\sigma}{2\sqrt{T}} - r K e^{-rT} N(d_2) $$
+$ \Theta_c = -\frac{S N'(d_1)\sigma}{2\sqrt{T}} - r K e^{-rT} N(d_2) $
 
 **看跌期权**：
-$$ \Theta_p = -\frac{S N'(d_1)\sigma}{2\sqrt{T}} + r K e^{-rT} N(-d_2) $$
+$ \Theta_p = -\frac{S N'(d_1)\sigma}{2\sqrt{T}} + r K e^{-rT} N(-d_2) $
 
 **注意点**：Theta通常为负值（时间衰减），深度实值看跌期权Theta可能为正。
 
 ### 步骤 5：计算Vega
 
-$$ \text{Vega} = \frac{\partial V}{\partial \sigma} = S\sqrt{T} N'(d_1) $$
+$ \text{Vega} = \frac{\partial V}{\partial \sigma} = S\sqrt{T} N'(d_1) $
 
 **注意点**：看涨和看跌期权的Vega相同；波动率越高，期权价值越大。
 
 ### 步骤 6：计算Rho
 
 **看涨期权**：
-$$ \rho_c = \frac{\partial c}{\partial r} = K T e^{-rT} N(d_2) $$
+$ \rho_c = \frac{\partial c}{\partial r} = K T e^{-rT} N(d_2) $
 
 **看跌期权**：
-$$ \rho_p = \frac{\partial p}{\partial r} = -K T e^{-rT} N(-d_2) $$
+$ \rho_p = \frac{\partial p}{\partial r} = -K T e^{-rT} N(-d_2) $
 
 **注意点**：利率上升增加看涨期权价值，降低看跌期权价值。
 
 ## 关键公式
 
 **标准正态密度函数**：
-$$ N'(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2} $$
+$ N'(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2} $
 
 **Delta-Gamma近似**：
-$$ \Delta V \approx \Delta \times \Delta S + \frac{1}{2}\Gamma \times (\Delta S)^2 $$
+$ \Delta V \approx \Delta \times \Delta S + \frac{1}{2}\Gamma \times (\Delta S)^2 $
 
 **Theta-Vega-Rho近似**：
-$$ \Delta V \approx \Theta \times \Delta t + \text{Vega} \times \Delta \sigma + \rho \times \Delta r $$
+$ \Delta V \approx \Theta \times \Delta t + \text{Vega} \times \Delta \sigma + \rho \times \Delta r $
 
 ## 常见问题
 

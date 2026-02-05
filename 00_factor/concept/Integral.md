@@ -14,7 +14,7 @@ tags:
 
 不定积分是求函数的所有原函数。
 
-$$\int f(x) dx = F(x) + C$$
+$\int f(x) dx = F(x) + C$
 
 其中 $F'(x) = f(x)$，C 是任意常数。
 
@@ -22,7 +22,7 @@ $$\int f(x) dx = F(x) + C$$
 
 定积分计算函数在某区间内的定值。
 
-$$\int_a^b f(x) dx = F(b) - F(a)$$
+$\int_a^b f(x) dx = F(b) - F(a)$
 
 ## 定积分的几何意义
 
@@ -30,8 +30,8 @@ $$\int_a^b f(x) dx = F(b) - F(a)$$
 
 ## 基本积分公式
 
-1. $\int k dx = kx + C$（k为常数）
-2. $\int x^n dx = \frac{x^{n+1}}{n+1} + C$（n ≠ -1）
+1. $\int k dx = kx + C（k为常数）$
+2. $\int x^n dx = \frac{x^{n+1}}{n+1} + C（n ≠ -1）$
 3. $\int \frac{1}{x} dx = \ln|x| + C$
 4. $\int e^x dx = e^x + C$
 5. $\int a^x dx = \frac{a^x}{\ln a} + C$
@@ -48,15 +48,15 @@ $$\int_a^b f(x) dx = F(b) - F(a)$$
 
 ### 第一换元法（凑微分）
 
-$\int f(g(x))g'(x)dx = \int f(u)du$，其中 $u = g(x)$
+$\int f(g(x))g'(x)dx = \int f(u)du，其中 u = g(x)$
 
 ### 第二换元法（变量替换）
 
-设 $x = \phi(t)$，则 $\int f(x)dx = \int f(\phi(t))\phi'(t)dt$
+$设 x = \phi(t)，则 \int f(x)dx = \int f(\phi(t))\phi'(t)dt$
 
 ## 分部积分法
 
-$$\int u dv = uv - \int v du$$
+$\int u dv = uv - \int v du$
 
 ## 应用
 
@@ -67,5 +67,5 @@ $$\int u dv = uv - \int v du$$
 5. **经济学应用**：消费者剩余、生产者剩余
 
 ## 相关链接
-[[00_factor/concept/Derivative (2)|导数]]
-[[00_factor/concept/Fundamental Theorem of Calculus|微积分基本定理]]
+[[Derivative (2)|导数]]
+[[Fundamental Theorem of Calculus|微积分基本定理]]

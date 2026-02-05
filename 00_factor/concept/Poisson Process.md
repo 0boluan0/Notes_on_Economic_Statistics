@@ -23,11 +23,11 @@ tags:
 3. **平稳增量**：对于任意 s < t，增量 N(t) - N(s) 的分布只与区间长度 t-s 有关
 4. **泊松分布**：在任意长度为 t 的时间区间内，事件发生次数服从参数为 λt 的泊松分布
 
-$$ P\{N(t) = n\} = e^{-\lambda t}\frac{(\lambda t)^n}{n!}, \quad n = 0, 1, 2, \dots $$
+$ P\{N(t) = n\} = e^{-\lambda t}\frac{(\lambda t)^n}{n!}, \quad n = 0, 1, 2, \dots $
 
 ### 等价定义 2（指数间隔）
 
-相邻事件到达间隔 X_i 互相独立，且每个 X_i 服从指数分布 Exp(λ)。
+相邻事件到达间隔 $X_i$ 互相独立，且每个 $X_i$ 服从指数分布 Exp(λ)。
 
 ## 数字特征
 
@@ -35,23 +35,23 @@ $$ P\{N(t) = n\} = e^{-\lambda t}\frac{(\lambda t)^n}{n!}, \quad n = 0, 1, 2, \d
 
 ### 1. 均值函数
 
-$$ E[N(t)] = \lambda t $$
+$ E[N(t)] = \lambda t $
 
 ### 2. 方差函数
 
-$$ Var[N(t)] = \lambda t $$
+$ Var[N(t)] = \lambda t $
 
 ### 3. 协方差函数
 
 对于 0 ≤ s < t：
 
-$$ Cov(N(s), N(t)) = \lambda \min(s, t) $$
+$ Cov(N(s), N(t)) = \lambda \min(s, t) $
 
 ## 无记忆性
 
 由于相邻事件到达间隔服从指数分布，具有无记忆性：
 
-$$ P\{X > s + t \mid X > s\} = P\{X > t\} $$
+$ P\{X > s + t \mid X > s\} = P\{X > t\} $
 
 这也是泊松过程"没有后效"或"平稳"的重要根源。
 
@@ -59,17 +59,18 @@ $$ P\{X > s + t \mid X > s\} = P\{X > t\} $$
 
 ### 1. 时间间隔分布
 
-相邻事件的时间间隔 T_n 相互独立，且均服从指数分布 Exp(λ)：
+相邻事件的时间间隔 $T_n$ 相互独立，且均服从指数分布 Exp(λ)：
 
-$$ P\{T_n \le t\} = 1 - e^{-\lambda t}, \quad t \ge 0 $$
+$ P\{T_n \le t\} = 1 - e^{-\lambda t}, \quad t \ge 0 $
 
-$$ f_{T_n}(t) = \lambda e^{-\lambda t}, \quad t \ge 0 $$
+$ f_{T_n}(t) = \lambda e^{-\lambda t}, \quad t \ge 0 $
 
 ### 2. 等待时间分布
 
-第 n 次事件的等待时间 W_n = T_1 + T_2 + ... + T_n 服从 Gamma(n, λ) 分布：
+第 n 次事件的等待时间 $W_n$ = $T_1$ + $T_2$ + ... + $T_n$ 服从 Gamma(n, λ) 分布：
+$$
 
-$$ f_{W_n}(t) = \frac{\lambda e^{-\lambda t}(\lambda t)^{n-1}}{(n-1)!}, \quad t \ge 0 $$
+$ f_{W_n}(t) = \frac{\lambda e^{-\lambda t}(\lambda t)^{n-1}}{(n-1)!}, \quad t \ge 0 $
 
 - 均值：$E[W_n] = \frac{n}{\lambda}$
 - 方差：$Var[W_n] = \frac{n}{\lambda^2}$
@@ -80,7 +81,7 @@ $$ f_{W_n}(t) = \frac{\lambda e^{-\lambda t}(\lambda t)^{n-1}}{(n-1)!}, \quad t 
 
 联合密度：
 
-$$ f(t_1, t_2, \dots, t_n | N(t) = n) = \frac{n!}{t^n}, \quad 0 < t_1 < t_2 < \dots < t_n < t $$
+$ f(t_1, t_2, \dots, t_n | N(t) = n) = \frac{n!}{t^n}, \quad 0 < t_1 < t_2 < \dots < t_n < t $
 
 ## 非齐次泊松过程
 
@@ -90,11 +91,11 @@ $$ f(t_1, t_2, \dots, t_n | N(t) = n) = \frac{n!}{t^n}, \quad 0 < t_1 < t_2 < \d
 
 ### 均值函数
 
-$$ m_X(t) = \int_0^t \lambda(s)ds $$
+$ m_X(t) = \int_0^t \lambda(s)ds $
 
 ### 分布
 
-$$ P\{N(t) = n\} = \frac{[m_X(t)]^n}{n!} e^{-m_X(t)}, \quad n \ge 0 $$
+$ P\{N(t) = n\} = \frac{[m_X(t)]^n}{n!} e^{-m_X(t)}, \quad n \ge 0 $
 
 ## 应用场景
 
@@ -106,8 +107,8 @@ $$ P\{N(t) = n\} = \frac{[m_X(t)]^n}{n!} e^{-m_X(t)}, \quad n \ge 0 $$
 
 ## 相关概念
 
-- [[00_factor/concept/Compound Poisson Process|复合泊松过程]]
-- [[00_factor/concept/Renewal Process|更新过程]]
+- [[Compound Poisson Process|复合泊松过程]]
+- [[Renewal Process|更新过程]]
 - [[Exponential Distribution|指数分布]]
 
 ## 性质总结

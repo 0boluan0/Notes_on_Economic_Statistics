@@ -23,11 +23,11 @@ tags:
 
 - **Delta：**
     $$
-    \Delta = \frac{\partial C}{\partial S}
+\Delta = \frac{\partial C}{\partial S}
     $$
 - **Gamma：**
     $$
-    \Gamma = \frac{\partial^2 C}{\partial S^2} = \frac{\partial \Delta}{\partial S}
+\Gamma = \frac{\partial^2 C}{\partial S^2} = \frac{\partial \Delta}{\partial S}
     $$
 
 即$\Gamma$是$\Delta$对$S$的导数。
@@ -42,7 +42,7 @@ tags:
 
 假设你持有一个看涨期权：
 
-- 当前$\Delta = 0.5$，$\Gamma = 0.1$
+- $当前\Delta = 0.5，\Gamma = 0.1$
 - 若标的价格$S$上涨$1$元，则$\Delta$将增加$0.1$，变为$0.6$
 - 若$S$再上涨$1$元，$\Delta$又增加$0.1$，变为$0.7$
 
@@ -50,7 +50,7 @@ tags:
 
 # **五、Gamma中性的含义**
 
-- **Gamma中性**：通过期权和现货等多种组合，使得$\Gamma=0$，即对标的资产价格的二阶变动也不敏感。
+- **Gamma中性**：$通过期权和现货等多种组合，使得\Gamma=0，即对标的资产价格的二阶变动也不敏感。$
 - 这种策略可以让组合在标的资产出现大幅波动时也能较好地对冲风险。
 
 ## 相关链接

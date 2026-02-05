@@ -24,26 +24,26 @@ tags:
 
 ### 步骤 1：获取马考利久期
 
-若未计算马考利久期，先计算 $D_M$。参见[[00_factor/procedure/Macaulay Duration Calculation|马考利久期计算]]。
+若未计算马考利久期，先计算 $D_M$。参见[[Macaulay Duration Calculation|马考利久期计算]]。
 
 **注意点**：确保 $D_M$ 的单位（年或周期）与后续计算一致。
 
 ### 步骤 2：确定收益率周期
 
-$$ y_{\text{周期}} = \frac{y}{m} $$
+$ y_{\text{周期}} = \frac{y}{m} $
 
-例如：年收益率5%，半年付息，则 $y_{\text{周期}} = 2.5\%$。
+例如：$年收益率5%，半年付息，则 y_{\text{周期}} = 2.5\%。$
 
 ### 步骤 3：计算修正久期
 
-$$ D_{\text{mod}} = \frac{D_M}{1 + y_{\text{周期}}} $$
+$ D_{\text{mod}} = \frac{D_M}{1 + y_{\text{周期}}} $
 
-**注意点**：当使用连续复利收益率时，$D_{\text{mod}} = D_M$。
+**注意点**：$当使用连续复利收益率时，D_{\text{mod}} = D_M。$
 
 ### 步骤 4：单位统一
 
 若 $D_M$ 为周期久期，需转换为年久期：
-$$ D_{\text{mod}}^{\text{年}} = \frac{D_{\text{mod}}}{m} $$
+$ D_{\text{mod}}^{\text{年}} = \frac{D_{\text{mod}}}{m} $
 
 ### 步骤 5：验证结果
 
@@ -55,24 +55,24 @@ $$ D_{\text{mod}}^{\text{年}} = \frac{D_{\text{mod}}}{m} $$
 ## 关键公式
 
 **修正久期**：
-$$ D_{\text{mod}} = \frac{D_M}{1 + \frac{y}{m}} $$
+$D_{\text{mod}} = \frac{D_M}{1 + \frac{y}{m}}$
 
 **连续复利下**：
-$$ D_{\text{mod}} = D_M $$
+$D_{\text{mod}} = D_M$
 
 **价格变化近似**：
-$$ \frac{\Delta P}{P} \approx -D_{\text{mod}} \times \Delta y $$
+$ \frac{\Delta P}{P} \approx -D_{\text{mod}} \times \Delta y $
 
 **美元久期（DV01）**：
-$$ \text{DV01} = -D_{\text{mod}} \times P \times 0.0001 $$
+$ \text{DV01} = -D_{\text{mod}} \times P \times 0.0001 $
 
 ## 债券价格敏感性
 
 **1%利率变动影响**：
-$$ \Delta P \approx -D_{\text{mod}} \times P \times 0.01 $$
+$ \Delta P \approx -D_{\text{mod}} \times P \times 0.01 $
 
 **1基点利率变动影响**：
-$$ \Delta P \approx -D_{\text{mod}} \times P \times 0.0001 $$
+$ \Delta P \approx -D_{\text{mod}} \times P \times 0.0001 $
 
 **注意点**：利率上升，价格下降，故取负值表示损失。
 
@@ -84,6 +84,6 @@ $$ \Delta P \approx -D_{\text{mod}} \times P \times 0.0001 $$
 4. **含期权债券**：修正久期不准确，需用有效久期。
 
 ## 相关概念
-[[00_factor/concept/duration|久期]]
-[[00_factor/concept/Macaulay Duration|马考利久期]]
+[[duration|久期]]
+[[Macaulay Duration|马考利久期]]
 [[Convexity|凸性]]

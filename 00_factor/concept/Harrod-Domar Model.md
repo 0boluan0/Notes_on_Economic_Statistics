@@ -67,50 +67,50 @@ $Y = \min(VK, ZN)$
 $Y = VK$
 
 对时间求导：
-$$\frac{dY}{dt} = V\frac{dK}{dt}$$
+$\frac{dY}{dt} = V\frac{dK}{dt}$
 
 #### 投资与储蓄
 
 $I = \frac{dK}{dt} = S = sY$
 
 代入得：
-$$\frac{dY}{dt} = VsY$$
+$\frac{dY}{dt} = VsY$
 
 #### 保证增长率
 
-$$\frac{dY/dt}{Y} = Vs$$
+$\frac{dY/dt}{Y} = Vs$
 
 记作：$G_W = Vs$
 
 其中：
 - $G_W$是保证增长率（资本充分利用的增长率）
-- $V$是产出-资本比
-- $s$是储蓄率
+- V是产出-资本比
+- s是储蓄率
 
 ### 从劳动角度（自然增长率）
 
 #### 产出与劳动关系
 
-$Y = ZN$
+Y = ZN
 
 对时间求导：
-$$\frac{dY}{dt} = Z\frac{dN}{dt}$$
+$\frac{dY}{dt} = Z\frac{dN}{dt}$
 
 #### 自然增长率
 
-$$\frac{dY/dt}{Y} = \frac{dN/dt}{N} = n$$
+$\frac{dY/dt}{Y} = \frac{dN/dt}{N} = n$
 
-记作：$G_N = n$
+记作：$G_N$ = n
 
 其中：
 - $G_N$是自然增长率（劳动充分就业的增长率）
-- $n$是人口增长率
+- n是人口增长率
 
 ## 均衡增长条件
 
 ### 基本条件
 
-$Vs = n$
+Vs = n
 
 即保证增长率等于自然增长率。
 
@@ -138,9 +138,9 @@ $Vs = n$
 
 ### 不稳定性
 
-均衡条件$Vs = n$难以满足：
+均衡条件Vs = n难以满足：
 
-- 如果$Vs$和$n$微小偏离
+- 如果Vs和n微小偏离
 - 经济会偏离均衡路径
 - 不会自动回到均衡
 
@@ -215,4 +215,4 @@ $Vs = n$
 - 需要更灵活的增长模型
 - 索罗模型解决了要素替代问题
 
-相关链接: [[00_factor/concept/Solow Model|索罗增长模型]], [[00_factor/concept/Economic Growth|经济增长]], [[00_factor/concept/Malthusian Trap|马尔萨斯人口陷阱]]
+相关链接: [[00_factor/concept/Solow Model|索罗增长模型]], [[Economic Growth|经济增长]], [[Malthusian Trap|马尔萨斯人口陷阱]]

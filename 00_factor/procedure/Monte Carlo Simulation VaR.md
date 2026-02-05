@@ -28,7 +28,7 @@ tags:
 ### 步骤 1：设定风险因子模型
 
 为每个风险因子选择合适的随机过程模型：
-- 股票价格：几何布朗运动 $dS = \mu S dt + \sigma S dW$
+- 股票价格：$几何布朗运动 dS = \mu S dt + \sigma S dW$
 - 利率：Vasicek/Hull-White模型
 - 汇率：GBM模型
 
@@ -45,7 +45,7 @@ tags:
 
 使用Cholesky分解生成相关的随机数：
 1. 对相关矩阵 $\Sigma$ 进行Cholesky分解：$\Sigma = LL^T$
-2. 生成独立标准正态随机数 $z_1, z_2, \dots, z_M$
+2. 生成独立标准正态随机数 $z_1, z_2, \ldots, z_M$
 3. 计算相关随机数：$\epsilon = L \cdot z$
 
 **注意点**：确保相关矩阵正定。
@@ -59,38 +59,38 @@ tags:
 ### 步骤 5：重新定价组合
 
 对每次模拟，计算组合期末价值：
-$$ P_i^{\text{end}} = \text{Reprice}(\text{组合}, \{S_{i,t}\}_{t=1}^T) $$
+$ P_i^{\text{end}} = \text{Reprice}(\text{组合}, \{S_{i,t}\}_{t=1}^T) $
 
 计算组合损益：
-$$ \Delta P_i = P_i^{\text{end}} - P_0 $$
+$ \Delta P_i = P_i^{\text{end}} - P_0 $
 
 **注意点**：路径依赖产品（如美式期权）需沿着路径逐步定价。
 
 ### 步骤 6：构建损益分布
 
-将所有模拟的损益 $\{\Delta P_i\}_{i=1}^{N_{sim}}$ 从小到大排序。
+$将所有模拟的损益 \{\Delta P_i\}_{i=1}^{N_{sim}} 从小到大排序。$
 
 ### 步骤 7：计算VaR
 
 取尾部 $(1-\alpha)$ 分位数：
-$$ \text{VaR}_{\alpha} = -\Delta P_{(\lceil N_{sim} \times (1-\alpha) \rceil)} $$
+$ \text{VaR}_{\alpha} = -\Delta P_{(\lceil N_{sim} \times (1-\alpha) \rceil)} $
 
 **注意点**：模拟次数 $N_{sim}$ 越大，VaR估计越精确。
 
 ### 步骤 8：计算ES（可选）
 
-$$ \text{ES}_{\alpha} = -\frac{1}{N_{sim}(1-\alpha)} \sum_{i=1}^{N_{sim}(1-\alpha)} \Delta P_{(i)} $$
+$ \text{ES}_{\alpha} = -\frac{1}{N_{sim}(1-\alpha)} \sum_{i=1}^{N_{sim}(1-\alpha)} \Delta P_{(i)} $
 
 ## 关键公式
 
 **几何布朗运动离散化**：
-$$ S_{t+1} = S_t \exp\left[\left(\mu - \frac{\sigma^2}{2}\right)\Delta t + \sigma \sqrt{\Delta t} z\right] $$
+$ S_{t+1} = S_t \exp\left[\left(\mu - \frac{\sigma^2}{2}\right)\Delta t + \sigma \sqrt{\Delta t} z\right] $
 
 **Cholesky分解**：
-$$ \Sigma = LL^T, \quad \epsilon = Lz $$
+$ \Sigma = LL^T, \quad \epsilon = Lz $
 
 **VaR估计误差**：
-$$ \text{SE}(\text{VaR}) \propto \frac{1}{\sqrt{N_{sim}}} $$
+$ \text{SE}(\text{VaR}) \propto \frac{1}{\sqrt{N_{sim}}} $
 
 ## 常见问题
 
@@ -101,5 +101,5 @@ $$ \text{SE}(\text{VaR}) \propto \frac{1}{\sqrt{N_{sim}}} $$
 
 ## 相关概念
 [[VaR]]
-[[00_factor/procedure/VaR Parametric Method|VaR参数法计算]]
-[[00_factor/procedure/Historical Simulation VaR|历史模拟法VaR计算]]
+[[VaR Parametric Method|VaR参数法计算]]
+[[Historical Simulation VaR|历史模拟法VaR计算]]

@@ -28,8 +28,8 @@ Y = Y(N,K) = \min(VK, ZN)
 $$
 
 其中：
-- $V = \frac{Y}{K}$ 是产出-资本比
-- $Z = \frac{Y}{N}$ 是产出-劳动比
+- $V = \frac{Y}{K} 是产出-资本比$
+- $Z = \frac{Y}{N} 是产出-劳动比$
 - $V$ 和 $Z$ 都是固定的常数
 
 ## 两个重要增长率
@@ -67,5 +67,5 @@ $$
 4. 假设过于严格，与现实差距较大
 
 ## 相关链接
-[[00_factor/framework/Solow Model|索罗模型]]
+[[00_factor/concept/Solow Model|索罗模型]]
 [[00_factor/concept/Kuznets Modern Economic Growth Theory|库兹涅茨现代经济增长理论]]

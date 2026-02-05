@@ -16,8 +16,8 @@ tags:
 
 ## 所需数据/条件
 
-- 平稳时间序列 ${y_t}_{t=1}^T$
-- 或已中心化的序列 ${\epsilon_t}_{t=1}^T$（均值为零）
+- $平稳时间序列 {y_t}_{t=1}^T$
+- $或已中心化的序列 {\epsilon_t}_{t=1}^T（均值为零）$
 
 ## 计算步骤
 
@@ -52,9 +52,9 @@ $$
 $$
 
 **PACF**（通过回归估计）：
-估计 $y_t = \phi_{k1} y_{t-1} + \cdots + \phi_{kk} y_{t-k} + e_t$，得到 $\hat{\phi}_{kk}$
+$估计 y_t = \phi_{k1} y_{t-1} + \cdots + \phi_{kk} y_{t-k} + e_t，得到 \hat{\phi}_{kk}$
 
-**注意点**：一般取 $K = 20$ 或 $K = \sqrt{T}$。
+**注意点**：$一般取 K = 20 或 K = \sqrt{T}。$
 
 #### 步骤 4：初步识别模型
 
@@ -111,11 +111,11 @@ $$
 #### 步骤 8：残差分析
 
 计算模型残差：
-$$\hat{\epsilon}_t = y_t - \hat{y}_t, \quad t=1,\dots,T
+$\hat{\epsilon}_t = y_t - \hat{y}_t, \quad t=1,\dots,T$
 $$
 
 检验残差性质：
-- **零均值检验**：$\bar{\epsilon} \approx 0$
+- **零均值检验**：\bar{\epsilon} \approx 0
 - **正态性检验**：使用Jarque-Bera检验或QQ图
 - **白噪声检验**：使用Ljung-Box或Box-Pierce检验
 
@@ -126,17 +126,17 @@ $$
 检验残差是否为白噪声（无自相关）：
 
 $$
-Q = T \sum_{k=1}^{s} \hat{\rho}_{\epsilon,k}^2 \xrightarrow{d} \chi^2(s)
+$Q = T \sum_{k=1}^{s} \hat{\rho}_{\epsilon,k}^2 \xrightarrow{d} \chi^2(s)$
 $$
 
-其中 $s$ 为检验滞后期数（如10或20）。
+其中 s 为检验滞后期数（如10或20）。
 
-**注意点**：若 $Q > \chi^2_{\alpha}(s)$，拒绝白噪声假设。
+**注意点**：若 Q > \chi^2_{\alpha}(s)，拒绝白噪声假设。
 
 #### 步骤 10：预测（可选）
 
 一步预测：
-$$\hat{y}_{T+1|T} = \hat{\phi}_1 y_T + \cdots + \hat{\phi}_p y_{T-p+1} + \hat{\theta}_1 \hat{\epsilon}_T + \cdots
+\hat{y}_{T+1|T} = \hat{\phi}_1 y_T + \cdots + \hat{\phi}_p y_{T-p+1} + \hat{\theta}_1 \hat{\epsilon}_T + \cdots
 $$
 
 多步预测需递推公式。
@@ -178,6 +178,6 @@ $$
 
 ## 相关概念
 [[Stationary Time Series|平稳时间序列]]
-[[00_factor/procedure/ARMA Model Identification Steps|ARMA模型识别步骤]]
-[[00_factor/procedure/GARCH Model Estimation Steps|GARCH模型估计步骤]]
-[[00_factor/concept/Unit Root Test|单位根]]
+[[ARMA Model Identification Steps|ARMA模型识别步骤]]
+[[GARCH Model Estimation Steps|GARCH模型估计步骤]]
+[[Unit Root Test|单位根]]

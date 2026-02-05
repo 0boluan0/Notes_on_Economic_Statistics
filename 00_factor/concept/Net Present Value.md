@@ -17,7 +17,7 @@ tags:
 
 ## 计算公式
 
-$$净现值 = \sum_{k=0}^{n} \frac{I_k}{(1 + i)^k} - \sum_{k=0}^{n} \frac{O_k}{(1 + i)^k}$$
+$净现值 = \sum_{k=0}^{n} \frac{I_k}{(1 + i)^k} - \sum_{k=0}^{n} \frac{O_k}{(1 + i)^k}$
 
 其中：
 - $I_k$：第k期现金流入
@@ -51,8 +51,8 @@ $$净现值 = \sum_{k=0}^{n} \frac{I_k}{(1 + i)^k} - \sum_{k=0}^{n} \frac{O_k}{(
 ## 相对指标
 
 为了解决规模差异问题，可以使用：
-- [[00_factor/concept/Profitability Index|现值指数]]：未来现金流入现值与现金流出现值的比率
-- [[00_factor/concept/Internal Rate of Return|内涵报酬率]]：使净现值为零的折现率
+- [[Profitability Index|现值指数]]：未来现金流入现值与现金流出现值的比率
+- [[Internal Rate of Return|内涵报酬率]]：使净现值为零的折现率
 
 ## 应用场景
 
@@ -61,5 +61,5 @@ $$净现值 = \sum_{k=0}^{n} \frac{I_k}{(1 + i)^k} - \sum_{k=0}^{n} \frac{O_k}{(
 3. **资本预算**：制定投资计划
 
 ## 相关链接
-[[00_factor/concept/Profitability Index|现值指数]]
-[[00_factor/concept/Internal Rate of Return|内涵报酬率]]
+[[Profitability Index|现值指数]]
+[[Internal Rate of Return|内涵报酬率]]

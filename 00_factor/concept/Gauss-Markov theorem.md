@@ -15,7 +15,7 @@ tags:
 ## 定理内容
 
 **经典线性回归模型（CLRM）**：
-$$y = X\beta + \varepsilon$$
+$y = X\beta + \varepsilon$
 
 其中：
 - $y$ 为 $n \times 1$ 观测向量
@@ -25,10 +25,10 @@ $$y = X\beta + \varepsilon$$
 
 **高斯-马尔可夫假设**：
 
-1. **线性性**：$y = X\beta + \varepsilon$（参数线性）
+1. **线性性**：$y = X\beta + \varepsilon（参数线性）$
 2. **严格外生性**：$E[\varepsilon | X] = 0$
 3. **同方差性**：$\text{Var}(\varepsilon | X) = \sigma^2 I_n$
-4. **无自相关**：$\text{Cov}(\varepsilon_i, \varepsilon_j) = 0$ 当 $i \neq j$
+4. **无自相关**：$\text{Cov}(\varepsilon_i, \varepsilon_j) = 0 当 i \neq j$
 5. **非随机回归元**（或条件于 $X$）：$X$ 可以视为固定
 
 **高斯-马尔可夫定理**：
@@ -48,7 +48,7 @@ $$y = X\beta + \varepsilon$$
 ### 步骤 1：推导 OLS 估计量
 
 最小化残差平方和：
-$$S(\beta) = (y - X\beta)'(y - X\beta)$$
+$S(\beta) = (y - X\beta)'(y - X\beta)$
 
 展开并对 $\beta$ 求导：
 $$
@@ -59,17 +59,17 @@ S(\beta) &= y'y - 2\beta'X'y + \beta'X'X\beta \\
 $$
 
 令导数为 0，得到**正规方程组**：
-$$X'X\hat{\beta} = X'y$$
+$X'X\hat{\beta} = X'y$
 
 解得 OLS 估计量：
-$$\hat{\beta}_{OLS} = (X'X)^{-1}X'y$$
+$\hat{\beta}_{OLS} = (X'X)^{-1}X'y$
 
 ### 步骤 2：证明 OLS 是线性估计量
 
 $\hat{\beta}_{OLS}$ 可以表示为：
-$$\hat{\beta}_{OLS} = (X'X)^{-1}X'y = A y$$
+$\hat{\beta}_{OLS} = (X'X)^{-1}X'y = A y$
 
-其中 $A = (X'X)^{-1}X'$ 是 $k \times n$ 矩阵，仅依赖于 $X$。
+$其中 A = (X'X)^{-1}X' 是 k \times n 矩阵，仅依赖于 X。$
 
 因此 $\hat{\beta}_{OLS}$ 是观测向量 $y$ 的**线性组合**。
 
@@ -87,7 +87,7 @@ E[\hat{\beta}_{OLS} | X] &= E[(X'X)^{-1}X'y | X] \\
 \end{aligned}
 $$
 
-因此 $E[\hat{\beta}_{OLS}] = \beta$，OLS 估计量是**无偏的**。
+$因此 E[\hat{\beta}_{OLS}] = \beta，OLS 估计量是**无偏的**。$
 
 ### 步骤 4：计算 OLS 的方差
 
@@ -105,22 +105,22 @@ $$
 
 ### 步骤 5：考虑任意线性无偏估计量
 
-设 $\tilde{\beta} = Cy$ 为任意线性估计量，其中 $C$ 为 $k \times n$ 矩阵。
+$设 \tilde{\beta} = Cy 为任意线性估计量，其中 C 为 k \times n 矩阵。$
 
 **无偏性条件**：
-$$E[\tilde{\beta} | X] = CE[y | X] = CX\beta = \beta$$
+$E[\tilde{\beta} | X] = CE[y | X] = CX\beta = \beta$
 
 这要求 $CX = I$（单位矩阵），即 $C$ 必须满足 $CX = I$。
 
 ### 步骤 6：比较 OLS 与任意线性无偏估计量的方差
 
 计算 $\tilde{\beta}$ 的方差：
-$$\text{Var}(\tilde{\beta} | X) = \text{Var}(Cy | X) = C \text{Var}(y | X) C' = \sigma^2 C C'$$
+$\text{Var}(\tilde{\beta} | X) = \text{Var}(Cy | X) = C \text{Var}(y | X) C' = \sigma^2 C C'$
 
-令 $C = (X'X)^{-1}X' + D$，其中 $D$ 是任意 $k \times n$ 矩阵。
+$令 C = (X'X)^{-1}X' + D，其中 D 是任意 k \times n 矩阵。$
 
 由无偏性条件 $CX = I$：
-$$[(X'X)^{-1}X' + D]X = I \Rightarrow (X'X)^{-1}X'X + DX = I \Rightarrow I + DX = I \Rightarrow DX = 0$$
+$[(X'X)^{-1}X' + D]X = I \Rightarrow (X'X)^{-1}X'X + DX = I \Rightarrow I + DX = I \Rightarrow DX = 0$
 
 计算 $\tilde{\beta}$ 的方差：
 $$
@@ -134,13 +134,13 @@ $$
 $$
 
 利用 $DX = 0$，则 $(DX)' = X'D' = 0$，因此：
-$$\text{Var}(\tilde{\beta} | X) = \sigma^2 [(X'X)^{-1} + D D']$$
+$\text{Var}(\tilde{\beta} | X) = \sigma^2 [(X'X)^{-1} + D D']$
 
 由于 $D D'$ 是半正定矩阵（对角线元素非负），有：
-$$\text{Var}(\tilde{\beta} | X) = \text{Var}(\hat{\beta}_{OLS} | X) + \sigma^2 D D' \geq \text{Var}(\hat{\beta}_{OLS} | X)$$
+$\text{Var}(\tilde{\beta} | X) = \text{Var}(\hat{\beta}_{OLS} | X) + \sigma^2 D D' \geq \text{Var}(\hat{\beta}_{OLS} | X)$
 
 即：
-$$\text{Var}(\tilde{\beta}) - \text{Var}(\hat{\beta}_{OLS}) = \sigma^2 D D' \text{ 是半正定的}$$
+$\text{Var}(\tilde{\beta}) - \text{Var}(\hat{\beta}_{OLS}) = \sigma^2 D D' \text{ 是半正定的}$
 
 ### 步骤 7：证明最小方差性
 
@@ -155,7 +155,7 @@ $$
 
 这意味着 OLS 估计量的每个元素的方差都不大于任意其他线性无偏估计量对应元素的方差。
 
-**特殊情况**：当且仅当 $D = 0$（即 $C = (X'X)^{-1}X'$）时，$\tilde{\beta} = \hat{\beta}_{OLS}$。
+**特殊情况**：$当且仅当 D = 0（即 C = (X'X)^{-1}X'）时，\tilde{\beta} = \hat{\beta}_{OLS}。$
 
 ## 结论
 
@@ -163,20 +163,20 @@ $$
 
 1. **线性**：$\hat{\beta}_{OLS} = (X'X)^{-1}X'y$
 2. **无偏**：$E[\hat{\beta}_{OLS}] = \beta$
-3. **有效**：$\text{Var}(\hat{\beta}_{OLS}) = \sigma^2 (X'X)^{-1}$ 达到最小
+3. **有效**：$\text{Var}(\hat{\beta}_{OLS}) = \sigma^2 (X'X)^{-1} 达到最小$
 
 **OLS 的方差公式**：
-$$\text{Var}(\hat{\beta}_{OLS}) = \sigma^2 (X'X)^{-1}$$
+$\text{Var}(\hat{\beta}_{OLS}) = \sigma^2 (X'X)^{-1}$
 
 **假设的必要性**：
 
-- **外生性**：$E[\varepsilon | X] = 0$ 是无偏性的必要条件
-- **同方差和无自相关**：$\text{Var}(\varepsilon | X) = \sigma^2 I$ 是有效性的必要条件
+- **外生性**：$E[\varepsilon | X] = 0 是无偏性的必要条件$
+- **同方差和无自相关**：$\text{Var}(\varepsilon | X) = \sigma^2 I 是有效性的必要条件$
 - 若违反同方差（异方差），应使用 GLS（广义最小二乘法）
 - 若违反无自相关（序列相关），应使用 Newey-West 标准误
 
 ## 相关概念
 [[OLS Estimator|OLS估计量]]
 [[Linear Regression Model|线性回归模型]]
-[[00_factor/procedure/OLS Estimation Steps|OLS估计步骤]]
-[[00_factor/concept/Heteroskedasticity|异方差]]
+[[OLS Estimation Steps|OLS估计步骤]]
+[[Heteroskedasticity|异方差]]

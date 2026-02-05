@@ -15,10 +15,10 @@ ARMA(p,q)模型是自回归移动平均模型，结合了AR(p)和MA(q)两种模�
 
 ## 模型形式
 
-$$y_t = c + \sum_{i=1}^{p} \phi_i y_{t-i} + \sum_{j=1}^{q} \theta_j \varepsilon_{t-j} + \varepsilon_t$$
+$y_t = c + \sum_{i=1}^{p} \phi_i y_{t-i} + \sum_{j=1}^{q} \theta_j \varepsilon_{t-j} + \varepsilon_t$
 
 其中：
-- y_t：时间序列在t期的值
+- $y_t$：时间序列在t期的值
 - c：常数项
 - φ_i：自回归系数
 - θ_j：移动平均系数
@@ -28,7 +28,7 @@ $$y_t = c + \sum_{i=1}^{p} \phi_i y_{t-i} + \sum_{j=1}^{q} \theta_j \varepsilon_
 
 ARMA模型平稳性仅由AR部分决定，要求特征方程的根在单位圆外：
 
-$$1 - \phi_1 z - \phi_2 z^2 - \cdots - \phi_p z^p = 0$$
+$1 - \phi_1 z - \phi_2 z^2 - \cdots - \phi_p z^p = 0$
 
 所有根|z| > 1。
 
@@ -54,8 +54,8 @@ $$1 - \phi_1 z - \phi_2 z^2 - \cdots - \phi_p z^p = 0$$
 - **AIC**：-2ln(L) + 2k
 - **BIC**：-2ln(L) + k·ln(T)
 
-相关链接: [[00_factor/concept/Autocorrelation Function|自相关函数]], [[00_factor/concept/Partial Autocorrelation Function|偏自相关函数]], [[ARCH]], [[GARCH]], [[00_factor/concept/Stationarity|平稳性]], [[AIC]], [[BIC]]
+相关链接: [[Autocorrelation Function|自相关函数]], [[Partial Autocorrelation Function|偏自相关函数]], [[ARCH]], [[GARCH]], [[Stationarity|平稳性]], [[AIC]], [[BIC]]
 
-## source_notes
+## $source_notes$
 
 - [[03_平稳时间序列模型#1.1 自回归移动平均模型ARMA(p,q) model]]

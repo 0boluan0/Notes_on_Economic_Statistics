@@ -28,7 +28,7 @@ $\epsilon_t = y_t - \beta x_t \sim I(0)$
 ### 检验思路
 
 1. 先估计协整系数$\beta$
-2. 再检验残差$\epsilon_t$是否平稳
+2. 再检验残差\epsilon_t是否平稳
 3. 若残差平稳，则存在协整关系
 
 ## EG两步检验法步骤
@@ -52,9 +52,9 @@ $y_t = \alpha + \beta x_t + \epsilon_t$
 
 #### 对残差进行单位根检验
 
-检验残差序列$\hat{\epsilon}_t$是否平稳：
+检验残差序列 $\hat{\epsilon}_t$ 是否平稳：
 - 使用ADF检验或PP检验
-- 检验$\hat{\epsilon}_t$是否有单位根
+- 检验 $\hat{\epsilon}_t$ 是否有单位根
 
 #### 注意事项
 
@@ -85,7 +85,7 @@ $y_t = \alpha + \beta x_t + \epsilon_t$
 
 - 残差ADF/PP检验统计量 < 临界值（负值更负）
 - 结论：存在协整关系
-- $\hat{\beta}$是协整系数的一致估计
+- $\hat{\beta}$ 是协整系数的一致估计
 
 #### 不能拒绝原假设
 
@@ -103,7 +103,7 @@ $y_t = \alpha + \beta x_t + \epsilon_t$
 
 $Q_t = \alpha + \beta P_t + \epsilon_t$
 
-OLS估计得$\hat{\beta} = 0.5$。
+$OLS估计得\hat{\beta} = 0.5。$
 
 2. **第二步：检验残差**
 
@@ -120,7 +120,7 @@ OLS估计得$\hat{\beta} = 0.5$。
 ### 经济解释
 
 价格和数量存在长期均衡关系：
-- $\beta = 0.5$表示长期需求弹性
+- $\beta = 0.5表示长期需求弹性$
 - 系统偏离后会向均衡调整
 
 ## 多变量EG两步检验
@@ -147,14 +147,14 @@ EG两步法只能检验是否存在协整关系：
 
 协整向量标准化：
 - $y_t = \beta x_t + \epsilon_t$
-- $x_t = \beta^{-1} y_t - \beta^{-1}\epsilon_t$
+$- x_t = \beta^{-1} y_t - \beta^{-1}\epsilon_t$
 
 两种表示都有效，但系数含义不同。
 
 ### 3. 对称性
 
 EG检验对回归方程的选择敏感：
-- $y$对$x$回归 vs $x$对$y$回归
+- y对x回归 vs x对y回归
 - 结果可能不同
 
 ### 4. 大样本要求
@@ -240,4 +240,4 @@ $y_t = \alpha + \beta x_t + \gamma z_t + \epsilon_t$
 - 报告第二步检验统计量
 - 说明临界值来源
 
-相关链接: [[00_factor/concept/Cointegration|协整]], [[00_factor/concept/Johansen Cointegration Test|Johansen检验]], [[Error Correction Model|误差纠正机制(ECM)]]
+相关链接: [[Cointegration|协整]], [[Johansen Cointegration Test|Johansen检验]], [[Error Correction Model|误差纠正机制(ECM)]]

@@ -53,7 +53,7 @@ $$
 w_I = p \times MP_L
 $$
 
-其中 $p$ 是工业产品的价格（假设为常数），$MP_L = \frac{\partial Q_I}{\partial L_I}$ 表示工业部门的劳动力边际产量。
+$其中 p 是工业产品的价格（假设为常数），MP_L = \frac{\partial Q_I}{\partial L_I} 表示工业部门的劳动力边际产量。$
 
 ## 模型启示
 
@@ -68,6 +68,6 @@ $$
 3. 假设工业部门的技术水平与发达国家相同，不符合现实
 
 ## 相关链接
-[[00_factor/framework/Fei-Ranis Model|费景汉-拉尼斯模型]]
-[[00_factor/framework/Todaro Migration Model|托达罗模型]]
+[[Fei-Ranis Model|费景汉-拉尼斯模型]]
+[[Todaro Migration Model|托达罗模型]]
 [[Population Migration Theory|人口迁移理论]]

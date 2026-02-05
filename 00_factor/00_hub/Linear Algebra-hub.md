@@ -62,7 +62,7 @@ tags:
 
 ## 课程笔记
 
-- [[00_factor/concept/Vector Space|01_向量空间]]
-- [[00_factor/concept/Matrix Operations|02_矩阵运算]]
-- [[00_factor/concept/Linear Systems|03_线性方程组]]
-- [[00_factor/concept/Multivariate Normal Distribution|04_多元正态分布]]
+- [[Vector Space|01_向量空间]]
+- [[Matrix Operations|02_矩阵运算]]
+- [[Linear Systems|03_线性方程组]]
+- [[Multivariate Normal Distribution|04_多元正态分布]]

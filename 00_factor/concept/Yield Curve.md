@@ -38,7 +38,7 @@ tags:
 **核心思想**：
 长期债券利率将等于债券有效期内预期短期利率的平均值。
 
-$$ r_{long} = \frac{r_1 + E[r_2] + \dots + E[r_n]}{n} $$
+$ r_{long} = \frac{r_1 + E[r_2] + \dots + E[r_n]}{n} $
 
 **关键假设**：
 债券购买者对于债券期限没有特别的偏好。不同期限的债券是完全替代品。
@@ -64,7 +64,7 @@ $$ r_{long} = \frac{r_1 + E[r_2] + \dots + E[r_n]}{n} $$
 1. 长期债券到期之前预期短期利率的平均值
 2. 随债券供求情况变动而变动的流动性溢价（又叫期限溢价）
 
-$$ r_{long} = \frac{E[r_1] + \dots + E[r_n]}{n} + \text{流动性溢价} $$
+$ r_{long} = \frac{E[r_1] + \dots + E[r_n]}{n} + \text{流动性溢价} $
 
 **解释力**：
 可以解释三个经验事实。
@@ -106,8 +106,8 @@ $$ r_{long} = \frac{E[r_1] + \dots + E[r_n]}{n} + \text{流动性溢价} $$
 
 ## 相关概念
 
-- [[00_factor/concept/Yield to Maturity|到期收益率]]
-- [[00_factor/concept/Risk Structure of Interest Rates|利率的风险结构]]
+- [[Yield to Maturity|到期收益率]]
+- [[Risk Structure of Interest Rates|利率的风险结构]]
 - [[Expectations Theory|预期理论]]
 
 ## 重要意义

@@ -8,7 +8,7 @@ tags:
 
 - **Delta（$\Delta$）**：衡量一个组合价值对标的资产价格微小变动的敏感度。
     $$
-    \Delta = \frac{\partial \text{组合价值}}{\partial S}
+\Delta = \frac{\partial \text{组合价值}}{\partial S}
     $$
 # 意义
 

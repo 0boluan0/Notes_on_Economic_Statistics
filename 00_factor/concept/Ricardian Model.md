@@ -57,7 +57,7 @@ Y = F(K, N)
 
 - 单位产出成本：c₁ < c₂ < c₃ < ...
 - 市场价格P由边际土地决定
-- 优等地地租：Rent = P - c_i（其中c_i < P）
+- 优等地地租：$Rent = P - c_i（其中c_i < P）$
 
 #### 供给曲线特性
 
@@ -169,4 +169,4 @@ Y = F(K, N)
    - 节约资源使用
    - 国际贸易缓解约束
 
-相关链接: [[00_factor/concept/Malthusian Trap|马尔萨斯人口陷阱]], [[00_factor/concept/Economic Growth|经济增长]], [[00_factor/concept/Differential Rent|级差地租]]
+相关链接: [[Malthusian Trap|马尔萨斯人口陷阱]], [[Economic Growth|经济增长]], [[Differential Rent|级差地租]]

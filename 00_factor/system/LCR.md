@@ -15,7 +15,7 @@ tags:
 
 ## 计算方法
 
-$$\text{LCR} = \frac{\text{高质量流动资产（HQLA）}}{\text{30天净现金流出}} \geq 100\%$$
+$\text{LCR} = \frac{\text{高质量流动资产（HQLA）}}{\text{30天净现金流出}} \geq 100\%$
 
 ### 高质量流动资产（HQLA）
 
@@ -27,7 +27,7 @@ $$\text{LCR} = \frac{\text{高质量流动资产（HQLA）}}{\text{30天净现�
 
 ### 净现金流出
 
-$$\text{净现金流出} = \sum \text{现金流出} \times \text{流失率} - \sum \text{现金流入} \times \text{流入系数}$$
+$\text{净现金流出} = \sum \text{现金流出} \times \text{流失率} - \sum \text{现金流入} \times \text{流入系数}$
 
 ## 判断标准
 
@@ -49,5 +49,5 @@ $$\text{净现金流出} = \sum \text{现金流出} \times \text{流失率} - \s
 
 ## 相关概念
 [[NSFR]]
-[[00_factor/system/Stress Testing|压力测试]]
-[[00_factor/system/Basel Capital Adequacy Ratio|巴塞尔资本充足率]]
+[[Stress Testing|压力测试]]
+[[Basel Capital Adequacy Ratio|巴塞尔资本充足率]]

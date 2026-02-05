@@ -13,7 +13,7 @@ tags:
 
 ## 定义
 
-$$营业净利率 = \frac{净利润}{营业收入} \times 100\%$$
+$营业净利率 = \frac{净利润}{营业收入} \times 100\%$
 
 ## 计算方法
 
@@ -35,7 +35,7 @@ $$营业净利率 = \frac{净利润}{营业收入} \times 100\%$$
 
 ## 在杜邦分析中的作用
 
-$$权益净利率 = 营业净利率 \times 总资产周转次数 \times 权益乘数$$
+$权益净利率 = 营业净利率 \times 总资产周转次数 \times 权益乘数$
 
 营业净利率反应销售效率的程度。
 
@@ -53,5 +53,5 @@ $$权益净利率 = 营业净利率 \times 总资产周转次数 \times 权益�
 3. **行业对比**：分析竞争优势
 
 ## 相关链接
-[[00_factor/concept/Return on Equity|权益净利率]]
-[[00_factor/concept/Return on Assets|总资产净利率]]
+[[Return on Equity|权益净利率]]
+[[Return on Assets|总资产净利率]]

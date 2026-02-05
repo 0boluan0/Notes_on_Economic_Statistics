@@ -11,7 +11,7 @@ ARIMA 模型（Autoregressive Integrated Moving Average）在 ARMA 基础上引�
 
 ## 形式
 
-对原序列 $y_t$ 做 $d$ 阶差分 $\Delta^d y_t$，若 $\Delta^d y_t$ 可由 ARMA($p$,$q$) 刻画，则称 $y_t \sim \text{ARIMA}(p,d,q)$。
+对原序列 $y_t$ 做 $d$ 阶差分 $\Delta^d y_t$，若 $\Delta^d y_t$ 可由 $\text{ARMA}(p,q)$ 刻画，则称 $y_t \sim \text{ARIMA}(p,d,q)$。
 
 ## 何时使用
 
@@ -19,7 +19,7 @@ ARIMA 模型（Autoregressive Integrated Moving Average）在 ARMA 基础上引�
 
 ## Connections
 
-- 相关：[[ARMA]]、[[00_factor/concept/Unit Root Test|单位根检验]]、[[00_factor/concept/Stationarity|平稳性]]
+- 相关：[[ARMA]]、[[Unit Root Test|单位根检验]]、[[Stationarity|平稳性]]
 
 ## source_notes
 

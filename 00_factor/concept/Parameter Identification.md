@@ -105,7 +105,7 @@ $\text{rank}(B_i\Gamma_i) = g_i - 1$
 
 其中：
 - $B_i$是其他方程中外生变量的系数矩阵
-- $\Gamma_i$是本方程中外生变量的系数矩阵
+- \Gamma_i是本方程中外生变量的系数矩阵
 - $g_i$是本方程中内生变量个数
 
 #### 实际含义
@@ -194,7 +194,7 @@ $\text{rank}(B_i\Gamma_i) = g_i - 1$
 
 在需求方程中：
 - 内生解释变量：$P$（1个）
-- 工具变量：$W_1, W_2$（2个）
+- 工具变量：$W_1$, $W_2$（2个）
 - 2 > 1，过度识别
 
 使用2SLS估计。
@@ -231,4 +231,4 @@ $\text{rank}(B_i\Gamma_i) = g_i - 1$
 
 面板数据的识别利用个体和时间的变异。
 
-相关链接: [[00_factor/concept/Simultaneous Equations Model|联立方程模型]], [[2SLS]], [[00_factor/concept/Instrumental Variable|工具变量]]
+相关链接: [[Simultaneous Equations Model|联立方程模型]], [[2SLS]], [[Instrumental Variable|工具变量]]

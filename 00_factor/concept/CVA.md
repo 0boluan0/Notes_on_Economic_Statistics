@@ -14,23 +14,23 @@ CVA（Credit Valuation Adjustment，信用估值调整）是衡量衍生品交�
 
 CVA是指由于交易对手可能违约，需要对衍生品无违约价值进行调整，以反映信用风险成本。
 
-$$CVA = E[\text{损失}], \text{在交易对手违约条件下}$$
+$CVA = E[\text{损失}], \text{在交易对手违约条件下}$
 
 ## 计算公式
 
 对于单笔衍生品交易：
 
-$$CVA = \sum_{i=1}^{n} PD(t_{i-1}, t_i) \cdot EAD(t_i) \cdot (1-R) \cdot DF(t_i)$$
+$CVA = \sum_{i=1}^{n} PD(t_{i-1}, t_i) \cdot EAD(t_i) \cdot (1-R) \cdot DF(t_i)$
 
 其中：
-- PD(t_{i-1}, t_i)：时间区间[t_{i-1}, t_i]的违约概率
-- EAD(t_i)：t_i时刻的违约暴露
+- PD(t_{i-1}, $t_i$)：时间区间[t_{i-1}, $t_i$]的违约概率
+- EAD($t_i$)：$t_i$时刻的违约暴露
 - R：回收率
-- DF(t_i)：t_i时刻的折现因子
+- DF($t_i$)：$t_i$时刻的折现因子
 
 ## 风险调整后的价值
 
-$$V_{with\_credit\_risk} = V_{no\_default} - CVA$$
+$V_{with\_credit\_risk} = V_{no\_default} - CVA$
 
 ## 影响因素
 
@@ -52,13 +52,13 @@ CVA本身也是一种风险，因为：
 
 对冲CVA的调整，反映银行自身违约对交易对手的收益：
 
-$$DVA = \text{银行违约时的收益}$$
+$DVA = \text{银行违约时的收益}$
 
 ## FVA（资金估值调整）
 
 考虑资金成本和收益的调整：
 
-$$FVA = \text{资金成本} - \text{资金收益}$$
+$FVA = \text{资金成本} - \text{资金收益}$
 
 ## 监管要求
 
@@ -75,4 +75,4 @@ $$FVA = \text{资金成本} - \text{资金收益}$$
 3. **资本计量**：计算CVA风险相关的监管资本要求
 4. **交易决策**：考虑信用风险成本的交易评估
 
-相关链接: [[00_factor/concept/Credit Risk|信用风险]], [[00_factor/concept/Default Risk|违约风险]], [[VaR]], [[DVA]], [[00_factor/concept/Basel Accords|巴塞尔协议]]
+相关链接: [[Credit Risk|信用风险]], [[Default Risk|违约风险]], [[VaR]], [[DVA]], [[Basel Accords|巴塞尔协议]]

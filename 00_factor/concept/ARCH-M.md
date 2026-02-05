@@ -28,9 +28,9 @@ $$
 ## Connections
 
 - 相关：[[ARCH]]、[[GARCH]]、[[TARCH]]、[[EGARCH]]
-- 估计：[[00_factor/concept/Maximum Likelihood Estimation|极大似然估计]]
+- 估计：[[Maximum Likelihood Estimation|极大似然估计]]
 
-## source_notes
+## $source_notes$
 
 - [[04_波动建模 Modeling Volatility#3.2 ARCH-M]]
 

@@ -27,7 +27,7 @@ $\hat{\epsilon}_i^2 = \alpha_0 + \alpha_1 x_{1i} + \alpha_2 x_{2i} + \dots + \al
 
 #### 原假设
 
-$H_0: \alpha_1 = \alpha_2 = \dots = \alpha_k = \beta_1 = \beta_2 = \dots = \beta_k = \gamma_1 = \gamma_2 = \dots = 0$
+$H_0$: $\alpha_1 = \alpha_2 = \dots = \alpha_k = \beta_1 = \beta_2 = \dots = \beta_k = \gamma_1 = \gamma_2 = \dots = 0$
 
 即不存在异方差。
 
@@ -61,7 +61,7 @@ $\hat{\epsilon}_i^2 = \alpha_0 + \alpha_1 x_{1i} + \alpha_2 x_{2i} + \dots + \al
 
 #### 原假设
 
-$H_0: \alpha_1 = \alpha_2 = \dots = \alpha_k = \beta_1 = \beta_2 = \dots = \beta_k = 0$
+$H_0$: $\alpha_1 = \alpha_2 = \dots = \alpha_k = \beta_1 = \beta_2 = \dots = \beta_k = 0$
 
 #### 统计量
 
@@ -183,4 +183,4 @@ $LM = n \cdot R^2 \sim \chi^2(2k)$
 - 说明异方差处理方法
 - 确保结论稳健
 
-相关链接: [[00_factor/concept/Heteroskedasticity|异方差]], [[OLS]], [[00_factor/concept/Weighted Least Squares|加权最小二乘法(WLS)]]
+相关链接: [[Heteroskedasticity|异方差]], [[OLS]], [[Weighted Least Squares|加权最小二乘法(WLS)]]

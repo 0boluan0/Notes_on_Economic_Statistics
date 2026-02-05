@@ -17,11 +17,11 @@ tags:
 
 对于马尔可夫链的平稳分布 π = (π_1, π_2, ..., π_n)，满足：
 
-$$ \pi P = \pi $$
+$ \pi P = \pi $
 
 且：
 
-$$ \sum_{j=1}^n \pi_j = 1, \quad \pi_j \ge 0 $$
+$ \sum_{j=1}^n \pi_j = 1, \quad \pi_j \ge 0 $
 
 其中 P 是转移概率矩阵。
 
@@ -43,7 +43,7 @@ $$ \sum_{j=1}^n \pi_j = 1, \quad \pi_j \ge 0 $$
 
 如果存在某个正整数 m 使得对所有状态 i, j 都有：
 
-$$ p_{ij}^{(m)} > 0 $$
+$ p_{ij}^{(m)} > 0 $
 
 即从任意状态 i 到状态 j 在 m 步之内有正概率可达，则存在平稳分布。
 
@@ -52,12 +52,18 @@ $$ p_{ij}^{(m)} > 0 $$
 ### 步骤 1：写出方程组
 
 从 $\pi P = \pi$ 得到：
-
-$$ \begin{cases} \pi_1 = p_{11}\pi_1 + p_{21}\pi_2 + \cdots + p_{n1}\pi_n \\ \pi_2 = p_{12}\pi_1 + p_{22}\pi_2 + \cdots + p_{n2}\pi_n \\ \vdots \\ \pi_n = p_{1n}\pi_1 + p_{2n}\pi_2 + \cdots + p_{nn}\pi_n \end{cases} $$
+$$
+\begin{cases}
+\pi_1 = p_{11}\pi_1 + p_{21}\pi_2 + \cdots + p_{n1}\pi_n \\
+\pi_2 = p_{12}\pi_1 + p_{22}\pi_2 + \cdots + p_{n2}\pi_n \\
+\vdots \\
+\pi_n = p_{1n}\pi_1 + p_{2n}\pi_2 + \cdots + p_{nn}\pi_n
+\end{cases}
+$$
 
 ### 步骤 2：添加约束条件
 
-$$ \pi_1 + \pi_2 + \cdots + \pi_n = 1 $$
+$\pi_1 + \pi_2 + \cdots + \pi_n = 1$
 
 ### 步骤 3：求解线性方程组
 
@@ -73,7 +79,7 @@ $$ \pi_1 + \pi_2 + \cdots + \pi_n = 1 $$
 
 对于不可约非周期的有限状态马尔可夫链：
 
-$$ \lim_{n \to \infty} p_{ij}^{(n)} = \pi_j $$
+$ \lim_{n \to \infty} p_{ij}^{(n)} = \pi_j $
 
 即：n 步转移矩阵 P^n 的各行都会收敛到同一个向量 π。
 
@@ -91,13 +97,24 @@ $$ \lim_{n \to \infty} p_{ij}^{(n)} = \pi_j $$
 
 设转移矩阵：
 
-$$ P = \begin{pmatrix} 0.9 & 0.1 \\ 0.2 & 0.8 \end{pmatrix} $$
+$$
+P =
+\begin{pmatrix}
+ 0.9 & 0.1 \\ 0.2 & 0.8 
+\end{pmatrix}
+$$
 
 求解平稳分布：
 
-$$ \begin{cases} \pi_1 = 0.9\pi_1 + 0.2\pi_2 \\ \pi_2 = 0.1\pi_1 + 0.8\pi_2 \\ \pi_1 + \pi_2 = 1 \end{cases} $$
+$$
+\begin{cases}
+\pi_1 = 0.9\pi_1 + 0.2\pi_2 \\
+\pi_2 = 0.1\pi_1 + 0.8\pi_2 \\
+\pi_1 + \pi_2 = 1
+\end{cases}
+$$
 
-解得：$\pi_1 = 2/3$, $\pi_2 = 1/3$
+解得：$\pi_1 = 2/3, \pi_2 = 1/3$
 
 即长期来看，系统有 2/3 的时间在状态 1，1/3 的时间在状态 2。
 
@@ -122,6 +139,6 @@ $$ \begin{cases} \pi_1 = 0.9\pi_1 + 0.2\pi_2 \\ \pi_2 = 0.1\pi_1 + 0.8\pi_2 \\ \
 
 ## 相关概念
 
-- [[00_factor/concept/Markov Chain|马尔可夫链]]
+- [[Markov Chain|马尔可夫链]]
 - [[Limiting Distribution|极限分布]]
 - [[Irreducible Markov Chain|不可约链]]

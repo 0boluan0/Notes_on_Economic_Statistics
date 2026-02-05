@@ -14,7 +14,7 @@ tags:
 
 ## 定义
 
-$$权益净利率 = \frac{净利润}{股东权益} \times 100\%$$
+$权益净利率 = \frac{净利润}{股东权益} \times 100\%$
 
 ## 计算方法
 
@@ -29,9 +29,9 @@ $$权益净利率 = \frac{净利润}{股东权益} \times 100\%$$
 
 ## 杜邦分析体系
 
-$$权益净利率 = 营业净利率 \times 总资产周转次数 \times 权益乘数$$
+$权益净利率 = 营业净利率 \times 总资产周转次数 \times 权益乘数$
 
-$$权益净利率 = \frac{净利润}{营业收入} \times \frac{营业收入}{总资产} \times \frac{总资产}{股东权益}$$
+$权益净利率 = \frac{净利润}{营业收入} \times \frac{营业收入}{总资产} \times \frac{总资产}{股东权益}$
 
 ### 驱动因素分解
 
@@ -56,6 +56,6 @@ $$权益净利率 = \frac{净利润}{营业收入} \times \frac{营业收入}{�
 - 要关注盈利的可持续性
 
 ## 相关链接
-[[00_factor/concept/Net Profit Margin|营业净利率]]
-[[00_factor/concept/Return on Assets|总资产净利率]]
-[[00_factor/concept/Equity Multiplier|权益乘数]]
+[[Net Profit Margin|营业净利率]]
+[[Return on Assets|总资产净利率]]
+[[Equity Multiplier|权益乘数]]

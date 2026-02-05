@@ -15,7 +15,7 @@ tags:
 
 如果 f(x) 在 [a, b] 上连续，且 F(x) 是 f(x) 的一个原函数，则：
 
-$$\int_a^b f(x)dx = F(b) - F(a)$$
+$\int_a^b f(x)dx = F(b) - F(a)$
 
 ## 意义
 
@@ -27,31 +27,32 @@ $$\int_a^b f(x)dx = F(b) - F(a)$$
 
 如果 f(x) 在 [a, b] 上连续，定义：
 
-$$F(x) = \int_a^x f(t)dt$$
+$F(x) = \int_a^x f(t)dt$
 
 则 F(x) 在 [a, b] 上可导，且：
 
-$$F'(x) = f(x)$$
+$F'(x) = f(x)$
 
 ## 第二部分定理
 
 如果 f(x) 在 [a, b] 上连续，且 F(x) 是 f(x) 的一个原函数，则：
 
-$$\int_a^b f(x)dx = F(b) - F(a)$$
+$\int_a^b f(x)dx = F(b) - F(a)$
 
 ## 推论
 
 1. **变限积分求导**
 
-   如果 $F(x) = \int_{a(x)}^{b(x)} f(t)dt$，则：
+   如果 F(x) = \int_{a(x)}^{b(x)} f(t)dt，则：
+$$
 
-   $$F'(x) = f(b(x))b'(x) - f(a(x))a'(x)$$
+   $F'(x) = f(b(x))b'(x) - f(a(x))a'(x)$
 
 2. **积分中值定理**
 
    如果 f(x) 在 [a, b] 上连续，则存在 c ∈ [a, b]，使得：
 
-   $$\int_a^b f(x)dx = f(c)(b-a)$$
+   $\int_a^b f(x)dx = f(c)(b-a)$
 
 ## 应用
 
@@ -67,6 +68,6 @@ $$\int_a^b f(x)dx = F(b) - F(a)$$
 - 使微积分成为统一的理论体系
 
 ## 相关链接
-[[00_factor/concept/Derivative (2)|导数]]
-[[00_factor/concept/Integral|积分]]
-[[00_factor/concept/Limit|极限]]
+[[Derivative (2)|导数]]
+[[Integral|积分]]
+[[Limit|极限]]

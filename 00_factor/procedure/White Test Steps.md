@@ -24,7 +24,7 @@ tags:
 
 ### 步骤 1：运行原始回归
 
-对原始模型进行OLS估计，得到残差序列 $\{\hat{\epsilon}_i\}_{i=1}^n$。
+$对原始模型进行OLS估计，得到残差序列 \{\hat{\epsilon}_i\}_{i=1}^n。$
 
 **注意点**：原始模型需要正确设定，遗漏变量可能导致虚假异方差。
 
@@ -32,7 +32,7 @@ tags:
 
 建立辅助回归，将残差平方对常数项、原自变量及其平方和交叉项回归：
 
-$$ \hat{\epsilon}_i^2 = \alpha_0 + \alpha_1 x_{1i} + \cdots + \alpha_k x_{ki} + \alpha_{k+1} x_{1i}^2 + \cdots + \alpha_{2k} x_{ki}^2 + \alpha_{2k+1} x_{1i}x_{2i} + \cdots + \text{error}_i $$
+$ \hat{\epsilon}_i^2 = \alpha_0 + \alpha_1 x_{1i} + \cdots + \alpha_k x_{ki} + \alpha_{k+1} x_{1i}^2 + \cdots + \alpha_{2k} x_{ki}^2 + \alpha_{2k+1} x_{1i}x_{2i} + \cdots + \text{error}_i $
 
 **注意点**：当自变量数量多时，此回归包含大量参数，可能损失自由度。
 
@@ -40,7 +40,7 @@ $$ \hat{\epsilon}_i^2 = \alpha_0 + \alpha_1 x_{1i} + \cdots + \alpha_k x_{ki} + 
 
 为减少参数损失，可以使用不含交叉项的简化White检验：
 
-$$ \hat{\epsilon}_i^2 = \alpha_0 + \alpha_1 x_{1i} + \cdots + \alpha_k x_{ki} + \alpha_{k+1} x_{1i}^2 + \cdots + \alpha_{2k} x_{ki}^2 + \text{error}_i $$
+$ \hat{\epsilon}_i^2 = \alpha_0 + \alpha_1 x_{1i} + \cdots + \alpha_k x_{ki} + \alpha_{k+1} x_{1i}^2 + \cdots + \alpha_{2k} x_{ki}^2 + \text{error}_i $
 
 **注意点**：简化形式在大多数情况下检验功效接近完整形式。
 
@@ -52,7 +52,7 @@ $$ \hat{\epsilon}_i^2 = \alpha_0 + \alpha_1 x_{1i} + \cdots + \alpha_k x_{ki} + 
 
 ### 步骤 5：构造检验统计量
 
-$$ LM = n \times R^2_{\text{aux}} $$
+$ LM = n \times R^2_{\text{aux}} $
 
 其中 $n$ 为样本量。
 
@@ -68,7 +68,7 @@ $$ LM = n \times R^2_{\text{aux}} $$
 
 ### 步骤 7：进行假设检验
 
-- 原假设 $H_0$：同方差性成立，$\alpha_1 = \alpha_2 = \cdots = 0$
+- 原假设 $H_0$：$同方差性成立，\alpha_1 = \alpha_2 = \cdots = 0$
 - 备择假设 $H_1$：存在异方差，至少一个 $\alpha_i \neq 0$
 
 **决策规则**：
@@ -80,13 +80,13 @@ $$ LM = n \times R^2_{\text{aux}} $$
 ## 关键公式
 
 **完整White检验辅助回归**：
-$$ \hat{\epsilon}_i^2 = \alpha_0 + \sum_{j=1}^{k} \alpha_j x_{ji} + \sum_{j=1}^{k} \alpha_{k+j} x_{ji}^2 + \sum_{1 \le j < l \le k} \alpha_{\cdot} x_{ji}x_{li} + \text{error}_i $$
+$ \hat{\epsilon}_i^2 = \alpha_0 + \sum_{j=1}^{k} \alpha_j x_{ji} + \sum_{j=1}^{k} \alpha_{k+j} x_{ji}^2 + \sum_{1 \le j < l \le k} \alpha_{\cdot} x_{ji}x_{li} + \text{error}_i $
 
 **LM统计量**：
-$$ LM = n \times R^2_{\text{aux}} \xrightarrow{d} \chi^2(df) $$
+$ LM = n \times R^2_{\text{aux}} \xrightarrow{d} \chi^2(df) $
 
 **临界值**：
-$$ \text{Critical Value} = \chi^2_{\alpha}(df) $$
+$ \text{Critical Value} = \chi^2_{\alpha}(df) $
 
 ## 常见问题
 
@@ -96,6 +96,6 @@ $$ \text{Critical Value} = \chi^2_{\alpha}(df) $$
 4. **多重共线性**：辅助回归中的高次项可能高度相关。
 
 ## 相关概念
-[[00_factor/concept/Heteroskedasticity|异方差]]
+[[Heteroskedasticity|异方差]]
 [[Weighted Least Squares Estimation|加权最小二乘估计]]
-[[00_factor/system/White Robust Standard Errors|稳健标准误]]
+[[White Robust Standard Errors|稳健标准误]]

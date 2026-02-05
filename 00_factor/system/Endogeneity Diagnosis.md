@@ -28,7 +28,7 @@ tags:
 ### 1. Hausman检验（与工具变量估计比较）
 
 检验统计量：
-$$H = (\hat{\beta}_{OLS} - \hat{\beta}_{IV})' [Var(\hat{\beta}_{OLS}) - Var(\hat{\beta}_{IV})]^{-1} (\hat{\beta}_{OLS} - \hat{\beta}_{IV}) \sim \chi^2(k)$$
+$H = (\hat{\beta}_{OLS} - \hat{\beta}_{IV})' [Var(\hat{\beta}_{OLS}) - Var(\hat{\beta}_{IV})]^{-1} (\hat{\beta}_{OLS} - \hat{\beta}_{IV}) \sim \chi^2(k)$
 
 | 判断标准 | p ≤ 0.05 | p > 0.05 |
 |----------|----------|----------|
@@ -48,7 +48,7 @@ $$H = (\hat{\beta}_{OLS} - \hat{\beta}_{IV})' [Var(\hat{\beta}_{OLS}) - Var(\hat
 ### 3. 过度识别检验（Sargan/Hansen检验）
 
 检验工具变量的外生性：
-$$Sargan = n \cdot R^2 \sim \chi^2(m-k)$$
+$Sargan = n \cdot R^2 \sim \chi^2(m-k)$
 
 其中 m 是工具变量个数，k 是内生变量个数。
 
@@ -74,7 +74,7 @@ $$Sargan = n \cdot R^2 \sim \chi^2(m-k)$$
 | 找不到有效工具变量 | 数据限制 | 使用替代方法（匹配、断点回归、双重差分） |
 
 ## 相关概念
-[[00_factor/concept/Instrumental Variable|工具变量]]
+[[Instrumental Variable|工具变量]]
 [[2SLS]]
 [[GMM]]
-[[00_factor/concept/Hausman Test|Hausman检验]]
+[[Hausman Test|Hausman检验]]

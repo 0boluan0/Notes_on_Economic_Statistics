@@ -19,7 +19,6 @@ $$
 $$
 
 如果 $X$ 和 $Y$ **独立**，那么 $\mathrm{Cov}(X, Y) = 0$，公式简化为：
-
 $$
 \mathrm{Var}(Z) = a^2 \mathrm{Var}(X) + b^2 \mathrm{Var}(Y)
 $$

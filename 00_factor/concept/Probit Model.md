@@ -16,36 +16,39 @@ probit模型（Probit Model）是用于分析二元被解释变量（取值为0�
 
 潜在效用模型：
 
-$$U_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_k x_{ik} + \varepsilon_i$$
+$U_i = \beta_0 + \beta_1 x_{i1} + \cdots + \beta_k x_{ik} + \varepsilon_i$
 
-其中ε_i ~ N(0, 1)。
+其中 $\varepsilon_i \sim N(0, 1)$。
 
 实际选择结果：
 
-$$y_i = \begin{cases}
+$$
+y_i =
+\begin{cases}
 1, & \text{if } U_i \geq 0 \\
 0, & \text{if } U_i < 0
-\end{cases}$$
+\end{cases}
+$$
 
 ## 概率表达式
 
-$$P(y_i = 1 | x_i) = P(U_i \geq 0) = P(\varepsilon_i \geq -\beta_0 - \beta_1 x_{i1} - \cdots - \beta_k x_{ik})$$
+$P(y_i = 1 | x_i) = P(U_i \geq 0) = P(\varepsilon_i \geq -\beta_0 - \beta_1 x_{i1} - \cdots - \beta_k x_{ik})$
 
-$$= 1 - \Phi(-\beta_0 - \beta_1 x_{i1} - \cdots - \beta_k x_{ik}) = \Phi(\beta_0 + \beta_1 x_{i1} + \cdots + \beta_k x_{ik})$$
+$= 1 - \Phi(-\beta_0 - \beta_1 x_{i1} - \cdots - \beta_k x_{ik}) = \Phi(\beta_0 + \beta_1 x_{i1} + \cdots + \beta_k x_{ik})$
 
 其中Φ(·)是标准正态分布的累积分布函数。
 
 ## 优势比（Odds Ratio）
 
-$$\textOdds} = \frac{P(y_i = 1)}{P(y_i = 0)} = \frac{\Phi(X_i\beta)}{1 - \Phi(X_i\beta)}$$
+$\text{Odds} = \frac{P(y_i = 1)}{P(y_i = 0)} = \frac{\Phi(X_i\beta)}{1 - \Phi(X_i\beta)}$
 
 与logit模型不同，probit模型的优势比与解释变量呈非线性关系。
 
 ## 系数解释
 
-- **截距β₀**：当所有解释变量为0时，事件发生的概率为Φ(β₀)
-- **斜率β_j**：解释变量x_j对概率的影响通过Φ函数传递
-- **边际效应**：∂P(y=1)/∂x_j = φ(Xβ)·β_j，其中φ是标准正态密度函数
+- **截距 $\beta_0$**：当所有解释变量为 0 时，事件发生的概率为 $\Phi(\beta_0)$
+- **斜率 $\beta_j$**：解释变量 $x_j$ 对概率的影响通过 $\Phi$ 函数传递
+- **边际效应**：$\partial P(y=1)/\partial x_j = \phi(X\beta)\beta_j$，其中 $\phi$ 是标准正态密度函数
 
 ## 估计方法
 
@@ -53,7 +56,7 @@ $$\textOdds} = \frac{P(y_i = 1)}{P(y_i = 0)} = \frac{\Phi(X_i\beta)}{1 - \Phi(X_
 
 对数似然函数：
 
-$$\ell(\beta) = \sum_{i=1}^{n} y_i \ln \Phi(X_i\beta) + (1-y_i) \ln [1-\Phi(X_i\beta)]$$
+$\ell(\beta) = \sum_{i=1}^{n} y_i \ln \Phi(X_i\beta) + (1-y_i) \ln [1-\Phi(X_i\beta)]$
 
 ## 模型评估
 
@@ -62,7 +65,7 @@ $$\ell(\beta) = \sum_{i=1}^{n} y_i \ln \Phi(X_i\beta) + (1-y_i) \ln [1-\Phi(X_i\
 #### 伪R²（Pseudo R²）
 
 McFadden R²：
-$$R^2_{McFadden} = 1 - \frac{\ell(\hat{\beta})}{\ell(0)}$$
+$R^2_{McFadden} = 1 - \frac{\ell(\hat{\beta})}{\ell(0)}$
 
 #### 拟合优度检验
 
@@ -79,7 +82,7 @@ $$R^2_{McFadden} = 1 - \frac{\ell(\hat{\beta})}{\ell(0)}$$
 
 #### 正确率
 
-$$\textAccuracy} = \frac{TP + TN}{TP + FP + TN + FN}$$
+$\text{Accuracy} = \frac{TP + TN}{TP + FP + TN + FN}$
 
 #### 灵敏度和特异度
 
@@ -107,4 +110,4 @@ $$\textAccuracy} = \frac{TP + TN}{TP + FP + TN + FN}$$
 3. **市场营销**：客户购买行为预测
 4. **社会科学**：投票行为、政策支持度
 
-相关链接: [[00_factor/concept/Logit Model|logit模型]], [[00_factor/concept/Linear Probability Model|LPM模型]], [[00_factor/concept/Maximum Likelihood Estimation|极大似然估计]]
+相关链接: [[Logit Model|logit模型]], [[Linear Probability Model|LPM模型]], [[Maximum Likelihood Estimation|极大似然估计]]

@@ -14,7 +14,7 @@ tags:
 
 某一实体的活动以没有反映在市场价格中的某种方式直接影响其他实体的福利，这种影响被称为外部性。
 
-$$ \text{Externality} = \text{对他人福利的影响} - \text{通过市场价格的部分} $$
+$ \text{Externality} = \text{对他人福利的影响} - \text{通过市场价格的部分} $
 
 ## 类型
 
@@ -39,7 +39,7 @@ $$ \text{Externality} = \text{对他人福利的影响} - \text{通过市场价�
 ### 负外部性
 **自由市场产量 > 社会最优产量**
 
-$$ Q_{market} > Q_{social} $$
+$ Q_{market} > Q_{social} $
 
 原因：
 - 生产者不考虑对他人造成的损害
@@ -48,7 +48,7 @@ $$ Q_{market} > Q_{social} $$
 ### 正外部性
 **自由市场产量 < 社会最优产量**
 
-$$ Q_{market} < Q_{social} $$
+$ Q_{market} < Q_{social} $
 
 原因：
 - 生产者/消费者得不到对他人带来的收益
@@ -81,7 +81,7 @@ $$ Q_{market} < Q_{social} $$
 #### 负外部性的政策
 
 **庇古税（Pigouvian Tax）**
-$$ \text{税率} = MSC - MPC $$
+$ \text{税率} = MSC - MPC $
 
 使私人边际成本等于社会边际成本。
 
@@ -97,7 +97,7 @@ $$ \text{税率} = MSC - MPC $$
 #### 正外部性的政策
 
 **庇古补贴（Pigouvian Subsidy）**
-$$ \text{补贴} = MSB - MPB $$
+$ \text{补贴} = MSB - MPB $
 
 使私人边际收益等于社会边际收益。
 
@@ -107,7 +107,7 @@ $$ \text{补贴} = MSB - MPB $$
 
 对于负外部性：
 
-$$ MSC = MPC + MEC $$
+$ MSC = MPC + MEC $
 
 其中：
 - MSC：边际社会成本（Marginal Social Cost）
@@ -127,9 +127,9 @@ $$ MSC = MPC + MEC $$
 
 ## 相关概念
 
-- [[00_factor/concept/Public Goods|公共物品]]
-- [[00_factor/concept/Pigouvian Tax|庇古税]]
-- [[00_factor/concept/Coase Theorem|科斯定理]]
+- [[Public Goods|公共物品]]
+- [[Pigouvian Tax|庇古税]]
+- [[Coase Theorem|科斯定理]]
 
 ## 政策选择比较
 

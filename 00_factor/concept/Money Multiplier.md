@@ -14,7 +14,7 @@ tags:
 
 货币乘数（Money Multiplier）表示基础货币（高能货币）变动对货币供应量的放大效应。
 
-$$ M = m \times MB $$
+$ M = m \times MB $
 
 ## 核心思想
 
@@ -29,11 +29,11 @@ $$ M = m \times MB $$
 
 ### 2. 货币乘数公式
 
-$$ M = \frac{1 + c}{rr + e + c} \times MB $$
+$ M = \frac{1 + c}{rr + e + c} \times MB $
 
 因此：
 
-$$ m = \frac{1 + c}{rr + e + c} $$
+$ m = \frac{1 + c}{rr + e + c} $
 
 其中：
 - rr：法定准备金率
@@ -42,7 +42,7 @@ $$ m = \frac{1 + c}{rr + e + c} $$
 
 ## 公式分解
 
-$$ m = \frac{1}{\frac{rr + e + c}{1 + c}} = \frac{1}{\frac{rr + e}{1 + c} + \frac{c}{1 + c}} $$
+$ m = \frac{1}{\frac{rr + e + c}{1 + c}} = \frac{1}{\frac{rr + e}{1 + c} + \frac{c}{1 + c}} $
 
 分子分母各项的含义：
 - $\frac{rr + e}{1 + c}$：存款对总负债的比率
@@ -59,7 +59,7 @@ $$ m = \frac{1}{\frac{rr + e + c}{1 + c}} = \frac{1}{\frac{rr + e}{1 + c} + \fra
 3. **现金持有水平（c）**：负相关
    - c 越高，货币乘数越小
 
-4. **非借入准备金（MB_n）**：正相关
+4. **非借入准备金（$MB_n$）**：正相关
 
 ### 因素影响示意图
 
@@ -84,14 +84,14 @@ $$ m = \frac{1}{\frac{rr + e + c}{1 + c}} = \frac{1}{\frac{rr + e}{1 + c} + \fra
 
 在简化模型中（假定银行不持有任何超额准备金）：
 
-$$ \Delta D = \frac{1}{rr} \times \Delta R $$
+$ \Delta D = \frac{1}{rr} \times \Delta R $
 
 存款创造停止的条件：所有银行的超额准备金都被用光。
 
 ## 与基础货币的关系
 
-$$ MB = C + R $$
-$$ M = m \times MB $$
+$ MB = C + R $
+$ M = m \times MB $
 
 货币供应量 = 货币乘数 × 基础货币
 
@@ -110,7 +110,7 @@ $$ M = m \times MB $$
 
 ## 相关概念
 
-- [[00_factor/concept/Monetary Base|基础货币]]
+- [[Monetary Base|基础货币]]
 - [[Deposit Creation|存款创造]]
 - [[Required Reserves|准备金]]
 

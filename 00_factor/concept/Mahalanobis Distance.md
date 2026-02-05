@@ -13,9 +13,9 @@ tags:
 
 马哈拉诺比斯距离是考虑变量相关性和不同尺度后，衡量观测值与均值之间距离的度量。
 
-对于随机向量 $X \sim N_p(\mu, \Sigma)$：
+对于随机向量 $X \sim $N_p$(\mu, \Sigma)$：
 
-$$ D^2 = (X - \mu)'\Sigma^{-1}(X - \mu) $$
+$ D^2 = (X - \mu)'\Sigma^{-1}(X - \mu) $
 
 ## 几何意义
 
@@ -36,17 +36,17 @@ $$ D^2 = (X - \mu)'\Sigma^{-1}(X - \mu) $$
 
 ### 1. 服从卡方分布
 
-如果 $X \sim N_p(\mu, \Sigma)$，则：
+如果 $X \sim $N_p$(\mu, \Sigma)$，则：
 
-$$ D^2 \sim \chi^2_p $$
+$ D^2 \sim \chi^2_p $
 
 这是马哈拉诺比斯距离最重要的性质。
 
 ### 2. 标准化
 可以通过标准化将其转化为标准正态距离：
 
-$$ Z = \Sigma^{-1/2}(X - \mu) $$
-$$ D^2 = Z'Z = ||Z||^2 $$
+$ Z = \Sigma^{-1/2}(X - \mu) $
+$ D^2 = Z'Z = ||Z||^2 $
 
 ## 应用
 
@@ -65,7 +65,7 @@ $$ D^2 = Z'Z = ||Z||^2 $$
 
 ### 4. 置信椭球构造
 - 构造均值的置信区域
-- 椭球边界由 $D^2 = \chi^2_{p,\alpha}$ 确定
+- $椭球边界由 D^2 = \chi^2_{p,\alpha} 确定$
 
 ## 与欧氏距离的比较
 
@@ -80,15 +80,26 @@ $$ D^2 = Z'Z = ||Z||^2 $$
 
 ### 二元情形
 对于 $X = (X_1, X_2)' \sim N_2(\mu, \Sigma)$：
+$$
+\Sigma =
+\begin{pmatrix}
+ \sigma_1^2 & \rho\sigma_1\sigma_2 \\ \rho\sigma_1\sigma_2 & \sigma_2^2 
+\end{pmatrix}
+$$
 
-$$ \Sigma = \begin{pmatrix} \sigma_1^2 & \rho\sigma_1\sigma_2 \\ \rho\sigma_1\sigma_2 & \sigma_2^2 \end{pmatrix} $$
+$$
+\Sigma^{-1} = \frac{1}{1-\rho^2}
+\begin{pmatrix}
+ \frac{1}{\sigma_1^2} & -\frac{\rho}{\sigma_1\sigma_2} \\ -\frac{\rho}{\sigma_1\sigma_2} & \frac{1}{\sigma_2^2} 
+\end{pmatrix}
+$$
 
-$$ \Sigma^{-1} = \frac{1}{1-\rho^2} \begin{pmatrix} \frac{1}{\sigma_1^2} & -\frac{\rho}{\sigma_1\sigma_2} \\ -\frac{\rho}{\sigma_1\sigma_2} & \frac{1}{\sigma_2^2} \end{pmatrix} $$
-
-$$ D^2 = \frac{1}{1-\rho^2}\left[\frac{(X_1-\mu_1)^2}{\sigma_1^2} + \frac{(X_2-\mu_2)^2}{\sigma_2^2} - \frac{2\rho(X_1-\mu_1)(X_2-\mu_2)}{\sigma_1\sigma_2}\right] $$
+$$
+D^2 = \frac{1}{1-\rho^2}\left[\frac{(X_1-\mu_1)^2}{\sigma_1^2} + \frac{(X_2-\mu_2)^2}{\sigma_2^2} - \frac{2\rho(X_1-\mu_1)(X_2-\mu_2)}{\sigma_1\sigma_2}\right]
+$$
 
 ## 相关概念
 
-- [[00_factor/concept/Multivariate Normal Distribution|多元正态分布]]
-- [[00_factor/concept/Wishart Distribution|Wishart 分布]]
+- [[Multivariate Normal Distribution|多元正态分布]]
+- [[Wishart Distribution|Wishart 分布]]
 - [[Hotelling T2 Test|Hotelling T² 检验]]

@@ -16,12 +16,12 @@ tags:
 
 面板数据格式：
 
-| 个体 | 时期 | y | x₁ | x₂ | ... | x_k |
+| 个体 | 时期 | y | x₁ | x₂ | ... | $x_k$ |
 |------|------|---|---|---|-----|-----|
-| 1 | 1 | y₁₁ | x₁₁₁ | x₂₁₁ | ... | x_k₁₁ |
-| 1 | 2 | y₁₂ | x₁₁₂ | x₂₁₂ | ... | x_k₁₂ |
+| 1 | 1 | y₁₁ | x₁₁₁ | x₂₁₁ | ... | $x_k$₁₁ |
+| 1 | 2 | y₁₂ | x₁₁₂ | x₂₁₂ | ... | $x_k$₁₂ |
 | ... | ... | ... | ... | ... | ... | ... |
-| N | T | y_NT | x₁_NT | x₂_NT | ... | x_k_NT |
+| N | T | $y_NT$ | x₁_NT | x₂_NT | ... | $x_k$_NT |
 
 其中N是个体数，T是时期数。
 
@@ -29,7 +29,7 @@ tags:
 
 基本形式：
 
-$$y_{it} = \alpha_i + \lambda_t + x_{it}'\beta + \varepsilon_{it}$$
+$y_{it} = \alpha_i + \lambda_t + x_{it}'\beta + \varepsilon_{it}$
 
 其中：
 - α_i：个体效应
@@ -49,13 +49,13 @@ $$y_{it} = \alpha_i + \lambda_t + x_{it}'\beta + \varepsilon_{it}$$
 
 ### 1. 固定效应（Fixed Effects）
 
-$$y_{it} = \alpha_i + x_{it}'\beta + \varepsilon_{it}$$
+$y_{it} = \alpha_i + x_{it}'\beta + \varepsilon_{it}$
 
 假设α_i与x_{it}相关，通过组内变换估计。
 
 ### 2. 随机效应（Random Effects）
 
-$$y_{it} = \beta_0 + x_{it}'\beta + \alpha_i + \varepsilon_{it}$$
+$y_{it} = \beta_0 + x_{it}'\beta + \alpha_i + \varepsilon_{it}$
 
 假设α_i ~ N(0, σ_α²)且与x_{it}不相关，使用GLS估计。
 
@@ -63,19 +63,19 @@ $$y_{it} = \beta_0 + x_{it}'\beta + \alpha_i + \varepsilon_{it}$$
 
 可以包含时间固定效应：
 
-$$y_{it} = \alpha_i + \lambda_t + x_{it}'\beta + \varepsilon_{it}$$
+$y_{it} = \alpha_i + \lambda_t + x_{it}'\beta + \varepsilon_{it}$
 
 ## 双向固定效应
 
 同时包含个体和时间固定效应：
 
-$$y_{it} = \alpha_i + \lambda_t + x_{it}'\beta + \varepsilon_{it}$$
+$y_{it} = \alpha_i + \lambda_t + x_{it}'\beta + \varepsilon_{it}$
 
 ## 动态面板模型
 
 包含被解释变量滞后项：
 
-$$y_{it} = \rho y_{i,t-1} + x_{it}'\beta + \alpha_i + \varepsilon_{it}$$
+$y_{it} = \rho y_{i,t-1} + x_{it}'\beta + \alpha_i + \varepsilon_{it}$
 
 存在"Nickell偏误"，需要使用工具变量估计。
 
@@ -98,4 +98,4 @@ $$y_{it} = \rho y_{i,t-1} + x_{it}'\beta + \alpha_i + \varepsilon_{it}$$
 - R：plm包
 - Python：linearmodels包
 
-相关链接: [[00_factor/concept/Fixed Effects Model|固定效应]], [[00_factor/concept/Random Effects Model|随机效应]], [[00_factor/concept/Hausman Test|豪斯曼检验]]
+相关链接: [[Fixed Effects Model|固定效应]], [[Random Effects Model|随机效应]], [[Hausman Test|豪斯曼检验]]

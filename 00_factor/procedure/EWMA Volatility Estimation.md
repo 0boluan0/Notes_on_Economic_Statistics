@@ -15,7 +15,7 @@ tags:
 
 ## 所需数据/条件
 
-- 历史收益率序列 ${\epsilon_t}_{t=1}^{T}$
+- $历史收益率序列 {\epsilon_t}_{t=1}^{T}$
 - 衰减因子 $\lambda$（RiskMetrics建议日频数据用0.94）
 
 ## 计算步骤
@@ -41,7 +41,7 @@ RiskMetrics标准值：
 
 ### 步骤 3：递归更新波动率
 
-对每个新观测 $\epsilon_t$，更新：
+对每个新观测 \epsilon_t，更新：
 
 $$
 \sigma_t^2 = \lambda \sigma_{t-1}^2 + (1-\lambda) \epsilon_t^2
@@ -105,7 +105,7 @@ $$
 \text{Half-life} = \frac{\ln(0.5)}{\ln(\lambda)} \approx \frac{-0.6931}{\ln(\lambda)}
 $$
 
-**注意点**：$\lambda = 0.94$ 时，半衰期约11天。
+**注意点**：$\lambda = 0.94$ 时，半衰期约 11 天。
 
 ## 与GARCH比较
 
@@ -116,7 +116,7 @@ $$
 | 参数数量 | 1 | 3 |
 | 适用场景 | 日常监控、快速响应 | 建模波动、均值回归 |
 
-##**注意点**：GARCH更灵活但更复杂，EWMA更简单实用。
+**注意点**：GARCH 更灵活但更复杂，EWMA 更简单实用。
 
 ## 常见问题
 
@@ -127,6 +127,6 @@ $$
 5. **数据缺口**：缺失值需要插值处理。
 
 ## 相关概念
-[[00_factor/concept/Historical Volatility|历史波动率]]
+[[Historical Volatility|历史波动率]]
 [[GARCH]]
 [[Volatility Clustering|波动率聚集]]

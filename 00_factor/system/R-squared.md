@@ -16,7 +16,7 @@ tags:
 
 ## 计算方法
 
-$$R^2 = \frac{\text{ESS}}{\text{TSS}} = 1 - \frac{\text{RSS}}{\text{TSS}} = 1 - \frac{\sum e_i^2}{\sum (y_i - \bar{y})^2}$$
+$R^2 = \frac{\text{ESS}}{\text{TSS}} = 1 - \frac{\text{RSS}}{\text{TSS}} = 1 - \frac{\sum e_i^2}{\sum (y_i - \bar{y})^2}$
 
 其中：
 - TSS（总平方和）：$\sum (y_i - \bar{y})^2$，因变量的总变异
@@ -25,7 +25,7 @@ $$R^2 = \frac{\text{ESS}}{\text{TSS}} = 1 - \frac{\text{RSS}}{\text{TSS}} = 1 - 
 
 ### 调整后判定系数（Adjusted R²）
 
-$$\bar{R}^2 = 1 - \frac{RSS/(n-k-1)}{TSS/(n-1)} = 1 - (1-R^2)\frac{n-1}{n-k-1}$$
+$\bar{R}^2 = 1 - \frac{RSS/(n-k-1)}{TSS/(n-1)} = 1 - (1-R^2)\frac{n-1}{n-k-1}$
 
 其中：
 - n：样本容量
@@ -58,8 +58,8 @@ $$\bar{R}^2 = 1 - \frac{RSS/(n-k-1)}{TSS/(n-1)} = 1 - (1-R^2)\frac{n-1}{n-k-1}$$
 | R²无法用于比较不同模型 | 因变量尺度不同 | 使用标准化R²或信息准则（AIC/BIC） |
 
 ## 相关概念
-[[00_factor/concept/F-test|F检验]]
+[[00_factor/system/F-test|F检验]]
 [[t Test|t检验]]
-[[00_factor/concept/Multicollinearity|多重共线性]]
+[[Multicollinearity|多重共线性]]
 [[AIC]]
 [[BIC]]

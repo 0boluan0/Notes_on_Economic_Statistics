@@ -13,20 +13,20 @@ tags:
 
 ## 定义
 
-设随机序列 $\{X_t\}$，若对所有 $t$ 有：
-1. 独立性：$(X_1,\dots,X_n)$ 的联合分布可分解为边际分布之积
+设随机序列 $\{$X_t$\}$，若对所有 $t$ 有：
+1. 独立性：$($X_1$,\dots,$X_n$)$ 的联合分布可分解为边际分布之积
 2. 同分布：$X_t$ 的边际分布相同
 
-则 $\{X_t\}$ 为 i.i.d. 序列。
+则 $\{$X_t$\}$ 为 i.i.d. 序列。
 
 ## 关系
 
-- i.i.d.（零均值） ⇒ [[00_factor/concept/Martingale Difference Sequence|鞅差序列]] ⇒ [[00_factor/concept/White Noise|白噪声过程]]（一般情形下，不可逆）
+- i.i.d.（零均值） ⇒ [[Martingale Difference Sequence|鞅差序列]] ⇒ [[White Noise|白噪声过程]]（一般情形下，不可逆）
 
 ## Connections
 
-- 相关：[[00_factor/concept/Independence vs. Uncorrelated|独立性与不相关]]
+- 相关：[[Independence vs. Uncorrelated|独立性与不相关]]
 
-## source_notes
+## $source_notes$
 
 - [[03_平稳时间序列模型#1.2 三种‘没有关系’的辨析]]

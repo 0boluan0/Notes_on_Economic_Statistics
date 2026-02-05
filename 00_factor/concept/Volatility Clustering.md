@@ -10,12 +10,12 @@ tags:
 # Volatility Clustering
 
 ## 它是什么
-- 「Volatility Clustering」是一个待补充定义的核心概念卡片。
+- 「Volatility Clustering」是指高波动期与低波动期在时间上聚集的现象。
 
 ## 最小可检索信息
-- 定义：待补充
-- 符号/公式：待补充
-- 最小例子：待补充
+- 定义：高波动期与低波动期在时间上聚集的现象。
+- 符号/公式：常由GARCH类模型刻画。
+- 最小例子：危机期波动持续高企。
 
 ## 关联卡片
 - [[EWMA Volatility Estimation]]

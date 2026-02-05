@@ -7,31 +7,55 @@ Use this rubric for module 1 in the daily note.
 - Use the latest 24 hours from execution time.
 - If a source only provides a date (no exact time), keep it only when clearly inside the window.
 
-## Category Quota
+## Coverage
 
-- World: 3 items
-- Finance: 3 items
-- Technology: 3 items
+- Regions: Americas, Europe, MENA, Africa, APAC (up to 3 items each)
+- Global Technology: 3 items
+- Global Intelligence & Geopolitics: 3 items (intel + gov + politics)
 
 ## Output Template
 
 ```markdown
-## 模块一｜24小时重大新闻（中英双语）
-> 时间窗口：{start_time} ~ {end_time}
+## 模块一｜全球态势静态快照（中英双语）
+> 时间窗口：{start_time} ~ {end_time} ({tz})
+> 注：若未启用翻译，中文行可暂用英文标题。
 
-### 世界（World）
-- 中文：...（含简短内容摘要）
-  EN: ... (with a brief content summary)
+![[98_attachment/dashboards/YYYY-MM-DD-map.svg]]
+
+### 区域新闻（Regions）
+#### 美洲 / Americas
+- 中文：...
+  EN: ...
   来源：...（YYYY-MM-DD HH:mm, local time）
 
-### 金融（Finance）
-- 中文：...（含简短内容摘要）
-  EN: ... (with a brief content summary)
+#### 欧洲 / Europe
+- 中文：...
+  EN: ...
   来源：...（YYYY-MM-DD HH:mm, local time）
 
-### 科技（Technology）
-- 中文：...（含简短内容摘要）
-  EN: ... (with a brief content summary)
+#### 中东北非 / MENA
+- 中文：...
+  EN: ...
+  来源：...（YYYY-MM-DD HH:mm, local time）
+
+#### 非洲 / Africa
+- 中文：...
+  EN: ...
+  来源：...（YYYY-MM-DD HH:mm, local time）
+
+#### 亚太 / APAC
+- 中文：...
+  EN: ...
+  来源：...（YYYY-MM-DD HH:mm, local time）
+
+### 全球科技（Global Technology）
+- 中文：...
+  EN: ...
+  来源：...（YYYY-MM-DD HH:mm, local time）
+
+### 全球情报/地缘政经（Global Intelligence & Geopolitics）
+- 中文：...
+  EN: ...
   来源：...（YYYY-MM-DD HH:mm, local time）
 ```
 

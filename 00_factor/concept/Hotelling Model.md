@@ -21,7 +21,7 @@ Hotelling 模型描述在线性城市中两个厂商进行空间和价格竞争�
 
 - 城市长度为 1，消费者均匀分布在 [0, 1]
 - 厂商 A 位于位置 0，厂商 B 位于位置 1
-- 厂商选择价格 p_A, p_B
+- 厂商选择价格 $p_A$, $p_B$
 - 消费者购买成本 = 商品价格 + 运输成本 × 距离
 - 运输成本为 t（单位距离成本）
 
@@ -29,8 +29,8 @@ Hotelling 模型描述在线性城市中两个厂商进行空间和价格竞争�
 
 消费者会选择总成本最低的厂商：
 
-- 从 A 购买的成本：p_A + t × x
-- 从 B 购买的成本：p_B + t × (1 - x)
+- 从 A 购买的成本：$p_A$ + t × x
+- 从 B 购买的成本：$p_B$ + t × (1 - x)
 
 其中 x 是消费者到 A 的距离。
 
@@ -38,12 +38,12 @@ Hotelling 模型描述在线性城市中两个厂商进行空间和价格竞争�
 
 在位置 x* 的消费者对两厂商无差异：
 
-$$ p_A + t x^* = p_B + t(1 - x^*) $$
-$$ x^* = \frac{p_B - p_A + t}{2t} $$
+$ p_A + t x^* = p_B + t(1 - x^*) $
+$ x^* = \frac{p_B - p_A + t}{2t} $
 
 ## 纳什均衡
 
-$$ p_A^* = p_B^* = c + t $$
+$ p_A^* = p_B^* = c + t $
 
 其中 c 是边际成本。
 
@@ -77,5 +77,5 @@ Hotelling 和古诺的辨析：
 
 ## 相关概念
 
-- [[00_factor/concept/Cournot Competition|古诺竞争]]
-- [[00_factor/concept/Bertrand Competition|Bertrand 竞争]]
+- [[Cournot Competition|古诺竞争]]
+- [[Bertrand Competition|Bertrand 竞争]]

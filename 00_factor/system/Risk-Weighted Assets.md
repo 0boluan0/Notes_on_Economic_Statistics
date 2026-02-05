@@ -17,7 +17,7 @@ tags:
 
 ## 计算方法
 
-$$\text{RWA} = \sum_{i=1}^{n} \text{资产}_i \times \text{风险权重}_i$$
+$\text{RWA} = \sum_{i=1}^{n} \text{资产}_i \times \text{风险权重}_i$
 
 ### Basel I 标准法风险权重
 
@@ -30,7 +30,7 @@ $$\text{RWA} = \sum_{i=1}^{n} \text{资产}_i \times \text{风险权重}_i$$
 
 ### IRB 法计算
 
-$$\text{RWA} = 12.5 \times K \times \text{EAD}$$
+$\text{RWA} = 12.5 \times K \times \text{EAD}$
 
 其中：
 - K：资本系数（基于 PD、LGD 计算）
@@ -53,7 +53,7 @@ $$\text{RWA} = 12.5 \times K \times \text{EAD}$$
 | 衍生品RWA计算复杂 | 潜在未来风险估计不准确 | 定期重估衍生品风险暴露，使用净额结算协议 |
 
 ## 相关概念
-[[00_factor/system/Basel Capital Adequacy Ratio|巴塞尔资本充足率]]
+[[Basel Capital Adequacy Ratio|巴塞尔资本充足率]]
 [[PD]]
 [[LGD]]
 [[EAD]]

@@ -14,7 +14,7 @@ tags:
 - **实际意义**：能及时反映最近波动的变化，比简单的均值更灵敏。
 
 
-**EWMA模型原理：**定义当天波动率方差的估计值为$h_t$（即日方差，$h_t=\sigma_t^2$），定义当日收益率为$u_t$。EWMA模型递推公式为：
+**EWMA模型原理：$**定义当天波动率方差的估计值为h_t（即日方差，h_t=\sigma_t^2），定义当日收益率为u_t。EWMA模型递推公式为：$
 
 $$ 
 h_{t} = \lambda\, h_{t-1} + (1-\lambda)\,u_{t-1}^2\,,
@@ -28,18 +28,18 @@ $$
 
 即最近的$u_{t-1}^2$权重大约为$1-\lambda$，再前一日的$u_{t-2}^2$权重约为$(1-\lambda)\lambda$，依此类推，权重按指数规律递减。相较于等权重的历史法，EWMA对新的波动情况更加敏感。
 
-**参数选择：**衰减因子$\lambda$一般根据经验或历史拟合确定。JP摩根公司的RiskMetrics建议对日频数据采用$\lambda=0.94$。在$\lambda=0.94$时，有约$1/(1-0.94)\approx16.7$天的有效记忆长度，意味着半衰期大致为$\ln(0.5)/\ln(0.94)\approx11$天左右。
+**参数选择：$**衰减因子\lambda一般根据经验或历史拟合确定。JP摩根公司的RiskMetrics建议对日频数据采用\lambda=0.94。在\lambda=0.94时，有约1/(1-0.94)\approx16.7天的有效记忆长度，意味着半衰期大致为\ln(0.5)/\ln(0.94)\approx11天左右。$
 
 **EWMA的优点：**
 
 - **数据需求少：**只需保存上一期波动率估计和最新收益率，无需长期历史窗口的数据存储。
 - **计算简便：**更新公式简单，易于实时计算新波动率。
 - **响应快速：**能较快捕捉波动率的变化趋势，比简单历史均值方法对波动的突变反应更灵敏。
-- **广泛应用：**已成为风险管理中常用模型，例如RiskMetrics体系中每日波动率预测即采用$\lambda=0.94$的EWMA模型。
+- **广泛应用：$**已成为风险管理中常用模型，例如RiskMetrics体系中每日波动率预测即采用\lambda=0.94的EWMA模型。$
 
 需要注意，EWMA模型相当于**假设波动率本身随机游走**或非常缓慢均值回归（$\lambda$接近1使得历史权重和接近1），因此其长期方差不收敛到固定值。尽管如此，在实践中EWMA因其简单有效而被大量采用。
 
 ## 相关链接
 
 - 相关模型：[[ARCH]], [[GARCH]]
-- 相关概念：[[Volatility Clustering|波动聚集]], [[00_factor/concept/Historical Volatility|历史波动率]], [[00_factor/concept/Implied Volatility|隐含波动率]], [[00_factor/concept/Realized Volatility|已实现波动率]]
+- 相关概念：[[Volatility Clustering|波动聚集]], [[Historical Volatility|历史波动率]], [[Implied Volatility|隐含波动率]], [[Realized Volatility|已实现波动率]]

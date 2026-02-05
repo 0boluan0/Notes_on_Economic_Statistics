@@ -30,5 +30,5 @@ $$
 
 ## 相关链接
 
-- 一般久期：[[00_factor/concept/duration|久期]], [[00_factor/concept/Macaulay Duration|马考利久期]], [[00_factor/concept/Modified Duration|修正久期]]
-- 应用：适用于含期权债券，考虑[[00_factor/concept/Implied Option Risk|隐含期权风险]]
+- 一般久期：[[duration|久期]], [[Macaulay Duration|马考利久期]], [[Modified Duration|修正久期]]
+- 应用：适用于含期权债券，考虑[[Implied Option Risk|隐含期权风险]]

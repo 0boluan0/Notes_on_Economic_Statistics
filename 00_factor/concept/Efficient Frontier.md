@@ -9,12 +9,12 @@ tags:
 # Efficient Frontier
 
 ## 它是什么
-- 「Efficient Frontier」是一个待补充定义的核心概念卡片。
+- 「Efficient Frontier」是指在给定风险下收益最大或给定收益下风险最小的组合集合。
 
 ## 最小可检索信息
-- 定义：待补充
-- 符号/公式：待补充
-- 最小例子：待补充
+- 定义：在给定风险下收益最大或给定收益下风险最小的组合集合。
+- 符号/公式：$最小方差：\min w^T\Sigma w s.t. w^T\mu=\bar\mu。$
+- 最小例子：均值-方差模型的可行前沿曲线。
 
 ## 关联卡片
 - [[CAPM Estimation]]

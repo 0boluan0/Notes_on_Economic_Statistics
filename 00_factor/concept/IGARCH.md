@@ -8,7 +8,7 @@ tags:
 - 波动建模
 - concept
 ---
-IGARCH（Integrated GARCH）指满足 $\sum \alpha_i + \sum \beta_j = 1$ 的 GARCH 模型，具有高度持久的波动记忆，长期无条件方差不存在。
+$IGARCH（Integrated GARCH）指满足 \sum \alpha_i + \sum \beta_j = 1 的 GARCH 模型，具有高度持久的波动记忆，长期无条件方差不存在。$
 
 ## 定义（以 GARCH(1,1) 为例）
 
@@ -27,9 +27,9 @@ $$
 ## Connections
 
 - 相关：[[GARCH]]、[[ARCH]]、[[TARCH]]、[[EGARCH]]
-- 估计与检验：[[00_factor/concept/Maximum Likelihood Estimation|极大似然估计]]、[[ARCH Effects Test|ARCH效应检验]]
+- 估计与检验：[[Maximum Likelihood Estimation|极大似然估计]]、[[ARCH Effects Test|ARCH效应检验]]
 
-## source_notes
+## $source_notes$
 
 - [[04_波动建模 Modeling Volatility#3.1 IGARCH]]
 

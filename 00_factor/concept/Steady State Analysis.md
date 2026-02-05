@@ -20,8 +20,8 @@ tags:
 ### 数学表达
 
 对于变量$x(t)$，稳态条件为：
-$\dot{x} = 0$（对于连续时间）
-或 $x_{t+1} = x_t$（对于离散时间）
+$\dot{x} = 0（对于连续时间）$
+$或 x_{t+1} = x_t（对于离散时间）$
 
 ## 索罗模型中的稳态
 
@@ -180,4 +180,4 @@ $\dot{k} = sf(k) - (n + \delta)k = 0$
 - 制度变迁模型
 - 技术扩散模型
 
-相关链接: [[00_factor/concept/Solow Model|索罗增长模型]], [[00_factor/concept/Harrod-Domar Model|哈罗德-多玛模型]], [[00_factor/concept/Economic Growth|经济增长]]
+相关链接: [[00_factor/concept/Solow Model|索罗增长模型]], [[00_factor/concept/Harrod-Domar Model|哈罗德-多玛模型]], [[Economic Growth|经济增长]]

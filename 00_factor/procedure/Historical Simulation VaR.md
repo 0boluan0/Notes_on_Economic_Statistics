@@ -35,14 +35,19 @@ tags:
 ### 步骤 2：构建历史收益率矩阵
 
 将历史收益率整理为 $N \times M$ 矩阵：
-$$ R = \begin{pmatrix} r_{1,1} & r_{2,1} & \cdots & r_{M,1} \\ r_{1,2} & r_{2,2} & \cdots & r_{M,2} \\ \vdots & \vdots & \ddots & \vdots \\ r_{1,N} & r_{2,N} & \cdots & r_{M,N} \end{pmatrix} $$
+$$
+R =
+\begin{pmatrix}
+ r_{1,1} & r_{2,1} & \cdots & r_{M,1} \\ r_{1,2} & r_{2,2} & \cdots & r_{M,2} \\ \vdots & \vdots & \ddots & \vdots \\ r_{1,N} & r_{2,N} & \cdots & r_{M,N} 
+\end{pmatrix}
+$$
 
 其中 $M$ 为资产数量，每行代表一个历史日的收益率向量。
 
 ### 步骤 3：计算组合历史损益
 
 对每个历史日 $t$，计算组合价值变化：
-$$ \Delta P_t = V_0 \times \sum_{j=1}^{M} w_j \times r_{j,t} $$
+$ \Delta P_t = V_0 \times \sum_{j=1}^{M} w_j \times r_{j,t} $
 
 其中 $V_0$ 为当前组合市值，$w_j$ 为资产 $j$ 的权重。
 
@@ -51,37 +56,37 @@ $$ \Delta P_t = V_0 \times \sum_{j=1}^{M} w_j \times r_{j,t} $$
 ### 步骤 4：排序损益序列
 
 将 $\Delta P_t$ 从最大损失到最大收益排序（或从最小到最大）：
-$$ \Delta P_{(1)} \le \Delta P_{(2)} \le \cdots \le \Delta P_{(N)} $$
+$\Delta P_{(1)} \le \Delta P_{(2)} \le \cdots \le \Delta P_{(N)}$
 
 ### 步骤 5：确定VaR位置
 
 根据置信水平 $\alpha$，确定分位数位置：
-- 尾部概率 = $1 - \alpha$
-- 位置索引 $k = \lceil N \times (1-\alpha) \rceil$
+- 尾部概率：$1 - \alpha$
+- 位置索引：$k = \lceil N \times (1-\alpha) \rceil$
 
 例如：$\alpha = 99\%$，$N = 250$，则取第 $\lceil 250 \times 0.01 \rceil = 3$ 大损失。
 
 ### 步骤 6：读取VaR值
 
-$$ \text{VaR}_{\alpha} = -\Delta P_{(k)} $$
+$ \text{VaR}_{\alpha} = -\Delta P_{(k)} $
 
 **注意点**：VaR为损失的正值。如果需要更精确的VaR，可在相邻两值间线性插值。
 
 ### 步骤 7：计算预期损失ES（可选）
 
 取尾部平均：
-$$ \text{ES}_{\alpha} = -\frac{1}{N(1-\alpha)} \sum_{i=1}^{N(1-\alpha)} \Delta P_{(i)} $$
+$ \text{ES}_{\alpha} = -\frac{1}{N(1-\alpha)} \sum_{i=1}^{N(1-\alpha)} \Delta P_{(i)} $
 
 ## 关键公式
 
 **组合单日损益（线性组合）**：
-$$ \Delta P_t = V_0 \times \mathbf{w}^T \mathbf{r}_t $$
+$\Delta P_t = V_0 \times \mathbf{w}^T \mathbf{r}_t$
 
 **VaR位置索引**：
-$$ k = \lceil N \times (1-\alpha) \rceil $$
+$ k = \lceil N \times (1-\alpha) \rceil $
 
 **VaR标准误估计**：
-$$ \text{SE}(\text{VaR}_\alpha) \approx \frac{\sqrt{\alpha(1-\alpha)}}{\sqrt{N} \cdot f(x_\alpha)} $$
+$ \text{SE}(\text{VaR}_\alpha) \approx \frac{\sqrt{\alpha(1-\alpha)}}{\sqrt{N} \cdot f(x_\alpha)} $
 
 其中 $f(x_\alpha)$ 为VaR处损失分布的概率密度。
 
@@ -94,6 +99,6 @@ $$ \text{SE}(\text{VaR}_\alpha) \approx \frac{\sqrt{\alpha(1-\alpha)}}{\sqrt{N} 
 
 ## 相关概念
 [[VaR]]
-[[00_factor/procedure/VaR Parametric Method|VaR参数法计算]]
-[[00_factor/procedure/Monte Carlo Simulation VaR|蒙特卡罗模拟法VaR计算]]
+[[VaR Parametric Method|VaR参数法计算]]
+[[Monte Carlo Simulation VaR|蒙特卡罗模拟法VaR计算]]
 [[EVT|极端值理论]]

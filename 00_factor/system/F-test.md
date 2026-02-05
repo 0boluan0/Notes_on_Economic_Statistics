@@ -18,7 +18,7 @@ tags:
 
 ### 整体显著性检验
 
-$$F = \frac{\text{模型均方}}{\text{残差均方}} = \frac{ESS/k}{RSS/(n-k-1)} \sim F(k, n-k-1)$$
+$F = \frac{\text{模型均方}}{\text{残差均方}} = \frac{ESS/k}{RSS/(n-k-1)} \sim F(k, n-k-1)$
 
 其中：
 - ESS：回归平方和
@@ -28,24 +28,24 @@ $$F = \frac{\text{模型均方}}{\text{残差均方}} = \frac{ESS/k}{RSS/(n-k-1)
 
 ### 嵌套模型比较
 
-$$F = \frac{(RSS_R - RSS_U)/(k_U - k_R)}{RSS_U/(n-k_U-1)} \sim F(k_U-k_R, n-k_U-1)$$
+$F = \frac{(RSS_R - RSS_U)/(k_U - k_R)}{RSS_U/(n-k_U-1)} \sim F(k_U-k_R, n-k_U-1)$
 
 其中：
-- RSS_R：受限模型的残差平方和
-- RSS_U：无约束模型的残差平方和
-- k_R：受限模型参数个数
-- k_U：无约束模型参数个数
+- $RSS_R$：受限模型的残差平方和
+- $RSS_U$：无约束模型的残差平方和
+- $k_R$：受限模型参数个数
+- $k_U$：无约束模型参数个数
 
 ## 判断标准
 
 ### 与R²的关系
 
-$$F = \frac{R^2/k}{(1-R^2)/(n-k-1)}$$
+$F = \frac{R^2/k}{(1-R^2)/(n-k-1)}$
 
 | F值 | p值范围 | 判断 |
 |------|----------|------|
-| F < F_critical | p > 0.05 | 不拒绝H0，模型整体不显著 |
-| F > F_critical | p ≤ 0.05 | 拒绝H0，模型整体显著 |
+| F < $F_critical$ | p > 0.05 | 不拒绝H0，模型整体不显著 |
+| F > $F_critical$ | p ≤ 0.05 | 拒绝H0，模型整体显著 |
 
 ### 警告信号
 
@@ -65,6 +65,6 @@ $$F = \frac{R^2/k}{(1-R^2)/(n-k-1)}$$
 
 ## 相关概念
 [[t Test|t检验]]
-[[00_factor/system/R-squared|判定系数]]
-[[00_factor/concept/Multicollinearity|多重共线性]]
-[[00_factor/concept/Variance Inflation Factor|方差膨胀因子]]
+[[R-squared|判定系数]]
+[[Multicollinearity|多重共线性]]
+[[00_factor/system/Variance Inflation Factor|方差膨胀因子]]

@@ -149,5 +149,5 @@ tags:
 4. **方法创新**：经济学研究方法的创新
 
 ## 相关链接
-[[00_factor/concept/Classical Economics|古典经济学]]
-[[00_factor/concept/Marshall's Economics|马歇尔经济学]]
+[[Classical Economics|古典经济学]]
+[[Marshall's Economics|马歇尔经济学]]

@@ -16,9 +16,9 @@ tags:
 ## 特征
 
 ### 信号与类型一一对应
-- 类型 θ_1 的发送者选择信号 m_1
-- 类型 θ_2 的发送者选择信号 m_2
-- m_1 ≠ m_2
+- 类型 θ_1 的发送者选择信号 $m_1$
+- 类型 θ_2 的发送者选择信号 $m_2$
+- $m_1$ ≠ $m_2$
 
 ### 完美信息揭示
 - 接收者看到信号后，能确定发送者的类型
@@ -34,7 +34,7 @@ tags:
 
 对于每种类型 θ，选择对应信号 m(θ) 的收益必须高于选择其他类型信号的收益：
 
-$$ U(\theta, m(\theta)) \geq U(\theta, m(\theta')) \quad \forall \theta \neq \theta' $$
+$ U(\theta, m(\theta)) \geq U(\theta, m(\theta')) \quad \forall \theta \neq \theta' $
 
 即：给定接收者的最优反应，每种类型都没有动机去模仿其他类型。
 
@@ -61,9 +61,9 @@ $$ U(\theta, m(\theta)) \geq U(\theta, m(\theta')) \quad \forall \theta \neq \th
 
 ## 相关概念
 
-- [[00_factor/concept/Pooling Equilibrium|混合均衡]]
-- [[00_factor/concept/Perfect Bayesian Equilibrium|完美贝叶斯均衡]]
-- [[00_factor/concept/Bayesian Game|贝叶斯博弈]]
+- [[Pooling Equilibrium|混合均衡]]
+- [[Perfect Bayesian Equilibrium|完美贝叶斯均衡]]
+- [[Bayesian Game|贝叶斯博弈]]
 
 ## 应用
 

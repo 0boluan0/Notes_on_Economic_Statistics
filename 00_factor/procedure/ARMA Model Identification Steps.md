@@ -18,7 +18,7 @@ tags:
 
 ## 所需数据/条件
 
-- 平稳时间序列 ${y_t}_{t=1}^T$
+- $平稳时间序列 {y_t}_{t=1}^T$
 - 样本自相关函数（ACF）和偏自相关函数（PACF）
 
 ## 计算步骤
@@ -35,15 +35,15 @@ tags:
 
 ### 步骤 2：绘制ACF和PACF图
 
-计算样本ACF和PACF，并绘制到滞后 $k=0,1,\dots,K$：
+计算样本ACF和PACF，并绘制到滞后 $k = 0, 1, \ldots, K$：
 
 **ACF公式**：
-$$ \hat{\rho}_k = \frac{\sum_{t=k+1}^T (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_{t=1}^T (y_t - \bar{y})^2} $$
+$\hat{\rho}_k = \frac{\sum_{t=k+1}^T (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_{t=1}^T (y_t - \bar{y})^2}$
 
 **PACF计算**：
 通过估计辅助回归 $y_t = \phi_{k1}y_{t-1} + \cdots + \phi_{kk}y_{t-k} + e_t$ 得到 $\hat{\phi}_{kk}$
 
-**注意点**：$K$ 通常取样本量的10%-20%，如 $K = 20$。
+**注意点**：K 通常取样本量的10%-20%，如 K = 20。
 
 ### 步骤 3：观察ACF模式
 
@@ -51,7 +51,7 @@ $$ \hat{\rho}_k = \frac{\sum_{t=k+1}^T (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_
 
 | ACF模式 | 可能模型 | 说明 |
 |---------|---------|------|
-| 截尾（$q$阶后为0） | MA(q) | ACF在 $q$ 处突然降为0 |
+| 截尾（q阶后为0） | MA(q) | ACF在 q 处突然降为0 |
 | 拖尾（指数衰减） | AR(p) 或 ARMA(p,q) | ACF缓慢衰减至0 |
 | 阻尼阻尼衰减 | AR(p) | 正负交替衰减 |
 
@@ -63,21 +63,21 @@ $$ \hat{\rho}_k = \frac{\sum_{t=k+1}^T (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_
 
 | PACF模式 | 可能模型 | 说明 |
 |---------|---------|------|
-| 截尾（$p$阶后为0） | AR(p) | PACF在 $p$ 处突然降为0 |
+| 截尾（p阶后为0） | AR(p) | PACF在 p 处突然降为0 |
 | 拖尾 | MA(q) 或 ARMA(p,q) | PACF缓慢衰减至0 |
 
-**注意点**：AR(p)模型的PACF在 $p$ 阶处截尾是关键识别特征。
+**注意点**：AR(p)模型的PACF在 p 阶处截尾是关键识别特征。
 
 ### 步骤 5：初步定阶
 
-根据ACF和PACF模式组合确定 $(p,q)$：
+根据ACF和PACF模式组合确定 (p,q)：
 
 **纯AR(p)**：
 - ACF拖尾（缓慢衰减）
-- PACF截尾（在 $p$ 阶后为0）
+- PACF截尾（在 p 阶后为0）
 
 **纯MA(q)**：
-- ACF截尾（在 $q$ 阶后为0）
+- ACF截尾（在 q 阶后为0）
 - PACF拖尾（缓慢衰减）
 
 **ARMA(p,q)**：
@@ -88,7 +88,7 @@ $$ \hat{\rho}_k = \frac{\sum_{t=k+1}^T (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_
 
 ### 步骤 6：估计候选模型
 
-对候选 $(p_1,q_1), (p_2,q_2), \dots$ 模型进行参数估计：
+对候选 $(p_1, q_1)$、$(p_2, q_2)$、$\ldots$ 模型进行参数估计：
 - 纯AR部分：使用OLS
 - 含MA部分：使用MLE或数值方法
 
@@ -98,8 +98,8 @@ $$ \hat{\rho}_k = \frac{\sum_{t=k+1}^T (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_
 
 计算各候选模型的AIC或SBC：
 
-$$ \text{AIC} = T \ln(\hat{\sigma}^2) + 2(p+q) $$
-$$ \text{SBC} = T \ln(\hat{\sigma}^2) + (p+q) \ln T $$
+$ \text{AIC} = T \ln(\hat{\sigma}^2) + 2(p+q) $
+$ \text{SBC} = T \ln(\hat{\sigma}^2) + (p+q) \ln T $
 
 其中 $\hat{\sigma}^2$ 为残差方差估计。
 
@@ -120,16 +120,16 @@ $$ \text{SBC} = T \ln(\hat{\sigma}^2) + (p+q) \ln T $$
 ## 关键公式
 
 **样本ACF**：
-$$ \hat{\rho}_k = \frac{\sum_{t=k+1}^T (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_{t=1}^T (y_t - \bar{y})^2} $$
+$\hat{\rho}_k = \frac{\sum_{t=k+1}^T (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_{t=1}^T (y_t - \bar{y})^2}$
 
 **样本PACF（回归法）**：
 通过 $y_t = \phi_{k1}y_{t-1} + \cdots + \phi_{kk}y_{t-k} + e_t$ 估计 $\hat{\phi}_{kk}$
 
 **AIC信息准则**：
-$$ \text{AIC} = T \ln(\sum \hat{\epsilon}_t^2 / T) + 2 \times \text{参数个数} $$
+$ \text{AIC} = T \ln(\sum \hat{\epsilon}_t^2 / T) + 2 \times \text{参数个数} $
 
 **Ljung-Box Q统计量**：
-$$ Q = T(T+2) \sum_{k=1}^s \frac{\hat{\rho}_k^2}{T-k} $$
+$ Q = T(T+2) \sum_{k=1}^s \frac{\hat{\rho}_k^2}{T-k} $
 
 ## 常见问题
 
@@ -139,8 +139,8 @@ $$ Q = T(T+2) \sum_{k=1}^s \frac{\hat{\rho}_k^2}{T-k} $$
 4. **非平稳序列**：非平稳序列的ACF和PACF行为异常。
 
 ## 相关概念
-[[00_factor/concept/Autocorrelation Function|自相关函数]]
-[[00_factor/concept/Partial Autocorrelation Function|偏自相关函数]]
+[[Autocorrelation Function|自相关函数]]
+[[Partial Autocorrelation Function|偏自相关函数]]
 [[Stationary Time Series|平稳时间序列]]
-[[00_factor/procedure/GARCH Model Estimation Steps|GARCH模型估计步骤]]
-[[00_factor/procedure/Box-Jenkins Method|Box-Jenkins方法]]
+[[GARCH Model Estimation Steps|GARCH模型估计步骤]]
+[[Box-Jenkins Method|Box-Jenkins方法]]

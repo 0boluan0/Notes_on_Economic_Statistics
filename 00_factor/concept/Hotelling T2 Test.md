@@ -10,12 +10,12 @@ tags:
 # Hotelling's T-squared Test
 
 ## 它是什么
-- 「Hotelling's T-squared Test」是一个待补充定义的核心概念卡片。
+- 「Hotelling T2 Test」是指检验总体均值向量的多元t检验。
 
 ## 最小可检索信息
-- 定义：待补充
-- 符号/公式：待补充
-- 最小例子：待补充
+- 定义：检验总体均值向量的多元t检验。
+- 符号/公式：$T^2=n(\bar x-\mu_0)'S^{-1}(\bar x-\mu_0)。$
+- 最小例子：检验多指标样本均值是否等于目标。
 
 ## 关联卡片
 - [[Mahalanobis Distance]]

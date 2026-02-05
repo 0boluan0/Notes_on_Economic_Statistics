@@ -16,17 +16,17 @@ tags:
 
 ## 计算方法
 
-$$CI_k = \sqrt{\frac{\lambda_{\max}}{\lambda_k}}$$
+$CI_k = \sqrt{\frac{\lambda_{\max}}{\lambda_k}}$
 
 其中：
 - $\lambda_{\max}$：X'X矩阵的最大特征值
-- $\lambda_k$：第k个特征值
+- \lambda_k：第k个特征值
 
 ### 方差分解比例（Variance Decomposition Proportions）
 
 计算每个回归系数的方差中，有多少比例来自每个特征值：
 
-$$\pi_{jk} = \frac{\phi_{jk}^2}{\sum_{i=1}^{p} \phi_{ji}^2}$$
+$\pi_{jk} = \frac{\phi_{jk}^2}{\sum_{i=1}^{p} \phi_{ji}^2}$
 
 其中 $\phi_{jk}$ 是特征向量第j行第k列的元素。
 
@@ -51,6 +51,6 @@ $$\pi_{jk} = \frac{\phi_{jk}^2}{\sum_{i=1}^{p} \phi_{ji}^2}$$
 | CI波动大 | 样本不稳定 | 增大样本、使用滚动窗口分析 |
 
 ## 相关概念
-[[00_factor/concept/Variance Inflation Factor|方差膨胀因子]]
-[[00_factor/concept/Multicollinearity|多重共线性]]
+[[00_factor/system/Variance Inflation Factor|方差膨胀因子]]
+[[Multicollinearity|多重共线性]]
 [[Eigenvalues|特征值]]

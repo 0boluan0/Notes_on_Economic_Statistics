@@ -20,10 +20,10 @@ tags:
 
 找到满足以下等式的 r：
 
-$$ \text{Price} = \sum_{t=1}^T \frac{C_t}{(1+r)^t} + \frac{F}{(1+r)^T} $$
+$ \text{Price} = \sum_{t=1}^T \frac{C_t}{(1+r)^t} + \frac{F}{(1+r)^T} $
 
 其中：
-- C_t：第 t 期的现金流（利息或偿付）
+- $C_t$：第 t 期的现金流（利息或偿付）
 - F：期末偿付的面值
 - T：到期期限
 
@@ -42,8 +42,8 @@ $$ \text{Price} = \sum_{t=1}^T \frac{C_t}{(1+r)^t} + \frac{F}{(1+r)^T} $$
 
 ### 4. 永续债券（Perpetuity/Consol）
 
-$$ P = \frac{C}{r} $$
-$$ r = \frac{C}{P} $$
+$ P = \frac{C}{r} $
+$ r = \frac{C}{P} $
 
 这种债券没有到期日，永远只支付固定息票。如果债券的到期时间很长，可以用永续债券来估算。
 
@@ -59,10 +59,10 @@ $$ r = \frac{C}{P} $$
 
 衡量一个人在特定时间段持有某种债券所获取的收益的指标，又叫做持有期回报率。
 
-$$ R = i_c + g $$
+$ R = i_c + g $
 
 包含两部分：
-1. i_c：利息收益（当期收益率）
+1. $i_c$：利息收益（当期收益率）
 2. g：资本利得率（rate of capital gain，即现在的价差）
 
 ### 案例分析
@@ -86,8 +86,8 @@ $$ R = i_c + g $$
 ## 相关概念
 
 - [[Present Value|现值]]
-- [[00_factor/concept/Yield to Maturity|到期收益率]]
-- [[00_factor/concept/duration|久期]]
+- [[Yield to Maturity|到期收益率]]
+- [[duration|久期]]
 
 ## 注意事项
 

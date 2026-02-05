@@ -15,11 +15,11 @@ Ljung-Box检验是用于检验时间序列是否存在自相关的统计方法�
 
 **Box-Pierce统计量：**
 
-$$Q = T \sum_{k=1}^{m} \hat{\rho}_k^2$$
+$Q = T \sum_{k=1}^{m} \hat{\rho}_k^2$
 
 **Ljung-Box统计量（小样本修正）：**
 
-$$Q_{LB} = T(T+2) \sum_{k=1}^{m} \frac{\hat{\rho}_k^2}{T-k}$$
+$Q_{LB} = T(T+2) \sum_{k=1}^{m} \frac{\hat{\rho}_k^2}{T-k}$
 
 其中：
 - T：样本量
@@ -33,11 +33,11 @@ $$Q_{LB} = T(T+2) \sum_{k=1}^{m} \frac{\hat{\rho}_k^2}{T-k}$$
 
 ## 分布
 
-在H₀下，Q和Q_LB近似服从χ²(m)分布。
+在H₀下，Q和$Q_LB$近似服从χ²(m)分布。
 
 ## 检验步骤
 
-1. **计算样本ACF**：计算$\hat{\rho}_k$，k = 1, 2, ..., m
+1. **计算样本ACF**：$计算\hat{\rho}_k，k = 1, 2, ..., m$
 2. **计算检验统计量**：使用Box-Pierce或Ljung-Box公式
 3. **比较临界值**：比较统计量与χ²(m)分布的临界值
 4. **判断**：若统计量显著，拒绝白噪声假设
@@ -46,8 +46,8 @@ $$Q_{LB} = T(T+2) \sum_{k=1}^{m} \frac{\hat{\rho}_k^2}{T-k}$$
 
 | 方法 | 公式 | 特点 |
 |------|------|------|
-| Box-Pierce | $Q = T \sum \hat{\rho}_k^2$ | 简单，但在小样本下效果较差 |
-| Ljung-Box | $Q_{LB} = T(T+2) \sum \frac{\hat{\rho}_k^2}{T-k}$ | 小样本修正，更常用 |
+$| Box-Pierce | Q = T \sum \hat{\rho}_k^2 | 简单，但在小样本下效果较差 |$
+$| Ljung-Box | Q_{LB} = T(T+2) \sum \frac{\hat{\rho}_k^2}{T-k} | 小样本修正，更常用 |$
 
 ## 应用
 
@@ -59,8 +59,8 @@ $$Q_{LB} = T(T+2) \sum_{k=1}^{m} \frac{\hat{\rho}_k^2}{T-k}$$
 
 McLeod-Li检验用于检验平方序列的自相关，检测ARCH效应：
 
-$$Q = T(T+2) \sum_{k=1}^{m} \frac{r_k^2}{T-k}$$
+$Q = T(T+2) \sum_{k=1}^{m} \frac{r_k^2}{T-k}$
 
-其中r_k是平方序列的自相关系数。
+其中$r_k$是平方序列的自相关系数。
 
-相关链接: [[00_factor/concept/White Noise Test|白噪声检验]], [[ARCH]], [[00_factor/concept/Autocorrelation Function|自相关函数]]
+相关链接: [[White Noise Test|白噪声检验]], [[ARCH]], [[Autocorrelation Function|自相关函数]]

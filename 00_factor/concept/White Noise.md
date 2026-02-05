@@ -16,8 +16,8 @@ tags:
 满足以下条件即为白噪声：
 
 1. $E(\varepsilon_t)=0$
-2. $\mathrm{Var}(\varepsilon_t)=\sigma^2$（与 $t$ 无关）
-3. $\mathrm{Cov}(\varepsilon_t,\varepsilon_{t-s})=0$（任意非零滞后 $s$）
+2. $\mathrm{Var}(\varepsilon_t)=\sigma^2（与 t 无关）$
+3. $\mathrm{Cov}(\varepsilon_t,\varepsilon_{t-s})=0（任意非零滞后 s）$
 
 ## 备注
 
@@ -26,10 +26,10 @@ tags:
 
 ## Connections
 
-- 用途：[[ARMA]] 创新项、[[00_factor/concept/White Noise Test|白噪声检验]] 残差诊断
-- 相关：[[00_factor/concept/Autocorrelation Function|自相关函数]]、[[00_factor/concept/Partial Autocorrelation Function|偏自相关函数]]
+- 用途：[[ARMA]] 创新项、[[White Noise Test|白噪声检验]] 残差诊断
+- 相关：[[Autocorrelation Function|自相关函数]]、[[Partial Autocorrelation Function|偏自相关函数]]
 
-## source_notes
+## $source_notes$
 
 - [[03_平稳时间序列模型#1.1 自回归移动平均模型ARMA(p,q) model]]（创新项设为白噪声）
 - [[03_平稳时间序列模型#1.2 三种‘没有关系’的辨析]]（白噪声定义）

@@ -48,14 +48,14 @@ tags:
 
 ### 1. 对基础货币的影响
 
-$$ \Delta MB = \Delta C + \Delta R $$
+$ \Delta MB = \Delta C + \Delta R $
 
 公开市场操作主要影响准备金 R，间接影响货币供给。
 
 ### 2. 对货币供给的影响
 
 通过货币乘数效应：
-$$ \Delta M = m \times \Delta MB $$
+$ \Delta M = m \times \Delta MB $
 
 ### 3. 对利率的影响
 
@@ -88,7 +88,7 @@ $$ \Delta M = m \times \Delta MB $$
 - 对一部分管控能力较弱（银行的借款），只能通过利率间接控制。
 
 能控制的部分叫非借入准备金（Non-borrowed Monetary Base, MBn）：
-$$ MB_n = MB - BR $$
+$ MB_n = MB - BR $
 
 ## 优势
 
@@ -122,10 +122,10 @@ $$ MB_n = MB - BR $$
 
 ## 相关概念
 
-- [[00_factor/concept/Monetary Base|基础货币]]
+- [[Monetary Base|基础货币]]
 - [[Required Reserves|准备金]]
 - [[Discount Rate|贴现率]]
-- [[00_factor/concept/Money Multiplier|货币乘数]]
+- [[Money Multiplier|货币乘数]]
 
 ## 在货币政策中的地位
 

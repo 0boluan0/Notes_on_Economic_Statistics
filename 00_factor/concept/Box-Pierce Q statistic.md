@@ -15,23 +15,23 @@ tags:
 
 ## 定理内容
 
-**目的**：检验时间序列 $\{y_t\}$ 的前 $s$ 阶自相关系数是否全部为零（即序列是否为白噪声）
+**目的**：检验时间序列 $\{$y_t$\}$ 的前 $s$ 阶自相关系数是否全部为零（即序列是否为白噪声）
 
 **原假设**：$H_0: \rho_1 = \rho_2 = \cdots = \rho_s = 0$
 
 **Box-Pierce Q 统计量**：
-$$Q = T \sum_{k=1}^{s} r_k^2$$
+$Q = T \sum_{k=1}^{s} r_k^2$
 
 **Ljung-Box 修正统计量**（小样本更稳健）：
-$$Q^* = T(T+2) \sum_{k=1}^{s} \frac{r_k^2}{T - k}$$
+$Q^* = T(T+2) \sum_{k=1}^{s} \frac{r_k^2}{T - k}$
 
 其中：
-- $T$ 为样本容量
+- T 为样本容量
 - $r_k$ 为样本自相关系数
-- $s$ 为检验的滞后阶数
+- s 为检验的滞后阶数
 
 在大样本下，当 $H_0$ 成立时：
-$$Q, Q^* \xrightarrow{d} \chi^2(s)$$
+$Q, Q^* \xrightarrow{d} \chi^2(s)$
 
 ## 证明思路
 
@@ -42,7 +42,7 @@ $$Q, Q^* \xrightarrow{d} \chi^2(s)$$
 ### 步骤 1：样本自相关系数的定义
 
 样本自相关系数：
-$$r_k = \frac{\sum_{t=k+1}^{T} (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_{t=1}^{T} (y_t - \bar{y})^2}$$
+$r_k = \frac{\sum_{t=k+1}^{T} (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_{t=1}^{T} (y_t - \bar{y})^2}$
 
 其中 $\bar{y} = \frac{1}{T}\sum_{t=1}^{T} y_t$ 为样本均值。
 
@@ -51,40 +51,40 @@ $$r_k = \frac{\sum_{t=k+1}^{T} (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_{t=1}^{T
 对于白噪声过程，当 $T \to \infty$ 时，时序自相关系数 $r_k$ 满足：
 
 **大样本性质**：
-$$\sqrt{T} \cdot r_k \xrightarrow{d} N(0, 1)$$
+$\sqrt{T} \cdot r_k \xrightarrow{d} N(0, 1)$
 
 因此：
-$$r_k \approx N\left(0, \frac{1}{T}\right)$$
+$r_k \approx N\left(0, \frac{1}{T}\right)$
 
-这意味着 $r_k^2$ 的期望约为 $1/T$。
+这意味着 r_k^2 的期望约为 1/T。
 
 ### 步骤 3：样本自相关系数的独立性
 
-在原假设 $H_0$ 下（白噪声），不同滞后的样本自相关系数 $\{r_k\}$ 渐近独立。
+在原假设 $H_0$ 下（白噪声），不同滞后的样本自相关系数 \{$r_k$\} 渐近独立。
 
 **直观解释**：白噪声的不同滞后观测值之间无相关性，因此估计出的 $r_1, r_2, \ldots, r_s$ 也渐近独立。
 
 ### 步骤 4：构造 Box-Pierce 统计量
 
-考虑 $s$ 个独立的标准化样本自相关系数：
-$$\sqrt{T} \cdot r_1, \sqrt{T} \cdot r_2, \ldots, \sqrt{T} \cdot r_s$$
+考虑 s 个独立的标准化样本自相关系数：
+$\sqrt{T} \cdot r_1, \sqrt{T} \cdot r_2, \ldots, \sqrt{T} \cdot r_s$
 
 它们的平方和为：
-$$\sum_{k=1}^{s} (\sqrt{T} \cdot r_k)^2 = T \sum_{k=1}^{s} r_k^2 = Q$$
+$\sum_{k=1}^{s} (\sqrt{T} \cdot r_k)^2 = T \sum_{k=1}^{s} r_k^2 = Q$
 
 由于每个 $\sqrt{T} \cdot r_k$ 渐近服从 $N(0,1)$，且相互独立，它们的平方和渐近服从自由度为 $s$ 的卡方分布：
-$$Q = T \sum_{k=1}^{s} r_k^2 \xrightarrow{d} \chi^2(s)$$
+$Q = T \sum_{k=1}^{s} r_k^2 \xrightarrow{d} \chi^2(s)$
 
 ### 步骤 5：Ljung-Box 的小样本修正
 
 Box-Pierce 统计量在小样本下可能有偏差。Ljung 和 Box 提出以下修正：
 
-每个 $r_k$ 的有效方差不是精确的 $1/T$，而是：
-$$\text{Var}(r_k) = \frac{1}{T - k}$$
+每个 $r_k$ 的有效方差不是精确的 1/T，而是：
+$\text{Var}(r_k) = \frac{1}{T - k}$
 
 因此，使用修正权重 $\frac{T+2}{T-k}$：
 
-$$Q^* = T(T+2) \sum_{k=1}^{s} \frac{r_k^2}{T - k}$$
+$Q^* = T(T+2) \sum_{k=1}^{s} \frac{r_k^2}{T - k}$
 
 这个统计量在 $H_0$ 下也渐近服从 $\chi^2(s)$，但在小样本下更接近真实分布。
 
@@ -92,7 +92,7 @@ $$Q^* = T(T+2) \sum_{k=1}^{s} \frac{r_k^2}{T - k}$$
 
 当检验 ARMA(p,q) 模型的残差时，自由度需要调整：
 
-$$df = s - p - q$$
+$df = s - p - q$
 
 （若模型包含常数项，则再减 1）
 
@@ -102,7 +102,7 @@ $$df = s - p - q$$
 
 检验步骤：
 
-1. **计算统计量**：根据样本计算 $Q$ 或 $Q^*$
+1. **计算统计量**：根据样本计算 Q 或 Q^*
 2. **查临界值**：给定显著性水平 $\alpha$，查 $\chi^2(df)$ 的临界值
 3. **判断**：
    - 若 $Q^* > \chi^2_{\alpha}(df)$，拒绝 $H_0$，认为序列存在自相关（不是白噪声）
@@ -114,6 +114,6 @@ $$df = s - p - q$$
 - **模型选择**：Box-Jenkins 三阶段建模法的诊断检验阶段
 
 ## 相关概念
-[[00_factor/concept/White Noise|白噪声过程]]
-[[00_factor/concept/Autocorrelation Function|自相关函数 ACF]]
-[[00_factor/concept/ARMA|ARMA模型]]
+[[White Noise|白噪声过程]]
+[[Autocorrelation Function|自相关函数 ACF]]
+[[ARMA|ARMA模型]]

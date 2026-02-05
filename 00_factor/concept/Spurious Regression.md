@@ -29,7 +29,7 @@ $y_t = \beta_0 + \beta_1 x_t + \epsilon_t$
 ### 问题
 
 尽管$y_t$和$x_t$完全无关：
-- 回归结果可能显示显著的$\beta_1$
+- 回归结果可能显示显著的\beta_1
 - $R^2$可能很高
 - t检验可能显著
 - 但这是误导性的
@@ -159,10 +159,10 @@ $\Delta y_t = \beta_0 + \beta_1 \Delta x_t + \epsilon_t$
 #### EG两步检验法
 
 1. 第一步：估计长期关系
-   $y_t = \beta_0 + \beta_1 x_t + \epsilon_t$
+$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$
 
 2. 第二步：检验残差平稳性
-   对$\epsilon_t$进行ADF检验
+   对\epsilon_t进行ADF检验
 
 #### 如果协整
 
@@ -238,4 +238,4 @@ $\Delta y_t = \alpha + \beta \Delta x_t + \gamma \epsilon_{t-1} + u_t$
 - 报度协整检验
 - 说明数据处理方法
 
-相关链接: [[00_factor/concept/Augmented Dickey-Fuller Test|ADF检验]], [[00_factor/concept/Phillips-Perron Test|PP检验]], [[00_factor/concept/Cointegration|协整]], [[Error Correction Model|误差纠正机制(ECM)]]
+相关链接: [[Augmented Dickey-Fuller Test|ADF检验]], [[Phillips-Perron Test|PP检验]], [[Cointegration|协整]], [[Error Correction Model|误差纠正机制(ECM)]]

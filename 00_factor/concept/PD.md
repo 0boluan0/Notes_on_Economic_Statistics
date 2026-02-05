@@ -9,12 +9,12 @@ tags:
 # Probability of Default (PD)
 
 ## 它是什么
-- 「Probability of Default (PD)」是一个待补充定义的核心概念卡片。
+- 「PD」是指在给定期限内借款人发生违约的概率。
 
 ## 最小可检索信息
-- 定义：待补充
-- 符号/公式：待补充
-- 最小例子：待补充
+- 定义：在给定期限内借款人发生违约的概率。
+- 符号/公式：$PD=P(\text{default within }T)。$
+- 最小例子：一年期PD=2%。
 
 ## 关联卡片
 - [[Risk-Weighted Assets]]

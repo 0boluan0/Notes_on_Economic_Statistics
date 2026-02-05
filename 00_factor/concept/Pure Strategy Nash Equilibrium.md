@@ -33,10 +33,10 @@ tags:
 
 ## 相关概念
 
-- [[00_factor/concept/Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
-- [[00_factor/concept/strategic-form Games|策略式表达]]
-- [[00_factor/concept/Best-Reply Function|最优反应函数]]
-- [[00_factor/concept/Rationalisability|可理性化]]
+- [[Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
+- [[strategic-form Games|策略式表达]]
+- [[Best-Reply Function|最优反应函数]]
+- [[Rationalisability|可理性化]]
 
 ## 常见例子
 
@@ -48,5 +48,5 @@ tags:
 ## 纳什均衡的类型
 
 - 纯策略纳什均衡
-- [[00_factor/concept/Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
-- [[00_factor/concept/Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]
+- [[Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
+- [[Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]

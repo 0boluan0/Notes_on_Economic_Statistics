@@ -53,5 +53,5 @@ tags:
 3. 制度质量决定了后发优势能否有效发挥
 
 ## 相关链接
-[[00_factor/concept/Rostow's Stages of Growth|罗斯托经济增长阶段论]]
-[[00_factor/concept/Middle-Income Trap|中等收入陷阱]]
+[[Rostow's Stages of Growth|罗斯托经济增长阶段论]]
+[[Middle-Income Trap|中等收入陷阱]]

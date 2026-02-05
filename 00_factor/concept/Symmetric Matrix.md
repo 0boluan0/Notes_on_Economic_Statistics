@@ -14,7 +14,7 @@ tags:
 ## 定义
 
 对于n×n矩阵A，如果对于所有i, j都有：
-a_ij = a_ji
+$a_ij = a_ji$
 
 则A是对称矩阵。
 
@@ -118,4 +118,4 @@ Q(x) = xᵀAx
 - 协方差矩阵是对称正定矩阵
 - 相关矩阵
 
-相关链接: [[00_factor/concept/Matrix Rank|矩阵的秩]], [[00_factor/concept/LU Decomposition|LU分解]]
+相关链接: [[Matrix Rank|矩阵的秩]], [[LU Decomposition|LU分解]]

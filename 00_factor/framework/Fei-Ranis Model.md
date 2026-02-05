@@ -43,11 +43,11 @@ tags:
 
 ## 数学表达
 
-设农业部门劳动力为 $L_A$，生产函数为 $Q_A = f(L_A)$
+$设农业部门劳动力为 L_A，生产函数为 Q_A = f(L_A)$
 
 - 在阶段1：$MP_L = \frac{\partial Q_A}{\partial L_A} \approx 0$
-- 在阶段2：$MP_L > 0$ 且递增
-- 在阶段3：$W_M = p_A \times MP_L$（其中 $p_A$ 为农产品价格）
+- 在阶段2：$MP_L$ > 0 且递增
+- 在阶段3：$W_M = p_A \times MP_L（其中 p_A 为农产品价格）$
 
 ## 与刘易斯模型的区别
 
@@ -62,5 +62,5 @@ tags:
 3. **资本积累**：工业部门的资本积累是推动劳动力转移的关键动力
 
 ## 相关链接
-[[00_factor/framework/Lewis Dual Sector Model|刘易斯模型]]
-[[00_factor/framework/Todaro Migration Model|托达罗模型]]
+[[Lewis Dual Sector Model|刘易斯模型]]
+[[Todaro Migration Model|托达罗模型]]

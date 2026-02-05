@@ -1,6 +1,6 @@
 ---
 name: today
-description: Generate today's journal note when the user says /today or asks for a daily log. Use template `00_inbox/日记模版.md` (fallback `00_inbox/日记模板.md`), create the note in `99_学习情况记录`, add a bilingual (Chinese + English) major-news section for the latest 24 hours (world, finance, technology), list unfinished tasks from existing notes in `99_学习情况记录`, and list today's tasks extracted from `Overview & Study Record.md` as markdown checkboxes.
+description: Generate today's journal note when the user says /today or asks for a daily log. Use template `00_inbox/日记模版.md` (fallback `00_inbox/日记模板.md`), create the note in `99_学习情况记录`, add a bilingual global situation dashboard (map + regional news + global tech + global intel/geopolitics) for the latest 24 hours, list unfinished tasks from existing notes in `99_学习情况记录`, and list today's tasks extracted from `Overview & Study Record.md` as markdown checkboxes.
 ---
 
 # Today
@@ -23,14 +23,12 @@ Use this workflow every time the user asks for `/today`.
    - Format: `YYYY-MM-DD——<DayAbbrev>.md` (for example `2026-02-02——Mon.md`).
    - If the file already exists, update it in place instead of creating a duplicate.
 
-3. Build module 1 (news, bilingual).
-   - Search the web for major news in the latest 24 hours in three categories:
-     - World
-     - Finance
-     - Technology
-   - Keep 3 items per category.
-   - For each item, write one short Chinese line and one short English line that include a brief content summary (not just the headline).
-   - Include publish time and source.
+3. Build module 1 (global dashboard, bilingual).
+   - Run:
+     - `python3 .codex/skills/today/scripts/build_news_dashboard.py --date YYYY-MM-DD`
+   - The script creates a static SVG map in `98_attachment/dashboards` and prints the full module 1 markdown to stdout.
+   - Use the printed markdown block directly (it already includes map embed + region/tech/intel lists).
+   - Optional: add `--translate` and set `LIBRETRANSLATE_URL` to enable machine translation for the Chinese lines.
    - Follow `references/news-format.md`.
 
 4. Build module 2 and module 3 (tasks) with the helper script.
@@ -42,7 +40,7 @@ Use this workflow every time the user asks for `/today`.
 5. Compose the final note.
    - Start from the resolved diary template content.
    - Place module order exactly:
-     - Module 1: 24h News (bilingual)
+     - Module 1: Global Situation Dashboard (bilingual)
      - Module 2: Unfinished Tasks (from old diaries)
      - Module 3: Today's Tasks (from overview plan)
    - Use markdown checkboxes (`- [ ]`) for all task bullets.
@@ -50,7 +48,7 @@ Use this workflow every time the user asks for `/today`.
 6. Save and verify.
    - Confirm file is under `99_学习情况记录`.
    - Confirm all three modules exist.
-   - Confirm module 1 is bilingual and within latest 24 hours.
+   - Confirm module 1 includes the map embed and news lists within latest 24 hours.
 
 ## Notes
 

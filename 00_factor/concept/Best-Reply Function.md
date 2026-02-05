@@ -16,14 +16,14 @@ tags:
 
 ## 形式化表示
 
-对于玩家 1，最优反应函数 BR_1(s_2) 返回在对手选择策略 s_2 时，玩家 1 的所有最优策略：
+对于玩家 1，最优反应函数 $BR_1$($s_2$) 返回在对手选择策略 $s_2$ 时，玩家 1 的所有最优策略：
 
-$$ BR_1(s_2) = \arg\max_{s_1 \in S_1} u_1(s_1, s_2) $$
+$ BR_1(s_2) = \arg\max_{s_1 \in S_1} u_1(s_1, s_2) $
 
 其中：
-- s_1, s_2 是玩家的策略
-- u_1 是玩家 1 的收益函数
-- S_1 是玩家 1 的策略集合
+- $s_1$, $s_2$ 是玩家的策略
+- $u_1$ 是玩家 1 的收益函数
+- $S_1$ 是玩家 1 的策略集合
 
 ## 性质
 
@@ -37,7 +37,7 @@ $$ BR_1(s_2) = \arg\max_{s_1 \in S_1} u_1(s_1, s_2) $$
 
 ### 寻找纳什均衡
 - 纳什均衡就是所有玩家的最优反应函数的交点
-- 当 BR_1(s_2*) = s_1* 且 BR_2(s_1*) = s_2* 时，(s_1*, s_2*) 是纳什均衡
+- $当 BR_1(s_2*) = s_1* 且 BR_2(s_1*) = s_2* 时，(s_1*, s_2*) 是纳什均衡$
 
 ### 混合策略求解
 - 通过构建最优反应函数图形
@@ -46,14 +46,14 @@ $$ BR_1(s_2) = \arg\max_{s_1 \in S_1} u_1(s_1, s_2) $$
 ## 相关概念
 
 - [[Nash Equilibrium|纳什均衡]]
-- [[00_factor/concept/Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
-- [[00_factor/concept/Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
-- [[00_factor/concept/Cournot Competition|古诺竞争]]
+- [[Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
+- [[Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
+- [[Cournot Competition|古诺竞争]]
 
 ## 典型例子
 
 ### 古诺竞争
-$$ q_1^* = \max \left\{0, \frac{a - c - q_2}{2}\right\} $$
+$ q_1^* = \max \left\{0, \frac{a - c - q_2}{2}\right\} $
 
 ### 性别博弈
 最优反应函数在某些区间上是多重最优的

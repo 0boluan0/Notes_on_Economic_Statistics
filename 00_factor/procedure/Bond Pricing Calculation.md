@@ -29,14 +29,14 @@ tags:
 ### 步骤 1：确定基本参数
 
 - 面值 $M$（通常为100元或1000元）
-- 票面年利息 $C_{\text{年}} = M \times \text{票面利率}$
-- 每期利息 $C = C_{\text{年}} / m$
+- $票面年利息 C_{\text{年}} = M \times \text{票面利率}$
+- $每期利息 C = C_{\text{年}} / m$
 
 **注意点**：确保所有利率单位一致（年利率）。
 
 ### 步骤 2：计算各期现金流
 
-每期现金流 $t = 1, 2, \dots, mn$：
+每期现金流 $t = 1, 2, \ldots, mn$：
 $$
 CF_t =
 \begin{cases}
@@ -53,7 +53,7 @@ $$
 PV_t = \frac{CF_t}{(1 + y/m)^t}
 $$
 
-**注意点**：分母使用 $(1 + y/m)^t$ 而非 $(1 + y)^t/m$。
+**注意点**：分母使用 (1 + y/m)^t 而非 (1 + y)^t/m。
 
 ### 步骤 4：加总得到债券价格
 
@@ -77,7 +77,7 @@ $$
 
 **零息债券（无利息）**：
 $$
-P = \frac{M}{(1 + y)^n}
+$P = \frac{M}{(1 + y)^n}$
 $$
 
 **注意点**：使用这些公式可快速计算，避免求和。
@@ -86,17 +86,17 @@ $$
 
 **一般债券定价公式**：
 $$
-P = \sum_{t=1}^{n} \frac{CF_t}{(1 + y)^t} + \frac{M}{(1 + y)^n}
+$P = \sum_{t=1}^{n} \frac{$CF_t$}{(1 + y)^t} + \frac{M}{(1 + y)^n}$
 $$
 
 **平息债券定价公式**：
 $$
-P = C \times \frac{1 - (1 + y)^{-n}}{y} + \frac{M}{(1 + y)^n}
+$P = C \times \frac{1 - (1 + y)^{-n}}{y} + \frac{M}{(1 + y)^n}$
 $$
 
 **到期收益率求解（由价格求YTM）**：
 $$
-\sum_{t=1}^{mn} \frac{CF_t}{(1 + y/m)^t} = P
+$\sum_{t=1}^{mn} \frac{$CF_t$}{(1 + y/m)^t} = P$
 $$
 需要数值方法求解（如二分法、牛顿迭代）。
 
@@ -123,6 +123,6 @@ $$
 4. **特殊情况处理**：到期日、流通债、含权债需特殊处理。
 
 ## 相关概念
-[[00_factor/concept/duration|久期]]
-[[00_factor/concept/Macaulay Duration|马考利久期]]
-[[00_factor/concept/Yield to Maturity|到期收益率]]
+[[duration|久期]]
+[[Macaulay Duration|马考利久期]]
+[[Yield to Maturity|到期收益率]]

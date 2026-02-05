@@ -10,13 +10,13 @@ tags:
 # Christoffersen Test
 
 ## 它是什么
-- 「Christoffersen Test」是一个待补充定义的核心概念卡片。
+- 「Christoffersen Test」是指VaR回测中同时检验覆盖率与独立性（条件覆盖率）的检验。
 
 ## 最小可检索信息
-- 定义：待补充
-- 符号/公式：待补充
-- 最小例子：待补充
+- 定义：VaR回测中同时检验覆盖率与独立性（条件覆盖率）的检验。
+- 符号/公式：$LR_{cc}=LR_{uc}+LR_{ind}$。
+- 最小例子：检验VaR例外次数是否正确且不成簇。
 
 ## 关联卡片
-- [[Backtesting]]
+- [[00_factor/concept/Backtesting|Backtesting]]
 - [[Bunching]]

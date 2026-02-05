@@ -22,9 +22,9 @@ tags:
 
 **模型形式：**
 
-1. 无趋势无截距：Δy_t = φy_{t-1} + ε_t
-2. 有截距无趋势：Δy_t = α + φy_{t-1} + ε_t
-3. 有截距有趋势：Δy_t = α + βt + φy_{t-1} + ε_t
+1. 无趋势无截距：$Δy_t = φy_{t-1} + ε_t$
+2. 有截距无趋势：$Δy_t = α + φy_{t-1} + ε_t$
+3. 有截距有趋势：$Δy_t = α + βt + φy_{t-1} + ε_t$
 
 **原假设H₀**：φ = 0（存在单位根，非平稳）
 **备择假设H₁**：φ < 0（不存在单位根，平稳）
@@ -35,7 +35,7 @@ tags:
 
 **模型形式：**
 
-$$\Delta y_t = \alpha + \beta t + \phi y_{t-1} + \sum_{i=1}^{p} \gamma_i \Delta y_{t-i} + \varepsilon_t$$
+$\Delta y_t = \alpha + \beta t + \phi y_{t-1} + \sum_{i=1}^{p} \gamma_i \Delta y_{t-i} + \varepsilon_t$
 
 **与DF的区别**：增加了滞后差分项Δy_{t-i}以消除误差项自相关
 
@@ -64,7 +64,7 @@ $$\Delta y_t = \alpha + \beta t + \phi y_{t-1} + \sum_{i=1}^{p} \gamma_i \Delta 
 ## 单整阶数I(d)
 
 - I(0)：平稳序列
-- I(1)：一阶差分后平稳（Δy_t平稳）
+- I(1)：一阶差分后平稳（Δ$y_t$平稳）
 - I(d)：d阶差分后平稳
 
 ## 注意事项
@@ -73,4 +73,4 @@ $$\Delta y_t = \alpha + \beta t + \phi y_{t-1} + \sum_{i=1}^{p} \gamma_i \Delta 
 2. **样本量要求**：小样本下检验功效较低
 3. **结构突变**：存在结构突变时，传统检验可能失效
 
-相关链接: [[00_factor/concept/Cointegration|协整]], [[00_factor/concept/Stationarity|平稳性]], [[Error Correction Model|误差修正模型]]
+相关链接: [[Cointegration|协整]], [[Stationarity|平稳性]], [[Error Correction Model|误差修正模型]]

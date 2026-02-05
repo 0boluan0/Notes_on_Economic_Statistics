@@ -14,13 +14,13 @@ tags:
 
 级数是数列 $\{a_n\}$ 的各项之和，记作：
 
-$$\sum_{n=1}^{\infty} a_n = a_1 + a_2 + a_3 + \cdots$$
+$\sum_{n=1}^{\infty} a_n = a_1 + a_2 + a_3 + \cdots$
 
 ## 部分和
 
 前 n 项的和称为部分和：
 
-$$S_n = \sum_{k=1}^{n} a_k = a_1 + a_2 + \cdots + a_n$$
+$S_n = \sum_{k=1}^{n} a_k = a_1 + a_2 + \cdots + a_n$
 
 ## 收敛与发散
 
@@ -31,17 +31,17 @@ $$S_n = \sum_{k=1}^{n} a_k = a_1 + a_2 + \cdots + a_n$$
 
 ### 1. 等比级数
 
-$$\sum_{n=0}^{\infty} ar^n = \frac{a}{1-r}$$（当 |r| < 1 时收敛）
+$\sum_{n=0}^{\infty} ar^n = \frac{a}{1-r}（当 |r| < 1 时收敛）$
 
 ### 2. 调和级数
 
-$$\sum_{n=1}^{\infty} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \cdots$$
+$\sum_{n=1}^{\infty} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \cdots$
 
 调和级数是发散的。
 
 ### 3. p-级数
 
-$$\sum_{n=1}^{\infty} \frac{1}{n^p}$$
+$\sum_{n=1}^{\infty} \frac{1}{n^p}$
 
 当 p > 1 时收敛，当 p ≤ 1 时发散。
 
@@ -69,11 +69,11 @@ $$\sum_{n=1}^{\infty} \frac{1}{n^p}$$
 
 ### 收敛半径
 
-幂级数的收敛区间为 $(x_0-R, x_0+R)$，R 称为收敛半径。
+幂级数的收敛区间为 $(x_0 - R, x_0 + R)$，$R$ 称为收敛半径。
 
 ### 常见幂级数
 
-1. **几何级数**：$\sum_{n=0}^{\infty} x^n = \frac{1}{1-x}$ (|x| < 1)
+1. **几何级数**：$\sum_{n=0}^{\infty} x^n = \frac{1}{1-x} (|x| < 1)$
 2. **指数级数**：$\sum_{n=0}^{\infty} \frac{x^n}{n!} = e^x$
 3. **正弦级数**：$\sum_{n=0}^{\infty} \frac{(-1)^n x^{2n+1}}{(2n+1)!} = \sin x$
 4. **余弦级数**：$\sum_{n=0}^{\infty} \frac{(-1)^n x^{2n}}{(2n)!} = \cos x$
@@ -82,7 +82,7 @@ $$\sum_{n=1}^{\infty} \frac{1}{n^p}$$
 
 函数 f(x) 在点 x₀ 处的泰勒级数：
 
-$$f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n$$
+$f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n$
 
 当 x₀ = 0 时，称为麦克劳林级数。
 
@@ -94,4 +94,4 @@ $$f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n$$
 4. **概率统计**：概率分布函数的展开
 
 ## 相关链接
-[[00_factor/concept/Limit|极限]]
+[[Limit|极限]]

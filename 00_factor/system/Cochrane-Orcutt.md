@@ -19,18 +19,18 @@ tags:
 ### 迭代步骤
 
 1. **初始OLS估计**：
-   $$y_t = \beta_0 + \beta_1 x_t + \epsilon_t$$
+   $y_t = \beta_0 + \beta_1 x_t + \epsilon_t$
    得到初始残差 $\hat{\epsilon}_t$
 
 2. **估计自相关系数**：
-   $$\hat{\rho} = \frac{\sum_{t=2}^T \hat{\epsilon}_t \hat{\epsilon}_{t-1}}{\sum_{t=2}^T \hat{\epsilon}_{t-1}^2}$$
+   $\hat{\rho} = \frac{\sum_{t=2}^T \hat{\epsilon}_t \hat{\epsilon}_{t-1}}{\sum_{t=2}^T \hat{\epsilon}_{t-1}^2}$
 
 3. **广义差分变换**：
-   $$y_t^* = y_t - \hat{\rho} y_{t-1}$$
-   $$x_t^* = x_t - \hat{\rho} x_{t-1}$$
+$y_t^* = y_t - \hat{\rho} y_{t-1}$
+$x_t^* = x_t - \hat{\rho} x_{t-1}$
 
 4. **重新估计模型**：
-   $$y_t^* = \beta_0(1-\hat{\rho}) + \beta_1 x_t^* + u_t$$
+$y_t^* = \beta_0(1-\hat{\rho}) + \beta_1 x_t^* + u_t$
 
 5. **迭代终止判断**：
    - 计算$\hat{\rho}$的新估计值
@@ -80,6 +80,6 @@ tags:
 | Newey-West | 任意自相关 | 非参数方法 |
 
 ## 相关概念
-[[00_factor/system/Autocorrelation Diagnosis|自相关诊断]]
+[[Autocorrelation Diagnosis|自相关诊断]]
 [[Newey-West]]
 [[FGLS]]

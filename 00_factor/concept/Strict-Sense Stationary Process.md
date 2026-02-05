@@ -14,9 +14,9 @@ tags:
 
 严平稳过程（Strict-Sense Stationary Process）是指随机过程的有限维分布不随时间的推移而改变。
 
-对于任意时间 t_1, t_2, ..., t_n 和任意时间差 τ：
+对于任意时间 $t_1$, $t_2$, ..., $t_n$ 和任意时间差 τ：
 
-随机变量 (X(t_1), X(t_2), ..., X(t_n)) 和 (X(t_1+τ), X(t_2+τ), ..., X(t_n+τ)) 的联合分布相同。
+随机变量 (X($t_1$), X($t_2$), ..., X($t_n$)) 和 (X($t_1$+τ), X($t_2$+τ), ..., X($t_n$+τ)) 的联合分布相同。
 
 ## 直观理解
 
@@ -29,17 +29,17 @@ tags:
 
 如果均值存在，则：
 
-$$ E[X(t)] = \mu \quad (\text{常数}) $$
+$ E[X(t)] = \mu \quad (\text{常数}) $
 
 ### 2. 方差常数
 
 如果方差存在，则：
 
-$$ Var[X(t)] = \sigma^2 \quad (\text{常数}) $$
+$ Var[X(t)] = \sigma^2 \quad (\text{常数}) $
 
 ### 3. 相关函数仅与时间差有关
 
-$$ R_X(t_1, t_2) = R_X(t_2 - t_1) $$
+$ R_X(t_1, t_2) = R_X(t_2 - t_1) $
 
 ### 4. 任意阶矩（如果存在）不随时间变化
 
@@ -63,7 +63,7 @@ $$ R_X(t_1, t_2) = R_X(t_2 - t_1) $$
 
 对于正态随机过程：
 
-$$ \text{宽平稳} \iff \text{严平稳} $$
+$ \text{宽平稳} \iff \text{严平稳} $
 
 这是因为正态分布完全由一、二阶矩决定。
 
@@ -75,11 +75,11 @@ $$ \text{宽平稳} \iff \text{严平稳} $$
 
 ### 均值各态历经性
 
-$$ \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T X(t) dt = E[X(t)] $$
+$ \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T X(t) dt = E[X(t)] $
 
 ### 相关函数各态历经性
 
-$$ \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T X(t)X(t+\tau) dt = R_X(\tau) $$
+$ \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T X(t)X(t+\tau) dt = R_X(\tau) $
 
 ## 应用
 
@@ -90,7 +90,7 @@ $$ \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T X(t)X(t+\tau) dt = R_X(\tau) $$
 
 ## 相关概念
 
-- [[00_factor/concept/Wide-Sense Stationary Process|宽平稳过程]]
+- [[Wide-Sense Stationary Process|宽平稳过程]]
 - [[Ergodicity|各态历经性]]
 | 特征 | 严平稳 | 宽平稳 |
 |------|---------|---------|

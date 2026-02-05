@@ -14,7 +14,7 @@ tags:
 
 ## 债券估价基本模型
 
-$$PV = \sum_{t=1}^{n} \frac{I_t}{(1 + i)^t} + \frac{M}{(1 + i)^n}$$
+$PV = \sum_{t=1}^{n} \frac{I_t}{(1 + i)^t} + \frac{M}{(1 + i)^n}$
 
 其中：
 - $PV$：债券价值
@@ -27,7 +27,7 @@ $$PV = \sum_{t=1}^{n} \frac{I_t}{(1 + i)^t} + \frac{M}{(1 + i)^n}$$
 
 平息债券是指不是按年发放利息的债券，而是按照其他时间尺度发放利息。
 
-$$PV = \sum_{t=1}^{mn} \frac{I / m}{(1 + i / m)^{tm}} + \frac{M}{(1 + i / m)^{mn}}$$
+$PV = \sum_{t=1}^{mn} \frac{I / m}{(1 + i / m)^{tm}} + \frac{M}{(1 + i / m)^{mn}}$
 
 其中：
 - $m$：每年付息次数
@@ -38,7 +38,7 @@ $$PV = \sum_{t=1}^{mn} \frac{I / m}{(1 + i / m)^{tm}} + \frac{M}{(1 + i / m)^{mn
 
 永久债券是指没有到期日，永不停止定期支付利息的债券。
 
-$$PV = \frac{利息额}{折现率}$$
+$PV = \frac{利息额}{折现率}$
 
 ## 流通债券估价
 
@@ -98,4 +98,4 @@ $$PV = \frac{利息额}{折现率}$$
 5. 保护性条款：保障债券持有人能得到还本付息的保障
 
 ## 相关链接
-[[00_factor/concept/Yield to Maturity|到期收益率]]
+[[Yield to Maturity|到期收益率]]

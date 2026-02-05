@@ -14,7 +14,7 @@ tags:
 
 ## 定义
 
-$$\rho_k = \frac{\text{Cov}(y_t, y_{t+k})}{\sqrt{\text{Var}(y_t)\text{Var}(y_{t+k})}}$$
+$\rho_k = \frac{\text{Cov}(y_t, y_{t+k})}{\sqrt{\text{Var}(y_t)\text{Var}(y_{t+k})}}$
 
 对于平稳时间序列，ACF只依赖于滞后阶数k。
 
@@ -33,18 +33,18 @@ $$\rho_k = \frac{\text{Cov}(y_t, y_{t+k})}{\sqrt{\text{Var}(y_t)\text{Var}(y_{t+
 
 ## 样本ACF估计
 
-$$\hat{\rho}_k = \frac{\sum_{t=k+1}^{T} (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_{t=1}^{T} (y_t - \bar{y})^2}$$
+$\hat{\rho}_k = \frac{\sum_{t=k+1}^{T} (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_{t=1}^{T} (y_t - \bar{y})^2}$
 
 ## 应用
 
 1. 检验序列相关性
 2. 识别ARMA模型阶数
 3. 评估模型拟合效果
-4. [[00_factor/concept/White Noise Test|白噪声检验]]
+4. [[White Noise Test|白噪声检验]]
 
-相关链接: [[00_factor/concept/Partial Autocorrelation Function|偏自相关函数]], [[ARMA]], [[00_factor/concept/White Noise Test|白噪声检验]]
+相关链接: [[Partial Autocorrelation Function|偏自相关函数]], [[ARMA]], [[White Noise Test|白噪声检验]]
 
-## source_notes
+## $source_notes$
 
 - [[03_平稳时间序列模型#0.回忆用]]（ACF 计算提示）
 - [[03_平稳时间序列模型#1. 引言 Introduction]]

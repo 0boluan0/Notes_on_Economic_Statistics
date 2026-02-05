@@ -12,13 +12,13 @@ ADL（Autoregressive Distributed Lag，自回归分布滞后）模型是包含�
 
 ## 模型形式
 
-$$y_t = \alpha + \sum_{i=1}^{p} \phi_i y_{t-i} + \sum_{j=0}^{q} \beta_j x_{t-j} + \varepsilon_t$$
+$y_t = \alpha + \sum_{i=1}^{p} \phi_i y_{t-i} + \sum_{j=0}^{q} \beta_j x_{t-j} + \varepsilon_t$
 
 其中：
-- y_t：被解释变量
-- x_t：解释变量
-- p：y_t的滞后阶数
-- q：x_t的滞后阶数（包括当期）
+- $y_t$：被解释变量
+- $x_t$：解释变量
+- p：$y_t$的滞后阶数
+- q：$x_t$的滞后阶数（包括当期）
 - ε_t：误差项
 
 ## 特例
@@ -28,14 +28,14 @@ $$y_t = \alpha + \sum_{i=1}^{p} \phi_i y_{t-i} + \sum_{j=0}^{q} \beta_j x_{t-j} 
 假设适应性预期：$x_t^* = \lambda x_{t-1} + (1-\lambda)x_t$
 
 ADL(1,0)形式：
-$$y_t = \gamma \delta \lambda y_{t-1} + \gamma (1-\lambda)x_t - \gamma \delta \lambda x_{t-1} + \varepsilon_t$$
+$y_t = \gamma \delta \lambda y_{t-1} + \gamma (1-\lambda)x_t - \gamma \delta \lambda x_{t-1} + \varepsilon_t$
 
 ### 2. 部分调整模型
 
 假设部分调整：$y_t - y_{t-1} = \delta(y_t^* - y_{t-1})$
 
 ADL(1,1)形式：
-$$y_t = (1-\delta)y_{t-1} + \delta \alpha_0 + \delta \alpha_1 x_t + \varepsilon_t$$
+$y_t = (1-\delta)y_{t-1} + \delta \alpha_0 + \delta \alpha_1 x_t + \varepsilon_t$
 
 ## 模型性质
 
@@ -51,7 +51,7 @@ $$y_t = (1-\delta)y_{t-1} + \delta \alpha_0 + \delta \alpha_1 x_t + \varepsilon_
 
 检验ADL模型中的自相关问题：
 
-$$h = (1 - \frac{d}{2}) \sqrt{\frac{T}{1 - T \hat{\phi}^2}}$$
+$h = (1 - \frac{d}{2}) \sqrt{\frac{T}{1 - T \hat{\phi}^2}}$
 
 其中d是Durbin-Watson统计量，$\hat{\phi}$是y_{t-1}的估计系数。
 
@@ -65,4 +65,4 @@ $$h = (1 - \frac{d}{2}) \sqrt{\frac{T}{1 - T \hat{\phi}^2}}$$
 2. **短期和长期效应**：区分即时影响和累积影响
 3. **政策评估**：评估财政政策、货币政策的动态效应
 
-相关链接: [[00_factor/concept/Distributed Lag Model|分布滞后模型]], [[00_factor/concept/Instrumental Variable|工具变量]], [[Autocorrelation|自相关]]
+相关链接: [[Distributed Lag Model|分布滞后模型]], [[Instrumental Variable|工具变量]], [[Autocorrelation|自相关]]

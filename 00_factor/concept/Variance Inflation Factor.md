@@ -13,18 +13,18 @@ tags:
 
 ## 定义
 
-对于解释变量x_i，其VIF定义为：
+对于解释变量$x_i$，其VIF定义为：
 
-$$VIF_i = \frac{1}{1 - R_i^2}$$
+$VIF_i = \frac{1}{1 - R_i^2}$
 
-其中R_i²是x_i对其他所有解释变量回归的判定系数（R²）。
+其中$R_i$²是$x_i$对其他所有解释变量回归的判定系数（R²）。
 
 ## 含义
 
-VIF_i衡量由于多重共线性导致x_i系数估计量的方差膨胀的程度。
+$VIF_i$衡量由于多重共线性导致$x_i$系数估计量的方差膨胀的程度。
 
-- **R_i² = 0**：x_i与其他变量完全无关，VIF = 1（无膨胀）
-- **R_i² → 1**：x_i可由其他变量完全线性表示，VIF → ∞（完全多重共线性）
+- **$R_i$² = 0**：$x_i与其他变量完全无关，VIF = 1（无膨胀）$
+- **$R_i$² → 1**：$x_i$可由其他变量完全线性表示，VIF → ∞（完全多重共线性）
 
 ## 判断标准
 
@@ -36,24 +36,24 @@ VIF_i衡量由于多重共线性导致x_i系数估计量的方差膨胀的程度
 
 ## 与标准误的关系
 
-考虑多重共线性后，x_i系数估计量的标准误为：
+考虑多重共线性后，$x_i$系数估计量的标准误为：
 
-$$\text{SE}(\hat{\beta}_i) = \frac{\sigma_{\varepsilon}}{\sqrt{SST_i}} \cdot \sqrt{VIF_i}$$
+$\text{SE}(\hat{\beta}_i) = \frac{\sigma_{\varepsilon}}{\sqrt{SST_i}} \cdot \sqrt{VIF_i}$
 
 其中：
 - σ_ε：误差项标准差
-- SST_i：x_i的离差平方和
-- √VIF_i：多重共线性导致标准误放大的倍数
+- $SST_i$：$x_i$的离差平方和
+- √$VIF_i$：多重共线性导致标准误放大的倍数
 
 ## 计算步骤
 
-1. 对每个x_i，用其他解释变量回归：$x_i = \gamma_0 + \sum_{j \neq i} \gamma_j x_j + u_i$
-2. 计算该回归的R²（记为R_i²）
-3. 计算VIF_i = 1/(1-R_i²)
+1. 对每个$x_i$，用其他解释变量回归：$x_i = \gamma_0 + \sum_{j \neq i} \gamma_j x_j + u_i$
+2. 计算该回归的R²（记为$R_i$²）
+3. $计算VIF_i = 1/(1-R_i²)$
 
 ## 性质
 
-1. **VIF ≥ 1**：因为0 ≤ R_i² < 1
+1. **VIF ≥ 1**：因为0 ≤ $R_i$² < 1
 2. **对变量敏感**：不同变量VIF可能不同
 3. **与模型整体相关**：平均VIF反映整体多重共线性水平
 
@@ -67,7 +67,7 @@ $$\text{SE}(\hat{\beta}_i) = \frac{\sigma_{\varepsilon}}{\sqrt{SST_i}} \cdot \sq
 
 对于多元线性回归，可以定义广义VIF矩阵：
 
-$$\text{VIF} = \text{diag}[(R(X) R(X)']^{-1}$$
+$\text{VIF} = \text{diag}[(R(X) R(X)']^{-1}$
 
 其中R(X)是X的相关矩阵。
 
@@ -80,4 +80,4 @@ $$\text{VIF} = \text{diag}[(R(X) R(X)']^{-1}$$
 | VIF | 标准化指标，便于判断 |
 | 条件指数 | 考虑所有变量相关 |
 
-相关链接: [[00_factor/concept/Multicollinearity|多重共线性]], [[00_factor/system/Condition Index|条件指数]]
+相关链接: [[Multicollinearity|多重共线性]], [[Condition Index|条件指数]]

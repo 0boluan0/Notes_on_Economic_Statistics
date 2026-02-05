@@ -18,7 +18,7 @@ tags:
 - 明确处理定义（Treat）、处理时间（Post）、结果变量与样本口径。
 
 ## Step 2
-- 构造变量：Treat_i、Post_t 与交互项 Treat_i×Post_t。
+- 构造变量：$Treat_i$、$Post_t$ 与交互项 $Treat_i$×$Post_t$。
 
 ## Step 3
 - 画出处理前趋势（均值图或事件研究图），初步检查平行趋势。

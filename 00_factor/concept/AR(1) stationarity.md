@@ -14,13 +14,13 @@ tags:
 ## 定理内容
 
 对于 AR(1) 模型：
-$$y_t = a_0 + a_1 y_{t-1} + \varepsilon_t$$
+$y_t = a_0 + a_1 y_{t-1} + \varepsilon_t$
 
-其中 $\varepsilon_t$ 为白噪声，$E(\varepsilon_t) = 0$，$\text{Var}(\varepsilon_t) = \sigma^2$。
+$其中 \varepsilon_t 为白噪声，E(\varepsilon_t) = 0，\text{Var}(\varepsilon_t) = \sigma^2。$
 
-**平稳性充要条件**：$|a_1| < 1$
+**平稳性充要条件**：$|$a_1$| < 1$
 
-当且仅当 $|a_1| < 1$ 时，该过程是协方差平稳的，此时：
+当且仅当 $|$a_1$| < 1$ 时，该过程是协方差平稳的，此时：
 - 均值：$\mu = \frac{a_0}{1 - a_1}$
 - 方差：$\text{Var}(y_t) = \frac{\sigma^2}{1 - a_1^2}$
 - 自协方差：$\gamma_s = \frac{\sigma^2 a_1^s}{1 - a_1^2}$
@@ -55,7 +55,9 @@ $$
 - **当 $|a_1| \geq 1$**：$a_1^t$ 发散或为常数，初始条件持续影响
 
 因此，当 $|a_1| < 1$ 时，得到稳定特解：
-$$y_t = \frac{a_0}{1 - a_1} + \sum_{i=0}^{\infty} a_1^i \varepsilon_{t-i}$$
+$$
+y_t = \frac{a_0}{1 - a_1} + \sum_{i=0}^{\infty} a_1^i \varepsilon_{t-i}
+$$
 
 ### 步骤 3：验证均值有限且为常数
 
@@ -99,7 +101,7 @@ $$
 
 ### 步骤 5：验证自协方差仅依赖于滞后
 
-计算滞后 $s > 0$ 的自协方差：
+计算滞后 s > 0 的自协方差：
 $$
 \begin{aligned}
 \gamma_s &= E[(y_t - \mu)(y_{t-s} - \mu)] \\
@@ -120,7 +122,7 @@ $$
 
 ### 步骤 6：计算自相关系数
 
-$$\rho_s = \frac{\gamma_s}{\gamma_0} = \frac{\frac{\sigma^2 a_1^s}{1 - a_1^2}}{\frac{\sigma^2}{1 - a_1^2}} = a_1^s$$
+$\rho_s = \frac{\gamma_s}{\gamma_0} = \frac{\frac{\sigma^2 a_1^s}{1 - a_1^2}}{\frac{\sigma^2}{1 - a_1^2}} = a_1^s$
 
 ## 结论
 
@@ -142,6 +144,6 @@ $$\rho_s = \frac{\gamma_s}{\gamma_0} = \frac{\frac{\sigma^2 a_1^s}{1 - a_1^2}}{\
 特征方程：$1 - \phi_1 z - \phi_2 z^2 - \cdots - \phi_p z^p = 0$
 
 ## 相关概念
-[[00_factor/concept/Yule-Walker equations|Yule-Walker方程]]
-[[00_factor/concept/ARMA|ARMA模型]]
+[[Yule-Walker equations|Yule-Walker方程]]
+[[ARMA|ARMA模型]]
 [[Difference Equation|差分方程]]

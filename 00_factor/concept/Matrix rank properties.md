@@ -21,9 +21,9 @@ tags:
 **行秩**：$A$ 的行向量组的极大线性无关组所含向量的个数
 
 **秩-零度定理（Sylvester 定理）**：
-$$\text{rank}(A) + \text{nullity}(A) = n$$
+$\text{rank}(A) + \text{nullity}(A) = n$
 
-其中 $\text{nullity}(A) = \dim(N(A))$ 是零空间的维数。
+$其中 \text{nullity}(A) = \dim(N(A)) 是零空间的维数。$
 
 **秩的不等式**：
 1. $0 \leq \text{rank}(A) \leq \min(m, n)$
@@ -52,10 +52,10 @@ $$\text{rank}(A) + \text{nullity}(A) = n$$
 - 非零行构成行向量组的极大线性无关组
 
 因此：
-$$\text{row rank}(R) = \text{col rank}(R) = \text{主元个数} = \text{rank}(R)$$
+$\text{row rank}(R) = \text{col rank}(R) = \text{主元个数} = \text{rank}(R)$
 
 结论：
-$$\text{rank}(A) = \text{row rank}(A) = \text{col rank}(A)$$
+$\text{rank}(A) = \text{row rank}(A) = \text{col rank}(A)$
 
 ### 步骤 2：证明秩-零度定理
 
@@ -78,10 +78,10 @@ $$\text{rank}(A) = \text{row rank}(A) = \text{col rank}(A)$$
 共得到 $n - r$ 个线性无关的解向量 $\{v_1, v_2, \ldots, v_{n-r}\}$，构成零空间 $N(A)$ 的基。
 
 因此：
-$$\text{nullity}(A) = n - r$$
+$\text{nullity}(A) = n - r$
 
 即：
-$$\text{rank}(A) + \text{nullity}(A) = r + (n - r) = n$$
+$\text{rank}(A) + \text{nullity}(A) = r + (n - r) = n$
 
 ### 步骤 3：证明秩的上下界
 
@@ -91,35 +91,35 @@ $$\text{rank}(A) + \text{nullity}(A) = r + (n - r) = n$$
 - 行秩不超过行数：$\text{rank}(A) \leq m$
 
 因此：
-$$\text{rank}(A) \leq \min(m, n)$$
+$\text{rank}(A) \leq \min(m, n)$
 
 ### 步骤 4：证明矩阵乘积的秩不等式
 
 设 $A$ 为 $m \times n$ 矩阵，$B$ 为 $n \times p$ 矩阵。
 
 **列空间角度**：
-$$C(AB) = \{ABx \mid x \in \mathbb{R}^p\} = \{A(Bx) \mid x \in \mathbb{R}^p\} \subseteq \{Ay \mid y \in \mathbb{R}^n\} = C(A)$$
+$C(AB) = \{ABx \mid x \in \mathbb{R}^p\} = \{A(Bx) \mid x \in \mathbb{R}^p\} \subseteq \{Ay \mid y \in \mathbb{R}^n\} = C(A)$
 
-$AB$ 的列空间是 $A$ 的列空间的子空间，因此：
-$$\text{rank}(AB) = \dim(C(AB)) \leq \dim(C(A)) = \text{rank}(A)$$
+AB 的列空间是 A 的列空间的子空间，因此：
+$\text{rank}(AB) = \dim(C(AB)) \leq \dim(C(A)) = \text{rank}(A)$
 
-**行空间角度**（利用 $(AB)^T = B^T A^T$）：
-$$\text{rank}(AB) = \text{rank}((AB)^T) = \text{rank}(B^T A^T) \leq \text{rank}(B^T) = \text{rank}(B)$$
+**行空间角度**（利用 (AB)^T = B^T A^T）：
+$\text{rank}(AB) = \text{rank}((AB)^T) = \text{rank}(B^T A^T) \leq \text{rank}(B^T) = \text{rank}(B)$
 
 综合：
-$$\text{rank}(AB) \leq \min(\text{rank}(A), \text{rank}(B))$$
+$\text{rank}(AB) \leq \min(\text{rank}(A), \text{rank}(B))$
 
 ### 步骤 5：证明矩阵和的秩不等式
 
-$$C(A+B) \subseteq C(A) + C(B)$$
+$C(A+B) \subseteq C(A) + C(B)$
 
-其中 $C(A) + C(B) = \{y + z \mid y \in C(A), z \in C(B)\}$ 是列空间的和。
+其中 C(A) + C(B) = \{y + z \mid y \in C(A), z \in C(B)\} 是列空间的和。
 
 因此：
-$$\dim(C(A+B)) \leq \dim(C(A) + C(B)) \leq \dim(C(A)) + \dim(C(B))$$
+$\dim(C(A+B)) \leq \dim(C(A) + C(B)) \leq \dim(C(A)) + \dim(C(B))$
 
 即：
-$$\text{rank}(A+B) \leq \text{rank}(A) + \text{rank}(B)$$
+$\text{rank}(A+B) \leq \text{rank}(A) + \text{rank}(B)$
 
 ## 结论
 
@@ -143,5 +143,5 @@ $$\text{rank}(A+B) \leq \text{rank}(A) + \text{rank}(B)$$
   - 通过 $\pi$ 矩阵的秩判断协整关系数量
 
 ## 相关概念
-[[00_factor/concept/Linear system solution structure|线性方程组解的结构]]
+[[Linear system solution structure|线性方程组解的结构]]
 [[Matrix Inverse|矩阵的逆]]

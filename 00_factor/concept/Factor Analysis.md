@@ -26,7 +26,7 @@ tags:
 
 ### 模型设定
 
-$$ X - \mu = LF + \epsilon $$
+$ X - \mu = LF + \epsilon $
 
 其中：
 - $X$：p × 1 可观测随机向量
@@ -39,18 +39,18 @@ $$ X - \mu = LF + \epsilon $$
 
 1. **公因子**：
    - $E(F) = 0$
-   - $\text{Cov}(F) = I_m$（单位矩阵，因子之间不相关）
+   - $\text{Cov}(F) = I_m（单位矩阵，因子之间不相关）$
 
 2. **特殊因子**：
    - $E(\epsilon) = 0$
-   - $\text{Cov}(\epsilon) = \Psi$（对角矩阵）
+   - $\text{Cov}(\epsilon) = \Psi（对角矩阵）$
 
 3. **独立性**：
    - $\text{Cov}(\epsilon, F) = 0$
 
 ## 协方差分解
 
-$$ \Sigma = LL' + \Psi $$
+$ \Sigma = LL' + \Psi $
 
 其中：
 - $LL'$：公因子贡献的协方差（公共部分）
@@ -60,13 +60,13 @@ $$ \Sigma = LL' + \Psi $$
 
 ### 公共度（Communality）
 
-$$ h_i^2 = \sum_{j=1}^m l_{ij}^2 $$
+$h_i^2 = \sum_{j=1}^m l_{ij}^2$
 
 表示第 i 个变量由公因子解释的方差部分。
 
 ### 特殊方差（Specific Variance）
 
-$$ \psi_i = \sigma_{ii} - h_i^2 $$
+$\psi_i = \sigma_{ii} - h_i^2$
 
 表示第 i 个变量未被公因子解释的方差（独特部分）。
 
@@ -75,7 +75,7 @@ $$ \psi_i = \sigma_{ii} - h_i^2 $$
 ### 非唯一性
 因子载荷矩阵 $L$ 不是唯一的。如果 $T$ 是正交矩阵：
 
-$$ L^* = LT $$
+$ L^* = LT $
 
 也满足模型，因为 $(LT)(LT)' = LTT'L' = LL'$。
 
@@ -101,7 +101,7 @@ $$ L^* = LT $$
 
 ### 2. 极大似然法（Maximum Likelihood Method）
 
-假设 $X \sim N_p(\mu, \Sigma)$，在约束 $L'\Psi^{-1}L$ 为对角矩阵下估计 $L$ 和 $\Psi$。
+假设 $X \sim $N_p$(\mu, \Sigma)$，在约束 $L'\Psi^{-1}L$ 为对角矩阵下估计 $L$ 和 $\Psi$。
 
 **考试不考**。
 
@@ -124,7 +124,7 @@ $$ L^* = LT $$
 | 特征 | 主成分分析 | 因子分析 |
 |------|-----------|---------|
 | 目标 | 数据压缩 | 结构建模 |
-| 模型 | $Y = PX$ | $X = LF + \epsilon$ |
+$| 模型 | Y = PX | X = LF + \epsilon |$
 | 方差 | 完全解释 | 区分公共和特殊 |
 | 唯一性 | 唯一 | 不唯一（可旋转）|
 | 模型假设 | 无 | 有潜在因子假设 |
@@ -141,5 +141,5 @@ $$ L^* = LT $$
 ## 相关概念
 
 - [[PCA|主成分分析]]
-- [[00_factor/concept/Communality|公共度]]
+- [[Communality|公共度]]
 - [[Factor Loadings|因子载荷]]

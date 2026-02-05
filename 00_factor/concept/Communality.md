@@ -15,21 +15,23 @@ tags:
 
 在因子分析中：
 
-$$ h_i^2 = \sum_{j=1}^m l_{ij}^2 $$
+$ h_i^2 = \sum_{j=1}^m l_{ij}^2 $
 
 其中：
-- $h_i^2$：第 i 个变量的公共度
-- $l_{ij}$：第 i 个变量在第 j 个因子上的载荷
+- h_i^2：第 i 个变量的公共度
+- l_{ij}：第 i 个变量在第 j 个因子上的载荷
 - m：公共因子数量
 
 ## 数学含义
 
 从协方差分解 $\Sigma = LL' + \Psi$ 来看：
-
-$$ \sigma_{ii} = h_i^2 + \psi_i $$
-
+$$
+\sigma_{ii} = h_i^2 + \psi_i
+$$
 即：
-$$ h_i^2 = \sigma_{ii} - \psi_i $$
+$$
+h_i^2 = \sigma_{ii} - \psi_i
+$$
 
 变量的总方差 = 公共度 + 特殊方差
 
@@ -47,11 +49,14 @@ $$ h_i^2 = \sigma_{ii} - \psi_i $$
 
 假设因子载荷矩阵：
 
-$$ L = \begin{pmatrix}
+$$
+L =
+\begin{pmatrix}
 0.8 & 0.2 \\
 0.6 & 0.7 \\
 0.4 & 0.5
-\end{pmatrix} $$
+\end{pmatrix}
+$$
 
 计算公共度：
 
@@ -76,7 +81,7 @@ $$ L = \begin{pmatrix}
 ## 相关概念
 
 - [[Specific Variance|特殊方差]]
-- [[00_factor/concept/Factor Analysis|因子分析]]
+- [[Factor Analysis|因子分析]]
 - [[Factor Loadings|因子载荷]]
 
 ## 性质
@@ -85,4 +90,6 @@ $$ L = \begin{pmatrix}
 2. **非负**：公共度总是非负的
 3. **总和**：所有变量公共度之和等于所有因子方差之和
 
-$$ \sum_{i=1}^p h_i^2 = \sum_{j=1}^m \left(\sum_{i=1}^p l_{ij}^2\right) $$
+$$
+\sum_{i=1}^p h_i^2 = \sum_{j=1}^m \left(\sum_{i=1}^p l_{ij}^2\right)
+$$

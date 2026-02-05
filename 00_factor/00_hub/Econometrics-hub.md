@@ -61,8 +61,8 @@ tags:
 ## 多重共线性
 
 [[Multicollinearity|多重共线性]]
-[[00_factor/system/Variance Inflation Factor|方差膨胀因子]]
-[[00_factor/system/Condition Index|条件指数]]
+[[00_factor/concept/Variance Inflation Factor|方差膨胀因子]]
+[[Condition Index|条件指数]]
 
 ## 内生性问题
 
@@ -102,7 +102,7 @@ tags:
 
 ## 课程笔记
 
-- [[00_factor/concept/OLS Basics|01_OLS基础]]
-- [[00_factor/system/Heteroskedasticity and Autocorrelation|02_异方差与自相关]]
-- [[00_factor/system/Multicollinearity and Endogeneity|03_多重共线性与内生性]]
-- [[00_factor/concept/Simultaneous Equations Model|04_联立方程模型]]
+- [[OLS Basics|01_OLS基础]]
+- [[Heteroskedasticity and Autocorrelation|02_异方差与自相关]]
+- [[Multicollinearity and Endogeneity|03_多重共线性与内生性]]
+- [[Simultaneous Equations Model|04_联立方程模型]]

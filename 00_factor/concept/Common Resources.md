@@ -68,15 +68,15 @@ tags:
 ### 数学模型
 
 设 n 个人共同使用资源：
-- 个人使用量：x_i
-- 总使用量：X = Σx_i
-- 个人收益：B_i(x_i)
+- 个人使用量：$x_i$
+- 总使用量：$X = Σx_i$
+- 个人收益：$B_i$($x_i$)
 - 社会成本：C(X)
 
-个人最优：max B_i(x_i) - x_i C(X) / n
-社会最优：max ΣB_i(x_i) - C(X)
+个人最优：max $B_i$($x_i$) - $x_i$ C(X) / n
+社会最优：max Σ$B_i$($x_i$) - C(X)
 
-结果：x_i(个人) > x_i(社会)
+结果：$x_i$(个人) > $x_i$(社会)
 
 ## 解决方案
 
@@ -142,10 +142,10 @@ Elinor Ostrom 研究表明，社区自主管理可以避免公地悲剧：
 
 ## 相关概念
 
-- [[00_factor/concept/Public Goods|公共物品]]
-- [[00_factor/concept/Club Goods|俱乐部物品]]
-- [[00_factor/concept/Externality|外部性]]
-- [[00_factor/concept/Coase Theorem|科斯定理]]
+- [[Public Goods|公共物品]]
+- [[Club Goods|俱乐部物品]]
+- [[Externality|外部性]]
+- [[Coase Theorem|科斯定理]]
 
 ## 政策启示
 

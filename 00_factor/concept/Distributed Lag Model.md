@@ -14,11 +14,11 @@ tags:
 
 ## 基本形式
 
-$$y_t = \alpha + \sum_{j=0}^{q} \beta_j x_{t-j} + \varepsilon_t$$
+$y_t = \alpha + \sum_{j=0}^{q} \beta_j x_{t-j} + \varepsilon_t$
 
 其中：
-- y_t：被解释变量
-- x_t：解释变量
+- $y_t$：被解释变量
+- $x_t$：解释变量
 - β_j：滞后j期的系数
 - q：最大滞后阶数
 - ε_t：误差项
@@ -31,7 +31,7 @@ $$y_t = \alpha + \sum_{j=0}^{q} \beta_j x_{t-j} + \varepsilon_t$$
 
 ### 2. 无限分布滞后（IDL）
 
-$$y_t = \alpha + \sum_{j=0}^{\infty} \beta_j x_{t-j} + \varepsilon_t$$
+$y_t = \alpha + \sum_{j=0}^{\infty} \beta_j x_{t-j} + \varepsilon_t$
 
 通常假设β_j按某种规律衰减（如几何衰减）。
 
@@ -48,12 +48,12 @@ $$y_t = \alpha + \sum_{j=0}^{\infty} \beta_j x_{t-j} + \varepsilon_t$$
 假设β_j = βλ^j，其中0 < λ < 1
 
 模型可表示为：
-$$y_t = \alpha + \beta x_t + \lambda y_{t-1} + \varepsilon_t$$
+$y_t = \alpha + \beta x_t + \lambda y_{t-1} + \varepsilon_t$
 
 ### 2. 多项式分布滞后（Almon滞后）
 
 假设β_j是j的多项式函数：
-$$\beta_j = a_0 + a_1 j + a_2 j^2 + ... + a_m j^m$$
+$\beta_j = a_0 + a_1 j + a_2 j^2 + ... + a_m j^m$
 
 其中m < q。
 
@@ -65,17 +65,17 @@ $$\beta_j = a_0 + a_1 j + a_2 j^2 + ... + a_m j^m$$
 
 ### 长期效应（长期乘数）
 
-长期乘数 = $\sum_{j=0}^{q} \beta_j$
+$长期乘数 = \sum_{j=0}^{q} \beta_j$
 
 ### 平均滞后
 
-$$\bar{L} = \frac{\sum_{j=0}^{q} j \beta_j}{\sum_{j=0}^{q} \beta_j}$$
+$\bar{L} = \frac{\sum_{j=0}^{q} j \beta_j}{\sum_{j=0}^{q} \beta_j}$
 
 ## 估计问题
 
 ### 多重共线性
 
-x_t, x_{t-1}, ..., x_{t-q}通常高度相关，导致：
+$x_t$, x_{t-1}, ..., x_{t-q}通常高度相关，导致：
 - 参数估计不稳定
 - 标准误较大
 
@@ -91,4 +91,4 @@ x_t, x_{t-1}, ..., x_{t-q}通常高度相关，导致：
 2. **投资行为**：分析投资对收入、利率的反应
 3. **消费函数**：分析消费对收入的动态调整
 
-相关链接: [[ADL]], [[Autocorrelation|自相关]], [[00_factor/concept/Multicollinearity|多重共线性]]
+相关链接: [[ADL]], [[Autocorrelation|自相关]], [[Multicollinearity|多重共线性]]

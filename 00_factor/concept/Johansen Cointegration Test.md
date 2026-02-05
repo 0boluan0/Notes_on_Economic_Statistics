@@ -22,27 +22,29 @@ $\Delta y_t = \Pi y_{t-1} + \sum_{i=1}^{p-1} \Gamma_i \Delta y_{t-i} + \epsilon_
 
 其中：
 - $\Pi$是$k \times k$的长期影响矩阵
-- $\Gamma_i$是短期动态系数矩阵
-- $\epsilon_t$是$k \times 1$的误差项向量
+- $\Gamma_i$ 是短期动态系数矩阵
+- $\epsilon_t$ 是 $k \times 1$ 的误差项向量
 
 ### 协整关系的秩
 
-协整关系的个数等于矩阵$\Pi$的秩r：
+协整关系的个数等于矩阵 $\Pi$ 的秩 $r$：
 - $r = 0$：无协整关系
 - $0 < r < k$：存在r个协整关系
 - $r = k$：全部变量平稳（无单位根）
 
 ### 矩阵分解
 
-当$\text{rank}(\Pi) = r$时，可分解为：
-$\Pi = \alpha \beta'$
+当 $\text{rank}(\Pi) = r$ 时，可分解为：
+$$
+\Pi = \alpha \beta'
+$$
 
 其中：
-- $\alpha$是$k \times r$的调整系数矩阵
-- $\beta$是$k \times r$的协整向量矩阵
-- $\beta'$是$r \times k$的矩阵
+- $\alpha$ 是 $k \times r$ 的调整系数矩阵
+- $\beta$ 是 $k \times r$ 的协整向量矩阵
+- $\beta'$ 是 $r \times k$ 的矩阵
 
-协整关系：$\beta' y_t = 0$（r个方程）
+协整关系：$\beta' y_t = 0$（$r$ 个方程）
 
 ## 检验统计量
 
@@ -50,22 +52,22 @@ $\Pi = \alpha \beta'$
 
 #### 原假设
 
-$H_0: \text{rank}(\Pi) = r$
-$H_1: \text{rank}(\Pi) > r$
+$H_0$: $\text{rank}(\Pi) = r$
+$H_1$: $\text{rank}(\Pi) > r$
 
 #### 统计量
 
 $\text{Trace}_r = -T \sum_{i=r+1}^k \ln(1 - \hat{\lambda}_i)$
 
 其中：
-- $T$是样本量
-- $\hat{\lambda}_i$是第$i$大的特征值（从大到小）
-- $k$是变量个数
-- $r$是假设的协整关系个数
+- $T$ 是样本量
+- $\hat{\lambda}_i$ 是第 $i$ 大的特征值（从大到小）
+- k是变量个数
+- r是假设的协整关系个数
 
 #### 检验步骤
 
-1. 从$r = 0$开始
+1. 从r = 0开始
 2. 计算Trace统计量
 3. 与临界值比较
 4. 若拒绝，r = 1，重复
@@ -79,21 +81,21 @@ $\text{Trace}_r = -T \sum_{i=r+1}^k \ln(1 - \hat{\lambda}_i)$
 
 #### 原假设
 
-$H_0: \text{rank}(\Pi) = r$
-$H_1: \text{rank}(\Pi) = r+1$
+$H_0$: $\text{rank}(\Pi) = r$
+$H_1$: $\text{rank}(\Pi) = r+1$
 
 #### 统计量
 
 $\text{Max-Eig}_r = -T \ln(1 - \hat{\lambda}_{r+1})$
 
-其中$\hat{\lambda}_{r+1}$是第$(r+1)$大的特征值。
+其中 $\hat{\lambda}_{r+1}$ 是第 $(r+1)$ 大的特征值。
 
 #### 检验步骤
 
-1. 从$r = 0$开始
+1. 从 $r = 0$ 开始
 2. 计算Max-Eig统计量
 3. 与临界值比较
-4. 若拒绝，r = 1，重复
+4. 若拒绝，$r = 1$，重复
 5. 直到不能拒绝
 
 ## 两种统计量的比较
@@ -125,7 +127,7 @@ $\Delta y_t = \Pi y_{t-1} + \sum_{i=1}^{p-1} \Gamma_i \Delta y_{t-i} + \epsilon_
 
 #### 从r = k开始
 
-1. 计算特征值$\hat{\lambda}_i$
+1. 计算特征值 $\hat{\lambda}_i$
 2. 计算Trace和Max-Eig统计量
 3. 与临界值比较
 4. 逐次检验
@@ -136,7 +138,7 @@ $\Delta y_t = \Pi y_{t-1} + \sum_{i=1}^{p-1} \Gamma_i \Delta y_{t-i} + \epsilon_
 
 ### 5. 估计协整向量和调整系数
 
-基于确定的r，估计：
+基于确定的 $r$，估计：
 - $\beta$：协整向量矩阵
 - $\alpha$：调整系数矩阵
 
@@ -162,8 +164,8 @@ $\beta' y_t = \mu + \delta t + \epsilon_t$
 
 ### 矩阵的随意性
 
-$\Pi = \alpha \beta'$，但$\alpha$和$\beta$的分解不唯一：
-- 对于任意$r \times r$可逆矩阵$F$：
+$\Pi = \alpha \beta'$，但 $\alpha$ 和 $\beta$ 的分解不唯一：
+- 对于任意 $r \times r$ 可逆矩阵 $F$：
 - $\alpha F (F^{-1}\beta') = \alpha \beta'$
 
 ### 标准化
@@ -172,11 +174,11 @@ $\Pi = \alpha \beta'$，但$\alpha$和$\beta$的分解不唯一：
 
 #### 方法1：标准化第一个变量
 
-令$\beta$的第一个元素为1：$\beta_{11} = 1$。
+令 $\beta$ 的第一个元素为 1：$\beta_{11} = 1$。
 
 #### 方法2：标准化协整向量
 
-$\beta$的每个向量标准化。
+$\beta$ 的每个向量标准化。
 
 #### 方法3：施加理论约束
 
@@ -186,13 +188,13 @@ $\beta$的每个向量标准化。
 
 ### 特征值的含义
 
-$\hat{\lambda}_i$反映第$i$个协整关系的强度：
-- $\hat{\lambda}_i$越大：协整关系越强
-- $\hat{\lambda}_i$接近0：协整关系弱
+$\hat{\lambda}_i$ 反映第 $i$ 个协整关系的强度：
+- $\hat{\lambda}_i$ 越大：协整关系越强
+- $\hat{\lambda}_i$ 接近 0：协整关系弱
 
 ### 协整关系的强度
 
-$\hat{\lambda}_i$可用于判断协整关系的经济重要性。
+$\hat{\lambda}_i$ 可用于判断协整关系的经济重要性。
 
 ## 临界值
 
@@ -309,4 +311,4 @@ Trace和Max-Eig可能给出不同结果，需要谨慎判断。
 
 协整向量应有经济理论支持。
 
-相关链接: [[00_factor/concept/Cointegration|协整]], [[00_factor/concept/Engle-Granger Two-Step Test|EG两步检验法]], [[Error Correction Model|误差纠正机制(ECM)]]
+相关链接: [[Cointegration|协整]], [[Engle-Granger Two-Step Test|EG两步检验法]], [[Error Correction Model|误差纠正机制(ECM)]]

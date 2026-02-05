@@ -14,17 +14,17 @@ F检验（F-test）是用于比较两个方差是否相等的统计检验方法�
 
 F统计量定义为两个独立方差估计量的比值：
 
-$$F = \frac{s_1^2 / \sigma_1^2}{s_2^2 / \sigma_2^2}$$
+$F = \frac{s_1^2 / \sigma_1^2}{s_2^2 / \sigma_2^2}$
 
 在原假设H₀: σ₁² = σ₂²下：
 
-$$F = \frac{s_1^2}{s_2^2} \sim F(n_1-1, n_2-1)$$
+$F = \frac{s_1^2}{s_2^2} \sim F(n_1-1, n_2-1)$
 
 ## F分布
 
 F分布是两个独立卡方分布除以自由度之比：
 
-$$F = \frac{\chi_1^2 / d_1}{\chi_2^2 / d_2} \sim F(d_1, d_2)$$
+$F = \frac{\chi_1^2 / d_1}{\chi_2^2 / d_2} \sim F(d_1, d_2)$
 
 其中d₁和d₂是自由度。
 
@@ -37,7 +37,7 @@ $$F = \frac{\chi_1^2 / d_1}{\chi_2^2 / d_2} \sim F(d_1, d_2)$$
 
 F统计量：
 
-$$F = \frac{(R^2 / k)}{(1 - R^2) / (n - k - 1)} \sim F(k, n-k-1)$$
+$F = \frac{(R^2 / k)}{(1 - R^2) / (n - k - 1)} \sim F(k, n-k-1)$
 
 其中：
 - R²：判定系数
@@ -48,18 +48,18 @@ $$F = \frac{(R^2 / k)}{(1 - R^2) / (n - k - 1)} \sim F(k, n-k-1)$$
 
 比较受限模型和非受限模型：
 
-$$F = \frac{(SSR_R - SSR_U) / r}{SSR_U / (n - k)} \sim F(r, n-k)$$
+$F = \frac{(SSR_R - SSR_U) / r}{SSR_U / (n - k)} \sim F(r, n-k)$
 
 其中：
-- SSR_R：受限模型的残差平方和
-- SSR_U：非受限模型的残差平方和
+- $SSR_R$：受限模型的残差平方和
+- $SSR_U$：非受限模型的残差平方和
 - r：约束条件个数
 
 ### 3. 模型比较
 
 比较两个嵌套模型：
 
-$$F = \frac{(RSS_1 - RSS_2) / (k_2 - k_1)}{RSS_2 / (n - k_2)} \sim F(k_2-k_1, n-k_2)$$
+$F = \frac{(RSS_1 - RSS_2) / (k_2 - k_1)}{RSS_2 / (n - k_2)} \sim F(k_2-k_1, n-k_2)$
 
 其中RSS₁ > RSS₂（模型2包含更多变量）。
 
@@ -68,7 +68,7 @@ $$F = \frac{(RSS_1 - RSS_2) / (k_2 - k_1)}{RSS_2 / (n - k_2)} \sim F(k_2-k_1, n-
 1. 提出原假设和备择假设
 2. 计算F统计量
 3. 确定自由度
-4. 计算p值：p = P(F > F_obs)
+4. 计算p值：$p = P(F > F_obs)$
 5. 比较p值与显著性水平α
 
 ## 判断标准
@@ -80,7 +80,7 @@ $$F = \frac{(RSS_1 - RSS_2) / (k_2 - k_1)}{RSS_2 / (n - k_2)} \sim F(k_2-k_1, n-
 
 在简单线性回归中：
 
-$$F = t^2$$
+$F = t^2$
 
 即F检验等价于t检验的平方。
 
@@ -96,6 +96,6 @@ $$F = t^2$$
 
 检验两个时期或两个样本的回归系数是否相同。
 
-$$F = \frac{[SSR - (SSR_1 + SSR_2)] / k}{(SSR_1 + SSR_2) / (n_1 + n_2 - 2k)}$$
+$F = \frac{[SSR - (SSR_1 + SSR_2)] / k}{(SSR_1 + SSR_2) / (n_1 + n_2 - 2k)}$
 
-相关链接: [[t Test|t检验]], [[Chi-square Test|卡方检验]], [[00_factor/system/R-squared|判定系数]]
+相关链接: [[t Test|t检验]], [[Chi-square Test|卡方检验]], [[R-squared|判定系数]]

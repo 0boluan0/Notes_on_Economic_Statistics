@@ -18,7 +18,7 @@ tags:
 
    估计模型：$y = \hat{\beta}_0 + \hat{\beta}_1 x_1 + \hat{\varepsilon}$
 
-   如果遗漏变量x_2与x_1相关，则x_1与$\hat{\varepsilon}$相关。
+   如果遗漏变量$x_2$与$x_1$相关，则$x_1$与$\hat{\varepsilon}$相关。
 
 2. **联立方程偏误（Simultaneity Bias）**
 
@@ -86,7 +86,7 @@ tags:
 
 其中：
 - P和Q由两个方程同时决定
-- 在需求方程中，P与$\varepsilon_D$相关（内生）
+- 在需求方程中，P与\varepsilon_D相关（内生）
 - W可以作为需求方程中P的工具变量
 
-相关链接: [[00_factor/concept/Instrumental Variable|工具变量]], [[2SLS]], [[00_factor/concept/Hausman Test|Hausman检验]], [[00_factor/concept/Simultaneous Equations Model|联立方程模型]]
+相关链接: [[Instrumental Variable|工具变量]], [[2SLS]], [[Hausman Test|Hausman检验]], [[Simultaneous Equations Model|联立方程模型]]
