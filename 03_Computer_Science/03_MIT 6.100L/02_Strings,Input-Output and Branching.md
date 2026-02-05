@@ -19,6 +19,14 @@ print(s + " " + b)  # me myself
 print(s * 3)        # mememe
 ```
 
+```python
+f= "a"
+g=" b"
+h="3"
+S2=(f+g)*int(h)
+print(S2)
+```
+
 ### 长度与索引
 
 - `len(s)` 返回字符串长度
