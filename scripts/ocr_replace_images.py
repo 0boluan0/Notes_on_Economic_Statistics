@@ -26,6 +26,8 @@ class OcrEngine:
         self.lang = lang
         self.min_conf = min_conf
         self._latex_ocr = None
+        self._latex_disabled = False
+        self._latex_warned = False
 
     def ocr_text(self, img) -> Tuple[str, float]:
         import pytesseract
@@ -53,13 +55,25 @@ class OcrEngine:
         return text, conf
 
     def ocr_latex(self, img) -> str:
+        if self._latex_disabled:
+            return ""
         if self._latex_ocr is None:
-            from pix2tex.cli import LatexOCR
+            try:
+                from pix2tex.cli import LatexOCR
 
-            self._latex_ocr = LatexOCR()
+                self._latex_ocr = LatexOCR()
+            except Exception as exc:
+                self._latex_disabled = True
+                if not self._latex_warned:
+                    print(f"LatexOCR unavailable: {exc}", file=sys.stderr)
+                    self._latex_warned = True
+                return ""
         try:
             latex = self._latex_ocr(img)
-        except Exception:
+        except Exception as exc:
+            if not self._latex_warned:
+                print(f"LatexOCR failed: {exc}", file=sys.stderr)
+                self._latex_warned = True
             return ""
         return normalize_latex(latex)
 

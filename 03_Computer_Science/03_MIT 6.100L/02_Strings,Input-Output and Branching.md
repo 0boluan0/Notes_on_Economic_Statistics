@@ -42,7 +42,7 @@ print(s[-1])   # c
 ### 切片（Slicing）
 
 - 形式：`s[start:stop:step]`
-- `stop` 不包含在结果里（到 `stop-1`）
+- ==`stop` 不包含在结果里（到 `stop-1`）==
 - `step` 可为负，表示从右往左
 
 ```python
@@ -53,7 +53,7 @@ print(s[:])       # abcdefgh
 print(s[::-1])    # hgfedcba
 print(s[4:1:-2])  # ec
 ```
-
+ 
 > [!important] 字符串不可变（Immutable）
 > 不能直接修改某个位置的字符，只能创建新字符串再绑定。
 >

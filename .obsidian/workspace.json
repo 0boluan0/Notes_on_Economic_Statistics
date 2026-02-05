@@ -130,7 +130,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -140,7 +139,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 02_Strings,Input-Output and Branching"
+              "title": "Backlinks"
             }
           },
           {
@@ -149,12 +148,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 02_Strings,Input-Output and Branching"
+              "title": "Outgoing links"
             }
           },
           {
@@ -201,11 +199,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "File properties for 02_Strings,Input-Output and Branching"
+              "title": "File properties"
             }
           },
           {
@@ -306,13 +302,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 02_Strings,Input-Output and Branching"
+              "title": "Outline"
             }
           },
           {
@@ -359,10 +354,16 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "7753fb3dc8dc90cc",
+  "active": "b63aa4b85fa0dcb1",
   "lastOpenFiles": [
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec02.pdf",
+    "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
+    "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf",
+    "03_Computer_Science/99_Miscellaneous/SQL.md",
+    "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
+    "02_Economy/01_Econometrics/03_多元线性回归.md",
+    "02_Economy/01_Econometrics/01_导论.md",
     "99_学习情况记录/2026-02-05——Thu.md",
+    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec02.pdf",
     "02_Economy/01_Econometrics/02_一元线性回归.md",
     "scripts/ocr_replace_images.py",
     "98_attachment/Pasted image 20250327091329.png",
@@ -375,7 +376,6 @@
     "98_attachment/Pasted image 20240310184955.png",
     "98_attachment/Pasted image 20240229220513.png",
     "98_attachment/Pasted image 20240229220125.png",
-    "02_Economy/01_Econometrics/01_导论.md",
     "02_Economy/01_Econometrics/01_Econometrics.canvas",
     "02_Economy/10_发展经济学/00_导论和考试相关.md",
     "00_factor/procedure/OLS.md",
@@ -385,7 +385,6 @@
     "00_inbox/残差(residual).md",
     "00_inbox/大样本与小样本.md",
     "02_Economy/02_public finance财政学/02_public finance财政学.canvas",
-    "02_Economy/01_Econometrics/03_多元线性回归.md",
     "02_Economy/10_发展经济学/10_发展经济学.canvas",
     "02_Economy/07_金融机构与风险管理/07_金融机构与风险管理.canvas",
     "02_Economy/06_证券投资学/06_证券投资学.canvas",
@@ -398,9 +397,6 @@
     "02_Economy/01_Econometrics/07_异方差.md",
     "02_Economy/02_public finance财政学/2_财政支出/04_经常性支出.md",
     "02_Economy/02_public finance财政学/2_财政支出/03_财政支出总论.md",
-    "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
-    "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
-    "03_Computer_Science/99_Miscellaneous/SQL.md",
     "Overview & Study Record.md",
     "03_Computer_Science/99_Miscellaneous",
     "99_学习情况记录/2026-02-04——Wed.md",
@@ -408,7 +404,6 @@
     "03_Computer_Science/99_Miscellaneous/the_missing_semester.md",
     "03_Computer_Science/03_MIT 6.100L/02_Strings,Input/Output and Branching.md",
     "03_Computer_Science/03_MIT 6.100L/02_Strings,Input",
-    "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf",
     "99_学习情况记录/2026-02-03——Tue.md",
     "99_学习情况记录/2026-02-02——Mon.md",
     "CLAUDE.md",

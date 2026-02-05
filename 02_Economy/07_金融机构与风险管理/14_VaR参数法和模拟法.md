@@ -103,9 +103,11 @@ $$
 - 如果$\gamma>0$（组合具有正Gamma，例如持有看涨期权），损益分布左尾比相应正态分布更窄。极端负收益出现概率降低，因此直接用正态假设算出的VaR会偏保守（偏大）
 - 如果$\gamma<0$（组合Gamma为负，如卖出期权），损益分布左尾比正态更厚。出现巨大损失的概率高于正态预测，正态假设下计算的VaR将会偏低，低估尾部风险 
 
-![[Pasted image 20250629104144.png]]
+Major Gamma combination: Right tail thickening > Linear VaR tends to be overestimated T toi [EEL A (normal approx.) 0.40 to ti A+T(+T) ! i --- linear 99% VaR = -2.33 0.35 ti ss real 99% VaR = -1.79 0.30 |i ti ri 0.25 i ri 0.20 ti iG ti ti 0.15 i ri 0.10 fa 13 1 1 0.05 1 1 0.00 -4 -2 0 2 4 6
+~~[[Pasted image 20250629104144.png]]~~ (已转文字)
 
-![[Pasted image 20250629104152.png]]
+Minor Gamma combination: Left tail thickening > Linear VaR tends to be underestimated 7 [EE A (normal approx.) 1 0.40 A+T(CD 1 --- linear 99% VaR = -2.33 ! 0.35 | …… real 99% VaR = -2.87 | 0.30 po i po pa 0.25 po po pa po 0.20 poy pa po pa 0.15 pa pa pa it 0.10 i pa 0.05 pot iat 0.00 -6 -4 -2 0 2 4
+~~[[Pasted image 20250629104152.png]]~~ (已转文字)
 
 二次模型要求计算组合损益分布的二阶矩、三阶矩等统计量，然后根据偏度、峰度对VaR进行修正。
 

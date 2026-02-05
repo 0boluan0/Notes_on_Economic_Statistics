@@ -213,7 +213,8 @@ $$s_t = d_t$$
 • 如果 $\big|\frac{\beta}{\gamma}\big| = 1$，则 $|r|=1$，价格会**持续震荡**且幅度保持不变（$r=-1$ 会导致价格在两个值之间来回跳动，称为边际稳定或周期2振荡） 。这种情况下系统处于临界状态，轻微扰动将导致持续波动。
 
 
-![[Pasted image 20250316150336.png]]
+Cobweb Model Diagram 12}-— p=10-q (demand curve) — p=2q (supply curve) @ = Equilibrium point 10 <-------------------------------- | 1 8 | 1 o 1 | a © | | Q | 1 1 4 | 1 1 1 1 1 2 Se a en a -em 0 0 1 2 3 4 5 6 q (Quantity)
+~~[[Pasted image 20250316150336.png]]~~ (已转文字)
 
 ## 3.2 蛛网模型的数学解释
 
@@ -375,19 +376,22 @@ $$\frac{1}{1 - a_1 L} = 1 + a_1 L + a_1^2 L^2 + a_1^3 L^3 + \cdots.$$（这类�
 # 作业
 
 ## 1. 
-![[Pasted image 20250516202456.png]]
+1. Consider the difference equation y, = ao + a,y,., with the initial coridition Yo: Jill solved the difference equation by iterating backward: ote = Ag + G)(dg + aa2) meee = dy + doa, + aga? to + ayay! + atyo Bill added the homogeneous and particular solutions to obtain y, = ay/(1 - a,) + a'[o — ao(l ~ 24). ， A. Show that the two solutions are identical for la, | < 1 B. Show that for a, = 1, Jill's solution is equivalent to y, = dot + Yo. How would you use Bill's method to arrive at this same conclusion in the case a,=1?
+~~[[Pasted image 20250516202456.png]]~~ (已转文字)
 
  a)很简单,就是一个等比数列求和公式的应用
  b)Jill那个就硬推就行了.bill是按照特解-齐次解-通解的过程来搞的.实际上也可以使用洛必达法则来处理.总之就是不太重要
 
 ## 3.
-![[Pasted image 20250516202520.png]]
+3. Suppose that the money supply process has the form m, =m +pm,_,+€, where mis aconstant andO<p< 1. : | A. Show that it is possible to express m,,, in terms of the known value m, and the sequence {€,.4, E25 + Eran) | . B. Suppose that all values of es for; > 0 have a mean value of zero. Explain how you could use your result in part A to forecast the money supply 7 pe- nods into the future.
+~~[[Pasted image 20250516202520.png]]~~ (已转文字)
 
 a)使用迭代法
 b)没看懂他要干嘛.总之就是不难
 
 ## 7.
-![[Pasted image 20250516202556.png]]
+7. 考虑 随机 过 程 y = ao + aay,-: + evo a 求 齐 次 解 ， 确 定 稳定 性 条 件 。 b. 运用 待定 系数 法 求 特 解 。 c. 证 明 利用 滞后 算 子 法 产生 相同 的 结果 。
+~~[[Pasted image 20250516202556.png]]~~ (已转文字)
 
 a)正常的操作而已
 b)设为常数然后解方程
