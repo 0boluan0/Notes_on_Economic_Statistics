@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "86eb7cb30c254d8c",
+      "id": "b81fa3763fc64b55",
       "type": "text",
       "x": -130,
       "y": -60,
@@ -11,2814 +11,2769 @@
       "color": "5"
     },
     {
-      "id": "3a17f5c81a3848da",
+      "id": "d1218b79470a4bc7",
       "type": "group",
       "x": -399,
-      "y": -11539,
+      "y": -11210,
       "width": 800,
-      "height": 10940,
+      "height": 10610,
       "label": "concept",
       "color": "3"
     },
     {
-      "id": "30329467fd814b7e",
+      "id": "6253ae82744f47e0",
       "type": "text",
       "x": -359,
-      "y": -11499,
-      "width": 220,
-      "height": 80,
-      "text": "**Accounts Receivable Turnover Ratio**"
-    },
-    {
-      "id": "0d7b171d3e2c4e6d",
-      "type": "text",
-      "x": -109,
-      "y": -11499,
-      "width": 220,
-      "height": 80,
-      "text": "**Annuity**"
-    },
-    {
-      "id": "e016dc4de9094a59",
-      "type": "text",
-      "x": 141,
-      "y": -11499,
-      "width": 220,
-      "height": 80,
-      "text": "**Benchmark Interest Rate**"
-    },
-    {
-      "id": "4a586c1912d84932",
-      "type": "text",
-      "x": -359,
-      "y": -11389,
-      "width": 220,
-      "height": 80,
-      "text": "**Bond Valuation Model**"
-    },
-    {
-      "id": "b0a317eccf4d4989",
-      "type": "text",
-      "x": -109,
-      "y": -11389,
-      "width": 220,
-      "height": 80,
-      "text": "**Cash Coverage Ratio**"
-    },
-    {
-      "id": "5a4bbe2373da4bd6",
-      "type": "text",
-      "x": 141,
-      "y": -11389,
-      "width": 220,
-      "height": 80,
-      "text": "**Cash Ratio**"
-    },
-    {
-      "id": "bd044137973747a4",
-      "type": "text",
-      "x": -359,
-      "y": -11279,
-      "width": 220,
-      "height": 80,
-      "text": "**Compound Poisson Process**"
-    },
-    {
-      "id": "032e6f44c614471c",
-      "type": "text",
-      "x": -109,
-      "y": -11279,
-      "width": 220,
-      "height": 80,
-      "text": "**Current Ratio**"
-    },
-    {
-      "id": "e012fa43b3dc4bba",
-      "type": "text",
-      "x": 141,
-      "y": -11279,
-      "width": 220,
-      "height": 80,
-      "text": "**Debt-to-Asset Ratio**"
-    },
-    {
-      "id": "8e7bdedfe0d14b0b",
-      "type": "text",
-      "x": -359,
-      "y": -11169,
-      "width": 220,
-      "height": 80,
-      "text": "**Debt-to-Equity Ratio**"
-    },
-    {
-      "id": "2edebf76dfd74381",
-      "type": "text",
-      "x": -109,
-      "y": -11169,
-      "width": 220,
-      "height": 80,
-      "text": "**Default Risk**"
-    },
-    {
-      "id": "eb2c417219d8494a",
-      "type": "text",
-      "x": 141,
-      "y": -11169,
-      "width": 220,
-      "height": 80,
-      "text": "**DuPont Analysis**"
-    },
-    {
-      "id": "d4637e47dac04c5e",
-      "type": "text",
-      "x": -359,
-      "y": -11059,
-      "width": 220,
-      "height": 80,
-      "text": "**Engle-Granger Two-Step Test**"
-    },
-    {
-      "id": "7253d34a6cdf4f48",
-      "type": "text",
-      "x": -109,
-      "y": -11059,
-      "width": 220,
-      "height": 80,
-      "text": "**Equity Multiplier**"
-    },
-    {
-      "id": "60148e79611d4400",
-      "type": "text",
-      "x": 141,
-      "y": -11059,
-      "width": 220,
-      "height": 80,
-      "text": "**Externality**"
-    },
-    {
-      "id": "167625e8bb4b4ff1",
-      "type": "text",
-      "x": -359,
-      "y": -10949,
-      "width": 220,
-      "height": 80,
-      "text": "**Factor Analysis**"
-    },
-    {
-      "id": "d54a1a38f5344e01",
-      "type": "text",
-      "x": -109,
-      "y": -10949,
-      "width": 220,
-      "height": 80,
-      "text": "**Future Value**"
-    },
-    {
-      "id": "00cd036a17624bb5",
-      "type": "text",
-      "x": 141,
-      "y": -10949,
-      "width": 220,
-      "height": 80,
-      "text": "**Interest Rate Sensitivity Gap**"
-    },
-    {
-      "id": "f463d7010e454c44",
-      "type": "text",
-      "x": -359,
-      "y": -10839,
-      "width": 220,
-      "height": 80,
-      "text": "**Internal Growth Rate**"
-    },
-    {
-      "id": "c4a9037f43c745ef",
-      "type": "text",
-      "x": -109,
-      "y": -10839,
-      "width": 220,
-      "height": 80,
-      "text": "**Inventory Turnover Ratio**"
-    },
-    {
-      "id": "31800479a0e54c4e",
-      "type": "text",
-      "x": 141,
-      "y": -10839,
-      "width": 220,
-      "height": 80,
-      "text": "**Long-term Debt Ratio**"
-    },
-    {
-      "id": "c08911684de342e8",
-      "type": "text",
-      "x": -359,
-      "y": -10729,
-      "width": 220,
-      "height": 80,
-      "text": "**Market Risk**"
-    },
-    {
-      "id": "252ebe4ce7dd4c99",
-      "type": "text",
-      "x": -109,
-      "y": -10729,
-      "width": 220,
-      "height": 80,
-      "text": "**Model Misspecification**"
-    },
-    {
-      "id": "49af383769f34b7e",
-      "type": "text",
-      "x": 141,
-      "y": -10729,
-      "width": 220,
-      "height": 80,
-      "text": "**Money Multiplier**"
-    },
-    {
-      "id": "e6ada78ae16b4b52",
-      "type": "text",
-      "x": -359,
-      "y": -10619,
-      "width": 220,
-      "height": 80,
-      "text": "**Net Present Value**"
-    },
-    {
-      "id": "0292d1e8e8da4147",
-      "type": "text",
-      "x": -109,
-      "y": -10619,
-      "width": 220,
-      "height": 80,
-      "text": "**Net Present Value (2)**"
-    },
-    {
-      "id": "874d62414ad64487",
-      "type": "text",
-      "x": 141,
-      "y": -10619,
-      "width": 220,
-      "height": 80,
-      "text": "**Net Profit Margin**"
-    },
-    {
-      "id": "bd06ec7496d24ca8",
-      "type": "text",
-      "x": -359,
-      "y": -10509,
-      "width": 220,
-      "height": 80,
-      "text": "**Null Space**"
-    },
-    {
-      "id": "ccdfb991c4f841db",
-      "type": "text",
-      "x": -109,
-      "y": -10509,
-      "width": 220,
-      "height": 80,
-      "text": "**Opportunity Cost**"
-    },
-    {
-      "id": "ec9b9992ab1845d0",
-      "type": "text",
-      "x": 141,
-      "y": -10509,
+      "y": -11170,
       "width": 220,
       "height": 80,
       "text": "**Present Value**"
     },
     {
-      "id": "14cbc6fc494c4418",
-      "type": "text",
-      "x": -359,
-      "y": -10399,
-      "width": 220,
-      "height": 80,
-      "text": "**Price-to-Book Ratio**"
-    },
-    {
-      "id": "673956bcd6d14b22",
+      "id": "57f48a9e194d491d",
       "type": "text",
       "x": -109,
-      "y": -10399,
+      "y": -11170,
       "width": 220,
       "height": 80,
-      "text": "**Price-to-Earnings Ratio**"
+      "text": "**Bond Valuation Model**"
     },
     {
-      "id": "7e43ee3a3cc34867",
+      "id": "c22eebfc4faf47c1",
       "type": "text",
       "x": 141,
-      "y": -10399,
+      "y": -11170,
       "width": 220,
       "height": 80,
-      "text": "**Price-to-Sales Ratio**"
+      "text": "**Future Value**"
     },
     {
-      "id": "60679c091b164f28",
+      "id": "7338dc4cb85f4569",
       "type": "text",
       "x": -359,
-      "y": -10289,
+      "y": -11060,
       "width": 220,
       "height": 80,
-      "text": "**Principal-Agent Problem**"
+      "text": "**Interest Rate Sensitivity Gap**"
     },
     {
-      "id": "c541887b82c345c4",
+      "id": "aa837fcd4c2e470e",
       "type": "text",
       "x": -109,
-      "y": -10289,
+      "y": -11060,
       "width": 220,
       "height": 80,
-      "text": "**Profitability Index**"
+      "text": "**Annuity**"
     },
     {
-      "id": "135b2a029449435a",
+      "id": "b8a27a0ca8ab411e",
       "type": "text",
       "x": 141,
-      "y": -10289,
-      "width": 220,
-      "height": 80,
-      "text": "**Property Rights**"
-    },
-    {
-      "id": "3d3e858f7df84bc9",
-      "type": "text",
-      "x": -359,
-      "y": -10179,
-      "width": 220,
-      "height": 80,
-      "text": "**Quick Ratio**"
-    },
-    {
-      "id": "6373cd46ec19457d",
-      "type": "text",
-      "x": -109,
-      "y": -10179,
-      "width": 220,
-      "height": 80,
-      "text": "**Return on Assets**"
-    },
-    {
-      "id": "b53bbca79d214501",
-      "type": "text",
-      "x": 141,
-      "y": -10179,
-      "width": 220,
-      "height": 80,
-      "text": "**Return on Equity**"
-    },
-    {
-      "id": "971d89886d044b84",
-      "type": "text",
-      "x": -359,
-      "y": -10069,
-      "width": 220,
-      "height": 80,
-      "text": "**strategies**"
-    },
-    {
-      "id": "dd91d77bb9564bd1",
-      "type": "text",
-      "x": -109,
-      "y": -10069,
-      "width": 220,
-      "height": 80,
-      "text": "**Sunk Cost**"
-    },
-    {
-      "id": "bc472816416e41e4",
-      "type": "text",
-      "x": 141,
-      "y": -10069,
+      "y": -11060,
       "width": 220,
       "height": 80,
       "text": "**Sustainable Growth Rate**"
     },
     {
-      "id": "4a9bf66728254df8",
+      "id": "1bfe5b6b82d44e01",
       "type": "text",
       "x": -359,
-      "y": -9959,
+      "y": -10950,
       "width": 220,
       "height": 80,
-      "text": "**t Test**"
+      "text": "**DuPont Analysis**"
     },
     {
-      "id": "9e1693b7cdda411c",
+      "id": "46271ed50f854b0e",
       "type": "text",
       "x": -109,
-      "y": -9959,
-      "width": 220,
-      "height": 80,
-      "text": "**Time Value of Money**"
-    },
-    {
-      "id": "b568fca214ee47c0",
-      "type": "text",
-      "x": 141,
-      "y": -9959,
-      "width": 220,
-      "height": 80,
-      "text": "**Times Interest Earned Ratio**"
-    },
-    {
-      "id": "a51905a4f0d345f4",
-      "type": "text",
-      "x": -359,
-      "y": -9849,
+      "y": -10950,
       "width": 220,
       "height": 80,
       "text": "**Working Capital**"
     },
     {
-      "id": "46acbecfb955444a",
-      "type": "text",
-      "x": -109,
-      "y": -9849,
-      "width": 220,
-      "height": 80,
-      "text": "**Yield Curve**"
-    },
-    {
-      "id": "07687b6bb9e34019",
+      "id": "ba58ceb5d46046b2",
       "type": "text",
       "x": 141,
-      "y": -9849,
+      "y": -10950,
       "width": 220,
       "height": 80,
-      "text": "**Yield to Maturity**"
+      "text": "**Long-term Debt Ratio**"
     },
     {
-      "id": "91cdc982b0ee4053",
+      "id": "c324363d0c554dfe",
       "type": "text",
       "x": -359,
-      "y": -9739,
+      "y": -10840,
       "width": 220,
       "height": 80,
-      "text": "**(1)战略分析**"
+      "text": "**Net Profit Margin**"
     },
     {
-      "id": "572c3237d60f4031",
+      "id": "df6ab1f847154f0b",
       "type": "text",
       "x": -109,
-      "y": -9739,
-      "width": 220,
-      "height": 80,
-      "text": "**(2)会计分析**"
-    },
-    {
-      "id": "4cab5638bc54446f",
-      "type": "text",
-      "x": 141,
-      "y": -9739,
-      "width": 220,
-      "height": 80,
-      "text": "**(3)财务分析**"
-    },
-    {
-      "id": "6ccfa6ac3c834a3c",
-      "type": "text",
-      "x": -359,
-      "y": -9629,
-      "width": 220,
-      "height": 80,
-      "text": "**(4)部署分析**"
-    },
-    {
-      "id": "b7d1ac5e96f146fe",
-      "type": "text",
-      "x": -109,
-      "y": -9629,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)个人独资企业(Sole Proprietorship)**"
-    },
-    {
-      "id": "ae5285bb4ebd4234",
-      "type": "text",
-      "x": 141,
-      "y": -9629,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)债券(Bond)**"
-    },
-    {
-      "id": "425cf468a0a64135",
-      "type": "text",
-      "x": -359,
-      "y": -9519,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)净现值(Net Present Value)**"
-    },
-    {
-      "id": "497e4c01d7404e3d",
-      "type": "text",
-      "x": -109,
-      "y": -9519,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)利润最大化**"
-    },
-    {
-      "id": "d36b4a8aa11a4117",
-      "type": "text",
-      "x": 141,
-      "y": -9519,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)可偿债资产与短期债务的存量比较**"
-    },
-    {
-      "id": "c040626a310140cd",
-      "type": "text",
-      "x": -359,
-      "y": -9409,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)可持续增长率的概念**"
-    },
-    {
-      "id": "eb6118792e564936",
-      "type": "text",
-      "x": -109,
-      "y": -9409,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)含义**"
-    },
-    {
-      "id": "84849f79dd6b49bf",
-      "type": "text",
-      "x": 141,
-      "y": -9409,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)固定收益证券**"
-    },
-    {
-      "id": "323076b148434cf4",
-      "type": "text",
-      "x": -359,
-      "y": -9299,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)复利终值**"
-    },
-    {
-      "id": "26b01c09a6b643fc",
-      "type": "text",
-      "x": -109,
-      "y": -9299,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)存量比率**"
-    },
-    {
-      "id": "6230e4788a4d40a8",
-      "type": "text",
-      "x": 141,
-      "y": -9299,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)居民**"
-    },
-    {
-      "id": "d43aeb4693694ea3",
-      "type": "text",
-      "x": -359,
-      "y": -9189,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)市盈率**"
-    },
-    {
-      "id": "2565effca8134e4d",
-      "type": "text",
-      "x": -109,
-      "y": -9189,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)应收账款周转率**"
-    },
-    {
-      "id": "930818ad06684efa",
-      "type": "text",
-      "x": 141,
-      "y": -9189,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)投资项目现金流量的影响因素**"
-    },
-    {
-      "id": "dd56dc068ef34ab9",
-      "type": "text",
-      "x": -359,
-      "y": -9079,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)普通年金终值和现值**"
-    },
-    {
-      "id": "4ee4d171c4b34345",
-      "type": "text",
-      "x": -109,
-      "y": -9079,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)杜邦分析体系的核心比率**"
-    },
-    {
-      "id": "650d53b686f84ede",
-      "type": "text",
-      "x": 141,
-      "y": -9079,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)比较分析法(Comparative Analysis Method)**"
-    },
-    {
-      "id": "01ae2d593c8c4850",
-      "type": "text",
-      "x": -359,
-      "y": -8969,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)现金流量的含义**"
-    },
-    {
-      "id": "ffef8058eef8476e",
-      "type": "text",
-      "x": -109,
-      "y": -8969,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)管理用资产负债表**"
-    },
-    {
-      "id": "68831785de634997",
-      "type": "text",
-      "x": 141,
-      "y": -8969,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)经营者的利益要求与协商**"
-    },
-    {
-      "id": "43990bdce7a3419e",
-      "type": "text",
-      "x": -359,
-      "y": -8859,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)股票的有关概念**"
-    },
-    {
-      "id": "3d58fe9bfe43467f",
-      "type": "text",
-      "x": -109,
-      "y": -8859,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)营业净利率**"
-    },
-    {
-      "id": "80ccc397626a4358",
-      "type": "text",
-      "x": 141,
-      "y": -8859,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)计算方法**"
-    },
-    {
-      "id": "7108fa735cde48ab",
-      "type": "text",
-      "x": -359,
-      "y": -8749,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)财务报表信息的披露问题**"
-    },
-    {
-      "id": "83b080b19f984ac4",
-      "type": "text",
-      "x": -109,
-      "y": -8749,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)货币市场和资本市场**"
-    },
-    {
-      "id": "9be356946ca34fee",
-      "type": "text",
-      "x": 141,
-      "y": -8749,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)资本市场效率的意义**"
-    },
-    {
-      "id": "04226ffb9cab42da",
-      "type": "text",
-      "x": -359,
-      "y": -8639,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)资金融通功能**"
-    },
-    {
-      "id": "0de6df0ab11d4951",
-      "type": "text",
-      "x": -109,
-      "y": -8639,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)销售百分比法**"
-    },
-    {
-      "id": "9362c2f0aa7343c6",
-      "type": "text",
-      "x": 141,
-      "y": -8639,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)销售预测**"
-    },
-    {
-      "id": "6801a73621f34692",
-      "type": "text",
-      "x": -359,
-      "y": -8529,
-      "width": 220,
-      "height": 80,
-      "text": "**(一)长期投资(Long-term Investment)**"
-    },
-    {
-      "id": "59019d6e6b3740f4",
-      "type": "text",
-      "x": -109,
-      "y": -8529,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)一级市场和二级市场**"
-    },
-    {
-      "id": "23125dd02dca483c",
-      "type": "text",
-      "x": 141,
-      "y": -8529,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)价格发现功能**"
-    },
-    {
-      "id": "3f5eb27c03a044d0",
-      "type": "text",
-      "x": -359,
-      "y": -8419,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)估计各项费用和利润留存额**"
-    },
-    {
-      "id": "075445cf34204753",
-      "type": "text",
-      "x": -109,
-      "y": -8419,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)债券票面利率(Bond Coupon Rate)**"
-    },
-    {
-      "id": "802cc6bf6d5d447e",
-      "type": "text",
-      "x": 141,
-      "y": -8419,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)公司制企业(Corporation)**"
-    },
-    {
-      "id": "a56d00935ad844c9",
-      "type": "text",
-      "x": -359,
-      "y": -8309,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)其他利益相关者的利益要求与协商**"
-    },
-    {
-      "id": "804134eae150471c",
-      "type": "text",
-      "x": -109,
-      "y": -8309,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)市销率**"
-    },
-    {
-      "id": "81973630ec1f4e0b",
-      "type": "text",
-      "x": 141,
-      "y": -8309,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)影响短期偿债因素的其他因素**"
-    },
-    {
-      "id": "9f3c1058eaf44326",
-      "type": "text",
-      "x": -359,
-      "y": -8199,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)影响长期偿债能力的其他因素**"
-    },
-    {
-      "id": "4da5306a1fc6465e",
-      "type": "text",
-      "x": -109,
-      "y": -8199,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)投资基金**"
-    },
-    {
-      "id": "a514543a5df940ab",
-      "type": "text",
-      "x": 141,
-      "y": -8199,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)报价利率和有效年利率**"
-    },
-    {
-      "id": "c562992a9aec46b1",
-      "type": "text",
-      "x": -359,
-      "y": -8089,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)政府**"
-    },
-    {
-      "id": "795424f989ad4cd9",
-      "type": "text",
-      "x": -109,
-      "y": -8089,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)权益净利率**"
-    },
-    {
-      "id": "032f9b6656b84ea8",
-      "type": "text",
-      "x": 141,
-      "y": -8089,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)权益净利率的驱动因素分解**"
-    },
-    {
-      "id": "d46a11e0c5194521",
-      "type": "text",
-      "x": -359,
-      "y": -7979,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)流动资产周转率**"
-    },
-    {
-      "id": "121122eddc7b4f84",
-      "type": "text",
-      "x": -109,
-      "y": -7979,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)管理用现金流量表**"
-    },
-    {
-      "id": "24f79fb7a7e84702",
-      "type": "text",
-      "x": 141,
-      "y": -7979,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)股东财富最大化**"
-    },
-    {
-      "id": "11deec9a5b404eb0",
-      "type": "text",
-      "x": -359,
-      "y": -7869,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)股利**"
-    },
-    {
-      "id": "45a473a3bb374478",
-      "type": "text",
-      "x": -109,
-      "y": -7869,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)营运资本管理**"
-    },
-    {
-      "id": "e94a0279ed4f407d",
-      "type": "text",
-      "x": 141,
-      "y": -7869,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)衍生证券**"
-    },
-    {
-      "id": "c2403d78df194a6f",
-      "type": "text",
-      "x": -359,
-      "y": -7759,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)财务报表信息的比较基础问题**"
-    },
-    {
-      "id": "4c87dea7e2d7462c",
-      "type": "text",
-      "x": -109,
-      "y": -7759,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)资本市场效率的程度**"
-    },
-    {
-      "id": "20edeac9b6fa49bb",
-      "type": "text",
-      "x": 141,
-      "y": -7759,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)运用信息技术预测**"
-    },
-    {
-      "id": "4ea4805e20d44047",
-      "type": "text",
-      "x": -359,
-      "y": -7649,
-      "width": 220,
-      "height": 80,
-      "text": "**(三)递延年金终值和现值**"
-    },
-    {
-      "id": "78f77590c7634ce5",
-      "type": "text",
-      "x": -109,
-      "y": -7649,
-      "width": 220,
-      "height": 80,
-      "text": "**(二) 预付年金终值和现值**"
-    },
-    {
-      "id": "e396b47a37a94c71",
-      "type": "text",
-      "x": 141,
-      "y": -7649,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)估计经营资产和经营负债**"
-    },
-    {
-      "id": "114aa0a870244f67",
-      "type": "text",
-      "x": -359,
-      "y": -7539,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)保险公司**"
-    },
-    {
-      "id": "b916ce30b27148ea",
-      "type": "text",
-      "x": -109,
-      "y": -7539,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)债券价值的影响因素(Factors Affecting Bond Value)**"
-    },
-    {
-      "id": "bdbdf43c080448c9",
-      "type": "text",
-      "x": 141,
-      "y": -7539,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)债券面值(Bond Face Value)**"
-    },
-    {
-      "id": "17caa37a23e948e5",
-      "type": "text",
-      "x": -359,
-      "y": -7429,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)债务市场和股权市场**"
-    },
-    {
-      "id": "83d805ef7f0a4fed",
-      "type": "text",
-      "x": -109,
-      "y": -7429,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)债权人的利益要求和协商**"
-    },
-    {
-      "id": "1e76f1a5f6794ba1",
-      "type": "text",
-      "x": 141,
-      "y": -7429,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)公司**"
-    },
-    {
-      "id": "ab04ff22ac654bea",
-      "type": "text",
-      "x": -359,
-      "y": -7319,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)可持续增长率计算**"
-    },
-    {
-      "id": "3d04a5c8145e4272",
-      "type": "text",
-      "x": -109,
-      "y": -7319,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)合伙企业(Partnership)**"
-    },
-    {
-      "id": "8eb702e7cc2b478b",
-      "type": "text",
-      "x": 141,
-      "y": -7319,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)回归分析法**"
-    },
-    {
-      "id": "50bc16e77667422d",
-      "type": "text",
-      "x": -359,
-      "y": -7209,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)复利现值**"
-    },
-    {
-      "id": "0b7789e142b04678",
-      "type": "text",
-      "x": -109,
-      "y": -7209,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)存货周转率**"
-    },
-    {
-      "id": "85d13296aad14bb3",
-      "type": "text",
-      "x": 141,
-      "y": -7209,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)市净率(市账率)**"
-    },
-    {
-      "id": "2624a5648cef45dd",
-      "type": "text",
-      "x": -359,
-      "y": -7099,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)总资产净利率**"
-    },
-    {
-      "id": "4258211dcc5d450e",
-      "type": "text",
-      "x": -109,
-      "y": -7099,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)有效资本市场**"
-    },
-    {
-      "id": "557efef5972f4e92",
-      "type": "text",
-      "x": 141,
-      "y": -7099,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)权益证券**"
-    },
-    {
-      "id": "189add5e1d7245e7",
-      "type": "text",
-      "x": -359,
-      "y": -6989,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)每股收益最大化(权益资本净利率最大化)**"
-    },
-    {
-      "id": "67327fcd12d2425f",
-      "type": "text",
-      "x": -109,
-      "y": -6989,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)流量比率**"
-    },
-    {
-      "id": "86a80032c8954b50",
-      "type": "text",
-      "x": 141,
-      "y": -6989,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)现值系数(Present Value Index)**"
-    },
-    {
-      "id": "3101f1357475477c",
-      "type": "text",
-      "x": -359,
-      "y": -6879,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)现金流量比率**"
-    },
-    {
-      "id": "6abf6dbd25b049e9",
-      "type": "text",
-      "x": -109,
-      "y": -6879,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)管理用利润表**"
-    },
-    {
-      "id": "523b088b1160463f",
-      "type": "text",
-      "x": 141,
-      "y": -6879,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)股票的价格**"
-    },
-    {
-      "id": "879f1ed4340a4bdb",
-      "type": "text",
-      "x": -359,
-      "y": -6769,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)财务报表信息的可靠性问题**"
-    },
-    {
-      "id": "a2c4e14f20434be5",
-      "type": "text",
-      "x": -109,
-      "y": -6769,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)长期筹资(Long-term Financing)**"
-    },
-    {
-      "id": "8b51ec4ca5cc4785",
-      "type": "text",
-      "x": 141,
-      "y": -6769,
-      "width": 220,
-      "height": 80,
-      "text": "**(二)风险分配功能**"
-    },
-    {
-      "id": "b81ef1350be1443a",
-      "type": "text",
-      "x": -359,
-      "y": -6659,
-      "width": 220,
-      "height": 80,
-      "text": "**(五)债券的到期日,到期期限(Bond Maturity Date and Term)**"
-    },
-    {
-      "id": "cde536864e444a44",
-      "type": "text",
-      "x": -109,
-      "y": -6659,
-      "width": 220,
-      "height": 80,
-      "text": "**(五)节约信息成本**"
-    },
-    {
-      "id": "e1a13af7a00d43b4",
-      "type": "text",
-      "x": 141,
-      "y": -6659,
-      "width": 220,
-      "height": 80,
-      "text": "**(五)证券公司**"
-    },
-    {
-      "id": "1d78067642444e6c",
-      "type": "text",
-      "x": -359,
-      "y": -6549,
-      "width": 220,
-      "height": 80,
-      "text": "**(五)非流动资产周转率**"
-    },
-    {
-      "id": "87ae83c2951e4813",
-      "type": "text",
-      "x": -109,
-      "y": -6549,
-      "width": 220,
-      "height": 80,
-      "text": "**(六)债券的种类**"
-    },
-    {
-      "id": "be4e90cdded34d36",
-      "type": "text",
-      "x": 141,
-      "y": -6549,
-      "width": 220,
-      "height": 80,
-      "text": "**(六)总资产周转率**"
-    },
-    {
-      "id": "eb45bad94c1c4740",
-      "type": "text",
-      "x": -359,
-      "y": -6439,
-      "width": 220,
-      "height": 80,
-      "text": "**(四)估计所需外部融资需求**"
-    },
-    {
-      "id": "8eaccc145a6d4845",
-      "type": "text",
-      "x": -109,
-      "y": -6439,
-      "width": 220,
-      "height": 80,
-      "text": "**(四)债券计息和付息方式**"
-    },
-    {
-      "id": "6ddb07cbe1ed4b75",
-      "type": "text",
-      "x": 141,
-      "y": -6439,
-      "width": 220,
-      "height": 80,
-      "text": "**(四)场内交易市场和场外交易市场**"
-    },
-    {
-      "id": "3095499f6e414c0d",
-      "type": "text",
-      "x": -359,
-      "y": -6329,
-      "width": 220,
-      "height": 80,
-      "text": "**(四)杜邦分析体系的局限性**"
-    },
-    {
-      "id": "e927effbba434adc",
-      "type": "text",
-      "x": -109,
-      "y": -6329,
-      "width": 220,
-      "height": 80,
-      "text": "**(四)永续年金**"
-    },
-    {
-      "id": "65f3aa8c1bd64f89",
-      "type": "text",
-      "x": 141,
-      "y": -6329,
-      "width": 220,
-      "height": 80,
-      "text": "**(四)管理用财务分析体系**"
-    },
-    {
-      "id": "2461590f2e304822",
-      "type": "text",
-      "x": -359,
-      "y": -6219,
-      "width": 220,
-      "height": 80,
-      "text": "**(四)营运资本周转率**"
-    },
-    {
-      "id": "3bf8476b67274a2e",
-      "type": "text",
-      "x": -109,
-      "y": -6219,
-      "width": 220,
-      "height": 80,
-      "text": "**(四)证券交易所**"
-    },
-    {
-      "id": "42cd9232f5eb4c3d",
-      "type": "text",
-      "x": 141,
-      "y": -6219,
-      "width": 220,
-      "height": 80,
-      "text": "**(四)调节经济功能**"
-    },
-    {
-      "id": "7596f9dc680f48f4",
-      "type": "text",
-      "x": -359,
-      "y": -6109,
-      "width": 220,
-      "height": 80,
-      "text": "**02_财务报表分析和财务预测**"
-    },
-    {
-      "id": "7779f9c8a9484a5a",
-      "type": "text",
-      "x": -109,
-      "y": -6109,
-      "width": 220,
-      "height": 80,
-      "text": "**2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf**"
-    },
-    {
-      "id": "fcd291e01c074107",
-      "type": "text",
-      "x": 141,
-      "y": -6109,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20241011222855.png**"
-    },
-    {
-      "id": "1395a01b1e494af5",
-      "type": "text",
-      "x": -359,
-      "y": -5999,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20241011223628.png**"
-    },
-    {
-      "id": "5e5255d9a9c040f8",
-      "type": "text",
-      "x": -109,
-      "y": -5999,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20241011223809.png**"
-    },
-    {
-      "id": "6bbb730e4bf9482a",
-      "type": "text",
-      "x": 141,
-      "y": -5999,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20241011234007.png**"
-    },
-    {
-      "id": "49a570f8dcaa4ed9",
-      "type": "text",
-      "x": -359,
-      "y": -5889,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20241114223917.png**"
-    },
-    {
-      "id": "e9d6a180c6af4590",
-      "type": "text",
-      "x": -109,
-      "y": -5889,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20241115213614.png**"
-    },
-    {
-      "id": "d76333a1214e4335",
-      "type": "text",
-      "x": 141,
-      "y": -5889,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20241115213839.png**"
-    },
-    {
-      "id": "7e1efd735d4f4bcd",
-      "type": "text",
-      "x": -359,
-      "y": -5779,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20241115215349.png**"
-    },
-    {
-      "id": "ebda04576ccc4d82",
-      "type": "text",
-      "x": -109,
-      "y": -5779,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20241116132324.png**"
-    },
-    {
-      "id": "d5f583a26d5f44f4",
-      "type": "text",
-      "x": 141,
-      "y": -5779,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20241116132435.png**"
-    },
-    {
-      "id": "6143c2dc1eca4fab",
-      "type": "text",
-      "x": -359,
-      "y": -5669,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20241116152159.png**"
-    },
-    {
-      "id": "0159251b5a434594",
-      "type": "text",
-      "x": -109,
-      "y": -5669,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20241116152226.png**"
-    },
-    {
-      "id": "884cf6f8e7ee4e99",
-      "type": "text",
-      "x": 141,
-      "y": -5669,
-      "width": 220,
-      "height": 80,
-      "text": "**一. 债券的有关概念(Relevant Concepts of Bonds)**"
-    },
-    {
-      "id": "a5b863b533e74d89",
-      "type": "text",
-      "x": -359,
-      "y": -5559,
-      "width": 220,
-      "height": 80,
-      "text": "**一.企业组织形式(Forms of Business Organization)**"
-    },
-    {
-      "id": "4ea8f4a76fb54e30",
-      "type": "text",
-      "x": -109,
-      "y": -5559,
-      "width": 220,
-      "height": 80,
-      "text": "**一.内含增长率的测算**"
-    },
-    {
-      "id": "5e33514944de4b54",
-      "type": "text",
-      "x": 141,
-      "y": -5559,
-      "width": 220,
-      "height": 80,
-      "text": "**一.净现值法(Net Present Value Method)**"
-    },
-    {
-      "id": "77537b44cf05497b",
-      "type": "text",
-      "x": -359,
-      "y": -5449,
-      "width": 220,
-      "height": 80,
-      "text": "**一.基准利率及特征(Benchmark Interest Rate and Characteristics)**"
-    },
-    {
-      "id": "02963a1e58bd405f",
-      "type": "text",
-      "x": -109,
-      "y": -5449,
-      "width": 220,
-      "height": 80,
-      "text": "**一.投资项目现金流量的构成**"
-    },
-    {
-      "id": "b46159cef5f34c07",
-      "type": "text",
-      "x": 141,
-      "y": -5449,
-      "width": 220,
-      "height": 80,
-      "text": "**一.短期偿债能力比率**"
-    },
-    {
-      "id": "45fba8f78f564e63",
-      "type": "text",
-      "x": -359,
-      "y": -5339,
-      "width": 220,
-      "height": 80,
-      "text": "**一.股票的有关概念**"
-    },
-    {
-      "id": "8f0210973750481a",
-      "type": "text",
-      "x": -109,
-      "y": -5339,
-      "width": 220,
-      "height": 80,
-      "text": "**一.财务报表分析的目的(Purpose of Financial Statement Analysis)**"
-    },
-    {
-      "id": "6bc953dc596b4f47",
-      "type": "text",
-      "x": 141,
-      "y": -5339,
-      "width": 220,
-      "height": 80,
-      "text": "**一.财务管理的目标**"
-    },
-    {
-      "id": "be6818dbb9fb427b",
-      "type": "text",
-      "x": -359,
-      "y": -5229,
-      "width": 220,
-      "height": 80,
-      "text": "**一.财务预测的意义**"
-    },
-    {
-      "id": "27cc20e5f96d4f5a",
-      "type": "text",
-      "x": -109,
-      "y": -5229,
-      "width": 220,
-      "height": 80,
-      "text": "**一.货币时间价值概念(Concept of Time Value of Money)**"
-    },
-    {
-      "id": "62eb75e86df94de5",
-      "type": "text",
-      "x": 141,
-      "y": -5229,
-      "width": 220,
-      "height": 80,
-      "text": "**一.金融工具的类型**"
-    },
-    {
-      "id": "f9199255407c4431",
-      "type": "text",
-      "x": -359,
-      "y": -5119,
-      "width": 220,
-      "height": 80,
-      "text": "**七.管理用财务报表体系**"
-    },
-    {
-      "id": "e88d31c7330c4940",
-      "type": "text",
-      "x": -109,
-      "y": -5119,
-      "width": 220,
-      "height": 80,
-      "text": "**三.债券的收益率**"
-    },
-    {
-      "id": "8c7e391fadb34d09",
-      "type": "text",
-      "x": 141,
-      "y": -5119,
-      "width": 220,
-      "height": 80,
-      "text": "**三.市场利率的影响因素(Influencing Factors of Market Interest Rates)**"
-    },
-    {
-      "id": "708a8a8d43e743f3",
-      "type": "text",
-      "x": -359,
-      "y": -5009,
-      "width": 220,
-      "height": 80,
-      "text": "**三.年金终值和现值**"
-    },
-    {
-      "id": "2bd8bd21e9b042f8",
-      "type": "text",
-      "x": -109,
-      "y": -5009,
-      "width": 220,
-      "height": 80,
-      "text": "**三.股票的期望收益率**"
-    },
-    {
-      "id": "3f078a01616d49b3",
-      "type": "text",
-      "x": 141,
-      "y": -5009,
-      "width": 220,
-      "height": 80,
-      "text": "**三.营运能力比率**"
-    },
-    {
-      "id": "d4c8a37aaf1741ab",
-      "type": "text",
-      "x": -359,
-      "y": -4899,
-      "width": 220,
-      "height": 80,
-      "text": "**三.财务报表分析的局限性(Limitations of Financial Statement Analysis)**"
-    },
-    {
-      "id": "a15703046ff04323",
-      "type": "text",
-      "x": -109,
-      "y": -4899,
-      "width": 220,
-      "height": 80,
-      "text": "**三.财务预测的方法**"
-    },
-    {
-      "id": "ea7733fc88b34432",
-      "type": "text",
-      "x": 141,
-      "y": -4899,
-      "width": 220,
-      "height": 80,
-      "text": "**三.金融市场的参与者**"
-    },
-    {
-      "id": "cbb66e8656b944c3",
-      "type": "text",
-      "x": -359,
-      "y": -4789,
-      "width": 220,
-      "height": 80,
-      "text": "**不要忽视机会成本**"
-    },
-    {
-      "id": "e4eebc6d9a2b4ca9",
-      "type": "text",
-      "x": -109,
-      "y": -4789,
-      "width": 220,
-      "height": 80,
-      "text": "**举例分析**"
-    },
-    {
-      "id": "49215cba58c4495b",
-      "type": "text",
-      "x": 141,
-      "y": -4789,
-      "width": 220,
-      "height": 80,
-      "text": "**二.债券的价值(Bond Value)**"
-    },
-    {
-      "id": "1b77eaf62f944958",
-      "type": "text",
-      "x": -359,
-      "y": -4679,
-      "width": 220,
-      "height": 80,
-      "text": "**二.利率的期限结构(Term Structure of Interest Rates)**"
-    },
-    {
-      "id": "74c50f5e3266483a",
-      "type": "text",
-      "x": -109,
-      "y": -4679,
-      "width": 220,
-      "height": 80,
-      "text": "**二.利益相关者的要求**"
-    },
-    {
-      "id": "8f04af50bd5849ab",
-      "type": "text",
-      "x": 141,
-      "y": -4679,
-      "width": 220,
-      "height": 80,
-      "text": "**二.可持续增长率的测算**"
-    },
-    {
-      "id": "9b28c597369948a2",
-      "type": "text",
-      "x": -359,
-      "y": -4569,
-      "width": 220,
-      "height": 80,
-      "text": "**二.复利终值和现值(Compound Interest Future Value and Present Value)**"
-    },
-    {
-      "id": "6c09a90be7bb4d34",
-      "type": "text",
-      "x": -109,
-      "y": -4569,
-      "width": 220,
-      "height": 80,
-      "text": "**二.投资项目现金流量的估计方法**"
-    },
-    {
-      "id": "14fdc01595b64cc2",
-      "type": "text",
-      "x": 141,
-      "y": -4569,
-      "width": 220,
-      "height": 80,
-      "text": "**二.股票的价值**"
-    },
-    {
-      "id": "15ef6f2cd4e24e1a",
-      "type": "text",
-      "x": -359,
-      "y": -4459,
-      "width": 220,
-      "height": 80,
-      "text": "**二.财务报表分析的方法(Methods of Financial Statement Analysis)**"
-    },
-    {
-      "id": "b8f353de837e409d",
-      "type": "text",
-      "x": -109,
-      "y": -4459,
-      "width": 220,
-      "height": 80,
-      "text": "**二.财务管理的主要内容(Main Content of Financial Management)**"
-    },
-    {
-      "id": "6a2e72375f6f4127",
-      "type": "text",
-      "x": 141,
-      "y": -4459,
-      "width": 220,
-      "height": 80,
-      "text": "**二.金融市场的类型**"
-    },
-    {
-      "id": "28075a1292d04971",
-      "type": "text",
-      "x": -359,
-      "y": -4349,
-      "width": 220,
-      "height": 80,
-      "text": "**二.长期偿债能力比率**"
-    },
-    {
-      "id": "2c04327d6483423d",
-      "type": "text",
-      "x": -109,
-      "y": -4349,
-      "width": 220,
-      "height": 80,
-      "text": "**五,市价比率**"
-    },
-    {
-      "id": "bd94e938f02e4beb",
-      "type": "text",
-      "x": 141,
-      "y": -4349,
-      "width": 220,
-      "height": 80,
-      "text": "**五.金融市场的功能**"
-    },
-    {
-      "id": "409181c457a94f47",
-      "type": "text",
-      "x": -359,
-      "y": -4239,
-      "width": 220,
-      "height": 80,
-      "text": "**产权比率和权益乘数**"
-    },
-    {
-      "id": "047cfd09cf3246cb",
-      "type": "text",
-      "x": -109,
-      "y": -4239,
-      "width": 220,
-      "height": 80,
-      "text": "**价值评估理论**"
-    },
-    {
-      "id": "0072716d81fd4e6b",
-      "type": "text",
-      "x": 141,
-      "y": -4239,
-      "width": 220,
-      "height": 80,
-      "text": "**企业实现增长的三种方式**"
-    },
-    {
-      "id": "90baaeecf463484d",
-      "type": "text",
-      "x": -359,
-      "y": -4129,
-      "width": 220,
-      "height": 80,
-      "text": "**优先债券与次级债券**"
-    },
-    {
-      "id": "53c50851371649e4",
-      "type": "text",
-      "x": -109,
-      "y": -4129,
-      "width": 220,
-      "height": 80,
-      "text": "**优势**"
-    },
-    {
-      "id": "b25683ab73424fdc",
-      "type": "text",
-      "x": 141,
-      "y": -4129,
-      "width": 220,
-      "height": 80,
-      "text": "**优点**"
-    },
-    {
-      "id": "80216c442ee94bce",
-      "type": "text",
-      "x": -359,
-      "y": -4019,
-      "width": 220,
-      "height": 80,
-      "text": "**债务担保**"
-    },
-    {
-      "id": "1f0d93101d554a02",
-      "type": "text",
-      "x": -109,
-      "y": -4019,
-      "width": 220,
-      "height": 80,
-      "text": "**债权人和公司的矛盾**"
-    },
-    {
-      "id": "2f61e9bb624543cf",
-      "type": "text",
-      "x": 141,
-      "y": -4019,
-      "width": 220,
-      "height": 80,
-      "text": "**债权人的要求**"
-    },
-    {
-      "id": "86a7af5259d24e5c",
-      "type": "text",
-      "x": -359,
-      "y": -3909,
-      "width": 220,
-      "height": 80,
-      "text": "**公司股东和公司经营者的矛盾.**"
-    },
-    {
-      "id": "c046e7e212d94e9d",
-      "type": "text",
-      "x": -109,
-      "y": -3909,
-      "width": 220,
-      "height": 80,
-      "text": "**六.杜邦分析体系**"
-    },
-    {
-      "id": "5d9d31b752aa405e",
-      "type": "text",
-      "x": 141,
-      "y": -3909,
-      "width": 220,
-      "height": 80,
-      "text": "**六.资本市场效率**"
-    },
-    {
-      "id": "9ca808289fc54b1c",
-      "type": "text",
-      "x": -359,
-      "y": -3799,
-      "width": 220,
-      "height": 80,
-      "text": "**具有特殊条款的债券**"
-    },
-    {
-      "id": "d9129e4543064585",
-      "type": "text",
-      "x": -109,
-      "y": -3799,
-      "width": 220,
-      "height": 80,
-      "text": "**决策原则**"
-    },
-    {
-      "id": "7a156946eefe4a81",
-      "type": "text",
-      "x": 141,
-      "y": -3799,
-      "width": 220,
-      "height": 80,
-      "text": "**利息支付频率**"
-    },
-    {
-      "id": "dbad0283ced34102",
-      "type": "text",
-      "x": -359,
-      "y": -3689,
-      "width": 220,
-      "height": 80,
-      "text": "**到期时间 ：**"
-    },
-    {
-      "id": "2fb1d8bcfbef4a0d",
-      "type": "text",
-      "x": -109,
-      "y": -3689,
-      "width": 220,
-      "height": 80,
-      "text": "**制度性措施**"
-    },
-    {
-      "id": "4bfa731833c74cdb",
-      "type": "text",
-      "x": 141,
-      "y": -3689,
-      "width": 220,
-      "height": 80,
-      "text": "**合同利益相关者**"
-    },
-    {
-      "id": "d93e5b8de52b43f2",
-      "type": "text",
-      "x": -359,
-      "y": -3579,
+      "y": -10840,
       "width": 220,
       "height": 80,
       "text": "**含义**"
     },
     {
-      "id": "5f010b009a814632",
-      "type": "text",
-      "x": -109,
-      "y": -3579,
-      "width": 220,
-      "height": 80,
-      "text": "**四,盈利能力比率**"
-    },
-    {
-      "id": "d37f61ba337f45c3",
+      "id": "4bc2cb8ce71741a1",
       "type": "text",
       "x": 141,
-      "y": -3579,
+      "y": -10840,
       "width": 220,
       "height": 80,
-      "text": "**四.金融中介机构(没讲)**"
+      "text": "**Benchmark Interest Rate**"
     },
     {
-      "id": "671d55bd191c4df1",
+      "id": "eba906e34f554f54",
       "type": "text",
       "x": -359,
-      "y": -3469,
-      "width": 220,
-      "height": 80,
-      "text": "**基准利率(Benchmark Interest Rate)**"
-    },
-    {
-      "id": "551eaddf9c9d4a89",
-      "type": "text",
-      "x": -109,
-      "y": -3469,
-      "width": 220,
-      "height": 80,
-      "text": "**基准利率特征**"
-    },
-    {
-      "id": "55aec159dc0148d3",
-      "type": "text",
-      "x": 141,
-      "y": -3469,
-      "width": 220,
-      "height": 80,
-      "text": "**基础功能**"
-    },
-    {
-      "id": "f827936e1ba84745",
-      "type": "text",
-      "x": -359,
-      "y": -3359,
-      "width": 220,
-      "height": 80,
-      "text": "**增强短期偿债能力的表外因素**"
-    },
-    {
-      "id": "a323c39111584196",
-      "type": "text",
-      "x": -109,
-      "y": -3359,
-      "width": 220,
-      "height": 80,
-      "text": "**外部融资销售增长比**"
-    },
-    {
-      "id": "0b2196dfa3b64474",
-      "type": "text",
-      "x": 141,
-      "y": -3359,
-      "width": 220,
-      "height": 80,
-      "text": "**存量差额比较:**"
-    },
-    {
-      "id": "1f6f6dbe52b2435a",
-      "type": "text",
-      "x": -359,
-      "y": -3249,
-      "width": 220,
-      "height": 80,
-      "text": "**存量比率比较**"
-    },
-    {
-      "id": "f88afc5df0c244a4",
-      "type": "text",
-      "x": -109,
-      "y": -3249,
-      "width": 220,
-      "height": 80,
-      "text": "**定义**"
-    },
-    {
-      "id": "15e910983c124d84",
-      "type": "text",
-      "x": 141,
-      "y": -3249,
-      "width": 220,
-      "height": 80,
-      "text": "**对营运资本的影响**"
-    },
-    {
-      "id": "4f31ea2e8faf48ae",
-      "type": "text",
-      "x": -359,
-      "y": -3139,
-      "width": 220,
-      "height": 80,
-      "text": "**对财务管理的意义**"
-    },
-    {
-      "id": "81be54d2f17d4049",
-      "type": "text",
-      "x": -109,
-      "y": -3139,
+      "y": -10730,
       "width": 220,
       "height": 80,
       "text": "**局限**"
     },
     {
-      "id": "2e026f30cd534a68",
-      "type": "text",
-      "x": 141,
-      "y": -3139,
-      "width": 220,
-      "height": 80,
-      "text": "**市场有效性的理论研究**"
-    },
-    {
-      "id": "22d977141dbd45ef",
-      "type": "text",
-      "x": -359,
-      "y": -3029,
-      "width": 220,
-      "height": 80,
-      "text": "**平息债券的估价(Valuation of Coupon Bonds)**"
-    },
-    {
-      "id": "87475fd0c7f64986",
+      "id": "9d15807941f0412c",
       "type": "text",
       "x": -109,
-      "y": -3029,
+      "y": -10730,
       "width": 220,
       "height": 80,
-      "text": "**截屏 2024-10-10 20.04.51.jpeg**"
+      "text": "**Cash Coverage Ratio**"
     },
     {
-      "id": "b582cf239b014762",
+      "id": "4228faa71e4e4822",
       "type": "text",
       "x": 141,
-      "y": -3029,
+      "y": -10730,
       "width": 220,
       "height": 80,
-      "text": "**截屏 2024-10-11 22.32.26.jpeg**"
+      "text": "**Debt-to-Asset Ratio**"
     },
     {
-      "id": "39670639e4164d29",
+      "id": "37892018f00e40ec",
       "type": "text",
       "x": -359,
-      "y": -2919,
+      "y": -10620,
       "width": 220,
       "height": 80,
-      "text": "**投资组合理论**"
+      "text": "**Model Misspecification**"
     },
     {
-      "id": "0dbdccf8ac6d4fc6",
+      "id": "933a0db3e2244ac1",
       "type": "text",
       "x": -109,
-      "y": -2919,
+      "y": -10620,
       "width": 220,
       "height": 80,
-      "text": "**折现率**"
+      "text": "**Money Multiplier**"
     },
     {
-      "id": "70c520a93139469b",
+      "id": "e085d8f6dd9d4bb7",
       "type": "text",
       "x": 141,
-      "y": -2919,
+      "y": -10620,
       "width": 220,
       "height": 80,
-      "text": "**报价利率(名义利率)**"
+      "text": "**Net Present Value**"
     },
     {
-      "id": "d8122cece2ba4d0f",
+      "id": "fd51e23d77954e4a",
       "type": "text",
       "x": -359,
-      "y": -2809,
+      "y": -10510,
       "width": 220,
       "height": 80,
-      "text": "**按利率是否固定分**"
+      "text": "**Net Present Value (2)**"
     },
     {
-      "id": "93f78a4e061a4843",
+      "id": "98eb0be17322478b",
       "type": "text",
       "x": -109,
-      "y": -2809,
+      "y": -10510,
       "width": 220,
       "height": 80,
-      "text": "**按是否有财产担保分**"
+      "text": "**Return on Equity**"
     },
     {
-      "id": "3b7e208cab3546bc",
+      "id": "6f3132c2143c40f8",
       "type": "text",
       "x": 141,
-      "y": -2809,
+      "y": -10510,
       "width": 220,
       "height": 80,
-      "text": "**按是否记名分**"
+      "text": "**Time Value of Money**"
     },
     {
-      "id": "eb76de7642794b4b",
+      "id": "6141830ec4074728",
       "type": "text",
       "x": -359,
-      "y": -2699,
+      "y": -10400,
       "width": 220,
       "height": 80,
-      "text": "**按比较内容分类**"
+      "text": "**Times Interest Earned Ratio**"
     },
     {
-      "id": "9efb675133ef4fa2",
+      "id": "34d4b7221ec749ba",
       "type": "text",
       "x": -109,
-      "y": -2699,
+      "y": -10400,
       "width": 220,
       "height": 80,
-      "text": "**按比较对象分类**"
+      "text": "**优势**"
     },
     {
-      "id": "e739e6a6e14a4492",
+      "id": "fa22d51bc8e44820",
       "type": "text",
       "x": 141,
-      "y": -2699,
+      "y": -10400,
       "width": 220,
       "height": 80,
-      "text": "**有效年利率**"
+      "text": "**决策原则**"
     },
     {
-      "id": "4508b13ce9994ee3",
+      "id": "53abb2aabe084072",
       "type": "text",
       "x": -359,
-      "y": -2589,
-      "width": 220,
-      "height": 80,
-      "text": "**未决诉讼**"
-    },
-    {
-      "id": "0950f5d162fa419a",
-      "type": "text",
-      "x": -109,
-      "y": -2589,
-      "width": 220,
-      "height": 80,
-      "text": "**根据期初股东权益计算可持续增长率**"
-    },
-    {
-      "id": "f7eb6275efc24914",
-      "type": "text",
-      "x": 141,
-      "y": -2589,
-      "width": 220,
-      "height": 80,
-      "text": "**根据期末股东权益计算可持续增长率.**"
-    },
-    {
-      "id": "bc581cec33044957",
-      "type": "text",
-      "x": -359,
-      "y": -2479,
-      "width": 220,
-      "height": 80,
-      "text": "**永久债券(Permanent Bonds)**"
-    },
-    {
-      "id": "02965f9d3f5b4772",
-      "type": "text",
-      "x": -109,
-      "y": -2479,
-      "width": 220,
-      "height": 80,
-      "text": "**注意内容**"
-    },
-    {
-      "id": "40a6a1cdd6f14eb2",
-      "type": "text",
-      "x": 141,
-      "y": -2479,
-      "width": 220,
-      "height": 80,
-      "text": "**流通债券(Traded Bonds)**"
-    },
-    {
-      "id": "8c454aa96a6f49d9",
-      "type": "text",
-      "x": -359,
-      "y": -2369,
+      "y": -10290,
       "width": 220,
       "height": 80,
       "text": "**特点**"
     },
     {
-      "id": "1ed1b391e06e4180",
+      "id": "903af777caa04e3e",
       "type": "text",
       "x": -109,
-      "y": -2369,
-      "width": 220,
-      "height": 80,
-      "text": "**现金流量与负债比率**"
-    },
-    {
-      "id": "b700bc713400491f",
-      "type": "text",
-      "x": 141,
-      "y": -2369,
-      "width": 220,
-      "height": 80,
-      "text": "**现金流量理论**"
-    },
-    {
-      "id": "ddbb967ceb4a4f62",
-      "type": "text",
-      "x": -359,
-      "y": -2259,
-      "width": 220,
-      "height": 80,
-      "text": "**相关成本与非相关成本**"
-    },
-    {
-      "id": "d15568f42ad74c61",
-      "type": "text",
-      "x": -109,
-      "y": -2259,
-      "width": 220,
-      "height": 80,
-      "text": "**确定经营资产和经营负债项目的销售百分比**"
-    },
-    {
-      "id": "b1edb9c6370249e6",
-      "type": "text",
-      "x": 141,
-      "y": -2259,
-      "width": 220,
-      "height": 80,
-      "text": "**票面利率：**"
-    },
-    {
-      "id": "862c662a869e4b9d",
-      "type": "text",
-      "x": -359,
-      "y": -2149,
-      "width": 220,
-      "height": 80,
-      "text": "**第一类代理成本**"
-    },
-    {
-      "id": "ad49b5b7b6eb40f5",
-      "type": "text",
-      "x": -109,
-      "y": -2149,
-      "width": 220,
-      "height": 80,
-      "text": "**第一节 债券估价(Bond Valuation)**"
-    },
-    {
-      "id": "480fb525812846ee",
-      "type": "text",
-      "x": 141,
-      "y": -2149,
-      "width": 220,
-      "height": 80,
-      "text": "**第一节 利率(Interest Rate)**"
-    },
-    {
-      "id": "8ad92491c7004da2",
-      "type": "text",
-      "x": -359,
-      "y": -2039,
-      "width": 220,
-      "height": 80,
-      "text": "**第三节 风险和报酬**"
-    },
-    {
-      "id": "349303a80d1a48b2",
-      "type": "text",
-      "x": -109,
-      "y": -2039,
-      "width": 220,
-      "height": 80,
-      "text": "**第三节.财务管理的基础概念和基本理论(本节略)**"
-    },
-    {
-      "id": "e238f4d5b1fe4d09",
-      "type": "text",
-      "x": 141,
-      "y": -2039,
-      "width": 220,
-      "height": 80,
-      "text": "**第二类代理成本**"
-    },
-    {
-      "id": "4e715a7bbf704fba",
-      "type": "text",
-      "x": -359,
-      "y": -1929,
-      "width": 220,
-      "height": 80,
-      "text": "**第二节 投资项目评估方法(Investment Project Evaluation Methods)**"
-    },
-    {
-      "id": "4b03a49d3df245e4",
-      "type": "text",
-      "x": -109,
-      "y": -1929,
-      "width": 220,
-      "height": 80,
-      "text": "**第二节 财务比率分析**"
-    },
-    {
-      "id": "7ef359364e7c4d8f",
-      "type": "text",
-      "x": 141,
-      "y": -1929,
-      "width": 220,
-      "height": 80,
-      "text": "**第二节 货币的时间价值(Time Value of Money)**"
-    },
-    {
-      "id": "ab2711d1ebcd4582",
-      "type": "text",
-      "x": -359,
-      "y": -1819,
-      "width": 220,
-      "height": 80,
-      "text": "**第二节.财务管理的目标与利益相关者的要求.**"
-    },
-    {
-      "id": "0840a10f1c2641f2",
-      "type": "text",
-      "x": -109,
-      "y": -1819,
-      "width": 220,
-      "height": 80,
-      "text": "**第四节 增长率与资本需求的测算**"
-    },
-    {
-      "id": "7a5be251d1ac498f",
-      "type": "text",
-      "x": 141,
-      "y": -1819,
-      "width": 220,
-      "height": 80,
-      "text": "**第四节.金融工具和金融市场**"
-    },
-    {
-      "id": "b5df9054d0894979",
-      "type": "text",
-      "x": -359,
-      "y": -1709,
-      "width": 220,
-      "height": 80,
-      "text": "**约束条件**"
-    },
-    {
-      "id": "820022ad41144743",
-      "type": "text",
-      "x": -109,
-      "y": -1709,
-      "width": 220,
-      "height": 80,
-      "text": "**经营者利益和股东利益的协调**"
-    },
-    {
-      "id": "290e2dc6fc174e87",
-      "type": "text",
-      "x": 141,
-      "y": -1709,
-      "width": 220,
-      "height": 80,
-      "text": "**考虑投资方案对其他项目的影响**"
-    },
-    {
-      "id": "b41d175ccd3b4aa9",
-      "type": "text",
-      "x": -359,
-      "y": -1599,
-      "width": 220,
-      "height": 80,
-      "text": "**股票股价**"
-    },
-    {
-      "id": "e226d66856794058",
-      "type": "text",
-      "x": -109,
-      "y": -1599,
-      "width": 220,
-      "height": 80,
-      "text": "**衡量方法**"
-    },
-    {
-      "id": "6b1a6e57f9f746f9",
-      "type": "text",
-      "x": 141,
-      "y": -1599,
-      "width": 220,
-      "height": 80,
-      "text": "**计息期利率**"
-    },
-    {
-      "id": "5c18544f56be4686",
-      "type": "text",
-      "x": -359,
-      "y": -1489,
+      "y": -10290,
       "width": 220,
       "height": 80,
       "text": "**计算公式**"
     },
     {
-      "id": "f5dea7d6827044fc",
+      "id": "8fe1d5901a454b00",
+      "type": "text",
+      "x": 141,
+      "y": -10290,
+      "width": 220,
+      "height": 80,
+      "text": "**Cash Ratio**"
+    },
+    {
+      "id": "5569c50600c84b1c",
+      "type": "text",
+      "x": -359,
+      "y": -10180,
+      "width": 220,
+      "height": 80,
+      "text": "**Null Space**"
+    },
+    {
+      "id": "84dffc75f56a45af",
       "type": "text",
       "x": -109,
-      "y": -1489,
+      "y": -10180,
+      "width": 220,
+      "height": 80,
+      "text": "**(1)战略分析**"
+    },
+    {
+      "id": "060f6a0960b34022",
+      "type": "text",
+      "x": 141,
+      "y": -10180,
+      "width": 220,
+      "height": 80,
+      "text": "**(2)会计分析**"
+    },
+    {
+      "id": "ecdb9e3960934f39",
+      "type": "text",
+      "x": -359,
+      "y": -10070,
+      "width": 220,
+      "height": 80,
+      "text": "**(3)财务分析**"
+    },
+    {
+      "id": "328115bf0e124c16",
+      "type": "text",
+      "x": -109,
+      "y": -10070,
+      "width": 220,
+      "height": 80,
+      "text": "**(4)部署分析**"
+    },
+    {
+      "id": "875940dca0ea49b8",
+      "type": "text",
+      "x": 141,
+      "y": -10070,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)个人独资企业(Sole Proprietorship)**"
+    },
+    {
+      "id": "7c61f0a0df4d4977",
+      "type": "text",
+      "x": -359,
+      "y": -9960,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)债券(Bond)**"
+    },
+    {
+      "id": "e9c6865922bc498a",
+      "type": "text",
+      "x": -109,
+      "y": -9960,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)净现值(Net Present Value)**"
+    },
+    {
+      "id": "5987e70a6db64fb7",
+      "type": "text",
+      "x": 141,
+      "y": -9960,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)利润最大化**"
+    },
+    {
+      "id": "cd89c991ef154451",
+      "type": "text",
+      "x": -359,
+      "y": -9850,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)可偿债资产与短期债务的存量比较**"
+    },
+    {
+      "id": "094b5d2f28b24ae2",
+      "type": "text",
+      "x": -109,
+      "y": -9850,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)可持续增长率的概念**"
+    },
+    {
+      "id": "a21f0dd51c5941b4",
+      "type": "text",
+      "x": 141,
+      "y": -9850,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)含义**"
+    },
+    {
+      "id": "8fc50f4431634b70",
+      "type": "text",
+      "x": -359,
+      "y": -9740,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)固定收益证券**"
+    },
+    {
+      "id": "1e4e55e894004635",
+      "type": "text",
+      "x": -109,
+      "y": -9740,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)复利终值**"
+    },
+    {
+      "id": "d7a35a19b40543ad",
+      "type": "text",
+      "x": 141,
+      "y": -9740,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)存量比率**"
+    },
+    {
+      "id": "aff37ffe8bb44b11",
+      "type": "text",
+      "x": -359,
+      "y": -9630,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)居民**"
+    },
+    {
+      "id": "436a765908774117",
+      "type": "text",
+      "x": -109,
+      "y": -9630,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)市盈率**"
+    },
+    {
+      "id": "bd035260f57d4674",
+      "type": "text",
+      "x": 141,
+      "y": -9630,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)应收账款周转率**"
+    },
+    {
+      "id": "3947fdecba8e4e82",
+      "type": "text",
+      "x": -359,
+      "y": -9520,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)投资项目现金流量的影响因素**"
+    },
+    {
+      "id": "6a82456d0e744bd5",
+      "type": "text",
+      "x": -109,
+      "y": -9520,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)普通年金终值和现值**"
+    },
+    {
+      "id": "f30e03fff32c48b6",
+      "type": "text",
+      "x": 141,
+      "y": -9520,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)杜邦分析体系的核心比率**"
+    },
+    {
+      "id": "aa5220904f7a4342",
+      "type": "text",
+      "x": -359,
+      "y": -9410,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)比较分析法(Comparative Analysis Method)**"
+    },
+    {
+      "id": "43641b79b4404125",
+      "type": "text",
+      "x": -109,
+      "y": -9410,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)现金流量的含义**"
+    },
+    {
+      "id": "1251af094d6a4f87",
+      "type": "text",
+      "x": 141,
+      "y": -9410,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)管理用资产负债表**"
+    },
+    {
+      "id": "4ad8375536b441ad",
+      "type": "text",
+      "x": -359,
+      "y": -9300,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)经营者的利益要求与协商**"
+    },
+    {
+      "id": "fa90752da3c14b06",
+      "type": "text",
+      "x": -109,
+      "y": -9300,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)股票的有关概念**"
+    },
+    {
+      "id": "ab8639a4261c46d7",
+      "type": "text",
+      "x": 141,
+      "y": -9300,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)营业净利率**"
+    },
+    {
+      "id": "f67e62ac5eae432a",
+      "type": "text",
+      "x": -359,
+      "y": -9190,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)计算方法**"
+    },
+    {
+      "id": "6cfa24e161a74377",
+      "type": "text",
+      "x": -109,
+      "y": -9190,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)财务报表信息的披露问题**"
+    },
+    {
+      "id": "21675af9b0414d82",
+      "type": "text",
+      "x": 141,
+      "y": -9190,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)货币市场和资本市场**"
+    },
+    {
+      "id": "5dba0c5f1b534899",
+      "type": "text",
+      "x": -359,
+      "y": -9080,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)资本市场效率的意义**"
+    },
+    {
+      "id": "5bcc7e080eb44ead",
+      "type": "text",
+      "x": -109,
+      "y": -9080,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)资金融通功能**"
+    },
+    {
+      "id": "6be0c43d339943e1",
+      "type": "text",
+      "x": 141,
+      "y": -9080,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)销售百分比法**"
+    },
+    {
+      "id": "8057b9b127214160",
+      "type": "text",
+      "x": -359,
+      "y": -8970,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)销售预测**"
+    },
+    {
+      "id": "2a3564ba06954d01",
+      "type": "text",
+      "x": -109,
+      "y": -8970,
+      "width": 220,
+      "height": 80,
+      "text": "**(一)长期投资(Long-term Investment)**"
+    },
+    {
+      "id": "23a46412360f4473",
+      "type": "text",
+      "x": 141,
+      "y": -8970,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)一级市场和二级市场**"
+    },
+    {
+      "id": "9c400c9e2f6642f9",
+      "type": "text",
+      "x": -359,
+      "y": -8860,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)价格发现功能**"
+    },
+    {
+      "id": "63a503ab48fb42f1",
+      "type": "text",
+      "x": -109,
+      "y": -8860,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)估计各项费用和利润留存额**"
+    },
+    {
+      "id": "ed0c5d28ff2e4450",
+      "type": "text",
+      "x": 141,
+      "y": -8860,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)债券票面利率(Bond Coupon Rate)**"
+    },
+    {
+      "id": "1b76736640824a64",
+      "type": "text",
+      "x": -359,
+      "y": -8750,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)公司制企业(Corporation)**"
+    },
+    {
+      "id": "2dfe66e88b0c4bb4",
+      "type": "text",
+      "x": -109,
+      "y": -8750,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)其他利益相关者的利益要求与协商**"
+    },
+    {
+      "id": "835289b221fa4ea2",
+      "type": "text",
+      "x": 141,
+      "y": -8750,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)市销率**"
+    },
+    {
+      "id": "a96b96ffa01f4324",
+      "type": "text",
+      "x": -359,
+      "y": -8640,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)影响短期偿债因素的其他因素**"
+    },
+    {
+      "id": "d02f542da4d84ae9",
+      "type": "text",
+      "x": -109,
+      "y": -8640,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)影响长期偿债能力的其他因素**"
+    },
+    {
+      "id": "a1a3574b5d7347c0",
+      "type": "text",
+      "x": 141,
+      "y": -8640,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)投资基金**"
+    },
+    {
+      "id": "ffe077f6d1e74c10",
+      "type": "text",
+      "x": -359,
+      "y": -8530,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)报价利率和有效年利率**"
+    },
+    {
+      "id": "d39b91fd9cbe4995",
+      "type": "text",
+      "x": -109,
+      "y": -8530,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)政府**"
+    },
+    {
+      "id": "3cdb18a30fe749b8",
+      "type": "text",
+      "x": 141,
+      "y": -8530,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)权益净利率**"
+    },
+    {
+      "id": "df1a2e6e6acb466a",
+      "type": "text",
+      "x": -359,
+      "y": -8420,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)权益净利率的驱动因素分解**"
+    },
+    {
+      "id": "58cc8cc9b8f341e8",
+      "type": "text",
+      "x": -109,
+      "y": -8420,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)流动资产周转率**"
+    },
+    {
+      "id": "3d95b7fee4e34d0b",
+      "type": "text",
+      "x": 141,
+      "y": -8420,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)管理用现金流量表**"
+    },
+    {
+      "id": "f9ab0b7b4eb84c1d",
+      "type": "text",
+      "x": -359,
+      "y": -8310,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)股东财富最大化**"
+    },
+    {
+      "id": "d294dd300fbb428e",
+      "type": "text",
+      "x": -109,
+      "y": -8310,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)股利**"
+    },
+    {
+      "id": "2188171859264c79",
+      "type": "text",
+      "x": 141,
+      "y": -8310,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)营运资本管理**"
+    },
+    {
+      "id": "b0a27874edf34fc8",
+      "type": "text",
+      "x": -359,
+      "y": -8200,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)衍生证券**"
+    },
+    {
+      "id": "a9e11804bea54082",
+      "type": "text",
+      "x": -109,
+      "y": -8200,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)财务报表信息的比较基础问题**"
+    },
+    {
+      "id": "0e662e9b8f6d48cf",
+      "type": "text",
+      "x": 141,
+      "y": -8200,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)资本市场效率的程度**"
+    },
+    {
+      "id": "0bd300d7529e4fe5",
+      "type": "text",
+      "x": -359,
+      "y": -8090,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)运用信息技术预测**"
+    },
+    {
+      "id": "7d6fb4fdb54e4d10",
+      "type": "text",
+      "x": -109,
+      "y": -8090,
+      "width": 220,
+      "height": 80,
+      "text": "**(三)递延年金终值和现值**"
+    },
+    {
+      "id": "cd47960c9db54e8a",
+      "type": "text",
+      "x": 141,
+      "y": -8090,
+      "width": 220,
+      "height": 80,
+      "text": "**(二) 预付年金终值和现值**"
+    },
+    {
+      "id": "d11d039346934992",
+      "type": "text",
+      "x": -359,
+      "y": -7980,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)估计经营资产和经营负债**"
+    },
+    {
+      "id": "1a2aaa38685f4360",
+      "type": "text",
+      "x": -109,
+      "y": -7980,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)保险公司**"
+    },
+    {
+      "id": "0fab6d5824364774",
+      "type": "text",
+      "x": 141,
+      "y": -7980,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)债券价值的影响因素(Factors Affecting Bond Value)**"
+    },
+    {
+      "id": "94fdaceb83674e7a",
+      "type": "text",
+      "x": -359,
+      "y": -7870,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)债券面值(Bond Face Value)**"
+    },
+    {
+      "id": "8ad2f8d1b2a8426b",
+      "type": "text",
+      "x": -109,
+      "y": -7870,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)债务市场和股权市场**"
+    },
+    {
+      "id": "f2b9be18f6a24961",
+      "type": "text",
+      "x": 141,
+      "y": -7870,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)债权人的利益要求和协商**"
+    },
+    {
+      "id": "a25ee2a696ba45cf",
+      "type": "text",
+      "x": -359,
+      "y": -7760,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)公司**"
+    },
+    {
+      "id": "c440ca43dd72480a",
+      "type": "text",
+      "x": -109,
+      "y": -7760,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)可持续增长率计算**"
+    },
+    {
+      "id": "c4b4ab77c87b4a54",
+      "type": "text",
+      "x": 141,
+      "y": -7760,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)合伙企业(Partnership)**"
+    },
+    {
+      "id": "6eb5ce16014349ef",
+      "type": "text",
+      "x": -359,
+      "y": -7650,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)回归分析法**"
+    },
+    {
+      "id": "bcfb9f0a6cb3479f",
+      "type": "text",
+      "x": -109,
+      "y": -7650,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)因素分析法(连环替代法)(Factor Analysis Method (Chain Substitution Method))**"
+    },
+    {
+      "id": "ed02b551a6104795",
+      "type": "text",
+      "x": 141,
+      "y": -7650,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)复利现值**"
+    },
+    {
+      "id": "c0781fa5efab42a7",
+      "type": "text",
+      "x": -359,
+      "y": -7540,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)存货周转率**"
+    },
+    {
+      "id": "fff86009e23c4ce2",
+      "type": "text",
+      "x": -109,
+      "y": -7540,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)市净率(市账率)**"
+    },
+    {
+      "id": "423a918d7ebe4ba4",
+      "type": "text",
+      "x": 141,
+      "y": -7540,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)总资产净利率**"
+    },
+    {
+      "id": "44cd7fed747d4287",
+      "type": "text",
+      "x": -359,
+      "y": -7430,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)有效资本市场**"
+    },
+    {
+      "id": "840e592f8c074f62",
+      "type": "text",
+      "x": -109,
+      "y": -7430,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)权益证券**"
+    },
+    {
+      "id": "ed19d77ce9974c30",
+      "type": "text",
+      "x": 141,
+      "y": -7430,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)每股收益最大化(权益资本净利率最大化)**"
+    },
+    {
+      "id": "7bef85b993ac4527",
+      "type": "text",
+      "x": -359,
+      "y": -7320,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)流量比率**"
+    },
+    {
+      "id": "8039f817f9344d9e",
+      "type": "text",
+      "x": -109,
+      "y": -7320,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)现值系数(Present Value Index)**"
+    },
+    {
+      "id": "84e44a1ea7ae4399",
+      "type": "text",
+      "x": 141,
+      "y": -7320,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)现金流量比率**"
+    },
+    {
+      "id": "27932b45f7f945c3",
+      "type": "text",
+      "x": -359,
+      "y": -7210,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)管理用利润表**"
+    },
+    {
+      "id": "1bac0905266e4b48",
+      "type": "text",
+      "x": -109,
+      "y": -7210,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)股票的价格**"
+    },
+    {
+      "id": "633332a69f1845fe",
+      "type": "text",
+      "x": 141,
+      "y": -7210,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)财务报表信息的可靠性问题**"
+    },
+    {
+      "id": "15417ceb262d4abe",
+      "type": "text",
+      "x": -359,
+      "y": -7100,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)长期筹资(Long-term Financing)**"
+    },
+    {
+      "id": "e249dce1e4594730",
+      "type": "text",
+      "x": -109,
+      "y": -7100,
+      "width": 220,
+      "height": 80,
+      "text": "**(二)风险分配功能**"
+    },
+    {
+      "id": "8a0188d773014657",
+      "type": "text",
+      "x": 141,
+      "y": -7100,
+      "width": 220,
+      "height": 80,
+      "text": "**(五)债券的到期日,到期期限(Bond Maturity Date and Term)**"
+    },
+    {
+      "id": "14af731e56224f17",
+      "type": "text",
+      "x": -359,
+      "y": -6990,
+      "width": 220,
+      "height": 80,
+      "text": "**(五)节约信息成本**"
+    },
+    {
+      "id": "86303472ecef4089",
+      "type": "text",
+      "x": -109,
+      "y": -6990,
+      "width": 220,
+      "height": 80,
+      "text": "**(五)证券公司**"
+    },
+    {
+      "id": "5b39a3eea6c84976",
+      "type": "text",
+      "x": 141,
+      "y": -6990,
+      "width": 220,
+      "height": 80,
+      "text": "**(五)非流动资产周转率**"
+    },
+    {
+      "id": "5d3fe32132b14c47",
+      "type": "text",
+      "x": -359,
+      "y": -6880,
+      "width": 220,
+      "height": 80,
+      "text": "**(六)债券的种类**"
+    },
+    {
+      "id": "897f64bcd7fd4259",
+      "type": "text",
+      "x": -109,
+      "y": -6880,
+      "width": 220,
+      "height": 80,
+      "text": "**(六)总资产周转率**"
+    },
+    {
+      "id": "943a72905b7c442a",
+      "type": "text",
+      "x": 141,
+      "y": -6880,
+      "width": 220,
+      "height": 80,
+      "text": "**(四)估计所需外部融资需求**"
+    },
+    {
+      "id": "35afcc6bf9154d82",
+      "type": "text",
+      "x": -359,
+      "y": -6770,
+      "width": 220,
+      "height": 80,
+      "text": "**(四)债券计息和付息方式**"
+    },
+    {
+      "id": "a7e8bba0cfb14f95",
+      "type": "text",
+      "x": -109,
+      "y": -6770,
+      "width": 220,
+      "height": 80,
+      "text": "**(四)场内交易市场和场外交易市场**"
+    },
+    {
+      "id": "70a6db01d3134adb",
+      "type": "text",
+      "x": 141,
+      "y": -6770,
+      "width": 220,
+      "height": 80,
+      "text": "**(四)杜邦分析体系的局限性**"
+    },
+    {
+      "id": "9337c49c112d401d",
+      "type": "text",
+      "x": -359,
+      "y": -6660,
+      "width": 220,
+      "height": 80,
+      "text": "**(四)永续年金**"
+    },
+    {
+      "id": "d82157f40bc34f66",
+      "type": "text",
+      "x": -109,
+      "y": -6660,
+      "width": 220,
+      "height": 80,
+      "text": "**(四)管理用财务分析体系**"
+    },
+    {
+      "id": "061c538d57644c2a",
+      "type": "text",
+      "x": 141,
+      "y": -6660,
+      "width": 220,
+      "height": 80,
+      "text": "**(四)营运资本周转率**"
+    },
+    {
+      "id": "e32bf8340d8f414c",
+      "type": "text",
+      "x": -359,
+      "y": -6550,
+      "width": 220,
+      "height": 80,
+      "text": "**(四)证券交易所**"
+    },
+    {
+      "id": "46d5d323196f407d",
+      "type": "text",
+      "x": -109,
+      "y": -6550,
+      "width": 220,
+      "height": 80,
+      "text": "**(四)调节经济功能**"
+    },
+    {
+      "id": "3ee61d10e9c14b05",
+      "type": "text",
+      "x": 141,
+      "y": -6550,
+      "width": 220,
+      "height": 80,
+      "text": "**Accounts Receivable Turnover Ratio**"
+    },
+    {
+      "id": "85f09f52d5d04dd7",
+      "type": "text",
+      "x": -359,
+      "y": -6440,
+      "width": 220,
+      "height": 80,
+      "text": "**Compound Poisson Process**"
+    },
+    {
+      "id": "2a6587ce6cc647b7",
+      "type": "text",
+      "x": -109,
+      "y": -6440,
+      "width": 220,
+      "height": 80,
+      "text": "**Debt-to-Equity Ratio**"
+    },
+    {
+      "id": "e7e811ba268848ec",
+      "type": "text",
+      "x": 141,
+      "y": -6440,
+      "width": 220,
+      "height": 80,
+      "text": "**Equity Multiplier**"
+    },
+    {
+      "id": "8e98a8853cbe48bf",
+      "type": "text",
+      "x": -359,
+      "y": -6330,
+      "width": 220,
+      "height": 80,
+      "text": "**Factor Analysis**"
+    },
+    {
+      "id": "96b90d8cd57544df",
+      "type": "text",
+      "x": -109,
+      "y": -6330,
+      "width": 220,
+      "height": 80,
+      "text": "**Factor Loadings**"
+    },
+    {
+      "id": "a0f8c21c43f34277",
+      "type": "text",
+      "x": 141,
+      "y": -6330,
+      "width": 220,
+      "height": 80,
+      "text": "**Internal Growth Rate**"
+    },
+    {
+      "id": "bc6109289fff4eda",
+      "type": "text",
+      "x": -359,
+      "y": -6220,
+      "width": 220,
+      "height": 80,
+      "text": "**Inventory Turnover Ratio**"
+    },
+    {
+      "id": "940fa98faeb54cc1",
+      "type": "text",
+      "x": -109,
+      "y": -6220,
+      "width": 220,
+      "height": 80,
+      "text": "**Market Risk**"
+    },
+    {
+      "id": "4c267114a68e42fd",
+      "type": "text",
+      "x": 141,
+      "y": -6220,
+      "width": 220,
+      "height": 80,
+      "text": "**Opportunity Cost**"
+    },
+    {
+      "id": "3659264d78914d53",
+      "type": "text",
+      "x": -359,
+      "y": -6110,
+      "width": 220,
+      "height": 80,
+      "text": "**Price-to-Book Ratio**"
+    },
+    {
+      "id": "53110ca11d744b95",
+      "type": "text",
+      "x": -109,
+      "y": -6110,
+      "width": 220,
+      "height": 80,
+      "text": "**Price-to-Earnings Ratio**"
+    },
+    {
+      "id": "6fd1a8131521486d",
+      "type": "text",
+      "x": 141,
+      "y": -6110,
+      "width": 220,
+      "height": 80,
+      "text": "**Price-to-Sales Ratio**"
+    },
+    {
+      "id": "be1e66c7885748ef",
+      "type": "text",
+      "x": -359,
+      "y": -6000,
+      "width": 220,
+      "height": 80,
+      "text": "**Principal-Agent Problem**"
+    },
+    {
+      "id": "ab11f3cd6f0043ae",
+      "type": "text",
+      "x": -109,
+      "y": -6000,
+      "width": 220,
+      "height": 80,
+      "text": "**Property Rights**"
+    },
+    {
+      "id": "d540bae85bd1420b",
+      "type": "text",
+      "x": 141,
+      "y": -6000,
+      "width": 220,
+      "height": 80,
+      "text": "**Return on Assets**"
+    },
+    {
+      "id": "f61c9a7bee7c4b3d",
+      "type": "text",
+      "x": -359,
+      "y": -5890,
+      "width": 220,
+      "height": 80,
+      "text": "**Yield Curve**"
+    },
+    {
+      "id": "356925bcb75a4fe4",
+      "type": "text",
+      "x": -109,
+      "y": -5890,
+      "width": 220,
+      "height": 80,
+      "text": "**一. 债券的有关概念(Relevant Concepts of Bonds)**"
+    },
+    {
+      "id": "be88b2bf683a4ead",
+      "type": "text",
+      "x": 141,
+      "y": -5890,
+      "width": 220,
+      "height": 80,
+      "text": "**一.企业组织形式(Forms of Business Organization)**"
+    },
+    {
+      "id": "6fb9aaea68e142b5",
+      "type": "text",
+      "x": -359,
+      "y": -5780,
+      "width": 220,
+      "height": 80,
+      "text": "**一.内含增长率的测算**"
+    },
+    {
+      "id": "2473f4050a704787",
+      "type": "text",
+      "x": -109,
+      "y": -5780,
+      "width": 220,
+      "height": 80,
+      "text": "**一.净现值法(Net Present Value Method)**"
+    },
+    {
+      "id": "72a60da7cd2a48d5",
+      "type": "text",
+      "x": 141,
+      "y": -5780,
+      "width": 220,
+      "height": 80,
+      "text": "**一.基准利率及特征(Benchmark Interest Rate and Characteristics)**"
+    },
+    {
+      "id": "4dedcef8fa04487a",
+      "type": "text",
+      "x": -359,
+      "y": -5670,
+      "width": 220,
+      "height": 80,
+      "text": "**一.投资项目现金流量的构成**"
+    },
+    {
+      "id": "8fb3edc610454074",
+      "type": "text",
+      "x": -109,
+      "y": -5670,
+      "width": 220,
+      "height": 80,
+      "text": "**一.短期偿债能力比率**"
+    },
+    {
+      "id": "b8d160a656f64c9f",
+      "type": "text",
+      "x": 141,
+      "y": -5670,
+      "width": 220,
+      "height": 80,
+      "text": "**一.股票的有关概念**"
+    },
+    {
+      "id": "fbad8bbec7544235",
+      "type": "text",
+      "x": -359,
+      "y": -5560,
+      "width": 220,
+      "height": 80,
+      "text": "**一.财务报表分析的目的(Purpose of Financial Statement Analysis)**"
+    },
+    {
+      "id": "36a0736d16c3433c",
+      "type": "text",
+      "x": -109,
+      "y": -5560,
+      "width": 220,
+      "height": 80,
+      "text": "**一.财务管理的目标**"
+    },
+    {
+      "id": "195d2cc3f4c04cbb",
+      "type": "text",
+      "x": 141,
+      "y": -5560,
+      "width": 220,
+      "height": 80,
+      "text": "**一.财务预测的意义**"
+    },
+    {
+      "id": "d9c515f3966244a0",
+      "type": "text",
+      "x": -359,
+      "y": -5450,
+      "width": 220,
+      "height": 80,
+      "text": "**一.货币时间价值概念(Concept of Time Value of Money)**"
+    },
+    {
+      "id": "0d49017ab96544e9",
+      "type": "text",
+      "x": -109,
+      "y": -5450,
+      "width": 220,
+      "height": 80,
+      "text": "**一.金融工具的类型**"
+    },
+    {
+      "id": "07ece4ca18e8485c",
+      "type": "text",
+      "x": 141,
+      "y": -5450,
+      "width": 220,
+      "height": 80,
+      "text": "**七.管理用财务报表体系**"
+    },
+    {
+      "id": "6e0257ba9b8146af",
+      "type": "text",
+      "x": -359,
+      "y": -5340,
+      "width": 220,
+      "height": 80,
+      "text": "**三.债券的收益率**"
+    },
+    {
+      "id": "ad8583678acb4040",
+      "type": "text",
+      "x": -109,
+      "y": -5340,
+      "width": 220,
+      "height": 80,
+      "text": "**三.市场利率的影响因素(Influencing Factors of Market Interest Rates)**"
+    },
+    {
+      "id": "3158f7cc14f4439f",
+      "type": "text",
+      "x": 141,
+      "y": -5340,
+      "width": 220,
+      "height": 80,
+      "text": "**三.年金终值和现值**"
+    },
+    {
+      "id": "23f03acce719488a",
+      "type": "text",
+      "x": -359,
+      "y": -5230,
+      "width": 220,
+      "height": 80,
+      "text": "**三.股票的期望收益率**"
+    },
+    {
+      "id": "7dc7932db6214159",
+      "type": "text",
+      "x": -109,
+      "y": -5230,
+      "width": 220,
+      "height": 80,
+      "text": "**三.营运能力比率**"
+    },
+    {
+      "id": "ac06b9ecd84845c0",
+      "type": "text",
+      "x": 141,
+      "y": -5230,
+      "width": 220,
+      "height": 80,
+      "text": "**三.财务报表分析的局限性(Limitations of Financial Statement Analysis)**"
+    },
+    {
+      "id": "72640c65af1a46ac",
+      "type": "text",
+      "x": -359,
+      "y": -5120,
+      "width": 220,
+      "height": 80,
+      "text": "**三.财务预测的方法**"
+    },
+    {
+      "id": "125e042d02074f9e",
+      "type": "text",
+      "x": -109,
+      "y": -5120,
+      "width": 220,
+      "height": 80,
+      "text": "**三.金融市场的参与者**"
+    },
+    {
+      "id": "c6ec156a7a3c4b73",
+      "type": "text",
+      "x": 141,
+      "y": -5120,
+      "width": 220,
+      "height": 80,
+      "text": "**不要忽视机会成本**"
+    },
+    {
+      "id": "44dc2849ae4a4e74",
+      "type": "text",
+      "x": -359,
+      "y": -5010,
+      "width": 220,
+      "height": 80,
+      "text": "**举例分析**"
+    },
+    {
+      "id": "3f1f23454cbf4ace",
+      "type": "text",
+      "x": -109,
+      "y": -5010,
+      "width": 220,
+      "height": 80,
+      "text": "**二.债券的价值(Bond Value)**"
+    },
+    {
+      "id": "a6102ae6d46d4416",
+      "type": "text",
+      "x": 141,
+      "y": -5010,
+      "width": 220,
+      "height": 80,
+      "text": "**二.利率的期限结构(Term Structure of Interest Rates)**"
+    },
+    {
+      "id": "ce2f0d26a65c4b7c",
+      "type": "text",
+      "x": -359,
+      "y": -4900,
+      "width": 220,
+      "height": 80,
+      "text": "**二.利益相关者的要求**"
+    },
+    {
+      "id": "e68fd059710a406e",
+      "type": "text",
+      "x": -109,
+      "y": -4900,
+      "width": 220,
+      "height": 80,
+      "text": "**二.可持续增长率的测算**"
+    },
+    {
+      "id": "8eaca67b07af4c57",
+      "type": "text",
+      "x": 141,
+      "y": -4900,
+      "width": 220,
+      "height": 80,
+      "text": "**二.复利终值和现值(Compound Interest Future Value and Present Value)**"
+    },
+    {
+      "id": "7d30c4cd734d4697",
+      "type": "text",
+      "x": -359,
+      "y": -4790,
+      "width": 220,
+      "height": 80,
+      "text": "**二.投资项目现金流量的估计方法**"
+    },
+    {
+      "id": "390633428dc34e3c",
+      "type": "text",
+      "x": -109,
+      "y": -4790,
+      "width": 220,
+      "height": 80,
+      "text": "**二.股票的价值**"
+    },
+    {
+      "id": "e5e0c8d2b8ef4e75",
+      "type": "text",
+      "x": 141,
+      "y": -4790,
+      "width": 220,
+      "height": 80,
+      "text": "**二.财务报表分析的方法(Methods of Financial Statement Analysis)**"
+    },
+    {
+      "id": "0355726311514e12",
+      "type": "text",
+      "x": -359,
+      "y": -4680,
+      "width": 220,
+      "height": 80,
+      "text": "**二.财务管理的主要内容(Main Content of Financial Management)**"
+    },
+    {
+      "id": "26b4dd75b1124af7",
+      "type": "text",
+      "x": -109,
+      "y": -4680,
+      "width": 220,
+      "height": 80,
+      "text": "**二.金融市场的类型**"
+    },
+    {
+      "id": "cf31d01def14414b",
+      "type": "text",
+      "x": 141,
+      "y": -4680,
+      "width": 220,
+      "height": 80,
+      "text": "**二.长期偿债能力比率**"
+    },
+    {
+      "id": "feb1f798463b4121",
+      "type": "text",
+      "x": -359,
+      "y": -4570,
+      "width": 220,
+      "height": 80,
+      "text": "**五,市价比率**"
+    },
+    {
+      "id": "641ed4375ad14cb3",
+      "type": "text",
+      "x": -109,
+      "y": -4570,
+      "width": 220,
+      "height": 80,
+      "text": "**五.金融市场的功能**"
+    },
+    {
+      "id": "2a1396e5c64b4266",
+      "type": "text",
+      "x": 141,
+      "y": -4570,
+      "width": 220,
+      "height": 80,
+      "text": "**产权比率和权益乘数**"
+    },
+    {
+      "id": "44021bf8a3dc46a8",
+      "type": "text",
+      "x": -359,
+      "y": -4460,
+      "width": 220,
+      "height": 80,
+      "text": "**价值评估理论**"
+    },
+    {
+      "id": "67b3d2cdc4224e8d",
+      "type": "text",
+      "x": -109,
+      "y": -4460,
+      "width": 220,
+      "height": 80,
+      "text": "**企业实现增长的三种方式**"
+    },
+    {
+      "id": "774f532b8b5d4f3f",
+      "type": "text",
+      "x": 141,
+      "y": -4460,
+      "width": 220,
+      "height": 80,
+      "text": "**优先债券与次级债券**"
+    },
+    {
+      "id": "45021b266d024929",
+      "type": "text",
+      "x": -359,
+      "y": -4350,
+      "width": 220,
+      "height": 80,
+      "text": "**优点**"
+    },
+    {
+      "id": "24e1b5477ae547bb",
+      "type": "text",
+      "x": -109,
+      "y": -4350,
+      "width": 220,
+      "height": 80,
+      "text": "**债务担保**"
+    },
+    {
+      "id": "ee283310ea2d41c1",
+      "type": "text",
+      "x": 141,
+      "y": -4350,
+      "width": 220,
+      "height": 80,
+      "text": "**债权人和公司的矛盾**"
+    },
+    {
+      "id": "1fb18ed52a8d49c9",
+      "type": "text",
+      "x": -359,
+      "y": -4240,
+      "width": 220,
+      "height": 80,
+      "text": "**债权人的要求**"
+    },
+    {
+      "id": "0103d1a31f1f422a",
+      "type": "text",
+      "x": -109,
+      "y": -4240,
+      "width": 220,
+      "height": 80,
+      "text": "**公司股东和公司经营者的矛盾.**"
+    },
+    {
+      "id": "d1aae125122f49a3",
+      "type": "text",
+      "x": 141,
+      "y": -4240,
+      "width": 220,
+      "height": 80,
+      "text": "**六.杜邦分析体系**"
+    },
+    {
+      "id": "0e5ad82bd84a437f",
+      "type": "text",
+      "x": -359,
+      "y": -4130,
+      "width": 220,
+      "height": 80,
+      "text": "**六.资本市场效率**"
+    },
+    {
+      "id": "5246e3a6ca4748dc",
+      "type": "text",
+      "x": -109,
+      "y": -4130,
+      "width": 220,
+      "height": 80,
+      "text": "**具有特殊条款的债券**"
+    },
+    {
+      "id": "89eb1e41e01a444f",
+      "type": "text",
+      "x": 141,
+      "y": -4130,
+      "width": 220,
+      "height": 80,
+      "text": "**利息支付频率**"
+    },
+    {
+      "id": "850745e7f7bc4d28",
+      "type": "text",
+      "x": -359,
+      "y": -4020,
+      "width": 220,
+      "height": 80,
+      "text": "**到期时间 ：**"
+    },
+    {
+      "id": "972294d0767a4d5a",
+      "type": "text",
+      "x": -109,
+      "y": -4020,
+      "width": 220,
+      "height": 80,
+      "text": "**制度性措施**"
+    },
+    {
+      "id": "39c3d5ab5e224ec6",
+      "type": "text",
+      "x": 141,
+      "y": -4020,
+      "width": 220,
+      "height": 80,
+      "text": "**合同利益相关者**"
+    },
+    {
+      "id": "33c579a31fe14a8d",
+      "type": "text",
+      "x": -359,
+      "y": -3910,
+      "width": 220,
+      "height": 80,
+      "text": "**四,盈利能力比率**"
+    },
+    {
+      "id": "eddab5b9375f424c",
+      "type": "text",
+      "x": -109,
+      "y": -3910,
+      "width": 220,
+      "height": 80,
+      "text": "**四.金融中介机构(没讲)**"
+    },
+    {
+      "id": "5572ee403a7949e4",
+      "type": "text",
+      "x": 141,
+      "y": -3910,
+      "width": 220,
+      "height": 80,
+      "text": "**基准利率(Benchmark Interest Rate)**"
+    },
+    {
+      "id": "61f50f300b214d32",
+      "type": "text",
+      "x": -359,
+      "y": -3800,
+      "width": 220,
+      "height": 80,
+      "text": "**基准利率特征**"
+    },
+    {
+      "id": "a8b66235c67c4f74",
+      "type": "text",
+      "x": -109,
+      "y": -3800,
+      "width": 220,
+      "height": 80,
+      "text": "**基础功能**"
+    },
+    {
+      "id": "f305a629bd7f4041",
+      "type": "text",
+      "x": 141,
+      "y": -3800,
+      "width": 220,
+      "height": 80,
+      "text": "**增强短期偿债能力的表外因素**"
+    },
+    {
+      "id": "2ce9c2469afa458e",
+      "type": "text",
+      "x": -359,
+      "y": -3690,
+      "width": 220,
+      "height": 80,
+      "text": "**外部融资销售增长比**"
+    },
+    {
+      "id": "e52d886b183e489e",
+      "type": "text",
+      "x": -109,
+      "y": -3690,
+      "width": 220,
+      "height": 80,
+      "text": "**存量差额比较:**"
+    },
+    {
+      "id": "03b69e46ddcd4a0b",
+      "type": "text",
+      "x": 141,
+      "y": -3690,
+      "width": 220,
+      "height": 80,
+      "text": "**存量比率比较**"
+    },
+    {
+      "id": "30f62fdfff6643d0",
+      "type": "text",
+      "x": -359,
+      "y": -3580,
+      "width": 220,
+      "height": 80,
+      "text": "**定义**"
+    },
+    {
+      "id": "81c15140f2804be1",
+      "type": "text",
+      "x": -109,
+      "y": -3580,
+      "width": 220,
+      "height": 80,
+      "text": "**对营运资本的影响**"
+    },
+    {
+      "id": "62e415a784954802",
+      "type": "text",
+      "x": 141,
+      "y": -3580,
+      "width": 220,
+      "height": 80,
+      "text": "**对财务管理的意义**"
+    },
+    {
+      "id": "c15945f7dd8147ec",
+      "type": "text",
+      "x": -359,
+      "y": -3470,
+      "width": 220,
+      "height": 80,
+      "text": "**市场有效性的理论研究**"
+    },
+    {
+      "id": "07dc6edba77443d4",
+      "type": "text",
+      "x": -109,
+      "y": -3470,
+      "width": 220,
+      "height": 80,
+      "text": "**平息债券的估价(Valuation of Coupon Bonds)**"
+    },
+    {
+      "id": "541fd645e2bf4eba",
+      "type": "text",
+      "x": 141,
+      "y": -3470,
+      "width": 220,
+      "height": 80,
+      "text": "**投资组合理论**"
+    },
+    {
+      "id": "69af0231909b4a0c",
+      "type": "text",
+      "x": -359,
+      "y": -3360,
+      "width": 220,
+      "height": 80,
+      "text": "**折现率**"
+    },
+    {
+      "id": "0fee576ff42442d6",
+      "type": "text",
+      "x": -109,
+      "y": -3360,
+      "width": 220,
+      "height": 80,
+      "text": "**报价利率(名义利率)**"
+    },
+    {
+      "id": "71a6e352ef074b65",
+      "type": "text",
+      "x": 141,
+      "y": -3360,
+      "width": 220,
+      "height": 80,
+      "text": "**按利率是否固定分**"
+    },
+    {
+      "id": "f90749eeb3fb4b23",
+      "type": "text",
+      "x": -359,
+      "y": -3250,
+      "width": 220,
+      "height": 80,
+      "text": "**按是否有财产担保分**"
+    },
+    {
+      "id": "72be1cf3eb93448a",
+      "type": "text",
+      "x": -109,
+      "y": -3250,
+      "width": 220,
+      "height": 80,
+      "text": "**按是否记名分**"
+    },
+    {
+      "id": "df8dd931bf3e4d6b",
+      "type": "text",
+      "x": 141,
+      "y": -3250,
+      "width": 220,
+      "height": 80,
+      "text": "**按比较内容分类**"
+    },
+    {
+      "id": "c4a6b6fb5d1b4f32",
+      "type": "text",
+      "x": -359,
+      "y": -3140,
+      "width": 220,
+      "height": 80,
+      "text": "**按比较对象分类**"
+    },
+    {
+      "id": "60d9e398d74c43f4",
+      "type": "text",
+      "x": -109,
+      "y": -3140,
+      "width": 220,
+      "height": 80,
+      "text": "**有效年利率**"
+    },
+    {
+      "id": "2d6b671fcd2d460c",
+      "type": "text",
+      "x": 141,
+      "y": -3140,
+      "width": 220,
+      "height": 80,
+      "text": "**未决诉讼**"
+    },
+    {
+      "id": "13af3d0465414d57",
+      "type": "text",
+      "x": -359,
+      "y": -3030,
+      "width": 220,
+      "height": 80,
+      "text": "**根据期初股东权益计算可持续增长率**"
+    },
+    {
+      "id": "99243e1c77b84041",
+      "type": "text",
+      "x": -109,
+      "y": -3030,
+      "width": 220,
+      "height": 80,
+      "text": "**根据期末股东权益计算可持续增长率.**"
+    },
+    {
+      "id": "0bf0c175bdb842ca",
+      "type": "text",
+      "x": 141,
+      "y": -3030,
+      "width": 220,
+      "height": 80,
+      "text": "**永久债券(Permanent Bonds)**"
+    },
+    {
+      "id": "37b125b378a24e29",
+      "type": "text",
+      "x": -359,
+      "y": -2920,
+      "width": 220,
+      "height": 80,
+      "text": "**注意内容**"
+    },
+    {
+      "id": "9acc94d8c30d420f",
+      "type": "text",
+      "x": -109,
+      "y": -2920,
+      "width": 220,
+      "height": 80,
+      "text": "**流通债券(Traded Bonds)**"
+    },
+    {
+      "id": "025d86a46c5e4079",
+      "type": "text",
+      "x": 141,
+      "y": -2920,
+      "width": 220,
+      "height": 80,
+      "text": "**现金流量与负债比率**"
+    },
+    {
+      "id": "d3550cc93a424e9b",
+      "type": "text",
+      "x": -359,
+      "y": -2810,
+      "width": 220,
+      "height": 80,
+      "text": "**现金流量理论**"
+    },
+    {
+      "id": "23e1f35cd4df47c1",
+      "type": "text",
+      "x": -109,
+      "y": -2810,
+      "width": 220,
+      "height": 80,
+      "text": "**相关成本与非相关成本**"
+    },
+    {
+      "id": "65e210a9ece54245",
+      "type": "text",
+      "x": 141,
+      "y": -2810,
+      "width": 220,
+      "height": 80,
+      "text": "**确定经营资产和经营负债项目的销售百分比**"
+    },
+    {
+      "id": "e5bca25bde614d4d",
+      "type": "text",
+      "x": -359,
+      "y": -2700,
+      "width": 220,
+      "height": 80,
+      "text": "**票面利率：**"
+    },
+    {
+      "id": "c6bd5902ebe342f0",
+      "type": "text",
+      "x": -109,
+      "y": -2700,
+      "width": 220,
+      "height": 80,
+      "text": "**第一类代理成本**"
+    },
+    {
+      "id": "ebef5fdc0ebc44e4",
+      "type": "text",
+      "x": 141,
+      "y": -2700,
+      "width": 220,
+      "height": 80,
+      "text": "**第一节 债券估价(Bond Valuation)**"
+    },
+    {
+      "id": "4777822e07b74d64",
+      "type": "text",
+      "x": -359,
+      "y": -2590,
+      "width": 220,
+      "height": 80,
+      "text": "**第一节 利率(Interest Rate)**"
+    },
+    {
+      "id": "7f5e8f7d4146433d",
+      "type": "text",
+      "x": -109,
+      "y": -2590,
+      "width": 220,
+      "height": 80,
+      "text": "**第三节 投资项目现金流量的估计(Estimation of Cash Flows for Investment Projects)**"
+    },
+    {
+      "id": "c649b91042984502",
+      "type": "text",
+      "x": 141,
+      "y": -2590,
+      "width": 220,
+      "height": 80,
+      "text": "**第三节 风险和报酬**"
+    },
+    {
+      "id": "8e7e537bf9e3487b",
+      "type": "text",
+      "x": -359,
+      "y": -2480,
+      "width": 220,
+      "height": 80,
+      "text": "**第三节.财务管理的基础概念和基本理论(本节略)**"
+    },
+    {
+      "id": "8ef41202e4dd48a2",
+      "type": "text",
+      "x": -109,
+      "y": -2480,
+      "width": 220,
+      "height": 80,
+      "text": "**第二类代理成本**"
+    },
+    {
+      "id": "457e695128bf449c",
+      "type": "text",
+      "x": 141,
+      "y": -2480,
+      "width": 220,
+      "height": 80,
+      "text": "**第二节 投资项目评估方法(Investment Project Evaluation Methods)**"
+    },
+    {
+      "id": "7c0dd6bcd4b144a1",
+      "type": "text",
+      "x": -359,
+      "y": -2370,
+      "width": 220,
+      "height": 80,
+      "text": "**第二节 财务比率分析**"
+    },
+    {
+      "id": "7b8f32ddf2c4419c",
+      "type": "text",
+      "x": -109,
+      "y": -2370,
+      "width": 220,
+      "height": 80,
+      "text": "**第二节 货币的时间价值(Time Value of Money)**"
+    },
+    {
+      "id": "33b67e87f1d54516",
+      "type": "text",
+      "x": 141,
+      "y": -2370,
+      "width": 220,
+      "height": 80,
+      "text": "**第二节.财务管理的目标与利益相关者的要求.**"
+    },
+    {
+      "id": "28ac1e61302d46d0",
+      "type": "text",
+      "x": -359,
+      "y": -2260,
+      "width": 220,
+      "height": 80,
+      "text": "**第四节 增长率与资本需求的测算**"
+    },
+    {
+      "id": "d50941073fa0405a",
+      "type": "text",
+      "x": -109,
+      "y": -2260,
+      "width": 220,
+      "height": 80,
+      "text": "**第四节.金融工具和金融市场**"
+    },
+    {
+      "id": "f325006d4b9d4a43",
+      "type": "text",
+      "x": 141,
+      "y": -2260,
+      "width": 220,
+      "height": 80,
+      "text": "**约束条件**"
+    },
+    {
+      "id": "c3a189df0c72406c",
+      "type": "text",
+      "x": -359,
+      "y": -2150,
+      "width": 220,
+      "height": 80,
+      "text": "**经营者利益和股东利益的协调**"
+    },
+    {
+      "id": "d6179e2622034155",
+      "type": "text",
+      "x": -109,
+      "y": -2150,
+      "width": 220,
+      "height": 80,
+      "text": "**考虑投资方案对其他项目的影响**"
+    },
+    {
+      "id": "f2cd4d6f35a046d6",
+      "type": "text",
+      "x": 141,
+      "y": -2150,
+      "width": 220,
+      "height": 80,
+      "text": "**股票股价**"
+    },
+    {
+      "id": "722246e5fd2d440a",
+      "type": "text",
+      "x": -359,
+      "y": -2040,
+      "width": 220,
+      "height": 80,
+      "text": "**衡量方法**"
+    },
+    {
+      "id": "eb7f56e8e29e4eea",
+      "type": "text",
+      "x": -109,
+      "y": -2040,
+      "width": 220,
+      "height": 80,
+      "text": "**计息期利率**"
+    },
+    {
+      "id": "db2a1432c1034017",
+      "type": "text",
+      "x": 141,
+      "y": -2040,
       "width": 220,
       "height": 80,
       "text": "**财务管理的基本理论**"
     },
     {
-      "id": "0b90f57e3b37458e",
+      "id": "bd713af82dbc40f0",
       "type": "text",
-      "x": 141,
-      "y": -1489,
+      "x": -359,
+      "y": -1930,
       "width": 220,
       "height": 80,
       "text": "**货币的时间价值**"
     },
     {
-      "id": "6f40d5a0d90042f2",
+      "id": "f9cda38711594ff2",
       "type": "text",
-      "x": -359,
-      "y": -1379,
+      "x": -109,
+      "y": -1930,
       "width": 220,
       "height": 80,
       "text": "**资本市场有效的基础条件(三者有一个就行)**"
     },
     {
-      "id": "c330aa6c1a40475d",
+      "id": "5a18b0fe628b4306",
       "type": "text",
-      "x": -109,
-      "y": -1379,
+      "x": 141,
+      "y": -1930,
       "width": 220,
       "height": 80,
       "text": "**资本结构理论**"
     },
     {
-      "id": "c9b6f9ca9d244e67",
+      "id": "7842231d48e64eaf",
       "type": "text",
-      "x": 141,
-      "y": -1379,
+      "x": -359,
+      "y": -1820,
       "width": 220,
       "height": 80,
       "text": "**资本试产有效的外部标志**"
     },
     {
-      "id": "e1725f3b64d44f4c",
+      "id": "5a090d93095d4c40",
       "type": "text",
-      "x": -359,
-      "y": -1269,
+      "x": -109,
+      "y": -1820,
       "width": 220,
       "height": 80,
       "text": "**金融工具**"
     },
     {
-      "id": "b418cfd63cd14780",
+      "id": "e0016911610c4228",
       "type": "text",
-      "x": -109,
-      "y": -1269,
+      "x": 141,
+      "y": -1820,
       "width": 220,
       "height": 80,
       "text": "**金融市场**"
     },
     {
-      "id": "0f04ed128c1f4677",
+      "id": "c00e8e44466e4764",
       "type": "text",
-      "x": 141,
-      "y": -1269,
+      "x": -359,
+      "y": -1710,
       "width": 220,
       "height": 80,
       "text": "**银行**"
     },
     {
-      "id": "9be7a8e9d22040fd",
+      "id": "8066ad7c6acf4cdc",
       "type": "text",
-      "x": -359,
-      "y": -1159,
+      "x": -109,
+      "y": -1710,
       "width": 220,
       "height": 80,
       "text": "**长期租赁**"
     },
     {
-      "id": "e98ce934e4f541e2",
+      "id": "31b7515191d84679",
       "type": "text",
-      "x": -109,
-      "y": -1159,
+      "x": 141,
+      "y": -1710,
       "width": 220,
       "height": 80,
       "text": "**附加功能**"
     },
     {
-      "id": "f5fd2997b24b45de",
+      "id": "b0b31d8a25d44fc4",
       "type": "text",
-      "x": 141,
-      "y": -1159,
+      "x": -359,
+      "y": -1600,
       "width": 220,
       "height": 80,
       "text": "**降低短期偿债能力的表外因素**"
     },
     {
-      "id": "35ad0d7ee3b84547",
+      "id": "61b934f59aa4499c",
       "type": "text",
-      "x": -359,
-      "y": -1049,
+      "x": -109,
+      "y": -1600,
       "width": 220,
       "height": 80,
       "text": "**零息债券**"
     },
     {
-      "id": "e56611b80cb047ed",
+      "id": "ebc7ff1e2ffe4351",
       "type": "text",
-      "x": -109,
-      "y": -1049,
+      "x": 141,
+      "y": -1600,
       "width": 220,
       "height": 80,
       "text": "**非合同利益相关者**"
     },
     {
-      "id": "0ed71858851e4f35",
+      "id": "e0c3857be0874210",
       "type": "text",
-      "x": 141,
-      "y": -1049,
+      "x": -359,
+      "y": -1490,
       "width": 220,
       "height": 80,
       "text": "**非银行机构**"
     },
     {
-      "id": "6f74e1f5285a4831",
+      "id": "9356d244242a4922",
       "type": "text",
-      "x": -359,
-      "y": -939,
+      "x": -109,
+      "y": -1490,
       "width": 220,
       "height": 80,
       "text": "**面值：**"
     },
     {
-      "id": "6d3a3da885fc4448",
+      "id": "61f1081d8e5a4fce",
       "type": "text",
-      "x": -109,
-      "y": -939,
+      "x": 141,
+      "y": -1490,
       "width": 220,
       "height": 80,
       "text": "**预计可动用的金融资产**"
     },
     {
-      "id": "5e7eb20fc426459e",
+      "id": "6dc88a11fd944409",
       "type": "text",
-      "x": 141,
-      "y": -939,
+      "x": -359,
+      "y": -1380,
       "width": 220,
       "height": 80,
       "text": "**预计各项经营资产和经营负债**"
     },
     {
-      "id": "7728cf97afa54475",
+      "id": "366809eb390e453b",
       "type": "text",
-      "x": -359,
-      "y": -829,
+      "x": -109,
+      "y": -1380,
       "width": 220,
       "height": 80,
       "text": "**预计增加的借款**"
     },
     {
-      "id": "e2b409e299a84ed3",
+      "id": "617b79990ce54635",
       "type": "text",
-      "x": -109,
-      "y": -829,
+      "x": 141,
+      "y": -1380,
       "width": 220,
       "height": 80,
       "text": "**预计增加的留存收益**"
     },
     {
-      "id": "ce184c325d644c4f",
+      "id": "d4c7912a562649a8",
       "type": "text",
-      "x": 141,
-      "y": -829,
+      "x": -359,
+      "y": -1270,
       "width": 220,
       "height": 80,
       "text": "**风险与报酬**"
     },
     {
-      "id": "39d2c16d73194a9e",
+      "id": "1784d92aa205493e",
       "type": "text",
-      "x": -359,
-      "y": -719,
+      "x": -109,
+      "y": -1270,
       "width": 220,
       "height": 80,
       "text": "**风险评估理论**"
     },
     {
-      "id": "617b4d33925949cb",
+      "id": "8056d03b50b84929",
+      "type": "text",
+      "x": 141,
+      "y": -1270,
+      "width": 220,
+      "height": 80,
+      "text": "**02_财务报表分析和财务预测**"
+    },
+    {
+      "id": "ebef4663750042b9",
+      "type": "text",
+      "x": -359,
+      "y": -1160,
+      "width": 220,
+      "height": 80,
+      "text": "**2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf**"
+    },
+    {
+      "id": "d03d79ff6ac745e2",
+      "type": "text",
+      "x": -109,
+      "y": -1160,
+      "width": 220,
+      "height": 80,
+      "text": "**截屏 2024-10-10 20.04.51.jpeg**"
+    },
+    {
+      "id": "6f0dabfab2244cc3",
+      "type": "text",
+      "x": 141,
+      "y": -1160,
+      "width": 220,
+      "height": 80,
+      "text": "**截屏 2024-10-11 22.32.26.jpeg**"
+    },
+    {
+      "id": "7541ef1435544e18",
+      "type": "text",
+      "x": -359,
+      "y": -1050,
+      "width": 220,
+      "height": 80,
+      "text": "**Default Risk**"
+    },
+    {
+      "id": "12d52eaeb3ac4c73",
+      "type": "text",
+      "x": -109,
+      "y": -1050,
+      "width": 220,
+      "height": 80,
+      "text": "**Engle-Granger Two-Step Test**"
+    },
+    {
+      "id": "4d53f0b588424d9c",
+      "type": "text",
+      "x": 141,
+      "y": -1050,
+      "width": 220,
+      "height": 80,
+      "text": "**Current Ratio**"
+    },
+    {
+      "id": "9260a774569645d8",
+      "type": "text",
+      "x": -359,
+      "y": -940,
+      "width": 220,
+      "height": 80,
+      "text": "**Externality**"
+    },
+    {
+      "id": "6e42c4aba13e46cd",
+      "type": "text",
+      "x": -109,
+      "y": -940,
+      "width": 220,
+      "height": 80,
+      "text": "**Profitability Index**"
+    },
+    {
+      "id": "20da31b79a1a4584",
+      "type": "text",
+      "x": 141,
+      "y": -940,
+      "width": 220,
+      "height": 80,
+      "text": "**Quick Ratio**"
+    },
+    {
+      "id": "3b67f4980a6b469f",
+      "type": "text",
+      "x": -359,
+      "y": -830,
+      "width": 220,
+      "height": 80,
+      "text": "**strategies**"
+    },
+    {
+      "id": "4c1217a7560649a0",
+      "type": "text",
+      "x": -109,
+      "y": -830,
+      "width": 220,
+      "height": 80,
+      "text": "**Sunk Cost**"
+    },
+    {
+      "id": "00cb56509ef14011",
+      "type": "text",
+      "x": 141,
+      "y": -830,
+      "width": 220,
+      "height": 80,
+      "text": "**t Test**"
+    },
+    {
+      "id": "6990cef55a804817",
+      "type": "text",
+      "x": -359,
+      "y": -720,
+      "width": 220,
+      "height": 80,
+      "text": "**Yield to Maturity**"
+    },
+    {
+      "id": "587eea5e97aa4afa",
       "type": "group",
-      "x": 4856,
-      "y": -3169,
+      "x": 4713,
+      "y": -3142,
       "width": 800,
-      "height": 270,
+      "height": 380,
       "label": "framework",
       "color": "3"
     },
     {
-      "id": "7cb2bd57d0ae493a",
+      "id": "f8990d7543124774",
       "type": "text",
-      "x": 4896,
-      "y": -3129,
+      "x": 4753,
+      "y": -3102,
       "width": 220,
       "height": 80,
       "text": "**(一)债券的估价模型(Bond Valuation Model)**"
     },
     {
-      "id": "b49ca26187c14354",
+      "id": "b4452bd3ae49408c",
       "type": "text",
-      "x": 5146,
-      "y": -3129,
+      "x": 5003,
+      "y": -3102,
       "width": 220,
       "height": 80,
       "text": "**(三)零增长股票的估价模型**"
     },
     {
-      "id": "5118ce4dcc7e4b16",
+      "id": "8ad4f6c0ce5c4aac",
       "type": "text",
-      "x": 5396,
-      "y": -3129,
+      "x": 5253,
+      "y": -3102,
       "width": 220,
       "height": 80,
       "text": "**(二)杜邦分析体系的基本框架**"
     },
     {
-      "id": "2bb4aa24f9da4f73",
+      "id": "fb16438ab6624052",
       "type": "text",
-      "x": 4896,
-      "y": -3019,
+      "x": 4753,
+      "y": -2992,
       "width": 220,
       "height": 80,
       "text": "**(二)股票估价的基本模型**"
     },
     {
-      "id": "fef372392b3449bc",
+      "id": "3dda9a0f37da4603",
       "type": "text",
-      "x": 5146,
-      "y": -3019,
+      "x": 5003,
+      "y": -2992,
       "width": 220,
       "height": 80,
       "text": "**(四)固定增长股票的估价模型**"
     },
     {
-      "id": "abecb418d98640fa",
+      "id": "d9dbfbb7b3e4413c",
       "type": "text",
-      "x": 5396,
-      "y": -3019,
+      "x": 5253,
+      "y": -2992,
       "width": 220,
       "height": 80,
       "text": "**债券估价的基本模型(Basic Model of Bond Valuation)**"
     },
     {
-      "id": "4ea8a56b533b4fab",
+      "id": "cae0c602ee0447c0",
+      "type": "text",
+      "x": 4753,
+      "y": -2882,
+      "width": 220,
+      "height": 80,
+      "text": "**第一节 财务报表分析的框架和方法(Framework and Methods of Financial Statement Analysis)**"
+    },
+    {
+      "id": "a27f3d07c14c479b",
       "type": "group",
-      "x": 4856,
-      "y": 2899,
+      "x": 4713,
+      "y": 2817,
       "width": 800,
       "height": 270,
       "label": "procedure",
       "color": "3"
     },
     {
-      "id": "bacbbefd25bb4c53",
+      "id": "a35fa494469f4950",
       "type": "text",
-      "x": 4896,
-      "y": 2939,
+      "x": 4753,
+      "y": 2857,
+      "width": 220,
+      "height": 80,
+      "text": "**Bond and Stock Valuation**"
+    },
+    {
+      "id": "33e26ec7b9594511",
+      "type": "text",
+      "x": 5003,
+      "y": 2857,
+      "width": 220,
+      "height": 80,
+      "text": "**Bond Pricing Calculation**"
+    },
+    {
+      "id": "09f556a7b58f4d23",
+      "type": "text",
+      "x": 5253,
+      "y": 2857,
       "width": 220,
       "height": 80,
       "text": "**Financial Ratio Analysis**"
     },
     {
-      "id": "24346b6384574b7f",
+      "id": "09152b71b9cf49d8",
       "type": "text",
-      "x": 5146,
-      "y": 2939,
+      "x": 4753,
+      "y": 2967,
       "width": 220,
       "height": 80,
       "text": "**Investment Decisions**"
     },
     {
-      "id": "bf721a3643f14f29",
+      "id": "93749c59c30b40a9",
       "type": "text",
-      "x": 5396,
-      "y": 2939,
+      "x": 5003,
+      "y": 2967,
       "width": 220,
       "height": 80,
       "text": "**二.财务预测的步骤**"
     },
     {
-      "id": "97b5391584624a28",
+      "id": "eb0c1f3e581c4b0b",
       "type": "text",
-      "x": 4896,
-      "y": 3049,
+      "x": 5253,
+      "y": 2967,
       "width": 220,
       "height": 80,
       "text": "**第三节 财务预测的步骤和方法**"
     },
     {
-      "id": "469c900242ed4f28",
+      "id": "124f2603734e4057",
       "type": "group",
       "x": -399,
-      "y": 5959,
+      "y": 5795,
       "width": 800,
       "height": 220,
       "label": "system",
       "color": "3"
     },
     {
-      "id": "f7731c55962f40fe",
+      "id": "7e3bd13c670c4223",
       "type": "text",
       "x": -359,
-      "y": 5999,
+      "y": 5835,
+      "width": 220,
+      "height": 80,
+      "text": "**Model Validation**"
+    },
+    {
+      "id": "908595d7bd01498e",
+      "type": "text",
+      "x": -109,
+      "y": 5835,
       "width": 220,
       "height": 80,
       "text": "**R-squared**"
     },
     {
-      "id": "e5d5e59eafd94c84",
+      "id": "7968969735474a9c",
       "type": "group",
-      "x": -5656,
-      "y": 2925,
+      "x": -5513,
+      "y": 2842,
       "width": 800,
       "height": 220,
       "label": "proof",
       "color": "3"
     },
     {
-      "id": "a8d8587e455848ac",
+      "id": "412cb120cdb947de",
       "type": "group",
-      "x": -5656,
-      "y": -3145,
+      "x": -5513,
+      "y": -3062,
       "width": 800,
       "height": 220,
       "label": "writing",
@@ -2827,2187 +2782,2152 @@
   ],
   "edges": [
     {
-      "id": "8479e786551d4f66",
-      "fromNode": "86eb7cb30c254d8c",
+      "id": "dee9c03ddedc4727",
+      "fromNode": "b81fa3763fc64b55",
       "fromSide": "right",
-      "toNode": "3a17f5c81a3848da",
+      "toNode": "d1218b79470a4bc7",
       "toSide": "left"
     },
     {
-      "id": "6582ae3408634615",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "e21f75e68c594739",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "30329467fd814b7e",
+      "toNode": "6253ae82744f47e0",
       "toSide": "left"
     },
     {
-      "id": "641e5806aa3d43a3",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "8cf4c46146c3448d",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "0d7b171d3e2c4e6d",
+      "toNode": "57f48a9e194d491d",
       "toSide": "left"
     },
     {
-      "id": "59eb77f265684a2b",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "4fae795bfbe84da1",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "e016dc4de9094a59",
+      "toNode": "c22eebfc4faf47c1",
       "toSide": "left"
     },
     {
-      "id": "9a66df5be50a4fdb",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "463cc587bcf64b27",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "4a586c1912d84932",
+      "toNode": "7338dc4cb85f4569",
       "toSide": "left"
     },
     {
-      "id": "62b3aa12f21840b5",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "1aaa779a2d6640f5",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "b0a317eccf4d4989",
+      "toNode": "aa837fcd4c2e470e",
       "toSide": "left"
     },
     {
-      "id": "2203c94af33d4b27",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c3937089a9d84cd4",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "5a4bbe2373da4bd6",
+      "toNode": "b8a27a0ca8ab411e",
       "toSide": "left"
     },
     {
-      "id": "1517b0a324f94f87",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "94c16ab8ded74f33",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "bd044137973747a4",
+      "toNode": "1bfe5b6b82d44e01",
       "toSide": "left"
     },
     {
-      "id": "0516366fb53648af",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "eb7877dda9c8428f",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "032e6f44c614471c",
+      "toNode": "46271ed50f854b0e",
       "toSide": "left"
     },
     {
-      "id": "c32be4df74034fe5",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "2912c87b2bb54b61",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "e012fa43b3dc4bba",
+      "toNode": "ba58ceb5d46046b2",
       "toSide": "left"
     },
     {
-      "id": "a0dc1a15bc3645da",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "9acb360875ae4170",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "8e7bdedfe0d14b0b",
+      "toNode": "c324363d0c554dfe",
       "toSide": "left"
     },
     {
-      "id": "8e7e31de35d346b2",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "5a3e863e0cb7480b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "2edebf76dfd74381",
+      "toNode": "df6ab1f847154f0b",
       "toSide": "left"
     },
     {
-      "id": "f8d994e6557b42a6",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "a4ded07998514cf3",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "eb2c417219d8494a",
+      "toNode": "4bc2cb8ce71741a1",
       "toSide": "left"
     },
     {
-      "id": "64f90cef6edb49ce",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "5413b2b66dea458e",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "d4637e47dac04c5e",
+      "toNode": "eba906e34f554f54",
       "toSide": "left"
     },
     {
-      "id": "454c5cbcf9024b71",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "13aa04b932aa47a4",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "7253d34a6cdf4f48",
+      "toNode": "9d15807941f0412c",
       "toSide": "left"
     },
     {
-      "id": "9a412c1a8a824246",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "afcaa5e1145f4c32",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "60148e79611d4400",
+      "toNode": "4228faa71e4e4822",
       "toSide": "left"
     },
     {
-      "id": "d18caeb3ff894aab",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "e5af1b2a26f44df1",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "167625e8bb4b4ff1",
+      "toNode": "37892018f00e40ec",
       "toSide": "left"
     },
     {
-      "id": "7c437915c6124012",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "7b619914c9834f57",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "d54a1a38f5344e01",
+      "toNode": "933a0db3e2244ac1",
       "toSide": "left"
     },
     {
-      "id": "18c2b69a88da4720",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "cf9fe72dcd66441c",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "00cd036a17624bb5",
+      "toNode": "e085d8f6dd9d4bb7",
       "toSide": "left"
     },
     {
-      "id": "17987d260b5249d5",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "6f81f22326ec41c6",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "f463d7010e454c44",
+      "toNode": "fd51e23d77954e4a",
       "toSide": "left"
     },
     {
-      "id": "44255d68e2684baa",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "81cbd28b0ba444b6",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "c4a9037f43c745ef",
+      "toNode": "98eb0be17322478b",
       "toSide": "left"
     },
     {
-      "id": "8f48f95cce7c477b",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "a509fca61cd14ebe",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "31800479a0e54c4e",
+      "toNode": "6f3132c2143c40f8",
       "toSide": "left"
     },
     {
-      "id": "835000ee321343b4",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "cde5c64f7b654f87",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "c08911684de342e8",
+      "toNode": "6141830ec4074728",
       "toSide": "left"
     },
     {
-      "id": "34ace349e5c74000",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "a54aa1facf8a47ca",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "252ebe4ce7dd4c99",
+      "toNode": "34d4b7221ec749ba",
       "toSide": "left"
     },
     {
-      "id": "5815657d9f494a42",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "844c6f246a0a434c",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "49af383769f34b7e",
+      "toNode": "fa22d51bc8e44820",
       "toSide": "left"
     },
     {
-      "id": "2718da203ff643b0",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "b5e1a05070644159",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "e6ada78ae16b4b52",
+      "toNode": "53abb2aabe084072",
       "toSide": "left"
     },
     {
-      "id": "e97028b858e647fe",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "74caf281816d4404",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "0292d1e8e8da4147",
+      "toNode": "903af777caa04e3e",
       "toSide": "left"
     },
     {
-      "id": "6ead8993b1d94d1d",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "9812702a17564500",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "874d62414ad64487",
+      "toNode": "8fe1d5901a454b00",
       "toSide": "left"
     },
     {
-      "id": "cfb001a96d8a44fc",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "6e128d34c519465d",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "bd06ec7496d24ca8",
+      "toNode": "5569c50600c84b1c",
       "toSide": "left"
     },
     {
-      "id": "d8a6d66bcc3c4a36",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d1c22927114d4473",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "ccdfb991c4f841db",
+      "toNode": "84dffc75f56a45af",
       "toSide": "left"
     },
     {
-      "id": "bc73d445e8574446",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "2bd795a1fea54bbe",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "ec9b9992ab1845d0",
+      "toNode": "060f6a0960b34022",
       "toSide": "left"
     },
     {
-      "id": "2159af083f114af7",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "0328b19268994b84",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "14cbc6fc494c4418",
+      "toNode": "ecdb9e3960934f39",
       "toSide": "left"
     },
     {
-      "id": "da2209ccd8624be0",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "dc2228af481e448b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "673956bcd6d14b22",
+      "toNode": "328115bf0e124c16",
       "toSide": "left"
     },
     {
-      "id": "6b579481b18c4ab7",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "dfb66339d7284648",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "7e43ee3a3cc34867",
+      "toNode": "875940dca0ea49b8",
       "toSide": "left"
     },
     {
-      "id": "5bbd48ef3b7f4dcb",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "a44c959fddd54b15",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "60679c091b164f28",
+      "toNode": "7c61f0a0df4d4977",
       "toSide": "left"
     },
     {
-      "id": "92ede98019fc4980",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "0fbfa0cfd43a41f1",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "c541887b82c345c4",
+      "toNode": "e9c6865922bc498a",
       "toSide": "left"
     },
     {
-      "id": "592df19064de4d3b",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "f10c84ca6a854708",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "135b2a029449435a",
+      "toNode": "5987e70a6db64fb7",
       "toSide": "left"
     },
     {
-      "id": "2f44f376fd2d4e82",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "0b912b1bae084a7e",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "3d3e858f7df84bc9",
+      "toNode": "cd89c991ef154451",
       "toSide": "left"
     },
     {
-      "id": "842a23dd9cd24c39",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d3f0055bbf7e44ff",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "6373cd46ec19457d",
+      "toNode": "094b5d2f28b24ae2",
       "toSide": "left"
     },
     {
-      "id": "56103bb351d3415e",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c3dc7cd175194925",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "b53bbca79d214501",
+      "toNode": "a21f0dd51c5941b4",
       "toSide": "left"
     },
     {
-      "id": "e8669cdba0fa4376",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "9cfbe336f1b44562",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "971d89886d044b84",
+      "toNode": "8fc50f4431634b70",
       "toSide": "left"
     },
     {
-      "id": "33f19165dba94fdf",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d239d392b789458b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "dd91d77bb9564bd1",
+      "toNode": "1e4e55e894004635",
       "toSide": "left"
     },
     {
-      "id": "3017a23b00c642df",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "62a682777b7a47f3",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "bc472816416e41e4",
+      "toNode": "d7a35a19b40543ad",
       "toSide": "left"
     },
     {
-      "id": "3f812386f36a4880",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "95e79a16d0be4226",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "4a9bf66728254df8",
+      "toNode": "aff37ffe8bb44b11",
       "toSide": "left"
     },
     {
-      "id": "09ed90010b8943b1",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "1ebc3fe3e0604db4",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "9e1693b7cdda411c",
+      "toNode": "436a765908774117",
       "toSide": "left"
     },
     {
-      "id": "5efe90cb7fce4ef8",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d1c88fbc320e4327",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "b568fca214ee47c0",
+      "toNode": "bd035260f57d4674",
       "toSide": "left"
     },
     {
-      "id": "da3ac128770c4144",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "a563726774694ed7",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "a51905a4f0d345f4",
+      "toNode": "3947fdecba8e4e82",
       "toSide": "left"
     },
     {
-      "id": "f3e06513346d4bc9",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "bf5157a6c88746cb",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "46acbecfb955444a",
+      "toNode": "6a82456d0e744bd5",
       "toSide": "left"
     },
     {
-      "id": "f9e271678e6f421f",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "126199d664e14f3c",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "07687b6bb9e34019",
+      "toNode": "f30e03fff32c48b6",
       "toSide": "left"
     },
     {
-      "id": "dfcb5edc1c53478b",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "b48af7f79a144986",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "91cdc982b0ee4053",
+      "toNode": "aa5220904f7a4342",
       "toSide": "left"
     },
     {
-      "id": "345eab5c2dd64b38",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "b1dc0546e7d64d88",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "572c3237d60f4031",
+      "toNode": "43641b79b4404125",
       "toSide": "left"
     },
     {
-      "id": "df9f97e8ce994d63",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "72bfc5b3aa0d4f54",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "4cab5638bc54446f",
+      "toNode": "1251af094d6a4f87",
       "toSide": "left"
     },
     {
-      "id": "8ef6a0ba28b7466a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "cf8f6f2893ba4f79",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "6ccfa6ac3c834a3c",
+      "toNode": "4ad8375536b441ad",
       "toSide": "left"
     },
     {
-      "id": "7baabab1ce62438a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "78b549ed5d9240ef",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "b7d1ac5e96f146fe",
+      "toNode": "fa90752da3c14b06",
       "toSide": "left"
     },
     {
-      "id": "b229877d8891474c",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d40b84fd703e45fc",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "ae5285bb4ebd4234",
+      "toNode": "ab8639a4261c46d7",
       "toSide": "left"
     },
     {
-      "id": "46f31b5372094742",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "4860db10aecd460e",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "425cf468a0a64135",
+      "toNode": "f67e62ac5eae432a",
       "toSide": "left"
     },
     {
-      "id": "79c09fce413743d2",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d49bb2f0c0774989",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "497e4c01d7404e3d",
+      "toNode": "6cfa24e161a74377",
       "toSide": "left"
     },
     {
-      "id": "9f40f193dfa343c2",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "e483941de8f648d8",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "d36b4a8aa11a4117",
+      "toNode": "21675af9b0414d82",
       "toSide": "left"
     },
     {
-      "id": "18cf757f3ac049ea",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d539aadbf48442b6",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "c040626a310140cd",
+      "toNode": "5dba0c5f1b534899",
       "toSide": "left"
     },
     {
-      "id": "40eb1cf7ec9d4b85",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "75b2f6b614554fe1",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "eb6118792e564936",
+      "toNode": "5bcc7e080eb44ead",
       "toSide": "left"
     },
     {
-      "id": "32d6c293501e4347",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "4f89899cd9f84ae5",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "84849f79dd6b49bf",
+      "toNode": "6be0c43d339943e1",
       "toSide": "left"
     },
     {
-      "id": "d498b0953bc240b1",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "2bda97b95b824b99",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "323076b148434cf4",
+      "toNode": "8057b9b127214160",
       "toSide": "left"
     },
     {
-      "id": "56e8fb8d99ee40fd",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "837b81061f854547",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "26b01c09a6b643fc",
+      "toNode": "2a3564ba06954d01",
       "toSide": "left"
     },
     {
-      "id": "888ccbc7077d4ec2",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "55d9356025994286",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "6230e4788a4d40a8",
+      "toNode": "23a46412360f4473",
       "toSide": "left"
     },
     {
-      "id": "401a4eaa900e44e1",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "eb065093bcc847ff",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "d43aeb4693694ea3",
+      "toNode": "9c400c9e2f6642f9",
       "toSide": "left"
     },
     {
-      "id": "718f62585eba4268",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "275963d24fbb443e",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "2565effca8134e4d",
+      "toNode": "63a503ab48fb42f1",
       "toSide": "left"
     },
     {
-      "id": "f83f651cf3064c37",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "56cd8c1608ad4f4b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "930818ad06684efa",
+      "toNode": "ed0c5d28ff2e4450",
       "toSide": "left"
     },
     {
-      "id": "89f94b313b4343fe",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "02551a156a854428",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "dd56dc068ef34ab9",
+      "toNode": "1b76736640824a64",
       "toSide": "left"
     },
     {
-      "id": "a6441a8fa1844b8d",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "b3c6c7822fdb4d7e",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "4ee4d171c4b34345",
+      "toNode": "2dfe66e88b0c4bb4",
       "toSide": "left"
     },
     {
-      "id": "eb64c8cdecda438b",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "f692483975d14dc9",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "650d53b686f84ede",
+      "toNode": "835289b221fa4ea2",
       "toSide": "left"
     },
     {
-      "id": "e6af411adf2d4e64",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "a8e52c9132fd4498",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "01ae2d593c8c4850",
+      "toNode": "a96b96ffa01f4324",
       "toSide": "left"
     },
     {
-      "id": "74d6a3db3c724c47",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "85964b6b3ff94fdb",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "ffef8058eef8476e",
+      "toNode": "d02f542da4d84ae9",
       "toSide": "left"
     },
     {
-      "id": "be397f5aa6bb409e",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "029ce80b4a8849d6",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "68831785de634997",
+      "toNode": "a1a3574b5d7347c0",
       "toSide": "left"
     },
     {
-      "id": "142744df56474358",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "eb48fc9606254cb2",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "43990bdce7a3419e",
+      "toNode": "ffe077f6d1e74c10",
       "toSide": "left"
     },
     {
-      "id": "eb3e292e619d494e",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "0ab56762de76472c",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "3d58fe9bfe43467f",
+      "toNode": "d39b91fd9cbe4995",
       "toSide": "left"
     },
     {
-      "id": "82cfa28b88c34f8a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "7e67816bae094ae4",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "80ccc397626a4358",
+      "toNode": "3cdb18a30fe749b8",
       "toSide": "left"
     },
     {
-      "id": "adbbcf3df93348ff",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "4572539a47c14089",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "7108fa735cde48ab",
+      "toNode": "df1a2e6e6acb466a",
       "toSide": "left"
     },
     {
-      "id": "fea98fbbb3874c48",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "26178b12e7644ab3",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "83b080b19f984ac4",
+      "toNode": "58cc8cc9b8f341e8",
       "toSide": "left"
     },
     {
-      "id": "d0d703dcf9284471",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "4ce2040a2dfa4208",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "9be356946ca34fee",
+      "toNode": "3d95b7fee4e34d0b",
       "toSide": "left"
     },
     {
-      "id": "4e281f67f04c4094",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "24c65f2e02804202",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "04226ffb9cab42da",
+      "toNode": "f9ab0b7b4eb84c1d",
       "toSide": "left"
     },
     {
-      "id": "50d19a602b7d46d1",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "9ae312e5d43c41e6",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "0de6df0ab11d4951",
+      "toNode": "d294dd300fbb428e",
       "toSide": "left"
     },
     {
-      "id": "ad9af305580b4d6a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "00a194ca84704368",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "9362c2f0aa7343c6",
+      "toNode": "2188171859264c79",
       "toSide": "left"
     },
     {
-      "id": "e7760cb4e212413b",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "0c25acd6abc444c3",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "6801a73621f34692",
+      "toNode": "b0a27874edf34fc8",
       "toSide": "left"
     },
     {
-      "id": "fba4a8d8202c4e54",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "9162f48f9e184d01",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "59019d6e6b3740f4",
+      "toNode": "a9e11804bea54082",
       "toSide": "left"
     },
     {
-      "id": "e4212cd8d91d4db0",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "958a2a0923e64e2a",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "23125dd02dca483c",
+      "toNode": "0e662e9b8f6d48cf",
       "toSide": "left"
     },
     {
-      "id": "c061d1d7ffd44240",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "7e54a647cb7b4d63",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "3f5eb27c03a044d0",
+      "toNode": "0bd300d7529e4fe5",
       "toSide": "left"
     },
     {
-      "id": "c8869e53961b4115",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "44f17a3b335541eb",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "075445cf34204753",
+      "toNode": "7d6fb4fdb54e4d10",
       "toSide": "left"
     },
     {
-      "id": "0d3ee13511b84198",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "81386d667eb44d31",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "802cc6bf6d5d447e",
+      "toNode": "cd47960c9db54e8a",
       "toSide": "left"
     },
     {
-      "id": "a235f33ef2484ae7",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "65ec6b374e1647ae",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "a56d00935ad844c9",
+      "toNode": "d11d039346934992",
       "toSide": "left"
     },
     {
-      "id": "6b3713a7ab6742c6",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "b242db8d6a0746c4",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "804134eae150471c",
+      "toNode": "1a2aaa38685f4360",
       "toSide": "left"
     },
     {
-      "id": "94b17d9e204b4b7a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "9f4b7b30134544b8",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "81973630ec1f4e0b",
+      "toNode": "0fab6d5824364774",
       "toSide": "left"
     },
     {
-      "id": "06e92a43079e46cf",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "e1d8310987f34bc2",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "9f3c1058eaf44326",
+      "toNode": "94fdaceb83674e7a",
       "toSide": "left"
     },
     {
-      "id": "eaed3ff8325f4011",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "f8e942de9ac740e7",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "4da5306a1fc6465e",
+      "toNode": "8ad2f8d1b2a8426b",
       "toSide": "left"
     },
     {
-      "id": "7974665e19e84da2",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "2040361886d1476d",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "a514543a5df940ab",
+      "toNode": "f2b9be18f6a24961",
       "toSide": "left"
     },
     {
-      "id": "4b555fb34a324055",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "e69b108f80164278",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "c562992a9aec46b1",
+      "toNode": "a25ee2a696ba45cf",
       "toSide": "left"
     },
     {
-      "id": "2374513891fe4fe5",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "9e13e56279ec4943",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "795424f989ad4cd9",
+      "toNode": "c440ca43dd72480a",
       "toSide": "left"
     },
     {
-      "id": "29ced214d3dd4b85",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "209a32838be74898",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "032f9b6656b84ea8",
+      "toNode": "c4b4ab77c87b4a54",
       "toSide": "left"
     },
     {
-      "id": "cc64d9fd152443b2",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "a1ce0e5729dc4eb3",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "d46a11e0c5194521",
+      "toNode": "6eb5ce16014349ef",
       "toSide": "left"
     },
     {
-      "id": "87253dd106824df7",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "17e9a6435b85403b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "121122eddc7b4f84",
+      "toNode": "bcfb9f0a6cb3479f",
       "toSide": "left"
     },
     {
-      "id": "c45942c32a0d481a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "fe7f784e5d064b73",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "24f79fb7a7e84702",
+      "toNode": "ed02b551a6104795",
       "toSide": "left"
     },
     {
-      "id": "77583ef958bf4672",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "b001a4cca5ce44a1",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "11deec9a5b404eb0",
+      "toNode": "c0781fa5efab42a7",
       "toSide": "left"
     },
     {
-      "id": "03df064e58814fe5",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "f9f31d634fc44c81",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "45a473a3bb374478",
+      "toNode": "fff86009e23c4ce2",
       "toSide": "left"
     },
     {
-      "id": "aa4c282ca1bb445e",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "0e591542bf444872",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "e94a0279ed4f407d",
+      "toNode": "423a918d7ebe4ba4",
       "toSide": "left"
     },
     {
-      "id": "6e48f5dce74f4708",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "edb1e4dcbe1f4456",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "c2403d78df194a6f",
+      "toNode": "44cd7fed747d4287",
       "toSide": "left"
     },
     {
-      "id": "a6655e62a545431d",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "f292a65218eb41d6",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "4c87dea7e2d7462c",
+      "toNode": "840e592f8c074f62",
       "toSide": "left"
     },
     {
-      "id": "f4f9431b49534264",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "669e24d979a14043",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "20edeac9b6fa49bb",
+      "toNode": "ed19d77ce9974c30",
       "toSide": "left"
     },
     {
-      "id": "c3f26e7d16934f04",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "2b979ed72c484a69",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "4ea4805e20d44047",
+      "toNode": "7bef85b993ac4527",
       "toSide": "left"
     },
     {
-      "id": "9d8021e128734516",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "23529c3545d54061",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "78f77590c7634ce5",
+      "toNode": "8039f817f9344d9e",
       "toSide": "left"
     },
     {
-      "id": "f306e8c490d443c8",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "4a8413e0a1ec44a1",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "e396b47a37a94c71",
+      "toNode": "84e44a1ea7ae4399",
       "toSide": "left"
     },
     {
-      "id": "695de5973f934bd5",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d96082a854cd4fa3",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "114aa0a870244f67",
+      "toNode": "27932b45f7f945c3",
       "toSide": "left"
     },
     {
-      "id": "c23766b4657d424a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "bb99b987da6442f4",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "b916ce30b27148ea",
+      "toNode": "1bac0905266e4b48",
       "toSide": "left"
     },
     {
-      "id": "6285f43ede3c4f30",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "a8e05387b831496d",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "bdbdf43c080448c9",
+      "toNode": "633332a69f1845fe",
       "toSide": "left"
     },
     {
-      "id": "d95419471c174a5a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d69bc7a5956e4964",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "17caa37a23e948e5",
+      "toNode": "15417ceb262d4abe",
       "toSide": "left"
     },
     {
-      "id": "88bd827f65344ada",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "f87dd422e39642ce",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "83d805ef7f0a4fed",
+      "toNode": "e249dce1e4594730",
       "toSide": "left"
     },
     {
-      "id": "f6d78c5b04b54178",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "6335edec58cb41cc",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "1e76f1a5f6794ba1",
+      "toNode": "8a0188d773014657",
       "toSide": "left"
     },
     {
-      "id": "b5837b048a46450c",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d7de5ddc1aa3428a",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "ab04ff22ac654bea",
+      "toNode": "14af731e56224f17",
       "toSide": "left"
     },
     {
-      "id": "c2a70fa880ee4bad",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "93514c46ef6145f5",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "3d04a5c8145e4272",
+      "toNode": "86303472ecef4089",
       "toSide": "left"
     },
     {
-      "id": "e11b04351fc34cbd",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "7f87a27402c1454c",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "8eb702e7cc2b478b",
+      "toNode": "5b39a3eea6c84976",
       "toSide": "left"
     },
     {
-      "id": "475fceb5dd9b49ff",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "8951a51f80834040",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "50bc16e77667422d",
+      "toNode": "5d3fe32132b14c47",
       "toSide": "left"
     },
     {
-      "id": "4631082dc6d84bad",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "b50e3a0419714808",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "0b7789e142b04678",
+      "toNode": "897f64bcd7fd4259",
       "toSide": "left"
     },
     {
-      "id": "7f222948a1cd4d48",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "191e2a6ac3e6424a",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "85d13296aad14bb3",
+      "toNode": "943a72905b7c442a",
       "toSide": "left"
     },
     {
-      "id": "88c5abd318494da1",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "382d2957af7e473f",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "2624a5648cef45dd",
+      "toNode": "35afcc6bf9154d82",
       "toSide": "left"
     },
     {
-      "id": "3051423bbe4d4bf2",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "cade0f381cc748e8",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "4258211dcc5d450e",
+      "toNode": "a7e8bba0cfb14f95",
       "toSide": "left"
     },
     {
-      "id": "3ac08c5661814c3a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "7f7d92f2a7ce4021",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "557efef5972f4e92",
+      "toNode": "70a6db01d3134adb",
       "toSide": "left"
     },
     {
-      "id": "8e60be5896b84ce4",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c31142b37cdd4d3c",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "189add5e1d7245e7",
+      "toNode": "9337c49c112d401d",
       "toSide": "left"
     },
     {
-      "id": "d3d2cf41bfc1463c",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "0ea665bef8504905",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "67327fcd12d2425f",
+      "toNode": "d82157f40bc34f66",
       "toSide": "left"
     },
     {
-      "id": "098bcf701ddf4aef",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "2a63a379a3d7424a",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "86a80032c8954b50",
+      "toNode": "061c538d57644c2a",
       "toSide": "left"
     },
     {
-      "id": "f8bfafc82bde46c1",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "cdaa9e759d854f4d",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "3101f1357475477c",
+      "toNode": "e32bf8340d8f414c",
       "toSide": "left"
     },
     {
-      "id": "49d1ad5fe96248fa",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "40b997f134464724",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "6abf6dbd25b049e9",
+      "toNode": "46d5d323196f407d",
       "toSide": "left"
     },
     {
-      "id": "a36b6ac569a745cc",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c926f3a2fcc648e2",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "523b088b1160463f",
+      "toNode": "3ee61d10e9c14b05",
       "toSide": "left"
     },
     {
-      "id": "7d81d056be8d4627",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "156e68fe6c344e9a",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "879f1ed4340a4bdb",
+      "toNode": "85f09f52d5d04dd7",
       "toSide": "left"
     },
     {
-      "id": "493fcb4401bc4444",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "94eac1265a384e76",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "a2c4e14f20434be5",
+      "toNode": "2a6587ce6cc647b7",
       "toSide": "left"
     },
     {
-      "id": "02ed85368e4b4896",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "68adb33f13ff4f8b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "8b51ec4ca5cc4785",
+      "toNode": "e7e811ba268848ec",
       "toSide": "left"
     },
     {
-      "id": "63251139bc3744e3",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "31e98101636b4c2c",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "b81ef1350be1443a",
+      "toNode": "8e98a8853cbe48bf",
       "toSide": "left"
     },
     {
-      "id": "1fb302c86718490f",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "316cebfbb4c04f16",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "cde536864e444a44",
+      "toNode": "96b90d8cd57544df",
       "toSide": "left"
     },
     {
-      "id": "d1b7cf4dd2694108",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "a497535419834c20",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "e1a13af7a00d43b4",
+      "toNode": "a0f8c21c43f34277",
       "toSide": "left"
     },
     {
-      "id": "1b5f77a02eaa4528",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "5dcbaf464fe84411",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "1d78067642444e6c",
+      "toNode": "bc6109289fff4eda",
       "toSide": "left"
     },
     {
-      "id": "22a2beda45804997",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "f0069104c5764caa",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "87ae83c2951e4813",
+      "toNode": "940fa98faeb54cc1",
       "toSide": "left"
     },
     {
-      "id": "ab1e3748704247d8",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "9410266350a24ad6",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "be4e90cdded34d36",
+      "toNode": "4c267114a68e42fd",
       "toSide": "left"
     },
     {
-      "id": "164155cdb45d4446",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c3f38d29c93444f8",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "eb45bad94c1c4740",
+      "toNode": "3659264d78914d53",
       "toSide": "left"
     },
     {
-      "id": "cc88042e7da24376",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "7a1becbbe3b9460f",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "8eaccc145a6d4845",
+      "toNode": "53110ca11d744b95",
       "toSide": "left"
     },
     {
-      "id": "989e39f20e8d4437",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "ec25848a5dff4dd0",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "6ddb07cbe1ed4b75",
+      "toNode": "6fd1a8131521486d",
       "toSide": "left"
     },
     {
-      "id": "739df7be46b942d0",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d71d167bcd344913",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "3095499f6e414c0d",
+      "toNode": "be1e66c7885748ef",
       "toSide": "left"
     },
     {
-      "id": "ff2a2e09a4254132",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "494965e094004e04",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "e927effbba434adc",
+      "toNode": "ab11f3cd6f0043ae",
       "toSide": "left"
     },
     {
-      "id": "44490a6bc4d74dfd",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "977e99304631417b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "65f3aa8c1bd64f89",
+      "toNode": "d540bae85bd1420b",
       "toSide": "left"
     },
     {
-      "id": "f93f59d36bed4d53",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "936154b7cc504bd2",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "2461590f2e304822",
+      "toNode": "f61c9a7bee7c4b3d",
       "toSide": "left"
     },
     {
-      "id": "48fed591da09405a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "78e5a6019f1c47f8",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "3bf8476b67274a2e",
+      "toNode": "356925bcb75a4fe4",
       "toSide": "left"
     },
     {
-      "id": "223170b748f245b9",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "06e4371771db4c0a",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "42cd9232f5eb4c3d",
+      "toNode": "be88b2bf683a4ead",
       "toSide": "left"
     },
     {
-      "id": "2b045a55a6774893",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "b1c7ac2293024d67",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "7596f9dc680f48f4",
+      "toNode": "6fb9aaea68e142b5",
       "toSide": "left"
     },
     {
-      "id": "f6bea9cb65604af0",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "2097a85552914b58",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "7779f9c8a9484a5a",
+      "toNode": "2473f4050a704787",
       "toSide": "left"
     },
     {
-      "id": "efff5956f64b474f",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "8ee53748216843dc",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "fcd291e01c074107",
+      "toNode": "72a60da7cd2a48d5",
       "toSide": "left"
     },
     {
-      "id": "98fb90a349a149c2",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "52624347eac84a93",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "1395a01b1e494af5",
+      "toNode": "4dedcef8fa04487a",
       "toSide": "left"
     },
     {
-      "id": "e17c054f702540e4",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c9202780fb324848",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "5e5255d9a9c040f8",
+      "toNode": "8fb3edc610454074",
       "toSide": "left"
     },
     {
-      "id": "72f5678d5e3e4337",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "7fe13643a59d478e",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "6bbb730e4bf9482a",
+      "toNode": "b8d160a656f64c9f",
       "toSide": "left"
     },
     {
-      "id": "1c9c9afa4eda4cf0",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "e6d7742811324fb8",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "49a570f8dcaa4ed9",
+      "toNode": "fbad8bbec7544235",
       "toSide": "left"
     },
     {
-      "id": "0b44a0d71ebc474b",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "491867ec67624f43",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "e9d6a180c6af4590",
+      "toNode": "36a0736d16c3433c",
       "toSide": "left"
     },
     {
-      "id": "b6def884943a4f75",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "b054fd1a04a1417c",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "d76333a1214e4335",
+      "toNode": "195d2cc3f4c04cbb",
       "toSide": "left"
     },
     {
-      "id": "5c803857894043fe",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "918894f505e446e3",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "7e1efd735d4f4bcd",
+      "toNode": "d9c515f3966244a0",
       "toSide": "left"
     },
     {
-      "id": "4a890a6fab844f8d",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "04ac5d7a4a1a4a7c",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "ebda04576ccc4d82",
+      "toNode": "0d49017ab96544e9",
       "toSide": "left"
     },
     {
-      "id": "3f590273a1854607",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "240b3ca927ca43df",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "d5f583a26d5f44f4",
+      "toNode": "07ece4ca18e8485c",
       "toSide": "left"
     },
     {
-      "id": "685d55efe544403a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "f37580472f164d3a",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "6143c2dc1eca4fab",
+      "toNode": "6e0257ba9b8146af",
       "toSide": "left"
     },
     {
-      "id": "25b5d4b9add7402a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "ca661f43ec584fb1",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "0159251b5a434594",
+      "toNode": "ad8583678acb4040",
       "toSide": "left"
     },
     {
-      "id": "04e0956d74aa4365",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "8587f33f79844208",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "884cf6f8e7ee4e99",
+      "toNode": "3158f7cc14f4439f",
       "toSide": "left"
     },
     {
-      "id": "8dda250a1af245a1",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c31fb2bef26544ab",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "a5b863b533e74d89",
+      "toNode": "23f03acce719488a",
       "toSide": "left"
     },
     {
-      "id": "1d7a7ea922f14e7e",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c4bdd96fed5d4b45",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "4ea8f4a76fb54e30",
+      "toNode": "7dc7932db6214159",
       "toSide": "left"
     },
     {
-      "id": "f632038dec744e2a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c114c1b615c1493c",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "5e33514944de4b54",
+      "toNode": "ac06b9ecd84845c0",
       "toSide": "left"
     },
     {
-      "id": "2dae6e52463a40f6",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "8296917930374f34",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "77537b44cf05497b",
+      "toNode": "72640c65af1a46ac",
       "toSide": "left"
     },
     {
-      "id": "6bd2fc50d030417d",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "62e529ca7f36403c",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "02963a1e58bd405f",
+      "toNode": "125e042d02074f9e",
       "toSide": "left"
     },
     {
-      "id": "8ea12fb5681e4822",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "4e513178ae30445e",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "b46159cef5f34c07",
+      "toNode": "c6ec156a7a3c4b73",
       "toSide": "left"
     },
     {
-      "id": "a2986779637c42dd",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "e78ed2b4ceee4294",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "45fba8f78f564e63",
+      "toNode": "44dc2849ae4a4e74",
       "toSide": "left"
     },
     {
-      "id": "f81717480f6c4044",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "48ce22f1e28e4c13",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "8f0210973750481a",
+      "toNode": "3f1f23454cbf4ace",
       "toSide": "left"
     },
     {
-      "id": "d511537e0e4e4810",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c4aced841f1c4abd",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "6bc953dc596b4f47",
+      "toNode": "a6102ae6d46d4416",
       "toSide": "left"
     },
     {
-      "id": "4e77fecaf651414d",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "9059a281f29344ce",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "be6818dbb9fb427b",
+      "toNode": "ce2f0d26a65c4b7c",
       "toSide": "left"
     },
     {
-      "id": "dd0e71ce56f247fc",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "65b53389d4484b7b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "27cc20e5f96d4f5a",
+      "toNode": "e68fd059710a406e",
       "toSide": "left"
     },
     {
-      "id": "21238ccdf7ae49cf",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "7bbf54de4e084025",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "62eb75e86df94de5",
+      "toNode": "8eaca67b07af4c57",
       "toSide": "left"
     },
     {
-      "id": "f4e9c9d102074e87",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "e51376167e474148",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "f9199255407c4431",
+      "toNode": "7d30c4cd734d4697",
       "toSide": "left"
     },
     {
-      "id": "bb96bf94b08247e7",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "502d8b3f22434c05",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "e88d31c7330c4940",
+      "toNode": "390633428dc34e3c",
       "toSide": "left"
     },
     {
-      "id": "5ffe8f851daf450e",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "10ebc4fece8f4af8",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "8c7e391fadb34d09",
+      "toNode": "e5e0c8d2b8ef4e75",
       "toSide": "left"
     },
     {
-      "id": "a88d5c13b4f849a6",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "75d75848b95d42ef",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "708a8a8d43e743f3",
+      "toNode": "0355726311514e12",
       "toSide": "left"
     },
     {
-      "id": "c789e9ba08504ab4",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "474b572684514b6e",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "2bd8bd21e9b042f8",
+      "toNode": "26b4dd75b1124af7",
       "toSide": "left"
     },
     {
-      "id": "f0ab9a7ad6994848",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "091167ee4ca64e01",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "3f078a01616d49b3",
+      "toNode": "cf31d01def14414b",
       "toSide": "left"
     },
     {
-      "id": "864ff8fcd62f45ef",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "0d17f7a6896c4b7b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "d4c8a37aaf1741ab",
+      "toNode": "feb1f798463b4121",
       "toSide": "left"
     },
     {
-      "id": "07f515345dd549c3",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "70afd121429f4a74",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "a15703046ff04323",
+      "toNode": "641ed4375ad14cb3",
       "toSide": "left"
     },
     {
-      "id": "219147e307254b65",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "a492c40c748247fa",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "ea7733fc88b34432",
+      "toNode": "2a1396e5c64b4266",
       "toSide": "left"
     },
     {
-      "id": "4f3c79ac1b7d4f32",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "fdff8960d881466d",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "cbb66e8656b944c3",
+      "toNode": "44021bf8a3dc46a8",
       "toSide": "left"
     },
     {
-      "id": "aef5e39bc9b74a6a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "1d34c4f7ad5848a8",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "e4eebc6d9a2b4ca9",
+      "toNode": "67b3d2cdc4224e8d",
       "toSide": "left"
     },
     {
-      "id": "3ee1f46e3da445db",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "8fb5fdee61154acf",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "49215cba58c4495b",
+      "toNode": "774f532b8b5d4f3f",
       "toSide": "left"
     },
     {
-      "id": "a075613b12d74071",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "ab2fa950e80343e5",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "1b77eaf62f944958",
+      "toNode": "45021b266d024929",
       "toSide": "left"
     },
     {
-      "id": "63b35bce65b84ad3",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "9eaf605b8b1b44e5",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "74c50f5e3266483a",
+      "toNode": "24e1b5477ae547bb",
       "toSide": "left"
     },
     {
-      "id": "b25c02f252d54267",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "cfa04762e54640ad",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "8f04af50bd5849ab",
+      "toNode": "ee283310ea2d41c1",
       "toSide": "left"
     },
     {
-      "id": "304724be9393444e",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "f53ad26333e04db5",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "9b28c597369948a2",
+      "toNode": "1fb18ed52a8d49c9",
       "toSide": "left"
     },
     {
-      "id": "59f32db9902843cf",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "fad2afd6b34c497c",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "6c09a90be7bb4d34",
+      "toNode": "0103d1a31f1f422a",
       "toSide": "left"
     },
     {
-      "id": "da97dd79a2ac4237",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d4a1f1da8f8348cd",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "14fdc01595b64cc2",
+      "toNode": "d1aae125122f49a3",
       "toSide": "left"
     },
     {
-      "id": "5d1de328049e4e54",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "76fed40bcead4a52",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "15ef6f2cd4e24e1a",
+      "toNode": "0e5ad82bd84a437f",
       "toSide": "left"
     },
     {
-      "id": "99c3b9f6e66f4fac",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d4f70830bfbe4fab",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "b8f353de837e409d",
+      "toNode": "5246e3a6ca4748dc",
       "toSide": "left"
     },
     {
-      "id": "7e0affaa32204323",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "eefe42d77bb84e6b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "6a2e72375f6f4127",
+      "toNode": "89eb1e41e01a444f",
       "toSide": "left"
     },
     {
-      "id": "48476876cc624be5",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "8f09a25cf6474aa0",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "28075a1292d04971",
+      "toNode": "850745e7f7bc4d28",
       "toSide": "left"
     },
     {
-      "id": "c6dd389622054a38",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "bd87f7e3fdfb4709",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "2c04327d6483423d",
+      "toNode": "972294d0767a4d5a",
       "toSide": "left"
     },
     {
-      "id": "c486839ac68144bc",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c77f52f91db64076",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "bd94e938f02e4beb",
+      "toNode": "39c3d5ab5e224ec6",
       "toSide": "left"
     },
     {
-      "id": "402d8ec7c5fc4615",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "8adb444367014e73",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "409181c457a94f47",
+      "toNode": "33c579a31fe14a8d",
       "toSide": "left"
     },
     {
-      "id": "0271ca0a0aa34b4e",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "bdb7a132630e4188",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "047cfd09cf3246cb",
+      "toNode": "eddab5b9375f424c",
       "toSide": "left"
     },
     {
-      "id": "a05de578216546ab",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c48c3f89546644a9",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "0072716d81fd4e6b",
+      "toNode": "5572ee403a7949e4",
       "toSide": "left"
     },
     {
-      "id": "744a920910504eea",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "256602c72feb447b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "90baaeecf463484d",
+      "toNode": "61f50f300b214d32",
       "toSide": "left"
     },
     {
-      "id": "eb3b85882dea4d1a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "7d2d2a1c1c1d4c6a",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "53c50851371649e4",
+      "toNode": "a8b66235c67c4f74",
       "toSide": "left"
     },
     {
-      "id": "95714b882ae04574",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "50b6fdef4a0e4ea5",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "b25683ab73424fdc",
+      "toNode": "f305a629bd7f4041",
       "toSide": "left"
     },
     {
-      "id": "1ec715d169d54223",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "ef6c6958c6cf4c45",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "80216c442ee94bce",
+      "toNode": "2ce9c2469afa458e",
       "toSide": "left"
     },
     {
-      "id": "211bdaf9ff784fe4",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "763b15e8757b4df5",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "1f0d93101d554a02",
+      "toNode": "e52d886b183e489e",
       "toSide": "left"
     },
     {
-      "id": "e250b489fc474d64",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "3e368a00fae3498d",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "2f61e9bb624543cf",
+      "toNode": "03b69e46ddcd4a0b",
       "toSide": "left"
     },
     {
-      "id": "955cde1cead64752",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "e4f4a890c22e40d7",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "86a7af5259d24e5c",
+      "toNode": "30f62fdfff6643d0",
       "toSide": "left"
     },
     {
-      "id": "a7777391a3ba49ba",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "5b4237be2e724688",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "c046e7e212d94e9d",
+      "toNode": "81c15140f2804be1",
       "toSide": "left"
     },
     {
-      "id": "1661bb93edbe4076",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "0ea4cf12385e4411",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "5d9d31b752aa405e",
+      "toNode": "62e415a784954802",
       "toSide": "left"
     },
     {
-      "id": "4b99bf517cb14b2f",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c0791cac4027447e",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "9ca808289fc54b1c",
+      "toNode": "c15945f7dd8147ec",
       "toSide": "left"
     },
     {
-      "id": "3cdf119c735a4cca",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "f9e8f9fb762448eb",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "d9129e4543064585",
+      "toNode": "07dc6edba77443d4",
       "toSide": "left"
     },
     {
-      "id": "d369100ab6044bce",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "553d7c3a6c0f4108",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "7a156946eefe4a81",
+      "toNode": "541fd645e2bf4eba",
       "toSide": "left"
     },
     {
-      "id": "e816538b65da468a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "02f541ad794a48fe",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "dbad0283ced34102",
+      "toNode": "69af0231909b4a0c",
       "toSide": "left"
     },
     {
-      "id": "d51ac84d5b35475a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "824a179b41ce4084",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "2fb1d8bcfbef4a0d",
+      "toNode": "0fee576ff42442d6",
       "toSide": "left"
     },
     {
-      "id": "0b10269f97814845",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "8d475fcdc94842df",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "4bfa731833c74cdb",
+      "toNode": "71a6e352ef074b65",
       "toSide": "left"
     },
     {
-      "id": "5877fc4b0e5b4ada",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "42c5477cae10474d",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "d93e5b8de52b43f2",
+      "toNode": "f90749eeb3fb4b23",
       "toSide": "left"
     },
     {
-      "id": "f05dc821170b464e",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "2ff6f147398b4698",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "5f010b009a814632",
+      "toNode": "72be1cf3eb93448a",
       "toSide": "left"
     },
     {
-      "id": "35b93b3ab3ff404f",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "0d4f200e86c24f1e",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "d37f61ba337f45c3",
+      "toNode": "df8dd931bf3e4d6b",
       "toSide": "left"
     },
     {
-      "id": "17dd57d0107842da",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "b501f134a0cb4575",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "671d55bd191c4df1",
+      "toNode": "c4a6b6fb5d1b4f32",
       "toSide": "left"
     },
     {
-      "id": "9d3c0e2c90b84e76",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "11697b6b044144bb",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "551eaddf9c9d4a89",
+      "toNode": "60d9e398d74c43f4",
       "toSide": "left"
     },
     {
-      "id": "a3d309f73992491d",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "bdca48dc212044ff",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "55aec159dc0148d3",
+      "toNode": "2d6b671fcd2d460c",
       "toSide": "left"
     },
     {
-      "id": "4eb9421178e14796",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "3b76b0ad3b744415",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "f827936e1ba84745",
+      "toNode": "13af3d0465414d57",
       "toSide": "left"
     },
     {
-      "id": "c5e31ec8d84c4e69",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "b7faf8392d4d466f",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "a323c39111584196",
+      "toNode": "99243e1c77b84041",
       "toSide": "left"
     },
     {
-      "id": "ef281af65d254b4c",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "0fa3d9e351954393",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "0b2196dfa3b64474",
+      "toNode": "0bf0c175bdb842ca",
       "toSide": "left"
     },
     {
-      "id": "3e50aa63841145c8",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "eeebf6cc0c024b01",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "1f6f6dbe52b2435a",
+      "toNode": "37b125b378a24e29",
       "toSide": "left"
     },
     {
-      "id": "9c5725eb7b344640",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "352f8219b150471b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "f88afc5df0c244a4",
+      "toNode": "9acc94d8c30d420f",
       "toSide": "left"
     },
     {
-      "id": "bd3e704e71864b8f",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "e77f2ae7896a46d4",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "15e910983c124d84",
+      "toNode": "025d86a46c5e4079",
       "toSide": "left"
     },
     {
-      "id": "340c5b1fabb54a0f",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "78cec51122d34e21",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "4f31ea2e8faf48ae",
+      "toNode": "d3550cc93a424e9b",
       "toSide": "left"
     },
     {
-      "id": "3b4a0b8fea7a400c",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "b8fd7b6aecf54ad6",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "81be54d2f17d4049",
+      "toNode": "23e1f35cd4df47c1",
       "toSide": "left"
     },
     {
-      "id": "c841ca32c31e4526",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "80acafcbc0be477e",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "2e026f30cd534a68",
+      "toNode": "65e210a9ece54245",
       "toSide": "left"
     },
     {
-      "id": "b0428782eb924463",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "291d46d1241a4b1a",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "22d977141dbd45ef",
+      "toNode": "e5bca25bde614d4d",
       "toSide": "left"
     },
     {
-      "id": "385a0663a47142c1",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "a4268e7d0a0e439c",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "87475fd0c7f64986",
+      "toNode": "c6bd5902ebe342f0",
       "toSide": "left"
     },
     {
-      "id": "9e291db15a20419c",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "28eac87dee3946d9",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "b582cf239b014762",
+      "toNode": "ebef5fdc0ebc44e4",
       "toSide": "left"
     },
     {
-      "id": "e99246e6c6bf4e8f",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "dd9a85434dca4e08",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "39670639e4164d29",
+      "toNode": "4777822e07b74d64",
       "toSide": "left"
     },
     {
-      "id": "6ac69ba9e9b941d8",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "36b151e7f1704149",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "0dbdccf8ac6d4fc6",
+      "toNode": "7f5e8f7d4146433d",
       "toSide": "left"
     },
     {
-      "id": "cca4924a5b1e4e8a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "49aabbc93ea84c3b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "70c520a93139469b",
+      "toNode": "c649b91042984502",
       "toSide": "left"
     },
     {
-      "id": "d7b9490b27df4837",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d3bdcef7957d4149",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "d8122cece2ba4d0f",
+      "toNode": "8e7e537bf9e3487b",
       "toSide": "left"
     },
     {
-      "id": "8b2b5306ad4b42d3",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "df4900666e124c82",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "93f78a4e061a4843",
+      "toNode": "8ef41202e4dd48a2",
       "toSide": "left"
     },
     {
-      "id": "acc14093e5304ffe",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "3a29a24cbb9b4ad5",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "3b7e208cab3546bc",
+      "toNode": "457e695128bf449c",
       "toSide": "left"
     },
     {
-      "id": "1f2ee135653c4253",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "f8787b425f1046b3",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "eb76de7642794b4b",
+      "toNode": "7c0dd6bcd4b144a1",
       "toSide": "left"
     },
     {
-      "id": "12e0faf8195b4369",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "686355b04e65426d",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "9efb675133ef4fa2",
+      "toNode": "7b8f32ddf2c4419c",
       "toSide": "left"
     },
     {
-      "id": "3fb3df01c61c41f9",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "1bb12e4ea77f4c69",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "e739e6a6e14a4492",
+      "toNode": "33b67e87f1d54516",
       "toSide": "left"
     },
     {
-      "id": "ebb71742d76442c8",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c166f27396b047dc",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "4508b13ce9994ee3",
+      "toNode": "28ac1e61302d46d0",
       "toSide": "left"
     },
     {
-      "id": "f0a1b4809aed431c",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "ef88da8aafb6489b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "0950f5d162fa419a",
+      "toNode": "d50941073fa0405a",
       "toSide": "left"
     },
     {
-      "id": "1299bfb0930a4d56",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "866eaafa710f43e2",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "f7eb6275efc24914",
+      "toNode": "f325006d4b9d4a43",
       "toSide": "left"
     },
     {
-      "id": "902adb96212a4b5d",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "f357445b8e7c4381",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "bc581cec33044957",
+      "toNode": "c3a189df0c72406c",
       "toSide": "left"
     },
     {
-      "id": "1cb836a29c424238",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c468bd0332b54ad5",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "02965f9d3f5b4772",
+      "toNode": "d6179e2622034155",
       "toSide": "left"
     },
     {
-      "id": "e7ca02ae70944536",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "fb8315df036047e2",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "40a6a1cdd6f14eb2",
+      "toNode": "f2cd4d6f35a046d6",
       "toSide": "left"
     },
     {
-      "id": "1006f7fa97a149a7",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "2a10971c414447b1",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "8c454aa96a6f49d9",
+      "toNode": "722246e5fd2d440a",
       "toSide": "left"
     },
     {
-      "id": "b86366f8414b4b43",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "3c986e6c69814cad",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "1ed1b391e06e4180",
+      "toNode": "eb7f56e8e29e4eea",
       "toSide": "left"
     },
     {
-      "id": "c53023dc4d8a498e",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "6b44b74e5eda4d79",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "b700bc713400491f",
+      "toNode": "db2a1432c1034017",
       "toSide": "left"
     },
     {
-      "id": "1a79e6f2f99342b6",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "1bedc4b01ba7454c",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "ddbb967ceb4a4f62",
+      "toNode": "bd713af82dbc40f0",
       "toSide": "left"
     },
     {
-      "id": "15b74c7ca01a478d",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "95cceb5080de4975",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "d15568f42ad74c61",
+      "toNode": "f9cda38711594ff2",
       "toSide": "left"
     },
     {
-      "id": "5534a876accf4829",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "069b95a3f8fb4e56",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "b1edb9c6370249e6",
+      "toNode": "5a18b0fe628b4306",
       "toSide": "left"
     },
     {
-      "id": "3a518329ce1f4427",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "dff4dac62c354229",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "862c662a869e4b9d",
+      "toNode": "7842231d48e64eaf",
       "toSide": "left"
     },
     {
-      "id": "c8928bcb481946ad",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "aaad47ba7f7b444a",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "ad49b5b7b6eb40f5",
+      "toNode": "5a090d93095d4c40",
       "toSide": "left"
     },
     {
-      "id": "c07f7241ee4645b9",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "ab45bce32d5a4ab9",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "480fb525812846ee",
+      "toNode": "e0016911610c4228",
       "toSide": "left"
     },
     {
-      "id": "5f283897b3dd491d",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d91062ca2f894540",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "8ad92491c7004da2",
+      "toNode": "c00e8e44466e4764",
       "toSide": "left"
     },
     {
-      "id": "505151985d5c49bf",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "4b4e08e94aac4327",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "349303a80d1a48b2",
+      "toNode": "8066ad7c6acf4cdc",
       "toSide": "left"
     },
     {
-      "id": "2b2b446ad37a4a65",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "12af0013106245d1",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "e238f4d5b1fe4d09",
+      "toNode": "31b7515191d84679",
       "toSide": "left"
     },
     {
-      "id": "0cef5bde15fd46f2",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "607c2d6355684b39",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "4e715a7bbf704fba",
+      "toNode": "b0b31d8a25d44fc4",
       "toSide": "left"
     },
     {
-      "id": "8c721c1fb36d40cc",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "0784ab1983c54161",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "4b03a49d3df245e4",
+      "toNode": "61b934f59aa4499c",
       "toSide": "left"
     },
     {
-      "id": "f5b5da12ec15440d",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "26fb87457ccc4f11",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "7ef359364e7c4d8f",
+      "toNode": "ebc7ff1e2ffe4351",
       "toSide": "left"
     },
     {
-      "id": "32199e2213db4464",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "66e18d1e717c4fe7",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "ab2711d1ebcd4582",
+      "toNode": "e0c3857be0874210",
       "toSide": "left"
     },
     {
-      "id": "13554d230cbc43dc",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "16ecde0f19624a04",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "0840a10f1c2641f2",
+      "toNode": "9356d244242a4922",
       "toSide": "left"
     },
     {
-      "id": "294437e2ad934f7e",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "7a9a72b0179a4be3",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "7a5be251d1ac498f",
+      "toNode": "61f1081d8e5a4fce",
       "toSide": "left"
     },
     {
-      "id": "da83c06be9c14cc1",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "27c8909c36244241",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "b5df9054d0894979",
+      "toNode": "6dc88a11fd944409",
       "toSide": "left"
     },
     {
-      "id": "5cf23d3681084edc",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "119d1a4de9fc4d84",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "820022ad41144743",
+      "toNode": "366809eb390e453b",
       "toSide": "left"
     },
     {
-      "id": "a9b77e1602ac4e90",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "5cf9084fbad04a3b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "290e2dc6fc174e87",
+      "toNode": "617b79990ce54635",
       "toSide": "left"
     },
     {
-      "id": "8c14df006ca0487c",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "47df4cf230e94d4b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "b41d175ccd3b4aa9",
+      "toNode": "d4c7912a562649a8",
       "toSide": "left"
     },
     {
-      "id": "006777f5bffb4f50",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "cfd60c3c97974c95",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "e226d66856794058",
+      "toNode": "1784d92aa205493e",
       "toSide": "left"
     },
     {
-      "id": "f5985c2ab83a43c9",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "6981d2ebb4104a6c",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "6b1a6e57f9f746f9",
+      "toNode": "8056d03b50b84929",
       "toSide": "left"
     },
     {
-      "id": "f43b9249c9f94444",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c7b8178fc26e4e10",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "5c18544f56be4686",
+      "toNode": "ebef4663750042b9",
       "toSide": "left"
     },
     {
-      "id": "5fa08acf49f14e74",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "2ff5082e628d4c82",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "f5dea7d6827044fc",
+      "toNode": "d03d79ff6ac745e2",
       "toSide": "left"
     },
     {
-      "id": "2dbbf03ef02d4280",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d74f43d5da5e45ff",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "0b90f57e3b37458e",
+      "toNode": "6f0dabfab2244cc3",
       "toSide": "left"
     },
     {
-      "id": "b717acedcf6244a9",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "4cca54809289477b",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "6f40d5a0d90042f2",
+      "toNode": "7541ef1435544e18",
       "toSide": "left"
     },
     {
-      "id": "a2c9a6fe5617400e",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "627f75eed93e4c24",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "c330aa6c1a40475d",
+      "toNode": "12d52eaeb3ac4c73",
       "toSide": "left"
     },
     {
-      "id": "9744756e57cb406d",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "e7a32c1e032341ed",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "c9b6f9ca9d244e67",
+      "toNode": "4d53f0b588424d9c",
       "toSide": "left"
     },
     {
-      "id": "e6d67038af85462c",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "f9751536c98e4cc9",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "e1725f3b64d44f4c",
+      "toNode": "9260a774569645d8",
       "toSide": "left"
     },
     {
-      "id": "a7906db28af44e64",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "545631acc9bd4618",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "b418cfd63cd14780",
+      "toNode": "6e42c4aba13e46cd",
       "toSide": "left"
     },
     {
-      "id": "7850f52058fd43ea",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "1052053636814f02",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "0f04ed128c1f4677",
+      "toNode": "20da31b79a1a4584",
       "toSide": "left"
     },
     {
-      "id": "041bce6d08264aeb",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "0fd4b65cb46c46bb",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "9be7a8e9d22040fd",
+      "toNode": "3b67f4980a6b469f",
       "toSide": "left"
     },
     {
-      "id": "03cba5aa09294bb4",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "2800b51ab28b4d52",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "e98ce934e4f541e2",
+      "toNode": "4c1217a7560649a0",
       "toSide": "left"
     },
     {
-      "id": "d3fa8862147640e1",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "7a5b4b98ad994e81",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "f5fd2997b24b45de",
+      "toNode": "00cb56509ef14011",
       "toSide": "left"
     },
     {
-      "id": "552f97c4cadf48a4",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "09b6d43c545943f3",
+      "fromNode": "d1218b79470a4bc7",
       "fromSide": "right",
-      "toNode": "35ad0d7ee3b84547",
+      "toNode": "6990cef55a804817",
       "toSide": "left"
     },
     {
-      "id": "96128afc19de4938",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "a15d72c10d0148e9",
+      "fromNode": "b81fa3763fc64b55",
       "fromSide": "right",
-      "toNode": "e56611b80cb047ed",
+      "toNode": "587eea5e97aa4afa",
       "toSide": "left"
     },
     {
-      "id": "ad54a649eb354941",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "0c1ba7fd5a574e87",
+      "fromNode": "587eea5e97aa4afa",
       "fromSide": "right",
-      "toNode": "0ed71858851e4f35",
+      "toNode": "f8990d7543124774",
       "toSide": "left"
     },
     {
-      "id": "27c7411ba8504b13",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "d5e2006938ad4d8c",
+      "fromNode": "587eea5e97aa4afa",
       "fromSide": "right",
-      "toNode": "6f74e1f5285a4831",
+      "toNode": "b4452bd3ae49408c",
       "toSide": "left"
     },
     {
-      "id": "a7e7620ab8e34d48",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "41ad6b48fe4f4e40",
+      "fromNode": "587eea5e97aa4afa",
       "fromSide": "right",
-      "toNode": "6d3a3da885fc4448",
+      "toNode": "8ad4f6c0ce5c4aac",
       "toSide": "left"
     },
     {
-      "id": "80a162f061de4c16",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "c270b020b1b1434b",
+      "fromNode": "587eea5e97aa4afa",
       "fromSide": "right",
-      "toNode": "5e7eb20fc426459e",
+      "toNode": "fb16438ab6624052",
       "toSide": "left"
     },
     {
-      "id": "66ad92b8d1ec4d86",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "647d9f6951644fac",
+      "fromNode": "587eea5e97aa4afa",
       "fromSide": "right",
-      "toNode": "7728cf97afa54475",
+      "toNode": "3dda9a0f37da4603",
       "toSide": "left"
     },
     {
-      "id": "26f1f85a5d534fb1",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "1691a675f53c4012",
+      "fromNode": "587eea5e97aa4afa",
       "fromSide": "right",
-      "toNode": "e2b409e299a84ed3",
+      "toNode": "d9dbfbb7b3e4413c",
       "toSide": "left"
     },
     {
-      "id": "f339a6dfa6dc4c4a",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "a6703674013b439d",
+      "fromNode": "587eea5e97aa4afa",
       "fromSide": "right",
-      "toNode": "ce184c325d644c4f",
+      "toNode": "cae0c602ee0447c0",
       "toSide": "left"
     },
     {
-      "id": "932ef2111b91441c",
-      "fromNode": "3a17f5c81a3848da",
+      "id": "b369bc75ca264cb3",
+      "fromNode": "b81fa3763fc64b55",
       "fromSide": "right",
-      "toNode": "39d2c16d73194a9e",
+      "toNode": "a27f3d07c14c479b",
       "toSide": "left"
     },
     {
-      "id": "2bd15146ba7a4cb2",
-      "fromNode": "86eb7cb30c254d8c",
+      "id": "f776f90c86f34984",
+      "fromNode": "a27f3d07c14c479b",
       "fromSide": "right",
-      "toNode": "617b4d33925949cb",
+      "toNode": "a35fa494469f4950",
       "toSide": "left"
     },
     {
-      "id": "4a675e4193fc4ec4",
-      "fromNode": "617b4d33925949cb",
+      "id": "a744c316a6054d1b",
+      "fromNode": "a27f3d07c14c479b",
       "fromSide": "right",
-      "toNode": "7cb2bd57d0ae493a",
+      "toNode": "33e26ec7b9594511",
       "toSide": "left"
     },
     {
-      "id": "b85c9436c1a5438c",
-      "fromNode": "617b4d33925949cb",
+      "id": "fc0787f057db485e",
+      "fromNode": "a27f3d07c14c479b",
       "fromSide": "right",
-      "toNode": "b49ca26187c14354",
+      "toNode": "09f556a7b58f4d23",
       "toSide": "left"
     },
     {
-      "id": "6607d2d739c64021",
-      "fromNode": "617b4d33925949cb",
+      "id": "5fdfa3057f7942a0",
+      "fromNode": "a27f3d07c14c479b",
       "fromSide": "right",
-      "toNode": "5118ce4dcc7e4b16",
+      "toNode": "09152b71b9cf49d8",
       "toSide": "left"
     },
     {
-      "id": "091d1de3db6b456e",
-      "fromNode": "617b4d33925949cb",
+      "id": "ff1465dfdd8344f4",
+      "fromNode": "a27f3d07c14c479b",
       "fromSide": "right",
-      "toNode": "2bb4aa24f9da4f73",
+      "toNode": "93749c59c30b40a9",
       "toSide": "left"
     },
     {
-      "id": "781c4780bbda4a29",
-      "fromNode": "617b4d33925949cb",
+      "id": "95bfe43a648546c8",
+      "fromNode": "a27f3d07c14c479b",
       "fromSide": "right",
-      "toNode": "fef372392b3449bc",
+      "toNode": "eb0c1f3e581c4b0b",
       "toSide": "left"
     },
     {
-      "id": "4a489c5ee0ce4fa7",
-      "fromNode": "617b4d33925949cb",
+      "id": "3962c7eb863b42ca",
+      "fromNode": "b81fa3763fc64b55",
       "fromSide": "right",
-      "toNode": "abecb418d98640fa",
+      "toNode": "124f2603734e4057",
       "toSide": "left"
     },
     {
-      "id": "c1d0ab5ce7344698",
-      "fromNode": "86eb7cb30c254d8c",
+      "id": "b645d34423a943c6",
+      "fromNode": "124f2603734e4057",
       "fromSide": "right",
-      "toNode": "4ea8a56b533b4fab",
+      "toNode": "7e3bd13c670c4223",
       "toSide": "left"
     },
     {
-      "id": "86a6b62fafbc4118",
-      "fromNode": "4ea8a56b533b4fab",
+      "id": "cec724f5e49945ed",
+      "fromNode": "124f2603734e4057",
       "fromSide": "right",
-      "toNode": "bacbbefd25bb4c53",
+      "toNode": "908595d7bd01498e",
       "toSide": "left"
     },
     {
-      "id": "aa848876af8a4841",
-      "fromNode": "4ea8a56b533b4fab",
+      "id": "fbce7ba27b7f4fad",
+      "fromNode": "b81fa3763fc64b55",
       "fromSide": "right",
-      "toNode": "24346b6384574b7f",
+      "toNode": "7968969735474a9c",
       "toSide": "left"
     },
     {
-      "id": "23b73a7a32f44c06",
-      "fromNode": "4ea8a56b533b4fab",
+      "id": "5272e724b9254587",
+      "fromNode": "b81fa3763fc64b55",
       "fromSide": "right",
-      "toNode": "bf721a3643f14f29",
-      "toSide": "left"
-    },
-    {
-      "id": "a7235463fe94494d",
-      "fromNode": "4ea8a56b533b4fab",
-      "fromSide": "right",
-      "toNode": "97b5391584624a28",
-      "toSide": "left"
-    },
-    {
-      "id": "936326cdf7374d8d",
-      "fromNode": "86eb7cb30c254d8c",
-      "fromSide": "right",
-      "toNode": "469c900242ed4f28",
-      "toSide": "left"
-    },
-    {
-      "id": "6f24e92eb4ec4113",
-      "fromNode": "469c900242ed4f28",
-      "fromSide": "right",
-      "toNode": "f7731c55962f40fe",
-      "toSide": "left"
-    },
-    {
-      "id": "95350dc201a84e4c",
-      "fromNode": "86eb7cb30c254d8c",
-      "fromSide": "right",
-      "toNode": "e5d5e59eafd94c84",
-      "toSide": "left"
-    },
-    {
-      "id": "68b908c0a4b54e33",
-      "fromNode": "86eb7cb30c254d8c",
-      "fromSide": "right",
-      "toNode": "a8d8587e455848ac",
+      "toNode": "412cb120cdb947de",
       "toSide": "left"
     }
   ]

@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "2d0d596949444509",
+      "id": "d3b5353a61da43c3",
       "type": "text",
       "x": -130,
       "y": -60,
@@ -11,2383 +11,1546 @@
       "color": "5"
     },
     {
-      "id": "bf6abb807ca94af0",
+      "id": "7cbe932c9ad84173",
       "type": "group",
       "x": -399,
-      "y": -9779,
+      "y": -6370,
       "width": 800,
-      "height": 9180,
+      "height": 5770,
       "label": "concept",
       "color": "3"
     },
     {
-      "id": "b50e761758b34dc2",
+      "id": "0165830b5e614708",
       "type": "text",
       "x": -359,
-      "y": -9739,
-      "width": 220,
-      "height": 80,
-      "text": "**Backward Induction**"
-    },
-    {
-      "id": "a72f666b05234e65",
-      "type": "text",
-      "x": -109,
-      "y": -9739,
-      "width": 220,
-      "height": 80,
-      "text": "**Bayesian Game**"
-    },
-    {
-      "id": "3d40ec0b73714004",
-      "type": "text",
-      "x": 141,
-      "y": -9739,
-      "width": 220,
-      "height": 80,
-      "text": "**Bertrand Competition**"
-    },
-    {
-      "id": "71ef20fcd2354d5c",
-      "type": "text",
-      "x": -359,
-      "y": -9629,
-      "width": 220,
-      "height": 80,
-      "text": "**Best-Reply Function**"
-    },
-    {
-      "id": "79e860e7e18c48a1",
-      "type": "text",
-      "x": -109,
-      "y": -9629,
-      "width": 220,
-      "height": 80,
-      "text": "**Cournot Competition**"
-    },
-    {
-      "id": "60430e07f1284bd1",
-      "type": "text",
-      "x": 141,
-      "y": -9629,
-      "width": 220,
-      "height": 80,
-      "text": "**Engle-Granger Two-Step Test**"
-    },
-    {
-      "id": "8fd8aab1b6ae48c9",
-      "type": "text",
-      "x": -359,
-      "y": -9519,
-      "width": 220,
-      "height": 80,
-      "text": "**Extensive-form Game**"
-    },
-    {
-      "id": "95552e114e3448ed",
-      "type": "text",
-      "x": -109,
-      "y": -9519,
-      "width": 220,
-      "height": 80,
-      "text": "**Hotelling Model**"
-    },
-    {
-      "id": "d84a70b40d0845e3",
-      "type": "text",
-      "x": 141,
-      "y": -9519,
-      "width": 220,
-      "height": 80,
-      "text": "**Information Set**"
-    },
-    {
-      "id": "01b34810bf784274",
-      "type": "text",
-      "x": -359,
-      "y": -9409,
-      "width": 220,
-      "height": 80,
-      "text": "**Limit**"
-    },
-    {
-      "id": "f240b950a0af48d6",
-      "type": "text",
-      "x": -109,
-      "y": -9409,
-      "width": 220,
-      "height": 80,
-      "text": "**Linear Combination of Two Random Variables**"
-    },
-    {
-      "id": "1bc9537161c04812",
-      "type": "text",
-      "x": 141,
-      "y": -9409,
-      "width": 220,
-      "height": 80,
-      "text": "**Model Misspecification**"
-    },
-    {
-      "id": "9cf84fe2b621443e",
-      "type": "text",
-      "x": -359,
-      "y": -9299,
-      "width": 220,
-      "height": 80,
-      "text": "**Nash Equilibrium**"
-    },
-    {
-      "id": "c407e87a53a54fd3",
-      "type": "text",
-      "x": -109,
-      "y": -9299,
-      "width": 220,
-      "height": 80,
-      "text": "**payoffs**"
-    },
-    {
-      "id": "c6ad956210894e70",
-      "type": "text",
-      "x": 141,
-      "y": -9299,
-      "width": 220,
-      "height": 80,
-      "text": "**Perfect Bayesian Equilibrium**"
-    },
-    {
-      "id": "f1035f5f298142f8",
-      "type": "text",
-      "x": -359,
-      "y": -9189,
-      "width": 220,
-      "height": 80,
-      "text": "**player**"
-    },
-    {
-      "id": "5d903e4821414cde",
-      "type": "text",
-      "x": -109,
-      "y": -9189,
-      "width": 220,
-      "height": 80,
-      "text": "**Pooling Equilibrium**"
-    },
-    {
-      "id": "4f86b6c1ae954a9c",
-      "type": "text",
-      "x": 141,
-      "y": -9189,
-      "width": 220,
-      "height": 80,
-      "text": "**Price-to-Book Ratio**"
-    },
-    {
-      "id": "2f1e7d89d77a433d",
-      "type": "text",
-      "x": -359,
-      "y": -9079,
-      "width": 220,
-      "height": 80,
-      "text": "**Prisoner's Dilemma**"
-    },
-    {
-      "id": "c075d8a89e82439e",
-      "type": "text",
-      "x": -109,
-      "y": -9079,
-      "width": 220,
-      "height": 80,
-      "text": "**Q Test**"
-    },
-    {
-      "id": "aea61895f99d4e73",
-      "type": "text",
-      "x": 141,
-      "y": -9079,
-      "width": 220,
-      "height": 80,
-      "text": "**Rationalisability**"
-    },
-    {
-      "id": "7a4a8ea467704f44",
-      "type": "text",
-      "x": -359,
-      "y": -8969,
-      "width": 220,
-      "height": 80,
-      "text": "**Repeated Games**"
-    },
-    {
-      "id": "41fcaa3f91854b1f",
-      "type": "text",
-      "x": -109,
-      "y": -8969,
-      "width": 220,
-      "height": 80,
-      "text": "**Separating Equilibrium**"
-    },
-    {
-      "id": "fdef34ce90854bb3",
-      "type": "text",
-      "x": 141,
-      "y": -8969,
-      "width": 220,
-      "height": 80,
-      "text": "**strategic-form Games**"
-    },
-    {
-      "id": "47f0f106ed3d4928",
-      "type": "text",
-      "x": -359,
-      "y": -8859,
+      "y": -6330,
       "width": 220,
       "height": 80,
       "text": "**strategies**"
     },
     {
-      "id": "70eebf7ca0464aae",
+      "id": "5226df59820140d4",
       "type": "text",
       "x": -109,
-      "y": -8859,
+      "y": -6330,
       "width": 220,
       "height": 80,
-      "text": "**Strictly Dominated Strategy**"
+      "text": "**Nash Equilibrium**"
     },
     {
-      "id": "f056d95c600243c3",
+      "id": "a3064bba95254a0c",
       "type": "text",
       "x": 141,
-      "y": -8859,
-      "width": 220,
-      "height": 80,
-      "text": "**Subgame**"
-    },
-    {
-      "id": "f5ca718c3a4a4521",
-      "type": "text",
-      "x": -359,
-      "y": -8749,
-      "width": 220,
-      "height": 80,
-      "text": "**Subgame Perfect Nash Equilibrium**"
-    },
-    {
-      "id": "a723eec409424eec",
-      "type": "text",
-      "x": -109,
-      "y": -8749,
-      "width": 220,
-      "height": 80,
-      "text": "****crazy Eddie和newmarket的博弈**，一种特殊的垄断**"
-    },
-    {
-      "id": "740b73f1152d47f0",
-      "type": "text",
-      "x": 141,
-      "y": -8749,
-      "width": 220,
-      "height": 80,
-      "text": "**03_策略式博弈**"
-    },
-    {
-      "id": "69d22c3d7aaa435c",
-      "type": "text",
-      "x": -359,
-      "y": -8639,
-      "width": 220,
-      "height": 80,
-      "text": "**04_混合策略的纳什均衡**"
-    },
-    {
-      "id": "9273d06c8cd6451d",
-      "type": "text",
-      "x": -109,
-      "y": -8639,
-      "width": 220,
-      "height": 80,
-      "text": "**06_扩展性博弈**"
-    },
-    {
-      "id": "196b21b0e37f40b9",
-      "type": "text",
-      "x": 141,
-      "y": -8639,
-      "width": 220,
-      "height": 80,
-      "text": "**07_子博弈不完全信息**"
-    },
-    {
-      "id": "773dd6fe3e31453b",
-      "type": "text",
-      "x": -359,
-      "y": -8529,
-      "width": 220,
-      "height": 80,
-      "text": "**1.1.player 局中人**"
-    },
-    {
-      "id": "c8ade42324414fae",
-      "type": "text",
-      "x": -109,
-      "y": -8529,
-      "width": 220,
-      "height": 80,
-      "text": "**1.2.strategies 策略**"
-    },
-    {
-      "id": "2834b3f22a894784",
-      "type": "text",
-      "x": 141,
-      "y": -8529,
-      "width": 220,
-      "height": 80,
-      "text": "**1.3.payoffs 效用**"
-    },
-    {
-      "id": "ae7cbbc2a62f4e9c",
-      "type": "text",
-      "x": -359,
-      "y": -8419,
-      "width": 220,
-      "height": 80,
-      "text": "**action**"
-    },
-    {
-      "id": "baffd6a147014d23",
-      "type": "text",
-      "x": -109,
-      "y": -8419,
-      "width": 220,
-      "height": 80,
-      "text": "**Advertising Game**"
-    },
-    {
-      "id": "be0d71afb05b4739",
-      "type": "text",
-      "x": 141,
-      "y": -8419,
-      "width": 220,
-      "height": 80,
-      "text": "**belief**"
-    },
-    {
-      "id": "766a755fa43e4e10",
-      "type": "text",
-      "x": -359,
-      "y": -8309,
-      "width": 220,
-      "height": 80,
-      "text": "**C**"
-    },
-    {
-      "id": "7b3a2017d6334975",
-      "type": "text",
-      "x": -109,
-      "y": -8309,
-      "width": 220,
-      "height": 80,
-      "text": "**coordinated  attack**"
-    },
-    {
-      "id": "c38b2d4816134dc8",
-      "type": "text",
-      "x": 141,
-      "y": -8309,
-      "width": 220,
-      "height": 80,
-      "text": "**crazy Eddie和newmarket的博弈**"
-    },
-    {
-      "id": "317355e0bd6b42bd",
-      "type": "text",
-      "x": -359,
-      "y": -8199,
-      "width": 220,
-      "height": 80,
-      "text": "**D**"
-    },
-    {
-      "id": "e3faf53bfee9435f",
-      "type": "text",
-      "x": -109,
-      "y": -8199,
-      "width": 220,
-      "height": 80,
-      "text": "**definition**"
-    },
-    {
-      "id": "6eec3fb1ce604a7d",
-      "type": "text",
-      "x": 141,
-      "y": -8199,
-      "width": 220,
-      "height": 80,
-      "text": "**eg：政府工作招标**"
-    },
-    {
-      "id": "f1765b4f104b4ae8",
-      "type": "text",
-      "x": -359,
-      "y": -8089,
-      "width": 220,
-      "height": 80,
-      "text": "**entry Deterrence**"
-    },
-    {
-      "id": "2c6c7ccbc5324e8d",
-      "type": "text",
-      "x": -109,
-      "y": -8089,
-      "width": 220,
-      "height": 80,
-      "text": "**Extensive-Form Games**"
-    },
-    {
-      "id": "492204fd15be4b0b",
-      "type": "text",
-      "x": 141,
-      "y": -8089,
-      "width": 220,
-      "height": 80,
-      "text": "**Global Game**"
-    },
-    {
-      "id": "136faf773cdc470e",
-      "type": "text",
-      "x": -359,
-      "y": -7979,
-      "width": 220,
-      "height": 80,
-      "text": "**Hotelling 和古诺的辨析**"
-    },
-    {
-      "id": "cb000223101e4b06",
-      "type": "text",
-      "x": -109,
-      "y": -7979,
-      "width": 220,
-      "height": 80,
-      "text": "**investment game**"
-    },
-    {
-      "id": "7b4f589902e1421b",
-      "type": "text",
-      "x": 141,
-      "y": -7979,
-      "width": 220,
-      "height": 80,
-      "text": "**matching pennies**"
-    },
-    {
-      "id": "fb3e56ad91454c36",
-      "type": "text",
-      "x": -359,
-      "y": -7869,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240303162257.png**"
-    },
-    {
-      "id": "a54f379c47a54be6",
-      "type": "text",
-      "x": -109,
-      "y": -7869,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240303162619.png**"
-    },
-    {
-      "id": "aa20468043df4d8a",
-      "type": "text",
-      "x": 141,
-      "y": -7869,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240303162911.png**"
-    },
-    {
-      "id": "293eb78e4009472d",
-      "type": "text",
-      "x": -359,
-      "y": -7759,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240303163023.png**"
-    },
-    {
-      "id": "e4e4bcdb13c7484b",
-      "type": "text",
-      "x": -109,
-      "y": -7759,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240303163055.png**"
-    },
-    {
-      "id": "7bb7d73990c24abd",
-      "type": "text",
-      "x": 141,
-      "y": -7759,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240303163217.png**"
-    },
-    {
-      "id": "c5ca9c07159f4d3e",
-      "type": "text",
-      "x": -359,
-      "y": -7649,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240305225834.png**"
-    },
-    {
-      "id": "f6ed8c8c67e74380",
-      "type": "text",
-      "x": -109,
-      "y": -7649,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240305230159.png**"
-    },
-    {
-      "id": "1e74981f3cec4406",
-      "type": "text",
-      "x": 141,
-      "y": -7649,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240305231548.png**"
-    },
-    {
-      "id": "cebd0520d11e4cf1",
-      "type": "text",
-      "x": -359,
-      "y": -7539,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240305231646.png**"
-    },
-    {
-      "id": "ceb4a1a143c14ea1",
-      "type": "text",
-      "x": -109,
-      "y": -7539,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240305232048.png**"
-    },
-    {
-      "id": "b4c17c4dba924b5f",
-      "type": "text",
-      "x": 141,
-      "y": -7539,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240305232147.png**"
-    },
-    {
-      "id": "f8a02bba6f7044c8",
-      "type": "text",
-      "x": -359,
-      "y": -7429,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240305233410.png**"
-    },
-    {
-      "id": "f8f55c9781474963",
-      "type": "text",
-      "x": -109,
-      "y": -7429,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240305233643.png**"
-    },
-    {
-      "id": "9b0e3f1ecd87402b",
-      "type": "text",
-      "x": 141,
-      "y": -7429,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240305233856.png**"
-    },
-    {
-      "id": "fa5a8d72ede0447a",
-      "type": "text",
-      "x": -359,
-      "y": -7319,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240305233917.png**"
-    },
-    {
-      "id": "126a28d3ba2c4ea0",
-      "type": "text",
-      "x": -109,
-      "y": -7319,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240305234013.png**"
-    },
-    {
-      "id": "c19e5426fa8942a0",
-      "type": "text",
-      "x": 141,
-      "y": -7319,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240305234151.png**"
-    },
-    {
-      "id": "bc0795a396a149b4",
-      "type": "text",
-      "x": -359,
-      "y": -7209,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240305234344.png**"
-    },
-    {
-      "id": "f6b08ee5f0304541",
-      "type": "text",
-      "x": -109,
-      "y": -7209,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240305234504.png**"
-    },
-    {
-      "id": "147af4cceaff4410",
-      "type": "text",
-      "x": 141,
-      "y": -7209,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240311214936.png**"
-    },
-    {
-      "id": "e2a15a8fe1f64303",
-      "type": "text",
-      "x": -359,
-      "y": -7099,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240311215053.png**"
-    },
-    {
-      "id": "cf4d7801b6a44afb",
-      "type": "text",
-      "x": -109,
-      "y": -7099,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240311215251.png**"
-    },
-    {
-      "id": "65263fd3b8364da4",
-      "type": "text",
-      "x": 141,
-      "y": -7099,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240311231715.png**"
-    },
-    {
-      "id": "d61befbf957a414d",
-      "type": "text",
-      "x": -359,
-      "y": -6989,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240313200428.png**"
-    },
-    {
-      "id": "81b7ba670cc44c74",
-      "type": "text",
-      "x": -109,
-      "y": -6989,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240313200506.png**"
-    },
-    {
-      "id": "27ba00998b124026",
-      "type": "text",
-      "x": 141,
-      "y": -6989,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240313200645.png**"
-    },
-    {
-      "id": "8df4e47842c9411e",
-      "type": "text",
-      "x": -359,
-      "y": -6879,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240313205931.png**"
-    },
-    {
-      "id": "a7d554a4421d470d",
-      "type": "text",
-      "x": -109,
-      "y": -6879,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240313210044.png**"
-    },
-    {
-      "id": "5cfcaf08dd1c41ee",
-      "type": "text",
-      "x": 141,
-      "y": -6879,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240313210138.png**"
-    },
-    {
-      "id": "5c271060439a4a18",
-      "type": "text",
-      "x": -359,
-      "y": -6769,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240313210231.png**"
-    },
-    {
-      "id": "5e5bda233efe4db1",
-      "type": "text",
-      "x": -109,
-      "y": -6769,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240313210359.png**"
-    },
-    {
-      "id": "f8b15297e07b4046",
-      "type": "text",
-      "x": 141,
-      "y": -6769,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240313210534.png**"
-    },
-    {
-      "id": "e9d2dc40aed34f73",
-      "type": "text",
-      "x": -359,
-      "y": -6659,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240314080523.png**"
-    },
-    {
-      "id": "97be6e2c3f8a4d41",
-      "type": "text",
-      "x": -109,
-      "y": -6659,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240314080537.png**"
-    },
-    {
-      "id": "bfa8a96ac235477b",
-      "type": "text",
-      "x": 141,
-      "y": -6659,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240314080802.png**"
-    },
-    {
-      "id": "c604619cfaba4cec",
-      "type": "text",
-      "x": -359,
-      "y": -6549,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240314080817.png**"
-    },
-    {
-      "id": "2a030186fb58423f",
-      "type": "text",
-      "x": -109,
-      "y": -6549,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240314083043.png**"
-    },
-    {
-      "id": "1c8cb6ac772f4991",
-      "type": "text",
-      "x": 141,
-      "y": -6549,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240314083105.png**"
-    },
-    {
-      "id": "22ac62f7bc1d4557",
-      "type": "text",
-      "x": -359,
-      "y": -6439,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240314084308.png**"
-    },
-    {
-      "id": "f4cf83b44261483c",
-      "type": "text",
-      "x": -109,
-      "y": -6439,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240320212438.png**"
-    },
-    {
-      "id": "fa6584befec647a4",
-      "type": "text",
-      "x": 141,
-      "y": -6439,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240320212508.png**"
-    },
-    {
-      "id": "1bdbdd8e8b844620",
-      "type": "text",
-      "x": -359,
-      "y": -6329,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240320212701.png**"
-    },
-    {
-      "id": "f56824f2e29143c7",
-      "type": "text",
-      "x": -109,
-      "y": -6329,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240321214842.png**"
-    },
-    {
-      "id": "20aab006d9f5435b",
-      "type": "text",
-      "x": 141,
-      "y": -6329,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240321224444.png**"
-    },
-    {
-      "id": "6956968f2e0a4f84",
-      "type": "text",
-      "x": -359,
-      "y": -6219,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240321230352.png**"
-    },
-    {
-      "id": "e2b87c20ea71466e",
-      "type": "text",
-      "x": -109,
-      "y": -6219,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240322141037.png**"
-    },
-    {
-      "id": "d6b44dd64b254d78",
-      "type": "text",
-      "x": 141,
-      "y": -6219,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240322141305.png**"
-    },
-    {
-      "id": "111af276d94c45e3",
-      "type": "text",
-      "x": -359,
-      "y": -6109,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240322213743.png**"
-    },
-    {
-      "id": "1a9fc14cae9446f2",
-      "type": "text",
-      "x": -109,
-      "y": -6109,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240325195002.png**"
-    },
-    {
-      "id": "f97d7901e2a84712",
-      "type": "text",
-      "x": 141,
-      "y": -6109,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240325200436.png**"
-    },
-    {
-      "id": "854100474bb14298",
-      "type": "text",
-      "x": -359,
-      "y": -5999,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240325200712.png**"
-    },
-    {
-      "id": "487139e08ccd45d2",
-      "type": "text",
-      "x": -109,
-      "y": -5999,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240325200723.png**"
-    },
-    {
-      "id": "c547ddc651c4415e",
-      "type": "text",
-      "x": 141,
-      "y": -5999,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240326131442.png**"
-    },
-    {
-      "id": "7be3cbe07a824e11",
-      "type": "text",
-      "x": -359,
-      "y": -5889,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240326132253.png**"
-    },
-    {
-      "id": "924c576120db4bb4",
-      "type": "text",
-      "x": -109,
-      "y": -5889,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240326132416.png**"
-    },
-    {
-      "id": "a33cb0b52bbb4b8d",
-      "type": "text",
-      "x": 141,
-      "y": -5889,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240326143255.png**"
-    },
-    {
-      "id": "d2d8d58d199b4128",
-      "type": "text",
-      "x": -359,
-      "y": -5779,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240326150334.png**"
-    },
-    {
-      "id": "e4a17f4d70f84915",
-      "type": "text",
-      "x": -109,
-      "y": -5779,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240328212230.png**"
-    },
-    {
-      "id": "bc3c7588a3a64f9c",
-      "type": "text",
-      "x": 141,
-      "y": -5779,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240328215317.png**"
-    },
-    {
-      "id": "500a33ab9e504499",
-      "type": "text",
-      "x": -359,
-      "y": -5669,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240328215330.png**"
-    },
-    {
-      "id": "a9c684ac4f8d4304",
-      "type": "text",
-      "x": -109,
-      "y": -5669,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240330160407.png**"
-    },
-    {
-      "id": "be0e2adcb7bb4662",
-      "type": "text",
-      "x": 141,
-      "y": -5669,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240330183327.png**"
-    },
-    {
-      "id": "cc11858cd7784071",
-      "type": "text",
-      "x": -359,
-      "y": -5559,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240401183224.png**"
-    },
-    {
-      "id": "4c23fdb520e74f4f",
-      "type": "text",
-      "x": -109,
-      "y": -5559,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240401192147.png**"
-    },
-    {
-      "id": "8c8ba88eb9b54399",
-      "type": "text",
-      "x": 141,
-      "y": -5559,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240408161943.png**"
-    },
-    {
-      "id": "03ad71979b074150",
-      "type": "text",
-      "x": -359,
-      "y": -5449,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240408163433.png**"
-    },
-    {
-      "id": "b08887399e0f4852",
-      "type": "text",
-      "x": -109,
-      "y": -5449,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240408163547.png**"
-    },
-    {
-      "id": "315012b17ffd44f5",
-      "type": "text",
-      "x": 141,
-      "y": -5449,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240408163758.png**"
-    },
-    {
-      "id": "140a03ac521a451a",
-      "type": "text",
-      "x": -359,
-      "y": -5339,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240408163844.png**"
-    },
-    {
-      "id": "319fce942de34bed",
-      "type": "text",
-      "x": -109,
-      "y": -5339,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240409104615.png**"
-    },
-    {
-      "id": "708e5add71ba4cd7",
-      "type": "text",
-      "x": 141,
-      "y": -5339,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240409105306.png**"
-    },
-    {
-      "id": "4ff4186018cc40ed",
-      "type": "text",
-      "x": -359,
-      "y": -5229,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240409111916.png**"
-    },
-    {
-      "id": "b60c4754ee6e42a3",
-      "type": "text",
-      "x": -109,
-      "y": -5229,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240411195529.png**"
-    },
-    {
-      "id": "c05ed90e5d194c28",
-      "type": "text",
-      "x": 141,
-      "y": -5229,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240411200217.png**"
-    },
-    {
-      "id": "c0e0295ed4654016",
-      "type": "text",
-      "x": -359,
-      "y": -5119,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240414104320.png**"
-    },
-    {
-      "id": "e5a06f1165c94e99",
-      "type": "text",
-      "x": -109,
-      "y": -5119,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240417092350.png**"
-    },
-    {
-      "id": "9812025fca0b4283",
-      "type": "text",
-      "x": 141,
-      "y": -5119,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240417194417.png**"
-    },
-    {
-      "id": "066df531c0964f02",
-      "type": "text",
-      "x": -359,
-      "y": -5009,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240417195419.png**"
-    },
-    {
-      "id": "70f39beff2c34276",
-      "type": "text",
-      "x": -109,
-      "y": -5009,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240417200105.png**"
-    },
-    {
-      "id": "8fb0cc27c02a497c",
-      "type": "text",
-      "x": 141,
-      "y": -5009,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240417201247.png**"
-    },
-    {
-      "id": "9d5f04fae414410b",
-      "type": "text",
-      "x": -359,
-      "y": -4899,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240417202820.png**"
-    },
-    {
-      "id": "4e996bca7f2b4e34",
-      "type": "text",
-      "x": -109,
-      "y": -4899,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240417203557.png**"
-    },
-    {
-      "id": "6a0152800fe842cd",
-      "type": "text",
-      "x": 141,
-      "y": -4899,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240417205505.png**"
-    },
-    {
-      "id": "3ba2d03be5454391",
-      "type": "text",
-      "x": -359,
-      "y": -4789,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240417205745.png**"
-    },
-    {
-      "id": "67b16f86cbc14d32",
-      "type": "text",
-      "x": -109,
-      "y": -4789,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240417210200.png**"
-    },
-    {
-      "id": "f13023c3d71846e3",
-      "type": "text",
-      "x": 141,
-      "y": -4789,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240418081616.png**"
-    },
-    {
-      "id": "71e13e6c92c7426a",
-      "type": "text",
-      "x": -359,
-      "y": -4679,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240418081825.png**"
-    },
-    {
-      "id": "9b8f506ee5a64a1b",
-      "type": "text",
-      "x": -109,
-      "y": -4679,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240418082946.png**"
-    },
-    {
-      "id": "92170eb2f2a1465f",
-      "type": "text",
-      "x": 141,
-      "y": -4679,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240418083634.png**"
-    },
-    {
-      "id": "e3b8294e7b0a4370",
-      "type": "text",
-      "x": -359,
-      "y": -4569,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240425195436.png**"
-    },
-    {
-      "id": "7017297659ca4141",
-      "type": "text",
-      "x": -109,
-      "y": -4569,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240425195503.png**"
-    },
-    {
-      "id": "6926eb0a0c1c47df",
-      "type": "text",
-      "x": 141,
-      "y": -4569,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240425201046.png**"
-    },
-    {
-      "id": "ccbb6357e4be4668",
-      "type": "text",
-      "x": -359,
-      "y": -4459,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240425201142.png**"
-    },
-    {
-      "id": "a59f0a5c7a64415d",
-      "type": "text",
-      "x": -109,
-      "y": -4459,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240425201549.png**"
-    },
-    {
-      "id": "e47754b756c84c1b",
-      "type": "text",
-      "x": 141,
-      "y": -4459,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240425201613.png**"
-    },
-    {
-      "id": "e13de533e1bc41de",
-      "type": "text",
-      "x": -359,
-      "y": -4349,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240430161327.png**"
-    },
-    {
-      "id": "cff67a92c92a4e08",
-      "type": "text",
-      "x": -109,
-      "y": -4349,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240430170207.png**"
-    },
-    {
-      "id": "ebbbcc38c96e428c",
-      "type": "text",
-      "x": 141,
-      "y": -4349,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240501153106.png**"
-    },
-    {
-      "id": "58b0990e2f5b4801",
-      "type": "text",
-      "x": -359,
-      "y": -4239,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240501153253.png**"
-    },
-    {
-      "id": "89d1229a0ead486f",
-      "type": "text",
-      "x": -109,
-      "y": -4239,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240501153522.png**"
-    },
-    {
-      "id": "56b94040525143ec",
-      "type": "text",
-      "x": 141,
-      "y": -4239,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240501165038.png**"
-    },
-    {
-      "id": "9309460389fd41f3",
-      "type": "text",
-      "x": -359,
-      "y": -4129,
-      "width": 220,
-      "height": 80,
-      "text": "**Pasted image 20240501165047.png**"
-    },
-    {
-      "id": "44fcca3df307487b",
-      "type": "text",
-      "x": -109,
-      "y": -4129,
-      "width": 220,
-      "height": 80,
-      "text": "**perfect-Bayesian Equilibrium**"
-    },
-    {
-      "id": "5baa69d81fae4f3d",
-      "type": "text",
-      "x": 141,
-      "y": -4129,
-      "width": 220,
-      "height": 80,
-      "text": "**strategy**"
-    },
-    {
-      "id": "9d98a64acd93481b",
-      "type": "text",
-      "x": -359,
-      "y": -4019,
-      "width": 220,
-      "height": 80,
-      "text": "**Submodular and Supermodular Games**"
-    },
-    {
-      "id": "47da019af0e342c3",
-      "type": "text",
-      "x": -109,
-      "y": -4019,
-      "width": 220,
-      "height": 80,
-      "text": "**type**"
-    },
-    {
-      "id": "0ca0c813d88a42c5",
-      "type": "text",
-      "x": 141,
-      "y": -4019,
-      "width": 220,
-      "height": 80,
-      "text": "**一个案例**"
-    },
-    {
-      "id": "b97ad690d4954378",
-      "type": "text",
-      "x": -359,
-      "y": -3909,
-      "width": 220,
-      "height": 80,
-      "text": "**一种不同的情况**"
-    },
-    {
-      "id": "847a37df6be94e21",
-      "type": "text",
-      "x": -109,
-      "y": -3909,
-      "width": 220,
-      "height": 80,
-      "text": "**两个犯人先后审问**"
-    },
-    {
-      "id": "75d38ade6896427e",
-      "type": "text",
-      "x": 141,
-      "y": -3909,
-      "width": 220,
-      "height": 80,
-      "text": "**严格优势策略定义（Definition 4）**"
-    },
-    {
-      "id": "6ef58daad9784870",
-      "type": "text",
-      "x": -359,
-      "y": -3799,
-      "width": 220,
-      "height": 80,
-      "text": "**严格劣于**"
-    },
-    {
-      "id": "03c16493941b434b",
-      "type": "text",
-      "x": -109,
-      "y": -3799,
-      "width": 220,
-      "height": 80,
-      "text": "**严格劣势策略定义（Definition 3）**"
-    },
-    {
-      "id": "cd0f1a45d67e4030",
-      "type": "text",
-      "x": 141,
-      "y": -3799,
-      "width": 220,
-      "height": 80,
-      "text": "**严格占优**"
-    },
-    {
-      "id": "47191e32d67b44bc",
-      "type": "text",
-      "x": -359,
-      "y": -3689,
-      "width": 220,
-      "height": 80,
-      "text": "**严格占优策略定义（Definition 2）**"
-    },
-    {
-      "id": "c6690c8f01b64385",
-      "type": "text",
-      "x": -109,
-      "y": -3689,
-      "width": 220,
-      "height": 80,
-      "text": "**为什会先增加后减少？**"
-    },
-    {
-      "id": "09cfa0f1ff3145a2",
-      "type": "text",
-      "x": 141,
-      "y": -3689,
-      "width": 220,
-      "height": 80,
-      "text": "**五元素**"
-    },
-    {
-      "id": "f795f182dd7d4bce",
-      "type": "text",
-      "x": -359,
-      "y": -3579,
-      "width": 220,
-      "height": 80,
-      "text": "**介绍**"
-    },
-    {
-      "id": "72037c76340a466d",
-      "type": "text",
-      "x": -109,
-      "y": -3579,
-      "width": 220,
-      "height": 80,
-      "text": "**价格竞争(Price Competition)**"
-    },
-    {
-      "id": "8af2217becf442a2",
-      "type": "text",
-      "x": 141,
-      "y": -3579,
-      "width": 220,
-      "height": 80,
-      "text": "**优势策略均衡**"
-    },
-    {
-      "id": "be167a8c0e644dc1",
-      "type": "text",
-      "x": -359,
-      "y": -3469,
-      "width": 220,
-      "height": 80,
-      "text": "**使用精炼贝叶斯均衡的案例**"
-    },
-    {
-      "id": "e1bf9a808a074175",
-      "type": "text",
-      "x": -109,
-      "y": -3469,
-      "width": 220,
-      "height": 80,
-      "text": "**信息集information set**"
-    },
-    {
-      "id": "1b120f826d42454e",
-      "type": "text",
-      "x": 141,
-      "y": -3469,
-      "width": 220,
-      "height": 80,
-      "text": "**信息集概念**"
-    },
-    {
-      "id": "934db5b5c4e443c9",
-      "type": "text",
-      "x": -359,
-      "y": -3359,
-      "width": 220,
-      "height": 80,
-      "text": "**其他相似情形**"
-    },
-    {
-      "id": "5c8ce92dfc754f12",
-      "type": "text",
-      "x": -109,
-      "y": -3359,
-      "width": 220,
-      "height": 80,
-      "text": "**内容**"
-    },
-    {
-      "id": "dabd89a7cf2d4c28",
-      "type": "text",
-      "x": 141,
-      "y": -3359,
+      "y": -6330,
       "width": 220,
       "height": 80,
       "text": "**分析**"
     },
     {
-      "id": "f1698831e3834040",
+      "id": "6ee32f39145e496f",
       "type": "text",
       "x": -359,
-      "y": -3249,
-      "width": 220,
-      "height": 80,
-      "text": "**分析-最优反应函数的求解**"
-    },
-    {
-      "id": "c0df8e1639f74183",
-      "type": "text",
-      "x": -109,
-      "y": -3249,
-      "width": 220,
-      "height": 80,
-      "text": "**分类**"
-    },
-    {
-      "id": "e5c84455fcf9421b",
-      "type": "text",
-      "x": 141,
-      "y": -3249,
-      "width": 220,
-      "height": 80,
-      "text": "**变体:belief的引入**"
-    },
-    {
-      "id": "19966251954a4c5d",
-      "type": "text",
-      "x": -359,
-      "y": -3139,
-      "width": 220,
-      "height": 80,
-      "text": "**变体：correlated types**"
-    },
-    {
-      "id": "79425cf719c74a2e",
-      "type": "text",
-      "x": -109,
-      "y": -3139,
-      "width": 220,
-      "height": 80,
-      "text": "**可理性化 Rationalisability**"
-    },
-    {
-      "id": "409606ed87e247ae",
-      "type": "text",
-      "x": 141,
-      "y": -3139,
-      "width": 220,
-      "height": 80,
-      "text": "**咖啡厅还是酒吧**"
-    },
-    {
-      "id": "ffa64078cec64a6b",
-      "type": "text",
-      "x": -359,
-      "y": -3029,
-      "width": 220,
-      "height": 80,
-      "text": "**囚徒困境The Prisoners’ Dilemma**"
-    },
-    {
-      "id": "1260eba2e97740e1",
-      "type": "text",
-      "x": -109,
-      "y": -3029,
-      "width": 220,
-      "height": 80,
-      "text": "**垄断**"
-    },
-    {
-      "id": "faa92c661a224944",
-      "type": "text",
-      "x": 141,
-      "y": -3029,
-      "width": 220,
-      "height": 80,
-      "text": "**垄断(Monopoly)**"
-    },
-    {
-      "id": "d80908083af54711",
-      "type": "text",
-      "x": -359,
-      "y": -2919,
+      "y": -6220,
       "width": 220,
       "height": 80,
       "text": "**基本信息**"
     },
     {
-      "id": "e8dc00c26e7f4fbe",
+      "id": "c55050c4357943e5",
       "type": "text",
       "x": -109,
-      "y": -2919,
+      "y": -6220,
       "width": 220,
       "height": 80,
-      "text": "**基本内容**"
+      "text": "**Extensive-form Game**"
     },
     {
-      "id": "e6762d6b306843dd",
+      "id": "fa6c4095098a4a59",
       "type": "text",
       "x": 141,
-      "y": -2919,
+      "y": -6220,
       "width": 220,
       "height": 80,
-      "text": "**奇数定律**"
+      "text": "**Best-Reply Function**"
     },
     {
-      "id": "32693a98c9be40ca",
+      "id": "a9871cc9a343498e",
       "type": "text",
       "x": -359,
-      "y": -2809,
+      "y": -6110,
       "width": 220,
       "height": 80,
-      "text": "**如何得到separating equilibrium中的均衡**"
+      "text": "**03_策略式博弈**"
     },
     {
-      "id": "5f6726d351834bc9",
+      "id": "e677eca7ff6c4320",
       "type": "text",
       "x": -109,
-      "y": -2809,
+      "y": -6110,
       "width": 220,
       "height": 80,
-      "text": "**如何找出纳什均衡**"
+      "text": "**Perfect Bayesian Equilibrium**"
     },
     {
-      "id": "a61e9136d74a496c",
+      "id": "1f8c0620002c4a89",
       "type": "text",
       "x": 141,
-      "y": -2809,
+      "y": -6110,
       "width": 220,
       "height": 80,
-      "text": "**如何走出囚徒困境**"
+      "text": "**Information Set**"
     },
     {
-      "id": "28fc2a28e2a24348",
+      "id": "f81ba1933bae44c2",
       "type": "text",
       "x": -359,
-      "y": -2699,
+      "y": -6000,
       "width": 220,
       "height": 80,
-      "text": "**如果p大于2/5**"
+      "text": "**player**"
     },
     {
-      "id": "550db53c10714748",
+      "id": "bdb3ddbb7bd14e04",
       "type": "text",
       "x": -109,
-      "y": -2699,
+      "y": -6000,
       "width": 220,
       "height": 80,
-      "text": "**如果p小于2/5**"
+      "text": "**Subgame**"
     },
     {
-      "id": "71a790a94c0645b2",
+      "id": "1c89e759436b41a9",
       "type": "text",
       "x": 141,
-      "y": -2699,
+      "y": -6000,
       "width": 220,
       "height": 80,
-      "text": "**子博弈sub-game**"
+      "text": "**payoffs**"
     },
     {
-      "id": "37d05129c7d14d16",
+      "id": "764de09bb67e4424",
       "type": "text",
       "x": -359,
-      "y": -2589,
-      "width": 220,
-      "height": 80,
-      "text": "**子博弈精炼均衡subgame-perfect equilibrium**"
-    },
-    {
-      "id": "323af8f98e08466a",
-      "type": "text",
-      "x": -109,
-      "y": -2589,
-      "width": 220,
-      "height": 80,
-      "text": "**子博弈精炼纳什均衡 Subgame Perfect Nash equilibrium**"
-    },
-    {
-      "id": "8c39ced69f6b4fb4",
-      "type": "text",
-      "x": 141,
-      "y": -2589,
-      "width": 220,
-      "height": 80,
-      "text": "**完全竞争(Perfect Competition)**"
-    },
-    {
-      "id": "4e78bb56ad0a46cd",
-      "type": "text",
-      "x": -359,
-      "y": -2479,
-      "width": 220,
-      "height": 80,
-      "text": "**定义**"
-    },
-    {
-      "id": "a10d9277253a4f67",
-      "type": "text",
-      "x": -109,
-      "y": -2479,
-      "width": 220,
-      "height": 80,
-      "text": "**定义definition**"
-    },
-    {
-      "id": "682c1fdd67f34d57",
-      "type": "text",
-      "x": 141,
-      "y": -2479,
-      "width": 220,
-      "height": 80,
-      "text": "**寡头(Oligopoly)**"
-    },
-    {
-      "id": "2749e9d9bcad4030",
-      "type": "text",
-      "x": -359,
-      "y": -2369,
-      "width": 220,
-      "height": 80,
-      "text": "**寻找纳什均衡的方法**"
-    },
-    {
-      "id": "7659b3691b8a4d1b",
-      "type": "text",
-      "x": -109,
-      "y": -2369,
-      "width": 220,
-      "height": 80,
-      "text": "**将五元素转化为3要素**"
-    },
-    {
-      "id": "d084c5310dc74b29",
-      "type": "text",
-      "x": 141,
-      "y": -2369,
-      "width": 220,
-      "height": 80,
-      "text": "**将扩展性博弈转化为策略式博弈**"
-    },
-    {
-      "id": "158883784c954dbb",
-      "type": "text",
-      "x": -359,
-      "y": -2259,
-      "width": 220,
-      "height": 80,
-      "text": "**延伸到三人的博弈**"
-    },
-    {
-      "id": "9c62833b114b40cc",
-      "type": "text",
-      "x": -109,
-      "y": -2259,
-      "width": 220,
-      "height": 80,
-      "text": "**引入**"
-    },
-    {
-      "id": "018aff57e92d49a6",
-      "type": "text",
-      "x": 141,
-      "y": -2259,
-      "width": 220,
-      "height": 80,
-      "text": "**引申**"
-    },
-    {
-      "id": "97705905ec224d29",
-      "type": "text",
-      "x": -359,
-      "y": -2149,
-      "width": 220,
-      "height": 80,
-      "text": "**思想**"
-    },
-    {
-      "id": "c96d45c8f01e4078",
-      "type": "text",
-      "x": -109,
-      "y": -2149,
-      "width": 220,
-      "height": 80,
-      "text": "**恐吓Entry Deterrence with an Explicit Threat**"
-    },
-    {
-      "id": "a2ce1e5fb28a4abf",
-      "type": "text",
-      "x": 141,
-      "y": -2149,
-      "width": 220,
-      "height": 80,
-      "text": "**情况描述**"
-    },
-    {
-      "id": "e734dfc1c864486f",
-      "type": "text",
-      "x": -359,
-      "y": -2039,
-      "width": 220,
-      "height": 80,
-      "text": "**情景描述**"
-    },
-    {
-      "id": "a6ec7233c08d492e",
-      "type": "text",
-      "x": -109,
-      "y": -2039,
-      "width": 220,
-      "height": 80,
-      "text": "**打猎打兔子还是鹿**"
-    },
-    {
-      "id": "e5a91e3f2fbe4c73",
-      "type": "text",
-      "x": 141,
-      "y": -2039,
-      "width": 220,
-      "height": 80,
-      "text": "**拓展到n家寡头**"
-    },
-    {
-      "id": "34b896b61d1b4d25",
-      "type": "text",
-      "x": -359,
-      "y": -1929,
-      "width": 220,
-      "height": 80,
-      "text": "**描述博弈的两个方法**"
-    },
-    {
-      "id": "1c898e192fac4e47",
-      "type": "text",
-      "x": -109,
-      "y": -1929,
-      "width": 220,
-      "height": 80,
-      "text": "**改变的内容**"
-    },
-    {
-      "id": "e370b81ff8f8402c",
-      "type": "text",
-      "x": 141,
-      "y": -1929,
-      "width": 220,
-      "height": 80,
-      "text": "**最优反应函数Best-Reply Functions**"
-    },
-    {
-      "id": "6024498995ab40c6",
-      "type": "text",
-      "x": -359,
-      "y": -1819,
-      "width": 220,
-      "height": 80,
-      "text": "**最优反应函数求解**"
-    },
-    {
-      "id": "a9a7923464824d8c",
-      "type": "text",
-      "x": -109,
-      "y": -1819,
-      "width": 220,
-      "height": 80,
-      "text": "**最优反应函数求解纳什均衡**"
-    },
-    {
-      "id": "072fbb4fd4ba452a",
-      "type": "text",
-      "x": 141,
-      "y": -1819,
-      "width": 220,
-      "height": 80,
-      "text": "**有尽头的重复博弈**"
-    },
-    {
-      "id": "187a889a30ab4b5b",
-      "type": "text",
-      "x": -359,
-      "y": -1709,
-      "width": 220,
-      "height": 80,
-      "text": "**有效的恐吓**"
-    },
-    {
-      "id": "2e46abbd09024653",
-      "type": "text",
-      "x": -109,
-      "y": -1709,
-      "width": 220,
-      "height": 80,
-      "text": "**样例**"
-    },
-    {
-      "id": "2732e40f2a554f49",
-      "type": "text",
-      "x": 141,
-      "y": -1709,
-      "width": 220,
-      "height": 80,
-      "text": "**案例**"
-    },
-    {
-      "id": "071987938dea44c2",
-      "type": "text",
-      "x": -359,
-      "y": -1599,
-      "width": 220,
-      "height": 80,
-      "text": "**案例信息**"
-    },
-    {
-      "id": "b77d4b83aac74266",
-      "type": "text",
-      "x": -109,
-      "y": -1599,
-      "width": 220,
-      "height": 80,
-      "text": "**案例：noisy battle of sexes**"
-    },
-    {
-      "id": "d3557d1b13b94850",
-      "type": "text",
-      "x": 141,
-      "y": -1599,
-      "width": 220,
-      "height": 80,
-      "text": "**案例：以[[06_扩展性博弈**"
-    },
-    {
-      "id": "2f660a3b0698401f",
-      "type": "text",
-      "x": -359,
-      "y": -1489,
-      "width": 220,
-      "height": 80,
-      "text": "**案例：千足虫博弈**"
-    },
-    {
-      "id": "1cb5267e267a4c8a",
-      "type": "text",
-      "x": -109,
-      "y": -1489,
-      "width": 220,
-      "height": 80,
-      "text": "**求解纳什均衡**"
-    },
-    {
-      "id": "8de72e1e42564a00",
-      "type": "text",
-      "x": 141,
-      "y": -1489,
-      "width": 220,
-      "height": 80,
-      "text": "**没有尽头的重复博弈（不知道什么时候是尽头）**"
-    },
-    {
-      "id": "11806be1ec4d4ba2",
-      "type": "text",
-      "x": -359,
-      "y": -1379,
-      "width": 220,
-      "height": 80,
-      "text": "**混合策略中的严格优势与严格劣势**"
-    },
-    {
-      "id": "03dbf1b1a1124de3",
-      "type": "text",
-      "x": -109,
-      "y": -1379,
-      "width": 220,
-      "height": 80,
-      "text": "**混合策略中的纳什均衡**"
-    },
-    {
-      "id": "a25a6d0ba0d9421e",
-      "type": "text",
-      "x": 141,
-      "y": -1379,
-      "width": 220,
-      "height": 80,
-      "text": "**混合策略的纳什均衡**"
-    },
-    {
-      "id": "7937c9e6d4294db7",
-      "type": "text",
-      "x": -359,
-      "y": -1269,
-      "width": 220,
-      "height": 80,
-      "text": "**电商对价格的影响**"
-    },
-    {
-      "id": "4bb1c6ee3c994dfb",
-      "type": "text",
-      "x": -109,
-      "y": -1269,
-      "width": 220,
-      "height": 80,
-      "text": "**画横线**"
-    },
-    {
-      "id": "0584785a3ebf4fb3",
-      "type": "text",
-      "x": 141,
-      "y": -1269,
-      "width": 220,
-      "height": 80,
-      "text": "**画箭头**"
-    },
-    {
-      "id": "3c00c3e90efe4013",
-      "type": "text",
-      "x": -359,
-      "y": -1159,
-      "width": 220,
-      "height": 80,
-      "text": "**石头剪刀布**"
-    },
-    {
-      "id": "9eea0e31bd634fe1",
-      "type": "text",
-      "x": -109,
-      "y": -1159,
+      "y": -5890,
       "width": 220,
       "height": 80,
       "text": "**纯策略的纳什均衡**"
     },
     {
-      "id": "72c3a0e07ebc4211",
+      "id": "89bfc899ac8548b9",
+      "type": "text",
+      "x": -109,
+      "y": -5890,
+      "width": 220,
+      "height": 80,
+      "text": "**Repeated Games**"
+    },
+    {
+      "id": "7f59b4fedd854be8",
       "type": "text",
       "x": 141,
-      "y": -1159,
+      "y": -5890,
+      "width": 220,
+      "height": 80,
+      "text": "**Cournot Competition**"
+    },
+    {
+      "id": "7ed2916579274a01",
+      "type": "text",
+      "x": -359,
+      "y": -5780,
+      "width": 220,
+      "height": 80,
+      "text": "**Bayesian Game**"
+    },
+    {
+      "id": "fa60e883eb914ccd",
+      "type": "text",
+      "x": -109,
+      "y": -5780,
+      "width": 220,
+      "height": 80,
+      "text": "**内容**"
+    },
+    {
+      "id": "1124c137a4ea487f",
+      "type": "text",
+      "x": 141,
+      "y": -5780,
+      "width": 220,
+      "height": 80,
+      "text": "**Hotelling Model**"
+    },
+    {
+      "id": "4d2a59b4c06141f0",
+      "type": "text",
+      "x": -359,
+      "y": -5670,
+      "width": 220,
+      "height": 80,
+      "text": "**Hotelling T2 Test**"
+    },
+    {
+      "id": "fb3335d8ef30400c",
+      "type": "text",
+      "x": -109,
+      "y": -5670,
+      "width": 220,
+      "height": 80,
+      "text": "**Prisoner's Dilemma**"
+    },
+    {
+      "id": "027b34c052994220",
+      "type": "text",
+      "x": 141,
+      "y": -5670,
+      "width": 220,
+      "height": 80,
+      "text": "**求解纳什均衡**"
+    },
+    {
+      "id": "72f31b271c674fad",
+      "type": "text",
+      "x": -359,
+      "y": -5560,
+      "width": 220,
+      "height": 80,
+      "text": "**混合策略的纳什均衡**"
+    },
+    {
+      "id": "07c585ea5d744948",
+      "type": "text",
+      "x": -109,
+      "y": -5560,
+      "width": 220,
+      "height": 80,
+      "text": "**06_扩展性博弈**"
+    },
+    {
+      "id": "3ae995208e10400b",
+      "type": "text",
+      "x": 141,
+      "y": -5560,
+      "width": 220,
+      "height": 80,
+      "text": "**Model Misspecification**"
+    },
+    {
+      "id": "9307d79546044fc0",
+      "type": "text",
+      "x": -359,
+      "y": -5450,
+      "width": 220,
+      "height": 80,
+      "text": "**Strictly Dominated Strategy**"
+    },
+    {
+      "id": "c00497213824452d",
+      "type": "text",
+      "x": -109,
+      "y": -5450,
+      "width": 220,
+      "height": 80,
+      "text": "**strategic-form Games**"
+    },
+    {
+      "id": "0254d76615484a23",
+      "type": "text",
+      "x": 141,
+      "y": -5450,
+      "width": 220,
+      "height": 80,
+      "text": "**Engle-Granger Two-Step Test**"
+    },
+    {
+      "id": "78fd823c38684c03",
+      "type": "text",
+      "x": -359,
+      "y": -5340,
+      "width": 220,
+      "height": 80,
+      "text": "**Backward Induction**"
+    },
+    {
+      "id": "dafee059336949b2",
+      "type": "text",
+      "x": -109,
+      "y": -5340,
+      "width": 220,
+      "height": 80,
+      "text": "**Subgame Perfect Nash Equilibrium**"
+    },
+    {
+      "id": "11e5d30203554427",
+      "type": "text",
+      "x": 141,
+      "y": -5340,
+      "width": 220,
+      "height": 80,
+      "text": "****crazy Eddie和newmarket的博弈**，一种特殊的垄断**"
+    },
+    {
+      "id": "0c6a96c362064ed5",
+      "type": "text",
+      "x": -359,
+      "y": -5230,
+      "width": 220,
+      "height": 80,
+      "text": "**1.1.player 局中人**"
+    },
+    {
+      "id": "3035be1dd55a4f65",
+      "type": "text",
+      "x": -109,
+      "y": -5230,
+      "width": 220,
+      "height": 80,
+      "text": "**1.2.strategies 策略**"
+    },
+    {
+      "id": "40e90bdb80854937",
+      "type": "text",
+      "x": 141,
+      "y": -5230,
+      "width": 220,
+      "height": 80,
+      "text": "**1.3.payoffs 效用**"
+    },
+    {
+      "id": "89c583876a484070",
+      "type": "text",
+      "x": -359,
+      "y": -5120,
+      "width": 220,
+      "height": 80,
+      "text": "**action**"
+    },
+    {
+      "id": "5eeac1f3bc314e89",
+      "type": "text",
+      "x": -109,
+      "y": -5120,
+      "width": 220,
+      "height": 80,
+      "text": "**Advertising Game**"
+    },
+    {
+      "id": "f14746f5dc2a4209",
+      "type": "text",
+      "x": 141,
+      "y": -5120,
+      "width": 220,
+      "height": 80,
+      "text": "**belief**"
+    },
+    {
+      "id": "402f3880c2964293",
+      "type": "text",
+      "x": -359,
+      "y": -5010,
+      "width": 220,
+      "height": 80,
+      "text": "**Bertrand Competition**"
+    },
+    {
+      "id": "574702acf99b4a8a",
+      "type": "text",
+      "x": -109,
+      "y": -5010,
+      "width": 220,
+      "height": 80,
+      "text": "**coordinated  attack**"
+    },
+    {
+      "id": "39b53c8452fc4f20",
+      "type": "text",
+      "x": 141,
+      "y": -5010,
+      "width": 220,
+      "height": 80,
+      "text": "**definition**"
+    },
+    {
+      "id": "581e641835d0401c",
+      "type": "text",
+      "x": -359,
+      "y": -4900,
+      "width": 220,
+      "height": 80,
+      "text": "**eg：政府工作招标**"
+    },
+    {
+      "id": "9d5b1308bc7f4aed",
+      "type": "text",
+      "x": -109,
+      "y": -4900,
+      "width": 220,
+      "height": 80,
+      "text": "**entry Deterrence**"
+    },
+    {
+      "id": "b8df84a29bde4eaa",
+      "type": "text",
+      "x": 141,
+      "y": -4900,
+      "width": 220,
+      "height": 80,
+      "text": "**Extensive-Form Games**"
+    },
+    {
+      "id": "89cd770b936940a1",
+      "type": "text",
+      "x": -359,
+      "y": -4790,
+      "width": 220,
+      "height": 80,
+      "text": "**Global Game**"
+    },
+    {
+      "id": "a50394b1bf444b57",
+      "type": "text",
+      "x": -109,
+      "y": -4790,
+      "width": 220,
+      "height": 80,
+      "text": "**Hotelling 和古诺的辨析**"
+    },
+    {
+      "id": "3b69a3e4358f4311",
+      "type": "text",
+      "x": 141,
+      "y": -4790,
+      "width": 220,
+      "height": 80,
+      "text": "**investment game**"
+    },
+    {
+      "id": "94aae62feaf0454d",
+      "type": "text",
+      "x": -359,
+      "y": -4680,
+      "width": 220,
+      "height": 80,
+      "text": "**Linear Combination**"
+    },
+    {
+      "id": "778c48e519b34dd2",
+      "type": "text",
+      "x": -109,
+      "y": -4680,
+      "width": 220,
+      "height": 80,
+      "text": "**Linear Combination of Two Random Variables**"
+    },
+    {
+      "id": "55edeb5c2716405c",
+      "type": "text",
+      "x": 141,
+      "y": -4680,
+      "width": 220,
+      "height": 80,
+      "text": "**Linear Independence**"
+    },
+    {
+      "id": "843b253acda540d5",
+      "type": "text",
+      "x": -359,
+      "y": -4570,
+      "width": 220,
+      "height": 80,
+      "text": "**Linear Probability Model**"
+    },
+    {
+      "id": "43c64a1e18f8448e",
+      "type": "text",
+      "x": -109,
+      "y": -4570,
+      "width": 220,
+      "height": 80,
+      "text": "**Linear Products**"
+    },
+    {
+      "id": "ccaf7a49cdea4142",
+      "type": "text",
+      "x": 141,
+      "y": -4570,
+      "width": 220,
+      "height": 80,
+      "text": "**Linear Regression Model**"
+    },
+    {
+      "id": "cd7cdc0cd933418e",
+      "type": "text",
+      "x": -359,
+      "y": -4460,
+      "width": 220,
+      "height": 80,
+      "text": "**Linear system solution structure**"
+    },
+    {
+      "id": "f72bdec2c5a34175",
+      "type": "text",
+      "x": -109,
+      "y": -4460,
+      "width": 220,
+      "height": 80,
+      "text": "**Linear Systems**"
+    },
+    {
+      "id": "894721beb70849cd",
+      "type": "text",
+      "x": 141,
+      "y": -4460,
+      "width": 220,
+      "height": 80,
+      "text": "**matching pennies**"
+    },
+    {
+      "id": "33bf1d81aa1849fc",
+      "type": "text",
+      "x": -359,
+      "y": -4350,
+      "width": 220,
+      "height": 80,
+      "text": "**perfect-Bayesian Equilibrium**"
+    },
+    {
+      "id": "b5371505e4fb42b3",
+      "type": "text",
+      "x": -109,
+      "y": -4350,
+      "width": 220,
+      "height": 80,
+      "text": "**Pooling Equilibrium**"
+    },
+    {
+      "id": "4b7db241459544f1",
+      "type": "text",
+      "x": 141,
+      "y": -4350,
+      "width": 220,
+      "height": 80,
+      "text": "**Price-to-Book Ratio**"
+    },
+    {
+      "id": "f95e7ae760b44fe1",
+      "type": "text",
+      "x": -359,
+      "y": -4240,
+      "width": 220,
+      "height": 80,
+      "text": "**Price-to-Earnings Ratio**"
+    },
+    {
+      "id": "49a4c6a742a24c7f",
+      "type": "text",
+      "x": -109,
+      "y": -4240,
+      "width": 220,
+      "height": 80,
+      "text": "**Price-to-Sales Ratio**"
+    },
+    {
+      "id": "813d8bbed06349ae",
+      "type": "text",
+      "x": 141,
+      "y": -4240,
+      "width": 220,
+      "height": 80,
+      "text": "**Rationalisability**"
+    },
+    {
+      "id": "2cb3051544ac440a",
+      "type": "text",
+      "x": -359,
+      "y": -4130,
+      "width": 220,
+      "height": 80,
+      "text": "**Separating Equilibrium**"
+    },
+    {
+      "id": "e940dae996ed499b",
+      "type": "text",
+      "x": -109,
+      "y": -4130,
+      "width": 220,
+      "height": 80,
+      "text": "**strategy**"
+    },
+    {
+      "id": "f3452cfb856447cb",
+      "type": "text",
+      "x": 141,
+      "y": -4130,
+      "width": 220,
+      "height": 80,
+      "text": "**Submodular and Supermodular Games**"
+    },
+    {
+      "id": "979236fdf8d64659",
+      "type": "text",
+      "x": -359,
+      "y": -4020,
+      "width": 220,
+      "height": 80,
+      "text": "**type**"
+    },
+    {
+      "id": "16c9cb05ac924fca",
+      "type": "text",
+      "x": -109,
+      "y": -4020,
+      "width": 220,
+      "height": 80,
+      "text": "**一个案例**"
+    },
+    {
+      "id": "e084b764681246ad",
+      "type": "text",
+      "x": 141,
+      "y": -4020,
+      "width": 220,
+      "height": 80,
+      "text": "**一种不同的情况**"
+    },
+    {
+      "id": "1bb6f9726d2942d9",
+      "type": "text",
+      "x": -359,
+      "y": -3910,
+      "width": 220,
+      "height": 80,
+      "text": "**两个犯人先后审问**"
+    },
+    {
+      "id": "5aaad6691c5a4e41",
+      "type": "text",
+      "x": -109,
+      "y": -3910,
+      "width": 220,
+      "height": 80,
+      "text": "**为什会先增加后减少？**"
+    },
+    {
+      "id": "554ecfaf245c442d",
+      "type": "text",
+      "x": 141,
+      "y": -3910,
+      "width": 220,
+      "height": 80,
+      "text": "**五元素**"
+    },
+    {
+      "id": "3bae105240814ca7",
+      "type": "text",
+      "x": -359,
+      "y": -3800,
+      "width": 220,
+      "height": 80,
+      "text": "**介绍**"
+    },
+    {
+      "id": "dac394d80cf94722",
+      "type": "text",
+      "x": -109,
+      "y": -3800,
+      "width": 220,
+      "height": 80,
+      "text": "**价格竞争(Price Competition)**"
+    },
+    {
+      "id": "8a3bc63765934e9a",
+      "type": "text",
+      "x": 141,
+      "y": -3800,
+      "width": 220,
+      "height": 80,
+      "text": "**使用精炼贝叶斯均衡的案例**"
+    },
+    {
+      "id": "f206bd03521a45c0",
+      "type": "text",
+      "x": -359,
+      "y": -3690,
+      "width": 220,
+      "height": 80,
+      "text": "**信息集information set**"
+    },
+    {
+      "id": "cfe1d8b020304e45",
+      "type": "text",
+      "x": -109,
+      "y": -3690,
+      "width": 220,
+      "height": 80,
+      "text": "**信息集概念**"
+    },
+    {
+      "id": "874d99c3873e4427",
+      "type": "text",
+      "x": 141,
+      "y": -3690,
+      "width": 220,
+      "height": 80,
+      "text": "**其他相似情形**"
+    },
+    {
+      "id": "1f89a84de6664e53",
+      "type": "text",
+      "x": -359,
+      "y": -3580,
+      "width": 220,
+      "height": 80,
+      "text": "**分析-最优反应函数的求解**"
+    },
+    {
+      "id": "d25d384f204d425b",
+      "type": "text",
+      "x": -109,
+      "y": -3580,
+      "width": 220,
+      "height": 80,
+      "text": "**分类**"
+    },
+    {
+      "id": "40b24c89250b4a9f",
+      "type": "text",
+      "x": 141,
+      "y": -3580,
+      "width": 220,
+      "height": 80,
+      "text": "**变体:belief的引入**"
+    },
+    {
+      "id": "40fe904bd5554bd0",
+      "type": "text",
+      "x": -359,
+      "y": -3470,
+      "width": 220,
+      "height": 80,
+      "text": "**变体：correlated types**"
+    },
+    {
+      "id": "a1845803429e4dc5",
+      "type": "text",
+      "x": -109,
+      "y": -3470,
+      "width": 220,
+      "height": 80,
+      "text": "**可理性化 Rationalisability**"
+    },
+    {
+      "id": "50d39f48018b45c0",
+      "type": "text",
+      "x": 141,
+      "y": -3470,
+      "width": 220,
+      "height": 80,
+      "text": "**咖啡厅还是酒吧**"
+    },
+    {
+      "id": "db03f502fac04c9e",
+      "type": "text",
+      "x": -359,
+      "y": -3360,
+      "width": 220,
+      "height": 80,
+      "text": "**囚徒困境The Prisoners’ Dilemma**"
+    },
+    {
+      "id": "f693881cea5f4aae",
+      "type": "text",
+      "x": -109,
+      "y": -3360,
+      "width": 220,
+      "height": 80,
+      "text": "**垄断**"
+    },
+    {
+      "id": "bdddfb4a3d2b41e4",
+      "type": "text",
+      "x": 141,
+      "y": -3360,
+      "width": 220,
+      "height": 80,
+      "text": "**垄断(Monopoly)**"
+    },
+    {
+      "id": "86fd289593474488",
+      "type": "text",
+      "x": -359,
+      "y": -3250,
+      "width": 220,
+      "height": 80,
+      "text": "**基本内容**"
+    },
+    {
+      "id": "4d65251642a647b7",
+      "type": "text",
+      "x": -109,
+      "y": -3250,
+      "width": 220,
+      "height": 80,
+      "text": "**奇数定律**"
+    },
+    {
+      "id": "93b719248d7b4a54",
+      "type": "text",
+      "x": 141,
+      "y": -3250,
+      "width": 220,
+      "height": 80,
+      "text": "**如何得到separating equilibrium中的均衡**"
+    },
+    {
+      "id": "82b7b1bd7abc45f7",
+      "type": "text",
+      "x": -359,
+      "y": -3140,
+      "width": 220,
+      "height": 80,
+      "text": "**如何找出纳什均衡**"
+    },
+    {
+      "id": "e0aa402985034201",
+      "type": "text",
+      "x": -109,
+      "y": -3140,
+      "width": 220,
+      "height": 80,
+      "text": "**如何走出囚徒困境**"
+    },
+    {
+      "id": "a9b84f2637ad448a",
+      "type": "text",
+      "x": 141,
+      "y": -3140,
+      "width": 220,
+      "height": 80,
+      "text": "**如果p大于2/5**"
+    },
+    {
+      "id": "7752e4e818f6441f",
+      "type": "text",
+      "x": -359,
+      "y": -3030,
+      "width": 220,
+      "height": 80,
+      "text": "**如果p小于2/5**"
+    },
+    {
+      "id": "0839483260ac4077",
+      "type": "text",
+      "x": -109,
+      "y": -3030,
+      "width": 220,
+      "height": 80,
+      "text": "**子博弈sub-game**"
+    },
+    {
+      "id": "3eff18e8d30f48de",
+      "type": "text",
+      "x": 141,
+      "y": -3030,
+      "width": 220,
+      "height": 80,
+      "text": "**子博弈精炼均衡subgame-perfect equilibrium**"
+    },
+    {
+      "id": "dd1277155d5e4c00",
+      "type": "text",
+      "x": -359,
+      "y": -2920,
+      "width": 220,
+      "height": 80,
+      "text": "**子博弈精炼纳什均衡 Subgame Perfect Nash equilibrium**"
+    },
+    {
+      "id": "fc74c84658ca4e48",
+      "type": "text",
+      "x": -109,
+      "y": -2920,
+      "width": 220,
+      "height": 80,
+      "text": "**完全竞争(Perfect Competition)**"
+    },
+    {
+      "id": "d3fcda4560234b15",
+      "type": "text",
+      "x": 141,
+      "y": -2920,
+      "width": 220,
+      "height": 80,
+      "text": "**定义**"
+    },
+    {
+      "id": "ce6809c6a3dd4680",
+      "type": "text",
+      "x": -359,
+      "y": -2810,
+      "width": 220,
+      "height": 80,
+      "text": "**定义definition**"
+    },
+    {
+      "id": "85e81224d9e444f0",
+      "type": "text",
+      "x": -109,
+      "y": -2810,
+      "width": 220,
+      "height": 80,
+      "text": "**寡头(Oligopoly)**"
+    },
+    {
+      "id": "87299dbc35c4400c",
+      "type": "text",
+      "x": 141,
+      "y": -2810,
+      "width": 220,
+      "height": 80,
+      "text": "**寻找纳什均衡的方法**"
+    },
+    {
+      "id": "01786d273f3a499a",
+      "type": "text",
+      "x": -359,
+      "y": -2700,
+      "width": 220,
+      "height": 80,
+      "text": "**将五元素转化为3要素**"
+    },
+    {
+      "id": "541e03ff32ae4ad1",
+      "type": "text",
+      "x": -109,
+      "y": -2700,
+      "width": 220,
+      "height": 80,
+      "text": "**将扩展性博弈转化为策略式博弈**"
+    },
+    {
+      "id": "17b555f48ecb4326",
+      "type": "text",
+      "x": 141,
+      "y": -2700,
+      "width": 220,
+      "height": 80,
+      "text": "**延伸到三人的博弈**"
+    },
+    {
+      "id": "7732db4d513148da",
+      "type": "text",
+      "x": -359,
+      "y": -2590,
+      "width": 220,
+      "height": 80,
+      "text": "**延伸：严格占优策略中的连续剔除 Iterated Deletion of Strictly Dominated Strategies**"
+    },
+    {
+      "id": "6ae0109a39c04de2",
+      "type": "text",
+      "x": -109,
+      "y": -2590,
+      "width": 220,
+      "height": 80,
+      "text": "**引入**"
+    },
+    {
+      "id": "da99cc6c5fc24dcd",
+      "type": "text",
+      "x": 141,
+      "y": -2590,
+      "width": 220,
+      "height": 80,
+      "text": "**引申**"
+    },
+    {
+      "id": "e0724a5194934484",
+      "type": "text",
+      "x": -359,
+      "y": -2480,
+      "width": 220,
+      "height": 80,
+      "text": "**思想**"
+    },
+    {
+      "id": "5ed13d29ce374160",
+      "type": "text",
+      "x": -109,
+      "y": -2480,
+      "width": 220,
+      "height": 80,
+      "text": "**恐吓Entry Deterrence with an Explicit Threat**"
+    },
+    {
+      "id": "097351ff8e14449b",
+      "type": "text",
+      "x": 141,
+      "y": -2480,
+      "width": 220,
+      "height": 80,
+      "text": "**情况描述**"
+    },
+    {
+      "id": "d465925c438d4ba4",
+      "type": "text",
+      "x": -359,
+      "y": -2370,
+      "width": 220,
+      "height": 80,
+      "text": "**情景描述**"
+    },
+    {
+      "id": "94d86614976a45dc",
+      "type": "text",
+      "x": -109,
+      "y": -2370,
+      "width": 220,
+      "height": 80,
+      "text": "**打猎打兔子还是鹿**"
+    },
+    {
+      "id": "2cc0b2e40d654afe",
+      "type": "text",
+      "x": 141,
+      "y": -2370,
+      "width": 220,
+      "height": 80,
+      "text": "**拓展到n家寡头**"
+    },
+    {
+      "id": "b90c39aca6884f7e",
+      "type": "text",
+      "x": -359,
+      "y": -2260,
+      "width": 220,
+      "height": 80,
+      "text": "**描述博弈的两个方法**"
+    },
+    {
+      "id": "a0d1e84384dd44dd",
+      "type": "text",
+      "x": -109,
+      "y": -2260,
+      "width": 220,
+      "height": 80,
+      "text": "**改变的内容**"
+    },
+    {
+      "id": "686efab10cf54997",
+      "type": "text",
+      "x": 141,
+      "y": -2260,
+      "width": 220,
+      "height": 80,
+      "text": "**最优反应函数Best-Reply Functions**"
+    },
+    {
+      "id": "63d6b23a4f984f21",
+      "type": "text",
+      "x": -359,
+      "y": -2150,
+      "width": 220,
+      "height": 80,
+      "text": "**最优反应函数求解**"
+    },
+    {
+      "id": "b7ad6acc76254f57",
+      "type": "text",
+      "x": -109,
+      "y": -2150,
+      "width": 220,
+      "height": 80,
+      "text": "**最优反应函数求解纳什均衡**"
+    },
+    {
+      "id": "161f1092c7cf44e2",
+      "type": "text",
+      "x": 141,
+      "y": -2150,
+      "width": 220,
+      "height": 80,
+      "text": "**有尽头的重复博弈**"
+    },
+    {
+      "id": "465449bf21c649a5",
+      "type": "text",
+      "x": -359,
+      "y": -2040,
+      "width": 220,
+      "height": 80,
+      "text": "**有效的恐吓**"
+    },
+    {
+      "id": "1dac2dc6dea44968",
+      "type": "text",
+      "x": -109,
+      "y": -2040,
+      "width": 220,
+      "height": 80,
+      "text": "**样例**"
+    },
+    {
+      "id": "d1ea5611006d4f80",
+      "type": "text",
+      "x": 141,
+      "y": -2040,
+      "width": 220,
+      "height": 80,
+      "text": "**案例**"
+    },
+    {
+      "id": "7ba12cb5600a46de",
+      "type": "text",
+      "x": -359,
+      "y": -1930,
+      "width": 220,
+      "height": 80,
+      "text": "**案例信息**"
+    },
+    {
+      "id": "bc869974175a4e32",
+      "type": "text",
+      "x": -109,
+      "y": -1930,
+      "width": 220,
+      "height": 80,
+      "text": "**案例：noisy battle of sexes**"
+    },
+    {
+      "id": "59c524f7e10a4e04",
+      "type": "text",
+      "x": 141,
+      "y": -1930,
+      "width": 220,
+      "height": 80,
+      "text": "**案例：以[[06_扩展性博弈**"
+    },
+    {
+      "id": "b4dffb72c18749f5",
+      "type": "text",
+      "x": -359,
+      "y": -1820,
+      "width": 220,
+      "height": 80,
+      "text": "**案例：千足虫博弈**"
+    },
+    {
+      "id": "1f92dd950f224d74",
+      "type": "text",
+      "x": -109,
+      "y": -1820,
+      "width": 220,
+      "height": 80,
+      "text": "**没有尽头的重复博弈（不知道什么时候是尽头）**"
+    },
+    {
+      "id": "9914c28e8df54494",
+      "type": "text",
+      "x": 141,
+      "y": -1820,
+      "width": 220,
+      "height": 80,
+      "text": "**混合策略中的严格优势与严格劣势**"
+    },
+    {
+      "id": "94d7e06156294718",
+      "type": "text",
+      "x": -359,
+      "y": -1710,
+      "width": 220,
+      "height": 80,
+      "text": "**混合策略中的纳什均衡**"
+    },
+    {
+      "id": "9dc1659738994454",
+      "type": "text",
+      "x": -109,
+      "y": -1710,
+      "width": 220,
+      "height": 80,
+      "text": "**电商对价格的影响**"
+    },
+    {
+      "id": "05963e198d6d4b26",
+      "type": "text",
+      "x": 141,
+      "y": -1710,
+      "width": 220,
+      "height": 80,
+      "text": "**画横线**"
+    },
+    {
+      "id": "a8b597cae6fb4d52",
+      "type": "text",
+      "x": -359,
+      "y": -1600,
+      "width": 220,
+      "height": 80,
+      "text": "**画箭头**"
+    },
+    {
+      "id": "03d6567489844080",
+      "type": "text",
+      "x": -109,
+      "y": -1600,
+      "width": 220,
+      "height": 80,
+      "text": "**石头剪刀布**"
+    },
+    {
+      "id": "9b7b6074cb03479a",
+      "type": "text",
+      "x": 141,
+      "y": -1600,
       "width": 220,
       "height": 80,
       "text": "**纳什均衡求解-通过最优反应函数求解**"
     },
     {
-      "id": "730c6de37a974379",
+      "id": "34d41c67d59a4d85",
       "type": "text",
       "x": -359,
-      "y": -1049,
+      "y": -1490,
       "width": 220,
       "height": 80,
       "text": "**线性需求下的古诺竞争 Cournot Competition with Linear Demand**"
     },
     {
-      "id": "e899ca72bdca4acb",
+      "id": "bbb7392e6b8d41f8",
       "type": "text",
       "x": -109,
-      "y": -1049,
+      "y": -1490,
       "width": 220,
       "height": 80,
       "text": "**结论**"
     },
     {
-      "id": "84e316b438074173",
+      "id": "7a4bfdf7ccf74795",
       "type": "text",
       "x": 141,
-      "y": -1049,
+      "y": -1490,
       "width": 220,
       "height": 80,
       "text": "**转化为策略式博弈**"
     },
     {
-      "id": "071a13c263e348d7",
+      "id": "0c4ea7b56b6042a1",
       "type": "text",
       "x": -359,
-      "y": -939,
+      "y": -1380,
       "width": 220,
       "height": 80,
       "text": "**辨析:均衡之间的范围关系**"
     },
     {
-      "id": "b8b9826fc85645ef",
+      "id": "ea962c26f8da4efe",
       "type": "text",
       "x": -109,
-      "y": -939,
+      "y": -1380,
       "width": 220,
       "height": 80,
       "text": "**辨析：Global Game 和Bayesian Game**"
     },
     {
-      "id": "8c29e2df84124112",
+      "id": "befade5d901e4a99",
       "type": "text",
       "x": 141,
-      "y": -939,
+      "y": -1380,
       "width": 220,
       "height": 80,
       "text": "**过程**"
     },
     {
-      "id": "58dbe07374914e95",
+      "id": "db4de21770d5424d",
       "type": "text",
       "x": -359,
-      "y": -829,
+      "y": -1270,
       "width": 220,
       "height": 80,
       "text": "**逆向归纳  backward induction**"
     },
     {
-      "id": "5d2ee4f2eaef407a",
+      "id": "ef718141fe734cf5",
       "type": "text",
       "x": -109,
-      "y": -829,
+      "y": -1270,
       "width": 220,
       "height": 80,
       "text": "**钻石**"
     },
     {
-      "id": "d8b8b571af5e403d",
+      "id": "177eb5005dc94ae4",
       "type": "text",
       "x": 141,
-      "y": -829,
+      "y": -1270,
       "width": 220,
       "height": 80,
       "text": "**链家平台**"
     },
     {
-      "id": "5039d49d4a9e46e7",
+      "id": "253a98368db04e49",
       "type": "text",
       "x": -359,
-      "y": -719,
+      "y": -1160,
       "width": 220,
       "height": 80,
       "text": "**静态的寡头竞争Static Oligopoly**"
     },
     {
-      "id": "4b64c53a41e14a34",
+      "id": "8d04b33ca5714dcb",
       "type": "text",
       "x": -109,
-      "y": -719,
+      "y": -1160,
       "width": 220,
       "height": 80,
       "text": "**鹰鸽博弈**"
     },
     {
-      "id": "5d2335f0cb694c4c",
+      "id": "283b6ac703b24ef8",
       "type": "text",
       "x": 141,
-      "y": -719,
+      "y": -1160,
       "width": 220,
       "height": 80,
       "text": "**黑社会组织**"
     },
     {
-      "id": "3a8754b4950a441c",
+      "id": "21a842ddf9084d2f",
+      "type": "text",
+      "x": -359,
+      "y": -1050,
+      "width": 220,
+      "height": 80,
+      "text": "**crazy Eddie和newmarket的博弈**"
+    },
+    {
+      "id": "89cea8738e3f4522",
+      "type": "text",
+      "x": -109,
+      "y": -1050,
+      "width": 220,
+      "height": 80,
+      "text": "**严格优势策略定义（Definition 4）**"
+    },
+    {
+      "id": "36009e6c3f7b4d45",
+      "type": "text",
+      "x": 141,
+      "y": -1050,
+      "width": 220,
+      "height": 80,
+      "text": "**严格劣于**"
+    },
+    {
+      "id": "09f9c8ead63648b7",
+      "type": "text",
+      "x": -359,
+      "y": -940,
+      "width": 220,
+      "height": 80,
+      "text": "**严格劣势策略定义（Definition 3）**"
+    },
+    {
+      "id": "d3ac87dc9fdd4dde",
+      "type": "text",
+      "x": -109,
+      "y": -940,
+      "width": 220,
+      "height": 80,
+      "text": "**严格占优**"
+    },
+    {
+      "id": "8810cf20165d4cd7",
+      "type": "text",
+      "x": 141,
+      "y": -940,
+      "width": 220,
+      "height": 80,
+      "text": "**严格占优策略定义（Definition 2）**"
+    },
+    {
+      "id": "a0155b057ce44163",
+      "type": "text",
+      "x": -359,
+      "y": -830,
+      "width": 220,
+      "height": 80,
+      "text": "**优势策略均衡**"
+    },
+    {
+      "id": "94c58c051bec4f8d",
+      "type": "text",
+      "x": -109,
+      "y": -830,
+      "width": 220,
+      "height": 80,
+      "text": "**04_混合策略的纳什均衡**"
+    },
+    {
+      "id": "220a885e90a0414c",
+      "type": "text",
+      "x": 141,
+      "y": -830,
+      "width": 220,
+      "height": 80,
+      "text": "**07_子博弈不完全信息**"
+    },
+    {
+      "id": "de26c29b9b954f3a",
+      "type": "text",
+      "x": -359,
+      "y": -720,
+      "width": 220,
+      "height": 80,
+      "text": "**Limit**"
+    },
+    {
+      "id": "d78af1adf36d4b42",
+      "type": "text",
+      "x": -109,
+      "y": -720,
+      "width": 220,
+      "height": 80,
+      "text": "**Q Test**"
+    },
+    {
+      "id": "5e93e2d888884d1e",
       "type": "group",
-      "x": 4094,
-      "y": -2729,
+      "x": 2618,
+      "y": -1877,
       "width": 800,
       "height": 270,
       "label": "framework",
       "color": "3"
     },
     {
-      "id": "6ea03760036c409f",
+      "id": "60d37273943b4af3",
       "type": "text",
-      "x": 4134,
-      "y": -2689,
+      "x": 2658,
+      "y": -1837,
       "width": 220,
       "height": 80,
       "text": "**Game Theory**"
     },
     {
-      "id": "75296d84ae4640ce",
+      "id": "fd5d39fed7a14b8c",
       "type": "text",
-      "x": 4384,
-      "y": -2689,
+      "x": 2908,
+      "y": -1837,
       "width": 220,
       "height": 80,
       "text": "**- **古诺模型（Cournot Model）****"
     },
     {
-      "id": "1a3596ade0fd4068",
+      "id": "72859cec9e914743",
       "type": "text",
-      "x": 4634,
-      "y": -2689,
-      "width": 220,
-      "height": 80,
-      "text": "**古诺模型（Cournot Model）**"
-    },
-    {
-      "id": "17904dc66e3d4a9f",
-      "type": "text",
-      "x": 4134,
-      "y": -2579,
+      "x": 3158,
+      "y": -1837,
       "width": 220,
       "height": 80,
       "text": "**模型信息**"
     },
     {
-      "id": "f8ab16ac62494e77",
+      "id": "c6998f9af2524291",
+      "type": "text",
+      "x": 2658,
+      "y": -1727,
+      "width": 220,
+      "height": 80,
+      "text": "**古诺模型（Cournot Model）**"
+    },
+    {
+      "id": "078d4ea800d143c0",
       "type": "group",
-      "x": 4094,
-      "y": 2484,
+      "x": 2618,
+      "y": 1632,
       "width": 800,
       "height": 220,
       "label": "procedure",
       "color": "3"
     },
     {
-      "id": "559a8bd7db124497",
+      "id": "b3ea450a77f94188",
       "type": "text",
-      "x": 4134,
-      "y": 2524,
+      "x": 2658,
+      "y": 1672,
       "width": 220,
       "height": 80,
       "text": "**Investment Decisions**"
     },
     {
-      "id": "a18a82b9def242a8",
+      "id": "e4a6a75d8d254f1d",
       "type": "group",
       "x": -399,
-      "y": 5079,
+      "y": 3375,
       "width": 800,
       "height": 220,
       "label": "system",
       "color": "3"
     },
     {
-      "id": "2b604430a33249da",
+      "id": "45fb39bf8a394fd3",
+      "type": "text",
+      "x": -359,
+      "y": 3415,
+      "width": 220,
+      "height": 80,
+      "text": "**Model Validation**"
+    },
+    {
+      "id": "1ae9e11f8c0c4c1b",
       "type": "group",
-      "x": -4894,
-      "y": 2485,
+      "x": -3418,
+      "y": 1632,
       "width": 800,
       "height": 220,
       "label": "proof",
       "color": "3"
     },
     {
-      "id": "594892ad7fd54056",
+      "id": "b972fd6c51934846",
       "type": "group",
-      "x": -4894,
-      "y": -2730,
+      "x": -3418,
+      "y": -1877,
       "width": 800,
       "height": 270,
       "label": "writing",
       "color": "3"
     },
     {
-      "id": "2a041189f665495c",
+      "id": "5075c8516a3343d3",
       "type": "text",
-      "x": -4854,
-      "y": -2690,
+      "x": -3378,
+      "y": -1837,
       "width": 220,
       "height": 80,
       "text": "**1.[[策略式表达]] strategic-form Games**"
     },
     {
-      "id": "f595c2622aa248c6",
+      "id": "ac1b1f3d06e04805",
       "type": "text",
-      "x": -4604,
-      "y": -2690,
+      "x": -3128,
+      "y": -1837,
       "width": 220,
       "height": 80,
       "text": "**2规范式表达**"
     },
     {
-      "id": "b85d31e6eb6c4e8d",
+      "id": "fdcc53ee4a274474",
       "type": "text",
-      "x": -4354,
-      "y": -2690,
+      "x": -2878,
+      "y": -1837,
       "width": 220,
       "height": 80,
       "text": "**2规范式表达(Normal Form Representation)**"
     },
     {
-      "id": "0e7693d99a5c4951",
+      "id": "2a0bd0c6a72f4f35",
       "type": "text",
-      "x": -4854,
-      "y": -2580,
+      "x": -3378,
+      "y": -1727,
       "width": 220,
       "height": 80,
       "text": "**信息集表达**"
@@ -2395,1851 +1558,1200 @@
   ],
   "edges": [
     {
-      "id": "2ce9c243ec1a44cd",
-      "fromNode": "2d0d596949444509",
+      "id": "367b67f4d0964f6b",
+      "fromNode": "d3b5353a61da43c3",
       "fromSide": "right",
-      "toNode": "bf6abb807ca94af0",
+      "toNode": "7cbe932c9ad84173",
       "toSide": "left"
     },
     {
-      "id": "8f19879c0a8f485c",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "40e760d12be54c3d",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "b50e761758b34dc2",
+      "toNode": "0165830b5e614708",
       "toSide": "left"
     },
     {
-      "id": "7cadb61affc6484a",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "52a76813bc7e4c4d",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "a72f666b05234e65",
+      "toNode": "5226df59820140d4",
       "toSide": "left"
     },
     {
-      "id": "d4f7bfb0aa5741ad",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "9e1bf3f5857e4a29",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "3d40ec0b73714004",
+      "toNode": "a3064bba95254a0c",
       "toSide": "left"
     },
     {
-      "id": "80ac12f4ec7b46da",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "7f8e00ef42824cab",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "71ef20fcd2354d5c",
+      "toNode": "6ee32f39145e496f",
       "toSide": "left"
     },
     {
-      "id": "2685ba9b362d476d",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "c666fcf78a9a4336",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "79e860e7e18c48a1",
+      "toNode": "c55050c4357943e5",
       "toSide": "left"
     },
     {
-      "id": "49a0e2062365483a",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "65fb660ac549441a",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "60430e07f1284bd1",
+      "toNode": "fa6c4095098a4a59",
       "toSide": "left"
     },
     {
-      "id": "f332b440059147c5",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "a602ea16d44d4546",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "8fd8aab1b6ae48c9",
+      "toNode": "a9871cc9a343498e",
       "toSide": "left"
     },
     {
-      "id": "b031e1211a224f94",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "0783013dba5f46f7",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "95552e114e3448ed",
+      "toNode": "e677eca7ff6c4320",
       "toSide": "left"
     },
     {
-      "id": "04de75f384754801",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "8701d172e192463d",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "d84a70b40d0845e3",
+      "toNode": "1f8c0620002c4a89",
       "toSide": "left"
     },
     {
-      "id": "0f8572851ec94491",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "15e22bfc0cce451d",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "01b34810bf784274",
+      "toNode": "f81ba1933bae44c2",
       "toSide": "left"
     },
     {
-      "id": "c572148d54e24249",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "b491a436a2354952",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "f240b950a0af48d6",
+      "toNode": "bdb3ddbb7bd14e04",
       "toSide": "left"
     },
     {
-      "id": "64a92cf590e64705",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "dbad8caa05b14870",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "1bc9537161c04812",
+      "toNode": "1c89e759436b41a9",
       "toSide": "left"
     },
     {
-      "id": "1734a85a6e084e40",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "eeac140c49f14e01",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "9cf84fe2b621443e",
+      "toNode": "764de09bb67e4424",
       "toSide": "left"
     },
     {
-      "id": "dbedfb2b91b243d8",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "89c168681fc44ff9",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "c407e87a53a54fd3",
+      "toNode": "89bfc899ac8548b9",
       "toSide": "left"
     },
     {
-      "id": "06e4181b704a4483",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "af240cb522cc4841",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "c6ad956210894e70",
+      "toNode": "7f59b4fedd854be8",
       "toSide": "left"
     },
     {
-      "id": "31d1fd8225fb4f9f",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "8801e2fa69e74dca",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "f1035f5f298142f8",
+      "toNode": "7ed2916579274a01",
       "toSide": "left"
     },
     {
-      "id": "35dd0b73a7a84a16",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "e9a7f52faadd4d9b",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "5d903e4821414cde",
+      "toNode": "fa60e883eb914ccd",
       "toSide": "left"
     },
     {
-      "id": "d6996821474d4c11",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "07a00923a18241ac",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "4f86b6c1ae954a9c",
+      "toNode": "1124c137a4ea487f",
       "toSide": "left"
     },
     {
-      "id": "52eab02a8d5843e9",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "7e1920ba46c24166",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "2f1e7d89d77a433d",
+      "toNode": "4d2a59b4c06141f0",
       "toSide": "left"
     },
     {
-      "id": "1951dc8f1b8a45f9",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "d054d27f57c14f44",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "c075d8a89e82439e",
+      "toNode": "fb3335d8ef30400c",
       "toSide": "left"
     },
     {
-      "id": "b5261c0add4b4156",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "a06848bfa94d483d",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "aea61895f99d4e73",
+      "toNode": "027b34c052994220",
       "toSide": "left"
     },
     {
-      "id": "b372a404868544e9",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "de516e12ec3d4cd5",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "7a4a8ea467704f44",
+      "toNode": "72f31b271c674fad",
       "toSide": "left"
     },
     {
-      "id": "e1bd01b5874747e5",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "4399723023ff4ca3",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "41fcaa3f91854b1f",
+      "toNode": "07c585ea5d744948",
       "toSide": "left"
     },
     {
-      "id": "0ce466a2b9c94cf6",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "6723a5519f07470a",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "fdef34ce90854bb3",
+      "toNode": "3ae995208e10400b",
       "toSide": "left"
     },
     {
-      "id": "9ce1f65e749f4113",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "34609cd76f574ff2",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "47f0f106ed3d4928",
+      "toNode": "9307d79546044fc0",
       "toSide": "left"
     },
     {
-      "id": "f6836bf6f4594c79",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "ba104549c0af4f89",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "70eebf7ca0464aae",
+      "toNode": "c00497213824452d",
       "toSide": "left"
     },
     {
-      "id": "4a01f18a493b4999",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "c4b5abd35def4c0a",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "f056d95c600243c3",
+      "toNode": "0254d76615484a23",
       "toSide": "left"
     },
     {
-      "id": "1f67932f67d545c0",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "211877f4c64e4f39",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "f5ca718c3a4a4521",
+      "toNode": "78fd823c38684c03",
       "toSide": "left"
     },
     {
-      "id": "fdef47a08a7347b4",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "27971d05a6014108",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "a723eec409424eec",
+      "toNode": "dafee059336949b2",
       "toSide": "left"
     },
     {
-      "id": "f61cac49577e4fc3",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "e98dd611e47f43a7",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "740b73f1152d47f0",
+      "toNode": "11e5d30203554427",
       "toSide": "left"
     },
     {
-      "id": "e41289788ae24622",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "4a1a6086a14e4d54",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "69d22c3d7aaa435c",
+      "toNode": "0c6a96c362064ed5",
       "toSide": "left"
     },
     {
-      "id": "d93363781452497e",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "ff8d0ce2422a4008",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "9273d06c8cd6451d",
+      "toNode": "3035be1dd55a4f65",
       "toSide": "left"
     },
     {
-      "id": "b8f0b66fa5114d6c",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "0bd6b32be6744f93",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "196b21b0e37f40b9",
+      "toNode": "40e90bdb80854937",
       "toSide": "left"
     },
     {
-      "id": "e09a23d2f7ce4107",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "245de88838b34465",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "773dd6fe3e31453b",
+      "toNode": "89c583876a484070",
       "toSide": "left"
     },
     {
-      "id": "733300e4ba2e4b36",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "2474a00786694128",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "c8ade42324414fae",
+      "toNode": "5eeac1f3bc314e89",
       "toSide": "left"
     },
     {
-      "id": "81f0a06359de4c06",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "a822df8821a04479",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "2834b3f22a894784",
+      "toNode": "f14746f5dc2a4209",
       "toSide": "left"
     },
     {
-      "id": "1eec575ee5cf46df",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "b4cb4dcb54d74cbc",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "ae7cbbc2a62f4e9c",
+      "toNode": "402f3880c2964293",
       "toSide": "left"
     },
     {
-      "id": "ec49144471a445cd",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "a1225398d538468a",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "baffd6a147014d23",
+      "toNode": "574702acf99b4a8a",
       "toSide": "left"
     },
     {
-      "id": "b0bb4ad310b14022",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "07ab5f36febe411b",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "be0d71afb05b4739",
+      "toNode": "39b53c8452fc4f20",
       "toSide": "left"
     },
     {
-      "id": "5cf0a1f4c29e4cbd",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "1d8bf0a83108490b",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "766a755fa43e4e10",
+      "toNode": "581e641835d0401c",
       "toSide": "left"
     },
     {
-      "id": "ccb18cdcc1f444ab",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "dd35861f066d4ff1",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "7b3a2017d6334975",
+      "toNode": "9d5b1308bc7f4aed",
       "toSide": "left"
     },
     {
-      "id": "d6e36c949add476d",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "8e20356471714f7c",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "c38b2d4816134dc8",
+      "toNode": "b8df84a29bde4eaa",
       "toSide": "left"
     },
     {
-      "id": "d1c1ea4d9f0647e9",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "0169267675bb460d",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "317355e0bd6b42bd",
+      "toNode": "89cd770b936940a1",
       "toSide": "left"
     },
     {
-      "id": "f6b775bae2554c48",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "971a6878dff34c34",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "e3faf53bfee9435f",
+      "toNode": "a50394b1bf444b57",
       "toSide": "left"
     },
     {
-      "id": "086ddb2b4cbf49d8",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "a4cf3ab330dd4c43",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "6eec3fb1ce604a7d",
+      "toNode": "3b69a3e4358f4311",
       "toSide": "left"
     },
     {
-      "id": "e33d23aee8d243d6",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "622a2941f46b4785",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "f1765b4f104b4ae8",
+      "toNode": "94aae62feaf0454d",
       "toSide": "left"
     },
     {
-      "id": "5a6ff6c6dfe24476",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "977413d07b184c75",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "2c6c7ccbc5324e8d",
+      "toNode": "778c48e519b34dd2",
       "toSide": "left"
     },
     {
-      "id": "f27cacc44a304ed6",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "e4c410c1f4f944dc",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "492204fd15be4b0b",
+      "toNode": "55edeb5c2716405c",
       "toSide": "left"
     },
     {
-      "id": "b8b9fa49b2724a7f",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "3b08de3915c54d60",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "136faf773cdc470e",
+      "toNode": "843b253acda540d5",
       "toSide": "left"
     },
     {
-      "id": "41ea159e29c2436e",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "6c57290ca32b4bd6",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "cb000223101e4b06",
+      "toNode": "43c64a1e18f8448e",
       "toSide": "left"
     },
     {
-      "id": "b706afb24a7d428f",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "c2ad3b9b21914e3f",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "7b4f589902e1421b",
+      "toNode": "ccaf7a49cdea4142",
       "toSide": "left"
     },
     {
-      "id": "c9d817bfe0174013",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "02215debd66e426a",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "fb3e56ad91454c36",
+      "toNode": "cd7cdc0cd933418e",
       "toSide": "left"
     },
     {
-      "id": "81631f1cbb8e42fa",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "3f9e1eb0fecf437e",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "a54f379c47a54be6",
+      "toNode": "f72bdec2c5a34175",
       "toSide": "left"
     },
     {
-      "id": "7953632631ac4e42",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "368fddddd32f4ed4",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "aa20468043df4d8a",
+      "toNode": "894721beb70849cd",
       "toSide": "left"
     },
     {
-      "id": "c76f5cd1c842483e",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "f070339fe753424a",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "293eb78e4009472d",
+      "toNode": "33bf1d81aa1849fc",
       "toSide": "left"
     },
     {
-      "id": "8f5a08ed2f2a4062",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "394baf127b1e416b",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "e4e4bcdb13c7484b",
+      "toNode": "b5371505e4fb42b3",
       "toSide": "left"
     },
     {
-      "id": "16f3ba07082a4ac0",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "6b993f504fbf404e",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "7bb7d73990c24abd",
+      "toNode": "4b7db241459544f1",
       "toSide": "left"
     },
     {
-      "id": "1bd1ef6871914880",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "2f3daacf9b464253",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "c5ca9c07159f4d3e",
+      "toNode": "f95e7ae760b44fe1",
       "toSide": "left"
     },
     {
-      "id": "ceeea21adaab410e",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "7af67818c94648fd",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "f6ed8c8c67e74380",
+      "toNode": "49a4c6a742a24c7f",
       "toSide": "left"
     },
     {
-      "id": "0dbebabac9be4cdf",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "7933e119e4be497d",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "1e74981f3cec4406",
+      "toNode": "813d8bbed06349ae",
       "toSide": "left"
     },
     {
-      "id": "a6bc37d25be940cd",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "a57cfcec31b943af",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "cebd0520d11e4cf1",
+      "toNode": "2cb3051544ac440a",
       "toSide": "left"
     },
     {
-      "id": "30236a3a36e74651",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "e0da89a68e93430b",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "ceb4a1a143c14ea1",
+      "toNode": "e940dae996ed499b",
       "toSide": "left"
     },
     {
-      "id": "22831de36859419c",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "35b9d4277275445e",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "b4c17c4dba924b5f",
+      "toNode": "f3452cfb856447cb",
       "toSide": "left"
     },
     {
-      "id": "30ba2c2ceea24180",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "765fdff145344014",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "f8a02bba6f7044c8",
+      "toNode": "979236fdf8d64659",
       "toSide": "left"
     },
     {
-      "id": "eaeaa3a56c044e8c",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "eb13aab2d48b4355",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "f8f55c9781474963",
+      "toNode": "16c9cb05ac924fca",
       "toSide": "left"
     },
     {
-      "id": "9d87ba78d4504994",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "d15fe0ce6bbb48d9",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "9b0e3f1ecd87402b",
+      "toNode": "e084b764681246ad",
       "toSide": "left"
     },
     {
-      "id": "37be3e519bac4608",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "5dac9325a20a473f",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "fa5a8d72ede0447a",
+      "toNode": "1bb6f9726d2942d9",
       "toSide": "left"
     },
     {
-      "id": "75eefa1e74dc4c97",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "e697f2834d3049cc",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "126a28d3ba2c4ea0",
+      "toNode": "5aaad6691c5a4e41",
       "toSide": "left"
     },
     {
-      "id": "723c036ef2aa47f9",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "c026b2c09e7448ce",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "c19e5426fa8942a0",
+      "toNode": "554ecfaf245c442d",
       "toSide": "left"
     },
     {
-      "id": "bf267d4b1d6845c7",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "2bfbaeee3bd24f65",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "bc0795a396a149b4",
+      "toNode": "3bae105240814ca7",
       "toSide": "left"
     },
     {
-      "id": "fa3af8dbfc824805",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "f8198bfb16884bee",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "f6b08ee5f0304541",
+      "toNode": "dac394d80cf94722",
       "toSide": "left"
     },
     {
-      "id": "6ef6669b04414e3a",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "797e646a0658428f",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "147af4cceaff4410",
+      "toNode": "8a3bc63765934e9a",
       "toSide": "left"
     },
     {
-      "id": "921d513090cc468a",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "4d4916f932134717",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "e2a15a8fe1f64303",
+      "toNode": "f206bd03521a45c0",
       "toSide": "left"
     },
     {
-      "id": "acaba73ed0bc4e06",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "db992bfcc55f4113",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "cf4d7801b6a44afb",
+      "toNode": "cfe1d8b020304e45",
       "toSide": "left"
     },
     {
-      "id": "770400ea6d3c4ca5",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "f6dd2bfc62c94443",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "65263fd3b8364da4",
+      "toNode": "874d99c3873e4427",
       "toSide": "left"
     },
     {
-      "id": "05926403d0c3416c",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "cafec34b865341c6",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "d61befbf957a414d",
+      "toNode": "1f89a84de6664e53",
       "toSide": "left"
     },
     {
-      "id": "ca9e9a867b454ac1",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "064d1441393f487b",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "81b7ba670cc44c74",
+      "toNode": "d25d384f204d425b",
       "toSide": "left"
     },
     {
-      "id": "7675941f6e4d486f",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "d71313c124e04439",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "27ba00998b124026",
+      "toNode": "40b24c89250b4a9f",
       "toSide": "left"
     },
     {
-      "id": "f3ac281323a04d19",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "ad47290442e24f87",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "8df4e47842c9411e",
+      "toNode": "40fe904bd5554bd0",
       "toSide": "left"
     },
     {
-      "id": "c9c2ecd65b804f50",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "82610b0404af4c0a",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "a7d554a4421d470d",
+      "toNode": "a1845803429e4dc5",
       "toSide": "left"
     },
     {
-      "id": "554191356cc34376",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "1129bdc9bbe6412e",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "5cfcaf08dd1c41ee",
+      "toNode": "50d39f48018b45c0",
       "toSide": "left"
     },
     {
-      "id": "2cc2ad13e90649f3",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "7dc8317353f24b26",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "5c271060439a4a18",
+      "toNode": "db03f502fac04c9e",
       "toSide": "left"
     },
     {
-      "id": "f40ca6e5fb354130",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "d38347f384524e6e",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "5e5bda233efe4db1",
+      "toNode": "f693881cea5f4aae",
       "toSide": "left"
     },
     {
-      "id": "678727941e3c4e0f",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "68876b93207846f9",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "f8b15297e07b4046",
+      "toNode": "bdddfb4a3d2b41e4",
       "toSide": "left"
     },
     {
-      "id": "489cf34f25774fae",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "7ba7657452e448f8",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "e9d2dc40aed34f73",
+      "toNode": "86fd289593474488",
       "toSide": "left"
     },
     {
-      "id": "5b65448466704260",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "e98e8e731d18440c",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "97be6e2c3f8a4d41",
+      "toNode": "4d65251642a647b7",
       "toSide": "left"
     },
     {
-      "id": "ea70135fc7ae4b21",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "ae39bceabc714a8a",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "bfa8a96ac235477b",
+      "toNode": "93b719248d7b4a54",
       "toSide": "left"
     },
     {
-      "id": "8aeb53a1d5a2460e",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "a0650054f09e433a",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "c604619cfaba4cec",
+      "toNode": "82b7b1bd7abc45f7",
       "toSide": "left"
     },
     {
-      "id": "c3088c9844e24d37",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "e09326d0d6a0469a",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "2a030186fb58423f",
+      "toNode": "e0aa402985034201",
       "toSide": "left"
     },
     {
-      "id": "488c8cb5a3bf45e0",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "40ab6a0e37a643f4",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "1c8cb6ac772f4991",
+      "toNode": "a9b84f2637ad448a",
       "toSide": "left"
     },
     {
-      "id": "4bcbfb0d814c40f7",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "085f2d3b5e504cf2",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "22ac62f7bc1d4557",
+      "toNode": "7752e4e818f6441f",
       "toSide": "left"
     },
     {
-      "id": "f567829e90174061",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "be968c13c5b24d58",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "f4cf83b44261483c",
+      "toNode": "0839483260ac4077",
       "toSide": "left"
     },
     {
-      "id": "a9457fb15ad546f0",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "1bfea84aab334b87",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "fa6584befec647a4",
+      "toNode": "3eff18e8d30f48de",
       "toSide": "left"
     },
     {
-      "id": "54598466152f4d51",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "c605b5e72a9d45d2",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "1bdbdd8e8b844620",
+      "toNode": "dd1277155d5e4c00",
       "toSide": "left"
     },
     {
-      "id": "bc07f514a6dd4942",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "f3565da3f7c249e8",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "f56824f2e29143c7",
+      "toNode": "fc74c84658ca4e48",
       "toSide": "left"
     },
     {
-      "id": "2c04ff707e824596",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "81a8b0ad0b5f4f06",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "20aab006d9f5435b",
+      "toNode": "d3fcda4560234b15",
       "toSide": "left"
     },
     {
-      "id": "87ba2eae52854df9",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "07dbe7e0457948fe",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "6956968f2e0a4f84",
+      "toNode": "ce6809c6a3dd4680",
       "toSide": "left"
     },
     {
-      "id": "14a1ebad9116450a",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "dac948e0835e4bde",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "e2b87c20ea71466e",
+      "toNode": "85e81224d9e444f0",
       "toSide": "left"
     },
     {
-      "id": "20c9f73b5bc64244",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "729d0e14d17b4734",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "d6b44dd64b254d78",
+      "toNode": "87299dbc35c4400c",
       "toSide": "left"
     },
     {
-      "id": "d6e3887c78414fc5",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "d10a9561e7bf41b6",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "111af276d94c45e3",
+      "toNode": "01786d273f3a499a",
       "toSide": "left"
     },
     {
-      "id": "2d5b3ad662d74432",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "7ee5e1b2a0e643d3",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "1a9fc14cae9446f2",
+      "toNode": "541e03ff32ae4ad1",
       "toSide": "left"
     },
     {
-      "id": "d95b0bb6fc044df6",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "b3370f2232c1473c",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "f97d7901e2a84712",
+      "toNode": "17b555f48ecb4326",
       "toSide": "left"
     },
     {
-      "id": "7ad645d0bff148e1",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "3a0bbc0701bd436b",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "854100474bb14298",
+      "toNode": "7732db4d513148da",
       "toSide": "left"
     },
     {
-      "id": "50d0cbb690a342b0",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "19bbef10cb34450e",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "487139e08ccd45d2",
+      "toNode": "6ae0109a39c04de2",
       "toSide": "left"
     },
     {
-      "id": "8b3d01f905594eb1",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "db557c969ede4eb2",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "c547ddc651c4415e",
+      "toNode": "da99cc6c5fc24dcd",
       "toSide": "left"
     },
     {
-      "id": "7713e000472c4720",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "a1571b205e28414b",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "7be3cbe07a824e11",
+      "toNode": "e0724a5194934484",
       "toSide": "left"
     },
     {
-      "id": "cb3b8ea4b2314a81",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "083e5a4b861d4f3a",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "924c576120db4bb4",
+      "toNode": "5ed13d29ce374160",
       "toSide": "left"
     },
     {
-      "id": "fabe987fc98040bd",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "646c872759f44cba",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "a33cb0b52bbb4b8d",
+      "toNode": "097351ff8e14449b",
       "toSide": "left"
     },
     {
-      "id": "16a65e84ea204c3b",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "ee96d4f46ba8433c",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "d2d8d58d199b4128",
+      "toNode": "d465925c438d4ba4",
       "toSide": "left"
     },
     {
-      "id": "19fc13fe060f47bd",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "c7802ed099dc4ae5",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "e4a17f4d70f84915",
+      "toNode": "94d86614976a45dc",
       "toSide": "left"
     },
     {
-      "id": "82a9800394f24d5b",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "342c42bab2b64961",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "bc3c7588a3a64f9c",
+      "toNode": "2cc0b2e40d654afe",
       "toSide": "left"
     },
     {
-      "id": "31f10fba12d74e05",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "c7012b30262e43bf",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "500a33ab9e504499",
+      "toNode": "b90c39aca6884f7e",
       "toSide": "left"
     },
     {
-      "id": "f582919992d14e9e",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "618f09a0c0184476",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "a9c684ac4f8d4304",
+      "toNode": "a0d1e84384dd44dd",
       "toSide": "left"
     },
     {
-      "id": "f2cc976a8b2a48a6",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "d866d5720ac14f8d",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "be0e2adcb7bb4662",
+      "toNode": "686efab10cf54997",
       "toSide": "left"
     },
     {
-      "id": "1bfda3e3459b41c5",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "fd11019aea41416f",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "cc11858cd7784071",
+      "toNode": "63d6b23a4f984f21",
       "toSide": "left"
     },
     {
-      "id": "a72bf70cb5fc47f4",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "3780069ce6244fdf",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "4c23fdb520e74f4f",
+      "toNode": "b7ad6acc76254f57",
       "toSide": "left"
     },
     {
-      "id": "88195404c09d4ef8",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "cb0ac8be25024f15",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "8c8ba88eb9b54399",
+      "toNode": "161f1092c7cf44e2",
       "toSide": "left"
     },
     {
-      "id": "918eb859da744937",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "1c3953f7fdda4dcf",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "03ad71979b074150",
+      "toNode": "465449bf21c649a5",
       "toSide": "left"
     },
     {
-      "id": "ddf30f1e3e314f7c",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "2622cb5e7fb040fc",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "b08887399e0f4852",
+      "toNode": "1dac2dc6dea44968",
       "toSide": "left"
     },
     {
-      "id": "3a2bd63705c54019",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "1c391a47abb845bb",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "315012b17ffd44f5",
+      "toNode": "d1ea5611006d4f80",
       "toSide": "left"
     },
     {
-      "id": "4e6482209fcd4f53",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "b8099bf0f5e44b1e",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "140a03ac521a451a",
+      "toNode": "7ba12cb5600a46de",
       "toSide": "left"
     },
     {
-      "id": "f848ac123e294105",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "9008772b72354f9f",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "319fce942de34bed",
+      "toNode": "bc869974175a4e32",
       "toSide": "left"
     },
     {
-      "id": "2276d07fdcd248b4",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "8739d34f3d9b45fb",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "708e5add71ba4cd7",
+      "toNode": "59c524f7e10a4e04",
       "toSide": "left"
     },
     {
-      "id": "a4622bb273ae4f43",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "e5c16d85834741be",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "4ff4186018cc40ed",
+      "toNode": "b4dffb72c18749f5",
       "toSide": "left"
     },
     {
-      "id": "ee35db8e05b148f8",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "9ba15307b60643dd",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "b60c4754ee6e42a3",
+      "toNode": "1f92dd950f224d74",
       "toSide": "left"
     },
     {
-      "id": "9c63034ddd214a49",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "9e0b60cb286347f6",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "c05ed90e5d194c28",
+      "toNode": "9914c28e8df54494",
       "toSide": "left"
     },
     {
-      "id": "9c1ed07e3b704a72",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "149b4f7bb2514c9e",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "c0e0295ed4654016",
+      "toNode": "94d7e06156294718",
       "toSide": "left"
     },
     {
-      "id": "2e9c99d67ec44e3e",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "68af2b3ec3a34cbf",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "e5a06f1165c94e99",
+      "toNode": "9dc1659738994454",
       "toSide": "left"
     },
     {
-      "id": "7b0486fabd574022",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "11b847a6f0ae4744",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "9812025fca0b4283",
+      "toNode": "05963e198d6d4b26",
       "toSide": "left"
     },
     {
-      "id": "a58a94364a054d06",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "6bc8d93fbd294d7e",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "066df531c0964f02",
+      "toNode": "a8b597cae6fb4d52",
       "toSide": "left"
     },
     {
-      "id": "f2ac2719200848a7",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "e7a70fdcab3446fa",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "70f39beff2c34276",
+      "toNode": "03d6567489844080",
       "toSide": "left"
     },
     {
-      "id": "fa399ca00be145d3",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "3170ea844cdf471d",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "8fb0cc27c02a497c",
+      "toNode": "9b7b6074cb03479a",
       "toSide": "left"
     },
     {
-      "id": "d0a4bdff905848ad",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "9f9e9616902e4133",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "9d5f04fae414410b",
+      "toNode": "34d41c67d59a4d85",
       "toSide": "left"
     },
     {
-      "id": "ba90c92d417f44be",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "7e1e2be9f6c34dbc",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "4e996bca7f2b4e34",
+      "toNode": "bbb7392e6b8d41f8",
       "toSide": "left"
     },
     {
-      "id": "6bab76edcde34a4a",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "b0385c464e8b4b92",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "6a0152800fe842cd",
+      "toNode": "7a4bfdf7ccf74795",
       "toSide": "left"
     },
     {
-      "id": "554d399663864737",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "2ade729979ce4709",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "3ba2d03be5454391",
+      "toNode": "0c4ea7b56b6042a1",
       "toSide": "left"
     },
     {
-      "id": "65969bd650d1418e",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "4d78bfa0a0244f46",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "67b16f86cbc14d32",
+      "toNode": "ea962c26f8da4efe",
       "toSide": "left"
     },
     {
-      "id": "a6882e958ae24c31",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "13127ea12df745dd",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "f13023c3d71846e3",
+      "toNode": "befade5d901e4a99",
       "toSide": "left"
     },
     {
-      "id": "442201b12f1c4d2c",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "f1dca556d92447ea",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "71e13e6c92c7426a",
+      "toNode": "db4de21770d5424d",
       "toSide": "left"
     },
     {
-      "id": "26573c8161294aa5",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "b9cee4881f4d4334",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "9b8f506ee5a64a1b",
+      "toNode": "ef718141fe734cf5",
       "toSide": "left"
     },
     {
-      "id": "a3f9d676cb2a4a63",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "67d872fc433e4300",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "92170eb2f2a1465f",
+      "toNode": "177eb5005dc94ae4",
       "toSide": "left"
     },
     {
-      "id": "a9889fa1b3a5447f",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "82aeaca1e04a4873",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "e3b8294e7b0a4370",
+      "toNode": "253a98368db04e49",
       "toSide": "left"
     },
     {
-      "id": "3ce74b8f7ca247ad",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "2b2d74bc27444da1",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "7017297659ca4141",
+      "toNode": "8d04b33ca5714dcb",
       "toSide": "left"
     },
     {
-      "id": "dd862379f665424f",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "923ce82909f44f87",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "6926eb0a0c1c47df",
+      "toNode": "283b6ac703b24ef8",
       "toSide": "left"
     },
     {
-      "id": "224c31ef2673401a",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "7c1d1e131d6f40d4",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "ccbb6357e4be4668",
+      "toNode": "21a842ddf9084d2f",
       "toSide": "left"
     },
     {
-      "id": "2fd78aed21af4df3",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "7db9d4e5e5b741f3",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "a59f0a5c7a64415d",
+      "toNode": "89cea8738e3f4522",
       "toSide": "left"
     },
     {
-      "id": "740d9cd23e4146c3",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "348a0cc8e044446b",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "e47754b756c84c1b",
+      "toNode": "36009e6c3f7b4d45",
       "toSide": "left"
     },
     {
-      "id": "f5ba2d06a34d4062",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "49576eb15e324e17",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "e13de533e1bc41de",
+      "toNode": "09f9c8ead63648b7",
       "toSide": "left"
     },
     {
-      "id": "6eea9ed261d543ae",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "8dda9c9fe3344f21",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "cff67a92c92a4e08",
+      "toNode": "d3ac87dc9fdd4dde",
       "toSide": "left"
     },
     {
-      "id": "023657e207924f82",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "e0475d94243c47c7",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "ebbbcc38c96e428c",
+      "toNode": "8810cf20165d4cd7",
       "toSide": "left"
     },
     {
-      "id": "91ecf4a03f974446",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "42475e1008244a8a",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "58b0990e2f5b4801",
+      "toNode": "a0155b057ce44163",
       "toSide": "left"
     },
     {
-      "id": "0e15516d7cc34b75",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "780777afea774122",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "89d1229a0ead486f",
+      "toNode": "94c58c051bec4f8d",
       "toSide": "left"
     },
     {
-      "id": "b234f1bef7844b2f",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "c9ed2003c46a4dfd",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "56b94040525143ec",
+      "toNode": "220a885e90a0414c",
       "toSide": "left"
     },
     {
-      "id": "139e4381a4784302",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "23e54e60d9a140f8",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "9309460389fd41f3",
+      "toNode": "de26c29b9b954f3a",
       "toSide": "left"
     },
     {
-      "id": "bef15f7939864de8",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "ac435f3f678e47eb",
+      "fromNode": "7cbe932c9ad84173",
       "fromSide": "right",
-      "toNode": "44fcca3df307487b",
+      "toNode": "d78af1adf36d4b42",
       "toSide": "left"
     },
     {
-      "id": "1221a248bdda46c0",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "5bc71c6716d14a1e",
+      "fromNode": "d3b5353a61da43c3",
       "fromSide": "right",
-      "toNode": "5baa69d81fae4f3d",
+      "toNode": "5e93e2d888884d1e",
       "toSide": "left"
     },
     {
-      "id": "77865432b60443f9",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "b146b0977b3e497f",
+      "fromNode": "5e93e2d888884d1e",
       "fromSide": "right",
-      "toNode": "9d98a64acd93481b",
+      "toNode": "60d37273943b4af3",
       "toSide": "left"
     },
     {
-      "id": "a0d5bcf2d461497c",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "b15cc62c067348ab",
+      "fromNode": "5e93e2d888884d1e",
       "fromSide": "right",
-      "toNode": "47da019af0e342c3",
+      "toNode": "fd5d39fed7a14b8c",
       "toSide": "left"
     },
     {
-      "id": "7a8168d4d3c9475d",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "f6da1aafc6c44a3f",
+      "fromNode": "5e93e2d888884d1e",
       "fromSide": "right",
-      "toNode": "0ca0c813d88a42c5",
+      "toNode": "72859cec9e914743",
       "toSide": "left"
     },
     {
-      "id": "d86d5f478b9e47f9",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "b012d8f734a54d87",
+      "fromNode": "5e93e2d888884d1e",
       "fromSide": "right",
-      "toNode": "b97ad690d4954378",
+      "toNode": "c6998f9af2524291",
       "toSide": "left"
     },
     {
-      "id": "94e6202d88ea40c9",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "998616ad2c5d4fa7",
+      "fromNode": "d3b5353a61da43c3",
       "fromSide": "right",
-      "toNode": "847a37df6be94e21",
+      "toNode": "078d4ea800d143c0",
       "toSide": "left"
     },
     {
-      "id": "ffde67699e354b40",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "0ad4ab74735f420a",
+      "fromNode": "078d4ea800d143c0",
       "fromSide": "right",
-      "toNode": "75d38ade6896427e",
+      "toNode": "b3ea450a77f94188",
       "toSide": "left"
     },
     {
-      "id": "b07487e464d748f6",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "751147b60a244618",
+      "fromNode": "d3b5353a61da43c3",
       "fromSide": "right",
-      "toNode": "6ef58daad9784870",
+      "toNode": "e4a6a75d8d254f1d",
       "toSide": "left"
     },
     {
-      "id": "bbe27fb8a2424f04",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "2d6bba8c1a784bd1",
+      "fromNode": "e4a6a75d8d254f1d",
       "fromSide": "right",
-      "toNode": "03c16493941b434b",
+      "toNode": "45fb39bf8a394fd3",
       "toSide": "left"
     },
     {
-      "id": "61700719b0494f2d",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "397f733fcdb54cd3",
+      "fromNode": "d3b5353a61da43c3",
       "fromSide": "right",
-      "toNode": "cd0f1a45d67e4030",
+      "toNode": "1ae9e11f8c0c4c1b",
       "toSide": "left"
     },
     {
-      "id": "c294c2c8143746dd",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "7bed85c588d44291",
+      "fromNode": "d3b5353a61da43c3",
       "fromSide": "right",
-      "toNode": "47191e32d67b44bc",
+      "toNode": "b972fd6c51934846",
       "toSide": "left"
     },
     {
-      "id": "d80e5ee0e0374477",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "248aad636cec4c33",
+      "fromNode": "b972fd6c51934846",
       "fromSide": "right",
-      "toNode": "c6690c8f01b64385",
+      "toNode": "5075c8516a3343d3",
       "toSide": "left"
     },
     {
-      "id": "4aac61d60f5845d4",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "0bea66c336fb4ad3",
+      "fromNode": "b972fd6c51934846",
       "fromSide": "right",
-      "toNode": "09cfa0f1ff3145a2",
+      "toNode": "ac1b1f3d06e04805",
       "toSide": "left"
     },
     {
-      "id": "0a62f1c3fadb4a60",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "887a9e4577d54deb",
+      "fromNode": "b972fd6c51934846",
       "fromSide": "right",
-      "toNode": "f795f182dd7d4bce",
+      "toNode": "fdcc53ee4a274474",
       "toSide": "left"
     },
     {
-      "id": "d9e05e9a23914043",
-      "fromNode": "bf6abb807ca94af0",
+      "id": "9664a9dcce8e4ec9",
+      "fromNode": "b972fd6c51934846",
       "fromSide": "right",
-      "toNode": "72037c76340a466d",
-      "toSide": "left"
-    },
-    {
-      "id": "d8fc14fdd8ab46e6",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "8af2217becf442a2",
-      "toSide": "left"
-    },
-    {
-      "id": "388a01dc6dc5432f",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "be167a8c0e644dc1",
-      "toSide": "left"
-    },
-    {
-      "id": "80e0449a05ae4d37",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "e1bf9a808a074175",
-      "toSide": "left"
-    },
-    {
-      "id": "ecf54359d7924fa1",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "1b120f826d42454e",
-      "toSide": "left"
-    },
-    {
-      "id": "fbe45b562fc04001",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "934db5b5c4e443c9",
-      "toSide": "left"
-    },
-    {
-      "id": "1521b6f3973d435a",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "5c8ce92dfc754f12",
-      "toSide": "left"
-    },
-    {
-      "id": "52652e6c4f074805",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "dabd89a7cf2d4c28",
-      "toSide": "left"
-    },
-    {
-      "id": "07b4535cbf0a436e",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "f1698831e3834040",
-      "toSide": "left"
-    },
-    {
-      "id": "1f07a3caf10644c7",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "c0df8e1639f74183",
-      "toSide": "left"
-    },
-    {
-      "id": "2f60a59ee09640c8",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "e5c84455fcf9421b",
-      "toSide": "left"
-    },
-    {
-      "id": "85c5b26567e44ca8",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "19966251954a4c5d",
-      "toSide": "left"
-    },
-    {
-      "id": "01df985cda3b4101",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "79425cf719c74a2e",
-      "toSide": "left"
-    },
-    {
-      "id": "48cf0ef051ba4a80",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "409606ed87e247ae",
-      "toSide": "left"
-    },
-    {
-      "id": "7aa3e79481ed4138",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "ffa64078cec64a6b",
-      "toSide": "left"
-    },
-    {
-      "id": "279778eae7de4301",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "1260eba2e97740e1",
-      "toSide": "left"
-    },
-    {
-      "id": "4cd58425ccde402a",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "faa92c661a224944",
-      "toSide": "left"
-    },
-    {
-      "id": "11abae812ada4ca3",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "d80908083af54711",
-      "toSide": "left"
-    },
-    {
-      "id": "d9360daaf1034db0",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "e8dc00c26e7f4fbe",
-      "toSide": "left"
-    },
-    {
-      "id": "6a23c4e3589d4d7f",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "e6762d6b306843dd",
-      "toSide": "left"
-    },
-    {
-      "id": "839ab36904314a9b",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "32693a98c9be40ca",
-      "toSide": "left"
-    },
-    {
-      "id": "dc9de3433f0e4afd",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "5f6726d351834bc9",
-      "toSide": "left"
-    },
-    {
-      "id": "772ea3fc4ff54267",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "a61e9136d74a496c",
-      "toSide": "left"
-    },
-    {
-      "id": "3c761263eea641fe",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "28fc2a28e2a24348",
-      "toSide": "left"
-    },
-    {
-      "id": "7b19d8f557d44f54",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "550db53c10714748",
-      "toSide": "left"
-    },
-    {
-      "id": "b8e3dadf45944565",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "71a790a94c0645b2",
-      "toSide": "left"
-    },
-    {
-      "id": "92d8c5b5e6b34fa8",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "37d05129c7d14d16",
-      "toSide": "left"
-    },
-    {
-      "id": "01d4bbcac2084df6",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "323af8f98e08466a",
-      "toSide": "left"
-    },
-    {
-      "id": "b5f4f88759ff40b5",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "8c39ced69f6b4fb4",
-      "toSide": "left"
-    },
-    {
-      "id": "7093e843d832467c",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "4e78bb56ad0a46cd",
-      "toSide": "left"
-    },
-    {
-      "id": "71a0b7e022804360",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "a10d9277253a4f67",
-      "toSide": "left"
-    },
-    {
-      "id": "bfdea20ee0fe43f6",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "682c1fdd67f34d57",
-      "toSide": "left"
-    },
-    {
-      "id": "a84fb0fc9c5c4a44",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "2749e9d9bcad4030",
-      "toSide": "left"
-    },
-    {
-      "id": "8a4649b2815541f4",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "7659b3691b8a4d1b",
-      "toSide": "left"
-    },
-    {
-      "id": "18369856e7e14051",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "d084c5310dc74b29",
-      "toSide": "left"
-    },
-    {
-      "id": "6dc66f8327974ab1",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "158883784c954dbb",
-      "toSide": "left"
-    },
-    {
-      "id": "ff95608d515d439c",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "9c62833b114b40cc",
-      "toSide": "left"
-    },
-    {
-      "id": "99a25e333a484150",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "018aff57e92d49a6",
-      "toSide": "left"
-    },
-    {
-      "id": "11f83aaaecca4ff0",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "97705905ec224d29",
-      "toSide": "left"
-    },
-    {
-      "id": "c2f870177ebb42a7",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "c96d45c8f01e4078",
-      "toSide": "left"
-    },
-    {
-      "id": "7ac57fe0c8b540d7",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "a2ce1e5fb28a4abf",
-      "toSide": "left"
-    },
-    {
-      "id": "0329fd1ac1114dbe",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "e734dfc1c864486f",
-      "toSide": "left"
-    },
-    {
-      "id": "709c8e48714a4d3b",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "a6ec7233c08d492e",
-      "toSide": "left"
-    },
-    {
-      "id": "f4c856ab3b964e38",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "e5a91e3f2fbe4c73",
-      "toSide": "left"
-    },
-    {
-      "id": "97a51933944b4084",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "34b896b61d1b4d25",
-      "toSide": "left"
-    },
-    {
-      "id": "3a3a4c1fa116477e",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "1c898e192fac4e47",
-      "toSide": "left"
-    },
-    {
-      "id": "9b11bfa3df4742fd",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "e370b81ff8f8402c",
-      "toSide": "left"
-    },
-    {
-      "id": "4f480403824a4cf9",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "6024498995ab40c6",
-      "toSide": "left"
-    },
-    {
-      "id": "46d8199c9eaa4425",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "a9a7923464824d8c",
-      "toSide": "left"
-    },
-    {
-      "id": "33d69c607cdd4f38",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "072fbb4fd4ba452a",
-      "toSide": "left"
-    },
-    {
-      "id": "8a8b16674c4e4f3e",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "187a889a30ab4b5b",
-      "toSide": "left"
-    },
-    {
-      "id": "197b37baf1104f4b",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "2e46abbd09024653",
-      "toSide": "left"
-    },
-    {
-      "id": "f6127e2c248b4c6a",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "2732e40f2a554f49",
-      "toSide": "left"
-    },
-    {
-      "id": "b8555fa02ab54a91",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "071987938dea44c2",
-      "toSide": "left"
-    },
-    {
-      "id": "ba15200288384e1c",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "b77d4b83aac74266",
-      "toSide": "left"
-    },
-    {
-      "id": "b1b7e28bc4a04bdb",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "d3557d1b13b94850",
-      "toSide": "left"
-    },
-    {
-      "id": "445aa23d31d3456f",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "2f660a3b0698401f",
-      "toSide": "left"
-    },
-    {
-      "id": "d9c53b6c25e54402",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "1cb5267e267a4c8a",
-      "toSide": "left"
-    },
-    {
-      "id": "1dff98ed1b614ec9",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "8de72e1e42564a00",
-      "toSide": "left"
-    },
-    {
-      "id": "5544d2927ae14225",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "11806be1ec4d4ba2",
-      "toSide": "left"
-    },
-    {
-      "id": "234ce4d066f64696",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "03dbf1b1a1124de3",
-      "toSide": "left"
-    },
-    {
-      "id": "a391627f415d451b",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "a25a6d0ba0d9421e",
-      "toSide": "left"
-    },
-    {
-      "id": "09ff44e3821c4a66",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "7937c9e6d4294db7",
-      "toSide": "left"
-    },
-    {
-      "id": "4081c7418ea6486a",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "4bb1c6ee3c994dfb",
-      "toSide": "left"
-    },
-    {
-      "id": "e32b68ba964442cd",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "0584785a3ebf4fb3",
-      "toSide": "left"
-    },
-    {
-      "id": "c3dba253c5694c22",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "3c00c3e90efe4013",
-      "toSide": "left"
-    },
-    {
-      "id": "8c33f9b08a924093",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "9eea0e31bd634fe1",
-      "toSide": "left"
-    },
-    {
-      "id": "1a9ccbb7840443d7",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "72c3a0e07ebc4211",
-      "toSide": "left"
-    },
-    {
-      "id": "ee569322a2124e7f",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "730c6de37a974379",
-      "toSide": "left"
-    },
-    {
-      "id": "22dc2fa715804bbe",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "e899ca72bdca4acb",
-      "toSide": "left"
-    },
-    {
-      "id": "9856c3b7af944898",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "84e316b438074173",
-      "toSide": "left"
-    },
-    {
-      "id": "26e2992667374a45",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "071a13c263e348d7",
-      "toSide": "left"
-    },
-    {
-      "id": "e93b6f8176ee4efe",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "b8b9826fc85645ef",
-      "toSide": "left"
-    },
-    {
-      "id": "a5613b9f2f984d31",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "8c29e2df84124112",
-      "toSide": "left"
-    },
-    {
-      "id": "c09b50f9247c4019",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "58dbe07374914e95",
-      "toSide": "left"
-    },
-    {
-      "id": "90511c5d09e84528",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "5d2ee4f2eaef407a",
-      "toSide": "left"
-    },
-    {
-      "id": "e707c9e23f734b53",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "d8b8b571af5e403d",
-      "toSide": "left"
-    },
-    {
-      "id": "796154bad00e4b65",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "5039d49d4a9e46e7",
-      "toSide": "left"
-    },
-    {
-      "id": "646ca659b76f42ac",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "4b64c53a41e14a34",
-      "toSide": "left"
-    },
-    {
-      "id": "584347ed00c248c2",
-      "fromNode": "bf6abb807ca94af0",
-      "fromSide": "right",
-      "toNode": "5d2335f0cb694c4c",
-      "toSide": "left"
-    },
-    {
-      "id": "9e6b362fa7f8416f",
-      "fromNode": "2d0d596949444509",
-      "fromSide": "right",
-      "toNode": "3a8754b4950a441c",
-      "toSide": "left"
-    },
-    {
-      "id": "d6704282f4df425e",
-      "fromNode": "3a8754b4950a441c",
-      "fromSide": "right",
-      "toNode": "6ea03760036c409f",
-      "toSide": "left"
-    },
-    {
-      "id": "f14fdbce208645ce",
-      "fromNode": "3a8754b4950a441c",
-      "fromSide": "right",
-      "toNode": "75296d84ae4640ce",
-      "toSide": "left"
-    },
-    {
-      "id": "40bd5b25db7c4fac",
-      "fromNode": "3a8754b4950a441c",
-      "fromSide": "right",
-      "toNode": "1a3596ade0fd4068",
-      "toSide": "left"
-    },
-    {
-      "id": "045e0e42fc8e4f33",
-      "fromNode": "3a8754b4950a441c",
-      "fromSide": "right",
-      "toNode": "17904dc66e3d4a9f",
-      "toSide": "left"
-    },
-    {
-      "id": "01234887620f4a95",
-      "fromNode": "2d0d596949444509",
-      "fromSide": "right",
-      "toNode": "f8ab16ac62494e77",
-      "toSide": "left"
-    },
-    {
-      "id": "3bb523c2a1a7493b",
-      "fromNode": "f8ab16ac62494e77",
-      "fromSide": "right",
-      "toNode": "559a8bd7db124497",
-      "toSide": "left"
-    },
-    {
-      "id": "3329f47469ac4d74",
-      "fromNode": "2d0d596949444509",
-      "fromSide": "right",
-      "toNode": "a18a82b9def242a8",
-      "toSide": "left"
-    },
-    {
-      "id": "1daf7eab8ce74763",
-      "fromNode": "2d0d596949444509",
-      "fromSide": "right",
-      "toNode": "2b604430a33249da",
-      "toSide": "left"
-    },
-    {
-      "id": "441930088de54ada",
-      "fromNode": "2d0d596949444509",
-      "fromSide": "right",
-      "toNode": "594892ad7fd54056",
-      "toSide": "left"
-    },
-    {
-      "id": "d9fd246314284943",
-      "fromNode": "594892ad7fd54056",
-      "fromSide": "right",
-      "toNode": "2a041189f665495c",
-      "toSide": "left"
-    },
-    {
-      "id": "95940ff4dc1b48e1",
-      "fromNode": "594892ad7fd54056",
-      "fromSide": "right",
-      "toNode": "f595c2622aa248c6",
-      "toSide": "left"
-    },
-    {
-      "id": "db244adc538344f0",
-      "fromNode": "594892ad7fd54056",
-      "fromSide": "right",
-      "toNode": "b85d31e6eb6c4e8d",
-      "toSide": "left"
-    },
-    {
-      "id": "3363590eb9834b67",
-      "fromNode": "594892ad7fd54056",
-      "fromSide": "right",
-      "toNode": "0e7693d99a5c4951",
+      "toNode": "2a0bd0c6a72f4f35",
       "toSide": "left"
     }
   ]

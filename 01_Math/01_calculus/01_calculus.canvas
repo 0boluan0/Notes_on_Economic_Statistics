@@ -1,7 +1,7 @@
 {
   "nodes": [
     {
-      "id": "9dc28176b4a9484a",
+      "id": "1dd9d462b4be4937",
       "type": "text",
       "x": -130,
       "y": -60,
@@ -11,135 +11,144 @@
       "color": "5"
     },
     {
-      "id": "d1e4114c3bec4457",
+      "id": "f74ae368dde541f6",
       "type": "group",
       "x": -399,
-      "y": -1244,
+      "y": -1300,
       "width": 800,
-      "height": 490,
+      "height": 600,
       "label": "concept",
       "color": "3"
     },
     {
-      "id": "18e4f44b895d46ef",
+      "id": "acb72778f1a14727",
       "type": "text",
       "x": -359,
-      "y": -1204,
-      "width": 220,
-      "height": 80,
-      "text": "**Derivative (2)**"
-    },
-    {
-      "id": "716e74d49ef54ccd",
-      "type": "text",
-      "x": -109,
-      "y": -1204,
-      "width": 220,
-      "height": 80,
-      "text": "**geometric interpretation of derivative**"
-    },
-    {
-      "id": "65893d082fc044be",
-      "type": "text",
-      "x": 141,
-      "y": -1204,
-      "width": 220,
-      "height": 80,
-      "text": "**Integral**"
-    },
-    {
-      "id": "a7eb658b939f47d8",
-      "type": "text",
-      "x": -359,
-      "y": -1094,
+      "y": -1260,
       "width": 220,
       "height": 80,
       "text": "**Applications of Differentiation**"
     },
     {
-      "id": "1d0e59c0fc0a49d2",
+      "id": "27088fdac24e4e08",
       "type": "text",
       "x": -109,
-      "y": -1094,
+      "y": -1260,
       "width": 220,
       "height": 80,
       "text": "**Differentiation**"
     },
     {
-      "id": "4facf8c975b84a94",
+      "id": "dc9875638fed4289",
       "type": "text",
       "x": 141,
-      "y": -1094,
+      "y": -1260,
       "width": 220,
       "height": 80,
       "text": "**Exam**"
     },
     {
-      "id": "8734ccdfd39447c3",
+      "id": "acbd6f682bcb4308",
       "type": "text",
       "x": -359,
-      "y": -984,
+      "y": -1150,
       "width": 220,
       "height": 80,
       "text": "**Exploring the Infinite**"
     },
     {
-      "id": "db18c201633344ed",
+      "id": "fe9d677a4fe74922",
       "type": "text",
       "x": -109,
-      "y": -984,
+      "y": -1150,
+      "width": 220,
+      "height": 80,
+      "text": "**Integral**"
+    },
+    {
+      "id": "996210cfaeaf4ca9",
+      "type": "text",
+      "x": 141,
+      "y": -1150,
       "width": 220,
       "height": 80,
       "text": "**Introduction to 18.01**"
     },
     {
-      "id": "46390a0c9d4549ff",
+      "id": "cba4ed55ff8749b0",
       "type": "text",
-      "x": 141,
-      "y": -984,
+      "x": -359,
+      "y": -1040,
       "width": 220,
       "height": 80,
       "text": "**Part A:Definition and Basic Rules**"
     },
     {
-      "id": "a9121bf2559e4140",
+      "id": "ca3807abb2f04dbe",
       "type": "text",
-      "x": -359,
-      "y": -874,
+      "x": -109,
+      "y": -1040,
       "width": 220,
       "height": 80,
       "text": "**Session 1: Introduction to Derivatives**"
     },
     {
-      "id": "73d88024466c4883",
+      "id": "7de8dd90829146d9",
       "type": "text",
-      "x": -109,
-      "y": -874,
+      "x": 141,
+      "y": -1040,
       "width": 220,
       "height": 80,
       "text": "**Techniques of  Integration**"
     },
     {
-      "id": "1e0c69f6f45d4848",
+      "id": "afbebbb6c2074459",
       "type": "text",
-      "x": 141,
-      "y": -874,
+      "x": -359,
+      "y": -930,
       "width": 220,
       "height": 80,
       "text": "**The Definite Integral and its Applications**"
     },
     {
-      "id": "479f5ca8a7764e39",
+      "id": "c49571a2ff454e97",
+      "type": "text",
+      "x": -109,
+      "y": -930,
+      "width": 220,
+      "height": 80,
+      "text": "**derivative**"
+    },
+    {
+      "id": "f64a5959544f4f16",
+      "type": "text",
+      "x": 141,
+      "y": -930,
+      "width": 220,
+      "height": 80,
+      "text": "**Derivative (2)**"
+    },
+    {
+      "id": "dc7017bbeecd444f",
+      "type": "text",
+      "x": -359,
+      "y": -820,
+      "width": 220,
+      "height": 80,
+      "text": "**geometric interpretation of derivative**"
+    },
+    {
+      "id": "92e7844629234467",
       "type": "group",
       "x": 466,
-      "y": -609,
+      "y": -610,
       "width": 800,
       "height": 220,
       "label": "framework",
       "color": "3"
     },
     {
-      "id": "bd78c7dfcd2946f3",
+      "id": "4344de05cc524846",
       "type": "group",
       "x": 466,
       "y": 389,
@@ -149,27 +158,27 @@
       "color": "3"
     },
     {
-      "id": "94681629c33d4fd2",
+      "id": "2fe58d49c4034349",
       "type": "group",
       "x": -399,
-      "y": 889,
+      "y": 890,
       "width": 800,
       "height": 220,
       "label": "system",
       "color": "3"
     },
     {
-      "id": "762cd611368947d2",
+      "id": "89796f7614264949",
       "type": "group",
       "x": -1266,
-      "y": 390,
+      "y": 389,
       "width": 800,
       "height": 220,
       "label": "proof",
       "color": "3"
     },
     {
-      "id": "e37a960a8881403b",
+      "id": "66144db97d644f98",
       "type": "group",
       "x": -1266,
       "y": -610,
@@ -181,129 +190,136 @@
   ],
   "edges": [
     {
-      "id": "85201ed44e4c47b2",
-      "fromNode": "9dc28176b4a9484a",
+      "id": "eb7d02e4a4634cac",
+      "fromNode": "1dd9d462b4be4937",
       "fromSide": "right",
-      "toNode": "d1e4114c3bec4457",
+      "toNode": "f74ae368dde541f6",
       "toSide": "left"
     },
     {
-      "id": "18993567d24c4bf7",
-      "fromNode": "d1e4114c3bec4457",
+      "id": "9b875373ab374185",
+      "fromNode": "f74ae368dde541f6",
       "fromSide": "right",
-      "toNode": "18e4f44b895d46ef",
+      "toNode": "acb72778f1a14727",
       "toSide": "left"
     },
     {
-      "id": "8f55a7b2595e4e50",
-      "fromNode": "d1e4114c3bec4457",
+      "id": "3e6fe2f1c0354ca2",
+      "fromNode": "f74ae368dde541f6",
       "fromSide": "right",
-      "toNode": "716e74d49ef54ccd",
+      "toNode": "27088fdac24e4e08",
       "toSide": "left"
     },
     {
-      "id": "8ebe7068ceb74e59",
-      "fromNode": "d1e4114c3bec4457",
+      "id": "ceabbc1050ca41d4",
+      "fromNode": "f74ae368dde541f6",
       "fromSide": "right",
-      "toNode": "65893d082fc044be",
+      "toNode": "dc9875638fed4289",
       "toSide": "left"
     },
     {
-      "id": "1ce67f1635b54e02",
-      "fromNode": "d1e4114c3bec4457",
+      "id": "dfb52a7868f44029",
+      "fromNode": "f74ae368dde541f6",
       "fromSide": "right",
-      "toNode": "a7eb658b939f47d8",
+      "toNode": "acbd6f682bcb4308",
       "toSide": "left"
     },
     {
-      "id": "b4fc86a40048475b",
-      "fromNode": "d1e4114c3bec4457",
+      "id": "bc2888f845e34cf8",
+      "fromNode": "f74ae368dde541f6",
       "fromSide": "right",
-      "toNode": "1d0e59c0fc0a49d2",
+      "toNode": "fe9d677a4fe74922",
       "toSide": "left"
     },
     {
-      "id": "2f0eca962e81467b",
-      "fromNode": "d1e4114c3bec4457",
+      "id": "f132367a6ce34aad",
+      "fromNode": "f74ae368dde541f6",
       "fromSide": "right",
-      "toNode": "4facf8c975b84a94",
+      "toNode": "996210cfaeaf4ca9",
       "toSide": "left"
     },
     {
-      "id": "0dbbd428785a4f8f",
-      "fromNode": "d1e4114c3bec4457",
+      "id": "c54d9f46e60045e3",
+      "fromNode": "f74ae368dde541f6",
       "fromSide": "right",
-      "toNode": "8734ccdfd39447c3",
+      "toNode": "cba4ed55ff8749b0",
       "toSide": "left"
     },
     {
-      "id": "fa4102b3e5614612",
-      "fromNode": "d1e4114c3bec4457",
+      "id": "2d47a8916cbc424f",
+      "fromNode": "f74ae368dde541f6",
       "fromSide": "right",
-      "toNode": "db18c201633344ed",
+      "toNode": "ca3807abb2f04dbe",
       "toSide": "left"
     },
     {
-      "id": "e49ddb54fa08414a",
-      "fromNode": "d1e4114c3bec4457",
+      "id": "3701c6bba49e4634",
+      "fromNode": "f74ae368dde541f6",
       "fromSide": "right",
-      "toNode": "46390a0c9d4549ff",
+      "toNode": "7de8dd90829146d9",
       "toSide": "left"
     },
     {
-      "id": "54ec8da8e46e434c",
-      "fromNode": "d1e4114c3bec4457",
+      "id": "9000b2e494b941e6",
+      "fromNode": "f74ae368dde541f6",
       "fromSide": "right",
-      "toNode": "a9121bf2559e4140",
+      "toNode": "afbebbb6c2074459",
       "toSide": "left"
     },
     {
-      "id": "3a08d630f0104988",
-      "fromNode": "d1e4114c3bec4457",
+      "id": "13d0fa9c45704c6b",
+      "fromNode": "f74ae368dde541f6",
       "fromSide": "right",
-      "toNode": "73d88024466c4883",
+      "toNode": "c49571a2ff454e97",
       "toSide": "left"
     },
     {
-      "id": "b0f968af8a89418e",
-      "fromNode": "d1e4114c3bec4457",
+      "id": "0466810512e24a1c",
+      "fromNode": "f74ae368dde541f6",
       "fromSide": "right",
-      "toNode": "1e0c69f6f45d4848",
+      "toNode": "f64a5959544f4f16",
       "toSide": "left"
     },
     {
-      "id": "e44aac92a8c44b42",
-      "fromNode": "9dc28176b4a9484a",
+      "id": "6fbff0aefe3f4dc9",
+      "fromNode": "f74ae368dde541f6",
       "fromSide": "right",
-      "toNode": "479f5ca8a7764e39",
+      "toNode": "dc7017bbeecd444f",
       "toSide": "left"
     },
     {
-      "id": "9d9b52ed8644468b",
-      "fromNode": "9dc28176b4a9484a",
+      "id": "f28592102d5e484a",
+      "fromNode": "1dd9d462b4be4937",
       "fromSide": "right",
-      "toNode": "bd78c7dfcd2946f3",
+      "toNode": "92e7844629234467",
       "toSide": "left"
     },
     {
-      "id": "b89d0515bbc046eb",
-      "fromNode": "9dc28176b4a9484a",
+      "id": "ee8fbc0c52234934",
+      "fromNode": "1dd9d462b4be4937",
       "fromSide": "right",
-      "toNode": "94681629c33d4fd2",
+      "toNode": "4344de05cc524846",
       "toSide": "left"
     },
     {
-      "id": "91489c7a447d4605",
-      "fromNode": "9dc28176b4a9484a",
+      "id": "fb661ac504ee4d75",
+      "fromNode": "1dd9d462b4be4937",
       "fromSide": "right",
-      "toNode": "762cd611368947d2",
+      "toNode": "2fe58d49c4034349",
       "toSide": "left"
     },
     {
-      "id": "73f33140fb3e4b55",
-      "fromNode": "9dc28176b4a9484a",
+      "id": "21c2520cc465420e",
+      "fromNode": "1dd9d462b4be4937",
       "fromSide": "right",
-      "toNode": "e37a960a8881403b",
+      "toNode": "89796f7614264949",
+      "toSide": "left"
+    },
+    {
+      "id": "94a7fe5fa7764f5c",
+      "fromNode": "1dd9d462b4be4937",
+      "fromSide": "right",
+      "toNode": "66144db97d644f98",
       "toSide": "left"
     }
   ]
