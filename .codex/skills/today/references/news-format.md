@@ -9,59 +9,29 @@ Use this rubric for module 1 in the daily note.
 
 ## Coverage
 
-- Regions: Americas, Europe, MENA, Africa, APAC (up to 3 items each)
-- Global Technology: 3 items
-- Global Intelligence & Geopolitics: 3 items (intel + gov + politics)
+- Show a single summary table beneath the map.
+- The number of rows is allocated dynamically by region heat.
+- Do not include sources in the table.
 
 ## Output Template
 
 ```markdown
 ## 模块一｜全球态势静态快照（中英双语）
 > 时间窗口：{start_time} ~ {end_time} ({tz})
-> 注：若未启用翻译，中文行可暂用英文标题。
+> 注：表格为摘要，不含来源。
 
 ![[98_attachment/dashboards/YYYY-MM-DD-map.svg]]
 
-### 区域新闻（Regions）
-#### 美洲 / Americas
-- 中文：...
-  EN: ...
-  来源：...（YYYY-MM-DD HH:mm, local time）
-
-#### 欧洲 / Europe
-- 中文：...
-  EN: ...
-  来源：...（YYYY-MM-DD HH:mm, local time）
-
-#### 中东北非 / MENA
-- 中文：...
-  EN: ...
-  来源：...（YYYY-MM-DD HH:mm, local time）
-
-#### 非洲 / Africa
-- 中文：...
-  EN: ...
-  来源：...（YYYY-MM-DD HH:mm, local time）
-
-#### 亚太 / APAC
-- 中文：...
-  EN: ...
-  来源：...（YYYY-MM-DD HH:mm, local time）
-
-### 全球科技（Global Technology）
-- 中文：...
-  EN: ...
-  来源：...（YYYY-MM-DD HH:mm, local time）
-
-### 全球情报/地缘政经（Global Intelligence & Geopolitics）
-- 中文：...
-  EN: ...
-  来源：...（YYYY-MM-DD HH:mm, local time）
+### 今日要点（按热度分配篇幅）
+| 区域 | 热度 | 发生了什么 |
+| --- | --- | --- |
+| 美洲 / Americas | 86 | …… |
+|  |  | …… |
+| 欧洲 / Europe | 9 | …… |
 ```
 
 ## Quality Rules
 
-- Keep each item to 1-2 concise lines per language (headline + short summary).
-- Prefer primary and high-credibility outlets.
-- Do not fabricate details when sources conflict or are incomplete.
-- If an item is developing, mark it as "持续更新 / developing".
+- Keep each summary short and factual (1 short clause).
+- Prefer the top items in each region by recency.
+- If no items are available, write "暂无显著新闻".

@@ -104,6 +104,9 @@ KEYWORD_STOPWORDS = {
     "and",
     "among",
     "add",
+    "about",
+    "accuse",
+    "accuses",
     "announces",
     "announced",
     "as",
@@ -118,6 +121,7 @@ KEYWORD_STOPWORDS = {
     "can",
     "could",
     "court",
+    "claims",
     "day",
     "deal",
     "despite",
@@ -297,12 +301,54 @@ def dedupe_items(items: Iterable[NewsItem]) -> List[NewsItem]:
     seen: set[str] = set()
     result: List[NewsItem] = []
     for item in items:
-        key = item.link or item.title.lower()
+        title_key = re.sub(r"[^a-z0-9]+", "", item.title.lower())
+        key = item.link or title_key
         if key in seen:
             continue
         seen.add(key)
         result.append(item)
     return result
+
+
+def load_cache(path: Path) -> List[NewsItem]:
+    if not path.exists():
+        return []
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return []
+    items: List[NewsItem] = []
+    for row in payload:
+        try:
+            ts = dt.datetime.fromisoformat(row["timestamp"])
+        except (KeyError, ValueError):
+            continue
+        items.append(
+            NewsItem(
+                title=row.get("title", ""),
+                link=row.get("link", ""),
+                source=row.get("source", ""),
+                timestamp=ts,
+                category=row.get("category", ""),
+                region=row.get("region"),
+            )
+        )
+    return items
+
+
+def save_cache(path: Path, items: List[NewsItem]) -> None:
+    payload = [
+        {
+            "title": item.title,
+            "link": item.link,
+            "source": item.source,
+            "timestamp": item.timestamp.isoformat(),
+            "category": item.category,
+            "region": item.region,
+        }
+        for item in items
+    ]
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def filter_window(
@@ -637,7 +683,7 @@ def allocate_rows(counts: Dict[str, int]) -> Dict[str, int]:
     if total <= 0:
         return {region: 0 for region in REGION_ORDER}
 
-    total_rows = min(12, max(5, total // 30 + 5))
+    total_rows = min(8, max(4, total // 50 + 4))
     raw = {region: (counts[region] / total) * total_rows for region in REGION_ORDER}
     rows: Dict[str, int] = {}
     for region in REGION_ORDER:
@@ -677,6 +723,18 @@ def summarize_item(item: NewsItem, translate_enabled: bool, translator) -> str:
     return title_en
 
 
+def unique_by_title(items: List[NewsItem]) -> List[NewsItem]:
+    seen: set[str] = set()
+    result: List[NewsItem] = []
+    for item in items:
+        key = re.sub(r"[^a-z0-9]+", "", item.title.lower())
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(item)
+    return result
+
+
 def build_markdown(
     map_filename: str,
     window_text: str,
@@ -707,7 +765,7 @@ def build_markdown(
         take = rows.get(region, 0)
         if take <= 0:
             continue
-        items = region_items.get(region, [])[:take]
+        items = unique_by_title(region_items.get(region, []))[:take]
         if not items:
             continue
         for idx, item in enumerate(items):
@@ -800,6 +858,31 @@ def main() -> int:
     vault_root = Path(__file__).resolve().parents[4]
     output_dir = vault_root / "98_attachment" / "dashboards"
     output_dir.mkdir(parents=True, exist_ok=True)
+    cache_path = output_dir / f"{target_date:%Y-%m-%d}-news.json"
+    if not items_all:
+        cached = load_cache(cache_path)
+        if cached:
+            items_all = cached
+            items_all = dedupe_items(items_all)
+            for item in items_all:
+                if not item.region:
+                    item.region = detect_region(item.title)
+            region_items = {region: [] for region in REGION_ORDER}
+            region_items["UNKNOWN"] = []
+            for item in items_all:
+                region = item.region or "UNKNOWN"
+                if region in region_items:
+                    region_items[region].append(item)
+                else:
+                    region_items["UNKNOWN"].append(item)
+            for items in region_items.values():
+                items.sort(key=lambda x: x.timestamp, reverse=True)
+            counts = {region: len(region_items.get(region, [])) for region in REGION_ORDER}
+            region_keywords = {
+                region: extract_keywords(region_items.get(region, [])) for region in REGION_ORDER
+            }
+    elif items_all:
+        save_cache(cache_path, items_all)
     map_filename = f"{target_date:%Y-%m-%d}-map.svg"
     map_path = output_dir / map_filename
 
