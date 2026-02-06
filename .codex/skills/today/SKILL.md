@@ -1,6 +1,6 @@
 ---
 name: today
-description: Generate today's journal note when the user says /today or asks for a daily log. Use template `00_inbox/日记模版.md` (fallback `00_inbox/日记模板.md`), create the note in `99_学习情况记录`, add a bilingual global situation dashboard (map + a concise table summary under the map) for the latest 24 hours, list unfinished tasks from existing notes in `99_学习情况记录`, and list today's tasks extracted from `Overview & Study Record.md` as markdown checkboxes.
+description: Generate today's journal note when the user says /today or asks for a daily log. Use template `00_inbox/日记模版.md` (fallback `00_inbox/日记模板.md`), create the note in `99_学习情况记录`, add a bilingual global situation dashboard (map + a concise table summary + finance/tech bullets under the map) for the latest 24 hours, list unfinished tasks from existing notes in `99_学习情况记录`, and list today's tasks extracted from `Overview & Study Record.md` as markdown checkboxes.
 ---
 
 # Today
@@ -23,11 +23,11 @@ Use this workflow every time the user asks for `/today`.
    - Format: `YYYY-MM-DD——<DayAbbrev>.md` (for example `2026-02-02——Mon.md`).
    - If the file already exists, update it in place instead of creating a duplicate.
 
-3. Build module 1 (global dashboard, concise table).
+3. Build module 1 (global dashboard, concise table + finance/tech bullets).
    - Run:
      - `python3 .codex/skills/today/scripts/build_news_dashboard.py --date YYYY-MM-DD`
    - The script creates a static SVG map in `98_attachment/dashboards` and prints the full module 1 markdown to stdout.
-   - Use the printed markdown block directly (it already includes map embed + a heat-weighted summary table).
+   - Use the printed markdown block directly (it already includes map embed + heat-weighted summary table + finance/tech bullets).
    - Optional: add `--translate` and set `LIBRETRANSLATE_URL` to enable machine translation for the Chinese lines.
    - Follow `references/news-format.md`.
 
@@ -48,7 +48,7 @@ Use this workflow every time the user asks for `/today`.
 6. Save and verify.
    - Confirm file is under `99_学习情况记录`.
    - Confirm all three modules exist.
-   - Confirm module 1 includes the map embed and the summary table within latest 24 hours.
+   - Confirm module 1 includes the map embed, summary table, and finance/tech bullets within latest 24 hours.
 
 ## Notes
 

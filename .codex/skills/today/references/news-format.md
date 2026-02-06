@@ -12,6 +12,8 @@ Use this rubric for module 1 in the daily note.
 - Show a single summary table beneath the map.
 - The number of rows is allocated dynamically by region heat.
 - Do not include sources in the table.
+- Append finance and tech bullet summaries after the table.
+- Finance/tech bullets should not include sources.
 
 ## Output Template
 
@@ -28,10 +30,19 @@ Use this rubric for module 1 in the daily note.
 | 美洲 / Americas | 86 | …… |
 |  |  | …… |
 | 欧洲 / Europe | 9 | …… |
+
+### 金融要点
+- ……
+- ……
+
+### 科技要点
+- ……
+- ……
 ```
 
 ## Quality Rules
 
 - Keep each summary short and factual (1 short clause).
 - Prefer the top items in each region by recency.
+- For finance/tech, keep 2–4 bullets and avoid jargon unless needed.
 - If no items are available, write "暂无显著新闻".

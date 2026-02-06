@@ -87,6 +87,7 @@ REGION_LABELS = {
 
 MAX_REGION_ITEMS = 3
 MAX_TECH_ITEMS = 3
+MAX_FINANCE_ITEMS = 3
 MAX_INTEL_ITEMS = 3
 
 LEGEND_STEPS: List[Tuple[str, str]] = [
@@ -741,6 +742,8 @@ def build_markdown(
     tz_label: str,
     tzinfo: dt.tzinfo,
     region_items: Dict[str, List[NewsItem]],
+    finance_items: List[NewsItem],
+    tech_items: List[NewsItem],
     translate_enabled: bool,
     translator,
 ) -> str:
@@ -776,6 +779,26 @@ def build_markdown(
 
     if not any_row:
         lines.append("| 全局 | 0 | 暂无显著新闻 |")
+
+    lines.append("")
+    lines.append("### 金融要点")
+    finance_list = unique_by_title(finance_items)[:MAX_FINANCE_ITEMS]
+    if finance_list:
+        for item in finance_list:
+            summary = summarize_item(item, translate_enabled, translator)
+            lines.append(f"- {summary}")
+    else:
+        lines.append("- 暂无显著新闻")
+
+    lines.append("")
+    lines.append("### 科技要点")
+    tech_list = unique_by_title(tech_items)[:MAX_TECH_ITEMS]
+    if tech_list:
+        for item in tech_list:
+            summary = summarize_item(item, translate_enabled, translator)
+            lines.append(f"- {summary}")
+    else:
+        lines.append("- 暂无显著新闻")
 
     return "\n".join(lines) + "\n"
 
@@ -883,6 +906,10 @@ def main() -> int:
             }
     elif items_all:
         save_cache(cache_path, items_all)
+    finance_items = [item for item in items_all if item.category == "finance"]
+    finance_items.sort(key=lambda x: x.timestamp, reverse=True)
+    tech_items = [item for item in items_all if item.category in {"tech", "ai"}]
+    tech_items.sort(key=lambda x: x.timestamp, reverse=True)
     map_filename = f"{target_date:%Y-%m-%d}-map.svg"
     map_path = output_dir / map_filename
 
@@ -895,6 +922,8 @@ def main() -> int:
         tz_label,
         now.tzinfo or dt.timezone.utc,
         region_items,
+        finance_items,
+        tech_items,
         args.translate,
         translator,
     )

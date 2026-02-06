@@ -213,8 +213,8 @@ $$s_t = d_t$$
 • 如果 $\big|\frac{\beta}{\gamma}\big| = 1$，则 $|r|=1$，价格会**持续震荡**且幅度保持不变（$r=-1$ 会导致价格在两个值之间来回跳动，称为边际稳定或周期2振荡） 。这种情况下系统处于临界状态，轻微扰动将导致持续波动。
 
 
-Cobweb Model Diagram 12}-— p=10-q (demand curve) — p=2q (supply curve) @ = Equilibrium point 10 <-------------------------------- | 1 8 | 1 o 1 | a © | | Q | 1 1 4 | 1 1 1 1 1 2 Se a en a -em 0 0 1 2 3 4 5 6 q (Quantity)
-~~[[Pasted image 20250316150336.png]]~~ (已转文字)
+
+![[Pasted image 20250316150336.png]]
 
 ## 3.2 蛛网模型的数学解释
 
