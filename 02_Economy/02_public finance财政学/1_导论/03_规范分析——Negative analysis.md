@@ -41,12 +41,11 @@ $$ \begin{array}{c}{{\circ\mathrm{\DeltaWF}_{\mathrm{af}}=\mathrm{MRS}_{\mathrm{
 
 wivhtermmeree Efficiency versus Equity 到 ve 在 每 一 效用 水 平 与 Adam 效率 与 公平 所 能 取得 的 最 大 效用 量 之 间 的 关系 ove RS 8 8 下 Ps & “9 SA Does society have to choose 2 between p3 & q? S Adam +————~ Apples peryear 一 一
 ![[Pasted image 20240312091947.png]]
-Utility Possibilities Curve 效用 可 能 性 曲线 2 3 < Maximum amount of one @ U person's utility given each < level of another person’s utility ps 已 知 一 个 人 的 效用 水 平 , 另 一 个 人 的 最 大 效用 水 平 ps U Eve's utility
-![[Pasted image 20240312093106.png]]
+效用可能性曲线（Utility Possibilities Curve, UPC）表示：给定 Eve 的效用水平时，Adam 可达到的最大效用。曲线上的点（如 p3、p5）是帕累托有效配置；曲线内部点（如 q）是无效率配置。
 Social Indifference Curve 社会 无 差异 曲线 Society’s willingness to trade off one person's utility for another’s 2 W = F(UAdam, UEve) 社会 福利 函数 5 社会 福利 取决 于 每 一 个 成 员 的 福利 = sg Increasing < social welfare Eve’s utility
-![[Pasted image 20240312124803.png]]
+
 Maximizing Social Welfare 社会 福利 最 大 化 Pa) = If society values a more < i equitable distribution of goods - 3 i embodied in Social Indifference Curves, fairness and efficiency are possible (iii) Eve’s utility
-![[Pasted image 20240312124813.png]]
+
 就是让两条线取切线
 
 # 政府干预

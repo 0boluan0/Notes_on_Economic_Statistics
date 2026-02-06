@@ -24,8 +24,15 @@ The Nature of Externalities-Graphical Analysis $ Reduction from Q, to Q" means d
 #### 讨价还价
 当产权被严格划分时，可以通过讨价还价达到新的均衡
 eg：将河划分给Bart则Lisa需要给Bart钱Bart才乐意减产以平衡收入的降低
-Supplier will | Q, to Q’ if MSC = MPC + MD $ paid by Demander, who is willing to do so. Bargain . MPC possible over $ transferred. h d 一 和 MD Ce T—w 0 * Q’ Qi Q per year
-![[Pasted image 20240317124800.png]]
+若需求方愿意转移支付，供给方可以把污染（或产量）从 $Q_1$ 调整到社会更优的 $Q^*$。只要 $MD>(MB-MPC)$，就存在讨价还价空间。
+
+```mermaid
+flowchart LR
+    A["初始：按私人成本决策（Q1）"] --> B["需求方补偿供给方"]
+    B --> C["供给方减排/减产"]
+    C --> D["达到社会更优水平（Q*）"]
+```
+
 。 MD >(MB-— MPC) => the opportunity for a bargain exists
 ![[Pasted image 20240317124916.png]]
 满足上述不等式的时候就还有讲价的区间，否则就没必要讲价。
@@ -47,32 +54,62 @@ Supplier will | Q, to Q’ if MSC = MPC + MD $ paid by Demander, who is willing 
 * MC: the marginal cost to Bart of reducing each unit of pollution.
 * Cost for reducing pollution can stem from reducing output,shifting to cleaner inputs, or installing a new technology to control pollution.
 ### 征收庇古税
-Public Responses to Externalities — Taxes 外 部 性 的 公共 对 策 ， 对 污染 行为 征 税 MSC = MPC + MD $ (MPC + cd) 有 效 边 际 成 本 Pigouvian tax revenues 庇 古 税 MPC - d | |---------------/------------- 人 > MD 一 人 < 2 Qe Qa Q per year
-![[Pasted image 20240317131808.png]]
+庇古税通过提高污染行为的私人成本，使决策从 $Q_1$ 向社会最优 $Q^*$ 收敛，并形成税收收入。
+
+```mermaid
+flowchart LR
+    A["征税前：按MPC决策（Q1）"] --> B["征税后：面对 MSC=MPC+MD"]
+    B --> C["产量/排污降至 Q*"]
+    C --> D["形成庇古税收入"]
+```
+
 MSC边际社会成本MPC边际个人成本MD边际污染
 
 
 ### 发放庇古补贴
-Public Responses to Externalities — Subsidies that pay polluter not to pollute 外 部 性 的 公共 对 策 ， 对 不 污染 行为 进行 补贴 MSC= MPC+ MD $ (MPC + cd) 有 效 边 际 成 本 Pigouvian MPC subsidy 庇 古 补贴 | MD ae 0 Q* Qa Q per year
-![[Pasted image 20240317131824.png]]
+对减排行为发放庇古补贴，可以把个体激励调整到社会最优附近。
+
+```mermaid
+flowchart LR
+    A["无补贴：减排不足（Q1）"] --> B["发放庇古补贴"]
+    B --> C["减排提高，向Q*收敛"]
+```
+
 ### 排污费
 对于Bart而言，最好的情况是减少任何一点污染的排放，因为减少排污就意味着花钱，他肯定不想花钱。
-9 ft results in only el reduction Mc f* results in e* reduction: the efficient level Pw _ f* Emissions fee 0 . . e* et Pollution reduction 污染 减少 量
-![[Pasted image 20240317133349.png]]
+当排污费为 $f_t$ 时，只会带来较低减排量 $e_t$；当排污费提高到 $f^*$ 时，可达到有效减排水平 $e^*$。
+
 ## 不同污染者之间统一污染减少
 假设有第三个人Homer也开了一家会排污的公司
-一 MCy Requiring each company to reduce pollution by 50 units is b not cost effective. Better to have Bart reduce pollution by 100 units because he can do so at a lower cost. But is it fair??? MCg 1 1 1 1 __ 1 1 1 1 1 10 50 75 90 Bart’s 25 50 75 90 Homers pollution pollution reduction reduction
-![[Pasted image 20240317133635.png]]
-Emissions Fees achieve fairness and efficiency An Emissions Fee=$50 means MCy Bart will reduce by 75 and Homer only by 25, but Homer pays larger tax. Bart’s Tax Payment Homer’s Tax MC, Payment 1 f= _ fe 1 $50 $50 50 75 90 Bart’s 25 50 75 90 Homer's pollution pollution reduction reduction
-![[Pasted image 20240317133650.png]]
+若强制每家都减排 50 单位，在边际减排成本不同的情况下并不成本有效。更有效率的做法是让低边际成本企业减排更多。
+
+当排污费为 $50$ 时，Bart 减排约 75，Homer 减排约 25；Homer 的税负更高，从而同时改进效率与公平。
+
+```mermaid
+flowchart LR
+    A["统一减排（各50）"] --> B["成本无效率"]
+    C["征收统一排污费 f=$50"] --> D["低MAC企业多减排（Bart≈75）"]
+    C --> E["高MAC企业少减排（Homer≈25）"]
+    E --> F["高排放者承担更高税负"]
+```
+
 
 
 ### 总量控制与交易制度
 
 发放一定量的污染许可证，政府进行初步的配给，而后经过市场进行调控直到均衡。
 
-Public Responses to Externalities- Cap-and-Trade: Polluters must have a permit YA Et te Se 总 量 控制 与 交易 制度 Bart: The cost of reducing pollution MC, is less than market price of a permit, so sell permit. b Homer: The cost of reducing pollution is greater than market 1 price of a permit so buy permit. 1 BOTH GAIN FROM TRADE ) 1 MC, ; 1 1 faL_ LLL f= _ 1 $50 ; $50 i 1 1 1 1 10 50 75 90 Barts 25 50 75 90 Homers pollution pollution reduction reduction
-![[Pasted image 20240317133710.png]]
+在总量控制与交易制度下：若企业边际减排成本低于许可证价格，则卖出许可证；若高于许可证价格，则买入许可证；交易使双方都受益。
+
+```mermaid
+flowchart LR
+    A["总量控制：政府初始配给许可证"] --> B["形成许可证市场价格"]
+    B --> C["MAC < 价格：卖出许可证"]
+    B --> D["MAC > 价格：买入许可证"]
+    C --> E["资源配置更有效率"]
+    D --> E
+```
+
 #### 碳交易市场
 ## 命令控制管理
 强制性的，不是很好用
@@ -80,8 +117,8 @@ Public Responses to Externalities- Cap-and-Trade: Polluters must have a permit Y
 加州的车辆强制装尾气处理装置
 
 # 对正外部性的处理
-Positive Externalities $ MC MSB = MPB + MEB 边际 社会 收益 | MPB 边际 私人 收益 | | MEB 边际 外 部 收益 Ra R* Research per year
-![[Pasted image 20240317133951.png]]
+正外部性下，社会边际收益满足 $MSB=MPB+MEB$，因此社会最优研究投入 $R^*$ 通常高于私人自发投入 $R_a$。
+
 与负的外部性相反，这个的边际社会受益是比边际私人受益要高的。
 
 ## 公共处理

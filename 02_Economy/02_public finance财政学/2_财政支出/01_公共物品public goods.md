@@ -15,7 +15,9 @@ a 王 提 Fx v= eS IN WAS RR 非 竞 争 性 有 线 电视 、 收 费 软 件 
 
 特别的，公共物品的分类不是绝对的，有时候会因情况的变动而改变。
 — e.g., Lighthouse (灯塔 ) & signal receiver (nonexcludability criterion does not hold) —eg., SHLAA fd vs. 拥 墙 的 公园 (nonrivalness criterion is no longer satisfied) — Impure public good 非 纯 公 共 物 品 : to some extent rival or excludable en - 3}
-![[Pasted image 20240314084602.png]]
+- 例如：灯塔与信号接收（nonexcludability 不完全成立）。
+- 例如：不拥挤的公园 vs. 拥挤的公园（nonrivalness 条件不再完全满足）。
+- **Impure public good（非纯公共物品）**：在一定程度上具有竞争性或可排他性。
 
 # 私人物品的有效提供
 给每个人提供的数量不一样但是价格一样。
