@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2026-02-06——Fri.md",
+                "file": "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-02-06——Fri"
+              "title": "04_案例（囚徒困境与纳什均衡）"
             }
           }
         ],
@@ -130,6 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -139,7 +140,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for 04_案例（囚徒困境与纳什均衡）"
             }
           },
           {
@@ -148,11 +149,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from 04_案例（囚徒困境与纳什均衡）"
             }
           },
           {
@@ -199,9 +201,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for 04_案例（囚徒困境与纳什均衡）"
             }
           },
           {
@@ -243,7 +247,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: ✳ 循环结构补全"
+              "title": "Terminal: ✳ README.md设计"
             }
           },
           {
@@ -302,12 +306,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 04_案例（囚徒困境与纳什均衡）"
             }
           },
           {
@@ -354,9 +359,14 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "b3535002684673d1",
+  "active": "7753fb3dc8dc90cc",
   "lastOpenFiles": [
     "99_学习情况记录/2026-02-06——Fri.md",
+    "03_Computer_Science/README.md",
+    "README.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "Overview & Study Record.md",
     "98_attachment/dashboards/2026-02-06-map.svg",
     "00_factor/concept/2SLS.md",
     "99_学习情况记录/2026-02-04——Wed.md",
@@ -393,12 +403,7 @@
     "98_attachment/Pasted image 20240229220513.png",
     "02_Economy/01_Econometrics/01_Econometrics.canvas",
     "02_Economy/10_发展经济学/00_导论和考试相关.md",
-    "00_factor/procedure/OLS.md",
-    "00_inbox/最小二乘法(Ordinary Least Squares, OLS).md",
-    "00_factor/concept/Residual.md",
     "02_Economy/08_经济预测与决策/08_经济预测与决策.canvas",
-    "00_inbox/残差(residual).md",
-    "00_inbox/大样本与小样本.md",
     "02_Economy/02_public finance财政学/02_public finance财政学.canvas",
     "02_Economy/10_发展经济学/10_发展经济学.canvas",
     "02_Economy/07_金融机构与风险管理/07_金融机构与风险管理.canvas",

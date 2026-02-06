@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
 <rect x="0" y="0" width="100%" height="100%" fill="#ffffff"/>
 <text x="40" y="46" font-size="20" font-family="Arial, sans-serif" fill="#0f172a">全球态势地图 | Global Situation Map</text>
-<text x="40" y="72" font-size="12" font-family="Arial, sans-serif" fill="#475569">时间窗口: 2026-02-05 11:30 ~ 2026-02-06 11:30</text>
+<text x="40" y="72" font-size="12" font-family="Arial, sans-serif" fill="#475569">时间窗口: 2026-02-05 11:49 ~ 2026-02-06 11:49</text>
 <text x="40" y="490" font-size="11" font-family="Arial, sans-serif" fill="#64748b">示意区域块，按新闻数量着色</text>
 <ellipse cx="450" cy="285" rx="390" ry="190" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
 <rect x="80" y="170" width="210" height="190" rx="16" fill="#0b4ec2" stroke="#94a3b8" stroke-width="1"/>
 <text x="92" y="198" font-size="13" font-family="Arial, sans-serif" fill="#ffffff">Americas 美洲</text>
-<text x="92" y="222" font-size="12" font-family="Arial, sans-serif" fill="#ffffff">新闻数: 125</text>
+<text x="92" y="222" font-size="12" font-family="Arial, sans-serif" fill="#ffffff">新闻数: 104</text>
 <rect x="340" y="120" width="140" height="90" rx="16" fill="#0b4ec2" stroke="#94a3b8" stroke-width="1"/>
 <text x="352" y="148" font-size="13" font-family="Arial, sans-serif" fill="#ffffff">Europe 欧洲</text>
-<text x="352" y="172" font-size="12" font-family="Arial, sans-serif" fill="#ffffff">新闻数: 28</text>
+<text x="352" y="172" font-size="12" font-family="Arial, sans-serif" fill="#ffffff">新闻数: 29</text>
 <rect x="370" y="230" width="150" height="80" rx="16" fill="#6ea7ff" stroke="#94a3b8" stroke-width="1"/>
 <text x="382" y="258" font-size="13" font-family="Arial, sans-serif" fill="#0f172a">MENA 中东北非</text>
 <text x="382" y="282" font-size="12" font-family="Arial, sans-serif" fill="#0f172a">新闻数: 8</text>
