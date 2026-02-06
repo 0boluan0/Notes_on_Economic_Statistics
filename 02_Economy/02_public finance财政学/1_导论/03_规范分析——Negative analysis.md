@@ -13,16 +13,21 @@
 ![[帕累托]]，![[埃奇沃斯框图]]，![[契约曲线]]，![[MRS边际替代率]]
 
 消费的帕累托效率条件：
-$$ {\cal M}|\ R S_{a f}^{\mathrm{Adaun}}\;\;\;=\;\;|\bar{\cal M}|R S_{a f}^{\mathrm{Evo}} $$
-![[Pasted image 20240308143632.png]]
+$$
+MRS_{af}^{Adam}=MRS_{af}^{Eve}
+$$
 
 ## 供给侧
 
 [[生产可能性曲线]]，[[MRT边际转换率]]，
 
 生产可变情况下的帕累托效率条件
-$$ \begin{array}{c}{{\circ\mathrm{\DeltaWF}_{\mathrm{af}}=\mathrm{MRS}_{\mathrm{af}}^{\mathrm{Adar}}=\mathrm{\MRS}_{\mathrm{af}}^{\mathrm{Eve}}}}\\ {{\circ\mathrm{\MC}_{\mathrm{a}}/\mathrm{MC}_{\mathrm{f}}=\mathrm{\MRS}_{\mathrm{af}}^{\mathrm{Adar}}=\mathrm{\MRS}_{\mathrm{af}}^{\mathrm{Eve}}}}\end{array} $$
-![[Pasted image 20240311233008.png]]
+$$
+\begin{aligned}
+MRT_{af} &= MRS_{af}^{Adam}=MRS_{af}^{Eve},\\
+\frac{MC_a}{MC_f} &= MRS_{af}^{Adam}=MRS_{af}^{Eve}.
+\end{aligned}
+$$
 
 只要边际替代率不等于边际转换率就有帕累托改进的机会。
 
