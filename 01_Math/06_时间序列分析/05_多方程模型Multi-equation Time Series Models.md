@@ -381,8 +381,19 @@ $$
 # 作业
 
 ## 4.
-4. REE PRR y, =0.5y,, +z, +6,, # 中 ，z 为 自 回归 过 程 x =0. 5z,_, +e., a. 求 滤波 后 的 序列 |y,| 与 序列 { se。 | 间 的 互 相关 系数 。 b. 现 假设 y =0.5y, ,+z +0.5z ,+s,， 并 Az, =0.5z ,+es， 求 滤波 后 的 序列 |y,| 与 ss 标准 化 互 协 方差 。 证 明 第 1 个 和 第 2 个 互 协 方差 成 比例 。 证 明 互 协 方差 以 0.5 的 比例 衰减 。
-![[Pasted image 20250525194711.png]]
+4. 考察传递函数模型
+$$
+y_t=0.5y_{t-1}+z_t+\varepsilon_t,\qquad
+z_t=0.5z_{t-1}+\varepsilon_{zt}.
+$$
+
+a. 求滤波后的序列 $\{y_t\}$ 与序列 $\{\varepsilon_{zt}\}$ 间的互相关系数。  
+b. 现假设
+$$
+y_t=0.5y_{t-1}+z_t+0.5z_{t-1}+\varepsilon_t,\qquad
+z_t=0.5z_{t-1}+\varepsilon_{zt},
+$$
+求滤波后的序列 $\{y_t\}$ 与 $\varepsilon_{zt}$ 的标准化互协方差；证明第 1 个和第 2 个互协方差成比例，并证明互协方差以 0.5 的比例衰减。
 
 ## 6.
 Use (5.28) to find the appropriate second-order stochastic difference equation for y, ; . cg: oe wee y, _ 08 0.2 Vy . el Hh ER ety 和 0.2 0.8j|z- e>, a 7 oe A. Determine whether the {y,} sequence is stationary. - oe B. Discuss the shape of the impulse response function of y, to a one-trit shock in el and a one-unit shock in e,,. mae C. Suppose evy = er + 0.5e,, and that ez = €,,. Discuss the shape of the impulse response function of y, to a one-unit shock in ¢€,,. Repeat for a one-unit shock in €,,. D. Suppose e,, = €,, and that ex = 0.5¢,, + er Discuss the shape of the impulse response function of y, to a one unit shock in ev Repeat for a one-unit shock in €,,. E. Use your answers to C and D to explain why the ordering in a Choleski de- composition is important. F. Using the notation in (5.21), find A? and A}. Does A7 appear to approach zero (i.e., the null matrix)?
