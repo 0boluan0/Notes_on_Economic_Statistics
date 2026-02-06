@@ -24,6 +24,8 @@ from urllib.request import Request, urlopen
 
 USER_AGENT = "today-dashboard/1.0 (local)"
 GDELT_ENDPOINT = "https://api.gdeltproject.org/api/v2/doc/doc"
+ASSETS_DIR = Path(__file__).resolve().parents[1] / "assets"
+TOPOJSON_PATH = ASSETS_DIR / "countries-110m.json"
 
 NEWS_CATEGORIES: Dict[str, str] = {
     "politics": "(politics OR government OR election OR congress)",
@@ -88,13 +90,93 @@ MAX_TECH_ITEMS = 3
 MAX_INTEL_ITEMS = 3
 
 LEGEND_STEPS: List[Tuple[str, str]] = [
-    ("0", "#f2f2f2"),
-    ("1-2", "#d6e8ff"),
-    ("3-5", "#a8ccff"),
-    ("6-10", "#6ea7ff"),
-    ("11-20", "#2f7bff"),
-    ("21+", "#0b4ec2"),
+    ("0", "#f7f1e6"),
+    ("1-2", "#f4d8c5"),
+    ("3-5", "#f2b58f"),
+    ("6-10", "#ee8a5b"),
+    ("11-20", "#e45b3b"),
+    ("21+", "#c7372f"),
 ]
+
+KEYWORD_STOPWORDS = {
+    "after",
+    "amid",
+    "and",
+    "among",
+    "add",
+    "announces",
+    "announced",
+    "as",
+    "at",
+    "back",
+    "by",
+    "before",
+    "between",
+    "billion",
+    "breaks",
+    "calls",
+    "can",
+    "could",
+    "court",
+    "day",
+    "deal",
+    "despite",
+    "for",
+    "from",
+    "gets",
+    "global",
+    "group",
+    "government",
+    "had",
+    "has",
+    "have",
+    "his",
+    "its",
+    "into",
+    "last",
+    "latest",
+    "market",
+    "more",
+    "new",
+    "not",
+    "officials",
+    "over",
+    "plan",
+    "plans",
+    "report",
+    "reports",
+    "said",
+    "says",
+    "set",
+    "says",
+    "shares",
+    "state",
+    "stocks",
+    "talks",
+    "than",
+    "that",
+    "the",
+    "their",
+    "this",
+    "three",
+    "time",
+    "to",
+    "today",
+    "under",
+    "up",
+    "using",
+    "war",
+    "week",
+    "what",
+    "while",
+    "with",
+    "will",
+    "wins",
+    "year",
+    "years",
+}
+
+KEYWORD_KEEP_UPPER = {"ai", "us", "uk", "eu", "nato"}
 
 
 @dataclass
@@ -231,6 +313,116 @@ def filter_window(
     return filtered
 
 
+def extract_keywords(items: Iterable[NewsItem]) -> str:
+    counts: Dict[str, int] = {}
+    for item in items:
+        tokens = re.findall(r"[A-Za-z][A-Za-z0-9']+", item.title)
+        for token in tokens:
+            word = token.strip("'").lower()
+            if not word or word in KEYWORD_STOPWORDS:
+                continue
+            if len(word) < 3 and word not in KEYWORD_KEEP_UPPER:
+                continue
+            counts[word] = counts.get(word, 0) + 1
+
+    if not counts:
+        return "—"
+
+    top = sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))[:3]
+    formatted = []
+    for word, _ in top:
+        if word in KEYWORD_KEEP_UPPER:
+            formatted.append(word.upper())
+        else:
+            formatted.append(word)
+
+    joined = ", ".join(formatted)
+    if len(joined) > 36:
+        joined = joined[:33].rstrip(", ") + "…"
+    return joined
+
+
+def classify_region(lon: float, lat: float) -> Optional[str]:
+    if lat < -55:
+        return None
+    if lon < -30:
+        return "AMERICAS"
+    if lon >= 60:
+        return "APAC"
+    if lat >= 35:
+        return "EUROPE"
+    if lat >= 12:
+        return "MENA"
+    return "AFRICA"
+
+
+def load_topojson(path: Path) -> Optional[dict]:
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return None
+
+
+def decode_arcs(data: dict) -> List[List[Tuple[float, float]]]:
+    transform = data.get("transform")
+    arcs = data.get("arcs", [])
+    if not transform:
+        return []
+    scale = transform["scale"]
+    translate = transform["translate"]
+
+    decoded: List[List[Tuple[float, float]]] = []
+    for arc in arcs:
+        x = 0
+        y = 0
+        coords: List[Tuple[float, float]] = []
+        for dx, dy in arc:
+            x += dx
+            y += dy
+            lon = x * scale[0] + translate[0]
+            lat = y * scale[1] + translate[1]
+            coords.append((lon, lat))
+        decoded.append(coords)
+    return decoded
+
+
+def arc_by_index(arcs: List[List[Tuple[float, float]]], idx: int) -> List[Tuple[float, float]]:
+    if idx >= 0:
+        return arcs[idx]
+    return list(reversed(arcs[~idx]))
+
+
+def arcs_to_coords(
+    arcs: List[List[Tuple[float, float]]], arc_indices: List[int]
+) -> List[Tuple[float, float]]:
+    coords: List[Tuple[float, float]] = []
+    for idx in arc_indices:
+        arc = arc_by_index(arcs, idx)
+        if coords:
+            coords.extend(arc[1:])
+        else:
+            coords.extend(arc)
+    return coords
+
+
+def geometry_rings(geom: dict) -> List[List[List[int]]]:
+    if geom["type"] == "Polygon":
+        return [geom["arcs"]]
+    if geom["type"] == "MultiPolygon":
+        return geom["arcs"]
+    return []
+
+
+def centroid_from_coords(coords: List[Tuple[float, float]]) -> Tuple[float, float]:
+    if not coords:
+        return (0.0, 0.0)
+    xs = [c[0] for c in coords]
+    ys = [c[1] for c in coords]
+    return (sum(xs) / len(xs), sum(ys) / len(ys))
+
+
 def color_for_count(count: int) -> str:
     if count <= 0:
         return LEGEND_STEPS[0][1]
@@ -254,7 +446,7 @@ def text_color(hex_color: str) -> str:
     return "#0f172a" if luminance > 0.6 else "#ffffff"
 
 
-def build_map_svg(
+def build_fallback_svg(
     counts: Dict[str, int],
     window_text: str,
     output_path: Path,
@@ -324,22 +516,165 @@ def build_map_svg(
     output_path.write_text("\n".join(svg_lines) + "\n", encoding="utf-8")
 
 
-def format_item_lines(
-    item: NewsItem,
-    tzinfo: dt.tzinfo,
-    tz_label: str,
-    translate_enabled: bool,
-    translator,
-) -> List[str]:
+def build_map_svg(
+    counts: Dict[str, int],
+    keywords: Dict[str, str],
+    window_text: str,
+    output_path: Path,
+) -> None:
+    topo = load_topojson(TOPOJSON_PATH)
+    if not topo:
+        build_fallback_svg(counts, window_text, output_path)
+        return
+
+    arcs = decode_arcs(topo)
+    countries = topo.get("objects", {}).get("countries", {}).get("geometries", [])
+    if not arcs or not countries:
+        build_fallback_svg(counts, window_text, output_path)
+        return
+
+    width = 1000
+    height = 520
+    map_x = 40
+    map_y = 90
+    map_w = 920
+    map_h = 360
+
+    def proj(lon: float, lat: float) -> Tuple[float, float]:
+        x = (lon + 180.0) / 360.0 * map_w + map_x
+        y = (90.0 - lat) / 180.0 * map_h + map_y
+        return x, y
+
+    svg_lines: List[str] = []
+    svg_lines.append(
+        f"<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"{width}\" height=\"{height}\" viewBox=\"0 0 {width} {height}\">"
+    )
+    svg_lines.append("<rect x=\"0\" y=\"0\" width=\"100%\" height=\"100%\" fill=\"#ffffff\"/>")
+    svg_lines.append(
+        "<text x=\"40\" y=\"46\" font-size=\"20\" font-family=\"Arial, sans-serif\" fill=\"#1f2937\">全球态势地图 | Global Situation Map</text>"
+    )
+    svg_lines.append(
+        f"<text x=\"40\" y=\"72\" font-size=\"12\" font-family=\"Arial, sans-serif\" fill=\"#6b7280\">时间窗口: {window_text}</text>"
+    )
+
+    svg_lines.append("<g id=\"countries\" stroke=\"#ffffff\" stroke-width=\"0.2\">")
+    for geom in countries:
+        rings = geometry_rings(geom)
+        if not rings:
+            continue
+
+        longest: List[Tuple[float, float]] = []
+        for polygon in rings:
+            if not polygon:
+                continue
+            coords = arcs_to_coords(arcs, polygon[0])
+            if len(coords) > len(longest):
+                longest = coords
+
+        lon, lat = centroid_from_coords(longest)
+        region = classify_region(lon, lat)
+        fill = color_for_count(counts.get(region, 0)) if region else "#f1f5f9"
+
+        for polygon in rings:
+            path_parts: List[str] = []
+            for ring in polygon:
+                coords = arcs_to_coords(arcs, ring)
+                if not coords:
+                    continue
+                for idx, (lon_pt, lat_pt) in enumerate(coords):
+                    x, y = proj(lon_pt, lat_pt)
+                    if idx == 0:
+                        path_parts.append(f"M{x:.2f},{y:.2f}")
+                    else:
+                        path_parts.append(f"L{x:.2f},{y:.2f}")
+                path_parts.append("Z")
+            if not path_parts:
+                continue
+            svg_lines.append(
+                f"<path d=\"{' '.join(path_parts)}\" fill=\"{fill}\" fill-opacity=\"0.85\" fill-rule=\"evenodd\"/>"
+            )
+    svg_lines.append("</g>")
+
+    label_positions = {
+        "AMERICAS": (-105, 20),
+        "EUROPE": (10, 58),
+        "MENA": (25, 24),
+        "AFRICA": (20, -10),
+        "APAC": (120, 15),
+    }
+    svg_lines.append("<g font-family=\"Arial, sans-serif\" fill=\"#111827\" font-size=\"12\" text-anchor=\"middle\">")
+    for region in REGION_ORDER:
+        lon, lat = label_positions[region]
+        x, y = proj(lon, lat)
+        label = REGION_LABELS.get(region, region)
+        count = counts.get(region, 0)
+        svg_lines.append(
+            f"<text x=\"{x:.2f}\" y=\"{y:.2f}\">{label} | {count}</text>"
+        )
+        svg_lines.append(
+            f"<text x=\"{x:.2f}\" y=\"{y+14:.2f}\" font-size=\"10\" fill=\"#374151\">{keywords.get(region, '—')}</text>"
+        )
+    svg_lines.append("</g>")
+
+    legend_x = 730
+    legend_y = 452
+    svg_lines.append("<g font-family=\"Arial, sans-serif\" fill=\"#374151\" font-size=\"11\">")
+    svg_lines.append(f"<text x=\"{legend_x}\" y=\"{legend_y}\">热度图例 | Counts</text>")
+    for idx, (label, color) in enumerate(LEGEND_STEPS):
+        y = legend_y + 10 + idx * 16
+        svg_lines.append(
+            f"<rect x=\"{legend_x}\" y=\"{y}\" width=\"12\" height=\"12\" fill=\"{color}\" stroke=\"#9ca3af\" stroke-width=\"0.4\"/>"
+        )
+        svg_lines.append(f"<text x=\"{legend_x+18}\" y=\"{y+10}\">{label}</text>")
+    svg_lines.append("</g>")
+
+    svg_lines.append("</svg>")
+    output_path.write_text("\n".join(svg_lines) + "\n", encoding="utf-8")
+
+
+def allocate_rows(counts: Dict[str, int]) -> Dict[str, int]:
+    total = sum(counts.values())
+    if total <= 0:
+        return {region: 0 for region in REGION_ORDER}
+
+    total_rows = min(12, max(5, total // 30 + 5))
+    raw = {region: (counts[region] / total) * total_rows for region in REGION_ORDER}
+    rows: Dict[str, int] = {}
+    for region in REGION_ORDER:
+        if counts[region] <= 0:
+            rows[region] = 0
+        else:
+            rows[region] = max(1, int(raw[region]))
+
+    current = sum(rows.values())
+    if current < total_rows:
+        order = sorted(REGION_ORDER, key=lambda r: raw[r] - int(raw[r]), reverse=True)
+        idx = 0
+        while current < total_rows:
+            region = order[idx % len(order)]
+            if counts[region] > 0:
+                rows[region] += 1
+                current += 1
+            idx += 1
+    elif current > total_rows:
+        order = sorted(REGION_ORDER, key=lambda r: raw[r] - int(raw[r]))
+        idx = 0
+        while current > total_rows and idx < len(order):
+            region = order[idx]
+            if rows[region] > 1:
+                rows[region] -= 1
+                current -= 1
+            idx += 1
+
+    return rows
+
+
+def summarize_item(item: NewsItem, translate_enabled: bool, translator) -> str:
     title_en = item.title
-    title_zh = translator(title_en) if translate_enabled else title_en
-    time_str = item.local_time(tzinfo)
-    lines = [
-        f"- 中文：{title_zh}",
-        f"  EN: {title_en}",
-        f"  来源：{item.source}（{time_str}, {tz_label}）",
-    ]
-    return lines
+    if translate_enabled:
+        title_zh = translator(title_en)
+        return title_zh
+    return title_en
 
 
 def build_markdown(
@@ -348,69 +683,41 @@ def build_markdown(
     tz_label: str,
     tzinfo: dt.tzinfo,
     region_items: Dict[str, List[NewsItem]],
-    tech_items: List[NewsItem],
-    intel_items: List[NewsItem],
     translate_enabled: bool,
     translator,
 ) -> str:
     lines: List[str] = []
     lines.append("## 模块一｜全球态势静态快照（中英双语）")
     lines.append(f"> 时间窗口：{window_text} ({tz_label})")
+    lines.append("> 注：表格为摘要，不含来源。")
     if not translate_enabled:
-        lines.append("> 注：中文行默认使用英文标题，可手动润色或配置 LibreTranslate 翻译服务。")
+        lines.append("> 注：未启用翻译时摘要可能为英文标题。")
     lines.append("")
     lines.append(f"![[98_attachment/dashboards/{map_filename}]]")
     lines.append("")
-    lines.append("### 区域新闻（Regions）")
+    lines.append("### 今日要点（按热度分配篇幅）")
+    lines.append("| 区域 | 热度 | 发生了什么 |")
+    lines.append("| --- | --- | --- |")
+
+    counts = {region: len(region_items.get(region, [])) for region in REGION_ORDER}
+    rows = allocate_rows(counts)
+    any_row = False
 
     for region in REGION_ORDER:
-        lines.append(f"#### {REGION_LABELS[region]}")
-        items = region_items.get(region, [])[:MAX_REGION_ITEMS]
+        take = rows.get(region, 0)
+        if take <= 0:
+            continue
+        items = region_items.get(region, [])[:take]
         if not items:
-            lines.extend(
-                [
-                    "- 中文：暂无符合条件的新闻",
-                    "  EN: No items in window",
-                    "  来源：—",
-                ]
-            )
-        else:
-            for item in items:
-                lines.extend(format_item_lines(item, tzinfo, tz_label, translate_enabled, translator))
+            continue
+        for idx, item in enumerate(items):
+            label = REGION_LABELS[region] if idx == 0 else ""
+            summary = summarize_item(item, translate_enabled, translator)
+            lines.append(f"| {label} | {counts[region]} | {summary} |")
+            any_row = True
 
-    unknown_items = region_items.get("UNKNOWN", [])[:MAX_REGION_ITEMS]
-    if unknown_items:
-        lines.append(f"#### {REGION_LABELS['UNKNOWN']}")
-        for item in unknown_items:
-            lines.extend(format_item_lines(item, tzinfo, tz_label, translate_enabled, translator))
-
-    lines.append("")
-    lines.append("### 全球科技（Global Technology）")
-    if not tech_items:
-        lines.extend(
-            [
-                "- 中文：暂无符合条件的新闻",
-                "  EN: No items in window",
-                "  来源：—",
-            ]
-        )
-    else:
-        for item in tech_items[:MAX_TECH_ITEMS]:
-            lines.extend(format_item_lines(item, tzinfo, tz_label, translate_enabled, translator))
-
-    lines.append("")
-    lines.append("### 全球情报/地缘政经（Global Intelligence & Geopolitics）")
-    if not intel_items:
-        lines.extend(
-            [
-                "- 中文：暂无符合条件的新闻",
-                "  EN: No items in window",
-                "  来源：—",
-            ]
-        )
-    else:
-        for item in intel_items[:MAX_INTEL_ITEMS]:
-            lines.extend(format_item_lines(item, tzinfo, tz_label, translate_enabled, translator))
+    if not any_row:
+        lines.append("| 全局 | 0 | 暂无显著新闻 |")
 
     return "\n".join(lines) + "\n"
 
@@ -485,15 +792,10 @@ def main() -> int:
     for items in region_items.values():
         items.sort(key=lambda x: x.timestamp, reverse=True)
 
-    tech_items = [item for item in items_all if item.category == "tech"]
-    intel_items = [
-        item for item in items_all if item.category in {"intel", "gov", "politics"}
-    ]
-
-    tech_items = dedupe_items(tech_items)
-    intel_items = dedupe_items(intel_items)
-
     counts = {region: len(region_items.get(region, [])) for region in REGION_ORDER}
+    region_keywords = {
+        region: extract_keywords(region_items.get(region, [])) for region in REGION_ORDER
+    }
 
     vault_root = Path(__file__).resolve().parents[4]
     output_dir = vault_root / "98_attachment" / "dashboards"
@@ -501,7 +803,7 @@ def main() -> int:
     map_filename = f"{target_date:%Y-%m-%d}-map.svg"
     map_path = output_dir / map_filename
 
-    build_map_svg(counts, window_text, map_path)
+    build_map_svg(counts, region_keywords, window_text, map_path)
 
     translator = make_translator(args.translate)
     markdown = build_markdown(
@@ -510,8 +812,6 @@ def main() -> int:
         tz_label,
         now.tzinfo or dt.timezone.utc,
         region_items,
-        tech_items,
-        intel_items,
         args.translate,
         translator,
     )
