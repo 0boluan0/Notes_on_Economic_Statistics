@@ -12,7 +12,7 @@ eg：Bart向河中排放了污水，他本应支付排污的成本但是他事�
 
 负外部性会导致自由市场产量水平大于社会效率水平
 The Nature of Externalities-Graphical Analysis $ Reduction from Q, to Q" means dcg Eee profit loss for Supplier and dchg welfare gain for Demander. 5 边际 私人 成 本 h d 8 MD 边际 损害 “ a_ie ° Q* Q payee TE Ta 人 Actual output oer year SAN 285, PE Ber 0044 buy MeCram till Edueatien All Biahte Bacanrad 5.
-~~[[Pasted image 20240315133213.png]]~~ (已转文字)
+![[Pasted image 20240315133213.png]]
 如果Bart减产则Bart少∆dcg这些收入但是Lisa得到红色部分，所以社会总产出会增加。
 
 正外部性会导致自由市场产量水平小于社会效率水平
@@ -25,9 +25,9 @@ The Nature of Externalities-Graphical Analysis $ Reduction from Q, to Q" means d
 当产权被严格划分时，可以通过讨价还价达到新的均衡
 eg：将河划分给Bart则Lisa需要给Bart钱Bart才乐意减产以平衡收入的降低
 Supplier will | Q, to Q’ if MSC = MPC + MD $ paid by Demander, who is willing to do so. Bargain . MPC possible over $ transferred. h d 一 和 MD Ce T—w 0 * Q’ Qi Q per year
-~~[[Pasted image 20240317124800.png]]~~ (已转文字)
+![[Pasted image 20240317124800.png]]
 。 MD >(MB-— MPC) => the opportunity for a bargain exists
-~~[[Pasted image 20240317124916.png]]~~ (已转文字)
+![[Pasted image 20240317124916.png]]
 满足上述不等式的时候就还有讲价的区间，否则就没必要讲价。
 事实上付的钱是一个范围而非一个定值。
 
@@ -48,23 +48,23 @@ Supplier will | Q, to Q’ if MSC = MPC + MD $ paid by Demander, who is willing 
 * Cost for reducing pollution can stem from reducing output,shifting to cleaner inputs, or installing a new technology to control pollution.
 ### 征收庇古税
 Public Responses to Externalities — Taxes 外 部 性 的 公共 对 策 ， 对 污染 行为 征 税 MSC = MPC + MD $ (MPC + cd) 有 效 边 际 成 本 Pigouvian tax revenues 庇 古 税 MPC - d | |---------------/------------- 人 > MD 一 人 < 2 Qe Qa Q per year
-~~[[Pasted image 20240317131808.png]]~~ (已转文字)
+![[Pasted image 20240317131808.png]]
 MSC边际社会成本MPC边际个人成本MD边际污染
 
 
 ### 发放庇古补贴
 Public Responses to Externalities — Subsidies that pay polluter not to pollute 外 部 性 的 公共 对 策 ， 对 不 污染 行为 进行 补贴 MSC= MPC+ MD $ (MPC + cd) 有 效 边 际 成 本 Pigouvian MPC subsidy 庇 古 补贴 | MD ae 0 Q* Qa Q per year
-~~[[Pasted image 20240317131824.png]]~~ (已转文字)
+![[Pasted image 20240317131824.png]]
 ### 排污费
 对于Bart而言，最好的情况是减少任何一点污染的排放，因为减少排污就意味着花钱，他肯定不想花钱。
 9 ft results in only el reduction Mc f* results in e* reduction: the efficient level Pw _ f* Emissions fee 0 . . e* et Pollution reduction 污染 减少 量
-~~[[Pasted image 20240317133349.png]]~~ (已转文字)
+![[Pasted image 20240317133349.png]]
 ## 不同污染者之间统一污染减少
 假设有第三个人Homer也开了一家会排污的公司
 一 MCy Requiring each company to reduce pollution by 50 units is b not cost effective. Better to have Bart reduce pollution by 100 units because he can do so at a lower cost. But is it fair??? MCg 1 1 1 1 __ 1 1 1 1 1 10 50 75 90 Bart’s 25 50 75 90 Homers pollution pollution reduction reduction
-~~[[Pasted image 20240317133635.png]]~~ (已转文字)
+![[Pasted image 20240317133635.png]]
 Emissions Fees achieve fairness and efficiency An Emissions Fee=$50 means MCy Bart will reduce by 75 and Homer only by 25, but Homer pays larger tax. Bart’s Tax Payment Homer’s Tax MC, Payment 1 f= _ fe 1 $50 $50 50 75 90 Bart’s 25 50 75 90 Homer's pollution pollution reduction reduction
-~~[[Pasted image 20240317133650.png]]~~ (已转文字)
+![[Pasted image 20240317133650.png]]
 
 
 ### 总量控制与交易制度
@@ -72,7 +72,7 @@ Emissions Fees achieve fairness and efficiency An Emissions Fee=$50 means MCy Ba
 发放一定量的污染许可证，政府进行初步的配给，而后经过市场进行调控直到均衡。
 
 Public Responses to Externalities- Cap-and-Trade: Polluters must have a permit YA Et te Se 总 量 控制 与 交易 制度 Bart: The cost of reducing pollution MC, is less than market price of a permit, so sell permit. b Homer: The cost of reducing pollution is greater than market 1 price of a permit so buy permit. 1 BOTH GAIN FROM TRADE ) 1 MC, ; 1 1 faL_ LLL f= _ 1 $50 ; $50 i 1 1 1 1 10 50 75 90 Barts 25 50 75 90 Homers pollution pollution reduction reduction
-~~[[Pasted image 20240317133710.png]]~~ (已转文字)
+![[Pasted image 20240317133710.png]]
 #### 碳交易市场
 ## 命令控制管理
 强制性的，不是很好用
@@ -81,7 +81,7 @@ Public Responses to Externalities- Cap-and-Trade: Polluters must have a permit Y
 
 # 对正外部性的处理
 Positive Externalities $ MC MSB = MPB + MEB 边际 社会 收益 | MPB 边际 私人 收益 | | MEB 边际 外 部 收益 Ra R* Research per year
-~~[[Pasted image 20240317133951.png]]~~ (已转文字)
+![[Pasted image 20240317133951.png]]
 与负的外部性相反，这个的边际社会受益是比边际私人受益要高的。
 
 ## 公共处理

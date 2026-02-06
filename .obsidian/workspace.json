@@ -130,6 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "01_Math/03_game theory/03_策略式博弈.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -139,7 +140,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for 03_策略式博弈"
             }
           },
           {
@@ -148,11 +149,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "01_Math/03_game theory/03_策略式博弈.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from 03_策略式博弈"
             }
           },
           {
@@ -199,9 +201,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "01_Math/03_game theory/03_策略式博弈.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for 03_策略式博弈"
             }
           },
           {
@@ -302,12 +306,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "01_Math/03_game theory/03_策略式博弈.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 03_策略式博弈"
             }
           },
           {
@@ -354,8 +359,9 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "3cf7d72ddbb2faad",
+  "active": "7753fb3dc8dc90cc",
   "lastOpenFiles": [
+    "00_inbox/image_text_audit_2026-02-06.csv",
     "01_Math/03_game theory/03_策略式博弈.md",
     "00_factor/concept/Rationalisability.md",
     "01_Math/05_随机过程/01_预备知识.md",
@@ -396,7 +402,6 @@
     "01_Math/03_game theory/03_game theory.canvas",
     "03_Computer_Science/99_Miscellaneous/SQL.md",
     "98_attachment/dashboards",
-    "03_Computer_Science/99_Miscellaneous/the_missing_semester.md",
     "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec02.pdf",
     "scripts/ocr_replace_images.py",

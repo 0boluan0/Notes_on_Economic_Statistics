@@ -383,14 +383,14 @@ $$
 
 ## 4.
 4. REE PRR y, =0.5y,, +z, +6,, # 中 ，z 为 自 回归 过 程 x =0. 5z,_, +e., a. 求 滤波 后 的 序列 |y,| 与 序列 { se。 | 间 的 互 相关 系数 。 b. 现 假设 y =0.5y, ,+z +0.5z ,+s,， 并 Az, =0.5z ,+es， 求 滤波 后 的 序列 |y,| 与 ss 标准 化 互 协 方差 。 证 明 第 1 个 和 第 2 个 互 协 方差 成 比例 。 证 明 互 协 方差 以 0.5 的 比例 衰减 。
-~~[[Pasted image 20250525194711.png]]~~ (已转文字)
+![[Pasted image 20250525194711.png]]
 
 ## 6.
 Use (5.28) to find the appropriate second-order stochastic difference equation for y, ; . cg: oe wee y, _ 08 0.2 Vy . el Hh ER ety 和 0.2 0.8j|z- e>, a 7 oe A. Determine whether the {y,} sequence is stationary. - oe B. Discuss the shape of the impulse response function of y, to a one-trit shock in el and a one-unit shock in e,,. mae C. Suppose evy = er + 0.5e,, and that ez = €,,. Discuss the shape of the impulse response function of y, to a one-unit shock in ¢€,,. Repeat for a one-unit shock in €,,. D. Suppose e,, = €,, and that ex = 0.5¢,, + er Discuss the shape of the impulse response function of y, to a one unit shock in ev Repeat for a one-unit shock in €,,. E. Use your answers to C and D to explain why the ordering in a Choleski de- composition is important. F. Using the notation in (5.21), find A? and A}. Does A7 appear to approach zero (i.e., the null matrix)?
-~~[[Pasted image 20250525194732.png]]~~ (已转文字)
+![[Pasted image 20250525194732.png]]
 
 ## 8.
 6. Suppose the residuals of a VAR are such that var(e,) = 0.75, var(e,) = 0.5, and Cov(el ez) = 0.25. A. Using (5.53) through (5.56) as guides, show that it is not possible to iden- tify the structural VAR. ‘-¢ B, Using Choleski decomposition such that b,, = 0, find the identified values of b,,, var(e,), and var(e,). C. Using Choleski decomposition such that b,, = 0, find the identified values of b,, var(e,), and var(e,). D. Using a Sims-Bernanke decomposition such that 6, = 0.5, find the identi- fied values of bj, var(e,), and Var(e,).
-~~[[Pasted image 20250525194752.png]]~~ (已转文字)
+![[Pasted image 20250525194752.png]]
 E. Using a Sims-Bernanke decomposition such that bz, = 0.5, find the identi- fied values of bz var(e,), and var(€). F. Suppose that the first three values of e,, are estimated to be 1, 0, and -1 and “ the first three values of ex are estimated to be -1, 0, and 1. Find the first . three values of eu and ex using each of the decompositions in parts B through E.
-~~[[Pasted image 20250525194802.png]]~~ (已转文字)
+![[Pasted image 20250525194802.png]]
