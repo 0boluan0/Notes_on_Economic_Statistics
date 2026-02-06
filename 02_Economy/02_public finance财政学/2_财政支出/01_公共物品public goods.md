@@ -10,8 +10,10 @@ a 王 提 Fx v= eS IN WAS RR 非 竞 争 性 有 线 电视 、 收 费 软 件 
 * 公共资源(Common Resources)：竞争性，非排他性
 
 举例：
-。 Basic research 基础 科研 。 Uncongested non-toll roads 非 收费 、 非 拥堵 的 公路 。 Fireworks display 烟火 秀 。National Defense 国防
-![[Pasted image 20240314091530.png]]
+- Basic research（基础科研）
+- Uncongested non-toll roads（非收费、非拥堵公路）
+- Fireworks display（烟火秀）
+- National defense（国防）
 
 特别的，公共物品的分类不是绝对的，有时候会因情况的变动而改变。
 — e.g., Lighthouse (灯塔 ) & signal receiver (nonexcludability criterion does not hold) —eg., SHLAA fd vs. 拥 墙 的 公园 (nonrivalness criterion is no longer satisfied) — Impure public good 非 纯 公 共 物 品 : to some extent rival or excludable en - 3}

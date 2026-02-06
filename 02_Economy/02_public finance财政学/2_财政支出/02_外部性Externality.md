@@ -34,7 +34,6 @@ flowchart LR
 ```
 
 。 MD >(MB-— MPC) => the opportunity for a bargain exists
-![[Pasted image 20240317124916.png]]
 满足上述不等式的时候就还有讲价的区间，否则就没必要讲价。
 事实上付的钱是一个范围而非一个定值。
 
