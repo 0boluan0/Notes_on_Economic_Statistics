@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
 <rect x="0" y="0" width="100%" height="100%" fill="#ffffff"/>
 <text x="40" y="46" font-size="20" font-family="Arial, sans-serif" fill="#1f2937">全球态势地图 | Global Situation Map</text>
-<text x="40" y="72" font-size="12" font-family="Arial, sans-serif" fill="#6b7280">时间窗口: 2026-02-05 13:48 ~ 2026-02-06 13:48</text>
+<text x="40" y="72" font-size="12" font-family="Arial, sans-serif" fill="#6b7280">时间窗口: 2026-02-05 14:32 ~ 2026-02-06 14:32</text>
 <g id="countries" stroke="#ffffff" stroke-width="0.2">
 <path d="M955.21,305.01 L955.84,304.68 L956.72,305.26 L956.30,306.30 L954.72,306.58 L953.31,306.33 L953.06,305.45 L954.05,304.76 L955.21,305.01 Z" fill="#ee8a5b" fill-opacity="0.85" fill-rule="evenodd"/>
 <path d="M40.00,302.13 L40.52,302.04 L40.21,303.00 L40.00,303.11 L958.37,303.60 L956.74,304.02 L956.41,303.28 L957.69,302.87 L958.50,302.76 L960.00,302.13 L40.00,302.13 Z" fill="#ee8a5b" fill-opacity="0.85" fill-rule="evenodd"/>
@@ -290,15 +290,15 @@
 <path d="M578.79,262.98 L576.55,261.65 L575.94,260.80 L574.52,261.22 L573.34,261.09 L572.65,261.42 L571.51,261.18 L569.95,259.53 L569.55,258.90 L567.63,258.11 L566.99,256.91 L565.92,256.04 L564.20,255.00 L564.18,254.35 L562.79,253.54 L561.05,252.76 L561.83,252.54 L562.70,252.17 L563.37,250.38 L564.06,249.45 L565.90,249.18 L566.35,249.73 L567.66,250.89 L568.37,251.07 L569.29,250.72 L571.13,250.79 L571.48,251.20 L574.03,251.20 L574.11,250.79 L575.43,250.41 L575.69,249.83 L576.66,249.42 L578.80,250.59 L580.13,250.38 L581.40,248.94 L582.80,247.84 L582.58,246.64 L581.97,246.05 L583.50,245.95 L583.68,245.50 L584.87,245.64 L584.55,247.12 L584.87,248.56 L586.18,249.35 L586.49,250.04 L586.44,251.03 L586.80,251.07 L586.83,252.63 L586.44,253.24 L585.09,253.29 L584.21,254.43 L585.79,254.57 L587.08,255.55 L587.53,256.35 L588.69,256.81 L590.20,258.99 L588.47,260.31 L586.90,261.50 L585.33,262.42 L583.53,262.42 L581.47,262.88 L579.85,262.44 L578.79,262.98 Z" fill="#ee8a5b" fill-opacity="0.85" fill-rule="evenodd"/>
 </g>
 <g font-family="Arial, sans-serif" fill="#111827" font-size="12" text-anchor="middle">
-<text x="231.67" y="230.00">美洲 / Americas | 106</text>
-<text x="231.67" y="244.00" font-size="10" fill="#374151">trump, US, AI</text>
-<text x="525.56" y="154.00">欧洲 / Europe | 30</text>
+<text x="231.67" y="230.00">美洲 / Americas | 101</text>
+<text x="231.67" y="244.00" font-size="10" fill="#374151">trump, AI, elections</text>
+<text x="525.56" y="154.00">欧洲 / Europe | 32</text>
 <text x="525.56" y="168.00" font-size="10" fill="#374151">russia, ukraine, US</text>
-<text x="563.89" y="222.00">中东北非 / MENA | 14</text>
+<text x="563.89" y="222.00">中东北非 / MENA | 13</text>
 <text x="563.89" y="236.00" font-size="10" fill="#374151">gaza, alleged, arrested</text>
 <text x="551.11" y="290.00">非洲 / Africa | 6</text>
 <text x="551.11" y="304.00" font-size="10" fill="#374151">africa, launches, news</text>
-<text x="806.67" y="240.00">亚太 / APAC | 7</text>
+<text x="806.67" y="240.00">亚太 / APAC | 6</text>
 <text x="806.67" y="254.00" font-size="10" fill="#374151">china, US, air</text>
 </g>
 <g font-family="Arial, sans-serif" fill="#374151" font-size="11">

@@ -18,7 +18,7 @@ Use this rubric for module 1 in the daily note.
 ## Output Template
 
 ```markdown
-## 模块一｜全球态势静态快照（中英双语）
+## 模块一｜全球态势静态快照（中文为主）
 > 时间窗口：{start_time} ~ {end_time} ({tz})
 > 注：表格为摘要，不含来源。
 

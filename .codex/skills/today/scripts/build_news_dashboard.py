@@ -748,11 +748,9 @@ def build_markdown(
     translator,
 ) -> str:
     lines: List[str] = []
-    lines.append("## 模块一｜全球态势静态快照（中英双语）")
+    lines.append("## 模块一｜全球态势静态快照（中文为主）")
     lines.append(f"> 时间窗口：{window_text} ({tz_label})")
     lines.append("> 注：表格为摘要，不含来源。")
-    if not translate_enabled:
-        lines.append("> 注：未启用翻译时摘要可能为英文标题。")
     lines.append("")
     lines.append(f"![[98_attachment/dashboards/{map_filename}]]")
     lines.append("")
