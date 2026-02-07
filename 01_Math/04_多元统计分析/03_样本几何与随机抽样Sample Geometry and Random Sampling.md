@@ -1,48 +1,48 @@
 
-# Chapter 3: Sample Geometry and Random Sampling (样本几何与随机抽样)
+# 第3章：样本几何与随机抽样（Sample Geometry and Random Sampling）
 
-## 1. The Geometry of the Sample (样本的几何结构)
-- **Data Matrix Representation (数据矩阵表示)**
-  - Structure and notation of the data matrix.
-- **Mean-Corrected Vector and Deviation Vector (均值修正向量与偏差向量)**
-  - Definitions and mathematical representations.
-- **Angles Between Deviation Vectors (偏差向量之间的夹角)**
-  - Relationship between cosine of angles and correlation coefficients.
+## 1. 样本的几何结构（The Geometry of the Sample）
+- **数据矩阵表示（Data Matrix Representation）**
+  - 数据矩阵的结构与记号。
+- **均值修正向量与偏差向量（Mean-Corrected Vector and Deviation Vector）**
+  - 定义（Definition）与数学表示。
+- **偏差向量之间的夹角（Angles Between Deviation Vectors）**
+  - 夹角余弦与相关系数之间的关系。
 
-## 2. Random Sample and the Expected Values of the Sample Mean and Covariance Matrix
-- **Definition of the Sample Covariance Matrix (样本协方差矩阵的定义)**
-  - Formula and its components.
-- **Generalized Variance (广义方差)**
-  - Interpretation using determinant of the covariance matrix.
-  - Trace of the covariance matrix as a measure of total variability.
+## 2. 随机样本与样本均值/协方差矩阵的期望（Random Sample and the Expected Values of the Sample Mean and Covariance Matrix）
+- **样本协方差矩阵的定义（Definition of the Sample Covariance Matrix）**
+  - 公式及其组成。
+- **广义方差（Generalized Variance）**
+  - 通过协方差矩阵行列式进行解释。
+  - 通过协方差矩阵迹衡量总体变异。
 
-## 3. Geometric Interpretation of Generalized Variance
-- **Area and Volume (面积与体积)**
-  - Calculation of areas and volumes in low-dimensional and high-dimensional spaces.
-- **High-Dimensional Covariance Characteristics (高维协方差特征)**
-  - Implications when the sample size ($n$) is less than the number of variables ($p$).
+## 3. 广义方差的几何解释（Geometric Interpretation of Generalized Variance）
+- **面积与体积（Area and Volume）**
+  - 低维与高维空间中面积/体积的计算。
+- **高维协方差特征（High-Dimensional Covariance Characteristics）**
+  - 当样本量 $n$ 小于变量数 $p$ 时的含义。
 
-## 4. Matrix Representation of the Sample Covariance Matrix
-- **Matrix Representation (矩阵表示)**
-  - Deviation matrix and its role in computing the covariance matrix.
-- **Determinant and Eigenvalues (行列式与特征值)**
-  - Use of eigenvalues to interpret data variability in $p$-space.
-- **Rank-Deficient Cases (秩亏缺情况)**
-  - Handling cases where the covariance matrix determinant is zero.
+## 4. 样本协方差矩阵的矩阵表示（Matrix Representation of the Sample Covariance Matrix）
+- **矩阵表示（Matrix Representation）**
+  - 偏差矩阵及其在协方差计算中的作用。
+- **行列式与特征值（Determinant and Eigenvalues）**
+  - 用特征值解释 $p$ 维空间中的数据变异性。
+- **秩亏缺情况（Rank-Deficient Cases）**
+  - 处理协方差矩阵行列式为 0 的情形。
 
-## 5. Standardized Covariance Matrix and Correlation Matrix
-- **Standardization (标准化)**
-  - Transforming variables to obtain the correlation matrix.
-- **Correlation Matrix Representation (相关系数矩阵表示)**
-  - Mathematical formulation of the sample correlation matrix.
-- **Relationship Between Covariance and Correlation Matrices (协方差矩阵与相关系数矩阵的关系)**
-  - Conversion formulas using diagonal scaling matrices.
+## 5. 标准化协方差矩阵与相关矩阵（Standardized Covariance Matrix and Correlation Matrix）
+- **标准化（Standardization）**
+  - 通过变量标准化得到相关矩阵。
+- **相关矩阵表示（Correlation Matrix Representation）**
+  - 样本相关矩阵的数学表达。
+- **协方差矩阵与相关矩阵的关系（Relationship Between Covariance and Correlation Matrices）**
+  - 使用对角缩放矩阵的转换公式。
 
 -----
 
-# 1. The Geometry of the Sample 样本的几何结构
+# 1. 样本的几何结构（The Geometry of the Sample）
 
-## 1.1 Data Matrix Representation 数据矩阵的表示
+## 1.1 数据矩阵表示（Data Matrix Representation）
 
 数据矩阵（Data Matrix）$X_{n \times p}$ 用于表示 $n$ 个观测样本在 $p$ 个变量上的取值，其结构为：
 $$
@@ -56,7 +56,7 @@ x_{n1} & x_{n2} & \cdots & x_{np}
 $$
 其中每一行表示一个样本（Sample），每一列表示一个变量（Variable）。通过数据矩阵，我们可以对多变量样本进行统一表示。
 
-## 1.2 Mean-Corrected Vector and Deviation Vector 均值修正向量与偏差向量
+## 1.2 均值修正向量与偏差向量（Mean-Corrected Vector and Deviation Vector）
 
 - 对于第 $i$ 个变量，其观测值组成向量 $y_i$，表示为：
   $$
@@ -86,7 +86,7 @@ $$
 
 ---
 
-## 1.3 Sum of Squared Deviations 偏差平方和
+## 1.3 偏差平方和（Sum of Squared Deviations）
 
 变量的总体变异性可以通过偏差平方和（Sum of Squared Deviations）来表示，其定义为：
 $$
@@ -96,7 +96,7 @@ $$
 
 ---
 
-## 1.4 Angles Between Deviation Vectors 偏差向量之间的夹角
+## 1.4 偏差向量夹角（Angles Between Deviation Vectors）
 
 - 偏差向量 $d_i$ 和 $d_k$ 之间的内积（Inner Product）定义为：
   $$
@@ -117,11 +117,11 @@ $$
 
 ---
 
-# 2. Random Sample and the Expected Values of the Sample Mean and Covariance Matrix
+# 2. 随机样本与样本均值/协方差矩阵的期望（Random Sample and the Expected Values of the Sample Mean and Covariance Matrix）
 
 随机样本与样本均值和协方差矩阵的期望值
 
-## 2.1 Sample Covariance Matrix 样本协方差矩阵
+## 2.1 样本协方差矩阵（Sample Covariance Matrix）
 
 样本协方差矩阵（Sample Covariance Matrix）用于衡量变量之间的线性关系，其定义为：
 $$
@@ -148,11 +148,11 @@ D是Deviation Matrix(偏差矩阵)
 
 ---
 
-## 2.2 Generalized Variance 广义方差
+## 2.2 广义方差（Generalized Variance）
 
 为了用一个数值总结协方差矩阵所表达的变异性，可以使用以下两种方法：
 
-### 2.2.1 Determinant of $S$ 矩阵行列式
+### 2.2.1 $S$ 的行列式（Determinant of $S$）
 
 样本协方差矩阵 $S$ 的行列式被称为**推广样本方差**（Generalized Sample Variance）：
 $$
@@ -160,7 +160,7 @@ $$
 $$
 - 几何意义：当 $p=2$ 时，$|S|$ 是协方差矩阵所表示的椭圆面积的平方；当 $p>2$ 时，$|S|$ 是高维超体积的平方。
 
-### 2.2.2 Trace of $S$ 矩阵迹
+### 2.2.2 $S$ 的迹（Trace of $S$）
 
 另一种方法是使用协方差矩阵的迹（Trace），即对角线元素之和，表示总样本方差（Total Sample Variance）：
 $$
@@ -170,14 +170,14 @@ $$
 
 ---
 
-## 2.3 Properties of Generalized Variance 广义方差的性质
+## 2.3 广义方差的性质（Properties of Generalized Variance）
 
 - **高维情况**：当样本数量 $n$ 小于或等于变量数量 $p$ 时，$|S| = 0$。此时协方差矩阵的秩不足，称为高维退化（High-Dimensional Degeneracy）。
 - **变量选择的影响**：当 $|S|=0$ 时，说明至少一个变量的偏差向量是其他变量偏差向量的线性组合。此时需要移除部分变量以确保矩阵为满秩。
 
 ---
 
-## 2.4 Geometric Interpretation of Generalized Variance 推广方差的几何解释
+## 2.4 广义方差的几何解释（Geometric Interpretation of Generalized Variance）
 
 - **面积与体积**：对于二维（$p=2$）情形，推广方差与椭圆面积的平方成正比：
   $$
@@ -194,13 +194,13 @@ $$
 
 ---
 
-# 3. Geometric Interpretation of Generalized Variance推广方差的几何解释
+# 3. 广义方差的几何解释（Geometric Interpretation of Generalized Variance）
 
 推广方差（Generalized Variance）通过几何视角揭示了样本协方差矩阵中变异性的分布特性，特别是在二维和高维空间中。行列式（Determinant）和矩阵迹（Trace）的几何意义分别对应面积、体积和总体变异性的量化。
 
 ---
 
-## 3.1 Generalized Variance in 2D: Elliptical Area in Two Dimensions
+## 3.1 二维广义方差：椭圆面积（Generalized Variance in 2D: Elliptical Area in Two Dimensions）
 
 ### 椭圆面积（二维情形）
 
@@ -242,7 +242,7 @@ $$
 
 ---
 
-## 3.2 Generalized Variance in Higher Dimensions: Hypervolume
+## 3.2 高维广义方差：超体积（Generalized Variance in Higher Dimensions: Hypervolume）
 
 ### 超体积（高维情形）
 
@@ -278,7 +278,7 @@ $$
 
 ---
 
-## 3.3 Trace as Total Variability: An Alternative Measure
+## 3.3 用迹衡量总体变异：替代指标（Trace as Total Variability: An Alternative Measure）
 
 矩阵迹（Trace）是另一种量化协方差矩阵总变异性的方法，其定义为对角线元素之和：
 $$
@@ -293,7 +293,7 @@ $$
 
 ---
 
-## 3.4 Special Cases and Practical Considerations
+## 3.4 特殊情形与实务考虑（Special Cases and Practical Considerations）
 ### 特殊情形：
 
 1. **行列式为零（$|S| = 0$）**：
@@ -304,7 +304,7 @@ $$
    - 相关矩阵的行列式可提供标准化后的推广方差。
 
 ---
-# 4. Matrix Representation of the Sample Covariance Matrix
+# 4. 样本协方差矩阵的矩阵表示（Matrix Representation of the Sample Covariance Matrix）
 
 样本协方差矩阵的矩阵表示
 
@@ -312,7 +312,7 @@ $$
 
 ---
 
-## 4.1 Matrix Representation 矩阵表示
+## 4.1 矩阵表示（Matrix Representation）
 
 ### 偏差矩阵（Deviation Matrix）的定义
 
@@ -342,7 +342,7 @@ $$
 
 ---
 
-## 4.2 Determinant and Eigenvalues 行列式与特征值
+## 4.2 行列式与特征值（Determinant and Eigenvalues）
 ### 协方差矩阵行列式的几何意义
 
 样本协方差矩阵的行列式（Determinant）$|S|$ 反映了数据在 $p$ 维空间中生成的高维超体积的平方：
@@ -370,7 +370,7 @@ $$
 
 ---
 
-## 4.3 Rank-Deficient Cases 协方差矩阵秩不足的情况
+## 4.3 秩亏缺情形（Rank-Deficient Cases）
 ### 秩不足（Rank Deficiency）的定义
 
 协方差矩阵的秩（Rank）表示变量间独立方向的个数。当矩阵秩不足（Rank-Deficient）时，行列式 $|S| = 0$。这通常发生在以下情况：
@@ -395,13 +395,13 @@ $$
 
 ---
 
-## 5. Standardized Covariance Matrix and Correlation Matrix标准化协方差矩阵与相关矩阵
+## 5. 标准化协方差矩阵与相关矩阵（Standardized Covariance Matrix and Correlation Matrix）
 
 协方差矩阵描述了变量间的线性关系，但其数值受到变量量纲的影响。通过标准化，可以消除量纲差异，使变量间的关系更清晰。
 
 ---
 
-## 5.1 Standardization 标准化
+## 5.1 标准化（Standardization）
 ### 标准化的定义
 
 为了消除变量的量纲影响，可以对变量进行标准化（Standardization），即将每个变量的均值调整为 $0$，标准差调整为 $1$。对于变量 $X_j$，其标准化形式为：
@@ -420,7 +420,7 @@ $$
 
 ---
 
-## 5.2 Correlation Matrix Representation 相关矩阵的表示
+## 5.2 相关矩阵表示（Correlation Matrix Representation）
 ### 相关矩阵的定义
 
 相关矩阵（Correlation Matrix）$R$ 是标准化后的协方差矩阵，表示变量之间的线性关系。其公式为：
@@ -445,7 +445,7 @@ $$
 
 ---
 
-## 5.3 Relationship Between Covariance and Correlation Matrices 协方差矩阵与相关矩阵的关系
+## 5.3 协方差矩阵与相关矩阵的关系（Relationship Between Covariance and Correlation Matrices）
 
 ### 转换公式
 
@@ -469,4 +469,3 @@ $$
    $$
    S = D^{1/2} R D^{1/2}.
    $$
-

@@ -1,61 +1,61 @@
 
-# Matrix Algebra and Random Vectors
+# 矩阵代数与随机向量（Matrix Algebra and Random Vectors）
 
-### 1. Basics of Matrix and Vector Algebra
-- Definition of Vectors
-- Vector Length and Direction
-- Cosine of the Angle Between Two Vectors
-- Scalar Multiplication and Unit Vectors
-- Linear Dependence and Independence of Vectors
-- Projection of a Vector
+### 1. 矩阵与向量代数基础（Basics of Matrix and Vector Algebra）
+- 向量定义（Definition of vectors）
+- 向量长度与方向（Vector length and direction）
+- 向量夹角余弦（Cosine of the angle between two vectors）
+- 标量乘法与单位向量（Scalar multiplication and unit vectors）
+- 向量线性相关与线性无关（Linear dependence and independence）
+- 向量投影（Projection of a vector）
 
-### 2. Matrices
-- Definition and Notation
-- Identity Matrix (单位矩阵)
-- Diagonal Matrix (对角矩阵)
-- Matrix Operations:
-  - Scalar Multiplication (标量乘法)
-  - Matrix Addition (矩阵加法)
-  - Matrix Multiplication (矩阵乘法)
-- Matrix Inverse (矩阵逆)
-- Orthogonal Matrices (正交矩阵)
-- Rank of a Matrix (矩阵的秩)
+### 2. 矩阵（Matrices）
+- 定义与记号（Definition and notation）
+- 单位矩阵（Identity Matrix）
+- 对角矩阵（Diagonal Matrix）
+- 矩阵运算（Matrix operations）：
+  - 标量乘法（Scalar Multiplication）
+  - 矩阵加法（Matrix Addition）
+  - 矩阵乘法（Matrix Multiplication）
+- 矩阵逆（Matrix Inverse）
+- 正交矩阵（Orthogonal Matrices）
+- 矩阵的秩（Rank of a Matrix）
 
-### 3. Determinants (行列式)
-- Definition of Determinants
-- Properties:
-  - Determinant of Product of Matrices
-  - Determinant of Inverse
-  - Determinant of Diagonal Matrices
-  - Determinants and Orthogonal Matrices
+### 3. 行列式（Determinants）
+- 行列式定义（Definition of determinants）
+- 性质（Properties）：
+  - 矩阵乘积行列式（Determinant of product of matrices）
+  - 逆矩阵行列式（Determinant of inverse）
+  - 对角矩阵行列式（Determinant of diagonal matrices）
+  - 行列式与正交矩阵（Determinants and orthogonal matrices）
 
-### 4. Eigenvalues and Eigenvectors (特征值与特征向量)
-- Definitions
-- Properties:
+### 4. 特征值与特征向量（Eigenvalues and Eigenvectors）
+- 定义（Definitions）
+- 性质（Properties）：
   - Spectral Representation (谱表示)
-  - Trace and Determinant Using Eigenvalues
+  - 用特征值表示迹与行列式（Trace and Determinant Using Eigenvalues）
 
-### 5. Positive Definite and Non-Negative Definite Matrices
-- Definitions and Properties
+### 5. 正定与半正定矩阵（Positive Definite and Non-Negative Definite Matrices）
+- 定义与性质（Definitions and Properties）
 - Quadratic Forms (二次型)
 
-### 6. Square Root of a Matrix
-- Definition
-- Symmetry and Properties
-- Transformation of Quadratic Forms
+### 6. 矩阵平方根（Square Root of a Matrix）
+- 定义（Definition）
+- 对称性与性质（Symmetry and properties）
+- 二次型变换（Transformation of quadratic forms）
 
-### 7. Random Vectors and Random Matrices (随机向量与随机矩阵)
-- Definitions
-- Mean and Variance-Covariance Matrix (均值和方差-协方差矩阵)
-- Linear Functions of Random Vectors
+### 7. 随机向量与随机矩阵（Random Vectors and Random Matrices）
+- 定义（Definitions）
+- 均值与方差-协方差矩阵（Mean and Variance-Covariance Matrix）
+- 随机向量的线性函数（Linear Functions of Random Vectors）
 
-### 8. Correlation Matrix (相关系数矩阵)
-- Definition and Properties
-- Relationship with Variance-Covariance Matrix
+### 8. 相关矩阵（Correlation Matrix）
+- 定义与性质（Definition and properties）
+- 与方差-协方差矩阵关系（Relationship with variance-covariance matrix）
 
 ---
 
-# Basics of Matrix and Vector Algebra
+# 矩阵与向量代数基础（Basics of Matrix and Vector Algebra）
 
 ## 1. **向量的定义与表示**
 
@@ -175,7 +175,7 @@ $$
 
 ---
 
-# Matrices
+# 矩阵（Matrices）
 
 ## 1. **矩阵的定义与表示**
 
@@ -407,7 +407,7 @@ $$
 
 ---
 
-# Determinants
+# 行列式（Determinants）
 
 ## 1. **行列式的定义**
 
@@ -497,7 +497,7 @@ $$|Q|^2 = 1.$$
 
 ---
 
-# Eigenvalues and Eigenvectors
+# 特征值与特征向量（Eigenvalues and Eigenvectors）
 
 ## 1. **特征值与特征向量的定义**
 
@@ -957,7 +957,7 @@ $$
 
 ---
 
-# Positive Definite and Non-Negative Definite Matrices
+# 正定与半正定矩阵（Positive Definite and Non-Negative Definite Matrices）
 
 ## 1. **定义**
 
@@ -1032,7 +1032,7 @@ $$
 
 ---
 
-# Square Root of a Matrix
+# 矩阵平方根（Square Root of a Matrix）
 
 ## 1. **定义**
 
@@ -1100,7 +1100,7 @@ $$
 
 ---
 
-# **Quadratic Transformation**
+# 二次型变换（Quadratic Transformation）
 
 ## **1. 定义**
 
@@ -1274,7 +1274,7 @@ $$
 ------------
 
 
-# Random Vectors and Random Matrices
+# 随机向量与随机矩阵（Random Vectors and Random Matrices）
 
 ## 1. **随机向量 (Random Vectors)**
 
@@ -1343,7 +1343,7 @@ $$
 
 ---
 
-# Correlation Matrix
+# 相关矩阵（Correlation Matrix）
 
 ## 1. **定义**
 

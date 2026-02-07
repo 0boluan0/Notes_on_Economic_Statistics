@@ -1,48 +1,48 @@
 
 ==证明不要求掌握.但是要知道本章提到过的各个性质,会在选择题中出现==
 
-# Chapter 4: The Multivariate Normal Distribution
+# 第4章：多元正态分布（The Multivariate Normal Distribution）
 
-## 1. Introduction
-- **1.1 Overview**: Importance and applications of the multivariate normal distribution.
-- **1.2 Use Cases**: Assumptions and scenarios where the multivariate normal distribution applies.
+## 1. 引言（Introduction）
+- **1.1 概述（Overview）**：多元正态分布（Multivariate Normal Distribution）的重要性与应用场景。
+- **1.2 适用场景（Use Cases）**：多元正态分布成立时的常见假设与使用条件。
 
-## 2. The Multivariate Normal Density and Its Properties
-- **2.1 Univariate Normal Distribution**: Definition and probability density function.
-- **2.2 Multivariate Normal Distribution**:
-  - Density function formula and interpretation.
-  - Special case: Bivariate normal distribution.
-- **2.3 Equi-probability Density Contours**: Definition and elliptical properties.
+## 2. 多元正态密度及其性质（The Multivariate Normal Density and Its Properties）
+- **2.1 单变量正态分布（Univariate Normal Distribution）**：定义与概率密度函数。
+- **2.2 多元正态分布（Multivariate Normal Distribution）**：
+  - 密度函数公式与解释。
+  - 特例：二维正态分布（Bivariate Normal Distribution）。
+- **2.3 等概率密度轮廓（Equi-probability Density Contours）**：定义与椭圆性质。
 
-## 3. Properties of Multivariate Normal Distribution
-- **3.1 Linear Combinations**: Distribution properties and reverse deduction.
-- **3.2 Affine Transformations**: Behavior under linear transformations.
-- **3.3 Translation**: Impact of constant vector shifts.
-- **3.4 Conditional Distributions**: Conditional mean and covariance formulas.
+## 3. 多元正态分布的性质（Properties of Multivariate Normal Distribution）
+- **3.1 线性组合（Linear Combinations）**：分布性质与反向推导。
+- **3.2 仿射变换（Affine Transformations）**：线性变换下的分布行为。
+- **3.3 平移（Translation）**：常向量平移对分布的影响。
+- **3.4 条件分布（Conditional Distributions）**：条件均值与条件协方差公式。
 
-## 4. Quadratic Forms and Related Distributions
-- **4.1 Quadratic Forms**: $\\chi^2$ distribution and related properties.
-- **4.2 Standardization**: Properties of the standardized normal distribution.
+## 4. 二次型与相关分布（Quadratic Forms and Related Distributions）
+- **4.1 二次型（Quadratic Forms）**：$\\chi^2$ 分布及其相关性质。
+- **4.2 标准化（Standardization）**：标准正态分布的相关性质。
 
-## 5. Sampling from Multivariate Normal Distribution
-- **5.1 Joint Density Function**: Formula for the joint distribution of samples.
-- **5.2 Maximum Likelihood Estimation**: Estimation of sample mean and covariance matrix.
+## 5. 多元正态分布的抽样（Sampling from Multivariate Normal Distribution）
+- **5.1 联合密度函数（Joint Density Function）**：样本联合分布的表达式。
+- **5.2 极大似然估计（Maximum Likelihood Estimation）**：样本均值与协方差矩阵的估计。
 
-## 6. Wishart Distribution
-- **6.1 Definition**: Distribution of the sample covariance matrix.
-- **6.2 Properties**:
-  - Independence and summation properties.
-  - Transformations of matrices.
+## 6. Wishart 分布（Wishart Distribution）
+- **6.1 定义（Definition）**：样本协方差矩阵的分布。
+- **6.2 性质（Properties）**：
+  - 独立性与可加性。
+  - 矩阵变换下的分布性质。
 
-## 7. Large Sample Properties
-- **7.1 Central Limit Theorem**: Asymptotic properties for large samples.
+## 7. 大样本性质（Large Sample Properties）
+- **7.1 中心极限定理（Central Limit Theorem）**：大样本下的渐近性质。
 
-## 8. Assessing the Assumption of Normality
-- **8.1 Univariate Normality Tests**: Using histograms and probability plots.
-- **8.2 Multivariate Normality Tests**: Chi-square distances and quantile comparisons.
+## 8. 正态性假设检验（Assessing the Assumption of Normality）
+- **8.1 单变量正态性检验（Univariate Normality Tests）**：直方图与概率图方法。
+- **8.2 多变量正态性检验（Multivariate Normality Tests）**：卡方距离与分位数比较。
 
 -----------------------
-# 1. Introduction
+# 1. 引言（Introduction）
 
 ## 1.1 概述：多元正态分布的重要性和应用
 - **多元正态分布 (Multivariate Normal Distribution)** 是单变量正态分布的扩展，适用于高维数据。
@@ -52,11 +52,11 @@
 
 ---
 
-# 2. The Multivariate Normal Density and Its Properties
+# 2. 多元正态密度及其性质（The Multivariate Normal Density and Its Properties）
 
 ## 2.1 单变量正态分布 (Univariate Normal Distribution)
 
-- **定义 (Definition)**：
+- **定义（Definition）**：
   - 单变量正态分布描述的是一个随机变量 $x$ 的概率分布。
   - 若 $x$ 服从正态分布，记为：
     $$
@@ -78,7 +78,7 @@
 ## 2.2 多元正态分布 (Multivariate Normal Distribution)
 ### 2.2.1 密度函数公式 (Density Function Formula)
 
-- **定义**：
+- **定义（Definition）**：
   - 多元正态分布描述的是随机向量 $X = (X_1, X_2, \dots, X_p)'$ 的概率分布。
   - 若 $X$ 服从多元正态分布，记为：
     $$
@@ -120,11 +120,12 @@ $$
 **为了体现相关性，设相关系数为 $\rho = 0.5$；再设 $X$ 的标准差为 $\sigma_X = 1$，$Y$ 的标准差为 $\sigma_Y = 2$，则**
 
 $$
-\Sigma
+\Sigma =
 \begin{pmatrix}
-\sigma_X^2 & \rho,\sigma_X \sigma_Y \\
-\rho,\sigma_X \sigma_Y & \sigma_Y^2
+\sigma_X^2 & \rho \sigma_X \sigma_Y \\
+\rho \sigma_X \sigma_Y & \sigma_Y^2
 \end{pmatrix}
+=
 \begin{pmatrix}
 1^2 & 0.5 \times 1 \times 2 \\
 0.5 \times 1 \times 2 & 2^2
@@ -217,7 +218,7 @@ $$
 
 ## 2.3 等概率密度曲线 (Equi-probability Density Contours)
 
-- **定义 (Definition)**：
+- **定义（Definition）**：
 
 “**多元正态分布的等概率密度曲线（或曲面）**”是由满足
 
@@ -256,7 +257,7 @@ $$
 
 --------
 
-# 3. Properties of Multivariate Normal Distribution
+# 3. 多元正态分布的性质（Properties of Multivariate Normal Distribution）
 
 **前置示例设定**
 
@@ -636,7 +637,7 @@ $$
 
 ---------------
 
-# 4. Quadratic Forms and Related Distributions
+# 4. 二次型与相关分布（Quadratic Forms and Related Distributions）
 
 ## 4.1 平方形式的分布 (Distribution of Quadratic Forms)
 
@@ -690,7 +691,7 @@ $$
 
 ## 4.2 标准化 (Standardization)
 
-- **定义**：
+- **定义（Definition）**：
   - 通过以下变换对 $X$ 进行标准化：
     $$
     Z = \Sigma^{-1/2}(X - \mu)
@@ -707,7 +708,7 @@ $$
 
 ---
 
-# 5. Sampling from Multivariate Normal Distribution
+# 5. 多元正态分布的抽样（Sampling from Multivariate Normal Distribution）
 
 ## 5.1 联合密度函数 (Joint Density Function)
 
@@ -876,11 +877,11 @@ $$
 
 ----------------------
 
-# 6. Wishart Distribution
+# 6. Wishart 分布（Wishart Distribution）
 
 ==如果总体是正态分布,那么样本的方差协方差矩阵就是Wishart 分布==
 
-## 6.1 定义 (Definition)
+## 6.1 定义（Definition）
 
 **1. 样本协方差矩阵的分布及Wishart分布**
 
@@ -981,7 +982,7 @@ $$
 
 ---
 
-# 7. Large Sample Properties
+# 7. 大样本性质（Large Sample Properties）
 
 ## 7.1 中心极限定理 (Central Limit Theorem)
 
@@ -1076,7 +1077,7 @@ $$
 
 ---
 
-# 8. Assessing the Assumption of Normality
+# 8. 正态性假设检验（Assessing the Assumption of Normality）
 
 ## 8.1 单变量正态性检验 (Univariate Normality Tests)
 

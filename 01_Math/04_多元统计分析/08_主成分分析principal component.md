@@ -1,5 +1,5 @@
 
-# chapter 8 principal component
+# 第8章：主成分分析（Principal component）
 
 **1. 主成分分析（PCA）简介**
 
