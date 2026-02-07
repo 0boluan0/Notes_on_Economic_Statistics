@@ -5,16 +5,16 @@
 
 # 1. 引言
 
-本节概览波动建模动机与事实特征，重点在第 2–3 节的 ARCH/GARCH 与拓展模型。~~没什么意义.~~
+本节概览波动建模动机与事实特征，重点在第 2–3 节的 [[ARCH|ARCH]]/[[GARCH|GARCH]] 与拓展模型。~~没什么意义.~~
 
 ## 1.1 为什么要进行波动建模
 
-Volatility 就是条件二阶矩.
+[[Volatility Clustering|Volatility]] 就是条件二阶矩.
 
-1. 金融和经济时间序列往往表现出**条件异方差**（conditional heteroskedasticity）现象，即随着时间推移序列的**波动性**(volatility)并非恒定不变，而是呈现出集中的波动期和平稳期交替出现的特征。
+1. 金融和经济时间序列往往表现出**[[Conditional Heteroskedasticity|条件异方差]]**（conditional heteroskedasticity）现象，即随着时间推移序列的**波动性**(volatility)并非恒定不变，而是呈现出集中的波动期和平稳期交替出现的特征。
 2. **波动性聚集现象**（volatility clustering） :波动性聚集是指金融时间序列中高波动时期往往紧随高波动时期，而低波动时期往往紧随低波动时期。换言之，剧烈波动的冲击往往簇集出现。
 
-对于波动建模,有三种方法  ARCH GARCH 和SV
+对于波动建模,有三种方法  [[ARCH|ARCH]] [[GARCH|GARCH]] 和SV
 除此之外,还有RV,是对于高频数据的建模.
 
 ## 1.2 经济学领域的特征事实
@@ -23,10 +23,10 @@ Volatility 就是条件二阶矩.
  2. **许多时间序列的波动性并不恒定**，会随着时间发生变化。例如，美国实际GDP增速的波动在1984年左右明显下降，在2007年出现了一个大的负向波动尖峰，随后波动性有所稳定 。这表明方差存在结构性变化; 
  3. 序列受到冲击后的影响可能具有高度**持久性**（persistence），即冲击的影响在序列中持续很长时间； 
  4. 有些金融序列表现出类似随机游走的行为，没有均值回归趋势，例如汇率呈长时间升值或贬值的漫步状（见随机游走模型）； 
- 5. 一些序列与其他序列存在共移动现象，例如短期和长期利率常常一起变动，体现**共同趋势**和**协整**关系； 
+ 5. 一些序列与其他序列存在共移动现象，例如短期和长期利率常常一起变动，体现**共同趋势**和**[[Cointegration|协整]]**关系； 
  6. 某些序列存在**结构性突变**，例如金融危机后油价出现跳变。
 
-# 2. ARCH,GARCH
+# 2. [[ARCH|ARCH]],[[GARCH|GARCH]]
 
 ~~加了条件异方差不影响是白噪声~~（说明：白噪声通常指无条件零均值、方差常数且相互不相关；存在条件异方差不影响“不相关”，但对“方差常数”的理解需区分“条件/无条件”层面，常用[[鞅差序列]]刻画条件零均值）
 
@@ -35,13 +35,13 @@ Volatility 就是条件二阶矩.
 为了刻画波动群聚现象,可以引入一个状态变量:
 
 >[!note] 状态变量 State Variable
->状态变量使得方差可以随状态变化。例如，假设模型：$$y_{t+1} = \epsilon_{t+1} x_t$$其中$y_{t+1}$是我们关心的变量（已经去除均值，使其均值为0，以专注于波动部分），$\epsilon_{t+1}$是均值为0、方差为$\sigma^2$的**白噪声**（white noise），而$x_t$是第$t$期的某个状态变量。这样，条件方差就是：$$\operatorname{Var}(y_{t+1} \mid \mathcal{F}_t) = \sigma^2 x_t^2.$$
+>状态变量使得方差可以随状态变化。例如，假设模型：$$y_{t+1} = \epsilon_{t+1} x_t$$其中$y_{t+1}$是我们关心的变量（已经去除均值，使其均值为0，以专注于波动部分），$\epsilon_{t+1}$是均值为0、方差为$\sigma^2$的**[[White Noise|白噪声]]**（white noise），而$x_t$是第$t$期的某个状态变量。这样，条件方差就是：$$\operatorname{Var}(y_{t+1} \mid \mathcal{F}_t) = \sigma^2 x_t^2.$$
 
 通过这种方式，如果$x_t$随时间变化，那么$y$的条件方差也会随之变化。当$x_t$较大时，$\sigma^2 x_t^2$也较大，表示波动性提高；当$x_t$较小时，波动性降低。这为捕捉非恒定方差提供了一个思路。
 
 ## 2.2 [[ARCH]]
 
->[!note] **ARCH(1)模型定义：**
+>[!note] **[[ARCH|ARCH]](1)模型定义：**
 >$$\epsilon_t = \nu_t \sqrt{\alpha_0 + \alpha_1 \epsilon_{t-1}^2}$$或者写作:$$\begin{cases}
 \varepsilon_t = \nu_t \sqrt{h_t}  \\
 h_t = \alpha_0 + \alpha_1 \varepsilon_{t-1}^2
@@ -62,7 +62,7 @@ h_t = \alpha_0 + \alpha_1 \varepsilon_{t-1}^2
 
 ARCH的N要取得比较大.所以发明了GARCH模型,在保持对条件异方差性建模能力的同时，用更少的参数捕捉长期的波动影响。
 
->[!note] GARCH(p,q)模型
+>[!note] [[GARCH|GARCH]](p,q)模型
 >$$\begin{cases}
 > \varepsilon_t = \nu_t \sqrt{h_t}  \\
 > h_t = \alpha_0 + \sum_{i=1}^{q} \alpha_i\varepsilon_{t-i}^2 + \sum_{j=1}^{p} \beta_j h_{t-j}
@@ -77,7 +77,7 @@ GARCH模型通常能够用更少的滞后项达到与高阶ARCH模型同样的�
 
 实证分析中最常用的就是GARCH(1,1)
 
-## 2.4 侦测ARCH/GARCH效应
+## 2.4 [[ARCH LM Test|侦测ARCH/GARCH效应]]
 
 参见：[[ARCH Effects Test|ARCH效应检验]]
 
@@ -85,8 +85,8 @@ GARCH模型通常能够用更少的滞后项达到与高阶ARCH模型同样的�
 
 使用两种方法检验残差,两种方法都是在对原始序列先拟合一个最好的ARMA模型,并得到一个残差序列${\hat{\varepsilon}_t}$.而后对残差序列进行操作
 
->[!note] McLeod-Li检验
-> 拟合一个“最优”ARMA模型,得到残差序列 $\hat{\varepsilon}_t$
+>[!note] [[McLeod-Li Test|McLeod-Li检验]]
+> 拟合一个“最优”[[ARMA|ARMA模型]],得到残差序列 $\hat{\varepsilon}_t$
 >   
 >  对残差序列平方$\hat{\varepsilon}_t^2$，计算其样本自相关.定义第 i 阶自相关：
 > $$r_i = \frac{\sum_{t=i+1}^{T} (\hat{\varepsilon}_t^2 - \bar{\sigma}^2)(\hat{\varepsilon}_{t-i}^2 - \bar{\sigma}^2)}{\sum_{t=1}^{T} (\hat{\varepsilon}_t^2 - \bar{\sigma}^2)^2}$$
@@ -96,20 +96,20 @@ GARCH模型通常能够用更少的滞后项达到与高阶ARCH模型同样的�
 > 
 > $$Q = T(T+2) \sum_{i=1}^m \frac{r_i^2}{T - i} \quad \text{服从 } \chi^2_m \text{ 分布}$$
 > 
-> - 如果显著 ⇒ 拒绝 $H_0$,即意味着残差序列中存在 ARCH 效应
+> - 如果显著 ⇒ 拒绝 $H_0$,即意味着残差序列中存在 [[ARCH|ARCH]] 效应
 > - 若不显著 ⇒ 没有显著条件异方差
 
->[!note] ARCH-LM检验
->同样先拟合一个 ARMA 模型 ⇒ 得到残差 $\hat{\varepsilon}_t$
+>[!note] [[ARCH LM Test|ARCH-LM检验]]
+>同样先拟合一个 [[ARMA|ARMA]] 模型 ⇒ 得到残差 $\hat{\varepsilon}_t$
 > 使用残差做回归：
 > $$\hat{\varepsilon}_t^2 = \alpha_0 + \sum_{j=1}^{q} \alpha_j \hat{\varepsilon}_{t-j}^2 + \eta_t$$
-> 这个是检验是否存在 ARCH(q) 的标准形式。
+> 这个是检验是否存在 [[ARCH|ARCH]](q) 的标准形式。
 > 检验思想：
-> - 原假设 $H_0$: $\alpha_1 = \alpha_2 = \cdots = \alpha_q = 0$（无 ARCH）
+> - 原假设 $H_0$: $\alpha_1 = \alpha_2 = \cdots = \alpha_q = 0$（无 [[ARCH|ARCH]]）
 > - 计算 R^2：这个回归的决定系数
 > - 构造统计量：$L = T R^2 \sim \chi^2_q$
-> 	- 如果 L 显著 ⇒ 存在 ARCH 效应
-> 	- 若不显著 ⇒ 没有 ARCH 效应
+> 	- 如果 L 显著 ⇒ 存在 [[ARCH|ARCH]] 效应
+> 	- 若不显著 ⇒ 没有 [[ARCH|ARCH]] 效应
 
 ## 2.5 极大似然估计MLE
 
@@ -127,9 +127,9 @@ $\log L = -\frac{T}{2} \log(2\pi) - \frac{1}{2} \sum_{t=1}^T \log h_t - \frac{1}
 
 ### (1)模型拟合优度的评估:AIC和SBC.
 
-• AIC 定义为：$\displaystyle \text{AIC} = -2\ln L_{\text{max}} + 2k$，其中$L_{\text{max}}$是模型最大化后的似然值，$k$是模型中估计参数的个数 。$-2\ln L$衡量了模型残差的不可解释程度（越小表示模型拟合越好），而$2k$是对模型复杂度的惩罚（参数越多惩罚越大）。
+• [[AIC|AIC]] 定义为：$\displaystyle \text{[[AIC|AIC]]} = -2\ln L_{\text{max}} + 2k$，其中$L_{\text{max}}$是模型最大化后的似然值，$k$是模型中估计参数的个数 。$-2\ln L$衡量了模型残差的不可解释程度（越小表示模型拟合越好），而$2k$是对模型复杂度的惩罚（参数越多惩罚越大）。
 
-• BIC 定义为：$\displaystyle \text{BIC} = -2\ln L_{\text{max}} + k \ln T$，其中$T$为样本容量 。相比AIC，BIC对参数个数的惩罚更严厉（乘以$\ln T$因子），在大样本下倾向于选择更简洁的模型。
+• [[BIC|BIC]] 定义为：$\displaystyle \text{[[BIC|BIC]]} = -2\ln L_{\text{max}} + k \ln T$，其中$T$为样本容量 。相比AIC，BIC对参数个数的惩罚更严厉（乘以$\ln T$因子），在大样本下倾向于选择更简洁的模型。
 
 ### (2)模型诊断
 
@@ -158,15 +158,15 @@ $$\hat{y}_{t+1|t} \pm 1.96 \sqrt{\hat{h}_{t+1|t}} $$
 
 ==极大概率不考,如果没时间了就别学了.==
 
-## 3.1 IGARCH
+## 3.1 [[IGARCH|IGARCH]]
 
 参见：[[IGARCH]]
 
 金融时间序列的一个典型特征是波动性的**高度持久**（persistent）。实证中，对许多资产回报率拟合GARCH(1,1)模型时，常常发现估计得到的$\hat{\alpha}_1 + \hat{\beta}_1$非常接近1。
 
->[!note] **积整GARCH模型**（Integrated GARCH，简称IGARCH）。
+>[!note] **积整GARCH模型**（[[IGARCH|Integrated GARCH]]，简称IGARCH）。
 >$\alpha_1 + \beta_1 = 1$的GARCH模型.
->IGARCH(1,1)实际上就是$\alpha_1 + \beta_1 = 1$的GARCH(1,1)模型。这个等式让原先的GARCH模型少了一个参数
+>[[IGARCH|IGARCH]](1,1)实际上就是$\alpha_1 + \beta_1 = 1$的GARCH(1,1)模型。这个等式让原先的GARCH模型少了一个参数
 >
 >其特性为:
 >1. 无条件方差不存在
@@ -174,20 +174,20 @@ $$\hat{y}_{t+1|t} \pm 1.96 \sqrt{\hat{h}_{t+1|t}} $$
 >
 >总之就是会永远记住之前发生的事情
 
-## 3.2 ARCH-M
+## 3.2 [[ARCH-M|ARCH-M]]
 
 参见：[[ARCH-M]]
 
 风险越大,要求的收益越高
 
->[!note] ARCH-M 
+>[!note] [[ARCH-M|ARCH-M]] 
 >$$\begin{cases} y_t &= \mu_t + \varepsilon_t \\ \mu_t &= \beta + \delta h_t \quad (\delta > 0) \\ h_t &= \alpha_0 + \sum_{i=1}^q \alpha_i \varepsilon_{t-i}^2 \end{cases}$$ 
 
 | 方程                                                   | **含义**                     |
 | ---------------------------------------------------- | -------------------------- |
 | $y_t = \mu_t + \varepsilon_t$                        | 观测值等于期望值 + 噪声              |
 | $\mu_t = \beta + \delta h_t$                         | **均值受到波动** $h_t$ **的正向影响** |
-| $h_t = \alpha_0 + \sum \alpha_i \varepsilon_{t-i}^2$ | 标准 ARCH(q) 波动结构            |
+| $h_t = \alpha_0 + \sum \alpha_i \varepsilon_{t-i}^2$ | 标准 [[ARCH|ARCH]](q) 波动结构            |
 
 ## 3.3 带有解释变量的波动模型
 
@@ -205,14 +205,14 @@ $$\hat{y}_{t+1|t} \pm 1.96 \sqrt{\hat{h}_{t+1|t}} $$
 >[!note] 杠杆效应leverage effect
 >这表现为**波动性的非对称性**.例如公司的负面信息对公司的影响大于公司的正面信息.
 
->[!note] TARCH ,门限GARCH效应 Threshold GARCH
+>[!note] [[TARCH|TARCH]] ,门限GARCH效应 Threshold [[GARCH|GARCH]]
 > TARCH通过在方差方程中引入一个针对负残差的指示变量来实现非对称效应。以TARCH(1,1)为例，其形式可写为：
 > 
 > $$h_t = \alpha_0 + \alpha_1 \epsilon_{t-1}^2 + \lambda_1d_{t-1}\epsilon_{t-1}^2 + \beta_1 h_{t-1},$$
 > 
 > ==其中$d_{t-1}$是一个哑变量==，当$\epsilon_{t-1} < 0$时$d_{t-1}=1$，当$\epsilon_{t-1} \ge 0$时$d_{t-1}=0$。也就是说，$\epsilon_{t-1}^2$项会根据$\epsilon_{t-1}$的符号被赋予不同的系数：如果前一期是负冲击，则方差方程中实际影响是$(\alpha_1+\lambda_1)\epsilon_{t-1}^2$；如果前一期是正冲击，则影响是$\alpha_1 \epsilon_{t-1}^2$（因为这时$d_{t-1}=0$，额外项不起作用）。
 
->[!note] EGARCH 指数GARCH模型 Exponential GARCH
+>[!note] [[EGARCH|EGARCH]] 指数GARCH模型 [[Exponential Distribution|Exponential]] [[GARCH|GARCH]]
 >指数GARCH模型采用对数形式的方差方程，形式例如EGARCH(1,1)：
 > 
 > $$\ln h_t = \alpha_0 + \alpha_1 \left(\frac{\epsilon_{t-1}}{\sqrt{h_{t-1}}}\right) + \lambda_1 \left|\frac{\epsilon_{t-1}}{\sqrt{h_{t-1}}}\right| + \beta_1 \ln h_{t-1}.$$

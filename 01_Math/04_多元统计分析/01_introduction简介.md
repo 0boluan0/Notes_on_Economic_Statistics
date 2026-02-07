@@ -1,5 +1,5 @@
 
-# 多变量分析(Multivariate analysis)
+# 多变量分析([[Multivariate Normal Distribution|Multivariate]] analysis)
 
 # 多元方法的目标
 
@@ -25,7 +25,7 @@
 
  计算过程见标准推导：先求均值再代入方差定义即可。
 
-## 样本方差 (Sample Variance)
+## 样本方差 (Sample [[Variance Decomposition|Variance]])
 
 对于样本 ${x_1, x_2, \dots, x_n}$，样本方差的计算公式为：
 
@@ -57,7 +57,7 @@ $$
 • $\bar{x}$ 和 $\bar{y}$ 分别是 $x$ 和 $y$ 的样本均值。
 • $S_{xy}$ 是样本协方差(sample covariance)。
 
-## 样本相关系数 (Sample Correlation Coefficient)
+## 样本相关系数 (Sample [[Correlation Coefficient|Correlation Coefficient]])
 
 $$
 

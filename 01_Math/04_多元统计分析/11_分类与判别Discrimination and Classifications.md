@@ -74,9 +74,9 @@ $$
 
 使用$C(1|2)$表示2被分到1所带来的成本,那么不难看出$C(1|1)$=$C(2|2)$=0.
 
-### 3.2.3 Expected Cost of Misclassification ECM
+### 3.2.3 Expected Cost of Misclassification [[Error Correction Model|ECM]]
 
-$$ECM  =P1 × P (2|1) × c(2|1) + P2 × P (1|2) × c(1|2)$$
+$$[[Error Correction Model|ECM]]  =P1 × P (2|1) × c(2|1) + P2 × P (1|2) × c(1|2)$$
 目标是使该判别函数最小（或最大，取决于定义）。
 
 **1. 分类区域的定义**
@@ -169,6 +169,6 @@ $$ \hat{E}\{AER\} = \frac{n_{1m}(H) + n_{2m}(H)}{n_1 + n_2} $$
 # 7. 多个总体的分类
 
 ## 条件期望误分类成本
-$$ ECM(i) = \sum_{k \neq i} P(k|i)c(k|i) $$
+$$ [[Error Correction Model|ECM]](i) = \sum_{k \neq i} P(k|i)c(k|i) $$
 ## 总体误分类成本
-$$ ECM = \sum_{i=1}^{g} p_i ECM(i) $$
+$$ [[Error Correction Model|ECM]] = \sum_{i=1}^{g} p_i [[Error Correction Model|ECM]](i) $$

@@ -4,14 +4,14 @@
 
 # 定义(Definition)
 
-* Externality : An activity of one entity that affects the welfare of another entity in a way that is outside the market mechanism。
+* [[Externality|Externality]] : An activity of one entity that affects the welfare of another entity in a way that is outside the market mechanism。
 * 某一实体的活动以没有反映在市场价格中的某种方式直接影响他人福利，这种影响被称为外部性(externality)。
 eg：Bart向河中排放了污水，他本应支付排污的成本但是他事实上并未支付，而是产生了负的外部性。
 
 # 对于负外部性的处理
 
 负外部性会导致自由市场产量水平大于社会效率水平
-The Nature of Externalities-Graphical Analysis $ Reduction from Q, to Q" means dcg Eee profit loss for Supplier and dchg welfare gain for Demander. 5 边际 私人 成 本 h d 8 MD 边际 损害 “ a_ie ° Q* Q payee TE Ta 人 Actual output oer year SAN 285, PE Ber 0044 buy MeCram till Edueatien All Biahte Bacanrad 5.
+The Nature of [[Externality|Externalities]]-Graphical Analysis $ Reduction from Q, to Q" means dcg Eee profit loss for Supplier and dchg welfare gain for Demander. 5 边际 私人 成 本 h d 8 MD 边际 损害 “ a_ie ° Q* Q payee TE Ta 人 Actual output oer year SAN 285, PE Ber 0044 buy MeCram till Edueatien All Biahte Bacanrad 5.
 ![[Pasted image 20240315133213.png]]
 如果Bart减产则Bart少∆dcg这些收入但是Lisa得到红色部分，所以社会总产出会增加。
 
@@ -37,7 +37,7 @@ flowchart LR
 满足上述不等式的时候就还有讲价的区间，否则就没必要讲价。
 事实上付的钱是一个范围而非一个定值。
 
-#### 科斯定理
+#### [[Coase Theorem|科斯定理]]
 
 * 前提条件：讨价还价成本低，产权可严格划分。
 * 科斯定律起作用的必要假设：各方讨价还价成本很低，资源所有者能够识别使其财产受到损害的源头,且在防止伤害上能够得到法律保护。
@@ -53,7 +53,7 @@ flowchart LR
 * MC: the marginal cost to Bart of reducing each unit of pollution.
 * Cost for reducing pollution can stem from reducing output,shifting to cleaner inputs, or installing a new technology to control pollution.
 ### 征收庇古税
-庇古税通过提高污染行为的私人成本，使决策从 $Q_1$ 向社会最优 $Q^*$ 收敛，并形成税收收入。
+庇古税通过提高污染行为的私人成本，使决策从 $Q_1$ 向社会最优 $Q^*$ [[Limit|收敛]]，并形成税收收入。
 
 ```mermaid
 flowchart LR

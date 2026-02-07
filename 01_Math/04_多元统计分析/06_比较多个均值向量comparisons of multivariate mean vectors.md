@@ -12,7 +12,7 @@
 
 - 差值向量定义： $$D_j = \begin{pmatrix} D_{j1} \\ D_{j2} \\ \vdots \\ D_{jp} \end{pmatrix} = \begin{pmatrix} x_{1j1} - x_{2j1} \\ x_{1j2} - x_{2j2} \\ \vdots \\ x_{1jp} - x_{2jp} \end{pmatrix}$$
 - 差值向量的期望和协方差： $$(D_j) = \delta = \begin{pmatrix} \delta_1 \\ \delta_2 \\ \vdots \\ \delta_p \end{pmatrix}, \quad Cov(D_j) = \Sigma_d$$
-## 1.3. **Hotelling $T^2$ 检验 (Hotelling's $T^2$ Test)**
+## 1.3. **[[Hotelling Model|Hotelling]] $T^2$ 检验 ([[Hotelling Model|Hotelling]]'s $T^2$ Test)**
 
 - 目标：对比 $\delta = 0$ 的假设 $H_0$（无显著差异）。
 - 检验统计量： $$T^2 = n (\bar{D} - \delta)' S_d^{-1} (\bar{D} - \delta)$$ 其中：
@@ -23,7 +23,7 @@
     ==当样本量足够大时，$T^2 \sim \chi^2_p$。==
     ==精确分布为 $T^2 \sim \frac{p(n-1)}{n-p}F_{p,n-p}$。==
 
-## 1.4. **置信区间 (Confidence Intervals)**
+## 1.4. **置信区间 ([[Confidence Level|Confidence]] Intervals)**
 
 - 单变量差异的同时置信区间： $$\bar{d}_i \pm \sqrt{\frac{p(n-1)}{n-p} F_{p,n-p}(\alpha)} \sqrt{\frac{S_{di}^2}{n}}$$ 其中：
     - $\bar{d}_i$ 是差值向量中第$i$个变量的均值。
@@ -258,8 +258,8 @@ $$
 ## 2.1协方差矩阵相等的情况
 
 
-• **Population 1**: $x_{11}, x_{12}, \dots, x_{1n_1} \sim N_p(\mu_1, \Sigma_1)$
-• **Population 2**: $x_{21}, x_{22}, \dots, x_{2n_2} \sim N_p(\mu_2, \Sigma_2)$
+• **[[Population Growth and Economic Development|Population]] 1**: $x_{11}, x_{12}, \dots, x_{1n_1} \sim N_p(\mu_1, \Sigma_1)$
+• **[[Population Growth and Economic Development|Population]] 2**: $x_{21}, x_{22}, \dots, x_{2n_2} \sim N_p(\mu_2, \Sigma_2)$
 
 • 假设两总体均值和协方差矩阵如下：
 
@@ -279,7 +279,7 @@ $$
 
 $$S_2 = \frac{1}{n_2 - 1} \sum_{j=1}^{n_2} (x_{2j} - \bar{X}_2)(x_{2j} - \bar{X}_2)’.
 $$
-• **合并样本协方差矩阵（Pooled Covariance Matrix）：**
+• **合并样本协方差矩阵（Pooled Covariance [[Matrix Inverse|Matrix]]）：**
 $$
 S_{pooled} = S = \frac{(n_1 - 1)S_1 + (n_2 - 1)S_2}{n_1 + n_2 - 2}.
 $$
@@ -298,7 +298,7 @@ $$
 E(\bar{X}_1 - \bar{X}_2) = \mu_1 - \mu_2, \quad \text{Var}(\bar{X}_1 - \bar{X}_2) = \left(\frac{1}{n_1} + \frac{1}{n_2}\right)\Sigma.
 $$
 • $\Sigma$ 使用 $S_{pooled}$ 估计。
-• **Hotelling $T^2$ 统计量：**
+• **[[Hotelling Model|Hotelling]] $T^2$ 统计量：**
 
 $$
 
@@ -377,7 +377,7 @@ $T^2$ 统计量的分布在小样本情况下不再严格服从 $F$ 分布。可
 
 • **渐近方法**：当样本量足够大时，$T^2$ 统计量近似服从 $\chi^2_p$ 分布（$p$ 是变量数）。
 
-• **Multivariate Behrens-Fisher Problem**
+• **[[Multivariate Normal Distribution|Multivariate]] Behrens-Fisher Problem**
 		当比较两个总体的均值向量时，如果两个总体的协方差矩阵不相等（$\Sigma_1 \neq \Sigma_2$）且样本量较小，这属§于**多变量 Behrens-Fisher 问题**。
 • **分布：**
 $$
@@ -469,18 +469,18 @@ $$
 
 • **统计量：**
 $$
-\Delta^* = \frac{|W|}{|T|}。
+\[[Delta|Delta]]^* = \frac{|W|}{|T|}。
 $$
-• $\Delta^*$ 称为 Wilks Lambda，值越小表明组间差异越显著。
+• $\[[Delta|Delta]]^*$ 称为 Wilks Lambda，值越小表明组间差异越显著。
 • **自由度与显著性检验：**
 
 如果样本量较大：
 $$
-\left(n - 1 - \frac{p + g}{2}\right)\ln\Delta^* \sim \chi^2_{p(g-1)}。
+\left(n - 1 - \frac{p + g}{2}\right)\ln\[[Delta|Delta]]^* \sim \chi^2_{p(g-1)}。
 $$
 拒绝域：
 $$
-\left(n - 1 - \frac{p + g}{2}\right)\ln\Delta^* > \chi^2_{p(g-1)}(\alpha)。
+\left(n - 1 - \frac{p + g}{2}\right)\ln\[[Delta|Delta]]^* > \chi^2_{p(g-1)}(\alpha)。
 $$
 
 ## **3.5. MANOVA 表**
@@ -488,11 +488,11 @@ $$
 | **Source of Variation** | **SSP 矩阵**                                                                    | **自由度**                |
 | ----------------------- | ----------------------------------------------------------------------------- | ---------------------- |
 | Treatment (Between)     | $B = \sum_{l=1}^g n_l (\bar{X}_l - \bar{X})(\bar{X}_l - \bar{X})'$            | $g-1$                  |
-| Residual (Within)       | $W = \sum_{l=1}^g \sum_{j=1}^{n_g} (x_{lj} - \bar{X}_l)(x_{lj} - \bar{X}_l)'$ | $\sum_{l=1}^g n_l - g$ |
+| [[Residual|Residual]] (Within)       | $W = \sum_{l=1}^g \sum_{j=1}^{n_g} (x_{lj} - \bar{X}_l)(x_{lj} - \bar{X}_l)'$ | $\sum_{l=1}^g n_l - g$ |
 | Total (Corrected)       | $T = B + W$                                                                   | $\sum_{l=1}^g n_l - 1$ |
 
 ## **3.6. 采样分布**
 
-• $\Delta^*$ 的采样分布基于 Wilks Lambda 的分布，取决于变量数 $p$ 和组数 $g$：
-• 当 $p = 1, g \geq 2$：$\Delta^* \sim F_{g-1, \sum n_e - g}$；
-• 当 $p = 2, g \geq 2$：$\Delta^* \sim F_{2(g-1), 2(\sum n_e - g)}$。
+• $\[[Delta|Delta]]^*$ 的采样分布基于 Wilks Lambda 的分布，取决于变量数 $p$ 和组数 $g$：
+• 当 $p = 1, g \geq 2$：$\[[Delta|Delta]]^* \sim F_{g-1, \sum n_e - g}$；
+• 当 $p = 2, g \geq 2$：$\[[Delta|Delta]]^* \sim F_{2(g-1), 2(\sum n_e - g)}$。

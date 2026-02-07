@@ -17,7 +17,7 @@
 > 
 > $$
 > 
-> 这里，$a_0$ 是常数项，$a_1$ 是劫机次数的**AR(1)系数**（表示过去劫机次数对当前的影响），$c_0$ 是干预效应系数，$\varepsilon_t$ 是白噪声误差项。模型中包含一个滞后项$y_{t-1}$，假定序列在没有干预时服从AR(1)动态，并以$c_0 z_t$项刻画政策干预的即时影响。
+> 这里，$a_0$ 是常数项，$a_1$ 是劫机次数的**[[AR(1) stationarity|AR]](1)系数**（表示过去劫机次数对当前的影响），$c_0$ 是干预效应系数，$\varepsilon_t$ 是白噪声误差项。模型中包含一个滞后项$y_{t-1}$，假定序列在没有干预时服从AR(1)动态，并以$c_0 z_t$项刻画政策干预的即时影响。
 
 • 如果没有干预（$z_t=0$），模型退化为 $y_t = a_0 + a_1 y_{t-1} + \varepsilon_t$，是一个均值为 $a_0/(1-a_1)$ 的稳定AR(1)过程。
 
@@ -48,9 +48,9 @@ $$
   
 可以看出，干预使序列的漂移项从 $a_0$ 变为 $a_0 + c_0$，从而将**长期均值**提高（或降低）了 $\frac{c_0}{1 - a_1}$。这个长期效应就是干预的永久影响。当 $c_0<0$ 时，新的长期均值低于原先，说明政策永久性地减少了劫机事件发生的平均水平；$c_0>0$ 则反之。这个结果直观：$c_0$ 是干预导致的瞬时变动，而 $\frac{c_0}{1 - a_1}$ 表示经过AR(1)动态放大后，干预对平稳均值的总改变量。
 
-## 1.2 脉冲响应函数 IRF Impulse Response Analysis
+## 1.2 [[Impulse Response Function|脉冲响应函数]] [[Impulse Response Function|IRF]] [[Impulse Response Function|Impulse]] Response Analysis
 
->[!note] 脉冲响应函数
+>[!note] [[Impulse Response Function|脉冲响应函数]]
 >即干预发生后各期对 $y$ 的影响路径。这里的“冲击”指的是干预变量$z_t$从0跳变为1的变化，相当于一次永久性的干预。
 > 
 > 对于任意$j \ge 0$，我们可以计算**脉冲响应**：干预在$t$期发生对未来第$j$期 ($t+j$) 的影响大小。由于模型是线性的，冲击响应等于对 $z_t$ 求偏导：
@@ -83,13 +83,13 @@ $$
 
 • 干预模型的残差是否近似白噪声（无自相关）。
 
-4. **模型诊断与比较：** 对比包含干预项的模型与不含干预项的基准模型，或者与其他可能的备选模型，使用信息准则（AIC、SBC/BIC）来评估优劣。理想情况下，含干预模型应当有更低的信息准则值、残差更随机，以及**优于**不包含干预的模型。
+4. **模型诊断与比较：** 对比包含干预项的模型与不含干预项的基准模型，或者与其他可能的备选模型，使用信息准则（[[AIC|AIC]]、SBC/[[BIC|BIC]]）来评估优劣。理想情况下，含干预模型应当有更低的信息准则值、残差更随机，以及**优于**不包含干预的模型。
 
 # 2.政策分析
 
 废话
 
-# 3. 自回归分布滞后ADL  Autoregressive Distributed Lag
+# 3. 自回归分布滞后ADL  Autoregressive [[Distributed Lag Model|Distributed]] Lag
 
 ## 3.1 ADL的定义
 
@@ -106,16 +106,16 @@ $$
  
  • $B(L)$ 表示 $\epsilon_t$ 的移动平均(MA)部分，如 $B(L)\epsilon_t = \epsilon_t + b_1 \epsilon_{t-1} + \cdots + b_q \epsilon_{t-q}$。很多情况下我们可以假定 $B(L)=1$（即噪声项为白噪声，无MA结构），以简化分析。
 
->[!note] 自回归分布滞后模型
+>[!note] [[ADL|自回归分布滞后模型]]
 >
-> **自回归分布滞后模型**（Autoregressive Distributed Lag Model, 简称 **ADL 模型**）就是干预模型的自然延伸。在 ADL 模型中，$z_t$ 可以是随机的外生变量序列.在上面的模型的基础上当我们忽略$B(L)$（设$B(L)=1$）时，就得到**自回归分布滞后（ADL）模型**：
+> **[[ADL|自回归分布滞后模型]]**（[[ADL|Autoregressive Distributed Lag Model]], 简称 **[[ADL|ADL]] 模型**）就是干预模型的自然延伸。在 [[ADL|ADL]] 模型中，$z_t$ 可以是随机的外生变量序列.在上面的模型的基础上当我们忽略$B(L)$（设$B(L)=1$）时，就得到**自回归分布滞后（[[ADL|ADL]]）模型**：
 $$y_t = a_0 + A(L)y_{t-1} + C(L) z_t + \varepsilon_t$$
 
 • $C(L)$ 被称为**传递函数**（transfer function），因为它描述了外生变量$z_t$的变动如何通过不同滞后传递到内生变量$y_t$上。例如，如果 $C(L) = c_0 + c_1L + c_2L^2$，说明$z_t$对$y_t$有当期效应$c_0$，对下一期$y$有滞后一阶效应$c_1$，对再下一期有滞后两期效应$c_2$，以此类推。
 
 • $C(L)$ 多项式的系数${c_i}$称为**传递函数权重**。它们刻画了$z$的一个单位变化对$y$在不同滞后期的影响强度。
 
-• 由于$z_t$影响被分布在多个时滞上，因此此类模型也常被称为“**分布滞后模型**”。
+• 由于$z_t$影响被分布在多个时滞上，因此此类模型也常被称为“**[[Distributed Lag Model|分布滞后模型]]**”。
 
 >[!note] leading indicator
 >在传递函数$C(L)$中，**$c_0$系数的重要性**值得注意：
@@ -126,10 +126,10 @@ $$y_t = a_0 + A(L)y_{t-1} + C(L) z_t + \varepsilon_t$$
 
 ## 3.2 ADL的模型性质
 
-考虑一个简单情形来探究ADL模型的统计性质和如何识别滞后效应：**AR(1)过程 + 延迟$d$期的单一滞后效应**。具体模型：
+考虑一个简单情形来探究ADL模型的统计性质和如何识别滞后效应：**[[AR(1) stationarity|AR]](1)过程 + 延迟$d$期的单一滞后效应**。具体模型：
 
 $$
-y_t = a_1 y_{t-1} + c_d z_{t-d} + \varepsilon_t, \tag{ADL(1, d)}
+y_t = a_1 y_{t-1} + c_d z_{t-d} + \varepsilon_t, \tag{[[ADL|ADL]](1, d)}
 $$
 
 其中 $z_t$ 是外生的白噪声过程（均值0，方差$\sigma_z^2$），$\varepsilon_t$是白噪声误差（与$z_t$独立），$d \ge 0$为整数，表示$z$对$y$影响的延迟长度。
@@ -243,8 +243,8 @@ $$
 ## 4.1 VAR定义
 
 ==是用来处理内生性问题的工具==
->[!note] VAR
-> 考虑一个二元系统（bivariate VAR）：
+>[!note] [[VAR Model|VAR]]
+> 考虑一个二元系统（bivariate [[VAR Model|VAR]]）：
 > $$
 > \begin{aligned}
 > y_t &= b_{10} - b_{12} z_t + \gamma_{11} y_{t-1} + \gamma_{12} z_{t-1} + \varepsilon_{yt}  \\
@@ -284,11 +284,11 @@ $$
 使用迭代法得到:$x_t = \left( I + A_1 + A_1^2 + \dots + A_1^n \right) A_0 + \sum_{i=0}^n A_1^i e_{t-i} + A_1^{n+1} x_{t-n-1}$.
 
 >[!note] VAR的稳定性
->要让 VAR 模型在长期不爆炸（即收敛），我们要求：
+>要让 [[VAR Model|VAR]] 模型在长期不爆炸（即收敛），我们要求：
 > 
 > $\boxed{ \lim_{n \to \infty} A_1^n = 0 } \Rightarrow \text{所有特征值（eigenvalues）都在单位圆内}$
 > 
-> 对二维 VAR，稳定性等价于这个多项式的根都在单位圆外：
+> 对二维 [[VAR Model|VAR]]，稳定性等价于这个多项式的根都在单位圆外：
 > 
 > $I - A_1 L = \begin{bmatrix} 1 - a_{11}L & -a_{12}L \\ -a_{21}L & 1 - a_{22}L \end{bmatrix}$
 > 
@@ -317,12 +317,12 @@ $$
 > $\begin{aligned} \text{Cov}(x_t) &= \mathbb{E}[(x_t - \mu)(x_t - \mu)’] = \sum_{i=0}^{\infty} A_1^i \Sigma (A_1^i)’ \\ &= \boxed{ (I - A_1)^{-1} \Sigma [(I - A_1)^{-1}]’ } \end{aligned}$
 > 这里 $\Sigma = \text{Cov}(e_t)$，即 reduced form 误差的协方差矩阵。
 
-## 4.3 VAR 的估计
+## 4.3 [[VAR Model|VAR]] 的估计
 
 <span style="color: yellow;">简约的VAR可以使用OLS估计,但是简约的VAR不能反推结构化VAR.</span>
 
 >[!note] Cholesky 识别法
->我们前面提到过：Reduced-form VAR $x_t = A_0 + A_1 x_{t-1} + e_t$ 只有 9 个估计量（如果二维系统），而结构系统（SVAR）有 10 个参数 ⇒ **未识别（under-identified）**
+>我们前面提到过：[[Reduced Form Equation|Reduced]]-form [[VAR Model|VAR]] $x_t = A_0 + A_1 x_{t-1} + e_t$ 只有 9 个估计量（如果二维系统），而结构系统（SVAR）有 10 个参数 ⇒ **未识别（under-identified）**
 > 假设第一个变量对第二个变量有即时影响，但反过来没有：
 >$B = \begin{bmatrix} 1 & b_{12} \\ 0 & 1 \end{bmatrix}$
 > $$
@@ -353,7 +353,7 @@ $$
 \mathbf{x}_t = \mu + \sum_{i=0}^{\infty} \Psi(i)\varepsilon_{t-i}，
 $$
 
-这就是使用**结构冲击**的VMA表示。矩阵$\Psi(i)$的元素 $\psi_{jk}(i)$ 就表示**第$k$个结构冲击在滞后$i$期对第$j$个变量的影响**。这组${\psi_{jk}(i)}$就是VAR的**冲击响应函数**(Impulse Response Functions)。对于二维例子：
+这就是使用**结构冲击**的VMA表示。矩阵$\Psi(i)$的元素 $\psi_{jk}(i)$ 就表示**第$k$个结构冲击在滞后$i$期对第$j$个变量的影响**。这组${\psi_{jk}(i)}$就是VAR的**冲击响应函数**([[Impulse Response Function|Impulse]] Response Functions)。对于二维例子：
 
 • $\psi_{11}(i)$：$y$对自身冲击$\varepsilon^y$在$i$期后的响应，
 • $\psi_{12}(i)$：$y$对$z$的冲击$\varepsilon^z$在$i$期后的响应，
@@ -364,10 +364,10 @@ $$
 
 ==必须知道结构VAR才能进行脉冲响应分析==
 
-## 4.5 格兰杰因果检验
+## 4.5 [[Granger Causality Test|格兰杰因果检验]]
 
 >[!note] 格兰杰因果
->形式定义为：若包含变量 $X$ 的过去信息能够提高对变量 $Y$ 未来的预测，那么称 $X$ Granger成因于（Granger-cause） $Y$。数学表述为，对于任意事件集 $A$，
+>形式定义为：若包含变量 $X$ 的过去信息能够提高对变量 $Y$ 未来的预测，那么称 $X$ Granger成因于（[[Granger Causality Test|Granger]]-cause） $Y$。数学表述为，对于任意事件集 $A$，
 > 
 > $$
 > P\{Y_{t+1}\in A \mid \mathcal{F}_t\} \neq P\{Y_{t+1}\in A \mid \mathcal{F}_{-X,t}\}

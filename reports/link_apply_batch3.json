@@ -1,0 +1,3652 @@
+{
+  "mode": "apply",
+  "matching_level": "medium",
+  "conflict_policy": "prefer-concept",
+  "cards_indexed": 442,
+  "unique_terms": 1409,
+  "conflict_terms": 85,
+  "stats": {
+    "files_scanned": 39,
+    "skip_wikilink": 1212,
+    "match_hits": 406,
+    "files_with_replacements": 31,
+    "actual_replacements": 406
+  },
+  "top_terms": [
+    [
+      "Delta",
+      73
+    ],
+    [
+      "Matrix",
+      57
+    ],
+    [
+      "Hotelling",
+      27
+    ],
+    [
+      "Variance",
+      19
+    ],
+    [
+      "ARMA",
+      17
+    ],
+    [
+      "Correlation",
+      13
+    ],
+    [
+      "Confidence",
+      13
+    ],
+    [
+      "ARCH",
+      12
+    ],
+    [
+      "Random",
+      11
+    ],
+    [
+      "Determinant",
+      10
+    ],
+    [
+      "Nash",
+      9
+    ],
+    [
+      "Multivariate",
+      7
+    ],
+    [
+      "Linear",
+      7
+    ],
+    [
+      "Eigenvalues",
+      7
+    ],
+    [
+      "MLE",
+      7
+    ],
+    [
+      "GARCH",
+      7
+    ],
+    [
+      "Bayesian",
+      6
+    ],
+    [
+      "Granger",
+      6
+    ],
+    [
+      "博弈论",
+      4
+    ],
+    [
+      "Gamma",
+      4
+    ],
+    [
+      "Likelihood",
+      4
+    ],
+    [
+      "Population",
+      4
+    ],
+    [
+      "Simultaneous",
+      4
+    ],
+    [
+      "OLS",
+      4
+    ],
+    [
+      "Principal",
+      4
+    ],
+    [
+      "Eigenvectors",
+      3
+    ],
+    [
+      "Wishart",
+      3
+    ],
+    [
+      "导数",
+      3
+    ],
+    [
+      "Component",
+      3
+    ],
+    [
+      "Perfect",
+      2
+    ],
+    [
+      "Cournot",
+      2
+    ],
+    [
+      "Extensive",
+      2
+    ],
+    [
+      "Lewis",
+      2
+    ],
+    [
+      "Backward",
+      2
+    ],
+    [
+      "Information",
+      2
+    ],
+    [
+      "Positive",
+      2
+    ],
+    [
+      "Conditional",
+      2
+    ],
+    [
+      "Error",
+      2
+    ],
+    [
+      "Autocorrelation",
+      2
+    ],
+    [
+      "Difference",
+      2
+    ],
+    [
+      "Impulse",
+      2
+    ],
+    [
+      "ADF",
+      2
+    ],
+    [
+      "Johansen",
+      2
+    ],
+    [
+      "Engle",
+      2
+    ],
+    [
+      "derivative",
+      1
+    ],
+    [
+      "geometric",
+      1
+    ],
+    [
+      "Integral",
+      1
+    ],
+    [
+      "Column",
+      1
+    ],
+    [
+      "Game Theory",
+      1
+    ],
+    [
+      "Price",
+      1
+    ],
+    [
+      "Rationalisability",
+      1
+    ],
+    [
+      "Bertrand",
+      1
+    ],
+    [
+      "payoffs",
+      1
+    ],
+    [
+      "Subgame",
+      1
+    ],
+    [
+      "Spectral",
+      1
+    ],
+    [
+      "Asymptotic",
+      1
+    ],
+    [
+      "Parameter",
+      1
+    ],
+    [
+      "Residual",
+      1
+    ],
+    [
+      "Marginal",
+      1
+    ],
+    [
+      "Stationary",
+      1
+    ],
+    [
+      "Ergodicity",
+      1
+    ],
+    [
+      "Strict",
+      1
+    ],
+    [
+      "Martingale",
+      1
+    ],
+    [
+      "Convergence",
+      1
+    ],
+    [
+      "Limit",
+      1
+    ],
+    [
+      "Stochastic",
+      1
+    ],
+    [
+      "Partial",
+      1
+    ],
+    [
+      "Durbin",
+      1
+    ],
+    [
+      "Volatility",
+      1
+    ],
+    [
+      "Exponential",
+      1
+    ],
+    [
+      "Distributed",
+      1
+    ],
+    [
+      "Reduced",
+      1
+    ]
+  ],
+  "top_files": [
+    [
+      "01_Math/04_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
+      58
+    ],
+    [
+      "01_Math/04_多元统计分析/05_ 总体平均向量的推论.md",
+      58
+    ],
+    [
+      "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
+      53
+    ],
+    [
+      "01_Math/06_时间序列分析/03_平稳时间序列模型.md",
+      26
+    ],
+    [
+      "01_Math/04_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
+      25
+    ],
+    [
+      "01_Math/06_时间序列分析/07_协整和误差修正模型.md",
+      23
+    ],
+    [
+      "01_Math/03_game theory/03_策略式博弈.md",
+      21
+    ],
+    [
+      "01_Math/06_时间序列分析/04_波动建模 Modeling Volatility.md",
+      19
+    ],
+    [
+      "01_Math/04_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md",
+      16
+    ],
+    [
+      "01_Math/06_时间序列分析/02_差分方程Difference Equation.md",
+      16
+    ],
+    [
+      "01_Math/05_随机过程/05_连续时间的马尔可夫链.md",
+      13
+    ],
+    [
+      "01_Math/03_game theory/06_扩展性博弈.md",
+      10
+    ],
+    [
+      "01_Math/06_时间序列分析/06_含趋势的模型.md",
+      9
+    ],
+    [
+      "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md",
+      8
+    ],
+    [
+      "01_Math/06_时间序列分析/00_导论与概率论复习.md",
+      7
+    ],
+    [
+      "01_Math/05_随机过程/06_平稳随机过程.md",
+      6
+    ],
+    [
+      "01_Math/03_game theory/01_导论.md",
+      5
+    ],
+    [
+      "01_Math/03_game theory/05_贝叶斯博弈.md",
+      5
+    ],
+    [
+      "01_Math/06_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
+      5
+    ],
+    [
+      "01_Math/04_多元统计分析/08_主成分分析principal component.md",
+      4
+    ],
+    [
+      "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
+      3
+    ],
+    [
+      "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md",
+      3
+    ],
+    [
+      "01_Math/03_game theory/07_子博弈不完全信息.md",
+      3
+    ],
+    [
+      "01_Math/04_多元统计分析/01_introduction简介.md",
+      2
+    ],
+    [
+      "01_Math/05_随机过程/02_随机过程的概念和分类.md",
+      2
+    ],
+    [
+      "01_Math/03_game theory/02_初步认识博弈.md",
+      1
+    ],
+    [
+      "01_Math/04_多元统计分析/07_多元线性回归multivariate linear regression.md",
+      1
+    ],
+    [
+      "01_Math/04_多元统计分析/09_因子分析Factor Analysis and Inference for Structured.md",
+      1
+    ],
+    [
+      "01_Math/05_随机过程/00_随机考点.md",
+      1
+    ],
+    [
+      "01_Math/05_随机过程/01_预备知识.md",
+      1
+    ],
+    [
+      "01_Math/05_随机过程/03_泊松过程.md",
+      1
+    ]
+  ],
+  "per_file_replacements": {
+    "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md": [
+      {
+        "source": "derivative",
+        "target": "derivative"
+      },
+      {
+        "source": "geometric",
+        "target": "geometric interpretation of derivative"
+      },
+      {
+        "source": "Integral",
+        "target": "Integral"
+      }
+    ],
+    "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md": [
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Column",
+        "target": "Column Space"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      }
+    ],
+    "01_Math/03_game theory/01_导论.md": [
+      {
+        "source": "博弈论",
+        "target": "Game Theory"
+      },
+      {
+        "source": "Game Theory",
+        "target": "Game Theory"
+      },
+      {
+        "source": "Perfect",
+        "target": "Perfect Bayesian Equilibrium"
+      },
+      {
+        "source": "Cournot",
+        "target": "Cournot Competition"
+      },
+      {
+        "source": "Price",
+        "target": "Price-to-Book Ratio"
+      }
+    ],
+    "01_Math/03_game theory/02_初步认识博弈.md": [
+      {
+        "source": "Extensive",
+        "target": "Extensive-form Game"
+      }
+    ],
+    "01_Math/03_game theory/03_策略式博弈.md": [
+      {
+        "source": "Nash",
+        "target": "Nash Equilibrium"
+      },
+      {
+        "source": "Nash",
+        "target": "Nash Equilibrium"
+      },
+      {
+        "source": "Nash",
+        "target": "Nash Equilibrium"
+      },
+      {
+        "source": "Lewis",
+        "target": "Lewis Dual Sector Model"
+      },
+      {
+        "source": "Lewis",
+        "target": "Lewis Dual Sector Model"
+      },
+      {
+        "source": "Nash",
+        "target": "Nash Equilibrium"
+      },
+      {
+        "source": "Rationalisability",
+        "target": "Rationalisability"
+      },
+      {
+        "source": "Nash",
+        "target": "Nash Equilibrium"
+      },
+      {
+        "source": "Gamma",
+        "target": "Gamma"
+      },
+      {
+        "source": "Gamma",
+        "target": "Gamma"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Nash",
+        "target": "Nash Equilibrium"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Nash",
+        "target": "Nash Equilibrium"
+      }
+    ],
+    "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md": [
+      {
+        "source": "Cournot",
+        "target": "Cournot Competition"
+      },
+      {
+        "source": "Bertrand",
+        "target": "Bertrand Competition"
+      },
+      {
+        "source": "博弈论",
+        "target": "Game Theory"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      }
+    ],
+    "01_Math/03_game theory/05_贝叶斯博弈.md": [
+      {
+        "source": "Bayesian",
+        "target": "Bayesian Game"
+      },
+      {
+        "source": "Bayesian",
+        "target": "Bayesian Game"
+      },
+      {
+        "source": "Bayesian",
+        "target": "Bayesian Game"
+      },
+      {
+        "source": "Bayesian",
+        "target": "Bayesian Game"
+      },
+      {
+        "source": "Nash",
+        "target": "Nash Equilibrium"
+      }
+    ],
+    "01_Math/03_game theory/06_扩展性博弈.md": [
+      {
+        "source": "payoffs",
+        "target": "payoffs"
+      },
+      {
+        "source": "Gamma",
+        "target": "Gamma"
+      },
+      {
+        "source": "Backward",
+        "target": "Backward Induction"
+      },
+      {
+        "source": "Information",
+        "target": "Information Set"
+      },
+      {
+        "source": "博弈论",
+        "target": "Game Theory"
+      },
+      {
+        "source": "博弈论",
+        "target": "Game Theory"
+      },
+      {
+        "source": "Extensive",
+        "target": "Extensive-form Game"
+      },
+      {
+        "source": "Information",
+        "target": "Information Set"
+      },
+      {
+        "source": "Subgame",
+        "target": "Subgame"
+      },
+      {
+        "source": "Nash",
+        "target": "Nash Equilibrium"
+      }
+    ],
+    "01_Math/03_game theory/07_子博弈不完全信息.md": [
+      {
+        "source": "Perfect",
+        "target": "Perfect Bayesian Equilibrium"
+      },
+      {
+        "source": "Bayesian",
+        "target": "Bayesian Game"
+      },
+      {
+        "source": "Bayesian",
+        "target": "Bayesian Game"
+      }
+    ],
+    "01_Math/04_多元统计分析/01_introduction简介.md": [
+      {
+        "source": "Multivariate",
+        "target": "Multivariate Normal Distribution"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      }
+    ],
+    "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md": [
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Random",
+        "target": "Random Effects Model"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Linear",
+        "target": "Linear Combination"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Determinant",
+        "target": "Determinant"
+      },
+      {
+        "source": "Determinant",
+        "target": "Determinant"
+      },
+      {
+        "source": "Determinant",
+        "target": "Determinant"
+      },
+      {
+        "source": "Eigenvalues",
+        "target": "Eigenvalues"
+      },
+      {
+        "source": "Eigenvectors",
+        "target": "Eigenvectors"
+      },
+      {
+        "source": "Spectral",
+        "target": "Spectral Decomposition"
+      },
+      {
+        "source": "Determinant",
+        "target": "Determinant"
+      },
+      {
+        "source": "Eigenvalues",
+        "target": "Eigenvalues"
+      },
+      {
+        "source": "Positive",
+        "target": "Positive Definite Matrix"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Random",
+        "target": "Random Effects Model"
+      },
+      {
+        "source": "Random",
+        "target": "Random Effects Model"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Linear",
+        "target": "Linear Combination"
+      },
+      {
+        "source": "Random",
+        "target": "Random Effects Model"
+      },
+      {
+        "source": "Correlation",
+        "target": "Correlation Coefficient"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Eigenvalues",
+        "target": "Eigenvalues"
+      },
+      {
+        "source": "Eigenvectors",
+        "target": "Eigenvectors"
+      },
+      {
+        "source": "Positive",
+        "target": "Positive Definite Matrix"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Random",
+        "target": "Random Effects Model"
+      },
+      {
+        "source": "Random",
+        "target": "Random Effects Model"
+      },
+      {
+        "source": "Random",
+        "target": "Random Effects Model"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Linear",
+        "target": "Linear Combination"
+      },
+      {
+        "source": "Random",
+        "target": "Random Effects Model"
+      },
+      {
+        "source": "Correlation",
+        "target": "Correlation Coefficient"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Correlation",
+        "target": "Correlation Coefficient"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      }
+    ],
+    "01_Math/04_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md": [
+      {
+        "source": "Random",
+        "target": "Random Effects Model"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Random",
+        "target": "Random Effects Model"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Determinant",
+        "target": "Determinant"
+      },
+      {
+        "source": "Eigenvalues",
+        "target": "Eigenvalues"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Correlation",
+        "target": "Correlation Coefficient"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Correlation",
+        "target": "Correlation Coefficient"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Correlation",
+        "target": "Correlation Coefficient"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Random",
+        "target": "Random Effects Model"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Determinant",
+        "target": "Determinant"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Determinant",
+        "target": "Determinant"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Determinant",
+        "target": "Determinant"
+      },
+      {
+        "source": "Eigenvalues",
+        "target": "Eigenvalues"
+      },
+      {
+        "source": "Determinant",
+        "target": "Determinant"
+      },
+      {
+        "source": "Eigenvalues",
+        "target": "Eigenvalues"
+      },
+      {
+        "source": "Correlation",
+        "target": "Correlation Coefficient"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Correlation",
+        "target": "Correlation Coefficient"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Correlation",
+        "target": "Correlation Coefficient"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Correlation",
+        "target": "Correlation Coefficient"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Correlation",
+        "target": "Correlation Coefficient"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Correlation",
+        "target": "Correlation Coefficient"
+      }
+    ],
+    "01_Math/04_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md": [
+      {
+        "source": "Multivariate",
+        "target": "Multivariate Normal Distribution"
+      },
+      {
+        "source": "Linear",
+        "target": "Linear Combination"
+      },
+      {
+        "source": "Conditional",
+        "target": "Conditional Heteroskedasticity"
+      },
+      {
+        "source": "Multivariate",
+        "target": "Multivariate Normal Distribution"
+      },
+      {
+        "source": "Linear",
+        "target": "Linear Combination"
+      },
+      {
+        "source": "Multivariate",
+        "target": "Multivariate Normal Distribution"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Determinant",
+        "target": "Determinant"
+      },
+      {
+        "source": "Eigenvectors",
+        "target": "Eigenvectors"
+      },
+      {
+        "source": "Eigenvalues",
+        "target": "Eigenvalues"
+      },
+      {
+        "source": "Linear",
+        "target": "Linear Combination"
+      },
+      {
+        "source": "Conditional",
+        "target": "Conditional Heteroskedasticity"
+      },
+      {
+        "source": "Multivariate",
+        "target": "Multivariate Normal Distribution"
+      },
+      {
+        "source": "Likelihood",
+        "target": "Likelihood Ratio Test"
+      },
+      {
+        "source": "MLE",
+        "target": "Maximum Likelihood Estimation"
+      },
+      {
+        "source": "MLE",
+        "target": "Maximum Likelihood Estimation"
+      },
+      {
+        "source": "MLE",
+        "target": "Maximum Likelihood Estimation"
+      },
+      {
+        "source": "MLE",
+        "target": "Maximum Likelihood Estimation"
+      },
+      {
+        "source": "MLE",
+        "target": "Maximum Likelihood Estimation"
+      },
+      {
+        "source": "Wishart",
+        "target": "Wishart Distribution"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Asymptotic",
+        "target": "Asymptotic Theory"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Multivariate",
+        "target": "Multivariate Normal Distribution"
+      }
+    ],
+    "01_Math/04_多元统计分析/05_ 总体平均向量的推论.md": [
+      {
+        "source": "Population",
+        "target": "Population Growth and Economic Development"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Confidence",
+        "target": "Confidence Level"
+      },
+      {
+        "source": "Confidence",
+        "target": "Confidence Level"
+      },
+      {
+        "source": "Simultaneous",
+        "target": "Simultaneous Equations Model"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Likelihood",
+        "target": "Likelihood Ratio Test"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Likelihood",
+        "target": "Likelihood Ratio Test"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Wishart",
+        "target": "Wishart Distribution"
+      },
+      {
+        "source": "Wishart",
+        "target": "Wishart Distribution"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Likelihood",
+        "target": "Likelihood Ratio Test"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Confidence",
+        "target": "Confidence Level"
+      },
+      {
+        "source": "Confidence",
+        "target": "Confidence Level"
+      },
+      {
+        "source": "Confidence",
+        "target": "Confidence Level"
+      },
+      {
+        "source": "Parameter",
+        "target": "Parameter Identification"
+      },
+      {
+        "source": "Confidence",
+        "target": "Confidence Level"
+      },
+      {
+        "source": "Simultaneous",
+        "target": "Simultaneous Equations Model"
+      },
+      {
+        "source": "Confidence",
+        "target": "Confidence Level"
+      },
+      {
+        "source": "Confidence",
+        "target": "Confidence Level"
+      },
+      {
+        "source": "Confidence",
+        "target": "Confidence Level"
+      },
+      {
+        "source": "Linear",
+        "target": "Linear Combination"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Simultaneous",
+        "target": "Simultaneous Equations Model"
+      },
+      {
+        "source": "Confidence",
+        "target": "Confidence Level"
+      },
+      {
+        "source": "Confidence",
+        "target": "Confidence Level"
+      },
+      {
+        "source": "Error",
+        "target": "Error Correction Model"
+      },
+      {
+        "source": "Simultaneous",
+        "target": "Simultaneous Equations Model"
+      },
+      {
+        "source": "Confidence",
+        "target": "Confidence Level"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      }
+    ],
+    "01_Math/04_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md": [
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Confidence",
+        "target": "Confidence Level"
+      },
+      {
+        "source": "Population",
+        "target": "Population Growth and Economic Development"
+      },
+      {
+        "source": "Population",
+        "target": "Population Growth and Economic Development"
+      },
+      {
+        "source": "Matrix",
+        "target": "Matrix Inverse"
+      },
+      {
+        "source": "Hotelling",
+        "target": "Hotelling Model"
+      },
+      {
+        "source": "Multivariate",
+        "target": "Multivariate Normal Distribution"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Residual",
+        "target": "Residual"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      }
+    ],
+    "01_Math/04_多元统计分析/07_多元线性回归multivariate linear regression.md": [
+      {
+        "source": "OLS",
+        "target": "OLS Basics"
+      }
+    ],
+    "01_Math/04_多元统计分析/08_主成分分析principal component.md": [
+      {
+        "source": "Principal",
+        "target": "Principal-Agent Problem"
+      },
+      {
+        "source": "Population",
+        "target": "Population Growth and Economic Development"
+      },
+      {
+        "source": "Principal",
+        "target": "Principal-Agent Problem"
+      },
+      {
+        "source": "Principal",
+        "target": "Principal-Agent Problem"
+      }
+    ],
+    "01_Math/04_多元统计分析/09_因子分析Factor Analysis and Inference for Structured.md": [
+      {
+        "source": "Principal",
+        "target": "Principal-Agent Problem"
+      }
+    ],
+    "01_Math/05_随机过程/00_随机考点.md": [
+      {
+        "source": "导数",
+        "target": "derivative"
+      }
+    ],
+    "01_Math/05_随机过程/01_预备知识.md": [
+      {
+        "source": "Marginal",
+        "target": "Marginal Revolution"
+      }
+    ],
+    "01_Math/05_随机过程/02_随机过程的概念和分类.md": [
+      {
+        "source": "Variance",
+        "target": "Variance Decomposition"
+      },
+      {
+        "source": "Correlation",
+        "target": "Correlation Coefficient"
+      }
+    ],
+    "01_Math/05_随机过程/03_泊松过程.md": [
+      {
+        "source": "Gamma",
+        "target": "Gamma"
+      }
+    ],
+    "01_Math/05_随机过程/05_连续时间的马尔可夫链.md": [
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Backward",
+        "target": "Backward Induction"
+      }
+    ],
+    "01_Math/05_随机过程/06_平稳随机过程.md": [
+      {
+        "source": "Stationary",
+        "target": "Stationary Distribution"
+      },
+      {
+        "source": "Autocorrelation",
+        "target": "Autocorrelation"
+      },
+      {
+        "source": "Ergodicity",
+        "target": "Ergodicity"
+      },
+      {
+        "source": "Strict",
+        "target": "Strict-Sense Stationary Process"
+      },
+      {
+        "source": "导数",
+        "target": "derivative"
+      },
+      {
+        "source": "导数",
+        "target": "derivative"
+      }
+    ],
+    "01_Math/06_时间序列分析/00_导论与概率论复习.md": [
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "ARCH",
+        "target": "ARCH"
+      },
+      {
+        "source": "GARCH",
+        "target": "GARCH"
+      },
+      {
+        "source": "Martingale",
+        "target": "Martingale Difference Sequence"
+      },
+      {
+        "source": "Convergence",
+        "target": "Convergence in Probability"
+      },
+      {
+        "source": "Limit",
+        "target": "Limit"
+      },
+      {
+        "source": "OLS",
+        "target": "OLS Basics"
+      }
+    ],
+    "01_Math/06_时间序列分析/02_差分方程Difference Equation.md": [
+      {
+        "source": "Difference",
+        "target": "Difference Equation"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Component",
+        "target": "Component VaR"
+      },
+      {
+        "source": "Component",
+        "target": "Component VaR"
+      },
+      {
+        "source": "Component",
+        "target": "Component VaR"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Difference",
+        "target": "Difference Equation"
+      },
+      {
+        "source": "Stochastic",
+        "target": "Stochastic Processes Overview"
+      }
+    ],
+    "01_Math/06_时间序列分析/03_平稳时间序列模型.md": [
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "ARCH",
+        "target": "ARCH"
+      },
+      {
+        "source": "Autocorrelation",
+        "target": "Autocorrelation"
+      },
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "Partial",
+        "target": "Partial Autocorrelation Function"
+      },
+      {
+        "source": "Durbin",
+        "target": "Durbin-Watson Statistic"
+      },
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "OLS",
+        "target": "OLS Basics"
+      },
+      {
+        "source": "OLS",
+        "target": "OLS Basics"
+      },
+      {
+        "source": "MLE",
+        "target": "Maximum Likelihood Estimation"
+      },
+      {
+        "source": "MLE",
+        "target": "Maximum Likelihood Estimation"
+      },
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "Error",
+        "target": "Error Correction Model"
+      },
+      {
+        "source": "Granger",
+        "target": "Granger Causality Test"
+      },
+      {
+        "source": "Granger",
+        "target": "Granger Causality Test"
+      }
+    ],
+    "01_Math/06_时间序列分析/04_波动建模 Modeling Volatility.md": [
+      {
+        "source": "ARCH",
+        "target": "ARCH"
+      },
+      {
+        "source": "GARCH",
+        "target": "GARCH"
+      },
+      {
+        "source": "Volatility",
+        "target": "Volatility Clustering"
+      },
+      {
+        "source": "ARCH",
+        "target": "ARCH"
+      },
+      {
+        "source": "GARCH",
+        "target": "GARCH"
+      },
+      {
+        "source": "ARCH",
+        "target": "ARCH"
+      },
+      {
+        "source": "GARCH",
+        "target": "GARCH"
+      },
+      {
+        "source": "ARCH",
+        "target": "ARCH"
+      },
+      {
+        "source": "GARCH",
+        "target": "GARCH"
+      },
+      {
+        "source": "ARCH",
+        "target": "ARCH"
+      },
+      {
+        "source": "ARMA",
+        "target": "ARMA"
+      },
+      {
+        "source": "ARCH",
+        "target": "ARCH"
+      },
+      {
+        "source": "ARCH",
+        "target": "ARCH"
+      },
+      {
+        "source": "ARCH",
+        "target": "ARCH"
+      },
+      {
+        "source": "ARCH",
+        "target": "ARCH"
+      },
+      {
+        "source": "ARCH",
+        "target": "ARCH"
+      },
+      {
+        "source": "GARCH",
+        "target": "GARCH"
+      },
+      {
+        "source": "Exponential",
+        "target": "Exponential Distribution"
+      },
+      {
+        "source": "GARCH",
+        "target": "GARCH"
+      }
+    ],
+    "01_Math/06_时间序列分析/05_多方程模型Multi-equation Time Series Models.md": [
+      {
+        "source": "Impulse",
+        "target": "Impulse Response Function"
+      },
+      {
+        "source": "Distributed",
+        "target": "Distributed Lag Model"
+      },
+      {
+        "source": "Reduced",
+        "target": "Reduced Form Equation"
+      },
+      {
+        "source": "Impulse",
+        "target": "Impulse Response Function"
+      },
+      {
+        "source": "Granger",
+        "target": "Granger Causality Test"
+      }
+    ],
+    "01_Math/06_时间序列分析/06_含趋势的模型.md": [
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "ADF",
+        "target": "Augmented Dickey-Fuller Test"
+      },
+      {
+        "source": "ADF",
+        "target": "Augmented Dickey-Fuller Test"
+      }
+    ],
+    "01_Math/06_时间序列分析/07_协整和误差修正模型.md": [
+      {
+        "source": "Johansen",
+        "target": "Johansen Cointegration Test"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Engle",
+        "target": "Engle-Granger Two-Step Test"
+      },
+      {
+        "source": "Granger",
+        "target": "Granger Causality Test"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Granger",
+        "target": "Granger Causality Test"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Engle",
+        "target": "Engle-Granger Two-Step Test"
+      },
+      {
+        "source": "Granger",
+        "target": "Granger Causality Test"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Johansen",
+        "target": "Johansen Cointegration Test"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      },
+      {
+        "source": "Delta",
+        "target": "Delta"
+      }
+    ]
+  },
+  "conflicts": {
+    "DID": {
+      "candidates": [
+        {
+          "card_name": "DID",
+          "card_type": "concept",
+          "path": "00_factor/concept/DID.md"
+        },
+        {
+          "card_name": "DID Diagnostics",
+          "card_type": "system",
+          "path": "00_factor/system/DID Diagnostics.md"
+        },
+        {
+          "card_name": "DID Estimation Steps",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/DID Estimation Steps.md"
+        },
+        {
+          "card_name": "DID Framework",
+          "card_type": "framework",
+          "path": "00_factor/framework/DID Framework.md"
+        },
+        {
+          "card_name": "DID Identification Proof",
+          "card_type": "proof",
+          "path": "00_factor/proof/DID Identification Proof.md"
+        },
+        {
+          "card_name": "DID Writing Template",
+          "card_type": "writing",
+          "path": "00_factor/writing/DID Writing Template.md"
+        },
+        {
+          "card_name": "DID-hub",
+          "card_type": "00_hub",
+          "path": "00_factor/00_hub/DID-hub.md"
+        }
+      ],
+      "selected": "DID",
+      "reason": "conflict-prefer-rank"
+    },
+    "Growth": {
+      "candidates": [
+        {
+          "card_name": "Growth Theory",
+          "card_type": "framework",
+          "path": "00_factor/framework/Growth Theory.md"
+        },
+        {
+          "card_name": "Growth Theory-hub",
+          "card_type": "00_hub",
+          "path": "00_factor/00_hub/Growth Theory-hub.md"
+        }
+      ],
+      "selected": "Growth Theory",
+      "reason": "conflict-prefer-rank"
+    },
+    "经济增长理论": {
+      "candidates": [
+        {
+          "card_name": "Growth Theory",
+          "card_type": "framework",
+          "path": "00_factor/framework/Growth Theory.md"
+        },
+        {
+          "card_name": "Growth Theory-hub",
+          "card_type": "00_hub",
+          "path": "00_factor/00_hub/Growth Theory-hub.md"
+        }
+      ],
+      "selected": "Growth Theory",
+      "reason": "conflict-prefer-rank"
+    },
+    "增长理论": {
+      "candidates": [
+        {
+          "card_name": "Growth Theory",
+          "card_type": "framework",
+          "path": "00_factor/framework/Growth Theory.md"
+        },
+        {
+          "card_name": "Growth Theory-hub",
+          "card_type": "00_hub",
+          "path": "00_factor/00_hub/Growth Theory-hub.md"
+        }
+      ],
+      "selected": "Growth Theory",
+      "reason": "conflict-prefer-rank"
+    },
+    "Growth Theory": {
+      "candidates": [
+        {
+          "card_name": "Growth Theory",
+          "card_type": "framework",
+          "path": "00_factor/framework/Growth Theory.md"
+        },
+        {
+          "card_name": "Growth Theory-hub",
+          "card_type": "00_hub",
+          "path": "00_factor/00_hub/Growth Theory-hub.md"
+        }
+      ],
+      "selected": "Growth Theory",
+      "reason": "conflict-prefer-rank"
+    },
+    "双重差分": {
+      "candidates": [
+        {
+          "card_name": "DID",
+          "card_type": "concept",
+          "path": "00_factor/concept/DID.md"
+        },
+        {
+          "card_name": "DID-hub",
+          "card_type": "00_hub",
+          "path": "00_factor/00_hub/DID-hub.md"
+        }
+      ],
+      "selected": "DID",
+      "reason": "conflict-prefer-rank"
+    },
+    "差分中的差分": {
+      "candidates": [
+        {
+          "card_name": "DID",
+          "card_type": "concept",
+          "path": "00_factor/concept/DID.md"
+        },
+        {
+          "card_name": "DID-hub",
+          "card_type": "00_hub",
+          "path": "00_factor/00_hub/DID-hub.md"
+        }
+      ],
+      "selected": "DID",
+      "reason": "conflict-prefer-rank"
+    },
+    "Difference-in-Differences": {
+      "candidates": [
+        {
+          "card_name": "DID",
+          "card_type": "concept",
+          "path": "00_factor/concept/DID.md"
+        },
+        {
+          "card_name": "DID-hub",
+          "card_type": "00_hub",
+          "path": "00_factor/00_hub/DID-hub.md"
+        }
+      ],
+      "selected": "DID",
+      "reason": "conflict-prefer-rank"
+    },
+    "Financial": {
+      "candidates": [
+        {
+          "card_name": "Financial Management-hub",
+          "card_type": "00_hub",
+          "path": "00_factor/00_hub/Financial Management-hub.md"
+        },
+        {
+          "card_name": "Financial Ratio Analysis",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/Financial Ratio Analysis.md"
+        }
+      ],
+      "selected": "Financial Ratio Analysis",
+      "reason": "conflict-prefer-rank"
+    },
+    "博弈论": {
+      "candidates": [
+        {
+          "card_name": "Game Theory",
+          "card_type": "framework",
+          "path": "00_factor/framework/Game Theory.md"
+        },
+        {
+          "card_name": "Game Theory-hub",
+          "card_type": "00_hub",
+          "path": "00_factor/00_hub/Game Theory-hub.md"
+        }
+      ],
+      "selected": "Game Theory",
+      "reason": "conflict-prefer-rank"
+    },
+    "Game Theory": {
+      "candidates": [
+        {
+          "card_name": "Game Theory",
+          "card_type": "framework",
+          "path": "00_factor/framework/Game Theory.md"
+        },
+        {
+          "card_name": "Game Theory-hub",
+          "card_type": "00_hub",
+          "path": "00_factor/00_hub/Game Theory-hub.md"
+        }
+      ],
+      "selected": "Game Theory",
+      "reason": "conflict-prefer-rank"
+    },
+    "Volatility": {
+      "candidates": [
+        {
+          "card_name": "Volatility Clustering",
+          "card_type": "concept",
+          "path": "00_factor/concept/Volatility Clustering.md"
+        },
+        {
+          "card_name": "Volatility Modeling-hub",
+          "card_type": "00_hub",
+          "path": "00_factor/00_hub/Volatility Modeling-hub.md"
+        }
+      ],
+      "selected": "Volatility Clustering",
+      "reason": "conflict-prefer-rank"
+    },
+    "Linear": {
+      "candidates": [
+        {
+          "card_name": "Linear Algebra-hub",
+          "card_type": "00_hub",
+          "path": "00_factor/00_hub/Linear Algebra-hub.md"
+        },
+        {
+          "card_name": "Linear Combination",
+          "card_type": "concept",
+          "path": "00_factor/concept/Linear Combination.md"
+        },
+        {
+          "card_name": "Linear Combination of Two Random Variables",
+          "card_type": "concept",
+          "path": "00_factor/concept/Linear Combination of Two Random Variables.md"
+        },
+        {
+          "card_name": "Linear Independence",
+          "card_type": "concept",
+          "path": "00_factor/concept/Linear Independence.md"
+        },
+        {
+          "card_name": "Linear Probability Model",
+          "card_type": "concept",
+          "path": "00_factor/concept/Linear Probability Model.md"
+        },
+        {
+          "card_name": "Linear Products",
+          "card_type": "concept",
+          "path": "00_factor/concept/Linear Products.md"
+        },
+        {
+          "card_name": "Linear Regression Model",
+          "card_type": "concept",
+          "path": "00_factor/concept/Linear Regression Model.md"
+        },
+        {
+          "card_name": "Linear system solution structure",
+          "card_type": "concept",
+          "path": "00_factor/concept/Linear system solution structure.md"
+        },
+        {
+          "card_name": "Linear Systems",
+          "card_type": "concept",
+          "path": "00_factor/concept/Linear Systems.md"
+        }
+      ],
+      "selected": "Linear Combination",
+      "reason": "conflict-prefer-rank"
+    },
+    "Interest": {
+      "candidates": [
+        {
+          "card_name": "Interest Rate Risk Management-hub",
+          "card_type": "00_hub",
+          "path": "00_factor/00_hub/Interest Rate Risk Management-hub.md"
+        },
+        {
+          "card_name": "Interest Rate Sensitivity Gap",
+          "card_type": "concept",
+          "path": "00_factor/concept/Interest Rate Sensitivity Gap.md"
+        }
+      ],
+      "selected": "Interest Rate Sensitivity Gap",
+      "reason": "conflict-prefer-rank"
+    },
+    "哈罗德-多玛模型": {
+      "candidates": [
+        {
+          "card_name": "Harrod-Domar Model",
+          "card_type": "framework",
+          "path": "00_factor/framework/Harrod-Domar Model.md"
+        },
+        {
+          "card_name": "Harrod-Domar Model",
+          "card_type": "concept",
+          "path": "00_factor/concept/Harrod-Domar Model.md"
+        }
+      ],
+      "selected": "Harrod-Domar Model",
+      "reason": "conflict-prefer-rank"
+    },
+    "Harrod": {
+      "candidates": [
+        {
+          "card_name": "Harrod-Domar Model",
+          "card_type": "framework",
+          "path": "00_factor/framework/Harrod-Domar Model.md"
+        },
+        {
+          "card_name": "Harrod-Domar Model",
+          "card_type": "concept",
+          "path": "00_factor/concept/Harrod-Domar Model.md"
+        }
+      ],
+      "selected": "Harrod-Domar Model",
+      "reason": "conflict-prefer-rank"
+    },
+    "Harrod-Domar Model": {
+      "candidates": [
+        {
+          "card_name": "Harrod-Domar Model",
+          "card_type": "framework",
+          "path": "00_factor/framework/Harrod-Domar Model.md"
+        },
+        {
+          "card_name": "Harrod-Domar Model",
+          "card_type": "concept",
+          "path": "00_factor/concept/Harrod-Domar Model.md"
+        }
+      ],
+      "selected": "Harrod-Domar Model",
+      "reason": "conflict-prefer-rank"
+    },
+    "Solow": {
+      "candidates": [
+        {
+          "card_name": "Solow Model",
+          "card_type": "framework",
+          "path": "00_factor/framework/Solow Model.md"
+        },
+        {
+          "card_name": "Solow Model",
+          "card_type": "concept",
+          "path": "00_factor/concept/Solow Model.md"
+        },
+        {
+          "card_name": "Solow-Swan Model",
+          "card_type": "concept",
+          "path": "00_factor/concept/Solow-Swan Model.md"
+        }
+      ],
+      "selected": "Solow Model",
+      "reason": "conflict-prefer-rank"
+    },
+    "Solow Growth Model": {
+      "candidates": [
+        {
+          "card_name": "Solow Model",
+          "card_type": "framework",
+          "path": "00_factor/framework/Solow Model.md"
+        },
+        {
+          "card_name": "Solow Model",
+          "card_type": "concept",
+          "path": "00_factor/concept/Solow Model.md"
+        }
+      ],
+      "selected": "Solow Model",
+      "reason": "conflict-prefer-rank"
+    },
+    "Solow Model": {
+      "candidates": [
+        {
+          "card_name": "Solow Model",
+          "card_type": "framework",
+          "path": "00_factor/framework/Solow Model.md"
+        },
+        {
+          "card_name": "Solow Model",
+          "card_type": "concept",
+          "path": "00_factor/concept/Solow Model.md"
+        }
+      ],
+      "selected": "Solow Model",
+      "reason": "conflict-prefer-rank"
+    },
+    "Rostow": {
+      "candidates": [
+        {
+          "card_name": "Rostow Stages of Economic Growth",
+          "card_type": "framework",
+          "path": "00_factor/framework/Rostow Stages of Economic Growth.md"
+        },
+        {
+          "card_name": "Rostow's Stages of Growth",
+          "card_type": "concept",
+          "path": "00_factor/concept/Rostow's Stages of Growth.md"
+        }
+      ],
+      "selected": "Rostow's Stages of Growth",
+      "reason": "conflict-prefer-rank"
+    },
+    "罗斯托经济增长阶段论": {
+      "candidates": [
+        {
+          "card_name": "Rostow Stages of Economic Growth",
+          "card_type": "framework",
+          "path": "00_factor/framework/Rostow Stages of Economic Growth.md"
+        },
+        {
+          "card_name": "Rostow's Stages of Growth",
+          "card_type": "concept",
+          "path": "00_factor/concept/Rostow's Stages of Growth.md"
+        }
+      ],
+      "selected": "Rostow's Stages of Growth",
+      "reason": "conflict-prefer-rank"
+    },
+    "Kuznets": {
+      "candidates": [
+        {
+          "card_name": "Kuznets Modern Economic Growth Theory",
+          "card_type": "framework",
+          "path": "00_factor/framework/Kuznets Modern Economic Growth Theory.md"
+        },
+        {
+          "card_name": "Kuznets Modern Economic Growth Theory",
+          "card_type": "concept",
+          "path": "00_factor/concept/Kuznets Modern Economic Growth Theory.md"
+        }
+      ],
+      "selected": "Kuznets Modern Economic Growth Theory",
+      "reason": "conflict-prefer-rank"
+    },
+    "Kuznets Modern Economic Growth Theory": {
+      "candidates": [
+        {
+          "card_name": "Kuznets Modern Economic Growth Theory",
+          "card_type": "framework",
+          "path": "00_factor/framework/Kuznets Modern Economic Growth Theory.md"
+        },
+        {
+          "card_name": "Kuznets Modern Economic Growth Theory",
+          "card_type": "concept",
+          "path": "00_factor/concept/Kuznets Modern Economic Growth Theory.md"
+        }
+      ],
+      "selected": "Kuznets Modern Economic Growth Theory",
+      "reason": "conflict-prefer-rank"
+    },
+    "库兹涅茨现代经济增长理论": {
+      "candidates": [
+        {
+          "card_name": "Kuznets Modern Economic Growth Theory",
+          "card_type": "framework",
+          "path": "00_factor/framework/Kuznets Modern Economic Growth Theory.md"
+        },
+        {
+          "card_name": "Kuznets Modern Economic Growth Theory",
+          "card_type": "concept",
+          "path": "00_factor/concept/Kuznets Modern Economic Growth Theory.md"
+        }
+      ],
+      "selected": "Kuznets Modern Economic Growth Theory",
+      "reason": "conflict-prefer-rank"
+    },
+    "CAPM": {
+      "candidates": [
+        {
+          "card_name": "CAPM",
+          "card_type": "framework",
+          "path": "00_factor/framework/CAPM.md"
+        },
+        {
+          "card_name": "CAPM Estimation",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/CAPM Estimation.md"
+        }
+      ],
+      "selected": "CAPM",
+      "reason": "conflict-prefer-rank"
+    },
+    "F检验": {
+      "candidates": [
+        {
+          "card_name": "F-test",
+          "card_type": "system",
+          "path": "00_factor/system/F-test.md"
+        },
+        {
+          "card_name": "F-test",
+          "card_type": "concept",
+          "path": "00_factor/concept/F-test.md"
+        }
+      ],
+      "selected": "F-test",
+      "reason": "conflict-prefer-rank"
+    },
+    "F-test": {
+      "candidates": [
+        {
+          "card_name": "F-test",
+          "card_type": "system",
+          "path": "00_factor/system/F-test.md"
+        },
+        {
+          "card_name": "F-test",
+          "card_type": "concept",
+          "path": "00_factor/concept/F-test.md"
+        }
+      ],
+      "selected": "F-test",
+      "reason": "conflict-prefer-rank"
+    },
+    "Variance Inflation Factor": {
+      "candidates": [
+        {
+          "card_name": "Variance Inflation Factor",
+          "card_type": "system",
+          "path": "00_factor/system/Variance Inflation Factor.md"
+        },
+        {
+          "card_name": "Variance Inflation Factor",
+          "card_type": "concept",
+          "path": "00_factor/concept/Variance Inflation Factor.md"
+        }
+      ],
+      "selected": "Variance Inflation Factor",
+      "reason": "conflict-prefer-rank"
+    },
+    "Variance": {
+      "candidates": [
+        {
+          "card_name": "Variance Decomposition",
+          "card_type": "concept",
+          "path": "00_factor/concept/Variance Decomposition.md"
+        },
+        {
+          "card_name": "Variance Inflation Factor",
+          "card_type": "system",
+          "path": "00_factor/system/Variance Inflation Factor.md"
+        },
+        {
+          "card_name": "Variance Inflation Factor",
+          "card_type": "concept",
+          "path": "00_factor/concept/Variance Inflation Factor.md"
+        },
+        {
+          "card_name": "Variance-Covariance Method",
+          "card_type": "concept",
+          "path": "00_factor/concept/Variance-Covariance Method.md"
+        }
+      ],
+      "selected": "Variance Decomposition",
+      "reason": "conflict-prefer-rank"
+    },
+    "方差膨胀因子": {
+      "candidates": [
+        {
+          "card_name": "Variance Inflation Factor",
+          "card_type": "system",
+          "path": "00_factor/system/Variance Inflation Factor.md"
+        },
+        {
+          "card_name": "Variance Inflation Factor",
+          "card_type": "concept",
+          "path": "00_factor/concept/Variance Inflation Factor.md"
+        }
+      ],
+      "selected": "Variance Inflation Factor",
+      "reason": "conflict-prefer-rank"
+    },
+    "VIF": {
+      "candidates": [
+        {
+          "card_name": "Variance Inflation Factor",
+          "card_type": "system",
+          "path": "00_factor/system/Variance Inflation Factor.md"
+        },
+        {
+          "card_name": "Variance Inflation Factor",
+          "card_type": "concept",
+          "path": "00_factor/concept/Variance Inflation Factor.md"
+        }
+      ],
+      "selected": "Variance Inflation Factor",
+      "reason": "conflict-prefer-rank"
+    },
+    "Autocorrelation": {
+      "candidates": [
+        {
+          "card_name": "Autocorrelation",
+          "card_type": "concept",
+          "path": "00_factor/concept/Autocorrelation.md"
+        },
+        {
+          "card_name": "Autocorrelation Diagnosis",
+          "card_type": "system",
+          "path": "00_factor/system/Autocorrelation Diagnosis.md"
+        },
+        {
+          "card_name": "Autocorrelation Function",
+          "card_type": "concept",
+          "path": "00_factor/concept/Autocorrelation Function.md"
+        }
+      ],
+      "selected": "Autocorrelation",
+      "reason": "conflict-prefer-rank"
+    },
+    "条件指数": {
+      "candidates": [
+        {
+          "card_name": "Condition Index",
+          "card_type": "system",
+          "path": "00_factor/system/Condition Index.md"
+        },
+        {
+          "card_name": "Condition Number",
+          "card_type": "concept",
+          "path": "00_factor/concept/Condition Number.md"
+        }
+      ],
+      "selected": "Condition Number",
+      "reason": "conflict-prefer-rank"
+    },
+    "ARCH LM Test": {
+      "candidates": [
+        {
+          "card_name": "ARCH LM Test",
+          "card_type": "system",
+          "path": "00_factor/system/ARCH LM Test.md"
+        },
+        {
+          "card_name": "ARCH LM Test",
+          "card_type": "concept",
+          "path": "00_factor/concept/ARCH LM Test.md"
+        }
+      ],
+      "selected": "ARCH LM Test",
+      "reason": "conflict-prefer-rank"
+    },
+    "ARCH": {
+      "candidates": [
+        {
+          "card_name": "ARCH",
+          "card_type": "concept",
+          "path": "00_factor/concept/ARCH.md"
+        },
+        {
+          "card_name": "ARCH Effects Test",
+          "card_type": "concept",
+          "path": "00_factor/concept/ARCH Effects Test.md"
+        },
+        {
+          "card_name": "ARCH LM Test",
+          "card_type": "system",
+          "path": "00_factor/system/ARCH LM Test.md"
+        },
+        {
+          "card_name": "ARCH LM Test",
+          "card_type": "concept",
+          "path": "00_factor/concept/ARCH LM Test.md"
+        },
+        {
+          "card_name": "ARCH-M",
+          "card_type": "concept",
+          "path": "00_factor/concept/ARCH-M.md"
+        }
+      ],
+      "selected": "ARCH",
+      "reason": "conflict-prefer-rank"
+    },
+    "Basel": {
+      "candidates": [
+        {
+          "card_name": "Basel Accords",
+          "card_type": "concept",
+          "path": "00_factor/concept/Basel Accords.md"
+        },
+        {
+          "card_name": "Basel Capital Adequacy Ratio",
+          "card_type": "system",
+          "path": "00_factor/system/Basel Capital Adequacy Ratio.md"
+        }
+      ],
+      "selected": "Basel Accords",
+      "reason": "conflict-prefer-rank"
+    },
+    "回溯检验": {
+      "candidates": [
+        {
+          "card_name": "Backtesting",
+          "card_type": "system",
+          "path": "00_factor/system/Backtesting.md"
+        },
+        {
+          "card_name": "Backtesting",
+          "card_type": "concept",
+          "path": "00_factor/concept/Backtesting.md"
+        }
+      ],
+      "selected": "Backtesting",
+      "reason": "conflict-prefer-rank"
+    },
+    "Backtesting": {
+      "candidates": [
+        {
+          "card_name": "Backtesting",
+          "card_type": "system",
+          "path": "00_factor/system/Backtesting.md"
+        },
+        {
+          "card_name": "Backtesting",
+          "card_type": "concept",
+          "path": "00_factor/concept/Backtesting.md"
+        }
+      ],
+      "selected": "Backtesting",
+      "reason": "conflict-prefer-rank"
+    },
+    "Endogeneity": {
+      "candidates": [
+        {
+          "card_name": "Endogeneity",
+          "card_type": "concept",
+          "path": "00_factor/concept/Endogeneity.md"
+        },
+        {
+          "card_name": "Endogeneity Diagnosis",
+          "card_type": "system",
+          "path": "00_factor/system/Endogeneity Diagnosis.md"
+        }
+      ],
+      "selected": "Endogeneity",
+      "reason": "conflict-prefer-rank"
+    },
+    "White": {
+      "candidates": [
+        {
+          "card_name": "White Noise",
+          "card_type": "concept",
+          "path": "00_factor/concept/White Noise.md"
+        },
+        {
+          "card_name": "White Noise Test",
+          "card_type": "concept",
+          "path": "00_factor/concept/White Noise Test.md"
+        },
+        {
+          "card_name": "White Robust Standard Errors",
+          "card_type": "system",
+          "path": "00_factor/system/White Robust Standard Errors.md"
+        },
+        {
+          "card_name": "White Test",
+          "card_type": "concept",
+          "path": "00_factor/concept/White Test.md"
+        },
+        {
+          "card_name": "White Test Steps",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/White Test Steps.md"
+        }
+      ],
+      "selected": "White Noise",
+      "reason": "conflict-prefer-rank"
+    },
+    "Heteroskedasticity": {
+      "candidates": [
+        {
+          "card_name": "Heteroskedasticity",
+          "card_type": "concept",
+          "path": "00_factor/concept/Heteroskedasticity.md"
+        },
+        {
+          "card_name": "Heteroskedasticity and Autocorrelation",
+          "card_type": "system",
+          "path": "00_factor/system/Heteroskedasticity and Autocorrelation.md"
+        }
+      ],
+      "selected": "Heteroskedasticity",
+      "reason": "conflict-prefer-rank"
+    },
+    "Stationarity": {
+      "candidates": [
+        {
+          "card_name": "Stationarity",
+          "card_type": "concept",
+          "path": "00_factor/concept/Stationarity.md"
+        },
+        {
+          "card_name": "Stationarity Tests Comparison",
+          "card_type": "system",
+          "path": "00_factor/system/Stationarity Tests Comparison.md"
+        }
+      ],
+      "selected": "Stationarity",
+      "reason": "conflict-prefer-rank"
+    },
+    "Multicollinearity": {
+      "candidates": [
+        {
+          "card_name": "Multicollinearity",
+          "card_type": "concept",
+          "path": "00_factor/concept/Multicollinearity.md"
+        },
+        {
+          "card_name": "Multicollinearity and Endogeneity",
+          "card_type": "system",
+          "path": "00_factor/system/Multicollinearity and Endogeneity.md"
+        }
+      ],
+      "selected": "Multicollinearity",
+      "reason": "conflict-prefer-rank"
+    },
+    "GARCH": {
+      "candidates": [
+        {
+          "card_name": "GARCH",
+          "card_type": "concept",
+          "path": "00_factor/concept/GARCH.md"
+        },
+        {
+          "card_name": "GARCH Model Estimation Steps",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/GARCH Model Estimation Steps.md"
+        }
+      ],
+      "selected": "GARCH",
+      "reason": "conflict-prefer-rank"
+    },
+    "EWMA": {
+      "candidates": [
+        {
+          "card_name": "EWMA",
+          "card_type": "concept",
+          "path": "00_factor/concept/EWMA.md"
+        },
+        {
+          "card_name": "EWMA Volatility Estimation",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/EWMA Volatility Estimation.md"
+        }
+      ],
+      "selected": "EWMA",
+      "reason": "conflict-prefer-rank"
+    },
+    "ADF": {
+      "candidates": [
+        {
+          "card_name": "ADF Test Steps",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/ADF Test Steps.md"
+        },
+        {
+          "card_name": "Augmented Dickey-Fuller Test",
+          "card_type": "concept",
+          "path": "00_factor/concept/Augmented Dickey-Fuller Test.md"
+        }
+      ],
+      "selected": "Augmented Dickey-Fuller Test",
+      "reason": "conflict-prefer-rank"
+    },
+    "OLS": {
+      "candidates": [
+        {
+          "card_name": "OLS",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/OLS.md"
+        },
+        {
+          "card_name": "OLS Basics",
+          "card_type": "concept",
+          "path": "00_factor/concept/OLS Basics.md"
+        },
+        {
+          "card_name": "OLS consistency",
+          "card_type": "concept",
+          "path": "00_factor/concept/OLS consistency.md"
+        },
+        {
+          "card_name": "OLS Estimation Steps",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/OLS Estimation Steps.md"
+        },
+        {
+          "card_name": "OLS Estimator",
+          "card_type": "concept",
+          "path": "00_factor/concept/OLS Estimator.md"
+        },
+        {
+          "card_name": "OLS unbiasedness",
+          "card_type": "concept",
+          "path": "00_factor/concept/OLS unbiasedness.md"
+        }
+      ],
+      "selected": "OLS Basics",
+      "reason": "conflict-prefer-rank"
+    },
+    "Weighted": {
+      "candidates": [
+        {
+          "card_name": "Weighted Historical Simulation",
+          "card_type": "concept",
+          "path": "00_factor/concept/Weighted Historical Simulation.md"
+        },
+        {
+          "card_name": "Weighted Least Squares",
+          "card_type": "concept",
+          "path": "00_factor/concept/Weighted Least Squares.md"
+        },
+        {
+          "card_name": "Weighted Least Squares Estimation",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/Weighted Least Squares Estimation.md"
+        }
+      ],
+      "selected": "Weighted Historical Simulation",
+      "reason": "conflict-prefer-rank"
+    },
+    "EVT": {
+      "candidates": [
+        {
+          "card_name": "EVT",
+          "card_type": "concept",
+          "path": "00_factor/concept/EVT.md"
+        },
+        {
+          "card_name": "EVT VaR Calculation",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/EVT VaR Calculation.md"
+        }
+      ],
+      "selected": "EVT",
+      "reason": "conflict-prefer-rank"
+    },
+    "MLE": {
+      "candidates": [
+        {
+          "card_name": "Maximum Likelihood Estimation",
+          "card_type": "concept",
+          "path": "00_factor/concept/Maximum Likelihood Estimation.md"
+        },
+        {
+          "card_name": "MLE Estimation Steps",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/MLE Estimation Steps.md"
+        }
+      ],
+      "selected": "Maximum Likelihood Estimation",
+      "reason": "conflict-prefer-rank"
+    },
+    "Modified": {
+      "candidates": [
+        {
+          "card_name": "Modified Duration",
+          "card_type": "concept",
+          "path": "00_factor/concept/Modified Duration.md"
+        },
+        {
+          "card_name": "Modified Duration Calculation",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/Modified Duration Calculation.md"
+        }
+      ],
+      "selected": "Modified Duration",
+      "reason": "conflict-prefer-rank"
+    },
+    "Monte": {
+      "candidates": [
+        {
+          "card_name": "Monte Carlo Simulation Method",
+          "card_type": "concept",
+          "path": "00_factor/concept/Monte Carlo Simulation Method.md"
+        },
+        {
+          "card_name": "Monte Carlo Simulation VaR",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/Monte Carlo Simulation VaR.md"
+        }
+      ],
+      "selected": "Monte Carlo Simulation Method",
+      "reason": "conflict-prefer-rank"
+    },
+    "Macaulay": {
+      "candidates": [
+        {
+          "card_name": "Macaulay Duration",
+          "card_type": "concept",
+          "path": "00_factor/concept/Macaulay Duration.md"
+        },
+        {
+          "card_name": "Macaulay Duration Calculation",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/Macaulay Duration Calculation.md"
+        }
+      ],
+      "selected": "Macaulay Duration",
+      "reason": "conflict-prefer-rank"
+    },
+    "Historical": {
+      "candidates": [
+        {
+          "card_name": "Historical Simulation Method",
+          "card_type": "concept",
+          "path": "00_factor/concept/Historical Simulation Method.md"
+        },
+        {
+          "card_name": "Historical Simulation VaR",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/Historical Simulation VaR.md"
+        },
+        {
+          "card_name": "Historical Volatility",
+          "card_type": "concept",
+          "path": "00_factor/concept/Historical Volatility.md"
+        }
+      ],
+      "selected": "Historical Simulation Method",
+      "reason": "conflict-prefer-rank"
+    },
+    "Johansen": {
+      "candidates": [
+        {
+          "card_name": "Johansen Cointegration Test",
+          "card_type": "concept",
+          "path": "00_factor/concept/Johansen Cointegration Test.md"
+        },
+        {
+          "card_name": "Johansen Cointegration Test Steps",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/Johansen Cointegration Test Steps.md"
+        }
+      ],
+      "selected": "Johansen Cointegration Test",
+      "reason": "conflict-prefer-rank"
+    },
+    "IRR": {
+      "candidates": [
+        {
+          "card_name": "Internal Rate of Return",
+          "card_type": "concept",
+          "path": "00_factor/concept/Internal Rate of Return.md"
+        },
+        {
+          "card_name": "IRR Calculation",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/IRR Calculation.md"
+        }
+      ],
+      "selected": "Internal Rate of Return",
+      "reason": "conflict-prefer-rank"
+    },
+    "NPV": {
+      "candidates": [
+        {
+          "card_name": "Net Present Value",
+          "card_type": "concept",
+          "path": "00_factor/concept/Net Present Value.md"
+        },
+        {
+          "card_name": "NPV Calculation",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/NPV Calculation.md"
+        }
+      ],
+      "selected": "Net Present Value",
+      "reason": "conflict-prefer-rank"
+    },
+    "ARMA": {
+      "candidates": [
+        {
+          "card_name": "ARMA",
+          "card_type": "concept",
+          "path": "00_factor/concept/ARMA.md"
+        },
+        {
+          "card_name": "ARMA Model Identification Steps",
+          "card_type": "procedure",
+          "path": "00_factor/procedure/ARMA Model Identification Steps.md"
+        }
+      ],
+      "selected": "ARMA",
+      "reason": "conflict-prefer-rank"
+    },
+    "Price": {
+      "candidates": [
+        {
+          "card_name": "Price-to-Book Ratio",
+          "card_type": "concept",
+          "path": "00_factor/concept/Price-to-Book Ratio.md"
+        },
+        {
+          "card_name": "Price-to-Earnings Ratio",
+          "card_type": "concept",
+          "path": "00_factor/concept/Price-to-Earnings Ratio.md"
+        },
+        {
+          "card_name": "Price-to-Sales Ratio",
+          "card_type": "concept",
+          "path": "00_factor/concept/Price-to-Sales Ratio.md"
+        }
+      ],
+      "selected": "Price-to-Book Ratio",
+      "reason": "conflict-prefer-rank"
+    },
+    "Hotelling": {
+      "candidates": [
+        {
+          "card_name": "Hotelling Model",
+          "card_type": "concept",
+          "path": "00_factor/concept/Hotelling Model.md"
+        },
+        {
+          "card_name": "Hotelling T2 Test",
+          "card_type": "concept",
+          "path": "00_factor/concept/Hotelling T2 Test.md"
+        }
+      ],
+      "selected": "Hotelling Model",
+      "reason": "conflict-prefer-rank"
+    },
+    "Poisson": {
+      "candidates": [
+        {
+          "card_name": "Poisson Process",
+          "card_type": "concept",
+          "path": "00_factor/concept/Poisson Process.md"
+        },
+        {
+          "card_name": "Poisson process memoryless property",
+          "card_type": "concept",
+          "path": "00_factor/concept/Poisson process memoryless property.md"
+        }
+      ],
+      "selected": "Poisson Process",
+      "reason": "conflict-prefer-rank"
+    },
+    "Stationary": {
+      "candidates": [
+        {
+          "card_name": "Stationary Distribution",
+          "card_type": "concept",
+          "path": "00_factor/concept/Stationary Distribution.md"
+        },
+        {
+          "card_name": "Stationary Stochastic Process",
+          "card_type": "concept",
+          "path": "00_factor/concept/Stationary Stochastic Process.md"
+        },
+        {
+          "card_name": "Stationary Time Series",
+          "card_type": "concept",
+          "path": "00_factor/concept/Stationary Time Series.md"
+        }
+      ],
+      "selected": "Stationary Distribution",
+      "reason": "conflict-prefer-rank"
+    },
+    "Matrix": {
+      "candidates": [
+        {
+          "card_name": "Matrix Inverse",
+          "card_type": "concept",
+          "path": "00_factor/concept/Matrix Inverse.md"
+        },
+        {
+          "card_name": "Matrix Operations",
+          "card_type": "concept",
+          "path": "00_factor/concept/Matrix Operations.md"
+        },
+        {
+          "card_name": "Matrix Rank",
+          "card_type": "concept",
+          "path": "00_factor/concept/Matrix Rank.md"
+        },
+        {
+          "card_name": "Matrix rank properties",
+          "card_type": "concept",
+          "path": "00_factor/concept/Matrix rank properties.md"
+        }
+      ],
+      "selected": "Matrix Inverse",
+      "reason": "conflict-prefer-rank"
+    },
+    "Delta": {
+      "candidates": [
+        {
+          "card_name": "Delta",
+          "card_type": "concept",
+          "path": "00_factor/concept/Delta.md"
+        },
+        {
+          "card_name": "Delta Approximation",
+          "card_type": "concept",
+          "path": "00_factor/concept/Delta Approximation.md"
+        },
+        {
+          "card_name": "Delta-Gamma Approximation",
+          "card_type": "concept",
+          "path": "00_factor/concept/Delta-Gamma Approximation.md"
+        }
+      ],
+      "selected": "Delta",
+      "reason": "conflict-prefer-rank"
+    },
+    "Default Risk": {
+      "candidates": [
+        {
+          "card_name": "Default Risk",
+          "card_type": "concept",
+          "path": "00_factor/concept/Default Risk.md"
+        },
+        {
+          "card_name": "Risk Structure of Interest Rates",
+          "card_type": "concept",
+          "path": "00_factor/concept/Risk Structure of Interest Rates.md"
+        }
+      ],
+      "selected": "Default Risk",
+      "reason": "conflict-prefer-rank"
+    },
+    "Cointegration": {
+      "candidates": [
+        {
+          "card_name": "Cointegration",
+          "card_type": "concept",
+          "path": "00_factor/concept/Cointegration.md"
+        },
+        {
+          "card_name": "Cointegration theorem",
+          "card_type": "concept",
+          "path": "00_factor/concept/Cointegration theorem.md"
+        }
+      ],
+      "selected": "Cointegration",
+      "reason": "conflict-prefer-rank"
+    },
+    "Economic": {
+      "candidates": [
+        {
+          "card_name": "Economic Development",
+          "card_type": "concept",
+          "path": "00_factor/concept/Economic Development.md"
+        },
+        {
+          "card_name": "Economic Growth",
+          "card_type": "concept",
+          "path": "00_factor/concept/Economic Growth.md"
+        }
+      ],
+      "selected": "Economic Development",
+      "reason": "conflict-prefer-rank"
+    },
+    "Differential": {
+      "candidates": [
+        {
+          "card_name": "Differential Equation",
+          "card_type": "concept",
+          "path": "00_factor/concept/Differential Equation.md"
+        },
+        {
+          "card_name": "Differential Rent",
+          "card_type": "concept",
+          "path": "00_factor/concept/Differential Rent.md"
+        }
+      ],
+      "selected": "Differential Equation",
+      "reason": "conflict-prefer-rank"
+    },
+    "Repeated": {
+      "candidates": [
+        {
+          "card_name": "Repeated Games",
+          "card_type": "concept",
+          "path": "00_factor/concept/Repeated Games.md"
+        },
+        {
+          "card_name": "Repeated Games and Mixed Strategies",
+          "card_type": "concept",
+          "path": "00_factor/concept/Repeated Games and Mixed Strategies.md"
+        }
+      ],
+      "selected": "Repeated Games",
+      "reason": "conflict-prefer-rank"
+    },
+    "Return": {
+      "candidates": [
+        {
+          "card_name": "Return on Assets",
+          "card_type": "concept",
+          "path": "00_factor/concept/Return on Assets.md"
+        },
+        {
+          "card_name": "Return on Equity",
+          "card_type": "concept",
+          "path": "00_factor/concept/Return on Equity.md"
+        }
+      ],
+      "selected": "Return on Assets",
+      "reason": "conflict-prefer-rank"
+    },
+    "Internal": {
+      "candidates": [
+        {
+          "card_name": "Internal Growth Rate",
+          "card_type": "concept",
+          "path": "00_factor/concept/Internal Growth Rate.md"
+        },
+        {
+          "card_name": "Internal Rate of Return",
+          "card_type": "concept",
+          "path": "00_factor/concept/Internal Rate of Return.md"
+        }
+      ],
+      "selected": "Internal Growth Rate",
+      "reason": "conflict-prefer-rank"
+    },
+    "Factor": {
+      "candidates": [
+        {
+          "card_name": "Factor Analysis",
+          "card_type": "concept",
+          "path": "00_factor/concept/Factor Analysis.md"
+        },
+        {
+          "card_name": "Factor Loadings",
+          "card_type": "concept",
+          "path": "00_factor/concept/Factor Loadings.md"
+        }
+      ],
+      "selected": "Factor Analysis",
+      "reason": "conflict-prefer-rank"
+    },
+    "Yield": {
+      "candidates": [
+        {
+          "card_name": "Yield Curve",
+          "card_type": "concept",
+          "path": "00_factor/concept/Yield Curve.md"
+        },
+        {
+          "card_name": "Yield Curve Risk",
+          "card_type": "concept",
+          "path": "00_factor/concept/Yield Curve Risk.md"
+        },
+        {
+          "card_name": "Yield to Maturity",
+          "card_type": "concept",
+          "path": "00_factor/concept/Yield to Maturity.md"
+        }
+      ],
+      "selected": "Yield Curve",
+      "reason": "conflict-prefer-rank"
+    },
+    "Credit": {
+      "candidates": [
+        {
+          "card_name": "Credit Risk",
+          "card_type": "concept",
+          "path": "00_factor/concept/Credit Risk.md"
+        },
+        {
+          "card_name": "Credit VaR",
+          "card_type": "concept",
+          "path": "00_factor/concept/Credit VaR.md"
+        }
+      ],
+      "selected": "Credit Risk",
+      "reason": "conflict-prefer-rank"
+    },
+    "Implied": {
+      "candidates": [
+        {
+          "card_name": "Implied Option Risk",
+          "card_type": "concept",
+          "path": "00_factor/concept/Implied Option Risk.md"
+        },
+        {
+          "card_name": "Implied Volatility",
+          "card_type": "concept",
+          "path": "00_factor/concept/Implied Volatility.md"
+        }
+      ],
+      "selected": "Implied Option Risk",
+      "reason": "conflict-prefer-rank"
+    },
+    "导数": {
+      "candidates": [
+        {
+          "card_name": "derivative",
+          "card_type": "concept",
+          "path": "00_factor/concept/derivative.md"
+        },
+        {
+          "card_name": "Derivative (2)",
+          "card_type": "concept",
+          "path": "00_factor/concept/Derivative (2).md"
+        }
+      ],
+      "selected": "derivative",
+      "reason": "conflict-prefer-rank"
+    },
+    "Random": {
+      "candidates": [
+        {
+          "card_name": "Random Effects Model",
+          "card_type": "concept",
+          "path": "00_factor/concept/Random Effects Model.md"
+        },
+        {
+          "card_name": "Random Walk",
+          "card_type": "concept",
+          "path": "00_factor/concept/Random Walk.md"
+        }
+      ],
+      "selected": "Random Effects Model",
+      "reason": "conflict-prefer-rank"
+    },
+    "Spectral": {
+      "candidates": [
+        {
+          "card_name": "Spectral Decomposition",
+          "card_type": "concept",
+          "path": "00_factor/concept/Spectral Decomposition.md"
+        },
+        {
+          "card_name": "Spectral Risk Measure",
+          "card_type": "concept",
+          "path": "00_factor/concept/Spectral Risk Measure.md"
+        }
+      ],
+      "selected": "Spectral Decomposition",
+      "reason": "conflict-prefer-rank"
+    },
+    "Population": {
+      "candidates": [
+        {
+          "card_name": "Population Growth and Economic Development",
+          "card_type": "concept",
+          "path": "00_factor/concept/Population Growth and Economic Development.md"
+        },
+        {
+          "card_name": "Population Migration Theory",
+          "card_type": "concept",
+          "path": "00_factor/concept/Population Migration Theory.md"
+        }
+      ],
+      "selected": "Population Growth and Economic Development",
+      "reason": "conflict-prefer-rank"
+    },
+    "Basis": {
+      "candidates": [
+        {
+          "card_name": "Basis Point Value (BPV)",
+          "card_type": "concept",
+          "path": "00_factor/concept/Basis Point Value (BPV).md"
+        },
+        {
+          "card_name": "Basis Risk",
+          "card_type": "concept",
+          "path": "00_factor/concept/Basis Risk.md"
+        }
+      ],
+      "selected": "Basis Point Value (BPV)",
+      "reason": "conflict-prefer-rank"
+    },
+    "Subgame": {
+      "candidates": [
+        {
+          "card_name": "Subgame",
+          "card_type": "concept",
+          "path": "00_factor/concept/Subgame.md"
+        },
+        {
+          "card_name": "Subgame Perfect Nash Equilibrium",
+          "card_type": "concept",
+          "path": "00_factor/concept/Subgame Perfect Nash Equilibrium.md"
+        }
+      ],
+      "selected": "Subgame",
+      "reason": "conflict-prefer-rank"
+    },
+    "Markov": {
+      "candidates": [
+        {
+          "card_name": "Markov Chain",
+          "card_type": "concept",
+          "path": "00_factor/concept/Markov Chain.md"
+        },
+        {
+          "card_name": "Markov Process",
+          "card_type": "concept",
+          "path": "00_factor/concept/Markov Process.md"
+        }
+      ],
+      "selected": "Markov Chain",
+      "reason": "conflict-prefer-rank"
+    },
+    "Efficient": {
+      "candidates": [
+        {
+          "card_name": "Efficient Frontier",
+          "card_type": "concept",
+          "path": "00_factor/concept/Efficient Frontier.md"
+        },
+        {
+          "card_name": "Efficient Market Hypothesis",
+          "card_type": "concept",
+          "path": "00_factor/concept/Efficient Market Hypothesis.md"
+        }
+      ],
+      "selected": "Efficient Frontier",
+      "reason": "conflict-prefer-rank"
+    },
+    "Marginal": {
+      "candidates": [
+        {
+          "card_name": "Marginal Revolution",
+          "card_type": "concept",
+          "path": "00_factor/concept/Marginal Revolution.md"
+        },
+        {
+          "card_name": "Marginal VaR",
+          "card_type": "concept",
+          "path": "00_factor/concept/Marginal VaR.md"
+        }
+      ],
+      "selected": "Marginal Revolution",
+      "reason": "conflict-prefer-rank"
+    }
+  },
+  "write_failed": []
+}

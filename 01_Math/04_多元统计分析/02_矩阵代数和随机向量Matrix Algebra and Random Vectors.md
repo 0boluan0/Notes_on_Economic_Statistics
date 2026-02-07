@@ -1,61 +1,61 @@
 
-# 矩阵代数与随机向量（Matrix Algebra and Random Vectors）
+# 矩阵代数与随机向量（[[Matrix Inverse|Matrix]] Algebra and [[Random Effects Model|Random]] Vectors）
 
-### 1. 矩阵与向量代数基础（Basics of Matrix and Vector Algebra）
+### 1. 矩阵与向量代数基础（Basics of [[Matrix Inverse|Matrix]] and Vector Algebra）
 - 向量定义（Definition of vectors）
 - 向量长度与方向（Vector length and direction）
 - 向量夹角余弦（Cosine of the angle between two vectors）
 - 标量乘法与单位向量（Scalar multiplication and unit vectors）
-- 向量线性相关与线性无关（Linear dependence and independence）
+- 向量线性相关与线性无关（[[Linear Combination|Linear]] dependence and independence）
 - 向量投影（Projection of a vector）
 
 ### 2. 矩阵（Matrices）
 - 定义与记号（Definition and notation）
-- 单位矩阵（Identity Matrix）
-- 对角矩阵（Diagonal Matrix）
-- 矩阵运算（Matrix operations）：
+- 单位矩阵（Identity [[Matrix Inverse|Matrix]]）
+- 对角矩阵（Diagonal [[Matrix Inverse|Matrix]]）
+- [[Matrix Operations|矩阵运算]]（[[Matrix Inverse|Matrix]] operations）：
   - 标量乘法（Scalar Multiplication）
-  - 矩阵加法（Matrix Addition）
-  - 矩阵乘法（Matrix Multiplication）
-- 矩阵逆（Matrix Inverse）
+  - 矩阵加法（[[Matrix Inverse|Matrix]] Addition）
+  - 矩阵乘法（[[Matrix Inverse|Matrix]] Multiplication）
+- 矩阵逆（[[Matrix Inverse|Matrix Inverse]]）
 - 正交矩阵（Orthogonal Matrices）
-- 矩阵的秩（Rank of a Matrix）
+- [[Matrix Rank|矩阵的秩]]（Rank of a [[Matrix Inverse|Matrix]]）
 
-### 3. 行列式（Determinants）
+### 3. [[Determinant|行列式]]（Determinants）
 - 行列式定义（Definition of determinants）
 - 性质（Properties）：
-  - 矩阵乘积行列式（Determinant of product of matrices）
-  - 逆矩阵行列式（Determinant of inverse）
-  - 对角矩阵行列式（Determinant of diagonal matrices）
+  - 矩阵乘积行列式（[[Determinant|Determinant]] of product of matrices）
+  - 逆矩阵行列式（[[Determinant|Determinant]] of inverse）
+  - 对角矩阵行列式（[[Determinant|Determinant]] of diagonal matrices）
   - 行列式与正交矩阵（Determinants and orthogonal matrices）
 
-### 4. 特征值与特征向量（Eigenvalues and Eigenvectors）
+### 4. 特征值与特征向量（[[Eigenvalues|Eigenvalues]] and [[Eigenvectors|Eigenvectors]]）
 - 定义（Definitions）
 - 性质（Properties）：
-  - Spectral Representation (谱表示)
-  - 用特征值表示迹与行列式（Trace and Determinant Using Eigenvalues）
+  - [[Spectral Decomposition|Spectral]] Representation (谱表示)
+  - 用特征值表示迹与行列式（Trace and [[Determinant|Determinant]] Using [[Eigenvalues|Eigenvalues]]）
 
-### 5. 正定与半正定矩阵（Positive Definite and Non-Negative Definite Matrices）
+### 5. 正定与半正定矩阵（[[Positive Definite Matrix|Positive]] Definite and Non-Negative Definite Matrices）
 - 定义与性质（Definitions and Properties）
 - Quadratic Forms (二次型)
 
-### 6. 矩阵平方根（Square Root of a Matrix）
+### 6. 矩阵平方根（Square Root of a [[Matrix Inverse|Matrix]]）
 - 定义（Definition）
 - 对称性与性质（Symmetry and properties）
 - 二次型变换（Transformation of quadratic forms）
 
-### 7. 随机向量与随机矩阵（Random Vectors and Random Matrices）
+### 7. 随机向量与随机矩阵（[[Random Effects Model|Random]] Vectors and [[Random Effects Model|Random]] Matrices）
 - 定义（Definitions）
-- 均值与方差-协方差矩阵（Mean and Variance-Covariance Matrix）
-- 随机向量的线性函数（Linear Functions of Random Vectors）
+- 均值与方差-协方差矩阵（Mean and [[Variance Decomposition|Variance]]-Covariance [[Matrix Inverse|Matrix]]）
+- 随机向量的线性函数（[[Linear Combination|Linear]] Functions of [[Random Effects Model|Random]] Vectors）
 
-### 8. 相关矩阵（Correlation Matrix）
+### 8. 相关矩阵（[[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]]）
 - 定义与性质（Definition and properties）
 - 与方差-协方差矩阵关系（Relationship with variance-covariance matrix）
 
 ---
 
-# 矩阵与向量代数基础（Basics of Matrix and Vector Algebra）
+# 矩阵与向量代数基础（Basics of [[Matrix Inverse|Matrix]] and Vector Algebra）
 
 ## 1. **向量的定义与表示**
 
@@ -189,11 +189,11 @@ $$
      a_{n1} & a_{n2} & \cdots & a_{np}
      \end{pmatrix}
      $$
-   - 方阵：若 $n = p$，则称矩阵为方阵（Square Matrix）。
+   - 方阵：若 $n = p$，则称矩阵为方阵（Square [[Matrix Inverse|Matrix]]）。
 
 ## 2. **特殊矩阵**
 
-   - **单位矩阵 (Identity Matrix)**:
+   - **单位矩阵 (Identity [[Matrix Inverse|Matrix]])**:
      $$I_p = \begin{pmatrix}
      1 & 0 & \cdots & 0 \\
      0 & 1 & \cdots & 0 \\
@@ -201,7 +201,7 @@ $$
      0 & 0 & \cdots & 1
      \end{pmatrix}$$
      对角线上全为 $1$，其余元素为 $0$。
-   - **对角矩阵 (Diagonal Matrix)**:
+   - **对角矩阵 (Diagonal [[Matrix Inverse|Matrix]])**:
      $$A = \begin{pmatrix}
      a_{11} & 0 & \cdots & 0 \\
      0 & a_{22} & \cdots & 0 \\
@@ -210,7 +210,7 @@ $$
      \end{pmatrix}$$
      非对角线元素为 $0$。
 
-## 3. **矩阵运算**
+## 3. **[[Matrix Operations|矩阵运算]]**
 
    - **标量乘法 (Scalar Multiplication)**:
      $$c \cdot A = \begin{pmatrix}
@@ -219,14 +219,14 @@ $$
      \vdots & \vdots & \ddots & \vdots \\
      c \cdot a_{n1} & c \cdot a_{n2} & \cdots & c \cdot a_{np}
      \end{pmatrix}$$
-   - **矩阵加法 (Matrix Addition)**:
+   - **矩阵加法 ([[Matrix Inverse|Matrix]] Addition)**:
      若 $A_{n \times p}$ 和 $B_{n \times p}$，则：
      $$A + B = \begin{pmatrix}
      a_{11} + b_{11} & \cdots & a_{1p} + b_{1p} \\
      \vdots & \ddots & \vdots \\
      a_{n1} + b_{n1} & \cdots & a_{np} + b_{np}
      \end{pmatrix}$$
-   - **矩阵乘法 (Matrix Multiplication)**:
+   - **矩阵乘法 ([[Matrix Inverse|Matrix]] Multiplication)**:
      若 $A_{n \times p}$ 和 $B_{p \times m}$，则 $C = A \cdot B$，$C_{n \times m}$ 的元素为：
      $$c_{ik} = \sum_{j=1}^p a_{ij} b_{jk}$$
 
@@ -250,7 +250,7 @@ $$
 
 特别的,对称矩阵的转置等于它本身
 
-## 5. **矩阵的逆**
+## 5. **[[Matrix Inverse|矩阵的逆]]**
 
    - 若方阵 $A$ 存在矩阵 $B$，使得：
      $$AB = BA = I_p$$
@@ -293,7 +293,7 @@ D^{-1} = \begin{bmatrix}
 
 ==总体协方差矩阵一定可逆,但是样本协方差矩阵不一定有逆.==
 
-## 6. **正交矩阵 (Orthogonal Matrix)**
+## 6. **正交矩阵 (Orthogonal [[Matrix Inverse|Matrix]])**
 
    - 矩阵 $Q$ 满足：
      $$Q Q' = Q' Q = I_p$$
@@ -302,7 +302,7 @@ D^{-1} = \begin{bmatrix}
 
 Q的转置等于他的逆.他的行和列都是正交的.
 
-## 7. **矩阵的秩 (Rank of a Matrix)**
+## 7. **[[Matrix Rank|矩阵的秩]] (Rank of a [[Matrix Inverse|Matrix]])**
 
    - 矩阵 $A_{n \times p}$ 的秩是其线性无关列向量的最大数目，记为 $\text{rank}(A)$，满足：
      $$\text{rank}(A) \leq \min(n, p)$$
@@ -407,11 +407,11 @@ $$
 
 ---
 
-# 行列式（Determinants）
+# [[Determinant|行列式]]（Determinants）
 
 ## 1. **行列式的定义**
 
-   - 对于一个方阵 $A$，行列式 $|A|$ 是一个标量，反映矩阵的某些代数性质。
+   - 对于一个方阵 $A$，[[Determinant|行列式]] $|A|$ 是一个标量，反映矩阵的某些代数性质。
    - 不同阶矩阵的行列式计算方式：
      - 若 $p = 1$：
        $$|A| = a_{11}$$
@@ -497,13 +497,13 @@ $$|Q|^2 = 1.$$
 
 ---
 
-# 特征值与特征向量（Eigenvalues and Eigenvectors）
+# 特征值与特征向量（[[Eigenvalues|Eigenvalues]] and [[Eigenvectors|Eigenvectors]]）
 
 ## 1. **特征值与特征向量的定义**
 
    - 对于一个方阵 $A$，若存在非零向量 $x$ 和标量 $\lambda$，使得：
      $$Ax = \lambda x$$
-     则 $\lambda$ 称为 $A$ 的**特征值 (eigenvalue)**，$x$ 称为对应的**特征向量 (eigenvector)**。
+     则 $\lambda$ 称为 $A$ 的**[[Eigenvalues|特征值]] (eigenvalue)**，$x$ 称为对应的**[[Eigenvectors|特征向量]] (eigenvector)**。
    - **几何意义**：
      - 特征向量是矩阵 $A$ 作用下**方向不变**的向量。
      - 特征值表示 $A$ 在对应特征向量上的拉伸或缩放比例。
@@ -537,11 +537,11 @@ $$|Q|^2 = 1.$$
 
 ## 4. **特征值与特征向量的应用**
 
-### **谱分解 (Spectral Decomposition)**：
+### **[[Spectral Decomposition|谱分解]] ([[Spectral Decomposition|Spectral Decomposition]])**：
 
 #### 1. **谱分解的定义**
 
-**谱分解**（Spectral Decomposition）是线性代数中的一个重要概念，用于将一个矩阵分解成由其特征值和特征向量定义的形式。谱分解的核心思想是利用矩阵的特征值和特征向量，将矩阵表示为一个基于这些特征的分解形式。
+**[[Spectral Decomposition|谱分解]]**（[[Spectral Decomposition|Spectral Decomposition]]）是线性代数中的一个重要概念，用于将一个矩阵分解成由其特征值和特征向量定义的形式。谱分解的核心思想是利用矩阵的特征值和特征向量，将矩阵表示为一个基于这些特征的分解形式。
 
 对于一个 $n \times n$ 的对称矩阵 $\mathbf{A}$，它可以表示为：
 
@@ -957,22 +957,22 @@ $$
 
 ---
 
-# 正定与半正定矩阵（Positive Definite and Non-Negative Definite Matrices）
+# 正定与半正定矩阵（[[Positive Definite Matrix|Positive]] Definite and Non-Negative Definite Matrices）
 
 ## 1. **定义**
 
-   - **正定矩阵 (Positive Definite Matrix)**:
+   - **[[Positive Definite Matrix|正定矩阵]] ([[Positive Definite Matrix|Positive Definite Matrix]])**:
      若 $A$ 是一个 $p \times p$ 的对称矩阵，且对于任意非零向量 $x \neq 0$，满足：
      $$x'Ax > 0$$
      则 $A$ 被称为正定矩阵。
-   - **半正定矩阵 (Non-Negative Definite Matrix)**:
+   - **半正定矩阵 (Non-Negative Definite [[Matrix Inverse|Matrix]])**:
      若 $A$ 是一个 $p \times p$ 的对称矩阵，且对于任意非零向量 $x \neq 0$，满足：
      $$x'Ax \geq 0$$
      则 $A$ 被称为半正定矩阵。
 
 ## 2. **几何意义**
 
-   - **正定矩阵**：对应于一个严格凸的二次型（即 $x'Ax$ 在任意方向都大于零）。
+   - **[[Positive Definite Matrix|正定矩阵]]**：对应于一个严格凸的二次型（即 $x'Ax$ 在任意方向都大于零）。
    - **半正定矩阵**：对应于一个不严格凸的二次型（即 $x'Ax$ 可以等于零，但不能为负）。
 
 ## 3. **特征值的判定条件**
@@ -1032,7 +1032,7 @@ $$
 
 ---
 
-# 矩阵平方根（Square Root of a Matrix）
+# 矩阵平方根（Square Root of a [[Matrix Inverse|Matrix]]）
 
 ## 1. **定义**
 
@@ -1068,7 +1068,7 @@ $$
 
    - **例子 1: 简单对称正定矩阵**
      $$A = \begin{pmatrix} 4 & 0 \\ 0 & 9 \end{pmatrix}$$
-     - 特征值：$\lambda_1 = 4, \lambda_2 = 9$。
+     - [[Eigenvalues|特征值]]：$\lambda_1 = 4, \lambda_2 = 9$。
      - 特征值平方根：$\sqrt{\lambda_1} = 2, \sqrt{\lambda_2} = 3$。
      - 矩阵平方根：
        $$A^{1/2} = \begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}$$
@@ -1167,7 +1167,7 @@ $$
 其中 $x = \begin{pmatrix} x_1 \ x_2 \end{pmatrix}$，$A$ 是对称矩阵。
 
 
-## 4.**正定矩阵 Rayleigh 商的最大值与最小值**
+## 4.**[[Positive Definite Matrix|正定矩阵]] Rayleigh 商的最大值与最小值**
 
 ### 4.1结论：
 
@@ -1189,7 +1189,7 @@ $$
 x = \sum_{i=1}^p c_i e_i, \quad \text{其中 } c_i = e_i^T x.
 
 $$
-• 特征向量 $e_i$ 是正交归一化的，即：
+• [[Eigenvectors|特征向量]] $e_i$ 是正交归一化的，即：
 
 $$
 e_i^T e_j = \begin{cases}
@@ -1274,9 +1274,9 @@ $$
 ------------
 
 
-# 随机向量与随机矩阵（Random Vectors and Random Matrices）
+# 随机向量与随机矩阵（[[Random Effects Model|Random]] Vectors and [[Random Effects Model|Random]] Matrices）
 
-## 1. **随机向量 (Random Vectors)**
+## 1. **随机向量 ([[Random Effects Model|Random]] Vectors)**
 
    - 随机向量是由多个随机变量组成的列向量：
      $$x = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_p \end{pmatrix}$$
@@ -1287,7 +1287,7 @@ $$
      - 若 $y = Ax + b$，其中 $A$ 是常数矩阵，$b$ 是常数向量，则：
        $$E(y) = AE(x) + b$$
 
-## 2. **随机向量的协方差矩阵 (Variance-Covariance Matrix)**
+## 2. **随机向量的协方差矩阵 ([[Variance Decomposition|Variance]]-Covariance [[Matrix Inverse|Matrix]])**
 
    - 定义为随机变量之间的方差与协方差的矩阵：
      $$\Sigma = \begin{pmatrix}
@@ -1309,7 +1309,7 @@ $$
      \end{pmatrix}$$
      其中 $\sigma_{ij} = \text{Cov}(x_i, x_j)$。
 
-## 3. **线性函数的方差 (Variance of a Linear Function)**
+## 3. **线性函数的方差 ([[Variance Decomposition|Variance]] of a [[Linear Combination|Linear]] Function)**
 
    - 若 $x$ 是一个 $p$ 维随机向量，$b$ 是一个常数向量，则：
      $$\text{Var}(b'x) = b'\Sigma b$$
@@ -1320,7 +1320,7 @@ $$
    - 如果 $x_i$ 和 $x_j$ 是独立的，则它们一定是非相关的，即 $\text{Cov}(x_i, x_j) = 0$。
    - 非相关性并不一定意味着独立性。
 
-## 5. **随机矩阵 (Random Matrices)**
+## 5. **随机矩阵 ([[Random Effects Model|Random]] Matrices)**
 
    - 随机矩阵是元素为随机变量的矩阵。例如，一个 $p \times q$ 随机矩阵：
      $$X = \begin{pmatrix} x_{11} & x_{12} & \cdots & x_{1q} \\
@@ -1330,7 +1330,7 @@ $$
      \end{pmatrix}$$
    - 每一列可以看作一个随机向量。
 
-## 6. **相关矩阵 (Correlation Matrix)**
+## 6. **相关矩阵 ([[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]])**
 
    - 相关矩阵描述随机变量之间的相关性：
      $$\rho_{ij} = \frac{\text{Cov}(x_i, x_j)}{\sqrt{\text{Var}(x_i) \text{Var}(x_j)}} = \frac{\sigma_{ij}}{\sqrt{\sigma_{ii} \sigma_{jj}}}$$
@@ -1343,7 +1343,7 @@ $$
 
 ---
 
-# 相关矩阵（Correlation Matrix）
+# 相关矩阵（[[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]]）
 
 ## 1. **定义**
 

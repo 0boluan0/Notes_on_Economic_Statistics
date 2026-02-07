@@ -1,58 +1,58 @@
 
 ==证明不要求掌握.但是要知道本章提到过的各个性质,会在选择题中出现==
 
-# 第4章：多元正态分布（The Multivariate Normal Distribution）
+# 第4章：[[Multivariate Normal Distribution|多元正态分布]]（The [[Multivariate Normal Distribution|Multivariate Normal Distribution]]）
 
 ## 1. 引言（Introduction）
-- **1.1 概述（Overview）**：多元正态分布（Multivariate Normal Distribution）的重要性与应用场景。
+- **1.1 概述（Overview）**：[[Multivariate Normal Distribution|多元正态分布]]（[[Multivariate Normal Distribution|Multivariate Normal Distribution]]）的重要性与应用场景。
 - **1.2 适用场景（Use Cases）**：多元正态分布成立时的常见假设与使用条件。
 
-## 2. 多元正态密度及其性质（The Multivariate Normal Density and Its Properties）
+## 2. 多元正态密度及其性质（The [[Multivariate Normal Distribution|Multivariate]] Normal Density and Its Properties）
 - **2.1 单变量正态分布（Univariate Normal Distribution）**：定义与概率密度函数。
-- **2.2 多元正态分布（Multivariate Normal Distribution）**：
+- **2.2 [[Multivariate Normal Distribution|多元正态分布]]（[[Multivariate Normal Distribution|Multivariate Normal Distribution]]）**：
   - 密度函数公式与解释。
   - 特例：二维正态分布（Bivariate Normal Distribution）。
 - **2.3 等概率密度轮廓（Equi-probability Density Contours）**：定义与椭圆性质。
 
-## 3. 多元正态分布的性质（Properties of Multivariate Normal Distribution）
-- **3.1 线性组合（Linear Combinations）**：分布性质与反向推导。
+## 3. 多元正态分布的性质（Properties of [[Multivariate Normal Distribution|Multivariate Normal Distribution]]）
+- **3.1 [[Linear Combination|线性组合]]（[[Linear Combination|Linear]] Combinations）**：分布性质与反向推导。
 - **3.2 仿射变换（Affine Transformations）**：线性变换下的分布行为。
 - **3.3 平移（Translation）**：常向量平移对分布的影响。
-- **3.4 条件分布（Conditional Distributions）**：条件均值与条件协方差公式。
+- **3.4 条件分布（[[Conditional Heteroskedasticity|Conditional]] Distributions）**：条件均值与条件协方差公式。
 
 ## 4. 二次型与相关分布（Quadratic Forms and Related Distributions）
 - **4.1 二次型（Quadratic Forms）**：$\\chi^2$ 分布及其相关性质。
 - **4.2 标准化（Standardization）**：标准正态分布的相关性质。
 
-## 5. 多元正态分布的抽样（Sampling from Multivariate Normal Distribution）
+## 5. 多元正态分布的抽样（Sampling from [[Multivariate Normal Distribution|Multivariate Normal Distribution]]）
 - **5.1 联合密度函数（Joint Density Function）**：样本联合分布的表达式。
-- **5.2 极大似然估计（Maximum Likelihood Estimation）**：样本均值与协方差矩阵的估计。
+- **5.2 [[Maximum Likelihood Estimation|极大似然估计]]（[[Maximum Likelihood Estimation|Maximum Likelihood Estimation]]）**：样本均值与协方差矩阵的估计。
 
-## 6. Wishart 分布（Wishart Distribution）
+## 6. [[Wishart Distribution|Wishart 分布]]（[[Wishart Distribution|Wishart Distribution]]）
 - **6.1 定义（Definition）**：样本协方差矩阵的分布。
 - **6.2 性质（Properties）**：
   - 独立性与可加性。
   - 矩阵变换下的分布性质。
 
 ## 7. 大样本性质（Large Sample Properties）
-- **7.1 中心极限定理（Central Limit Theorem）**：大样本下的渐近性质。
+- **7.1 [[Central Limit Theorem|中心极限定理]]（[[Central Limit Theorem|Central Limit Theorem]]）**：大样本下的渐近性质。
 
 ## 8. 正态性假设检验（Assessing the Assumption of Normality）
 - **8.1 单变量正态性检验（Univariate Normality Tests）**：直方图与概率图方法。
-- **8.2 多变量正态性检验（Multivariate Normality Tests）**：卡方距离与分位数比较。
+- **8.2 多变量正态性检验（[[Multivariate Normal Distribution|Multivariate]] Normality Tests）**：卡方距离与分位数比较。
 
 -----------------------
 # 1. 引言（Introduction）
 
 ## 1.1 概述：多元正态分布的重要性和应用
-- **多元正态分布 (Multivariate Normal Distribution)** 是单变量正态分布的扩展，适用于高维数据。
+- **[[Multivariate Normal Distribution|多元正态分布]] ([[Multivariate Normal Distribution|Multivariate Normal Distribution]])** 是单变量正态分布的扩展，适用于高维数据。
 - 它因其数学性质和可解释性，在多元统计分析中占据重要地位。
-- 许多统计和机器学习技术，例如 **主成分分析 (Principal Component Analysis, PCA)**、**线性判别分析 (Linear Discriminant Analysis, LDA)** 和 **高斯混合模型 (Gaussian Mixture Models, GMM)** 都假设数据遵循多元正态分布。
-- 即使真实数据并不完全服从正态分布，根据 **中心极限定理 (Central Limit Theorem, CLT)**，独立随机变量的和趋近正态分布，因此多元正态分布通常是实际分布的合理近似。
+- 许多统计和机器学习技术，例如 **[[PCA|主成分分析]] ([[PCA|Principal Component Analysis]], [[PCA|PCA]])**、**线性判别分析 ([[Linear Combination|Linear]] Discriminant Analysis, LDA)** 和 **高斯混合模型 (Gaussian Mixture Models, [[GMM|GMM]])** 都假设数据遵循多元正态分布。
+- 即使真实数据并不完全服从正态分布，根据 **[[Central Limit Theorem|中心极限定理]] ([[Central Limit Theorem|Central Limit Theorem]], [[Central Limit Theorem|CLT]])**，独立随机变量的和趋近正态分布，因此多元正态分布通常是实际分布的合理近似。
 
 ---
 
-# 2. 多元正态密度及其性质（The Multivariate Normal Density and Its Properties）
+# 2. 多元正态密度及其性质（The [[Multivariate Normal Distribution|Multivariate]] Normal Density and Its Properties）
 
 ## 2.1 单变量正态分布 (Univariate Normal Distribution)
 
@@ -64,7 +64,7 @@
     $$
     其中：
     - $\mu$ 是均值 (Mean)，表示分布的中心。
-    - $\sigma^2$ 是方差 (Variance)，描述分布的宽度。
+    - $\sigma^2$ 是方差 ([[Variance Decomposition|Variance]])，描述分布的宽度。
 - **概率密度函数 (Probability Density Function, PDF)**：
   - 单变量正态分布的 PDF 表达式为：
     $$
@@ -75,7 +75,7 @@
     2. 范围：概率密度函数的定义域为 $(-\infty, \infty)$。
     3. 面积：曲线下的总面积为 1。
 
-## 2.2 多元正态分布 (Multivariate Normal Distribution)
+## 2.2 [[Multivariate Normal Distribution|多元正态分布]] ([[Multivariate Normal Distribution|Multivariate Normal Distribution]])
 ### 2.2.1 密度函数公式 (Density Function Formula)
 
 - **定义（Definition）**：
@@ -86,17 +86,17 @@
     $$
     其中：
     - $\mu$ 是 $p \times 1$ 的均值向量 (Mean Vector)，表示分布的中心。
-    - $\Sigma$ 是 $p \times p$ 的协方差矩阵 (Covariance Matrix)，描述变量之间的相关性。
+    - $\Sigma$ 是 $p \times p$ 的协方差矩阵 (Covariance [[Matrix Inverse|Matrix]])，描述变量之间的相关性。
 - **概率密度函数 (PDF)**：
   - 多元正态分布的 PDF 表达式为：
     $$
     f(X) = \frac{1}{(2\pi)^{p/2} |\Sigma|^{1/2}} e^{-\frac{1}{2} (X-\mu)'\Sigma^{-1}(X-\mu)}
     $$
     其中：
-    - $|\Sigma|$ 是协方差矩阵的行列式 (Determinant)。
-    - $\Sigma^{-1}$ 是协方差矩阵的逆矩阵 (Inverse Matrix)。
+    - $|\Sigma|$ 是协方差矩阵的行列式 ([[Determinant|Determinant]])。
+    - $\Sigma^{-1}$ 是协方差矩阵的逆矩阵 ([[Matrix Inverse|Inverse Matrix]])。
   - **性质**：
-    1. 协方差矩阵 $\Sigma$ 是正定矩阵 (Positive Definite Matrix)
+    1. 协方差矩阵 $\Sigma$ 是正定矩阵 ([[Positive Definite Matrix|Positive Definite Matrix]])
     2. 分布中心由均值向量 $\mu$ 确定。
 
 假设有两个随机变量，$X$ 和 $Y$，它们服从二维正态分布，均值向量和协方差矩阵设定如下：
@@ -155,7 +155,7 @@ $$
   \Sigma =\begin{pmatrix} \sigma_{11} & \sigma_{12} \\ \sigma_{12} & \sigma_{22} \end{pmatrix}=\begin{pmatrix} \sigma_1^2 & \rho\sigma_1\sigma_2 \\ \rho\sigma_1\sigma_2 & \sigma_2^2 \end{pmatrix}
   $$
   这里：
-  - $\rho$ 是两个随机变量之间的相关系数 (Correlation Coefficient)。
+  - $\rho$ 是两个随机变量之间的相关系数 ([[Correlation Coefficient|Correlation Coefficient]])。
   - $\sigma_1$ 和 $\sigma_2$ 是 $X_1$ 和 $X_2$ 的标准差 (Standard Deviation)。
 
 写作:$y\sim BN(\mu_1,\mu_2,\sigma_1^2,\sigma_2^2,\rho_{12})$
@@ -251,13 +251,13 @@ $$
 - **椭圆性质 (Elliptical Properties)**：
   1. 曲线的形状是椭圆 (Ellipse)，其中心位于均值向量 $\mu$。
   2. 椭圆的方向和大小由协方差矩阵 $\Sigma$ 决定：
-     - 主轴方向对应 $\Sigma$ 的特征向量 (Eigenvectors)。
-     - 主轴长度与特征值 (Eigenvalues) 成正比。
+     - 主轴方向对应 $\Sigma$ 的特征向量 ([[Eigenvectors|Eigenvectors]])。
+     - 主轴长度与特征值 ([[Eigenvalues|Eigenvalues]]) 成正比。
   3. 当协方差矩阵为对角矩阵时，等概率密度曲线为圆形。
 
 --------
 
-# 3. 多元正态分布的性质（Properties of Multivariate Normal Distribution）
+# 3. 多元正态分布的性质（Properties of [[Multivariate Normal Distribution|Multivariate Normal Distribution]]）
 
 **前置示例设定**
 
@@ -295,7 +295,7 @@ $$
 \end{pmatrix}.
 $$
 
-## 3.1 线性组合 (Linear Combinations)
+## 3.1 [[Linear Combination|线性组合]] ([[Linear Combination|Linear]] Combinations)
 
 - 如果 $X \sim N_p(\mu, \Sigma)$ 且 $a$ 是 $p \times 1$ 的常数向量，则 $a'X$ 的分布为：
   $$
@@ -452,7 +452,7 @@ A\mu
 \end{pmatrix}.
 $$
 
-• 协方差矩阵 $A\Sigma A’$ 可以照常做矩阵乘法即可，结果依然是一个 $2\times2$ 的对称、正定矩阵。
+• 协方差矩阵 $A\Sigma A’$ 可以照常做矩阵乘法即可，结果依然是一个 $2\times2$ 的对称、[[Positive Definite Matrix|正定矩阵]]。
 
 ## 3.3 平移 (Translation)
 - 若 $X \sim N_p(\mu, \Sigma)$ 且 $d$ 是 $p \times 1$ 的常量向量，则平移后的分布为：
@@ -460,7 +460,7 @@ $$
   X + d \sim N_p(\mu + d, \Sigma)
   $$
 
-## 3.4 条件分布 (Conditional Distributions)
+## 3.4 条件分布 ([[Conditional Heteroskedasticity|Conditional]] Distributions)
 
 ==考试的时候不考==
 
@@ -652,7 +652,7 @@ $$
 $$
 D^2 = (X - \mu)’\Sigma^{-1}(X - \mu)
 $$
-为它的「**（平方）马哈拉诺比斯距离**」。
+为它的「**（平方）[[Mahalanobis Distance|马哈拉诺比斯距离]]**」。
 
 2. 这个 $D^2$ 服从自由度为 $p$ 的卡方分布（记作 $\chi^2_p$）。
 
@@ -680,11 +680,11 @@ $$
 因为在 $Z$ 中，每个分量 $Z_i$ 都是服从 $N(0,1)$ 的独立随机变量，所以它们的平方和自然就是 $\chi^2_p$ 分布。
 
 
-• **马哈拉诺比斯距离**：在多元正态中，$(X - \mu)’ \Sigma^{-1} (X - \mu)$ 可以看作点 $X$ 到均值 $\mu$ 的“加权距离”——其中 $\Sigma$ 决定了不同坐标方向上的尺度和相关性。
+• **[[Mahalanobis Distance|马哈拉诺比斯距离]]**：在多元正态中，$(X - \mu)’ \Sigma^{-1} (X - \mu)$ 可以看作点 $X$ 到均值 $\mu$ 的“加权距离”——其中 $\Sigma$ 决定了不同坐标方向上的尺度和相关性。
 
-• **卡方分布**：在一维正态中，标准正态随机变量 $Z \sim N(0,1)$ 的平方 $Z^2$ 服从 $\chi^2_1$；多维情况相当于把若干个独立的标准正态平方加起来，就得到 $\chi^2_p$。
+• **[[Chi-square Distribution|卡方分布]]**：在一维正态中，标准正态随机变量 $Z \sim N(0,1)$ 的平方 $Z^2$ 服从 $\chi^2_1$；多维情况相当于把若干个独立的标准正态平方加起来，就得到 $\chi^2_p$。
 
-• **几何或统计推断应用**：该结论常用于统计检验、异常值检测、构造置信椭球等场景。例如，如果我们希望检验 $X$ 是否“偏离” $\mu$ 太多，就可以看它的马哈拉诺比斯距离是否过大，从而判断是否落在置信椭球外面。
+• **几何或统计推断应用**：该结论常用于统计检验、[[Outlier Detection|异常值检测]]、构造置信椭球等场景。例如，如果我们希望检验 $X$ 是否“偏离” $\mu$ 太多，就可以看它的马哈拉诺比斯距离是否过大，从而判断是否落在置信椭球外面。
 
 总之，给定 $X \sim N_p(\mu, \Sigma)$，经过合适的线性变换（$\Sigma^{-1/2}$）可以把它「标准化」成 $Z \sim N_p(0,I_p)$，而由此推导出 $(X-\mu)’,\Sigma^{-1},(X-\mu)$ 的分布是 $\chi^2_p$。
 
@@ -708,7 +708,7 @@ $$
 
 ---
 
-# 5. 多元正态分布的抽样（Sampling from Multivariate Normal Distribution）
+# 5. 多元正态分布的抽样（Sampling from [[Multivariate Normal Distribution|Multivariate Normal Distribution]]）
 
 ## 5.1 联合密度函数 (Joint Density Function)
 
@@ -724,13 +724,13 @@ $$
   - 联合密度函数描述了 $n$ 个样本的联合概率。
   - 总体均值为 $\mu$，协方差矩阵为 $\Sigma$。
 
-## 5.2 最大似然估计 (Maximum Likelihood Estimation)
+## 5.2 最大似然估计 ([[Maximum Likelihood Estimation|Maximum Likelihood Estimation]])
 
 ==考试不会考证明==
 
 ### 5.2.1 多元正态分布的最大似然估计
 
-多元正态分布（Multivariate Normal）的似然函数（Likelihood）。如果我们假设有 $n$ 个观测向量 $X_1, X_2, \dots, X_n$，它们都是从 $N_p(\mu, \Sigma)$（维度为 $p$ 的多元正态分布，均值为 $p \times 1$ 向量 $\mu$，协方差矩阵为 $p \times p$ 的对称正定矩阵 $\Sigma$）中独立同分布采样而来，则它们的联合概率密度函数写成一个乘积形式。具体来说：
+[[Multivariate Normal Distribution|多元正态分布]]（[[Multivariate Normal Distribution|Multivariate]] Normal）的似然函数（[[Likelihood Ratio Test|Likelihood]]）。如果我们假设有 $n$ 个观测向量 $X_1, X_2, \dots, X_n$，它们都是从 $N_p(\mu, \Sigma)$（维度为 $p$ 的多元正态分布，均值为 $p \times 1$ 向量 $\mu$，协方差矩阵为 $p \times p$ 的对称正定矩阵 $\Sigma$）中独立同分布采样而来，则它们的联合概率密度函数写成一个乘积形式。具体来说：
 
   $$
 \prod_{j=1}^n {
@@ -743,7 +743,7 @@ $$
 • 其中，$(X_j - \mu)^\prime \Sigma^{-1} (X_j - \mu)$ 就是“偏离均值向量”的二次型，它衡量了 $X_j$ 相对于均值 $\mu$ 的“距离”（由协方差矩阵 $\Sigma$ 来度量）。
 • 似然函数就是把单个样本点的概率密度相乘得到的结果，因为样本独立同分布。
 
-可以对均值向量和协方差矩阵进行最大似然估计 (MLE)：
+可以对均值向量和协方差矩阵进行最大似然估计 ([[Maximum Likelihood Estimation|MLE]])：
   - **均值向量的估计**：
     $$
     \hat{\mu} = \bar{X} = \frac{1}{n} \sum_{j=1}^n X_j
@@ -781,7 +781,7 @@ $$
 
 ### **5.2.2. 不变性 (Invariance property)**
 
-**结论**：如果$\hat{\theta}$是$\theta$的最大似然估计（MLE），并且$h(\theta)$是关于参数$\theta$的某个函数，那么
+**结论**：如果$\hat{\theta}$是$\theta$的最大似然估计（[[Maximum Likelihood Estimation|MLE]]），并且$h(\theta)$是关于参数$\theta$的某个函数，那么
 $$
 h(\hat{\theta})
 $$
@@ -802,9 +802,9 @@ e^{\hat{\mu}}.
 $$
 在多元正态分布中也是同理：只要将$\hat{\theta}$代入$h(\theta)$即可得到$h(\theta)$的MLE。
 
-### **5.2.3. 多元正态分布中的一些 MLE 举例**
+### **5.2.3. 多元正态分布中的一些 [[Maximum Likelihood Estimation|MLE]] 举例**
 
-1. MLE of $\mu\Sigma^{-1}\mu$
+1. [[Maximum Likelihood Estimation|MLE]] of $\mu\Sigma^{-1}\mu$
 
 对于多元正态分布$N(\mu,\Sigma)$，假设已知
 
@@ -819,7 +819,7 @@ $$
 $$
 \hat{\mu},\hat{\Sigma}^{-1},\hat{\mu}.
 $$
-2. MLE of $\sqrt{\sigma_{ii}}$
+2. [[Maximum Likelihood Estimation|MLE]] of $\sqrt{\sigma_{ii}}$
 
 如果我们只关心协方差矩阵中的对角线元素$\sigma_{ii}$，其最大似然估计（在某些定义下）是
 
@@ -877,7 +877,7 @@ $$
 
 ----------------------
 
-# 6. Wishart 分布（Wishart Distribution）
+# 6. [[Wishart Distribution|Wishart 分布]]（[[Wishart Distribution|Wishart Distribution]]）
 
 ==如果总体是正态分布,那么样本的方差协方差矩阵就是Wishart 分布==
 
@@ -896,7 +896,7 @@ $$
 
 在这里，我们有以下结论：
 
-1. $(n-1)S$服从Wishart分布(Wishart distribution)，记为
+1. $(n-1)S$服从Wishart分布([[Wishart Distribution|Wishart]] distribution)，记为
 
 $$
 
@@ -948,7 +948,7 @@ $$
 
 **4. 一个简单的直观认识**
 
-• **在一维情况下**（$p=1$时），Wishart分布退化为$\chi^2$分布（卡方分布）。因为此时$(n-1)S$就是样本方差乘以$(n-1)$，而它正好符合$\chi^2_{n-1}$分布。
+• **在一维情况下**（$p=1$时），Wishart分布退化为$\chi^2$分布（[[Chi-square Distribution|卡方分布]]）。因为此时$(n-1)S$就是样本方差乘以$(n-1)$，而它正好符合$\chi^2_{n-1}$分布。
 
 • **在多维情况下**（$p>1$），$(n-1)S$不仅是一个标量，而是一个正定对称随机矩阵；Wishart分布可以被视为多维情形下的“卡方分布矩阵版”。
 
@@ -984,7 +984,7 @@ $$
 
 # 7. 大样本性质（Large Sample Properties）
 
-## 7.1 中心极限定理 (Central Limit Theorem)
+## 7.1 [[Central Limit Theorem|中心极限定理]] ([[Central Limit Theorem|Central Limit Theorem]])
 
 **1. 大数定理与中心极限定理的多维情形**
 
@@ -998,11 +998,11 @@ $$
 
 • 这里$\overline{X} = \tfrac{1}{n}\sum_{i=1}^n X_i$是样本均值向量。
 • $\Rightarrow$表示“收敛于分布上”(convergence in distribution)，也称渐近分布。
-• 这实际上是**中心极限定理**在多维情形下的体现：样本均值的分布会在大样本极限下趋近于多元正态分布。
+• 这实际上是**[[Central Limit Theorem|中心极限定理]]**在多维情形下的体现：样本均值的分布会在大样本极限下趋近于多元正态分布。
 
 **2. 当$\overline{X}$来自正态总体时，$n(\overline{X}-\mu)’\Sigma^{-1}(\overline{X}-\mu)$服从$\chi^2_p$**
 
-如果观测$X_i$本身就是从$N_p(\mu,\Sigma)$（多元正态分布）抽样得到的，那么我们可以精确地推导出下面这个结论：
+如果观测$X_i$本身就是从$N_p(\mu,\Sigma)$（[[Multivariate Normal Distribution|多元正态分布]]）抽样得到的，那么我们可以精确地推导出下面这个结论：
 
 $$
 n\bigl(\overline{X}-\mu\bigr)’\Sigma^{-1}\bigl(\overline{X}-\mu\bigr)
@@ -1035,7 +1035,7 @@ $$
 
 **4. 整体逻辑**
 
-1. **中心极限定理(多元)**：$\sqrt{n}(\overline{X} - \mu)$趋于$N_p(0,\Sigma)$。
+1. **[[Central Limit Theorem|中心极限定理]](多元)**：$\sqrt{n}(\overline{X} - \mu)$趋于$N_p(0,\Sigma)$。
 2. **精确结果(正态总体)**：如果$X_i$真来自$N_p(\mu,\Sigma)$，则
 $$
 n(\overline{X}-\mu)’\Sigma^{-1}(\overline{X}-\mu)\sim\chi^2_p.
@@ -1047,7 +1047,7 @@ $$
 
 在$n$和$(n-p)$都很大时成立
 
-这些结果在多元统计推断中非常常用：例如构造关于$\mu$的置信区间、多元假设检验(Hotelling$T^2$)等，都要用到上述卡方分布或近似。
+这些结果在多元统计推断中非常常用：例如构造关于$\mu$的置信区间、多元假设检验([[Hotelling Model|Hotelling]]$T^2$)等，都要用到上述卡方分布或近似。
 
 **5. 总结**
 
@@ -1055,15 +1055,15 @@ $$
 • **当不确定总体是否正态，且仅知$\mu, \Sigma$有限**：可以使用大样本下的中心极限定理（多维版），得到渐近正态以及卡方近似的结论。
 • **用$S$替代$\Sigma$会带来估计误差，但在大样本下依然能使用卡方分布做近似。
 
-## 7.2 样本协方差矩阵的渐近分布 (Asymptotic Distribution of Sample Covariance Matrix)
+## 7.2 样本协方差矩阵的渐近分布 ([[Asymptotic Theory|Asymptotic]] Distribution of Sample Covariance [[Matrix Inverse|Matrix]])
 
 - 假设样本协方差矩阵为 $S = \frac{1}{n-1} \sum_{j=1}^n (X_j - \bar{X})(X_j - \bar{X})'$，当 $n$ 很大时：
-  - $(n-1)S$ 的分布趋于 **Wishart 分布 (Wishart Distribution)**：
+  - $(n-1)S$ 的分布趋于 **[[Wishart Distribution|Wishart 分布]] ([[Wishart Distribution|Wishart Distribution]])**：
     $$
     (n-1)S \sim W_p(\Sigma, n-1)
     $$
 
-## 7.3 卡方分布性质 (Chi-square Distribution Approximation)
+## 7.3 卡方分布性质 ([[Chi-square Distribution|Chi-square Distribution]] Approximation)
 
 - 当样本量较大时，样本均值的平方形式：
   $$
@@ -1093,7 +1093,7 @@ $$
   4. **Shapiro-Wilk 或 Kolmogorov-Smirnov 检验**：
      - 使用统计检验量化正态性。
 
-## 8.2 多变量正态性检验 (Multivariate Normality Tests)
+## 8.2 多变量正态性检验 ([[Multivariate Normal Distribution|Multivariate]] Normality Tests)
 
 ==了解一下就行==
 
@@ -1103,7 +1103,7 @@ $$
 • **多元正态性**要求不仅各分量边际分布是正态，更要求它们的线性组合也呈正态，以及存在某种特定的协方差结构。因此需要额外的检验方法来判断是否符合**联合正态性**(joint normality)。
 
 2. **方法**：
-  1. **卡方距离 (Mahalanobis Distance)**：
+  1. **卡方距离 ([[Mahalanobis Distance|Mahalanobis Distance]])**：
      - 定义每个样本的卡方距离：
        $$
        d_j^2 = (X_j - \bar{X})'S^{-1}(X_j - \bar{X})

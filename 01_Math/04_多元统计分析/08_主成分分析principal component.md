@@ -1,7 +1,7 @@
 
-# 第8章：主成分分析（Principal component）
+# 第8章：[[PCA|主成分分析]]（[[Principal-Agent Problem|Principal]] component）
 
-**1. 主成分分析（PCA）简介**
+**1. [[PCA|主成分分析]]（[[PCA|PCA]]）简介**
 
 • 定义与目标
 • 数据降维与信息解释
@@ -33,17 +33,17 @@
 
 ---
 
-# **1.Principal Component Analysis (PCA)**
+# **1.[[PCA|Principal Component Analysis]] ([[PCA|PCA]])**
 
-本节概览 PCA 的目的与应用场景（降维与解释），形式化推导见后续小节。
+本节概览 [[PCA|PCA]] 的目的与应用场景（降维与解释），形式化推导见后续小节。
 
-# **2. Population Principal Components**
+# **2. [[Population Growth and Economic Development|Population]] [[Principal-Agent Problem|Principal]] Components**
 
 ## 2.1做法
 
 • 给定 $X = \begin{pmatrix}X_1  \\ X_2  \\  \vdots  \\  X_p\end{pmatrix}$，具有均值 $\mu$ 和协方差矩阵 $\Sigma$。
-• 特征值：$\lambda_1 \geq \lambda_2 \geq \dots \geq \lambda_p$。
-• 特征向量：$e_1, e_2, \dots, e_p$。
+• [[Eigenvalues|特征值]]：$\lambda_1 \geq \lambda_2 \geq \dots \geq \lambda_p$。
+• [[Eigenvectors|特征向量]]：$e_1, e_2, \dots, e_p$。
 • 主成分定义为：
 $$ Y_i = e_i’X = \sum_{j=1}^p e_{ij}X_j, \quad i = 1, 2, \dots, p $$
 
@@ -67,7 +67,7 @@ $$ \frac{\lambda_k}{\sum_{i=1}^p \lambda_i} $$
 
 ## **2.2Principal Components of Standardized Variables**
 
-基于协方差矩阵与基于相关矩阵的 PCA 结果不同；前者受量纲影响，后者在标准化后消除量纲差异。
+基于协方差矩阵与基于相关矩阵的 [[PCA|PCA]] 结果不同；前者受量纲影响，后者在标准化后消除量纲差异。
 
 • 标准化变量：$Z_j = \frac{X_j - \mu_j}{\sqrt{\sigma_{jj}}}$。
 • 标准化后的协方差矩阵为相关矩阵 $\rho$。
@@ -75,7 +75,7 @@ $$ \frac{\lambda_k}{\sum_{i=1}^p \lambda_i} $$
 • 主成分定义为：
 $$ Y_i = e_i’Z = e_i’(X - \mu) $$
 
-## **2.3Sample Principal Components**
+## **2.3Sample [[Principal-Agent Problem|Principal]] Components**
 
 用样本协方差矩阵：$S = \frac{1}{n-1}(X - \bar{X})(X - \bar{X})’$。代替$\Sigma$,其余不变
 
@@ -91,7 +91,7 @@ $$ \frac{\sum_{i=1}^k \lambda_i}{p} $$
 
 • 当样本量 $n$ 足够大且在正态等正则条件下，样本特征值具备渐近正态性：
 • $\sqrt{n}(\hat{\lambda}_i - \lambda_i) \overset{a}{\sim} N\!\big(0,\,2\lambda_i^2\big)$。
-• 特征值/特征向量的联合性质依赖分布假设，独立性一般需额外条件。
+• [[Eigenvalues|特征值]]/特征向量的联合性质依赖分布假设，独立性一般需额外条件。
 • $\lambda_i$ 的近似置信区间：
 $$ \hat{\lambda}_i \pm Z_{\alpha/2} \sqrt{\tfrac{2\lambda_i^2}{n}} $$
 ==大样本性质不考==

@@ -4,10 +4,10 @@
 **一件商品在实际使用时，雇主能不能够方便的把其他的使用者排除在外，如果能比较方便地做到，就说明它有“排他性”，不方便做到，就说明它不具有“排他性”。**
 a 王 提 Fx v= eS IN WAS RR 非 竞 争 性 有 线 电视 、 收 费 软 件 | 无 线 广播 、 开 源 软
 ![[Pasted image 20240312133200.png]]
-* 纯公共物品(Pure Public Goods)：非竞争性，非排他性
+* 纯公共物品(Pure [[Public Goods|Public Goods]])：非竞争性，非排他性
 * 私人物品(Private Goods)：竞争性，排他性
-* 俱乐部物品(Club Goods)：非竞争性，排他性
-* 公共资源(Common Resources)：竞争性，非排他性
+* [[Club Goods|俱乐部物品]]([[Club Goods|Club Goods]])：非竞争性，排他性
+* [[Common Resources|公共资源]]([[Common Resources|Common Resources]])：竞争性，非排他性
 
 举例：
 - Basic research（基础科研）
@@ -25,11 +25,11 @@ a 王 提 Fx v= eS IN WAS RR 非 竞 争 性 有 线 电视 、 收 费 软 件 
 给每个人提供的数量不一样但是价格一样。
 $$ \left[\frac{\mathrm{Pree~}{\mid\vphantom[[object Object]]{\enspace0.5~}}{\mid\cfrac{\mathrm{Gve}}{\mid\cfrac{\mathrm{Ate}}{\mid\mathrm{A}}}}}{\mid\cfrac{\mathfrak{I}}{\mid\cfrac{\mathfrak{A}}{\mid\cfrac{\mathrm{A}}{\mid\mathrm{A}}}}{\mid\cfrac{\mathfrak{A}}{\mid\cfrac{\mathrm{A}}{\mid\cfrac{\mathrm{A}}{\mid\mathrm{A}}}}{\mid\cfrac{\mathrm{A}}{\mid\Upsilon}}}}\right] $$
 ![[Pasted image 20240314092642.png]]
-$$ \begin{array}{l}{{\frac{\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma}}{\left|\mp\Gamma\right|}}}\\ {{\frac{\Gamma\Gamma\left|\overline{{{\bf\Psi}}}}{\pm\Gamma\Lambda\overline{{{\bf\Psi}}}\Sigma\Gamma\Sigma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\overline{{{\bf\Psi}}}}{\left|\frac{\Gamma\Gamma\overline{{{\bf\Psi}}}}{\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\Gamma\overline{{{\bf\Psi}}}}\overline{{{{\bf\Psi}}}}\Gamma\overline{{{\bf\Psi}}}\overline{{{\bf\Psi}}}}{\left|\frac{\Gamma\overline{{{\bf\Psi}}}}}\overline{{{\bf\Psi}}}\right|}}}\\ {{\frac{\left|\overline{{{\bf\Psi}}}}\left|\Pi\overline{{\Pi}}\right|\Pi\overline{{\Pi\Pi}}\overline{{{\Pi}}}}\Pi\Pi\Sigma\Pi\Sigma\right|\Pi\Sigma\right|}}}}\\ {{{{\Sigma}}}}{{{\Pi}}}}}\end{array}{\right.\right. $$
+$$ \begin{array}{l}{{\frac{\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]}}{\left|\mp\[[Gamma|Gamma]]\right|}}}\\ {{\frac{\[[Gamma|Gamma]]\[[Gamma|Gamma]]\left|\overline{{{\bf\Psi}}}}{\pm\[[Gamma|Gamma]]\Lambda\overline{{{\bf\Psi}}}\Sigma\[[Gamma|Gamma]]\Sigma\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\overline{{{\bf\Psi}}}}{\left|\frac{\[[Gamma|Gamma]]\[[Gamma|Gamma]]\overline{{{\bf\Psi}}}}{\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\[[Gamma|Gamma]]\overline{{{\bf\Psi}}}}\overline{{{{\bf\Psi}}}}\[[Gamma|Gamma]]\overline{{{\bf\Psi}}}\overline{{{\bf\Psi}}}}{\left|\frac{\[[Gamma|Gamma]]\overline{{{\bf\Psi}}}}}\overline{{{\bf\Psi}}}\right|}}}\\ {{\frac{\left|\overline{{{\bf\Psi}}}}\left|\Pi\overline{{\Pi}}\right|\Pi\overline{{\Pi\Pi}}\overline{{{\Pi}}}}\Pi\Pi\Sigma\Pi\Sigma\right|\Pi\Sigma\right|}}}}\\ {{{{\Sigma}}}}{{{\Pi}}}}}\end{array}{\right.\right. $$
 ![[Pasted image 20240314092652.png]]
 每个人MRS相同，但个人可以消费不同的数量。总需求是对不同数量的横向加总。
 # 公共物品的有效提供
-ee ee Market $550 $450 $350 $250 (DA**) ed ttl
+ee ee [[Market Risk|Market]] $550 $450 $350 $250 (DA**) ed ttl
 ![[Pasted image 20240314095014.png]]
 每个人的支付意愿不同，但是提供的数量完全相同
 $$ \begin{array}{c}{{{}_{n}\frac{\mathrm{\bigg:}\!}{}_{n}\frac{\mathrm{\bigg|}--\mathrm{\boldmath~---\mathrm{\boldmath~--~}\mathrm{\bf--~}}-\mathrm{\boldmath~--~}\mathrm{\boldmath~--~}\mathrm{\boldmath~-~}}}\\ {{{}_{n}\mathrm{\scriptsize~\bar{\scriptstyle\leq}\!}\quad{}\!\!\!\!\!}}&{{{}\!\!\!\!}}\\ {{{}^{\quad}\!\!\!}_{n}^{\mathrm{\scriptsize~\ell}\!\!\!\leq\!\!\!\!--\mathrm{\boldmath~--\mathrm{\boldmath~--\mathrm{\boldmath~-~}\!\!~--\mathrm{\boldmath~-~}-\mathrm{\boldmath~-~}-\mathrm{\boldmath~-~}}-\mathrm{\boldmath~-~}\mathrm{\boldmath~-~}}}\\ {{{}\!\!\!\!\!}}&{{{}\,\,\,~~~~~~i}}\end{array} $$

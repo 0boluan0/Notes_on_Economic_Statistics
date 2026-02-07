@@ -1,5 +1,5 @@
 
-# 1. OLS
+# 1. [[OLS Basics|OLS]]
 
 ## **1.1. 模型形式**
 
@@ -29,7 +29,7 @@
     - 协方差矩阵：$Var(\hat{\boldsymbol{\beta}}) = \sigma^2(\mathbf{X}'\mathbf{X})^{-1}$
 - 拟合值与残差：
     - 拟合值：$\hat{\mathbf{Y}} = \mathbf{X}\hat{\boldsymbol{\beta}}$
-    - 残差：$\hat{\boldsymbol{\epsilon}} = \mathbf{Y} - \hat{\mathbf{Y}}$
+    - [[Residual|残差]]：$\hat{\boldsymbol{\epsilon}} = \mathbf{Y} - \hat{\mathbf{Y}}$
 
 ## **1.4. 总平方和分解**
 
@@ -45,11 +45,11 @@
     - $R^2$ 越接近 $1$，模型拟合效果越好。
 ## **1.6. 假设检验**
 
-1. **总体显著性检验** (F检验)：
+1. **总体显著性检验** ([[F-test|F检验]])：
     - 检验假设：$H_0: \beta_1 = \beta_2 = \cdots = \beta_k = 0$
-    - F统计量： $$F = \frac{\frac{RSS}{k}}{\frac{ESS}{n-k-1}}$$
+    - [[F-test|F统计量]]： $$F = \frac{\frac{RSS}{k}}{\frac{ESS}{n-k-1}}$$
     - $F \sim F_{k, n-k-1}$。
-2. **单个变量检验** (t检验)：
+2. **单个变量检验** ([[t Test|t检验]])：
     - 检验假设：$H_0: \beta_j = 0$
     - t统计量： $$t = \frac{\hat{\beta}_j}{\sqrt{\sigma^2 (\mathbf{X}'\mathbf{X})^{-1}_{jj}}}$$
     - $t \sim t_{n-k-1}$。

@@ -3,7 +3,7 @@
 # 1.introduction
 - **目的**: 使用少量 随机因子描述变量间的协方差结构。
 - **核心思想**: 如果变量可按相关性分组，则组内变量高度相关，组间变量相关性较低。每组用一个因子表示。
-- **与主成分分析（PCA）的关系**: 因子分析可以看作是PCA的扩展。
+- **与主成分分析（[[PCA|PCA]]）的关系**: 因子分析可以看作是PCA的扩展。
 
 ---
 
@@ -35,10 +35,10 @@
 
 ### 公共度与特殊方差
 
-- 公共度 $h_i^2$:
+- [[Communality|公共度]] $h_i^2$:
   $$h_i^2 = \sum_{j=1}^m l_{ij}^2$$
   表示第 $i$ 个变量由公因子解释的方差部分。
-- 特殊方差 $\psi_i$:
+- [[Specific Variance|特殊方差]] $\psi_i$:
   $$\psi_i = \sigma_{ii} - h_i^2$$
 
   表示未被公因子解释的方差。
@@ -55,15 +55,15 @@
 1. 使用样本协方差矩阵 $S$。
 2. 特征值分解:
    $$\Sigma = \sum_{j=1}^p \lambda_j e_j e_j'$$
-   - $\lambda_j$: 特征值，$e_j$: 对应特征向量。
+   - $\lambda_j$: [[Eigenvalues|特征值]]，$e_j$: 对应特征向量。
 3. 近似:
    $$\Sigma \approx LL'$$
    - 保留最大的 $m$ 个特征值。
 
-4. 因子载荷:
+4. [[Factor Loadings|因子载荷]]:
    $$L = [\sqrt{\lambda_1}e_1, \sqrt{\lambda_2}e_2, \dots, \sqrt{\lambda_m}e_m]$$
 
-5. 特殊方差:
+5. [[Specific Variance|特殊方差]]:
    $$\psi_i = \sigma_{ii} - \sum_{j=1}^m l_{ij}^2$$
 ### **例题**
 
@@ -76,7 +76,7 @@ S = \begin{pmatrix}
 0.6 & 0.5 & 1.5
 \end{pmatrix}.
 $$
-请使用“主成分法”（Principal Components，简称PC法）来做因子分析，假设我们希望提取$m=2$个因子。请完成以下步骤：
+请使用“主成分法”（[[Principal-Agent Problem|Principal]] Components，简称PC法）来做因子分析，假设我们希望提取$m=2$个因子。请完成以下步骤：
 1. 对矩阵$S$做特征值分解，得到其特征值$\lambda_j$和对应的特征向量$e_j$。
 2. 从大到小选取最大的2个特征值，得到对应的特征向量，并计算因子载荷矩阵
 $$L = \big[\sqrt{\lambda_1}  e_1; \sqrt{\lambda_2}  e_2\big].$$
@@ -110,7 +110,7 @@ $$
 • $\lambda_3 \approx 1.0,\quad e_3 \approx \begin{pmatrix} 0.59  \\  0.12  \\  -0.80 \end{pmatrix}$
 **说明：**
 1. 特征值从大到小排列（$\lambda_1 \ge \lambda_2 \ge \lambda_3$）。
-2. 特征向量 $e_j$ 一般取单位向量（范数为1）。
+2. [[Eigenvectors|特征向量]] $e_j$ 一般取单位向量（范数为1）。
 
 **步骤2：选取前$m=2$个特征值并计算因子载荷矩阵**
 
@@ -151,7 +151,7 @@ $$
 在样本层面上通常拿 $S$ 代替 $\Sigma$ 进行估计。
 2. **计算特殊方差：**
 
-对每个变量$i$（对应矩阵$S$的第$i$行/列），特殊方差
+对每个变量$i$（对应矩阵$S$的第$i$行/列），[[Specific Variance|特殊方差]]
 $$
 \psi_i = \sigma_{ii} - \sum_{j=1}^m l_{ij}^2,
 $$
@@ -203,6 +203,6 @@ $$
 
 - **残差分析**: 检查 $S - (LL' + \Psi)$。
 - **检验方法**:
-  - 似然比检验:
+  - [[Likelihood Ratio Test|似然比检验]]:
     $$-2\ln\Lambda \sim \chi^2$$
-  - 信息准则: AIC 和 BIC。
+  - 信息准则: [[AIC|AIC]] 和 [[BIC|BIC]]。

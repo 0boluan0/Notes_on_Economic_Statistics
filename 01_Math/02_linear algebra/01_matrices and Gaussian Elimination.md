@@ -6,11 +6,11 @@
 
 ## 方程消元
 
- 线性代数(linear algebra)的核心是解联立线性方程组(system of linear equations).
+ [[Linear Algebra-hub|线性代数]](linear algebra)的核心是解联立线性方程组(system of linear equations).
 
 寻找主元(pivot)的过程就是将一个矩阵(matrix)转为上三角矩阵(upper triangular matrix)的过程.对角线上的每个值都是一个主元.主元不能为0.
 
-## 矩阵消元(Matrix Elimination)
+## 矩阵消元([[Matrix Inverse|Matrix]] Elimination)
 ### 原理
 
 矩阵消元的过程和方程消元的过程是一致的,区别在于需要把过程写为矩阵(matrix)形式.即不能说用哪一行减去哪一行之类的,应该说是使用目标矩阵乘以某一矩阵以得到目标矩阵的上三角矩阵(upper triangular matrix)形式.
@@ -104,7 +104,7 @@ $$
 
 可以看作右侧矩阵的行按照左侧矩阵信息线性相加
 
-### 列表示(Column Representation)
+### 列表示([[Column Space|Column]] Representation)
 
 可以看作左侧矩阵的列按照右侧矩阵的系数线性相加
 
@@ -112,15 +112,15 @@ $$
 
 AB可以看作A的columnxB的rows的sum.同时这也意味着,可以将矩阵分成块,然后按找块的位置相乘.块之间要保证其形状可以乘.然后在块这一层级上使用一样的原则进行矩阵的乘法
 
-## 逆矩阵(Inverse Matrix, 方阵)
+## [[Matrix Inverse|逆矩阵]]([[Matrix Inverse|Inverse Matrix]], 方阵)
 
 $A^{-1}A$是方阵(square matrix)的左逆.在方阵中,左逆等于右逆.只要A存在逆矩阵,放在哪里不影响.非方阵则不成立.
 
 可逆矩阵也称为非奇异矩阵(nonsingular matrix).
 
-### 奇异矩阵(Singular Matrix)
+### [[Singular Matrix|奇异矩阵]]([[Singular Matrix|Singular Matrix]])
 
-奇异矩阵的行列式(determinant)值为0 .或者说能够找到一个非零向量x,使Ax=0,这样的矩阵没有逆. 即不可逆矩阵(奇异矩阵)其列能够通过线性组合得到0 .
+奇异矩阵的行列式(determinant)值为0 .或者说能够找到一个非零向量x,使Ax=0,这样的矩阵没有逆. 即不可逆矩阵([[Singular Matrix|奇异矩阵]])其列能够通过线性组合得到0 .
 
 ### 逆矩阵的计算
 
@@ -165,7 +165,7 @@ AB的逆为$B^{-1}A^{-1}$.先穿袜子后穿鞋,先脱鞋再脱袜子.
 
 # 矩阵消元的拆分形式
 
-A=LU
+A=[[LU Decomposition|LU]]
 
 U是A经过消元后得到的上三角矩阵(upper triangular matrix),L就是消元的过程.L将是一个下三角矩阵(lower triangular matrix),所以使用L(lower)
 
@@ -173,18 +173,18 @@ U是A经过消元后得到的上三角矩阵(upper triangular matrix),L就是消
 
 如果没有行变换,消元乘数可以直接写进L中
 
-# 置换矩阵(Permutation Matrix)
+# [[Permutation Matrix|置换矩阵]]([[Permutation Matrix|Permutation Matrix]])
 
 进行行变换的矩阵叫置换矩阵.保证A的主元一定是非零主元. 使用置换矩阵记录行变换过程.
-由A=LU变为PA=LU.对于任何的可逆矩阵都可以写为这种形式.
+由A=LU变为PA=[[LU Decomposition|LU]].对于任何的可逆矩阵都可以写为这种形式.
 
 置换矩阵是行重新排布的单位矩阵(identity matrix).
 
-# 转置矩阵(Transpose Matrix)
+# 转置矩阵(Transpose [[Matrix Inverse|Matrix]])
 
 行列标号改变.
 
-## 对称矩阵(Symmetric Matrix)
+## [[Symmetric Matrix|对称矩阵]]([[Symmetric Matrix|Symmetric Matrix]])
 
 转置矩阵等于其本身.对称矩阵一定是方阵.一个矩阵乘以自己的转置一定是对称矩阵
 

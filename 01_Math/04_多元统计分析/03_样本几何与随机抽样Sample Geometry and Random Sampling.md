@@ -1,50 +1,50 @@
 
-# 第3章：样本几何与随机抽样（Sample Geometry and Random Sampling）
+# 第3章：样本几何与随机抽样（Sample Geometry and [[Random Effects Model|Random]] Sampling）
 
 ## 1. 样本的几何结构（The Geometry of the Sample）
-- **数据矩阵表示（Data Matrix Representation）**
+- **数据矩阵表示（Data [[Matrix Inverse|Matrix]] Representation）**
   - 数据矩阵的结构与记号。
 - **均值修正向量与偏差向量（Mean-Corrected Vector and Deviation Vector）**
   - 定义（Definition）与数学表示。
 - **偏差向量之间的夹角（Angles Between Deviation Vectors）**
   - 夹角余弦与相关系数之间的关系。
 
-## 2. 随机样本与样本均值/协方差矩阵的期望（Random Sample and the Expected Values of the Sample Mean and Covariance Matrix）
-- **样本协方差矩阵的定义（Definition of the Sample Covariance Matrix）**
+## 2. 随机样本与样本均值/协方差矩阵的期望（[[Random Effects Model|Random]] Sample and the Expected Values of the Sample Mean and Covariance [[Matrix Inverse|Matrix]]）
+- **样本协方差矩阵的定义（Definition of the Sample Covariance [[Matrix Inverse|Matrix]]）**
   - 公式及其组成。
-- **广义方差（Generalized Variance）**
+- **广义方差（Generalized [[Variance Decomposition|Variance]]）**
   - 通过协方差矩阵行列式进行解释。
   - 通过协方差矩阵迹衡量总体变异。
 
-## 3. 广义方差的几何解释（Geometric Interpretation of Generalized Variance）
+## 3. 广义方差的几何解释（Geometric Interpretation of Generalized [[Variance Decomposition|Variance]]）
 - **面积与体积（Area and Volume）**
   - 低维与高维空间中面积/体积的计算。
 - **高维协方差特征（High-Dimensional Covariance Characteristics）**
   - 当样本量 $n$ 小于变量数 $p$ 时的含义。
 
-## 4. 样本协方差矩阵的矩阵表示（Matrix Representation of the Sample Covariance Matrix）
-- **矩阵表示（Matrix Representation）**
+## 4. 样本协方差矩阵的矩阵表示（[[Matrix Inverse|Matrix]] Representation of the Sample Covariance [[Matrix Inverse|Matrix]]）
+- **矩阵表示（[[Matrix Inverse|Matrix]] Representation）**
   - 偏差矩阵及其在协方差计算中的作用。
-- **行列式与特征值（Determinant and Eigenvalues）**
+- **行列式与特征值（[[Determinant|Determinant]] and [[Eigenvalues|Eigenvalues]]）**
   - 用特征值解释 $p$ 维空间中的数据变异性。
 - **秩亏缺情况（Rank-Deficient Cases）**
   - 处理协方差矩阵行列式为 0 的情形。
 
-## 5. 标准化协方差矩阵与相关矩阵（Standardized Covariance Matrix and Correlation Matrix）
+## 5. 标准化协方差矩阵与相关矩阵（Standardized Covariance [[Matrix Inverse|Matrix]] and [[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]]）
 - **标准化（Standardization）**
   - 通过变量标准化得到相关矩阵。
-- **相关矩阵表示（Correlation Matrix Representation）**
+- **相关矩阵表示（[[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]] Representation）**
   - 样本相关矩阵的数学表达。
-- **协方差矩阵与相关矩阵的关系（Relationship Between Covariance and Correlation Matrices）**
+- **协方差矩阵与相关矩阵的关系（Relationship Between Covariance and [[Correlation Coefficient|Correlation]] Matrices）**
   - 使用对角缩放矩阵的转换公式。
 
 -----
 
 # 1. 样本的几何结构（The Geometry of the Sample）
 
-## 1.1 数据矩阵表示（Data Matrix Representation）
+## 1.1 数据矩阵表示（Data [[Matrix Inverse|Matrix]] Representation）
 
-数据矩阵（Data Matrix）$X_{n \times p}$ 用于表示 $n$ 个观测样本在 $p$ 个变量上的取值，其结构为：
+数据矩阵（Data [[Matrix Inverse|Matrix]]）$X_{n \times p}$ 用于表示 $n$ 个观测样本在 $p$ 个变量上的取值，其结构为：
 $$
 X_{n \times p} =
 \begin{pmatrix}
@@ -110,20 +110,20 @@ $$
   $$
   其中：
   - $s_{ik}$ 是样本协方差（Sample Covariance）。
-  - $s_{ii}$ 和 $s_{kk}$ 分别是 $d_i$ 和 $d_k$ 的样本方差（Sample Variance）。
-  - $r_{ik}$ 是样本相关系数（Sample Correlation Coefficient）。
+  - $s_{ii}$ 和 $s_{kk}$ 分别是 $d_i$ 和 $d_k$ 的样本方差（Sample [[Variance Decomposition|Variance]]）。
+  - $r_{ik}$ 是样本相关系数（Sample [[Correlation Coefficient|Correlation Coefficient]]）。
 
 - 这一结果的几何意义是：相关系数是偏差向量夹角余弦值的标准化形式。当 $r_{ik}=1$ 时，两个变量完全正相关；当 $r_{ik}=-1$ 时，完全负相关；当 $r_{ik}=0$ 时，变量无关。
 
 ---
 
-# 2. 随机样本与样本均值/协方差矩阵的期望（Random Sample and the Expected Values of the Sample Mean and Covariance Matrix）
+# 2. 随机样本与样本均值/协方差矩阵的期望（[[Random Effects Model|Random]] Sample and the Expected Values of the Sample Mean and Covariance [[Matrix Inverse|Matrix]]）
 
 随机样本与样本均值和协方差矩阵的期望值
 
-## 2.1 样本协方差矩阵（Sample Covariance Matrix）
+## 2.1 样本协方差矩阵（Sample Covariance [[Matrix Inverse|Matrix]]）
 
-样本协方差矩阵（Sample Covariance Matrix）用于衡量变量之间的线性关系，其定义为：
+样本协方差矩阵（Sample Covariance [[Matrix Inverse|Matrix]]）用于衡量变量之间的线性关系，其定义为：
 $$
 S = ((s_{ik})),
 $$
@@ -144,17 +144,17 @@ $$
 S = \frac{1}{n-1} D^T D.
 $$
 
-D是Deviation Matrix(偏差矩阵)
+D是Deviation [[Matrix Inverse|Matrix]](偏差矩阵)
 
 ---
 
-## 2.2 广义方差（Generalized Variance）
+## 2.2 广义方差（Generalized [[Variance Decomposition|Variance]]）
 
 为了用一个数值总结协方差矩阵所表达的变异性，可以使用以下两种方法：
 
-### 2.2.1 $S$ 的行列式（Determinant of $S$）
+### 2.2.1 $S$ 的行列式（[[Determinant|Determinant]] of $S$）
 
-样本协方差矩阵 $S$ 的行列式被称为**推广样本方差**（Generalized Sample Variance）：
+样本协方差矩阵 $S$ 的行列式被称为**推广样本方差**（Generalized Sample [[Variance Decomposition|Variance]]）：
 $$
 |S| = \text{det}(S).
 $$
@@ -162,7 +162,7 @@ $$
 
 ### 2.2.2 $S$ 的迹（Trace of $S$）
 
-另一种方法是使用协方差矩阵的迹（Trace），即对角线元素之和，表示总样本方差（Total Sample Variance）：
+另一种方法是使用协方差矩阵的迹（Trace），即对角线元素之和，表示总样本方差（Total Sample [[Variance Decomposition|Variance]]）：
 $$
 \text{Trace}(S) = s_{11} + s_{22} + \cdots + s_{pp}.
 $$
@@ -170,14 +170,14 @@ $$
 
 ---
 
-## 2.3 广义方差的性质（Properties of Generalized Variance）
+## 2.3 广义方差的性质（Properties of Generalized [[Variance Decomposition|Variance]]）
 
 - **高维情况**：当样本数量 $n$ 小于或等于变量数量 $p$ 时，$|S| = 0$。此时协方差矩阵的秩不足，称为高维退化（High-Dimensional Degeneracy）。
 - **变量选择的影响**：当 $|S|=0$ 时，说明至少一个变量的偏差向量是其他变量偏差向量的线性组合。此时需要移除部分变量以确保矩阵为满秩。
 
 ---
 
-## 2.4 广义方差的几何解释（Geometric Interpretation of Generalized Variance）
+## 2.4 广义方差的几何解释（Geometric Interpretation of Generalized [[Variance Decomposition|Variance]]）
 
 - **面积与体积**：对于二维（$p=2$）情形，推广方差与椭圆面积的平方成正比：
   $$
@@ -194,13 +194,13 @@ $$
 
 ---
 
-# 3. 广义方差的几何解释（Geometric Interpretation of Generalized Variance）
+# 3. 广义方差的几何解释（Geometric Interpretation of Generalized [[Variance Decomposition|Variance]]）
 
-推广方差（Generalized Variance）通过几何视角揭示了样本协方差矩阵中变异性的分布特性，特别是在二维和高维空间中。行列式（Determinant）和矩阵迹（Trace）的几何意义分别对应面积、体积和总体变异性的量化。
+推广方差（Generalized [[Variance Decomposition|Variance]]）通过几何视角揭示了样本协方差矩阵中变异性的分布特性，特别是在二维和高维空间中。[[Determinant|行列式]]（[[Determinant|Determinant]]）和矩阵迹（Trace）的几何意义分别对应面积、体积和总体变异性的量化。
 
 ---
 
-## 3.1 二维广义方差：椭圆面积（Generalized Variance in 2D: Elliptical Area in Two Dimensions）
+## 3.1 二维广义方差：椭圆面积（Generalized [[Variance Decomposition|Variance]] in 2D: Elliptical Area in Two Dimensions）
 
 ### 椭圆面积（二维情形）
 
@@ -242,7 +242,7 @@ $$
 
 ---
 
-## 3.2 高维广义方差：超体积（Generalized Variance in Higher Dimensions: Hypervolume）
+## 3.2 高维广义方差：超体积（Generalized [[Variance Decomposition|Variance]] in Higher Dimensions: Hypervolume）
 
 ### 超体积（高维情形）
 
@@ -253,7 +253,7 @@ $$
 
 ### 几何特性：
 
-1. **变量的独立性**：当所有变量完全独立（偏差向量两两正交）时，超体积达到最大值，行列式 $|S|$ 也取最大值。
+1. **变量的独立性**：当所有变量完全独立（偏差向量两两正交）时，超体积达到最大值，[[Determinant|行列式]] $|S|$ 也取最大值。
 2. **变量的相关性**：当部分变量之间高度相关或完全相关时，偏差向量共线或共面，导致高维体积减小，甚至为零。
 3. **退化情况**：当样本数 $n \leq p$ 时，协方差矩阵的秩不足，高维体积退化为零（$|S| = 0$）。
 
@@ -288,7 +288,7 @@ $$
 - 特点：与行列式相比，Trace 不考虑变量之间的相关性。
 
 **对比**：
-1. 行列式（$|S|$）强调变量的交互关系，通过面积或体积体现相关性。
+1. [[Determinant|行列式]]（$|S|$）强调变量的交互关系，通过面积或体积体现相关性。
 2. 矩阵迹（Trace）仅反映各变量单独的变异性，不受变量相关性影响。
 
 ---
@@ -304,7 +304,7 @@ $$
    - 相关矩阵的行列式可提供标准化后的推广方差。
 
 ---
-# 4. 样本协方差矩阵的矩阵表示（Matrix Representation of the Sample Covariance Matrix）
+# 4. 样本协方差矩阵的矩阵表示（[[Matrix Inverse|Matrix]] Representation of the Sample Covariance [[Matrix Inverse|Matrix]]）
 
 样本协方差矩阵的矩阵表示
 
@@ -312,9 +312,9 @@ $$
 
 ---
 
-## 4.1 矩阵表示（Matrix Representation）
+## 4.1 矩阵表示（[[Matrix Inverse|Matrix]] Representation）
 
-### 偏差矩阵（Deviation Matrix）的定义
+### 偏差矩阵（Deviation [[Matrix Inverse|Matrix]]）的定义
 
 假设数据矩阵 $X_{n \times p}$ 表示 $n$ 个样本在 $p$ 个变量上的观测值，其均值矩阵 $X̄$ 表示为：
 $$
@@ -322,7 +322,7 @@ X̄ = \frac{1}{n} \mathbf{1}_{n \times 1} \cdot \mathbf{1}_{1 \times p} X,
 $$
 其中 $\mathbf{1}_{n \times 1}$ 是 $n$ 维列向量，$\mathbf{1}_{1 \times p}$ 是 $p$ 维行向量。
 
-偏差矩阵（Deviation Matrix）定义为：
+偏差矩阵（Deviation [[Matrix Inverse|Matrix]]）定义为：
 $$
 D = X - \mathbf{1}_{n \times 1} X̄.
 $$
@@ -342,14 +342,14 @@ $$
 
 ---
 
-## 4.2 行列式与特征值（Determinant and Eigenvalues）
+## 4.2 行列式与特征值（[[Determinant|Determinant]] and [[Eigenvalues|Eigenvalues]]）
 ### 协方差矩阵行列式的几何意义
 
-样本协方差矩阵的行列式（Determinant）$|S|$ 反映了数据在 $p$ 维空间中生成的高维超体积的平方：
+样本协方差矩阵的行列式（[[Determinant|Determinant]]）$|S|$ 反映了数据在 $p$ 维空间中生成的高维超体积的平方：
 $$
 |S| = \prod_{i=1}^p \lambda_i,
 $$
-其中 $\lambda_1, \lambda_2, \dots, \lambda_p$ 是协方差矩阵的特征值（Eigenvalues）。
+其中 $\lambda_1, \lambda_2, \dots, \lambda_p$ 是协方差矩阵的特征值（[[Eigenvalues|Eigenvalues]]）。
 
 ### 特征值与数据变异性的关系
 
@@ -366,14 +366,14 @@ $$
 ### 几何直观
 
 - 如果一个特征值为零，说明数据在该方向上没有变异性，变量间存在完全的线性相关。
-- 特征值的大小反映了不同方向上的变异性分布。例如，在主成分分析（PCA）中，特征值越大，对应的主成分方向越重要。
+- 特征值的大小反映了不同方向上的变异性分布。例如，在主成分分析（[[PCA|PCA]]）中，特征值越大，对应的主成分方向越重要。
 
 ---
 
 ## 4.3 秩亏缺情形（Rank-Deficient Cases）
 ### 秩不足（Rank Deficiency）的定义
 
-协方差矩阵的秩（Rank）表示变量间独立方向的个数。当矩阵秩不足（Rank-Deficient）时，行列式 $|S| = 0$。这通常发生在以下情况：
+协方差矩阵的秩（Rank）表示变量间独立方向的个数。当矩阵秩不足（Rank-Deficient）时，[[Determinant|行列式]] $|S| = 0$。这通常发生在以下情况：
 1. **样本数小于变量数（$n < p$）**：
    - 当样本数不足以覆盖变量维度时，协方差矩阵无法生成满秩矩阵。
    - 高维数据中常见这种情况（称为 "curse of dimensionality"）。
@@ -383,19 +383,19 @@ $$
 ### 处理秩不足的方法
 
 1. **移除冗余变量**：
-   - 如果变量间存在完全线性相关性，可以通过主成分分析（PCA）或变量选择方法移除冗余变量。
+   - 如果变量间存在完全线性相关性，可以通过主成分分析（[[PCA|PCA]]）或变量选择方法移除冗余变量。
 2. **正则化协方差矩阵**：
    - 在高维情况下，可以对协方差矩阵进行正则化（Regularization），例如加上小的正对角元素：
      $$
      S_{\text{reg}} = S + \epsilon I,
      $$
      其中 $\epsilon$ 是正则化参数，$I$ 是单位矩阵。
-3. **使用相关矩阵（Correlation Matrix）替代**：
+3. **使用相关矩阵（[[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]]）替代**：
    - 标准化变量后使用相关矩阵代替协方差矩阵，避免变量量纲差异的影响。
 
 ---
 
-## 5. 标准化协方差矩阵与相关矩阵（Standardized Covariance Matrix and Correlation Matrix）
+## 5. 标准化协方差矩阵与相关矩阵（Standardized Covariance [[Matrix Inverse|Matrix]] and [[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]]）
 
 协方差矩阵描述了变量间的线性关系，但其数值受到变量量纲的影响。通过标准化，可以消除量纲差异，使变量间的关系更清晰。
 
@@ -416,14 +416,14 @@ $$
 
 ### 标准化后协方差矩阵的变化
 
-通过对数据矩阵 $X$ 标准化，生成的协方差矩阵成为相关矩阵（Correlation Matrix），其值范围固定为 $[-1, 1]$。
+通过对数据矩阵 $X$ 标准化，生成的协方差矩阵成为相关矩阵（[[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]]），其值范围固定为 $[-1, 1]$。
 
 ---
 
-## 5.2 相关矩阵表示（Correlation Matrix Representation）
+## 5.2 相关矩阵表示（[[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]] Representation）
 ### 相关矩阵的定义
 
-相关矩阵（Correlation Matrix）$R$ 是标准化后的协方差矩阵，表示变量之间的线性关系。其公式为：
+相关矩阵（[[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]]）$R$ 是标准化后的协方差矩阵，表示变量之间的线性关系。其公式为：
 $$
 R = \frac{1}{n-1} Z^T Z,
 $$
@@ -441,11 +441,11 @@ $$
 
 1. **对角线元素**：相关矩阵的对角线元素为 $1$，即 $r_{ii} = 1$，因为每个变量与自身完全相关。
 2. **对称性**：相关矩阵是对称矩阵，即 $r_{ij} = r_{ji}$。
-3. **取值范围**：相关系数 $r_{ij}$ 的取值范围为 $[-1, 1]$。
+3. **取值范围**：[[Correlation Coefficient|相关系数]] $r_{ij}$ 的取值范围为 $[-1, 1]$。
 
 ---
 
-## 5.3 协方差矩阵与相关矩阵的关系（Relationship Between Covariance and Correlation Matrices）
+## 5.3 协方差矩阵与相关矩阵的关系（Relationship Between Covariance and [[Correlation Coefficient|Correlation]] Matrices）
 
 ### 转换公式
 

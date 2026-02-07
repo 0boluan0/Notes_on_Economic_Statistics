@@ -16,21 +16,21 @@
 
 从一个拓扑空间到另一个拓扑空间的映射.
 
-## 1.2 术语：差分算子（Difference operator）
+## 1.2 术语：差分算子（[[Difference Equation|Difference]] operator）
 
->[!NOTE] 差分算子 $\Delta$的定义
-> 定义一阶差分为 $\Delta y_t \equiv y_t - y_{t-1}$，表示变量在相邻两个时期的变化量。例如，如果 $y_t$ 是某期的值，那么 $\Delta y_t$ 就是 $y_t$ 与前一期 $y_{t-1}$ 之差。 
+>[!NOTE] 差分算子 $\[[Delta|Delta]]$的定义
+> 定义一阶差分为 $\[[Delta|Delta]] y_t \equiv y_t - y_{t-1}$，表示变量在相邻两个时期的变化量。例如，如果 $y_t$ 是某期的值，那么 $\[[Delta|Delta]] y_t$ 就是 $y_t$ 与前一期 $y_{t-1}$ 之差。 
 > 
-> 同理，**二阶差分**定义为 $\Delta^2 y_t \equiv \Delta(\Delta y_t) = (y_t - y_{t-1}) - (y_{t-1} - y_{t-2}) = y_t - 2y_{t-1} + y_{t-2}$ 。差分算子在时间序列分析中类似于微积分中的导数运算，用于考察序列的变化。
+> 同理，**二阶差分**定义为 $\[[Delta|Delta]]^2 y_t \equiv \[[Delta|Delta]](\[[Delta|Delta]] y_t) = (y_t - y_{t-1}) - (y_{t-1} - y_{t-2}) = y_t - 2y_{t-1} + y_{t-2}$ 。差分算子在时间序列分析中类似于微积分中的导数运算，用于考察序列的变化。
 
-**直观理解**：$\Delta f(x)$ 计算的是 $f(x)$ 在 $x$ 处的增量，相当于离散版本的**一阶导数**。
+**直观理解**：$\[[Delta|Delta]] f(x)$ 计算的是 $f(x)$ 在 $x$ 处的增量，相当于离散版本的**一阶导数**。
 
 ## 1.3 术语：滞后算子（Lag operator）
 
 >[!NOTE] 滞后算子 $L$的定义
 > $L^i y_t = y_{t-i}$，即将序列“往后推”$i$期（滞后 $i$ 期） 。例如，$L y_t = y_{t-1}$，$L^2 y_t = y_{t-2}$ 等。
 > 
-> 滞后算子有一些类似指数的运算性质，如 $L^i \cdot L^j = L^{i+j}$，$L^0$ 为恒等算子等~~/~~。利用滞后算子可以简洁地表示差分，例如 $\Delta y_t = y_t - y_{t-1} = y_t - L y_t = (1 - L) y_t$。
+> 滞后算子有一些类似指数的运算性质，如 $L^i \cdot L^j = L^{i+j}$，$L^0$ 为恒等算子等~~/~~。利用滞后算子可以简洁地表示差分，例如 $\[[Delta|Delta]] y_t = y_t - y_{t-1} = y_t - L y_t = (1 - L) y_t$。
 
 ## 1.4 为什么要研究差分方程
 
@@ -39,17 +39,17 @@ $$y_t = T_t + S_t + I_t$$
 并设：
 $$T_t = 1 + 0.1 t, \quad S_t = 1.6 \sin\left(\frac{t\pi}{6}\right), \quad I_t = 0.7 I_{t-1} + \varepsilon_t$$
 这个 $y_t$ 可以拆分为三个部分：
-1. **趋势成分（Trend Component）$T_t$**  
+1. **趋势成分（Trend [[Component VaR|Component]]）$T_t$**  
    这里的趋势项 $T_t = 1 + 0.1 t$ 表示 $y_t$ 随着时间 $t$ 线性增长，每个时间点 $t$ 增加 $0.1$。
-2. **季节成分（Seasonal Component）$S_t$**  
+2. **季节成分（Seasonal [[Component VaR|Component]]）$S_t$**  
    季节项 $S_t = 1.6 \sin(t\pi/6)$ 采用正弦函数，表示 $y_t$ 随着时间 $t$ 具有周期性变化。周期为 $12$（因为 $\sin$ 函数的周期是 $2\pi$，即 $t\pi/6 = 2\pi$ 对应 $t=12$），说明该数据可能有**年度季节性**（比如按月变化的经济指标）。
-3. **不规则成分（Irregular Component）$I_t$**  
-   不规则项 $I_t$ 由一阶自回归模型（AR(1) 过程）给出：$$I_t = 0.7 I_{t-1} + \varepsilon_t$$
+3. **不规则成分（Irregular [[Component VaR|Component]]）$I_t$**  
+   不规则项 $I_t$ 由一阶自回归模型（[[AR(1) stationarity|AR]](1) 过程）给出：$$I_t = 0.7 I_{t-1} + \varepsilon_t$$
    其中 $\varepsilon_t$ 是随机扰动，表示无法预测的随机变化。这个方程表示 $I_t$ 依赖于其前一期值 $I_{t-1}$，并受到随机冲击的影响。这是一种**平稳时间序列模型**，如果 $|\phi| < 1$（这里 $\phi = 0.7$），则该过程是均值回归的，不会发散。
 
 ==差分方程最一般的形~~势~~式就是某个变量当前的取值可由自身的滞后项、时间以及其他变量的函数共同决定。==
 
-# 2.线性差分方程和其解Linear Difference Equation and Its Solution
+# 2.线性差分方程和其解Linear [[Difference Equation|Difference Equation]] and Its Solution
 
 ## 2.1 线性差分方程
 
@@ -67,7 +67,7 @@ $$T_t = 1 + 0.1 t, \quad S_t = 1.6 \sin\left(\frac{t\pi}{6}\right), \quad I_t = 
 >    - 也可以是其他经济变量（或随机过程）的滞后值或当前值。
 >    - 或者是随机扰动，如白噪声的加权和，$x_t = \sum_{i=0}^\infty \beta_i \, \varepsilon_{t-i}$
 >   
->   **差分算子表示**     $$\Delta y_t = a_0 + \gamma \, y_{t-1} + \sum_{i=2}^n a_i \, y_{t-i} + x_t$$ 其中 $\gamma = a_1 - 1$。这是把一阶差分后的 $y_t$ 与其滞后值联系起来的一种写法，有时在研究单位根、平稳性等问题时更方便。
+>   **差分算子表示**     $$\[[Delta|Delta]] y_t = a_0 + \gamma \, y_{t-1} + \sum_{i=2}^n a_i \, y_{t-i} + x_t$$ 其中 $\gamma = a_1 - 1$。这是把一阶差分后的 $y_t$ 与其滞后值联系起来的一种写法，有时在研究单位根、平稳性等问题时更方便。
 
 ## 2.2 差分方程的解
 
@@ -75,7 +75,7 @@ $$T_t = 1 + 0.1 t, \quad S_t = 1.6 \sin\left(\frac{t\pi}{6}\right), \quad I_t = 
 >一个差分方程的解，给出了 $y_t$ 如何作为 $\{x_t\}$ 的元素与时间 $t$（以及可能给定的 $y_t$ 序列初始条件）来确定其数值的函数形式.
 
 >[!example] **示例 1**：
->  $$\Delta y_t = 2$$  
+>  $$\[[Delta|Delta]] y_t = 2$$  
 >  其解为  
 >  $$y_t = 2t + c$$  
 >  其中 $c$ 是任意常数。我们可以通过代入来验证。
@@ -208,7 +208,7 @@ $$s_t = b + \beta p_{t}^* + \varepsilon_t$$
 $$s_t = d_t$$
 
 
-• 如果 $\big|\frac{\beta}{\gamma}\big| < 1$（供给曲线相对需求曲线**较平缓**），则特征根 $r = -\frac{\beta}{\gamma}$ 满足 $|r|<1$，价格齐次项 $A r^t$ 会指数衰减至0。此时价格的波动将**收敛**于长期均衡 $p^*$ 。具体表现为价格围绕 $p^*$ 震荡且幅度越来越小，最终趋于稳定。此情形被称为**收敛的蜘蛛网**。
+• 如果 $\big|\frac{\beta}{\gamma}\big| < 1$（供给曲线相对需求曲线**较平缓**），则特征根 $r = -\frac{\beta}{\gamma}$ 满足 $|r|<1$，价格齐次项 $A r^t$ 会指数衰减至0。此时价格的波动将**[[Limit|收敛]]**于长期均衡 $p^*$ 。具体表现为价格围绕 $p^*$ 震荡且幅度越来越小，最终趋于稳定。此情形被称为**收敛的蜘蛛网**。
 • 如果 $\big|\frac{\beta}{\gamma}\big| > 1$（供给曲线**更陡峭**），则 $|r|>1$，齐次项的影响会随时间放大，导致价格波动**发散** 。也就是说，价格将越来越偏离均衡，呈现爆炸性的振荡。此为**发散的蜘蛛网**情况，现实中意味着市场不稳定，价格可能越来越极端。
 • 如果 $\big|\frac{\beta}{\gamma}\big| = 1$，则 $|r|=1$，价格会**持续震荡**且幅度保持不变（$r=-1$ 会导致价格在两个值之间来回跳动，称为边际稳定或周期2振荡） 。这种情况下系统处于临界状态，轻微扰动将导致持续波动。
 
@@ -241,7 +241,7 @@ $$A = p_0 - \frac{a - b}{\gamma + \beta} + \frac{1}{\gamma} \sum_{i=0}^{\infty} 
 	• 第二部分 $-\frac{1}{\gamma}\sum_{i=0}^{t-1}(-\frac{\beta}{\gamma})^i \varepsilon_{t-i}$ 是**冲击的短期影响**累积项。它捕捉了供给冲击对价格的即时和滞后影响。在稳定情形下，冲击的影响会逐步衰减（因为$|-\beta/\gamma|<1$时高次项很小），表示市场对供给扰动的短期调整过程。
 	• 第三部分 $\Big(-\frac{\beta}{\gamma}\Big)^t\Big(p_0 - \frac{a - b}{\gamma + \beta}\Big)$ 是**初始偏离的影响**。它代表了初始价格偏离均衡时，价格如何随着时间动态调整回归均衡。如果$\beta/\gamma<1$，这一项会随着$t$增大而衰减（因为$|-\beta/\gamma|<1$），表明初始条件的影响逐渐消失；如果$\beta/\gamma>1$，这一项将随时间放大，体现出市场不稳定性。
 
-# 4. 解二阶齐次微分方程Solving Second order Homogeneous Difference Equations
+# 4. 解二阶齐次微分方程Solving Second order Homogeneous [[Difference Equation|Difference]] Equations
 
 #必考 <span style="color: yellow;">考试的时候只会出实数解,算出来虚数只可能是你算错了.</span>
 
@@ -277,9 +277,9 @@ $$y_t^h = A_1 {\alpha_1}^t + A_2t{\alpha_1}^t$$
 
 | **驱动 $x_t$ 类型**  | **特解猜测形式 $y_t^p$**                     | **注意事项**                             |
 | ---------------- | -------------------------------------- | ------------------------------------ |
-| 常数 $C$ 或 0       | 常数 $y_t^p = C$                         | 若 $\sum a_i = 1$（单位根），改试 $C t$ 等     |
+| 常数 $C$ 或 0       | 常数 $y_t^p = C$                         | 若 $\sum a_i = 1$（[[Unit Root Test|单位根]]），改试 $C t$ 等     |
 | 指数 $B \lambda^t$ | 同形 $y_t^p = K \lambda^t$               | 若 $\lambda$ 是特征根，则改试 $K t \lambda^t$ |
-| $d$次多项式 $B t^d$  | 同次多项式 $y_t^p = C_0 + \cdots + C_d t^d$ | 若 $r=1$ 为特征根（单位根），需升高次数（乘$t$）        |
+| $d$次多项式 $B t^d$  | 同次多项式 $y_t^p = C_0 + \cdots + C_d t^d$ | 若 $r=1$ 为特征根（[[Unit Root Test|单位根]]），需升高次数（乘$t$）        |
 
 >[!quote] 上述情况的具体分析(可略过,意义不大)
 > **情形1：** $x_t$为常数或零（最简单情形）。
@@ -288,7 +288,7 @@ $$y_t^h = A_1 {\alpha_1}^t + A_2t{\alpha_1}^t$$
 > 
 > $$c = a_0 + a_1 c + a_2 c + \cdots + a_n c = a_0 + (a_1 + a_2 + \cdots + a_n) c.$$
 > 
-> 解出$c = \frac{a_0}{,1 - (a_1 + \cdots + a_n),}$，前提是$1 - (a_1 + \cdots + a_n) \neq 0$。这个分母为零的情况意味着**单位根**存在（特征根$\alpha=1$导致齐次解中包含常数项），也就是$a_1 + \cdots + a_n = 1$，导致简单常数猜测失败。
+> 解出$c = \frac{a_0}{,1 - (a_1 + \cdots + a_n),}$，前提是$1 - (a_1 + \cdots + a_n) \neq 0$。这个分母为零的情况意味着**[[Unit Root Test|单位根]]**存在（特征根$\alpha=1$导致齐次解中包含常数项），也就是$a_1 + \cdots + a_n = 1$，导致简单常数猜测失败。
 > 
 > • 如果$1 - (a_1 + \cdots + a_n) = 0$（存在单位根），说明方程的齐次解本身有一个常数解分量，这时驱动为常数会产生一个**线性趋势特解**。换句话说，需要尝试$y_t^p = c , t$这样的形式。将$y_t^p = c t$代入方程：
 > 
@@ -324,7 +324,7 @@ $$y_t^h = A_1 {\alpha_1}^t + A_2t{\alpha_1}^t$$
 > 
 > $$C_0 = \frac{a_0}{1 - a_1}, \qquad C_1 = \frac{B}{,r - a_1,},$$
 > 
-> 前提是$a_1 \neq 1$且$a_1 \neq r$。若$a_1 = 1$（单位根），我们需要在$C_0$部分乘$t$（即尝试$C_0 t$形式）；若$a_1 = r$（齐次解与驱动频率冲突），需要在$C_1 r^t$部分乘$t$（即尝试$C_1 t r^t$）。这与前述一般原则一致。
+> 前提是$a_1 \neq 1$且$a_1 \neq r$。若$a_1 = 1$（[[Unit Root Test|单位根]]），我们需要在$C_0$部分乘$t$（即尝试$C_0 t$形式）；若$a_1 = r$（齐次解与驱动频率冲突），需要在$C_1 r^t$部分乘$t$（即尝试$C_1 t r^t$）。这与前述一般原则一致。
 > 
 > **情形3：** $x_t = B , t^d$（多项式时间趋势）。
 > 
@@ -335,7 +335,7 @@ $$y_t^h = A_1 {\alpha_1}^t + A_2t{\alpha_1}^t$$
 > 将其代入方程，将两边同次幂的$t$项进行比较，可以解出$C_0, C_1, \ldots, C_d$。解这些系数通常需要联立$d+1$个线性方程，过程比较机械。需要注意的是，如果在求解过程中发现分母为0或者解不出，通常意味着猜测的多项式次数需要提高（这往往是因为差分方程的齐次部分本身也有类似多项式解，例如包含单位根导致线性漂移）。例如，如果$x_t$是线性而齐次部分有单位根，则可能需要尝试二次多项式作为特解。
 > 
 
-## 5.2 随机过程的特解(Particular Solution for Stochastic Process)
+## 5.2 随机过程的特解(Particular Solution for [[Stochastic Processes Overview|Stochastic]] Process)
 
 ### (1) 待定系数法
 

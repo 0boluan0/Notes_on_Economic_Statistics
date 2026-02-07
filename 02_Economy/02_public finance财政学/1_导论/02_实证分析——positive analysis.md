@@ -1,4 +1,4 @@
-# 基础信息(Positive Analysis)
+# 基础信息([[Positive Definite Matrix|Positive]] Analysis)
 
 * 超越一切价值判断，只描述、解释实证研究对象的各种现象，研究其内在规律或者检验有关理论，并运用理论构造模型，分析并预测人们在一定条件下的行为趋势或者概率。
 * 目标：解释这个世界。
@@ -30,7 +30,7 @@ X先于Y，X才有可能导致Y的发生
 **XY相关不代表二者有因果关系**，想证明二者有因果关系需要排除其他的所有因素的影响，这部分工作的多寡好坏直接影响实证分析的高度
 
 
-## DID
+## [[DID|DID]]
 difference in difference
 看treatment group和control group 的前后差别
 

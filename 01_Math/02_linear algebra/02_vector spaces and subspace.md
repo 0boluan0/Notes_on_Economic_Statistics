@@ -1,17 +1,17 @@
 
-# 向量空间(Vector Space)
+# [[Vector Space|向量空间]]([[Vector Space|Vector Space]])
 
 ## 向量空间的定义
 
 使用$R^n$表示,包含所有n维向量(n-dimensional vector)的空间,向量空间必须对向量的线性组合(linear combination)封闭.R2就是普通的平面.R3就是立体空间.
 
-## 子空间(subspace)
+## [[Subspace|子空间]](subspace)
 
 是向量空间的一部分,但是完全满足向量空间的那个定义.
 
  R2本身首先是自己的子空间,所有过0点的直线也都是.0点也是.
 
-如其是有两个列向量(column vector)组合而来的.这也就意味着,两个列向量的线性组合构成了R3的一个subspace.又叫做column space C(A)(列空间).
+如其是有两个列向量(column vector)组合而来的.这也就意味着,两个列向量的线性组合构成了R3的一个subspace.又叫做column space C(A)([[Column Space|列空间]]).
 
 在
 
@@ -19,13 +19,13 @@ $$
 A=\begin{bmatrix} 1&1&2\\2&1&3 \\ 3&1&4 \\4&1&5 \end{bmatrix}
 $$
 
-Ax=b ,仅在b属于A的column space(列空间)的时候有解.并且列3是列1和列2的线性组合,所以将列三去掉后的列空间和列三存在的列空间是一样的.所以A的列空间是$R^4$空间上的二维子空间.
+Ax=b ,仅在b属于A的column space([[Column Space|列空间]])的时候有解.并且列3是列1和列2的线性组合,所以将列三去掉后的列空间和列三存在的列空间是一样的.所以A的列空间是$R^4$空间上的二维子空间.
 
-# 零空间(null space)
+# [[Null Space|零空间]](null space)
 
 真正关心的b只有一个,就是0.Ax=0
 
-## 矩阵的秩(rank)
+## [[Matrix Rank|矩阵的秩]](rank)
 
 通过矩阵消元(matrix elimination)得到阶梯形式(echelon form)的矩阵,即0都聚集在左下角.经过消元之后剩下的非零的行的数量,也就是主元(pivot)的个数
 
