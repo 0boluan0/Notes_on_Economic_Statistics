@@ -1,6 +1,38 @@
 {
   "recentFiles": [
     {
+      "basename": "01_matrices and Gaussian Elimination",
+      "path": "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md"
+    },
+    {
+      "basename": "1-7",
+      "path": "01_Math/01_calculus/Lecture_notes/1-7.pdf"
+    },
+    {
+      "basename": "MIT18.01_Single-Variable-Calculus",
+      "path": "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md"
+    },
+    {
+      "basename": "03_策略式博弈",
+      "path": "01_Math/03_game theory/03_策略式博弈.md"
+    },
+    {
+      "basename": "02_初步认识博弈",
+      "path": "01_Math/03_game theory/02_初步认识博弈.md"
+    },
+    {
+      "basename": "03_平稳时间序列模型",
+      "path": "01_Math/06_时间序列分析/03_平稳时间序列模型.md"
+    },
+    {
+      "basename": "05_多元回归模型的矩阵表达",
+      "path": "02_Economy/01_Econometrics/05_多元回归模型的矩阵表达.md"
+    },
+    {
+      "basename": "06_多重共线性",
+      "path": "02_Economy/01_Econometrics/06_多重共线性.md"
+    },
+    {
       "basename": "2026-02-06——Fri",
       "path": "99_学习情况记录/2026-02-06——Fri.md"
     },
@@ -61,14 +93,6 @@
       "path": "02_Economy/01_Econometrics/04_模型设定.md"
     },
     {
-      "basename": "05_多元回归模型的矩阵表达",
-      "path": "02_Economy/01_Econometrics/05_多元回归模型的矩阵表达.md"
-    },
-    {
-      "basename": "06_多重共线性",
-      "path": "02_Economy/01_Econometrics/06_多重共线性.md"
-    },
-    {
       "basename": "07_异方差",
       "path": "02_Economy/01_Econometrics/07_异方差.md"
     },
@@ -95,10 +119,6 @@
     {
       "basename": "05_多方程模型Multi-equation Time Series Models",
       "path": "01_Math/06_时间序列分析/05_多方程模型Multi-equation Time Series Models.md"
-    },
-    {
-      "basename": "03_平稳时间序列模型",
-      "path": "01_Math/06_时间序列分析/03_平稳时间序列模型.md"
     },
     {
       "basename": "00_导论与概率论复习",
@@ -179,26 +199,6 @@
     {
       "basename": "04_案例（囚徒困境与纳什均衡）",
       "path": "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md"
-    },
-    {
-      "basename": "03_策略式博弈",
-      "path": "01_Math/03_game theory/03_策略式博弈.md"
-    },
-    {
-      "basename": "2026-02-07——Sat",
-      "path": "99_学习情况记录/2026-02-07——Sat.md"
-    },
-    {
-      "basename": "02_初步认识博弈",
-      "path": "01_Math/03_game theory/02_初步认识博弈.md"
-    },
-    {
-      "basename": "Rationalisability",
-      "path": "00_factor/concept/Rationalisability.md"
-    },
-    {
-      "basename": "Pasted image 20241111104407",
-      "path": "98_attachment/Pasted image 20241111104407.png"
     }
   ],
   "omittedPaths": [],
