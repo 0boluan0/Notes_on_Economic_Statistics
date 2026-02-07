@@ -375,15 +375,18 @@ $$\frac{1}{1 - a_1 L} = 1 + a_1 L + a_1^2 L^2 + a_1^3 L^3 + \cdots.$$（这类�
 # 作业
 
 ## 1. 
-1. Consider the difference equation y, = ao + a,y,., with the initial coridition Yo: Jill solved the difference equation by iterating backward: ote = Ag + G)(dg + aa2) meee = dy + doa, + aga? to + ayay! + atyo Bill added the homogeneous and particular solutions to obtain y, = ay/(1 - a,) + a'[o — ao(l ~ 24). ， A. Show that the two solutions are identical for la, | < 1 B. Show that for a, = 1, Jill's solution is equivalent to y, = dot + Yo. How would you use Bill's method to arrive at this same conclusion in the case a,=1?
-1. Consider the difference equation $y_t=a_0+a_1y_{t-1}$ with the initial condition $y_0$. Jill solved the difference equation by iterating backward:\n\n$$\n\begin{aligned}\ny_t &= a_0+a_1y_{t-1}\\\n    &= a_0+a_1(a_0+a_1y_{t-2})\\\n    &= a_0+a_0a_1+a_0a_1^2+\cdots+a_0a_1^{t-1}+a_1^ty_0\n\end{aligned}\n$$\n\nBill added the homogeneous and particular solutions to obtain\n$$\ny_t=\frac{a_0}{1-a_1}+a_1^t\left[y_0-\frac{a_0}{1-a_1}\right].\n$$\n\nA. Show that the two solutions are identical for $|a_1|<1$.\nB. Show that for $a_1=1$, Jill's solution is equivalent to $y_t=a_0t+y_0$. How would you use Bill's method to arrive at this same conclusion in the case $a_1=1$?
+
+1. Consider the difference equation $y_t=a_0+a_1y_{t-1}$ with the initial condition $y_0$. Jill solved the difference equation by iterating backward:$$\begin{aligned}y_t &= a_0+a_1y_{t-1}\\   &= a_0+a_1(a_0+a_1y_{t-2})\\    &= a_0+a_0a_1+a_0a_1^2+\cdots+a_0a_1^{t-1}+a_1^ty_0\end{aligned}$$Bill added the homogeneous and particular solutions to obtain$$y_t=\frac{a_0}{1-a_1}+a_1^t\left[y_0-\frac{a_0}{1-a_1}\right].$$
+	1. A. Show that the two solutions are identical for $|a_1|<1$.
+	2. B. Show that for $a_1=1$, Jill's solution is equivalent to $y_t=a_0t+y_0$. How would you use Bill's method to arrive at this same conclusion in the case $a_1=1$?
 
  a)很简单,就是一个等比数列求和公式的应用
  b)Jill那个就硬推就行了.bill是按照特解-齐次解-通解的过程来搞的.实际上也可以使用洛必达法则来处理.总之就是不太重要
 
 ## 3.
-3. Suppose that the money supply process has the form m, =m +pm,_,+€, where mis aconstant andO<p< 1. : | A. Show that it is possible to express m,,, in terms of the known value m, and the sequence {€,.4, E25 + Eran) | . B. Suppose that all values of es for; > 0 have a mean value of zero. Explain how you could use your result in part A to forecast the money supply 7 pe- nods into the future.
-3. Suppose that the money supply process has the form $m_t=m+\rho m_{t-1}+\varepsilon_t$, where $m$ is a constant and $0<\rho<1$.\n\nA. Show that it is possible to express $m_{t+n}$ in terms of the known value $m_t$ and the sequence $\{\varepsilon_{t+1},\varepsilon_{t+2},\ldots,\varepsilon_{t+n}\}$.\n\nB. Suppose that all values of $\varepsilon_{t+i}$ for $i>0$ have a mean value of zero. Explain how you could use your result in part A to forecast the money supply $n$ periods into the future.
+3. Suppose that the money supply process has the form $m_t=m+\rho m_{t-1}+\varepsilon_t$, where $m$ is a constant and $0<\rho<1$.
+	1. A. Show that it is possible to express $m_{t+n}$ in terms of the known value $m_t$ and the sequence $\{\varepsilon_{t+1},\varepsilon_{t+2},\ldots,\varepsilon_{t+n}\}$.
+	2. B. Suppose that all values of $\varepsilon_{t+i}$ for $i>0$ have a mean value of zero. Explain how you could use your result in part A to forecast the money supply $n$ periods into the future.
 
 a)使用迭代法
 b)没看懂他要干嘛.总之就是不难

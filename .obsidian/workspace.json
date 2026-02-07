@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Overview & Study Record.md",
+                "file": "02_Economy/01_Econometrics/01_导论.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,35 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Overview & Study Record"
-            }
-          },
-          {
-            "id": "7753fb3dc8dc90cc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Math/03_game theory/06_扩展性博弈.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "06_扩展性博弈"
+              "title": "01_导论"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -130,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_Math/03_game theory/06_扩展性博弈.md",
+                "file": "02_Economy/01_Econometrics/01_导论.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -140,7 +115,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 06_扩展性博弈"
+              "title": "Backlinks for 01_导论"
             }
           },
           {
@@ -149,12 +124,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_Math/03_game theory/06_扩展性博弈.md",
+                "file": "02_Economy/01_Econometrics/01_导论.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 06_扩展性博弈"
+              "title": "Outgoing links from 01_导论"
             }
           },
           {
@@ -202,10 +177,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "01_Math/03_game theory/06_扩展性博弈.md"
+                "file": "02_Economy/01_Econometrics/01_导论.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for 06_扩展性博弈"
+              "title": "File properties for 01_导论"
             }
           },
           {
@@ -306,13 +281,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Math/03_game theory/06_扩展性博弈.md",
+                "file": "02_Economy/01_Econometrics/01_导论.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 06_扩展性博弈"
+              "title": "Outline of 01_导论"
             }
           },
           {
@@ -359,62 +334,62 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "7753fb3dc8dc90cc",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
-    "01_Math/03_game theory/05_贝叶斯博弈.md",
-    "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md",
-    "01_Math/03_game theory/03_策略式博弈.md",
-    "99_学习情况记录/2026-02-07——Sat.md",
-    "99_学习情况记录/2026-02-06——Fri.md",
+    "02_Economy/01_Econometrics/01_Econometrics.canvas",
+    "02_Economy/01_Econometrics/01_导论.md",
+    "02_Economy/01_Econometrics/02_一元线性回归.md",
+    "02_Economy/01_Econometrics/03_多元线性回归.md",
+    "02_Economy/01_Econometrics/04_模型设定.md",
+    "02_Economy/01_Econometrics/05_多元回归模型的矩阵表达.md",
+    "02_Economy/01_Econometrics/06_多重共线性.md",
+    "02_Economy/01_Econometrics/07_异方差.md",
+    "01_Math/06_时间序列分析/时序复习.md",
+    "01_Math/06_时间序列分析/lecture-dual.pdf",
+    "01_Math/06_时间序列分析/lecture.pdf",
+    "01_Math/06_时间序列分析/07_协整和误差修正模型.md",
+    "01_Math/06_时间序列分析/06_含趋势的模型.md",
+    "01_Math/06_时间序列分析/04_波动建模 Modeling Volatility.md",
+    "01_Math/06_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
+    "01_Math/06_时间序列分析/06_时间序列分析.canvas",
+    "01_Math/06_时间序列分析/03_平稳时间序列模型.md",
+    "01_Math/06_时间序列分析/02_差分方程Difference Equation.md",
+    "01_Math/06_时间序列分析/01_介绍时间序列.md",
+    "01_Math/06_时间序列分析/00_导论与概率论复习.md",
+    "01_Math/05_随机过程/07_布朗运动与鞅.md",
+    "01_Math/05_随机过程/随机模拟卷.md",
+    "01_Math/05_随机过程/06_平稳随机过程.md",
+    "01_Math/05_随机过程/05_连续时间的马尔可夫链.md",
+    "01_Math/05_随机过程/05_随机过程.canvas",
+    "01_Math/05_随机过程/04_马尔可夫链.md",
+    "01_Math/05_随机过程/03_泊松过程.md",
+    "01_Math/05_随机过程/02_随机过程的概念和分类.md",
+    "01_Math/05_随机过程/01_预备知识.md",
+    "01_Math/05_随机过程/00_随机考点.md",
+    "01_Math/04_多元统计分析/WechatIMG1755.jpg",
+    "01_Math/04_多元统计分析/04_多元统计分析.canvas",
     "98_attachment/dashboards/2026-02-08-map.svg",
     "98_attachment/dashboards/2026-02-07-news.json",
     "98_attachment/dashboards/2026-02-07-map.svg",
-    "01_Math/03_game theory/02_初步认识博弈.md",
     "00_inbox/image_text_audit_2026-02-06.csv",
-    "00_factor/concept/Rationalisability.md",
-    "01_Math/05_随机过程/01_预备知识.md",
     "98_attachment/Pasted image 20241111104407.png",
-    "01_Math/05_随机过程/00_随机考点.md",
     "01_Math/03_game theory/第3次作业.pdf",
     "01_Math/03_game theory/第2次作业.pdf",
     "01_Math/03_game theory/第1次作业补充.pdf",
     "01_Math/03_game theory/第1次作业.pdf",
-    "01_Math/03_game theory/06_扩展性博弈.md",
-    "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md",
     "01_Math/02_linear algebra/02_linear algebra.canvas",
-    "01_Math/02_linear algebra/00_perface.md",
-    "01_Math/03_game theory/01_导论.md",
-    "01_Math/06_时间序列分析/02_差分方程Difference Equation.md",
     "98_attachment/Pasted image 20250316150336.png",
-    "01_Math/06_时间序列分析/01_介绍时间序列.md",
-    "01_Math/06_时间序列分析/00_导论与概率论复习.md",
     "98_attachment/dashboards/2026-02-06-news.json",
     "98_attachment/Pasted image 20240305230159.png",
     "98_attachment/Pasted image 20240303163023.png",
     "98_attachment/Pasted image 20240326131442.png",
     "98_attachment/Pasted image 20240330160407.png",
-    "03_Computer_Science/README.md",
-    "README.md",
-    "AGENTS.md",
-    "CLAUDE.md",
-    "Overview & Study Record.md",
     "98_attachment/dashboards/2026-02-06-map.svg",
-    "00_factor/concept/2SLS.md",
-    "99_学习情况记录/2026-02-04——Wed.md",
-    "99_学习情况记录/2026-02-05——Thu.md",
-    "00_inbox/策略式表达.md",
     "01_Math/03_game theory/03_game theory.canvas",
     "98_attachment/dashboards",
-    "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf",
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec02.pdf",
-    "98_attachment/Pasted image 20250327091329.png",
-    "02_Economy/01_Econometrics/01_Econometrics.canvas",
     "02_Economy/08_经济预测与决策/08_经济预测与决策.canvas",
     "02_Economy/02_public finance财政学/02_public finance财政学.canvas",
     "02_Economy/10_发展经济学/10_发展经济学.canvas",
-    "02_Economy/07_金融机构与风险管理/07_金融机构与风险管理.canvas",
-    "02_Economy/06_证券投资学/06_证券投资学.canvas",
-    "02_Economy/05_财务管理/05_财务管理.canvas",
-    "02_Economy/04_经济思想史/04_经济思想史.canvas"
+    "02_Economy/07_金融机构与风险管理/07_金融机构与风险管理.canvas"
   ]
 }
