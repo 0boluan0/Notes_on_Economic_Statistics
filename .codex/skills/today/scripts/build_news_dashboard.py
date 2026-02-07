@@ -26,6 +26,7 @@ USER_AGENT = "today-dashboard/1.0 (local)"
 GDELT_ENDPOINT = "https://api.gdeltproject.org/api/v2/doc/doc"
 ASSETS_DIR = Path(__file__).resolve().parents[1] / "assets"
 TOPOJSON_PATH = ASSETS_DIR / "countries-110m.json"
+FETCH_ERROR_COUNT = 0
 
 NEWS_CATEGORIES: Dict[str, str] = {
     "politics": "(politics OR government OR election OR congress)",
@@ -236,6 +237,7 @@ def parse_gdelt_date(value: str) -> Optional[dt.datetime]:
 
 
 def fetch_json(url: str) -> Optional[dict]:
+    global FETCH_ERROR_COUNT
     req = Request(url, headers={"User-Agent": USER_AGENT})
     try:
         with urlopen(req, timeout=20) as resp:
@@ -244,6 +246,7 @@ def fetch_json(url: str) -> Optional[dict]:
                 return None
             return json.loads(payload)
     except Exception as exc:
+        FETCH_ERROR_COUNT += 1
         print(f"[news-dashboard] fetch failed: {exc}", file=sys.stderr)
         return None
 
@@ -746,11 +749,15 @@ def build_markdown(
     tech_items: List[NewsItem],
     translate_enabled: bool,
     translator,
+    data_status_note: Optional[str] = None,
+    no_data_reason: Optional[str] = None,
 ) -> str:
     lines: List[str] = []
     lines.append("## 模块一｜全球态势静态快照（中文为主）")
     lines.append(f"> 时间窗口：{window_text} ({tz_label})")
     lines.append("> 注：表格为摘要，不含来源。")
+    if data_status_note:
+        lines.append(data_status_note)
     lines.append("")
     lines.append(f"![[98_attachment/dashboards/{map_filename}]]")
     lines.append("")
@@ -776,7 +783,7 @@ def build_markdown(
             any_row = True
 
     if not any_row:
-        lines.append("| 全局 | 0 | 暂无显著新闻 |")
+        lines.append(f"| 全局 | 0 | {no_data_reason or '暂无显著新闻'} |")
 
     lines.append("")
     lines.append("### 金融要点")
@@ -786,7 +793,7 @@ def build_markdown(
             summary = summarize_item(item, translate_enabled, translator)
             lines.append(f"- {summary}")
     else:
-        lines.append("- 暂无显著新闻")
+        lines.append(f"- {no_data_reason or '暂无显著新闻'}")
 
     lines.append("")
     lines.append("### 科技要点")
@@ -796,7 +803,7 @@ def build_markdown(
             summary = summarize_item(item, translate_enabled, translator)
             lines.append(f"- {summary}")
     else:
-        lines.append("- 暂无显著新闻")
+        lines.append(f"- {no_data_reason or '暂无显著新闻'}")
 
     return "\n".join(lines) + "\n"
 
@@ -880,11 +887,14 @@ def main() -> int:
     output_dir = vault_root / "98_attachment" / "dashboards"
     output_dir.mkdir(parents=True, exist_ok=True)
     cache_path = output_dir / f"{target_date:%Y-%m-%d}-news.json"
+    data_status_note: Optional[str] = None
+    no_data_reason: Optional[str] = None
     if not items_all:
         cached = load_cache(cache_path)
         if cached:
             items_all = cached
             items_all = dedupe_items(items_all)
+            data_status_note = f"> 数据状态：在线抓取失败，使用本地缓存（{target_date:%Y-%m-%d}）。"
             for item in items_all:
                 if not item.region:
                     item.region = detect_region(item.title)
@@ -902,6 +912,9 @@ def main() -> int:
             region_keywords = {
                 region: extract_keywords(region_items.get(region, [])) for region in REGION_ORDER
             }
+        elif FETCH_ERROR_COUNT > 0:
+            no_data_reason = "网络受限，未抓取到有效新闻（可提权重试）"
+            data_status_note = "> 数据状态：在线抓取失败，且本地无当日缓存。"
     elif items_all:
         save_cache(cache_path, items_all)
     finance_items = [item for item in items_all if item.category == "finance"]
@@ -924,6 +937,8 @@ def main() -> int:
         tech_items,
         args.translate,
         translator,
+        data_status_note=data_status_note,
+        no_data_reason=no_data_reason,
     )
     print(markdown)
     return 0

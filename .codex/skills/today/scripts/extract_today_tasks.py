@@ -68,6 +68,35 @@ def find_unfinished_tasks(diary_dir: Path, exclude_filename: Optional[str]) -> L
     return dedupe_keep_order(tasks)
 
 
+def find_tasks_moved_to_date(
+    diary_dir: Path, exclude_filename: Optional[str], target_date: dt.date
+) -> List[str]:
+    moved_pattern = re.compile(
+        r"^\s*-\s*~~(.*?)~~\s*[（(]\s*转移至\s*(\d{4}-\d{2}-\d{2})\s*[)）]\s*$"
+    )
+    tasks: List[str] = []
+    if not diary_dir.exists():
+        return tasks
+
+    for note in sorted(diary_dir.glob("*.md")):
+        if exclude_filename and note.name == exclude_filename:
+            continue
+        text = note.read_text(encoding="utf-8", errors="ignore")
+        for line in text.splitlines():
+            match = moved_pattern.match(line)
+            if not match:
+                continue
+            task_text = match.group(1).strip()
+            moved_to = match.group(2).strip()
+            if moved_to != target_date.isoformat():
+                continue
+            if task_text == "暂无历史未完成任务":
+                continue
+            tasks.append(task_text)
+
+    return dedupe_keep_order(tasks)
+
+
 def mark_tasks_moved(
     diary_dir: Path,
     exclude_filename: Optional[str],
@@ -245,6 +274,9 @@ def main() -> None:
     diary_dir = Path(args.diary_dir)
     overview_path = Path(args.overview)
 
+    moved_to_today_tasks = find_tasks_moved_to_date(
+        diary_dir, exclude_filename=target_filename, target_date=target_date
+    )
     unfinished_tasks = find_unfinished_tasks(diary_dir, exclude_filename=target_filename)
     mark_tasks_moved(
         diary_dir,
@@ -252,6 +284,7 @@ def main() -> None:
         tasks_to_move=unfinished_tasks,
         target_date=target_date,
     )
+    unfinished_tasks = dedupe_keep_order(moved_to_today_tasks + unfinished_tasks)
     if overview_path.exists():
         overview_text = overview_path.read_text(encoding="utf-8", errors="ignore")
         today_tasks, week_index, weekday_zh = extract_today_overview_tasks(overview_text, target_date)
