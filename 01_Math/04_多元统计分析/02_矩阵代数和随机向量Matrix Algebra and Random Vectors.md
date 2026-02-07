@@ -55,20 +55,20 @@
 
 ---
 
-# Basics of Matrix and Vector Algebra 
+# Basics of Matrix and Vector Algebra
 
 ## 1. **向量的定义与表示**
-   
+
    - 向量是包含 $n$ 个实数的数组：
      $$x = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}, \quad x' = (x_1, x_2, \cdots, x_n)$$
 
 ## 2. **向量的长度**
-   
+
    - 向量 $x$ 的长度公式：
      $$L_x = \sqrt{x_1^2 + x_2^2 + \cdots + x_n^2} = \sqrt{x'x}$$
 
 ## 3. **向量间的夹角与余弦**
-   
+
    - 两向量 $x$ 和 $y$ 的夹角 $\theta$ 的余弦公式：
      $$\cos\theta = \frac{x'y}{L_x L_y}$$
      - $\cos\theta = 1$：$x = cy, c > 0$
@@ -76,23 +76,23 @@
      - $\cos\theta = 0$：$x$ 和 $y$ 正交。
 
 ## 4. **向量的缩放与单位向量**
-   
+
    - 缩放公式：
      $$cx = \begin{pmatrix} cx_1 \\ cx_2 \\ \vdots \\ cx_n \end{pmatrix}, \quad L_{cx} = |c|L_x$$
-   
+
    - 单位向量公式：
      $$x^* = \frac{x}{L_x}$$
      单位向量的长度为 $1$，方向与 $x$ 相同。
 
 ## 5. **线性相关与无关**
-   
+
    - 向量组 $\{x_1, x_2, \cdots, x_k\}$ 线性相关当且仅当：
      $$c_1x_1 + c_2x_2 + \cdots + c_kx_k = 0$$
      且系数 $c_1, c_2, \cdots, c_k$ 不全为零。
    - 若无此关系，则为线性无关。
 
 ## 6. **向量的投影**
-   
+
    - 向量 $x$ 在 $y$ 上的投影公式：
      $$\text{Projection of } x \text{ on } y = \frac{x'y}{y'y}y$$
    - 投影的长度：
@@ -149,9 +149,8 @@ $$
 
 在向量空间中，如果一组向量两两正交，并且非零，则这组向量构成正交基。
 
-  
 
-**例子**  
+**例子**
 
 **二维空间**
 
@@ -176,10 +175,10 @@ $$
 
 ---
 
-# Matrices 
+# Matrices
 
 ## 1. **矩阵的定义与表示**
-  
+
    - 矩阵是 $n \times p$ 的数值数组，由 $n$ 行和 $p$ 列组成：
      $$
      A_{n \times p} =
@@ -193,7 +192,7 @@ $$
    - 方阵：若 $n = p$，则称矩阵为方阵（Square Matrix）。
 
 ## 2. **特殊矩阵**
-  
+
    - **单位矩阵 (Identity Matrix)**:
      $$I_p = \begin{pmatrix}
      1 & 0 & \cdots & 0 \\
@@ -212,7 +211,7 @@ $$
      非对角线元素为 $0$。
 
 ## 3. **矩阵运算**
-   
+
    - **标量乘法 (Scalar Multiplication)**:
      $$c \cdot A = \begin{pmatrix}
      c \cdot a_{11} & c \cdot a_{12} & \cdots & c \cdot a_{1p} \\
@@ -230,9 +229,9 @@ $$
    - **矩阵乘法 (Matrix Multiplication)**:
      若 $A_{n \times p}$ 和 $B_{p \times m}$，则 $C = A \cdot B$，$C_{n \times m}$ 的元素为：
      $$c_{ik} = \sum_{j=1}^p a_{ij} b_{jk}$$
- 
+
 ## 4. **矩阵的转置**
-   
+
    - 矩阵转置将行变为列：
      $$
         A =
@@ -241,7 +240,7 @@ $$
      a_{21} & a_{22} & \cdots & a_{2p} \\
      \vdots & \vdots & \ddots & \vdots \\
      a_{n1} & a_{n2} & \cdots & a_{np}
-     \end{pmatrix} 
+     \end{pmatrix}
      A' = \begin{pmatrix}
      a_{11} & a_{21} & \cdots & a_{n1} \\
      a_{12} & a_{22} & \cdots & a_{n2} \\
@@ -252,7 +251,7 @@ $$
 特别的,对称矩阵的转置等于它本身
 
 ## 5. **矩阵的逆**
-   
+
    - 若方阵 $A$ 存在矩阵 $B$，使得：
      $$AB = BA = I_p$$
      则 $B$ 是 $A$ 的逆，记为 $A^{-1}$。
@@ -260,7 +259,7 @@ $$
 
 对角矩阵的逆矩阵好求：
 
-$$  
+$$
 D = \begin{bmatrix}
 
 d_1 & 0 & 0 & \cdots & 0 \\
@@ -275,7 +274,7 @@ d_1 & 0 & 0 & \cdots & 0 \\
 
 \end{bmatrix}$$
 
-逆矩阵为:$$  
+逆矩阵为:$$
 
 D^{-1} = \begin{bmatrix}
 
@@ -295,7 +294,7 @@ D^{-1} = \begin{bmatrix}
 ==总体协方差矩阵一定可逆,但是样本协方差矩阵不一定有逆.==
 
 ## 6. **正交矩阵 (Orthogonal Matrix)**
-  
+
    - 矩阵 $Q$ 满足：
      $$Q Q' = Q' Q = I_p$$
      则称 $Q$ 为正交矩阵。
@@ -304,7 +303,7 @@ D^{-1} = \begin{bmatrix}
 Q的转置等于他的逆.他的行和列都是正交的.
 
 ## 7. **矩阵的秩 (Rank of a Matrix)**
-   
+
    - 矩阵 $A_{n \times p}$ 的秩是其线性无关列向量的最大数目，记为 $\text{rank}(A)$，满足：
      $$\text{rank}(A) \leq \min(n, p)$$
    - 当 $\text{rank}(A) = \min(n, p)$ 时，$A$ 为满秩矩阵；否则为秩亏矩阵。
@@ -340,7 +339,7 @@ $$
 
 $$
 \mathbf{A} =
-\begin{bmatrix} 
+\begin{bmatrix}
 1 & 2 \\
 3 & 4
 \end{bmatrix}
@@ -374,7 +373,7 @@ $$
 
 $$
 \text{tr}(\mathbf{B}) = 2 + 3 + 6 = 11
-$$ 
+$$
 **矩阵的迹的性质**
 
 1. **可加性**：
@@ -408,7 +407,7 @@ $$
 
 ---
 
-# Determinants 
+# Determinants
 
 ## 1. **行列式的定义**
 
@@ -426,7 +425,7 @@ $$
        $$
 
 ## 2. **行列式的一般计算公式**
-   
+
    - 对于 $n \times n$ 矩阵 $A$：
      $$
      |A| = \sum_{j=1}^n (-1)^{1+j}a_{1j}|A_{1j}|
@@ -434,7 +433,7 @@ $$
      其中 $A_{1j}$ 是删除第 $1$ 行和第 $j$ 列后的子矩阵。
 
 ## 3. **行列式的性质**
-   
+
    - **乘法性质**：
      若 $A$ 和 $B$ 为方阵，则：
      $$|AB| = |A||B|$$
@@ -459,7 +458,7 @@ $$
      $$|A| = a_{11}a_{22}\cdots a_{pp}$$
 
 ## 4. **行列式与矩阵特性的关系**
-   
+
    - **非奇异矩阵**：
      若 $|A| \neq 0$，则 $A$ 可逆，且列向量线性无关。
    - **正交矩阵**：
@@ -482,7 +481,7 @@ $$|Q|^2 = 1.$$
 • 从上式可得：$$|Q| = \pm 1.$$
 
 ## 5. **行列式与特征值的关系**
-  
+
    - 若 $A$ 的特征值为 $\lambda_1, \lambda_2, \cdots, \lambda_p$，则：
      - 行列式为所有特征值的乘积：
        $$|A| = \prod_{i=1}^p \lambda_i$$
@@ -490,7 +489,7 @@ $$|Q|^2 = 1.$$
        $$\text{tr}(A) = \sum_{i=1}^p \lambda_i$$
 
 ## 6. **行列式的应用**
-   
+
 - **判断矩阵的可逆性**：
      若 $|A| \neq 0$，则 $A$ 可逆；否则不可逆。
    - **线性变换的几何意义**：
@@ -498,10 +497,10 @@ $$|Q|^2 = 1.$$
 
 ---
 
-# Eigenvalues and Eigenvectors 
+# Eigenvalues and Eigenvectors
 
 ## 1. **特征值与特征向量的定义**
-   
+
    - 对于一个方阵 $A$，若存在非零向量 $x$ 和标量 $\lambda$，使得：
      $$Ax = \lambda x$$
      则 $\lambda$ 称为 $A$ 的**特征值 (eigenvalue)**，$x$ 称为对应的**特征向量 (eigenvector)**。
@@ -510,7 +509,7 @@ $$|Q|^2 = 1.$$
      - 特征值表示 $A$ 在对应特征向量上的拉伸或缩放比例。
 
 ## 2. **特征值与特征向量的性质**
-   
+
    - 一个 $p \times p$ 矩阵 $A$ 有 $p$ 对特征值与特征向量：
      $$(\lambda_1, e_1), (\lambda_2, e_2), \cdots, (\lambda_p, e_p)$$
    - 特征向量可以标准化为单位向量：
@@ -518,7 +517,7 @@ $$|Q|^2 = 1.$$
    - 当 $A$ 是对称矩阵时，不同特征值对应的特征向量是正交的（互相垂直）。
 
 ## 3. **特征值与特征向量的计算方法**
-   
+
    - 特征值的求解：
      - 解以下特征方程：
        $$|A - \lambda I| = 0$$
@@ -537,9 +536,9 @@ $$|Q|^2 = 1.$$
      - 对 $\lambda_2 = -1$，解 $(A + I)x = 0$，得 $e_2 = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix}$。
 
 ## 4. **特征值与特征向量的应用**
-   
+
 ### **谱分解 (Spectral Decomposition)**：
-    
+
 #### 1. **谱分解的定义**
 
 **谱分解**（Spectral Decomposition）是线性代数中的一个重要概念，用于将一个矩阵分解成由其特征值和特征向量定义的形式。谱分解的核心思想是利用矩阵的特征值和特征向量，将矩阵表示为一个基于这些特征的分解形式。
@@ -798,7 +797,7 @@ $$
 \mathbf{A}^k = \mathbf{Q} \mathbf{\Lambda}^k \mathbf{Q}^\top
 
 $$
-   
+
    - **迹和行列式的关系**：
      - 矩阵的迹等于特征值之和：
        $$\text{tr}(A) = \sum_{i=1}^p \lambda_i$$
@@ -945,7 +944,6 @@ $$
 
 **6. 小结**
 
-  
 
 通过奇异值分解：
 
@@ -959,10 +957,10 @@ $$
 
 ---
 
-# Positive Definite and Non-Negative Definite Matrices 
+# Positive Definite and Non-Negative Definite Matrices
 
 ## 1. **定义**
-   
+
    - **正定矩阵 (Positive Definite Matrix)**:
      若 $A$ 是一个 $p \times p$ 的对称矩阵，且对于任意非零向量 $x \neq 0$，满足：
      $$x'Ax > 0$$
@@ -973,18 +971,18 @@ $$
      则 $A$ 被称为半正定矩阵。
 
 ## 2. **几何意义**
-   
+
    - **正定矩阵**：对应于一个严格凸的二次型（即 $x'Ax$ 在任意方向都大于零）。
    - **半正定矩阵**：对应于一个不严格凸的二次型（即 $x'Ax$ 可以等于零，但不能为负）。
 
 ## 3. **特征值的判定条件**
-   
+
    - 一个矩阵是否为正定或半正定可以通过其特征值判断：
      - 若 $A$ 的所有特征值 $\lambda_i > 0$，则 $A$ 是正定矩阵。
      - 若 $A$ 的所有特征值 $\lambda_i \geq 0$，则 $A$ 是半正定矩阵。
 
 ## 4. **二次型 (Quadratic Form)**
-   
+
    - $x'Ax$ 被称为一个关于 $p$ 个变量 $x_1, x_2, \cdots, x_p$ 的二次型：
     $$
      x'Ax = \sum_{i=1}^p \sum_{j=1}^p a_{ij}x_ix_j
@@ -992,7 +990,7 @@ $$
    - 在正定矩阵的情况下，二次型 $x'Ax > 0$ 表示该函数无论 $x$ 如何变化，其值总为正。
 
 ## 5. **正定矩阵的等价条件**
-   
+
    - 若 $A$ 是对称矩阵，下列条件等价于 $A$ 是正定矩阵：
      1. 所有特征值 $\lambda_i > 0$。
      2. 对任意非零向量 $x$，$x'Ax > 0$。
@@ -1010,22 +1008,22 @@ $$
 则证明: 当且仅当所有特征值$\lambda_i > 0$时，$x^\top A x > 0$对任意$x \neq 0$成立。因此，矩阵$A$是正定矩阵。
 
 ## 7. **例子与直观理解**
-   
-   - **例子 1: 对称正定矩阵**  
-     $$A = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}$$  
+
+   - **例子 1: 对称正定矩阵**
+     $$A = \begin{pmatrix} 2 & 1 \\ 1 & 2 \end{pmatrix}$$
      - $A$ 的特征值为 $\lambda_1 = 3, \lambda_2 = 1$，均为正，因此 $A$ 是正定矩阵。
      - 对任意向量 $x = \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}$：
        $$x'Ax = 2x_1^2 + 2x_2^2 + 2x_1x_2 > 0$$
        可见二次型恒为正。
 
-   - **例子 2: 半正定矩阵**  
-     $$B = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}$$  
+   - **例子 2: 半正定矩阵**
+     $$B = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}$$
      - $B$ 的特征值为 $\lambda_1 = 1, \lambda_2 = 0$，均为非负，因此 $B$ 是半正定矩阵。
      - 对于 $x = \begin{pmatrix} x_1 \\ x_2 \end{pmatrix}$：
        $$x'Bx = x_1^2 \geq 0$$
 
 ## 8. **正定矩阵的平方根**
-   
+
    - 若 $A$ 是正定矩阵，则可以定义 $A$ 的平方根矩阵 $A^{1/2}$，满足：
      $$A^{1/2}A^{1/2} = A$$
      其构造方式基于特征分解：
@@ -1034,16 +1032,16 @@ $$
 
 ---
 
-# Square Root of a Matrix 
+# Square Root of a Matrix
 
 ## 1. **定义**
-   
+
    - 矩阵的平方根是一个矩阵 $A^{1/2}$，满足：
      $$A^{1/2}A^{1/2} = A$$
    - 条件：平方根矩阵的存在性要求 $A$ 必须是**对称正定矩阵**。
 
 ## 2. **构造方法**
-   
+
    - 使用特征值分解：
      $$A = P \Lambda P'$$
      其中：
@@ -1054,7 +1052,7 @@ $$
      其中 $\Lambda^{1/2} = \text{diag}(\sqrt{\lambda_1}, \sqrt{\lambda_2}, \cdots, \sqrt{\lambda_p})$。
 
 ## 3. **性质**
-   
+
    - **对称性**：如果 $A$ 是对称矩阵，则 $A^{1/2}$ 也是对称矩阵。
      $$ (A^{1/2})' = A^{1/2} $$
    - **正定性**：如果 $A$ 是正定矩阵，则 $A^{1/2}$ 也是正定矩阵。
@@ -1062,29 +1060,29 @@ $$
      $$ A^{-1} = (A^{1/2})^{-1}(A^{1/2})^{-1}, \quad A^{-1/2} = (A^{1/2})^{-1} $$
 
 ## 4. **几何意义**
-   
+
    - 矩阵平方根可以被视为将 $A$ 的作用分解为两个连续的“半作用”。
    - 对于正定矩阵 $A$，$A^{1/2}$ 是一种等价于线性变换 $A$ 的简化操作。
 
 ## 5. **例子**
-   
-   - **例子 1: 简单对称正定矩阵**  
-     $$A = \begin{pmatrix} 4 & 0 \\ 0 & 9 \end{pmatrix}$$  
+
+   - **例子 1: 简单对称正定矩阵**
+     $$A = \begin{pmatrix} 4 & 0 \\ 0 & 9 \end{pmatrix}$$
      - 特征值：$\lambda_1 = 4, \lambda_2 = 9$。
      - 特征值平方根：$\sqrt{\lambda_1} = 2, \sqrt{\lambda_2} = 3$。
      - 矩阵平方根：
        $$A^{1/2} = \begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}$$
      - 验证：$A^{1/2}A^{1/2} = A$。
 
-   - **例子 2: 非对角矩阵**  
-     $$A = \begin{pmatrix} 5 & 4 \\ 4 & 5 \end{pmatrix}$$  
+   - **例子 2: 非对角矩阵**
+     $$A = \begin{pmatrix} 5 & 4 \\ 4 & 5 \end{pmatrix}$$
      - 特征值分解：$\lambda_1 = 9, \lambda_2 = 1$，特征向量构成正交矩阵：
        $$P = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix}$$
      - 矩阵平方根：
        $$A^{1/2} = P \begin{pmatrix} 3 & 0 \\ 0 & 1 \end{pmatrix} P' = \begin{pmatrix} 3 & 2 \\ 2 & 3 \end{pmatrix}$$
 
 ## 6. **应用**
-   
+
    - **协方差矩阵的变换**：
      - 协方差矩阵 $\Sigma$ 的平方根 $\Sigma^{1/2}$ 用于生成服从多元正态分布的随机向量：
        $$X \sim N(0, \Sigma), \quad X = \Sigma^{1/2}Z$$
@@ -1093,7 +1091,7 @@ $$
      - 在优化中，平方根矩阵常用于条件数分析和预处理。
 
 ## 7. **重要公式**
-   
+
    - 矩阵平方根与特征值：
      $$A^{1/2} = \sum_{i=1}^p \sqrt{\lambda_i} e_i e_i'$$
      其中 $e_i$ 是特征向量，$\lambda_i$ 是对应特征值。
@@ -1168,7 +1166,7 @@ $$
 
 其中 $x = \begin{pmatrix} x_1 \ x_2 \end{pmatrix}$，$A$ 是对称矩阵。
 
-  
+
 ## 4.**正定矩阵 Rayleigh 商的最大值与最小值**
 
 ### 4.1结论：
@@ -1248,7 +1246,7 @@ $$
 此时：
 $$
 R(x) = \frac{\lambda_1 \cdot 1^2}{1} = \lambda_1.
-$$  
+$$
 
 因此，Rayleigh 商的最大值为：
 
@@ -1276,10 +1274,10 @@ $$
 ------------
 
 
-# Random Vectors and Random Matrices 
+# Random Vectors and Random Matrices
 
 ## 1. **随机向量 (Random Vectors)**
-   
+
    - 随机向量是由多个随机变量组成的列向量：
      $$x = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_p \end{pmatrix}$$
      其中 $x_1, x_2, \cdots, x_p$ 是随机变量。
@@ -1290,12 +1288,12 @@ $$
        $$E(y) = AE(x) + b$$
 
 ## 2. **随机向量的协方差矩阵 (Variance-Covariance Matrix)**
-   
+
    - 定义为随机变量之间的方差与协方差的矩阵：
-     $$\Sigma = \begin{pmatrix} 
-     \text{Var}(x_1) & \text{Cov}(x_1, x_2) & \cdots & \text{Cov}(x_1, x_p) \\ 
-     \text{Cov}(x_2, x_1) & \text{Var}(x_2) & \cdots & \text{Cov}(x_2, x_p) \\ 
-     \vdots & \vdots & \ddots & \vdots \\ 
+     $$\Sigma = \begin{pmatrix}
+     \text{Var}(x_1) & \text{Cov}(x_1, x_2) & \cdots & \text{Cov}(x_1, x_p) \\
+     \text{Cov}(x_2, x_1) & \text{Var}(x_2) & \cdots & \text{Cov}(x_2, x_p) \\
+     \vdots & \vdots & \ddots & \vdots \\
      \text{Cov}(x_p, x_1) & \text{Cov}(x_p, x_2) & \cdots & \text{Var}(x_p)
      \end{pmatrix}$$
      其中 $\text{Cov}(x_i, x_j) = E[(x_i - \mu_i)(x_j - \mu_j)]$。
@@ -1304,36 +1302,36 @@ $$
        $$\Sigma_{ij} = \Sigma_{ji}$$
      - 若 $x$ 的随机变量是线性无关的，则 $\Sigma$ 是正定矩阵。
    - **示例**：对于随机向量 $x = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}$：
-     $$\Sigma = \begin{pmatrix} 
-     \sigma_{11} & \sigma_{12} & \sigma_{13} \\ 
-     \sigma_{21} & \sigma_{22} & \sigma_{23} \\ 
-     \sigma_{31} & \sigma_{32} & \sigma_{33} 
+     $$\Sigma = \begin{pmatrix}
+     \sigma_{11} & \sigma_{12} & \sigma_{13} \\
+     \sigma_{21} & \sigma_{22} & \sigma_{23} \\
+     \sigma_{31} & \sigma_{32} & \sigma_{33}
      \end{pmatrix}$$
      其中 $\sigma_{ij} = \text{Cov}(x_i, x_j)$。
 
 ## 3. **线性函数的方差 (Variance of a Linear Function)**
-   
+
    - 若 $x$ 是一个 $p$ 维随机向量，$b$ 是一个常数向量，则：
      $$\text{Var}(b'x) = b'\Sigma b$$
    - 几何意义：这描述了向量 $x$ 在方向 $b$ 上的分布宽度。
 
 ## 4. **独立性与非相关性**
-   
+
    - 如果 $x_i$ 和 $x_j$ 是独立的，则它们一定是非相关的，即 $\text{Cov}(x_i, x_j) = 0$。
    - 非相关性并不一定意味着独立性。
 
 ## 5. **随机矩阵 (Random Matrices)**
-  
+
    - 随机矩阵是元素为随机变量的矩阵。例如，一个 $p \times q$ 随机矩阵：
-     $$X = \begin{pmatrix} x_{11} & x_{12} & \cdots & x_{1q} \\ 
-     x_{21} & x_{22} & \cdots & x_{2q} \\ 
-     \vdots & \vdots & \ddots & \vdots \\ 
-     x_{p1} & x_{p2} & \cdots & x_{pq} 
+     $$X = \begin{pmatrix} x_{11} & x_{12} & \cdots & x_{1q} \\
+     x_{21} & x_{22} & \cdots & x_{2q} \\
+     \vdots & \vdots & \ddots & \vdots \\
+     x_{p1} & x_{p2} & \cdots & x_{pq}
      \end{pmatrix}$$
    - 每一列可以看作一个随机向量。
 
 ## 6. **相关矩阵 (Correlation Matrix)**
-   
+
    - 相关矩阵描述随机变量之间的相关性：
      $$\rho_{ij} = \frac{\text{Cov}(x_i, x_j)}{\sqrt{\text{Var}(x_i) \text{Var}(x_j)}} = \frac{\sigma_{ij}}{\sqrt{\sigma_{ii} \sigma_{jj}}}$$
    - 相关矩阵的性质：
@@ -1345,24 +1343,24 @@ $$
 
 ---
 
-# Correlation Matrix 
+# Correlation Matrix
 
 ## 1. **定义**
-   
+
    - 相关矩阵描述随机向量中各变量之间的相关性
    - 若随机向量 $x = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_p \end{pmatrix}$，其相关矩阵为：
      $$
-     \rho = \begin{pmatrix} 
-     1 & \rho_{12} & \cdots & \rho_{1p} \\ 
-     \rho_{21} & 1 & \cdots & \rho_{2p} \\ 
-     \vdots & \vdots & \ddots & \vdots \\ 
-     \rho_{p1} & \rho_{p2} & \cdots & 1 
+     \rho = \begin{pmatrix}
+     1 & \rho_{12} & \cdots & \rho_{1p} \\
+     \rho_{21} & 1 & \cdots & \rho_{2p} \\
+     \vdots & \vdots & \ddots & \vdots \\
+     \rho_{p1} & \rho_{p2} & \cdots & 1
      \end{pmatrix}
      $$
      其中 $\rho_{ij}$ 是 $x_i$ 和 $x_j$ 的相关系数。
 
 ## 2. **相关系数的公式**
-   
+
    - 两随机变量 $x_i$ 和 $x_j$ 的相关系数定义为：
      $$
      \rho_{ij} = \frac{\text{Cov}(x_i, x_j)}{\sqrt{\text{Var}(x_i) \cdot \text{Var}(x_j)}} = \frac{\sigma_{ij}}{\sqrt{\sigma_{ii} \cdot \sigma_{jj}}}
@@ -1374,14 +1372,14 @@ $$
      - $\rho_{ij} = 0$ 表示 $x_i$ 和 $x_j$ 不相关（线性关系为零）。
 
 ## 3. **相关矩阵的性质**
-   
+
    - 对角线元素 $\rho_{ii} = 1$（每个变量与自身的相关系数为 1）。
    - $\rho_{ij} = \rho_{ji}$，即相关矩阵是对称矩阵。
    - 相关矩阵是正半定矩阵（所有特征值均非负）。
    - 相关矩阵可以通过协方差矩阵标准化得到。
 
 ## 4. **协方差矩阵与相关矩阵的关系**
-  
+
    - 若随机向量 $x$ 的协方差矩阵为 $\Sigma$，则相关矩阵为：
      $$
      \rho = V^{-1/2} \Sigma V^{-1/2}
@@ -1394,22 +1392,22 @@ $$
 
 
 ## 5. **例子**
-   
+
    - 假设随机向量 $x = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}$ 的协方差矩阵为：
      $$
-     \Sigma = \begin{pmatrix} 
-     4 & 2 & 1 \\ 
-     2 & 3 & 1 \\ 
-     1 & 1 & 2 
+     \Sigma = \begin{pmatrix}
+     4 & 2 & 1 \\
+     2 & 3 & 1 \\
+     1 & 1 & 2
      \end{pmatrix}
      $$
      计算对应的相关矩阵：
      - 方差向量 $V = \text{diag}(4, 3, 2)$。
      - 相关矩阵为：
        $$
-       \rho = V^{-1/2} \Sigma V^{-1/2} = \begin{pmatrix} 
-       1 & \frac{2}{\sqrt{12}} & \frac{1}{\sqrt{8}} \\ 
-       \frac{2}{\sqrt{12}} & 1 & \frac{1}{\sqrt{6}} \\ 
-       \frac{1}{\sqrt{8}} & \frac{1}{\sqrt{6}} & 1 
+       \rho = V^{-1/2} \Sigma V^{-1/2} = \begin{pmatrix}
+       1 & \frac{2}{\sqrt{12}} & \frac{1}{\sqrt{8}} \\
+       \frac{2}{\sqrt{12}} & 1 & \frac{1}{\sqrt{6}} \\
+       \frac{1}{\sqrt{8}} & \frac{1}{\sqrt{6}} & 1
        \end{pmatrix}
        $$

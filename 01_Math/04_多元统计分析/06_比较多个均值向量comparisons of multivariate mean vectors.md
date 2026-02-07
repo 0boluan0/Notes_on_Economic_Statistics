@@ -201,7 +201,7 @@ S =
 \begin{bmatrix}
 387.4 & 489.4 & 1014.1 & 148.7 \\
 489.4 & 225.4 & 109.3 & 296.0 \\
-1014.1 & 109.3 & 479.6 & 120.4  \\ 
+1014.1 & 109.3 & 479.6 & 120.4  \\
 148.7 & 296.0 & 120.4 & 363.8
 \end{bmatrix}.
 $$
@@ -388,9 +388,9 @@ $$
 
 $$
 \nu = \frac{p + p^2}{
-    \sum_{i=1}^2 \frac{1}{n_i} \left\{ 
-    \text{tr} \left[ \frac{1}{n_i} S_i \left( \frac{1}{n_1} S_1 + \frac{1}{n_2} S_2 \right)^{-1} \right]^2 
-    + \left( \text{tr} \left[ \frac{1}{n_i} S_i \left( \frac{1}{n_1} S_1 + \frac{1}{n_2} S_2 \right)^{-1} \right] \right)^2 
+    \sum_{i=1}^2 \frac{1}{n_i} \left\{
+    \text{tr} \left[ \frac{1}{n_i} S_i \left( \frac{1}{n_1} S_1 + \frac{1}{n_2} S_2 \right)^{-1} \right]^2
+    + \left( \text{tr} \left[ \frac{1}{n_i} S_i \left( \frac{1}{n_1} S_1 + \frac{1}{n_2} S_2 \right)^{-1} \right] \right)^2
     \right\}
 }
 $$

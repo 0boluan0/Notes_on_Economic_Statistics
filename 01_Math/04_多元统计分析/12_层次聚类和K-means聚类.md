@@ -1,6 +1,6 @@
 # linkage
 
-#必考 划线题肯定考
+# 必考 划线题肯定考
 
 single linkage是最小的
 complete linkage是取最大

@@ -26,14 +26,3 @@ B : How to differentiate any function you know
 # Exam
 
 
-
-
-
-
-
-
-
-
-
-
-

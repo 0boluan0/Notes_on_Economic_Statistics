@@ -30,12 +30,12 @@ Ax=b ,仅在b属于A的column space(列空间)的时候有解.并且列3是列1�
 通过矩阵消元(matrix elimination)得到阶梯形式(echelon form)的矩阵,即0都聚集在左下角.经过消元之后剩下的非零的行的数量,也就是主元(pivot)的个数
 
 $$
-A=\begin{bmatrix} 1&2&2&2\\2&4&6&8 \\ 3&6&8&10  \end{bmatrix} 
+A=\begin{bmatrix} 1&2&2&2\\2&4&6&8 \\ 3&6&8&10  \end{bmatrix}
 $$
 经过消元后得到:
 
 $$
-U=\begin{bmatrix} 1&2&2&2\\0&0&2&4 \\ 0&0&0&0  \end{bmatrix} 
+U=\begin{bmatrix} 1&2&2&2\\0&0&2&4 \\ 0&0&0&0  \end{bmatrix}
 $$
 
 其中第一列和第三列叫做主列(pivot column),二四列叫做free column(自由列).自由列可以任意分配数值.对于任意分配的自由列数据,都能求出对应的主列的值使得Ax=0成立.
@@ -46,7 +46,7 @@ $$
 
 继续化简,reduce row echelon form(简化行阶梯形式),
 $$
-R=\begin{bmatrix} 1&2&2&2\\0&0&2&4 \\ 0&0&0&0  \end{bmatrix} 
+R=\begin{bmatrix} 1&2&2&2\\0&0&2&4 \\ 0&0&0&0  \end{bmatrix}
 $$
 
 矩阵主列的个数和其转置的主列的个数相同
@@ -55,18 +55,18 @@ $$
 
 首先拿到一个矩阵
 $$
-A=\begin{bmatrix} 1&2&3\\2&4&6 \\ 2&6&8 \\ 2&8&10  \end{bmatrix} 
+A=\begin{bmatrix} 1&2&3\\2&4&6 \\ 2&6&8 \\ 2&8&10  \end{bmatrix}
 $$
 
 使用消元法求解他的U,此过程中允许行交换和行线性变换
 $$
- U=\begin{bmatrix} 1&2&3\\0&2&2 \\ 0&0&0 \\ 0&0&0  \end{bmatrix} 
+ U=\begin{bmatrix} 1&2&3\\0&2&2 \\ 0&0&0 \\ 0&0&0  \end{bmatrix}
 $$
 
 发现它有两个主列一个自由列,给自由列赋值1,因为赋值0之后肯定都是0了,没意义.
 
 $$
- \begin{bmatrix} 1&2&3\\0&2&2 \\ 0&0&0 \\ 0&0&0  \end{bmatrix} 
+ \begin{bmatrix} 1&2&3\\0&2&2 \\ 0&0&0 \\ 0&0&0  \end{bmatrix}
  \begin{bmatrix} X_1\\X_2 \\ X_3=1(赋值)  \end{bmatrix} =\begin{bmatrix}0 \\ 0 \\ 0 \\ 0\end{bmatrix}
 
 $$
@@ -79,17 +79,17 @@ $$ X=c\begin{bmatrix} -1\\-1 \\ 1  \end{bmatrix}$$
 还可将U化为R
 
 $$
- R=\begin{bmatrix} 1&0&1\\0&1&1 \\ 0&0&0 \\ 0&0&0  \end{bmatrix} 
+ R=\begin{bmatrix} 1&0&1\\0&1&1 \\ 0&0&0 \\ 0&0&0  \end{bmatrix}
 $$
 
 R的组成形式为:
 
 $$
- U=\begin{bmatrix} I&F \\ 0&0 \end{bmatrix} 
+ U=\begin{bmatrix} I&F \\ 0&0 \end{bmatrix}
 $$
 使用U求得的特解为:
 $$
- X=\begin{bmatrix} -F \\ I  \end{bmatrix} 
+ X=\begin{bmatrix} -F \\ I  \end{bmatrix}
 $$
 
 # 解方程Ax=b
@@ -105,4 +105,4 @@ $$
 
 顺序和前面求零空间差不多,但是在带入的时候只能将自由列的x都代0,得到特解,这个特解和上面零空间的解的线性组合就是所有解.因为AX_p=b.AX_n=0那么两式相加就能得到b.
 
-特解+0空间解的所有线性组合.相当于零空间的解过0点,b的解过上面算出来的特解.纬度是不变的.  
+特解+0空间解的所有线性组合.相当于零空间的解过0点,b的解过上面算出来的特解.纬度是不变的.

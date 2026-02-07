@@ -4,7 +4,7 @@
 方程为:
 
 $$
-\begin{cases} 
+\begin{cases}
 2x-y=0\\
  -x+2y-z=-1\\
  -3y+4z=4 \\
@@ -18,14 +18,14 @@ $$
 A=
 \begin{bmatrix}
  2&-1&0  \\
- -1&2&-1 \\ 
- 0&-3&4 \\ 
+ -1&2&-1 \\
+ 0&-3&4 \\
  \end{bmatrix},
  B=
  \begin{bmatrix}
  0  \\
- -1 \\ 
- 4 \\ 
+ -1 \\
+ 4 \\
  \end{bmatrix}
 $$
 
@@ -39,26 +39,26 @@ $$
 X
 \begin{bmatrix}
  2  \\
- -1 \\ 
- 0 \\ 
+ -1 \\
+ 0 \\
  \end{bmatrix}
 +y
 \begin{bmatrix}
  -1  \\
- 2 \\ 
- -3 \\ 
+ 2 \\
+ -3 \\
  \end{bmatrix}
 +z
 \begin{bmatrix}
  0  \\
- -1 \\ 
- 4 \\ 
+ -1 \\
+ 4 \\
  \end{bmatrix}
 =
 \begin{bmatrix}
  0  \\
- -1 \\ 
- 4 \\ 
+ -1 \\
+ 4 \\
  \end{bmatrix}
 $$
 
@@ -71,31 +71,30 @@ $$
 Ax=b
 
 $$
-\begin{bmatrix} 
+\begin{bmatrix}
 2&5 \\
-1&3 \\ 
+1&3 \\
 \end{bmatrix}
-\begin{bmatrix} 
+\begin{bmatrix}
  1\\
- 2 \\ 
+ 2 \\
 \end{bmatrix}
 =
-1\begin{bmatrix} 
+1\begin{bmatrix}
  2\\
- 1 \\ 
+ 1 \\
 \end{bmatrix}
-+2\begin{bmatrix} 
- 5 \\ 
- 3 \\ 
++2\begin{bmatrix}
+ 5 \\
+ 3 \\
 \end{bmatrix}
 =
-\begin{bmatrix} 
+\begin{bmatrix}
  12\\
- 7 \\ 
+ 7 \\
 \end{bmatrix}
 $$
 
 将Ax看成A的column combination.
-
 
 
