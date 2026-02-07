@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/03_Iteration.md",
+                "file": "01_Math/06_时间序列分析/04_波动建模 Modeling Volatility.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "03_Iteration"
+              "title": "04_波动建模 Modeling Volatility"
             }
           }
         ]
@@ -218,7 +218,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: ✳ Obsidian笔记链接自动化"
+              "title": "Terminal: ⠐ Obsidian笔记链接自动化"
             }
           },
           {
@@ -264,7 +264,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 6
       },
       {
         "id": "8532e59675ffc5f1",
@@ -329,53 +329,53 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "3cf7d72ddbb2faad",
+  "active": "36db59183709d800",
   "lastOpenFiles": [
-    "03_Computer_Science/03_MIT 6.100L/03_Iteration.md",
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec03.pdf",
-    "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
-    "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
-    "00_factor/concept/Absolute VaR.md",
-    "00_factor/concept/Accounts Receivable Turnover Ratio.md",
-    "00_factor/concept/Adam Smith's Economics.md",
-    "00_factor/concept/2SLS.md",
-    "00_inbox/add_done_item.md",
-    "01_Math/03_game theory/03_策略式博弈.md",
-    "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md",
-    "01_Math/01_calculus/Lecture_notes/1-7.pdf",
-    "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
-    "01_Math/01_calculus/01_calculus.canvas",
-    "01_Math/03_game theory/02_初步认识博弈.md",
-    "01_Math/06_时间序列分析/03_平稳时间序列模型.md",
-    "02_Economy/01_Econometrics/05_多元回归模型的矩阵表达.md",
-    "02_Economy/01_Econometrics/06_多重共线性.md",
-    "99_学习情况记录/2026-02-06——Fri.md",
-    "99_学习情况记录/2026-02-05——Thu.md",
-    "99_学习情况记录/2026-02-03——Tue.md",
-    "99_学习情况记录/2026-02-02——Mon.md",
-    "01_Math/06_时间序列分析/02_差分方程Difference Equation.md",
+    "01_Math/06_时间序列分析/04_波动建模 Modeling Volatility.md",
+    "00_factor/concept/TARCH.md",
+    "linked_notes/01_calculus/MIT18.01_Single-Variable-Calculus.md",
+    "00_factor/concept/derivative.md",
     "01_Math/06_时间序列分析/01_介绍时间序列.md",
-    "01_Math/05_随机过程/05_连续时间的马尔可夫链.md",
-    "01_Math/05_随机过程/06_平稳随机过程.md",
-    "01_Math/05_随机过程/04_马尔可夫链.md",
-    "01_Math/05_随机过程/01_预备知识.md",
-    "01_Math/05_随机过程/02_随机过程的概念和分类.md",
+    "01_Math/06_时间序列分析/00_导论与概率论复习.md",
+    "linked_notes/07_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
+    "linked_notes/07_金融机构与风险管理/08_操作员如何管理风险暴露.md",
+    "linked_notes/07_金融机构与风险管理/14_VaR参数法和模拟法.md",
+    "linked_notes/07_金融机构与风险管理/16_巴塞尔协议.md",
+    "linked_notes/07_金融机构与风险管理/01_引言.md",
+    "linked_notes/07_金融机构与风险管理/13_历史模拟法和极值理论.md",
+    "linked_notes/07_金融机构与风险管理/22_情景分析和压力测试.md",
+    "linked_notes/07_金融机构与风险管理/19_违约风险.md",
+    "linked_notes/07_金融机构与风险管理/20_CVA,DVA衍生产品中的对手信用风险.md",
+    "linked_notes/07_金融机构与风险管理/00_金融风险划重点.md",
+    "linked_notes/07_金融机构与风险管理/10_波动率.md",
+    "linked_notes/07_金融机构与风险管理/21_信用在险价值.md",
+    "linked_notes/07_金融机构与风险管理/17_OTC衍生产品市场的监管.md",
+    "linked_notes/07_金融机构与风险管理/07_定价与情景分析.md",
+    "linked_notes/07_金融机构与风险管理/12_VAR风险.md",
+    "linked_notes/07_金融机构与风险管理/11_相关系数与copula函数.md",
+    "linked_notes/07_金融机构与风险管理/09_利率风险.md",
+    "linked_notes/07_金融机构与风险管理",
+    "linked_notes/03_货币银行学/1_引言/00_在这节课开始之前，导论.md",
+    "linked_notes/03_货币银行学/1_引言/02_金融体系概览.md",
+    "linked_notes/03_货币银行学/1_引言/01_为什么研究货币，银行与金融市场.md",
+    "linked_notes/03_货币银行学/1_引言",
+    "linked_notes/03_货币银行学/0_补充",
+    "linked_notes/03_货币银行学/2_金融市场",
+    "linked_notes/03_货币银行学/4_中央银行与货币政策的实施",
+    "linked_notes/03_货币银行学/5_国际金融与货币政策",
+    "linked_notes/03_货币银行学/3_金融机构",
+    "linked_notes/03_货币银行学",
+    "linked_notes/01_Econometrics",
+    "linked_notes/05_财务管理",
+    "01_Math/01_calculus/01_calculus.canvas",
     "02_Economy/01_Econometrics/01_Econometrics.canvas",
-    "01_Math/06_时间序列分析/lecture-dual.pdf",
-    "01_Math/06_时间序列分析/lecture.pdf",
     "01_Math/06_时间序列分析/06_时间序列分析.canvas",
     "01_Math/05_随机过程/05_随机过程.canvas",
     "01_Math/04_多元统计分析/WechatIMG1755.jpg",
     "01_Math/04_多元统计分析/04_多元统计分析.canvas",
     "98_attachment/dashboards/2026-02-08-map.svg",
-    "98_attachment/dashboards/2026-02-07-news.json",
     "98_attachment/dashboards/2026-02-07-map.svg",
-    "00_inbox/image_text_audit_2026-02-06.csv",
     "98_attachment/Pasted image 20241111104407.png",
-    "01_Math/03_game theory/第3次作业.pdf",
-    "01_Math/03_game theory/第2次作业.pdf",
-    "01_Math/03_game theory/第1次作业补充.pdf",
-    "01_Math/03_game theory/第1次作业.pdf",
     "01_Math/02_linear algebra/02_linear algebra.canvas",
     "98_attachment/Pasted image 20250316150336.png",
     "98_attachment/Pasted image 20240305230159.png",
