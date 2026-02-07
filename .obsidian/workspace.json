@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2026-02-07——Sat.md",
+                "file": "01_Math/03_game theory/06_扩展性博弈.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-02-07——Sat"
+              "title": "06_扩展性博弈"
             }
           }
         ],
@@ -130,6 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "01_Math/03_game theory/06_扩展性博弈.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -139,7 +140,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for 06_扩展性博弈"
             }
           },
           {
@@ -148,11 +149,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "01_Math/03_game theory/06_扩展性博弈.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from 06_扩展性博弈"
             }
           },
           {
@@ -199,9 +201,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "01_Math/03_game theory/06_扩展性博弈.md"
+              },
               "icon": "lucide-info",
-              "title": "File properties"
+              "title": "File properties for 06_扩展性博弈"
             }
           },
           {
@@ -302,12 +306,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "01_Math/03_game theory/06_扩展性博弈.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 06_扩展性博弈"
             }
           },
           {
@@ -354,14 +359,16 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "3cf7d72ddbb2faad",
+  "active": "7753fb3dc8dc90cc",
   "lastOpenFiles": [
+    "01_Math/03_game theory/05_贝叶斯博弈.md",
+    "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md",
+    "01_Math/03_game theory/03_策略式博弈.md",
     "99_学习情况记录/2026-02-07——Sat.md",
     "99_学习情况记录/2026-02-06——Fri.md",
     "98_attachment/dashboards/2026-02-08-map.svg",
     "98_attachment/dashboards/2026-02-07-news.json",
     "98_attachment/dashboards/2026-02-07-map.svg",
-    "01_Math/03_game theory/03_策略式博弈.md",
     "01_Math/03_game theory/02_初步认识博弈.md",
     "00_inbox/image_text_audit_2026-02-06.csv",
     "00_factor/concept/Rationalisability.md",
@@ -377,8 +384,6 @@
     "01_Math/02_linear algebra/02_linear algebra.canvas",
     "01_Math/02_linear algebra/00_perface.md",
     "01_Math/03_game theory/01_导论.md",
-    "01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md",
-    "01_Math/03_game theory/05_贝叶斯博弈.md",
     "01_Math/06_时间序列分析/02_差分方程Difference Equation.md",
     "98_attachment/Pasted image 20250316150336.png",
     "01_Math/06_时间序列分析/01_介绍时间序列.md",
