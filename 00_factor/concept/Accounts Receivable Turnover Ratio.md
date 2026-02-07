@@ -1,13 +1,12 @@
 ---
 aliases:
-- 应收账款周转次数
-- 应收账款周转率
-- Accounts
-- Accounts Receivable Turnover Ratio
+  - 应收账款周转次数
+  - 应收账款周转率
+  - Accounts Receivable Turnover Ratio
 tags:
-- 财务管理
-- 财务比率
-- concept
+  - 财务管理
+  - 财务比率
+  - concept
 ---
 应收账款周转率是指营业收入与应收账款的比值，用于衡量企业应收账款回收速度。
 

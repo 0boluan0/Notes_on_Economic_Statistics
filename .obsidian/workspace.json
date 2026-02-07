@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/add_done_item.md",
+                "file": "00_factor/concept/Asymptotic Theory.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "add_done_item"
+              "title": "Asymptotic Theory"
             }
           }
         ]
@@ -281,13 +281,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/add_done_item.md",
+                "file": "00_factor/concept/Asymptotic Theory.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of add_done_item"
+              "title": "Outline of Asymptotic Theory"
             }
           },
           {
@@ -336,10 +336,16 @@
   },
   "active": "aa29847e2d80759c",
   "lastOpenFiles": [
+    "00_factor/concept/Augmented Dickey-Fuller Test.md",
+    "00_factor/concept/Autocorrelation.md",
+    "00_factor/concept/Asymptotic Theory.md",
+    "00_factor/concept/ARIMA.md",
+    "00_factor/concept/ARCH Effects Test.md",
+    "00_factor/concept/Accounts Receivable Turnover Ratio.md",
+    "00_inbox/add_done_item.md",
     "00_inbox/日记模版.md",
     "00_inbox/插入批注.md",
     "00_inbox/周记模版.md",
-    "00_inbox/add_done_item.md",
     "99_学习情况记录/2026-02-07——Sat.md",
     "99_学习情况记录/2026-02-06——Fri.md",
     "99_学习情况记录/2026-02-05——Thu.md",
@@ -360,12 +366,6 @@
     "99_学习情况记录/已复盘/2025-06-27——周五.md",
     "99_学习情况记录/已复盘/2025-06-26——周四.md",
     "99_学习情况记录/已复盘/2025-06-19——周四.md",
-    "99_学习情况记录/已复盘/2025-06-16——周一.md",
-    "99_学习情况记录/已复盘/2025-06-07——周六.md",
-    "99_学习情况记录/已复盘/2025-05-27——周二.md",
-    "99_学习情况记录/已复盘/2025-05-25——周日.md",
-    "99_学习情况记录/已复盘/2025-05-24——周六.md",
-    "99_学习情况记录/已复盘/2025-05-23——周五.md",
     "99_学习情况记录/已复盘",
     "99_学习情况记录/周记",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec03.pdf",
