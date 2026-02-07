@@ -5,6 +5,10 @@
       "path": "01_Math/03_game theory/03_策略式博弈.md"
     },
     {
+      "basename": "02_初步认识博弈",
+      "path": "01_Math/03_game theory/02_初步认识博弈.md"
+    },
+    {
       "basename": "Rationalisability",
       "path": "00_factor/concept/Rationalisability.md"
     },
@@ -51,10 +55,6 @@
     {
       "basename": "01_导论",
       "path": "01_Math/03_game theory/01_导论.md"
-    },
-    {
-      "basename": "02_初步认识博弈",
-      "path": "01_Math/03_game theory/02_初步认识博弈.md"
     },
     {
       "basename": "04_案例（囚徒困境与纳什均衡）",
