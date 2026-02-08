@@ -1,6 +1,38 @@
 {
   "recentFiles": [
     {
+      "basename": "2026-02-08——Sun",
+      "path": "99_学习情况记录/2026-02-08——Sun.md"
+    },
+    {
+      "basename": "2026-02-07——Sat",
+      "path": "99_学习情况记录/2026-02-07——Sat.md"
+    },
+    {
+      "basename": "Overview & Study Record",
+      "path": "Overview & Study Record.md"
+    },
+    {
+      "basename": "Learning method",
+      "path": "04_method/Learning method.md"
+    },
+    {
+      "basename": "03_Iteration",
+      "path": "03_Computer_Science/03_MIT 6.100L/03_Iteration.md"
+    },
+    {
+      "basename": "02_Strings,Input-Output and Branching",
+      "path": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md"
+    },
+    {
+      "basename": "Introduction to Computation and Programming Using Python, Revised - Guttag, John V.",
+      "path": "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf"
+    },
+    {
+      "basename": "任务管理系统说明",
+      "path": "04_method/任务管理系统说明.md"
+    },
+    {
       "basename": "Asymptotic Theory",
       "path": "00_factor/concept/Asymptotic Theory.md"
     },
@@ -41,10 +73,6 @@
       "path": "00_inbox/周记模版.md"
     },
     {
-      "basename": "2026-02-07——Sat",
-      "path": "99_学习情况记录/2026-02-07——Sat.md"
-    },
-    {
       "basename": "2026-02-06——Fri",
       "path": "99_学习情况记录/2026-02-06——Fri.md"
     },
@@ -67,10 +95,6 @@
     {
       "basename": "_link_check_report",
       "path": "00_factor/_link_check_report.md"
-    },
-    {
-      "basename": "03_Iteration",
-      "path": "03_Computer_Science/03_MIT 6.100L/03_Iteration.md"
     },
     {
       "basename": "mit6_100l_lec03",
@@ -175,30 +199,6 @@
     {
       "basename": "01_介绍时间序列",
       "path": "01_Math/06_时间序列分析/01_介绍时间序列.md"
-    },
-    {
-      "basename": "00_导论与概率论复习",
-      "path": "01_Math/06_时间序列分析/00_导论与概率论复习.md"
-    },
-    {
-      "basename": "payoffs",
-      "path": "00_factor/concept/payoffs.md"
-    },
-    {
-      "basename": "03_策略式博弈",
-      "path": "01_Math/03_game theory/03_策略式博弈.md"
-    },
-    {
-      "basename": "02_Strings,Input-Output and Branching",
-      "path": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md"
-    },
-    {
-      "basename": "01_Introduction",
-      "path": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md"
-    },
-    {
-      "basename": "1-7",
-      "path": "01_Math/01_calculus/Lecture_notes/1-7.pdf"
     }
   ],
   "omittedPaths": [],
