@@ -38,8 +38,8 @@ for index in range(len(s)):
     if s[index] in 'iu':
         print("There is an i or u")
 
-for char in s:
-    if char in 'iu':
+for i in s:
+    if i in 'iu':
         print("There is an i or u")
 ```
 
