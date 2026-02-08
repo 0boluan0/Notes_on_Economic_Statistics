@@ -1,6 +1,38 @@
 {
   "recentFiles": [
     {
+      "basename": "04_Loops over strings, Guess-and-check and Binary",
+      "path": "03_Computer_Science/03_MIT 6.100L/04_Loops over strings, Guess-and-check and Binary.md"
+    },
+    {
+      "basename": "03_Iteration",
+      "path": "03_Computer_Science/03_MIT 6.100L/03_Iteration.md"
+    },
+    {
+      "basename": "Game Theory-hub",
+      "path": "00_factor/00_hub/Game Theory-hub.md"
+    },
+    {
+      "basename": "Introduction to Computation and Programming Using Python, Revised - Guttag, John V.",
+      "path": "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf"
+    },
+    {
+      "basename": "02_Strings,Input-Output and Branching",
+      "path": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md"
+    },
+    {
+      "basename": "mit6_100l_lec03",
+      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec03.pdf"
+    },
+    {
+      "basename": "mit6_100l_lec02",
+      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec02.pdf"
+    },
+    {
+      "basename": "README",
+      "path": "03_Computer_Science/README.md"
+    },
+    {
       "basename": "2026-02-08——Sun",
       "path": "99_学习情况记录/2026-02-08——Sun.md"
     },
@@ -15,18 +47,6 @@
     {
       "basename": "Learning method",
       "path": "04_method/Learning method.md"
-    },
-    {
-      "basename": "03_Iteration",
-      "path": "03_Computer_Science/03_MIT 6.100L/03_Iteration.md"
-    },
-    {
-      "basename": "02_Strings,Input-Output and Branching",
-      "path": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md"
-    },
-    {
-      "basename": "Introduction to Computation and Programming Using Python, Revised - Guttag, John V.",
-      "path": "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf"
     },
     {
       "basename": "任务管理系统说明",
@@ -95,10 +115,6 @@
     {
       "basename": "_link_check_report",
       "path": "00_factor/_link_check_report.md"
-    },
-    {
-      "basename": "mit6_100l_lec03",
-      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec03.pdf"
     },
     {
       "basename": "05_贝叶斯博弈",
@@ -183,22 +199,6 @@
     {
       "basename": "Linear Algebra-hub",
       "path": "00_factor/00_hub/Linear Algebra-hub.md"
-    },
-    {
-      "basename": "04_波动建模 Modeling Volatility",
-      "path": "01_Math/06_时间序列分析/04_波动建模 Modeling Volatility.md"
-    },
-    {
-      "basename": "TARCH",
-      "path": "00_factor/concept/TARCH.md"
-    },
-    {
-      "basename": "derivative",
-      "path": "00_factor/concept/derivative.md"
-    },
-    {
-      "basename": "01_介绍时间序列",
-      "path": "01_Math/06_时间序列分析/01_介绍时间序列.md"
     }
   ],
   "omittedPaths": [],
