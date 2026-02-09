@@ -182,7 +182,7 @@ $$
 - 把非方阵也谈 det。
 
 **1道例题（含简解）**
-- 题：`A=\begin{bmatrix}1&2\3&4\end{bmatrix}`。
+- 题：$A=\begin{bmatrix}1&2\\3&4\end{bmatrix}$。
 - 解：`\det(A)=1\cdot4-2\cdot3=-2`。
 - 结论：可逆且发生方向翻转。
 
@@ -214,8 +214,8 @@ $$
 - 在大矩阵上硬用展开计算。
 
 **1道例题（含简解）**
-- 题：对 `A=\begin{bmatrix}2&1&0\1&3&1\0&1&2\end{bmatrix}` 以第一行展开。
-- 解：`\det(A)=2\det\begin{bmatrix}3&1\1&2\end{bmatrix}-1\det\begin{bmatrix}1&1\0&2\end{bmatrix}=2(5)-2=8`。
+- 题：对 $A=\begin{bmatrix}2&1&0\\1&3&1\\0&1&2\end{bmatrix}$ 以第一行展开。
+- 解：$\det(A)=2\det\begin{bmatrix}3&1\\1&2\end{bmatrix}-1\det\begin{bmatrix}1&1\\0&2\end{bmatrix}=2(5)-2=8$。
 - 故 `A` 可逆。
 
 ### Session 2.7 克拉默法则、逆与体积
@@ -246,7 +246,7 @@ $$
 - 把克拉默法则当通用算法。
 
 **1道例题（含简解）**
-- 题：`A=\begin{bmatrix}1&2\3&4\end{bmatrix}, b=(5,11)^T`。
+- 题：$A=\begin{bmatrix}1&2\\3&4\end{bmatrix},\ b=(5,11)^T$。
 - 解：`\det(A)=-2`；`\det(A_1)= -2, \det(A_2)= -4`。
 - 故 `x_1=1,x_2=2`。
 
@@ -278,7 +278,7 @@ $$
 - 代数重数与几何重数混淆。
 
 **1道例题（含简解）**
-- 题：`A=\begin{bmatrix}2&0\0&3\end{bmatrix}` 的特征结构。
+- 题：$A=\begin{bmatrix}2&0\\0&3\end{bmatrix}$ 的特征结构。
 - 解：特征值 `2,3`；对应特征向量分别沿 `e1,e2`。
 - `A^k` 直接对角元幂次化。
 
@@ -310,7 +310,7 @@ $$
 - 忽略复特征值情形。
 
 **1道例题（含简解）**
-- 题：`A=\begin{bmatrix}1&1\0&2\end{bmatrix}`，求 `A^k` 思路。
+- 题：$A=\begin{bmatrix}1&1\\0&2\end{bmatrix}$，求 $A^k$ 思路。
 - 解：先求特征值 `1,2` 与特征向量，组 `S,\Lambda`。
 - 再用 `A^k=S\Lambda^kS^{-1}`。
 
@@ -375,7 +375,7 @@ $$
 - 傅里叶系数内积计算漏掉归一化常数。
 
 **1道例题（含简解）**
-- 题：两状态转移 `A=[[0.9,0.2],[0.1,0.8]]`（列随机），求稳态。
+- 题：两状态转移 $A=\begin{bmatrix}0.9&0.2\\0.1&0.8\end{bmatrix}$（列随机），求稳态。
 - 解：解 `A\pi=\pi,\ \pi_1+\pi_2=1`，得 `\pi=(2/3,1/3)`。
 - 长时间分布趋近该向量。
 
