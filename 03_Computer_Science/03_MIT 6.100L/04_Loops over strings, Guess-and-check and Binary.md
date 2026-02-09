@@ -115,7 +115,7 @@ else:
 ### 例子：立方根（正负数）
 
 ```python
-cube = int(input("Enter an integer: "))
+cube = 1000
 for guess in range(abs(cube) + 1):
     if guess**3 >= abs(cube):
         break
@@ -169,7 +169,7 @@ $$
 ### 十进制整数转二进制（Python 实现思路）
 
 ```python
-num = int(input("Enter an integer: "))
+num = 1442
 
 is_neg = num < 0
 num = abs(num)
@@ -194,11 +194,11 @@ print(result)
 
 ## 课堂练习（You Try It）
 
-- [ ] 统计 `range(5)`, `range(10)`, `range(2,9,3)`, `range(-4,6,2)` 中偶数个数
-- [ ] 给字符串 `s` 统计 unique letters 数量（不用 set）
-- [ ] 写 secret number 搜索程序，对比“有/无 Boolean flag”两个版本
-- [ ] 实现整数转二进制函数，测试 `0, 1, 19, -19`
-- [ ] 验证 `0.1 + 0.1 + ...`（10 次）与 `1` 的比较结果
+- [x] 统计 `range(5)`, `range(10)`, `range(2,9,3)`, `range(-4,6,2)` 中偶数个数 ✅ 2026-02-09
+- [x] 给字符串 `s` 统计 unique letters 数量（不用 set） ✅ 2026-02-09
+- [x] 写 secret number 搜索程序，对比“有/无 Boolean flag”两个版本 ✅ 2026-02-09
+- [x] 实现整数转二进制函数，测试 `0, 1, 19, -19` ✅ 2026-02-09
+- [x] 验证 `0.1 + 0.1 + ...`（10 次）与 `1` 的比较结果 ✅ 2026-02-09
 
 ## 小结
 
