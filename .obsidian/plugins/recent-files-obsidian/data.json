@@ -1,8 +1,48 @@
 {
   "recentFiles": [
     {
+      "basename": "00_perface",
+      "path": "01_Math/02_linear algebra/00_perface.md"
+    },
+    {
+      "basename": "01_matrices and Gaussian Elimination",
+      "path": "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md"
+    },
+    {
+      "basename": "linear_algebra_and_its_applications_4th",
+      "path": "01_Math/02_linear algebra/linear_algebra_and_its_applications_4th.pdf"
+    },
+    {
+      "basename": "Introduction_to_Linear_Algebra(Strang)",
+      "path": "01_Math/02_linear algebra/Introduction_to_Linear_Algebra(Strang).pdf"
+    },
+    {
       "basename": "2026-02-09——Mon",
       "path": "99_学习情况记录/2026-02-09——Mon.md"
+    },
+    {
+      "basename": "Overview & Study Record",
+      "path": "Overview & Study Record.md"
+    },
+    {
+      "basename": "Learning method",
+      "path": "04_method/Learning method.md"
+    },
+    {
+      "basename": "08_Functions as objects",
+      "path": "03_Computer_Science/03_MIT 6.100L/08_Functions as objects.md"
+    },
+    {
+      "basename": "07_Decomposition abstraction and functions",
+      "path": "03_Computer_Science/03_MIT 6.100L/07_Decomposition abstraction and functions.md"
+    },
+    {
+      "basename": "06_Bisection search and algorithms",
+      "path": "03_Computer_Science/03_MIT 6.100L/06_Bisection search and algorithms.md"
+    },
+    {
+      "basename": "05_Floats and approximation methods",
+      "path": "03_Computer_Science/03_MIT 6.100L/05_Floats and approximation methods.md"
     },
     {
       "basename": "04_Loops over strings, Guess-and-check and Binary",
@@ -51,18 +91,6 @@
     {
       "basename": "2026-02-07——Sat",
       "path": "99_学习情况记录/2026-02-07——Sat.md"
-    },
-    {
-      "basename": "Overview & Study Record",
-      "path": "Overview & Study Record.md"
-    },
-    {
-      "basename": "Learning method",
-      "path": "04_method/Learning method.md"
-    },
-    {
-      "basename": "任务管理系统说明",
-      "path": "04_method/任务管理系统说明.md"
     },
     {
       "basename": "Asymptotic Theory",
@@ -171,34 +199,6 @@
     {
       "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
       "path": "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
-    },
-    {
-      "basename": "Determinant",
-      "path": "00_factor/concept/Determinant.md"
-    },
-    {
-      "basename": "Matrix Inverse",
-      "path": "00_factor/concept/Matrix Inverse.md"
-    },
-    {
-      "basename": "Spectral Decomposition",
-      "path": "00_factor/concept/Spectral Decomposition.md"
-    },
-    {
-      "basename": "Matrix Operations",
-      "path": "00_factor/concept/Matrix Operations.md"
-    },
-    {
-      "basename": "05_ 总体平均向量的推论",
-      "path": "01_Math/04_多元统计分析/05_ 总体平均向量的推论.md"
-    },
-    {
-      "basename": "Linear Combination",
-      "path": "00_factor/concept/Linear Combination.md"
-    },
-    {
-      "basename": "Introduction_to_Linear_Algebra(Strang)",
-      "path": "01_Math/02_linear algebra/Introduction_to_Linear_Algebra(Strang).pdf"
     }
   ],
   "omittedPaths": [],
