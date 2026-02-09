@@ -1,20 +1,124 @@
 {
   "recentFiles": [
     {
+      "basename": "Unit1_课堂笔记",
+      "path": "01_Math/02_linear algebra/Unit1/Unit1_课堂笔记.md"
+    },
+    {
       "basename": "00_perface",
       "path": "01_Math/02_linear algebra/00_perface.md"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses1.1sum",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.1sum.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses3.3prob",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.3prob.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses3.4prob",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.4prob.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses3.5prob",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.5prob.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses3.6prob",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.6prob.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses3.7prob",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.7prob.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses2.8prob",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses2.8prob.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses1.11prob",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.11prob.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses1.12prob",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.12prob.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_ex3s",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex3s.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_ex3",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex3.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_ex2s",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2s.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_ex2",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_ex1s",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex1s.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_ex1",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex1.pdf"
     },
     {
       "basename": "01_matrices and Gaussian Elimination",
       "path": "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md"
     },
     {
-      "basename": "linear_algebra_and_its_applications_4th",
-      "path": "01_Math/02_linear algebra/linear_algebra_and_its_applications_4th.pdf"
-    },
-    {
       "basename": "Introduction_to_Linear_Algebra(Strang)",
       "path": "01_Math/02_linear algebra/Introduction_to_Linear_Algebra(Strang).pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses1.1prob",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses1.2sum",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.2sum.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses1.3sum",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.3sum.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses1.5sum",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.5sum.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses3.9sum",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.9sum.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses1.10sum",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.10sum.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses1.8sum",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.8sum.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses1.7sum",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.7sum.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses1.6sum",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.6sum.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses1.4sum",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.4sum.pdf"
+    },
+    {
+      "basename": "linear_algebra_and_its_applications_4th",
+      "path": "01_Math/02_linear algebra/linear_algebra_and_its_applications_4th.pdf"
     },
     {
       "basename": "2026-02-09——Mon",
@@ -95,110 +199,6 @@
     {
       "basename": "Asymptotic Theory",
       "path": "00_factor/concept/Asymptotic Theory.md"
-    },
-    {
-      "basename": "Augmented Dickey-Fuller Test",
-      "path": "00_factor/concept/Augmented Dickey-Fuller Test.md"
-    },
-    {
-      "basename": "Autocorrelation",
-      "path": "00_factor/concept/Autocorrelation.md"
-    },
-    {
-      "basename": "ARIMA",
-      "path": "00_factor/concept/ARIMA.md"
-    },
-    {
-      "basename": "ARCH Effects Test",
-      "path": "00_factor/concept/ARCH Effects Test.md"
-    },
-    {
-      "basename": "Accounts Receivable Turnover Ratio",
-      "path": "00_factor/concept/Accounts Receivable Turnover Ratio.md"
-    },
-    {
-      "basename": "add_done_item",
-      "path": "00_inbox/add_done_item.md"
-    },
-    {
-      "basename": "日记模版",
-      "path": "00_inbox/日记模版.md"
-    },
-    {
-      "basename": "插入批注",
-      "path": "00_inbox/插入批注.md"
-    },
-    {
-      "basename": "周记模版",
-      "path": "00_inbox/周记模版.md"
-    },
-    {
-      "basename": "2026-02-06——Fri",
-      "path": "99_学习情况记录/2026-02-06——Fri.md"
-    },
-    {
-      "basename": "2026-02-05——Thu",
-      "path": "99_学习情况记录/2026-02-05——Thu.md"
-    },
-    {
-      "basename": "2026-02-04——Wed",
-      "path": "99_学习情况记录/2026-02-04——Wed.md"
-    },
-    {
-      "basename": "2026-02-03——Tue",
-      "path": "99_学习情况记录/2026-02-03——Tue.md"
-    },
-    {
-      "basename": "2026-02-02——Mon",
-      "path": "99_学习情况记录/2026-02-02——Mon.md"
-    },
-    {
-      "basename": "_link_check_report",
-      "path": "00_factor/_link_check_report.md"
-    },
-    {
-      "basename": "05_贝叶斯博弈",
-      "path": "01_Math/03_game theory/05_贝叶斯博弈.md"
-    },
-    {
-      "basename": "02_初步认识博弈",
-      "path": "01_Math/03_game theory/02_初步认识博弈.md"
-    },
-    {
-      "basename": "Extensive-form Game",
-      "path": "00_factor/concept/Extensive-form Game.md"
-    },
-    {
-      "basename": "01_导论",
-      "path": "01_Math/03_game theory/01_导论.md"
-    },
-    {
-      "basename": "Price-to-Book Ratio",
-      "path": "00_factor/concept/Price-to-Book Ratio.md"
-    },
-    {
-      "basename": "Perfect Bayesian Equilibrium",
-      "path": "00_factor/concept/Perfect Bayesian Equilibrium.md"
-    },
-    {
-      "basename": "02_税收与收入分布",
-      "path": "02_Economy/02_public finance财政学/3_财政收入/02_税收与收入分布.md"
-    },
-    {
-      "basename": "Income and Substitution Effects",
-      "path": "00_factor/concept/Income and Substitution Effects.md"
-    },
-    {
-      "basename": "Economic Development",
-      "path": "00_factor/concept/Economic Development.md"
-    },
-    {
-      "basename": "04_多元正态分布The Multivariate Normal Distribution",
-      "path": "01_Math/04_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md"
-    },
-    {
-      "basename": "02_矩阵代数和随机向量Matrix Algebra and Random Vectors",
-      "path": "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md"
     }
   ],
   "omittedPaths": [],
