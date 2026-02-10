@@ -1,310 +1,381 @@
 ---
 aliases: []
-tags: [linear-algebra, MIT-18.06SC, unit3]
+tags:
+  - linear-algebra
+  - MIT-18.06SC
+  - unit3
 date: 2026-02-09
 科目: Math
 ---
 
 # Unit3 课堂笔记（MIT 18.06SC）
 
+> 对应资料顺序：`MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.1sum.pdf` 到 `Ses3.9sum.pdf`。
+> 本单元主线：对称与正定（symmetric & positive definite）→ 复矩阵与 FFT → 相似/Jordan → SVD/换基/伪逆。
 
-## Session 笔记
+## Session 3.1 Symmetric matrices and positive definiteness
 
-### Session 3.1 对称矩阵与正定性
+### 课程目标
+- 理解对称矩阵（symmetric matrix）的谱性质。
+- 掌握正定矩阵（positive definite）的判定与意义。
 
-> 对应 Summary: *Symmetric matrices and positive definiteness*
+### 核心定义
+- 对称矩阵：
+  $$A=A^T$$
+- 正定：
+  $$x^TAx>0,\ \forall x\neq0$$
+- 谱分解（对称情形）：
+  $$A=Q\Lambda Q^T$$
 
-**核心概念**
-- 对称矩阵可被正交对角化，特征值全实。
-- 正定矩阵等价于所有非零向量上二次型为正。
-- 正定性连接最优化凸性与数值稳定。
+### 关键推导
+- 对称矩阵可正交对角化，特征值均实数。
+- 正定等价于所有特征值严格为正。
+- 在优化中，正定 Hessian 对应严格凸。
 
-**关键公式**
-$$
-A=Q\Lambda Q^T
-$$
-$$
-x^TAx>0\ (x\neq0)
-$$
+### 例题（含解法）
+$$A=\begin{bmatrix}2&1\\1&2\end{bmatrix}$$
+- 特征值 $3,1$，均正。
+- 因此 `A` 正定。
 
-**几何/直觉解释**
-- 对称矩阵在某组正交坐标下只做各向伸缩。
-- 正定表示“向上开的多维抛物面”。
-- 最小二乘中的 `A^TA` 就是典型半正定。
+### 易错点
+- 把“主对角线正”误当正定充分条件。
+- 忽略矩阵是否对称就讨论正定。
 
-**易错点**
-- 把“主对角线正”当充分条件。
-- 正定与可逆混淆（半正定不可逆）。
-- 忽略是否对称。
+### 与00_factor关联
+- [[Symmetric Matrix|对称矩阵]]
+- [[Eigenvalues|特征值]]
 
-**1道例题（含简解）**
-- 题：判断 $A=\begin{bmatrix}2&1\\1&2\end{bmatrix}$ 是否正定。
-- 解：特征值 `3,1` 均正，故正定。
-- 等价地主子式均正。
+### 代码块（完整保留）
+```python
+import numpy as np
 
-### Session 3.2 复矩阵与快速傅里叶
+A = np.array([[2,1],[1,2]], dtype=float)
+w = np.linalg.eigvals(A)
+print("eigenvalues:", w)
+print("is positive definite?", np.all(w > 0))
+```
 
-> 对应 Summary: *Complex matrices; fast Fourier transform*
+## Session 3.2 Complex matrices; fast Fourier transform
 
-**核心概念**
-- 复内积空间中需使用共轭转置 `A^*`。
-- 离散傅里叶变换矩阵是酉矩阵（单位化后）。
-- FFT 利用分治把 `O(n^2)` 降到 `O(n\log n)`。
+### 课程目标
+- 理解复内积与共轭转置（conjugate transpose）。
+- 理解 FFT 的分治思想。
 
-**关键公式**
-$$
-\langle x,y\rangle=x^*y
-$$
-$$
-F^*F=I
-$$
+### 核心定义
+- 共轭转置：$A^*=\overline{A}^T$。
+- 酉矩阵（unitary）：
+  $$U^*U=I$$
+- 离散傅里叶变换（DFT）是典型酉变换（适当归一化）。
 
-**几何/直觉解释**
-- 复指数基是“最适合周期信号”的正交基。
-- 酉变换保能量（Parseval）。
-- FFT 的本质是重复利用对称结构减少计算。
+### 关键推导
+- DFT 的偶/奇拆分将复杂度从 $O(n^2)$ 降到 $O(n\log n)$。
+- 频域系数可看作在复指数正交基上的投影坐标。
 
-**易错点**
-- 复数场仍用普通转置而非共轭转置。
-- 频域索引与物理频率对应关系搞错。
-- 忘记归一化系数。
+### 例题（含解法）
+长度4序列 $x=[1,2,0,0]$：
+- 直接 DFT 可得4个频域系数。
+- 用 FFT 会得到同样结果，但计算更快。
 
-**1道例题（含简解）**
-- 题：长度4序列做 DFT，说明为何可拆偶奇项。
-- 解：`X_k=\sum x_n\omega^{kn}`，把 n 分成偶/奇得到两个长度2 DFT。
-- 这就是 FFT 的第一层。
+### 易错点
+- 忘记共轭导致内积定义错误。
+- 频率索引与物理频率对应关系混乱。
 
-### Session 3.3 正定矩阵与极小值
+### 与00_factor关联
+- [[Power Spectral Density|功率谱密度]]
+- [[Spectral Decomposition|谱分解]]
 
-> 对应 Summary: *Positive definite matrices and minima*
+### 代码块（完整保留）
+```python
+import numpy as np
 
-**核心概念**
-- 二次函数 `f(x)=rac12x^TAx-b^Tx` 在 `A` 正定时有唯一极小点。
-- 一阶条件给 `Ax=b`，二阶条件由正定保证最小而非鞍点。
-- 这把线性方程与优化统一起来。
+x = np.array([1,2,0,0], dtype=complex)
+X_dft = np.fft.fft(x)
+print("FFT coefficients:", X_dft)
+print("inverse FFT:", np.fft.ifft(X_dft))
+```
 
-**关键公式**
-$$
-\nabla f(x)=Ax-b
-$$
-$$
-x^*=A^{-1}b
-$$
+## Session 3.3 Positive definite matrices and minima
 
-**几何/直觉解释**
-- 解线性方程可视作在能量面上找最低点。
-- 正定保证“盆地形状”，所以下降法稳定。
-- 谱条件数决定盆地扁平程度。
+### 课程目标
+- 把线性方程和二次优化联系起来。
+- 理解正定矩阵保证唯一极小点。
 
-**易错点**
-- 忽略对称性直接谈正定。
-- 把驻点都当最小点。
-- 条件数大时误以为算法错误。
+### 核心定义
+- 二次函数：
+  $$f(x)=\frac12x^TAx-b^Tx$$
+- 梯度条件：
+  $$\nabla f(x)=Ax-b=0$$
 
-**1道例题（含简解）**
-- 题：`f(x)=x_1^2+x_2^2-2x_1-4x_2` 的极小点。
-- 解：`
-abla f=[2x_1-2,2x_2-4]=0`，得 `(1,2)`。
-- 对应 `A=2I` 正定。
+### 关键推导
+- 当 `A` 正定时，驻点唯一且为全局极小：
+  $$x^*=A^{-1}b$$
+- 这是数值优化中最经典的线性系统来源。
 
-### Session 3.4 相似变换与 Jordan 形
+### 例题（含解法）
+$$f(x_1,x_2)=x_1^2+x_2^2-2x_1-4x_2$$
+- 梯度零点：$(x_1,x_2)=(1,2)$。
+- Hessian 为 $2I$，正定，故为唯一极小点。
 
-> 对应 Summary: *Similar matrices and Jordan form*
+### 易错点
+- 只看一阶条件，不验二阶正定。
+- 把半正定场景误判成唯一极小。
 
-**核心概念**
-- 相似变换保持特征值、秩、迹、行列式等不变量。
-- 不可对角化矩阵可用 Jordan 标准形刻画。
-- Jordan 块解释“特征值不足以描述全部动力学”现象。
+### 与00_factor关联
+- [[Positive Definite Matrix|正定矩阵]]
+- [[Differential Equation|微分方程]]
 
-**关键公式**
-$$
-B=S^{-1}AS
-$$
-$$
-J=\lambda I+N\ (N\text{ nilpotent})
-$$
+### 代码块（完整保留）
+```python
+import numpy as np
 
-**几何/直觉解释**
-- 相似是同一线性变换在不同基下的坐标表达。
-- Jordan 链补上“广义特征向量”缺口。
-- 指数与幂在 Jordan 块上会出现多项式因子。
+A = np.array([[2,0],[0,2]], dtype=float)
+b = np.array([2,4], dtype=float)
+x = np.linalg.solve(A, b)
+print("argmin x =", x)
+```
 
-**易错点**
-- 把“相等”与“相似”等同。
-- 广义特征向量求解层次写错。
-- 忽略复数域下才总能 Jordan 化。
+## Session 3.4 Similar matrices and Jordan form
 
-**1道例题（含简解）**
-- 题：$A=\begin{bmatrix}1&1\\0&1\end{bmatrix}$ 是否可对角化？
-- 解：仅一个特征向量，不可对角化；Jordan 形即自身。
-- `A^k` 会出现 `k` 项。
+### 课程目标
+- 理解相似变换（similarity transform）含义。
+- 理解 Jordan 形用于不可对角化矩阵。
 
-### Session 3.5 奇异值分解
+### 核心定义
+- 相似：
+  $$B=S^{-1}AS$$
+- Jordan 块：
+  $$J=\lambda I+N,\ N^k=0$$
 
-> 对应 Summary: *Singular value decomposition*
+### 关键推导
+- 相似矩阵有相同特征值、迹、行列式。
+- 当特征向量不足时，需用广义特征向量形成 Jordan 链。
 
-**核心概念**
-- 任意 `m×n` 矩阵都可写为 `A=U\Sigma V^T`。
-- 奇异值是 `A^TA` 特征值平方根，反映各方向增益。
-- SVD 是压缩、降噪、伪逆的统一工具。
+### 例题（含解法）
+$$A=\begin{bmatrix}1&1\\0&1\end{bmatrix}$$
+- 只有一个线性无关特征向量，不可对角化。
+- Jordan 形就是该矩阵本身（单一 Jordan 块）。
 
-**关键公式**
-$$
-A=U\Sigma V^T
-$$
-$$
-\sigma_i=\sqrt{\lambda_i(A^TA)}
-$$
+### 易错点
+- 误把“特征值相同”当作“矩阵相等”。
+- 对角化失败后不知道 Jordan 替代路径。
 
-**几何/直觉解释**
-- `V` 选输入方向，`\Sigma` 缩放，`U` 旋转到输出方向。
-- 把任意线性变换分解为“旋转-缩放-旋转”。
-- 大奇异值对应主要结构，小奇异值多为噪声。
+### 与00_factor关联
+- [[Eigenvalues|特征值]]
+- [[Eigenvectors|特征向量]]
 
-**易错点**
-- 把特征值与奇异值混同。
-- 忽略矩阵维度导致 `U,\Sigma,V` 形状错误。
-- 未排序奇异值就做截断。
+### 代码块（完整保留）
+```python
+import sympy as sp
 
-**1道例题（含简解）**
-- 题：说明 rank 与非零奇异值个数关系。
-- 解：`rank(A)=#{\sigma_i>0}`。
-- 因此截断 SVD 直接控制秩。
+A = sp.Matrix([[1,1],[0,1]])
+P, J = A.jordan_form()
+print("Jordan J =")
+sp.pprint(J)
+print("P =")
+sp.pprint(P)
+```
 
-### Session 3.6 线性变换与矩阵表示
+## Session 3.5 Singular value decomposition
 
-> 对应 Summary: *Linear transformations and their matrices*
+### 课程目标
+- 掌握 SVD（奇异值分解）结构。
+- 理解奇异值与秩、压缩、降噪关系。
 
-**核心概念**
-- 线性变换由其对基向量的作用唯一决定。
+### 核心定义
+- SVD：
+  $$A=U\Sigma V^T$$
+- 奇异值：
+  $$\sigma_i=\sqrt{\lambda_i(A^TA)}$$
+
+### 关键推导
+- 非零奇异值个数等于 `rank(A)`。
+- 截断 SVD 给出最佳低秩近似（Eckart-Young 定理）。
+
+### 例题（含解法）
+对
+$$A=\begin{bmatrix}3&0\\4&5\end{bmatrix}$$
+做 SVD，观察奇异值大小。
+- 大奇异值对应主要信息方向。
+
+### 易错点
+- 把特征值与奇异值混淆。
+- `U,\Sigma,V` 形状写错。
+
+### 与00_factor关联
+- [[Spectral Decomposition|谱分解]]
+- [[Matrix Rank|矩阵秩]]
+
+### 代码块（完整保留）
+```python
+import numpy as np
+
+A = np.array([[3,0],[4,5]], dtype=float)
+U, s, VT = np.linalg.svd(A)
+print("singular values:", s)
+print("reconstruct:\n", U @ np.diag(s) @ VT)
+```
+
+## Session 3.6 Linear transformations and their matrices
+
+### 课程目标
+- 理解“矩阵是线性变换在某组基下的表示”。
+- 会从变换定义写出矩阵。
+
+### 核心定义
+- 线性变换：
+  $$T(x)=Ax$$
+- 基变换后矩阵：
+  $$[T]_\mathcal{B}=P^{-1}AP$$
+
+### 关键推导
+- 先看 $T(e_i)$（基向量像），再拼成矩阵列。
 - 不同基下矩阵不同，但变换本体不变。
-- “矩阵是变换的坐标表示”是后续换基与压缩的核心。
 
-**关键公式**
-$$
-T(x)=Ax
-$$
-$$
-[T]_{\mathcal{B}}=P^{-1}AP
-$$
+### 例题（含解法）
+$T(x,y)=(x+y,y)$。
+- $T(e_1)=(1,0)$，$T(e_2)=(1,1)$。
+- 标准基矩阵：
+  $$A=\begin{bmatrix}1&1\\0&1\end{bmatrix}$$
 
-**几何/直觉解释**
-- 先有变换，后有矩阵；换基只是在换“描述语言”。
-- 选择好基可以让矩阵变稀疏或近对角，计算更快。
-- 很多模型改进本质是“找更好的表示基”。
+### 易错点
+- 把仿射变换误当线性变换（有常数项则不是）。
+- 基变换公式左右顺序写错。
 
-**易错点**
-- 把标准基表示当唯一真相。
-- 基变换矩阵左右乘顺序写反。
-- 把仿射变换误写成线性变换。
+### 与00_factor关联
+- [[Linear Systems|线性系统]]
+- [[Matrix Operations|矩阵运算]]
 
-**1道例题（含简解）**
-- 题：`T(x,y)=(x+y,y)` 在标准基下矩阵？
-- 解：$T(e_1)=(1,0),\ T(e_2)=(1,1)$，故 $A=\begin{bmatrix}1&1\\0&1\end{bmatrix}$。
-- 换基后矩阵会变但 `T` 不变。
+### 代码块（完整保留）
+```python
+import numpy as np
 
-### Session 3.7 换基与图像压缩
+A = np.array([[1,1],[0,1]], dtype=float)
+x = np.array([2,3], dtype=float)
+print("T(x)=", A @ x)
+```
 
-> 对应 Summary: *Change of basis; image compression*
+## Session 3.7 Change of basis; image compression
 
-**核心概念**
-- 换基把数据投到更有表达力的坐标系。
-- 图像压缩常用 SVD/[[PCA|PCA]]，仅保留主成分。
-- 误差-存储折中由截断阶数控制。
+### 课程目标
+- 理解换基（change of basis）带来的表示简化。
+- 理解图像压缩中的低秩思想。
 
-**关键公式**
-$$
-x=Pc,\ c=P^{-1}x
-$$
-$$
-A_k=\sum_{i=1}^k \sigma_i u_iv_i^T
-$$
+### 核心定义
+- 坐标变换：
+  $$x=Pc,\ c=P^{-1}x$$
+- 截断 SVD：
+  $$A_k=\sum_{i=1}^k\sigma_i u_i v_i^T$$
 
-**几何/直觉解释**
-- 好基让“信息集中在少数坐标”。
-- 压缩就是丢弃小能量方向。
-- 视觉上先保大结构，再补细节。
+### 关键推导
+- 换基后，信息可以集中到少数坐标。
+- 压缩就是保留主方向、舍弃小奇异值方向。
 
-**易错点**
-- 截断过狠导致伪影。
-- 把压缩误差与训练误差混淆。
-- 忽略数据中心化（若用 [[PCA|PCA]]）。
+### 例题（含解法）
+对矩阵做 rank-1 近似，比较原矩阵与近似矩阵误差。
+- 误差显著下降主要由第一奇异值方向贡献。
 
-**1道例题（含简解）**
-- 题：SVD 压缩中为何保留前 k 大奇异值？
-- 解：Eckart-Young 定理保证这是 Frobenius 范数下最佳 rank-k 近似。
-- 因此同样大小下误差最小。
+### 易错点
+- 截断过度导致信息损失严重。
+- 忘记比较误差指标（Frobenius norm）。
 
-### Session 3.8 左右逆与伪逆
+### 与00_factor关联
+- [[PCA|主成分分析]]
+- [[Matrix Rank|矩阵秩]]
 
-> 对应 Summary: *Left and right inverses; pseudoinverse*
+### 代码块（完整保留）
+```python
+import numpy as np
 
-**核心概念**
-- 高矩阵可能有左逆，宽矩阵可能有右逆。
-- Moore-Penrose 伪逆统一欠定与超定问题。
-- 伪逆解给出最小范数或最小二乘意义下的规范解。
+A = np.array([[1,2,3],[2,4,6],[1,1,1]], dtype=float)
+U, s, VT = np.linalg.svd(A)
+A1 = np.outer(U[:,0]*s[0], VT[0,:])
+print("rank(A)=", np.linalg.matrix_rank(A))
+print("rank(A1)=", np.linalg.matrix_rank(A1))
+print("||A-A1||_F=", np.linalg.norm(A-A1, 'fro'))
+```
 
-**关键公式**
-$$
-A^+=V\Sigma^+U^T
-$$
-$$
-\hat{x}=A^+b
-$$
+## Session 3.8 Left and right inverses; pseudoinverse
 
-**几何/直觉解释**
-- 真逆要求双侧可逆，伪逆是“最佳替代”。
-- 超定时拟合误差最小，欠定时解范数最小。
-- SVD 让伪逆计算透明可控。
+### 课程目标
+- 区分左逆（left inverse）与右逆（right inverse）。
+- 掌握 Moore-Penrose 伪逆（pseudoinverse）用途。
 
-**易错点**
-- 把左逆/右逆当双侧逆。
-- 小奇异值直接倒数导致噪声放大。
-- 忽略阈值截断和正则化。
+### 核心定义
+- 高矩阵（列满秩）可能有左逆。
+- 宽矩阵（行满秩）可能有右逆。
+- 伪逆：
+  $$A^+=V\Sigma^+U^T$$
 
-**1道例题（含简解）**
-- 题：`A` 满列秩时伪逆表达？
-- 解：`A^+=(A^TA)^{-1}A^T`。
-- 与最小二乘正规方程一致。
+### 关键推导
+- 超定系统：$\hat{x}=A^+b$ 给最小二乘解。
+- 欠定系统：$\hat{x}=A^+b$ 给最小范数解。
 
-### Session 3.9 Unit3 考前复盘
+### 例题（含解法）
+$$A=\begin{bmatrix}1&0\\0&1\\1&1\end{bmatrix},\ b=\begin{bmatrix}1\\2\\2\end{bmatrix}$$
+- `x = pinv(A) b` 是最小二乘意义下最优解。
 
-> 对应 Summary: *Exam 3 review*
+### 易错点
+- 把伪逆当普通逆使用场景。
+- 忽略秩亏导致数值不稳定问题。
 
-**核心概念**
-- 最终主线：正交与投影、谱分解、SVD/伪逆三大块。
-- 把“空间语言”和“分解语言”互相翻译是高分关键。
-- 复习重点是综合题中的方法选择与理由表达。
+### 与00_factor关联
+- [[Matrix Inverse|逆矩阵]]
+- [[OLS Basics|OLS基础]]
+- [[Matrix Rank|矩阵秩]]
 
-**关键公式**
-$$
-A=U\Sigma V^T
-$$
-$$
-\hat{x}=\arg\min_x\|Ax-b\|_2
-$$
+### 代码块（完整保留）
+```python
+import numpy as np
 
-**几何/直觉解释**
-- 先判题型：求解/拟合/压缩/稳定性，再选工具。
-- 同一题可用几何图像 + 代数推导双重解释。
-- 答题写出判据比纯算式更稳。
+A = np.array([[1,0],[0,1],[1,1]], dtype=float)
+b = np.array([1,2,2], dtype=float)
+x = np.linalg.pinv(A) @ b
+print("x_hat =", x)
+print("residual norm =", np.linalg.norm(A @ x - b))
+```
 
-**易错点**
-- SVD、特征分解、QR 用错场景。
-- 只给计算结果不说明为何成立。
-- 忽略条件数对数值误差的影响。
+## Session 3.9 Exam 3 review
 
-**1道例题（含简解）**
-- 题：何时优先用 QR 而非正规方程？
-- 解：当 `A^TA` 病态时，QR 更数值稳定。
-- 因此工程实现常先 QR/SVD。
+### 课程目标
+- 复盘 Unit3 的核心模型与题型。
+- 构建考试答题时的“判别-工具”快速路径。
 
-## Unit 总结
+### 核心定义
+- 高频题型：
+  - 对称/正定判定
+  - 相似与 Jordan
+  - SVD 与低秩近似
+  - 伪逆与最小二乘
 
-### 主线回顾
-- 对称/正定连接优化问题
-- SVD/伪逆连接压缩与反问题
-- 以“结构-算法-应用”完成全课程闭环
+### 关键推导
+- 解题顺序建议：
+  1. 判定矩阵类型（对称？可对角化？秩亏？）
+  2. 选工具（谱分解/Jordan/SVD/pinv）
+  3. 给结构结论 + 数值验证
 
-### 课程收束
-- 到此可以用同一语言处理：解方程、做拟合、做分解、做压缩。
+### 例题（含解法）
+给矩阵 `A`：要求判断是否正定、是否可对角化、是否需要伪逆。
+- 答案模板：
+  - 看对称性与特征值号
+  - 看特征向量个数
+  - 看秩与方程形状
+
+### 易错点
+- 看到特征值就直接结论，不检查前提。
+- 把“有解”与“最好解（least-squares best）”混淆。
+
+### 与00_factor关联
+- [[Symmetric Matrix|对称矩阵]]
+- [[Positive Definite Matrix|正定矩阵]]
+- [[Spectral Decomposition|谱分解]]
+- [[Matrix Inverse|逆矩阵]]
+
+### 代码块（完整保留）
+```python
+import numpy as np
+
+A = np.array([[2,1],[1,2]], dtype=float)
+print("eigvals:", np.linalg.eigvals(A))
+print("is symmetric:", np.allclose(A, A.T))
+print("pinv(A):\n", np.linalg.pinv(A))
+```

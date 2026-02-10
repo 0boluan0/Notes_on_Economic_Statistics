@@ -202,16 +202,17 @@ $$A=\begin{bmatrix}2&1\\4&3\end{bmatrix}$$
 
 ### 代码块（完整保留）
 ```python
-import numpy as np
-from scipy.linalg import lu
+import sympy as sp
 
-A = np.array([[2, 1], [4, 3]], dtype=float)
-P, L, U = lu(A)
-print("P:\n", P)
-print("L:\n", L)
-print("U:\n", U)
-print("P@A:\n", P @ A)
-print("L@U:\n", L @ U)
+A = sp.Matrix([[2, 1], [4, 3]])
+L, U, perm = A.LUdecomposition()
+print("L =")
+sp.pprint(L)
+print("U =")
+sp.pprint(U)
+print("perm =", perm)
+print("L*U =")
+sp.pprint(L * U)
 ```
 
 ## Session 1.5 Transposes, permutations, spaces Rn
