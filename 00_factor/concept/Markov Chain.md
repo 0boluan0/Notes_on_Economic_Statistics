@@ -2,7 +2,6 @@
 aliases:
 - 马尔可夫链
 - Markov Chain
-- Markov
 tags:
 - concept
 - stochastic processes

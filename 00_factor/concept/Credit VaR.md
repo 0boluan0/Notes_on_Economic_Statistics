@@ -4,7 +4,6 @@ aliases:
 - Credit VaR
 - 信用VaR
 - 信用在险价值
-- Credit
 tags:
 - concept
 ---

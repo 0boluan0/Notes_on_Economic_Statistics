@@ -2,7 +2,6 @@
 aliases:
 - Delta Approximation
 - Delta近似法
-- Delta
 tags:
 - concept
 ---

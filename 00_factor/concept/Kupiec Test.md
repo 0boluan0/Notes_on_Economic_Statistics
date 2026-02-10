@@ -3,7 +3,6 @@ aliases:
 - Kupiec Proportion of Failures Test
 - Kupiec Test
 - Kupiec检验
-- Kupiec
 tags:
 - concept
 ---

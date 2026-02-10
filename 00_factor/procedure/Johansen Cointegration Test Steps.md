@@ -1,7 +1,6 @@
 ---
 aliases:
 - Johansen协整检验步骤
-- Johansen
 - Johansen Cointegration Test Steps
 tags:
 - procedure

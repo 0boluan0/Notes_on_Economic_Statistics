@@ -2,7 +2,6 @@
 aliases:
 - Stationary Stochastic Process
 - 平稳随机过程
-- Stationary
 tags:
 - concept
 ---

@@ -3,7 +3,6 @@ aliases:
 - 新古典索罗模型
 - 索罗模型
 - Solow Growth Model
-- Solow
 - Solow Model
 tags:
 - development-economics

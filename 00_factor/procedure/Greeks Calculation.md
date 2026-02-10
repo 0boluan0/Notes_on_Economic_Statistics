@@ -2,7 +2,6 @@
 aliases:
 - 期权Greeks计算
 - Greeks计算
-- Greeks
 - Greeks Calculation
 tags:
 - procedure

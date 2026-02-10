@@ -4,7 +4,6 @@ aliases:
 - 胜算比
 - 机会比率
 - Odds Ratio
-- Odds
 tags:
 - 计量经济学
 - logit模型

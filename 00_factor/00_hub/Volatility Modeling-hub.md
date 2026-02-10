@@ -3,7 +3,6 @@ aliases:
 - 波动建模
 - 波动率建模-hub
 - Volatility Modeling
-- Volatility
 - Volatility Modeling-hub
 tags:
 - hub

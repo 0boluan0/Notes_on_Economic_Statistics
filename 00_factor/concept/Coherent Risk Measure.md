@@ -1,7 +1,6 @@
 ---
 aliases:
 - 一致性风险度量
-- Coherent
 - Coherent Risk Measure
 tags:
 - 金融

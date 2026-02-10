@@ -2,7 +2,6 @@
 aliases:
 - 联立性偏误
 - 同时性偏误
-- Simultaneity
 - Simultaneity Bias
 tags:
 - 计量经济学

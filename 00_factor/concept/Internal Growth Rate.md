@@ -2,7 +2,6 @@
 aliases:
 - 内部增长率
 - 内含增长率
-- Internal
 - Internal Growth Rate
 tags:
 - 财务管理

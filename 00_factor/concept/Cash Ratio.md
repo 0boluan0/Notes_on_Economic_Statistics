@@ -2,7 +2,6 @@
 aliases:
 - 最保守的流动性比率
 - 现金比率
-- Cash
 - Cash Ratio
 tags:
 - 财务管理

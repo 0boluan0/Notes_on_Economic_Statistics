@@ -2,7 +2,6 @@
 aliases:
 - Linear Systems
 - 线性方程组
-- Linear
 tags:
 - concept
 ---

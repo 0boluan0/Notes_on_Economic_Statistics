@@ -3,7 +3,6 @@ aliases:
 - Observation Window
 - Lookback Window
 - 观察期
-- Observation
 tags:
 - concept
 ---

@@ -4,7 +4,6 @@ aliases:
 - ADF检验
 - ADF
 - Augmented Dickey-Fuller Test
-- Augmented
 tags:
 - 计量经济学
 - 时间序列

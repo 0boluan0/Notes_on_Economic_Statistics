@@ -4,7 +4,6 @@ aliases:
 - 历史模拟法VaR计算
 - VaR
 - Historical Simulation VaR
-- Historical
 tags:
 - procedure
 - 07_金融机构与风险管理

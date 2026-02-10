@@ -3,7 +3,6 @@ aliases:
 - 中心极限定理
 - CLT
 - Central Limit Theorem
-- Central
 tags:
 - proof
 - 数学基础

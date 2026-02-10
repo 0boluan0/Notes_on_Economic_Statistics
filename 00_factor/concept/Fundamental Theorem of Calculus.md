@@ -3,7 +3,6 @@ aliases:
 - 牛顿-莱布尼茨公式
 - 微积分基本定理
 - Fundamental Theorem of Calculus
-- Fundamental
 tags:
 - 数学
 - 微积分

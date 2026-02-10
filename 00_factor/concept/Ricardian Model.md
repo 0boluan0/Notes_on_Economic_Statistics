@@ -2,7 +2,6 @@
 aliases:
 - 李嘉图模型
 - Ricardian Model
-- Ricardian
 tags:
 - 发展经济学
 - 经济思想史

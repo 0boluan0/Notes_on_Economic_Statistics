@@ -2,7 +2,6 @@
 aliases:
 - 可持续增长
 - 可持续增长率
-- Sustainable
 - Sustainable Growth Rate
 tags:
 - 财务管理

@@ -6,7 +6,6 @@ aliases:
 - 误差纠正模型
 - 误差纠正机制
 - Error Correction Mechanism
-- Error
 tags:
 - 时间序列
 - 计量经济学

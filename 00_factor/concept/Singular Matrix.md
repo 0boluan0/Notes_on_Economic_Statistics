@@ -3,7 +3,6 @@ aliases:
 - 不可逆矩阵
 - 退化矩阵
 - 奇异矩阵
-- Singular
 - Singular Matrix
 tags:
 - 线性代数

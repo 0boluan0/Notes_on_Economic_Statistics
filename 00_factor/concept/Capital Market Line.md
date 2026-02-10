@@ -1,7 +1,6 @@
 ---
 aliases:
 - 资本市场线
-- Capital
 - Capital Market Line
 tags:
 - 金融

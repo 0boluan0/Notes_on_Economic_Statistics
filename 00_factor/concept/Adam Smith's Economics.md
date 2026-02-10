@@ -3,7 +3,6 @@ aliases:
 - 斯密经济学
 - 亚当斯密经济学
 - Adam Smith's Economics
-- Adam
 tags:
 - 经济思想史
 - 经济学派

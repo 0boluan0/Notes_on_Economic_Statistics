@@ -2,7 +2,6 @@
 aliases:
 - 固定效应模型
 - 固定效应
-- Fixed
 - Fixed Effects Model
 tags:
 - 计量经济学

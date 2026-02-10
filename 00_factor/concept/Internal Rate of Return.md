@@ -3,7 +3,6 @@ aliases:
 - 内部收益率
 - 内涵报酬率
 - IRR
-- Internal
 - Internal Rate of Return
 tags:
 - 财务管理

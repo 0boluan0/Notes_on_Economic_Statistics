@@ -1,7 +1,6 @@
 ---
 aliases:
 - Hausman检验
-- Hausman
 - 豪斯曼检验
 - Hausman Test
 tags:

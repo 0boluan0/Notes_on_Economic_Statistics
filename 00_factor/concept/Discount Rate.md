@@ -2,7 +2,6 @@
 aliases:
 - Discount Rate
 - 贴现率
-- Discount
 tags:
 - concept
 ---

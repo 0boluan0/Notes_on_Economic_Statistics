@@ -3,7 +3,6 @@ aliases:
 - 谱分解
 - Eigenvalue Decomposition
 - Spectral Theorem
-- Spectral
 - Spectral Decomposition
 tags:
 - concept

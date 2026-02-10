@@ -2,7 +2,6 @@
 aliases:
 - 有效久期
 - Effective Duration
-- Effective
 tags:
 - concept
 ---

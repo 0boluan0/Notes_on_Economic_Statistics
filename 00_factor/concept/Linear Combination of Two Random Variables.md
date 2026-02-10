@@ -1,7 +1,6 @@
 ---
 aliases:
 - 两个随机变量线性组合
-- Linear
 - Linear Combination of Two Random Variables
 tags:
 - 数学

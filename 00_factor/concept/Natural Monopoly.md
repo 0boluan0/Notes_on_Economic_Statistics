@@ -2,7 +2,6 @@
 aliases:
 - Natural Monopoly
 - 自然垄断
-- Natural
 tags:
 - concept
 ---

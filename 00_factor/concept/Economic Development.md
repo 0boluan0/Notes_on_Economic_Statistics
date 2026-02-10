@@ -1,12 +1,12 @@
 ---
 aliases:
-  - 经济发展
-  - Economic Development
+- 经济发展
+- Economic Development
 tags:
-  - 发展经济学
-  - 宏观经济
-  - 经济
-  - concept
+- 发展经济学
+- 宏观经济
+- 经济
+- concept
 ---
 经济发展（Economic Development）是指以经济增长为核心的经济社会和政治结构的转换和全面进步，是比经济增长更宽泛的概念。
 

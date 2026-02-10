@@ -3,7 +3,6 @@ aliases:
 - 公开市场操作
 - OMO
 - Open Market Operations
-- Open
 tags:
 - concept
 - money and

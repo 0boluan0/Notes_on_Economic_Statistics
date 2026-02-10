@@ -1,9 +1,9 @@
 ---
 aliases:
-  - Extensive-form Game
-  - 扩展性博弈
+- Extensive-form Game
+- 扩展性博弈
 tags:
-  - concept
+- concept
 ---
 # Extensive-form Game
 

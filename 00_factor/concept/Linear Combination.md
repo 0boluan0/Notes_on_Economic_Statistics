@@ -2,7 +2,6 @@
 aliases:
 - Linear Combination
 - 线性组合
-- Linear
 tags:
 - concept
 ---

@@ -3,7 +3,6 @@ aliases:
 - 结构式
 - 结构方程
 - Structural Equation
-- Structural
 tags:
 - 计量经济学
 - 联立方程

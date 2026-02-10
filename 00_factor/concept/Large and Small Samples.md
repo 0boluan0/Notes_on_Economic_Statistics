@@ -2,7 +2,6 @@
 aliases:
 - 大样本与小样本
 - Large and Small Samples
-- Large
 tags:
 - concept
 ---

@@ -3,7 +3,6 @@ aliases:
 - Hotelling's T-squared Test
 - Hotelling T2 Test
 - Hotelling T² 检验
-- Hotelling
 tags:
 - concept
 ---

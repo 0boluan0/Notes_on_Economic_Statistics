@@ -2,7 +2,6 @@
 aliases:
 - 线性空间
 - 向量空间
-- Vector
 - Vector Space
 tags:
 - 线性代数

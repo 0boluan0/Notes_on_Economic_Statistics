@@ -1,11 +1,10 @@
 ---
 aliases:
-- Chi-square Distribution
-- Chi-Square Distribution
-- 卡方分布
-- Chi
+  - Chi-square Distribution
+  - Chi-Square Distribution
+  - 卡方分布
 tags:
-- concept
+  - concept
 ---
 # Chi-square Distribution
 

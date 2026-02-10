@@ -2,7 +2,6 @@
 aliases:
 - Scenario Analysis
 - 情景分析
-- Scenario
 tags:
 - concept
 ---

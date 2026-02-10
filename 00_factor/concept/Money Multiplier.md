@@ -2,7 +2,6 @@
 aliases:
 - 货币乘数
 - Deposit Multiplier
-- Money
 - Money Multiplier
 tags:
 - concept

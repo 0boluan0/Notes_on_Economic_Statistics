@@ -3,7 +3,6 @@ aliases:
 - 杠杆乘数
 - 权益乘数
 - Equity Multiplier
-- Equity
 tags:
 - 财务管理
 - 财务比率

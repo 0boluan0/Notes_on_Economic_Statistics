@@ -2,7 +2,6 @@
 aliases:
 - 净现值法
 - NPV
-- Net
 - Net Present Value
 tags:
 - 财务管理

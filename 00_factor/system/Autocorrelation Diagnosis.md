@@ -3,7 +3,6 @@ aliases:
 - 序列相关诊断
 - 自相关诊断
 - Autocorrelation Diagnosis
-- Autocorrelation
 tags:
 - system
 - 计量经济学

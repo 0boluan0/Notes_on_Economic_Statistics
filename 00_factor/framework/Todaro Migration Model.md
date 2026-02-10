@@ -3,7 +3,6 @@ aliases:
 - 托达罗人口迁移模型
 - 托达罗模型
 - Todaro Migration Model
-- Todaro
 tags:
 - development-economics
 - labor-transfer

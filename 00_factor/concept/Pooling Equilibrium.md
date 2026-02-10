@@ -2,7 +2,6 @@
 aliases:
 - 混合均衡
 - Pooling Equilibrium
-- Pooling
 tags:
 - concept
 - game theory

@@ -4,7 +4,6 @@ aliases:
 - 线性代数-hub
 - Linear Algebra
 - Linear Algebra-hub
-- Linear
 tags:
 - hub
 - 数学

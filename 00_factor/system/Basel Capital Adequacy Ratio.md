@@ -3,7 +3,6 @@ aliases:
 - 资本充足率
 - 巴塞尔资本充足率
 - Basel Capital Adequacy Ratio
-- Basel
 tags:
 - system
 - 金融机构与风险管理

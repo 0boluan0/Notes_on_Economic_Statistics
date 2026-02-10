@@ -3,7 +3,6 @@ aliases:
 - 分布滞后模型
 - DLM
 - Distributed Lag Model
-- Distributed
 tags:
 - 计量经济学
 - 时间序列

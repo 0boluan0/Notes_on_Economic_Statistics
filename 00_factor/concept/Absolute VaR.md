@@ -2,7 +2,6 @@
 aliases:
 - Absolute VaR
 - 绝对VaR
-- Absolute
 tags:
 - concept
 ---

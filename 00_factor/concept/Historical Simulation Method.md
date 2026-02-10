@@ -2,7 +2,6 @@
 aliases:
 - 历史模拟法
 - Historical Simulation
-- Historical
 - Historical Simulation Method
 tags:
 - 风险管理

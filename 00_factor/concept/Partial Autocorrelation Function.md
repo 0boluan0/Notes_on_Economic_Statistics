@@ -2,7 +2,6 @@
 aliases:
 - 偏自相关函数
 - PACF
-- Partial
 - Partial Autocorrelation Function
 tags:
 - 时间序列

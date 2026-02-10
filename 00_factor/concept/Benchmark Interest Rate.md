@@ -2,7 +2,6 @@
 aliases:
 - 基准利率
 - Benchmark Interest Rate
-- Benchmark
 tags:
 - 金融
 - 利率

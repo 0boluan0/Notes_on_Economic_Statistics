@@ -2,7 +2,6 @@
 aliases:
 - Efficient Frontier
 - 有效前沿
-- Efficient
 tags:
 - concept
 ---

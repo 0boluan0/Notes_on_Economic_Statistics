@@ -4,7 +4,6 @@ aliases:
 - 二级资本比率
 - Tier 2 Capital
 - Tier 2 Capital Ratio
-- Tier
 tags:
 - system
 - 金融机构与风险管理

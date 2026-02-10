@@ -1,13 +1,13 @@
 ---
 aliases:
-  - 市账率
-  - 市净率
-  - P/B Ratio
-  - Price-to-Book Ratio
+- 市账率
+- 市净率
+- P/B Ratio
+- Price-to-Book Ratio
 tags:
-  - 财务管理
-  - 财务比率
-  - concept
+- 财务管理
+- 财务比率
+- concept
 ---
 市净率是指每股市价与每股净资产的比值，用于衡量股票相对于账面价值的估值水平。
 

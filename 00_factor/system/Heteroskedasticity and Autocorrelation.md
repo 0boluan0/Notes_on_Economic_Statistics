@@ -2,7 +2,6 @@
 aliases:
 - Heteroskedasticity and Autocorrelation
 - 异方差与自相关
-- Heteroskedasticity
 tags:
 - system
 ---

@@ -3,7 +3,6 @@ aliases:
 - 俱乐部物品
 - Toll Goods
 - Club Goods
-- Club
 tags:
 - concept
 - public finance

@@ -2,7 +2,6 @@
 aliases:
 - 非线性产品
 - Nonlinear Products
-- Nonlinear
 tags:
 - 数学
 - concept

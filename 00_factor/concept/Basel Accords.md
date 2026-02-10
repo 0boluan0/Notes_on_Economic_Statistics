@@ -3,7 +3,6 @@ aliases:
 - 巴塞尔资本协议
 - 巴塞尔协议
 - Basel Accords
-- Basel
 tags:
 - 风险管理
 - 银行监管

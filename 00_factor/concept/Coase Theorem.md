@@ -1,7 +1,6 @@
 ---
 aliases:
 - 科斯定理
-- Coase
 - Coase Theorem
 tags:
 - concept

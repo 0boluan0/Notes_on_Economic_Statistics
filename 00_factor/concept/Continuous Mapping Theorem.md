@@ -2,7 +2,6 @@
 aliases:
 - 连续映射定理
 - Continuous Mapping Theorem
-- Continuous
 tags:
 - 概率论
 - 统计学

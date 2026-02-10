@@ -3,7 +3,6 @@ aliases:
 - 债券定价模型
 - 债券估价模型
 - Bond Valuation Model
-- Bond
 tags:
 - 财务管理
 - 证券估价

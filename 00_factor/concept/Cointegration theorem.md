@@ -4,7 +4,6 @@ aliases:
 - Granger representation theorem
 - Engle-Granger representation theorem
 - Cointegration theorem
-- Cointegration
 tags:
 - proof
 - 06_时间序列分析

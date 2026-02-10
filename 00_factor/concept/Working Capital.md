@@ -2,7 +2,6 @@
 aliases:
 - 净营运资本
 - 营运资本
-- Working
 - Working Capital
 tags:
 - 财务管理

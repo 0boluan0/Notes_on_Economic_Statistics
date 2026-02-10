@@ -3,7 +3,6 @@ aliases:
 - Emissions Trading
 - Cap-and-Trade
 - 排放许可交易
-- Emissions
 tags:
 - concept
 ---

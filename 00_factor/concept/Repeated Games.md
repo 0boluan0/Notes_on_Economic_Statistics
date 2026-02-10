@@ -3,7 +3,6 @@ aliases:
 - 重复博弈
 - Iterated Games
 - Repeated Games
-- Repeated
 tags:
 - concept
 - game theory

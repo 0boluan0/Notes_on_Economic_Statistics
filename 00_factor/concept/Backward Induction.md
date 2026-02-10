@@ -2,7 +2,6 @@
 aliases:
 - 逆向归纳法
 - Backward Induction
-- Backward
 tags:
 - concept
 - game theory

@@ -2,7 +2,6 @@
 aliases:
 - probit模型
 - probit
-- Probit
 - Probit Model
 tags:
 - 计量经济学

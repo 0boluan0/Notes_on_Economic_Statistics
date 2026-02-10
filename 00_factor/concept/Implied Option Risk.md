@@ -2,7 +2,6 @@
 aliases:
 - 隐含期权风险
 - Implied Option Risk
-- Implied
 tags:
 - 金融
 - concept

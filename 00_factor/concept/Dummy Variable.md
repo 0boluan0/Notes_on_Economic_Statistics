@@ -2,7 +2,6 @@
 aliases:
 - Dummy Variable
 - 虚拟变量
-- Dummy
 tags:
 - concept
 ---

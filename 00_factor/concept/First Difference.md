@@ -2,7 +2,6 @@
 aliases:
 - 一阶差分
 - First Difference
-- First
 tags:
 - 时间序列
 - 数据变换

@@ -3,7 +3,6 @@ aliases:
 - 线性概率模型
 - LPM模型
 - LPM
-- Linear
 - Linear Probability Model
 tags:
 - 计量经济学

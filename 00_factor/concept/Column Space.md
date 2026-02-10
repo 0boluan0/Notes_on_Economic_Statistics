@@ -2,7 +2,6 @@
 aliases:
 - Column Space
 - 列空间
-- Column
 tags:
 - concept
 ---

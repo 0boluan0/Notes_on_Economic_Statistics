@@ -3,7 +3,6 @@ aliases:
 - Portmanteau Q Test
 - Q Test
 - Q检验
-- Q
 tags:
 - concept
 ---

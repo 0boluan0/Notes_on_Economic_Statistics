@@ -1,11 +1,10 @@
 ---
 aliases:
-- Chi-square Test
-- Chi-Square Test
-- 卡方检验
-- Chi
+  - Chi-square Test
+  - Chi-Square Test
+  - 卡方检验
 tags:
-- concept
+  - concept
 ---
 # Chi-square Test
 

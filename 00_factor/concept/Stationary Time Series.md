@@ -2,7 +2,6 @@
 aliases:
 - Stationary Time Series
 - 平稳时间序列
-- Stationary
 tags:
 - concept
 ---

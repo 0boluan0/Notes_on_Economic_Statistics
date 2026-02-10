@@ -2,7 +2,6 @@
 aliases:
 - HC标准误
 - White稳健标准误
-- White
 - 稳健标准误
 - White Robust Standard Errors
 - White Robust SE

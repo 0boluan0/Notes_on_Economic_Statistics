@@ -3,7 +3,6 @@ aliases:
 - 修正久期计算步骤
 - 修正久期计算
 - Modified Duration Calculation
-- Modified
 tags:
 - procedure
 - 07_金融机构与风险管理

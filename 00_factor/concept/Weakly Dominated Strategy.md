@@ -2,7 +2,6 @@
 aliases:
 - Weakly Dominated Strategy
 - 弱占优策略
-- Weakly
 tags:
 - concept
 ---

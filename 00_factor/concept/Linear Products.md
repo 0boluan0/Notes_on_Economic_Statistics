@@ -1,7 +1,6 @@
 ---
 aliases:
 - 线性产品
-- Linear
 - Linear Products
 tags:
 - 数学

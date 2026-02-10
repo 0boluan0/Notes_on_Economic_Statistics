@@ -2,7 +2,6 @@
 aliases:
 - Difference Equation
 - 差分方程
-- Difference
 tags:
 - concept
 ---

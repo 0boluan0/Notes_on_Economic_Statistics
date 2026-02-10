@@ -1,7 +1,6 @@
 ---
 aliases:
 - 操作风险
-- Operational
 - Operational Risk
 tags:
 - 风险管理

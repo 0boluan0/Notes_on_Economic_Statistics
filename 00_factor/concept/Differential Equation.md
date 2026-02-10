@@ -3,7 +3,6 @@ aliases:
 - 常微分方程
 - 微分方程
 - Differential Equation
-- Differential
 tags:
 - 数学
 - 微积分

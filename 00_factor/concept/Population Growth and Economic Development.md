@@ -2,7 +2,6 @@
 aliases:
 - Population Growth and Economic Development
 - 人口增长与经济发展
-- Population
 tags:
 - concept
 ---

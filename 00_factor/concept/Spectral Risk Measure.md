@@ -2,7 +2,6 @@
 aliases:
 - Spectral Risk Measure
 - 光谱风险度量
-- Spectral
 tags:
 - concept
 ---

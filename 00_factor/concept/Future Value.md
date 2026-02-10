@@ -2,7 +2,6 @@
 aliases:
 - Future Value
 - 终值
-- Future
 tags:
 - concept
 ---

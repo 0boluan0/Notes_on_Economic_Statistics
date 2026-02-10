@@ -2,7 +2,6 @@
 aliases:
 - Bond and Stock Valuation
 - 债券与股票估值
-- Bond
 tags:
 - procedure
 ---

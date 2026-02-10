@@ -3,7 +3,6 @@ aliases:
 - 巴塞尔杠杆率
 - 杠杆率
 - Leverage Ratio
-- Leverage
 tags:
 - system
 - 金融机构与风险管理

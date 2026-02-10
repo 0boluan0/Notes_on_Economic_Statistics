@@ -4,7 +4,6 @@ aliases:
 - t-test
 - t Test
 - t检验
-- t
 tags:
 - concept
 ---

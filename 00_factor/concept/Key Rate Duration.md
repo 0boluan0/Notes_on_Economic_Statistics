@@ -2,7 +2,6 @@
 aliases:
 - 局部久期
 - Key Rate Duration
-- Key
 tags:
 - concept
 ---

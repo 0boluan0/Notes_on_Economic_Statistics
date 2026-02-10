@@ -1,7 +1,6 @@
 ---
 aliases:
 - 埃奇沃斯框图
-- Edgeworth
 - Edgeworth Box
 tags:
 - concept

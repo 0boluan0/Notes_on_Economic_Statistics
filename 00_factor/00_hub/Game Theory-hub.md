@@ -4,7 +4,6 @@ aliases:
 - 博弈论-hub
 - Game Theory
 - Game Theory-hub
-- Game
 tags:
 - hub
 ---

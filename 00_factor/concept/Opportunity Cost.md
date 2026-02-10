@@ -1,7 +1,6 @@
 ---
 aliases:
 - 机会成本
-- Opportunity
 - Opportunity Cost
 tags:
 - 经济学

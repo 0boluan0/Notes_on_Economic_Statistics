@@ -11,6 +11,11 @@ import yaml
 import argparse
 
 
+ENGLISH_MULTIWORD_TITLE_PATTERN = re.compile(
+    r"[A-Za-z0-9()'&+\-]+(?: [A-Za-z0-9()'&+\-]+)+"
+)
+
+
 def read_file(file_path):
     """读取文件内容"""
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -32,9 +37,62 @@ def extract_frontmatter(content):
             body = frontmatter_match.group(2)
             return frontmatter, body
         except Exception as e:
-            print(f"Error parsing frontmatter in {file_path}: {e}")
+            print(f"Error parsing frontmatter: {e}")
             return None, content
     return None, content
+
+
+def dedupe_preserve_order(items):
+    """列表保序去重"""
+    deduped = []
+    for item in items:
+        if item not in deduped:
+            deduped.append(item)
+    return deduped
+
+
+def normalize_title_for_alias_check(name):
+    """将标题标准化后用于alias规则判断（处理-hub后缀）"""
+    if name.endswith('-hub'):
+        return name[:-4]
+    return name
+
+
+def is_multiword_english_title(name):
+    """判断是否为英文多词标题"""
+    normalized = normalize_title_for_alias_check(name)
+    if ' ' not in normalized:
+        return False
+    return bool(ENGLISH_MULTIWORD_TITLE_PATTERN.fullmatch(normalized))
+
+
+def is_abbreviation_token(token):
+    """判断首词是否为应保留的技术缩写"""
+    if any(char.isdigit() for char in token):
+        return True
+
+    if re.fullmatch(r'[A-Z]{2,10}', token):
+        return True
+
+    if len(token) <= 10 and re.fullmatch(r"[A-Za-z][A-Za-z'\-]*", token):
+        uppercase_count = sum(char.isupper() for char in token)
+        if uppercase_count >= 2:
+            return True
+
+    return False
+
+
+def sanitize_aliases(aliases, filename):
+    """清理错误首词alias：英文多词标题下仅移除非缩写首词"""
+    name = os.path.splitext(filename)[0]
+    if not is_multiword_english_title(name):
+        return aliases
+
+    first_token = normalize_title_for_alias_check(name).split()[0]
+    if is_abbreviation_token(first_token):
+        return aliases
+
+    return [alias for alias in aliases if alias != first_token]
 
 
 def generate_aliases(filename, folder_type):
@@ -75,12 +133,14 @@ def generate_aliases(filename, folder_type):
     if name in term_mapping:
         aliases.append(term_mapping[name])
     else:
-        # 尝试提取文件名中的英文部分（如"CAPM模型" → "CAPM"）
-        english_match = re.search(r'[A-Za-z]+', name)
-        if english_match:
-            aliases.append(english_match.group())
+        # 对纯英文多词标题，不再自动添加首词（避免Bond Valuation Model -> Bond）
+        if not is_multiword_english_title(name):
+            # 尝试提取文件名中的英文部分（如"CAPM模型" → "CAPM"）
+            english_match = re.search(r'[A-Za-z]+', name)
+            if english_match:
+                aliases.append(english_match.group())
 
-    return list(set(aliases))  # 去重
+    return dedupe_preserve_order(aliases)
 
 
 def generate_tags(folder_type, filename):
@@ -133,7 +193,7 @@ def generate_tags(folder_type, filename):
             tags.append('计算机')
             break
 
-    return list(set(tags))  # 去重
+    return dedupe_preserve_order(tags)
 
 
 def process_file(file_path, folder_type):
@@ -150,16 +210,22 @@ def process_file(file_path, folder_type):
 
     # 处理aliases
     if 'aliases' not in frontmatter or not frontmatter['aliases']:
-        frontmatter['aliases'] = generate_aliases(filename, folder_type)
+        frontmatter['aliases'] = sanitize_aliases(
+            generate_aliases(filename, folder_type),
+            filename
+        )
     else:
         # 确保aliases是列表
         if isinstance(frontmatter['aliases'], str):
             frontmatter['aliases'] = [frontmatter['aliases']]
+        frontmatter['aliases'] = dedupe_preserve_order(frontmatter['aliases'])
+        frontmatter['aliases'] = sanitize_aliases(frontmatter['aliases'], filename)
         # 补充缺失的别名
         suggested_aliases = generate_aliases(filename, folder_type)
         for alias in suggested_aliases:
             if alias not in frontmatter['aliases']:
                 frontmatter['aliases'].append(alias)
+        frontmatter['aliases'] = dedupe_preserve_order(frontmatter['aliases'])
 
     # 处理tags
     if 'tags' not in frontmatter or not frontmatter['tags']:
@@ -168,14 +234,21 @@ def process_file(file_path, folder_type):
         # 确保tags是列表
         if isinstance(frontmatter['tags'], str):
             frontmatter['tags'] = [frontmatter['tags']]
+        frontmatter['tags'] = dedupe_preserve_order(frontmatter['tags'])
         # 补充缺失的标签
         suggested_tags = generate_tags(folder_type, filename)
         for tag in suggested_tags:
             if tag not in frontmatter['tags']:
                 frontmatter['tags'].append(tag)
+        frontmatter['tags'] = dedupe_preserve_order(frontmatter['tags'])
 
     # 生成新的内容
-    frontmatter_str = yaml.dump(frontmatter, default_flow_style=False, allow_unicode=True)
+    frontmatter_str = yaml.dump(
+        frontmatter,
+        default_flow_style=False,
+        allow_unicode=True,
+        sort_keys=False
+    )
     new_content = f"---\n{frontmatter_str}---\n{body}"
 
     # 写入文件

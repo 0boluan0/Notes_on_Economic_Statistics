@@ -3,7 +3,6 @@ aliases:
 - 内生性问题诊断
 - 内生性诊断
 - Endogeneity Diagnosis
-- Endogeneity
 tags:
 - system
 - 计量经济学

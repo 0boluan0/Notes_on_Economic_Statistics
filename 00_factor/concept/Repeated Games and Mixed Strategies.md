@@ -2,7 +2,6 @@
 aliases:
 - Repeated Games and Mixed Strategies
 - 重复博弈与混合策略
-- Repeated
 tags:
 - concept
 ---

@@ -2,7 +2,6 @@
 aliases:
 - White异方差检验步骤
 - White检验步骤
-- White
 - White Test Steps
 tags:
 - procedure

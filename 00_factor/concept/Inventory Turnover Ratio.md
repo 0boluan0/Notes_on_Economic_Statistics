@@ -2,7 +2,6 @@
 aliases:
 - 存货周转次数
 - 存货周转率
-- Inventory
 - Inventory Turnover Ratio
 tags:
 - 财务管理

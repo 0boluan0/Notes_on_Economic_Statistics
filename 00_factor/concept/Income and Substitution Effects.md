@@ -1,7 +1,6 @@
 ---
 aliases:
 - 收入效应与替代效应
-- Income
 - Income and Substitution Effects
 tags:
 - concept

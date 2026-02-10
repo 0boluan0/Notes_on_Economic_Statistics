@@ -3,7 +3,6 @@ aliases:
 - Hotelling模型
 - Hotelling Competition
 - Linear City Model
-- Hotelling
 - Hotelling 模型
 - Hotelling Model
 tags:

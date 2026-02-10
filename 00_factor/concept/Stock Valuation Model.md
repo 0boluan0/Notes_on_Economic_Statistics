@@ -3,7 +3,6 @@ aliases:
 - 股票定价模型
 - 股票估价模型
 - Stock Valuation Model
-- Stock
 tags:
 - 财务管理
 - 证券估价

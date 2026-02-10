@@ -2,7 +2,6 @@
 aliases:
 - Financial Ratio Analysis
 - 财务比率分析
-- Financial
 tags:
 - procedure
 ---

@@ -2,7 +2,6 @@
 aliases:
 - Holding Period
 - 持有期
-- Holding
 tags:
 - concept
 ---

@@ -3,7 +3,6 @@ aliases:
 - 稳定状态
 - 稳态分析
 - Steady State Analysis
-- Steady
 tags:
 - 发展经济学
 - 经济增长理论

@@ -4,7 +4,6 @@ aliases:
 - 总资产净利率
 - ROA
 - Return on Assets
-- Return
 tags:
 - 财务管理
 - 财务比率

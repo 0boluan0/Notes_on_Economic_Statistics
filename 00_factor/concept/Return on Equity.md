@@ -4,7 +4,6 @@ aliases:
 - 权益净利率
 - ROE
 - Return on Equity
-- Return
 tags:
 - 财务管理
 - 财务比率

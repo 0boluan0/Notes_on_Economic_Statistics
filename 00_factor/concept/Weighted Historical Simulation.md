@@ -2,7 +2,6 @@
 aliases:
 - Weighted Historical Simulation
 - 加权历史模拟
-- Weighted
 tags:
 - concept
 ---

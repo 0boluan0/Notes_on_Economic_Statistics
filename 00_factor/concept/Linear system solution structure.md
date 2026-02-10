@@ -3,7 +3,6 @@ aliases:
 - 齐次与非齐次线性方程组解的关系
 - 线性方程组解的结构
 - Linear system solution structure
-- Linear
 tags:
 - proof
 - 02_linear algebra

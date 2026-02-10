@@ -2,7 +2,6 @@
 aliases:
 - Payback Period
 - 回收期
-- Payback
 tags:
 - concept
 ---

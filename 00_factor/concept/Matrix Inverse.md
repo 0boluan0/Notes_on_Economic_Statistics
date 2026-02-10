@@ -1,11 +1,11 @@
 ---
 aliases:
-  - Matrix Inverse
-  - Inverse Matrix
-  - 矩阵的逆
-  - 逆矩阵
+- Matrix Inverse
+- Inverse Matrix
+- 矩阵的逆
+- 逆矩阵
 tags:
-  - concept
+- concept
 ---
 # Matrix Inverse
 

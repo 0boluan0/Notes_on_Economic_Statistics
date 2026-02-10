@@ -2,7 +2,6 @@
 aliases:
 - Deposit Creation
 - 存款创造
-- Deposit
 tags:
 - concept
 ---

@@ -2,7 +2,6 @@
 aliases:
 - Present Value
 - 现值
-- Present
 tags:
 - concept
 ---

@@ -3,7 +3,6 @@ aliases:
 - 鞅差序列
 - MDS
 - Martingale Difference Sequence
-- Martingale
 tags:
 - 时间序列
 - 概率论

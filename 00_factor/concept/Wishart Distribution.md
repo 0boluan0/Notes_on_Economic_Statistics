@@ -1,7 +1,6 @@
 ---
 aliases:
 - Wishart分布
-- Wishart
 - Wishart 分布
 - Wishart Distribution
 tags:

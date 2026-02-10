@@ -3,7 +3,6 @@ aliases:
 - 财务管理
 - 财务管理-hub
 - Financial Management
-- Financial
 - Financial Management-hub
 tags:
 - hub

@@ -2,7 +2,6 @@
 aliases:
 - 庇古税
 - Externality Tax
-- Pigouvian
 - Pigouvian Tax
 tags:
 - concept

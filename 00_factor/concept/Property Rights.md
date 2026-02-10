@@ -2,7 +2,6 @@
 aliases:
 - Property Rights
 - 产权
-- Property
 tags:
 - concept
 ---

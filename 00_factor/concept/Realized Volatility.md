@@ -2,7 +2,6 @@
 aliases:
 - 已实现波动率
 - Realized Volatility
-- Realized
 tags:
 - concept
 ---

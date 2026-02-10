@@ -3,7 +3,6 @@ aliases:
 - 复合泊松过程
 - Compound Poisson
 - Compound Poisson Process
-- Compound
 tags:
 - concept
 - stochastic processes

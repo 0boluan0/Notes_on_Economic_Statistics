@@ -2,7 +2,6 @@
 aliases:
 - Linear Regression Model
 - 线性回归模型
-- Linear
 tags:
 - concept
 ---

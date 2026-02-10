@@ -1,7 +1,6 @@
 ---
 aliases:
 - 边际VaR
-- Marginal
 - Marginal VaR
 tags:
 - concept

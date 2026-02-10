@@ -1,7 +1,6 @@
 ---
 aliases:
 - 违约风险
-- Default
 - Default Risk
 tags:
 - 风险管理

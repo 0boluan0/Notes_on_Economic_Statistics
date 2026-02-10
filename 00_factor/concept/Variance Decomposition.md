@@ -2,7 +2,6 @@
 aliases:
 - 方差分解
 - Variance Decomposition
-- Variance
 tags:
 - 时间序列
 - VAR模型

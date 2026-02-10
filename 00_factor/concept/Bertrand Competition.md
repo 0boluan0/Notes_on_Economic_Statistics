@@ -3,7 +3,6 @@ aliases:
 - Bertrand竞争
 - Bertrand Model
 - Bertrand Paradox
-- Bertrand
 - Bertrand 竞争
 - Bertrand Competition
 tags:

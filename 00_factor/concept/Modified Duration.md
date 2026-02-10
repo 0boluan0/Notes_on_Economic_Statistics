@@ -1,7 +1,6 @@
 ---
 aliases:
 - 修正久期
-- Modified
 - Modified Duration
 tags:
 - concept

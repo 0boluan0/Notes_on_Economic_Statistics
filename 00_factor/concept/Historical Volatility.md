@@ -2,7 +2,6 @@
 aliases:
 - 历史波动率
 - Historical Volatility
-- Historical
 tags:
 - concept
 ---

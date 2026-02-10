@@ -2,7 +2,6 @@
 aliases:
 - 排列矩阵
 - 置换矩阵
-- Permutation
 - Permutation Matrix
 tags:
 - 线性代数

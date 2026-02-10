@@ -2,7 +2,6 @@
 aliases:
 - Linear Independence
 - 线性无关
-- Linear
 tags:
 - concept
 ---

@@ -1,7 +1,6 @@
 ---
 aliases:
 - 收益率曲线风险
-- Yield
 - Yield Curve Risk
 tags:
 - 金融

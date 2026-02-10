@@ -4,7 +4,6 @@ aliases:
 - Risk Premium
 - Default Risk
 - Risk Structure of Interest Rates
-- Risk
 tags:
 - concept
 - money and banking

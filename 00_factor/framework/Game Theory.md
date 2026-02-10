@@ -4,7 +4,6 @@ aliases:
 - Game Theory Basics
 - 博弈论
 - 博弈论基础
-- Game
 tags:
 - framework
 ---

@@ -3,7 +3,6 @@ aliases:
 - Volatility Clustering
 - 波动率聚集
 - 波动聚集
-- Volatility
 tags:
 - concept
 ---

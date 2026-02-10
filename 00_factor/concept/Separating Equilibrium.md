@@ -2,7 +2,6 @@
 aliases:
 - 分离均衡
 - Separating Equilibrium
-- Separating
 tags:
 - concept
 - game theory

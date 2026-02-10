@@ -3,7 +3,6 @@ aliases:
 - Required Reserves
 - Reserves
 - 准备金
-- Required
 tags:
 - concept
 ---

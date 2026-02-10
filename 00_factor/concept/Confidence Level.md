@@ -2,7 +2,6 @@
 aliases:
 - Confidence Level
 - 置信水平
-- Confidence
 tags:
 - concept
 ---

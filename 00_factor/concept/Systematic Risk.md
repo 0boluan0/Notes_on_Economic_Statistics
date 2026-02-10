@@ -2,7 +2,6 @@
 aliases:
 - Systematic Risk
 - 系统风险
-- Systematic
 tags:
 - concept
 ---

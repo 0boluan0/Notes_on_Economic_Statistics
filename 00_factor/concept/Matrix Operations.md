@@ -2,7 +2,6 @@
 aliases:
 - Matrix Operations
 - 矩阵运算
-- Matrix
 tags:
 - concept
 ---

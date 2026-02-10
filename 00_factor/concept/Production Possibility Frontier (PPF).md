@@ -1,7 +1,6 @@
 ---
 aliases:
 - 生产可能性曲线
-- Production
 - Production Possibility Frontier (PPF)
 tags:
 - concept

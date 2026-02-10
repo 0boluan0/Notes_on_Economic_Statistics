@@ -2,7 +2,6 @@
 aliases:
 - Behavioral Finance
 - 行为金融学
-- Behavioral
 tags:
 - concept
 ---
