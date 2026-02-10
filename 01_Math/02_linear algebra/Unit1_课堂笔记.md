@@ -13,18 +13,18 @@ date: 2026-02-09
 > 对应资料顺序：`MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.1sum.pdf` 到 `Ses1.14sum.pdf`。
 > 本笔记以课堂顺序展开，吸收 `01_matrices and Gaussian Elimination.md` 与 `02_vector spaces and subspace.md` 的已有内容。
 
-## Session 1.1 The geometry of linear equations
+## 1.1 线性方程的几何图像（The Geometry of Linear Equations）
 
 ### 课程目标
 - 把“解方程组”统一成 `Ax=b`。
-- 同时理解 row picture（方程交点）和 column picture（列向量线性组合）。
+- 同时理解行图像（row picture，方程交点）与列图像（column picture，列向量线性组合）。
 - 建立“有解/无解/多解”的几何判据。
 
 ### 核心定义
 - 线性方程组：每个方程都是未知量的线性组合。
 - 矩阵形式：
   $$Ax=b$$
-- column picture：`b` 能否由 `A` 的列向量线性组合得到。
+- 列图像（column picture）：`b` 能否由 `A` 的列向量线性组合得到。
 
 ### 关键推导
 - 若 $A=[a_1,a_2,\dots,a_n]$，则
@@ -72,7 +72,7 @@ print("x =", x)
 print("A@x =", A @ x)
 ```
 
-## Session 1.2 Elimination with matrices
+## 1.2 矩阵消元（Elimination with Matrices）
 
 ### 课程目标
 - 掌握高斯消元（Gaussian elimination）流程。
@@ -123,7 +123,7 @@ print("augmented matrix:\n", Ab)
 print("solution:", np.linalg.solve(A, b))
 ```
 
-## Session 1.3 Multiplication and inverse matrices
+## 1.3 矩阵乘法与逆矩阵（Multiplication and Inverse Matrices）
 
 ### 课程目标
 - 理解矩阵乘法是线性变换复合。
@@ -168,7 +168,7 @@ print("A_inv:\n", A_inv)
 print("A @ A_inv:\n", A @ A_inv)
 ```
 
-## Session 1.4 Factorization into A = LU
+## 1.4 分解 $A=LU$（Factorization into $A=LU$）
 
 ### 课程目标
 - 掌握 LU 分解的计算逻辑。
@@ -215,7 +215,7 @@ print("L*U =")
 sp.pprint(L * U)
 ```
 
-## Session 1.5 Transposes, permutations, spaces Rn
+## 1.5 转置、置换与 $\mathbb{R}^n$ 空间（Transposes, Permutations, Spaces $\mathbb{R}^n$）
 
 ### 课程目标
 - 理解转置与置换矩阵的作用。
@@ -257,7 +257,7 @@ print("P@A=\n", P @ A)
 print("(A.T).T=\n", (A.T).T)
 ```
 
-## Session 1.6 Column space and nullspace
+## 1.6 列空间与零空间（Column Space and Nullspace）
 
 ### 课程目标
 - 理解列空间 `C(A)` 与零空间 `N(A)`。
@@ -298,7 +298,7 @@ print("rank(A)=", rank)
 print("col3 - col1 - col2 =", A[:,2] - A[:,0] - A[:,1])
 ```
 
-## Session 1.7 Solving Ax = 0: pivot variables, special solutions
+## 1.7 求解 $Ax=0$：主元变量与特殊解（Solving $Ax=0$: Pivot Variables, Special Solutions）
 
 ### 课程目标
 - 会通过 RREF 找主变量与自由变量。
@@ -340,7 +340,7 @@ print("rref:", A.rref())
 print("nullspace:", A.nullspace())
 ```
 
-## Session 1.8 Solving Ax = b: row reduced form R
+## 1.8 求解 $Ax=b$：行最简形 $R$（Solving $Ax=b$: Row-Reduced Form $R$）
 
 ### 课程目标
 - 在非齐次系统中区分“特解 + 齐次通解”。
@@ -385,7 +385,7 @@ print("A.rank =", A.rank(), "aug.rank =", A.row_join(b).rank())
 print("parametric solution:", sp.linsolve((A,b)))
 ```
 
-## Session 1.9 Independence, basis, and dimension
+## 1.9 线性无关、基与维数（Independence, Basis, and Dimension）
 
 ### 课程目标
 - 区分线性无关/相关。
@@ -425,7 +425,7 @@ print("rank =", V.rank())
 print("columns are independent?", V.rank() == V.shape[1])
 ```
 
-## Session 1.10 The four fundamental subspaces
+## 1.10 四个基本子空间（The Four Fundamental Subspaces）
 
 ### 课程目标
 - 掌握四大基本子空间的定义与所在空间。
@@ -470,7 +470,7 @@ print("rank", r)
 print("dim N(A)=", n-r, "dim N(A^T)=", m-r)
 ```
 
-## Session 1.11 Matrix spaces; rank 1; small world graphs
+## 1.11 矩阵空间、秩 1 与小世界图（Matrix Spaces, Rank 1, Small World Graphs）
 
 ### 课程目标
 - 把“矩阵也可以作为向量”这个观点建立起来。
@@ -511,7 +511,7 @@ print(A)
 print("rank:", np.linalg.matrix_rank(A))
 ```
 
-## Session 1.12 Graphs, networks, incidence matrices
+## 1.12 图、网络与关联矩阵（Graphs, Networks, Incidence Matrices）
 
 ### 课程目标
 - 理解图（graph）的关联矩阵（incidence matrix）表示。
@@ -556,7 +556,7 @@ print("B=\n", B)
 print("rank(B)=", np.linalg.matrix_rank(B))
 ```
 
-## Session 1.13 An overview of key ideas
+## 1.13 核心思想总览（An Overview of Key Ideas）
 
 ### 课程目标
 - 汇总 Unit1 主线：`Ax=b`、消元、子空间、秩。
@@ -597,7 +597,7 @@ print("rank(A)=", r)
 print("unknowns n=", A.shape[1], "=> solution dimension for Ax=0 is", A.shape[1]-r)
 ```
 
-## Session 1.14 Exam 1 review
+## 1.14 考试 1 复习（Exam 1 Review）
 
 ### 课程目标
 - 用“考前清单”压缩 Unit1 全部知识点。
