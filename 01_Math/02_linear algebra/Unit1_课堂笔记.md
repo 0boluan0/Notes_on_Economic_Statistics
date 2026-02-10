@@ -1,771 +1,645 @@
 ---
 aliases: []
-tags: [linear-algebra, MIT-18.06SC, unit1]
+tags:
+  - linear-algebra
+  - MIT-18.06SC
+  - unit1
 date: 2026-02-09
 科目: Math
 ---
 
 # Unit1 课堂笔记（MIT 18.06SC）
 
-## Session 笔记
+> 对应资料顺序：`MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.1sum.pdf` 到 `Ses1.14sum.pdf`。
+> 本笔记以课堂顺序展开，吸收 `01_matrices and Gaussian Elimination.md` 与 `02_vector spaces and subspace.md` 的已有内容。
 
-### Session 1.1 线性方程的几何图像
+## Session 1.1 The geometry of linear equations
 
-> 对应 Summary: *The geometry of linear equations*
+### 课程目标
+- 把“解方程组”统一成 `Ax=b`。
+- 同时理解 row picture（方程交点）和 column picture（列向量线性组合）。
+- 建立“有解/无解/多解”的几何判据。
 
-**核心概念**
-- 把线性方程组统一写成 $Ax=b$，并用两种视角理解：row picture（方程交点）与 column picture（列向量线性组合）。
-- “有解”对应 `b` 落在 `A` 的列空间 `C(A)`；“唯一解”还要求零空间只有零向量。
-- 本节建立整门课最核心问题：线性代数本质上是在研究线性映射与子空间关系。
+### 核心定义
+- 线性方程组：每个方程都是未知量的线性组合。
+- 矩阵形式：
+  $$Ax=b$$
+- column picture：`b` 能否由 `A` 的列向量线性组合得到。
 
-**关键公式**
+### 关键推导
+- 若 $A=[a_1,a_2,\dots,a_n]$，则
+  $$Ax=x_1a_1+x_2a_2+\cdots+x_na_n$$
+- 所以“求解 x”就是“找系数使列向量组合等于 b”。
+- 这和你之前笔记中的 Row/Column 两种写法是一致的，只是表达更统一。
+
+### 例题（含解法）
+已知
 $$
-Ax=b
+\begin{cases}
+2x-y=0\\
+-x+2y-z=-1\\
+-3y+4z=4
+\end{cases}
 $$
-$$
-b\in C(A)\iff \exists x\text{ s.t. }Ax=b
-$$
+写成 $Ax=b$ 并判断是否可能有解。
+- 解：
+  $$
+  A=\begin{bmatrix}
+ 2&-1&0\\-1&2&-1\\0&-3&4
+ \end{bmatrix},\quad
+ b=\begin{bmatrix}0\\-1\\4\end{bmatrix}
+  $$
+- 只要 $b\in C(A)$ 就有解；后续通过消元可以具体判定。
 
-**几何/直觉解释**
-- row picture 关注“几条线/平面是否交于一点”；column picture 关注“目标向量能否被列向量拼出来”。
-- 二维里是一组直线，三维里是平面；维数升高后几何图像看不见，但代数结构保持不变。
-- 把“解方程”理解成“找坐标”会更稳：`x` 就是 `b` 在列向量生成系统中的坐标。
+### 易错点
+- 把“有交点”直接当“唯一解”。
+- 忽略矩阵形状（`m×n`）就讨论结论。
+- 只算数值，不看几何结构。
 
-**易错点**
-- 把“有交点”误认为“唯一交点”；平行、重合、欠定都会改变解结构。
-- 只在数值层面算消元，不检查 `A` 的列是否足够生成 `b`。
-- 忽略 `m×n` 形状信息，导致把方阵结论错误套到非方阵。
+### 与00_factor关联
+- [[Linear Algebra-hub|线性代数-hub]]
+- [[Column Space|列空间]]
+- [[Linear Combination|线性组合]]
 
-**1道例题（含简解）**
-- 题：求解 $2x-y=0,\ -x+2y=3$。
-- 解：由第一式得 $y=2x$，代入第二式 $-x+4x=3$，故 $x=1,y=2$。
-- 检查：$A\begin{bmatrix}1\\2\end{bmatrix}=\begin{bmatrix}0\\3\end{bmatrix}=b$，与 row/column 两种视角一致。
-**关键坐标图代码（Python）**
+### 代码块（完整保留）
 ```python
-import micropip
-await micropip.install("matplotlib")
-import matplotlib.pyplot as plt
 import numpy as np
 
-x = np.linspace(-2, 4, 300)
-y1 = 2 * x
-y2 = 0.5 * x + 1.5
-
-fig, ax = plt.subplots(figsize=(5, 4))
-ax.plot(x, y1, label="2x-y=0")
-ax.plot(x, y2, label="-x+2y=3")
-ax.scatter([1], [2], color="red")
-ax.annotate("(1,2)", (1, 2), xytext=(1.2, 2.2))
-ax.axhline(0, color="black", lw=0.8)
-ax.axvline(0, color="black", lw=0.8)
-ax.set_xlim(-2, 4)
-ax.set_ylim(-2, 8)
-ax.grid(True)
-ax.legend()
-plt.show()
+A = np.array([[2, -1, 0], [-1, 2, -1], [0, -3, 4]], dtype=float)
+b = np.array([0, -1, 4], dtype=float)
+x = np.linalg.solve(A, b)
+print("x =", x)
+print("A@x =", A @ x)
 ```
 
+## Session 1.2 Elimination with matrices
 
-### Session 1.2 矩阵消元与主元
+### 课程目标
+- 掌握高斯消元（Gaussian elimination）流程。
+- 理解主元（pivot）与行变换的意义。
+- 会从增广矩阵判断无解/多解。
 
-> 对应 Summary: *Elimination with matrices*
+### 核心定义
+- 初等行变换：交换、倍乘、行加。
+- 主元列（pivot columns）：提供独立约束。
+- 阶梯形矩阵（echelon form）：便于回代。
 
-**核心概念**
-- 高斯消元通过初等行变换把矩阵化为阶梯形，上三角/行阶梯形中的主元（pivot）决定秩。
-- 消元不改变方程组解集（对增广矩阵同时做行变换），因此是“等价重写”而非“近似”。
-- 主元列对应基础方向，非主元列对应自由变量。
+### 关键推导
+- 用消元矩阵记步骤：
+  $$E_k\cdots E_2E_1A=U$$
+- 对增广矩阵同时行变换：
+  $$[A\mid b]\to[U\mid c]$$
+- 若出现 `[0 0 ... 0 | 非0]`，则无解。
 
-**关键公式**
+### 例题（含解法）
 $$
-E_k\cdots E_2E_1A=U
+\begin{cases}
+x+2y+z=2\\
+2x+5y+3z=5\\
+x+y+z=1
+\end{cases}
 $$
-$$
-\operatorname{rank}(A)=\#\text{pivot columns}
-$$
+- 消元：`R2 <- R2-2R1`, `R3 <- R3-R1`。
+- 得到上三角后回代：$y=1, z=0, x=0$。
 
-**几何/直觉解释**
-- 每一步行变换都在“消掉重复信息”，把约束关系压缩成更容易回代的形状。
-- 主元可以看成“新信息出现的位置”；没有主元的列只能依赖已有信息。
-- 先消元后回代，本质是把耦合系统拆成逐层可解。
+### 易错点
+- 求解 `Ax=b` 时把列变换混进来。
+- 主元为0不换行。
+- 回代时符号错误。
 
-**易错点**
-- 把行变换与列变换混用：求解 $Ax=b$ 时默认只做行变换。
-- 看到零主元不换行，导致后续除零或错误判断无解。
-- 把“零行”直接理解成矛盾；要结合增广列判断是多解还是无解。
+### 与00_factor关联
+- [[Matrix Operations|矩阵运算]]
+- [[Matrix Rank|矩阵秩]]
+- [[Linear Systems|线性系统]]
 
-**1道例题（含简解）**
-- 题：$x+2y+z=2,\ 2x+5y+3z=5,\ x+y+z=1$。
-- 解：行变换得 `U` 后回代：先得 $y=1,z=0$，再得 $x=0$。
-- 结论：解为 `(0,1,0)`，主元列为第1、2、3列。
-**关键坐标图代码（Python）**
+### 代码块（完整保留）
 ```python
-import micropip
-await micropip.install("matplotlib")
-import matplotlib.pyplot as plt
 import numpy as np
 
-fig, ax = plt.subplots(figsize=(5, 4))
-ax.plot([0, 1, 2], [2, 5, 8], marker="o", label="before elimination")
-ax.plot([0, 1, 2], [2, 3, 4], marker="s", label="after elimination")
-ax.scatter([0, 1], [2, 3], color="red", label="pivot rows")
-ax.set_xlabel("column index")
-ax.set_ylabel("value")
-ax.grid(True)
-ax.legend()
-plt.show()
+A = np.array([[1, 2, 1], [2, 5, 3], [1, 1, 1]], dtype=float)
+b = np.array([2, 5, 1], dtype=float)
+Ab = np.c_[A, b]
+print("augmented matrix:\n", Ab)
+print("solution:", np.linalg.solve(A, b))
 ```
 
+## Session 1.3 Multiplication and inverse matrices
 
-### Session 1.3 矩阵乘法与逆矩阵
+### 课程目标
+- 理解矩阵乘法是线性变换复合。
+- 理解逆矩阵的代数与几何意义。
+- 能通过增广矩阵求 $A^{-1}$。
 
-> 对应 Summary: *Multiplication and inverse matrices*
+### 核心定义
+- 乘法复合：$(AB)x=A(Bx)$。
+- 逆矩阵：$A^{-1}A=I=AA^{-1}$（仅方阵且可逆时）。
+- 可逆等价于 `det(A) ≠ 0`。
 
-**核心概念**
-- 矩阵乘法表示线性变换复合：先做右边变换，再做左边变换。
-- 可逆矩阵 $A^{-1}$ 满足 $A^{-1}A=I=AA^{-1}$，意味着变换可完全恢复。
-- 逆存在当且仅当矩阵满秩且零空间只有零向量。
+### 关键推导
+- 若 $A$ 可逆，则 $Ax=b$ 唯一解为：
+  $$x=A^{-1}b$$
+- 用行变换：
+  $$[A\mid I]\to[I\mid A^{-1}]$$
 
-**关键公式**
-$$
-(AB)x=A(Bx)
-$$
-$$
-A^{-1}A=I
-$$
-
-**几何/直觉解释**
-- “先袜子后鞋子”对应 $(AB)^{-1}=B^{-1}A^{-1}$，顺序一定反过来。
-- 把列看作基向量像：若列彼此独立，映射不压扁维度，才可能可逆。
-- 求逆可看成“把每个标准基向量都拉回原位”。
-
-**易错点**
-- 把 $AB=BA$ 当默认性质；一般不成立。
-- 把“行列式非零”当定义而非等价判据。
-- 非方阵谈双侧逆，结论会失真。
-
-**1道例题（含简解）**
-- 题：$A=\begin{bmatrix}1&3\\2&7\end{bmatrix}$，求 $A^{-1}$。
-- 解：$[A\mid I]$ 行变换到 $[I\mid A^{-1}]$，得 $A^{-1}=\begin{bmatrix}7&-3\\-2&1\end{bmatrix}$。
+### 例题（含解法）
+对
+$$A=\begin{bmatrix}1&3\\2&7\end{bmatrix}$$
+求逆。
+- 结果：
+  $$A^{-1}=\begin{bmatrix}7&-3\\-2&1\end{bmatrix}$$
 - 验证：$AA^{-1}=I$。
-**关键坐标图代码（Python）**
+
+### 易错点
+- 误以为 $AB=BA$。
+- 非方阵讨论双侧逆。
+- 把“左逆存在”直接当“可逆”。
+
+### 与00_factor关联
+- [[Matrix Inverse|逆矩阵]]
+- [[Determinant|行列式]]
+
+### 代码块（完整保留）
 ```python
-import micropip
-await micropip.install("matplotlib")
-import matplotlib.pyplot as plt
 import numpy as np
 
 A = np.array([[1, 3], [2, 7]], dtype=float)
-pts = np.array([[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]], dtype=float)
-img = (A @ pts.T).T
-
-fig, ax = plt.subplots(figsize=(5, 4))
-ax.plot(pts[:, 0], pts[:, 1], label="unit square")
-ax.plot(img[:, 0], img[:, 1], label="A transform")
-ax.axhline(0, color="black", lw=0.8)
-ax.axvline(0, color="black", lw=0.8)
-ax.grid(True)
-ax.legend()
-plt.show()
+A_inv = np.linalg.inv(A)
+print("A_inv:\n", A_inv)
+print("A @ A_inv:\n", A @ A_inv)
 ```
 
+## Session 1.4 Factorization into A = LU
 
-### Session 1.4 A=LU 分解
+### 课程目标
+- 掌握 LU 分解的计算逻辑。
+- 理解 `L` 记录消元过程、`U` 记录结果。
+- 会用 `LU` 快速解多个右端向量。
 
-> 对应 Summary: *Factorization into A = LU*
+### 核心定义
+- 无换行时：
+  $$A=LU$$
+- 求解流程：先 `Ly=b`，再 `Ux=y`。
 
-**核心概念**
-- 若消元过程中不需要换行，可把消元乘数收集成下三角矩阵 `L`，得到 $A=LU$。
-- `U` 记录“消元后的约束结构”，`L` 记录“如何从 A 走到 U”。
-- LU 让多右端向量 $Ax=b_i$ 的求解显著提速。
+### 关键推导
+- 每一步消元乘子（multiplier）写入 `L` 的下三角位置。
+- `L` 对角线取1，`U` 为上三角。
 
-**关键公式**
-$$
-A=LU
-$$
-$$
-Ly=b,\ Ux=y
-$$
+### 例题（含解法）
+$$A=\begin{bmatrix}2&1\\4&3\end{bmatrix}$$
+- 消元乘子 $m_{21}=2$。
+- 得
+  $$L=\begin{bmatrix}1&0\\2&1\end{bmatrix},\ U=\begin{bmatrix}2&1\\0&1\end{bmatrix}$$
+- 验证 $LU=A$。
 
-**几何/直觉解释**
-- 一次分解，多次回代：先解下三角，再解上三角。
-- `L` 像操作日志，`U` 像结果快照。
-- 数值计算里 LU 是最核心基建之一。
+### 易错点
+- 忘记 `L` 对角线为1。
+- 把 `L` 与 `U` 顺序写反。
+- 有行交换时仍写 `A=LU`。
 
-**易错点**
-- 需要换行时仍强行写 $A=LU$；应改用 $PA=LU$。
-- 把 `L` 的对角线写错（通常取 1）。
-- 把行交换信息遗漏，导致回代错误。
+### 与00_factor关联
+- [[LU Decomposition|LU分解]]
+- [[Matrix Operations|矩阵运算]]
 
-**1道例题（含简解）**
-- 题：$A=\begin{bmatrix}2&1\\4&3\end{bmatrix}$。
-- 解：消元乘数 $m_{21}=2$，得 $L=\begin{bmatrix}1&0\\2&1\end{bmatrix},\ U=\begin{bmatrix}2&1\\0&1\end{bmatrix}$。
-- 故 $A=LU$。
-**关键坐标图代码（Python）**
+### 代码块（完整保留）
 ```python
-import micropip
-await micropip.install("matplotlib")
-import matplotlib.pyplot as plt
+import numpy as np
+from scipy.linalg import lu
+
+A = np.array([[2, 1], [4, 3]], dtype=float)
+P, L, U = lu(A)
+print("P:\n", P)
+print("L:\n", L)
+print("U:\n", U)
+print("P@A:\n", P @ A)
+print("L@U:\n", L @ U)
+```
+
+## Session 1.5 Transposes, permutations, spaces Rn
+
+### 课程目标
+- 理解转置与置换矩阵的作用。
+- 掌握含换行消元时的标准形式 `PA=LU`。
+- 明确 `R^n` 向量空间语境。
+
+### 核心定义
+- 转置：$(AB)^T=B^TA^T$。
+- 置换矩阵（Permutation matrix）：单位矩阵换行。
+- 含换行的分解：
+  $$PA=LU$$
+
+### 关键推导
+- 行交换可由左乘 `P` 表示。
+- 置换不改变线性系统解集，只改变方程顺序。
+
+### 例题（含解法）
+$$P=\begin{bmatrix}0&1\\1&0\end{bmatrix},\quad A=\begin{bmatrix}1&2\\3&4\end{bmatrix}$$
+- 计算：
+  $$PA=\begin{bmatrix}3&4\\1&2\end{bmatrix}$$
+- 且 $P^{-1}=P^T=P$。
+
+### 易错点
+- 把 $(AB)^T$ 写成 $A^TB^T$。
+- 混淆行交换和列交换。
+- 把置换矩阵当一般随机矩阵。
+
+### 与00_factor关联
+- [[Permutation Matrix|置换矩阵]]
+- [[Vector Space|向量空间]]
+
+### 代码块（完整保留）
+```python
 import numpy as np
 
-v = np.array([1, 1], dtype=float)
-L = np.array([[1, 0], [2, 1]], dtype=float)
-U = np.array([[2, 1], [0, 1]], dtype=float)
-uv = U @ v
-luv = L @ uv
-
-fig, ax = plt.subplots(figsize=(5, 4))
-ax.quiver([0, 0, 0], [0, 0, 0], [v[0], uv[0], luv[0]], [v[1], uv[1], luv[1]], angles="xy", scale_units="xy", scale=1)
-ax.text(v[0], v[1], "v")
-ax.text(uv[0], uv[1], "Uv")
-ax.text(luv[0], luv[1], "LUv")
-ax.axhline(0, color="black", lw=0.8)
-ax.axvline(0, color="black", lw=0.8)
-ax.set_xlim(-1, 6)
-ax.set_ylim(-1, 8)
-ax.grid(True)
-plt.show()
+P = np.array([[0, 1], [1, 0]])
+A = np.array([[1, 2], [3, 4]])
+print("P@A=\n", P @ A)
+print("(A.T).T=\n", (A.T).T)
 ```
 
+## Session 1.6 Column space and nullspace
 
-### Session 1.5 转置与置换矩阵
+### 课程目标
+- 理解列空间 `C(A)` 与零空间 `N(A)`。
+- 掌握“`Ax=b` 有解当且仅当 `b∈C(A)`”。
+- 建立维数直觉。
 
-> 对应 Summary: *Transposes, permutations, spaces Rn*
+### 核心定义
+- 列空间：`A` 列向量线性组合的全体。
+- 零空间：满足 `Ax=0` 的所有向量。
+- 都是子空间（subspace）。
 
-**核心概念**
-- 转置把行列角色对调，连接行空间与列空间。
-- [[Permutation Matrix|置换矩阵]] `P` 表示行重排，`PA` 等价于把 `A` 的行重新排序。
-- 在含换行的消元中，标准形式是 $PA=LU$。
+### 关键推导
+- 你原笔记中的关键句：`Ax=b` 只有在 `b` 属于列空间时有解。
+- 通过消元确定 pivot columns，即列空间的基来源。
 
-**关键公式**
-$$
-(AB)^T=B^TA^T
-$$
-$$
-PA=LU
-$$
+### 例题（含解法）
+$$A=\begin{bmatrix}1&1&2\\2&1&3\\3&1&4\\4&1&5\end{bmatrix}$$
+- 第3列 = 第1列 + 第2列，列空间维数不变。
+- 所以 `C(A)` 由前两列张成，是 `R^4` 中二维子空间。
 
-**几何/直觉解释**
-- $A^T$ 把“对谁做内积”这个动作反向编码。
-- 置换矩阵本质是单位矩阵的行重排，几何上是坐标轴重排。
-- 很多“对称”性质都通过转置表达：$A=A^T$。
+### 易错点
+- 把“列空间在 `R^m`”误记成 `R^n`。
+- 用行变换后的列直接当原列空间基（需谨慎）。
+- 把“零空间只有0”当所有矩阵都成立。
 
-**易错点**
-- 误写 $(AB)^T=A^TB^T$。
-- 认为置换改变解集；其实它只改变方程顺序。
-- 把列置换和行置换混同。
+### 与00_factor关联
+- [[Column Space|列空间]]
+- [[Null Space|零空间]]
+- [[Subspace|子空间]]
 
-**1道例题（含简解）**
-- 题：给 $P=\begin{bmatrix}0&1\\1&0\end{bmatrix}$ 与 $A=\begin{bmatrix}1&2\\3&4\end{bmatrix}$，求 $PA$。
-- 解：交换两行，$PA=\begin{bmatrix}3&4\\1&2\end{bmatrix}$。
-- 说明：$P^{-1}=P^T=P$。
-**关键坐标图代码（Python）**
+### 代码块（完整保留）
 ```python
-import micropip
-await micropip.install("matplotlib")
-import matplotlib.pyplot as plt
 import numpy as np
 
-A = np.array([[1, 2], [3, 4]], dtype=float)
-P = np.array([[0, 1], [1, 0]], dtype=float)
-PA = P @ A
-
-fig, ax = plt.subplots(figsize=(5, 4))
-ax.plot([1, 2], A[0], marker="o", label="row1(A)")
-ax.plot([1, 2], A[1], marker="o", label="row2(A)")
-ax.plot([1, 2], PA[0], "--", marker="s", label="row1(PA)")
-ax.plot([1, 2], PA[1], "--", marker="s", label="row2(PA)")
-ax.set_xticks([1, 2])
-ax.grid(True)
-ax.legend()
-plt.show()
+A = np.array([[1,1,2],[2,1,3],[3,1,4],[4,1,5]], dtype=float)
+rank = np.linalg.matrix_rank(A)
+print("rank(A)=", rank)
+print("col3 - col1 - col2 =", A[:,2] - A[:,0] - A[:,1])
 ```
 
+## Session 1.7 Solving Ax = 0: pivot variables, special solutions
 
-### Session 1.6 列空间与零空间
+### 课程目标
+- 会通过 RREF 找主变量与自由变量。
+- 理解特解（special solutions）构造法。
+- 会写齐次方程通解。
 
-> 对应 Summary: *[[Column Space|Column space]] and nullspace*
+### 核心定义
+- 主变量：对应主元列。
+- 自由变量：可自由指定。
+- 特解：每次让一个自由变量为1，其余自由变量为0所得解。
 
-**核心概念**
-- 列空间 `C(A)` 是所有 `Ax` 可达向量集合；零空间 `N(A)` 是被映到零向量的输入集合。
-- $Ax=b$ 可解当且仅当 $b\in C(A)$。
-- 零空间维数刻画“解不唯一”的自由度。
+### 关键推导
+- 若 `n` 个未知量、`r` 个主元，则自由变量个数 `n-r`。
+- 齐次通解是所有特解的线性组合。
 
-**关键公式**
+### 例题（含解法）
 $$
-C(A)=\{Ax:x\in\mathbb{R}^n\}
+A=\begin{bmatrix}1&2&3\\2&4&6\\2&6&8\\2&8&10\end{bmatrix}
 $$
-$$
-N(A)=\{x:Ax=0\}
-$$
+- 消元后有2个主元、1个自由变量。
+- 令 $x_3=1$ 得特解 $(-1,-1,1)^T$。
+- 通解：$x=t(-1,-1,1)^T$。
 
-**几何/直觉解释**
-- 列空间描述输出能力，零空间描述信息损失。
-- 同一个 `b` 的所有解差一个零空间向量。
-- “可达 + 不可辨识”共同决定系统行为。
+### 易错点
+- 把自由变量也当回代目标。
+- 忘记通解参数（例如 `t`）。
+- 把一个特解误当全部解。
 
-**易错点**
-- 把列空间看成行空间。
-- 把 `N(A)` 中向量误解为“无意义噪声”；它是结构性自由度。
-- 只看方程数量不看秩。
+### 与00_factor关联
+- [[Null Space|零空间]]
+- [[Matrix Rank|矩阵秩]]
 
-**1道例题（含简解）**
-- 题：$A=\begin{bmatrix}1&2\\2&4\end{bmatrix}$，求 $C(A)$ 与 $N(A)$。
-- 解：$C(A)=\text{span}\{(1,2)^T\}$；$x_1+2x_2=0$，故 $N(A)=\text{span}\{(-2,1)^T\}$。
-- 由此知对某些 `b` 无解，对可解时有无穷多解。
-**关键坐标图代码（Python）**
+### 代码块（完整保留）
 ```python
-import micropip
-await micropip.install("matplotlib")
-import matplotlib.pyplot as plt
+import sympy as sp
+
+A = sp.Matrix([[1,2,3],[2,4,6],[2,6,8],[2,8,10]])
+print("rref:", A.rref())
+print("nullspace:", A.nullspace())
+```
+
+## Session 1.8 Solving Ax = b: row reduced form R
+
+### 课程目标
+- 在非齐次系统中区分“特解 + 齐次通解”。
+- 用简化行阶梯形（RREF）读解结构。
+- 会判断无解/唯一解/无穷多解。
+
+### 核心定义
+- 非齐次通解：
+  $$x=x_p+x_n,\quad Ax_p=b,\ Ax_n=0$$
+- RREF 直接给线性关系。
+
+### 关键推导
+- `Ax=b` 的全部解 = 一个特解 + 零空间平移。
+- 这也是你原笔记中“特解线 + 零空间方向”的几何表达。
+
+### 例题（含解法）
+设
+$$
+A=\begin{bmatrix}1&2&1\\2&4&2\end{bmatrix},\ b=\begin{bmatrix}3\\6\end{bmatrix}
+$$
+- 第二行与第一行等价，系统一致。
+- 一组特解：$x_p=(3,0,0)^T$。
+- 零空间方向来自 `x1+2x2+x3=0`，故有无穷多解。
+
+### 易错点
+- 看到秩不足就断言无解（还要看增广列）。
+- 特解选择后忘记加上零空间部分。
+- 把 `R` 当原矩阵去解释列空间。
+
+### 与00_factor关联
+- [[Linear Systems|线性系统]]
+- [[Null Space|零空间]]
+- [[Column Space|列空间]]
+
+### 代码块（完整保留）
+```python
+import sympy as sp
+
+A = sp.Matrix([[1,2,1],[2,4,2]])
+b = sp.Matrix([3,6])
+print("A.rank =", A.rank(), "aug.rank =", A.row_join(b).rank())
+print("parametric solution:", sp.linsolve((A,b)))
+```
+
+## Session 1.9 Independence, basis, and dimension
+
+### 课程目标
+- 区分线性无关/相关。
+- 理解基（basis）是“最小生成集”。
+- 理解维数（dimension）是自由方向数量。
+
+### 核心定义
+- 线性无关：只有零系数组合为零向量。
+- 基：既生成空间又线性无关。
+- 维数：任意基的向量个数。
+
+### 关键推导
+- `r` 个主元列对应一个无关集合。
+- 对于子空间，任意两组基长度相同（维数定义成立）。
+
+### 例题（含解法）
+向量组 $(1,0,1),(0,1,1),(1,1,2)$。
+- 第3个 = 前两个之和，故相关。
+- 去掉第3个后前两个构成该子空间一组基，维数为2。
+
+### 易错点
+- “向量个数少于维数”与“必无关”混淆。
+- 把生成集直接当基，不检验无关。
+- 在不同空间里混比维数。
+
+### 与00_factor关联
+- [[Linear Independence|线性无关]]
+- [[Basis Risk|基]]
+- [[Vector Space|向量空间]]
+
+### 代码块（完整保留）
+```python
+import sympy as sp
+
+V = sp.Matrix([[1,0,1],[0,1,1],[1,1,2]])
+print("rank =", V.rank())
+print("columns are independent?", V.rank() == V.shape[1])
+```
+
+## Session 1.10 The four fundamental subspaces
+
+### 课程目标
+- 掌握四大基本子空间的定义与所在空间。
+- 理解正交关系与维数关系。
+- 把 rank-nullity 定理放进总框架。
+
+### 核心定义
+- `C(A)`：列空间，位于 `R^m`。
+- `N(A)`：零空间，位于 `R^n`。
+- `C(A^T)`：行空间，位于 `R^n`。
+- `N(A^T)`：左零空间，位于 `R^m`。
+
+### 关键推导
+- 维数关系：
+  $$\dim C(A)=\dim C(A^T)=r$$
+  $$\dim N(A)=n-r,\ \dim N(A^T)=m-r$$
+- 正交关系：`C(A)` 与 `N(A^T)` 互为正交补；`C(A^T)` 与 `N(A)` 互为正交补。
+
+### 例题（含解法）
+若 `A` 是 `4×3` 且 `rank=2`：
+- `dim C(A)=2`，`dim N(A)=1`。
+- `dim C(A^T)=2`，`dim N(A^T)=2`。
+
+### 易错点
+- 忘记每个子空间属于哪个 `R^k`。
+- 只记秩，不记 `n-r` 与 `m-r`。
+- 混淆零空间和左零空间。
+
+### 与00_factor关联
+- [[Column Space|列空间]]
+- [[Null Space|零空间]]
+- [[Matrix Rank|矩阵秩]]
+
+### 代码块（完整保留）
+```python
 import numpy as np
 
-t = np.linspace(-2, 2, 200)
-fig, ax = plt.subplots(figsize=(5, 4))
-ax.plot(t, 2 * t, label="C(A)=span((1,2))")
-ax.scatter([1, 2], [2, 4], color="green", label="in C(A)")
-ax.scatter([1, 3], [1, 0], color="red", label="not in C(A)")
-ax.axhline(0, color="black", lw=0.8)
-ax.axvline(0, color="black", lw=0.8)
-ax.set_xlim(-2, 2)
-ax.set_ylim(-4, 4)
-ax.grid(True)
-ax.legend()
-plt.show()
+A = np.array([[1,2,0],[2,4,1],[0,0,1],[1,2,1]], dtype=float)
+r = np.linalg.matrix_rank(A)
+m, n = A.shape
+print("rank", r)
+print("dim N(A)=", n-r, "dim N(A^T)=", m-r)
 ```
 
+## Session 1.11 Matrix spaces; rank 1; small world graphs
 
-### Session 1.7 齐次系统与特解基
+### 课程目标
+- 把“矩阵也可以作为向量”这个观点建立起来。
+- 理解 rank-1 矩阵的结构与用途。
+- 初步连接图网络（small world graphs）与线性代数。
 
-> 对应 Summary: *Solving Ax = 0: pivot variables, special solutions*
+### 核心定义
+- 矩阵空间：所有 `m×n` 矩阵构成维数 `mn` 的向量空间。
+- rank-1 矩阵可写成外积：
+  $$A=uv^T$$
 
-**核心概念**
-- 齐次系统永远有零解，关键是是否存在非零解。
-- 自由变量个数等于 `n-r`，每个自由变量可构造一个特解方向。
-- 零空间基由这些特解向量组成。
+### 关键推导
+- rank-1 矩阵每一列都与 `u` 共线，每一行都与 `v^T` 共线。
+- 低秩结构是后续 SVD/压缩的先导。
 
-**关键公式**
-$$
-\dim N(A)=n-r
-$$
-$$
-x_n=c_1v_1+\cdots+c_kv_k
-$$
+### 例题（含解法）
+令 $u=(1,2,3)^T$, $v=(2,-1)^T$，
+$$A=uv^T=\begin{bmatrix}2&-1\\4&-2\\6&-3\end{bmatrix}$$
+- 直接看出第2列是第1列的 `-1/2` 倍，秩为1。
 
-**几何/直觉解释**
-- 自由变量是“可以自主选择的坐标”，主变量由约束被动决定。
-- 齐次解集一定过原点，是线性子空间。
-- 零空间基越多，系统可辨识性越弱。
+### 易错点
+- 把元素乘法误当外积。
+- 只看一行/一列就判断秩。
+- 忽略数值误差导致“近似低秩”判断错误。
 
-**易错点**
-- 把主变量也当可自由设定。
-- 把特解写成单个向量，忘记线性组合系数。
-- RREF 回代时符号出错。
+### 与00_factor关联
+- [[Matrix Rank|矩阵秩]]
+- [[Spectral Decomposition|谱分解]]
 
-**1道例题（含简解）**
-- 题：$A=\begin{bmatrix}1&2&3\\2&4&6\end{bmatrix}$，求 $N(A)$。
-- 解：约束 $x_1+2x_2+3x_3=0$，设 $x_2=s,x_3=t$，则 $x_1=-2s-3t$。
-- 故 $x=s(-2,1,0)^T+t(-3,0,1)^T$。
-**关键坐标图代码（Python）**
+### 代码块（完整保留）
 ```python
-import micropip
-await micropip.install("matplotlib")
-import matplotlib.pyplot as plt
 import numpy as np
 
-t = np.linspace(-3, 3, 200)
-fig, ax = plt.subplots(figsize=(5, 4))
-ax.plot(-2 * t, t, label="N(A)=span((-2,1))")
-ax.scatter([0], [0], color="red")
-ax.axhline(0, color="black", lw=0.8)
-ax.axvline(0, color="black", lw=0.8)
-ax.set_xlim(-6, 6)
-ax.set_ylim(-3, 3)
-ax.grid(True)
-ax.legend()
-plt.show()
+u = np.array([[1],[2],[3]], dtype=float)
+v = np.array([[2,-1]], dtype=float)
+A = u @ v
+print(A)
+print("rank:", np.linalg.matrix_rank(A))
 ```
 
+## Session 1.12 Graphs, networks, incidence matrices
 
-### Session 1.8 非齐次系统通解
+### 课程目标
+- 理解图（graph）的关联矩阵（incidence matrix）表示。
+- 把网络流约束写成线性方程。
+- 理解图连通性与矩阵秩的关系。
 
-> 对应 Summary: *Solving Ax = b: row [[Reduced Form Equation|reduced form]] R*
+### 核心定义
+- 关联矩阵 `B`：节点×边，列表示一条有向边在起点/终点的 `-1/+1`。
+- 流守恒：
+  $$Bf=s$$
 
-**核心概念**
-- $Ax=b$ 一旦可解，通解可写成“一个特解 + 零空间通解”。
-- RREF 同时给出可解性判据与参数化表达。
-- 几何上是仿射子空间：平移后的线性子空间。
+### 关键推导
+- 若图有 `c` 个连通分量，`rank(B)=n-c`（`n` 是节点数）。
+- `N(B^T)` 与连通分量结构有关。
 
-**关键公式**
+### 例题（含解法）
+3个节点，边 `1→2, 2→3, 1→3`：
 $$
-x=x_p+x_n
+B=\begin{bmatrix}
+-1&0&-1\\
+1&-1&0\\
+0&1&1
+\end{bmatrix}
 $$
-$$
-Ax=b\Rightarrow A(x_p+x_n)=b
-$$
+- 可验证 `rank(B)=2=n-1`（连通图）。
 
-**几何/直觉解释**
-- 先找一个落点 $x_p$，再沿 `N(A)` 方向移动仍留在解集。
-- 这解释了“多解”不是离散点，而是一条线/平面。
-- 零空间是解集方向，特解是解集位置。
+### 易错点
+- 边方向约定不一致。
+- 行列定义互换导致符号全错。
+- 把邻接矩阵与关联矩阵混淆。
 
-**易错点**
-- 找到特解后停止，漏掉全部通解。
-- 把 $x_p$ 误当零空间向量。
-- 忽略一致性条件导致“伪通解”。
+### 与00_factor关联
+- [[Matrix Rank|矩阵秩]]
+- [[Linear Systems|线性系统]]
 
-**1道例题（含简解）**
-- 题：$x+y+z=1,\ 2x+2y+2z=2$。
-- 解：约束等价于一条平面方程，设 $y=s,z=t$，得 $x=1-s-t$。
-- 通解 $x_p=(1,0,0)^T + s(-1,1,0)^T + t(-1,0,1)^T$。
-**关键坐标图代码（Python）**
+### 代码块（完整保留）
 ```python
-import micropip
-await micropip.install("matplotlib")
-import matplotlib.pyplot as plt
 import numpy as np
 
-t = np.linspace(-2, 2, 200)
-x = 1 - t
-y = t
-
-fig, ax = plt.subplots(figsize=(5, 4))
-ax.plot(x, y, label="x+y=1 solutions")
-ax.scatter([1], [0], color="red", label="x_p")
-ax.axhline(0, color="black", lw=0.8)
-ax.axvline(0, color="black", lw=0.8)
-ax.set_xlim(-2, 3)
-ax.set_ylim(-2, 3)
-ax.grid(True)
-ax.legend()
-plt.show()
+B = np.array([[-1,0,-1],[1,-1,0],[0,1,1]], dtype=float)
+print("B=\n", B)
+print("rank(B)=", np.linalg.matrix_rank(B))
 ```
 
+## Session 1.13 An overview of key ideas
 
-### Session 1.9 [[Linear Independence|线性无关]]、基与维数
+### 课程目标
+- 汇总 Unit1 主线：`Ax=b`、消元、子空间、秩。
+- 建立“结构优先于计算”的复习方式。
 
-> 对应 Summary: *[[Independence vs. Uncorrelated|Independence]], basis, and dimension*
+### 核心定义
+- 线性系统不是孤立题，而是同一结构在不同表述下的重复出现。
+- 核心对象：`C(A)`, `N(A)`, `rank`, `pivot`, `basis`。
 
-**核心概念**
-- 线性无关意味着没有向量可由其余向量线性表示。
-- 基是“既能张成又线性无关”的最小生成集。
-- 维数是基向量个数，与基的选取无关。
+### 关键推导
+- 从 `Ax=b` 出发：
+  - 是否有解：看 `b` 是否在 `C(A)`。
+  - 解有多唯一：看 `N(A)` 维数。
+- 一句话：列空间决定“可达”，零空间决定“自由度”。
 
-**关键公式**
-$$
-c_1v_1+\cdots+c_kv_k=0\Rightarrow c_i=0
-$$
-$$
-\dim V=\#\text{basis vectors}
-$$
+### 例题（含解法）
+设 `rank(A)=r`，`A` 为 `m×n`。
+- 若 `b∈C(A)`，解集维数是 `n-r`。
+- 若 `b∉C(A)`，无解。
 
-**几何/直觉解释**
-- 基就是坐标系统；换基只改坐标，不改几何对象。
-- 无关性保证表示唯一，张成性保证表示存在。
-- 这两件事构成向量表达的“存在-唯一”闭环。
+### 易错点
+- 复习时只刷算术，不刷结构关系图。
+- 把“解法步骤”与“判定逻辑”混在一起。
 
-**易错点**
-- 把“向量个数多”误解为“更能表示”；冗余会破坏无关。
-- 在子空间里用环境空间维数判定。
-- 忘记检查零向量会立刻导致线性相关。
+### 与00_factor关联
+- [[Column Space|列空间]]
+- [[Null Space|零空间]]
+- [[Matrix Rank|矩阵秩]]
+- [[Linear Independence|线性无关]]
 
-**1道例题（含简解）**
-- 题：判断 $v1=(1,0,1), v2=(0,1,1), v3=(1,1,2)$ 是否无关。
-- 解：$v3=v1+v2$，故相关。
-- 可取基 `{v1,v2}`，维数为2。
-**关键坐标图代码（Python）**
+### 代码块（完整保留）
 ```python
-import micropip
-await micropip.install("matplotlib")
-import matplotlib.pyplot as plt
 import numpy as np
 
-v1 = np.array([1, 0])
-v2 = np.array([0, 1])
-v3 = np.array([1, 1])
-
-fig, ax = plt.subplots(figsize=(5, 4))
-ax.quiver([0, 0, 0], [0, 0, 0], [v1[0], v2[0], v3[0]], [v1[1], v2[1], v3[1]], angles="xy", scale_units="xy", scale=1)
-ax.text(1, 0, "v1")
-ax.text(0, 1, "v2")
-ax.text(1, 1, "v3=v1+v2")
-ax.axhline(0, color="black", lw=0.8)
-ax.axvline(0, color="black", lw=0.8)
-ax.set_xlim(-0.5, 2)
-ax.set_ylim(-0.5, 2)
-ax.grid(True)
-plt.show()
+A = np.array([[1,2,3],[2,4,6],[1,1,1]], dtype=float)
+r = np.linalg.matrix_rank(A)
+print("rank(A)=", r)
+print("unknowns n=", A.shape[1], "=> solution dimension for Ax=0 is", A.shape[1]-r)
 ```
 
+## Session 1.14 Exam 1 review
 
-### Session 1.10 四个基本子空间
+### 课程目标
+- 用“考前清单”压缩 Unit1 全部知识点。
+- 明确题型与对应方法。
 
-> 对应 Summary: *The four fundamental subspaces*
+### 核心定义
+- 高频题型：
+  - 消元与 RREF
+  - `Ax=0` 与 `Ax=b`
+  - 子空间/维数/秩
+  - `A^{-1}`, `LU`, `PA=LU`
 
-**核心概念**
-- 四个基本子空间：$C(A), N(A), C(A^T), N(A^T)$。
-- 秩-零度定理连接列空间与零空间维数。
-- 行空间与零空间正交，列空间与左零空间正交。
+### 关键推导
+- 快速流程：
+  1. 先看矩阵形状和秩。
+  2. 再看增广列是否一致。
+  3. 最后写“特解 + 零空间通解”。
 
-**关键公式**
-$$
-\operatorname{rank}(A)+\dim N(A)=n
-$$
-$$
-\dim C(A)=\dim C(A^T)=r
-$$
+### 例题（含解法）
+给 `A` 与 `b`，要求：是否有解、解结构、是否唯一。
+- 标准答案模板：
+  - `rank(A)=?`, `rank([A|b])=?`
+  - 若一致则有解，否则无解
+  - 若有解，维数 `n-rank(A)`
 
-**几何/直觉解释**
-- 这是整门课的“地图”：输入端（列/零）与输出端（行/左零）成对出现。
-- 正交关系说明“能解释的数据”和“解释不了的残差”互相垂直。
-- 很多优化问题都靠这张地图定位。
+### 易错点
+- rank 比较少写一个。
+- 只给数值答案，不给结构说明。
+- 忘记检查结果回代。
 
-**易错点**
-- 把 $C(A^T)$ 误称为列空间。
-- 忽略左零空间 $N(A^T)$，导致最小二乘理解断层。
-- 秩的两个定义（pivot 数 / 独立列数）混用不清。
+### 与00_factor关联
+- [[Linear Systems|线性系统]]
+- [[Matrix Inverse|逆矩阵]]
+- [[LU Decomposition|LU分解]]
+- [[Permutation Matrix|置换矩阵]]
 
-**1道例题（含简解）**
-- 题：`A` 为 `3×4` 且 $rank=2$，求四空间维数。
-- 解：$dim C(A)=2, dim N(A)=2, dim C(A^T)=2, dim N(A^T)=1$。
-- 由维数和约束可快速定位解结构。
-**关键坐标图代码（Python）**
+### 代码块（完整保留）
 ```python
-import micropip
-await micropip.install("matplotlib")
-import matplotlib.pyplot as plt
-import numpy as np
+import sympy as sp
 
-x = np.linspace(-2, 2, 200)
-fig, ax = plt.subplots(figsize=(5, 4))
-ax.plot(x, x, label="Row/Column direction")
-ax.plot(x, -x, label="Null/Left-null direction")
-ax.axhline(0, color="black", lw=0.8)
-ax.axvline(0, color="black", lw=0.8)
-ax.set_xlim(-2, 2)
-ax.set_ylim(-2, 2)
-ax.grid(True)
-ax.legend()
-plt.show()
+A = sp.Matrix([[1,2,1],[2,4,2],[1,1,1]])
+b = sp.Matrix([1,2,0])
+print("rank(A)=", A.rank())
+print("rank([A|b])=", A.row_join(b).rank())
+print("solution set:", sp.linsolve((A,b)))
 ```
-
-
-### Session 1.11 矩阵空间与秩1分解
-
-> 对应 Summary: *Matrix spaces; rank 1; small world graphs*
-
-**核心概念**
-- 矩阵本身也构成向量空间，可在该空间讨论基与维数。
-- 秩1矩阵可写为外积 $uv^T$，是复杂矩阵的基础砖块。
-- 低秩分解把结构性信息与噪声分离。
-
-**关键公式**
-$$
-A=\sum_{i=1}^r u_iv_i^T
-$$
-$$
-\operatorname{rank}(uv^T)=1
-$$
-
-**几何/直觉解释**
-- 每个秩1项表示一个“模式”；叠加多个模式得到完整矩阵。
-- 图网络邻接矩阵常可近似低秩，反映社区结构。
-- 秩越低，压缩潜力越高。
-
-**易错点**
-- 把“元素多”当“秩高”。
-- 把任意分解都当最优低秩近似。
-- 忽略奇异值衰减特征。
-
-**1道例题（含简解）**
-- 题：$A=\begin{bmatrix}2&4\\1&2\end{bmatrix}$ 是否秩1？
-- 解：第二列是第一列2倍，故 rank=1，可写 $u=[2,1]^T, v=[1,2]^T$。
-- 即 $A=uv^T$。
-**关键坐标图代码（Python）**
-```python
-import micropip
-await micropip.install("matplotlib")
-import matplotlib.pyplot as plt
-import numpy as np
-
-c1 = np.array([2, 1])
-c2 = np.array([4, 2])
-
-fig, ax = plt.subplots(figsize=(5, 4))
-ax.quiver([0, 0], [0, 0], [c1[0], c2[0]], [c1[1], c2[1]], angles="xy", scale_units="xy", scale=1)
-ax.text(c1[0], c1[1], "c1")
-ax.text(c2[0], c2[1], "c2=2c1")
-ax.axhline(0, color="black", lw=0.8)
-ax.axvline(0, color="black", lw=0.8)
-ax.set_xlim(-1, 5)
-ax.set_ylim(-1, 3)
-ax.grid(True)
-plt.show()
-```
-
-
-### Session 1.12 图、网络与关联矩阵
-
-> 对应 Summary: *Graphs, networks, incidence matrices*
-
-**核心概念**
-- 图可由关联矩阵/拉普拉斯矩阵表示，网络流约束转为线性方程。
-- 节点守恒对应 $Bf=s$（流入流出平衡）。
-- 线性代数让图问题转为可计算矩阵问题。
-
-**关键公式**
-$$
-Bf=s
-$$
-$$
-L=BWB^T
-$$
-
-**几何/直觉解释**
-- 每条边是一个方向变量，节点方程是守恒律。
-- 网络问题常出现一个自由度（整体电位平移）。
-- 图连通性与矩阵秩直接相关。
-
-**易错点**
-- 边方向任意选但必须全局一致。
-- 忽略参考节点导致系统奇异。
-- 把加权图当无权图处理。
-
-**1道例题（含简解）**
-- 题：三节点链式网络，边流 `f1,f2`，源汇 $s=(1,0,-1)$，写守恒方程。
-- 解：关联矩阵 `B` 建立后解 $Bf=s$，得 $f1=f2=1$。
-- 说明中间节点净流为0。
-**关键坐标图代码（Python）**
-```python
-import micropip
-await micropip.install("matplotlib")
-import matplotlib.pyplot as plt
-import numpy as np
-
-nodes = np.array([[0, 0], [1.5, 1], [3, 0]])
-fig, ax = plt.subplots(figsize=(5, 4))
-ax.scatter(nodes[:, 0], nodes[:, 1], s=80)
-for i, (x, y) in enumerate(nodes, 1):
-    ax.text(x + 0.05, y + 0.05, f"v{i}")
-ax.plot(nodes[[0, 1], 0], nodes[[0, 1], 1], "-k")
-ax.plot(nodes[[1, 2], 0], nodes[[1, 2], 1], "-k")
-ax.arrow(0.2, 0.1, 1.0, 0.6, width=0.01, head_width=0.08)
-ax.arrow(1.7, 0.9, 1.0, -0.6, width=0.01, head_width=0.08)
-ax.set_xlim(-0.5, 3.5)
-ax.set_ylim(-0.8, 1.6)
-ax.set_aspect("equal", "box")
-ax.axis("off")
-plt.show()
-```
-
-
-### Session 1.13 关键思想总览
-
-> 对应 Summary: *An overview of key ideas*
-
-**核心概念**
-- 本节回看主线：消元、子空间、秩、可逆性是同一结构的不同切面。
-- “方程是否可解”由列空间决定，“解是否唯一”由零空间决定。
-- 面向后续考试，强调等价命题链的快速互推。
-
-**关键公式**
-$$
-A\text{ invertible}\iff \operatorname{rank}(A)=n
-$$
-$$
-\det(A)\neq0\iff A^{-1}\text{ exists}
-$$
-
-**几何/直觉解释**
-- 把知识点串成因果链比孤立记忆更稳。
-- 一题多法（消元/空间/分解）是检查理解深度的标准。
-- 先结构后计算，能减少计算失误。
-
-**易错点**
-- 把等价命题记成“单向蕴含”。
-- 复习只刷题不回顾定义。
-- 遇到非方阵仍套方阵判据。
-
-**1道例题（含简解）**
-- 题：给 `A` 为 `4×4` 且 $rank=3$，判断可逆与解结构。
-- 解：不可逆；`N(A)` 至少1维；$Ax=b$ 可能无解或多解。
-- 核心依据是秩信息。
-**关键坐标图代码（Python）**
-```python
-import micropip
-await micropip.install("matplotlib")
-import matplotlib.pyplot as plt
-import numpy as np
-
-scales = np.array([0.5, 1, 1.5, 2, 2.5])
-vol = np.abs(scales)
-
-fig, ax = plt.subplots(figsize=(5, 4))
-ax.plot(scales, vol, marker="o")
-ax.axhline(0, color="black", lw=0.8)
-ax.axvline(0, color="black", lw=0.8)
-ax.set_xlabel("1D scaling factor a")
-ax.set_ylabel("|det([a])|")
-ax.grid(True)
-plt.show()
-```
-
-
-### Session 1.14 Unit1 考前复盘
-
-> 对应 Summary: *Exam 1 review*
-
-**核心概念**
-- 按“方程-空间-分解”复盘 Unit1。
-- 优先掌握可解性、唯一性、参数化求解三件事。
-- 建立错题标签：维度错、符号错、逻辑错。
-
-**关键公式**
-$$
-x=x_p+x_n
-$$
-$$
-PA=LU
-$$
-
-**几何/直觉解释**
-- 考试题通常先给结构信息（秩/主元）再问结论。
-- 先写出空间关系，再下计算手。
-- 把每题映射到已知模板可提速。
-
-**易错点**
-- 临场把 RREF 与 REF 混淆。
-- 没做结果回代检查。
-- 忽略题目隐含条件（方阵/满秩/正交）。
-
-**1道例题（含简解）**
-- 题：已知 `A` 有一个自由变量，写 $Ax=b$ 解集形状。
-- 解：若一致，则解集是一条仿射直线 $x_p+t v$；若不一致则无解。
-- 判一致性看增广矩阵是否出现矛盾行。
-**关键坐标图代码（Python）**
-```python
-import micropip
-await micropip.install("matplotlib")
-import matplotlib.pyplot as plt
-import numpy as np
-
-rounds = np.arange(1, 8)
-error = np.array([0.45, 0.37, 0.31, 0.24, 0.20, 0.17, 0.14])
-
-fig, ax = plt.subplots(figsize=(5, 4))
-ax.plot(rounds, error, marker="o")
-ax.set_xlabel("review round")
-ax.set_ylabel("error rate")
-ax.grid(True)
-plt.show()
-```
-
-
-## Unit 总结
-
-### 主线回顾
-- $Ax=b$ 建模与几何解释
-- 高斯消元、LU、秩与可解性
-- 四个基本子空间与网络建模
-
-### 与下一 Unit 的衔接
-- 下一单元会在当前结构上加入更强的几何解释与数值算法视角。

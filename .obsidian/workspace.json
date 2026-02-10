@@ -224,51 +224,9 @@
               "icon": "terminal",
               "title": "Terminal: ✳ Claude Code"
             }
-          },
-          {
-            "id": "3cf7d72ddbb2faad",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "terminal:terminal",
-              "state": {
-                "terminal:terminal": {
-                  "cwd": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic",
-                  "focus": false,
-                  "profile": {
-                    "args": [
-                      "--login"
-                    ],
-                    "executable": "/bin/zsh",
-                    "followTheme": true,
-                    "name": "",
-                    "platforms": {
-                      "darwin": true
-                    },
-                    "pythonExecutable": "python3",
-                    "restoreHistory": false,
-                    "rightClickAction": "copyPaste",
-                    "successExitCodes": [
-                      "0",
-                      "SIGINT",
-                      "SIGTERM"
-                    ],
-                    "terminalOptions": {
-                      "documentOverride": null
-                    },
-                    "type": "integrated",
-                    "useWin32Conhost": true
-                  },
-                  "serial": null
-                }
-              },
-              "pinned": true,
-              "icon": "terminal",
-              "title": "Terminal: zsh"
-            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 6
       },
       {
         "id": "8532e59675ffc5f1",
@@ -335,7 +293,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "1a3aa5d6862a30c6",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
     "01_Math/02_linear algebra/Unit2_课堂笔记.md",
     "01_Math/02_linear algebra/Unit1_课堂笔记.md",
