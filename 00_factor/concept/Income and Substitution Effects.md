@@ -7,3 +7,16 @@ tags:
 ---
 * **收入效应**：当价格变动使消费者移动到更高或更低的无差异曲线时所引起的消费变动。 
 * **替代效应**：当价格变动使消费者沿着一条既定的无差异曲线变动到有新边际替代率的一点时所引起的消费变动。
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

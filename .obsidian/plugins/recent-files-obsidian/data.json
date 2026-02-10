@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "Unit3_课堂笔记",
+      "path": "01_Math/02_linear algebra/Unit3_课堂笔记.md"
+    },
+    {
+      "basename": "Unit2_课堂笔记",
+      "path": "01_Math/02_linear algebra/Unit2_课堂笔记.md"
+    },
+    {
+      "basename": "Unit1_课堂笔记",
+      "path": "01_Math/02_linear algebra/Unit1_课堂笔记.md"
+    },
+    {
+      "basename": "linear_algebra_and_its_applications_4th",
+      "path": "01_Math/02_linear algebra/linear_algebra_and_its_applications_4th.pdf"
+    },
+    {
+      "basename": "01_matrices and Gaussian Elimination",
+      "path": "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md"
+    },
+    {
+      "basename": "02_vector spaces and subspace",
+      "path": "01_Math/02_linear algebra/02_vector spaces and subspace.md"
+    },
+    {
       "basename": "Column Space",
       "path": "00_factor/concept/Column Space.md"
     },
@@ -81,10 +105,6 @@
       "path": "99_学习情况记录/2026-02-10——Tue.md"
     },
     {
-      "basename": "Unit1_课堂笔记",
-      "path": "01_Math/02_linear algebra/Unit1/Unit1_课堂笔记.md"
-    },
-    {
       "basename": "00_perface",
       "path": "01_Math/02_linear algebra/00_perface.md"
     },
@@ -149,10 +169,6 @@
       "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex1.pdf"
     },
     {
-      "basename": "01_matrices and Gaussian Elimination",
-      "path": "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md"
-    },
-    {
       "basename": "Introduction_to_Linear_Algebra(Strang)",
       "path": "01_Math/02_linear algebra/Introduction_to_Linear_Algebra(Strang).pdf"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "MIT18_06SCF11_Ses1.8sum",
       "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.8sum.pdf"
-    },
-    {
-      "basename": "MIT18_06SCF11_Ses1.7sum",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.7sum.pdf"
-    },
-    {
-      "basename": "MIT18_06SCF11_Ses1.6sum",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.6sum.pdf"
-    },
-    {
-      "basename": "MIT18_06SCF11_Ses1.4sum",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.4sum.pdf"
-    },
-    {
-      "basename": "linear_algebra_and_its_applications_4th",
-      "path": "01_Math/02_linear algebra/linear_algebra_and_its_applications_4th.pdf"
     }
   ],
   "omittedPaths": [],

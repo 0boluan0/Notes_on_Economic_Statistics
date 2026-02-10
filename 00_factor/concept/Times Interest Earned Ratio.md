@@ -51,3 +51,16 @@ $利息保障倍数 = \frac{息税前利润}{利息支出} = \frac{净利润 + �
 
 ## 相关链接
 [[Cash Coverage Ratio|现金流量利息保障倍数]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

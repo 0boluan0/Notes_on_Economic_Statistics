@@ -7,3 +7,16 @@ tags:
 - concept
 ---
 这是最主要的利率风险类型 。它源自银行资产、负债及表外业务在**重新定价时点或到期日**上的不匹配。当某一期间内利率敏感资产与利率敏感负债的重新定价金额不相等时（即存在“重新定价缺口”），利率变动就会使银行收益受到影响 。例如，70年代末80年代初美国储蓄与贷款协会（S&L）的危机，就是由于资产负债重新定价期限错配遇上利率飙升，导致巨额损失。
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

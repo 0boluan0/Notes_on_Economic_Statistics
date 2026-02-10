@@ -90,3 +90,16 @@ $ \sigma_i^*(\theta_i) \in \arg\max_{a_i} E_{\theta_{-i}|\theta_i}[u_i(a_i, \sig
 - 劳动市场筛选
 - 保险市场
 - 合约设计
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

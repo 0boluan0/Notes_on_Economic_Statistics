@@ -101,3 +101,16 @@ $ \text{SE}(\text{VaR}_\alpha) \approx \frac{\sqrt{\alpha(1-\alpha)}}{\sqrt{N} \
 [[VaR Parametric Method|VaR参数法计算]]
 [[Monte Carlo Simulation VaR|蒙特卡罗模拟法VaR计算]]
 [[EVT|极端值理论]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

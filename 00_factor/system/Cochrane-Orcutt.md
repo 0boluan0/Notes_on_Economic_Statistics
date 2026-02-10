@@ -83,3 +83,16 @@ $y_t^* = \beta_0(1-\hat{\rho}) + \beta_1 x_t^* + u_t$
 [[Autocorrelation Diagnosis|自相关诊断]]
 [[Newey-West]]
 [[FGLS]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

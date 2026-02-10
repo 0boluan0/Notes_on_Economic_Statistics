@@ -138,3 +138,16 @@ $ MSC = MPC + MEC $
 | 庇古税 | 灵活、激励相容 | 需要准确信息 |
 | 交易制度 | 成本有效 | 需要良好运行的排放市场 |
 | 命令控制 | 确定性高 | 灵活性差、成本高 |
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

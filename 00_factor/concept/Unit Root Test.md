@@ -73,3 +73,16 @@ $\Delta y_t = \alpha + \beta t + \phi y_{t-1} + \sum_{i=1}^{p} \gamma_i \Delta y
 3. **结构突变**：存在结构突变时，传统检验可能失效
 
 相关链接: [[Cointegration|协整]], [[Stationarity|平稳性]], [[Error Correction Model|误差修正模型]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

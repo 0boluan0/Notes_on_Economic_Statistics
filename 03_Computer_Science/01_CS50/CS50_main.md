@@ -31,7 +31,7 @@ also in terminal~~  ,~~ type `make hello`~~    ,no .c.~~（直接运行 `make he
 
 ### run the file
 
-./<filename(no c, just file name)>
+./<filename(no c, [[Just-identified|just]] file name)>
 eg : ./hello
 ### print
 

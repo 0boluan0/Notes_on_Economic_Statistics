@@ -54,3 +54,16 @@ $\text{资本充足率} = \frac{\text{总资本（Tier 1 + Tier 2）}}{\text{风
 [[Risk-Weighted Assets|风险加权资产]]
 [[Tier 1 Capital Ratio|Tier 1 Capital]]
 [[Tier 2 Capital Ratio|Tier 2 Capital]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

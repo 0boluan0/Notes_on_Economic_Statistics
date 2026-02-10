@@ -170,10 +170,10 @@ $$\text{[[Cook's Ratio|库克比率]]}=\frac{\text{资本（一级资本+二级�
 
 |**名称**|**定义**|**风险削减机理**|
 |---|---|---|
-|**支付净额 (payment netting)**|到期日把正负现金流先抵销，只结算“净额”|发生违约前就已减少待收/待付金额|
-|**清算/关闭净额 (close-out netting)**|若对手违约，双方所有合约同时终止，按**净赔偿额**结算|把“挑好合约赖账、挑坏合约履约”的 **选摘权**（cherry-picking）拔掉，确保你的正价值和负价值“同生共死”|
+|**支付净额 (payment [[Netting|netting]])**|到期日把正负现金流先抵销，只结算“净额”|发生违约前就已减少待收/待付金额|
+|**清算/关闭净额 (close-out [[Netting|netting]])**|若对手违约，双方所有合约同时终止，按**净赔偿额**结算|把“挑好合约赖账、挑坏合约履约”的 **选摘权**（cherry-picking）拔掉，确保你的正价值和负价值“同生共死”|
 
-在 OTC 衍生品里，**ISDA Master Agreement + CSA** 赋予 close-out netting 的法律效力。若获监管认可，银行可在资本计算里使用“净敞口”而不是“逐笔敞口”，信用 [[Risk-Weighted Assets|RWA]] 立刻打折。
+在 OTC 衍生品里，**ISDA Master Agreement + CSA** 赋予 close-out [[Netting|netting]] 的法律效力。若获监管认可，银行可在资本计算里使用“净敞口”而不是“逐笔敞口”，信用 [[Risk-Weighted Assets|RWA]] 立刻打折。
 
 ## 4.2 **CEM → NRR → [[EAD|EAD]] → [[Risk-Weighted Assets|RWA]]**
 
@@ -206,7 +206,7 @@ $$\text{[[Cook's Ratio|库克比率]]}=\frac{\text{资本（一级资本+二级�
 
 † 金价或外汇衍生品用另一列；题目里写的是“一般商品”，因此用 Commodity 列。
 
-NRR-theta-[[EAD|EAD]]-RAW-节省百分比
+NRR-[[Theta|theta]]-[[EAD|EAD]]-RAW-节省百分比
 
 # 5.1996修正案
 

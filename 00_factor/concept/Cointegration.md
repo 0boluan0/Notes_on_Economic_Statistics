@@ -66,3 +66,16 @@ $\Delta y_t = \Pi y_{t-1} + \sum_{i=1}^{p-1} \Gamma_i \Delta y_{t-i} + \varepsil
 3. **政策分析**：分析政策冲击的长期和短期效应
 
 相关链接: [[Error Correction Model|误差修正模型]], [[Unit Root Test|单位根检验]], [[VAR Model|VAR]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

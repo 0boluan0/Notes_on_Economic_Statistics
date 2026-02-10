@@ -11,8 +11,8 @@
 
 [[Volatility Clustering|Volatility]] 就是条件二阶矩.
 
-1. 金融和经济时间序列往往表现出**[[Conditional Heteroskedasticity|条件异方差]]**（conditional heteroskedasticity）现象，即随着时间推移序列的**波动性**(volatility)并非恒定不变，而是呈现出集中的波动期和平稳期交替出现的特征。
-2. **波动性聚集现象**（volatility clustering） :波动性聚集是指金融时间序列中高波动时期往往紧随高波动时期，而低波动时期往往紧随低波动时期。换言之，剧烈波动的冲击往往簇集出现。
+1. 金融和经济时间序列往往表现出**[[Conditional Heteroskedasticity|条件异方差]]**（[[Conditional Heteroskedasticity|conditional heteroskedasticity]]）现象，即随着时间推移序列的**波动性**(volatility)并非恒定不变，而是呈现出集中的波动期和平稳期交替出现的特征。
+2. **波动性聚集现象**（[[Volatility Clustering|volatility clustering]]） :波动性聚集是指金融时间序列中高波动时期往往紧随高波动时期，而低波动时期往往紧随低波动时期。换言之，剧烈波动的冲击往往簇集出现。
 
 对于波动建模,有三种方法  [[ARCH|ARCH]] [[GARCH|GARCH]] 和SV
 除此之外,还有RV,是对于高频数据的建模.
@@ -35,7 +35,7 @@
 为了刻画波动群聚现象,可以引入一个状态变量:
 
 >[!note] 状态变量 State Variable
->状态变量使得方差可以随状态变化。例如，假设模型：$$y_{t+1} = \epsilon_{t+1} x_t$$其中$y_{t+1}$是我们关心的变量（已经去除均值，使其均值为0，以专注于波动部分），$\epsilon_{t+1}$是均值为0、方差为$\sigma^2$的**[[White Noise|白噪声]]**（white noise），而$x_t$是第$t$期的某个状态变量。这样，条件方差就是：$$\operatorname{Var}(y_{t+1} \mid \mathcal{F}_t) = \sigma^2 x_t^2.$$
+>状态变量使得方差可以随状态变化。例如，假设模型：$$y_{t+1} = \epsilon_{t+1} x_t$$其中$y_{t+1}$是我们关心的变量（已经去除均值，使其均值为0，以专注于波动部分），$\epsilon_{t+1}$是均值为0、方差为$\sigma^2$的**[[White Noise|白噪声]]**（[[White Noise|white noise]]），而$x_t$是第$t$期的某个状态变量。这样，条件方差就是：$$\operatorname{Var}(y_{t+1} \mid \mathcal{F}_t) = \sigma^2 x_t^2.$$
 
 通过这种方式，如果$x_t$随时间变化，那么$y$的条件方差也会随之变化。当$x_t$较大时，$\sigma^2 x_t^2$也较大，表示波动性提高；当$x_t$较小时，波动性降低。这为捕捉非恒定方差提供了一个思路。
 
@@ -46,7 +46,7 @@
 \varepsilon_t = \nu_t \sqrt{h_t}  \\
 h_t = \alpha_0 + \alpha_1 \varepsilon_{t-1}^2
 \end{cases}$$
->其中${\nu_t}$是一列独立同分布（i.i.d.）的随机变量，满足
+>其中${\nu_t}$是一列独立同分布（[[IID|i.i.d.]]）的随机变量，满足
 >$\mathbb{E}(\nu_t)=0, \operatorname{Var}(\nu_t)=1$。
 >$\alpha_0$和$\alpha_1$为常数参数，且$\alpha_0 > 0$确保是正的，$0 \leq \alpha_1 < 1$保证平稳性。
 >$h_t$表示$\varepsilon_t$在$t$期的条件方差（即$h_t = \mathrm{Var}(\varepsilon_t \mid \mathcal{F}_{t-1})$)

@@ -64,3 +64,16 @@ DVA也是一种风险，因为：
 3. **资本管理**：考虑净信用调整的资本配置
 
 相关链接: [[CVA]], [[Credit Risk|信用风险]], [[Default Risk|违约风险]], [[VaR]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

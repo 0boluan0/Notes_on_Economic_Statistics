@@ -117,3 +117,16 @@ MLE是GMM的特例，使用期望和样本矩的差作为矩条件。
 3. **假设检验**：似然比检验、Wald检验、LM检验
 
 相关链接: [[00_factor/concept/F-test|F检验]], [[Logit Model|logit模型]], [[Probit Model|probit模型]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

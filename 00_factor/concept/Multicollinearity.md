@@ -116,3 +116,16 @@ $\kappa = \frac{\lambda_{max}}{\lambda_{min}}$
 3. 有时经济理论本身就包含相关变量
 
 相关链接: [[00_factor/concept/Variance Inflation Factor|方差膨胀因子]], [[Ridge Regression|岭回归]], [[PCA|主成分分析]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

@@ -110,3 +110,16 @@ $\text{Accuracy} = \frac{TP + TN}{TP + FP + TN + FN}$
 4. **社会科学**：投票行为、政策支持度
 
 相关链接: [[Logit Model|logit模型]], [[Linear Probability Model|LPM模型]], [[Maximum Likelihood Estimation|极大似然估计]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

@@ -99,3 +99,16 @@ tags:
 - [[Investment Decisions|02_投资决策]]
 - [[Bond and Stock Valuation|03_债券与股票估值]]
 - [[Financial Ratio Analysis|04_财务比率分析]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

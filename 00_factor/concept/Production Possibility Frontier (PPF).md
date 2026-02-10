@@ -20,3 +20,16 @@ PPF曲线的特点包括：
 5. **替代率**：PPF曲线的斜率代表了两种商品之间的替代率，即为了生产更多的一种商品而必须放弃的另一种商品的数量。‘
 
 ![[Pasted image 20240311232621.png]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

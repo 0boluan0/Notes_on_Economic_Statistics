@@ -4,12 +4,12 @@
 ## 1. 样本的几何结构（The Geometry of the Sample）
 - **数据矩阵表示（Data [[Matrix Inverse|Matrix]] Representation）**
   - 数据矩阵的结构与记号。
-- **均值修正向量与偏差向量（Mean-Corrected Vector and Deviation Vector）**
+- **均值修正向量与偏差向量（[[Mean-Variance Portfolio Optimization|Mean]]-Corrected Vector and Deviation Vector）**
   - 定义（Definition）与数学表示。
 - **偏差向量之间的夹角（Angles Between Deviation Vectors）**
   - 夹角余弦与相关系数之间的关系。
 
-## 2. 随机样本与样本均值/协方差矩阵的期望（[[Random Effects Model|Random]] Sample and the Expected Values of the Sample Mean and Covariance [[Matrix Inverse|Matrix]]）
+## 2. 随机样本与样本均值/协方差矩阵的期望（[[Random Effects Model|Random]] Sample and the Expected Values of the Sample [[Mean-Variance Portfolio Optimization|Mean]] and Covariance [[Matrix Inverse|Matrix]]）
 - **样本协方差矩阵的定义（Definition of the Sample Covariance [[Matrix Inverse|Matrix]]）**
   - 公式及其组成。
 - **广义方差（Generalized [[Variance Decomposition|Variance]]）**
@@ -56,7 +56,7 @@ x_{n1} & x_{n2} & \cdots & x_{np}
 $$
 其中每一行表示一个样本（Sample），每一列表示一个变量（Variable）。通过数据矩阵，我们可以对多变量样本进行统一表示。
 
-## 1.2 均值修正向量与偏差向量（Mean-Corrected Vector and Deviation Vector）
+## 1.2 均值修正向量与偏差向量（[[Mean-Variance Portfolio Optimization|Mean]]-Corrected Vector and Deviation Vector）
 
 - 对于第 $i$ 个变量，其观测值组成向量 $y_i$，表示为：
   $$
@@ -70,7 +70,7 @@ $$
   $$
   其中，$x_{ji}$ 表示第 $j$ 个样本在第 $i$ 个变量上的取值。
 
-- 对 $i$ 变量的均值修正向量（Mean-Corrected Vector），也称为偏差向量（Deviation Vector）$d_i$，定义为：
+- 对 $i$ 变量的均值修正向量（[[Mean-Variance Portfolio Optimization|Mean]]-Corrected Vector），也称为偏差向量（Deviation Vector）$d_i$，定义为：
   $$
   d_i = y_i - \bar{x}_i \mathbf{1} =
   \begin{pmatrix}
@@ -117,7 +117,7 @@ $$
 
 ---
 
-# 2. 随机样本与样本均值/协方差矩阵的期望（[[Random Effects Model|Random]] Sample and the Expected Values of the Sample Mean and Covariance [[Matrix Inverse|Matrix]]）
+# 2. 随机样本与样本均值/协方差矩阵的期望（[[Random Effects Model|Random]] Sample and the Expected Values of the Sample [[Mean-Variance Portfolio Optimization|Mean]] and Covariance [[Matrix Inverse|Matrix]]）
 
 随机样本与样本均值和协方差矩阵的期望值
 
@@ -134,7 +134,7 @@ $$
 其中：
 - $n$ 是样本数量。
 - $\bar{x}_i$ 和 $\bar{x}_k$ 分别是变量 $i$ 和变量 $k$ 的样本均值。
-- $d_i$ 和 $d_k$ 是均值修正向量（Mean-Corrected Vectors）。
+- $d_i$ 和 $d_k$ 是均值修正向量（[[Mean-Variance Portfolio Optimization|Mean]]-Corrected Vectors）。
 
 样本协方差矩阵 $S$ 包含 $p$ 个变量的样本方差（对角线元素）和 ${p}^{2} = \frac{p(p - 1)}{2}$ 个不同的样本协方差（非对角线元素）。
 
@@ -326,7 +326,7 @@ $$
 $$
 D = X - \mathbf{1}_{n \times 1} X̄.
 $$
-矩阵 $D$ 的每一列是一个变量的均值修正向量（Mean-Corrected Vector），用于计算变量的偏差。
+矩阵 $D$ 的每一列是一个变量的均值修正向量（[[Mean-Variance Portfolio Optimization|Mean]]-Corrected Vector），用于计算变量的偏差。
 
 ### 样本协方差矩阵的矩阵形式
 

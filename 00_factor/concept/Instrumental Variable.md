@@ -86,3 +86,16 @@ Hausman检验：比较OLS和IV估计量是否显著不同。
 3. **弱工具变量问题**：弱工具导致估计有偏且标准误错误
 
 相关链接: [[2SLS]], [[GMM]], [[Hausman Test|Hausman检验]], [[Endogeneity|内生性]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

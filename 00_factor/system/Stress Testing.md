@@ -65,3 +65,16 @@ $\min_{\Delta X} \sum_{i} w_i \Delta X_i \quad \text{s.t.} \quad \text{Loss} \ge
 [[ES]]
 [[LCR]]
 [[NSFR]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

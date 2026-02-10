@@ -17,3 +17,16 @@ tags:
 
 - 其他波动率度量：[[Historical Volatility|历史波动率]], [[Realized Volatility|已实现波动率]]
 - 相关概念：波动率微笑，VIX指数
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

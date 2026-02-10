@@ -71,3 +71,16 @@ $ U(\theta, m(\theta)) \geq U(\theta, m(\theta')) \quad \forall \theta \neq \the
 - 教育选择作为能力信号
 - 价格作为质量信号
 - 广告强度作为产品质量信号
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

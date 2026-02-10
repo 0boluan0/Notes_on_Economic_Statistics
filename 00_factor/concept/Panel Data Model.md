@@ -98,3 +98,16 @@ $y_{it} = \rho y_{i,t-1} + x_{it}'\beta + \alpha_i + \varepsilon_{it}$
 - Python：linearmodels包
 
 相关链接: [[Fixed Effects Model|固定效应]], [[Random Effects Model|随机效应]], [[Hausman Test|豪斯曼检验]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

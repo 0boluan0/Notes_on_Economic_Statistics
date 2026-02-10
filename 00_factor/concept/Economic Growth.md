@@ -132,3 +132,16 @@ GDP增长率 = (当年GDP - 上年GDP) / 上年GDP × 100%
 具有相似特征的国家收敛到不同的稳态水平。
 
 相关链接: [[Economic Development|经济发展]], [[Malthusian Trap|马尔萨斯人口陷阱]], [[00_factor/concept/Harrod-Domar Model|哈罗德-多玛模型]], [[00_factor/concept/Solow Model|索罗增长模型]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

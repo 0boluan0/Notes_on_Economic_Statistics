@@ -126,3 +126,16 @@ $p_{ij}(s+t) = \sum_{k \in S} p_{ik}(s) p_{kj}(t)$
 ## 相关概念
 [[Markov Process|马尔可夫过程]]
 [[Stationary Stochastic Process|平稳随机过程]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

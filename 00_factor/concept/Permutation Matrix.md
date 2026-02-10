@@ -90,3 +90,16 @@ P = [[0, 1, 0],
 4. **行列式计算**：通过行交换确定符号
 
 相关链接: [[LU Decomposition|LU分解]], [[Singular Matrix|奇异矩阵]], [[Matrix Rank|矩阵的秩]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

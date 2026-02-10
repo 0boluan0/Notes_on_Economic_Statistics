@@ -16,3 +16,16 @@ $$
 \mathrm{Corr}(U_i, U_j) = \mathrm{Cov}(U_i, U_j) = a_i a_j \,,
 $$ 
 因为 $\mathrm{Cov}(U_i, U_j) = a_i a_j\,\mathrm{Var}(F) + 0 = a_i a_j$（公共因子部分贡献相关，特异部分独立无协方差）。单因子模型将原本 $N(N-1)/2$ 个相关参数简化为 $N$ 个因子加载参数 $\{a_i\}$。
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

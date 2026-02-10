@@ -239,3 +239,16 @@ $J = n \cdot g(\hat{\beta})' W g(\hat{\beta}) \sim \chi^2(m - k)$
 - 提高估计精度
 
 相关链接: [[Just-identified|恰好识别]], [[Parameter Identification|参数识别]], [[2SLS]], [[GMM]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

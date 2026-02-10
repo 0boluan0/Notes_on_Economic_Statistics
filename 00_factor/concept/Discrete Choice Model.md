@@ -263,3 +263,16 @@ $LR = -2(\ln L_{\text{restricted}} - \ln L_{\text{unrestricted}})$
    - 疾病诊断
 
 相关链接: [[Dummy Variable|虚拟变量]], [[Linear Probability Model|LPM模型]], [[Logit Model|logit模型]], [[Probit Model|probit模型]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

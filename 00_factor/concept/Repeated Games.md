@@ -62,3 +62,16 @@ tags:
 ### Folk Theorem
 - 在无限重复博弈中，只要贴现因子足够大
 - 许多合作结果可以成为纳什均衡
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

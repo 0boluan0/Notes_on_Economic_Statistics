@@ -29,3 +29,16 @@ tags:
 
 ## 图表说明模板
 - 表 X 报告基准 DID 回归结果；图 X 展示处理前后的趋势对比。
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

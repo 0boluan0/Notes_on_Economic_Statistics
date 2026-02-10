@@ -178,3 +178,16 @@ $\pi_0$, \pi_1$, \pi_2$等是简约参数（Reduced Form Parameters）：
 误差项的假设影响识别和估计。
 
 相关链接: [[Reduced Form Equation|简约式方程]], [[Simultaneous Equations Model|联立方程模型]], [[Parameter Identification|参数识别]], [[2SLS]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

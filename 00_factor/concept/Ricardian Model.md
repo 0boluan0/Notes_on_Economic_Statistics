@@ -169,3 +169,16 @@ Y = F(K, N)
    - 国际贸易缓解约束
 
 相关链接: [[Malthusian Trap|马尔萨斯人口陷阱]], [[Economic Growth|经济增长]], [[Differential Rent|级差地租]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

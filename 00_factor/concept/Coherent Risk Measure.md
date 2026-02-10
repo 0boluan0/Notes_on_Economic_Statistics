@@ -37,3 +37,16 @@ CVaR(ES)是一致度量标准
 
 - 具体风险度量：[[VaR]], [[ES]]
 - 性质：VaR不满足次可加性，不是一致度量标准；ES满足全部四个公理，是一致度量标准
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

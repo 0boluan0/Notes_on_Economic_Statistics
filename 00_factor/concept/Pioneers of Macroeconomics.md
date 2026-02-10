@@ -160,3 +160,15 @@ $M = kPY$
 - 凯恩斯在这些理论基础上进行了革命性变革
 - 现代宏观经济学继承了这些理论的部分内容
 
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

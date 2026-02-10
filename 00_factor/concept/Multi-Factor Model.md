@@ -16,3 +16,16 @@ $$
 Corr(U_i, U_j) = \sum_{m=1}^M a_{im}\,a_{jm} \,.
 $$ 
 例如，在两因子模型下 $Corr(U_i, U_j) = a_{i1}a_{j1} + a_{i2}a_{j2}$。单因子模型是 $M=1$ 的特例。
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

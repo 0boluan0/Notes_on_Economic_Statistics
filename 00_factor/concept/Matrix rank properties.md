@@ -144,3 +144,16 @@ $\text{rank}(A+B) \leq \text{rank}(A) + \text{rank}(B)$
 ## 相关概念
 [[Linear system solution structure|线性方程组解的结构]]
 [[Matrix Inverse|矩阵的逆]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

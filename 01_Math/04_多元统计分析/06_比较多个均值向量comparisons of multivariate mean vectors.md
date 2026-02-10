@@ -1,5 +1,5 @@
 
-# 1.比较多个均值 (Comparisons of Multiple Mean Vectors)
+# 1.比较多个均值 (Comparisons of Multiple [[Mean-Variance Portfolio Optimization|Mean]] Vectors)
 
 ## 1.1. **研究背景与目标 (Research Background and Objectives)**
 
@@ -8,7 +8,7 @@
     - $x_{1j1}$: 处理1下的变量1
     - $x_{2j1}$: 处理2下的变量1
 
-## 1.2. **均值差异的数学表示 (Mathematical Representation of Mean Differences)**
+## 1.2. **均值差异的数学表示 (Mathematical Representation of [[Mean-Variance Portfolio Optimization|Mean]] Differences)**
 
 - 差值向量定义： $$D_j = \begin{pmatrix} D_{j1} \\ D_{j2} \\ \vdots \\ D_{jp} \end{pmatrix} = \begin{pmatrix} x_{1j1} - x_{2j1} \\ x_{1j2} - x_{2j2} \\ \vdots \\ x_{1jp} - x_{2jp} \end{pmatrix}$$
 - 差值向量的期望和协方差： $$(D_j) = \delta = \begin{pmatrix} \delta_1 \\ \delta_2 \\ \vdots \\ \delta_p \end{pmatrix}, \quad Cov(D_j) = \Sigma_d$$

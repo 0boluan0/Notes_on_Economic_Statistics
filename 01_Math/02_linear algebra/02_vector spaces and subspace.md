@@ -3,9 +3,9 @@
 
 ## 向量空间的定义
 
-使用$R^n$表示,包含所有n维向量(n-dimensional vector)的空间,向量空间必须对向量的线性组合(linear combination)封闭.R2就是普通的平面.R3就是立体空间.
+使用$R^n$表示,包含所有n维向量(n-dimensional vector)的空间,向量空间必须对向量的线性组合([[Linear Combination|linear combination]])封闭.R2就是普通的平面.R3就是立体空间.
 
-## [[Subspace|子空间]](subspace)
+## [[Subspace|子空间]]([[Subspace|subspace]])
 
 是向量空间的一部分,但是完全满足向量空间的那个定义.
 
@@ -21,7 +21,7 @@ $$
 
 Ax=b ,仅在b属于A的column space([[Column Space|列空间]])的时候有解.并且列3是列1和列2的线性组合,所以将列三去掉后的列空间和列三存在的列空间是一样的.所以A的列空间是$R^4$空间上的二维子空间.
 
-# [[Null Space|零空间]](null space)
+# [[Null Space|零空间]]([[Null Space|null space]])
 
 真正关心的b只有一个,就是0.Ax=0
 

@@ -1,286 +1,508 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-将课堂笔记中知识点卡片链接化的脚本
-功能：
-1. 索引 00_factor/ 目录下的所有知识点卡片
-2. 遍历 01_Math/ 和 02_Economy/ 目录下的笔记
-3. 自动识别并添加 Obsidian 双链链接
+将课程笔记中的知识点与00_factor卡片建立双链。
+
+能力：
+1. full/incremental 两种处理模式
+2. dry-run 预览与报告输出
+3. 仅处理增量文件（由 changed-files-file 指定）
+4. 自动注入 00_factor 课程反链 Dataview 面板（幂等）
 """
 
-import os
+import argparse
+import json
 import re
-import yaml
-import markdown
+from datetime import datetime, timezone
 from pathlib import Path
+
+import yaml
+
+BACKLINK_PANEL_MARKER = "<!-- course-backlinks-panel -->"
+BACKLINK_PANEL_BLOCK = (
+    "## 课程笔记反链\n\n"
+    f"{BACKLINK_PANEL_MARKER}\n"
+    "```dataview\n"
+    "LIST FROM \"\"\n"
+    "WHERE (\n"
+    "  contains(file.path, \"01_Math/\") OR\n"
+    "  contains(file.path, \"02_Economy/\") OR\n"
+    "  contains(file.path, \"03_Computer_Science/\")\n"
+    ") AND contains(file.outlinks, this.file.link)\n"
+    "SORT file.mtime DESC\n"
+    "```\n"
+)
+
+
+def now_iso():
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+
+def parse_frontmatter(content):
+    """解析 frontmatter，返回 (frontmatter_dict, body_text, has_frontmatter)。"""
+    match = re.match(r"^---\s*\n(.*?)\n---\s*\n?", content, re.DOTALL)
+    if not match:
+        return {}, content, False
+
+    frontmatter_text = match.group(1)
+    body = content[match.end():]
+    try:
+        data = yaml.safe_load(frontmatter_text) or {}
+    except Exception:
+        data = {}
+    return data, body, True
+
+
+def collect_ranges(pattern, text):
+    return [(m.start(), m.end()) for m in pattern.finditer(text)]
+
+
+def in_any_range(start, end, ranges):
+    for left, right in ranges:
+        if start >= left and end <= right:
+            return True
+    return False
 
 
 class KnowledgeBase:
-    """知识点卡片索引库"""
+    """00_factor 知识点索引库"""
 
     def __init__(self, factor_dir):
         self.factor_dir = Path(factor_dir)
         self.entries = []
         self.keyword_map = {}
+        self.pattern_map = {}
+
+    @staticmethod
+    def _is_alias_usable(alias, filename):
+        """
+        过滤高误报alias：
+        - 保留中文、短语、缩写（含数字或>=2个大写）
+        - 过滤“普通英文单词”型alias（如 Multi/Price/Long），除非与文件名同名
+        """
+        alias = alias.strip()
+        if not alias:
+            return False
+
+        if alias.lower() == filename.lower():
+            return True
+
+        if re.search(r"[\u4e00-\u9fff]", alias):
+            return True
+
+        if " " in alias:
+            return True
+
+        if any(ch.isdigit() for ch in alias):
+            return True
+
+        if re.fullmatch(r"[A-Za-z][A-Za-z'\-]*", alias):
+            upper_count = sum(ch.isupper() for ch in alias)
+            if upper_count >= 2:
+                return True
+            return False
+
+        return True
 
     def load_entries(self):
-        """加载所有知识点卡片信息"""
-        # 遍历 00_factor/ 目录及其子目录下的所有 .md 文件
         for md_file in self.factor_dir.rglob("*.md"):
-            # 跳过隐藏文件和报告文件
             if md_file.name.startswith(".") or md_file.name.startswith("_"):
                 continue
+
             try:
                 content = md_file.read_text(encoding="utf-8")
+            except Exception as exc:
+                print(f"警告：无法读取卡片 {md_file}: {exc}")
+                continue
 
-                # 解析 frontmatter
-                frontmatter = self._parse_frontmatter(content)
-                filename = md_file.stem  # 不带 .md 的文件名
+            frontmatter, _, _ = parse_frontmatter(content)
+            filename = md_file.stem
+            aliases = frontmatter.get("aliases", [])
+            if isinstance(aliases, str):
+                aliases = [aliases]
+            aliases = [x for x in aliases if isinstance(x, str)]
 
-                entry = {
-                    "filename": filename,
-                    "path": str(md_file),
-                    "aliases": frontmatter.get("aliases", []),
-                    "subject": frontmatter.get("科目", ""),
-                    "tags": frontmatter.get("tags", []),
-                }
+            entry = {
+                "filename": filename,
+                "path": str(md_file),
+                "aliases": aliases,
+                "subject": frontmatter.get("科目", ""),
+                "tags": frontmatter.get("tags", []),
+            }
+            self.entries.append(entry)
 
-                self.entries.append(entry)
+            keywords = [filename]
+            for alias in aliases:
+                if self._is_alias_usable(alias, filename):
+                    keywords.append(alias)
 
-                # 建立关键词映射：文件名和所有别名都作为关键词
-                keywords = [filename] + entry["aliases"]
-                for keyword in keywords:
-                    if keyword:
-                        # 预处理关键词：去除首尾空格，转换为小写
-                        processed_keyword = keyword.strip().lower()
-                        if processed_keyword not in self.keyword_map:
-                            self.keyword_map[processed_keyword] = []
-                        # 避免重复添加同一个文件
-                        if filename not in [e["filename"] for e in self.keyword_map[processed_keyword]]:
-                            self.keyword_map[processed_keyword].append(entry)
-
-            except Exception as e:
-                print(f"警告：无法处理文件 {md_file}: {e}")
+            for keyword in keywords:
+                normalized = keyword.strip().lower()
+                if not normalized:
+                    continue
+                bucket = self.keyword_map.setdefault(normalized, [])
+                if filename not in [e["filename"] for e in bucket]:
+                    bucket.append(entry)
 
         print(f"成功加载 {len(self.entries)} 个知识点卡片")
         print(f"建立了 {len(self.keyword_map)} 个关键词映射")
 
-    def _parse_frontmatter(self, content):
-        """解析 Markdown 文件的 YAML frontmatter"""
-        frontmatter = {}
-        if content.startswith("---"):
-            end_index = content.find("---", 3)
-            if end_index != -1:
-                try:
-                    frontmatter = yaml.safe_load(content[3:end_index])
-                except Exception as e:
-                    print(f"警告：解析 frontmatter 失败: {e}")
-        return frontmatter
+        # 预编译关键词正则，避免每个文件重复编译导致性能下降
+        for keyword in self.keyword_map.keys():
+            if re.match(r"^[a-zA-Z0-9_]+$", keyword):
+                pattern = re.compile(r"\b" + re.escape(keyword) + r"\b", re.IGNORECASE)
+            else:
+                pattern = re.compile(
+                    r"(?<![\w\u4e00-\u9fff])" + re.escape(keyword) + r"(?![\w\u4e00-\u9fff])",
+                    re.IGNORECASE,
+                )
+            self.pattern_map[keyword] = pattern
 
     def find_matches(self, text):
-        """在文本中查找匹配的知识点"""
+        """
+        在正文中查找候选匹配。
+        返回: (matches, stats)
+        """
+        stats = {
+            "skipped_special_blocks": 0,
+            "skipped_existing_links": 0,
+            "skipped_overlap": 0,
+        }
+
         matches = []
-        # 按关键词长度降序排序，避免短关键词匹配长关键词的问题
         sorted_keywords = sorted(self.keyword_map.keys(), key=len, reverse=True)
+        text_lower = text.lower()
+
+        code_ranges = collect_ranges(re.compile(r"```[\s\S]*?```"), text)
+        latex_block_ranges = collect_ranges(re.compile(r"\$\$[\s\S]*?\$\$"), text)
+        latex_inline_ranges = collect_ranges(re.compile(r"\$[^\$]*?\$"), text)
+        link_ranges = collect_ranges(re.compile(r"\[\[[^\[\]]+?\]\]"), text)
+
+        special_ranges = code_ranges + latex_block_ranges + latex_inline_ranges
 
         for keyword in sorted_keywords:
-            # 严格控制关键词长度，避免过短的关键词导致过度匹配
             if len(keyword) < 3:
                 continue
-
-            # 对于包含中文的关键词，要求更长的长度
-            if re.search(r'[\u4e00-\u9fff]', keyword) and len(keyword) < 4:
+            if re.search(r"[\u4e00-\u9fff]", keyword) and len(keyword) < 4:
                 continue
 
-            # 使用正则表达式匹配
-            if re.match(r'^[a-zA-Z0-9_]+$', keyword):
-                # 英文关键词使用单词边界
-                pattern = re.compile(r'\b' + re.escape(keyword) + r'\b', re.IGNORECASE)
-            else:
-                # 中文关键词使用严格的边界检测
-                # 只在中文标点、空格、换行、英文单词边界等位置匹配
-                pattern = re.compile(
-                    r'(?<=[^\w\u4e00-\u9fff]|^)' + re.escape(keyword) + r'(?=[^\w\u4e00-\u9fff]|$)',
-                    re.IGNORECASE
-                )
+            # 先做低成本子串过滤，减少正则匹配次数
+            if keyword not in text_lower:
+                continue
+
+            pattern = self.pattern_map[keyword]
 
             for match in pattern.finditer(text):
-                # 检查匹配是否在代码块或 LaTeX 公式中
-                if not self._is_in_special_block(text, match.start(), match.end()):
-                    matches.append({
+                start, end = match.start(), match.end()
+
+                if in_any_range(start, end, special_ranges):
+                    stats["skipped_special_blocks"] += 1
+                    continue
+
+                if in_any_range(start, end, link_ranges):
+                    stats["skipped_existing_links"] += 1
+                    continue
+
+                matches.append(
+                    {
                         "keyword": keyword,
-                        "start": match.start(),
-                        "end": match.end(),
-                        "entries": self.keyword_map[keyword]
-                    })
+                        "start": start,
+                        "end": end,
+                        "entries": self.keyword_map[keyword],
+                    }
+                )
 
-        # 去重：如果多个匹配重叠，保留最长的匹配
-        filtered_matches = []
-        for match in matches:
-            overlaps = False
-            for existing in filtered_matches:
-                if (match["start"] < existing["end"] and match["end"] > existing["start"]):
-                    overlaps = True
-                    # 保留长度更长的匹配
-                    if len(match["keyword"]) > len(existing["keyword"]):
-                        filtered_matches.remove(existing)
-                        filtered_matches.append(match)
+        matches.sort(key=lambda x: (x["start"], -(x["end"] - x["start"])))
+        filtered = []
+        for candidate in matches:
+            overlap = False
+            for existing in filtered:
+                if candidate["start"] < existing["end"] and candidate["end"] > existing["start"]:
+                    overlap = True
+                    stats["skipped_overlap"] += 1
                     break
-            if not overlaps:
-                filtered_matches.append(match)
+            if not overlap:
+                filtered.append(candidate)
 
-        return filtered_matches
-
-    def _is_in_special_block(self, text, start, end):
-        """检查位置是否在代码块或 LaTeX 公式中"""
-        # 检查代码块
-        code_blocks = self._find_code_blocks(text)
-        for cb_start, cb_end in code_blocks:
-            if start >= cb_start and end <= cb_end:
-                return True
-
-        # 检查 LaTeX 公式
-        latex_blocks = self._find_latex_blocks(text)
-        for lb_start, lb_end in latex_blocks:
-            if start >= lb_start and end <= lb_end:
-                return True
-
-        return False
-
-    def _find_code_blocks(self, text):
-        """找到所有代码块位置"""
-        blocks = []
-        # 匹配三个反引号的代码块
-        pattern = re.compile(r"```[\s\S]*?```")
-        for match in pattern.finditer(text):
-            blocks.append((match.start(), match.end()))
-        return blocks
-
-    def _find_latex_blocks(self, text):
-        """找到所有 LaTeX 公式块位置"""
-        blocks = []
-        # 匹配 $$...$$
-        pattern = re.compile(r"\$\$[\s\S]*?\$\$")
-        for match in pattern.finditer(text):
-            blocks.append((match.start(), match.end()))
-        # 匹配 $...$
-        pattern = re.compile(r"\$[^\$]*?\$")
-        for match in pattern.finditer(text):
-            blocks.append((match.start(), match.end()))
-        return blocks
+        filtered.sort(key=lambda x: x["start"])
+        return filtered, stats
 
 
 class LinkGenerator:
-    """链接生成器"""
+    """课程笔记 -> 00_factor 链接生成"""
 
     def __init__(self, knowledge_base):
         self.kb = knowledge_base
 
-    def generate_links(self, content):
-        """处理 Markdown 内容，生成链接"""
-        matches = self.kb.find_matches(content)
-        matches = sorted(matches, key=lambda x: x["start"])
-
-        # 替换内容（从后往前替换，避免位置偏移）
-        modified_content = content
-        offset = 0
-        for match in sorted(matches, key=lambda x: x["start"], reverse=True):
-            original_start = match["start"]
-            original_end = match["end"]
-            keyword = content[original_start:original_end]
-
-            # 选择最合适的链接目标（优先选择同名或同主题的）
-            best_entry = self._select_best_entry(match["entries"], keyword)
-
-            # 生成链接
-            link_text = keyword
-            link = f"[[{best_entry['filename']}|{link_text}]]"
-
-            # 替换
-            start = original_start + offset
-            end = original_end + offset
-            modified_content = modified_content[:start] + link + modified_content[end:]
-            offset += len(link) - (original_end - original_start)
-
-        return modified_content
-
-    def _select_best_entry(self, entries, keyword):
-        """选择最合适的链接目标"""
+    def _resolve_entry(self, entries, keyword_text):
         if len(entries) == 1:
-            return entries[0]
+            return entries[0], None
 
-        # 简单的选择策略：
-        # 1. 优先选择与关键词完全匹配的
+        text_l = keyword_text.lower()
+        exact = []
         for entry in entries:
-            if keyword.lower() == entry["filename"].lower() or keyword.lower() in [a.lower() for a in entry["aliases"]]:
-                return entry
+            aliases_l = [a.lower() for a in entry.get("aliases", []) if isinstance(a, str)]
+            if text_l == entry["filename"].lower() or text_l in aliases_l:
+                exact.append(entry)
 
-        # 2. 选择第一个匹配项
-        return entries[0]
+        if len(exact) == 1:
+            return exact[0], None
+
+        options = sorted({e["filename"] for e in entries})
+        return None, options
+
+    def process_content(self, content, file_path):
+        """返回 (new_content, note_stats)。"""
+        _, body, has_frontmatter = parse_frontmatter(content)
+        prefix = content[: len(content) - len(body)] if has_frontmatter else ""
+
+        matches, match_stats = self.kb.find_matches(body)
+
+        stats = {
+            "file": str(file_path),
+            "matched_candidates": len(matches),
+            "links_added": 0,
+            "ambiguous_skipped": 0,
+            "ambiguous_samples": [],
+            "skipped_special_blocks": match_stats["skipped_special_blocks"],
+            "skipped_existing_links": match_stats["skipped_existing_links"],
+            "skipped_overlap": match_stats["skipped_overlap"],
+        }
+
+        modified_body = body
+        for match in reversed(matches):
+            start, end = match["start"], match["end"]
+            raw_text = body[start:end]
+
+            entry, options = self._resolve_entry(match["entries"], raw_text)
+            if entry is None:
+                stats["ambiguous_skipped"] += 1
+                if len(stats["ambiguous_samples"]) < 20:
+                    stats["ambiguous_samples"].append(
+                        {
+                            "keyword": raw_text,
+                            "options": options,
+                            "position": [start, end],
+                        }
+                    )
+                continue
+
+            link = f"[[{entry['filename']}|{raw_text}]]"
+            modified_body = modified_body[:start] + link + modified_body[end:]
+            stats["links_added"] += 1
+
+        return prefix + modified_body, stats
 
 
 class Linker:
     """执行器"""
 
-    def __init__(self, source_dirs, factor_dir, output_dir=None):
-        self.source_dirs = [Path(d) for d in source_dirs]
-        self.factor_dir = Path(factor_dir)
-        self.output_dir = Path(output_dir) if output_dir else None
+    def __init__(
+        self,
+        source_dirs,
+        factor_dir,
+        mode,
+        changed_files,
+        output_dir=None,
+        dry_run=False,
+        inject_backlink_panel=True,
+    ):
+        self.source_dirs = [Path(p).resolve() for p in source_dirs]
+        self.factor_dir = Path(factor_dir).resolve()
+        self.mode = mode
+        self.changed_files = [Path(p).resolve() for p in changed_files]
+        self.output_dir = Path(output_dir).resolve() if output_dir else None
+        self.dry_run = dry_run
+        self.inject_backlink_panel = inject_backlink_panel
 
-        # 初始化知识库
-        self.kb = KnowledgeBase(factor_dir)
+        self.kb = KnowledgeBase(self.factor_dir)
         self.kb.load_entries()
-
-        # 初始化链接生成器
         self.link_generator = LinkGenerator(self.kb)
 
-    def process_notes(self):
-        """处理所有笔记"""
-        total_files = 0
-        processed_files = 0
+    def _resolve_output_path(self, source_file):
+        if not self.output_dir:
+            return source_file
 
+        for source_dir in self.source_dirs:
+            try:
+                rel = source_file.relative_to(source_dir)
+                output_path = self.output_dir / source_dir.name / rel
+                output_path.parent.mkdir(parents=True, exist_ok=True)
+                return output_path
+            except ValueError:
+                continue
+
+        output_path = self.output_dir / source_file.name
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        return output_path
+
+    def _collect_full_files(self):
+        files = []
         for source_dir in self.source_dirs:
             if not source_dir.exists() or not source_dir.is_dir():
                 print(f"警告：目录 {source_dir} 不存在或不是目录")
                 continue
 
             for md_file in source_dir.rglob("*.md"):
-                total_files += 1
+                if md_file.name.startswith("."):
+                    continue
+                files.append(md_file.resolve())
+
+        return sorted(set(files))
+
+    def _collect_incremental_files(self):
+        files = []
+        source_dir_set = set(self.source_dirs)
+
+        for file_path in self.changed_files:
+            if file_path.suffix.lower() != ".md":
+                continue
+            if not file_path.exists() or not file_path.is_file():
+                continue
+
+            for source_dir in source_dir_set:
                 try:
-                    content = md_file.read_text(encoding="utf-8")
+                    file_path.relative_to(source_dir)
+                    files.append(file_path)
+                    break
+                except ValueError:
+                    continue
 
-                    # 生成链接
-                    modified_content = self.link_generator.generate_links(content)
+        return sorted(set(files))
 
-                    # 确定输出路径
-                    if self.output_dir:
-                        relative_path = md_file.relative_to(source_dir)
-                        output_path = self.output_dir / relative_path
-                        output_path.parent.mkdir(parents=True, exist_ok=True)
-                    else:
-                        # 默认覆盖原文件（生产环境建议使用输出目录）
-                        output_path = md_file
+    def _build_backlink_panel(self, content):
+        if BACKLINK_PANEL_MARKER in content:
+            return content, False
 
-                    output_path.write_text(modified_content, encoding="utf-8")
-                    processed_files += 1
-                    print(f"成功处理：{md_file}")
+        new_content = content
+        if not new_content.endswith("\n"):
+            new_content += "\n"
+        if not new_content.endswith("\n\n"):
+            new_content += "\n"
+        new_content += BACKLINK_PANEL_BLOCK
+        return new_content, True
 
-                except Exception as e:
-                    print(f"错误：无法处理文件 {md_file}: {e}")
+    def _inject_backlink_panels(self):
+        stats = {
+            "factor_total_files": 0,
+            "backlink_panel_candidates": 0,
+            "backlink_panel_inserted": 0,
+            "errors": [],
+        }
 
-        print(f"\n处理完成！")
-        print(f"总文件数：{total_files}")
-        print(f"成功处理：{processed_files}")
-        print(f"失败：{total_files - processed_files}")
+        if not self.inject_backlink_panel:
+            return stats
+
+        for md_file in sorted(self.factor_dir.rglob("*.md")):
+            if md_file.name.startswith("."):
+                continue
+
+            stats["factor_total_files"] += 1
+
+            try:
+                content = md_file.read_text(encoding="utf-8")
+                updated, changed = self._build_backlink_panel(content)
+                if not changed:
+                    continue
+
+                stats["backlink_panel_candidates"] += 1
+                if not self.dry_run:
+                    md_file.write_text(updated, encoding="utf-8")
+                stats["backlink_panel_inserted"] += 1
+            except Exception as exc:
+                stats["errors"].append({"file": str(md_file), "error": str(exc)})
+
+        return stats
+
+    def process(self):
+        summary = {
+            "run_at": now_iso(),
+            "mode": self.mode,
+            "dry_run": self.dry_run,
+            "factor_dir": str(self.factor_dir),
+            "source_dirs": [str(p) for p in self.source_dirs],
+            "source_files_total": 0,
+            "source_files_processed": 0,
+            "source_files_changed": 0,
+            "links_added": 0,
+            "matched_candidates": 0,
+            "skipped_special_blocks": 0,
+            "skipped_existing_links": 0,
+            "skipped_overlap": 0,
+            "ambiguous_skipped": 0,
+            "ambiguous_samples": [],
+            "changed_files": [],
+            "errors": [],
+            "backlink_panel": {},
+        }
+
+        if self.mode == "full":
+            targets = self._collect_full_files()
+        else:
+            targets = self._collect_incremental_files()
+
+        summary["source_files_total"] = len(targets)
+
+        for md_file in targets:
+            try:
+                original = md_file.read_text(encoding="utf-8")
+                updated, note_stats = self.link_generator.process_content(original, md_file)
+
+                summary["source_files_processed"] += 1
+                summary["matched_candidates"] += note_stats["matched_candidates"]
+                summary["links_added"] += note_stats["links_added"]
+                summary["skipped_special_blocks"] += note_stats["skipped_special_blocks"]
+                summary["skipped_existing_links"] += note_stats["skipped_existing_links"]
+                summary["skipped_overlap"] += note_stats["skipped_overlap"]
+                summary["ambiguous_skipped"] += note_stats["ambiguous_skipped"]
+
+                if note_stats["ambiguous_samples"] and len(summary["ambiguous_samples"]) < 50:
+                    summary["ambiguous_samples"].append(
+                        {
+                            "file": str(md_file),
+                            "samples": note_stats["ambiguous_samples"],
+                        }
+                    )
+
+                if updated != original:
+                    output_path = self._resolve_output_path(md_file)
+                    if not self.dry_run:
+                        output_path.write_text(updated, encoding="utf-8")
+                    summary["source_files_changed"] += 1
+                    if len(summary["changed_files"]) < 500:
+                        summary["changed_files"].append(str(output_path))
+            except Exception as exc:
+                summary["errors"].append({"file": str(md_file), "error": str(exc)})
+
+        summary["backlink_panel"] = self._inject_backlink_panels()
+        return summary
 
 
-def main():
-    """主函数"""
-    import argparse
+def read_changed_files(changed_files_file):
+    lines = Path(changed_files_file).read_text(encoding="utf-8").splitlines()
+    resolved = []
+    for line in lines:
+        raw = line.strip()
+        if not raw:
+            continue
+        path = Path(raw)
+        if not path.is_absolute():
+            path = (Path.cwd() / path).resolve()
+        else:
+            path = path.resolve()
+        resolved.append(path)
+    return resolved
 
-    parser = argparse.ArgumentParser(
-        description="将课堂笔记中知识点卡片链接化的脚本"
-    )
+
+def write_report(report_path, summary):
+    report_path = Path(report_path)
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def build_parser():
+    parser = argparse.ArgumentParser(description="将课程笔记中知识点卡片链接化（支持全量/增量）")
+
     parser.add_argument(
         "--factor-dir",
         default="/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/00_factor",
@@ -291,19 +513,72 @@ def main():
         nargs="+",
         default=[
             "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math",
-            "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy"
+            "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy",
+            "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/03_Computer_Science",
         ],
-        help="要处理的笔记目录列表 (01_Math, 02_Economy)",
+        help="要处理的笔记目录列表",
+    )
+    parser.add_argument("--mode", choices=["full", "incremental"], default="full", help="运行模式")
+    parser.add_argument("--changed-files-file", help="增量模式下的变更文件列表（每行一个路径）")
+    parser.add_argument("--dry-run", action="store_true", help="仅预览，不写入文件")
+    parser.add_argument("--report-path", help="JSON 报告输出路径")
+    parser.add_argument("--output-dir", help="输出目录（不指定则覆盖源文件）")
+
+    parser.add_argument(
+        "--inject-backlink-panel",
+        dest="inject_backlink_panel",
+        action="store_true",
+        help="为 00_factor 注入课程反链 Dataview 面板（默认开启）",
     )
     parser.add_argument(
-        "--output-dir",
-        help="输出目录（如果不指定，将覆盖原文件）",
+        "--no-inject-backlink-panel",
+        dest="inject_backlink_panel",
+        action="store_false",
+        help="关闭 00_factor 课程反链面板注入",
     )
+    parser.set_defaults(inject_backlink_panel=True)
 
+    return parser
+
+
+def main():
+    parser = build_parser()
     args = parser.parse_args()
 
-    linker = Linker(args.source_dirs, args.factor_dir, args.output_dir)
-    linker.process_notes()
+    changed_files = []
+    if args.mode == "incremental":
+        if not args.changed_files_file:
+            parser.error("incremental 模式需要 --changed-files-file")
+        changed_files = read_changed_files(args.changed_files_file)
+
+    linker = Linker(
+        source_dirs=args.source_dirs,
+        factor_dir=args.factor_dir,
+        mode=args.mode,
+        changed_files=changed_files,
+        output_dir=args.output_dir,
+        dry_run=args.dry_run,
+        inject_backlink_panel=args.inject_backlink_panel,
+    )
+
+    summary = linker.process()
+
+    print("\n处理完成")
+    print(f"mode: {summary['mode']}")
+    print(f"dry_run: {summary['dry_run']}")
+    print(f"source_files_total: {summary['source_files_total']}")
+    print(f"source_files_processed: {summary['source_files_processed']}")
+    print(f"source_files_changed: {summary['source_files_changed']}")
+    print(f"links_added: {summary['links_added']}")
+    print(f"skipped_special_blocks: {summary['skipped_special_blocks']}")
+    print(f"skipped_existing_links: {summary['skipped_existing_links']}")
+    print(f"ambiguous_skipped: {summary['ambiguous_skipped']}")
+    print(f"backlink_panel_inserted: {summary['backlink_panel'].get('backlink_panel_inserted', 0)}")
+    print(f"errors: {len(summary['errors']) + len(summary['backlink_panel'].get('errors', []))}")
+
+    if args.report_path:
+        write_report(args.report_path, summary)
+        print(f"report: {args.report_path}")
 
 
 if __name__ == "__main__":

@@ -28,3 +28,16 @@ GARCH模型通常能够用更少的滞后项达到与高阶ARCH模型同样的�
 - 基础模型：[[ARCH]]
 - 扩展模型：[[TARCH]], [[EGARCH]]
 - 相关概念：[[EWMA]], [[Volatility Clustering|波动聚集]], [[Conditional Heteroskedasticity|条件异方差]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

@@ -76,3 +76,16 @@ $FVA = \text{资金成本} - \text{资金收益}$
 4. **交易决策**：考虑信用风险成本的交易评估
 
 相关链接: [[Credit Risk|信用风险]], [[Default Risk|违约风险]], [[VaR]], [[DVA]], [[Basel Accords|巴塞尔协议]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

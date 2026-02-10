@@ -7,23 +7,6 @@ date: 2026-02-09
 
 # Unit2 课堂笔记（MIT 18.06SC）
 
-## Unit 导航
-
-| Session | 主题 | Summary PDF |
-|---|---|---|
-| Session 2.1 | 正交向量与正交子空间 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.1sum.pdf|Ses2.1sum.pdf]] |
-| Session 2.2 | 子空间投影 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.2sum.pdf|Ses2.2sum.pdf]] |
-| Session 2.3 | 投影矩阵与最小二乘 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.3sum.pdf|Ses2.3sum.pdf]] |
-| Session 2.4 | 正交矩阵与 Gram-Schmidt | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.4sum.pdf|Ses2.4sum.pdf]] |
-| Session 2.5 | 行列式性质 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.5sum.pdf|Ses2.5sum.pdf]] |
-| Session 2.6 | 余子式与行列式公式 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.6sum.pdf|Ses2.6sum.pdf]] |
-| Session 2.7 | 克拉默法则、逆与体积 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.7sum.pdf|Ses2.7sum.pdf]] |
-| Session 2.8 | 特征值与特征向量 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.8sum.pdf|Ses2.8sum.pdf]] |
-| Session 2.9 | 对角化与 A 的幂 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.9sum.pdf|Ses2.9sum.pdf]] |
-| Session 2.10 | 微分方程与矩阵指数 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.10sum.pdf|Ses2.10sum.pdf]] |
-| Session 2.11 | 马尔可夫矩阵与傅里叶级数 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.11sum.pdf|Ses2.11sum.pdf]] |
-| Session 2.12 | Unit2 考前复盘 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.12sum.pdf|Ses2.12sum.pdf]] |
-
 ## Session 笔记
 
 ### Session 2.1 正交向量与正交子空间
@@ -188,7 +171,7 @@ $$
 
 ### Session 2.6 余子式与行列式公式
 
-> 对应 Summary: *Determinant formulas and cofactors*
+> 对应 Summary: *[[Determinant|Determinant]] formulas and cofactors*
 
 **核心概念**
 - 代数余子式展开给出递归计算行列式的方法。
@@ -220,7 +203,7 @@ $$
 
 ### Session 2.7 克拉默法则、逆与体积
 
-> 对应 Summary: *Cramer’s rule, inverse matrix, and volume*
+> 对应 Summary: *Cramer’s rule, [[Matrix Inverse|inverse matrix]], and volume*
 
 **核心概念**
 - 克拉默法则给出方阵可逆时各变量的显式分式表达。
@@ -252,7 +235,7 @@ $$
 
 ### Session 2.8 特征值与特征向量
 
-> 对应 Summary: *Eigenvalues and eigenvectors*
+> 对应 Summary: *[[Eigenvalues|Eigenvalues]] and [[Eigenvectors|eigenvectors]]*
 
 **核心概念**
 - 特征向量是方向不变向量，特征值是该方向伸缩倍数。
@@ -349,7 +332,7 @@ eq e^Ae^B`。
 
 ### Session 2.11 马尔可夫矩阵与傅里叶级数
 
-> 对应 Summary: *Markov matrices; Fourier series*
+> 对应 Summary: *Markov matrices; Fourier [[Series|series]]*
 
 **核心概念**
 - 马尔可夫矩阵列（或行）和为1，描述概率转移。

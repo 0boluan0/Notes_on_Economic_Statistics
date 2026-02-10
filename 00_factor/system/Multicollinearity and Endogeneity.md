@@ -44,3 +44,16 @@ tags:
 - [[Endogeneity Diagnosis|内生性诊断]]
 - [[00_factor/system/Variance Inflation Factor|方差膨胀因子]]
 - [[Condition Index|条件指数]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

@@ -113,3 +113,16 @@ $ \sqrt{n}(\hat{\theta}_{\text{MLE}} - \theta_0) \xrightarrow{d} N(0, I(\theta_0
 [[Likelihood Ratio Test|似然比检验]]
 [[ARMA Model Identification Steps|ARMA模型识别]]
 [[GARCH Model Estimation Steps|GARCH模型估计]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

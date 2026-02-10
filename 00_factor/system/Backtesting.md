@@ -60,3 +60,16 @@ $LR_{ind} = -2 \ln\left[\frac{(1-p)^{N_{00}}p^{N_{01}}(1-p)^{N_{10}}p^{N_{11}}}{
 [[VaR]]
 [[Bunching|聚束效应]]
 [[VaR Standard Error|VaR标准误]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

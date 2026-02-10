@@ -16,3 +16,16 @@ tags:
 - 基础模型：[[ARCH]], [[GARCH]]
 - 相关模型：[[TARCH]]
 - 现象：杠杆效应（负冲击比正冲击引起更大的波动）
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

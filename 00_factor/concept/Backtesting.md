@@ -65,3 +65,16 @@ tags:
 3. **系统性偏差**：调整模型参数或更换模型方法
 
 相关链接: [[VaR]], [[VaR Standard Error|VaR标准误]], [[Kupiec Test|Kupiec检验]], [[Christoffersen Test|Christoffersen检验]], [[GARCH]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

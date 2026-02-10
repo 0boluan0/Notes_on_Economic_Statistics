@@ -87,3 +87,16 @@ $\text{监管资本} = \text{RWA} \times 8\%$
 - 核心监管框架：银保会《商业银行资本管理办法》
 
 相关链接: [[Credit Risk|信用风险]], [[Market Risk|市场风险]], [[Operational Risk|操作风险]], [[VaR]], [[Capital Holding Ratio|资本金持有率]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

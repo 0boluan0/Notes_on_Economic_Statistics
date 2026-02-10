@@ -64,3 +64,16 @@ $ \sigma_i = (p_1, p_2, ..., p_k) $
 - [[Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
 - 混合策略纳什均衡
 - [[Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

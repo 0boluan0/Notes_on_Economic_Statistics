@@ -63,7 +63,7 @@
     x \sim N(\mu, \sigma^2)
     $$
     其中：
-    - $\mu$ 是均值 (Mean)，表示分布的中心。
+    - $\mu$ 是均值 ([[Mean-Variance Portfolio Optimization|Mean]])，表示分布的中心。
     - $\sigma^2$ 是方差 ([[Variance Decomposition|Variance]])，描述分布的宽度。
 - **概率密度函数 (Probability Density Function, PDF)**：
   - 单变量正态分布的 PDF 表达式为：
@@ -85,7 +85,7 @@
     X \sim N_p(\mu, \Sigma)
     $$
     其中：
-    - $\mu$ 是 $p \times 1$ 的均值向量 (Mean Vector)，表示分布的中心。
+    - $\mu$ 是 $p \times 1$ 的均值向量 ([[Mean-Variance Portfolio Optimization|Mean]] Vector)，表示分布的中心。
     - $\Sigma$ 是 $p \times p$ 的协方差矩阵 (Covariance [[Matrix Inverse|Matrix]])，描述变量之间的相关性。
 - **概率密度函数 (PDF)**：
   - 多元正态分布的 PDF 表达式为：

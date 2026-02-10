@@ -108,3 +108,16 @@ $ M = m \times MB $
 - 央行通过控制基础货币来控制货币供给
 - 货币乘数放大基础货币的影响
 - 是货币政策传导机制的核心环节
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

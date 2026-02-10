@@ -52,3 +52,16 @@ $\text{StdErr}(\hat{x}_q) \approx \frac{\sqrt{q(1-q)}}{\sqrt{n}f(x_q)}$
 ## $source_notes$
 
 - [[12_VAR风险#2.2 历史模拟法]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

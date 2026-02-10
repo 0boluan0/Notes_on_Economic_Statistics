@@ -11,3 +11,16 @@ tags:
 
 - 基础风险度量：[[VaR]]
 - VaR分解：[[Marginal VaR|边际VaR]], [[Component VaR|成分VaR]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

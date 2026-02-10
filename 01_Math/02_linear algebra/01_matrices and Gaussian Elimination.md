@@ -6,7 +6,7 @@
 
 ## 方程消元
 
- [[Linear Algebra-hub|线性代数]](linear algebra)的核心是解联立线性方程组(system of linear equations).
+ [[Linear Algebra-hub|线性代数]]([[Linear Algebra-hub|linear algebra]])的核心是解联立线性方程组(system of linear equations).
 
 寻找主元(pivot)的过程就是将一个矩阵(matrix)转为上三角矩阵(upper triangular matrix)的过程.对角线上的每个值都是一个主元.主元不能为0.
 
@@ -120,7 +120,7 @@ $A^{-1}A$是方阵(square matrix)的左逆.在方阵中,左逆等于右逆.只�
 
 ### [[Singular Matrix|奇异矩阵]]([[Singular Matrix|Singular Matrix]])
 
-奇异矩阵的行列式(determinant)值为0 .或者说能够找到一个非零向量x,使Ax=0,这样的矩阵没有逆. 即不可逆矩阵([[Singular Matrix|奇异矩阵]])其列能够通过线性组合得到0 .
+奇异矩阵的行列式([[Determinant|determinant]])值为0 .或者说能够找到一个非零向量x,使Ax=0,这样的矩阵没有逆. 即不可逆矩阵([[Singular Matrix|奇异矩阵]])其列能够通过线性组合得到0 .
 
 ### 逆矩阵的计算
 

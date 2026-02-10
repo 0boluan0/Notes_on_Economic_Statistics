@@ -204,3 +204,16 @@ ADF检验的统计量服从τ分布，而非标准t分布。
 数据存在结构断点时需要特殊处理。
 
 相关链接: [[Unit Root Test|单位根检验]], [[Phillips-Perron Test|PP检验]], [[Cointegration|协整]], [[Spurious Regression|伪回归]], [[AIC]], [[BIC]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

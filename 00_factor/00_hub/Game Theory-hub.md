@@ -69,3 +69,16 @@ tags:
 - [[Game Theory|01_博弈论基础]]
 - [[Nash Equilibrium|02_纳什均衡]]
 - [[Repeated Games and Mixed Strategies|03_重复博弈与混合策略]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

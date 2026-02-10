@@ -315,7 +315,7 @@ $$
 > $x_t = \mu + \sum_{i=0}^\infty A_1^i e_{t-i}$
 > 那么：
 > $\begin{aligned} \text{Cov}(x_t) &= \mathbb{E}[(x_t - \mu)(x_t - \mu)’] = \sum_{i=0}^{\infty} A_1^i \Sigma (A_1^i)’ \\ &= \boxed{ (I - A_1)^{-1} \Sigma [(I - A_1)^{-1}]’ } \end{aligned}$
-> 这里 $\Sigma = \text{Cov}(e_t)$，即 reduced form 误差的协方差矩阵。
+> 这里 $\Sigma = \text{Cov}(e_t)$，即 [[Reduced Form Equation|reduced form]] 误差的协方差矩阵。
 
 ## 4.3 [[VAR Model|VAR]] 的估计
 

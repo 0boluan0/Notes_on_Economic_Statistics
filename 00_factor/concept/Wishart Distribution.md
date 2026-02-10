@@ -85,3 +85,16 @@ $CAC' \sim W_m(C\Sigma C')$
 - 如果总体服从多元正态，则 $(n-1)S$ 服从 Wishart
 - 自由度越大，分布越集中于真实协方差矩阵
 - 样本均值与样本协方差相互独立（正态总体性质）
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

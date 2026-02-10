@@ -4,7 +4,7 @@
 
 本节常考三种 linkage 定义。
 
-- single linkage：两簇最近样本点之间的距离（取最小）。
+- [[Single-Factor Model|single]] linkage：两簇最近样本点之间的距离（取最小）。
 - complete linkage：两簇最远样本点之间的距离（取最大）。
 - average linkage：两簇样本点两两距离的平均值。
 

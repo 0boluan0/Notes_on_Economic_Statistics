@@ -26,3 +26,15 @@ DF/ADF 与 KPSS 检验相互补充：前者原假设为“存在单位根（非�
 - [[06_含趋势的模型#4.4 三检验比较]]
 - [[12_非平稳时间序列#单位根检验和平稳性检验]]
 
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

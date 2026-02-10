@@ -180,3 +180,16 @@ $\dot{k} = sf(k) - (n + \delta)k = 0$
 - 技术扩散模型
 
 相关链接: [[00_factor/concept/Solow Model|索罗增长模型]], [[00_factor/concept/Harrod-Domar Model|哈罗德-多玛模型]], [[Economic Growth|经济增长]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

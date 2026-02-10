@@ -121,3 +121,16 @@ $ r_{long} = \frac{E[r_1] + \dots + E[r_n]}{n} + \text{流动性溢价} $
 1. **动态变化**：收益率曲线会随市场变化而调整
 2. **国际比较**：不同国家的收益率曲线可能不同
 3. **风险调整**：需要考虑风险结构的差异
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

@@ -47,3 +47,16 @@ P(异常_t | 异常_{t-1}) > P(异常_t | 正常_{t-1})
 4. **提高置信水平**：在模型表现不佳时使用更保守的设置
 
 相关链接: [[VaR]], [[00_factor/concept/Backtesting|回溯检验]], [[Christoffersen Test|Christoffersen检验]], [[GARCH]], [[Volatility Clustering|波动聚集]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

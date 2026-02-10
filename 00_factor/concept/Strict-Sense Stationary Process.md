@@ -106,3 +106,16 @@ $ \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T X(t)X(t+\tau) dt = R_X(\tau) $
 - 提供了随机过程"稳定性"的最强定义
 - 是许多理论分析的基础
 - 在正态情况下与宽平稳等价，简化分析
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

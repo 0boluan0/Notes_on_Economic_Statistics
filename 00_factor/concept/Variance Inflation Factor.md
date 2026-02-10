@@ -80,3 +80,16 @@ $\text{VIF} = \text{diag}[(R(X) R(X)']^{-1}$
 | 条件指数 | 考虑所有变量相关 |
 
 相关链接: [[Multicollinearity|多重共线性]], [[Condition Index|条件指数]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

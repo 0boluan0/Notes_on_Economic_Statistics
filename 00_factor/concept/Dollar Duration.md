@@ -25,3 +25,16 @@ $$
 
 - 一般久期：[[duration|久期]], [[Modified Duration|修正久期]]
 - 应用：用于利率风险管理，与[[Curvature|曲率]]一起构成利率风险度量的完整框架
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

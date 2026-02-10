@@ -66,3 +66,16 @@ $h = (1 - \frac{d}{2}) \sqrt{\frac{T}{1 - T \hat{\phi}^2}}$
 3. **政策评估**：评估财政政策、货币政策的动态效应
 
 相关链接: [[Distributed Lag Model|分布滞后模型]], [[Instrumental Variable|工具变量]], [[Autocorrelation|自相关]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

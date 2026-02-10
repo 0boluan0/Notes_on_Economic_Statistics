@@ -188,3 +188,16 @@ tags:
    - 包括结构、制度、观念
 
 相关链接: [[Economic Growth|经济增长]], [[00_factor/concept/Solow Model|索罗增长模型]], [[Rostow's Stages of Growth|罗斯托经济增长阶段论]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

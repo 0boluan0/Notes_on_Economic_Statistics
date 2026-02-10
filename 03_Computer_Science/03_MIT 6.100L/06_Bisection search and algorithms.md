@@ -42,7 +42,7 @@ while abs(guess**2 - x) >= epsilon:
 
 ## 2. approximate search vs bisection
 
-- `while abs(...) >= epsilon` 与 `guess**2 <= x` 组合，防止 jump over epsilon
+- `while abs(...) >= epsilon` 与 `guess**2 <= x` 组合，防止 jump [[Over-identified|over]] epsilon
 - 线性搜索在 `x=54321` 上需要百万级猜测；bisection 所需猜测是 30
 - `num_guesses` 变量可以帮助对比效率
 

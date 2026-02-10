@@ -21,7 +21,7 @@
 
 # 描述性统计(Descriptive Statistics)
 
-## 样本均值 (Sample Mean)
+## 样本均值 (Sample [[Mean-Variance Portfolio Optimization|Mean]])
 
  计算过程见标准推导：先求均值再代入方差定义即可。
 
@@ -39,9 +39,9 @@ $$
 
 • $n$ 是样本数(sample size)。
 
-• $\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i$ 是样本均值(sample mean)。
+• $\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i$ 是样本均值(sample [[Mean-Variance Portfolio Optimization|mean]])。
 
-• $S^2_x$ 是样本方差(sample variance)。
+• $S^2_x$ 是样本方差(sample [[Variance-Covariance Method|variance]])。
 ## 样本协方差 (Sample Covariance)
 
 对于样本 ${(x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)}$，样本协方差的计算公式为：

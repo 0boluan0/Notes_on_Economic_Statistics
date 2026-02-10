@@ -58,3 +58,16 @@ $$
 ## 相关链接
 [[Malthusian Trap|马尔萨斯人口陷阱]]
 [[Ricardian Model|李嘉图模型]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

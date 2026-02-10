@@ -241,3 +241,16 @@ tags:
    - 制度创新
 
 相关链接: [[Economic Growth|经济增长]], [[00_factor/concept/Kuznets Modern Economic Growth Theory|库兹涅茨现代经济增长理论]], [[Advantage of Backwardness|后发优势理论]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

@@ -89,3 +89,16 @@ $ a^* \in \arg\max_{a} E_\theta[U(\theta, m, a)] $
 - 批发中的价格制定
 - 产品包装设计
 - 广告策略
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

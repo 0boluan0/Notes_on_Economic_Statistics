@@ -46,3 +46,16 @@ $\frac{\sum_{k=0}^{h-1} (\Psi_k)_{ij}^2}{\sum_{j=1}^{n} \sum_{k=0}^{h-1} (\Psi_k
 3. **结构识别**：需要额外的约束条件进行结构识别
 
 相关链接: [[Impulse Response Function|脉冲响应函数]], [[VAR Model|VAR]], [[Granger Causality Test|格兰杰因果检验]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

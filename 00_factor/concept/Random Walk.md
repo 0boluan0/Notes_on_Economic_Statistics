@@ -62,3 +62,16 @@ $dy_t = \mu dt + \sigma dW_t$
 2. **带趋势的随机游走**：$y_t = α + βt + y_{t-1} + ε_t$
 
 相关链接: [[Unit Root Test|单位根检验]], [[Stationarity|平稳性]], [[Efficient Market Hypothesis|有效市场假说]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

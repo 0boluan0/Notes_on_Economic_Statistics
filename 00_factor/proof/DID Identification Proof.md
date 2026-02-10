@@ -35,3 +35,16 @@ $DID = E[Y_{it}(1)-Y_{it}(0)|G_i=1,Post_t=1] = ATT$
 
 ## 结论
 - 在平行趋势成立下，DID 识别处理组平均处理效应（ATT）。
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

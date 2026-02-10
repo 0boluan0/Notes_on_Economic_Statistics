@@ -28,3 +28,16 @@ tags:
 - [[Repeated Games|重复博弈]]
 - [[Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
 - [[Nash Equilibrium|纳什均衡]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

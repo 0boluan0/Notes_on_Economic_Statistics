@@ -51,3 +51,16 @@ tags:
 - 缩小可能策略的范围
 - 理解博弈中的合理性约束
 - 在计算纳什均衡前进行预处理
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

@@ -59,3 +59,16 @@ $\hat{\theta}_{GMM} = \arg\min_{\theta} \bar{m}(\theta)' \hat{S}^{-1} \bar{m}(\t
 在H₀（模型正确设定）下，J ~ χ²(k-p)
 
 相关链接: [[2SLS]], [[Instrumental Variable|工具变量]], [[Maximum Likelihood Estimation|极大似然估计]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

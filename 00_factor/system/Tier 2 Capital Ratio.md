@@ -55,3 +55,16 @@ $\text{资本质量} = \frac{\text{CET1}}{\text{总资本}}$
 ## 相关概念
 [[Tier 1 Capital Ratio|一级资本比率]]
 [[Basel Capital Adequacy Ratio|巴塞尔资本充足率]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

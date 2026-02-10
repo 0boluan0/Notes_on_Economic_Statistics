@@ -241,3 +241,16 @@ $y_t = \alpha + \beta x_t + \gamma z_t + \epsilon_t$
 - 说明临界值来源
 
 相关链接: [[Cointegration|协整]], [[Johansen Cointegration Test|Johansen检验]], [[Error Correction Model|误差纠正机制(ECM)]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

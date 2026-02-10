@@ -90,3 +90,16 @@ tags:
 - W可以作为需求方程中P的工具变量
 
 相关链接: [[Instrumental Variable|工具变量]], [[2SLS]], [[Hausman Test|Hausman检验]], [[Simultaneous Equations Model|联立方程模型]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

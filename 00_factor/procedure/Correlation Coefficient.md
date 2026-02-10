@@ -12,3 +12,16 @@ $$
 $其中分子为**协方差** Cov(V_1, V_2) = E(V_1 V_2) - E(V_1)E(V_2)，分母是 V_1 和 V_2 的标准差乘积。相关系数 \rho 取值范围在 -1 与 1 之间，\rho=0 表示线性不相关，\rho=1 表示完全正相关，\rho=-1 表示完全负相关。$
 
 $在金融中，常需根据历史数据计算协方差和相关系数。例如，对于资产收益率序列，若假设收益率均值为0，则协方差可近似为收益率积的期望值 E(x\,y)。给定一组同时期的资产 X 和 Y 的收益率数据 \{x_i, y_i\}_{i=1}^N，协方差的样本估计为 \frac{1}{N}\sum_{i=1}^N (x_i - \bar{x})(y_i - \bar{y})，相关系数则为该协方差除以样本标准差的乘积。$
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

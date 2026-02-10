@@ -116,3 +116,16 @@ $ P\{N(t) = n\} = \frac{[m_X(t)]^n}{n!} e^{-m_X(t)}, \quad n \ge 0 $
 - 时间间隔独立同指数分布
 - 等待时间服从 Gamma 分布
 - 均值 = 方差 = λt
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

@@ -91,3 +91,16 @@ $x_t$, x_{t-1}, ..., x_{t-q}通常高度相关，导致：
 3. **消费函数**：分析消费对收入的动态调整
 
 相关链接: [[ADL]], [[Autocorrelation|自相关]], [[Multicollinearity|多重共线性]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

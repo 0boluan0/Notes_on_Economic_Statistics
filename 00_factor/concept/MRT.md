@@ -14,3 +14,16 @@ tags:
 边际转换率是理解经济体如何在不同生产选择之间做出决策的关键概念，特别是在考虑资源重新分配和生产权衡时。在实际应用中，MRT有助于政策制定者和企业理解在不同生产目标之间转换的经济含义。
 MRTaf = Marginal rate of transformation of apples for fig leaves
 MRTaf = Absolute value of slope of Production Possibilities Frontier
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

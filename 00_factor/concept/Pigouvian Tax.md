@@ -126,3 +126,16 @@ $ MSC = MSB $
 - 对进入市中心区域的车辆收费
 - 成功减少交通拥堵
 - 改善空气质量和交通效率
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

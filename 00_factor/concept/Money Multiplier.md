@@ -118,3 +118,16 @@ $ M = m \times MB $
 1. **货币政策分析**：评估货币政策的效果
 2. **货币供应量预测**：预测货币供应量的变化
 3. **金融稳定**：分析货币乘数的稳定性
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

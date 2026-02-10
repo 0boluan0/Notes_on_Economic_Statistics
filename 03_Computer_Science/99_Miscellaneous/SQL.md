@@ -24,7 +24,7 @@
 - [ ] 04 SQL Lesson 3: Queries with constraints (Pt. 2)
 - [ ] 05 SQL Lesson 4: Filtering and sorting Query results
 - [ ] 06 SQL Review: Simple SELECT Queries
-- [ ] 07 SQL Lesson 6: Multi-table queries with JOINs
+- [ ] 07 SQL Lesson 6: [[Multi-Factor Model|Multi]]-table queries with JOINs
 - [ ] 08 SQL Lesson 7: OUTER JOINs
 - [ ] 09 SQL Lesson 8: A short note on NULLs
 - [ ] 10 SQL Lesson 9: Queries with expressions
@@ -223,7 +223,7 @@ WHERE id BETWEEN 1 AND 5;
 ## 4）易错点
 ## 5）小结
 
-# 07 SQL Lesson 6: Multi-table queries with JOINs
+# 07 SQL Lesson 6: [[Multi-Factor Model|Multi]]-table queries with JOINs
 ## 1）本课要点
 ## 2）语法与示例
 ## 3）练习记录

@@ -93,3 +93,16 @@ $\hat{\sigma}_{\alpha}^2 = \frac{1}{n-k-1} \sum_{i=1}^{N} (T_i \cdot \bar{u}_i^2
 | 适用 | α_i与x不相关 | α_i与x相关 |
 
 相关链接: [[Fixed Effects Model|固定效应]], [[Hausman Test|豪斯曼检验]], [[Panel Data Model|面板数据模型]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

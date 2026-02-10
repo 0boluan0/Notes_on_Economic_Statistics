@@ -1,0 +1,29 @@
+{
+  "run_at": "2026-02-10T14:14:08Z",
+  "mode": "incremental",
+  "dry_run": true,
+  "factor_dir": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/00_factor",
+  "source_dirs": [
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/03_Computer_Science"
+  ],
+  "source_files_total": 7,
+  "source_files_processed": 7,
+  "source_files_changed": 0,
+  "links_added": 0,
+  "matched_candidates": 0,
+  "skipped_special_blocks": 0,
+  "skipped_existing_links": 63,
+  "skipped_overlap": 0,
+  "ambiguous_skipped": 0,
+  "ambiguous_samples": [],
+  "changed_files": [],
+  "errors": [],
+  "backlink_panel": {
+    "factor_total_files": 442,
+    "backlink_panel_candidates": 0,
+    "backlink_panel_inserted": 0,
+    "errors": []
+  }
+}

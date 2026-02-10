@@ -55,3 +55,16 @@ tags:
 - [[Growth Theory|04_经济增长理论]]
 - [[00_factor/concept/Solow Model|05_索洛模型]]
 - [[Dual Economy Model|01_二元经济模型]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

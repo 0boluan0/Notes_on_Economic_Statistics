@@ -3,7 +3,7 @@ date: 2026-02-08
 科目: MIT 6.100L
 ---
 
-# Loops over strings, guess-and-check and binary
+# Loops [[Over-identified|over]] strings, guess-and-check and binary
 
 ## 本讲主线
 
@@ -11,7 +11,7 @@ date: 2026-02-08
 - Guess-and-check（穷举/试探）算法
 - 二进制表示与浮点误差直觉
 
-## 1. Loops over strings（字符串上的循环）
+## 1. Loops [[Over-identified|over]] strings（字符串上的循环）
 
 ### `break` 的语义
 

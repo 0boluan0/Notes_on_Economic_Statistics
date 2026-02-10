@@ -43,3 +43,16 @@ $$
 
 - 相关模型：[[ARCH]], [[GARCH]]
 - 相关概念：[[Volatility Clustering|波动聚集]], [[Historical Volatility|历史波动率]], [[Implied Volatility|隐含波动率]], [[Realized Volatility|已实现波动率]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

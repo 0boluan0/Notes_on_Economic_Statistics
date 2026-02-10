@@ -231,3 +231,16 @@ $\text{rank}(B_i\Gamma_i) = g_i - 1$
 面板数据的识别利用个体和时间的变异。
 
 相关链接: [[Simultaneous Equations Model|联立方程模型]], [[2SLS]], [[Instrumental Variable|工具变量]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

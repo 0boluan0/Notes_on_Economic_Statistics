@@ -66,3 +66,16 @@ $有效年利率 = (1 + \frac{报价利率}{复利次数})^{复利次数} - 1$
 ## 相关链接
 [[Annuity|年金]]
 [[Net Present Value|净现值法]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

@@ -14,3 +14,16 @@ $边际VaR定义为组合VaR对某资产头寸的变化率，直观上是**组�
 - 基础风险度量：[[VaR]]
 - VaR分解：[[Incremental VaR|递增VaR]], [[Component VaR|成分VaR]]
 - 应用：用于[[Component VaR|成分VaR]]的计算（成分VaR = 持仓 × 边际VaR）
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

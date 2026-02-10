@@ -63,3 +63,16 @@ $Var(\hat{\beta})_{White} = (X'X)^{-1} \left[ \sum_{i=1}^n x_i x_i' e_i^2 \right
 [[Heteroscedasticity Diagnosis|异方差诊断]]
 [[Newey-West]]
 [[FGLS]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

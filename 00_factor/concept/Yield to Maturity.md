@@ -93,3 +93,16 @@ $ R = i_c + g $
 1. **假设条件**：YTM 假设所有利息都能按相同利率再投资
 2. **到期收益率 vs. 即期收益率**：到期收益率是承诺收益率，实际可能不同
 3. **计算方法**：通常需要通过试错法或数值方法求解
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

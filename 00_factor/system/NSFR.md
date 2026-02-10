@@ -59,3 +59,16 @@ $\text{NSFR} = \frac{\text{可得稳定资金（ASF）}}{\text{所需稳定资�
 [[LCR]]
 [[Stress Testing|压力测试]]
 [[Basel Capital Adequacy Ratio|巴塞尔资本充足率]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

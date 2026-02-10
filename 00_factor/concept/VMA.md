@@ -51,3 +51,16 @@ $\mathbf{\Psi}_j = \sum_{i=1}^{p} \mathbf{A}_i \mathbf{\Psi}_{ji}$
 3. **方差分解**：计算各变量冲击对预测误差方差的贡献
 
 相关链接: [[VAR Model|VAR]], [[Impulse Response Function|脉冲响应函数]], [[Variance Decomposition|方差分解]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

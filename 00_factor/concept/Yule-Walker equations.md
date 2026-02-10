@@ -114,3 +114,16 @@ Yule-Walker 方程建立了 AR 参数 \{\phi_i\} 与自相关系数 \{\rho_k\} �
 [[ARMA|ARMA模型]]
 [[Autocorrelation Function|自相关函数 ACF]]
 [[White Noise|白噪声过程]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

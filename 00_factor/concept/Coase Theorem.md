@@ -142,3 +142,16 @@ $ C \leq \text{支付} \leq D $
 - 强调了产权制度的重要性
 - 为环境经济学提供了理论基础
 - 影响了 deregulation 和私有化思潮
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

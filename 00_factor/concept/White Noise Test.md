@@ -66,3 +66,16 @@ $Q = T(T+2) \sum_{k=1}^{m} \frac{r_k^2}{T-k}$
 3. **多重检验**：检验多个滞后阶数时需考虑多重比较问题
 
 相关链接: [[Autocorrelation Function|自相关函数]], [[ARCH]], [[GARCH]], [[Ljung-Box Test|Ljung-Box检验]], [[Partial Autocorrelation Function|偏自相关函数]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

@@ -216,3 +216,16 @@ Vs = n
 - 索罗模型解决了要素替代问题
 
 相关链接: [[00_factor/concept/Solow Model|索罗增长模型]], [[Economic Growth|经济增长]], [[Malthusian Trap|马尔萨斯人口陷阱]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

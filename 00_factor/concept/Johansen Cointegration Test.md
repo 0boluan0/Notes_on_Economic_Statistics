@@ -311,3 +311,16 @@ Trace和Max-Eig可能给出不同结果，需要谨慎判断。
 协整向量应有经济理论支持。
 
 相关链接: [[Cointegration|协整]], [[Engle-Granger Two-Step Test|EG两步检验法]], [[Error Correction Model|误差纠正机制(ECM)]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

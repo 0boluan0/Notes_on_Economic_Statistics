@@ -131,3 +131,16 @@ g(P) = f(Y/N)
 4. **计划生育**：控制人口增长
 
 相关链接: [[Population Growth and Economic Development|人口增长与经济发展]], [[Ricardian Model|李嘉图模型]], [[00_factor/concept/Solow Model|索罗增长模型]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

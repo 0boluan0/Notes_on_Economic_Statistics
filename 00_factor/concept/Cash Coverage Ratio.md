@@ -55,3 +55,16 @@ $现金流量利息保障倍数 = \frac{经营活动现金流量净额}{利息�
 
 ## 相关链接
 [[Times Interest Earned Ratio|利息保障倍数]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

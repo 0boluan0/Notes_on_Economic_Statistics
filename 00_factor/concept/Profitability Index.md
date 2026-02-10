@@ -56,3 +56,16 @@ $现值指数 = \frac{未来现金流入的现值}{未来现金流出的现值}$
 ## 相关链接
 [[Net Present Value|净现值法]]
 [[Internal Rate of Return|内涵报酬率]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

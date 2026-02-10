@@ -41,3 +41,16 @@ tags:
 - [[00_factor/concept/Solow Model|索洛模型]]
 - [[00_factor/concept/Harrod-Domar Model|哈罗德-多玛模型]]
 - [[Rostow Stages of Economic Growth|罗斯托经济增长阶段论]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

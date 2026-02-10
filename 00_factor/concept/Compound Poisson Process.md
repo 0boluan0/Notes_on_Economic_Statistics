@@ -100,3 +100,16 @@ $ Var[X(10)] = 2 \times 10 \times 0.08 = 1.6 $
 - 保留了泊松过程的独立增量性质
 - 均值和方差与时间 λt 成正比
 - 可以建模"事件数量 + 每次影响"的累积过程
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

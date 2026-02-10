@@ -22,3 +22,16 @@ tags:
 
 - [[Central Limit Theorem]]（同章引用）
 - [[OLS consistency#步骤 4：应用连续映射定理|OLS估计量的一致性]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

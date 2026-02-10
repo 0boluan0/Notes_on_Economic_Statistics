@@ -68,3 +68,16 @@ tags:
 
 相关链接: [[Random Walk|随机游走]], [[CAPM|资本资产定价模型]], [[Behavioral Finance|行为金融学]]
 ]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

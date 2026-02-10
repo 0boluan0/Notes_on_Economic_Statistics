@@ -152,3 +152,16 @@ Elinor Ostrom 研究表明，社区自主管理可以避免公地悲剧：
 2. **社区自治有效**：本地社区往往比中央政府更了解情况
 3. **多手段结合**：产权 + 管制 + 税收
 4. **国际协作**：跨国资源需要国际制度安排
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

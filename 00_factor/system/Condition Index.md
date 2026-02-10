@@ -53,3 +53,16 @@ $\pi_{jk} = \frac{\phi_{jk}^2}{\sum_{i=1}^{p} \phi_{ji}^2}$
 [[00_factor/system/Variance Inflation Factor|方差膨胀因子]]
 [[Multicollinearity|多重共线性]]
 [[Eigenvalues|特征值]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

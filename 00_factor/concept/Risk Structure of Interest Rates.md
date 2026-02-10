@@ -88,3 +88,16 @@ $ \text{公司债券利率} = \text{无风险利率} + \text{违约风险溢价}
 1. **风险定价**：市场对风险进行定价
 2. **信息传递**：利率差异反映市场对风险的评估
 3. **政策制定**：央行关注风险结构的变化
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

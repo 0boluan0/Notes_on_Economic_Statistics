@@ -99,3 +99,16 @@ $F = t^2$
 $F = \frac{[SSR - (SSR_1 + SSR_2)] / k}{(SSR_1 + SSR_2) / (n_1 + n_2 - 2k)}$
 
 相关链接: [[t Test|t检验]], [[Chi-square Test|卡方检验]], [[R-squared|判定系数]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

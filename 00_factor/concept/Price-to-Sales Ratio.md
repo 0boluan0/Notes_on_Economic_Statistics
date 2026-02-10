@@ -59,3 +59,16 @@ $每股营业收入 = \frac{营业收入}{流通在外普通股加权平均股�
 ## 相关链接
 [[Price-to-Earnings Ratio|市盈率]]
 [[Price-to-Book Ratio|市净率]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

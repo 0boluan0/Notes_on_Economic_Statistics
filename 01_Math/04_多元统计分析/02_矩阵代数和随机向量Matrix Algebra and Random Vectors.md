@@ -6,7 +6,7 @@
 - 向量长度与方向（Vector length and direction）
 - 向量夹角余弦（Cosine of the angle between two vectors）
 - 标量乘法与单位向量（Scalar multiplication and unit vectors）
-- 向量线性相关与线性无关（[[Linear Combination|Linear]] dependence and independence）
+- 向量线性相关与线性无关（[[Linear Combination|Linear]] dependence and [[Independence vs. Uncorrelated|independence]]）
 - 向量投影（Projection of a vector）
 
 ### 2. 矩阵（Matrices）
@@ -46,12 +46,12 @@
 
 ### 7. 随机向量与随机矩阵（[[Random Effects Model|Random]] Vectors and [[Random Effects Model|Random]] Matrices）
 - 定义（Definitions）
-- 均值与方差-协方差矩阵（Mean and [[Variance Decomposition|Variance]]-Covariance [[Matrix Inverse|Matrix]]）
+- 均值与方差-协方差矩阵（[[Mean-Variance Portfolio Optimization|Mean]] and [[Variance Decomposition|Variance]]-Covariance [[Matrix Inverse|Matrix]]）
 - 随机向量的线性函数（[[Linear Combination|Linear]] Functions of [[Random Effects Model|Random]] Vectors）
 
 ### 8. 相关矩阵（[[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]]）
 - 定义与性质（Definition and properties）
-- 与方差-协方差矩阵关系（Relationship with variance-covariance matrix）
+- 与方差-协方差矩阵关系（Relationship with [[Variance-Covariance Method|variance]]-covariance matrix）
 
 ---
 
@@ -994,7 +994,7 @@ $$
    - 若 $A$ 是对称矩阵，下列条件等价于 $A$ 是正定矩阵：
      1. 所有特征值 $\lambda_i > 0$。
      2. 对任意非零向量 $x$，$x'Ax > 0$。
-     3. 所有主子矩阵（leading principal minors）的行列式均为正。
+     3. 所有主子矩阵（leading [[Principal-Agent Problem|principal]] minors）的行列式均为正。
    - 半正定矩阵的等价条件：
      1. 所有特征值 $\lambda_i \geq 0$。
      2. 对任意非零向量 $x$，$x'Ax \geq 0$。

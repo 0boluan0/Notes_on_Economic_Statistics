@@ -233,7 +233,7 @@ plt.show()
 
 **核心概念**
 - 转置把行列角色对调，连接行空间与列空间。
-- 置换矩阵 `P` 表示行重排，`PA` 等价于把 `A` 的行重新排序。
+- [[Permutation Matrix|置换矩阵]] `P` 表示行重排，`PA` 等价于把 `A` 的行重新排序。
 - 在含换行的消元中，标准形式是 $PA=LU$。
 
 **关键公式**
@@ -283,7 +283,7 @@ plt.show()
 
 ### Session 1.6 列空间与零空间
 
-> 对应 Summary: *Column space and nullspace*
+> 对应 Summary: *[[Column Space|Column space]] and nullspace*
 
 **核心概念**
 - 列空间 `C(A)` 是所有 `Ax` 可达向量集合；零空间 `N(A)` 是被映到零向量的输入集合。
@@ -388,7 +388,7 @@ plt.show()
 
 ### Session 1.8 非齐次系统通解
 
-> 对应 Summary: *Solving Ax = b: row reduced form R*
+> 对应 Summary: *Solving Ax = b: row [[Reduced Form Equation|reduced form]] R*
 
 **核心概念**
 - $Ax=b$ 一旦可解，通解可写成“一个特解 + 零空间通解”。
@@ -441,9 +441,9 @@ plt.show()
 ```
 
 
-### Session 1.9 线性无关、基与维数
+### Session 1.9 [[Linear Independence|线性无关]]、基与维数
 
-> 对应 Summary: *Independence, basis, and dimension*
+> 对应 Summary: *[[Independence vs. Uncorrelated|Independence]], basis, and dimension*
 
 **核心概念**
 - 线性无关意味着没有向量可由其余向量线性表示。

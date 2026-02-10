@@ -117,3 +117,16 @@ $ \hat{\beta} = (X'X)^{-1}X'y $
 
 - OLS性质：[[Gauss-Markov theorem|高斯-马尔可夫定理]]
 - 违反假设的后果：[[Heteroskedasticity|异方差]], [[Multicollinearity|多重共线性]], [[Autocorrelation|自相关]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

@@ -68,3 +68,16 @@ $F = \frac{R^2/k}{(1-R^2)/(n-k-1)}$
 [[R-squared|判定系数]]
 [[Multicollinearity|多重共线性]]
 [[00_factor/system/Variance Inflation Factor|方差膨胀因子]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

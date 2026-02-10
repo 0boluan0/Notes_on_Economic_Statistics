@@ -38,3 +38,15 @@ tags:
 - **负数头寸**：表示**负债**或**做空**（卖出）。你借入该资产并卖掉，希望它跌价，跌价时你赚钱。
 
 
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

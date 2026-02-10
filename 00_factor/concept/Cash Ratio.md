@@ -40,3 +40,16 @@ $现金比率 = \frac{现金及现金等价物}{流动负债}$
 ## 相关链接
 [[Current Ratio|流动比率]]
 [[Quick Ratio|速动比率]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

@@ -57,3 +57,16 @@ $\Delta y_t = \Pi y_{t-1} + \sum_{i=1}^{p-1} \Gamma_i \Delta y_{t-i} + \varepsil
 3. **预测模型**：结合长期均衡和短期动态进行预测
 
 相关链接: [[Cointegration|协整]], [[VAR Model|VAR]], [[Granger Causality Test|格兰杰因果检验]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

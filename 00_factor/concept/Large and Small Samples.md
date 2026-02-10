@@ -13,3 +13,16 @@ tags:
 ## 小样本
 样本容量过于小，样本信息结构发生扭曲，无法解释总体样本的数字特征
 理论上推导出来的分布不适用。
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

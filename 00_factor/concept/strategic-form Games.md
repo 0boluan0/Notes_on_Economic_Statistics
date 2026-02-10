@@ -24,3 +24,16 @@ A set of agents who play the game。N，局中人的集合：i，具体的某个
 
 >[!example] 效用的例子
 >现在有一个商贩在和顾客讲价，商贩最低卖40块，消费者最多出50块，那么对商贩来讲，所有的交易不成立的情况的效用一致，都是最低的排名，其次卖的越贵排名越靠前；而对于顾客来讲，交易不成立的情况与商贩一致，但是交易成立时付出的价格越低则排名越靠前
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

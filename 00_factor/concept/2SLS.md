@@ -78,3 +78,16 @@ $其中P_Z = Z(Z^T Z)^{-1} Z^T是投影矩阵。$
 3. **弱工具变量检验**：第一阶段F检验
 
 相关链接: [[Instrumental Variable|工具变量]], [[GMM]], [[Hausman Test|Hausman检验]], [[Endogeneity|内生性]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

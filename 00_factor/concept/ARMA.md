@@ -59,3 +59,16 @@ $1 - \phi_1 z - \phi_2 z^2 - \cdots - \phi_p z^p = 0$
 ## $source_notes$
 
 - [[03_平稳时间序列模型#1.1 自回归移动平均模型ARMA(p,q) model]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

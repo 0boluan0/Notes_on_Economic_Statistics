@@ -124,3 +124,16 @@ $\lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T |R_X(\tau) - m_X^2| d\tau = 0$
 - 简化了随机过程的统计分析
 - 允许使用时间平均代替统计平均
 - 是许多时间序列分析模型的基础假设
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

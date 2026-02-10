@@ -147,3 +147,16 @@ $\rho_s = \frac{\gamma_s}{\gamma_0} = \frac{\frac{\sigma^2 a_1^s}{1 - a_1^2}}{\f
 [[Yule-Walker equations|Yule-Walker方程]]
 [[ARMA|ARMA模型]]
 [[Difference Equation|差分方程]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

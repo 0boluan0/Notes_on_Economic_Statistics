@@ -93,3 +93,16 @@ $$
 $$
 \sum_{i=1}^p h_i^2 = \sum_{j=1}^m \left(\sum_{i=1}^p l_{ij}^2\right)
 $$
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

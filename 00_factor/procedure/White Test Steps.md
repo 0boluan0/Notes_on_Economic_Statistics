@@ -98,3 +98,16 @@ $ \text{Critical Value} = \chi^2_{\alpha}(df) $
 [[Heteroskedasticity|异方差]]
 [[Weighted Least Squares Estimation|加权最小二乘估计]]
 [[White Robust Standard Errors|稳健标准误]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```

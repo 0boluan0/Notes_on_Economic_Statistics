@@ -7,19 +7,6 @@ date: 2026-02-09
 
 # Unit3 课堂笔记（MIT 18.06SC）
 
-## Unit 导航
-
-| Session | 主题 | Summary PDF |
-|---|---|---|
-| Session 3.1 | 对称矩阵与正定性 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.1sum.pdf|Ses3.1sum.pdf]] |
-| Session 3.2 | 复矩阵与快速傅里叶 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.2sum.pdf|Ses3.2sum.pdf]] |
-| Session 3.3 | 正定矩阵与极小值 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.3sum.pdf|Ses3.3sum.pdf]] |
-| Session 3.4 | 相似变换与 Jordan 形 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.4sum.pdf|Ses3.4sum.pdf]] |
-| Session 3.5 | 奇异值分解 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.5sum.pdf|Ses3.5sum.pdf]] |
-| Session 3.6 | 线性变换与矩阵表示 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.6sum.pdf|Ses3.6sum.pdf]] |
-| Session 3.7 | 换基与图像压缩 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.7sum.pdf|Ses3.7sum.pdf]] |
-| Session 3.8 | 左右逆与伪逆 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.8sum.pdf|Ses3.8sum.pdf]] |
-| Session 3.9 | Unit3 考前复盘 | [[../MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.9sum.pdf|Ses3.9sum.pdf]] |
 
 ## Session 笔记
 
@@ -222,7 +209,7 @@ $$
 
 **核心概念**
 - 换基把数据投到更有表达力的坐标系。
-- 图像压缩常用 SVD/PCA，仅保留主成分。
+- 图像压缩常用 SVD/[[PCA|PCA]]，仅保留主成分。
 - 误差-存储折中由截断阶数控制。
 
 **关键公式**
@@ -241,7 +228,7 @@ $$
 **易错点**
 - 截断过狠导致伪影。
 - 把压缩误差与训练误差混淆。
-- 忽略数据中心化（若用 PCA）。
+- 忽略数据中心化（若用 [[PCA|PCA]]）。
 
 **1道例题（含简解）**
 - 题：SVD 压缩中为何保留前 k 大奇异值？

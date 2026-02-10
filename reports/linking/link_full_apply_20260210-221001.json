@@ -1,0 +1,2426 @@
+{
+  "run_at": "2026-02-10T14:10:03Z",
+  "mode": "full",
+  "dry_run": false,
+  "factor_dir": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/00_factor",
+  "source_dirs": [
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/03_Computer_Science"
+  ],
+  "source_files_total": 157,
+  "source_files_processed": 157,
+  "source_files_changed": 59,
+  "links_added": 315,
+  "matched_candidates": 494,
+  "skipped_special_blocks": 2568,
+  "skipped_existing_links": 3727,
+  "skipped_overlap": 9,
+  "ambiguous_skipped": 179,
+  "ambiguous_samples": [
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/03_game theory/01_导论.md",
+      "samples": [
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            434,
+            439
+          ]
+        },
+        {
+          "keyword": "Price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            410,
+            415
+          ]
+        },
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            219,
+            224
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md",
+      "samples": [
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            559,
+            564
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/04_多元统计分析/01_introduction简介.md",
+      "samples": [
+        {
+          "keyword": "Box",
+          "options": [
+            "Box-Jenkins Method",
+            "Box-Pierce Q statistic"
+          ],
+          "position": [
+            2426,
+            2429
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/06_时间序列分析/03_平稳时间序列模型.md",
+      "samples": [
+        {
+          "keyword": "var",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            38894,
+            38897
+          ]
+        },
+        {
+          "keyword": "var",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            38885,
+            38888
+          ]
+        },
+        {
+          "keyword": "Box",
+          "options": [
+            "Box-Jenkins Method",
+            "Box-Pierce Q statistic"
+          ],
+          "position": [
+            36769,
+            36772
+          ]
+        },
+        {
+          "keyword": "Box",
+          "options": [
+            "Box-Jenkins Method",
+            "Box-Pierce Q statistic"
+          ],
+          "position": [
+            27458,
+            27461
+          ]
+        },
+        {
+          "keyword": "Box",
+          "options": [
+            "Box-Jenkins Method",
+            "Box-Pierce Q statistic"
+          ],
+          "position": [
+            27411,
+            27414
+          ]
+        },
+        {
+          "keyword": "Box",
+          "options": [
+            "Box-Jenkins Method",
+            "Box-Pierce Q statistic"
+          ],
+          "position": [
+            27390,
+            27393
+          ]
+        },
+        {
+          "keyword": "Box",
+          "options": [
+            "Box-Jenkins Method",
+            "Box-Pierce Q statistic"
+          ],
+          "position": [
+            26730,
+            26733
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/01_Econometrics/07_异方差.md",
+      "samples": [
+        {
+          "keyword": "Var",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            2914,
+            2917
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/0_补充/00_知识点划重点.md",
+      "samples": [
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            2335,
+            2339
+          ]
+        },
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            1339,
+            1343
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/0_货币银行学看板.md",
+      "samples": [
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            850,
+            854
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/1_引言/00_在这节课开始之前，导论.md",
+      "samples": [
+        {
+          "keyword": "Debt",
+          "options": [
+            "Debt-to-Asset Ratio",
+            "Debt-to-Equity Ratio"
+          ],
+          "position": [
+            964,
+            968
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/1_引言/02_金融体系概览.md",
+      "samples": [
+        {
+          "keyword": "risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            5659,
+            5663
+          ]
+        },
+        {
+          "keyword": "risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            5626,
+            5630
+          ]
+        },
+        {
+          "keyword": "Debt",
+          "options": [
+            "Debt-to-Asset Ratio",
+            "Debt-to-Equity Ratio"
+          ],
+          "position": [
+            937,
+            941
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/2_金融市场/04_理解利率.md",
+      "samples": [
+        {
+          "keyword": "risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            2143,
+            2147
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/2_金融市场/05_利率行为.md",
+      "samples": [
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            12476,
+            12481
+          ]
+        },
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            10364,
+            10369
+          ]
+        },
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            10142,
+            10147
+          ]
+        },
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            9893,
+            9898
+          ]
+        },
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            9508,
+            9513
+          ]
+        },
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            9308,
+            9313
+          ]
+        },
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            2360,
+            2365
+          ]
+        },
+        {
+          "keyword": "risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            872,
+            876
+          ]
+        },
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            722,
+            726
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/3_金融机构/12_金融危机.md",
+      "samples": [
+        {
+          "keyword": "debt",
+          "options": [
+            "Debt-to-Asset Ratio",
+            "Debt-to-Equity Ratio"
+          ],
+          "position": [
+            2198,
+            2202
+          ]
+        },
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            1097,
+            1102
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/06_证券投资学/00_仅划重点.md",
+      "samples": [
+        {
+          "keyword": "risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            10091,
+            10095
+          ]
+        },
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            9189,
+            9194
+          ]
+        },
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            9166,
+            9171
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/06_证券投资学/01_证券投资工具.md",
+      "samples": [
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            10877,
+            10882
+          ]
+        },
+        {
+          "keyword": "debt",
+          "options": [
+            "Debt-to-Asset Ratio",
+            "Debt-to-Equity Ratio"
+          ],
+          "position": [
+            9786,
+            9790
+          ]
+        },
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            7556,
+            7561
+          ]
+        },
+        {
+          "keyword": "debt",
+          "options": [
+            "Debt-to-Asset Ratio",
+            "Debt-to-Equity Ratio"
+          ],
+          "position": [
+            5917,
+            5921
+          ]
+        },
+        {
+          "keyword": "risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            5692,
+            5696
+          ]
+        },
+        {
+          "keyword": "debt",
+          "options": [
+            "Debt-to-Asset Ratio",
+            "Debt-to-Equity Ratio"
+          ],
+          "position": [
+            5429,
+            5433
+          ]
+        },
+        {
+          "keyword": "debt",
+          "options": [
+            "Debt-to-Asset Ratio",
+            "Debt-to-Equity Ratio"
+          ],
+          "position": [
+            4895,
+            4899
+          ]
+        },
+        {
+          "keyword": "risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            2998,
+            3002
+          ]
+        },
+        {
+          "keyword": "risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            2981,
+            2985
+          ]
+        },
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            2966,
+            2970
+          ]
+        },
+        {
+          "keyword": "risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            2884,
+            2888
+          ]
+        },
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            2748,
+            2752
+          ]
+        },
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            2739,
+            2743
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/06_证券投资学/03_资产定价理论及其发展.md",
+      "samples": [
+        {
+          "keyword": "price",
+          "options": [
+            "Price-to-Earnings Ratio",
+            "Price-to-Sales Ratio"
+          ],
+          "position": [
+            95,
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/00_金融风险划重点.md",
+      "samples": [
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            14038,
+            14042
+          ]
+        },
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            13722,
+            13726
+          ]
+        },
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            13528,
+            13532
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            12234,
+            12237
+          ]
+        },
+        {
+          "keyword": "Var",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            11758,
+            11761
+          ]
+        },
+        {
+          "keyword": "Var",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            11727,
+            11730
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            11721,
+            11724
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            11592,
+            11595
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            11545,
+            11548
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            10362,
+            10365
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            8743,
+            8746
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            8714,
+            8717
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            8107,
+            8110
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            7960,
+            7963
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            7826,
+            7829
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            7663,
+            7666
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            7533,
+            7536
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            7447,
+            7450
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            7203,
+            7206
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            7154,
+            7157
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/01_引言.md",
+      "samples": [
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            428,
+            432
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/07_定价与情景分析.md",
+      "samples": [
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            15194,
+            15197
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            14639,
+            14642
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            14401,
+            14404
+          ]
+        },
+        {
+          "keyword": "risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            13572,
+            13576
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            10300,
+            10303
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            10275,
+            10278
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            10262,
+            10265
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/08_操作员如何管理风险暴露.md",
+      "samples": [
+        {
+          "keyword": "delta",
+          "options": [
+            "Delta",
+            "Delta-Gamma Approximation"
+          ],
+          "position": [
+            13589,
+            13594
+          ]
+        },
+        {
+          "keyword": "delta",
+          "options": [
+            "Delta",
+            "Delta-Gamma Approximation"
+          ],
+          "position": [
+            13551,
+            13556
+          ]
+        },
+        {
+          "keyword": "delta",
+          "options": [
+            "Delta",
+            "Delta-Gamma Approximation"
+          ],
+          "position": [
+            13497,
+            13502
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/09_利率风险.md",
+      "samples": [
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            1701,
+            1705
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/11_相关系数与copula函数.md",
+      "samples": [
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            10928,
+            10931
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            10215,
+            10218
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/12_VAR风险.md",
+      "samples": [
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            23803,
+            23806
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            22291,
+            22294
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            20305,
+            20308
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            20255,
+            20258
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            20202,
+            20205
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            17465,
+            17468
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            17132,
+            17135
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            17123,
+            17126
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            16287,
+            16290
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            15973,
+            15976
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            15900,
+            15903
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            15766,
+            15769
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            15666,
+            15669
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            15566,
+            15569
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            15534,
+            15537
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            15519,
+            15522
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            15485,
+            15488
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            15458,
+            15461
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            15437,
+            15440
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            15365,
+            15368
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/13_历史模拟法和极值理论.md",
+      "samples": [
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            3665,
+            3668
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            261,
+            264
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/14_VaR参数法和模拟法.md",
+      "samples": [
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            14742,
+            14745
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            6234,
+            6237
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            5093,
+            5096
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            5068,
+            5071
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            5004,
+            5007
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            4792,
+            4795
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            4759,
+            4762
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            4672,
+            4675
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            4570,
+            4573
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            4545,
+            4548
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            4482,
+            4485
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            4288,
+            4291
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            4256,
+            4259
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            4158,
+            4161
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
+      "samples": [
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            8596,
+            8599
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            8367,
+            8370
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            8306,
+            8309
+          ]
+        },
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            8286,
+            8290
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            7746,
+            7749
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            7593,
+            7596
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            6758,
+            6761
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            4964,
+            4967
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            4901,
+            4904
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            4737,
+            4740
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            4018,
+            4021
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            3417,
+            3420
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            1668,
+            1671
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            1441,
+            1444
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            662,
+            665
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            574,
+            577
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/16_巴塞尔协议.md",
+      "samples": [
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            671,
+            674
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/19_违约风险.md",
+      "samples": [
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            15717,
+            15721
+          ]
+        },
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            15606,
+            15610
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/20_CVA,DVA衍生产品中的对手信用风险.md",
+      "samples": [
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            13304,
+            13308
+          ]
+        },
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            13279,
+            13283
+          ]
+        },
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            7908,
+            7912
+          ]
+        },
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            7779,
+            7783
+          ]
+        },
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            7677,
+            7681
+          ]
+        },
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            7656,
+            7660
+          ]
+        },
+        {
+          "keyword": "Risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            6509,
+            6513
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/21_信用在险价值.md",
+      "samples": [
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            810,
+            813
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/22_情景分析和压力测试.md",
+      "samples": [
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            7409,
+            7412
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            192,
+            195
+          ]
+        },
+        {
+          "keyword": "VaR",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            120,
+            123
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/10_发展经济学/发展pre 话题6.md",
+      "samples": [
+        {
+          "keyword": "risk",
+          "options": [
+            "Risk-Weighted Assets",
+            "Risk-free Rate"
+          ],
+          "position": [
+            17343,
+            17347
+          ]
+        }
+      ]
+    },
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
+      "samples": [
+        {
+          "keyword": "var",
+          "options": [
+            "EVT VaR Calculation",
+            "Historical Simulation VaR",
+            "Monte Carlo Simulation VaR",
+            "VAR Model",
+            "VaR",
+            "VaR Parametric Method",
+            "VaR Standard Error",
+            "VaR-hub"
+          ],
+          "position": [
+            1632,
+            1635
+          ]
+        }
+      ]
+    }
+  ],
+  "changed_files": [
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/02_linear algebra/02_vector spaces and subspace.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/02_linear algebra/Unit1/Unit1_课堂笔记.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/02_linear algebra/Unit2/Unit2_课堂笔记.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/02_linear algebra/Unit3/Unit3_课堂笔记.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/03_game theory/02_初步认识博弈.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/03_game theory/03_策略式博弈.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/03_game theory/04_案例（囚徒困境与纳什均衡）.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/03_game theory/05_贝叶斯博弈.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/03_game theory/06_扩展性博弈.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/03_game theory/07_子博弈不完全信息.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/04_多元统计分析/01_introduction简介.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/04_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/04_多元统计分析/04_多元正态分布The Multivariate Normal Distribution.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/04_多元统计分析/05_ 总体平均向量的推论.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/04_多元统计分析/06_比较多个均值向量comparisons of multivariate mean vectors.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/04_多元统计分析/12_层次聚类和K-means聚类.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/05_随机过程/02_随机过程的概念和分类.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/05_随机过程/06_平稳随机过程.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/06_时间序列分析/00_导论与概率论复习.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/06_时间序列分析/02_差分方程Difference Equation.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/06_时间序列分析/03_平稳时间序列模型.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/06_时间序列分析/04_波动建模 Modeling Volatility.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/06_时间序列分析/05_多方程模型Multi-equation Time Series Models.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/01_Math/06_时间序列分析/06_含趋势的模型.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/01_Econometrics/01_导论.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/01_Econometrics/02_一元线性回归.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/01_Econometrics/03_多元线性回归.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/01_Econometrics/06_多重共线性.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/02_public finance财政学/2_财政支出/02_外部性Externality.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/0_补充/00_知识点划重点.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/0_货币银行学看板.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/1_引言/02_金融体系概览.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/2_金融市场/05_利率行为.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/2_金融市场/06_利率的风险结构与期限结构.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/2_金融市场/07_股票市场,理性预期理论与有效市场假说.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/3_金融机构/09_银行业与金融机构的管理.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/3_金融机构/10_金融监管的经济学分析.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/4_中央银行与货币政策的实施/13_中央银行与联邦储备体系.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/03_货币银行学/4_中央银行与货币政策的实施/14_货币供给过程.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/05_财务管理/01_财务管理概述.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/06_证券投资学/00_仅划重点.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/06_证券投资学/01_证券投资工具.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/00_金融风险划重点.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/01_引言.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/07_定价与情景分析.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/08_操作员如何管理风险暴露.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/09_利率风险.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/11_相关系数与copula函数.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/13_历史模拟法和极值理论.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/07_金融机构与风险管理/15_《巴塞尔协议I II》和 偿付能力法案II.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/10_发展经济学/03_人口迁移理论 2.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/10_发展经济学/03_人口迁移理论.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/03_Computer_Science/01_CS50/CS50_main.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/03_Computer_Science/03_MIT 6.100L/04_Loops over strings, Guess-and-check and Binary.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/03_Computer_Science/03_MIT 6.100L/06_Bisection search and algorithms.md",
+    "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/03_Computer_Science/99_Miscellaneous/SQL.md"
+  ],
+  "errors": [
+    {
+      "file": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/06_证券投资学/证券投资学划重点.md",
+      "error": "[Errno 13] Permission denied: '/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic/02_Economy/06_证券投资学/证券投资学划重点.md'"
+    }
+  ],
+  "backlink_panel": {
+    "factor_total_files": 442,
+    "backlink_panel_candidates": 442,
+    "backlink_panel_inserted": 442,
+    "errors": []
+  }
+}

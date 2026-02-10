@@ -260,3 +260,16 @@ tags:
    - 扩大开放
 
 相关链接: [[Economic Development|经济发展]], [[Advantage of Backwardness|后发优势理论]], [[Economic Growth|经济增长]]
+
+## 课程笔记反链
+
+<!-- course-backlinks-panel -->
+```dataview
+LIST FROM ""
+WHERE (
+  contains(file.path, "01_Math/") OR
+  contains(file.path, "02_Economy/") OR
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
+SORT file.mtime DESC
+```
