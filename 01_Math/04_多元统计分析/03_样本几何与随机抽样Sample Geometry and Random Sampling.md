@@ -1,42 +1,42 @@
 
-# 第3章：样本几何与随机抽样（Sample Geometry and [[Random Effects Model|Random]] Sampling）
+# 第3章：样本几何与随机抽样（Sample Geometry and Random Sampling）
 
-## 1. 样本的几何结构（The Geometry of the Sample）
-- **数据矩阵表示（Data [[Matrix Inverse|Matrix]] Representation）**
-  - 数据矩阵的结构与记号。
-- **均值修正向量与偏差向量（[[Mean-Variance Portfolio Optimization|Mean]]-Corrected Vector and Deviation Vector）**
-  - 定义（Definition）与数学表示。
-- **偏差向量之间的夹角（Angles Between Deviation Vectors）**
-  - 夹角余弦与相关系数之间的关系。
+## 1. 样本的几何结构（Geometry of Samples）
+- **数据矩阵表示（Data Matrix Representation）**
+  - 说明数据矩阵的结构与记号。
+- **均值修正向量与偏差向量（Mean-corrected Vector and Deviation Vector）**
+  - 给出定义与数学表示（Definition and Mathematical Representation）。
+- **偏差向量夹角（Angles Between Deviation Vectors）**
+  - 解释夹角余弦与相关系数的关系。
 
-## 2. 随机样本与样本均值/协方差矩阵的期望（[[Random Effects Model|Random]] Sample and the Expected Values of the Sample [[Mean-Variance Portfolio Optimization|Mean]] and Covariance [[Matrix Inverse|Matrix]]）
-- **样本协方差矩阵的定义（Definition of the Sample Covariance [[Matrix Inverse|Matrix]]）**
-  - 公式及其组成。
-- **广义方差（Generalized [[Variance Decomposition|Variance]]）**
-  - 通过协方差矩阵行列式进行解释。
-  - 通过协方差矩阵迹衡量总体变异。
+## 2. 随机样本与样本矩（Random Samples and Sample Moments）
+- **样本协方差矩阵定义（Definition of the Sample Covariance Matrix）**
+  - 给出公式及组成项解释。
+- **广义方差（Generalized Variance）**
+  - 用协方差矩阵行列式刻画总体离散程度。
+  - 用协方差矩阵迹补充刻画总体变异。
 
-## 3. 广义方差的几何解释（Geometric Interpretation of Generalized [[Variance Decomposition|Variance]]）
+## 3. 广义方差的几何解释（Geometric Interpretation of Generalized Variance）
 - **面积与体积（Area and Volume）**
-  - 低维与高维空间中面积/体积的计算。
-- **高维协方差特征（High-Dimensional Covariance Characteristics）**
-  - 当样本量 $n$ 小于变量数 $p$ 时的含义。
+  - 对应低维到高维空间的几何解释。
+- **高维协方差特征（High-dimensional Covariance Characteristics）**
+  - 讨论样本量 \(n\) 小于变量维度 \(p\) 时的意义。
 
-## 4. 样本协方差矩阵的矩阵表示（[[Matrix Inverse|Matrix]] Representation of the Sample Covariance [[Matrix Inverse|Matrix]]）
-- **矩阵表示（[[Matrix Inverse|Matrix]] Representation）**
-  - 偏差矩阵及其在协方差计算中的作用。
-- **行列式与特征值（[[Determinant|Determinant]] and [[Eigenvalues|Eigenvalues]]）**
-  - 用特征值解释 $p$ 维空间中的数据变异性。
-- **秩亏缺情况（Rank-Deficient Cases）**
+## 4. 样本协方差矩阵的矩阵表示（Matrix Representation of Sample Covariance Matrix）
+- **矩阵表示（Matrix Representation）**
+  - 偏差矩阵在协方差计算中的作用。
+- **行列式与特征值（Determinant and Eigenvalues）**
+  - 用特征值解释 \(p\) 维空间的数据变异。
+- **秩亏缺情形（Rank-deficient Cases）**
   - 处理协方差矩阵行列式为 0 的情形。
 
-## 5. 标准化协方差矩阵与相关矩阵（Standardized Covariance [[Matrix Inverse|Matrix]] and [[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]]）
+## 5. 标准化协方差矩阵与相关矩阵（Standardized Covariance Matrix and Correlation Matrix）
 - **标准化（Standardization）**
-  - 通过变量标准化得到相关矩阵。
-- **相关矩阵表示（[[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]] Representation）**
-  - 样本相关矩阵的数学表达。
-- **协方差矩阵与相关矩阵的关系（Relationship Between Covariance and [[Correlation Coefficient|Correlation]] Matrices）**
-  - 使用对角缩放矩阵的转换公式。
+  - 通过标准化变量得到相关矩阵。
+- **相关矩阵表示（Correlation Matrix Representation）**
+  - 写出样本相关矩阵的数学表达。
+- **协方差矩阵与相关矩阵关系（Relationship Between Covariance and Correlation Matrices）**
+  - 使用对角缩放矩阵给出转换公式。
 
 -----
 

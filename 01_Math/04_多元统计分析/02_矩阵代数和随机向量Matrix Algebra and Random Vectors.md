@@ -1,57 +1,56 @@
 
-# 矩阵代数与随机向量（[[Matrix Inverse|Matrix]] Algebra and [[Random Effects Model|Random]] Vectors）
+# 矩阵代数与随机向量（Matrix Algebra and Random Vectors）
 
-### 1. 矩阵与向量代数基础（Basics of [[Matrix Inverse|Matrix]] and Vector Algebra）
-- 向量定义（Definition of vectors）
-- 向量长度与方向（Vector length and direction）
-- 向量夹角余弦（Cosine of the angle between two vectors）
-- 标量乘法与单位向量（Scalar multiplication and unit vectors）
-- 向量线性相关与线性无关（[[Linear Combination|Linear]] dependence and [[Independence vs. Uncorrelated|independence]]）
-- 向量投影（Projection of a vector）
+### 1. 矩阵与向量代数基础（Fundamentals of Matrix and Vector Algebra）
+- 向量定义（Vector Definition）
+- 向量长度与方向（Vector Length and Direction）
+- 向量夹角与余弦（Angle and Cosine Between Vectors）
+- 标量乘法与单位向量（Scalar Multiplication and Unit Vector）
+- 线性相关与线性无关（Linear Dependence and Independence）
+- 向量投影（Vector Projection）
 
 ### 2. 矩阵（Matrices）
-- 定义与记号（Definition and notation）
-- 单位矩阵（Identity [[Matrix Inverse|Matrix]]）
-- 对角矩阵（Diagonal [[Matrix Inverse|Matrix]]）
-- [[Matrix Operations|矩阵运算]]（[[Matrix Inverse|Matrix]] operations）：
+- 定义与记号（Definition and Notation）
+- 单位矩阵（Identity Matrix）
+- 对角矩阵（Diagonal Matrix）
+- 矩阵运算（Matrix Operations）
   - 标量乘法（Scalar Multiplication）
-  - 矩阵加法（[[Matrix Inverse|Matrix]] Addition）
-  - 矩阵乘法（[[Matrix Inverse|Matrix]] Multiplication）
-- 矩阵逆（[[Matrix Inverse|Matrix Inverse]]）
-- 正交矩阵（Orthogonal Matrices）
-- [[Matrix Rank|矩阵的秩]]（Rank of a [[Matrix Inverse|Matrix]]）
+  - 矩阵加法（Matrix Addition）
+  - 矩阵乘法（Matrix Multiplication）
+- 逆矩阵（Inverse Matrix）
+- 正交矩阵（Orthogonal Matrix）
+- 矩阵的秩（Matrix Rank）
 
-### 3. [[Determinant|行列式]]（Determinants）
-- 行列式定义（Definition of determinants）
-- 性质（Properties）：
-  - 矩阵乘积行列式（[[Determinant|Determinant]] of product of matrices）
-  - 逆矩阵行列式（[[Determinant|Determinant]] of inverse）
-  - 对角矩阵行列式（[[Determinant|Determinant]] of diagonal matrices）
-  - 行列式与正交矩阵（Determinants and orthogonal matrices）
+### 3. 行列式（Determinants）
+- 行列式定义（Determinant Definition）
+- 行列式性质（Determinant Properties）
+  - 乘积行列式（Determinant of Product）
+  - 逆矩阵行列式（Determinant of Inverse）
+  - 对角矩阵行列式（Determinant of Diagonal Matrix）
 
-### 4. 特征值与特征向量（[[Eigenvalues|Eigenvalues]] and [[Eigenvectors|Eigenvectors]]）
-- 定义（Definitions）
-- 性质（Properties）：
-  - [[Spectral Decomposition|Spectral]] Representation (谱表示)
-  - 用特征值表示迹与行列式（Trace and [[Determinant|Determinant]] Using [[Eigenvalues|Eigenvalues]]）
-
-### 5. 正定与半正定矩阵（[[Positive Definite Matrix|Positive]] Definite and Non-Negative Definite Matrices）
-- 定义与性质（Definitions and Properties）
-- Quadratic Forms (二次型)
-
-### 6. 矩阵平方根（Square Root of a [[Matrix Inverse|Matrix]]）
+### 4. 特征值与特征向量（Eigenvalues and Eigenvectors）
 - 定义（Definition）
-- 对称性与性质（Symmetry and properties）
-- 二次型变换（Transformation of quadratic forms）
+- 性质（Properties）
+  - 谱表示（Spectral Representation）
+  - 用特征值表示迹与行列式（Trace and Determinant via Eigenvalues）
 
-### 7. 随机向量与随机矩阵（[[Random Effects Model|Random]] Vectors and [[Random Effects Model|Random]] Matrices）
-- 定义（Definitions）
-- 均值与方差-协方差矩阵（[[Mean-Variance Portfolio Optimization|Mean]] and [[Variance Decomposition|Variance]]-Covariance [[Matrix Inverse|Matrix]]）
-- 随机向量的线性函数（[[Linear Combination|Linear]] Functions of [[Random Effects Model|Random]] Vectors）
+### 5. 正定与半正定矩阵（Positive Definite and Positive Semidefinite Matrices）
+- 定义与性质（Definitions and Properties）
+- 二次型（Quadratic Forms）
 
-### 8. 相关矩阵（[[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]]）
-- 定义与性质（Definition and properties）
-- 与方差-协方差矩阵关系（Relationship with [[Variance-Covariance Method|variance]]-covariance matrix）
+### 6. 矩阵平方根（Square Root of a Matrix）
+- 定义（Definition）
+- 对称性与性质（Symmetry and Properties）
+- 二次型变换（Transformation of Quadratic Forms）
+
+### 7. 随机向量与随机矩阵（Random Vectors and Random Matrices）
+- 定义（Definition）
+- 均值与协方差矩阵（Mean Vector and Covariance Matrix）
+- 随机向量的线性函数（Linear Functions of Random Vectors）
+
+### 8. 相关矩阵（Correlation Matrix）
+- 定义与性质（Definition and Properties）
+- 与协方差矩阵的关系（Relationship with Covariance Matrix）
 
 ---
 

@@ -29,7 +29,7 @@
 - **5.2 [[Maximum Likelihood Estimation|极大似然估计]]（[[Maximum Likelihood Estimation|Maximum Likelihood Estimation]]）**：样本均值与协方差矩阵的估计。
 
 ## 6. [[Wishart Distribution|Wishart 分布]]（[[Wishart Distribution|Wishart Distribution]]）
-- **6.1 定义（Definition）**：样本协方差矩阵的分布。
+- **6.1 定义（Definition）**：样本协方差矩阵分布（Distribution of the Sample Covariance Matrix）。
 - **6.2 性质（Properties）**：
   - 独立性与可加性。
   - 矩阵变换下的分布性质。
@@ -54,9 +54,9 @@
 
 # 2. 多元正态密度及其性质（The [[Multivariate Normal Distribution|Multivariate]] Normal Density and Its Properties）
 
-## 2.1 单变量正态分布 (Univariate Normal Distribution)
+## 2.1 单变量正态分布（Univariate Normal Distribution）
 
-- **定义（Definition）**：
+- **定义（单变量正态分布, Univariate Normal Distribution）**：
   - 单变量正态分布描述的是一个随机变量 $x$ 的概率分布。
   - 若 $x$ 服从正态分布，记为：
     $$
@@ -76,9 +76,9 @@
     3. 面积：曲线下的总面积为 1。
 
 ## 2.2 [[Multivariate Normal Distribution|多元正态分布]] ([[Multivariate Normal Distribution|Multivariate Normal Distribution]])
-### 2.2.1 密度函数公式 (Density Function Formula)
+### 2.2.1 密度函数公式（Density Function Formula）
 
-- **定义（Definition）**：
+- **定义（多元正态分布, Multivariate Normal Distribution）**：
   - 多元正态分布描述的是随机向量 $X = (X_1, X_2, \dots, X_p)'$ 的概率分布。
   - 若 $X$ 服从多元正态分布，记为：
     $$
@@ -218,7 +218,7 @@ $$
 
 ## 2.3 等概率密度曲线 (Equi-probability Density Contours)
 
-- **定义（Definition）**：
+- **定义（等概率密度曲线, Equi-probability Density Contours）**：
 
 “**多元正态分布的等概率密度曲线（或曲面）**”是由满足
 
@@ -689,9 +689,9 @@ $$
 总之，给定 $X \sim N_p(\mu, \Sigma)$，经过合适的线性变换（$\Sigma^{-1/2}$）可以把它「标准化」成 $Z \sim N_p(0,I_p)$，而由此推导出 $(X-\mu)’,\Sigma^{-1},(X-\mu)$ 的分布是 $\chi^2_p$。
 
 
-## 4.2 标准化 (Standardization)
+## 4.2 标准化（Standardization）
 
-- **定义（Definition）**：
+- **定义（标准化变换, Standardization）**：
   - 通过以下变换对 $X$ 进行标准化：
     $$
     Z = \Sigma^{-1/2}(X - \mu)
@@ -710,7 +710,7 @@ $$
 
 # 5. 多元正态分布的抽样（Sampling from [[Multivariate Normal Distribution|Multivariate Normal Distribution]]）
 
-## 5.1 联合密度函数 (Joint Density Function)
+## 5.1 联合密度函数（Joint Density Function）
 
 - 假设从多元正态分布 $N_p(\mu, \Sigma)$ 中抽取 $n$ 个独立样本 $X_1, X_2, \dots, X_n$，则这些样本的联合概率密度函数为：
   $$
@@ -881,7 +881,7 @@ $$
 
 ==如果总体是正态分布,那么样本的方差协方差矩阵就是Wishart 分布==
 
-## 6.1 定义（Definition）
+## 6.1 定义（Definition）：Wishart 分布（Wishart Distribution）
 
 **1. 样本协方差矩阵的分布及Wishart分布**
 
@@ -896,7 +896,7 @@ $$
 
 在这里，我们有以下结论：
 
-1. $(n-1)S$服从Wishart分布([[Wishart Distribution|Wishart]] distribution)，记为
+1. $(n-1)S$ 服从 Wishart 分布（[[Wishart Distribution|Wishart distribution]]），记为
 
 $$
 
