@@ -1,45 +1,45 @@
 
-==证明不要求掌握.但是要知道本章提到过的各个性质,会在选择题中出现==
+==证明不要求掌握，但要知道本章提到的关键性质，选择题可能涉及。==
 
-# 第4章：[[Multivariate Normal Distribution|多元正态分布]]（The [[Multivariate Normal Distribution|Multivariate Normal Distribution]]）
+# 第4章：[[Multivariate Normal Distribution|多元正态分布]]（Multivariate Normal Distribution）
 
 ## 1. 引言（Introduction）
-- **1.1 概述（Overview）**：[[Multivariate Normal Distribution|多元正态分布]]（[[Multivariate Normal Distribution|Multivariate Normal Distribution]]）的重要性与应用场景。
+- **1.1 概述（Overview）**：多元正态分布的重要性与应用场景。
 - **1.2 适用场景（Use Cases）**：多元正态分布成立时的常见假设与使用条件。
 
-## 2. 多元正态密度及其性质（The [[Multivariate Normal Distribution|Multivariate]] Normal Density and Its Properties）
+## 2. 多元正态密度及其性质（Multivariate Normal Density and Its Properties）
 - **2.1 单变量正态分布（Univariate Normal Distribution）**：定义与概率密度函数。
-- **2.2 [[Multivariate Normal Distribution|多元正态分布]]（[[Multivariate Normal Distribution|Multivariate Normal Distribution]]）**：
+- **2.2 多元正态分布（Multivariate Normal Distribution）**：
   - 密度函数公式与解释。
   - 特例：二维正态分布（Bivariate Normal Distribution）。
 - **2.3 等概率密度轮廓（Equi-probability Density Contours）**：定义与椭圆性质。
 
-## 3. 多元正态分布的性质（Properties of [[Multivariate Normal Distribution|Multivariate Normal Distribution]]）
-- **3.1 [[Linear Combination|线性组合]]（[[Linear Combination|Linear]] Combinations）**：分布性质与反向推导。
+## 3. 多元正态分布的性质（Properties of Multivariate Normal Distribution）
+- **3.1 线性组合（Linear Combinations）**：分布性质与反向推导。
 - **3.2 仿射变换（Affine Transformations）**：线性变换下的分布行为。
 - **3.3 平移（Translation）**：常向量平移对分布的影响。
-- **3.4 条件分布（[[Conditional Heteroskedasticity|Conditional]] Distributions）**：条件均值与条件协方差公式。
+- **3.4 条件分布（Conditional Distributions）**：条件均值与条件协方差公式。
 
 ## 4. 二次型与相关分布（Quadratic Forms and Related Distributions）
-- **4.1 二次型（Quadratic Forms）**：$\\chi^2$ 分布及其相关性质。
+- **4.1 二次型（Quadratic Forms）**：\(\chi^2\) 分布及其相关性质。
 - **4.2 标准化（Standardization）**：标准正态分布的相关性质。
 
-## 5. 多元正态分布的抽样（Sampling from [[Multivariate Normal Distribution|Multivariate Normal Distribution]]）
+## 5. 多元正态分布的抽样（Sampling from Multivariate Normal Distribution）
 - **5.1 联合密度函数（Joint Density Function）**：样本联合分布的表达式。
-- **5.2 [[Maximum Likelihood Estimation|极大似然估计]]（[[Maximum Likelihood Estimation|Maximum Likelihood Estimation]]）**：样本均值与协方差矩阵的估计。
+- **5.2 [[Maximum Likelihood Estimation|极大似然估计]]（Maximum Likelihood Estimation）**：样本均值与协方差矩阵的估计。
 
-## 6. [[Wishart Distribution|Wishart 分布]]（[[Wishart Distribution|Wishart Distribution]]）
+## 6. [[Wishart Distribution|Wishart 分布]]（Wishart Distribution）
 - **6.1 定义（Definition）**：样本协方差矩阵分布（Distribution of the Sample Covariance Matrix）。
 - **6.2 性质（Properties）**：
   - 独立性与可加性。
   - 矩阵变换下的分布性质。
 
 ## 7. 大样本性质（Large Sample Properties）
-- **7.1 [[Central Limit Theorem|中心极限定理]]（[[Central Limit Theorem|Central Limit Theorem]]）**：大样本下的渐近性质。
+- **7.1 [[Central Limit Theorem|中心极限定理]]（Central Limit Theorem）**：大样本下的渐近性质。
 
 ## 8. 正态性假设检验（Assessing the Assumption of Normality）
 - **8.1 单变量正态性检验（Univariate Normality Tests）**：直方图与概率图方法。
-- **8.2 多变量正态性检验（[[Multivariate Normal Distribution|Multivariate]] Normality Tests）**：卡方距离与分位数比较。
+- **8.2 多变量正态性检验（Multivariate Normality Tests）**：卡方距离与分位数比较。
 
 -----------------------
 # 1. 引言（Introduction）
