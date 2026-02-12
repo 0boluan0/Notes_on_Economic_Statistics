@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/05_Floats and approximation methods.md",
+                "file": "03_Computer_Science/03_MIT 6.100L/06_Bisection search and Newton-Raphson.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "05_Floats and approximation methods"
+              "title": "06_Bisection search and Newton-Raphson"
             }
           }
         ]
@@ -281,12 +281,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "03_Computer_Science/03_MIT 6.100L/06_Bisection search and Newton-Raphson.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 06_Bisection search and Newton-Raphson"
             }
           },
           {
@@ -333,7 +334,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "457dc26df0b15a1b",
+  "active": "1a3aa5d6862a30c6",
   "lastOpenFiles": [
     "03_Computer_Science/03_MIT 6.100L/06_Bisection search and Newton-Raphson.md",
     "03_Computer_Science/03_MIT 6.100L/05_Floats and approximation methods.md",
