@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "05_Floats and approximation methods",
+      "path": "03_Computer_Science/03_MIT 6.100L/05_Floats and approximation methods.md"
+    },
+    {
       "basename": "06_Bisection search and Newton-Raphson",
       "path": "03_Computer_Science/03_MIT 6.100L/06_Bisection search and Newton-Raphson.md"
     },
     {
-      "basename": "05_Floats and approximation methods",
-      "path": "03_Computer_Science/03_MIT 6.100L/05_Floats and approximation methods.md"
+      "basename": "2026-02-13——Fri",
+      "path": "99_学习情况记录/2026-02-13——Fri.md"
     },
     {
       "basename": "04_Loops over strings, Guess-and-check and Binary",
@@ -195,10 +199,6 @@
     {
       "basename": "MIT18_06SCF11_ex1",
       "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex1.pdf"
-    },
-    {
-      "basename": "Introduction_to_Linear_Algebra(Strang)",
-      "path": "01_Math/02_linear algebra/Introduction_to_Linear_Algebra(Strang).pdf"
     }
   ],
   "omittedPaths": [],
