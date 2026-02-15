@@ -347,6 +347,21 @@ while abs(guess**2 - x) >= epsilon:
 ## 4. 课堂练习（You Try It）
 
 - [ ] 用 `epsilon` + `increment` 写一个“good enough” 的平方根，测试 `12345`、`54321`
+
+```python
+n = 12345
+epsilon = 0.01
+p = 0
+increment = 0.00001
+
+while abs( p**2 - n ) >=epsilon and p**2<=n:
+	p += increment
+	
+print(p)
+print(p**2)
+
+```
+
 - [ ] 实现能早早停止的 `while abs(...) < epsilon and guess**2 <= x` 版，并观察 `guess` 数量
 - [ ] 比较 `increment=0.0001` 与 `0.00001` 的运行速度/命中情况
 - [ ] 用 `while` 实现 `num % 2` 还是 `range` 选择判定奇数
