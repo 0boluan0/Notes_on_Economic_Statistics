@@ -302,9 +302,9 @@ print(x, 10 * 0.1)
 - 减小 `increment` 会明显降低性能；增大 `epsilon` 会牺牲精度
 
 ```python
-x = 36
-epsilon = 0.01
-increment = 0.0001
+x = 35
+epsilon = 0.001
+increment = 0.0000001
 guess = 0.0
 while abs(guess**2 - x) >= epsilon and guess**2 <= x:
     guess += increment

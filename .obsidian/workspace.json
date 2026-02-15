@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "03131a2febf80149",
+        "id": "1ee2b2282331b90f",
         "type": "tabs",
         "children": [
           {
-            "id": "1a3aa5d6862a30c6",
+            "id": "018c46bbae76f767",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2026-02-15——Sun.md",
+                "file": "03_Computer_Science/03_MIT 6.100L/05_Floats and approximation methods.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-02-15——Sun"
+              "title": "05_Floats and approximation methods"
             }
           }
         ]
@@ -281,13 +281,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2026-02-15——Sun.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-02-15——Sun"
+              "title": "Outline"
             }
           },
           {
@@ -334,16 +333,20 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "457dc26df0b15a1b",
   "lastOpenFiles": [
+    "03_Computer_Science/03_MIT 6.100L/05_Floats and approximation methods.md",
+    "99_学习情况记录/2026-02-14——Sat.md",
     "99_学习情况记录/2026-02-15——Sun.md",
+    "03_Computer_Science/03_MIT 6.100L/06_Bisection search and Newton-Raphson.md",
+    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec05.pdf",
+    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec06.pdf",
+    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec08.pdf",
+    "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf",
     "98_attachment/dashboards/2026-02-15-map.svg",
     "98_attachment/dashboards/2026-02-15-news.json",
-    "99_学习情况记录/2026-02-14——Sat.md",
     "98_attachment/dashboards/2026-02-14-map.svg",
     "98_attachment/dashboards/2026-02-14-news.json",
-    "03_Computer_Science/03_MIT 6.100L/05_Floats and approximation methods.md",
-    "03_Computer_Science/03_MIT 6.100L/06_Bisection search and Newton-Raphson.md",
     "99_学习情况记录/2026-02-13——Fri.md",
     "98_attachment/dashboards/2026-02-13-map.svg",
     "98_attachment/dashboards/2026-02-13-news.json",
@@ -363,10 +366,6 @@
     "01_Math/02_linear algebra/linear_algebra_and_its_applications_4th.pdf",
     "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md",
     "01_Math/02_linear algebra/02_vector spaces and subspace.md",
-    "reports/linking/link_incremental_preview_20260210-221406.json",
-    "reports/linking/link_full_apply_20260210-221324.json",
-    "reports/linking/link_full_apply_20260210-221224.json",
-    "reports/linking/link_full_preview_20260210-221211.json",
     "00_factor/concept/Column Space.md",
     "00_factor/concept/Coase Theorem.md",
     "00_factor/concept/Christoffersen Test.md",
@@ -376,7 +375,6 @@
     "00_factor/concept/Chi-square Distribution.md",
     "00_factor/concept/Cash Ratio.md",
     "00_factor/concept/Capital Market Line.md",
-    "00_factor/concept/Bootstrap Simulation.md",
     "98_attachment/dashboards/2026-02-10-map.svg",
     "98_attachment/linear_algebra/unit1_plots/session_1_14_review.png",
     "98_attachment/linear_algebra/unit1_plots/session_1_13_determinant.png",
