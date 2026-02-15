@@ -319,7 +319,7 @@ print(guess, 'is close to', x)
 
 ## 3. “好”算法：bisection、Newton-Raphson
 
-### Bisection search
+### Bisection search    
 
 - 需要：有序搜索区间 + 能告诉你猜测是偏大还是偏小
 - 每次猜 midpoint，成功则终止；否则根据反馈缩小区间到一半
