@@ -334,8 +334,10 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "018c46bbae76f767",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
+    "05_tools/Example Domain.md",
+    "05_tools/FastAPI.md",
     "03_Computer_Science/03_MIT 6.100L/06_Bisection search and Newton-Raphson.md",
     "05_tools/Paper2Any.md",
     "05_tools",
@@ -377,8 +379,6 @@
     "00_factor/concept/Christoffersen Test.md",
     "00_factor/concept/Classical Economics.md",
     "00_factor/concept/Chi-square Test.md",
-    "00_factor/concept/Central Limit Theorem.md",
-    "00_factor/concept/Chi-square Distribution.md",
     "98_attachment/dashboards/2026-02-10-map.svg",
     "98_attachment/linear_algebra/unit1_plots/session_1_14_review.png",
     "98_attachment/linear_algebra/unit1_plots/session_1_13_determinant.png",

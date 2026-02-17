@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tool"
+  short_description: "Generate 05_tools notes from GitHub or website URLs"
+  default_prompt: "Create or update a detailed tool note in 05_tools from a project URL."
