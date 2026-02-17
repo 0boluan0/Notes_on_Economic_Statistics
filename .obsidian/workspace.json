@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2026-02-16——Mon.md",
+                "file": "03_Computer_Science/03_MIT 6.100L/06_Bisection search and Newton-Raphson.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-02-16——Mon"
+              "title": "06_Bisection search and Newton-Raphson"
             }
           }
         ]
@@ -281,13 +281,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2026-02-16——Mon.md",
+                "file": "03_Computer_Science/03_MIT 6.100L/06_Bisection search and Newton-Raphson.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-02-16——Mon"
+              "title": "Outline of 06_Bisection search and Newton-Raphson"
             }
           },
           {
@@ -336,8 +336,11 @@
   },
   "active": "018c46bbae76f767",
   "lastOpenFiles": [
-    "99_学习情况记录/2026-02-15——Sun.md",
+    "99_学习情况记录/2026-02-17——Tue.md",
+    "98_attachment/dashboards/2026-02-17-map.svg",
+    "98_attachment/dashboards/2026-02-17-news.json",
     "99_学习情况记录/2026-02-16——Mon.md",
+    "99_学习情况记录/2026-02-15——Sun.md",
     "98_attachment/dashboards/2026-02-16-map.svg",
     "98_attachment/dashboards/2026-02-16-news.json",
     "03_Computer_Science/03_MIT 6.100L/05_Floats and approximation methods.md",
@@ -366,7 +369,6 @@
     "00_factor/concept/Hotelling Model.md",
     "99_学习情况记录/2026-02-10——Tue.md",
     "98_attachment/dashboards/2026-02-11-map.svg",
-    "98_attachment/dashboards/2026-02-11-news.json",
     "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md",
     "01_Math/02_linear algebra/02_vector spaces and subspace.md",
     "00_factor/concept/Column Space.md",
@@ -377,11 +379,9 @@
     "00_factor/concept/Central Limit Theorem.md",
     "00_factor/concept/Chi-square Distribution.md",
     "00_factor/concept/Cash Ratio.md",
-    "00_factor/concept/Capital Market Line.md",
     "98_attachment/dashboards/2026-02-10-map.svg",
     "98_attachment/linear_algebra/unit1_plots/session_1_14_review.png",
     "98_attachment/linear_algebra/unit1_plots/session_1_13_determinant.png",
-    "98_attachment/linear_algebra/unit1_plots/session_1_12_graph_network.png",
     "01_Math/01_calculus/01_calculus.canvas",
     "02_Economy/01_Econometrics/01_Econometrics.canvas",
     "01_Math/06_时间序列分析/06_时间序列分析.canvas",
