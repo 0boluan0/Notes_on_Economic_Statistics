@@ -3,7 +3,7 @@ date: 2026-02-17
 aliases: []
 tags: [tools, open-source, github]
 ---
-
+	
 # Paper2Any
 
 Turn paper/text/topic into editable research figures, technical route diagrams, and presentation slides.
