@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "2026-02-27——Fri",
+      "path": "99_学习情况记录/2026-02-27——Fri.md"
+    },
+    {
+      "basename": "2026-02-26——Thu",
+      "path": "99_学习情况记录/2026-02-26——Thu.md"
+    },
+    {
       "basename": "2026-02-25——Wed",
       "path": "99_学习情况记录/2026-02-25——Wed.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Classical Economics",
       "path": "00_factor/concept/Classical Economics.md"
-    },
-    {
-      "basename": "Chi-square Test",
-      "path": "00_factor/concept/Chi-square Test.md"
-    },
-    {
-      "basename": "Central Limit Theorem",
-      "path": "00_factor/concept/Central Limit Theorem.md"
     }
   ],
   "omittedPaths": [],
