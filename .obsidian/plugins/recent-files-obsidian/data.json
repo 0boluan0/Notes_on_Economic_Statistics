@@ -25,14 +25,6 @@
       "path": "04_method/Learning method.md"
     },
     {
-      "basename": "link_apply_batch1",
-      "path": "reports/link_apply_batch1.json"
-    },
-    {
-      "basename": "link_apply_batch2",
-      "path": "reports/link_apply_batch2.json"
-    },
-    {
       "basename": "AGENTS",
       "path": "AGENTS.md"
     },
@@ -49,28 +41,8 @@
       "path": "README.md"
     },
     {
-      "basename": "optimize_frontmatter",
-      "path": "optimize_frontmatter.py"
-    },
-    {
-      "basename": "link_knowledge",
-      "path": "link_knowledge.py"
-    },
-    {
       "basename": "CLAUDE",
       "path": "CLAUDE.md"
-    },
-    {
-      "basename": "clean_aliases",
-      "path": "scripts/clean_aliases.py"
-    },
-    {
-      "basename": "audit_kcs",
-      "path": "scripts/audit_kcs.py"
-    },
-    {
-      "basename": "link_full_apply_20260210-221224",
-      "path": "reports/linking/link_full_apply_20260210-221224.json"
     },
     {
       "basename": "2026-02-27——Fri",
