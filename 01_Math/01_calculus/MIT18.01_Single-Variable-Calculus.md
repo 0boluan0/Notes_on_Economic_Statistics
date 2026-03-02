@@ -1,4 +1,4 @@
-# MIT 18.01 单变量微积分（[[Single-Factor Model|Single]]-Variable Calculus）
+# MIT 18.01 单变量微积分（Single-Variable Calculus）
 
 ## 1. [[Derivative (2)|微分]]（Differentiation）
 
