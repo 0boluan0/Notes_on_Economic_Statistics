@@ -1,6 +1,42 @@
 {
   "recentFiles": [
     {
+      "basename": "2026-03-02——Mon",
+      "path": "99_学习情况记录/2026-03-02——Mon.md"
+    },
+    {
+      "basename": "2026-03-01——周日",
+      "path": "99_学习情况记录/2026-03-01——周日.md"
+    },
+    {
+      "basename": "AGENTS",
+      "path": "AGENTS.md"
+    },
+    {
+      "basename": "2026-02-28——周六",
+      "path": "99_学习情况记录/2026-02-28——周六.md"
+    },
+    {
+      "basename": "01_matrices and Gaussian Elimination",
+      "path": "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md"
+    },
+    {
+      "basename": "01_Ax=b and the Four  Subspaces",
+      "path": "01_Math/02_linear algebra/01_Ax=b and the Four  Subspaces.md"
+    },
+    {
+      "basename": "00_perface",
+      "path": "01_Math/02_linear algebra/00_perface.md"
+    },
+    {
+      "basename": "linear_algebra_and_its_applications_4th",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/linear_algebra_and_its_applications_4th.pdf"
+    },
+    {
+      "basename": "Introduction_to_Linear_Algebra(Strang)",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/Introduction_to_Linear_Algebra(Strang).pdf"
+    },
+    {
       "basename": "MIT18_06SCF11_final_ex",
       "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/01_Exams/MIT18_06SCF11_final_ex.pdf"
     },
@@ -15,14 +51,6 @@
     {
       "basename": "MIT18_06SCF11_Ses1.1prob",
       "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf"
-    },
-    {
-      "basename": "01_matrices and Gaussian Elimination",
-      "path": "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md"
-    },
-    {
-      "basename": "01_Ax=b and the Four  Subspaces",
-      "path": "01_Math/02_linear algebra/01_Ax=b and the Four  Subspaces.md"
     },
     {
       "basename": "MIT18.01_Single-Variable-Calculus",
@@ -49,16 +77,8 @@
       "path": "01_Math/01_calculus/Lecture_notes/1-7.pdf"
     },
     {
-      "basename": "2026-03-01——周日",
-      "path": "99_学习情况记录/2026-03-01——周日.md"
-    },
-    {
       "basename": "MSTNN",
       "path": "00_factor/00_hub/MSTNN.md"
-    },
-    {
-      "basename": "2026-02-28——周六",
-      "path": "99_学习情况记录/2026-02-28——周六.md"
     },
     {
       "basename": "Growth Theory-hub",
@@ -75,10 +95,6 @@
     {
       "basename": "Learning method",
       "path": "04_method/Learning method.md"
-    },
-    {
-      "basename": "AGENTS",
-      "path": "AGENTS.md"
     },
     {
       "basename": "01_building abstractions with functions",
@@ -137,18 +153,6 @@
       "path": "01_Math/02_linear algebra/Unit2_课堂笔记.md"
     },
     {
-      "basename": "linear_algebra_and_its_applications_4th",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/linear_algebra_and_its_applications_4th.pdf"
-    },
-    {
-      "basename": "Introduction_to_Linear_Algebra(Strang)",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/Introduction_to_Linear_Algebra(Strang).pdf"
-    },
-    {
-      "basename": "00_perface",
-      "path": "01_Math/02_linear algebra/00_perface.md"
-    },
-    {
       "basename": "MIT18_06SCF11_ex1",
       "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex1.pdf"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Example Domain",
       "path": "05_tools/Example Domain.md"
-    },
-    {
-      "basename": "FastAPI",
-      "path": "05_tools/FastAPI.md"
     }
   ],
   "omittedPaths": [],

@@ -24,6 +24,7 @@ from urllib.request import Request, urlopen
 
 USER_AGENT = "today-dashboard/1.0 (local)"
 GDELT_ENDPOINT = "https://api.gdeltproject.org/api/v2/doc/doc"
+WORLDMONITOR_DEFAULT_ENDPOINT = "https://worldmonitor.app/api/news/v1/list-feed-digest"
 ASSETS_DIR = Path(__file__).resolve().parents[1] / "assets"
 TOPOJSON_PATH = ASSETS_DIR / "countries-110m.json"
 FETCH_ERROR_COUNT = 0
@@ -206,6 +207,35 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Attempt machine translation for Chinese lines via LibreTranslate (optional).",
     )
+    default_source = os.environ.get("TODAY_NEWS_SOURCE", "auto").strip().lower()
+    if default_source not in {"auto", "worldmonitor", "gdelt"}:
+        default_source = "auto"
+    parser.add_argument(
+        "--source",
+        choices=["auto", "worldmonitor", "gdelt"],
+        default=default_source,
+        help="News source: worldmonitor RSS digest, gdelt, or auto (try worldmonitor then gdelt).",
+    )
+    parser.add_argument(
+        "--worldmonitor-url",
+        default=os.environ.get("TODAY_WORLDMONITOR_URL", WORLDMONITOR_DEFAULT_ENDPOINT),
+        help="World Monitor list-feed-digest endpoint URL.",
+    )
+    parser.add_argument(
+        "--worldmonitor-origin",
+        default=os.environ.get("TODAY_WORLDMONITOR_ORIGIN", "https://worldmonitor.app"),
+        help="Origin header used for World Monitor API calls (avoids API-key requirement).",
+    )
+    parser.add_argument(
+        "--worldmonitor-variant",
+        default=os.environ.get("TODAY_WORLDMONITOR_VARIANT", "full"),
+        help="World Monitor variant: full/tech/finance/happy.",
+    )
+    parser.add_argument(
+        "--worldmonitor-lang",
+        default=os.environ.get("TODAY_WORLDMONITOR_LANG", "en"),
+        help="World Monitor language code (e.g. en, zh, ja).",
+    )
     return parser.parse_args()
 
 
@@ -236,9 +266,12 @@ def parse_gdelt_date(value: str) -> Optional[dt.datetime]:
         return None
 
 
-def fetch_json(url: str) -> Optional[dict]:
+def fetch_json(url: str, extra_headers: Optional[Dict[str, str]] = None) -> Optional[dict]:
     global FETCH_ERROR_COUNT
-    req = Request(url, headers={"User-Agent": USER_AGENT})
+    headers = {"User-Agent": USER_AGENT}
+    if extra_headers:
+        headers.update(extra_headers)
+    req = Request(url, headers=headers)
     try:
         with urlopen(req, timeout=20) as resp:
             payload = resp.read().decode("utf-8", errors="ignore")
@@ -291,6 +324,71 @@ def fetch_category(category: str, max_records: int = 80) -> List[NewsItem]:
             )
         )
     return items
+
+
+WORLDMONITOR_REGION_CATEGORY_MAP = {
+    "us": "AMERICAS",
+    "latam": "AMERICAS",
+    "europe": "EUROPE",
+    "middleeast": "MENA",
+    "africa": "AFRICA",
+    "asia": "APAC",
+}
+
+
+def fetch_worldmonitor_digest(
+    endpoint: str,
+    variant: str,
+    lang: str,
+    origin: str,
+) -> Tuple[List[NewsItem], Optional[str]]:
+    params = {"variant": variant, "lang": lang}
+    url = f"{endpoint}?{urlencode(params)}"
+    data = fetch_json(url, extra_headers={"Origin": origin, "Accept": "application/json"})
+    if not data:
+        return [], None
+
+    generated_at = data.get("generatedAt")
+    categories = data.get("categories") or {}
+    if not isinstance(categories, dict):
+        return [], generated_at if isinstance(generated_at, str) else None
+
+    items: List[NewsItem] = []
+    for category, bucket in categories.items():
+        if not isinstance(bucket, dict):
+            continue
+        bucket_items = bucket.get("items") or []
+        if not isinstance(bucket_items, list):
+            continue
+        for row in bucket_items:
+            if not isinstance(row, dict):
+                continue
+            raw_title = row.get("title") or ""
+            title = re.sub(r"\s+", " ", str(raw_title)).strip()
+            link = str(row.get("link") or "").strip()
+            source = str(row.get("source") or "").strip()
+            published_at = row.get("publishedAt")
+
+            if not title or not link:
+                continue
+            try:
+                ts = dt.datetime.fromtimestamp(int(published_at) / 1000, tz=dt.timezone.utc)
+            except Exception:
+                continue
+
+            region = WORLDMONITOR_REGION_CATEGORY_MAP.get(str(category)) or detect_region(title)
+            items.append(
+                NewsItem(
+                    title=title,
+                    link=link,
+                    source=source or urlparse(link).netloc or "Unknown",
+                    timestamp=ts,
+                    category=str(category),
+                    region=region,
+                )
+            )
+
+    return items, generated_at if isinstance(generated_at, str) else None
 
 
 def detect_region(text: str) -> Optional[str]:
@@ -855,12 +953,38 @@ def main() -> int:
     tz_label = now.tzname() or "Local"
     window_text = f"{window_start:%Y-%m-%d %H:%M} ~ {window_end:%Y-%m-%d %H:%M}"
 
+    attempted_sources: List[str] = []
+    used_source: Optional[str] = None
+    source_note: Optional[str] = None
+
     items_all: List[NewsItem] = []
-    for category in NEWS_CATEGORIES:
-        items_all.extend(fetch_category(category))
+    if args.source in {"auto", "worldmonitor"}:
+        attempted_sources.append("worldmonitor")
+        wm_items, wm_generated_at = fetch_worldmonitor_digest(
+            endpoint=args.worldmonitor_url,
+            variant=args.worldmonitor_variant,
+            lang=args.worldmonitor_lang,
+            origin=args.worldmonitor_origin,
+        )
+        if wm_items:
+            items_all = wm_items
+            used_source = "worldmonitor"
+            if wm_generated_at:
+                source_note = f"> 数据源：World Monitor RSS digest（generatedAt: {wm_generated_at}）。"
+            else:
+                source_note = "> 数据源：World Monitor RSS digest。"
+
+    if not items_all and args.source in {"auto", "gdelt"}:
+        attempted_sources.append("gdelt")
+        for category in NEWS_CATEGORIES:
+            items_all.extend(fetch_category(category))
+        if items_all:
+            used_source = "gdelt"
+            source_note = "> 数据源：GDELT 24h doc API。"
 
     for item in items_all:
-        item.region = detect_region(item.title)
+        if not item.region:
+            item.region = detect_region(item.title)
 
     items_all = filter_window(items_all, window_start, window_end)
     items_all = dedupe_items(items_all)
@@ -887,14 +1011,19 @@ def main() -> int:
     output_dir = vault_root / "98_attachment" / "dashboards"
     output_dir.mkdir(parents=True, exist_ok=True)
     cache_path = output_dir / f"{target_date:%Y-%m-%d}-news.json"
-    data_status_note: Optional[str] = None
+    data_status_note: Optional[str] = source_note
     no_data_reason: Optional[str] = None
     if not items_all:
         cached = load_cache(cache_path)
         if cached:
             items_all = cached
             items_all = dedupe_items(items_all)
-            data_status_note = f"> 数据状态：在线抓取失败，使用本地缓存（{target_date:%Y-%m-%d}）。"
+            note_lines: List[str] = [
+                f"> 数据状态：在线抓取失败，使用本地缓存（{target_date:%Y-%m-%d}）。"
+            ]
+            if attempted_sources:
+                note_lines.append("> 在线数据源：" + ", ".join(attempted_sources) + "。")
+            data_status_note = "\n".join(note_lines)
             for item in items_all:
                 if not item.region:
                     item.region = detect_region(item.title)
@@ -914,7 +1043,8 @@ def main() -> int:
             }
         elif FETCH_ERROR_COUNT > 0:
             no_data_reason = "网络受限，未抓取到有效新闻（可提权重试）"
-            data_status_note = "> 数据状态：在线抓取失败，且本地无当日缓存。"
+            attempted = ", ".join(attempted_sources) if attempted_sources else (used_source or "online")
+            data_status_note = f"> 数据状态：在线抓取失败（{attempted}），且本地无当日缓存。"
     elif items_all:
         save_cache(cache_path, items_all)
     finance_items = [item for item in items_all if item.category == "finance"]

@@ -27,6 +27,7 @@ Use this workflow every time the user asks for `/today`.
    - Run:
      - `python3 .codex/skills/today/scripts/build_news_dashboard.py --date YYYY-MM-DD`
    - The script creates a static SVG map in `98_attachment/dashboards` and prints the full module 1 markdown to stdout.
+   - Data source: default is `--source auto` (try World Monitor RSS digest, then fallback to GDELT). Override with `--source worldmonitor|gdelt` or env `TODAY_NEWS_SOURCE`.
    - Use the printed markdown block directly (it already includes map embed + heat-weighted summary table + finance/tech bullets).
    - Optional: add `--translate` and set `LIBRETRANSLATE_URL` to enable machine translation for the Chinese lines.
    - If translation is not enabled or is inaccurate, translate the summaries manually before saving the note.
