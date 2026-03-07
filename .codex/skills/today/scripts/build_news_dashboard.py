@@ -249,6 +249,12 @@ def now_local() -> dt.datetime:
     return dt.datetime.now().astimezone()
 
 
+def resolve_window_end(target_date: dt.date, current_now: dt.datetime) -> dt.datetime:
+    if target_date == current_now.date():
+        return current_now
+    return dt.datetime.combine(target_date, current_now.timetz())
+
+
 def parse_gdelt_date(value: str) -> Optional[dt.datetime]:
     if not value:
         return None
@@ -948,9 +954,9 @@ def main() -> int:
     args = parse_args()
     target_date = parse_date(args.date)
     now = now_local()
-    window_end = now
-    window_start = now - dt.timedelta(hours=24)
-    tz_label = now.tzname() or "Local"
+    window_end = resolve_window_end(target_date, now)
+    window_start = window_end - dt.timedelta(hours=24)
+    tz_label = window_end.tzname() or "Local"
     window_text = f"{window_start:%Y-%m-%d %H:%M} ~ {window_end:%Y-%m-%d %H:%M}"
 
     attempted_sources: List[str] = []
