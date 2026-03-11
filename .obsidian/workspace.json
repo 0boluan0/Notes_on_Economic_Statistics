@@ -73,7 +73,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2026-03-09——Mon.md",
+                "file": "99_学习情况记录/2026-03-11——Wed.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -88,7 +88,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-03-09——Mon"
+              "title": "2026-03-11——Wed"
             }
           }
         ],
@@ -342,13 +342,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2026-03-09——Mon.md",
+                "file": "99_学习情况记录/2026-03-11——Wed.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-03-09——Mon"
+              "title": "Outline of 2026-03-11——Wed"
             }
           },
           {
@@ -398,6 +398,7 @@
   },
   "active": "32212bdbabb18fab",
   "lastOpenFiles": [
+    "99_学习情况记录/2026-03-09——Mon.md",
     "99_学习情况记录/2026-03-11——Wed.md",
     "98_attachment/dashboards/2026-03-11-map.svg",
     "98_attachment/dashboards/2026-03-11-news.json",
@@ -405,7 +406,6 @@
     "98_attachment/dashboards/2026-03-10-map.svg",
     "98_attachment/dashboards/2026-03-10-news.json",
     "99_学习情况记录/2026-03-08——Sun.md",
-    "99_学习情况记录/2026-03-09——Mon.md",
     "98_attachment/dashboards/2026-03-09-map.svg",
     "98_attachment/dashboards/2026-03-09-news.json",
     "99_学习情况记录/2026-03-07——Sat.md",
