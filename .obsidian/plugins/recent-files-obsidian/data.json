@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "2026-03-13——Fri",
+      "path": "99_学习情况记录/2026-03-13——Fri.md"
+    },
+    {
+      "basename": "2026-03-12——Thu",
+      "path": "99_学习情况记录/2026-03-12——Thu.md"
+    },
+    {
       "basename": "2026-03-11——Wed",
       "path": "99_学习情况记录/2026-03-11——Wed.md"
     },
@@ -191,14 +199,6 @@
     {
       "basename": "Public Goods",
       "path": "00_factor/concept/Public Goods.md"
-    },
-    {
-      "basename": "DID Writing Template",
-      "path": "00_factor/writing/DID Writing Template.md"
-    },
-    {
-      "basename": "_link_check_report",
-      "path": "00_factor/_link_check_report.md"
     }
   ],
   "omittedPaths": [],
