@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/>
+    </marker>
+  </defs>
+  <rect width="960" height="420" fill="#f8fafc"/>
+  <rect x="30" y="30" width="420" height="360" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="510" y="30" width="420" height="360" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="240" y="70" text-anchor="middle" font-size="28" fill="#0f172a" font-family="Helvetica, Arial, sans-serif">Row picture</text>
+  <text x="720" y="70" text-anchor="middle" font-size="28" fill="#0f172a" font-family="Helvetica, Arial, sans-serif">Column picture</text>
+
+  <line x1="110" y1="330" x2="370" y2="90" stroke="#2563eb" stroke-width="5"/>
+  <line x1="120" y1="110" x2="380" y2="300" stroke="#dc2626" stroke-width="5"/>
+  <circle cx="248" cy="202" r="8" fill="#111827"/>
+  <text x="258" y="190" font-size="22" fill="#111827" font-family="Helvetica, Arial, sans-serif">solution</text>
+  <line x1="80" y1="350" x2="395" y2="350" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="90" y1="360" x2="90" y2="70" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="350" y="378" font-size="20" fill="#475569" font-family="Helvetica, Arial, sans-serif">x</text>
+  <text x="60" y="92" font-size="20" fill="#475569" font-family="Helvetica, Arial, sans-serif">y</text>
+  <text x="150" y="120" font-size="18" fill="#dc2626" font-family="Helvetica, Arial, sans-serif">row 2</text>
+  <text x="280" y="110" font-size="18" fill="#2563eb" font-family="Helvetica, Arial, sans-serif">row 1</text>
+
+  <line x1="560" y1="340" x2="560" y2="90" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="560" y1="340" x2="860" y2="340" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="560" y1="340" x2="690" y2="150" stroke="#2563eb" stroke-width="6" marker-end="url(#arrow)"/>
+  <line x1="560" y1="340" x2="840" y2="240" stroke="#dc2626" stroke-width="6" marker-end="url(#arrow)"/>
+  <line x1="560" y1="340" x2="780" y2="130" stroke="#0f766e" stroke-width="6" marker-end="url(#arrow)"/>
+  <line x1="690" y1="150" x2="780" y2="130" stroke="#94a3b8" stroke-dasharray="8 6" stroke-width="3"/>
+  <line x1="840" y1="240" x2="780" y2="130" stroke="#94a3b8" stroke-dasharray="8 6" stroke-width="3"/>
+  <text x="650" y="150" font-size="20" fill="#2563eb" font-family="Helvetica, Arial, sans-serif">x₁ a₁</text>
+  <text x="770" y="260" font-size="20" fill="#dc2626" font-family="Helvetica, Arial, sans-serif">x₂ a₂</text>
+  <text x="790" y="126" font-size="22" fill="#0f172a" font-family="Helvetica, Arial, sans-serif">b</text>
+  <text x="605" y="374" font-size="18" fill="#475569" font-family="Helvetica, Arial, sans-serif">combine columns to reach b</text>
+  <text x="70" y="40" font-size="16" fill="#64748b" font-family="Helvetica, Arial, sans-serif">Ax = b as intersections vs linear combinations</text>
+</svg>

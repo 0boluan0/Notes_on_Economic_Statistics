@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" width="860" height="420">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/>
+    </marker>
+  </defs>
+  <rect width="860" height="420" fill="#f8fafc"/>
+  <rect x="40" y="60" width="360" height="300" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="470" y="60" width="350" height="300" rx="16" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="130" cy="140" r="18" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <circle cx="280" cy="130" r="18" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <circle cx="200" cy="270" r="18" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+  <text x="124" y="146" font-size="18" fill="#1e3a8a" font-family="Helvetica, Arial, sans-serif">1</text>
+  <text x="274" y="136" font-size="18" fill="#1e3a8a" font-family="Helvetica, Arial, sans-serif">2</text>
+  <text x="194" y="276" font-size="18" fill="#1e3a8a" font-family="Helvetica, Arial, sans-serif">3</text>
+  <line x1="148" y1="140" x2="262" y2="132" stroke="#1f2937" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="272" y1="146" x2="210" y2="252" stroke="#1f2937" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="184" y1="254" x2="140" y2="157" stroke="#1f2937" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="190" y="118" font-size="18" fill="#334155" font-family="Helvetica, Arial, sans-serif">e₁</text>
+  <text x="250" y="210" font-size="18" fill="#334155" font-family="Helvetica, Arial, sans-serif">e₂</text>
+  <text x="150" y="215" font-size="18" fill="#334155" font-family="Helvetica, Arial, sans-serif">e₃</text>
+  <text x="220" y="95" text-anchor="middle" font-size="26" fill="#0f172a" font-family="Helvetica, Arial, sans-serif">Directed graph</text>
+  <text x="645" y="95" text-anchor="middle" font-size="26" fill="#0f172a" font-family="Helvetica, Arial, sans-serif">Incidence matrix B</text>
+  <text x="530" y="150" font-size="22" fill="#475569" font-family="Helvetica, Arial, sans-serif">e₁</text>
+  <text x="610" y="150" font-size="22" fill="#475569" font-family="Helvetica, Arial, sans-serif">e₂</text>
+  <text x="690" y="150" font-size="22" fill="#475569" font-family="Helvetica, Arial, sans-serif">e₃</text>
+  <text x="500" y="205" font-size="22" fill="#475569" font-family="Helvetica, Arial, sans-serif">node 1</text>
+  <text x="500" y="255" font-size="22" fill="#475569" font-family="Helvetica, Arial, sans-serif">node 2</text>
+  <text x="500" y="305" font-size="22" fill="#475569" font-family="Helvetica, Arial, sans-serif">node 3</text>
+  <text x="555" y="205" font-size="28" fill="#111827" font-family="Helvetica, Arial, sans-serif">-1</text>
+  <text x="635" y="205" font-size="28" fill="#111827" font-family="Helvetica, Arial, sans-serif">0</text>
+  <text x="715" y="205" font-size="28" fill="#111827" font-family="Helvetica, Arial, sans-serif">1</text>
+  <text x="555" y="255" font-size="28" fill="#111827" font-family="Helvetica, Arial, sans-serif">1</text>
+  <text x="635" y="255" font-size="28" fill="#111827" font-family="Helvetica, Arial, sans-serif">-1</text>
+  <text x="715" y="255" font-size="28" fill="#111827" font-family="Helvetica, Arial, sans-serif">0</text>
+  <text x="555" y="305" font-size="28" fill="#111827" font-family="Helvetica, Arial, sans-serif">0</text>
+  <text x="635" y="305" font-size="28" fill="#111827" font-family="Helvetica, Arial, sans-serif">1</text>
+  <text x="715" y="305" font-size="28" fill="#111827" font-family="Helvetica, Arial, sans-serif">-1</text>
+  <text x="645" y="348" text-anchor="middle" font-size="18" fill="#64748b" font-family="Helvetica, Arial, sans-serif">each column records the edge's start and end nodes</text>
+</svg>

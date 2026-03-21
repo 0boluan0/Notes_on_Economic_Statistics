@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "MIT18.01_Single-Variable-Calculus",
+      "path": "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md"
+    },
+    {
+      "basename": "geometric interpretation of derivative",
+      "path": "00_factor/concept/geometric interpretation of derivative.md"
+    },
+    {
+      "basename": "18-25",
+      "path": "01_Math/01_calculus/Lecture_notes/18-25.pdf"
+    },
+    {
+      "basename": "26-38",
+      "path": "01_Math/01_calculus/Lecture_notes/26-38.pdf"
+    },
+    {
+      "basename": "9-16",
+      "path": "01_Math/01_calculus/Lecture_notes/9-16.pdf"
+    },
+    {
+      "basename": "1-7",
+      "path": "01_Math/01_calculus/Lecture_notes/1-7.pdf"
+    },
+    {
       "basename": "01_Ax = b and the Four Subspaces",
       "path": "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md"
     },
@@ -141,28 +165,8 @@
       "path": "AGENTS.md"
     },
     {
-      "basename": "MIT18.01_Single-Variable-Calculus",
-      "path": "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md"
-    },
-    {
       "basename": "Single-Factor Model",
       "path": "00_factor/concept/Single-Factor Model.md"
-    },
-    {
-      "basename": "26-38",
-      "path": "01_Math/01_calculus/Lecture_notes/26-38.pdf"
-    },
-    {
-      "basename": "18-25",
-      "path": "01_Math/01_calculus/Lecture_notes/18-25.pdf"
-    },
-    {
-      "basename": "9-16",
-      "path": "01_Math/01_calculus/Lecture_notes/9-16.pdf"
-    },
-    {
-      "basename": "1-7",
-      "path": "01_Math/01_calculus/Lecture_notes/1-7.pdf"
     },
     {
       "basename": "MSTNN",
@@ -195,10 +199,6 @@
     {
       "basename": "CLAUDE",
       "path": "CLAUDE.md"
-    },
-    {
-      "basename": "2026-02-27——Fri",
-      "path": "99_学习情况记录/2026-02-27——Fri.md"
     }
   ],
   "omittedPaths": [],
