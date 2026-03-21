@@ -14,12 +14,16 @@ tags:
 
 [[Vector Space|向量空间]]
 [[Matrix Rank|矩阵的秩]]
+[[Orthogonality|正交性]]
+[[Linear Transformation|线性变换]]
 
 ## 向量空间
 
 [[Vector Space|向量空间]]
 [[Subspace|子空间]]
 [[Linear Independence|线性无关]]
+[[Row Space|行空间]]
+[[Left Nullspace|左零空间]]
 
 ## 矩阵运算与分解
 
@@ -27,22 +31,32 @@ tags:
 [[Matrix Rank|矩阵的秩]]
 [[Matrix rank properties|矩阵秩的性质]]
 [[Null Space|零空间]]
+[[Column Space|列空间]]
+[[Row Space|行空间]]
 
 ### 矩阵分解
 [[LU Decomposition|LU分解]]
 [[Permutation Matrix|置换矩阵]]
 [[Spectral Decomposition|谱分解]]
+[[Diagonalization|对角化]]
+[[Singular Value Decomposition|奇异值分解]]
 
 ### 特殊矩阵
 [[Symmetric Matrix|对称矩阵]]
 [[Singular Matrix|奇异矩阵]]
 [[Wishart Distribution|Wishart分布]]
+[[Orthogonal Matrix|正交矩阵]]
+[[Projection Matrix|投影矩阵]]
+[[Markov Matrix|马尔可夫矩阵]]
 
 ## 线性方程组
 
 [[Linear system solution structure|线性方程组解的结构]]
 [[Determinant|行列式]]
 [[Matrix Inverse|逆矩阵]]
+[[Least Squares|最小二乘]]
+[[Pseudoinverse|伪逆]]
+[[Cramer's Rule|克拉默法则]]
 
 ## 多变量统计
 
@@ -61,10 +75,11 @@ tags:
 
 ## 课程笔记
 
-- [[Vector Space|01_向量空间]]
-- [[Matrix Operations|02_矩阵运算]]
-- [[Linear Systems|03_线性方程组]]
-- [[Multivariate Normal Distribution|04_多元正态分布]]
+- [[00_MIT OCW 18.06SC course map|MIT OCW 18.06SC course map]]
+- [[01_Ax = b and the Four Subspaces|Ax = b and the Four Subspaces]]
+- [[02_Least Squares, Determinants and Eigenvalues|Least Squares, Determinants and Eigenvalues]]
+- [[03_Positive Definite Matrices and Applications|Positive Definite Matrices and Applications]]
+- [[04_Review and exam roadmap|Review and exam roadmap]]
 
 ## 课程笔记反链
 
