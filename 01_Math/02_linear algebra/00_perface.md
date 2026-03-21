@@ -97,4 +97,3 @@ $$
 
 将Ax看成A的column combination.
 
-
