@@ -1,8 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "MIT18_06SCF11_Ses1.1sum",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.1sum.pdf"
+    },
+    {
       "basename": "01_Ax=b and the Four  Subspaces",
       "path": "01_Math/02_linear algebra/01_Ax=b and the Four  Subspaces.md"
+    },
+    {
+      "basename": "index",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/index.md"
     },
     {
       "basename": "00_perface",
@@ -10,11 +18,47 @@
     },
     {
       "basename": "linear_algebra_and_its_applications_4th",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/linear_algebra_and_its_applications_4th.pdf"
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Other/linear_algebra_and_its_applications_4th.pdf"
     },
     {
       "basename": "Introduction_to_Linear_Algebra(Strang)",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/Introduction_to_Linear_Algebra(Strang).pdf"
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Other/Introduction_to_Linear_Algebra(Strang).pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_Ses1.1prob",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_ex1",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex1.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_FinalRevsum",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/01_Exams/MIT18_06SCF11_FinalRevsum.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_final_exs",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/01_Exams/MIT18_06SCF11_final_exs.pdf"
+    },
+    {
+      "basename": "MIT18_06SCF11_final_ex",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/01_Exams/MIT18_06SCF11_final_ex.pdf"
+    },
+    {
+      "basename": "2026-03-21——Sat",
+      "path": "99_学习情况记录/2026-03-21——Sat.md"
+    },
+    {
+      "basename": "Growth Theory-hub",
+      "path": "00_factor/00_hub/Growth Theory-hub.md"
+    },
+    {
+      "basename": "2026-03-07——Sat",
+      "path": "99_学习情况记录/2026-03-07——Sat.md"
+    },
+    {
+      "basename": "2026-02-09——Mon",
+      "path": "99_学习情况记录/2026-02-09——Mon.md"
     },
     {
       "basename": "DID",
@@ -57,10 +101,6 @@
       "path": "99_学习情况记录/2026-03-08——Sun.md"
     },
     {
-      "basename": "2026-03-07——Sat",
-      "path": "99_学习情况记录/2026-03-07——Sat.md"
-    },
-    {
       "basename": "2026-02-28——Sat",
       "path": "99_学习情况记录/2026-02-28——Sat.md"
     },
@@ -93,22 +133,6 @@
       "path": "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md"
     },
     {
-      "basename": "MIT18_06SCF11_final_ex",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/01_Exams/MIT18_06SCF11_final_ex.pdf"
-    },
-    {
-      "basename": "MIT18_06SCF11_final_exs",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/01_Exams/MIT18_06SCF11_final_exs.pdf"
-    },
-    {
-      "basename": "MIT18_06SCF11_FinalRevsum",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/01_Exams/MIT18_06SCF11_FinalRevsum.pdf"
-    },
-    {
-      "basename": "MIT18_06SCF11_Ses1.1prob",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf"
-    },
-    {
       "basename": "MIT18.01_Single-Variable-Calculus",
       "path": "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md"
     },
@@ -135,10 +159,6 @@
     {
       "basename": "MSTNN",
       "path": "00_factor/00_hub/MSTNN.md"
-    },
-    {
-      "basename": "Growth Theory-hub",
-      "path": "00_factor/00_hub/Growth Theory-hub.md"
     },
     {
       "basename": "Econometrics-hub",
@@ -179,26 +199,6 @@
     {
       "basename": "04_Loops over strings, Guess-and-check and Binary",
       "path": "03_Computer_Science/03_MIT 6.100L/04_Loops over strings, Guess-and-check and Binary.md"
-    },
-    {
-      "basename": "Over-identified",
-      "path": "00_factor/concept/Over-identified.md"
-    },
-    {
-      "basename": "2026-02-03——Tue",
-      "path": "99_学习情况记录/2026-02-03——Tue.md"
-    },
-    {
-      "basename": "SQL",
-      "path": "03_Computer_Science/99_Miscellaneous/SQL.md"
-    },
-    {
-      "basename": "the_missing_semester",
-      "path": "03_Computer_Science/99_Miscellaneous/the_missing_semester.md"
-    },
-    {
-      "basename": "2026-02-26——Thu",
-      "path": "99_学习情况记录/2026-02-26——Thu.md"
     }
   ],
   "omittedPaths": [],
