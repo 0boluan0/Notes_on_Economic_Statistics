@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "01_Ax=b and the Four  Subspaces",
+      "path": "01_Math/02_linear algebra/01_Ax=b and the Four  Subspaces.md"
+    },
+    {
+      "basename": "00_perface",
+      "path": "01_Math/02_linear algebra/00_perface.md"
+    },
+    {
+      "basename": "linear_algebra_and_its_applications_4th",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/linear_algebra_and_its_applications_4th.pdf"
+    },
+    {
+      "basename": "Introduction_to_Linear_Algebra(Strang)",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/Introduction_to_Linear_Algebra(Strang).pdf"
+    },
+    {
       "basename": "DID",
       "path": "00_factor/concept/DID.md"
     },
@@ -75,22 +91,6 @@
     {
       "basename": "01_matrices and Gaussian Elimination",
       "path": "01_Math/02_linear algebra/01_matrices and Gaussian Elimination.md"
-    },
-    {
-      "basename": "01_Ax=b and the Four  Subspaces",
-      "path": "01_Math/02_linear algebra/01_Ax=b and the Four  Subspaces.md"
-    },
-    {
-      "basename": "00_perface",
-      "path": "01_Math/02_linear algebra/00_perface.md"
-    },
-    {
-      "basename": "linear_algebra_and_its_applications_4th",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/linear_algebra_and_its_applications_4th.pdf"
-    },
-    {
-      "basename": "Introduction_to_Linear_Algebra(Strang)",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/Introduction_to_Linear_Algebra(Strang).pdf"
     },
     {
       "basename": "MIT18_06SCF11_final_ex",
