@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_Fragments/Learning method.md",
+                "file": "04_Fragments/Learn Any Skill So Fast That People Think You're A Genius - 2026-03-28.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Learning method"
+              "title": "Learn Any Skill So Fast That People Think You're A Genius - 2026-03-28"
             }
           }
         ]
@@ -281,13 +281,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_Fragments/Learning method.md",
+                "file": "04_Fragments/Learn Any Skill So Fast That People Think You're A Genius - 2026-03-28.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Learning method"
+              "title": "Outline of Learn Any Skill So Fast That People Think You're A Genius - 2026-03-28"
             }
           },
           {
@@ -335,8 +335,15 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "fce6787a2e1b121b",
   "lastOpenFiles": [
+    "04_Fragments/AutoResearch Clearly Explained (and how to use it) - 2026-03-28.md",
+    "04_Fragments/Learn Any Skill So Fast That People Think You're A Genius - 2026-03-28.md",
+    "04_Fragments/Learning method.md",
+    "04_Fragments/2026-03-28 - AutoResearch Clearly Explained (and how to use it).md",
+    "99_学习情况记录/2026-03-28——Sat.md",
+    "98_attachment/dashboards/2026-03-28-map.svg",
+    "98_attachment/dashboards/2026-03-28-news.json",
     "05_tools/Code Space.md",
     "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf",
     "99_学习情况记录/2026-03-27——Fri.md",
@@ -364,9 +371,7 @@
     "98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit2-gram-schmidt.svg",
     "98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit1-incidence-network.svg",
     "98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit3-svd-geometry.svg",
-    "98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit3-pseudoinverse.svg",
     "98_attachment/linear_algebra/mit18_06sc",
-    "98_attachment/linear_algebra",
     "00_factor/concept/geometric interpretation of derivative.md",
     "00_factor/concept/Column Space.md",
     "00_factor/concept/Null Space.md",
@@ -378,11 +383,6 @@
     "00_factor/concept/Left Inverse.md",
     "00_factor/concept/Pseudoinverse.md",
     "00_factor/concept/Change of Basis.md",
-    "00_factor/concept/Linear Transformation.md",
-    "00_factor/concept/Singular Value Decomposition.md",
-    "00_factor/concept/Jordan Form.md",
-    "00_factor/concept/Similar Matrix.md",
-    "00_factor/concept/Fourier Series.md",
     "01_Math/01_calculus/01_calculus.canvas",
     "02_Economy/01_Econometrics/01_Econometrics.canvas",
     "01_Math/06_时间序列分析/06_时间序列分析.canvas",
