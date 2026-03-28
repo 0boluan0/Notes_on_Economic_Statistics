@@ -11,12 +11,24 @@
             "id": "fce6787a2e1b121b",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf"
+                "file": "04_Fragments/Learning method.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "MIT18_06SCF11_Ses1.1prob"
+              "icon": "lucide-file",
+              "title": "Learning method"
             }
           }
         ]
@@ -269,13 +281,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf",
+                "file": "04_Fragments/Learning method.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of MIT18_06SCF11_Ses1.1prob"
+              "title": "Outline of Learning method"
             }
           },
           {
@@ -323,8 +335,10 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "fce6787a2e1b121b",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
+    "05_tools/Code Space.md",
+    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf",
     "99_学习情况记录/2026-03-27——Fri.md",
     "98_attachment/dashboards/2026-03-27-map.svg",
     "98_attachment/dashboards/2026-03-27-news.json",
@@ -354,7 +368,6 @@
     "98_attachment/linear_algebra/mit18_06sc",
     "98_attachment/linear_algebra",
     "00_factor/concept/geometric interpretation of derivative.md",
-    "01_Math/01_calculus/Lecture_notes/18-25.pdf",
     "00_factor/concept/Column Space.md",
     "00_factor/concept/Null Space.md",
     "99_学习情况记录/2026-03-21——Sat.md",
@@ -370,7 +383,6 @@
     "00_factor/concept/Jordan Form.md",
     "00_factor/concept/Similar Matrix.md",
     "00_factor/concept/Fourier Series.md",
-    "00_factor/concept/Markov Matrix.md",
     "01_Math/01_calculus/01_calculus.canvas",
     "02_Economy/01_Econometrics/01_Econometrics.canvas",
     "01_Math/06_时间序列分析/06_时间序列分析.canvas",
