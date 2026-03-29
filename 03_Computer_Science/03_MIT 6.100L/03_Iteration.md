@@ -30,18 +30,18 @@ while <condition>:
 > `while` 可以无限重复执行。  
 > 条件若永远不变成 `False`，程序就会进入 infinite loop。
 
-### 例子：Lost Forest
-
-```python
-where = input("You're in the Lost Forest. Go left or right? ")
-while where == "right":
-    where = input("You're in the Lost Forest. Go left or right? ")
-print("You got out of the Lost Forest!")
-```
-
-- 只有输入精确的 `"right"`（小写）才会继续循环
-- 如果输入 `"RIGHT"`，条件为 `False`，会直接退出
-
+>[!example] 例子：Lost Forest
+>
+> ```python
+> where = input("You're in the Lost Forest. Go left or right? ")
+> while where == "right":
+>     where = input("You're in the Lost Forest. Go left or right? ")
+> print("You got out of the Lost Forest!")
+> ```
+>
+> - 只有输入精确的 `"right"`（小写）才会继续循环
+> - 如果输入 `"RIGHT"`，条件为 `False`，会直接退出
+>
 ### 终止与调试 infinite loop
 
 ```python

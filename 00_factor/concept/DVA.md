@@ -9,12 +9,12 @@ tags:
 ---
 DVA（Debt Valuation Adjustment，债务估值调整）是指当银行自身违约时，从交易对手角度看银行衍生品负债价值的变化，对银行构成的一种收益调整。
 
-## 定义
-
-DVA是银行自身违约风险的价值调整，反映了银行违约时对衍生品交易对手的潜在收益。
-
-$DVA = E[\text{银行违约时的收益}]$
-
+>[!note] 定义
+>
+> DVA是银行自身违约风险的价值调整，反映了银行违约时对衍生品交易对手的潜在收益。
+>
+> $DVA = E[\text{银行违约时的收益}]$
+>
 ## 计算公式
 
 $DVA = \sum_{i=1}^{n} PD_{bank}(t_{i-1}, t_i) \cdot EAD_{counterparty}(t_i) \cdot (1-R_{bank}) \cdot DF(t_i)$

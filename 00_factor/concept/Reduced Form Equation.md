@@ -11,62 +11,62 @@ tags:
 ---
 简约式方程（Reduced Form Equation）是联立方程系统中将所有内生变量都表示为外生变量的函数，体现系统的最终解。
 
-## 定义
-
-### 基本概念
-
-在联立方程系统中，通过代数运算将每个内生变量表示为外生变量的函数，得到的方程称为简约式方程。
-
-### 一般形式
-
-对于 $m$ 个内生变量 $y_1, y_2, \ldots, y_m$ 和 $k$ 个外生变量 $x_1, x_2, \ldots, x_k$：
-
-$y_i = \pi_{i0} + \pi_{i1}x_1 + \pi_{i2}x_2 + \dots + \pi_{ik}x_k + \nu_i$
-
-其中：
-- $\pi_{ij}$是简约参数
-- $\nu_i$ 是简约误差项
-
-## 例子：供求模型
-
-### 结构方程
-
-1. 需求：$Q_d = \beta_0 + \beta_1 P + \beta_2 Y + \epsilon_d$
-2. 供给：$Q_s = \alpha_0 + \alpha_1 P + \alpha_2 W + \epsilon_s$
-3. 均衡：$Q_d = Q_s = Q$
-
-### 推导简约式
-
-#### 均衡条件
-
-$\beta_0 + \beta_1 P + \beta_2 Y + \epsilon_d = \alpha_0 + \alpha_1 P + \alpha_2 W + \epsilon_s$
-
-#### 解均衡价格
-
-$(\beta_1 - \alpha_1)P = \alpha_0 - \beta_0 + \alpha_2 W - \beta_2 Y + \epsilon_s - \epsilon_d$
-
-$P = \frac{\alpha_0 - \beta_0 + \alpha_2 W - \beta_2 Y + \epsilon_s - \epsilon_d}{\beta_1 - \alpha_1}$
-
-整理为简约式：
-
-$P = \pi_0 + \pi_1 Y + \pi_2 W + \nu_P$
-
-其中：
-- $\pi_0 = \frac{\alpha_0 - \beta_0}{\beta_1 - \alpha_1}$
-- $\pi_1 = \frac{-\beta_2}{\beta_1 - \alpha_1}$
-- $\pi_2 = \frac{\alpha_2}{\beta_1 - \alpha_1}$
-- $\nu_P = \frac{\epsilon_s - \epsilon_d}{\beta_1 - \alpha_1}$
-
-#### 解均衡数量
-
-代入需求方程：
-
-$Q = \beta_0 + \beta_1(\pi_0 + \pi_1 Y + \pi_2 W + \nu_P) + \beta_2 Y + \epsilon_d$
-
-简化为简约式：
-
-$Q = \lambda_0 + \lambda_1 Y + \lambda_2 W + \nu_Q$
-
+>[!note] 定义
+>
+> ### 基本概念
+>
+> 在联立方程系统中，通过代数运算将每个内生变量表示为外生变量的函数，得到的方程称为简约式方程。
+>
+> ### 一般形式
+>
+> 对于 $m$ 个内生变量 $y_1, y_2, \ldots, y_m$ 和 $k$ 个外生变量 $x_1, x_2, \ldots, x_k$：
+>
+> $y_i = \pi_{i0} + \pi_{i1}x_1 + \pi_{i2}x_2 + \dots + \pi_{ik}x_k + \nu_i$
+>
+> 其中：
+> - $\pi_{ij}$是简约参数
+> - $\nu_i$ 是简约误差项
+>
+>[!example] 例子：供求模型
+>
+> ### 结构方程
+>
+> 1. 需求：$Q_d = \beta_0 + \beta_1 P + \beta_2 Y + \epsilon_d$
+> 2. 供给：$Q_s = \alpha_0 + \alpha_1 P + \alpha_2 W + \epsilon_s$
+> 3. 均衡：$Q_d = Q_s = Q$
+>
+> ### 推导简约式
+>
+> #### 均衡条件
+>
+> $\beta_0 + \beta_1 P + \beta_2 Y + \epsilon_d = \alpha_0 + \alpha_1 P + \alpha_2 W + \epsilon_s$
+>
+> #### 解均衡价格
+>
+> $(\beta_1 - \alpha_1)P = \alpha_0 - \beta_0 + \alpha_2 W - \beta_2 Y + \epsilon_s - \epsilon_d$
+>
+> $P = \frac{\alpha_0 - \beta_0 + \alpha_2 W - \beta_2 Y + \epsilon_s - \epsilon_d}{\beta_1 - \alpha_1}$
+>
+> 整理为简约式：
+>
+> $P = \pi_0 + \pi_1 Y + \pi_2 W + \nu_P$
+>
+> 其中：
+> - $\pi_0 = \frac{\alpha_0 - \beta_0}{\beta_1 - \alpha_1}$
+> - $\pi_1 = \frac{-\beta_2}{\beta_1 - \alpha_1}$
+> - $\pi_2 = \frac{\alpha_2}{\beta_1 - \alpha_1}$
+> - $\nu_P = \frac{\epsilon_s - \epsilon_d}{\beta_1 - \alpha_1}$
+>
+> #### 解均衡数量
+>
+> 代入需求方程：
+>
+> $Q = \beta_0 + \beta_1(\pi_0 + \pi_1 Y + \pi_2 W + \nu_P) + \beta_2 Y + \epsilon_d$
+>
+> 简化为简约式：
+>
+> $Q = \lambda_0 + \lambda_1 Y + \lambda_2 W + \nu_Q$
+>
 ## 特征
 
 ### 1. 只含外生变量

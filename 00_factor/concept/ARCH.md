@@ -5,7 +5,7 @@ aliases:
 tags:
 - concept
 ---
-> [!note] **ARCH(1)模型定义：**
+>[!note] **ARCH(1)模型定义：**
 > $$
 > \epsilon_t = \nu_t \sqrt{\alpha_0 + \alpha_1 \epsilon_{t-1}^2}
 > $$

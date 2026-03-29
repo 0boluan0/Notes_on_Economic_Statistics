@@ -46,7 +46,8 @@ $y_m = \beta_{m1}y_1 + \cdots + \gamma_{m1}x_1 + \cdots + \gamma_{mk}x_k + \vare
 
 在联立方程中，内生变量与误差项相关，导致OLS估计有偏且不一致。
 
-示例：简单供需模型
+>[!example] 示例
+> 简单供需模型
 
 需求：$Q = \alpha_0 + \alpha_1 P + \alpha_2 Y + \varepsilon_D$
 供给：$Q = \beta_0 + \beta_1 P + \beta_2 W + \varepsilon_S$

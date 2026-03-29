@@ -21,31 +21,31 @@ tags:
 
 矩阵乘法等价于线性变换的复合：先做 $B$ 的变换，再做 $A$ 的变换。
 
-## 最小例子
-
-若
-$$
-A=
-\begin{bmatrix}
-1&2\\3&4
-\end{bmatrix},\quad
-B=
-\begin{bmatrix}
-2&0\\1&2
-\end{bmatrix}
-$$
-则
-$$
-AB=
-\begin{bmatrix}
-1\cdot2+2\cdot1 & 1\cdot0+2\cdot2\\3\cdot2+4\cdot1 & 3\cdot0+4\cdot2
-\end{bmatrix}
-=
-\begin{bmatrix}
-4&4\\10&8
-\end{bmatrix}
-$$
-
+>[!example] 最小例子
+>
+> 若
+> $$
+> A=
+> \begin{bmatrix}
+> 1&2\\3&4
+> \end{bmatrix},\quad
+> B=
+> \begin{bmatrix}
+> 2&0\\1&2
+> \end{bmatrix}
+> $$
+> 则
+> $$
+> AB=
+> \begin{bmatrix}
+> 1\cdot2+2\cdot1 & 1\cdot0+2\cdot2\\3\cdot2+4\cdot1 & 3\cdot0+4\cdot2
+> \end{bmatrix}
+> =
+> \begin{bmatrix}
+> 4&4\\10&8
+> \end{bmatrix}
+> $$
+>
 ## 常见性质
 
 - 一般不满足交换律：$AB \neq BA$。

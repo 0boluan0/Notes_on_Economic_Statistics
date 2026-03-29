@@ -10,14 +10,14 @@ tags:
 ---
 白噪声过程（White Noise）是均值为 0、方差为常数且不同期不相关的随机过程。常见设定为高斯白噪声 $\varepsilon_t \sim i.i.d.\,N(0,\sigma^2)$。
 
-## 定义
-
-满足以下条件即为白噪声：
-
-1. $E(\varepsilon_t)=0$
-2. $\mathrm{Var}(\varepsilon_t)=\sigma^2（与 t 无关）$
-3. $\mathrm{Cov}(\varepsilon_t,\varepsilon_{t-s})=0（任意非零滞后 s）$
-
+>[!note] 定义
+>
+> 满足以下条件即为白噪声：
+>
+> 1. $E(\varepsilon_t)=0$
+> 2. $\mathrm{Var}(\varepsilon_t)=\sigma^2（与 t 无关）$
+> 3. $\mathrm{Cov}(\varepsilon_t,\varepsilon_{t-s})=0（任意非零滞后 s）$
+>
 ## 备注
 
 - 若进一步假定正态分布，则为“高斯白噪声”。

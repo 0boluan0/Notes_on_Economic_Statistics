@@ -34,24 +34,24 @@ $\hat{\theta}_{MLE} = \arg\max_{\theta} L(\theta) = \arg\max_{\theta} \ell(\thet
 
 $\frac{\partial \ell(\theta)}{\partial \theta} = 0$
 
-## 示例：正态分布的MLE
-
-给定x₁, ..., $x_n$ ~ N(μ, σ²)，对数似然函数：
-
-$\ell(\mu, \sigma^2) = -\frac{n}{2}\ln(2\pi) - \frac{n}{2}\ln(\sigma^2) - \frac{1}{2\sigma^2}\sum_{i=1}^{n}(x_i - \mu)^2$
-
-### 估计μ
-
-$\frac{\partial \ell}{\partial \mu} = \frac{1}{\sigma^2}\sum_{i=1}^{n}(x_i - \mu) = 0$
-
-$\hat{\mu} = \bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i$
-
-### 估计σ²
-
-$\frac{\partial \ell}{\partial \sigma^2} = -\frac{n}{2\sigma^2} + \frac{1}{2\sigma^4}\sum_{i=1}^{n}(x_i - \bar{x})^2 = 0$
-
-$\hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2$
-
+>[!example] 示例：正态分布的MLE
+>
+> 给定x₁, ..., $x_n$ ~ N(μ, σ²)，对数似然函数：
+>
+> $\ell(\mu, \sigma^2) = -\frac{n}{2}\ln(2\pi) - \frac{n}{2}\ln(\sigma^2) - \frac{1}{2\sigma^2}\sum_{i=1}^{n}(x_i - \mu)^2$
+>
+> ### 估计μ
+>
+> $\frac{\partial \ell}{\partial \mu} = \frac{1}{\sigma^2}\sum_{i=1}^{n}(x_i - \mu) = 0$
+>
+> $\hat{\mu} = \bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i$
+>
+> ### 估计σ²
+>
+> $\frac{\partial \ell}{\partial \sigma^2} = -\frac{n}{2\sigma^2} + \frac{1}{2\sigma^4}\sum_{i=1}^{n}(x_i - \bar{x})^2 = 0$
+>
+> $\hat{\sigma}^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2$
+>
 ## 性质
 
 ### 1. 不变性（Invariance）

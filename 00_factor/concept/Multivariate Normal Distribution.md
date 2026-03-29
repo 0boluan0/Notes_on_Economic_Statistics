@@ -9,16 +9,16 @@ tags:
 ---
 # 多元正态分布
 
-## 定义
-
-多元正态分布是单变量正态分布的高维扩展，描述 p 维随机向量的联合分布。
-
-$ X \sim N_p(\mu, \Sigma) $
-
-其中：
-- $\mu$：p × 1 均值向量（Mean Vector）
-- $\Sigma$：p × p 协方差矩阵（Covariance Matrix），必须是正定矩阵
-
+>[!note] 定义
+>
+> 多元正态分布是单变量正态分布的高维扩展，描述 p 维随机向量的联合分布。
+>
+> $ X \sim N_p(\mu, \Sigma) $
+>
+> 其中：
+> - $\mu$：p × 1 均值向量（Mean Vector）
+> - $\Sigma$：p × p 协方差矩阵（Covariance Matrix），必须是正定矩阵
+>
 ## 概率密度函数
 
 $ f(X) = \frac{1}{(2\pi)^{p/2} |\Sigma|^{1/2}} e^{-\frac{1}{2} (X-\mu)'\Sigma^{-1}(X-\mu)} $

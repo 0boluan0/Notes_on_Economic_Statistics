@@ -13,10 +13,10 @@ tags:
 ---
 误差修正模型（Error Correction Model, ECM）是用于描述协整系统短期动态调整的模型，结合了长期均衡关系和短期动态。
 
-## 定义
-
-ECM将变量的一阶差分表示为上一期偏离长期均衡（误差修正项）和其他滞后项的函数。
-
+>[!note] 定义
+>
+> ECM将变量的一阶差分表示为上一期偏离长期均衡（误差修正项）和其他滞后项的函数。
+>
 ## 模型形式
 
 $\Delta y_t = \alpha + \gamma EC_{t-1} + \sum_{i=1}^{p-1} \phi_i \Delta y_{t-i} + \sum_{j=1}^{q-1} \theta_j \Delta x_{t-j} + \varepsilon_t$

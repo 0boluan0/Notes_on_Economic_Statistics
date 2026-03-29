@@ -10,12 +10,12 @@ tags:
 ---
 $鞅差序列（Martingale Difference Sequence, MDS）满足 E(\varepsilon_t\mid \mathcal{F}_{t-1})=0，即在给定过去信息下，当前扰动的条件期望为 0。$
 
-## 定义
-
-在滤过 $\{\mathcal{F}_t\}$ 上，若对所有 $t$ 有：
-$ E(\varepsilon_t\mid \mathcal{F}_{t-1})=0, $
-则 $\{\varepsilon_t\}$ 为鞅差序列。
-
+>[!note] 定义
+>
+> 在滤过 $\{\mathcal{F}_t\}$ 上，若对所有 $t$ 有：
+> $ E(\varepsilon_t\mid \mathcal{F}_{t-1})=0, $
+> 则 $\{\varepsilon_t\}$ 为鞅差序列。
+>
 ## 关系
 
 - $若 \{\varepsilon_t\} 为 i.i.d. 且 E\varepsilon_t=0，则必为 MDS；反之不成立。$

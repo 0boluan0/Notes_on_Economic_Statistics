@@ -9,7 +9,7 @@ Shell 是一个命令行解释器，它提供了用户与操作系统内核之�
 
 ### 1. `pwd` - 显示当前工作目录
 **功能**：Print Working Directory，显示当前所在的目录路径。
-**示例**：
+>[!example] 示例
 ```bash
 pwd
 # 输出：/Users/yourname/Documents
@@ -52,7 +52,7 @@ mkdir -m 755 my_dir     # 创建目录并设置权限（755表示所有者读写
 
 ### 5. `rmdir` - 删除空目录
 **功能**：Remove Directory，删除空目录（只能删除空目录）。
-**示例**：
+>[!example] 示例
 ```bash
 rmdir empty_dir
 ```
@@ -79,7 +79,7 @@ cp -v source.txt dest.txt # 显示详细复制过程
 
 ### 8. `mv` - 移动/重命名文件/目录
 **功能**：Move，移动文件/目录或重命名。
-**示例**：
+>[!example] 示例
 ```bash
 mv file.txt new_name.txt # 重命名文件
 mv file.txt /path/to/dir # 移动文件到指定目录
@@ -119,7 +119,7 @@ chown -R user:group dir/ # 递归修改目录及其内容的所有权
 
 ### 1. `cat` - 查看文件内容
 **功能**：Concatenate，连接并显示文件内容。
-**示例**：
+>[!example] 示例
 ```bash
 cat file.txt            # 显示文件全部内容
 cat -n file.txt         # 显示内容并添加行号
@@ -127,7 +127,7 @@ cat -n file.txt         # 显示内容并添加行号
 
 ### 2. `head` - 查看文件开头部分
 **功能**：显示文件的前几行（默认10行）。
-**示例**：
+>[!example] 示例
 ```bash
 head file.txt           # 显示前10行
 head -n 20 file.txt     # 显示前20行
@@ -264,7 +264,7 @@ END {for(ip in count) print count[ip], ip}' access.log | sort -nr | head -10
 
 ### 1. `date` - 显示/设置日期时间
 **功能**：显示当前系统日期和时间，或设置系统时间。
-**示例**：
+>[!example] 示例
 ```bash
 date                    # 显示当前日期时间
 date "+%Y-%m-%d %H:%M:%S" # 自定义格式显示：2023-10-05 14:30:00
@@ -286,7 +286,7 @@ date -d "next Monday"    # 显示下周一的日期
 
 ### 2. `echo` - 输出文本
 **功能**：输出字符串或变量值。
-**示例**：
+>[!example] 示例
 ```bash
 echo "Hello World"      # 输出字符串
 echo $PATH              # 输出环境变量值
@@ -298,7 +298,7 @@ echo "User: $USER, Host: $HOSTNAME" # 输出多个变量
 
 ### 3. `man` - 查看命令手册
 **功能**：Manual，显示命令的详细帮助信息（手册页）。
-**示例**：
+>[!example] 示例
 ```bash
 man ls                  # 查看ls命令的手册
 man 5 passwd            # 查看passwd配置文件的手册（第5部分）
@@ -318,7 +318,7 @@ man -f command          # 查看命令的简短描述
 
 ### 4. `which` - 查找命令路径
 **功能**：显示命令的完整路径（根据PATH环境变量）。
-**示例**：
+>[!example] 示例
 ```bash
 which python3           # 显示python3命令的路径
 which -a ls             # 显示所有同名命令的路径
@@ -326,14 +326,14 @@ which -a ls             # 显示所有同名命令的路径
 
 ### 5. `whoami` - 显示当前用户
 **功能**：显示当前登录用户的用户名。
-**示例**：
+>[!example] 示例
 ```bash
 whoami
 ```
 
 ### 6. `id` - 显示用户和组信息
 **功能**：显示当前用户的UID、GID和所属组信息。
-**示例**：
+>[!example] 示例
 ```bash
 id                      # 显示完整信息
 id -u                   # 只显示UID
@@ -344,7 +344,7 @@ id -nG                  # 显示所有所属组的名称
 
 ### 7. `who` - 显示当前登录用户
 **功能**：显示当前登录系统的用户信息。
-**示例**：
+>[!example] 示例
 ```bash
 who                     # 显示用户和登录时间
 who -u                  # 显示用户和空闲时间
@@ -353,7 +353,7 @@ who -b                  # 显示系统启动时间
 
 ### 8. `uptime` - 显示系统运行时间
 **功能**：显示系统已运行的时间和平均负载。
-**示例**：
+>[!example] 示例
 ```bash
 uptime                  # 显示运行时间和负载
 ```
@@ -390,7 +390,7 @@ r-- = 4+0+0 = 4
 - **SetGID（SGID，2000）**：执行程序时以文件所属组身份运行；目录中的新文件继承组
 - **Sticky（1000）**：目录中的文件只能由所有者删除（例如/tmp目录）
 
-**示例**：
+>[!example] 示例
 ```bash
 chmod 4755 program     # 设置SUID权限
 chmod 2775 directory   # 设置SGID权限
@@ -398,7 +398,8 @@ chmod 1777 tempdir     # 设置Sticky权限
 ```
 
 ### 2. 环境变量
-**定义**：环境变量是Shell会话中可用的动态值，影响程序的行为。
+>[!note] 定义
+> 环境变量是Shell会话中可用的动态值，影响程序的行为。
 
 **常用环境变量**：
 ```bash
@@ -452,7 +453,7 @@ bg %1                   # 后台继续运行任务1
 
 ### 1. 管道（Pipe）- `|`
 **功能**：将一个命令的输出作为另一个命令的输入。
-**示例**：
+>[!example] 示例
 ```bash
 ls -l | grep ".txt"     # 列出所有.txt文件
 cat file.txt | sort | head -5 # 对文件内容排序并显示前5行
@@ -478,7 +479,7 @@ command &> output.txt   # 将标准输出和错误输出都重定向到文件
 [0-9]                   # 匹配任意数字
 ```
 
-**示例**：
+>[!example] 示例
 ```bash
 ls *.txt                # 列出所有.txt文件
 ls file?.txt            # 列出file1.txt、file2.txt等

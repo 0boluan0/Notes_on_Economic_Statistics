@@ -76,21 +76,21 @@ tags:
 - **过度识别**：工具变量个数 > 内生变量个数
 - **不可识别**：工具变量个数 < 内生变量个数
 
-## 示例
-
-### 需求-供给模型
-
-需求方程：$Q = \alpha_0 + \alpha_1 P + \alpha_2 Y + \varepsilon_D$
-
-供给方程：$Q = \beta_0 + \beta_1 P + \beta_2 W + \varepsilon_S$
-
-其中：
-- P和Q由两个方程同时决定
-- 在需求方程中，P与\varepsilon_D相关（内生）
-- W可以作为需求方程中P的工具变量
-
-相关链接: [[Instrumental Variable|工具变量]], [[2SLS]], [[Hausman Test|Hausman检验]], [[Simultaneous Equations Model|联立方程模型]]
-
+>[!example] 示例
+>
+> ### 需求-供给模型
+>
+> 需求方程：$Q = \alpha_0 + \alpha_1 P + \alpha_2 Y + \varepsilon_D$
+>
+> 供给方程：$Q = \beta_0 + \beta_1 P + \beta_2 W + \varepsilon_S$
+>
+> 其中：
+> - P和Q由两个方程同时决定
+> - 在需求方程中，P与\varepsilon_D相关（内生）
+> - W可以作为需求方程中P的工具变量
+>
+> 相关链接: [[Instrumental Variable|工具变量]], [[2SLS]], [[Hausman Test|Hausman检验]], [[Simultaneous Equations Model|联立方程模型]]
+>
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

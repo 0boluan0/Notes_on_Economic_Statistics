@@ -11,12 +11,12 @@ tags:
 ---
 自相关函数（Autocorrelation Function, ACF）是衡量时间序列自身在不同滞后时间上相关程度的函数。
 
-## 定义
-
-$\rho_k = \frac{\text{Cov}(y_t, y_{t+k})}{\sqrt{\text{Var}(y_t)\text{Var}(y_{t+k})}}$
-
-对于平稳时间序列，ACF只依赖于滞后阶数k。
-
+>[!note] 定义
+>
+> $\rho_k = \frac{\text{Cov}(y_t, y_{t+k})}{\sqrt{\text{Var}(y_t)\text{Var}(y_{t+k})}}$
+>
+> 对于平稳时间序列，ACF只依赖于滞后阶数k。
+>
 ## 性质
 
 1. **ρ₀ = 1**：时间序列与自身的相关系数为1

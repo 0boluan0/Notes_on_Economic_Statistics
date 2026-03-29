@@ -881,77 +881,77 @@ $$
 
 ==如果总体是正态分布,那么样本的方差协方差矩阵就是Wishart 分布==
 
-## 6.1 定义（Definition）：Wishart 分布（Wishart Distribution）
-
-**1. 样本协方差矩阵的分布及Wishart分布**
-
-当我们从$N_p(\mu,\Sigma)$（$p$维正态分布）中抽取样本$X_1, X_2, \dots, X_n$（每个$X_i\in\mathbb{R}^p$），定义样本协方差矩阵$S$为
-$$
-S = \frac{1}{n-1}\sum_{i=1}^n\bigl(X_i - \overline{X}\bigr)\bigl(X_i - \overline{X}\bigr)^\top,
-$$
-其中$\overline{X}$为样本均值向量
-$$
-\overline{X} = \frac{1}{n}\sum_{i=1}^n X_i.
-$$
-
-在这里，我们有以下结论：
-
-1. $(n-1)S$ 服从 Wishart 分布（[[Wishart Distribution|Wishart distribution]]），记为
-
-$$
-
-(n-1)S \sim W_p\bigl(n-1, \Sigma\bigr),
-
-$$
-
-其中$(n-1)$是Wishart分布的自由度(degrees of freedom)，$\Sigma$是底层正态分布的真协方差矩阵。
-
-2. 由多元正态分布的性质可知，$\overline{X}$与$S$相互独立(independent)。且
-$$
-\overline{X} \sim N_p\Bigl(\mu,;\frac{1}{n}\Sigma\Bigr).
-$$
-
-这意味着在抽样得到$X_1,\ldots,X_n$后，**样本均值向量**与**样本协方差矩阵**分别具有各自的分布，并且二者独立。
-
-**2. Wishart分布的形成原理**
-
-Wishart分布可以看作以下过程的矩阵形式：假设$Z_1,\dots,Z_m$是相互独立的$N_p(0,\Sigma)$随机向量（每个$Z_j\in\mathbb{R}^p$），那么
-
-
-$$
-
-\sum_{j=1}^m Z_j Z_j^\top
-
-$$
-
-
-就服从一个$W_p(m,\Sigma)$（即具有$m$自由度的Wishart分布，以$\Sigma$为参数）。在抽样均值为0的情形下，可以将$n$个$X_i-\mu$视作相互独立同分布的$N_p(0,\Sigma)$随机向量，从而得到$(n-1)S$的Wishart分布性质。
-
-**注意**：如果原分布不是中心化的（$\mu\neq 0$），我们可以先将样本向量减去其均值$\overline{X}$，再乘以$\Sigma^{-1/2}$，在一定变换下把问题转化为中心分布的形式，这就揭示了$(n-1)S$是Wishart分布的来龙去脉
-
-**3. 主要结论与应用**
-
-1. **$(n-1)S$的分布**
-
-当样本来自$N_p(\mu,\Sigma)$时，样本协方差矩阵的无缩放版本$(n-1)S$服从Wishart分布，记为
-$$
-(n-1)S \sim W_p\bigl(n-1, \Sigma\bigr).
-$$
-
-2. **$\overline{X}$的分布**
-
-样本均值$\overline{X}$服从$N_p\Bigl(\mu,\tfrac{1}{n}\Sigma\Bigr)$。并且它与$S$相互独立。
-
-3. **独立性**
-
-在多元正态分布下，$\overline{X}$与$S$的相互独立是一个非常重要且常被使用的结论。它在构造区间估计、假设检验以及各种推断场景（如Hotelling$T^2$检验）时都起到关键作用。
-
-**4. 一个简单的直观认识**
-
-• **在一维情况下**（$p=1$时），Wishart分布退化为$\chi^2$分布（[[Chi-square Distribution|卡方分布]]）。因为此时$(n-1)S$就是样本方差乘以$(n-1)$，而它正好符合$\chi^2_{n-1}$分布。
-
-• **在多维情况下**（$p>1$），$(n-1)S$不仅是一个标量，而是一个正定对称随机矩阵；Wishart分布可以被视为多维情形下的“卡方分布矩阵版”。
-
+>[!note] 6.1 定义（Definition）：Wishart 分布（Wishart Distribution）
+>
+> **1. 样本协方差矩阵的分布及Wishart分布**
+>
+> 当我们从$N_p(\mu,\Sigma)$（$p$维正态分布）中抽取样本$X_1, X_2, \dots, X_n$（每个$X_i\in\mathbb{R}^p$），定义样本协方差矩阵$S$为
+> $$
+> S = \frac{1}{n-1}\sum_{i=1}^n\bigl(X_i - \overline{X}\bigr)\bigl(X_i - \overline{X}\bigr)^\top,
+> $$
+> 其中$\overline{X}$为样本均值向量
+> $$
+> \overline{X} = \frac{1}{n}\sum_{i=1}^n X_i.
+> $$
+>
+> 在这里，我们有以下结论：
+>
+> 1. $(n-1)S$ 服从 Wishart 分布（[[Wishart Distribution|Wishart distribution]]），记为
+>
+> $$
+>
+> (n-1)S \sim W_p\bigl(n-1, \Sigma\bigr),
+>
+> $$
+>
+> 其中$(n-1)$是Wishart分布的自由度(degrees of freedom)，$\Sigma$是底层正态分布的真协方差矩阵。
+>
+> 2. 由多元正态分布的性质可知，$\overline{X}$与$S$相互独立(independent)。且
+> $$
+> \overline{X} \sim N_p\Bigl(\mu,;\frac{1}{n}\Sigma\Bigr).
+> $$
+>
+> 这意味着在抽样得到$X_1,\ldots,X_n$后，**样本均值向量**与**样本协方差矩阵**分别具有各自的分布，并且二者独立。
+>
+> **2. Wishart分布的形成原理**
+>
+> Wishart分布可以看作以下过程的矩阵形式：假设$Z_1,\dots,Z_m$是相互独立的$N_p(0,\Sigma)$随机向量（每个$Z_j\in\mathbb{R}^p$），那么
+>
+>
+> $$
+>
+> \sum_{j=1}^m Z_j Z_j^\top
+>
+> $$
+>
+>
+> 就服从一个$W_p(m,\Sigma)$（即具有$m$自由度的Wishart分布，以$\Sigma$为参数）。在抽样均值为0的情形下，可以将$n$个$X_i-\mu$视作相互独立同分布的$N_p(0,\Sigma)$随机向量，从而得到$(n-1)S$的Wishart分布性质。
+>
+> **注意**：如果原分布不是中心化的（$\mu\neq 0$），我们可以先将样本向量减去其均值$\overline{X}$，再乘以$\Sigma^{-1/2}$，在一定变换下把问题转化为中心分布的形式，这就揭示了$(n-1)S$是Wishart分布的来龙去脉
+>
+> **3. 主要结论与应用**
+>
+> 1. **$(n-1)S$的分布**
+>
+> 当样本来自$N_p(\mu,\Sigma)$时，样本协方差矩阵的无缩放版本$(n-1)S$服从Wishart分布，记为
+> $$
+> (n-1)S \sim W_p\bigl(n-1, \Sigma\bigr).
+> $$
+>
+> 2. **$\overline{X}$的分布**
+>
+> 样本均值$\overline{X}$服从$N_p\Bigl(\mu,\tfrac{1}{n}\Sigma\Bigr)$。并且它与$S$相互独立。
+>
+> 3. **独立性**
+>
+> 在多元正态分布下，$\overline{X}$与$S$的相互独立是一个非常重要且常被使用的结论。它在构造区间估计、假设检验以及各种推断场景（如Hotelling$T^2$检验）时都起到关键作用。
+>
+> **4. 一个简单的直观认识**
+>
+> • **在一维情况下**（$p=1$时），Wishart分布退化为$\chi^2$分布（[[Chi-square Distribution|卡方分布]]）。因为此时$(n-1)S$就是样本方差乘以$(n-1)$，而它正好符合$\chi^2_{n-1}$分布。
+>
+> • **在多维情况下**（$p>1$），$(n-1)S$不仅是一个标量，而是一个正定对称随机矩阵；Wishart分布可以被视为多维情形下的“卡方分布矩阵版”。
+>
 ## 6.2 性质
 
 **1. 互不依赖的Wishart随机矩阵之和**

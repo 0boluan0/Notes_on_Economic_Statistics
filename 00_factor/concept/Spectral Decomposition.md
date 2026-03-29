@@ -10,18 +10,18 @@ tags:
 ---
 # 谱分解
 
-## 定义
-
-谱分解（Spectral Decomposition）是将对称矩阵分解为由其特征值和特征向量定义的形式。
-
-对于一个 n × n 的对称矩阵 A：
-
-$ A = Q \Lambda Q^\top $
-
-其中：
-- Q：由 A 的正交特征向量组成的正交矩阵
-- $\Lambda$：对角矩阵，对角元素是 A 的特征值
-
+>[!note] 定义
+>
+> 谱分解（Spectral Decomposition）是将对称矩阵分解为由其特征值和特征向量定义的形式。
+>
+> 对于一个 n × n 的对称矩阵 A：
+>
+> $ A = Q \Lambda Q^\top $
+>
+> 其中：
+> - Q：由 A 的正交特征向量组成的正交矩阵
+> - $\Lambda$：对角矩阵，对角元素是 A 的特征值
+>
 ## 谱分解的具体形式
 
 假设 $A$ 是对称矩阵，其特征值为 $\lambda_1, \lambda_2, \ldots, \lambda_n$，对应的特征向量为 $v_1, v_2, \ldots, v_n$。
@@ -109,44 +109,44 @@ $ \min_{x \neq 0} \frac{x^T A x}{x^T x} = \lambda_n $
 - [[Eigenvectors|特征向量]]
 - [[Positive Definite Matrix|正定矩阵]]
 
-## 示例
-
-给定
-$$
-A =
-\begin{pmatrix}
-4 & 1 \\ 1 & 3
-\end{pmatrix}
-$$
-
-1. 特征值：$\lambda_1 = 5$，$\lambda_2 = 2$
-2. 特征向量：
-$$
-v_1 = \frac{1}{\sqrt{2}}
-\begin{pmatrix}
-1 \\ 1
-\end{pmatrix},\quad
-v_2 = \frac{1}{\sqrt{2}}
-\begin{pmatrix}
--1 \\ 1
-\end{pmatrix}
-$$
-3. 谱分解：
-$$
-A =
-\begin{pmatrix}
-\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\
-\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
-\end{pmatrix}
-\begin{pmatrix}
-5 & 0 \\ 0 & 2
-\end{pmatrix}
-\begin{pmatrix}
-\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
--\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
-\end{pmatrix}
-$$
-
+>[!example] 示例
+>
+> 给定
+> $$
+> A =
+> \begin{pmatrix}
+> 4 & 1 \\ 1 & 3
+> \end{pmatrix}
+> $$
+>
+> 1. 特征值：$\lambda_1 = 5$，$\lambda_2 = 2$
+> 2. 特征向量：
+> $$
+> v_1 = \frac{1}{\sqrt{2}}
+> \begin{pmatrix}
+> 1 \\ 1
+> \end{pmatrix},\quad
+> v_2 = \frac{1}{\sqrt{2}}
+> \begin{pmatrix}
+> -1 \\ 1
+> \end{pmatrix}
+> $$
+> 3. 谱分解：
+> $$
+> A =
+> \begin{pmatrix}
+> \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\
+> \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+> \end{pmatrix}
+> \begin{pmatrix}
+> 5 & 0 \\ 0 & 2
+> \end{pmatrix}
+> \begin{pmatrix}
+> \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+> -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+> \end{pmatrix}
+> $$
+>
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

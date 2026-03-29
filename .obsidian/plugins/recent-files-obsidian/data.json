@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "01_Ax = b and the Four Subspaces",
+      "path": "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md"
+    },
+    {
+      "basename": "00_MIT OCW 18.06SC course map",
+      "path": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md"
+    },
+    {
+      "basename": "04_马尔可夫链",
+      "path": "01_Math/05_随机过程/04_马尔可夫链.md"
+    },
+    {
+      "basename": "03_泊松过程",
+      "path": "01_Math/05_随机过程/03_泊松过程.md"
+    },
+    {
+      "basename": "05_连续时间的马尔可夫链",
+      "path": "01_Math/05_随机过程/05_连续时间的马尔可夫链.md"
+    },
+    {
+      "basename": "02_随机过程的概念和分类",
+      "path": "01_Math/05_随机过程/02_随机过程的概念和分类.md"
+    },
+    {
       "basename": "Introduction_to_Linear_Algebra(Strang)",
       "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Other/Introduction_to_Linear_Algebra(Strang).pdf"
     },
@@ -67,14 +91,6 @@
     {
       "basename": "MIT18_06SCF11_ex1",
       "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex1.pdf"
-    },
-    {
-      "basename": "01_Ax = b and the Four Subspaces",
-      "path": "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md"
-    },
-    {
-      "basename": "00_MIT OCW 18.06SC course map",
-      "path": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md"
     },
     {
       "basename": "MIT18.01_Single-Variable-Calculus",
@@ -183,22 +199,6 @@
     {
       "basename": "2026-03-08——Sun",
       "path": "99_学习情况记录/2026-03-08——Sun.md"
-    },
-    {
-      "basename": "2026-02-28——Sat",
-      "path": "99_学习情况记录/2026-02-28——Sat.md"
-    },
-    {
-      "basename": "2026-02-28——周六",
-      "path": "99_学习情况记录/2026-02-28——周六.md"
-    },
-    {
-      "basename": "2026-03-05——Thu",
-      "path": "99_学习情况记录/2026-03-05——Thu.md"
-    },
-    {
-      "basename": "2026-03-03——Tue",
-      "path": "99_学习情况记录/2026-03-03——Tue.md"
     }
   ],
   "omittedPaths": [],

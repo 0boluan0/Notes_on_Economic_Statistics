@@ -26,29 +26,29 @@ tags:
 - 有解当且仅当 $\mathrm{rank}(A)=\mathrm{rank}(A|b)$。
 - 唯一解当且仅当 $\mathrm{rank}(A)=n$（满列秩）。
 
-## 最小例子
-
-$$
-\begin{cases}
-2x+y=1\\
-x-y=0
-\end{cases}
-$$
-$\Rightarrow$
-$$
-A =
-\begin{bmatrix}
-2&1\\1&-1
-\end{bmatrix}
-$$
-\quad
-$$
-b =
-\begin{bmatrix}
-1\\0
-\end{bmatrix}
-$$
-
+>[!example] 最小例子
+>
+> $$
+> \begin{cases}
+> 2x+y=1\\
+> x-y=0
+> \end{cases}
+> $$
+> $\Rightarrow$
+> $$
+> A =
+> \begin{bmatrix}
+> 2&1\\1&-1
+> \end{bmatrix}
+> $$
+> \quad
+> $$
+> b =
+> \begin{bmatrix}
+> 1\\0
+> \end{bmatrix}
+> $$
+>
 ## 相关链接
 
 - [[Linear system solution structure|线性方程组解的结构]]

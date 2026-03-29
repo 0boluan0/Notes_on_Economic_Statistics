@@ -958,17 +958,17 @@ $$
 
 # 正定与半正定矩阵（[[Positive Definite Matrix|Positive]] Definite and Non-Negative Definite Matrices）
 
-## 1. **定义**
-
-   - **[[Positive Definite Matrix|正定矩阵]] ([[Positive Definite Matrix|Positive Definite Matrix]])**:
-     若 $A$ 是一个 $p \times p$ 的对称矩阵，且对于任意非零向量 $x \neq 0$，满足：
-     $$x'Ax > 0$$
-     则 $A$ 被称为正定矩阵。
-   - **半正定矩阵 (Non-Negative Definite [[Matrix Inverse|Matrix]])**:
-     若 $A$ 是一个 $p \times p$ 的对称矩阵，且对于任意非零向量 $x \neq 0$，满足：
-     $$x'Ax \geq 0$$
-     则 $A$ 被称为半正定矩阵。
-
+>[!note] 1. **定义**
+>
+>    - **[[Positive Definite Matrix|正定矩阵]] ([[Positive Definite Matrix|Positive Definite Matrix]])**:
+>      若 $A$ 是一个 $p \times p$ 的对称矩阵，且对于任意非零向量 $x \neq 0$，满足：
+>      $$x'Ax > 0$$
+>      则 $A$ 被称为正定矩阵。
+>    - **半正定矩阵 (Non-Negative Definite [[Matrix Inverse|Matrix]])**:
+>      若 $A$ 是一个 $p \times p$ 的对称矩阵，且对于任意非零向量 $x \neq 0$，满足：
+>      $$x'Ax \geq 0$$
+>      则 $A$ 被称为半正定矩阵。
+>
 ## 2. **几何意义**
 
    - **[[Positive Definite Matrix|正定矩阵]]**：对应于一个严格凸的二次型（即 $x'Ax$ 在任意方向都大于零）。
@@ -1033,12 +1033,12 @@ $$
 
 # 矩阵平方根（Square Root of a [[Matrix Inverse|Matrix]]）
 
-## 1. **定义**
-
-   - 矩阵的平方根是一个矩阵 $A^{1/2}$，满足：
-     $$A^{1/2}A^{1/2} = A$$
-   - 条件：平方根矩阵的存在性要求 $A$ 必须是**对称正定矩阵**。
-
+>[!note] 1. **定义**
+>
+>    - 矩阵的平方根是一个矩阵 $A^{1/2}$，满足：
+>      $$A^{1/2}A^{1/2} = A$$
+>    - 条件：平方根矩阵的存在性要求 $A$ 必须是**对称正定矩阵**。
+>
 ## 2. **构造方法**
 
    - 使用特征值分解：
@@ -1063,23 +1063,23 @@ $$
    - 矩阵平方根可以被视为将 $A$ 的作用分解为两个连续的“半作用”。
    - 对于正定矩阵 $A$，$A^{1/2}$ 是一种等价于线性变换 $A$ 的简化操作。
 
-## 5. **例子**
-
-   - **例子 1: 简单对称正定矩阵**
-     $$A = \begin{pmatrix} 4 & 0 \\ 0 & 9 \end{pmatrix}$$
-     - [[Eigenvalues|特征值]]：$\lambda_1 = 4, \lambda_2 = 9$。
-     - 特征值平方根：$\sqrt{\lambda_1} = 2, \sqrt{\lambda_2} = 3$。
-     - 矩阵平方根：
-       $$A^{1/2} = \begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}$$
-     - 验证：$A^{1/2}A^{1/2} = A$。
-
-   - **例子 2: 非对角矩阵**
-     $$A = \begin{pmatrix} 5 & 4 \\ 4 & 5 \end{pmatrix}$$
-     - 特征值分解：$\lambda_1 = 9, \lambda_2 = 1$，特征向量构成正交矩阵：
-       $$P = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix}$$
-     - 矩阵平方根：
-       $$A^{1/2} = P \begin{pmatrix} 3 & 0 \\ 0 & 1 \end{pmatrix} P' = \begin{pmatrix} 3 & 2 \\ 2 & 3 \end{pmatrix}$$
-
+>[!example] 5. **例子**
+>
+>    - **例子 1: 简单对称正定矩阵**
+>      $$A = \begin{pmatrix} 4 & 0 \\ 0 & 9 \end{pmatrix}$$
+>      - [[Eigenvalues|特征值]]：$\lambda_1 = 4, \lambda_2 = 9$。
+>      - 特征值平方根：$\sqrt{\lambda_1} = 2, \sqrt{\lambda_2} = 3$。
+>      - 矩阵平方根：
+>        $$A^{1/2} = \begin{pmatrix} 2 & 0 \\ 0 & 3 \end{pmatrix}$$
+>      - 验证：$A^{1/2}A^{1/2} = A$。
+>
+>    - **例子 2: 非对角矩阵**
+>      $$A = \begin{pmatrix} 5 & 4 \\ 4 & 5 \end{pmatrix}$$
+>      - 特征值分解：$\lambda_1 = 9, \lambda_2 = 1$，特征向量构成正交矩阵：
+>        $$P = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 & -1 \\ 1 & 1 \end{pmatrix}$$
+>      - 矩阵平方根：
+>        $$A^{1/2} = P \begin{pmatrix} 3 & 0 \\ 0 & 1 \end{pmatrix} P' = \begin{pmatrix} 3 & 2 \\ 2 & 3 \end{pmatrix}$$
+>
 ## 6. **应用**
 
    - **协方差矩阵的变换**：
@@ -1101,20 +1101,20 @@ $$
 
 # 二次型变换（Quadratic Transformation）
 
-## **1. 定义**
-
-一个 **Quadratic Transformation** 表示为：
-
-$$
-y = Q(x) = x^T A x + b^T x + c,
-$$
-其中：
-
-• $x \in \mathbb{R}^n$ 是一个 $n \times 1$ 的向量。
-• $A \in \mathbb{R}^{n \times n}$ 是对称矩阵（通常要求）。
-• $b \in \mathbb{R}^n$ 是线性变换的系数向量。
-• $c \in \mathbb{R}$ 是常数项。
-
+>[!note] **1. 定义**
+>
+> 一个 **Quadratic Transformation** 表示为：
+>
+> $$
+> y = Q(x) = x^T A x + b^T x + c,
+> $$
+> 其中：
+>
+> • $x \in \mathbb{R}^n$ 是一个 $n \times 1$ 的向量。
+> • $A \in \mathbb{R}^{n \times n}$ 是对称矩阵（通常要求）。
+> • $b \in \mathbb{R}^n$ 是线性变换的系数向量。
+> • $c \in \mathbb{R}$ 是常数项。
+>
 ## **2. 几何意义**
 
 二次变换的几何意义在于它可以生成二次曲线或曲面：
@@ -1300,13 +1300,14 @@ $$
      - $\Sigma$ 是对称矩阵：
        $$\Sigma_{ij} = \Sigma_{ji}$$
      - 若 $x$ 的随机变量是线性无关的，则 $\Sigma$ 是正定矩阵。
-   - **示例**：对于随机向量 $x = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}$：
-     $$\Sigma = \begin{pmatrix}
-     \sigma_{11} & \sigma_{12} & \sigma_{13} \\
-     \sigma_{21} & \sigma_{22} & \sigma_{23} \\
-     \sigma_{31} & \sigma_{32} & \sigma_{33}
-     \end{pmatrix}$$
-     其中 $\sigma_{ij} = \text{Cov}(x_i, x_j)$。
+>[!example] 示例
+> 对于随机向量 $x = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}$：
+>      $$\Sigma = \begin{pmatrix}
+>      \sigma_{11} & \sigma_{12} & \sigma_{13} \\
+>      \sigma_{21} & \sigma_{22} & \sigma_{23} \\
+>      \sigma_{31} & \sigma_{32} & \sigma_{33}
+>      \end{pmatrix}$$
+>      其中 $\sigma_{ij} = \text{Cov}(x_i, x_j)$。
 
 ## 3. **线性函数的方差 ([[Variance Decomposition|Variance]] of a [[Linear Combination|Linear]] Function)**
 
@@ -1344,20 +1345,20 @@ $$
 
 # 相关矩阵（[[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]]）
 
-## 1. **定义**
-
-   - 相关矩阵描述随机向量中各变量之间的相关性
-   - 若随机向量 $x = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_p \end{pmatrix}$，其相关矩阵为：
-     $$
-     \rho = \begin{pmatrix}
-     1 & \rho_{12} & \cdots & \rho_{1p} \\
-     \rho_{21} & 1 & \cdots & \rho_{2p} \\
-     \vdots & \vdots & \ddots & \vdots \\
-     \rho_{p1} & \rho_{p2} & \cdots & 1
-     \end{pmatrix}
-     $$
-     其中 $\rho_{ij}$ 是 $x_i$ 和 $x_j$ 的相关系数。
-
+>[!note] 1. **定义**
+>
+>    - 相关矩阵描述随机向量中各变量之间的相关性
+>    - 若随机向量 $x = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_p \end{pmatrix}$，其相关矩阵为：
+>      $$
+>      \rho = \begin{pmatrix}
+>      1 & \rho_{12} & \cdots & \rho_{1p} \\
+>      \rho_{21} & 1 & \cdots & \rho_{2p} \\
+>      \vdots & \vdots & \ddots & \vdots \\
+>      \rho_{p1} & \rho_{p2} & \cdots & 1
+>      \end{pmatrix}
+>      $$
+>      其中 $\rho_{ij}$ 是 $x_i$ 和 $x_j$ 的相关系数。
+>
 ## 2. **相关系数的公式**
 
    - 两随机变量 $x_i$ 和 $x_j$ 的相关系数定义为：
@@ -1390,23 +1391,23 @@ $$
      $$
 
 
-## 5. **例子**
-
-   - 假设随机向量 $x = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}$ 的协方差矩阵为：
-     $$
-     \Sigma = \begin{pmatrix}
-     4 & 2 & 1 \\
-     2 & 3 & 1 \\
-     1 & 1 & 2
-     \end{pmatrix}
-     $$
-     计算对应的相关矩阵：
-     - 方差向量 $V = \text{diag}(4, 3, 2)$。
-     - 相关矩阵为：
-       $$
-       \rho = V^{-1/2} \Sigma V^{-1/2} = \begin{pmatrix}
-       1 & \frac{2}{\sqrt{12}} & \frac{1}{\sqrt{8}} \\
-       \frac{2}{\sqrt{12}} & 1 & \frac{1}{\sqrt{6}} \\
-       \frac{1}{\sqrt{8}} & \frac{1}{\sqrt{6}} & 1
-       \end{pmatrix}
-       $$
+>[!example] 5. **例子**
+>
+>    - 假设随机向量 $x = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}$ 的协方差矩阵为：
+>      $$
+>      \Sigma = \begin{pmatrix}
+>      4 & 2 & 1 \\
+>      2 & 3 & 1 \\
+>      1 & 1 & 2
+>      \end{pmatrix}
+>      $$
+>      计算对应的相关矩阵：
+>      - 方差向量 $V = \text{diag}(4, 3, 2)$。
+>      - 相关矩阵为：
+>        $$
+>        \rho = V^{-1/2} \Sigma V^{-1/2} = \begin{pmatrix}
+>        1 & \frac{2}{\sqrt{12}} & \frac{1}{\sqrt{8}} \\
+>        \frac{2}{\sqrt{12}} & 1 & \frac{1}{\sqrt{6}} \\
+>        \frac{1}{\sqrt{8}} & \frac{1}{\sqrt{6}} & 1
+>        \end{pmatrix}
+>        $$

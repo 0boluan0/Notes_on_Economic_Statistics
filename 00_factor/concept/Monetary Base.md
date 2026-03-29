@@ -9,16 +9,16 @@ tags:
 ---
 # 基础货币
 
-## 定义
-
-基础货币（Monetary Base）又称高能货币（High-Powered Money），是中央银行的负债。
-
-$ MB = C + R $
-
-其中：
-- C：流通中的现金（Currency in Circulation）
-- R：准备金（Reserves）
-
+>[!note] 定义
+>
+> 基础货币（Monetary Base）又称高能货币（High-Powered Money），是中央银行的负债。
+>
+> $ MB = C + R $
+>
+> 其中：
+> - C：流通中的现金（Currency in Circulation）
+> - R：准备金（Reserves）
+>
 ## 组成部分
 
 ### 1. 流通中的现金（C）

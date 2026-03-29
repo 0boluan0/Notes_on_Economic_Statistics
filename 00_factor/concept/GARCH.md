@@ -7,7 +7,7 @@ tags:
 ---
 ARCH的N要取得比较大.所以发明了GARCH模型,在保持对条件异方差性建模能力的同时，用更少的参数捕捉长期的波动影响。
 
-> [!note] GARCH(p,q)模型
+>[!note] GARCH(p,q)模型
 > $$
 > \begin{cases}
 > \varepsilon_t = \nu_t \sqrt{h_t} \\

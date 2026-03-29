@@ -9,14 +9,14 @@ tags:
 ---
 # Left Nullspace
 
-## 它是什么
-- 「Left Nullspace」是指满足 $A^Ty=0$ 的所有向量 $y$ 构成的子空间。
-
-## 最小可检索信息
-- 定义：矩阵 $A^T$ 的零空间。
-- 符号/公式：$N(A^T)=\{y: A^Ty=0\}$。
-- 最小例子：如果 A 的列不能铺满 $\mathbb{R}^m$，则 left nullspace 非平凡。
-
+>[!note] 它是什么
+> - 「Left Nullspace」是指满足 $A^Ty=0$ 的所有向量 $y$ 构成的子空间。
+>
+>[!note] 最小可检索信息
+> - 定义：矩阵 $A^T$ 的零空间。
+> - 符号/公式：$N(A^T)=\{y: A^Ty=0\}$。
+> - 最小例子：如果 A 的列不能铺满 $\mathbb{R}^m$，则 left nullspace 非平凡。
+>
 ## 关键性质
 - left nullspace 与 [[Column Space]] 正交。
 - $\dim N(A^T)=m-r$，其中 $r=\operatorname{rank}(A)$。

@@ -71,22 +71,22 @@ print(len(seen))  # 3
 > [!important] Big Idea
 > Guess-and-check 必须有有限搜索空间；不能检查无限多个候选。
 
-### 例子：平方根（整数）
-
-```python
-guess = 0
-x = int(input("Enter an integer: "))
-while guess**2 < x:
-    guess += 1
-
-if guess**2 == x:
-    print("Square root of", x, "is", guess)
-else:
-    print(x, "is not a perfect square")
-```
-
-负数版本要先做符号处理（或直接拒绝输入），否则循环条件可能立刻失效。
-
+>[!example] 例子：平方根（整数）
+>
+> ```python
+> guess = 0
+> x = int(input("Enter an integer: "))
+> while guess**2 < x:
+>     guess += 1
+>
+> if guess**2 == x:
+>     print("Square root of", x, "is", guess)
+> else:
+>     print(x, "is not a perfect square")
+> ```
+>
+> 负数版本要先做符号处理（或直接拒绝输入），否则循环条件可能立刻失效。
+>
 ### Boolean flag（布尔标记）
 
 ```python
@@ -112,25 +112,25 @@ else:
 - `while`：候选生成规则更动态时更灵活
 - 如果只是在遍历一个固定范围，优先 `for`
 
-### 例子：立方根（正负数）
-
-```python
-cube = 1000
-for guess in range(abs(cube) + 1):
-    if guess**3 >= abs(cube):
-        break
-
-if guess**3 != abs(cube):
-    print(cube, "is not a perfect cube")
-else:
-    if cube < 0:
-        guess = -guess
-    print("Cube root of", cube, "is", guess)
-```
-
-- 通过 `>=` + `break` 可减少不必要迭代
-- 负数输入最终恢复符号
-
+>[!example] 例子：立方根（正负数）
+>
+> ```python
+> cube = 1000
+> for guess in range(abs(cube) + 1):
+>     if guess**3 >= abs(cube):
+>         break
+>
+> if guess**3 != abs(cube):
+>     print(cube, "is not a perfect cube")
+> else:
+>     if cube < 0:
+>         guess = -guess
+>     print("Cube root of", cube, "is", guess)
+> ```
+>
+> - 通过 `>=` + `break` 可减少不必要迭代
+> - 负数输入最终恢复符号
+>
 ### 应用：文字题也可穷举
 
 - 三重循环可暴力求解条件联立问题

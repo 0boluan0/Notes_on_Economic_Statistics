@@ -12,13 +12,13 @@ tags:
 
 OLS（Ordinary Least Squares）是在线性回归中通过最小化残差平方和来估计参数的方法。
 
-## 定义
-
-给定模型 $y = X\beta + u$，OLS 选择 $\hat{\beta}$ 使得：
-$$
-\hat{\beta} = \arg\min_{\beta} \sum_{i=1}^n (y_i - x_i' \beta)^2
-$$
-
+>[!note] 定义
+>
+> 给定模型 $y = X\beta + u$，OLS 选择 $\hat{\beta}$ 使得：
+> $$
+> \hat{\beta} = \arg\min_{\beta} \sum_{i=1}^n (y_i - x_i' \beta)^2
+> $$
+>
 ## 估计量形式
 
 当 X'X 可逆时：
@@ -26,10 +26,10 @@ $$
 \hat{\beta} = (X'X)^{-1}X'y
 $$
 
-## 最小例子
-
-简单回归 $y_i = \beta_0 + \beta_1 x_i + u_i$，OLS 选择 $\beta_0, \beta_1$ 使残差平方和最小。
-
+>[!example] 最小例子
+>
+> 简单回归 $y_i = \beta_0 + \beta_1 x_i + u_i$，OLS 选择 $\beta_0, \beta_1$ 使残差平方和最小。
+>
 ## 关键含义
 
 - 误差平方惩罚更重，强调“大误差”被更强地压制。
