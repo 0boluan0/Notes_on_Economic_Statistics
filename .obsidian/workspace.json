@@ -4,31 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "21a2a03891849e0e",
+        "id": "d3b3f3ab92122a15",
         "type": "tabs",
         "children": [
           {
-            "id": "fce6787a2e1b121b",
+            "id": "14764de06ec90304",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "04_Fragments/How To Articulate Your Thoughts Intelligently (Talk Like This) - 2026-03-28.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Other/Introduction_to_Linear_Algebra(Strang).pdf"
               },
-              "icon": "lucide-file",
-              "title": "How To Articulate Your Thoughts Intelligently (Talk Like This) - 2026-03-28"
+              "icon": "lucide-file-text",
+              "title": "Introduction_to_Linear_Algebra(Strang)"
             }
           }
         ]
@@ -281,13 +269,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_Fragments/How To Articulate Your Thoughts Intelligently (Talk Like This) - 2026-03-28.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of How To Articulate Your Thoughts Intelligently (Talk Like This) - 2026-03-28"
+              "title": "Outline"
             }
           },
           {
@@ -335,27 +322,34 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "fce6787a2e1b121b",
+  "active": "36db59183709d800",
   "lastOpenFiles": [
+    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Other/Introduction_to_Linear_Algebra(Strang).pdf",
+    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Other/linear_algebra_and_its_applications_4th.pdf",
+    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.2prob.pdf",
+    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf",
+    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.1sol.pdf",
+    "01_Math/01_calculus/Lecture_notes/1-7.pdf",
+    "03_Computer_Science/02_CS61A/01_building abstractions with functions.md",
+    "03_Computer_Science/01_CS50/CS50_main.md",
+    "04_Fragments/How To Articulate Your Thoughts Intelligently (Talk Like This) - 2026-03-28.md",
+    "04_Fragments/AutoResearch Clearly Explained (and how to use it) - 2026-03-28.md",
+    "04_Fragments/How I'd build a one-person business (if I started over in 2026) - 2026-03-28.md",
+    "04_Fragments/How to fix your entire life in 1 day - 2026-03-28.md",
+    "04_Fragments/How To Build A $1M One-Person Business Faster With AI - 2026-03-28.md",
     "04_Fragments/Learn Any Skill So Fast That People Think You're A Genius - 2026-03-28.md",
     "04_Fragments/Kortex- The $3 Million Dollar Mistake - 2026-03-28.md",
     "04_Fragments/How To Use AI Better Than 99% Of People (This Changed My Life) - 2026-03-28.md",
-    "04_Fragments/How To Articulate Your Thoughts Intelligently (Talk Like This) - 2026-03-28.md",
     "04_Fragments/The Most Important Skill To Learn Right Now - 2026-03-28.md",
-    "04_Fragments/How to fix your entire life in 1 day - 2026-03-28.md",
-    "04_Fragments/How I'd build a one-person business (if I started over in 2026) - 2026-03-28.md",
     "04_Fragments/If you have multiple interests, do not waste the next 2-3 years - 2026-03-28.md",
     "04_Fragments/The Future Of Work (& The New High-Income Skill Stack) - 2026-03-28.md",
     "04_Fragments/How To Think Like A Strategic Genius (5-Dimensional Thinking) - 2026-03-28.md",
-    "04_Fragments/How To Build A $1M One-Person Business Faster With AI - 2026-03-28.md",
-    "04_Fragments/AutoResearch Clearly Explained (and how to use it) - 2026-03-28.md",
     "04_Fragments/Learning method.md",
     "04_Fragments/2026-03-28 - AutoResearch Clearly Explained (and how to use it).md",
     "99_学习情况记录/2026-03-28——Sat.md",
     "98_attachment/dashboards/2026-03-28-map.svg",
     "98_attachment/dashboards/2026-03-28-news.json",
     "05_tools/Code Space.md",
-    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf",
     "99_学习情况记录/2026-03-27——Fri.md",
     "98_attachment/dashboards/2026-03-27-map.svg",
     "98_attachment/dashboards/2026-03-27-news.json",
@@ -370,19 +364,12 @@
     "98_attachment/dashboards/2026-03-24-news.json",
     "99_学习情况记录/2026-03-23——Mon.md",
     "98_attachment/dashboards/2026-03-23-map.svg",
-    "98_attachment/dashboards/2026-03-23-news.json",
-    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex1.pdf",
     "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
     "99_学习情况记录/2026-03-22——Sun.md",
     "98_attachment/dashboards/2026-03-22-map.svg",
-    "98_attachment/dashboards/2026-03-22-news.json",
-    "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md",
-    "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
     "98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit2-gram-schmidt.svg",
     "98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit1-incidence-network.svg",
     "98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit3-svd-geometry.svg",
-    "98_attachment/linear_algebra/mit18_06sc",
-    "00_factor/concept/geometric interpretation of derivative.md",
     "01_Math/01_calculus/01_calculus.canvas",
     "02_Economy/01_Econometrics/01_Econometrics.canvas",
     "01_Math/06_时间序列分析/06_时间序列分析.canvas",
