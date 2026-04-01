@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
+                "file": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_Ax = b and the Four Subspaces"
+              "title": "00_MIT OCW 18.06SC course map"
             }
           }
         ]
@@ -281,13 +281,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
+                "file": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 01_Ax = b and the Four Subspaces"
+              "title": "Outline of 00_MIT OCW 18.06SC course map"
             }
           },
           {
@@ -337,6 +337,11 @@
   },
   "active": "14764de06ec90304",
   "lastOpenFiles": [
+    "99_学习情况记录/2026-04-01——Wed.md",
+    "98_attachment/dashboards/2026-04-01-map.svg",
+    "98_attachment/dashboards/2026-04-01-news.json",
+    "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
+    "00_factor/concept/Null Space.md",
     "99_学习情况记录/2026-03-31——Tue.md",
     "98_attachment/dashboards/2026-03-31-map.svg",
     "98_attachment/dashboards/2026-03-31-news.json",
@@ -347,7 +352,6 @@
     "98_attachment/dashboards/2026-03-29-map.svg",
     "98_attachment/dashboards/2026-03-29-news.json",
     "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md",
-    "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
     "01_Math/05_随机过程/04_马尔可夫链.md",
     "01_Math/05_随机过程/03_泊松过程.md",
     "01_Math/05_随机过程/05_连续时间的马尔可夫链.md",
@@ -361,7 +365,6 @@
     "__pycache__",
     "normalize_callouts.py",
     "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Other/linear_algebra_and_its_applications_4th.pdf",
-    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.2prob.pdf",
     "03_Computer_Science/02_CS61A/01_building abstractions with functions.md",
     "03_Computer_Science/01_CS50/CS50_main.md",
     "04_Fragments/How To Articulate Your Thoughts Intelligently (Talk Like This) - 2026-03-28.md",
@@ -374,15 +377,12 @@
     "04_Fragments/How To Use AI Better Than 99% Of People (This Changed My Life) - 2026-03-28.md",
     "04_Fragments/The Most Important Skill To Learn Right Now - 2026-03-28.md",
     "04_Fragments/If you have multiple interests, do not waste the next 2-3 years - 2026-03-28.md",
-    "04_Fragments/The Future Of Work (& The New High-Income Skill Stack) - 2026-03-28.md",
-    "04_Fragments/How To Think Like A Strategic Genius (5-Dimensional Thinking) - 2026-03-28.md",
     "98_attachment/dashboards/2026-03-28-map.svg",
     "98_attachment/dashboards/2026-03-27-map.svg",
     "98_attachment/dashboards/2026-03-26-map.svg",
     "98_attachment/dashboards/2026-03-25-map.svg",
     "98_attachment/dashboards/2026-03-24-map.svg",
     "98_attachment/dashboards/2026-03-23-map.svg",
-    "98_attachment/dashboards/2026-03-22-map.svg",
     "01_Math/01_calculus/01_calculus.canvas",
     "02_Economy/01_Econometrics/01_Econometrics.canvas",
     "01_Math/06_时间序列分析/06_时间序列分析.canvas",

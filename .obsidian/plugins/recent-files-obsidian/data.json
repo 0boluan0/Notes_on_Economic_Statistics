@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "00_MIT OCW 18.06SC course map",
+      "path": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md"
+    },
+    {
       "basename": "01_Ax = b and the Four Subspaces",
       "path": "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md"
     },
     {
-      "basename": "00_MIT OCW 18.06SC course map",
-      "path": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md"
+      "basename": "Null Space",
+      "path": "00_factor/concept/Null Space.md"
     },
     {
       "basename": "04_马尔可夫链",
@@ -115,10 +119,6 @@
     {
       "basename": "Column Space",
       "path": "00_factor/concept/Column Space.md"
-    },
-    {
-      "basename": "Null Space",
-      "path": "00_factor/concept/Null Space.md"
     },
     {
       "basename": "2026-03-21——Sat",
