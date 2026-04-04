@@ -281,13 +281,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Computer_Science/99_Miscellaneous/the_missing_semester.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of the_missing_semester"
+              "title": "Outline"
             }
           },
           {
@@ -335,8 +334,9 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "36db59183709d800",
   "lastOpenFiles": [
+    "03_Computer_Science/99_Miscellaneous/the_missing_semester.md",
     "03_Computer_Science/99_Miscellaneous/SQL.md",
     "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-code/chapter 02/chapter2.py",
@@ -368,7 +368,6 @@
     "04_Fragments/Kortex- The $3 Million Dollar Mistake - 2026-03-28.md",
     "04_Fragments/If you have multiple interests, do not waste the next 2-3 years - 2026-03-28.md",
     "04_Fragments/How To Use AI Better Than 99% Of People (This Changed My Life) - 2026-03-28.md",
-    "04_Fragments/How To Think Like A Strategic Genius (5-Dimensional Thinking) - 2026-03-28.md",
     "98_attachment/dashboards/2026-04-02-map.svg",
     "98_attachment/dashboards/2026-04-02-news.json",
     "98_attachment/dashboards/2026-04-01-map.svg",

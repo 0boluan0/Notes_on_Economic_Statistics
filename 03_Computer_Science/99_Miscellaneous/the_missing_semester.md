@@ -1,1159 +1,1220 @@
-# The Missing Semester - Shell 基础操作
-
-## 一、Shell 简介
-Shell 是一个命令行解释器，它提供了用户与操作系统内核之间的交互接口。常见的 Shell 包括 Bash（Linux/macOS 默认）、Zsh、Fish 等。
-
+---
+aliases:
+  - The Missing Semester
+  - 计算机教育中缺失的一课
+tags:
+  - computer-science
+  - tools
+  - shell
+  - git
+  - vim
+  - security
 ---
 
-## 二、文件与目录管理
+# The Missing Semester
 
-### 1. `pwd` - 显示当前工作目录
-**功能**：Print Working Directory，显示当前所在的目录路径。
->[!example] 示例
+## 课程定位
+
+>[!note]
+> 这门课真正想补的不是某个单一工具，而是程序员的工作流能力。
+> 它默认你已经会写代码，但还没有系统掌握：
+> - 如何高效使用 shell 和命令行环境
+> - 如何真正把编辑器变成生产工具
+> - 如何用 Git、调试工具、构建系统和安全工具支撑长期工作
+> - 如何让自己的环境、脚本和流程可复用、可迁移、可自动化
+
+大学里的很多课程会教你算法、体系结构、操作系统、机器学习，但不会专门训练你如何高效使用每天都要碰的工具。于是很多人虽然会写程序，却仍然停留在“复制粘贴命令”“出问题再搜”“环境一换全崩”的阶段。`The Missing Semester` 想解决的正是这个问题。
+
+它的核心精神不是“多背命令”，而是：
+
+- 把命令行看成可编程环境，而不是黑窗口
+- 把编辑器看成语言和工作流，而不是输入框
+- 把 Git 看成数据模型，而不是神秘命令集合
+- 把调试、性能分析、安全和构建看成工程习惯，而不是高级附属品
+
+## 资料入口
+
+- 官网首页：https://missing-semester-cn.github.io/
+- 课程概览与 shell：https://missing-semester-cn.github.io/2020/course-shell/
+- Shell 工具和脚本：https://missing-semester-cn.github.io/2020/shell-tools/
+- 编辑器 (Vim)：https://missing-semester-cn.github.io/2020/editors/
+- 数据整理：https://missing-semester-cn.github.io/2020/data-wrangling/
+- 命令行环境：https://missing-semester-cn.github.io/2020/command-line/
+- 版本控制 (Git)：https://missing-semester-cn.github.io/2020/version-control/
+- 调试及性能分析：https://missing-semester-cn.github.io/2020/debugging-profiling/
+- 元编程：https://missing-semester-cn.github.io/2020/metaprogramming/
+- 安全和密码学：https://missing-semester-cn.github.io/2020/security/
+- 大杂烩：https://missing-semester-cn.github.io/2020/potpourri/
+- 提问&回答：https://missing-semester-cn.github.io/2020/qa/
+
+## 如何使用这篇笔记
+
+- 第一遍：按讲次顺序看，先建立整门课的地图。
+- 第二遍：把每一讲里的示例命令自己在终端跑一遍。
+- 第三遍：把常用内容吸收到自己的 dotfiles、脚本、Git 配置和编辑器里。
+
+如果只看不练，这门课几乎不会真正内化。它的价值高度依赖“把知识变成工作流”。
+
+## 课程主线地图
+
+| 讲次 | 主题 | 真正要学会的东西 |
+| --- | --- | --- |
+| 1 | 课程概览与 shell | 用 shell 作为文本接口操控计算机 |
+| 2 | Shell 工具和脚本 | 用脚本和工具把重复劳动自动化 |
+| 3 | 编辑器 (Vim) | 用模式化编辑提高读写代码效率 |
+| 4 | 数据整理 | 用管道和小工具逐步变换数据 |
+| 5 | 命令行环境 | 管理进程、会话、远程机器和配置 |
+| 6 | 版本控制 (Git) | 把 Git 当成快照图和数据模型 |
+| 7 | 调试及性能分析 | 系统定位错误和性能瓶颈 |
+| 8 | 元编程 | 用构建、测试、依赖和 CI 管理工程流程 |
+| 9 | 安全和密码学 | 理解常用安全工具背后的基本模型 |
+| 10 | 大杂烩 | 补齐大量高频但零散的实用主题 |
+| 11 | 提问&回答 | 回答工具选择与学习路径上的现实问题 |
+
+## 第 1 讲 课程概览与 shell
+
+资料：<https://missing-semester-cn.github.io/2020/course-shell/>
+
+### 这讲解决什么问题
+
+这一讲要你明白：为什么即使今天图形界面极强，shell 仍然是程序员最该掌握的接口之一。
+
+GUI 适合覆盖高频、固定、被设计者预先考虑到的交互；shell 适合开放式组合、批量处理、自动化和远程工作。程序员需要的恰恰经常是后者。
+
+### shell 是什么
+
+shell 是一个命令解释器，也是一个编程环境。
+
+它至少做三件事：
+
+- 读取你输入的命令
+- 解析命令、参数、重定向、管道和变量
+- 找到对应程序并执行
+
+因此 shell 不是“一个程序列表”，而是“组织程序协作的语言层”。
+
+### 核心概念
+
+- `command`：你要执行的程序
+- `argument`：传给程序的参数
+- `current working directory`：程序默认工作的目录
+- `PATH`：shell 在哪些目录里搜索可执行程序
+- `absolute path` vs `relative path`：绝对路径从根目录开始，相对路径相对于当前工作目录
+- `.` 与 `..`：当前目录和父目录
+
+### 最先要掌握的命令
+
 ```bash
 pwd
-# 输出：/Users/yourname/Documents
-```
-
-### 2. `cd` - 切换工作目录
-**功能**：Change Directory，切换到指定目录。
-**常用用法**：
-```bash
-cd /path/to/directory  # 切换到指定绝对路径
-cd relative/path       # 切换到指定相对路径
-cd ~                   # 切换到用户主目录（家目录）
-cd -                   # 切换到上一个工作目录
-cd ..                  # 切换到上级目录
-cd .                   # 保持当前目录不变（通常用于脚本）
-```
-
-### 3. `ls` - 列出目录内容
-**功能**：List，列出目录中的文件和子目录。
-**常用选项**：
-```bash
-ls                      # 列出当前目录可见文件
-ls -l                   # 详细列表格式（权限、大小、修改时间等）
-ls -a                   # 显示所有文件（包括隐藏文件，以.开头）
-ls -la                  # 详细列出所有文件
-ls -h                   # 以人类可读格式显示文件大小
-ls -t                   # 按修改时间排序（最新的在最前）
-ls -R                   # 递归列出目录内容
-ls /path/to/directory   # 列出指定目录内容
-```
-
-### 4. `mkdir` - 创建目录
-**功能**：Make Directory，创建新目录。
-**常用选项**：
-```bash
-mkdir new_dir           # 创建单个目录
-mkdir -p dir1/dir2/dir3 # 递归创建多层目录（如果父目录不存在）
-mkdir -m 755 my_dir     # 创建目录并设置权限（755表示所有者读写执行，其他只读执行）
-```
-
-### 5. `rmdir` - 删除空目录
-**功能**：Remove Directory，删除空目录（只能删除空目录）。
->[!example] 示例
-```bash
-rmdir empty_dir
-```
-
-### 6. `rm` - 删除文件/目录
-**功能**：Remove，删除文件或目录。
-**常用选项**：
-```bash
-rm file.txt             # 删除单个文件
-rm -f file.txt          # 强制删除（不提示确认）
-rm -r dir               # 递归删除目录及其内容
-rm -rf dir              # 强制递归删除（危险操作，慎用）
-```
-
-### 7. `cp` - 复制文件/目录
-**功能**：Copy，复制文件或目录。
-**常用选项**：
-```bash
-cp source.txt dest.txt  # 复制文件
-cp -r source_dir dest_dir # 递归复制目录
-cp -i source.txt dest.txt # 覆盖前提示确认
-cp -v source.txt dest.txt # 显示详细复制过程
-```
-
-### 8. `mv` - 移动/重命名文件/目录
-**功能**：Move，移动文件/目录或重命名。
->[!example] 示例
-```bash
-mv file.txt new_name.txt # 重命名文件
-mv file.txt /path/to/dir # 移动文件到指定目录
-mv dir /path/to/destination # 移动目录
-mv -i file.txt dest/    # 覆盖前提示确认
-```
-
-### 9. `chmod` - 修改文件权限
-**功能**：Change Mode，修改文件或目录的访问权限。
-**权限表示方法**：
-- **数字表示法**：r=4, w=2, x=1（r:读, w:写, x:执行）
-- **符号表示法**：u(用户), g(组), o(其他), a(所有)
-
-**常用用法**：
-```bash
-chmod 755 file.sh       # 用户:rwx, 组:r-x, 其他:r-x（常用的执行权限）
-chmod 644 file.txt      # 用户:rw-, 组:r--, 其他:r--（常用的文件权限）
-chmod +x file.sh        # 给所有用户添加执行权限
-chmod u+x file.sh       # 给用户添加执行权限
-chmod g-w file.txt      # 给组移除写权限
-chmod o-rwx file.txt    # 给其他用户移除所有权限
-chmod -R 755 dir/       # 递归修改目录及其内容的权限
-```
-
-### 10. `chown` - 修改文件所有者
-**功能**：Change Owner，修改文件或目录的所有者和组。
-**常用用法**：
-```bash
-chown user file.txt     # 变更文件所有者为user
-chown user:group file.txt # 变更文件所有者为user，所属组为group
-chown -R user:group dir/ # 递归修改目录及其内容的所有权
-```
-
----
-
-## 三、文件内容查看与处理
-
-### 1. `cat` - 查看文件内容
-**功能**：Concatenate，连接并显示文件内容。
->[!example] 示例
-```bash
-cat file.txt            # 显示文件全部内容
-cat -n file.txt         # 显示内容并添加行号
-```
-
-### 2. `head` - 查看文件开头部分
-**功能**：显示文件的前几行（默认10行）。
->[!example] 示例
-```bash
-head file.txt           # 显示前10行
-head -n 20 file.txt     # 显示前20行
-```
-
-### 3. `tail` - 查看文件结尾部分
-**功能**：显示文件的后几行（默认10行）。
-**常用选项**：
-```bash
-tail file.txt           # 显示后10行
-tail -n 15 file.txt     # 显示后15行
-tail -f log.txt         # 实时跟踪文件更新（常用语查看日志）
-```
-
-### 4. `sort` - 排序文件内容
-**功能**：对文件内容进行排序。
-**常用选项**：
-```bash
-sort file.txt           # 字典序排序
-sort -n file.txt        # 数值排序
-sort -r file.txt        # 倒序排序
-sort -k 2 file.txt      # 按第2列排序（默认以空格分隔）
-sort -t',' -k 3 file.csv # 以逗号分隔，按第3列排序
-```
-
-### 5. `grep` - 搜索文本
-**功能**：Global Regular Expression Print，在文件中搜索匹配模式的文本。
-**常用选项**：
-```bash
-grep "pattern" file.txt # 在文件中搜索字符串
-grep -i "pattern" file.txt # 忽略大小写搜索
-grep -r "pattern" dir/  # 递归搜索目录中的所有文件
-grep -n "pattern" file.txt # 显示匹配行的行号
-grep -v "pattern" file.txt # 显示不匹配的行
-grep -A 2 "pattern" file.txt # 显示匹配行及其后2行
-grep -B 2 "pattern" file.txt # 显示匹配行及其前2行
-grep -C 2 "pattern" file.txt # 显示匹配行及其前后各2行
-```
-
-### 6. `sed` - 流编辑器
-**功能**：Stream Editor，用于对文本进行编辑和转换（擅长替换操作）。
-**常用用法**：
-```bash
-sed 's/old/new/' file.txt # 替换每行第一个匹配的old为new
-sed 's/old/new/g' file.txt # 替换所有匹配的old为new
-sed '10s/old/new/' file.txt # 替换第10行的old为new
-sed -i.bak 's/old/new/g' file.txt # 直接修改文件（创建备份file.txt.bak）
-```
-
-### 7. `awk` - 文本处理工具
-**功能**：强大的文本处理工具，擅长按列处理数据（逐行扫描、分割字段、处理数据）。
-**基本语法**：
-```bash
-awk 'pattern { action }' file.txt
-```
-
-**常用用法**：
-```bash
-awk '{print $1}' file.txt         # 打印第一列（默认以空格/制表符分隔）
-awk -F',' '{print $2}' data.csv   # 以逗号分隔，打印第二列
-awk '{print $1, $3}' file.txt     # 打印第一列和第三列
-awk '/pattern/ {print $0}' file.txt # 打印包含pattern的所有行（$0表示整行）
-awk 'NR > 5 {print $0}' file.txt  # 打印第5行之后的所有行（NR是行号）
-awk '{sum += $1} END {print sum}' file.txt # 计算第一列的总和
-awk '{if ($2 > 100) print $1}' file.txt # 打印第二列大于100的行的第一列
-```
-
-**内置变量**：
-- `$0`：整行内容
-- `$1, $2, ...`：第1列、第2列等（默认以空格分隔）
-- `NF`：当前行的字段数
-- `NR`：当前行号
-- `FS`：字段分隔符（默认是空格）
-- `OFS`：输出字段分隔符（默认是空格）
-- `RS`：记录分隔符（默认是换行）
-- `ORS`：输出记录分隔符（默认是换行）
-- `FILENAME`：当前文件名
-
-**高级用法示例**：
-```bash
-# 使用多个分隔符（空格或逗号）
-awk -F'[ ,]' '{print $1, $3}' data.txt
-
-# 格式化输出（固定宽度）
-awk '{printf "%-10s %5d\n", $1, $2}' data.txt
-
-# 处理多个文件
-awk 'FNR == 1 {print "---", FILENAME, "---"} {print}' file1.txt file2.txt
-
-# 使用自定义函数
-awk '
-function max(a, b) {
-    return (a > b) ? a : b
-}
-{print max($1, $2)}' data.txt
-
-# 数组使用（统计词频）
-awk '{for(i=1;i<=NF;i++) count[$i]++}
-END {for(w in count) print w, count[w]}' text.txt
-```
-
-**实际场景示例**：
-```bash
-# 处理CSV文件 - 统计各分数段人数
-awk -F',' 'BEGIN {
-    print "Score Range\tCount"
-    print "------------------"
-    for(i=0;i<=100;i+=10)
-        ranges[i] = 0
-}
-NR>1 {
-    score = $3
-    if(score >= 0 && score <= 100) {
-        range = int(score / 10) * 10
-        ranges[range]++
-    }
-}
-END {
-    for(r in ranges) {
-        if(ranges[r] > 0) {
-            printf "%3d-%3d\t%d\n", r, r+9, ranges[r]
-        }
-    }
-}' students.csv
-
-# 分析日志文件 - 统计访问量最高的IP
-awk '{count[$1]++}
-END {for(ip in count) print count[ip], ip}' access.log | sort -nr | head -10
-```
-
----
-
-## 四、系统与信息查询
-
-### 1. `date` - 显示/设置日期时间
-**功能**：显示当前系统日期和时间，或设置系统时间。
->[!example] 示例
-```bash
-date                    # 显示当前日期时间
-date "+%Y-%m-%d %H:%M:%S" # 自定义格式显示：2023-10-05 14:30:00
-date "+%A, %B %d, %Y"    # 显示完整格式：Thursday, October 05, 2023
-date -d "2 days ago"     # 显示两天前的日期
-date -d "next Monday"    # 显示下周一的日期
-```
-
-**常用格式化选项**：
-- `%Y`：4位年份
-- `%m`：月份（01-12）
-- `%d`：日期（01-31）
-- `%H`：小时（00-23）
-- `%M`：分钟（00-59）
-- `%S`：秒（00-59）
-- `%A`：完整星期名
-- `%B`：完整月份名
-- `%j`：年积日（001-366）
-
-### 2. `echo` - 输出文本
-**功能**：输出字符串或变量值。
->[!example] 示例
-```bash
-echo "Hello World"      # 输出字符串
-echo $PATH              # 输出环境变量值
-echo -e "Line1\nLine2"  # 解析转义字符（换行）
-echo -n "No newline"    # 不输出尾随换行符
-echo "Current dir: $(pwd)" # 命令替换
-echo "User: $USER, Host: $HOSTNAME" # 输出多个变量
-```
-
-### 3. `man` - 查看命令手册
-**功能**：Manual，显示命令的详细帮助信息（手册页）。
->[!example] 示例
-```bash
-man ls                  # 查看ls命令的手册
-man 5 passwd            # 查看passwd配置文件的手册（第5部分）
-man -k "search term"    # 搜索包含特定关键词的手册
-man -f command          # 查看命令的简短描述
-```
-
-**手册页章节**：
-- 1：用户命令
-- 2：系统调用
-- 3：库函数
-- 4：特殊文件和设备
-- 5：配置文件格式
-- 6：游戏
-- 7：杂项
-- 8：系统管理命令和守护进程
-
-### 4. `which` - 查找命令路径
-**功能**：显示命令的完整路径（根据PATH环境变量）。
->[!example] 示例
-```bash
-which python3           # 显示python3命令的路径
-which -a ls             # 显示所有同名命令的路径
-```
-
-### 5. `whoami` - 显示当前用户
-**功能**：显示当前登录用户的用户名。
->[!example] 示例
-```bash
-whoami
-```
-
-### 6. `id` - 显示用户和组信息
-**功能**：显示当前用户的UID、GID和所属组信息。
->[!example] 示例
-```bash
-id                      # 显示完整信息
-id -u                   # 只显示UID
-id -g                   # 只显示GID
-id -G                   # 显示所有所属组的GID
-id -nG                  # 显示所有所属组的名称
-```
-
-### 7. `who` - 显示当前登录用户
-**功能**：显示当前登录系统的用户信息。
->[!example] 示例
-```bash
-who                     # 显示用户和登录时间
-who -u                  # 显示用户和空闲时间
-who -b                  # 显示系统启动时间
-```
-
-### 8. `uptime` - 显示系统运行时间
-**功能**：显示系统已运行的时间和平均负载。
->[!example] 示例
-```bash
-uptime                  # 显示运行时间和负载
-```
-
----
-
-## 五、核心概念详细解释
-
-### 1. 文件权限系统
-**Unix/Linux权限模型**：每个文件/目录都有三组权限（用户、组、其他）和三种权限类型（读、写、执行）。
-
-**权限表示方法**：
-```
-权限位：rwxr-xr-x
-         |   |   |
-         |   |   +-- 其他用户权限
-         |   +------ 组权限
-         +---------- 用户权限
-
-数字表示：r=4, w=2, x=1
-rwx = 4+2+1 = 7
-r-x = 4+0+1 = 5
-r-- = 4+0+0 = 4
-
-常用权限组合：
-- 755：用户rwx，组r-x，其他r-x（执行文件常用）
-- 644：用户rw-，组r--，其他r--（普通文件常用）
-- 700：用户rwx，组和其他无权限（敏感文件）
-- 600：用户rw-，组和其他无权限（敏感配置文件）
-```
-
-**特殊权限位**：
-- **SetUID（SUID，4000）**：执行程序时以文件所有者身份运行
-- **SetGID（SGID，2000）**：执行程序时以文件所属组身份运行；目录中的新文件继承组
-- **Sticky（1000）**：目录中的文件只能由所有者删除（例如/tmp目录）
-
->[!example] 示例
-```bash
-chmod 4755 program     # 设置SUID权限
-chmod 2775 directory   # 设置SGID权限
-chmod 1777 tempdir     # 设置Sticky权限
-```
-
-### 2. 环境变量
->[!note] 定义
-> 环境变量是Shell会话中可用的动态值，影响程序的行为。
-
-**常用环境变量**：
-```bash
-PATH    # 命令搜索路径（用:分隔）
-HOME    # 用户主目录路径
-PWD     # 当前工作目录
-SHELL   # 当前使用的Shell
-USER    # 当前用户名
-HOSTNAME # 主机名
-LANG    # 语言和地区设置
-TERM    # 终端类型
-PS1     # 命令提示符格式
-```
-
-**操作环境变量**：
-```bash
-echo $PATH              # 查看PATH变量
-export PATH=$PATH:/new/directory # 添加新路径到PATH
-PATH=/new/directory:$PATH       # 前置新路径
-export MY_VAR="value"   # 声明并导出变量
-unset MY_VAR            # 删除变量
-env                     # 列出所有环境变量
-printenv                # 列出所有环境变量（更详细）
-```
-
-### 3. 进程管理基础
-**进程状态**：
-- R（运行）：正在执行或在就绪队列中
-- S（睡眠）：等待资源（可中断）
-- D（磁盘睡眠）：等待磁盘I/O（不可中断）
-- T（停止）：暂停执行
-- Z（僵尸）：进程已结束但父进程未回收
-
-**常用命令**：
-```bash
-ps aux                  # 列出所有进程
-ps -ef                  # 列出所有进程（BSD风格）
-top                     # 实时显示进程资源使用情况
-htop                    # 增强版top（需安装）
-pkill -f "process name" # 根据名称杀死进程
-kill PID                # 发送信号给进程（默认SIGTERM）
-kill -9 PID             # 强制杀死进程（SIGKILL）
-jobs                    # 列出后台任务
-fg %1                   # 前台运行任务1
-bg %1                   # 后台继续运行任务1
-```
-
----
-
-## 六、高级操作与概念
-
-### 1. 管道（Pipe）- `|`
-**功能**：将一个命令的输出作为另一个命令的输入。
->[!example] 示例
-```bash
-ls -l | grep ".txt"     # 列出所有.txt文件
-cat file.txt | sort | head -5 # 对文件内容排序并显示前5行
-```
-
-### 2. 重定向
-**常用操作符**：
-```bash
-command > file.txt      # 将输出重定向到文件（覆盖）
-command >> file.txt     # 将输出重定向到文件（追加）
-command < file.txt      # 从文件读取输入
-command 2> error.txt    # 将错误输出重定向到文件
-command &> output.txt   # 将标准输出和错误输出都重定向到文件
-```
-
-### 3. 通配符
-**常用通配符**：
-```bash
-*                       # 匹配任意字符序列（0个或多个）
-?                       # 匹配任意单个字符
-[abc]                   # 匹配a、b或c
-[!abc]                  # 匹配除了a、b、c之外的字符
-[0-9]                   # 匹配任意数字
-```
-
->[!example] 示例
-```bash
-ls *.txt                # 列出所有.txt文件
-ls file?.txt            # 列出file1.txt、file2.txt等
-ls [a-c]*.py            # 列出以a、b或c开头的.py文件
-```
-
-### 4. 环境变量
-**常用环境变量**：
-- `PATH`：命令搜索路径
-- `HOME`：用户主目录
-- `PWD`：当前工作目录
-- `SHELL`：当前使用的Shell
-- `USER`：当前用户名
-
-**操作环境变量**：
-```bash
-echo $PATH              # 查看PATH变量
-export PATH=$PATH:/new/directory # 添加新路径到PATH
-```
-
----
-
-## 六、查找文件与目录
-
-### 1. `find` - 查找文件/目录
-**功能**：在文件系统中查找符合条件的文件或目录。
-**常用用法**：
-```bash
-find /path/to/search -name "*.txt" # 按文件名查找.txt文件
-find . -type f -name "*.py"       # 在当前目录查找.py文件（-type f表示文件）
-find . -type d -name "test*"      # 在当前目录查找以test开头的目录（-type d表示目录）
-find . -mtime -7                  # 查找7天内修改过的文件
-find . -size +100k                # 查找大于100KB的文件
-find . -perm 755                  # 查找权限为755的文件
-find . -name "*.tmp" -delete      # 查找并删除所有.tmp文件
-```
-
-**与其他命令配合使用**：
-```bash
-find . -name "*.txt" -exec grep "pattern" {} + # 在所有.txt文件中搜索pattern
-```
-
----
-
-## 七、常用快捷键
-| 快捷键       | 功能                     |
-|--------------|--------------------------|
-| `Ctrl + C`   | 中断当前命令             |
-| `Ctrl + Z`   | 暂停当前命令（可使用fg恢复） |
-| `Ctrl + D`   | 退出Shell会话（EOF）     |
-| `Ctrl + L`   | 清屏                     |
-| `Ctrl + A`   | 移动到行首               |
-| `Ctrl + E`   | 移动到行尾               |
-| `Ctrl + K`   | 剪切从光标到行尾的内容   |
-| `Ctrl + U`   | 剪切从光标到行首的内容   |
-| `Ctrl + R`   | 搜索历史命令             |
-| `Tab`        | 自动补全命令或路径       |
-
----
-
-## 八、常见问题与解决方案
-
-### 1. 文件权限问题
-**问题**：Permission denied（权限被拒绝）
-**解决方案**：
-```bash
-# 检查文件权限
-ls -l file.txt
-# 给用户添加执行权限
-chmod +x script.sh
-# 给用户添加读写权限
-chmod u+rw file.txt
-# 递归修改目录权限
-chmod -R 755 directory/
-```
-
-**问题**：无法删除文件：Operation not permitted
-**解决方案**：
-```bash
-# 检查是否有特殊权限位
-ls -l file.txt
-# 如果有i（immutable）属性，先去除
-chattr -i file.txt
-# 再尝试删除
-rm file.txt
-```
-
-### 2. 文件处理问题
-**问题**：文件内容显示乱码（编码问题）
-**解决方案**：
-```bash
-# 检查文件编码（需安装file命令）
-file -i file.txt
-# 转换编码（需安装iconv）
-iconv -f GBK -t UTF-8 file.txt > newfile.txt
-```
-
-**问题**：处理大文件时内存不足
-**解决方案**：
-```bash
-# 使用逐行处理的命令
-awk '{processing}' large_file.txt
-# 或者使用split分割文件
-split -l 10000 large_file.txt part_
-# 处理完后合并
-cat part_* > merged_file.txt
-```
-
-### 3. 系统性能问题
-**问题**：系统运行缓慢，CPU或内存使用率高
-**解决方案**：
-```bash
-# 查看进程资源使用
-top
-htop  # 更直观
-# 查找CPU使用率最高的进程
-ps aux --sort=-%cpu | head -10
-# 查找内存使用率最高的进程
-ps aux --sort=-%mem | head -10
-# 检查磁盘空间
-df -h
-# 检查磁盘使用情况
-du -sh /path/to/directory
-```
-
-### 4. 网络问题
-**问题**：无法连接到远程主机
-**解决方案**：
-```bash
-# 检查网络连通性
-ping example.com
-# 检查DNS解析
-nslookup example.com
-# 检查端口连通性
-telnet example.com 80
-nc -zv example.com 80  # 使用nc（netcat）
-# 查看路由表
-route -n
-```
-
-### 5. 命令使用问题
-**问题**：找不到命令：Command not found
-**解决方案**：
-```bash
-# 检查命令是否安装
-which command_name
-# 检查PATH变量
+cd /path/to/dir
+cd ..
+cd ~
+ls
+ls -l
+man ls
+which echo
 echo $PATH
-# 如果命令在非标准路径，添加到PATH
-export PATH=$PATH:/path/to/command
-# 或者直接使用完整路径
-/path/to/command
 ```
 
-**问题**：命令输出过长难以阅读
-**解决方案**：
+这些命令表面简单，但它们连着 shell 的最基本模型：你现在在哪、系统会去哪里找程序、一个程序又是如何被文档化的。
+
+### 重定向与管道
+
+shell 中最重要的抽象之一，是“程序读输入流、写输出流”。
+
+- `>`：把标准输出写到文件
+- `>>`：追加写入
+- `<`：从文件读取作为输入
+- `|`：把前一个程序的输出接到后一个程序的输入
+
+这意味着你可以把很多小工具像积木一样串起来，而不是写一大坨程序。
+
+>[!example] 典型工作流
+>
+> ```bash
+> echo hello > hello.txt
+> cat hello.txt
+> cat < hello.txt > hello2.txt
+> ls -l / | tail -n 1
+> curl --head --silent google.com | grep -i content-length
+> ```
+>
+> 这类命令真正重要的不是具体输出，而是你要形成直觉：
+> 一个程序的输出通常都能成为下一个程序的输入。
+
+### 权限与 root
+
+`ls -l` 里最容易被忽视但非常重要的内容是权限位。
+
+- 目录的 `x` 更多表示“可进入/可搜索”
+- 文件的 `x` 表示“可执行”
+- root 用户几乎不受限制，所以 `sudo` 很强也很危险
+
+官网里专门用亮度文件的例子说明了一件很容易踩坑的事：`sudo echo 3 > brightness` 往往失败，不是因为 `echo` 没有 root 权限，而是因为重定向是 shell 先做的，写文件这一步不是由 `sudo echo` 完成的。
+
+正确思路通常是：
+
 ```bash
-# 使用管道和分页工具
-command | less
-command | more
-# 保存到文件并查看
-command > output.txt
-cat output.txt
-# 或在输出中搜索关键词
-command | grep "pattern"
+echo 3 | sudo tee brightness
 ```
 
----
+### 这讲真正要记住什么
 
-## 九、Shell脚本基础
+- shell 不是老旧接口，而是可组合、可自动化的文本接口
+- 你执行的不是“魔法命令”，而是“程序 + 参数 + 环境 + 输入输出流”
+- 管道和重定向是 shell 最有力量的抽象
+- 出现权限问题时，要分清“谁在执行程序”和“谁在做文件重定向”
 
-### 1. 脚本基本结构
+## 第 2 讲 Shell 工具和脚本
+
+资料：<https://missing-semester-cn.github.io/2020/shell-tools/>
+
+### 这讲解决什么问题
+
+第一讲让你学会手动使用 shell；这一讲让你学会把 shell 变成自动化工具。
+
+当你发现自己总是在重复执行一串命令时，就应该开始考虑脚本、函数、别名和更合适的命令行工具。
+
+### Shell 脚本的核心地位
+
+shell 脚本并不是“比 Python 更高级”的语言，而是“更贴近命令行工作流”的语言。
+
+它擅长的事包括：
+
+- 调命令
+- 连管道
+- 重定向
+- 批量处理文件
+- 在系统环境里做轻量自动化
+
+它不适合承担大型程序的复杂数据结构、复杂错误处理和长期维护逻辑。
+
+### 变量、引号、控制流
+
+#### 变量赋值
+
 ```bash
-#!/bin/bash
-# 这是一个简单的Shell脚本
-
-# 定义变量
-NAME="World"
-
-# 输出文本
-echo "Hello, $NAME!"
-
-# 条件判断
-if [ "$NAME" == "World" ]; then
-    echo "Welcome to the world!"
-else
-    echo "Welcome, $NAME!"
-fi
-
-# 循环
-echo "Counting from 1 to 5:"
-for i in {1..5}; do
-    echo "Number: $i"
-done
-
-# 函数
-greet() {
-    local NAME=$1
-    echo "Hello, $NAME!"
-}
-
-# 调用函数
-greet "Alice"
-greet "Bob"
+foo=bar
+echo "$foo"
+echo '$foo'
 ```
 
-### 2. 脚本执行方式
+关键点：
+
+- 赋值时等号两侧不能有空格
+- 双引号会展开变量
+- 单引号基本保持原样
+
+#### 条件执行
+
 ```bash
-# 给脚本添加执行权限
-chmod +x script.sh
-# 执行脚本
-./script.sh
-# 或者使用bash解释器
-bash script.sh
+false || echo "Oops, fail"
+true && echo "Things went well"
+false ; echo "This will always run"
 ```
 
-### 3. 常见脚本用途
+关键点：
+
+- `&&`：前一个成功才继续
+- `||`：前一个失败才继续
+- `;`：无论如何都继续
+
+### 特殊变量
+
+官网特别强调 Bash 的一组特殊变量，因为它们极常用：
+
+- `$0`：脚本名
+- `$1` 到 `$9`：位置参数
+- `$@`：全部参数
+- `$#`：参数个数
+- `$?`：前一条命令退出码
+- `$$`：当前脚本进程号
+- `!!`：上一条完整命令
+- `$_`：上一条命令最后一个参数
+
+### 命令替换与进程替换
+
+#### 命令替换
+
 ```bash
-# 自动备份脚本
-#!/bin/bash
-BACKUP_DIR="/backup"
-SOURCE_DIR="/home/user/documents"
-DATE=$(date +"%Y%m%d_%H%M%S")
-
-mkdir -p $BACKUP_DIR
-tar -czf $BACKUP_DIR/backup_$DATE.tar.gz $SOURCE_DIR
-
-# 监控系统资源脚本
-#!/bin/bash
-CPU=$(top -bn1 | grep "Cpu(s)" | awk '{print $2}' | cut -d. -f1)
-MEM=$(free -m | awk 'NR==2{printf "%.2f%%", $3*100/$2}')
-
-echo "CPU Usage: ${CPU}%"
-echo "Memory Usage: ${MEM}"
-
-# 发送邮件通知（需安装mailx）
-if [ $CPU -gt 80 ]; then
-    echo "High CPU usage: ${CPU}%" | mailx -s "Warning: High CPU Usage" admin@example.com
-fi
+files=$(ls)
+now=$(date)
 ```
 
----
+shell 会先执行命令，再把输出结果替换进去。
 
-## 十、Shell语法详细介绍
+#### 进程替换
 
-### 1. 变量
-
-#### 变量定义与赋值
 ```bash
-# 基本变量定义
-name="John"
-age=30
-
-# 变量名规则：只能包含字母、数字和下划线，不能以数字开头
-# 错误示例：2name="John" 或 name@john="John"
-
-# 变量引用
-echo "My name is $name"
-echo "I am ${age} years old"  # 推荐使用${}格式，避免歧义
+diff <(ls foo) <(ls bar)
 ```
 
-#### 变量类型
+这类写法适合“某个工具想读文件，但你手头只有命令输出”的场景。
+
+### 函数、脚本与 shebang
+
+函数和脚本的关键差异：
+
+- 函数运行在当前 shell 进程里，能直接改当前环境
+- 脚本通常在新的进程里执行，不能直接修改父 shell 的当前目录
+- 脚本可以用任意解释器，不局限于 shell
+
+shebang 的作用是告诉系统用什么解释器执行脚本。
+
 ```bash
-# 字符串变量
-str1="Hello World"
-str2='Single quote string'  # 单引号内的内容原样输出
-
-# 数值变量
-num1=10
-num2=20
-
-# 命令替换
-current_dir=$(pwd)
-# 或使用反引号
-current_dir=`pwd`
-
-# 变量运算
-sum=$((num1 + num2))
-echo "Sum: $sum"  # 输出：Sum: 30
+#!/usr/bin/env bash
+#!/usr/bin/env python3
 ```
 
-#### 只读变量
+`/usr/bin/env` 的价值在于可移植性，它会根据 `PATH` 去找解释器。
+
+### 查找与搜索工具
+
+#### `find`
+
+适合按文件树、属性、时间、权限等复杂条件搜索。
+
 ```bash
-readonly PI=3.14159
-PI=3.14  # 会报错：PI: readonly variable
+find . -name '*.tmp' -exec rm {} \;
+find . -name '*.png' -exec magick {} {}.jpg \;
 ```
 
-#### 删除变量
+#### `fd`
+
+官网推荐把它看成更现代、更友好的 `find` 替代品。
+
+- 默认更快
+- 语法更简单
+- 默认行为更符合直觉
+
+#### `locate`
+
+基于数据库索引，速度快，但结果可能不够新，也不如 `find` 灵活。
+
+#### `grep` / `ripgrep`
+
+- `grep`：经典文本搜索
+- `rg`（ripgrep）：更快，更适合代码仓库
+
+### 代码质量工具
+
+shell 脚本很容易写出“能跑但很脆”的东西，所以课程推荐用 `shellcheck` 之类工具检查常见错误。
+
+比如：
+
+- 忘记给变量加引号
+- 误用 `for file in $(ls)`
+- 条件判断写法不稳
+
+### 这讲真正要记住什么
+
+- shell 脚本擅长“命令行自动化”，不擅长“大型通用程序”
+- 变量、引号和退出码是 Bash 最常见的坑源
+- 函数和脚本最大的差别在于是否运行在当前 shell 环境
+- 工具选择也很重要：`fd`、`rg` 这类现代工具常常比传统工具更顺手
+
+## 第 3 讲 编辑器 (Vim)
+
+资料：<https://missing-semester-cn.github.io/2020/editors/>
+
+### 这讲解决什么问题
+
+这讲不是在教你一个“终端里的古老编辑器”，而是在教一种高效率的编辑思想。
+
+程序员的大量时间并不花在连续输入文本上，而是花在：
+
+- 阅读代码
+- 跳转位置
+- 选中对象
+- 做小范围修改
+- 在多个文件之间切换
+
+Vim 之所以值得学，是因为它把这些高频动作设计成了一个可组合的语言。
+
+### Vim 的哲学
+
+#### 多模态
+
+Vim 的一个核心假设是：阅读/导航/编辑是不同动作，不应该都用“插入字符”的同一套键盘语义。
+
+常用模式包括：
+
+- 正常模式
+- 插入模式
+- 替换模式
+- 可视模式
+- 命令模式
+
+你大部分时间应该在正常模式，而不是插入模式。
+
+#### 命令可组合
+
+Vim 的接口像一种微型语言：
+
+- 移动命令像“名词”
+- 编辑命令像“动词”
+- 次数和修饰语进一步改变它们的含义
+
+例如：
+
+- `dw`：删除一个词
+- `d$`：删除到行尾
+- `ci(`：改括号内内容
+- `3w`：向前移动三个词
+
+### 最基本的操作分层
+
+#### 进入与退出
+
+```vim
+i
+R
+v
+V
+Ctrl-v
+:
+<Esc>
+```
+
+#### 文件级命令
+
+```vim
+:q
+:w
+:wq
+:e filename
+:ls
+:help topic
+```
+
+#### 常用移动
+
+```vim
+h j k l
+w b e
+0 ^ $
+gg G
+/pattern
+n N
+f{char}
+%
+```
+
+#### 常用编辑
+
+```vim
+x
+d{motion}
+c{motion}
+y
+p
+u
+Ctrl-r
+o
+O
+```
+
+### 真正高效的地方
+
+Vim 的效率不来自“快捷键多”，而来自三个机制：
+
+- 常见对象都可以被快速定位
+- 动作和对象可以组合
+- 肌肉记忆形成后，修改非常少依赖鼠标
+
+>[!example] 典型编辑思路
+>
+> 假设你要把函数调用里的参数整体改掉：
+>
+> - 传统编辑器常见做法：鼠标选中、删除、输入
+> - Vim 思路：`ci(`
+>
+> 你不再是“移动光标到每个字符”，而是“对语法对象做操作”。
+
+### 你还需要掌握的扩展能力
+
+- 搜索替换：`:%s/foo/bar/g`
+- 窗口分屏：`:sp` / `:vsp`
+- 宏：`q{寄存器}`、`@{寄存器}`
+- 帮助系统：`:help`
+- 学习资源：`vimtutor`
+
+### 配置与生态
+
+Vim 课程并不要求你一上来就折腾复杂插件生态，但强调两件事：
+
+- 配置是值得投入的，因为编辑器是长期工具
+- 不要盲目复制别人整套配置，先理解再吸收
+
+最基本的长期动作包括：
+
+- 写自己的 `~/.vimrc`
+- 给 shell / readline / 浏览器开启 Vim 风格键位
+- 逐步把高频操作映射到更顺手的方式
+
+### 这讲真正要记住什么
+
+- 学 Vim 不是为了“炫技”，而是为了提高高频编辑效率
+- Vim 的核心不是命令列表，而是“模式 + 组合”
+- 任何看起来繁琐的重复编辑，通常都存在更好的 Vim 方式
+- 先用起来，再逐步学高级功能，收益才会显现
+
+## 第 4 讲 数据整理
+
+资料：<https://missing-semester-cn.github.io/2020/data-wrangling/>
+
+### 这讲解决什么问题
+
+现实里的数据往往不是“直接拿来就能分析”的，它通常是日志、CSV、命令输出、半结构化文本，需要经过一连串变换才变成有用信息。
+
+数据整理的关键不是某一个工具，而是：
+
+- 理解输入是什么
+- 明白目标输出要长什么样
+- 选择合适的小工具逐步把前者变成后者
+
+### 核心工作流思想
+
+课程用日志处理说明了一个非常典型的思路：
+
+1. 先过滤噪音
+2. 再提取感兴趣字段
+3. 再排序、统计或聚合
+4. 必要时把中间结果保存下来
+
+这与 shell 的哲学完全一致：不要一上来就写大程序，先把小工具串起来。
+
+### 正则表达式
+
+正则是数据整理的基本功。至少要熟悉这些模式：
+
+- `.`：任意单字符
+- `*`：前一模式重复零次或多次
+- `+`：前一模式重复一次或多次
+- `[abc]`：字符集合
+- `(A|B)`：或
+- `^`：行首
+- `$`：行尾
+
+课程也特别提醒了正则的现实问题：
+
+- 不同工具的正则方言有差异
+- 贪婪匹配很容易匹配过头
+- 正则非常强大，但并不总是最稳的解决方案
+
+### 高频工具
+
+#### `grep`
+
+做过滤，找匹配行。
+
+#### `sed`
+
+做流式替换与简单重写，最经典语法是：
+
 ```bash
-unset name
-echo $name  # 输出空值
+sed 's/REGEX/SUBSTITUTION/'
 ```
 
-### 2. 字符串操作
+#### `awk`
 
-#### 字符串长度
+按字段处理文本，适合：
+
+- 取列
+- 统计
+- 条件筛选
+- 简单汇总
+
+#### `sort` / `uniq`
+
+适合排序与去重统计。
+
+#### `cut` / `paste`
+
+适合按分隔符抽列、拼列。
+
+#### `less`
+
+适合把长输出变得可读。
+
+### 远程数据整理
+
+课程里一个非常好的习惯是：尽量在数据所在位置先过滤，再传输结果。
+
 ```bash
-str="Hello World"
-echo "Length: ${#str}"  # 输出：11
+ssh myserver 'journalctl | grep sshd | grep "Disconnected from"' > ssh.log
 ```
 
-#### 字符串截取
+这不只是“会用 ssh”，而是理解了：
+
+- 网络也是成本
+- 过滤应该尽量前置
+- 管道可以跨机器工作
+
+### 这讲真正要记住什么
+
+- 数据整理的本质是“把输出逐步逼近目标格式”
+- 管道是组织数据变换的主干
+- 正则表达式很重要，但也容易误伤
+- 不要默认所有问题都要上 Python；很多问题先用命令行就能解决
+
+## 第 5 讲 命令行环境
+
+资料：<https://missing-semester-cn.github.io/2020/command-line/>
+
+### 这讲解决什么问题
+
+前几讲教你“怎么执行命令”，这讲教你“怎么把命令行变成长期可用的工作环境”。
+
+重点包括：
+
+- 任务控制
+- 终端多路复用
+- 别名与 dotfiles
+- SSH 与远程工作
+
+### 任务控制
+
+需要掌握的不是命令本身，而是信号模型。
+
+常见信号与操作：
+
+- `Ctrl-C`：通常发 `SIGINT`
+- `Ctrl-\`：通常发 `SIGQUIT`
+- `Ctrl-Z`：通常发 `SIGTSTP`
+- `kill -TERM PID`：更优雅地请求终止
+- `kill -KILL PID`：强制杀死，最后手段
+
+需要形成的工作习惯：
+
+- 优先优雅结束，不要默认 `kill -9`
+- 学会区分前台、后台、挂起、终止
+- 理解关闭终端时后台子进程可能一起死掉
+
+### jobs / fg / bg / nohup / disown
+
+这套组合决定你是否能自然地管理长任务。
+
 ```bash
-str="abcdefghijklmnopqrstuvwxyz"
-echo "${str:0:5}"    # 从第0位开始，取5个字符：abcde
-echo "${str:5}"      # 从第5位开始，取剩余所有字符：fghijklmnopqrstuvwxyz
-echo "${str: -5}"    # 取最后5个字符：vwxyz
-echo "${str:(-5)}"   # 同上，取最后5个字符：vwxyz
+jobs
+fg %1
+bg %1
+nohup long-running-command &
+disown
 ```
 
-#### 字符串替换
+### tmux：把终端升级为工作空间
+
+tmux 解决的是“一个终端窗口不够用，而且断线后不想丢工作”的问题。
+
+它的核心对象层次：
+
+- session
+- window
+- pane
+
+最重要的价值：
+
+- 多任务并行
+- 分屏
+- 断开后重连
+- 远程工作更稳定
+
+### 别名与 dotfiles
+
+别名适合缩短高频命令，例如：
+
 ```bash
-str="Hello World"
-echo "${str/World/Universe}"    # 替换第一个匹配的World：Hello Universe
-echo "${str//l/L}"              # 替换所有的l为L：HeLLo WorLD
-echo "${str/#Hello/Hi}"         # 替换开头的Hello：Hi World
-echo "${str/%World/Earth}"      # 替换结尾的World：Hello Earth
+alias ll="ls -lh"
+alias gs="git status"
+alias v="vim"
 ```
 
-#### 字符串大小写转换
+但别名只是表层。更重要的是 dotfiles：
+
+- `.bashrc`
+- `.zshrc`
+- `.vimrc`
+- `.gitconfig`
+
+课程真正鼓励的是：把自己的环境配置文本化、版本化、可迁移。
+
+### SSH
+
+SSH 不只是“远程登录”。
+
+你应该把它看成：
+
+- 远程 shell
+- 文件传输能力
+- 端口转发能力
+- 公钥认证体系
+
+长期习惯包括：
+
+- 用公私钥登录，少用密码
+- 配置 `~/.ssh/config`
+- 理解 known_hosts 与 host key 的意义
+- 远程长任务优先用 tmux
+
+### 这讲真正要记住什么
+
+- 命令行环境不是“黑框背景”，而是一整套工作流基础设施
+- 信号、后台任务、tmux、SSH 和 dotfiles 是长期效率来源
+- 别把环境配置留在“脑子里”，要让它可复现
+
+## 第 6 讲 版本控制 (Git)
+
+资料：<https://missing-semester-cn.github.io/2020/version-control/>
+
+### 这讲解决什么问题
+
+课程对 Git 的态度非常明确：不要从命令表学 Git，要从数据模型学 Git。
+
+很多人用 Git 时像在背咒语，是因为只记命令，不理解底层对象和历史图。
+
+### Git 的本质
+
+Git 不是“改动列表工具”，而是“快照图管理工具”。
+
+它把项目在某个时刻的完整状态记录成快照，并用提交图把这些快照串起来。
+
+核心对象可以粗略理解为：
+
+- blob：文件内容
+- tree：目录结构
+- commit：一次快照与元数据
+
+提交不是“补丁”，而是“带父指针的快照节点”。
+
+### 为什么这个模型重要
+
+一旦你理解提交图是 DAG，很多命令就不再神秘：
+
+- `branch`：本质是某个提交的可移动引用
+- `HEAD`：当前所在位置
+- `merge`：把两段历史合并
+- `rebase`：在另一条基线上重放提交
+- `checkout` / `switch`：移动工作位置
+
+### 你至少要能清楚区分的东西
+
+- 工作区
+- 暂存区
+- 提交历史
+- 本地分支
+- 远程分支
+
+如果这几层混在一起，Git 就会永远显得诡异。
+
+### 高频命令的正确理解
+
 ```bash
-str="Hello World"
-echo "${str^^}"   # 全部大写：HELLO WORLD
-echo "${str,,}"   # 全部小写：hello world
+git status
+git add
+git commit
+git log --all --graph --decorate
+git diff
+git checkout
+git switch
+git branch
+git merge
+git rebase
+git stash
+git reset
+git reflog
+git cherry-pick
+git bisect
 ```
 
-### 3. 数组
-
-#### 数组定义与操作
-```bash
-# 数组定义
-arr=("apple" "banana" "orange" "grape")
-
-# 数组长度
-echo "Array length: ${#arr[@]}"  # 输出：4
-
-# 访问数组元素
-echo "First element: ${arr[0]}"       # 输出：apple
-echo "Second element: ${arr[1]}"      # 输出：banana
-
-# 添加元素
-arr[4]="watermelon"
-arr+=("pineapple")  # 追加元素
-
-# 删除元素
-unset arr[2]
-echo "${arr[@]}"  # 输出：apple banana grape watermelon pineapple
-
-# 数组切片
-echo "${arr[@]:1:3}"  # 从索引1开始，取3个元素：banana grape watermelon
-```
-
-#### 关联数组（键值对）
-```bash
-# 声明关联数组
-declare -A colors
-colors["red"]="#FF0000"
-colors["green"]="#00FF00"
-colors["blue"]="#0000FF"
-
-# 访问关联数组
-echo "Red color: ${colors["red"]}"  # 输出：#FF0000
-
-# 遍历关联数组
-for key in "${!colors[@]}"; do
-    echo "Key: $key, Value: ${colors[$key]}"
-done
-```
-
-### 4. 条件判断
-
-#### `if` 语句结构
-`if` 语句是Shell条件判断的基础语法，使用 `fi` 作为结束标记：
-```bash
-# 基本语法
-if [ condition ]; then
-    # 条件成立时执行的命令
-elif [ another_condition ]; then
-    # 另一个条件成立时执行的命令
-else
-    # 所有条件都不成立时执行的命令
-fi
-```
-
-#### 文件判断
-```bash
-# 判断文件是否存在
-if [ -e "file.txt" ]; then
-    echo "File exists"
-else
-    echo "File not exists"
-fi
-
-# 判断是否为普通文件
-if [ -f "file.txt" ]; then
-    echo "It's a regular file"
-fi
-
-# 判断是否为目录
-if [ -d "dir" ]; then
-    echo "It's a directory"
-fi
-
-# 判断文件是否可读
-if [ -r "file.txt" ]; then
-    echo "File is readable"
-fi
-
-# 判断文件是否可写
-if [ -w "file.txt" ]; then
-    echo "File is writable"
-fi
-
-# 判断文件是否可执行
-if [ -x "script.sh" ]; then
-    echo "File is executable"
-fi
-```
-
-#### 数值比较
-```bash
-num1=10
-num2=20
-
-# 等于
-if [ $num1 -eq $num2 ]; then
-    echo "Equal"
-fi
-
-# 不等于
-if [ $num1 -ne $num2 ]; then
-    echo "Not equal"
-fi
-
-# 小于
-if [ $num1 -lt $num2 ]; then
-    echo "Less than"
-fi
-
-# 小于等于
-if [ $num1 -le $num2 ]; then
-    echo "Less than or equal"
-fi
-
-# 大于
-if [ $num1 -gt $num2 ]; then
-    echo "Greater than"
-fi
-
-# 大于等于
-if [ $num1 -ge $num2 ]; then
-    echo "Greater than or equal"
-fi
-```
-
-#### 字符串比较
-```bash
-str1="hello"
-str2="world"
-
-# 字符串相等
-if [ "$str1" = "$str2" ]; then
-    echo "Strings are equal"
-fi
-
-# 字符串不相等
-if [ "$str1" != "$str2" ]; then
-    echo "Strings are not equal"
-fi
-
-# 字符串长度为0
-if [ -z "$empty_str" ]; then
-    echo "String is empty"
-fi
-
-# 字符串长度不为0
-if [ -n "$str1" ]; then
-    echo "String is not empty"
-fi
-```
-
-### 5. 循环结构
-
-#### for循环
-```bash
-# 遍历数组
-fruits=("apple" "banana" "orange")
-for fruit in "${fruits[@]}"; do
-    echo "Fruit: $fruit"
-done
-
-# 遍历数字范围
-for ((i=1; i<=5; i++)); do
-    echo "Number: $i"
-done
-
-# 遍历文件
-for file in *.txt; do
-    echo "File: $file"
-done
-```
-
-#### while循环
-```bash
-# 基本while循环
-count=1
-while [ $count -le 5 ]; do
-    echo "Count: $count"
-    ((count++))
-done
-
-# 读取文件内容
-while read -r line; do
-    echo "Line: $line"
-done < file.txt
-
-# 无限循环
-while true; do
-    echo "This is an infinite loop"
-    sleep 1
-done
-```
-
-#### until循环
-```bash
-count=1
-until [ $count -gt 5 ]; do
-    echo "Count: $count"
-    ((count++))
-done
-```
-
-### 6. 函数
-
-#### 函数定义与调用
-```bash
-# 基本函数定义
-greet() {
-    echo "Hello, world!"
-}
-
-# 调用函数
-greet  # 输出：Hello, world!
-
-# 带参数的函数
-greet_person() {
-    local name=$1
-    echo "Hello, $name!"
-}
-
-greet_person "John"  # 输出：Hello, John!
-greet_person "Jane"  # 输出：Hello, Jane!
-```
-
-#### 函数返回值
-```bash
-# 使用return返回值
-add() {
-    local num1=$1
-    local num2=$2
-    local sum=$((num1 + num2))
-    return $sum
-}
-
-add 10 20
-echo "Sum: $?"  # 输出：Sum: 30
-
-# 使用输出返回值
-multiply() {
-    local num1=$1
-    local num2=$2
-    echo $((num1 * num2))
-}
-
-result=$(multiply 10 20)
-echo "Product: $result"  # 输出：Product: 200
-```
-
-#### 函数变量作用域
-```bash
-# 全局变量
-global_var="global"
-
-show_var() {
-    # 局部变量
-    local local_var="local"
-    echo "Local variable: $local_var"
-    echo "Global variable: $global_var"
-}
-
-show_var
-echo "Global variable outside: $global_var"
-# echo "Local variable outside: $local_var"  # 会报错：local_var: not found
-```
-
----
-
-## 十一、高级Shell编程技巧
-
-### 1. 输入输出处理
-
-#### 读取用户输入
-```bash
-# 简单输入
-echo -n "Enter your name: "
-read name
-echo "Hello, $name!"
-
-# 带默认值的输入
-read -p "Enter your age: " age
-age=${age:-18}  # 如果没有输入，默认值为18
-echo "Your age is $age"
-
-# 隐藏输入（密码输入）
-read -p "Enter your password: " -s password
-echo
-echo "Password entered: $password"
-```
-
-#### 格式化输出
-```bash
-# 使用printf
-printf "Name: %-10s Age: %3d\n" "John" 30
-printf "Price: $%.2f\n" 19.99
-printf "Date: %04d-%02d-%02d\n" 2023 10 5
-```
-
-### 2. 错误处理
-
-#### 错误检查
-```bash
-# 检查命令执行是否成功
-if ls /nonexistent >/dev/null 2>&1; then
-    echo "Command succeeded"
-else
-    echo "Command failed"
-    echo "Exit code: $?"
-fi
-
-# 强制脚本在错误时退出
-set -e  # 启用错误检查
-command1  # 命令失败时脚本会立即退出
-command2
-```
-
-#### 错误陷阱
-```bash
-# 设置错误陷阱
-cleanup() {
-    echo "Script interrupted, cleaning up..."
-    # 执行清理操作
-}
-
-trap cleanup INT TERM EXIT
-
-# 主程序
-echo "Running..."
-sleep 10
-```
-
-### 3. 正则表达式
-
-#### 基本正则表达式
-```bash
-# 使用grep进行正则匹配
-grep -E "^[0-9]+$" file.txt  # 匹配纯数字行
-grep -E "^[a-zA-Z]+$" file.txt  # 匹配纯字母行
-grep -E "^[a-zA-Z0-9_]+$" file.txt  # 匹配字母、数字、下划线
-```
-
-#### 正则表达式替换
-```bash
-# 使用sed进行正则替换
-sed 's/[0-9]\+/NUMBER/g' file.txt  # 将所有数字替换为NUMBER
-sed 's/^ *//g' file.txt  # 去除行首空格
-sed 's/ *$//g' file.txt  # 去除行尾空格
-```
+课程真正强调的不是“记住这些名字”，而是知道每个命令在操作哪一层状态。
+
+### merge 与 rebase
+
+- `merge`：保留分叉结构，生成合并提交
+- `rebase`：改写提交基底，让历史看起来更线性
+
+没有哪一个永远更高级。你需要理解两者在“历史表达方式”上的差异。
+
+### reflog 的现实价值
+
+Git 最让人安心的一点，是很多“看起来丢了”的东西其实没真丢。
+
+`reflog` 能帮你找回：
+
+- 被 reset 掉的提交
+- 被误切换前的位置
+- 一时找不到的历史状态
+
+这也是为什么理解引用和提交对象很重要。
+
+### 这讲真正要记住什么
+
+- Git 的核心是快照图，不是命令表
+- 分支本质上只是指针
+- 很多 Git 操作都是在移动引用、更新暂存区和工作区
+- 一旦理解数据模型，冲突、merge、rebase 和找回历史都会清楚很多
+
+## 第 7 讲 调试及性能分析
+
+资料：<https://missing-semester-cn.github.io/2020/debugging-profiling/>
+
+### 这讲解决什么问题
+
+这讲处理两个现实问题：
+
+- 程序错了，怎么定位
+- 程序慢了，怎么证明它为什么慢
+
+很多人对这两件事的默认做法是“盲改”和“凭感觉优化”，课程要你彻底改掉这种习惯。
+
+### 调试的层次
+
+#### 打印与日志
+
+打印调试依然有效，但日志更适合长期系统。
+
+日志的价值在于：
+
+- 可持久化
+- 可分级
+- 可过滤
+- 很多问题发生时，日志可能已经包含线索
+
+常见日志级别：
+
+- DEBUG
+- INFO
+- WARN
+- ERROR
+
+### 调试器与系统调用追踪
+
+有些问题不是“程序逻辑错了”，而是“程序和系统交互出了问题”。
+
+这时就需要：
+
+- `gdb` / `pdb` 等调试器
+- `strace` / `dtruss` 看系统调用
+- `lsof` 看打开文件
+- `tcpdump` / `Wireshark` 看网络包
+- 浏览器 DevTools 看前端和网络请求
+
+### 静态分析
+
+静态分析的价值在于：不运行代码，也能发现大量明显问题。
+
+例如：
+
+- 拼写错误
+- 未定义变量
+- 覆盖名字
+- 风格与潜在 bug
+
+这类工具包括语言自己的 linter、type checker、静态分析器等。
+
+### Profiling：先测再优化
+
+性能分析最重要的原则：
+
+- 不要先猜
+- 先测瓶颈
+- 优化后再测
+
+你通常会用到：
+
+- wall-clock time
+- CPU time
+- 内存分配
+- I/O 等待
+
+典型工具包括：
+
+- `time`
+- `perf`
+- 各语言 profiler
+- benchmark 工具
+
+### 微基准测试的坑
+
+课程会提醒你：benchmark 很容易测错。
+
+常见干扰项包括：
+
+- 缓存预热
+- 编译器优化
+- 输入规模太小
+- 测试环境不稳定
+- 把启动成本和核心逻辑混在一起
+
+### 这讲真正要记住什么
+
+- 调试不是“改一行试一行”，而是系统收集证据
+- 打印、日志、调试器、系统调用跟踪各自解决不同层面的问题
+- 性能优化必须建立在 profiling 之上
+- 没有测量就谈优化，通常是在浪费时间
+
+## 第 8 讲 元编程
+
+资料：<https://missing-semester-cn.github.io/2020/metaprogramming/>
+
+### 这讲解决什么问题
+
+这里的 “元编程” 不是指语言层面的宏系统，而是指“围绕程序开发流程的编程”。
+
+课程关注的是：
+
+- 构建系统
+- 依赖管理
+- 测试
+- 持续集成
+
+它们看起来不像“写功能”，但在真实工程里经常比功能本身更决定效率。
+
+### 构建系统
+
+构建系统本质上是在声明三件事：
+
+- 目标
+- 依赖
+- 规则
+
+典型例子是 `make`。
+
+它的关键价值不是“帮你执行命令”，而是：
+
+- 知道依赖关系
+- 知道哪些目标已经过期
+- 只重建必要部分
+
+这就是增量构建思想。
+
+>[!example] 典型理解
+>
+> 如果 `paper.pdf` 依赖 `paper.tex` 和 `plot-data.png`，而 `plot-data.png` 又依赖脚本和数据文件，那么当你只改了 `paper.tex` 时，`make` 不应该重新生成图像。
+>
+> 构建系统的价值就在于“自动判断哪些步骤真的需要重跑”。
+
+### 依赖管理
+
+一个项目可能依赖：
+
+- 解释器或编译器
+- 系统包
+- 语言生态里的库
+- 外部服务和工具链
+
+课程强调几个现实原则：
+
+- 依赖必须有版本
+- 版本升级必须理解兼容性
+- 不同层级的包管理器要分清角色
+
+### 语义化版本
+
+课程明确提到 `semver` 的思路：
+
+- patch：修 bug，不改 API
+- minor：新增兼容功能
+- major：破坏兼容
+
+这套约定的价值，是让依赖关系能更有预测性地管理。
+
+### 测试
+
+测试不是“交作业前再跑一下”，而是给重构和协作提供安全边界。
+
+你至少要理解几类测试：
+
+- 单元测试
+- 集成测试
+- 回归测试
+- 性能测试
+
+好测试的目标不是追求数量，而是：
+
+- 关键路径有保护
+- 失败能快速定位
+- 执行成本可接受
+
+### 持续集成
+
+CI 的核心不是“上云跑命令”，而是把“质量检查”从个人习惯变成系统流程。
+
+典型 CI 会自动做：
+
+- 安装依赖
+- 构建
+- 测试
+- Lint
+- 部署前检查
+
+### 这讲真正要记住什么
+
+- 工程不是只有代码，流程同样需要被设计
+- 构建系统的核心是依赖图和增量重建
+- 依赖管理最关键的是版本与兼容性
+- 测试和 CI 的价值在于把“别出问题”变成机制，而不是靠记性
+
+## 第 9 讲 安全和密码学
+
+资料：<https://missing-semester-cn.github.io/2020/security/>
+
+### 这讲解决什么问题
+
+这讲不是教你设计密码算法，而是教你理解常见安全工具背后的基本模型，避免在日常开发和使用中“会用但不懂”。
+
+### 熵
+
+熵衡量的是不确定性，也就是猜测难度。
+
+课程借密码强调一个现实原则：
+
+- 安全性不是“字符看起来复杂”
+- 而是“攻击者可行搜索空间到底有多大”
+
+40 比特熵大致能抵抗很多在线暴力猜测；
+面对离线暴力破解，通常需要更高熵。
+
+### 密码散列函数
+
+散列函数把任意输入映射到固定长度输出。
+
+安全散列至少要求：
+
+- 确定性
+- 难以反推原文
+- 难以构造碰撞
+
+课程用 Git 里的 SHA-1 说明散列的工程用途：
+
+- 内容寻址
+- 文件完整性校验
+- 承诺机制
+
+### KDF
+
+密钥生成函数的作用是：
+
+- 从密码导出密钥
+- 抵抗暴力枚举
+
+关键实践包括：
+
+- 不存明文密码
+- 加盐
+- 使用慢一点的 KDF
+
+### 对称加密与非对称加密
+
+#### 对称加密
+
+同一把密钥负责加密和解密。
+
+适合：
+
+- 文件加密
+- 磁盘加密
+- 会话内数据加密
+
+#### 非对称加密
+
+公钥与私钥分工不同。
+
+适合：
+
+- 安全分发加密能力
+- 签名与验签
+- SSH / PGP / 软件签名
+
+课程这里最重要的不是数学细节，而是使用模型：
+
+- 加密解决保密性
+- 签名解决真实性与不可抵赖
+
+### 现实安全习惯
+
+课程最后强调的安全建议非常务实：
+
+- 用密码管理器
+- 对每个站点使用独立强密码
+- 开启 2FA
+- 用全盘加密
+- 理解 SSH / Git 签名等工具背后的信任模型
+
+### 这讲真正要记住什么
+
+- 安全首先是模型问题，不是“玄学设置”
+- 熵、散列、KDF、对称/非对称加密要分清各自职责
+- 不要自己发明密码算法
+- 对普通开发者而言，最有价值的是采用正确工具和正确实践
+
+## 第 10 讲 大杂烩
+
+资料：<https://missing-semester-cn.github.io/2020/potpourri/>
+
+### 这讲解决什么问题
+
+有一类主题非常重要，但又很难单独撑起一整讲。大杂烩讲的就是这些“高频、零散、但长期很值”的内容。
+
+### 课程覆盖的典型主题
+
+- 键位映射
+- 守护进程与 `systemd`
+- `cron`
+- FUSE
+- 备份
+- API
+- 常见命令行标志习惯
+- Markdown
+- Docker / Vagrant / 虚拟机 / 云
+- 交互式计算环境
+- GitHub
+
+### 你应该怎么理解这一讲
+
+它不是要你把所有主题立刻精通，而是帮你建立一份“以后值得继续扩展的工具地图”。
+
+几个最值得马上吸收的点：
+
+#### 键位映射
+
+如果你每天大量敲键盘，那么：
+
+- 把 `Caps Lock` 改成 `Ctrl` 或 `Esc`
+- 给高频动作设置合理映射
+
+这种改动长期回报非常高。
+
+#### 守护进程与定时任务
+
+需要区分：
+
+- 一次性命令
+- 长期后台服务
+- 定时任务
+
+Linux 下常见组合：
+
+- `systemd`：服务管理
+- `cron`：定时执行
+
+#### FUSE
+
+课程用它提醒你：文件系统接口本身也可以被扩展，很多“像本地文件一样访问远端资源”的工具，底层其实就是在利用这类机制。
+
+#### 容器、虚拟机与云
+
+这部分最重要的不是工具品牌，而是抽象差异：
+
+- Docker：更轻量，更贴近应用打包与运行环境
+- VM：更完整隔离，更像整台机器
+- Cloud：把计算、存储、网络按服务交付
+
+### 这讲真正要记住什么
+
+- 大量高收益工具都散落在“非核心主线”里
+- 你不必一口吃完，但应该知道它们存在、各自解决什么问题
+- 程序员的生产力常常来自这些边角工具的长期积累
+
+## 第 11 讲 提问&回答
+
+资料：<https://missing-semester-cn.github.io/2020/qa/>
+
+### 这讲解决什么问题
+
+Q&A 的价值不在于提供唯一答案，而在于把很多学习和工具选择问题拉回现实上下文。
+
+### 课程里反复出现的判断逻辑
+
+#### 先问是否真的需要某个层级的复杂度
+
+比如更底层的操作系统知识、复杂性能工具、特殊编辑器配置，都不是默认人人都该立刻深入的主题。课程非常强调“按问题驱动学习”。
+
+#### 不要把工具选择绝对化
+
+例如：
+
+- Python vs Bash：看任务复杂度、可维护性、与系统交互程度
+- `apt` vs `pip`：看系统级安装还是语言生态、看隔离需求
+- Docker vs VM：看隔离粒度和目标场景
+- Vim vs Emacs vs VS Code：看你是否愿意投入相应学习成本
+
+#### 优先建立稳定工作流，而不是追逐所有新工具
+
+这门课的整体态度一直是：
+
+- 先把最常用的工具真正用熟
+- 再按痛点扩展
+- 不要陷入“收藏工具却没有工作流升级”的假进步
+
+### 课程给出的高价值现实建议
+
+- 软件包尽量分清系统级和语言级
+- 对语言级依赖优先使用隔离环境
+- 不要混用多个包管理方案造成环境污染
+- 浏览器、插件、编辑器和终端的选择都应服务于你的真实工作流
+- 2FA、密码管理器、全盘加密这类安全实践值得尽早变成默认配置
+
+### 这讲真正要记住什么
+
+- 好问题通常比“标准答案”更重要
+- 工具选择没有绝对最优，只有场景匹配
+- 长期高效来自稳定、可维护、可迁移的个人工作流
+
+## 全课主线回顾
+
+如果把整门课压成几句话，我会这样记：
+
+### 1. 命令行不是备用方案，而是开放式接口
+
+GUI 负责常见路径，shell 负责组合、自动化和远程操作。
+
+### 2. 小工具组合比大而全更强
+
+管道、脚本、正则、文本处理工具、Git、SSH、tmux 都在体现同一个思想：把复杂任务拆成可组合组件。
+
+### 3. 环境和流程也要工程化
+
+dotfiles、构建系统、测试、CI、包管理、调试工具，都是让个人工作方式从“临时手工”走向“可维护系统”。
+
+### 4. 工具能力最终要落到习惯
+
+真正有用的不是“我知道 tmux / Vim / Git / shellcheck 的存在”，而是：
+
+- 我会在真实工作里默认使用它们
+- 我的环境是文本化、版本化的
+- 我的排错与优化是基于证据的
+
+## 最值得养成的习惯
+
+- 遇到重复操作，先问能不能脚本化
+- 遇到大量文本，先问能不能管道化
+- 遇到 Git 困惑，先回到数据模型
+- 遇到 bug，先收集证据再修改
+- 遇到性能问题，先 profile 再优化
+- 遇到环境问题，先文本化和版本化配置
+- 遇到安全问题，优先采用成熟工具，不自己造轮子
+
+## 建议实践清单
+
+- 为自己的 shell 写一份最小可用配置文件
+- 学会用 `ssh` + `tmux` 在远端机器稳定工作
+- 让 `git log --graph --all --decorate` 成为默认观察历史的方式之一
+- 至少完整学一遍 `vimtutor`
+- 把 3 个真实的数据处理任务改写成管道
+- 为一个小项目补上 `Makefile`、测试和简单 CI
+- 使用密码管理器并开启关键账户的 2FA
+
+## 最后判断
+
+`The Missing Semester` 真正缺失的不是“某几个命令”，而是“把工具、环境和流程当成计算机教育正式内容”的视角。
+
+如果你学完后只多记住了一些命令，这门课就学浅了。
+如果你开始：
+
+- 主动自动化重复劳动
+- 把环境配置成自己的工作系统
+- 用正确抽象理解 Git、Shell、Vim 和安全工具
+
+那这门课才算真正发挥价值。
