@@ -163,31 +163,31 @@ echo 3 | sudo tee brightness
 
 ### 本讲命令速查表
 
-| 命令 / 工具 | 用途 | 课堂场景 / 关键语义 |
-| --- | --- | --- |
-| `date` | 打印当前时间 | 第一讲开场用来说明 shell 可以直接调用程序 |
-| `echo hello` | 打印文本参数 | 展示“命令 + 参数”的基本结构 |
-| `echo "hello world" / echo 'hello'` | 带空格参数与 quoting | 说明引号决定 shell 如何切分参数 |
-| `pwd` | 显示当前工作目录 | 建立路径坐标系 |
-| `cd /path / cd .. / cd ~ / cd -` | 切换目录 | 目录导航、回 home、返回上一个目录 |
-| `ls / ls -l / ls -lah` | 列目录内容与权限/大小信息 | 查看文件树、权限位、隐藏文件和可读大小 |
-| `mv old new` | 移动或重命名文件 | 常用文件操作 |
-| `cp src dst` | 复制文件 | 常用文件操作 |
-| `rm file / rmdir dir` | 删除文件/空目录 | 常用文件操作，理解删除和目录状态 |
-| `mkdir dir` | 创建目录 | 常用文件操作 |
-| `man ls / cmd --help` | 查看命令文档 | 命令不会背时优先查官方帮助 |
-| `which echo / type echo` | 查看命令解析到哪里 | 确认 shell 实际执行的是哪个程序/内建 |
-| `echo $PATH` | 查看可执行文件搜索路径 | 解释 shell 为什么能直接找到某个命令 |
-| `cat file / cat < file > out` | 查看文件或连接输入输出 | 引出标准输入/输出和重定向 |
-| `tail -n 1` | 取最后若干行 | 配合 `ls -l / \| tail -n 1` 演示管道 |
-| `curl --head --silent URL` | 抓 HTTP 头并安静输出 | 配合 `grep -i content-length` 演示网络输出进入管道 |
-| `grep -i pattern` | 按模式过滤文本 | 作为管道右侧消费者 |
-| `> / >> / < / \| / 2>` | 输出覆盖、追加、输入重定向、管道、错误重定向 | 标准流重接线是 shell 最核心抽象 |
-| `sudo cmd` | 以 root 权限运行命令 | 权限提升不是对整行 shell 语法都生效 |
-| `echo 3 \| sudo tee file` | 以 root 权限写文件 | 修复 `sudo echo 3 > file` 的重定向陷阱 |
-| `chmod +x file` | 增加可执行权限 | 让脚本可直接执行，理解权限位和 shebang |
-| `#!/bin/sh` | shebang 指定解释器 | 解释 shell 如何知道脚本该交给谁执行 |
-| `xdg-open file / open file` | 用系统默认程序打开文件 | 讲义里提到的便捷文件打开方式 |
+```text
+date                                  # 打印当前时间；开场演示 shell 可以直接调用程序
+echo hello                            # 打印参数；最基本的“命令 + 参数”结构
+echo "hello world" / echo 'hello'     # 用引号把含空格内容当成一个参数；单/双引号展开规则不同
+pwd                                   # 显示当前工作目录
+cd /path / cd .. / cd ~ / cd -        # 切换目录；绝对路径、上级目录、家目录、返回上一个目录
+ls / ls -l / ls -lah                  # 列目录；-l 看权限和元数据，-a 看隐藏文件，-h 让大小易读
+mv old new                            # 移动或重命名文件
+cp src dst                            # 复制文件
+rm file / rmdir dir                   # 删除文件/空目录；rmdir 只能删空目录
+mkdir dir                             # 新建目录
+man ls / ls --help                    # 查官方帮助；不会背参数时先查这里
+which echo / type echo                # 看 shell 实际会执行哪个程序/内建命令
+echo $PATH                            # 查看可执行文件搜索路径；解释为什么命令能直接运行
+cat file / cat < file > out           # 读文件，或把标准输入重定向到标准输出
+tail -n 1                             # 取最后 1 行；常接在管道右侧截取结果
+curl --head --silent URL              # 抓 HTTP 头且隐藏进度条；适合继续接文本处理命令
+grep -i pattern                       # 按模式过滤文本；-i 忽略大小写
+> / >> / < / | / 2>                   # stdout 覆盖、追加、stdin 重定向、管道、stderr 重定向
+sudo cmd                              # 用 root 权限执行命令；注意它不会自动提升 shell 先处理的重定向
+echo 3 | sudo tee brightness          # 让 tee 以 root 身份写文件；修复 sudo echo 3 > file 这类坑
+chmod +x file                         # 给脚本增加可执行权限
+#!/bin/sh                             # shebang；告诉系统这个脚本应该交给哪个解释器执行
+xdg-open file / open file             # 用系统默认程序打开文件；Linux/macOS 分别常用 xdg-open/open
+```
 
 ### 对应练习
 
@@ -336,27 +336,27 @@ shell 脚本很容易写出“能跑但很脆”的东西，所以课程推荐�
 
 ### 本讲命令速查表
 
-| 命令 / 工具 | 用途 | 课堂场景 / 关键语义 |
-| --- | --- | --- |
-| `foo=bar` | 变量赋值 | 等号两侧不能有空格 |
-| `"$foo" / '$foo'` | 变量展开与字面字符串 | 双引号展开变量，单引号基本不展开 |
-| `mcd () { mkdir -p "$1"; cd "$1"; }` | shell 函数 | 函数运行在当前 shell，可直接改变目录 |
-| `$0 $1 $@ $# $? $$ !! $_` | 脚本上下文特殊变量 | 参数读取、退出码检查、重复上一条命令 |
-| `false \|\| echo fail / true && echo ok / cmd1 ; cmd2` | 基于退出码的流程控制 | shell 常用的短路执行方式 |
-| `if [[ -f file ]]; then ... fi` | 条件判断 | 检查文件存在等场景 |
-| `for f in ...; do ...; done` | 循环批处理 | 批量处理参数或文件集合 |
-| `$(cmd)` | 命令替换 | 把命令输出嵌入参数或变量 |
-| `diff <(ls foo) <(ls bar)` | 进程替换 | 把命令输出伪装成文件输入 |
-| `*.sh / image.{png,jpg} / project/**/test/*.py` | glob 与 brace expansion | 批量生成路径参数 |
-| `#!/usr/bin/env bash` | 可移植 shebang | 不要写死解释器位置 |
-| `shellcheck script.sh` | 检查 shell 脚本常见错误 | 尤其是未加引号、脆弱循环、条件误写 |
-| `find . -name "*.tmp" -exec rm {} \;` | 按文件属性递归查找并执行动作 | 比手工 `ls` 更适合复杂筛选 |
-| `fd pattern` | 更现代的 find 替代 | 默认行为更贴近日常查找文件 |
-| `locate name` | 基于索引的快速文件名查找 | 很快，但结果可能不是最新 |
-| `grep -R pattern . / rg pattern` | 按内容搜索代码/文本 | `rg` 往往更快且默认忽略 `.git` |
-| `history / Ctrl+R / fzf` | 搜索历史命令 | 降低重复命令的记忆负担 |
-| `autojump / fasd` | 按历史快速跳目录 | 频繁目录切换的效率工具 |
-| `tree / broot / nnn / ranger` | 目录树查看与终端文件管理 | 课程推荐的目录导航扩展工具 |
+```text
+foo=bar / echo "$foo" / echo '$foo'                 # 变量赋值与展开；双引号展开变量，单引号基本原样保留
+mcd() { mkdir -p "$1" && cd "$1"; }                # shell 函数；把“建目录后进入”封成一个可复用命令
+source script.sh                                    # 在当前 shell 里执行脚本；让函数/变量定义留在当前会话
+$0 / $1 / $@ / $# / $? / $$ / $_                    # 特殊变量：脚本名、参数、参数列表、参数个数、退出码、进程号、上一条命令最后参数
+true / false / cmd1 && cmd2 / cmd1 || cmd2          # 基于退出码做条件执行；0 表示成功，非 0 表示失败
+cmd1 ; cmd2                                         # 无条件顺序执行两条命令
+$(cmd)                                              # 命令替换；把命令输出嵌回另一个命令的参数位置
+<(cmd)                                              # 进程替换；把命令输出伪装成一个可读“文件”
+*.py / ? / foo.{py,sh} / **/*.py                    # glob 展开；单星、单字符、花括号枚举、递归匹配
+diff <(ls foo) <(ls bar)                            # 比较两个命令输出；课堂里用它展示进程替换
+find . -name '*.tmp' -delete                        # 按条件找文件并直接执行删除动作
+find . -type f -name '*.py' -exec grep -H PATTERN {} \;  # 对 find 找到的每个文件执行命令；{} 是当前文件占位符
+fd pattern                                          # 更现代的文件查找工具；默认行为通常比 find 更符合日常使用
+locate pattern                                      # 查文件名索引；很快，但依赖后台数据库，不是实时遍历
+grep -R pattern . / rg pattern                      # 递归搜索文本；rg 通常更快，默认排除很多无用目录
+history / Ctrl-r / fzf                              # 命令历史搜索；Ctrl-r 反向增量搜索，fzf 做模糊选择
+tree / broot / nnn / ranger                         # 快速看目录树或做交互式文件浏览
+tldr cmd                                            # 看更偏“例子驱动”的简明帮助页；比 man 更适合快速回忆用法
+shellcheck script.sh                                # 静态检查 shell 脚本；尤其能抓 quoting、空格、未定义变量等常见坑
+```
 
 ### 对应练习
 
@@ -503,30 +503,30 @@ Vim 课程并不要求你一上来就折腾复杂插件生态，但强调两件�
 
 ### 本讲命令速查表
 
-| 命令 / 工具 | 用途 | 课堂场景 / 关键语义 |
-| --- | --- | --- |
-| `vim file` | 打开文件进入 Vim | 编辑器入口 |
-| `i / a / o / O / Esc` | 进入插入、追加、新行插入、回到普通模式 | 最小可用编辑流程 |
-| `:w / :q / :wq / :q!` | 保存、退出、保存退出、强制退出 | 文件级操作 |
-| `h j k l` | 左下上右移动 | 普通模式基础导航 |
-| `w b e` | 按单词前进/后退/到词尾 | 语义级移动 |
-| `0 ^ $` | 到行首/首个非空字符/行尾 | 行内导航 |
-| `gg / G / {line}G` | 到文件开头/结尾/指定行 | 跨文件大范围跳转 |
-| `f{char} / t{char} / ; / ,` | 在行内按字符跳转并重复 | 快速定位局部文本 |
-| `% / ( ) / { }` | 括号匹配、句子/段落移动 | 按结构移动 |
-| `x / r{char}` | 删字符/替换字符 | 最小粒度编辑 |
-| `d{motion} / c{motion} / y{motion}` | 删除/修改/复制一个范围 | operator + motion 组合思想 |
-| `dd / cc / yy / p / P` | 行级删除/修改/复制/粘贴 | 高频编辑动作 |
-| `u / Ctrl-r` | 撤销/重做 | 编辑回退 |
-| `v / V / Ctrl-v` | 字符/行/块可视选择 | 显式选择区域 |
-| `ci" / da( / yi{` | text object 操作 | 直接对引号/括号/代码块内部或整体编辑 |
-| `/pattern / ?pattern / n / N` | 搜索并跳转匹配 | 定位文本 |
-| `:%s/foo/bar/g` | 全文件替换 | 搜索替换主力命令 |
-| `:sp / :vsp / Ctrl-w hjkl` | 分屏与窗口切换 | 多窗口编辑 |
-| `:e file / :ls / :bN` | 打开文件、列 buffer、切 buffer | 理解 buffer 和 window 的区别 |
-| `q{reg} ... q / @{reg}` | 录制和重放宏 | 处理重复但带模式的编辑任务 |
-| `:help subject / vimtutor` | 查看帮助与完成入门教程 | 课程推荐的学习路径 |
-| `~/.vimrc / :CtrlP` | 配置与插件入口 | 把高频能力固化到编辑器环境 |
+```text
+vim file                         # 打开文件进入 Vim
+i / a / o / O / Esc              # 进入插入、光标后追加、下/上方开新行、回到普通模式
+:w / :q / :wq / :q!              # 保存、退出、保存并退出、放弃修改强退
+h j k l                          # 左 / 下 / 上 / 右移动
+w / b / e                        # 按词移动；跳到下一个词首、上一个词首、当前/下一个词尾
+0 / ^ / $                        # 到行首、首个非空字符、行尾
+gg / G / {line}G                 # 到文件开头、文件结尾、指定行
+f{char} / t{char} / ; / ,        # 行内字符跳转；; 重复上次查找，, 反向重复
+% / ( / ) / { / }                # 括号匹配跳转、句子移动、段落移动
+x / r{char}                      # 删除当前字符、把当前字符替换成指定字符
+d{motion} / c{motion} / y{motion} # 对 motion 覆盖的范围做删除 / 修改 / 复制
+dd / cc / yy / p / P             # 行级删除、修改、复制、粘贴；p 粘到后面，P 粘到前面
+u / Ctrl-r                       # 撤销 / 重做
+v / V / Ctrl-v                   # 字符级、行级、块级可视选择
+ci" / da( / yi{                  # text object：改引号内部、删整个括号对象、复制花括号内部
+/pattern / ?pattern / n / N      # 向下/向上搜索；n/N 跳到下一个/上一个匹配
+:%s/foo/bar/g                    # 全文件替换；g 表示一行里所有匹配都替换
+:sp / :vsp / Ctrl-w hjkl         # 水平/垂直分屏，以及窗口间移动
+:e file / :ls / :bN              # 打开文件、列出 buffer、切到第 N 个 buffer
+q{reg} ... q / @{reg}            # 录制宏到寄存器并重放；适合处理“重复但位置不同”的编辑任务
+:help subject / vimtutor         # 查帮助文档 / 完成交互式入门教程
+~/.vimrc / :CtrlP                # 配置文件与插件入口；CtrlP 是课堂示例里的模糊找文件插件
+```
 
 ### 对应练习
 
@@ -626,23 +626,24 @@ ssh myserver 'journalctl | grep sshd | grep "Disconnected from"' > ssh.log
 
 ### 本讲命令速查表
 
-| 命令 / 工具 | 用途 | 课堂场景 / 关键语义 |
-| --- | --- | --- |
-| `ssh myserver journalctl` | 在远端机器读取日志 | 先在数据源附近获取数据 |
-| `grep sshd / grep "Disconnected from"` | 按文本模式逐层过滤 | 日志清洗第一步 |
-| `sed -E 's/.../.../'` | 用扩展正则做替换和捕获组提取 | 从半结构化行中抽出用户名/IP 等字段 |
-| `sort / uniq -c / sort -nk1,1` | 排序、计数、按数值排序 | 把清洗后的行变成频数统计 |
-| `awk '{print $2}' / awk '$1 == 1 && $2 ~ /^c[^ ]*e$/ { ... }'` | 按字段提取、条件过滤、聚合 | 把文本当表格处理 |
-| `BEGIN { ... } / END { ... }` | awk 开头/结尾动作 | 汇总统计 |
-| `paste -sd+ \| bc -l` | 把多行数字拼成表达式并计算 | 在 shell 管道末端做数值运算 |
-| `R --slave -e 'x <- scan(file="stdin", quiet=TRUE); summary(x)'` | 把管道结果送进 R 做统计摘要 | 命令行数据整理连接统计工具 |
-| `gnuplot -p -e 'set boxwidth 0.5; plot "-" using 1:xtic(2) with boxes'` | 从 stdin 绘图 | 命令行可视化收尾 |
-| `xargs cmd` | 把标准输入转回命令参数 | 批量卸载/批量处理文件 |
-| `tr / sed y` | 字符级转换 | 大小写归一化等预处理 |
-| `less` | 分页检查中间输出 | 长管道每一步都要验证 |
-| `journalctl -b` | 按 boot 提取系统日志 | 课后练习中的启动日志对比 |
-| `ffmpeg ... \| convert - -colorspace gray - \| gzip \| ssh host ...` | 二进制流也可走管道 | 摄像头图像处理后压缩并发到远端 |
-| `tee copy.jpg` | 一边写文件一边继续向下游输出 | 在远端保存二进制副本并显示 |
+```text
+ssh myserver journalctl                              # 远程取日志；数据整理常常从“命令输出”而不是手工下载文件开始
+journalctl                                           # 查看 systemd 日志；课堂把它当作原始半结构化文本数据源
+grep 'pattern' / grep -v 'pattern'                  # 按模式保留/排除行
+sed -E 's/old/new/'                                 # 用扩展正则做替换；课堂里主要拿它做字段抽取和文本清洗
+awk '{print $2}' / awk '$1 == 1 {print $2}'          # 按列打印、按条件过滤；适合处理“空白分隔的表格型文本”
+sort / sort -n / sort -k2,2                         # 排序；字典序、数值序、按指定列排序
+uniq -c                                             # 统计连续重复行次数；通常必须先 sort 再 uniq 才有意义
+head -n 10 / tail -n 10                             # 取前/后若干行；常用来截 top-k 或快速抽查输出
+cut -d, -f2                                         # 按分隔符取指定字段；适合简单 CSV/TSV
+paste -sd+                                          # 把多行合并成一行并插入分隔符；常配合 bc 做求和
+bc -l                                               # 命令行计算器；-l 打开数学库并支持浮点计算
+tr 'A-Z' 'a-z'                                      # 字符级替换；常用于大小写归一化
+xargs cmd                                           # 把 stdin 里的文本转成命令参数；把“文本流”重新变回“参数列表”
+tee output.txt                                      # 一边继续向下游输出，一边把中间结果落盘
+wc -l / wc -w / wc -c                               # 统计行数、词数、字节数
+gnuplot                                             # 快速画图；课堂用它说明 shell 输出可以直接接可视化工具
+```
 
 ### 对应练习
 
@@ -749,29 +750,27 @@ SSH 不只是“远程登录”。
 
 ### 本讲命令速查表
 
-| 命令 / 工具 | 用途 | 课堂场景 / 关键语义 |
-| --- | --- | --- |
-| `Ctrl-C / Ctrl-\ / Ctrl-Z` | 向前台进程发送 SIGINT/SIGQUIT/SIGTSTP | 任务控制的键盘入口 |
-| `jobs / fg %1 / bg %1` | 查看任务、切回前台、后台继续运行 | 管理当前 shell 会话里的 job |
-| `kill -TERM PID / kill -KILL PID / kill -0 PID` | 请求终止、强制杀死、只检测进程是否存在 | 优先优雅结束，`kill -0` 可写 `pidwait` |
-| `pgrep -af pattern / pkill -f pattern` | 按名字查找或结束进程 | 避免手工复制 PID |
-| `sleep 60 & / wait` | 后台启动并等待子进程结束 | 任务编排与课后练习 |
-| `nohup cmd & / disown` | 让任务脱离终端挂断影响 | 单命令级别的不中断运行 |
-| `tmux / tmux new -s name / tmux ls / tmux attach -t name` | 创建、列出、重连会话 | session 级别的上下文保留 |
-| `tmux prefix + c / % / " / d` | 新建 window、左右/上下分屏、detach | 终端多路复用常用操作 |
-| `alias dc=cd` | 定义命令别名 | 修正高频误输入或缩短长命令 |
-| `source ~/.bashrc / source ~/.zshrc` | 重载 shell 配置 | 修改 dotfiles 后立即生效 |
-| `PS1=...` | 自定义提示符 | 在 prompt 中显示环境/路径/分支等信息 |
-| `ln -s source target` | 为 dotfiles 建符号链接 | 让仓库里的配置接回 home 目录固定路径 |
-| `ssh user@host / ssh host cmd` | 登录远端或直接执行远端命令 | 把 shell 工作流延伸到远端机器 |
-| `ssh-keygen -o -a 100 -t ed25519` | 生成较现代的 SSH 密钥对 | 推荐的密钥生成方式 |
-| `ssh-agent / ssh-add` | 缓存解锁后的私钥 | 避免反复输入 passphrase |
-| `ssh-copy-id vm` | 把公钥装到远端 `authorized_keys` | 启用免密码 SSH 登录 |
-| `scp src vm:dst / rsync -avP src vm:dst` | 复制或增量同步文件 | 远端文件传输 |
-| `ssh -L 9999:localhost:8888 vm` | 本地端口转发 | 从本机访问远端 Web 服务 |
-| `~/.ssh/config` | 配置主机别名、用户、密钥和端口转发 | 让多主机 SSH 使用更干净 |
-| `mosh vm` | 高延迟/网络切换下更稳的远程 shell | SSH 体验优化 |
-| `sshfs vm:/path mountpoint` | 把远端目录挂载成本地文件系统 | 远端文件编辑/浏览 |
+```text
+Ctrl-c / Ctrl-\ / Ctrl-z                # 发送 SIGINT / SIGQUIT / SIGTSTP；终止、退出并 core dump、挂起前台进程
+sleep 1000 &                             # 把命令放到后台运行；shell 立即返回提示符
+jobs                                     # 查看当前 shell 管理的作业
+bg %1 / fg %1                            # 让作业在后台继续跑 / 拉回前台
+kill -TERM %1 / kill -STOP %1            # 给进程/作业发信号；TERM 请求退出，STOP 强制暂停
+nohup cmd &                              # 忽略 SIGHUP，终端断开后尽量继续运行
+screen / tmux                            # 终端多路复用器；让远程会话可恢复
+tmux new -s work                         # 新建一个命名 tmux 会话
+Ctrl-b d                                 # 从当前 tmux 会话 detach；不杀掉里面的程序
+tmux ls / tmux attach -t work            # 查看已有会话 / 重新接回指定会话
+ssh user@host                            # 登录远程机器
+ssh -p 2222 user@host                    # 指定端口连接远程机器
+ssh -L 9999:localhost:8888 user@host     # 本地端口转发；把远端服务映射到本地端口
+scp file user@host:/path                 # 在本地和远端之间复制文件
+rsync -avP src/ user@host:dst/           # 增量同步目录；保留属性、显示进度、支持断点续传
+~/.ssh/config                            # 给常用主机写别名、用户名、端口和转发规则
+ssh-keygen / ssh-copy-id user@host       # 生成 SSH 密钥 / 把公钥装到远端实现免密登录
+alias ll='ls -lah'                       # 用别名固化高频短命令
+ln -s source target                      # 用软链接管理 dotfiles，避免多机配置靠手工复制
+```
 
 ### 对应练习
 
@@ -864,30 +863,26 @@ Git 最让人安心的一点，是很多“看起来丢了”的东西其实没�
 
 ### 本讲命令速查表
 
-| 命令 / 工具 | 用途 | 课堂场景 / 关键语义 |
-| --- | --- | --- |
-| `git init` | 初始化仓库 | 创建 `.git` 对象数据库和引用系统 |
-| `git status` | 查看工作区和暂存区状态 | 日常确认当前改动处于哪一层 |
-| `git add file` | 把工作区改动加入暂存区 | 准备进入下一次 commit |
-| `git commit -m "msg"` | 从暂存区创建提交并移动当前分支 | Git 快照生成主动作 |
-| `git log --all --graph --decorate --oneline` | 用图看所有分支历史 | 理解提交 DAG 和 ref 位置 |
-| `git cat-file -p HASH` | 查看对象库里的 blob/tree/commit 内容 | 用 plumbing 命令直接观察数据模型 |
-| `git branch name / git checkout name / git switch name` | 创建/切换分支 | 分支只是可移动指针 |
-| `git checkout HASH` | 切到旧提交进入 detached HEAD | 临时查看历史快照 |
-| `git diff / git diff --staged` | 比较工作区与暂存区、暂存区与 HEAD | 分清三层状态差异 |
-| `git restore file` | 用历史或暂存区内容恢复工作区文件 | 撤销局部文件改动 |
-| `git reset [--soft\|--mixed\|--hard] TARGET` | 移动分支并可选重置暂存区/工作区 | 理解引用移动与三层状态变化 |
-| `git merge branch` | 创建合并提交或快进合并 | 把分叉历史重新汇合 |
-| `git rebase base` | 把一串提交重放到新基底上 | 改写提交历史以线性化 |
-| `git remote -v / git remote add origin URL` | 查看/添加远端 | 远端本质上是另一个仓库引用集合 |
-| `git clone URL` | 复制远端仓库到本地 | 获得对象和远端跟踪分支 |
-| `git fetch / git pull / git push` | 拉取对象、拉取并合并/变基、推送引用更新 | 远端协作主命令 |
-| `git stash / git stash pop` | 临时收起未完成改动并恢复 | 切任务前保存现场 |
-| `git blame file / git show COMMIT` | 追踪某行是谁改的、查看提交细节 | 课程网站练习里的历史追查 |
-| `git bisect` | 二分定位引入 bug 的提交 | 版本历史本身也是调试工具 |
-| `git reflog` | 查看 HEAD/ref 移动记录 | 从误 reset/误切换中找回状态 |
-| `git config --global alias.graph ...` | 配置 Git 别名 | 把常用历史图命令固定下来 |
-| `git config --global core.excludesfile ~/.gitignore_global` | 设置全局忽略文件 | 忽略 OS/编辑器临时文件 |
+```text
+git help <cmd> / man git-<cmd>                  # 查 Git 子命令文档
+git init / git clone URL                        # 新建仓库 / 克隆已有仓库
+git status                                      # 查看工作区、暂存区、当前分支状态
+git add file / git add -p                       # 把修改加入暂存区；-p 可以按块交互式选择
+git commit / git commit -m "msg"                # 基于暂存区生成新提交对象
+git log --oneline --graph --decorate --all      # 看提交 DAG 和分支/HEAD 指针位置
+git diff / git diff --staged                    # 比较工作区改动 / 暂存区相对 HEAD 的改动
+git switch branch / git checkout branch         # 切换到已有分支
+git switch -c feature / git checkout -b feature # 基于当前提交新建分支并切过去
+git branch / git branch -d feature              # 列出分支 / 删除已合并分支
+git merge feature                               # 把 feature 合并进当前分支；可能产生 merge commit
+git rebase main                                 # 把当前分支提交重放到 main 顶上；会改写提交历史
+git stash / git stash pop                       # 暂存未提交改动 / 恢复暂存改动
+git reset --soft/--mixed/--hard <rev>           # 移动 HEAD/分支指针；三种模式分别保留到不同层，--hard 会丢工作区改动
+git restore file / git restore --staged file    # 撤销工作区文件改动 / 把文件从暂存区移出
+git reflog                                      # 查看 HEAD 曾经指向过哪里；误 reset/rebase 后常靠它找回提交
+git remote -v / git fetch / git pull / git push # 查看远端、拉取对象、拉取并合并、推送
+git cherry-pick <commit>                        # 把某个提交对应的补丁应用到当前分支
+```
 
 ### 对应练习
 
@@ -987,30 +982,25 @@ Git 最让人安心的一点，是很多“看起来丢了”的东西其实没�
 
 ### 本讲命令速查表
 
-| 命令 / 工具 | 用途 | 课堂场景 / 关键语义 |
-| --- | --- | --- |
-| `journalctl / log show` | 查看系统日志 | 追踪 sudo、服务退出、系统事件 |
-| `logger "msg"` | 向系统日志写一条消息 | 自造日志事件便于观察 |
-| `python -m pdb script.py / import pdb; pdb.set_trace()` | 进入 Python 调试器 | 断点、单步、看变量和调用栈 |
-| `gdb / lldb` | 调试 C/C++ 等程序 | 低层调试器 |
-| `strace -p PID / ltrace ./prog` | 跟踪系统调用/库调用 | 定位程序卡在 OS/库边界的原因 |
-| `shellcheck script.sh` | 静态检查 shell 脚本 | 课程示例里自动发现脆弱写法 |
-| `pyflakes / mypy` | Python 静态分析/类型检查 | 运行前发现错误 |
-| `time cmd` | 粗粒度测命令耗时 | 先看整体再深入 profile |
-| `python -m cProfile -s tottime script.py` | 函数级 CPU profiling | 定位热点函数 |
-| `kernprof -l -v script.py` | 行级 profiling | 定位具体慢在哪一行 |
-| `python -m memory_profiler script.py` | 按行看内存增长 | 定位内存瓶颈 |
-| `perf stat / perf record / perf report` | 硬件计数器与采样分析 | 观察循环数、缓存命中/缺失 |
-| `hyperfine --warmup 3 "cmd1" "cmd2"` | 稳定做多次 benchmark 比较 | 减少预热和噪声影响 |
-| `htop / top` | 交互式查看 CPU/进程状态 | 先判断资源瓶颈在哪 |
-| `iotop` | 查看磁盘 I/O 热点进程 | I/O 慢时定位元凶 |
-| `df -h / du -h / ncdu` | 看磁盘容量和目录占用 | 磁盘空间排查 |
-| `free -h` | 查看内存占用概况 | 内存压力检查 |
-| `lsof \| grep LISTEN` | 查看监听端口对应进程 | 定位端口被谁占用 |
-| `ss -tulpn` | 查看网络连接/监听状态 | 网络层排查 |
-| `stress -c 3 / taskset --cpu-list 0,2 stress -c 3` | 造 CPU 压力并限制 CPU 亲和性 | 资源限制与观测练习 |
-| `rr / RevPDB` | 可逆调试 | 进阶调试练习 |
-| `wireshark + http filter` | 抓包并过滤 HTTP 流量 | 观察 `curl ipinfo.io` 的请求与响应 |
+```text
+print(...) / logging.debug(...)                  # 最基础的观察手段；日志比裸 print 更适合保留上下文和分级输出
+python -m pdb script.py                          # 用 Python 调试器单步执行脚本
+ipdb                                             # 更好用的交互式 Python 调试器
+gdb / lldb                                       # C/C++ 等程序的调试器；断点、单步、看调用栈
+strace -e openat cmd                             # 跟踪系统调用；定位程序到底在请求哪些文件/资源
+ltrace cmd                                       # 跟踪动态库函数调用
+journalctl -u service                            # 查看系统服务日志
+dmesg                                            # 查看内核日志
+shellcheck script.sh                             # 静态检查 shell 脚本常见问题
+python -m cProfile -s tottime script.py          # Python CPU profiler；按耗时排序找热点
+time cmd                                         # 粗略查看 real / user / sys 时间
+hyperfine 'cmd1' 'cmd2'                          # 更稳定地 benchmark 多个命令，并自动做多轮统计
+perf stat / perf record / perf report            # Linux 性能计数和采样分析
+py-spy top --pid PID                             # 低侵入地查看 Python 进程热点函数
+htop / top                                       # 查看进程 CPU/内存占用
+iotop / iostat                                   # 查看 I/O 瓶颈
+free -h / df -h                                  # 查看内存余量 / 磁盘空间
+```
 
 ### 对应练习
 
@@ -1113,10 +1103,19 @@ CI 的核心不是“上云跑命令”，而是把“质量检查”从个人�
 
 ### 本讲命令速查表
 
-| 命令 / 工具 | 用途 | 课堂场景 / 关键语义 |
-| --- | --- | --- |
-| `make / make target` | 按依赖规则构建目标 | 构建系统核心入口 |
-| `target: deps
+```text
+make / make target                               # 运行默认目标 / 指定目标；make 会根据依赖判断哪些步骤需要重跑
+make -n target                                   # 只打印将要执行的命令，不真正执行；调试 Makefile 很有用
+.PHONY: clean                                    # 声明伪目标；避免同名文件干扰 make 的增量判断
+python -m venv .venv / source .venv/bin/activate # 创建并激活隔离环境
+pip install -r requirements.txt                  # 按依赖清单安装包
+pip freeze > requirements.txt                    # 把当前环境版本导出成快照；注意这不等于精心维护过的依赖声明
+poetry install / npm install / cargo build       # 不同语言生态里的依赖安装和构建入口
+pytest / cargo test                              # 运行测试；把“是否还能工作”变成可重复检查的机器动作
+tox                                              # 在多个环境矩阵下跑测试
+git bisect start / git bisect good / git bisect bad # 用二分法定位是哪次提交引入 bug
+GitHub Actions / CI                              # 持续集成；每次提交后自动跑构建、测试、检查
+```
 	command` | Makefile 规则格式 | 目标、依赖、命令三元组 |
 | `$@ / $< / $^` | Make 自动变量 | 写通用构建规则 |
 | `.PHONY: clean` | 声明伪目标 | `clean` 不是文件，而是动作名 |
@@ -1223,20 +1222,20 @@ CI 的核心不是“上云跑命令”，而是把“质量检查”从个人�
 
 ### 本讲命令速查表
 
-| 命令 / 工具 | 用途 | 课堂场景 / 关键语义 |
-| --- | --- | --- |
-| `log2(N)` | 估算搜索空间熵 | 比较 4 个随机单词口令和 8 位随机字母数字口令强度 |
-| `sha256sum file` | 计算文件哈希 | 对比下载镜像和官方摘要 |
-| `openssl aes-256-cbc -salt -in plain -out cipher` | 用对称加密加密文件 | 课程练习中的 AES 示例 |
-| `openssl aes-256-cbc -d -in cipher -out plain` | 解密文件 | 验证加解密正确性 |
-| `cat / hexdump / cmp` | 查看密文、比较原文与解密结果 | 验证密文不可读且解密后完全一致 |
-| `ssh-keygen -o -a 100 -t ed25519` | 生成 SSH 密钥对 | 非对称加密实践入口 |
-| `gpg --full-generate-key / gpg --encrypt / gpg --decrypt` | 生成 GPG 密钥、加密、解密 | 邮件加密练习 |
-| `git commit -S / git show --show-signature` | 签名提交并验证签名 | 把签名机制接到 Git 工作流 |
-| `git tag -s / git tag -v` | 签名 tag 并验证 | 发布对象签名 |
-| `Password manager / 2FA / full-disk encryption` | 密码管理器、双因子认证、全盘加密 | 课程收尾强调的现实安全默认项 |
-| `KDF + salt` | 从口令导出密钥并抵抗暴力猜测 | 理解为什么不能只做普通 hash |
-| `public key / private key / certificate / TOFU` | 公私钥、证书、首次信任模型 | 理解“怎么确认这个公钥真属于对方” |
+```text
+sha256sum file / shasum -a 256 file         # 计算文件哈希；用于完整性校验
+python -c "import hashlib; ..."            # 用 Python 哈希库演示“哈希函数是确定性映射”这一点
+openssl rand -base64 32                    # 生成高熵随机字符串；适合做随机密钥/令牌
+gpg -c file / gpg file.gpg                 # 用口令对文件做对称加密 / 解密
+openssl enc -aes-256-cbc -salt -in plain -out cipher # 对称加密演示；课堂借它说明“同一把密钥负责加解密”
+ssh-keygen -t ed25519                      # 生成非对称密钥对
+gpg --full-generate-key                    # 生成 GPG 公私钥对
+gpg --sign file / gpg --verify file.sig    # 数字签名 / 验签；验证“这确实是谁签的，且内容没被改”
+age -r recipient -o file.age file          # 更现代的文件加密工具；比手写 openssl 参数更不容易踩坑
+pwgen -s 20                                # 生成高熵随机密码
+pass / 1password                           # 密码管理器；核心目标是“每个站点都用独立强密码”
+2FA / U2F security key / TOTP              # 二因素认证；优先硬件 key 或 TOTP，不要只依赖短信验证码
+```
 
 ### 对应练习
 
@@ -1306,21 +1305,18 @@ Linux 下常见组合：
 
 ### 本讲命令速查表
 
-| 命令 / 工具 | 用途 | 课堂场景 / 关键语义 |
-| --- | --- | --- |
-| `systemctl status/start/stop/restart/enable SERVICE` | 管理 systemd 服务 | 把后台服务纳入系统生命周期管理 |
-| `journalctl -u SERVICE` | 查看某个服务日志 | 配合 systemd 排查守护进程 |
-| `sshfs host:/dir mountpoint` | 通过 FUSE 挂载远端目录 | 把远端资源当本地文件系统用 |
-| `curl URL` | 调用 Web API | 把互联网服务接入 shell 自动化 |
-| `jq '...'` | 查询 JSON | 从 API 响应中抽字段 |
-| `--help / --version / -v / --quiet / - / --` | 常见命令行惯例 | 提升面对陌生 CLI 的迁移能力 |
-| `xdg-open file / open file` | 用默认应用打开文件 | CLI 与 GUI 的连接点 |
-| `Hammerspoon / Karabiner / AutoHotkey` | 桌面自动化与键位改造 | 把“减少高频摩擦”延伸到 GUI |
-| `pandoc` | 文档格式转换 | Markdown 作为中间格式输出到 HTML/LaTeX/PDF |
-| `Jupyter Notebook` | 交互式计算和展示 | 适合探索式数据分析但要注意复现和版本控制 |
-| `Docker / VM / Vagrant / Cloud` | 隔离和复现开发环境 | 在不污染本机的前提下获得可复制环境 |
-| `GitHub Issues / Pull Requests` | 代码协作和评审 | 把 Git 工作流接到协作平台 |
-| `备份策略 / 云同步 / RAID` | 区分“同步/冗余”和真正备份 | 防止把单点复制误当备份 |
+```text
+xdotool / AutoHotkey / Karabiner-Elements   # 桌面自动化、热键绑定、键位重映射；把重复 GUI 操作脚本化
+jq '.field' data.json                       # 解析 JSON；比用 grep/sed 硬切 JSON 稳得多
+python -m http.server 8000                  # 在当前目录临时起一个静态文件 HTTP 服务
+python -m SimpleHTTPServer 8000             # Python 2 时代写法；旧环境里可能还会遇到
+sshfs user@host:/path mountpoint            # 把远端目录挂成本地文件系统来用
+rclone sync src remote:dst                  # 同步云盘/对象存储和本地目录
+ffmpeg -i in.mp4 out.mp3                    # 媒体转码、抽音轨、改封装
+convert in.png out.jpg / magick ...         # ImageMagick 图像转换；新版本常用 magick 入口
+pandoc in.md -o out.pdf                     # 文档格式转换
+tmux / mosh                                 # 远程工作更稳的会话工具；mosh 对高延迟/网络切换更友好
+```
 
 ### 对应练习
 
@@ -1370,18 +1366,16 @@ Q&A 的价值不在于提供唯一答案，而在于把很多学习和工具选�
 
 ### 本讲命令速查表
 
-| 命令 / 工具 | 用途 | 课堂场景 / 关键语义 |
-| --- | --- | --- |
-| `source script.sh` | 在当前 shell 执行脚本 | 修改当前 shell 环境时用它，不同于 `./script.sh` |
-| `./script.sh` | 在新进程运行脚本 | 不会直接改变父 shell 当前目录/环境 |
-| `python -m venv .venv / source .venv/bin/activate` | 创建并激活 Python 虚拟环境 | 区分系统包和项目依赖 |
-| `apt install / brew install / pip install` | 系统级包管理 vs 语言级包管理 | 按安装对象和隔离边界选工具 |
-| `conda / virtualenv` | 语言环境与依赖隔离 | 减少项目间环境污染 |
-| `history / history 1` | 查看命令历史 | 不同 shell 下统计高频命令 |
-| `Vim / Emacs / VS Code Vim mode` | 编辑器选择与投入深度 | 不要宗派化，按工作流和学习成本选 |
-| `Password manager / 2FA / browser extensions` | 日常安全工具栈 | 把第 9 讲建议落到真实工作流 |
-| `pandas -> HTML/LaTeX export` | 按输出目标选择数据工具 | Q&A 中关于表格产出的一类回答 |
-| `Linux distro / BSD / browser choice` | 生态选择 | 关注更新节奏、包管理、隐私和场景匹配 |
+```text
+man cmd / cmd --help / tldr cmd    # 先查文档再上网；完整手册、快速参数提示、示例导向速览各有侧重
+apropos keyword                    # 不知道命令名时，按关键词搜索 manpage
+shellcheck script.sh               # 写 shell 时先让工具扫一遍常见坑
+rg pattern                         # 在代码库里快速全文搜索；通常比 grep 更适合日常开发
+vimtutor                           # 系统化入门 Vim 的最短路径之一
+git help <cmd> / git reflog        # 查 Git 子命令文档 / 在误操作后找回提交位置
+tmux                               # 长任务和远程会话尽量放进可恢复的多路复用会话
+alias / dotfiles / ~/.ssh/config   # 把常用环境配置沉淀下来，并让迁移到新机器时可复现
+```
 
 ### 对应练习
 

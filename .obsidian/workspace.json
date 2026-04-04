@@ -236,7 +236,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: Academic"
+              "title": "Terminal: ⠦ Academic"
             }
           },
           {
@@ -282,7 +282,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       },
       {
         "id": "8532e59675ffc5f1",
@@ -348,7 +348,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "36db59183709d800",
+  "active": "457dc26df0b15a1b",
   "lastOpenFiles": [
     "03_Computer_Science/99_Miscellaneous/the_missing_semester.md",
     "brightness",
