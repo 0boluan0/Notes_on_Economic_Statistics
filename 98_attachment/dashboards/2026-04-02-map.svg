@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
 <rect x="0" y="0" width="100%" height="100%" fill="#ffffff"/>
 <text x="40" y="46" font-size="20" font-family="Arial, sans-serif" fill="#1f2937">全球态势地图 | Global Situation Map</text>
-<text x="40" y="72" font-size="12" font-family="Arial, sans-serif" fill="#6b7280">时间窗口: 2026-04-01 11:03 ~ 2026-04-02 11:03</text>
+<text x="40" y="72" font-size="12" font-family="Arial, sans-serif" fill="#6b7280">时间窗口: 2026-04-01 12:47 ~ 2026-04-02 12:47</text>
 <g id="countries" stroke="#ffffff" stroke-width="0.2">
 <path d="M955.21,305.01 L955.84,304.68 L956.72,305.26 L956.30,306.30 L954.72,306.58 L953.31,306.33 L953.06,305.45 L954.05,304.76 L955.21,305.01 Z" fill="#f4d8c5" fill-opacity="0.85" fill-rule="evenodd"/>
 <path d="M40.00,302.13 L40.52,302.04 L40.21,303.00 L40.00,303.11 L958.37,303.60 L956.74,304.02 L956.41,303.28 L957.69,302.87 L958.50,302.76 L960.00,302.13 L40.00,302.13 Z" fill="#f4d8c5" fill-opacity="0.85" fill-rule="evenodd"/>
