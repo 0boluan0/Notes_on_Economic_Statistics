@@ -10,6 +10,39 @@ tags:
 
 # Positive Definite Matrices and Applications
 
+## 单元速览
+
+- 这一单元真正回答的是：当矩阵不再只是“拿来解方程”时，怎样理解它的最佳结构、最佳坐标系和最佳逆。
+- 你最后必须能把题目自动分流到四条线：
+  - symmetric / positive definite / quadratic form。
+  - similarity / Jordan。
+  - SVD。
+  - linear transformation / change of basis / pseudoinverse。
+- 如果复习时间很少，至少保住这 5 个抓手：
+  - 对称矩阵最适合正交特征分解。
+  - positive definite 把二次型、极小值、最小二乘连起来。
+  - diagonalization 失败时要改看 Jordan。
+  - 任意矩阵统一由 SVD 处理。
+  - 伪逆是“最佳逆”，不是随便补出的逆。
+
+## 这页怎么用
+
+- 先看每个 session 的 `快速回忆`，确认自己能说出“为什么这一讲存在”。
+- 如果你只记公式但想不起课程逻辑，就回到本页开头和结尾的统一图景，不要直接沉进细节。
+- 遇到题目时先判断：
+  - 它是在问 symmetry / positivity？
+  - 还是在问 coordinate change / representation？
+  - 还是在问 general matrix decomposition？
+
+## Session 回忆索引
+
+- 3.1-3.3：对称矩阵、positive definite、quadratic form、minimum。
+- 3.4：similarity 与 Jordan，解释为什么 diagonalization 不是总能成功。
+- 3.5：SVD 统一任意矩阵。
+- 3.6-3.7：linear transformation 与 change of basis。
+- 3.8：left inverse / right inverse / pseudoinverse。
+- 3.9：Exam 3 前的结构闭环。
+
 ## 本单元主线
 
 Unit III 处理的是“把前两单元的工具彻底收束起来”。前面我们分别学过子空间、正交、最小二乘、行列式、特征值；这一单元开始问：对称矩阵为什么特别好，一般矩阵怎样被标准形式描述，线性变换与换基到底是什么，非方阵和秩亏矩阵的“最佳逆”又该怎样定义。
@@ -25,7 +58,13 @@ Unit III 处理的是“把前两单元的工具彻底收束起来”。前面�
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.1sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.1prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.1sol.pdf|solution]]
 
-关联卡片：[[Symmetric Matrix]]、[[Positive Definite Matrix]]、[[Spectral Decomposition]]
+关联卡片：[[Symmetric Matrix]]、[[Positive Definite Matrix]]、[[Spectral Decomposition]]、[[Testing Positive Definiteness]]
+
+>[!note] 快速回忆
+> - 这讲要回答：为什么对称矩阵是“最好处理”的矩阵类。
+> - 你要立刻想起：实特征值、正交特征向量基、正交对角化，以及 positive definite 的几种等价判别。
+> - 典型题型：判断矩阵是否对称/正定，并说明依据。
+> - 它接到下一讲：把特征值理论推进到复数域与 Fourier 基底。
 
 ### 为什么对称矩阵是“好矩阵”
 
@@ -106,11 +145,23 @@ $$
 - 会在“特征值判据 / 主元判据 / 二次型判据”间切换。
 - 能解释正交特征分解为何比一般对角化更强。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 3.2 Complex matrices; fast Fourier transform
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.2sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.2prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.2sol.pdf|solution]]
 
 关联卡片：[[Fourier Series]]、[[Orthogonality]]
+
+>[!note] 快速回忆
+> - 这讲要回答：为什么有时必须进入复数域，以及 FFT 在结构上到底做了什么。
+> - 你要立刻想起：复特征值成共轭对出现；复内积必须带共轭；FFT 本质是结构化换基。
+> - 典型题型：解释 unitary、说明 Fourier basis 为什么正交。
+> - 它接到下一讲：从“好基底”回到 positive definite 与极小值问题。
 
 ### 为什么要进入复数域
 
@@ -154,11 +205,23 @@ FFT 不是新的数学对象，而是更聪明地计算傅里叶变换。它利�
 - 能解释为什么复向量内积要带共轭。
 - 能把 FFT 理解成“结构化换基”，而不是算法黑箱。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 3.3 Positive definite matrices and minima
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.3sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.3prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.3sol.pdf|solution]]
 
 关联卡片：[[Positive Definite Matrix]]、[[Least Squares]]
+
+>[!note] 快速回忆
+> - 这讲要回答：为什么 positive definite 会自动带来唯一极小值。
+> - 你要立刻想起：`f(x)=1/2 x^TAx-b^Tx` 的 Hessian 是 A；若 A 正定，则驻点就是唯一全局 minimum。
+> - 典型题型：从二次型判断是否最小、解释 least squares 为什么唯一。
+> - 它接到下一讲：从“最好处理的矩阵”转向“对角化失败时怎么办”。
 
 ### 二次型视角
 
@@ -212,11 +275,23 @@ $$
 - 会把 $Ax=b$ 解释成二次目标函数的一阶条件。
 - 知道正定性为什么自动带来唯一最小值。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 3.4 Similar matrices and Jordan form
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.4sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.4prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.4sol.pdf|solution]]
 
-关联卡片：[[Similar Matrix]]、[[Jordan Form]]、[[Diagonalization]]
+关联卡片：[[Similar Matrix]]、[[Jordan Form]]、[[Diagonalization]]、[[Choosing Matrix Decompositions]]
+
+>[!note] 快速回忆
+> - 这讲要回答：若矩阵不能被完整 diagonalize，应当怎样描述它。
+> - 你要立刻想起：相似表示“同一变换的不同坐标表示”；Jordan form 描述的是特征向量不够时的缺陷结构。
+> - 典型题型：判断相似、判断是否可对角化、解释 Jordan block 的含义。
+> - 它接到下一讲：把一般方阵再扩展到任意矩阵，由 SVD 统一。
 
 ### 相似矩阵在说什么
 
@@ -267,11 +342,23 @@ $$
 - 知道对角化失败时 Jordan block 记录了什么信息。
 - 明白 Jordan form 的意义主要是结构解释，不是机械计算表演。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 3.5 Singular value decomposition
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.5sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.5prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.5sol.pdf|solution]]
 
-关联卡片：[[Singular Value Decomposition]]、[[Orthogonal Matrix]]、[[Pseudoinverse]]
+关联卡片：[[Singular Value Decomposition]]、[[Orthogonal Matrix]]、[[Pseudoinverse]]、[[Choosing Matrix Decompositions]]
+
+>[!note] 快速回忆
+> - 这讲要回答：为什么任意矩阵最后都该看 SVD。
+> - 你要立刻想起：`A=U\Sigma V^T`，奇异值来自 `A^TA` 的特征值平方根，四个基本子空间会在 SVD 中归位。
+> - 典型题型：解释 SVD 的来源、几何意义、rank 信息与低秩近似。
+> - 它接到下一讲：从分解转回“矩阵只是线性变换的一种表示”。
 
 ### 为什么需要 SVD
 
@@ -328,11 +415,23 @@ $$
 - 能把 SVD 理解成“输入方向、拉伸强度、输出方向”的分解。
 - 能说明为什么 SVD 同时给出四个基本子空间的正交基。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 3.6 Linear transformations and their matrices
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.6sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.6prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.6sol.pdf|solution]]
 
 关联卡片：[[Linear Transformation]]
+
+>[!note] 快速回忆
+> - 这讲要回答：为什么变换比矩阵本身更本质。
+> - 你要立刻想起：矩阵列向量就是基向量的像；矩阵只是线性变换在某组基下的坐标表达。
+> - 典型题型：从变换定义构造矩阵，或从矩阵解释变换作用。
+> - 它接到下一讲：一旦换基，矩阵表示就会变化。
 
 ### 变换比矩阵更本质
 
@@ -370,11 +469,23 @@ $$
 - 能区分“变换本身”和“该变换在某组基下的矩阵”。
 - 能快速判断一个映射是不是线性的。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 3.7 Change of basis; image compression
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.7sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.7prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.7sol.pdf|solution]]
 
 关联卡片：[[Change of Basis]]、[[Singular Value Decomposition]]
+
+>[!note] 快速回忆
+> - 这讲要回答：换基为什么会改变矩阵，但不会改变变换本身。
+> - 你要立刻想起：similarity 就是换基后的矩阵变换规则；低秩压缩本质上也依赖选对基底。
+> - 典型题型：做一次换基计算，解释相似矩阵为什么代表同一个变换。
+> - 它接到下一讲：再把“逆”推广到更一般的情形。
 
 ### 向量的换基
 
@@ -416,11 +527,23 @@ $$
 - 会写矩阵换基公式 $B=M^{-1}AM$。
 - 能解释换基在压缩和简化计算中的实际作用。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 3.8 Left and right inverses; pseudoinverse
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.8sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.8prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.8sol.pdf|solution]]
 
 关联卡片：[[Left Inverse]]、[[Right Inverse]]、[[Pseudoinverse]]
+
+>[!note] 快速回忆
+> - 这讲要回答：当普通 inverse 不存在时，什么叫“最佳逆”。
+> - 你要立刻想起：left inverse / right inverse 依赖满秩方向；伪逆由 SVD 给出，统一最小二乘解与最小范数解。
+> - 典型题型：判断何时存在 left/right inverse，写出 pseudoinverse 公式并解释其意义。
+> - 它接到下一讲：Exam 3 前把 symmetric、Jordan、SVD、change of basis、pseudoinverse 串起来。
 
 ### 双边逆只是方阵满秩时的特例
 
@@ -486,9 +609,21 @@ $$
 - 能写出满列秩和满行秩时最自然的左右逆公式。
 - 能用 SVD 解释伪逆为什么合理。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 3.9 Exam 3 review
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.9sum.pdf|summary]]
+
+>[!note] 快速回忆
+> - 这讲要回答：Exam 3 前最少必须保住哪几条结构线。
+> - 你要立刻想起：`symmetric/positive definite -> similarity/Jordan -> SVD -> linear transformation/change of basis -> pseudoinverse`。
+> - 典型题型：正定判别、Jordan 结构、SVD 解释、换基、左右逆与伪逆。
+> - 复习时若公式都记得却说不出“为什么学这讲”，就回到本页开头的 `单元速览`。
 
 ### 本单元的统一图景
 
@@ -516,6 +651,18 @@ Unit III 真正要形成的是一个层次感：
 - 相似和等于不是一回事；相似是同一变换在不同坐标系下的表示。
 - SVD 与特征分解不同，前者适用于任意矩阵。
 - 伪逆不是“随便补个逆”，而是 row space 到 column space 上最自然的逆。
+
+### 你要掌握
+
+- 能把 Unit III 压缩成 `symmetric / positive definite -> Jordan / SVD -> linear transformation / change of basis -> pseudoinverse`。
+- 能说清楚为什么这单元是在给前两单元做结构收束，而不是另开新话题。
+- 能根据矩阵类型快速判断该用 spectral decomposition、Jordan 还是 SVD。
+
+### 回忆检查
+
+- 不看正文，我能解释 Unit III 为什么必须同时讲 positive definite、Jordan、SVD 和 pseudoinverse。
+- 我能区分“矩阵性质”“坐标系变化”“最佳逆”这三类问题各自该回哪一节。
+- 如果我只记得公式，我也能说出每一讲在整门课里的角色。
 
 ## 本单元复习清单
 

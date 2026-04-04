@@ -17,6 +17,7 @@ tags:
 >
 ## 关联卡片
 - [[Spectral Decomposition]]
+- [[Testing Positive Definiteness]]
 
 ## 课程笔记反链
 

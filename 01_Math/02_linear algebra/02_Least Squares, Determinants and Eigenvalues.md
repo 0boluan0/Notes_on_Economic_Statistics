@@ -10,6 +10,37 @@ tags:
 
 # Least Squares, Determinants and Eigenvalues
 
+## 单元速览
+
+- 这一单元真正回答的是两件事：原方程无解时怎样做最佳逼近；矩阵反复作用时哪些方向最关键。
+- 你最后必须能把题目自动分流到三条线：
+  - projection / least squares / QR。
+  - determinant / cofactor / inverse / volume。
+  - eigenvalues / diagonalization / matrix exponential / Markov。
+- 如果复习时间很少，至少保住这 5 个抓手：
+  - 误差最小 $\Leftrightarrow$ 误差与目标子空间正交。
+  - 正规方程 `A^TA\hat{x}=A^Tb`。
+  - 投影矩阵 `P=A(A^TA)^{-1}A^T`。
+  - determinant 管奇异性和体积。
+  - eigen / diagonalization 管长期行为与“选对基底”。
+
+## 这页怎么用
+
+- 先看每个 session 前面的 `快速回忆`，只要能口述，就不要直接沉回正文。
+- 遇到题目时先判断它在问：
+  - 最佳逼近？
+  - 可逆性/体积？
+  - 长期行为/特征结构？
+- 若题目里出现 `best fit / closest / minimum error`，默认先去 projection / least squares。
+
+## Session 回忆索引
+
+- 2.1-2.4：正交、投影、least squares、Gram-Schmidt / QR。
+- 2.5-2.7：determinant、cofactor、inverse、volume。
+- 2.8-2.10：eigenvalues、diagonalization、$e^{At}$。
+- 2.11：Markov / Fourier 作为“选对基底后的解耦”。
+- 2.12：Exam 2 前的统一闭环。
+
 ## 本单元主线
 
 Unit II 解决的是两个更深的问题。第一，若 $Ax=b$ 无解，怎样在所有可能的 $Ax$ 中找到最接近 $b$ 的那个向量。第二，若反复施加同一个方阵，它会沿哪些方向拉伸、压缩、翻转或保持不变。前者导向正交、投影和最小二乘；后者导向行列式、特征值、对角化和矩阵指数。
@@ -20,7 +51,13 @@ Unit II 解决的是两个更深的问题。第一，若 $Ax=b$ 无解，怎样�
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.1sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses2.1prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses2.1sol.pdf|solution]]
 
-关联卡片：[[Orthogonality]]、[[Column Space]]、[[Null Space]]
+关联卡片：[[Orthogonality]]、[[Column Space]]、[[Null Space]]、[[Linear Algebra Problem-Type Map]]
+
+>[!note] 快速回忆
+> - 这讲要回答：为什么正交会成为 Unit II 的底层语言。
+> - 你要立刻想起：内积为 0、正交补、row space 与 nullspace 的正交关系、`N(A^TA)=N(A)`。
+> - 典型题型：证明正交关系、解释维数补齐、说明某个向量为什么是最佳误差方向的候选。
+> - 它接到下一讲：把“正交”具体落到 projection。
 
 ### 正交的代数定义与几何意义
 
@@ -76,11 +113,23 @@ $$
 - 能证明 row space 与 nullspace 互相正交。
 - 能说明为什么 $N(A^TA)=N(A)$。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 2.2 Projections onto subspaces
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.2sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses2.2prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses2.2sol.pdf|solution]]
 
 关联卡片：[[Orthogonal Projection]]、[[Projection Matrix]]、[[Orthogonality]]
+
+>[!note] 快速回忆
+> - 这讲要回答：为什么“距离最小”会等价于“误差正交”。
+> - 你要立刻想起：投影点 $p$ 的判别条件是 `b-p ⟂ S`；一维投影公式是所有高维投影的原型。
+> - 典型题型：求线投影 / 子空间投影，并解释为什么它是 closest point。
+> - 它接到下一讲：从几何投影写成正规方程与 least squares。
 
 ### 投影的定义
 
@@ -142,11 +191,23 @@ $$
 - 能解释为什么投影是唯一的最佳逼近。
 - 能把投影问题写成 $A^T(b-A\hat{x})=0$。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 2.3 Projection matrices and least squares
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.3sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses2.3prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses2.3sol.pdf|solution]]
 
-关联卡片：[[Projection Matrix]]、[[Least Squares]]、[[Orthogonal Projection]]
+关联卡片：[[Projection Matrix]]、[[Least Squares]]、[[Orthogonal Projection]]、[[Least Squares via Normal Equations]]
+
+>[!note] 快速回忆
+> - 这讲要回答：原系统无解时，最佳近似为什么由正规方程给出。
+> - 你要立刻想起：`A^T(b-A\hat{x})=0`，`P=A(A^TA)^{-1}A^T`，且正交投影矩阵满足 `P^T=P`、`P^2=P`。
+> - 典型题型：最小二乘、投影矩阵性质、线性回归 best fit。
+> - 它接到下一讲：怎样更稳定地构造正交基与 QR。
 
 ### 从无解系统到最佳近似
 
@@ -241,11 +302,23 @@ $$
 - 会写出并识别投影矩阵 $P$。
 - 会解一个简单的数据拟合题。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 2.4 Orthogonal matrices and Gram-Schmidt
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.4sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses2.4prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses2.4sol.pdf|solution]]
 
 关联卡片：[[Orthogonal Matrix]]、[[Gram-Schmidt Orthogonalization]]
+
+>[!note] 快速回忆
+> - 这讲要回答：为什么正交基会让 projection / least squares 的计算变简单。
+> - 你要立刻想起：Gram-Schmidt 是不断减去已有方向上的投影；QR 让 least squares 变成更容易解的上三角系统。
+> - 典型题型：手做 Gram-Schmidt、写 QR、解释 orthogonal matrix 的好处。
+> - 它接到下一讲：从“长度与角度”切换到 determinant 的体积语言。
 
 ### 正交矩阵的结构
 
@@ -297,11 +370,23 @@ $$
 - 能手工完成二维或三维的 Gram-Schmidt。
 - 知道 QR 分解为何对最小二乘有利。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 2.5 Properties of determinants
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.5sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses2.5prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses2.5sol.pdf|solution]]
 
 关联卡片：[[Determinant]]
+
+>[!note] 快速回忆
+> - 这讲要回答：determinant 到底在衡量什么。
+> - 你要立刻想起：它同时刻画可逆性、体积缩放、orientation；三条定义性性质是后面一切公式的起点。
+> - 典型题型：用行操作跟踪 determinant 变化，解释为何 determinant 为 0。
+> - 它接到下一讲：从性质走向 cofactor 公式。
 
 ### 行列式想衡量什么
 
@@ -345,11 +430,23 @@ $$
 - 能解释“determinant 为 0”为什么等价于矩阵把空间压扁。
 - 能从三角矩阵和消元读出 determinant。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 2.6 Determinant formulas and cofactors
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.6sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses2.6prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses2.6sol.pdf|solution]]
 
 关联卡片：[[Determinant]]
+
+>[!note] 快速回忆
+> - 这讲要回答：minor、cofactor、adjugate 为什么出现。
+> - 你要立刻想起：cofactor expansion 给出显式公式，但计算上通常不如 elimination；它的价值在结构理解。
+> - 典型题型：余子式展开、伴随矩阵、从 cofactor 推 inverse 公式。
+> - 它接到下一讲：把 determinant 与 inverse / volume 合并看。
 
 ### minor 与 cofactor
 
@@ -389,11 +486,23 @@ $$
 - 能解释为什么伴随矩阵能给出逆矩阵公式。
 - 知道 cofactor 公式偏理论，消元偏计算。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 2.7 Cramer's rule, inverse matrix, and volume
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.7sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses2.7prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses2.7sol.pdf|solution]]
 
 关联卡片：[[Cramer's Rule]]、[[Matrix Inverse]]、[[Determinant]]
+
+>[!note] 快速回忆
+> - 这讲要回答：Cramer's rule、inverse、volume 为什么是同一组思想的不同投影。
+> - 你要立刻想起：determinant 不只是一个数，它告诉你矩阵是否把空间压扁以及压缩了多少体积。
+> - 典型题型：用 determinant 讨论 inverse 是否存在，解释 Cramer's rule 何时有意义。
+> - 它接到下一讲：从体积切换到“不变方向”。
 
 ### Cramer's rule
 
@@ -429,11 +538,23 @@ $$
 - 能从几何上解释 determinant 的绝对值和符号。
 - 能说明 determinant 与可逆性为何等价。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 2.8 Eigenvalues and eigenvectors
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.8sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses2.8prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses2.8sol.pdf|solution]]
 
 关联卡片：[[Eigenvalues]]、[[Eigenvectors]]
+
+>[!note] 快速回忆
+> - 这讲要回答：矩阵反复作用时，哪些方向会被保留下来。
+> - 你要立刻想起：eigenvector 是“方向不变，只缩放”的向量；trace / determinant 在 2×2 中和 eigenvalues 有直接关系。
+> - 典型题型：求 eigenvalues / eigenvectors，解释某个矩阵的几何作用。
+> - 它接到下一讲：若有足够多 eigenvectors，就能 diagonalization。
 
 ### 特征向量在捕捉什么
 
@@ -484,11 +605,23 @@ $$
 - 会从几何上解释特征向量为何是“不改方向”的方向。
 - 知道 trace 与 determinant 分别控制特征值的和与积。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 2.9 Diagonalization and powers of A
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.9sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses2.9prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses2.9sol.pdf|solution]]
 
 关联卡片：[[Diagonalization]]、[[Eigenvalues]]、[[Eigenvectors]]
+
+>[!note] 快速回忆
+> - 这讲要回答：为什么 diagonalization 是处理矩阵幂的理想形式。
+> - 你要立刻想起：`A=S\Lambda S^{-1}` 让复杂的矩阵幂变成标量幂；失败原因通常是特征向量不够。
+> - 典型题型：判断是否可对角化、用对角化求 `A^k`。
+> - 它接到下一讲：把同样思路推到 matrix exponential 与微分方程。
 
 ### 为什么要对角化
 
@@ -542,11 +675,23 @@ $$
 - 会利用对角化快速计算 $A^k$。
 - 知道“特征值大小决定长期行为”的基本图像。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 2.10 Differential equations and $e^{At}$
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.10sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses2.10prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses2.10sol.pdf|solution]]
 
 关联卡片：[[Matrix Exponential]]、[[Diagonalization]]
+
+>[!note] 快速回忆
+> - 这讲要回答：为什么 $e^{At}$ 会自然出现在线性微分方程里。
+> - 你要立刻想起：若能 diagonalize，就把矩阵指数降成对角线上逐项指数；稳定性看特征值实部。
+> - 典型题型：用 eigen / diagonalization 求解二维线性系统。
+> - 它接到下一讲：看 Markov 和 Fourier 这两类“选对基底就解耦”的应用。
 
 ### 从标量指数函数到矩阵指数
 
@@ -618,11 +763,23 @@ $$
 - 会在可对角化时用特征分解求解 $x'(t)=Ax$。
 - 能从特征值判断稳定、发散和振荡。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 2.11 Markov matrices; Fourier series
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.11sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses2.11prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses2.11sol.pdf|solution]]
 
 关联卡片：[[Markov Matrix]]、[[Fourier Series]]、[[Orthogonality]]
+
+>[!note] 快速回忆
+> - 这讲要回答：Markov 和 Fourier 为什么能放在同一讲。
+> - 你要立刻想起：两者都在做“找到自然基底，让矩阵或算子分解得更简单”。
+> - 典型题型：求 Markov 稳态、解释 Fourier basis 为什么正交。
+> - 它接到下一讲：Exam 2 前把 projection、determinant、eigen 三线合并。
 
 ### Markov 矩阵
 
@@ -665,9 +822,21 @@ $$
 - 能用“投影到正交基”理解 Fourier series。
 - 能看出 Markov 和 Fourier 与特征值、投影的统一性。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 2.12 Exam 2 review
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses2.12sum.pdf|summary]]
+
+>[!note] 快速回忆
+> - 这讲要回答：Exam 2 前至少要保住哪三条线。
+> - 你要立刻想起：`orthogonality/projection -> least squares/QR -> determinant -> eigen/diagonalization/$e^{At}$`。
+> - 典型题型：projection、normal equations、Gram-Schmidt、determinant、eigen、Markov。
+> - 复习时如果不会分题型，先回到本页开头的 `单元速览`。
 
 ### 本单元的主线回顾
 
@@ -697,6 +866,18 @@ $$
 - 正规方程永远相容，但它解的是最小二乘问题，不是原方程的精确解。
 - determinant 为 0 说明矩阵奇异，不代表“某一步算错了”。
 - 可对角化需要足够多的特征向量，不只是需要特征值存在。
+
+### 你要掌握
+
+- 能把 Unit II 压缩成 `orthogonality -> projection -> least squares / QR -> determinant -> eigen / diagonalization / dynamics`。
+- 能根据题目特征在 projection、determinant、eigen 这几条路线之间快速切换。
+- 能说明这一单元为什么既讲最佳逼近，又讲长期行为。
+
+### 回忆检查
+
+- 不看正文，我能说出 Unit II 的三条核心题型：best fit、determinant/invertibility、eigen/dynamics。
+- 我能写出 least squares、projection matrix、diagonalization 这三条线各自最关键的公式。
+- 我知道自己若是不会分题型，应该回本页开头还是回某个具体 session。
 
 ## 本单元复习清单
 

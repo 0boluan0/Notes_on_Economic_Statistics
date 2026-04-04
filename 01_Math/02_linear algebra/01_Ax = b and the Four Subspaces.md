@@ -10,6 +10,37 @@ tags:
 
 # Ax = b and the Four Subspaces
 
+## 单元速览
+
+- 这一单元真正回答的是：`Ax=b` 为什么会有解 / 无解 / 不唯一，以及这些现象如何被子空间语言统一解释。
+- 你最后必须能把题目自动分流到两条线：
+  - 算法线：elimination、pivot、row reduction、LU。
+  - 结构线：[[Column Space]]、[[Null Space]]、[[Row Space]]、[[Left Nullspace]]、rank、basis、dimension。
+- 如果复习时间很少，至少要保住这 5 个抓手：
+  - `b` 是否在 [[Column Space]] 里。
+  - 解是否等于 `particular solution + [[Null Space]]`。
+  - pivot 个数就是 rank。
+  - `rank + nullity = n`。
+  - 四个基本子空间分别活在 $\mathbb{R}^m$ 还是 $\mathbb{R}^n$。
+
+## 这页怎么用
+
+- 第一次复习：先看每个 session 前面的 `快速回忆`，能口述后再读正文。
+- 第二次复习：直接跳到每讲的 `你要掌握` 和本页结尾的 `本单元复习清单`。
+- 做题卡住时，不要立刻回头重读整页，先问自己：
+  - 这是解结构题、basis 题，还是四个基本子空间题？
+  - 当前卡住的是算法步骤，还是空间解释？
+
+## Session 回忆索引
+
+- 1.1：row picture / column picture / matrix picture。
+- 1.2：整门课为什么会从消元一路走到 SVD。
+- 1.3-1.5：消元、主元、可逆性、LU。
+- 1.6-1.10：vector spaces、column/null space、special solutions、basis、dimension。
+- 1.11：四个基本子空间的总收束。
+- 1.12-1.13：rank-1、matrix spaces、graphs / incidence matrix。
+- 1.14：Exam 1 前的统一闭环。
+
 ## 本单元主线
 
 Unit I 讲的是整门线性代数最基础、也最耐用的问题：给定矩阵 $A$ 和向量 $b$，方程 $Ax=b$ 什么时候有解、什么时候唯一、什么时候会出现自由度。MIT 这门课的做法不是把它停留在“解方程技巧”，而是把问题提升成“矩阵怎样把一个空间映到另一个空间”。
@@ -27,6 +58,12 @@ Unit I 讲的是整门线性代数最基础、也最耐用的问题：给定矩�
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.1sum.pdf|summary]]
 
 关联卡片：[[Linear system solution structure]]、[[Column Space]]、[[Vector Space]]
+
+>[!note] 快速回忆
+> - 这讲要回答：同一个线性系统为什么能同时看成几何交点问题和列向量组合问题。
+> - 你要立刻想起：row picture 看交点，column picture 看 `b` 是否由列向量生成，matrix picture 看线性变换。
+> - 典型题型：把一个二元/三元系统翻译成三种 picture，并解释唯一解、无解、无穷多解。
+> - 它接到下一讲：从几何直觉升级到整门课的结构地图。
 
 ### 核心问题
 
@@ -85,11 +122,23 @@ Unit I 讲的是整门线性代数最基础、也最耐用的问题：给定矩�
 - 能用“列向量线性组合”解释矩阵乘法。
 - 能从几何上区分无解、唯一解、无穷多解。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 1.2 An overview of key ideas
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.13sum.pdf|summary]]
 
 关联卡片：[[Linear Algebra-hub|线性代数 Hub]]、[[Vector Space]]、[[Matrix Rank]]
+
+>[!note] 快速回忆
+> - 这讲要回答：为什么 elimination、subspace、orthogonality、eigen、SVD 会串成一门课。
+> - 你要立刻想起：整门课的推进顺序是 `Ax=b -> 子空间 -> 正交/最佳逼近 -> determinant/eigen -> 更一般的分解`。
+> - 典型题型：用一句话说明某个章节在整门线代里的角色。
+> - 它接到下一讲：课程地图落回具体算法，从消元开始。
 
 ### 这讲在课程里的位置
 
@@ -129,11 +178,23 @@ $$
 - 能用一句话说清楚每个后续章节在整门课中的作用。
 - 能解释“可逆矩阵”和“列独立、满秩、零空间平凡、每个 $b$ 唯一可解”其实是同一件事的不同表述。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 1.3 Elimination with matrices
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.2sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.2prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.2sol.pdf|solution]]
 
 关联卡片：[[Matrix Rank]]、[[LU Decomposition]]
+
+>[!note] 快速回忆
+> - 这讲要回答：消元究竟在做什么，以及它为什么不改变解集。
+> - 你要立刻想起：非零主元的个数就是 rank；遇到 0 主元要么换行，要么接受秩下降。
+> - 典型题型：手算消元、读 pivot / rank / free variables。
+> - 它接到下一讲：从消元步骤过渡到可逆性和逆矩阵。
 
 ### 消元在做什么
 
@@ -184,11 +245,23 @@ $$
 - 能根据主元位置读出秩和自由变量个数。
 - 能解释为什么消元不改变解集。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 1.4 Multiplication and inverse matrices
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.3sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.3prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.3sol.pdf|solution]]
 
-关联卡片：[[Matrix Inverse]]、[[Singular Matrix]]
+关联卡片：[[Matrix Inverse]]、[[Singular Matrix]]、[[Invertible Matrix Equivalence Chain]]
+
+>[!note] 快速回忆
+> - 这讲要回答：矩阵乘法怎样理解，以及 inverse 到底意味着什么。
+> - 你要立刻想起：矩阵乘法最重要的视角是“复合变换”；可逆等价于“每个 $b$ 唯一可解、零空间平凡、主元充满”。
+> - 典型题型：判断矩阵是否可逆、解释 singular 到底坏在哪。
+> - 它接到下一讲：把消元过程系统整理成 LU / PA=LU。
 
 ### 矩阵乘法的四种理解
 
@@ -234,11 +307,23 @@ $$
 - 能从“复合变换”解释 $(AB)^{-1}=B^{-1}A^{-1}$ 为何顺序反过来。
 - 能用上面的等价条件快速判断一个方阵是否可逆。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 1.5 Factorization into A = LU
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.4sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.4prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.4sol.pdf|solution]]
 
 关联卡片：[[LU Decomposition]]、[[Permutation Matrix]]
+
+>[!note] 快速回忆
+> - 这讲要回答：为什么消元算法能写成矩阵分解。
+> - 你要立刻想起：不换行时是 `A=LU`；需要换行时是 `PA=LU`。
+> - 典型题型：手写 LU / PA=LU，并解释 L、U、P 各自记录了什么。
+> - 它接到下一讲：从算法对象转向“什么叫向量空间与子空间”。
 
 ### 从算法到分解
 
@@ -310,11 +395,23 @@ $$
 - 能解释 L 和 U 分别保存了什么信息。
 - 知道何时要改写成 $PA=LU$。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 1.6 Transposes, permutations, vector spaces
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.5sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.5prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.5sol.pdf|solution]]
 
 关联卡片：[[Permutation Matrix]]、[[Vector Space]]、[[Subspace]]
+
+>[!note] 快速回忆
+> - 这讲要回答：为什么线代里到处在说“空间”，以及 transpose / permutation 在结构上意味着什么。
+> - 你要立刻想起：transpose 交换行列角色；vector space 关注 closure，而 permutation 只是重排坐标/方程。
+> - 典型题型：判断一个集合是不是子空间，解释转置后对象活在哪个空间。
+> - 它接到下一讲：正式进入 column space 与 nullspace。
 
 ### 转置把行和列互换
 
@@ -344,11 +441,23 @@ $$
 - 熟练使用 $(AB)^T=B^TA^T$。
 - 知道 row space 与 column space 在转置下如何互换。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 1.7 Column space and nullspace
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.6sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.6prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.6sol.pdf|solution]]
 
 关联卡片：[[Column Space]]、[[Null Space]]、[[Subspace]]
+
+>[!note] 快速回忆
+> - 这讲要回答：column space 和 nullspace 为什么是最先必须掌握的两个子空间。
+> - 你要立刻想起：[[Column Space]] 控制哪些 $b$ 可达，[[Null Space]] 控制为什么解不唯一。
+> - 典型题型：判断系统是否相容，解释冗余列带来的后果。
+> - 它接到下一讲：先把 `Ax=0` 的结构吃透。
 
 ### 两个最先出现的子空间
 
@@ -388,11 +497,23 @@ $$
 - 能从题目语句判断它问的是列空间还是零空间。
 - 知道列空间活在 $\mathbb{R}^m$，零空间活在 $\mathbb{R}^n$，两者不是同一个空间里的对象。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 1.8 Solving Ax = 0: pivot variables, special solutions
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.7sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.7prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.7sol.pdf|solution]]
 
 关联卡片：[[Null Space]]、[[Matrix Rank]]
+
+>[!note] 快速回忆
+> - 这讲要回答：为什么齐次系统是理解一切解结构的起点。
+> - 你要立刻想起：free variable 的个数就是零空间自由度；special solutions 构成 [[Null Space]] 的基。
+> - 典型题型：从 rref 直接写出 `Ax=0` 的通解与基。
+> - 它接到下一讲：再把一般系统写成“特解 + 零空间”。
 
 ### 齐次系统为什么最重要
 
@@ -434,11 +555,23 @@ $$
 - 知道自由变量个数就是零空间维数。
 - 明白“special solutions 不是某些偶然例子，而是零空间基向量”。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 1.9 Solving Ax = b: row reduced form R
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.8sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.8prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.8sol.pdf|solution]]
 
 关联卡片：[[Linear system solution structure]]、[[Null Space]]、[[Column Space]]
+
+>[!note] 快速回忆
+> - 这讲要回答：一般系统 `Ax=b` 的全部解怎样描述。
+> - 你要立刻想起：所有解都写成 `particular solution + [[Null Space]]`；是否有解先看相容条件。
+> - 典型题型：判断相容、找一个特解、再参数化全部解。
+> - 它接到下一讲：从“会解”走到“哪些向量算 independent / basis”。
 
 ### 把一般系统拆成“是否相容”与“如何参数化”
 
@@ -489,11 +622,23 @@ $$
 - 能从消元结果读出相容条件。
 - 明白无解的根源是 $b$ 不在列空间里。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 1.10 Independence, basis, and dimension
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.9sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.9prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.9sol.pdf|solution]]
 
 关联卡片：[[Vector Space]]、[[Subspace]]、[[Matrix Rank]]
+
+>[!note] 快速回忆
+> - 这讲要回答：什么叫 linear independence、basis、dimension。
+> - 你要立刻想起：basis 是“最少还能张成 / 最多仍保持独立”的那组向量；pivot column 往往直接指向 basis。
+> - 典型题型：从一组向量里挑 basis、求 dimension、说明为什么 independent。
+> - 它接到下一讲：把这些语言全部收束到四个基本子空间。
 
 ### 线性无关到底在说什么
 
@@ -529,11 +674,23 @@ $$
 - 能从矩阵的主元结构提取某个子空间的一组基。
 - 不把“生成”与“独立”混为一谈。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 1.11 The four fundamental subspaces
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.10sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.10prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.10sol.pdf|solution]]
 
-关联卡片：[[Column Space]]、[[Null Space]]、[[Row Space]]、[[Left Nullspace]]
+关联卡片：[[Column Space]]、[[Null Space]]、[[Row Space]]、[[Left Nullspace]]、[[Reading the Four Fundamental Subspaces from RREF]]
+
+>[!note] 快速回忆
+> - 这讲要回答：一个矩阵为什么天然带出四个基本子空间。
+> - 你要立刻想起：`C(A), N(A), C(A^T), N(A^T)` 分别活在不同 ambient space；正交关系和维数关系一起组成闭环。
+> - 典型题型：列出四个子空间的基、维数、所在空间与正交关系。
+> - 它接到下一讲：从向量空间走到“矩阵本身构成的空间”和 rank-1 视角。
 
 ### 四个空间的完整表
 
@@ -584,11 +741,23 @@ row space 与 nullspace 在 $\mathbb{R}^n$ 中互为正交补，column space 与
 - 能背出四个维数公式，并理解它们为什么成立。
 - 能用四个基本子空间重述“有解、唯一、最小二乘”等问题。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 1.12 Matrix spaces; rank 1; small world graphs
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.11sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.11prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.11sol.pdf|solution]]
 
 关联卡片：[[Matrix Rank]]、[[Symmetric Matrix]]
+
+>[!note] 快速回忆
+> - 这讲要回答：为什么 rank-1 值得被单独拎出来，以及矩阵空间本身怎样组织。
+> - 你要立刻想起：rank-1 矩阵是外积块，是更复杂矩阵的基本构件。
+> - 典型题型：判断 rank-1、说明矩阵空间的维数与基。
+> - 它接到下一讲：把线代语言放进 graph / network 模型。
 
 ### 矩阵本身也构成向量空间
 
@@ -615,11 +784,23 @@ rank-1 是“最简单但非平凡”的矩阵。它只有一个真正的方向�
 - 能把“矩阵空间”当成普通向量空间来做维数和子空间判断。
 - 能解释 rank-1 矩阵为什么等于一个列向量与一个行向量的外积。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 1.13 Graphs, networks, incidence matrices
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.12sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.12prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.12sol.pdf|solution]]
 
 关联卡片：[[Incidence Matrix]]、[[Null Space]]、[[Left Nullspace]]
+
+>[!note] 快速回忆
+> - 这讲要回答：矩阵怎样编码 graph / network 结构。
+> - 你要立刻想起：incidence matrix 把节点与边连起来；零空间和左零空间会对应回路与约束。
+> - 典型题型：写 incidence matrix、解释其 rank 和 nullspace。
+> - 它接到下一讲：Exam 1 前把算法线与结构线收成一个闭环。
 
 ### 网络中的矩阵
 
@@ -661,9 +842,21 @@ $$
 - 能解释为什么连通图的 incidence matrix 往往少一维秩。
 - 能把零空间理解成网络中的循环流。
 
+### 回忆检查
+
+- 不看正文，我能说出这讲要解决的问题。
+- 我能写出本讲最关键的公式、结论或判别条件。
+- 我知道这讲最典型的题型，以及它如何接到下一讲。
+
 ## Session 1.14 Exam 1 review
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.14sum.pdf|summary]]
+
+>[!note] 快速回忆
+> - 这讲要回答：Exam 1 前最少必须保住哪条链。
+> - 你要立刻想起：`几何图像 -> 消元/秩 -> column/null space -> basis/dimension -> four fundamental subspaces -> incidence matrix`。
+> - 典型题型：消元、general solution、basis、四个基本子空间、网络矩阵。
+> - 复习时如果哪一步说不顺，就直接回对应 session，而不是从头重读整篇。
 
 ### Unit I 的核心闭环
 
@@ -690,6 +883,18 @@ Exam 1 前你应该已经把以下链条串起来：
 - 行空间的基可以从 rref 的非零行取，因为行变换保持行空间。
 - 一般解是“特解 + 零空间”，不是“随便找一个解再加常数”。
 - 列空间和左零空间活在 $\mathbb{R}^m$，行空间和零空间活在 $\mathbb{R}^n$。
+
+### 你要掌握
+
+- 能把 Unit I 压缩成 `几何图像 -> 消元 -> 子空间 -> 基与维数 -> 四个基本子空间` 这一条链。
+- 能从题目表述快速判断该回哪一节，而不是重读整篇。
+- 能说清楚 Exam 1 里最常见的计算题和概念题分别在考什么。
+
+### 回忆检查
+
+- 不看正文，我能口头复述 Unit I 的主线推进顺序。
+- 我能立即举出 Unit I 最典型的三类题：消元、general solution、four fundamental subspaces。
+- 如果我在某一环卡住，我知道应该回哪个 session，而不是只能从头重读。
 
 ## 本单元复习清单
 

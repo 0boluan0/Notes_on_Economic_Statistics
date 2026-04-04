@@ -24,6 +24,7 @@ tags:
 ## 关联卡片
 - [[Orthogonal Projection]]
 - [[Projection Matrix]]
+- [[Least Squares via Normal Equations]]
 - [[Pseudoinverse]]
 
 ## 课程笔记反链

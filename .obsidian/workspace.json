@@ -281,13 +281,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 01_Ax = b and the Four Subspaces"
+              "title": "Outline"
             }
           },
           {
@@ -335,10 +334,16 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "14764de06ec90304",
+  "active": "36db59183709d800",
   "lastOpenFiles": [
-    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.13sum.pdf",
+    "00_factor/procedure/Testing Positive Definiteness.md",
+    "00_factor/procedure/Least Squares via Normal Equations.md",
+    "00_factor/framework/Linear Algebra Problem-Type Map.md",
+    "00_factor/framework/Choosing Matrix Decompositions.md",
+    "00_factor/framework/Invertible Matrix Equivalence Chain.md",
+    "00_factor/procedure/Reading the Four Fundamental Subspaces from RREF.md",
     "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
+    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.13sum.pdf",
     "01_Math/02_linear algebra/02_Least Squares, Determinants and Eigenvalues.md",
     "00_inbox/插入批注.md",
     "99_学习情况记录/2026-04-04——Sat.md",
@@ -364,22 +369,16 @@
     "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md",
     "98_attachment/dashboards/2026-04-02-map.svg",
     "98_attachment/dashboards/2026-04-02-news.json",
-    "99_学习情况记录/2026-04-01——Wed.md",
     "98_attachment/dashboards/2026-04-01-map.svg",
     "98_attachment/dashboards/2026-04-01-news.json",
-    "00_factor/concept/Null Space.md",
-    "99_学习情况记录/2026-03-31——Tue.md",
     "98_attachment/dashboards/2026-03-31-map.svg",
     "98_attachment/dashboards/2026-03-31-news.json",
-    "99_学习情况记录/2026-03-30——Mon.md",
     "98_attachment/dashboards/2026-03-30-map.svg",
     "98_attachment/dashboards/2026-03-30-news.json",
-    "99_学习情况记录/2026-03-29——Sun.md",
     "98_attachment/dashboards/2026-03-29-map.svg",
     "98_attachment/dashboards/2026-03-29-news.json",
     "01_Math/05_随机过程/01_预备知识.html",
     "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Other/Introduction_to_Linear_Algebra(Strang).pdf",
-    "__pycache__/normalize_callouts.cpython-311.pyc",
     "98_attachment/dashboards/2026-03-28-map.svg",
     "98_attachment/dashboards/2026-03-27-map.svg",
     "98_attachment/dashboards/2026-03-26-map.svg",

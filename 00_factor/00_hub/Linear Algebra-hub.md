@@ -10,76 +10,146 @@ tags:
 ---
 # 线性代数 Hub
 
+## 先从哪条主线进
+
+### 主线 1：`Ax=b`、消元与四个基本子空间
+
+- 课程入口：[[01_Ax = b and the Four Subspaces]]
+- 先读这些卡：
+  - [[Linear system solution structure]]
+  - [[Column Space]]
+  - [[Null Space]]
+  - [[Row Space]]
+  - [[Left Nullspace]]
+  - [[Matrix Rank]]
+  - [[Reading the Four Fundamental Subspaces from RREF]]
+
+### 主线 2：正交、投影、最佳逼近
+
+- 课程入口：[[02_Least Squares, Determinants and Eigenvalues#Session 2.1 Orthogonal vectors and subspaces|Unit II 正交主线]]
+- 先读这些卡：
+  - [[Orthogonality]]
+  - [[Orthogonal Projection]]
+  - [[Projection Matrix]]
+  - [[Least Squares]]
+  - [[Least Squares via Normal Equations]]
+  - [[Gram-Schmidt Orthogonalization]]
+  - [[Orthogonal Matrix]]
+
+### 主线 3：特征结构、标准形与矩阵分解
+
+- 课程入口：[[02_Least Squares, Determinants and Eigenvalues#Session 2.8 Eigenvalues and eigenvectors|Unit II eigen 主线]]、[[03_Positive Definite Matrices and Applications]]
+- 先读这些卡：
+  - [[Determinant]]
+  - [[Eigenvalues]]
+  - [[Eigenvectors]]
+  - [[Diagonalization]]
+  - [[Positive Definite Matrix]]
+  - [[Testing Positive Definiteness]]
+  - [[Jordan Form]]
+  - [[Singular Value Decomposition]]
+  - [[Pseudoinverse]]
+  - [[Choosing Matrix Decompositions]]
+
+## 按题型找入口
+
+### 题型：判断 `Ax=b` 有没有解、解是否唯一
+
+- [[01_Ax = b and the Four Subspaces]]
+- [[Linear system solution structure]]
+- [[Matrix Rank]]
+
+### 题型：从 rref 读 basis、dimension、four fundamental subspaces
+
+- [[01_Ax = b and the Four Subspaces#Session 1.11 The four fundamental subspaces|Unit I 核心 session]]
+- [[Reading the Four Fundamental Subspaces from RREF]]
+- [[Column Space]]
+- [[Null Space]]
+
+### 题型：做投影、least squares、QR
+
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.2 Projections onto subspaces|projection]]
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.3 Projection matrices and least squares|least squares]]
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.4 Orthogonal matrices and Gram-Schmidt|QR]]
+- [[Least Squares via Normal Equations]]
+
+### 题型：求 determinant、cofactor、inverse、volume
+
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.5 Properties of determinants|determinant 主线]]
+- [[Determinant]]
+- [[Cramer's Rule]]
+- [[Matrix Inverse]]
+
+### 题型：分析矩阵幂、稳态、动力系统
+
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.8 Eigenvalues and eigenvectors|eigen]]
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.9 Diagonalization and powers of A|diagonalization]]
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.10 Differential equations and $e^{At}$|matrix exponential]]
+- [[Markov Matrix]]
+
+### 题型：判断正定、说明为什么该用 Jordan / SVD / pseudoinverse
+
+- [[03_Positive Definite Matrices and Applications#Session 3.1 Symmetric matrices and positive definiteness|positive definite]]
+- [[03_Positive Definite Matrices and Applications#Session 3.4 Similar matrices and Jordan form|Jordan]]
+- [[03_Positive Definite Matrices and Applications#Session 3.5 Singular value decomposition|SVD]]
+- [[03_Positive Definite Matrices and Applications#Session 3.8 Left and right inverses; pseudoinverse|pseudoinverse]]
+- [[Testing Positive Definiteness]]
+
+## 课程导航
+
+- 总览：[[00_MIT OCW 18.06SC course map]]
+- Unit I：[[01_Ax = b and the Four Subspaces]]
+- Unit II：[[02_Least Squares, Determinants and Eigenvalues]]
+- Unit III：[[03_Positive Definite Matrices and Applications]]
+- 考前入口：[[04_Review and exam roadmap]]
+
 ## 核心概念
 
-[[Vector Space|向量空间]]
-[[Matrix Rank|矩阵的秩]]
-[[Orthogonality|正交性]]
-[[Linear Transformation|线性变换]]
+### 子空间与解结构
+- [[Vector Space]]
+- [[Subspace]]
+- [[Linear Independence]]
+- [[Matrix Rank]]
+- [[Column Space]]
+- [[Row Space]]
+- [[Null Space]]
+- [[Left Nullspace]]
 
-## 向量空间
+### 正交与逼近
+- [[Orthogonality]]
+- [[Orthogonal Projection]]
+- [[Projection Matrix]]
+- [[Least Squares]]
+- [[Orthogonal Matrix]]
 
-[[Vector Space|向量空间]]
-[[Subspace|子空间]]
-[[Linear Independence|线性无关]]
-[[Row Space|行空间]]
-[[Left Nullspace|左零空间]]
+### determinant / eigen / 分解
+- [[Determinant]]
+- [[Matrix Inverse]]
+- [[Eigenvalues]]
+- [[Eigenvectors]]
+- [[Diagonalization]]
+- [[Matrix Exponential]]
+- [[Symmetric Matrix]]
+- [[Positive Definite Matrix]]
+- [[Spectral Decomposition]]
+- [[Jordan Form]]
+- [[Singular Value Decomposition]]
+- [[Pseudoinverse]]
 
-## 矩阵运算与分解
+### 变换与表示
+- [[Linear Transformation]]
+- [[Change of Basis]]
+- [[Permutation Matrix]]
+- [[Incidence Matrix]]
 
-### 矩阵的秩
-[[Matrix Rank|矩阵的秩]]
-[[Matrix rank properties|矩阵秩的性质]]
-[[Null Space|零空间]]
-[[Column Space|列空间]]
-[[Row Space|行空间]]
+## 方法卡
 
-### 矩阵分解
-[[LU Decomposition|LU分解]]
-[[Permutation Matrix|置换矩阵]]
-[[Spectral Decomposition|谱分解]]
-[[Diagonalization|对角化]]
-[[Singular Value Decomposition|奇异值分解]]
-
-### 特殊矩阵
-[[Symmetric Matrix|对称矩阵]]
-[[Singular Matrix|奇异矩阵]]
-[[Wishart Distribution|Wishart分布]]
-[[Orthogonal Matrix|正交矩阵]]
-[[Projection Matrix|投影矩阵]]
-[[Markov Matrix|马尔可夫矩阵]]
-
-## 线性方程组
-
-[[Linear system solution structure|线性方程组解的结构]]
-[[Determinant|行列式]]
-[[Matrix Inverse|逆矩阵]]
-[[Least Squares|最小二乘]]
-[[Pseudoinverse|伪逆]]
-[[Cramer's Rule|克拉默法则]]
-
-## 多变量统计
-
-### 随机向量
-[[Linear Combination of Two Random Variables|两个随机变量线性组合]]
-[[Multivariate Normal Distribution|多元正态分布]]
-
-### 距离度量
-[[Mahalanobis Distance|马哈拉诺比斯距离]]
-
-### 因子分析
-[[Factor Analysis|因子分析]]
-[[Single-Factor Model|单因子模型]]
-[[Multi-Factor Model|多因子模型]]
-[[PCA|主成分分析]]
-
-## 课程笔记
-
-- [[00_MIT OCW 18.06SC course map|MIT OCW 18.06SC course map]]
-- [[01_Ax = b and the Four Subspaces|Ax = b and the Four Subspaces]]
-- [[02_Least Squares, Determinants and Eigenvalues|Least Squares, Determinants and Eigenvalues]]
-- [[03_Positive Definite Matrices and Applications|Positive Definite Matrices and Applications]]
-- [[04_Review and exam roadmap|Review and exam roadmap]]
+- [[Reading the Four Fundamental Subspaces from RREF]]
+- [[Gram-Schmidt Orthogonalization]]
+- [[Least Squares via Normal Equations]]
+- [[Testing Positive Definiteness]]
+- [[Choosing Matrix Decompositions]]
+- [[Linear Algebra Problem-Type Map]]
 
 ## 课程笔记反链
 
