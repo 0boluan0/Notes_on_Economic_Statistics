@@ -282,7 +282,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 6
       },
       {
         "id": "8532e59675ffc5f1",
@@ -295,13 +295,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2026-04-05——Sun.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-04-05——Sun"
+              "title": "Outline"
             }
           },
           {
@@ -349,12 +348,14 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "14764de06ec90304",
+  "active": "36db59183709d800",
   "lastOpenFiles": [
     "99_学习情况记录/2026-04-05——Sun.md",
+    "99_学习情况记录/2026-04-04——Sat.md",
+    "98_attachment/dashboards/2026-04-05-map.svg",
+    "98_attachment/dashboards/2026-04-05-news.json",
     "03_Computer_Science/99_Miscellaneous/the_missing_semester.md",
     "brightness",
-    "99_学习情况记录/2026-04-04——Sat.md",
     "03_Computer_Science/99_Miscellaneous/the_missing_semester_exercises/01_Course Shell Exercises.md",
     "03_Computer_Science/99_Miscellaneous/the_missing_semester_exercises/02_Shell Tools Exercises.md",
     "03_Computer_Science/99_Miscellaneous/the_missing_semester_exercises/11_Q&A Exercises.md",
@@ -379,7 +380,6 @@
     "00_factor/framework/Linear Algebra Problem-Type Map.md",
     "00_factor/framework/Choosing Matrix Decompositions.md",
     "00_factor/framework/Invertible Matrix Equivalence Chain.md",
-    "00_factor/procedure/Reading the Four Fundamental Subspaces from RREF.md",
     "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.13sum.pdf",
     "98_attachment/dashboards/2026-04-03-map.svg",
     "98_attachment/dashboards/2026-04-03-news.json",
@@ -392,11 +392,9 @@
     "98_attachment/dashboards/2026-03-31-map.svg",
     "98_attachment/dashboards/2026-03-31-news.json",
     "98_attachment/dashboards/2026-03-30-map.svg",
-    "98_attachment/dashboards/2026-03-30-news.json",
     "98_attachment/dashboards/2026-03-29-map.svg",
     "98_attachment/dashboards/2026-03-28-map.svg",
     "98_attachment/dashboards/2026-03-27-map.svg",
-    "98_attachment/dashboards/2026-03-26-map.svg",
     "01_Math/01_calculus/01_calculus.canvas",
     "02_Economy/01_Econometrics/01_Econometrics.canvas",
     "01_Math/06_时间序列分析/06_时间序列分析.canvas",
