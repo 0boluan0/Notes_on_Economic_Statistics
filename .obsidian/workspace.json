@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Computer_Science/99_Miscellaneous/the_missing_semester.md",
+                "file": "99_学习情况记录/2026-04-05——Sun.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "the_missing_semester"
+              "title": "2026-04-05——Sun"
             }
           },
           {
@@ -295,12 +295,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "99_学习情况记录/2026-04-05——Sun.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 2026-04-05——Sun"
             }
           },
           {
@@ -348,8 +349,9 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "457dc26df0b15a1b",
+  "active": "14764de06ec90304",
   "lastOpenFiles": [
+    "99_学习情况记录/2026-04-05——Sun.md",
     "03_Computer_Science/99_Miscellaneous/the_missing_semester.md",
     "brightness",
     "99_学习情况记录/2026-04-04——Sat.md",
