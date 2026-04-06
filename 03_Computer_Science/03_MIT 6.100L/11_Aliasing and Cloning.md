@@ -2,7 +2,7 @@
 aliases:
   - MIT 6.100L Lecture 11
   - 6.100L L11
-  - Aliasing, Cloning
+  - Aliasing and Cloning
 tags:
   - computer-science
   - python
@@ -13,114 +13,306 @@ course: MIT 6.100L Introduction to CS and Programming Using Python
 lecture: 11
 ---
 
-# Lecture 11: Aliasing, Cloning
+# Lecture 11: Aliasing and Cloning
 
 > [!tip] Hint
-> - 我能解释 aliasing 的本质：两个名字指向同一个可变对象。
-> - 我能区分浅复制、显式克隆与简单赋值。
-> - 我能说明 list comprehension 为什么既像循环又像构造器。
-> - 我能判断什么时候共享对象是特性，什么时候是 bug 来源。
-> - 我能围绕本讲的主轴 “Aliasing：多个名字共享同一个对象” / “Cloning：需要独立状态时就显式复制” / “List comprehension：更紧凑地构造新 list”，不翻 slides 也把整节课重新讲一遍。
-> - 我能解释 aliasing 为什么常见于可变对象。
-> - 我能判断某个场景是否需要 clone。
-> - 我能说明浅复制对嵌套对象的局限。
-> - 我能把本讲最关键的代码模式手写出来，并解释每一步为什么这样写。
+> - 这节课不是离开 mutability，而是专门处理 mutability 最容易出事故的地方：删除元素。
+> - 老师一上来先讲 copy，不是跑题，而是因为“删元素时遍历原列表”非常容易漏掉元素。
+> - `L[:]` 这节课第一次被正式解释成 clone，而不是普通切片小技巧。
+> - `remove`、`del`、`pop` 看起来都在删东西，但参数和返回值不一样，副作用也要分清。
+> - `remove_all` 的错误写法是在说明：一边遍历一边删，循环看到的世界会变。
+> - `L1_copy = L1` 不是 copy，而是 alias，这个坑是本讲的中心。
+> - `hot = warm`、`chill = cool[:]` 这种短例子其实在训练你画内存图。
+> - `sort()` vs `sorted()` 再次出现，是为了把 aliasing 和 mutation 一起看。
+> - shallow copy 只复制最外层，deep copy 才会把嵌套结构也复制开。
+> - 听完这节课，你应该能解释“为什么我明明只改了一个名字，另一个名字也变了”。
 
-> [!info] Lecture map
-> - Readings: Ch 5.3-5.5
-> - Recommended use order: read the Hint first, reconstruct the lecture from memory, then study the Core ideas, then run the official code, and only after that open the linked exercises.
-> - Main threads in this lecture: Aliasing：多个名字共享同一个对象 / Cloning：需要独立状态时就显式复制 / List comprehension：更紧凑地构造新 list
-> - Lecture 10 讲 mutability，这一讲把最麻烦的后果挑明：别名和共享引用。
-> - 很多‘明明没改它，为什么它也变了’的 bug，本质上都是 aliasing 问题。
-> - list comprehension 则提供了一种更声明式的构造新 list 的方式，常常能避开不必要的共享副作用。
+## Lecture flow
 
-## Core ideas
-### Aliasing：多个名字共享同一个对象
-赋值 `b = a` 对不可变对象常常没问题，但对 list 这样的可变对象，它意味着你现在有了两个入口能改同一个东西。
-- aliasing 不是错误本身；当你确实想共享状态时，它很有用。
-- 真正危险的是你以为自己拿到的是副本，实际上只是拿到了同一对象的另一个名字。
-- 调试时若怀疑 aliasing，可以同时 print 两个变量并观察 mutation 后是否一起变化。
-- 理解 aliasing 的最稳办法，是把注意力从‘变量名’转到‘对象身份’。
+### 1. 这节课从“如何安全地删元素”开始
+Lecture 10 已经让你意识到 list 是 mutable。  
+Lecture 11 则把问题推进一步：
 
-> [!note] What to internalize
-> - One-sentence takeaway: 赋值 `b = a` 对不可变对象常常没问题，但对 list 这样的可变对象，它意味着你现在有了两个入口能改同一个东西。
-> - Review anchor: aliasing 不是错误本身；当你确实想共享状态时，它很有用。
-> - Review anchor: 真正危险的是你以为自己拿到的是副本，实际上只是拿到了同一对象的另一个名字。
+- 如果我想删除元素怎么办
+- 删除时为什么经常出 bug
+- 我什么时候需要复制列表而不是直接改原列表
 
-从做题角度看，只要题目在考“Aliasing：多个名字共享同一个对象”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：赋值 `b = a` 对不可变对象常常没问题，但对 list 这样的可变对象，它意味着你现在有了两个入口能改同一个东西。
+所以这节课开头先讲 copy，不是偏题，而是因为一旦要 mutate 列表，就要开始考虑：
 
-### Cloning：需要独立状态时就显式复制
-当后续操作不该影响原对象时，复制不是锦上添花，而是语义的一部分。
-- 切片 `[:]`、某些构造器或复制函数都能产生新 list，但要清楚是浅复制还是更深层复制。
-- 如果 list 里嵌套的还是可变对象，浅复制只复制最外层结构，不会自动复制内部对象。
-- ‘我要不要 clone’ 本质上是在做状态所有权判断：后面谁有权修改这份数据？
-- 把复制写得显式，比事后靠注释提醒‘别改这个 list’更可靠。
+- 我现在改的是谁
+- 我遍历的是谁
+- 改动会不会反过来影响正在遍历的结构
 
-> [!note] What to internalize
-> - One-sentence takeaway: 当后续操作不该影响原对象时，复制不是锦上添花，而是语义的一部分。
-> - Review anchor: 切片 `[:]`、某些构造器或复制函数都能产生新 list，但要清楚是浅复制还是更深层复制。
-> - Review anchor: 如果 list 里嵌套的还是可变对象，浅复制只复制最外层结构，不会自动复制内部对象。
+### 2. 先讲 clone：`L[:]` 为什么重要
+老师最先正式介绍的是“复制整个列表”。
 
-从做题角度看，只要题目在考“Cloning：需要独立状态时就显式复制”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：当后续操作不该影响原对象时，复制不是锦上添花，而是语义的一部分。
+写法是：
 
-### List comprehension：更紧凑地构造新 list
-list comprehension 常常是把‘扫描 + 条件 + 构造新序列’压缩成一个表达式，适合表达数据转换。
-- 它最适合那些‘从旧 list 生成新 list’的任务，而不是包含大量副作用的复杂流程。
-- 在语义上，它更像‘声明我要什么样的新结果’，而不是一步步手工 append。
-- 这使得代码更贴近问题本身，也更容易看出没有原地修改旧 list。
-- 如果 comprehension 长到读不懂，就该拆回普通循环。
+```python
+Lcopy = L[:]
+```
 
-> [!note] What to internalize
-> - One-sentence takeaway: list comprehension 常常是把‘扫描 + 条件 + 构造新序列’压缩成一个表达式，适合表达数据转换。
-> - Review anchor: 它最适合那些‘从旧 list 生成新 list’的任务，而不是包含大量副作用的复杂流程。
-> - Review anchor: 在语义上，它更像‘声明我要什么样的新结果’，而不是一步步手工 append。
+课堂对这行代码的解释很直接：
 
-从做题角度看，只要题目在考“List comprehension：更紧凑地构造新 list”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：list comprehension 常常是把‘扫描 + 条件 + 构造新序列’压缩成一个表达式，适合表达数据转换。
+- Python 在内存里创建一个新的 list object
+- 把原列表顶层元素逐个复制进去
+- 新旧列表此时是两个不同对象
 
-## Code patterns from lecture
-> [!note] What the official code is trying to teach
-> - The official lecture code is worth reading as a notebook of small patterns, not just as a file to run once.
-> - Best workflow: predict output first, then run the code, then rewrite the pattern in your own words or with slightly changed values.
-> - remove from a list
-> - L = [2,1,3,6,3,7,0]
-> - L.remove(2)
-> - L.remove(3)
-> - del(L[1])
-> - print(L.pop())
-> - When a code pattern feels too easy, change the input, break one line on purpose, and explain why the behavior changes.
+这一点很关键，因为后面你会不断在两个策略之间切换：
 
-## Worked examples
-> [!example] Aliasing 带来的联动修改
-> ```python
-> a = [1, 2, 3]
-> b = a
-> a[0] = 99
-> print(a)
-> print(b)
-> ```
-> 两个名字共享同一个 list，所以 `a` 的原地修改会直接反映在 `b` 上。
+- 直接改原列表
+- 先复制一份，再在副本上遍历或修改
 
-> [!example] 用 comprehension 构造新 list
-> ```python
-> nums = [1, 2, 3, 4]
-> squares = [n * n for n in nums if n % 2 == 0]
-> print(squares)
-> ```
-> 这里得到的是新 list，不会修改原来的 `nums`，因此特别适合表达筛选+变换。
+> [!note]
+> `L[:]` 在这节课里的身份不是“切片技巧”，而是最常用的 clone 写法。
+
+### 3. 删除操作先分清：`remove`、`del`、`pop`
+老师接着把常见删除接口挨个拿出来。
+
+它们都能“删掉东西”，但侧重点不同：
+
+- `L.remove(e)`：按值删除，删除第一次出现的 `e`
+- `del(L[i])`：按索引删除，不返回值
+- `L.pop()` / `L.pop(i)`：按索引删除，并把删掉的元素返回
+
+这一段看似 API 介绍，真正目的是训练你不要把所有删除操作混成一团。
+
+例如：
+
+- 你已经知道要删哪个值，适合 `remove`
+- 你已经知道要删哪个位置，适合 `del` 或 `pop`
+- 你还想保留被删掉的那个元素，才需要 `pop`
+
+### 4. `remove_all(L, e)`：为什么一边遍历一边删会错
+课程第一个关键例子是 `remove_all(L, e)`。
+
+题目要求：
+
+- 原地修改 `L`
+- 去掉所有等于 `e` 的元素
+- 不返回新列表
+
+错误写法通常像这样：
+
+```python
+for elem in L:
+    if elem == e:
+        L.remove(e)
+```
+
+它的问题不是 `remove` 本身，而是：
+
+- `for elem in L` 正在按当前列表状态前进
+- 你又在循环内部改变这个列表
+- 元素位置一旦左移，后续某些元素就可能被跳过
+
+老师在这里反复强调的不是“这个题怎么写”，而是一个一般规律：
+
+> [!warning]
+> 对 mutable sequence 来说，遍历和修改如果发生在同一对象上，循环的行为必须重新分析。
+
+### 5. 更稳的写法：要么反复删，要么遍历副本
+课堂给出的比较安全的方式包括：
+
+```python
+while e in L:
+    L.remove(e)
+```
+
+这时你没有一边 `for` 一边扫描一边删除，而是每轮重新检查当前列表状态。
+
+另一个思路则出现在后面的 `remove_dups(L1, L2)` 中：
+
+- 遍历副本
+- 修改原列表
+
+这就需要 clone。
+
+### 6. `remove_dups(L1, L2)`：别把 alias 当 copy
+老师随后抛出一个更能暴露问题的例子：  
+如果 `L1` 中某个元素也在 `L2` 中，就把它从 `L1` 删除。
+
+错误版本里最经典的一行是：
+
+```python
+L1_copy = L1
+```
+
+这看起来像“复制了一份”，但实际上并没有。  
+它只是让 `L1_copy` 成为同一个对象的另一个名字，也就是 **alias**。
+
+于是：
+
+- 你以为自己在遍历副本
+- 实际上你还是在遍历被修改的那个对象
+
+正确写法才是：
+
+```python
+L1_copy = L1[:]
+for e in L1_copy:
+    if e in L2:
+        L1.remove(e)
+```
+
+### 7. aliasing：两个名字指向同一个对象
+到这里老师才正式把术语说出来：**aliasing**。
+
+最典型例子是：
+
+```python
+warm = ['red', 'yellow', 'orange']
+hot = warm
+hot.append('pink')
+```
+
+如果你只从变量名表面看，会以为：
+
+- `hot` 变了
+- `warm` 不该变
+
+但课堂要你建立的对象视角是：
+
+- `warm` 和 `hot` 指向同一个 list object
+- append 改的是那个对象
+- 所以两个名字看到的内容都会变
+
+这就是“为什么我只改了一个变量，另一个变量也变了”的根源。
+
+### 8. cloning：创建另一个独立对象
+为了和 aliasing 形成清楚对照，老师马上给出 cloning 例子：
+
+```python
+cool = ['blue', 'green', 'grey']
+chill = cool[:]
+chill.append('black')
+```
+
+这时：
+
+- `chill` 变了
+- `cool` 不变
+
+因为这里不是两个名字指向同一个对象，而是先创建了一个新对象，再让 `chill` 指向它。
+
+> [!example]
+> aliasing 和 cloning 的区别，表面上只差一个 `[:]`，但语义上是“共享对象”和“复制对象”的分界线。
+
+### 9. 再回头看 `sort()`：为什么它总和 aliasing 一起出问题
+老师接着用排序例子回收前两讲内容：
+
+```python
+sortedwarm = warm.sort()
+sortedcool = sorted(cool)
+```
+
+这两行一起看时，你会同时遇到两个坑：
+
+- `sort()` 是原地修改
+- 它返回 `None`
+
+如果一个列表还有 alias，那么这个原地修改会沿着 alias 一起暴露出来。  
+所以这节课里 `sort()` 再次出现，不只是复习 API，而是在把 mutation、aliasing、return value 三件事绑到一起看。
+
+### 10. lists of lists：顶层对象和内层对象要分开想
+课程随后故意给出嵌套列表，比如：
+
+```python
+warm = ['yellow', 'orange']
+hot = ['red']
+brightcolors = [warm]
+brightcolors.append(hot)
+hot.append('pink')
+```
+
+这里最容易错的地方是没有分层思考：
+
+- 顶层 list 是一个对象
+- 其中每个子 list 也是对象
+
+所以当你修改 `hot` 时，`brightcolors` 里看到的那个子列表也会变，因为它保存的正是 `hot` 这个对象的引用。
+
+这为后面的 shallow copy / deep copy 做了铺垫。
+
+### 11. shallow copy：只复制最外层壳
+老师后半段引入 `copy.copy(old_list)`，并且强调：
+
+- 它会创建一个新的顶层 list
+- 但里面嵌套的子对象仍然共享
+
+所以如果：
+
+- 你在顶层 append 一个新子列表
+- 旧副本可能看不到
+
+但如果：
+
+- 你修改某个共享子列表里的元素
+- 新旧两个结构都可能一起变
+
+课堂这里真正想让你掌握的是“复制到了哪一层”。
+
+### 12. deep copy：连嵌套层级一起断开
+为了解决上面的共享问题，老师再引入：
+
+```python
+copy.deepcopy(old_list)
+```
+
+这意味着：
+
+- 顶层复制
+- 内层也复制
+- 再深一层也继续复制
+
+所以之后你修改原结构里的嵌套元素，深拷贝出来的版本不会一起变。
+
+这部分不要求你死记库函数，而是要求你在看到嵌套结构时立刻问自己：
+
+- 我需要的只是顶层独立吗
+- 还是整个结构都要独立
+
+### 13. 这节课真正教的是“对象图”，不是列表技巧
+Lecture 11 如果只记成“学了 copy / deepcopy / remove / pop”，会低估它的重要性。
+
+这节课实际在训练你把程序状态看成一个对象图：
+
+- 名字指向对象
+- 对象里还可能含有别的对象
+- mutation 是对对象发生，不是对名字发生
+- aliasing 会让多个名字共享一个对象
+
+后面类、继承、复杂数据结构，全都建立在这种对象视角之上。
 
 ## Exercise log
-> [!note] Finger exercise snapshot
-> - Official prompt: Impoement the function that meets the specification beoow.: def remove_and_sort(Lin, k): """ Lin is a list of ints k is an int >= 0 Mutates Lin to remove the first k elements in Lin and then sorts the remaining elements...
-> - What this is really testing: whether you can compress the lecture into one small, high-frequency coding move without needing the slides beside you.
-> - Where to revisit if this feels shaky: go back to the first two Core ideas sections in this note, then rerun the official lecture code once with your own input.
-> - Follow-on practice path: after this finger exercise, the most natural next stop is Recitation 06.
 
-## From lecture to recitation and homework
-> [!abstract] How this lecture shows up in practice
-> - Problem-set connection: this lecture does not have a direct calendar milestone attached, so use it as a consolidation lecture rather than a sprint lecture.
-> - Recitation connection: Recitation 06 is the best place to turn the lecture ideas into shorter solved exercises.
-> - Suggested workflow: read this note once, run the lecture code, solve the smallest official exercise without peeking, then open the linked recitation or problem set materials.
-> - If you can explain the note but still cannot start the homework, the gap is usually not theory but translation: you need one more pass through the worked examples and lecture code.
+> [!example] Finger exercise 11
+> 官方练习是 `remove_and_sort(Lin, k)`：
+> - 原地删除前 `k` 个元素
+> - 再把剩余元素按升序排序
+> - 不返回任何值
+
+这题非常适合放在本讲末尾，因为它把本讲的三个关键词揉在一起了：
+
+- mutation
+- 删除操作
+- 原地排序
+
+官方解法先处理边界情况：
+
+```python
+if len(Lin) <= k:
+    Lin.clear()
+    return
+```
+
+然后再用 `del(Lin[0])` 连续删前面元素，最后 `Lin.sort()`。
+
+这题的价值不只是“会不会删前 k 个元素”，而是你能不能稳定地区分：
+
+- 修改列表本身
+- 返回新列表
+- `sort()` 的副作用
 
 ## Links to follow-up practice
 - Slides: [[MIT 6.100L-slides/mit6_100l_lec11.pdf|Lecture 11 slides]]
@@ -132,18 +324,19 @@ list comprehension 常常是把‘扫描 + 条件 + 构造新序列’压缩成�
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 5.3-5.5)
 
 ## Review checklist
-- [ ] 我能解释 aliasing 为什么常见于可变对象。
-- [ ] 我能判断某个场景是否需要 clone。
-- [ ] 我能说明浅复制对嵌套对象的局限。
-- [ ] 我能比较普通循环构造新 list 与 list comprehension 的优缺点。
-- [ ] 我能自己举出一个 aliasing bug 的例子。
-- [ ] 我能围绕“Aliasing：多个名字共享同一个对象”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能围绕“Cloning：需要独立状态时就显式复制”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能说出并避免这个高频误区：把 `b = a` 当成复制，而不是 aliasing。
-- [ ] 我能说出并避免这个高频误区：需要独立状态时没有 clone，后面一改全跟着变。
-- [ ] 我能不看 slides，只看题面就判断这题主要在考本讲的哪一个知识点。
+- [ ] 我能解释为什么 `L[:]` 在这节课里代表 clone。
+- [ ] 我能区分 `remove`、`del`、`pop` 的适用场景和返回值。
+- [ ] 我能说明为什么一边 `for` 遍历列表一边 `remove` 会漏元素。
+- [ ] 我能解释 `L1_copy = L1` 为什么只是 alias，不是 copy。
+- [ ] 我能画出 aliasing 和 cloning 的简单内存图。
+- [ ] 我能解释 shallow copy 和 deep copy 的差别。
+- [ ] 我能说明嵌套列表里“顶层复制”和“子对象共享”为什么是两回事。
+- [ ] 我能把 `sort()`、`sorted()`、`clear()` 这些原地/非原地操作联系到对象视角上。
+- [ ] 我能解释 finger exercise 11 为什么本质上在考 mutation 风格的 list 操作。
+- [ ] 我能按课堂顺序复述：copy -> remove pitfalls -> aliasing -> cloning -> shallow/deep copy。
 
 > [!warning] Common mistakes
-> - 把 `b = a` 当成复制，而不是 aliasing。
-> - 需要独立状态时没有 clone，后面一改全跟着变。
-> - 为了写得短强行上 comprehension，反而牺牲可读性。
+> - 把 `L1_copy = L1` 当成复制。
+> - 在遍历列表的同时删除这个列表里的元素。
+> - 只记 shallow copy / deep copy 名字，不去想“到底复制到哪一层”。
+> - 看到变量名不同，就误以为对象也一定不同。

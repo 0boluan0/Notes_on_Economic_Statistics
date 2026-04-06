@@ -16,110 +16,218 @@ lecture: 22
 # Lecture 22: Big Oh and Theta
 
 > [!tip] Hint
-> - 我能解释 Big-O 与 Theta 分别表达什么。
-> - 我能说明为什么复杂度关注的是规模趋大时的增长行为。
-> - 我能在简单表达式里找出主导项并忽略低阶项。
-> - 我能把复杂度记号和前一讲的 operation counting 连接起来。
-> - 我能围绕本讲的主轴 “Asymptotic notation 的目标是只保留增长本质” / “Big-O 与 Theta 的语义差别” / “从计数表达式到复杂度结论”，不翻 slides 也把整节课重新讲一遍。
-> - 我能解释 asymptotic notation 为什么要忽略常数和低阶项。
-> - 我能比较 Big-O 与 Theta 的信息含量。
-> - 我能从循环结构看出线性、二次、对数增长。
-> - 我能把本讲最关键的代码模式手写出来，并解释每一步为什么这样写。
+> - 这节课前半段继续 timing，但比上节更系统，用 `perf_counter` 提高精度。
+> - timing 不再只看数字函数，还开始看 list 相关函数，比如求和、查找、diameter。
+> - linear search 和 binary search 会在这讲里被放到一起正式比较。
+> - binary search 快，不是因为写法神秘，而是因为每次都把搜索区间砍半。
+> - `diameter` 和 `all_binary_numbers` 分别被用来制造 quadratic 和 exponential 的直观对比。
+> - 到中后段课程终于正式引入 order of growth，以及 big O / big Theta 语言。
+> - 老师更偏爱 Theta，因为它表达的是 asymptotically tight bound，而不是随便一个上界。
+> - 判断 Theta 时最重要的是：先说清 `n` 代表什么，再抓 dominant term。
+> - 不同变量的式子不能瞎写成 `Theta(n)`，必须说明哪个输入维度在增长。
+> - 听完这节课，你应该能把 timing 直觉过渡成“用增长阶比较程序”的理论语言。
 
-> [!info] Lecture map
-> - Readings: Ch 11
-> - Recommended use order: read the Hint first, reconstruct the lecture from memory, then study the Core ideas, then run the official code, and only after that open the linked exercises.
-> - Main threads in this lecture: Asymptotic notation 的目标是只保留增长本质 / Big-O 与 Theta 的语义差别 / 从计数表达式到复杂度结论
-> - Lecture 21 讲了怎么计数，这一讲给计数结果加上正式的增长记号。
-> - Big-O 强调上界视角，Theta 强调紧致阶；它们都服务于比较算法增长速度。
-> - 这部分是后续搜索、排序、哈希与复杂度分类的统一语言。
+## Lecture flow
 
-## Core ideas
-### Asymptotic notation 的目标是只保留增长本质
-复杂度记号不是忽略细节的偷懒，而是把注意力集中在输入足够大时真正决定趋势的部分。
-- 常数倍和低阶项在规模足够大时影响相对减弱，因此会被省略。
-- 分析重点变成：主导项是什么，它增长得有多快。
-- 这让你能跨实现、跨机器、跨语言比较算法结构。
-- 所以复杂度并不是运行时间本身，而是运行时间如何随输入规模增长。
+### 1. 开场继续 timing，但换成更精细的计时器
+Lecture 22 开头延续上讲，但老师先把技术细节升级成 `time.perf_counter()`。
 
-> [!note] What to internalize
-> - One-sentence takeaway: 复杂度记号不是忽略细节的偷懒，而是把注意力集中在输入足够大时真正决定趋势的部分。
-> - Review anchor: 常数倍和低阶项在规模足够大时影响相对减弱，因此会被省略。
-> - Review anchor: 分析重点变成：主导项是什么，它增长得有多快。
+原因很实际：
 
-从做题角度看，只要题目在考“Asymptotic notation 的目标是只保留增长本质”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：复杂度记号不是忽略细节的偷懒，而是把注意力集中在输入足够大时真正决定趋势的部分。
+- 上讲某些函数太快
+- `time.time()` 分辨率不够
+- `perf_counter()` 更适合测短代码段
 
-### Big-O 与 Theta 的语义差别
-Big-O 常被初学者误当成‘复杂度的唯一答案’，但它本质上只是一个上界表达；Theta 更强调紧致匹配。
-- 如果一个算法是 `Theta(n)`，它当然也是 `O(n^2)`，但后者信息更松、更不精确。
-- 讨论算法时，若能给出 Theta，通常比只给 Big-O 更有信息量。
-- Big-O 仍然很有用，因为它能快速表达‘最多增长到多快’。
-- 关键不是背定义，而是知道不同记号保留了多少信息。
+所以这节课虽然还在 timing，但已经更强调测量质量。
 
-> [!note] What to internalize
-> - One-sentence takeaway: Big-O 常被初学者误当成‘复杂度的唯一答案’，但它本质上只是一个上界表达；Theta 更强调紧致匹配。
-> - Review anchor: 如果一个算法是 `Theta(n)`，它当然也是 `O(n^2)`，但后者信息更松、更不精确。
-> - Review anchor: 讨论算法时，若能给出 Theta，通常比只给 Big-O 更有信息量。
+### 2. 先看简单 numeric 函数：常数 vs 线性
+课堂先用两个函数热身：
 
-从做题角度看，只要题目在考“Big-O 与 Theta 的语义差别”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：Big-O 常被初学者误当成‘复杂度的唯一答案’，但它本质上只是一个上界表达；Theta 更强调紧致匹配。
+- `convert_to_km(m)`：常数时间
+- `compound(invest, interest, n_months)`：随着某个参数变化可能呈线性增长
 
-### 从计数表达式到复杂度结论
-真正的能力不是记住几类常见阶，而是能从循环结构或递推关系出发，把计数转成复杂度。
-- 单层循环常对应线性级别，双重完整嵌套常对应二次级别，但要看边界与范围是否依赖输入规模。
-- 如果某段代码每次都把问题规模减半，你就要想到对数级别。
-- 分析时应先找主导操作，再看它执行次数的增长规律。
-- 这一步把前一讲的直觉正式化了。
+这时老师特别提醒一件事：
 
-> [!note] What to internalize
-> - One-sentence takeaway: 真正的能力不是记住几类常见阶，而是能从循环结构或递推关系出发，把计数转成复杂度。
-> - Review anchor: 单层循环常对应线性级别，双重完整嵌套常对应二次级别，但要看边界与范围是否依赖输入规模。
-> - Review anchor: 如果某段代码每次都把问题规模减半，你就要想到对数级别。
+- 一个函数可能有多个输入
+- 但不是每个输入变化都会影响复杂度
 
-从做题角度看，只要题目在考“从计数表达式到复杂度结论”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：真正的能力不是记住几类常见阶，而是能从循环结构或递推关系出发，把计数转成复杂度。
+例如 `compound` 中，如果增长的是 `n_months`，复杂度分析就和它最相关；  
+如果只是 `invest` 数值变大，循环次数并不会变。
 
-## Code patterns from lecture
-> [!note] What the official code is trying to teach
-> - The official lecture code is worth reading as a notebook of small patterns, not just as a file to run once.
-> - Best workflow: predict output first, then run the code, then rewrite the pattern in your own words or with slightly changed values.
-> - Example: timing a program
-> - define two functions
-> - creates a list [1, 10, 100, ...] to test different input sizes
-> - Example: Report timing and ops/sec for two functions
-> - print time and ops/sec for constant fcn
-> - for N in L_N
-> - When a code pattern feels too easy, change the input, break one line on purpose, and explain why the behavior changes.
+### 3. timing list 函数：输入规模开始从“数值”变成“列表长度”
+随后课堂把输入类型切到 list。
 
-## Worked examples
-> [!example] 找出多项式里的主导项
-> ```python
-> # 3*n**2 + 10*n + 7
-> # asymptotically behaves like n**2
-> ```
-> 当 `n` 很大时，`n**2` 会压过线性项和常数项，因此整体增长阶由它主导。
+例如：
 
-> [!example] 看到问题规模减半就联想到对数
-> ```python
-> count = 0
-> n = 1024
-> while n > 1:
->     n = n // 2
->     count += 1
-> print(count)
-> ```
-> 每轮都把规模砍半，因此迭代次数与 `log n` 同阶。
+```python
+def sum_of(L):
+    total = 0.0
+    for elt in L:
+        total += elt
+```
+
+这里老师明显开始强调：
+
+- `n` 不是元素值本身
+- `n` 是 `len(L)`
+
+这一步很关键，因为复杂度单元最容易卡住的点之一就是：  
+你得先定义“输入规模”。
+
+### 4. linear search vs binary search：同一任务，不同增长阶
+这节课最重要的对比例子之一是查找元素。
+
+老师先给出 brute-force：
+
+```python
+def is_in(L, x):
+    for elt in L:
+        if elt == x:
+            return True
+    return False
+```
+
+然后再给出 binary search：
+
+```python
+def binary_search(L, x):
+    ...
+```
+
+这时课堂真正要你看的不是“代码写法差多少”，而是：
+
+- linear search 每次最坏只排除一个元素
+- binary search 每次都排除一半候选空间
+
+### 5. 为什么 binary search 是 logarithmic
+老师花了不少时间口头画列表，把二分搜索的动作讲成：
+
+- 看中点
+- 决定去左半边还是右半边
+- 再看那一半的中点
+
+所以搜索区间大小大致经历：
+
+- `n`
+- `n/2`
+- `n/4`
+- `n/8`
+
+直到缩到 `1`。
+
+这就是 logarithmic growth 的直觉来源。
+
+> [!note]
+> 当问题规模每一步按比例缩小，而不是按固定常数减少时，复杂度往往会走向 `log n`。
+
+### 6. `diameter(L)`：嵌套循环制造 quadratic growth
+老师随后又拿 `diameter(L)` 这种两两比较点对的函数做对照。
+
+因为：
+
+- 外层遍历点
+- 内层又遍历剩余点
+
+所以总比较次数和 `len(L)^2` 同阶。
+
+这时课堂已经在把几种经典增长阶直觉排开：
+
+- constant
+- linear
+- logarithmic
+- quadratic
+
+### 7. `all_binary_numbers(N)`：指数增长真正变得吓人
+为了让 exponential growth 也变得直观，老师再给出：
+
+- 生成所有 N 位二进制串
+
+这个任务本身就有：
+
+- `2^N` 个输出
+
+所以无论你实现得多漂亮，规模一大都会迅速爆炸。
+
+这一步非常重要，因为它提醒你：
+
+- 有些问题不是“实现写得差”
+- 而是任务本身的输出规模就决定了下界非常大
+
+### 8. 从 timing 转向理论语言：order of growth
+做完这么多 timing 和 counting 之后，课堂终于引出：
+
+- order of growth
+- Big O
+- Big Theta
+
+老师这里要解决的问题是：
+
+- 我们不想只记某台机器上的秒数
+- 我们想比较输入变大时，增长趋势是什么
+
+这就是 order of growth 的作用。
+
+### 9. 为什么课程更偏爱 Theta
+老师明确说更喜欢用 Theta 来描述。
+
+原因是：
+
+- Big O 只给上界
+- 这个上界可能很松
+- Theta 更强调 asymptotically tight bound
+
+也就是说，Theta 不是随便找个长得更快的函数就完事，而是要抓住真正同阶的增长。
+
+### 10. 定义 `n` 代表什么，比写符号更重要
+这节课里老师反复追问：
+
+- 这里的 `n` 到底是什么
+- 是整数参数本身
+- 还是字符串长度
+- 还是列表长度
+- 还是某两个列表中的某一个长度
+
+这是复杂度分析最基础、也最容易被省略的一步。  
+如果 `n` 没定义清楚，`Theta(n)` 这种写法几乎没有意义。
+
+### 11. dominant term：抓增长最快的那一项
+讲完符号意义后，老师进入实际简化。
+
+核心规则是：
+
+- 抓 dominant term
+- 丢掉低阶项
+- 丢掉常数系数
+
+例如：
+
+- `n^2 + log n + 2` -> `Theta(n^2)`
+- `2^n + n log n + n^2` -> `Theta(2^n)`
+
+课堂在这里的目标不是形式化证明，而是建立简化直觉。
+
+### 12. 组合规则：顺序相加、嵌套相乘
+老师还开始把代码结构和 Theta 组合联系起来：
+
+- 顺序执行的代码块，复杂度大致相加，然后取 dominant one
+- 嵌套循环或嵌套成本，复杂度往往相乘
+
+这为下一讲从真实代码直接读复杂度打基础。
 
 ## Exercise log
-> [!warning] No official finger exercise
-> - Calendar explicitly marks this lecture as having no official finger exercise.
-> - Use the review checklist, the lecture code, and the linked recitation / problem set materials as the primary self-test for this lecture.
-> - For this lecture, a good replacement for the missing finger exercise is: hand-trace one representative example from the code, then write a fresh one from memory.
 
-## From lecture to recitation and homework
-> [!abstract] How this lecture shows up in practice
-> - Problem-set connection: this lecture does not have a direct calendar milestone attached, so use it as a consolidation lecture rather than a sprint lecture.
-> - Recitation connection: Recitation 10 is the best place to turn the lecture ideas into shorter solved exercises.
-> - Suggested workflow: read this note once, run the lecture code, solve the smallest official exercise without peeking, then open the linked recitation or problem set materials.
-> - If you can explain the note but still cannot start the homework, the gap is usually not theory but translation: you need one more pass through the worked examples and lecture code.
+> [!example] Finger exercise 22
+> 官方练习是三道“化简成 Theta”：
+> - `n*n + log(n) + 2**a` -> `Theta(n^2)`
+> - `2**n + n*log(n) + n**2` -> `Theta(2^n)`
+> - `f*log(f) + 100000 + 300*a + x*y*z` 在 `n` 这一维下 -> `Theta(1)`
+
+这套题的价值非常高，因为它逼你明确区分：
+
+- 哪个变量才是分析时增长的主变量
+- 哪些项其实对这个主变量来说只是常数
+
+这正是本讲理论部分最容易偷懒、但最不能偷懒的地方。
 
 ## Links to follow-up practice
 - Slides: [[MIT 6.100L-slides/mit6_100l_lec22.pdf|Lecture 22 slides]]
@@ -131,18 +239,19 @@ Big-O 常被初学者误当成‘复杂度的唯一答案’，但它本质上�
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 11)
 
 ## Review checklist
-- [ ] 我能解释 asymptotic notation 为什么要忽略常数和低阶项。
-- [ ] 我能比较 Big-O 与 Theta 的信息含量。
-- [ ] 我能从循环结构看出线性、二次、对数增长。
-- [ ] 我能把 operation counting 结果转成复杂度记号。
-- [ ] 我能判断一个更松的上界和一个紧致阶之间的差别。
-- [ ] 我能围绕“Asymptotic notation 的目标是只保留增长本质”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能围绕“Big-O 与 Theta 的语义差别”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能说出并避免这个高频误区：把 Big-O 当成‘唯一正确答案’，忽略它只是上界。
-- [ ] 我能说出并避免这个高频误区：看复杂度只盯常数和小输入表现，不看增长趋势。
-- [ ] 我能不看 slides，只看题面就判断这题主要在考本讲的哪一个知识点。
+- [ ] 我能解释为什么 `perf_counter` 比普通 timing 更适合本讲。
+- [ ] 我能为多参数函数说明“哪一个参数变化才决定复杂度”。
+- [ ] 我能把 list 函数的输入规模定义成列表长度。
+- [ ] 我能解释 linear search 和 binary search 的增长差异来自哪里。
+- [ ] 我能说明为什么 `diameter` 是 quadratic、`all_binary_numbers` 是 exponential。
+- [ ] 我能解释 order of growth 为什么比单次 timing 更重要。
+- [ ] 我能区分 Big O 和 Big Theta 的直觉差别。
+- [ ] 我能在写 `Theta(...)` 前先说清 `n` 是什么。
+- [ ] 我能做 dominant term simplification。
+- [ ] 我能按课堂顺序复述：better timing -> search comparison -> several growth shapes -> Theta notation。
 
 > [!warning] Common mistakes
-> - 把 Big-O 当成‘唯一正确答案’，忽略它只是上界。
-> - 看复杂度只盯常数和小输入表现，不看增长趋势。
-> - 不会从代码结构回推操作次数。
+> - 没定义清 `n` 就直接写 `Theta(n)`。
+> - 把数值大小和输入规模混为一谈。
+> - 见到 Big O / Theta 就只顾套公式，不回到代码结构。
+> - 化简时把与主变量无关的项也错误保留下来。

@@ -16,114 +16,221 @@ lecture: 21
 # Lecture 21: Timing Programs and Counting Operations
 
 > [!tip] Hint
-> - 我能解释为什么‘程序快不快’不该只靠感觉。
-> - 我能区分 wall-clock timing 与 operation counting 的角色。
-> - 我能说明常数因子、输入规模和增长趋势分别影响什么。
-> - 我能把性能讨论从‘这个程序现在很快’提升到‘规模变大时会怎样’。
-> - 我能围绕本讲的主轴 “Timing 给你经验事实，counting 给你结构解释” / “先识别程序里的主导操作” / “常数因子与增长趋势要分开看”，不翻 slides 也把整节课重新讲一遍。
-> - 我能解释 timing 与 operation counting 分别解决什么问题。
-> - 我能从一段代码里识别主导操作。
-> - 我能说明为什么性能讨论必须带上输入规模。
-> - 我能把本讲最关键的代码模式手写出来，并解释每一步为什么这样写。
+> - 这节课开头先从“程序不仅要对，还要快”切换课程目标，复杂度单元正式开始。
+> - correctness 之前一直是主角，但现在老师要你开始关心 efficiency。
+> - time efficiency 和 space efficiency 往往有 tradeoff，Fibonacci memoization 被拿来做第一例。
+> - 第一种测效率的方法是直接 timing，看看程序在不同输入规模上要多久。
+> - `c_to_f`、`mysum`、`square` 是三类代表：constant、linear、quadratic。
+> - timing 很直观，但会受机器状态、实现细节和小样本误差影响。
+> - 第二种方法是 counting operations，把代码里关键操作一项项数出来。
+> - counting 比 timing 更抽象，但更稳定，也更靠近后面要讲的复杂度理论。
+> - 老师这讲一直在让你比较“输入扩大 10 倍时，时间或操作数大约扩大多少倍”。
+> - 听完这节课，你应该知道为什么“跑起来快不快”不能只靠一次 timing 结果下结论。
 
-> [!info] Lecture map
-> - Readings: Ch 11
-> - Recommended use order: read the Hint first, reconstruct the lecture from memory, then study the Core ideas, then run the official code, and only after that open the linked exercises.
-> - Main threads in this lecture: Timing 给你经验事实，counting 给你结构解释 / 先识别程序里的主导操作 / 常数因子与增长趋势要分开看
-> - 这一讲是复杂度分析的入口：先从可观测的运行时间和可推理的操作计数开始。
-> - 实际时间测量很重要，但它会受机器、实现细节、随机因素影响；因此还需要更抽象的计数模型。
-> - 后面的 Big-O / Theta 都是在这里的基础上把‘增长趋势’说得更形式化。
+## Lecture flow
 
-## Core ideas
-### Timing 给你经验事实，counting 给你结构解释
-如果只计时不分析，你只能知道‘它现在快不快’；如果只分析不计时，你又可能忽略实现细节与常数因素。两者结合才完整。
-- wall-clock timing 直接测程序运行耗时，适合比较真实实现表现。
-- operation counting 关注核心操作发生了多少次，适合抽离机器差异理解算法结构。
-- 当输入规模变化时，真正关键的是操作次数如何增长，而不只是某一次测试耗时。
-- 性能分析的目标不是神秘数学，而是预测程序扩展后的行为。
+### 1. 课程目标从 correctness 转向 efficiency
+Lecture 21 一开始就说明要换挡。
 
-> [!note] What to internalize
-> - One-sentence takeaway: 如果只计时不分析，你只能知道‘它现在快不快’；如果只分析不计时，你又可能忽略实现细节与常数因素。两者结合才完整。
-> - Review anchor: wall-clock timing 直接测程序运行耗时，适合比较真实实现表现。
-> - Review anchor: operation counting 关注核心操作发生了多少次，适合抽离机器差异理解算法结构。
+前面 problem sets 和 quizzes 重点一直是：
 
-从做题角度看，只要题目在考“Timing 给你经验事实，counting 给你结构解释”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：如果只计时不分析，你只能知道‘它现在快不快’；如果只分析不计时，你又可能忽略实现细节与常数因素。两者结合才完整。
+- 程序是否正确
 
-### 先识别程序里的主导操作
-不是所有语句都同等重要。分析复杂度时，你通常只盯住那个随着输入增长最有代表性的核心操作。
-- 例如搜索算法里常关注比较次数，排序里常关注比较或交换次数。
-- 如果一个循环嵌套另一个循环，主导操作往往来自最内层重复部分。
-- 把复杂程序拆成‘有哪些重复结构’之后，计数就会容易很多。
-- 这一步是在为后面的 asymptotic notation 做铺垫。
+但现实里的程序通常还得考虑：
 
-> [!note] What to internalize
-> - One-sentence takeaway: 不是所有语句都同等重要。分析复杂度时，你通常只盯住那个随着输入增长最有代表性的核心操作。
-> - Review anchor: 例如搜索算法里常关注比较次数，排序里常关注比较或交换次数。
-> - Review anchor: 如果一个循环嵌套另一个循环，主导操作往往来自最内层重复部分。
+- 时间上够不够快
+- 空间上占不占资源
 
-从做题角度看，只要题目在考“先识别程序里的主导操作”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：不是所有语句都同等重要。分析复杂度时，你通常只盯住那个随着输入增长最有代表性的核心操作。
+这节课因此正式开启复杂度单元，开始讨论 how efficient our programs are。
 
-### 常数因子与增长趋势要分开看
-小输入时常数和实现细节很显眼，大输入时增长阶往往决定一切。要学会同时看这两个层次。
-- 一个常数更小的二次算法，在很小输入上可能暂时比线性对数算法还快。
-- 但随着规模变大，增长更慢的算法通常会反超。
-- 因此性能讨论不能脱离输入规模范围和应用上下文。
-- 复杂度分析的真正价值是帮助你预测‘未来会不会炸’，而不是只评价当下。
+### 2. 先讲 time vs space tradeoff
+老师先没有直接上 timing，而是先给一个动机：  
+程序效率常常不是单维度的。
 
-> [!note] What to internalize
-> - One-sentence takeaway: 小输入时常数和实现细节很显眼，大输入时增长阶往往决定一切。要学会同时看这两个层次。
-> - Review anchor: 一个常数更小的二次算法，在很小输入上可能暂时比线性对数算法还快。
-> - Review anchor: 但随着规模变大，增长更慢的算法通常会反超。
+最典型例子就是前面见过的 Fibonacci：
 
-从做题角度看，只要题目在考“常数因子与增长趋势要分开看”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：小输入时常数和实现细节很显眼，大输入时增长阶往往决定一切。要学会同时看这两个层次。
+- naive recursion：省空间，但会做海量重复工作
+- memoization：额外占用字典空间，但速度快很多
 
-## Code patterns from lecture
-> [!note] What the official code is trying to teach
-> - The official lecture code is worth reading as a notebook of small patterns, not just as a file to run once.
-> - Best workflow: predict output first, then run the code, then rewrite the pattern in your own words or with slightly changed values.
-> - Example: timing a program
-> - constant fcn
-> - linear fcn -- finds 0+1+2+...+x
-> - quadratic fcn -- finds n*n inefficiently
-> - helper function to show timing
-> - creates a list [1, 10, 100, ...] to test different input sizes
-> - When a code pattern feels too easy, change the input, break one line on purpose, and explain why the behavior changes.
+这让课程一开始就把一个很重要的观念钉住：
 
-## Worked examples
-> [!example] 简单计时实验
-> ```python
-> import time
->
-> start = time.time()
-> total = 0
-> for i in range(1000000):
->     total += i
-> print(time.time() - start)
-> ```
-> 计时能给你经验感觉，但如果不结合结构分析，你很难预测输入规模再翻十倍会发生什么。
+> [!note]
+> 更快和更省内存往往不能同时极致；很多算法是在时间和空间之间做取舍。
 
-> [!example] 显式计数核心操作
-> ```python
-> count = 0
-> for i in range(5):
->     for j in range(3):
->         count += 1
-> print(count)
-> ```
-> 这里的 `count` 可以帮助你把‘嵌套循环执行了多少次核心操作’具象化。
+### 3. 第一条路线：直接 timing 程序
+接着老师进入第一种评估效率的方法：  
+直接计时。
+
+代码里用到 `time.time()`，大致做法是：
+
+1. 记录开始时间
+2. 运行函数
+3. 记录结束时间
+4. 相减得到耗时
+
+这在直觉上最容易理解，因为你直接看到“这段代码花了多久”。
+
+### 4. 用三类函数建立 timing 直觉
+老师故意选了三种非常不同的函数：
+
+- `c_to_f(c)`：常数时间
+- `mysum(x)`：线性时间
+- `square(n)`：双重循环，近似二次时间
+
+然后让输入规模按：
+
+- `1`
+- `10`
+- `100`
+- `1000`
+
+这样逐步扩大，观察 timing 的变化。
+
+课堂此时在训练的不是精准测量，而是量级直觉：
+
+- 常数函数几乎不怎么变
+- 线性函数增长比较平稳
+- 二次函数会很快变得难以忍受
+
+### 5. timing 的长处：真实、直观
+老师并没有一开始就批 timing，而是先承认它的优点。
+
+timing 的好处包括：
+
+- 贴近真实运行环境
+- 不需要先抽象出理论模型
+- 对新手特别直观
+
+如果你只是粗略比较两个实现，timing 常常是第一步。
+
+### 6. timing 的局限：噪声很多，解释不稳定
+但老师很快也指出 timing 的局限。
+
+例如：
+
+- 机器当前负载
+- Python 解释器本身的细节
+- 运行时缓存
+- 样本太小导致的测量误差
+
+都会让 timing 结果抖动。
+
+所以：
+
+- 很小的输入规模上，timing 可能几乎看不出区别
+- 同一函数多跑几次，也可能拿到不同时间
+
+这就引出第二条路线。
+
+### 7. 第二条路线：counting operations
+老师随后转到 counting operations。
+
+思想很简单：
+
+- 不直接问“花了多少秒”
+- 而是问“执行了多少基本操作”
+
+这样做的好处是：
+
+- 更抽象
+- 更稳定
+- 不那么依赖机器和环境噪声
+
+当然代价是你得自己建模“哪些东西算一次操作”。
+
+### 8. 从常数函数开始数：`c_to_f`
+以最简单的 `c_to_f(c)` 为例，老师把几步乘法、除法、加法粗略记成固定个数操作。
+
+于是无论输入 `c` 是多少，操作数都差不多保持不变。
+
+这一点和 timing 对应起来，就形成了第一个复杂度直觉：
+
+- 不是所有函数的运行成本都随输入值本身变化
+
+### 9. 线性例子：`mysum(x)`
+对于：
+
+```python
+def mysum(x):
+    total = 0
+    for i in range(x + 1):
+        total += i
+```
+
+老师数操作时会把：
+
+- 初始化
+- 每轮循环中的赋值、加法、比较
+
+都记进去。
+
+虽然具体常数项可以不同，但核心现象很清楚：
+
+- 输入 `x` 扩大大约 10 倍
+- 操作数也会大约扩大 10 倍
+
+这就是线性增长。
+
+### 10. 二次例子：`square(n)`
+对双重循环的 `square(n)` 来说，情况就明显不同了。
+
+```python
+for i in range(n):
+    for j in range(n):
+        ...
+```
+
+这里老师反复问的是：
+
+- 外层循环跑几次
+- 每次外层里，内层又跑几次
+
+所以总操作量大约和 `n * n` 成正比。
+
+这就是为什么当输入扩大 10 倍时：
+
+- 线性函数可能只慢约 10 倍
+- 二次函数可能慢约 100 倍
+
+### 11. timing 和 counting 的关系
+这节课并不是让你二选一，而是在建立比较框架。
+
+它们的关系可以概括为：
+
+- timing：真实世界表现，直观但 noisy
+- counting：抽象模型，更稳定但需要人为设定
+
+老师希望你意识到：
+
+- 仅靠 timing 看一眼，不够稳
+- 仅靠 operation counting，不够贴近真实机器
+
+后面的复杂度理论，其实是在 counting 的基础上进一步抽象。
+
+### 12. 课程这时还没正式进入 Big Theta，但地基已经搭好了
+Lecture 21 的任务不是正式定义 Big O / Theta。  
+它更像是先让你接受：
+
+- 程序效率可以系统比较
+- 输入规模变化比单次运行结果更重要
+- constant / linear / quadratic 的增长差异是真实会咬人的
+
+这让下节课进入 order of growth 时不会显得凭空抽象。
 
 ## Exercise log
-> [!warning] No official finger exercise
-> - Calendar explicitly marks this lecture as having no official finger exercise.
-> - Use the review checklist, the lecture code, and the linked recitation / problem set materials as the primary self-test for this lecture.
-> - For this lecture, a good replacement for the missing finger exercise is: hand-trace one representative example from the code, then write a fresh one from memory.
 
-## From lecture to recitation and homework
-> [!abstract] How this lecture shows up in practice
-> - Problem-set connection: this lecture does not have a direct calendar milestone attached, so use it as a consolidation lecture rather than a sprint lecture.
-> - Recitation connection: there is no recitation attached to this lecture week in the official calendar.
-> - Suggested workflow: read this note once, run the lecture code, solve the smallest official exercise without peeking, then open the linked recitation or problem set materials.
-> - If you can explain the note but still cannot start the homework, the gap is usually not theory but translation: you need one more pass through the worked examples and lecture code.
+> [!warning] No official finger exercise
+> 这讲官方没有单独的 finger exercise 文件。
+
+如果要按课堂内容做一个最像 finger exercise 的自测，最合适的是自己完成下面两步：
+
+- 选 `c_to_f`、`mysum`、`square` 三个函数，预测输入扩大 10 倍时 timing 和 ops 分别会怎样变化。
+- 不看代码注释，自己为 `mysum` 或 `square` 重做一遍 operation counting。
+
+这两步正好对应本讲的两条主线：
+
+- timing
+- counting
 
 ## Links to follow-up practice
 - Slides: [[MIT 6.100L-slides/mit6_100l_lec21.pdf|Lecture 21 slides]]
@@ -135,18 +242,19 @@ lecture: 21
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 11)
 
 ## Review checklist
-- [ ] 我能解释 timing 与 operation counting 分别解决什么问题。
-- [ ] 我能从一段代码里识别主导操作。
-- [ ] 我能说明为什么性能讨论必须带上输入规模。
-- [ ] 我能比较常数因子和增长趋势的影响。
-- [ ] 我能对一个简单循环程序做粗略计数分析。
-- [ ] 我能围绕“Timing 给你经验事实，counting 给你结构解释”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能围绕“先识别程序里的主导操作”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能说出并避免这个高频误区：只看一次计时结果就下结论，不分析输入规模增长。
-- [ ] 我能说出并避免这个高频误区：把所有语句都平均看待，没有抓住主导操作。
-- [ ] 我能不看 slides，只看题面就判断这题主要在考本讲的哪一个知识点。
+- [ ] 我能解释为什么课程会从 correctness 转向 efficiency。
+- [ ] 我能说明 time efficiency 和 space efficiency 的 tradeoff。
+- [ ] 我能用 Fibonacci memoization 解释“拿空间换时间”。
+- [ ] 我能说出 timing 程序的基本步骤。
+- [ ] 我能比较 `c_to_f`、`mysum`、`square` 在 timing 上的大致增长差异。
+- [ ] 我能解释 timing 为什么会 noisy。
+- [ ] 我能说明 counting operations 的基本思想。
+- [ ] 我能手动数出一个简单循环函数的大致操作数表达式。
+- [ ] 我能解释为什么输入扩大 10 倍时，线性和二次增长会表现得很不一样。
+- [ ] 我能按课堂顺序复述：motivation -> timing -> limitations -> counting。
 
 > [!warning] Common mistakes
-> - 只看一次计时结果就下结论，不分析输入规模增长。
-> - 把所有语句都平均看待，没有抓住主导操作。
-> - 把常数因子与增长阶混成一回事。
+> - 用一次 timing 结果就断定两个程序谁更优。
+> - 数操作时把所有常数差异都当成最重要部分。
+> - 只看输入值本身，而不看“输入规模”到底该怎么定义。
+> - 把时间快慢和空间占用想成永远同步改进。

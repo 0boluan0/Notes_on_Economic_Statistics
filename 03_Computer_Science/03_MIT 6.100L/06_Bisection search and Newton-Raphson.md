@@ -2,7 +2,7 @@
 aliases:
   - MIT 6.100L Lecture 06
   - 6.100L L06
-  - Bisection Search and Newton-Raphson
+  - Bisection search and Newton-Raphson
 tags:
   - computer-science
   - python
@@ -13,123 +13,295 @@ course: MIT 6.100L Introduction to CS and Programming Using Python
 lecture: 06
 ---
 
-# Lecture 06: Bisection Search and Newton-Raphson
+# Lecture 06: Bisection search and Newton-Raphson
 
 > [!tip] Hint
-> - 我能解释 bisection search 为何要求答案被夹在一个区间里。
-> - 我能说明 low / high / guess 三者在迭代中怎样收缩不确定性。
-> - 我能说出 Newton-Raphson 的更新思想：利用局部线性近似快速修正 guess。
-> - 我能比较 fixed increment、bisection、Newton-Raphson 的速度与前提差异。
-> - 我能围绕本讲的主轴 “Bisection search：每次砍掉一半不确定区间” / “Newton-Raphson：用局部斜率决定修正步长” / “选择哪种方法，取决于你知道多少结构”，不翻 slides 也把整节课重新讲一遍。
-> - 我能说明 bisection search 成立的核心前提。
-> - 我能解释 low / high / guess 在每轮迭代中的更新规则。
-> - 我能口头讲出 Newton-Raphson 的更新思想，而不是只背公式。
-> - 我能把本讲最关键的代码模式手写出来，并解释每一步为什么这样写。
+> - 这节课一开始不是讲新算法，而是先回顾上节 approximation method 为什么正确却太慢。
+> - 老师用 “448 页课本找藏着的 100 美元” 的游戏把 bisection search 的直觉先种下去，再讲平方根代码。
+> - 二分搜索的关键不是“取中点”四个字，而是问题必须有内在顺序，且答案始终被当前区间包住。
+> - low/high/guess 三个变量不是并列的：low 和 high 描述不确定区间，guess 只是当前试探点。
+> - `x < 1` 时区间不能再写成 `[0, x]`，这是课堂中专门拎出来修补的边界。
+> - cube root 的 you try it 是要你把 “平方根上的二分” 迁移到另一种单调函数上。
+> - Newton-Raphson 不是凭空降临的新魔法，而是“利用局部斜率决定修正步长”的第三种近似策略。
+> - 本讲一直在比较三件事：fixed increment、bisection、Newton，不只是背它们各自代码。
+> - bisection 的速度来自每次砍半区间，Newton 的速度来自利用导数信息做更聪明的跳跃。
+> - 这节课的核心不是把公式背熟，而是理解“如何用问题结构换速度”。
 
-> [!info] Lecture map
-> - Readings: Ch 3.4-3.5
-> - Recommended use order: read the Hint first, reconstruct the lecture from memory, then study the Core ideas, then run the official code, and only after that open the linked exercises.
-> - Main threads in this lecture: Bisection search：每次砍掉一半不确定区间 / Newton-Raphson：用局部斜率决定修正步长 / 选择哪种方法，取决于你知道多少结构
-> - 这一讲是对 Lecture 5 的数值近似升级：不再用笨办法一点点挪，而是用问题结构加速搜索。
-> - Bisection search 的关键词是‘有序区间’，Newton-Raphson 的关键词是‘用导数信息快速修正’。
-> - 这两种方法不仅是求根技巧，更是在训练你如何利用额外结构减少搜索空间。
+## Lecture flow
 
-## Core ideas
-### Bisection search：每次砍掉一半不确定区间
-当你确定答案在 `[low, high]` 之间，而且函数在这个区间里有稳定的顺序关系时，就可以每次拿中点试探。
-- 当前 guess 取 `(low + high) / 2`；如果 guess 太小，就把 low 提到 guess，否则把 high 压到 guess。
-- 算法真正维护的是 invariant：真正答案始终还在 `[low, high]` 内。
-- 如果输入小于 `1`，区间选择要更小心，例如平方根问题应把区间设为 `[x, 1]` 而不是 `[0, x]`。
-- 与固定步长相比，bisection 用更少猜测次数换来同等级别的精度。
+### 1. 开场先回顾：approximation method 为什么不够好
+Lecture 6 的出发点非常直接：  
+上节课我们已经有了 approximation method，它是对的，但它太慢了。
 
-> [!note] What to internalize
-> - One-sentence takeaway: 当你确定答案在 `[low, high]` 之间，而且函数在这个区间里有稳定的顺序关系时，就可以每次拿中点试探。
-> - Review anchor: 当前 guess 取 `(low + high) / 2`；如果 guess 太小，就把 low 提到 guess，否则把 high 压到 guess。
-> - Review anchor: 算法真正维护的是 invariant：真正答案始终还在 `[low, high]` 内。
+老师先回顾上一讲的平方根近似代码：
 
-从做题角度看，只要题目在考“Bisection search：每次砍掉一半不确定区间”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：当你确定答案在 `[low, high]` 之间，而且函数在这个区间里有稳定的顺序关系时，就可以每次拿中点试探。
+```python
+while abs(guess**2 - x) >= epsilon and guess**2 <= x:
+    guess += increment
+```
 
-### Newton-Raphson：用局部斜率决定修正步长
-Newton-Raphson 的直觉是：如果你知道当前点附近函数变化得多快，就能更聪明地迈下一步，而不是盲目折半。
-- 对平方根问题，更新式可以写成 `guess = guess - ((guess**2 - k) / (2*guess))`。
-- 它通常收敛很快，但依赖一个合理初值，也更依赖问题本身的可微结构。
-- 和 bisection 不同，Newton 不一定始终保留一个安全区间，所以你更需要关注发散或异常情况。
-- 本质上它是在用切线代替曲线，用局部线性模型快速逼近真正的根。
+这个方法的问题不是会不会成功，而是：
 
-> [!note] What to internalize
-> - One-sentence takeaway: Newton-Raphson 的直觉是：如果你知道当前点附近函数变化得多快，就能更聪明地迈下一步，而不是盲目折半。
-> - Review anchor: 对平方根问题，更新式可以写成 `guess = guess - ((guess**2 - k) / (2*guess))`。
-> - Review anchor: 它通常收敛很快，但依赖一个合理初值，也更依赖问题本身的可微结构。
+- 走得太小步
+- 每次只前进一个固定 increment
+- 对大输入时效率极差
 
-从做题角度看，只要题目在考“Newton-Raphson：用局部斜率决定修正步长”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：Newton-Raphson 的直觉是：如果你知道当前点附近函数变化得多快，就能更聪明地迈下一步，而不是盲目折半。
+所以这一讲的问题变成：
 
-### 选择哪种方法，取决于你知道多少结构
-算法不是越高级越好，而是要看问题条件是否支持它的前提。
-- 如果只知道答案在某个单调区间里，bisection 往往稳健、简单且容易证明正确。
-- 如果你还能拿到导数或类似的局部变化信息，Newton-Raphson 常常更快。
-- 如果问题几乎没有结构可用，才会退回固定步长或枚举。
-- 写数值算法时，速度、正确性、稳健性通常是三角关系，不可能只优化其中一个维度而不付代价。
+> 我们能不能保留“逐步逼近”这件事，  
+> 但让每一步走得更聪明？
 
-> [!note] What to internalize
-> - One-sentence takeaway: 算法不是越高级越好，而是要看问题条件是否支持它的前提。
-> - Review anchor: 如果只知道答案在某个单调区间里，bisection 往往稳健、简单且容易证明正确。
-> - Review anchor: 如果你还能拿到导数或类似的局部变化信息，Newton-Raphson 常常更快。
+### 2. 先用“猜书页上的 100 美元”建立 bisection 的直觉
+在正式讲代码之前，老师先用了一个非常经典的猜页码游戏。
 
-从做题角度看，只要题目在考“选择哪种方法，取决于你知道多少结构”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：算法不是越高级越好，而是要看问题条件是否支持它的前提。
+设定是：
 
-## Code patterns from lecture
-> [!note] What the official code is trying to teach
-> - The official lecture code is worth reading as a notebook of small patterns, not just as a file to run once.
-> - Best workflow: predict output first, then run the code, then rewrite the pattern in your own words or with slightly changed values.
-> - Recall the approximation method code to find the square root
-> - x = 54321
-> - epsilon = 0.01
-> - num_guesses = 0
-> - guess = 0.0
-> - increment = 0.0001 # try it with 0.00001
-> - When a code pattern feels too easy, change the input, break one line on purpose, and explain why the behavior changes.
+- 一本 448 页的书
+- 某一页夹着 100 美元
+- 如果只允许在 8 次以内猜中页码就赢
 
-## Worked examples
-> [!example] 用 bisection 近似平方根
-> ```python
-> x = 0.5
-> epsilon = 0.01
-> low, high = x, 1.0
-> guess = (low + high) / 2
-> while abs(guess**2 - x) >= epsilon:
->     if guess**2 < x:
->         low = guess
->     else:
->         high = guess
->     guess = (low + high) / 2
-> print(guess)
-> ```
-> 这个例子说明 bisection 的关键不在公式，而在于每轮都让有效区间减半，同时保证答案没有丢出区间。
+如果你每次只得到“对/错”，这个游戏并不友好；  
+但如果你每次都能知道“猜大了还是猜小了”，事情就完全变了。
 
-> [!example] Newton-Raphson 更新平方根 guess
-> ```python
-> k = 24
-> epsilon = 0.01
-> guess = k / 2
-> while abs(guess**2 - k) >= epsilon:
->     guess = guess - ((guess**2 - k) / (2 * guess))
-> print(guess)
-> ```
-> Newton 的每一步都更激进，因为它利用了局部斜率信息；这也是它通常更快的原因。
+因为这时最自然的策略就是：
+
+- 每次猜当前区间的 midpoint
+- 根据“太大/太小”决定保留哪一半
+
+老师用这个例子不是为了讲游戏，而是为了让你先在离散场景里感受到：
+
+> [!note]
+> bisection search 的威力来自“每一步都能排除一半候选空间”。
+
+### 3. bisection search 的适用前提：问题必须自带顺序
+老师随后把直觉收成正式条件：
+
+- 问题要有 inherent order
+- 你要知道答案落在某个 interval 里
+- midpoint 左右两边必须能根据反馈排除掉一半
+
+这几点缺一不可。
+
+如果没有顺序，根本谈不上 “左半边 / 右半边”；  
+如果不知道答案一开始在哪个区间，也没法安全地半分。
+
+所以 bisection 不是一个可以胡乱套用的模板，而是一种依赖问题结构的搜索策略。
+
+### 4. 从 approximation 的“线性前进”切换到 bisection 的“区间收缩”
+讲完动机后，老师把平方根问题重新画成区间。
+
+设我们要找 `sqrt(x)`，并且先假设 `x >= 1`。  
+那么答案一定落在区间：
+
+- `low = 0`
+- `high = x`
+
+然后我们取中点：
+
+```python
+guess = (high + low) / 2
+```
+
+此时有三种情况：
+
+- `guess**2` 已经足够接近 `x`
+- `guess**2 < x`，说明 guess 偏小，应该抬高下界
+- `guess**2 > x`，说明 guess 偏大，应该压低上界
+
+所以 unlike fixed increment：
+
+- 我们不再机械向前加一个小步长
+- 我们改成重设搜索区间
+
+### 5. square root 上的 bisection 代码：每一轮都维护不变量
+对应代码大致是：
+
+```python
+x = 54321
+epsilon = 0.01
+low = 0.0
+high = x
+guess = (high + low) / 2
+
+while abs(guess**2 - x) >= epsilon:
+    if guess**2 < x:
+        low = guess
+    else:
+        high = guess
+    guess = (high + low) / 2.0
+```
+
+这段代码的真正逻辑不是 if/else，而是它一直维护一个关键不变量：
+
+> [!note]
+> 每一轮结束后，真正答案仍然被包在 `[low, high]` 这个区间里。
+
+如果这个不变量没守住，二分搜索就失去意义了。
+
+所以你在读这段程序时，不能只盯着 “更新了哪个变量”，而要盯：
+
+- 为什么更新后的新区间仍然合法？
+
+### 6. 为什么它比 approximation 快：不是常数更好，而是增长方式变了
+老师在讲义里明确对比了两种搜索：
+
+- exhaustive / approximation 风格：每次只缩掉一点点
+- bisection：每次直接砍掉一半
+
+这意味着 candidate space 的大小变化完全不同：
+
+- 线性式减少：`N -> N-1`
+- 对数式减少：`N -> N/2 -> N/4 -> N/8 ...`
+
+哪怕你还没有正式学复杂度记号，此时也应该先形成直觉：
+
+- 不是所有“逐步逼近”都一样快
+- 关键看每一步到底缩掉了多少不确定性
+
+### 7. 边界修补：`x < 1` 时，区间不能再设成 `[0, x]`
+老师随后专门做了一个 you try it：  
+如果 `x = 0.5`，那 low 和 high 应该怎么设？
+
+这一步很关键，因为它说明：
+
+- bisection 的框架没变
+- 但初始区间必须真的包住答案
+
+对平方根来说：
+
+- 如果 `x >= 1`，答案在 `[1, x]` 或 `[0, x]` 都可描述
+- 如果 `0 < x < 1`，平方根其实比 `x` 大，而不是更小
+
+所以更完整的版本写成：
+
+```python
+if x >= 1:
+    low = 1.0
+    high = x
+else:
+    low = x
+    high = 1.0
+```
+
+> [!warning]
+> 很多二分搜索 bug 都不是出在循环体，而是出在初始区间压根没把答案包进去。
+
+### 8. cube root you try it：把同一搜索结构迁移到另一种单调函数
+讲完 square root 后，老师立刻让大家写 cube root 版本：
+
+```python
+cube = 27
+epsilon = 0.01
+low = 0
+high = cube
+guess = (high + low) / 2.0
+while abs(guess**3 - cube) >= epsilon:
+    if guess**3 < cube:
+        low = guess
+    else:
+        high = guess
+    guess = (high + low) / 2.0
+```
+
+这一步的意义很明确：  
+老师要你意识到 bisection 不是“平方根专属模板”，而是依赖以下结构：
+
+- 有有序区间
+- 有单调关系
+- 中点比较能告诉你保留哪一半
+
+只要这些结构还在，目标函数可以换。
+
+### 9. 再进一步：对负 cube 也能做，但要先处理 sign
+老师随后又展示了 all-cubes 版本，包括 negative cube。
+
+做法和前面整数 cube root 类似：
+
+- 先记下原数是否为负
+- 对绝对值做搜索
+- 最后再把结果符号改回来
+
+这段仍然是在训练同一个习惯：
+
+- 算法主骨架可以保留
+- 输入预处理和结果后处理单独写
+
+### 10. Newton-Raphson：第三种逼近方式，不再靠区间，而靠局部导数
+讲到最后一部分，老师引入 Newton-Raphson。
+
+这时课堂的语气其实已经不是“再学一个公式”，而是：
+
+> 我们已经见过两种方法了，  
+> 现在来看一种更 aggressively smart 的方法。
+
+对于平方根问题，Newton 更新大致写成：
+
+```python
+guess = guess - (((guess**2) - k) / (2 * guess))
+```
+
+老师没有把重点放在推导证明，而是强调它的思路：
+
+- 你当前 guess 附近，函数有局部斜率
+- 这个斜率能告诉你，应该修正多少
+- 所以下一步不再是固定小步，也不再是区间中点
+- 而是根据局部信息跳到一个更有希望的位置
+
+### 11. Newton 为什么常常更快，但也更依赖函数结构
+课堂里这一部分虽然简短，但你最好在笔记里明确记下来：
+
+- approximation method：最笨，但很直观
+- bisection：利用 order 和 interval，每次砍半
+- Newton：利用 derivative 信息，通常更快
+
+它们的差别不是只在代码长短，而在于每一步使用了多少问题结构：
+
+- fixed increment：几乎不用结构
+- bisection：用顺序和单调
+- Newton：再进一步用局部斜率
+
+所以速度提升的本质，是你愿意并且能够利用更多信息。
+
+### 12. 本讲真正的收尾：算法不是越神奇越好，而是越贴合问题结构越好
+Lecture 6 到最后，其实是在帮你重建一个更成熟的算法直觉：
+
+- 同一个数值问题可以有多种算法
+- 快慢差别很大
+- 差别来自你用了什么结构信息
+
+从现在开始，看到一个问题时，除了问 “能不能做”，你也应该开始问：
+
+- 它有没有 order？
+- 有没有 natural interval？
+- 有没有 derivative 或其他局部信息？
+- 我能不能别再傻乎乎一个小步一个小步试？
 
 ## Exercise log
-> [!note] Finger exercise snapshot
-> - Official prompt: Assume you are given an integer 0 <= N <= 1000. Write a piece of Python code that uses bisection search to guess N. he code prints two oines: count: with how many guesses it took to find N, and answer: with the vaoue of...
-> - What this is really testing: whether you can compress the lecture into one small, high-frequency coding move without needing the slides beside you.
-> - Where to revisit if this feels shaky: go back to the first two Core ideas sections in this note, then rerun the official lecture code once with your own input.
-> - Follow-on practice path: after this finger exercise, the most natural next stop is Recitation 03.
-
-## From lecture to recitation and homework
-> [!abstract] How this lecture shows up in practice
-> - Problem-set connection: this lecture does not have a direct calendar milestone attached, so use it as a consolidation lecture rather than a sprint lecture.
-> - Recitation connection: Recitation 03 is the best place to turn the lecture ideas into shorter solved exercises.
-> - Suggested workflow: read this note once, run the lecture code, solve the smallest official exercise without peeking, then open the linked recitation or problem set materials.
-> - If you can explain the note but still cannot start the homework, the gap is usually not theory but translation: you need one more pass through the worked examples and lecture code.
+> [!example] Finger exercise 06
+> 官方题目要求：在 `0 <= N <= 1000` 的前提下，用 bisection search 猜出 `N`，并打印猜了多少次和最终答案。
+>
+> ```python
+> low = 0
+> high = 1001
+> guess = (high + low) // 2
+> count = 1
+> while guess != N:
+>     if guess < N:
+>         low = guess
+>     elif guess > N:
+>         high = guess
+>     guess = (high + low) // 2
+>     count += 1
+> print("count:", count)
+> print("answer:", guess)
+> ```
+>
+> 这题非常好，因为它把 bisection 的骨架抽得更干净了：
+> - 没有平方和立方，只有 ordered interval
+> - 没有 epsilon，直接是精确整数答案
+> - 但 low / high / midpoint / shrink-half 的结构完全一样
+>
+> 如果你能把这题做顺，说明你已经抓住的是搜索结构，而不是某个具体数学公式。
 
 ## Links to follow-up practice
 - Slides: [[MIT 6.100L-slides/mit6_100l_lec06.pdf|Lecture 06 slides]]
@@ -141,16 +313,16 @@ Newton-Raphson 的直觉是：如果你知道当前点附近函数变化得多�
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 3.4-3.5)
 
 ## Review checklist
-- [ ] 我能说明 bisection search 成立的核心前提。
-- [ ] 我能解释 low / high / guess 在每轮迭代中的更新规则。
-- [ ] 我能口头讲出 Newton-Raphson 的更新思想，而不是只背公式。
-- [ ] 我能比较 fixed increment、bisection、Newton-Raphson 的优缺点。
-- [ ] 我能处理输入小于 1 时平方根区间的特殊情况。
-- [ ] 我能围绕“Bisection search：每次砍掉一半不确定区间”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能围绕“Newton-Raphson：用局部斜率决定修正步长”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能说出并避免这个高频误区：没有保证真实答案一开始就在 `[low, high]` 区间内。
-- [ ] 我能说出并避免这个高频误区：把 bisection 机械套用到不满足单调/有序结构的问题上。
-- [ ] 我能不看 slides，只看题面就判断这题主要在考本讲的哪一个知识点。
+- [ ] 我能解释为什么 approximation method 虽然正确却常常太慢。
+- [ ] 我能复述“猜课本页码”例子为什么会自然导向 midpoint strategy。
+- [ ] 我能说清楚 bisection search 的适用前提，而不是只背代码模板。
+- [ ] 我能解释 low、high、guess 在每一轮中各自承担什么角色。
+- [ ] 我能说明为什么更新 low 或 high 后，答案仍然被包在区间里。
+- [ ] 我能处理 `x < 1` 时平方根区间的特殊情况。
+- [ ] 我能把 bisection 从 square root 迁移到 cube root。
+- [ ] 我能用自己的话解释 Newton-Raphson 的更新思想，而不是只背公式。
+- [ ] 我能比较 fixed increment、bisection、Newton-Raphson 三者使用了哪些结构信息。
+- [ ] 我能解释为什么“如何利用问题结构”决定了算法快慢。
 
 > [!warning] Common mistakes
 > - 没有保证真实答案一开始就在 `[low, high]` 区间内。

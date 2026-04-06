@@ -16,115 +16,282 @@ lecture: 08
 # Lecture 08: Functions as Objects
 
 > [!tip] Hint
-> - 我能说明函数为什么也是对象，因此可以被赋值、传参、返回。
-> - 我能解释 scope 与 environment 如何影响变量查找。
-> - 我能区分调用函数、把函数本身当值传递、以及函数返回值三件事。
-> - 我能看懂一个 higher-order function 在做什么，而不是被括号迷惑。
-> - 我能围绕本讲的主轴 “Functions are first-class objects” / “Scope 与 environment：名字到底去哪里找” / “Higher-order thinking：把行为作为参数”，不翻 slides 也把整节课重新讲一遍。
-> - 我能解释为什么函数在 Python 中也是对象。
-> - 我能说清楚一次函数调用会创建什么新的 environment。
-> - 我能区分‘传函数’与‘传函数调用结果’。
-> - 我能把本讲最关键的代码模式手写出来，并解释每一步为什么这样写。
+> - 这节课先回顾上节函数语法，但立刻把重点移到“函数调用之后到底返回了什么”。
+> - `return` 被老师讲得很具体：它会立刻终止函数执行，并把一个值传回调用点。
+> - 即使你没写 `return`，函数也不是“不返回”，而是隐式返回 `None`。
+> - `print` 是给人看的，`return` 是给程序后续步骤用的，这里开始被正式拆开。
+> - `is_triangular` 的 buggy 代码在训练的不是三角数，而是“什么时候该 return，什么时候只是 print”。
+> - 课堂把上节的 bisection 包成 `bisection_root`，是在示范如何把一整段算法变成一个函数对象。
+> - scope 例子不是枝节，而是在说明局部变量、外层变量、读与改为什么不同。
+> - 真正的新东西是：函数和 int、str 一样，也是 object，所以可以作为参数传给别的函数。
+> - `calc(op, x, y)`、`apply(criteria, n)` 这些例子在为后面的 lambda、高阶函数和 testing 做准备。
+> - 听完这节课，你应该能解释“函数为什么能当参数”而不只是背一句“Python 万物皆对象”。
 
-> [!info] Lecture map
-> - Readings: Ch 4.3-4.6
-> - Recommended use order: read the Hint first, reconstruct the lecture from memory, then study the Core ideas, then run the official code, and only after that open the linked exercises.
-> - Main threads in this lecture: Functions are first-class objects / Scope 与 environment：名字到底去哪里找 / Higher-order thinking：把行为作为参数
-> - 这一讲把函数从‘程序里的一个段落’升级成‘可以像其他值一样被操作的对象’。
-> - 理解 environment 和 scope，是理解函数调用、局部变量、后续递归与类方法的关键。
-> - 函数一旦是一等公民，程序就可以把行为本身当成数据来组织。
+## Lecture flow
 
-## Core ideas
-### Functions are first-class objects
-在 Python 里，函数不是语法附属品，而是可以绑定到名字、放进数据结构、作为参数传来传去的对象。
-- 写 `f = abs` 是把函数对象绑定给新名字；写 `f = abs()` 则是先调用再绑定返回值，这两者完全不同。
-- 因为函数是对象，你可以把‘选哪种行为’也变成程序运行时的决定。
-- 这让代码更通用：同一个框架可以接受不同函数作为策略输入。
-- 一旦把函数当对象看，很多“奇怪的括号”其实只是对象与调用的区别。
+### 1. 开场先回顾函数，但重点放在“函数调用的结果”
+这节课一开始确实回顾了上节的函数语法，不过老师的重心已经变了。
 
-> [!note] What to internalize
-> - One-sentence takeaway: 在 Python 里，函数不是语法附属品，而是可以绑定到名字、放进数据结构、作为参数传来传去的对象。
-> - Review anchor: 写 `f = abs` 是把函数对象绑定给新名字；写 `f = abs()` 则是先调用再绑定返回值，这两者完全不同。
-> - Review anchor: 因为函数是对象，你可以把‘选哪种行为’也变成程序运行时的决定。
+上节课重点是：
 
-从做题角度看，只要题目在考“Functions are first-class objects”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：在 Python 里，函数不是语法附属品，而是可以绑定到名字、放进数据结构、作为参数传来传去的对象。
+- 为什么要 decomposition
+- 函数怎么定义
+- docstring 是什么
 
-### Scope 与 environment：名字到底去哪里找
-函数调用会创建新的 local environment。名字查找不是随便发生的，而是按作用域规则逐层寻找。
-- 函数内部定义的局部变量默认只在本次调用有效，调用结束后环境就消失。
-- 如果局部作用域里没有某个名字，Python 才会继续往外层找。
-- 理解 scope 能帮助你解释‘为什么这个变量在这里能用、在那里报错’。
-- 写函数时要尽量减少对外部可变状态的隐式依赖，否则程序会难以推理。
+这节课开始把注意力放到函数运行时：
 
-> [!note] What to internalize
-> - One-sentence takeaway: 函数调用会创建新的 local environment。名字查找不是随便发生的，而是按作用域规则逐层寻找。
-> - Review anchor: 函数内部定义的局部变量默认只在本次调用有效，调用结束后环境就消失。
-> - Review anchor: 如果局部作用域里没有某个名字，Python 才会继续往外层找。
+- 调用一个函数时到底发生了什么
+- 它返回什么
+- 这个返回值会怎样进入后续计算
 
-从做题角度看，只要题目在考“Scope 与 environment：名字到底去哪里找”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：函数调用会创建新的 local environment。名字查找不是随便发生的，而是按作用域规则逐层寻找。
+所以 Lecture 8 不是单纯继续讲函数语法，而是在把“函数是程序部件”推进成“函数是可以被传递和操控的对象”。
 
-### Higher-order thinking：把行为作为参数
-函数对象最有价值的地方，是允许你把‘要做什么操作’抽象成参数，而不是写死在函数体里。
-- 如果一个框架只是‘对数据做某种处理’，那么那种处理方式就很适合抽象成函数参数。
-- 这会让代码从‘只会做一种事’变成‘在同一框架下做一类事’。
-- 学习 higher-order function 的关键不是炫技，而是理解抽象层次提高后，重复代码会变少。
-- 后面的 `lambda`、排序 key、map/filter 风格都属于这一类思想。
+### 2. `is_even_with_return` vs `is_even_without_return`
+老师第一个正式对比的例子非常直接：  
+两个几乎一样的函数，唯一差别是有没有 `return`。
 
-> [!note] What to internalize
-> - One-sentence takeaway: 函数对象最有价值的地方，是允许你把‘要做什么操作’抽象成参数，而不是写死在函数体里。
-> - Review anchor: 如果一个框架只是‘对数据做某种处理’，那么那种处理方式就很适合抽象成函数参数。
-> - Review anchor: 这会让代码从‘只会做一种事’变成‘在同一框架下做一类事’。
+```python
+def is_even_with_return(i):
+    print('with return')
+    remainder = i % 2
+    return remainder == 0
 
-从做题角度看，只要题目在考“Higher-order thinking：把行为作为参数”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：函数对象最有价值的地方，是允许你把‘要做什么操作’抽象成参数，而不是写死在函数体里。
+def is_even_without_return(i):
+    print('without return')
+    remainder = i % 2
+    has_rem = (remainder == 0)
+    print(has_rem)
+```
 
-## Code patterns from lecture
-> [!note] What the official code is trying to teach
-> - The official lecture code is worth reading as a notebook of small patterns, not just as a file to run once.
-> - Best workflow: predict output first, then run the code, then rewrite the pattern in your own words or with slightly changed values.
-> - Example: combinations of print and return
-> - is_even_with_return(3) # -> False
-> - print(is_even_with_return(3)) # -> print(False)
-> - return None
-> - is_even_without_return(3) # -> None
-> - print(is_even_without_return(3)) # -> print(None)
-> - When a code pattern feels too easy, change the input, break one line on purpose, and explain why the behavior changes.
+课堂在这里强调了两个判断：
 
-## Worked examples
-> [!example] 把函数绑定给变量
-> ```python
-> def square(x):
->     return x * x
->
-> f = square
-> print(f(5))
-> ```
-> 这里 `f` 绑定的是函数对象本身，所以后面 `f(5)` 与 `square(5)` 完全等价。
+- 写了 `return`，函数调用会被替换成那个返回值
+- 没写 `return`，函数会隐式返回 `None`
 
-> [!example] 把函数当参数传递
-> ```python
-> def apply_twice(fn, x):
->     return fn(fn(x))
->
-> def add_one(y):
->     return y + 1
->
-> print(apply_twice(add_one, 3))
-> ```
-> 这个例子体现 higher-order function 的核心：框架是 `apply_twice`，具体行为由传入的函数决定。
+这就是为什么：
+
+```python
+print(is_even_with_return(3))
+print(is_even_without_return(3))
+```
+
+打印出来的行为完全不同。
+
+> [!note]
+> Python 中“没有显式 return”不等于“没有返回值”，而是“返回 `None`”。
+
+### 3. `print` 和 `return` 在程序里服务不同对象
+老师接着把这个差异讲得更彻底。
+
+- `print(...)` 是副作用，目的是把东西显示到终端
+- `return ...` 是把值交给调用者
+
+所以如果你写：
+
+```python
+def mult(x, y):
+    print(x * y)
+```
+
+那它确实会把乘积显示出来，但它**没有把这个值交给别的代码**。  
+一旦你把它嵌进更大的表达式，就会出问题，因为函数调用的结果其实是 `None`。
+
+这时课堂里的核心转折是：
+
+> [!warning]
+> 初学者最容易犯的错之一，是把“屏幕上看到了结果”误当成“程序里真的得到了这个值”。
+
+### 4. `is_triangular` 的 bug：错误不在数学，而在控制流
+接下来的 you-try-it 是 `is_triangular(n)`。
+
+表面上它是在判断一个数是不是 triangular number，  
+但这道题课堂真正想训练的是函数控制流。
+
+原始 buggy 版本的问题是：
+
+- 在循环里找到答案时只是 `print(True)`
+- 循环结束后无论如何又 `print(False)`
+- 它没有正确地利用 `return` 来结束函数
+
+所以修复这类 bug 的关键不是“再多写几个 if”，而是想清楚：
+
+- 什么时候已经足够确定答案
+- 该不该立刻终止函数
+- 结果应不应该返回而不是打印
+
+### 5. 把旧算法封装成函数：`bisection_root`
+接着老师把前几讲已经学过的二分平方根包装成函数：
+
+```python
+def bisection_root(x):
+    epsilon = 0.01
+    low = 0
+    high = x
+    ans = (high + low) / 2.0
+    while abs(ans**2 - x) >= epsilon:
+        if ans**2 < x:
+            low = ans
+        else:
+            high = ans
+        ans = (high + low) / 2.0
+    return ans
+```
+
+这个例子很重要，因为它第一次把一整段算法变成可复用部件。  
+课堂这里其实在说：
+
+- 之前你会写算法
+- 现在你要学会把算法封成函数
+- 这样别的函数才能直接调用它
+
+后面 `count_nums_with_sqrt_close_to` 这种题就是建立在这一步上的。
+
+### 6. 一个函数可以调用另一个函数，于是程序开始真正组合起来
+一旦 `bisection_root` 被封好，后面的函数就可以站在更高层去写。
+
+例如：
+
+- 我不再关心二分法内部怎么收缩区间
+- 我只把它当成“给我一个数，返回它平方根近似值”的工具
+
+这其实就是上节 abstraction 的兑现版本。  
+Lecture 7 讲的是理念，Lecture 8 开始把它变成一种实际写法。
+
+### 7. scope：局部名字、外层名字、能读不能随便改
+讲完 `return` 之后，课堂转去讲 **scope**。
+
+老师用几个很短的函数例子说明：
+
+- 函数内部创建的变量默认是局部的
+- 可以读取外层已经存在的名字
+- 但如果你在函数内部给某个名字赋值，Python 会把它当局部变量处理
+- 所以“读外层变量”和“改外层变量”不是一回事
+
+例如：
+
+```python
+def g(y):
+    print(x)
+    print(x + 1)
+
+def h(y):
+    x += 1
+```
+
+`g` 里只是读 `x`，如果外面有 `x`，它能工作；  
+`h` 里既想读又想写 `x`，Python 会把它判定成局部变量，于是报错。
+
+> [!note]
+> scope 这部分的意义不是记语法细节，而是理解每个函数调用都有自己独立的小环境。
+
+### 8. 真正的新内容：函数和别的值一样，也是 object
+到这里课程才进入标题里的核心：**functions as objects**。
+
+老师明确说出一个观念：
+
+- int 是对象
+- str 是对象
+- list 是对象
+- function 也是对象
+
+既然函数有名字、可以被引用，那它就可以像别的对象一样被：
+
+- 赋给变量
+- 作为参数传递
+- 从一个函数传进另一个函数
+
+这并不是神秘规则，而是 Python 对函数的一种统一处理方式。
+
+### 9. `calc(op, x, y)`：把“做什么操作”当成输入
+老师用 `calc` 例子把这个观念真正落地：
+
+```python
+def calc(op, x, y):
+    return op(x, y)
+```
+
+然后再定义：
+
+```python
+def add(a, b):
+    return a + b
+
+def sub(a, b):
+    return a - b
+```
+
+这里最关键的理解是：
+
+- `op` 不是字符串
+- `op` 不是运算符符号
+- `op` 是一个函数对象
+
+所以 `calc(add, 2, 3)` 的意思就是：
+
+1. 把函数 `add` 传进去
+2. 在 `calc` 内部调用 `op(x, y)`
+3. 实际上也就是调用 `add(2, 3)`
+
+### 10. `apply(criteria, n)`：把“判断标准”本身变成参数
+更典型的高阶函数例子是：
+
+```python
+def apply(criteria, n):
+    count = 0
+    for i in range(0, n + 1):
+        if criteria(i):
+            count += 1
+    return count
+```
+
+这段代码非常值得停下来理解，因为它第一次把“行为”当成输入。
+
+`criteria` 在这里不是一个布尔值，而是：
+
+- 一个接受数字
+- 返回布尔值
+- 表示筛选标准的函数
+
+于是：
+
+- `apply(is_even, 10)` 统计的是 0 到 10 里偶数有多少个
+- 如果以后传入别的条件函数，就能统计别的东西
+
+> [!example]
+> 这就是抽象层级提升的瞬间：  
+> `apply` 不再关心“偶数”是什么，它只关心“给我一个判定标准，我就按这个标准数数”。
+
+### 11. 课堂最后已经在为 lambda 铺路
+Lecture 8 虽然还没有系统讲 lambda，但已经在制造那个需求。
+
+比如如果某个标准非常简单，只会用一次，那么为了配合 `apply` 去专门写一个完整 `def`，看起来就有点重。
+
+这正是 Lecture 9 要继续解决的问题。  
+所以这节课最后的重要收束其实是：
+
+- 函数可以返回值
+- 函数可以作为参数
+- 函数调用发生在独立 scope 中
+- 因此函数本身已经变成可以操作的对象
 
 ## Exercise log
-> [!note] Finger exercise snapshot
-> - Official prompt: Impoement the function that meets the specification beoow.: def same_chars(s1, s2): """ s1 and s2 are strings Returns boolean True is a character in s1 is also in s2, and vice versa. If a character only exists in one of...
-> - What this is really testing: whether you can compress the lecture into one small, high-frequency coding move without needing the slides beside you.
-> - Where to revisit if this feels shaky: go back to the first two Core ideas sections in this note, then rerun the official lecture code once with your own input.
-> - Follow-on practice path: after this finger exercise, the most natural next stop is Recitation 04.
 
-## From lecture to recitation and homework
-> [!abstract] How this lecture shows up in practice
-> - Problem-set connection: this lecture does not have a direct calendar milestone attached, so use it as a consolidation lecture rather than a sprint lecture.
-> - Recitation connection: Recitation 04 is the best place to turn the lecture ideas into shorter solved exercises.
-> - Suggested workflow: read this note once, run the lecture code, solve the smallest official exercise without peeking, then open the linked recitation or problem set materials.
-> - If you can explain the note but still cannot start the homework, the gap is usually not theory but translation: you need one more pass through the worked examples and lecture code.
+> [!example] Finger exercise 08
+> 官方练习是 `same_chars(s1, s2)`：如果 `s1` 中的每个字符都在 `s2` 中出现，且 `s2` 中的每个字符也都在 `s1` 中出现，则返回 `True`。
+
+这题表面上是字符串扫描，实际却正好卡在本讲的两个重点上：
+
+- 你要写的是一个真正 **返回布尔值** 的函数，而不是打印中间判断
+- 你要清楚函数接口只承诺“比较字符集合关系”，不承诺比较出现次数
+
+官方解法是两段对称循环：
+
+- 先检查 `s1` 的字符是否都在 `s2`
+- 再检查 `s2` 的字符是否都在 `s1`
+
+它适合放在本讲后面，因为这就是最典型的“按 specification 写函数并正确 return”。
+
+如果你写着写着想 `print(True)` 或 `print(False)`，说明本讲最核心的区分还没站稳。
 
 ## Links to follow-up practice
 - Slides: [[MIT 6.100L-slides/mit6_100l_lec08.pdf|Lecture 08 slides]]
@@ -136,18 +303,19 @@ lecture: 08
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 4.3-4.6)
 
 ## Review checklist
-- [ ] 我能解释为什么函数在 Python 中也是对象。
-- [ ] 我能说清楚一次函数调用会创建什么新的 environment。
-- [ ] 我能区分‘传函数’与‘传函数调用结果’。
-- [ ] 我能读懂一个 higher-order function 的数据流。
-- [ ] 我能判断一个重复逻辑是否适合抽象成函数参数。
-- [ ] 我能围绕“Functions are first-class objects”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能围绕“Scope 与 environment：名字到底去哪里找”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能说出并避免这个高频误区：把 `f` 与 `f()` 混为一谈，不知道自己传的是函数还是返回值。
-- [ ] 我能说出并避免这个高频误区：对局部变量与外层变量的查找规则没有概念，导致 scope bug。
-- [ ] 我能不看 slides，只看题面就判断这题主要在考本讲的哪一个知识点。
+- [ ] 我能解释显式 `return`、隐式 `None`、`print` 三者的区别。
+- [ ] 我能说明为什么 `print(mult(...))` 这种写法经常暴露出函数没有返回值的问题。
+- [ ] 我能解释 `is_triangular` 这类 bug 为什么本质上是控制流错误而不只是公式错误。
+- [ ] 我能说明为什么把 bisection 封成函数后，别的函数就能站在更高层组织代码。
+- [ ] 我能说清 scope 的基本规则：局部变量、读取外层变量、在函数里赋值会触发什么结果。
+- [ ] 我能解释为什么函数可以作为参数传给别的函数。
+- [ ] 我能读懂 `calc(op, x, y)` 和 `apply(criteria, n)` 这类高阶函数。
+- [ ] 我能解释“函数作为对象”到底带来了什么编程上的好处，而不是只会背定义。
+- [ ] 我能把 finger exercise 08 和本讲的 `return` / 函数接口联系起来。
+- [ ] 我能按课堂顺序复述：回顾函数 -> return vs print -> scope -> functions as objects。
 
 > [!warning] Common mistakes
-> - 把 `f` 与 `f()` 混为一谈，不知道自己传的是函数还是返回值。
-> - 对局部变量与外层变量的查找规则没有概念，导致 scope bug。
-> - 为了复用逻辑仍然硬复制代码，而不是把行为抽象成函数参数。
+> - 函数内部把结果打印出来，就误以为调用者已经拿到了那个值。
+> - 没写 `return` 却以为函数“什么都没返回”。
+> - 搞不清 scope，看到函数里出现同名变量就以为和外面的一定是同一个东西。
+> - 传给高阶函数的不是函数对象本身，而是不小心先把函数调用掉了。

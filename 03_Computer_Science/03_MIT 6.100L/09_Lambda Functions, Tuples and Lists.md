@@ -13,114 +13,302 @@ course: MIT 6.100L Introduction to CS and Programming Using Python
 lecture: 09
 ---
 
-# Lecture 09: Lambda Functions, Tuples, and Lists
+# Lecture 09: Lambda Functions, Tuples and Lists
 
 > [!tip] Hint
-> - 我能解释 lambda 适合解决什么问题，以及何时不该滥用它。
-> - 我能区分 tuple 的 immutability 与 list 的 mutability。
-> - 我能说明 sequence 数据结构为何重要：它让同一种循环骨架可以处理很多对象。
-> - 我能说出 list 和 tuple 在建模上的不同侧重点。
-> - 我能围绕本讲的主轴 “Lambda：轻量级匿名函数” / “Tuple：固定、轻量、不可变的 sequence” / “List：可变 sequence 的入口”，不翻 slides 也把整节课重新讲一遍。
-> - 我能解释 lambda 的适用场景与局限。
-> - 我能比较 tuple 与 list 在 mutability 和用途上的差异。
-> - 我能用 tuple packing / unpacking 组织多值返回。
-> - 我能把本讲最关键的代码模式手写出来，并解释每一步为什么这样写。
+> - 这节课前半段先把上节“函数作为对象”推到一个极简形式，也就是 lambda。
+> - lambda 的动机不是炫技，而是有些函数简单到只用一次，没必要专门写一个完整 `def`。
+> - `lambda x: x % 2 == 0` 这种写法本质上还是函数对象，只是匿名。
+> - `do_twice(n, fn)` 这种例子在课堂上是为了让你真正接受“函数可以像值一样被传来传去”。
+> - 讲完 lambda 后，课程突然切到 tuples，不是跳话题，而是开始引入新的复合数据类型。
+> - tuple 的关键词是 ordered、indexed、immutable，经常适合用来把多个返回值打包。
+> - `quotient_and_remainder` 这类函数展示了 tuple 最自然的用法：一次返回多个结果。
+> - `*args` 是另一个课堂转折，它说明函数参数个数本身也可以更灵活。
+> - 课程最后才引入 list，故意把它先讲成“像 tuple 一样的序列”，暂时还不强调 mutability。
+> - 听完这节课，你应该能解释为什么 tuples 和 lists 都是 sequence，但后面课程会把它们分开对待。
 
-> [!info] Lecture map
-> - Readings: Ch 5.1-5.3
-> - Recommended use order: read the Hint first, reconstruct the lecture from memory, then study the Core ideas, then run the official code, and only after that open the linked exercises.
-> - Main threads in this lecture: Lambda：轻量级匿名函数 / Tuple：固定、轻量、不可变的 sequence / List：可变 sequence 的入口
-> - 这讲把‘函数作为对象’和‘一组值作为一个对象’这两条线接起来。
-> - Tuple 常用来表达固定结构的数据，list 常用来表达可变集合；这会直接影响后续算法与 bug 类型。
-> - 后面的 mutability、aliasing、sorting、classes 都会不断回到这里的 sequence 直觉。
+## Lecture flow
 
-## Core ideas
-### Lambda：轻量级匿名函数
-lambda 不是用来替代所有普通函数的，而是用来表达那些非常短、只在局部使用一次的小行为。
-- 当某个函数逻辑非常短，而且只是为了当参数传给别的函数时，lambda 很方便。
-- lambda 的价值在于减少样板代码，而不是让逻辑变得神秘。
-- 一旦逻辑开始复杂、需要注释或多步推导，就该回到 `def`。
-- 阅读 lambda 时，先问清楚它接收什么输入、返回什么输出。
+### 1. 先把上节高阶函数收尾：为什么需要 lambda
+Lecture 9 的开头不是凭空冒出 lambda，而是从上节的 `apply(criteria, n)` 继续走。
 
-> [!note] What to internalize
-> - One-sentence takeaway: lambda 不是用来替代所有普通函数的，而是用来表达那些非常短、只在局部使用一次的小行为。
-> - Review anchor: 当某个函数逻辑非常短，而且只是为了当参数传给别的函数时，lambda 很方便。
-> - Review anchor: lambda 的价值在于减少样板代码，而不是让逻辑变得神秘。
+上节已经学到：
 
-从做题角度看，只要题目在考“Lambda：轻量级匿名函数”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：lambda 不是用来替代所有普通函数的，而是用来表达那些非常短、只在局部使用一次的小行为。
+- 函数是对象
+- 函数可以作为参数
+- 所以像 `apply(is_even, 10)` 这样的调用是合理的
 
-### Tuple：固定、轻量、不可变的 sequence
-tuple 最适合表示‘这一组东西天然应该绑在一起，但不打算在原地修改’的结构。
-- tuple 的 immutability 意味着创建后不能通过 index 改元素，这让它更稳定、更适合做返回值或坐标记录。
-- tuple packing / unpacking 让多值返回、位置绑定变得自然。
-- 你可以把 tuple 理解成‘带顺序的记录’，尤其适合固定字段数量的小结构。
-- 不可变不是限制，而是在设计上强调‘这份结构代表的是一个事实，而不是可编辑容器’。
+但老师立刻指出一个实际问题：  
+如果某个函数特别简单，而且只会用一次，那为了它单独写一个完整 `def`，看起来就有点笨重。
 
-> [!note] What to internalize
-> - One-sentence takeaway: tuple 最适合表示‘这一组东西天然应该绑在一起，但不打算在原地修改’的结构。
-> - Review anchor: tuple 的 immutability 意味着创建后不能通过 index 改元素，这让它更稳定、更适合做返回值或坐标记录。
-> - Review anchor: tuple packing / unpacking 让多值返回、位置绑定变得自然。
+这时才轮到 lambda 出场。
 
-从做题角度看，只要题目在考“Tuple：固定、轻量、不可变的 sequence”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：tuple 最适合表示‘这一组东西天然应该绑在一起，但不打算在原地修改’的结构。
+### 2. lambda：匿名函数，只保留最小必要结构
+lambda 的课堂定位非常明确：
 
-### List：可变 sequence 的入口
-list 比 tuple 更灵活，因为它支持添加、删除、替换元素；但这种灵活也带来了更多需要管理的状态变化。
-- list 适合表示一批数量可变、顺序重要、以后还会被修改的数据。
-- indexing、slicing、membership test、遍历方式都和字符串、tuple 一脉相承。
-- 一旦对象可变，程序正确性就不只取决于‘当前值是什么’，还取决于‘谁可能在后面改它’。
-- list 的 mutability 是下一讲 aliasing 与 cloning 的真正背景。
+- 它是一个函数
+- 但没有名字
+- 适合写非常短、非常局部的逻辑
 
-> [!note] What to internalize
-> - One-sentence takeaway: list 比 tuple 更灵活，因为它支持添加、删除、替换元素；但这种灵活也带来了更多需要管理的状态变化。
-> - Review anchor: list 适合表示一批数量可变、顺序重要、以后还会被修改的数据。
-> - Review anchor: indexing、slicing、membership test、遍历方式都和字符串、tuple 一脉相承。
+例如：
 
-从做题角度看，只要题目在考“List：可变 sequence 的入口”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：list 比 tuple 更灵活，因为它支持添加、删除、替换元素；但这种灵活也带来了更多需要管理的状态变化。
+```python
+lambda x: x % 2 == 0
+```
 
-## Code patterns from lecture
-> [!note] What the official code is trying to teach
-> - The official lecture code is worth reading as a notebook of small patterns, not just as a file to run once.
-> - Best workflow: predict output first, then run the code, then rewrite the pattern in your own words or with slightly changed values.
-> - print('apply with is_5:',apply(is_5,10))
-> - print('apply with anon fcn:', apply(lambda x: x==5, 100))
-> - Shown another way, the following are equivalent
-> - is_even(8) # returns True
-> - (lambda x: x%2==0)(8) # returns True
-> - 1. What does this print?
-> - When a code pattern feels too easy, change the input, break one line on purpose, and explain why the behavior changes.
+它和：
 
-## Worked examples
-> [!example] 用 lambda 表示一次性的小行为
-> ```python
-> double = lambda x: x * 2
-> print(double(5))
-> ```
-> 这个例子只想说明 lambda 的位置：它适合极短逻辑。只要逻辑稍微复杂，就应该换回 `def`。
+```python
+def is_even(x):
+    return x % 2 == 0
+```
 
-> [!example] 用 tuple 返回多个结果
-> ```python
-> def quotient_and_remainder(a, b):
->     return a // b, a % b
->
-> q, r = quotient_and_remainder(17, 5)
-> print(q, r)
-> ```
-> tuple 让多值返回自然可读，同时保留顺序结构。
+在行为上等价，只是前者没有名字。
+
+老师在这里拆解 lambda 的时候，重点是让你读懂它的组成：
+
+- `lambda` 关键字
+- 参数列表
+- 冒号
+- 一个表达式
+
+> [!note]
+> lambda 不是“迷你版程序块”；它只能写一个表达式，因此天然适合极简单、临时性的函数。
+
+### 3. `apply(lambda ..., n)`：把临时标准直接塞进去
+最自然的使用方式，就是把 lambda 直接传给上节的高阶函数。
+
+例如：
+
+```python
+apply(lambda x: x == 5, 100)
+```
+
+或者：
+
+```python
+apply(lambda x: x % 10 == 0, 100)
+```
+
+这样写时，你要真正意识到：
+
+- `criteria` 位置需要的是一个函数对象
+- lambda 表达式的结果正好就是一个函数对象
+
+所以这里不是“语法魔法”，只是把一个临时函数直接放到了参数位置。
+
+### 4. `do_twice(n, fn)`：函数对象真的可以被重复调用
+老师接着给出：
+
+```python
+def do_twice(n, fn):
+    return fn(fn(n))
+```
+
+这类代码第一次看常常会让人卡住，因为它把函数对象和普通值混在一起使用了。
+
+正确的读法是：
+
+1. 先对 `n` 调用一次 `fn`
+2. 把结果再交给同一个 `fn`
+3. 返回最终结果
+
+例如：
+
+```python
+do_twice(3, lambda x: x**2)
+```
+
+执行过程就是：
+
+- 先算 `fn(3)`，得到 `9`
+- 再算 `fn(9)`，得到 `81`
+
+这一步很重要，因为它让“函数能当参数”不再停留在一句口号上。
+
+### 5. 课程此时切到 tuples：新的数据组织方式
+lambda 部分讲完后，老师把课堂推进到新的 object types：**tuples** 和 **lists**。
+
+先讲 tuple，是因为它相对简单。老师把 tuple 介绍成一种 sequence：
+
+- 有顺序
+- 可以索引
+- 可以切片
+- 可以遍历
+
+但它和 list 的重要区别先被提前说出来：  
+tuple 是 **immutable**。
+
+所以课堂这里真正希望你先形成的印象是：
+
+- 它像字符串那样可以 indexing/slicing
+- 它又能装不同类型的对象
+- 但创建后不能原地修改
+
+### 6. tuple 最自然的用途：打包多个返回值
+tuple 在这节课里最重要的登场方式不是“存一堆数据”，而是配合函数返回多个结果。
+
+老师用的典型例子是：
+
+```python
+def quotient_and_remainder(x, y):
+    q = x // y
+    r = x % y
+    return (q, r)
+```
+
+这让函数调用不再被迫只能给一个数字，而是可以给一个结构化结果。
+
+后面再写：
+
+```python
+quot, rem = quotient_and_remainder(5, 2)
+```
+
+你就能同时拿到两个值。
+
+> [!example]
+> 这时 tuple 的意义不是“多了一个数据类型”，而是函数接口一下子灵活了很多。
+
+### 7. `char_counts`：tuple 让返回结果更像一个小记录
+课堂随后的 you-try-it `char_counts(s)` 就是在练这一点。
+
+它要求返回：
+
+- 元音个数
+- 辅音个数
+
+如果没有 tuple，你很难把这两个紧密相关的结果优雅地一起返回。  
+有了 tuple，函数接口就可以很自然地写成：
+
+```python
+return (vowels, consonants)
+```
+
+这里也顺手强化了一件事：
+
+- sequence 可以按位置取值
+- 所以 tuple 返回值经常依赖“第一个位置是什么、第二个位置是什么”的约定
+
+### 8. `*args`：参数个数也可以灵活
+老师接下来又引入一个与函数接口相关的新点：**variable number of arguments**。
+
+代码里最核心的对比是：
+
+```python
+def mean(*args):
+    ...
+```
+
+和
+
+```python
+def mean(args):
+    ...
+```
+
+这两个写法看起来很像，但意义完全不同：
+
+- `*args`：把任意多个位置参数打包成一个 tuple
+- `args`：只是普通的单个参数名
+
+所以：
+
+- `mean(1, 2, 3)` 对应 `*args`
+- `mean((1, 2, 3))` 对应普通单参数版本
+
+这部分的课堂重点不是背语法，而是接受：
+
+- tuple 不只会出现在返回值里
+- 也会出现在参数收集里
+
+### 9. 先讲 list，但先把它当作“更灵活的 sequence”
+讲完 tuple 后，老师才开始引入 list。
+
+在这节课里，list 还没有被拿来重点讲 mutability；  
+它先被放在“sequence 家族”里和 tuple 并列介绍。
+
+也就是说，课堂此时先强调的是这些相似点：
+
+- 都能 indexing
+- 都能遍历
+- 都能装多种类型
+- 都能作为一组对象传来传去
+
+于是代码顺着就出现了：
+
+```python
+def list_sum(L):
+    total = 0
+    for e in L:
+        total += e
+    return total
+```
+
+以及：
+
+```python
+def len_sum(L):
+    total = 0
+    for s in L:
+        total += len(s)
+    return total
+```
+
+老师在这里其实是在训练你：  
+一旦进入 sequence 语境，很多处理模式都会重复出现。
+
+### 10. `sum_and_prod`、`sublist_sum`：list 可以承载更复杂的嵌套结构
+这节课最后的例子开始把 list 的灵活性往前推。
+
+例如：
+
+- `sum_and_prod(L)`：对同一个 list 同时累计两个量
+- `sublist_sum(L)`：list 的元素本身还是 list
+
+这在课堂上有两个效果：
+
+- 你开始习惯 sequence 可以嵌套 sequence
+- 你开始区分“返回一个值”和“返回一个结构”
+
+到这一步，课程已经为下节的 list mutability 做好了地基。
+
+### 11. 这节课的主线其实是“函数接口更自由了”
+如果只看标题，会觉得 Lecture 9 是几块碎内容拼在一起。  
+但按课堂推进来看，主线其实很清楚：
+
+1. 函数作为对象，可以匿名化成 lambda
+2. 函数接口可以接受行为本身作为参数
+3. 函数接口也可以返回 tuple 这样的复合结果
+4. 接下来我们需要更通用的 sequence 来装数据，于是引出 list
+
+所以它不是跳跃，而是在慢慢把“函数接口”和“数据组织”同时扩展。
 
 ## Exercise log
-> [!note] Finger exercise snapshot
-> - Official prompt: Impoement the function that meets the specification beoow.: def dot_product(tA, tB): """ tA: a tuple of numbers tB: a tuple of numbers of the same length as tA Assumes tA and tB are the same length. Returns a tuple...
-> - What this is really testing: whether you can compress the lecture into one small, high-frequency coding move without needing the slides beside you.
-> - Where to revisit if this feels shaky: go back to the first two Core ideas sections in this note, then rerun the official lecture code once with your own input.
-> - Follow-on practice path: after this finger exercise, the most natural next stop is Recitation 04.
-> - Homework bridge: this lecture is directly connected to the following calendar milestones: PS 2 out, PS 1 due.
 
-## From lecture to recitation and homework
-> [!abstract] How this lecture shows up in practice
-> - Problem-set connection: calendar shows this lecture touching the following milestones: PS 2 out；PS 1 due。读完本讲后，不应只会解释概念，还应能把它们搬到更长的程序里。
-> - Recitation connection: Recitation 04 is the best place to turn the lecture ideas into shorter solved exercises.
-> - Suggested workflow: read this note once, run the lecture code, solve the smallest official exercise without peeking, then open the linked recitation or problem set materials.
-> - If you can explain the note but still cannot start the homework, the gap is usually not theory but translation: you need one more pass through the worked examples and lecture code.
+> [!example] Finger exercise 09
+> 官方练习是 `dot_product(tA, tB)`：
+> - 输入两个等长数字 tuple
+> - 返回一个 tuple
+> - 第一个元素是长度
+> - 第二个元素是 pairwise products 的总和
+
+这题跟本讲高度对齐，因为它同时检查三件事：
+
+- 你会不会按 index 并行访问两个 tuple
+- 你能不能把循环累计结果写对
+- 你有没有接受“函数返回值本身也可以是 tuple”
+
+官方解法是：
+
+```python
+tot = 0
+for i in range(len(tA)):
+    tot += tA[i] * tB[i]
+return (len(tA), tot)
+```
+
+如果你写的时候总想拆成两个函数或把长度和结果分别打印，说明这节课关于 tuple 返回值的直觉还不够稳。
 
 ## Links to follow-up practice
 - Slides: [[MIT 6.100L-slides/mit6_100l_lec09.pdf|Lecture 09 slides]]
@@ -133,18 +321,19 @@ list 比 tuple 更灵活，因为它支持添加、删除、替换元素；但�
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 5.1-5.3)
 
 ## Review checklist
-- [ ] 我能解释 lambda 的适用场景与局限。
-- [ ] 我能比较 tuple 与 list 在 mutability 和用途上的差异。
-- [ ] 我能用 tuple packing / unpacking 组织多值返回。
-- [ ] 我能说明为什么 sequence 思维能复用前面学过的循环模式。
-- [ ] 我能为一个具体问题选择更适合的 sequence 类型。
-- [ ] 我能围绕“Lambda：轻量级匿名函数”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能围绕“Tuple：固定、轻量、不可变的 sequence”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能说出并避免这个高频误区：为了炫技把复杂逻辑都塞进 lambda。
-- [ ] 我能说出并避免这个高频误区：没有意识到 tuple 与 list 的 mutability 不同，导致建模选错数据结构。
-- [ ] 我能不看 slides，只看题面就判断这题主要在考本讲的哪一个知识点。
+- [ ] 我能说明 lambda 是怎么从上节“函数作为对象”自然生长出来的。
+- [ ] 我能解释 lambda 和普通 `def` 在适用场景上的差异。
+- [ ] 我能手动 trace `do_twice(3, lambda x: x**2)` 这种调用。
+- [ ] 我能说清 tuple 的三个关键词：ordered、indexable、immutable。
+- [ ] 我能解释为什么 tuple 很适合做多个返回值的打包。
+- [ ] 我能区分 `mean(*args)` 和 `mean(args)` 的含义。
+- [ ] 我能说明 list 和 tuple 在这节课里先被当成什么共同类别来看待。
+- [ ] 我能读懂 `sublist_sum` 这类“list of lists”结构。
+- [ ] 我能把 finger exercise 09 和 tuple 返回值的用途联系起来。
+- [ ] 我能按课堂顺序复述：lambda -> tuple -> `*args` -> lists。
 
 > [!warning] Common mistakes
-> - 为了炫技把复杂逻辑都塞进 lambda。
-> - 没有意识到 tuple 与 list 的 mutability 不同，导致建模选错数据结构。
-> - 把 sequence 当成一堆散乱变量，没有利用统一的遍历与索引思维。
+> - 把 lambda 当成一种和函数完全不同的东西，而不是匿名函数。
+> - 忘了 tuple 的不可变性，写出想原地修改 tuple 的代码。
+> - 没区分 `*args` 是打包多个参数，而不是普通单参数。
+> - 看到 list/tuple 都能索引，就忽略了后面课程会重点区分它们的 mutability。

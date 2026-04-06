@@ -16,128 +16,302 @@ lecture: 19
 # Lecture 19: Inheritance
 
 > [!tip] Hint
-> - 我能解释 inheritance 解决的是什么复用问题。
-> - 我能区分父类、子类、继承、override。
-> - 我能说明为什么子类应当扩展或特化父类，而不是复制父类。
-> - 我能判断一个层次结构是否真的表达了 is-a 关系。
-> - 我能围绕本讲的主轴 “Inheritance：在已有抽象上复用与特化” / “Override 与 inherited methods” / “建模时先问是不是合理的 is-a 关系”，不翻 slides 也把整节课重新讲一遍。
-> - 我能解释继承想复用的到底是什么。
-> - 我能判断一个设计是否真的满足 is-a 关系。
-> - 我能把本讲最关键的代码模式手写出来，并解释每一步为什么这样写。
+> - 这节课开头先用猫、兔子、人这些现实分类说明 inheritance 的直觉，不是先讲语法。
+> - Animal 被选作 parent class，因为 age、name 这类属性适合放在更泛的层级。
+> - getters/setters 在这一讲再次被强调，是为了 information hiding 和后面改内部实现的灵活性。
+> - subclass 的关键不是“复制父类代码”，而是 automatically gets parent attributes and methods，再加自己的东西。
+> - `Cat(Animal)` 先演示最简单的继承：复用父类的 init、getter、setter，再加 `speak` 和重写 `__str__`。
+> - Person 的 `__init__` 比 Cat 更复杂，因为它要先调用 `Animal.__init__`，再补自己的属性。
+> - Student 再继承 Person，课堂借它说明 inheritance 可以一层层往下传。
+> - method overriding 在这节课变成显性主题：子类可以保留父类大部分行为，但改掉某个方法，比如 `speak`。
+> - Rabbit 部分除了继承，还引入 class variable、`__add__`、`__eq__`，开始让对象类型更“活”。
+> - 听完这节课，你应该能解释继承为什么能减少重复设计，同时保留子类差异。
 
-> [!info] Lecture map
-> - Readings: Ch 10.2
-> - Recommended use order: read the Hint first, reconstruct the lecture from memory, then study the Core ideas, then run the official code, and only after that open the linked exercises.
-> - Main threads in this lecture: Inheritance：在已有抽象上复用与特化 / Override 与 inherited methods / 建模时先问是不是合理的 is-a 关系
-> - 前面两讲已经会定义单个类，这一讲讨论如何组织一组相关类。
-> - inheritance 的目标是共享共性、保留差异，让重复逻辑集中在父类，特殊行为留给子类。
-> - 理解继承，也是在练习接口替换与层次建模，为更复杂系统设计打基础。
+## Lecture flow
 
-## Core ideas
-### Inheritance：在已有抽象上复用与特化
-如果多个类共享大量相同行为或状态约束，就可以把公共部分提到父类，再让子类表达差异。
-- 父类负责定义共性，子类负责扩展或改写局部行为。
-- 这比复制粘贴多个相似类更稳，因为公共逻辑只维护一份。
-- 继承的前提不是‘代码长得像’，而是‘语义上存在稳定共性’。
-- 一旦层次设计合理，使用者也能更容易理解不同类之间的关系。
+### 1. 先从现实分类讲 inheritance 的直觉
+Lecture 19 开场先退回现实世界。
 
-> [!note] What to internalize
-> - One-sentence takeaway: 如果多个类共享大量相同行为或状态约束，就可以把公共部分提到父类，再让子类表达差异。
-> - Review anchor: 父类负责定义共性，子类负责扩展或改写局部行为。
-> - Review anchor: 这比复制粘贴多个相似类更稳，因为公共逻辑只维护一份。
+老师举了：
 
-从做题角度看，只要题目在考“Inheritance：在已有抽象上复用与特化”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：如果多个类共享大量相同行为或状态约束，就可以把公共部分提到父类，再让子类表达差异。
+- cats
+- rabbits
+- people
 
-### Override 与 inherited methods
-子类可以直接继承父类方法，也可以 override 某些方法来表达更具体的行为。
-- override 的价值在于保持接口不变、语义更具体，而不是随意改掉父类约定。
-- 子类仍然可以复用父类未被改写的方法，这就是继承复用的核心收益。
-- 阅读继承代码时，要同时关注‘这个方法是本类定义的，还是从父类来的’。
-- override 如果破坏了父类原本的使用预期，会让整个层次变得难以推理。
+这些类别的例子，是为了说明 inheritance 的动机不是语法炫技，而是现实中的分类本来就有层次：
 
-> [!note] What to internalize
-> - One-sentence takeaway: 子类可以直接继承父类方法，也可以 override 某些方法来表达更具体的行为。
-> - Review anchor: override 的价值在于保持接口不变、语义更具体，而不是随意改掉父类约定。
-> - Review anchor: 子类仍然可以复用父类未被改写的方法，这就是继承复用的核心收益。
+- 都是 animal
+- 但各自还有自己的特殊性质
 
-从做题角度看，只要题目在考“Override 与 inherited methods”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：子类可以直接继承父类方法，也可以 override 某些方法来表达更具体的行为。
+这一步很重要，因为 inheritance 的核心不是“代码复用”四个字，而是：
 
-### 建模时先问是不是合理的 is-a 关系
-不是所有共享代码的场景都该用继承。有时组合更合适；继承应保留给真正的层次语义。
-- 如果子类只是想借用一点实现，而不是语义上属于父类，那么继承往往是坏味道。
-- 好的继承层次应该满足：在大多数使用场景里，子类都能被当作父类看待。
-- 过深层次会让代码阅读成本上升，因为行为来源变得分散。
-- 因此继承的价值不在于省代码行数，而在于表达清楚的语义关系。
+- 通用属性放上层
+- 特殊属性留给下层
 
-> [!note] What to internalize
-> - One-sentence takeaway: 不是所有共享代码的场景都该用继承。有时组合更合适；继承应保留给真正的层次语义。
-> - Review anchor: 如果子类只是想借用一点实现，而不是语义上属于父类，那么继承往往是坏味道。
-> - Review anchor: 好的继承层次应该满足：在大多数使用场景里，子类都能被当作父类看待。
+### 2. Animal：先定义最泛的父类
+基于这个现实分类，老师先写出 `Animal` 类。
 
-从做题角度看，只要题目在考“建模时先问是不是合理的 is-a 关系”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：不是所有共享代码的场景都该用继承。有时组合更合适；继承应保留给真正的层次语义。
+`Animal` 的数据和行为都很基础：
 
-## Code patterns from lecture
-> [!note] What the official code is trying to teach
-> - The official lecture code is worth reading as a notebook of small patterns, not just as a file to run once.
-> - Best workflow: predict output first, then run the code, then rewrite the pattern in your own words or with slightly changed values.
-> - Animal abstract data type
-> - #default parameters with methods
-> - print(a)
-> - print(b)
-> - print(a.age)
-> - print(a.get_age())
-> - When a code pattern feels too easy, change the input, break one line on purpose, and explain why the behavior changes.
+- `age`
+- `name`
+- `get_age`
+- `get_name`
+- `set_age`
+- `set_name`
+- `__str__`
 
-## Worked examples
-> [!example] 子类继承父类的通用行为
-> ```python
-> class Animal:
->     def speak(self):
->         return "..."
->
-> class Dog(Animal):
->     pass
->
-> print(Dog().speak())
-> ```
-> Dog 没有自己实现 `speak`，但可以直接继承父类版本。这说明继承先提供的是复用。
+这里课堂特别强调的是：  
+父类不需要穷尽所有具体细节，它只需要承载“所有子类都会共享的那部分”。
 
-> [!example] override 父类方法
-> ```python
-> class Animal:
->     def speak(self):
->         return "..."
->
-> class Dog(Animal):
->     def speak(self):
->         return "woof"
->
-> print(Dog().speak())
-> ```
-> 接口还是 `speak()`，但子类提供了更具体的语义实现。
+### 3. getters / setters 再次出现，是为了 information hiding
+老师在 Animal 这里专门停下来重新强调 getters 和 setters。
+
+原因不是怕你忘了方法定义，而是因为：
+
+- 如果别人总是直接写 `a.age = ...`
+- 将来你想更改内部表示方式就会非常痛苦
+
+而如果大家统一通过：
+
+- `get_age()`
+- `set_age(...)`
+
+来交互，那么你以后可以改内部实现，而不必把所有外部调用点一起推翻。
+
+这就是 information hiding 的实际价值。
+
+### 4. 用 Animal objects 参与普通程序
+老师接着没有直接讲继承，而是先展示 Animal 类如何在普通代码中被使用。
+
+例如：
+
+- `animal_dict(L)`：把列表里的非负整数映射成 Animal objects
+- `make_animals(L1, L2)`：根据年龄列表和名字列表创建一组 Animal
+
+这一步很关键，因为它说明对象不是只在类定义里存在，它们会真的进入普通数据流：
+
+- 被放进 list
+- 被放进 dict
+- 被函数创建和返回
+
+### 5. 正式引入 inheritance：子类天然拥有父类的通用部分
+到这里老师才真正给出继承的图景。
+
+如果：
+
+- Cat is an Animal
+- Rabbit is an Animal
+- Person is an Animal
+
+那这些子类就应该自动继承 Animal 的通用属性和行为，例如：
+
+- age
+- name
+- getters / setters
+
+与此同时，每个子类还能加自己的行为。
+
+### 6. `Cat(Animal)`：最简单的继承范例
+老师先从最简单的子类开始：
+
+```python
+class Cat(Animal):
+    def speak(self):
+        print("meow")
+    def __str__(self):
+        return "cat:" + str(self.name) + ":" + str(self.age)
+```
+
+这段代码的课堂重点有两个：
+
+- Cat 没有重写 `__init__`，所以直接复用 Animal 的初始化逻辑
+- Cat 可以在保留父类通用属性的同时，补上自己的方法
+
+这就是 inheritance 最干净的第一版。
+
+### 7. method lookup：先看子类，找不到再往父类走
+老师在 Cat 例子上花了一些时间解释调用机制。
+
+当你对 Cat 对象调用方法时，Python 会：
+
+1. 先在 Cat 类里找
+2. 找不到，再去 Animal 里找
+3. 再找不到，再继续向上
+
+这就是为什么：
+
+- Cat 可以用 Animal 里的 `get_age`
+- 但打印时如果 Cat 自己有 `__str__`，就会优先用 Cat 的版本
+
+### 8. overriding：子类可以替换父类某个行为
+`__str__` 在 Cat 中其实就是一次 method overriding。
+
+父类 Animal 的字符串表示可能是：
+
+- `animal:name:age`
+
+但 Cat 需要：
+
+- `cat:name:age`
+
+这就是覆盖父类方法的典型场景：
+
+- 通用框架大致一样
+- 但某个具体行为更适合由子类自定义
+
+### 9. Person：为什么有时必须重写 `__init__`
+Cat 之后，老师切到 `Person(Animal)`，并让它的初始化更复杂一些。
+
+原因在于：
+
+- Person 需要 `name`
+- 还要额外有 `friends`
+
+所以 `Person.__init__` 不能简单沿用 Animal 的签名，而要：
+
+1. 先调用 `Animal.__init__(self, age)`
+2. 再通过 `self.set_name(name)` 补名字
+3. 再初始化自己的新属性 `friends`
+
+这一段特别重要，因为它让你看到：
+
+- 子类不是只能照搬父类 init
+- 子类可以在“先继承、再补充”的思路下写自己的构造逻辑
+
+### 10. Person 的新行为：friend list、age_diff、speak
+在 Person 中，老师加入了更多特有行为：
+
+- `add_friend`
+- `get_friends`
+- `age_diff`
+- `speak`
+
+这时 inheritance 的价值就更清楚了：
+
+- age / name 这些通用能力从 Animal 来
+- friend list 和人类说话方式属于 Person 自己
+
+因此子类不是“比父类更窄”，而是“继承通用部分并扩展专属部分”。
+
+### 11. Student：继承链可以继续向下
+讲完 Person 后，老师继续往下分：
+
+- Student is a Person
+
+于是 Student 会继承：
+
+- Animal 的通用部分
+- Person 的通用部分
+
+再加上自己的：
+
+- `major`
+- `change_major`
+- 更符合学生语境的 `speak`
+
+这里课堂真正想建立的是一条继承链直觉：
+
+- Student -> Person -> Animal -> object
+
+### 12. Student 的 `speak`：override 的典型用途
+Student 里的 `speak` 不再像 Person 一样简单说 “hello”，  
+而是输出和学生生活相关的话。
+
+这让 method overriding 的意义变得很直观：
+
+- 子类共享了父类大部分通用能力
+- 但在某个行为上想更具体、更贴近自身语义
+- 就直接覆写那个方法
+
+### 13. Rabbit：class variable 进入继承场景
+后半段老师把重点转向 Rabbit，并引入 class variable `tag`。
+
+Rabbit 类中：
+
+- 每创建一只兔子，分配一个新的编号
+- 这个编号增长规则属于整个类，不属于某一只单独兔子
+
+所以最合适的位置就是 class variable。
+
+这部分是在把 Lecture 18 的 class variable 观念塞进继承框架中。
+
+### 14. Rabbit 的父母关系：对象还能引用同类对象
+Rabbit 类更进一步的地方在于：
+
+- 每只兔子可以记录 parent1 / parent2
+- 所以对象属性里可以装“同类的其他对象”
+
+这让对象图开始变复杂：
+
+- rabbit object 引用 other rabbit objects
+- 类之间不只是树状继承，实例之间也会形成关系网络
+
+### 15. `__add__`：把“两只兔子相加”解释成产生新兔子
+老师随后给 Rabbit 加上：
+
+```python
+def __add__(self, oth):
+    return Rabbit(0, self, oth)
+```
+
+这当然不是数学加法，而是课程借运算符重载展示：
+
+- 你可以定义对象类型自己认为合理的“加法”语义
+
+在 Rabbit 世界里，`r1 + r2` 就被定义为：
+
+- 产生一只新兔子
+- 其父母是 `r1` 和 `r2`
+
+### 16. `__eq__`：对象相等性的标准也由你定义
+接着老师再写 Rabbit 的 `__eq__`。
+
+在这里，两只兔子相等不是看内存地址，而是看：
+
+- 它们是否有相同的父母
+
+并且父母顺序交换也算相同。
+
+这一步非常关键，因为它让你看到：
+
+- 对象“相等”到底是什么意思
+- 也可以由类设计者来决定
+
+### 17. 这节课其实在讲“共性与差异如何同时保留”
+Lecture 19 如果只记成“继承会省代码”，就太浅了。
+
+这节课真正完成的是：
+
+- 用父类保存共性
+- 用子类表达差异
+- 用 overriding 让差异体现在行为上
+- 用 class variable 和对象关系让类世界更贴近真实建模需求
 
 ## Exercise log
-> [!note] Finger exercise snapshot
-> - Official prompt: In this problem, you will implement two classes according to the specification below: one Container class and one Stack class (a subclass of Container ). Our Container class will initialize an empty list. The two...
-> - Official solution sketch:
-> ```python
-> class Container(object):
-> def __init__(self):
-> self.myList = []
-> def size(self):
-> return len(self.myList)
-> def add(self, elem):
-> ```
-> - What this is really testing: whether you can compress the lecture into one small, high-frequency coding move without needing the slides beside you.
-> - Where to revisit if this feels shaky: go back to the first two Core ideas sections in this note, then rerun the official lecture code once with your own input.
-> - Follow-on practice path: after this finger exercise, the most natural next stop is Recitation 09.
 
-## From lecture to recitation and homework
-> [!abstract] How this lecture shows up in practice
-> - Problem-set connection: this lecture does not have a direct calendar milestone attached, so use it as a consolidation lecture rather than a sprint lecture.
-> - Recitation connection: Recitation 09 is the best place to turn the lecture ideas into shorter solved exercises.
-> - Suggested workflow: read this note once, run the lecture code, solve the smallest official exercise without peeking, then open the linked recitation or problem set materials.
-> - If you can explain the note but still cannot start the homework, the gap is usually not theory but translation: you need one more pass through the worked examples and lecture code.
+> [!example] Finger exercise 19
+> 官方题目要求实现：
+> - `Container`
+> - `Stack(Container)`
+
+Container 提供：
+
+- `size`
+- `add`
+
+Stack 额外提供：
+
+- `remove`
+
+而且 `remove` 要体现后进先出。
+
+这题很适合作为本讲练习，因为它不是在考“会不会写 list”，而是在考：
+
+- 你会不会先把通用行为放父类
+- 再把特有行为放子类
+
+这正是 inheritance 的最小工程版本。
 
 ## Links to follow-up practice
 - Slides: [[MIT 6.100L-slides/mit6_100l_lec19.pdf|Lecture 19 slides]]
@@ -149,18 +323,19 @@ lecture: 19
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 10.2)
 
 ## Review checklist
-- [ ] 我能解释继承想复用的到底是什么。
-- [ ] 我能区分父类、子类、继承、override。
-- [ ] 我能判断一个设计是否真的满足 is-a 关系。
-- [ ] 我能说明为什么复制粘贴多个相似类不如合理继承。
-- [ ] 我能看懂某个方法到底来自哪一层类。
-- [ ] 我能围绕“Inheritance：在已有抽象上复用与特化”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能围绕“Override 与 inherited methods”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能说出并避免这个高频误区：把继承当成纯粹省代码工具，而不是层次建模工具。
-- [ ] 我能说出并避免这个高频误区：override 时破坏父类原有接口预期。
-- [ ] 我能不看 slides，只看题面就判断这题主要在考本讲的哪一个知识点。
+- [ ] 我能用现实分类例子解释 inheritance 的直觉。
+- [ ] 我能说明为什么 Animal 适合作为父类。
+- [ ] 我能解释 getters/setters 在继承层级里为什么仍然重要。
+- [ ] 我能读懂并写出最简单的子类，如 `Cat(Animal)`。
+- [ ] 我能解释 method lookup 为什么是“先看子类，再看父类”。
+- [ ] 我能说明什么时候子类应该重写 `__init__`。
+- [ ] 我能解释 overriding 的意义，并举出 `speak` 或 `__str__` 的例子。
+- [ ] 我能理解 Student 为什么会继承 Person 再继承 Animal。
+- [ ] 我能解释 Rabbit 中 class variable 和 `__add__` / `__eq__` 的设计含义。
+- [ ] 我能按课堂顺序复述：Animal -> Cat -> Person -> Student -> Rabbit。
 
 > [!warning] Common mistakes
-> - 把继承当成纯粹省代码工具，而不是层次建模工具。
-> - override 时破坏父类原有接口预期。
-> - 明明是 has-a 关系，却硬写成 is-a 关系。
+> - 把继承理解成简单复制粘贴，而不是共性抽取。
+> - 子类需要额外初始化时忘记先调用父类的 `__init__`。
+> - 不理解 overriding，看到同名方法就不知道 Python 会选哪个版本。
+> - 该放父类的通用逻辑放到了子类，导致层级设计混乱。

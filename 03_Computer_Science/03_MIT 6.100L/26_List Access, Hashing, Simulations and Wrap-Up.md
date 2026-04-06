@@ -16,112 +16,281 @@ lecture: 26
 # Lecture 26: List Access, Hashing, Simulations, and Wrap-Up
 
 > [!tip] Hint
-> - 我能解释按位置访问 list 为什么通常便宜，而哈希表又为什么能支持按 key 的快速访问。
-> - 我能说明 hashing 的目标是把查找从线性扫描转成更直接的定位。
-> - 我能解释 simulation 为什么是程序的一种重要用途。
-> - 我能把整门课的主线串起来：数据表示、控制流、抽象、复杂度。
-> - 我能围绕本讲的主轴 “List access 与 hashing 是两种不同的定位思路” / “Simulation：当直接推公式很难时，用程序做实验” / “Wrap-up：整门课的主线应当串成一个系统”，不翻 slides 也把整节课重新讲一遍。
-> - 我能解释 list access 与 hashing 的思路差异。
-> - 我能说明为什么 dict 的查找方式与 list 不同。
-> - 我能设计一个最简单的 simulation 实验。
-> - 我能把本讲最关键的代码模式手写出来，并解释每一步为什么这样写。
+> - 最后一讲先说今天要“收尾若干 loose ends”，所以内容确实跨几个主题，但推进顺序很清楚。
+> - 第一部分先回到 list：为什么 index access 是 `Theta(1)`，它在内存里到底怎么放。
+> - contiguous memory 和地址偏移量，是理解 list access complexity 的关键。
+> - 然后课程转到 dictionary：如果把 dict 朴素存成 list of entries，lookup 为什么会退化成 `Theta(n)`。
+> - hashing 的核心不是记 hash 值，而是理解“用 hash function 把 key 映到 bucket/index”。
+> - 只有 hashable 对象才能做 dict key，这又把 immutable / mutable 的概念拉回来了。
+> - 好 hash function 和合适 hash table 大小决定了碰撞多少，也决定了平均性能。
+> - 后半段 simulations 把 randomness、probability 和 computation 接起来，说明你已经能做很多实验型建模。
+> - 骰子和 fill_pool 例子都在练同一个框架：定义一次实验，重复很多次，用频率逼近概率或平均值。
+> - 听完这节课，你应该能把 list、dict、hashing、simulation 当成课程前面所有内容的一次回收总结。
 
-> [!info] Lecture map
-> - Readings: Ch 12.3, Ch 17
-> - Recommended use order: read the Hint first, reconstruct the lecture from memory, then study the Core ideas, then run the official code, and only after that open the linked exercises.
-> - Main threads in this lecture: List access 与 hashing 是两种不同的定位思路 / Simulation：当直接推公式很难时，用程序做实验 / Wrap-up：整门课的主线应当串成一个系统
-> - 最后一讲回收多个主题：底层访问方式、哈希思想、模拟方法，以及对全课主线的整理。
-> - 它提醒你：课程不是一堆零散专题，而是围绕‘怎样表示问题、怎样组织计算、怎样评估代价’展开。
-> - list access 与 hashing 给出不同的数据访问路径，simulation 则展示程序如何用于研究难以直接解析的问题。
+## Lecture flow
 
-## Core ideas
-### List access 与 hashing 是两种不同的定位思路
-顺序容器和映射容器的差别，最终会落实到‘我要怎样更快找到目标数据’这个问题上。
-- list 的优势在于顺序和按位置访问；当你知道 index 时，拿元素通常很直接。
-- 但如果你只知道内容或 key，而不知道位置，线性搜索的成本就会上升。
-- hashing 的目标是把 key 通过哈希函数映射到更容易定位的位置，从而避免从头扫到尾。
-- 这正是 dict 在大量查找场景里常常很强的原因。
+### 1. 开场先说明：今天是收尾和 wrap-up
+Lecture 26 一开始就说这会是最后一讲，内容会分成几个 loose ends：
 
-> [!note] What to internalize
-> - One-sentence takeaway: 顺序容器和映射容器的差别，最终会落实到‘我要怎样更快找到目标数据’这个问题上。
-> - Review anchor: list 的优势在于顺序和按位置访问；当你知道 index 时，拿元素通常很直接。
-> - Review anchor: 但如果你只知道内容或 key，而不知道位置，线性搜索的成本就会上升。
+- lists
+- dictionaries / hashing
+- simulations
+- 课程总结
 
-从做题角度看，只要题目在考“List access 与 hashing 是两种不同的定位思路”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：顺序容器和映射容器的差别，最终会落实到‘我要怎样更快找到目标数据’这个问题上。
+所以这讲表面上看跨度很大，但它其实是在把前面学过的东西重新连回到底层实现和更广的应用场景上。
 
-### Simulation：当直接推公式很难时，用程序做实验
-模拟的本质是：明确规则、反复试验、统计结果。很多复杂系统不容易手算，但可以通过程序近似观察其行为。
-- simulation 需要先定义状态、随机过程或更新规则，再运行足够多次观察总体行为。
-- 它不一定给出解析闭式答案，但能帮助你估计概率、趋势或平均表现。
-- 程序在这里不只是计算器，而是实验平台。
-- 这让课程回到最初的主题：计算机可以帮助我们探索那些手工难以穷尽的过程。
+### 2. 先回到 list：为什么某些操作是 `Theta(1)`，某些是 `Theta(n)`
+老师先回顾我们已经知道的 list 操作复杂度：
 
-> [!note] What to internalize
-> - One-sentence takeaway: 模拟的本质是：明确规则、反复试验、统计结果。很多复杂系统不容易手算，但可以通过程序近似观察其行为。
-> - Review anchor: simulation 需要先定义状态、随机过程或更新规则，再运行足够多次观察总体行为。
-> - Review anchor: 它不一定给出解析闭式答案，但能帮助你估计概率、趋势或平均表现。
+- equality：`Theta(n)`
+- membership：`Theta(n)`
+- iteration：`Theta(n)`
+- direct index access：`Theta(1)`
 
-从做题角度看，只要题目在考“Simulation：当直接推公式很难时，用程序做实验”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：模拟的本质是：明确规则、反复试验、统计结果。很多复杂系统不容易手算，但可以通过程序近似观察其行为。
+然后问了一个非常关键的问题：
 
-### Wrap-up：整门课的主线应当串成一个系统
-学完一门入门课，最重要的不是记住每个语法点，而是能把核心思想连起来形成自己的编程地图。
-- 数据表示：数字、字符串、序列、字典、对象，决定你如何组织世界。
-- 控制流：分支、循环、递归，决定你如何组织计算过程。
-- 抽象：函数、类、模块化，决定你如何控制复杂度。
-- 分析：测试、调试、复杂度、可视化、模拟，决定你如何判断程序是否可靠、是否高效、是否解释得通。
+- 为什么 index access 会是常数时间？
 
-> [!note] What to internalize
-> - One-sentence takeaway: 学完一门入门课，最重要的不是记住每个语法点，而是能把核心思想连起来形成自己的编程地图。
-> - Review anchor: 数据表示：数字、字符串、序列、字典、对象，决定你如何组织世界。
-> - Review anchor: 控制流：分支、循环、递归，决定你如何组织计算过程。
+这就把课堂从“背复杂度表”推进到“理解实现原因”。
 
-从做题角度看，只要题目在考“Wrap-up：整门课的主线应当串成一个系统”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：学完一门入门课，最重要的不是记住每个语法点，而是能把核心思想连起来形成自己的编程地图。
+### 3. contiguous memory：列表为什么能常数时间取第 i 个元素
+老师解释，list 在内存里可以想成一段连续内存块。
 
-## Code patterns from lecture
-> [!note] What the official code is trying to teach
-> - The official lecture code is worth reading as a notebook of small patterns, not just as a file to run once.
-> - Best workflow: predict output first, then run the code, then rewrite the pattern in your own words or with slightly changed values.
-> - set line width
-> - set font size for titles
-> - set font size for labels on axes
-> - set size of numbers on x-axis
-> - set size of numbers on y-axis
-> - set size of ticks on x-axis
-> - When a code pattern feels too easy, change the input, break one line on purpose, and explain why the behavior changes.
+如果：
 
-## Worked examples
-> [!example] 用 dict 体现 hashing 思维
-> ```python
-> phone_book = {"Ana": "617-0000", "MIT": "617-1111"}
-> print(phone_book["Ana"])
-> ```
-> 这里你不需要顺序扫描整个表，而是通过 key 直接定位对应值，这正是 hashing 思维在 Python 中的日常体现。
+- 列表长度是 `L`
+- 每个元素占固定大小（为便于解释，先假设只是整数）
 
-> [!example] 最小随机模拟
-> ```python
-> import random
->
-> heads = 0
-> trials = 1000
-> for _ in range(trials):
->     if random.choice(["H", "T"]) == "H":
->         heads += 1
-> print(heads / trials)
-> ```
-> 模拟的套路是：定义随机规则，多次重复，然后用统计结果近似观察整体行为。
+那么一旦知道：
+
+- 列表起始地址
+- 每个元素大小
+- 索引 `i`
+
+就能直接算出第 `i` 个元素在哪个地址。
+
+所以：
+
+- 不需要一个个数过去
+- 只需要做地址偏移运算
+
+这就是 `Theta(1)` 的来源。
+
+### 4. list 里装的往往不是值本身，而是引用
+老师随后补充，真实 Python list 里不一定直接放原始整数值。
+
+如果 list 元素是：
+
+- 另一个 list
+- 一个 dictionary
+- 更复杂的对象
+
+那 list 本身存放的更像是引用 / 指针。
+
+这一步很重要，因为它帮你把前面学过的 aliasing、对象、嵌套结构与底层表示重新连起来。
+
+### 5. 为什么 equality / membership / iteration 是线性
+和 index access 对照起来，老师再次强调：
+
+- 判断两个 list 是否相等，要逐元素比
+- 判断某元素是否在 list 里，要一个个扫
+- 遍历 list 当然也要逐个访问
+
+所以这些操作天然和长度成正比。
+
+这一段实际上是在示范一种更成熟的复杂度理解：
+
+- 不是背表，而是回到“为了完成这个任务，最少得看多少数据”
+
+### 6. 从 list 过渡到 dict：为什么 dict 不能像 list 那样按位置找
+接着老师切到 dictionary。
+
+如果我们天真地把 dict 存成一串 entries：
+
+- 每个 entry 是 `[key, value]`
+- 所有 entry 排成一个长 list
+
+那么查某个 key 时，就只能：
+
+- 从头扫到尾
+- 一个个比 key
+
+这就会退化成 `Theta(n)`。
+
+所以 dict 想快，必须有别的组织方法。
+
+### 7. hashing：把 key 映射到 hash table 的某个位置
+这时课程正式引出 hashing。
+
+hashing 的核心思路是：
+
+1. 对 key 运行一个 hash function
+2. 得到某个数值
+3. 再把它映到 hash table 的某个 index / bucket
+
+于是查找时就不再是：
+
+- 在整个条目列表里线性扫
+
+而是：
+
+- 直接跳到某个预期位置附近去看
+
+> [!note]
+> 哈希的本质是“用计算换定位”，先算出 key 应该落在哪，而不是全表扫描。
+
+### 8. hash table 为什么常用 list 来做底层容器
+老师特别解释了 hash table 常被想成“一个很长的 list”。
+
+原因不是它和普通 list 语义一样，而是因为：
+
+- list indexing 本身是常数时间
+
+如果 hash function 能给出目标 bucket 的 index，  
+那么 hash table 的底层就可以借助 list 的 O(1) index access。
+
+所以 այստեղ课程其实把：
+
+- list 的底层优势
+- dict 的高层接口
+
+通过 hashing 连接起来了。
+
+### 9. collision：不同 key 可能 hash 到同一个 bucket
+老师接着解释一个不可避免的问题：collision。
+
+因为：
+
+- key 的可能空间巨大
+- hash table 的桶数量有限
+
+所以不同 key 可能映到同一位置。
+
+这时常见做法是：
+
+- 该 bucket 里再存一个小列表
+- 把所有碰撞进去的 entries 放进去
+
+于是查找时：
+
+- 先靠 hash function 快速缩小范围
+- 再在那个小 bucket 里局部扫描
+
+### 10. 什么叫 hashable：为什么 list 不能做 dict key
+老师随后把前面 mutable / immutable 的内容重新拉回来。
+
+一个对象若想做 dict key，必须是 **hashable**。
+
+核心要求是：
+
+- 多次对同一个对象做 hash，结果必须稳定
+
+这也是为什么：
+
+- int、str、tuple 通常可以
+- list 不行
+
+因为 list 是 mutable，如果内容变了，原来的 hash 位置就会失去意义。
+
+### 11. 好 hash function 要满足什么
+课堂还讨论了 hash function / hash table pair 的好坏标准。
+
+大致包括：
+
+- 结果要稳定
+- 计算不能太慢
+- 尽量把 keys 分散开
+- 尽量减少碰撞
+
+这一步的意义在于让你知道：
+
+- “平均接近常数时间”不是白送的
+- 它建立在合适的 hash design 上
+
+### 12. simulations：把概率问题交给计算机反复试验
+讲完 hashing 后，课堂最后一个技术主题是 simulation。
+
+老师把 simulation 的一般框架说得很清楚：
+
+1. 定义一次随机实验
+2. 重复很多次
+3. 统计结果
+4. 用相对频率或平均值近似真实概率 / 期望
+
+这部分很重要，因为它展示了 computation 在“解析解不好写”时的另一种力量。
+
+### 13. 骰子例子：频率逼近概率
+第一个 simulation 例子是掷骰子。
+
+老师没有从公式出发，而是直接：
+
+- 设定骰子六个面
+- 重复滚很多次
+- 统计某一面出现比例
+
+随着模拟次数增加，得到的比例会越来越接近真实概率。
+
+这让“probability as long-run frequency”在程序里变得非常具体。
+
+### 14. 更复杂的骰子实验：at least k times out of N rolls
+老师接着把单次掷骰扩展成更复杂事件：
+
+- 一次实验里掷 `N` 次
+- 统计某一面至少出现 `k` 次的概率
+
+这时 simulation 框架仍然完全一样，只是：
+
+- 单次实验内部的结构更复杂
+
+这说明 simulation 的一般性很强：
+
+- 你只要能定义一次实验如何进行
+- 就能把它重复很多次
+
+### 15. `fill_pool(size)`：simulation 也能近似连续随机量问题
+最后老师给出一个更贴近现实建模的例子：
+
+- 水龙头流速在 1 到 3 gallons/min 间随机波动
+- 想估计填满泳池要多久
+
+这时每次实验不是掷离散骰子，而是：
+
+- 生成一个区间上的随机实数
+- 计算对应填满时间
+
+然后再做很多次，取平均。
+
+这一步非常好，因为它告诉你：
+
+- simulation 不只适用于离散概率
+- 连续随机变量也能做
+
+### 16. 这节课最后真正做的是全课程回收
+Lecture 26 到最后其实是在把整门课的很多主线重新收回来：
+
+- list 的底层表示
+- dict 与 hashing
+- complexity intuition
+- randomness and simulation
+
+再加上老师对后续课程方向的提示，这一讲更像整门 6.100L 的 closure。
 
 ## Exercise log
-> [!warning] No official finger exercise
-> - Calendar explicitly marks this lecture as having no official finger exercise.
-> - Use the review checklist, the lecture code, and the linked recitation / problem set materials as the primary self-test for this lecture.
-> - For this lecture, a good replacement for the missing finger exercise is: hand-trace one representative example from the code, then write a fresh one from memory.
 
-## From lecture to recitation and homework
-> [!abstract] How this lecture shows up in practice
-> - Problem-set connection: this lecture does not have a direct calendar milestone attached, so use it as a consolidation lecture rather than a sprint lecture.
-> - Recitation connection: there is no recitation attached to this lecture week in the official calendar.
-> - Suggested workflow: read this note once, run the lecture code, solve the smallest official exercise without peeking, then open the linked recitation or problem set materials.
-> - If you can explain the note but still cannot start the homework, the gap is usually not theory but translation: you need one more pass through the worked examples and lecture code.
+> [!warning] No official finger exercise
+> 这讲官方没有单独的 finger exercise 文件。
+
+最适合按课堂内容做的自测有三类：
+
+- 口头解释为什么 `L[i]` 是 `Theta(1)` 而 `x in L` 是 `Theta(n)`。
+- 自己画一个小 hash table，模拟几次不同名字 hash 到 bucket 的过程。
+- 自己实现一次简单 simulation，比如 10000 次掷骰统计某事件概率。
+
+这三步分别对应本讲三条主线：
+
+- list implementation intuition
+- hashing intuition
+- simulation framework
 
 ## Links to follow-up practice
 - Slides: [[MIT 6.100L-slides/mit6_100l_lec26.pdf|Lecture 26 slides]]
@@ -133,18 +302,19 @@ lecture: 26
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 12.3, Ch 17)
 
 ## Review checklist
-- [ ] 我能解释 list access 与 hashing 的思路差异。
-- [ ] 我能说明为什么 dict 的查找方式与 list 不同。
-- [ ] 我能设计一个最简单的 simulation 实验。
-- [ ] 我能用自己的话总结整门课的主线。
-- [ ] 我能说出以后继续学习 Python / CS 时，这门课留下些什么。
-- [ ] 我能围绕“List access 与 hashing 是两种不同的定位思路”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能围绕“Simulation：当直接推公式很难时，用程序做实验”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能说出并避免这个高频误区：只记住某个数据结构快，却不理解它快在什么访问模式上。
-- [ ] 我能说出并避免这个高频误区：把 simulation 当成随便跑随机代码，而没有先定义清楚规则与统计目标。
-- [ ] 我能不看 slides，只看题面就判断这题主要在考本讲的哪一个知识点。
+- [ ] 我能解释为什么 list index access 是 `Theta(1)`。
+- [ ] 我能说明 contiguous memory / 地址偏移为什么支持常数时间访问。
+- [ ] 我能解释为什么 equality、membership、iteration 对 list 是线性的。
+- [ ] 我能说明如果把 dict 朴素存成 entry 列表，lookup 为什么会是 `Theta(n)`。
+- [ ] 我能解释 hash function 和 hash table 分别扮演什么角色。
+- [ ] 我能说明 collision 是什么，以及为什么它不可避免。
+- [ ] 我能解释为什么 mutable list 不能做 dict key。
+- [ ] 我能复述 simulation 的一般框架：定义实验、重复、统计。
+- [ ] 我能用骰子或 fill_pool 例子说明 simulation 如何逼近概率或平均值。
+- [ ] 我能按课堂顺序复述：list internals -> hashing -> simulations -> wrap-up。
 
 > [!warning] Common mistakes
-> - 只记住某个数据结构快，却不理解它快在什么访问模式上。
-> - 把 simulation 当成随便跑随机代码，而没有先定义清楚规则与统计目标。
-> - 学完整门课后仍然把概念当碎片，没有形成统一地图。
+> - 只背“dict 查找快”，却不知道快在哈希和底层索引。
+> - 把 hashable 理解成“任何对象都能 hash”。
+> - 忘记 collision 后还需要在 bucket 里继续区分条目。
+> - 把 simulation 理解成“随机跑一遍”，却没有大量重复和统计。

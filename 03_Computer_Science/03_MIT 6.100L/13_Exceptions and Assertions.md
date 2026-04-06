@@ -16,115 +16,252 @@ lecture: 13
 # Lecture 13: Exceptions and Assertions
 
 > [!tip] Hint
-> - 我能解释 exception 是什么，以及它和普通返回值为什么不是一回事。
-> - 我能说出 try/except 的作用：隔离错误处理，而不是吞掉一切。
-> - 我能说明 assertion 在程序里表达的是什么 contract。
-> - 我能判断某个错误应该用条件分支处理，还是用异常机制处理。
-> - 我能围绕本讲的主轴 “Exceptions 是程序对异常状态的显式信号” / “try / except 应该让错误处理更清楚，而不是更模糊” / “Assertions 把隐含假设写成可执行的检查”，不翻 slides 也把整节课重新讲一遍。
-> - 我能解释 exception 为什么不是普通返回值。
-> - 我能写出只捕获特定异常的 try/except。
-> - 我能说明 assertion 最适合表达哪类假设。
-> - 我能把本讲最关键的代码模式手写出来，并解释每一步为什么这样写。
+> - 这节课开场先从 “scary red errors” 讲起，目标不是怕错误，而是学会把错误纳入程序逻辑。
+> - 异常是程序遇到 unexpected condition 时抛出的信号，不同错误类型对应不同异常。
+> - `try`/`except` 的课堂语义很明确：先试正常路径，出错了再走备用处理逻辑。
+> - `except ValueError` 和裸 `except` 的区别，是“你到底想捕获什么问题”。
+> - 这节课反复强调：不是所有错误都该被吞掉，有时应该返回默认值，有时应该重新 raise。
+> - `raise ValueError(...)` 的意义是把“这个输入不符合我函数约定”明确表达出来。
+> - assertions 也是异常，但更像是给程序员自己的内在假设加护栏。
+> - `assert condition` 失败时抛的是 `AssertionError`，适合放在“不该被破坏的前提”上。
+> - exceptions 是处理运行时异常情况，assertions 更偏向开发时抓逻辑违例。
+> - 听完这节课，你应该能判断某个问题该 try/except、该 raise、还是该 assert。
 
-> [!info] Lecture map
-> - Readings: Ch 9
-> - Recommended use order: read the Hint first, reconstruct the lecture from memory, then study the Core ideas, then run the official code, and only after that open the linked exercises.
-> - Main threads in this lecture: Exceptions 是程序对异常状态的显式信号 / try / except 应该让错误处理更清楚，而不是更模糊 / Assertions 把隐含假设写成可执行的检查
-> - 前面的 testing/debugging 主要在定位问题，这一讲开始讨论如何在程序运行时显式处理异常路径。
-> - 异常机制的重点不是‘不让程序报错’，而是让错误被更合理地暴露、传播或恢复。
-> - assertion 则是一种更主动的自检：把本来只存在于脑子里的假设写进代码。
+## Lecture flow
 
-## Core ideas
-### Exceptions 是程序对异常状态的显式信号
-异常不是普通数据，它代表程序遇到了当前流程无法正常继续的情况。
-- 如果把错误也塞进普通返回值，调用者很容易忘记检查；异常机制强迫你正视错误路径。
-- 常见异常如 `ZeroDivisionError`、`TypeError`、`ValueError` 都在提醒‘当前输入或状态违背了预期’。
-- 异常会沿调用栈向上传播，直到被匹配的 `except` 处理或最终让程序终止。
-- 所以异常本质上也是一种控制流。
+### 1. 从 debugging ducks 进入：错误不是只拿来害怕的
+Lecture 13 的开场延续了上一讲的 debugging 氛围。  
+老师先拿 “debugging ducks” 活跃气氛，然后立刻转到今天主题：
 
-> [!note] What to internalize
-> - One-sentence takeaway: 异常不是普通数据，它代表程序遇到了当前流程无法正常继续的情况。
-> - Review anchor: 如果把错误也塞进普通返回值，调用者很容易忘记检查；异常机制强迫你正视错误路径。
-> - Review anchor: 常见异常如 `ZeroDivisionError`、`TypeError`、`ValueError` 都在提醒‘当前输入或状态违背了预期’。
+- exceptions
+- assertions
 
-从做题角度看，只要题目在考“Exceptions 是程序对异常状态的显式信号”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：异常不是普通数据，它代表程序遇到了当前流程无法正常继续的情况。
+她把这些东西描述成我们经常看到的 “scary red errors”。  
+这句话的重点不是渲染恐惧，而是让你接受：
 
-### try / except 应该让错误处理更清楚，而不是更模糊
-好的异常处理代码能把正常路径和错误恢复路径分开写，从而保持主逻辑清晰。
-- 只捕获你真正知道如何处理的异常类型，避免一个裸 `except` 把所有问题都吃掉。
-- 异常处理的目的是恢复、补救、记录或明确失败，而不是掩盖错误。
-- 如果 except 块太大，往往说明你没有定位清楚风险点在哪里。
-- 写异常处理时要问：如果这里出错，我到底打算让程序怎么继续？
+- 错误信息不是程序世界的意外噪音
+- 它们本身就是语言机制的一部分
 
-> [!note] What to internalize
-> - One-sentence takeaway: 好的异常处理代码能把正常路径和错误恢复路径分开写，从而保持主逻辑清晰。
-> - Review anchor: 只捕获你真正知道如何处理的异常类型，避免一个裸 `except` 把所有问题都吃掉。
-> - Review anchor: 异常处理的目的是恢复、补救、记录或明确失败，而不是掩盖错误。
+### 2. 什么是 exception：程序遇到了原本没预料到的情况
+老师先从概念上解释 exception。
 
-从做题角度看，只要题目在考“try / except 应该让错误处理更清楚，而不是更模糊”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：好的异常处理代码能把正常路径和错误恢复路径分开写，从而保持主逻辑清晰。
+程序多数时候按正常路径运行；  
+但一旦碰到某个意外条件，比如：
 
-### Assertions 把隐含假设写成可执行的检查
-assert 不是给用户做输入校验，而是给程序员自己做内部一致性检查：如果这里不成立，说明程序逻辑已经偏了。
-- assertion 常用来表达 precondition、postcondition 或重要 invariant。
-- 它的价值在于把‘我默认这里应该成立’变成机器能立刻验证的事实。
-- 当 assert 失败时，你得到的是更早、更靠近 bug 根源的反馈。
-- 会写 assert，往往说明你已经能清楚说出程序依赖哪些逻辑假设。
+- index 越界
+- 类型不匹配
+- 名字不存在
+- 除以 0
 
-> [!note] What to internalize
-> - One-sentence takeaway: assert 不是给用户做输入校验，而是给程序员自己做内部一致性检查：如果这里不成立，说明程序逻辑已经偏了。
-> - Review anchor: assertion 常用来表达 precondition、postcondition 或重要 invariant。
-> - Review anchor: 它的价值在于把‘我默认这里应该成立’变成机器能立刻验证的事实。
+Python 就会抛出一个 exception。
 
-从做题角度看，只要题目在考“Assertions 把隐含假设写成可执行的检查”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：assert 不是给用户做输入校验，而是给程序员自己做内部一致性检查：如果这里不成立，说明程序逻辑已经偏了。
+所以 exception 可以理解成：
 
-## Code patterns from lecture
-> [!note] What the official code is trying to teach
-> - The official lecture code is worth reading as a notebook of small patterns, not just as a file to run once.
-> - Best workflow: predict output first, then run the code, then rewrite the pattern in your own words or with slightly changed values.
-> - Example: Exceptions with summing digits in a string
-> - Not using exceptions
-> - print(sum_digits("123"))
-> - print(sum_digits("123abc"))
-> - Using exceptions around potentially problematic code
-> - Print that an error happened and let the program keep going
-> - When a code pattern feels too easy, change the input, break one line on purpose, and explain why the behavior changes.
+> [!note]
+> 程序执行偏离了“预期正常路径”时发出的信号。
 
-## Worked examples
-> [!example] 只捕获自己知道如何处理的异常
-> ```python
-> def safe_divide(a, b):
->     try:
->         return a / b
->     except ZeroDivisionError:
->         return None
->
-> print(safe_divide(10, 0))
-> ```
-> 这里的 except 很具体：只处理除零这一个已知问题，而不是把所有错误都吞掉。
+课堂这里也专门说，很多你已经见过的错误其实都是不同类型的 exception。
 
-> [!example] 用 assertion 写出函数依赖的假设
-> ```python
-> def average(nums):
->     assert len(nums) > 0, "nums must not be empty"
->     return sum(nums) / len(nums)
->
-> print(average([1, 2, 3]))
-> ```
-> 这个 assert 把‘不能为空’从脑中假设变成了代码里的 contract。
+### 3. 以前程序一报错就崩，现在开始学会“接住”异常
+到这一步老师指出，之前我们的程序遇到异常时通常只有一个结果：
+
+- 直接 crash
+- 回去 debug
+
+但 Python 其实允许你写代码去处理这些情况。  
+这就是 `try` / `except` 的意义。
+
+它们让程序可以说：
+
+- 先按正常逻辑试试看
+- 如果某类异常真的发生了
+- 那就执行另一套处理代码
+
+### 4. `try` / `except`：把正常路径和异常路径显式分开
+老师先讲最基本框架：
+
+```python
+try:
+    # potentially problematic code
+except:
+    # code to run if an exception occurs
+```
+
+理解这段结构时要抓住两条：
+
+- `try` 里面放的是你希望正常执行的代码
+- `except` 里面放的是“如果 try 失败，该怎么办”
+
+如果 try 里没有异常，except 就不会运行。  
+如果 try 里抛了异常，Python 会跳出 try，转去执行对应的 except。
+
+### 5. 具体例子：字符串求数字和
+老师用 `sum_digits` 一类例子演示异常处理。
+
+原始任务是：
+
+- 遍历字符串
+- 把其中数字字符转换成 int
+- 求和
+
+问题在于，如果字符串里混入非数字字符，`int(...)` 可能抛 `ValueError`。
+
+于是你就有几种选择：
+
+- 忽略这个字符
+- 给出默认处理
+- 直接把异常继续抛给调用者
+
+课程这里要你看到的不是某一个“正确唯一答案”，而是：
+
+- exception handling 让你能明确决定程序该怎么处理坏输入
+
+### 6. 指定异常类型：不是所有错误都该被同一种方法处理
+老师接下来强调，except 不一定要写得很宽泛。
+
+你可以写：
+
+```python
+except ValueError:
+    ...
+except ZeroDivisionError:
+    ...
+except Exception as err:
+    ...
+```
+
+课堂在这里的重要观念是：
+
+- 不同异常代表不同失败原因
+- 处理方式也可能不同
+
+所以如果你知道自己要防的就是 `ValueError`，那就应该写得更具体，而不是用一个笼统的裸 `except` 把所有问题吞掉。
+
+> [!warning]
+> 裸 `except` 常常太宽，会把你原本想看见的 bug 也吞掉。
+
+### 7. `pairwise_div`：异常处理可以保护整个循环继续跑
+老师接着用列表分母相除之类的例子说明：
+
+- 如果没有异常处理，循环中途遇到一个坏元素可能整个函数就崩掉
+- 加了 try/except，你可以选择记录问题、跳过坏输入，或对该位置给默认值
+
+这时异常处理的一个实际价值就很明显了：
+
+- 它不只是“报错更好看”
+- 而是能决定整个程序是“全盘崩掉”还是“局部容错继续工作”
+
+### 8. 什么时候应该 `raise` 自己的异常
+讲到这里，老师把方向再推进一步：
+
+- 你不只会“接住” Python 自带异常
+- 你还可以主动 `raise` 自己的异常
+
+例如你写函数时可能想表达：
+
+- 输入为空不合法
+- 分母列表里不允许出现 0
+- 某个参数类型或范围违反函数前提
+
+这时你可以显式写：
+
+```python
+raise ValueError("denominator cannot be 0")
+```
+
+这样做的意义是把函数的前提条件说得更清楚，而不是等代码在深处莫名崩掉。
+
+### 9. `raise` 的课堂语义：把“这是坏输入”写进接口里
+这一段的关键不是背 `raise` 的语法，而是理解它的设计角色。
+
+如果某个输入违背了函数承诺，你通常有两种选择：
+
+- 悄悄给个默认值，继续跑
+- 明确拒绝它，并 raise 一个异常
+
+当错误真的代表“调用者违反了接口约定”时，后者往往更合适。  
+这让函数接口边界更清楚，也让 bug 更早暴露出来。
+
+### 10. assertions：给程序自己的假设加护栏
+讲完 exceptions 之后，老师再引入 assertions。
+
+assertion 也是一种异常机制，但角度不一样。  
+它的核心语句是：
+
+```python
+assert condition
+```
+
+如果 `condition` 为真，什么都不发生；  
+如果为假，就抛出 `AssertionError`。
+
+课堂里老师把它解释成：
+
+- 程序员在代码中声明“这里我认为某个条件必须成立”
+- 一旦不成立，立刻暴露
+
+### 11. assertion 更像开发时的自我检查
+和 try/except 不同，assert 往往不是用来优雅处理用户输入，而是用来保护程序内部逻辑。
+
+例如：
+
+- 某长度不该为 0
+- 某分母在这里必须非零
+- 某中间变量应满足你前面推导出的不变量
+
+这类条件如果不成立，往往说明：
+
+- 程序逻辑已经走偏
+- 或某个前置函数没有兑现承诺
+
+所以 assert 更像一种开发时的 guardrail。
+
+### 12. exceptions 和 assertions 的课堂分工
+老师后面其实一直在帮助大家区分这两套机制：
+
+- exceptions：处理运行时可能出现的异常情况
+- assertions：检查程序内部本不该被破坏的假设
+
+更口语化地说：
+
+- `try` / `except` 更像“外部世界可能出错，我要怎么应对”
+- `assert` 更像“如果这里都不成立，那说明我的程序自己有问题”
+
+### 13. 这节课并不是“让程序不报错”，而是让错误变得有语义
+Lecture 13 最容易被误读成“学会别让程序崩”。  
+但课堂真正目标更高：
+
+- 不是简单压制错误
+- 而是让错误处理更有语义、更靠近接口边界
+
+好的 exception / assertion 使用，会让代码回答下面这些问题：
+
+- 什么算合法输入
+- 什么算调用者犯错
+- 什么算程序内部逻辑违例
+- 出问题后是继续、跳过、默认、还是立刻停止
 
 ## Exercise log
-> [!note] Finger exercise snapshot
-> - Official prompt: Impoement the function that meets the specification beoow.: def sum_str_lengths(L): """ L is a non-empty list containing either: * string elements or * a non-empty sublist of string elements Returns the sum of the...
-> - What this is really testing: whether you can compress the lecture into one small, high-frequency coding move without needing the slides beside you.
-> - Where to revisit if this feels shaky: go back to the first two Core ideas sections in this note, then rerun the official lecture code once with your own input.
-> - Follow-on practice path: after this finger exercise, the most natural next stop is Recitation 07.
 
-## From lecture to recitation and homework
-> [!abstract] How this lecture shows up in practice
-> - Problem-set connection: this lecture does not have a direct calendar milestone attached, so use it as a consolidation lecture rather than a sprint lecture.
-> - Recitation connection: Recitation 07 is the best place to turn the lecture ideas into shorter solved exercises.
-> - Suggested workflow: read this note once, run the lecture code, solve the smallest official exercise without peeking, then open the linked recitation or problem set materials.
-> - If you can explain the note but still cannot start the homework, the gap is usually not theory but translation: you need one more pass through the worked examples and lecture code.
+> [!example] Finger exercise 13
+> 官方题目是 `sum_str_lengths(L)`：
+> - `L` 是非空列表
+> - 元素要么是字符串，要么是“非空字符串子列表”
+> - 返回所有字符串长度之和
+> - 如果出现非字符串或非列表元素，要 `raise ValueError`
+
+这题正好卡在本讲的核心点上：
+
+- 你不只是遍历和计数
+- 你还要在发现非法结构时主动抛异常
+
+官方思路就是：
+
+- 遇到 `str` 就累加长度
+- 遇到 `list` 就继续检查其元素
+- 遇到别的类型就 `raise ValueError`
+
+所以这题本质上在训练你把“输入前提”写成代码里的显式错误路径。
 
 ## Links to follow-up practice
 - Slides: [[MIT 6.100L-slides/mit6_100l_lec13.pdf|Lecture 13 slides]]
@@ -136,18 +273,19 @@ assert 不是给用户做输入校验，而是给程序员自己做内部一致�
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 9)
 
 ## Review checklist
-- [ ] 我能解释 exception 为什么不是普通返回值。
-- [ ] 我能写出只捕获特定异常的 try/except。
-- [ ] 我能说明 assertion 最适合表达哪类假设。
-- [ ] 我能判断一个错误应该由分支处理还是由异常传播。
-- [ ] 我能说明‘吞掉异常’为什么危险。
-- [ ] 我能围绕“Exceptions 是程序对异常状态的显式信号”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能围绕“try / except 应该让错误处理更清楚，而不是更模糊”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能说出并避免这个高频误区：用一个大而全的裸 `except` 掩盖真正的 bug。
-- [ ] 我能说出并避免这个高频误区：把 assertion 当成所有输入校验的万能工具，而不是内部逻辑检查。
-- [ ] 我能不看 slides，只看题面就判断这题主要在考本讲的哪一个知识点。
+- [ ] 我能解释 exception 的基本含义和它与普通“报错信息”的关系。
+- [ ] 我能说明 `try` / `except` 的执行流程。
+- [ ] 我能区分具体异常类型和裸 `except` 的差别。
+- [ ] 我能说明什么时候应该吞掉异常、什么时候应该重新抛出。
+- [ ] 我能解释 `raise ValueError(...)` 为什么是在表达接口边界。
+- [ ] 我能解释 assertion 的作用以及它和 exception handling 的区别。
+- [ ] 我能判断某个条件更适合写成 `assert` 还是更适合写成 `if ...: raise ...`。
+- [ ] 我能把 finger exercise 13 与“主动 raise 异常”联系起来。
+- [ ] 我能说出本讲不是为了“消灭错误”，而是让错误处理有语义。
+- [ ] 我能按课堂顺序复述：认识异常 -> try/except -> specific exceptions -> raise -> assert。
 
 > [!warning] Common mistakes
-> - 用一个大而全的裸 `except` 掩盖真正的 bug。
-> - 把 assertion 当成所有输入校验的万能工具，而不是内部逻辑检查。
-> - 异常发生后没有明确策略，只是让程序继续跑下去。
+> - 用裸 `except` 把本应暴露的 bug 一起吞掉。
+> - 看到异常就想强行继续运行，而不思考接口是不是已经被破坏。
+> - 把 assertion 当成用户输入校验的唯一手段。
+> - 不区分“调用者传错了参数”和“程序内部逻辑自己坏了”。

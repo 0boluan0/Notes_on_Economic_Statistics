@@ -16,121 +16,296 @@ lecture: 16
 # Lecture 16: Recursion on Non-Numerics
 
 > [!tip] Hint
-> - 我能把递归从数字问题迁移到 string、list 等非数值结构上。
-> - 我能说明 memoization 为什么能改善某些递归的重复计算。
-> - 我能解释‘递归处理 sequence’时规模是如何减少的。
-> - 我能看出一个递归是不是在重复算同一个子问题。
-> - 我能围绕本讲的主轴 “结构递归：把 sequence 看成‘头 + 剩余部分’” / “Fibonacci 提醒我们：递归可能有大量重复工作” / “递归能自然表达嵌套结构与分治问题”，不翻 slides 也把整节课重新讲一遍。
-> - 我能在 string 或 list 上写出正确的 base case 和 recursive case。
-> - 我能解释 Fibonacci 为什么会有重叠子问题。
-> - 我能说明 memoization 的作用与成本。
-> - 我能把本讲最关键的代码模式手写出来，并解释每一步为什么这样写。
+> - 这节课开头先回顾递归，但很快就把注意力从纯数字转到 list、nested list 这类非数值对象上。
+> - Fibonacci 先被拿出来复习，是为了暴露“递归定义很自然，但 naive recursion 可能重复工作得很严重”。
+> - memoization 用 dict 存中间结果，正好把前面的 recursion 和 dictionaries 连了起来。
+> - 课堂后半段的真正主角是 list recursion：`L[0]` 和 `L[1:]` 这套拆法会反复出现。
+> - `total_recur` 是最小模板：空列表或单元素是 base case，其余交给更短的子列表。
+> - `in_list` 的错误版本很关键，因为它说明递归不只要把规模缩小，还要保留必要的信息。
+> - `flatten`、`deep_rev` 这些例子在告诉你：递归不仅能处理数字，也能处理嵌套结构。
+> - 每次写 list recursion 时，都要先问自己 base case 是空列表、单元素列表，还是别的结构。
+> - towers of Hanoi 被放在最后，是为了让你感受到递归对“分步骤搬运”类问题的天然契合。
+> - 听完这节课，你应该能把 recursion 模板从 numeric 问题迁移到 sequence 和 nested structure 上。
 
-> [!info] Lecture map
-> - Readings: Ch 6.2-6.4
-> - Recommended use order: read the Hint first, reconstruct the lecture from memory, then study the Core ideas, then run the official code, and only after that open the linked exercises.
-> - Main threads in this lecture: 结构递归：把 sequence 看成‘头 + 剩余部分’ / Fibonacci 提醒我们：递归可能有大量重复工作 / 递归能自然表达嵌套结构与分治问题
-> - 这讲的关键不是引入新语法，而是把递归思维从 `n-1` 推广到更一般的结构缩小。
-> - 一旦你能在 string、list、tree 这类对象上看见递归，你对分治与结构化算法的理解会明显升级。
-> - Fibonacci 与 memoization 则提醒我们：递归写法优雅，但不自动保证高效。
+## Lecture flow
 
-## Core ideas
-### 结构递归：把 sequence 看成‘头 + 剩余部分’
-对字符串和列表做递归时，最自然的切法通常不是减一个数字，而是拿走第一个元素，把剩余部分交给递归处理。
-- 例如处理字符串时，可以把问题拆成‘处理首字符’与‘处理剩余子串’。
-- 这种写法和循环扫描 sequence 的本质目标相同，只是控制结构换成了递归。
-- 如果每次递归都稳定减少一个元素，base case 往往就是空串、空 list 或单元素结构。
-- 这让你开始从数据结构的形状而不是数字大小思考规模。
+### 1. 先用 Fibonacci 回顾递归，但这次重点是效率
+Lecture 16 一开始没有立刻上 list recursion，而是先回看上一讲的递归思想。
 
-> [!note] What to internalize
-> - One-sentence takeaway: 对字符串和列表做递归时，最自然的切法通常不是减一个数字，而是拿走第一个元素，把剩余部分交给递归处理。
-> - Review anchor: 例如处理字符串时，可以把问题拆成‘处理首字符’与‘处理剩余子串’。
-> - Review anchor: 这种写法和循环扫描 sequence 的本质目标相同，只是控制结构换成了递归。
+老师选的是 Fibonacci：
 
-从做题角度看，只要题目在考“结构递归：把 sequence 看成‘头 + 剩余部分’”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：对字符串和列表做递归时，最自然的切法通常不是减一个数字，而是拿走第一个元素，把剩余部分交给递归处理。
+- `fib(1) = 1`
+- `fib(2) = 1`
+- `fib(n) = fib(n-1) + fib(n-2)`
 
-### Fibonacci 提醒我们：递归可能有大量重复工作
-某些递归定义虽然非常贴近数学描述，但计算时会反复求解同一个子问题，效率极差。
-- 朴素 Fibonacci 会重复计算相同的 `fib(k)` 很多次，这是典型的重叠子问题。
-- 一旦子问题会重复出现，memoization 就能通过缓存结果显著减少开销。
-- 缓存不是递归的修补，而是承认‘优雅定义’与‘高效执行’有时需要两层设计。
-- 这也为后面动态规划和复杂度分析建立了直觉。
+这当然是很典型的递归定义，但这次回顾的重点不再只是：
 
-> [!note] What to internalize
-> - One-sentence takeaway: 某些递归定义虽然非常贴近数学描述，但计算时会反复求解同一个子问题，效率极差。
-> - Review anchor: 朴素 Fibonacci 会重复计算相同的 `fib(k)` 很多次，这是典型的重叠子问题。
-> - Review anchor: 一旦子问题会重复出现，memoization 就能通过缓存结果显著减少开销。
+- base case 是什么
+- recursive step 是什么
 
-从做题角度看，只要题目在考“Fibonacci 提醒我们：递归可能有大量重复工作”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：某些递归定义虽然非常贴近数学描述，但计算时会反复求解同一个子问题，效率极差。
+而是要开始看：
 
-### 递归能自然表达嵌套结构与分治问题
-像 Towers of Hanoi、嵌套列表处理等问题，递归的优势是能直接照着问题结构写，而不是强行把结构摊平成循环状态机。
-- 当一个问题天然由若干更小的同类子问题组成时，递归描述通常最自然。
-- 但自然不等于免费：每一次函数调用都要付出栈与时间成本。
-- 所以递归程序写完后，最好马上问两个问题：规模是否单调减小？子问题是否会重复？
-- 如果这两个问题答不清，程序就算能跑，也很难算稳。
+- 递归展开后有没有重复工作
 
-> [!note] What to internalize
-> - One-sentence takeaway: 像 Towers of Hanoi、嵌套列表处理等问题，递归的优势是能直接照着问题结构写，而不是强行把结构摊平成循环状态机。
-> - Review anchor: 当一个问题天然由若干更小的同类子问题组成时，递归描述通常最自然。
-> - Review anchor: 但自然不等于免费：每一次函数调用都要付出栈与时间成本。
+### 2. naive Fibonacci 很自然，但会爆出大量重复调用
+`fib_recur(n)` 的定义非常顺：
 
-从做题角度看，只要题目在考“递归能自然表达嵌套结构与分治问题”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：像 Towers of Hanoi、嵌套列表处理等问题，递归的优势是能直接照着问题结构写，而不是强行把结构摊平成循环状态机。
+```python
+def fib_recur(n):
+    if n == 1 or n == 2:
+        return 1
+    else:
+        return fib_recur(n - 1) + fib_recur(n - 2)
+```
 
-## Code patterns from lecture
-> [!note] What the official code is trying to teach
-> - The official lecture code is worth reading as a notebook of small patterns, not just as a file to run once.
-> - Best workflow: predict output first, then run the code, then rewrite the pattern in your own words or with slightly changed values.
-> - Fibonacci with a dictionary
-> - print(fib_recur(34))
-> - print(fib_efficient(34, d))
-> - make a score of x-1 then add 1
-> - and make a score of x-2 then add 2
-> - and make a score of x-3 then add 3
-> - When a code pattern feels too easy, change the input, break one line on purpose, and explain why the behavior changes.
+问题在于，一旦 trace 稍大的 `n`，你会发现：
 
-## Worked examples
-> [!example] 递归反转字符串
-> ```python
-> def reverse_string(s):
->     if s == "":
->         return ""
->     return reverse_string(s[1:]) + s[0]
->
-> print(reverse_string("python"))
-> ```
-> 问题规模通过 `s[1:]` 递减，base case 是空字符串。这是典型的非数值递归。
+- `fib(n-2)` 会被算很多遍
+- `fib(n-3)` 会被算得更多
 
-> [!example] 用 memoization 优化 Fibonacci
-> ```python
-> def fib(n, memo=None):
->     if memo is None:
->         memo = {}
->     if n in memo:
->         return memo[n]
->     if n <= 1:
->         return n
->     memo[n] = fib(n - 1, memo) + fib(n - 2, memo)
->     return memo[n]
->
-> print(fib(10))
-> ```
-> 缓存把重叠子问题的重复求值消掉，说明递归写法与性能优化可以同时存在。
+这说明“递归定义自然”不等于“递归实现高效”。  
+这也是本讲开场比上讲多出来的一层认识。
+
+### 3. memoization：把递归结果存起来，别一遍遍重算
+老师随后给出改进版 `fib_efficient(n, d)`。
+
+关键点是：
+
+- `d` 是一个 dict
+- key 是已经算过的 `n`
+- value 是对应 Fibonacci 值
+
+于是逻辑变成：
+
+```python
+if n in d:
+    return d[n]
+else:
+    ans = fib_efficient(n - 1, d) + fib_efficient(n - 2, d)
+    d[n] = ans
+    return ans
+```
+
+这一步非常有代表性，因为它让你看到：
+
+- recursion 不是孤立主题
+- 它会和前面学过的 dict 结合，形成更高效的实现
+
+### 4. 递归可以不止一个子调用：`score_count`
+老师还给了 `score_count(x)` 这类例子。
+
+它不是像上一讲乘法那样只有一个递归分支，而是：
+
+- `score_count(x-1)`
+- `score_count(x-2)`
+- `score_count(x-3)`
+
+一起出现。
+
+这说明递归模式会越来越丰富：
+
+- 有时一层只生成一个更小问题
+- 有时一层会分裂成多个更小问题
+
+理解这一点，对后面看复杂度和树状展开非常重要。
+
+### 5. 课堂正式转场：主角从数字变成 list
+回顾完数字递归后，老师明确说今天 main event 是 recursion on non-numerics，尤其是 lists。
+
+转场之后，你需要把上讲的递归模板翻译成列表语言：
+
+- 数字版常问 “离 base case 还有多远”
+- list 版常问 “列表还剩多少元素没处理”
+
+最常见拆法就是：
+
+- `L[0]`：当前要处理的头部
+- `L[1:]`：剩余更小的同类问题
+
+### 6. `total_recur(L)`：list recursion 的最小模板
+老师先从最简单的例子开始：递归求列表元素和。
+
+```python
+def total_recur(L):
+    if L == []:
+        return 0
+    else:
+        return L[0] + total_recur(L[1:])
+```
+
+这里的模式几乎是后面所有 list recursion 的母版：
+
+- base case：空列表
+- recursive step：处理头元素 + 递归处理剩余部分
+
+> [!note]
+> list recursion 最常见的套路，就是“先处理一个元素，再把问题交给更短的列表”。
+
+### 7. `total_len_recur`：换掉“处理头元素”的方式，框架不变
+随后老师让你把同样结构用于字符串列表长度和。
+
+核心思想完全不变，只是头元素的处理方式从：
+
+- `L[0]`
+
+变成：
+
+- `len(L[0])`
+
+这一步是在训练你别把递归模板和某个具体运算绑死。  
+真正稳定的是结构，而不是里面那一个动作。
+
+### 8. `in_list(L, e)`：递归不仅要缩小，还要保持逻辑正确
+老师接下来故意展示了一个错误版本：
+
+```python
+def in_list(L, e):
+    if len(L) == 1:
+        return L[0] == e
+    else:
+        return in_list(L[1:], e)
+```
+
+它的问题在于：
+
+- 每次都只看尾部递归结果
+- 却没有检查当前头元素是不是 `e`
+
+所以如果 `e` 正好在前面，它会被跳过去。
+
+这是本讲非常值得记住的一幕，因为它说明：
+
+- 递归不是“只会把输入切小”
+- 你还必须确保每一层保留了问题真正需要的信息
+
+### 9. 正确版 `in_list`：头元素检查是不可省的一层工作
+修好之后的写法通常是：
+
+```python
+def in_list(L, e):
+    if len(L) == 0:
+        return False
+    elif L[0] == e:
+        return True
+    else:
+        return in_list(L[1:], e)
+```
+
+这正好展示了递归设计时两个常见判断：
+
+- base case 是什么
+- 当前层自己必须做什么
+
+只有把这两个问题都回答清楚，递归才会既终止又正确。
+
+### 10. `flatten(L)`：开始处理嵌套结构
+课堂后半段递归真正开始变有趣的是 `flatten(L)`。
+
+如果 `L` 的元素本身就是子列表，那么你希望输出：
+
+- 把所有子列表里的元素按顺序拼成一个平坦列表
+
+在简单版本里：
+
+```python
+def flatten(L):
+    if len(L) == 1:
+        return L[0]
+    else:
+        return L[0] + flatten(L[1:])
+```
+
+这里你已经不只是拆“列表长度”，还在依赖：
+
+- 列表拼接
+- 子列表本身的结构
+
+### 11. `in_lists_of_list`：先看当前子列表，再看剩余子列表
+老师又给出一个很自然的迁移题：
+
+- `L` 是 list of lists
+- 判断 `e` 是否出现在任何一个子列表里
+
+这时递归思路是：
+
+- 如果当前子列表里已经有 `e`，立即返回 `True`
+- 否则把问题缩成“剩余子列表里有没有”
+
+这比单层 `in_list` 多了一层嵌套，但骨架依然熟悉。
+
+### 12. `my_rev`：递归也能做顺序重排
+接下来老师把递归用在反转列表顺序上：
+
+```python
+def my_rev(L):
+    if len(L) == 1:
+        return L
+    else:
+        return my_rev(L[1:]) + [L[0]]
+```
+
+这个例子很重要，因为它说明递归不仅能累计数值，还能重组顺序。
+
+写法的直觉是：
+
+- 先把后面的部分反过来
+- 再把当前头元素接到最后
+
+### 13. `deep_rev`：递归处理“嵌套里的嵌套”
+真正把 recursion on non-numerics 推到深水区的是 `deep_rev`。
+
+此时列表元素可能本身还是 list，  
+于是你不仅要反转顶层顺序，还要递归反转内部子列表。
+
+这里课堂重点变成：
+
+- 先判断当前元素是不是 list
+- 如果不是，按普通元素处理
+- 如果是，再对这个子列表递归调用 `deep_rev`
+
+这类题已经很接近“树状结构递归”了。
+
+> [!example]
+> `deep_rev` 的价值在于让你真正看到：  
+> 递归不是只会对一个方向不断切片，它可以随着数据结构本身的嵌套层级一起深入。
+
+### 14. Towers of Hanoi：递归适合“分阶段搬运”问题
+老师最后还给了 Towers of Hanoi。
+
+它的思想特别适合递归：
+
+1. 先把上面 `n-1` 个盘子移到 spare
+2. 再把最大的盘子移到 target
+3. 再把 `n-1` 个盘子从 spare 移到 target
+
+这里递归的美感在于：
+
+- 大问题可以拆成几个更小的同类问题
+- 每一步拆法结构完全一致
+
+所以这节课最后是在用一个更“算法味”的问题巩固递归直觉。
 
 ## Exercise log
-> [!note] Finger exercise snapshot
-> - Official prompt: Impoement the function that meets the specification beoow.: def flatten(L): """ L: a list Returns a copy of L, which is a flattened version of L """ # Your code here # Examples: L =...
-> - What this is really testing: whether you can compress the lecture into one small, high-frequency coding move without needing the slides beside you.
-> - Where to revisit if this feels shaky: go back to the first two Core ideas sections in this note, then rerun the official lecture code once with your own input.
-> - Follow-on practice path: after this finger exercise, the most natural next stop is Recitation 08.
-> - Homework bridge: this lecture is directly connected to the following calendar milestones: PS 4 out, PS 3 due.
 
-## From lecture to recitation and homework
-> [!abstract] How this lecture shows up in practice
-> - Problem-set connection: calendar shows this lecture touching the following milestones: PS 4 out；PS 3 due。读完本讲后，不应只会解释概念，还应能把它们搬到更长的程序里。
-> - Recitation connection: Recitation 08 is the best place to turn the lecture ideas into shorter solved exercises.
-> - Suggested workflow: read this note once, run the lecture code, solve the smallest official exercise without peeking, then open the linked recitation or problem set materials.
-> - If you can explain the note but still cannot start the homework, the gap is usually not theory but translation: you need one more pass through the worked examples and lecture code.
+> [!example] Finger exercise 16
+> 官方练习就是 `flatten(L)`：
+> - 输入是可能含嵌套子列表的 list
+> - 返回一个完全 flatten 过的新列表
+
+官方解法很能代表本讲后半段的标准写法：
+
+```python
+result = []
+for i in L:
+    if type(i) == list:
+        result.extend(flatten(i))
+    else:
+        result.append(i)
+return result
+```
+
+它和课堂上的简化版 `flatten` 相比，多了一层真正的“类型判断后递归进入子列表”。  
+所以这题是本讲最核心的一道迁移练习。
 
 ## Links to follow-up practice
 - Slides: [[MIT 6.100L-slides/mit6_100l_lec16.pdf|Lecture 16 slides]]
@@ -143,18 +318,19 @@ lecture: 16
 - Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 6.2-6.4)
 
 ## Review checklist
-- [ ] 我能在 string 或 list 上写出正确的 base case 和 recursive case。
-- [ ] 我能解释 Fibonacci 为什么会有重叠子问题。
-- [ ] 我能说明 memoization 的作用与成本。
-- [ ] 我能判断一个递归问题是不是天然适合结构递归。
-- [ ] 我能比较结构递归与循环扫描 sequence 的异同。
-- [ ] 我能围绕“结构递归：把 sequence 看成‘头 + 剩余部分’”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能围绕“Fibonacci 提醒我们：递归可能有大量重复工作”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
-- [ ] 我能说出并避免这个高频误区：只会写 `n-1` 型递归，看不出 sequence 也能递归缩小。
-- [ ] 我能说出并避免这个高频误区：写出优雅但指数级重复计算的递归，却没有意识到性能问题。
-- [ ] 我能不看 slides，只看题面就判断这题主要在考本讲的哪一个知识点。
+- [ ] 我能解释为什么 naive Fibonacci 会重复计算，以及 memoization 如何缓解。
+- [ ] 我能把 numeric recursion 的模板迁移到 list recursion。
+- [ ] 我能说明 `L[0]` / `L[1:]` 这套拆法为什么常见。
+- [ ] 我能解释 `in_list` 错误版本到底漏掉了哪一步信息。
+- [ ] 我能设计 list recursion 的 base case，是空列表还是单元素列表。
+- [ ] 我能读懂并手写 `flatten`、`in_lists_of_list`、`my_rev` 这类递归函数。
+- [ ] 我能解释 `deep_rev` 为什么比普通 reverse 多一层递归。
+- [ ] 我能说明 Towers of Hanoi 为什么天然适合递归。
+- [ ] 我能把 finger exercise 16 视为“递归处理嵌套结构”的最小练习。
+- [ ] 我能按课堂顺序复述：Fibonacci efficiency -> list recursion -> nested list recursion -> Hanoi。
 
 > [!warning] Common mistakes
-> - 只会写 `n-1` 型递归，看不出 sequence 也能递归缩小。
-> - 写出优雅但指数级重复计算的递归，却没有意识到性能问题。
-> - 在需要缓存的场景里反复重算相同子问题。
+> - 只会把 list 切小，却忘了当前层还需要检查或处理头元素。
+> - 看到嵌套列表时没有先判断元素类型。
+> - base case 设计得太弱，导致空列表或单元素列表处理出错。
+> - 把 recursion on lists 机械理解成“永远只写 `L[0] + f(L[1:])`”，不会根据任务调整。
