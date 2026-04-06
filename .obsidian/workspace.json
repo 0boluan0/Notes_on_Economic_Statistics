@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Computer_Science/99_Miscellaneous/the_missing_semester.md",
+                "file": "99_学习情况记录/2026-04-06——Mon.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "the_missing_semester"
+              "title": "2026-04-06——Mon"
             }
           },
           {
@@ -295,13 +295,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Computer_Science/99_Miscellaneous/the_missing_semester.md",
+                "file": "99_学习情况记录/2026-04-06——Mon.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of the_missing_semester"
+              "title": "Outline of 2026-04-06——Mon"
             }
           },
           {
@@ -352,6 +352,7 @@
   "active": "14764de06ec90304",
   "lastOpenFiles": [
     "03_Computer_Science/99_Miscellaneous/the_missing_semester.md",
+    "99_学习情况记录/2026-04-06——Mon.md",
     "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
     "01_Math/02_linear algebra/04_Review and exam roadmap.md",
     "99_学习情况记录/2026-04-05——Sun.md",
@@ -381,7 +382,6 @@
     "00_factor/procedure/Least Squares via Normal Equations.md",
     "00_factor/framework/Linear Algebra Problem-Type Map.md",
     "00_factor/framework/Choosing Matrix Decompositions.md",
-    "00_factor/framework/Invertible Matrix Equivalence Chain.md",
     "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.13sum.pdf",
     "98_attachment/dashboards/2026-04-03-map.svg",
     "98_attachment/dashboards/2026-04-03-news.json",
