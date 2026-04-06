@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Problem Sets on MIT OpenCourseWare</title>
+    <link>/resources/problem-sets/</link>
+    <description>Recent content in Problem Sets on MIT OpenCourseWare</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="/resources/problem-sets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Problem Set 0</title>
+      <link>/resources/mit6_100l_f22_ps0_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_ps0_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Problem Set 0 Code</title>
+      <link>/resources/mit6_100l_f22_ps0_code_zip/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_ps0_code_zip/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Problem Set 1</title>
+      <link>/resources/mit6_100l_f22_ps1_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_ps1_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Problem Set 1 Code</title>
+      <link>/resources/mit6_100l_f22_ps1_code_zip/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_ps1_code_zip/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Problem Set 2</title>
+      <link>/resources/mit6_100l_f22_ps2_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_ps2_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Problem Set 2 Code</title>
+      <link>/resources/mit6_100l_f22_ps2_code_zip/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_ps2_code_zip/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Problem Set 3</title>
+      <link>/resources/mit6_100l_f22_ps3_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_ps3_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Problem Set 3 Code</title>
+      <link>/resources/mit6_100l_f22_ps3_code_zip/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_ps3_code_zip/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Problem Set 4</title>
+      <link>/resources/mit6_100l_f22_ps4_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_ps4_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Problem Set 4 Code</title>
+      <link>/resources/mit6_100l_f22_ps4_code_zip/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_ps4_code_zip/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Problem Set 5</title>
+      <link>/resources/mit6_100l_f22_ps5_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_ps5_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Problem Set 5 Code</title>
+      <link>/resources/mit6_100l_f22_ps5_code_zip/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_ps5_code_zip/data.json</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

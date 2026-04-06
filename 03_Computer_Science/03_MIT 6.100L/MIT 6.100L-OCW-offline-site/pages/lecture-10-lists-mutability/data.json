@@ -1,0 +1,6 @@
+
+{
+  "title":"Lecture 10: Lists, Mutability",
+  "content":"Topics: List Operations, Mutability: mutation, aliasing, tricky examples with loops over L\nViewing videos requires an internet connection Your browser does not support some features required to play this video. Please update your browser to the latest version for the best experience. You can also download the video to watch it offline. View video page Download video Download transcript Lecture Notes Lecture 10: Lists, Mutability\nLecture 10 Code\nReadings Ch 5.3–5.5\nFinger Exercise Lecture 10 Implement the function that meets the specifications below:\ndef all_true(n, Lf): \u0026#34;\u0026#34;\u0026#34; n is an int Lf is a list of functions that take in an int and return a Boolean Returns True if each and every function in Lf returns True when called with n as a parameter. Otherwise returns False. \u0026#34;\u0026#34;\u0026#34; # Your code here # Examples: all_true() # prints 6 6.100L Finger Exercises Lecture 10 Solutions\nRecitation 5 Recitations were smaller sections that reviewed the previous lectures. Files contain recitation notes and worked examples in code.\nRecitation 5 Notes and Code\n"}
+
+

@@ -1,0 +1,6 @@
+
+{
+  "title":"Lecture 8: Functions as Objects",
+  "content":"Topics: Functions: environments, scope, functions as objects\nViewing videos requires an internet connection Your browser does not support some features required to play this video. Please update your browser to the latest version for the best experience. You can also download the video to watch it offline. View video page Download video Download transcript Lecture Notes Lecture 8: Functions as Objects\nLecture 8 Code\nReadings Ch 4.3–4.6\nFinger Exercise Lecture 8 Implement the function that meets the specifications below:\ndef same_chars(s1, s2): \u0026#34;\u0026#34;\u0026#34; s1 and s2 are strings Returns boolean True is a character in s1 is also in s2, and vice versa. If a character only exists in one of s1 or s2, returns False. \u0026#34;\u0026#34;\u0026#34; # Your code here # Examples: print(same_chars(\u0026#34;abc\u0026#34;, \u0026#34;cab\u0026#34;)) # prints True print(same_chars(\u0026#34;abccc\u0026#34;, \u0026#34;caaab\u0026#34;)) # prints True print(same_chars(\u0026#34;abcd\u0026#34;, \u0026#34;cabaa\u0026#34;)) # prints False print(same_chars(\u0026#34;abcabc\u0026#34;, \u0026#34;cabz\u0026#34;)) # prints False 6.100L Finger Exercises Lecture 8 Solutions\n"}
+
+

@@ -1,0 +1,6 @@
+
+{
+  "title":"Lecture 9: Lambda Functions, Tuples, and Lists",
+  "content":"Topics: Tuples and lists\nViewing videos requires an internet connection Your browser does not support some features required to play this video. Please update your browser to the latest version for the best experience. You can also download the video to watch it offline. View video page Download video Download transcript Lecture Notes Lecture 9: Lambda Functions, Tuples, and Lists\nLecture 9 Code\nReadings Ch 5.1–5.3\nFinger Exercise Lecture 9 Implement the function that meets the specifications below:\ndef dot_product(tA, tB): \u0026#34;\u0026#34;\u0026#34; tA: a tuple of numbers tB: a tuple of numbers of the same length as tA Assumes tA and tB are the same length. Returns a tuple where the: * first element is the length of one of the tuples * second element is the sum of the pairwise products of tA and tB \u0026#34;\u0026#34;\u0026#34; # Your code here # Examples: tA = (1, 2, 3) tB = (4, 5, 6) print(dot_product(tA, tB)) # prints (3,32) 6.100L Finger Exercises Lecture 9 Solutions\nProblem Set 2 Problem Set 2\nProblem Set 2 Code\nRecitation 4 Recitations were smaller sections that reviewed the previous lectures. Files contain recitation notes and worked examples in code.\nRecitation 4 Notes and Code\n"}
+
+

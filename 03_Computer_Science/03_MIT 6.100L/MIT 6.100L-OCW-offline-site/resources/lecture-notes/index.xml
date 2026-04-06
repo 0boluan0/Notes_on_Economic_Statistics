@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lecture Notes on MIT OpenCourseWare</title>
+    <link>/resources/lecture-notes/</link>
+    <description>Recent content in Lecture Notes on MIT OpenCourseWare</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="/resources/lecture-notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 1: Introduction</title>
+      <link>/resources/mit6_100l_f22_lec01_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec01_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 10: Lists, Mutability</title>
+      <link>/resources/mit6_100l_f22_lec10_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec10_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 11: Aliasing, Cloning</title>
+      <link>/resources/mit6_100l_f22_lec11_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec11_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 12: List Comprehension, Functions as Objects, Testing, Debugging</title>
+      <link>/resources/mit6_100l_f22_lec12_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec12_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 13: Exceptions, Assertions</title>
+      <link>/resources/mit6_100l_f22_lec13_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec13_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 14: Dictionaries</title>
+      <link>/resources/mit6_100l_f22_lec14_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec14_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 15: Recursion</title>
+      <link>/resources/mit6_100l_f22_lec15_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec15_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 16: Recursion on Non-Numerics</title>
+      <link>/resources/mit6_100l_f22_lec16_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec16_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 17: Python Classes</title>
+      <link>/resources/mit6_100l_f22_lec17_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec17_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 18: More Python Class Methods</title>
+      <link>/resources/mit6_100l_f22_lec18_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec18_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 19: Inheritance</title>
+      <link>/resources/mit6_100l_f22_lec19_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec19_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 2: Strings, Input/Output, and Branching</title>
+      <link>/resources/mit6_100l_f22_lec02_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec02_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 20: Fitness Tracker Object Oriented Programming Example</title>
+      <link>/resources/mit6_100l_f22_lec20_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec20_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 21: Timing Programs, Counting Operations</title>
+      <link>/resources/mit6_100l_f22_lec21_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec21_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 22: Big Oh and Theta</title>
+      <link>/resources/mit6_100l_f22_lec22_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec22_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 23: Complexity Classes Examples</title>
+      <link>/resources/mit6_100l_f22_lec23_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec23_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 24: Sorting Algorithms</title>
+      <link>/resources/mit6_100l_f22_lec24_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec24_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 25: Plotting</title>
+      <link>/resources/mit6_100l_f22_lec25_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec25_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 26: List Access, Hashing, Simulations, and Wrap-Up</title>
+      <link>/resources/mit6_100l_f22_lec26_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec26_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 3: Iteration</title>
+      <link>/resources/mit6_100l_f22_lec03_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec03_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 4: Loops over Strings, Guess-and-Check, Binary</title>
+      <link>/resources/mit6_100l_f22_lec04_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec04_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 5: Floats and Approximation Methods</title>
+      <link>/resources/mit6_100l_f22_lec05_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec05_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 6: Bisection Search</title>
+      <link>/resources/mit6_100l_f22_lec06_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec06_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 7: Decomposition, Abstraction, Functions</title>
+      <link>/resources/mit6_100l_f22_lec07_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec07_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 8: Functions as Objects</title>
+      <link>/resources/mit6_100l_f22_lec08_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec08_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lecture 9: Lambda Functions, Tuples, and Lists</title>
+      <link>/resources/mit6_100l_f22_lec09_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_lec09_pdf/data.json</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

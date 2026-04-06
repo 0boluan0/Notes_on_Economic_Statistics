@@ -1,0 +1,5791 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:11.400 align:middle line:84%
+[SQUEAKING]
+[RUSTLING] [CLICKING]
+
+00:00:11.400 --> 00:00:13.350 align:middle line:84%
+ANA BELL: OK, so
+let's get started.
+
+00:00:13.350 --> 00:00:15.780 align:middle line:84%
+Today we will be
+continuing talking
+
+00:00:15.780 --> 00:00:18.990 align:middle line:84%
+a little bit about loops
+and seeing some other couple
+
+00:00:18.990 --> 00:00:20.460 align:middle line:90%
+nuances of loops.
+
+00:00:20.460 --> 00:00:24.120 align:middle line:84%
+And then, we'll get started on
+our first algorithm, the guess
+
+00:00:24.120 --> 00:00:25.080 align:middle line:90%
+and check algorithm.
+
+00:00:25.080 --> 00:00:26.130 align:middle line:84%
+And then, towards
+the end, we're going
+
+00:00:26.130 --> 00:00:27.672 align:middle line:84%
+to start talking
+about binary numbers
+
+00:00:27.672 --> 00:00:31.160 align:middle line:84%
+in advance of seeing
+our next algorithm.
+
+00:00:31.160 --> 00:00:34.100 align:middle line:84%
+So let's do a quick recap of
+what we learned last time.
+
+00:00:34.100 --> 00:00:35.860 align:middle line:84%
+And then, we'll do a
+little coding example
+
+00:00:35.860 --> 00:00:37.130 align:middle line:90%
+and then we'll move on.
+
+00:00:37.130 --> 00:00:40.630 align:middle line:84%
+So we saw last lecture some
+looping mechanisms, right?
+
+00:00:40.630 --> 00:00:43.120 align:middle line:84%
+We saw while loops
+and for loops.
+
+00:00:43.120 --> 00:00:45.340 align:middle line:84%
+They're both a way
+for us to control
+
+00:00:45.340 --> 00:00:46.690 align:middle line:90%
+what happens in the code.
+
+00:00:46.690 --> 00:00:48.820 align:middle line:84%
+And specifically,
+they're a way for us
+
+00:00:48.820 --> 00:00:52.280 align:middle line:84%
+to repeat certain lines in the
+code sort of automatically,
+
+00:00:52.280 --> 00:00:53.120 align:middle line:90%
+so to speak.
+
+00:00:53.120 --> 00:00:55.060 align:middle line:84%
+So with while loops,
+the lines of code
+
+00:00:55.060 --> 00:00:57.700 align:middle line:84%
+were repeated as long
+as some condition held.
+
+00:00:57.700 --> 00:01:00.310 align:middle line:84%
+And with for loops,
+the lines of code
+
+00:01:00.310 --> 00:01:03.940 align:middle line:84%
+were repeated for some
+sequence of values, OK?
+
+00:01:03.940 --> 00:01:07.780 align:middle line:84%
+And the sequence of values
+was something that we decided.
+
+00:01:07.780 --> 00:01:09.510 align:middle line:90%
+It was numerical.
+
+00:01:09.510 --> 00:01:10.930 align:middle line:90%
+That's what we saw last lecture.
+
+00:01:10.930 --> 00:01:13.138 align:middle line:84%
+Today, we're going to see
+that the sequence of values
+
+00:01:13.138 --> 00:01:17.570 align:middle line:84%
+can actually be
+non-numerical as well.
+
+00:01:17.570 --> 00:01:25.220 align:middle line:84%
+So both of those loop
+types, I guess, had--
+
+00:01:25.220 --> 00:01:27.470 align:middle line:90%
+ended at certain times, right?
+
+00:01:27.470 --> 00:01:31.730 align:middle line:84%
+So the while loop ended when
+the condition became false.
+
+00:01:31.730 --> 00:01:34.190 align:middle line:84%
+And for loop ended
+when we've exhausted
+
+00:01:34.190 --> 00:01:35.900 align:middle line:90%
+our sequence of values.
+
+00:01:35.900 --> 00:01:39.560 align:middle line:84%
+But oftentimes, we want to write
+programs where we break out
+
+00:01:39.560 --> 00:01:40.760 align:middle line:90%
+of the loop prematurely.
+
+00:01:40.760 --> 00:01:43.670 align:middle line:84%
+We don't want the while loop
+condition to become false
+
+00:01:43.670 --> 00:01:45.920 align:middle line:84%
+and we don't want to exhaust
+our entire set of values
+
+00:01:45.920 --> 00:01:47.130 align:middle line:90%
+in for loop.
+
+00:01:47.130 --> 00:01:51.710 align:middle line:84%
+So in order to exit a loop
+before the natural end comes,
+
+00:01:51.710 --> 00:01:54.600 align:middle line:84%
+we can use this thing
+called a break statement.
+
+00:01:54.600 --> 00:01:58.580 align:middle line:84%
+And the break statement
+allows us to exit the loop.
+
+00:01:58.580 --> 00:02:01.910 align:middle line:84%
+And the loop it exits is going
+to be the one that immediately
+
+00:02:01.910 --> 00:02:03.810 align:middle line:90%
+surrounds the break statement.
+
+00:02:03.810 --> 00:02:06.890 align:middle line:84%
+So here's a little
+example of a nested--
+
+00:02:06.890 --> 00:02:08.100 align:middle line:90%
+two nested while loop.
+
+00:02:08.100 --> 00:02:11.270 align:middle line:84%
+So one while loop and then
+one nested one inside it.
+
+00:02:11.270 --> 00:02:16.850 align:middle line:84%
+The outer one is going to run
+whenever condition one holds.
+
+00:02:16.850 --> 00:02:21.350 align:middle line:84%
+And the inner one runs whenever
+condition two holds, OK?
+
+00:02:21.350 --> 00:02:25.460 align:middle line:84%
+Now, expression a will evaluate
+when both condition one
+
+00:02:25.460 --> 00:02:26.990 align:middle line:90%
+and condition two hold, right?
+
+00:02:26.990 --> 00:02:29.940 align:middle line:84%
+So we enter the first while loop
+and we enter the second while
+
+00:02:29.940 --> 00:02:30.440 align:middle line:90%
+loop.
+
+00:02:30.440 --> 00:02:32.930 align:middle line:84%
+Both of those conditions
+have to be true.
+
+00:02:32.930 --> 00:02:36.470 align:middle line:84%
+But Python, as soon as it
+sees this break statement,
+
+00:02:36.470 --> 00:02:40.618 align:middle line:84%
+Python will immediately
+exit the loop that
+
+00:02:40.618 --> 00:02:41.910 align:middle line:90%
+surrounds that break statement.
+
+00:02:41.910 --> 00:02:43.827 align:middle line:84%
+So the loop that surrounds
+the break statement
+
+00:02:43.827 --> 00:02:46.730 align:middle line:84%
+is the one that
+has condition two.
+
+00:02:46.730 --> 00:02:50.210 align:middle line:84%
+The condition one
+loop will keep going.
+
+00:02:50.210 --> 00:02:52.660 align:middle line:84%
+So as soon as Python sees
+this break statement,
+
+00:02:52.660 --> 00:02:55.750 align:middle line:84%
+it's going to immediately
+stop running the while loop.
+
+00:02:55.750 --> 00:02:57.130 align:middle line:84%
+It's not even
+going to go back up
+
+00:02:57.130 --> 00:02:59.230 align:middle line:84%
+and check the
+condition two, which
+
+00:02:59.230 --> 00:03:02.900 align:middle line:84%
+means that expression B will
+actually never get evaluated.
+
+00:03:02.900 --> 00:03:04.285 align:middle line:90%
+So this is terrible code.
+
+00:03:04.285 --> 00:03:06.910 align:middle line:84%
+We don't want to write code like
+this because expression B will
+
+00:03:06.910 --> 00:03:08.920 align:middle line:90%
+never be run, right?
+
+00:03:08.920 --> 00:03:10.810 align:middle line:84%
+But this is just to
+show you the impact
+
+00:03:10.810 --> 00:03:13.220 align:middle line:84%
+that a break
+statement would have.
+
+00:03:13.220 --> 00:03:16.040 align:middle line:84%
+And expression c will
+then be evaluated
+
+00:03:16.040 --> 00:03:17.690 align:middle line:90%
+whenever condition one is true.
+
+00:03:17.690 --> 00:03:19.280 align:middle line:84%
+Now, condition
+two may or may not
+
+00:03:19.280 --> 00:03:20.990 align:middle line:90%
+have been true along the way.
+
+00:03:20.990 --> 00:03:23.960 align:middle line:84%
+But expression c
+will evaluate only
+
+00:03:23.960 --> 00:03:25.820 align:middle line:84%
+when condition one
+is true, right?
+
+00:03:25.820 --> 00:03:28.170 align:middle line:84%
+Condition two would
+have stopped being true.
+
+00:03:28.170 --> 00:03:30.470 align:middle line:84%
+And then, we're going
+at the same indentation
+
+00:03:30.470 --> 00:03:32.090 align:middle line:90%
+level as this inner loop.
+
+00:03:32.090 --> 00:03:35.990 align:middle line:90%
+
+
+00:03:35.990 --> 00:03:37.940 align:middle line:84%
+AUDIENCE: It only
+evaluates the one time?
+
+00:03:37.940 --> 00:03:40.600 align:middle line:84%
+It only gives a one and then
+because the break is there?
+
+00:03:40.600 --> 00:03:41.600 align:middle line:90%
+ANA BELL: Exactly, yeah.
+
+00:03:41.600 --> 00:03:42.475 align:middle line:90%
+That's a great point.
+
+00:03:42.475 --> 00:03:45.350 align:middle line:84%
+So it only evaluates this
+expression a one time
+
+00:03:45.350 --> 00:03:48.080 align:middle line:84%
+because right after it
+evaluates it, it sees the break.
+
+00:03:48.080 --> 00:03:50.900 align:middle line:84%
+And then, we immediately exit
+the while loop and we're done.
+
+00:03:50.900 --> 00:03:52.220 align:middle line:90%
+That is a great observation.
+
+00:03:52.220 --> 00:03:53.570 align:middle line:90%
+Yeah.
+
+00:03:53.570 --> 00:03:56.930 align:middle line:84%
+And that's what this
+code will basically show.
+
+00:03:56.930 --> 00:04:00.110 align:middle line:84%
+So here it is us doing the break
+statement in the same structure
+
+00:04:00.110 --> 00:04:02.697 align:middle line:90%
+as on the previous slide.
+
+00:04:02.697 --> 00:04:04.280 align:middle line:84%
+And what we're going
+to do is actually
+
+00:04:04.280 --> 00:04:07.160 align:middle line:84%
+just run the Python
+Tutor for this code just
+
+00:04:07.160 --> 00:04:11.960 align:middle line:84%
+to give you some more practice
+running the Python Tutor.
+
+00:04:11.960 --> 00:04:14.930 align:middle line:84%
+So this is the same code
+as on the previous slide.
+
+00:04:14.930 --> 00:04:17.930 align:middle line:84%
+I've got a for loop that
+goes through some sequence
+
+00:04:17.930 --> 00:04:18.500 align:middle line:90%
+of values.
+
+00:04:18.500 --> 00:04:20.390 align:middle line:84%
+Can anyone tell me what
+are the sequence of values
+
+00:04:20.390 --> 00:04:21.605 align:middle line:90%
+this for loop will loop over?
+
+00:04:21.605 --> 00:04:25.360 align:middle line:90%
+
+
+00:04:25.360 --> 00:04:31.490 align:middle line:90%
+5, 7, 9, and we stop, right?
+
+00:04:31.490 --> 00:04:35.660 align:middle line:84%
+Because 11 is end, but we go up
+to but not including n minus 1.
+
+00:04:35.660 --> 00:04:38.360 align:middle line:84%
+So 5, 7, 9 are the
+only three values
+
+00:04:38.360 --> 00:04:41.940 align:middle line:90%
+we would potentially loop over.
+
+00:04:41.940 --> 00:04:43.470 align:middle line:90%
+So hit Next.
+
+00:04:43.470 --> 00:04:45.060 align:middle line:90%
+We initialize my sum to zero.
+
+00:04:45.060 --> 00:04:47.580 align:middle line:84%
+So in our minds, we
+think about the fact
+
+00:04:47.580 --> 00:04:49.140 align:middle line:84%
+that we're going
+to loop through--
+
+00:04:49.140 --> 00:04:51.780 align:middle line:84%
+make this loop
+variable be 5, 7, 9.
+
+00:04:51.780 --> 00:04:55.410 align:middle line:84%
+So the first time through
+the loop i will be 5.
+
+00:04:55.410 --> 00:04:59.860 align:middle line:84%
+We're going to add i, which
+is currently 5, to my sum.
+
+00:04:59.860 --> 00:05:03.510 align:middle line:90%
+So 5 plus 0 makes my sum 5.
+
+00:05:03.510 --> 00:05:07.090 align:middle line:84%
+And then, we immediately
+see the break, right?
+
+00:05:07.090 --> 00:05:09.910 align:middle line:84%
+Because if my sum equals
+5 is true, so we go inside
+
+00:05:09.910 --> 00:05:12.380 align:middle line:84%
+and we immediately see
+the break statement,
+
+00:05:12.380 --> 00:05:14.760 align:middle line:84%
+this line will
+never get executed.
+
+00:05:14.760 --> 00:05:17.135 align:middle line:84%
+So we're never going to
+increment my sum by 1.
+
+00:05:17.135 --> 00:05:20.680 align:middle line:90%
+
+
+00:05:20.680 --> 00:05:24.460 align:middle line:84%
+So the break immediately
+breaks out of our loop.
+
+00:05:24.460 --> 00:05:26.950 align:middle line:84%
+Now, the if statement
+is not a loop, right?
+
+00:05:26.950 --> 00:05:27.800 align:middle line:90%
+It's a conditional.
+
+00:05:27.800 --> 00:05:29.980 align:middle line:84%
+So the loop we break
+out of is for loop.
+
+00:05:29.980 --> 00:05:32.240 align:middle line:84%
+And then, there's no
+other loop surrounding it,
+
+00:05:32.240 --> 00:05:34.915 align:middle line:84%
+so then, the program is
+basically done and we print 5.
+
+00:05:34.915 --> 00:05:38.430 align:middle line:90%
+
+
+00:05:38.430 --> 00:05:40.410 align:middle line:90%
+Again, bad code.
+
+00:05:40.410 --> 00:05:42.520 align:middle line:84%
+We would never write
+code like this.
+
+00:05:42.520 --> 00:05:44.520 align:middle line:84%
+But this is just to
+show you exactly what
+
+00:05:44.520 --> 00:05:47.410 align:middle line:84%
+happens with the
+break statement.
+
+00:05:47.410 --> 00:05:50.320 align:middle line:84%
+So there's the code
+block for the for loop.
+
+00:05:50.320 --> 00:05:52.800 align:middle line:84%
+And this is the code block
+for the if statement.
+
+00:05:52.800 --> 00:05:55.800 align:middle line:84%
+And the break breaks
+out of our loop,
+
+00:05:55.800 --> 00:06:02.640 align:middle line:84%
+which is the lighter purple,
+not the if statement.
+
+00:06:02.640 --> 00:06:04.870 align:middle line:84%
+So let's have you write
+a little bit of code.
+
+00:06:04.870 --> 00:06:08.010 align:middle line:84%
+And this is sort of
+maybe a little practice
+
+00:06:08.010 --> 00:06:12.280 align:middle line:84%
+with just loops in general
+that we saw last lecture.
+
+00:06:12.280 --> 00:06:15.360 align:middle line:84%
+There's no break, really,
+in this particular program
+
+00:06:15.360 --> 00:06:17.440 align:middle line:84%
+here, just a little
+bit of practice.
+
+00:06:17.440 --> 00:06:19.440 align:middle line:84%
+So what I want you
+to do is to write
+
+00:06:19.440 --> 00:06:21.480 align:middle line:84%
+code that, basically,
+has a for loop
+
+00:06:21.480 --> 00:06:22.720 align:middle line:90%
+running through this range.
+
+00:06:22.720 --> 00:06:25.620 align:middle line:90%
+So for i in, pick one of these.
+
+00:06:25.620 --> 00:06:29.370 align:middle line:84%
+I want you to write code
+within that for loop that
+
+00:06:29.370 --> 00:06:34.680 align:middle line:84%
+counts how many even numbers
+are in that range, right?
+
+00:06:34.680 --> 00:06:36.180 align:middle line:90%
+So including the 0.
+
+00:06:36.180 --> 00:06:40.200 align:middle line:84%
+So for range 5, your
+counter should basically
+
+00:06:40.200 --> 00:06:45.878 align:middle line:84%
+pick up on the fact that 0 is
+even, 2 is even, and 4 is even,
+
+00:06:45.878 --> 00:06:46.670 align:middle line:90%
+and then that's it.
+
+00:06:46.670 --> 00:06:47.855 align:middle line:90%
+So it should print 3.
+
+00:06:47.855 --> 00:06:52.340 align:middle line:90%
+
+
+00:06:52.340 --> 00:06:56.630 align:middle line:84%
+So here is you try it inside
+the Python file for today.
+
+00:06:56.630 --> 00:06:59.540 align:middle line:84%
+And I've already started
+you off with this for i
+
+00:06:59.540 --> 00:07:03.370 align:middle line:90%
+in range 5 as the first one.
+
+00:07:03.370 --> 00:07:05.063 align:middle line:84%
+And I'll give you
+a couple of minutes
+
+00:07:05.063 --> 00:07:06.355 align:middle line:90%
+to just write the code in here.
+
+00:07:06.355 --> 00:07:13.180 align:middle line:90%
+
+
+00:07:13.180 --> 00:07:17.960 align:middle line:84%
+OK, would anyone like to
+start us off with some code?
+
+00:07:17.960 --> 00:07:23.960 align:middle line:90%
+
+
+00:07:23.960 --> 00:07:25.301 align:middle line:90%
+Or give me-- yeah?
+
+00:07:25.301 --> 00:07:26.744 align:middle line:90%
+AUDIENCE: [INAUDIBLE].
+
+00:07:26.744 --> 00:07:36.097 align:middle line:90%
+
+
+00:07:36.097 --> 00:07:36.680 align:middle line:90%
+ANA BELL: Yep.
+
+00:07:36.680 --> 00:07:39.900 align:middle line:90%
+
+
+00:07:39.900 --> 00:07:43.650 align:middle line:84%
+So this line of code is
+going to take our i, right?
+
+00:07:43.650 --> 00:07:47.010 align:middle line:84%
+So in fact, what we could
+do to remind ourselves
+
+00:07:47.010 --> 00:07:49.980 align:middle line:84%
+what i is, and this is very
+helpful for quizzes as well,
+
+00:07:49.980 --> 00:07:52.020 align:middle line:84%
+we can write a
+little comment here
+
+00:07:52.020 --> 00:07:56.910 align:middle line:90%
+that says I is 0, 1, 2, 3, 4.
+
+00:07:56.910 --> 00:08:00.430 align:middle line:84%
+Just so we don't have
+to remember this fact,
+
+00:08:00.430 --> 00:08:04.380 align:middle line:84%
+we can just always look here
+and know what i is going to be.
+
+00:08:04.380 --> 00:08:07.440 align:middle line:84%
+And then, this line of
+code, absolutely correct,
+
+00:08:07.440 --> 00:08:10.830 align:middle line:84%
+is going to take i and
+grab the remainder when
+
+00:08:10.830 --> 00:08:14.360 align:middle line:90%
+i is divided by 2.
+
+00:08:14.360 --> 00:08:19.680 align:middle line:84%
+And if the remainder is 0, that
+means that the number is even.
+
+00:08:19.680 --> 00:08:21.575 align:middle line:84%
+And then, what do
+we do inside here?
+
+00:08:21.575 --> 00:08:29.078 align:middle line:90%
+
+
+00:08:29.078 --> 00:08:30.620 align:middle line:84%
+So when this is
+true, when it's even,
+
+00:08:30.620 --> 00:08:32.809 align:middle line:84%
+how do we keep
+track of whether--
+
+00:08:32.809 --> 00:08:37.200 align:middle line:84%
+or how many times
+this condition occurs?
+
+00:08:37.200 --> 00:08:38.150 align:middle line:90%
+Yeah?
+
+00:08:38.150 --> 00:08:41.750 align:middle line:90%
+AUDIENCE: [INAUDIBLE].
+
+00:08:41.750 --> 00:08:43.220 align:middle line:90%
+ANA BELL: Yes, exactly.
+
+00:08:43.220 --> 00:08:44.510 align:middle line:90%
+Should we create a variable?
+
+00:08:44.510 --> 00:08:45.350 align:middle line:90%
+Yes we can.
+
+00:08:45.350 --> 00:08:48.290 align:middle line:90%
+So let's call it even nums.
+
+00:08:48.290 --> 00:08:52.720 align:middle line:84%
+And we'll probably want to
+increment it by 1, right?
+
+00:08:52.720 --> 00:08:54.470 align:middle line:84%
+Because here's another
+number that's even.
+
+00:08:54.470 --> 00:08:56.750 align:middle line:90%
+So even nums plus equals 1.
+
+00:08:56.750 --> 00:09:02.910 align:middle line:84%
+And then, let's remember
+to initialize it
+
+00:09:02.910 --> 00:09:04.200 align:middle line:90%
+right before our loop, right?
+
+00:09:04.200 --> 00:09:06.210 align:middle line:84%
+So initially, before
+we even start our loop,
+
+00:09:06.210 --> 00:09:07.830 align:middle line:90%
+we have 0 even numbers.
+
+00:09:07.830 --> 00:09:09.690 align:middle line:84%
+And then, each time
+through our loop,
+
+00:09:09.690 --> 00:09:13.430 align:middle line:84%
+we see one that's
+perfectly divisible by 2.
+
+00:09:13.430 --> 00:09:16.460 align:middle line:84%
+We're going to increment
+this little counter by one.
+
+00:09:16.460 --> 00:09:19.880 align:middle line:90%
+
+
+00:09:19.880 --> 00:09:21.852 align:middle line:90%
+AUDIENCE: Not the same variable.
+
+00:09:21.852 --> 00:09:23.560 align:middle line:84%
+ANA BELL: Oh yeah,
+not the same variable.
+
+00:09:23.560 --> 00:09:24.060 align:middle line:90%
+Thank you.
+
+00:09:24.060 --> 00:09:25.150 align:middle line:90%
+Even nums.
+
+00:09:25.150 --> 00:09:25.650 align:middle line:90%
+Yeah.
+
+00:09:25.650 --> 00:09:28.390 align:middle line:90%
+
+
+00:09:28.390 --> 00:09:32.920 align:middle line:84%
+And the mental model you should
+have at this point or beginning
+
+00:09:32.920 --> 00:09:37.270 align:middle line:84%
+is just the fact that these
+three lines solve our problem.
+
+00:09:37.270 --> 00:09:40.570 align:middle line:84%
+It does the automatic
+counting for us, right?
+
+00:09:40.570 --> 00:09:45.310 align:middle line:84%
+Because i will take on 0,
+then 1, then 2, then 3,
+
+00:09:45.310 --> 00:09:48.400 align:middle line:84%
+and then 4 automatically
+as the loop
+
+00:09:48.400 --> 00:09:50.150 align:middle line:84%
+goes through the
+sequence of values.
+
+00:09:50.150 --> 00:09:51.880 align:middle line:84%
+And so at the end of
+the loop, so sort of
+
+00:09:51.880 --> 00:09:55.750 align:middle line:84%
+at the same indentation level as
+the for loop, all we need to do
+
+00:09:55.750 --> 00:10:03.920 align:middle line:84%
+is print how many of
+these numbers we have.
+
+00:10:03.920 --> 00:10:06.550 align:middle line:90%
+So if we run it, it'll print 3.
+
+00:10:06.550 --> 00:10:09.460 align:middle line:84%
+And if we change
+this to 10, it'll
+
+00:10:09.460 --> 00:10:12.850 align:middle line:84%
+print probably 6
+because it counts the 0.
+
+00:10:12.850 --> 00:10:16.490 align:middle line:90%
+
+
+00:10:16.490 --> 00:10:19.665 align:middle line:90%
+Questions about-- yeah, please.
+
+00:10:19.665 --> 00:10:21.540 align:middle line:84%
+AUDIENCE: Is there
+anything I should look out
+
+00:10:21.540 --> 00:10:24.990 align:middle line:84%
+for in the fine print
+on 2 instead of 3?
+
+00:10:24.990 --> 00:10:27.030 align:middle line:84%
+ANA BELL: So if
+you're under counting,
+
+00:10:27.030 --> 00:10:29.550 align:middle line:84%
+you may be initialize--
+did you initialize
+
+00:10:29.550 --> 00:10:31.290 align:middle line:90%
+even nums to something else?
+
+00:10:31.290 --> 00:10:35.250 align:middle line:84%
+Or maybe this is not
+incrementing right or maybe
+
+00:10:35.250 --> 00:10:37.785 align:middle line:90%
+the range is different?
+
+00:10:37.785 --> 00:10:39.410 align:middle line:84%
+AUDIENCE: I'll try
+to read them to you.
+
+00:10:39.410 --> 00:10:40.035 align:middle line:90%
+ANA BELL: Yeah.
+
+00:10:40.035 --> 00:10:45.500 align:middle line:90%
+
+
+00:10:45.500 --> 00:10:46.490 align:middle line:90%
+It worked.
+
+00:10:46.490 --> 00:10:49.580 align:middle line:90%
+Awesome.
+
+00:10:49.580 --> 00:10:55.870 align:middle line:90%
+OK, so iterating through--
+
+00:10:55.870 --> 00:10:58.180 align:middle line:84%
+using for loops to iterate
+through sequence of values
+
+00:10:58.180 --> 00:10:59.750 align:middle line:90%
+is pretty useful.
+
+00:10:59.750 --> 00:11:03.260 align:middle line:84%
+Let's take another look here
+at this particular program.
+
+00:11:03.260 --> 00:11:05.170 align:middle line:90%
+So this program is--
+
+00:11:05.170 --> 00:11:08.650 align:middle line:84%
+this set of code, this
+code, and this code
+
+00:11:08.650 --> 00:11:10.300 align:middle line:84%
+actually end up
+doing the same thing.
+
+00:11:10.300 --> 00:11:12.710 align:middle line:84%
+But let's look at
+the top one for now.
+
+00:11:12.710 --> 00:11:16.810 align:middle line:84%
+So this is a program that
+takes in a string s as
+
+00:11:16.810 --> 00:11:18.700 align:middle line:90%
+sort of an input, so to speak.
+
+00:11:18.700 --> 00:11:24.640 align:middle line:84%
+It iterates through the
+numbers 0 to the length of s.
+
+00:11:24.640 --> 00:11:27.940 align:middle line:84%
+For index in range
+len s is basically
+
+00:11:27.940 --> 00:11:32.830 align:middle line:84%
+going to say for index in range
+13 or however many letters
+
+00:11:32.830 --> 00:11:35.610 align:middle line:90%
+this string has, right?
+
+00:11:35.610 --> 00:11:38.550 align:middle line:84%
+D-E-M-O space,
+all those letters.
+
+00:11:38.550 --> 00:11:41.800 align:middle line:84%
+There's 13 of them or
+something like that.
+
+00:11:41.800 --> 00:11:43.830 align:middle line:84%
+So this line of
+code here is going
+
+00:11:43.830 --> 00:11:45.780 align:middle line:84%
+to have our index
+take on the value
+
+00:11:45.780 --> 00:11:51.250 align:middle line:84%
+0 through 13 representing
+the index in s.
+
+00:11:51.250 --> 00:11:53.640 align:middle line:84%
+So the lowercase d
+will be at index 0,
+
+00:11:53.640 --> 00:11:57.760 align:middle line:84%
+the lowercase e will be
+at index 1, and so on.
+
+00:11:57.760 --> 00:12:02.060 align:middle line:84%
+So with this index in
+hand, the next bit of code,
+
+00:12:02.060 --> 00:12:05.390 align:middle line:84%
+if square bracket
+index equal equal i
+
+00:12:05.390 --> 00:12:09.110 align:middle line:84%
+will check for me if this
+particular character is an i,
+
+00:12:09.110 --> 00:12:12.620 align:middle line:84%
+or that particular
+character is a u.
+
+00:12:12.620 --> 00:12:15.230 align:middle line:84%
+And every time that
+happens, I'm going
+
+00:12:15.230 --> 00:12:18.440 align:middle line:84%
+to have this print
+out to the screen.
+
+00:12:18.440 --> 00:12:20.300 align:middle line:90%
+There's an i or u.
+
+00:12:20.300 --> 00:12:24.635 align:middle line:84%
+So inside my code here,
+this is the first one.
+
+00:12:24.635 --> 00:12:27.260 align:middle line:90%
+
+
+00:12:27.260 --> 00:12:29.180 align:middle line:90%
+And I run it.
+
+00:12:29.180 --> 00:12:31.330 align:middle line:84%
+It's going to print
+out that sentence twice
+
+00:12:31.330 --> 00:12:34.247 align:middle line:84%
+because there's only
+two i's or u's in here.
+
+00:12:34.247 --> 00:12:36.080 align:middle line:84%
+And if it repeats, it'll
+print it out twice.
+
+00:12:36.080 --> 00:12:38.440 align:middle line:90%
+So there's one u and one i.
+
+00:12:38.440 --> 00:12:41.390 align:middle line:90%
+
+
+00:12:41.390 --> 00:12:46.040 align:middle line:84%
+But this code can actually
+be written a lot simpler.
+
+00:12:46.040 --> 00:12:49.700 align:middle line:84%
+Notice it took me a little
+bit of a while to explain it.
+
+00:12:49.700 --> 00:12:51.272 align:middle line:84%
+And probably, at
+first glance, it
+
+00:12:51.272 --> 00:12:52.730 align:middle line:84%
+would take you a
+little bit of time
+
+00:12:52.730 --> 00:12:54.145 align:middle line:90%
+to figure out what it's doing.
+
+00:12:54.145 --> 00:12:55.520 align:middle line:84%
+And that's because
+we're actually
+
+00:12:55.520 --> 00:13:00.080 align:middle line:84%
+relying on the index as
+kind of a middleman, right?
+
+00:13:00.080 --> 00:13:04.940 align:middle line:84%
+We're iterating for
+loop through the index.
+
+00:13:04.940 --> 00:13:08.630 align:middle line:84%
+And then, we're indexing
+into that index variable
+
+00:13:08.630 --> 00:13:11.120 align:middle line:90%
+to grab the particular letter.
+
+00:13:11.120 --> 00:13:14.210 align:middle line:84%
+It turns out that
+with for loops,
+
+00:13:14.210 --> 00:13:18.050 align:middle line:84%
+I told you you can iterate over
+any sequence of values, not
+
+00:13:18.050 --> 00:13:19.290 align:middle line:90%
+just numbers.
+
+00:13:19.290 --> 00:13:22.340 align:middle line:84%
+And remember that strings
+are actually just a sequence
+
+00:13:22.340 --> 00:13:23.540 align:middle line:90%
+of characters, right?
+
+00:13:23.540 --> 00:13:25.440 align:middle line:90%
+Case sensitive characters.
+
+00:13:25.440 --> 00:13:29.370 align:middle line:84%
+So in Python, we can actually
+write code like this.
+
+00:13:29.370 --> 00:13:33.600 align:middle line:90%
+So the middle box right here.
+
+00:13:33.600 --> 00:13:36.870 align:middle line:84%
+It has for loop iterating
+through each character
+
+00:13:36.870 --> 00:13:38.130 align:middle line:90%
+in the string directly.
+
+00:13:38.130 --> 00:13:43.290 align:middle line:84%
+So no longer are we looking
+at the index, 0 through 12,
+
+00:13:43.290 --> 00:13:46.350 align:middle line:84%
+but we're looking at
+the letter directly.
+
+00:13:46.350 --> 00:13:49.770 align:middle line:84%
+So our loop variable,
+which I called char,
+
+00:13:49.770 --> 00:13:51.900 align:middle line:84%
+but you can call
+whatever you'd like,
+
+00:13:51.900 --> 00:13:56.640 align:middle line:84%
+is now going to take on values
+that are the letters themselves
+
+00:13:56.640 --> 00:13:57.880 align:middle line:90%
+one at a time.
+
+00:13:57.880 --> 00:14:01.080 align:middle line:84%
+So the first time through the
+loop, char will be lowercase d.
+
+00:14:01.080 --> 00:14:03.900 align:middle line:84%
+The next time through the
+loop, char will be lowercase e.
+
+00:14:03.900 --> 00:14:07.000 align:middle line:84%
+The next time, char will
+be lowercase m and so on.
+
+00:14:07.000 --> 00:14:09.000 align:middle line:84%
+And so now we've got
+this sequence of values
+
+00:14:09.000 --> 00:14:11.440 align:middle line:90%
+that's the letters directly.
+
+00:14:11.440 --> 00:14:16.110 align:middle line:84%
+So when we check if the letter
+is an i or u, all I need to do
+
+00:14:16.110 --> 00:14:18.420 align:middle line:90%
+is check if that character--
+
+00:14:18.420 --> 00:14:20.880 align:middle line:84%
+char, my variable--
+is equivalent to i
+
+00:14:20.880 --> 00:14:22.920 align:middle line:90%
+or equivalent to u.
+
+00:14:22.920 --> 00:14:24.850 align:middle line:90%
+And it's going to be the same--
+
+00:14:24.850 --> 00:14:26.740 align:middle line:90%
+and it's exactly the same code.
+
+00:14:26.740 --> 00:14:28.840 align:middle line:84%
+So this is the
+one we had before.
+
+00:14:28.840 --> 00:14:31.290 align:middle line:84%
+And this is the one
+I just went through,
+
+00:14:31.290 --> 00:14:34.050 align:middle line:84%
+and again, it prints
+out that sentence twice
+
+00:14:34.050 --> 00:14:38.400 align:middle line:84%
+because it's the
+same starting string.
+
+00:14:38.400 --> 00:14:41.960 align:middle line:84%
+So the sequence of values now
+is our characters directory.
+
+00:14:41.960 --> 00:14:43.160 align:middle line:90%
+It's the letters directly.
+
+00:14:43.160 --> 00:14:45.725 align:middle line:90%
+It's not the index itself.
+
+00:14:45.725 --> 00:14:47.100 align:middle line:84%
+And it turns out
+there's actually
+
+00:14:47.100 --> 00:14:51.240 align:middle line:84%
+a much more Pythonic way to
+write the code, this middle box
+
+00:14:51.240 --> 00:14:52.570 align:middle line:90%
+down here.
+
+00:14:52.570 --> 00:14:56.430 align:middle line:84%
+So in the bottom box, the
+only part that I've changed
+
+00:14:56.430 --> 00:14:57.600 align:middle line:90%
+is the if statement.
+
+00:14:57.600 --> 00:15:00.930 align:middle line:84%
+And I'm using this
+n keyword to test
+
+00:15:00.930 --> 00:15:03.300 align:middle line:84%
+whether the character
+that I have in hand,
+
+00:15:03.300 --> 00:15:05.340 align:middle line:84%
+lowercase d, lowercase
+e, lowercase m,
+
+00:15:05.340 --> 00:15:09.810 align:middle line:84%
+and so on is in this sequence
+of characters I or u.
+
+00:15:09.810 --> 00:15:12.420 align:middle line:84%
+And for this case, it's
+not so important, right?
+
+00:15:12.420 --> 00:15:14.280 align:middle line:84%
+Because in the
+middle box we could
+
+00:15:14.280 --> 00:15:20.070 align:middle line:84%
+do if char is equal to i or char
+is equal to u, which is fine.
+
+00:15:20.070 --> 00:15:23.670 align:middle line:84%
+But if we wanted to test if the
+character is one of the digits
+
+00:15:23.670 --> 00:15:28.980 align:middle line:84%
+0 through 9, this if,
+or, or, or would become
+
+00:15:28.980 --> 00:15:31.170 align:middle line:90%
+a really long line, right?
+
+00:15:31.170 --> 00:15:36.180 align:middle line:84%
+And so all we can do is if char
+is in some particular sequence
+
+00:15:36.180 --> 00:15:39.210 align:middle line:84%
+of characters, Python will
+automatically turn that
+
+00:15:39.210 --> 00:15:42.870 align:middle line:84%
+into that longer if it's this
+or if it's this or if it's this
+
+00:15:42.870 --> 00:15:43.980 align:middle line:90%
+or if it's this and so on.
+
+00:15:43.980 --> 00:15:47.590 align:middle line:90%
+
+
+00:15:47.590 --> 00:15:50.050 align:middle line:84%
+OK, so the big idea
+here with for loops
+
+00:15:50.050 --> 00:15:52.750 align:middle line:84%
+is that, yes, we're iterating
+through a sequence of values,
+
+00:15:52.750 --> 00:15:54.970 align:middle line:84%
+but we're not limited
+to just numbers.
+
+00:15:54.970 --> 00:15:56.680 align:middle line:84%
+And that's the cool
+thing about for loops
+
+00:15:56.680 --> 00:15:58.990 align:middle line:84%
+you can iterate through
+characters directly.
+
+00:15:58.990 --> 00:16:00.550 align:middle line:84%
+And we're going to
+see later on, we
+
+00:16:00.550 --> 00:16:04.300 align:middle line:84%
+can iterate through lists of
+numbers, lists of strings,
+
+00:16:04.300 --> 00:16:07.740 align:middle line:84%
+and a whole bunch
+of other things.
+
+00:16:07.740 --> 00:16:10.370 align:middle line:84%
+So let's write a slightly
+more complex program.
+
+00:16:10.370 --> 00:16:14.360 align:middle line:84%
+This was version 0.01 of
+the cheerleader robots.
+
+00:16:14.360 --> 00:16:19.010 align:middle line:84%
+You see up in the corner there
+that I wrote the robots are not
+
+00:16:19.010 --> 00:16:20.660 align:middle line:90%
+mine, but the code is.
+
+00:16:20.660 --> 00:16:23.390 align:middle line:84%
+So here's a little bit
+of code that kind of puts
+
+00:16:23.390 --> 00:16:26.720 align:middle line:84%
+together iterating through
+strings directly and iterating
+
+00:16:26.720 --> 00:16:28.050 align:middle line:90%
+through numbers directly.
+
+00:16:28.050 --> 00:16:31.490 align:middle line:84%
+So let me show you what this
+program is actually doing.
+
+00:16:31.490 --> 00:16:33.410 align:middle line:84%
+And then, we'll
+go over the code.
+
+00:16:33.410 --> 00:16:38.620 align:middle line:84%
+Somebody give me some noun
+you're really excited about.
+
+00:16:38.620 --> 00:16:39.962 align:middle line:90%
+What is that?
+
+00:16:39.962 --> 00:16:40.905 align:middle line:90%
+AUDIENCE: [INAUDIBLE].
+
+00:16:40.905 --> 00:16:41.530 align:middle line:90%
+ANA BELL: What?
+
+00:16:41.530 --> 00:16:46.060 align:middle line:90%
+
+
+00:16:46.060 --> 00:16:47.200 align:middle line:90%
+Never mind.
+
+00:16:47.200 --> 00:16:49.810 align:middle line:84%
+Give me something
+else that I know.
+
+00:16:49.810 --> 00:16:51.130 align:middle line:90%
+What is it?
+
+00:16:51.130 --> 00:16:51.850 align:middle line:90%
+Pineapples.
+
+00:16:51.850 --> 00:16:55.070 align:middle line:90%
+OK, pineapples.
+
+00:16:55.070 --> 00:16:57.830 align:middle line:84%
+OK, it's going to cheer
+for us about pineapples,
+
+00:16:57.830 --> 00:17:02.990 align:middle line:84%
+and let's say we're enthusiastic
+level 8 about pineapples.
+
+00:17:02.990 --> 00:17:05.030 align:middle line:84%
+All right, so this is
+my cheerleader program.
+
+00:17:05.030 --> 00:17:08.119 align:middle line:84%
+So I typed in a word and I
+typed in an enthusiasm level
+
+00:17:08.119 --> 00:17:10.230 align:middle line:90%
+for pineapples.
+
+00:17:10.230 --> 00:17:12.420 align:middle line:90%
+And then, all it does is--
+
+00:17:12.420 --> 00:17:14.609 align:middle line:84%
+and notice the repetition,
+which computers
+
+00:17:14.609 --> 00:17:15.780 align:middle line:90%
+are really awesome for.
+
+00:17:15.780 --> 00:17:18.359 align:middle line:84%
+Give me a P, P, give me
+an I, I, give me an N,
+
+00:17:18.359 --> 00:17:20.700 align:middle line:90%
+N, and so on, right?
+
+00:17:20.700 --> 00:17:22.079 align:middle line:90%
+What does that spell?
+
+00:17:22.079 --> 00:17:24.810 align:middle line:84%
+And then, it does pineapples
+with three exclamation marks
+
+00:17:24.810 --> 00:17:26.760 align:middle line:84%
+eight times because
+that's how enthusiastic I
+
+00:17:26.760 --> 00:17:29.450 align:middle line:90%
+am about pineapples.
+
+00:17:29.450 --> 00:17:32.030 align:middle line:84%
+All right, so let's look at the
+code that actually does this.
+
+00:17:32.030 --> 00:17:34.130 align:middle line:84%
+Notice there's two
+parts to it, right?
+
+00:17:34.130 --> 00:17:38.340 align:middle line:84%
+There's the part that
+does the spelling.
+
+00:17:38.340 --> 00:17:41.100 align:middle line:84%
+And then, there's the
+part that does repeating
+
+00:17:41.100 --> 00:17:43.480 align:middle line:90%
+the word some number of times.
+
+00:17:43.480 --> 00:17:45.630 align:middle line:90%
+So these are two separate loops.
+
+00:17:45.630 --> 00:17:47.880 align:middle line:90%
+The spelling is up here.
+
+00:17:47.880 --> 00:17:48.770 align:middle line:90%
+This for loop here.
+
+00:17:48.770 --> 00:17:53.030 align:middle line:84%
+And then, repeating some
+number of times is down here.
+
+00:17:53.030 --> 00:17:57.050 align:middle line:84%
+OK, so the part where
+we do the spelling
+
+00:17:57.050 --> 00:18:01.220 align:middle line:84%
+has a for loop that
+iterates through the letters
+
+00:18:01.220 --> 00:18:03.320 align:middle line:90%
+in the word directly, right?
+
+00:18:03.320 --> 00:18:05.490 align:middle line:84%
+I'm not doing anything
+special with these letters.
+
+00:18:05.490 --> 00:18:09.020 align:middle line:84%
+So I can just iterate
+through the letters directly.
+
+00:18:09.020 --> 00:18:12.050 align:middle line:84%
+So for w in word,
+where word is the input
+
+00:18:12.050 --> 00:18:17.870 align:middle line:84%
+that I grabbed from the
+user, w is a loop variable
+
+00:18:17.870 --> 00:18:21.670 align:middle line:84%
+that's going to first be p then
+i then n then e then then a
+
+00:18:21.670 --> 00:18:24.140 align:middle line:90%
+and so on, right?
+
+00:18:24.140 --> 00:18:26.550 align:middle line:84%
+And then, I have
+an if else here.
+
+00:18:26.550 --> 00:18:28.490 align:middle line:84%
+And if you look carefully,
+the only difference
+
+00:18:28.490 --> 00:18:30.560 align:middle line:84%
+between the if-- what
+we do inside the if
+
+00:18:30.560 --> 00:18:32.000 align:middle line:84%
+and what we do
+inside the else is
+
+00:18:32.000 --> 00:18:35.450 align:middle line:84%
+whether we type in an
+and then the letter,
+
+00:18:35.450 --> 00:18:37.910 align:middle line:90%
+or a and then the letter, right?
+
+00:18:37.910 --> 00:18:40.160 align:middle line:84%
+Because some letters
+make sense to say give me
+
+00:18:40.160 --> 00:18:43.040 align:middle line:90%
+an a as opposed to give me a a.
+
+00:18:43.040 --> 00:18:45.230 align:middle line:84%
+It just doesn't sound
+right in English.
+
+00:18:45.230 --> 00:18:50.730 align:middle line:84%
+The letters where it makes sense
+to do an are defined up here.
+
+00:18:50.730 --> 00:18:55.390 align:middle line:84%
+So notice they're just defined
+as a really long string.
+
+00:18:55.390 --> 00:18:59.580 align:middle line:84%
+And so the if statement
+uses that in keyword we
+
+00:18:59.580 --> 00:19:01.080 align:middle line:90%
+saw on the slide, right?
+
+00:19:01.080 --> 00:19:05.220 align:middle line:84%
+It says if w, so if that
+particular character is
+
+00:19:05.220 --> 00:19:09.210 align:middle line:84%
+one of these, is in this
+sequence of characters,
+
+00:19:09.210 --> 00:19:15.170 align:middle line:84%
+then print give me an and
+that particular character.
+
+00:19:15.170 --> 00:19:18.500 align:middle line:84%
+And otherwise, it's not
+one of these letters
+
+00:19:18.500 --> 00:19:19.820 align:middle line:90%
+where it makes sense to say an.
+
+00:19:19.820 --> 00:19:24.800 align:middle line:84%
+So then you just print give
+me a and then that letter.
+
+00:19:24.800 --> 00:19:27.320 align:middle line:84%
+Here, I just rewrote
+these two print statements
+
+00:19:27.320 --> 00:19:31.670 align:middle line:84%
+using f strings, which we
+talked about back in lecture 2,
+
+00:19:31.670 --> 00:19:36.970 align:middle line:84%
+just to show you how you could
+rewrite it with f strings.
+
+00:19:36.970 --> 00:19:39.160 align:middle line:90%
+But it can be done both ways.
+
+00:19:39.160 --> 00:19:42.070 align:middle line:84%
+OK, so at the end of this,
+we've done the spelling.
+
+00:19:42.070 --> 00:19:43.780 align:middle line:84%
+And then, we have a
+print statement that
+
+00:19:43.780 --> 00:19:44.980 align:middle line:90%
+says, what does that spell?
+
+00:19:44.980 --> 00:19:47.140 align:middle line:84%
+And then, the last
+part is to repeat
+
+00:19:47.140 --> 00:19:49.600 align:middle line:84%
+that word some n
+number of times,
+
+00:19:49.600 --> 00:19:50.980 align:middle line:90%
+whatever the user told us.
+
+00:19:50.980 --> 00:19:54.400 align:middle line:84%
+So I say that number of times
+in a variable called times.
+
+00:19:54.400 --> 00:19:56.800 align:middle line:84%
+And then, all I
+do here is I have
+
+00:19:56.800 --> 00:20:00.781 align:middle line:84%
+a nice little for loop that
+goes through however many--
+
+00:20:00.781 --> 00:20:02.950 align:middle line:90%
+how much that number is, right?
+
+00:20:02.950 --> 00:20:06.550 align:middle line:84%
+So range times means it's going
+to be 0 all the way up through
+
+00:20:06.550 --> 00:20:09.470 align:middle line:90%
+and including times minus 1.
+
+00:20:09.470 --> 00:20:13.160 align:middle line:84%
+That's a total of eight
+times in this particular case
+
+00:20:13.160 --> 00:20:14.240 align:middle line:90%
+that it loops through.
+
+00:20:14.240 --> 00:20:16.340 align:middle line:84%
+And then, all we do
+is print the word
+
+00:20:16.340 --> 00:20:18.480 align:middle line:90%
+with three exclamation marks.
+
+00:20:18.480 --> 00:20:21.930 align:middle line:84%
+Notice that this
+print statement that's
+
+00:20:21.930 --> 00:20:25.230 align:middle line:84%
+inside the bottom for loop is
+not actually doing anything
+
+00:20:25.230 --> 00:20:26.730 align:middle line:90%
+with our loop variable, right?
+
+00:20:26.730 --> 00:20:28.980 align:middle line:84%
+Our loop variable here
+is i, but we're not
+
+00:20:28.980 --> 00:20:30.090 align:middle line:90%
+doing anything with it.
+
+00:20:30.090 --> 00:20:31.320 align:middle line:90%
+And that's totally fine.
+
+00:20:31.320 --> 00:20:34.890 align:middle line:84%
+Because all we're
+using in the times
+
+00:20:34.890 --> 00:20:36.600 align:middle line:84%
+in the loop in this
+particular case
+
+00:20:36.600 --> 00:20:39.510 align:middle line:84%
+is to do this action
+some number of times.
+
+00:20:39.510 --> 00:20:41.010 align:middle line:84%
+We don't always
+have to do something
+
+00:20:41.010 --> 00:20:43.210 align:middle line:90%
+with that loop variable.
+
+00:20:43.210 --> 00:20:44.820 align:middle line:90%
+Any questions about this code?
+
+00:20:44.820 --> 00:20:48.680 align:middle line:90%
+
+
+00:20:48.680 --> 00:20:49.333 align:middle line:90%
+Yeah.
+
+00:20:49.333 --> 00:20:50.750 align:middle line:84%
+AUDIENCE: Could
+you also have used
+
+00:20:50.750 --> 00:20:53.162 align:middle line:90%
+if statements for the prints?
+
+00:20:53.162 --> 00:20:55.370 align:middle line:84%
+ANA BELL: Could you use if
+statements for the prints?
+
+00:20:55.370 --> 00:20:58.760 align:middle line:90%
+Which prints, these ones?
+
+00:20:58.760 --> 00:21:01.600 align:middle line:90%
+How so?
+
+00:21:01.600 --> 00:21:04.640 align:middle line:84%
+AUDIENCE: To evaluate
+the w's instead
+
+00:21:04.640 --> 00:21:09.220 align:middle line:90%
+of having to concatenate.
+
+00:21:09.220 --> 00:21:11.190 align:middle line:90%
+I mean, not if, f.
+
+00:21:11.190 --> 00:21:12.190 align:middle line:90%
+ANA BELL: Oh, f strings.
+
+00:21:12.190 --> 00:21:13.773 align:middle line:84%
+Yeah, we could have
+done it like this.
+
+00:21:13.773 --> 00:21:15.670 align:middle line:90%
+Yeah, so this is how it is f.
+
+00:21:15.670 --> 00:21:17.650 align:middle line:84%
+And then, we do the
+characters themselves
+
+00:21:17.650 --> 00:21:19.690 align:middle line:90%
+inside the curly brackets.
+
+00:21:19.690 --> 00:21:20.650 align:middle line:90%
+Oh no, that's OK.
+
+00:21:20.650 --> 00:21:21.588 align:middle line:90%
+It's OK.
+
+00:21:21.588 --> 00:21:22.630 align:middle line:90%
+Yeah, there's a question.
+
+00:21:22.630 --> 00:21:23.500 align:middle line:90%
+Yeah.
+
+00:21:23.500 --> 00:21:25.167 align:middle line:84%
+AUDIENCE: Can you say
+how that last part
+
+00:21:25.167 --> 00:21:27.160 align:middle line:84%
+would work since we're
+not actually doing it?
+
+00:21:27.160 --> 00:21:28.780 align:middle line:84%
+ANA BELL: Yeah, so
+the last for loop
+
+00:21:28.780 --> 00:21:33.790 align:middle line:84%
+is still going to iterate
+through times times, right?
+
+00:21:33.790 --> 00:21:36.040 align:middle line:84%
+And the loop variable
+each time through the loop
+
+00:21:36.040 --> 00:21:39.600 align:middle line:84%
+will be 0, then
+1, then 2, then 3.
+
+00:21:39.600 --> 00:21:42.270 align:middle line:84%
+We're not doing anything
+with the i, right?
+
+00:21:42.270 --> 00:21:45.190 align:middle line:84%
+The stuff that's indented
+is going to get done,
+
+00:21:45.190 --> 00:21:48.780 align:middle line:84%
+but we're just not using the
+fact that i is 0 or 1 or 2
+
+00:21:48.780 --> 00:21:51.380 align:middle line:90%
+at all.
+
+00:21:51.380 --> 00:21:53.360 align:middle line:84%
+Yeah, it increments
+itself automatically,
+
+00:21:53.360 --> 00:21:54.410 align:middle line:90%
+we're just not using it.
+
+00:21:54.410 --> 00:21:55.190 align:middle line:90%
+Yeah, exactly.
+
+00:21:55.190 --> 00:22:01.340 align:middle line:90%
+
+
+00:22:01.340 --> 00:22:02.600 align:middle line:90%
+And that's what I said.
+
+00:22:02.600 --> 00:22:05.210 align:middle line:84%
+OK, so let's have you
+write a little bit of code.
+
+00:22:05.210 --> 00:22:06.820 align:middle line:84%
+So let's assume
+you're going to be
+
+00:22:06.820 --> 00:22:09.388 align:middle line:84%
+given a string of
+lowercase letters, right?
+
+00:22:09.388 --> 00:22:11.680 align:middle line:84%
+So we're not going to bother
+uppercase, lowercase, just
+
+00:22:11.680 --> 00:22:13.360 align:middle line:84%
+assume you're given
+lowercase letters.
+
+00:22:13.360 --> 00:22:15.070 align:middle line:90%
+It's stored in a variable s.
+
+00:22:15.070 --> 00:22:18.420 align:middle line:84%
+So as an example,
+s is equal to abca.
+
+00:22:18.420 --> 00:22:20.350 align:middle line:84%
+I would like you to
+write some code that
+
+00:22:20.350 --> 00:22:23.710 align:middle line:84%
+counts how many unique letters
+are in this string, right?
+
+00:22:23.710 --> 00:22:25.690 align:middle line:90%
+So notice a occurs twice.
+
+00:22:25.690 --> 00:22:27.880 align:middle line:84%
+But the count that
+your code should
+
+00:22:27.880 --> 00:22:30.840 align:middle line:84%
+do for this particular--
+in this particular string
+
+00:22:30.840 --> 00:22:31.840 align:middle line:90%
+should just be 3, right?
+
+00:22:31.840 --> 00:22:33.130 align:middle line:84%
+We don't want to
+double count the a.
+
+00:22:33.130 --> 00:22:34.540 align:middle line:84%
+So there are three
+unique letters
+
+00:22:34.540 --> 00:22:39.990 align:middle line:90%
+in abca, they are a, b, and c.
+
+00:22:39.990 --> 00:22:41.490 align:middle line:90%
+So I do have a little hint.
+
+00:22:41.490 --> 00:22:44.760 align:middle line:84%
+It involves the use
+of an extra variable,
+
+00:22:44.760 --> 00:22:48.000 align:middle line:90%
+as these programs usually go.
+
+00:22:48.000 --> 00:22:51.990 align:middle line:84%
+Try to think about having
+this extra variable be
+
+00:22:51.990 --> 00:22:56.750 align:middle line:84%
+a string that contains
+everything you've seen so far.
+
+00:22:56.750 --> 00:23:00.640 align:middle line:84%
+So as soon as you see a letter
+that you haven't seen before,
+
+00:23:00.640 --> 00:23:03.790 align:middle line:84%
+add it to the string
+variable that you've--
+
+00:23:03.790 --> 00:23:06.730 align:middle line:84%
+marking that you've
+now seen this letter.
+
+00:23:06.730 --> 00:23:13.960 align:middle line:84%
+And then, use this same variable
+to write the rest of it.
+
+00:23:13.960 --> 00:23:16.175 align:middle line:84%
+As you go through your
+letters, make sure
+
+00:23:16.175 --> 00:23:18.550 align:middle line:84%
+that you're going to check
+whether you've seen it already
+
+00:23:18.550 --> 00:23:21.220 align:middle line:90%
+before recounting it.
+
+00:23:21.220 --> 00:23:25.050 align:middle line:90%
+
+
+00:23:25.050 --> 00:23:29.370 align:middle line:84%
+So as usual, it's in
+here around line 76.
+
+00:23:29.370 --> 00:23:32.435 align:middle line:90%
+This is the code to do it.
+
+00:23:32.435 --> 00:23:33.810 align:middle line:84%
+So I'll give you
+a couple minutes
+
+00:23:33.810 --> 00:23:36.410 align:middle line:84%
+and then we can
+write it together.
+
+00:23:36.410 --> 00:23:40.743 align:middle line:84%
+OK, so let me just
+work through it.
+
+00:23:40.743 --> 00:23:42.160 align:middle line:84%
+And this is something
+that I think
+
+00:23:42.160 --> 00:23:43.990 align:middle line:84%
+is pretty useful in
+a quiz situation.
+
+00:23:43.990 --> 00:23:46.060 align:middle line:84%
+It's just writing
+things on paper
+
+00:23:46.060 --> 00:23:48.143 align:middle line:84%
+first just because it's a
+programming and computer
+
+00:23:48.143 --> 00:23:49.602 align:middle line:84%
+science class,
+doesn't mean we have
+
+00:23:49.602 --> 00:23:50.990 align:middle line:90%
+to start coding right away.
+
+00:23:50.990 --> 00:23:54.770 align:middle line:84%
+So it's really helpful to just
+put some ideas down on paper.
+
+00:23:54.770 --> 00:23:58.060 align:middle line:84%
+So the way I would go
+about this problem is,
+
+00:23:58.060 --> 00:24:02.316 align:middle line:84%
+clearly, I have to touch each
+character in the string s.
+
+00:24:02.316 --> 00:24:04.390 align:middle line:90%
+So already, for me, that's--
+
+00:24:04.390 --> 00:24:06.540 align:middle line:90%
+I need to have a loop.
+
+00:24:06.540 --> 00:24:09.110 align:middle line:84%
+So as I'm looking
+at each character,
+
+00:24:09.110 --> 00:24:10.800 align:middle line:90%
+I'm going to keep track of it.
+
+00:24:10.800 --> 00:24:13.340 align:middle line:84%
+So if it's not something I
+haven't seen-- so if it's
+
+00:24:13.340 --> 00:24:15.860 align:middle line:84%
+something I haven't
+seen before, what
+
+00:24:15.860 --> 00:24:20.060 align:middle line:84%
+I want to do is say, OK,
+I have now seen this a.
+
+00:24:20.060 --> 00:24:23.307 align:middle line:84%
+So I'm going to add
+it to a seen variable.
+
+00:24:23.307 --> 00:24:25.390 align:middle line:84%
+And then, I'm going to
+increment a counter, right?
+
+00:24:25.390 --> 00:24:26.260 align:middle line:90%
+I've seen it once.
+
+00:24:26.260 --> 00:24:31.060 align:middle line:90%
+So count maybe equals 1 now.
+
+00:24:31.060 --> 00:24:34.360 align:middle line:84%
+The next time, I look at the
+next letter I'm going to say,
+
+00:24:34.360 --> 00:24:35.170 align:middle line:90%
+it's a b.
+
+00:24:35.170 --> 00:24:36.520 align:middle line:90%
+Have I seen it before?
+
+00:24:36.520 --> 00:24:37.030 align:middle line:90%
+No.
+
+00:24:37.030 --> 00:24:39.220 align:middle line:84%
+Let me add it to
+my seen variable
+
+00:24:39.220 --> 00:24:42.350 align:middle line:90%
+and increment my count.
+
+00:24:42.350 --> 00:24:45.710 align:middle line:84%
+Next time, I'm going to
+look at the letter c.
+
+00:24:45.710 --> 00:24:46.940 align:middle line:90%
+Have I seen it before?
+
+00:24:46.940 --> 00:24:49.020 align:middle line:84%
+No, I'm going to
+add it to my seen
+
+00:24:49.020 --> 00:24:51.050 align:middle line:84%
+and then I'm going to
+increment my count.
+
+00:24:51.050 --> 00:24:52.600 align:middle line:84%
+And then, the last
+time I'm going
+
+00:24:52.600 --> 00:24:54.350 align:middle line:84%
+to look at this letter
+a I'm going to say,
+
+00:24:54.350 --> 00:24:56.240 align:middle line:90%
+is it already in my seen?
+
+00:24:56.240 --> 00:24:57.232 align:middle line:90%
+Yep.
+
+00:24:57.232 --> 00:24:59.440 align:middle line:84%
+So I'm not going to do
+anything with this one, right?
+
+00:24:59.440 --> 00:25:03.370 align:middle line:84%
+So when I see a letter
+that's already seen--
+
+00:25:03.370 --> 00:25:05.680 align:middle line:84%
+that I've already added
+to my seen variable,
+
+00:25:05.680 --> 00:25:07.630 align:middle line:84%
+I basically do nothing
+in my code, right?
+
+00:25:07.630 --> 00:25:11.350 align:middle line:84%
+So the most of the work happens
+when I encounter something
+
+00:25:11.350 --> 00:25:13.100 align:middle line:90%
+I have never seen before.
+
+00:25:13.100 --> 00:25:17.787 align:middle line:84%
+So does anyone have some starter
+code or something we can write?
+
+00:25:17.787 --> 00:25:19.870 align:middle line:84%
+We don't have to write it
+perfectly top to bottom.
+
+00:25:19.870 --> 00:25:21.940 align:middle line:84%
+We can write pieces
+here and there.
+
+00:25:21.940 --> 00:25:25.090 align:middle line:90%
+
+
+00:25:25.090 --> 00:25:27.470 align:middle line:90%
+Yeah?
+
+00:25:27.470 --> 00:25:30.260 align:middle line:84%
+AUDIENCE: [INAUDIBLE] you can
+find your things up there.
+
+00:25:30.260 --> 00:25:34.748 align:middle line:90%
+I wrote for char in s.
+
+00:25:34.748 --> 00:25:37.040 align:middle line:84%
+And I don't think this is
+how I'm supposed to write it,
+
+00:25:37.040 --> 00:25:44.630 align:middle line:84%
+but I said if char in
+s in seen for false.
+
+00:25:44.630 --> 00:25:46.970 align:middle line:84%
+But like I want to say
+if it's not in seen.
+
+00:25:46.970 --> 00:25:49.800 align:middle line:84%
+ANA BELL: Yeah, so
+that's a great start.
+
+00:25:49.800 --> 00:25:51.920 align:middle line:84%
+So if you want to say
+if it's not in seen,
+
+00:25:51.920 --> 00:25:55.850 align:middle line:84%
+we can just say if char or car,
+or however you pronounce it,
+
+00:25:55.850 --> 00:25:58.010 align:middle line:90%
+is not in seen.
+
+00:25:58.010 --> 00:26:04.600 align:middle line:84%
+So that takes the inverse of
+true or false whatever this is.
+
+00:26:04.600 --> 00:26:07.730 align:middle line:84%
+Because in seen will
+either be true or false.
+
+00:26:07.730 --> 00:26:11.500 align:middle line:84%
+And not that will
+be false or true.
+
+00:26:11.500 --> 00:26:12.880 align:middle line:90%
+So that's perfect.
+
+00:26:12.880 --> 00:26:14.595 align:middle line:90%
+Yeah?
+
+00:26:14.595 --> 00:26:16.720 align:middle line:84%
+AUDIENCE: [INAUDIBLE] but
+when we use the word not,
+
+00:26:16.720 --> 00:26:18.580 align:middle line:84%
+do you use the
+exclamation [INAUDIBLE]??
+
+00:26:18.580 --> 00:26:21.130 align:middle line:84%
+ANA BELL: Oh yeah, so we
+can use not when we're
+
+00:26:21.130 --> 00:26:23.560 align:middle line:90%
+dealing with Booleans, right?
+
+00:26:23.560 --> 00:26:25.090 align:middle line:84%
+So something that
+an expression that
+
+00:26:25.090 --> 00:26:26.990 align:middle line:90%
+evaluates to true or false.
+
+00:26:26.990 --> 00:26:28.450 align:middle line:90%
+That's when we use not.
+
+00:26:28.450 --> 00:26:31.390 align:middle line:84%
+And the not equal, so the
+exclamation mark equal,
+
+00:26:31.390 --> 00:26:34.030 align:middle line:84%
+is used with other
+expressions when we're
+
+00:26:34.030 --> 00:26:35.950 align:middle line:90%
+testing for equality, right?
+
+00:26:35.950 --> 00:26:38.620 align:middle line:90%
+Like 3 not equal 2.
+
+00:26:38.620 --> 00:26:41.560 align:middle line:84%
+Or a not equal b or
+something like that, right?
+
+00:26:41.560 --> 00:26:44.560 align:middle line:84%
+So things that could be
+numerical not necessarily
+
+00:26:44.560 --> 00:26:45.640 align:middle line:90%
+just true and false.
+
+00:26:45.640 --> 00:26:48.360 align:middle line:90%
+
+
+00:26:48.360 --> 00:26:55.120 align:middle line:84%
+OK, so if char is not in seen,
+so if I haven't seen it before,
+
+00:26:55.120 --> 00:26:55.995 align:middle line:90%
+what do I want to do?
+
+00:26:55.995 --> 00:26:59.560 align:middle line:90%
+
+
+00:26:59.560 --> 00:27:00.523 align:middle line:90%
+Yep?
+
+00:27:00.523 --> 00:27:01.972 align:middle line:90%
+AUDIENCE: [INAUDIBLE].
+
+00:27:01.972 --> 00:27:12.587 align:middle line:90%
+
+
+00:27:12.587 --> 00:27:13.170 align:middle line:90%
+ANA BELL: Yep.
+
+00:27:13.170 --> 00:27:16.200 align:middle line:84%
+So we can append the
+character that we just
+
+00:27:16.200 --> 00:27:20.310 align:middle line:84%
+looked at to our seen list, just
+as we had done incrementally
+
+00:27:20.310 --> 00:27:21.100 align:middle line:90%
+here.
+
+00:27:21.100 --> 00:27:24.000 align:middle line:84%
+So that takes care of adding
+the character one by one if we
+
+00:27:24.000 --> 00:27:27.410 align:middle line:90%
+haven't seen it to our seen.
+
+00:27:27.410 --> 00:27:28.880 align:middle line:90%
+Good.
+
+00:27:28.880 --> 00:27:30.170 align:middle line:90%
+Anything else we want to do?
+
+00:27:30.170 --> 00:27:33.290 align:middle line:84%
+Or we can even test it
+out like this, right?
+
+00:27:33.290 --> 00:27:37.670 align:middle line:84%
+So we can print seen each
+time through our loop.
+
+00:27:37.670 --> 00:27:40.650 align:middle line:90%
+
+
+00:27:40.650 --> 00:27:43.560 align:middle line:84%
+So first it's a, then
+it's ab, then it's abc.
+
+00:27:43.560 --> 00:27:47.850 align:middle line:84%
+And then, the last time it
+should still be abc, and it is.
+
+00:27:47.850 --> 00:27:52.320 align:middle line:90%
+
+
+00:27:52.320 --> 00:27:55.990 align:middle line:84%
+And the last step is to just do
+what the problem asks us to do,
+
+00:27:55.990 --> 00:27:59.070 align:middle line:84%
+which is to print how
+many characters are--
+
+00:27:59.070 --> 00:28:01.680 align:middle line:84%
+how many unique characters are
+in this list or in this string.
+
+00:28:01.680 --> 00:28:04.640 align:middle line:90%
+
+
+00:28:04.640 --> 00:28:05.487 align:middle line:90%
+Yeah?
+
+00:28:05.487 --> 00:28:06.948 align:middle line:90%
+AUDIENCE: [INAUDIBLE].
+
+00:28:06.948 --> 00:28:17.680 align:middle line:90%
+
+
+00:28:17.680 --> 00:28:22.660 align:middle line:84%
+ANA BELL: Yeah, we can have
+a counter that is initially
+
+00:28:22.660 --> 00:28:23.920 align:middle line:90%
+zero before the loop.
+
+00:28:23.920 --> 00:28:28.210 align:middle line:84%
+And every time we add a new
+thing to our seen string,
+
+00:28:28.210 --> 00:28:29.980 align:middle line:90%
+we can increment our counter.
+
+00:28:29.980 --> 00:28:33.670 align:middle line:84%
+And then, that takes care of
+the bulk of the work, right?
+
+00:28:33.670 --> 00:28:37.360 align:middle line:84%
+This does all the counting, all
+the adding to the unique seen.
+
+00:28:37.360 --> 00:28:41.290 align:middle line:84%
+And so at the end of the loop,
+we have this number in hand.
+
+00:28:41.290 --> 00:28:42.920 align:middle line:90%
+And then, we can just print it.
+
+00:28:42.920 --> 00:28:45.670 align:middle line:84%
+So with this particular
+case, it's 3.
+
+00:28:45.670 --> 00:28:48.190 align:middle line:84%
+If we add more a's
+in random spots,
+
+00:28:48.190 --> 00:28:51.570 align:middle line:90%
+it's still going to be 3, right?
+
+00:28:51.570 --> 00:28:52.070 align:middle line:90%
+Yeah?
+
+00:28:52.070 --> 00:28:54.360 align:middle line:90%
+AUDIENCE: [INAUDIBLE].
+
+00:28:54.360 --> 00:28:57.030 align:middle line:84%
+ANA BELL: Yeah, so now that
+we have some code that--
+
+00:28:57.030 --> 00:28:58.950 align:middle line:84%
+basically, that
+works really well,
+
+00:28:58.950 --> 00:29:00.540 align:middle line:90%
+we can make improvements to it.
+
+00:29:00.540 --> 00:29:02.100 align:middle line:84%
+So one improvement
+that's suggested
+
+00:29:02.100 --> 00:29:05.380 align:middle line:84%
+is instead of keeping
+a counter variable,
+
+00:29:05.380 --> 00:29:08.190 align:middle line:84%
+we can actually just
+recognize the fact
+
+00:29:08.190 --> 00:29:12.630 align:middle line:84%
+that the length of our seen is
+just all the unique characters
+
+00:29:12.630 --> 00:29:13.980 align:middle line:90%
+we've seen already, right?
+
+00:29:13.980 --> 00:29:17.130 align:middle line:84%
+Because when we double up on
+something, we don't re-add it.
+
+00:29:17.130 --> 00:29:24.180 align:middle line:84%
+So all we can do to print out
+the number of unique characters
+
+00:29:24.180 --> 00:29:27.920 align:middle line:84%
+is to just say, I'm going to
+print out the length of seen,
+
+00:29:27.920 --> 00:29:28.420 align:middle line:90%
+OK?
+
+00:29:28.420 --> 00:29:31.420 align:middle line:84%
+And now there's no need to
+increment any sort of counter.
+
+00:29:31.420 --> 00:29:32.870 align:middle line:90%
+And so that still gives us 3.
+
+00:29:32.870 --> 00:29:40.690 align:middle line:90%
+
+
+00:29:40.690 --> 00:29:42.838 align:middle line:90%
+Questions about this code?
+
+00:29:42.838 --> 00:29:43.630 align:middle line:90%
+Does it make sense?
+
+00:29:43.630 --> 00:29:48.570 align:middle line:90%
+
+
+00:29:48.570 --> 00:29:50.090 align:middle line:90%
+Notice there's no else, right?
+
+00:29:50.090 --> 00:29:52.610 align:middle line:84%
+We just have a nice little
+if, there's no else.
+
+00:29:52.610 --> 00:29:55.250 align:middle line:84%
+Because there's
+nothing to do when
+
+00:29:55.250 --> 00:29:56.670 align:middle line:84%
+we've already seen
+the character.
+
+00:29:56.670 --> 00:29:58.700 align:middle line:90%
+So we could have else pass.
+
+00:29:58.700 --> 00:30:01.040 align:middle line:90%
+And pass is just some--
+
+00:30:01.040 --> 00:30:02.810 align:middle line:90%
+it's just a keyword in Python.
+
+00:30:02.810 --> 00:30:05.450 align:middle line:84%
+You see it's turned blue because
+it's a keyword in Python.
+
+00:30:05.450 --> 00:30:07.820 align:middle line:90%
+It just means do nothing, right?
+
+00:30:07.820 --> 00:30:10.220 align:middle line:84%
+So we wouldn't write
+this, obviously.
+
+00:30:10.220 --> 00:30:13.290 align:middle line:90%
+
+
+00:30:13.290 --> 00:30:15.290 align:middle line:84%
+If we had an else case,
+that's what we would do.
+
+00:30:15.290 --> 00:30:16.332 align:middle line:90%
+We would just do nothing.
+
+00:30:16.332 --> 00:30:18.430 align:middle line:90%
+
+
+00:30:18.430 --> 00:30:23.120 align:middle line:84%
+OK, other questions
+about the code?
+
+00:30:23.120 --> 00:30:25.238 align:middle line:90%
+Is that right?
+
+00:30:25.238 --> 00:30:30.474 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:30:30.474 --> 00:30:31.290 align:middle line:90%
+ANA BELL: Sorry.
+
+00:30:31.290 --> 00:30:32.387 align:middle line:90%
+Say again.
+
+00:30:32.387 --> 00:30:35.190 align:middle line:90%
+AUDIENCE: [INAUDIBLE].
+
+00:30:35.190 --> 00:30:38.460 align:middle line:84%
+ANA BELL: Why are we printing
+the length of seen here?
+
+00:30:38.460 --> 00:30:41.040 align:middle line:84%
+So we're printing
+the length of seen
+
+00:30:41.040 --> 00:30:49.590 align:middle line:84%
+because we see that whenever we
+add a unique character to this
+
+00:30:49.590 --> 00:30:55.150 align:middle line:84%
+seen variable, it's one that we
+haven't actually seen before,
+
+00:30:55.150 --> 00:30:55.900 align:middle line:90%
+right?
+
+00:30:55.900 --> 00:30:58.780 align:middle line:84%
+And so the only things
+I'm adding to my seen
+
+00:30:58.780 --> 00:31:01.250 align:middle line:90%
+are things that are new.
+
+00:31:01.250 --> 00:31:04.990 align:middle line:84%
+And so even as I was going
+through manually here,
+
+00:31:04.990 --> 00:31:07.510 align:middle line:84%
+I said, I've seen the a, I've
+seen the b, I've seen the c,
+
+00:31:07.510 --> 00:31:08.650 align:middle line:90%
+I added them one by one.
+
+00:31:08.650 --> 00:31:10.510 align:middle line:84%
+And then, when I
+saw the duplicate a,
+
+00:31:10.510 --> 00:31:13.630 align:middle line:84%
+I didn't add it
+to my here, right?
+
+00:31:13.630 --> 00:31:16.420 align:middle line:84%
+And so, basically,
+the seen already
+
+00:31:16.420 --> 00:31:20.290 align:middle line:84%
+contains all the unique
+characters in my list--
+
+00:31:20.290 --> 00:31:24.010 align:middle line:90%
+in my string-- original string.
+
+00:31:24.010 --> 00:31:30.790 align:middle line:90%
+
+
+00:31:30.790 --> 00:31:33.550 align:middle line:84%
+OK, so quick summary of what
+we've seen so far before we
+
+00:31:33.550 --> 00:31:35.120 align:middle line:84%
+start looking at
+our first algorithm.
+
+00:31:35.120 --> 00:31:36.610 align:middle line:90%
+So we've seen objects, right?
+
+00:31:36.610 --> 00:31:39.820 align:middle line:84%
+That's how we write
+Python programs.
+
+00:31:39.820 --> 00:31:43.160 align:middle line:84%
+We manipulate objects by
+saving them to variables
+
+00:31:43.160 --> 00:31:45.110 align:middle line:84%
+so the values are more
+easily accessible.
+
+00:31:45.110 --> 00:31:47.800 align:middle line:84%
+We have expressions that
+evaluate to different things,
+
+00:31:47.800 --> 00:31:50.230 align:middle line:84%
+integers, floats,
+Booleans, things like that.
+
+00:31:50.230 --> 00:31:53.020 align:middle line:84%
+We added branching
+as a way to control--
+
+00:31:53.020 --> 00:31:55.990 align:middle line:84%
+as a control flow mechanism
+to our program, right?
+
+00:31:55.990 --> 00:31:59.140 align:middle line:84%
+It says, hey Python, either
+evaluate this set of statements
+
+00:31:59.140 --> 00:32:00.910 align:middle line:84%
+or this other set of
+statements depending
+
+00:32:00.910 --> 00:32:02.810 align:middle line:84%
+on whether this
+condition is true.
+
+00:32:02.810 --> 00:32:05.980 align:middle line:84%
+And then, we added
+the last mechanism
+
+00:32:05.980 --> 00:32:08.620 align:middle line:84%
+for control flow, the
+looping mechanism that
+
+00:32:08.620 --> 00:32:13.120 align:middle line:84%
+said, either loop or repeat this
+code while some condition is
+
+00:32:13.120 --> 00:32:18.640 align:middle line:84%
+true or loop this code for
+this sequence of values, OK?
+
+00:32:18.640 --> 00:32:21.970 align:middle line:84%
+So really, with
+that in hand, we've
+
+00:32:21.970 --> 00:32:24.550 align:middle line:84%
+basically have a really
+nice toolbox of things
+
+00:32:24.550 --> 00:32:27.310 align:middle line:84%
+that we can use to write
+interesting programs.
+
+00:32:27.310 --> 00:32:29.350 align:middle line:90%
+That's kind of all we need.
+
+00:32:29.350 --> 00:32:31.582 align:middle line:84%
+But this is not the
+end of the class.
+
+00:32:31.582 --> 00:32:34.040 align:middle line:84%
+We're going to look at other
+things that will make our code
+
+00:32:34.040 --> 00:32:36.300 align:middle line:90%
+neater, more readable.
+
+00:32:36.300 --> 00:32:39.458 align:middle line:84%
+We can write more of it more
+efficiently, things like that.
+
+00:32:39.458 --> 00:32:41.000 align:middle line:84%
+But really, if you
+want to just start
+
+00:32:41.000 --> 00:32:42.920 align:middle line:84%
+writing little
+algorithms, this is
+
+00:32:42.920 --> 00:32:46.230 align:middle line:84%
+all we need in terms
+of Python syntax.
+
+00:32:46.230 --> 00:32:49.370 align:middle line:84%
+So the first thing we're going
+to apply this knowledge to
+
+00:32:49.370 --> 00:32:51.530 align:middle line:84%
+is our very first
+algorithm called
+
+00:32:51.530 --> 00:32:53.940 align:middle line:90%
+the guess-and-check algorithm.
+
+00:32:53.940 --> 00:32:56.400 align:middle line:84%
+So another word for the
+guess-and-check algorithm
+
+00:32:56.400 --> 00:32:59.130 align:middle line:90%
+is exhaustive enumeration, OK?
+
+00:32:59.130 --> 00:33:03.520 align:middle line:84%
+So the idea here is that
+we're given a problem.
+
+00:33:03.520 --> 00:33:07.390 align:middle line:84%
+We can guess a value
+for a solution, OK?
+
+00:33:07.390 --> 00:33:08.530 align:middle line:90%
+We'll just do a guess.
+
+00:33:08.530 --> 00:33:10.810 align:middle line:84%
+And then, we'll test whether
+this guess is correct.
+
+00:33:10.810 --> 00:33:13.220 align:middle line:90%
+Does it solve our problem?
+
+00:33:13.220 --> 00:33:15.470 align:middle line:90%
+If it does, we're done.
+
+00:33:15.470 --> 00:33:17.380 align:middle line:84%
+We've found a solution
+to our problem.
+
+00:33:17.380 --> 00:33:19.390 align:middle line:84%
+If it doesn't solve
+our problem, we're
+
+00:33:19.390 --> 00:33:21.400 align:middle line:84%
+just going to keep
+making guesses
+
+00:33:21.400 --> 00:33:26.170 align:middle line:84%
+until we've exhausted our set
+of possible guesses, right?
+
+00:33:26.170 --> 00:33:28.330 align:middle line:84%
+So either we find
+the solution or we
+
+00:33:28.330 --> 00:33:31.910 align:middle line:84%
+say we weren't able to find
+a solution to this problem.
+
+00:33:31.910 --> 00:33:33.890 align:middle line:84%
+It doesn't mean that
+one doesn't exist.
+
+00:33:33.890 --> 00:33:35.890 align:middle line:84%
+It just means that
+with guess-and-check
+
+00:33:35.890 --> 00:33:38.770 align:middle line:84%
+and exhaustively enumerating
+all these possible values,
+
+00:33:38.770 --> 00:33:41.320 align:middle line:84%
+we were not able
+to find a solution.
+
+00:33:41.320 --> 00:33:44.190 align:middle line:84%
+So in terms of a flow chart,
+the way this looks is we
+
+00:33:44.190 --> 00:33:45.360 align:middle line:90%
+have an initial guess.
+
+00:33:45.360 --> 00:33:47.260 align:middle line:90%
+We ask, is this guess correct?
+
+00:33:47.260 --> 00:33:48.580 align:middle line:90%
+If it is, we're done.
+
+00:33:48.580 --> 00:33:52.560 align:middle line:84%
+And if it's not, we're going
+to choose a next guess.
+
+00:33:52.560 --> 00:33:58.850 align:middle line:84%
+So let's look at finding the
+root of a perfect square.
+
+00:33:58.850 --> 00:34:00.100 align:middle line:90%
+And that's our problem.
+
+00:34:00.100 --> 00:34:01.870 align:middle line:84%
+And we're going to
+say either we found
+
+00:34:01.870 --> 00:34:05.710 align:middle line:84%
+the root of this
+perfect square or we say
+
+00:34:05.710 --> 00:34:08.940 align:middle line:90%
+this is not a perfect square.
+
+00:34:08.940 --> 00:34:12.030 align:middle line:84%
+So with guess-and-check
+we can say, well,
+
+00:34:12.030 --> 00:34:16.100 align:middle line:84%
+what if we want to find
+whether 7 is a perfect square?
+
+00:34:16.100 --> 00:34:17.870 align:middle line:90%
+If it is, what is its root?
+
+00:34:17.870 --> 00:34:21.340 align:middle line:84%
+And if it's not say, that
+it's not a perfect square.
+
+00:34:21.340 --> 00:34:24.000 align:middle line:84%
+Well, we can make
+an initial guess, 6.
+
+00:34:24.000 --> 00:34:25.409 align:middle line:90%
+That's not the right solution.
+
+00:34:25.409 --> 00:34:26.790 align:middle line:90%
+We can make another guess, 9.
+
+00:34:26.790 --> 00:34:28.110 align:middle line:90%
+That's not the right solution.
+
+00:34:28.110 --> 00:34:29.380 align:middle line:90%
+We can make another guess, 2.
+
+00:34:29.380 --> 00:34:30.630 align:middle line:90%
+That's not the right solution.
+
+00:34:30.630 --> 00:34:31.679 align:middle line:90%
+We can make a guess 0.
+
+00:34:31.679 --> 00:34:33.480 align:middle line:84%
+That's, obviously, not
+the right solution.
+
+00:34:33.480 --> 00:34:36.100 align:middle line:84%
+We can keep guessing
+randomly like this,
+
+00:34:36.100 --> 00:34:38.070 align:middle line:84%
+but it's not going to be
+very efficient, right?
+
+00:34:38.070 --> 00:34:40.199 align:middle line:84%
+What we want to do is use
+the power of computers,
+
+00:34:40.199 --> 00:34:42.810 align:middle line:84%
+and computers work with
+these sort of patterns
+
+00:34:42.810 --> 00:34:43.500 align:middle line:90%
+in hand, right?
+
+00:34:43.500 --> 00:34:46.679 align:middle line:84%
+Remember range starting from
+0 following a pattern going up
+
+00:34:46.679 --> 00:34:48.409 align:middle line:90%
+to some number.
+
+00:34:48.409 --> 00:34:50.530 align:middle line:90%
+So the idea is to be systematic.
+
+00:34:50.530 --> 00:34:52.300 align:middle line:84%
+And then, we can really
+harness the power
+
+00:34:52.300 --> 00:34:55.460 align:middle line:84%
+of programming and computers
+being able to do things really,
+
+00:34:55.460 --> 00:34:57.370 align:middle line:90%
+really quickly for us.
+
+00:34:57.370 --> 00:35:00.100 align:middle line:84%
+So for that same
+problem, finding out
+
+00:35:00.100 --> 00:35:03.650 align:middle line:84%
+whether a number x
+is a perfect square,
+
+00:35:03.650 --> 00:35:06.115 align:middle line:84%
+let's be systematic and
+start with a guess of 0.
+
+00:35:06.115 --> 00:35:08.800 align:middle line:90%
+
+
+00:35:08.800 --> 00:35:10.900 align:middle line:84%
+Two cases, the
+number we're trying
+
+00:35:10.900 --> 00:35:14.480 align:middle line:84%
+to find the square root
+of is a perfect square.
+
+00:35:14.480 --> 00:35:15.820 align:middle line:90%
+Let's say 4.
+
+00:35:15.820 --> 00:35:18.770 align:middle line:84%
+We're going to start with
+a guess of 0, 0 squared.
+
+00:35:18.770 --> 00:35:19.630 align:middle line:90%
+Solve our problem?
+
+00:35:19.630 --> 00:35:21.430 align:middle line:90%
+No, increment.
+
+00:35:21.430 --> 00:35:23.200 align:middle line:84%
+Does 1 squared
+solve our problem?
+
+00:35:23.200 --> 00:35:24.430 align:middle line:90%
+No, increment.
+
+00:35:24.430 --> 00:35:26.440 align:middle line:84%
+Does 2 squared
+solve our problem?
+
+00:35:26.440 --> 00:35:29.650 align:middle line:90%
+Yes, we are done.
+
+00:35:29.650 --> 00:35:33.010 align:middle line:84%
+What if x is not
+a perfect square?
+
+00:35:33.010 --> 00:35:35.810 align:middle line:90%
+OK, let's say, 10.
+
+00:35:35.810 --> 00:35:39.830 align:middle line:84%
+Let's use the same systematic
+approach of guess-and-check.
+
+00:35:39.830 --> 00:35:43.040 align:middle line:84%
+We're going to need to add a
+little bit of algebra though.
+
+00:35:43.040 --> 00:35:45.350 align:middle line:84%
+Because if we
+don't, we're at risk
+
+00:35:45.350 --> 00:35:47.990 align:middle line:84%
+of potentially
+doing something that
+
+00:35:47.990 --> 00:35:49.860 align:middle line:90%
+will lead to an infinite loop.
+
+00:35:49.860 --> 00:35:52.550 align:middle line:84%
+So the algebra we need to
+add to solve our problem
+
+00:35:52.550 --> 00:35:56.450 align:middle line:84%
+is to say, if we were
+looking at a number that's
+
+00:35:56.450 --> 00:35:59.420 align:middle line:84%
+not a perfect square, we need
+to have to find-- we have
+
+00:35:59.420 --> 00:36:01.190 align:middle line:90%
+to find a way to stop, right?
+
+00:36:01.190 --> 00:36:03.650 align:middle line:84%
+We don't want to guess
+something that's infinite.
+
+00:36:03.650 --> 00:36:04.770 align:middle line:90%
+This is guess-and-check.
+
+00:36:04.770 --> 00:36:09.060 align:middle line:84%
+So we need an exhaustive
+set of potential solutions.
+
+00:36:09.060 --> 00:36:10.412 align:middle line:90%
+So we're going to use algebra.
+
+00:36:10.412 --> 00:36:11.870 align:middle line:84%
+And we're going to
+say, we're going
+
+00:36:11.870 --> 00:36:17.390 align:middle line:84%
+to stop as soon as our guess
+squared becomes bigger than x.
+
+00:36:17.390 --> 00:36:20.790 align:middle line:84%
+So we're going to start guessing
+zero then 1, then 2, then 3
+
+00:36:20.790 --> 00:36:21.290 align:middle line:90%
+then 4.
+
+00:36:21.290 --> 00:36:24.440 align:middle line:84%
+And at some point, that
+number that guess squared,
+
+00:36:24.440 --> 00:36:25.790 align:middle line:90%
+will be bigger than x.
+
+00:36:25.790 --> 00:36:28.340 align:middle line:84%
+And we know we can stop because
+numbers bigger than that will
+
+00:36:28.340 --> 00:36:30.470 align:middle line:90%
+definitely be bigger than x.
+
+00:36:30.470 --> 00:36:32.930 align:middle line:84%
+So our first guess
+would be 0 squared.
+
+00:36:32.930 --> 00:36:34.430 align:middle line:90%
+Obviously, less than 10.
+
+00:36:34.430 --> 00:36:35.855 align:middle line:90%
+1 squared, less than 10.
+
+00:36:35.855 --> 00:36:37.310 align:middle line:90%
+2 squared, less than 10.
+
+00:36:37.310 --> 00:36:38.690 align:middle line:90%
+3 squared, less than 10, right?
+
+00:36:38.690 --> 00:36:41.170 align:middle line:90%
+That's 9.
+
+00:36:41.170 --> 00:36:46.160 align:middle line:84%
+4 squared becomes 16, and we
+say this is where we stop.
+
+00:36:46.160 --> 00:36:52.080 align:middle line:84%
+And we have not found a
+square root for 10, right?
+
+00:36:52.080 --> 00:36:53.760 align:middle line:90%
+So 10 is not a perfect square.
+
+00:36:53.760 --> 00:36:56.780 align:middle line:90%
+
+
+00:36:56.780 --> 00:36:57.740 align:middle line:90%
+Does that make sense?
+
+00:36:57.740 --> 00:36:59.480 align:middle line:90%
+Is that all right?
+
+00:36:59.480 --> 00:37:02.450 align:middle line:84%
+So our exhaustive set
+of potential solutions
+
+00:37:02.450 --> 00:37:07.760 align:middle line:84%
+is 0 through 4 because that
+brought us closest to 10.
+
+00:37:07.760 --> 00:37:09.500 align:middle line:90%
+And at 4, we've gone over 10.
+
+00:37:09.500 --> 00:37:11.630 align:middle line:84%
+And we don't need
+to check 5, 6, 7
+
+00:37:11.630 --> 00:37:13.760 align:middle line:84%
+because it's
+definitely not going
+
+00:37:13.760 --> 00:37:16.250 align:middle line:84%
+to be-- those values squared
+will definitely be bigger
+
+00:37:16.250 --> 00:37:17.970 align:middle line:90%
+than 10.
+
+00:37:17.970 --> 00:37:22.140 align:middle line:84%
+So this is the code that
+solves that problem.
+
+00:37:22.140 --> 00:37:23.800 align:middle line:90%
+We got input from the user.
+
+00:37:23.800 --> 00:37:25.560 align:middle line:84%
+So what number do
+you want to find
+
+00:37:25.560 --> 00:37:28.830 align:middle line:84%
+whether it's a perfect
+square or not and what is it
+
+00:37:28.830 --> 00:37:31.720 align:middle line:90%
+if it is a perfect square?
+
+00:37:31.720 --> 00:37:36.150 align:middle line:84%
+We have a while loop that
+checks one condition, right?
+
+00:37:36.150 --> 00:37:39.980 align:middle line:84%
+That's our stopping
+condition here.
+
+00:37:39.980 --> 00:37:41.950 align:middle line:84%
+We're going to iterate
+through the loop
+
+00:37:41.950 --> 00:37:44.620 align:middle line:84%
+when guess squared
+is less than x.
+
+00:37:44.620 --> 00:37:46.210 align:middle line:84%
+So on that number
+line, we're going
+
+00:37:46.210 --> 00:37:51.190 align:middle line:84%
+to keep incrementing by 1
+as long as our square is
+
+00:37:51.190 --> 00:37:53.460 align:middle line:90%
+less than x.
+
+00:37:53.460 --> 00:37:56.870 align:middle line:90%
+So that's this while loop here.
+
+00:37:56.870 --> 00:38:00.470 align:middle line:84%
+And what we're doing inside the
+loop is incrementing our guess.
+
+00:38:00.470 --> 00:38:03.230 align:middle line:90%
+Guess equals guess plus 1.
+
+00:38:03.230 --> 00:38:06.860 align:middle line:84%
+And then, at some point, if we
+haven't found a perfect square
+
+00:38:06.860 --> 00:38:08.570 align:middle line:84%
+or if we have found
+a perfect square,
+
+00:38:08.570 --> 00:38:10.820 align:middle line:84%
+this condition
+becomes false, right?
+
+00:38:10.820 --> 00:38:14.750 align:middle line:84%
+Because this is false
+when we have the opposite
+
+00:38:14.750 --> 00:38:16.290 align:middle line:90%
+of this less than sign.
+
+00:38:16.290 --> 00:38:20.630 align:middle line:84%
+So guess squared becomes
+greater than or equal to x.
+
+00:38:20.630 --> 00:38:23.270 align:middle line:84%
+Now, that's two very
+different things, right?
+
+00:38:23.270 --> 00:38:26.450 align:middle line:84%
+Guess squared greater
+than x means we haven't
+
+00:38:26.450 --> 00:38:27.830 align:middle line:90%
+found this perfect square.
+
+00:38:27.830 --> 00:38:30.890 align:middle line:84%
+But guess squared is
+equal to x means we have
+
+00:38:30.890 --> 00:38:33.420 align:middle line:90%
+found a perfect square, right?
+
+00:38:33.420 --> 00:38:39.700 align:middle line:84%
+And both of those cases trigger
+us to leave the while loop.
+
+00:38:39.700 --> 00:38:41.520 align:middle line:84%
+So then, right after
+the while loop,
+
+00:38:41.520 --> 00:38:43.050 align:middle line:90%
+we need to have an if else.
+
+00:38:43.050 --> 00:38:47.210 align:middle line:84%
+The if else checks for
+one of those two cases.
+
+00:38:47.210 --> 00:38:50.440 align:middle line:84%
+So the if guess squared
+is equivalent to x
+
+00:38:50.440 --> 00:38:53.200 align:middle line:84%
+means that we exited the
+while loop because we found
+
+00:38:53.200 --> 00:38:54.800 align:middle line:90%
+that it was a perfect square.
+
+00:38:54.800 --> 00:38:56.290 align:middle line:90%
+So like 4, for example, right?
+
+00:38:56.290 --> 00:39:00.070 align:middle line:84%
+If x was 4, when we hit 2,
+that while loop becomes false.
+
+00:39:00.070 --> 00:39:05.080 align:middle line:84%
+And we exited because
+4 was a perfect square.
+
+00:39:05.080 --> 00:39:09.400 align:middle line:84%
+But the 10, for example, would
+fall within the else clause
+
+00:39:09.400 --> 00:39:10.480 align:middle line:90%
+here, right?
+
+00:39:10.480 --> 00:39:14.530 align:middle line:84%
+Because we have exited the
+loop because guess squared 4,
+
+00:39:14.530 --> 00:39:18.480 align:middle line:84%
+4 squared 16, was
+greater than 10.
+
+00:39:18.480 --> 00:39:21.910 align:middle line:84%
+And so that's-- then we would
+print x is not a perfect
+
+00:39:21.910 --> 00:39:22.410 align:middle line:90%
+square.
+
+00:39:22.410 --> 00:39:25.380 align:middle line:90%
+
+
+00:39:25.380 --> 00:39:29.300 align:middle line:84%
+OK, so this works for
+many different values,
+
+00:39:29.300 --> 00:39:30.920 align:middle line:90%
+as big as you'd like.
+
+00:39:30.920 --> 00:39:35.300 align:middle line:84%
+But it doesn't work
+for negative values.
+
+00:39:35.300 --> 00:39:37.400 align:middle line:84%
+And the reason it doesn't
+work for negative values
+
+00:39:37.400 --> 00:39:39.650 align:middle line:84%
+is because the loop
+never actually enters
+
+00:39:39.650 --> 00:39:41.400 align:middle line:90%
+in the first place.
+
+00:39:41.400 --> 00:39:46.580 align:middle line:84%
+So for example, if we look
+at this whether negative 2
+
+00:39:46.580 --> 00:39:50.450 align:middle line:84%
+is a perfect square, we're
+going to start with guesses 0
+
+00:39:50.450 --> 00:39:52.545 align:middle line:84%
+just because that's
+how we implemented
+
+00:39:52.545 --> 00:39:53.420 align:middle line:90%
+the algorithm, right?
+
+00:39:53.420 --> 00:39:55.430 align:middle line:84%
+On the previous
+slide, it says guesses
+
+00:39:55.430 --> 00:39:59.160 align:middle line:90%
+equal to 0 right at the top.
+
+00:39:59.160 --> 00:40:05.420 align:middle line:84%
+And so guesses 0, we say,
+is 0 squared less than x?
+
+00:40:05.420 --> 00:40:06.200 align:middle line:90%
+No.
+
+00:40:06.200 --> 00:40:08.330 align:middle line:90%
+0 is not less than negative 2.
+
+00:40:08.330 --> 00:40:10.280 align:middle line:84%
+And that while loop
+never even enters
+
+00:40:10.280 --> 00:40:12.910 align:middle line:90%
+at all, which is fine, right?
+
+00:40:12.910 --> 00:40:16.300 align:middle line:84%
+Because negative 2 does
+not-- or negative 4--
+
+00:40:16.300 --> 00:40:18.730 align:middle line:84%
+negative numbers are
+not perfect squares
+
+00:40:18.730 --> 00:40:21.140 align:middle line:84%
+unless we're talking
+about imaginary numbers.
+
+00:40:21.140 --> 00:40:23.600 align:middle line:84%
+But we're not in
+this particular case.
+
+00:40:23.600 --> 00:40:26.620 align:middle line:84%
+However, we might want to handle
+the case when the user gives us
+
+00:40:26.620 --> 00:40:27.730 align:middle line:90%
+a negative number.
+
+00:40:27.730 --> 00:40:30.400 align:middle line:84%
+Maybe they accidentally typed in
+the negative sign or something
+
+00:40:30.400 --> 00:40:31.730 align:middle line:90%
+like that.
+
+00:40:31.730 --> 00:40:35.200 align:middle line:84%
+So we can actually
+take care of that case
+
+00:40:35.200 --> 00:40:37.150 align:middle line:84%
+by adding a little
+bit of extra code
+
+00:40:37.150 --> 00:40:39.360 align:middle line:90%
+around what we already wrote.
+
+00:40:39.360 --> 00:40:42.960 align:middle line:84%
+So the stuff that's boxed in
+red is the extra code we write.
+
+00:40:42.960 --> 00:40:47.470 align:middle line:84%
+Everything else is exactly
+the same as two slides ago.
+
+00:40:47.470 --> 00:40:50.280 align:middle line:84%
+So the only thing we want
+to do when we encounter
+
+00:40:50.280 --> 00:40:55.870 align:middle line:84%
+a negative number is flag it
+using a new variable that's
+
+00:40:55.870 --> 00:40:57.280 align:middle line:90%
+either true or false.
+
+00:40:57.280 --> 00:41:00.500 align:middle line:84%
+And then, at the end,
+we can handle that flag.
+
+00:41:00.500 --> 00:41:02.920 align:middle line:84%
+So if it's true,
+we do something.
+
+00:41:02.920 --> 00:41:05.740 align:middle line:84%
+And if it's false, we
+do something else, OK?
+
+00:41:05.740 --> 00:41:07.660 align:middle line:84%
+So in this particular
+case, we've
+
+00:41:07.660 --> 00:41:10.370 align:middle line:84%
+got a negative flag
+initially false,
+
+00:41:10.370 --> 00:41:13.360 align:middle line:84%
+which means that we're going to
+initially assume the user gives
+
+00:41:13.360 --> 00:41:15.250 align:middle line:90%
+us a positive value, right?
+
+00:41:15.250 --> 00:41:18.530 align:middle line:90%
+So a negative flag equals false.
+
+00:41:18.530 --> 00:41:19.830 align:middle line:90%
+We get input from the user.
+
+00:41:19.830 --> 00:41:22.830 align:middle line:84%
+And then, we check if the user
+gave us a negative number.
+
+00:41:22.830 --> 00:41:25.010 align:middle line:84%
+So if the x is less
+than 0, then we're
+
+00:41:25.010 --> 00:41:28.280 align:middle line:84%
+going to change the
+value of this flag.
+
+00:41:28.280 --> 00:41:30.680 align:middle line:90%
+Neg flag equals to true.
+
+00:41:30.680 --> 00:41:33.590 align:middle line:84%
+So we're going to change the
+value from false to true.
+
+00:41:33.590 --> 00:41:36.530 align:middle line:84%
+And then, the rest of
+it is the same, right?
+
+00:41:36.530 --> 00:41:39.660 align:middle line:84%
+This is all the same as
+what we had two slides ago.
+
+00:41:39.660 --> 00:41:41.180 align:middle line:84%
+Except that, at the
+end, we're going
+
+00:41:41.180 --> 00:41:44.600 align:middle line:84%
+to check to see if the user
+gave us-- actually gave us
+
+00:41:44.600 --> 00:41:47.055 align:middle line:84%
+a negative number, we
+can check with them,
+
+00:41:47.055 --> 00:41:49.430 align:middle line:84%
+did you actually mean the
+positive version of that number
+
+00:41:49.430 --> 00:41:50.390 align:middle line:90%
+or something like that?
+
+00:41:50.390 --> 00:41:53.170 align:middle line:90%
+
+
+00:41:53.170 --> 00:41:58.300 align:middle line:84%
+And so, in code, the way
+this looks is as follows.
+
+00:41:58.300 --> 00:42:02.070 align:middle line:84%
+So if we run it and we
+give it 4, obviously,
+
+00:42:02.070 --> 00:42:03.900 align:middle line:84%
+it tells us it's
+a perfect square
+
+00:42:03.900 --> 00:42:05.790 align:middle line:90%
+and what its square root is.
+
+00:42:05.790 --> 00:42:08.800 align:middle line:90%
+9 works.
+
+00:42:08.800 --> 00:42:11.860 align:middle line:84%
+10, it says it's not
+a perfect square.
+
+00:42:11.860 --> 00:42:16.000 align:middle line:84%
+And then, when we give it a
+negative number, square or not,
+
+00:42:16.000 --> 00:42:20.110 align:middle line:84%
+it just tells us negative
+4 is not a perfect square.
+
+00:42:20.110 --> 00:42:22.270 align:middle line:84%
+And then, it says, just
+checking, did you mean 4?
+
+00:42:22.270 --> 00:42:24.220 align:middle line:84%
+So it does this
+extra print statement
+
+00:42:24.220 --> 00:42:25.810 align:middle line:90%
+when the number was negative.
+
+00:42:25.810 --> 00:42:29.040 align:middle line:90%
+
+
+00:42:29.040 --> 00:42:29.640 align:middle line:90%
+Yeah?
+
+00:42:29.640 --> 00:42:30.690 align:middle line:90%
+Question.
+
+00:42:30.690 --> 00:42:34.780 align:middle line:84%
+AUDIENCE: I didn't quite
+get the [INAUDIBLE]..
+
+00:42:34.780 --> 00:42:36.950 align:middle line:84%
+ANA BELL: Yeah, so I
+can explain that again.
+
+00:42:36.950 --> 00:42:40.060 align:middle line:84%
+So the negative flag
+equals false is just
+
+00:42:40.060 --> 00:42:41.350 align:middle line:90%
+a variable, right?
+
+00:42:41.350 --> 00:42:42.850 align:middle line:90%
+I just called it neg flag.
+
+00:42:42.850 --> 00:42:45.430 align:middle line:84%
+It's a variable I
+initialized to false just
+
+00:42:45.430 --> 00:42:46.900 align:middle line:84%
+to say, hey, the
+number I'm going
+
+00:42:46.900 --> 00:42:48.370 align:middle line:90%
+to assume is not negative.
+
+00:42:48.370 --> 00:42:50.320 align:middle line:90%
+And then, we only flag it--
+
+00:42:50.320 --> 00:42:53.990 align:middle line:84%
+we only change its value to
+true if the number was negative.
+
+00:42:53.990 --> 00:42:55.840 align:middle line:84%
+So in fact, we could
+have just had a little
+
+00:42:55.840 --> 00:42:58.480 align:middle line:90%
+if else here, right?
+
+00:42:58.480 --> 00:43:00.430 align:middle line:90%
+We don't have this line up here.
+
+00:43:00.430 --> 00:43:02.170 align:middle line:90%
+We have x is equal to int.
+
+00:43:02.170 --> 00:43:04.390 align:middle line:84%
+And then, we say if x is
+less than 0 and neg flag
+
+00:43:04.390 --> 00:43:06.957 align:middle line:84%
+equals true, else neg
+flag equals false.
+
+00:43:06.957 --> 00:43:08.290 align:middle line:90%
+We could have done that as well.
+
+00:43:08.290 --> 00:43:12.790 align:middle line:90%
+
+
+00:43:12.790 --> 00:43:14.770 align:middle line:84%
+OK, so the big idea
+with guess-and-check
+
+00:43:14.770 --> 00:43:17.200 align:middle line:84%
+is we can't test an
+infinite number of values.
+
+00:43:17.200 --> 00:43:22.140 align:middle line:84%
+We have to stop at
+some point, right?
+
+00:43:22.140 --> 00:43:25.455 align:middle line:84%
+So now, we've been
+working with the code that
+
+00:43:25.455 --> 00:43:27.330 align:middle line:84%
+looks like something on
+the left side, right?
+
+00:43:27.330 --> 00:43:28.890 align:middle line:90%
+We've been using while loops.
+
+00:43:28.890 --> 00:43:31.710 align:middle line:84%
+But we've seen that
+we can actually
+
+00:43:31.710 --> 00:43:36.175 align:middle line:84%
+write very efficient code
+using for loops as well.
+
+00:43:36.175 --> 00:43:37.800 align:middle line:84%
+And in fact, the
+guess and check method
+
+00:43:37.800 --> 00:43:40.020 align:middle line:84%
+maybe intuitively
+lends itself better
+
+00:43:40.020 --> 00:43:42.300 align:middle line:84%
+to a for loop than
+a while loop, right?
+
+00:43:42.300 --> 00:43:45.360 align:middle line:84%
+Because we're trying to iterate
+through an exhaustive set
+
+00:43:45.360 --> 00:43:46.890 align:middle line:90%
+of values, right?
+
+00:43:46.890 --> 00:43:49.410 align:middle line:84%
+The numbers 0 through
+some number, right?
+
+00:43:49.410 --> 00:43:51.900 align:middle line:84%
+And so maybe a for
+loop is a better way
+
+00:43:51.900 --> 00:43:54.030 align:middle line:84%
+to write such a guess
+and check algorithm.
+
+00:43:54.030 --> 00:43:56.680 align:middle line:84%
+And we're going to see how to
+rewrite that in a little bit.
+
+00:43:56.680 --> 00:43:58.620 align:middle line:84%
+But in terms of a flow
+chart, the way for loop
+
+00:43:58.620 --> 00:44:00.990 align:middle line:84%
+would go is we
+sequentially go through
+
+00:44:00.990 --> 00:44:02.130 align:middle line:90%
+all the possible values.
+
+00:44:02.130 --> 00:44:03.840 align:middle line:84%
+When we've exhausted
+all the values,
+
+00:44:03.840 --> 00:44:05.520 align:middle line:84%
+we say we didn't
+find a solution.
+
+00:44:05.520 --> 00:44:09.510 align:middle line:84%
+And otherwise, the for loop
+just automatically grabs for us
+
+00:44:09.510 --> 00:44:12.340 align:middle line:90%
+the next value in the sequence.
+
+00:44:12.340 --> 00:44:14.340 align:middle line:84%
+So let's have you work
+on this for a little bit.
+
+00:44:14.340 --> 00:44:17.280 align:middle line:84%
+I want you to hard code for me
+a number as a secret number.
+
+00:44:17.280 --> 00:44:19.510 align:middle line:84%
+This is kind of what
+we did last lecture.
+
+00:44:19.510 --> 00:44:23.260 align:middle line:84%
+So secret equals 7, 5,
+whatever you'd like it to be.
+
+00:44:23.260 --> 00:44:26.010 align:middle line:84%
+And then, I want you
+to write some code that
+
+00:44:26.010 --> 00:44:29.490 align:middle line:84%
+goes through all of these
+numbers from 1 to 10 inclusive,
+
+00:44:29.490 --> 00:44:34.540 align:middle line:84%
+let's say, and prints that
+it found the secret number.
+
+00:44:34.540 --> 00:44:38.040 align:middle line:84%
+So if the secret number is
+within the range 0 through 10,
+
+00:44:38.040 --> 00:44:40.350 align:middle line:90%
+print that you found the number.
+
+00:44:40.350 --> 00:44:42.610 align:middle line:84%
+And otherwise, don't
+print anything.
+
+00:44:42.610 --> 00:44:46.570 align:middle line:84%
+So if you don't find the
+number, print nothing.
+
+00:44:46.570 --> 00:44:50.200 align:middle line:84%
+And as you're working on that,
+and if you finish that code,
+
+00:44:50.200 --> 00:44:53.080 align:middle line:84%
+think about how you
+would change that code
+
+00:44:53.080 --> 00:44:55.450 align:middle line:90%
+to do one thing differently.
+
+00:44:55.450 --> 00:44:59.300 align:middle line:84%
+If it's not found, print
+that you didn't find it.
+
+00:44:59.300 --> 00:45:02.950 align:middle line:84%
+So in the first version, if
+you don't find it, do nothing.
+
+00:45:02.950 --> 00:45:05.530 align:middle line:84%
+But in the second version,
+if you don't find it,
+
+00:45:05.530 --> 00:45:09.200 align:middle line:84%
+tell me that you
+didn't find it, OK?
+
+00:45:09.200 --> 00:45:15.420 align:middle line:84%
+So these codes are
+in this Python file.
+
+00:45:15.420 --> 00:45:19.980 align:middle line:84%
+And the easier version
+is about line 129.
+
+00:45:19.980 --> 00:45:22.140 align:middle line:90%
+And then, if you work on--
+
+00:45:22.140 --> 00:45:23.850 align:middle line:84%
+after you finish
+that if you're done,
+
+00:45:23.850 --> 00:45:27.360 align:middle line:84%
+you can just copy that
+code to lines about 144
+
+00:45:27.360 --> 00:45:31.710 align:middle line:84%
+and try to modify it to
+the new specification.
+
+00:45:31.710 --> 00:45:37.300 align:middle line:84%
+So if you don't find it,
+print that you didn't find it.
+
+00:45:37.300 --> 00:45:41.300 align:middle line:84%
+OK, so tell me some
+code for the first one.
+
+00:45:41.300 --> 00:45:43.390 align:middle line:84%
+So if we find the
+number print we
+
+00:45:43.390 --> 00:45:44.905 align:middle line:84%
+found it, and
+otherwise do nothing.
+
+00:45:44.905 --> 00:45:53.550 align:middle line:90%
+
+
+00:45:53.550 --> 00:45:55.425 align:middle line:84%
+What's better, while
+loop or for loop?
+
+00:45:55.425 --> 00:45:59.210 align:middle line:90%
+
+
+00:45:59.210 --> 00:46:00.000 align:middle line:90%
+For loop.
+
+00:46:00.000 --> 00:46:00.600 align:middle line:90%
+Yeah.
+
+00:46:00.600 --> 00:46:06.090 align:middle line:90%
+For, let's say, i in range.
+
+00:46:06.090 --> 00:46:10.520 align:middle line:84%
+How do I get numbers
+1 to 10 inclusive?
+
+00:46:10.520 --> 00:46:13.040 align:middle line:90%
+
+
+00:46:13.040 --> 00:46:14.270 align:middle line:90%
+1, 11.
+
+00:46:14.270 --> 00:46:14.990 align:middle line:90%
+Exactly.
+
+00:46:14.990 --> 00:46:16.520 align:middle line:90%
+Good.
+
+00:46:16.520 --> 00:46:18.770 align:middle line:84%
+And again, I can write a
+little message for myself.
+
+00:46:18.770 --> 00:46:25.100 align:middle line:84%
+i is 1, 2, 3, 4,
+dot, dot, dot, 11.
+
+00:46:25.100 --> 00:46:28.790 align:middle line:84%
+What do I do to make the
+check whether this number
+
+00:46:28.790 --> 00:46:32.734 align:middle line:90%
+i is my secret?
+
+00:46:32.734 --> 00:46:36.550 align:middle line:90%
+AUDIENCE: [INAUDIBLE].
+
+00:46:36.550 --> 00:46:41.630 align:middle line:84%
+ANA BELL: Yep, if i equals
+secret, let's say print found.
+
+00:46:41.630 --> 00:46:44.710 align:middle line:90%
+
+
+00:46:44.710 --> 00:46:46.870 align:middle line:90%
+OK, run it.
+
+00:46:46.870 --> 00:46:49.150 align:middle line:84%
+Obviously, 4 is
+within that range.
+
+00:46:49.150 --> 00:46:52.360 align:middle line:84%
+Obviously, 100, not
+in that range, right?
+
+00:46:52.360 --> 00:46:55.100 align:middle line:84%
+So when we had 4,
+it printed found.
+
+00:46:55.100 --> 00:46:58.180 align:middle line:84%
+And when we had
+100, it did nothing.
+
+00:46:58.180 --> 00:47:03.260 align:middle line:84%
+OK, I'm going to copy this
+code and paste it down here.
+
+00:47:03.260 --> 00:47:06.190 align:middle line:84%
+So let's try the version
+now where we just
+
+00:47:06.190 --> 00:47:08.980 align:middle line:84%
+make one small change to
+our specification, right?
+
+00:47:08.980 --> 00:47:11.620 align:middle line:84%
+Now we request the
+code to say, if you
+
+00:47:11.620 --> 00:47:14.290 align:middle line:84%
+don't find the number
+within this range, print
+
+00:47:14.290 --> 00:47:17.710 align:middle line:90%
+that you did not find it.
+
+00:47:17.710 --> 00:47:21.340 align:middle line:90%
+What are some things we can try?
+
+00:47:21.340 --> 00:47:22.525 align:middle line:90%
+Else, OK?
+
+00:47:22.525 --> 00:47:25.170 align:middle line:90%
+
+
+00:47:25.170 --> 00:47:29.200 align:middle line:90%
+Print not found.
+
+00:47:29.200 --> 00:47:37.150 align:middle line:90%
+OK, so 4, obviously, was found.
+
+00:47:37.150 --> 00:47:40.090 align:middle line:84%
+But we also printed
+all these not founds.
+
+00:47:40.090 --> 00:47:42.895 align:middle line:90%
+
+
+00:47:42.895 --> 00:47:43.395 align:middle line:90%
+Why?
+
+00:47:43.395 --> 00:47:46.210 align:middle line:90%
+
+
+00:47:46.210 --> 00:47:47.210 align:middle line:90%
+Yes.
+
+00:47:47.210 --> 00:47:48.710 align:middle line:84%
+AUDIENCE: [INAUDIBLE]
+it's iterating
+
+00:47:48.710 --> 00:47:51.740 align:middle line:84%
+through the whole range, so
+you could try breaking out
+
+00:47:51.740 --> 00:47:52.670 align:middle line:90%
+of the [INAUDIBLE].
+
+00:47:52.670 --> 00:47:54.890 align:middle line:84%
+ANA BELL: Yeah, we printed
+it because it's iterating
+
+00:47:54.890 --> 00:47:55.890 align:middle line:90%
+through the whole range.
+
+00:47:55.890 --> 00:47:58.820 align:middle line:84%
+Every time I check an
+i, I'm either printing
+
+00:47:58.820 --> 00:48:00.720 align:middle line:90%
+found or not found.
+
+00:48:00.720 --> 00:48:09.460 align:middle line:84%
+Yeah, so we could break, I
+guess, when we found it, right?
+
+00:48:09.460 --> 00:48:10.990 align:middle line:90%
+Break.
+
+00:48:10.990 --> 00:48:13.940 align:middle line:90%
+Run it.
+
+00:48:13.940 --> 00:48:16.980 align:middle line:84%
+OK, then we print not
+found until we find it
+
+00:48:16.980 --> 00:48:18.050 align:middle line:90%
+and then we break.
+
+00:48:18.050 --> 00:48:19.670 align:middle line:90%
+So we're getting there, right?
+
+00:48:19.670 --> 00:48:23.030 align:middle line:84%
+It's looking a
+little bit better.
+
+00:48:23.030 --> 00:48:24.250 align:middle line:90%
+What else can we try?
+
+00:48:24.250 --> 00:48:26.270 align:middle line:90%
+Yes.
+
+00:48:26.270 --> 00:48:27.500 align:middle line:90%
+Another break.
+
+00:48:27.500 --> 00:48:30.070 align:middle line:90%
+
+
+00:48:30.070 --> 00:48:32.650 align:middle line:84%
+We can try another
+break after not found.
+
+00:48:32.650 --> 00:48:35.440 align:middle line:90%
+
+
+00:48:35.440 --> 00:48:37.740 align:middle line:90%
+But then, the 4 is not found.
+
+00:48:37.740 --> 00:48:38.280 align:middle line:90%
+Yeah?
+
+00:48:38.280 --> 00:48:39.753 align:middle line:90%
+AUDIENCE: [INAUDIBLE].
+
+00:48:39.753 --> 00:48:56.570 align:middle line:90%
+
+
+00:48:56.570 --> 00:48:58.680 align:middle line:90%
+ANA BELL: Yeah, I like the idea.
+
+00:48:58.680 --> 00:49:00.695 align:middle line:84%
+Yeah, you can try to
+do a Boolean flag.
+
+00:49:00.695 --> 00:49:02.070 align:middle line:84%
+Was that your
+suggestion as well?
+
+00:49:02.070 --> 00:49:02.570 align:middle line:90%
+Yeah.
+
+00:49:02.570 --> 00:49:06.120 align:middle line:84%
+OK, let's try to do
+the Boolean flag way.
+
+00:49:06.120 --> 00:49:09.160 align:middle line:90%
+Let's delete the brakes.
+
+00:49:09.160 --> 00:49:11.380 align:middle line:84%
+Let's go back to
+what we had before.
+
+00:49:11.380 --> 00:49:13.380 align:middle line:90%
+So basically, our idea is--
+
+00:49:13.380 --> 00:49:17.100 align:middle line:84%
+I think what we're trying
+to get at is we only
+
+00:49:17.100 --> 00:49:19.680 align:middle line:84%
+want to print not
+found when we've
+
+00:49:19.680 --> 00:49:22.860 align:middle line:84%
+gone through all the
+numbers in the range, right?
+
+00:49:22.860 --> 00:49:25.560 align:middle line:84%
+So kind of something
+like this, right?
+
+00:49:25.560 --> 00:49:27.210 align:middle line:84%
+I want to print
+the not found only
+
+00:49:27.210 --> 00:49:31.870 align:middle line:90%
+once at the end of my loop, OK?
+
+00:49:31.870 --> 00:49:34.270 align:middle line:84%
+But this code
+doesn't work either
+
+00:49:34.270 --> 00:49:37.510 align:middle line:84%
+because I'm always
+printing not found.
+
+00:49:37.510 --> 00:49:40.570 align:middle line:84%
+No matter if I do this extra
+print inside here, right?
+
+00:49:40.570 --> 00:49:42.250 align:middle line:84%
+Because this not
+found at the end
+
+00:49:42.250 --> 00:49:45.200 align:middle line:84%
+here is at the same
+indentation level as for loop.
+
+00:49:45.200 --> 00:49:47.830 align:middle line:84%
+So the suggestion
+from a couple of you
+
+00:49:47.830 --> 00:49:50.500 align:middle line:84%
+is to actually
+set a flag, right?
+
+00:49:50.500 --> 00:49:55.120 align:middle line:84%
+So we can set a found flag
+to be originally, let's say,
+
+00:49:55.120 --> 00:49:57.400 align:middle line:90%
+false, right?
+
+00:49:57.400 --> 00:50:00.565 align:middle line:84%
+So before I even start my loop,
+let me just assume it's false.
+
+00:50:00.565 --> 00:50:03.110 align:middle line:90%
+
+
+00:50:03.110 --> 00:50:09.860 align:middle line:84%
+And I'm going to use
+this flag to trigger--
+
+00:50:09.860 --> 00:50:10.610 align:middle line:90%
+or I'm going to--
+
+00:50:10.610 --> 00:50:14.790 align:middle line:84%
+I guess I'm going to
+change this flag whenever
+
+00:50:14.790 --> 00:50:18.030 align:middle line:90%
+I found the number, right?
+
+00:50:18.030 --> 00:50:20.670 align:middle line:90%
+So found is originally false.
+
+00:50:20.670 --> 00:50:23.880 align:middle line:84%
+And the place in my
+code where I know
+
+00:50:23.880 --> 00:50:27.090 align:middle line:84%
+I found the number
+is here, right?
+
+00:50:27.090 --> 00:50:29.220 align:middle line:84%
+When i is equivalent
+to my secret.
+
+00:50:29.220 --> 00:50:32.550 align:middle line:84%
+And then, I can set my
+found flag to be true.
+
+00:50:32.550 --> 00:50:35.310 align:middle line:84%
+I only call it a
+flag because it flags
+
+00:50:35.310 --> 00:50:36.730 align:middle line:90%
+that an event happened or not.
+
+00:50:36.730 --> 00:50:38.610 align:middle line:90%
+So it's kind of a Boolean event.
+
+00:50:38.610 --> 00:50:40.740 align:middle line:84%
+But it's really just
+a variable, right?
+
+00:50:40.740 --> 00:50:42.840 align:middle line:84%
+Nothing special
+about the word flag.
+
+00:50:42.840 --> 00:50:43.800 align:middle line:90%
+It's just a variable.
+
+00:50:43.800 --> 00:50:48.340 align:middle line:90%
+
+
+00:50:48.340 --> 00:50:51.340 align:middle line:84%
+OK, so now, I think
+the suggestion was, now
+
+00:50:51.340 --> 00:50:53.980 align:middle line:84%
+that we've set our
+flag to true or false
+
+00:50:53.980 --> 00:51:00.010 align:middle line:84%
+depending on what happened in
+the code, we can say if found,
+
+00:51:00.010 --> 00:51:03.670 align:middle line:84%
+or I guess, in this particular
+case, if not found, right?
+
+00:51:03.670 --> 00:51:06.930 align:middle line:90%
+The inverse of my Boolean.
+
+00:51:06.930 --> 00:51:07.770 align:middle line:90%
+Print not found.
+
+00:51:07.770 --> 00:51:10.770 align:middle line:90%
+
+
+00:51:10.770 --> 00:51:13.470 align:middle line:84%
+There's no else because the
+else was already taken care
+
+00:51:13.470 --> 00:51:15.390 align:middle line:90%
+of when we had the secret--
+
+00:51:15.390 --> 00:51:18.010 align:middle line:84%
+when we found the
+secret within the code.
+
+00:51:18.010 --> 00:51:21.510 align:middle line:84%
+So now, we print
+found when it's 4.
+
+00:51:21.510 --> 00:51:25.230 align:middle line:84%
+And if the number is, obviously,
+outside the range like 100,
+
+00:51:25.230 --> 00:51:26.370 align:middle line:90%
+we print not found.
+
+00:51:26.370 --> 00:51:30.950 align:middle line:90%
+
+
+00:51:30.950 --> 00:51:33.440 align:middle line:84%
+We can make a small
+change to it, I guess.
+
+00:51:33.440 --> 00:51:36.620 align:middle line:84%
+So we don't have to print
+found down in there.
+
+00:51:36.620 --> 00:51:40.550 align:middle line:84%
+For maybe consistency
+or making things even,
+
+00:51:40.550 --> 00:51:46.510 align:middle line:84%
+we can just say else, print,
+found, or something like that.
+
+00:51:46.510 --> 00:51:48.640 align:middle line:84%
+And I think that
+should work as well.
+
+00:51:48.640 --> 00:51:53.610 align:middle line:84%
+So 100 is not found
+and 4 is found, right?
+
+00:51:53.610 --> 00:51:55.740 align:middle line:84%
+So now we're doing things
+kind of consistently.
+
+00:51:55.740 --> 00:51:58.080 align:middle line:84%
+We're printing out whether
+we found it or not down here.
+
+00:51:58.080 --> 00:52:00.930 align:middle line:84%
+And inside for loop,
+we're just dealing
+
+00:52:00.930 --> 00:52:06.580 align:middle line:84%
+with the logic of the
+finding or not finding it.
+
+00:52:06.580 --> 00:52:08.260 align:middle line:90%
+Any questions about this code?
+
+00:52:08.260 --> 00:52:09.850 align:middle line:90%
+Does it seem all right?
+
+00:52:09.850 --> 00:52:11.890 align:middle line:90%
+Does it make sense?
+
+00:52:11.890 --> 00:52:15.180 align:middle line:84%
+So I'm showcasing
+these Boolean flags
+
+00:52:15.180 --> 00:52:18.240 align:middle line:84%
+just because they're very
+useful for signaling that things
+
+00:52:18.240 --> 00:52:20.620 align:middle line:90%
+happened in your code, right?
+
+00:52:20.620 --> 00:52:22.330 align:middle line:84%
+So when you find
+yourself asking,
+
+00:52:22.330 --> 00:52:26.200 align:middle line:84%
+how do I how do know that this
+thing happened or something?
+
+00:52:26.200 --> 00:52:28.990 align:middle line:84%
+Boolean flag is
+the answer, right?
+
+00:52:28.990 --> 00:52:32.050 align:middle line:84%
+Just set it to true
+or false, 0 or 1, a
+
+00:52:32.050 --> 00:52:33.250 align:middle line:90%
+or b, whatever you want.
+
+00:52:33.250 --> 00:52:37.180 align:middle line:84%
+And then, check the
+value of that variable
+
+00:52:37.180 --> 00:52:41.260 align:middle line:84%
+later on in the code to see
+if the event happened or not.
+
+00:52:41.260 --> 00:52:46.040 align:middle line:90%
+
+
+00:52:46.040 --> 00:52:47.920 align:middle line:84%
+So these are the two
+codes that we had just
+
+00:52:47.920 --> 00:52:49.930 align:middle line:84%
+written kind of
+side by side just
+
+00:52:49.930 --> 00:52:51.890 align:middle line:84%
+to show you exactly
+what the difference is.
+
+00:52:51.890 --> 00:52:55.570 align:middle line:84%
+So here is the code where
+if we don't find the number,
+
+00:52:55.570 --> 00:52:57.220 align:middle line:90%
+we don't print anything, right?
+
+00:52:57.220 --> 00:53:00.220 align:middle line:84%
+So it's just a for loop with
+an if and we say we found it.
+
+00:53:00.220 --> 00:53:04.510 align:middle line:84%
+And the one on the right is
+the code where we did find it--
+
+00:53:04.510 --> 00:53:07.880 align:middle line:84%
+where if we didn't find it, we
+printed that we didn't find it.
+
+00:53:07.880 --> 00:53:10.630 align:middle line:84%
+So the only things that
+are added in addition
+
+00:53:10.630 --> 00:53:13.420 align:middle line:84%
+to the code on the left is the
+stuff that's bolded, right?
+
+00:53:13.420 --> 00:53:16.210 align:middle line:84%
+So I just have this flag that
+I initially set to false.
+
+00:53:16.210 --> 00:53:19.120 align:middle line:84%
+I set it to true when
+this event happened.
+
+00:53:19.120 --> 00:53:21.620 align:middle line:90%
+That is, I found the number.
+
+00:53:21.620 --> 00:53:24.340 align:middle line:84%
+And then, I do the
+check at the end
+
+00:53:24.340 --> 00:53:27.510 align:middle line:90%
+to print or not print found.
+
+00:53:27.510 --> 00:53:31.840 align:middle line:84%
+AUDIENCE: Can you explain why we
+don't use else on [INAUDIBLE]..
+
+00:53:31.840 --> 00:53:35.910 align:middle line:84%
+ANA BELL: I don't use else
+in the if or down here.
+
+00:53:35.910 --> 00:53:37.650 align:middle line:90%
+In the if?
+
+00:53:37.650 --> 00:53:39.600 align:middle line:84%
+So we don't use
+the else inside the
+
+00:53:39.600 --> 00:53:44.850 align:middle line:84%
+if i equals secret because
+that if or else we'll
+
+00:53:44.850 --> 00:53:48.440 align:middle line:84%
+be done every time
+through the loop, right?
+
+00:53:48.440 --> 00:53:52.610 align:middle line:84%
+And I only print that we didn't
+find it one time at the end,
+
+00:53:52.610 --> 00:53:54.230 align:middle line:90%
+right?
+
+00:53:54.230 --> 00:53:57.380 align:middle line:84%
+If I have an else
+inside for loop,
+
+00:53:57.380 --> 00:54:01.400 align:middle line:84%
+it's basically asking if
+i is the secret number.
+
+00:54:01.400 --> 00:54:04.250 align:middle line:84%
+So 0 is not the secret
+number, we would hit the else.
+
+00:54:04.250 --> 00:54:06.740 align:middle line:84%
+1 is not the secret number,
+we would hit the else.
+
+00:54:06.740 --> 00:54:08.780 align:middle line:84%
+2 is not the secret
+number, we hit the else.
+
+00:54:08.780 --> 00:54:11.160 align:middle line:84%
+And only when I get
+to 7, in this case,
+
+00:54:11.160 --> 00:54:14.025 align:middle line:84%
+it is the secret number,
+so I hit the if and so on.
+
+00:54:14.025 --> 00:54:16.650 align:middle line:84%
+So it's not something I want to
+do every time through the loop,
+
+00:54:16.650 --> 00:54:17.330 align:middle line:90%
+it's--
+
+00:54:17.330 --> 00:54:19.760 align:middle line:84%
+I put it at the end because
+I only need to do it once.
+
+00:54:19.760 --> 00:54:25.130 align:middle line:90%
+
+
+00:54:25.130 --> 00:54:26.480 align:middle line:90%
+Does that make sense?
+
+00:54:26.480 --> 00:54:30.290 align:middle line:90%
+
+
+00:54:30.290 --> 00:54:35.680 align:middle line:84%
+OK, so Boolean variables
+are a variable that
+
+00:54:35.680 --> 00:54:37.330 align:middle line:90%
+is in one of two states, right?
+
+00:54:37.330 --> 00:54:38.590 align:middle line:90%
+I used here true or false.
+
+00:54:38.590 --> 00:54:42.136 align:middle line:84%
+But as I mentioned, you can use
+0 or 1, a or b, as long as you
+
+00:54:42.136 --> 00:54:45.190 align:middle line:84%
+as the programmer remember
+what values you're expecting
+
+00:54:45.190 --> 00:54:47.020 align:middle line:90%
+this variable to take on.
+
+00:54:47.020 --> 00:54:50.410 align:middle line:84%
+Boolean variables can be used
+as signals that something
+
+00:54:50.410 --> 00:54:51.970 align:middle line:90%
+happened in the code, right?
+
+00:54:51.970 --> 00:54:54.310 align:middle line:84%
+So this could be useful
+in a quiz situation.
+
+00:54:54.310 --> 00:54:57.430 align:middle line:84%
+We call these Boolean flags,
+but again, it's just a name.
+
+00:54:57.430 --> 00:55:00.340 align:middle line:84%
+It's just a variable
+that changes state
+
+00:55:00.340 --> 00:55:04.470 align:middle line:84%
+depending on if some event
+happened in the code.
+
+00:55:04.470 --> 00:55:07.380 align:middle line:84%
+OK, so I'm coming back to the
+idea of while and for loops.
+
+00:55:07.380 --> 00:55:09.910 align:middle line:84%
+And we've already seen that
+there are many situations where
+
+00:55:09.910 --> 00:55:15.000 align:middle line:84%
+for loops are a lot easier
+to use than while loops, OK?
+
+00:55:15.000 --> 00:55:16.680 align:middle line:84%
+So when we have for
+loops that iterate
+
+00:55:16.680 --> 00:55:17.950 align:middle line:90%
+through a sequence of values.
+
+00:55:17.950 --> 00:55:19.680 align:middle line:84%
+So the guess-and-check
+algorithm actually
+
+00:55:19.680 --> 00:55:22.980 align:middle line:84%
+lends itself a little bit better
+for loops than while loops.
+
+00:55:22.980 --> 00:55:25.140 align:middle line:84%
+So here's an
+example of us trying
+
+00:55:25.140 --> 00:55:28.170 align:middle line:84%
+to find the cube root in
+this particular case, not
+
+00:55:28.170 --> 00:55:29.530 align:middle line:90%
+the square root of a number.
+
+00:55:29.530 --> 00:55:34.140 align:middle line:84%
+And again, we're only
+asking if this number x is--
+
+00:55:34.140 --> 00:55:38.490 align:middle line:84%
+or in this case cube
+is a perfect cube, OK?
+
+00:55:38.490 --> 00:55:41.370 align:middle line:84%
+So the way the code
+works with a for loop
+
+00:55:41.370 --> 00:55:43.110 align:middle line:84%
+is we're going to
+iterate through all
+
+00:55:43.110 --> 00:55:44.920 align:middle line:90%
+the possible values.
+
+00:55:44.920 --> 00:55:50.680 align:middle line:84%
+So we have for our guests
+in range some number.
+
+00:55:50.680 --> 00:55:52.440 align:middle line:84%
+So we're going to
+check all the value 0
+
+00:55:52.440 --> 00:55:54.510 align:middle line:84%
+all the way up
+through cube plus 1.
+
+00:55:54.510 --> 00:55:57.510 align:middle line:84%
+The reason why we did the 1 is
+because if the user gives us
+
+00:55:57.510 --> 00:56:01.440 align:middle line:84%
+the number 1 we want to
+check 1 itself, right?
+
+00:56:01.440 --> 00:56:04.240 align:middle line:84%
+If we didn't have cubed plus
+1, if we just had cubed,
+
+00:56:04.240 --> 00:56:07.120 align:middle line:84%
+we would mistakenly
+stop at 0 even
+
+00:56:07.120 --> 00:56:09.930 align:middle line:90%
+though 1 is a perfect cube.
+
+00:56:09.930 --> 00:56:11.790 align:middle line:84%
+And then, inside
+for loop, we just
+
+00:56:11.790 --> 00:56:14.820 align:middle line:84%
+have if guess cubed
+is equal to cube,
+
+00:56:14.820 --> 00:56:20.020 align:middle line:84%
+then we have found
+our perfect cube.
+
+00:56:20.020 --> 00:56:23.380 align:middle line:84%
+If we have negative
+numbers with cubes,
+
+00:56:23.380 --> 00:56:28.180 align:middle line:84%
+it's just adding a
+little bit of extra code.
+
+00:56:28.180 --> 00:56:31.480 align:middle line:84%
+But it's not as weird as
+with the square root, right?
+
+00:56:31.480 --> 00:56:33.880 align:middle line:84%
+Because the cube root
+of a negative number
+
+00:56:33.880 --> 00:56:36.460 align:middle line:84%
+is just the cube root
+of that positive version
+
+00:56:36.460 --> 00:56:39.700 align:middle line:84%
+of that number with a
+negative sign in front of it.
+
+00:56:39.700 --> 00:56:42.270 align:middle line:84%
+So all we're doing
+with a negative number
+
+00:56:42.270 --> 00:56:44.400 align:middle line:84%
+as the input is
+saying, I'm going
+
+00:56:44.400 --> 00:56:48.420 align:middle line:84%
+to iterate through all
+these values in through 0
+
+00:56:48.420 --> 00:56:50.310 align:middle line:84%
+all the way up to
+the positive version
+
+00:56:50.310 --> 00:56:51.930 align:middle line:90%
+of whatever the user gave me.
+
+00:56:51.930 --> 00:56:54.150 align:middle line:84%
+So this is taking
+the absolute value
+
+00:56:54.150 --> 00:56:57.060 align:middle line:84%
+of the number the user
+gave me and adding 1 to it.
+
+00:56:57.060 --> 00:57:00.070 align:middle line:84%
+So just kind of like the
+code on the previous slide,
+
+00:57:00.070 --> 00:57:02.040 align:middle line:84%
+except we're doing the
+absolute value of it.
+
+00:57:02.040 --> 00:57:03.750 align:middle line:84%
+We're checking if
+the guess cubed
+
+00:57:03.750 --> 00:57:06.360 align:middle line:84%
+is equivalent to the
+absolute value of cubed.
+
+00:57:06.360 --> 00:57:08.290 align:middle line:84%
+Exactly the same as
+on the previous slide,
+
+00:57:08.290 --> 00:57:10.620 align:middle line:84%
+except taking the absolute
+value of the cube.
+
+00:57:10.620 --> 00:57:13.410 align:middle line:84%
+And then, we have
+this extra little bit
+
+00:57:13.410 --> 00:57:16.210 align:middle line:84%
+that checks if the user actually
+gave us a negative number.
+
+00:57:16.210 --> 00:57:21.270 align:middle line:84%
+So do we need to put a negative
+number in front of our guess?
+
+00:57:21.270 --> 00:57:24.050 align:middle line:84%
+So if the user actually did
+give us a negative number,
+
+00:57:24.050 --> 00:57:25.820 align:middle line:90%
+let's just take--
+
+00:57:25.820 --> 00:57:29.390 align:middle line:84%
+do minus whatever value we
+just found for the cube.
+
+00:57:29.390 --> 00:57:35.950 align:middle line:84%
+And then, we can print the
+cube root of this perfect cube.
+
+00:57:35.950 --> 00:57:38.410 align:middle line:84%
+OK, so again, same code as
+before, the only difference
+
+00:57:38.410 --> 00:57:41.980 align:middle line:84%
+is absolute value of
+cube and adding this
+
+00:57:41.980 --> 00:57:44.215 align:middle line:84%
+check to deal with
+negative numbers.
+
+00:57:44.215 --> 00:57:47.740 align:middle line:90%
+
+
+00:57:47.740 --> 00:57:50.500 align:middle line:84%
+OK, so we can actually make
+this code a little bit faster
+
+00:57:50.500 --> 00:57:52.930 align:middle line:84%
+because, for example,
+when we're taking--
+
+00:57:52.930 --> 00:57:56.500 align:middle line:84%
+checking the cube root of 27,
+the numbers we're checking
+
+00:57:56.500 --> 00:58:02.590 align:middle line:84%
+are 0, 1, 2, 3, 4, 5, 6 in our
+for loop all the way up to 27,
+
+00:58:02.590 --> 00:58:03.280 align:middle line:90%
+right?
+
+00:58:03.280 --> 00:58:09.190 align:middle line:84%
+But we can recognize the fact
+that when we reach 27, fine.
+
+00:58:09.190 --> 00:58:10.660 align:middle line:90%
+Let's say, 26.
+
+00:58:10.660 --> 00:58:15.250 align:middle line:84%
+We can recognize the
+fact that when we hit 3,
+
+00:58:15.250 --> 00:58:20.530 align:middle line:84%
+the guess cubed is
+actually 27, right?
+
+00:58:20.530 --> 00:58:23.380 align:middle line:84%
+And so in for loop,
+it doesn't make sense
+
+00:58:23.380 --> 00:58:28.540 align:middle line:84%
+to keep checking 4, 5, 6, 7 to
+see if those numbers are then
+
+00:58:28.540 --> 00:58:29.830 align:middle line:90%
+going to match--
+
+00:58:29.830 --> 00:58:33.430 align:middle line:84%
+or be our cube root for a,,
+potentially perfect cube.
+
+00:58:33.430 --> 00:58:35.650 align:middle line:84%
+And so that's what
+this code is doing.
+
+00:58:35.650 --> 00:58:39.950 align:middle line:84%
+It's going to have a little
+if statement in here.
+
+00:58:39.950 --> 00:58:41.575 align:middle line:84%
+So again, this is
+the same as before.
+
+00:58:41.575 --> 00:58:43.450 align:middle line:84%
+But we're going to have
+a little if statement
+
+00:58:43.450 --> 00:58:45.040 align:middle line:84%
+that says, if the
+guessed cubed is
+
+00:58:45.040 --> 00:58:48.830 align:middle line:84%
+greater than or equal to-- not
+just equal to, but greater than
+
+00:58:48.830 --> 00:58:49.700 align:middle line:90%
+or equal to.
+
+00:58:49.700 --> 00:58:54.140 align:middle line:90%
+Let's break out of the loop, OK?
+
+00:58:54.140 --> 00:58:58.250 align:middle line:84%
+And so when this
+condition is false--
+
+00:58:58.250 --> 00:58:59.930 align:middle line:84%
+or sorry, when this
+condition is true,
+
+00:58:59.930 --> 00:59:01.970 align:middle line:84%
+guess cube is greater
+than or equal to,
+
+00:59:01.970 --> 00:59:03.680 align:middle line:90%
+we have exited the loop.
+
+00:59:03.680 --> 00:59:06.650 align:middle line:84%
+But now, just like with
+the square root code
+
+00:59:06.650 --> 00:59:09.440 align:middle line:84%
+with the while loop, we have
+to see why we exited the loop.
+
+00:59:09.440 --> 00:59:12.490 align:middle line:84%
+Why did we break out of
+this loop prematurely?
+
+00:59:12.490 --> 00:59:15.190 align:middle line:84%
+OK, one is we exited
+because the guess
+
+00:59:15.190 --> 00:59:17.410 align:middle line:90%
+cube was equal to the cube.
+
+00:59:17.410 --> 00:59:20.530 align:middle line:84%
+Or the guess cubed was
+greater than the cube.
+
+00:59:20.530 --> 00:59:25.720 align:middle line:84%
+And so then we have a little
+if else conditional here that
+
+00:59:25.720 --> 00:59:29.950 align:middle line:84%
+says, if we exited because
+it's not equal, greater than,
+
+00:59:29.950 --> 00:59:32.230 align:middle line:90%
+then it's not a perfect cube.
+
+00:59:32.230 --> 00:59:34.510 align:middle line:84%
+And otherwise, we
+exited because it
+
+00:59:34.510 --> 00:59:37.480 align:middle line:84%
+was equal to, which
+is the same code we
+
+00:59:37.480 --> 00:59:39.100 align:middle line:90%
+had on the previous slide.
+
+00:59:39.100 --> 00:59:42.730 align:middle line:84%
+Check whether the user gave us
+a positive or negative value,
+
+00:59:42.730 --> 00:59:44.860 align:middle line:84%
+put the negative sign
+in front of our guess,
+
+00:59:44.860 --> 00:59:49.310 align:middle line:84%
+and then print the
+perfect cube root.
+
+00:59:49.310 --> 00:59:53.000 align:middle line:84%
+OK, so all variations of the
+same sort of starter code,
+
+00:59:53.000 --> 00:59:55.220 align:middle line:84%
+we're just adding little
+bits of functionality
+
+00:59:55.220 --> 00:59:59.320 align:middle line:84%
+and making the code slightly
+more efficient here and there.
+
+00:59:59.320 --> 01:00:00.740 align:middle line:90%
+So I have another example.
+
+01:00:00.740 --> 01:00:03.790 align:middle line:84%
+And this example is probably
+the point in this class
+
+01:00:03.790 --> 01:00:06.730 align:middle line:84%
+where you're like, aha, this
+is what computational thinking
+
+01:00:06.730 --> 01:00:07.700 align:middle line:90%
+means.
+
+01:00:07.700 --> 01:00:11.950 align:middle line:84%
+So remember these word
+problems from childhood, right?
+
+01:00:11.950 --> 01:00:13.150 align:middle line:90%
+You see a math problem.
+
+01:00:13.150 --> 01:00:15.640 align:middle line:84%
+You have basically a
+system of equations.
+
+01:00:15.640 --> 01:00:17.320 align:middle line:84%
+Algebraically,
+you could probably
+
+01:00:17.320 --> 01:00:19.480 align:middle line:90%
+solve it within a minute or so.
+
+01:00:19.480 --> 01:00:21.820 align:middle line:84%
+We can actually
+apply computation
+
+01:00:21.820 --> 01:00:24.770 align:middle line:84%
+to solve problems
+just like these.
+
+01:00:24.770 --> 01:00:27.100 align:middle line:84%
+So we don't need to
+do it algebraically,
+
+01:00:27.100 --> 01:00:29.350 align:middle line:84%
+we can just tell
+the computer, here's
+
+01:00:29.350 --> 01:00:31.390 align:middle line:84%
+a bunch of values
+I want you to try.
+
+01:00:31.390 --> 01:00:34.030 align:middle line:84%
+Try them to see if they match
+these systems of equations.
+
+01:00:34.030 --> 01:00:37.370 align:middle line:90%
+And then, print out the answer.
+
+01:00:37.370 --> 01:00:38.432 align:middle line:90%
+So here's an example.
+
+01:00:38.432 --> 01:00:40.390 align:middle line:84%
+I've got Alyssa, Ben,
+and Cindy selling tickets
+
+01:00:40.390 --> 01:00:41.200 align:middle line:90%
+to a fundraiser.
+
+01:00:41.200 --> 01:00:42.640 align:middle line:90%
+Ben sells to fewer than Alyssa.
+
+01:00:42.640 --> 01:00:44.110 align:middle line:90%
+Cindy sells twice as many.
+
+01:00:44.110 --> 01:00:45.590 align:middle line:90%
+10 total tickets were sold.
+
+01:00:45.590 --> 01:00:48.300 align:middle line:90%
+How many did Alyssa sell?
+
+01:00:48.300 --> 01:00:52.420 align:middle line:84%
+Here's some code that could
+solve this problem for us.
+
+01:00:52.420 --> 01:00:55.630 align:middle line:84%
+I'm basically figuring out
+all the possible combinations
+
+01:00:55.630 --> 01:00:59.170 align:middle line:84%
+for tickets that Alyssa and Ben
+and Cindy could sell, right?
+
+01:00:59.170 --> 01:01:03.070 align:middle line:84%
+So I've got three loops,
+each nested, right?
+
+01:01:03.070 --> 01:01:07.810 align:middle line:84%
+So Alyssa could sell 0 or
+one ticket or two tickets
+
+01:01:07.810 --> 01:01:08.330 align:middle line:90%
+and so on.
+
+01:01:08.330 --> 01:01:10.330 align:middle line:84%
+But for every value
+of a list-- so
+
+01:01:10.330 --> 01:01:13.690 align:middle line:84%
+Alyssa can sell zero,
+one, or two tickets.
+
+01:01:13.690 --> 01:01:17.480 align:middle line:84%
+For every one of those, Ben can
+sell zero, one, or two tickets,
+
+01:01:17.480 --> 01:01:17.980 align:middle line:90%
+right?
+
+01:01:17.980 --> 01:01:21.490 align:middle line:84%
+So Alyssa can sell zero, Ben can
+sell zero, Cindy can sell zero,
+
+01:01:21.490 --> 01:01:24.190 align:middle line:84%
+Alyssa can sell zero, Ben can
+sell one, Cindy can sell zero,
+
+01:01:24.190 --> 01:01:24.778 align:middle line:90%
+and so on.
+
+01:01:24.778 --> 01:01:26.320 align:middle line:84%
+So we're basically
+having these three
+
+01:01:26.320 --> 01:01:28.580 align:middle line:84%
+for loops that make all
+the possible combinations
+
+01:01:28.580 --> 01:01:29.080 align:middle line:90%
+of tickets.
+
+01:01:29.080 --> 01:01:31.090 align:middle line:84%
+So here I have
+Alyssa Ben and Cindy
+
+01:01:31.090 --> 01:01:33.250 align:middle line:84%
+trying to sell tickets
+to a fundraiser.
+
+01:01:33.250 --> 01:01:35.990 align:middle line:84%
+And then, I have my
+system of equations here.
+
+01:01:35.990 --> 01:01:37.690 align:middle line:84%
+So in total they
+sell 10 tickets.
+
+01:01:37.690 --> 01:01:39.940 align:middle line:84%
+So here, total two
+less than twice
+
+01:01:39.940 --> 01:01:42.080 align:middle line:90%
+are all Boolean variables.
+
+01:01:42.080 --> 01:01:45.460 align:middle line:84%
+So a plus b plus c
+is equivalent to 10
+
+01:01:45.460 --> 01:01:47.650 align:middle line:84%
+is the first condition
+I need to hold.
+
+01:01:47.650 --> 01:01:50.198 align:middle line:84%
+b is equal to a minus 2
+is the second condition I
+
+01:01:50.198 --> 01:01:50.740 align:middle line:90%
+need to hold.
+
+01:01:50.740 --> 01:01:53.678 align:middle line:84%
+And c is equal to-- is
+equivalent to 2 times a
+
+01:01:53.678 --> 01:01:55.220 align:middle line:84%
+is the last condition
+I need to hold.
+
+01:01:55.220 --> 01:01:58.170 align:middle line:84%
+Those were the conditions from
+the previous slides, right?
+
+01:01:58.170 --> 01:02:01.260 align:middle line:84%
+And so these three Booleans,
+whenever they hold,
+
+01:02:01.260 --> 01:02:05.400 align:middle line:84%
+total is true and two less
+is true and twice is true.
+
+01:02:05.400 --> 01:02:07.740 align:middle line:84%
+When all these things
+three things hold,
+
+01:02:07.740 --> 01:02:10.120 align:middle line:84%
+I have found the
+solution to my problem.
+
+01:02:10.120 --> 01:02:15.060 align:middle line:84%
+So inside my code, this
+is Alyssa, Ben, and Cindy
+
+01:02:15.060 --> 01:02:17.010 align:middle line:90%
+trying to sell tickets.
+
+01:02:17.010 --> 01:02:20.430 align:middle line:84%
+And the code automatically tells
+me they sold this many each.
+
+01:02:20.430 --> 01:02:24.060 align:middle line:84%
+And what's cool about this code
+is we can then change something
+
+01:02:24.060 --> 01:02:24.820 align:middle line:90%
+about it.
+
+01:02:24.820 --> 01:02:27.428 align:middle line:84%
+And then, we can run it again
+and immediately it tells us
+
+01:02:27.428 --> 01:02:28.470 align:middle line:90%
+what the new solution is.
+
+01:02:28.470 --> 01:02:30.540 align:middle line:84%
+We don't have to do it
+algebraically and solve it
+
+01:02:30.540 --> 01:02:33.530 align:middle line:90%
+all over again.
+
+01:02:33.530 --> 01:02:35.200 align:middle line:84%
+The problem with
+this code and the way
+
+01:02:35.200 --> 01:02:38.560 align:middle line:84%
+I wrote it specifically is it's
+really slow for big numbers.
+
+01:02:38.560 --> 01:02:41.170 align:middle line:84%
+If I change it to
+1,000 tickets being
+
+01:02:41.170 --> 01:02:44.960 align:middle line:84%
+sold by three people and then
+a couple other changes here,
+
+01:02:44.960 --> 01:02:47.290 align:middle line:84%
+just the shear fact that
+I've got Alyssa iterating
+
+01:02:47.290 --> 01:02:50.110 align:middle line:84%
+through 0 to 1,000 and Ben
+iterating through 0 to 1,000
+
+01:02:50.110 --> 01:02:54.020 align:middle line:84%
+and Cindy iterating through 0 to
+1,000 takes a really long time.
+
+01:02:54.020 --> 01:02:55.810 align:middle line:90%
+And so that particular code--
+
+01:02:55.810 --> 01:02:57.340 align:middle line:84%
+I'm not even going
+to run it-- will
+
+01:02:57.340 --> 01:03:00.940 align:middle line:84%
+take a really long time if
+I change the values to be
+
+01:03:00.940 --> 01:03:03.130 align:middle line:90%
+1020 and twice.
+
+01:03:03.130 --> 01:03:07.120 align:middle line:84%
+But instead, we can use a mix
+of algebra and computation
+
+01:03:07.120 --> 01:03:08.290 align:middle line:90%
+to solve the problem.
+
+01:03:08.290 --> 01:03:11.240 align:middle line:84%
+We recognize we actually only
+need a loop through one loop,
+
+01:03:11.240 --> 01:03:11.740 align:middle line:90%
+right?
+
+01:03:11.740 --> 01:03:14.560 align:middle line:84%
+I only care about maybe
+checking Alyssa's number
+
+01:03:14.560 --> 01:03:18.400 align:middle line:84%
+of tickets being 0 through
+potentially 1,000 tickets sold.
+
+01:03:18.400 --> 01:03:22.900 align:middle line:84%
+And then, I can use my
+other two equations, right?
+
+01:03:22.900 --> 01:03:23.770 align:middle line:90%
+Ben and Cindy.
+
+01:03:23.770 --> 01:03:26.290 align:middle line:84%
+How many did they sell
+with respect to Alyssa?
+
+01:03:26.290 --> 01:03:30.920 align:middle line:84%
+And then, I've got my
+two other equations here,
+
+01:03:30.920 --> 01:03:33.970 align:middle line:84%
+which will tell me how many
+Ben and Cindy sold with respect
+
+01:03:33.970 --> 01:03:36.070 align:middle line:90%
+to Alyssa's loop, right?
+
+01:03:36.070 --> 01:03:38.500 align:middle line:84%
+And then, my last
+equation here is
+
+01:03:38.500 --> 01:03:43.420 align:middle line:84%
+that Ben and Cindy and Melissa
+altogether had to sell 1,000.
+
+01:03:43.420 --> 01:03:47.550 align:middle line:84%
+And so with this
+particular code,
+
+01:03:47.550 --> 01:03:50.840 align:middle line:84%
+I'm able to find the answer
+to the question, which
+
+01:03:50.840 --> 01:03:52.090 align:middle line:90%
+is how many tickets they sold.
+
+01:03:52.090 --> 01:03:53.610 align:middle line:84%
+And again, this
+is really awesome
+
+01:03:53.610 --> 01:03:58.530 align:middle line:84%
+because now I can make
+small changes to the numbers
+
+01:03:58.530 --> 01:04:00.630 align:middle line:84%
+and solve the
+problem, basically,
+
+01:04:00.630 --> 01:04:01.830 align:middle line:90%
+immediately like that.
+
+01:04:01.830 --> 01:04:04.440 align:middle line:84%
+I don't need to go back
+and solve it algebraically
+
+01:04:04.440 --> 01:04:08.950 align:middle line:90%
+as I would if I were to do math.
+
+01:04:08.950 --> 01:04:12.970 align:middle line:84%
+OK, so we can apply computation
+to many different problems.
+
+01:04:12.970 --> 01:04:16.380 align:middle line:84%
+I hope that this is a really
+good showcase, this word
+
+01:04:16.380 --> 01:04:18.870 align:middle line:84%
+problem of what we mean
+by computational thinking
+
+01:04:18.870 --> 01:04:21.390 align:middle line:84%
+and the kinds of things we
+want you to come away from--
+
+01:04:21.390 --> 01:04:23.550 align:middle line:90%
+come away with in this class.
+
+01:04:23.550 --> 01:04:25.230 align:middle line:84%
+The last thing I
+wanted to talk about,
+
+01:04:25.230 --> 01:04:28.120 align:middle line:84%
+and I'll just do a quick
+intuition, is binary numbers.
+
+01:04:28.120 --> 01:04:30.600 align:middle line:84%
+And this is actually a
+precursor to the next algorithm
+
+01:04:30.600 --> 01:04:33.840 align:middle line:84%
+we're going to see in the
+next lecture, an approximation
+
+01:04:33.840 --> 01:04:34.360 align:middle line:90%
+algorithm.
+
+01:04:34.360 --> 01:04:35.970 align:middle line:84%
+It's going to be
+an improvement on
+
+01:04:35.970 --> 01:04:37.740 align:middle line:90%
+the guess-and-check algorithm.
+
+01:04:37.740 --> 01:04:40.110 align:middle line:84%
+So far, we've seen
+numbers in Python
+
+01:04:40.110 --> 01:04:42.550 align:middle line:84%
+they can be integers, which
+are whole numbers and floats,
+
+01:04:42.550 --> 01:04:45.400 align:middle line:90%
+which are real numbers.
+
+01:04:45.400 --> 01:04:48.450 align:middle line:84%
+But in programming,
+some interesting things
+
+01:04:48.450 --> 01:04:50.880 align:middle line:90%
+happen when we deal with floats.
+
+01:04:50.880 --> 01:04:53.340 align:middle line:84%
+And this is going to be
+our motivation for talking
+
+01:04:53.340 --> 01:04:55.590 align:middle line:84%
+about binary numbers
+and then fractions
+
+01:04:55.590 --> 01:04:58.480 align:middle line:84%
+and then floats in this lecture
+and then in the next one.
+
+01:04:58.480 --> 01:05:02.890 align:middle line:84%
+So here's an example
+of some code.
+
+01:05:02.890 --> 01:05:05.940 align:middle line:84%
+So I've got-- it is exactly
+what's in the slides.
+
+01:05:05.940 --> 01:05:07.620 align:middle line:90%
+I've got an integer x.
+
+01:05:07.620 --> 01:05:09.420 align:middle line:84%
+And all I'm doing
+in this code is
+
+01:05:09.420 --> 01:05:11.020 align:middle line:84%
+I have a loop
+through a range 10.
+
+01:05:11.020 --> 01:05:13.200 align:middle line:84%
+So that means it's going
+to loop through 10 times.
+
+01:05:13.200 --> 01:05:15.900 align:middle line:90%
+And I'm adding 0.1 10 times.
+
+01:05:15.900 --> 01:05:19.050 align:middle line:84%
+So 0.1 plus 0.1
+plus 0.1 10 times.
+
+01:05:19.050 --> 01:05:22.470 align:middle line:84%
+And I'm going to print
+whether x, the sum,
+
+01:05:22.470 --> 01:05:25.470 align:middle line:84%
+0.1 plus 0.1 plus
+0.1 is equal to 1.
+
+01:05:25.470 --> 01:05:27.760 align:middle line:84%
+And just to show you I'm
+not pulling your leg,
+
+01:05:27.760 --> 01:05:31.860 align:middle line:84%
+I'm going to run it and
+print whether x-- so
+
+01:05:31.860 --> 01:05:34.950 align:middle line:84%
+0.1 plus 0.1 plus 0.1 10
+times is equivalent to 1.
+
+01:05:34.950 --> 01:05:38.210 align:middle line:90%
+And this code prints false.
+
+01:05:38.210 --> 01:05:39.260 align:middle line:90%
+Not intuitive, right?
+
+01:05:39.260 --> 01:05:42.500 align:middle line:84%
+If I'm adding 0.1 10 times,
+I should be getting 1.
+
+01:05:42.500 --> 01:05:44.120 align:middle line:90%
+But I'm not in programming.
+
+01:05:44.120 --> 01:05:46.610 align:middle line:84%
+And just to show you the
+actual answer we get,
+
+01:05:46.610 --> 01:05:50.090 align:middle line:84%
+let's print what the
+value of x is and then
+
+01:05:50.090 --> 01:05:54.510 align:middle line:84%
+ask whether that's the same
+as just multiplying 0.1 by 10.
+
+01:05:54.510 --> 01:05:58.870 align:middle line:84%
+So doing the loop where we
+add this number 10 times
+
+01:05:58.870 --> 01:06:01.840 align:middle line:90%
+gives me actually 0.9999999.
+
+01:06:01.840 --> 01:06:08.210 align:middle line:84%
+Whereas, just multiplying 0.1 by
+10 gives me 1, as I expect, OK?
+
+01:06:08.210 --> 01:06:10.850 align:middle line:90%
+And this is the motivation for--
+
+01:06:10.850 --> 01:06:13.130 align:middle line:84%
+or I guess the precursor
+to our next algorithm,
+
+01:06:13.130 --> 01:06:15.980 align:middle line:90%
+the approximation algorithm, OK?
+
+01:06:15.980 --> 01:06:18.830 align:middle line:84%
+So we have this thing called
+a floating point error.
+
+01:06:18.830 --> 01:06:20.790 align:middle line:90%
+And why does it happen?
+
+01:06:20.790 --> 01:06:24.440 align:middle line:84%
+And since it happens, we
+can't do equivalency, right?
+
+01:06:24.440 --> 01:06:28.840 align:middle line:84%
+We can't use the equal
+equal sign between floats
+
+01:06:28.840 --> 01:06:31.180 align:middle line:84%
+because we get
+things like this that
+
+01:06:31.180 --> 01:06:33.080 align:middle line:84%
+are going to completely
+mess up our program
+
+01:06:33.080 --> 01:06:35.920 align:middle line:84%
+when we expect something
+as simple as adding
+
+01:06:35.920 --> 01:06:40.960 align:middle line:84%
+0.1 to itself 10 times to
+be 1 and it's not, right?
+
+01:06:40.960 --> 01:06:45.347 align:middle line:84%
+And so the big idea here is
+we have operations on floats.
+
+01:06:45.347 --> 01:06:46.930 align:middle line:84%
+Because of the way
+floats are actually
+
+01:06:46.930 --> 01:06:48.880 align:middle line:84%
+stored in computer
+memory, these operations
+
+01:06:48.880 --> 01:06:53.230 align:middle line:84%
+introduce a very small error,
+super, super small, every time
+
+01:06:53.230 --> 01:06:54.800 align:middle line:84%
+you do an operation
+with a float.
+
+01:06:54.800 --> 01:06:56.710 align:middle line:84%
+But the more you do
+this operation that
+
+01:06:56.710 --> 01:06:59.080 align:middle line:84%
+has this tiny error,
+the more this error
+
+01:06:59.080 --> 01:07:00.700 align:middle line:90%
+gets magnified, right?
+
+01:07:00.700 --> 01:07:03.830 align:middle line:84%
+And so, then, we see
+surprising results like that.
+
+01:07:03.830 --> 01:07:06.340 align:middle line:84%
+And so that comes about
+with the way that floats
+
+01:07:06.340 --> 01:07:09.550 align:middle line:84%
+are actually stored
+in the computer.
+
+01:07:09.550 --> 01:07:12.540 align:middle line:84%
+So what we have
+in the computer is
+
+01:07:12.540 --> 01:07:14.580 align:middle line:84%
+we work with binary,
+zeros and ones.
+
+01:07:14.580 --> 01:07:17.340 align:middle line:84%
+But humans actually
+work in base 10, right?
+
+01:07:17.340 --> 01:07:18.630 align:middle line:90%
+We think from 0 to 9.
+
+01:07:18.630 --> 01:07:22.600 align:middle line:84%
+But the computer works
+in base 2, either 0 or 1.
+
+01:07:22.600 --> 01:07:25.050 align:middle line:84%
+And the reason it
+works through 0 and 1
+
+01:07:25.050 --> 01:07:28.380 align:middle line:84%
+is because of the way that the
+computer hardware is built,
+
+01:07:28.380 --> 01:07:28.980 align:middle line:90%
+right?
+
+01:07:28.980 --> 01:07:31.500 align:middle line:84%
+It's easy for the
+computer hardware
+
+01:07:31.500 --> 01:07:34.170 align:middle line:84%
+to say that a magnetic
+spin is up or down, right?
+
+01:07:34.170 --> 01:07:34.980 align:middle line:90%
+0 or 1.
+
+01:07:34.980 --> 01:07:36.630 align:middle line:84%
+It's easy for the
+hardware to say
+
+01:07:36.630 --> 01:07:40.560 align:middle line:84%
+that it has a voltage
+that's low or high, right?
+
+01:07:40.560 --> 01:07:43.750 align:middle line:84%
+It would be a lot harder for
+the computer hardware to say,
+
+01:07:43.750 --> 01:07:47.370 align:middle line:84%
+hey, I have a voltage that's
+0 low, high, let's say, 1,
+
+01:07:47.370 --> 01:07:50.190 align:middle line:84%
+or it's 1/10 of the high
+or 2/10 of the high.
+
+01:07:50.190 --> 01:07:52.290 align:middle line:84%
+There would be too
+many errors introduced.
+
+01:07:52.290 --> 01:07:54.570 align:middle line:84%
+And so it's a lot easier
+for the computer hardware
+
+01:07:54.570 --> 01:07:57.810 align:middle line:84%
+to just be in one of
+these two states, 0 or 1.
+
+01:07:57.810 --> 01:08:00.540 align:middle line:90%
+So that's where binary comes in.
+
+01:08:00.540 --> 01:08:02.360 align:middle line:84%
+And so when we're
+dealing with integers,
+
+01:08:02.360 --> 01:08:04.790 align:middle line:84%
+this is not a problem
+because we can easily
+
+01:08:04.790 --> 01:08:09.680 align:middle line:84%
+convert numbers
+that are in base 10
+
+01:08:09.680 --> 01:08:12.830 align:middle line:84%
+to base 2 that are
+whole numbers, integers.
+
+01:08:12.830 --> 01:08:14.810 align:middle line:84%
+The problem will come
+when we do floats.
+
+01:08:14.810 --> 01:08:17.120 align:middle line:84%
+So you don't need to know
+how to do the conversion.
+
+01:08:17.120 --> 01:08:18.740 align:middle line:84%
+But it will give
+you an intuition
+
+01:08:18.740 --> 01:08:20.370 align:middle line:90%
+for what's going to happen.
+
+01:08:20.370 --> 01:08:25.010 align:middle line:84%
+So the number 1507 in base 10,
+so that's what we have up here,
+
+01:08:25.010 --> 01:08:30.290 align:middle line:84%
+is 1,000 plus 500 plus 0
+times 10 plus 7, right?
+
+01:08:30.290 --> 01:08:32.899 align:middle line:84%
+In base 2, we have
+a similar pattern.
+
+01:08:32.899 --> 01:08:37.189 align:middle line:84%
+We have some whole number
+multiplied by some power of 2.
+
+01:08:37.189 --> 01:08:41.180 align:middle line:84%
+Here, we had the whole number
+be either number 0 through 9
+
+01:08:41.180 --> 01:08:43.189 align:middle line:90%
+multiplied by some power of 10.
+
+01:08:43.189 --> 01:08:47.120 align:middle line:84%
+But in base 2, we're going to
+have either 0 or 1 multiplied
+
+01:08:47.120 --> 01:08:49.380 align:middle line:90%
+by some power of 2.
+
+01:08:49.380 --> 01:08:53.760 align:middle line:84%
+And if we're trying to convert
+the number 1507 from base 10
+
+01:08:53.760 --> 01:08:57.700 align:middle line:84%
+to base 2, because I
+guess, humanly speaking,
+
+01:08:57.700 --> 01:08:59.200 align:middle line:84%
+the way we'd think
+about it is, what
+
+01:08:59.200 --> 01:09:02.620 align:middle line:84%
+is the biggest power of 2
+that we can have that takes
+
+01:09:02.620 --> 01:09:05.410 align:middle line:90%
+us close to but not over 1507?
+
+01:09:05.410 --> 01:09:08.229 align:middle line:90%
+And that's 2 to the 10, 1,024.
+
+01:09:08.229 --> 01:09:10.779 align:middle line:84%
+Because 2 to the 11 is
+2000 something, and that's
+
+01:09:10.779 --> 01:09:12.133 align:middle line:90%
+already too big.
+
+01:09:12.133 --> 01:09:13.550 align:middle line:84%
+And then, you ask
+yourself, what's
+
+01:09:13.550 --> 01:09:15.319 align:middle line:84%
+the next biggest
+power of 2 I can
+
+01:09:15.319 --> 01:09:18.410 align:middle line:84%
+add to this number, 1,024,
+that brings me close to
+
+01:09:18.410 --> 01:09:21.439 align:middle line:90%
+but not over 1507?
+
+01:09:21.439 --> 01:09:23.060 align:middle line:90%
+That's going to be 256.
+
+01:09:23.060 --> 01:09:26.630 align:middle line:84%
+Notice we skipped 2 to the
+9 because adding 2 to the 9
+
+01:09:26.630 --> 01:09:29.960 align:middle line:90%
+takes us over 1507.
+
+01:09:29.960 --> 01:09:32.800 align:middle line:90%
+It's adding 512 to 1,024.
+
+01:09:32.800 --> 01:09:35.560 align:middle line:84%
+And so we repeat this
+process where we're basically
+
+01:09:35.560 --> 01:09:37.359 align:middle line:84%
+trying to figure out,
+what are the biggest
+
+01:09:37.359 --> 01:09:42.700 align:middle line:84%
+powers of 2 we can add in
+order that makes up 1507?
+
+01:09:42.700 --> 01:09:45.729 align:middle line:84%
+And it turns out it's going to
+be 2 to the 10 plus 2 to the 8
+
+01:09:45.729 --> 01:09:47.979 align:middle line:84%
+plus 2 to the 7 plus 2
+to the 6 plus 2 to the 5.
+
+01:09:47.979 --> 01:09:50.859 align:middle line:84%
+2 to the 4, 3, and 2 are
+all going to be zeros.
+
+01:09:50.859 --> 01:09:52.810 align:middle line:90%
+And 2 to the 1 and 2 to the 0.
+
+01:09:52.810 --> 01:09:57.190 align:middle line:84%
+And the bits, 1 times 2 to
+the 10, 1 times 2 to the 8,
+
+01:09:57.190 --> 01:10:00.820 align:middle line:84%
+is basically what gets
+represented here, right?
+
+01:10:00.820 --> 01:10:04.480 align:middle line:84%
+These whole number portions that
+we multiply the powers of 10
+
+01:10:04.480 --> 01:10:06.470 align:middle line:90%
+by.
+
+01:10:06.470 --> 01:10:09.620 align:middle line:84%
+And that's how we convert
+from a decimal number
+
+01:10:09.620 --> 01:10:10.490 align:middle line:90%
+to a binary number.
+
+01:10:10.490 --> 01:10:13.730 align:middle line:84%
+But again, this is kind of
+a human way of converting.
+
+01:10:13.730 --> 01:10:18.725 align:middle line:84%
+We can actually do it in a more
+systematic way, a more-- not a
+
+01:10:18.725 --> 01:10:19.850 align:middle line:90%
+more imperative way, right?
+
+01:10:19.850 --> 01:10:20.870 align:middle line:90%
+A recipe way.
+
+01:10:20.870 --> 01:10:23.900 align:middle line:84%
+Some way that a computer can
+actually use to take a number
+
+01:10:23.900 --> 01:10:25.340 align:middle line:90%
+and convert it to binary.
+
+01:10:25.340 --> 01:10:28.250 align:middle line:84%
+And you would never have
+to come up with this way.
+
+01:10:28.250 --> 01:10:31.070 align:middle line:84%
+But given this way of
+converting to binary,
+
+01:10:31.070 --> 01:10:33.990 align:middle line:84%
+you should be able
+to code it up.
+
+01:10:33.990 --> 01:10:36.770 align:middle line:84%
+So the idea here is we're
+going to take a number
+
+01:10:36.770 --> 01:10:40.550 align:middle line:84%
+and we're going to
+look at the remainder
+
+01:10:40.550 --> 01:10:44.050 align:middle line:90%
+when we divide it by 2.
+
+01:10:44.050 --> 01:10:46.510 align:middle line:84%
+If it's an odd number,
+obviously, the remainder is 1.
+
+01:10:46.510 --> 01:10:48.310 align:middle line:84%
+If it's an even number,
+the remainder is 0.
+
+01:10:48.310 --> 01:10:51.170 align:middle line:84%
+And that remainder actually
+gives us the last bit,
+
+01:10:51.170 --> 01:10:53.110 align:middle line:90%
+the farthest right bit.
+
+01:10:53.110 --> 01:10:54.520 align:middle line:84%
+And then, we can
+take that number
+
+01:10:54.520 --> 01:10:56.470 align:middle line:90%
+and divide it by 2 fully.
+
+01:10:56.470 --> 01:10:59.080 align:middle line:84%
+And then, that gives us
+the remaining four digits.
+
+01:10:59.080 --> 01:11:02.810 align:middle line:84%
+So you see everything else
+just gets shifted over.
+
+01:11:02.810 --> 01:11:06.370 align:middle line:84%
+And the way the code looks is
+just doing successive divisions
+
+01:11:06.370 --> 01:11:08.380 align:middle line:90%
+and figuring out the remainders.
+
+01:11:08.380 --> 01:11:10.970 align:middle line:84%
+So I'm just going to look at
+the Python Tutor real quick
+
+01:11:10.970 --> 01:11:12.800 align:middle line:90%
+and then we can stop.
+
+01:11:12.800 --> 01:11:16.360 align:middle line:84%
+So if we're trying to convert
+the number 1507 following
+
+01:11:16.360 --> 01:11:20.200 align:middle line:84%
+this particular recipe, all we
+do is we look at the remainder
+
+01:11:20.200 --> 01:11:21.880 align:middle line:90%
+when we divide the number by 2.
+
+01:11:21.880 --> 01:11:23.420 align:middle line:90%
+So this is an odd number.
+
+01:11:23.420 --> 01:11:25.570 align:middle line:84%
+Obviously, the remainder
+is going to be 1.
+
+01:11:25.570 --> 01:11:30.040 align:middle line:84%
+So we add a 1 to our
+binary representation.
+
+01:11:30.040 --> 01:11:31.900 align:middle line:84%
+And then, we're
+going to keep adding
+
+01:11:31.900 --> 01:11:36.610 align:middle line:84%
+what happens when we divide
+the remaining numbers by 2.
+
+01:11:36.610 --> 01:11:39.130 align:middle line:84%
+We're going to keep adding
+the remainder to the front
+
+01:11:39.130 --> 01:11:41.150 align:middle line:90%
+of this string here.
+
+01:11:41.150 --> 01:11:46.030 align:middle line:84%
+So if we divide the number
+1507 by 2, that gives us 753.
+
+01:11:46.030 --> 01:11:48.820 align:middle line:84%
+And now we ask, is
+753 odd or even?
+
+01:11:48.820 --> 01:11:52.300 align:middle line:84%
+It's odd, so we add another one
+to the front of this string--
+
+01:11:52.300 --> 01:11:53.590 align:middle line:90%
+the result string.
+
+01:11:53.590 --> 01:11:56.380 align:middle line:90%
+Divide 753 by 2, it's 376.
+
+01:11:56.380 --> 01:11:57.640 align:middle line:90%
+This is even.
+
+01:11:57.640 --> 01:12:00.710 align:middle line:84%
+So now we add a 0 to
+the front of my string.
+
+01:12:00.710 --> 01:12:04.790 align:middle line:84%
+So notice what happens to this
+string as we go step by step.
+
+01:12:04.790 --> 01:12:07.130 align:middle line:90%
+376 divided by 2 is 188.
+
+01:12:07.130 --> 01:12:08.630 align:middle line:90%
+What is this even number?
+
+01:12:08.630 --> 01:12:11.880 align:middle line:84%
+So we add a 0 to the
+front of the string.
+
+01:12:11.880 --> 01:12:13.890 align:middle line:90%
+188 divided by 2 is 94.
+
+01:12:13.890 --> 01:12:16.080 align:middle line:84%
+Again, it's an even
+number, so we add a 0
+
+01:12:16.080 --> 01:12:17.840 align:middle line:90%
+to the front of this string.
+
+01:12:17.840 --> 01:12:19.760 align:middle line:90%
+94 divided by 2 is 47.
+
+01:12:19.760 --> 01:12:21.410 align:middle line:90%
+It's odd, so we add a 1.
+
+01:12:21.410 --> 01:12:23.150 align:middle line:90%
+47 divided by 2 is 23.
+
+01:12:23.150 --> 01:12:24.650 align:middle line:90%
+It's odd, so we add a 1.
+
+01:12:24.650 --> 01:12:27.380 align:middle line:84%
+23 divided by 2 is
+11, so we add an odd--
+
+01:12:27.380 --> 01:12:28.760 align:middle line:90%
+so we add a 1.
+
+01:12:28.760 --> 01:12:32.840 align:middle line:84%
+11 divided by 2 is 5, so
+it's odd, so we add a 1.
+
+01:12:32.840 --> 01:12:35.930 align:middle line:84%
+And then, 5 divided by
+2 is even, we add a 0.
+
+01:12:35.930 --> 01:12:38.150 align:middle line:84%
+And then, 1 is our last
+number, so we add a 1.
+
+01:12:38.150 --> 01:12:40.880 align:middle line:84%
+And notice this is
+the exact same number
+
+01:12:40.880 --> 01:12:45.343 align:middle line:84%
+we had when we did it in this
+human, thoughtful way where
+
+01:12:45.343 --> 01:12:47.510 align:middle line:84%
+we were trying to figure
+out the highest powers of 2
+
+01:12:47.510 --> 01:12:53.520 align:middle line:84%
+we can take to go up to but
+not over the number 1507.
+
+01:12:53.520 --> 01:12:58.290 align:middle line:84%
+But we did this using just
+this very iterative, very nice
+
+01:12:58.290 --> 01:12:58.890 align:middle line:90%
+loopy code.
+
+01:12:58.890 --> 01:13:00.670 align:middle line:84%
+And if we wanted to
+do a negative number,
+
+01:13:00.670 --> 01:13:02.850 align:middle line:84%
+we would just add
+these two boxes here.
+
+01:13:02.850 --> 01:13:05.730 align:middle line:84%
+It just basically means we add
+a negative sign in front of it.
+
+01:13:05.730 --> 01:13:08.400 align:middle line:90%
+OK.
+
+01:13:08.400 --> 01:13:09.950 align:middle line:90%
+Yeah.
+
+01:13:09.950 --> 01:13:16.000 align:middle line:90%

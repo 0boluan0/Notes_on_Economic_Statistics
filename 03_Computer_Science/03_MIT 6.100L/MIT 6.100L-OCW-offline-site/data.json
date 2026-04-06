@@ -1,0 +1,23 @@
+{
+  "course_title":"Introduction to CS and Programming using Python",
+  "course_description":"This subject is aimed at students with little to no programming experience. It aims to provide students with an understanding of the role computation can play in solving problems. It also aims to help students, regardless of their major, feel justifiably confident in their ability to write simple programs that allow them to accomplish useful goals. The class will use the Python 3 programming language.",
+  "course_description_html":"This subject is aimed at students with little to no programming experience. It aims to provide students with an understanding of the role computation can play in solving problems. It also aims to help students, regardless of their major, feel justifiably confident in their ability to write simple programs that allow them to accomplish useful goals. The class will use the Python 3 programming language.",
+  "site_uid":"0d7cf6b1-07d3-4577-9858-19e9881653f8",
+  "legacy_uid":"","instructors": [{
+    "first_name":"Ana",
+    "last_name":"Bell",
+    "middle_initial":"",
+    "salutation":"Dr.",
+    "title":"Dr. Ana Bell"}],"department_numbers":["6"],
+  "learning_resource_types":["Lecture Videos","Lecture Notes","Problem Sets","Programming Assignments with Examples","Readings","Problem-solving Notes","Podcasts"],
+  "topics":[["Engineering","Computer Science","Programming Languages"]],
+  "mit_learn_topics":[],
+  "primary_course_number":"6.100L",
+  "extra_course_numbers":"",
+  "term":"Fall",
+  "year":"2022",
+  "level":["Undergraduate"],
+  "hide_download":false,
+  "image_src":"./static_resources/mit6_100l_f22.jpeg",
+  "course_image_metadata":{"body":"","content_type":"resource","draft":false,"file":"/courses/6-100l-introduction-to-cs-and-programming-using-python-fall-2022/mit6_100l_f22.jpeg","file_size":153564,"file_type":"image/jpeg","image_metadata":{"caption":"Flowers are an example of the Fibonacci sequence in nature. The Fibonacci sequence is a classic example of a recursive function, as discussed in lectures 15 and 16. (Image courtesy of {{% resource_link \"e76f0613-c3ee-4c38-9d52-e397aadb5db9\" \"Arthur T. LaBar\" %}} on Flickr. License: CC BY.)","credit":"Image courtesy of {{% resource_link \"e76f0613-c3ee-4c38-9d52-e397aadb5db9\" \"Arthur T. LaBar\" %}} on Flickr. License: CC BY.","image-alt":"Closeup of sunflower petals and seeds. "},"iscjklanguage":false,"learning_resource_types":[],"license":"https://creativecommons.org/licenses/by-nc-sa/4.0/","resourcetype":"Image","title":"Fibonacci Sequence in Nature","uid":"b3cb1c7c-0662-40b0-b109-4bcad6b5f705","video_files":{"archive_url":"","video_captions_file":"","video_thumbnail_file":"","video_transcript_file":""},"video_metadata":{"video_speakers":"","video_tags":"","youtube_description":"","youtube_id":""}}}
+

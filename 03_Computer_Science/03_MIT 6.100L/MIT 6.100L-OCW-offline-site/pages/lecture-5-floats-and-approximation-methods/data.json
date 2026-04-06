@@ -1,0 +1,6 @@
+
+{
+  "title":"Lecture 5: Floats and Approximation Methods",
+  "content":"Topics: Simple Algorithms: approximation method, floats\nViewing videos requires an internet connection Your browser does not support some features required to play this video. Please update your browser to the latest version for the best experience. You can also download the video to watch it offline. View video page Download video Download transcript Lecture Notes Lecture 5: Floats and Approximation Methods\nLecture 5 Code\nReadings Ch 3.3, 3.2\nFinger Exercise Lecture 5 Assume you are given a string variable named my_str. Write a piece of Python code that prints out a new string containing the even indexed characters of my_str. For example, if my_str = \u0026quot;abcdefg\u0026quot; then your code should print out aceg.\n6.100L Finger Exercises Lecture 5 Solutions\n"}
+
+

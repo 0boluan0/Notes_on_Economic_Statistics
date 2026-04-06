@@ -1,0 +1,6 @@
+
+{
+  "title":"Lecture 4: Loops over Strings, Guess-and-Check, Binary",
+  "content":"Topics: Iteration, Simple Programs: guess and check, binary, fractions\nViewing videos requires an internet connection Your browser does not support some features required to play this video. Please update your browser to the latest version for the best experience. You can also download the video to watch it offline. View video page Download video Download transcript Lecture Notes Lecture 4: Loops over Strings, Guess-and-Check, Binary\nLecture 4 Code\nReadings Ch 3.1, 3.3\nFinger Exercise Lecture 4 Assume you are given a positive integer variable named N. Write a piece of Python code that finds the cube root of N. The code prints the cube root if N is a perfect cube or it prints error if N is not a perfect cube. Hint: use a loop that increments a counter—you decide when the counter should stop.\n6.100L Finger Exercises Lecture 4 Solutions\n"}
+
+

@@ -1,0 +1,3624 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.960 align:middle line:90%
+[SQUEAKING]
+
+00:00:01.960 --> 00:00:03.430 align:middle line:90%
+[RUSTLING]
+
+00:00:03.430 --> 00:00:04.900 align:middle line:90%
+[CLICKING]
+
+00:00:04.900 --> 00:00:11.270 align:middle line:90%
+
+
+00:00:11.270 --> 00:00:16.610 align:middle line:84%
+ANA BELL: So let's get started
+with lists and mutability.
+
+00:00:16.610 --> 00:00:20.510 align:middle line:84%
+So last lecture, we
+talked a lot about what
+
+00:00:20.510 --> 00:00:24.290 align:middle line:84%
+it means to have these mutable
+data structures, lists.
+
+00:00:24.290 --> 00:00:26.190 align:middle line:90%
+Today, we're not off the hook.
+
+00:00:26.190 --> 00:00:29.120 align:middle line:84%
+We will continue talking
+about the idea of mutability,
+
+00:00:29.120 --> 00:00:32.870 align:middle line:84%
+but we're going to do it in
+the context of removing items
+
+00:00:32.870 --> 00:00:36.510 align:middle line:84%
+from lists and some of the
+pitfalls that come with that.
+
+00:00:36.510 --> 00:00:40.040 align:middle line:84%
+And then we'll go into,
+along the way, ideas
+
+00:00:40.040 --> 00:00:42.320 align:middle line:84%
+about cloning or
+making copies of lists,
+
+00:00:42.320 --> 00:00:46.670 align:middle line:84%
+and aliasing, making another
+name for the same object
+
+00:00:46.670 --> 00:00:48.000 align:middle line:90%
+in memory.
+
+00:00:48.000 --> 00:00:53.570 align:middle line:84%
+So first, let's quickly talk
+about making a copy of a list
+
+00:00:53.570 --> 00:00:56.300 align:middle line:84%
+because so far,
+when we were dealing
+
+00:00:56.300 --> 00:00:58.700 align:middle line:84%
+with these mutable
+objects, we notice
+
+00:00:58.700 --> 00:01:04.349 align:middle line:84%
+that it's sometimes inconvenient
+to have to mutate the list,
+
+00:01:04.349 --> 00:01:04.849 align:middle line:90%
+right?
+
+00:01:04.849 --> 00:01:06.680 align:middle line:84%
+And it's hard to keep
+track of the fact
+
+00:01:06.680 --> 00:01:07.910 align:middle line:90%
+that we're mutating a list.
+
+00:01:07.910 --> 00:01:10.790 align:middle line:84%
+And there are some problems
+for when it does make sense
+
+00:01:10.790 --> 00:01:14.580 align:middle line:84%
+to make a copy of our list so
+that we can mutate the copy
+
+00:01:14.580 --> 00:01:16.560 align:middle line:84%
+or mutate the
+original while still
+
+00:01:16.560 --> 00:01:22.920 align:middle line:84%
+having those original
+items saved somewhere else.
+
+00:01:22.920 --> 00:01:23.500 align:middle line:90%
+OK?
+
+00:01:23.500 --> 00:01:27.390 align:middle line:84%
+So you can ask Python to
+make a copy of a list.
+
+00:01:27.390 --> 00:01:29.460 align:middle line:84%
+And basically,
+behind the scenes,
+
+00:01:29.460 --> 00:01:32.850 align:middle line:84%
+it creates a new list object
+for us in memory and copies
+
+00:01:32.850 --> 00:01:35.340 align:middle line:84%
+over every single element
+from the list you'd
+
+00:01:35.340 --> 00:01:38.040 align:middle line:90%
+like to copy into the new list.
+
+00:01:38.040 --> 00:01:38.730 align:middle line:90%
+OK?
+
+00:01:38.730 --> 00:01:43.180 align:middle line:84%
+So the syntax for doing a
+copy of a list is as follows.
+
+00:01:43.180 --> 00:01:47.010 align:middle line:84%
+So we've got a list that's
+already made called L.
+
+00:01:47.010 --> 00:01:48.730 align:middle line:84%
+And we want to
+make a copy of it.
+
+00:01:48.730 --> 00:01:50.760 align:middle line:84%
+So the syntax is
+L squared brackets
+
+00:01:50.760 --> 00:01:52.350 align:middle line:90%
+with a colon inside it.
+
+00:01:52.350 --> 00:01:55.860 align:middle line:84%
+And behind the scenes, Python
+makes this list inside memory.
+
+00:01:55.860 --> 00:01:58.170 align:middle line:84%
+And then we save
+that new list that
+
+00:01:58.170 --> 00:02:03.690 align:middle line:84%
+has the exact same elements
+as L into a list named Lcopy.
+
+00:02:03.690 --> 00:02:04.350 align:middle line:90%
+OK.
+
+00:02:04.350 --> 00:02:06.850 align:middle line:84%
+And so in memory,
+the way this looks--
+
+00:02:06.850 --> 00:02:09.360 align:middle line:84%
+so if I have this code
+here where I name my list
+
+00:02:09.360 --> 00:02:12.120 align:middle line:84%
+Loriginal-- again, I'm choosing
+a different name than L
+
+00:02:12.120 --> 00:02:15.690 align:middle line:84%
+just to show you that
+whatever list object I have,
+
+00:02:15.690 --> 00:02:17.470 align:middle line:84%
+that's the name I
+need to reference.
+
+00:02:17.470 --> 00:02:20.820 align:middle line:84%
+So if I have Loriginal
+is 4, 5, 6 in memory,
+
+00:02:20.820 --> 00:02:23.370 align:middle line:84%
+if I want to make
+a copy of my list,
+
+00:02:23.370 --> 00:02:25.680 align:middle line:84%
+I just say Loriginal
+square brackets
+
+00:02:25.680 --> 00:02:26.700 align:middle line:90%
+with a colon inside it.
+
+00:02:26.700 --> 00:02:28.830 align:middle line:84%
+That means copy
+every single element
+
+00:02:28.830 --> 00:02:30.690 align:middle line:84%
+from beginning to
+end of this list
+
+00:02:30.690 --> 00:02:34.590 align:middle line:90%
+and bind it to the name Lnew.
+
+00:02:34.590 --> 00:02:37.890 align:middle line:84%
+So notice-- in memory now,
+I have two list objects.
+
+00:02:37.890 --> 00:02:39.910 align:middle line:84%
+They're referenced
+by different names.
+
+00:02:39.910 --> 00:02:42.120 align:middle line:84%
+And so if I change one
+of them, the other one
+
+00:02:42.120 --> 00:02:43.800 align:middle line:90%
+will not change, right?
+
+00:02:43.800 --> 00:02:48.040 align:middle line:84%
+They're now completely
+separate objects.
+
+00:02:48.040 --> 00:02:48.670 align:middle line:90%
+OK.
+
+00:02:48.670 --> 00:02:50.680 align:middle line:84%
+So we're starting
+this lecture off
+
+00:02:50.680 --> 00:02:52.540 align:middle line:84%
+with a quick little
+exercise just
+
+00:02:52.540 --> 00:02:55.060 align:middle line:84%
+to get you to remember
+what we did last time
+
+00:02:55.060 --> 00:02:57.520 align:middle line:84%
+and to practice writing
+a little bit of code
+
+00:02:57.520 --> 00:03:00.260 align:middle line:90%
+with mutable objects.
+
+00:03:00.260 --> 00:03:03.340 align:middle line:84%
+So I would like you to
+write this function called
+
+00:03:03.340 --> 00:03:04.720 align:middle line:90%
+remove_all.
+
+00:03:04.720 --> 00:03:07.030 align:middle line:84%
+This is going to feel
+very similar to something
+
+00:03:07.030 --> 00:03:08.180 align:middle line:90%
+we did last lecture.
+
+00:03:08.180 --> 00:03:10.690 align:middle line:84%
+So last lecture, I asked you
+to write a similar function,
+
+00:03:10.690 --> 00:03:13.510 align:middle line:84%
+which took in a list
+L and an element E.
+
+00:03:13.510 --> 00:03:16.450 align:middle line:84%
+And that function
+from last lecture
+
+00:03:16.450 --> 00:03:20.200 align:middle line:84%
+created a new list and
+then basically populated
+
+00:03:20.200 --> 00:03:23.650 align:middle line:84%
+that new list with
+all the elements--
+
+00:03:23.650 --> 00:03:25.390 align:middle line:84%
+it had all the
+same elements as L
+
+00:03:25.390 --> 00:03:28.630 align:middle line:84%
+except for omitting the
+ones that were equal to E.
+
+00:03:28.630 --> 00:03:29.320 align:middle line:90%
+OK.
+
+00:03:29.320 --> 00:03:32.260 align:middle line:84%
+This version that I would
+like you to write for me
+
+00:03:32.260 --> 00:03:36.040 align:middle line:84%
+is not going to create a new
+list and return this new list.
+
+00:03:36.040 --> 00:03:41.390 align:middle line:84%
+It will mutate my input
+L such that you're
+
+00:03:41.390 --> 00:03:48.320 align:middle line:84%
+going to only keep the elements
+from L that do not match E.
+
+00:03:48.320 --> 00:03:49.370 align:middle line:90%
+OK.
+
+00:03:49.370 --> 00:03:51.750 align:middle line:84%
+So I'm going to give you
+a hint for how to do this.
+
+00:03:51.750 --> 00:03:56.960 align:middle line:84%
+So the process for this is
+going to make use of this thing
+
+00:03:56.960 --> 00:03:59.540 align:middle line:84%
+that we just saw, which is,
+I want you to first save
+
+00:03:59.540 --> 00:04:02.180 align:middle line:90%
+the list as is into a copy.
+
+00:04:02.180 --> 00:04:04.110 align:middle line:84%
+And then at the end
+of last lecture,
+
+00:04:04.110 --> 00:04:06.830 align:middle line:84%
+we saw a way for us
+to mutate a list,
+
+00:04:06.830 --> 00:04:09.090 align:middle line:84%
+to empty it out of
+all the elements.
+
+00:04:09.090 --> 00:04:11.180 align:middle line:84%
+So we still have that
+object in memory,
+
+00:04:11.180 --> 00:04:13.280 align:middle line:84%
+but we're just essentially
+clearing it out.
+
+00:04:13.280 --> 00:04:15.210 align:middle line:84%
+We remove all the
+elements from it.
+
+00:04:15.210 --> 00:04:17.959 align:middle line:84%
+So first, make a copy
+and save the elements.
+
+00:04:17.959 --> 00:04:20.660 align:middle line:84%
+Then clear the list
+we want to mutate--
+
+00:04:20.660 --> 00:04:22.500 align:middle line:90%
+L.
+
+00:04:22.500 --> 00:04:25.500 align:middle line:84%
+And then iterate
+through the copy
+
+00:04:25.500 --> 00:04:30.480 align:middle line:84%
+and add all of the elements
+that do not equal E back into L.
+
+00:04:30.480 --> 00:04:31.860 align:middle line:90%
+So that should be the process.
+
+00:04:31.860 --> 00:04:35.790 align:middle line:84%
+And in the end, when we call
+this remove_all function,
+
+00:04:35.790 --> 00:04:38.880 align:middle line:84%
+the thing that we're passing
+in will have been mutated.
+
+00:04:38.880 --> 00:04:41.380 align:middle line:84%
+We don't have
+anything to return.
+
+00:04:41.380 --> 00:04:44.320 align:middle line:84%
+We're just mutating the
+thing that's being passed in.
+
+00:04:44.320 --> 00:04:47.250 align:middle line:84%
+So I'll give you a couple
+minutes to work on that.
+
+00:04:47.250 --> 00:04:50.580 align:middle line:84%
+And you can start writing
+it around line 30.
+
+00:04:50.580 --> 00:04:54.980 align:middle line:90%
+
+
+00:04:54.980 --> 00:04:56.900 align:middle line:90%
+OK.
+
+00:04:56.900 --> 00:05:00.580 align:middle line:84%
+Does anyone have some
+code to start with?
+
+00:05:00.580 --> 00:05:01.270 align:middle line:90%
+Yes.
+
+00:05:01.270 --> 00:05:03.440 align:middle line:90%
+STUDENT: Initialize new list?
+
+00:05:03.440 --> 00:05:04.040 align:middle line:90%
+ANA BELL: Yup.
+
+00:05:04.040 --> 00:05:05.340 align:middle line:90%
+Initialize a new list.
+
+00:05:05.340 --> 00:05:07.203 align:middle line:90%
+Yep.
+
+00:05:07.203 --> 00:05:08.370 align:middle line:90%
+What do you want to call it?
+
+00:05:08.370 --> 00:05:10.220 align:middle line:90%
+Lnew?
+
+00:05:10.220 --> 00:05:10.880 align:middle line:90%
+Good name.
+
+00:05:10.880 --> 00:05:13.970 align:middle line:84%
+Lnew equals-- how do we make
+a copy, and what do we copy?
+
+00:05:13.970 --> 00:05:17.100 align:middle line:90%
+
+
+00:05:17.100 --> 00:05:18.810 align:middle line:84%
+STUDENT: Why do we
+copy [INAUDIBLE] added
+
+00:05:18.810 --> 00:05:21.750 align:middle line:90%
+to the ones that aren't equal?
+
+00:05:21.750 --> 00:05:25.800 align:middle line:84%
+ANA BELL: So what we'd like
+to do is mutate L, right?
+
+00:05:25.800 --> 00:05:29.730 align:middle line:84%
+But L already contains a
+bunch of items in it, right?
+
+00:05:29.730 --> 00:05:32.940 align:middle line:84%
+So that's why we first want
+to make a copy of it, right?
+
+00:05:32.940 --> 00:05:35.980 align:middle line:84%
+So just like in the
+syntax from the slides,
+
+00:05:35.980 --> 00:05:38.190 align:middle line:84%
+this will essentially
+save for us
+
+00:05:38.190 --> 00:05:43.220 align:middle line:84%
+everything that we already have
+in L in a new list called Lnew.
+
+00:05:43.220 --> 00:05:43.720 align:middle line:90%
+OK.
+
+00:05:43.720 --> 00:05:47.050 align:middle line:84%
+So now that we have
+that, does anyone--
+
+00:05:47.050 --> 00:05:48.580 align:middle line:90%
+yeah.
+
+00:05:48.580 --> 00:05:51.470 align:middle line:90%
+STUDENT: I used L.clear.
+
+00:05:51.470 --> 00:05:55.460 align:middle line:84%
+ANA BELL: So L.clear does not
+take a parameter in, right?
+
+00:05:55.460 --> 00:05:58.370 align:middle line:84%
+It's just a function
+that empties out L fully.
+
+00:05:58.370 --> 00:06:02.450 align:middle line:84%
+So it'll basically drop every
+single element in L. OK?
+
+00:06:02.450 --> 00:06:07.140 align:middle line:84%
+But we will see a function
+that will remove elements.
+
+00:06:07.140 --> 00:06:07.640 align:middle line:90%
+OK?
+
+00:06:07.640 --> 00:06:13.940 align:middle line:84%
+So if we do L.clear, then L
+becomes the empty list, right?
+
+00:06:13.940 --> 00:06:15.450 align:middle line:90%
+L just becomes this.
+
+00:06:15.450 --> 00:06:17.540 align:middle line:84%
+So now that I've
+mutated my object
+
+00:06:17.540 --> 00:06:19.730 align:middle line:84%
+to contain none of
+my elements in it,
+
+00:06:19.730 --> 00:06:21.710 align:middle line:84%
+how do I add back
+in the elements
+
+00:06:21.710 --> 00:06:23.180 align:middle line:90%
+that satisfy the condition?
+
+00:06:23.180 --> 00:06:32.170 align:middle line:90%
+
+
+00:06:32.170 --> 00:06:32.670 align:middle line:90%
+Yeah.
+
+00:06:32.670 --> 00:06:36.270 align:middle line:90%
+So for n in Lnew--
+
+00:06:36.270 --> 00:06:39.360 align:middle line:84%
+so I'm iterating over the
+list that actually contains
+
+00:06:39.360 --> 00:06:42.570 align:middle line:90%
+stuff, the thing I've copied.
+
+00:06:42.570 --> 00:06:44.100 align:middle line:90%
+And then--
+
+00:06:44.100 --> 00:06:46.303 align:middle line:84%
+STUDENT: You can just be
+like, if e not equal to n,
+
+00:06:46.303 --> 00:06:47.720 align:middle line:84%
+then you want
+append [INAUDIBLE]..
+
+00:06:47.720 --> 00:06:48.960 align:middle line:90%
+ANA BELL: Yeah, exactly.
+
+00:06:48.960 --> 00:06:49.520 align:middle line:90%
+L.append.
+
+00:06:49.520 --> 00:06:57.440 align:middle line:84%
+So notice-- I am
+appending to L, but I'm
+
+00:06:57.440 --> 00:06:59.150 align:middle line:90%
+iterating over Lnew, right?
+
+00:06:59.150 --> 00:07:00.980 align:middle line:84%
+Lnew has all of
+these elements in it.
+
+00:07:00.980 --> 00:07:03.920 align:middle line:84%
+I want to touch each element
+to see what value it has.
+
+00:07:03.920 --> 00:07:07.760 align:middle line:84%
+If it's not equal to the
+one from the parameter e,
+
+00:07:07.760 --> 00:07:12.140 align:middle line:84%
+then I add it to my list, L,
+the one that's currently empty.
+
+00:07:12.140 --> 00:07:12.640 align:middle line:90%
+OK?
+
+00:07:12.640 --> 00:07:14.950 align:middle line:84%
+And then do I need
+to return anything?
+
+00:07:14.950 --> 00:07:17.910 align:middle line:90%
+
+
+00:07:17.910 --> 00:07:21.210 align:middle line:84%
+We don't need to return--
+it won't hurt to return L,
+
+00:07:21.210 --> 00:07:25.390 align:middle line:84%
+but L will already be mutated
+by virtue of this function.
+
+00:07:25.390 --> 00:07:28.940 align:middle line:84%
+So we don't need to
+return any L. Right?
+
+00:07:28.940 --> 00:07:31.560 align:middle line:84%
+L is my parameter
+that I've passed in.
+
+00:07:31.560 --> 00:07:33.080 align:middle line:90%
+So there's nothing to return.
+
+00:07:33.080 --> 00:07:38.650 align:middle line:84%
+It's just being mutated
+in the function.
+
+00:07:38.650 --> 00:07:43.500 align:middle line:84%
+So when I make my function
+call here, I'm passing an L in.
+
+00:07:43.500 --> 00:07:48.480 align:middle line:84%
+I'm just making a call to remove
+all with this Lin object, which
+
+00:07:48.480 --> 00:07:51.010 align:middle line:90%
+is this one here.
+
+00:07:51.010 --> 00:07:54.690 align:middle line:84%
+And notice-- I'm not saving
+the return from this function
+
+00:07:54.690 --> 00:07:56.100 align:middle line:90%
+to anything, right?
+
+00:07:56.100 --> 00:07:59.640 align:middle line:84%
+Because this function will just
+mutate whatever I passed in.
+
+00:07:59.640 --> 00:08:02.940 align:middle line:84%
+And then if I just
+print the value of Lin
+
+00:08:02.940 --> 00:08:08.032 align:middle line:84%
+after this function call,
+it'll print the mutated value.
+
+00:08:08.032 --> 00:08:10.465 align:middle line:84%
+STUDENT: So when we're
+appending n [INAUDIBLE]??
+
+00:08:10.465 --> 00:08:11.340 align:middle line:90%
+ANA BELL: Yes, sorry.
+
+00:08:11.340 --> 00:08:13.680 align:middle line:90%
+We should append.
+
+00:08:13.680 --> 00:08:14.440 align:middle line:90%
+Thank you.
+
+00:08:14.440 --> 00:08:14.940 align:middle line:90%
+Yep.
+
+00:08:14.940 --> 00:08:17.640 align:middle line:90%
+And that looked weird.
+
+00:08:17.640 --> 00:08:19.020 align:middle line:90%
+Perfect.
+
+00:08:19.020 --> 00:08:23.460 align:middle line:84%
+And so if I run the other two
+examples here, I'm removing 1.
+
+00:08:23.460 --> 00:08:26.490 align:middle line:84%
+So it should just show
+me a list with all 2.
+
+00:08:26.490 --> 00:08:29.190 align:middle line:90%
+And here I'm removing 0.
+
+00:08:29.190 --> 00:08:32.860 align:middle line:84%
+And 0 doesn't even exist, so it
+doesn't mutate that input list
+
+00:08:32.860 --> 00:08:33.360 align:middle line:90%
+at all.
+
+00:08:33.360 --> 00:08:37.280 align:middle line:90%
+
+
+00:08:37.280 --> 00:08:39.450 align:middle line:90%
+OK.
+
+00:08:39.450 --> 00:08:44.190 align:middle line:84%
+So now, we can start talking
+about other operations
+
+00:08:44.190 --> 00:08:46.540 align:middle line:84%
+on lists which deal
+with removing lists
+
+00:08:46.540 --> 00:08:48.420 align:middle line:90%
+and making the lists smaller.
+
+00:08:48.420 --> 00:08:51.930 align:middle line:84%
+So we're actually going to take
+elements away from the list.
+
+00:08:51.930 --> 00:08:57.210 align:middle line:84%
+And this is similar to what
+the suggestion was instead of
+
+00:08:57.210 --> 00:09:00.180 align:middle line:84%
+to clear out a specific
+element, right?
+
+00:09:00.180 --> 00:09:02.610 align:middle line:84%
+But the clear function
+removes all the elements.
+
+00:09:02.610 --> 00:09:05.310 align:middle line:84%
+However, these functions
+will remove certain elements
+
+00:09:05.310 --> 00:09:06.520 align:middle line:90%
+from our lists.
+
+00:09:06.520 --> 00:09:09.390 align:middle line:84%
+So there's three different
+ways that are on this slide.
+
+00:09:09.390 --> 00:09:12.810 align:middle line:84%
+And I'm going to show you
+an example with this list L,
+
+00:09:12.810 --> 00:09:14.980 align:middle line:84%
+showcasing what each one
+of these functions do.
+
+00:09:14.980 --> 00:09:16.720 align:middle line:84%
+But first, I'll
+just explain them.
+
+00:09:16.720 --> 00:09:19.680 align:middle line:84%
+So one option for removing
+an item from a list
+
+00:09:19.680 --> 00:09:22.013 align:middle line:84%
+is if you know the index
+of the item you want
+
+00:09:22.013 --> 00:09:23.430 align:middle line:84%
+to remove, like
+you want to remove
+
+00:09:23.430 --> 00:09:25.930 align:middle line:84%
+the very first one in the list,
+or the last one in the list,
+
+00:09:25.930 --> 00:09:28.080 align:middle line:84%
+or the halfway point,
+or something like that,
+
+00:09:28.080 --> 00:09:32.370 align:middle line:84%
+you can tell Python to
+remove the item from list L
+
+00:09:32.370 --> 00:09:34.860 align:middle line:84%
+at a particular
+index with this del
+
+00:09:34.860 --> 00:09:36.930 align:middle line:84%
+parentheses-- so
+this function del.
+
+00:09:36.930 --> 00:09:42.290 align:middle line:84%
+And you pass in L at whatever
+index you want to remove.
+
+00:09:42.290 --> 00:09:46.320 align:middle line:84%
+Now, sometimes, you
+want to remove the item
+
+00:09:46.320 --> 00:09:47.820 align:middle line:84%
+all the way at the
+end of the list--
+
+00:09:47.820 --> 00:09:49.430 align:middle line:90%
+so the farthest-most right.
+
+00:09:49.430 --> 00:09:53.830 align:middle line:84%
+In that case, there's
+an operation called pop.
+
+00:09:53.830 --> 00:09:56.380 align:middle line:84%
+And you call pop on
+list L. So if you just
+
+00:09:56.380 --> 00:09:58.930 align:middle line:84%
+say L.pop with nothing
+in the parentheses,
+
+00:09:58.930 --> 00:10:02.050 align:middle line:84%
+Python will automatically grab
+that last value from the list
+
+00:10:02.050 --> 00:10:04.070 align:middle line:90%
+and drop it from the list.
+
+00:10:04.070 --> 00:10:04.700 align:middle line:90%
+OK.
+
+00:10:04.700 --> 00:10:06.430 align:middle line:84%
+Now, pop is a little
+bit interesting
+
+00:10:06.430 --> 00:10:10.490 align:middle line:90%
+because it has a return value.
+
+00:10:10.490 --> 00:10:12.500 align:middle line:84%
+We're using this
+dot notation, which
+
+00:10:12.500 --> 00:10:16.310 align:middle line:84%
+we used with append and clear
+and a bunch of other things
+
+00:10:16.310 --> 00:10:17.130 align:middle line:90%
+from last lecture.
+
+00:10:17.130 --> 00:10:19.970 align:middle line:84%
+But here this pop--
+not only does it
+
+00:10:19.970 --> 00:10:22.880 align:middle line:84%
+have the side effect of
+mutating my list by dropping
+
+00:10:22.880 --> 00:10:26.000 align:middle line:84%
+the last element from it, but
+it also returns something.
+
+00:10:26.000 --> 00:10:29.060 align:middle line:84%
+So this function call
+here will return for me
+
+00:10:29.060 --> 00:10:32.960 align:middle line:84%
+the value of the element that
+got dropped, just in case
+
+00:10:32.960 --> 00:10:36.860 align:middle line:84%
+you want to do
+something with it.
+
+00:10:36.860 --> 00:10:39.130 align:middle line:84%
+And lastly, if you
+know element you'd
+
+00:10:39.130 --> 00:10:41.080 align:middle line:84%
+like to remove
+specifically, so if you
+
+00:10:41.080 --> 00:10:43.090 align:middle line:84%
+have a list of a
+bunch of names and you
+
+00:10:43.090 --> 00:10:45.950 align:middle line:84%
+want to remove Anna from
+that list and the string
+
+00:10:45.950 --> 00:10:47.920 align:middle line:84%
+Anna is what you'd
+like to remove,
+
+00:10:47.920 --> 00:10:51.340 align:middle line:84%
+you do that using the
+function L.remove.
+
+00:10:51.340 --> 00:10:53.590 align:middle line:84%
+So whatever lists your
+names are part of,
+
+00:10:53.590 --> 00:10:55.540 align:middle line:90%
+you say that list.remove.
+
+00:10:55.540 --> 00:10:59.050 align:middle line:84%
+And then you pass it in the
+string Anna or the number 5
+
+00:10:59.050 --> 00:11:02.260 align:middle line:84%
+or whatever actual element
+you'd like to remove.
+
+00:11:02.260 --> 00:11:02.890 align:middle line:90%
+OK.
+
+00:11:02.890 --> 00:11:08.440 align:middle line:84%
+Now, if there are many
+elements that match that value,
+
+00:11:08.440 --> 00:11:10.750 align:middle line:84%
+if there's many Annas
+in my list of names,
+
+00:11:10.750 --> 00:11:13.160 align:middle line:84%
+it will only remove the
+first one it finds--
+
+00:11:13.160 --> 00:11:14.378 align:middle line:90%
+so from index 0.
+
+00:11:14.378 --> 00:11:15.670 align:middle line:90%
+All the other ones will remain.
+
+00:11:15.670 --> 00:11:18.500 align:middle line:84%
+You'll have to call
+that function again.
+
+00:11:18.500 --> 00:11:20.240 align:middle line:84%
+So let's look at
+this example here.
+
+00:11:20.240 --> 00:11:25.840 align:middle line:84%
+I've got this list of
+seven elements within it.
+
+00:11:25.840 --> 00:11:29.570 align:middle line:84%
+Let's do a few of these
+operations all in a row.
+
+00:11:29.570 --> 00:11:32.050 align:middle line:84%
+So each one of these
+operations will mutate my list.
+
+00:11:32.050 --> 00:11:36.040 align:middle line:84%
+So the operation right after it
+will work on the mutated list.
+
+00:11:36.040 --> 00:11:36.700 align:middle line:90%
+OK.
+
+00:11:36.700 --> 00:11:40.750 align:middle line:84%
+So let's start with this
+L. If we say L.remove 2,
+
+00:11:40.750 --> 00:11:45.070 align:middle line:84%
+Python will look for the
+element whose value is 2.
+
+00:11:45.070 --> 00:11:45.880 align:middle line:90%
+Well, there it is.
+
+00:11:45.880 --> 00:11:47.200 align:middle line:90%
+It's at the front of my list.
+
+00:11:47.200 --> 00:11:48.100 align:middle line:90%
+That's fine.
+
+00:11:48.100 --> 00:11:50.240 align:middle line:84%
+And Python will
+remove that element.
+
+00:11:50.240 --> 00:11:53.890 align:middle line:84%
+So this list will now be one
+element less shorter, right?
+
+00:11:53.890 --> 00:11:55.910 align:middle line:90%
+And that 2 is going to be gone.
+
+00:11:55.910 --> 00:12:01.510 align:middle line:84%
+So the list L will now be
+mutated to be 1, 3, 6, 3, 7, 0.
+
+00:12:01.510 --> 00:12:02.010 align:middle line:90%
+All right.
+
+00:12:02.010 --> 00:12:04.340 align:middle line:84%
+Well, what if we
+remove 3 now, right?
+
+00:12:04.340 --> 00:12:06.530 align:middle line:84%
+So we've done the
+operation to remove 2.
+
+00:12:06.530 --> 00:12:08.600 align:middle line:84%
+We've ended up with
+this mutated list.
+
+00:12:08.600 --> 00:12:12.350 align:middle line:84%
+Now, what if we remove 3
+from this mutated list?
+
+00:12:12.350 --> 00:12:15.290 align:middle line:84%
+There's two of them
+in there, right?
+
+00:12:15.290 --> 00:12:17.660 align:middle line:84%
+The element that's
+going to be removed
+
+00:12:17.660 --> 00:12:21.350 align:middle line:84%
+is the first one it finds--
+so just this one here.
+
+00:12:21.350 --> 00:12:24.150 align:middle line:84%
+And again, this is an
+operation that mutates my list.
+
+00:12:24.150 --> 00:12:27.380 align:middle line:84%
+So this list here
+that I've started with
+
+00:12:27.380 --> 00:12:31.850 align:middle line:90%
+would be one element shorter.
+
+00:12:31.850 --> 00:12:33.740 align:middle line:84%
+And that 3 will have
+been removed, right?
+
+00:12:33.740 --> 00:12:35.210 align:middle line:90%
+So now, I've got 1, 6, 3, 7, 0.
+
+00:12:35.210 --> 00:12:38.930 align:middle line:90%
+
+
+00:12:38.930 --> 00:12:39.430 align:middle line:90%
+All right.
+
+00:12:39.430 --> 00:12:43.310 align:middle line:84%
+What if we want to delete an
+element at a particular index?
+
+00:12:43.310 --> 00:12:45.520 align:middle line:84%
+So now again, we're working
+with the mutated list--
+
+00:12:45.520 --> 00:12:47.770 align:middle line:90%
+1, 6, 3, 7, 0.
+
+00:12:47.770 --> 00:12:53.410 align:middle line:84%
+This del function takes an
+index in a specific list
+
+00:12:53.410 --> 00:12:55.730 align:middle line:84%
+and removes the
+element that is there.
+
+00:12:55.730 --> 00:12:59.200 align:middle line:84%
+So in this case, I want to
+remove the element at index 1.
+
+00:12:59.200 --> 00:13:02.020 align:middle line:84%
+So in this list here,
+the element at index 1
+
+00:13:02.020 --> 00:13:03.880 align:middle line:90%
+is the 6, right?
+
+00:13:03.880 --> 00:13:04.480 align:middle line:90%
+This is 0.
+
+00:13:04.480 --> 00:13:05.320 align:middle line:90%
+This is 1.
+
+00:13:05.320 --> 00:13:07.450 align:middle line:90%
+So the 6 will be removed.
+
+00:13:07.450 --> 00:13:10.235 align:middle line:84%
+And my list will be
+mutated to just contain
+
+00:13:10.235 --> 00:13:11.110 align:middle line:90%
+these four elements--
+
+00:13:11.110 --> 00:13:14.980 align:middle line:90%
+1, 3, 7, and 0.
+
+00:13:14.980 --> 00:13:19.540 align:middle line:84%
+And lastly, if we
+pop, that function
+
+00:13:19.540 --> 00:13:22.390 align:middle line:84%
+will just remove the element
+at the end of the list.
+
+00:13:22.390 --> 00:13:25.210 align:middle line:84%
+The element at the end
+of the list is this 0.
+
+00:13:25.210 --> 00:13:30.160 align:middle line:84%
+So the list through
+the side effect of pop
+
+00:13:30.160 --> 00:13:33.310 align:middle line:84%
+is going to be mutated to
+contain just the three elements
+
+00:13:33.310 --> 00:13:34.960 align:middle line:90%
+except for the last one.
+
+00:13:34.960 --> 00:13:37.240 align:middle line:90%
+So it'll contain 1, 3, and 7.
+
+00:13:37.240 --> 00:13:39.820 align:middle line:84%
+And additionally,
+if I'd like to save
+
+00:13:39.820 --> 00:13:43.090 align:middle line:84%
+the value of the
+element that got removed
+
+00:13:43.090 --> 00:13:48.220 align:middle line:84%
+from the end of the list, the
+0, you can because this function
+
+00:13:48.220 --> 00:13:49.000 align:middle line:90%
+call here--
+
+00:13:49.000 --> 00:13:55.790 align:middle line:84%
+L.pop-- you can save the
+return value into a variable.
+
+00:13:55.790 --> 00:14:00.130 align:middle line:84%
+None of the other
+ones-- del or remove--
+
+00:14:00.130 --> 00:14:01.690 align:middle line:90%
+have any return, right?
+
+00:14:01.690 --> 00:14:05.650 align:middle line:84%
+So if you saved a variable
+from the function call
+
+00:14:05.650 --> 00:14:08.620 align:middle line:84%
+to a variable, that
+variable will be none.
+
+00:14:08.620 --> 00:14:11.350 align:middle line:84%
+Pop is special because
+it actually grabs
+
+00:14:11.350 --> 00:14:15.500 align:middle line:84%
+that variable value
+and returns it.
+
+00:14:15.500 --> 00:14:16.000 align:middle line:90%
+OK.
+
+00:14:16.000 --> 00:14:19.360 align:middle line:84%
+So all of these operations
+mutate the list, right?
+
+00:14:19.360 --> 00:14:22.510 align:middle line:84%
+So that means as we did
+operation after operation,
+
+00:14:22.510 --> 00:14:24.595 align:middle line:84%
+we were working with
+the mutated list.
+
+00:14:24.595 --> 00:14:27.160 align:middle line:90%
+
+
+00:14:27.160 --> 00:14:28.580 align:middle line:90%
+OK.
+
+00:14:28.580 --> 00:14:30.607 align:middle line:90%
+Yes, there was a question.
+
+00:14:30.607 --> 00:14:31.190 align:middle line:90%
+STUDENT: Yeah.
+
+00:14:31.190 --> 00:14:33.280 align:middle line:90%
+It should still be L1--
+
+00:14:33.280 --> 00:14:34.857 align:middle line:90%
+the third one to the left.
+
+00:14:34.857 --> 00:14:35.690 align:middle line:90%
+ANA BELL: I'm sorry.
+
+00:14:35.690 --> 00:14:36.590 align:middle line:90%
+Say it again.
+
+00:14:36.590 --> 00:14:38.830 align:middle line:84%
+STUDENT: In the third
+one, you said delete L1.
+
+00:14:38.830 --> 00:14:40.170 align:middle line:90%
+ANA BELL: L at index 1.
+
+00:14:40.170 --> 00:14:40.670 align:middle line:90%
+Yeah.
+
+00:14:40.670 --> 00:14:43.400 align:middle line:84%
+So the L at index 1
+here works on the list
+
+00:14:43.400 --> 00:14:44.330 align:middle line:90%
+we have just mutated.
+
+00:14:44.330 --> 00:14:45.230 align:middle line:90%
+So this one.
+
+00:14:45.230 --> 00:14:47.245 align:middle line:90%
+The element at index 1 is the 6.
+
+00:14:47.245 --> 00:14:47.870 align:middle line:90%
+STUDENT: Sorry.
+
+00:14:47.870 --> 00:14:48.320 align:middle line:90%
+ANA BELL: Oh, yeah.
+
+00:14:48.320 --> 00:14:49.160 align:middle line:90%
+Yeah.
+
+00:14:49.160 --> 00:14:51.860 align:middle line:90%
+No worries.
+
+00:14:51.860 --> 00:14:52.360 align:middle line:90%
+OK.
+
+00:14:52.360 --> 00:14:54.443 align:middle line:84%
+So let's look at the code
+we just wrote in the you
+
+00:14:54.443 --> 00:14:55.300 align:middle line:90%
+try it exercise.
+
+00:14:55.300 --> 00:14:58.840 align:middle line:84%
+And try to rewrite it using
+this remove operation.
+
+00:14:58.840 --> 00:15:02.290 align:middle line:84%
+Well, the way we
+can think of it is
+
+00:15:02.290 --> 00:15:05.310 align:middle line:84%
+we'd like to remove the
+element that is e, right?
+
+00:15:05.310 --> 00:15:08.260 align:middle line:84%
+So we know the value of the
+element we'd like to remove.
+
+00:15:08.260 --> 00:15:11.570 align:middle line:84%
+It's 3, or 5, or 1,
+or 2, or whatever.
+
+00:15:11.570 --> 00:15:13.460 align:middle line:90%
+So that's e.
+
+00:15:13.460 --> 00:15:15.740 align:middle line:84%
+And we know of an
+operation that can remove
+
+00:15:15.740 --> 00:15:17.120 align:middle line:90%
+the element from the list.
+
+00:15:17.120 --> 00:15:19.760 align:middle line:84%
+It's called remove,
+unsurprisingly.
+
+00:15:19.760 --> 00:15:24.180 align:middle line:84%
+So what we can do is
+we can say, L.remove e.
+
+00:15:24.180 --> 00:15:24.680 align:middle line:90%
+right?
+
+00:15:24.680 --> 00:15:26.395 align:middle line:84%
+And that would remove
+the first instance
+
+00:15:26.395 --> 00:15:27.770 align:middle line:84%
+of the element in
+the list, but I
+
+00:15:27.770 --> 00:15:31.400 align:middle line:84%
+might have many of these
+elements in my list.
+
+00:15:31.400 --> 00:15:33.980 align:middle line:84%
+So we can just write
+a little while loop
+
+00:15:33.980 --> 00:15:35.300 align:middle line:90%
+around this operation.
+
+00:15:35.300 --> 00:15:39.380 align:middle line:84%
+And we say, while we still
+have this value in our list,
+
+00:15:39.380 --> 00:15:41.600 align:middle line:90%
+remove it.
+
+00:15:41.600 --> 00:15:42.100 align:middle line:90%
+Right?
+
+00:15:42.100 --> 00:15:44.230 align:middle line:84%
+So that's what this
+while loop is doing.
+
+00:15:44.230 --> 00:15:48.640 align:middle line:84%
+e in L is going to be there true
+or false, whether the number 5
+
+00:15:48.640 --> 00:15:50.180 align:middle line:90%
+or whatever is in my list.
+
+00:15:50.180 --> 00:15:55.780 align:middle line:84%
+And as long as I still have a 5
+in my list, call L.remove on 5
+
+00:15:55.780 --> 00:15:58.810 align:middle line:90%
+or whatever it is.
+
+00:15:58.810 --> 00:16:05.640 align:middle line:84%
+So nice little two-liner here
+to solve the same problem.
+
+00:16:05.640 --> 00:16:08.970 align:middle line:84%
+Now, what if we rewrote that
+code in a slightly different
+
+00:16:08.970 --> 00:16:11.817 align:middle line:84%
+way, again using remove,
+but let's say maybe
+
+00:16:11.817 --> 00:16:13.650 align:middle line:84%
+we didn't realize we
+could use a while loop?
+
+00:16:13.650 --> 00:16:16.920 align:middle line:84%
+And instead, we used a
+for loop to iterate over
+
+00:16:16.920 --> 00:16:21.570 align:middle line:84%
+each element in L. And if
+that element is equal to e,
+
+00:16:21.570 --> 00:16:23.780 align:middle line:90%
+remove it.
+
+00:16:23.780 --> 00:16:24.280 align:middle line:90%
+Right?
+
+00:16:24.280 --> 00:16:26.230 align:middle line:90%
+Seems reasonable.
+
+00:16:26.230 --> 00:16:28.410 align:middle line:90%
+So what would happen?
+
+00:16:28.410 --> 00:16:31.240 align:middle line:90%
+And I can run it for you guys.
+
+00:16:31.240 --> 00:16:34.800 align:middle line:84%
+So if we run it
+with this code here,
+
+00:16:34.800 --> 00:16:39.870 align:middle line:84%
+this is the one from the
+slides, just to show you
+
+00:16:39.870 --> 00:16:41.650 align:middle line:90%
+that I'm not making it up.
+
+00:16:41.650 --> 00:16:43.440 align:middle line:84%
+So if this is the
+code that we wrote,
+
+00:16:43.440 --> 00:16:46.120 align:middle line:84%
+I tried to remove
+the 2 from the list.
+
+00:16:46.120 --> 00:16:50.910 align:middle line:84%
+And when I printed the result,
+it actually printed 1, 2.
+
+00:16:50.910 --> 00:16:54.060 align:middle line:84%
+So I have two elements
+left in my list.
+
+00:16:54.060 --> 00:16:57.525 align:middle line:84%
+It looks like it didn't
+correctly remove a 2.
+
+00:16:57.525 --> 00:17:03.110 align:middle line:90%
+
+
+00:17:03.110 --> 00:17:07.380 align:middle line:84%
+And at first, it's surprising
+why this is, right?
+
+00:17:07.380 --> 00:17:10.230 align:middle line:90%
+Because the code looks right.
+
+00:17:10.230 --> 00:17:12.190 align:middle line:90%
+It seems to work just fine.
+
+00:17:12.190 --> 00:17:15.750 align:middle line:84%
+But let's step through
+this memory diagram
+
+00:17:15.750 --> 00:17:18.040 align:middle line:84%
+and see exactly what
+happens step-by-step,
+
+00:17:18.040 --> 00:17:21.560 align:middle line:84%
+so with each iteration
+of our for loop.
+
+00:17:21.560 --> 00:17:25.510 align:middle line:84%
+So originally, I've got L
+containing 1, 2, 2, right?
+
+00:17:25.510 --> 00:17:26.470 align:middle line:90%
+So far, so good.
+
+00:17:26.470 --> 00:17:28.750 align:middle line:84%
+That's just us doing
+this line here.
+
+00:17:28.750 --> 00:17:31.520 align:middle line:84%
+And then I make a function
+call to remove all.
+
+00:17:31.520 --> 00:17:35.930 align:middle line:84%
+So I want to remove the
+number 2 from my list.
+
+00:17:35.930 --> 00:17:39.490 align:middle line:84%
+I've got a for loop, where my
+loop variable is called elem.
+
+00:17:39.490 --> 00:17:44.710 align:middle line:84%
+And it will iterate through
+each element in my sequence
+
+00:17:44.710 --> 00:17:47.710 align:middle line:84%
+where my sequence is
+all the elements in L.
+
+00:17:47.710 --> 00:17:50.080 align:middle line:90%
+So first, it will be 1, right?
+
+00:17:50.080 --> 00:17:52.090 align:middle line:84%
+Then it will be the next
+value in the sequence--
+
+00:17:52.090 --> 00:17:53.960 align:middle line:90%
+2, and then 2, and then 2.
+
+00:17:53.960 --> 00:17:54.460 align:middle line:90%
+Right?
+
+00:17:54.460 --> 00:17:57.430 align:middle line:84%
+So here I've just got elem
+initialized to the first value
+
+00:17:57.430 --> 00:17:58.240 align:middle line:90%
+in the sequence.
+
+00:17:58.240 --> 00:18:02.020 align:middle line:84%
+If elem equal equal e, well,
+the 1 does not equal the 2.
+
+00:18:02.020 --> 00:18:05.300 align:middle line:84%
+So then we do not
+remove anything.
+
+00:18:05.300 --> 00:18:07.910 align:middle line:84%
+Next, the for loop goes
+on to the next value
+
+00:18:07.910 --> 00:18:09.870 align:middle line:90%
+in my sequence-- the 2.
+
+00:18:09.870 --> 00:18:12.300 align:middle line:90%
+So now, elem is 2.
+
+00:18:12.300 --> 00:18:16.530 align:middle line:84%
+And if elem equal
+equal 2, it does
+
+00:18:16.530 --> 00:18:18.970 align:middle line:90%
+equal 2, what am I going to do?
+
+00:18:18.970 --> 00:18:21.570 align:middle line:90%
+Well, I need to do L.remove e.
+
+00:18:21.570 --> 00:18:25.530 align:middle line:84%
+So this is where
+bad things happen.
+
+00:18:25.530 --> 00:18:28.740 align:middle line:84%
+I'm going to remove an
+element from my list, right?
+
+00:18:28.740 --> 00:18:30.700 align:middle line:84%
+So I still have those
+three 2s in there.
+
+00:18:30.700 --> 00:18:33.000 align:middle line:84%
+But as soon as I
+drop one of the 2s,
+
+00:18:33.000 --> 00:18:36.510 align:middle line:84%
+all the elements beyond
+that 2 shift over.
+
+00:18:36.510 --> 00:18:39.900 align:middle line:90%
+
+
+00:18:39.900 --> 00:18:42.900 align:middle line:84%
+But Python doesn't know
+that it should also
+
+00:18:42.900 --> 00:18:45.190 align:middle line:90%
+shift over the pointer.
+
+00:18:45.190 --> 00:18:45.690 align:middle line:90%
+Right?
+
+00:18:45.690 --> 00:18:50.190 align:middle line:84%
+It's still pointing to that
+element that it's currently at.
+
+00:18:50.190 --> 00:18:52.200 align:middle line:84%
+It's not going to shift
+itself backward just
+
+00:18:52.200 --> 00:18:54.730 align:middle line:90%
+because you removed an element.
+
+00:18:54.730 --> 00:18:59.550 align:middle line:84%
+And so Python just finished
+removing the element.
+
+00:18:59.550 --> 00:19:02.530 align:middle line:84%
+And now, it says I
+finished this loop through.
+
+00:19:02.530 --> 00:19:05.010 align:middle line:84%
+So I need to go back up
+here and make element be
+
+00:19:05.010 --> 00:19:07.320 align:middle line:90%
+the next value in my sequence--
+
+00:19:07.320 --> 00:19:09.490 align:middle line:90%
+the next 2.
+
+00:19:09.490 --> 00:19:13.210 align:middle line:84%
+So I've essentially
+skipped over one thing
+
+00:19:13.210 --> 00:19:17.590 align:middle line:84%
+that I needed to remove
+because when I remove the item,
+
+00:19:17.590 --> 00:19:19.690 align:middle line:84%
+everything else
+shifted over as well,
+
+00:19:19.690 --> 00:19:22.600 align:middle line:90%
+but my pointer didn't decrement.
+
+00:19:22.600 --> 00:19:24.120 align:middle line:90%
+OK.
+
+00:19:24.120 --> 00:19:26.070 align:middle line:90%
+So this is a big problem.
+
+00:19:26.070 --> 00:19:30.960 align:middle line:84%
+We can finish off here, but
+we've already seen the problem.
+
+00:19:30.960 --> 00:19:33.660 align:middle line:84%
+The last time through the
+loop, Python sees-- well,
+
+00:19:33.660 --> 00:19:36.180 align:middle line:84%
+is this 2 equal to the
+thing I want to remove?
+
+00:19:36.180 --> 00:19:36.930 align:middle line:90%
+It is.
+
+00:19:36.930 --> 00:19:38.720 align:middle line:90%
+So it removes it.
+
+00:19:38.720 --> 00:19:39.800 align:middle line:90%
+And this is the end.
+
+00:19:39.800 --> 00:19:42.380 align:middle line:84%
+It has no more values left
+to go through in the sequence
+
+00:19:42.380 --> 00:19:48.132 align:middle line:84%
+because its pointer is
+already out of the bounds.
+
+00:19:48.132 --> 00:19:49.120 align:middle line:90%
+OK.
+
+00:19:49.120 --> 00:19:51.350 align:middle line:90%
+Is everyone OK with that issue?
+
+00:19:51.350 --> 00:19:51.850 align:middle line:90%
+OK.
+
+00:19:51.850 --> 00:19:54.850 align:middle line:84%
+So the problem
+here with remove is
+
+00:19:54.850 --> 00:19:59.160 align:middle line:84%
+that we're iterating over a
+list as we're mutating it.
+
+00:19:59.160 --> 00:19:59.660 align:middle line:90%
+Right?
+
+00:19:59.660 --> 00:20:03.370 align:middle line:84%
+And so removing these items can
+cause unpredictable behavior.
+
+00:20:03.370 --> 00:20:08.050 align:middle line:84%
+Something like this could still
+happen if we were adding items,
+
+00:20:08.050 --> 00:20:09.970 align:middle line:84%
+except that we're
+usually adding items
+
+00:20:09.970 --> 00:20:11.980 align:middle line:84%
+to the end of the
+list with append.
+
+00:20:11.980 --> 00:20:15.070 align:middle line:84%
+If we were adding items
+somewhere in the middle
+
+00:20:15.070 --> 00:20:18.040 align:middle line:84%
+or somewhere around where our
+pointer is supposed to be,
+
+00:20:18.040 --> 00:20:20.620 align:middle line:84%
+I think we could theoretically
+run into the same issue
+
+00:20:20.620 --> 00:20:23.890 align:middle line:84%
+when we're adding items
+where we might skip elements
+
+00:20:23.890 --> 00:20:25.820 align:middle line:84%
+or we might see
+an element twice.
+
+00:20:25.820 --> 00:20:26.320 align:middle line:90%
+OK?
+
+00:20:26.320 --> 00:20:28.690 align:middle line:84%
+It's just more apparent
+when we're removing items.
+
+00:20:28.690 --> 00:20:31.250 align:middle line:90%
+
+
+00:20:31.250 --> 00:20:33.130 align:middle line:84%
+So this is the big
+thing that we're going
+
+00:20:33.130 --> 00:20:34.608 align:middle line:90%
+to talk about in this lecture.
+
+00:20:34.608 --> 00:20:36.400 align:middle line:84%
+So I'm going to go
+through another example.
+
+00:20:36.400 --> 00:20:38.860 align:middle line:84%
+This is tricky example
+number 4, where
+
+00:20:38.860 --> 00:20:40.510 align:middle line:84%
+we're going to do a
+very similar thing,
+
+00:20:40.510 --> 00:20:45.070 align:middle line:84%
+but we're going to have a loop
+iterating over L's elements
+
+00:20:45.070 --> 00:20:49.510 align:middle line:84%
+directly, just like we did,
+but doing a different task just
+
+00:20:49.510 --> 00:20:53.730 align:middle line:84%
+so we're not doing that
+same remove_all task.
+
+00:20:53.730 --> 00:20:56.840 align:middle line:84%
+So let's look at a
+slightly different problem.
+
+00:20:56.840 --> 00:20:59.030 align:middle line:84%
+This will be in the context
+of a function called
+
+00:20:59.030 --> 00:21:01.570 align:middle line:90%
+remove_duplicates.
+
+00:21:01.570 --> 00:21:04.340 align:middle line:84%
+This function will
+take in two lists.
+
+00:21:04.340 --> 00:21:07.060 align:middle line:84%
+So as an example
+here, I've got a list
+
+00:21:07.060 --> 00:21:08.980 align:middle line:90%
+with 10, 20, 30, and 40 in it.
+
+00:21:08.980 --> 00:21:12.950 align:middle line:84%
+And I've got another list
+with 10, 20, 50, and 60 in it.
+
+00:21:12.950 --> 00:21:18.620 align:middle line:84%
+The purpose of this function
+is to mutate L1, OK?
+
+00:21:18.620 --> 00:21:21.950 align:middle line:84%
+And the way I want
+to mutate L1 is such
+
+00:21:21.950 --> 00:21:29.230 align:middle line:84%
+that if an element in L1 is
+also in L2, I want to remove it.
+
+00:21:29.230 --> 00:21:29.730 align:middle line:90%
+All right.
+
+00:21:29.730 --> 00:21:33.390 align:middle line:84%
+So the 10 and the 20, notice,
+are common to L1 and L2.
+
+00:21:33.390 --> 00:21:37.260 align:middle line:84%
+So I would like to remove
+the 10 and the 20 from L1.
+
+00:21:37.260 --> 00:21:41.250 align:middle line:84%
+The 30 and the 40 stay because
+there's no 30 or 40 in L2.
+
+00:21:41.250 --> 00:21:44.110 align:middle line:90%
+
+
+00:21:44.110 --> 00:21:45.640 align:middle line:90%
+So that's our task.
+
+00:21:45.640 --> 00:21:49.550 align:middle line:84%
+And this is the code that
+supposedly does this.
+
+00:21:49.550 --> 00:21:52.510 align:middle line:84%
+So I've got a loop that goes
+through each element in L1--
+
+00:21:52.510 --> 00:21:55.360 align:middle line:84%
+so 10, then 20,
+then 30, then 40.
+
+00:21:55.360 --> 00:21:58.660 align:middle line:84%
+And I ask if that
+element is in L2.
+
+00:21:58.660 --> 00:22:00.430 align:middle line:90%
+So here they are.
+
+00:22:00.430 --> 00:22:01.540 align:middle line:90%
+There's two of them here.
+
+00:22:01.540 --> 00:22:03.990 align:middle line:90%
+Then remove it from L1.
+
+00:22:03.990 --> 00:22:06.990 align:middle line:84%
+Very similar thing
+to what we just did.
+
+00:22:06.990 --> 00:22:11.670 align:middle line:84%
+This code doesn't work
+because if we actually run it,
+
+00:22:11.670 --> 00:22:14.100 align:middle line:84%
+in the end, Python
+will mutate L1
+
+00:22:14.100 --> 00:22:17.760 align:middle line:84%
+to contain the 20, and
+the 30, and the 40, right?
+
+00:22:17.760 --> 00:22:21.150 align:middle line:84%
+Whereas we only want it
+to keep the 30 and the 40
+
+00:22:21.150 --> 00:22:22.920 align:middle line:84%
+because the 20 also
+appeared in L2.
+
+00:22:22.920 --> 00:22:25.570 align:middle line:84%
+So why in the world
+did we keep it?
+
+00:22:25.570 --> 00:22:27.970 align:middle line:84%
+Well, we kept it because
+of the same issue
+
+00:22:27.970 --> 00:22:33.310 align:middle line:84%
+that we just saw, where mutating
+a list as we're iterating over
+
+00:22:33.310 --> 00:22:35.270 align:middle line:90%
+it and we're doing a removal--
+
+00:22:35.270 --> 00:22:37.880 align:middle line:84%
+so we're again skipping
+over an element.
+
+00:22:37.880 --> 00:22:39.730 align:middle line:84%
+So let's just step
+through this one just
+
+00:22:39.730 --> 00:22:41.240 align:middle line:84%
+to show you again
+what can happen.
+
+00:22:41.240 --> 00:22:44.800 align:middle line:84%
+So here I've got 10,
+20, 30, 40 for L1,
+
+00:22:44.800 --> 00:22:49.720 align:middle line:84%
+and 10, 20, 50, 60
+for L2 in my loop.
+
+00:22:49.720 --> 00:22:53.260 align:middle line:84%
+My variable is e, so
+first, it'll be 10.
+
+00:22:53.260 --> 00:22:57.100 align:middle line:90%
+And we ask, if 10 is in L2--
+
+00:22:57.100 --> 00:22:59.380 align:middle line:90%
+that's true-- remove it from L1.
+
+00:22:59.380 --> 00:23:02.110 align:middle line:84%
+So you can see what's
+going to happen.
+
+00:23:02.110 --> 00:23:04.090 align:middle line:90%
+My 10 is removed.
+
+00:23:04.090 --> 00:23:06.130 align:middle line:84%
+Everything else
+shifts over by 1,
+
+00:23:06.130 --> 00:23:11.980 align:middle line:90%
+but my loop index stays fixed.
+
+00:23:11.980 --> 00:23:18.070 align:middle line:84%
+Next, Python says, I'm going
+to increment my variable e
+
+00:23:18.070 --> 00:23:21.520 align:middle line:84%
+to go to the next
+item in my sequence.
+
+00:23:21.520 --> 00:23:24.130 align:middle line:90%
+So e becomes the 30.
+
+00:23:24.130 --> 00:23:27.040 align:middle line:84%
+And already, I've
+skipped over one element
+
+00:23:27.040 --> 00:23:30.990 align:middle line:84%
+that I was interested
+in removing.
+
+00:23:30.990 --> 00:23:33.060 align:middle line:84%
+So here when we're
+pointing to the 30,
+
+00:23:33.060 --> 00:23:35.790 align:middle line:84%
+Python says, well,
+the 30 is not in L2.
+
+00:23:35.790 --> 00:23:37.380 align:middle line:90%
+So we don't do anything.
+
+00:23:37.380 --> 00:23:38.820 align:middle line:90%
+And then it points to the 40.
+
+00:23:38.820 --> 00:23:40.440 align:middle line:90%
+The 40 is not in L2.
+
+00:23:40.440 --> 00:23:41.610 align:middle line:90%
+So we don't do anything.
+
+00:23:41.610 --> 00:23:42.930 align:middle line:90%
+And then the code is done.
+
+00:23:42.930 --> 00:23:47.520 align:middle line:84%
+And we've erroneously finished
+with mutating L1 to just
+
+00:23:47.520 --> 00:23:51.110 align:middle line:90%
+be the 20, 30, and the 40.
+
+00:23:51.110 --> 00:23:52.240 align:middle line:90%
+OK.
+
+00:23:52.240 --> 00:23:57.100 align:middle line:84%
+So let's try to rewrite
+the code to actually work
+
+00:23:57.100 --> 00:23:59.050 align:middle line:90%
+by using copies.
+
+00:23:59.050 --> 00:24:01.450 align:middle line:84%
+So we certainly could
+use the same trick
+
+00:24:01.450 --> 00:24:05.050 align:middle line:84%
+we did with the first you
+try it exercise, where
+
+00:24:05.050 --> 00:24:10.390 align:middle line:84%
+we could make a copy, clear L1,
+and then add the elements back.
+
+00:24:10.390 --> 00:24:11.660 align:middle line:90%
+We could do that.
+
+00:24:11.660 --> 00:24:14.530 align:middle line:84%
+But we can also do a slightly
+different version of that
+
+00:24:14.530 --> 00:24:16.120 align:middle line:90%
+where, again, we make a copy.
+
+00:24:16.120 --> 00:24:21.650 align:middle line:84%
+So here I've got L1_copy
+equals L1 square bracket colon.
+
+00:24:21.650 --> 00:24:25.050 align:middle line:84%
+And then the key thing here is
+we're iterating over the copy,
+
+00:24:25.050 --> 00:24:27.430 align:middle line:90%
+right?
+
+00:24:27.430 --> 00:24:30.000 align:middle line:84%
+So if we iterate over
+the copy, we're not
+
+00:24:30.000 --> 00:24:33.150 align:middle line:84%
+going to mutate the copy,
+but we will mutate L1.
+
+00:24:33.150 --> 00:24:38.460 align:middle line:84%
+So for the for loop,
+variable goes over the copy,
+
+00:24:38.460 --> 00:24:42.800 align:middle line:90%
+but the removal is done from L1.
+
+00:24:42.800 --> 00:24:46.050 align:middle line:84%
+So to visualize that,
+this is what happens.
+
+00:24:46.050 --> 00:24:48.750 align:middle line:90%
+So I've got L1 and L2 as before.
+
+00:24:48.750 --> 00:24:53.210 align:middle line:84%
+So when I make my function
+call here, I have L1_copy
+
+00:24:53.210 --> 00:24:55.350 align:middle line:90%
+equals L1 square bracket colon.
+
+00:24:55.350 --> 00:24:57.140 align:middle line:84%
+So this makes for
+me a new variable
+
+00:24:57.140 --> 00:25:01.580 align:middle line:84%
+inside memory, which is an
+exact duplicate, copy or clone,
+
+00:25:01.580 --> 00:25:04.330 align:middle line:90%
+of L1.
+
+00:25:04.330 --> 00:25:04.830 align:middle line:90%
+OK.
+
+00:25:04.830 --> 00:25:07.770 align:middle line:84%
+So every one of my
+elements is now saved.
+
+00:25:07.770 --> 00:25:10.260 align:middle line:84%
+So I can do whatever
+I'd like to L1
+
+00:25:10.260 --> 00:25:13.020 align:middle line:84%
+and know that I can
+still have a way
+
+00:25:13.020 --> 00:25:19.510 align:middle line:84%
+to iterate and look at each
+variable from the original L1.
+
+00:25:19.510 --> 00:25:25.435 align:middle line:84%
+So now, my loop variable e
+goes over elements in L1 copy.
+
+00:25:25.435 --> 00:25:28.540 align:middle line:90%
+
+
+00:25:28.540 --> 00:25:30.070 align:middle line:90%
+So first, we look at the 10.
+
+00:25:30.070 --> 00:25:32.890 align:middle line:84%
+And I say, if the 10
+is in L2-- it is--
+
+00:25:32.890 --> 00:25:34.360 align:middle line:90%
+remove it from L1.
+
+00:25:34.360 --> 00:25:37.780 align:middle line:84%
+So notice-- I have just
+mutated L1, not the copy,
+
+00:25:37.780 --> 00:25:41.440 align:middle line:90%
+to be one element less.
+
+00:25:41.440 --> 00:25:45.230 align:middle line:84%
+Then the loop variable e goes to
+the next value in my sequence.
+
+00:25:45.230 --> 00:25:47.110 align:middle line:84%
+So I'm not skipping
+anything here because I
+
+00:25:47.110 --> 00:25:48.710 align:middle line:90%
+didn't mutate L1_copy.
+
+00:25:48.710 --> 00:25:52.360 align:middle line:84%
+So now we look at the 20
+correctly this time, right?
+
+00:25:52.360 --> 00:25:54.910 align:middle line:90%
+So now we ask, is the 20 in L2?
+
+00:25:54.910 --> 00:25:57.580 align:middle line:90%
+It is, so we remove it from L1.
+
+00:25:57.580 --> 00:26:00.190 align:middle line:84%
+And then the 30 and
+the 40, we do nothing.
+
+00:26:00.190 --> 00:26:02.720 align:middle line:90%
+
+
+00:26:02.720 --> 00:26:04.130 align:middle line:90%
+Questions about this?
+
+00:26:04.130 --> 00:26:05.420 align:middle line:90%
+Is this OK?
+
+00:26:05.420 --> 00:26:06.200 align:middle line:90%
+Is this too fast?
+
+00:26:06.200 --> 00:26:07.100 align:middle line:90%
+Is this too slow?
+
+00:26:07.100 --> 00:26:09.690 align:middle line:90%
+
+
+00:26:09.690 --> 00:26:10.190 align:middle line:90%
+Good.
+
+00:26:10.190 --> 00:26:12.450 align:middle line:90%
+OK.
+
+00:26:12.450 --> 00:26:14.030 align:middle line:90%
+OK.
+
+00:26:14.030 --> 00:26:20.990 align:middle line:84%
+So that's using copies, a.k.a.
+clones to help you keep track
+
+00:26:20.990 --> 00:26:25.430 align:middle line:84%
+of values in an original
+list without overwriting them
+
+00:26:25.430 --> 00:26:27.800 align:middle line:84%
+or without removing
+them accidentally.
+
+00:26:27.800 --> 00:26:30.320 align:middle line:84%
+Now, I want to
+talk about aliases
+
+00:26:30.320 --> 00:26:32.750 align:middle line:84%
+because this is a very
+important topic when we have
+
+00:26:32.750 --> 00:26:34.740 align:middle line:90%
+these mutable data structures.
+
+00:26:34.740 --> 00:26:38.990 align:middle line:84%
+So let's do a quick overview
+of what an alias is.
+
+00:26:38.990 --> 00:26:41.510 align:middle line:90%
+So if we think about a city--
+
+00:26:41.510 --> 00:26:44.900 align:middle line:84%
+for example, Boston--
+an alias for Boston
+
+00:26:44.900 --> 00:26:48.110 align:middle line:84%
+is basically any other name that
+refers to the same city, right?
+
+00:26:48.110 --> 00:26:49.890 align:middle line:90%
+The same object.
+
+00:26:49.890 --> 00:26:53.270 align:middle line:84%
+So Boston, also known as the
+Hub, or Beantown, or Athens
+
+00:26:53.270 --> 00:26:55.100 align:middle line:90%
+of America--
+
+00:26:55.100 --> 00:26:58.400 align:middle line:84%
+all of these names refer to
+the same inherent city, right?
+
+00:26:58.400 --> 00:27:02.030 align:middle line:84%
+So if I say Boston is
+small and tech-savvy,
+
+00:27:02.030 --> 00:27:06.890 align:middle line:84%
+then those two attributes or
+properties refer to the object
+
+00:27:06.890 --> 00:27:07.490 align:middle line:90%
+itself, right?
+
+00:27:07.490 --> 00:27:08.340 align:middle line:90%
+The city.
+
+00:27:08.340 --> 00:27:10.910 align:middle line:84%
+So the Hub is small
+and tech-savvy,
+
+00:27:10.910 --> 00:27:12.770 align:middle line:84%
+or Beantown is small
+and tech-savvy, right?
+
+00:27:12.770 --> 00:27:18.440 align:middle line:84%
+It doesn't matter what name
+I refer to this object as.
+
+00:27:18.440 --> 00:27:21.420 align:middle line:84%
+The same set of properties
+still apply to it.
+
+00:27:21.420 --> 00:27:24.980 align:middle line:84%
+And so if I add an attribute
+or if I take away an attribute
+
+00:27:24.980 --> 00:27:28.100 align:middle line:84%
+through one of these aliases,
+through one of these names,
+
+00:27:28.100 --> 00:27:31.520 align:middle line:84%
+well, if it's suddenly
+snowing in Boston,
+
+00:27:31.520 --> 00:27:33.260 align:middle line:84%
+then yes, it's
+snowing in the Hub
+
+00:27:33.260 --> 00:27:34.790 align:middle line:84%
+or it's snowing in
+Beantown, right?
+
+00:27:34.790 --> 00:27:38.580 align:middle line:84%
+Because these are just
+names for the same object.
+
+00:27:38.580 --> 00:27:42.500 align:middle line:84%
+And so that idea
+is also something
+
+00:27:42.500 --> 00:27:45.250 align:middle line:84%
+that comes up when we deal
+with these mutable objects.
+
+00:27:45.250 --> 00:27:47.780 align:middle line:90%
+
+
+00:27:47.780 --> 00:27:49.790 align:middle line:84%
+If you don't
+explicitly tell Python
+
+00:27:49.790 --> 00:27:52.620 align:middle line:84%
+you'd like to make
+a copy of a list
+
+00:27:52.620 --> 00:27:57.830 align:middle line:84%
+and you just use the equal
+sign between a mutable object
+
+00:27:57.830 --> 00:28:00.560 align:middle line:84%
+and another name for
+this mutable object,
+
+00:28:00.560 --> 00:28:05.430 align:middle line:84%
+then Python only creates
+an alias for that object.
+
+00:28:05.430 --> 00:28:07.010 align:middle line:84%
+So notice-- we had
+to say explicitly,
+
+00:28:07.010 --> 00:28:09.800 align:middle line:84%
+I want to make a copy with
+the square brackets colon.
+
+00:28:09.800 --> 00:28:12.630 align:middle line:84%
+If we write code that
+looks like this--
+
+00:28:12.630 --> 00:28:15.150 align:middle line:84%
+so here the only
+difference I've done--
+
+00:28:15.150 --> 00:28:17.150 align:middle line:84%
+so the code on the right
+is the one that worked.
+
+00:28:17.150 --> 00:28:21.290 align:middle line:84%
+The code on the left is me
+not making a copy of my L1.
+
+00:28:21.290 --> 00:28:26.400 align:middle line:84%
+I'm only using the
+equal sign directly.
+
+00:28:26.400 --> 00:28:29.110 align:middle line:84%
+And in Python, using
+this assignment operator,
+
+00:28:29.110 --> 00:28:36.240 align:middle line:84%
+the equals sign, means
+that you're making an alias
+
+00:28:36.240 --> 00:28:38.470 align:middle line:90%
+for that same object in memory.
+
+00:28:38.470 --> 00:28:42.510 align:middle line:84%
+So it's just another name to
+refer to that same object.
+
+00:28:42.510 --> 00:28:45.405 align:middle line:84%
+If you mutate that
+object through L1,
+
+00:28:45.405 --> 00:28:48.090 align:middle line:84%
+L1_copy will also
+have been mutated
+
+00:28:48.090 --> 00:28:52.130 align:middle line:84%
+because it's pointing to the
+same object and vice versa.
+
+00:28:52.130 --> 00:28:54.760 align:middle line:84%
+So really, this particular
+code on the left
+
+00:28:54.760 --> 00:28:59.320 align:middle line:84%
+here is not any better
+than saying for e in L1
+
+00:28:59.320 --> 00:29:02.680 align:middle line:84%
+because L1_copy is pointing
+to the exact same object
+
+00:29:02.680 --> 00:29:03.900 align:middle line:90%
+in memory.
+
+00:29:03.900 --> 00:29:04.400 align:middle line:90%
+OK.
+
+00:29:04.400 --> 00:29:09.470 align:middle line:84%
+So let me show you exactly what
+this means in the little cloud
+
+00:29:09.470 --> 00:29:14.210 align:middle line:90%
+diagram that we've been doing.
+
+00:29:14.210 --> 00:29:17.870 align:middle line:84%
+So this is the code that
+creates an alias, not a copy.
+
+00:29:17.870 --> 00:29:20.780 align:middle line:84%
+So I've got L1 equals
+10, 20, 30, 40.
+
+00:29:20.780 --> 00:29:25.100 align:middle line:84%
+L2 is 10, 20, 50,
+60, just like before.
+
+00:29:25.100 --> 00:29:28.280 align:middle line:84%
+The code up here-- so
+L1_copy equals L1--
+
+00:29:28.280 --> 00:29:29.930 align:middle line:84%
+I just named it
+copy, but it's not
+
+00:29:29.930 --> 00:29:31.730 align:middle line:90%
+actually making a copy, right?
+
+00:29:31.730 --> 00:29:33.950 align:middle line:84%
+Because nowhere did
+I say explicitly
+
+00:29:33.950 --> 00:29:36.720 align:middle line:84%
+to make a copy using the
+square brackets colon.
+
+00:29:36.720 --> 00:29:40.820 align:middle line:84%
+So the alias in memory means
+that it's just another name
+
+00:29:40.820 --> 00:29:46.450 align:middle line:84%
+pointing to that
+exact same object.
+
+00:29:46.450 --> 00:29:46.960 align:middle line:90%
+OK.
+
+00:29:46.960 --> 00:29:51.190 align:middle line:84%
+So then the for loop
+for e in L1_copy
+
+00:29:51.190 --> 00:29:53.660 align:middle line:84%
+is iterating through
+this object here,
+
+00:29:53.660 --> 00:29:57.830 align:middle line:84%
+which is being pointed
+to by L1_copy and L1.
+
+00:29:57.830 --> 00:29:58.330 align:middle line:90%
+OK.
+
+00:29:58.330 --> 00:30:01.210 align:middle line:84%
+So if I'm iterating through
+and removing elements
+
+00:30:01.210 --> 00:30:05.320 align:middle line:84%
+as I'm doing so, this is
+just the original buggy code
+
+00:30:05.320 --> 00:30:07.990 align:middle line:84%
+that we had that iterated
+through L1, right?
+
+00:30:07.990 --> 00:30:13.690 align:middle line:84%
+So I'm removing the 10,
+incrementing the e variable
+
+00:30:13.690 --> 00:30:17.050 align:middle line:84%
+to the next element, and then
+not doing anything with the 30
+
+00:30:17.050 --> 00:30:20.525 align:middle line:84%
+and not doing
+anything with the 40.
+
+00:30:20.525 --> 00:30:21.400 align:middle line:90%
+Does that make sense?
+
+00:30:21.400 --> 00:30:22.240 align:middle line:90%
+Aliases?
+
+00:30:22.240 --> 00:30:24.610 align:middle line:90%
+Is that all right?
+
+00:30:24.610 --> 00:30:26.660 align:middle line:90%
+OK.
+
+00:30:26.660 --> 00:30:31.780 align:middle line:84%
+So the big idea that will
+tie a couple things together
+
+00:30:31.780 --> 00:30:34.480 align:middle line:84%
+is related to functions--
+formal parameters
+
+00:30:34.480 --> 00:30:36.560 align:middle line:90%
+and actual parameters.
+
+00:30:36.560 --> 00:30:40.180 align:middle line:84%
+So when we make a
+function definition,
+
+00:30:40.180 --> 00:30:45.310 align:middle line:84%
+the parameters inside
+the function definition
+
+00:30:45.310 --> 00:30:46.853 align:middle line:84%
+are called formal
+parameters, right?
+
+00:30:46.853 --> 00:30:48.520 align:middle line:84%
+We're just writing
+the function assuming
+
+00:30:48.520 --> 00:30:51.340 align:middle line:84%
+that these will eventually get
+some actual values associated
+
+00:30:51.340 --> 00:30:52.610 align:middle line:90%
+with them.
+
+00:30:52.610 --> 00:30:54.860 align:middle line:84%
+When we make a
+function call, that's
+
+00:30:54.860 --> 00:30:57.140 align:middle line:90%
+when we pass actual values.
+
+00:30:57.140 --> 00:31:02.220 align:middle line:84%
+And when we have mutable objects
+being passed into a function,
+
+00:31:02.220 --> 00:31:04.560 align:middle line:84%
+the formal parameter
+actually becomes
+
+00:31:04.560 --> 00:31:10.110 align:middle line:84%
+an alias for the actual
+parameter in the function call.
+
+00:31:10.110 --> 00:31:13.670 align:middle line:84%
+So here's our
+function once again.
+
+00:31:13.670 --> 00:31:17.420 align:middle line:84%
+The difference between what
+we've been seeing so far--
+
+00:31:17.420 --> 00:31:19.490 align:middle line:84%
+this is the code that
+we had just seen.
+
+00:31:19.490 --> 00:31:22.340 align:middle line:84%
+The difference that I've
+done in this particular code
+
+00:31:22.340 --> 00:31:27.020 align:middle line:84%
+is not named this L1 and L2 like
+it was named up here, right?
+
+00:31:27.020 --> 00:31:29.750 align:middle line:84%
+Because it doesn't have
+to be named L1 and L2.
+
+00:31:29.750 --> 00:31:32.986 align:middle line:90%
+I named it La and Lb.
+
+00:31:32.986 --> 00:31:35.770 align:middle line:84%
+And this will bring
+the point home.
+
+00:31:35.770 --> 00:31:38.490 align:middle line:84%
+So when I make my function
+call to remove duplicates
+
+00:31:38.490 --> 00:31:43.890 align:middle line:84%
+with La and Lb, Python takes
+this object and this object
+
+00:31:43.890 --> 00:31:46.080 align:middle line:84%
+and passes them
+in as parameters.
+
+00:31:46.080 --> 00:31:49.980 align:middle line:84%
+So in my memory diagram, I've
+got La is 10, 20, 30, 40,
+
+00:31:49.980 --> 00:31:51.700 align:middle line:90%
+and Lb, 10, 20, 50, 60.
+
+00:31:51.700 --> 00:31:52.200 align:middle line:90%
+Right?
+
+00:31:52.200 --> 00:31:54.630 align:middle line:90%
+That's what I have down here.
+
+00:31:54.630 --> 00:31:57.270 align:middle line:84%
+As soon as I make my
+function call, remember--
+
+00:31:57.270 --> 00:32:00.420 align:middle line:84%
+Python maps out
+formal parameters
+
+00:32:00.420 --> 00:32:01.870 align:middle line:90%
+to actual parameters.
+
+00:32:01.870 --> 00:32:04.590 align:middle line:84%
+But when we're dealing
+with these mutable objects,
+
+00:32:04.590 --> 00:32:12.000 align:middle line:84%
+L1 and L2 are aliases for
+the things being passed in.
+
+00:32:12.000 --> 00:32:13.980 align:middle line:90%
+So L1 will point to--
+
+00:32:13.980 --> 00:32:16.792 align:middle line:90%
+you tell me.
+
+00:32:16.792 --> 00:32:17.720 align:middle line:90%
+STUDENT: La?
+
+00:32:17.720 --> 00:32:19.070 align:middle line:90%
+ANA BELL: Yes, exactly.
+
+00:32:19.070 --> 00:32:22.490 align:middle line:84%
+So here I've got the same
+name for the same object.
+
+00:32:22.490 --> 00:32:26.000 align:middle line:90%
+And L2 will point to Lb, right?
+
+00:32:26.000 --> 00:32:29.430 align:middle line:84%
+Two different names
+pointing to the same object.
+
+00:32:29.430 --> 00:32:32.600 align:middle line:84%
+And that's why when I'm
+iterating through and doing
+
+00:32:32.600 --> 00:32:37.190 align:middle line:84%
+whatever I am doing to these
+formal parameters here,
+
+00:32:37.190 --> 00:32:43.370 align:middle line:84%
+Python actually mutates the
+objects that were passed in.
+
+00:32:43.370 --> 00:32:44.240 align:middle line:90%
+Yes.
+
+00:32:44.240 --> 00:32:49.495 align:middle line:84%
+STUDENT: So does that
+mean that La and L1 will
+
+00:32:49.495 --> 00:32:52.550 align:middle line:90%
+have the same ID?
+
+00:32:52.550 --> 00:32:55.150 align:middle line:84%
+ANA BELL: La and L1
+will have the same IDs.
+
+00:32:55.150 --> 00:32:55.720 align:middle line:90%
+Yeah.
+
+00:32:55.720 --> 00:32:56.500 align:middle line:90%
+Yeah.
+
+00:32:56.500 --> 00:32:58.340 align:middle line:90%
+Exactly.
+
+00:32:58.340 --> 00:32:58.840 align:middle line:90%
+Yeah.
+
+00:32:58.840 --> 00:33:01.270 align:middle line:84%
+Using that ID function
+we did last time.
+
+00:33:01.270 --> 00:33:03.960 align:middle line:90%
+Exactly.
+
+00:33:03.960 --> 00:33:05.305 align:middle line:90%
+I invite you to try it, too.
+
+00:33:05.305 --> 00:33:06.930 align:middle line:84%
+But I think they
+should because they're
+
+00:33:06.930 --> 00:33:09.440 align:middle line:90%
+modifying the same object.
+
+00:33:09.440 --> 00:33:11.260 align:middle line:90%
+Everyone OK so far?
+
+00:33:11.260 --> 00:33:14.160 align:middle line:84%
+Two names, aliases
+for that same object.
+
+00:33:14.160 --> 00:33:17.480 align:middle line:84%
+And so that's why when
+we're mutating L1 here,
+
+00:33:17.480 --> 00:33:21.110 align:middle line:84%
+this La and Lb that we passed
+in will be mutated, right?
+
+00:33:21.110 --> 00:33:22.950 align:middle line:90%
+So here's my L1_copy as well.
+
+00:33:22.950 --> 00:33:26.120 align:middle line:84%
+So I've got three names
+for this particular object.
+
+00:33:26.120 --> 00:33:29.540 align:middle line:84%
+And then we do the thing where
+we mutate the thing, right?
+
+00:33:29.540 --> 00:33:32.930 align:middle line:84%
+And then at the end of the
+function when it's done,
+
+00:33:32.930 --> 00:33:35.570 align:middle line:90%
+this entire thing has no return.
+
+00:33:35.570 --> 00:33:37.130 align:middle line:90%
+It returns none.
+
+00:33:37.130 --> 00:33:41.720 align:middle line:84%
+But when we print La,
+the thing we're printing
+
+00:33:41.720 --> 00:33:43.430 align:middle line:90%
+is this object here.
+
+00:33:43.430 --> 00:33:45.200 align:middle line:90%
+It's whatever La points to.
+
+00:33:45.200 --> 00:33:48.230 align:middle line:84%
+And it's this thing that
+was mutated through L1.
+
+00:33:48.230 --> 00:33:53.450 align:middle line:90%
+
+
+00:33:53.450 --> 00:33:54.200 align:middle line:90%
+Yes, no?
+
+00:33:54.200 --> 00:33:55.400 align:middle line:90%
+Thumbs up, thumbs down?
+
+00:33:55.400 --> 00:33:56.120 align:middle line:90%
+Is it good?
+
+00:33:56.120 --> 00:33:57.695 align:middle line:90%
+This is very cool, you guys.
+
+00:33:57.695 --> 00:34:00.910 align:middle line:90%
+
+
+00:34:00.910 --> 00:34:01.410 align:middle line:90%
+OK.
+
+00:34:01.410 --> 00:34:04.110 align:middle line:84%
+This was a nice
+loose end to tie up.
+
+00:34:04.110 --> 00:34:04.610 align:middle line:90%
+OK.
+
+00:34:04.610 --> 00:34:09.020 align:middle line:84%
+So the last 10
+minutes, I want to talk
+
+00:34:09.020 --> 00:34:14.870 align:middle line:84%
+about what happens when
+we have lists that contain
+
+00:34:14.870 --> 00:34:16.520 align:middle line:90%
+lists themselves, right?
+
+00:34:16.520 --> 00:34:20.120 align:middle line:84%
+So so far, the examples
+we've been working with
+
+00:34:20.120 --> 00:34:23.960 align:middle line:84%
+are lists that just contain
+strings, or integers,
+
+00:34:23.960 --> 00:34:26.570 align:middle line:90%
+or things that are immutable.
+
+00:34:26.570 --> 00:34:29.300 align:middle line:84%
+But what exactly happens
+behind the scenes
+
+00:34:29.300 --> 00:34:34.449 align:middle line:84%
+when we have elements that
+are mutable themselves?
+
+00:34:34.449 --> 00:34:37.630 align:middle line:90%
+So we're going to do an example.
+
+00:34:37.630 --> 00:34:41.909 align:middle line:84%
+We're going to go through
+all of these slides working
+
+00:34:41.909 --> 00:34:43.949 align:middle line:84%
+through an example
+where we start out
+
+00:34:43.949 --> 00:34:46.960 align:middle line:84%
+with this old list that
+looks something like this.
+
+00:34:46.960 --> 00:34:51.179 align:middle line:84%
+So we have a list that
+contains three elements, right?
+
+00:34:51.179 --> 00:34:54.270 align:middle line:90%
+The first one is another list.
+
+00:34:54.270 --> 00:34:56.100 align:middle line:90%
+The second is another list.
+
+00:34:56.100 --> 00:34:58.920 align:middle line:90%
+And the third is another list.
+
+00:34:58.920 --> 00:35:01.560 align:middle line:84%
+I don't care what elements
+those lists have for now.
+
+00:35:01.560 --> 00:35:07.310 align:middle line:84%
+All I know is at the top level,
+old_list contains three things.
+
+00:35:07.310 --> 00:35:07.810 align:middle line:90%
+OK.
+
+00:35:07.810 --> 00:35:10.270 align:middle line:90%
+So let's do aliasing.
+
+00:35:10.270 --> 00:35:12.850 align:middle line:84%
+And then we'll do a
+shallow copy of this list.
+
+00:35:12.850 --> 00:35:14.680 align:middle line:84%
+And then we'll do a
+deep copy of this list
+
+00:35:14.680 --> 00:35:16.700 align:middle line:90%
+and show you what happens.
+
+00:35:16.700 --> 00:35:19.210 align:middle line:84%
+So in this example,
+what we're going to do
+
+00:35:19.210 --> 00:35:22.300 align:middle line:84%
+is just a straight-up
+alias of old_list.
+
+00:35:22.300 --> 00:35:26.380 align:middle line:84%
+So we're going to make old_list
+and new_list be aliases
+
+00:35:26.380 --> 00:35:28.120 align:middle line:90%
+for the exact same object--
+
+00:35:28.120 --> 00:35:29.270 align:middle line:90%
+this thing here.
+
+00:35:29.270 --> 00:35:35.000 align:middle line:84%
+So I do that with just the
+plain old assignment operator.
+
+00:35:35.000 --> 00:35:36.730 align:middle line:84%
+So inside memory,
+the way we're going
+
+00:35:36.730 --> 00:35:38.950 align:middle line:84%
+to represent this
+old list is here
+
+00:35:38.950 --> 00:35:40.870 align:middle line:84%
+is my list with
+three elements in it.
+
+00:35:40.870 --> 00:35:43.270 align:middle line:84%
+And because each
+element is itself
+
+00:35:43.270 --> 00:35:48.710 align:middle line:84%
+a list, so a mutable object, I'm
+not going to plop it in here,
+
+00:35:48.710 --> 00:35:51.640 align:middle line:84%
+but instead, Python
+generally tends
+
+00:35:51.640 --> 00:35:55.240 align:middle line:84%
+to make a pointer to that
+mutable object somewhere else
+
+00:35:55.240 --> 00:35:57.210 align:middle line:90%
+in memory.
+
+00:35:57.210 --> 00:35:59.580 align:middle line:84%
+You'll see why in
+a couple of slides.
+
+00:35:59.580 --> 00:36:02.060 align:middle line:84%
+But for now, it will look
+cluttered if I did so.
+
+00:36:02.060 --> 00:36:05.060 align:middle line:84%
+But for now, it helps to
+visualize the structure.
+
+00:36:05.060 --> 00:36:07.310 align:middle line:84%
+So old_list contains
+three elements.
+
+00:36:07.310 --> 00:36:11.370 align:middle line:84%
+And each one of those elements
+are pointed to over here.
+
+00:36:11.370 --> 00:36:13.400 align:middle line:84%
+So if I say new_list
+equals old_list,
+
+00:36:13.400 --> 00:36:17.580 align:middle line:84%
+Python will make another name
+for the same thing in memory.
+
+00:36:17.580 --> 00:36:22.230 align:middle line:84%
+When I do this line here where
+I index new_list at index 2--
+
+00:36:22.230 --> 00:36:24.390 align:middle line:90%
+so that's 0, 1, 2--
+
+00:36:24.390 --> 00:36:30.180 align:middle line:84%
+and then I follow it to index
+1 over here, so this guy
+
+00:36:30.180 --> 00:36:33.020 align:middle line:90%
+here, the 6--
+
+00:36:33.020 --> 00:36:35.930 align:middle line:84%
+I have changed the
+string foo to be 6.
+
+00:36:35.930 --> 00:36:39.290 align:middle line:84%
+And now, new_list
+and old_list both are
+
+00:36:39.290 --> 00:36:40.680 align:middle line:90%
+pointing to the same object.
+
+00:36:40.680 --> 00:36:44.855 align:middle line:84%
+So it will have been mutated to
+contain that 6 in that sublist.
+
+00:36:44.855 --> 00:36:48.350 align:middle line:90%
+
+
+00:36:48.350 --> 00:36:48.860 align:middle line:90%
+OK.
+
+00:36:48.860 --> 00:36:51.140 align:middle line:90%
+So that's aliasing.
+
+00:36:51.140 --> 00:36:53.570 align:middle line:84%
+Now, what we can
+do is we can create
+
+00:36:53.570 --> 00:36:56.180 align:middle line:90%
+copies of mutable objects.
+
+00:36:56.180 --> 00:36:58.370 align:middle line:84%
+And we can create
+either something called
+
+00:36:58.370 --> 00:37:01.240 align:middle line:90%
+a shallow copy or a deep copy.
+
+00:37:01.240 --> 00:37:03.460 align:middle line:84%
+The shallow copy is
+equivalent to what
+
+00:37:03.460 --> 00:37:06.390 align:middle line:84%
+we've been doing with the
+square brackets colon.
+
+00:37:06.390 --> 00:37:11.340 align:middle line:84%
+And that's perfectly OK if
+we're dealing with lists that
+
+00:37:11.340 --> 00:37:14.730 align:middle line:90%
+just contain immutable things.
+
+00:37:14.730 --> 00:37:17.900 align:middle line:84%
+But as soon as we create a
+shallow copy of a list that
+
+00:37:17.900 --> 00:37:21.500 align:middle line:84%
+can contain other lists
+or other mutable things,
+
+00:37:21.500 --> 00:37:23.180 align:middle line:90%
+interesting things happen.
+
+00:37:23.180 --> 00:37:27.440 align:middle line:84%
+Only the top level gets
+copied, but anything
+
+00:37:27.440 --> 00:37:30.920 align:middle line:84%
+that's mutable at a deeper
+level than that top level
+
+00:37:30.920 --> 00:37:34.520 align:middle line:84%
+does not get copied
+because if it did and you
+
+00:37:34.520 --> 00:37:37.130 align:middle line:84%
+had many, many levels deep
+of all these mutable things,
+
+00:37:37.130 --> 00:37:39.680 align:middle line:84%
+that would be a lot of
+things for Python to copy.
+
+00:37:39.680 --> 00:37:40.280 align:middle line:90%
+OK.
+
+00:37:40.280 --> 00:37:43.130 align:middle line:84%
+So what we're doing with
+this particular code
+
+00:37:43.130 --> 00:37:45.900 align:middle line:84%
+is we're going to create
+this old list here.
+
+00:37:45.900 --> 00:37:48.560 align:middle line:84%
+So it's 1, 2 as the
+first element, 3,
+
+00:37:48.560 --> 00:37:52.670 align:middle line:84%
+4 as the second element,
+and 5,6 as the last element.
+
+00:37:52.670 --> 00:37:54.920 align:middle line:84%
+We're going to create something
+called a shallow copy.
+
+00:37:54.920 --> 00:37:58.250 align:middle line:84%
+And we could have also said
+old_list square brackets colon.
+
+00:37:58.250 --> 00:38:00.280 align:middle line:90%
+It would be equivalent.
+
+00:38:00.280 --> 00:38:02.850 align:middle line:84%
+And in this shallow
+copy, Python only
+
+00:38:02.850 --> 00:38:06.410 align:middle line:90%
+creates a copy of the top level.
+
+00:38:06.410 --> 00:38:12.010 align:middle line:84%
+So notice-- new_list is pointing
+to a list with three elements
+
+00:38:12.010 --> 00:38:15.430 align:middle line:84%
+in it, but anything
+that's at a deeper
+
+00:38:15.430 --> 00:38:19.990 align:middle line:84%
+level than that top level
+does not get copied.
+
+00:38:19.990 --> 00:38:22.210 align:middle line:84%
+So all these mutable
+things that are
+
+00:38:22.210 --> 00:38:24.160 align:middle line:84%
+my elements-- this
+list, and this list,
+
+00:38:24.160 --> 00:38:27.670 align:middle line:84%
+and this list-- these are
+three mutable elements.
+
+00:38:27.670 --> 00:38:31.180 align:middle line:84%
+They do not get their own
+copies because we've only
+
+00:38:31.180 --> 00:38:34.370 align:middle line:90%
+made a shallow copy.
+
+00:38:34.370 --> 00:38:39.630 align:middle line:84%
+So what this means is
+that the top level--
+
+00:38:39.630 --> 00:38:40.130 align:middle line:90%
+sorry.
+
+00:38:40.130 --> 00:38:43.660 align:middle line:84%
+So this is just
+what it prints out.
+
+00:38:43.660 --> 00:38:47.550 align:middle line:84%
+So at the top level, we can
+add elements to old_list.
+
+00:38:47.550 --> 00:38:50.530 align:middle line:84%
+And it won't interfere with
+the top level of new_list.
+
+00:38:50.530 --> 00:38:53.040 align:middle line:84%
+So as an example
+here we're going
+
+00:38:53.040 --> 00:38:59.830 align:middle line:84%
+to add this 7, 8
+list to old_list.
+
+00:38:59.830 --> 00:39:02.080 align:middle line:90%
+So we follow old_list.
+
+00:39:02.080 --> 00:39:05.200 align:middle line:84%
+And we add another
+element to the end of it.
+
+00:39:05.200 --> 00:39:05.700 align:middle line:90%
+OK.
+
+00:39:05.700 --> 00:39:08.270 align:middle line:90%
+So there it is.
+
+00:39:08.270 --> 00:39:12.330 align:middle line:84%
+But that element didn't
+get added to new_list.
+
+00:39:12.330 --> 00:39:12.830 align:middle line:90%
+Right?
+
+00:39:12.830 --> 00:39:17.670 align:middle line:84%
+Because we only added it to
+the top level of old_list.
+
+00:39:17.670 --> 00:39:20.640 align:middle line:84%
+So now, question
+is, what happens
+
+00:39:20.640 --> 00:39:24.900 align:middle line:84%
+if we go in and mutate one
+of these three shared items?
+
+00:39:24.900 --> 00:39:27.970 align:middle line:84%
+So old_list and new_list
+is as we would expect.
+
+00:39:27.970 --> 00:39:30.210 align:middle line:90%
+So let's do one more operation.
+
+00:39:30.210 --> 00:39:34.590 align:middle line:84%
+So in addition to
+appending the 7 and the 8
+
+00:39:34.590 --> 00:39:36.960 align:middle line:84%
+like we do over here,
+let's also mutate
+
+00:39:36.960 --> 00:39:38.950 align:middle line:90%
+one of those shared items.
+
+00:39:38.950 --> 00:39:40.200 align:middle line:90%
+So here it is.
+
+00:39:40.200 --> 00:39:42.210 align:middle line:84%
+This is what we just did
+on the previous slide.
+
+00:39:42.210 --> 00:39:43.560 align:middle line:90%
+There's my 7 and 8.
+
+00:39:43.560 --> 00:39:46.950 align:middle line:84%
+And now, let's go into
+old_list at index 1.
+
+00:39:46.950 --> 00:39:49.740 align:middle line:84%
+So 0, 1-- that's
+this middle one here.
+
+00:39:49.740 --> 00:39:55.290 align:middle line:84%
+And at index 1 in that-- so
+that's 0, 1, 4 over here.
+
+00:39:55.290 --> 00:39:56.940 align:middle line:90%
+Let's change the 4 to the 9.
+
+00:39:56.940 --> 00:40:00.850 align:middle line:90%
+
+
+00:40:00.850 --> 00:40:01.390 align:middle line:90%
+OK?
+
+00:40:01.390 --> 00:40:04.210 align:middle line:84%
+Well, when we print
+new_list, we're
+
+00:40:04.210 --> 00:40:08.120 align:middle line:84%
+going to be printing a list
+with three things in it.
+
+00:40:08.120 --> 00:40:09.850 align:middle line:90%
+The first one is the list 1, 2.
+
+00:40:09.850 --> 00:40:11.740 align:middle line:90%
+The second one is 3, 9.
+
+00:40:11.740 --> 00:40:13.490 align:middle line:90%
+We just mutated that.
+
+00:40:13.490 --> 00:40:15.265 align:middle line:90%
+And the last one is 5, 6.
+
+00:40:15.265 --> 00:40:18.010 align:middle line:90%
+
+
+00:40:18.010 --> 00:40:21.280 align:middle line:84%
+And when we print
+old_list, this one
+
+00:40:21.280 --> 00:40:27.060 align:middle line:84%
+will also have that 9 over there
+because those middle elements
+
+00:40:27.060 --> 00:40:30.660 align:middle line:84%
+are shared, but we will
+also have an extra element
+
+00:40:30.660 --> 00:40:32.010 align:middle line:90%
+at the top level--
+
+00:40:32.010 --> 00:40:36.240 align:middle line:84%
+the 7, 8 that we just
+added only to old_list.
+
+00:40:36.240 --> 00:40:40.090 align:middle line:90%
+
+
+00:40:40.090 --> 00:40:40.600 align:middle line:90%
+OK.
+
+00:40:40.600 --> 00:40:41.890 align:middle line:90%
+Thoughts on this example?
+
+00:40:41.890 --> 00:40:43.240 align:middle line:90%
+What is confusing?
+
+00:40:43.240 --> 00:40:46.990 align:middle line:90%
+
+
+00:40:46.990 --> 00:40:47.894 align:middle line:90%
+Yeah.
+
+00:40:47.894 --> 00:40:49.394 align:middle line:84%
+STUDENT: Could you
+explain why the 9
+
+00:40:49.394 --> 00:40:51.175 align:middle line:90%
+gets added to the new list?
+
+00:40:51.175 --> 00:40:51.800 align:middle line:90%
+ANA BELL: Yeah.
+
+00:40:51.800 --> 00:40:55.560 align:middle line:84%
+Why does the 9 get added or
+get changed to the new list?
+
+00:40:55.560 --> 00:40:56.060 align:middle line:90%
+Yeah.
+
+00:40:56.060 --> 00:41:01.700 align:middle line:84%
+So the operation called
+copy from this library,
+
+00:41:01.700 --> 00:41:04.430 align:middle line:84%
+which is also named
+copy, only creates
+
+00:41:04.430 --> 00:41:06.780 align:middle line:90%
+a shallow copy of the list.
+
+00:41:06.780 --> 00:41:10.040 align:middle line:84%
+So a shallow copy means
+that if you have a list
+
+00:41:10.040 --> 00:41:11.870 align:middle line:90%
+with some elements within it--
+
+00:41:11.870 --> 00:41:16.950 align:middle line:84%
+so here in this case, we have
+those three elements in it--
+
+00:41:16.950 --> 00:41:20.670 align:middle line:84%
+all you're doing is copying
+the top structure, right?
+
+00:41:20.670 --> 00:41:22.600 align:middle line:90%
+So this structure here.
+
+00:41:22.600 --> 00:41:25.710 align:middle line:84%
+But if you have any elements
+that are themselves mutable,
+
+00:41:25.710 --> 00:41:27.420 align:middle line:90%
+they don't get their own copies.
+
+00:41:27.420 --> 00:41:30.240 align:middle line:84%
+So really, inside the
+memory, if this one
+
+00:41:30.240 --> 00:41:36.870 align:middle line:84%
+is pointing to some object
+like it does to that list 1, 2,
+
+00:41:36.870 --> 00:41:42.150 align:middle line:84%
+the copy is also going to
+point to that same subobject,
+
+00:41:42.150 --> 00:41:44.420 align:middle line:90%
+substructure.
+
+00:41:44.420 --> 00:41:50.080 align:middle line:84%
+And so if you're mutating this
+substructure through one name,
+
+00:41:50.080 --> 00:41:52.240 align:middle line:84%
+if you're accessing it
+through the other name,
+
+00:41:52.240 --> 00:41:54.160 align:middle line:84%
+that other name
+is still accessing
+
+00:41:54.160 --> 00:41:56.380 align:middle line:90%
+the thing that was mutated.
+
+00:41:56.380 --> 00:41:57.860 align:middle line:90%
+Does that make sense?
+
+00:41:57.860 --> 00:41:58.570 align:middle line:90%
+Is that OK?
+
+00:41:58.570 --> 00:41:59.530 align:middle line:90%
+Yeah.
+
+00:41:59.530 --> 00:42:03.740 align:middle line:84%
+And so this shallow copy is just
+copying the top structure here.
+
+00:42:03.740 --> 00:42:05.800 align:middle line:84%
+So you can see at
+the top level, we
+
+00:42:05.800 --> 00:42:07.560 align:middle line:90%
+have these two different lists.
+
+00:42:07.560 --> 00:42:10.240 align:middle line:84%
+So that means to this one,
+I can add another item
+
+00:42:10.240 --> 00:42:12.340 align:middle line:90%
+to the end of it, right?
+
+00:42:12.340 --> 00:42:15.490 align:middle line:84%
+And that item will not
+be duplicated up here
+
+00:42:15.490 --> 00:42:17.350 align:middle line:90%
+because this is one thing.
+
+00:42:17.350 --> 00:42:18.830 align:middle line:90%
+This is another thing.
+
+00:42:18.830 --> 00:42:20.860 align:middle line:84%
+But the middle
+ones or any levels
+
+00:42:20.860 --> 00:42:23.980 align:middle line:84%
+that are beyond that
+top level are shared.
+
+00:42:23.980 --> 00:42:25.120 align:middle line:90%
+They're not copies.
+
+00:42:25.120 --> 00:42:26.320 align:middle line:90%
+Yeah.
+
+00:42:26.320 --> 00:42:30.280 align:middle line:84%
+STUDENT: So if you edit
+it through the new list,
+
+00:42:30.280 --> 00:42:31.587 align:middle line:90%
+is it mutual?
+
+00:42:31.587 --> 00:42:32.170 align:middle line:90%
+ANA BELL: Yes.
+
+00:42:32.170 --> 00:42:32.590 align:middle line:90%
+Yes.
+
+00:42:32.590 --> 00:42:33.640 align:middle line:90%
+Exactly, great question.
+
+00:42:33.640 --> 00:42:38.780 align:middle line:84%
+So if we edited this number
+1 here through the new list,
+
+00:42:38.780 --> 00:42:39.280 align:middle line:90%
+then yeah.
+
+00:42:39.280 --> 00:42:41.320 align:middle line:84%
+The old list will
+still see the edits
+
+00:42:41.320 --> 00:42:46.100 align:middle line:84%
+because they're both pointing
+to these shared things.
+
+00:42:46.100 --> 00:42:48.580 align:middle line:84%
+But if I edit the 7
+and 8, it will only
+
+00:42:48.580 --> 00:42:53.270 align:middle line:84%
+be edited through
+old_list because that's 7,
+
+00:42:53.270 --> 00:42:55.670 align:middle line:90%
+8 is only seen by old_list.
+
+00:42:55.670 --> 00:42:58.610 align:middle line:90%
+
+
+00:42:58.610 --> 00:42:59.110 align:middle line:90%
+OK.
+
+00:42:59.110 --> 00:43:01.730 align:middle line:84%
+That's basically
+what I've said here.
+
+00:43:01.730 --> 00:43:03.670 align:middle line:84%
+And so if you really,
+really, really want
+
+00:43:03.670 --> 00:43:06.220 align:middle line:84%
+to copy every single
+mutable object
+
+00:43:06.220 --> 00:43:09.160 align:middle line:84%
+or every single object at
+all the different levels,
+
+00:43:09.160 --> 00:43:11.720 align:middle line:84%
+we would have to create
+something called a deep copy.
+
+00:43:11.720 --> 00:43:14.510 align:middle line:84%
+So we do this using
+copy.deepcopy.
+
+00:43:14.510 --> 00:43:15.010 align:middle line:90%
+OK?
+
+00:43:15.010 --> 00:43:17.000 align:middle line:84%
+And so this is the
+exact same example,
+
+00:43:17.000 --> 00:43:21.340 align:middle line:84%
+except that we've just changed
+copy.copy to copy.deepcopy.
+
+00:43:21.340 --> 00:43:26.090 align:middle line:84%
+And so here we've got our old
+list exactly as we had before.
+
+00:43:26.090 --> 00:43:28.540 align:middle line:84%
+And if we deep copy
+old_list, Python
+
+00:43:28.540 --> 00:43:31.390 align:middle line:84%
+will make copies of
+every single object
+
+00:43:31.390 --> 00:43:36.140 align:middle line:84%
+at every single
+level from old_list.
+
+00:43:36.140 --> 00:43:39.290 align:middle line:84%
+So everything becomes
+its own object.
+
+00:43:39.290 --> 00:43:42.820 align:middle line:84%
+So now, if I mutate
+old_list to append 7 and 8,
+
+00:43:42.820 --> 00:43:44.920 align:middle line:84%
+that only gets
+added to old_list.
+
+00:43:44.920 --> 00:43:48.910 align:middle line:84%
+And if I mutate old_list to
+have this element be a 9,
+
+00:43:48.910 --> 00:43:51.340 align:middle line:84%
+that only gets mutated
+through old_list.
+
+00:43:51.340 --> 00:43:54.760 align:middle line:84%
+So old_list contains
+the changed values,
+
+00:43:54.760 --> 00:43:57.160 align:middle line:84%
+but new_list remains
+untouched because I've
+
+00:43:57.160 --> 00:43:58.360 align:middle line:90%
+made copies at every level.
+
+00:43:58.360 --> 00:43:58.930 align:middle line:90%
+Yes.
+
+00:43:58.930 --> 00:44:03.350 align:middle line:84%
+STUDENT: So is copy.deepcopy
+doing old_list square bracket
+
+00:44:03.350 --> 00:44:05.060 align:middle line:90%
+with the colon in the end?
+
+00:44:05.060 --> 00:44:07.220 align:middle line:84%
+ANA BELL: Yes, but then
+it goes further down
+
+00:44:07.220 --> 00:44:08.960 align:middle line:90%
+at every single level.
+
+00:44:08.960 --> 00:44:13.040 align:middle line:84%
+So the regular copy.copy does
+the square bracket colon.
+
+00:44:13.040 --> 00:44:16.685 align:middle line:84%
+And the deepcopy goes further
+to all the other levels.
+
+00:44:16.685 --> 00:44:20.910 align:middle line:90%
+
+
+00:44:20.910 --> 00:44:21.410 align:middle line:90%
+OK.
+
+00:44:21.410 --> 00:44:25.160 align:middle line:84%
+So lots of ideas
+in this lecture.
+
+00:44:25.160 --> 00:44:29.120 align:middle line:84%
+And last, I would highly suggest
+going through the Python tutor
+
+00:44:29.120 --> 00:44:33.380 align:middle line:84%
+and all these examples just so
+you see them in a different way
+
+00:44:33.380 --> 00:44:35.900 align:middle line:84%
+to see exactly how
+it'll be the same memory
+
+00:44:35.900 --> 00:44:40.220 align:middle line:84%
+diagram that we've done, except
+through the Python tutor.
+
+00:44:40.220 --> 00:44:43.700 align:middle line:84%
+So it will be very
+helpful for you, I think.
+
+00:44:43.700 --> 00:44:46.130 align:middle line:84%
+I would give that a try as
+you're studying for the quiz.
+
+00:44:46.130 --> 00:44:47.810 align:middle line:84%
+I think what's
+important to realize is
+
+00:44:47.810 --> 00:44:50.450 align:middle line:90%
+that we have objects in memory.
+
+00:44:50.450 --> 00:44:52.500 align:middle line:84%
+And we have names that
+point to these objects.
+
+00:44:52.500 --> 00:44:57.050 align:middle line:84%
+And so if you get that and keep
+that straight in your mind,
+
+00:44:57.050 --> 00:45:00.110 align:middle line:84%
+it will be very, very
+helpful to understanding
+
+00:45:00.110 --> 00:45:02.030 align:middle line:84%
+what's an alias,
+what's a clone, when
+
+00:45:02.030 --> 00:45:05.030 align:middle line:84%
+you're iterating over certain
+objects, and things like that.
+
+00:45:05.030 --> 00:45:08.720 align:middle line:84%
+And the big idea here is
+just side effects, OK?
+
+00:45:08.720 --> 00:45:12.650 align:middle line:84%
+Every one of these operations
+has some sort of side effect.
+
+00:45:12.650 --> 00:45:15.050 align:middle line:84%
+And it's important to
+make sure that you're not
+
+00:45:15.050 --> 00:45:17.980 align:middle line:84%
+changing something you
+don't want to be changing.
+
+00:45:17.980 --> 00:45:20.020 align:middle line:90%
+OK.
+
+00:45:20.020 --> 00:45:21.460 align:middle line:84%
+I guess I just
+had one last thing
+
+00:45:21.460 --> 00:45:23.260 align:middle line:90%
+to say about lists and tuples.
+
+00:45:23.260 --> 00:45:25.210 align:middle line:90%
+We've seen both of them.
+
+00:45:25.210 --> 00:45:28.000 align:middle line:84%
+When do you want to use
+tuples and not lists?
+
+00:45:28.000 --> 00:45:30.560 align:middle line:84%
+When you want something
+that shouldn't be changed.
+
+00:45:30.560 --> 00:45:33.190 align:middle line:84%
+So if you have something that
+might accidentally get changed,
+
+00:45:33.190 --> 00:45:37.130 align:middle line:90%
+do not save it as a list.
+
+00:45:37.130 --> 00:45:37.630 align:middle line:90%
+OK.
+
+00:45:37.630 --> 00:45:39.940 align:middle line:84%
+And then on the other
+side, why would you
+
+00:45:39.940 --> 00:45:42.730 align:middle line:90%
+use a list but not a tuple?
+
+00:45:42.730 --> 00:45:47.320 align:middle line:84%
+You would use a list
+because you don't
+
+00:45:47.320 --> 00:45:49.163 align:middle line:84%
+want to be creating
+copies all the time.
+
+00:45:49.163 --> 00:45:51.580 align:middle line:84%
+So when you have, again, these
+large databases, every time
+
+00:45:51.580 --> 00:45:53.080 align:middle line:84%
+you want to make a
+change to it, you
+
+00:45:53.080 --> 00:45:55.180 align:middle line:84%
+don't want to make
+a copy of everything
+
+00:45:55.180 --> 00:45:56.540 align:middle line:90%
+with that small change in it.
+
+00:45:56.540 --> 00:46:00.490 align:middle line:84%
+And so mutating an object
+is good from that respect.
+
+00:46:00.490 --> 00:46:01.000 align:middle line:90%
+OK.
+
+00:46:01.000 --> 00:46:03.640 align:middle line:84%
+So that wraps up
+lists and mutability.
+
+00:46:03.640 --> 00:46:06.790 align:middle line:84%
+Next lecture, we'll just tie
+up a bunch more loose ends.
+
+00:46:06.790 --> 00:46:10.260 align:middle line:84%
+And then we'll get
+into a new topic.
+
+00:46:10.260 --> 00:46:16.000 align:middle line:90%

@@ -1,0 +1,3730 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:08.766 align:middle line:84%
+[SQUEAKING]
+[RUSTLING] [CLICKING]
+
+00:00:08.766 --> 00:00:16.590 align:middle line:90%
+
+
+00:00:16.590 --> 00:00:19.350 align:middle line:84%
+ANA BELL: All right, so
+today marks the last lecture
+
+00:00:19.350 --> 00:00:21.860 align:middle line:84%
+on the subject of
+sorting algorithms--
+
+00:00:21.860 --> 00:00:24.450 align:middle line:90%
+or on the subject of complexity.
+
+00:00:24.450 --> 00:00:26.250 align:middle line:84%
+And specifically,
+we will be talking
+
+00:00:26.250 --> 00:00:28.780 align:middle line:90%
+about sorting algorithms.
+
+00:00:28.780 --> 00:00:33.310 align:middle line:84%
+So let's remember where we left
+off at the end of last lecture.
+
+00:00:33.310 --> 00:00:36.750 align:middle line:84%
+We tried to look for
+elements within a list.
+
+00:00:36.750 --> 00:00:39.780 align:middle line:84%
+And this is a really common
+problem in computer science
+
+00:00:39.780 --> 00:00:43.143 align:middle line:84%
+where the list is,
+basically, a large data set
+
+00:00:43.143 --> 00:00:45.060 align:middle line:84%
+that you might have
+gathered on, I don't know,
+
+00:00:45.060 --> 00:00:49.140 align:middle line:84%
+biology information or
+physical-- experimental data.
+
+00:00:49.140 --> 00:00:51.460 align:middle line:90%
+Some big file of data.
+
+00:00:51.460 --> 00:00:53.592 align:middle line:84%
+And one of the
+most common things
+
+00:00:53.592 --> 00:00:55.050 align:middle line:84%
+you might want to
+do on such a file
+
+00:00:55.050 --> 00:00:57.270 align:middle line:84%
+is to search for something
+within that file.
+
+00:00:57.270 --> 00:00:59.100 align:middle line:84%
+Basically, you'll
+read it in as a list
+
+00:00:59.100 --> 00:01:02.640 align:middle line:84%
+and you'll search for something
+of interest within this list.
+
+00:01:02.640 --> 00:01:05.340 align:middle line:84%
+So we saw two
+algorithms to search
+
+00:01:05.340 --> 00:01:06.720 align:middle line:90%
+for an element within a list.
+
+00:01:06.720 --> 00:01:10.260 align:middle line:84%
+The first was just a
+straight up linear search.
+
+00:01:10.260 --> 00:01:13.920 align:middle line:84%
+That linear search we
+did on an unsorted list,
+
+00:01:13.920 --> 00:01:16.520 align:middle line:84%
+and we also did it
+on a sorted list.
+
+00:01:16.520 --> 00:01:18.730 align:middle line:84%
+And what we saw was
+that the worst case time
+
+00:01:18.730 --> 00:01:20.980 align:middle line:84%
+complexity for
+searching for an element
+
+00:01:20.980 --> 00:01:25.000 align:middle line:84%
+within a list using linear
+search was theta of n.
+
+00:01:25.000 --> 00:01:27.360 align:middle line:84%
+That's the best
+that we could do.
+
+00:01:27.360 --> 00:01:32.510 align:middle line:84%
+Now, we saw the binary search
+algorithm as an alternate way
+
+00:01:32.510 --> 00:01:34.070 align:middle line:84%
+to search for an
+element in a list.
+
+00:01:34.070 --> 00:01:36.710 align:middle line:84%
+But the caveat to using
+the binary search algorithm
+
+00:01:36.710 --> 00:01:39.570 align:middle line:84%
+was that we had to
+have a sorted list.
+
+00:01:39.570 --> 00:01:43.520 align:middle line:84%
+We can't use this binary search
+algorithm on an unsorted list
+
+00:01:43.520 --> 00:01:47.130 align:middle line:84%
+because it will give
+us an incorrect answer.
+
+00:01:47.130 --> 00:01:49.670 align:middle line:84%
+So assuming the list is
+sorted, binary search
+
+00:01:49.670 --> 00:01:52.040 align:middle line:84%
+does a much better
+job a much faster job
+
+00:01:52.040 --> 00:01:53.690 align:middle line:84%
+at finding the
+element within a list.
+
+00:01:53.690 --> 00:01:56.660 align:middle line:84%
+It does it in theta
+of log n time, which
+
+00:01:56.660 --> 00:01:58.190 align:middle line:90%
+is faster than theta of n.
+
+00:01:58.190 --> 00:02:01.820 align:middle line:84%
+The timings through
+a code that we
+
+00:02:01.820 --> 00:02:04.670 align:middle line:84%
+did showed this, counting
+the number of operations
+
+00:02:04.670 --> 00:02:07.880 align:middle line:84%
+showed this, and then, the
+theory also showed this.
+
+00:02:07.880 --> 00:02:12.950 align:middle line:84%
+All right, so clearly, it is
+better to use binary search
+
+00:02:12.950 --> 00:02:14.540 align:middle line:90%
+because it's faster.
+
+00:02:14.540 --> 00:02:17.550 align:middle line:84%
+But when does it make
+sense to use binary search?
+
+00:02:17.550 --> 00:02:22.130 align:middle line:84%
+So the idea is, given some
+sort of data set, some list
+
+00:02:22.130 --> 00:02:25.250 align:middle line:84%
+of elements, we would
+have to first sort them
+
+00:02:25.250 --> 00:02:27.510 align:middle line:90%
+in order to do binary search.
+
+00:02:27.510 --> 00:02:30.410 align:middle line:84%
+So the question then
+becomes the time
+
+00:02:30.410 --> 00:02:34.020 align:middle line:84%
+that it takes for us to
+do a sort plus the time
+
+00:02:34.020 --> 00:02:36.630 align:middle line:84%
+that it takes for us to
+use binary search to look
+
+00:02:36.630 --> 00:02:40.500 align:middle line:84%
+for an element within that list
+should be less than the time
+
+00:02:40.500 --> 00:02:43.020 align:middle line:84%
+that it takes for us
+to do linear search.
+
+00:02:43.020 --> 00:02:44.640 align:middle line:84%
+In that case, it
+makes sense for us
+
+00:02:44.640 --> 00:02:46.890 align:middle line:90%
+to do a sort and binary search.
+
+00:02:46.890 --> 00:02:51.270 align:middle line:84%
+This implies that the time
+it takes for us to is less
+
+00:02:51.270 --> 00:02:52.810 align:middle line:90%
+than the subtraction.
+
+00:02:52.810 --> 00:02:55.230 align:middle line:84%
+So theta of n minus
+theta of log n.
+
+00:02:55.230 --> 00:03:00.720 align:middle line:84%
+So this implies that we can
+sort a list in less than theta
+
+00:03:00.720 --> 00:03:01.320 align:middle line:90%
+of n time.
+
+00:03:01.320 --> 00:03:04.320 align:middle line:84%
+That means we can a list
+without even looking
+
+00:03:04.320 --> 00:03:06.850 align:middle line:90%
+at each element in the list.
+
+00:03:06.850 --> 00:03:08.520 align:middle line:90%
+And that's not possible, right?
+
+00:03:08.520 --> 00:03:10.950 align:middle line:84%
+We have to, at least,
+go through each element
+
+00:03:10.950 --> 00:03:13.440 align:middle line:84%
+in the list one at a time
+to determine that list
+
+00:03:13.440 --> 00:03:15.510 align:middle line:90%
+is sorted to begin with, right?
+
+00:03:15.510 --> 00:03:19.740 align:middle line:84%
+So even in the best case
+scenario, to sort a list,
+
+00:03:19.740 --> 00:03:21.420 align:middle line:84%
+that's going to be
+theta of n time.
+
+00:03:21.420 --> 00:03:25.540 align:middle line:84%
+So clearly, this
+will never be true.
+
+00:03:25.540 --> 00:03:28.320 align:middle line:84%
+So then, the question
+becomes, why do we
+
+00:03:28.320 --> 00:03:30.910 align:middle line:84%
+bother doing binary
+search in the first place?
+
+00:03:30.910 --> 00:03:32.640 align:middle line:84%
+Well, that's
+because, oftentimes,
+
+00:03:32.640 --> 00:03:35.490 align:middle line:84%
+if you download
+a data set or you
+
+00:03:35.490 --> 00:03:40.620 align:middle line:84%
+want to do some search on some
+list or some data set that you
+
+00:03:40.620 --> 00:03:43.020 align:middle line:84%
+get, most of the
+time, you're not
+
+00:03:43.020 --> 00:03:44.520 align:middle line:84%
+going to want to
+do it just once.
+
+00:03:44.520 --> 00:03:48.330 align:middle line:84%
+You're going to sort
+that list one time
+
+00:03:48.330 --> 00:03:50.340 align:middle line:84%
+and then do a whole
+bunch of searches
+
+00:03:50.340 --> 00:03:53.620 align:middle line:84%
+for a whole bunch of different
+things within that list.
+
+00:03:53.620 --> 00:03:56.190 align:middle line:84%
+So if we can somehow
+amortize the cost
+
+00:03:56.190 --> 00:04:00.990 align:middle line:84%
+of doing one sort over
+k different searches,
+
+00:04:00.990 --> 00:04:04.380 align:middle line:84%
+as k gets really, really
+big, it makes sense
+
+00:04:04.380 --> 00:04:07.480 align:middle line:84%
+to do binary search
+on the sorted list
+
+00:04:07.480 --> 00:04:11.770 align:middle line:84%
+rather than just to look
+through using linear search
+
+00:04:11.770 --> 00:04:13.030 align:middle line:90%
+k different times, right?
+
+00:04:13.030 --> 00:04:16.000 align:middle line:84%
+So then, that time to do the
+sort only once kind of gets
+
+00:04:16.000 --> 00:04:19.089 align:middle line:84%
+absorbed and goes
+to 0 as the number--
+
+00:04:19.089 --> 00:04:22.870 align:middle line:84%
+the k number of searches goes
+to some really big number.
+
+00:04:22.870 --> 00:04:24.580 align:middle line:84%
+All right, so
+clearly, we've shown
+
+00:04:24.580 --> 00:04:29.500 align:middle line:84%
+that if you want to do many
+searches on a data set,
+
+00:04:29.500 --> 00:04:32.668 align:middle line:84%
+it makes sense to do
+the sort only once.
+
+00:04:32.668 --> 00:04:34.210 align:middle line:84%
+All right, so now
+we're going to look
+
+00:04:34.210 --> 00:04:36.010 align:middle line:84%
+at a bunch of different
+sorting algorithms.
+
+00:04:36.010 --> 00:04:38.068 align:middle line:84%
+We're going to start with
+some really bad ones.
+
+00:04:38.068 --> 00:04:39.610 align:middle line:84%
+And then, we're
+going to work our way
+
+00:04:39.610 --> 00:04:43.060 align:middle line:84%
+up to what is considered one of
+the best sorting algorithms--
+
+00:04:43.060 --> 00:04:45.170 align:middle line:90%
+the best that we can do.
+
+00:04:45.170 --> 00:04:48.970 align:middle line:84%
+So let's begin by showing a
+really, really bad sorting
+
+00:04:48.970 --> 00:04:49.910 align:middle line:90%
+algorithm.
+
+00:04:49.910 --> 00:04:52.030 align:middle line:84%
+And there are
+actually competitions
+
+00:04:52.030 --> 00:04:54.310 align:middle line:84%
+where people can come up
+with really bad sorting
+
+00:04:54.310 --> 00:05:00.250 align:middle line:84%
+algorithms that sort lists in
+a really weird way while being
+
+00:05:00.250 --> 00:05:02.470 align:middle line:84%
+really bad still making
+forward progress,
+
+00:05:02.470 --> 00:05:03.980 align:middle line:90%
+and this is one of them.
+
+00:05:03.980 --> 00:05:08.050 align:middle line:84%
+So this one is called bogo
+sort, coming from the bogo sort,
+
+00:05:08.050 --> 00:05:11.090 align:middle line:84%
+also called random
+sort or monkey sort.
+
+00:05:11.090 --> 00:05:13.690 align:middle line:84%
+So the idea here-- and I'm
+going to use these cards
+
+00:05:13.690 --> 00:05:15.880 align:middle line:84%
+as we look at these
+different sorting algorithms.
+
+00:05:15.880 --> 00:05:19.330 align:middle line:84%
+The idea of bogo sort is that
+we're going to use randomness
+
+00:05:19.330 --> 00:05:22.430 align:middle line:90%
+to help us sort the list.
+
+00:05:22.430 --> 00:05:27.610 align:middle line:84%
+So if we wanted to sort a
+list or a deck of cards,
+
+00:05:27.610 --> 00:05:29.710 align:middle line:84%
+for example, the
+idea of bogo sort
+
+00:05:29.710 --> 00:05:31.613 align:middle line:84%
+is that we're going
+to take all our cards,
+
+00:05:31.613 --> 00:05:33.280 align:middle line:84%
+we're going to throw
+them up in the air,
+
+00:05:33.280 --> 00:05:35.260 align:middle line:84%
+we're going to pick
+them up as they land,
+
+00:05:35.260 --> 00:05:37.570 align:middle line:84%
+and we're going to check
+to see if they're sorted.
+
+00:05:37.570 --> 00:05:38.647 align:middle line:90%
+If they are, we're done.
+
+00:05:38.647 --> 00:05:40.730 align:middle line:84%
+If they're not, we're going
+to repeat the process.
+
+00:05:40.730 --> 00:05:42.010 align:middle line:84%
+We're going to throw
+them up in the air,
+
+00:05:42.010 --> 00:05:43.900 align:middle line:84%
+let them fall where
+they may, and then we're
+
+00:05:43.900 --> 00:05:47.190 align:middle line:84%
+going to check if
+they're sorted, OK?
+
+00:05:47.190 --> 00:05:50.110 align:middle line:84%
+So the code would look
+something like this.
+
+00:05:50.110 --> 00:05:54.690 align:middle line:84%
+It takes in a list L. And it
+says, while the list is not
+
+00:05:54.690 --> 00:05:57.270 align:middle line:84%
+sorted, we're going to
+call this shuffle function
+
+00:05:57.270 --> 00:05:58.740 align:middle line:90%
+from the random library.
+
+00:05:58.740 --> 00:06:02.070 align:middle line:84%
+And the shuffle function
+just reshuffles or rearranges
+
+00:06:02.070 --> 00:06:05.080 align:middle line:84%
+the elements in
+the list at random.
+
+00:06:05.080 --> 00:06:08.560 align:middle line:84%
+So let me show you
+how that looks like.
+
+00:06:08.560 --> 00:06:10.005 align:middle line:90%
+So here is the sorted function.
+
+00:06:10.005 --> 00:06:18.710 align:middle line:90%
+
+
+00:06:18.710 --> 00:06:20.600 align:middle line:90%
+I'm going to run it.
+
+00:06:20.600 --> 00:06:25.190 align:middle line:84%
+So it starts out with
+this list of, obviously,
+
+00:06:25.190 --> 00:06:26.420 align:middle line:90%
+elements not in order.
+
+00:06:26.420 --> 00:06:31.550 align:middle line:84%
+And it took about 0.2 seconds to
+just randomly keep reshuffling
+
+00:06:31.550 --> 00:06:34.190 align:middle line:84%
+the elements of that
+list to give me--
+
+00:06:34.190 --> 00:06:36.210 align:middle line:84%
+for them to become
+in sorted order.
+
+00:06:36.210 --> 00:06:37.820 align:middle line:90%
+So I did about 30,000 shuffles.
+
+00:06:37.820 --> 00:06:39.650 align:middle line:84%
+And if I run it
+again, it'll take
+
+00:06:39.650 --> 00:06:43.020 align:middle line:84%
+a completely different amount
+of time each time it's run.
+
+00:06:43.020 --> 00:06:44.250 align:middle line:90%
+So now it was really fast.
+
+00:06:44.250 --> 00:06:45.740 align:middle line:90%
+But if I keep running it--
+
+00:06:45.740 --> 00:06:48.630 align:middle line:84%
+one time I ran it last night,
+it took about two seconds.
+
+00:06:48.630 --> 00:06:52.370 align:middle line:90%
+So you can see it's just random.
+
+00:06:52.370 --> 00:06:54.850 align:middle line:84%
+So what's the complexity
+of this function?
+
+00:06:54.850 --> 00:06:58.280 align:middle line:84%
+Clearly, it's not going
+to be very good at best.
+
+00:06:58.280 --> 00:07:00.130 align:middle line:84%
+So in the best case
+scenario, let's say,
+
+00:07:00.130 --> 00:07:02.650 align:middle line:90%
+my input list is already sorted.
+
+00:07:02.650 --> 00:07:04.930 align:middle line:84%
+So in the best case
+scenario, the theta
+
+00:07:04.930 --> 00:07:07.630 align:middle line:84%
+would be just theta of n, where
+n is the length of the list.
+
+00:07:07.630 --> 00:07:10.660 align:middle line:84%
+Because we have to look
+at each element once to
+
+00:07:10.660 --> 00:07:13.510 align:middle line:84%
+make sure that it's
+in its rightful place.
+
+00:07:13.510 --> 00:07:16.870 align:middle line:84%
+But in the worst case scenario,
+the theta complexity of this
+
+00:07:16.870 --> 00:07:17.750 align:middle line:90%
+is unbounded.
+
+00:07:17.750 --> 00:07:18.850 align:middle line:90%
+It's infinity.
+
+00:07:18.850 --> 00:07:21.880 align:middle line:84%
+Because at worst case, we're
+going to be super unlucky
+
+00:07:21.880 --> 00:07:24.940 align:middle line:84%
+and we're just never
+going to get the elements
+
+00:07:24.940 --> 00:07:27.340 align:middle line:90%
+in a sorted order, OK?
+
+00:07:27.340 --> 00:07:30.640 align:middle line:84%
+So clearly, not a very
+good sorting algorithm.
+
+00:07:30.640 --> 00:07:32.500 align:middle line:84%
+If you go to the
+Wikipedia page for this,
+
+00:07:32.500 --> 00:07:35.440 align:middle line:84%
+it'll give you a whole bunch
+of other examples of algorithms
+
+00:07:35.440 --> 00:07:40.960 align:middle line:84%
+similar in this spirit of
+being bad but making forward
+
+00:07:40.960 --> 00:07:44.350 align:middle line:90%
+progress towards an answer.
+
+00:07:44.350 --> 00:07:46.530 align:middle line:84%
+So next, we're going to
+look at a different sorting
+
+00:07:46.530 --> 00:07:48.330 align:middle line:84%
+algorithm called
+bubble sort, and it's
+
+00:07:48.330 --> 00:07:51.000 align:middle line:84%
+one of the most popular
+one popular sorting
+
+00:07:51.000 --> 00:07:52.770 align:middle line:84%
+algorithms not
+because it's good,
+
+00:07:52.770 --> 00:07:55.770 align:middle line:84%
+but because people really
+like to make fun of it.
+
+00:07:55.770 --> 00:07:58.750 align:middle line:84%
+OK, so it's best
+to understand it.
+
+00:07:58.750 --> 00:08:01.800 align:middle line:84%
+So the idea of bubble
+sort is that we're
+
+00:08:01.800 --> 00:08:06.420 align:middle line:84%
+going to start with an
+originally unsorted list.
+
+00:08:06.420 --> 00:08:10.690 align:middle line:84%
+And like I said, I'm going
+to use this as an example.
+
+00:08:10.690 --> 00:08:15.100 align:middle line:84%
+And we're going to try to
+compare consecutive elements
+
+00:08:15.100 --> 00:08:18.270 align:middle line:90%
+one at a time.
+
+00:08:18.270 --> 00:08:20.090 align:middle line:84%
+And as we do so,
+we're effectively
+
+00:08:20.090 --> 00:08:23.870 align:middle line:84%
+going to bubble up the largest
+element towards the end
+
+00:08:23.870 --> 00:08:25.220 align:middle line:90%
+of the list, OK?
+
+00:08:25.220 --> 00:08:29.570 align:middle line:84%
+So we're going to start our
+first pass on this clearly
+
+00:08:29.570 --> 00:08:32.690 align:middle line:84%
+unsorted list and we're going to
+compare the first two elements.
+
+00:08:32.690 --> 00:08:37.190 align:middle line:84%
+If the element at
+index I is smaller
+
+00:08:37.190 --> 00:08:39.740 align:middle line:84%
+than the element
+at index I minus 1,
+
+00:08:39.740 --> 00:08:41.270 align:middle line:90%
+then I'm going to do a swap.
+
+00:08:41.270 --> 00:08:43.190 align:middle line:84%
+So here they were,
+so I did a swap.
+
+00:08:43.190 --> 00:08:45.420 align:middle line:84%
+Then I'm going to compare
+the next set of elements.
+
+00:08:45.420 --> 00:08:47.780 align:middle line:84%
+So these two are
+already sorted, right?
+
+00:08:47.780 --> 00:08:50.150 align:middle line:84%
+These two are not, so
+I'm going to swap them.
+
+00:08:50.150 --> 00:08:52.150 align:middle line:84%
+These two are not, I'm
+going to swap them.
+
+00:08:52.150 --> 00:08:53.900 align:middle line:84%
+These two are not, I'm
+going to swap them.
+
+00:08:53.900 --> 00:08:55.910 align:middle line:84%
+They're not, I'm
+going to swap them.
+
+00:08:55.910 --> 00:09:00.290 align:middle line:84%
+And these two are not, and
+I'm going to swap them, OK?
+
+00:09:00.290 --> 00:09:03.850 align:middle line:84%
+Just move it over because
+that table got in the way.
+
+00:09:03.850 --> 00:09:06.760 align:middle line:84%
+All right, so after I
+finished my first pass,
+
+00:09:06.760 --> 00:09:10.000 align:middle line:84%
+this number 11
+effectively bubbled up
+
+00:09:10.000 --> 00:09:13.990 align:middle line:84%
+from wherever it was towards
+the end of the list, the place
+
+00:09:13.990 --> 00:09:15.448 align:middle line:84%
+where it belongs,
+basically, right?
+
+00:09:15.448 --> 00:09:16.823 align:middle line:84%
+It belongs at the
+end of the list
+
+00:09:16.823 --> 00:09:18.160 align:middle line:90%
+because it's the biggest number.
+
+00:09:18.160 --> 00:09:23.510 align:middle line:84%
+Since I've done at least one
+swap on that previous run,
+
+00:09:23.510 --> 00:09:24.880 align:middle line:90%
+I'm going to go through again.
+
+00:09:24.880 --> 00:09:27.490 align:middle line:84%
+Because in the process
+of doing a swap,
+
+00:09:27.490 --> 00:09:29.740 align:middle line:84%
+I might have disarranged
+something that
+
+00:09:29.740 --> 00:09:32.210 align:middle line:90%
+was already sort of in order.
+
+00:09:32.210 --> 00:09:34.240 align:middle line:84%
+So now I'm going to
+start all over again.
+
+00:09:34.240 --> 00:09:36.340 align:middle line:84%
+I'm going to say, are
+these two in sorted order?
+
+00:09:36.340 --> 00:09:37.030 align:middle line:90%
+They are.
+
+00:09:37.030 --> 00:09:37.840 align:middle line:90%
+These two?
+
+00:09:37.840 --> 00:09:38.980 align:middle line:90%
+No, so I swap.
+
+00:09:38.980 --> 00:09:39.730 align:middle line:90%
+Are these two?
+
+00:09:39.730 --> 00:09:40.750 align:middle line:90%
+No, so I swap.
+
+00:09:40.750 --> 00:09:41.650 align:middle line:90%
+Are these two?
+
+00:09:41.650 --> 00:09:45.070 align:middle line:84%
+No, so I swap, I
+swap, and I swap.
+
+00:09:45.070 --> 00:09:49.420 align:middle line:84%
+And now, after two passes,
+I've effectively bubbled up
+
+00:09:49.420 --> 00:09:53.192 align:middle line:90%
+the next biggest number.
+
+00:09:53.192 --> 00:09:55.250 align:middle line:90%
+You guys can see.
+
+00:09:55.250 --> 00:10:00.020 align:middle line:84%
+OK, next time through,
+I'm going to have
+
+00:10:00.020 --> 00:10:04.310 align:middle line:90%
+to go again because I am--
+
+00:10:04.310 --> 00:10:05.902 align:middle line:90%
+I did one swap last time.
+
+00:10:05.902 --> 00:10:07.610 align:middle line:84%
+So again, I'm going
+to compare these two.
+
+00:10:07.610 --> 00:10:08.570 align:middle line:90%
+I need to swap them.
+
+00:10:08.570 --> 00:10:10.010 align:middle line:90%
+These two, I need to swap them.
+
+00:10:10.010 --> 00:10:11.540 align:middle line:90%
+These two, I need to swap them.
+
+00:10:11.540 --> 00:10:14.000 align:middle line:84%
+Swap them, swap them,
+and these are in order
+
+00:10:14.000 --> 00:10:15.920 align:middle line:90%
+and these are in order, OK?
+
+00:10:15.920 --> 00:10:18.950 align:middle line:84%
+Again, 5 and the 4 needs
+to swap, 5 and the 1 needs
+
+00:10:18.950 --> 00:10:21.590 align:middle line:84%
+to swap, 5 and the 0
+needs to swap, 5 and the 2
+
+00:10:21.590 --> 00:10:22.222 align:middle line:90%
+needs to swap.
+
+00:10:22.222 --> 00:10:24.680 align:middle line:84%
+These are in order, these are
+in order, these are in order.
+
+00:10:24.680 --> 00:10:26.660 align:middle line:90%
+4 and the 1 needs to swap.
+
+00:10:26.660 --> 00:10:27.800 align:middle line:90%
+These two need a swap.
+
+00:10:27.800 --> 00:10:28.700 align:middle line:90%
+These need a swap.
+
+00:10:28.700 --> 00:10:30.620 align:middle line:84%
+Ordered, ordered,
+ordered, ordered.
+
+00:10:30.620 --> 00:10:32.570 align:middle line:90%
+Next, these two need to swap.
+
+00:10:32.570 --> 00:10:35.490 align:middle line:84%
+These are OK, these
+are OK, and so on.
+
+00:10:35.490 --> 00:10:39.650 align:middle line:90%
+And now that I've not--
+
+00:10:39.650 --> 00:10:41.300 align:middle line:90%
+I'm going to do one final check.
+
+00:10:41.300 --> 00:10:43.070 align:middle line:90%
+These are all in order, right?
+
+00:10:43.070 --> 00:10:45.770 align:middle line:84%
+So now that I haven't
+done any more swaps,
+
+00:10:45.770 --> 00:10:49.610 align:middle line:84%
+I can say that this list is
+now in sorted order, right?
+
+00:10:49.610 --> 00:10:53.900 align:middle line:84%
+So with each pass, I'm
+bubbling up the biggest element
+
+00:10:53.900 --> 00:10:55.320 align:middle line:90%
+towards the end of the list.
+
+00:10:55.320 --> 00:11:01.910 align:middle line:84%
+So at the end of n passes,
+the top-- the last n elements
+
+00:11:01.910 --> 00:11:05.020 align:middle line:90%
+will be in sorted order, OK?
+
+00:11:05.020 --> 00:11:08.330 align:middle line:84%
+So the code looks
+something like this.
+
+00:11:08.330 --> 00:11:11.260 align:middle line:90%
+I've got a Boolean flag here.
+
+00:11:11.260 --> 00:11:15.340 align:middle line:84%
+That keeps track of whether
+or not I have done a swap.
+
+00:11:15.340 --> 00:11:19.450 align:middle line:84%
+If I've done a swap, then I know
+I need to go through and double
+
+00:11:19.450 --> 00:11:23.800 align:middle line:84%
+check that everything is still
+in order by comparing index
+
+00:11:23.800 --> 00:11:25.890 align:middle line:90%
+I and I minus 1.
+
+00:11:25.890 --> 00:11:28.680 align:middle line:84%
+So to do that,
+we've got a for loop
+
+00:11:28.680 --> 00:11:31.980 align:middle line:84%
+that goes through from 1
+all the way up to the end
+
+00:11:31.980 --> 00:11:35.220 align:middle line:84%
+of the list because I'm going
+to compare element at index I
+
+00:11:35.220 --> 00:11:36.270 align:middle line:90%
+with I minus 1.
+
+00:11:36.270 --> 00:11:39.370 align:middle line:84%
+If I started at 0, we'd get
+an index out of bounds error.
+
+00:11:39.370 --> 00:11:41.220 align:middle line:84%
+So that's why I start
+with 1 over there.
+
+00:11:41.220 --> 00:11:43.380 align:middle line:84%
+And then, the inside
+of for loop just
+
+00:11:43.380 --> 00:11:45.540 align:middle line:84%
+checks if the element
+at, I guess, J--
+
+00:11:45.540 --> 00:11:48.210 align:middle line:84%
+I use instead of J instead
+of I. J and J minus 1
+
+00:11:48.210 --> 00:11:49.440 align:middle line:90%
+are in the right order.
+
+00:11:49.440 --> 00:11:50.770 align:middle line:90%
+Now, obviously, they are.
+
+00:11:50.770 --> 00:11:53.670 align:middle line:84%
+But when I first started this
+demo, they were not, right?
+
+00:11:53.670 --> 00:11:59.010 align:middle line:84%
+So as long as this J minus 1 and
+J are not in order, do a swap.
+
+00:11:59.010 --> 00:12:01.110 align:middle line:90%
+So here, I just change--
+
+00:12:01.110 --> 00:12:04.680 align:middle line:84%
+I use this tuple
+trick here to do
+
+00:12:04.680 --> 00:12:08.240 align:middle line:84%
+the swap of element
+J minus 1 and J.
+
+00:12:08.240 --> 00:12:10.820 align:middle line:84%
+And I also reset
+the Boolean flag
+
+00:12:10.820 --> 00:12:13.130 align:middle line:90%
+that I did the swap to true.
+
+00:12:13.130 --> 00:12:17.700 align:middle line:84%
+And this goes through until
+I don't do any more swaps.
+
+00:12:17.700 --> 00:12:22.610 align:middle line:84%
+And then, the code will not go
+through the while loop anymore.
+
+00:12:22.610 --> 00:12:26.300 align:middle line:84%
+So let's print how this
+actually looks like when
+
+00:12:26.300 --> 00:12:28.740 align:middle line:90%
+we run it on our list.
+
+00:12:28.740 --> 00:12:34.120 align:middle line:84%
+So here, I have
+my original list.
+
+00:12:34.120 --> 00:12:38.920 align:middle line:84%
+Each set here delineated
+by this line break
+
+00:12:38.920 --> 00:12:44.690 align:middle line:84%
+represents one loop
+of my while loop.
+
+00:12:44.690 --> 00:12:47.290 align:middle line:90%
+So this thing here, right?
+
+00:12:47.290 --> 00:12:49.420 align:middle line:90%
+One iteration of my while loop.
+
+00:12:49.420 --> 00:12:54.340 align:middle line:84%
+And each line within here
+represents one iteration of my
+
+00:12:54.340 --> 00:12:56.750 align:middle line:90%
+for loop, OK?
+
+00:12:56.750 --> 00:13:00.200 align:middle line:84%
+So what we can see
+is that as we're
+
+00:13:00.200 --> 00:13:04.820 align:middle line:84%
+comparing the 4 and the 8, the
+8 bubbles up one step over.
+
+00:13:04.820 --> 00:13:08.960 align:middle line:90%
+Then we compare the 8 and the 6.
+
+00:13:08.960 --> 00:13:12.210 align:middle line:84%
+The 8 bubbles itself
+over and so on and so on,
+
+00:13:12.210 --> 00:13:13.640 align:middle line:90%
+until it encounters the 11.
+
+00:13:13.640 --> 00:13:15.710 align:middle line:84%
+And then, the 11
+starts to bubble itself
+
+00:13:15.710 --> 00:13:17.250 align:middle line:90%
+up all the way to the end.
+
+00:13:17.250 --> 00:13:19.760 align:middle line:84%
+So at the end of the
+first while loop pass,
+
+00:13:19.760 --> 00:13:23.420 align:middle line:84%
+my 11 is in its rightful
+spot at the top of the list--
+
+00:13:23.420 --> 00:13:25.120 align:middle line:90%
+at the end of the list.
+
+00:13:25.120 --> 00:13:26.800 align:middle line:84%
+Next time through
+the while loop,
+
+00:13:26.800 --> 00:13:30.730 align:middle line:84%
+I'm effectively bubbling up
+the 8 to the end, so over here.
+
+00:13:30.730 --> 00:13:33.470 align:middle line:84%
+Next time through the while
+loop is six bubbles to the end.
+
+00:13:33.470 --> 00:13:35.470 align:middle line:84%
+Next time the five
+bubbles through the end.
+
+00:13:35.470 --> 00:13:38.795 align:middle line:84%
+Then the four, then the two,
+then the one, and then the
+
+00:13:38.795 --> 00:13:39.295 align:middle line:90%
+zero.
+
+00:13:39.295 --> 00:13:44.240 align:middle line:90%
+
+
+00:13:44.240 --> 00:13:47.570 align:middle line:84%
+All right, so what's
+the-- yeah, question.
+
+00:13:47.570 --> 00:13:50.030 align:middle line:84%
+AUDIENCE: Just a
+little question.
+
+00:13:50.030 --> 00:13:52.362 align:middle line:84%
+Is there any reason why
+you need the brackets?
+
+00:13:52.362 --> 00:13:54.070 align:middle line:84%
+ANA BELL: Oh, we don't
+need the brackets.
+
+00:13:54.070 --> 00:13:57.050 align:middle line:90%
+
+
+00:13:57.050 --> 00:13:58.790 align:middle line:90%
+I mean, you can put them in.
+
+00:13:58.790 --> 00:13:59.840 align:middle line:90%
+It won't harm.
+
+00:13:59.840 --> 00:14:02.210 align:middle line:84%
+But if you don't
+put them, it's OK.
+
+00:14:02.210 --> 00:14:06.150 align:middle line:84%
+Python knows that it's doing
+an assignment one by one.
+
+00:14:06.150 --> 00:14:08.625 align:middle line:84%
+So this one to that one
+and that one to that one.
+
+00:14:08.625 --> 00:14:09.125 align:middle line:90%
+Yeah.
+
+00:14:09.125 --> 00:14:12.400 align:middle line:90%
+
+
+00:14:12.400 --> 00:14:15.920 align:middle line:84%
+OK, so let's look at the worst
+case complexity analysis.
+
+00:14:15.920 --> 00:14:19.660 align:middle line:84%
+So the easy one we can already
+know is this inner for loop,
+
+00:14:19.660 --> 00:14:20.230 align:middle line:90%
+right?
+
+00:14:20.230 --> 00:14:22.730 align:middle line:84%
+This one goes through from one
+to the length of the list, SO
+
+00:14:22.730 --> 00:14:25.740 align:middle line:90%
+that's theta of linked list.
+
+00:14:25.740 --> 00:14:27.840 align:middle line:84%
+We have another
+complexity, though.
+
+00:14:27.840 --> 00:14:30.060 align:middle line:84%
+Because in the
+worst case scenario,
+
+00:14:30.060 --> 00:14:32.610 align:middle line:90%
+our list is completely backward.
+
+00:14:32.610 --> 00:14:37.800 align:middle line:84%
+And so this while loop up
+here will repeat length
+
+00:14:37.800 --> 00:14:40.080 align:middle line:84%
+L times because we're
+going to bubble up
+
+00:14:40.080 --> 00:14:42.420 align:middle line:84%
+every single one of the
+elements all the way
+
+00:14:42.420 --> 00:14:44.050 align:middle line:90%
+through to the end of the list.
+
+00:14:44.050 --> 00:14:46.500 align:middle line:84%
+So the complexity
+of that while loop
+
+00:14:46.500 --> 00:14:48.570 align:middle line:84%
+will be theta of
+length L as well.
+
+00:14:48.570 --> 00:14:50.310 align:middle line:84%
+Because thinking
+about the worst case
+
+00:14:50.310 --> 00:14:53.190 align:middle line:84%
+is when our biggest
+element is here,
+
+00:14:53.190 --> 00:14:55.260 align:middle line:84%
+the second biggest element
+is here, and so on.
+
+00:14:55.260 --> 00:14:57.810 align:middle line:90%
+
+
+00:14:57.810 --> 00:15:00.690 align:middle line:84%
+All right, so the worst case
+complexity of this function
+
+00:15:00.690 --> 00:15:03.660 align:middle line:90%
+is theta of length L squared.
+
+00:15:03.660 --> 00:15:06.300 align:middle line:84%
+Or theta of n squared where
+n is the length of the list
+
+00:15:06.300 --> 00:15:09.360 align:middle line:90%
+just to be less verbose.
+
+00:15:09.360 --> 00:15:12.945 align:middle line:84%
+OK, clearly not a great
+sorting algorithm.
+
+00:15:12.945 --> 00:15:15.570 align:middle line:84%
+It's pretty inefficient in some
+of the things it's doing, i.e.,
+
+00:15:15.570 --> 00:15:17.670 align:middle line:90%
+once it's reached--
+
+00:15:17.670 --> 00:15:19.440 align:middle line:84%
+sorted some of
+the stuff up here,
+
+00:15:19.440 --> 00:15:21.640 align:middle line:84%
+it keeps comparing them
+through to the end.
+
+00:15:21.640 --> 00:15:26.310 align:middle line:84%
+So it just always goes through
+to the length of the list.
+
+00:15:26.310 --> 00:15:29.670 align:middle line:84%
+We can look at another sorting
+algorithm called selection
+
+00:15:29.670 --> 00:15:32.190 align:middle line:84%
+sort, which is sort
+of like bubble sort,
+
+00:15:32.190 --> 00:15:35.920 align:middle line:84%
+but it does things in a
+little bit of a smarter way.
+
+00:15:35.920 --> 00:15:41.640 align:middle line:84%
+So let me start again
+with an unsorted list, OK?
+
+00:15:41.640 --> 00:15:47.750 align:middle line:84%
+And let's see how selection
+sort will do this.
+
+00:15:47.750 --> 00:15:51.890 align:middle line:90%
+OK, let's put that there.
+
+00:15:51.890 --> 00:15:58.010 align:middle line:84%
+OK, so the idea of selection
+sort is that with each pass,
+
+00:15:58.010 --> 00:16:01.910 align:middle line:84%
+we're going to decide
+which one of these elements
+
+00:16:01.910 --> 00:16:04.160 align:middle line:90%
+belongs at some index.
+
+00:16:04.160 --> 00:16:07.190 align:middle line:84%
+So with my first pass,
+I'll decide which
+
+00:16:07.190 --> 00:16:09.440 align:middle line:90%
+element belongs at index 0.
+
+00:16:09.440 --> 00:16:11.780 align:middle line:84%
+With my second pass,
+I'll decide which
+
+00:16:11.780 --> 00:16:13.700 align:middle line:90%
+element belongs at index 1.
+
+00:16:13.700 --> 00:16:16.550 align:middle line:84%
+With my third, which
+element belongs at index 2,
+
+00:16:16.550 --> 00:16:18.350 align:middle line:90%
+and so on, OK?
+
+00:16:18.350 --> 00:16:21.395 align:middle line:84%
+So the way we're going to do
+that is by saying, all right,
+
+00:16:21.395 --> 00:16:24.020 align:middle line:84%
+I'm going to take this element,
+it's the first one in the list,
+
+00:16:24.020 --> 00:16:25.970 align:middle line:84%
+it's the one
+currently at index 0.
+
+00:16:25.970 --> 00:16:29.480 align:middle line:84%
+And I'm going to compare it
+with every single element
+
+00:16:29.480 --> 00:16:31.500 align:middle line:90%
+from the rest of the list.
+
+00:16:31.500 --> 00:16:34.460 align:middle line:84%
+And as I find an element
+that's smaller than the one
+
+00:16:34.460 --> 00:16:36.630 align:middle line:84%
+currently there, I'm
+going to swap them
+
+00:16:36.630 --> 00:16:38.630 align:middle line:84%
+because I know that that
+smaller one, obviously,
+
+00:16:38.630 --> 00:16:40.130 align:middle line:90%
+belongs at index 0.
+
+00:16:40.130 --> 00:16:41.960 align:middle line:84%
+So I'm going to compare
+the 5 with the 8.
+
+00:16:41.960 --> 00:16:44.085 align:middle line:84%
+I'm going to say, well,
+the 5 is smaller than the 8
+
+00:16:44.085 --> 00:16:46.430 align:middle line:84%
+so it currently
+belongs at index 0.
+
+00:16:46.430 --> 00:16:48.450 align:middle line:90%
+I compare the 5 with the 1.
+
+00:16:48.450 --> 00:16:50.820 align:middle line:84%
+The one is smaller, so
+I'm going to do a swap
+
+00:16:50.820 --> 00:16:52.410 align:middle line:90%
+and say the 1 belongs here.
+
+00:16:52.410 --> 00:16:54.720 align:middle line:90%
+5 with the 11, the 1 belong--
+
+00:16:54.720 --> 00:16:56.910 align:middle line:84%
+sorry, the 1 with the
+11, the 1 belongs here.
+
+00:16:56.910 --> 00:16:58.680 align:middle line:90%
+1 with the 6, the 1 belongs.
+
+00:16:58.680 --> 00:17:00.330 align:middle line:84%
+1 with the 2, the
+1 is still there.
+
+00:17:00.330 --> 00:17:04.319 align:middle line:84%
+1 with the 0, well, 0 is smaller
+than 1, so let me swap it.
+
+00:17:04.319 --> 00:17:06.420 align:middle line:90%
+0 with the 4, we're done.
+
+00:17:06.420 --> 00:17:08.730 align:middle line:84%
+So now at the end
+of the first pass,
+
+00:17:08.730 --> 00:17:11.640 align:middle line:84%
+I've decided that the 0 is
+the smallest out of everybody
+
+00:17:11.640 --> 00:17:14.680 align:middle line:90%
+here so it belongs at index 0.
+
+00:17:14.680 --> 00:17:17.810 align:middle line:84%
+Next time, my
+second pass, I'm not
+
+00:17:17.810 --> 00:17:19.060 align:middle line:90%
+going to worry about this one.
+
+00:17:19.060 --> 00:17:20.435 align:middle line:84%
+I know it's already
+the smallest,
+
+00:17:20.435 --> 00:17:23.810 align:middle line:84%
+so I'm going to determine which
+element belongs at index 1,
+
+00:17:23.810 --> 00:17:24.369 align:middle line:90%
+right?
+
+00:17:24.369 --> 00:17:26.619 align:middle line:84%
+So the 8 is the
+first one there, it's
+
+00:17:26.619 --> 00:17:27.880 align:middle line:90%
+the one currently at index 1.
+
+00:17:27.880 --> 00:17:29.545 align:middle line:84%
+So I'm going to
+start with it being
+
+00:17:29.545 --> 00:17:30.670 align:middle line:90%
+the one that belongs there.
+
+00:17:30.670 --> 00:17:34.310 align:middle line:84%
+And I'm going to successively
+compare it with everybody else.
+
+00:17:34.310 --> 00:17:35.770 align:middle line:90%
+So the 8 with the 5.
+
+00:17:35.770 --> 00:17:38.050 align:middle line:84%
+The 5, clearly, is
+smaller than the 8.
+
+00:17:38.050 --> 00:17:40.150 align:middle line:90%
+5 with the 11, the 5 is smaller.
+
+00:17:40.150 --> 00:17:41.740 align:middle line:90%
+5 with the 6, the 5 is smaller.
+
+00:17:41.740 --> 00:17:44.740 align:middle line:84%
+5 with the 2 needs a swap
+because the 2 is smaller.
+
+00:17:44.740 --> 00:17:47.050 align:middle line:90%
+2 with the 1, again, we swap.
+
+00:17:47.050 --> 00:17:48.310 align:middle line:90%
+The 1 is smaller.
+
+00:17:48.310 --> 00:17:51.210 align:middle line:90%
+And then, 1 with the 4, done.
+
+00:17:51.210 --> 00:17:53.010 align:middle line:84%
+So at the end of
+the second pass,
+
+00:17:53.010 --> 00:17:56.260 align:middle line:84%
+I've decided that the 1
+belongs at the next index.
+
+00:17:56.260 --> 00:17:59.550 align:middle line:84%
+So now these two elements
+are in their correct place.
+
+00:17:59.550 --> 00:18:01.600 align:middle line:90%
+They're in sorted order.
+
+00:18:01.600 --> 00:18:04.780 align:middle line:84%
+OK, third pass, we're going to
+decide which element belongs
+
+00:18:04.780 --> 00:18:07.150 align:middle line:90%
+at the next index, index 2.
+
+00:18:07.150 --> 00:18:09.130 align:middle line:90%
+So 8 with the 11 is OK.
+
+00:18:09.130 --> 00:18:11.170 align:middle line:90%
+8 with the 6, we need to swap.
+
+00:18:11.170 --> 00:18:13.240 align:middle line:90%
+6 with the 5, we need to swap.
+
+00:18:13.240 --> 00:18:15.370 align:middle line:90%
+5 with the 2, we need to swap.
+
+00:18:15.370 --> 00:18:18.340 align:middle line:90%
+2 with the 4, everything's OK.
+
+00:18:18.340 --> 00:18:21.520 align:middle line:84%
+Three passes, the first three
+elements are in sorted order.
+
+00:18:21.520 --> 00:18:25.060 align:middle line:84%
+Now, we just need to figure out
+between these leftovers which
+
+00:18:25.060 --> 00:18:27.770 align:middle line:90%
+one belongs at the next level.
+
+00:18:27.770 --> 00:18:30.310 align:middle line:90%
+So 8 with the 11, we do a swap.
+
+00:18:30.310 --> 00:18:32.710 align:middle line:90%
+8 with the 6, we do the swap.
+
+00:18:32.710 --> 00:18:35.020 align:middle line:84%
+6 with the 5, we
+bring the 5 here.
+
+00:18:35.020 --> 00:18:38.420 align:middle line:90%
+5 with the 4, we bring it here.
+
+00:18:38.420 --> 00:18:43.250 align:middle line:84%
+OK, again, 11 with the
+8, we swapped these.
+
+00:18:43.250 --> 00:18:44.930 align:middle line:90%
+8 with the 6, we swapped these.
+
+00:18:44.930 --> 00:18:47.210 align:middle line:84%
+6 with the 5, we
+swapped them, all right?
+
+00:18:47.210 --> 00:18:50.090 align:middle line:84%
+So as you can see, as
+I'm making my way through
+
+00:18:50.090 --> 00:18:52.670 align:middle line:84%
+to figure out which element
+belongs at the next index,
+
+00:18:52.670 --> 00:18:57.290 align:middle line:84%
+I have fewer elements to
+decide between which belongs
+
+00:18:57.290 --> 00:18:59.180 align:middle line:90%
+at the next index, right?
+
+00:18:59.180 --> 00:19:03.440 align:middle line:84%
+So here, the 8 and
+the 11 needs to swap.
+
+00:19:03.440 --> 00:19:05.030 align:middle line:90%
+8 with the 6 needs to swap.
+
+00:19:05.030 --> 00:19:09.240 align:middle line:90%
+And then, lastly, like that.
+
+00:19:09.240 --> 00:19:12.660 align:middle line:84%
+OK, so slightly more
+efficient in that
+
+00:19:12.660 --> 00:19:15.780 align:middle line:84%
+we're not comparing
+a bunch of pairs
+
+00:19:15.780 --> 00:19:19.000 align:middle line:84%
+all the time all the way through
+to the length of the list.
+
+00:19:19.000 --> 00:19:20.770 align:middle line:90%
+So the code looks like this.
+
+00:19:20.770 --> 00:19:24.880 align:middle line:84%
+I've got one for loop that goes
+through the length of the list.
+
+00:19:24.880 --> 00:19:29.310 align:middle line:84%
+And one inner for loop
+that only starts at I
+
+00:19:29.310 --> 00:19:31.740 align:middle line:84%
+and goes through to the
+end of the list, right?
+
+00:19:31.740 --> 00:19:34.260 align:middle line:84%
+So unlike bubble sort,
+which started at 1
+
+00:19:34.260 --> 00:19:36.540 align:middle line:84%
+and went through to the end
+of the list all the time,
+
+00:19:36.540 --> 00:19:38.488 align:middle line:84%
+here, I'm starting
+at I and going
+
+00:19:38.488 --> 00:19:39.780 align:middle line:90%
+through to the end of the list.
+
+00:19:39.780 --> 00:19:43.920 align:middle line:84%
+Because in selection
+sort, with each pass,
+
+00:19:43.920 --> 00:19:47.710 align:middle line:84%
+I've decided which element
+belongs at a specific index.
+
+00:19:47.710 --> 00:19:51.120 align:middle line:84%
+So I no longer need to worry
+about comparing that element
+
+00:19:51.120 --> 00:19:52.840 align:middle line:90%
+with everybody else.
+
+00:19:52.840 --> 00:19:55.590 align:middle line:84%
+So when we were
+like that, we had
+
+00:19:55.590 --> 00:19:57.510 align:middle line:84%
+decided these were
+in sorted order,
+
+00:19:57.510 --> 00:20:00.540 align:middle line:84%
+I only needed to compare
+these three amongst themselves
+
+00:20:00.540 --> 00:20:03.180 align:middle line:84%
+to decide which one
+fit at the next spot.
+
+00:20:03.180 --> 00:20:06.290 align:middle line:84%
+Everybody else was
+already sorted.
+
+00:20:06.290 --> 00:20:08.900 align:middle line:84%
+So what's the complexity
+analysis of this?
+
+00:20:08.900 --> 00:20:11.300 align:middle line:84%
+This is going to feel
+very similar to diameter
+
+00:20:11.300 --> 00:20:12.740 align:middle line:90%
+from last lecture.
+
+00:20:12.740 --> 00:20:14.840 align:middle line:84%
+Because diameter also
+had this funky thing
+
+00:20:14.840 --> 00:20:16.730 align:middle line:84%
+where we started from
+I and went through
+
+00:20:16.730 --> 00:20:19.250 align:middle line:90%
+to the length of the list.
+
+00:20:19.250 --> 00:20:22.310 align:middle line:84%
+Well, it's going to be theta
+of length L squared again.
+
+00:20:22.310 --> 00:20:25.610 align:middle line:84%
+So there's two ways to
+think about this, OK?
+
+00:20:25.610 --> 00:20:29.640 align:middle line:84%
+The first one is to look
+at each loop individually.
+
+00:20:29.640 --> 00:20:33.550 align:middle line:84%
+Clearly, the outer loop goes
+through theta of length L,
+
+00:20:33.550 --> 00:20:34.050 align:middle line:90%
+right?
+
+00:20:34.050 --> 00:20:35.340 align:middle line:90%
+No question about that.
+
+00:20:35.340 --> 00:20:37.007 align:middle line:84%
+That just goes through
+a range of length
+
+00:20:37.007 --> 00:20:39.580 align:middle line:84%
+L. The inner loop is a
+little bit trickier, right?
+
+00:20:39.580 --> 00:20:43.090 align:middle line:84%
+Because it doesn't always
+go from some fixed number
+
+00:20:43.090 --> 00:20:45.310 align:middle line:90%
+to the length of the list.
+
+00:20:45.310 --> 00:20:50.010 align:middle line:84%
+But what we can think
+about is on average, right?
+
+00:20:50.010 --> 00:20:53.070 align:middle line:84%
+The first time when we're
+trying to figure out
+
+00:20:53.070 --> 00:20:56.760 align:middle line:84%
+the element that belongs at
+the first index, or index 0,
+
+00:20:56.760 --> 00:20:58.800 align:middle line:84%
+we went through to the
+length of the list.
+
+00:20:58.800 --> 00:21:00.580 align:middle line:84%
+We had to compare
+with everybody else.
+
+00:21:00.580 --> 00:21:03.810 align:middle line:84%
+The next time we have to compare
+with the linked list minus 1,
+
+00:21:03.810 --> 00:21:05.490 align:middle line:90%
+then linked list minus 2.
+
+00:21:05.490 --> 00:21:08.940 align:middle line:84%
+And then, at the end, we
+only had one item to compare.
+
+00:21:08.940 --> 00:21:13.020 align:middle line:84%
+So on average, that inner
+loop goes through length L
+
+00:21:13.020 --> 00:21:14.340 align:middle line:90%
+over two times, right?
+
+00:21:14.340 --> 00:21:16.350 align:middle line:84%
+On average, we have to
+look through about half
+
+00:21:16.350 --> 00:21:22.960 align:middle line:84%
+of the elements in the
+list to do the comparison.
+
+00:21:22.960 --> 00:21:27.690 align:middle line:84%
+So if the inner loop here, on
+average, is theta of length
+
+00:21:27.690 --> 00:21:33.450 align:middle line:84%
+L-- is length L over 2, then
+the theta of length L over 2
+
+00:21:33.450 --> 00:21:39.780 align:middle line:84%
+is theta of length L. There's
+just a 0.5 in front of that.
+
+00:21:39.780 --> 00:21:41.990 align:middle line:84%
+So that's the first way to
+think about the complexity
+
+00:21:41.990 --> 00:21:43.280 align:middle line:90%
+analysis of this.
+
+00:21:43.280 --> 00:21:47.610 align:middle line:84%
+The other way is to
+ask yourself, well,
+
+00:21:47.610 --> 00:21:51.770 align:middle line:84%
+what part of this code
+is doing the repetitions?
+
+00:21:51.770 --> 00:21:53.780 align:middle line:84%
+If we were to think
+about what we're
+
+00:21:53.780 --> 00:21:57.200 align:middle line:84%
+counting in terms of units,
+which part of this code
+
+00:21:57.200 --> 00:21:57.900 align:middle line:90%
+repeats?
+
+00:21:57.900 --> 00:22:01.130 align:middle line:84%
+Well, the stuff inside the
+inner for loop repeats, right?
+
+00:22:01.130 --> 00:22:05.070 align:middle line:84%
+So you're going to do a
+whole bunch of comparisons.
+
+00:22:05.070 --> 00:22:09.100 align:middle line:84%
+So how many actual
+comparisons will you do?
+
+00:22:09.100 --> 00:22:14.290 align:middle line:84%
+Well, the very first time,
+from the outer first pass
+
+00:22:14.290 --> 00:22:16.030 align:middle line:84%
+through to the end
+of the list, you're
+
+00:22:16.030 --> 00:22:19.060 align:middle line:84%
+going to do approximately
+length L comparisons.
+
+00:22:19.060 --> 00:22:22.270 align:middle line:84%
+The next time you're going to
+do length L minus 1 comparisons,
+
+00:22:22.270 --> 00:22:24.160 align:middle line:84%
+then length L minus
+2 comparisons,
+
+00:22:24.160 --> 00:22:27.780 align:middle line:84%
+and so on and so on down
+to only one comparison.
+
+00:22:27.780 --> 00:22:30.020 align:middle line:84%
+So if we do that
+sum 1 plus 2 plus 3
+
+00:22:30.020 --> 00:22:33.050 align:middle line:84%
+plus all the way up
+to length L, the sum--
+
+00:22:33.050 --> 00:22:36.650 align:middle line:84%
+that formula becomes length L
+times length L plus 1 over 2,
+
+00:22:36.650 --> 00:22:40.970 align:middle line:84%
+so that becomes length L squared
+over 2 plus length L over 2,
+
+00:22:40.970 --> 00:22:45.840 align:middle line:84%
+and that becomes theta
+of length L squared.
+
+00:22:45.840 --> 00:22:47.270 align:middle line:84%
+So just a couple
+of ways to think
+
+00:22:47.270 --> 00:22:50.000 align:middle line:84%
+about the analysis
+of this and this
+
+00:22:50.000 --> 00:22:51.620 align:middle line:84%
+is a pretty common
+thing you'll see.
+
+00:22:51.620 --> 00:22:54.050 align:middle line:84%
+But just because we
+start at I doesn't
+
+00:22:54.050 --> 00:22:58.910 align:middle line:84%
+mean that it decreases the
+complexity of this function
+
+00:22:58.910 --> 00:22:59.780 align:middle line:90%
+dramatically.
+
+00:22:59.780 --> 00:23:01.520 align:middle line:84%
+It doesn't decrease
+it by some order,
+
+00:23:01.520 --> 00:23:03.950 align:middle line:84%
+it just decreases
+it by half, right?
+
+00:23:03.950 --> 00:23:10.850 align:middle line:90%
+So it's still theta of length L.
+
+00:23:10.850 --> 00:23:17.430 align:middle line:84%
+OK, so we can actually do
+a little variation on this.
+
+00:23:17.430 --> 00:23:21.210 align:middle line:84%
+Because you might have noticed
+it was a little inefficient
+
+00:23:21.210 --> 00:23:24.240 align:middle line:84%
+to do the swap every time
+I noticed another element
+
+00:23:24.240 --> 00:23:26.220 align:middle line:90%
+that's smaller, right?
+
+00:23:26.220 --> 00:23:28.920 align:middle line:90%
+I didn't have to do the switch.
+
+00:23:28.920 --> 00:23:32.130 align:middle line:84%
+All I had to do was
+kind of just keep track
+
+00:23:32.130 --> 00:23:34.830 align:middle line:84%
+through a variable of
+the smallest number
+
+00:23:34.830 --> 00:23:38.820 align:middle line:84%
+that I have seen so far, and
+only do the switch at the end
+
+00:23:38.820 --> 00:23:42.150 align:middle line:84%
+when I've determined that
+that's the smallest number.
+
+00:23:42.150 --> 00:23:44.950 align:middle line:84%
+So the variation, basically,
+if this is my list says,
+
+00:23:44.950 --> 00:23:47.610 align:middle line:84%
+hey, I'm going to look at
+this element that belongs
+
+00:23:47.610 --> 00:23:49.620 align:middle line:90%
+in this very first slot.
+
+00:23:49.620 --> 00:23:50.880 align:middle line:90%
+8 is the first one.
+
+00:23:50.880 --> 00:23:52.980 align:middle line:84%
+Then I'm going to look
+through the elements
+
+00:23:52.980 --> 00:23:54.600 align:middle line:84%
+all the way up to
+the end of the list
+
+00:23:54.600 --> 00:23:56.250 align:middle line:84%
+and keep track of
+the smallest one.
+
+00:23:56.250 --> 00:24:00.270 align:middle line:84%
+The 4, the 1 is currently
+smallest, 6 is not, 5 is not,
+
+00:24:00.270 --> 00:24:03.180 align:middle line:84%
+9 is not, 2 is not, the
+0 is smaller than the 1.
+
+00:24:03.180 --> 00:24:06.600 align:middle line:84%
+So if I see the 0 is
+smallest, then I swap it.
+
+00:24:06.600 --> 00:24:09.010 align:middle line:84%
+So I only do one
+swap at the end.
+
+00:24:09.010 --> 00:24:10.860 align:middle line:84%
+Next time through, I'm
+going to decide which
+
+00:24:10.860 --> 00:24:12.300 align:middle line:90%
+element belongs at this index.
+
+00:24:12.300 --> 00:24:16.750 align:middle line:84%
+The 1 is the smallest I see, so
+I do the swap only at the end.
+
+00:24:16.750 --> 00:24:18.670 align:middle line:84%
+Then I decide which
+element belongs here.
+
+00:24:18.670 --> 00:24:20.740 align:middle line:84%
+The 2 is smallest out
+of everybody left,
+
+00:24:20.740 --> 00:24:22.010 align:middle line:90%
+the 2 goes there.
+
+00:24:22.010 --> 00:24:24.430 align:middle line:84%
+So I'm doing all
+these comparisons,
+
+00:24:24.430 --> 00:24:29.210 align:middle line:84%
+but I only do the swap at the
+end when I've decided, hey,
+
+00:24:29.210 --> 00:24:30.700 align:middle line:90%
+this is the smallest element.
+
+00:24:30.700 --> 00:24:33.918 align:middle line:84%
+Let me just swap it with the one
+that's currently there, right?
+
+00:24:33.918 --> 00:24:36.085 align:middle line:84%
+So it's just going to go
+through to the end of that.
+
+00:24:36.085 --> 00:24:39.530 align:middle line:90%
+
+
+00:24:39.530 --> 00:24:44.670 align:middle line:84%
+OK, so I wrote that
+variation here.
+
+00:24:44.670 --> 00:24:50.640 align:middle line:84%
+So this is selection
+sort, just as we saw it.
+
+00:24:50.640 --> 00:24:55.070 align:middle line:84%
+So we can see here that the
+first pass with the outer loop
+
+00:24:55.070 --> 00:25:00.890 align:middle line:84%
+we have length L comparisons
+to make because we're always
+
+00:25:00.890 --> 00:25:04.400 align:middle line:84%
+comparing these two than
+the one that's currently
+
+00:25:04.400 --> 00:25:06.603 align:middle line:90%
+at this index and the--
+
+00:25:06.603 --> 00:25:08.270 align:middle line:84%
+one index over, the
+one that's currently
+
+00:25:08.270 --> 00:25:11.280 align:middle line:84%
+at this index and one
+index over and so on.
+
+00:25:11.280 --> 00:25:14.330 align:middle line:84%
+So the first pass I've
+done length L swaps--
+
+00:25:14.330 --> 00:25:16.370 align:middle line:90%
+or sorry, length L comparisons.
+
+00:25:16.370 --> 00:25:20.390 align:middle line:84%
+The next pass, I've done
+length L minus 1 comparisons
+
+00:25:20.390 --> 00:25:22.310 align:middle line:84%
+because I don't need to
+look at the 0 anymore.
+
+00:25:22.310 --> 00:25:24.080 align:middle line:84%
+I already know that's
+in the right place.
+
+00:25:24.080 --> 00:25:27.650 align:middle line:84%
+Then after that, I do length
+L minus two comparisons, then
+
+00:25:27.650 --> 00:25:29.250 align:middle line:84%
+length L minus
+three comparisons.
+
+00:25:29.250 --> 00:25:32.540 align:middle line:84%
+So you can see, as
+we're making progress
+
+00:25:32.540 --> 00:25:35.960 align:middle line:84%
+through our outer loop, we have
+fewer and fewer comparisons
+
+00:25:35.960 --> 00:25:36.650 align:middle line:90%
+to do.
+
+00:25:36.650 --> 00:25:39.590 align:middle line:84%
+So you might think that
+this is much better,
+
+00:25:39.590 --> 00:25:43.390 align:middle line:84%
+but the theta complexity
+analysis says it's not.
+
+00:25:43.390 --> 00:25:45.460 align:middle line:84%
+So that's the original
+selection sort.
+
+00:25:45.460 --> 00:25:50.770 align:middle line:84%
+And the variation
+on selection sort
+
+00:25:50.770 --> 00:25:55.210 align:middle line:84%
+looks a little more complicated,
+but it's not doing a swap.
+
+00:25:55.210 --> 00:25:58.960 align:middle line:84%
+So it's only doing a swap
+down here, as you can see.
+
+00:25:58.960 --> 00:26:02.410 align:middle line:84%
+It's doing it after it
+finishes this inner for loop.
+
+00:26:02.410 --> 00:26:06.910 align:middle line:84%
+And all this inner for
+loop is doing is checking--
+
+00:26:06.910 --> 00:26:09.220 align:middle line:84%
+is doing the
+comparisons and keeping
+
+00:26:09.220 --> 00:26:12.880 align:middle line:84%
+track of the smallest number
+it sees in this variable
+
+00:26:12.880 --> 00:26:14.470 align:middle line:90%
+called smallest.
+
+00:26:14.470 --> 00:26:17.830 align:middle line:84%
+And the index associated
+with that smallest variable
+
+00:26:17.830 --> 00:26:21.420 align:middle line:90%
+in smallest J.
+
+00:26:21.420 --> 00:26:24.090 align:middle line:84%
+Now, if we look at
+the analysis for this,
+
+00:26:24.090 --> 00:26:27.060 align:middle line:84%
+well, we still have
+an outer for loop
+
+00:26:27.060 --> 00:26:28.800 align:middle line:84%
+that goes through
+length L. We still
+
+00:26:28.800 --> 00:26:33.180 align:middle line:84%
+have an inner for loop that
+goes from I to length L. All
+
+00:26:33.180 --> 00:26:36.420 align:middle line:84%
+it's doing is eliminating
+this line here.
+
+00:26:36.420 --> 00:26:39.420 align:middle line:84%
+It does it only once at
+the end, but it's still
+
+00:26:39.420 --> 00:26:41.250 align:middle line:90%
+doing all these comparisons.
+
+00:26:41.250 --> 00:26:44.820 align:middle line:84%
+It still has to look through
+all of these elements one pair
+
+00:26:44.820 --> 00:26:46.450 align:middle line:90%
+by pair to do the comparison.
+
+00:26:46.450 --> 00:26:49.140 align:middle line:84%
+So actually, this
+slight speed up
+
+00:26:49.140 --> 00:26:52.860 align:middle line:84%
+doesn't have a big impact
+on my theta complexity.
+
+00:26:52.860 --> 00:26:55.695 align:middle line:84%
+It's still going to be
+theta of length L squared.
+
+00:26:55.695 --> 00:27:00.140 align:middle line:90%
+
+
+00:27:00.140 --> 00:27:04.720 align:middle line:84%
+Any questions so far on
+these sorting algorithms?
+
+00:27:04.720 --> 00:27:10.950 align:middle line:90%
+
+
+00:27:10.950 --> 00:27:14.670 align:middle line:84%
+So clearly, we're not
+really doing a very good job
+
+00:27:14.670 --> 00:27:20.940 align:middle line:84%
+about thinking of a unique
+way to do the sorting, right?
+
+00:27:20.940 --> 00:27:24.270 align:middle line:84%
+Because all of these
+different variations where
+
+00:27:24.270 --> 00:27:25.890 align:middle line:84%
+we're doing slight
+speed ups here
+
+00:27:25.890 --> 00:27:29.820 align:middle line:84%
+and there aren't doing a
+drastic enough job to bring us
+
+00:27:29.820 --> 00:27:32.820 align:middle line:90%
+a whole complexity class lower.
+
+00:27:32.820 --> 00:27:35.220 align:middle line:84%
+So we have to think
+about the problem
+
+00:27:35.220 --> 00:27:36.970 align:middle line:90%
+in a completely different way.
+
+00:27:36.970 --> 00:27:41.460 align:middle line:84%
+So the iterative approach
+is not working out for us,
+
+00:27:41.460 --> 00:27:45.450 align:middle line:84%
+where we basically have a loop
+that does something and then
+
+00:27:45.450 --> 00:27:47.940 align:middle line:84%
+another loop that does some
+sort of comparison, right?
+
+00:27:47.940 --> 00:27:51.990 align:middle line:84%
+That's not going to get
+us a whole complexity
+
+00:27:51.990 --> 00:27:53.620 align:middle line:90%
+class speed up.
+
+00:27:53.620 --> 00:27:55.560 align:middle line:84%
+So instead, what
+we're going to do
+
+00:27:55.560 --> 00:28:02.220 align:middle line:84%
+is approach the problem from
+a sort of inspired by binary--
+
+00:28:02.220 --> 00:28:04.770 align:middle line:84%
+bisection search,
+or binary search.
+
+00:28:04.770 --> 00:28:07.860 align:middle line:84%
+In bisection search,
+we weren't looking
+
+00:28:07.860 --> 00:28:09.570 align:middle line:90%
+at each element one at a time.
+
+00:28:09.570 --> 00:28:14.560 align:middle line:84%
+We were taking our list and
+dividing it in half, right?
+
+00:28:14.560 --> 00:28:17.680 align:middle line:84%
+So we can try to do a
+similar approach here,
+
+00:28:17.680 --> 00:28:20.230 align:middle line:84%
+and that's what this
+merge sort algorithm does.
+
+00:28:20.230 --> 00:28:22.990 align:middle line:84%
+It's going to take
+an original list
+
+00:28:22.990 --> 00:28:28.190 align:middle line:84%
+and it's going to divide this
+list in half with each step.
+
+00:28:28.190 --> 00:28:31.210 align:middle line:84%
+And it's going to
+do this recursively.
+
+00:28:31.210 --> 00:28:33.210 align:middle line:84%
+It's going to be a divide
+and conquer algorithm.
+
+00:28:33.210 --> 00:28:34.668 align:middle line:84%
+So it's going to
+recursively divide
+
+00:28:34.668 --> 00:28:36.200 align:middle line:90%
+this list in half each step.
+
+00:28:36.200 --> 00:28:41.720 align:middle line:84%
+And then, it's going to merge
+sorted lists in a really smart
+
+00:28:41.720 --> 00:28:44.660 align:middle line:84%
+way such that it'll give
+us the speedup that we're
+
+00:28:44.660 --> 00:28:46.080 align:middle line:90%
+interested in.
+
+00:28:46.080 --> 00:28:48.770 align:middle line:84%
+So let me explain to you
+how we're going to merge it.
+
+00:28:48.770 --> 00:28:54.600 align:middle line:84%
+And then, we'll see how we can
+write up this whole algorithm.
+
+00:28:54.600 --> 00:28:58.670 align:middle line:90%
+So let's say that we have--
+
+00:28:58.670 --> 00:28:59.760 align:middle line:90%
+let's do this.
+
+00:28:59.760 --> 00:29:07.020 align:middle line:84%
+Let's say that we've done
+some sort of division
+
+00:29:07.020 --> 00:29:08.850 align:middle line:90%
+of lists, right?
+
+00:29:08.850 --> 00:29:11.280 align:middle line:84%
+And let's say that we've
+written this algorithm
+
+00:29:11.280 --> 00:29:14.220 align:middle line:84%
+and it works really
+nicely in such a way
+
+00:29:14.220 --> 00:29:21.180 align:middle line:84%
+that it gives us two
+sorted lists, all right?
+
+00:29:21.180 --> 00:29:26.730 align:middle line:84%
+So if somehow my algorithm
+where I had one full list of all
+
+00:29:26.730 --> 00:29:30.670 align:middle line:84%
+of these eight elements
+here divided itself,
+
+00:29:30.670 --> 00:29:34.860 align:middle line:84%
+and when it came back together
+it gave me two sublists
+
+00:29:34.860 --> 00:29:38.710 align:middle line:84%
+that themselves are sorted,
+so this is a sorted list
+
+00:29:38.710 --> 00:29:41.590 align:middle line:84%
+and this is a sorted
+list by itself.
+
+00:29:41.590 --> 00:29:47.500 align:middle line:84%
+Then, there's this really smart
+merge step that we can do.
+
+00:29:47.500 --> 00:29:51.560 align:middle line:84%
+So we can recognize that if
+this list is sorted by itself
+
+00:29:51.560 --> 00:29:54.310 align:middle line:84%
+and this list is
+sorted by itself,
+
+00:29:54.310 --> 00:29:58.060 align:middle line:84%
+to determine the element that
+is the smallest between both
+
+00:29:58.060 --> 00:29:59.920 align:middle line:84%
+of these lists,
+all we have to do
+
+00:29:59.920 --> 00:30:02.410 align:middle line:84%
+is look at the first
+element of each list--
+
+00:30:02.410 --> 00:30:03.730 align:middle line:90%
+each sublist, right?
+
+00:30:03.730 --> 00:30:05.470 align:middle line:84%
+This is the smallest
+out of these guys.
+
+00:30:05.470 --> 00:30:07.095 align:middle line:84%
+This is the smallest
+out of these guys.
+
+00:30:07.095 --> 00:30:08.680 align:middle line:84%
+So if I just compare
+the 0 and the 4,
+
+00:30:08.680 --> 00:30:13.640 align:middle line:84%
+I know the 0 will be
+smallest out of everything.
+
+00:30:13.640 --> 00:30:17.120 align:middle line:84%
+Then, I'm left with this
+list, it's still sorted.
+
+00:30:17.120 --> 00:30:17.840 align:middle line:90%
+This list, it's.
+
+00:30:17.840 --> 00:30:21.410 align:middle line:84%
+Still sorted I look at the first
+element of each of these lists.
+
+00:30:21.410 --> 00:30:23.120 align:middle line:84%
+Which one of these
+is the smallest?
+
+00:30:23.120 --> 00:30:25.010 align:middle line:84%
+Well, the 1 is
+smaller than the 4.
+
+00:30:25.010 --> 00:30:27.320 align:middle line:84%
+So I'm going to take
+this one and say
+
+00:30:27.320 --> 00:30:28.580 align:middle line:90%
+this one comes next, right?
+
+00:30:28.580 --> 00:30:30.560 align:middle line:84%
+So we're using the
+property that these two
+
+00:30:30.560 --> 00:30:32.280 align:middle line:90%
+lists themselves are sorted.
+
+00:30:32.280 --> 00:30:36.080 align:middle line:84%
+So all I need to do is compare
+the first element of each list.
+
+00:30:36.080 --> 00:30:37.820 align:middle line:90%
+Then I compare th 2 and the 4.
+
+00:30:37.820 --> 00:30:39.590 align:middle line:84%
+I say the 2 is
+smaller than the 4.
+
+00:30:39.590 --> 00:30:41.900 align:middle line:84%
+The 6 and the 4,
+the 4 goes next.
+
+00:30:41.900 --> 00:30:43.850 align:middle line:84%
+The 6 and the 5,
+the 5 goes here.
+
+00:30:43.850 --> 00:30:46.460 align:middle line:90%
+6 and the 8, 6 goes here.
+
+00:30:46.460 --> 00:30:49.200 align:middle line:84%
+8 and the 11, well, they're
+already in sorted order
+
+00:30:49.200 --> 00:30:50.900 align:middle line:90%
+so we're done.
+
+00:30:50.900 --> 00:30:55.040 align:middle line:84%
+So that really smart merge
+step touched every element
+
+00:30:55.040 --> 00:30:59.570 align:middle line:84%
+only once to bring it into
+my master sorted list.
+
+00:30:59.570 --> 00:31:01.430 align:middle line:84%
+I didn't have to
+do multiple passes.
+
+00:31:01.430 --> 00:31:05.190 align:middle line:84%
+I just had to look at the
+first element of each list.
+
+00:31:05.190 --> 00:31:09.350 align:middle line:84%
+So if we can somehow
+get to this point
+
+00:31:09.350 --> 00:31:12.200 align:middle line:84%
+where we have these two
+sublists that are sorted,
+
+00:31:12.200 --> 00:31:15.860 align:middle line:84%
+I can just do a little merge
+by looking at the first element
+
+00:31:15.860 --> 00:31:17.600 align:middle line:90%
+in each of these sorted lists.
+
+00:31:17.600 --> 00:31:21.290 align:middle line:84%
+And that, basically, gives
+me a theta of n complexity
+
+00:31:21.290 --> 00:31:24.410 align:middle line:84%
+to do the merge from
+to smaller sorted lists
+
+00:31:24.410 --> 00:31:27.740 align:middle line:90%
+into one big sorted list, right?
+
+00:31:27.740 --> 00:31:30.290 align:middle line:84%
+So here's the idea of
+this merge sort algorithm.
+
+00:31:30.290 --> 00:31:34.160 align:middle line:84%
+We're going to take an original
+big unsorted list containing
+
+00:31:34.160 --> 00:31:35.960 align:middle line:90%
+n elements.
+
+00:31:35.960 --> 00:31:37.190 align:middle line:90%
+It's unsorted.
+
+00:31:37.190 --> 00:31:39.350 align:middle line:84%
+We're going to
+divide it in half.
+
+00:31:39.350 --> 00:31:42.480 align:middle line:84%
+Of course, these two halves,
+there's no order to them,
+
+00:31:42.480 --> 00:31:44.840 align:middle line:84%
+so they are potentially
+very unsorted.
+
+00:31:44.840 --> 00:31:46.800 align:middle line:84%
+We're going to take
+each one of those halves
+
+00:31:46.800 --> 00:31:48.500 align:middle line:90%
+and divide them as well in half.
+
+00:31:48.500 --> 00:31:50.580 align:middle line:90%
+More unsorted sublists.
+
+00:31:50.580 --> 00:31:54.390 align:middle line:84%
+Now, I've got four unsorted
+sublists of smaller lengths.
+
+00:31:54.390 --> 00:31:57.520 align:middle line:84%
+Then I'm going to keep
+dividing them in half.
+
+00:31:57.520 --> 00:31:59.970 align:middle line:84%
+I have now maybe
+just two elements
+
+00:31:59.970 --> 00:32:01.922 align:middle line:90%
+in each of these unsorted lists.
+
+00:32:01.922 --> 00:32:03.630 align:middle line:84%
+There's no guarantee
+that they're sorted.
+
+00:32:03.630 --> 00:32:05.970 align:middle line:84%
+And then, I divide
+it in half once more
+
+00:32:05.970 --> 00:32:11.120 align:middle line:84%
+to have a list with
+one element in each--
+
+00:32:11.120 --> 00:32:12.120 align:middle line:90%
+a list with one element.
+
+00:32:12.120 --> 00:32:16.110 align:middle line:84%
+Maybe some of these
+will be empty.
+
+00:32:16.110 --> 00:32:18.270 align:middle line:84%
+So then, if I can
+get to this point
+
+00:32:18.270 --> 00:32:19.920 align:middle line:84%
+where I just have
+lists containing
+
+00:32:19.920 --> 00:32:22.710 align:middle line:84%
+one element in each
+list, those lists
+
+00:32:22.710 --> 00:32:24.180 align:middle line:90%
+themselves are sorted, right?
+
+00:32:24.180 --> 00:32:27.060 align:middle line:84%
+An element with just a 1 in
+it-- a list with just a 1 in it
+
+00:32:27.060 --> 00:32:29.530 align:middle line:90%
+is sorted.
+
+00:32:29.530 --> 00:32:32.440 align:middle line:84%
+So then, I can begin a
+merge step, which says,
+
+00:32:32.440 --> 00:32:36.510 align:middle line:84%
+hey, these two here that
+were originally unsorted,
+
+00:32:36.510 --> 00:32:39.210 align:middle line:84%
+let's just merge
+the pairs back up.
+
+00:32:39.210 --> 00:32:43.920 align:middle line:84%
+And we'll do that
+smart merge way, right?
+
+00:32:43.920 --> 00:32:47.490 align:middle line:84%
+So these two will merge
+back in to give me
+
+00:32:47.490 --> 00:32:52.140 align:middle line:84%
+all of these eight sorted
+lists of length two.
+
+00:32:52.140 --> 00:32:55.230 align:middle line:84%
+And then, we're going to
+merge these pairs back
+
+00:32:55.230 --> 00:33:01.290 align:middle line:84%
+up, again, using that
+smart merge way to give me
+
+00:33:01.290 --> 00:33:03.180 align:middle line:90%
+four sorted lists.
+
+00:33:03.180 --> 00:33:07.020 align:middle line:84%
+And then, we're going to merge
+these pairs of sorted lists
+
+00:33:07.020 --> 00:33:09.750 align:middle line:90%
+to give me bigger sorted lists.
+
+00:33:09.750 --> 00:33:11.160 align:middle line:84%
+And finally, we're
+going to merge
+
+00:33:11.160 --> 00:33:15.780 align:middle line:84%
+these two sorted lists to give
+me my final master sorted list,
+
+00:33:15.780 --> 00:33:16.680 align:middle line:90%
+OK?
+
+00:33:16.680 --> 00:33:23.440 align:middle line:84%
+So let's do the process of
+doing the sort a step at a time.
+
+00:33:23.440 --> 00:33:30.620 align:middle line:84%
+So we're going to take our
+original list like this.
+
+00:33:30.620 --> 00:33:34.030 align:middle line:84%
+I'm actually going
+to try to do this.
+
+00:33:34.030 --> 00:33:36.200 align:middle line:84%
+I'm going to need some
+room to move them down.
+
+00:33:36.200 --> 00:33:39.810 align:middle line:84%
+So this is my original
+unsorted list.
+
+00:33:39.810 --> 00:33:41.410 align:middle line:90%
+Let's move this here.
+
+00:33:41.410 --> 00:33:44.100 align:middle line:90%
+Something like that.
+
+00:33:44.100 --> 00:33:45.860 align:middle line:84%
+So what's the
+process going to be?
+
+00:33:45.860 --> 00:33:49.790 align:middle line:84%
+Step one is to
+divide them in half.
+
+00:33:49.790 --> 00:33:54.420 align:middle line:84%
+Step two, divide each
+of these in half.
+
+00:33:54.420 --> 00:33:57.670 align:middle line:84%
+Step three, divide
+each of them in half.
+
+00:33:57.670 --> 00:34:01.540 align:middle line:84%
+So now I've got a bunch of lists
+with only one element in it.
+
+00:34:01.540 --> 00:34:03.890 align:middle line:84%
+Now, I need to
+merge them back up.
+
+00:34:03.890 --> 00:34:06.520 align:middle line:84%
+So merging these two
+together to give me
+
+00:34:06.520 --> 00:34:09.699 align:middle line:84%
+a list with two elements says,
+I'm just going to compare them.
+
+00:34:09.699 --> 00:34:11.199 align:middle line:84%
+The one that's
+smaller goes first.
+
+00:34:11.199 --> 00:34:13.630 align:middle line:84%
+The one that's
+bigger goes second.
+
+00:34:13.630 --> 00:34:15.633 align:middle line:90%
+Again, these ones, compare them.
+
+00:34:15.633 --> 00:34:17.050 align:middle line:84%
+The one that's
+smaller goes first.
+
+00:34:17.050 --> 00:34:18.820 align:middle line:84%
+The one that's
+bigger goals second.
+
+00:34:18.820 --> 00:34:21.219 align:middle line:90%
+Again, compare them.
+
+00:34:21.219 --> 00:34:22.850 align:middle line:90%
+Again, compare them.
+
+00:34:22.850 --> 00:34:27.790 align:middle line:84%
+So now I've done one merge
+where I have four lists that are
+
+00:34:27.790 --> 00:34:30.790 align:middle line:90%
+sorted by themselves, right?
+
+00:34:30.790 --> 00:34:33.250 align:middle line:84%
+So now I'm going to
+merge these two together
+
+00:34:33.250 --> 00:34:35.750 align:middle line:90%
+and these two together.
+
+00:34:35.750 --> 00:34:38.350 align:middle line:84%
+So I'm only looking at
+the first element of each.
+
+00:34:38.350 --> 00:34:40.300 align:middle line:84%
+So I compare the 0
+and the 2, and I know
+
+00:34:40.300 --> 00:34:43.179 align:middle line:90%
+the 0 is smaller than the 2.
+
+00:34:43.179 --> 00:34:46.060 align:middle line:84%
+Then the 2 and the
+8, the 2 is smaller.
+
+00:34:46.060 --> 00:34:48.980 align:middle line:84%
+Then the 8 and the
+11, and then the 11.
+
+00:34:48.980 --> 00:34:53.350 align:middle line:84%
+So now, this list is
+now sorted by itself.
+
+00:34:53.350 --> 00:34:56.739 align:middle line:84%
+Same process here, compare only
+the first element of each list.
+
+00:34:56.739 --> 00:35:01.390 align:middle line:84%
+The 1 comes first then the 4
+comes next then the 5 comes
+
+00:35:01.390 --> 00:35:04.090 align:middle line:90%
+next and then the 6, right?
+
+00:35:04.090 --> 00:35:06.580 align:middle line:84%
+So now, I've reached
+the exact same spot
+
+00:35:06.580 --> 00:35:09.550 align:middle line:84%
+I was at when I was talking
+about the merge step, right?
+
+00:35:09.550 --> 00:35:13.010 align:middle line:84%
+When I showed you that we
+could get to that spot.
+
+00:35:13.010 --> 00:35:16.597 align:middle line:84%
+So I've got these two lists that
+are themselves sorted to merge.
+
+00:35:16.597 --> 00:35:19.180 align:middle line:84%
+So all I need to do is look at
+the first element in each list.
+
+00:35:19.180 --> 00:35:21.340 align:middle line:90%
+So there's my 0 goes first.
+
+00:35:21.340 --> 00:35:23.590 align:middle line:84%
+1 compared with the
+2, the 1 goes next.
+
+00:35:23.590 --> 00:35:25.750 align:middle line:84%
+2 compared the 4,
+the 2 goes next.
+
+00:35:25.750 --> 00:35:27.850 align:middle line:84%
+4 compared with the
+8, the 4 goes next.
+
+00:35:27.850 --> 00:35:30.130 align:middle line:84%
+5 compared with the
+8, the 5 goes next.
+
+00:35:30.130 --> 00:35:32.500 align:middle line:84%
+6 compared with the
+8, the 6 goes next.
+
+00:35:32.500 --> 00:35:35.570 align:middle line:84%
+And I've removed all the
+elements in this list,
+
+00:35:35.570 --> 00:35:37.210 align:middle line:84%
+so I know I just
+need to grab whatever
+
+00:35:37.210 --> 00:35:38.800 align:middle line:84%
+is left in here
+in whatever order
+
+00:35:38.800 --> 00:35:43.600 align:middle line:84%
+it's there because everything's
+already sorted, OK?
+
+00:35:43.600 --> 00:35:47.500 align:middle line:84%
+So that's the entire merge
+sort algorithm, right?
+
+00:35:47.500 --> 00:35:50.410 align:middle line:84%
+Now if I do this
+demo, this is actually
+
+00:35:50.410 --> 00:35:52.300 align:middle line:84%
+going to show you
+the exact steps
+
+00:35:52.300 --> 00:35:54.530 align:middle line:84%
+that the recursive
+algorithm is doing.
+
+00:35:54.530 --> 00:35:57.520 align:middle line:84%
+And it's not going to be in the
+same order that I showed you.
+
+00:35:57.520 --> 00:36:01.180 align:middle line:84%
+It's not going to be
+dividing this in half
+
+00:36:01.180 --> 00:36:03.430 align:middle line:84%
+and then dividing
+in half and so on.
+
+00:36:03.430 --> 00:36:06.790 align:middle line:84%
+Because when we're
+doing the recursion,
+
+00:36:06.790 --> 00:36:12.460 align:middle line:84%
+first, we're going to figure out
+how to a left sublist, right?
+
+00:36:12.460 --> 00:36:15.100 align:middle line:84%
+So if I have my original
+unsorted list here,
+
+00:36:15.100 --> 00:36:18.840 align:middle line:84%
+we're going to figure out
+how to a left sublist first.
+
+00:36:18.840 --> 00:36:21.270 align:middle line:84%
+That's a recursive
+step that we haven't
+
+00:36:21.270 --> 00:36:22.890 align:middle line:90%
+reached the base case for yet.
+
+00:36:22.890 --> 00:36:24.570 align:middle line:90%
+We still have to sort this list.
+
+00:36:24.570 --> 00:36:28.808 align:middle line:84%
+So we're going to try to the
+left sublist of this one.
+
+00:36:28.808 --> 00:36:31.350 align:middle line:84%
+And then, we're going to try to
+the left sublist of this one.
+
+00:36:31.350 --> 00:36:32.880 align:middle line:84%
+So we're going to
+do something that
+
+00:36:32.880 --> 00:36:38.100 align:middle line:84%
+feels really similar to
+the Fibonacci sequence--
+
+00:36:38.100 --> 00:36:39.510 align:middle line:90%
+yes, Fibonacci, right?
+
+00:36:39.510 --> 00:36:41.940 align:middle line:84%
+Fibonacci of n is
+Fibonacci of n minus 1
+
+00:36:41.940 --> 00:36:44.460 align:middle line:84%
+plus Fibonacci of
+n minus 2, right?
+
+00:36:44.460 --> 00:36:46.800 align:middle line:84%
+In that particular
+case, when we were
+
+00:36:46.800 --> 00:36:50.040 align:middle line:84%
+trying to find Fibonacci of
+6 or something like that,
+
+00:36:50.040 --> 00:36:54.810 align:middle line:84%
+we were going and exploring
+the left side until we
+
+00:36:54.810 --> 00:36:57.450 align:middle line:90%
+reached a base case, right?
+
+00:36:57.450 --> 00:36:59.850 align:middle line:84%
+And only once we reached
+the base case could
+
+00:36:59.850 --> 00:37:02.560 align:middle line:90%
+we pop up and do the other half.
+
+00:37:02.560 --> 00:37:05.680 align:middle line:84%
+And so this algorithm is going
+to feel very similar to that.
+
+00:37:05.680 --> 00:37:07.470 align:middle line:90%
+So here's my original list.
+
+00:37:07.470 --> 00:37:09.630 align:middle line:84%
+I'm splitting the
+left hand side to try
+
+00:37:09.630 --> 00:37:12.840 align:middle line:84%
+to figure out how
+to merge those all
+
+00:37:12.840 --> 00:37:15.190 align:middle line:90%
+the way to those left lists.
+
+00:37:15.190 --> 00:37:16.860 align:middle line:84%
+So the 8 and the 4
+will be compared,
+
+00:37:16.860 --> 00:37:18.940 align:middle line:90%
+and the 4 goes before the 8.
+
+00:37:18.940 --> 00:37:20.680 align:middle line:84%
+And then, I'm going
+to merge the-- then
+
+00:37:20.680 --> 00:37:23.710 align:middle line:84%
+I'm going to merge the 1
+and the 6 by themselves.
+
+00:37:23.710 --> 00:37:26.170 align:middle line:84%
+Those are already
+sorted, as we know.
+
+00:37:26.170 --> 00:37:28.600 align:middle line:84%
+Then we're going to merge
+the 4 and the 8 back
+
+00:37:28.600 --> 00:37:31.490 align:middle line:84%
+with the 1 and the 6
+using that merge step.
+
+00:37:31.490 --> 00:37:34.180 align:middle line:84%
+And then, we're going to do the
+same thing to that right hand
+
+00:37:34.180 --> 00:37:36.760 align:middle line:90%
+side one at a time.
+
+00:37:36.760 --> 00:37:39.250 align:middle line:84%
+We'll do another
+example where we go step
+
+00:37:39.250 --> 00:37:41.980 align:middle line:90%
+by step through this.
+
+00:37:41.980 --> 00:37:44.707 align:middle line:84%
+And now we've got our
+2, 4 elements together.
+
+00:37:44.707 --> 00:37:46.540 align:middle line:84%
+So now we're just doing
+our final merge step
+
+00:37:46.540 --> 00:37:52.730 align:middle line:84%
+where we decide which
+one belongs next, OK?
+
+00:37:52.730 --> 00:37:56.150 align:middle line:90%
+So let's look at the merge code.
+
+00:37:56.150 --> 00:37:59.120 align:middle line:90%
+And this is-- not yet, sorry.
+
+00:37:59.120 --> 00:38:01.460 align:middle line:84%
+Let's look at the
+merge step once more.
+
+00:38:01.460 --> 00:38:04.760 align:middle line:84%
+So if I have two lists
+that I'm trying to merge,
+
+00:38:04.760 --> 00:38:07.470 align:middle line:84%
+the idea was that you look
+at the first element of each,
+
+00:38:07.470 --> 00:38:07.970 align:middle line:90%
+right?
+
+00:38:07.970 --> 00:38:09.890 align:middle line:84%
+So first the 1
+and the 2 compared
+
+00:38:09.890 --> 00:38:13.130 align:middle line:84%
+means the 1 is smaller,
+so it goes into my result.
+
+00:38:13.130 --> 00:38:16.040 align:middle line:84%
+The 5 and the 2 gets
+compared, the 2 is smaller,
+
+00:38:16.040 --> 00:38:18.530 align:middle line:90%
+so the 2 goes into the result.
+
+00:38:18.530 --> 00:38:21.590 align:middle line:84%
+The 5 and the 3 gets
+compared, the 3 is smaller,
+
+00:38:21.590 --> 00:38:24.720 align:middle line:84%
+so the 3 goes in the
+result and so on and so on.
+
+00:38:24.720 --> 00:38:26.780 align:middle line:84%
+So we keep doing this
+process where we just
+
+00:38:26.780 --> 00:38:29.000 align:middle line:84%
+keep looking at
+the first element
+
+00:38:29.000 --> 00:38:33.620 align:middle line:84%
+until we have one of the
+lists become empty, right?
+
+00:38:33.620 --> 00:38:36.620 align:middle line:84%
+So this is my left sublist,
+this is my right sublist.
+
+00:38:36.620 --> 00:38:38.870 align:middle line:84%
+When one of these
+lists becomes empty,
+
+00:38:38.870 --> 00:38:42.680 align:middle line:84%
+I no longer need to compare
+18 with nothing, right?
+
+00:38:42.680 --> 00:38:44.900 align:middle line:84%
+All I need to do is
+grab all these elements
+
+00:38:44.900 --> 00:38:48.740 align:middle line:84%
+and stick them
+through at the end.
+
+00:38:48.740 --> 00:38:51.910 align:middle line:84%
+So let's look at the code
+for just the merge step.
+
+00:38:51.910 --> 00:38:54.280 align:middle line:84%
+We don't need to look at the
+code for the full algorithm
+
+00:38:54.280 --> 00:38:54.970 align:middle line:90%
+yet.
+
+00:38:54.970 --> 00:38:58.420 align:middle line:84%
+But the merge step
+code is just the part
+
+00:38:58.420 --> 00:39:01.540 align:middle line:84%
+that takes us from
+two sorted lists
+
+00:39:01.540 --> 00:39:04.790 align:middle line:90%
+into one bigger sorted list.
+
+00:39:04.790 --> 00:39:09.520 align:middle line:90%
+So it does that step in one.
+
+00:39:09.520 --> 00:39:12.230 align:middle line:84%
+This is where the
+main event happens.
+
+00:39:12.230 --> 00:39:16.690 align:middle line:84%
+So this is just going to
+use indices to compare which
+
+00:39:16.690 --> 00:39:19.420 align:middle line:90%
+element we need to grab next.
+
+00:39:19.420 --> 00:39:24.370 align:middle line:84%
+So if I have
+something like this--
+
+00:39:24.370 --> 00:39:25.780 align:middle line:90%
+like that, right?
+
+00:39:25.780 --> 00:39:29.200 align:middle line:84%
+Then I'm not actually going
+to make a copy of a list
+
+00:39:29.200 --> 00:39:33.010 align:middle line:84%
+or do any sort of funky
+stuff with list copying
+
+00:39:33.010 --> 00:39:34.960 align:middle line:84%
+because that will
+increase the complexity.
+
+00:39:34.960 --> 00:39:38.080 align:middle line:84%
+But we are going to do
+that trick where we take--
+
+00:39:38.080 --> 00:39:40.540 align:middle line:84%
+where we use an
+integer index to decide
+
+00:39:40.540 --> 00:39:43.600 align:middle line:84%
+where we're going
+to-- which element
+
+00:39:43.600 --> 00:39:44.890 align:middle line:90%
+we're going to grab next.
+
+00:39:44.890 --> 00:39:47.500 align:middle line:84%
+So that's what this
+I and J is for.
+
+00:39:47.500 --> 00:39:53.300 align:middle line:84%
+We've got I is going to be
+the index from my left sublist
+
+00:39:53.300 --> 00:39:56.810 align:middle line:84%
+and J will be the index
+for my right sublist.
+
+00:39:56.810 --> 00:40:00.170 align:middle line:84%
+And all it does is it says,
+while I still have elements
+
+00:40:00.170 --> 00:40:03.200 align:middle line:84%
+in both of these lists,
+just take the pointer
+
+00:40:03.200 --> 00:40:05.945 align:middle line:84%
+and say which one of the
+elements at these two pointers
+
+00:40:05.945 --> 00:40:07.640 align:middle line:90%
+I and J is smaller.
+
+00:40:07.640 --> 00:40:09.200 align:middle line:84%
+So if the 0 is
+smaller, I'm going
+
+00:40:09.200 --> 00:40:12.650 align:middle line:84%
+to create a new list here that's
+going to have the 0 in it.
+
+00:40:12.650 --> 00:40:15.900 align:middle line:84%
+I'm not actually taking this
+element and moving it here.
+
+00:40:15.900 --> 00:40:18.285 align:middle line:84%
+All I will do next
+is say the pointer
+
+00:40:18.285 --> 00:40:19.910 align:middle line:84%
+that tells me which
+element I should be
+
+00:40:19.910 --> 00:40:22.220 align:middle line:90%
+looking at next moves over one.
+
+00:40:22.220 --> 00:40:24.560 align:middle line:90%
+So this list remains unchanged.
+
+00:40:24.560 --> 00:40:26.870 align:middle line:84%
+Then I'm going to
+compare the 2 with the 1.
+
+00:40:26.870 --> 00:40:28.080 align:middle line:90%
+That 1 comes next.
+
+00:40:28.080 --> 00:40:30.830 align:middle line:84%
+So I'm going to take the 1
+and put it in my list here.
+
+00:40:30.830 --> 00:40:34.350 align:middle line:84%
+And this pointer moves
+here to the next element.
+
+00:40:34.350 --> 00:40:37.280 align:middle line:84%
+So now while this
+list stays as is,
+
+00:40:37.280 --> 00:40:39.457 align:middle line:84%
+I'm looking at the
+element at this pointer
+
+00:40:39.457 --> 00:40:41.540 align:middle line:84%
+and comparing it with the
+element at this pointer.
+
+00:40:41.540 --> 00:40:45.830 align:middle line:84%
+So then the 2 comes next and
+this pointer increments by one,
+
+00:40:45.830 --> 00:40:48.090 align:middle line:90%
+OK?
+
+00:40:48.090 --> 00:40:49.440 align:middle line:90%
+So that's what that code does.
+
+00:40:49.440 --> 00:40:52.950 align:middle line:84%
+These two while loops
+just deal with the case
+
+00:40:52.950 --> 00:40:56.100 align:middle line:84%
+when we have one list
+that has finished
+
+00:40:56.100 --> 00:40:57.690 align:middle line:90%
+inserting its elements.
+
+00:40:57.690 --> 00:41:00.750 align:middle line:84%
+So like in this particular
+case here when my right sublist
+
+00:41:00.750 --> 00:41:03.690 align:middle line:84%
+became empty, we've already
+put on all the elements in it
+
+00:41:03.690 --> 00:41:05.250 align:middle line:90%
+into our master list.
+
+00:41:05.250 --> 00:41:08.280 align:middle line:84%
+Then all we need to do is take
+everything that's left over
+
+00:41:08.280 --> 00:41:10.630 align:middle line:84%
+and copy them into
+my master list.
+
+00:41:10.630 --> 00:41:13.725 align:middle line:84%
+And that's what these two
+while loops are doing.
+
+00:41:13.725 --> 00:41:16.450 align:middle line:90%
+
+
+00:41:16.450 --> 00:41:19.060 align:middle line:84%
+So the complexity of
+this merge sort-- so
+
+00:41:19.060 --> 00:41:23.100 align:middle line:90%
+that's just what it's doing.
+
+00:41:23.100 --> 00:41:25.450 align:middle line:90%
+So it's just doing one pass.
+
+00:41:25.450 --> 00:41:27.190 align:middle line:90%
+It's not doing multiple passes.
+
+00:41:27.190 --> 00:41:29.200 align:middle line:84%
+So we just look at
+each element once.
+
+00:41:29.200 --> 00:41:32.040 align:middle line:84%
+So the complexity
+of this merge sort--
+
+00:41:32.040 --> 00:41:34.260 align:middle line:84%
+of not the sort,
+just the merge step
+
+00:41:34.260 --> 00:41:37.230 align:middle line:84%
+is theta of length
+of the list, right?
+
+00:41:37.230 --> 00:41:41.320 align:middle line:84%
+Because we're just looking at
+all of these elements once.
+
+00:41:41.320 --> 00:41:44.180 align:middle line:84%
+Now, what about the
+actual algorithm?
+
+00:41:44.180 --> 00:41:48.340 align:middle line:84%
+So here, I've got the merge
+function down here, OK?
+
+00:41:48.340 --> 00:41:50.838 align:middle line:84%
+It's going to take a left
+list and a right list
+
+00:41:50.838 --> 00:41:52.630 align:middle line:84%
+and it's going to do
+that step that we just
+
+00:41:52.630 --> 00:41:55.390 align:middle line:84%
+did where you look at the
+smallest element in each.
+
+00:41:55.390 --> 00:41:56.590 align:middle line:90%
+What about the rest of it?
+
+00:41:56.590 --> 00:41:59.890 align:middle line:84%
+Well, the rest of it
+is just recursion.
+
+00:41:59.890 --> 00:42:02.530 align:middle line:84%
+My base case is when I
+have a list that's empty
+
+00:42:02.530 --> 00:42:04.480 align:middle line:84%
+or a list with
+one element in it.
+
+00:42:04.480 --> 00:42:07.480 align:middle line:90%
+Then I just grab that list.
+
+00:42:07.480 --> 00:42:11.190 align:middle line:90%
+That's going to be my merge.
+
+00:42:11.190 --> 00:42:13.380 align:middle line:84%
+And else, what
+we're going to do is
+
+00:42:13.380 --> 00:42:16.840 align:middle line:84%
+we're going to do the step where
+we divide the list in half.
+
+00:42:16.840 --> 00:42:19.800 align:middle line:84%
+So we're doing integer division
+from the length of the list
+
+00:42:19.800 --> 00:42:23.530 align:middle line:84%
+because we don't want the
+middle to be 7.5, for example.
+
+00:42:23.530 --> 00:42:26.160 align:middle line:84%
+So we're going to grab
+some integer index.
+
+00:42:26.160 --> 00:42:29.610 align:middle line:84%
+And then, we're going
+to say I'm going to--
+
+00:42:29.610 --> 00:42:31.860 align:middle line:84%
+again, there's a lot of
+faith involved in recursion.
+
+00:42:31.860 --> 00:42:34.620 align:middle line:84%
+I'm going to say
+the left sublist--
+
+00:42:34.620 --> 00:42:37.010 align:middle line:90%
+so this one here--
+
+00:42:37.010 --> 00:42:39.860 align:middle line:84%
+if my algorithm
+somehow works correctly
+
+00:42:39.860 --> 00:42:42.350 align:middle line:90%
+will now be a sorted list.
+
+00:42:42.350 --> 00:42:45.910 align:middle line:90%
+
+
+00:42:45.910 --> 00:42:50.770 align:middle line:84%
+And then, my right over here,
+right equals this thing here,
+
+00:42:50.770 --> 00:42:53.300 align:middle line:84%
+will also somehow
+be a sorted list.
+
+00:42:53.300 --> 00:42:55.780 align:middle line:84%
+So this is me putting
+faith in my algorithm
+
+00:42:55.780 --> 00:43:00.632 align:middle line:84%
+that I can get a sorted list
+from the index 0 all the way up
+
+00:43:00.632 --> 00:43:02.590 align:middle line:84%
+to the midpoint and the
+midpoint all the way up
+
+00:43:02.590 --> 00:43:03.890 align:middle line:90%
+to the end of the list.
+
+00:43:03.890 --> 00:43:07.690 align:middle line:84%
+So if somehow I can get a left
+sublist that's sorted by itself
+
+00:43:07.690 --> 00:43:10.000 align:middle line:84%
+and a right sublist
+that's sorted by itself,
+
+00:43:10.000 --> 00:43:14.290 align:middle line:84%
+all I need to do to get
+the final sorted list
+
+00:43:14.290 --> 00:43:15.500 align:middle line:90%
+is to merge them.
+
+00:43:15.500 --> 00:43:19.260 align:middle line:84%
+So that's what the
+merge function is doing.
+
+00:43:19.260 --> 00:43:23.740 align:middle line:90%
+OK, so let's step through.
+
+00:43:23.740 --> 00:43:26.220 align:middle line:84%
+So I've got my
+original list here.
+
+00:43:26.220 --> 00:43:29.580 align:middle line:84%
+And this is where we're going
+to be thinking about how
+
+00:43:29.580 --> 00:43:31.500 align:middle line:90%
+we step through Fibonacci.
+
+00:43:31.500 --> 00:43:33.000 align:middle line:90%
+Here's my original list.
+
+00:43:33.000 --> 00:43:35.370 align:middle line:90%
+The first step is to do--
+
+00:43:35.370 --> 00:43:38.700 align:middle line:90%
+is to figure out the left part.
+
+00:43:38.700 --> 00:43:40.290 align:middle line:84%
+So we're going to
+divide it in half
+
+00:43:40.290 --> 00:43:44.550 align:middle line:84%
+and it says, I need to figure
+out the sorted version of 8416.
+
+00:43:44.550 --> 00:43:46.470 align:middle line:84%
+But it's not my
+base case, so I need
+
+00:43:46.470 --> 00:43:49.620 align:middle line:84%
+to figure out the sorted version
+of the left part of that,
+
+00:43:49.620 --> 00:43:50.700 align:middle line:90%
+the 8, 4.
+
+00:43:50.700 --> 00:43:52.290 align:middle line:84%
+Again, it's not
+my base case, so I
+
+00:43:52.290 --> 00:43:54.810 align:middle line:84%
+need to figure out the sorted
+version of the left, just
+
+00:43:54.810 --> 00:43:55.530 align:middle line:90%
+the 8.
+
+00:43:55.530 --> 00:43:57.430 align:middle line:90%
+It's single by itself.
+
+00:43:57.430 --> 00:43:59.160 align:middle line:84%
+So that's just
+going to be the 8.
+
+00:43:59.160 --> 00:44:02.640 align:middle line:84%
+Then we can figure out the right
+half of it, it's 4 by itself,
+
+00:44:02.640 --> 00:44:05.210 align:middle line:90%
+and we merge them.
+
+00:44:05.210 --> 00:44:09.680 align:middle line:84%
+Then we can figure out the right
+half of this one here, 8416.
+
+00:44:09.680 --> 00:44:12.965 align:middle line:84%
+So we need to figure out what's
+the sorted version of 1, 6.
+
+00:44:12.965 --> 00:44:14.840 align:middle line:84%
+Well, as humans, we know
+it's already sorted,
+
+00:44:14.840 --> 00:44:18.080 align:middle line:84%
+but the algorithm goes through,
+looks at the left side,
+
+00:44:18.080 --> 00:44:20.810 align:middle line:84%
+looks at the right
+side, merges them up.
+
+00:44:20.810 --> 00:44:25.070 align:middle line:84%
+Now, we merge the 4816
+according to the merge step
+
+00:44:25.070 --> 00:44:26.780 align:middle line:90%
+to give us one 1468.
+
+00:44:26.780 --> 00:44:28.460 align:middle line:84%
+And at this point,
+we've finished
+
+00:44:28.460 --> 00:44:32.630 align:middle line:90%
+just the left half of 84165920.
+
+00:44:32.630 --> 00:44:34.530 align:middle line:84%
+And now we need to
+do the right half.
+
+00:44:34.530 --> 00:44:37.010 align:middle line:84%
+So we do the whole
+process all over again
+
+00:44:37.010 --> 00:44:41.300 align:middle line:84%
+by taking that 5920 looking
+only at the left piece,
+
+00:44:41.300 --> 00:44:43.820 align:middle line:84%
+then the left
+piece of that, then
+
+00:44:43.820 --> 00:44:47.430 align:middle line:84%
+the right piece of that base
+case, merging them back up.
+
+00:44:47.430 --> 00:44:51.990 align:middle line:84%
+The right step, the left
+part of that right step,
+
+00:44:51.990 --> 00:44:55.180 align:middle line:84%
+the right part of that right
+step, merging them back up.
+
+00:44:55.180 --> 00:44:58.590 align:middle line:84%
+So then, we do the merge
+step of 5, 9 and 0, 2,
+
+00:44:58.590 --> 00:45:02.550 align:middle line:84%
+and then, the merge step of
+these two lists, 1, 4, 6,
+
+00:45:02.550 --> 00:45:05.400 align:middle line:90%
+8 and 0, 2, 5, 9.
+
+00:45:05.400 --> 00:45:08.280 align:middle line:84%
+So you can see it has a
+similar feel to exploring
+
+00:45:08.280 --> 00:45:10.890 align:middle line:84%
+one side of the branch
+first just like in Fibonacci
+
+00:45:10.890 --> 00:45:12.000 align:middle line:90%
+for the exact same reason.
+
+00:45:12.000 --> 00:45:14.280 align:middle line:84%
+Because we've got a function
+call that's recursive,
+
+00:45:14.280 --> 00:45:17.400 align:middle line:84%
+we can't complete it until
+we've explored all the way down
+
+00:45:17.400 --> 00:45:18.940 align:middle line:90%
+to the bottom.
+
+00:45:18.940 --> 00:45:20.940 align:middle line:84%
+So the overall
+complexity of this
+
+00:45:20.940 --> 00:45:25.020 align:middle line:84%
+is going to be the merge
+step itself is theta of n,
+
+00:45:25.020 --> 00:45:28.470 align:middle line:84%
+like we just talked about, but
+how many levels do we have?
+
+00:45:28.470 --> 00:45:31.470 align:middle line:84%
+That is, how many times do
+we take our original list
+
+00:45:31.470 --> 00:45:35.640 align:middle line:84%
+and subdivide it until
+we get to our base case?
+
+00:45:35.640 --> 00:45:38.880 align:middle line:84%
+And the number of times is,
+according to this function,
+
+00:45:38.880 --> 00:45:41.190 align:middle line:84%
+very much like when we
+did bisection search.
+
+00:45:41.190 --> 00:45:44.160 align:middle line:84%
+We're going to take an
+original n elements in my list
+
+00:45:44.160 --> 00:45:46.080 align:middle line:84%
+and I'm going to
+keep dividing this n
+
+00:45:46.080 --> 00:45:51.100 align:middle line:84%
+elements by 2 and a bunch
+of sublists I times.
+
+00:45:51.100 --> 00:45:53.560 align:middle line:84%
+So I times is how
+many times we're
+
+00:45:53.560 --> 00:45:56.240 align:middle line:84%
+going to subdivide this list
+until we get to a base case.
+
+00:45:56.240 --> 00:45:57.850 align:middle line:90%
+So what is I in terms of n?
+
+00:45:57.850 --> 00:46:01.160 align:middle line:90%
+Well, I is equal to log of n.
+
+00:46:01.160 --> 00:46:05.270 align:middle line:90%
+So at each merge step--
+
+00:46:05.270 --> 00:46:08.490 align:middle line:84%
+sorry, so at each sublevel,
+I've got a merge step.
+
+00:46:08.490 --> 00:46:14.030 align:middle line:84%
+So I've got theta of log of
+n levels multiplied by theta
+
+00:46:14.030 --> 00:46:16.290 align:middle line:90%
+of n for my merge step.
+
+00:46:16.290 --> 00:46:18.350 align:middle line:84%
+So the overall complexity
+of this function
+
+00:46:18.350 --> 00:46:21.605 align:middle line:84%
+is theta of n log n, where
+n is the length of the list.
+
+00:46:21.605 --> 00:46:24.860 align:middle line:90%
+
+
+00:46:24.860 --> 00:46:29.290 align:middle line:84%
+OK, so it turns out
+that theta of n log n
+
+00:46:29.290 --> 00:46:32.530 align:middle line:84%
+is actually the fastest
+we can have a sort be.
+
+00:46:32.530 --> 00:46:35.200 align:middle line:84%
+You cannot do a sorting
+algorithm that's faster than
+
+00:46:35.200 --> 00:46:35.710 align:middle line:90%
+that.
+
+00:46:35.710 --> 00:46:39.010 align:middle line:84%
+You can do little tricks here
+and there based on your data.
+
+00:46:39.010 --> 00:46:41.710 align:middle line:84%
+Maybe you don't divide
+the list exactly in half.
+
+00:46:41.710 --> 00:46:45.010 align:middle line:84%
+Maybe you divide it and you
+find some sort of pivot point
+
+00:46:45.010 --> 00:46:46.990 align:middle line:84%
+that's a little bit
+smarter about the data.
+
+00:46:46.990 --> 00:46:51.100 align:middle line:84%
+But in general, the complexity
+of this function-- of a sorting
+
+00:46:51.100 --> 00:46:53.020 align:middle line:84%
+algorithm is always
+going to be--
+
+00:46:53.020 --> 00:46:55.210 align:middle line:84%
+the fastest it's going to
+be is theta of n log n.
+
+00:46:55.210 --> 00:46:58.950 align:middle line:90%
+
+
+00:46:58.950 --> 00:47:02.910 align:middle line:84%
+We've seen a bunch of
+different algorithms
+
+00:47:02.910 --> 00:47:06.480 align:middle line:90%
+here to help us design programs.
+
+00:47:06.480 --> 00:47:09.420 align:middle line:84%
+So the reason why we do
+this complexity analysis
+
+00:47:09.420 --> 00:47:11.860 align:middle line:84%
+is to guide the
+design of a program.
+
+00:47:11.860 --> 00:47:13.890 align:middle line:84%
+So if you already
+have a bunch of
+
+00:47:13.890 --> 00:47:16.230 align:middle line:84%
+nested for loops in
+the program that you're
+
+00:47:16.230 --> 00:47:17.653 align:middle line:84%
+trying to consider
+writing, you'll
+
+00:47:17.653 --> 00:47:20.070 align:middle line:84%
+already know it's going to be
+pretty inefficient and slow.
+
+00:47:20.070 --> 00:47:25.750 align:middle line:84%
+So you might want to rethink
+the design to begin with, OK?
+
+00:47:25.750 --> 00:47:27.390 align:middle line:90%
+All right.
+
+00:47:27.390 --> 00:47:39.000 align:middle line:90%

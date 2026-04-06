@@ -1,0 +1,6331 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.440 align:middle line:90%
+[SQUEAKING]
+
+00:00:02.440 --> 00:00:04.880 align:middle line:90%
+[RUSTLING]
+
+00:00:04.880 --> 00:00:07.320 align:middle line:90%
+[CLICKING]
+
+00:00:07.320 --> 00:00:11.224 align:middle line:90%
+
+
+00:00:11.224 --> 00:00:13.530 align:middle line:84%
+ANA BELL: All
+right, so let's get
+
+00:00:13.530 --> 00:00:14.890 align:middle line:90%
+started with today's lecture.
+
+00:00:14.890 --> 00:00:16.530 align:middle line:84%
+We're going to look
+at a lot more code
+
+00:00:16.530 --> 00:00:19.920 align:middle line:84%
+where we basically
+figure out the complexity
+
+00:00:19.920 --> 00:00:22.450 align:middle line:90%
+class of that given code.
+
+00:00:22.450 --> 00:00:24.930 align:middle line:84%
+So first, let's
+remember what we learned
+
+00:00:24.930 --> 00:00:26.440 align:middle line:90%
+at the end of the last lecture.
+
+00:00:26.440 --> 00:00:30.990 align:middle line:84%
+So we introduced this theta
+notation as a notation
+
+00:00:30.990 --> 00:00:34.470 align:middle line:84%
+to mark the order of growth
+of a particular function
+
+00:00:34.470 --> 00:00:36.300 align:middle line:90%
+or a particular piece of code.
+
+00:00:36.300 --> 00:00:40.140 align:middle line:84%
+And the theta we preferred
+over big O notation
+
+00:00:40.140 --> 00:00:43.920 align:middle line:84%
+because the theta allowed us to
+get this asymptotic upper bound
+
+00:00:43.920 --> 00:00:47.050 align:middle line:84%
+on the worst-case
+runtime of our function.
+
+00:00:47.050 --> 00:00:49.680 align:middle line:84%
+So we wanted an asymptotic bound
+as opposed to an upper bound
+
+00:00:49.680 --> 00:00:52.650 align:middle line:84%
+because that upper bound can
+be anything that grows faster
+
+00:00:52.650 --> 00:00:53.760 align:middle line:90%
+than our function.
+
+00:00:53.760 --> 00:00:57.640 align:middle line:84%
+So we prefer this theta
+as the asymptotic bound.
+
+00:00:57.640 --> 00:01:00.010 align:middle line:84%
+So at the end of last
+lecture, we basically
+
+00:01:00.010 --> 00:01:04.030 align:middle line:84%
+said that given some function,
+the theta for that function
+
+00:01:04.030 --> 00:01:08.180 align:middle line:84%
+is going to be the dominant
+term of that function.
+
+00:01:08.180 --> 00:01:10.120 align:middle line:84%
+So if we have a
+whole bunch of terms,
+
+00:01:10.120 --> 00:01:12.310 align:middle line:84%
+we focus on the one
+that grows the most.
+
+00:01:12.310 --> 00:01:15.820 align:middle line:84%
+We drop any additive constants,
+any multiplicative constants,
+
+00:01:15.820 --> 00:01:18.340 align:middle line:84%
+and all the other
+terms that don't grow
+
+00:01:18.340 --> 00:01:21.670 align:middle line:90%
+as fast as that biggest one.
+
+00:01:21.670 --> 00:01:23.890 align:middle line:84%
+So we ended up with some
+classes of algorithms
+
+00:01:23.890 --> 00:01:25.312 align:middle line:84%
+that we're going
+to go over today.
+
+00:01:25.312 --> 00:01:26.770 align:middle line:84%
+We're going to see
+a bunch of codes
+
+00:01:26.770 --> 00:01:28.960 align:middle line:84%
+that fall within those
+classes of algorithms.
+
+00:01:28.960 --> 00:01:33.310 align:middle line:84%
+But before we go into that, I
+wanted to just quickly recap
+
+00:01:33.310 --> 00:01:35.570 align:middle line:90%
+the end of last lecture.
+
+00:01:35.570 --> 00:01:39.280 align:middle line:84%
+So we saw an example that was
+pretty similar to this one,
+
+00:01:39.280 --> 00:01:41.350 align:middle line:90%
+if not the same.
+
+00:01:41.350 --> 00:01:43.770 align:middle line:84%
+So we know that
+given some function,
+
+00:01:43.770 --> 00:01:46.080 align:middle line:84%
+we can grab the theta
+of that function
+
+00:01:46.080 --> 00:01:48.090 align:middle line:84%
+by focusing on
+that dominant term.
+
+00:01:48.090 --> 00:01:50.500 align:middle line:84%
+But how do we get
+at that function?
+
+00:01:50.500 --> 00:01:54.450 align:middle line:84%
+So given some piece of code,
+the idea to get at that function
+
+00:01:54.450 --> 00:01:58.570 align:middle line:84%
+was to first start by looking
+at the inputs to the function.
+
+00:01:58.570 --> 00:02:03.470 align:middle line:84%
+So we have three inputs in this
+particular case, L, L1, and L2.
+
+00:02:03.470 --> 00:02:05.820 align:middle line:84%
+Once we figure out the
+inputs to this function,
+
+00:02:05.820 --> 00:02:10.460 align:middle line:84%
+we go on and look at everything
+within the code that depends
+
+00:02:10.460 --> 00:02:12.150 align:middle line:90%
+on these input parameters.
+
+00:02:12.150 --> 00:02:14.480 align:middle line:84%
+So they could be
+direct, like a loop that
+
+00:02:14.480 --> 00:02:17.390 align:middle line:84%
+goes over something
+related to the input,
+
+00:02:17.390 --> 00:02:19.160 align:middle line:84%
+or it could be
+indirect, as we're
+
+00:02:19.160 --> 00:02:21.300 align:middle line:84%
+going to see in some
+examples later today.
+
+00:02:21.300 --> 00:02:26.270 align:middle line:84%
+But we basically look at just
+the parts of the function that
+
+00:02:26.270 --> 00:02:28.330 align:middle line:90%
+deal with this input.
+
+00:02:28.330 --> 00:02:34.450 align:middle line:84%
+If we want to be exact,
+we start by finding out
+
+00:02:34.450 --> 00:02:38.565 align:middle line:84%
+the exact number of operations
+that we do within this code.
+
+00:02:38.565 --> 00:02:39.940 align:middle line:84%
+That's something
+that we did when
+
+00:02:39.940 --> 00:02:43.010 align:middle line:84%
+we counted the number of
+operations given some function.
+
+00:02:43.010 --> 00:02:45.340 align:middle line:84%
+So we're going to count the
+number of operations given
+
+00:02:45.340 --> 00:02:50.350 align:middle line:84%
+this code in relation
+to L1, L2, and L.
+
+00:02:50.350 --> 00:02:54.100 align:middle line:84%
+So we've got this relationship
+that we can come up
+
+00:02:54.100 --> 00:02:57.340 align:middle line:84%
+with that relates the
+number of operations run
+
+00:02:57.340 --> 00:03:00.190 align:middle line:90%
+as a function of L, L1, and L2.
+
+00:03:00.190 --> 00:03:04.900 align:middle line:84%
+So the 1 over here is
+constant because we just
+
+00:03:04.900 --> 00:03:07.870 align:middle line:84%
+have an assignment
+here for some variable.
+
+00:03:07.870 --> 00:03:11.230 align:middle line:84%
+The next term here
+is not constant.
+
+00:03:11.230 --> 00:03:14.050 align:middle line:84%
+There are five constant
+things that we're doing.
+
+00:03:14.050 --> 00:03:19.210 align:middle line:84%
+Assigning I to be a value and
+range, indexing into L at I,
+
+00:03:19.210 --> 00:03:19.900 align:middle line:90%
+that's two.
+
+00:03:19.900 --> 00:03:23.290 align:middle line:84%
+Indexing into L1
+at I, that's three.
+
+00:03:23.290 --> 00:03:25.300 align:middle line:84%
+Checking the
+equality, that's four.
+
+00:03:25.300 --> 00:03:27.880 align:middle line:84%
+And then setting inL1
+to be True, that's five.
+
+00:03:27.880 --> 00:03:29.860 align:middle line:84%
+So there's five
+operations, but these
+
+00:03:29.860 --> 00:03:32.230 align:middle line:90%
+are repeated how many times?
+
+00:03:32.230 --> 00:03:36.310 align:middle line:84%
+Well, they're repeated length
+L1 times because this loop
+
+00:03:36.310 --> 00:03:39.010 align:middle line:90%
+goes through length L1.
+
+00:03:39.010 --> 00:03:41.920 align:middle line:84%
+So this term here,
+this for loop here
+
+00:03:41.920 --> 00:03:45.820 align:middle line:84%
+is length L1 times 5
+number of operations.
+
+00:03:45.820 --> 00:03:48.850 align:middle line:84%
+Then the one here is this
+assignment over here.
+
+00:03:48.850 --> 00:03:51.310 align:middle line:84%
+And then this loop
+down at the bottom
+
+00:03:51.310 --> 00:03:54.520 align:middle line:84%
+is exactly the same as
+the loop up at the top,
+
+00:03:54.520 --> 00:03:59.830 align:middle line:84%
+except that now this bottom
+loop repeats length L2 times.
+
+00:03:59.830 --> 00:04:04.540 align:middle line:84%
+So as L2 gets bigger, this
+loop will take longer to run.
+
+00:04:04.540 --> 00:04:06.110 align:middle line:90%
+That's how we think about that.
+
+00:04:06.110 --> 00:04:09.160 align:middle line:84%
+And then, lastly, the plus 2
+at the end of that relationship
+
+00:04:09.160 --> 00:04:11.860 align:middle line:84%
+is finding the and of
+these two variables
+
+00:04:11.860 --> 00:04:14.730 align:middle line:90%
+and then doing a return.
+
+00:04:14.730 --> 00:04:18.560 align:middle line:84%
+So that leads us to simplify
+it as 5 times length L1
+
+00:04:18.560 --> 00:04:20.329 align:middle line:90%
+plus 5 times length L2 plus 3.
+
+00:04:20.329 --> 00:04:23.450 align:middle line:84%
+And this becomes the
+function that we can then
+
+00:04:23.450 --> 00:04:25.010 align:middle line:90%
+grab the theta.
+
+00:04:25.010 --> 00:04:28.310 align:middle line:84%
+So now we just use the
+regular rules of theta,
+
+00:04:28.310 --> 00:04:30.350 align:middle line:84%
+law of addition, and
+law of multiplication,
+
+00:04:30.350 --> 00:04:32.480 align:middle line:84%
+if there's anything
+to add or multiply.
+
+00:04:32.480 --> 00:04:35.980 align:middle line:84%
+In this particular case,
+let's say that L, L1, and L2
+
+00:04:35.980 --> 00:04:36.980 align:middle line:90%
+are all the same length.
+
+00:04:36.980 --> 00:04:38.930 align:middle line:84%
+And then we can simplify
+the above function
+
+00:04:38.930 --> 00:04:40.580 align:middle line:90%
+to 10 length L plus 3.
+
+00:04:40.580 --> 00:04:44.630 align:middle line:84%
+And then the theta of that
+becomes just theta of length L
+
+00:04:44.630 --> 00:04:48.440 align:middle line:84%
+because we drop the 3, we
+drop the 10 multiply-- the 10
+
+00:04:48.440 --> 00:04:54.790 align:middle line:84%
+multiplying L. And then
+we just keep length L.
+
+00:04:54.790 --> 00:04:59.090 align:middle line:84%
+So this is how we get at the
+theta of a particular function.
+
+00:04:59.090 --> 00:05:00.800 align:middle line:84%
+This is one we
+looked at last time.
+
+00:05:00.800 --> 00:05:03.700 align:middle line:84%
+But as we look at
+more functions today,
+
+00:05:03.700 --> 00:05:05.110 align:middle line:84%
+we're going to
+get better at just
+
+00:05:05.110 --> 00:05:07.420 align:middle line:84%
+identifying the parts
+of the code that
+
+00:05:07.420 --> 00:05:09.700 align:middle line:90%
+just deal with our inputs.
+
+00:05:09.700 --> 00:05:11.980 align:middle line:90%
+This inL1 equals False.
+
+00:05:11.980 --> 00:05:13.210 align:middle line:90%
+This inL2 equals False.
+
+00:05:13.210 --> 00:05:15.850 align:middle line:84%
+This return, this and, those
+are all constant things
+
+00:05:15.850 --> 00:05:16.910 align:middle line:90%
+that are happening.
+
+00:05:16.910 --> 00:05:18.880 align:middle line:84%
+So we don't need to
+focus in on those.
+
+00:05:18.880 --> 00:05:20.920 align:middle line:84%
+We just maybe glance
+at them really quickly
+
+00:05:20.920 --> 00:05:22.750 align:middle line:84%
+to make sure there's
+nothing funky going
+
+00:05:22.750 --> 00:05:25.570 align:middle line:84%
+on that's dependent on
+the length of our list.
+
+00:05:25.570 --> 00:05:29.070 align:middle line:84%
+But we can just basically say,
+well, we've got our inputs.
+
+00:05:29.070 --> 00:05:31.570 align:middle line:84%
+We've got one for loop that
+goes through the length, another
+
+00:05:31.570 --> 00:05:33.153 align:middle line:84%
+for loop that goes
+through the length.
+
+00:05:33.153 --> 00:05:35.620 align:middle line:84%
+They're in series, so we
+use the law of addition
+
+00:05:35.620 --> 00:05:38.980 align:middle line:84%
+to say that this function is
+theta of length L1 plus length
+
+00:05:38.980 --> 00:05:39.790 align:middle line:90%
+L2.
+
+00:05:39.790 --> 00:05:42.520 align:middle line:84%
+And so then we can quickly
+tell the theta of that function
+
+00:05:42.520 --> 00:05:47.040 align:middle line:84%
+just by looking at the parts
+that depend on the input.
+
+00:05:47.040 --> 00:05:49.870 align:middle line:84%
+So that leads us-- so at
+the end of last lecture,
+
+00:05:49.870 --> 00:05:52.920 align:middle line:84%
+we ended up with
+looking at these--
+
+00:05:52.920 --> 00:05:56.700 align:middle line:84%
+sorry, deciding that these
+are the complexity classes
+
+00:05:56.700 --> 00:06:00.750 align:middle line:84%
+that we can categorize a
+lot of our functions in.
+
+00:06:00.750 --> 00:06:02.340 align:middle line:90%
+So theta of 1 is constant.
+
+00:06:02.340 --> 00:06:04.230 align:middle line:90%
+Theta of log n is logarithmic.
+
+00:06:04.230 --> 00:06:07.650 align:middle line:84%
+Here, n is-- assuming n is
+the input to my function.
+
+00:06:07.650 --> 00:06:11.340 align:middle line:90%
+Theta of n is linear.
+
+00:06:11.340 --> 00:06:13.320 align:middle line:90%
+Theta of n log n is log linear.
+
+00:06:13.320 --> 00:06:18.000 align:middle line:84%
+Theta of n, if n is my input to
+some constant, like n squared
+
+00:06:18.000 --> 00:06:20.520 align:middle line:84%
+and cubed, runs in
+polynomial time.
+
+00:06:20.520 --> 00:06:24.300 align:middle line:84%
+And then theta of some constant
+to the n, where n is my input,
+
+00:06:24.300 --> 00:06:27.090 align:middle line:84%
+is going to be exponential,
+like 2 to the n, 3 to the n.
+
+00:06:27.090 --> 00:06:29.910 align:middle line:84%
+Those are all considered
+exponential time algorithms.
+
+00:06:29.910 --> 00:06:31.740 align:middle line:84%
+And when we write
+our algorithms,
+
+00:06:31.740 --> 00:06:37.920 align:middle line:84%
+we want to be up in this maybe
+top four, maybe top five,
+
+00:06:37.920 --> 00:06:40.020 align:middle line:84%
+though polynomial is
+going to grow pretty
+
+00:06:40.020 --> 00:06:42.180 align:middle line:90%
+quickly as our input gets big.
+
+00:06:42.180 --> 00:06:45.720 align:middle line:84%
+So if we can take our code
+and just quickly glance at it
+
+00:06:45.720 --> 00:06:48.160 align:middle line:84%
+and classify it within
+one of these algorithms,
+
+00:06:48.160 --> 00:06:51.520 align:middle line:84%
+that can guide us
+towards writing--
+
+00:06:51.520 --> 00:06:53.590 align:middle line:84%
+towards deciding whether
+the algorithm we wrote
+
+00:06:53.590 --> 00:06:55.360 align:middle line:90%
+was good or bad.
+
+00:06:55.360 --> 00:06:57.730 align:middle line:84%
+If we glance at it and
+say, hey, this algorithm
+
+00:06:57.730 --> 00:07:00.670 align:middle line:84%
+is exponential or this function
+that I wrote is exponential,
+
+00:07:00.670 --> 00:07:03.460 align:middle line:84%
+maybe we want to rethink
+our approach to the problem
+
+00:07:03.460 --> 00:07:08.280 align:middle line:84%
+and try to get it into one of
+the upper complexity classes.
+
+00:07:08.280 --> 00:07:10.670 align:middle line:84%
+So what we're going to
+do the rest of this class
+
+00:07:10.670 --> 00:07:13.317 align:middle line:84%
+is just go through a bunch
+of these complexity classes,
+
+00:07:13.317 --> 00:07:14.900 align:middle line:84%
+and we're going to
+see some codes that
+
+00:07:14.900 --> 00:07:17.000 align:middle line:84%
+belong to these
+complexity classes
+
+00:07:17.000 --> 00:07:20.690 align:middle line:84%
+and hopefully give
+you an idea of what
+
+00:07:20.690 --> 00:07:24.730 align:middle line:84%
+code looks like that fits in
+one of these complexity classes.
+
+00:07:24.730 --> 00:07:27.120 align:middle line:84%
+So the first one we'll look
+at is the constant complexity
+
+00:07:27.120 --> 00:07:27.720 align:middle line:90%
+class.
+
+00:07:27.720 --> 00:07:29.320 align:middle line:90%
+It's pretty simple.
+
+00:07:29.320 --> 00:07:32.040 align:middle line:84%
+It's not really
+very interesting.
+
+00:07:32.040 --> 00:07:35.610 align:middle line:84%
+If your code belongs in this
+constant complexity class,
+
+00:07:35.610 --> 00:07:37.920 align:middle line:84%
+that means that it does not
+depend on the input at all.
+
+00:07:37.920 --> 00:07:40.400 align:middle line:90%
+It always runs in constant time.
+
+00:07:40.400 --> 00:07:43.420 align:middle line:84%
+So your code can
+have loops, or it
+
+00:07:43.420 --> 00:07:46.060 align:middle line:84%
+can have some sort of
+recursive structure.
+
+00:07:46.060 --> 00:07:49.120 align:middle line:84%
+But that loop or that
+recursive structure
+
+00:07:49.120 --> 00:07:51.680 align:middle line:84%
+doesn't depend on
+the input at all.
+
+00:07:51.680 --> 00:07:52.870 align:middle line:90%
+So it's fine to have loops.
+
+00:07:52.870 --> 00:07:55.037 align:middle line:84%
+It's just as long as it
+doesn't depend on the input,
+
+00:07:55.037 --> 00:07:57.200 align:middle line:90%
+it's considered constant.
+
+00:07:57.200 --> 00:07:59.440 align:middle line:84%
+So there are some
+built-in operations
+
+00:07:59.440 --> 00:08:00.860 align:middle line:90%
+that are constant time.
+
+00:08:00.860 --> 00:08:02.740 align:middle line:84%
+So if you see any
+of these operations,
+
+00:08:02.740 --> 00:08:05.800 align:middle line:84%
+like indexing into a
+list, appending to a list,
+
+00:08:05.800 --> 00:08:09.970 align:middle line:84%
+grabbing the value associated
+with a dictionary key,
+
+00:08:09.970 --> 00:08:11.570 align:middle line:90%
+those are all constant time.
+
+00:08:11.570 --> 00:08:13.120 align:middle line:84%
+So if you see them
+in your code, you
+
+00:08:13.120 --> 00:08:15.040 align:middle line:84%
+don't need to account
+for them at all.
+
+00:08:15.040 --> 00:08:17.260 align:middle line:84%
+But we're going to
+see in a few slides
+
+00:08:17.260 --> 00:08:20.620 align:middle line:84%
+that there are some operations
+on lists and dictionaries
+
+00:08:20.620 --> 00:08:24.050 align:middle line:84%
+that do add some
+nonconstant complexity.
+
+00:08:24.050 --> 00:08:26.440 align:middle line:84%
+So you can't just
+brush them off.
+
+00:08:26.440 --> 00:08:29.210 align:middle line:84%
+All right, let's look at
+a couple examples of code.
+
+00:08:29.210 --> 00:08:32.289 align:middle line:84%
+So here's a very simple
+function, add x comma y.
+
+00:08:32.289 --> 00:08:34.150 align:middle line:90%
+So x and y are my inputs.
+
+00:08:34.150 --> 00:08:37.299 align:middle line:84%
+There is no loop or
+nothing recursive,
+
+00:08:37.299 --> 00:08:39.039 align:middle line:90%
+nothing that takes time here.
+
+00:08:39.039 --> 00:08:40.990 align:middle line:84%
+There's nothing that
+repeats in this code.
+
+00:08:40.990 --> 00:08:44.470 align:middle line:84%
+So the complexity of
+this code is theta of 1.
+
+00:08:44.470 --> 00:08:45.620 align:middle line:90%
+That's it.
+
+00:08:45.620 --> 00:08:46.690 align:middle line:90%
+Here's another example.
+
+00:08:46.690 --> 00:08:50.110 align:middle line:84%
+This is our kilometer
+example, taking in miles.
+
+00:08:50.110 --> 00:08:51.790 align:middle line:90%
+All it does is a multiplication.
+
+00:08:51.790 --> 00:08:53.163 align:middle line:90%
+Again, theta of 1.
+
+00:08:53.163 --> 00:08:55.330 align:middle line:84%
+There's nothing interesting
+going on here-- no loop,
+
+00:08:55.330 --> 00:08:57.590 align:middle line:90%
+no recursive.
+
+00:08:57.590 --> 00:09:01.320 align:middle line:84%
+Here's a function that
+does have a loop within it.
+
+00:09:01.320 --> 00:09:03.930 align:middle line:84%
+First thing we look at,
+though, is my input.
+
+00:09:03.930 --> 00:09:05.730 align:middle line:90%
+What variable is my input here?
+
+00:09:05.730 --> 00:09:07.600 align:middle line:90%
+It's x, right?
+
+00:09:07.600 --> 00:09:12.380 align:middle line:84%
+So which part of my
+code here depends on x?
+
+00:09:12.380 --> 00:09:16.170 align:middle line:84%
+Well, there's something
+that I'm adding here.
+
+00:09:16.170 --> 00:09:19.040 align:middle line:84%
+So I'm adding x
+onto some number.
+
+00:09:19.040 --> 00:09:22.430 align:middle line:84%
+And I do have a loop, but
+does the loop depend on x?
+
+00:09:22.430 --> 00:09:22.940 align:middle line:90%
+No.
+
+00:09:22.940 --> 00:09:27.920 align:middle line:84%
+It depends on some number that
+is just 100 within my function.
+
+00:09:27.920 --> 00:09:33.170 align:middle line:84%
+If y equals x here,
+then this code
+
+00:09:33.170 --> 00:09:35.300 align:middle line:84%
+wouldn't be constant,
+because this loop
+
+00:09:35.300 --> 00:09:37.160 align:middle line:90%
+will go through x times.
+
+00:09:37.160 --> 00:09:41.780 align:middle line:84%
+But here, y is just 100, so this
+code is theta of 1 complexity.
+
+00:09:41.780 --> 00:09:46.690 align:middle line:84%
+There's nothing here that
+depends on x as x grows.
+
+00:09:46.690 --> 00:09:50.180 align:middle line:84%
+All right, so not very
+interesting examples there.
+
+00:09:50.180 --> 00:09:55.690 align:middle line:84%
+So let's move on to the next
+simplest class of functions,
+
+00:09:55.690 --> 00:09:57.820 align:middle line:90%
+the linear complexity class.
+
+00:09:57.820 --> 00:10:02.050 align:middle line:84%
+And these functions
+will be usually denoted
+
+00:10:02.050 --> 00:10:07.120 align:middle line:84%
+by one loop or maybe many
+loops in series or something
+
+00:10:07.120 --> 00:10:07.930 align:middle line:90%
+like that.
+
+00:10:07.930 --> 00:10:11.860 align:middle line:84%
+But these loops all
+depend just linearly on n.
+
+00:10:11.860 --> 00:10:16.420 align:middle line:84%
+You could also have a
+recursive function that repeats
+
+00:10:16.420 --> 00:10:18.167 align:middle line:90%
+that's also linearly in n.
+
+00:10:18.167 --> 00:10:20.500 align:middle line:84%
+So we're going to see an
+example of a recursive function
+
+00:10:20.500 --> 00:10:21.167 align:middle line:90%
+in a little bit.
+
+00:10:21.167 --> 00:10:23.320 align:middle line:84%
+But first, we'll start out
+with just some functions
+
+00:10:23.320 --> 00:10:26.600 align:middle line:90%
+that loop linearly with n.
+
+00:10:26.600 --> 00:10:28.730 align:middle line:84%
+There are some
+built-in operations
+
+00:10:28.730 --> 00:10:31.830 align:middle line:90%
+though that are linear in time.
+
+00:10:31.830 --> 00:10:35.730 align:middle line:84%
+So if we ever see these
+operations within our code,
+
+00:10:35.730 --> 00:10:38.300 align:middle line:84%
+we can't ignore
+them because they
+
+00:10:38.300 --> 00:10:43.220 align:middle line:84%
+will contribute a theta of
+n complexity to our code.
+
+00:10:43.220 --> 00:10:47.360 align:middle line:84%
+So we have to account for them
+like if we have some e in n
+
+00:10:47.360 --> 00:10:49.790 align:middle line:84%
+within some other
+loop, we can't just
+
+00:10:49.790 --> 00:10:51.320 align:middle line:90%
+say this e in n is constant.
+
+00:10:51.320 --> 00:10:54.290 align:middle line:84%
+We'd have to use the law of
+multiplication or something
+
+00:10:54.290 --> 00:10:56.610 align:middle line:90%
+like that to account for it.
+
+00:10:56.610 --> 00:10:59.030 align:middle line:84%
+So checking if an element
+is in a list obviously
+
+00:10:59.030 --> 00:11:00.770 align:middle line:84%
+is linear because
+you have to look
+
+00:11:00.770 --> 00:11:04.760 align:middle line:84%
+at each element in the list
+to determine that e is in it
+
+00:11:04.760 --> 00:11:06.050 align:middle line:90%
+or not.
+
+00:11:06.050 --> 00:11:10.710 align:middle line:84%
+Making a copy of your list
+is also linear in time.
+
+00:11:10.710 --> 00:11:14.240 align:middle line:84%
+Even though we're making a
+copy of half of our list,
+
+00:11:14.240 --> 00:11:16.940 align:middle line:84%
+so the first half
+of our list, it's
+
+00:11:16.940 --> 00:11:23.300 align:middle line:84%
+still linear because copying
+0.5 times length L is still
+
+00:11:23.300 --> 00:11:25.680 align:middle line:84%
+theta of length L.
+That multiplicative
+
+00:11:25.680 --> 00:11:28.510 align:middle line:84%
+constant on the front
+of our length L is 0.5.
+
+00:11:28.510 --> 00:11:32.500 align:middle line:84%
+So if we drop it, that's
+still theta of length L.
+
+00:11:32.500 --> 00:11:34.365 align:middle line:84%
+Checking for equality
+between two lists
+
+00:11:34.365 --> 00:11:35.740 align:middle line:84%
+is also constant
+because you have
+
+00:11:35.740 --> 00:11:37.540 align:middle line:84%
+to look at each
+element in the list,
+
+00:11:37.540 --> 00:11:40.420 align:middle line:84%
+compare them to make sure
+that they're the same or not.
+
+00:11:40.420 --> 00:11:46.150 align:middle line:84%
+And deleting an item in a
+list is also linear in time.
+
+00:11:46.150 --> 00:11:48.250 align:middle line:84%
+Sorry, this one was
+constant in time--
+
+00:11:48.250 --> 00:11:51.160 align:middle line:84%
+sorry, this one
+was linear in time.
+
+00:11:51.160 --> 00:11:53.950 align:middle line:84%
+Deletion is also linear in
+time just because of the way
+
+00:11:53.950 --> 00:11:55.280 align:middle line:90%
+lists are stored in memory.
+
+00:11:55.280 --> 00:11:56.950 align:middle line:84%
+So if you delete an
+item in the end--
+
+00:11:56.950 --> 00:11:59.920 align:middle line:84%
+from your list,
+Python will count
+
+00:11:59.920 --> 00:12:03.460 align:middle line:90%
+that as linear time complexity.
+
+00:12:03.460 --> 00:12:05.080 align:middle line:90%
+So let's look at some examples.
+
+00:12:05.080 --> 00:12:07.890 align:middle line:84%
+First, we'll just start out
+with just some regular functions
+
+00:12:07.890 --> 00:12:10.840 align:middle line:84%
+with loops, and then we'll
+look at one recursive function.
+
+00:12:10.840 --> 00:12:14.340 align:middle line:84%
+So here I've got
+multiply x by y.
+
+00:12:14.340 --> 00:12:17.960 align:middle line:90%
+It loops through range y.
+
+00:12:17.960 --> 00:12:23.310 align:middle line:84%
+And it just adds x plus
+x plus x plus x y times.
+
+00:12:23.310 --> 00:12:25.090 align:middle line:90%
+So I've got two parameters here.
+
+00:12:25.090 --> 00:12:27.510 align:middle line:84%
+So I need to think about the
+complexity of this function
+
+00:12:27.510 --> 00:12:29.590 align:middle line:90%
+with regards to both of them.
+
+00:12:29.590 --> 00:12:33.780 align:middle line:84%
+So the complexity with
+respect to y is theta of y
+
+00:12:33.780 --> 00:12:37.410 align:middle line:84%
+because I've got one loop
+that's a function of y.
+
+00:12:37.410 --> 00:12:39.930 align:middle line:84%
+So this loop will
+repeat however big y is.
+
+00:12:39.930 --> 00:12:44.760 align:middle line:84%
+So if y increases, the time this
+loop takes will also increase.
+
+00:12:44.760 --> 00:12:46.980 align:middle line:84%
+So the theta complexity
+of this function
+
+00:12:46.980 --> 00:12:50.700 align:middle line:90%
+is theta of y with respect to y.
+
+00:12:50.700 --> 00:12:52.450 align:middle line:84%
+But what's the complexity
+of this function
+
+00:12:52.450 --> 00:12:55.150 align:middle line:90%
+with respect to x?
+
+00:12:55.150 --> 00:12:58.480 align:middle line:84%
+I have no looping structure
+here that's with respect to x.
+
+00:12:58.480 --> 00:13:01.940 align:middle line:84%
+All I'm doing to x is just
+adding on to some number.
+
+00:13:01.940 --> 00:13:04.960 align:middle line:84%
+So the complexity with respect
+to x is just theta of 1.
+
+00:13:04.960 --> 00:13:07.090 align:middle line:84%
+So the overall complexity
+of this function
+
+00:13:07.090 --> 00:13:09.310 align:middle line:90%
+is just going to be theta of y.
+
+00:13:09.310 --> 00:13:12.625 align:middle line:84%
+X does not contribute anything
+to this, the runtime of this.
+
+00:13:12.625 --> 00:13:15.220 align:middle line:90%
+
+
+00:13:15.220 --> 00:13:18.070 align:middle line:84%
+All right, so this
+and the previous sort
+
+00:13:18.070 --> 00:13:20.170 align:middle line:84%
+of loop function from
+the constant kind of
+
+00:13:20.170 --> 00:13:22.330 align:middle line:84%
+tells us that we need
+to be careful about what
+
+00:13:22.330 --> 00:13:23.620 align:middle line:90%
+the inputs are.
+
+00:13:23.620 --> 00:13:25.540 align:middle line:84%
+When we report
+the complexity, we
+
+00:13:25.540 --> 00:13:29.530 align:middle line:84%
+have to report it with respect
+to the inputs to our function.
+
+00:13:29.530 --> 00:13:33.280 align:middle line:84%
+We don't always just say theta
+of n or theta of n squared
+
+00:13:33.280 --> 00:13:35.170 align:middle line:84%
+or theta of length
+n, whatever it is.
+
+00:13:35.170 --> 00:13:37.850 align:middle line:84%
+We have to relate it to
+the inputs to our function.
+
+00:13:37.850 --> 00:13:39.430 align:middle line:84%
+And if we have more
+than one input,
+
+00:13:39.430 --> 00:13:43.990 align:middle line:84%
+we have to be careful to account
+for all of the inputs that
+
+00:13:43.990 --> 00:13:47.352 align:middle line:90%
+contribute to the complexity.
+
+00:13:47.352 --> 00:13:49.060 align:middle line:84%
+All right, let's look
+at another example.
+
+00:13:49.060 --> 00:13:53.700 align:middle line:84%
+So here's one where
+you take in a string s.
+
+00:13:53.700 --> 00:13:56.740 align:middle line:84%
+We loop through
+each character in s.
+
+00:13:56.740 --> 00:14:00.780 align:middle line:84%
+We cast each character
+to an integer.
+
+00:14:00.780 --> 00:14:02.710 align:middle line:84%
+And then we add
+on to some value.
+
+00:14:02.710 --> 00:14:06.240 align:middle line:84%
+So we're essentially just adding
+on all of the characters in s,
+
+00:14:06.240 --> 00:14:07.874 align:middle line:90%
+in the string s.
+
+00:14:07.874 --> 00:14:12.870 align:middle line:84%
+So this has one loop that loops
+through all the elements in s.
+
+00:14:12.870 --> 00:14:14.940 align:middle line:84%
+Now, if s is a
+string, what's going
+
+00:14:14.940 --> 00:14:16.890 align:middle line:90%
+to make this program slower?
+
+00:14:16.890 --> 00:14:19.170 align:middle line:90%
+Is it that the string--
+
+00:14:19.170 --> 00:14:22.940 align:middle line:84%
+so the numerical value
+of the string is bigger?
+
+00:14:22.940 --> 00:14:28.060 align:middle line:84%
+No, because if I'm looping
+through the string 1, 0, 0, 0,
+
+00:14:28.060 --> 00:14:29.810 align:middle line:84%
+it's going to take the
+same amount of time
+
+00:14:29.810 --> 00:14:32.570 align:middle line:84%
+as if I'm looping through
+the string 9, 9, 9, 9.
+
+00:14:32.570 --> 00:14:34.980 align:middle line:84%
+It's the length of the
+string that matters.
+
+00:14:34.980 --> 00:14:37.130 align:middle line:84%
+So that's what
+this loop is doing.
+
+00:14:37.130 --> 00:14:39.990 align:middle line:84%
+It's taking into account
+the length of the string.
+
+00:14:39.990 --> 00:14:42.440 align:middle line:84%
+So if my string is
+longer, then it's
+
+00:14:42.440 --> 00:14:43.880 align:middle line:90%
+going to take longer to run.
+
+00:14:43.880 --> 00:14:45.770 align:middle line:84%
+So the complexity
+of this function
+
+00:14:45.770 --> 00:14:48.200 align:middle line:84%
+is just theta of
+length s because that's
+
+00:14:48.200 --> 00:14:49.760 align:middle line:84%
+the length of the
+string contributes
+
+00:14:49.760 --> 00:14:53.330 align:middle line:90%
+to slowing down my function.
+
+00:14:53.330 --> 00:14:55.020 align:middle line:84%
+Everything else that
+we do is constant.
+
+00:14:55.020 --> 00:14:57.880 align:middle line:84%
+So the overall complexity
+is theta of length of s.
+
+00:14:57.880 --> 00:15:00.320 align:middle line:84%
+Or if it's simpler, you
+can just say theta of n,
+
+00:15:00.320 --> 00:15:07.075 align:middle line:84%
+but then you have to say where n
+is something, like length of s.
+
+00:15:07.075 --> 00:15:08.710 align:middle line:84%
+All right, here's
+another example.
+
+00:15:08.710 --> 00:15:13.150 align:middle line:84%
+This is a factorial program
+that does it iteratively.
+
+00:15:13.150 --> 00:15:17.440 align:middle line:84%
+So it's going to use a
+loop to keep adding--
+
+00:15:17.440 --> 00:15:20.770 align:middle line:84%
+sorry, to keep multiplying
+on i to calculate
+
+00:15:20.770 --> 00:15:22.970 align:middle line:90%
+the factorial of some n.
+
+00:15:22.970 --> 00:15:25.100 align:middle line:90%
+So in this case, my input is n.
+
+00:15:25.100 --> 00:15:27.050 align:middle line:84%
+So now I'm going to
+look through my function
+
+00:15:27.050 --> 00:15:31.340 align:middle line:84%
+to see what part of my
+function depends on n.
+
+00:15:31.340 --> 00:15:33.290 align:middle line:90%
+So here, n is just a number.
+
+00:15:33.290 --> 00:15:37.340 align:middle line:84%
+And I'm looping through from
+2 all the way up to n plus 1.
+
+00:15:37.340 --> 00:15:40.145 align:middle line:84%
+So I'm going to loop through
+n minus 1 times overall.
+
+00:15:40.145 --> 00:15:43.570 align:middle line:90%
+
+
+00:15:43.570 --> 00:15:45.730 align:middle line:84%
+Since I'm looping
+through n minus 1 times,
+
+00:15:45.730 --> 00:15:47.230 align:middle line:84%
+there's nothing
+else really that's
+
+00:15:47.230 --> 00:15:48.980 align:middle line:90%
+contributing to the complexity.
+
+00:15:48.980 --> 00:15:53.320 align:middle line:84%
+So theta of n minus
+1 is just theta of n.
+
+00:15:53.320 --> 00:15:56.590 align:middle line:84%
+So the complexity of this
+function is just theta of n.
+
+00:15:56.590 --> 00:15:59.700 align:middle line:90%
+
+
+00:15:59.700 --> 00:16:01.680 align:middle line:90%
+Everyone OK so far?
+
+00:16:01.680 --> 00:16:03.240 align:middle line:84%
+So very simple
+programs that just
+
+00:16:03.240 --> 00:16:09.030 align:middle line:84%
+have one loop that just
+depends on the input linearly.
+
+00:16:09.030 --> 00:16:11.970 align:middle line:84%
+OK, I will make a little
+note about the factorial
+
+00:16:11.970 --> 00:16:14.160 align:middle line:84%
+because this is kind
+of something important.
+
+00:16:14.160 --> 00:16:17.230 align:middle line:84%
+It's going to tell us the
+difference between theory,
+
+00:16:17.230 --> 00:16:19.530 align:middle line:84%
+which is what this
+class is mostly about
+
+00:16:19.530 --> 00:16:22.480 align:middle line:84%
+or this set of lectures,
+and the real world.
+
+00:16:22.480 --> 00:16:25.680 align:middle line:84%
+So I actually ran the
+iterative version of factorial
+
+00:16:25.680 --> 00:16:26.830 align:middle line:90%
+on the computer.
+
+00:16:26.830 --> 00:16:30.120 align:middle line:84%
+And you can see here I've
+multiplied the input by 2,
+
+00:16:30.120 --> 00:16:32.560 align:middle line:90%
+so 40, 80, 160, 320, and so on.
+
+00:16:32.560 --> 00:16:35.460 align:middle line:84%
+So as I'm multiplying
+the input by 2,
+
+00:16:35.460 --> 00:16:39.180 align:middle line:84%
+if I'm expecting this function
+to be linearly related
+
+00:16:39.180 --> 00:16:42.540 align:middle line:84%
+to the input, I'm
+expecting that the time
+
+00:16:42.540 --> 00:16:45.060 align:middle line:84%
+that this function
+takes to run is
+
+00:16:45.060 --> 00:16:47.670 align:middle line:84%
+going to be approximately
+twice as long.
+
+00:16:47.670 --> 00:16:49.497 align:middle line:84%
+If the input increases
+by 2, the time
+
+00:16:49.497 --> 00:16:51.330 align:middle line:84%
+it takes for this program
+to run should just
+
+00:16:51.330 --> 00:16:53.380 align:middle line:90%
+increase by 2 as well.
+
+00:16:53.380 --> 00:16:55.080 align:middle line:90%
+And it does.
+
+00:16:55.080 --> 00:16:57.030 align:middle line:84%
+It does all the
+way up to somewhere
+
+00:16:57.030 --> 00:17:02.580 align:middle line:90%
+between 640 and 1,280.
+
+00:17:02.580 --> 00:17:06.150 align:middle line:84%
+So if we do the math, that's
+approximately times 2 each time
+
+00:17:06.150 --> 00:17:07.079 align:middle line:90%
+minus--
+
+00:17:07.079 --> 00:17:08.670 align:middle line:84%
+because we're just
+doing times here.
+
+00:17:08.670 --> 00:17:13.440 align:middle line:84%
+But then, after somewhere
+within 640 and 1,280,
+
+00:17:13.440 --> 00:17:16.680 align:middle line:84%
+the time that it takes to
+run my program no longer
+
+00:17:16.680 --> 00:17:18.980 align:middle line:90%
+follows this linear pattern.
+
+00:17:18.980 --> 00:17:21.670 align:middle line:84%
+In fact, it starts to
+grow faster than linear.
+
+00:17:21.670 --> 00:17:24.790 align:middle line:84%
+And at a first glance,
+it looks like it
+
+00:17:24.790 --> 00:17:27.849 align:middle line:90%
+grows squared, polynomially.
+
+00:17:27.849 --> 00:17:31.330 align:middle line:84%
+So instead of-- if you
+increase the input by 2,
+
+00:17:31.330 --> 00:17:34.330 align:middle line:84%
+it looks like the time
+it takes for this program
+
+00:17:34.330 --> 00:17:39.380 align:middle line:84%
+to run increases by
+4 after some point.
+
+00:17:39.380 --> 00:17:43.210 align:middle line:84%
+And that's because
+in the real world,
+
+00:17:43.210 --> 00:17:45.520 align:middle line:84%
+I've got Python
+running on the machine.
+
+00:17:45.520 --> 00:17:48.730 align:middle line:84%
+There's only some
+set number of bits
+
+00:17:48.730 --> 00:17:52.980 align:middle line:84%
+that my computer can hold
+when it stores numbers.
+
+00:17:52.980 --> 00:17:58.020 align:middle line:84%
+And the factorial of some
+number between 640 and 1,280
+
+00:17:58.020 --> 00:18:02.760 align:middle line:84%
+becomes so large that when
+Python and the machine
+
+00:18:02.760 --> 00:18:05.880 align:middle line:84%
+is trying to deal with
+multiplying these big numbers
+
+00:18:05.880 --> 00:18:08.490 align:middle line:84%
+by these big numbers
+altogether, it's
+
+00:18:08.490 --> 00:18:12.420 align:middle line:84%
+just taking a really long time
+to run because it can't store
+
+00:18:12.420 --> 00:18:15.570 align:middle line:84%
+these big numbers as efficiently
+as it could store these smaller
+
+00:18:15.570 --> 00:18:16.660 align:middle line:90%
+numbers.
+
+00:18:16.660 --> 00:18:18.690 align:middle line:84%
+And so in the real
+world what ends up
+
+00:18:18.690 --> 00:18:22.590 align:middle line:84%
+happening is after some-- after
+I'm trying to store some really
+
+00:18:22.590 --> 00:18:24.900 align:middle line:84%
+large value and doing the
+operations with some really
+
+00:18:24.900 --> 00:18:28.560 align:middle line:84%
+large values, the
+time complexity
+
+00:18:28.560 --> 00:18:30.330 align:middle line:90%
+goes down dramatically, right?
+
+00:18:30.330 --> 00:18:33.510 align:middle line:84%
+N to n squared is
+a pretty big jump.
+
+00:18:33.510 --> 00:18:37.080 align:middle line:84%
+And so this kind of shows
+the difference between theory
+
+00:18:37.080 --> 00:18:38.430 align:middle line:90%
+and the real world.
+
+00:18:38.430 --> 00:18:40.500 align:middle line:84%
+So in the real world, we
+can't store these values
+
+00:18:40.500 --> 00:18:42.270 align:middle line:90%
+as efficiently as they get big.
+
+00:18:42.270 --> 00:18:47.082 align:middle line:84%
+AUDIENCE: So does that mean
+the, I guess, [INAUDIBLE]??
+
+00:18:47.082 --> 00:18:53.820 align:middle line:90%
+
+
+00:18:53.820 --> 00:18:57.090 align:middle line:84%
+ANA BELL: Yeah, so if we use
+a machine that had more bits
+
+00:18:57.090 --> 00:19:00.210 align:middle line:84%
+to store values, then
+we'd be able to be
+
+00:19:00.210 --> 00:19:02.670 align:middle line:90%
+more efficient farther along.
+
+00:19:02.670 --> 00:19:03.345 align:middle line:90%
+Yeah, exactly.
+
+00:19:03.345 --> 00:19:05.920 align:middle line:90%
+
+
+00:19:05.920 --> 00:19:07.770 align:middle line:84%
+And we could-- I
+guess we could--
+
+00:19:07.770 --> 00:19:11.040 align:middle line:84%
+if we had a language that was
+maybe doing some smarter things
+
+00:19:11.040 --> 00:19:14.340 align:middle line:84%
+and storing these big values
+in a much smarter way, that
+
+00:19:14.340 --> 00:19:18.630 align:middle line:84%
+could also have an impact
+in the timing as well.
+
+00:19:18.630 --> 00:19:20.430 align:middle line:84%
+But for the purposes
+of this class,
+
+00:19:20.430 --> 00:19:24.810 align:middle line:84%
+we're just interested in the
+theoretical happenings here.
+
+00:19:24.810 --> 00:19:28.040 align:middle line:84%
+So as the input
+increases by x, we
+
+00:19:28.040 --> 00:19:30.800 align:middle line:84%
+expect that the time that
+it takes to run the program
+
+00:19:30.800 --> 00:19:33.200 align:middle line:84%
+will be x times as
+long because we're
+
+00:19:33.200 --> 00:19:38.520 align:middle line:84%
+looking at values that are
+really, really big in theory.
+
+00:19:38.520 --> 00:19:40.630 align:middle line:84%
+OK, so let's look
+at another example.
+
+00:19:40.630 --> 00:19:45.450 align:middle line:84%
+So this is a factorial function
+that does it recursively.
+
+00:19:45.450 --> 00:19:47.640 align:middle line:90%
+We've seen this function before.
+
+00:19:47.640 --> 00:19:50.290 align:middle line:84%
+We just looked at the
+iterative version of factorial.
+
+00:19:50.290 --> 00:19:53.050 align:middle line:84%
+Now we're looking at the
+recursive version of factorial.
+
+00:19:53.050 --> 00:19:54.220 align:middle line:90%
+So what do we have?
+
+00:19:54.220 --> 00:19:58.830 align:middle line:84%
+We have one base case that our
+code will eventually get down
+
+00:19:58.830 --> 00:20:03.480 align:middle line:84%
+to and a recursive step, which
+is just n times factorial n
+
+00:20:03.480 --> 00:20:06.200 align:middle line:90%
+minus 1.
+
+00:20:06.200 --> 00:20:10.820 align:middle line:84%
+So how do we do the analysis
+of a recursive algorithm?
+
+00:20:10.820 --> 00:20:12.690 align:middle line:84%
+Because in this
+recursive algorithm,
+
+00:20:12.690 --> 00:20:14.780 align:middle line:90%
+we don't have a loop.
+
+00:20:14.780 --> 00:20:17.090 align:middle line:84%
+In the previous
+examples, we had a loop
+
+00:20:17.090 --> 00:20:19.290 align:middle line:84%
+that we could
+definitively say, hey,
+
+00:20:19.290 --> 00:20:21.290 align:middle line:84%
+this loop will repeat
+this many times.
+
+00:20:21.290 --> 00:20:25.310 align:middle line:84%
+So clearly, increasing
+n will increase the time
+
+00:20:25.310 --> 00:20:27.000 align:middle line:90%
+it takes for this loop to run.
+
+00:20:27.000 --> 00:20:29.150 align:middle line:84%
+So when we're dealing
+with recursive functions
+
+00:20:29.150 --> 00:20:32.780 align:middle line:84%
+we think about how many
+times the recursive function
+
+00:20:32.780 --> 00:20:34.820 align:middle line:90%
+is going to be called.
+
+00:20:34.820 --> 00:20:39.920 align:middle line:84%
+Because when we call factorial,
+we have factorial of some 5
+
+00:20:39.920 --> 00:20:44.090 align:middle line:84%
+or whatever it is, and
+this calls factorial of 4,
+
+00:20:44.090 --> 00:20:46.580 align:middle line:90%
+and this calls factorial of 3.
+
+00:20:46.580 --> 00:20:51.170 align:middle line:84%
+And so we have this
+chain of function calls
+
+00:20:51.170 --> 00:20:54.540 align:middle line:84%
+where we get down
+to the base case.
+
+00:20:54.540 --> 00:20:56.600 align:middle line:84%
+And once we get down
+to the base case,
+
+00:20:56.600 --> 00:21:01.760 align:middle line:84%
+we start to kick off
+the step that returns
+
+00:21:01.760 --> 00:21:03.480 align:middle line:90%
+the result, one at a time.
+
+00:21:03.480 --> 00:21:07.340 align:middle line:84%
+So when we're talking about
+recursive functions what
+
+00:21:07.340 --> 00:21:13.600 align:middle line:84%
+we really care about is how
+many times we call the function.
+
+00:21:13.600 --> 00:21:17.650 align:middle line:84%
+That's our, quote, unquote
+"loop" for recursive functions.
+
+00:21:17.650 --> 00:21:19.630 align:middle line:84%
+It's just the function
+calling itself
+
+00:21:19.630 --> 00:21:22.180 align:middle line:90%
+to ask itself to do the work.
+
+00:21:22.180 --> 00:21:26.710 align:middle line:84%
+And it does the work with a
+slightly changed parameter.
+
+00:21:26.710 --> 00:21:29.290 align:middle line:84%
+So what we need to
+do is think about,
+
+00:21:29.290 --> 00:21:32.390 align:middle line:84%
+how many times does this
+function call itself?
+
+00:21:32.390 --> 00:21:35.150 align:middle line:84%
+And on top of that, is
+there some sort of overhead
+
+00:21:35.150 --> 00:21:37.640 align:middle line:90%
+that's not constant?
+
+00:21:37.640 --> 00:21:41.450 align:middle line:84%
+In this particular case, when
+we call factorial recursive,
+
+00:21:41.450 --> 00:21:45.410 align:middle line:84%
+we're going to go
+essentially theta of n times
+
+00:21:45.410 --> 00:21:48.770 align:middle line:84%
+because we start with n then
+we do n minus 1, n minus 2,
+
+00:21:48.770 --> 00:21:51.260 align:middle line:84%
+n minus 3, all
+the way down to 0.
+
+00:21:51.260 --> 00:21:53.210 align:middle line:84%
+So effectively, we've
+called ourselves
+
+00:21:53.210 --> 00:21:55.520 align:middle line:90%
+about n times, so theta of n.
+
+00:21:55.520 --> 00:21:58.040 align:middle line:84%
+And the overhead for
+each one of those calls
+
+00:21:58.040 --> 00:22:01.850 align:middle line:84%
+is constant because all I'm
+doing to n is subtracting by 1.
+
+00:22:01.850 --> 00:22:03.800 align:middle line:90%
+And that's a constant thing.
+
+00:22:03.800 --> 00:22:05.330 align:middle line:90%
+N minus 1 is theta of 1.
+
+00:22:05.330 --> 00:22:08.450 align:middle line:90%
+It's just constant.
+
+00:22:08.450 --> 00:22:11.840 align:middle line:84%
+So the overall complexity
+of this is just theta of n,
+
+00:22:11.840 --> 00:22:15.220 align:middle line:90%
+where n is just my input.
+
+00:22:15.220 --> 00:22:18.340 align:middle line:84%
+So what we notice is
+that the iterative
+
+00:22:18.340 --> 00:22:20.650 align:middle line:84%
+and the recursive
+versions of factorial
+
+00:22:20.650 --> 00:22:25.820 align:middle line:84%
+are both theta of n, which
+means that, generally speaking,
+
+00:22:25.820 --> 00:22:28.270 align:middle line:84%
+if we were trying to
+decide whether to implement
+
+00:22:28.270 --> 00:22:30.820 align:middle line:84%
+factorial recursively
+or iteratively,
+
+00:22:30.820 --> 00:22:32.890 align:middle line:84%
+it won't really
+matter in the long run
+
+00:22:32.890 --> 00:22:36.250 align:middle line:84%
+because the worst-case
+complexity is theta of n.
+
+00:22:36.250 --> 00:22:37.370 align:middle line:90%
+It's the same for both.
+
+00:22:37.370 --> 00:22:41.060 align:middle line:84%
+So it will be your choice
+which one to actually use.
+
+00:22:41.060 --> 00:22:44.740 align:middle line:84%
+So then it maybe comes down to
+readability or other factors.
+
+00:22:44.740 --> 00:22:48.920 align:middle line:90%
+
+
+00:22:48.920 --> 00:22:50.720 align:middle line:90%
+All right, another example.
+
+00:22:50.720 --> 00:22:51.670 align:middle line:90%
+So this is compound.
+
+00:22:51.670 --> 00:22:53.180 align:middle line:90%
+We saw this last lecture.
+
+00:22:53.180 --> 00:22:55.452 align:middle line:84%
+We actually timed it
+and counted how many--
+
+00:22:55.452 --> 00:22:56.410 align:middle line:90%
+actually, did we count?
+
+00:22:56.410 --> 00:22:57.170 align:middle line:90%
+I don't remember.
+
+00:22:57.170 --> 00:22:59.470 align:middle line:84%
+I don't think we counted
+the number of operations,
+
+00:22:59.470 --> 00:23:00.310 align:middle line:90%
+or maybe we did.
+
+00:23:00.310 --> 00:23:03.290 align:middle line:90%
+But we definitely timed it.
+
+00:23:03.290 --> 00:23:07.190 align:middle line:84%
+So this function took
+in three parameters.
+
+00:23:07.190 --> 00:23:10.300 align:middle line:84%
+So we can have to be careful
+which one of these parameters--
+
+00:23:10.300 --> 00:23:13.030 align:middle line:84%
+or which parameters
+of these actually
+
+00:23:13.030 --> 00:23:14.750 align:middle line:90%
+contribute to my complexity.
+
+00:23:14.750 --> 00:23:19.720 align:middle line:84%
+So this function calculates
+the amount of money I have
+
+00:23:19.720 --> 00:23:26.230 align:middle line:84%
+if I invest some monthly
+amount at some monthly interest
+
+00:23:26.230 --> 00:23:28.570 align:middle line:90%
+over some number of months.
+
+00:23:28.570 --> 00:23:31.930 align:middle line:84%
+So the loop here iterates
+through a number of months.
+
+00:23:31.930 --> 00:23:35.710 align:middle line:84%
+And then everything else
+seems to be constant.
+
+00:23:35.710 --> 00:23:37.720 align:middle line:90%
+I have one loop.
+
+00:23:37.720 --> 00:23:40.330 align:middle line:84%
+So the inside of the
+loop is constant.
+
+00:23:40.330 --> 00:23:42.050 align:middle line:90%
+I do have to double check that.
+
+00:23:42.050 --> 00:23:43.510 align:middle line:90%
+But so far, so good.
+
+00:23:43.510 --> 00:23:45.010 align:middle line:90%
+It's not looping anything else.
+
+00:23:45.010 --> 00:23:48.170 align:middle line:84%
+It's not a function
+of anything else.
+
+00:23:48.170 --> 00:23:50.995 align:middle line:84%
+The loop itself, though,
+is theta of n months.
+
+00:23:50.995 --> 00:23:53.530 align:middle line:90%
+
+
+00:23:53.530 --> 00:23:56.050 align:middle line:84%
+So the overall complexity
+of this function
+
+00:23:56.050 --> 00:23:57.700 align:middle line:90%
+is theta of n months.
+
+00:23:57.700 --> 00:24:02.290 align:middle line:84%
+Or we could say theta of n,
+where n is equal to n months.
+
+00:24:02.290 --> 00:24:05.530 align:middle line:84%
+None of the other parameters
+contribute to my complexity.
+
+00:24:05.530 --> 00:24:08.378 align:middle line:84%
+And that's exactly what we
+saw when we ran the code.
+
+00:24:08.378 --> 00:24:10.420 align:middle line:84%
+We ran it by changing each
+one of the parameters,
+
+00:24:10.420 --> 00:24:12.460 align:middle line:84%
+and we saw only n
+months contributed
+
+00:24:12.460 --> 00:24:14.255 align:middle line:90%
+to a slowing program.
+
+00:24:14.255 --> 00:24:18.340 align:middle line:90%
+
+
+00:24:18.340 --> 00:24:21.340 align:middle line:84%
+If we really wanted
+to, we could have
+
+00:24:21.340 --> 00:24:25.570 align:middle line:84%
+done this analysis
+in depth, as we've
+
+00:24:25.570 --> 00:24:27.665 align:middle line:84%
+done last lecture,
+to actually count
+
+00:24:27.665 --> 00:24:29.290 align:middle line:84%
+the full number of
+operations, or as we
+
+00:24:29.290 --> 00:24:30.950 align:middle line:84%
+did at the beginning
+of this lecture.
+
+00:24:30.950 --> 00:24:33.910 align:middle line:90%
+So total equals 0 is theta of 1.
+
+00:24:33.910 --> 00:24:38.980 align:middle line:84%
+The loop is theta of n months
+multiplied by for operations.
+
+00:24:38.980 --> 00:24:44.720 align:middle line:84%
+So i grabbing a value in
+range, taking multiplication,
+
+00:24:44.720 --> 00:24:47.530 align:middle line:84%
+addition, and then
+saving that into total,
+
+00:24:47.530 --> 00:24:50.870 align:middle line:84%
+that's four, multiplied
+by theta of n,
+
+00:24:50.870 --> 00:24:54.140 align:middle line:84%
+where n is n months, plus
+theta of 1 to do the return.
+
+00:24:54.140 --> 00:24:56.440 align:middle line:84%
+So that ends up being
+theta of 1 plus 4 n
+
+00:24:56.440 --> 00:25:00.140 align:middle line:84%
+plus 1, which just
+simplifies to theta of n,
+
+00:25:00.140 --> 00:25:01.000 align:middle line:90%
+where n is n months.
+
+00:25:01.000 --> 00:25:02.770 align:middle line:90%
+Yeah.
+
+00:25:02.770 --> 00:25:06.630 align:middle line:84%
+AUDIENCE: Why did that
+[INAUDIBLE] to 1--
+
+00:25:06.630 --> 00:25:08.991 align:middle line:90%
+well, theta 1 [INAUDIBLE]?
+
+00:25:08.991 --> 00:25:14.960 align:middle line:90%
+
+
+00:25:14.960 --> 00:25:17.330 align:middle line:84%
+ANA BELL: Yeah, so we're
+just looking at operations.
+
+00:25:17.330 --> 00:25:20.390 align:middle line:84%
+We're doing calculations
+with interest and invest
+
+00:25:20.390 --> 00:25:22.850 align:middle line:84%
+and multiplying it
+with total, right?
+
+00:25:22.850 --> 00:25:26.120 align:middle line:84%
+But the fact that
+interest is bigger--
+
+00:25:26.120 --> 00:25:29.600 align:middle line:84%
+like, if the interest is $1
+or if the interest is $1,000,
+
+00:25:29.600 --> 00:25:34.970 align:middle line:84%
+is this going to make that
+line of code much slower?
+
+00:25:34.970 --> 00:25:37.550 align:middle line:84%
+No, because all we're
+doing is a multiplication
+
+00:25:37.550 --> 00:25:39.150 align:middle line:90%
+between two numbers.
+
+00:25:39.150 --> 00:25:41.120 align:middle line:84%
+So that's why the
+inside is theta 1.
+
+00:25:41.120 --> 00:25:44.630 align:middle line:84%
+But having a loop where we
+repeat this over and over again
+
+00:25:44.630 --> 00:25:46.410 align:middle line:84%
+is going to slow
+the program down.
+
+00:25:46.410 --> 00:25:46.910 align:middle line:90%
+Yeah.
+
+00:25:46.910 --> 00:25:50.690 align:middle line:90%
+
+
+00:25:50.690 --> 00:25:54.210 align:middle line:84%
+OK, how about this
+Fibonacci function?
+
+00:25:54.210 --> 00:25:57.590 align:middle line:84%
+So this is an iterative
+version of Fibonacci.
+
+00:25:57.590 --> 00:25:59.880 align:middle line:84%
+I don't know if we've
+seen this before.
+
+00:25:59.880 --> 00:26:04.010 align:middle line:84%
+Again, we could do sort of a
+rough, quick analysis, where
+
+00:26:04.010 --> 00:26:06.500 align:middle line:84%
+we just briefly glance
+at every single line
+
+00:26:06.500 --> 00:26:10.220 align:middle line:84%
+and ask ourselves whether
+it's contributing theta of 1
+
+00:26:10.220 --> 00:26:14.330 align:middle line:84%
+or something worse to
+our total analysis--
+
+00:26:14.330 --> 00:26:16.930 align:middle line:90%
+total runtime analysis.
+
+00:26:16.930 --> 00:26:19.330 align:middle line:84%
+So we've got this
+first part here,
+
+00:26:19.330 --> 00:26:21.900 align:middle line:84%
+which is just
+constant, state of 1.
+
+00:26:21.900 --> 00:26:23.820 align:middle line:90%
+Nothing here is loopy.
+
+00:26:23.820 --> 00:26:26.700 align:middle line:84%
+There's no recursive
+going on, nothing
+
+00:26:26.700 --> 00:26:30.260 align:middle line:84%
+that depends on the input
+in a nonconstant way.
+
+00:26:30.260 --> 00:26:32.930 align:middle line:84%
+In the else, we've got
+this constant, again,
+
+00:26:32.930 --> 00:26:34.430 align:middle line:90%
+just assigning two parameters.
+
+00:26:34.430 --> 00:26:35.790 align:middle line:90%
+We've got a loop.
+
+00:26:35.790 --> 00:26:40.730 align:middle line:84%
+So now this loop is
+going to be nonconstant.
+
+00:26:40.730 --> 00:26:44.270 align:middle line:84%
+The stuff inside the
+loop is constant though.
+
+00:26:44.270 --> 00:26:47.730 align:middle line:84%
+So the loop itself
+depends on n, my input.
+
+00:26:47.730 --> 00:26:49.870 align:middle line:84%
+So that's going
+to be theta of n.
+
+00:26:49.870 --> 00:26:53.260 align:middle line:84%
+But that theta of n is
+multiplied by theta of 1.
+
+00:26:53.260 --> 00:26:55.520 align:middle line:84%
+The stuff inside the
+loop is just constant.
+
+00:26:55.520 --> 00:26:58.420 align:middle line:84%
+So that's theta of n times theta
+of 1, which is just theta of n.
+
+00:26:58.420 --> 00:27:01.690 align:middle line:84%
+And then the return, of
+course, is theta of 1.
+
+00:27:01.690 --> 00:27:03.580 align:middle line:84%
+So we could do a
+calculation like this,
+
+00:27:03.580 --> 00:27:05.810 align:middle line:84%
+or you could just
+quickly scan and say,
+
+00:27:05.810 --> 00:27:09.040 align:middle line:84%
+hey, I've just got a loop that
+looks-- that depends on n.
+
+00:27:09.040 --> 00:27:10.280 align:middle line:90%
+And that's theta of n.
+
+00:27:10.280 --> 00:27:11.950 align:middle line:84%
+So the overall
+complexity of this,
+
+00:27:11.950 --> 00:27:14.920 align:middle line:84%
+if we want it to be
+detailed, is this, theta of 1
+
+00:27:14.920 --> 00:27:18.010 align:middle line:84%
+plus theta of 1 plus theta
+of n times theta of 1
+
+00:27:18.010 --> 00:27:19.000 align:middle line:90%
+plus theta of 1.
+
+00:27:19.000 --> 00:27:21.760 align:middle line:84%
+But overall, that just
+gives us theta of n
+
+00:27:21.760 --> 00:27:26.890 align:middle line:84%
+because that loop is the only
+thing that depends on my input.
+
+00:27:26.890 --> 00:27:29.110 align:middle line:90%
+Everyone all right so far?
+
+00:27:29.110 --> 00:27:31.290 align:middle line:90%
+OK.
+
+00:27:31.290 --> 00:27:31.890 align:middle line:90%
+Perfect.
+
+00:27:31.890 --> 00:27:35.700 align:middle line:84%
+So now let's move on to the
+second easiest complexity
+
+00:27:35.700 --> 00:27:36.780 align:middle line:90%
+to identify.
+
+00:27:36.780 --> 00:27:38.830 align:middle line:84%
+That's the polynomial
+complexity.
+
+00:27:38.830 --> 00:27:41.610 align:middle line:84%
+So polynomial
+complexity generally
+
+00:27:41.610 --> 00:27:45.870 align:middle line:84%
+deals with functions
+that have nested loops.
+
+00:27:45.870 --> 00:27:48.300 align:middle line:84%
+So if we have two nested
+loops that linearly
+
+00:27:48.300 --> 00:27:50.610 align:middle line:84%
+depend on my input,
+that's going to be
+
+00:27:50.610 --> 00:27:52.740 align:middle line:90%
+a function that's n squared.
+
+00:27:52.740 --> 00:27:54.810 align:middle line:84%
+If I've got three
+nested loops that all
+
+00:27:54.810 --> 00:27:58.740 align:middle line:84%
+depend on my input linearly,
+that's going to be n cubed.
+
+00:27:58.740 --> 00:28:02.300 align:middle line:90%
+So let's see some examples.
+
+00:28:02.300 --> 00:28:05.860 align:middle line:84%
+So here I have a really
+simple nested loop situation.
+
+00:28:05.860 --> 00:28:09.990 align:middle line:90%
+I've got a function called g.
+
+00:28:09.990 --> 00:28:13.380 align:middle line:84%
+And it's going to
+take in an input n.
+
+00:28:13.380 --> 00:28:17.370 align:middle line:84%
+So I'm going to look for
+everything that depends on n.
+
+00:28:17.370 --> 00:28:19.380 align:middle line:84%
+Well, I've got a for
+loop here that's going
+
+00:28:19.380 --> 00:28:20.650 align:middle line:90%
+to iterate n times.
+
+00:28:20.650 --> 00:28:22.390 align:middle line:90%
+So that's theta of n.
+
+00:28:22.390 --> 00:28:24.590 align:middle line:90%
+And I've got an inner for loop.
+
+00:28:24.590 --> 00:28:27.320 align:middle line:84%
+So for each thing in
+my outer for loop,
+
+00:28:27.320 --> 00:28:32.600 align:middle line:84%
+I'm going to do the inner
+thing n times as well.
+
+00:28:32.600 --> 00:28:36.840 align:middle line:84%
+And then the stuff inside my
+inner for loop is constant.
+
+00:28:36.840 --> 00:28:37.940 align:middle line:90%
+So that's theta of n.
+
+00:28:37.940 --> 00:28:40.490 align:middle line:84%
+And the stuff outside
+of my loops are-- sorry,
+
+00:28:40.490 --> 00:28:43.310 align:middle line:84%
+the stuff inside my inner
+for loop is theta of 1.
+
+00:28:43.310 --> 00:28:46.330 align:middle line:84%
+And the stuff outside of any
+of for loops are theta of 1
+
+00:28:46.330 --> 00:28:46.830 align:middle line:90%
+as well.
+
+00:28:46.830 --> 00:28:49.260 align:middle line:84%
+So they contribute nothing
+to this complexity.
+
+00:28:49.260 --> 00:28:53.730 align:middle line:84%
+So the only thing that I need
+to account for is my outer loop,
+
+00:28:53.730 --> 00:28:54.890 align:middle line:90%
+which is theta of n.
+
+00:28:54.890 --> 00:28:58.010 align:middle line:84%
+And law of multiplication
+says my inner loop
+
+00:28:58.010 --> 00:29:00.830 align:middle line:90%
+is going to be multiplied--
+
+00:29:00.830 --> 00:29:04.512 align:middle line:84%
+multiply its complexity to
+my outer loop's complexity.
+
+00:29:04.512 --> 00:29:06.720 align:middle line:84%
+All right, so the overall
+complexity of this function
+
+00:29:06.720 --> 00:29:09.000 align:middle line:84%
+is theta of n squared
+because the number of times
+
+00:29:09.000 --> 00:29:11.730 align:middle line:84%
+that I'm going to
+do this operation is
+
+00:29:11.730 --> 00:29:13.575 align:middle line:90%
+going to be n squared times.
+
+00:29:13.575 --> 00:29:17.930 align:middle line:90%
+
+
+00:29:17.930 --> 00:29:19.570 align:middle line:90%
+Perfect.
+
+00:29:19.570 --> 00:29:22.840 align:middle line:84%
+All right, so now let's look
+at some examples with lists.
+
+00:29:22.840 --> 00:29:25.160 align:middle line:90%
+We haven't seen those yet.
+
+00:29:25.160 --> 00:29:28.280 align:middle line:84%
+So now we have to
+think about the input.
+
+00:29:28.280 --> 00:29:30.400 align:middle line:84%
+In this case, it's
+going to be two lists.
+
+00:29:30.400 --> 00:29:33.640 align:middle line:84%
+And when we're dealing with
+lists, one of the things that--
+
+00:29:33.640 --> 00:29:35.980 align:middle line:84%
+or the most common thing
+we're interested in is what
+
+00:29:35.980 --> 00:29:38.680 align:middle line:84%
+happens to the behavior
+of the function
+
+00:29:38.680 --> 00:29:42.010 align:middle line:90%
+as the lists get bigger?
+
+00:29:42.010 --> 00:29:45.850 align:middle line:84%
+As we saw in last
+lecture, the size
+
+00:29:45.850 --> 00:29:48.800 align:middle line:84%
+of the elements within the
+list typically don't matter.
+
+00:29:48.800 --> 00:29:53.020 align:middle line:84%
+But the fact that I have more
+elements to do stuff with
+
+00:29:53.020 --> 00:29:54.160 align:middle line:90%
+does matter.
+
+00:29:54.160 --> 00:29:56.890 align:middle line:84%
+So if my list now has
+twice as many elements,
+
+00:29:56.890 --> 00:30:02.140 align:middle line:84%
+this program or most programs
+will probably be twice as slow.
+
+00:30:02.140 --> 00:30:05.650 align:middle line:84%
+So here's a function
+called is_subset.
+
+00:30:05.650 --> 00:30:08.200 align:middle line:84%
+It takes in two
+lists, L1 and L2.
+
+00:30:08.200 --> 00:30:11.260 align:middle line:84%
+I've added two little
+examples up here
+
+00:30:11.260 --> 00:30:13.250 align:middle line:84%
+to help us figure out
+what this function does.
+
+00:30:13.250 --> 00:30:19.270 align:middle line:84%
+So it's going to tell us whether
+the elements of L1 are in L2.
+
+00:30:19.270 --> 00:30:22.510 align:middle line:84%
+So in the first example
+here, elements in L1
+
+00:30:22.510 --> 00:30:24.520 align:middle line:90%
+are 3 and 5 and 2.
+
+00:30:24.520 --> 00:30:28.310 align:middle line:84%
+And L2 does have the
+3 and the 5 and the 2,
+
+00:30:28.310 --> 00:30:29.980 align:middle line:90%
+but it also has other stuff.
+
+00:30:29.980 --> 00:30:31.240 align:middle line:90%
+That's totally fine.
+
+00:30:31.240 --> 00:30:33.730 align:middle line:84%
+All the elements
+in L1 are in L2.
+
+00:30:33.730 --> 00:30:35.350 align:middle line:84%
+So this function
+will return True
+
+00:30:35.350 --> 00:30:38.620 align:middle line:84%
+for those examples,
+those in L1 and L2.
+
+00:30:38.620 --> 00:30:41.960 align:middle line:84%
+And then here's an example
+where it will return False.
+
+00:30:41.960 --> 00:30:44.950 align:middle line:84%
+So the elements of
+L1 are 3 and 5 and 2.
+
+00:30:44.950 --> 00:30:47.860 align:middle line:90%
+And L2 is missing the 3.
+
+00:30:47.860 --> 00:30:49.840 align:middle line:84%
+So then that one
+will return False.
+
+00:30:49.840 --> 00:30:53.470 align:middle line:84%
+The elements of L1
+are not all in L2.
+
+00:30:53.470 --> 00:30:55.780 align:middle line:90%
+So it's not a subset.
+
+00:30:55.780 --> 00:30:57.610 align:middle line:84%
+All right, so what's
+this function doing?
+
+00:30:57.610 --> 00:31:00.920 align:middle line:84%
+Well, it's iterating through
+all the elements in L1.
+
+00:31:00.920 --> 00:31:04.010 align:middle line:84%
+So it's going to first look at
+the 3, then the 5, then the 2.
+
+00:31:04.010 --> 00:31:06.920 align:middle line:84%
+It's going to look
+through each element in L2
+
+00:31:06.920 --> 00:31:09.420 align:middle line:84%
+for every one of
+those L1 elements.
+
+00:31:09.420 --> 00:31:12.230 align:middle line:84%
+So it's going to look at the
+3 and the 2, the 3 and the 3,
+
+00:31:12.230 --> 00:31:14.090 align:middle line:84%
+the 3 and the 5,
+the 3 and the 9.
+
+00:31:14.090 --> 00:31:17.120 align:middle line:84%
+Then it's going to look at the
+5 and the 2, the 5 and the 3, 5
+
+00:31:17.120 --> 00:31:18.530 align:middle line:90%
+and 5, 5 and 9.
+
+00:31:18.530 --> 00:31:20.570 align:middle line:90%
+It's going to keep doing that.
+
+00:31:20.570 --> 00:31:28.200 align:middle line:84%
+And it's going to keep track
+of this Boolean called matched.
+
+00:31:28.200 --> 00:31:30.360 align:middle line:90%
+And it's going to--
+
+00:31:30.360 --> 00:31:35.700 align:middle line:84%
+as long as it finds this
+element e1 within my L2
+
+00:31:35.700 --> 00:31:38.230 align:middle line:84%
+it's going to save
+matched to be True.
+
+00:31:38.230 --> 00:31:45.000 align:middle line:84%
+And it's going to keep doing
+this until it does not find--
+
+00:31:45.000 --> 00:31:46.890 align:middle line:84%
+sorry, until it keeps
+finding matches--
+
+00:31:46.890 --> 00:31:49.530 align:middle line:84%
+as long-- sorry, until
+it finds a match.
+
+00:31:49.530 --> 00:31:51.660 align:middle line:84%
+As soon as it finds
+a match, it breaks
+
+00:31:51.660 --> 00:31:53.310 align:middle line:84%
+because there's no
+need for it to keep
+
+00:31:53.310 --> 00:31:55.140 align:middle line:84%
+looking at the remaining
+elements of L2.
+
+00:31:55.140 --> 00:31:58.140 align:middle line:84%
+It already found
+one that matches.
+
+00:31:58.140 --> 00:32:00.810 align:middle line:84%
+So this code could
+actually be rewritten
+
+00:32:00.810 --> 00:32:04.410 align:middle line:90%
+by saying the inverse.
+
+00:32:04.410 --> 00:32:10.560 align:middle line:84%
+If e1 is not equal to L2, we can
+just immediately return False
+
+00:32:10.560 --> 00:32:12.720 align:middle line:84%
+because we've already
+found an element
+
+00:32:12.720 --> 00:32:15.050 align:middle line:90%
+from L1 that's not in L2.
+
+00:32:15.050 --> 00:32:17.550 align:middle line:84%
+So we could have rewritten this
+code in many different ways,
+
+00:32:17.550 --> 00:32:20.990 align:middle line:84%
+but the ultimate analysis
+will be the same.
+
+00:32:20.990 --> 00:32:24.950 align:middle line:84%
+So let's look at the
+analysis for this function.
+
+00:32:24.950 --> 00:32:27.440 align:middle line:90%
+Well, we have two inputs.
+
+00:32:27.440 --> 00:32:30.730 align:middle line:84%
+So we have to be careful
+about both of these inputs.
+
+00:32:30.730 --> 00:32:34.900 align:middle line:84%
+Which parts of this function
+depend on L1 and L2?
+
+00:32:34.900 --> 00:32:37.780 align:middle line:84%
+Well, we've got
+an outer for loop.
+
+00:32:37.780 --> 00:32:43.330 align:middle line:84%
+So what happens to the
+complexity with regards
+
+00:32:43.330 --> 00:32:44.990 align:middle line:90%
+to this loop?
+
+00:32:44.990 --> 00:32:47.950 align:middle line:84%
+Well, if I have more elements
+in L1, then this code--
+
+00:32:47.950 --> 00:32:50.330 align:middle line:84%
+this loop will go
+through more times.
+
+00:32:50.330 --> 00:32:55.960 align:middle line:84%
+So this loop will be
+executed length L1 times.
+
+00:32:55.960 --> 00:32:58.300 align:middle line:84%
+So the theta for
+this outer loop is
+
+00:32:58.300 --> 00:33:00.710 align:middle line:90%
+going to be theta of length L1.
+
+00:33:00.710 --> 00:33:02.430 align:middle line:90%
+But there is an inner loop.
+
+00:33:02.430 --> 00:33:04.310 align:middle line:84%
+So for each element
+in my outer loop,
+
+00:33:04.310 --> 00:33:08.550 align:middle line:84%
+I'm also going to do
+everything in this inner loop.
+
+00:33:08.550 --> 00:33:12.110 align:middle line:84%
+So in the worst case, I need to
+look through each element in L2
+
+00:33:12.110 --> 00:33:13.920 align:middle line:90%
+to find a match.
+
+00:33:13.920 --> 00:33:18.500 align:middle line:84%
+So the inner loop will execute
+at most length L2 times,
+
+00:33:18.500 --> 00:33:20.150 align:middle line:90%
+again, in the worst case.
+
+00:33:20.150 --> 00:33:23.950 align:middle line:84%
+So the inner loop will
+be theta of length L2.
+
+00:33:23.950 --> 00:33:27.070 align:middle line:84%
+So the overall complexity,
+since I've got this nested loop
+
+00:33:27.070 --> 00:33:29.770 align:middle line:84%
+situation, law of
+multiplication says
+
+00:33:29.770 --> 00:33:32.710 align:middle line:84%
+that it's going to be the theta
+of my outer loop multiplied
+
+00:33:32.710 --> 00:33:34.130 align:middle line:90%
+by the theta of my inner loop.
+
+00:33:34.130 --> 00:33:35.950 align:middle line:84%
+So theta of length
+L1 times length L2.
+
+00:33:35.950 --> 00:33:38.680 align:middle line:90%
+
+
+00:33:38.680 --> 00:33:41.810 align:middle line:90%
+OK, everyone-- yeah, question.
+
+00:33:41.810 --> 00:33:47.934 align:middle line:84%
+AUDIENCE: It means that if you
+have a linear if statement,
+
+00:33:47.934 --> 00:33:50.240 align:middle line:90%
+it would be an e?
+
+00:33:50.240 --> 00:33:51.830 align:middle line:90%
+ANA BELL: Yes.
+
+00:33:51.830 --> 00:33:56.110 align:middle line:90%
+So like here, in this if?
+
+00:33:56.110 --> 00:34:01.330 align:middle line:84%
+Yes, if the if had
+something like using an in,
+
+00:34:01.330 --> 00:34:06.940 align:middle line:84%
+where in is linear, then
+yes, there would be another--
+
+00:34:06.940 --> 00:34:09.190 align:middle line:84%
+it would be like
+there was another loop
+
+00:34:09.190 --> 00:34:10.590 align:middle line:90%
+at the third level.
+
+00:34:10.590 --> 00:34:12.159 align:middle line:84%
+Yeah, so then it
+would be n cubed.
+
+00:34:12.159 --> 00:34:15.070 align:middle line:90%
+Still a polynomial but n cubed.
+
+00:34:15.070 --> 00:34:19.130 align:middle line:90%
+
+
+00:34:19.130 --> 00:34:23.800 align:middle line:84%
+So if L1 and L2 are the same
+length, which sometimes we put
+
+00:34:23.800 --> 00:34:26.380 align:middle line:90%
+on to simplify the complexity--
+
+00:34:26.380 --> 00:34:28.810 align:middle line:84%
+we'll put this condition on
+to simplify the complexity,
+
+00:34:28.810 --> 00:34:32.710 align:middle line:84%
+then we say that it's
+theta of length L1 squared.
+
+00:34:32.710 --> 00:34:34.540 align:middle line:84%
+It's still polynomial
+complexity.
+
+00:34:34.540 --> 00:34:37.710 align:middle line:90%
+
+
+00:34:37.710 --> 00:34:40.350 align:middle line:84%
+OK, let's look--
+sorry, question.
+
+00:34:40.350 --> 00:34:42.683 align:middle line:84%
+AUDIENCE: If they weren't
+the same length, [INAUDIBLE]??
+
+00:34:42.683 --> 00:34:44.683 align:middle line:84%
+ANA BELL: Yes, if they
+were not the same length,
+
+00:34:44.683 --> 00:34:46.190 align:middle line:84%
+you have to denote
+it in the terms
+
+00:34:46.190 --> 00:34:49.370 align:middle line:90%
+of the both lengths, yeah.
+
+00:34:49.370 --> 00:34:51.570 align:middle line:84%
+OK, let's look at
+another example.
+
+00:34:51.570 --> 00:34:57.260 align:middle line:84%
+So here's a function that grabs
+the intersect of two lists.
+
+00:34:57.260 --> 00:35:00.620 align:middle line:84%
+So again, I've got a
+little example up here,
+
+00:35:00.620 --> 00:35:02.240 align:middle line:90%
+example L1 and L2.
+
+00:35:02.240 --> 00:35:05.640 align:middle line:84%
+So the intersect are going to
+be the common elements within L1
+
+00:35:05.640 --> 00:35:06.140 align:middle line:90%
+and L2.
+
+00:35:06.140 --> 00:35:07.260 align:middle line:90%
+But I'm only going to--
+
+00:35:07.260 --> 00:35:08.810 align:middle line:90%
+I'm not going to do duplicates.
+
+00:35:08.810 --> 00:35:11.310 align:middle line:84%
+So I'm just going to
+keep the unique numbers.
+
+00:35:11.310 --> 00:35:16.220 align:middle line:84%
+So here I've got L1 and L2
+contain 3, 5, 2 and 2, 3, 5, 9.
+
+00:35:16.220 --> 00:35:19.850 align:middle line:84%
+So notice the 2 and the
+3 and the 5 both occur--
+
+00:35:19.850 --> 00:35:22.380 align:middle line:90%
+all occur in both lists.
+
+00:35:22.380 --> 00:35:27.200 align:middle line:84%
+So the intersect of these
+two lists is 2, 3, and 5.
+
+00:35:27.200 --> 00:35:30.380 align:middle line:84%
+This example here
+on the right side
+
+00:35:30.380 --> 00:35:33.230 align:middle line:84%
+is going to be a
+little bit trickier.
+
+00:35:33.230 --> 00:35:35.810 align:middle line:84%
+It's kind of a unique edge
+case, but the code still
+
+00:35:35.810 --> 00:35:36.920 align:middle line:90%
+works for that edge case.
+
+00:35:36.920 --> 00:35:40.100 align:middle line:84%
+It's if I have L1 that has
+duplicates of some number
+
+00:35:40.100 --> 00:35:42.470 align:middle line:84%
+and L2 that has duplicates
+of that same number,
+
+00:35:42.470 --> 00:35:45.770 align:middle line:84%
+the returned list
+of the intersect
+
+00:35:45.770 --> 00:35:49.130 align:middle line:84%
+should just be 7,
+that one number once.
+
+00:35:49.130 --> 00:35:52.220 align:middle line:90%
+
+
+00:35:52.220 --> 00:35:55.600 align:middle line:84%
+So how does the
+code achieve this?
+
+00:35:55.600 --> 00:35:57.780 align:middle line:84%
+So you notice a nice
+little structure here.
+
+00:35:57.780 --> 00:36:00.150 align:middle line:84%
+I've got two blocks
+of code, right?
+
+00:36:00.150 --> 00:36:03.990 align:middle line:84%
+I've got something here, which
+is going to actually help
+
+00:36:03.990 --> 00:36:07.320 align:middle line:84%
+us build this list of
+all of the elements
+
+00:36:07.320 --> 00:36:10.410 align:middle line:84%
+that are common within the
+two lists and then something
+
+00:36:10.410 --> 00:36:13.620 align:middle line:84%
+down here, where I'm
+going to cull that list
+
+00:36:13.620 --> 00:36:16.110 align:middle line:90%
+to keep only the unique values.
+
+00:36:16.110 --> 00:36:20.520 align:middle line:84%
+So up here, this has a
+nested loop situation,
+
+00:36:20.520 --> 00:36:22.380 align:middle line:84%
+just like in the
+previous example.
+
+00:36:22.380 --> 00:36:27.150 align:middle line:84%
+I have to look at all of
+the pairs from L1 and L2
+
+00:36:27.150 --> 00:36:30.240 align:middle line:90%
+to figure out which are common.
+
+00:36:30.240 --> 00:36:34.140 align:middle line:84%
+So this for loop
+over L1 is going
+
+00:36:34.140 --> 00:36:35.820 align:middle line:84%
+to go through the
+3, the 5, and the 2.
+
+00:36:35.820 --> 00:36:37.890 align:middle line:84%
+And then the inner
+for loop through L2
+
+00:36:37.890 --> 00:36:40.090 align:middle line:90%
+is going to basically match--
+
+00:36:40.090 --> 00:36:42.330 align:middle line:84%
+take a look at, does
+the 3 match the 2?
+
+00:36:42.330 --> 00:36:43.380 align:middle line:90%
+Does the 3 match the 3?
+
+00:36:43.380 --> 00:36:44.460 align:middle line:90%
+Does the 3 match the 5?
+
+00:36:44.460 --> 00:36:45.660 align:middle line:90%
+Does the 3 match the 9?
+
+00:36:45.660 --> 00:36:48.960 align:middle line:84%
+And then the 5 match the 2,
+5 match the 3, and so on.
+
+00:36:48.960 --> 00:36:50.810 align:middle line:84%
+So that's what those
+loops are doing.
+
+00:36:50.810 --> 00:36:53.510 align:middle line:84%
+And as soon as we
+find a match, we're
+
+00:36:53.510 --> 00:36:56.300 align:middle line:84%
+going to append it to
+this temporary list.
+
+00:36:56.300 --> 00:37:00.030 align:middle line:84%
+And it's OK if we have
+duplicates in this list.
+
+00:37:00.030 --> 00:37:02.750 align:middle line:84%
+So if you look at the example
+on the right-hand side
+
+00:37:02.750 --> 00:37:06.560 align:middle line:84%
+there with the 7
+duplicated many times,
+
+00:37:06.560 --> 00:37:12.020 align:middle line:84%
+that's actually going to create
+a temporary list that's going
+
+00:37:12.020 --> 00:37:15.110 align:middle line:90%
+to contain nine times that 7.
+
+00:37:15.110 --> 00:37:17.368 align:middle line:84%
+So it's going to look
+at the 7 with the 7,
+
+00:37:17.368 --> 00:37:19.160 align:middle line:84%
+and it's going to say,
+hey, that's a match.
+
+00:37:19.160 --> 00:37:20.340 align:middle line:90%
+Let me add it.
+
+00:37:20.340 --> 00:37:23.505 align:middle line:84%
+Then it's going to look at
+the 7 with the middle 7 in L2,
+
+00:37:23.505 --> 00:37:25.130 align:middle line:84%
+and it's going to
+say, let me add that.
+
+00:37:25.130 --> 00:37:26.880 align:middle line:84%
+And then it's going
+to look at the first 7
+
+00:37:26.880 --> 00:37:28.730 align:middle line:84%
+in L1 with the last
+7 in L2, and it's
+
+00:37:28.730 --> 00:37:30.477 align:middle line:90%
+going to say, let me add that.
+
+00:37:30.477 --> 00:37:32.810 align:middle line:84%
+And then it's going to do
+that same thing all over again
+
+00:37:32.810 --> 00:37:35.750 align:middle line:84%
+when it looks at the
+middle 7 in L1 along
+
+00:37:35.750 --> 00:37:37.220 align:middle line:90%
+with each element in L2.
+
+00:37:37.220 --> 00:37:39.920 align:middle line:84%
+So it's going to add
+the 7 three more times.
+
+00:37:39.920 --> 00:37:42.380 align:middle line:84%
+And then again when
+it looks at the last 7
+
+00:37:42.380 --> 00:37:45.170 align:middle line:90%
+in L1 along with each 7 in L2.
+
+00:37:45.170 --> 00:37:46.500 align:middle line:90%
+So that's totally fine.
+
+00:37:46.500 --> 00:37:48.350 align:middle line:84%
+That's just what
+this code is doing.
+
+00:37:48.350 --> 00:37:50.850 align:middle line:84%
+And then the bottom
+part down here
+
+00:37:50.850 --> 00:37:56.640 align:middle line:84%
+is going to take this
+temporary list that we created,
+
+00:37:56.640 --> 00:37:59.550 align:middle line:84%
+and it's going to just keep
+the unique values within it.
+
+00:37:59.550 --> 00:38:02.700 align:middle line:84%
+So it's going to keep that--
+create that unique list.
+
+00:38:02.700 --> 00:38:04.530 align:middle line:84%
+And it's going to
+say, if I haven't seen
+
+00:38:04.530 --> 00:38:07.150 align:middle line:90%
+this value in unique, add it.
+
+00:38:07.150 --> 00:38:09.550 align:middle line:84%
+And if I have,
+don't do anything.
+
+00:38:09.550 --> 00:38:12.240 align:middle line:84%
+So in the end,
+this code down here
+
+00:38:12.240 --> 00:38:15.405 align:middle line:84%
+is going to take that big
+list here and just keep
+
+00:38:15.405 --> 00:38:16.155 align:middle line:90%
+the unique values.
+
+00:38:16.155 --> 00:38:18.930 align:middle line:90%
+
+
+00:38:18.930 --> 00:38:21.220 align:middle line:84%
+All right, so let's do
+the analysis for this.
+
+00:38:21.220 --> 00:38:23.670 align:middle line:84%
+So I've got my outer
+for loop and my inner
+
+00:38:23.670 --> 00:38:27.150 align:middle line:84%
+for loop up in the top
+half of my code here.
+
+00:38:27.150 --> 00:38:30.600 align:middle line:84%
+That generates my temporary--
+long temporary list,
+
+00:38:30.600 --> 00:38:32.370 align:middle line:90%
+potentially long temporary list.
+
+00:38:32.370 --> 00:38:34.890 align:middle line:84%
+So that we already know
+from the previous example
+
+00:38:34.890 --> 00:38:37.860 align:middle line:84%
+is theta of length L1
+times theta of length L2.
+
+00:38:37.860 --> 00:38:38.910 align:middle line:90%
+Pretty simple.
+
+00:38:38.910 --> 00:38:42.000 align:middle line:84%
+Now, what about this
+bottom half here?
+
+00:38:42.000 --> 00:38:45.360 align:middle line:84%
+Because we have to be careful
+about this bottom half.
+
+00:38:45.360 --> 00:38:49.830 align:middle line:84%
+This one could also
+contribute to the complexity.
+
+00:38:49.830 --> 00:38:54.240 align:middle line:84%
+It's looping through a temporary
+variable, a list variable
+
+00:38:54.240 --> 00:38:56.150 align:middle line:90%
+that we created.
+
+00:38:56.150 --> 00:39:03.210 align:middle line:84%
+But this list is created by
+doing something to L1 and L2,
+
+00:39:03.210 --> 00:39:06.000 align:middle line:84%
+by looking at
+elements in L1 and L2.
+
+00:39:06.000 --> 00:39:11.100 align:middle line:84%
+So it's actually indirectly
+related to L1 and L2.
+
+00:39:11.100 --> 00:39:15.240 align:middle line:84%
+So we can't just cast it aside
+because it could potentially
+
+00:39:15.240 --> 00:39:19.350 align:middle line:84%
+contribute to the
+complexity of my program.
+
+00:39:19.350 --> 00:39:24.090 align:middle line:84%
+And in the worst case, I
+create this temporary variable
+
+00:39:24.090 --> 00:39:26.010 align:middle line:90%
+that looks like this.
+
+00:39:26.010 --> 00:39:30.840 align:middle line:84%
+So in the worst possible case,
+my temporary variables length
+
+00:39:30.840 --> 00:39:33.960 align:middle line:84%
+is going to be length
+L1 times length L2.
+
+00:39:33.960 --> 00:39:39.110 align:middle line:84%
+I basically added that character
+every time I compared a value.
+
+00:39:39.110 --> 00:39:44.730 align:middle line:84%
+So this list at worst case is
+length L1 times length L2 long.
+
+00:39:44.730 --> 00:39:48.230 align:middle line:84%
+So if I'm iterating
+through that list,
+
+00:39:48.230 --> 00:39:50.620 align:middle line:84%
+then the complexity
+of that second half
+
+00:39:50.620 --> 00:39:55.235 align:middle line:84%
+is also theta of length L1 times
+length L2 in the worst case,
+
+00:39:55.235 --> 00:39:55.735 align:middle line:90%
+right?
+
+00:39:55.735 --> 00:40:00.900 align:middle line:90%
+
+
+00:40:00.900 --> 00:40:03.090 align:middle line:84%
+So the overall complexity
+of the function
+
+00:40:03.090 --> 00:40:05.730 align:middle line:84%
+is theta of length
+L1 times length L2
+
+00:40:05.730 --> 00:40:10.930 align:middle line:84%
+up here plus theta of length
+L1 times length L2 down here.
+
+00:40:10.930 --> 00:40:13.380 align:middle line:84%
+So in this particular
+case, the fact
+
+00:40:13.380 --> 00:40:15.750 align:middle line:84%
+that I'm iterating over
+temp didn't actually
+
+00:40:15.750 --> 00:40:19.020 align:middle line:84%
+increase my complexity,
+but you can imagine code
+
+00:40:19.020 --> 00:40:25.380 align:middle line:84%
+where doing something funky
+like this where you indirectly
+
+00:40:25.380 --> 00:40:28.140 align:middle line:84%
+have some loop over something
+related to the input
+
+00:40:28.140 --> 00:40:29.770 align:middle line:90%
+could affect the complexity.
+
+00:40:29.770 --> 00:40:31.680 align:middle line:84%
+So in this case, the
+overall complexity
+
+00:40:31.680 --> 00:40:35.880 align:middle line:84%
+is still theta of length
+L1 times length L2.
+
+00:40:35.880 --> 00:40:37.170 align:middle line:90%
+Questions about this one?
+
+00:40:37.170 --> 00:40:45.070 align:middle line:90%
+
+
+00:40:45.070 --> 00:40:47.900 align:middle line:90%
+OK.
+
+00:40:47.900 --> 00:40:48.400 align:middle line:90%
+Yeah?
+
+00:40:48.400 --> 00:40:54.110 align:middle line:90%
+
+
+00:40:54.110 --> 00:40:55.850 align:middle line:90%
+AUDIENCE: Why is it not--
+
+00:40:55.850 --> 00:40:59.750 align:middle line:84%
+again, because [INAUDIBLE]
+you're appending a certain
+
+00:40:59.750 --> 00:41:01.850 align:middle line:84%
+number of them, how
+do you know that's--
+
+00:41:01.850 --> 00:41:03.860 align:middle line:84%
+like [INAUDIBLE] vary
+for each problem.
+
+00:41:03.860 --> 00:41:05.780 align:middle line:84%
+ANA BELL: It varies for
+each problem, right?
+
+00:41:05.780 --> 00:41:08.570 align:middle line:84%
+But in the analysis,
+we're interested
+
+00:41:08.570 --> 00:41:13.430 align:middle line:84%
+in the worst-case scenario,
+like the asymptotic behavior
+
+00:41:13.430 --> 00:41:14.780 align:middle line:90%
+of the worst case.
+
+00:41:14.780 --> 00:41:18.440 align:middle line:84%
+And in the worst case,
+we've added this number,
+
+00:41:18.440 --> 00:41:21.440 align:middle line:90%
+length L1 times L2 times.
+
+00:41:21.440 --> 00:41:25.040 align:middle line:84%
+Most of the time, of course,
+it's not going to be this bad.
+
+00:41:25.040 --> 00:41:28.919 align:middle line:84%
+It's just in this one particular
+case that it is this bad.
+
+00:41:28.919 --> 00:41:30.711 align:middle line:84%
+AUDIENCE: Oh, I see
+what you're adding, OK.
+
+00:41:30.711 --> 00:41:33.417 align:middle line:90%
+
+
+00:41:33.417 --> 00:41:35.130 align:middle line:84%
+ANA BELL: OK, let's
+look at one more
+
+00:41:35.130 --> 00:41:36.460 align:middle line:90%
+function that's polynomial.
+
+00:41:36.460 --> 00:41:37.470 align:middle line:90%
+So here's diameter.
+
+00:41:37.470 --> 00:41:39.060 align:middle line:90%
+We saw this last lecture.
+
+00:41:39.060 --> 00:41:42.270 align:middle line:84%
+Basically, if we have a bunch
+of points in a 2D plane,
+
+00:41:42.270 --> 00:41:45.210 align:middle line:84%
+this function tells
+us the distance--
+
+00:41:45.210 --> 00:41:48.480 align:middle line:84%
+sorry, the maximum distance
+between any two points.
+
+00:41:48.480 --> 00:41:51.820 align:middle line:84%
+So I drew that picture
+in the 2D plane.
+
+00:41:51.820 --> 00:41:57.630 align:middle line:84%
+So this one is going to
+have nested loops again.
+
+00:41:57.630 --> 00:42:03.280 align:middle line:84%
+So the outer loop iterates
+through length L times.
+
+00:42:03.280 --> 00:42:06.630 align:middle line:84%
+So remember, our L is just a
+list of tuples representing
+
+00:42:06.630 --> 00:42:08.590 align:middle line:90%
+these xy coordinates.
+
+00:42:08.590 --> 00:42:11.670 align:middle line:84%
+So the outer loop easily
+goes through length L times.
+
+00:42:11.670 --> 00:42:14.400 align:middle line:84%
+But what does the
+inner loop go through?
+
+00:42:14.400 --> 00:42:19.260 align:middle line:84%
+The inner loop is actually
+starting at i not 0.
+
+00:42:19.260 --> 00:42:22.050 align:middle line:84%
+If it started at
+0, the inner loop
+
+00:42:22.050 --> 00:42:25.620 align:middle line:84%
+would be clearly theta of
+length L. But it's not.
+
+00:42:25.620 --> 00:42:28.010 align:middle line:90%
+It starts at i.
+
+00:42:28.010 --> 00:42:31.430 align:middle line:84%
+On average, though, how many
+times does that inner loop
+
+00:42:31.430 --> 00:42:32.770 align:middle line:90%
+go through?
+
+00:42:32.770 --> 00:42:35.440 align:middle line:84%
+Well, the first time it goes
+through that inner loop,
+
+00:42:35.440 --> 00:42:41.770 align:middle line:84%
+it's going to look at
+length L minus 1 elements.
+
+00:42:41.770 --> 00:42:46.060 align:middle line:84%
+Next time it's going to look
+at length L minus 2 elements.
+
+00:42:46.060 --> 00:42:50.230 align:middle line:84%
+Next time it's going to look
+at length L minus 3 elements,
+
+00:42:50.230 --> 00:42:53.200 align:middle line:84%
+until we get to the end,
+where it's going to look
+
+00:42:53.200 --> 00:42:57.160 align:middle line:90%
+at 1 and then 0 elements.
+
+00:42:57.160 --> 00:42:59.080 align:middle line:84%
+So if we think
+about how many times
+
+00:42:59.080 --> 00:43:01.810 align:middle line:84%
+that inner loop
+actually iterates,
+
+00:43:01.810 --> 00:43:06.280 align:middle line:84%
+it's going to be, what is
+it, like length L minus 1
+
+00:43:06.280 --> 00:43:09.545 align:middle line:90%
+multiplied by length L over 2.
+
+00:43:09.545 --> 00:43:11.920 align:middle line:84%
+Is that the function, I think,
+to add all these together?
+
+00:43:11.920 --> 00:43:16.270 align:middle line:84%
+Something like that,
+which is basically still
+
+00:43:16.270 --> 00:43:18.790 align:middle line:84%
+something that's a
+function of length L. Like,
+
+00:43:18.790 --> 00:43:24.010 align:middle line:84%
+we can simplify it to
+be 0.5 length L. So it's
+
+00:43:24.010 --> 00:43:27.130 align:middle line:84%
+still a function of length
+L because the coefficient
+
+00:43:27.130 --> 00:43:30.340 align:middle line:84%
+in the front of that
+length L is 0.5.
+
+00:43:30.340 --> 00:43:32.690 align:middle line:84%
+So the overall complexity
+of the inner loop
+
+00:43:32.690 --> 00:43:37.700 align:middle line:84%
+is still theta of length L.
+All right, everything else
+
+00:43:37.700 --> 00:43:41.150 align:middle line:90%
+within this code is constant.
+
+00:43:41.150 --> 00:43:44.665 align:middle line:84%
+So the overall complexity is
+just theta of length L squared.
+
+00:43:44.665 --> 00:43:50.920 align:middle line:90%
+
+
+00:43:50.920 --> 00:43:52.580 align:middle line:90%
+Yeah.
+
+00:43:52.580 --> 00:43:53.080 align:middle line:90%
+Sorry?
+
+00:43:53.080 --> 00:43:56.604 align:middle line:84%
+Where did the 1/2 come-- oh,
+it's the formula to add--
+
+00:43:56.604 --> 00:43:59.620 align:middle line:84%
+like, if you add 1 plus 2
+plus 3 plus 4 plus all the way
+
+00:43:59.620 --> 00:44:01.810 align:middle line:84%
+up to n, what's the
+formula to do that?
+
+00:44:01.810 --> 00:44:05.520 align:middle line:84%
+I think it's like n times n plus
+1 over 2, something like that.
+
+00:44:05.520 --> 00:44:07.670 align:middle line:84%
+So this is not
+exactly half, but it's
+
+00:44:07.670 --> 00:44:10.100 align:middle line:84%
+something on the order
+plus, I don't know,
+
+00:44:10.100 --> 00:44:15.050 align:middle line:84%
+something, whatever
+this calculates to.
+
+00:44:15.050 --> 00:44:18.920 align:middle line:84%
+But in effect, it's something
+that's smaller than length L,
+
+00:44:18.920 --> 00:44:21.530 align:middle line:84%
+but it's still a
+function of length L.
+
+00:44:21.530 --> 00:44:26.300 align:middle line:84%
+And so that front coefficient
+right before length L
+
+00:44:26.300 --> 00:44:27.740 align:middle line:90%
+just goes away.
+
+00:44:27.740 --> 00:44:32.390 align:middle line:84%
+Even if it was 10, we
+would still cast it away.
+
+00:44:32.390 --> 00:44:35.660 align:middle line:84%
+In this case, it's
+0.5 or whatever it is.
+
+00:44:35.660 --> 00:44:37.970 align:middle line:84%
+So it's still less
+than 1, but we still
+
+00:44:37.970 --> 00:44:40.100 align:middle line:84%
+cast it away because we're
+interested in the theta
+
+00:44:40.100 --> 00:44:40.910 align:middle line:90%
+of this.
+
+00:44:40.910 --> 00:44:42.090 align:middle line:90%
+Yeah.
+
+00:44:42.090 --> 00:44:46.020 align:middle line:84%
+AUDIENCE: [INAUDIBLE]
+nested for loops-- with two
+
+00:44:46.020 --> 00:44:50.380 align:middle line:84%
+for loops, that length
+[INAUDIBLE] an n squared
+
+00:44:50.380 --> 00:44:51.310 align:middle line:90%
+[INAUDIBLE]?
+
+00:44:51.310 --> 00:44:54.100 align:middle line:90%
+
+
+00:44:54.100 --> 00:44:57.330 align:middle line:84%
+ANA BELL: I mean, the
+inner loop could just not
+
+00:44:57.330 --> 00:44:58.635 align:middle line:90%
+depend on the input at all.
+
+00:44:58.635 --> 00:45:02.630 align:middle line:90%
+
+
+00:45:02.630 --> 00:45:05.390 align:middle line:84%
+Like here it's n squared
+because both of the loops
+
+00:45:05.390 --> 00:45:07.260 align:middle line:90%
+depend linearly on the input.
+
+00:45:07.260 --> 00:45:09.050 align:middle line:90%
+But if the inner loop--
+
+00:45:09.050 --> 00:45:11.630 align:middle line:84%
+like if the outer loop went
+through a range length L
+
+00:45:11.630 --> 00:45:13.940 align:middle line:84%
+squared, then the
+overall complexity
+
+00:45:13.940 --> 00:45:16.400 align:middle line:84%
+would be length L
+cubed in this case
+
+00:45:16.400 --> 00:45:20.433 align:middle line:84%
+because it's length L
+squared times length L.
+
+00:45:20.433 --> 00:45:22.850 align:middle line:84%
+Or if one of the loops doesn't
+depend on the input at all,
+
+00:45:22.850 --> 00:45:26.060 align:middle line:84%
+then it contributes
+nothing constant--
+
+00:45:26.060 --> 00:45:28.070 align:middle line:84%
+nothing linear,
+so it's constant.
+
+00:45:28.070 --> 00:45:33.090 align:middle line:90%
+
+
+00:45:33.090 --> 00:45:36.420 align:middle line:84%
+OK, let's have you think
+about this question for a bit.
+
+00:45:36.420 --> 00:45:40.430 align:middle line:90%
+
+
+00:45:40.430 --> 00:45:41.847 align:middle line:90%
+So think about the input.
+
+00:45:41.847 --> 00:45:43.430 align:middle line:84%
+Think about parts
+of the function that
+
+00:45:43.430 --> 00:45:44.640 align:middle line:90%
+depend on the input.
+
+00:45:44.640 --> 00:45:48.510 align:middle line:90%
+And then what is the complexity?
+
+00:45:48.510 --> 00:45:53.150 align:middle line:84%
+OK what's the outer
+loop theta of?
+
+00:45:53.150 --> 00:45:56.330 align:middle line:90%
+
+
+00:45:56.330 --> 00:45:57.812 align:middle line:90%
+Yeah.
+
+00:45:57.812 --> 00:45:59.700 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:45:59.700 --> 00:46:02.070 align:middle line:84%
+ANA BELL: Yes, nums is a
+list, so the outer loop
+
+00:46:02.070 --> 00:46:03.360 align:middle line:90%
+is theta of length of nums.
+
+00:46:03.360 --> 00:46:03.930 align:middle line:90%
+Correct.
+
+00:46:03.930 --> 00:46:05.520 align:middle line:90%
+Good.
+
+00:46:05.520 --> 00:46:07.395 align:middle line:90%
+What's the inner loop theta of?
+
+00:46:07.395 --> 00:46:11.020 align:middle line:90%
+
+
+00:46:11.020 --> 00:46:11.560 align:middle line:90%
+Yeah.
+
+00:46:11.560 --> 00:46:13.060 align:middle line:84%
+Is that what you were
+going to say, theta of 1?
+
+00:46:13.060 --> 00:46:13.560 align:middle line:90%
+Exactly.
+
+00:46:13.560 --> 00:46:16.870 align:middle line:84%
+It's the length of digits,
+but digits is not my input.
+
+00:46:16.870 --> 00:46:18.350 align:middle line:90%
+Nums is my input.
+
+00:46:18.350 --> 00:46:21.980 align:middle line:84%
+So the inner loop will always
+just iterate through 10 times.
+
+00:46:21.980 --> 00:46:24.010 align:middle line:84%
+So in the eyes of the
+inputs to the function,
+
+00:46:24.010 --> 00:46:26.170 align:middle line:90%
+that's just constant.
+
+00:46:26.170 --> 00:46:27.850 align:middle line:90%
+So the input is nums.
+
+00:46:27.850 --> 00:46:29.282 align:middle line:90%
+The outer loop is theta of nums.
+
+00:46:29.282 --> 00:46:30.490 align:middle line:90%
+The inner loop is theta of 1.
+
+00:46:30.490 --> 00:46:33.670 align:middle line:84%
+So the overall complexity
+is theta of length of nums.
+
+00:46:33.670 --> 00:46:34.930 align:middle line:90%
+Perfect.
+
+00:46:34.930 --> 00:46:38.270 align:middle line:90%
+How about this one?
+
+00:46:38.270 --> 00:46:40.640 align:middle line:90%
+What are my inputs?
+
+00:46:40.640 --> 00:46:42.155 align:middle line:84%
+Do any loops depend
+on these inputs?
+
+00:46:42.155 --> 00:46:45.370 align:middle line:90%
+
+
+00:46:45.370 --> 00:46:47.290 align:middle line:84%
+What's the outer
+loop complexity?
+
+00:46:47.290 --> 00:46:51.080 align:middle line:90%
+
+
+00:46:51.080 --> 00:46:51.580 align:middle line:90%
+Yeah.
+
+00:46:51.580 --> 00:46:52.840 align:middle line:90%
+AUDIENCE: Length of L1.
+
+00:46:52.840 --> 00:46:55.880 align:middle line:84%
+ANA BELL: Yeah, theta
+of length L1, exactly.
+
+00:46:55.880 --> 00:46:58.130 align:middle line:84%
+What's the inner
+loop complexity?
+
+00:46:58.130 --> 00:47:01.469 align:middle line:90%
+
+
+00:47:01.469 --> 00:47:03.202 align:middle line:90%
+AUDIENCE: Theta length of L2.
+
+00:47:03.202 --> 00:47:04.910 align:middle line:84%
+ANA BELL: Theta of
+length of L2, perfect.
+
+00:47:04.910 --> 00:47:07.850 align:middle line:84%
+And is there anything else that
+contributes to the complexity
+
+00:47:07.850 --> 00:47:10.710 align:middle line:90%
+here?
+
+00:47:10.710 --> 00:47:11.210 align:middle line:90%
+What's that?
+
+00:47:11.210 --> 00:47:12.335 align:middle line:90%
+AUDIENCE: The if statement.
+
+00:47:12.335 --> 00:47:13.510 align:middle line:90%
+ANA BELL: The if statement.
+
+00:47:13.510 --> 00:47:17.560 align:middle line:84%
+Yes, what about it is making you
+question that the complexity is
+
+00:47:17.560 --> 00:47:18.550 align:middle line:90%
+not constant?
+
+00:47:18.550 --> 00:47:21.756 align:middle line:84%
+AUDIENCE: So in iterates
+through the length of L3.
+
+00:47:21.756 --> 00:47:23.780 align:middle line:84%
+ANA BELL: Exactly,
+yes, very nice.
+
+00:47:23.780 --> 00:47:26.690 align:middle line:84%
+So in iterates through
+the length of L3.
+
+00:47:26.690 --> 00:47:31.880 align:middle line:84%
+Looking for an element in L3,
+e1 in L3, is not constant.
+
+00:47:31.880 --> 00:47:34.340 align:middle line:84%
+You have to look through
+the whole length of L3
+
+00:47:34.340 --> 00:47:36.800 align:middle line:84%
+to figure out whether
+it's there or not.
+
+00:47:36.800 --> 00:47:41.160 align:middle line:84%
+So this inner bit
+here is not constant.
+
+00:47:41.160 --> 00:47:43.100 align:middle line:90%
+It's theta of length L3.
+
+00:47:43.100 --> 00:47:46.660 align:middle line:84%
+In fact, it's two
+times length L3.
+
+00:47:46.660 --> 00:47:48.970 align:middle line:84%
+So the overall complexity
+of this function
+
+00:47:48.970 --> 00:47:51.898 align:middle line:84%
+is theta of length L1 times
+theta of length L2 times
+
+00:47:51.898 --> 00:47:52.690 align:middle line:90%
+theta of length L3.
+
+00:47:52.690 --> 00:47:55.350 align:middle line:90%
+
+
+00:47:55.350 --> 00:47:55.850 align:middle line:90%
+OK.
+
+00:47:55.850 --> 00:47:58.580 align:middle line:90%
+
+
+00:47:58.580 --> 00:47:59.120 align:middle line:90%
+Cool.
+
+00:47:59.120 --> 00:48:01.350 align:middle line:84%
+Let's look at the
+exponential complexity.
+
+00:48:01.350 --> 00:48:04.860 align:middle line:84%
+So this is a complexity that
+grows really, really quickly.
+
+00:48:04.860 --> 00:48:07.130 align:middle line:84%
+We never want the
+algorithms that we write
+
+00:48:07.130 --> 00:48:08.940 align:middle line:90%
+to land within this class.
+
+00:48:08.940 --> 00:48:12.920 align:middle line:84%
+Unfortunately, there are just
+some problems in real life
+
+00:48:12.920 --> 00:48:16.730 align:middle line:84%
+that we have to compute
+that are just naturally
+
+00:48:16.730 --> 00:48:18.080 align:middle line:90%
+part of this complexity class.
+
+00:48:18.080 --> 00:48:19.490 align:middle line:84%
+There are some
+techniques to deal
+
+00:48:19.490 --> 00:48:22.560 align:middle line:84%
+with making these algorithms
+a little bit faster.
+
+00:48:22.560 --> 00:48:26.000 align:middle line:84%
+But inherently, there are
+just exponential algorithms
+
+00:48:26.000 --> 00:48:29.480 align:middle line:84%
+that we just can't do any
+better than exponential
+
+00:48:29.480 --> 00:48:32.610 align:middle line:90%
+in solving these problems.
+
+00:48:32.610 --> 00:48:38.140 align:middle line:84%
+All right, so let's
+look at Fibonacci again.
+
+00:48:38.140 --> 00:48:41.890 align:middle line:84%
+We looked at Fibonacci a few
+slides ago, iterative version.
+
+00:48:41.890 --> 00:48:45.730 align:middle line:84%
+And the iterative
+version was theta of n.
+
+00:48:45.730 --> 00:48:49.090 align:middle line:84%
+But if we look at the
+recursive version of Fibonacci,
+
+00:48:49.090 --> 00:48:50.990 align:middle line:90%
+it's not theta of n at all.
+
+00:48:50.990 --> 00:48:54.370 align:middle line:84%
+In fact, as you can see, it's in
+this exponential set of slides,
+
+00:48:54.370 --> 00:48:57.040 align:middle line:84%
+the recursive
+version of Fibonacci
+
+00:48:57.040 --> 00:48:59.650 align:middle line:90%
+is actually exponential.
+
+00:48:59.650 --> 00:49:03.050 align:middle line:84%
+So let's recall what
+this code is doing.
+
+00:49:03.050 --> 00:49:06.580 align:middle line:84%
+So there's two base cases,
+Fibonacci of 0 and 1.
+
+00:49:06.580 --> 00:49:10.000 align:middle line:84%
+And then the recursive step
+is Fibonacci of n minus 1
+
+00:49:10.000 --> 00:49:11.920 align:middle line:90%
+plus Fibonacci of n minus 2.
+
+00:49:11.920 --> 00:49:15.670 align:middle line:84%
+So for every level
+that we go down,
+
+00:49:15.670 --> 00:49:19.810 align:middle line:84%
+there's going to be
+times two more paths
+
+00:49:19.810 --> 00:49:23.980 align:middle line:84%
+that we need to explore
+to grab the values from.
+
+00:49:23.980 --> 00:49:29.350 align:middle line:84%
+So for the very first n, we've
+got just one value to grab.
+
+00:49:29.350 --> 00:49:32.830 align:middle line:84%
+For the next n, we've got
+times two that value to grab.
+
+00:49:32.830 --> 00:49:37.190 align:middle line:84%
+The next level-- for the next n,
+we've got two times more values
+
+00:49:37.190 --> 00:49:37.910 align:middle line:90%
+to grab.
+
+00:49:37.910 --> 00:49:39.560 align:middle line:90%
+And so on.
+
+00:49:39.560 --> 00:49:43.310 align:middle line:84%
+So the fact that there
+are two recursive calls
+
+00:49:43.310 --> 00:49:47.840 align:middle line:84%
+in this recursive step leads
+us to this little inverted tree
+
+00:49:47.840 --> 00:49:49.490 align:middle line:90%
+kind of structure.
+
+00:49:49.490 --> 00:49:53.330 align:middle line:84%
+And we even drew this when we
+looked at how many function
+
+00:49:53.330 --> 00:49:55.820 align:middle line:90%
+calls are being run.
+
+00:49:55.820 --> 00:49:57.260 align:middle line:84%
+Remember, when
+we're figuring out
+
+00:49:57.260 --> 00:50:01.225 align:middle line:84%
+the complexity with
+a recursive function,
+
+00:50:01.225 --> 00:50:03.350 align:middle line:84%
+we need to figure out how
+many of these functions--
+
+00:50:03.350 --> 00:50:06.380 align:middle line:84%
+how many recursive calls
+are we actually doing.
+
+00:50:06.380 --> 00:50:09.290 align:middle line:84%
+So because of this tree
+structure, every time
+
+00:50:09.290 --> 00:50:11.930 align:middle line:84%
+we add a new level,
+we basically have two
+
+00:50:11.930 --> 00:50:15.200 align:middle line:84%
+completely separate
+paths to explore further.
+
+00:50:15.200 --> 00:50:18.630 align:middle line:84%
+And those two paths have
+their own two paths and so on.
+
+00:50:18.630 --> 00:50:22.250 align:middle line:84%
+So this leads us to this tree
+structure, which is actually
+
+00:50:22.250 --> 00:50:27.050 align:middle line:84%
+going to lead to the total
+number of recursive calls
+
+00:50:27.050 --> 00:50:30.580 align:middle line:84%
+to be exponential, so
+theta of 2 to the n.
+
+00:50:30.580 --> 00:50:35.650 align:middle line:84%
+Now, if we looked at the actual
+recursive call's tree-- right,
+
+00:50:35.650 --> 00:50:39.790 align:middle line:84%
+we looked at this, and it looked
+something like this a bunch
+
+00:50:39.790 --> 00:50:41.260 align:middle line:90%
+of lectures ago--
+
+00:50:41.260 --> 00:50:44.710 align:middle line:84%
+you might notice that the
+tree actually thins out
+
+00:50:44.710 --> 00:50:46.240 align:middle line:90%
+a little bit to the right.
+
+00:50:46.240 --> 00:50:50.090 align:middle line:84%
+It's not a full tree with the
+leaves nicely all the way down.
+
+00:50:50.090 --> 00:50:52.810 align:middle line:84%
+And that's because, well,
+the left path calculates
+
+00:50:52.810 --> 00:50:58.210 align:middle line:84%
+Fib 5 but the right path
+calculates Fib 4, so n minus 1
+
+00:50:58.210 --> 00:50:59.800 align:middle line:90%
+of the left path.
+
+00:50:59.800 --> 00:51:01.310 align:middle line:90%
+But that's fine.
+
+00:51:01.310 --> 00:51:04.210 align:middle line:84%
+It's not that we
+are actually going
+
+00:51:04.210 --> 00:51:11.500 align:middle line:84%
+to speed up anything by some
+sort of order of magnitude.
+
+00:51:11.500 --> 00:51:13.750 align:middle line:84%
+Just because the tree
+thins out a little bit
+
+00:51:13.750 --> 00:51:15.910 align:middle line:84%
+on the right-hand
+side is not going
+
+00:51:15.910 --> 00:51:18.440 align:middle line:84%
+to speed up the overall
+complexity of this function.
+
+00:51:18.440 --> 00:51:22.360 align:middle line:84%
+It's going to be theta of 2 to
+the n minus some theta that's
+
+00:51:22.360 --> 00:51:23.830 align:middle line:90%
+less than 2 to the n.
+
+00:51:23.830 --> 00:51:28.420 align:middle line:84%
+So that subtraction is not
+going to really decrease
+
+00:51:28.420 --> 00:51:30.290 align:middle line:84%
+the overall complexity
+of our function.
+
+00:51:30.290 --> 00:51:33.900 align:middle line:84%
+So the order of this
+is still exponential.
+
+00:51:33.900 --> 00:51:38.630 align:middle line:84%
+All right, here's another
+example of an exponential code.
+
+00:51:38.630 --> 00:51:42.650 align:middle line:84%
+So this is a function
+that is going to generate
+
+00:51:42.650 --> 00:51:46.050 align:middle line:90%
+all the subsets of a list.
+
+00:51:46.050 --> 00:51:47.780 align:middle line:84%
+So again, I've added
+a little example
+
+00:51:47.780 --> 00:51:50.460 align:middle line:84%
+here to help us understand
+what it's doing.
+
+00:51:50.460 --> 00:51:53.930 align:middle line:84%
+So here I've got three numbers,
+a list with three numbers, 1,
+
+00:51:53.930 --> 00:51:54.860 align:middle line:90%
+2, and 3.
+
+00:51:54.860 --> 00:51:58.040 align:middle line:84%
+And to generate
+subsets, what this means
+
+00:51:58.040 --> 00:52:01.460 align:middle line:84%
+is that I'm going to
+create a new list of all
+
+00:52:01.460 --> 00:52:04.940 align:middle line:84%
+of the possible
+combinations of numbers
+
+00:52:04.940 --> 00:52:09.620 align:middle line:84%
+within my original list, of
+all the possible lengths.
+
+00:52:09.620 --> 00:52:11.960 align:middle line:84%
+So first, one
+subset of this list
+
+00:52:11.960 --> 00:52:13.410 align:middle line:90%
+could be just the empty list.
+
+00:52:13.410 --> 00:52:17.490 align:middle line:84%
+So that's not taking any of
+my original numbers at all.
+
+00:52:17.490 --> 00:52:21.960 align:middle line:84%
+The next one is a list with
+just one of the numbers in it.
+
+00:52:21.960 --> 00:52:24.080 align:middle line:84%
+So either the 1
+or the 2 or the 3.
+
+00:52:24.080 --> 00:52:26.990 align:middle line:90%
+
+
+00:52:26.990 --> 00:52:30.050 align:middle line:84%
+A next subset of my
+list could be taking
+
+00:52:30.050 --> 00:52:31.320 align:middle line:90%
+just two of the elements.
+
+00:52:31.320 --> 00:52:34.280 align:middle line:84%
+So one and 2, 1 and 3
+and 2 and 3 and then
+
+00:52:34.280 --> 00:52:36.490 align:middle line:84%
+lastly I can just
+grab all the elements.
+
+00:52:36.490 --> 00:52:37.642 align:middle line:90%
+So 1 and the 2 and the 3.
+
+00:52:37.642 --> 00:52:38.850 align:middle line:90%
+I don't care about the order.
+
+00:52:38.850 --> 00:52:42.150 align:middle line:84%
+I just care that I have all of
+these different combinations
+
+00:52:42.150 --> 00:52:46.200 align:middle line:84%
+of all of the different
+lengths in my final list.
+
+00:52:46.200 --> 00:52:49.690 align:middle line:84%
+So does everyone understand
+the goal of this function?
+
+00:52:49.690 --> 00:52:51.920 align:middle line:90%
+OK, so how do we achieve this?
+
+00:52:51.920 --> 00:52:54.320 align:middle line:84%
+Well, you might
+not be surprised.
+
+00:52:54.320 --> 00:52:56.080 align:middle line:84%
+We're going to do
+it recursively.
+
+00:52:56.080 --> 00:52:58.870 align:middle line:84%
+That's really the
+only reasonable way
+
+00:52:58.870 --> 00:53:01.420 align:middle line:90%
+to write this code.
+
+00:53:01.420 --> 00:53:04.930 align:middle line:84%
+So I'm going to go
+through this slide just
+
+00:53:04.930 --> 00:53:06.585 align:middle line:90%
+explaining what each line does.
+
+00:53:06.585 --> 00:53:08.710 align:middle line:84%
+But on the next slide, I'll
+have a little animation
+
+00:53:08.710 --> 00:53:13.060 align:middle line:84%
+that shows step by step how the
+function creates this subset
+
+00:53:13.060 --> 00:53:14.090 align:middle line:90%
+list.
+
+00:53:14.090 --> 00:53:16.540 align:middle line:84%
+So first thing, it's
+recursive, so I've
+
+00:53:16.540 --> 00:53:18.010 align:middle line:90%
+got my base case up there.
+
+00:53:18.010 --> 00:53:22.030 align:middle line:84%
+If I have a list of
+length 0, then the subset
+
+00:53:22.030 --> 00:53:26.020 align:middle line:84%
+of an empty list is just
+going to be this list
+
+00:53:26.020 --> 00:53:28.390 align:middle line:90%
+with the empty thing inside it.
+
+00:53:28.390 --> 00:53:29.860 align:middle line:84%
+So if I have no
+elements, there's
+
+00:53:29.860 --> 00:53:33.060 align:middle line:84%
+only one subset,
+that's the empty list.
+
+00:53:33.060 --> 00:53:37.020 align:middle line:84%
+Then if I have more than
+one element inside it,
+
+00:53:37.020 --> 00:53:40.430 align:middle line:84%
+I'm going to do the
+same idea that we
+
+00:53:40.430 --> 00:53:44.120 align:middle line:84%
+saw when we worked with lists
+back in the recursion lectures.
+
+00:53:44.120 --> 00:53:47.090 align:middle line:84%
+I'm going to extract
+one of my elements.
+
+00:53:47.090 --> 00:53:49.640 align:middle line:84%
+I'm going to work on
+the remaining list.
+
+00:53:49.640 --> 00:53:51.260 align:middle line:84%
+And then I'm going
+to do something
+
+00:53:51.260 --> 00:53:53.270 align:middle line:84%
+by taking that
+element and tacking
+
+00:53:53.270 --> 00:53:57.420 align:middle line:84%
+it back on to the result.
+So in this particular case,
+
+00:53:57.420 --> 00:54:01.710 align:middle line:84%
+the thing that I'm extracting
+is the last element in my list.
+
+00:54:01.710 --> 00:54:05.540 align:middle line:84%
+So if my list is 1, 2,
+and 3, at a step here,
+
+00:54:05.540 --> 00:54:09.680 align:middle line:84%
+I'm going to extract the 3
+and make it into its own list.
+
+00:54:09.680 --> 00:54:11.240 align:middle line:84%
+So that's what
+that step is doing.
+
+00:54:11.240 --> 00:54:14.670 align:middle line:84%
+It extracts the last
+element in the list.
+
+00:54:14.670 --> 00:54:20.580 align:middle line:84%
+Then I make a function call to
+generate subsets on everything
+
+00:54:20.580 --> 00:54:22.660 align:middle line:90%
+except for that last element.
+
+00:54:22.660 --> 00:54:27.630 align:middle line:84%
+So if I'm-- so I say, hey,
+function that I'm currently
+
+00:54:27.630 --> 00:54:32.730 align:middle line:84%
+writing right now, if you can
+generate for me the subset
+
+00:54:32.730 --> 00:54:36.482 align:middle line:84%
+of all the elements, the
+subset for this list,
+
+00:54:36.482 --> 00:54:38.940 align:middle line:84%
+then you're going to come up
+with something that looks like
+
+00:54:38.940 --> 00:54:39.440 align:middle line:90%
+this.
+
+00:54:39.440 --> 00:54:42.570 align:middle line:84%
+It's going to be the
+empty list, the 1, the 2,
+
+00:54:42.570 --> 00:54:45.390 align:middle line:90%
+and the 1 and the 2 together.
+
+00:54:45.390 --> 00:54:47.580 align:middle line:84%
+So the subset of
+this list is going
+
+00:54:47.580 --> 00:54:51.200 align:middle line:84%
+to be this group
+of elements here.
+
+00:54:51.200 --> 00:54:52.760 align:middle line:84%
+So that's what this
+is going to do.
+
+00:54:52.760 --> 00:54:55.930 align:middle line:84%
+So this is, again, us trusting
+that the function we write
+
+00:54:55.930 --> 00:54:59.840 align:middle line:84%
+will generate something
+that looks like this.
+
+00:54:59.840 --> 00:55:03.110 align:middle line:84%
+If we've got to this
+point, then smaller
+
+00:55:03.110 --> 00:55:06.120 align:middle line:84%
+is going to be a list
+that looks like this.
+
+00:55:06.120 --> 00:55:09.320 align:middle line:84%
+So the next part of
+the code is going
+
+00:55:09.320 --> 00:55:14.490 align:middle line:84%
+to take that little extra thing
+that I had saved previously,
+
+00:55:14.490 --> 00:55:18.350 align:middle line:84%
+and it's going to tack on
+that 3 to every element
+
+00:55:18.350 --> 00:55:19.560 align:middle line:90%
+within this list.
+
+00:55:19.560 --> 00:55:23.270 align:middle line:84%
+So then I'm going to basically
+say, I'm going to take this 3
+
+00:55:23.270 --> 00:55:27.050 align:middle line:84%
+and make a list with the
+3 in it, a list with the 1
+
+00:55:27.050 --> 00:55:30.530 align:middle line:84%
+and the 3 in it, a list
+with the 2 and the 3 in it,
+
+00:55:30.530 --> 00:55:33.680 align:middle line:84%
+and a list with the 1 and
+the 2 and the 3 in it.
+
+00:55:33.680 --> 00:55:36.590 align:middle line:84%
+So I've just taken
+that 3 and added it
+
+00:55:36.590 --> 00:55:40.190 align:middle line:84%
+to everything that resulted
+from this line of code here,
+
+00:55:40.190 --> 00:55:43.960 align:middle line:90%
+from my function calling itself.
+
+00:55:43.960 --> 00:55:48.520 align:middle line:84%
+And then all it does is
+returns smaller plus new.
+
+00:55:48.520 --> 00:55:51.460 align:middle line:84%
+So if I add these
+two together, this
+
+00:55:51.460 --> 00:55:53.650 align:middle line:84%
+is going to generate for
+me my final subset that I
+
+00:55:53.650 --> 00:55:55.030 align:middle line:90%
+was interested in.
+
+00:55:55.030 --> 00:55:56.140 align:middle line:90%
+I've got the empty thing.
+
+00:55:56.140 --> 00:55:58.120 align:middle line:84%
+I've got the 1, the 2,
+and the 3 by itself.
+
+00:55:58.120 --> 00:56:01.090 align:middle line:84%
+I've got the 1, 2; the 1,
+3; and the 2, 3 by itself;
+
+00:56:01.090 --> 00:56:03.730 align:middle line:90%
+and then the 1, 2, 3 altogether.
+
+00:56:03.730 --> 00:56:05.950 align:middle line:90%
+So that's the big idea here.
+
+00:56:05.950 --> 00:56:09.180 align:middle line:84%
+So let's just go
+through it step by step,
+
+00:56:09.180 --> 00:56:10.900 align:middle line:90%
+recursively calling ourselves.
+
+00:56:10.900 --> 00:56:13.590 align:middle line:90%
+So this is me finding out the--
+
+00:56:13.590 --> 00:56:15.520 align:middle line:84%
+kicking off my
+function call, saying,
+
+00:56:15.520 --> 00:56:19.290 align:middle line:84%
+hey, generate the subsets
+for the list 1, 2, 3.
+
+00:56:19.290 --> 00:56:21.450 align:middle line:84%
+I'm going to keep
+the extra aside.
+
+00:56:21.450 --> 00:56:23.820 align:middle line:84%
+I need to make another
+function call because I'm not
+
+00:56:23.820 --> 00:56:25.060 align:middle line:90%
+at my base case.
+
+00:56:25.060 --> 00:56:29.130 align:middle line:84%
+So I'm going to call
+gen_subsets on 1, 2.
+
+00:56:29.130 --> 00:56:30.910 align:middle line:90%
+This is also not my base case.
+
+00:56:30.910 --> 00:56:33.840 align:middle line:84%
+So I'm going to take my
+last element, put it aside,
+
+00:56:33.840 --> 00:56:38.000 align:middle line:84%
+and I'm going to call
+gen_subsets on just the 1.
+
+00:56:38.000 --> 00:56:39.350 align:middle line:90%
+Still not the base case.
+
+00:56:39.350 --> 00:56:41.320 align:middle line:84%
+I'm going to take this
+extra, put it aside,
+
+00:56:41.320 --> 00:56:43.910 align:middle line:84%
+and I'm going to call
+gen_subsets on the empty list.
+
+00:56:43.910 --> 00:56:45.980 align:middle line:84%
+And this is where I
+reach my base case.
+
+00:56:45.980 --> 00:56:48.160 align:middle line:84%
+So far, nothing has
+been returned at all.
+
+00:56:48.160 --> 00:56:50.900 align:middle line:90%
+No work has been done.
+
+00:56:50.900 --> 00:56:54.600 align:middle line:84%
+At my base case, Python will
+say, I know what this is.
+
+00:56:54.600 --> 00:56:57.740 align:middle line:84%
+It's going to be the list with
+just the empty thing in it.
+
+00:56:57.740 --> 00:56:58.580 align:middle line:90%
+All right, cool?
+
+00:56:58.580 --> 00:57:02.340 align:middle line:84%
+Next, that gets returned, so
+this function call goes away.
+
+00:57:02.340 --> 00:57:04.170 align:middle line:90%
+So now what is it going to do?
+
+00:57:04.170 --> 00:57:07.070 align:middle line:84%
+Well, it's going to take
+that extra I set aside,
+
+00:57:07.070 --> 00:57:10.730 align:middle line:84%
+take the smaller list
+that I just returned,
+
+00:57:10.730 --> 00:57:14.040 align:middle line:84%
+and basically double
+that smaller list.
+
+00:57:14.040 --> 00:57:15.920 align:middle line:90%
+So this is my smaller list.
+
+00:57:15.920 --> 00:57:17.510 align:middle line:84%
+And then I'm going
+to double that
+
+00:57:17.510 --> 00:57:20.780 align:middle line:84%
+by saying I'm going to put
+this 1 to the end of everything
+
+00:57:20.780 --> 00:57:23.140 align:middle line:90%
+in my smaller list.
+
+00:57:23.140 --> 00:57:25.030 align:middle line:84%
+Maybe this is not so
+apparent at this step,
+
+00:57:25.030 --> 00:57:28.070 align:middle line:84%
+but let's go one more
+step and see what happens.
+
+00:57:28.070 --> 00:57:30.070 align:middle line:84%
+So now this function
+also terminates.
+
+00:57:30.070 --> 00:57:34.600 align:middle line:84%
+It returns this empty
+list and 1 in it and says,
+
+00:57:34.600 --> 00:57:36.690 align:middle line:84%
+all right, here, with
+this function call,
+
+00:57:36.690 --> 00:57:40.020 align:middle line:84%
+I had saved the 2
+separately and said,
+
+00:57:40.020 --> 00:57:43.740 align:middle line:84%
+I'm going to now tack on this
+2 to the end of everything
+
+00:57:43.740 --> 00:57:45.490 align:middle line:90%
+that I had just returned.
+
+00:57:45.490 --> 00:57:46.990 align:middle line:90%
+So this is smaller.
+
+00:57:46.990 --> 00:57:49.150 align:middle line:90%
+This is smaller over here.
+
+00:57:49.150 --> 00:57:51.990 align:middle line:84%
+And all I'm going to do
+is take this extra thing
+
+00:57:51.990 --> 00:57:55.210 align:middle line:84%
+and tack it on to the end of
+everything that was in smaller.
+
+00:57:55.210 --> 00:57:57.730 align:middle line:84%
+So I'm going to tack it on to
+the end of this empty list,
+
+00:57:57.730 --> 00:58:00.590 align:middle line:84%
+so it just gives me this 2, and
+tack it on to the end of this 1
+
+00:58:00.590 --> 00:58:01.590 align:middle line:90%
+so it gives me the 1, 2.
+
+00:58:01.590 --> 00:58:05.150 align:middle line:90%
+
+
+00:58:05.150 --> 00:58:08.500 align:middle line:84%
+So I've basically doubled
+my list at this stage.
+
+00:58:08.500 --> 00:58:11.530 align:middle line:84%
+One more step,
+this gets returned.
+
+00:58:11.530 --> 00:58:14.290 align:middle line:84%
+And now this is my
+original function call.
+
+00:58:14.290 --> 00:58:16.750 align:middle line:84%
+The thing that I had
+extracted was the 3.
+
+00:58:16.750 --> 00:58:19.150 align:middle line:84%
+So now we're basically
+at this step here.
+
+00:58:19.150 --> 00:58:20.860 align:middle line:90%
+I extracted the 3.
+
+00:58:20.860 --> 00:58:27.010 align:middle line:84%
+The function just below it
+returned this smaller, right?
+
+00:58:27.010 --> 00:58:29.710 align:middle line:84%
+So that means that
+this 3 is going
+
+00:58:29.710 --> 00:58:33.173 align:middle line:84%
+to get appended to the end of
+everything that was in smaller.
+
+00:58:33.173 --> 00:58:35.590 align:middle line:84%
+So it's going to be appended
+to the end of this empty list
+
+00:58:35.590 --> 00:58:37.810 align:middle line:84%
+to give me just the
+3, to the end of the 1
+
+00:58:37.810 --> 00:58:39.970 align:middle line:84%
+to give me the 1 and the
+3, to the end of the 2
+
+00:58:39.970 --> 00:58:42.380 align:middle line:84%
+to give me the 2 and the 3,
+and to the end of the 1, 2
+
+00:58:42.380 --> 00:58:45.010 align:middle line:90%
+to give me the 1, 2, 3.
+
+00:58:45.010 --> 00:58:47.650 align:middle line:90%
+Now, this is the final answer.
+
+00:58:47.650 --> 00:58:50.020 align:middle line:84%
+So I basically keep
+what I had returned
+
+00:58:50.020 --> 00:58:53.350 align:middle line:84%
+from the previous function
+call and concatenate that
+
+00:58:53.350 --> 00:58:55.570 align:middle line:84%
+with the thing that
+I had just created,
+
+00:58:55.570 --> 00:58:57.130 align:middle line:90%
+where I tacked on my 3.
+
+00:58:57.130 --> 00:58:59.320 align:middle line:90%
+And this is my final answer.
+
+00:58:59.320 --> 00:59:02.590 align:middle line:84%
+It's just out of order
+to what we intuitively
+
+00:59:02.590 --> 00:59:04.090 align:middle line:90%
+would have written by hand.
+
+00:59:04.090 --> 00:59:07.390 align:middle line:84%
+But it hits on all of the
+elements that I wanted to have
+
+00:59:07.390 --> 00:59:08.650 align:middle line:90%
+anyway.
+
+00:59:08.650 --> 00:59:11.020 align:middle line:84%
+So I've got the empty list,
+everything with just one
+
+00:59:11.020 --> 00:59:13.750 align:middle line:84%
+element in it, everything
+with the two elements in it,
+
+00:59:13.750 --> 00:59:16.550 align:middle line:84%
+and everything with all
+three elements in it.
+
+00:59:16.550 --> 00:59:19.570 align:middle line:84%
+So let's look at the
+complexity analysis of this.
+
+00:59:19.570 --> 00:59:22.040 align:middle line:84%
+We've got two things
+going on here.
+
+00:59:22.040 --> 00:59:24.190 align:middle line:84%
+One is how many
+of these function
+
+00:59:24.190 --> 00:59:28.270 align:middle line:84%
+calls are actually being done,
+like with the inverse tree
+
+00:59:28.270 --> 00:59:28.780 align:middle line:90%
+structure.
+
+00:59:28.780 --> 00:59:30.610 align:middle line:84%
+How many of those
+function calls do
+
+00:59:30.610 --> 00:59:33.205 align:middle line:84%
+we need to do to
+get to the end of--
+
+00:59:33.205 --> 00:59:34.750 align:middle line:90%
+to our base case?
+
+00:59:34.750 --> 00:59:36.894 align:middle line:90%
+And on top of that--
+
+00:59:36.894 --> 00:59:40.240 align:middle line:84%
+sorry, that will tell us
+how many actual elements
+
+00:59:40.240 --> 00:59:41.740 align:middle line:90%
+in the list we will have.
+
+00:59:41.740 --> 00:59:45.250 align:middle line:84%
+And on top of that, we have
+actually a time complexity
+
+00:59:45.250 --> 00:59:46.540 align:middle line:90%
+that's not constant.
+
+00:59:46.540 --> 00:59:50.170 align:middle line:90%
+That's to copy our list.
+
+00:59:50.170 --> 00:59:52.758 align:middle line:84%
+So copying a list
+is not constant
+
+00:59:52.758 --> 00:59:55.300 align:middle line:84%
+because it takes some time to
+take all the elements in a list
+
+00:59:55.300 --> 00:59:56.990 align:middle line:90%
+and make a copy of them.
+
+00:59:56.990 --> 00:59:59.530 align:middle line:84%
+So if we think about
+the time it takes
+
+00:59:59.530 --> 01:00:04.210 align:middle line:84%
+to make our list at each step,
+how many of these sub elements
+
+01:00:04.210 --> 01:00:08.600 align:middle line:84%
+we're creating, well,
+at the very base case,
+
+01:00:08.600 --> 01:00:12.100 align:middle line:84%
+we have one element; at
+the case just above it,
+
+01:00:12.100 --> 01:00:14.950 align:middle line:84%
+we had two elements; at
+the case just above that,
+
+01:00:14.950 --> 01:00:17.390 align:middle line:84%
+we had four elements; at
+the case just above that,
+
+01:00:17.390 --> 01:00:19.080 align:middle line:90%
+we had eight elements.
+
+01:00:19.080 --> 01:00:23.510 align:middle line:84%
+So at each step, the
+number of sublists
+
+01:00:23.510 --> 01:00:27.140 align:middle line:84%
+that we were generating
+was basically twice as much
+
+01:00:27.140 --> 01:00:29.050 align:middle line:90%
+as the previous step.
+
+01:00:29.050 --> 01:00:34.100 align:middle line:84%
+So the overall number of subsets
+was on the order of 2 to the n.
+
+01:00:34.100 --> 01:00:36.170 align:middle line:84%
+But there was also
+a time complexity
+
+01:00:36.170 --> 01:00:39.110 align:middle line:84%
+to make a copy of the
+list within each one
+
+01:00:39.110 --> 01:00:40.430 align:middle line:90%
+of those subsets.
+
+01:00:40.430 --> 01:00:42.650 align:middle line:84%
+So we're multiplying
+the complexity
+
+01:00:42.650 --> 01:00:44.390 align:middle line:84%
+it takes to make all
+those function calls
+
+01:00:44.390 --> 01:00:47.240 align:middle line:84%
+and generate all those
+subsets by the time it takes
+
+01:00:47.240 --> 01:00:49.080 align:middle line:90%
+to make a copy of the list.
+
+01:00:49.080 --> 01:00:51.020 align:middle line:84%
+So the overall
+complexity is actually
+
+01:00:51.020 --> 01:00:53.420 align:middle line:84%
+going to be theta of
+n times 2 to the n
+
+01:00:53.420 --> 01:00:57.430 align:middle line:84%
+because it's a
+little bit harder--
+
+01:00:57.430 --> 01:01:00.120 align:middle line:84%
+it's a little bit worse than
+exponential, just purely
+
+01:01:00.120 --> 01:01:03.000 align:middle line:84%
+for the fact that we're
+copying the list at each step.
+
+01:01:03.000 --> 01:01:07.920 align:middle line:90%
+
+
+01:01:07.920 --> 01:01:11.190 align:middle line:84%
+All right, so let's move on
+to logarithmic complexity.
+
+01:01:11.190 --> 01:01:14.360 align:middle line:84%
+This one's going to be a little
+bit tricky because right off
+
+01:01:14.360 --> 01:01:16.110 align:middle line:84%
+the bat, we're not
+going to be able to see
+
+01:01:16.110 --> 01:01:19.230 align:middle line:84%
+a direct relationship
+between the input
+
+01:01:19.230 --> 01:01:21.600 align:middle line:90%
+and what loop we actually have.
+
+01:01:21.600 --> 01:01:24.990 align:middle line:84%
+So here I've got a
+function called digit_add.
+
+01:01:24.990 --> 01:01:30.240 align:middle line:84%
+It's going to take in
+a number, so like 1234,
+
+01:01:30.240 --> 01:01:33.240 align:middle line:84%
+something like
+that, number 1,234.
+
+01:01:33.240 --> 01:01:35.740 align:middle line:90%
+The code casts it to a string.
+
+01:01:35.740 --> 01:01:38.970 align:middle line:84%
+So it takes in a
+pure numerical value.
+
+01:01:38.970 --> 01:01:43.620 align:middle line:84%
+It makes a string out
+of it and then iterates
+
+01:01:43.620 --> 01:01:46.860 align:middle line:90%
+through the string.
+
+01:01:46.860 --> 01:01:51.570 align:middle line:84%
+So the function here, in
+terms of time complexity,
+
+01:01:51.570 --> 01:01:54.600 align:middle line:84%
+is theta of length
+S. Here, we're
+
+01:01:54.600 --> 01:01:57.330 align:middle line:84%
+iterating through the string
+backward basically, 4, then 3,
+
+01:01:57.330 --> 01:01:59.540 align:middle line:90%
+then 2, then 1.
+
+01:01:59.540 --> 01:02:01.470 align:middle line:90%
+But what's my input?
+
+01:02:01.470 --> 01:02:01.970 align:middle line:90%
+It's n.
+
+01:02:01.970 --> 01:02:03.380 align:middle line:90%
+It's not s.
+
+01:02:03.380 --> 01:02:06.020 align:middle line:84%
+So the time complexity
+of this function,
+
+01:02:06.020 --> 01:02:11.750 align:middle line:84%
+while it's linear in s,
+s is not linear in n,
+
+01:02:11.750 --> 01:02:16.250 align:middle line:84%
+because when my number is 83,
+my loop only iterates twice.
+
+01:02:16.250 --> 01:02:19.400 align:middle line:84%
+If my number has four
+digits in it, 4,271,
+
+01:02:19.400 --> 01:02:22.430 align:middle line:90%
+my loop iterates four times.
+
+01:02:22.430 --> 01:02:27.090 align:middle line:84%
+So this relationship
+is not linear.
+
+01:02:27.090 --> 01:02:29.020 align:middle line:90%
+So what is it exactly?
+
+01:02:29.020 --> 01:02:32.910 align:middle line:84%
+Well, let's think about what
+that loop is actually doing.
+
+01:02:32.910 --> 01:02:36.480 align:middle line:84%
+If I have a number
+with four digits in it,
+
+01:02:36.480 --> 01:02:44.190 align:middle line:84%
+something in the thousands, when
+I iterate through the number
+
+01:02:44.190 --> 01:02:46.470 align:middle line:84%
+sort of backward, this
+number as a string,
+
+01:02:46.470 --> 01:02:52.970 align:middle line:84%
+I'm basically taking that 1 and
+keeping it in my running sum.
+
+01:02:52.970 --> 01:02:56.960 align:middle line:84%
+Then it's kind of like I
+divided that number by 10.
+
+01:02:56.960 --> 01:03:00.980 align:middle line:84%
+I grabbed the remainder when
+I divided that number by 10.
+
+01:03:00.980 --> 01:03:03.320 align:middle line:84%
+And that's the thing
+that I just added.
+
+01:03:03.320 --> 01:03:06.680 align:middle line:84%
+The whole number left
+over when I divided by 10
+
+01:03:06.680 --> 01:03:08.930 align:middle line:90%
+is this bit here.
+
+01:03:08.930 --> 01:03:11.410 align:middle line:84%
+So now think of it
+like taking this--
+
+01:03:11.410 --> 01:03:14.380 align:middle line:84%
+to take this last element here,
+it's like I take this number
+
+01:03:14.380 --> 01:03:16.180 align:middle line:90%
+and divide by 10 again.
+
+01:03:16.180 --> 01:03:18.460 align:middle line:84%
+I grab the remainder
+when I divide by 10
+
+01:03:18.460 --> 01:03:20.050 align:middle line:90%
+and add it to my running total.
+
+01:03:20.050 --> 01:03:23.110 align:middle line:84%
+And the whole number I'm
+left over when dividing by 10
+
+01:03:23.110 --> 01:03:24.460 align:middle line:90%
+is just this.
+
+01:03:24.460 --> 01:03:26.200 align:middle line:90%
+One more time, I take the 2.
+
+01:03:26.200 --> 01:03:29.200 align:middle line:84%
+The remainder when
+I divided that 42
+
+01:03:29.200 --> 01:03:32.650 align:middle line:84%
+is 2, and the whole number
+I was left over with is 4.
+
+01:03:32.650 --> 01:03:36.950 align:middle line:84%
+And then lastly I can do
+that last thing again.
+
+01:03:36.950 --> 01:03:41.060 align:middle line:84%
+So what's the relationship
+between the magnitude of n,
+
+01:03:41.060 --> 01:03:45.320 align:middle line:84%
+this 4,000-something, or this
+80-something to how many times
+
+01:03:45.320 --> 01:03:48.620 align:middle line:84%
+I have to loop through to
+get every digit in my number?
+
+01:03:48.620 --> 01:03:52.100 align:middle line:84%
+Well, the trick here is
+to think about taking
+
+01:03:52.100 --> 01:03:54.830 align:middle line:84%
+my magnitude, my n--
+the magnitude of n
+
+01:03:54.830 --> 01:03:59.070 align:middle line:84%
+and dividing it by
+10 a bunch of times.
+
+01:03:59.070 --> 01:04:03.030 align:middle line:84%
+How many times do I divide
+by 10 to basically grab
+
+01:04:03.030 --> 01:04:06.690 align:middle line:84%
+every single element,
+every single digit in my n?
+
+01:04:06.690 --> 01:04:09.570 align:middle line:90%
+Well, length s times, right?
+
+01:04:09.570 --> 01:04:14.420 align:middle line:84%
+That's kind of like taking
+each character one at a time.
+
+01:04:14.420 --> 01:04:15.970 align:middle line:84%
+To take each character
+one at a time,
+
+01:04:15.970 --> 01:04:18.400 align:middle line:84%
+that's like dividing by
+10 to grab the remainder.
+
+01:04:18.400 --> 01:04:20.850 align:middle line:84%
+And then I've done
+that length s times.
+
+01:04:20.850 --> 01:04:23.120 align:middle line:90%
+That's what this loop is doing.
+
+01:04:23.120 --> 01:04:27.260 align:middle line:84%
+So the relationship
+between the magnitude of n
+
+01:04:27.260 --> 01:04:29.480 align:middle line:84%
+and how many times I
+go through the loop
+
+01:04:29.480 --> 01:04:34.430 align:middle line:84%
+is this, n divided by 10 some
+number of times, length s
+
+01:04:34.430 --> 01:04:35.420 align:middle line:90%
+times, is equal to 1.
+
+01:04:35.420 --> 01:04:38.660 align:middle line:84%
+That means I've finished going
+through this entire element--
+
+01:04:38.660 --> 01:04:41.390 align:middle line:84%
+this entire number, all the
+digits within the number.
+
+01:04:41.390 --> 01:04:43.820 align:middle line:84%
+So the relationship
+between n and length
+
+01:04:43.820 --> 01:04:46.040 align:middle line:84%
+s is length s is
+equal to log of n.
+
+01:04:46.040 --> 01:04:49.950 align:middle line:90%
+
+
+01:04:49.950 --> 01:04:52.350 align:middle line:84%
+And now that I have
+this nice relationship,
+
+01:04:52.350 --> 01:04:55.680 align:middle line:84%
+well, I said that this function
+was linear in length s.
+
+01:04:55.680 --> 01:04:57.570 align:middle line:84%
+So if it's theta
+of length s, it's
+
+01:04:57.570 --> 01:04:59.825 align:middle line:90%
+going to be theta of log n.
+
+01:04:59.825 --> 01:05:01.200 align:middle line:84%
+I just mapped
+those two together.
+
+01:05:01.200 --> 01:05:05.010 align:middle line:90%
+
+
+01:05:05.010 --> 01:05:06.620 align:middle line:90%
+Questions about this?
+
+01:05:06.620 --> 01:05:08.850 align:middle line:84%
+This trick can work in
+many different ways.
+
+01:05:08.850 --> 01:05:11.820 align:middle line:84%
+What's important to realize
+is that here there's
+
+01:05:11.820 --> 01:05:13.950 align:middle line:84%
+kind an indirect
+relationship between what's
+
+01:05:13.950 --> 01:05:17.190 align:middle line:84%
+actually happening in
+the code and my input.
+
+01:05:17.190 --> 01:05:19.750 align:middle line:90%
+It's not as clear cut.
+
+01:05:19.750 --> 01:05:21.490 align:middle line:84%
+But there is some
+relationship, which
+
+01:05:21.490 --> 01:05:23.680 align:middle line:90%
+is not constant and not linear.
+
+01:05:23.680 --> 01:05:30.930 align:middle line:90%
+
+
+01:05:30.930 --> 01:05:32.140 align:middle line:90%
+OK.
+
+01:05:32.140 --> 01:05:34.330 align:middle line:84%
+So the overall complexity
+of this function
+
+01:05:34.330 --> 01:05:37.300 align:middle line:84%
+is theta of log n, where I don't
+actually care about the base
+
+01:05:37.300 --> 01:05:41.335 align:middle line:84%
+when I report the
+complexity in terms of log.
+
+01:05:41.335 --> 01:05:42.460 align:middle line:90%
+In this case, it's base 10.
+
+01:05:42.460 --> 01:05:45.715 align:middle line:84%
+But if it was base 2, it
+would be the same, log n.
+
+01:05:45.715 --> 01:05:49.180 align:middle line:90%
+
+
+01:05:49.180 --> 01:05:55.000 align:middle line:84%
+OK, so we saw a bunch
+of examples, just one
+
+01:05:55.000 --> 01:05:56.530 align:middle line:90%
+of logarithmic complexity.
+
+01:05:56.530 --> 01:05:58.870 align:middle line:84%
+But we're going to see
+next that searching
+
+01:05:58.870 --> 01:06:04.990 align:middle line:84%
+for an element in the list will
+also be logarithmic complexity.
+
+01:06:04.990 --> 01:06:07.390 align:middle line:84%
+Before we get to that,
+I'd like to just make--
+
+01:06:07.390 --> 01:06:09.940 align:middle line:84%
+just put this slide
+up to remind you
+
+01:06:09.940 --> 01:06:13.270 align:middle line:84%
+that there are several
+functions, built-in functions,
+
+01:06:13.270 --> 01:06:16.600 align:middle line:84%
+with lists and dictionaries
+that aren't constant.
+
+01:06:16.600 --> 01:06:22.000 align:middle line:84%
+So like the example you guys did
+where we used the in operator,
+
+01:06:22.000 --> 01:06:23.290 align:middle line:90%
+we had to be careful--
+
+01:06:23.290 --> 01:06:26.560 align:middle line:84%
+if you ever see these operations
+being done in the code,
+
+01:06:26.560 --> 01:06:28.130 align:middle line:90%
+don't just push them aside.
+
+01:06:28.130 --> 01:06:31.030 align:middle line:84%
+You have to account for them
+within the complexity analysis.
+
+01:06:31.030 --> 01:06:34.490 align:middle line:90%
+
+
+01:06:34.490 --> 01:06:39.350 align:middle line:84%
+OK, so next we're going to look
+at some searching algorithms.
+
+01:06:39.350 --> 01:06:42.710 align:middle line:84%
+These algorithms, we're going to
+see a bunch of different codes
+
+01:06:42.710 --> 01:06:44.630 align:middle line:90%
+that implement searching.
+
+01:06:44.630 --> 01:06:47.780 align:middle line:84%
+These will-- again, they'll
+be very similar to the ones
+
+01:06:47.780 --> 01:06:50.010 align:middle line:84%
+that we actually
+timed last lecture.
+
+01:06:50.010 --> 01:06:52.160 align:middle line:84%
+So we're going to
+look at searching
+
+01:06:52.160 --> 01:06:54.230 align:middle line:90%
+for an element in a list.
+
+01:06:54.230 --> 01:06:57.680 align:middle line:84%
+We're going to look at a bunch
+of different implementations
+
+01:06:57.680 --> 01:07:02.970 align:middle line:84%
+of the plain brute force
+searching element in a list.
+
+01:07:02.970 --> 01:07:05.240 align:middle line:84%
+Whether it's sorted
+or unsorted, as long
+
+01:07:05.240 --> 01:07:07.970 align:middle line:84%
+as you just brute force your way
+from the beginning of the list
+
+01:07:07.970 --> 01:07:09.500 align:middle line:84%
+to the end of the
+list, you'll be
+
+01:07:09.500 --> 01:07:11.840 align:middle line:84%
+able to find the element
+you're looking for
+
+01:07:11.840 --> 01:07:13.680 align:middle line:90%
+or say that it's not there.
+
+01:07:13.680 --> 01:07:16.160 align:middle line:84%
+So we're going to look at
+some linear search functions.
+
+01:07:16.160 --> 01:07:18.650 align:middle line:84%
+And then we're going to look
+at the bisection search--
+
+01:07:18.650 --> 01:07:21.500 align:middle line:84%
+a couple bisection
+search implementations.
+
+01:07:21.500 --> 01:07:23.570 align:middle line:84%
+And that's where we
+divide the list in half
+
+01:07:23.570 --> 01:07:25.560 align:middle line:90%
+and discard one of the halves.
+
+01:07:25.560 --> 01:07:29.930 align:middle line:84%
+And those implementations
+though will
+
+01:07:29.930 --> 01:07:32.240 align:middle line:90%
+need our list to be sorted.
+
+01:07:32.240 --> 01:07:34.380 align:middle line:84%
+So the brute forcing
+our way doesn't really
+
+01:07:34.380 --> 01:07:35.850 align:middle line:84%
+matter whether
+it's sorted or not,
+
+01:07:35.850 --> 01:07:38.980 align:middle line:84%
+but the bisection search
+only gives the correct answer
+
+01:07:38.980 --> 01:07:41.740 align:middle line:84%
+if the list is
+sorted to begin with.
+
+01:07:41.740 --> 01:07:43.780 align:middle line:84%
+All right, so first, let's
+look at linear search
+
+01:07:43.780 --> 01:07:46.210 align:middle line:90%
+on an unsorted list.
+
+01:07:46.210 --> 01:07:50.950 align:middle line:84%
+This is code that is going to
+search for element e in list L.
+
+01:07:50.950 --> 01:07:53.530 align:middle line:84%
+It loops through the
+length of the list
+
+01:07:53.530 --> 01:07:56.620 align:middle line:84%
+and keeps this
+Boolean flag in mind.
+
+01:07:56.620 --> 01:07:58.660 align:middle line:84%
+If it finds the element
+we're looking for,
+
+01:07:58.660 --> 01:07:59.830 align:middle line:90%
+it just sets the flag.
+
+01:07:59.830 --> 01:08:02.500 align:middle line:84%
+And at the end of iterating
+through the whole list,
+
+01:08:02.500 --> 01:08:05.380 align:middle line:84%
+it tells us whether
+it found it or not.
+
+01:08:05.380 --> 01:08:09.118 align:middle line:84%
+So the worst-case
+scenario analysis
+
+01:08:09.118 --> 01:08:11.160 align:middle line:84%
+says that we have to look
+through the entire list
+
+01:08:11.160 --> 01:08:13.690 align:middle line:84%
+to determine the
+element is there or not.
+
+01:08:13.690 --> 01:08:17.700 align:middle line:84%
+So the theta of this
+particular function
+
+01:08:17.700 --> 01:08:20.714 align:middle line:84%
+is theta of length L.
+There's only one loop.
+
+01:08:20.714 --> 01:08:24.029 align:middle line:84%
+It depends on the length of
+L, nothing really special
+
+01:08:24.029 --> 01:08:26.633 align:middle line:90%
+about this function.
+
+01:08:26.633 --> 01:08:28.050 align:middle line:84%
+Now, you might
+notice that there's
+
+01:08:28.050 --> 01:08:30.029 align:middle line:84%
+something inefficient
+about this function
+
+01:08:30.029 --> 01:08:32.700 align:middle line:84%
+and that once it finds
+an element, let's
+
+01:08:32.700 --> 01:08:34.319 align:middle line:84%
+say at the beginning
+of the list,
+
+01:08:34.319 --> 01:08:36.810 align:middle line:84%
+this function actually
+just sets the flag
+
+01:08:36.810 --> 01:08:39.460 align:middle line:84%
+and keeps going through
+to the end of the list.
+
+01:08:39.460 --> 01:08:42.840 align:middle line:84%
+So we can actually do a little
+bit of a speed-up with this bit
+
+01:08:42.840 --> 01:08:47.040 align:middle line:84%
+here and say that,
+hey, if we find it,
+
+01:08:47.040 --> 01:08:48.640 align:middle line:90%
+just return True right away.
+
+01:08:48.640 --> 01:08:51.979 align:middle line:84%
+No need to keep going
+to the end of the list.
+
+01:08:51.979 --> 01:08:55.390 align:middle line:84%
+So what's the analysis
+for this code?
+
+01:08:55.390 --> 01:08:58.010 align:middle line:84%
+Well, again, we're doing
+worst-case analysis.
+
+01:08:58.010 --> 01:09:01.340 align:middle line:84%
+So in the worst case,
+the element is not there.
+
+01:09:01.340 --> 01:09:04.240 align:middle line:84%
+So we still have to search
+through every single element
+
+01:09:04.240 --> 01:09:07.960 align:middle line:84%
+in the list, beginning to end,
+to determine it's not there.
+
+01:09:07.960 --> 01:09:11.423 align:middle line:84%
+So the worst-case theta
+analysis for this function
+
+01:09:11.423 --> 01:09:13.840 align:middle line:84%
+is that we still have to go
+through to the end of the list
+
+01:09:13.840 --> 01:09:15.340 align:middle line:90%
+to determine it's not there.
+
+01:09:15.340 --> 01:09:17.290 align:middle line:84%
+So it's still going
+to be-- sorry,
+
+01:09:17.290 --> 01:09:20.080 align:middle line:84%
+it's still going to be theta
+of n-- sorry, theta of length
+
+01:09:20.080 --> 01:09:21.424 align:middle line:90%
+L time.
+
+01:09:21.424 --> 01:09:24.979 align:middle line:90%
+
+
+01:09:24.979 --> 01:09:27.220 align:middle line:90%
+So this is on an unsorted list.
+
+01:09:27.220 --> 01:09:30.200 align:middle line:84%
+But what if we look
+at a sorted list?
+
+01:09:30.200 --> 01:09:35.439 align:middle line:84%
+OK, so we can do a little
+something clever in our code.
+
+01:09:35.439 --> 01:09:39.930 align:middle line:84%
+If the list is
+sorted, we can say
+
+01:09:39.930 --> 01:09:42.840 align:middle line:84%
+we're going to start-- let's
+say it's increasing sorted.
+
+01:09:42.840 --> 01:09:45.210 align:middle line:84%
+We can start at the
+beginning of the list,
+
+01:09:45.210 --> 01:09:46.770 align:middle line:90%
+look through each element.
+
+01:09:46.770 --> 01:09:49.470 align:middle line:90%
+If we find it, return True.
+
+01:09:49.470 --> 01:09:52.740 align:middle line:84%
+If we reach an element
+that's bigger than the one
+
+01:09:52.740 --> 01:09:55.180 align:middle line:84%
+we're looking for, if
+the list is sorted,
+
+01:09:55.180 --> 01:09:57.180 align:middle line:84%
+so all the remaining
+elements in the list
+
+01:09:57.180 --> 01:10:00.030 align:middle line:84%
+are also bigger than the one
+we're looking for, right?
+
+01:10:00.030 --> 01:10:03.660 align:middle line:84%
+And then we can just
+return False right away.
+
+01:10:03.660 --> 01:10:05.380 align:middle line:84%
+Well, we think
+we're pretty clever,
+
+01:10:05.380 --> 01:10:09.810 align:middle line:84%
+but the worst-case analysis
+says that the element is not
+
+01:10:09.810 --> 01:10:11.290 align:middle line:90%
+even in the list at all.
+
+01:10:11.290 --> 01:10:14.970 align:middle line:84%
+So we still have to go through
+and look to the end of the list
+
+01:10:14.970 --> 01:10:17.350 align:middle line:84%
+to figure out that that
+element is not there.
+
+01:10:17.350 --> 01:10:19.800 align:middle line:84%
+So we still have to touch
+each element in the list
+
+01:10:19.800 --> 01:10:21.390 align:middle line:90%
+to determine it's not there.
+
+01:10:21.390 --> 01:10:24.090 align:middle line:84%
+So the worst-case theta
+complexity analysis
+
+01:10:24.090 --> 01:10:27.255 align:middle line:84%
+still says that this
+is theta of length L
+
+01:10:27.255 --> 01:10:28.755 align:middle line:84%
+because everything
+else is constant.
+
+01:10:28.755 --> 01:10:33.560 align:middle line:90%
+
+
+01:10:33.560 --> 01:10:35.880 align:middle line:90%
+So now let's look at bisection.
+
+01:10:35.880 --> 01:10:39.170 align:middle line:84%
+So as far as we can tell, just
+doing a linear, brute force
+
+01:10:39.170 --> 01:10:43.010 align:middle line:84%
+search way is not going
+to give us anything
+
+01:10:43.010 --> 01:10:44.450 align:middle line:90%
+better than theta of n.
+
+01:10:44.450 --> 01:10:47.610 align:middle line:84%
+But when we looked at the
+timings in last lecture,
+
+01:10:47.610 --> 01:10:49.640 align:middle line:84%
+we saw that this binary
+search or bisection
+
+01:10:49.640 --> 01:10:54.590 align:middle line:84%
+search on an element in a list
+was actually much, much faster.
+
+01:10:54.590 --> 01:10:59.100 align:middle line:84%
+It grew at a faster rate than
+linear but not quite constant.
+
+01:10:59.100 --> 01:11:01.940 align:middle line:84%
+So let's remember
+how that code looked.
+
+01:11:01.940 --> 01:11:05.330 align:middle line:84%
+So we basically had a list
+with a bunch of elements in it.
+
+01:11:05.330 --> 01:11:08.300 align:middle line:84%
+We looked at the element
+at the middle of the list.
+
+01:11:08.300 --> 01:11:10.730 align:middle line:84%
+And we said, are you the
+one we're looking for?
+
+01:11:10.730 --> 01:11:12.770 align:middle line:90%
+In the worst case, it's not.
+
+01:11:12.770 --> 01:11:16.070 align:middle line:84%
+So then we have to ask,
+are you bigger or smaller
+
+01:11:16.070 --> 01:11:17.600 align:middle line:90%
+than the one we're looking for?
+
+01:11:17.600 --> 01:11:20.060 align:middle line:84%
+If it's bigger,
+then we know we have
+
+01:11:20.060 --> 01:11:21.830 align:middle line:84%
+to look in the lower
+half of the list.
+
+01:11:21.830 --> 01:11:24.600 align:middle line:84%
+If it's smaller, we look in
+the upper half of the list.
+
+01:11:24.600 --> 01:11:27.950 align:middle line:84%
+And now that we either look in
+the lower or the upper half,
+
+01:11:27.950 --> 01:11:31.350 align:middle line:84%
+we notice we have the exact
+same problem to solve.
+
+01:11:31.350 --> 01:11:33.720 align:middle line:84%
+So this should ring
+a little bell that
+
+01:11:33.720 --> 01:11:36.750 align:middle line:90%
+says we should use recursion.
+
+01:11:36.750 --> 01:11:38.370 align:middle line:84%
+Now we have the same
+problem to solve,
+
+01:11:38.370 --> 01:11:41.160 align:middle line:84%
+an element e in a
+slightly smaller list.
+
+01:11:41.160 --> 01:11:43.170 align:middle line:90%
+Is it in that list?
+
+01:11:43.170 --> 01:11:47.470 align:middle line:84%
+So that's exactly what
+we're going to implement.
+
+01:11:47.470 --> 01:11:50.310 align:middle line:84%
+So visually speaking, this
+is what we're going to do.
+
+01:11:50.310 --> 01:11:55.080 align:middle line:84%
+We're going to have an original
+list with n elements in it.
+
+01:11:55.080 --> 01:11:56.820 align:middle line:84%
+We're going to look
+at the halfway point.
+
+01:11:56.820 --> 01:11:58.960 align:middle line:84%
+Worst case, it's not the
+one we're looking for.
+
+01:11:58.960 --> 01:12:01.920 align:middle line:84%
+So we're going to decide on
+one of the sides to next search
+
+01:12:01.920 --> 01:12:02.610 align:middle line:90%
+through.
+
+01:12:02.610 --> 01:12:05.340 align:middle line:84%
+Now we have n over 2
+elements to look through.
+
+01:12:05.340 --> 01:12:07.020 align:middle line:84%
+Again, it's not
+there, worst case.
+
+01:12:07.020 --> 01:12:09.150 align:middle line:84%
+So we have to decide on
+which half to look through.
+
+01:12:09.150 --> 01:12:11.370 align:middle line:84%
+Now we have n over 4
+elements to look through.
+
+01:12:11.370 --> 01:12:12.750 align:middle line:90%
+We keep doing this.
+
+01:12:12.750 --> 01:12:15.300 align:middle line:84%
+We keep of halving
+more and more recursive
+
+01:12:15.300 --> 01:12:17.670 align:middle line:84%
+calls until we
+reach a base case.
+
+01:12:17.670 --> 01:12:21.450 align:middle line:84%
+And the base case is
+that we now have a list
+
+01:12:21.450 --> 01:12:24.050 align:middle line:90%
+with one element in it.
+
+01:12:24.050 --> 01:12:26.270 align:middle line:84%
+Either that element is
+the one we're looking for
+
+01:12:26.270 --> 01:12:28.460 align:middle line:84%
+or, worst case,
+it's not, and we've
+
+01:12:28.460 --> 01:12:30.620 align:middle line:84%
+determined that the
+element we're looking for
+
+01:12:30.620 --> 01:12:34.450 align:middle line:84%
+is not in these n
+elements at all.
+
+01:12:34.450 --> 01:12:37.210 align:middle line:90%
+So our base case is down here.
+
+01:12:37.210 --> 01:12:41.070 align:middle line:84%
+And we started with
+n elements over here.
+
+01:12:41.070 --> 01:12:43.340 align:middle line:84%
+So the bisection
+search algorithm
+
+01:12:43.340 --> 01:12:48.150 align:middle line:84%
+will repeat this task of
+dividing the list in half
+
+01:12:48.150 --> 01:12:51.670 align:middle line:90%
+let's say i times.
+
+01:12:51.670 --> 01:12:53.320 align:middle line:84%
+So this is quote,
+unquote "how many
+
+01:12:53.320 --> 01:12:55.120 align:middle line:90%
+iterations we would have made."
+
+01:12:55.120 --> 01:12:57.610 align:middle line:84%
+But since this is recursion,
+there's no iterations.
+
+01:12:57.610 --> 01:13:01.510 align:middle line:84%
+This is how many function calls
+we have until we reach the base
+
+01:13:01.510 --> 01:13:04.040 align:middle line:90%
+case, i function calls.
+
+01:13:04.040 --> 01:13:07.000 align:middle line:84%
+So if we take our
+original n elements
+
+01:13:07.000 --> 01:13:11.260 align:middle line:84%
+and we divide them by
+2 so many times that we
+
+01:13:11.260 --> 01:13:13.870 align:middle line:84%
+have only one element
+left to search for that's
+
+01:13:13.870 --> 01:13:15.790 align:middle line:90%
+when we found our answer.
+
+01:13:15.790 --> 01:13:20.580 align:middle line:84%
+So we now have a relationship
+between how many elements
+
+01:13:20.580 --> 01:13:25.290 align:middle line:84%
+we had originally, n elements,
+and how many times we
+
+01:13:25.290 --> 01:13:29.050 align:middle line:84%
+had to divide our loop
+to get to our answer,
+
+01:13:29.050 --> 01:13:31.140 align:middle line:84%
+how many of these
+levels we have.
+
+01:13:31.140 --> 01:13:34.930 align:middle line:84%
+N divided by 2 to the i equals
+1, that's our relationship.
+
+01:13:34.930 --> 01:13:38.880 align:middle line:84%
+So in the bisection search
+algorithm, how many times
+
+01:13:38.880 --> 01:13:40.620 align:middle line:84%
+are we calling this
+recursive function
+
+01:13:40.620 --> 01:13:42.100 align:middle line:90%
+to get to the base case?
+
+01:13:42.100 --> 01:13:43.290 align:middle line:90%
+Well, i times.
+
+01:13:43.290 --> 01:13:45.570 align:middle line:90%
+So what is i in terms of n?
+
+01:13:45.570 --> 01:13:47.700 align:middle line:84%
+Well, the relationship
+between i and n
+
+01:13:47.700 --> 01:13:50.730 align:middle line:84%
+is similar to the
+one we had over here,
+
+01:13:50.730 --> 01:13:52.800 align:middle line:84%
+where we divided this
+number by 10 each time,
+
+01:13:52.800 --> 01:13:54.600 align:middle line:84%
+except that now we're
+dividing a list of n
+
+01:13:54.600 --> 01:13:56.740 align:middle line:90%
+elements by 2 each time.
+
+01:13:56.740 --> 01:14:00.630 align:middle line:84%
+So the relationship
+is still logarithmic.
+
+01:14:00.630 --> 01:14:04.260 align:middle line:84%
+It relates the number of
+elements I originally had, n,
+
+01:14:04.260 --> 01:14:06.990 align:middle line:84%
+with how many times I
+had to divide my list
+
+01:14:06.990 --> 01:14:10.800 align:middle line:84%
+to get to one element, whether
+it's the one I'm looking for
+
+01:14:10.800 --> 01:14:12.450 align:middle line:90%
+or not.
+
+01:14:12.450 --> 01:14:16.490 align:middle line:84%
+So the complexity of just the
+pure bisection search algorithm
+
+01:14:16.490 --> 01:14:20.970 align:middle line:84%
+is theta of log n, where n
+is the length of the list.
+
+01:14:20.970 --> 01:14:22.460 align:middle line:84%
+That's how many
+subdivisions I need
+
+01:14:22.460 --> 01:14:25.370 align:middle line:84%
+to do to get to one
+element to decide it's
+
+01:14:25.370 --> 01:14:27.820 align:middle line:90%
+not the one I'm looking for.
+
+01:14:27.820 --> 01:14:30.750 align:middle line:84%
+So now we're going to look at
+two different implementations
+
+01:14:30.750 --> 01:14:32.730 align:middle line:84%
+of the code to do
+bisection search.
+
+01:14:32.730 --> 01:14:34.780 align:middle line:84%
+One will be more
+efficient than the other.
+
+01:14:34.780 --> 01:14:37.320 align:middle line:84%
+Let's start with the one
+that's simpler to write
+
+01:14:37.320 --> 01:14:39.390 align:middle line:90%
+but less efficient.
+
+01:14:39.390 --> 01:14:43.010 align:middle line:84%
+So this code, you can see
+here it looks for element
+
+01:14:43.010 --> 01:14:45.380 align:middle line:84%
+e in list L. It
+has two base cases
+
+01:14:45.380 --> 01:14:47.360 align:middle line:84%
+up there, those
+are both constant,
+
+01:14:47.360 --> 01:14:50.130 align:middle line:90%
+and one recursive step here.
+
+01:14:50.130 --> 01:14:51.780 align:middle line:84%
+So either we do this
+one or this one.
+
+01:14:51.780 --> 01:14:54.950 align:middle line:84%
+So this one is if we decided we
+need to look in the lower half,
+
+01:14:54.950 --> 01:14:56.360 align:middle line:84%
+and this is if we
+decided we need
+
+01:14:56.360 --> 01:14:59.810 align:middle line:84%
+to look in the upper
+half for the element.
+
+01:14:59.810 --> 01:15:02.770 align:middle line:84%
+So this is just pure
+bisection search,
+
+01:15:02.770 --> 01:15:04.630 align:middle line:84%
+which on the previous
+slide we decided
+
+01:15:04.630 --> 01:15:09.880 align:middle line:84%
+is theta of log of length
+of the list, theta of log n.
+
+01:15:09.880 --> 01:15:15.990 align:middle line:84%
+Now, that's fine, but what do
+we have as a parameter here?
+
+01:15:15.990 --> 01:15:19.050 align:middle line:90%
+It's half of my list.
+
+01:15:19.050 --> 01:15:21.960 align:middle line:84%
+So in addition to
+doing bisection search
+
+01:15:21.960 --> 01:15:23.970 align:middle line:84%
+and just doing the
+algorithm, having
+
+01:15:23.970 --> 01:15:25.380 align:middle line:84%
+a bunch of bisection
+search calls
+
+01:15:25.380 --> 01:15:28.320 align:middle line:84%
+that take me to that
+list of one element,
+
+01:15:28.320 --> 01:15:31.860 align:middle line:84%
+on top of that, each time I
+make that bisection search call,
+
+01:15:31.860 --> 01:15:34.510 align:middle line:90%
+I'm copying my list.
+
+01:15:34.510 --> 01:15:37.180 align:middle line:90%
+So this is not constant.
+
+01:15:37.180 --> 01:15:40.170 align:middle line:84%
+It's theta of length
+L over 2, right?
+
+01:15:40.170 --> 01:15:42.210 align:middle line:90%
+I grab half of my list.
+
+01:15:42.210 --> 01:15:48.630 align:middle line:84%
+So the complexity of that code
+is theta of n times log n.
+
+01:15:48.630 --> 01:15:53.190 align:middle line:84%
+Theta of log n for the bisection
+search bit, but theta of n
+
+01:15:53.190 --> 01:15:55.140 align:middle line:84%
+tacked on to each
+one of those calls
+
+01:15:55.140 --> 01:15:57.720 align:middle line:84%
+because I have to
+grab a copy of my list
+
+01:15:57.720 --> 01:15:59.740 align:middle line:90%
+with each function call.
+
+01:15:59.740 --> 01:16:02.210 align:middle line:84%
+So it's not quite
+that efficient.
+
+01:16:02.210 --> 01:16:06.800 align:middle line:84%
+Now, let's look at a slightly
+different implementation.
+
+01:16:06.800 --> 01:16:10.100 align:middle line:84%
+This particular one is
+going to use integers
+
+01:16:10.100 --> 01:16:11.600 align:middle line:90%
+to keep track of endpoints.
+
+01:16:11.600 --> 01:16:13.730 align:middle line:84%
+So instead of
+copying my list, let
+
+01:16:13.730 --> 01:16:16.430 align:middle line:84%
+me just keep track of a
+number for my low endpoint
+
+01:16:16.430 --> 01:16:19.190 align:middle line:84%
+and a number for
+my high endpoint.
+
+01:16:19.190 --> 01:16:21.800 align:middle line:84%
+The complexity analysis
+for the bisection search
+
+01:16:21.800 --> 01:16:24.312 align:middle line:84%
+is going to be exactly the same
+because even though I'm just
+
+01:16:24.312 --> 01:16:26.270 align:middle line:84%
+keeping track of these
+high and low end points,
+
+01:16:26.270 --> 01:16:29.390 align:middle line:84%
+I'm still dividing the list
+in half with each call.
+
+01:16:29.390 --> 01:16:33.770 align:middle line:84%
+But I'm doing it by keeping
+track of integer indices.
+
+01:16:33.770 --> 01:16:35.660 align:middle line:84%
+So the size of the
+problem is still
+
+01:16:35.660 --> 01:16:37.100 align:middle line:90%
+reduced by two at each step.
+
+01:16:37.100 --> 01:16:39.020 align:middle line:84%
+I'm keeping track of
+these integer indices.
+
+01:16:39.020 --> 01:16:41.420 align:middle line:84%
+I'm not copying the
+list at this point.
+
+01:16:41.420 --> 01:16:46.160 align:middle line:84%
+I'm just changing an
+integer value from 10 to 5
+
+01:16:46.160 --> 01:16:47.580 align:middle line:90%
+or whatever it is.
+
+01:16:47.580 --> 01:16:51.890 align:middle line:84%
+So the complexity analysis
+of the bisection search
+
+01:16:51.890 --> 01:16:53.000 align:middle line:90%
+is theta of log n.
+
+01:16:53.000 --> 01:16:55.250 align:middle line:84%
+The code looks a
+little bit messier,
+
+01:16:55.250 --> 01:16:58.430 align:middle line:84%
+but overall, it still does
+the same sort of things.
+
+01:16:58.430 --> 01:17:02.480 align:middle line:84%
+It's messier because now I
+want bisection search to look
+
+01:17:02.480 --> 01:17:07.010 align:middle line:84%
+for an element e in list L,
+but I'd like my recursive call
+
+01:17:07.010 --> 01:17:10.730 align:middle line:84%
+to keep track of two end
+points, these integers low
+
+01:17:10.730 --> 01:17:12.320 align:middle line:84%
+and the integer high,
+the thing that I
+
+01:17:12.320 --> 01:17:15.000 align:middle line:90%
+want to search my list between.
+
+01:17:15.000 --> 01:17:17.060 align:middle line:84%
+So I'm going to create
+another function
+
+01:17:17.060 --> 01:17:22.070 align:middle line:84%
+that I kick off down here, which
+looks for an element in list L.
+
+01:17:22.070 --> 01:17:25.550 align:middle line:84%
+But I'm also going to keep track
+of my low and high end points
+
+01:17:25.550 --> 01:17:29.850 align:middle line:84%
+as parameter to my
+bisection search function.
+
+01:17:29.850 --> 01:17:32.030 align:middle line:84%
+So bisection_search_helper
+here is now
+
+01:17:32.030 --> 01:17:34.640 align:middle line:84%
+going to take in
+these four parameters.
+
+01:17:34.640 --> 01:17:37.010 align:middle line:84%
+The rest of the code
+is just details.
+
+01:17:37.010 --> 01:17:38.630 align:middle line:84%
+But what's important
+is everything
+
+01:17:38.630 --> 01:17:42.800 align:middle line:84%
+is constant except for my
+two bisection search calls.
+
+01:17:42.800 --> 01:17:45.380 align:middle line:90%
+Here, I'm changing my low--
+
+01:17:45.380 --> 01:17:47.030 align:middle line:84%
+I'm sorry, I'm
+changing my high if I
+
+01:17:47.030 --> 01:17:48.890 align:middle line:84%
+want to look in the
+lower half of the list.
+
+01:17:48.890 --> 01:17:51.020 align:middle line:84%
+And here I'm
+changing my low if I
+
+01:17:51.020 --> 01:17:53.010 align:middle line:84%
+want to look in the
+upper half of the list.
+
+01:17:53.010 --> 01:17:55.280 align:middle line:84%
+So the bisection
+search calls are still
+
+01:17:55.280 --> 01:17:58.728 align:middle line:84%
+going to be theta of log n,
+but what's the overhead now?
+
+01:17:58.728 --> 01:18:00.020 align:middle line:90%
+The overhead is nothing, right?
+
+01:18:00.020 --> 01:18:01.020 align:middle line:90%
+It's constant.
+
+01:18:01.020 --> 01:18:02.660 align:middle line:90%
+This L is the same one.
+
+01:18:02.660 --> 01:18:04.110 align:middle line:90%
+I'm not making a copy of it.
+
+01:18:04.110 --> 01:18:05.930 align:middle line:90%
+I'm just passing it through.
+
+01:18:05.930 --> 01:18:07.040 align:middle line:90%
+E is just a number.
+
+01:18:07.040 --> 01:18:08.060 align:middle line:90%
+Low is just a number.
+
+01:18:08.060 --> 01:18:11.090 align:middle line:84%
+And mid minus 1 is just
+a constant operation.
+
+01:18:11.090 --> 01:18:13.170 align:middle line:84%
+There's nothing
+being copied here.
+
+01:18:13.170 --> 01:18:15.650 align:middle line:84%
+So the overall
+complexity of this code,
+
+01:18:15.650 --> 01:18:18.860 align:middle line:84%
+while it looks a little bit
+messier, is just theta of log n
+
+01:18:18.860 --> 01:18:22.760 align:middle line:84%
+because the overhead is constant
+on each one of those function
+
+01:18:22.760 --> 01:18:24.630 align:middle line:90%
+calls.
+
+01:18:24.630 --> 01:18:28.160 align:middle line:84%
+So that brings us to
+this final question.
+
+01:18:28.160 --> 01:18:32.270 align:middle line:84%
+Clearly bisection search
+on a sorted list is faster,
+
+01:18:32.270 --> 01:18:35.960 align:middle line:84%
+it's theta of log n,
+than by pure brute force
+
+01:18:35.960 --> 01:18:39.030 align:middle line:84%
+search on a list that could
+be sorted or unsorted.
+
+01:18:39.030 --> 01:18:44.140 align:middle line:84%
+So the question is,
+when does it make sense
+
+01:18:44.140 --> 01:18:45.820 align:middle line:90%
+to sort the list first?
+
+01:18:45.820 --> 01:18:49.210 align:middle line:84%
+So given an unsorted list,
+when do you sort the list
+
+01:18:49.210 --> 01:18:53.470 align:middle line:84%
+and use this fast binary
+search versus just using
+
+01:18:53.470 --> 01:18:56.010 align:middle line:90%
+a straight-up linear search?
+
+01:18:56.010 --> 01:18:58.260 align:middle line:84%
+Well, that's when
+the time it takes
+
+01:18:58.260 --> 01:19:02.670 align:middle line:84%
+to do the sort, an initial
+sort, plus the complexity
+
+01:19:02.670 --> 01:19:06.450 align:middle line:84%
+to do binary search
+is less than doing
+
+01:19:06.450 --> 01:19:10.020 align:middle line:84%
+the straight-up linear
+search because the list has
+
+01:19:10.020 --> 01:19:12.360 align:middle line:90%
+to be sorted for this to work.
+
+01:19:12.360 --> 01:19:14.020 align:middle line:90%
+Well, when is that true?
+
+01:19:14.020 --> 01:19:17.580 align:middle line:84%
+Well, this implies that the
+time it takes to do the sort
+
+01:19:17.580 --> 01:19:22.090 align:middle line:90%
+is less than theta of n.
+
+01:19:22.090 --> 01:19:23.920 align:middle line:90%
+So that means what?
+
+01:19:23.920 --> 01:19:27.640 align:middle line:84%
+Can you sort a list without
+even looking at all the elements
+
+01:19:27.640 --> 01:19:29.940 align:middle line:90%
+once?
+
+01:19:29.940 --> 01:19:30.780 align:middle line:90%
+No, right?
+
+01:19:30.780 --> 01:19:32.880 align:middle line:84%
+You have to look at
+all the elements once
+
+01:19:32.880 --> 01:19:35.770 align:middle line:84%
+to even say that, hey, this
+list is already sorted.
+
+01:19:35.770 --> 01:19:39.572 align:middle line:90%
+So this is actually never true.
+
+01:19:39.572 --> 01:19:40.530 align:middle line:90%
+So what does that mean?
+
+01:19:40.530 --> 01:19:43.830 align:middle line:84%
+Does that mean we never want
+to do binary search on a list
+
+01:19:43.830 --> 01:19:45.980 align:middle line:90%
+unless it's already sorted?
+
+01:19:45.980 --> 01:19:47.450 align:middle line:90%
+Kind of.
+
+01:19:47.450 --> 01:19:51.050 align:middle line:84%
+But in fact, there
+are various situations
+
+01:19:51.050 --> 01:19:54.410 align:middle line:84%
+when it does make sense to do
+the sort first and then use
+
+01:19:54.410 --> 01:19:55.220 align:middle line:90%
+binary search.
+
+01:19:55.220 --> 01:19:59.180 align:middle line:84%
+And that's the case where
+you're given a data set,
+
+01:19:59.180 --> 01:20:03.780 align:middle line:84%
+and you want to do a whole bunch
+of searches on that data set.
+
+01:20:03.780 --> 01:20:09.600 align:middle line:84%
+So if you can take that sort,
+do it once, and then amortize
+
+01:20:09.600 --> 01:20:14.490 align:middle line:84%
+the cost it took you to do that
+sort over K different searches,
+
+01:20:14.490 --> 01:20:18.930 align:middle line:84%
+then it makes sense to pay
+the price to do the sort once
+
+01:20:18.930 --> 01:20:20.610 align:middle line:84%
+and then do it
+over-- and then do
+
+01:20:20.610 --> 01:20:25.080 align:middle line:84%
+the binary search over all
+these searches-- yeah, all
+
+01:20:25.080 --> 01:20:27.780 align:middle line:90%
+these searches.
+
+01:20:27.780 --> 01:20:30.450 align:middle line:84%
+And so as K gets
+really big, the time
+
+01:20:30.450 --> 01:20:33.390 align:middle line:84%
+it takes for you to do the
+sort becomes irrelevant.
+
+01:20:33.390 --> 01:20:35.670 align:middle line:84%
+The theta of doing
+this thing on the left
+
+01:20:35.670 --> 01:20:39.720 align:middle line:84%
+becomes just the theta to do
+the search logarithmically
+
+01:20:39.720 --> 01:20:41.700 align:middle line:84%
+than it does to do
+the search linearly.
+
+01:20:41.700 --> 01:20:45.580 align:middle line:90%
+
+
+01:20:45.580 --> 01:20:48.220 align:middle line:84%
+OK, so if you're only
+doing the search once,
+
+01:20:48.220 --> 01:20:51.028 align:middle line:84%
+please do not sort your list
+and then do a binary search.
+
+01:20:51.028 --> 01:20:52.570 align:middle line:84%
+That's going to take
+longer than just
+
+01:20:52.570 --> 01:20:55.390 align:middle line:84%
+looking at the
+elements in your list
+
+01:20:55.390 --> 01:20:57.228 align:middle line:84%
+straight through
+using brute force.
+
+01:20:57.228 --> 01:20:59.395 align:middle line:84%
+But if you're going to do
+a whole bunch of searches,
+
+01:20:59.395 --> 01:21:03.520 align:middle line:84%
+it makes sense to do the
+sort and then do the search.
+
+01:21:03.520 --> 01:21:04.208 align:middle line:90%
+All right.
+
+01:21:04.208 --> 01:21:05.500 align:middle line:90%
+All right, that's all I've got.
+
+01:21:05.500 --> 01:21:06.580 align:middle line:84%
+Next lecture,
+we're going to look
+
+01:21:06.580 --> 01:21:08.372 align:middle line:84%
+at a bunch of different
+sorting algorithms,
+
+01:21:08.372 --> 01:21:11.130 align:middle line:90%
+and we'll have a quiz.
+
+01:21:11.130 --> 01:21:18.000 align:middle line:90%

@@ -1,0 +1,5888 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.475 align:middle line:90%
+[SQUEAKING]
+
+00:00:02.475 --> 00:00:04.455 align:middle line:90%
+[RUSTLING]
+
+00:00:04.455 --> 00:00:06.435 align:middle line:90%
+[CLICKING]
+
+00:00:06.435 --> 00:00:16.415 align:middle line:90%
+
+
+00:00:16.415 --> 00:00:19.220 align:middle line:84%
+ANA BELL: All right,
+let's get started.
+
+00:00:19.220 --> 00:00:23.980 align:middle line:84%
+So today's lecture is
+lecture three out of four
+
+00:00:23.980 --> 00:00:26.170 align:middle line:84%
+on the idea of
+object-oriented programming
+
+00:00:26.170 --> 00:00:30.250 align:middle line:84%
+and creating our own object
+types through Python classes.
+
+00:00:30.250 --> 00:00:31.750 align:middle line:84%
+The majority of
+today's lecture will
+
+00:00:31.750 --> 00:00:33.130 align:middle line:90%
+be on this idea of inheritance.
+
+00:00:33.130 --> 00:00:35.470 align:middle line:84%
+But before we get
+there, I'd like
+
+00:00:35.470 --> 00:00:37.870 align:middle line:84%
+to do a little bit of a
+recap of the big things
+
+00:00:37.870 --> 00:00:39.880 align:middle line:90%
+that we've seen already.
+
+00:00:39.880 --> 00:00:42.460 align:middle line:84%
+And along the way,
+we'll be writing
+
+00:00:42.460 --> 00:00:45.790 align:middle line:84%
+a new data type for
+something more abstract,
+
+00:00:45.790 --> 00:00:48.850 align:middle line:84%
+an animal class, more abstract
+than what we've seen before.
+
+00:00:48.850 --> 00:00:51.110 align:middle line:84%
+But then, when we get to
+the idea of inheritance,
+
+00:00:51.110 --> 00:00:52.840 align:middle line:84%
+we'll build upon
+this animal class
+
+00:00:52.840 --> 00:00:56.030 align:middle line:90%
+with some more animal objects.
+
+00:00:56.030 --> 00:01:00.260 align:middle line:84%
+So the big idea behind
+creating our own data types
+
+00:01:00.260 --> 00:01:03.290 align:middle line:84%
+is that we want to mimic what's
+going on in real life, right?
+
+00:01:03.290 --> 00:01:05.300 align:middle line:84%
+And in real life,
+we basically have
+
+00:01:05.300 --> 00:01:09.200 align:middle line:84%
+all of these different
+objects in the world, right?
+
+00:01:09.200 --> 00:01:12.470 align:middle line:84%
+But these objects can
+be grouped according
+
+00:01:12.470 --> 00:01:13.790 align:middle line:90%
+to some categories, right?
+
+00:01:13.790 --> 00:01:17.180 align:middle line:84%
+So in this particular slide,
+I've got six different objects.
+
+00:01:17.180 --> 00:01:19.340 align:middle line:84%
+But the three on
+the left can kind of
+
+00:01:19.340 --> 00:01:20.660 align:middle line:90%
+be grouped together, right?
+
+00:01:20.660 --> 00:01:23.510 align:middle line:84%
+We know that they
+are a kind of cat.
+
+00:01:23.510 --> 00:01:26.960 align:middle line:84%
+And as such, we know
+that all these cats,
+
+00:01:26.960 --> 00:01:29.390 align:middle line:84%
+we can describe them using
+some common properties
+
+00:01:29.390 --> 00:01:30.480 align:middle line:90%
+and common behaviors.
+
+00:01:30.480 --> 00:01:34.070 align:middle line:84%
+So for these cats, I would
+say that all these cats
+
+00:01:34.070 --> 00:01:37.530 align:middle line:84%
+have a name an age and a color
+associated with them, right?
+
+00:01:37.530 --> 00:01:40.672 align:middle line:84%
+So I know that all cats
+will therefore generally
+
+00:01:40.672 --> 00:01:42.380 align:middle line:84%
+have a name and age
+and a color, and then
+
+00:01:42.380 --> 00:01:45.290 align:middle line:90%
+some similar set of behaviors.
+
+00:01:45.290 --> 00:01:48.110 align:middle line:84%
+The items on the right,
+those three objects,
+
+00:01:48.110 --> 00:01:49.940 align:middle line:84%
+I know they can be
+categorized together.
+
+00:01:49.940 --> 00:01:51.470 align:middle line:84%
+Let's say that
+they're wild rabbits.
+
+00:01:51.470 --> 00:01:53.178 align:middle line:84%
+And let's say that,
+for the wild rabbits,
+
+00:01:53.178 --> 00:01:54.660 align:middle line:84%
+I don't actually
+give them a name.
+
+00:01:54.660 --> 00:01:56.940 align:middle line:84%
+So I would categorize
+them, again,
+
+00:01:56.940 --> 00:02:02.100 align:middle line:84%
+using common properties, just
+an age and a color, no name.
+
+00:02:02.100 --> 00:02:04.290 align:middle line:84%
+And then those three
+objects on the right
+
+00:02:04.290 --> 00:02:06.180 align:middle line:84%
+also have a common
+set of behaviors
+
+00:02:06.180 --> 00:02:08.440 align:middle line:84%
+different than the
+objects on the left.
+
+00:02:08.440 --> 00:02:12.460 align:middle line:84%
+And so we're trying to mimic the
+idea of these categorizations
+
+00:02:12.460 --> 00:02:15.510 align:middle line:84%
+and data types that
+we see in real life.
+
+00:02:15.510 --> 00:02:21.570 align:middle line:84%
+OK, so a little bit of a recap,
+when we define our own data
+
+00:02:21.570 --> 00:02:25.600 align:middle line:84%
+type in Python, we decide
+on a bunch of attributes.
+
+00:02:25.600 --> 00:02:29.430 align:middle line:84%
+And attributes can either be
+data or they can be procedures.
+
+00:02:29.430 --> 00:02:34.320 align:middle line:84%
+The data is, you think of
+them as what variables make up
+
+00:02:34.320 --> 00:02:35.070 align:middle line:90%
+your object.
+
+00:02:35.070 --> 00:02:36.780 align:middle line:84%
+And this is something
+that you decide.
+
+00:02:36.780 --> 00:02:38.160 align:middle line:84%
+So for a coordinate
+object, we've
+
+00:02:38.160 --> 00:02:40.470 align:middle line:84%
+seen this example
+a lot of times,
+
+00:02:40.470 --> 00:02:42.450 align:middle line:90%
+we decided on x and y values.
+
+00:02:42.450 --> 00:02:44.940 align:middle line:84%
+For this more abstract
+idea of an animal,
+
+00:02:44.940 --> 00:02:47.760 align:middle line:84%
+well, we can just say
+that we can describe
+
+00:02:47.760 --> 00:02:50.580 align:middle line:84%
+an animal by its
+age, so how long
+
+00:02:50.580 --> 00:02:54.160 align:middle line:90%
+it's been alive since birth.
+
+00:02:54.160 --> 00:02:55.990 align:middle line:84%
+In terms of
+procedural attributes,
+
+00:02:55.990 --> 00:03:00.100 align:middle line:84%
+these we implemented using
+methods in Python classes.
+
+00:03:00.100 --> 00:03:02.800 align:middle line:84%
+And the idea behind
+these is just,
+
+00:03:02.800 --> 00:03:04.840 align:middle line:84%
+how can somebody
+or somebody who's
+
+00:03:04.840 --> 00:03:07.510 align:middle line:84%
+creating an object of this
+type manipulate the object?
+
+00:03:07.510 --> 00:03:10.340 align:middle line:84%
+What are some ways to
+interface with this object?
+
+00:03:10.340 --> 00:03:13.850 align:middle line:84%
+So our coordinate class, one
+of the more interesting things
+
+00:03:13.850 --> 00:03:15.830 align:middle line:84%
+was to find a distance
+between a coordinate
+
+00:03:15.830 --> 00:03:16.850 align:middle line:90%
+and another coordinate.
+
+00:03:16.850 --> 00:03:19.160 align:middle line:84%
+But some of the
+simpler things were
+
+00:03:19.160 --> 00:03:22.160 align:middle line:84%
+to just get the value of the
+x-coordinate, the y-coordinate,
+
+00:03:22.160 --> 00:03:23.270 align:middle line:90%
+and things like that.
+
+00:03:23.270 --> 00:03:26.180 align:middle line:84%
+For our animal class that
+we're implementing today,
+
+00:03:26.180 --> 00:03:28.440 align:middle line:84%
+it's going to be a
+little bit more abstract.
+
+00:03:28.440 --> 00:03:32.105 align:middle line:84%
+But one of the simplest things
+is to just say, hey, tell me
+
+00:03:32.105 --> 00:03:33.230 align:middle line:90%
+how long you've been alive.
+
+00:03:33.230 --> 00:03:36.680 align:middle line:84%
+That's basically just
+grabbing the value
+
+00:03:36.680 --> 00:03:41.090 align:middle line:84%
+of the attribute,
+the H. So here,
+
+00:03:41.090 --> 00:03:45.230 align:middle line:84%
+we're defining our
+data object, right?
+
+00:03:45.230 --> 00:03:48.080 align:middle line:84%
+The class keyword
+tells Python we're
+
+00:03:48.080 --> 00:03:49.370 align:middle line:90%
+creating our new data type.
+
+00:03:49.370 --> 00:03:51.150 align:middle line:84%
+This is the name
+of our data type.
+
+00:03:51.150 --> 00:03:55.130 align:middle line:84%
+So the type of this thing
+that we're creating is Animal.
+
+00:03:55.130 --> 00:03:59.960 align:middle line:84%
+In parentheses here,
+animal's parent
+
+00:03:59.960 --> 00:04:02.690 align:middle line:90%
+is the generic Python object.
+
+00:04:02.690 --> 00:04:04.370 align:middle line:84%
+And later in today's
+lecture, we're
+
+00:04:04.370 --> 00:04:06.328 align:middle line:84%
+going to see what happens
+when we put something
+
+00:04:06.328 --> 00:04:07.560 align:middle line:90%
+else in those parentheses.
+
+00:04:07.560 --> 00:04:10.160 align:middle line:84%
+So the parent of a
+class that we create
+
+00:04:10.160 --> 00:04:13.360 align:middle line:84%
+is something other than just
+the generic Python object.
+
+00:04:13.360 --> 00:04:15.490 align:middle line:84%
+And then the very first
+method that we always
+
+00:04:15.490 --> 00:04:18.940 align:middle line:84%
+write in our new object
+definition is the init method.
+
+00:04:18.940 --> 00:04:20.470 align:middle line:84%
+This tells Python,
+how do you create
+
+00:04:20.470 --> 00:04:24.640 align:middle line:84%
+an object of this type,
+a very basic information
+
+00:04:24.640 --> 00:04:26.230 align:middle line:90%
+that Python needs to know.
+
+00:04:26.230 --> 00:04:29.530 align:middle line:84%
+So the init method is a
+special dunder method,
+
+00:04:29.530 --> 00:04:32.550 align:middle line:84%
+double underscore,
+init, double underscore.
+
+00:04:32.550 --> 00:04:34.240 align:middle line:90%
+And by now, you're familiar.
+
+00:04:34.240 --> 00:04:36.390 align:middle line:84%
+The first parameter
+of every single method
+
+00:04:36.390 --> 00:04:39.970 align:middle line:84%
+that we define inside a class
+is this thing called self.
+
+00:04:39.970 --> 00:04:45.250 align:middle line:84%
+And remember, self
+is a variable, right?
+
+00:04:45.250 --> 00:04:50.530 align:middle line:84%
+It's a variable name that allows
+us to talk about an object
+
+00:04:50.530 --> 00:04:53.410 align:middle line:84%
+without having created one yet
+because all we're doing here
+
+00:04:53.410 --> 00:04:55.240 align:middle line:90%
+is defining the class, right?
+
+00:04:55.240 --> 00:04:57.530 align:middle line:84%
+We don't have actual
+objects created.
+
+00:04:57.530 --> 00:04:59.830 align:middle line:84%
+And so this method
+here, the init method
+
+00:04:59.830 --> 00:05:01.300 align:middle line:84%
+and all the other
+methods, are run
+
+00:05:01.300 --> 00:05:02.830 align:middle line:90%
+on an object of type animal.
+
+00:05:02.830 --> 00:05:04.970 align:middle line:84%
+But we don't have
+that object yet.
+
+00:05:04.970 --> 00:05:09.190 align:middle line:84%
+So the first parameter
+will be that object
+
+00:05:09.190 --> 00:05:11.470 align:middle line:90%
+in this abstract sort of way.
+
+00:05:11.470 --> 00:05:15.410 align:middle line:84%
+And then you can put other
+parameters in that list.
+
+00:05:15.410 --> 00:05:18.160 align:middle line:84%
+And so we say that, when we
+create a new animal object,
+
+00:05:18.160 --> 00:05:22.800 align:middle line:84%
+we're going to initialize it
+by its age, so some number.
+
+00:05:22.800 --> 00:05:26.040 align:middle line:84%
+Within the init, what
+do we usually do?
+
+00:05:26.040 --> 00:05:30.750 align:middle line:84%
+Well, we usually initialize
+all the data attributes, also
+
+00:05:30.750 --> 00:05:32.950 align:middle line:90%
+called instance variables.
+
+00:05:32.950 --> 00:05:35.040 align:middle line:84%
+So here, how many
+data attributes
+
+00:05:35.040 --> 00:05:39.750 align:middle line:90%
+do I have for the animal class?
+
+00:05:39.750 --> 00:05:41.430 align:middle line:90%
+Two, exactly, yeah, two.
+
+00:05:41.430 --> 00:05:45.000 align:middle line:84%
+The first one, self.age,
+is a data attribute.
+
+00:05:45.000 --> 00:05:46.440 align:middle line:84%
+And we know it's
+a data attribute
+
+00:05:46.440 --> 00:05:49.710 align:middle line:84%
+because we have that self
+appearing again, right?
+
+00:05:49.710 --> 00:05:53.490 align:middle line:84%
+If it was just a variable
+name, like age or years
+
+00:05:53.490 --> 00:05:56.100 align:middle line:84%
+or time or something
+like that, it would just
+
+00:05:56.100 --> 00:05:57.630 align:middle line:90%
+be a regular old variable.
+
+00:05:57.630 --> 00:05:59.670 align:middle line:84%
+And as soon as that
+init method ended,
+
+00:05:59.670 --> 00:06:01.270 align:middle line:90%
+that variable would go away.
+
+00:06:01.270 --> 00:06:03.930 align:middle line:84%
+But the fact that we've
+initialized this variable
+
+00:06:03.930 --> 00:06:06.510 align:middle line:84%
+using self. tells
+Python, hey, this
+
+00:06:06.510 --> 00:06:09.900 align:middle line:84%
+is a variable that I want
+to persist for as long
+
+00:06:09.900 --> 00:06:12.120 align:middle line:90%
+as this object exists in memory.
+
+00:06:12.120 --> 00:06:14.640 align:middle line:90%
+So it's an instance variable.
+
+00:06:14.640 --> 00:06:16.740 align:middle line:84%
+So self.age equals age
+will create this data
+
+00:06:16.740 --> 00:06:21.210 align:middle line:84%
+attribute, age, and assign it
+to the parameter passed in age.
+
+00:06:21.210 --> 00:06:24.330 align:middle line:84%
+Now, self.name is
+also a data attribute.
+
+00:06:24.330 --> 00:06:26.850 align:middle line:84%
+It's just not being passed
+in the parameter list.
+
+00:06:26.850 --> 00:06:27.780 align:middle line:90%
+And that's OK.
+
+00:06:27.780 --> 00:06:31.510 align:middle line:84%
+Not everything has to be
+passed into the parameter list.
+
+00:06:31.510 --> 00:06:33.960 align:middle line:84%
+So here, what we're
+effectively doing
+
+00:06:33.960 --> 00:06:36.150 align:middle line:84%
+is saying, when we create
+a new animal object,
+
+00:06:36.150 --> 00:06:39.840 align:middle line:84%
+we have to tell it the age,
+how long it's been alive for.
+
+00:06:39.840 --> 00:06:43.900 align:middle line:84%
+But then the name data attribute
+is always going to be none.
+
+00:06:43.900 --> 00:06:47.700 align:middle line:84%
+So there's an absence of a value
+for the name for every animal
+
+00:06:47.700 --> 00:06:49.860 align:middle line:90%
+we create right off the bat.
+
+00:06:49.860 --> 00:06:54.095 align:middle line:84%
+OK, everyone OK
+with me so far here?
+
+00:06:54.095 --> 00:06:56.720 align:middle line:84%
+AUDIENCE: What's the purpose of
+defining self.name equals None?
+
+00:06:56.720 --> 00:06:58.790 align:middle line:84%
+ANA BELL: What's the purpose
+of defining this to be none?
+
+00:06:58.790 --> 00:07:00.873 align:middle line:84%
+Well, later on, I'm going
+to add some methods that
+
+00:07:00.873 --> 00:07:03.740 align:middle line:84%
+allow you to give a name
+to an animal if you'd like.
+
+00:07:03.740 --> 00:07:07.230 align:middle line:84%
+But again, this is a
+design choice that I made.
+
+00:07:07.230 --> 00:07:11.990 align:middle line:84%
+So yeah, you might not make
+the same design choices.
+
+00:07:11.990 --> 00:07:14.590 align:middle line:84%
+So that's the
+definition for my class,
+
+00:07:14.590 --> 00:07:16.360 align:middle line:90%
+just these four lines of code.
+
+00:07:16.360 --> 00:07:20.440 align:middle line:84%
+And then down here, we saw,
+in the past couple lectures,
+
+00:07:20.440 --> 00:07:22.660 align:middle line:84%
+how to create actual
+new objects, right?
+
+00:07:22.660 --> 00:07:27.700 align:middle line:84%
+So this is where the action
+actually happens, right?
+
+00:07:27.700 --> 00:07:30.340 align:middle line:84%
+So here, I'm creating
+a new animal object.
+
+00:07:30.340 --> 00:07:34.600 align:middle line:84%
+A variable, myanimal, is bound
+to that animal object, right?
+
+00:07:34.600 --> 00:07:36.310 align:middle line:90%
+So that's my variable name.
+
+00:07:36.310 --> 00:07:37.880 align:middle line:84%
+You can name it
+anything you want.
+
+00:07:37.880 --> 00:07:41.150 align:middle line:84%
+And then you're telling
+Python to create a new animal
+
+00:07:41.150 --> 00:07:43.720 align:middle line:84%
+object simply by invoking
+the name of the class,
+
+00:07:43.720 --> 00:07:45.820 align:middle line:84%
+and then passing in
+all the parameters
+
+00:07:45.820 --> 00:07:49.390 align:middle line:84%
+that we're expecting here,
+except for self because self
+
+00:07:49.390 --> 00:07:51.790 align:middle line:90%
+becomes this thing.
+
+00:07:51.790 --> 00:07:54.550 align:middle line:84%
+If I were to draw a box around
+Animal(3), that is the self.
+
+00:07:54.550 --> 00:07:58.670 align:middle line:84%
+That is this object
+that I just created.
+
+00:07:58.670 --> 00:08:01.100 align:middle line:90%
+OK, so that's the init method.
+
+00:08:01.100 --> 00:08:03.560 align:middle line:84%
+Last lecture, we saw
+some dunder methods.
+
+00:08:03.560 --> 00:08:06.770 align:middle line:84%
+And I think I said,
+probably the second method
+
+00:08:06.770 --> 00:08:08.810 align:middle line:84%
+you'd ever want to
+implement for a new class
+
+00:08:08.810 --> 00:08:12.030 align:middle line:90%
+is this dunder str method.
+
+00:08:12.030 --> 00:08:15.170 align:middle line:84%
+Now, the dunder str
+method tells Python
+
+00:08:15.170 --> 00:08:21.230 align:middle line:84%
+how Python should print an
+object of type animal, right?
+
+00:08:21.230 --> 00:08:22.940 align:middle line:84%
+Because initially,
+right off the bat,
+
+00:08:22.940 --> 00:08:25.850 align:middle line:84%
+if we didn't implement
+this dunder str method,
+
+00:08:25.850 --> 00:08:30.320 align:middle line:84%
+Python would default to the str
+method of the generic Python
+
+00:08:30.320 --> 00:08:32.510 align:middle line:84%
+object, which just
+tells us the memory
+
+00:08:32.510 --> 00:08:35.039 align:middle line:84%
+location this object
+has been created at,
+
+00:08:35.039 --> 00:08:36.500 align:middle line:90%
+which is not very useful.
+
+00:08:36.500 --> 00:08:39.919 align:middle line:84%
+When we print an animal object,
+and again, my design choice
+
+00:08:39.919 --> 00:08:44.720 align:middle line:84%
+is to say I'm going to
+print animal, colon,
+
+00:08:44.720 --> 00:08:47.930 align:middle line:84%
+the name of that animal, colon,
+and the age of that animal,
+
+00:08:47.930 --> 00:08:49.970 align:middle line:90%
+again, my design choice, right?
+
+00:08:49.970 --> 00:08:51.740 align:middle line:84%
+And remember, the
+dunder str method
+
+00:08:51.740 --> 00:08:53.930 align:middle line:84%
+returns the string
+you want to print out.
+
+00:08:53.930 --> 00:08:58.940 align:middle line:84%
+It doesn't print
+it out straight up.
+
+00:08:58.940 --> 00:09:00.297 align:middle line:90%
+Everyone OK with that so far?
+
+00:09:00.297 --> 00:09:01.130 align:middle line:90%
+It should be review.
+
+00:09:01.130 --> 00:09:03.740 align:middle line:84%
+OK, so then the
+other things that we
+
+00:09:03.740 --> 00:09:06.170 align:middle line:84%
+want to include in our
+class, and this is something
+
+00:09:06.170 --> 00:09:10.070 align:middle line:84%
+that I included no matter
+what the language you're
+
+00:09:10.070 --> 00:09:14.810 align:middle line:84%
+working with, is these things
+called getters and setters.
+
+00:09:14.810 --> 00:09:17.900 align:middle line:84%
+So getters are these
+two right here.
+
+00:09:17.900 --> 00:09:20.420 align:middle line:84%
+Getters are basically
+very simple functions
+
+00:09:20.420 --> 00:09:23.480 align:middle line:84%
+that return the
+values of the data
+
+00:09:23.480 --> 00:09:26.090 align:middle line:90%
+attributes that this object has.
+
+00:09:26.090 --> 00:09:29.420 align:middle line:84%
+This object just has
+two, an age and a name,
+
+00:09:29.420 --> 00:09:32.220 align:middle line:84%
+because they were defined
+using self.age and self.name.
+
+00:09:32.220 --> 00:09:36.360 align:middle line:84%
+So here's a getter to just
+tell me the value of self.age.
+
+00:09:36.360 --> 00:09:38.570 align:middle line:84%
+So all it does is
+return self.age.
+
+00:09:38.570 --> 00:09:43.910 align:middle line:84%
+And name, all it does is return
+self.name, very, very simple.
+
+00:09:43.910 --> 00:09:48.800 align:middle line:84%
+Setters, same idea, except that
+now, we're allowing someone
+
+00:09:48.800 --> 00:09:51.830 align:middle line:84%
+using our class to set
+the values of these data
+
+00:09:51.830 --> 00:09:55.040 align:middle line:84%
+attributes through
+these methods, right?
+
+00:09:55.040 --> 00:09:57.620 align:middle line:84%
+So here, all it's
+doing is taking
+
+00:09:57.620 --> 00:09:59.960 align:middle line:84%
+in a parameter for the
+thing you want to change
+
+00:09:59.960 --> 00:10:01.910 align:middle line:90%
+the age or the name to, right?
+
+00:10:01.910 --> 00:10:04.580 align:middle line:84%
+And all it does is
+say, well, self.age
+
+00:10:04.580 --> 00:10:09.420 align:middle line:84%
+is going to be equal to the
+thing you passed in, OK?
+
+00:10:09.420 --> 00:10:10.660 align:middle line:90%
+That's the age.
+
+00:10:10.660 --> 00:10:13.020 align:middle line:84%
+So we're changing this
+to a different number.
+
+00:10:13.020 --> 00:10:16.080 align:middle line:84%
+And then the set name is
+changing the name data
+
+00:10:16.080 --> 00:10:17.890 align:middle line:90%
+attribute to a different string.
+
+00:10:17.890 --> 00:10:21.090 align:middle line:84%
+And here, I'm using
+this default parameter
+
+00:10:21.090 --> 00:10:25.530 align:middle line:84%
+that we talked about
+way back when we
+
+00:10:25.530 --> 00:10:26.970 align:middle line:90%
+talked about functions, right?
+
+00:10:26.970 --> 00:10:29.475 align:middle line:84%
+So if you don't pass in
+an actual string value,
+
+00:10:29.475 --> 00:10:31.890 align:middle line:84%
+we'll default to
+the empty string.
+
+00:10:31.890 --> 00:10:34.470 align:middle line:90%
+
+
+00:10:34.470 --> 00:10:38.320 align:middle line:84%
+So let me show you
+how this works.
+
+00:10:38.320 --> 00:10:41.190 align:middle line:84%
+So this is my animal class
+exactly as in the slides.
+
+00:10:41.190 --> 00:10:44.840 align:middle line:84%
+I've got my init str and
+my two getters and setters.
+
+00:10:44.840 --> 00:10:47.420 align:middle line:84%
+And then I've got two animals
+being created here, right?
+
+00:10:47.420 --> 00:10:50.990 align:middle line:84%
+So here's a print for
+animal with age four.
+
+00:10:50.990 --> 00:10:53.000 align:middle line:84%
+And here's a print of
+animal with age six.
+
+00:10:53.000 --> 00:10:56.240 align:middle line:84%
+So if I run these, it should
+print animal, colon, none,
+
+00:10:56.240 --> 00:10:58.910 align:middle line:84%
+because I didn't set the name
+to anything for these two,
+
+00:10:58.910 --> 00:11:01.700 align:middle line:84%
+and then their
+respective ages, right?
+
+00:11:01.700 --> 00:11:06.080 align:middle line:84%
+So this is using
+the str method on a.
+
+00:11:06.080 --> 00:11:09.878 align:middle line:84%
+And this is using
+the str method on b.
+
+00:11:09.878 --> 00:11:13.940 align:middle line:84%
+OK, and then, we can
+access, of course,
+
+00:11:13.940 --> 00:11:16.560 align:middle line:84%
+using dot notation, all
+of our data attributes.
+
+00:11:16.560 --> 00:11:19.070 align:middle line:84%
+So here, I'm accessing
+the age directly.
+
+00:11:19.070 --> 00:11:21.800 align:middle line:84%
+But since the
+getter, get_age, just
+
+00:11:21.800 --> 00:11:24.050 align:middle line:84%
+returns for me the value
+of that data attribute,
+
+00:11:24.050 --> 00:11:25.920 align:middle line:84%
+these will actually
+print the same thing.
+
+00:11:25.920 --> 00:11:27.720 align:middle line:84%
+So I'm just going to
+comment these out.
+
+00:11:27.720 --> 00:11:30.920 align:middle line:84%
+So if I'm accessing a's
+age through either the data
+
+00:11:30.920 --> 00:11:33.200 align:middle line:84%
+attribute directly or
+through the getter method,
+
+00:11:33.200 --> 00:11:38.850 align:middle line:84%
+it will print four for both,
+pretty straightforward.
+
+00:11:38.850 --> 00:11:41.070 align:middle line:84%
+And then we can do
+some things like this.
+
+00:11:41.070 --> 00:11:43.590 align:middle line:84%
+So I can call the
+set_name method.
+
+00:11:43.590 --> 00:11:46.080 align:middle line:84%
+So here, I'm passing
+an actual name for it.
+
+00:11:46.080 --> 00:11:50.480 align:middle line:84%
+And then I can print the
+name or I can use the getter
+
+00:11:50.480 --> 00:11:52.040 align:middle line:90%
+to print the name, right?
+
+00:11:52.040 --> 00:11:54.470 align:middle line:84%
+So if I run that,
+you'll see, the name
+
+00:11:54.470 --> 00:11:57.930 align:middle line:84%
+has now been changed
+for object a.
+
+00:11:57.930 --> 00:12:01.300 align:middle line:84%
+Then, if I run the print method
+on a, then it prints animal,
+
+00:12:01.300 --> 00:12:03.640 align:middle line:84%
+colon, the new name that
+I just set it to, fluffy.
+
+00:12:03.640 --> 00:12:06.880 align:middle line:84%
+And then the age
+has been unchanged.
+
+00:12:06.880 --> 00:12:09.340 align:middle line:84%
+If I run set_name
+without a parameter,
+
+00:12:09.340 --> 00:12:11.680 align:middle line:84%
+it will revert to
+that default parameter
+
+00:12:11.680 --> 00:12:14.610 align:middle line:84%
+for the name, which
+is the empty string.
+
+00:12:14.610 --> 00:12:18.028 align:middle line:84%
+So the new name of my animal a
+will just be an empty string.
+
+00:12:18.028 --> 00:12:19.820 align:middle line:84%
+So it's just going to
+be colon with nothing
+
+00:12:19.820 --> 00:12:23.630 align:middle line:84%
+in there, so no space or
+anything, just nothing.
+
+00:12:23.630 --> 00:12:26.210 align:middle line:90%
+
+
+00:12:26.210 --> 00:12:29.700 align:middle line:90%
+OK, everyone all right so far?
+
+00:12:29.700 --> 00:12:32.900 align:middle line:90%
+Hopefully, a little review.
+
+00:12:32.900 --> 00:12:38.840 align:middle line:84%
+So we saw that we can actually
+grab the exact same value
+
+00:12:38.840 --> 00:12:44.090 align:middle line:84%
+for the age by accessing the
+age data attribute directly
+
+00:12:44.090 --> 00:12:48.350 align:middle line:84%
+using dot notation or
+our getter that we wrote.
+
+00:12:48.350 --> 00:12:53.660 align:middle line:84%
+One of these is better than
+the other in terms of style
+
+00:12:53.660 --> 00:12:58.010 align:middle line:84%
+and in terms of good
+coding practices
+
+00:12:58.010 --> 00:13:01.080 align:middle line:84%
+and in terms of writing
+code that's easy to read,
+
+00:13:01.080 --> 00:13:04.400 align:middle line:84%
+easy to modify, robust,
+things like that.
+
+00:13:04.400 --> 00:13:08.000 align:middle line:84%
+The one that is better
+to use is the one
+
+00:13:08.000 --> 00:13:10.220 align:middle line:90%
+that accesses the method.
+
+00:13:10.220 --> 00:13:11.750 align:middle line:90%
+Both are using dot notation.
+
+00:13:11.750 --> 00:13:15.350 align:middle line:84%
+But the first one is actually
+accessing the internals
+
+00:13:15.350 --> 00:13:19.940 align:middle line:90%
+of my class definition, right?
+
+00:13:19.940 --> 00:13:22.850 align:middle line:84%
+In order to know the
+value of my data attribute
+
+00:13:22.850 --> 00:13:25.610 align:middle line:84%
+as someone who's just using
+this code for an animal class,
+
+00:13:25.610 --> 00:13:29.840 align:middle line:84%
+I'd have to actually go in
+and read the init method
+
+00:13:29.840 --> 00:13:32.582 align:middle line:84%
+to know these data attributes
+that are being initialized.
+
+00:13:32.582 --> 00:13:33.540 align:middle line:90%
+I don't know about you.
+
+00:13:33.540 --> 00:13:36.290 align:middle line:84%
+But I actually-- let's take an
+example of a list, something
+
+00:13:36.290 --> 00:13:37.310 align:middle line:90%
+we've used a lot.
+
+00:13:37.310 --> 00:13:41.150 align:middle line:84%
+Have you ever gone into the
+definition of the list class
+
+00:13:41.150 --> 00:13:43.910 align:middle line:84%
+to see the data attributes
+that are being initialized?
+
+00:13:43.910 --> 00:13:45.230 align:middle line:90%
+I haven't, right?
+
+00:13:45.230 --> 00:13:47.720 align:middle line:84%
+All we've been doing
+is working with methods
+
+00:13:47.720 --> 00:13:50.990 align:middle line:84%
+that allow us to make changes
+to lists, to do operations
+
+00:13:50.990 --> 00:13:52.320 align:middle line:90%
+on lists, and things like that.
+
+00:13:52.320 --> 00:13:55.480 align:middle line:84%
+So the internal workings of the
+list class is hidden from us.
+
+00:13:55.480 --> 00:13:57.230 align:middle line:84%
+And that's just the
+way we like it, right?
+
+00:13:57.230 --> 00:14:00.020 align:middle line:84%
+I don't care how the list
+is actually implemented.
+
+00:14:00.020 --> 00:14:02.660 align:middle line:84%
+And the same thing should
+happen here, right?
+
+00:14:02.660 --> 00:14:06.030 align:middle line:84%
+I shouldn't care how I
+implement the animal class.
+
+00:14:06.030 --> 00:14:12.850 align:middle line:84%
+I shouldn't care what instance
+variables they're using.
+
+00:14:12.850 --> 00:14:15.400 align:middle line:90%
+So let me show you why.
+
+00:14:15.400 --> 00:14:17.430 align:middle line:84%
+So if someone who's
+writing the animal class
+
+00:14:17.430 --> 00:14:21.120 align:middle line:84%
+decides in the future that age
+was a strange variable name
+
+00:14:21.120 --> 00:14:26.250 align:middle line:84%
+to use and they decide to
+change the variable associated
+
+00:14:26.250 --> 00:14:29.400 align:middle line:84%
+with how long this animal has
+been alive to, to be years,
+
+00:14:29.400 --> 00:14:30.150 align:middle line:90%
+right?
+
+00:14:30.150 --> 00:14:36.330 align:middle line:84%
+So here, I've got
+self.years equals age.
+
+00:14:36.330 --> 00:14:40.650 align:middle line:84%
+That's the only change I've
+made to my animal class.
+
+00:14:40.650 --> 00:14:43.800 align:middle line:84%
+So I've made the design decision
+to change this data attribute
+
+00:14:43.800 --> 00:14:45.000 align:middle line:90%
+to be years.
+
+00:14:45.000 --> 00:14:48.090 align:middle line:84%
+And then, of course, since
+I'm making this class,
+
+00:14:48.090 --> 00:14:50.160 align:middle line:84%
+I need to make sure all
+my getters and setters
+
+00:14:50.160 --> 00:14:52.900 align:middle line:84%
+and everything still works
+with this new data attribute.
+
+00:14:52.900 --> 00:14:57.660 align:middle line:84%
+So my get_age will
+return self.years, right?
+
+00:14:57.660 --> 00:15:00.090 align:middle line:84%
+I'm returning this
+variable, a data
+
+00:15:00.090 --> 00:15:02.840 align:middle line:90%
+attribute that I've changed.
+
+00:15:02.840 --> 00:15:06.450 align:middle line:90%
+Well, this is the full code.
+
+00:15:06.450 --> 00:15:09.290 align:middle line:84%
+So you can see the changed
+data attribute here.
+
+00:15:09.290 --> 00:15:11.480 align:middle line:90%
+I'm using self.years equals age.
+
+00:15:11.480 --> 00:15:16.580 align:middle line:84%
+And then my getter is
+going to return self.years.
+
+00:15:16.580 --> 00:15:20.280 align:middle line:84%
+And my setter is going
+to set self.years.
+
+00:15:20.280 --> 00:15:24.210 align:middle line:84%
+Well, this
+implementation should be
+
+00:15:24.210 --> 00:15:27.720 align:middle line:84%
+hidden from me,
+somebody who is just
+
+00:15:27.720 --> 00:15:31.040 align:middle line:84%
+trying to create a bunch
+of animals in their code.
+
+00:15:31.040 --> 00:15:37.300 align:middle line:84%
+So this code down here will
+work if I use my method, right?
+
+00:15:37.300 --> 00:15:40.480 align:middle line:84%
+Because the method should
+still work no matter
+
+00:15:40.480 --> 00:15:43.960 align:middle line:84%
+what the data attribute
+is called, age or years
+
+00:15:43.960 --> 00:15:45.920 align:middle line:90%
+or time or whatever.
+
+00:15:45.920 --> 00:15:49.770 align:middle line:84%
+But if I had code that accessed
+that data attribute directly,
+
+00:15:49.770 --> 00:15:50.820 align:middle line:90%
+it doesn't work anymore.
+
+00:15:50.820 --> 00:15:53.660 align:middle line:84%
+It throws an error
+because, surprise, that
+
+00:15:53.660 --> 00:15:56.720 align:middle line:90%
+attribute no longer exists.
+
+00:15:56.720 --> 00:16:03.370 align:middle line:84%
+So it's much better
+style and more
+
+00:16:03.370 --> 00:16:08.080 align:middle line:84%
+robust to use only getters
+and setters, only methods,
+
+00:16:08.080 --> 00:16:10.750 align:middle line:84%
+to make changes and to
+manipulate the objects.
+
+00:16:10.750 --> 00:16:12.340 align:middle line:84%
+You should never
+ever really have
+
+00:16:12.340 --> 00:16:17.130 align:middle line:84%
+to use the data
+attributes, right?
+
+00:16:17.130 --> 00:16:18.420 align:middle line:90%
+Questions about that?
+
+00:16:18.420 --> 00:16:21.130 align:middle line:90%
+
+
+00:16:21.130 --> 00:16:23.860 align:middle line:84%
+OK, good, because
+that's something
+
+00:16:23.860 --> 00:16:27.610 align:middle line:84%
+that you'll have to keep in
+mind on the quiz next Monday,
+
+00:16:27.610 --> 00:16:30.200 align:middle line:90%
+not using data attributes.
+
+00:16:30.200 --> 00:16:37.320 align:middle line:84%
+All right, so having
+said that, Python
+
+00:16:37.320 --> 00:16:40.000 align:middle line:84%
+does allow you to do a
+bunch of questionable stuff.
+
+00:16:40.000 --> 00:16:43.020 align:middle line:84%
+So, first of all, it
+allows you, as we just
+
+00:16:43.020 --> 00:16:45.420 align:middle line:84%
+saw, to access
+the data attribute
+
+00:16:45.420 --> 00:16:48.190 align:middle line:84%
+of a particular instance
+that you create.
+
+00:16:48.190 --> 00:16:49.240 align:middle line:90%
+So you create an object.
+
+00:16:49.240 --> 00:16:51.750 align:middle line:84%
+It's a very specific
+animal with a specific age.
+
+00:16:51.750 --> 00:16:55.860 align:middle line:84%
+You can just use dot notation
+to access the value of all
+
+00:16:55.860 --> 00:16:57.960 align:middle line:90%
+of these data attributes.
+
+00:16:57.960 --> 00:17:03.210 align:middle line:84%
+Fine, we'll mess
+ourselves up in the future
+
+00:17:03.210 --> 00:17:04.920 align:middle line:90%
+because maybe this won't work.
+
+00:17:04.920 --> 00:17:06.640 align:middle line:90%
+But it's not so bad.
+
+00:17:06.640 --> 00:17:10.109 align:middle line:84%
+However, Python also
+allows you to change
+
+00:17:10.109 --> 00:17:12.960 align:middle line:84%
+the value of a data attribute
+outside of the class
+
+00:17:12.960 --> 00:17:14.109 align:middle line:90%
+definition.
+
+00:17:14.109 --> 00:17:17.339 align:middle line:84%
+So this is code we write
+not within the class.
+
+00:17:17.339 --> 00:17:20.440 align:middle line:84%
+It's code we write as somebody
+who's using the class.
+
+00:17:20.440 --> 00:17:21.730 align:middle line:90%
+So what does this mean?
+
+00:17:21.730 --> 00:17:25.260 align:middle line:84%
+Well, now, I'm going to
+set the age data attribute
+
+00:17:25.260 --> 00:17:28.830 align:middle line:84%
+to be whatever I want outside
+the class definition, right?
+
+00:17:28.830 --> 00:17:33.215 align:middle line:84%
+I could even set it to a
+dictionary if I wanted to.
+
+00:17:33.215 --> 00:17:34.840 align:middle line:84%
+In this particular
+case, I'm setting it
+
+00:17:34.840 --> 00:17:36.220 align:middle line:90%
+to a string infinite.
+
+00:17:36.220 --> 00:17:40.690 align:middle line:84%
+But if I do this, then I risk
+code on this animal class
+
+00:17:40.690 --> 00:17:42.880 align:middle line:84%
+not working further
+on because maybe they
+
+00:17:42.880 --> 00:17:45.310 align:middle line:84%
+assume that the age
+is always a number.
+
+00:17:45.310 --> 00:17:47.170 align:middle line:84%
+And so a different
+method I might run
+
+00:17:47.170 --> 00:17:50.175 align:middle line:84%
+will not work anymore if I
+happen to set it to the string.
+
+00:17:50.175 --> 00:17:52.830 align:middle line:90%
+
+
+00:17:52.830 --> 00:17:55.560 align:middle line:84%
+And then one other thing Python
+actually allows you to do
+
+00:17:55.560 --> 00:18:00.270 align:middle line:84%
+is to add data
+attributes to instances.
+
+00:18:00.270 --> 00:18:04.100 align:middle line:84%
+So now, the problem with
+this is that, let's say
+
+00:18:04.100 --> 00:18:06.470 align:middle line:84%
+I create a whole bunch of
+instances of animals, right?
+
+00:18:06.470 --> 00:18:07.850 align:middle line:90%
+This animal's got age four.
+
+00:18:07.850 --> 00:18:09.110 align:middle line:90%
+This animal's got age six.
+
+00:18:09.110 --> 00:18:10.700 align:middle line:90%
+This animal's got age five.
+
+00:18:10.700 --> 00:18:13.880 align:middle line:84%
+And then one of these animals,
+I decide to add a new data
+
+00:18:13.880 --> 00:18:14.630 align:middle line:90%
+attribute to it.
+
+00:18:14.630 --> 00:18:16.320 align:middle line:84%
+Like, only one of
+these instances
+
+00:18:16.320 --> 00:18:19.700 align:middle line:84%
+now has three data attributes
+associated with it, a name,
+
+00:18:19.700 --> 00:18:21.605 align:middle line:90%
+an age, and now the size.
+
+00:18:21.605 --> 00:18:24.110 align:middle line:90%
+
+
+00:18:24.110 --> 00:18:26.390 align:middle line:84%
+All the other animal
+instances I've created only
+
+00:18:26.390 --> 00:18:28.310 align:middle line:84%
+have a name and an age
+associated with them.
+
+00:18:28.310 --> 00:18:31.470 align:middle line:84%
+Just this one happens to have
+this extra data attribute.
+
+00:18:31.470 --> 00:18:34.580 align:middle line:84%
+So now, the whole reason why
+we're creating our own data
+
+00:18:34.580 --> 00:18:36.530 align:middle line:90%
+types was to be consistent.
+
+00:18:36.530 --> 00:18:38.870 align:middle line:84%
+To bundle the
+specific set of data
+
+00:18:38.870 --> 00:18:42.230 align:middle line:84%
+and specific set of behaviors
+together flies out the window
+
+00:18:42.230 --> 00:18:45.770 align:middle line:84%
+because now I have one instance
+that now has this extra data
+
+00:18:45.770 --> 00:18:47.420 align:middle line:90%
+attribute associated with it.
+
+00:18:47.420 --> 00:18:49.340 align:middle line:90%
+And nobody else does, right?
+
+00:18:49.340 --> 00:18:54.860 align:middle line:84%
+So all that consistency
+has gone out the window.
+
+00:18:54.860 --> 00:19:00.020 align:middle line:84%
+So never ever do any of
+these outside of the class
+
+00:19:00.020 --> 00:19:00.600 align:middle line:90%
+definition.
+
+00:19:00.600 --> 00:19:03.530 align:middle line:84%
+It's totally OK to access
+data attributes while you're
+
+00:19:03.530 --> 00:19:07.130 align:middle line:84%
+defining a class,
+but not OK to do
+
+00:19:07.130 --> 00:19:09.170 align:middle line:84%
+any of these outside of
+the class definition,
+
+00:19:09.170 --> 00:19:12.380 align:middle line:84%
+even though Python
+allows you to do it.
+
+00:19:12.380 --> 00:19:14.570 align:middle line:84%
+OK, so one of the
+things I wanted
+
+00:19:14.570 --> 00:19:16.760 align:middle line:84%
+to show you in this
+lecture is something
+
+00:19:16.760 --> 00:19:18.080 align:middle line:90%
+we haven't really seen so far.
+
+00:19:18.080 --> 00:19:21.530 align:middle line:84%
+And that's actually just working
+with objects that we create.
+
+00:19:21.530 --> 00:19:23.930 align:middle line:84%
+Yes, when we created
+fractions and coordinates,
+
+00:19:23.930 --> 00:19:25.670 align:middle line:84%
+we just created a
+whole bunch of objects
+
+00:19:25.670 --> 00:19:30.080 align:middle line:84%
+and then printed the numerators
+or printed the object
+
+00:19:30.080 --> 00:19:31.760 align:middle line:90%
+or multiplied them together.
+
+00:19:31.760 --> 00:19:35.120 align:middle line:84%
+But we never actually
+wrote nice functions that
+
+00:19:35.120 --> 00:19:37.370 align:middle line:90%
+work with objects of our type.
+
+00:19:37.370 --> 00:19:41.040 align:middle line:84%
+So one of the things I wanted
+to show you is how to do that.
+
+00:19:41.040 --> 00:19:44.330 align:middle line:84%
+So here's a function
+that creates
+
+00:19:44.330 --> 00:19:47.070 align:middle line:90%
+a dictionary out of a list.
+
+00:19:47.070 --> 00:19:52.590 align:middle line:84%
+So the input here is going to
+be a list of whatever I want.
+
+00:19:52.590 --> 00:19:56.610 align:middle line:84%
+And the function, what
+I would like it to do
+
+00:19:56.610 --> 00:20:01.440 align:middle line:84%
+is to pick up from the
+list only numbers that are
+
+00:20:01.440 --> 00:20:04.360 align:middle line:90%
+non-negative and just integers.
+
+00:20:04.360 --> 00:20:06.690 align:middle line:84%
+So in this particular case,
+I would like my function
+
+00:20:06.690 --> 00:20:10.960 align:middle line:84%
+to pick up the 2, the 5, and
+the 0, ignoring everything else.
+
+00:20:10.960 --> 00:20:13.420 align:middle line:84%
+And I would like to
+create a dictionary out
+
+00:20:13.420 --> 00:20:14.830 align:middle line:90%
+of these numbers.
+
+00:20:14.830 --> 00:20:17.020 align:middle line:84%
+And what the
+dictionary should do
+
+00:20:17.020 --> 00:20:19.340 align:middle line:84%
+is map each one
+of these numbers,
+
+00:20:19.340 --> 00:20:22.340 align:middle line:90%
+so the 2, the 5, and the 0.
+
+00:20:22.340 --> 00:20:24.260 align:middle line:90%
+These would be my keys.
+
+00:20:24.260 --> 00:20:34.180 align:middle line:84%
+And they should be mapped to
+animal objects with these ages.
+
+00:20:34.180 --> 00:20:37.360 align:middle line:90%
+So that's an animal of age two.
+
+00:20:37.360 --> 00:20:39.850 align:middle line:84%
+And this is an
+animal with age five.
+
+00:20:39.850 --> 00:20:43.990 align:middle line:84%
+And this should be an
+animal with age zero, right?
+
+00:20:43.990 --> 00:20:47.380 align:middle line:90%
+So my key types are ints.
+
+00:20:47.380 --> 00:20:50.290 align:middle line:84%
+And the values
+associated with the keys,
+
+00:20:50.290 --> 00:20:54.410 align:middle line:84%
+the type should be animal, this
+object that I just created,
+
+00:20:54.410 --> 00:20:54.910 align:middle line:90%
+all right?
+
+00:20:54.910 --> 00:20:57.710 align:middle line:84%
+So the code is pretty
+straightforward.
+
+00:20:57.710 --> 00:21:00.490 align:middle line:84%
+We just have a little loop that
+goes through each element one
+
+00:21:00.490 --> 00:21:01.780 align:middle line:90%
+at a time in my list.
+
+00:21:01.780 --> 00:21:04.270 align:middle line:84%
+That's for n and L.
+And then I'm just
+
+00:21:04.270 --> 00:21:06.730 align:middle line:84%
+going to do something
+to the elements that
+
+00:21:06.730 --> 00:21:11.530 align:middle line:84%
+are integers and greater or
+equal to zero, non-negative.
+
+00:21:11.530 --> 00:21:14.590 align:middle line:84%
+So that will extract only
+the 2, the 5, and the 0
+
+00:21:14.590 --> 00:21:18.220 align:middle line:84%
+as we go through the loop
+over the elements in L.
+
+00:21:18.220 --> 00:21:23.210 align:middle line:84%
+And then the key line
+here is this one in red.
+
+00:21:23.210 --> 00:21:28.370 align:middle line:84%
+I'm going to say, this line just
+adds an entry to my dictionary,
+
+00:21:28.370 --> 00:21:29.150 align:middle line:90%
+right?
+
+00:21:29.150 --> 00:21:31.702 align:middle line:84%
+So this is the syntax
+for putting something
+
+00:21:31.702 --> 00:21:32.660 align:middle line:90%
+in a dictionary, right?
+
+00:21:32.660 --> 00:21:35.630 align:middle line:84%
+There's no append or plus
+in a dictionary or anything
+
+00:21:35.630 --> 00:21:36.390 align:middle line:90%
+like that.
+
+00:21:36.390 --> 00:21:38.780 align:middle line:90%
+It's just straight up indexing.
+
+00:21:38.780 --> 00:21:43.640 align:middle line:84%
+The key you want is n, so
+either a 2, a 5, or a 0.
+
+00:21:43.640 --> 00:21:46.460 align:middle line:84%
+And the value I want to
+associate with that key
+
+00:21:46.460 --> 00:21:51.050 align:middle line:84%
+is an animal with age
+whatever this is, 2, 5 or 0,
+
+00:21:51.050 --> 00:21:54.320 align:middle line:90%
+so exactly what I wrote here.
+
+00:21:54.320 --> 00:21:56.590 align:middle line:90%
+Everyone OK so far?
+
+00:21:56.590 --> 00:21:59.970 align:middle line:84%
+All right, the loop goes
+through to the end of the list.
+
+00:21:59.970 --> 00:22:01.830 align:middle line:84%
+And then we've created
+our dictionary.
+
+00:22:01.830 --> 00:22:03.940 align:middle line:90%
+And we're done.
+
+00:22:03.940 --> 00:22:06.340 align:middle line:84%
+As we're writing this
+code, how would we debug it
+
+00:22:06.340 --> 00:22:08.410 align:middle line:84%
+or how would we check
+to see that it worked?
+
+00:22:08.410 --> 00:22:11.110 align:middle line:84%
+Well, the instinct
+is to say, OK, well,
+
+00:22:11.110 --> 00:22:12.950 align:middle line:84%
+let me check to see if
+this function worked.
+
+00:22:12.950 --> 00:22:19.030 align:middle line:84%
+So here, this line, animals
+equals animal_dict(L) will run
+
+00:22:19.030 --> 00:22:21.420 align:middle line:90%
+this function.
+
+00:22:21.420 --> 00:22:24.480 align:middle line:84%
+And it runs it on this
+L. And at the end,
+
+00:22:24.480 --> 00:22:28.810 align:middle line:84%
+it returns a dictionary,
+something that looks like this.
+
+00:22:28.810 --> 00:22:34.230 align:middle line:84%
+So our instinct is to just
+print that return to dictionary.
+
+00:22:34.230 --> 00:22:37.140 align:middle line:84%
+But if we were to print
+that, and you can actually
+
+00:22:37.140 --> 00:22:39.450 align:middle line:84%
+run the code in Python,
+if you print that,
+
+00:22:39.450 --> 00:22:41.590 align:middle line:90%
+you get something like this.
+
+00:22:41.590 --> 00:22:43.380 align:middle line:84%
+And that's because
+Python doesn't
+
+00:22:43.380 --> 00:22:46.050 align:middle line:84%
+dig through elements
+of dictionaries
+
+00:22:46.050 --> 00:22:51.540 align:middle line:84%
+or even elements of lists to run
+the print method recursively.
+
+00:22:51.540 --> 00:22:53.760 align:middle line:84%
+It just runs the print
+method top level.
+
+00:22:53.760 --> 00:22:58.350 align:middle line:84%
+And the problem is, it knows
+how to print integers just fine.
+
+00:22:58.350 --> 00:23:00.930 align:middle line:84%
+But it doesn't know how to
+print a dictionary where
+
+00:23:00.930 --> 00:23:03.210 align:middle line:90%
+the values are animal objects.
+
+00:23:03.210 --> 00:23:05.280 align:middle line:84%
+And so we run into the
+same problem where,
+
+00:23:05.280 --> 00:23:07.620 align:middle line:84%
+now, the value
+associated with key 2
+
+00:23:07.620 --> 00:23:10.290 align:middle line:84%
+is this animal object
+at that memory location.
+
+00:23:10.290 --> 00:23:14.130 align:middle line:84%
+But how do I know that
+I didn't screw up my--
+
+00:23:14.130 --> 00:23:16.950 align:middle line:84%
+I created an animal
+with age five
+
+00:23:16.950 --> 00:23:20.440 align:middle line:84%
+where it should have
+been two, right?
+
+00:23:20.440 --> 00:23:22.900 align:middle line:84%
+So the solution,
+and you'll probably
+
+00:23:22.900 --> 00:23:26.950 align:middle line:84%
+encounter this on the next quiz
+if you're debugging your code,
+
+00:23:26.950 --> 00:23:32.350 align:middle line:84%
+the solution is to just iterate
+through the dictionary in such
+
+00:23:32.350 --> 00:23:34.900 align:middle line:84%
+a way that you run that
+print statement directly
+
+00:23:34.900 --> 00:23:36.580 align:middle line:90%
+on an object of type animal.
+
+00:23:36.580 --> 00:23:38.140 align:middle line:84%
+Python knows how
+to do that, right?
+
+00:23:38.140 --> 00:23:40.960 align:middle line:84%
+We told it the
+str method, right?
+
+00:23:40.960 --> 00:23:43.040 align:middle line:90%
+We have an str method here.
+
+00:23:43.040 --> 00:23:46.030 align:middle line:84%
+So it knows how to run the print
+directly on an animal object.
+
+00:23:46.030 --> 00:23:48.460 align:middle line:84%
+It just doesn't know how
+to run the print where
+
+00:23:48.460 --> 00:23:51.260 align:middle line:84%
+the value of a dictionary
+is an animal object.
+
+00:23:51.260 --> 00:23:54.970 align:middle line:84%
+So let's replace this
+print of the dictionary
+
+00:23:54.970 --> 00:23:57.230 align:middle line:90%
+with a little loop.
+
+00:23:57.230 --> 00:24:02.270 align:middle line:84%
+It goes through this, the
+dictionary's items, right?
+
+00:24:02.270 --> 00:24:04.040 align:middle line:90%
+So n is going to be my key.
+
+00:24:04.040 --> 00:24:07.590 align:middle line:84%
+And a is going to be the value
+associated with that key.
+
+00:24:07.590 --> 00:24:09.660 align:middle line:84%
+And I've just got the
+print statement here.
+
+00:24:09.660 --> 00:24:12.630 align:middle line:84%
+So I'm using an F string
+here that prints key
+
+00:24:12.630 --> 00:24:15.240 align:middle line:84%
+and whatever value
+that key is with val,
+
+00:24:15.240 --> 00:24:18.180 align:middle line:90%
+whatever value that is, right?
+
+00:24:18.180 --> 00:24:20.940 align:middle line:84%
+So now, the print statement
+is being run directly
+
+00:24:20.940 --> 00:24:23.160 align:middle line:90%
+on an object of type, animal.
+
+00:24:23.160 --> 00:24:26.580 align:middle line:84%
+And now, the result
+of this loop will
+
+00:24:26.580 --> 00:24:29.430 align:middle line:90%
+be this, so key 2 with value.
+
+00:24:29.430 --> 00:24:34.740 align:middle line:84%
+And then it uses the print
+statement on my animal object.
+
+00:24:34.740 --> 00:24:35.730 align:middle line:90%
+Does that make sense?
+
+00:24:35.730 --> 00:24:38.862 align:middle line:90%
+Everyone OK so far?
+
+00:24:38.862 --> 00:24:41.090 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:24:41.090 --> 00:24:42.090 align:middle line:90%
+ANA BELL: Yeah, exactly.
+
+00:24:42.090 --> 00:24:44.423 align:middle line:84%
+It's converting the stuff in
+the dictionary with strings
+
+00:24:44.423 --> 00:24:47.430 align:middle line:84%
+because my print statement
+is being run directly
+
+00:24:47.430 --> 00:24:49.583 align:middle line:90%
+on that object of type animal.
+
+00:24:49.583 --> 00:24:50.750 align:middle line:90%
+And it knows how to do that.
+
+00:24:50.750 --> 00:24:52.446 align:middle line:90%
+I implemented the dunder str.
+
+00:24:52.446 --> 00:24:56.550 align:middle line:90%
+
+
+00:24:56.550 --> 00:24:59.520 align:middle line:90%
+Everyone OK?
+
+00:24:59.520 --> 00:25:02.640 align:middle line:90%
+OK, so let's have you try this.
+
+00:25:02.640 --> 00:25:04.490 align:middle line:84%
+Let's have you
+write a little code.
+
+00:25:04.490 --> 00:25:08.400 align:middle line:84%
+So this function, it's
+going to be very similar.
+
+00:25:08.400 --> 00:25:09.650 align:middle line:90%
+We're not making dictionaries.
+
+00:25:09.650 --> 00:25:10.650 align:middle line:90%
+You'll be making a list.
+
+00:25:10.650 --> 00:25:13.220 align:middle line:84%
+But you'll encounter
+the same problem.
+
+00:25:13.220 --> 00:25:17.030 align:middle line:84%
+The input here is going to be
+two lists of the same length.
+
+00:25:17.030 --> 00:25:18.770 align:middle line:90%
+One list has numbers.
+
+00:25:18.770 --> 00:25:21.180 align:middle line:90%
+One list has strings.
+
+00:25:21.180 --> 00:25:24.410 align:middle line:84%
+And what I'd like you to do
+is create for me a new list.
+
+00:25:24.410 --> 00:25:27.950 align:middle line:84%
+And the new list is going
+to have animal objects,
+
+00:25:27.950 --> 00:25:30.710 align:middle line:90%
+where you match index by index.
+
+00:25:30.710 --> 00:25:34.070 align:middle line:84%
+So the resulting animal
+object at index 0
+
+00:25:34.070 --> 00:25:37.520 align:middle line:84%
+will basically create for
+me a new animal with age two
+
+00:25:37.520 --> 00:25:40.630 align:middle line:90%
+and named blobfish, right?
+
+00:25:40.630 --> 00:25:44.320 align:middle line:84%
+The animal, object and the
+resulting list at index 1
+
+00:25:44.320 --> 00:25:46.990 align:middle line:84%
+will be with age five
+and name crazyant.
+
+00:25:46.990 --> 00:25:49.090 align:middle line:84%
+And then the animal
+object at index 2
+
+00:25:49.090 --> 00:25:51.580 align:middle line:84%
+will be age one
+and named parafox.
+
+00:25:51.580 --> 00:25:54.580 align:middle line:84%
+So we're just doing the
+same thing index by index,
+
+00:25:54.580 --> 00:25:56.740 align:middle line:84%
+where you create a
+new animal object
+
+00:25:56.740 --> 00:26:02.620 align:middle line:84%
+with the age, this
+value, one at a time.
+
+00:26:02.620 --> 00:26:05.572 align:middle line:84%
+And you set the name to be
+this value one at a time,
+
+00:26:05.572 --> 00:26:06.655 align:middle line:90%
+and then return that list.
+
+00:26:06.655 --> 00:26:10.310 align:middle line:90%
+
+
+00:26:10.310 --> 00:26:15.780 align:middle line:90%
+So that should be line 79.
+
+00:26:15.780 --> 00:26:18.720 align:middle line:90%
+
+
+00:26:18.720 --> 00:26:21.180 align:middle line:90%
+OK, who has a start for me?
+
+00:26:21.180 --> 00:26:24.350 align:middle line:90%
+
+
+00:26:24.350 --> 00:26:26.900 align:middle line:90%
+OK, should we call it L3?
+
+00:26:26.900 --> 00:26:28.210 align:middle line:90%
+OK.
+
+00:26:28.210 --> 00:26:35.760 align:middle line:84%
+AUDIENCE: But then for n in
+L1, [INAUDIBLE] having it
+
+00:26:35.760 --> 00:26:41.610 align:middle line:90%
+go through L2 of n.
+
+00:26:41.610 --> 00:26:44.520 align:middle line:84%
+ANA BELL: Yes, but then
+if you're doing L2 of n,
+
+00:26:44.520 --> 00:26:47.200 align:middle line:84%
+then this should be
+the index, right?
+
+00:26:47.200 --> 00:26:49.990 align:middle line:84%
+So how do I make this be the
+index instead of the element
+
+00:26:49.990 --> 00:26:51.750 align:middle line:90%
+directly?
+
+00:26:51.750 --> 00:26:54.510 align:middle line:90%
+Yeah, yeah.
+
+00:26:54.510 --> 00:26:59.878 align:middle line:84%
+AUDIENCE: Well maybe n
+of, over the range column?
+
+00:26:59.878 --> 00:27:01.170 align:middle line:90%
+ANA BELL: Yeah, exactly, right?
+
+00:27:01.170 --> 00:27:03.087 align:middle line:84%
+So instead of looking
+at the element directly,
+
+00:27:03.087 --> 00:27:05.020 align:middle line:90%
+let's just look at the range.
+
+00:27:05.020 --> 00:27:08.580 align:middle line:84%
+So for i in, range, and
+then we need to do len.
+
+00:27:08.580 --> 00:27:11.620 align:middle line:84%
+Pick one of the lists because
+they're the same length.
+
+00:27:11.620 --> 00:27:17.730 align:middle line:84%
+So now, i is 0, 1, 2, 3,
+4, 5, all the index values.
+
+00:27:17.730 --> 00:27:21.030 align:middle line:90%
+
+
+00:27:21.030 --> 00:27:33.640 align:middle line:84%
+AUDIENCE: Well, and you can make
+L3 [INAUDIBLE] L1 at index i
+
+00:27:33.640 --> 00:27:36.080 align:middle line:90%
+equal to L2 at index i.
+
+00:27:36.080 --> 00:27:41.270 align:middle line:84%
+ANA BELL: So L1 at index
+i, so I need to create
+
+00:27:41.270 --> 00:27:43.190 align:middle line:90%
+an animal with that age, right?
+
+00:27:43.190 --> 00:27:45.215 align:middle line:90%
+So let's do this.
+
+00:27:45.215 --> 00:27:49.210 align:middle line:90%
+
+
+00:27:49.210 --> 00:27:54.230 align:middle line:84%
+Age equals L1 at index i,
+just to save it as a variable.
+
+00:27:54.230 --> 00:27:57.130 align:middle line:90%
+And name equals L2 at index i.
+
+00:27:57.130 --> 00:28:00.110 align:middle line:90%
+Do we agree?
+
+00:28:00.110 --> 00:28:04.090 align:middle line:84%
+So now that I have age and
+name stored in these variables,
+
+00:28:04.090 --> 00:28:10.680 align:middle line:84%
+how do I make an animal
+object with that age?
+
+00:28:10.680 --> 00:28:11.310 align:middle line:90%
+Yeah.
+
+00:28:11.310 --> 00:28:17.180 align:middle line:84%
+AUDIENCE: You could
+say L3 at i equals--
+
+00:28:17.180 --> 00:28:20.190 align:middle line:84%
+well, I know you'd
+call it animal.h.
+
+00:28:20.190 --> 00:28:22.980 align:middle line:84%
+ANA BELL: Well, the init
+method creates for me
+
+00:28:22.980 --> 00:28:25.720 align:middle line:90%
+an animal with that age, right?
+
+00:28:25.720 --> 00:28:28.330 align:middle line:84%
+So when we just create a
+new animal object, we just
+
+00:28:28.330 --> 00:28:31.320 align:middle line:90%
+pass in that age, right?
+
+00:28:31.320 --> 00:28:38.380 align:middle line:84%
+Like, the constructor requires
+the age of the animal, right?
+
+00:28:38.380 --> 00:28:40.660 align:middle line:84%
+So when we construct
+a new animal object,
+
+00:28:40.660 --> 00:28:43.550 align:middle line:84%
+we just invoke the
+name of our animal.
+
+00:28:43.550 --> 00:28:44.050 align:middle line:90%
+Where is it?
+
+00:28:44.050 --> 00:28:46.180 align:middle line:90%
+Here, right?
+
+00:28:46.180 --> 00:28:48.910 align:middle line:84%
+Or-- sorry, our animal
+type, our animal class.
+
+00:28:48.910 --> 00:28:50.620 align:middle line:84%
+And then we pass
+in the age that we
+
+00:28:50.620 --> 00:28:53.700 align:middle line:84%
+want to create this
+animal with, right?
+
+00:28:53.700 --> 00:28:57.090 align:middle line:84%
+And that, according
+to the init method,
+
+00:28:57.090 --> 00:29:00.090 align:middle line:84%
+creates self.age
+to be whatever is
+
+00:29:00.090 --> 00:29:05.230 align:middle line:90%
+passed in, and the name, None.
+
+00:29:05.230 --> 00:29:06.550 align:middle line:90%
+So we're halfway there.
+
+00:29:06.550 --> 00:29:10.750 align:middle line:84%
+We've created an animal object
+with the age that we want.
+
+00:29:10.750 --> 00:29:14.545 align:middle line:84%
+But the name data attribute
+for this object is None.
+
+00:29:14.545 --> 00:29:17.160 align:middle line:90%
+
+
+00:29:17.160 --> 00:29:18.375 align:middle line:90%
+Everyone with me so far?
+
+00:29:18.375 --> 00:29:22.010 align:middle line:90%
+
+
+00:29:22.010 --> 00:29:24.840 align:middle line:84%
+So how do we make the
+name of this animal
+
+00:29:24.840 --> 00:29:28.850 align:middle line:84%
+object be the one that we
+saved from that L2 list?
+
+00:29:28.850 --> 00:29:32.630 align:middle line:90%
+
+
+00:29:32.630 --> 00:29:34.560 align:middle line:84%
+AUDIENCE: You can use
+the setter function.
+
+00:29:34.560 --> 00:29:35.580 align:middle line:90%
+ANA BELL: Yeah, exactly.
+
+00:29:35.580 --> 00:29:38.610 align:middle line:84%
+We can use the setter function,
+yeah, set name right here,
+
+00:29:38.610 --> 00:29:39.120 align:middle line:90%
+right?
+
+00:29:39.120 --> 00:29:41.070 align:middle line:84%
+Don't access the
+attribute directly.
+
+00:29:41.070 --> 00:29:42.705 align:middle line:84%
+But yeah, we can use
+a setter function.
+
+00:29:42.705 --> 00:29:46.570 align:middle line:90%
+
+
+00:29:46.570 --> 00:29:49.210 align:middle line:84%
+So this created for me
+that new animal, right?
+
+00:29:49.210 --> 00:29:53.500 align:middle line:84%
+But I need to actually save
+that animal somehow, right?
+
+00:29:53.500 --> 00:29:55.520 align:middle line:84%
+Because I need to
+reference it later.
+
+00:29:55.520 --> 00:29:57.010 align:middle line:90%
+So let me do this.
+
+00:29:57.010 --> 00:29:58.900 align:middle line:90%
+a equals animal with that age.
+
+00:29:58.900 --> 00:30:01.780 align:middle line:84%
+And then we run the setter
+function on this object, a,
+
+00:30:01.780 --> 00:30:02.350 align:middle line:90%
+right?
+
+00:30:02.350 --> 00:30:06.750 align:middle line:90%
+set_name-- it's just a function.
+
+00:30:06.750 --> 00:30:09.070 align:middle line:84%
+And what name do we want to
+set it at, this thing here?
+
+00:30:09.070 --> 00:30:12.120 align:middle line:84%
+So name here is this
+variable that we
+
+00:30:12.120 --> 00:30:13.635 align:middle line:90%
+extracted from the L2 list.
+
+00:30:13.635 --> 00:30:18.180 align:middle line:90%
+
+
+00:30:18.180 --> 00:30:21.110 align:middle line:90%
+Everyone OK so far?
+
+00:30:21.110 --> 00:30:26.780 align:middle line:84%
+So now, what I have is,
+object a is a variable that's
+
+00:30:26.780 --> 00:30:30.655 align:middle line:90%
+bound to an animal object.
+
+00:30:30.655 --> 00:30:33.340 align:middle line:84%
+The age was set when
+we first created it.
+
+00:30:33.340 --> 00:30:36.775 align:middle line:84%
+And the name, we just set
+through the setter function.
+
+00:30:36.775 --> 00:30:39.350 align:middle line:90%
+
+
+00:30:39.350 --> 00:30:43.400 align:middle line:84%
+And now, we should
+just put it in my list.
+
+00:30:43.400 --> 00:30:45.140 align:middle line:84%
+My list is originally
+empty, right?
+
+00:30:45.140 --> 00:30:49.860 align:middle line:84%
+So now, I don't have a bunch
+of elements to add it to.
+
+00:30:49.860 --> 00:30:58.527 align:middle line:84%
+So let's just append it
+to L3, like that, right?
+
+00:30:58.527 --> 00:31:01.110 align:middle line:84%
+I mean, theoretically, I could
+have created an empty list that
+
+00:31:01.110 --> 00:31:02.768 align:middle line:90%
+was three elements long.
+
+00:31:02.768 --> 00:31:03.810 align:middle line:90%
+And then I could do L3.i.
+
+00:31:03.810 --> 00:31:06.680 align:middle line:90%
+
+
+00:31:06.680 --> 00:31:07.720 align:middle line:90%
+But this works, too.
+
+00:31:07.720 --> 00:31:12.500 align:middle line:90%
+
+
+00:31:12.500 --> 00:31:19.850 align:middle line:84%
+And then at the end,
+let's return L3, right?
+
+00:31:19.850 --> 00:31:21.806 align:middle line:90%
+Questions about this?
+
+00:31:21.806 --> 00:31:22.775 align:middle line:90%
+This is all right?
+
+00:31:22.775 --> 00:31:30.510 align:middle line:90%
+
+
+00:31:30.510 --> 00:31:32.910 align:middle line:84%
+OK, so if we run it
+and we just print
+
+00:31:32.910 --> 00:31:34.950 align:middle line:84%
+the list with these
+animal objects,
+
+00:31:34.950 --> 00:31:37.650 align:middle line:84%
+we run the same problem as
+that dictionary one, right?
+
+00:31:37.650 --> 00:31:41.340 align:middle line:84%
+You see I've got a bunch
+of memory locations here?
+
+00:31:41.340 --> 00:31:44.970 align:middle line:84%
+So to test that I did it
+right, instead of printing
+
+00:31:44.970 --> 00:31:48.060 align:middle line:84%
+the list, let's iterate
+through our list,
+
+00:31:48.060 --> 00:31:51.960 align:middle line:84%
+through this little for loop,
+and just run the print method
+
+00:31:51.960 --> 00:31:56.370 align:middle line:90%
+directly on my object, right?
+
+00:31:56.370 --> 00:31:58.050 align:middle line:84%
+So now, if I run
+that, it should just
+
+00:31:58.050 --> 00:32:00.640 align:middle line:84%
+run the print statement directly
+on each of these animals,
+
+00:32:00.640 --> 00:32:01.140 align:middle line:90%
+right?
+
+00:32:01.140 --> 00:32:02.940 align:middle line:90%
+So that's correct, I think.
+
+00:32:02.940 --> 00:32:06.000 align:middle line:90%
+
+
+00:32:06.000 --> 00:32:07.540 align:middle line:90%
+Does that make sense?
+
+00:32:07.540 --> 00:32:08.110 align:middle line:90%
+Yeah.
+
+00:32:08.110 --> 00:32:11.090 align:middle line:84%
+AUDIENCE: What did you
+change to make it bigger?
+
+00:32:11.090 --> 00:32:14.150 align:middle line:84%
+ANA BELL: Oh, so instead of
+printing the list, this thing,
+
+00:32:14.150 --> 00:32:17.258 align:middle line:84%
+I looped through my list
+and printed the elements.
+
+00:32:17.258 --> 00:32:17.800 align:middle line:90%
+AUDIENCE: Oh.
+
+00:32:17.800 --> 00:32:19.680 align:middle line:90%
+So that's not in the function.
+
+00:32:19.680 --> 00:32:21.388 align:middle line:84%
+ANA BELL: That's not
+in the function, no.
+
+00:32:21.388 --> 00:32:23.155 align:middle line:84%
+That's just, yeah,
+that's outside.
+
+00:32:23.155 --> 00:32:25.530 align:middle line:84%
+But this is something pretty
+common that you'll run into.
+
+00:32:25.530 --> 00:32:28.530 align:middle line:84%
+You'll make a list or
+dictionary or some structure
+
+00:32:28.530 --> 00:32:31.210 align:middle line:84%
+or tuple or something like
+that with objects of your type.
+
+00:32:31.210 --> 00:32:33.085 align:middle line:84%
+And when you run the
+print statement directly
+
+00:32:33.085 --> 00:32:36.400 align:middle line:84%
+on that structure, it doesn't
+go deeper than top level.
+
+00:32:36.400 --> 00:32:38.880 align:middle line:84%
+And so it prints that
+uninformative stuff.
+
+00:32:38.880 --> 00:32:44.940 align:middle line:90%
+
+
+00:32:44.940 --> 00:32:51.180 align:middle line:84%
+OK, so in this example,
+we saw that it's better
+
+00:32:51.180 --> 00:32:54.960 align:middle line:84%
+to access the attributes
+through getters and setters.
+
+00:32:54.960 --> 00:32:58.410 align:middle line:84%
+So in addition to the
+init, the str method,
+
+00:32:58.410 --> 00:33:00.390 align:middle line:84%
+writing getters
+and setters to have
+
+00:33:00.390 --> 00:33:02.820 align:middle line:84%
+a consistent way of accessing
+and modifying these data
+
+00:33:02.820 --> 00:33:04.420 align:middle line:90%
+attributes is really important.
+
+00:33:04.420 --> 00:33:07.230 align:middle line:84%
+And then you can even impose
+restrictions, something like,
+
+00:33:07.230 --> 00:33:08.550 align:middle line:90%
+the types have to be this.
+
+00:33:08.550 --> 00:33:11.080 align:middle line:84%
+Or maybe the age can't
+be a negative number
+
+00:33:11.080 --> 00:33:12.130 align:middle line:90%
+or something like that.
+
+00:33:12.130 --> 00:33:17.500 align:middle line:84%
+And it allows a lot more
+consistent use of the object.
+
+00:33:17.500 --> 00:33:19.980 align:middle line:84%
+So now, let's move on
+to hierarchies, OK?
+
+00:33:19.980 --> 00:33:23.470 align:middle line:84%
+And this is where we're going
+to talk about inheritance.
+
+00:33:23.470 --> 00:33:28.750 align:middle line:84%
+So there's something like
+maybe 28 objects on this slide,
+
+00:33:28.750 --> 00:33:29.250 align:middle line:90%
+right?
+
+00:33:29.250 --> 00:33:31.208 align:middle line:84%
+There's the six we
+encountered at the beginning
+
+00:33:31.208 --> 00:33:33.250 align:middle line:90%
+of this lecture and 22 up there.
+
+00:33:33.250 --> 00:33:37.030 align:middle line:84%
+So there's 28 separate
+objects on this slide.
+
+00:33:37.030 --> 00:33:41.070 align:middle line:84%
+And all of these objects, we
+could say, are of type animal,
+
+00:33:41.070 --> 00:33:41.670 align:middle line:90%
+right?
+
+00:33:41.670 --> 00:33:46.000 align:middle line:84%
+Because by our definition,
+the attributes for an animal
+
+00:33:46.000 --> 00:33:47.930 align:middle line:90%
+is how long they've been alive.
+
+00:33:47.930 --> 00:33:52.010 align:middle line:84%
+And these all are objects that
+have been alive for some time.
+
+00:33:52.010 --> 00:33:56.470 align:middle line:84%
+But in addition to having
+the attribute for how long
+
+00:33:56.470 --> 00:34:00.820 align:middle line:84%
+they've been alive and an
+unknown name, we can actually
+
+00:34:00.820 --> 00:34:02.860 align:middle line:84%
+then create separate
+categories, right?
+
+00:34:02.860 --> 00:34:06.970 align:middle line:84%
+And each one of these
+boxes that I've created
+
+00:34:06.970 --> 00:34:10.389 align:middle line:84%
+is a different subset
+of animal, right?
+
+00:34:10.389 --> 00:34:14.320 align:middle line:84%
+We'll call it a subclass or
+a child of an animal class.
+
+00:34:14.320 --> 00:34:18.400 align:middle line:84%
+And that's because they will
+bring about different data
+
+00:34:18.400 --> 00:34:22.989 align:middle line:84%
+attributes in addition to what
+an animal's data attributes
+
+00:34:22.989 --> 00:34:23.800 align:middle line:90%
+are.
+
+00:34:23.800 --> 00:34:27.070 align:middle line:84%
+And they will bring about
+different behaviors in addition
+
+00:34:27.070 --> 00:34:30.820 align:middle line:84%
+to the behaviors of our really
+generic animal object, right?
+
+00:34:30.820 --> 00:34:34.840 align:middle line:84%
+So the things a cat can do, a
+rabbit might not be able to do.
+
+00:34:34.840 --> 00:34:36.962 align:middle line:84%
+And the things a person
+can do, a cat won't do
+
+00:34:36.962 --> 00:34:38.170 align:middle line:90%
+and a rabbit can't do, right?
+
+00:34:38.170 --> 00:34:39.790 align:middle line:90%
+So they're all animals.
+
+00:34:39.790 --> 00:34:44.590 align:middle line:84%
+But they all are going to have
+additional data attributes
+
+00:34:44.590 --> 00:34:47.530 align:middle line:84%
+and additional behaviors that
+are different in these three
+
+00:34:47.530 --> 00:34:49.520 align:middle line:90%
+categories, right?
+
+00:34:49.520 --> 00:34:52.639 align:middle line:84%
+So I might say something like,
+the cat has a name, an age,
+
+00:34:52.639 --> 00:34:54.440 align:middle line:90%
+and a pattern or a color.
+
+00:34:54.440 --> 00:34:56.058 align:middle line:84%
+The rabbit, again,
+I said are wild.
+
+00:34:56.058 --> 00:34:57.350 align:middle line:90%
+So maybe they don't get a name.
+
+00:34:57.350 --> 00:34:59.870 align:middle line:84%
+But they'll have a
+color or pattern.
+
+00:34:59.870 --> 00:35:03.870 align:middle line:84%
+And then the age, of course,
+from the animal, people,
+
+00:35:03.870 --> 00:35:06.350 align:middle line:84%
+of course, have the--
+the person object has
+
+00:35:06.350 --> 00:35:08.945 align:middle line:90%
+the age that comes from animal.
+
+00:35:08.945 --> 00:35:11.570 align:middle line:84%
+But in addition, they might have
+a list of friends or something
+
+00:35:11.570 --> 00:35:14.028 align:middle line:84%
+associated, something like that
+associated with them right,
+
+00:35:14.028 --> 00:35:17.258 align:middle line:84%
+and a list of friends,
+something a cat doesn't have,
+
+00:35:17.258 --> 00:35:18.800 align:middle line:84%
+something that a
+rabbit doesn't have.
+
+00:35:18.800 --> 00:35:20.510 align:middle line:90%
+So you see what I mean.
+
+00:35:20.510 --> 00:35:21.920 align:middle line:90%
+And we can even go further.
+
+00:35:21.920 --> 00:35:24.530 align:middle line:84%
+We can say, well, if I
+take my person object,
+
+00:35:24.530 --> 00:35:26.780 align:middle line:84%
+I can now sub-categorize
+that as well
+
+00:35:26.780 --> 00:35:29.000 align:middle line:84%
+and say, well, this
+is a student class.
+
+00:35:29.000 --> 00:35:30.920 align:middle line:84%
+And then this student
+class, I would
+
+00:35:30.920 --> 00:35:33.120 align:middle line:90%
+say a student is a person.
+
+00:35:33.120 --> 00:35:34.940 align:middle line:84%
+So all the data
+attributes and all the
+
+00:35:34.940 --> 00:35:37.940 align:middle line:84%
+behaviors that a person
+has, the student also has,
+
+00:35:37.940 --> 00:35:39.440 align:middle line:84%
+and, of course, all
+the animal stuff
+
+00:35:39.440 --> 00:35:41.600 align:middle line:90%
+because a person is an animal.
+
+00:35:41.600 --> 00:35:46.250 align:middle line:84%
+So for example, let's say an
+animal is a generic object.
+
+00:35:46.250 --> 00:35:47.070 align:middle line:90%
+It doesn't speak.
+
+00:35:47.070 --> 00:35:50.330 align:middle line:84%
+But let's say a person gets
+the behavior to speak, right?
+
+00:35:50.330 --> 00:35:52.760 align:middle line:84%
+So for speaking, I
+might just print Hello
+
+00:35:52.760 --> 00:35:55.130 align:middle line:84%
+to the screen or something
+simple like that.
+
+00:35:55.130 --> 00:35:57.150 align:middle line:90%
+A student is a person.
+
+00:35:57.150 --> 00:36:02.390 align:middle line:84%
+So maybe they also get
+something like their age,
+
+00:36:02.390 --> 00:36:05.210 align:middle line:84%
+the name, and maybe a list of
+friends associated with them.
+
+00:36:05.210 --> 00:36:09.472 align:middle line:84%
+But a student might also have
+a major or a favorite subject
+
+00:36:09.472 --> 00:36:11.180 align:middle line:84%
+in school associated
+with them, something
+
+00:36:11.180 --> 00:36:12.830 align:middle line:84%
+that a person
+doesn't have, right?
+
+00:36:12.830 --> 00:36:15.170 align:middle line:84%
+So that's a new data
+attribute associated
+
+00:36:15.170 --> 00:36:17.970 align:middle line:84%
+with a student that's not
+associated with a person.
+
+00:36:17.970 --> 00:36:20.810 align:middle line:84%
+A student might also
+have different behaviors,
+
+00:36:20.810 --> 00:36:23.250 align:middle line:84%
+like tell me your favorite
+subject in school,
+
+00:36:23.250 --> 00:36:24.090 align:middle line:90%
+things like that.
+
+00:36:24.090 --> 00:36:26.640 align:middle line:84%
+Or it might override
+behaviors of a person.
+
+00:36:26.640 --> 00:36:30.170 align:middle line:84%
+So if a person speaks,
+says, hello, prints hello
+
+00:36:30.170 --> 00:36:33.255 align:middle line:84%
+to the screen, we can say, hey,
+if I ask the student to speak,
+
+00:36:33.255 --> 00:36:34.880 align:middle line:84%
+they might say, I
+have homework instead
+
+00:36:34.880 --> 00:36:37.210 align:middle line:90%
+or something like that, right?
+
+00:36:37.210 --> 00:36:42.010 align:middle line:84%
+So what we're trying to do
+is take those relationships
+
+00:36:42.010 --> 00:36:43.910 align:middle line:90%
+and implement them in code.
+
+00:36:43.910 --> 00:36:48.970 align:middle line:84%
+So here, I've got an animal
+class, which is my base class.
+
+00:36:48.970 --> 00:36:53.110 align:middle line:84%
+It's going to be my, also called
+parent class or super-class.
+
+00:36:53.110 --> 00:36:56.448 align:middle line:84%
+And then anything
+that an animal has,
+
+00:36:56.448 --> 00:36:58.990 align:middle line:84%
+all the data attributes and all
+the behaviors of that animal,
+
+00:36:58.990 --> 00:37:01.720 align:middle line:84%
+will be inherited by
+person, cat, and rabbit.
+
+00:37:01.720 --> 00:37:03.778 align:middle line:84%
+So anything-- so a
+person is an animal.
+
+00:37:03.778 --> 00:37:04.570 align:middle line:90%
+A cat is an animal.
+
+00:37:04.570 --> 00:37:05.710 align:middle line:90%
+A rabbit is an animal.
+
+00:37:05.710 --> 00:37:08.350 align:middle line:84%
+So everything they have,
+all these three subtypes
+
+00:37:08.350 --> 00:37:09.430 align:middle line:90%
+will have as well.
+
+00:37:09.430 --> 00:37:13.190 align:middle line:84%
+But all these subtypes will be
+different amongst themselves,
+
+00:37:13.190 --> 00:37:13.690 align:middle line:90%
+right?
+
+00:37:13.690 --> 00:37:16.030 align:middle line:84%
+A person will have an
+ability to speak, maybe
+
+00:37:16.030 --> 00:37:17.290 align:middle line:90%
+print hello to the screen.
+
+00:37:17.290 --> 00:37:19.248 align:middle line:84%
+A cat could also have
+the ability to speak.
+
+00:37:19.248 --> 00:37:21.040 align:middle line:84%
+But maybe they'll print
+meow to the screen.
+
+00:37:21.040 --> 00:37:24.310 align:middle line:84%
+A rabbit won't even have
+the ability to speak at all.
+
+00:37:24.310 --> 00:37:26.890 align:middle line:84%
+A person might have
+a list of friends,
+
+00:37:26.890 --> 00:37:29.960 align:middle line:84%
+whereas a cat won't, a rabbit
+won't things, like that.
+
+00:37:29.960 --> 00:37:32.110 align:middle line:84%
+So we can either add
+more information.
+
+00:37:32.110 --> 00:37:34.300 align:middle line:84%
+Like, list of friends
+was an example of that.
+
+00:37:34.300 --> 00:37:35.560 align:middle line:90%
+We can add more behavior.
+
+00:37:35.560 --> 00:37:38.940 align:middle line:84%
+Like, the ability to speak
+is an example of that.
+
+00:37:38.940 --> 00:37:42.210 align:middle line:84%
+And an example of overriding
+behavior, like I mentioned,
+
+00:37:42.210 --> 00:37:45.750 align:middle line:84%
+is let's say we have a
+subclass student of person.
+
+00:37:45.750 --> 00:37:51.780 align:middle line:84%
+If a person's speak method said
+to print Hello to the screen,
+
+00:37:51.780 --> 00:37:55.440 align:middle line:84%
+we can override that behavior
+through a speak method
+
+00:37:55.440 --> 00:37:58.410 align:middle line:84%
+inside student, where you don't
+just print hello to the screen.
+
+00:37:58.410 --> 00:38:01.670 align:middle line:90%
+You can print, I have homework.
+
+00:38:01.670 --> 00:38:07.050 align:middle line:84%
+So let's try to start
+implementing this relationship.
+
+00:38:07.050 --> 00:38:09.110 align:middle line:90%
+This is just our animal class.
+
+00:38:09.110 --> 00:38:10.370 align:middle line:90%
+There's nothing new here.
+
+00:38:10.370 --> 00:38:11.990 align:middle line:84%
+I'm just doing a
+little refresher
+
+00:38:11.990 --> 00:38:13.710 align:middle line:90%
+on what this class looks like.
+
+00:38:13.710 --> 00:38:16.040 align:middle line:84%
+So we've got our init,
+where we initialize
+
+00:38:16.040 --> 00:38:18.650 align:middle line:90%
+an age and a name that's None.
+
+00:38:18.650 --> 00:38:20.780 align:middle line:84%
+We've got two
+getters, two setters,
+
+00:38:20.780 --> 00:38:23.955 align:middle line:84%
+and this str method that prints
+animal, colon, name, colon,
+
+00:38:23.955 --> 00:38:24.455 align:middle line:90%
+age.
+
+00:38:24.455 --> 00:38:28.770 align:middle line:90%
+
+
+00:38:28.770 --> 00:38:32.140 align:middle line:84%
+So yeah, OK, this animal
+class inherits from object,
+
+00:38:32.140 --> 00:38:34.240 align:middle line:90%
+so the generic Python object.
+
+00:38:34.240 --> 00:38:36.870 align:middle line:84%
+And now, let's work
+on the subclass, cat.
+
+00:38:36.870 --> 00:38:39.930 align:middle line:84%
+So when I create
+my subclass cat,
+
+00:38:39.930 --> 00:38:42.780 align:middle line:84%
+the way I tell Python
+that this cat is an animal
+
+00:38:42.780 --> 00:38:46.770 align:middle line:84%
+is by putting in the parentheses
+here the name of the type
+
+00:38:46.770 --> 00:38:50.940 align:middle line:84%
+that I want this
+class to inherit from.
+
+00:38:50.940 --> 00:38:55.030 align:middle line:90%
+So a cat is an animal.
+
+00:38:55.030 --> 00:38:58.090 align:middle line:84%
+Now, one of the things
+I kept coming back to
+
+00:38:58.090 --> 00:39:00.550 align:middle line:84%
+is, any time you
+create a new data type,
+
+00:39:00.550 --> 00:39:03.180 align:middle line:90%
+you have to have an init method.
+
+00:39:03.180 --> 00:39:06.960 align:middle line:84%
+This doesn't specifically
+have an init method, right?
+
+00:39:06.960 --> 00:39:09.340 align:middle line:84%
+I've just got two
+other methods here.
+
+00:39:09.340 --> 00:39:11.790 align:middle line:84%
+So you might think
+that it's missing.
+
+00:39:11.790 --> 00:39:16.380 align:middle line:84%
+But it's actually not because
+as soon as you put another data
+
+00:39:16.380 --> 00:39:21.030 align:middle line:84%
+type here in the parentheses,
+so that cat is an animal,
+
+00:39:21.030 --> 00:39:24.150 align:middle line:84%
+think of it like Python
+going into the animal class,
+
+00:39:24.150 --> 00:39:27.990 align:middle line:84%
+copying and pasting everything
+that's part of the animal class
+
+00:39:27.990 --> 00:39:30.240 align:middle line:84%
+or copying everything that's
+part of that animal class
+
+00:39:30.240 --> 00:39:33.270 align:middle line:90%
+and pasting it inside cat.
+
+00:39:33.270 --> 00:39:36.840 align:middle line:84%
+So since I don't have an init
+method specifically defined
+
+00:39:36.840 --> 00:39:39.960 align:middle line:84%
+in cat, Python
+will say, oh, we'll
+
+00:39:39.960 --> 00:39:43.760 align:middle line:84%
+just use the init method
+of your parent animal.
+
+00:39:43.760 --> 00:39:45.730 align:middle line:84%
+So the way we create
+a cat is going
+
+00:39:45.730 --> 00:39:48.940 align:middle line:84%
+to be exactly the same
+way we create an animal,
+
+00:39:48.940 --> 00:39:51.760 align:middle line:84%
+except that the name is
+going to be cat as my object
+
+00:39:51.760 --> 00:39:54.310 align:middle line:90%
+type instead of animal.
+
+00:39:54.310 --> 00:39:56.360 align:middle line:84%
+But we just pass
+it in one thing,
+
+00:39:56.360 --> 00:39:59.440 align:middle line:90%
+which is the age of this cat.
+
+00:39:59.440 --> 00:40:01.785 align:middle line:84%
+So since we're copying and
+pasting everything-- yeah,
+
+00:40:01.785 --> 00:40:02.285 align:middle line:90%
+question.
+
+00:40:02.285 --> 00:40:06.190 align:middle line:84%
+AUDIENCE: The parent class
+of animal [INAUDIBLE]
+
+00:40:06.190 --> 00:40:07.430 align:middle line:90%
+is that also [INAUDIBLE]?
+
+00:40:07.430 --> 00:40:08.600 align:middle line:90%
+ANA BELL: Yes, exactly.
+
+00:40:08.600 --> 00:40:10.820 align:middle line:84%
+So the parent class
+of animal is object.
+
+00:40:10.820 --> 00:40:12.890 align:middle line:84%
+So cat will also
+be a Python object.
+
+00:40:12.890 --> 00:40:15.890 align:middle line:84%
+But that's super generic stuff,
+like binding a variable name
+
+00:40:15.890 --> 00:40:17.540 align:middle line:84%
+to this object,
+things like that.
+
+00:40:17.540 --> 00:40:20.310 align:middle line:90%
+
+
+00:40:20.310 --> 00:40:22.760 align:middle line:84%
+So not only does the
+init get copied in,
+
+00:40:22.760 --> 00:40:26.240 align:middle line:84%
+but every single data
+attribute, age and name,
+
+00:40:26.240 --> 00:40:29.550 align:middle line:84%
+every single way that that
+data attribute gets created,
+
+00:40:29.550 --> 00:40:32.330 align:middle line:84%
+so the self.age is going to
+be a data attribute of cat.
+
+00:40:32.330 --> 00:40:33.830 align:middle line:84%
+And it's going to
+be set to whatever
+
+00:40:33.830 --> 00:40:36.110 align:middle line:84%
+is passed in as a
+parameter. self.name
+
+00:40:36.110 --> 00:40:38.780 align:middle line:84%
+will be initialized to
+none, just like for animal.
+
+00:40:38.780 --> 00:40:40.850 align:middle line:84%
+I've got my two
+getters, my two setters
+
+00:40:40.850 --> 00:40:42.650 align:middle line:90%
+that also work with cats.
+
+00:40:42.650 --> 00:40:46.100 align:middle line:84%
+And then, the str
+method of animal
+
+00:40:46.100 --> 00:40:49.400 align:middle line:90%
+will also be inherited in here.
+
+00:40:49.400 --> 00:40:51.200 align:middle line:90%
+But now, we notice one thing.
+
+00:40:51.200 --> 00:40:52.820 align:middle line:84%
+And that's, we
+have an str method
+
+00:40:52.820 --> 00:40:54.440 align:middle line:90%
+defined in the animal class.
+
+00:40:54.440 --> 00:40:59.210 align:middle line:84%
+But then, in my cat class, I
+define an str method as well,
+
+00:40:59.210 --> 00:40:59.930 align:middle line:90%
+right?
+
+00:40:59.930 --> 00:41:04.770 align:middle line:84%
+So that's called overriding
+your parents's class.
+
+00:41:04.770 --> 00:41:07.860 align:middle line:84%
+And when we create an
+object of type cat,
+
+00:41:07.860 --> 00:41:11.610 align:middle line:84%
+if this object has
+a method that has
+
+00:41:11.610 --> 00:41:15.960 align:middle line:84%
+the same name as their
+parent, we use this method.
+
+00:41:15.960 --> 00:41:17.850 align:middle line:84%
+There's no reason to
+go up to your parent
+
+00:41:17.850 --> 00:41:19.260 align:middle line:90%
+to ask for their method.
+
+00:41:19.260 --> 00:41:23.650 align:middle line:84%
+We use the one that
+is for this object.
+
+00:41:23.650 --> 00:41:28.140 align:middle line:84%
+And cat, in addition to having
+everything that animal has,
+
+00:41:28.140 --> 00:41:32.100 align:middle line:84%
+implements a new behavior,
+which is the ability to speak.
+
+00:41:32.100 --> 00:41:35.310 align:middle line:84%
+And all it does is print
+meow to the screen.
+
+00:41:35.310 --> 00:41:39.080 align:middle line:90%
+OK, so let's look at some code.
+
+00:41:39.080 --> 00:41:40.570 align:middle line:90%
+So here's my cat.
+
+00:41:40.570 --> 00:41:43.090 align:middle line:84%
+So I created a new cat
+object the same way
+
+00:41:43.090 --> 00:41:44.170 align:middle line:90%
+I would create an animal.
+
+00:41:44.170 --> 00:41:48.760 align:middle line:84%
+But I'm invoking the
+name of this class, cat.
+
+00:41:48.760 --> 00:41:50.320 align:middle line:84%
+The way I create
+an animal is just
+
+00:41:50.320 --> 00:41:53.470 align:middle line:84%
+by passing in the age
+of this thing, right?
+
+00:41:53.470 --> 00:41:56.080 align:middle line:84%
+So here, I'm creating a
+cat whose age is five.
+
+00:41:56.080 --> 00:41:58.450 align:middle line:84%
+The name of this
+cat is None, right?
+
+00:41:58.450 --> 00:42:03.140 align:middle line:84%
+Because that's what the
+init method of animal does.
+
+00:42:03.140 --> 00:42:06.790 align:middle line:84%
+But I can run the methods
+on animal on my cat object
+
+00:42:06.790 --> 00:42:08.440 align:middle line:90%
+because a cat is an animal.
+
+00:42:08.440 --> 00:42:10.840 align:middle line:84%
+So all the methods
+that work with animals
+
+00:42:10.840 --> 00:42:13.030 align:middle line:84%
+will work with an
+object of type cat.
+
+00:42:13.030 --> 00:42:15.670 align:middle line:84%
+So, here, I can just
+run the set_name method
+
+00:42:15.670 --> 00:42:17.200 align:middle line:90%
+on my cat object.
+
+00:42:17.200 --> 00:42:20.320 align:middle line:84%
+Even though the method is not
+explicitly defined in here,
+
+00:42:20.320 --> 00:42:22.730 align:middle line:90%
+it's defined in my parent.
+
+00:42:22.730 --> 00:42:24.670 align:middle line:84%
+So if I set the name
+to fluffy and then I
+
+00:42:24.670 --> 00:42:27.670 align:middle line:84%
+print the cat object,
+it's going to print,
+
+00:42:27.670 --> 00:42:30.415 align:middle line:84%
+it's a cat, colon, the
+name, colon, the age.
+
+00:42:30.415 --> 00:42:32.990 align:middle line:90%
+
+
+00:42:32.990 --> 00:42:36.560 align:middle line:84%
+speak is just going to
+print meow to the screen.
+
+00:42:36.560 --> 00:42:38.985 align:middle line:84%
+We can do the getter
+methods as well.
+
+00:42:38.985 --> 00:42:41.360 align:middle line:84%
+So all of these methods that
+were implemented with animal
+
+00:42:41.360 --> 00:42:43.290 align:middle line:90%
+work with cats as well.
+
+00:42:43.290 --> 00:42:48.710 align:middle line:84%
+Now, in here, object
+a was created up here
+
+00:42:48.710 --> 00:42:52.010 align:middle line:90%
+when we talked about animals.
+
+00:42:52.010 --> 00:42:56.480 align:middle line:84%
+It's an animal object because
+it was created using the animal
+
+00:42:56.480 --> 00:42:58.910 align:middle line:90%
+invocation here.
+
+00:42:58.910 --> 00:43:02.630 align:middle line:84%
+Does the animal class
+have a method to speak?
+
+00:43:02.630 --> 00:43:03.380 align:middle line:90%
+No.
+
+00:43:03.380 --> 00:43:06.350 align:middle line:84%
+So if I actually run this,
+it'll give me an error, right?
+
+00:43:06.350 --> 00:43:07.880 align:middle line:84%
+It just says
+there's no attribute
+
+00:43:07.880 --> 00:43:09.330 align:middle line:90%
+speak, which makes sense.
+
+00:43:09.330 --> 00:43:10.250 align:middle line:90%
+I never defined that.
+
+00:43:10.250 --> 00:43:12.455 align:middle line:84%
+I defined that in your
+child, not the parent.
+
+00:43:12.455 --> 00:43:15.960 align:middle line:90%
+
+
+00:43:15.960 --> 00:43:17.400 align:middle line:90%
+Questions about cats?
+
+00:43:17.400 --> 00:43:22.190 align:middle line:90%
+
+
+00:43:22.190 --> 00:43:30.630 align:middle line:84%
+OK, so I want to briefly
+touch upon overriding methods
+
+00:43:30.630 --> 00:43:32.920 align:middle line:84%
+because it can get a
+little bit confusing.
+
+00:43:32.920 --> 00:43:36.180 align:middle line:84%
+So you notice, the str
+method was implemented
+
+00:43:36.180 --> 00:43:37.500 align:middle line:90%
+in both of these objects.
+
+00:43:37.500 --> 00:43:41.820 align:middle line:84%
+The str method is in cat, which
+overrides the animal's method
+
+00:43:41.820 --> 00:43:44.250 align:middle line:84%
+to print cat, colon,
+name, colon, age.
+
+00:43:44.250 --> 00:43:46.380 align:middle line:84%
+And the animal
+method, str method,
+
+00:43:46.380 --> 00:43:48.450 align:middle line:84%
+prints animal, colon,
+name, colon, age.
+
+00:43:48.450 --> 00:43:53.280 align:middle line:84%
+So the rule is, when you're
+running a method that you know
+
+00:43:53.280 --> 00:43:58.350 align:middle line:84%
+exists in a whole bunch of
+these inherited objects,
+
+00:43:58.350 --> 00:44:00.480 align:middle line:90%
+you look at--
+
+00:44:00.480 --> 00:44:01.440 align:middle line:90%
+which one is it?
+
+00:44:01.440 --> 00:44:02.250 align:middle line:90%
+It's str, right?
+
+00:44:02.250 --> 00:44:04.500 align:middle line:84%
+So it would be the print
+method, or any method.
+
+00:44:04.500 --> 00:44:06.030 align:middle line:90%
+It doesn't matter what it is.
+
+00:44:06.030 --> 00:44:08.580 align:middle line:84%
+You look at the object you're
+calling the method on, right?
+
+00:44:08.580 --> 00:44:11.010 align:middle line:84%
+So if it's a dot notation,
+you look at the thing
+
+00:44:11.010 --> 00:44:12.180 align:middle line:90%
+before the dot.
+
+00:44:12.180 --> 00:44:14.160 align:middle line:84%
+If it's one of these
+special methods,
+
+00:44:14.160 --> 00:44:16.720 align:middle line:84%
+what's the object you're
+running this method on?
+
+00:44:16.720 --> 00:44:20.970 align:middle line:84%
+So here, I've got the
+print method on object c.
+
+00:44:20.970 --> 00:44:23.250 align:middle line:90%
+Python asks, what is your type?
+
+00:44:23.250 --> 00:44:24.520 align:middle line:90%
+Oh, you're a cat?
+
+00:44:24.520 --> 00:44:26.650 align:middle line:84%
+Do you have an str
+method defined?
+
+00:44:26.650 --> 00:44:27.580 align:middle line:90%
+Yes, you do.
+
+00:44:27.580 --> 00:44:30.970 align:middle line:84%
+So then, it uses the one
+that it finds right away.
+
+00:44:30.970 --> 00:44:35.820 align:middle line:84%
+But if for some reason,
+the current object
+
+00:44:35.820 --> 00:44:37.860 align:middle line:84%
+doesn't have that method,
+so an example of that
+
+00:44:37.860 --> 00:44:40.350 align:middle line:90%
+is set_name, right?
+
+00:44:40.350 --> 00:44:43.880 align:middle line:84%
+set_name is not a
+method defined in cat.
+
+00:44:43.880 --> 00:44:45.083 align:middle line:90%
+c is an object of type cat.
+
+00:44:45.083 --> 00:44:46.250 align:middle line:90%
+It doesn't have that method.
+
+00:44:46.250 --> 00:44:48.410 align:middle line:84%
+Python says, oh, you
+don't have that method.
+
+00:44:48.410 --> 00:44:49.850 align:middle line:90%
+Let me look at your parent.
+
+00:44:49.850 --> 00:44:51.780 align:middle line:84%
+Does your parent
+have that method?
+
+00:44:51.780 --> 00:44:53.870 align:middle line:84%
+And then it looks
+through in here.
+
+00:44:53.870 --> 00:44:54.860 align:middle line:90%
+And it finds it.
+
+00:44:54.860 --> 00:44:56.750 align:middle line:84%
+Good, if it finds
+it, it uses that one.
+
+00:44:56.750 --> 00:44:59.638 align:middle line:84%
+If it doesn't find it, it
+looks at your parent's parent.
+
+00:44:59.638 --> 00:45:01.680 align:middle line:84%
+If your parent's parent
+has it, it uses that one.
+
+00:45:01.680 --> 00:45:04.222 align:middle line:84%
+And if it doesn't, it looks at
+your parent's parent's parent.
+
+00:45:04.222 --> 00:45:06.680 align:middle line:84%
+Until it gets to the
+generic Python object,
+
+00:45:06.680 --> 00:45:10.890 align:middle line:84%
+this one right here, if they
+have it, it uses that one.
+
+00:45:10.890 --> 00:45:13.080 align:middle line:84%
+And if it doesn't, then
+it throws an error.
+
+00:45:13.080 --> 00:45:16.280 align:middle line:84%
+So an example of something that
+the generic Python object has
+
+00:45:16.280 --> 00:45:17.660 align:middle line:90%
+is the str method, right?
+
+00:45:17.660 --> 00:45:19.370 align:middle line:84%
+It just prints the
+memory location.
+
+00:45:19.370 --> 00:45:21.890 align:middle line:84%
+And that's why, when we
+don't implement our str
+
+00:45:21.890 --> 00:45:25.650 align:middle line:84%
+method in our class, Python
+defaults to the generic Python
+
+00:45:25.650 --> 00:45:26.150 align:middle line:90%
+object.
+
+00:45:26.150 --> 00:45:35.070 align:middle line:90%
+
+
+00:45:35.070 --> 00:45:35.850 align:middle line:90%
+Questions?
+
+00:45:35.850 --> 00:45:39.890 align:middle line:90%
+
+
+00:45:39.890 --> 00:45:42.460 align:middle line:90%
+OK, let's look at a person.
+
+00:45:42.460 --> 00:45:47.550 align:middle line:90%
+So let's create a person object.
+
+00:45:47.550 --> 00:45:51.120 align:middle line:84%
+This person object, again,
+will inherit from animal
+
+00:45:51.120 --> 00:45:55.650 align:middle line:84%
+because the only
+things we set an animal
+
+00:45:55.650 --> 00:45:59.310 align:middle line:84%
+as defined as is being alive
+for some period of time.
+
+00:45:59.310 --> 00:46:01.362 align:middle line:90%
+And it has no name.
+
+00:46:01.362 --> 00:46:02.070 align:middle line:90%
+The name is None.
+
+00:46:02.070 --> 00:46:04.150 align:middle line:90%
+So we don't even pass that in.
+
+00:46:04.150 --> 00:46:08.580 align:middle line:84%
+So let's say the parent
+class, the person is animal.
+
+00:46:08.580 --> 00:46:11.420 align:middle line:84%
+But this is my
+design choice, also
+
+00:46:11.420 --> 00:46:12.670 align:middle line:90%
+to highlight a bunch of stuff.
+
+00:46:12.670 --> 00:46:16.590 align:middle line:84%
+But let's say that
+this person class, when
+
+00:46:16.590 --> 00:46:19.140 align:middle line:84%
+I create a new person
+object, I would like
+
+00:46:19.140 --> 00:46:22.283 align:middle line:90%
+to pass in an age and a name.
+
+00:46:22.283 --> 00:46:24.450 align:middle line:84%
+So I don't just want to
+create a person with an age.
+
+00:46:24.450 --> 00:46:27.870 align:middle line:84%
+I want to actually create it
+using a name in that parameter
+
+00:46:27.870 --> 00:46:28.900 align:middle line:90%
+list.
+
+00:46:28.900 --> 00:46:33.360 align:middle line:84%
+So as an example, in my code
+here, when I create a person,
+
+00:46:33.360 --> 00:46:37.020 align:middle line:84%
+I would like to pass in their
+name, comma, and the age, two
+
+00:46:37.020 --> 00:46:40.660 align:middle line:90%
+parameters to make a person.
+
+00:46:40.660 --> 00:46:45.660 align:middle line:84%
+Well, I can't use the
+animal's init method, right?
+
+00:46:45.660 --> 00:46:48.180 align:middle line:84%
+I could for cat because
+cat was happy to just
+
+00:46:48.180 --> 00:46:50.070 align:middle line:90%
+be created using an age.
+
+00:46:50.070 --> 00:46:52.530 align:middle line:84%
+But I can't do that
+for a person because I
+
+00:46:52.530 --> 00:46:54.240 align:middle line:84%
+would like to create
+a person by passing
+
+00:46:54.240 --> 00:46:58.090 align:middle line:84%
+in two parameters in the
+creation of the person.
+
+00:46:58.090 --> 00:47:00.960 align:middle line:84%
+So what I have to
+do is effectively
+
+00:47:00.960 --> 00:47:03.420 align:middle line:84%
+override the init
+method of animal
+
+00:47:03.420 --> 00:47:09.070 align:middle line:84%
+by implementing it in my
+class definition, right?
+
+00:47:09.070 --> 00:47:12.310 align:middle line:84%
+So here, I have to define
+my own init method.
+
+00:47:12.310 --> 00:47:15.730 align:middle line:84%
+And I do it because now, I'm
+not just passing in an age.
+
+00:47:15.730 --> 00:47:20.340 align:middle line:84%
+I want to pass in a name and
+an age in the parameter list.
+
+00:47:20.340 --> 00:47:23.650 align:middle line:84%
+And then, beyond that, what do
+I do inside the init method?
+
+00:47:23.650 --> 00:47:27.070 align:middle line:84%
+Well, I know that this
+person is an animal.
+
+00:47:27.070 --> 00:47:30.660 align:middle line:84%
+So what I'm going to do
+to make my life simpler
+
+00:47:30.660 --> 00:47:33.100 align:middle line:90%
+is to call animals init method.
+
+00:47:33.100 --> 00:47:35.040 align:middle line:84%
+So here, we use
+this dot notation
+
+00:47:35.040 --> 00:47:36.660 align:middle line:84%
+on the name of
+the class, sort of
+
+00:47:36.660 --> 00:47:40.590 align:middle line:84%
+similar to how I showed you that
+long way of calling methods.
+
+00:47:40.590 --> 00:47:42.600 align:middle line:84%
+Well, here's the name
+of the class, dot
+
+00:47:42.600 --> 00:47:44.040 align:middle line:90%
+the name of the method, init.
+
+00:47:44.040 --> 00:47:46.785 align:middle line:84%
+And now, I pass in all the
+parameters, self and age.
+
+00:47:46.785 --> 00:47:49.610 align:middle line:90%
+
+
+00:47:49.610 --> 00:47:51.860 align:middle line:84%
+So I'm going to call
+animal's init method, which
+
+00:47:51.860 --> 00:47:55.280 align:middle line:84%
+will create that
+self.age, set it to age,
+
+00:47:55.280 --> 00:47:57.920 align:middle line:84%
+and create that self.name
+and set it to none.
+
+00:47:57.920 --> 00:47:59.480 align:middle line:84%
+So I'm taking
+advantage of the fact
+
+00:47:59.480 --> 00:48:02.300 align:middle line:84%
+that that init method already
+does those two lines for me,
+
+00:48:02.300 --> 00:48:02.840 align:middle line:90%
+right?
+
+00:48:02.840 --> 00:48:06.290 align:middle line:84%
+So I've turned those two
+lines into one line here.
+
+00:48:06.290 --> 00:48:08.450 align:middle line:84%
+And then I'm going
+to say, well, I'd
+
+00:48:08.450 --> 00:48:10.310 align:middle line:84%
+like to set the
+name of my person.
+
+00:48:10.310 --> 00:48:13.520 align:middle line:84%
+So I'm going to call the method
+set_name with the parameter
+
+00:48:13.520 --> 00:48:14.960 align:middle line:90%
+that's passed in.
+
+00:48:14.960 --> 00:48:17.180 align:middle line:84%
+And then I'm also
+going to initialize
+
+00:48:17.180 --> 00:48:19.610 align:middle line:84%
+another data attribute
+for a person, which
+
+00:48:19.610 --> 00:48:22.900 align:middle line:84%
+is a list of friends,
+initially empty.
+
+00:48:22.900 --> 00:48:25.420 align:middle line:84%
+So what's nice about this, and
+when we implement the student
+
+00:48:25.420 --> 00:48:28.150 align:middle line:84%
+class, it'll look
+even nicer, what's
+
+00:48:28.150 --> 00:48:30.580 align:middle line:84%
+nice about this is we're
+taking advantage of the fact
+
+00:48:30.580 --> 00:48:33.500 align:middle line:84%
+that the init method of animal
+already does some work for us.
+
+00:48:33.500 --> 00:48:35.890 align:middle line:84%
+But at the same
+time, we can clearly
+
+00:48:35.890 --> 00:48:40.150 align:middle line:84%
+see, in this subclass,
+what the person
+
+00:48:40.150 --> 00:48:44.620 align:middle line:84%
+object brings in addition
+to the animal object, right?
+
+00:48:44.620 --> 00:48:50.050 align:middle line:84%
+So in addition to just being
+an animal, we give a name
+
+00:48:50.050 --> 00:48:52.060 align:middle line:84%
+and get a list of
+friends, right?
+
+00:48:52.060 --> 00:48:55.270 align:middle line:84%
+So it's very nice to see
+the extra data attributes
+
+00:48:55.270 --> 00:48:59.140 align:middle line:84%
+or what you need to change
+with respect to the animal
+
+00:48:59.140 --> 00:49:00.760 align:middle line:90%
+to make a person.
+
+00:49:00.760 --> 00:49:02.570 align:middle line:90%
+And then, beyond that--
+
+00:49:02.570 --> 00:49:04.390 align:middle line:90%
+so I think that's what I said.
+
+00:49:04.390 --> 00:49:06.620 align:middle line:84%
+Sorry, I didn't go
+through that as I said it.
+
+00:49:06.620 --> 00:49:09.370 align:middle line:84%
+And then beyond
+that, I've got some--
+
+00:49:09.370 --> 00:49:10.870 align:middle line:84%
+we can add some
+getters and setters.
+
+00:49:10.870 --> 00:49:12.290 align:middle line:90%
+I just did a select few.
+
+00:49:12.290 --> 00:49:13.970 align:middle line:84%
+But you should add
+them for all of them.
+
+00:49:13.970 --> 00:49:17.050 align:middle line:84%
+So the get_friends just
+returns a copy of my list
+
+00:49:17.050 --> 00:49:19.422 align:middle line:84%
+because maybe I want to
+keep my original order
+
+00:49:19.422 --> 00:49:20.380 align:middle line:90%
+or something like that.
+
+00:49:20.380 --> 00:49:24.080 align:middle line:84%
+So it's just good style to
+return a copy of a list.
+
+00:49:24.080 --> 00:49:26.630 align:middle line:84%
+The ability to add
+a friend to my list
+
+00:49:26.630 --> 00:49:30.320 align:middle line:84%
+basically just adds a
+friend's name as a string,
+
+00:49:30.320 --> 00:49:32.040 align:middle line:90%
+if it's not already in the list.
+
+00:49:32.040 --> 00:49:35.030 align:middle line:84%
+So I can't have two
+Ana's in my list.
+
+00:49:35.030 --> 00:49:37.220 align:middle line:90%
+I consider them the same.
+
+00:49:37.220 --> 00:49:39.830 align:middle line:84%
+Ability to speak just
+prints hello to the screen.
+
+00:49:39.830 --> 00:49:42.020 align:middle line:84%
+And then I added this
+cute little function
+
+00:49:42.020 --> 00:49:45.560 align:middle line:84%
+to tell me the age difference
+between this object that I'm
+
+00:49:45.560 --> 00:49:49.190 align:middle line:84%
+calling age difference on
+and some other person, right?
+
+00:49:49.190 --> 00:49:51.710 align:middle line:84%
+And all it does is
+grab the two ages,
+
+00:49:51.710 --> 00:49:53.660 align:middle line:84%
+take the absolute value
+of the difference,
+
+00:49:53.660 --> 00:49:55.990 align:middle line:90%
+and print that to the screen.
+
+00:49:55.990 --> 00:49:59.980 align:middle line:84%
+And then lastly, we're
+going to override the str
+
+00:49:59.980 --> 00:50:02.890 align:middle line:84%
+method of animal, instead of
+saying animal, colon, name,
+
+00:50:02.890 --> 00:50:05.650 align:middle line:84%
+colon, age, to say person,
+colon, name, colon, age.
+
+00:50:05.650 --> 00:50:09.470 align:middle line:84%
+So this way, it helps me
+figure out the type as well.
+
+00:50:09.470 --> 00:50:15.560 align:middle line:84%
+So in my code here, I've
+got two people, p1, p2.
+
+00:50:15.560 --> 00:50:16.940 align:middle line:90%
+Here's Jack, age 30.
+
+00:50:16.940 --> 00:50:18.365 align:middle line:90%
+Here's Jill, age 25.
+
+00:50:18.365 --> 00:50:25.880 align:middle line:84%
+If I run the get_name,
+get_age on both of these,
+
+00:50:25.880 --> 00:50:28.970 align:middle line:84%
+this will run animal's
+get_age get_name.
+
+00:50:28.970 --> 00:50:32.390 align:middle line:84%
+I've not defined these
+in here, which is fine.
+
+00:50:32.390 --> 00:50:33.413 align:middle line:90%
+We inherit from animal.
+
+00:50:33.413 --> 00:50:35.330 align:middle line:84%
+And animal knows how to
+grab the age and name.
+
+00:50:35.330 --> 00:50:36.515 align:middle line:90%
+So there they are.
+
+00:50:36.515 --> 00:50:39.710 align:middle line:90%
+
+
+00:50:39.710 --> 00:50:44.350 align:middle line:84%
+If I print P1, it'll print
+person, colon, name, age.
+
+00:50:44.350 --> 00:50:48.150 align:middle line:84%
+If I ask p1 to speak,
+it just prints, hello.
+
+00:50:48.150 --> 00:50:51.475 align:middle line:84%
+If I ask the age difference
+between p1 and p2, no matter
+
+00:50:51.475 --> 00:50:53.100 align:middle line:84%
+what, it just takes
+the absolute value,
+
+00:50:53.100 --> 00:50:54.930 align:middle line:90%
+prints five year difference.
+
+00:50:54.930 --> 00:50:58.590 align:middle line:84%
+And then let's add
+some friends to p1.
+
+00:50:58.590 --> 00:51:00.060 align:middle line:90%
+So here, I've got two Bob's.
+
+00:51:00.060 --> 00:51:02.565 align:middle line:84%
+But it's just the list,
+keeping unique names.
+
+00:51:02.565 --> 00:51:08.940 align:middle line:90%
+
+
+00:51:08.940 --> 00:51:11.550 align:middle line:84%
+OK, so let's have you try
+this for a little bit.
+
+00:51:11.550 --> 00:51:14.335 align:middle line:90%
+
+
+00:51:14.335 --> 00:51:15.710 align:middle line:84%
+It's a little bit,
+again, working
+
+00:51:15.710 --> 00:51:17.270 align:middle line:90%
+with objects of this type.
+
+00:51:17.270 --> 00:51:21.270 align:middle line:84%
+So it's a function that
+takes in a dictionary.
+
+00:51:21.270 --> 00:51:23.270 align:middle line:84%
+So I'll tell you what the
+dictionary looks like.
+
+00:51:23.270 --> 00:51:29.900 align:middle line:84%
+It maps a person object to
+a cat object, all right?
+
+00:51:29.900 --> 00:51:30.900 align:middle line:90%
+So that's my dictionary.
+
+00:51:30.900 --> 00:51:31.940 align:middle line:90%
+So this is the key.
+
+00:51:31.940 --> 00:51:32.820 align:middle line:90%
+This is the value.
+
+00:51:32.820 --> 00:51:35.750 align:middle line:84%
+So I've got all
+these person objects
+
+00:51:35.750 --> 00:51:37.235 align:middle line:90%
+being mapped to cat objects.
+
+00:51:37.235 --> 00:51:39.860 align:middle line:90%
+
+
+00:51:39.860 --> 00:51:42.760 align:middle line:84%
+So as an example, here's
+an input dictionary.
+
+00:51:42.760 --> 00:51:47.200 align:middle line:90%
+p1 is this person here.
+
+00:51:47.200 --> 00:51:50.890 align:middle line:84%
+And p2 is this
+person here, right?
+
+00:51:50.890 --> 00:51:54.640 align:middle line:84%
+So my two keys, p1, p2,
+are person objects, right?
+
+00:51:54.640 --> 00:51:56.290 align:middle line:84%
+They're not integers,
+floats, strings.
+
+00:51:56.290 --> 00:51:57.850 align:middle line:90%
+They're person objects.
+
+00:51:57.850 --> 00:52:01.250 align:middle line:84%
+And then the values associated
+with those are cat objects.
+
+00:52:01.250 --> 00:52:03.880 align:middle line:84%
+So here's an object of
+type cat with its name.
+
+00:52:03.880 --> 00:52:08.170 align:middle line:84%
+I just ran set_name on that cat
+after I created it, same here.
+
+00:52:08.170 --> 00:52:11.980 align:middle line:84%
+Here's the name set to
+this new cat object.
+
+00:52:11.980 --> 00:52:15.160 align:middle line:84%
+So I've mapped p1
+to c1, p2 to c2.
+
+00:52:15.160 --> 00:52:17.155 align:middle line:84%
+So if I run this function,
+what I'd like to do
+
+00:52:17.155 --> 00:52:18.910 align:middle line:84%
+is not return anything
+this function.
+
+00:52:18.910 --> 00:52:20.530 align:middle line:90%
+It just prints something.
+
+00:52:20.530 --> 00:52:23.230 align:middle line:84%
+On each line, as you're
+going through all the items
+
+00:52:23.230 --> 00:52:25.240 align:middle line:84%
+in the dictionary,
+it just prints
+
+00:52:25.240 --> 00:52:33.302 align:middle line:84%
+the name of that key, colon,
+the name of the value.
+
+00:52:33.302 --> 00:52:34.760 align:middle line:84%
+So all I'd like to
+do is write code
+
+00:52:34.760 --> 00:52:37.410 align:middle line:84%
+that extracts the name
+from my person object
+
+00:52:37.410 --> 00:52:44.353 align:middle line:90%
+and from the cat object, OK?
+
+00:52:44.353 --> 00:52:45.520 align:middle line:90%
+I know what you're thinking.
+
+00:52:45.520 --> 00:52:48.850 align:middle line:90%
+I look really young for 86.
+
+00:52:48.850 --> 00:52:51.790 align:middle line:84%
+But it's diet, exercise,
+and hanging out with you
+
+00:52:51.790 --> 00:52:58.286 align:middle line:90%
+guys, and candy, for sure.
+
+00:52:58.286 --> 00:53:04.200 align:middle line:84%
+So here, let's write
+this code on 178.
+
+00:53:04.200 --> 00:53:05.700 align:middle line:84%
+All right, does
+anyone have a start?
+
+00:53:05.700 --> 00:53:10.700 align:middle line:90%
+
+
+00:53:10.700 --> 00:53:11.200 align:middle line:90%
+Yeah.
+
+00:53:11.200 --> 00:53:16.586 align:middle line:90%
+
+
+00:53:16.586 --> 00:53:18.810 align:middle line:90%
+d.items, yep.
+
+00:53:18.810 --> 00:53:23.970 align:middle line:84%
+Let's write a note for
+ourselves. k is person.
+
+00:53:23.970 --> 00:53:27.056 align:middle line:90%
+v is cat, yep.
+
+00:53:27.056 --> 00:53:29.864 align:middle line:84%
+AUDIENCE: [INAUDIBLE]
+k.get_name.
+
+00:53:29.864 --> 00:53:33.150 align:middle line:90%
+
+
+00:53:33.150 --> 00:53:35.940 align:middle line:84%
+ANA BELL: Yep, so k.get_name,
+you want to save it
+
+00:53:35.940 --> 00:53:37.816 align:middle line:90%
+as a variable?
+
+00:53:37.816 --> 00:53:40.480 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:53:40.480 --> 00:53:41.585 align:middle line:90%
+ANA BELL: Or no?
+
+00:53:41.585 --> 00:53:42.950 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:53:42.950 --> 00:53:44.992 align:middle line:84%
+ANA BELL: Oh, you want to
+put it on the one line.
+
+00:53:44.992 --> 00:53:46.470 align:middle line:90%
+That's fine, yep.
+
+00:53:46.470 --> 00:53:49.091 align:middle line:90%
+Print, k.get_name.
+
+00:53:49.091 --> 00:53:51.550 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:53:51.550 --> 00:53:59.160 align:middle line:84%
+ANA BELL: Yup, v.get_name,
+exactly, yep, perfect.
+
+00:53:59.160 --> 00:54:01.420 align:middle line:90%
+And yeah, nothing to return.
+
+00:54:01.420 --> 00:54:05.760 align:middle line:90%
+So let's run that, cool.
+
+00:54:05.760 --> 00:54:08.450 align:middle line:90%
+
+
+00:54:08.450 --> 00:54:10.440 align:middle line:84%
+Does anyone have
+questions about that?
+
+00:54:10.440 --> 00:54:15.740 align:middle line:90%
+
+
+00:54:15.740 --> 00:54:17.960 align:middle line:84%
+All right, so we're just
+manipulating these object
+
+00:54:17.960 --> 00:54:18.460 align:middle line:90%
+types.
+
+00:54:18.460 --> 00:54:20.880 align:middle line:84%
+And again, if it's
+confusing, I highly
+
+00:54:20.880 --> 00:54:23.010 align:middle line:84%
+recommend, quiz
+situations and things
+
+00:54:23.010 --> 00:54:25.620 align:middle line:84%
+like that, now that we're
+working with object types,
+
+00:54:25.620 --> 00:54:27.987 align:middle line:90%
+just make little notes, right?
+
+00:54:27.987 --> 00:54:29.820 align:middle line:84%
+I know we're iterating
+through a dictionary.
+
+00:54:29.820 --> 00:54:31.440 align:middle line:84%
+And it's kind of
+convention, right?
+
+00:54:31.440 --> 00:54:33.220 align:middle line:84%
+Keys are integers,
+things like that.
+
+00:54:33.220 --> 00:54:36.630 align:middle line:84%
+But this particular case, just
+a little note that k is a person
+
+00:54:36.630 --> 00:54:41.190 align:middle line:84%
+will help you remember that you
+need to run a method on this k
+
+00:54:41.190 --> 00:54:45.570 align:middle line:84%
+variable, like we did here,
+k.get_name and then v.get_name.
+
+00:54:45.570 --> 00:54:53.940 align:middle line:90%
+
+
+00:54:53.940 --> 00:54:58.120 align:middle line:90%
+OK, yeah.
+
+00:54:58.120 --> 00:55:02.070 align:middle line:84%
+AUDIENCE: How do we
+ensure that the get_name,
+
+00:55:02.070 --> 00:55:06.060 align:middle line:90%
+that the [INAUDIBLE]?
+
+00:55:06.060 --> 00:55:06.660 align:middle line:90%
+And--
+
+00:55:06.660 --> 00:55:08.868 align:middle line:84%
+ANA BELL: How do you ensure
+that the keys are person?
+
+00:55:08.868 --> 00:55:11.490 align:middle line:90%
+
+
+00:55:11.490 --> 00:55:14.440 align:middle line:84%
+You can't ensure it in
+this particular case.
+
+00:55:14.440 --> 00:55:19.200 align:middle line:84%
+I mean, you could say, if
+type of k equal, equal,
+
+00:55:19.200 --> 00:55:22.860 align:middle line:84%
+person, capital P,
+person, then do the code,
+
+00:55:22.860 --> 00:55:25.125 align:middle line:84%
+and else probably
+just skip it or raise
+
+00:55:25.125 --> 00:55:26.250 align:middle line:90%
+a value error or something.
+
+00:55:26.250 --> 00:55:27.750 align:middle line:84%
+Like, you could
+enforce it that way.
+
+00:55:27.750 --> 00:55:29.190 align:middle line:84%
+But in this
+particular case, we're
+
+00:55:29.190 --> 00:55:34.200 align:middle line:84%
+just assuming that the tester
+will make person objects mapped
+
+00:55:34.200 --> 00:55:37.350 align:middle line:90%
+to cat objects, yeah.
+
+00:55:37.350 --> 00:55:41.010 align:middle line:84%
+But yes, certainly, if you're
+making a software for something
+
+00:55:41.010 --> 00:55:43.350 align:middle line:84%
+more complex, you should
+probably make sure of that,
+
+00:55:43.350 --> 00:55:45.360 align:middle line:90%
+enforce that.
+
+00:55:45.360 --> 00:55:47.310 align:middle line:84%
+OK, so the big idea
+with inheritance
+
+00:55:47.310 --> 00:55:50.400 align:middle line:84%
+is that now that we
+have sub-classes, also
+
+00:55:50.400 --> 00:55:53.160 align:middle line:84%
+known as child classes,
+those sub-classes
+
+00:55:53.160 --> 00:55:54.910 align:middle line:90%
+use a parent's attributes.
+
+00:55:54.910 --> 00:55:57.030 align:middle line:84%
+So everything that a
+parent has and can do,
+
+00:55:57.030 --> 00:55:59.160 align:middle line:90%
+a child has and can do as well.
+
+00:55:59.160 --> 00:56:03.480 align:middle line:84%
+But that child can override
+certain parent's behaviors.
+
+00:56:03.480 --> 00:56:07.680 align:middle line:84%
+And the child can add new
+behaviors or new attributes,
+
+00:56:07.680 --> 00:56:09.980 align:middle line:90%
+in addition to the parent.
+
+00:56:09.980 --> 00:56:12.200 align:middle line:84%
+Let's look at one more
+subclass student before we
+
+00:56:12.200 --> 00:56:14.090 align:middle line:90%
+go on to one last thing.
+
+00:56:14.090 --> 00:56:19.370 align:middle line:84%
+So a student here from
+our pictures and diagrams
+
+00:56:19.370 --> 00:56:21.500 align:middle line:84%
+inherits from person,
+not from animal,
+
+00:56:21.500 --> 00:56:23.660 align:middle line:84%
+but indirectly
+from animal, right?
+
+00:56:23.660 --> 00:56:26.250 align:middle line:90%
+So a student is a person.
+
+00:56:26.250 --> 00:56:28.400 align:middle line:84%
+And when I create
+a person, I would
+
+00:56:28.400 --> 00:56:31.910 align:middle line:84%
+love to create it using a
+name an age and a major.
+
+00:56:31.910 --> 00:56:34.520 align:middle line:84%
+But we can use a default
+parameter for that major
+
+00:56:34.520 --> 00:56:36.770 align:middle line:84%
+to be None if we don't
+actually want to pass it in.
+
+00:56:36.770 --> 00:56:41.460 align:middle line:84%
+But I would like to create it
+by setting their major as well.
+
+00:56:41.460 --> 00:56:44.930 align:middle line:84%
+So now, I can't use the
+parent's init method
+
+00:56:44.930 --> 00:56:46.880 align:middle line:84%
+because I've got three
+parameters I would like
+
+00:56:46.880 --> 00:56:48.740 align:middle line:90%
+to initiate my student with.
+
+00:56:48.740 --> 00:56:52.740 align:middle line:84%
+So I would like to create my
+own init method inside person.
+
+00:56:52.740 --> 00:56:57.010 align:middle line:84%
+So here I am, defining
+my own init method.
+
+00:56:57.010 --> 00:57:00.510 align:middle line:84%
+And now, it becomes
+apparent why it's
+
+00:57:00.510 --> 00:57:02.820 align:middle line:84%
+nice to call the init
+method of your parent
+
+00:57:02.820 --> 00:57:07.020 align:middle line:84%
+because if I say a
+student is a person,
+
+00:57:07.020 --> 00:57:10.590 align:middle line:84%
+all I need to do to
+initialize a person type,
+
+00:57:10.590 --> 00:57:12.503 align:middle line:84%
+all the attributes
+associated with a person
+
+00:57:12.503 --> 00:57:13.920 align:middle line:84%
+and the init method
+of the person.
+
+00:57:13.920 --> 00:57:16.260 align:middle line:84%
+So just call the init
+method of the person.
+
+00:57:16.260 --> 00:57:20.280 align:middle line:84%
+That will create my name,
+my age, set my name,
+
+00:57:20.280 --> 00:57:22.240 align:middle line:84%
+create my list of
+friends, all that stuff.
+
+00:57:22.240 --> 00:57:26.320 align:middle line:84%
+So those five lines get
+compacted into this one line.
+
+00:57:26.320 --> 00:57:30.250 align:middle line:84%
+And then it also becomes really
+easy to see what the student
+
+00:57:30.250 --> 00:57:32.410 align:middle line:90%
+has, in addition to the person.
+
+00:57:32.410 --> 00:57:37.510 align:middle line:84%
+Well, it just has a major
+data attribute. self.major is
+
+00:57:37.510 --> 00:57:39.370 align:middle line:90%
+set to whatever is passed in.
+
+00:57:39.370 --> 00:57:42.910 align:middle line:84%
+And then, beyond this,
+it's just methods
+
+00:57:42.910 --> 00:57:44.420 align:middle line:90%
+here and there to do stuff.
+
+00:57:44.420 --> 00:57:47.920 align:middle line:84%
+So here, I've got a
+change_major method.
+
+00:57:47.920 --> 00:57:49.420 align:middle line:84%
+It just sets the
+major to something.
+
+00:57:49.420 --> 00:57:51.560 align:middle line:84%
+I should probably add a
+getter in there as well.
+
+00:57:51.560 --> 00:57:52.810 align:middle line:90%
+But I ran out of room.
+
+00:57:52.810 --> 00:57:55.600 align:middle line:84%
+And here's a speak method
+that gets overridden
+
+00:57:55.600 --> 00:57:57.700 align:middle line:90%
+from the method of person.
+
+00:57:57.700 --> 00:57:59.530 align:middle line:84%
+So the speak
+method, for student,
+
+00:57:59.530 --> 00:58:06.500 align:middle line:84%
+I made it slightly more complex
+than what the parent has.
+
+00:58:06.500 --> 00:58:10.480 align:middle line:84%
+So here, I'm using this random
+library, not a random library
+
+00:58:10.480 --> 00:58:14.150 align:middle line:84%
+I found, arbitrary library,
+it's a library called random.
+
+00:58:14.150 --> 00:58:16.750 align:middle line:84%
+And it has a bunch of
+functions that allow you
+
+00:58:16.750 --> 00:58:19.010 align:middle line:90%
+to deal with random numbers.
+
+00:58:19.010 --> 00:58:21.520 align:middle line:84%
+So one of the functions
+that this random library has
+
+00:58:21.520 --> 00:58:24.190 align:middle line:84%
+gives you a number
+between 0 and 1
+
+00:58:24.190 --> 00:58:27.440 align:middle line:90%
+at random, so a float at random.
+
+00:58:27.440 --> 00:58:29.980 align:middle line:84%
+So what I'm doing in the
+speak method for students
+
+00:58:29.980 --> 00:58:35.230 align:middle line:84%
+is randomly printing
+one of four strings,
+
+00:58:35.230 --> 00:58:37.690 align:middle line:84%
+according to where that
+random number that's gotten
+
+00:58:37.690 --> 00:58:40.780 align:middle line:90%
+lines between 0 and 1.
+
+00:58:40.780 --> 00:58:43.730 align:middle line:90%
+And then-- oops, not yet.
+
+00:58:43.730 --> 00:58:47.060 align:middle line:84%
+And then, here, I'm
+overriding my str method.
+
+00:58:47.060 --> 00:58:52.750 align:middle line:84%
+So we can see, in
+the student class
+
+00:58:52.750 --> 00:58:54.560 align:middle line:84%
+here, here, I've
+created two students.
+
+00:58:54.560 --> 00:58:56.230 align:middle line:84%
+So this one actually
+has a major.
+
+00:58:56.230 --> 00:58:59.230 align:middle line:84%
+This one's major is going to be
+set to None, just the default
+
+00:58:59.230 --> 00:59:00.370 align:middle line:90%
+value.
+
+00:59:00.370 --> 00:59:03.370 align:middle line:84%
+And then, if I run
+this code, you can see,
+
+00:59:03.370 --> 00:59:06.610 align:middle line:84%
+every time I run it, the student
+1 says something different.
+
+00:59:06.610 --> 00:59:08.240 align:middle line:84%
+Student two says
+something different.
+
+00:59:08.240 --> 00:59:11.280 align:middle line:84%
+So it's just running
+this random number
+
+00:59:11.280 --> 00:59:15.030 align:middle line:90%
+and then choosing what to print.
+
+00:59:15.030 --> 00:59:18.190 align:middle line:84%
+Maybe more often than
+not, I should bias it
+
+00:59:18.190 --> 00:59:21.470 align:middle line:90%
+towards something.
+
+00:59:21.470 --> 00:59:24.375 align:middle line:84%
+All right, so one more class
+I'd like to talk about, rabbit.
+
+00:59:24.375 --> 00:59:26.000 align:middle line:84%
+That's the one that
+we actually haven't
+
+00:59:26.000 --> 00:59:28.310 align:middle line:84%
+talked about from those
+little subcategories.
+
+00:59:28.310 --> 00:59:30.260 align:middle line:84%
+And as we talk about
+this rabbit class,
+
+00:59:30.260 --> 00:59:33.390 align:middle line:84%
+I'd like to introduce one
+more idea of a variable.
+
+00:59:33.390 --> 00:59:35.360 align:middle line:84%
+So far, we've had just
+plain old variables
+
+00:59:35.360 --> 00:59:39.290 align:middle line:84%
+that go away as soon as
+a environment disappears.
+
+00:59:39.290 --> 00:59:41.540 align:middle line:84%
+We've talked about
+instance variables, a.k.a.
+
+00:59:41.540 --> 00:59:45.560 align:middle line:84%
+data attributes, which
+are consistent for objects
+
+00:59:45.560 --> 00:59:47.120 align:middle line:84%
+that you create
+of a certain type
+
+00:59:47.120 --> 00:59:50.480 align:middle line:84%
+but have different values
+for different instances.
+
+00:59:50.480 --> 00:59:54.650 align:middle line:84%
+The last variable I'd like to
+talk about is a class variable.
+
+00:59:54.650 --> 00:59:57.830 align:middle line:84%
+What's cool about a
+class variable is that,
+
+00:59:57.830 --> 01:00:00.450 align:middle line:84%
+think of it like
+a shared resource.
+
+01:00:00.450 --> 01:00:04.700 align:middle line:84%
+So it's a variable
+that any instance
+
+01:00:04.700 --> 01:00:09.980 align:middle line:84%
+of this particular type
+can access and modify.
+
+01:00:09.980 --> 01:00:13.130 align:middle line:84%
+And if it's modified,
+all the other instances
+
+01:00:13.130 --> 01:00:16.250 align:middle line:84%
+will see this
+modified value, right?
+
+01:00:16.250 --> 01:00:19.880 align:middle line:84%
+So it's just shared across all
+the instances of type rabbit,
+
+01:00:19.880 --> 01:00:21.760 align:middle line:90%
+in this particular case.
+
+01:00:21.760 --> 01:00:26.070 align:middle line:84%
+And so there's many different
+ways to use class variables.
+
+01:00:26.070 --> 01:00:29.140 align:middle line:84%
+In object-oriented programming,
+they're pretty useful.
+
+01:00:29.140 --> 01:00:32.010 align:middle line:84%
+The way I'm going
+to use it here is
+
+01:00:32.010 --> 01:00:35.190 align:middle line:84%
+to give me the ability
+to basically count
+
+01:00:35.190 --> 01:00:38.640 align:middle line:84%
+how many instances
+of this type rabbit
+
+01:00:38.640 --> 01:00:40.440 align:middle line:90%
+I've created in my program.
+
+01:00:40.440 --> 01:00:41.940 align:middle line:84%
+So when I run the
+program, remember,
+
+01:00:41.940 --> 01:00:43.890 align:middle line:84%
+I can create a whole
+bunch of instances.
+
+01:00:43.890 --> 01:00:46.830 align:middle line:84%
+I'm going to try to use this
+class variable as a way for me
+
+01:00:46.830 --> 01:00:49.980 align:middle line:84%
+to basically keep a counter
+of how many of these instances
+
+01:00:49.980 --> 01:00:51.960 align:middle line:90%
+I've created.
+
+01:00:51.960 --> 01:00:55.900 align:middle line:84%
+All right, so let's
+look at the code.
+
+01:00:55.900 --> 01:00:58.590 align:middle line:84%
+So the first thing I'm going to
+do is just inherit from animal.
+
+01:00:58.590 --> 01:01:00.820 align:middle line:90%
+It gets a name and an age.
+
+01:01:00.820 --> 01:01:04.480 align:middle line:84%
+And that's about it, all those
+getters and setters and the str
+
+01:01:04.480 --> 01:01:05.710 align:middle line:90%
+method.
+
+01:01:05.710 --> 01:01:08.500 align:middle line:84%
+Now, to create my
+class variable,
+
+01:01:08.500 --> 01:01:11.070 align:middle line:84%
+notice I'm defining this
+variable, just plain
+
+01:01:11.070 --> 01:01:15.120 align:middle line:84%
+old variable, outside of
+any methods within the class
+
+01:01:15.120 --> 01:01:16.770 align:middle line:90%
+definition, right?
+
+01:01:16.770 --> 01:01:18.720 align:middle line:90%
+So here's tag is equal to 1.
+
+01:01:18.720 --> 01:01:21.390 align:middle line:84%
+The very first variable--
+the very first instance
+
+01:01:21.390 --> 01:01:25.620 align:middle line:84%
+of a rabbit I create will
+grab the value of whatever it
+
+01:01:25.620 --> 01:01:27.290 align:middle line:90%
+says here.
+
+01:01:27.290 --> 01:01:32.720 align:middle line:84%
+But then, if any instance
+changes this value,
+
+01:01:32.720 --> 01:01:36.320 align:middle line:84%
+other instances will see
+that changed value, OK?
+
+01:01:36.320 --> 01:01:38.870 align:middle line:84%
+So what we're going
+to do is, we're
+
+01:01:38.870 --> 01:01:43.790 align:middle line:84%
+going to implement ID
+numbers for these rabbits,
+
+01:01:43.790 --> 01:01:47.420 align:middle line:84%
+so sort of tagging them to keep
+track of how many there are.
+
+01:01:47.420 --> 01:01:50.950 align:middle line:84%
+So in the init method
+of animal, or of rabbit,
+
+01:01:50.950 --> 01:01:55.840 align:middle line:84%
+I'm going to create a new rabbit
+using an age and two parents.
+
+01:01:55.840 --> 01:01:57.460 align:middle line:84%
+So, again, different
+than animal,
+
+01:01:57.460 --> 01:02:00.530 align:middle line:84%
+so I'm going to have to
+implement my own init method.
+
+01:02:00.530 --> 01:02:02.600 align:middle line:84%
+But I'll call
+animal's init method
+
+01:02:02.600 --> 01:02:04.610 align:middle line:84%
+because it does
+some work for me.
+
+01:02:04.610 --> 01:02:08.930 align:middle line:84%
+Then, I'm going to add two data
+attributes for the two parents
+
+01:02:08.930 --> 01:02:11.190 align:middle line:90%
+to be whatever is passed in.
+
+01:02:11.190 --> 01:02:13.530 align:middle line:84%
+And then, down here
+is where I'm going
+
+01:02:13.530 --> 01:02:16.560 align:middle line:84%
+to use this class variable,
+the shared resource, these two
+
+01:02:16.560 --> 01:02:17.440 align:middle line:90%
+lines.
+
+01:02:17.440 --> 01:02:19.620 align:middle line:84%
+So the first thing
+I'm going to do
+
+01:02:19.620 --> 01:02:22.980 align:middle line:84%
+is add one last data
+attribute for my rabbit,
+
+01:02:22.980 --> 01:02:24.520 align:middle line:90%
+which is the rid value.
+
+01:02:24.520 --> 01:02:26.160 align:middle line:90%
+So it's the rabbit ID.
+
+01:02:26.160 --> 01:02:28.080 align:middle line:84%
+And this is going
+to be a unique value
+
+01:02:28.080 --> 01:02:29.880 align:middle line:90%
+for every rabbit I create.
+
+01:02:29.880 --> 01:02:31.800 align:middle line:84%
+First rabbit will
+have a value of 1
+
+01:02:31.800 --> 01:02:32.980 align:middle line:90%
+that I create in my program.
+
+01:02:32.980 --> 01:02:36.490 align:middle line:84%
+Second rabbit I create will
+have a value of 2, and so on.
+
+01:02:36.490 --> 01:02:37.980 align:middle line:90%
+So what am I setting it to?
+
+01:02:37.980 --> 01:02:40.140 align:middle line:84%
+Well, I'm going to set it
+to whatever the tag is.
+
+01:02:40.140 --> 01:02:45.390 align:middle line:84%
+So the very first rabbit I
+create, their rid will be 1.
+
+01:02:45.390 --> 01:02:48.000 align:middle line:84%
+That's what the tag
+is initially set to.
+
+01:02:48.000 --> 01:02:51.840 align:middle line:84%
+But then, before I
+finish the init method,
+
+01:02:51.840 --> 01:02:57.870 align:middle line:84%
+there's one other line of
+code, rabbit.tag plus equals 1.
+
+01:02:57.870 --> 01:03:01.950 align:middle line:84%
+So this instance, right before
+it finishes creating itself,
+
+01:03:01.950 --> 01:03:05.370 align:middle line:84%
+is going to take that tag
+and increment it by 1.
+
+01:03:05.370 --> 01:03:10.460 align:middle line:84%
+So the next rabbit
+I create, it's
+
+01:03:10.460 --> 01:03:15.100 align:middle line:84%
+going to grab the tag value
+that was just changed, OK?
+
+01:03:15.100 --> 01:03:17.300 align:middle line:90%
+Let's visualize it.
+
+01:03:17.300 --> 01:03:20.510 align:middle line:84%
+So we're going to do
+it with actual rabbits.
+
+01:03:20.510 --> 01:03:24.530 align:middle line:84%
+OK, so first, I'm going
+to-- so there's going
+
+01:03:24.530 --> 01:03:25.620 align:middle line:90%
+to be three lines of code.
+
+01:03:25.620 --> 01:03:27.330 align:middle line:84%
+And this is the program
+I'm going to run.
+
+01:03:27.330 --> 01:03:29.000 align:middle line:84%
+So the first thing
+I'm going to do
+
+01:03:29.000 --> 01:03:33.770 align:middle line:84%
+is create my first
+rabbit, right?
+
+01:03:33.770 --> 01:03:37.340 align:middle line:84%
+Its rid will be whatever
+the value of tag
+
+01:03:37.340 --> 01:03:38.510 align:middle line:90%
+is originally, right?
+
+01:03:38.510 --> 01:03:40.820 align:middle line:84%
+So, originally, we
+said the tag is 1.
+
+01:03:40.820 --> 01:03:44.580 align:middle line:84%
+So behind the scenes, what's
+going to happen is Python says,
+
+01:03:44.580 --> 01:03:47.040 align:middle line:84%
+oh, you're the first
+instance of rabbit class.
+
+01:03:47.040 --> 01:03:49.610 align:middle line:90%
+So the tag was initialized to 1.
+
+01:03:49.610 --> 01:03:55.640 align:middle line:84%
+So your rid is going to be
+whatever the value is, 1.
+
+01:03:55.640 --> 01:03:58.340 align:middle line:84%
+So I've got, this
+rabbit, its age is 8.
+
+01:03:58.340 --> 01:03:59.300 align:middle line:90%
+Two parents are None.
+
+01:03:59.300 --> 01:04:00.590 align:middle line:90%
+And rid is 1.
+
+01:04:00.590 --> 01:04:03.710 align:middle line:84%
+But then, before I finish
+creating this rabbit,
+
+01:04:03.710 --> 01:04:06.530 align:middle line:84%
+the last line of the init
+method says, take the tag
+
+01:04:06.530 --> 01:04:07.850 align:middle line:90%
+and increment it by 1.
+
+01:04:07.850 --> 01:04:10.470 align:middle line:90%
+
+
+01:04:10.470 --> 01:04:13.020 align:middle line:84%
+All right, next line
+in the code says, here,
+
+01:04:13.020 --> 01:04:14.640 align:middle line:90%
+let me create another rabbit.
+
+01:04:14.640 --> 01:04:17.710 align:middle line:84%
+This one, I'm going to pass
+in age 6 as my parameter.
+
+01:04:17.710 --> 01:04:19.080 align:middle line:90%
+So that's the age 6.
+
+01:04:19.080 --> 01:04:22.710 align:middle line:84%
+Two parents are None by
+default. So Python says,
+
+01:04:22.710 --> 01:04:25.020 align:middle line:84%
+all right, well, here's
+a new rabbit object.
+
+01:04:25.020 --> 01:04:25.980 align:middle line:90%
+It's age is 6.
+
+01:04:25.980 --> 01:04:28.100 align:middle line:90%
+The two parents are None.
+
+01:04:28.100 --> 01:04:32.490 align:middle line:84%
+A line that says
+self.rid, so the rid of r2
+
+01:04:32.490 --> 01:04:34.980 align:middle line:84%
+will be whatever
+tag is right now.
+
+01:04:34.980 --> 01:04:37.650 align:middle line:84%
+Well, the previous rabbit
+incremented it to 2.
+
+01:04:37.650 --> 01:04:43.570 align:middle line:84%
+So the rid of this next
+rabbit is 2, right?
+
+01:04:43.570 --> 01:04:46.540 align:middle line:84%
+OK, the last line of
+code before this rabbit
+
+01:04:46.540 --> 01:04:51.310 align:middle line:84%
+finishes it creating itself
+is to increment the tag to 3.
+
+01:04:51.310 --> 01:04:54.170 align:middle line:84%
+So now, if I have one
+more line of code,
+
+01:04:54.170 --> 01:04:55.690 align:middle line:90%
+I'm creating one more rabbit.
+
+01:04:55.690 --> 01:04:57.670 align:middle line:90%
+This age is 10, right?
+
+01:04:57.670 --> 01:05:01.900 align:middle line:84%
+So behind the scenes, Python
+creates this variable named R3.
+
+01:05:01.900 --> 01:05:05.778 align:middle line:84%
+It's bound to an object, a
+rabbit object, whose age is 10.
+
+01:05:05.778 --> 01:05:07.570 align:middle line:84%
+Two parents are None,
+of course, because we
+
+01:05:07.570 --> 01:05:08.920 align:middle line:90%
+didn't pass in any parents.
+
+01:05:08.920 --> 01:05:14.110 align:middle line:84%
+And the rid is whatever the
+tag is right now, 3, OK?
+
+01:05:14.110 --> 01:05:18.010 align:middle line:84%
+Well, here's the
+one with rid of 3.
+
+01:05:18.010 --> 01:05:20.020 align:middle line:84%
+And before we finish
+creating, let's
+
+01:05:20.020 --> 01:05:21.940 align:middle line:84%
+just increment the tag
+so that we set it up
+
+01:05:21.940 --> 01:05:23.980 align:middle line:90%
+for the next rabbit, OK?
+
+01:05:23.980 --> 01:05:26.055 align:middle line:90%
+Everyone OK so far?
+
+01:05:26.055 --> 01:05:27.430 align:middle line:84%
+AUDIENCE: [INAUDIBLE]
+just create
+
+01:05:27.430 --> 01:05:30.610 align:middle line:90%
+the first line [INAUDIBLE]?
+
+01:05:30.610 --> 01:05:36.420 align:middle line:84%
+ANA BELL: Yep, yes,
+yes, it gives you two
+
+01:05:36.420 --> 01:05:39.990 align:middle line:84%
+because when you run
+this line, rabbit 8,
+
+01:05:39.990 --> 01:05:43.210 align:middle line:84%
+it has to run the
+init to completion.
+
+01:05:43.210 --> 01:05:44.980 align:middle line:84%
+And the last line
+of the init always
+
+01:05:44.980 --> 01:05:50.120 align:middle line:84%
+increments it to be one more
+than what it started with.
+
+01:05:50.120 --> 01:05:54.800 align:middle line:84%
+You can't, I guess, pause the
+function run in the middle
+
+01:05:54.800 --> 01:05:55.340 align:middle line:90%
+to check.
+
+01:05:55.340 --> 01:05:59.270 align:middle line:90%
+
+
+01:05:59.270 --> 01:06:03.100 align:middle line:84%
+OK, so let's look at
+a couple other methods
+
+01:06:03.100 --> 01:06:07.510 align:middle line:84%
+that we can implement-- sorry,
+other questions about that very
+
+01:06:07.510 --> 01:06:10.870 align:middle line:90%
+cool way of creating rabbits?
+
+01:06:10.870 --> 01:06:12.125 align:middle line:90%
+Yeah.
+
+01:06:12.125 --> 01:06:13.750 align:middle line:84%
+AUDIENCE: I guess I
+just wanted to know
+
+01:06:13.750 --> 01:06:18.430 align:middle line:84%
+more about the space
+above the definitions, so
+
+01:06:18.430 --> 01:06:20.070 align:middle line:90%
+the [INAUDIBLE].
+
+01:06:20.070 --> 01:06:22.860 align:middle line:84%
+ANA BELL: Yes,
+let's go back, here.
+
+01:06:22.860 --> 01:06:26.370 align:middle line:84%
+AUDIENCE: Yeah, so above
+the init definition,
+
+01:06:26.370 --> 01:06:27.960 align:middle line:90%
+that space there, what else--
+
+01:06:27.960 --> 01:06:30.180 align:middle line:90%
+like, what goes on there?
+
+01:06:30.180 --> 01:06:31.620 align:middle line:90%
+ANA BELL: Mostly just this.
+
+01:06:31.620 --> 01:06:34.380 align:middle line:84%
+Yeah, mostly, you
+want the object
+
+01:06:34.380 --> 01:06:37.350 align:middle line:84%
+to have things
+associated with it.
+
+01:06:37.350 --> 01:06:40.590 align:middle line:84%
+So, really, shared
+stuff is nice.
+
+01:06:40.590 --> 01:06:44.280 align:middle line:84%
+But it's a little tenuous
+in using it just because--
+
+01:06:44.280 --> 01:06:46.627 align:middle line:84%
+you should use it for pretty
+specific situations, right?
+
+01:06:46.627 --> 01:06:48.960 align:middle line:84%
+You don't just want to define
+a whole bunch of variables
+
+01:06:48.960 --> 01:06:51.270 align:middle line:84%
+that everybody can
+access here and there,
+
+01:06:51.270 --> 01:06:52.980 align:middle line:90%
+only specific situations.
+
+01:06:52.980 --> 01:06:56.340 align:middle line:84%
+Yeah, most of the time, you just
+have methods in the definition,
+
+01:06:56.340 --> 01:06:58.500 align:middle line:90%
+yeah.
+
+01:06:58.500 --> 01:06:59.860 align:middle line:90%
+But maybe there's other stuff.
+
+01:06:59.860 --> 01:07:01.845 align:middle line:84%
+I just don't know about
+it right now, yeah.
+
+01:07:01.845 --> 01:07:05.330 align:middle line:90%
+
+
+01:07:05.330 --> 01:07:09.110 align:middle line:84%
+OK, let's look at a couple more
+methods for the rabbit so here,
+
+01:07:09.110 --> 01:07:12.210 align:middle line:84%
+I've got a getter,
+just three getters.
+
+01:07:12.210 --> 01:07:13.310 align:middle line:90%
+I should probably put--
+
+01:07:13.310 --> 01:07:15.140 align:middle line:84%
+I don't want to put
+a setter for the rid
+
+01:07:15.140 --> 01:07:17.840 align:middle line:84%
+because that would
+mess up my counting.
+
+01:07:17.840 --> 01:07:20.450 align:middle line:84%
+And probably, I don't want
+setters for parents, too.
+
+01:07:20.450 --> 01:07:21.590 align:middle line:90%
+But maybe we might.
+
+01:07:21.590 --> 01:07:22.407 align:middle line:90%
+I don't know.
+
+01:07:22.407 --> 01:07:23.990 align:middle line:84%
+The only thing that
+looks a little bit
+
+01:07:23.990 --> 01:07:26.660 align:middle line:84%
+weird for the get_rid
+is this zfill.
+
+01:07:26.660 --> 01:07:29.960 align:middle line:84%
+And I added that as a cute
+little thing to basically make
+
+01:07:29.960 --> 01:07:31.550 align:middle line:90%
+the ID look like an ID number.
+
+01:07:31.550 --> 01:07:33.860 align:middle line:84%
+So it pre-fills the
+front with zeros.
+
+01:07:33.860 --> 01:07:35.570 align:middle line:84%
+Like, it pads the
+front with zeros.
+
+01:07:35.570 --> 01:07:38.990 align:middle line:84%
+So for the ID of 1, you
+can see, it's 00001.
+
+01:07:38.990 --> 01:07:42.860 align:middle line:84%
+For an ID of 123, it
+would be 00123, right?
+
+01:07:42.860 --> 01:07:47.780 align:middle line:84%
+So it just makes it look
+nice when we print it out,
+
+01:07:47.780 --> 01:07:49.310 align:middle line:90%
+when we print out the ID.
+
+01:07:49.310 --> 01:07:52.050 align:middle line:84%
+And otherwise, the two parents
+just return the parent objects.
+
+01:07:52.050 --> 01:07:54.890 align:middle line:90%
+
+
+01:07:54.890 --> 01:07:57.680 align:middle line:84%
+One interesting method
+that I would like to add,
+
+01:07:57.680 --> 01:08:00.890 align:middle line:84%
+and we'll play on the fact
+that rabbits mate here,
+
+01:08:00.890 --> 01:08:03.450 align:middle line:90%
+is to add two rabbits together.
+
+01:08:03.450 --> 01:08:06.590 align:middle line:84%
+So we're implementing
+the dunder method,
+
+01:08:06.590 --> 01:08:09.230 align:middle line:84%
+double underscore,
+add, double underscore,
+
+01:08:09.230 --> 01:08:14.450 align:middle line:84%
+to have the ability to add two
+rabbits together in our code,
+
+01:08:14.450 --> 01:08:14.950 align:middle line:90%
+all right?
+
+01:08:14.950 --> 01:08:18.170 align:middle line:84%
+So, again, this is a
+design decision I made.
+
+01:08:18.170 --> 01:08:21.100 align:middle line:84%
+So when I add two
+rabbits together,
+
+01:08:21.100 --> 01:08:23.560 align:middle line:84%
+I'm going to create
+a new rabbit object.
+
+01:08:23.560 --> 01:08:27.250 align:middle line:84%
+And that's exactly what the
+code is doing inside here.
+
+01:08:27.250 --> 01:08:32.140 align:middle line:84%
+So I'm going to run this
+add dunder method on self
+
+01:08:32.140 --> 01:08:33.490 align:middle line:90%
+and other, right?
+
+01:08:33.490 --> 01:08:36.069 align:middle line:84%
+And then, behind, or in
+front of the scenes, I guess,
+
+01:08:36.069 --> 01:08:38.029 align:middle line:84%
+is going to be
+this plus operator.
+
+01:08:38.029 --> 01:08:40.330 align:middle line:84%
+So the self will be the
+thing before the plus.
+
+01:08:40.330 --> 01:08:43.270 align:middle line:84%
+And the other will be the
+thing after the plus, right?
+
+01:08:43.270 --> 01:08:46.189 align:middle line:84%
+Just like what we
+saw last lecture.
+
+01:08:46.189 --> 01:08:50.710 align:middle line:84%
+So when we add r1 plus r2, what
+I would like the result to be
+
+01:08:50.710 --> 01:08:56.319 align:middle line:84%
+is another rabbit object,
+who has one parent, r1,
+
+01:08:56.319 --> 01:08:58.390 align:middle line:90%
+and the other parent, r2.
+
+01:08:58.390 --> 01:09:00.430 align:middle line:84%
+Those are the things
+we added together.
+
+01:09:00.430 --> 01:09:04.000 align:middle line:84%
+And let's say this new rabbit
+object is age of 0, right?
+
+01:09:04.000 --> 01:09:06.290 align:middle line:90%
+It's a newborn.
+
+01:09:06.290 --> 01:09:09.649 align:middle line:84%
+So to implement
+that, we just have--
+
+01:09:09.649 --> 01:09:12.229 align:middle line:84%
+we're returning a new
+rabbit object here, right?
+
+01:09:12.229 --> 01:09:14.149 align:middle line:84%
+So we're just creating
+a new rabbit object
+
+01:09:14.149 --> 01:09:17.120 align:middle line:90%
+on the fly in this method.
+
+01:09:17.120 --> 01:09:18.560 align:middle line:84%
+How do we create
+a rabbit object?
+
+01:09:18.560 --> 01:09:22.880 align:middle line:84%
+We need to give it an
+age and the two parents.
+
+01:09:22.880 --> 01:09:28.069 align:middle line:84%
+Originally, when we created
+those three r1, r2, r3's, they
+
+01:09:28.069 --> 01:09:29.840 align:middle line:90%
+didn't have parents, right?
+
+01:09:29.840 --> 01:09:32.310 align:middle line:84%
+They were just unknown
+or something like that.
+
+01:09:32.310 --> 01:09:34.340 align:middle line:84%
+But in this
+particular case, we do
+
+01:09:34.340 --> 01:09:35.840 align:middle line:84%
+want to know what
+their parents are.
+
+01:09:35.840 --> 01:09:38.450 align:middle line:84%
+Their parents are the thing
+before the plus and the thing
+
+01:09:38.450 --> 01:09:39.740 align:middle line:90%
+after the plus.
+
+01:09:39.740 --> 01:09:41.495 align:middle line:90%
+So one parent will be self.
+
+01:09:41.495 --> 01:09:43.370 align:middle line:84%
+And the other parent
+will be other, the thing
+
+01:09:43.370 --> 01:09:45.965 align:middle line:90%
+that's in the parameter list.
+
+01:09:45.965 --> 01:09:49.970 align:middle line:90%
+
+
+01:09:49.970 --> 01:09:53.109 align:middle line:84%
+So let's continue on
+with our program here.
+
+01:09:53.109 --> 01:09:55.390 align:middle line:84%
+We had these three lines
+of code that were run.
+
+01:09:55.390 --> 01:09:57.190 align:middle line:84%
+And I created
+these three rabbits
+
+01:09:57.190 --> 01:10:00.790 align:middle line:90%
+with these IDs, 1, 2, 3.
+
+01:10:00.790 --> 01:10:04.420 align:middle line:84%
+If I add two rabbits
+together, r1 plus r2,
+
+01:10:04.420 --> 01:10:07.150 align:middle line:84%
+to give me a rabbit
+object variable,
+
+01:10:07.150 --> 01:10:10.660 align:middle line:84%
+e4, Python says,
+all right, well,
+
+01:10:10.660 --> 01:10:14.650 align:middle line:84%
+let me run this dunder method
+behind the scenes of the plus.
+
+01:10:14.650 --> 01:10:18.400 align:middle line:90%
+So r4 effectively becomes what?
+
+01:10:18.400 --> 01:10:24.150 align:middle line:84%
+Well, we replace, in the
+previous slide right here,
+
+01:10:24.150 --> 01:10:27.180 align:middle line:84%
+the return is rabbit(0),
+one parent, comma,
+
+01:10:27.180 --> 01:10:28.450 align:middle line:90%
+the other parent.
+
+01:10:28.450 --> 01:10:30.570 align:middle line:84%
+So when we make
+this addition, we
+
+01:10:30.570 --> 01:10:34.350 align:middle line:84%
+have rabbit(0),
+comma, one parent,
+
+01:10:34.350 --> 01:10:37.080 align:middle line:84%
+the thing before the dot, comma,
+the other parent, or the thing
+
+01:10:37.080 --> 01:10:39.810 align:middle line:84%
+before the plus and then
+the thing after the plus.
+
+01:10:39.810 --> 01:10:45.000 align:middle line:84%
+So my r4 becomes the result
+of adding r1 plus r2.
+
+01:10:45.000 --> 01:10:48.330 align:middle line:90%
+So its parents are these two.
+
+01:10:48.330 --> 01:10:53.050 align:middle line:84%
+, Now how does this
+rabbit get created, right?
+
+01:10:53.050 --> 01:10:54.370 align:middle line:90%
+It's a new rabbit object.
+
+01:10:54.370 --> 01:10:58.450 align:middle line:84%
+So we run the init method
+of the rabid object, which
+
+01:10:58.450 --> 01:11:00.820 align:middle line:90%
+means that, here's a variable.
+
+01:11:00.820 --> 01:11:02.500 align:middle line:90%
+It's bound to a rabbit object.
+
+01:11:02.500 --> 01:11:03.730 align:middle line:90%
+Its age is 0.
+
+01:11:03.730 --> 01:11:06.460 align:middle line:84%
+It has these two parents
+that our object is
+
+01:11:06.460 --> 01:11:10.270 align:middle line:84%
+bound to other rabbit
+objects, up here, r1 and r2.
+
+01:11:10.270 --> 01:11:15.220 align:middle line:84%
+And the ID, just like before, is
+whatever the tag is right now.
+
+01:11:15.220 --> 01:11:17.740 align:middle line:84%
+Well, we already created
+three rabbit objects
+
+01:11:17.740 --> 01:11:18.520 align:middle line:90%
+ahead of this one.
+
+01:11:18.520 --> 01:11:21.420 align:middle line:90%
+So this one's tag will be 4.
+
+01:11:21.420 --> 01:11:23.040 align:middle line:84%
+And then, right
+before we finish,
+
+01:11:23.040 --> 01:11:25.770 align:middle line:90%
+we increment the tag to 5.
+
+01:11:25.770 --> 01:11:30.540 align:middle line:84%
+So no matter how we're creating
+these rabbit objects, either
+
+01:11:30.540 --> 01:11:33.420 align:middle line:84%
+just plain old in
+our program directly
+
+01:11:33.420 --> 01:11:39.300 align:middle line:84%
+or through an indirect method,
+in this case, the plus,
+
+01:11:39.300 --> 01:11:42.450 align:middle line:84%
+we're still creating rabbit
+objects in our program, right?
+
+01:11:42.450 --> 01:11:45.600 align:middle line:84%
+So that counter, that
+shared variable tag,
+
+01:11:45.600 --> 01:11:47.820 align:middle line:84%
+is still coming
+into play, right?
+
+01:11:47.820 --> 01:11:50.955 align:middle line:84%
+So we're still counting all of
+these rabbit objects created.
+
+01:11:50.955 --> 01:11:53.920 align:middle line:90%
+
+
+01:11:53.920 --> 01:11:55.960 align:middle line:90%
+Does that make sense?
+
+01:11:55.960 --> 01:11:59.030 align:middle line:90%
+OK, good.
+
+01:11:59.030 --> 01:12:02.950 align:middle line:90%
+So, yeah, that's fine.
+
+01:12:02.950 --> 01:12:05.620 align:middle line:84%
+So one last method,
+so this is a method
+
+01:12:05.620 --> 01:12:08.380 align:middle line:84%
+that checks for equality
+between two rabbits.
+
+01:12:08.380 --> 01:12:10.690 align:middle line:84%
+And again, my design
+choice is to say
+
+01:12:10.690 --> 01:12:13.100 align:middle line:90%
+that two rabbits are equal.
+
+01:12:13.100 --> 01:12:16.660 align:middle line:84%
+So if I say r1
+equal equal r2, that
+
+01:12:16.660 --> 01:12:18.190 align:middle line:90%
+will tell me true or false.
+
+01:12:18.190 --> 01:12:21.010 align:middle line:84%
+And my design choice is to
+say that two rabbits are
+
+01:12:21.010 --> 01:12:23.510 align:middle line:84%
+equal if they have
+the same parents.
+
+01:12:23.510 --> 01:12:31.330 align:middle line:84%
+So if I create another rabbit
+object, 4 was r1 plus r2.
+
+01:12:31.330 --> 01:12:34.660 align:middle line:84%
+But if 5 is r2 plus
+r1, I want to say
+
+01:12:34.660 --> 01:12:36.730 align:middle line:84%
+that 5 and 4 are
+equal because they
+
+01:12:36.730 --> 01:12:38.800 align:middle line:90%
+have the same parents, right?
+
+01:12:38.800 --> 01:12:42.190 align:middle line:84%
+I don't care that it was
+r1 plus r2 or r2 plus r1.
+
+01:12:42.190 --> 01:12:43.450 align:middle line:90%
+They have the same parents.
+
+01:12:43.450 --> 01:12:45.570 align:middle line:90%
+It's just an opposite order.
+
+01:12:45.570 --> 01:12:48.080 align:middle line:84%
+And so that's what this
+eq method is doing.
+
+01:12:48.080 --> 01:12:50.000 align:middle line:84%
+It's a dunder
+method to implement
+
+01:12:50.000 --> 01:12:52.640 align:middle line:90%
+equality between two rabbits.
+
+01:12:52.640 --> 01:12:57.140 align:middle line:84%
+So parents_same is a Boolean
+here that just checks the rid.
+
+01:12:57.140 --> 01:12:59.300 align:middle line:84%
+So this Boolean,
+parents_same, is
+
+01:12:59.300 --> 01:13:01.340 align:middle line:84%
+going to check that
+the addition was made,
+
+01:13:01.340 --> 01:13:04.400 align:middle line:90%
+r1 plus r2, r1 plus r2, right?
+
+01:13:04.400 --> 01:13:07.190 align:middle line:84%
+And parents_opposite
+is also going
+
+01:13:07.190 --> 01:13:09.650 align:middle line:84%
+to be a Boolean, either
+true or false, that
+
+01:13:09.650 --> 01:13:13.970 align:middle line:84%
+checks if I made the rabbits,
+r1 plus r2, and then r2 plus r1,
+
+01:13:13.970 --> 01:13:16.490 align:middle line:90%
+so backward in the parents.
+
+01:13:16.490 --> 01:13:18.470 align:middle line:84%
+But they still have
+the same parents.
+
+01:13:18.470 --> 01:13:22.890 align:middle line:90%
+
+
+01:13:22.890 --> 01:13:29.010 align:middle line:84%
+And the reason I'm checking for
+IDs is because IDs are unique.
+
+01:13:29.010 --> 01:13:31.590 align:middle line:84%
+So originally, when I wrote
+this code a long time ago,
+
+01:13:31.590 --> 01:13:33.480 align:middle line:84%
+I actually ended up,
+my first iteration,
+
+01:13:33.480 --> 01:13:37.830 align:middle line:84%
+checking just the straight
+up parents values, right?
+
+01:13:37.830 --> 01:13:41.320 align:middle line:84%
+So it was comparing, basically,
+rabbit objects together.
+
+01:13:41.320 --> 01:13:44.700 align:middle line:84%
+But the problem with that
+code is that, at some point,
+
+01:13:44.700 --> 01:13:49.940 align:middle line:84%
+it tried to compare a
+none, some rabbits might
+
+01:13:49.940 --> 01:13:53.030 align:middle line:84%
+have a none as their parent,
+with an actual rabbit object.
+
+01:13:53.030 --> 01:13:54.650 align:middle line:90%
+And then the code crashed.
+
+01:13:54.650 --> 01:13:58.370 align:middle line:84%
+And then I realized, I can just
+compare the ID values directly
+
+01:13:58.370 --> 01:14:00.950 align:middle line:84%
+because those are, one,
+just numbers, so very
+
+01:14:00.950 --> 01:14:01.880 align:middle line:90%
+easy to compare.
+
+01:14:01.880 --> 01:14:02.990 align:middle line:90%
+And two, they're unique.
+
+01:14:02.990 --> 01:14:07.530 align:middle line:84%
+So I know I'm not going to have
+two rabbits with the same ID.
+
+01:14:07.530 --> 01:14:10.455 align:middle line:84%
+And so, in this particular case,
+I've got these two rabbits.
+
+01:14:10.455 --> 01:14:11.700 align:middle line:90%
+I should say they're equal.
+
+01:14:11.700 --> 01:14:15.330 align:middle line:84%
+But then, if I add
+r2 plus r3, r6,
+
+01:14:15.330 --> 01:14:17.730 align:middle line:84%
+this one is not going
+to be equal to any
+
+01:14:17.730 --> 01:14:18.690 align:middle line:90%
+of my other rabbits.
+
+01:14:18.690 --> 01:14:22.500 align:middle line:90%
+
+
+01:14:22.500 --> 01:14:24.750 align:middle line:90%
+So here's my code.
+
+01:14:24.750 --> 01:14:29.670 align:middle line:90%
+
+
+01:14:29.670 --> 01:14:31.490 align:middle line:84%
+So here, I've got my
+three rabbits, right?
+
+01:14:31.490 --> 01:14:36.260 align:middle line:84%
+So I think we've printed
+this out already.
+
+01:14:36.260 --> 01:14:37.070 align:middle line:90%
+So here's r1.
+
+01:14:37.070 --> 01:14:39.530 align:middle line:84%
+It's a rabbit with this
+ID, rabbit with this ID,
+
+01:14:39.530 --> 01:14:41.850 align:middle line:90%
+rabbit with this ID.
+
+01:14:41.850 --> 01:14:45.060 align:middle line:84%
+And then r1's parents, r2's
+parents, and r3's parents
+
+01:14:45.060 --> 01:14:47.920 align:middle line:90%
+all have none, are none.
+
+01:14:47.920 --> 01:14:56.965 align:middle line:84%
+But then, when I add r4 as
+r1 plus r2, I can print--
+
+01:14:56.965 --> 01:15:00.820 align:middle line:90%
+
+
+01:15:00.820 --> 01:15:03.130 align:middle line:90%
+r4 is a rabbit with ID of 4.
+
+01:15:03.130 --> 01:15:05.950 align:middle line:84%
+And then R1 and R2 are, as
+usual, what we just saw.
+
+01:15:05.950 --> 01:15:08.200 align:middle line:84%
+And then, when we grab
+the parents of r4,
+
+01:15:08.200 --> 01:15:11.800 align:middle line:84%
+it's going to be r1, which
+is this rabbit with this ID,
+
+01:15:11.800 --> 01:15:16.600 align:middle line:84%
+and r2 with this rabbit
+with this ID, right?
+
+01:15:16.600 --> 01:15:19.910 align:middle line:84%
+And then, we can
+check the equality.
+
+01:15:19.910 --> 01:15:25.000 align:middle line:84%
+So here, I can create
+r4, r5, and r6.
+
+01:15:25.000 --> 01:15:28.630 align:middle line:84%
+So r3 plus r4 and
+r4 plus r3, they
+
+01:15:28.630 --> 01:15:30.850 align:middle line:90%
+should be equivalent, right?
+
+01:15:30.850 --> 01:15:35.050 align:middle line:84%
+So here, I've got
+r5 and r6 down here.
+
+01:15:35.050 --> 01:15:37.660 align:middle line:84%
+See, I'm just running
+the double equal sign
+
+01:15:37.660 --> 01:15:42.043 align:middle line:84%
+on objects of type rabbit,
+which is pretty cool.
+
+01:15:42.043 --> 01:15:43.210 align:middle line:90%
+And they're the same, right?
+
+01:15:43.210 --> 01:15:45.190 align:middle line:84%
+Because they have
+the same two parents.
+
+01:15:45.190 --> 01:15:47.450 align:middle line:84%
+I don't care that they're
+in opposite order.
+
+01:15:47.450 --> 01:15:50.740 align:middle line:84%
+But then, r4 and r6
+have different parents,
+
+01:15:50.740 --> 01:15:52.030 align:middle line:90%
+right? r4 had 1 and 2.
+
+01:15:52.030 --> 01:15:54.940 align:middle line:90%
+And R6 had 3 and 4.
+
+01:15:54.940 --> 01:15:59.630 align:middle line:90%
+
+
+01:15:59.630 --> 01:16:00.935 align:middle line:90%
+Questions about this code?
+
+01:16:00.935 --> 01:16:05.510 align:middle line:90%
+
+
+01:16:05.510 --> 01:16:07.730 align:middle line:84%
+OK, so class variable
+is pretty cool.
+
+01:16:07.730 --> 01:16:09.840 align:middle line:84%
+You share them across
+all the instances.
+
+01:16:09.840 --> 01:16:11.930 align:middle line:84%
+So if one instance
+modifies it, they'll
+
+01:16:11.930 --> 01:16:14.100 align:middle line:84%
+be modified for all
+the other instances.
+
+01:16:14.100 --> 01:16:17.280 align:middle line:84%
+So we have one more example
+to look at next lecture.
+
+01:16:17.280 --> 01:16:19.760 align:middle line:84%
+We're actually going to
+implement our own fitness
+
+01:16:19.760 --> 01:16:21.060 align:middle line:90%
+tracker class.
+
+01:16:21.060 --> 01:16:23.210 align:middle line:84%
+So it's going to be a
+little bit more complex.
+
+01:16:23.210 --> 01:16:25.520 align:middle line:84%
+But we're going to see
+a lot of the same ideas
+
+01:16:25.520 --> 01:16:28.400 align:middle line:84%
+that we saw today, just
+in this slightly more
+
+01:16:28.400 --> 01:16:32.600 align:middle line:84%
+complex setting of implementing
+our own fitness tracker.
+
+01:16:32.600 --> 01:16:36.020 align:middle line:84%
+So it's still kind of an
+abstract thing, but more useful
+
+01:16:36.020 --> 01:16:41.110 align:middle line:84%
+than animals and rabbits and
+person and student classes.
+
+01:16:41.110 --> 01:16:55.000 align:middle line:90%

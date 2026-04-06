@@ -1,0 +1,6037 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.964 align:middle line:90%
+[SQUEAKING]
+
+00:00:01.964 --> 00:00:03.928 align:middle line:90%
+[RUSTLING]
+
+00:00:03.928 --> 00:00:06.874 align:middle line:90%
+[CLICKING]
+
+00:00:06.874 --> 00:00:16.720 align:middle line:90%
+
+
+00:00:16.720 --> 00:00:20.000 align:middle line:84%
+ANA BELL: OK, so
+let's get started.
+
+00:00:20.000 --> 00:00:22.870 align:middle line:84%
+Today's lecture
+will be the last one
+
+00:00:22.870 --> 00:00:26.440 align:middle line:84%
+we have on object oriented
+programming and creating
+
+00:00:26.440 --> 00:00:29.690 align:middle line:84%
+our own data types
+with Python classes.
+
+00:00:29.690 --> 00:00:31.420 align:middle line:84%
+So in today's
+lecture, we're going
+
+00:00:31.420 --> 00:00:35.650 align:middle line:84%
+to go through an example
+that's more involved.
+
+00:00:35.650 --> 00:00:39.580 align:middle line:84%
+We're going to be creating our
+own fitness tracker object.
+
+00:00:39.580 --> 00:00:43.720 align:middle line:84%
+And specifically, we're going to
+create a class that implements
+
+00:00:43.720 --> 00:00:45.550 align:middle line:90%
+the idea of a workout.
+
+00:00:45.550 --> 00:00:47.620 align:middle line:84%
+And the slides for
+today, are going
+
+00:00:47.620 --> 00:00:51.130 align:middle line:84%
+to feel very similar to the
+slides from Monday's lecture.
+
+00:00:51.130 --> 00:00:55.360 align:middle line:84%
+A lot of them are just kind of
+reinforcing the same ideas we
+
+00:00:55.360 --> 00:01:00.130 align:middle line:84%
+saw last lecture on creating
+getters and setters,
+
+00:01:00.130 --> 00:01:03.280 align:middle line:84%
+creating class variables,
+and the idea of inheritance.
+
+00:01:03.280 --> 00:01:05.530 align:middle line:84%
+But we're just going
+to do it in the context
+
+00:01:05.530 --> 00:01:10.680 align:middle line:84%
+of this more involved example,
+the fitness tracker, OK.
+
+00:01:10.680 --> 00:01:13.140 align:middle line:84%
+So let me remind you,
+first of all, something
+
+00:01:13.140 --> 00:01:16.200 align:middle line:84%
+we've been talking
+about and hopefully, you
+
+00:01:16.200 --> 00:01:20.310 align:middle line:84%
+understand at this point
+in our lectures on object
+
+00:01:20.310 --> 00:01:24.210 align:middle line:84%
+oriented programming, and that's
+the idea that when we write
+
+00:01:24.210 --> 00:01:26.610 align:middle line:84%
+our own object types,
+we're writing code from two
+
+00:01:26.610 --> 00:01:28.170 align:middle line:90%
+different perspectives.
+
+00:01:28.170 --> 00:01:30.930 align:middle line:84%
+The first perspective is the
+one on the left-hand side
+
+00:01:30.930 --> 00:01:33.210 align:middle line:84%
+here, where we are
+making design decisions
+
+00:01:33.210 --> 00:01:36.420 align:middle line:84%
+for how we want to implement
+this new object, this new data
+
+00:01:36.420 --> 00:01:37.270 align:middle line:90%
+type.
+
+00:01:37.270 --> 00:01:39.510 align:middle line:84%
+And when we make these
+design decisions,
+
+00:01:39.510 --> 00:01:41.340 align:middle line:84%
+we decide the name
+of the object.
+
+00:01:41.340 --> 00:01:45.360 align:middle line:84%
+We decide the attributes, which
+are either data or procedures
+
+00:01:45.360 --> 00:01:47.900 align:middle line:90%
+that we want the object to have.
+
+00:01:47.900 --> 00:01:50.600 align:middle line:84%
+And then once we've
+decided on this,
+
+00:01:50.600 --> 00:01:52.460 align:middle line:84%
+and we've implemented
+our data type,
+
+00:01:52.460 --> 00:01:55.460 align:middle line:84%
+then we can start to
+use the data type.
+
+00:01:55.460 --> 00:01:58.430 align:middle line:84%
+And to use it, we are
+creating a whole bunch
+
+00:01:58.430 --> 00:02:00.680 align:middle line:90%
+of objects of this type.
+
+00:02:00.680 --> 00:02:02.810 align:middle line:84%
+And we're manipulating
+these objects
+
+00:02:02.810 --> 00:02:05.310 align:middle line:84%
+in some interesting
+and useful way.
+
+00:02:05.310 --> 00:02:07.070 align:middle line:84%
+So the left-hand
+side, we're creating
+
+00:02:07.070 --> 00:02:10.190 align:middle line:84%
+this blueprint, this
+abstract notion of an object.
+
+00:02:10.190 --> 00:02:13.820 align:middle line:84%
+And the right-hand side, we
+are creating actual instances
+
+00:02:13.820 --> 00:02:14.930 align:middle line:90%
+that we manipulate.
+
+00:02:14.930 --> 00:02:18.230 align:middle line:84%
+So up this object
+oriented set of lectures,
+
+00:02:18.230 --> 00:02:21.170 align:middle line:84%
+we've really just been working
+with the right-hand side.
+
+00:02:21.170 --> 00:02:24.110 align:middle line:84%
+We've been working with objects
+that other people have created,
+
+00:02:24.110 --> 00:02:26.270 align:middle line:84%
+but the big idea of
+these set of lectures
+
+00:02:26.270 --> 00:02:29.100 align:middle line:84%
+is that we now get to
+create our own object types,
+
+00:02:29.100 --> 00:02:31.970 align:middle line:84%
+so we get to write
+this code here.
+
+00:02:31.970 --> 00:02:35.660 align:middle line:84%
+OK, so we're going to
+write code to create
+
+00:02:35.660 --> 00:02:38.570 align:middle line:90%
+a tracker for workouts.
+
+00:02:38.570 --> 00:02:41.180 align:middle line:84%
+And today's lecture,
+there's going
+
+00:02:41.180 --> 00:02:43.730 align:middle line:84%
+to be a sequence of things
+that we're going to do.
+
+00:02:43.730 --> 00:02:46.320 align:middle line:84%
+We're going to start out with
+a really simple workout object.
+
+00:02:46.320 --> 00:02:47.903 align:middle line:84%
+And then we're going
+to improve on it.
+
+00:02:47.903 --> 00:02:50.150 align:middle line:84%
+So I've actually set
+out a little roadmap
+
+00:02:50.150 --> 00:02:52.440 align:middle line:84%
+here on the board
+that we can follow.
+
+00:02:52.440 --> 00:02:54.690 align:middle line:84%
+So every time we finish
+sort of a little section,
+
+00:02:54.690 --> 00:02:56.210 align:middle line:84%
+we'll check it
+off so just easier
+
+00:02:56.210 --> 00:02:59.370 align:middle line:84%
+to understand where we
+are in today's lecture.
+
+00:02:59.370 --> 00:03:02.690 align:middle line:84%
+So we're going to create, first,
+just a very simple workout
+
+00:03:02.690 --> 00:03:06.980 align:middle line:84%
+object in the same spirit that
+we've been creating objects.
+
+00:03:06.980 --> 00:03:08.840 align:middle line:84%
+Then we're going
+to improve on it
+
+00:03:08.840 --> 00:03:13.080 align:middle line:84%
+a little bit by adding nicer
+methods and things like that.
+
+00:03:13.080 --> 00:03:15.560 align:middle line:84%
+And then we're going to go
+through the idea of inheritance
+
+00:03:15.560 --> 00:03:18.110 align:middle line:84%
+to create very specific
+types of workouts.
+
+00:03:18.110 --> 00:03:21.110 align:middle line:84%
+So if we think
+about workouts, we
+
+00:03:21.110 --> 00:03:23.390 align:middle line:84%
+have many different
+kinds of workouts, right.
+
+00:03:23.390 --> 00:03:26.390 align:middle line:84%
+We've got biking,
+swimming, running,
+
+00:03:26.390 --> 00:03:30.500 align:middle line:84%
+but really, at the core of all
+these workouts, if we think
+
+00:03:30.500 --> 00:03:34.440 align:middle line:84%
+about the information related
+to just a very generic workout,
+
+00:03:34.440 --> 00:03:36.690 align:middle line:84%
+not a running or swimming
+specific one or a biking
+
+00:03:36.690 --> 00:03:39.810 align:middle line:84%
+one, just a generic
+workout, there
+
+00:03:39.810 --> 00:03:43.950 align:middle line:84%
+are some common properties that
+all of these workouts have.
+
+00:03:43.950 --> 00:03:47.400 align:middle line:90%
+So I've listed them here.
+
+00:03:47.400 --> 00:03:49.980 align:middle line:84%
+A workout might have an
+icon associated with it.
+
+00:03:49.980 --> 00:03:52.230 align:middle line:84%
+So this or this or this,
+but whatever it may be,
+
+00:03:52.230 --> 00:03:57.060 align:middle line:84%
+there is an icon
+property for a workout.
+
+00:03:57.060 --> 00:03:59.970 align:middle line:84%
+The kind of workout so
+biking, swimming, running,
+
+00:03:59.970 --> 00:04:01.170 align:middle line:90%
+things like that.
+
+00:04:01.170 --> 00:04:04.240 align:middle line:84%
+A date, so maybe a start
+date and an end date,
+
+00:04:04.240 --> 00:04:06.690 align:middle line:84%
+start time, end time,
+that kind of information.
+
+00:04:06.690 --> 00:04:08.970 align:middle line:84%
+The heart rate, maybe
+average heart rate
+
+00:04:08.970 --> 00:04:14.040 align:middle line:84%
+throughout that entire activity,
+the distance and the number
+
+00:04:14.040 --> 00:04:15.420 align:middle line:90%
+of calories burned.
+
+00:04:15.420 --> 00:04:18.149 align:middle line:84%
+All of these properties are
+common to any kind of workout
+
+00:04:18.149 --> 00:04:21.310 align:middle line:90%
+that we might want to create.
+
+00:04:21.310 --> 00:04:24.790 align:middle line:84%
+But now that we have
+specific kinds of workouts
+
+00:04:24.790 --> 00:04:28.280 align:middle line:84%
+that we might want to create,
+we can actually think well,
+
+00:04:28.280 --> 00:04:30.370 align:middle line:84%
+in addition to these
+common properties,
+
+00:04:30.370 --> 00:04:32.950 align:middle line:84%
+a swimming specific
+workout might actually
+
+00:04:32.950 --> 00:04:36.250 align:middle line:84%
+have some more information
+that we'd like to save,
+
+00:04:36.250 --> 00:04:39.790 align:middle line:84%
+and we'd like to allow the user
+to work with so the swimming
+
+00:04:39.790 --> 00:04:42.280 align:middle line:84%
+pace, maybe the stroke type,
+the 100-yard splits, things
+
+00:04:42.280 --> 00:04:43.690 align:middle line:90%
+like that for swimming.
+
+00:04:43.690 --> 00:04:45.790 align:middle line:84%
+And for running, we
+might want to show
+
+00:04:45.790 --> 00:04:47.530 align:middle line:84%
+the user the cadence,
+the running pace,
+
+00:04:47.530 --> 00:04:49.870 align:middle line:84%
+the mile splits, and
+maybe the total elevation
+
+00:04:49.870 --> 00:04:52.710 align:middle line:90%
+throughout that run.
+
+00:04:52.710 --> 00:04:54.540 align:middle line:84%
+But the idea here
+is that we have
+
+00:04:54.540 --> 00:04:56.700 align:middle line:84%
+some core set of
+properties, that no matter
+
+00:04:56.700 --> 00:04:58.470 align:middle line:84%
+what kind of workout
+we're creating,
+
+00:04:58.470 --> 00:05:01.350 align:middle line:84%
+we would like to
+save, and we would
+
+00:05:01.350 --> 00:05:06.780 align:middle line:84%
+like to allow the user to store
+and to do operations with.
+
+00:05:06.780 --> 00:05:08.900 align:middle line:84%
+Now when we implement
+our workout class,
+
+00:05:08.900 --> 00:05:10.650 align:middle line:84%
+we're not going to
+implement all of these.
+
+00:05:10.650 --> 00:05:11.820 align:middle line:90%
+They're not all necessary.
+
+00:05:11.820 --> 00:05:14.140 align:middle line:84%
+We're going to just keep
+some of the core ones.
+
+00:05:14.140 --> 00:05:16.800 align:middle line:84%
+So the ones we're actually
+going to implement in this class
+
+00:05:16.800 --> 00:05:18.570 align:middle line:90%
+are italicized.
+
+00:05:18.570 --> 00:05:21.330 align:middle line:84%
+So we're going to keep the
+icon and the kind of workout,
+
+00:05:21.330 --> 00:05:24.330 align:middle line:84%
+the start time,
+end times, and then
+
+00:05:24.330 --> 00:05:25.620 align:middle line:90%
+the number of calories burned.
+
+00:05:25.620 --> 00:05:26.995 align:middle line:84%
+That's something
+that we're going
+
+00:05:26.995 --> 00:05:31.980 align:middle line:84%
+to just save as the common set
+of attributes for a workout.
+
+00:05:31.980 --> 00:05:34.380 align:middle line:84%
+But of course, you can see
+that if you make the design
+
+00:05:34.380 --> 00:05:36.510 align:middle line:84%
+decision to improve
+upon this workout class,
+
+00:05:36.510 --> 00:05:40.550 align:middle line:84%
+you might include a bunch of
+these other ones, as well.
+
+00:05:40.550 --> 00:05:45.840 align:middle line:84%
+OK, so we're going to have to
+decide the data attributes.
+
+00:05:45.840 --> 00:05:48.110 align:middle line:84%
+So we just mentioned on
+the previous slide, when
+
+00:05:48.110 --> 00:05:50.570 align:middle line:84%
+we make design decisions,
+we figure out the attributes
+
+00:05:50.570 --> 00:05:53.640 align:middle line:84%
+that we'd like to have
+for our object type.
+
+00:05:53.640 --> 00:05:55.640 align:middle line:84%
+So that's the data
+and the behaviors.
+
+00:05:55.640 --> 00:05:57.980 align:middle line:84%
+For the data for
+our workout, we've
+
+00:05:57.980 --> 00:05:59.960 align:middle line:84%
+decided it would be
+the start time, the end
+
+00:05:59.960 --> 00:06:01.820 align:middle line:84%
+time, and the number
+of calories burned.
+
+00:06:01.820 --> 00:06:05.630 align:middle line:84%
+So those three things together
+maybe start time is a string,
+
+00:06:05.630 --> 00:06:07.340 align:middle line:84%
+end time is a
+string, and calories
+
+00:06:07.340 --> 00:06:10.160 align:middle line:84%
+is a number, either a
+float or int or whatever.
+
+00:06:10.160 --> 00:06:15.680 align:middle line:84%
+Those three things together
+make up the object a workout.
+
+00:06:15.680 --> 00:06:18.510 align:middle line:84%
+And then in terms of
+functional attributes,
+
+00:06:18.510 --> 00:06:21.450 align:middle line:84%
+so these are the methods
+that our object might have,
+
+00:06:21.450 --> 00:06:24.170 align:middle line:84%
+well, we can have, of
+course, the ability
+
+00:06:24.170 --> 00:06:26.420 align:middle line:84%
+to tell us the
+number of calories
+
+00:06:26.420 --> 00:06:28.640 align:middle line:84%
+burned, so something
+like a getter method
+
+00:06:28.640 --> 00:06:30.380 align:middle line:84%
+to set the number
+of calories burned
+
+00:06:30.380 --> 00:06:34.070 align:middle line:84%
+if we accidentally inputted
+the wrong number, reset it.
+
+00:06:34.070 --> 00:06:38.150 align:middle line:84%
+And then maybe something like
+displaying an information card.
+
+00:06:38.150 --> 00:06:41.570 align:middle line:84%
+So something like
+this if the user
+
+00:06:41.570 --> 00:06:43.620 align:middle line:84%
+asks us to print
+a workout object,
+
+00:06:43.620 --> 00:06:49.170 align:middle line:84%
+we might display information
+in this nice manner here.
+
+00:06:49.170 --> 00:06:51.910 align:middle line:84%
+All right, so let's
+start defining our class.
+
+00:06:51.910 --> 00:06:53.880 align:middle line:84%
+So this is a very
+simple workout class.
+
+00:06:53.880 --> 00:06:57.240 align:middle line:84%
+So we're going to do the box
+number one up there before we
+
+00:06:57.240 --> 00:06:58.060 align:middle line:90%
+improve on it.
+
+00:06:58.060 --> 00:06:59.760 align:middle line:84%
+So this is in the
+same spirit as we
+
+00:06:59.760 --> 00:07:03.130 align:middle line:84%
+have been defining classes
+in the past three lectures,
+
+00:07:03.130 --> 00:07:03.630 align:middle line:90%
+all right.
+
+00:07:03.630 --> 00:07:06.900 align:middle line:84%
+So we tell Python we're
+creating a new object
+
+00:07:06.900 --> 00:07:10.630 align:middle line:84%
+by saying this is a class
+and the name of this object.
+
+00:07:10.630 --> 00:07:13.260 align:middle line:84%
+So the type of this
+object is Workout,
+
+00:07:13.260 --> 00:07:17.130 align:middle line:84%
+and the parent of this object
+is the generic Python object,
+
+00:07:17.130 --> 00:07:19.140 align:middle line:90%
+so far so good, right.
+
+00:07:19.140 --> 00:07:22.650 align:middle line:84%
+Now, the first method we have
+to implement is the init method.
+
+00:07:22.650 --> 00:07:25.140 align:middle line:84%
+It tells Python how to
+create an object of type
+
+00:07:25.140 --> 00:07:27.300 align:middle line:90%
+Workout, the constructor.
+
+00:07:27.300 --> 00:07:29.700 align:middle line:84%
+And we've got a bunch
+of parameters in here
+
+00:07:29.700 --> 00:07:32.010 align:middle line:84%
+because it's just a
+regular function that's
+
+00:07:32.010 --> 00:07:33.330 align:middle line:90%
+a little bit special.
+
+00:07:33.330 --> 00:07:37.080 align:middle line:84%
+The first parameter of every
+method is, of course, self.
+
+00:07:37.080 --> 00:07:41.490 align:middle line:84%
+Because when we call a method,
+we call it on an object.
+
+00:07:41.490 --> 00:07:44.140 align:middle line:84%
+So some object dot
+this method name.
+
+00:07:44.140 --> 00:07:47.100 align:middle line:84%
+The thing before the
+dot, effectively,
+
+00:07:47.100 --> 00:07:49.600 align:middle line:84%
+gets mapped to the
+variable self, which
+
+00:07:49.600 --> 00:07:51.310 align:middle line:84%
+is why every one
+of these methods
+
+00:07:51.310 --> 00:07:53.840 align:middle line:90%
+has self as the first parameter.
+
+00:07:53.840 --> 00:07:56.290 align:middle line:84%
+And then we've got a whole
+bunch of other parameters
+
+00:07:56.290 --> 00:07:58.880 align:middle line:84%
+for how we would like to
+initialize the Workout object.
+
+00:07:58.880 --> 00:08:02.500 align:middle line:84%
+So we're going to say, when
+we create a Workout object,
+
+00:08:02.500 --> 00:08:05.020 align:middle line:84%
+we're going to tell it
+the start time, the end
+
+00:08:05.020 --> 00:08:09.480 align:middle line:84%
+time, and the number
+of calories burned.
+
+00:08:09.480 --> 00:08:13.350 align:middle line:84%
+So that's the function
+stub, I guess.
+
+00:08:13.350 --> 00:08:15.570 align:middle line:84%
+That's how you
+create the object.
+
+00:08:15.570 --> 00:08:17.790 align:middle line:84%
+And then what does this
+function actually do?
+
+00:08:17.790 --> 00:08:19.470 align:middle line:84%
+What does this
+method actually do?
+
+00:08:19.470 --> 00:08:22.020 align:middle line:84%
+Well, it does some
+of the usual things
+
+00:08:22.020 --> 00:08:24.490 align:middle line:90%
+that we know at this point.
+
+00:08:24.490 --> 00:08:28.020 align:middle line:84%
+So it basically maps every
+one of these input parameters
+
+00:08:28.020 --> 00:08:32.970 align:middle line:84%
+to data attributes self.start,
+self.end, and self.calories,
+
+00:08:32.970 --> 00:08:34.390 align:middle line:90%
+OK.
+
+00:08:34.390 --> 00:08:37.330 align:middle line:84%
+But in addition to
+just saving these
+
+00:08:37.330 --> 00:08:38.950 align:middle line:84%
+as data attributes,
+the things that
+
+00:08:38.950 --> 00:08:40.900 align:middle line:84%
+are passed in when
+you create the object,
+
+00:08:40.900 --> 00:08:42.669 align:middle line:84%
+we would like to
+do two more things.
+
+00:08:42.669 --> 00:08:45.430 align:middle line:84%
+We're creating two
+more data attributes.
+
+00:08:45.430 --> 00:08:47.800 align:middle line:84%
+So in total, a workout
+object is defined
+
+00:08:47.800 --> 00:08:49.840 align:middle line:90%
+by five data attributes.
+
+00:08:49.840 --> 00:08:53.530 align:middle line:84%
+These last two data attributes,
+we don't need to pass in.
+
+00:08:53.530 --> 00:08:57.940 align:middle line:84%
+We're just going to, by
+default, make them two strings.
+
+00:08:57.940 --> 00:09:03.130 align:middle line:84%
+The icon is going to be the
+string, this sweating person
+
+00:09:03.130 --> 00:09:04.060 align:middle line:90%
+emoji.
+
+00:09:04.060 --> 00:09:06.080 align:middle line:84%
+And you can have
+emojis inside strings,
+
+00:09:06.080 --> 00:09:07.950 align:middle line:90%
+which is actually pretty cool.
+
+00:09:07.950 --> 00:09:10.598 align:middle line:84%
+And the kind is going to be
+just the kind of workout,
+
+00:09:10.598 --> 00:09:12.890 align:middle line:84%
+so we're just going to set
+it to be the string workout.
+
+00:09:12.890 --> 00:09:14.473 align:middle line:84%
+When we create running
+workouts, it'll
+
+00:09:14.473 --> 00:09:15.650 align:middle line:90%
+just be the string running.
+
+00:09:15.650 --> 00:09:18.260 align:middle line:84%
+When we create biking workouts,
+it'll be a string biking.
+
+00:09:18.260 --> 00:09:20.040 align:middle line:90%
+Whatever you want it to be.
+
+00:09:20.040 --> 00:09:23.510 align:middle line:84%
+And we're going to see where
+these show up later on.
+
+00:09:23.510 --> 00:09:26.540 align:middle line:84%
+OK, so that's the definition
+of my class Workout,
+
+00:09:26.540 --> 00:09:29.250 align:middle line:90%
+and then, for now, that's it.
+
+00:09:29.250 --> 00:09:31.550 align:middle line:84%
+That's all we have in terms
+of the class definition.
+
+00:09:31.550 --> 00:09:34.760 align:middle line:84%
+Now what happens when we create
+an actual Workout object?
+
+00:09:34.760 --> 00:09:37.350 align:middle line:84%
+Well, we invoke the
+name of the class.
+
+00:09:37.350 --> 00:09:40.520 align:middle line:90%
+So we say here, Workout.
+
+00:09:40.520 --> 00:09:43.280 align:middle line:84%
+And we're going to save this
+object, to the right hand
+
+00:09:43.280 --> 00:09:47.120 align:middle line:84%
+side of the equal sign,
+as variable my_workout,
+
+00:09:47.120 --> 00:09:49.130 align:middle line:90%
+so far review.
+
+00:09:49.130 --> 00:09:53.540 align:middle line:84%
+We pass in the parameters that
+the Workout object expects.
+
+00:09:53.540 --> 00:09:55.850 align:middle line:84%
+So here's a string
+representing the start time,
+
+00:09:55.850 --> 00:09:57.710 align:middle line:84%
+a string representing
+the end time,
+
+00:09:57.710 --> 00:10:04.320 align:middle line:84%
+and the calories burned for
+this particular workout, 200.
+
+00:10:04.320 --> 00:10:06.740 align:middle line:90%
+Yes, good.
+
+00:10:06.740 --> 00:10:11.160 align:middle line:84%
+OK, so then we can
+add a whole bunch
+
+00:10:11.160 --> 00:10:12.870 align:middle line:90%
+more methods to our class.
+
+00:10:12.870 --> 00:10:14.340 align:middle line:90%
+That was just the init method.
+
+00:10:14.340 --> 00:10:16.560 align:middle line:84%
+But last lecture, I
+mentioned that it's
+
+00:10:16.560 --> 00:10:19.770 align:middle line:84%
+important to add
+getters and setter
+
+00:10:19.770 --> 00:10:24.600 align:middle line:84%
+methods to allow the user
+to grab or set various data
+
+00:10:24.600 --> 00:10:25.630 align:middle line:90%
+attributes.
+
+00:10:25.630 --> 00:10:28.020 align:middle line:84%
+So here, I've got
+three getter methods
+
+00:10:28.020 --> 00:10:30.570 align:middle line:84%
+to grab for me the calories,
+start time, and end time,
+
+00:10:30.570 --> 00:10:33.990 align:middle line:84%
+and three setter methods
+to set the calories,
+
+00:10:33.990 --> 00:10:35.400 align:middle line:90%
+start time, and end time.
+
+00:10:35.400 --> 00:10:38.750 align:middle line:90%
+
+
+00:10:38.750 --> 00:10:42.773 align:middle line:84%
+All right, so what I
+wanted to show you,
+
+00:10:42.773 --> 00:10:44.440 align:middle line:84%
+and this is not
+something we've actually
+
+00:10:44.440 --> 00:10:48.220 align:middle line:84%
+seen before, I wanted to show
+you that every time you create
+
+00:10:48.220 --> 00:10:52.000 align:middle line:84%
+an object of some type or even
+an object that already exists,
+
+00:10:52.000 --> 00:10:57.190 align:middle line:84%
+you can actually look
+into where this object is
+
+00:10:57.190 --> 00:10:59.500 align:middle line:84%
+stored in memory,
+which is kind of cool.
+
+00:10:59.500 --> 00:11:02.440 align:middle line:84%
+So if we think about
+the class definition
+
+00:11:02.440 --> 00:11:03.440 align:middle line:90%
+that we've done so far.
+
+00:11:03.440 --> 00:11:05.170 align:middle line:84%
+So not creating an
+actual instance,
+
+00:11:05.170 --> 00:11:07.750 align:middle line:90%
+just defining the class.
+
+00:11:07.750 --> 00:11:09.670 align:middle line:84%
+This class definition
+is actually
+
+00:11:09.670 --> 00:11:13.900 align:middle line:84%
+kind of like an object
+stored away in Python memory.
+
+00:11:13.900 --> 00:11:16.480 align:middle line:90%
+So here I have my Workout class.
+
+00:11:16.480 --> 00:11:19.600 align:middle line:84%
+And associated with my
+Workout class definition,
+
+00:11:19.600 --> 00:11:22.870 align:middle line:84%
+Python knows about
+all of these methods
+
+00:11:22.870 --> 00:11:25.900 align:middle line:84%
+that you're allowed to do
+with this Python class.
+
+00:11:25.900 --> 00:11:28.540 align:middle line:84%
+And this is called the
+class state dictionary.
+
+00:11:28.540 --> 00:11:30.250 align:middle line:84%
+So it's a dictionary
+that basically
+
+00:11:30.250 --> 00:11:32.630 align:middle line:90%
+holds the state of your object.
+
+00:11:32.630 --> 00:11:36.200 align:middle line:84%
+So I wanted to show you what
+that looks like in code.
+
+00:11:36.200 --> 00:11:38.290 align:middle line:90%
+So this is my Workout class.
+
+00:11:38.290 --> 00:11:41.570 align:middle line:84%
+And the way you access
+the state dictionary
+
+00:11:41.570 --> 00:11:44.160 align:middle line:84%
+is by invoking the
+name of your class.
+
+00:11:44.160 --> 00:11:47.090 align:middle line:84%
+So not an instance, the
+name of the actual class
+
+00:11:47.090 --> 00:11:50.930 align:middle line:84%
+dot this Dunder method
+double underscore dict double
+
+00:11:50.930 --> 00:11:51.530 align:middle line:90%
+underscore.
+
+00:11:51.530 --> 00:11:54.710 align:middle line:84%
+So this holds the
+state dictionary.
+
+00:11:54.710 --> 00:11:57.620 align:middle line:84%
+And if we just access
+the keys, we're
+
+00:11:57.620 --> 00:12:00.080 align:middle line:84%
+going to see here
+every single method
+
+00:12:00.080 --> 00:12:02.660 align:middle line:90%
+we've defined in our class.
+
+00:12:02.660 --> 00:12:04.520 align:middle line:84%
+So you see here,
+here's my dictionary.
+
+00:12:04.520 --> 00:12:07.550 align:middle line:84%
+I could cast it to a list if
+I wanted to but not necessary.
+
+00:12:07.550 --> 00:12:10.460 align:middle line:84%
+But you can see every single
+method that we've defined.
+
+00:12:10.460 --> 00:12:12.470 align:middle line:84%
+So all our getters,
+all our setters,
+
+00:12:12.470 --> 00:12:16.220 align:middle line:84%
+the init method, the
+double underscore doc
+
+00:12:16.220 --> 00:12:21.770 align:middle line:84%
+actually grabs for us this
+docstring that you've put right
+
+00:12:21.770 --> 00:12:25.670 align:middle line:90%
+under the class definition.
+
+00:12:25.670 --> 00:12:27.210 align:middle line:90%
+So that's kind of cool.
+
+00:12:27.210 --> 00:12:30.080 align:middle line:84%
+So that's the dictionary keys,
+and of course, as we know,
+
+00:12:30.080 --> 00:12:32.370 align:middle line:84%
+keys have values
+associated with them.
+
+00:12:32.370 --> 00:12:35.540 align:middle line:84%
+So the values associated
+with each one of these keys
+
+00:12:35.540 --> 00:12:38.640 align:middle line:84%
+is going to be, and
+we can see here,
+
+00:12:38.640 --> 00:12:43.940 align:middle line:84%
+so for example, the value
+associated with the docstring,
+
+00:12:43.940 --> 00:12:48.380 align:middle line:84%
+is going to be, literally,
+the thing that I printed out--
+
+00:12:48.380 --> 00:12:50.750 align:middle line:84%
+the little docstring
+that I put right
+
+00:12:50.750 --> 00:12:53.150 align:middle line:90%
+underneath my class definition.
+
+00:12:53.150 --> 00:12:55.310 align:middle line:84%
+So now it knows the
+docstring for this class
+
+00:12:55.310 --> 00:12:56.630 align:middle line:90%
+that I just created.
+
+00:12:56.630 --> 00:13:00.485 align:middle line:84%
+And the values associated with
+my getter methods and my setter
+
+00:13:00.485 --> 00:13:03.110 align:middle line:84%
+methods and the init method and
+all the methods that I created,
+
+00:13:03.110 --> 00:13:05.900 align:middle line:84%
+are just the locations
+in memory where Python
+
+00:13:05.900 --> 00:13:08.180 align:middle line:90%
+can find these methods to run.
+
+00:13:08.180 --> 00:13:11.030 align:middle line:84%
+They don't have actual
+values associated with them,
+
+00:13:11.030 --> 00:13:13.790 align:middle line:84%
+of course, because they're
+just method definitions,
+
+00:13:13.790 --> 00:13:17.150 align:middle line:84%
+but Python just
+knows where to go
+
+00:13:17.150 --> 00:13:20.890 align:middle line:84%
+in which memory location to
+actually run this function.
+
+00:13:20.890 --> 00:13:24.910 align:middle line:84%
+OK, so that's kind
+of cool to know.
+
+00:13:24.910 --> 00:13:28.070 align:middle line:90%
+
+
+00:13:28.070 --> 00:13:31.670 align:middle line:84%
+OK, so that's the state
+dictionary of my definition,
+
+00:13:31.670 --> 00:13:34.260 align:middle line:90%
+the implementation of my class.
+
+00:13:34.260 --> 00:13:37.420 align:middle line:84%
+Now, what happens when I
+create an actual instance?
+
+00:13:37.420 --> 00:13:39.900 align:middle line:84%
+So here I've got
+my_workout equals,
+
+00:13:39.900 --> 00:13:43.830 align:middle line:84%
+and now I've got this actual
+instance of this class type
+
+00:13:43.830 --> 00:13:45.030 align:middle line:90%
+Workout.
+
+00:13:45.030 --> 00:13:49.410 align:middle line:84%
+When Python sees this line, it
+says, OK, what kind of object
+
+00:13:49.410 --> 00:13:50.580 align:middle line:90%
+do you want to create?
+
+00:13:50.580 --> 00:13:52.120 align:middle line:90%
+A workout object.
+
+00:13:52.120 --> 00:13:55.170 align:middle line:84%
+It looks at the init method
+of that Workout object,
+
+00:13:55.170 --> 00:13:58.040 align:middle line:84%
+and then it runs all the lines
+associated with that Workout
+
+00:13:58.040 --> 00:13:58.540 align:middle line:90%
+object.
+
+00:13:58.540 --> 00:14:01.590 align:middle line:84%
+So now it creates a
+new object in memory
+
+00:14:01.590 --> 00:14:03.960 align:middle line:84%
+puts that at some
+memory location.
+
+00:14:03.960 --> 00:14:08.160 align:middle line:84%
+This object is going to
+be of type Workout class.
+
+00:14:08.160 --> 00:14:12.630 align:middle line:84%
+And now this object is going to
+have its own state dictionary,
+
+00:14:12.630 --> 00:14:15.660 align:middle line:84%
+in the object state,
+dictionary we're not storing
+
+00:14:15.660 --> 00:14:17.340 align:middle line:90%
+methods or things like that.
+
+00:14:17.340 --> 00:14:20.430 align:middle line:84%
+We're storing the actual
+data attributes associated
+
+00:14:20.430 --> 00:14:22.620 align:middle line:90%
+with this object, all right.
+
+00:14:22.620 --> 00:14:24.875 align:middle line:84%
+So this object, all
+the data attributes
+
+00:14:24.875 --> 00:14:27.000 align:middle line:84%
+are all the things that
+you access via the self dot
+
+00:14:27.000 --> 00:14:30.630 align:middle line:84%
+keyword, self dot icon, self dot
+kind, self dot start, self dot
+
+00:14:30.630 --> 00:14:33.100 align:middle line:90%
+end, and self dot calories.
+
+00:14:33.100 --> 00:14:35.140 align:middle line:84%
+So we can actually
+go in the code,
+
+00:14:35.140 --> 00:14:38.440 align:middle line:84%
+just like we did when we looked
+at the class state dictionary,
+
+00:14:38.440 --> 00:14:42.370 align:middle line:84%
+and look at the state dictionary
+for one specific object, one
+
+00:14:42.370 --> 00:14:43.700 align:middle line:90%
+instance.
+
+00:14:43.700 --> 00:14:46.960 align:middle line:84%
+So again, we can call the
+double underscore dict
+
+00:14:46.960 --> 00:14:49.700 align:middle line:90%
+method on this instance.
+
+00:14:49.700 --> 00:14:51.640 align:middle line:84%
+So now I have an
+actual object that has
+
+00:14:51.640 --> 00:14:53.720 align:middle line:90%
+some values associated with it.
+
+00:14:53.720 --> 00:14:56.890 align:middle line:84%
+And if I look at
+just the keys, we
+
+00:14:56.890 --> 00:14:59.230 align:middle line:84%
+see these are the data
+attributes associated
+
+00:14:59.230 --> 00:15:01.990 align:middle line:90%
+with an object of type Workout.
+
+00:15:01.990 --> 00:15:04.810 align:middle line:84%
+I've got my five
+data attributes.
+
+00:15:04.810 --> 00:15:07.810 align:middle line:84%
+And then the values
+associated with those keys,
+
+00:15:07.810 --> 00:15:11.560 align:middle line:84%
+are going to be the values that
+are specific to this object.
+
+00:15:11.560 --> 00:15:15.640 align:middle line:84%
+So my start is this date here,
+my end is this date here,
+
+00:15:15.640 --> 00:15:17.140 align:middle line:90%
+calories was 200.
+
+00:15:17.140 --> 00:15:19.270 align:middle line:84%
+The icon was the little
+sweaty person emoji,
+
+00:15:19.270 --> 00:15:21.250 align:middle line:84%
+and the kind of
+workout is workout.
+
+00:15:21.250 --> 00:15:25.920 align:middle line:90%
+
+
+00:15:25.920 --> 00:15:28.380 align:middle line:84%
+So it's kind of neat
+to be able to look
+
+00:15:28.380 --> 00:15:30.780 align:middle line:84%
+into that sort of
+detail of where things
+
+00:15:30.780 --> 00:15:33.690 align:middle line:90%
+are stored inside memory.
+
+00:15:33.690 --> 00:15:38.290 align:middle line:84%
+OK, so we saw how to create
+an instance of an object,
+
+00:15:38.290 --> 00:15:41.950 align:middle line:84%
+and we can create a whole bunch
+of workouts that we then store.
+
+00:15:41.950 --> 00:15:44.860 align:middle line:84%
+And then we can use
+dot notation to access
+
+00:15:44.860 --> 00:15:46.210 align:middle line:90%
+all of these attributes.
+
+00:15:46.210 --> 00:15:48.850 align:middle line:84%
+So we can either access
+attributes directly,
+
+00:15:48.850 --> 00:15:50.530 align:middle line:90%
+or we can access methods.
+
+00:15:50.530 --> 00:15:51.550 align:middle line:90%
+We already know this.
+
+00:15:51.550 --> 00:15:57.100 align:middle line:84%
+So last lecture, I said that you
+can use dot notation to access
+
+00:15:57.100 --> 00:15:58.100 align:middle line:90%
+data attributes.
+
+00:15:58.100 --> 00:16:01.390 align:middle line:84%
+So here we're accessing
+the calories value.
+
+00:16:01.390 --> 00:16:04.180 align:middle line:84%
+And that's fine,
+but what's preferred
+
+00:16:04.180 --> 00:16:06.790 align:middle line:90%
+is to use the getter methods.
+
+00:16:06.790 --> 00:16:09.580 align:middle line:84%
+so get_calories will,
+in this particular case,
+
+00:16:09.580 --> 00:16:12.280 align:middle line:84%
+return the exact same
+value as just accessing
+
+00:16:12.280 --> 00:16:15.030 align:middle line:90%
+the calories data attribute.
+
+00:16:15.030 --> 00:16:18.240 align:middle line:84%
+But the note that I
+made last lecture,
+
+00:16:18.240 --> 00:16:20.880 align:middle line:84%
+was that it was better
+to use a getter method
+
+00:16:20.880 --> 00:16:24.930 align:middle line:84%
+because the implementation
+behind the scenes might change.
+
+00:16:24.930 --> 00:16:27.600 align:middle line:84%
+And if the implementation
+changes, then
+
+00:16:27.600 --> 00:16:30.990 align:middle line:84%
+if you access the calories
+method directly, or sorry,
+
+00:16:30.990 --> 00:16:32.730 align:middle line:84%
+the calories data
+attribute directly,
+
+00:16:32.730 --> 00:16:35.170 align:middle line:90%
+your code might crash.
+
+00:16:35.170 --> 00:16:37.210 align:middle line:84%
+But not only that,
+somebody who's
+
+00:16:37.210 --> 00:16:41.380 align:middle line:84%
+writing a getter method
+for this workout function,
+
+00:16:41.380 --> 00:16:45.610 align:middle line:84%
+might actually make that method
+be a lot more complex than just
+
+00:16:45.610 --> 00:16:47.500 align:middle line:90%
+returning that data attribute.
+
+00:16:47.500 --> 00:16:50.500 align:middle line:84%
+And that's what we're going
+to see in the next slide.
+
+00:16:50.500 --> 00:16:55.240 align:middle line:84%
+So the idea behind using
+these consistent methods,
+
+00:16:55.240 --> 00:16:57.400 align:middle line:84%
+instead of accessing
+using data attributes,
+
+00:16:57.400 --> 00:17:01.510 align:middle line:84%
+is that you want to
+keep information hidden.
+
+00:17:01.510 --> 00:17:03.190 align:middle line:84%
+You don't want to
+start messing around
+
+00:17:03.190 --> 00:17:05.380 align:middle line:84%
+with looking at how
+something is implemented.
+
+00:17:05.380 --> 00:17:07.930 align:middle line:84%
+Because that goes against
+the principle of abstraction,
+
+00:17:07.930 --> 00:17:10.660 align:middle line:84%
+modularity, and
+information hiding.
+
+00:17:10.660 --> 00:17:12.910 align:middle line:84%
+You want to keep things
+hidden because you
+
+00:17:12.910 --> 00:17:16.450 align:middle line:84%
+want to use the objects that
+somebody else has created
+
+00:17:16.450 --> 00:17:18.190 align:middle line:90%
+in a nicely consistent manner.
+
+00:17:18.190 --> 00:17:20.290 align:middle line:84%
+The way we use them
+in a consistent manner
+
+00:17:20.290 --> 00:17:25.150 align:middle line:84%
+is by always using methods that
+are associated with that object
+
+00:17:25.150 --> 00:17:26.710 align:middle line:90%
+type.
+
+00:17:26.710 --> 00:17:28.900 align:middle line:84%
+And so using getter
+methods might
+
+00:17:28.900 --> 00:17:31.510 align:middle line:84%
+have seemed inconsequential
+when we wrote the Animal
+
+00:17:31.510 --> 00:17:33.610 align:middle line:84%
+class last lecture,
+but it's going
+
+00:17:33.610 --> 00:17:38.420 align:middle line:84%
+to be a lot more important
+in this particular lecture.
+
+00:17:38.420 --> 00:17:43.890 align:middle line:84%
+So with that, we've finished
+our simple Workout class.
+
+00:17:43.890 --> 00:17:47.240 align:middle line:84%
+And now we're going to
+change the implementation
+
+00:17:47.240 --> 00:17:49.400 align:middle line:90%
+just a little bit.
+
+00:17:49.400 --> 00:17:51.170 align:middle line:84%
+And what we're going
+to do is, we're
+
+00:17:51.170 --> 00:17:54.320 align:middle line:84%
+going to make a
+change to the way
+
+00:17:54.320 --> 00:17:56.400 align:middle line:90%
+that we store the information.
+
+00:17:56.400 --> 00:17:58.425 align:middle line:84%
+We're going to use
+a class variable.
+
+00:17:58.425 --> 00:18:01.050 align:middle line:84%
+And I'll remind you what a class
+variable is in the next slide,
+
+00:18:01.050 --> 00:18:04.230 align:middle line:84%
+and we're going to make a change
+to the get_calories method.
+
+00:18:04.230 --> 00:18:07.260 align:middle line:84%
+And we're going
+to allow the user
+
+00:18:07.260 --> 00:18:12.070 align:middle line:84%
+to say, hey, I'm going to
+create this Workout object.
+
+00:18:12.070 --> 00:18:14.040 align:middle line:84%
+But I don't know
+about you, I don't
+
+00:18:14.040 --> 00:18:16.470 align:middle line:84%
+know how many
+calories I burn when
+
+00:18:16.470 --> 00:18:18.870 align:middle line:90%
+I do a workout for 40 minutes.
+
+00:18:18.870 --> 00:18:20.770 align:middle line:84%
+I don't know that
+right off the bat.
+
+00:18:20.770 --> 00:18:25.080 align:middle line:84%
+So if the user doesn't supply
+the number of calories burned,
+
+00:18:25.080 --> 00:18:28.230 align:middle line:84%
+we're going to have
+our get_calories method
+
+00:18:28.230 --> 00:18:31.860 align:middle line:84%
+estimate those
+calories burned based
+
+00:18:31.860 --> 00:18:35.640 align:middle line:90%
+on the duration of that workout.
+
+00:18:35.640 --> 00:18:38.580 align:middle line:84%
+So we're going to allow
+the user to either supply
+
+00:18:38.580 --> 00:18:40.620 align:middle line:84%
+the number of
+calories, in which case
+
+00:18:40.620 --> 00:18:42.400 align:middle line:84%
+they probably know
+what they're doing,
+
+00:18:42.400 --> 00:18:46.420 align:middle line:84%
+and then when they ask us to
+tell us to get the calories,
+
+00:18:46.420 --> 00:18:47.640 align:middle line:90%
+we're going to use those.
+
+00:18:47.640 --> 00:18:50.370 align:middle line:84%
+Or we're going to allow
+the user to not supply
+
+00:18:50.370 --> 00:18:52.830 align:middle line:84%
+the number of
+calories, and instead
+
+00:18:52.830 --> 00:18:56.470 align:middle line:84%
+estimate those calories
+based on the duration
+
+00:18:56.470 --> 00:18:59.792 align:middle line:84%
+that they said this
+workout lasted.
+
+00:18:59.792 --> 00:19:01.250 align:middle line:84%
+All right, so that's
+the big change
+
+00:19:01.250 --> 00:19:04.370 align:middle line:84%
+that we're going to do
+here in the Workout class.
+
+00:19:04.370 --> 00:19:07.280 align:middle line:84%
+So we're going to do a
+better get_calories method.
+
+00:19:07.280 --> 00:19:10.670 align:middle line:84%
+All right, so this is
+the new implementation
+
+00:19:10.670 --> 00:19:12.780 align:middle line:90%
+of my Workout class.
+
+00:19:12.780 --> 00:19:14.970 align:middle line:84%
+First thing you'll
+notice, is we're
+
+00:19:14.970 --> 00:19:18.450 align:middle line:90%
+using this class variable.
+
+00:19:18.450 --> 00:19:19.950 align:middle line:84%
+We talked about
+this last lecture
+
+00:19:19.950 --> 00:19:22.920 align:middle line:90%
+when we did the rabbits example.
+
+00:19:22.920 --> 00:19:28.500 align:middle line:84%
+In the rabbits example, we had
+each rabbit change this class
+
+00:19:28.500 --> 00:19:29.610 align:middle line:90%
+variable value.
+
+00:19:29.610 --> 00:19:32.910 align:middle line:84%
+In this example, I'm not going
+to change this class variable
+
+00:19:32.910 --> 00:19:33.570 align:middle line:90%
+value.
+
+00:19:33.570 --> 00:19:36.660 align:middle line:84%
+I'm actually just going
+to use it as a variable
+
+00:19:36.660 --> 00:19:38.670 align:middle line:84%
+that every one of
+these instances
+
+00:19:38.670 --> 00:19:40.790 align:middle line:90%
+is going to be able to access.
+
+00:19:40.790 --> 00:19:43.570 align:middle line:84%
+And I'm just not going to
+change it, which is fine.
+
+00:19:43.570 --> 00:19:47.270 align:middle line:84%
+You don't have to change
+this class variable.
+
+00:19:47.270 --> 00:19:49.510 align:middle line:84%
+So this class variable
+will represent
+
+00:19:49.510 --> 00:19:54.590 align:middle line:84%
+how many calories per hour
+are burned, so just a number.
+
+00:19:54.590 --> 00:19:57.538 align:middle line:84%
+And then the init
+method, and again, we're
+
+00:19:57.538 --> 00:19:59.080 align:middle line:84%
+going to make a
+different init method
+
+00:19:59.080 --> 00:20:01.000 align:middle line:84%
+than what we saw in
+the previous slides,
+
+00:20:01.000 --> 00:20:03.520 align:middle line:84%
+the init method is going
+to be new and improved.
+
+00:20:03.520 --> 00:20:07.240 align:middle line:84%
+We're going to take in still
+the same number of parameters,
+
+00:20:07.240 --> 00:20:11.560 align:middle line:84%
+but the calories are going
+to have a default value.
+
+00:20:11.560 --> 00:20:14.500 align:middle line:84%
+So if the user actually passes
+in the number of calories,
+
+00:20:14.500 --> 00:20:17.440 align:middle line:84%
+the value for calories
+here, self dot calories
+
+00:20:17.440 --> 00:20:19.970 align:middle line:84%
+will be whatever
+the user passed in.
+
+00:20:19.970 --> 00:20:23.320 align:middle line:84%
+But if the user doesn't pass
+in the number of calories,
+
+00:20:23.320 --> 00:20:29.380 align:middle line:84%
+then this parameter here, self
+dot calories will be none.
+
+00:20:29.380 --> 00:20:35.020 align:middle line:84%
+None being used to represent
+the absence of a value.
+
+00:20:35.020 --> 00:20:39.310 align:middle line:84%
+So two options here when
+we create the object.
+
+00:20:39.310 --> 00:20:42.640 align:middle line:84%
+Other things you might notice
+is that the self dot start,
+
+00:20:42.640 --> 00:20:44.380 align:middle line:84%
+so the start time
+and the end time
+
+00:20:44.380 --> 00:20:47.380 align:middle line:84%
+are no longer just
+start and end.
+
+00:20:47.380 --> 00:20:50.150 align:middle line:90%
+
+
+00:20:50.150 --> 00:20:52.190 align:middle line:84%
+I'm going to talk about
+this on the next slide.
+
+00:20:52.190 --> 00:20:54.230 align:middle line:84%
+But essentially
+what I'm doing here,
+
+00:20:54.230 --> 00:20:57.800 align:middle line:84%
+is I'm saying the start
+and end will be passed in
+
+00:20:57.800 --> 00:21:00.080 align:middle line:84%
+as strings, just
+like we have been
+
+00:21:00.080 --> 00:21:03.980 align:middle line:84%
+in the past, like,
+September 1, 2022 1:35 PM.
+
+00:21:03.980 --> 00:21:04.860 align:middle line:90%
+That's fine.
+
+00:21:04.860 --> 00:21:07.830 align:middle line:84%
+We can still pass in the
+start time as a string.
+
+00:21:07.830 --> 00:21:10.940 align:middle line:84%
+But when I'm storing
+it inside my object,
+
+00:21:10.940 --> 00:21:13.220 align:middle line:84%
+I'm actually going to
+store it as whatever
+
+00:21:13.220 --> 00:21:14.810 align:middle line:90%
+this thing gives me.
+
+00:21:14.810 --> 00:21:20.210 align:middle line:84%
+And this thing is actually
+going to be returning or parsing
+
+00:21:20.210 --> 00:21:23.240 align:middle line:84%
+the string as a new
+data type, something
+
+00:21:23.240 --> 00:21:26.518 align:middle line:84%
+we've not worked with before,
+called a datetime object.
+
+00:21:26.518 --> 00:21:29.060 align:middle line:84%
+We're going to look at this on
+the next slide in a little bit
+
+00:21:29.060 --> 00:21:29.670 align:middle line:90%
+more detail.
+
+00:21:29.670 --> 00:21:31.790 align:middle line:84%
+But for now, all
+we need to know is
+
+00:21:31.790 --> 00:21:35.420 align:middle line:84%
+that the self dot start and
+self dot end will be a new data
+
+00:21:35.420 --> 00:21:39.510 align:middle line:90%
+type, a datetime object.
+
+00:21:39.510 --> 00:21:42.960 align:middle line:84%
+So that's my init
+method, so few changes.
+
+00:21:42.960 --> 00:21:47.220 align:middle line:84%
+Now my get_calories method will
+look a little bit different,
+
+00:21:47.220 --> 00:21:47.850 align:middle line:90%
+as well.
+
+00:21:47.850 --> 00:21:50.550 align:middle line:84%
+We're not just returning
+self dot calories
+
+00:21:50.550 --> 00:21:54.150 align:middle line:84%
+like we had in that
+simple Workout class.
+
+00:21:54.150 --> 00:21:56.710 align:middle line:84%
+We're going to do
+a little switch.
+
+00:21:56.710 --> 00:22:01.390 align:middle line:84%
+So if the user supplies
+the number of calories,
+
+00:22:01.390 --> 00:22:04.620 align:middle line:84%
+so if the calories here
+were actually passed in,
+
+00:22:04.620 --> 00:22:09.390 align:middle line:84%
+then we don't resort to
+the calories being none.
+
+00:22:09.390 --> 00:22:12.810 align:middle line:84%
+Calories will be 100 or
+450 or whatever it is.
+
+00:22:12.810 --> 00:22:16.440 align:middle line:84%
+And then this if statement is
+false, so we go in the else,
+
+00:22:16.440 --> 00:22:18.130 align:middle line:90%
+and we just return that value.
+
+00:22:18.130 --> 00:22:20.070 align:middle line:84%
+So it's exactly
+the same behavior
+
+00:22:20.070 --> 00:22:23.890 align:middle line:84%
+as in my simple Workout
+class from back there.
+
+00:22:23.890 --> 00:22:27.090 align:middle line:84%
+But if the user does not
+supply the number of calories
+
+00:22:27.090 --> 00:22:31.470 align:middle line:84%
+when they create an object, then
+the calories will be none here.
+
+00:22:31.470 --> 00:22:33.120 align:middle line:84%
+When I create my
+object, the data
+
+00:22:33.120 --> 00:22:36.040 align:middle line:84%
+attribute self dot
+calories will be none here.
+
+00:22:36.040 --> 00:22:39.090 align:middle line:84%
+So when I ask the
+workout to tell me
+
+00:22:39.090 --> 00:22:41.070 align:middle line:84%
+how many calories
+I burned, we're
+
+00:22:41.070 --> 00:22:42.970 align:middle line:84%
+going to go inside
+the if statement.
+
+00:22:42.970 --> 00:22:45.180 align:middle line:90%
+And we're going to do something.
+
+00:22:45.180 --> 00:22:47.720 align:middle line:90%
+
+
+00:22:47.720 --> 00:22:51.710 align:middle line:84%
+The thing we're going to
+do is subtract the end time
+
+00:22:51.710 --> 00:22:52.895 align:middle line:90%
+minus the start time.
+
+00:22:52.895 --> 00:22:55.690 align:middle line:90%
+
+
+00:22:55.690 --> 00:22:59.530 align:middle line:84%
+And something like this is
+allowed on a datetime object
+
+00:22:59.530 --> 00:23:01.970 align:middle line:84%
+but obviously not
+allowed on strings,
+
+00:23:01.970 --> 00:23:05.800 align:middle line:84%
+which is why I'm converting
+these strings representing
+
+00:23:05.800 --> 00:23:09.420 align:middle line:84%
+a date and a time into
+this datetime object.
+
+00:23:09.420 --> 00:23:15.060 align:middle line:84%
+This subtraction here
+gives me something that's
+
+00:23:15.060 --> 00:23:17.580 align:middle line:90%
+called a timedelta object.
+
+00:23:17.580 --> 00:23:19.800 align:middle line:84%
+And it's just a
+new type of object
+
+00:23:19.800 --> 00:23:21.430 align:middle line:84%
+we haven't really
+worked with before,
+
+00:23:21.430 --> 00:23:25.800 align:middle line:84%
+but it's an object type
+that we can run a method on.
+
+00:23:25.800 --> 00:23:29.640 align:middle line:84%
+And the method is going
+to be the total_seconds.
+
+00:23:29.640 --> 00:23:33.330 align:middle line:84%
+So for this timedelta object,
+so 10 minutes or 18 minutes
+
+00:23:33.330 --> 00:23:36.300 align:middle line:84%
+or whatever it may be, if
+we run this method called
+
+00:23:36.300 --> 00:23:38.400 align:middle line:84%
+total_seconds, it will
+tell us how many seconds
+
+00:23:38.400 --> 00:23:40.530 align:middle line:90%
+are in that timedelta object.
+
+00:23:40.530 --> 00:23:43.920 align:middle line:84%
+Divide by 3,600 to tell
+us the number of hours,
+
+00:23:43.920 --> 00:23:49.122 align:middle line:84%
+and then multiply by the
+class variable cal_per_hour
+
+00:23:49.122 --> 00:23:50.580 align:middle line:84%
+will tell us how
+many calories were
+
+00:23:50.580 --> 00:23:52.740 align:middle line:90%
+burned in that elapsed time.
+
+00:23:52.740 --> 00:23:56.625 align:middle line:90%
+
+
+00:23:56.625 --> 00:23:57.125 align:middle line:90%
+Yeah.
+
+00:23:57.125 --> 00:24:00.080 align:middle line:84%
+AUDIENCE: If we can do
+like workout dot and then
+
+00:24:00.080 --> 00:24:01.400 align:middle line:90%
+all of that like--
+
+00:24:01.400 --> 00:24:04.010 align:middle line:84%
+ANA BELL: Oh, workout dot
+is just this thing here.
+
+00:24:04.010 --> 00:24:06.560 align:middle line:84%
+Workout dot cal_per_hour,
+that's just this,
+
+00:24:06.560 --> 00:24:09.200 align:middle line:84%
+and then we multiply
+by that number.
+
+00:24:09.200 --> 00:24:12.570 align:middle line:90%
+
+
+00:24:12.570 --> 00:24:13.710 align:middle line:90%
+Questions about that?
+
+00:24:13.710 --> 00:24:17.350 align:middle line:90%
+
+
+00:24:17.350 --> 00:24:21.350 align:middle line:84%
+OK, so essentially this is going
+to do the estimation for us
+
+00:24:21.350 --> 00:24:24.680 align:middle line:84%
+for how many calories we
+burned in some number of hours
+
+00:24:24.680 --> 00:24:26.000 align:middle line:90%
+or some number of minutes.
+
+00:24:26.000 --> 00:24:30.440 align:middle line:84%
+Now, let's demystify this
+start and end time stuff.
+
+00:24:30.440 --> 00:24:37.010 align:middle line:84%
+So the way that we are
+converting this string
+
+00:24:37.010 --> 00:24:40.500 align:middle line:84%
+to a datetime object, is by
+using this library up here.
+
+00:24:40.500 --> 00:24:44.240 align:middle line:84%
+So a library is a
+collection of objects,
+
+00:24:44.240 --> 00:24:46.430 align:middle line:84%
+a collection of
+maybe also functions,
+
+00:24:46.430 --> 00:24:49.230 align:middle line:84%
+that all deal with the
+same type of thing.
+
+00:24:49.230 --> 00:24:52.610 align:middle line:84%
+So in this particular case, they
+all deal with dates and times
+
+00:24:52.610 --> 00:24:55.190 align:middle line:84%
+and manipulating dates and
+times and things like that.
+
+00:24:55.190 --> 00:24:57.200 align:middle line:84%
+In the last lecture,
+we saw an example
+
+00:24:57.200 --> 00:24:59.120 align:middle line:84%
+of a library, that
+random library that
+
+00:24:59.120 --> 00:25:01.880 align:middle line:84%
+allowed us to do operations
+with random numbers.
+
+00:25:01.880 --> 00:25:04.940 align:middle line:84%
+So it's just a nice collection
+of functions and objects
+
+00:25:04.940 --> 00:25:07.650 align:middle line:90%
+that deal with one common thing.
+
+00:25:07.650 --> 00:25:09.800 align:middle line:84%
+So in this particular
+case, there
+
+00:25:09.800 --> 00:25:13.910 align:middle line:84%
+is a function
+inside that library,
+
+00:25:13.910 --> 00:25:18.350 align:middle line:84%
+this parser dot parse function
+that takes in a string
+
+00:25:18.350 --> 00:25:22.850 align:middle line:84%
+and can parse it to
+this datetime object.
+
+00:25:22.850 --> 00:25:26.810 align:middle line:84%
+So if we print the type of start
+date and the type of end date,
+
+00:25:26.810 --> 00:25:30.500 align:middle line:84%
+it will show us that it's
+this type datetime thing.
+
+00:25:30.500 --> 00:25:32.870 align:middle line:84%
+So it's a new object type
+we haven't worked with yet,
+
+00:25:32.870 --> 00:25:35.900 align:middle line:84%
+but it's an object type like a
+list is, like a dictionary is,
+
+00:25:35.900 --> 00:25:38.810 align:middle line:90%
+like our workout is.
+
+00:25:38.810 --> 00:25:41.210 align:middle line:84%
+And so the reason why
+we're doing the conversion
+
+00:25:41.210 --> 00:25:46.940 align:middle line:84%
+is because we don't want to deal
+with the messy part of grabbing
+
+00:25:46.940 --> 00:25:49.130 align:middle line:84%
+in a string and
+then figuring out
+
+00:25:49.130 --> 00:25:51.770 align:middle line:84%
+how long the elapsed
+time is based
+
+00:25:51.770 --> 00:25:54.920 align:middle line:84%
+on just parsing characters
+throughout the string.
+
+00:25:54.920 --> 00:25:57.320 align:middle line:84%
+I certainly don't want to
+do that, but you know what?
+
+00:25:57.320 --> 00:25:59.750 align:middle line:84%
+Somebody who is passionate
+about doing that
+
+00:25:59.750 --> 00:26:02.060 align:middle line:84%
+did it in this nice
+little library for us.
+
+00:26:02.060 --> 00:26:05.060 align:middle line:84%
+So all we're doing is just
+reusing the work that they've
+
+00:26:05.060 --> 00:26:09.650 align:middle line:84%
+done to save it as this object,
+and then, they basically
+
+00:26:09.650 --> 00:26:12.860 align:middle line:84%
+said let me implement
+the minus sign to work
+
+00:26:12.860 --> 00:26:17.160 align:middle line:84%
+with objects of type
+datetime, and it makes
+
+00:26:17.160 --> 00:26:18.550 align:middle line:90%
+things like this very easy.
+
+00:26:18.550 --> 00:26:21.840 align:middle line:84%
+We can just subtract two
+dates from each other,
+
+00:26:21.840 --> 00:26:24.060 align:middle line:84%
+and it will tell us
+the elapsed time.
+
+00:26:24.060 --> 00:26:26.940 align:middle line:84%
+We can run a method
+on that elapsed time
+
+00:26:26.940 --> 00:26:29.160 align:middle line:84%
+to tell us how many
+seconds that elapsed time
+
+00:26:29.160 --> 00:26:30.520 align:middle line:90%
+is, so pretty cool.
+
+00:26:30.520 --> 00:26:31.020 align:middle line:90%
+Yeah.
+
+00:26:31.020 --> 00:26:32.437 align:middle line:84%
+AUDIENCE: Does
+those total seconds
+
+00:26:32.437 --> 00:26:33.960 align:middle line:90%
+get imported for the parser?
+
+00:26:33.960 --> 00:26:36.360 align:middle line:84%
+ANA BELL: Yeah, the
+total seconds gets
+
+00:26:36.360 --> 00:26:40.700 align:middle line:84%
+imported with the date util
+parser thing, yeah, exactly.
+
+00:26:40.700 --> 00:26:45.020 align:middle line:84%
+It's an operation that can be
+run on this date timedelta,
+
+00:26:45.020 --> 00:26:46.430 align:middle line:90%
+I think, type object here.
+
+00:26:46.430 --> 00:26:48.620 align:middle line:84%
+AUDIENCE: So it's like
+total hours, total minutes.
+
+00:26:48.620 --> 00:26:50.690 align:middle line:84%
+ANA BELL: I think there
+might be total minutes
+
+00:26:50.690 --> 00:26:53.570 align:middle line:84%
+and total hours
+also, yeah, yeah.
+
+00:26:53.570 --> 00:26:56.490 align:middle line:84%
+AUDIENCE: So this parser
+class, and then dot
+
+00:26:56.490 --> 00:26:58.560 align:middle line:90%
+parser dot total_seconds are--
+
+00:26:58.560 --> 00:27:00.315 align:middle line:84%
+ANA BELL: Yeah,
+exactly, yeah, exactly.
+
+00:27:00.315 --> 00:27:03.050 align:middle line:90%
+
+
+00:27:03.050 --> 00:27:05.130 align:middle line:90%
+Yeah, so yeah.
+
+00:27:05.130 --> 00:27:07.980 align:middle line:84%
+AUDIENCE: Should the code
+should be imported thing?
+
+00:27:07.980 --> 00:27:10.260 align:middle line:84%
+ANA BELL: Yeah, so we
+usually import all our stuff
+
+00:27:10.260 --> 00:27:10.968 align:middle line:90%
+right at the top.
+
+00:27:10.968 --> 00:27:12.510 align:middle line:84%
+So I was just going
+to show the code.
+
+00:27:12.510 --> 00:27:14.160 align:middle line:84%
+So here I've got
+everything that I need
+
+00:27:14.160 --> 00:27:15.900 align:middle line:90%
+to import way at the beginning.
+
+00:27:15.900 --> 00:27:18.480 align:middle line:84%
+So it's kind of like Python
+goes and copies and pastes
+
+00:27:18.480 --> 00:27:21.460 align:middle line:84%
+everything in those files
+and puts them in your file.
+
+00:27:21.460 --> 00:27:23.460 align:middle line:84%
+So now everything that's
+defined in those files,
+
+00:27:23.460 --> 00:27:25.470 align:middle line:90%
+is now accessible in your file.
+
+00:27:25.470 --> 00:27:32.160 align:middle line:84%
+You just have to do the dot
+notation on these libraries
+
+00:27:32.160 --> 00:27:33.510 align:middle line:90%
+here.
+
+00:27:33.510 --> 00:27:38.470 align:middle line:84%
+So I just wanted to
+show you down here.
+
+00:27:38.470 --> 00:27:41.130 align:middle line:84%
+So here, I shouldn't
+have imported again,
+
+00:27:41.130 --> 00:27:42.640 align:middle line:84%
+but it's just part
+of this exercise.
+
+00:27:42.640 --> 00:27:45.330 align:middle line:84%
+So here I've got the
+parser being imported.
+
+00:27:45.330 --> 00:27:46.620 align:middle line:90%
+I've got the start time.
+
+00:27:46.620 --> 00:27:49.920 align:middle line:84%
+These are just strings,
+nothing special about them.
+
+00:27:49.920 --> 00:27:53.440 align:middle line:90%
+And we can parse them.
+
+00:27:53.440 --> 00:27:55.650 align:middle line:84%
+So I've got these
+strings parsed.
+
+00:27:55.650 --> 00:27:58.750 align:middle line:84%
+And the types of
+these objects, again,
+
+00:27:58.750 --> 00:28:01.590 align:middle line:84%
+are not strings anymore
+now that I've parsed them.
+
+00:28:01.590 --> 00:28:05.820 align:middle line:84%
+start_date and end_date
+are now these datetime
+
+00:28:05.820 --> 00:28:08.570 align:middle line:90%
+objects, datetime dot datetime.
+
+00:28:08.570 --> 00:28:10.640 align:middle line:84%
+And then we can do
+operations like this.
+
+00:28:10.640 --> 00:28:14.830 align:middle line:84%
+So if I just simply subtract
+one time from the other
+
+00:28:14.830 --> 00:28:18.130 align:middle line:84%
+and print that
+timedelta object, Python
+
+00:28:18.130 --> 00:28:20.110 align:middle line:84%
+puts it in this nice
+little format for me.
+
+00:28:20.110 --> 00:28:21.580 align:middle line:90%
+I should just comment these out.
+
+00:28:21.580 --> 00:28:22.510 align:middle line:90%
+It's hard to see.
+
+00:28:22.510 --> 00:28:24.440 align:middle line:84%
+It puts it in this nice
+little format for me.
+
+00:28:24.440 --> 00:28:27.070 align:middle line:84%
+So here's number of
+hours colon number
+
+00:28:27.070 --> 00:28:28.720 align:middle line:84%
+of minutes colon
+number of seconds.
+
+00:28:28.720 --> 00:28:31.600 align:middle line:84%
+So this is the str method
+that was implemented
+
+00:28:31.600 --> 00:28:33.130 align:middle line:90%
+for that kind of object.
+
+00:28:33.130 --> 00:28:35.500 align:middle line:84%
+It prints it in this
+nice little form hours
+
+00:28:35.500 --> 00:28:37.780 align:middle line:90%
+colon minutes colon seconds.
+
+00:28:37.780 --> 00:28:41.650 align:middle line:84%
+And then we can do this
+useful thing, which
+
+00:28:41.650 --> 00:28:43.750 align:middle line:84%
+is what we're doing
+in our code, we
+
+00:28:43.750 --> 00:28:46.030 align:middle line:84%
+can run the
+total_seconds function
+
+00:28:46.030 --> 00:28:48.790 align:middle line:84%
+on an object of this
+timedelta, and it tells us
+
+00:28:48.790 --> 00:28:54.100 align:middle line:84%
+that this 10 minutes is
+equivalent to 600 seconds.
+
+00:28:54.100 --> 00:28:56.440 align:middle line:90%
+So very, very cool, very useful.
+
+00:28:56.440 --> 00:28:59.450 align:middle line:84%
+And we don't even need to know
+how any of that is implemented.
+
+00:28:59.450 --> 00:29:01.810 align:middle line:84%
+We just make use
+of these functions.
+
+00:29:01.810 --> 00:29:03.850 align:middle line:84%
+What's cool about
+the parser, though,
+
+00:29:03.850 --> 00:29:06.700 align:middle line:84%
+and this will be
+really, really cool,
+
+00:29:06.700 --> 00:29:11.600 align:middle line:84%
+you can actually write the time
+and the date in any format.
+
+00:29:11.600 --> 00:29:16.660 align:middle line:84%
+It doesn't have to be month
+slash day slash year space
+
+00:29:16.660 --> 00:29:17.290 align:middle line:90%
+this.
+
+00:29:17.290 --> 00:29:19.210 align:middle line:84%
+So this is kind of
+how I wrote this one.
+
+00:29:19.210 --> 00:29:21.040 align:middle line:84%
+We can actually
+write it something
+
+00:29:21.040 --> 00:29:24.910 align:middle line:90%
+like Sept 30, 2021 like that.
+
+00:29:24.910 --> 00:29:27.070 align:middle line:90%
+And it knows how to read that.
+
+00:29:27.070 --> 00:29:30.310 align:middle line:84%
+Or we can write out September
+all the way put the comma
+
+00:29:30.310 --> 00:29:33.520 align:middle line:84%
+there, put the comma there,
+put the pm lowercase and closer
+
+00:29:33.520 --> 00:29:36.530 align:middle line:84%
+to the time, and it knows
+how to read that as well.
+
+00:29:36.530 --> 00:29:39.370 align:middle line:84%
+So it knows how to parse all
+these different ways of writing
+
+00:29:39.370 --> 00:29:42.460 align:middle line:84%
+the dates and save them
+as these datetime objects
+
+00:29:42.460 --> 00:29:47.958 align:middle line:84%
+for using in this very
+nice very readable way.
+
+00:29:47.958 --> 00:29:48.625 align:middle line:90%
+Isn't that cool?
+
+00:29:48.625 --> 00:29:51.330 align:middle line:90%
+
+
+00:29:51.330 --> 00:29:56.155 align:middle line:84%
+OK, so very useful if you ever
+want to work with date types.
+
+00:29:56.155 --> 00:29:59.840 align:middle line:90%
+
+
+00:29:59.840 --> 00:30:05.900 align:middle line:84%
+So now this is our
+state dictionary
+
+00:30:05.900 --> 00:30:10.160 align:middle line:84%
+so for how we ended up with
+our simple Workout class.
+
+00:30:10.160 --> 00:30:14.000 align:middle line:84%
+But what are the changes
+we made to improve it?
+
+00:30:14.000 --> 00:30:18.110 align:middle line:84%
+Well, in my state dictionary,
+I added my class variable
+
+00:30:18.110 --> 00:30:19.410 align:middle line:90%
+calories_per_hour.
+
+00:30:19.410 --> 00:30:24.790 align:middle line:84%
+So now this calories_per_hour
+is available for any instance
+
+00:30:24.790 --> 00:30:26.140 align:middle line:90%
+that I create.
+
+00:30:26.140 --> 00:30:28.000 align:middle line:84%
+We already knew this,
+but this is kind
+
+00:30:28.000 --> 00:30:29.470 align:middle line:90%
+of a representation of that.
+
+00:30:29.470 --> 00:30:32.540 align:middle line:90%
+
+
+00:30:32.540 --> 00:30:35.000 align:middle line:84%
+And we didn't add
+anything to the instances.
+
+00:30:35.000 --> 00:30:38.600 align:middle line:90%
+Those haven't changed.
+
+00:30:38.600 --> 00:30:41.360 align:middle line:84%
+So little aside on
+class variables,
+
+00:30:41.360 --> 00:30:44.930 align:middle line:84%
+so this cal_per_hour
+here is available for all
+
+00:30:44.930 --> 00:30:46.260 align:middle line:90%
+of these instances.
+
+00:30:46.260 --> 00:30:50.900 align:middle line:84%
+Now, a class variable is just
+like an instance variable.
+
+00:30:50.900 --> 00:30:54.440 align:middle line:84%
+We can access it from within
+the class definition, which is
+
+00:30:54.440 --> 00:30:56.240 align:middle line:90%
+how it should always be done.
+
+00:30:56.240 --> 00:30:59.360 align:middle line:84%
+But Python being
+Python, they allow
+
+00:30:59.360 --> 00:31:03.230 align:middle line:84%
+you to access that class
+variable from outside the class
+
+00:31:03.230 --> 00:31:05.650 align:middle line:90%
+definition, as well.
+
+00:31:05.650 --> 00:31:07.720 align:middle line:84%
+So we can do
+something like this.
+
+00:31:07.720 --> 00:31:12.150 align:middle line:84%
+So we can call the
+cal_per_hour class variable
+
+00:31:12.150 --> 00:31:16.230 align:middle line:84%
+on the name of this class
+outside of the definition.
+
+00:31:16.230 --> 00:31:17.460 align:middle line:90%
+This is my class definition.
+
+00:31:17.460 --> 00:31:19.290 align:middle line:90%
+It ended here.
+
+00:31:19.290 --> 00:31:21.810 align:middle line:84%
+And this is just code that's
+outside the definition,
+
+00:31:21.810 --> 00:31:27.090 align:middle line:84%
+and Python will be happy to
+tell you what that value is.
+
+00:31:27.090 --> 00:31:28.980 align:middle line:84%
+Python will also be
+happy to tell you
+
+00:31:28.980 --> 00:31:32.050 align:middle line:84%
+what that value is if you
+access it through an instance.
+
+00:31:32.050 --> 00:31:35.400 align:middle line:84%
+So here I've created an actual
+instance of type Workout,
+
+00:31:35.400 --> 00:31:37.890 align:middle line:84%
+so I'm not calling
+the cal_per_hour
+
+00:31:37.890 --> 00:31:40.170 align:middle line:84%
+on the name of my class,
+I'm just grabbing it
+
+00:31:40.170 --> 00:31:41.910 align:middle line:90%
+through one of my instances.
+
+00:31:41.910 --> 00:31:44.280 align:middle line:84%
+And if I print instance
+dot cal_per_hour,
+
+00:31:44.280 --> 00:31:48.650 align:middle line:84%
+Python will also happily
+tell me what that value is.
+
+00:31:48.650 --> 00:31:50.900 align:middle line:84%
+And Python being
+Python, they're going
+
+00:31:50.900 --> 00:31:53.690 align:middle line:84%
+to allow you to change the
+value of that cal_per_hour,
+
+00:31:53.690 --> 00:31:56.130 align:middle line:84%
+outside of the class
+definition, as well.
+
+00:31:56.130 --> 00:31:58.280 align:middle line:84%
+So here, outside the
+class definition,
+
+00:31:58.280 --> 00:32:01.980 align:middle line:84%
+I'm going to say workout
+dot cal_per_hour = 250.
+
+00:32:01.980 --> 00:32:06.260 align:middle line:84%
+So now, the cal_per_hour
+is changed permanently
+
+00:32:06.260 --> 00:32:08.720 align:middle line:84%
+to 250 no matter
+how I access it,
+
+00:32:08.720 --> 00:32:11.660 align:middle line:84%
+either by calling the
+name of my class directly
+
+00:32:11.660 --> 00:32:16.160 align:middle line:84%
+or by calling the class variable
+through one of the instances.
+
+00:32:16.160 --> 00:32:19.940 align:middle line:90%
+
+
+00:32:19.940 --> 00:32:26.640 align:middle line:84%
+So, no good, never ever
+work with these access,
+
+00:32:26.640 --> 00:32:28.490 align:middle line:84%
+data attributes or
+access class variables
+
+00:32:28.490 --> 00:32:30.080 align:middle line:90%
+outside the class definition.
+
+00:32:30.080 --> 00:32:31.760 align:middle line:84%
+If you really want
+the user to be
+
+00:32:31.760 --> 00:32:35.540 align:middle line:84%
+able to do something like this,
+then write a method for it.
+
+00:32:35.540 --> 00:32:38.240 align:middle line:84%
+And then they can
+change it or access it
+
+00:32:38.240 --> 00:32:40.460 align:middle line:84%
+in a consistent way,
+the way that you
+
+00:32:40.460 --> 00:32:43.570 align:middle line:90%
+want them to access it.
+
+00:32:43.570 --> 00:32:45.820 align:middle line:84%
+OK, so just a little
+bit of practice for you
+
+00:32:45.820 --> 00:32:48.372 align:middle line:84%
+guys to create a couple
+of Workout objects,
+
+00:32:48.372 --> 00:32:50.830 align:middle line:84%
+just to make sure everyone's
+on the same page we understand
+
+00:32:50.830 --> 00:32:52.420 align:middle line:90%
+what a workout object is.
+
+00:32:52.420 --> 00:32:55.240 align:middle line:84%
+So just create
+for me two objects
+
+00:32:55.240 --> 00:32:59.000 align:middle line:84%
+and then print the calories
+for these Workout objects.
+
+00:32:59.000 --> 00:33:00.880 align:middle line:84%
+So the first one I would
+like you to create,
+
+00:33:00.880 --> 00:33:05.050 align:middle line:90%
+name the variable w_one.
+
+00:33:05.050 --> 00:33:08.170 align:middle line:84%
+This workout started in
+January 1, 2001 3:30,
+
+00:33:08.170 --> 00:33:10.010 align:middle line:90%
+and it went till 4:00 PM.
+
+00:33:10.010 --> 00:33:12.770 align:middle line:84%
+And you want to estimate the
+calories from this workout.
+
+00:33:12.770 --> 00:33:16.640 align:middle line:84%
+You don't know how many calories
+you burned, and then print
+
+00:33:16.640 --> 00:33:18.410 align:middle line:90%
+the value for that calories.
+
+00:33:18.410 --> 00:33:22.460 align:middle line:84%
+And then the second object,
+same start date same end date,
+
+00:33:22.460 --> 00:33:25.160 align:middle line:84%
+but you know that you
+burned 300 calories.
+
+00:33:25.160 --> 00:33:27.140 align:middle line:84%
+So create these two
+objects, and then print
+
+00:33:27.140 --> 00:33:29.500 align:middle line:90%
+the number of calories burned.
+
+00:33:29.500 --> 00:33:36.620 align:middle line:90%
+So this is online 199.
+
+00:33:36.620 --> 00:33:40.130 align:middle line:84%
+And it's OK to scroll back up
+to the init method of Workout,
+
+00:33:40.130 --> 00:33:42.440 align:middle line:84%
+just to see how
+it's implemented.
+
+00:33:42.440 --> 00:33:44.390 align:middle line:84%
+No reason you should
+have memorized it by now.
+
+00:33:44.390 --> 00:33:46.913 align:middle line:90%
+
+
+00:33:46.913 --> 00:33:48.830 align:middle line:84%
+All right, how do we
+create these two objects?
+
+00:33:48.830 --> 00:33:51.080 align:middle line:90%
+What's w_one equal to?
+
+00:33:51.080 --> 00:33:58.530 align:middle line:90%
+
+
+00:33:58.530 --> 00:33:59.467 align:middle line:90%
+Yeah.
+
+00:33:59.467 --> 00:34:01.927 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:34:01.927 --> 00:34:02.510 align:middle line:90%
+ANA BELL: Yep.
+
+00:34:02.510 --> 00:34:04.000 align:middle line:90%
+AUDIENCE: Is the date first?
+
+00:34:04.000 --> 00:34:06.040 align:middle line:84%
+ANA BELL: Yep, the
+start_date would be first.
+
+00:34:06.040 --> 00:34:06.938 align:middle line:90%
+So I can just--
+
+00:34:06.938 --> 00:34:08.730 align:middle line:84%
+AUDIENCE: [INAUDIBLE]
+put that as a string.
+
+00:34:08.730 --> 00:34:10.245 align:middle line:84%
+ANA BELL: As a
+string, perfect, yep.
+
+00:34:10.245 --> 00:34:11.900 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:34:11.900 --> 00:34:13.610 align:middle line:90%
+ANA BELL: Yep.
+
+00:34:13.610 --> 00:34:14.237 align:middle line:90%
+I'm not saying.
+
+00:34:14.237 --> 00:34:15.320 align:middle line:90%
+I don't think I'll say at.
+
+00:34:15.320 --> 00:34:18.170 align:middle line:90%
+I don't know if that works.
+
+00:34:18.170 --> 00:34:20.969 align:middle line:84%
+And then the end_date
+right is the next one.
+
+00:34:20.969 --> 00:34:26.219 align:middle line:84%
+So this one's 4:00
+PM, right like that.
+
+00:34:26.219 --> 00:34:28.270 align:middle line:90%
+We can do that.
+
+00:34:28.270 --> 00:34:31.889 align:middle line:90%
+And then what else do I put?
+
+00:34:31.889 --> 00:34:33.015 align:middle line:90%
+Or do I put anything else?
+
+00:34:33.015 --> 00:34:35.770 align:middle line:90%
+
+
+00:34:35.770 --> 00:34:38.270 align:middle line:84%
+AUDIENCE: If you want
+[INAUDIBLE] calories
+
+00:34:38.270 --> 00:34:38.770 align:middle line:90%
+[INAUDIBLE].
+
+00:34:38.770 --> 00:34:40.812 align:middle line:84%
+ANA BELL: Exactly, yeah,
+in this particular case,
+
+00:34:40.812 --> 00:34:43.120 align:middle line:84%
+I'm going to let
+it default to none.
+
+00:34:43.120 --> 00:34:45.190 align:middle line:84%
+And then how do
+I grab the number
+
+00:34:45.190 --> 00:34:47.080 align:middle line:84%
+of calories burned
+for this object,
+
+00:34:47.080 --> 00:34:49.500 align:middle line:90%
+for this Workout object?
+
+00:34:49.500 --> 00:34:50.500 align:middle line:90%
+How do I print that out?
+
+00:34:50.500 --> 00:34:53.762 align:middle line:90%
+
+
+00:34:53.762 --> 00:34:57.030 align:middle line:84%
+AUDIENCE: Don't you
+want that [INAUDIBLE]??
+
+00:34:57.030 --> 00:35:00.060 align:middle line:84%
+ANA BELL: Yep, so I just
+call the get_calories method
+
+00:35:00.060 --> 00:35:03.600 align:middle line:84%
+on w_one, and let's slap a
+print statement around that,
+
+00:35:03.600 --> 00:35:04.290 align:middle line:90%
+like that.
+
+00:35:04.290 --> 00:35:08.940 align:middle line:90%
+
+
+00:35:08.940 --> 00:35:10.180 align:middle line:90%
+Yep.
+
+00:35:10.180 --> 00:35:11.780 align:middle line:90%
+AUDIENCE: Mine, when I do that--
+
+00:35:11.780 --> 00:35:13.010 align:middle line:90%
+oh, wait. let me do that.
+
+00:35:13.010 --> 00:35:16.410 align:middle line:90%
+
+
+00:35:16.410 --> 00:35:17.880 align:middle line:90%
+ANA BELL: Perfect.
+
+00:35:17.880 --> 00:35:19.140 align:middle line:90%
+So what is it?
+
+00:35:19.140 --> 00:35:22.290 align:middle line:84%
+A 30-minute workout at
+200 calories per hour,
+
+00:35:22.290 --> 00:35:26.540 align:middle line:90%
+it's 100 calories burned.
+
+00:35:26.540 --> 00:35:29.720 align:middle line:84%
+Second one will
+be pretty similar.
+
+00:35:29.720 --> 00:35:32.120 align:middle line:84%
+So I'm just going
+to copy and paste.
+
+00:35:32.120 --> 00:35:36.965 align:middle line:84%
+What's the difference between
+this one and the previous one?
+
+00:35:36.965 --> 00:35:42.980 align:middle line:90%
+
+
+00:35:42.980 --> 00:35:47.215 align:middle line:84%
+When I create my object,
+what's the one difference?
+
+00:35:47.215 --> 00:35:47.715 align:middle line:90%
+Yeah.
+
+00:35:47.715 --> 00:35:50.570 align:middle line:84%
+AUDIENCE: Don't you pass in the
+number of calories [INAUDIBLE]??
+
+00:35:50.570 --> 00:35:55.340 align:middle line:84%
+ANA BELL: Yep, exactly, we will
+pass in 300 as the last param
+
+00:35:55.340 --> 00:35:56.570 align:middle line:90%
+here.
+
+00:35:56.570 --> 00:36:01.310 align:middle line:84%
+And so then if we run that, 100
+was my first print statement
+
+00:36:01.310 --> 00:36:02.840 align:middle line:90%
+and 300 is my second one.
+
+00:36:02.840 --> 00:36:07.640 align:middle line:84%
+So it relies on
+the number that was
+
+00:36:07.640 --> 00:36:11.840 align:middle line:84%
+passed in as opposed to
+calculating it by estimating it
+
+00:36:11.840 --> 00:36:14.240 align:middle line:90%
+based on the start and end.
+
+00:36:14.240 --> 00:36:17.100 align:middle line:84%
+All right, everyone
+OK with this?
+
+00:36:17.100 --> 00:36:20.570 align:middle line:84%
+We all understand
+get_calories method, perfect.
+
+00:36:20.570 --> 00:36:23.060 align:middle line:84%
+So we've finished our
+improved method here.
+
+00:36:23.060 --> 00:36:26.990 align:middle line:84%
+We saw this better get_calories
+method, very neat method
+
+00:36:26.990 --> 00:36:28.730 align:middle line:90%
+that allows estimation.
+
+00:36:28.730 --> 00:36:32.495 align:middle line:84%
+And we saw a little bit about
+using these datetime objects.
+
+00:36:32.495 --> 00:36:35.560 align:middle line:90%
+
+
+00:36:35.560 --> 00:36:38.050 align:middle line:84%
+OK, so the next stop,
+the rest of this lecture
+
+00:36:38.050 --> 00:36:40.510 align:middle line:84%
+will be implementing
+one subclass
+
+00:36:40.510 --> 00:36:47.470 align:middle line:84%
+of this state of this workout
+object called a RunWorkout
+
+00:36:47.470 --> 00:36:49.120 align:middle line:90%
+class.
+
+00:36:49.120 --> 00:36:53.230 align:middle line:84%
+And so we're going to use the
+idea of hierarchies and class
+
+00:36:53.230 --> 00:36:55.190 align:middle line:90%
+inheritance to do this.
+
+00:36:55.190 --> 00:36:58.750 align:middle line:84%
+So let's remember a little
+bit about hierarchies
+
+00:36:58.750 --> 00:37:00.760 align:middle line:90%
+In terms of Python.
+
+00:37:00.760 --> 00:37:05.410 align:middle line:84%
+So when we create a
+class that we know
+
+00:37:05.410 --> 00:37:10.060 align:middle line:84%
+will be this parent class,
+that's a base class.
+
+00:37:10.060 --> 00:37:13.600 align:middle line:84%
+It's the most basic thing
+that we'd like to work off of.
+
+00:37:13.600 --> 00:37:18.340 align:middle line:84%
+We call that the parent class
+or the superclass, and this one
+
+00:37:18.340 --> 00:37:22.810 align:middle line:84%
+parent class, can have many
+subclasses associated with it.
+
+00:37:22.810 --> 00:37:25.610 align:middle line:84%
+So in this particular
+case, just as an example,
+
+00:37:25.610 --> 00:37:28.990 align:middle line:84%
+we can have two
+types of workouts,
+
+00:37:28.990 --> 00:37:31.510 align:middle line:84%
+one outdoor workout and one
+kind is an outdoor workout,
+
+00:37:31.510 --> 00:37:34.860 align:middle line:84%
+and the other kind
+is an indoor workout.
+
+00:37:34.860 --> 00:37:39.690 align:middle line:90%
+And both of these are Workouts.
+
+00:37:39.690 --> 00:37:42.300 align:middle line:84%
+So everything that a
+Workout has and everything
+
+00:37:42.300 --> 00:37:44.670 align:middle line:84%
+that we can do
+with a Workout, we
+
+00:37:44.670 --> 00:37:49.050 align:middle line:84%
+will exist in outdoor
+workout and indoor workout,
+
+00:37:49.050 --> 00:37:51.480 align:middle line:84%
+and we'll be able to
+do with outdoor workout
+
+00:37:51.480 --> 00:37:53.010 align:middle line:90%
+and indoor workout.
+
+00:37:53.010 --> 00:37:56.280 align:middle line:84%
+So a child class
+is a parent class.
+
+00:37:56.280 --> 00:37:59.490 align:middle line:90%
+A subclass is a super class.
+
+00:37:59.490 --> 00:38:08.280 align:middle line:84%
+But these subclasses can bring
+about some of their own quote
+
+00:38:08.280 --> 00:38:11.530 align:middle line:84%
+unquote "ideas,"
+their own attributes.
+
+00:38:11.530 --> 00:38:15.900 align:middle line:84%
+So for an outdoor workout, we
+might add more information,
+
+00:38:15.900 --> 00:38:19.530 align:middle line:84%
+so add more attributes, maybe
+location, something like that.
+
+00:38:19.530 --> 00:38:23.130 align:middle line:84%
+For indoor workout, you
+might not need a location.
+
+00:38:23.130 --> 00:38:26.490 align:middle line:84%
+You might not add any
+extra data attributes.
+
+00:38:26.490 --> 00:38:29.070 align:middle line:90%
+We might add more behaviors.
+
+00:38:29.070 --> 00:38:30.910 align:middle line:84%
+So for outdoor
+workout, I don't know,
+
+00:38:30.910 --> 00:38:37.000 align:middle line:84%
+you add some different behavior
+than just a regular workout.
+
+00:38:37.000 --> 00:38:40.430 align:middle line:84%
+Same for indoor workout, or
+you might override behaviors.
+
+00:38:40.430 --> 00:38:42.730 align:middle line:84%
+So you might change
+something that Workout
+
+00:38:42.730 --> 00:38:45.520 align:middle line:84%
+does to be specific
+to an outdoor workout.
+
+00:38:45.520 --> 00:38:48.220 align:middle line:84%
+And of course, we can create
+as many of these subclasses
+
+00:38:48.220 --> 00:38:49.370 align:middle line:90%
+as we'd like.
+
+00:38:49.370 --> 00:38:51.370 align:middle line:84%
+So for outdoor
+workouts, we can now
+
+00:38:51.370 --> 00:38:53.800 align:middle line:84%
+have two different types of
+outdoor workouts, running
+
+00:38:53.800 --> 00:38:54.580 align:middle line:90%
+or a swimming.
+
+00:38:54.580 --> 00:38:57.220 align:middle line:84%
+And for indoor workouts, we
+might have treadmill or weights
+
+00:38:57.220 --> 00:38:58.420 align:middle line:90%
+types of workouts.
+
+00:38:58.420 --> 00:39:01.120 align:middle line:84%
+And whenever you create
+these child classes,
+
+00:39:01.120 --> 00:39:03.550 align:middle line:84%
+they inherit everything
+that their parents has.
+
+00:39:03.550 --> 00:39:06.550 align:middle line:84%
+So a running class
+is an outdoor workout
+
+00:39:06.550 --> 00:39:09.430 align:middle line:84%
+and by default, it's also
+going to be a Workout
+
+00:39:09.430 --> 00:39:13.180 align:middle line:84%
+right because outdoor
+workout was a Workout.
+
+00:39:13.180 --> 00:39:16.810 align:middle line:84%
+So what we're going to do
+in this RunWorkout class is,
+
+00:39:16.810 --> 00:39:20.260 align:middle line:84%
+I'm going to show you
+three methods implemented.
+
+00:39:20.260 --> 00:39:23.770 align:middle line:84%
+The first one is going to
+be just reusing something
+
+00:39:23.770 --> 00:39:25.690 align:middle line:90%
+that our parent can do.
+
+00:39:25.690 --> 00:39:29.710 align:middle line:84%
+The second one is going
+to be overriding a method
+
+00:39:29.710 --> 00:39:33.160 align:middle line:84%
+that our parent already can
+do to make it better and more
+
+00:39:33.160 --> 00:39:35.060 align:middle line:90%
+specific to the child class.
+
+00:39:35.060 --> 00:39:38.810 align:middle line:84%
+And the third one is to add a
+method that our parent didn't
+
+00:39:38.810 --> 00:39:40.260 align:middle line:90%
+even have.
+
+00:39:40.260 --> 00:39:43.130 align:middle line:84%
+So we're going to do these
+three things in the run workout
+
+00:39:43.130 --> 00:39:44.410 align:middle line:90%
+object.
+
+00:39:44.410 --> 00:39:49.750 align:middle line:84%
+OK, so let's remember
+this example here
+
+00:39:49.750 --> 00:39:52.750 align:middle line:84%
+about common properties that
+all of our Workouts have.
+
+00:39:52.750 --> 00:39:55.540 align:middle line:84%
+So this is basically us
+implementing our Workout
+
+00:39:55.540 --> 00:39:56.620 align:middle line:90%
+superclass.
+
+00:39:56.620 --> 00:39:59.050 align:middle line:84%
+So I know we did
+implement all of these,
+
+00:39:59.050 --> 00:40:00.663 align:middle line:84%
+but in theory, we
+can implement all
+
+00:40:00.663 --> 00:40:02.080 align:middle line:84%
+of the things that
+are highlighted
+
+00:40:02.080 --> 00:40:03.952 align:middle line:90%
+in yellow in our parent class.
+
+00:40:03.952 --> 00:40:06.160 align:middle line:84%
+And these are common no
+matter what kinds of Workouts
+
+00:40:06.160 --> 00:40:07.300 align:middle line:90%
+we create.
+
+00:40:07.300 --> 00:40:09.400 align:middle line:84%
+Now, in the Python
+file, I actually
+
+00:40:09.400 --> 00:40:10.835 align:middle line:90%
+have a swimming subclass.
+
+00:40:10.835 --> 00:40:12.460 align:middle line:84%
+We're not going to
+go over the swimming
+
+00:40:12.460 --> 00:40:13.960 align:middle line:84%
+subclass in the
+lecture, but please
+
+00:40:13.960 --> 00:40:17.302 align:middle line:84%
+feel free to go through
+it in the Python file
+
+00:40:17.302 --> 00:40:18.010 align:middle line:90%
+for this lecture.
+
+00:40:18.010 --> 00:40:20.590 align:middle line:84%
+And I think you'll also be
+working with it in recitation
+
+00:40:20.590 --> 00:40:22.270 align:middle line:90%
+on Friday, as well.
+
+00:40:22.270 --> 00:40:26.830 align:middle line:84%
+In lecture, we're going to
+be creating a subclass that's
+
+00:40:26.830 --> 00:40:29.410 align:middle line:90%
+specific to running.
+
+00:40:29.410 --> 00:40:31.780 align:middle line:84%
+And this running
+class will, of course,
+
+00:40:31.780 --> 00:40:34.690 align:middle line:84%
+inherit all of these properties
+that our parent workout
+
+00:40:34.690 --> 00:40:40.840 align:middle line:84%
+class has, but we're also
+going to add our own data.
+
+00:40:40.840 --> 00:40:44.410 align:middle line:84%
+And we're going to override
+some data that the workout
+
+00:40:44.410 --> 00:40:46.123 align:middle line:90%
+class has and things like that.
+
+00:40:46.123 --> 00:40:48.040 align:middle line:84%
+So specifically, the
+only thing we're actually
+
+00:40:48.040 --> 00:40:50.980 align:middle line:84%
+going to implement
+that's different
+
+00:40:50.980 --> 00:40:56.650 align:middle line:84%
+than a regular Workout, is to
+add an elevation attribute.
+
+00:40:56.650 --> 00:41:00.460 align:middle line:84%
+So beyond that start_time,
+end_time, calories an icon
+
+00:41:00.460 --> 00:41:03.290 align:middle line:84%
+will also exist, and the kind
+of workout it will also exist.
+
+00:41:03.290 --> 00:41:05.680 align:middle line:84%
+Those are our five data
+attributes from Workout.
+
+00:41:05.680 --> 00:41:08.620 align:middle line:84%
+And we're going to add
+elevation for running workout
+
+00:41:08.620 --> 00:41:11.050 align:middle line:90%
+to make six.
+
+00:41:11.050 --> 00:41:15.703 align:middle line:84%
+OK, so this was our parent
+class, just as a reminder,
+
+00:41:15.703 --> 00:41:16.870 align:middle line:90%
+this is what it looked like.
+
+00:41:16.870 --> 00:41:20.480 align:middle line:84%
+We had our class attribute
+here, class variable,
+
+00:41:20.480 --> 00:41:23.940 align:middle line:90%
+and this init method here.
+
+00:41:23.940 --> 00:41:29.490 align:middle line:84%
+The class Workout, their parent
+was the generic Python object.
+
+00:41:29.490 --> 00:41:31.670 align:middle line:84%
+Now, when we create
+our RunWorkout,
+
+00:41:31.670 --> 00:41:34.790 align:middle line:84%
+our parent will be
+the Workout class.
+
+00:41:34.790 --> 00:41:37.220 align:middle line:84%
+So we don't just want it
+to be a Python object.
+
+00:41:37.220 --> 00:41:41.030 align:middle line:84%
+We want it to be
+a Workout object.
+
+00:41:41.030 --> 00:41:44.170 align:middle line:84%
+So as soon as we do that
+inside our code, Python says,
+
+00:41:44.170 --> 00:41:47.410 align:middle line:84%
+all right, let me just grab
+all of this stuff, everything
+
+00:41:47.410 --> 00:41:50.980 align:middle line:84%
+that's defined inside your
+parent class, this Workout.
+
+00:41:50.980 --> 00:41:54.890 align:middle line:84%
+And quote unquote "copy and
+paste it into this class."
+
+00:41:54.890 --> 00:41:57.220 align:middle line:84%
+So right off the bat,
+we've got all of the things
+
+00:41:57.220 --> 00:42:00.440 align:middle line:90%
+that Workout has.
+
+00:42:00.440 --> 00:42:06.950 align:middle line:84%
+But that doesn't quite
+work with our RunWorkout.
+
+00:42:06.950 --> 00:42:09.320 align:middle line:84%
+Because when we
+create a RunWorkout,
+
+00:42:09.320 --> 00:42:11.030 align:middle line:84%
+and again, this is
+a design decision,
+
+00:42:11.030 --> 00:42:13.760 align:middle line:84%
+we would like the user
+to be able to pass
+
+00:42:13.760 --> 00:42:18.730 align:middle line:84%
+in an extra parameter
+here, the elevation value.
+
+00:42:18.730 --> 00:42:20.910 align:middle line:84%
+So in addition to the
+start_time, end_time,
+
+00:42:20.910 --> 00:42:22.680 align:middle line:84%
+and the calories_burned,
+I'm going
+
+00:42:22.680 --> 00:42:24.900 align:middle line:84%
+to slip in this
+elevation value right
+
+00:42:24.900 --> 00:42:27.630 align:middle line:84%
+before the
+calories_burned parameter.
+
+00:42:27.630 --> 00:42:30.170 align:middle line:90%
+
+
+00:42:30.170 --> 00:42:33.160 align:middle line:84%
+So when I initialize
+my RunWorkout,
+
+00:42:33.160 --> 00:42:37.990 align:middle line:84%
+I could, theoretically, pass
+in four values string, string,
+
+00:42:37.990 --> 00:42:39.910 align:middle line:90%
+number, number.
+
+00:42:39.910 --> 00:42:44.830 align:middle line:84%
+Or since elevation has
+a default parameter,
+
+00:42:44.830 --> 00:42:46.540 align:middle line:84%
+and calories has a
+default parameter,
+
+00:42:46.540 --> 00:42:48.610 align:middle line:84%
+I could pass in
+just string string,
+
+00:42:48.610 --> 00:42:53.310 align:middle line:84%
+and those other
+two will default.
+
+00:42:53.310 --> 00:42:54.990 align:middle line:84%
+So what is this
+init method doing?
+
+00:42:54.990 --> 00:42:59.640 align:middle line:84%
+It's calling the
+super() function.
+
+00:42:59.640 --> 00:43:01.570 align:middle line:84%
+I know we haven't
+done this before,
+
+00:43:01.570 --> 00:43:03.130 align:middle line:84%
+but I just wanted
+to show you this.
+
+00:43:03.130 --> 00:43:06.300 align:middle line:84%
+This is another
+way to ask Python
+
+00:43:06.300 --> 00:43:10.110 align:middle line:90%
+to tell you who your parent is.
+
+00:43:10.110 --> 00:43:14.460 align:middle line:84%
+So when you run this function
+super() inside a class
+
+00:43:14.460 --> 00:43:19.170 align:middle line:84%
+definition, Python
+effectively returns--
+
+00:43:19.170 --> 00:43:21.740 align:middle line:84%
+so the replacement of
+this function, this
+
+00:43:21.740 --> 00:43:23.820 align:middle line:84%
+is just a function it
+has a return value.
+
+00:43:23.820 --> 00:43:27.570 align:middle line:84%
+The return will be the thing
+in the parentheses here.
+
+00:43:27.570 --> 00:43:29.990 align:middle line:84%
+So effectively,
+that line becomes
+
+00:43:29.990 --> 00:43:33.440 align:middle line:84%
+workout dot double underscore
+init double underscore exactly
+
+00:43:33.440 --> 00:43:35.000 align:middle line:84%
+what as we saw in
+the last lecture
+
+00:43:35.000 --> 00:43:38.670 align:middle line:84%
+when we did animal,
+rabbits and all those done.
+
+00:43:38.670 --> 00:43:42.440 align:middle line:84%
+All right, so what we're doing
+here, is we're saying, well,
+
+00:43:42.440 --> 00:43:45.700 align:middle line:84%
+I know workout can do all
+those initializations for me,
+
+00:43:45.700 --> 00:43:47.860 align:middle line:84%
+so let me just take
+advantage of that,
+
+00:43:47.860 --> 00:43:52.330 align:middle line:84%
+not copy and paste it, and
+just let Workout do the job
+
+00:43:52.330 --> 00:43:54.700 align:middle line:84%
+and initialize all
+that stuff for me.
+
+00:43:54.700 --> 00:43:57.850 align:middle line:84%
+So this line of code
+here, initializes
+
+00:43:57.850 --> 00:44:00.550 align:middle line:84%
+the start end times
+right by parsing them,
+
+00:44:00.550 --> 00:44:06.100 align:middle line:84%
+the calories and the icon
+to the sweaty person emoji,
+
+00:44:06.100 --> 00:44:09.430 align:middle line:90%
+and the kind to workout string.
+
+00:44:09.430 --> 00:44:11.440 align:middle line:84%
+But since this is
+a RunWorkout, I
+
+00:44:11.440 --> 00:44:16.510 align:middle line:84%
+would like to replace the icon
+with the little running person
+
+00:44:16.510 --> 00:44:17.380 align:middle line:90%
+emoji.
+
+00:44:17.380 --> 00:44:21.250 align:middle line:84%
+And the kind of workout this
+is, is no longer just a workout.
+
+00:44:21.250 --> 00:44:23.785 align:middle line:84%
+Let's say it's a
+running workout so it
+
+00:44:23.785 --> 00:44:24.910 align:middle line:90%
+becomes a string "running."
+
+00:44:24.910 --> 00:44:30.610 align:middle line:84%
+So I'm overriding those data
+attributes to be the strings.
+
+00:44:30.610 --> 00:44:33.820 align:middle line:84%
+And then the thing
+that RunWorkout
+
+00:44:33.820 --> 00:44:35.890 align:middle line:84%
+has that Workout
+didn't have at all,
+
+00:44:35.890 --> 00:44:38.960 align:middle line:84%
+is this elevation
+data attribute.
+
+00:44:38.960 --> 00:44:42.490 align:middle line:84%
+So self dot elev is now a new
+data attribute that did not
+
+00:44:42.490 --> 00:44:43.930 align:middle line:90%
+exist in the regular Workout.
+
+00:44:43.930 --> 00:44:47.620 align:middle line:90%
+
+
+00:44:47.620 --> 00:44:51.730 align:middle line:84%
+And then I've got these
+two methods down here,
+
+00:44:51.730 --> 00:44:54.670 align:middle line:84%
+a getter for the elevation and
+a setter for the elevation.
+
+00:44:54.670 --> 00:44:56.840 align:middle line:84%
+Nothing fancy with them,
+they just return and set.
+
+00:44:56.840 --> 00:44:57.340 align:middle line:90%
+Yeah.
+
+00:44:57.340 --> 00:45:00.550 align:middle line:84%
+AUDIENCE: Can we overwrite
+super init [INAUDIBLE]??
+
+00:45:00.550 --> 00:45:02.260 align:middle line:84%
+ANA BELL: Yeah,
+so the Super init
+
+00:45:02.260 --> 00:45:04.270 align:middle line:90%
+calls the parent's init method.
+
+00:45:04.270 --> 00:45:08.050 align:middle line:84%
+And the reason I do that is
+because I know the parent
+
+00:45:08.050 --> 00:45:10.870 align:middle line:84%
+can just initialize
+all that stuff for me.
+
+00:45:10.870 --> 00:45:12.820 align:middle line:84%
+So I'm just taking
+advantage of the fact
+
+00:45:12.820 --> 00:45:15.430 align:middle line:84%
+that it does all
+that stuff for me.
+
+00:45:15.430 --> 00:45:17.380 align:middle line:84%
+You can imagine the
+init method, maybe,
+
+00:45:17.380 --> 00:45:20.110 align:middle line:84%
+it also checked the
+types to make sure
+
+00:45:20.110 --> 00:45:23.560 align:middle line:84%
+that the person who created
+this to enforce that start
+
+00:45:23.560 --> 00:45:24.190 align:middle line:90%
+is a string.
+
+00:45:24.190 --> 00:45:25.150 align:middle line:90%
+End is a string.
+
+00:45:25.150 --> 00:45:26.800 align:middle line:84%
+All that extra code
+that would happen
+
+00:45:26.800 --> 00:45:30.190 align:middle line:84%
+in the init method of
+Workout, we would just
+
+00:45:30.190 --> 00:45:32.420 align:middle line:90%
+let run with this line here.
+
+00:45:32.420 --> 00:45:35.390 align:middle line:84%
+So we don't have to
+copy and paste it.
+
+00:45:35.390 --> 00:45:36.170 align:middle line:90%
+Yes.
+
+00:45:36.170 --> 00:45:38.300 align:middle line:84%
+AUDIENCE: Do we
+also have to take
+
+00:45:38.300 --> 00:45:42.500 align:middle line:84%
+by leaving the line above
+right in [INAUDIBLE]??
+
+00:45:42.500 --> 00:45:46.005 align:middle line:84%
+ANA BELL: Yes, you
+mean these two?
+
+00:45:46.005 --> 00:45:48.582 align:middle line:84%
+AUDIENCE: The [INAUDIBLE]
+so that [INAUDIBLE]----
+
+00:45:48.582 --> 00:45:49.165 align:middle line:90%
+ANA BELL: Yep.
+
+00:45:49.165 --> 00:45:52.992 align:middle line:84%
+AUDIENCE: --needs to
+have start and calories.
+
+00:45:52.992 --> 00:45:58.013 align:middle line:84%
+And the Super needs to have at
+least start, end, and calories?
+
+00:45:58.013 --> 00:46:00.180 align:middle line:84%
+ANA BELL: Yes, exactly,
+actually, yes, you're right.
+
+00:46:00.180 --> 00:46:03.750 align:middle line:84%
+So the reason this works
+is because the init method
+
+00:46:03.750 --> 00:46:07.740 align:middle line:84%
+of my Workout takes in the start
+and the end and the calories.
+
+00:46:07.740 --> 00:46:10.830 align:middle line:84%
+If I said that the init
+method of RunWorkout
+
+00:46:10.830 --> 00:46:14.010 align:middle line:84%
+doesn't need start and end
+or something like that,
+
+00:46:14.010 --> 00:46:16.668 align:middle line:84%
+I wouldn't be able to run
+this init method, exactly.
+
+00:46:16.668 --> 00:46:18.960 align:middle line:84%
+Or maybe I would run it with
+some defaults or something
+
+00:46:18.960 --> 00:46:20.610 align:middle line:84%
+like if you actually
+want to run it,
+
+00:46:20.610 --> 00:46:22.470 align:middle line:84%
+you have to pass
+it-- you still have
+
+00:46:22.470 --> 00:46:28.110 align:middle line:84%
+to follow the stub of that
+init method, right, yeah,
+
+00:46:28.110 --> 00:46:31.270 align:middle line:90%
+that's a great point.
+
+00:46:31.270 --> 00:46:32.070 align:middle line:90%
+yeah
+
+00:46:32.070 --> 00:46:33.445 align:middle line:84%
+AUDIENCE: [INAUDIBLE]
+you said, I
+
+00:46:33.445 --> 00:46:36.970 align:middle line:84%
+feel like before passing
+the init of the parent
+
+00:46:36.970 --> 00:46:40.990 align:middle line:84%
+into this one without having
+to write the Super thing.
+
+00:46:40.990 --> 00:46:43.150 align:middle line:90%
+ANA BELL: Yeah, so you're right.
+
+00:46:43.150 --> 00:46:44.680 align:middle line:84%
+I wasn't writing
+the Super thing.
+
+00:46:44.680 --> 00:46:48.830 align:middle line:84%
+I was just naming
+the parent directly.
+
+00:46:48.830 --> 00:46:51.550 align:middle line:84%
+So in the animal
+one, I said, animal
+
+00:46:51.550 --> 00:46:53.980 align:middle line:84%
+dot double underscore
+init double underscore.
+
+00:46:53.980 --> 00:46:56.350 align:middle line:84%
+And in this particular
+case, I'm just showing you
+
+00:46:56.350 --> 00:46:58.130 align:middle line:90%
+a different way to do it.
+
+00:46:58.130 --> 00:47:01.750 align:middle line:84%
+Maybe you don't know
+who your parent is?
+
+00:47:01.750 --> 00:47:03.970 align:middle line:84%
+In that case, you can
+just run this function,
+
+00:47:03.970 --> 00:47:06.730 align:middle line:84%
+and it tells you
+who your parent is.
+
+00:47:06.730 --> 00:47:09.160 align:middle line:84%
+But this line would
+work just as well
+
+00:47:09.160 --> 00:47:12.010 align:middle line:84%
+if I said workout,
+write this thing,
+
+00:47:12.010 --> 00:47:14.200 align:middle line:84%
+dot double underscore
+init double underscore.
+
+00:47:14.200 --> 00:47:15.700 align:middle line:84%
+And that would be
+exactly the same
+
+00:47:15.700 --> 00:47:19.260 align:middle line:90%
+as I had done last lecture.
+
+00:47:19.260 --> 00:47:22.250 align:middle line:84%
+So let's look at the state
+dictionary for this one,
+
+00:47:22.250 --> 00:47:24.180 align:middle line:90%
+for this new addition here.
+
+00:47:24.180 --> 00:47:27.320 align:middle line:84%
+So this is a state dictionary
+of just my plain old Workout
+
+00:47:27.320 --> 00:47:28.920 align:middle line:90%
+class.
+
+00:47:28.920 --> 00:47:30.140 align:middle line:90%
+We saw this before.
+
+00:47:30.140 --> 00:47:32.210 align:middle line:84%
+It's all my getters,
+all my setters,
+
+00:47:32.210 --> 00:47:35.840 align:middle line:84%
+the init, and this cal_per_hour
+from the new and improved
+
+00:47:35.840 --> 00:47:38.500 align:middle line:90%
+Workout class.
+
+00:47:38.500 --> 00:47:44.740 align:middle line:84%
+Now, my subclass, the RunWorkout
+the super() method basically
+
+00:47:44.740 --> 00:47:49.130 align:middle line:90%
+says, hey, you are a Workout.
+
+00:47:49.130 --> 00:47:53.360 align:middle line:84%
+The super() method, the
+state dictionary for it will
+
+00:47:53.360 --> 00:47:57.260 align:middle line:84%
+additionally have this
+getter and this setter,
+
+00:47:57.260 --> 00:47:59.270 align:middle line:90%
+these two methods.
+
+00:47:59.270 --> 00:48:02.420 align:middle line:84%
+We're not copying all
+this stuff all over again,
+
+00:48:02.420 --> 00:48:05.420 align:middle line:84%
+down in the RunWorkout
+state dictionary
+
+00:48:05.420 --> 00:48:07.760 align:middle line:84%
+because that already
+exists up here.
+
+00:48:07.760 --> 00:48:10.970 align:middle line:84%
+But in addition, the RunWorkout
+has this get_elevation
+
+00:48:10.970 --> 00:48:12.180 align:middle line:90%
+and set_elevation method.
+
+00:48:12.180 --> 00:48:16.520 align:middle line:84%
+Those are the only things that
+we've defined in this class.
+
+00:48:16.520 --> 00:48:19.430 align:middle line:84%
+So then when I create
+a RunWorkout instance.
+
+00:48:19.430 --> 00:48:22.660 align:middle line:84%
+So this is an instance of
+RunWorkout, not Workout.
+
+00:48:22.660 --> 00:48:25.180 align:middle line:84%
+Python points to this
+RunWorkout class.
+
+00:48:25.180 --> 00:48:28.240 align:middle line:84%
+And the data attributes
+for a RunWorkout instance
+
+00:48:28.240 --> 00:48:30.910 align:middle line:84%
+are going to be, of course,
+all the data attributes
+
+00:48:30.910 --> 00:48:37.620 align:middle line:84%
+of a regular Workout, those
+five, plus the elevation.
+
+00:48:37.620 --> 00:48:39.585 align:middle line:84%
+The new data attribute
+that I just added.
+
+00:48:39.585 --> 00:48:48.850 align:middle line:90%
+
+
+00:48:48.850 --> 00:48:52.570 align:middle line:84%
+So we're using inheritance
+in this particular case
+
+00:48:52.570 --> 00:48:56.920 align:middle line:84%
+in the spirit of modularity,
+in the spirit of abstraction,
+
+00:48:56.920 --> 00:48:59.680 align:middle line:84%
+in the spirit of writing
+code that's reusable,
+
+00:48:59.680 --> 00:49:03.580 align:middle line:84%
+that's readable, that's
+understandable in the future.
+
+00:49:03.580 --> 00:49:07.270 align:middle line:84%
+So if we were writing the
+RunWorkout by basically copying
+
+00:49:07.270 --> 00:49:09.410 align:middle line:84%
+and pasting everything
+in there all over again,
+
+00:49:09.410 --> 00:49:12.160 align:middle line:84%
+it would be a really long
+class, where most of it
+
+00:49:12.160 --> 00:49:15.460 align:middle line:84%
+was just a copy and
+paste off of the Workout.
+
+00:49:15.460 --> 00:49:18.730 align:middle line:84%
+So now, if we define
+it in this way,
+
+00:49:18.730 --> 00:49:22.150 align:middle line:84%
+we can easily see
+new functionality
+
+00:49:22.150 --> 00:49:26.260 align:middle line:84%
+and new data attributes that
+RunWorkout has, in addition
+
+00:49:26.260 --> 00:49:29.500 align:middle line:90%
+to just being a Workout object.
+
+00:49:29.500 --> 00:49:34.500 align:middle line:84%
+So all those good things for
+writing very nice clear code
+
+00:49:34.500 --> 00:49:39.090 align:middle line:84%
+OK, so now we're going to
+look at a method that's
+
+00:49:39.090 --> 00:49:40.890 align:middle line:90%
+being reused from our parent.
+
+00:49:40.890 --> 00:49:44.730 align:middle line:84%
+And that's this double
+underscore str method.
+
+00:49:44.730 --> 00:49:50.550 align:middle line:84%
+So this str method,
+it looks like a beast.
+
+00:49:50.550 --> 00:49:54.820 align:middle line:84%
+It's very, very long, but I
+promise you, it's not so bad.
+
+00:49:54.820 --> 00:49:57.780 align:middle line:84%
+So this str method, let's
+remember what it does.
+
+00:49:57.780 --> 00:50:03.510 align:middle line:84%
+It tells Python what to do when
+you print an object of type
+
+00:50:03.510 --> 00:50:08.225 align:middle line:84%
+Workout because it's defined
+inside the Workout class here.
+
+00:50:08.225 --> 00:50:09.600 align:middle line:84%
+So I'll show you
+what it actually
+
+00:50:09.600 --> 00:50:12.490 align:middle line:84%
+looks like in the
+actual Workout class.
+
+00:50:12.490 --> 00:50:15.930 align:middle line:90%
+So here's my Workout.
+
+00:50:15.930 --> 00:50:19.050 align:middle line:84%
+There's my class variable, my
+init, my getters, my setters,
+
+00:50:19.050 --> 00:50:21.930 align:middle line:84%
+all that, and then
+here's my str method.
+
+00:50:21.930 --> 00:50:23.100 align:middle line:90%
+It's long, right?
+
+00:50:23.100 --> 00:50:25.110 align:middle line:90%
+It takes an entire page.
+
+00:50:25.110 --> 00:50:28.530 align:middle line:84%
+This is not a method that I
+would like to copy and paste
+
+00:50:28.530 --> 00:50:30.660 align:middle line:84%
+in every single one
+of my subclasses
+
+00:50:30.660 --> 00:50:33.240 align:middle line:84%
+because that would
+be a lot of code.
+
+00:50:33.240 --> 00:50:35.550 align:middle line:84%
+Again, against the
+spirit of abstraction,
+
+00:50:35.550 --> 00:50:37.960 align:middle line:90%
+modularity, all that good stuff.
+
+00:50:37.960 --> 00:50:41.670 align:middle line:84%
+So what we're doing is,
+we're just defining it once
+
+00:50:41.670 --> 00:50:45.280 align:middle line:90%
+in our parent class Workout.
+
+00:50:45.280 --> 00:50:50.760 align:middle line:84%
+And it's going to
+do the following.
+
+00:50:50.760 --> 00:50:55.640 align:middle line:84%
+So str method has
+to return a string.
+
+00:50:55.640 --> 00:50:57.410 align:middle line:90%
+It doesn't print the string.
+
+00:50:57.410 --> 00:50:58.970 align:middle line:84%
+This is a very
+important distinction.
+
+00:50:58.970 --> 00:51:02.750 align:middle line:84%
+It returns a string that
+will eventually be printed
+
+00:51:02.750 --> 00:51:05.580 align:middle line:90%
+when you call the print method.
+
+00:51:05.580 --> 00:51:09.950 align:middle line:84%
+So the thing that I'm doing
+throughout this whole method,
+
+00:51:09.950 --> 00:51:13.370 align:middle line:84%
+is to basically just build
+up my string to return.
+
+00:51:13.370 --> 00:51:16.070 align:middle line:84%
+Return register
+is return string.
+
+00:51:16.070 --> 00:51:18.290 align:middle line:84%
+And I'm building it
+just by concatenating
+
+00:51:18.290 --> 00:51:20.780 align:middle line:84%
+it piece by piece with
+more and more stuff
+
+00:51:20.780 --> 00:51:23.150 align:middle line:84%
+that I want to
+eventually print out.
+
+00:51:23.150 --> 00:51:26.540 align:middle line:84%
+So the output would look
+something like this.
+
+00:51:26.540 --> 00:51:29.780 align:middle line:84%
+I'm basically printing
+out, on the console, sort
+
+00:51:29.780 --> 00:51:33.980 align:middle line:84%
+of like the little square
+of a watch, very cute.
+
+00:51:33.980 --> 00:51:35.780 align:middle line:90%
+So what am I composing here?
+
+00:51:35.780 --> 00:51:39.410 align:middle line:84%
+The first bit, this
+thing in the red box,
+
+00:51:39.410 --> 00:51:43.430 align:middle line:84%
+prints this line over here,
+just horizontal line that's
+
+00:51:43.430 --> 00:51:45.590 align:middle line:90%
+some width long.
+
+00:51:45.590 --> 00:51:48.640 align:middle line:84%
+The next bit here,
+you notice, it
+
+00:51:48.640 --> 00:51:54.070 align:middle line:84%
+grabs the icon data attribute,
+puts it here on a line
+
+00:51:54.070 --> 00:51:56.290 align:middle line:84%
+along with a vertical
+bar and a bunch of spaces
+
+00:51:56.290 --> 00:51:58.500 align:middle line:90%
+and a vertical bar.
+
+00:51:58.500 --> 00:52:01.460 align:middle line:84%
+The next bit here, prints
+the kind of workout
+
+00:52:01.460 --> 00:52:04.110 align:middle line:84%
+by accessing the
+kind data attribute.
+
+00:52:04.110 --> 00:52:06.530 align:middle line:84%
+So either workout, or
+running, or swimming,
+
+00:52:06.530 --> 00:52:08.030 align:middle line:90%
+whatever that string is.
+
+00:52:08.030 --> 00:52:10.950 align:middle line:84%
+Prints it right
+underneath the emoji.
+
+00:52:10.950 --> 00:52:15.690 align:middle line:84%
+The next bit here, is
+composing the duration.
+
+00:52:15.690 --> 00:52:18.510 align:middle line:84%
+So remember when we did
+the datetime object,
+
+00:52:18.510 --> 00:52:22.830 align:middle line:84%
+just over here, when we were
+printing the duration where
+
+00:52:22.830 --> 00:52:26.110 align:middle line:84%
+we just simply subtracted an
+end time minus a start time,
+
+00:52:26.110 --> 00:52:28.200 align:middle line:90%
+It looked like this.
+
+00:52:28.200 --> 00:52:29.820 align:middle line:90%
+I'm perfectly happy with that.
+
+00:52:29.820 --> 00:52:31.420 align:middle line:90%
+That looks really nice.
+
+00:52:31.420 --> 00:52:34.640 align:middle line:90%
+So let's just use that.
+
+00:52:34.640 --> 00:52:38.630 align:middle line:84%
+So the get_duration just
+does the subtraction.
+
+00:52:38.630 --> 00:52:40.970 align:middle line:84%
+It's a method inside
+my Workout class.
+
+00:52:40.970 --> 00:52:47.680 align:middle line:84%
+And then we just keep composing
+that to our return string.
+
+00:52:47.680 --> 00:52:51.540 align:middle line:84%
+Next, we are going to figure
+out how many calories were
+
+00:52:51.540 --> 00:52:53.460 align:middle line:90%
+burned in this Workout object.
+
+00:52:53.460 --> 00:52:58.410 align:middle line:84%
+So again, we're grabbing the
+get_calories method, the return
+
+00:52:58.410 --> 00:53:02.370 align:middle line:84%
+value from that method,
+however it may be calculated.
+
+00:53:02.370 --> 00:53:05.640 align:middle line:84%
+So for this workout type, either
+we gave the value directly,
+
+00:53:05.640 --> 00:53:09.870 align:middle line:84%
+or we let it estimate it from
+the duration of the workout.
+
+00:53:09.870 --> 00:53:11.610 align:middle line:84%
+However it decides
+to calculate it,
+
+00:53:11.610 --> 00:53:13.920 align:middle line:84%
+according to how this
+Workout object was made,
+
+00:53:13.920 --> 00:53:17.620 align:middle line:90%
+that value gets put right there.
+
+00:53:17.620 --> 00:53:20.640 align:middle line:84%
+And then the last bit is this
+last line down at the bottom.
+
+00:53:20.640 --> 00:53:24.050 align:middle line:90%
+
+
+00:53:24.050 --> 00:53:27.490 align:middle line:84%
+So then we can create
+any kind of workout
+
+00:53:27.490 --> 00:53:31.690 align:middle line:84%
+because all the child classes
+inherit all of the methods
+
+00:53:31.690 --> 00:53:32.720 align:middle line:90%
+from the parent class.
+
+00:53:32.720 --> 00:53:34.720 align:middle line:84%
+So of course all
+these child classes
+
+00:53:34.720 --> 00:53:37.960 align:middle line:84%
+will inherit the str
+method of Workout.
+
+00:53:37.960 --> 00:53:40.630 align:middle line:84%
+So no matter what kind
+of workout I'm creating,
+
+00:53:40.630 --> 00:53:42.910 align:middle line:84%
+so here I'm just creating
+a regular workout, here
+
+00:53:42.910 --> 00:53:45.160 align:middle line:84%
+a running workout, and
+here a swim workout.
+
+00:53:45.160 --> 00:53:47.440 align:middle line:84%
+No matter how I'm
+creating it, they'll
+
+00:53:47.440 --> 00:53:49.040 align:middle line:90%
+use the same str method.
+
+00:53:49.040 --> 00:53:52.270 align:middle line:84%
+So all of these will print it
+in this really nice format.
+
+00:53:52.270 --> 00:53:56.980 align:middle line:84%
+The first bit will be specific
+to the kind of workout we have.
+
+00:53:56.980 --> 00:53:58.540 align:middle line:84%
+The little emojis
+will be different
+
+00:53:58.540 --> 00:54:01.180 align:middle line:84%
+because I've set
+those separately
+
+00:54:01.180 --> 00:54:03.280 align:middle line:90%
+within the subclasses.
+
+00:54:03.280 --> 00:54:08.470 align:middle line:84%
+The kind, as well, the label
+workout or running or swimming.
+
+00:54:08.470 --> 00:54:11.470 align:middle line:84%
+The calories_burned
+and the duration
+
+00:54:11.470 --> 00:54:18.370 align:middle line:84%
+will be calculated using the
+get_calories method and then
+
+00:54:18.370 --> 00:54:19.490 align:middle line:90%
+the get_duration method.
+
+00:54:19.490 --> 00:54:22.100 align:middle line:84%
+So again, in a nicely
+consistent way.
+
+00:54:22.100 --> 00:54:25.000 align:middle line:84%
+So I'll show you what this
+looks like in the actual code.
+
+00:54:25.000 --> 00:54:29.040 align:middle line:90%
+
+
+00:54:29.040 --> 00:54:30.150 align:middle line:90%
+Let me just comment that.
+
+00:54:30.150 --> 00:54:36.610 align:middle line:90%
+
+
+00:54:36.610 --> 00:54:38.910 align:middle line:84%
+So here I've got three
+workouts created.
+
+00:54:38.910 --> 00:54:41.160 align:middle line:84%
+And then I'm just printing
+these three different kinds
+
+00:54:41.160 --> 00:54:42.000 align:middle line:90%
+of workouts.
+
+00:54:42.000 --> 00:54:45.360 align:middle line:84%
+And just to show
+you I'm not lying,
+
+00:54:45.360 --> 00:54:48.690 align:middle line:84%
+see the swim workout doesn't
+have an str method defined
+
+00:54:48.690 --> 00:54:51.413 align:middle line:84%
+and neither does
+the run workout.
+
+00:54:51.413 --> 00:54:52.830 align:middle line:84%
+It just has a bunch
+of other stuff
+
+00:54:52.830 --> 00:54:54.970 align:middle line:90%
+defined, but no str method.
+
+00:54:54.970 --> 00:54:57.960 align:middle line:84%
+So we're just using the
+str method of our parent,
+
+00:54:57.960 --> 00:55:01.170 align:middle line:84%
+and then when we run
+it, it looks like this.
+
+00:55:01.170 --> 00:55:04.470 align:middle line:84%
+So I've got a regular workout
+with their icon and label,
+
+00:55:04.470 --> 00:55:06.240 align:middle line:84%
+running workout with
+their icon and label,
+
+00:55:06.240 --> 00:55:09.970 align:middle line:84%
+and a swimming workout
+with their icon and label.
+
+00:55:09.970 --> 00:55:12.940 align:middle line:90%
+Isn't that cute.
+
+00:55:12.940 --> 00:55:16.590 align:middle line:84%
+All right, so we've made our
+own little digital thing.
+
+00:55:16.590 --> 00:55:21.500 align:middle line:90%
+
+
+00:55:21.500 --> 00:55:26.390 align:middle line:84%
+So this begs the
+question, when can we
+
+00:55:26.390 --> 00:55:31.780 align:middle line:84%
+use an instance of a
+class, of a subclass?
+
+00:55:31.780 --> 00:55:34.300 align:middle line:90%
+
+
+00:55:34.300 --> 00:55:38.290 align:middle line:84%
+Well, you can use an instance
+of this RunWorkout anywhere
+
+00:55:38.290 --> 00:55:40.810 align:middle line:84%
+where you can use
+Workout because again,
+
+00:55:40.810 --> 00:55:43.900 align:middle line:84%
+the way I think about it is,
+you say, well, a RunWorkout is
+
+00:55:43.900 --> 00:55:46.450 align:middle line:84%
+a Workout, so anything
+I can do with a Workout,
+
+00:55:46.450 --> 00:55:50.050 align:middle line:84%
+I should be able to do with a
+RunWorkout, or a SwimWorkout,
+
+00:55:50.050 --> 00:55:51.820 align:middle line:90%
+or any of the subclasses.
+
+00:55:51.820 --> 00:55:53.410 align:middle line:90%
+But the opposite is not true.
+
+00:55:53.410 --> 00:55:55.840 align:middle line:84%
+If I can do something
+with a RunWorkout,
+
+00:55:55.840 --> 00:55:58.120 align:middle line:84%
+well, RunWorkout has a bunch
+of other specific things
+
+00:55:58.120 --> 00:55:59.120 align:middle line:90%
+that it can do.
+
+00:55:59.120 --> 00:56:00.850 align:middle line:84%
+Of course, a regular
+workout is not
+
+00:56:00.850 --> 00:56:04.360 align:middle line:84%
+going to be able to do
+those specific things.
+
+00:56:04.360 --> 00:56:06.710 align:middle line:84%
+So let's think about these
+two helper functions.
+
+00:56:06.710 --> 00:56:08.650 align:middle line:84%
+This one calculates
+the total calories
+
+00:56:08.650 --> 00:56:10.300 align:middle line:90%
+given a list of workouts.
+
+00:56:10.300 --> 00:56:12.730 align:middle line:84%
+And this one calculates
+the total elevation
+
+00:56:12.730 --> 00:56:15.490 align:middle line:90%
+given a list of workouts.
+
+00:56:15.490 --> 00:56:17.650 align:middle line:84%
+The code looks very
+similar for both.
+
+00:56:17.650 --> 00:56:19.690 align:middle line:84%
+We're just iterating
+through the loop,
+
+00:56:19.690 --> 00:56:23.890 align:middle line:84%
+grabbing each Workout
+object, and then we're
+
+00:56:23.890 --> 00:56:28.030 align:middle line:84%
+calling the get_calories
+or the get_elevation
+
+00:56:28.030 --> 00:56:29.800 align:middle line:90%
+on that Workout object.
+
+00:56:29.800 --> 00:56:31.570 align:middle line:84%
+So this will give me
+a number, and then
+
+00:56:31.570 --> 00:56:34.630 align:middle line:84%
+I'm just keeping a running
+sum for the total elevation
+
+00:56:34.630 --> 00:56:38.830 align:middle line:84%
+and the total calories and
+at the end, I return it.
+
+00:56:38.830 --> 00:56:41.300 align:middle line:84%
+So again, the list
+here is important.
+
+00:56:41.300 --> 00:56:44.960 align:middle line:84%
+These are Workout objects
+and Workout objects.
+
+00:56:44.960 --> 00:56:48.880 align:middle line:90%
+So what if I have a bunch of--
+
+00:56:48.880 --> 00:56:52.120 align:middle line:84%
+so here I've got two Workout
+objects and two running Workout
+
+00:56:52.120 --> 00:56:53.170 align:middle line:90%
+objects.
+
+00:56:53.170 --> 00:56:59.410 align:middle line:84%
+So these Workout objects
+are 30-minutes long.
+
+00:56:59.410 --> 00:57:03.430 align:middle line:84%
+So using 200 calories
+per hour, these ones
+
+00:57:03.430 --> 00:57:06.910 align:middle line:90%
+will each be 100 calories.
+
+00:57:06.910 --> 00:57:15.140 align:middle line:84%
+These running workouts are
+two hours long, so they will--
+
+00:57:15.140 --> 00:57:17.088 align:middle line:90%
+it doesn't actually matter.
+
+00:57:17.088 --> 00:57:17.630 align:middle line:90%
+sorry, sorry.
+
+00:57:17.630 --> 00:57:19.700 align:middle line:84%
+These running workouts
+are two hours long,
+
+00:57:19.700 --> 00:57:23.360 align:middle line:84%
+so they're going
+to be 400 calories.
+
+00:57:23.360 --> 00:57:30.120 align:middle line:84%
+Because these parameters here,
+correspond to the elevation.
+
+00:57:30.120 --> 00:57:31.920 align:middle line:84%
+And they correspond
+to the elevation
+
+00:57:31.920 --> 00:57:35.520 align:middle line:84%
+because if we look at the way we
+define a running workout right
+
+00:57:35.520 --> 00:57:39.450 align:middle line:84%
+here, this is the order
+of the parameters start
+
+00:57:39.450 --> 00:57:43.240 align:middle line:84%
+time, end time, elevation
+value, calories.
+
+00:57:43.240 --> 00:57:49.360 align:middle line:84%
+So when I pass in parameters,
+that need to go in that order.
+
+00:57:49.360 --> 00:57:51.280 align:middle line:90%
+And I can't skip around.
+
+00:57:51.280 --> 00:57:53.990 align:middle line:84%
+If I want one of them to
+be the default variable,
+
+00:57:53.990 --> 00:57:56.300 align:middle line:90%
+then that has to be at the end.
+
+00:57:56.300 --> 00:58:00.640 align:middle line:84%
+So in this particular case, I've
+got these two running workouts
+
+00:58:00.640 --> 00:58:04.960 align:middle line:84%
+at 400 calories because by
+default, I didn't actually
+
+00:58:04.960 --> 00:58:06.280 align:middle line:90%
+pass in the number of calories.
+
+00:58:06.280 --> 00:58:08.260 align:middle line:84%
+And then the elevation
+is 100 and 200.
+
+00:58:08.260 --> 00:58:09.160 align:middle line:90%
+Yeah.
+
+00:58:09.160 --> 00:58:12.830 align:middle line:84%
+AUDIENCE: What if we wanted
+the default elevation
+
+00:58:12.830 --> 00:58:17.470 align:middle line:84%
+and of the calories,
+would be put comma comma?
+
+00:58:17.470 --> 00:58:20.930 align:middle line:84%
+ANA BELL: Then if you
+wanted both to be default,
+
+00:58:20.930 --> 00:58:22.240 align:middle line:90%
+then you just put nothing.
+
+00:58:22.240 --> 00:58:24.280 align:middle line:84%
+You can't just leave
+an empty comma.
+
+00:58:24.280 --> 00:58:26.980 align:middle line:84%
+AUDIENCE: If you want
+the default elevation
+
+00:58:26.980 --> 00:58:28.000 align:middle line:90%
+and [INAUDIBLE]
+
+00:58:28.000 --> 00:58:30.250 align:middle line:84%
+ANA BELL: Yeah,
+so then you would
+
+00:58:30.250 --> 00:58:33.100 align:middle line:84%
+have to actually explicitly
+say, like, calories
+
+00:58:33.100 --> 00:58:35.420 align:middle line:90%
+equals whatever you want.
+
+00:58:35.420 --> 00:58:37.150 align:middle line:84%
+So at that point--
+yeah, now that we're
+
+00:58:37.150 --> 00:58:41.350 align:middle line:84%
+working with default variables,
+it becomes a little bit tricky.
+
+00:58:41.350 --> 00:58:43.480 align:middle line:84%
+You can't go wrong
+with just saying, like,
+
+00:58:43.480 --> 00:58:45.928 align:middle line:84%
+elev equals whatever you
+want it to be, calories
+
+00:58:45.928 --> 00:58:46.970 align:middle line:90%
+equals whatever you want.
+
+00:58:46.970 --> 00:58:50.660 align:middle line:84%
+And then you can do whatever
+you'd like in that case.
+
+00:58:50.660 --> 00:58:54.220 align:middle line:84%
+But in this particular case,
+we know our workouts are 400,
+
+00:58:54.220 --> 00:58:57.170 align:middle line:90%
+and elevation is those values.
+
+00:58:57.170 --> 00:59:01.570 align:middle line:84%
+So when we run total calories
+on all of the Workouts,
+
+00:59:01.570 --> 00:59:03.490 align:middle line:84%
+no matter what kind
+of workout I have,
+
+00:59:03.490 --> 00:59:07.940 align:middle line:84%
+it doesn't actually matter
+because Python will just
+
+00:59:07.940 --> 00:59:10.860 align:middle line:84%
+grab calories for all
+of these workout types.
+
+00:59:10.860 --> 00:59:12.170 align:middle line:90%
+So just sums that up.
+
+00:59:12.170 --> 00:59:16.610 align:middle line:84%
+Elevation, if I run it
+only on running workouts,
+
+00:59:16.610 --> 00:59:18.080 align:middle line:90%
+Python will know what to do.
+
+00:59:18.080 --> 00:59:21.710 align:middle line:84%
+Here's 100 and 200 because
+those running workouts have
+
+00:59:21.710 --> 00:59:23.750 align:middle line:90%
+an elevation data attribute.
+
+00:59:23.750 --> 00:59:29.540 align:middle line:84%
+But if I ask for the elevation
+for a running workout and just
+
+00:59:29.540 --> 00:59:32.930 align:middle line:84%
+a regular workout, Python
+will spit out an error
+
+00:59:32.930 --> 00:59:37.650 align:middle line:84%
+because as soon as it sees this
+workout one, it , says, well,
+
+00:59:37.650 --> 00:59:40.530 align:middle line:84%
+what's the workout
+dot get_elev method.
+
+00:59:40.530 --> 00:59:43.700 align:middle line:84%
+And it's going to say, I
+don't have a get_elev method
+
+00:59:43.700 --> 00:59:44.780 align:middle line:90%
+for a regular workout.
+
+00:59:44.780 --> 00:59:46.520 align:middle line:90%
+That's not something I know.
+
+00:59:46.520 --> 00:59:50.480 align:middle line:84%
+Because that's something that we
+implemented in the child class.
+
+00:59:50.480 --> 00:59:53.170 align:middle line:84%
+So let's go through
+these together.
+
+00:59:53.170 --> 00:59:57.070 align:middle line:84%
+And it's actually nothing
+to code just, to run.
+
+00:59:57.070 --> 01:00:01.010 align:middle line:90%
+
+
+01:00:01.010 --> 01:00:02.810 align:middle line:90%
+So it's just down here.
+
+01:00:02.810 --> 01:00:05.230 align:middle line:84%
+So this is just kind of
+making sure you understand
+
+01:00:05.230 --> 01:00:06.620 align:middle line:90%
+the order of operations.
+
+01:00:06.620 --> 01:00:09.370 align:middle line:84%
+And I think one of the ones
+that was question here,
+
+01:00:09.370 --> 01:00:11.770 align:middle line:84%
+where we actually passed
+in the number of calories,
+
+01:00:11.770 --> 01:00:13.490 align:middle line:90%
+is at the end.
+
+01:00:13.490 --> 01:00:16.780 align:middle line:84%
+So when I create a
+regular workout--
+
+01:00:16.780 --> 01:00:19.430 align:middle line:84%
+oops, let me just
+remove that over here
+
+01:00:19.430 --> 01:00:22.120 align:middle line:84%
+--what is the value when
+I ask Python to tell me
+
+01:00:22.120 --> 01:00:25.170 align:middle line:90%
+the calories for this workout?
+
+01:00:25.170 --> 01:00:28.095 align:middle line:84%
+At 200 calories an hour,
+what's the value here?
+
+01:00:28.095 --> 01:00:33.230 align:middle line:90%
+
+
+01:00:33.230 --> 01:00:35.462 align:middle line:90%
+Just yell it out.
+
+01:00:35.462 --> 01:00:37.240 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+01:00:37.240 --> 01:00:40.070 align:middle line:90%
+ANA BELL: 30 minutes?
+
+01:00:40.070 --> 01:00:44.240 align:middle line:90%
+100, right?
+
+01:00:44.240 --> 01:00:47.510 align:middle line:84%
+What's the elevation when
+I ask Python to tell me
+
+01:00:47.510 --> 01:00:48.890 align:middle line:90%
+the elevation for this object?
+
+01:00:48.890 --> 01:00:53.074 align:middle line:90%
+
+
+01:00:53.074 --> 01:00:54.510 align:middle line:90%
+AUDIENCE: An error.
+
+01:00:54.510 --> 01:00:57.940 align:middle line:90%
+ANA BELL: Error, exactly, yep.
+
+01:00:57.940 --> 01:01:01.820 align:middle line:84%
+Yep, because the Workout
+object has no attribute.
+
+01:01:01.820 --> 01:01:03.400 align:middle line:90%
+It has no method get_elev.
+
+01:01:03.400 --> 01:01:06.970 align:middle line:84%
+That's something specific
+to a running workout.
+
+01:01:06.970 --> 01:01:09.530 align:middle line:84%
+OK, how about this
+one, RunWorkout here.
+
+01:01:09.530 --> 01:01:11.320 align:middle line:90%
+So here I'm actually--
+
+01:01:11.320 --> 01:01:13.310 align:middle line:90%
+oops I didn't mean to do that.
+
+01:01:13.310 --> 01:01:15.385 align:middle line:84%
+What happens if I grab
+the calories for w2?
+
+01:01:15.385 --> 01:01:24.018 align:middle line:90%
+
+
+01:01:24.018 --> 01:01:25.480 align:middle line:90%
+AUDIENCE: 450.
+
+01:01:25.480 --> 01:01:28.780 align:middle line:84%
+ANA BELL: Yep, 450, yep it just
+grabs whatever's passed in,
+
+01:01:28.780 --> 01:01:29.650 align:middle line:90%
+doesn't estimate.
+
+01:01:29.650 --> 01:01:31.403 align:middle line:90%
+How about the elevation?
+
+01:01:31.403 --> 01:01:32.270 align:middle line:90%
+AUDIENCE: 70.
+
+01:01:32.270 --> 01:01:35.760 align:middle line:84%
+ANA BELL: Yep, there,
+again, perfect.
+
+01:01:35.760 --> 01:01:38.610 align:middle line:84%
+Now let's create three
+kinds of running workouts.
+
+01:01:38.610 --> 01:01:40.940 align:middle line:90%
+So here's one.
+
+01:01:40.940 --> 01:01:44.190 align:middle line:84%
+What's the calories and
+elevation for this one?
+
+01:01:44.190 --> 01:01:46.290 align:middle line:90%
+I'll just do them both together.
+
+01:01:46.290 --> 01:01:48.110 align:middle line:90%
+So rw1.
+
+01:01:48.110 --> 01:01:50.720 align:middle line:84%
+This parameter is the
+only one passed in.
+
+01:01:50.720 --> 01:01:53.510 align:middle line:84%
+What does that correspond
+to, calories or elevation?
+
+01:01:53.510 --> 01:01:56.720 align:middle line:90%
+AUDIENCE: Elevation.
+
+01:01:56.720 --> 01:01:58.970 align:middle line:84%
+ANA BELL: Yeah elevation,
+remember our parameter list.
+
+01:01:58.970 --> 01:02:01.050 align:middle line:90%
+Elevation comes before calories.
+
+01:02:01.050 --> 01:02:04.400 align:middle line:84%
+So the elevation is
+250, and the calories
+
+01:02:04.400 --> 01:02:08.390 align:middle line:84%
+will be estimated based
+on whatever this is.
+
+01:02:08.390 --> 01:02:10.160 align:middle line:90%
+So calories is first at 100.
+
+01:02:10.160 --> 01:02:13.530 align:middle line:90%
+Elevation is 250.
+
+01:02:13.530 --> 01:02:16.140 align:middle line:90%
+How about running workout 2?
+
+01:02:16.140 --> 01:02:20.050 align:middle line:84%
+So here I've got 450
+and 700 in that order.
+
+01:02:20.050 --> 01:02:21.960 align:middle line:90%
+Which one is the elevation?
+
+01:02:21.960 --> 01:02:26.027 align:middle line:90%
+
+
+01:02:26.027 --> 01:02:26.610 align:middle line:90%
+AUDIENCE: 450.
+
+01:02:26.610 --> 01:02:29.117 align:middle line:84%
+ANA BELL: Yep, 450,
+and calories is 700.
+
+01:02:29.117 --> 01:02:31.200 align:middle line:84%
+So when we print it, I
+printed them backwards just
+
+01:02:31.200 --> 01:02:33.780 align:middle line:90%
+to confuse us all.
+
+01:02:33.780 --> 01:02:37.170 align:middle line:84%
+And then lastly, how
+about this RunWorkout 3?
+
+01:02:37.170 --> 01:02:41.520 align:middle line:84%
+So here, to answer
+the question what
+
+01:02:41.520 --> 01:02:43.560 align:middle line:84%
+if I wanted elevation
+to be default,
+
+01:02:43.560 --> 01:02:45.880 align:middle line:84%
+but I wanted to
+pass in calories?
+
+01:02:45.880 --> 01:02:49.140 align:middle line:84%
+So here I just say the
+name of my parameter there,
+
+01:02:49.140 --> 01:02:50.550 align:middle line:90%
+and I give it an actual value.
+
+01:02:50.550 --> 01:02:53.170 align:middle line:90%
+
+
+01:02:53.170 --> 01:02:56.050 align:middle line:84%
+So clearly here,
+calories will be 300,
+
+01:02:56.050 --> 01:02:57.715 align:middle line:90%
+and elevation defaults to zero.
+
+01:02:57.715 --> 01:03:00.990 align:middle line:90%
+
+
+01:03:00.990 --> 01:03:06.270 align:middle line:84%
+So just a little practice
+reading the specifications.
+
+01:03:06.270 --> 01:03:10.470 align:middle line:84%
+OK, so that finishes reusing
+the str method from the parent.
+
+01:03:10.470 --> 01:03:14.400 align:middle line:84%
+Now let's override
+our superclass.
+
+01:03:14.400 --> 01:03:18.070 align:middle line:84%
+So our improved Workout
+class, remember,
+
+01:03:18.070 --> 01:03:23.220 align:middle line:84%
+has a get_calories method that
+estimates the calories based
+
+01:03:23.220 --> 01:03:25.980 align:middle line:84%
+on the time that it took
+you to do this workout,
+
+01:03:25.980 --> 01:03:30.000 align:middle line:84%
+whether it was a running
+workout or a regular workout.
+
+01:03:30.000 --> 01:03:32.460 align:middle line:84%
+But what I'm doing
+in this method,
+
+01:03:32.460 --> 01:03:35.760 align:middle line:84%
+is I'm going to actually
+implement my own get_calories
+
+01:03:35.760 --> 01:03:41.040 align:middle line:84%
+method inside the class
+definition for a RunWorkout.
+
+01:03:41.040 --> 01:03:43.920 align:middle line:84%
+So here's my RunWorkout
+class definition.
+
+01:03:43.920 --> 01:03:46.750 align:middle line:84%
+And I've got my own
+get_calories method.
+
+01:03:46.750 --> 01:03:50.070 align:middle line:84%
+So when I run get_calories
+on a RunWorkout,
+
+01:03:50.070 --> 01:03:52.320 align:middle line:90%
+Python will use this one.
+
+01:03:52.320 --> 01:03:53.820 align:middle line:90%
+What is this one going to do?
+
+01:03:53.820 --> 01:03:56.730 align:middle line:84%
+So we're going to do
+something really cool.
+
+01:03:56.730 --> 01:03:59.880 align:middle line:84%
+We're going to estimate the
+number of calories burned
+
+01:03:59.880 --> 01:04:06.060 align:middle line:84%
+for a run workout based on a set
+of points, latitude longitude
+
+01:04:06.060 --> 01:04:06.970 align:middle line:90%
+points.
+
+01:04:06.970 --> 01:04:09.690 align:middle line:84%
+So what we can
+actually do, is we're
+
+01:04:09.690 --> 01:04:13.800 align:middle line:84%
+going to pass in
+a list of tuples
+
+01:04:13.800 --> 01:04:17.640 align:middle line:84%
+like this, which represents
+the route that we
+
+01:04:17.640 --> 01:04:20.980 align:middle line:84%
+take, so in this
+particular case,
+
+01:04:20.980 --> 01:04:26.260 align:middle line:84%
+I've got four places that
+I have jogged between.
+
+01:04:26.260 --> 01:04:29.290 align:middle line:84%
+So these are my four
+latitude longitude points.
+
+01:04:29.290 --> 01:04:34.020 align:middle line:84%
+So each tuple is
+latitude comma longitude.
+
+01:04:34.020 --> 01:04:36.980 align:middle line:84%
+So I can make this as
+precise as I'd like.
+
+01:04:36.980 --> 01:04:40.430 align:middle line:84%
+But what I want
+this method to do,
+
+01:04:40.430 --> 01:04:42.680 align:middle line:84%
+is to potentially,
+if the user does
+
+01:04:42.680 --> 01:04:44.750 align:middle line:84%
+give me a set of
+latitude longitude points
+
+01:04:44.750 --> 01:04:47.360 align:middle line:84%
+that they actually went
+through, to calculate
+
+01:04:47.360 --> 01:04:51.230 align:middle line:84%
+the calories burned based
+on a class variable called
+
+01:04:51.230 --> 01:04:53.600 align:middle line:90%
+calories_per_kilometer.
+
+01:04:53.600 --> 01:04:56.990 align:middle line:84%
+So given a set of these
+points, what I'd like to do is
+
+01:04:56.990 --> 01:05:00.830 align:middle line:84%
+to calculate the total
+kilometers traveled between all
+
+01:05:00.830 --> 01:05:04.805 align:middle line:84%
+of these latitude longitude
+points, multiply that distance,
+
+01:05:04.805 --> 01:05:05.540 align:middle line:90%
+.
+
+01:05:05.540 --> 01:05:08.880 align:middle line:84%
+That kilometer distance by
+the calories_per_kilometer.
+
+01:05:08.880 --> 01:05:12.620 align:middle line:84%
+And use that as the
+estimate for the calories
+
+01:05:12.620 --> 01:05:15.340 align:middle line:84%
+burned in this
+particular RunWorkout.
+
+01:05:15.340 --> 01:05:17.750 align:middle line:84%
+So this is how the
+code achieves that.
+
+01:05:17.750 --> 01:05:19.660 align:middle line:84%
+So I've got another
+class variable
+
+01:05:19.660 --> 01:05:22.360 align:middle line:84%
+that's only specific
+to this RunWorkout.
+
+01:05:22.360 --> 01:05:24.640 align:middle line:84%
+So Workout does not
+know about this.
+
+01:05:24.640 --> 01:05:26.440 align:middle line:90%
+Calories_per_kilometer is 100.
+
+01:05:26.440 --> 01:05:29.080 align:middle line:84%
+And now I've got my own
+get_calories method here.
+
+01:05:29.080 --> 01:05:30.110 align:middle line:90%
+It's overridden.
+
+01:05:30.110 --> 01:05:33.340 align:middle line:84%
+So if we run this
+get_calories on a RunWorkout,
+
+01:05:33.340 --> 01:05:36.010 align:middle line:90%
+it will use this one.
+
+01:05:36.010 --> 01:05:37.190 align:middle line:90%
+And what does it do?
+
+01:05:37.190 --> 01:05:40.730 align:middle line:84%
+Well, if we don't give
+it any GPS points,
+
+01:05:40.730 --> 01:05:43.520 align:middle line:84%
+if we don't give it a
+list of tuples there,
+
+01:05:43.520 --> 01:05:46.160 align:middle line:90%
+Python will default to the else.
+
+01:05:46.160 --> 01:05:47.240 align:middle line:90%
+What does the else do?
+
+01:05:47.240 --> 01:05:50.120 align:middle line:84%
+Well, it says, hey,
+who's your parent?
+
+01:05:50.120 --> 01:05:51.990 align:middle line:90%
+Run their get_calories method.
+
+01:05:51.990 --> 01:05:56.760 align:middle line:84%
+So that's just estimating it
+based on the total time elapsed
+
+01:05:56.760 --> 01:05:57.830 align:middle line:90%
+in this workout.
+
+01:05:57.830 --> 01:06:00.030 align:middle line:90%
+That's our default parent.
+
+01:06:00.030 --> 01:06:06.180 align:middle line:84%
+But if the user got fancy and
+gave us a bunch of tuples,
+
+01:06:06.180 --> 01:06:07.770 align:middle line:84%
+representing latitude
+and longitude
+
+01:06:07.770 --> 01:06:09.750 align:middle line:84%
+points for all of
+their workouts,
+
+01:06:09.750 --> 01:06:13.160 align:middle line:84%
+then we're going to do
+the following stuff.
+
+01:06:13.160 --> 01:06:16.820 align:middle line:84%
+We're going to iterate through
+all of these pairs of GPS
+
+01:06:16.820 --> 01:06:19.340 align:middle line:90%
+points, pair by pair.
+
+01:06:19.340 --> 01:06:23.780 align:middle line:84%
+We're going to
+calculate the distance,
+
+01:06:23.780 --> 01:06:26.360 align:middle line:84%
+given this latitude,
+longitude value.
+
+01:06:26.360 --> 01:06:31.460 align:middle line:84%
+Add on to this running total
+for the total distance,
+
+01:06:31.460 --> 01:06:34.070 align:middle line:84%
+and then return
+that total distance
+
+01:06:34.070 --> 01:06:38.090 align:middle line:84%
+multiplied by this
+class variable,
+
+01:06:38.090 --> 01:06:42.050 align:middle line:90%
+calories_per_kilometer.
+
+01:06:42.050 --> 01:06:46.010 align:middle line:84%
+So let me show you
+what this actually
+
+01:06:46.010 --> 01:06:49.550 align:middle line:84%
+looks like because the only
+thing that is sort of still
+
+01:06:49.550 --> 01:06:53.060 align:middle line:84%
+mystifying here, is
+this GPS distance.
+
+01:06:53.060 --> 01:06:55.550 align:middle line:84%
+And this GPS
+distance is actually
+
+01:06:55.550 --> 01:07:01.260 align:middle line:84%
+a function that's in
+this lecture helpers
+
+01:07:01.260 --> 01:07:05.800 align:middle line:84%
+file, which is included in
+today's Python zip file.
+
+01:07:05.800 --> 01:07:09.240 align:middle line:90%
+And it's just from the internet.
+
+01:07:09.240 --> 01:07:16.620 align:middle line:84%
+It's a way to calculate the
+distance traveled between two
+
+01:07:16.620 --> 01:07:18.030 align:middle line:90%
+latitude longitude pairs.
+
+01:07:18.030 --> 01:07:19.120 align:middle line:90%
+That's all it is.
+
+01:07:19.120 --> 01:07:21.900 align:middle line:84%
+So it does some fancy stuff
+with sines and cosines
+
+01:07:21.900 --> 01:07:23.760 align:middle line:84%
+and things like
+that to figure out
+
+01:07:23.760 --> 01:07:27.510 align:middle line:84%
+the distance between
+these two lat long pairs.
+
+01:07:27.510 --> 01:07:28.720 align:middle line:90%
+That's all it is.
+
+01:07:28.720 --> 01:07:32.700 align:middle line:84%
+So we're just running that
+function nicely down here
+
+01:07:32.700 --> 01:07:35.430 align:middle line:84%
+to help us calculate
+that total distance.
+
+01:07:35.430 --> 01:07:38.320 align:middle line:84%
+Beyond that, everything
+is pretty simple.
+
+01:07:38.320 --> 01:07:43.890 align:middle line:84%
+It's just looking at consecutive
+pairs of these tuples,
+
+01:07:43.890 --> 01:07:46.740 align:middle line:84%
+getting that distance plus
+this distance plus distances,
+
+01:07:46.740 --> 01:07:51.510 align:middle line:84%
+and then multiplying by
+the cal_per_kilometer.
+
+01:07:51.510 --> 01:07:54.670 align:middle line:84%
+So in the end, what we get
+is something like this.
+
+01:07:54.670 --> 01:07:58.620 align:middle line:90%
+So here let me show you.
+
+01:07:58.620 --> 01:08:01.540 align:middle line:84%
+Here are two points,
+latitude longitude points.
+
+01:08:01.540 --> 01:08:03.780 align:middle line:84%
+So I've got Boston and
+Newton, so here I've
+
+01:08:03.780 --> 01:08:05.820 align:middle line:90%
+just got a straight shot.
+
+01:08:05.820 --> 01:08:09.300 align:middle line:84%
+So I'm counting, getting very
+precise with blocks and things
+
+01:08:09.300 --> 01:08:10.180 align:middle line:90%
+like that.
+
+01:08:10.180 --> 01:08:12.270 align:middle line:84%
+But if I create a
+running workout here
+
+01:08:12.270 --> 01:08:15.450 align:middle line:84%
+with the start time, end
+time, elevation value, and now
+
+01:08:15.450 --> 01:08:19.620 align:middle line:84%
+I pass in the route
+GPS points, this
+
+01:08:19.620 --> 01:08:22.870 align:middle line:84%
+is another piece
+to my init method.
+
+01:08:22.870 --> 01:08:24.160 align:middle line:90%
+I forgot to show you that.
+
+01:08:24.160 --> 01:08:25.609 align:middle line:90%
+Sorry about that.
+
+01:08:25.609 --> 01:08:30.700 align:middle line:84%
+So here's my init
+method for RunWorkout.
+
+01:08:30.700 --> 01:08:33.010 align:middle line:90%
+I skipped that little bit.
+
+01:08:33.010 --> 01:08:35.170 align:middle line:84%
+Last parameter here
+is to actually pass
+
+01:08:35.170 --> 01:08:36.520 align:middle line:90%
+in some route GPS points.
+
+01:08:36.520 --> 01:08:39.080 align:middle line:90%
+
+
+01:08:39.080 --> 01:08:41.529 align:middle line:84%
+And if I actually pass in
+those route GPS points,
+
+01:08:41.529 --> 01:08:43.540 align:middle line:84%
+when I run the
+get_calories method,
+
+01:08:43.540 --> 01:08:45.279 align:middle line:84%
+it tells me that I
+burned this many.
+
+01:08:45.279 --> 01:08:47.106 align:middle line:84%
+And it calculates it
+based on that distance
+
+01:08:47.106 --> 01:08:48.189 align:middle line:90%
+between Boston and Newton.
+
+01:08:48.189 --> 01:08:50.740 align:middle line:90%
+
+
+01:08:50.740 --> 01:08:52.930 align:middle line:84%
+In the second example
+here, I don't actually
+
+01:08:52.930 --> 01:08:56.090 align:middle line:84%
+pass in the value
+for the GPS points,
+
+01:08:56.090 --> 01:08:59.050 align:middle line:84%
+so we're defaulting to
+just our regular calories
+
+01:08:59.050 --> 01:09:01.630 align:middle line:84%
+function from Workout,
+which is to calculate it
+
+01:09:01.630 --> 01:09:03.830 align:middle line:84%
+based on the start
+time and the end time.
+
+01:09:03.830 --> 01:09:07.350 align:middle line:90%
+So from 1:35 to 3:57.
+
+01:09:07.350 --> 01:09:10.215 align:middle line:84%
+That's why it's a weird not
+round number of calories.
+
+01:09:10.215 --> 01:09:15.330 align:middle line:90%
+
+
+01:09:15.330 --> 01:09:17.010 align:middle line:84%
+So I think that's
+also really cool,
+
+01:09:17.010 --> 01:09:22.109 align:middle line:90%
+you guys, this function here.
+
+01:09:22.109 --> 01:09:25.290 align:middle line:84%
+OK, so these overridden
+methods, just to show you
+
+01:09:25.290 --> 01:09:29.160 align:middle line:84%
+for completion's sake, how
+this Run Workout class looks,
+
+01:09:29.160 --> 01:09:31.770 align:middle line:84%
+everything is the same as
+what we ended up with before.
+
+01:09:31.770 --> 01:09:35.250 align:middle line:84%
+But now I'm going to reimplement
+my get_calories method,
+
+01:09:35.250 --> 01:09:38.399 align:middle line:84%
+so now RunWorkout knows
+about a calories method.
+
+01:09:38.399 --> 01:09:41.040 align:middle line:84%
+And I've also got
+this data attribute.
+
+01:09:41.040 --> 01:09:44.010 align:middle line:84%
+Sorry, class variable, sorry,
+I always get messed up.
+
+01:09:44.010 --> 01:09:46.649 align:middle line:84%
+This class variable
+cals_per_kilometer.
+
+01:09:46.649 --> 01:09:50.290 align:middle line:84%
+And any RunWorkout instance
+will know about, of course,
+
+01:09:50.290 --> 01:09:53.069 align:middle line:84%
+the cals_per_kilometer, as
+well as the cal_per_hour
+
+01:09:53.069 --> 01:09:53.805 align:middle line:90%
+from our parent.
+
+01:09:53.805 --> 01:09:56.830 align:middle line:90%
+
+
+01:09:56.830 --> 01:09:57.970 align:middle line:90%
+Questions about that?
+
+01:09:57.970 --> 01:10:02.560 align:middle line:90%
+
+
+01:10:02.560 --> 01:10:05.180 align:middle line:84%
+OK, we're building
+something really nice here.
+
+01:10:05.180 --> 01:10:08.020 align:middle line:84%
+So I guess the
+question is, and I
+
+01:10:08.020 --> 01:10:10.100 align:middle line:84%
+think you've probably
+figured this out,
+
+01:10:10.100 --> 01:10:12.160 align:middle line:84%
+how do you know
+which method to call?
+
+01:10:12.160 --> 01:10:17.050 align:middle line:84%
+Well, you just look at
+the object before the dot.
+
+01:10:17.050 --> 01:10:21.040 align:middle line:84%
+You run a method your object
+dot method name, what's
+
+01:10:21.040 --> 01:10:22.270 align:middle line:90%
+the thing before the dot?
+
+01:10:22.270 --> 01:10:23.860 align:middle line:90%
+What is its type?
+
+01:10:23.860 --> 01:10:26.290 align:middle line:84%
+If the type-- like, for
+example, get_calories
+
+01:10:26.290 --> 01:10:29.290 align:middle line:84%
+--if the type is
+running, you look
+
+01:10:29.290 --> 01:10:33.250 align:middle line:84%
+to see if that class definition
+has a get_calories method.
+
+01:10:33.250 --> 01:10:35.920 align:middle line:90%
+If it does, you use that.
+
+01:10:35.920 --> 01:10:38.380 align:middle line:84%
+If it doesn't, and
+only if it doesn't, you
+
+01:10:38.380 --> 01:10:40.510 align:middle line:84%
+look at your parent and
+say, does your parent
+
+01:10:40.510 --> 01:10:42.190 align:middle line:90%
+have a get_calories method?
+
+01:10:42.190 --> 01:10:44.360 align:middle line:90%
+If it does, you use that.
+
+01:10:44.360 --> 01:10:46.630 align:middle line:84%
+And if it doesn't, you look
+at the parents' parent.
+
+01:10:46.630 --> 01:10:50.598 align:middle line:84%
+Does the parent's parent
+have a get_calories method?
+
+01:10:50.598 --> 01:10:51.640 align:middle line:90%
+If it does, you use that.
+
+01:10:51.640 --> 01:10:53.920 align:middle line:84%
+If it doesn't, you look at
+the parents parent's parent
+
+01:10:53.920 --> 01:10:56.253 align:middle line:84%
+all the way up, you keep going
+all the way up the chain,
+
+01:10:56.253 --> 01:10:58.780 align:middle line:84%
+until you get to the
+generic Python object.
+
+01:10:58.780 --> 01:11:03.440 align:middle line:84%
+If the Python object
+type has a method named
+
+01:11:03.440 --> 01:11:06.410 align:middle line:84%
+what you'd like to call,
+you use that, otherwise
+
+01:11:06.410 --> 01:11:09.740 align:middle line:84%
+error, No such method
+was found anywhere
+
+01:11:09.740 --> 01:11:14.810 align:middle line:84%
+within our chain of hierarchies
+up until the Python object.
+
+01:11:14.810 --> 01:11:17.780 align:middle line:84%
+All right, so that
+finishes overriding
+
+01:11:17.780 --> 01:11:19.680 align:middle line:90%
+our get_calories method.
+
+01:11:19.680 --> 01:11:21.890 align:middle line:84%
+And now we're going to
+do one more thing, which
+
+01:11:21.890 --> 01:11:26.540 align:middle line:84%
+is to add something new to
+RunWorkout that didn't actually
+
+01:11:26.540 --> 01:11:31.640 align:middle line:84%
+exist in Workout Although,
+I guess I am implementing it
+
+01:11:31.640 --> 01:11:33.740 align:middle line:90%
+in Workout.
+
+01:11:33.740 --> 01:11:35.870 align:middle line:90%
+So it's not actually adding new.
+
+01:11:35.870 --> 01:11:37.880 align:middle line:84%
+But we're going to
+override it anyway.
+
+01:11:37.880 --> 01:11:42.380 align:middle line:84%
+So the class Workout, let's
+say that we want to compare
+
+01:11:42.380 --> 01:11:45.020 align:middle line:90%
+two workouts together.
+
+01:11:45.020 --> 01:11:48.970 align:middle line:84%
+So to do that, we're going
+to implement the Dunder
+
+01:11:48.970 --> 01:11:51.535 align:middle line:84%
+method double underscore
+eq double underscore.
+
+01:11:51.535 --> 01:11:55.150 align:middle line:84%
+And this will allow us to
+compare two running Workout
+
+01:11:55.150 --> 01:11:58.900 align:middle line:84%
+objects, or two Workout objects,
+or running and Workout objects
+
+01:11:58.900 --> 01:12:01.120 align:middle line:90%
+using the double equal sign.
+
+01:12:01.120 --> 01:12:05.800 align:middle line:90%
+So w1 == run w2 or whatever.
+
+01:12:05.800 --> 01:12:07.750 align:middle line:84%
+So we can use the
+double equal sign
+
+01:12:07.750 --> 01:12:11.070 align:middle line:90%
+to compare objects of our type.
+
+01:12:11.070 --> 01:12:18.000 align:middle line:84%
+So again, my decision for
+comparing these two objects,
+
+01:12:18.000 --> 01:12:23.200 align:middle line:84%
+Workout objects is to say, well,
+first, let's compare the types.
+
+01:12:23.200 --> 01:12:27.090 align:middle line:84%
+So if I'm comparing a workout
+versus a running workout,
+
+01:12:27.090 --> 01:12:30.160 align:middle line:84%
+right off the bat, they're
+not going to be equal.
+
+01:12:30.160 --> 01:12:32.920 align:middle line:84%
+So first of all, the type of
+this object should be the same.
+
+01:12:32.920 --> 01:12:34.920 align:middle line:84%
+So I should be comparing
+workouts with workouts,
+
+01:12:34.920 --> 01:12:38.420 align:middle line:84%
+running workouts with running
+workouts, or swims with swims.
+
+01:12:38.420 --> 01:12:43.010 align:middle line:84%
+And I also want every
+one of the other data
+
+01:12:43.010 --> 01:12:44.790 align:middle line:90%
+attributes to be the same.
+
+01:12:44.790 --> 01:12:49.380 align:middle line:84%
+So the start time, end times,
+the kind, and the get calories.
+
+01:12:49.380 --> 01:12:52.060 align:middle line:84%
+So as long as all of
+these things are the same
+
+01:12:52.060 --> 01:12:54.630 align:middle line:84%
+I'm going to say that
+these workouts are
+
+01:12:54.630 --> 01:12:58.030 align:middle line:90%
+the same or equivalent.
+
+01:12:58.030 --> 01:13:00.600 align:middle line:84%
+So this is the equal
+method in my workout,
+
+01:13:00.600 --> 01:13:04.110 align:middle line:84%
+and then, in my class
+Workout, I can actually
+
+01:13:04.110 --> 01:13:06.700 align:middle line:90%
+override that method.
+
+01:13:06.700 --> 01:13:12.690 align:middle line:84%
+So this should actually
+be add override, just
+
+01:13:12.690 --> 01:13:13.770 align:middle line:90%
+like the other one.
+
+01:13:13.770 --> 01:13:17.370 align:middle line:90%
+
+
+01:13:17.370 --> 01:13:21.030 align:middle line:84%
+And then RunWorkout, I'm going
+to override the equal method,
+
+01:13:21.030 --> 01:13:24.900 align:middle line:84%
+but I'm going to do it in a
+very modular Pythonic way.
+
+01:13:24.900 --> 01:13:27.210 align:middle line:84%
+I'm going to say that
+a RunWorkout is going
+
+01:13:27.210 --> 01:13:36.250 align:middle line:84%
+to be the same as another
+Workout if everything
+
+01:13:36.250 --> 01:13:38.930 align:middle line:90%
+in my parent is the same.
+
+01:13:38.930 --> 01:13:43.420 align:middle line:84%
+So here, I'm just calling the
+super() method saying Workout
+
+01:13:43.420 --> 01:13:47.070 align:middle line:84%
+dot double underscore equal
+double underscore other.
+
+01:13:47.070 --> 01:13:50.780 align:middle line:84%
+So with this little bit
+here, this line here,
+
+01:13:50.780 --> 01:13:53.020 align:middle line:84%
+just the super() dot double
+underscore equal double
+
+01:13:53.020 --> 01:13:59.520 align:middle line:84%
+underscore other, this
+compares all of these things.
+
+01:13:59.520 --> 01:14:04.820 align:middle line:84%
+So I don't need to rewrite that
+in eq the method of RunWorkout.
+
+01:14:04.820 --> 01:14:08.360 align:middle line:84%
+And I can clearly see
+what else in addition
+
+01:14:08.360 --> 01:14:11.210 align:middle line:84%
+to regular Workout
+comparison, I need
+
+01:14:11.210 --> 01:14:13.730 align:middle line:84%
+to have happen for
+them to be equal.
+
+01:14:13.730 --> 01:14:17.077 align:middle line:84%
+I also want the
+elevations to be equal.
+
+01:14:17.077 --> 01:14:18.410 align:middle line:90%
+That's the other data attribute.
+
+01:14:18.410 --> 01:14:22.020 align:middle line:90%
+
+
+01:14:22.020 --> 01:14:25.510 align:middle line:84%
+So you can see now how nicely
+modular this code looks.
+
+01:14:25.510 --> 01:14:29.130 align:middle line:84%
+It's very clear what
+differentiates a RunWorkout
+
+01:14:29.130 --> 01:14:33.810 align:middle line:84%
+to a regular Workout
+with this slide.
+
+01:14:33.810 --> 01:14:35.010 align:middle line:90%
+Questions about this?
+
+01:14:35.010 --> 01:14:38.240 align:middle line:90%
+
+
+01:14:38.240 --> 01:14:38.810 align:middle line:90%
+OK.
+
+01:14:38.810 --> 01:14:41.300 align:middle line:84%
+AUDIENCE: Should [INAUDIBLE]
+to continue to end.
+
+01:14:41.300 --> 01:14:44.570 align:middle line:84%
+ANA BELL: Yeah, exactly,
+yeah, so this should all
+
+01:14:44.570 --> 01:14:47.550 align:middle line:90%
+be on one line.
+
+01:14:47.550 --> 01:14:50.700 align:middle line:84%
+But the backslash
+actually just breaks up
+
+01:14:50.700 --> 01:14:55.390 align:middle line:84%
+the line into multiple
+lines for visibility.
+
+01:14:55.390 --> 01:14:59.490 align:middle line:84%
+So in the code, here's
+a bunch of Workouts.
+
+01:14:59.490 --> 01:15:01.570 align:middle line:90%
+And we can run some of them.
+
+01:15:01.570 --> 01:15:04.300 align:middle line:84%
+But you can see why
+they're true or false.
+
+01:15:04.300 --> 01:15:08.850 align:middle line:84%
+So here, w1 and w2
+are not the same
+
+01:15:08.850 --> 01:15:13.380 align:middle line:84%
+because the calories_burned
+are different.
+
+01:15:13.380 --> 01:15:14.877 align:middle line:90%
+They're both regular workouts.
+
+01:15:14.877 --> 01:15:16.710 align:middle line:84%
+They both have the same
+start and end times,
+
+01:15:16.710 --> 01:15:18.400 align:middle line:84%
+but the calories_burned
+are different.
+
+01:15:18.400 --> 01:15:22.065 align:middle line:84%
+So this prints false, just
+equality on these workouts.
+
+01:15:22.065 --> 01:15:25.500 align:middle line:90%
+
+
+01:15:25.500 --> 01:15:27.630 align:middle line:90%
+And then here's a true one.
+
+01:15:27.630 --> 01:15:31.710 align:middle line:84%
+w2 is equivalent to w3
+because the start and end
+
+01:15:31.710 --> 01:15:34.530 align:middle line:84%
+times are the same,
+the length is the same,
+
+01:15:34.530 --> 01:15:38.700 align:middle line:84%
+and the calories_burned
+are the same, w1 and w3.
+
+01:15:38.700 --> 01:15:42.040 align:middle line:84%
+Or sorry, w2 and w3,
+these two, all right.
+
+01:15:42.040 --> 01:15:44.110 align:middle line:84%
+This one just used
+the default value,
+
+01:15:44.110 --> 01:15:48.170 align:middle line:84%
+but that default
+calculated values
+
+01:15:48.170 --> 01:15:50.740 align:middle line:84%
+was calculated to be 100 because
+it's a 30-minute workout,
+
+01:15:50.740 --> 01:15:51.240 align:middle line:90%
+anyway.
+
+01:15:51.240 --> 01:15:53.610 align:middle line:90%
+
+
+01:15:53.610 --> 01:15:56.760 align:middle line:84%
+So you can go through some of
+the other ones on your own.
+
+01:15:56.760 --> 01:15:59.510 align:middle line:90%
+
+
+01:15:59.510 --> 01:16:03.500 align:middle line:84%
+I guess the other interesting
+one is this w1 with rw1.
+
+01:16:03.500 --> 01:16:09.050 align:middle line:84%
+Everything about this is
+the same, calories_burned.
+
+01:16:09.050 --> 01:16:11.750 align:middle line:84%
+Everything is the same, except
+for the fact that they are
+
+01:16:11.750 --> 01:16:13.580 align:middle line:90%
+different kinds of workouts.
+
+01:16:13.580 --> 01:16:14.420 align:middle line:90%
+One is a run.
+
+01:16:14.420 --> 01:16:16.840 align:middle line:90%
+One is a regular.
+
+01:16:16.840 --> 01:16:18.010 align:middle line:90%
+So we run that as false.
+
+01:16:18.010 --> 01:16:21.920 align:middle line:90%
+
+
+01:16:21.920 --> 01:16:25.080 align:middle line:84%
+Other questions,
+or any questions?
+
+01:16:25.080 --> 01:16:29.210 align:middle line:90%
+
+
+01:16:29.210 --> 01:16:35.510 align:middle line:84%
+OK, so last slide, this
+is the last lecture
+
+01:16:35.510 --> 01:16:39.610 align:middle line:90%
+on object oriented programming.
+
+01:16:39.610 --> 01:16:41.920 align:middle line:84%
+Hopefully, it gave
+you an idea for how
+
+01:16:41.920 --> 01:16:43.240 align:middle line:90%
+to create your own objects.
+
+01:16:43.240 --> 01:16:45.370 align:middle line:84%
+And this last
+example, specifically,
+
+01:16:45.370 --> 01:16:47.260 align:middle line:84%
+showed how we can
+just improve it
+
+01:16:47.260 --> 01:16:51.910 align:middle line:84%
+a little bit at a time to make
+it be this really cool thing.
+
+01:16:51.910 --> 01:16:54.640 align:middle line:84%
+We added a way to
+estimate calories.
+
+01:16:54.640 --> 01:16:58.090 align:middle line:84%
+We added a way to estimate
+calories using GPS points,
+
+01:16:58.090 --> 01:16:59.620 align:middle line:84%
+and we just did
+it incrementally.
+
+01:16:59.620 --> 01:17:01.630 align:middle line:84%
+So you don't want to do
+that right off the bat.
+
+01:17:01.630 --> 01:17:03.713 align:middle line:84%
+Just write a little bit
+at a time, and in the end,
+
+01:17:03.713 --> 01:17:07.540 align:middle line:84%
+you can write a really
+cool object type.
+
+01:17:07.540 --> 01:17:10.480 align:middle line:84%
+Now that you know how to
+create your own object types,
+
+01:17:10.480 --> 01:17:14.620 align:middle line:84%
+you can create objects
+using other objects.
+
+01:17:14.620 --> 01:17:17.800 align:middle line:84%
+So some of the data attributes
+for something more complex,
+
+01:17:17.800 --> 01:17:21.820 align:middle line:84%
+could be a Workout object,
+something like that.
+
+01:17:21.820 --> 01:17:25.030 align:middle line:90%
+But it's possible to overdo it.
+
+01:17:25.030 --> 01:17:28.750 align:middle line:84%
+Especially now that we're not
+writing super complex classes,
+
+01:17:28.750 --> 01:17:31.330 align:middle line:90%
+it's possible to overengineer.
+
+01:17:31.330 --> 01:17:33.940 align:middle line:84%
+And when you overengineer,
+it becomes kind of
+
+01:17:33.940 --> 01:17:38.170 align:middle line:84%
+annoying to just keep scrolling
+back and forth to this init,
+
+01:17:38.170 --> 01:17:41.030 align:middle line:84%
+to that init to figure
+out what methods
+
+01:17:41.030 --> 01:17:44.340 align:middle line:84%
+were in this class, what
+methods were in the other class?
+
+01:17:44.340 --> 01:17:49.730 align:middle line:84%
+And so if you can achieve
+it using just one object
+
+01:17:49.730 --> 01:17:52.940 align:middle line:84%
+type, or maybe just a function,
+no need to create your
+
+01:17:52.940 --> 01:17:55.610 align:middle line:84%
+own all these
+complicated object types
+
+01:17:55.610 --> 01:17:57.290 align:middle line:90%
+that build upon object types.
+
+01:17:57.290 --> 01:18:01.010 align:middle line:84%
+But I just wanted to show you
+that it is possible, especially
+
+01:18:01.010 --> 01:18:03.740 align:middle line:84%
+as you might be building
+more complex things
+
+01:18:03.740 --> 01:18:06.810 align:middle line:84%
+in future classes,
+things like that.
+
+01:18:06.810 --> 01:18:10.070 align:middle line:84%
+It is possible to write
+really complex classes that
+
+01:18:10.070 --> 01:18:14.270 align:middle line:84%
+don't look so bad because you're
+building upon code that you've
+
+01:18:14.270 --> 01:18:15.230 align:middle line:90%
+already written.
+
+01:18:15.230 --> 01:18:18.830 align:middle line:84%
+So now we've got these ideas
+of abstraction, modularity,
+
+01:18:18.830 --> 01:18:20.930 align:middle line:84%
+information hiding
+that all work together
+
+01:18:20.930 --> 01:18:24.830 align:middle line:84%
+to help you achieve
+this really cool object
+
+01:18:24.830 --> 01:18:28.200 align:middle line:90%
+or cool class or cool program.
+
+01:18:28.200 --> 01:18:31.800 align:middle line:84%
+OK, so the next set
+of lectures, we're
+
+01:18:31.800 --> 01:18:34.380 align:middle line:84%
+going to leave programming
+for a little bit.
+
+01:18:34.380 --> 01:18:37.350 align:middle line:84%
+And we're going to
+look at figuring out
+
+01:18:37.350 --> 01:18:40.950 align:middle line:84%
+how to write efficient
+programs and how
+
+01:18:40.950 --> 01:18:45.570 align:middle line:84%
+to figure out whether our
+programs are efficient or not
+
+01:18:45.570 --> 01:18:47.350 align:middle line:90%
+and things like that.
+
+01:18:47.350 --> 01:18:50.220 align:middle line:84%
+So we're going to go into a more
+theoretical side of computer
+
+01:18:50.220 --> 01:18:51.770 align:middle line:90%
+science.
+
+01:18:51.770 --> 01:19:04.000 align:middle line:90%

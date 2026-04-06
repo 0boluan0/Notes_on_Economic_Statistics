@@ -1,0 +1,6 @@
+
+{
+  "title":"Lecture 15: Recursion",
+  "content":"Topics: Recursion: iteration vs. recursion, inductive reasoning\nViewing videos requires an internet connection Your browser does not support some features required to play this video. Please update your browser to the latest version for the best experience. You can also download the video to watch it offline. View video page Download video Download transcript Lecture Notes Lecture 15: Recursion\nLecture 15 Code\nReadings Ch 6.1\nFinger Exercise Lecture 15 Implement the function that meets the specifications below:\ndef recur_power(base, exp): \u0026#34;\u0026#34;\u0026#34; base: int or float. exp: int \u0026gt;= 0 Returns base to the power of exp using recursion. Hint: Base case is when exp = 0. Otherwise, in the recursive case you return base * base^(exp-1). \u0026#34;\u0026#34;\u0026#34; # Your code here # Examples: print(recur_power(2,5) # prints 32 6.100L Finger Exercises Lecture 15 Solutions\n"}
+
+

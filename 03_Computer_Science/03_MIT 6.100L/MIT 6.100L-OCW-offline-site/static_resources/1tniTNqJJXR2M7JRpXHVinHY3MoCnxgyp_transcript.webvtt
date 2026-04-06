@@ -1,0 +1,3462 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.964 align:middle line:90%
+[SQUEAKING]
+
+00:00:01.964 --> 00:00:04.419 align:middle line:90%
+[RUSTLING]
+
+00:00:04.419 --> 00:00:08.347 align:middle line:90%
+[CLICKING]
+
+00:00:08.347 --> 00:00:11.707 align:middle line:90%
+
+
+00:00:11.707 --> 00:00:12.540 align:middle line:90%
+ANA BELL: All right.
+
+00:00:12.540 --> 00:00:13.720 align:middle line:90%
+Welcome, everyone.
+
+00:00:13.720 --> 00:00:15.930 align:middle line:84%
+So in case you
+missed last lecture,
+
+00:00:15.930 --> 00:00:19.680 align:middle line:84%
+I've got some extra
+debugging ducks
+
+00:00:19.680 --> 00:00:24.510 align:middle line:84%
+that were left over from last
+lecture's debugging lecture.
+
+00:00:24.510 --> 00:00:25.865 align:middle line:90%
+Please take them home.
+
+00:00:25.865 --> 00:00:27.990 align:middle line:84%
+I don't want to have to
+take them back to my office
+
+00:00:27.990 --> 00:00:30.280 align:middle line:84%
+and then bring them
+back so many times.
+
+00:00:30.280 --> 00:00:32.729 align:middle line:84%
+So please, give
+them a good home.
+
+00:00:32.729 --> 00:00:36.600 align:middle line:84%
+If you find them useful
+in your debugging
+
+00:00:36.600 --> 00:00:40.740 align:middle line:84%
+strategy throughout your
+programming careers,
+
+00:00:40.740 --> 00:00:42.840 align:middle line:84%
+I suggest you
+upgrade to carrying
+
+00:00:42.840 --> 00:00:44.790 align:middle line:84%
+a debugging duck
+with you everywhere,
+
+00:00:44.790 --> 00:00:46.140 align:middle line:90%
+as I have on my phone.
+
+00:00:46.140 --> 00:00:48.070 align:middle line:90%
+I use it in my day to day life.
+
+00:00:48.070 --> 00:00:53.100 align:middle line:84%
+So that's just the next
+step beyond an actual duck.
+
+00:00:53.100 --> 00:00:56.110 align:middle line:84%
+All right, so let's get
+started on today's lecture.
+
+00:00:56.110 --> 00:01:02.370 align:middle line:84%
+We will be going over the idea
+of exceptions and assertions.
+
+00:01:02.370 --> 00:01:06.510 align:middle line:84%
+And these are basically
+those scary red errors
+
+00:01:06.510 --> 00:01:09.670 align:middle line:84%
+that we get when
+our program crashes.
+
+00:01:09.670 --> 00:01:10.170 align:middle line:90%
+OK?
+
+00:01:10.170 --> 00:01:12.190 align:middle line:84%
+Today's lecture will
+hopefully shed some light
+
+00:01:12.190 --> 00:01:15.280 align:middle line:84%
+on exactly what
+these exceptions are
+
+00:01:15.280 --> 00:01:18.440 align:middle line:84%
+and how we can actually use them
+to our advantage in our code.
+
+00:01:18.440 --> 00:01:23.050 align:middle line:84%
+So let's start by
+talking about exceptions.
+
+00:01:23.050 --> 00:01:28.260 align:middle line:84%
+So when you run your code,
+usually it runs without error,
+
+00:01:28.260 --> 00:01:31.320 align:middle line:84%
+produces the right output
+all the time, like mine does.
+
+00:01:31.320 --> 00:01:35.970 align:middle line:84%
+But sometimes it so
+happens that your code
+
+00:01:35.970 --> 00:01:37.830 align:middle line:90%
+hits an unexpected condition.
+
+00:01:37.830 --> 00:01:41.730 align:middle line:84%
+And when that unexpected
+condition is run,
+
+00:01:41.730 --> 00:01:44.620 align:middle line:84%
+you get an exception to
+something that was expected.
+
+00:01:44.620 --> 00:01:48.910 align:middle line:84%
+So we've already seen a bunch
+of different exception examples.
+
+00:01:48.910 --> 00:01:51.610 align:middle line:84%
+So we even talked about a
+couple of these last lecture.
+
+00:01:51.610 --> 00:01:53.670 align:middle line:84%
+So we've got index
+errors where you index
+
+00:01:53.670 --> 00:01:56.610 align:middle line:84%
+too far into some
+list, type errors where
+
+00:01:56.610 --> 00:01:58.980 align:middle line:84%
+you're doing funky things
+with types that Python
+
+00:01:58.980 --> 00:02:00.960 align:middle line:90%
+doesn't like syntax.
+
+00:02:00.960 --> 00:02:02.577 align:middle line:90%
+Errors are also exceptions.
+
+00:02:02.577 --> 00:02:03.910 align:middle line:90%
+Name errors are also exceptions.
+
+00:02:03.910 --> 00:02:06.300 align:middle line:84%
+So a bunch of these errors
+that we've encountered
+
+00:02:06.300 --> 00:02:08.990 align:middle line:90%
+are types of exceptions.
+
+00:02:08.990 --> 00:02:13.000 align:middle line:84%
+So it turns out so far in
+our programming experience
+
+00:02:13.000 --> 00:02:16.640 align:middle line:84%
+that whenever we
+get an exception,
+
+00:02:16.640 --> 00:02:18.310 align:middle line:90%
+the program immediately crashes.
+
+00:02:18.310 --> 00:02:22.000 align:middle line:84%
+And really we don't have any
+way to handle these exceptions.
+
+00:02:22.000 --> 00:02:23.980 align:middle line:84%
+We just accept the
+fact that it crashed
+
+00:02:23.980 --> 00:02:26.320 align:middle line:84%
+and we go back to
+the debugging board.
+
+00:02:26.320 --> 00:02:30.100 align:middle line:84%
+But it turns out that in Python
+we can actually write code
+
+00:02:30.100 --> 00:02:32.090 align:middle line:90%
+to handle these exceptions.
+
+00:02:32.090 --> 00:02:35.120 align:middle line:84%
+So if your code does happen
+to throw an exception,
+
+00:02:35.120 --> 00:02:38.680 align:middle line:84%
+so an error occurs or
+something unexpected happens,
+
+00:02:38.680 --> 00:02:42.520 align:middle line:84%
+you can write code that
+deals with that situation.
+
+00:02:42.520 --> 00:02:46.240 align:middle line:84%
+And either decides to ignore
+the fact that an error occurred,
+
+00:02:46.240 --> 00:02:52.720 align:middle line:84%
+set some default values, or
+just raise your own exception
+
+00:02:52.720 --> 00:02:53.300 align:middle line:90%
+and move on.
+
+00:02:53.300 --> 00:02:58.260 align:middle line:84%
+So we're going to see a bunch
+of examples of these cases.
+
+00:02:58.260 --> 00:03:00.920 align:middle line:84%
+So the way that we
+deal with exceptions
+
+00:03:00.920 --> 00:03:03.950 align:middle line:90%
+is using some code blocks.
+
+00:03:03.950 --> 00:03:05.900 align:middle line:84%
+The way that we
+handle exceptions
+
+00:03:05.900 --> 00:03:08.120 align:middle line:84%
+is using these try
+and except blocks.
+
+00:03:08.120 --> 00:03:13.810 align:middle line:84%
+So the way that we write
+an exception handler
+
+00:03:13.810 --> 00:03:17.410 align:middle line:84%
+is to put some potentially
+problematic code
+
+00:03:17.410 --> 00:03:19.700 align:middle line:90%
+inside this try block.
+
+00:03:19.700 --> 00:03:21.670 align:middle line:84%
+So the try is a
+keyword in Python,
+
+00:03:21.670 --> 00:03:24.100 align:middle line:84%
+so obviously you can't name
+a variable try or anything
+
+00:03:24.100 --> 00:03:25.150 align:middle line:90%
+like that.
+
+00:03:25.150 --> 00:03:27.490 align:middle line:84%
+If you type it in your code,
+you'll see it turns blue.
+
+00:03:27.490 --> 00:03:31.240 align:middle line:84%
+And try tells Python that you're
+starting a code block that
+
+00:03:31.240 --> 00:03:34.700 align:middle line:84%
+contains some lines of code
+you'd like Python to execute.
+
+00:03:34.700 --> 00:03:37.720 align:middle line:90%
+So just normal code.
+
+00:03:37.720 --> 00:03:40.330 align:middle line:84%
+If Python is able to
+successfully execute
+
+00:03:40.330 --> 00:03:42.860 align:middle line:84%
+these lines of code without
+an exception being raised,
+
+00:03:42.860 --> 00:03:46.390 align:middle line:84%
+so without the program
+crashing, then nothing happens.
+
+00:03:46.390 --> 00:03:49.840 align:middle line:84%
+Nothing is run inside
+this except block.
+
+00:03:49.840 --> 00:03:52.910 align:middle line:84%
+And the code just
+continues as normal.
+
+00:03:52.910 --> 00:03:56.680 align:middle line:84%
+But if it so happens that,
+in that code that you ran
+
+00:03:56.680 --> 00:03:59.470 align:middle line:84%
+something strange has
+happened and the code
+
+00:03:59.470 --> 00:04:01.750 align:middle line:90%
+would have crashed.
+
+00:04:01.750 --> 00:04:04.060 align:middle line:84%
+The code actually
+doesn't crash, because we
+
+00:04:04.060 --> 00:04:07.630 align:middle line:84%
+can catch the exception
+that gets raised
+
+00:04:07.630 --> 00:04:09.860 align:middle line:90%
+inside this except block.
+
+00:04:09.860 --> 00:04:14.580 align:middle line:84%
+So if we have an associated
+except block over here to a try
+
+00:04:14.580 --> 00:04:15.900 align:middle line:90%
+block from here.
+
+00:04:15.900 --> 00:04:18.540 align:middle line:84%
+Python is going to try
+to run this potentially
+
+00:04:18.540 --> 00:04:19.410 align:middle line:90%
+problematic code.
+
+00:04:19.410 --> 00:04:21.180 align:middle line:84%
+And if an exception
+is raised, it
+
+00:04:21.180 --> 00:04:24.750 align:middle line:84%
+will stop running any further
+lines inside the try block
+
+00:04:24.750 --> 00:04:28.380 align:middle line:84%
+and immediately hop to the
+lines in the except block.
+
+00:04:28.380 --> 00:04:32.970 align:middle line:84%
+And the lines in the except
+block will then get executed.
+
+00:04:32.970 --> 00:04:36.600 align:middle line:84%
+So to just draw a
+parallel to, if I
+
+00:04:36.600 --> 00:04:39.700 align:middle line:84%
+were to say this in
+terms of if and else.
+
+00:04:39.700 --> 00:04:42.390 align:middle line:84%
+The way that I would describe
+the try and accept blocks
+
+00:04:42.390 --> 00:04:46.140 align:middle line:84%
+is I would say if,
+and then I would
+
+00:04:46.140 --> 00:04:48.720 align:middle line:84%
+put all the potentially
+problematic lines of code
+
+00:04:48.720 --> 00:04:52.260 align:middle line:84%
+that I'd like to write inside
+this condition for the if.
+
+00:04:52.260 --> 00:04:54.000 align:middle line:84%
+And if all of
+these lines of code
+
+00:04:54.000 --> 00:04:58.050 align:middle line:84%
+manage to successfully run,
+then nothing else happens.
+
+00:04:58.050 --> 00:05:00.720 align:middle line:84%
+The inside of this if is
+essentially just a pass.
+
+00:05:00.720 --> 00:05:02.730 align:middle line:84%
+And we don't execute
+the else and then
+
+00:05:02.730 --> 00:05:05.290 align:middle line:84%
+we just carry on with
+the rest of our lives.
+
+00:05:05.290 --> 00:05:07.170 align:middle line:84%
+But if there is
+some line of code
+
+00:05:07.170 --> 00:05:10.140 align:middle line:84%
+here that we're trying to run
+that crashes or that causes
+
+00:05:10.140 --> 00:05:13.120 align:middle line:84%
+the program to crash,
+Python will say nope,
+
+00:05:13.120 --> 00:05:16.300 align:middle line:84%
+I'm not going to crash
+just yet, let me see what
+
+00:05:16.300 --> 00:05:17.570 align:middle line:90%
+the code would like me to do.
+
+00:05:17.570 --> 00:05:19.450 align:middle line:84%
+And so we'd hop inside
+this else and then
+
+00:05:19.450 --> 00:05:21.910 align:middle line:84%
+we'd do something to
+handle the problem.
+
+00:05:21.910 --> 00:05:24.560 align:middle line:84%
+The something we do is
+inside this except block.
+
+00:05:24.560 --> 00:05:26.620 align:middle line:84%
+So again, this is not
+code we'd ever write.
+
+00:05:26.620 --> 00:05:29.470 align:middle line:84%
+It's just kind of a
+way to draw parallel
+
+00:05:29.470 --> 00:05:31.370 align:middle line:90%
+with what we know so far.
+
+00:05:31.370 --> 00:05:35.410 align:middle line:84%
+The code that we would write
+is this try a bunch of code,
+
+00:05:35.410 --> 00:05:41.140 align:middle line:84%
+except, do some lines of code
+if an error should come up
+
+00:05:41.140 --> 00:05:43.100 align:middle line:90%
+in the try block.
+
+00:05:43.100 --> 00:05:45.550 align:middle line:84%
+So let's look at some
+examples with code
+
+00:05:45.550 --> 00:05:48.470 align:middle line:84%
+that you should be able to write
+at this point in the course.
+
+00:05:48.470 --> 00:05:51.220 align:middle line:84%
+So we have some code
+on the left here.
+
+00:05:51.220 --> 00:05:54.310 align:middle line:84%
+It's a function
+called some digits.
+
+00:05:54.310 --> 00:05:58.240 align:middle line:84%
+And we're writing this code
+without any exceptions OK?
+
+00:05:58.240 --> 00:06:01.670 align:middle line:84%
+We're just writing it as if you
+were given this code on a quiz.
+
+00:06:01.670 --> 00:06:04.820 align:middle line:90%
+What would be one solution?
+
+00:06:04.820 --> 00:06:08.611 align:middle line:84%
+So this some digits
+takes in a string S.
+
+00:06:08.611 --> 00:06:11.137 align:middle line:84%
+And we say it's non-empty,
+containing some digits,
+
+00:06:11.137 --> 00:06:13.220 align:middle line:84%
+and I want to return the
+sum of all the characters
+
+00:06:13.220 --> 00:06:14.130 align:middle line:90%
+that are digits.
+
+00:06:14.130 --> 00:06:17.150 align:middle line:84%
+So I don't actually say anything
+about whether this string S
+
+00:06:17.150 --> 00:06:20.580 align:middle line:90%
+contains non digit characters.
+
+00:06:20.580 --> 00:06:23.630 align:middle line:84%
+But let's write it in
+a robust way anyway.
+
+00:06:23.630 --> 00:06:27.530 align:middle line:84%
+So we'd have a loop that
+goes through every character
+
+00:06:27.530 --> 00:06:31.100 align:middle line:84%
+in that string S. And I'm
+using this in keyword here,
+
+00:06:31.100 --> 00:06:32.690 align:middle line:84%
+this nice little
+trick here that says
+
+00:06:32.690 --> 00:06:35.330 align:middle line:84%
+if that character, so
+whatever character it may be,
+
+00:06:35.330 --> 00:06:43.420 align:middle line:84%
+is inside this string of digits,
+then I know it's a number--
+
+00:06:43.420 --> 00:06:44.820 align:middle line:90%
+Sorry, I know it's a digit.
+
+00:06:44.820 --> 00:06:47.010 align:middle line:84%
+And I'm going to
+cast that digits
+
+00:06:47.010 --> 00:06:49.710 align:middle line:84%
+0 through 9, whatever it
+may be, to an integer,
+
+00:06:49.710 --> 00:06:51.370 align:middle line:90%
+add it to my running total.
+
+00:06:51.370 --> 00:06:54.550 align:middle line:84%
+And then that loop does
+its thing until it's done.
+
+00:06:54.550 --> 00:06:56.560 align:middle line:90%
+And then I return the total.
+
+00:06:56.560 --> 00:07:01.770 align:middle line:84%
+So in terms of
+running the code, this
+
+00:07:01.770 --> 00:07:03.550 align:middle line:84%
+is just as I have
+it on the slide.
+
+00:07:03.550 --> 00:07:06.330 align:middle line:84%
+So here, if the user gives
+me the string 1, 2, 3,
+
+00:07:06.330 --> 00:07:09.990 align:middle line:84%
+I'm going to sum 1,
+plus 2, plus 3, six.
+
+00:07:09.990 --> 00:07:11.490 align:middle line:90%
+Perfect.
+
+00:07:11.490 --> 00:07:13.950 align:middle line:84%
+And if the user gives
+me 1, 2, 3, and then
+
+00:07:13.950 --> 00:07:17.040 align:middle line:84%
+some random characters
+that I know I can't add,
+
+00:07:17.040 --> 00:07:21.360 align:middle line:84%
+Python will still be able
+to evaluate it, because that
+
+00:07:21.360 --> 00:07:22.990 align:middle line:90%
+if statement will not be run.
+
+00:07:22.990 --> 00:07:23.490 align:middle line:90%
+Right?
+
+00:07:23.490 --> 00:07:25.770 align:middle line:84%
+For A, B, and C, we
+don't go inside the if.
+
+00:07:25.770 --> 00:07:27.990 align:middle line:84%
+So there's no need
+to cast anything.
+
+00:07:27.990 --> 00:07:28.490 align:middle line:90%
+All right.
+
+00:07:28.490 --> 00:07:30.550 align:middle line:90%
+So the code still works.
+
+00:07:30.550 --> 00:07:33.760 align:middle line:84%
+If I didn't have
+this if here, if I
+
+00:07:33.760 --> 00:07:36.160 align:middle line:84%
+decided to just cast to an
+int every single thing that
+
+00:07:36.160 --> 00:07:40.100 align:middle line:84%
+comes my way, the first line
+of code will still work,
+
+00:07:40.100 --> 00:07:43.630 align:middle line:84%
+but the second line of code
+will throw an exception.
+
+00:07:43.630 --> 00:07:44.290 align:middle line:90%
+You see?
+
+00:07:44.290 --> 00:07:47.710 align:middle line:84%
+I have on the right hand
+side my scary red text
+
+00:07:47.710 --> 00:07:53.610 align:middle line:84%
+that says ValueError, invalid
+literal for int with base 10 a.
+
+00:07:53.610 --> 00:07:57.200 align:middle line:90%
+Kind of hard to parse.
+
+00:07:57.200 --> 00:07:59.688 align:middle line:84%
+But after you've seen
+a bunch of these,
+
+00:07:59.688 --> 00:08:01.730 align:middle line:84%
+you'll figure out that
+there's something going on
+
+00:08:01.730 --> 00:08:02.870 align:middle line:90%
+with my types.
+
+00:08:02.870 --> 00:08:05.690 align:middle line:90%
+And then I'm trying to cast--
+
+00:08:05.690 --> 00:08:09.740 align:middle line:84%
+I'm trying to cast to
+an integer the string a.
+
+00:08:09.740 --> 00:08:12.420 align:middle line:84%
+Obviously, it doesn't
+know how to do that.
+
+00:08:12.420 --> 00:08:14.400 align:middle line:84%
+So that's the potentially
+problematic line.
+
+00:08:14.400 --> 00:08:14.900 align:middle line:90%
+Right?
+
+00:08:14.900 --> 00:08:18.190 align:middle line:90%
+Casting to an integer.
+
+00:08:18.190 --> 00:08:20.280 align:middle line:84%
+So let's try to
+write the same code,
+
+00:08:20.280 --> 00:08:23.830 align:middle line:84%
+except that now we'll do
+it with exception handling.
+
+00:08:23.830 --> 00:08:26.980 align:middle line:84%
+So a bunch of it is
+going to be the same.
+
+00:08:26.980 --> 00:08:29.260 align:middle line:90%
+What we're going to change is--
+
+00:08:29.260 --> 00:08:33.480 align:middle line:84%
+The potentially problematic
+code is these 2 lines here.
+
+00:08:33.480 --> 00:08:33.980 align:middle line:90%
+Right?
+
+00:08:33.980 --> 00:08:37.500 align:middle line:90%
+I don't need the if anymore.
+
+00:08:37.500 --> 00:08:39.470 align:middle line:84%
+Instead, I'm going
+to just assume
+
+00:08:39.470 --> 00:08:43.130 align:middle line:84%
+I can cast every single
+character to an integer.
+
+00:08:43.130 --> 00:08:44.610 align:middle line:90%
+And I'm going to try to do that.
+
+00:08:44.610 --> 00:08:46.970 align:middle line:84%
+So I'm going to try to
+cast every single character
+
+00:08:46.970 --> 00:08:51.125 align:middle line:84%
+to an integer, and then
+add it to my running total.
+
+00:08:51.125 --> 00:08:54.880 align:middle line:90%
+
+
+00:08:54.880 --> 00:08:57.580 align:middle line:84%
+Most of the time that's
+going to work if the input is
+
+00:08:57.580 --> 00:09:00.490 align:middle line:84%
+a digit, but sometimes
+the users give me
+
+00:09:00.490 --> 00:09:02.920 align:middle line:90%
+something that's non-digit.
+
+00:09:02.920 --> 00:09:05.170 align:middle line:84%
+In that case, you
+saw what happens,
+
+00:09:05.170 --> 00:09:07.040 align:middle line:90%
+the code throws a value error.
+
+00:09:07.040 --> 00:09:10.600 align:middle line:84%
+So if we didn't have the except
+block, nor the try block,
+
+00:09:10.600 --> 00:09:12.130 align:middle line:90%
+the code crashes immediately.
+
+00:09:12.130 --> 00:09:13.960 align:middle line:90%
+No answer is even given.
+
+00:09:13.960 --> 00:09:16.210 align:middle line:84%
+But with the except
+block, Python
+
+00:09:16.210 --> 00:09:19.480 align:middle line:84%
+will say, oh, in this
+particular for loop
+
+00:09:19.480 --> 00:09:23.330 align:middle line:90%
+run I had an exception raised.
+
+00:09:23.330 --> 00:09:26.080 align:middle line:84%
+So I'm going to execute whatever
+is inside the except block.
+
+00:09:26.080 --> 00:09:29.230 align:middle line:84%
+And the except block says
+print, can't convert,
+
+00:09:29.230 --> 00:09:31.870 align:middle line:84%
+and then the character that
+it couldn't convert that time
+
+00:09:31.870 --> 00:09:33.410 align:middle line:90%
+through the loop.
+
+00:09:33.410 --> 00:09:36.230 align:middle line:84%
+And then that loop
+iteration is done
+
+00:09:36.230 --> 00:09:38.810 align:middle line:84%
+and it goes on to the next
+character in the sequence.
+
+00:09:38.810 --> 00:09:42.000 align:middle line:90%
+
+
+00:09:42.000 --> 00:09:44.490 align:middle line:90%
+So let's run the code.
+
+00:09:44.490 --> 00:09:48.270 align:middle line:84%
+And this is-- Some
+digits with the except.
+
+00:09:48.270 --> 00:09:52.830 align:middle line:84%
+So here I've got the user
+giving me perfectly fine input.
+
+00:09:52.830 --> 00:09:54.330 align:middle line:90%
+No exceptions are raised.
+
+00:09:54.330 --> 00:09:56.700 align:middle line:90%
+The code worked well.
+
+00:09:56.700 --> 00:10:00.030 align:middle line:84%
+If the user gives me some
+characters within there,
+
+00:10:00.030 --> 00:10:01.470 align:middle line:90%
+the loops go through.
+
+00:10:01.470 --> 00:10:03.750 align:middle line:90%
+It adds 1, plus 2, plus 3.
+
+00:10:03.750 --> 00:10:08.270 align:middle line:84%
+But then, when it tries to
+cast to an integer, the a,
+
+00:10:08.270 --> 00:10:10.910 align:middle line:84%
+over here, as the
+iteration goes to the a,
+
+00:10:10.910 --> 00:10:15.750 align:middle line:84%
+is going to say this raises a
+value error, as we just saw.
+
+00:10:15.750 --> 00:10:17.480 align:middle line:84%
+And I'm going to
+execute whatever
+
+00:10:17.480 --> 00:10:18.650 align:middle line:90%
+is inside the except block.
+
+00:10:18.650 --> 00:10:20.600 align:middle line:84%
+So it prints couldn't
+convert character.
+
+00:10:20.600 --> 00:10:21.110 align:middle line:90%
+There it is.
+
+00:10:21.110 --> 00:10:22.550 align:middle line:84%
+And then I actually
+gave the user
+
+00:10:22.550 --> 00:10:24.320 align:middle line:84%
+the character it
+couldn't convert.
+
+00:10:24.320 --> 00:10:26.780 align:middle line:84%
+It goes on to the next
+iteration, the next character
+
+00:10:26.780 --> 00:10:27.710 align:middle line:90%
+in the sequence.
+
+00:10:27.710 --> 00:10:30.380 align:middle line:84%
+The B, again,
+tries to convert B.
+
+00:10:30.380 --> 00:10:32.400 align:middle line:90%
+It can't cast it to an integer.
+
+00:10:32.400 --> 00:10:34.250 align:middle line:90%
+So we print couldn't convert B.
+
+00:10:34.250 --> 00:10:38.080 align:middle line:84%
+And then lastly, the C,
+same with the C. Does
+
+00:10:38.080 --> 00:10:38.860 align:middle line:90%
+that make sense?
+
+00:10:38.860 --> 00:10:40.270 align:middle line:90%
+Is that all right so far?
+
+00:10:40.270 --> 00:10:43.300 align:middle line:84%
+So kind of like a little if
+else situation going on here?
+
+00:10:43.300 --> 00:10:47.240 align:middle line:90%
+
+
+00:10:47.240 --> 00:10:48.050 align:middle line:90%
+Nice.
+
+00:10:48.050 --> 00:10:50.480 align:middle line:84%
+Places to put try/except
+blocks are when you're
+
+00:10:50.480 --> 00:10:54.590 align:middle line:84%
+dealing with user input, because
+the users, when they give you
+
+00:10:54.590 --> 00:10:58.410 align:middle line:84%
+some inputs for using
+the actual input command,
+
+00:10:58.410 --> 00:10:59.870 align:middle line:90%
+they're very unpredictable.
+
+00:10:59.870 --> 00:11:02.270 align:middle line:84%
+We don't know what kinds
+of things they'll give you,
+
+00:11:02.270 --> 00:11:04.310 align:middle line:84%
+even though you give
+them clear instructions
+
+00:11:04.310 --> 00:11:08.920 align:middle line:84%
+to tell me one number or
+tell me another number.
+
+00:11:08.920 --> 00:11:16.200 align:middle line:84%
+So in these 3 lines
+of code, down here,
+
+00:11:16.200 --> 00:11:18.750 align:middle line:84%
+I've got the user
+giving me 2 numbers.
+
+00:11:18.750 --> 00:11:22.530 align:middle line:84%
+And then I print the first
+one divided by the second one.
+
+00:11:22.530 --> 00:11:24.290 align:middle line:90%
+So I'm a nice user.
+
+00:11:24.290 --> 00:11:27.770 align:middle line:84%
+I do what I'm told, so I'm
+going to do 5 divided by 8.
+
+00:11:27.770 --> 00:11:28.370 align:middle line:90%
+Perfect.
+
+00:11:28.370 --> 00:11:29.330 align:middle line:90%
+The code runs well.
+
+00:11:29.330 --> 00:11:32.270 align:middle line:90%
+
+
+00:11:32.270 --> 00:11:35.210 align:middle line:84%
+Let's say somebody else
+runs the code and this time
+
+00:11:35.210 --> 00:11:38.480 align:middle line:84%
+they decide to do seven
+divided by, I don't know, five,
+
+00:11:38.480 --> 00:11:40.940 align:middle line:90%
+like that.
+
+00:11:40.940 --> 00:11:43.580 align:middle line:90%
+Value error.
+
+00:11:43.580 --> 00:11:45.300 align:middle line:84%
+So that's one thing
+that could go wrong.
+
+00:11:45.300 --> 00:11:48.740 align:middle line:90%
+The user tries to be funny.
+
+00:11:48.740 --> 00:11:50.690 align:middle line:84%
+And then another thing
+that could go wrong
+
+00:11:50.690 --> 00:11:54.720 align:middle line:84%
+is, let's say, the user gives
+me a 0 for the second number.
+
+00:11:54.720 --> 00:11:57.120 align:middle line:84%
+So in this case, I get
+a ZeroDivisionError.
+
+00:11:57.120 --> 00:11:59.720 align:middle line:84%
+You can see Python doesn't
+know how to divide by 0.
+
+00:11:59.720 --> 00:12:01.830 align:middle line:90%
+So it raises an exception.
+
+00:12:01.830 --> 00:12:03.290 align:middle line:90%
+This thing is ZeroDivisionError.
+
+00:12:03.290 --> 00:12:06.370 align:middle line:90%
+
+
+00:12:06.370 --> 00:12:09.520 align:middle line:84%
+So this is a case where I'm
+dealing with potentially
+
+00:12:09.520 --> 00:12:10.580 align:middle line:90%
+problematic inputs.
+
+00:12:10.580 --> 00:12:13.690 align:middle line:84%
+So I'm going to wrap my
+potentially problematic lines
+
+00:12:13.690 --> 00:12:15.920 align:middle line:84%
+of code in a try
+and except block.
+
+00:12:15.920 --> 00:12:18.310 align:middle line:84%
+So I've got those 3 lines
+that I'm going to try to do.
+
+00:12:18.310 --> 00:12:21.258 align:middle line:84%
+And if anything goes
+wrong, I'm going
+
+00:12:21.258 --> 00:12:23.050 align:middle line:84%
+to execute whatever is
+in the except block,
+
+00:12:23.050 --> 00:12:26.590 align:middle line:84%
+and all I do is print
+bug in user input.
+
+00:12:26.590 --> 00:12:27.160 align:middle line:90%
+OK.
+
+00:12:27.160 --> 00:12:29.380 align:middle line:90%
+So let's run that.
+
+00:12:29.380 --> 00:12:32.500 align:middle line:90%
+That's this one here.
+
+00:12:32.500 --> 00:12:37.410 align:middle line:84%
+So here, again, proper
+input works well.
+
+00:12:37.410 --> 00:12:42.490 align:middle line:84%
+If the user gives me a
+letter, bug and user input.
+
+00:12:42.490 --> 00:12:46.870 align:middle line:84%
+So a much nicer friendlier
+way to crash the program then
+
+00:12:46.870 --> 00:12:48.740 align:middle line:90%
+value error or whatever it was.
+
+00:12:48.740 --> 00:12:51.640 align:middle line:84%
+And then again, if
+the user gives me a 0,
+
+00:12:51.640 --> 00:12:54.230 align:middle line:90%
+bug in user input.
+
+00:12:54.230 --> 00:12:58.930 align:middle line:84%
+Again, much nicer way
+to crash the program.
+
+00:12:58.930 --> 00:13:06.330 align:middle line:84%
+So what we can actually do
+is have specific behaviors
+
+00:13:06.330 --> 00:13:09.250 align:middle line:84%
+depending on what
+exceptions are raised.
+
+00:13:09.250 --> 00:13:09.750 align:middle line:90%
+Right?
+
+00:13:09.750 --> 00:13:12.360 align:middle line:84%
+So maybe I don't
+want a generic text
+
+00:13:12.360 --> 00:13:15.670 align:middle line:84%
+that says bug in user input
+for both of those cases.
+
+00:13:15.670 --> 00:13:16.170 align:middle line:90%
+Right?
+
+00:13:16.170 --> 00:13:18.302 align:middle line:84%
+Maybe if the user
+divides by 0, I
+
+00:13:18.302 --> 00:13:20.760 align:middle line:84%
+want to give them a different
+message than if the user gave
+
+00:13:20.760 --> 00:13:23.290 align:middle line:90%
+me a letter.
+
+00:13:23.290 --> 00:13:25.590 align:middle line:84%
+So in that case,
+what I can do is
+
+00:13:25.590 --> 00:13:27.630 align:middle line:84%
+I can have different
+except blocks
+
+00:13:27.630 --> 00:13:31.270 align:middle line:84%
+for every different error
+that I might come up.
+
+00:13:31.270 --> 00:13:35.160 align:middle line:84%
+So as I'm writing this code,
+I can think ahead, right?
+
+00:13:35.160 --> 00:13:38.080 align:middle line:84%
+And I can try to
+catch specific errors.
+
+00:13:38.080 --> 00:13:42.040 align:middle line:84%
+So here I can catch
+the value error.
+
+00:13:42.040 --> 00:13:44.880 align:middle line:84%
+So I say except and then I
+say the name of the error
+
+00:13:44.880 --> 00:13:46.680 align:middle line:90%
+that I'd like to catch.
+
+00:13:46.680 --> 00:13:50.910 align:middle line:84%
+And this block of code,
+this except block of code
+
+00:13:50.910 --> 00:13:54.360 align:middle line:84%
+will be run only if the
+code in the try block
+
+00:13:54.360 --> 00:13:57.660 align:middle line:84%
+crashes with that
+specific value error.
+
+00:13:57.660 --> 00:13:58.350 align:middle line:90%
+Right?
+
+00:13:58.350 --> 00:14:02.500 align:middle line:84%
+And then I can also catch my
+zero division error down here.
+
+00:14:02.500 --> 00:14:06.630 align:middle line:84%
+And in this particular
+case, this except block
+
+00:14:06.630 --> 00:14:11.610 align:middle line:84%
+is only run when the
+ZeroDivisionError is raised.
+
+00:14:11.610 --> 00:14:12.300 align:middle line:90%
+Right?
+
+00:14:12.300 --> 00:14:16.097 align:middle line:84%
+So here in the value error I'm
+going to print for the user,
+
+00:14:16.097 --> 00:14:17.430 align:middle line:90%
+I could not convert to a number.
+
+00:14:17.430 --> 00:14:21.100 align:middle line:84%
+So a more specific error
+message so they know what's up.
+
+00:14:21.100 --> 00:14:24.310 align:middle line:84%
+And in a ZeroDivisionError
+I can also
+
+00:14:24.310 --> 00:14:25.630 align:middle line:90%
+flag that there was an issue.
+
+00:14:25.630 --> 00:14:28.210 align:middle line:84%
+I can't divide by 0 by
+printing that to the screen.
+
+00:14:28.210 --> 00:14:31.480 align:middle line:84%
+And then I can say a
+divided by b is infinity.
+
+00:14:31.480 --> 00:14:35.650 align:middle line:84%
+And I can continue
+the last statement
+
+00:14:35.650 --> 00:14:38.155 align:middle line:84%
+that was supposed to be done
+in the try block, a plus b,
+
+00:14:38.155 --> 00:14:40.150 align:middle line:84%
+I can give them the
+answer to a plus b,
+
+00:14:40.150 --> 00:14:42.670 align:middle line:90%
+because we can add a 0 to a.
+
+00:14:42.670 --> 00:14:44.680 align:middle line:90%
+No problem.
+
+00:14:44.680 --> 00:14:47.950 align:middle line:84%
+The last except
+block down here is
+
+00:14:47.950 --> 00:14:50.830 align:middle line:84%
+catching anything else that's
+not a value error and not
+
+00:14:50.830 --> 00:14:52.160 align:middle line:90%
+a zero division error.
+
+00:14:52.160 --> 00:14:55.610 align:middle line:84%
+So I can't think of anything
+that could go wrong.
+
+00:14:55.610 --> 00:15:00.020 align:middle line:84%
+So if we happen to go in here,
+something went very wrong.
+
+00:15:00.020 --> 00:15:02.380 align:middle line:84%
+I would say the only
+thing I can think
+
+00:15:02.380 --> 00:15:06.610 align:middle line:84%
+of is if our computer
+is almost out of memory,
+
+00:15:06.610 --> 00:15:09.910 align:middle line:84%
+and running this little piece
+of code pushes it over the edge.
+
+00:15:09.910 --> 00:15:10.420 align:middle line:90%
+Right?
+
+00:15:10.420 --> 00:15:13.630 align:middle line:84%
+Then Python will probably
+crash and maybe it'll
+
+00:15:13.630 --> 00:15:15.640 align:middle line:84%
+print that error before
+completely shutting down
+
+00:15:15.640 --> 00:15:17.350 align:middle line:90%
+the computer or something.
+
+00:15:17.350 --> 00:15:21.090 align:middle line:84%
+But that last one
+should never really run.
+
+00:15:21.090 --> 00:15:22.590 align:middle line:84%
+So let me show you
+what happens when
+
+00:15:22.590 --> 00:15:27.160 align:middle line:84%
+we run the code with these
+specific except blocks now.
+
+00:15:27.160 --> 00:15:30.330 align:middle line:84%
+So if the user gives me
+perfectly nice input,
+
+00:15:30.330 --> 00:15:32.100 align:middle line:84%
+then the program
+proceeds as normal.
+
+00:15:32.100 --> 00:15:33.840 align:middle line:84%
+Every line of code
+inside the try block
+
+00:15:33.840 --> 00:15:35.760 align:middle line:90%
+is executed over here.
+
+00:15:35.760 --> 00:15:38.990 align:middle line:84%
+None of the accept
+blocks are executed.
+
+00:15:38.990 --> 00:15:43.190 align:middle line:90%
+The user gives me a letter.
+
+00:15:43.190 --> 00:15:45.550 align:middle line:84%
+I end the program
+gracefully with the message
+
+00:15:45.550 --> 00:15:47.300 align:middle line:84%
+could not convert to
+a number so then they
+
+00:15:47.300 --> 00:15:49.590 align:middle line:90%
+know that I caught them.
+
+00:15:49.590 --> 00:15:54.290 align:middle line:84%
+And then the last one is
+if I try to divide by 0.
+
+00:15:54.290 --> 00:15:57.110 align:middle line:84%
+Again, I've got the little
+message, can't divide by 0.
+
+00:15:57.110 --> 00:15:59.930 align:middle line:84%
+And then I give them their
+division to be infinity.
+
+00:15:59.930 --> 00:16:01.250 align:middle line:90%
+And a plus b is 6.
+
+00:16:01.250 --> 00:16:04.250 align:middle line:84%
+So I do all the lines of code
+that are caught over here.
+
+00:16:04.250 --> 00:16:07.090 align:middle line:90%
+
+
+00:16:07.090 --> 00:16:09.000 align:middle line:90%
+Questions so far?
+
+00:16:09.000 --> 00:16:10.770 align:middle line:90%
+Seems all right so far.
+
+00:16:10.770 --> 00:16:12.260 align:middle line:90%
+OK.
+
+00:16:12.260 --> 00:16:16.970 align:middle line:84%
+So really nice ways for us to
+deal with exceptions that get
+
+00:16:16.970 --> 00:16:17.960 align:middle line:90%
+raised in our programs.
+
+00:16:17.960 --> 00:16:22.070 align:middle line:84%
+Now the things
+that I've told you
+
+00:16:22.070 --> 00:16:23.780 align:middle line:84%
+that we can associate
+with a try block
+
+00:16:23.780 --> 00:16:25.310 align:middle line:90%
+is an except block, right?
+
+00:16:25.310 --> 00:16:26.660 align:middle line:90%
+So we've done that.
+
+00:16:26.660 --> 00:16:29.180 align:middle line:84%
+But we can actually associate
+a couple other things
+
+00:16:29.180 --> 00:16:29.930 align:middle line:90%
+with try blocks.
+
+00:16:29.930 --> 00:16:31.770 align:middle line:84%
+And we don't really
+use them in this class,
+
+00:16:31.770 --> 00:16:33.270 align:middle line:84%
+but I just thought
+I'd mention them.
+
+00:16:33.270 --> 00:16:37.280 align:middle line:84%
+So if you have an else block
+associated with a try block,
+
+00:16:37.280 --> 00:16:40.760 align:middle line:84%
+that means the lines of
+code inside the else block
+
+00:16:40.760 --> 00:16:43.460 align:middle line:84%
+will execute when everything
+inside the try block
+
+00:16:43.460 --> 00:16:45.330 align:middle line:90%
+is executed perfectly.
+
+00:16:45.330 --> 00:16:47.510 align:middle line:84%
+So if everything goes
+according to plan,
+
+00:16:47.510 --> 00:16:51.660 align:middle line:84%
+whatever you put inside the else
+block will also get executed.
+
+00:16:51.660 --> 00:16:54.870 align:middle line:84%
+And then you can have a
+finally block as well.
+
+00:16:54.870 --> 00:16:57.650 align:middle line:84%
+So just like we have
+a try and accept,
+
+00:16:57.650 --> 00:16:59.970 align:middle line:84%
+you can also have a finally
+associated with those.
+
+00:16:59.970 --> 00:17:02.810 align:middle line:84%
+And the body of the finally
+will be executed no matter what.
+
+00:17:02.810 --> 00:17:05.540 align:middle line:84%
+If an exception was raised,
+you also execute the finally.
+
+00:17:05.540 --> 00:17:07.369 align:middle line:84%
+If the code worked
+perfectly fine
+
+00:17:07.369 --> 00:17:10.920 align:middle line:84%
+without raising any errors,
+the finally also gets executed.
+
+00:17:10.920 --> 00:17:13.349 align:middle line:84%
+So I gave an example
+here of something
+
+00:17:13.349 --> 00:17:15.839 align:middle line:84%
+that you might put
+inside the finally block,
+
+00:17:15.839 --> 00:17:17.349 align:middle line:90%
+so sort of clean up code.
+
+00:17:17.349 --> 00:17:20.339 align:middle line:84%
+So if you're writing code
+that opens files from the file
+
+00:17:20.339 --> 00:17:22.530 align:middle line:84%
+system, a good idea
+is to close them
+
+00:17:22.530 --> 00:17:23.849 align:middle line:90%
+before you finish your program.
+
+00:17:23.849 --> 00:17:25.266 align:middle line:84%
+So that's something
+that you might
+
+00:17:25.266 --> 00:17:28.380 align:middle line:84%
+want to do inside the finally
+block just close files
+
+00:17:28.380 --> 00:17:33.990 align:middle line:84%
+before shutting down, before
+your program terminates.
+
+00:17:33.990 --> 00:17:34.490 align:middle line:90%
+OK.
+
+00:17:34.490 --> 00:17:38.630 align:middle line:84%
+So I've shown you how
+to deal with exceptions,
+
+00:17:38.630 --> 00:17:42.240 align:middle line:84%
+but now what do we do
+inside the accept blocks?
+
+00:17:42.240 --> 00:17:42.740 align:middle line:90%
+OK.
+
+00:17:42.740 --> 00:17:44.407 align:middle line:84%
+We've done a couple
+of different things,
+
+00:17:44.407 --> 00:17:46.580 align:middle line:84%
+mostly printing out that
+something went wrong,
+
+00:17:46.580 --> 00:17:49.800 align:middle line:84%
+but we can do
+various other things.
+
+00:17:49.800 --> 00:17:51.830 align:middle line:84%
+One thing, and I don't
+recommend doing this,
+
+00:17:51.830 --> 00:17:53.270 align:middle line:90%
+is to just fail silently.
+
+00:17:53.270 --> 00:17:57.120 align:middle line:84%
+Certainly we could write
+code that basically has--
+
+00:17:57.120 --> 00:17:57.620 align:middle line:90%
+Yeah.
+
+00:17:57.620 --> 00:17:58.412 align:middle line:90%
+There's a question.
+
+00:17:58.412 --> 00:17:59.180 align:middle line:90%
+AUDIENCE: Sorry.
+
+00:17:59.180 --> 00:18:01.297 align:middle line:90%
+The last time when you said--
+
+00:18:01.297 --> 00:18:01.880 align:middle line:90%
+ANA BELL: Yep.
+
+00:18:01.880 --> 00:18:03.617 align:middle line:84%
+AUDIENCE: Like,
+how is it different
+
+00:18:03.617 --> 00:18:05.430 align:middle line:90%
+from like normal else?
+
+00:18:05.430 --> 00:18:08.000 align:middle line:84%
+ANA BELL: So this is an else
+that we'd associate with a try.
+
+00:18:08.000 --> 00:18:11.960 align:middle line:84%
+So we would do
+something like else,
+
+00:18:11.960 --> 00:18:14.330 align:middle line:84%
+and then you would
+print something here,
+
+00:18:14.330 --> 00:18:17.740 align:middle line:90%
+success or something.
+
+00:18:17.740 --> 00:18:20.940 align:middle line:84%
+And then if the code executes
+perfectly without an error,
+
+00:18:20.940 --> 00:18:23.718 align:middle line:90%
+then you'll also print success.
+
+00:18:23.718 --> 00:18:24.260 align:middle line:90%
+AUDIENCE: OK.
+
+00:18:24.260 --> 00:18:24.885 align:middle line:90%
+ANA BELL: Yeah.
+
+00:18:24.885 --> 00:18:28.570 align:middle line:90%
+
+
+00:18:28.570 --> 00:18:32.170 align:middle line:84%
+So what do we do inside
+the except blocks?
+
+00:18:32.170 --> 00:18:34.030 align:middle line:84%
+One thing is to
+fail silently, which
+
+00:18:34.030 --> 00:18:38.650 align:middle line:84%
+means that well, you could
+try your entire piece of code,
+
+00:18:38.650 --> 00:18:40.420 align:middle line:90%
+and then you could say except.
+
+00:18:40.420 --> 00:18:42.310 align:middle line:84%
+And then the only line
+you have in except
+
+00:18:42.310 --> 00:18:44.200 align:middle line:90%
+is maybe a line that says pass.
+
+00:18:44.200 --> 00:18:47.200 align:middle line:84%
+So that means any error that
+happens, you would catch,
+
+00:18:47.200 --> 00:18:49.120 align:middle line:84%
+but you do absolutely
+nothing and let
+
+00:18:49.120 --> 00:18:52.420 align:middle line:84%
+the program continue with a
+potentially bad value being
+
+00:18:52.420 --> 00:18:53.260 align:middle line:90%
+passed along.
+
+00:18:53.260 --> 00:18:55.600 align:middle line:90%
+That's not a good idea.
+
+00:18:55.600 --> 00:18:58.090 align:middle line:84%
+You could also silently
+substitute values
+
+00:18:58.090 --> 00:19:01.540 align:middle line:84%
+that you know might
+be problematic without
+
+00:19:01.540 --> 00:19:02.920 align:middle line:90%
+flagging things happening.
+
+00:19:02.920 --> 00:19:05.840 align:middle line:90%
+Also not good ideas.
+
+00:19:05.840 --> 00:19:08.540 align:middle line:84%
+At the very least, you should
+flag something to the output
+
+00:19:08.540 --> 00:19:11.350 align:middle line:84%
+that something
+weird has happened.
+
+00:19:11.350 --> 00:19:13.790 align:middle line:84%
+Another thing you could do
+is return some error value.
+
+00:19:13.790 --> 00:19:16.480 align:middle line:84%
+So you could have a whole
+bunch of variables in your code
+
+00:19:16.480 --> 00:19:19.900 align:middle line:84%
+that you could set
+to some values,
+
+00:19:19.900 --> 00:19:24.820 align:middle line:84%
+like flags kind of thing,
+whenever your code runs
+
+00:19:24.820 --> 00:19:26.200 align:middle line:90%
+into an exception block.
+
+00:19:26.200 --> 00:19:26.860 align:middle line:90%
+Right?
+
+00:19:26.860 --> 00:19:29.200 align:middle line:84%
+But the problem with
+that is that you
+
+00:19:29.200 --> 00:19:33.380 align:middle line:84%
+have to now check for all these
+values further on in your code.
+
+00:19:33.380 --> 00:19:33.880 align:middle line:90%
+Right?
+
+00:19:33.880 --> 00:19:35.837 align:middle line:84%
+So now your code becomes
+overly complicated,
+
+00:19:35.837 --> 00:19:38.170 align:middle line:84%
+because you have a whole bunch
+of extra variables you're
+
+00:19:38.170 --> 00:19:41.050 align:middle line:84%
+constantly checking to see
+if any errors were flagged
+
+00:19:41.050 --> 00:19:43.690 align:middle line:90%
+or something like that happened.
+
+00:19:43.690 --> 00:19:46.270 align:middle line:84%
+One last thing, and this is
+what I'll show you you can do,
+
+00:19:46.270 --> 00:19:49.100 align:middle line:84%
+is to actually still
+stop the execution.
+
+00:19:49.100 --> 00:19:51.010 align:middle line:84%
+So much like when
+we input when we
+
+00:19:51.010 --> 00:19:53.800 align:middle line:84%
+tried to run the
+sum digits program
+
+00:19:53.800 --> 00:19:55.750 align:middle line:84%
+and it crashed
+with a value error.
+
+00:19:55.750 --> 00:19:58.840 align:middle line:84%
+We could still make
+our program crash,
+
+00:19:58.840 --> 00:20:00.820 align:middle line:90%
+but it's on our own terms.
+
+00:20:00.820 --> 00:20:04.000 align:middle line:84%
+So we can raise our
+own ValueErrors,
+
+00:20:04.000 --> 00:20:06.220 align:middle line:84%
+or whatever kind of error
+you'd like to raise,
+
+00:20:06.220 --> 00:20:08.410 align:middle line:90%
+with your own custom message.
+
+00:20:08.410 --> 00:20:11.830 align:middle line:84%
+So the code still
+crashes, which is fine,
+
+00:20:11.830 --> 00:20:15.920 align:middle line:84%
+because maybe you don't want
+problematic code to move on,
+
+00:20:15.920 --> 00:20:19.450 align:middle line:84%
+but you're basically having
+it crash with a custom
+
+00:20:19.450 --> 00:20:23.000 align:middle line:84%
+message and a custom
+error type being raised.
+
+00:20:23.000 --> 00:20:24.850 align:middle line:90%
+So this is a keyword in Python.
+
+00:20:24.850 --> 00:20:26.890 align:middle line:84%
+You raise your own
+ValueError and then
+
+00:20:26.890 --> 00:20:31.690 align:middle line:84%
+in parentheses, you put whatever
+message you would like to put.
+
+00:20:31.690 --> 00:20:34.090 align:middle line:84%
+So here's an example
+of the sum digits where
+
+00:20:34.090 --> 00:20:35.510 align:middle line:90%
+we raise our own exception.
+
+00:20:35.510 --> 00:20:38.890 align:middle line:84%
+So let's say that
+indeed, we only
+
+00:20:38.890 --> 00:20:41.650 align:middle line:84%
+wanted the user
+to give us digits
+
+00:20:41.650 --> 00:20:44.470 align:middle line:84%
+and we don't actually
+want this function
+
+00:20:44.470 --> 00:20:47.200 align:middle line:84%
+to keep running and
+passing along the total
+
+00:20:47.200 --> 00:20:50.350 align:middle line:84%
+if the user ever gave us a
+string that contains letters.
+
+00:20:50.350 --> 00:20:50.980 align:middle line:90%
+Right.
+
+00:20:50.980 --> 00:20:53.170 align:middle line:84%
+So in that particular
+case, I'm going
+
+00:20:53.170 --> 00:20:57.875 align:middle line:84%
+to still put a try block
+and an except block.
+
+00:20:57.875 --> 00:20:59.500 align:middle line:84%
+A try block around
+the problematic code
+
+00:20:59.500 --> 00:21:01.900 align:middle line:84%
+and except block to
+catch any errors.
+
+00:21:01.900 --> 00:21:05.770 align:middle line:84%
+But now, instead of printing
+something and letting
+
+00:21:05.770 --> 00:21:08.560 align:middle line:84%
+the code carry on
+with the loop, we're
+
+00:21:08.560 --> 00:21:13.020 align:middle line:84%
+going to raise a value
+error with our own message.
+
+00:21:13.020 --> 00:21:15.950 align:middle line:84%
+So my message is that this
+drink contained a character.
+
+00:21:15.950 --> 00:21:18.690 align:middle line:90%
+So if I run this code.
+
+00:21:18.690 --> 00:21:20.490 align:middle line:90%
+And it's actually up here.
+
+00:21:20.490 --> 00:21:24.260 align:middle line:84%
+If I run this code with
+perfectly fine inputs,
+
+00:21:24.260 --> 00:21:25.140 align:middle line:90%
+there's no issue.
+
+00:21:25.140 --> 00:21:25.640 align:middle line:90%
+Right?
+
+00:21:25.640 --> 00:21:28.730 align:middle line:84%
+We just calculate
+the total as we want.
+
+00:21:28.730 --> 00:21:32.690 align:middle line:84%
+But if the user gives
+us some string that
+
+00:21:32.690 --> 00:21:35.720 align:middle line:84%
+does contain extra characters
+which maybe we don't actually
+
+00:21:35.720 --> 00:21:39.440 align:middle line:84%
+want to have happen,
+you see, I still
+
+00:21:39.440 --> 00:21:42.980 align:middle line:84%
+have a ValueError, which is
+the same kind of exception that
+
+00:21:42.980 --> 00:21:46.130 align:middle line:84%
+was raised without
+the try and except.
+
+00:21:46.130 --> 00:21:48.920 align:middle line:84%
+But now the message
+that I've passed in
+
+00:21:48.920 --> 00:21:53.090 align:middle line:84%
+is string contained a character,
+as opposed to invalid literal
+
+00:21:53.090 --> 00:21:58.160 align:middle line:84%
+for whatever that
+cryptic message was.
+
+00:21:58.160 --> 00:22:01.850 align:middle line:84%
+So this is a much
+nicer way to flag
+
+00:22:01.850 --> 00:22:05.690 align:middle line:84%
+or to stop the program,
+to terminate the program,
+
+00:22:05.690 --> 00:22:07.310 align:middle line:90%
+but do it on your own terms.
+
+00:22:07.310 --> 00:22:09.890 align:middle line:90%
+
+
+00:22:09.890 --> 00:22:12.910 align:middle line:84%
+So let's have you work on
+this for a couple of minutes.
+
+00:22:12.910 --> 00:22:14.800 align:middle line:84%
+You'll raise your
+own ValueErrors.
+
+00:22:14.800 --> 00:22:17.110 align:middle line:84%
+I'd like you to write
+this function that's
+
+00:22:17.110 --> 00:22:18.460 align:middle line:90%
+called pairwise division.
+
+00:22:18.460 --> 00:22:20.110 align:middle line:90%
+It takes in 2 lists.
+
+00:22:20.110 --> 00:22:22.900 align:middle line:84%
+The lists should be non-empty
+and they're equal lengths.
+
+00:22:22.900 --> 00:22:23.410 align:middle line:90%
+Right?
+
+00:22:23.410 --> 00:22:27.700 align:middle line:84%
+So per this example, here's
+2 lists that are not empty
+
+00:22:27.700 --> 00:22:29.000 align:middle line:90%
+and they're the same length.
+
+00:22:29.000 --> 00:22:33.220 align:middle line:84%
+And I would like the code
+to basically go element
+
+00:22:33.220 --> 00:22:34.300 align:middle line:90%
+by element.
+
+00:22:34.300 --> 00:22:38.720 align:middle line:84%
+And create a new list where
+each element is going to be,
+
+00:22:38.720 --> 00:22:41.290 align:middle line:84%
+for example, 4 divided
+by 1, 5 divided by 2,
+
+00:22:41.290 --> 00:22:42.580 align:middle line:90%
+and 6 divided by 3.
+
+00:22:42.580 --> 00:22:45.260 align:middle line:84%
+So pairwise, you
+do the division,
+
+00:22:45.260 --> 00:22:49.350 align:middle line:84%
+put all those elements in a
+new list, and return that list.
+
+00:22:49.350 --> 00:22:54.180 align:middle line:84%
+If the denominator--
+So the second parameter
+
+00:22:54.180 --> 00:22:59.750 align:middle line:84%
+passed in Ldenom contains
+any 0, raise a value error.
+
+00:22:59.750 --> 00:23:00.250 align:middle line:90%
+OK.
+
+00:23:00.250 --> 00:23:02.980 align:middle line:84%
+So don't let the code crash
+with the zero division error,
+
+00:23:02.980 --> 00:23:07.190 align:middle line:84%
+but instead raise a ValueError
+with a nice message.
+
+00:23:07.190 --> 00:23:09.500 align:middle line:84%
+So start with just the
+code to do the task,
+
+00:23:09.500 --> 00:23:15.300 align:middle line:84%
+and then add the value
+error bit at the end.
+
+00:23:15.300 --> 00:23:15.800 align:middle line:90%
+OK.
+
+00:23:15.800 --> 00:23:17.383 align:middle line:84%
+Does anyone have a
+start how would you
+
+00:23:17.383 --> 00:23:19.320 align:middle line:90%
+like to solve this problem?
+
+00:23:19.320 --> 00:23:21.480 align:middle line:90%
+How do you want to write it?
+
+00:23:21.480 --> 00:23:23.253 align:middle line:90%
+Yeah.
+
+00:23:23.253 --> 00:23:25.140 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:23:25.140 --> 00:23:26.706 align:middle line:90%
+ANA BELL: Yep.
+
+00:23:26.706 --> 00:23:32.020 align:middle line:84%
+AUDIENCE: And then try
+to do the [INAUDIBLE],,
+
+00:23:32.020 --> 00:23:38.180 align:middle line:84%
+L [INAUDIBLE] Lnum i over Ldenom
+i [INAUDIBLE] Sorry, for i,
+
+00:23:38.180 --> 00:23:40.640 align:middle line:84%
+I guess, over the
+whole [INAUDIBLE]..
+
+00:23:40.640 --> 00:23:45.760 align:middle line:84%
+ANA BELL: Lnum at i
+divided by Ldenom--
+
+00:23:45.760 --> 00:23:49.430 align:middle line:90%
+whoops-- at i.
+
+00:23:49.430 --> 00:23:53.780 align:middle line:90%
+So we do the division for i, in.
+
+00:23:53.780 --> 00:24:00.490 align:middle line:90%
+
+
+00:24:00.490 --> 00:24:02.250 align:middle line:90%
+So here, what is i?
+
+00:24:02.250 --> 00:24:04.860 align:middle line:84%
+Is it the element
+or is it an index?
+
+00:24:04.860 --> 00:24:05.460 align:middle line:90%
+Yeah.
+
+00:24:05.460 --> 00:24:08.850 align:middle line:84%
+So how do we grab
+like basically numbers
+
+00:24:08.850 --> 00:24:13.150 align:middle line:84%
+0 through the length
+of one of these lists?
+
+00:24:13.150 --> 00:24:14.347 align:middle line:90%
+If you want to do it.
+
+00:24:14.347 --> 00:24:15.780 align:middle line:90%
+Yeah.
+
+00:24:15.780 --> 00:24:16.490 align:middle line:90%
+AUDIENCE: Oh.
+
+00:24:16.490 --> 00:24:21.765 align:middle line:90%
+So for i in len Lnum.
+
+00:24:21.765 --> 00:24:22.390 align:middle line:90%
+ANA BELL: Yeah.
+
+00:24:22.390 --> 00:24:24.700 align:middle line:84%
+So we have to do
+range, remember.
+
+00:24:24.700 --> 00:24:26.860 align:middle line:90%
+Yeah, range(len(Lnum)).
+
+00:24:26.860 --> 00:24:28.880 align:middle line:90%
+Yeah.
+
+00:24:28.880 --> 00:24:30.290 align:middle line:84%
+I think those are
+my parentheses.
+
+00:24:30.290 --> 00:24:34.100 align:middle line:84%
+That's cool that you did list
+comprehension right away.
+
+00:24:34.100 --> 00:24:38.510 align:middle line:84%
+Does anyone want to
+rewrite this using a loop?
+
+00:24:38.510 --> 00:24:45.390 align:middle line:90%
+
+
+00:24:45.390 --> 00:24:45.890 align:middle line:90%
+It's true.
+
+00:24:45.890 --> 00:24:46.310 align:middle line:90%
+Oh, yeah.
+
+00:24:46.310 --> 00:24:46.400 align:middle line:90%
+Go.
+
+00:24:46.400 --> 00:24:46.900 align:middle line:90%
+
+
+00:24:46.900 --> 00:24:50.000 align:middle line:90%
+AUDIENCE: For e in Lnum.
+
+00:24:50.000 --> 00:24:52.470 align:middle line:90%
+ANA BELL: Yep.
+
+00:24:52.470 --> 00:24:54.680 align:middle line:90%
+AUDIENCE: Lnum of e--
+
+00:24:54.680 --> 00:25:02.208 align:middle line:84%
+Or I got to say how L is equal
+to L.append in [INAUDIBLE]..
+
+00:25:02.208 --> 00:25:04.935 align:middle line:90%
+
+
+00:25:04.935 --> 00:25:07.060 align:middle line:84%
+ANA BELL: So we still want
+to use the index, right?
+
+00:25:07.060 --> 00:25:10.150 align:middle line:84%
+Because if we're looking
+at the element in Lnum,
+
+00:25:10.150 --> 00:25:13.330 align:middle line:84%
+it's going to be hard for us to
+grab the same element in Lnum.
+
+00:25:13.330 --> 00:25:18.530 align:middle line:84%
+So let's iterate through
+0 through the range.
+
+00:25:18.530 --> 00:25:19.030 align:middle line:90%
+Right?
+
+00:25:19.030 --> 00:25:20.740 align:middle line:84%
+So basically what
+we did up there,
+
+00:25:20.740 --> 00:25:23.110 align:middle line:84%
+range, len, and then
+pick one of them
+
+00:25:23.110 --> 00:25:24.860 align:middle line:90%
+because they're the same length.
+
+00:25:24.860 --> 00:25:28.240 align:middle line:84%
+So now let's change this to
+i just so we're not confused.
+
+00:25:28.240 --> 00:25:31.040 align:middle line:90%
+I would say i is 0, 1, 2, 3, 4.
+
+00:25:31.040 --> 00:25:31.540 align:middle line:90%
+Right?
+
+00:25:31.540 --> 00:25:33.700 align:middle line:84%
+So now we know
+this is the index.
+
+00:25:33.700 --> 00:25:37.070 align:middle line:84%
+So with this index in hand,
+this is the right start.
+
+00:25:37.070 --> 00:25:37.570 align:middle line:90%
+Right?
+
+00:25:37.570 --> 00:25:40.820 align:middle line:84%
+Lnum at i gives me
+the element in Lnum.
+
+00:25:40.820 --> 00:25:46.520 align:middle line:90%
+Divide by Ldenom exactly at i.
+
+00:25:46.520 --> 00:25:51.080 align:middle line:84%
+AUDIENCE: And then we
+take that L of [INAUDIBLE]
+
+00:25:51.080 --> 00:25:52.670 align:middle line:90%
+ANA BELL: Yeah.
+
+00:25:52.670 --> 00:25:58.530 align:middle line:84%
+L. We can do L.append,
+something like that.
+
+00:25:58.530 --> 00:26:02.475 align:middle line:84%
+We can't say L at i equals
+that, because our L is--
+
+00:26:02.475 --> 00:26:03.620 align:middle line:90%
+AUDIENCE: Not [INAUDIBLE].
+
+00:26:03.620 --> 00:26:04.370 align:middle line:90%
+ANA BELL: --not [INAUDIBLE].
+
+00:26:04.370 --> 00:26:04.910 align:middle line:90%
+Exactly.
+
+00:26:04.910 --> 00:26:05.410 align:middle line:90%
+Yes.
+
+00:26:05.410 --> 00:26:06.150 align:middle line:90%
+Perfect.
+
+00:26:06.150 --> 00:26:08.170 align:middle line:90%
+So we could do like this.
+
+00:26:08.170 --> 00:26:09.770 align:middle line:90%
+So this is just another way.
+
+00:26:09.770 --> 00:26:13.990 align:middle line:90%
+
+
+00:26:13.990 --> 00:26:17.885 align:middle line:84%
+And then at the end we
+can return our variable.
+
+00:26:17.885 --> 00:26:18.385 align:middle line:90%
+Right.
+
+00:26:18.385 --> 00:26:21.400 align:middle line:90%
+
+
+00:26:21.400 --> 00:26:21.900 align:middle line:90%
+OK.
+
+00:26:21.900 --> 00:26:23.250 align:middle line:90%
+So that solves our problem.
+
+00:26:23.250 --> 00:26:26.230 align:middle line:84%
+How do we add the piece
+where we raise a value error?
+
+00:26:26.230 --> 00:26:32.400 align:middle line:84%
+So how do you want to
+check that Ldenom has a 0.
+
+00:26:32.400 --> 00:26:35.640 align:middle line:84%
+Because this should hopefully
+run work with our code
+
+00:26:35.640 --> 00:26:37.240 align:middle line:90%
+without--
+
+00:26:37.240 --> 00:26:37.740 align:middle line:90%
+Oh.
+
+00:26:37.740 --> 00:26:37.980 align:middle line:90%
+Oops.
+
+00:26:37.980 --> 00:26:38.770 align:middle line:90%
+Did I do it twice?
+
+00:26:38.770 --> 00:26:39.270 align:middle line:90%
+Sorry.
+
+00:26:39.270 --> 00:26:39.900 align:middle line:90%
+Yes I did.
+
+00:26:39.900 --> 00:26:42.820 align:middle line:84%
+Let me just comment
+one of these out.
+
+00:26:42.820 --> 00:26:43.320 align:middle line:90%
+Oops.
+
+00:26:43.320 --> 00:26:45.980 align:middle line:90%
+
+
+00:26:45.980 --> 00:26:47.740 align:middle line:90%
+There.
+
+00:26:47.740 --> 00:26:51.480 align:middle line:84%
+So how do I add the
+piece about valuers.
+
+00:26:51.480 --> 00:26:52.525 align:middle line:90%
+Yes.
+
+00:26:52.525 --> 00:26:54.180 align:middle line:90%
+AUDIENCE: Depend on your try.
+
+00:26:54.180 --> 00:26:56.060 align:middle line:90%
+And then you add except.
+
+00:26:56.060 --> 00:26:59.507 align:middle line:84%
+And then [INAUDIBLE]
+do not contain zero.
+
+00:26:59.507 --> 00:27:00.090 align:middle line:90%
+ANA BELL: Yep.
+
+00:27:00.090 --> 00:27:05.480 align:middle line:84%
+So we can pop this into
+a try and then except
+
+00:27:05.480 --> 00:27:08.060 align:middle line:90%
+and raise ValueError.
+
+00:27:08.060 --> 00:27:08.870 align:middle line:90%
+Yep.
+
+00:27:08.870 --> 00:27:12.340 align:middle line:90%
+And with some nice message here.
+
+00:27:12.340 --> 00:27:13.000 align:middle line:90%
+Nice message.
+
+00:27:13.000 --> 00:27:16.770 align:middle line:90%
+
+
+00:27:16.770 --> 00:27:19.470 align:middle line:84%
+And we can also put the
+entire for loop under the try.
+
+00:27:19.470 --> 00:27:21.630 align:middle line:90%
+The code is not very long.
+
+00:27:21.630 --> 00:27:24.190 align:middle line:90%
+It wouldn't make a difference.
+
+00:27:24.190 --> 00:27:25.950 align:middle line:84%
+So if we try to run
+it like that now,
+
+00:27:25.950 --> 00:27:27.945 align:middle line:84%
+I've got my value error
+with my nice message.
+
+00:27:27.945 --> 00:27:30.960 align:middle line:90%
+
+
+00:27:30.960 --> 00:27:31.460 align:middle line:90%
+Yeah.
+
+00:27:31.460 --> 00:27:33.530 align:middle line:84%
+Another way we could
+raise the ValueError,
+
+00:27:33.530 --> 00:27:37.460 align:middle line:84%
+just for completion's sake,
+is to say something like--
+
+00:27:37.460 --> 00:27:39.620 align:middle line:84%
+You can even raise things
+inside if statements.
+
+00:27:39.620 --> 00:27:41.660 align:middle line:84%
+They don't have to be
+part of except blocks.
+
+00:27:41.660 --> 00:27:43.880 align:middle line:84%
+Before we even do
+anything with the code,
+
+00:27:43.880 --> 00:27:49.550 align:middle line:84%
+we can say if 0 is in
+Ldenom, raise value error.
+
+00:27:49.550 --> 00:27:52.220 align:middle line:84%
+That would also be
+a fine thing to do.
+
+00:27:52.220 --> 00:27:54.720 align:middle line:90%
+
+
+00:27:54.720 --> 00:27:55.220 align:middle line:90%
+All right.
+
+00:27:55.220 --> 00:27:59.490 align:middle line:84%
+So we can raise valuers
+wherever we'd like.
+
+00:27:59.490 --> 00:28:02.160 align:middle line:84%
+So now I'd like to talk a
+little bit about assertions.
+
+00:28:02.160 --> 00:28:06.770 align:middle line:84%
+So assertions are actually still
+exceptions that get raised.
+
+00:28:06.770 --> 00:28:10.040 align:middle line:84%
+They're just a very
+special type of exceptions
+
+00:28:10.040 --> 00:28:13.820 align:middle line:84%
+that we mostly use as a
+defensive programming tool.
+
+00:28:13.820 --> 00:28:20.060 align:middle line:84%
+So assertions are basically
+used to enforce these contracts
+
+00:28:20.060 --> 00:28:21.860 align:middle line:84%
+that we make
+between somebody who
+
+00:28:21.860 --> 00:28:24.780 align:middle line:84%
+writes a function and
+somebody who uses a function.
+
+00:28:24.780 --> 00:28:27.110 align:middle line:84%
+So that's basically the
+function docstrings.
+
+00:28:27.110 --> 00:28:27.740 align:middle line:90%
+Right?
+
+00:28:27.740 --> 00:28:29.510 align:middle line:84%
+When we talked
+about docstrings, I
+
+00:28:29.510 --> 00:28:32.180 align:middle line:84%
+said that it's very
+hard for us to enforce
+
+00:28:32.180 --> 00:28:36.110 align:middle line:90%
+the text within the docstring.
+
+00:28:36.110 --> 00:28:36.680 align:middle line:90%
+Right?
+
+00:28:36.680 --> 00:28:38.945 align:middle line:84%
+Because the person who's
+writing the function
+
+00:28:38.945 --> 00:28:44.900 align:middle line:84%
+is saying the input list should
+not be empty or to input lists,
+
+00:28:44.900 --> 00:28:47.510 align:middle line:84%
+like in the previous example,
+should be the same length.
+
+00:28:47.510 --> 00:28:49.783 align:middle line:84%
+And there's no way for us
+to really enforce that.
+
+00:28:49.783 --> 00:28:51.450 align:middle line:84%
+It's just something
+that's nice to have.
+
+00:28:51.450 --> 00:28:53.408 align:middle line:84%
+And we're going to
+guarantee that the code runs
+
+00:28:53.408 --> 00:28:56.180 align:middle line:90%
+if these things are upheld.
+
+00:28:56.180 --> 00:28:58.400 align:middle line:84%
+But it turns out that
+assertions are actually
+
+00:28:58.400 --> 00:29:00.990 align:middle line:84%
+a nice way for us to
+add to a nice thing
+
+00:29:00.990 --> 00:29:03.660 align:middle line:84%
+to add to our
+functions that do try
+
+00:29:03.660 --> 00:29:07.620 align:middle line:84%
+to enforce this contract
+through the specification.
+
+00:29:07.620 --> 00:29:09.680 align:middle line:84%
+So the way we create
+an assert, we say,
+
+00:29:09.680 --> 00:29:13.860 align:middle line:84%
+assert and I'm asserting
+that this statement is true.
+
+00:29:13.860 --> 00:29:16.700 align:middle line:84%
+So if I want that the
+input length for a function
+
+00:29:16.700 --> 00:29:20.120 align:middle line:84%
+to be non-zero, I would assert
+that the length L is not
+
+00:29:20.120 --> 00:29:22.680 align:middle line:84%
+equal to 0 or
+something like that.
+
+00:29:22.680 --> 00:29:27.030 align:middle line:84%
+And if the assertion is true,
+if that condition is met,
+
+00:29:27.030 --> 00:29:28.920 align:middle line:84%
+then the code
+carries on as normal.
+
+00:29:28.920 --> 00:29:30.930 align:middle line:84%
+But if the assertion
+is not true,
+
+00:29:30.930 --> 00:29:33.410 align:middle line:84%
+then Python ends with
+an assertion error
+
+00:29:33.410 --> 00:29:37.340 align:middle line:84%
+and then some message that
+the condition was not true.
+
+00:29:37.340 --> 00:29:39.320 align:middle line:84%
+And these are really
+nice because it
+
+00:29:39.320 --> 00:29:43.020 align:middle line:84%
+halts the execution of a program
+as soon as that contract is not
+
+00:29:43.020 --> 00:29:43.520 align:middle line:90%
+held.
+
+00:29:43.520 --> 00:29:44.020 align:middle line:90%
+Right?
+
+00:29:44.020 --> 00:29:47.060 align:middle line:84%
+As soon as something within the
+specification has gone wrong,
+
+00:29:47.060 --> 00:29:50.060 align:middle line:84%
+then the program terminates
+with those assertion errors.
+
+00:29:50.060 --> 00:29:52.100 align:middle line:84%
+And it's nice to see
+them, because if you're
+
+00:29:52.100 --> 00:29:54.200 align:middle line:84%
+debugging your
+code, you don't want
+
+00:29:54.200 --> 00:30:01.388 align:middle line:84%
+to propagate bad values through
+functions, because that value
+
+00:30:01.388 --> 00:30:02.930 align:middle line:84%
+might get propagated
+later and later,
+
+00:30:02.930 --> 00:30:06.420 align:middle line:84%
+and later, and then it would
+make your debugging very hard.
+
+00:30:06.420 --> 00:30:06.920 align:middle line:90%
+OK?
+
+00:30:06.920 --> 00:30:10.160 align:middle line:84%
+So if you stop the execution
+as soon as something is just
+
+00:30:10.160 --> 00:30:15.810 align:middle line:84%
+strange or off, as in
+something like an assumption
+
+00:30:15.810 --> 00:30:20.820 align:middle line:84%
+a parameter is not
+met, then that's good.
+
+00:30:20.820 --> 00:30:26.520 align:middle line:84%
+So in some digits example, here
+is the code that we wrote last.
+
+00:30:26.520 --> 00:30:29.770 align:middle line:84%
+So total down to the bottom
+is exactly what we had before.
+
+00:30:29.770 --> 00:30:32.160 align:middle line:84%
+All we're going to add
+is this assert statement
+
+00:30:32.160 --> 00:30:34.680 align:middle line:84%
+up here that the
+length of is not empty,
+
+00:30:34.680 --> 00:30:36.660 align:middle line:84%
+because part of my
+contract here is
+
+00:30:36.660 --> 00:30:38.800 align:middle line:90%
+that s is a non-empty string.
+
+00:30:38.800 --> 00:30:39.300 align:middle line:90%
+Right?
+
+00:30:39.300 --> 00:30:40.710 align:middle line:84%
+So that's a nice
+thing to assert.
+
+00:30:40.710 --> 00:30:42.690 align:middle line:84%
+If the user ever gives
+us an empty string,
+
+00:30:42.690 --> 00:30:45.040 align:middle line:90%
+the program will terminate.
+
+00:30:45.040 --> 00:30:50.010 align:middle line:84%
+So in this example here,
+I've got some digits
+
+00:30:50.010 --> 00:30:50.790 align:middle line:90%
+with the assert.
+
+00:30:50.790 --> 00:30:56.580 align:middle line:84%
+So if the user gives us an empty
+string, no total was created
+
+00:30:56.580 --> 00:31:00.060 align:middle line:84%
+and the assert was
+immediately false.
+
+00:31:00.060 --> 00:31:02.370 align:middle line:90%
+So length was equal to 0.
+
+00:31:02.370 --> 00:31:07.450 align:middle line:84%
+The assertion error was raised
+with the message s is empty.
+
+00:31:07.450 --> 00:31:08.490 align:middle line:90%
+So what I had here.
+
+00:31:08.490 --> 00:31:11.320 align:middle line:90%
+
+
+00:31:11.320 --> 00:31:16.810 align:middle line:84%
+If I have fine input, then
+no assertion is raised,
+
+00:31:16.810 --> 00:31:18.610 align:middle line:84%
+and the code carries
+on as normal.
+
+00:31:18.610 --> 00:31:19.410 align:middle line:90%
+So that's nice.
+
+00:31:19.410 --> 00:31:22.560 align:middle line:90%
+
+
+00:31:22.560 --> 00:31:26.730 align:middle line:84%
+So let's have you add one more
+line of code to the program
+
+00:31:26.730 --> 00:31:27.930 align:middle line:90%
+that we just wrote.
+
+00:31:27.930 --> 00:31:33.120 align:middle line:84%
+Just add an assert statement
+that enforces the contract.
+
+00:31:33.120 --> 00:31:36.870 align:middle line:84%
+So I have Lnum and Ldenom
+are non-empty lists
+
+00:31:36.870 --> 00:31:38.250 align:middle line:90%
+of equal lengths.
+
+00:31:38.250 --> 00:31:41.040 align:middle line:84%
+So you can do this all
+in one assert statement,
+
+00:31:41.040 --> 00:31:43.080 align:middle line:84%
+or you can put 2 separate
+assert statements
+
+00:31:43.080 --> 00:31:44.890 align:middle line:90%
+with 2 separate messages.
+
+00:31:44.890 --> 00:31:47.110 align:middle line:84%
+However you'd like,
+it is fine with me.
+
+00:31:47.110 --> 00:31:49.110 align:middle line:84%
+So I'll give you a
+minute to work on that
+
+00:31:49.110 --> 00:31:52.300 align:middle line:90%
+and then we can write it.
+
+00:31:52.300 --> 00:31:53.170 align:middle line:90%
+All right.
+
+00:31:53.170 --> 00:31:56.870 align:middle line:84%
+What assertions
+should I put in here?
+
+00:31:56.870 --> 00:31:58.910 align:middle line:90%
+Yeah.
+
+00:31:58.910 --> 00:32:05.441 align:middle line:84%
+AUDIENCE: Maybe assert
+len(Lnum) and then [INAUDIBLE]
+
+00:32:05.441 --> 00:32:08.283 align:middle line:90%
+Ldenom, and then [INAUDIBLE].
+
+00:32:08.283 --> 00:32:10.450 align:middle line:84%
+ANA BELL: So the thing I'm
+asserting should be true.
+
+00:32:10.450 --> 00:32:12.270 align:middle line:90%
+So do I want them to be equal?
+
+00:32:12.270 --> 00:32:13.270 align:middle line:90%
+Yes.
+
+00:32:13.270 --> 00:32:13.770 align:middle line:90%
+Exactly.
+
+00:32:13.770 --> 00:32:21.050 align:middle line:84%
+So I want len(Lnum) to
+equal len(Ldenom) Yeah.
+
+00:32:21.050 --> 00:32:22.260 align:middle line:90%
+Ldenom, like that.
+
+00:32:22.260 --> 00:32:23.460 align:middle line:90%
+Yep, that's one.
+
+00:32:23.460 --> 00:32:23.960 align:middle line:90%
+Right?
+
+00:32:23.960 --> 00:32:27.080 align:middle line:84%
+So the thing you want, you're
+asserting that this is true,
+
+00:32:27.080 --> 00:32:29.870 align:middle line:84%
+and if not, comma, we're
+going to put a message.
+
+00:32:29.870 --> 00:32:30.980 align:middle line:90%
+Right?
+
+00:32:30.980 --> 00:32:33.920 align:middle line:84%
+Lengths different or
+something like that.
+
+00:32:33.920 --> 00:32:36.785 align:middle line:90%
+
+
+00:32:36.785 --> 00:32:38.660 align:middle line:84%
+Do you want to do the
+other assert statement?
+
+00:32:38.660 --> 00:32:41.210 align:middle line:84%
+Or does somebody else
+want to take a crack
+
+00:32:41.210 --> 00:32:42.189 align:middle line:90%
+at the other assert?
+
+00:32:42.189 --> 00:32:46.980 align:middle line:90%
+
+
+00:32:46.980 --> 00:32:49.355 align:middle line:84%
+So the other one is that
+they are non-empty lists.
+
+00:32:49.355 --> 00:32:52.170 align:middle line:90%
+
+
+00:32:52.170 --> 00:32:54.270 align:middle line:90%
+Yeah.
+
+00:32:54.270 --> 00:32:56.873 align:middle line:84%
+AUDIENCE: And assert
+at the length of Lnum
+
+00:32:56.873 --> 00:33:01.200 align:middle line:90%
+is not like a exclamation point.
+
+00:33:01.200 --> 00:33:03.530 align:middle line:90%
+Same thing for Ldenom.
+
+00:33:03.530 --> 00:33:09.697 align:middle line:84%
+And that should take
+out [INAUDIBLE]..
+
+00:33:09.697 --> 00:33:10.280 align:middle line:90%
+ANA BELL: Yep.
+
+00:33:10.280 --> 00:33:11.720 align:middle line:90%
+So we can definitely do that.
+
+00:33:11.720 --> 00:33:13.310 align:middle line:90%
+Not equal to 0, comma.
+
+00:33:13.310 --> 00:33:17.880 align:middle line:90%
+
+
+00:33:17.880 --> 00:33:19.780 align:middle line:84%
+Empty list or
+something like that.
+
+00:33:19.780 --> 00:33:20.730 align:middle line:90%
+Yep.
+
+00:33:20.730 --> 00:33:21.810 align:middle line:90%
+Very nice.
+
+00:33:21.810 --> 00:33:24.540 align:middle line:84%
+So here we're trying to
+enforce our nice contracts.
+
+00:33:24.540 --> 00:33:26.800 align:middle line:84%
+And I've got 2
+examples down here.
+
+00:33:26.800 --> 00:33:29.530 align:middle line:84%
+So here I've got 2
+different lengths of lists.
+
+00:33:29.530 --> 00:33:30.390 align:middle line:90%
+So there you go.
+
+00:33:30.390 --> 00:33:36.970 align:middle line:84%
+My assertion was raised with the
+nice message, lengths differ.
+
+00:33:36.970 --> 00:33:38.760 align:middle line:84%
+And then the code
+would immediately stop
+
+00:33:38.760 --> 00:33:41.000 align:middle line:84%
+and it would force
+us to check to see
+
+00:33:41.000 --> 00:33:42.250 align:middle line:90%
+why these links are different.
+
+00:33:42.250 --> 00:33:44.880 align:middle line:84%
+So these bad lists won't
+propagate any further
+
+00:33:44.880 --> 00:33:46.770 align:middle line:90%
+if I had larger pieces of code.
+
+00:33:46.770 --> 00:33:48.300 align:middle line:90%
+And then same here.
+
+00:33:48.300 --> 00:33:51.150 align:middle line:84%
+I've got this assertion error
+that I have an empty list.
+
+00:33:51.150 --> 00:33:57.110 align:middle line:90%
+
+
+00:33:57.110 --> 00:33:58.400 align:middle line:90%
+Any questions so far?
+
+00:33:58.400 --> 00:34:01.200 align:middle line:90%
+
+
+00:34:01.200 --> 00:34:02.920 align:middle line:90%
+OK.
+
+00:34:02.920 --> 00:34:05.015 align:middle line:84%
+One more example I
+want to go through.
+
+00:34:05.015 --> 00:34:06.640 align:middle line:84%
+I'm not going to
+actually run this one,
+
+00:34:06.640 --> 00:34:08.380 align:middle line:90%
+but it is in the Python slides.
+
+00:34:08.380 --> 00:34:12.250 align:middle line:84%
+I just wanted to give you
+another example of how
+
+00:34:12.250 --> 00:34:15.429 align:middle line:84%
+we can use exceptions
+and assertions in just
+
+00:34:15.429 --> 00:34:16.659 align:middle line:90%
+a different setting.
+
+00:34:16.659 --> 00:34:20.179 align:middle line:84%
+And it hopefully shows
+that as a programmer,
+
+00:34:20.179 --> 00:34:24.730 align:middle line:84%
+you get to choose how
+you add these exceptions
+
+00:34:24.730 --> 00:34:25.480 align:middle line:90%
+and assertions.
+
+00:34:25.480 --> 00:34:25.980 align:middle line:90%
+Right?
+
+00:34:25.980 --> 00:34:30.260 align:middle line:84%
+So wherever they seem reasonable
+to add, you should add them.
+
+00:34:30.260 --> 00:34:32.500 align:middle line:84%
+So in this particular
+example, we
+
+00:34:32.500 --> 00:34:36.020 align:middle line:84%
+are assuming that we
+have a class list.
+
+00:34:36.020 --> 00:34:39.850 align:middle line:84%
+In this case, I only have
+2 students in my class.
+
+00:34:39.850 --> 00:34:42.969 align:middle line:90%
+So these are their test grades.
+
+00:34:42.969 --> 00:34:45.730 align:middle line:84%
+So I've got a list
+that looks like this.
+
+00:34:45.730 --> 00:34:48.800 align:middle line:84%
+It looks complicated, but
+I'll walk you through it.
+
+00:34:48.800 --> 00:34:52.670 align:middle line:90%
+This is one student in my list.
+
+00:34:52.670 --> 00:34:55.170 align:middle line:84%
+And this is another
+student in my list.
+
+00:34:55.170 --> 00:34:57.652 align:middle line:84%
+So I've got a list
+of lists, where
+
+00:34:57.652 --> 00:34:59.360 align:middle line:84%
+these things that I've
+highlighted in red
+
+00:34:59.360 --> 00:35:00.800 align:middle line:90%
+is my students.
+
+00:35:00.800 --> 00:35:04.580 align:middle line:84%
+And for each student
+I have more lists
+
+00:35:04.580 --> 00:35:07.230 align:middle line:90%
+as part of their information.
+
+00:35:07.230 --> 00:35:12.180 align:middle line:84%
+So the first list related to
+one student is their name.
+
+00:35:12.180 --> 00:35:12.680 align:middle line:90%
+Right?
+
+00:35:12.680 --> 00:35:14.263 align:middle line:84%
+The first element
+is their first name.
+
+00:35:14.263 --> 00:35:15.960 align:middle line:84%
+Second element is
+their last name.
+
+00:35:15.960 --> 00:35:18.680 align:middle line:84%
+And then the second
+list for that student
+
+00:35:18.680 --> 00:35:20.280 align:middle line:90%
+is their grades in the class.
+
+00:35:20.280 --> 00:35:23.330 align:middle line:84%
+So just another list of all
+the grades in the class.
+
+00:35:23.330 --> 00:35:25.080 align:middle line:90%
+OK.
+
+00:35:25.080 --> 00:35:27.210 align:middle line:84%
+So what I would
+like to do, and this
+
+00:35:27.210 --> 00:35:29.580 align:middle line:84%
+is the code I'm
+going to go through,
+
+00:35:29.580 --> 00:35:34.610 align:middle line:84%
+is what is I'd like to
+create a new list based
+
+00:35:34.610 --> 00:35:38.780 align:middle line:84%
+on the original GRE test
+grades that contains
+
+00:35:38.780 --> 00:35:40.500 align:middle line:90%
+the same information as before.
+
+00:35:40.500 --> 00:35:42.200 align:middle line:84%
+So you can see, I
+still have 2 lists
+
+00:35:42.200 --> 00:35:44.390 align:middle line:84%
+of students, the first
+row and the second row.
+
+00:35:44.390 --> 00:35:47.690 align:middle line:84%
+And in each
+student's information
+
+00:35:47.690 --> 00:35:50.540 align:middle line:84%
+I again still have their name
+and their list of grades,
+
+00:35:50.540 --> 00:35:54.080 align:middle line:84%
+but I'm adding one
+more item at the end
+
+00:35:54.080 --> 00:35:57.913 align:middle line:84%
+for each student, which is the
+average of the list of grades.
+
+00:35:57.913 --> 00:35:59.330 align:middle line:84%
+So I've taken the
+average of these
+
+00:35:59.330 --> 00:36:02.990 align:middle line:84%
+and plopped it as my
+integer or float at the end.
+
+00:36:02.990 --> 00:36:05.880 align:middle line:90%
+And same with my next student.
+
+00:36:05.880 --> 00:36:10.200 align:middle line:84%
+So the code that's going
+to do this looks like this.
+
+00:36:10.200 --> 00:36:14.790 align:middle line:84%
+That's just the original list to
+give you an example to look at,
+
+00:36:14.790 --> 00:36:18.100 align:middle line:84%
+because I find it hard to
+see things without examples.
+
+00:36:18.100 --> 00:36:21.760 align:middle line:84%
+So this is the code that
+gets the stats for the class.
+
+00:36:21.760 --> 00:36:24.390 align:middle line:84%
+So that creates this new
+list containing my average
+
+00:36:24.390 --> 00:36:28.030 align:middle line:84%
+at the end for each
+student in the class list.
+
+00:36:28.030 --> 00:36:30.300 align:middle line:84%
+So for example,
+student here, stu
+
+00:36:30.300 --> 00:36:34.030 align:middle line:84%
+is going to be this
+list of 2 lists.
+
+00:36:34.030 --> 00:36:38.050 align:middle line:84%
+What I'm going to do in my new
+list that I'm creating here,
+
+00:36:38.050 --> 00:36:40.300 align:middle line:84%
+new stats, is I'm
+going to append student
+
+00:36:40.300 --> 00:36:41.890 align:middle line:90%
+at 0, which is just their name.
+
+00:36:41.890 --> 00:36:44.170 align:middle line:84%
+So just a straight
+copy and paste.
+
+00:36:44.170 --> 00:36:46.390 align:middle line:84%
+Student (1), which
+is just their grades.
+
+00:36:46.390 --> 00:36:48.130 align:middle line:84%
+Again, a straight
+up copy and paste
+
+00:36:48.130 --> 00:36:49.540 align:middle line:90%
+of all their list of grades.
+
+00:36:49.540 --> 00:36:55.220 align:middle line:84%
+And then I'm going to apply
+a function named average
+
+00:36:55.220 --> 00:36:56.930 align:middle line:90%
+to the list of student grades.
+
+00:36:56.930 --> 00:36:59.670 align:middle line:90%
+
+
+00:36:59.670 --> 00:37:02.130 align:middle line:84%
+And what we're going to see
+in the next couple of slides
+
+00:37:02.130 --> 00:37:03.720 align:middle line:84%
+is we're going to
+see a few variations
+
+00:37:03.720 --> 00:37:06.090 align:middle line:84%
+of this average
+function and what
+
+00:37:06.090 --> 00:37:11.210 align:middle line:84%
+happens when we apply
+these different functions.
+
+00:37:11.210 --> 00:37:16.490 align:middle line:84%
+But for now, I will assume
+that this code will do the job.
+
+00:37:16.490 --> 00:37:21.260 align:middle line:84%
+So the original average function
+will take in a list of grades.
+
+00:37:21.260 --> 00:37:25.940 align:middle line:84%
+So this grades here will
+look like this blue box here.
+
+00:37:25.940 --> 00:37:26.440 align:middle line:90%
+Right?
+
+00:37:26.440 --> 00:37:28.180 align:middle line:90%
+So just the list of numbers.
+
+00:37:28.180 --> 00:37:30.790 align:middle line:84%
+It's going to sum
+all the grades,
+
+00:37:30.790 --> 00:37:32.620 align:middle line:84%
+so sum of all the
+elements inside that
+
+00:37:32.620 --> 00:37:36.680 align:middle line:84%
+list and divide by how
+many there are average.
+
+00:37:36.680 --> 00:37:37.950 align:middle line:90%
+OK.
+
+00:37:37.950 --> 00:37:44.340 align:middle line:84%
+Now let's say that I have a
+student that contains no quiz
+
+00:37:44.340 --> 00:37:46.260 align:middle line:90%
+grades or no grades at all.
+
+00:37:46.260 --> 00:37:50.505 align:middle line:84%
+In that case, their list
+of grades will be empty.
+
+00:37:50.505 --> 00:37:53.100 align:middle line:90%
+
+
+00:37:53.100 --> 00:37:57.650 align:middle line:84%
+So if I try to apply the sum
+of all the grades, divided
+
+00:37:57.650 --> 00:37:59.480 align:middle line:84%
+by the length of the
+grades, for somebody
+
+00:37:59.480 --> 00:38:03.230 align:middle line:84%
+who has no grades information,
+that length will be 0.
+
+00:38:03.230 --> 00:38:06.320 align:middle line:84%
+So I'm going to get a
+ZeroDivisionError when I
+
+00:38:06.320 --> 00:38:09.930 align:middle line:90%
+run my code, and it will crash.
+
+00:38:09.930 --> 00:38:14.240 align:middle line:84%
+So what I'd like to do is to
+change my average function
+
+00:38:14.240 --> 00:38:17.580 align:middle line:90%
+to try to catch such an error.
+
+00:38:17.580 --> 00:38:21.660 align:middle line:84%
+So I'm going to try to do the
+sum divided by the length.
+
+00:38:21.660 --> 00:38:24.620 align:middle line:84%
+And I'm going to catch this
+ZeroDivisionError inside this
+
+00:38:24.620 --> 00:38:25.250 align:middle line:90%
+except block.
+
+00:38:25.250 --> 00:38:29.830 align:middle line:84%
+And all I'm going to do is
+print warning: no grades data.
+
+00:38:29.830 --> 00:38:34.180 align:middle line:84%
+So for any student that actually
+has grades information here,
+
+00:38:34.180 --> 00:38:35.680 align:middle line:90%
+the code will work--
+
+00:38:35.680 --> 00:38:37.870 align:middle line:84%
+the code to get the average
+will work just fine,
+
+00:38:37.870 --> 00:38:40.690 align:middle line:84%
+because it will do the
+sum divided by the length.
+
+00:38:40.690 --> 00:38:44.320 align:middle line:90%
+
+
+00:38:44.320 --> 00:38:46.510 align:middle line:84%
+So that means the try
+block will succeed,
+
+00:38:46.510 --> 00:38:48.920 align:middle line:84%
+and we're going to return the
+sum divided by the length.
+
+00:38:48.920 --> 00:38:52.880 align:middle line:84%
+But if any student enters
+the zero division error here,
+
+00:38:52.880 --> 00:38:54.680 align:middle line:90%
+we're going to print something.
+
+00:38:54.680 --> 00:38:56.810 align:middle line:90%
+And what do we return?
+
+00:38:56.810 --> 00:38:59.420 align:middle line:84%
+What is the function return
+if we enter the except block?
+
+00:38:59.420 --> 00:39:10.593 align:middle line:90%
+
+
+00:39:10.593 --> 00:39:12.010 align:middle line:84%
+That's what's going
+to be printed,
+
+00:39:12.010 --> 00:39:13.900 align:middle line:84%
+but what is this
+function actually return?
+
+00:39:13.900 --> 00:39:16.330 align:middle line:90%
+What value?
+
+00:39:16.330 --> 00:39:16.930 align:middle line:90%
+None.
+
+00:39:16.930 --> 00:39:17.560 align:middle line:90%
+Exactly.
+
+00:39:17.560 --> 00:39:18.060 align:middle line:90%
+Right?
+
+00:39:18.060 --> 00:39:20.710 align:middle line:84%
+There's no return inside
+this except block.
+
+00:39:20.710 --> 00:39:22.720 align:middle line:90%
+And no code after it either.
+
+00:39:22.720 --> 00:39:25.000 align:middle line:84%
+So you can see here,
+if it successfully
+
+00:39:25.000 --> 00:39:28.420 align:middle line:84%
+completes for these 3 students,
+we've got our numbers.
+
+00:39:28.420 --> 00:39:29.750 align:middle line:90%
+That's what we returned.
+
+00:39:29.750 --> 00:39:33.070 align:middle line:84%
+But for the last student that
+has no grades information,
+
+00:39:33.070 --> 00:39:35.650 align:middle line:90%
+we're returning none.
+
+00:39:35.650 --> 00:39:36.760 align:middle line:90%
+OK.
+
+00:39:36.760 --> 00:39:38.080 align:middle line:90%
+I don't like that.
+
+00:39:38.080 --> 00:39:39.760 align:middle line:84%
+What I would like
+in my grades book
+
+00:39:39.760 --> 00:39:43.190 align:middle line:84%
+is to have numbers
+as my value there.
+
+00:39:43.190 --> 00:39:50.540 align:middle line:84%
+So instead, let's add a
+return for that except block.
+
+00:39:50.540 --> 00:39:53.307 align:middle line:84%
+So we're still going
+to flag the error.
+
+00:39:53.307 --> 00:39:55.640 align:middle line:84%
+We still want to know that
+something weird has happened.
+
+00:39:55.640 --> 00:39:59.300 align:middle line:84%
+I don't just want to
+return a 0 without actually
+
+00:39:59.300 --> 00:40:02.180 align:middle line:84%
+telling the user that
+something's gone down.
+
+00:40:02.180 --> 00:40:04.040 align:middle line:84%
+I still flag the
+error, but then I
+
+00:40:04.040 --> 00:40:06.883 align:middle line:84%
+can return a 0, so that
+it's still a number.
+
+00:40:06.883 --> 00:40:09.050 align:middle line:84%
+And then, if I do something
+with numbers at the end,
+
+00:40:09.050 --> 00:40:11.870 align:middle line:90%
+then it all works out.
+
+00:40:11.870 --> 00:40:16.110 align:middle line:84%
+This was a particularly
+hard first Quiz, 10, 10, 80.
+
+00:40:16.110 --> 00:40:19.140 align:middle line:90%
+
+
+00:40:19.140 --> 00:40:19.640 align:middle line:90%
+OK.
+
+00:40:19.640 --> 00:40:23.400 align:middle line:84%
+One last thing we can
+do is to just assert.
+
+00:40:23.400 --> 00:40:23.900 align:middle line:90%
+Right?
+
+00:40:23.900 --> 00:40:27.080 align:middle line:84%
+So if we want to make sure
+that every student had
+
+00:40:27.080 --> 00:40:31.610 align:middle line:84%
+some sort of grades information,
+maybe if the grades data was
+
+00:40:31.610 --> 00:40:35.240 align:middle line:84%
+empty, something weird happened
+from a previous function that
+
+00:40:35.240 --> 00:40:37.190 align:middle line:84%
+might have been
+called, I don't know,
+
+00:40:37.190 --> 00:40:41.060 align:middle line:84%
+but maybe we say
+let's just assert
+
+00:40:41.060 --> 00:40:43.160 align:middle line:84%
+that the length of
+the grades is not 0,
+
+00:40:43.160 --> 00:40:45.800 align:middle line:84%
+so we only want this
+code to execute if there
+
+00:40:45.800 --> 00:40:47.180 align:middle line:90%
+are some grades information.
+
+00:40:47.180 --> 00:40:51.030 align:middle line:84%
+And if not, let's just raise an
+assertion error just in case.
+
+00:40:51.030 --> 00:40:55.280 align:middle line:84%
+So we can assert that the length
+of grades is not equal to 0.
+
+00:40:55.280 --> 00:40:59.210 align:middle line:84%
+And in that case, the
+code will terminate
+
+00:40:59.210 --> 00:41:02.870 align:middle line:84%
+as soon as we try to get that
+last student information.
+
+00:41:02.870 --> 00:41:06.020 align:middle line:84%
+It will crash and it will crash
+with this assert statement
+
+00:41:06.020 --> 00:41:07.460 align:middle line:90%
+that there's no grades data.
+
+00:41:07.460 --> 00:41:10.140 align:middle line:84%
+And then we can go back
+to the code and see,
+
+00:41:10.140 --> 00:41:12.170 align:middle line:84%
+did we actually
+expect the student
+
+00:41:12.170 --> 00:41:13.610 align:middle line:90%
+to have information or not?
+
+00:41:13.610 --> 00:41:15.180 align:middle line:84%
+And then we can try
+to work through.
+
+00:41:15.180 --> 00:41:17.980 align:middle line:90%
+
+
+00:41:17.980 --> 00:41:23.830 align:middle line:84%
+So just a quick summary of
+exceptions and assertions.
+
+00:41:23.830 --> 00:41:26.350 align:middle line:84%
+Hopefully, this lecture
+kind of demystified
+
+00:41:26.350 --> 00:41:29.560 align:middle line:84%
+some of these exceptions
+that we've been getting.
+
+00:41:29.560 --> 00:41:32.800 align:middle line:84%
+It showed you they're
+not as scary, as they
+
+00:41:32.800 --> 00:41:35.310 align:middle line:90%
+might have seemed originally.
+
+00:41:35.310 --> 00:41:38.260 align:middle line:84%
+But they don't always have
+to terminate the program.
+
+00:41:38.260 --> 00:41:38.980 align:middle line:90%
+Right?
+
+00:41:38.980 --> 00:41:40.540 align:middle line:90%
+You can catch them.
+
+00:41:40.540 --> 00:41:42.550 align:middle line:84%
+You can deal with
+them in whatever way
+
+00:41:42.550 --> 00:41:45.550 align:middle line:84%
+that makes sense for that
+particular function or program.
+
+00:41:45.550 --> 00:41:48.070 align:middle line:84%
+You can print a nice
+output to the screen.
+
+00:41:48.070 --> 00:41:50.830 align:middle line:90%
+You can set some default values.
+
+00:41:50.830 --> 00:41:53.290 align:middle line:84%
+You can still
+terminate the program,
+
+00:41:53.290 --> 00:41:55.870 align:middle line:84%
+but do it on your own
+terms with your own errors,
+
+00:41:55.870 --> 00:41:57.400 align:middle line:84%
+with your own
+custom messages, so
+
+00:41:57.400 --> 00:42:00.430 align:middle line:84%
+that the users can see
+something nicer than the default
+
+00:42:00.430 --> 00:42:01.450 align:middle line:90%
+Python messages.
+
+00:42:01.450 --> 00:42:01.990 align:middle line:90%
+Right?
+
+00:42:01.990 --> 00:42:07.000 align:middle line:84%
+And so exception handling
+is a very important part
+
+00:42:07.000 --> 00:42:10.510 align:middle line:84%
+of writing a program,
+especially if you
+
+00:42:10.510 --> 00:42:12.880 align:middle line:90%
+expect weird things to happen.
+
+00:42:12.880 --> 00:42:14.830 align:middle line:90%
+Right?
+
+00:42:14.830 --> 00:42:17.890 align:middle line:84%
+Assertions, on the other
+hand, are a type of exception.
+
+00:42:17.890 --> 00:42:19.750 align:middle line:84%
+And they're useful,
+as I've mentioned,
+
+00:42:19.750 --> 00:42:22.270 align:middle line:84%
+to try to enforce
+these contracts,
+
+00:42:22.270 --> 00:42:24.410 align:middle line:90%
+these specifications.
+
+00:42:24.410 --> 00:42:27.650 align:middle line:84%
+You basically use
+assertions because you don't
+
+00:42:27.650 --> 00:42:30.120 align:middle line:90%
+want bad values to propagate.
+
+00:42:30.120 --> 00:42:34.430 align:middle line:84%
+So as soon as something that
+isn't as you expect it to be
+
+00:42:34.430 --> 00:42:38.625 align:middle line:84%
+happens, assertion
+error is raised
+
+00:42:38.625 --> 00:42:40.250 align:middle line:84%
+and the program
+immediately terminates,
+
+00:42:40.250 --> 00:42:44.330 align:middle line:84%
+allowing you to check to see why
+exactly those conditions were
+
+00:42:44.330 --> 00:42:45.230 align:middle line:90%
+not met.
+
+00:42:45.230 --> 00:42:46.670 align:middle line:90%
+OK.
+
+00:42:46.670 --> 00:42:47.700 align:middle line:90%
+So that's it.
+
+00:42:47.700 --> 00:42:49.600 align:middle line:90%
+That's all I had.
+
+00:42:49.600 --> 00:42:55.000 align:middle line:90%

@@ -1,0 +1,5056 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.940 align:middle line:84%
+[SQUEAKING]
+[RUSTLING] [CLICKING]
+
+00:00:04.940 --> 00:00:16.302 align:middle line:90%
+
+
+00:00:16.302 --> 00:00:21.440 align:middle line:84%
+ANA BELL: All right, so welcome
+to the first lecture of 6.100L.
+
+00:00:21.440 --> 00:00:23.150 align:middle line:90%
+That's our new number.
+
+00:00:23.150 --> 00:00:24.560 align:middle line:90%
+My name is Ana Bell.
+
+00:00:24.560 --> 00:00:26.870 align:middle line:84%
+That's two separate
+names, first name Ana,
+
+00:00:26.870 --> 00:00:28.890 align:middle line:84%
+last name Bell--
+super confusing.
+
+00:00:28.890 --> 00:00:31.310 align:middle line:84%
+But I've been a lecturer
+here in the EECS Department
+
+00:00:31.310 --> 00:00:33.800 align:middle line:84%
+for probably almost
+10 years now.
+
+00:00:33.800 --> 00:00:36.170 align:middle line:84%
+And I've been doing the
+intro course for a while.
+
+00:00:36.170 --> 00:00:39.230 align:middle line:84%
+I'm really happy to be teaching
+this full semester version
+
+00:00:39.230 --> 00:00:41.750 align:middle line:90%
+of 6.100A.
+
+00:00:41.750 --> 00:00:45.530 align:middle line:84%
+So today what we're
+going to do is go over
+
+00:00:45.530 --> 00:00:48.560 align:middle line:84%
+a little bit of course
+administrative information,
+
+00:00:48.560 --> 00:00:50.840 align:middle line:84%
+and then we'll dive
+right into some thoughts
+
+00:00:50.840 --> 00:00:53.420 align:middle line:84%
+about computers, high
+level how they work.
+
+00:00:53.420 --> 00:00:56.700 align:middle line:84%
+And then we'll start going
+into some Python basics.
+
+00:00:56.700 --> 00:00:59.000 align:middle line:84%
+So we're going to get
+coding right away.
+
+00:00:59.000 --> 00:01:01.880 align:middle line:84%
+So I highly encourage you,
+since you're in this class,
+
+00:01:01.880 --> 00:01:04.519 align:middle line:84%
+to download the lecture
+slides beforehand,
+
+00:01:04.519 --> 00:01:08.690 align:middle line:84%
+to take notes, and
+run code when I do.
+
+00:01:08.690 --> 00:01:10.730 align:middle line:84%
+Some of the lectures
+are interactive.
+
+00:01:10.730 --> 00:01:12.260 align:middle line:84%
+And we'll have
+breaks, so there'll
+
+00:01:12.260 --> 00:01:14.480 align:middle line:84%
+be a place where
+you can take a break
+
+00:01:14.480 --> 00:01:16.440 align:middle line:90%
+to actually do some coding.
+
+00:01:16.440 --> 00:01:18.137 align:middle line:90%
+And that's important--
+
+00:01:18.137 --> 00:01:19.470 align:middle line:90%
+I call them "you try it" breaks.
+
+00:01:19.470 --> 00:01:21.553 align:middle line:84%
+That's important to make
+sure that you're actually
+
+00:01:21.553 --> 00:01:24.780 align:middle line:84%
+practicing what we are
+learning right at this time.
+
+00:01:24.780 --> 00:01:28.290 align:middle line:84%
+The main idea for lectures is,
+yes, I will do some teaching,
+
+00:01:28.290 --> 00:01:29.790 align:middle line:84%
+but there will also
+be opportunities
+
+00:01:29.790 --> 00:01:33.990 align:middle line:84%
+for questions and for you
+guys to try some programming
+
+00:01:33.990 --> 00:01:35.010 align:middle line:90%
+right on the spot.
+
+00:01:35.010 --> 00:01:36.780 align:middle line:84%
+Even if you don't
+finish writing a program
+
+00:01:36.780 --> 00:01:39.390 align:middle line:84%
+that we start talking
+about, I will finish it,
+
+00:01:39.390 --> 00:01:41.430 align:middle line:84%
+and we can all talk
+about it together.
+
+00:01:41.430 --> 00:01:46.270 align:middle line:84%
+And I'll show you some
+pitfalls and things like that.
+
+00:01:46.270 --> 00:01:47.760 align:middle line:84%
+There will be lots
+of opportunities
+
+00:01:47.760 --> 00:01:52.320 align:middle line:84%
+to practice in this class at
+various degrees of granularity.
+
+00:01:52.320 --> 00:01:54.510 align:middle line:84%
+And then there's also
+lots of opportunities
+
+00:01:54.510 --> 00:01:58.050 align:middle line:84%
+that I have in the handouts
+to do extra practice
+
+00:01:58.050 --> 00:02:02.330 align:middle line:84%
+at home and through a bunch of
+different resources as well.
+
+00:02:02.330 --> 00:02:05.590 align:middle line:84%
+The reason why I stress
+participation and practice is
+
+00:02:05.590 --> 00:02:08.410 align:middle line:84%
+because part of the
+reason you're here is you
+
+00:02:08.410 --> 00:02:10.180 align:middle line:90%
+want to learn how to program.
+
+00:02:10.180 --> 00:02:12.160 align:middle line:84%
+You don't know how
+to program yet.
+
+00:02:12.160 --> 00:02:14.890 align:middle line:84%
+And programming is
+actually a skill.
+
+00:02:14.890 --> 00:02:16.090 align:middle line:90%
+it's like math or reading.
+
+00:02:16.090 --> 00:02:18.100 align:middle line:84%
+It's something that
+you have to practice.
+
+00:02:18.100 --> 00:02:21.290 align:middle line:84%
+You can't just watch me type
+in a bunch of lines of code
+
+00:02:21.290 --> 00:02:23.800 align:middle line:84%
+And then when it comes
+time to do the quiz,
+
+00:02:23.800 --> 00:02:25.600 align:middle line:84%
+you automatically
+know how to do it.
+
+00:02:25.600 --> 00:02:29.530 align:middle line:84%
+You need to do it often,
+more and more so that it
+
+00:02:29.530 --> 00:02:32.110 align:middle line:90%
+becomes sort of second nature.
+
+00:02:32.110 --> 00:02:35.680 align:middle line:84%
+So the three big things you'll
+get out of this class are
+
+00:02:35.680 --> 00:02:37.300 align:middle line:84%
+knowledge of
+concepts, obviously--
+
+00:02:37.300 --> 00:02:39.640 align:middle line:84%
+we're going to learn some
+computer science ideas--
+
+00:02:39.640 --> 00:02:43.840 align:middle line:84%
+programming skill,
+and problem solving--
+
+00:02:43.840 --> 00:02:45.190 align:middle line:90%
+problem solving skills.
+
+00:02:45.190 --> 00:02:48.167 align:middle line:84%
+Lectures and exams
+basically help you
+
+00:02:48.167 --> 00:02:50.500 align:middle line:84%
+with your knowledge of-- test
+your knowledge of concepts
+
+00:02:50.500 --> 00:02:52.690 align:middle line:84%
+and help you get
+knowledge of concepts.
+
+00:02:52.690 --> 00:02:56.650 align:middle line:84%
+Finger exercises give you
+the programming skills.
+
+00:02:56.650 --> 00:02:59.950 align:middle line:84%
+And the problem sets help
+you with problem solving.
+
+00:02:59.950 --> 00:03:04.070 align:middle line:84%
+Basically, if you're given an
+English version of-- a problem
+
+00:03:04.070 --> 00:03:07.520 align:middle line:84%
+in English, how do
+you go from that
+
+00:03:07.520 --> 00:03:10.730 align:middle line:84%
+to thinking about what computer
+science concepts can I apply?
+
+00:03:10.730 --> 00:03:14.300 align:middle line:84%
+And then after that, how do
+I take those computer science
+
+00:03:14.300 --> 00:03:17.340 align:middle line:84%
+concepts and actually
+do the programming?
+
+00:03:17.340 --> 00:03:20.760 align:middle line:84%
+So what are some topics
+we'll be covering?
+
+00:03:20.760 --> 00:03:23.480 align:middle line:84%
+We will be, at the
+core of it, learning
+
+00:03:23.480 --> 00:03:24.800 align:middle line:90%
+computational thinking.
+
+00:03:24.800 --> 00:03:28.880 align:middle line:84%
+So in the future, when
+you encounter a problem,
+
+00:03:28.880 --> 00:03:31.910 align:middle line:84%
+your first thought shouldn't
+be, How do I mathematically
+
+00:03:31.910 --> 00:03:34.100 align:middle line:84%
+solve this? or, How
+do I brute force
+
+00:03:34.100 --> 00:03:35.700 align:middle line:90%
+or manually solve this problem?
+
+00:03:35.700 --> 00:03:39.248 align:middle line:84%
+How can I apply computation
+to help me solve this problem?
+
+00:03:39.248 --> 00:03:40.790 align:middle line:84%
+And throughout these
+lectures, you're
+
+00:03:40.790 --> 00:03:44.330 align:middle line:84%
+going to see some examples
+of us applying computation
+
+00:03:44.330 --> 00:03:46.490 align:middle line:84%
+to a problem you might
+have already seen and maybe
+
+00:03:46.490 --> 00:03:51.060 align:middle line:84%
+solved mathematically,
+which is pretty cool.
+
+00:03:51.060 --> 00:03:52.910 align:middle line:84%
+Obviously, to get
+that, we're going
+
+00:03:52.910 --> 00:03:54.710 align:middle line:84%
+to learn the Python
+programming language.
+
+00:03:54.710 --> 00:03:56.360 align:middle line:84%
+Once we get the
+basics, we're going
+
+00:03:56.360 --> 00:03:59.600 align:middle line:84%
+to see how we can start
+to structure our code
+
+00:03:59.600 --> 00:04:01.580 align:middle line:84%
+to look a little bit
+better so we don't just
+
+00:04:01.580 --> 00:04:04.670 align:middle line:84%
+have a bunch of code
+dumped in a file.
+
+00:04:04.670 --> 00:04:06.530 align:middle line:84%
+We're going to start
+to organize our code
+
+00:04:06.530 --> 00:04:11.360 align:middle line:84%
+and see how we can make it
+neat, readable, and modular.
+
+00:04:11.360 --> 00:04:14.750 align:middle line:90%
+And then towards the--
+
+00:04:14.750 --> 00:04:16.970 align:middle line:84%
+not in this lecture but
+in a couple of lectures
+
+00:04:16.970 --> 00:04:19.260 align:middle line:84%
+and as a theme
+throughout this class,
+
+00:04:19.260 --> 00:04:20.959 align:middle line:84%
+we're going to look
+at some algorithms.
+
+00:04:20.959 --> 00:04:23.300 align:middle line:84%
+They're not super
+complicated, but they're
+
+00:04:23.300 --> 00:04:26.150 align:middle line:84%
+kind of the base algorithms
+for a bunch of algorithms
+
+00:04:26.150 --> 00:04:28.190 align:middle line:84%
+you might see in
+the future if you
+
+00:04:28.190 --> 00:04:30.708 align:middle line:90%
+decide to take more CS classes.
+
+00:04:30.708 --> 00:04:32.250 align:middle line:84%
+Lastly, towards the
+end of the class,
+
+00:04:32.250 --> 00:04:34.940 align:middle line:84%
+we're going to see algorithmic
+complexity, which basically
+
+00:04:34.940 --> 00:04:37.670 align:middle line:84%
+means we're going to start
+asking or trying to answer
+
+00:04:37.670 --> 00:04:40.160 align:middle line:84%
+the question, how do
+we know the programs
+
+00:04:40.160 --> 00:04:42.070 align:middle line:90%
+we write are efficient?
+
+00:04:42.070 --> 00:04:44.570 align:middle line:84%
+We can write programs, but how
+do we know that they're fast,
+
+00:04:44.570 --> 00:04:47.328 align:middle line:84%
+and how do we know
+that they don't take up
+
+00:04:47.328 --> 00:04:48.620 align:middle line:90%
+all the memory in the computer?
+
+00:04:48.620 --> 00:04:51.710 align:middle line:84%
+So things like that,
+comparing different algorithms
+
+00:04:51.710 --> 00:04:55.670 align:middle line:84%
+that do the same thing
+against each other.
+
+00:04:55.670 --> 00:04:58.330 align:middle line:90%
+So if there's no questions--
+
+00:04:58.330 --> 00:05:00.340 align:middle line:84%
+again, as I said, a
+bunch of this information
+
+00:05:00.340 --> 00:05:02.470 align:middle line:84%
+is already in the
+handout plus more--
+
+00:05:02.470 --> 00:05:05.840 align:middle line:90%
+we can begin.
+
+00:05:05.840 --> 00:05:11.240 align:middle line:84%
+OK, so let's start by
+talking about knowledge.
+
+00:05:11.240 --> 00:05:14.210 align:middle line:84%
+Declarative knowledge
+is a statement of fact,
+
+00:05:14.210 --> 00:05:17.420 align:middle line:84%
+and a lot of us probably
+in math and in the past
+
+00:05:17.420 --> 00:05:19.250 align:middle line:84%
+have worked with
+declarative knowledge.
+
+00:05:19.250 --> 00:05:21.300 align:middle line:84%
+But this is not how computer
+science, this is not
+
+00:05:21.300 --> 00:05:23.570 align:middle line:90%
+how this class works.
+
+00:05:23.570 --> 00:05:25.940 align:middle line:84%
+In computer science
+what we do is we
+
+00:05:25.940 --> 00:05:28.790 align:middle line:84%
+work with imperative knowledge,
+which is basically a recipe,
+
+00:05:28.790 --> 00:05:30.540 align:middle line:90%
+how to do something.
+
+00:05:30.540 --> 00:05:33.050 align:middle line:84%
+And when we're programming,
+all we're doing
+
+00:05:33.050 --> 00:05:35.870 align:middle line:84%
+is writing a recipe for the
+computer to do something.
+
+00:05:35.870 --> 00:05:37.920 align:middle line:90%
+That's it.
+
+00:05:37.920 --> 00:05:40.530 align:middle line:90%
+So here's a numerical example.
+
+00:05:40.530 --> 00:05:44.210 align:middle line:84%
+The first statement is
+a declarative statement.
+
+00:05:44.210 --> 00:05:47.060 align:middle line:84%
+The square root of a number
+x is y such that y times y
+
+00:05:47.060 --> 00:05:47.930 align:middle line:90%
+is equal to x.
+
+00:05:47.930 --> 00:05:50.150 align:middle line:84%
+There are many possible
+values for x and y
+
+00:05:50.150 --> 00:05:53.600 align:middle line:84%
+that this statement
+can be true, right?
+
+00:05:53.600 --> 00:05:55.880 align:middle line:84%
+But if we gave that
+statement to a computer,
+
+00:05:55.880 --> 00:05:57.380 align:middle line:84%
+it wouldn't know
+what to do with it.
+
+00:05:57.380 --> 00:06:00.770 align:middle line:84%
+What we need to do
+is tell the computer
+
+00:06:00.770 --> 00:06:03.440 align:middle line:84%
+how to find the square
+root of a number
+
+00:06:03.440 --> 00:06:06.060 align:middle line:84%
+and then tell us what the
+square root of that number is.
+
+00:06:06.060 --> 00:06:09.380 align:middle line:84%
+And so the computer
+then needs a recipe.
+
+00:06:09.380 --> 00:06:11.300 align:middle line:84%
+So the recipe, a
+really simple one
+
+00:06:11.300 --> 00:06:13.010 align:middle line:84%
+for finding the square
+root of a number,
+
+00:06:13.010 --> 00:06:15.500 align:middle line:90%
+is steps one, two, three.
+
+00:06:15.500 --> 00:06:17.540 align:middle line:84%
+So what we do is--
+let's say we want
+
+00:06:17.540 --> 00:06:20.680 align:middle line:90%
+to find the square root of 16.
+
+00:06:20.680 --> 00:06:23.950 align:middle line:84%
+We obviously know it's four,
+but the computer doesn't.
+
+00:06:23.950 --> 00:06:25.530 align:middle line:84%
+And so we give it
+an initial guess.
+
+00:06:25.530 --> 00:06:27.680 align:middle line:90%
+Let's say the guess is three.
+
+00:06:27.680 --> 00:06:29.400 align:middle line:90%
+How do we go from there?
+
+00:06:29.400 --> 00:06:30.920 align:middle line:90%
+So the steps we follow--
+
+00:06:30.920 --> 00:06:35.960 align:middle line:84%
+step one, if 3 times 3,
+9, is close enough to 16,
+
+00:06:35.960 --> 00:06:37.140 align:middle line:90%
+we can stop.
+
+00:06:37.140 --> 00:06:39.320 align:middle line:84%
+It's not really
+close enough for me.
+
+00:06:39.320 --> 00:06:41.910 align:middle line:90%
+So let's keep going.
+
+00:06:41.910 --> 00:06:44.810 align:middle line:84%
+Step two-- otherwise,
+we're going
+
+00:06:44.810 --> 00:06:46.940 align:middle line:84%
+to make a new guess
+by averaging g,
+
+00:06:46.940 --> 00:06:50.180 align:middle line:84%
+which is our original
+guess, 3, and x
+
+00:06:50.180 --> 00:06:52.280 align:middle line:90%
+over g, which is 16 over 3.
+
+00:06:52.280 --> 00:06:54.420 align:middle line:84%
+16 was the square root
+we wanted to find.
+
+00:06:54.420 --> 00:06:58.210 align:middle line:90%
+So our next guess is 4.17.
+
+00:06:58.210 --> 00:07:01.000 align:middle line:84%
+OK, using the new guess,
+repeat the process
+
+00:07:01.000 --> 00:07:02.200 align:middle line:90%
+until we are close enough.
+
+00:07:02.200 --> 00:07:03.910 align:middle line:90%
+So we go back to step one.
+
+00:07:03.910 --> 00:07:05.800 align:middle line:84%
+That's the first
+part of the process.
+
+00:07:05.800 --> 00:07:07.210 align:middle line:90%
+We find guess squared.
+
+00:07:07.210 --> 00:07:10.390 align:middle line:90%
+4.17 squared is 17.36.
+
+00:07:10.390 --> 00:07:13.450 align:middle line:84%
+So now we say, is
+that close enough?
+
+00:07:13.450 --> 00:07:14.290 align:middle line:90%
+Not really.
+
+00:07:14.290 --> 00:07:14.830 align:middle line:90%
+It's not.
+
+00:07:14.830 --> 00:07:15.650 align:middle line:90%
+It's 17.
+
+00:07:15.650 --> 00:07:17.600 align:middle line:84%
+It's not really
+even close to 16.
+
+00:07:17.600 --> 00:07:19.450 align:middle line:90%
+So let's do it again.
+
+00:07:19.450 --> 00:07:26.140 align:middle line:84%
+We make a new guess by averaging
+4.17 and 16 divided by 4.17.
+
+00:07:26.140 --> 00:07:30.150 align:middle line:84%
+That gives us our
+new guess, 4.0035.
+
+00:07:30.150 --> 00:07:34.210 align:middle line:84%
+OK, next step, using the new
+guess, we repeat the process.
+
+00:07:34.210 --> 00:07:38.430 align:middle line:90%
+So 4.0035 squared is 16.277--
+
+00:07:38.430 --> 00:07:40.080 align:middle line:90%
+.0277.
+
+00:07:40.080 --> 00:07:42.720 align:middle line:90%
+Is that close enough to x?
+
+00:07:42.720 --> 00:07:44.490 align:middle line:84%
+Yeah, I could be
+happy with this.
+
+00:07:44.490 --> 00:07:47.970 align:middle line:84%
+I could stop there because we're
+within sort of plus/minus 1.
+
+00:07:47.970 --> 00:07:49.300 align:middle line:90%
+So I'm OK with that.
+
+00:07:49.300 --> 00:07:52.320 align:middle line:84%
+But if we want it to be within
+plus or minus 1 times 10
+
+00:07:52.320 --> 00:07:55.170 align:middle line:84%
+to the negative 6 or 7
+or something like that,
+
+00:07:55.170 --> 00:07:58.760 align:middle line:84%
+then we would
+continue the process.
+
+00:07:58.760 --> 00:08:01.840 align:middle line:84%
+So really what we had
+there is an algorithm.
+
+00:08:01.840 --> 00:08:03.608 align:middle line:90%
+It's a sequence of steps--
+
+00:08:03.608 --> 00:08:04.900 align:middle line:90%
+step one, step two, step three.
+
+00:08:04.900 --> 00:08:07.450 align:middle line:84%
+There's some sort
+of flow of control.
+
+00:08:07.450 --> 00:08:12.070 align:middle line:84%
+We had a place where we said
+if the guess is close enough,
+
+00:08:12.070 --> 00:08:13.640 align:middle line:90%
+then we can stop.
+
+00:08:13.640 --> 00:08:15.550 align:middle line:90%
+Otherwise, we do something else.
+
+00:08:15.550 --> 00:08:17.710 align:middle line:84%
+We had another flow
+of control where
+
+00:08:17.710 --> 00:08:19.240 align:middle line:90%
+we said repeat this thing.
+
+00:08:19.240 --> 00:08:21.100 align:middle line:84%
+So we're kind of
+not going linearly,
+
+00:08:21.100 --> 00:08:23.160 align:middle line:90%
+but we're changing the flow.
+
+00:08:23.160 --> 00:08:25.740 align:middle line:84%
+And then lastly
+is a way to stop.
+
+00:08:25.740 --> 00:08:27.810 align:middle line:84%
+We don't want the
+algorithm to go on forever.
+
+00:08:27.810 --> 00:08:29.370 align:middle line:84%
+We would like to
+stop at some point.
+
+00:08:29.370 --> 00:08:32.429 align:middle line:84%
+And this stopping point, I
+was kind of vague about it.
+
+00:08:32.429 --> 00:08:35.940 align:middle line:84%
+But it could be when we
+were within plus or minus 1
+
+00:08:35.940 --> 00:08:39.669 align:middle line:90%
+of the actual answer.
+
+00:08:39.669 --> 00:08:44.680 align:middle line:84%
+And so recipes are
+basically algorithms, right?
+
+00:08:44.680 --> 00:08:47.520 align:middle line:84%
+My grandmother was basically
+teaching algorithms
+
+00:08:47.520 --> 00:08:52.020 align:middle line:84%
+when she would teach
+me to bake a cake.
+
+00:08:52.020 --> 00:08:55.380 align:middle line:84%
+She didn't call it that,
+but she was really.
+
+00:08:55.380 --> 00:08:58.410 align:middle line:84%
+And so even recipes have
+that same structure.
+
+00:08:58.410 --> 00:08:59.697 align:middle line:90%
+There's a sequence of steps.
+
+00:08:59.697 --> 00:09:00.780 align:middle line:90%
+There's a flow of control.
+
+00:09:00.780 --> 00:09:03.000 align:middle line:84%
+Like, if you don't have
+egg, use egg substitute.
+
+00:09:03.000 --> 00:09:06.690 align:middle line:84%
+Or repeat sticking
+a toothpick to see
+
+00:09:06.690 --> 00:09:09.520 align:middle line:84%
+if it comes out clean every
+minute or something like that.
+
+00:09:09.520 --> 00:09:12.210 align:middle line:90%
+And then there's a way to stop.
+
+00:09:12.210 --> 00:09:13.680 align:middle line:84%
+When the toothpick
+comes out clean,
+
+00:09:13.680 --> 00:09:16.800 align:middle line:84%
+you take it out of the
+oven, and you eat it.
+
+00:09:16.800 --> 00:09:19.700 align:middle line:84%
+And so computers are machines
+that execute these algorithms.
+
+00:09:19.700 --> 00:09:22.190 align:middle line:90%
+They're actually dumb.
+
+00:09:22.190 --> 00:09:24.240 align:middle line:90%
+Computers are not very smart.
+
+00:09:24.240 --> 00:09:26.220 align:middle line:84%
+They don't make
+decisions on their own.
+
+00:09:26.220 --> 00:09:28.490 align:middle line:84%
+They just follow these
+sequences of steps
+
+00:09:28.490 --> 00:09:30.440 align:middle line:90%
+that we told them to do.
+
+00:09:30.440 --> 00:09:35.000 align:middle line:84%
+Computers are good at storing
+lots and lots of data.
+
+00:09:35.000 --> 00:09:36.680 align:middle line:84%
+We can't really do
+that, but computers
+
+00:09:36.680 --> 00:09:40.520 align:middle line:84%
+can store gigabytes of
+storage, terabytes even.
+
+00:09:40.520 --> 00:09:42.450 align:middle line:84%
+And computers can do
+operations really,
+
+00:09:42.450 --> 00:09:44.720 align:middle line:84%
+really quickly, which is
+something we can't do.
+
+00:09:44.720 --> 00:09:46.170 align:middle line:84%
+They're good at
+those two things,
+
+00:09:46.170 --> 00:09:47.820 align:middle line:90%
+but they're not very smart.
+
+00:09:47.820 --> 00:09:49.880 align:middle line:84%
+They can't make
+decisions unless they're
+
+00:09:49.880 --> 00:09:54.180 align:middle line:90%
+told to make the decisions.
+
+00:09:54.180 --> 00:09:59.240 align:middle line:84%
+So really, the computer only
+does what you tell it to do.
+
+00:09:59.240 --> 00:10:02.830 align:middle line:84%
+And that's one of the big ideas
+that I want you to come away
+
+00:10:02.830 --> 00:10:05.080 align:middle line:90%
+from this lecture with.
+
+00:10:05.080 --> 00:10:07.420 align:middle line:84%
+Computer only does
+what you tell it to do.
+
+00:10:07.420 --> 00:10:09.760 align:middle line:84%
+The sequences of steps
+that you tell it to do,
+
+00:10:09.760 --> 00:10:12.520 align:middle line:84%
+that's the only
+thing it follows.
+
+00:10:12.520 --> 00:10:15.810 align:middle line:84%
+So a little brief history
+just to make you appreciate
+
+00:10:15.810 --> 00:10:19.320 align:middle line:84%
+programming, Python programming
+language before we actually get
+
+00:10:19.320 --> 00:10:22.120 align:middle line:90%
+started with it is--
+
+00:10:22.120 --> 00:10:24.840 align:middle line:84%
+so before the 1940s,
+we had these things
+
+00:10:24.840 --> 00:10:27.240 align:middle line:90%
+called fixed program computers.
+
+00:10:27.240 --> 00:10:29.280 align:middle line:84%
+A pocket calculator
+as an example of that.
+
+00:10:29.280 --> 00:10:33.910 align:middle line:90%
+Every button was an operation.
+
+00:10:33.910 --> 00:10:36.010 align:middle line:84%
+In the little screen,
+you could use parentheses
+
+00:10:36.010 --> 00:10:38.110 align:middle line:84%
+to put a bunch of different
+operations together,
+
+00:10:38.110 --> 00:10:41.500 align:middle line:84%
+but there was no way to store
+all these operations together
+
+00:10:41.500 --> 00:10:46.227 align:middle line:84%
+to later put in different
+inputs for that same sequence
+
+00:10:46.227 --> 00:10:46.810 align:middle line:90%
+of operations.
+
+00:10:46.810 --> 00:10:49.270 align:middle line:84%
+You had to input it every
+single-- input those sequences
+
+00:10:49.270 --> 00:10:52.980 align:middle line:90%
+of operations every single time.
+
+00:10:52.980 --> 00:10:57.810 align:middle line:84%
+After the 1940s, stored programs
+computers came into play.
+
+00:10:57.810 --> 00:11:03.600 align:middle line:84%
+And they were able to store
+instructions to do things
+
+00:11:03.600 --> 00:11:06.390 align:middle line:90%
+as data.
+
+00:11:06.390 --> 00:11:09.390 align:middle line:84%
+And there was a special program
+called an interpreter that
+
+00:11:09.390 --> 00:11:10.860 align:middle line:90%
+executed these instructions.
+
+00:11:10.860 --> 00:11:14.370 align:middle line:84%
+It knew how to follow
+simple sequences of steps.
+
+00:11:14.370 --> 00:11:17.520 align:middle line:84%
+When the program told it to
+go to a different location,
+
+00:11:17.520 --> 00:11:18.180 align:middle line:90%
+it did.
+
+00:11:18.180 --> 00:11:23.780 align:middle line:84%
+So it was basically
+executing these instructions.
+
+00:11:23.780 --> 00:11:28.730 align:middle line:84%
+And the instructions that it
+did were arithmetic and logical,
+
+00:11:28.730 --> 00:11:30.770 align:middle line:84%
+so addition, subtraction,
+things like that;
+
+00:11:30.770 --> 00:11:34.280 align:middle line:84%
+simple tests like checking for
+equality between two values;
+
+00:11:34.280 --> 00:11:36.500 align:middle line:84%
+and moving data, so
+taking this value
+
+00:11:36.500 --> 00:11:39.560 align:middle line:84%
+and putting it at a
+different memory location.
+
+00:11:39.560 --> 00:11:41.860 align:middle line:84%
+So I just wanted to give
+you a really brief overview,
+
+00:11:41.860 --> 00:11:44.410 align:middle line:84%
+and this is not super
+accurate, but it gives you
+
+00:11:44.410 --> 00:11:47.410 align:middle line:84%
+a sense of how
+exactly things happen
+
+00:11:47.410 --> 00:11:50.420 align:middle line:90%
+low level in the computer.
+
+00:11:50.420 --> 00:11:52.660 align:middle line:84%
+So the computer
+basically has memory,
+
+00:11:52.660 --> 00:11:54.040 align:middle line:90%
+where things are stored.
+
+00:11:54.040 --> 00:11:57.730 align:middle line:84%
+It has an arithmetic logic
+unit that does operations.
+
+00:11:57.730 --> 00:12:00.130 align:middle line:84%
+It knows how to add things,
+subtract things, multiply
+
+00:12:00.130 --> 00:12:01.810 align:middle line:90%
+things, compare things.
+
+00:12:01.810 --> 00:12:03.970 align:middle line:84%
+And then it has the
+control unit, where
+
+00:12:03.970 --> 00:12:06.590 align:middle line:90%
+this program counter is set.
+
+00:12:06.590 --> 00:12:08.610 align:middle line:84%
+And this is where
+you put a program in.
+
+00:12:08.610 --> 00:12:10.570 align:middle line:90%
+So let's see if this works.
+
+00:12:10.570 --> 00:12:12.280 align:middle line:90%
+This is a program.
+
+00:12:12.280 --> 00:12:14.480 align:middle line:90%
+And up here is our memory.
+
+00:12:14.480 --> 00:12:18.250 align:middle line:84%
+So we have a bunch of memory
+locations, 3456, 3457.
+
+00:12:18.250 --> 00:12:20.500 align:middle line:84%
+And at each of these
+memory locations,
+
+00:12:20.500 --> 00:12:24.750 align:middle line:84%
+we have some values
+stored, prefilled.
+
+00:12:24.750 --> 00:12:28.170 align:middle line:84%
+So when we first run this
+program, what ends up happening
+
+00:12:28.170 --> 00:12:31.260 align:middle line:84%
+is that the interpreter
+sees the first instruction,
+
+00:12:31.260 --> 00:12:35.650 align:middle line:84%
+Add, the values at
+3456 and 3457 together.
+
+00:12:35.650 --> 00:12:38.190 align:middle line:84%
+So it goes to these
+memory locations here,
+
+00:12:38.190 --> 00:12:40.710 align:middle line:84%
+grabs the 3 and the
+4, and sends them
+
+00:12:40.710 --> 00:12:42.480 align:middle line:90%
+to the Arithmetic Logic Unit.
+
+00:12:42.480 --> 00:12:44.710 align:middle line:84%
+The ALU knows how
+to do the addition.
+
+00:12:44.710 --> 00:12:49.560 align:middle line:84%
+So it adds 3 plus 4, 7, and
+sends the result back here.
+
+00:12:49.560 --> 00:12:52.710 align:middle line:84%
+Now, we never told it to
+store that result anywhere.
+
+00:12:52.710 --> 00:12:54.930 align:middle line:84%
+But the next
+instruction says Store
+
+00:12:54.930 --> 00:12:57.270 align:middle line:84%
+the value you just
+got back from the ALU
+
+00:12:57.270 --> 00:12:59.760 align:middle line:90%
+at this memory location, 3458.
+
+00:12:59.760 --> 00:13:04.380 align:middle line:84%
+So the next step
+basically takes that 7
+
+00:13:04.380 --> 00:13:08.320 align:middle line:84%
+and stores it at
+memory location 3458.
+
+00:13:08.320 --> 00:13:12.650 align:middle line:84%
+Super tedious-- all we
+did was add 3 plus 4.
+
+00:13:12.650 --> 00:13:14.060 align:middle line:90%
+We do that again.
+
+00:13:14.060 --> 00:13:18.020 align:middle line:84%
+We add the values
+at 7889 and 7890.
+
+00:13:18.020 --> 00:13:19.310 align:middle line:90%
+So it goes in the memory.
+
+00:13:19.310 --> 00:13:23.410 align:middle line:84%
+It grabs the 5 and the
+2, sends it to the ALU.
+
+00:13:23.410 --> 00:13:26.710 align:middle line:84%
+The ALU calculates it
+as 7, brings it back,
+
+00:13:26.710 --> 00:13:32.270 align:middle line:84%
+and then we store
+that in location 7891.
+
+00:13:32.270 --> 00:13:34.970 align:middle line:84%
+And then after that, all
+we've done is two additions.
+
+00:13:34.970 --> 00:13:38.330 align:middle line:84%
+And then the next instruction
+says Compare the values
+
+00:13:38.330 --> 00:13:41.780 align:middle line:84%
+at memory locations
+3458 and 7891.
+
+00:13:41.780 --> 00:13:45.670 align:middle line:84%
+So we're going to
+compare the 7 with the 7.
+
+00:13:45.670 --> 00:13:49.430 align:middle line:84%
+The ALU again does this
+comparison and says,
+
+00:13:49.430 --> 00:13:51.350 align:middle line:84%
+all right, well, 7
+and 7 are equivalent.
+
+00:13:51.350 --> 00:13:54.790 align:middle line:84%
+So this is true or whatever
+it wants to give back
+
+00:13:54.790 --> 00:13:56.860 align:middle line:90%
+to the interpreter.
+
+00:13:56.860 --> 00:13:59.140 align:middle line:84%
+And then the last
+instruction here we
+
+00:13:59.140 --> 00:14:01.820 align:middle line:84%
+have is Print the result
+of that comparison.
+
+00:14:01.820 --> 00:14:04.930 align:middle line:84%
+So we print True
+because they were equal.
+
+00:14:04.930 --> 00:14:06.910 align:middle line:84%
+Again, super high
+level, but it kind of
+
+00:14:06.910 --> 00:14:10.160 align:middle line:84%
+gives you an appreciation
+for programming languages
+
+00:14:10.160 --> 00:14:10.750 align:middle line:90%
+these days.
+
+00:14:10.750 --> 00:14:14.260 align:middle line:84%
+This is very tedious to write
+if we had to write programs
+
+00:14:14.260 --> 00:14:16.470 align:middle line:90%
+in this manner.
+
+00:14:16.470 --> 00:14:17.970 align:middle line:84%
+Alan Turing a long
+time ago showed
+
+00:14:17.970 --> 00:14:20.400 align:middle line:84%
+that you can compute
+anything with actually
+
+00:14:20.400 --> 00:14:22.170 align:middle line:84%
+an even more basic
+set of primitives,
+
+00:14:22.170 --> 00:14:23.700 align:middle line:90%
+not addition, subtraction.
+
+00:14:23.700 --> 00:14:26.640 align:middle line:84%
+But instead, with a
+tape, you would actually
+
+00:14:26.640 --> 00:14:29.820 align:middle line:84%
+have six primitives-- move the
+tape left, move the tape right,
+
+00:14:29.820 --> 00:14:33.780 align:middle line:84%
+read the value at the tape,
+put a value on the tape,
+
+00:14:33.780 --> 00:14:38.130 align:middle line:84%
+erase the value from the
+tape, and no operation.
+
+00:14:38.130 --> 00:14:43.790 align:middle line:84%
+And so since he showed this what
+the result of it actually was
+
+00:14:43.790 --> 00:14:46.760 align:middle line:90%
+is down here.
+
+00:14:46.760 --> 00:14:48.710 align:middle line:84%
+Anything computable
+in one language
+
+00:14:48.710 --> 00:14:50.820 align:middle line:84%
+is computable in any other
+programming language.
+
+00:14:50.820 --> 00:14:53.660 align:middle line:84%
+So if we had some
+program written in Java,
+
+00:14:53.660 --> 00:14:57.530 align:middle line:84%
+that basically boils
+down to something super
+
+00:14:57.530 --> 00:15:02.540 align:middle line:84%
+long but something that is made
+up of these six primitives.
+
+00:15:02.540 --> 00:15:05.150 align:middle line:84%
+That means that if we boil
+down this program to these six
+
+00:15:05.150 --> 00:15:08.450 align:middle line:84%
+primitives, we can build
+back up the same program
+
+00:15:08.450 --> 00:15:10.370 align:middle line:84%
+in a completely
+different language.
+
+00:15:10.370 --> 00:15:11.660 align:middle line:90%
+And that's really powerful.
+
+00:15:11.660 --> 00:15:14.400 align:middle line:90%
+That's a really cool statement.
+
+00:15:14.400 --> 00:15:17.970 align:middle line:84%
+Now, we're not going to be
+working with those primitives.
+
+00:15:17.970 --> 00:15:21.630 align:middle line:84%
+We're going to be using the
+Python primitives, which
+
+00:15:21.630 --> 00:15:23.760 align:middle line:84%
+are more convenient,
+and they allow
+
+00:15:23.760 --> 00:15:26.490 align:middle line:84%
+us to do a lot more
+things in much less time.
+
+00:15:26.490 --> 00:15:28.260 align:middle line:84%
+I'm going to do a
+little comparison
+
+00:15:28.260 --> 00:15:32.520 align:middle line:84%
+as we talk about the primitives
+of Python with English.
+
+00:15:32.520 --> 00:15:36.090 align:middle line:84%
+So in English, some of the
+primitives might be words
+
+00:15:36.090 --> 00:15:38.430 align:middle line:84%
+or even we can do
+letters or characters.
+
+00:15:38.430 --> 00:15:41.785 align:middle line:90%
+But we can say it's words.
+
+00:15:41.785 --> 00:15:43.410 align:middle line:84%
+With characters, we
+can build up words.
+
+00:15:43.410 --> 00:15:44.993 align:middle line:84%
+With words, we can
+build up sentences.
+
+00:15:44.993 --> 00:15:46.710 align:middle line:84%
+With sentences, we
+can build up stories.
+
+00:15:46.710 --> 00:15:50.700 align:middle line:84%
+With stories, we can build up
+books and things like that.
+
+00:15:50.700 --> 00:15:52.740 align:middle line:84%
+In programming
+languages, the primitives
+
+00:15:52.740 --> 00:15:58.860 align:middle line:84%
+are numbers, sequences
+of characters, operators
+
+00:15:58.860 --> 00:16:04.500 align:middle line:84%
+like addition,
+multiplication, division,
+
+00:16:04.500 --> 00:16:07.020 align:middle line:84%
+checking for equality, checking
+that something is greater
+
+00:16:07.020 --> 00:16:09.160 align:middle line:90%
+than, things like that.
+
+00:16:09.160 --> 00:16:12.210 align:middle line:84%
+So once we have these
+primitives in a language,
+
+00:16:12.210 --> 00:16:15.700 align:middle line:84%
+we can start to build up
+the syntax of the language.
+
+00:16:15.700 --> 00:16:20.130 align:middle line:84%
+So in English, having something
+like noun and noun and noun
+
+00:16:20.130 --> 00:16:22.050 align:middle line:90%
+doesn't make any sense.
+
+00:16:22.050 --> 00:16:23.980 align:middle line:84%
+Cat dog boy doesn't
+make much sense.
+
+00:16:23.980 --> 00:16:26.050 align:middle line:90%
+It's not syntactically valid.
+
+00:16:26.050 --> 00:16:31.100 align:middle line:84%
+But noun verb noun is
+syntactically valid.
+
+00:16:31.100 --> 00:16:33.620 align:middle line:84%
+Similarly, in
+programming languages,
+
+00:16:33.620 --> 00:16:37.890 align:middle line:84%
+we can have two objects
+kind of side by side.
+
+00:16:37.890 --> 00:16:41.090 align:middle line:84%
+So here, this is a sequence
+of characters h and i.
+
+00:16:41.090 --> 00:16:43.670 align:middle line:84%
+And this is the number 5
+right beside that sequence
+
+00:16:43.670 --> 00:16:45.270 align:middle line:90%
+of characters.
+
+00:16:45.270 --> 00:16:47.372 align:middle line:84%
+But that doesn't make
+any sense, right?
+
+00:16:47.372 --> 00:16:49.580 align:middle line:84%
+What does it mean to have
+this sequence of characters
+
+00:16:49.580 --> 00:16:50.913 align:middle line:90%
+and that number right beside it?
+
+00:16:50.913 --> 00:16:52.670 align:middle line:90%
+It has no meaning in Python.
+
+00:16:52.670 --> 00:16:54.980 align:middle line:84%
+Instead, what we
+have to do is we
+
+00:16:54.980 --> 00:16:57.480 align:middle line:84%
+have to add an operator in
+between these two objects.
+
+00:16:57.480 --> 00:16:59.360 align:middle line:84%
+So here we add a
+little star operator
+
+00:16:59.360 --> 00:17:01.550 align:middle line:84%
+in between the sequence
+of characters "hi"
+
+00:17:01.550 --> 00:17:02.990 align:middle line:90%
+and the number 5.
+
+00:17:02.990 --> 00:17:05.119 align:middle line:84%
+And in Python, the
+meaning to this
+
+00:17:05.119 --> 00:17:08.300 align:middle line:84%
+is I want to repeat the
+sequence of characters "hi,"
+
+00:17:08.300 --> 00:17:09.770 align:middle line:90%
+h-i, five times.
+
+00:17:09.770 --> 00:17:13.410 align:middle line:84%
+So this would basically
+give me hi, hi, hi, hi, hi.
+
+00:17:13.410 --> 00:17:17.280 align:middle line:84%
+So once we have
+sentences in English
+
+00:17:17.280 --> 00:17:21.060 align:middle line:84%
+and expressions that
+are syntactically valid,
+
+00:17:21.060 --> 00:17:24.280 align:middle line:84%
+we can now talk about the static
+semantics of the language.
+
+00:17:24.280 --> 00:17:27.150 align:middle line:84%
+So in English, saying
+something like "I are hungry"
+
+00:17:27.150 --> 00:17:32.010 align:middle line:84%
+is syntactically correct,
+but it's not static--
+
+00:17:32.010 --> 00:17:37.590 align:middle line:84%
+it's not-- sorry, it doesn't
+have good static semantics.
+
+00:17:37.590 --> 00:17:41.640 align:middle line:84%
+There's no meaning-- there is
+no meaning to that because the
+
+00:17:41.640 --> 00:17:44.850 align:middle line:90%
+"are" is for you or plural.
+
+00:17:44.850 --> 00:17:46.620 align:middle line:84%
+Similarly, in
+programming languages,
+
+00:17:46.620 --> 00:17:49.410 align:middle line:84%
+and this will differ depending
+on what programming language
+
+00:17:49.410 --> 00:17:51.000 align:middle line:90%
+you use--
+
+00:17:51.000 --> 00:17:53.070 align:middle line:84%
+here, in the previous
+slide, we saw
+
+00:17:53.070 --> 00:17:56.610 align:middle line:84%
+that you can use the star
+operator between the sequence
+
+00:17:56.610 --> 00:17:58.020 align:middle line:90%
+of characters and the number.
+
+00:17:58.020 --> 00:18:01.690 align:middle line:84%
+And that meant repeat
+that sequence many times.
+
+00:18:01.690 --> 00:18:04.860 align:middle line:84%
+But if we use a plus operator
+in between the sequence
+
+00:18:04.860 --> 00:18:07.380 align:middle line:84%
+of characters and a
+number, that doesn't
+
+00:18:07.380 --> 00:18:10.410 align:middle line:90%
+have any meaning in Python.
+
+00:18:10.410 --> 00:18:12.330 align:middle line:84%
+So it has a static
+semantic error,
+
+00:18:12.330 --> 00:18:14.700 align:middle line:84%
+even though it's
+syntactically valid, right?
+
+00:18:14.700 --> 00:18:21.430 align:middle line:84%
+We have operator-- sorry,
+object operator object.
+
+00:18:21.430 --> 00:18:24.490 align:middle line:84%
+So, so far, we've been able
+to find really nice parallels
+
+00:18:24.490 --> 00:18:28.010 align:middle line:84%
+with English, the English
+language and the programming
+
+00:18:28.010 --> 00:18:28.510 align:middle line:90%
+languages.
+
+00:18:28.510 --> 00:18:30.730 align:middle line:84%
+But this is kind of
+where things break down,
+
+00:18:30.730 --> 00:18:33.830 align:middle line:84%
+when we talk about the
+semantics of a language.
+
+00:18:33.830 --> 00:18:37.450 align:middle line:84%
+So in English, you can have
+many different meanings.
+
+00:18:37.450 --> 00:18:41.680 align:middle line:84%
+The chicken is ready to eat
+means let's eat this chicken.
+
+00:18:41.680 --> 00:18:44.320 align:middle line:84%
+Or the chicken is ready to
+eat means the chicken wants
+
+00:18:44.320 --> 00:18:46.060 align:middle line:90%
+to eat something.
+
+00:18:46.060 --> 00:18:49.690 align:middle line:84%
+Programming languages, there
+is no multiple meanings
+
+00:18:49.690 --> 00:18:50.950 align:middle line:90%
+to a program that you write.
+
+00:18:50.950 --> 00:18:53.680 align:middle line:84%
+Because the computer,
+the machine,
+
+00:18:53.680 --> 00:18:58.000 align:middle line:84%
+the language follows the
+set of instructions to a T,
+
+00:18:58.000 --> 00:19:01.870 align:middle line:84%
+there is no ambiguity
+about what it needs to do.
+
+00:19:01.870 --> 00:19:03.610 align:middle line:84%
+It just follows the
+instructions and does
+
+00:19:03.610 --> 00:19:08.350 align:middle line:84%
+what it needs to do to the
+end, till it reaches the--
+
+00:19:08.350 --> 00:19:10.060 align:middle line:90%
+it terminates the program.
+
+00:19:10.060 --> 00:19:12.100 align:middle line:84%
+And so programs only
+have one meaning,
+
+00:19:12.100 --> 00:19:14.080 align:middle line:84%
+but the problem is it
+might not be the meaning
+
+00:19:14.080 --> 00:19:17.290 align:middle line:90%
+that you intended it to have.
+
+00:19:17.290 --> 00:19:19.750 align:middle line:84%
+And that's when things
+start to go wrong.
+
+00:19:19.750 --> 00:19:24.000 align:middle line:84%
+We can have syntactic errors
+in our program, spelling errors
+
+00:19:24.000 --> 00:19:25.840 align:middle line:84%
+and indentation errors,
+things like that.
+
+00:19:25.840 --> 00:19:27.270 align:middle line:90%
+And those are easy to catch.
+
+00:19:27.270 --> 00:19:31.830 align:middle line:84%
+Static semantic errors are
+90% probably easy to catch.
+
+00:19:31.830 --> 00:19:35.790 align:middle line:84%
+But the problem comes
+in with the semantics.
+
+00:19:35.790 --> 00:19:39.000 align:middle line:84%
+The meaning that you
+intended this program to have
+
+00:19:39.000 --> 00:19:41.770 align:middle line:84%
+might not be what
+it's actually doing.
+
+00:19:41.770 --> 00:19:44.800 align:middle line:84%
+And that's where most
+of my errors happen.
+
+00:19:44.800 --> 00:19:47.130 align:middle line:84%
+And that's where I get super
+frustrated when I program.
+
+00:19:47.130 --> 00:19:49.630 align:middle line:84%
+And that's probably where you
+guys will get super frustrated
+
+00:19:49.630 --> 00:19:51.600 align:middle line:84%
+too because you write a
+program that you think
+
+00:19:51.600 --> 00:19:56.040 align:middle line:84%
+is doing one thing, but instead,
+either it crashes right away,
+
+00:19:56.040 --> 00:19:59.520 align:middle line:84%
+or it runs forever and doesn't
+really stop, or it terminates,
+
+00:19:59.520 --> 00:20:01.110 align:middle line:84%
+but it gives you an
+incorrect answer.
+
+00:20:01.110 --> 00:20:02.990 align:middle line:84%
+It's not what you
+were expecting.
+
+00:20:02.990 --> 00:20:08.550 align:middle line:84%
+And we'll talk about
+this in a few lectures.
+
+00:20:08.550 --> 00:20:10.400 align:middle line:84%
+So when we write
+programs, we're basically
+
+00:20:10.400 --> 00:20:14.120 align:middle line:84%
+writing sequences of
+definitions and commands.
+
+00:20:14.120 --> 00:20:17.360 align:middle line:84%
+And we're going to write
+these either in a file editor
+
+00:20:17.360 --> 00:20:18.770 align:middle line:90%
+or in a shell.
+
+00:20:18.770 --> 00:20:22.970 align:middle line:84%
+The first, today at least, we're
+writing in the shell directly.
+
+00:20:22.970 --> 00:20:26.360 align:middle line:84%
+And half of tomorrow,
+we'll write in the shell
+
+00:20:26.360 --> 00:20:30.830 align:middle line:84%
+because we're not
+really writing any--
+
+00:20:30.830 --> 00:20:33.790 align:middle line:84%
+we're not really writing
+many lines of code.
+
+00:20:33.790 --> 00:20:34.790 align:middle line:90%
+We're just going to be--
+
+00:20:34.790 --> 00:20:39.980 align:middle line:84%
+I'm just going to be showing
+you some really quick things
+
+00:20:39.980 --> 00:20:42.450 align:middle line:84%
+that we can do with the
+Python programming language.
+
+00:20:42.450 --> 00:20:45.740 align:middle line:84%
+So hopefully you all have
+installed the programming
+
+00:20:45.740 --> 00:20:47.480 align:middle line:90%
+environment.
+
+00:20:47.480 --> 00:20:49.040 align:middle line:90%
+This is the Code Editor.
+
+00:20:49.040 --> 00:20:51.750 align:middle line:84%
+So tomorrow, we'll
+start working in here.
+
+00:20:51.750 --> 00:20:54.830 align:middle line:84%
+But for today, we're really
+just going to work in the shell.
+
+00:20:54.830 --> 00:20:57.815 align:middle line:84%
+And even in the
+future, you can still
+
+00:20:57.815 --> 00:20:58.940 align:middle line:90%
+type commands in the shell.
+
+00:20:58.940 --> 00:21:01.730 align:middle line:84%
+I find the shell very useful if
+there's just something really
+
+00:21:01.730 --> 00:21:04.230 align:middle line:84%
+quick that I want
+to check, that I
+
+00:21:04.230 --> 00:21:06.817 align:middle line:84%
+don't want to write a
+program for and then run.
+
+00:21:06.817 --> 00:21:08.400 align:middle line:84%
+It's just like a
+simple command that I
+
+00:21:08.400 --> 00:21:09.942 align:middle line:84%
+want to check to
+make sure it's doing
+
+00:21:09.942 --> 00:21:14.100 align:middle line:84%
+what I think it's doing before
+I insert it in my code editor.
+
+00:21:14.100 --> 00:21:19.650 align:middle line:90%
+So here we have this.
+
+00:21:19.650 --> 00:21:20.940 align:middle line:90%
+So mine is--
+
+00:21:20.940 --> 00:21:23.160 align:middle line:84%
+I guess I'm using the white
+theme just because I find
+
+00:21:23.160 --> 00:21:25.290 align:middle line:90%
+it easier for you guys to see.
+
+00:21:25.290 --> 00:21:26.940 align:middle line:90%
+This is the file editor.
+
+00:21:26.940 --> 00:21:30.240 align:middle line:84%
+And this is just a bunch
+of expressions or--
+
+00:21:30.240 --> 00:21:32.940 align:middle line:84%
+yeah, a bunch of code that
+we're going to type in today.
+
+00:21:32.940 --> 00:21:36.137 align:middle line:84%
+And we're going to type it in
+the shell today, so the thing
+
+00:21:36.137 --> 00:21:37.095 align:middle line:90%
+on the right-hand side.
+
+00:21:37.095 --> 00:21:40.270 align:middle line:90%
+
+
+00:21:40.270 --> 00:21:45.310 align:middle line:84%
+OK, so what exactly do we
+do when we write a program?
+
+00:21:45.310 --> 00:21:48.220 align:middle line:84%
+At the base of it, we
+are going to create
+
+00:21:48.220 --> 00:21:53.140 align:middle line:84%
+objects inside our programs, and
+we're going to manipulate them.
+
+00:21:53.140 --> 00:21:54.100 align:middle line:90%
+That's it.
+
+00:21:54.100 --> 00:22:00.320 align:middle line:84%
+That's what programming is
+mostly about at its core.
+
+00:22:00.320 --> 00:22:03.370 align:middle line:84%
+Now, when we create
+objects, it's
+
+00:22:03.370 --> 00:22:05.080 align:middle line:84%
+important-- this is
+kind of something
+
+00:22:05.080 --> 00:22:06.455 align:middle line:84%
+we're going to
+come back to again
+
+00:22:06.455 --> 00:22:08.770 align:middle line:84%
+and again in a more
+high-level setting.
+
+00:22:08.770 --> 00:22:11.440 align:middle line:84%
+But right now what I
+want you to understand
+
+00:22:11.440 --> 00:22:16.870 align:middle line:84%
+is that when we create an
+object, an object has a type.
+
+00:22:16.870 --> 00:22:20.590 align:middle line:84%
+And the type that an
+object has tells Python
+
+00:22:20.590 --> 00:22:23.870 align:middle line:84%
+the things you're allowed
+to do with that object.
+
+00:22:23.870 --> 00:22:25.400 align:middle line:90%
+So here are two examples.
+
+00:22:25.400 --> 00:22:29.100 align:middle line:90%
+The number 30, it's a number.
+
+00:22:29.100 --> 00:22:31.460 align:middle line:84%
+The type we'll talk
+about it in a bit.
+
+00:22:31.460 --> 00:22:32.550 align:middle line:90%
+The type is an integer.
+
+00:22:32.550 --> 00:22:33.763 align:middle line:90%
+It's a whole number.
+
+00:22:33.763 --> 00:22:35.180 align:middle line:84%
+But basically,
+what are the things
+
+00:22:35.180 --> 00:22:37.580 align:middle line:84%
+we can do with this
+integer, with this number?
+
+00:22:37.580 --> 00:22:39.110 align:middle line:90%
+We can add it to another number.
+
+00:22:39.110 --> 00:22:40.670 align:middle line:84%
+We can subtract it
+to another number.
+
+00:22:40.670 --> 00:22:43.110 align:middle line:90%
+We can take it to another power.
+
+00:22:43.110 --> 00:22:47.510 align:middle line:84%
+We can take some other
+number to this power of 30.
+
+00:22:47.510 --> 00:22:50.240 align:middle line:84%
+A bunch of mathematical
+operations,
+
+00:22:50.240 --> 00:22:52.260 align:middle line:90%
+as you would expect.
+
+00:22:52.260 --> 00:22:53.940 align:middle line:84%
+So that's pretty
+straightforward.
+
+00:22:53.940 --> 00:22:57.770 align:middle line:84%
+What about this one here,
+this quotation capital
+
+00:22:57.770 --> 00:22:59.190 align:middle line:90%
+A, lowercase a--
+
+00:22:59.190 --> 00:23:01.590 align:middle line:84%
+lowercase n,
+lowercase a quotation?
+
+00:23:01.590 --> 00:23:04.100 align:middle line:84%
+So this is something we'll
+talk about next lecture.
+
+00:23:04.100 --> 00:23:05.270 align:middle line:90%
+It's called a string.
+
+00:23:05.270 --> 00:23:07.640 align:middle line:84%
+And it's a sequence
+of characters.
+
+00:23:07.640 --> 00:23:10.710 align:middle line:84%
+The quotations tell Python
+it's a sequence of characters.
+
+00:23:10.710 --> 00:23:13.550 align:middle line:84%
+And the characters part of it
+are capital A, lowercase n,
+
+00:23:13.550 --> 00:23:15.500 align:middle line:90%
+and lowercase a.
+
+00:23:15.500 --> 00:23:19.040 align:middle line:84%
+The kinds of things I
+can do with this string
+
+00:23:19.040 --> 00:23:20.990 align:middle line:84%
+are not the same kinds
+of things I'm allowed
+
+00:23:20.990 --> 00:23:22.198 align:middle line:90%
+to do with the number, right?
+
+00:23:22.198 --> 00:23:25.490 align:middle line:84%
+If I tried to take
+Ana and divide it
+
+00:23:25.490 --> 00:23:28.790 align:middle line:84%
+by the sequence
+of characters Bob,
+
+00:23:28.790 --> 00:23:31.340 align:middle line:84%
+Python would complain
+very much because you
+
+00:23:31.340 --> 00:23:33.058 align:middle line:84%
+can't divide a string
+by another string,
+
+00:23:33.058 --> 00:23:34.100 align:middle line:90%
+a sequence of characters.
+
+00:23:34.100 --> 00:23:35.630 align:middle line:84%
+It doesn't make
+sense to divide it
+
+00:23:35.630 --> 00:23:37.700 align:middle line:84%
+by another sequence
+of characters.
+
+00:23:37.700 --> 00:23:40.790 align:middle line:84%
+Similarly, I can't
+take Ana to some power.
+
+00:23:40.790 --> 00:23:42.950 align:middle line:90%
+I can't multiply--
+
+00:23:42.950 --> 00:23:45.420 align:middle line:84%
+I can't multiply by
+itself, things like that.
+
+00:23:45.420 --> 00:23:47.270 align:middle line:84%
+But the kinds of things
+that I am allowed
+
+00:23:47.270 --> 00:23:48.860 align:middle line:84%
+to do on a sequence
+of characters
+
+00:23:48.860 --> 00:23:50.402 align:middle line:84%
+is different than
+the kinds of things
+
+00:23:50.402 --> 00:23:51.720 align:middle line:90%
+I'm allowed to do on a number.
+
+00:23:51.720 --> 00:23:53.887 align:middle line:84%
+So the things I can do with
+a sequence of characters
+
+00:23:53.887 --> 00:23:56.240 align:middle line:84%
+is I can say, well,
+what's the character
+
+00:23:56.240 --> 00:23:58.010 align:middle line:90%
+at the first position?
+
+00:23:58.010 --> 00:23:59.780 align:middle line:90%
+What's the middle character?
+
+00:23:59.780 --> 00:24:02.090 align:middle line:84%
+How long is the
+sequence of characters?
+
+00:24:02.090 --> 00:24:04.460 align:middle line:90%
+How many characters do I have?
+
+00:24:04.460 --> 00:24:07.352 align:middle line:84%
+And so now you can see
+that the type of the object
+
+00:24:07.352 --> 00:24:08.560 align:middle line:90%
+is actually really important.
+
+00:24:08.560 --> 00:24:11.950 align:middle line:84%
+Python uses it to know
+the kinds of operations
+
+00:24:11.950 --> 00:24:13.400 align:middle line:90%
+you're allowed to do with it.
+
+00:24:13.400 --> 00:24:16.490 align:middle line:84%
+And so there's actually
+scalar objects,
+
+00:24:16.490 --> 00:24:19.930 align:middle line:84%
+and these are Python's
+primitives, numbers
+
+00:24:19.930 --> 00:24:21.670 align:middle line:90%
+and truth values.
+
+00:24:21.670 --> 00:24:23.320 align:middle line:90%
+And there are nonscalar objects.
+
+00:24:23.320 --> 00:24:24.920 align:middle line:84%
+We're not talking
+about these yet.
+
+00:24:24.920 --> 00:24:26.628 align:middle line:84%
+We'll talk about these
+in a few lectures.
+
+00:24:26.628 --> 00:24:28.570 align:middle line:84%
+But these have some
+sort of structure.
+
+00:24:28.570 --> 00:24:30.790 align:middle line:84%
+So for example,
+a list of numbers
+
+00:24:30.790 --> 00:24:33.862 align:middle line:84%
+has a structure because there's
+a number at the beginning
+
+00:24:33.862 --> 00:24:36.070 align:middle line:84%
+of the list, there's a number
+at the end of the list,
+
+00:24:36.070 --> 00:24:36.778 align:middle line:90%
+things like that.
+
+00:24:36.778 --> 00:24:39.470 align:middle line:84%
+But a number itself
+doesn't have a structure.
+
+00:24:39.470 --> 00:24:42.410 align:middle line:90%
+It's just the number.
+
+00:24:42.410 --> 00:24:44.912 align:middle line:84%
+So what are the types
+of the scalar objects?
+
+00:24:44.912 --> 00:24:46.870 align:middle line:84%
+What are the types of
+the primitives in Python?
+
+00:24:46.870 --> 00:24:52.660 align:middle line:84%
+Integers, so number 5, 0,
+negative 100, 1 million.
+
+00:24:52.660 --> 00:24:55.000 align:middle line:90%
+Float is another type.
+
+00:24:55.000 --> 00:24:58.870 align:middle line:84%
+It represents all the
+real numbers, so 3.27.
+
+00:24:58.870 --> 00:25:02.590 align:middle line:84%
+2.0 is a float because it
+has a decimal number even
+
+00:25:02.590 --> 00:25:04.790 align:middle line:90%
+though to us that just means 2.
+
+00:25:04.790 --> 00:25:07.310 align:middle line:84%
+But to Python, if
+you put in 2.0,
+
+00:25:07.310 --> 00:25:09.020 align:middle line:90%
+it says that's a type float.
+
+00:25:09.020 --> 00:25:12.350 align:middle line:84%
+Negative 3.14159,
+things like that.
+
+00:25:12.350 --> 00:25:13.850 align:middle line:90%
+Bool is a Boolean.
+
+00:25:13.850 --> 00:25:15.620 align:middle line:90%
+It represents truth values.
+
+00:25:15.620 --> 00:25:20.440 align:middle line:84%
+And there's only two possible
+values that a Boolean type has,
+
+00:25:20.440 --> 00:25:21.470 align:middle line:90%
+True and False.
+
+00:25:21.470 --> 00:25:26.690 align:middle line:84%
+And it has to be capital T
+True and capital F False.
+
+00:25:26.690 --> 00:25:31.670 align:middle line:84%
+And the last one is
+this NoneType type.
+
+00:25:31.670 --> 00:25:33.560 align:middle line:90%
+It's literally called NoneType.
+
+00:25:33.560 --> 00:25:36.178 align:middle line:84%
+And it has only one
+special value, None.
+
+00:25:36.178 --> 00:25:37.970 align:middle line:84%
+We're not going to talk
+about it for a bit,
+
+00:25:37.970 --> 00:25:41.240 align:middle line:84%
+but we will sometime
+in the future.
+
+00:25:41.240 --> 00:25:43.390 align:middle line:84%
+So to figure out the
+type of an object
+
+00:25:43.390 --> 00:25:47.360 align:middle line:84%
+when you create that object,
+you use the type command.
+
+00:25:47.360 --> 00:25:50.440 align:middle line:84%
+So we can say something
+like type parentheses.
+
+00:25:50.440 --> 00:25:51.670 align:middle line:90%
+And this is a command.
+
+00:25:51.670 --> 00:25:54.048 align:middle line:84%
+And inside the parentheses,
+you say, what do you
+
+00:25:54.048 --> 00:25:55.090 align:middle line:90%
+want to find the type of?
+
+00:25:55.090 --> 00:25:59.120 align:middle line:84%
+So if we do type of 7,
+it tells me it's an int.
+
+00:25:59.120 --> 00:26:01.100 align:middle line:84%
+And if you want to do
+the same command again,
+
+00:26:01.100 --> 00:26:02.870 align:middle line:84%
+I hit the up arrow,
+and it automatically
+
+00:26:02.870 --> 00:26:04.580 align:middle line:90%
+puts in what I wrote previously.
+
+00:26:04.580 --> 00:26:07.460 align:middle line:84%
+And then if I want
+to do type of 0.0,
+
+00:26:07.460 --> 00:26:09.485 align:middle line:84%
+it's a float because
+there's a decimal point.
+
+00:26:09.485 --> 00:26:13.110 align:middle line:90%
+
+
+00:26:13.110 --> 00:26:14.540 align:middle line:84%
+So this is basically
+what I said.
+
+00:26:14.540 --> 00:26:16.460 align:middle line:90%
+So we type this in the shell.
+
+00:26:16.460 --> 00:26:23.290 align:middle line:84%
+And the shell tells
+us what the output is.
+
+00:26:23.290 --> 00:26:28.170 align:middle line:84%
+So just to reiterate,
+int, float, bool,
+
+00:26:28.170 --> 00:26:31.870 align:middle line:84%
+and NoneType are
+types of objects.
+
+00:26:31.870 --> 00:26:34.690 align:middle line:84%
+And there can be many
+different objects
+
+00:26:34.690 --> 00:26:36.850 align:middle line:90%
+you can create of that type.
+
+00:26:36.850 --> 00:26:38.980 align:middle line:84%
+So if you think about
+it, ints and floats,
+
+00:26:38.980 --> 00:26:41.140 align:middle line:84%
+we basically have
+an infinite number
+
+00:26:41.140 --> 00:26:44.020 align:middle line:84%
+of objects we can
+create of those types
+
+00:26:44.020 --> 00:26:48.700 align:middle line:84%
+because we can have 0, 1, 2,
+3, 100, 200, 300, 1 million,
+
+00:26:48.700 --> 00:26:49.840 align:middle line:90%
+and all the negatives.
+
+00:26:49.840 --> 00:26:54.490 align:middle line:84%
+There's almost an infinite
+number of values or objects
+
+00:26:54.490 --> 00:26:56.830 align:middle line:84%
+that we can create of
+type int and float.
+
+00:26:56.830 --> 00:27:01.450 align:middle line:84%
+But bool, there's only two,
+the truth values True or False.
+
+00:27:01.450 --> 00:27:04.930 align:middle line:84%
+And the NoneType, there's
+only one, this None.
+
+00:27:04.930 --> 00:27:07.660 align:middle line:84%
+So that's the type, and these
+are the possible values,
+
+00:27:07.660 --> 00:27:11.210 align:middle line:90%
+possible objects we can create.
+
+00:27:11.210 --> 00:27:12.350 align:middle line:90%
+You try it.
+
+00:27:12.350 --> 00:27:14.700 align:middle line:84%
+So you can just yell
+out the answers.
+
+00:27:14.700 --> 00:27:17.750 align:middle line:84%
+There's nothing to type unless
+you want to check yourself so
+
+00:27:17.750 --> 00:27:20.198 align:middle line:90%
+what is the type of 1234?
+
+00:27:20.198 --> 00:27:21.540 align:middle line:90%
+AUDIENCE: Int.
+
+00:27:21.540 --> 00:27:22.600 align:middle line:90%
+ANA BELL: Int.
+
+00:27:22.600 --> 00:27:24.730 align:middle line:90%
+Type of 8.99?
+
+00:27:24.730 --> 00:27:25.510 align:middle line:90%
+Float.
+
+00:27:25.510 --> 00:27:27.220 align:middle line:90%
+Type of 9.0?
+
+00:27:27.220 --> 00:27:27.880 align:middle line:90%
+Float.
+
+00:27:27.880 --> 00:27:29.780 align:middle line:90%
+Type of True?
+
+00:27:29.780 --> 00:27:30.280 align:middle line:90%
+Bool.
+
+00:27:30.280 --> 00:27:31.720 align:middle line:90%
+And type of False?
+
+00:27:31.720 --> 00:27:32.440 align:middle line:90%
+Bool.
+
+00:27:32.440 --> 00:27:33.400 align:middle line:90%
+Perfect.
+
+00:27:33.400 --> 00:27:35.800 align:middle line:84%
+If you ever wonder what
+the type of something is,
+
+00:27:35.800 --> 00:27:37.425 align:middle line:90%
+you type it in here.
+
+00:27:37.425 --> 00:27:38.650 align:middle line:90%
+You guys are doing well.
+
+00:27:38.650 --> 00:27:39.700 align:middle line:90%
+Type is bool.
+
+00:27:39.700 --> 00:27:43.870 align:middle line:84%
+Type of lowercase
+t true is an error,
+
+00:27:43.870 --> 00:27:46.390 align:middle line:84%
+just wanted to point that out
+just to reiterate the fact
+
+00:27:46.390 --> 00:27:49.000 align:middle line:84%
+that capitalization
+matters in Python.
+
+00:27:49.000 --> 00:27:51.280 align:middle line:84%
+This is our first
+error, by the way, guys.
+
+00:27:51.280 --> 00:27:52.600 align:middle line:90%
+Very exciting.
+
+00:27:52.600 --> 00:27:55.210 align:middle line:84%
+The error is a
+NameError, and this is
+
+00:27:55.210 --> 00:28:00.150 align:middle line:90%
+the message associated with it.
+
+00:28:00.150 --> 00:28:04.490 align:middle line:84%
+You also know that it's
+something special in Python
+
+00:28:04.490 --> 00:28:06.500 align:middle line:90%
+when you have color-coded stuff.
+
+00:28:06.500 --> 00:28:10.430 align:middle line:84%
+So you see capital T
+True, capital F False are
+
+00:28:10.430 --> 00:28:13.310 align:middle line:84%
+this dark blue here,
+whereas anything
+
+00:28:13.310 --> 00:28:17.900 align:middle line:84%
+that's not special in
+Python is just black.
+
+00:28:17.900 --> 00:28:19.910 align:middle line:90%
+So type is a special command.
+
+00:28:19.910 --> 00:28:23.700 align:middle line:84%
+This is a float, so you
+see they're color coded.
+
+00:28:23.700 --> 00:28:25.110 align:middle line:90%
+OK.
+
+00:28:25.110 --> 00:28:27.660 align:middle line:84%
+So once we create
+objects, one thing
+
+00:28:27.660 --> 00:28:30.300 align:middle line:84%
+we can do with these
+objects is to cast them
+
+00:28:30.300 --> 00:28:31.680 align:middle line:90%
+to a different type.
+
+00:28:31.680 --> 00:28:36.300 align:middle line:84%
+Now, this is a little
+bit maybe confusing
+
+00:28:36.300 --> 00:28:39.660 align:middle line:84%
+because we're not actually
+changing the object once we've
+
+00:28:39.660 --> 00:28:40.720 align:middle line:90%
+created it.
+
+00:28:40.720 --> 00:28:46.210 align:middle line:84%
+So once we create the integer
+3, it's there in memory.
+
+00:28:46.210 --> 00:28:49.900 align:middle line:84%
+If we cast that integer
+to a float version of it,
+
+00:28:49.900 --> 00:28:52.240 align:middle line:84%
+we're creating a new
+object in memory.
+
+00:28:52.240 --> 00:28:53.290 align:middle line:90%
+We're not changing the 3.
+
+00:28:53.290 --> 00:28:55.310 align:middle line:90%
+The 3 already exists.
+
+00:28:55.310 --> 00:28:57.640 align:middle line:84%
+We're just getting the
+float version of it
+
+00:28:57.640 --> 00:29:00.440 align:middle line:84%
+and storing it as a
+new object in memory.
+
+00:29:00.440 --> 00:29:03.790 align:middle line:84%
+So when we do float
+3, this is a command
+
+00:29:03.790 --> 00:29:08.140 align:middle line:84%
+that gets for me the float
+version of the integer 3.
+
+00:29:08.140 --> 00:29:10.720 align:middle line:90%
+So that will give me 3.0.
+
+00:29:10.720 --> 00:29:16.750 align:middle line:84%
+So for example, this
+is what I had, float 3.
+
+00:29:16.750 --> 00:29:18.970 align:middle line:90%
+The output is 3.0.
+
+00:29:18.970 --> 00:29:26.120 align:middle line:84%
+If I do int of 5.2,
+it truncates it,
+
+00:29:26.120 --> 00:29:29.090 align:middle line:84%
+and it gives me the integer
+portion of this float.
+
+00:29:29.090 --> 00:29:33.582 align:middle line:84%
+If I do int of 5.9,
+it still truncates it
+
+00:29:33.582 --> 00:29:35.540 align:middle line:84%
+and gives me the integer
+version of this float.
+
+00:29:35.540 --> 00:29:37.670 align:middle line:90%
+It doesn't round.
+
+00:29:37.670 --> 00:29:42.200 align:middle line:84%
+I'm just asking for the
+integer version of this float.
+
+00:29:42.200 --> 00:29:45.780 align:middle line:84%
+Some operations like
+round is an operation
+
+00:29:45.780 --> 00:29:48.870 align:middle line:84%
+we can do has an
+implicit cast in it.
+
+00:29:48.870 --> 00:29:53.570 align:middle line:84%
+So if I round 5.9, it's actually
+going to round it to 6.0
+
+00:29:53.570 --> 00:29:55.710 align:middle line:90%
+and then cast it to an integer.
+
+00:29:55.710 --> 00:29:58.550 align:middle line:84%
+So notice it doesn't
+give me as an output 6.0.
+
+00:29:58.550 --> 00:30:00.620 align:middle line:90%
+It then rounds it to just six.
+
+00:30:00.620 --> 00:30:03.560 align:middle line:90%
+
+
+00:30:03.560 --> 00:30:08.100 align:middle line:84%
+So that's basically what
+I said in the example.
+
+00:30:08.100 --> 00:30:10.940 align:middle line:90%
+So let's have you try this.
+
+00:30:10.940 --> 00:30:12.800 align:middle line:84%
+What are the types
+of the following?
+
+00:30:12.800 --> 00:30:14.820 align:middle line:84%
+I don't need the
+values but the types.
+
+00:30:14.820 --> 00:30:23.640 align:middle line:84%
+So if I get type of float of
+123, what is the type of that?
+
+00:30:23.640 --> 00:30:24.990 align:middle line:90%
+Float, yeah, exactly.
+
+00:30:24.990 --> 00:30:26.850 align:middle line:90%
+Yep.
+
+00:30:26.850 --> 00:30:28.830 align:middle line:90%
+What if I round 7.9?
+
+00:30:28.830 --> 00:30:30.180 align:middle line:90%
+What's the type of the result?
+
+00:30:30.180 --> 00:30:31.080 align:middle line:90%
+Int, yep.
+
+00:30:31.080 --> 00:30:35.700 align:middle line:84%
+What if I create a float
+of the round of 7.2?
+
+00:30:35.700 --> 00:30:36.390 align:middle line:90%
+AUDIENCE: Float.
+
+00:30:36.390 --> 00:30:37.920 align:middle line:90%
+ANA BELL: Yes, good.
+
+00:30:37.920 --> 00:30:39.300 align:middle line:90%
+Float would be 7.0.
+
+00:30:39.300 --> 00:30:41.550 align:middle line:90%
+And the int of 7.2?
+
+00:30:41.550 --> 00:30:42.924 align:middle line:90%
+AUDIENCE: 7.
+
+00:30:42.924 --> 00:30:43.840 align:middle line:90%
+Int.
+
+00:30:43.840 --> 00:30:45.040 align:middle line:90%
+ANA BELL: Int, yes, exactly.
+
+00:30:45.040 --> 00:30:46.510 align:middle line:90%
+I want the type not the value.
+
+00:30:46.510 --> 00:30:51.490 align:middle line:84%
+And the int of 7.9
+is an int, exactly.
+
+00:30:51.490 --> 00:30:54.060 align:middle line:90%
+Awesome, good.
+
+00:30:54.060 --> 00:30:57.075 align:middle line:84%
+OK, so we've created
+a bunch of objects.
+
+00:30:57.075 --> 00:30:58.950 align:middle line:84%
+We know that we can
+create a bunch of objects
+
+00:30:58.950 --> 00:30:59.670 align:middle line:90%
+in our programs.
+
+00:30:59.670 --> 00:31:01.180 align:middle line:90%
+What do we do with them?
+
+00:31:01.180 --> 00:31:05.380 align:middle line:84%
+Well, we can combine
+them into expressions.
+
+00:31:05.380 --> 00:31:08.790 align:middle line:90%
+So let's say we have 3 plus 2.
+
+00:31:08.790 --> 00:31:11.490 align:middle line:84%
+I've got object,
+operator, object.
+
+00:31:11.490 --> 00:31:13.530 align:middle line:84%
+Cool, syntactically
+valid in Python
+
+00:31:13.530 --> 00:31:15.910 align:middle line:84%
+and has no static
+semantic error.
+
+00:31:15.910 --> 00:31:21.120 align:middle line:84%
+So if I do that in Python,
+it's going to be OK.
+
+00:31:21.120 --> 00:31:25.100 align:middle line:90%
+3 plus 2, 5.
+
+00:31:25.100 --> 00:31:31.420 align:middle line:84%
+And the type of 3
+plus 2 is an integer.
+
+00:31:31.420 --> 00:31:32.980 align:middle line:84%
+So basically what
+I've done here,
+
+00:31:32.980 --> 00:31:38.320 align:middle line:84%
+I've put an expression
+within this type command.
+
+00:31:38.320 --> 00:31:39.760 align:middle line:90%
+And that's OK.
+
+00:31:39.760 --> 00:31:41.530 align:middle line:84%
+That's, in fact,
+encouraged in Python.
+
+00:31:41.530 --> 00:31:44.665 align:middle line:84%
+You don't just want to
+calculate and then stick in.
+
+00:31:44.665 --> 00:31:46.040 align:middle line:84%
+That would be
+very, very tedious.
+
+00:31:46.040 --> 00:31:50.360 align:middle line:84%
+So you can insert expressions
+in many, many different places.
+
+00:31:50.360 --> 00:31:53.510 align:middle line:84%
+So here we have 3 plus
+2, 5 divided by 3.
+
+00:31:53.510 --> 00:31:56.630 align:middle line:84%
+Again, we've got 5 divided
+by 3 has this decimal value.
+
+00:31:56.630 --> 00:31:59.480 align:middle line:90%
+And the result has a float--
+
+00:31:59.480 --> 00:32:01.830 align:middle line:90%
+is of type float.
+
+00:32:01.830 --> 00:32:03.380 align:middle line:84%
+So the important
+thing to remember
+
+00:32:03.380 --> 00:32:08.390 align:middle line:84%
+when we're doing expressions
+is Python reads the expression,
+
+00:32:08.390 --> 00:32:12.680 align:middle line:84%
+but it does not store
+the expression in memory.
+
+00:32:12.680 --> 00:32:15.080 align:middle line:84%
+What it does is it
+reads the expression,
+
+00:32:15.080 --> 00:32:18.330 align:middle line:84%
+evaluates it to
+one single value,
+
+00:32:18.330 --> 00:32:22.050 align:middle line:84%
+and then it stores the
+result value in memory.
+
+00:32:22.050 --> 00:32:23.690 align:middle line:84%
+So it never stores
+the expression.
+
+00:32:23.690 --> 00:32:27.650 align:middle line:84%
+It evaluates the expression
+and then stores the value.
+
+00:32:27.650 --> 00:32:30.680 align:middle line:84%
+And so this is the syntax for an
+expression-- object, operator,
+
+00:32:30.680 --> 00:32:33.180 align:middle line:90%
+object, as we just saw.
+
+00:32:33.180 --> 00:32:36.650 align:middle line:84%
+And that's really-- and
+the idea I said before,
+
+00:32:36.650 --> 00:32:40.340 align:middle line:84%
+where Python stores
+values of expressions,
+
+00:32:40.340 --> 00:32:45.480 align:middle line:84%
+not the expressions themselves,
+is really, really important.
+
+00:32:45.480 --> 00:32:48.420 align:middle line:84%
+So this is my first
+big idea slide.
+
+00:32:48.420 --> 00:32:50.610 align:middle line:84%
+I decided to insert
+these because I
+
+00:32:50.610 --> 00:32:53.590 align:middle line:84%
+think they stress the
+importance of several concepts.
+
+00:32:53.590 --> 00:32:55.240 align:middle line:90%
+So I hope this is one.
+
+00:32:55.240 --> 00:32:57.690 align:middle line:90%
+So we're taking expressions.
+
+00:32:57.690 --> 00:32:59.320 align:middle line:84%
+They can be as
+complex as you'd like.
+
+00:32:59.320 --> 00:33:01.860 align:middle line:84%
+We can use parentheses,
+a bunch of-- it
+
+00:33:01.860 --> 00:33:05.070 align:middle line:84%
+doesn't just have to be
+object, operator, object.
+
+00:33:05.070 --> 00:33:07.440 align:middle line:84%
+It can be more
+complex than that.
+
+00:33:07.440 --> 00:33:10.590 align:middle line:84%
+But basically, however
+complex that expression
+
+00:33:10.590 --> 00:33:14.730 align:middle line:84%
+is, we evaluate it, and we
+replace it with one value.
+
+00:33:14.730 --> 00:33:18.350 align:middle line:84%
+And the expression can
+be something like this.
+
+00:33:18.350 --> 00:33:20.920 align:middle line:84%
+It doesn't just have to be
+something that's mathematical.
+
+00:33:20.920 --> 00:33:22.660 align:middle line:84%
+This was a mathematical
+expression,
+
+00:33:22.660 --> 00:33:24.400 align:middle line:90%
+but this is also an expression.
+
+00:33:24.400 --> 00:33:25.660 align:middle line:90%
+And it evaluates.
+
+00:33:25.660 --> 00:33:31.240 align:middle line:84%
+So this entire thing evaluates
+to this word, this word which
+
+00:33:31.240 --> 00:33:34.270 align:middle line:90%
+represents the type integer.
+
+00:33:34.270 --> 00:33:36.660 align:middle line:90%
+So here are some more examples.
+
+00:33:36.660 --> 00:33:39.480 align:middle line:90%
+3 plus 2, again.
+
+00:33:39.480 --> 00:33:42.270 align:middle line:84%
+We've got these examples
+with the parentheses,
+
+00:33:42.270 --> 00:33:44.220 align:middle line:84%
+4 plus 2 times 6
+minus 1 obviously
+
+00:33:44.220 --> 00:33:46.140 align:middle line:90%
+gives us the number, 35.
+
+00:33:46.140 --> 00:33:49.120 align:middle line:84%
+And then we can insert
+expressions wherever we'd like.
+
+00:33:49.120 --> 00:33:51.930 align:middle line:84%
+So here I'm inserting
+that specific expression
+
+00:33:51.930 --> 00:33:54.220 align:middle line:90%
+in the type command.
+
+00:33:54.220 --> 00:33:56.940 align:middle line:84%
+And this is also an
+expression, like I just said.
+
+00:33:56.940 --> 00:34:00.570 align:middle line:90%
+And its result is int.
+
+00:34:00.570 --> 00:34:04.080 align:middle line:84%
+And similarly, we can also
+insert that expression here.
+
+00:34:04.080 --> 00:34:06.900 align:middle line:84%
+And then we can wrap
+that around cast.
+
+00:34:06.900 --> 00:34:08.489 align:middle line:90%
+And it gives us a float.
+
+00:34:08.489 --> 00:34:09.796 align:middle line:90%
+Yes?
+
+00:34:09.796 --> 00:34:11.949 align:middle line:84%
+AUDIENCE: So when you're
+inserting expressions
+
+00:34:11.949 --> 00:34:15.035 align:middle line:84%
+[INAUDIBLE] include
+the operators--
+
+00:34:15.035 --> 00:34:16.253 align:middle line:90%
+[INAUDIBLE] operators in?
+
+00:34:16.253 --> 00:34:17.920 align:middle line:84%
+ANA BELL: When you're
+inserting-- sorry,
+
+00:34:17.920 --> 00:34:19.299 align:middle line:90%
+when you're inserting what?
+
+00:34:19.299 --> 00:34:21.424 align:middle line:84%
+AUDIENCE: Well, since you
+said they're expressions,
+
+00:34:21.424 --> 00:34:24.550 align:middle line:84%
+and you said that you need
+like object, operator, object,
+
+00:34:24.550 --> 00:34:25.969 align:middle line:90%
+expression, type.
+
+00:34:25.969 --> 00:34:28.090 align:middle line:84%
+What would be the
+operators in this case?
+
+00:34:28.090 --> 00:34:30.157 align:middle line:90%
+ANA BELL: Oh, I see.
+
+00:34:30.157 --> 00:34:31.449 align:middle line:90%
+AUDIENCE: How are they defined?
+
+00:34:31.449 --> 00:34:34.429 align:middle line:84%
+ANA BELL: Yeah, that's a
+good-- that's a good question.
+
+00:34:34.429 --> 00:34:41.909 align:middle line:84%
+So in this particular case, the
+type and the float are not--
+
+00:34:41.909 --> 00:34:44.949 align:middle line:84%
+there is no operator I guess
+in this particular case.
+
+00:34:44.949 --> 00:34:48.210 align:middle line:84%
+It's more like a command
+that gives us an output.
+
+00:34:48.210 --> 00:34:51.210 align:middle line:90%
+But there is still some--
+
+00:34:51.210 --> 00:34:54.510 align:middle line:84%
+there is still an
+output that it gives us.
+
+00:34:54.510 --> 00:34:56.940 align:middle line:84%
+So we can then take
+the result of this
+
+00:34:56.940 --> 00:35:00.240 align:middle line:90%
+and save it somewhere else.
+
+00:35:00.240 --> 00:35:04.140 align:middle line:84%
+Sorry, yeah, I guess the example
+I gave on the previous slide
+
+00:35:04.140 --> 00:35:06.360 align:middle line:84%
+was just an example
+of an expression
+
+00:35:06.360 --> 00:35:08.695 align:middle line:84%
+where we could do
+object, operator, object.
+
+00:35:08.695 --> 00:35:09.195 align:middle line:90%
+Yeah.
+
+00:35:09.195 --> 00:35:14.830 align:middle line:90%
+
+
+00:35:14.830 --> 00:35:16.510 align:middle line:90%
+Yeah, so when we have these--
+
+00:35:16.510 --> 00:35:19.480 align:middle line:84%
+I guess it works for
+mathematical expressions.
+
+00:35:19.480 --> 00:35:21.760 align:middle line:84%
+Mathematical expressions
+work left to right, just
+
+00:35:21.760 --> 00:35:22.600 align:middle line:90%
+like in math.
+
+00:35:22.600 --> 00:35:29.150 align:middle line:84%
+Parentheses can override
+certain precedents.
+
+00:35:29.150 --> 00:35:33.280 align:middle line:84%
+If we have commands
+that have computations,
+
+00:35:33.280 --> 00:35:36.310 align:middle line:84%
+then we have this command
+with the parentheses.
+
+00:35:36.310 --> 00:35:39.140 align:middle line:84%
+And we evaluate what's
+inside the parentheses first.
+
+00:35:39.140 --> 00:35:42.310 align:middle line:84%
+So we work our way in to
+out in that particular case.
+
+00:35:42.310 --> 00:35:45.130 align:middle line:90%
+
+
+00:35:45.130 --> 00:35:46.570 align:middle line:90%
+So here are some examples.
+
+00:35:46.570 --> 00:35:47.700 align:middle line:90%
+Let's have you try these.
+
+00:35:47.700 --> 00:35:50.520 align:middle line:84%
+So we can type these
+in our console.
+
+00:35:50.520 --> 00:35:53.560 align:middle line:84%
+What are the values of
+the following expressions?
+
+00:35:53.560 --> 00:35:57.640 align:middle line:84%
+So 13 minus 4 divided
+by 12 times 12.
+
+00:35:57.640 --> 00:35:58.635 align:middle line:90%
+So we can try that.
+
+00:35:58.635 --> 00:36:03.310 align:middle line:90%
+
+
+00:36:03.310 --> 00:36:04.810 align:middle line:84%
+I don't know off
+the top of my head,
+
+00:36:04.810 --> 00:36:05.977 align:middle line:90%
+so we'll have to type it in.
+
+00:36:05.977 --> 00:36:07.720 align:middle line:90%
+0.0625, OK.
+
+00:36:07.720 --> 00:36:10.960 align:middle line:84%
+So the value of that
+expression is a float, right?
+
+00:36:10.960 --> 00:36:12.160 align:middle line:90%
+0.0625.
+
+00:36:12.160 --> 00:36:17.512 align:middle line:84%
+What's the value of the
+expression type 4 times 3?
+
+00:36:17.512 --> 00:36:18.500 align:middle line:90%
+AUDIENCE: Int.
+
+00:36:18.500 --> 00:36:19.340 align:middle line:90%
+ANA BELL: Int, yeah.
+
+00:36:19.340 --> 00:36:23.690 align:middle line:84%
+What about the type of the
+expression 4.0 times 3?
+
+00:36:23.690 --> 00:36:24.420 align:middle line:90%
+AUDIENCE: Float.
+
+00:36:24.420 --> 00:36:26.370 align:middle line:90%
+ANA BELL: Yes, exactly.
+
+00:36:26.370 --> 00:36:27.210 align:middle line:90%
+That's very good.
+
+00:36:27.210 --> 00:36:30.000 align:middle line:90%
+So type of 4 times 3 is int.
+
+00:36:30.000 --> 00:36:32.550 align:middle line:90%
+But 4.0 times 3 is a float.
+
+00:36:32.550 --> 00:36:33.510 align:middle line:90%
+Good.
+
+00:36:33.510 --> 00:36:37.260 align:middle line:84%
+And then what about int
+of a half or of 1 over 2?
+
+00:36:37.260 --> 00:36:40.515 align:middle line:90%
+
+
+00:36:40.515 --> 00:36:42.380 align:middle line:90%
+AUDIENCE: So it's 0.
+
+00:36:42.380 --> 00:36:45.040 align:middle line:90%
+ANA BELL: Yeah, exactly, it's 0.
+
+00:36:45.040 --> 00:36:50.220 align:middle line:84%
+Yep, because it's 0.5,
+and we truncate to 0.
+
+00:36:50.220 --> 00:36:52.770 align:middle line:84%
+The reason I had this here
+is because it leads nicely
+
+00:36:52.770 --> 00:36:54.070 align:middle line:90%
+into this slide.
+
+00:36:54.070 --> 00:36:56.310 align:middle line:84%
+You don't have to
+memorize these rules.
+
+00:36:56.310 --> 00:36:59.340 align:middle line:84%
+You can always check
+it out in the console.
+
+00:36:59.340 --> 00:37:01.500 align:middle line:84%
+But there are some
+rules for the resulting
+
+00:37:01.500 --> 00:37:03.220 align:middle line:90%
+types when we do operations.
+
+00:37:03.220 --> 00:37:06.990 align:middle line:84%
+So when we do
+operations with numbers,
+
+00:37:06.990 --> 00:37:11.730 align:middle line:84%
+addition, subtraction,
+and multiplication always
+
+00:37:11.730 --> 00:37:15.540 align:middle line:84%
+yield an integer if both of
+the operators are integers.
+
+00:37:15.540 --> 00:37:17.400 align:middle line:84%
+If one is a float
+or both are floats,
+
+00:37:17.400 --> 00:37:19.410 align:middle line:90%
+then it gives me a float.
+
+00:37:19.410 --> 00:37:20.820 align:middle line:90%
+Division is different.
+
+00:37:20.820 --> 00:37:24.510 align:middle line:84%
+No matter what types you divide,
+you will always get a float.
+
+00:37:24.510 --> 00:37:27.190 align:middle line:90%
+
+
+00:37:27.190 --> 00:37:30.090 align:middle line:84%
+Now what about this
+// and this percent?
+
+00:37:30.090 --> 00:37:32.250 align:middle line:84%
+These are actually
+useful operations.
+
+00:37:32.250 --> 00:37:35.110 align:middle line:84%
+They kind of go hand
+in hand with division.
+
+00:37:35.110 --> 00:37:41.726 align:middle line:84%
+So when I do 5 divided
+by 3, it's this 1.667.
+
+00:37:41.726 --> 00:37:48.110 align:middle line:84%
+// is basically a floor or
+getting the integer portion
+
+00:37:48.110 --> 00:37:49.250 align:middle line:90%
+of the division.
+
+00:37:49.250 --> 00:37:52.460 align:middle line:90%
+So 5//3 gives me one.
+
+00:37:52.460 --> 00:37:57.620 align:middle line:90%
+It truncates the fraction.
+
+00:37:57.620 --> 00:38:01.140 align:middle line:84%
+The percent gives
+me the remainder.
+
+00:38:01.140 --> 00:38:05.630 align:middle line:84%
+So 5%3 gives me the remainder
+when I divide 5 by 3.
+
+00:38:05.630 --> 00:38:09.530 align:middle line:84%
+So it's going to give me-- give
+it to me in a whole number.
+
+00:38:09.530 --> 00:38:12.440 align:middle line:84%
+So that's going to be 2 because
+there's 2 left over when
+
+00:38:12.440 --> 00:38:15.440 align:middle line:90%
+I divide 5 by 3.
+
+00:38:15.440 --> 00:38:17.810 align:middle line:84%
+So these are pretty
+useful operations,
+
+00:38:17.810 --> 00:38:23.210 align:middle line:84%
+the // and the percent, when
+we do mathematical programs.
+
+00:38:23.210 --> 00:38:25.910 align:middle line:84%
+The last thing is
+the ** is how we
+
+00:38:25.910 --> 00:38:30.320 align:middle line:84%
+denote power, exponentiation,
+kind of different
+
+00:38:30.320 --> 00:38:32.960 align:middle line:84%
+than you might be
+used to in math.
+
+00:38:32.960 --> 00:38:36.980 align:middle line:90%
+So 2 to the power of 3, 8.
+
+00:38:36.980 --> 00:38:39.620 align:middle line:90%
+2 to the power of 3.0, 8.0.
+
+00:38:39.620 --> 00:38:45.080 align:middle line:84%
+And the rules for integer
+division, percent,
+
+00:38:45.080 --> 00:38:48.960 align:middle line:84%
+and exponentiation are just
+like addition, subtraction,
+
+00:38:48.960 --> 00:38:49.610 align:middle line:90%
+multiplication.
+
+00:38:49.610 --> 00:38:52.580 align:middle line:84%
+If one is a float, then the
+result will be a float as well.
+
+00:38:52.580 --> 00:38:57.040 align:middle line:90%
+
+
+00:38:57.040 --> 00:38:57.540 align:middle line:90%
+Yeah.
+
+00:38:57.540 --> 00:39:00.270 align:middle line:90%
+
+
+00:39:00.270 --> 00:39:04.260 align:middle line:84%
+OK, and we talked about
+the type of output.
+
+00:39:04.260 --> 00:39:06.110 align:middle line:84%
+So I think I briefly
+mentioned this.
+
+00:39:06.110 --> 00:39:09.290 align:middle line:84%
+The operator precedence
+is exponentiation and then
+
+00:39:09.290 --> 00:39:12.920 align:middle line:84%
+multiplication, division,
+percent or remainder
+
+00:39:12.920 --> 00:39:14.550 align:middle line:84%
+at the next level,
+and then addition,
+
+00:39:14.550 --> 00:39:15.720 align:middle line:90%
+subtraction at the bottom.
+
+00:39:15.720 --> 00:39:20.510 align:middle line:84%
+But you can always override
+these using parentheses.
+
+00:39:20.510 --> 00:39:24.810 align:middle line:84%
+OK, questions so far
+before we move on?
+
+00:39:24.810 --> 00:39:25.520 align:middle line:90%
+Yes.
+
+00:39:25.520 --> 00:39:27.770 align:middle line:84%
+AUDIENCE: So why does
+division-- why does it always
+
+00:39:27.770 --> 00:39:30.110 align:middle line:84%
+result in float
+if you have 9 by 3
+
+00:39:30.110 --> 00:39:32.330 align:middle line:84%
+and that's [INAUDIBLE]
+why does it [INAUDIBLE]??
+
+00:39:32.330 --> 00:39:34.640 align:middle line:84%
+ANA BELL: Yeah, so the
+question is, why does it always
+
+00:39:34.640 --> 00:39:36.410 align:middle line:90%
+result in a float?
+
+00:39:36.410 --> 00:39:40.520 align:middle line:84%
+If it didn't, I think it would
+the operation itself would have
+
+00:39:40.520 --> 00:39:43.760 align:middle line:84%
+to do extra work to figure out
+whether it's a whole number
+
+00:39:43.760 --> 00:39:44.490 align:middle line:90%
+or not.
+
+00:39:44.490 --> 00:39:49.400 align:middle line:84%
+So I think it's just easier
+that it gives us always a float,
+
+00:39:49.400 --> 00:39:50.390 align:middle line:90%
+I guess.
+
+00:39:50.390 --> 00:39:54.230 align:middle line:84%
+Previous versions of
+Python, the / was actually,
+
+00:39:54.230 --> 00:39:58.100 align:middle line:84%
+I think, integer division,
+which is super counterintuitive
+
+00:39:58.100 --> 00:40:00.047 align:middle line:84%
+because you would use
+that in your program.
+
+00:40:00.047 --> 00:40:01.880 align:middle line:84%
+And then you would
+basically integer divide,
+
+00:40:01.880 --> 00:40:03.320 align:middle line:90%
+and things would go wrong.
+
+00:40:03.320 --> 00:40:08.310 align:middle line:84%
+But again, just a design choice
+on behalf of the programmers.
+
+00:40:08.310 --> 00:40:11.630 align:middle line:90%
+Other questions so far?
+
+00:40:11.630 --> 00:40:15.110 align:middle line:90%
+OK, so we have a lot of objects.
+
+00:40:15.110 --> 00:40:18.890 align:middle line:84%
+Objects have different types,
+again, floats, integers,
+
+00:40:18.890 --> 00:40:20.120 align:middle line:90%
+Booleans.
+
+00:40:20.120 --> 00:40:22.310 align:middle line:90%
+What can we do with them?
+
+00:40:22.310 --> 00:40:24.740 align:middle line:84%
+So far, they're kind of
+just sitting in there,
+
+00:40:24.740 --> 00:40:26.600 align:middle line:84%
+and we can get
+properties about them.
+
+00:40:26.600 --> 00:40:28.730 align:middle line:84%
+But what we'd like to
+do is write programs,
+
+00:40:28.730 --> 00:40:30.590 align:middle line:84%
+basically trying to
+automate some things
+
+00:40:30.590 --> 00:40:32.930 align:middle line:84%
+about these objects,
+manipulate them
+
+00:40:32.930 --> 00:40:36.740 align:middle line:84%
+to help us achieve a more
+complicated and interesting
+
+00:40:36.740 --> 00:40:38.370 align:middle line:90%
+program.
+
+00:40:38.370 --> 00:40:42.770 align:middle line:84%
+So what we can do
+to get to that end
+
+00:40:42.770 --> 00:40:48.260 align:middle line:84%
+is to start assigning names
+to some of these objects.
+
+00:40:48.260 --> 00:40:54.860 align:middle line:84%
+If I create an object for pi in
+my program to 20 decimal places
+
+00:40:54.860 --> 00:40:57.800 align:middle line:84%
+somehow, and I have that
+number in my program,
+
+00:40:57.800 --> 00:40:59.390 align:middle line:90%
+that float in my program--
+
+00:40:59.390 --> 00:41:02.480 align:middle line:84%
+if I want to use that number
+in many different places
+
+00:41:02.480 --> 00:41:04.670 align:middle line:84%
+in my program, I'd
+have to copy and paste
+
+00:41:04.670 --> 00:41:10.330 align:middle line:84%
+it a whole bunch of times so
+far, which is very tedious,
+
+00:41:10.330 --> 00:41:12.640 align:middle line:90%
+lots of errors will happen.
+
+00:41:12.640 --> 00:41:13.730 align:middle line:90%
+I don't want to do that.
+
+00:41:13.730 --> 00:41:16.360 align:middle line:84%
+So instead what I can
+do is I can give a name
+
+00:41:16.360 --> 00:41:21.100 align:middle line:84%
+to this ridiculously long
+value of pi called pi.
+
+00:41:21.100 --> 00:41:23.470 align:middle line:84%
+And then I can just
+use this name anywhere
+
+00:41:23.470 --> 00:41:26.290 align:middle line:84%
+I want to grab that
+ridiculously long value for pi
+
+00:41:26.290 --> 00:41:27.490 align:middle line:90%
+in my program.
+
+00:41:27.490 --> 00:41:29.860 align:middle line:90%
+It's a lot easier to read.
+
+00:41:29.860 --> 00:41:32.350 align:middle line:84%
+It's a lot easier for me
+to write this program.
+
+00:41:32.350 --> 00:41:38.780 align:middle line:84%
+And it leads to a really
+nice and neat program.
+
+00:41:38.780 --> 00:41:40.930 align:middle line:84%
+So what we can do
+is we can start
+
+00:41:40.930 --> 00:41:45.610 align:middle line:84%
+saying that the float 0.001
+will be referenced by the name
+
+00:41:45.610 --> 00:41:52.790 align:middle line:84%
+"small" or the 100.4 will be
+referenced by the name "temp."
+
+00:41:52.790 --> 00:41:56.110 align:middle line:84%
+So what we want to do is create
+these things called variables.
+
+00:41:56.110 --> 00:42:00.220 align:middle line:84%
+And a variable is different
+in computer science
+
+00:42:00.220 --> 00:42:02.800 align:middle line:84%
+from a mathematical
+variable or variables
+
+00:42:02.800 --> 00:42:04.360 align:middle line:84%
+that you've known
+so far in math.
+
+00:42:04.360 --> 00:42:06.580 align:middle line:84%
+So math variables
+come back to the idea
+
+00:42:06.580 --> 00:42:09.530 align:middle line:84%
+of declarative knowledge,
+a declarative statement.
+
+00:42:09.530 --> 00:42:12.470 align:middle line:84%
+You can have something like a
+plus b is equal to b minus 1
+
+00:42:12.470 --> 00:42:16.850 align:middle line:84%
+in math, or x is equal to--
+or x times x is equal to y,
+
+00:42:16.850 --> 00:42:19.040 align:middle line:90%
+and that's perfectly OK.
+
+00:42:19.040 --> 00:42:22.670 align:middle line:84%
+In math, we basically say
+that variable x represents
+
+00:42:22.670 --> 00:42:24.970 align:middle line:90%
+all the square roots of y.
+
+00:42:24.970 --> 00:42:27.805 align:middle line:84%
+That's not going to fly
+in computer science.
+
+00:42:27.805 --> 00:42:30.700 align:middle line:84%
+In computer science,
+we don't have--
+
+00:42:30.700 --> 00:42:32.275 align:middle line:84%
+we don't do
+declarative knowledge.
+
+00:42:32.275 --> 00:42:33.400 align:middle line:90%
+We do imperative knowledge.
+
+00:42:33.400 --> 00:42:35.770 align:middle line:84%
+And so what we're working
+with in computer science
+
+00:42:35.770 --> 00:42:39.790 align:middle line:84%
+is a bunch of
+assignment statements.
+
+00:42:39.790 --> 00:42:42.370 align:middle line:84%
+So what we can do
+in computer science
+
+00:42:42.370 --> 00:42:47.750 align:middle line:84%
+is we're going to basically
+bind a value to a variable.
+
+00:42:47.750 --> 00:42:49.780 align:middle line:84%
+So we're going to say
+this variable name is
+
+00:42:49.780 --> 00:42:50.860 align:middle line:90%
+bound to this value.
+
+00:42:50.860 --> 00:42:52.630 align:middle line:84%
+Every time I want
+to grab this value,
+
+00:42:52.630 --> 00:42:55.100 align:middle line:84%
+I'm going to invoke
+this variable name.
+
+00:42:55.100 --> 00:42:56.560 align:middle line:90%
+So here are some examples.
+
+00:42:56.560 --> 00:42:59.900 align:middle line:90%
+I've got a is equal to b plus 1.
+
+00:42:59.900 --> 00:43:03.260 align:middle line:84%
+The thing on the right-hand
+side will evaluate to some value
+
+00:43:03.260 --> 00:43:09.050 align:middle line:84%
+as long as I have something
+that b has a value for.
+
+00:43:09.050 --> 00:43:11.540 align:middle line:90%
+I've got here m is equal to 10.
+
+00:43:11.540 --> 00:43:12.920 align:middle line:90%
+So m is a variable.
+
+00:43:12.920 --> 00:43:14.870 align:middle line:90%
+Its value is 10.
+
+00:43:14.870 --> 00:43:19.010 align:middle line:84%
+I've got F is equal
+to m times 9.98.
+
+00:43:19.010 --> 00:43:21.620 align:middle line:84%
+So again, I have an expression
+on the right-hand side,
+
+00:43:21.620 --> 00:43:22.730 align:middle line:90%
+and that's OK.
+
+00:43:22.730 --> 00:43:27.320 align:middle line:84%
+I'm going to use the value of
+10, so F's value will be 99.8.
+
+00:43:27.320 --> 00:43:28.205 align:middle line:90%
+Yeah.
+
+00:43:28.205 --> 00:43:32.570 align:middle line:84%
+AUDIENCE: Can you put
+it so that for F--
+
+00:43:32.570 --> 00:43:34.310 align:middle line:90%
+is it like this one value of m?
+
+00:43:34.310 --> 00:43:35.900 align:middle line:84%
+Or can you have it
+so it's going to be
+
+00:43:35.900 --> 00:43:38.365 align:middle line:90%
+whatever m assigned recently?
+
+00:43:38.365 --> 00:43:38.990 align:middle line:90%
+ANA BELL: Yeah.
+
+00:43:38.990 --> 00:43:42.630 align:middle line:84%
+The question is, can you have
+m whatever it recently is?
+
+00:43:42.630 --> 00:43:45.350 align:middle line:84%
+So in this particular case,
+I just have these two lines.
+
+00:43:45.350 --> 00:43:47.240 align:middle line:90%
+And m will be whatever 10 is.
+
+00:43:47.240 --> 00:43:51.020 align:middle line:84%
+But we'll see in a couple
+lectures that we can write
+
+00:43:51.020 --> 00:43:53.750 align:middle line:90%
+a loop where you change m.
+
+00:43:53.750 --> 00:43:58.070 align:middle line:84%
+And then every time you change
+m, you immediately calculate F.
+
+00:43:58.070 --> 00:44:01.320 align:middle line:84%
+And then it'll calculate F
+based on the new value of m.
+
+00:44:01.320 --> 00:44:05.430 align:middle line:84%
+But if we just have these two
+lines, that's all there is.
+
+00:44:05.430 --> 00:44:07.190 align:middle line:90%
+It just uses 10.
+
+00:44:07.190 --> 00:44:08.315 align:middle line:90%
+Was there another question?
+
+00:44:08.315 --> 00:44:11.820 align:middle line:90%
+
+
+00:44:11.820 --> 00:44:15.300 align:middle line:84%
+So in computer science,
+you have only one variable
+
+00:44:15.300 --> 00:44:18.540 align:middle line:84%
+to the left of this equal sign,
+called the assignment operator.
+
+00:44:18.540 --> 00:44:21.420 align:middle line:84%
+And you have a value
+to the right-hand side
+
+00:44:21.420 --> 00:44:24.220 align:middle line:84%
+of the equal sign, the
+assignment operator.
+
+00:44:24.220 --> 00:44:29.670 align:middle line:84%
+So one variable basically
+maps to or binds to one value.
+
+00:44:29.670 --> 00:44:34.220 align:middle line:84%
+So the equal sign is an
+assignment statement.
+
+00:44:34.220 --> 00:44:35.460 align:middle line:90%
+It's not equality.
+
+00:44:35.460 --> 00:44:37.760 align:middle line:84%
+It's not a solve for
+x type of situation.
+
+00:44:37.760 --> 00:44:39.260 align:middle line:90%
+It's just an assignment.
+
+00:44:39.260 --> 00:44:42.850 align:middle line:84%
+It binds this name
+to this value.
+
+00:44:42.850 --> 00:44:46.950 align:middle line:84%
+So the way that we figure
+out the name with the value
+
+00:44:46.950 --> 00:44:49.770 align:middle line:84%
+is, well, if we have this
+assignment statement here,
+
+00:44:49.770 --> 00:44:51.807 align:middle line:84%
+we first look at
+the right-hand side.
+
+00:44:51.807 --> 00:44:53.640 align:middle line:84%
+So we always start with
+the right-hand side.
+
+00:44:53.640 --> 00:44:55.540 align:middle line:90%
+And we evaluate it.
+
+00:44:55.540 --> 00:44:58.120 align:middle line:84%
+Remember, we have an
+expression on the right.
+
+00:44:58.120 --> 00:45:00.970 align:middle line:84%
+We have to evaluate
+it to one value.
+
+00:45:00.970 --> 00:45:04.950 align:middle line:84%
+So this will be 3.14,
+whatever it is, 1.159.
+
+00:45:04.950 --> 00:45:09.810 align:middle line:84%
+And then we take that value
+and bind it to the name pi.
+
+00:45:09.810 --> 00:45:14.160 align:middle line:84%
+So anytime I type in p-i, "pi,"
+in my program from now on,
+
+00:45:14.160 --> 00:45:18.450 align:middle line:84%
+Python will automatically
+grab 3.14159 from memory.
+
+00:45:18.450 --> 00:45:21.430 align:middle line:90%
+So it's bound to that value now.
+
+00:45:21.430 --> 00:45:23.410 align:middle line:90%
+OK, there are some rules.
+
+00:45:23.410 --> 00:45:24.910 align:middle line:84%
+Did I have them on
+the previous one?
+
+00:45:24.910 --> 00:45:32.270 align:middle line:84%
+Yes, there are some
+rules to variable names,
+
+00:45:32.270 --> 00:45:33.920 align:middle line:84%
+but we'll talk
+about that in a bit.
+
+00:45:33.920 --> 00:45:36.820 align:middle line:84%
+For now, I want you to tell
+me if any of the following
+
+00:45:36.820 --> 00:45:37.720 align:middle line:90%
+are allowed.
+
+00:45:37.720 --> 00:45:40.190 align:middle line:84%
+If I do x is equal to 6,
+is that allowed in Python?
+
+00:45:40.190 --> 00:45:41.630 align:middle line:90%
+AUDIENCE: Yes.
+
+00:45:41.630 --> 00:45:42.550 align:middle line:90%
+ANA BELL: Yes, it is.
+
+00:45:42.550 --> 00:45:42.820 align:middle line:90%
+Good.
+
+00:45:42.820 --> 00:45:45.250 align:middle line:84%
+Because I have one variable
+name bound to one value, 6.
+
+00:45:45.250 --> 00:45:46.480 align:middle line:90%
+What about 6 equals x?
+
+00:45:46.480 --> 00:45:47.530 align:middle line:90%
+It's just backward.
+
+00:45:47.530 --> 00:45:48.130 align:middle line:90%
+AUDIENCE: No.
+
+00:45:48.130 --> 00:45:49.300 align:middle line:90%
+ANA BELL: OK, good.
+
+00:45:49.300 --> 00:45:53.500 align:middle line:90%
+6 equals x is bad, syntax error.
+
+00:45:53.500 --> 00:45:56.560 align:middle line:84%
+How about x times
+y equals 3 plus 4?
+
+00:45:56.560 --> 00:45:57.320 align:middle line:90%
+AUDIENCE: No.
+
+00:45:57.320 --> 00:45:59.560 align:middle line:84%
+ANA BELL: No, exactly,
+because the thing on the left
+
+00:45:59.560 --> 00:46:00.970 align:middle line:90%
+has an operator in it.
+
+00:46:00.970 --> 00:46:02.830 align:middle line:90%
+And operators are special.
+
+00:46:02.830 --> 00:46:06.040 align:middle line:84%
+So it can't have-- you can't
+have a variable with that *
+
+00:46:06.040 --> 00:46:06.910 align:middle line:90%
+as a name.
+
+00:46:06.910 --> 00:46:09.790 align:middle line:90%
+How about xy equals 3 plus 4?
+
+00:46:09.790 --> 00:46:10.457 align:middle line:90%
+AUDIENCE: Yes.
+
+00:46:10.457 --> 00:46:11.790 align:middle line:90%
+ANA BELL: Allowed, yes, exactly.
+
+00:46:11.790 --> 00:46:14.160 align:middle line:84%
+I was hoping to get you guys
+with that, but I didn't.
+
+00:46:14.160 --> 00:46:17.730 align:middle line:90%
+Xy equals 3 plus 4 is OK.
+
+00:46:17.730 --> 00:46:18.730 align:middle line:90%
+There was no error.
+
+00:46:18.730 --> 00:46:21.810 align:middle line:84%
+And then I can invoke the
+name of the variable I just
+
+00:46:21.810 --> 00:46:23.980 align:middle line:90%
+created simply by typing it in.
+
+00:46:23.980 --> 00:46:27.690 align:middle line:84%
+So if I type in
+xy, it gives me 7.
+
+00:46:27.690 --> 00:46:32.250 align:middle line:84%
+And then I can do operations
+with it, xy plus 1 is 8.
+
+00:46:32.250 --> 00:46:32.820 align:middle line:90%
+Yeah.
+
+00:46:32.820 --> 00:46:34.695 align:middle line:84%
+AUDIENCE: Before you
+were putting the strings
+
+00:46:34.695 --> 00:46:35.760 align:middle line:90%
+with apostrophes.
+
+00:46:35.760 --> 00:46:37.420 align:middle line:90%
+So wouldn't you need that?
+
+00:46:37.420 --> 00:46:40.360 align:middle line:84%
+ANA BELL: So those are strings,
+right, sequences of characters.
+
+00:46:40.360 --> 00:46:42.140 align:middle line:90%
+Here, these are variables.
+
+00:46:42.140 --> 00:46:47.280 align:middle line:84%
+So these are names that I
+am giving as a variable.
+
+00:46:47.280 --> 00:46:48.530 align:middle line:90%
+Yeah, that's a great question.
+
+00:46:48.530 --> 00:46:51.010 align:middle line:90%
+So this is going to be a string.
+
+00:46:51.010 --> 00:46:52.840 align:middle line:90%
+And you notice it changed color.
+
+00:46:52.840 --> 00:46:55.390 align:middle line:90%
+It has some meaning in Python.
+
+00:46:55.390 --> 00:46:58.690 align:middle line:84%
+But xy is a variable
+that I create.
+
+00:46:58.690 --> 00:47:03.760 align:middle line:90%
+
+
+00:47:03.760 --> 00:47:08.080 align:middle line:84%
+OK, so why do we want to
+give names to variables?
+
+00:47:08.080 --> 00:47:10.990 align:middle line:84%
+Because as I showed you
+with the pi example,
+
+00:47:10.990 --> 00:47:14.530 align:middle line:84%
+it's a lot easier to
+write readable code
+
+00:47:14.530 --> 00:47:18.470 align:middle line:84%
+if you have variable names
+within your programs.
+
+00:47:18.470 --> 00:47:20.560 align:middle line:90%
+So when you grab--
+
+00:47:20.560 --> 00:47:23.110 align:middle line:84%
+when you write programs,
+it's important to choose
+
+00:47:23.110 --> 00:47:25.060 align:middle line:90%
+variable names wisely.
+
+00:47:25.060 --> 00:47:27.472 align:middle line:84%
+You don't want to use
+just single letters.
+
+00:47:27.472 --> 00:47:28.930 align:middle line:84%
+You don't want to
+name it something
+
+00:47:28.930 --> 00:47:31.305 align:middle line:84%
+that doesn't have something
+to do with the program you're
+
+00:47:31.305 --> 00:47:33.640 align:middle line:84%
+writing, because
+you're going to want
+
+00:47:33.640 --> 00:47:36.940 align:middle line:84%
+to reread these programs
+sometime in the future.
+
+00:47:36.940 --> 00:47:39.490 align:middle line:84%
+Or others might want to
+read your programs sometime
+
+00:47:39.490 --> 00:47:40.730 align:middle line:90%
+in the future.
+
+00:47:40.730 --> 00:47:43.240 align:middle line:84%
+So here's an example
+of a nice program.
+
+00:47:43.240 --> 00:47:46.120 align:middle line:84%
+It's just basically four
+assignment statements
+
+00:47:46.120 --> 00:47:48.350 align:middle line:90%
+that do some calculations.
+
+00:47:48.350 --> 00:47:51.050 align:middle line:84%
+The first line of the
+program is not really a line.
+
+00:47:51.050 --> 00:47:52.950 align:middle line:90%
+It's called a comment.
+
+00:47:52.950 --> 00:47:54.700 align:middle line:84%
+You can have as many
+of these as you like.
+
+00:47:54.700 --> 00:47:56.020 align:middle line:90%
+They start with a hash.
+
+00:47:56.020 --> 00:47:57.520 align:middle line:84%
+It's a line that
+starts with a hash.
+
+00:47:57.520 --> 00:48:00.880 align:middle line:84%
+And it's basically
+a text that you
+
+00:48:00.880 --> 00:48:05.690 align:middle line:84%
+write that helps you or
+others figure out what
+
+00:48:05.690 --> 00:48:07.020 align:middle line:90%
+the code is supposed to do.
+
+00:48:07.020 --> 00:48:10.430 align:middle line:84%
+And usually we comment large
+chunks of code at a time,
+
+00:48:10.430 --> 00:48:13.700 align:middle line:90%
+not line by line.
+
+00:48:13.700 --> 00:48:17.790 align:middle line:84%
+Then we have these four
+assignment statements.
+
+00:48:17.790 --> 00:48:22.160 align:middle line:84%
+So here I'm defining variable
+named pi bound to the value
+
+00:48:22.160 --> 00:48:25.430 align:middle line:84%
+here, so not the
+division but 3.14159.
+
+00:48:25.430 --> 00:48:28.820 align:middle line:84%
+Variable named radius
+bound to this float 2.2.
+
+00:48:28.820 --> 00:48:30.740 align:middle line:84%
+And then I have a
+variable named area
+
+00:48:30.740 --> 00:48:34.580 align:middle line:84%
+which is bound to the
+result of this expression.
+
+00:48:34.580 --> 00:48:38.330 align:middle line:84%
+So when Python sees
+my pi and my radius,
+
+00:48:38.330 --> 00:48:42.260 align:middle line:84%
+it grabs them from memory,
+replaces them with the values,
+
+00:48:42.260 --> 00:48:45.680 align:middle line:84%
+evaluates the expression,
+grabs that one
+
+00:48:45.680 --> 00:48:49.280 align:middle line:84%
+value that we evaluated to
+15-point-something, whatever
+
+00:48:49.280 --> 00:48:52.760 align:middle line:84%
+this is, and binds the
+15-point-something to the name
+
+00:48:52.760 --> 00:48:54.200 align:middle line:90%
+area.
+
+00:48:54.200 --> 00:48:55.760 align:middle line:90%
+Same with circumference.
+
+00:48:55.760 --> 00:48:59.578 align:middle line:90%
+
+
+00:48:59.578 --> 00:49:01.370 align:middle line:84%
+Code style is something
+that we're actually
+
+00:49:01.370 --> 00:49:03.270 align:middle line:84%
+going to look at in
+your problem sets.
+
+00:49:03.270 --> 00:49:05.540 align:middle line:84%
+So I just wanted to
+quickly talk about that.
+
+00:49:05.540 --> 00:49:09.560 align:middle line:84%
+Here is a program that
+has really bad style.
+
+00:49:09.560 --> 00:49:10.940 align:middle line:90%
+Actually, that shouldn't be meh.
+
+00:49:10.940 --> 00:49:13.370 align:middle line:84%
+It should be terrible
+or something like that.
+
+00:49:13.370 --> 00:49:15.830 align:middle line:84%
+But in case you
+haven't noticed, it's
+
+00:49:15.830 --> 00:49:17.900 align:middle line:84%
+the same program as
+on the previous slide.
+
+00:49:17.900 --> 00:49:20.600 align:middle line:84%
+But if I gave you this
+program straight off the bat,
+
+00:49:20.600 --> 00:49:23.030 align:middle line:84%
+you probably wouldn't
+know what it's doing.
+
+00:49:23.030 --> 00:49:27.020 align:middle line:84%
+It's reusing 355
+over 113 twice here.
+
+00:49:27.020 --> 00:49:30.140 align:middle line:84%
+It's using just a and
+c as variable names.
+
+00:49:30.140 --> 00:49:33.720 align:middle line:84%
+Its description is
+"do calculations."
+
+00:49:33.720 --> 00:49:35.060 align:middle line:90%
+So pretty bad.
+
+00:49:35.060 --> 00:49:36.660 align:middle line:90%
+This is a little bit better.
+
+00:49:36.660 --> 00:49:40.980 align:middle line:84%
+I've recognized that 355
+over 113 is being used twice.
+
+00:49:40.980 --> 00:49:43.050 align:middle line:90%
+So I'm saving it as a variable.
+
+00:49:43.050 --> 00:49:47.930 align:middle line:84%
+But my variables are
+still single characters.
+
+00:49:47.930 --> 00:49:51.530 align:middle line:90%
+And my comments are pretty bad.
+
+00:49:51.530 --> 00:49:54.620 align:middle line:84%
+I'm basically saying
+what the code is doing.
+
+00:49:54.620 --> 00:49:56.670 align:middle line:90%
+Please don't do that.
+
+00:49:56.670 --> 00:50:01.410 align:middle line:84%
+We can see that a equals
+p times r times r.
+
+00:50:01.410 --> 00:50:03.850 align:middle line:84%
+I see that I'm multiplying
+p with r squared.
+
+00:50:03.850 --> 00:50:07.020 align:middle line:84%
+I don't need to read
+that in English.
+
+00:50:07.020 --> 00:50:10.590 align:middle line:84%
+What I would like to see
+is a comment like this.
+
+00:50:10.590 --> 00:50:13.920 align:middle line:84%
+Here I'm commenting
+a chunk of code.
+
+00:50:13.920 --> 00:50:17.340 align:middle line:84%
+And someone who doesn't want
+to read this chunk of code
+
+00:50:17.340 --> 00:50:19.020 align:middle line:84%
+just reads the
+comment, and I already
+
+00:50:19.020 --> 00:50:21.960 align:middle line:84%
+know that I'm calculating the
+area and circumference using
+
+00:50:21.960 --> 00:50:23.670 align:middle line:90%
+an approximation for pi.
+
+00:50:23.670 --> 00:50:27.960 align:middle line:84%
+That's a pretty nice comment
+there and good descriptive
+
+00:50:27.960 --> 00:50:31.200 align:middle line:90%
+names and all that.
+
+00:50:31.200 --> 00:50:34.640 align:middle line:84%
+So we can actually--
+once we create an object,
+
+00:50:34.640 --> 00:50:37.370 align:middle line:84%
+a variable-- sorry, once we
+create an object and bind it
+
+00:50:37.370 --> 00:50:41.270 align:middle line:84%
+to a variable, we can
+change the bindings.
+
+00:50:41.270 --> 00:50:43.370 align:middle line:84%
+So we can take
+that variable name
+
+00:50:43.370 --> 00:50:46.620 align:middle line:84%
+and bind it to a
+completely different value.
+
+00:50:46.620 --> 00:50:49.880 align:middle line:84%
+This might not be
+useful right now,
+
+00:50:49.880 --> 00:50:53.000 align:middle line:84%
+but it will be useful
+when we introduce
+
+00:50:53.000 --> 00:50:55.640 align:middle line:90%
+control flow in our programs.
+
+00:50:55.640 --> 00:50:59.390 align:middle line:84%
+So to rebind a variable
+what that means is
+
+00:50:59.390 --> 00:51:01.640 align:middle line:84%
+we're going to take
+the name, we're
+
+00:51:01.640 --> 00:51:03.860 align:middle line:84%
+going to lose the binding
+to the previous value,
+
+00:51:03.860 --> 00:51:05.970 align:middle line:84%
+and we're going to
+rebind it to a new value.
+
+00:51:05.970 --> 00:51:08.870 align:middle line:84%
+So I'm going to show you how
+this looks like in memory.
+
+00:51:08.870 --> 00:51:11.660 align:middle line:84%
+I'm going to use this
+sort of cloud picture
+
+00:51:11.660 --> 00:51:14.750 align:middle line:84%
+to represent what
+happens behind the scenes
+
+00:51:14.750 --> 00:51:16.040 align:middle line:90%
+whenever we write programs.
+
+00:51:16.040 --> 00:51:18.980 align:middle line:84%
+And it's like a little animation
+to help you understand line
+
+00:51:18.980 --> 00:51:20.760 align:middle line:90%
+by line what's going on.
+
+00:51:20.760 --> 00:51:24.080 align:middle line:90%
+So here we have pi equals 3.14.
+
+00:51:24.080 --> 00:51:27.920 align:middle line:84%
+So the green 3.14 is
+my value in memory.
+
+00:51:27.920 --> 00:51:28.700 align:middle line:90%
+Cloud is memory.
+
+00:51:28.700 --> 00:51:29.960 align:middle line:90%
+That's my value in memory.
+
+00:51:29.960 --> 00:51:32.450 align:middle line:90%
+And it's bound to this name pi.
+
+00:51:32.450 --> 00:51:35.440 align:middle line:90%
+So this is my variable name.
+
+00:51:35.440 --> 00:51:38.590 align:middle line:84%
+The next line, radius
+equals 2.2, same thing.
+
+00:51:38.590 --> 00:51:41.740 align:middle line:84%
+I've got 2.2 as my value
+in memory, my object.
+
+00:51:41.740 --> 00:51:44.930 align:middle line:84%
+And radius is the
+name for that object.
+
+00:51:44.930 --> 00:51:47.190 align:middle line:84%
+Area equals pi times
+radius squared.
+
+00:51:47.190 --> 00:51:49.100 align:middle line:84%
+So what happens
+behind the scenes
+
+00:51:49.100 --> 00:51:51.517 align:middle line:90%
+is it calculates this value.
+
+00:51:51.517 --> 00:51:52.850 align:middle line:90%
+It doesn't store the expression.
+
+00:51:52.850 --> 00:51:55.550 align:middle line:84%
+It stores the value resulting
+from the calculation,
+
+00:51:55.550 --> 00:51:58.430 align:middle line:90%
+and then it saves it--
+
+00:51:58.430 --> 00:52:01.530 align:middle line:90%
+or binds it to the name area.
+
+00:52:01.530 --> 00:52:03.090 align:middle line:90%
+OK, everything OK so far?
+
+00:52:03.090 --> 00:52:04.360 align:middle line:90%
+We've seen this code before.
+
+00:52:04.360 --> 00:52:04.860 align:middle line:90%
+Cool.
+
+00:52:04.860 --> 00:52:06.930 align:middle line:84%
+So now what happens
+when we do this,
+
+00:52:06.930 --> 00:52:09.720 align:middle line:90%
+radius equals radius plus 1?
+
+00:52:09.720 --> 00:52:15.610 align:middle line:84%
+In math, that would
+say 0 equals 1.
+
+00:52:15.610 --> 00:52:16.840 align:middle line:90%
+But we're not in math here.
+
+00:52:16.840 --> 00:52:20.620 align:middle line:84%
+We're in computer science,
+and this is perfectly valid.
+
+00:52:20.620 --> 00:52:25.180 align:middle line:84%
+We're following the rule when
+we have an assignment that
+
+00:52:25.180 --> 00:52:29.920 align:middle line:84%
+says look at the right-hand
+side first and evaluate it
+
+00:52:29.920 --> 00:52:32.570 align:middle line:84%
+and then bind it to
+the left-hand side.
+
+00:52:32.570 --> 00:52:37.422 align:middle line:84%
+So if we look at the right-hand
+side first, we see radius.
+
+00:52:37.422 --> 00:52:38.380 align:middle line:90%
+Well, what's the value?
+
+00:52:38.380 --> 00:52:40.060 align:middle line:90%
+2.2.
+
+00:52:40.060 --> 00:52:43.870 align:middle line:90%
+We see add 1 to it, 3.2.
+
+00:52:43.870 --> 00:52:45.610 align:middle line:90%
+Save that in memory.
+
+00:52:45.610 --> 00:52:47.840 align:middle line:90%
+And then we see the assignment.
+
+00:52:47.840 --> 00:52:52.000 align:middle line:84%
+Now save it with
+the name radius.
+
+00:52:52.000 --> 00:52:56.260 align:middle line:84%
+OK, so we can only have
+one variable assigned
+
+00:52:56.260 --> 00:52:58.030 align:middle line:90%
+to one value at a time.
+
+00:52:58.030 --> 00:52:59.590 align:middle line:90%
+This is not math.
+
+00:52:59.590 --> 00:53:00.850 align:middle line:90%
+This is computer science.
+
+00:53:00.850 --> 00:53:05.380 align:middle line:84%
+So you can only have radius
+point to one thing at a time.
+
+00:53:05.380 --> 00:53:08.590 align:middle line:84%
+With this line of code,
+radius equals radius plus 1.
+
+00:53:08.590 --> 00:53:12.700 align:middle line:84%
+We've lost the binding to
+2.2, this object in memory,
+
+00:53:12.700 --> 00:53:17.520 align:middle line:84%
+and we've rebound
+it to the value 3.2.
+
+00:53:17.520 --> 00:53:19.320 align:middle line:90%
+And that's perfectly fine.
+
+00:53:19.320 --> 00:53:21.330 align:middle line:84%
+2.2 is now just
+sitting in memory.
+
+00:53:21.330 --> 00:53:25.380 align:middle line:84%
+We can't get back to it unless
+we say maybe radius equals 2.2.
+
+00:53:25.380 --> 00:53:27.480 align:middle line:84%
+It just sits in
+memory and then might
+
+00:53:27.480 --> 00:53:29.910 align:middle line:84%
+be collected later
+on by-- or reclaimed
+
+00:53:29.910 --> 00:53:31.840 align:middle line:84%
+by garbage collection
+or something like that.
+
+00:53:31.840 --> 00:53:34.470 align:middle line:84%
+But for now, we
+can't get back to it.
+
+00:53:34.470 --> 00:53:39.800 align:middle line:84%
+Now, what's the value for area
+at the end of these lines?
+
+00:53:39.800 --> 00:53:43.640 align:middle line:84%
+Well, according to
+this, it's 15.1976.
+
+00:53:43.640 --> 00:53:47.700 align:middle line:84%
+So it's using the old
+2.2 value for radius.
+
+00:53:47.700 --> 00:53:52.890 align:middle line:84%
+And that's OK because
+the program never told--
+
+00:53:52.890 --> 00:53:55.950 align:middle line:84%
+never had a line that
+said recalculate area
+
+00:53:55.950 --> 00:53:59.380 align:middle line:90%
+after we changed the radius.
+
+00:53:59.380 --> 00:54:02.830 align:middle line:84%
+It's just following,
+dumb, line by line.
+
+00:54:02.830 --> 00:54:05.410 align:middle line:84%
+It doesn't know that, hey,
+if I change the radius,
+
+00:54:05.410 --> 00:54:08.050 align:middle line:84%
+the user might want
+the area changed.
+
+00:54:08.050 --> 00:54:09.980 align:middle line:84%
+It doesn't make
+those connections.
+
+00:54:09.980 --> 00:54:12.190 align:middle line:84%
+It's just following
+instructions.
+
+00:54:12.190 --> 00:54:13.330 align:middle line:90%
+And that's OK.
+
+00:54:13.330 --> 00:54:15.350 align:middle line:84%
+If we want it to
+change the area,
+
+00:54:15.350 --> 00:54:18.400 align:middle line:84%
+we would have to copy
+this line and paste it
+
+00:54:18.400 --> 00:54:20.020 align:middle line:90%
+after we've changed the radius.
+
+00:54:20.020 --> 00:54:24.215 align:middle line:84%
+And then the area
+would change as well.
+
+00:54:24.215 --> 00:54:25.090 align:middle line:90%
+Does that make sense?
+
+00:54:25.090 --> 00:54:28.320 align:middle line:84%
+That's kind of an important
+part of this lecture.
+
+00:54:28.320 --> 00:54:30.410 align:middle line:90%
+OK, cool.
+
+00:54:30.410 --> 00:54:33.493 align:middle line:84%
+So big idea here is our
+lines are evaluated one
+
+00:54:33.493 --> 00:54:34.160 align:middle line:90%
+after the other.
+
+00:54:34.160 --> 00:54:35.060 align:middle line:90%
+We're not skipping.
+
+00:54:35.060 --> 00:54:36.500 align:middle line:90%
+We're not repeating things.
+
+00:54:36.500 --> 00:54:38.610 align:middle line:84%
+That's something we're
+going to learn about later.
+
+00:54:38.610 --> 00:54:41.820 align:middle line:90%
+But for now, line by line.
+
+00:54:41.820 --> 00:54:44.390 align:middle line:90%
+So here's a little you try it.
+
+00:54:44.390 --> 00:54:46.340 align:middle line:84%
+These three lines are
+executed in order.
+
+00:54:46.340 --> 00:54:49.490 align:middle line:84%
+What are the values
+for meters and feet
+
+00:54:49.490 --> 00:54:51.230 align:middle line:90%
+variables at each line?
+
+00:54:51.230 --> 00:54:54.770 align:middle line:84%
+So how about at the first line,
+what's the value for meters
+
+00:54:54.770 --> 00:54:57.450 align:middle line:90%
+after we execute the first line?
+
+00:54:57.450 --> 00:54:57.950 align:middle line:90%
+100.
+
+00:54:57.950 --> 00:54:58.715 align:middle line:90%
+What about feet?
+
+00:54:58.715 --> 00:55:01.620 align:middle line:90%
+
+
+00:55:01.620 --> 00:55:05.930 align:middle line:84%
+So at the end of the first line,
+there is no value for feet yet.
+
+00:55:05.930 --> 00:55:07.730 align:middle line:90%
+How about after the second line?
+
+00:55:07.730 --> 00:55:09.320 align:middle line:90%
+328.08.
+
+00:55:09.320 --> 00:55:09.980 align:middle line:90%
+Right?
+
+00:55:09.980 --> 00:55:11.960 align:middle line:90%
+How about the value for meters?
+
+00:55:11.960 --> 00:55:12.680 align:middle line:90%
+AUDIENCE: 100.
+
+00:55:12.680 --> 00:55:13.970 align:middle line:90%
+ANA BELL: 100 still.
+
+00:55:13.970 --> 00:55:15.950 align:middle line:84%
+And what about after
+the third line?
+
+00:55:15.950 --> 00:55:20.360 align:middle line:90%
+I'm changing meters to 200.
+
+00:55:20.360 --> 00:55:21.380 align:middle line:90%
+Exactly, yeah.
+
+00:55:21.380 --> 00:55:26.240 align:middle line:84%
+Meters is 200, but
+feet is still 328.08.
+
+00:55:26.240 --> 00:55:29.980 align:middle line:84%
+And this is something I
+want to show you guys today.
+
+00:55:29.980 --> 00:55:31.510 align:middle line:84%
+And we're going
+to use this Python
+
+00:55:31.510 --> 00:55:34.870 align:middle line:90%
+Tutor a lot more in the future.
+
+00:55:34.870 --> 00:55:37.450 align:middle line:84%
+Python Tutor is a nice
+website that allows
+
+00:55:37.450 --> 00:55:39.460 align:middle line:90%
+you to step in your code--
+
+00:55:39.460 --> 00:55:41.600 align:middle line:84%
+step through your
+code step by step.
+
+00:55:41.600 --> 00:55:44.830 align:middle line:84%
+So at each line
+that you execute,
+
+00:55:44.830 --> 00:55:47.950 align:middle line:84%
+you get to see the values of
+all the variables in the code.
+
+00:55:47.950 --> 00:55:49.790 align:middle line:84%
+It's a very useful
+debugging tool.
+
+00:55:49.790 --> 00:55:52.990 align:middle line:84%
+I hope you'll try it out
+today and on Monday, maybe,
+
+00:55:52.990 --> 00:55:55.810 align:middle line:84%
+for the finger exercises
+if you're having trouble.
+
+00:55:55.810 --> 00:55:59.350 align:middle line:84%
+And you can use it for
+quizzes to help you debug.
+
+00:55:59.350 --> 00:56:00.700 align:middle line:90%
+But I can just show you.
+
+00:56:00.700 --> 00:56:03.740 align:middle line:84%
+It's pretty simple here because
+it's just a step by step.
+
+00:56:03.740 --> 00:56:05.470 align:middle line:90%
+So we step through.
+
+00:56:05.470 --> 00:56:08.320 align:middle line:84%
+So the red says the line
+I'm going to execute.
+
+00:56:08.320 --> 00:56:10.310 align:middle line:84%
+Green is the line
+I just executed.
+
+00:56:10.310 --> 00:56:12.230 align:middle line:90%
+So I just executed meters 100.
+
+00:56:12.230 --> 00:56:16.120 align:middle line:84%
+So here I have my meters
+variable with the value 100.
+
+00:56:16.120 --> 00:56:17.630 align:middle line:90%
+Step through next.
+
+00:56:17.630 --> 00:56:19.450 align:middle line:84%
+So I just executed
+feet equals this.
+
+00:56:19.450 --> 00:56:24.770 align:middle line:84%
+So I now have a variable named
+feet with a value 328.08.
+
+00:56:24.770 --> 00:56:26.590 align:middle line:90%
+Meters still 100.
+
+00:56:26.590 --> 00:56:33.760 align:middle line:84%
+And then meters 200,
+feet remained 328.08.
+
+00:56:33.760 --> 00:56:35.710 align:middle line:84%
+So obviously, this is
+a pretty simple program
+
+00:56:35.710 --> 00:56:37.240 align:middle line:84%
+to run the Python
+Tutor on, but you
+
+00:56:37.240 --> 00:56:44.500 align:middle line:84%
+can imagine using it in
+more complex settings.
+
+00:56:44.500 --> 00:56:45.700 align:middle line:90%
+How about one more?
+
+00:56:45.700 --> 00:56:47.770 align:middle line:90%
+And this is my last example.
+
+00:56:47.770 --> 00:56:49.990 align:middle line:84%
+I want you to try to
+write a program that
+
+00:56:49.990 --> 00:56:51.910 align:middle line:90%
+swaps the values of x and y.
+
+00:56:51.910 --> 00:56:53.800 align:middle line:84%
+So originally--
+and I'll draw this,
+
+00:56:53.800 --> 00:56:55.610 align:middle line:90%
+the memory diagram real quick.
+
+00:56:55.610 --> 00:56:58.330 align:middle line:90%
+So we have-- this is our memory.
+
+00:56:58.330 --> 00:57:00.970 align:middle line:90%
+We have x is bound to 1.
+
+00:57:00.970 --> 00:57:03.550 align:middle line:90%
+Y is bound to 2.
+
+00:57:03.550 --> 00:57:08.110 align:middle line:84%
+And what I want to do
+without saying x equals 2,
+
+00:57:08.110 --> 00:57:10.750 align:middle line:84%
+y equals 1, what I want
+to do is swap the values.
+
+00:57:10.750 --> 00:57:14.980 align:middle line:84%
+I want x to be associated with
+2 and y to be associated with 1
+
+00:57:14.980 --> 00:57:19.000 align:middle line:84%
+but only using
+commands like this.
+
+00:57:19.000 --> 00:57:22.780 align:middle line:90%
+And so the code here is buggy.
+
+00:57:22.780 --> 00:57:23.980 align:middle line:90%
+That means it's wrong.
+
+00:57:23.980 --> 00:57:26.650 align:middle line:90%
+It has an error in it.
+
+00:57:26.650 --> 00:57:28.270 align:middle line:84%
+Well, let's step
+through-- let's step
+
+00:57:28.270 --> 00:57:29.710 align:middle line:90%
+through a little bit at a time.
+
+00:57:29.710 --> 00:57:32.110 align:middle line:90%
+Y equals x.
+
+00:57:32.110 --> 00:57:34.630 align:middle line:84%
+What do I do when
+y equals x here?
+
+00:57:34.630 --> 00:57:37.610 align:middle line:90%
+
+
+00:57:37.610 --> 00:57:43.110 align:middle line:84%
+Yeah, exactly, y is going
+to move from 2 to 1.
+
+00:57:43.110 --> 00:57:45.285 align:middle line:84%
+Now, what happens
+when I do x equals y?
+
+00:57:45.285 --> 00:57:47.840 align:middle line:90%
+
+
+00:57:47.840 --> 00:57:49.820 align:middle line:90%
+Yes, x stays the same.
+
+00:57:49.820 --> 00:57:54.260 align:middle line:84%
+My first line, y equals
+x, lost the binding to 2.
+
+00:57:54.260 --> 00:57:58.470 align:middle line:84%
+And now it's all messed up
+because I can't get it back.
+
+00:57:58.470 --> 00:58:00.860 align:middle line:84%
+So instead-- so if you
+didn't understand this,
+
+00:58:00.860 --> 00:58:03.710 align:middle line:84%
+you can click Python Tutor
+and just step through step
+
+00:58:03.710 --> 00:58:05.510 align:middle line:90%
+by step on your own.
+
+00:58:05.510 --> 00:58:07.943 align:middle line:90%
+But how can we fix this?
+
+00:58:07.943 --> 00:58:09.755 align:middle line:84%
+AUDIENCE: Create
+a third variable.
+
+00:58:09.755 --> 00:58:11.600 align:middle line:84%
+ANA BELL: Create
+a third variable?
+
+00:58:11.600 --> 00:58:12.820 align:middle line:90%
+Yeah, that's a great idea.
+
+00:58:12.820 --> 00:58:14.540 align:middle line:84%
+Yeah, we can create
+a third variable.
+
+00:58:14.540 --> 00:58:16.960 align:middle line:90%
+So x is 1, y is 1--
+
+00:58:16.960 --> 00:58:17.863 align:middle line:90%
+y is 2.
+
+00:58:17.863 --> 00:58:19.280 align:middle line:84%
+So we can create
+a third variable.
+
+00:58:19.280 --> 00:58:23.230 align:middle line:84%
+What do you want to make
+the variable equal to?
+
+00:58:23.230 --> 00:58:25.090 align:middle line:90%
+X or y?
+
+00:58:25.090 --> 00:58:27.280 align:middle line:90%
+Yeah, either one.
+
+00:58:27.280 --> 00:58:30.190 align:middle line:90%
+I made it y, so let's do y.
+
+00:58:30.190 --> 00:58:33.490 align:middle line:84%
+So here I've got a temporary
+variable called "temp,"
+
+00:58:33.490 --> 00:58:36.970 align:middle line:90%
+and I made it equal to 2.
+
+00:58:36.970 --> 00:58:38.395 align:middle line:90%
+And now what can I do?
+
+00:58:38.395 --> 00:58:41.890 align:middle line:90%
+
+
+00:58:41.890 --> 00:58:43.410 align:middle line:90%
+Which one can I reassign now?
+
+00:58:43.410 --> 00:58:47.390 align:middle line:90%
+X equals y, or y equals x?
+
+00:58:47.390 --> 00:58:49.880 align:middle line:84%
+Exactly, y equals--
+if I do x equals y,
+
+00:58:49.880 --> 00:58:53.430 align:middle line:84%
+I lose my binding to 1,
+and it messed up again.
+
+00:58:53.430 --> 00:58:55.610 align:middle line:90%
+So y equals x is OK to do.
+
+00:58:55.610 --> 00:58:59.290 align:middle line:84%
+So I'm going to lose the
+binding from y from 2
+
+00:58:59.290 --> 00:59:01.120 align:middle line:90%
+and bind it up to 1.
+
+00:59:01.120 --> 00:59:04.590 align:middle line:90%
+And now what do I do?
+
+00:59:04.590 --> 00:59:10.960 align:middle line:84%
+Yeah, now I can safely
+reassign x to temp.
+
+00:59:10.960 --> 00:59:14.830 align:middle line:84%
+So I can say x is equal to
+temp because temp points to 2.
+
+00:59:14.830 --> 00:59:19.470 align:middle line:84%
+And I want to make x
+point to 2 as well.
+
+00:59:19.470 --> 00:59:23.297 align:middle line:84%
+So in terms of code,
+that's sort of the diagram.
+
+00:59:23.297 --> 00:59:24.380 align:middle line:90%
+But we can write the code.
+
+00:59:24.380 --> 00:59:27.680 align:middle line:90%
+So you don't-- let's see.
+
+00:59:27.680 --> 00:59:31.040 align:middle line:84%
+We don't write it in
+here, but on your own,
+
+00:59:31.040 --> 00:59:32.828 align:middle line:84%
+you can write it in
+here if you'd like.
+
+00:59:32.828 --> 00:59:33.870 align:middle line:90%
+Or we can do it together.
+
+00:59:33.870 --> 00:59:34.970 align:middle line:90%
+So x is equal--
+
+00:59:34.970 --> 00:59:35.480 align:middle line:90%
+oops.
+
+00:59:35.480 --> 00:59:39.050 align:middle line:90%
+X equals 1, y equals 2.
+
+00:59:39.050 --> 00:59:41.780 align:middle line:90%
+And then we had temp.
+
+00:59:41.780 --> 00:59:45.020 align:middle line:84%
+We wanted to assign
+it to whatever y was.
+
+00:59:45.020 --> 00:59:48.120 align:middle line:90%
+So we say temp is equal to y.
+
+00:59:48.120 --> 00:59:50.640 align:middle line:84%
+And if you want to check
+the values of the variables,
+
+00:59:50.640 --> 00:59:52.350 align:middle line:90%
+you can just invoke the names.
+
+00:59:52.350 --> 00:59:59.380 align:middle line:84%
+So x is 1, y is 2, and temp
+should be whatever y is, 2.
+
+00:59:59.380 --> 01:00:00.980 align:middle line:90%
+OK, good so far.
+
+01:00:00.980 --> 01:00:07.210 align:middle line:84%
+So now I'm at the step
+here, I think, right?
+
+01:00:07.210 --> 01:00:08.480 align:middle line:90%
+I've just created this.
+
+01:00:08.480 --> 01:00:10.120 align:middle line:84%
+And then the last
+thing I need to do
+
+01:00:10.120 --> 01:00:15.730 align:middle line:84%
+is lose the binding from
+x to whatever temp is.
+
+01:00:15.730 --> 01:00:18.320 align:middle line:84%
+So I want to do
+this operation here,
+
+01:00:18.320 --> 01:00:23.540 align:middle line:84%
+which means I want to assign
+x to be equal to temp.
+
+01:00:23.540 --> 01:00:26.960 align:middle line:90%
+So now x is 2, y is 1.
+
+01:00:26.960 --> 01:00:29.720 align:middle line:90%
+
+
+01:00:29.720 --> 01:00:32.850 align:middle line:90%
+What did I do?
+
+01:00:32.850 --> 01:00:36.120 align:middle line:90%
+Yeah, so this happens sometimes.
+
+01:00:36.120 --> 01:00:39.210 align:middle line:90%
+We can just start all over.
+
+01:00:39.210 --> 01:00:41.670 align:middle line:90%
+So y equals temp.
+
+01:00:41.670 --> 01:00:42.540 align:middle line:90%
+Sorry.
+
+01:00:42.540 --> 01:00:44.910 align:middle line:90%
+Temp equals y.
+
+01:00:44.910 --> 01:00:49.610 align:middle line:90%
+
+
+01:00:49.610 --> 01:00:52.360 align:middle line:90%
+Y equals x.
+
+01:00:52.360 --> 01:00:53.620 align:middle line:90%
+Y is one.
+
+01:00:53.620 --> 01:00:54.670 align:middle line:90%
+X is 1.
+
+01:00:54.670 --> 01:00:58.060 align:middle line:90%
+And then x equals temp.
+
+01:00:58.060 --> 01:01:00.940 align:middle line:90%
+Y is one, x is 2.
+
+01:01:00.940 --> 01:01:04.480 align:middle line:90%
+So it's OK if things go wrong.
+
+01:01:04.480 --> 01:01:05.870 align:middle line:90%
+They will go wrong.
+
+01:01:05.870 --> 01:01:08.080 align:middle line:84%
+We can just start all over
+in this particular case
+
+01:01:08.080 --> 01:01:10.300 align:middle line:84%
+by redefining our
+variables and just
+
+01:01:10.300 --> 01:01:11.960 align:middle line:90%
+trying it out all over again.
+
+01:01:11.960 --> 01:01:13.730 align:middle line:84%
+So that's kind of
+what the shell is for.
+
+01:01:13.730 --> 01:01:14.660 align:middle line:90%
+That's what I use it for.
+
+01:01:14.660 --> 01:01:16.827 align:middle line:84%
+That's what we're going to
+use it for in the future,
+
+01:01:16.827 --> 01:01:20.950 align:middle line:84%
+just to do quick things
+like this and also things
+
+01:01:20.950 --> 01:01:24.070 align:middle line:84%
+like checking the types
+and other commands we've
+
+01:01:24.070 --> 01:01:27.700 align:middle line:90%
+done earlier.
+
+01:01:27.700 --> 01:01:30.910 align:middle line:84%
+OK, so any questions
+before we do the summary?
+
+01:01:30.910 --> 01:01:33.640 align:middle line:84%
+Was this all right pace
+or was it too fast?
+
+01:01:33.640 --> 01:01:35.510 align:middle line:90%
+Or it was OK?
+
+01:01:35.510 --> 01:01:36.700 align:middle line:90%
+OK, good.
+
+01:01:36.700 --> 01:01:37.700 align:middle line:90%
+Thumbs up is good.
+
+01:01:37.700 --> 01:01:40.280 align:middle line:90%
+So let's do a quick summary.
+
+01:01:40.280 --> 01:01:43.420 align:middle line:84%
+We saw that we can
+create programs
+
+01:01:43.420 --> 01:01:45.160 align:middle line:90%
+by manipulating objects.
+
+01:01:45.160 --> 01:01:47.500 align:middle line:90%
+We created objects in Python.
+
+01:01:47.500 --> 01:01:50.080 align:middle line:84%
+And we saw that objects
+have a particular type.
+
+01:01:50.080 --> 01:01:53.470 align:middle line:84%
+The type that the object
+has tells Python the things
+
+01:01:53.470 --> 01:01:57.260 align:middle line:84%
+that you can do
+with that object.
+
+01:01:57.260 --> 01:02:00.770 align:middle line:84%
+We can combine objects
+in expressions.
+
+01:02:00.770 --> 01:02:04.000 align:middle line:84%
+And these expressions
+evaluate or boil down
+
+01:02:04.000 --> 01:02:06.310 align:middle line:90%
+to one particular value.
+
+01:02:06.310 --> 01:02:09.850 align:middle line:84%
+Objects or values can
+be stored in variables.
+
+01:02:09.850 --> 01:02:13.510 align:middle line:84%
+And these variables allow
+us to access these values
+
+01:02:13.510 --> 01:02:15.820 align:middle line:84%
+with nicer names later
+on in our program.
+
+01:02:15.820 --> 01:02:20.470 align:middle line:84%
+And then we're able to write
+neater, more legible programs
+
+01:02:20.470 --> 01:02:21.790 align:middle line:90%
+as well.
+
+01:02:21.790 --> 01:02:22.600 align:middle line:90%
+So the equal sign--
+
+01:02:22.600 --> 01:02:25.360 align:middle line:84%
+I showed you a couple of
+differences between math
+
+01:02:25.360 --> 01:02:26.290 align:middle line:90%
+and computer science.
+
+01:02:26.290 --> 01:02:29.840 align:middle line:84%
+The equal sign was one
+notable difference.
+
+01:02:29.840 --> 01:02:31.910 align:middle line:84%
+The equal sign in
+math is declarative,
+
+01:02:31.910 --> 01:02:34.910 align:middle line:84%
+and the equal sign in computer
+science is an assignment.
+
+01:02:34.910 --> 01:02:38.600 align:middle line:84%
+You're basically saying this
+is associated with this.
+
+01:02:38.600 --> 01:02:44.230 align:middle line:84%
+And we're not doing any sort of
+equality in computer science.
+
+01:02:44.230 --> 01:02:48.640 align:middle line:84%
+And yes, computers do
+what you tell them to do.
+
+01:02:48.640 --> 01:02:51.340 align:middle line:84%
+That's kind of the
+big thing here.
+
+01:02:51.340 --> 01:02:54.010 align:middle line:84%
+Line by line, it executes
+starting from the top,
+
+01:02:54.010 --> 01:02:55.880 align:middle line:90%
+goes line by line.
+
+01:02:55.880 --> 01:02:58.960 align:middle line:84%
+So far, we haven't
+seen any places where
+
+01:02:58.960 --> 01:03:00.610 align:middle line:90%
+the computer makes a decision.
+
+01:03:00.610 --> 01:03:02.560 align:middle line:84%
+But next lecture,
+we will see how
+
+01:03:02.560 --> 01:03:06.130 align:middle line:84%
+we can insert decision
+points in our programs
+
+01:03:06.130 --> 01:03:10.420 align:middle line:84%
+for the computer to either
+execute one set of code
+
+01:03:10.420 --> 01:03:12.380 align:middle line:90%
+or another set of code.
+
+01:03:12.380 --> 01:03:14.870 align:middle line:84%
+All right, so that's the
+end of today's lecture.
+
+01:03:14.870 --> 01:03:16.070 align:middle line:90%
+Thank you all for joining.
+
+01:03:16.070 --> 01:03:18.330 align:middle line:90%
+I will see you on Monday.
+
+01:03:18.330 --> 01:03:30.000 align:middle line:90%

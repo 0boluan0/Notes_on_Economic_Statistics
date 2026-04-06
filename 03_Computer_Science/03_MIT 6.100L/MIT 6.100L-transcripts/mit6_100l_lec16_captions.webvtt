@@ -1,0 +1,6122 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.485 align:middle line:90%
+[SQUEAKING]
+
+00:00:01.485 --> 00:00:02.970 align:middle line:90%
+[RUSTLING]
+
+00:00:02.970 --> 00:00:03.960 align:middle line:90%
+
+
+00:00:03.960 --> 00:00:05.445 align:middle line:90%
+[CLICKING]
+
+00:00:05.445 --> 00:00:16.350 align:middle line:90%
+
+
+00:00:16.350 --> 00:00:18.630 align:middle line:84%
+ANA BELL: Let's get
+started, everybody.
+
+00:00:18.630 --> 00:00:21.150 align:middle line:84%
+So last lecture,
+we began talking
+
+00:00:21.150 --> 00:00:23.250 align:middle line:90%
+about this topic of recursion.
+
+00:00:23.250 --> 00:00:29.310 align:middle line:84%
+And it hopefully solidified a
+few really fundamental ideas
+
+00:00:29.310 --> 00:00:33.600 align:middle line:84%
+about recursion that we're
+going to use in today's lecture.
+
+00:00:33.600 --> 00:00:35.970 align:middle line:84%
+Today's lecture,
+the first half of it
+
+00:00:35.970 --> 00:00:40.350 align:middle line:84%
+ish we're going to talk
+about recursion just
+
+00:00:40.350 --> 00:00:44.050 align:middle line:84%
+to review on some actual
+numerical examples.
+
+00:00:44.050 --> 00:00:46.980 align:middle line:84%
+But then the second half, which
+is the main event for today,
+
+00:00:46.980 --> 00:00:50.310 align:middle line:84%
+is going to be recursion on
+non-numerics, so specifically
+
+00:00:50.310 --> 00:00:51.700 align:middle line:90%
+recursion on lists.
+
+00:00:51.700 --> 00:00:53.370 align:middle line:84%
+But the techniques
+we'll see on lists
+
+00:00:53.370 --> 00:00:56.430 align:middle line:84%
+can be applied to other
+things that are non-numerics
+
+00:00:56.430 --> 00:01:00.020 align:middle line:84%
+as well, like tuples, or
+strings, or things like that.
+
+00:01:00.020 --> 00:01:03.805 align:middle line:84%
+So let's start the review a
+little bit of a review of what
+
+00:01:03.805 --> 00:01:05.930 align:middle line:84%
+we talked about last time
+and some of the big ideas
+
+00:01:05.930 --> 00:01:07.380 align:middle line:90%
+by looking at this example.
+
+00:01:07.380 --> 00:01:10.100 align:middle line:84%
+So we're going to write
+a recursive function
+
+00:01:10.100 --> 00:01:11.850 align:middle line:90%
+for the Fibonacci sequence.
+
+00:01:11.850 --> 00:01:13.820 align:middle line:84%
+And the Fibonacci
+sequence exists
+
+00:01:13.820 --> 00:01:16.230 align:middle line:90%
+in nature in a lot of places.
+
+00:01:16.230 --> 00:01:20.420 align:middle line:84%
+One specific place is you
+can model mating of rabbits
+
+00:01:20.420 --> 00:01:21.740 align:middle line:90%
+using Fibonacci sequence.
+
+00:01:21.740 --> 00:01:24.320 align:middle line:90%
+
+
+00:01:24.320 --> 00:01:26.340 align:middle line:84%
+But we won't be studying
+that in depth today.
+
+00:01:26.340 --> 00:01:28.590 align:middle line:84%
+We're just going to be looking
+at the sequence itself.
+
+00:01:28.590 --> 00:01:31.310 align:middle line:84%
+So just to remind you,
+the idea behind Fibonacci
+
+00:01:31.310 --> 00:01:36.080 align:middle line:84%
+is we start out with two sort
+of basic values, Fibonacci of 1
+
+00:01:36.080 --> 00:01:38.810 align:middle line:90%
+is 1 and Fibonacci of 2 is 1.
+
+00:01:38.810 --> 00:01:42.260 align:middle line:84%
+So in my table here, I've got
+these two starting values.
+
+00:01:42.260 --> 00:01:44.600 align:middle line:84%
+And we can fill in the
+remainder of the table
+
+00:01:44.600 --> 00:01:48.110 align:middle line:84%
+by basically saying Fibonacci
+of n is Fibonacci of n minus 1
+
+00:01:48.110 --> 00:01:50.300 align:middle line:90%
+plus Fibonacci of n minus 2.
+
+00:01:50.300 --> 00:01:52.880 align:middle line:84%
+So Fibonacci of 3
+will be 1 plus 1.
+
+00:01:52.880 --> 00:01:55.010 align:middle line:90%
+Fibonacci of 4 will be 2 plus 1.
+
+00:01:55.010 --> 00:01:56.900 align:middle line:90%
+Fibonacci of 5 is 3 plus 2.
+
+00:01:56.900 --> 00:01:58.950 align:middle line:90%
+Fibonacci of 6 is 5 plus 3.
+
+00:01:58.950 --> 00:02:00.760 align:middle line:90%
+And Fibonacci of 7 is 8 plus 5.
+
+00:02:00.760 --> 00:02:01.260 align:middle line:90%
+Right.
+
+00:02:01.260 --> 00:02:05.190 align:middle line:84%
+That's the sequence
+we all know and love.
+
+00:02:05.190 --> 00:02:05.690 align:middle line:90%
+OK.
+
+00:02:05.690 --> 00:02:07.700 align:middle line:84%
+So our two base
+cases, if we're going
+
+00:02:07.700 --> 00:02:11.600 align:middle line:84%
+to put this in mathematical
+terms, are Fibonacci of 1 is 1.
+
+00:02:11.600 --> 00:02:13.550 align:middle line:90%
+Fibonacci of 2 is 1.
+
+00:02:13.550 --> 00:02:18.440 align:middle line:84%
+And our recursive step right
+in terms of the math and slash
+
+00:02:18.440 --> 00:02:22.580 align:middle line:84%
+programming lingo is going
+to be the Fibonacci of n
+
+00:02:22.580 --> 00:02:26.660 align:middle line:84%
+is equal to Fibonacci of n minus
+1 plus Fibonacci of n minus 2.
+
+00:02:26.660 --> 00:02:29.250 align:middle line:90%
+So we put that in our function.
+
+00:02:29.250 --> 00:02:32.330 align:middle line:84%
+So we slap a definition
+around that code
+
+00:02:32.330 --> 00:02:34.970 align:middle line:84%
+and turn it into a nice
+function that we can run.
+
+00:02:34.970 --> 00:02:39.020 align:middle line:84%
+If x is 1 or x is 2-- those are
+our two base cases-- we just
+
+00:02:39.020 --> 00:02:40.470 align:middle line:90%
+return one right off the bat.
+
+00:02:40.470 --> 00:02:40.970 align:middle line:90%
+Right.
+
+00:02:40.970 --> 00:02:41.720 align:middle line:90%
+Nothing to call.
+
+00:02:41.720 --> 00:02:43.070 align:middle line:90%
+No functions to call.
+
+00:02:43.070 --> 00:02:44.600 align:middle line:90%
+They're our base cases.
+
+00:02:44.600 --> 00:02:48.512 align:middle line:84%
+But otherwise, we're
+going to return a value.
+
+00:02:48.512 --> 00:02:49.970 align:middle line:84%
+And the thing we're
+going to return
+
+00:02:49.970 --> 00:02:52.880 align:middle line:84%
+is a call to
+Fibonacci of n minus 1
+
+00:02:52.880 --> 00:02:55.010 align:middle line:84%
+plus Fibonacci of
+n minus 2 just like
+
+00:02:55.010 --> 00:02:58.130 align:middle line:84%
+the mathematical
+definition said to do.
+
+00:02:58.130 --> 00:02:58.820 align:middle line:90%
+OK.
+
+00:02:58.820 --> 00:03:01.400 align:middle line:84%
+So this is different than
+what we saw last lecture.
+
+00:03:01.400 --> 00:03:03.170 align:middle line:84%
+Last lecture in
+our recursive step,
+
+00:03:03.170 --> 00:03:06.900 align:middle line:84%
+we had basically just one
+function call to ourselves.
+
+00:03:06.900 --> 00:03:09.660 align:middle line:84%
+So whatever function
+we had defined up here,
+
+00:03:09.660 --> 00:03:13.290 align:middle line:84%
+we only had return some
+variation of that function down
+
+00:03:13.290 --> 00:03:15.780 align:middle line:84%
+here with something
+else tacked on to it,
+
+00:03:15.780 --> 00:03:18.210 align:middle line:84%
+like an addition of some
+value or something else.
+
+00:03:18.210 --> 00:03:20.940 align:middle line:84%
+In this case, we actually
+have the function
+
+00:03:20.940 --> 00:03:22.750 align:middle line:90%
+being called twice.
+
+00:03:22.750 --> 00:03:23.250 align:middle line:90%
+OK.
+
+00:03:23.250 --> 00:03:27.390 align:middle line:84%
+So we're going to see
+what implications this has
+
+00:03:27.390 --> 00:03:29.230 align:middle line:90%
+as we trace through the code.
+
+00:03:29.230 --> 00:03:30.690 align:middle line:84%
+And so as I trace
+through the code,
+
+00:03:30.690 --> 00:03:33.120 align:middle line:84%
+I'll remind you of
+some of the big ideas
+
+00:03:33.120 --> 00:03:35.740 align:middle line:90%
+that we learned last lecture.
+
+00:03:35.740 --> 00:03:39.690 align:middle line:84%
+So let's say that we wanted
+to calculate Fibonacci of 6.
+
+00:03:39.690 --> 00:03:42.690 align:middle line:84%
+And so I'm going to illustrate
+a function call just
+
+00:03:42.690 --> 00:03:47.790 align:middle line:84%
+by the name of the function with
+the parameter that I'm calling.
+
+00:03:47.790 --> 00:03:50.310 align:middle line:84%
+So one of the big
+ideas from last lecture
+
+00:03:50.310 --> 00:03:52.050 align:middle line:84%
+was that when you
+make a function
+
+00:03:52.050 --> 00:03:55.510 align:middle line:84%
+call to a function
+that's recursive,
+
+00:03:55.510 --> 00:03:57.850 align:middle line:84%
+you're going to trace
+through that function
+
+00:03:57.850 --> 00:03:59.860 align:middle line:84%
+call and the environment
+for that function
+
+00:03:59.860 --> 00:04:01.310 align:middle line:90%
+just as you normally would.
+
+00:04:01.310 --> 00:04:04.780 align:middle line:84%
+But as soon as you see another
+function call, so in this case,
+
+00:04:04.780 --> 00:04:07.760 align:middle line:84%
+Fibonacci of 6 doesn't
+enter the base cases.
+
+00:04:07.760 --> 00:04:10.310 align:middle line:84%
+It goes up into
+the recursive step.
+
+00:04:10.310 --> 00:04:12.370 align:middle line:84%
+And it says I'm
+going to calculate
+
+00:04:12.370 --> 00:04:16.839 align:middle line:84%
+Fibonacci of x minus 1 plus
+Fibonacci of x minus 2.
+
+00:04:16.839 --> 00:04:19.839 align:middle line:84%
+So for this Fibonacci
+of 6 function
+
+00:04:19.839 --> 00:04:23.620 align:middle line:84%
+call, let's follow along and
+say, well, Fibonacci of 6,
+
+00:04:23.620 --> 00:04:26.290 align:middle line:84%
+we'll say I want to
+calculate Fibonacci of 5.
+
+00:04:26.290 --> 00:04:30.580 align:middle line:90%
+
+
+00:04:30.580 --> 00:04:31.870 align:middle line:90%
+This is my question to you.
+
+00:04:31.870 --> 00:04:35.350 align:middle line:84%
+Is it going to now
+calculate Fibonacci of 4?
+
+00:04:35.350 --> 00:04:38.900 align:middle line:90%
+
+
+00:04:38.900 --> 00:04:39.830 align:middle line:90%
+No.
+
+00:04:39.830 --> 00:04:44.660 align:middle line:84%
+Very good because Fibonacci
+of 5 is a function call.
+
+00:04:44.660 --> 00:04:45.200 align:middle line:90%
+Right.
+
+00:04:45.200 --> 00:04:48.230 align:middle line:84%
+We need to explore what
+this function will return
+
+00:04:48.230 --> 00:04:52.070 align:middle line:84%
+before Fibonacci of 6 can
+add the result of this,
+
+00:04:52.070 --> 00:04:55.700 align:middle line:84%
+the return of this,
+to Fibonacci of 4.
+
+00:04:55.700 --> 00:04:58.730 align:middle line:84%
+So that means then
+this new Fib(5)
+
+00:04:58.730 --> 00:05:03.170 align:middle line:84%
+is an entirely new environment
+calling Fibonacci with n
+
+00:05:03.170 --> 00:05:04.820 align:middle line:84%
+is equal to 5,
+completely separate
+
+00:05:04.820 --> 00:05:07.170 align:middle line:84%
+than our original
+Fibonacci of 6 call.
+
+00:05:07.170 --> 00:05:09.830 align:middle line:84%
+So let's explore what
+Fibonacci of 5 is going to do.
+
+00:05:09.830 --> 00:05:12.500 align:middle line:84%
+Well, in its function call,
+it's going to again go
+
+00:05:12.500 --> 00:05:13.670 align:middle line:90%
+in the recursive step.
+
+00:05:13.670 --> 00:05:16.570 align:middle line:84%
+It's going to figure
+out Fibonacci of 4.
+
+00:05:16.570 --> 00:05:18.087 align:middle line:84%
+And then it's going
+to pause there
+
+00:05:18.087 --> 00:05:20.170 align:middle line:84%
+because it needs to figure
+out what Fibonacci of 4
+
+00:05:20.170 --> 00:05:24.860 align:middle line:84%
+is before it finishes its other
+half to do Fibonacci of 3.
+
+00:05:24.860 --> 00:05:27.650 align:middle line:84%
+So Fibonacci of 4 will now
+create a new environment.
+
+00:05:27.650 --> 00:05:30.240 align:middle line:84%
+And now it has to
+explore its return.
+
+00:05:30.240 --> 00:05:32.390 align:middle line:84%
+So it figures out
+Fibonacci of 4 is, again,
+
+00:05:32.390 --> 00:05:34.850 align:middle line:84%
+going into the recursive
+step to calculate
+
+00:05:34.850 --> 00:05:36.980 align:middle line:90%
+Fibonacci of 3 plus something.
+
+00:05:36.980 --> 00:05:39.020 align:middle line:84%
+But we don't know what
+that something is yet
+
+00:05:39.020 --> 00:05:42.080 align:middle line:84%
+because we have to explore
+what Fibonacci of 3 is.
+
+00:05:42.080 --> 00:05:44.330 align:middle line:84%
+So already we're four
+function calls deep
+
+00:05:44.330 --> 00:05:47.750 align:middle line:84%
+and we haven't
+really done any work
+
+00:05:47.750 --> 00:05:49.370 align:middle line:90%
+that we can see the result of.
+
+00:05:49.370 --> 00:05:51.620 align:middle line:84%
+There's no values
+being passed back.
+
+00:05:51.620 --> 00:05:54.350 align:middle line:84%
+All we're doing is
+exploring this path down
+
+00:05:54.350 --> 00:05:56.180 align:middle line:84%
+until we get to some
+sort of base case
+
+00:05:56.180 --> 00:06:01.250 align:middle line:84%
+that will kick off our
+conquer step where we
+
+00:06:01.250 --> 00:06:03.780 align:middle line:90%
+pass values back up the chain.
+
+00:06:03.780 --> 00:06:05.910 align:middle line:84%
+So Fibonacci of
+3, again, is going
+
+00:06:05.910 --> 00:06:07.980 align:middle line:90%
+to look at Fibonacci of 2.
+
+00:06:07.980 --> 00:06:12.820 align:middle line:84%
+And finally, we've
+reached a base case.
+
+00:06:12.820 --> 00:06:15.600 align:middle line:84%
+So Fibonacci of 2 will
+immediately return.
+
+00:06:15.600 --> 00:06:17.440 align:middle line:84%
+It doesn't make
+another function call.
+
+00:06:17.440 --> 00:06:23.230 align:middle line:84%
+So Fibonacci of 2 will return a
+value and then Fibonacci of 3,
+
+00:06:23.230 --> 00:06:27.610 align:middle line:84%
+in its function call, has
+the result for Fibonacci of 2
+
+00:06:27.610 --> 00:06:32.680 align:middle line:84%
+and then it's going to do plus
+that value plus Fibonacci of 1,
+
+00:06:32.680 --> 00:06:33.640 align:middle line:90%
+3 minus 2.
+
+00:06:33.640 --> 00:06:35.320 align:middle line:90%
+So that's this one here.
+
+00:06:35.320 --> 00:06:41.140 align:middle line:84%
+It can easily do that addition
+and return the value back up
+
+00:06:41.140 --> 00:06:42.460 align:middle line:90%
+to Fibonacci of 3.
+
+00:06:42.460 --> 00:06:49.750 align:middle line:84%
+So now Fibonacci of 3
+has its first half ready.
+
+00:06:49.750 --> 00:06:52.280 align:middle line:90%
+So Fibonacci of 4--
+
+00:06:52.280 --> 00:06:52.780 align:middle line:90%
+sorry.
+
+00:06:52.780 --> 00:06:56.320 align:middle line:84%
+So Fibonacci of 4 has its first
+half ready, Fibonacci of 3.
+
+00:06:56.320 --> 00:07:00.190 align:middle line:84%
+So Fibonacci of 4 was trying
+to figure out what Fib(3) was.
+
+00:07:00.190 --> 00:07:01.660 align:middle line:90%
+And it did.
+
+00:07:01.660 --> 00:07:03.580 align:middle line:90%
+It was Fib(2) plus Fib(1), 2.
+
+00:07:03.580 --> 00:07:07.240 align:middle line:84%
+So now it has a value
+for its first half here.
+
+00:07:07.240 --> 00:07:13.390 align:middle line:84%
+And it needs to add that value
+to Fibonacci of 2, 4 minus 2.
+
+00:07:13.390 --> 00:07:15.100 align:middle line:90%
+So it will explore that path.
+
+00:07:15.100 --> 00:07:16.370 align:middle line:90%
+That's a base case.
+
+00:07:16.370 --> 00:07:18.520 align:middle line:84%
+So all it does is return
+the value immediately
+
+00:07:18.520 --> 00:07:22.090 align:middle line:84%
+and now Fibonacci
+of 4 has its value,
+
+00:07:22.090 --> 00:07:24.970 align:middle line:84%
+whatever Fib(3) was that we
+figured out, plus Fib(2).
+
+00:07:24.970 --> 00:07:27.490 align:middle line:90%
+
+
+00:07:27.490 --> 00:07:32.230 align:middle line:84%
+Now Fib(4), we have a value
+for it when we called Fib(5).
+
+00:07:32.230 --> 00:07:35.770 align:middle line:84%
+So Fib(5) is now
+halfway happy because it
+
+00:07:35.770 --> 00:07:37.240 align:middle line:90%
+knows what Fib(4) is.
+
+00:07:37.240 --> 00:07:40.820 align:middle line:84%
+But it needs to
+add that to Fib(3).
+
+00:07:40.820 --> 00:07:44.600 align:middle line:90%
+So Fib(5) is still halted.
+
+00:07:44.600 --> 00:07:46.820 align:middle line:84%
+It can't return anything
+because now it needs
+
+00:07:46.820 --> 00:07:48.620 align:middle line:90%
+to explore what Fib(3) is.
+
+00:07:48.620 --> 00:07:56.630 align:middle line:84%
+Well, Fib(3) is going to
+do another function call.
+
+00:07:56.630 --> 00:07:57.130 align:middle line:90%
+Right?
+
+00:07:57.130 --> 00:08:00.280 align:middle line:84%
+So it's going to call
+Fib(2) and Fib(1), which
+
+00:08:00.280 --> 00:08:03.070 align:middle line:84%
+are two base cases which
+easily return the value back
+
+00:08:03.070 --> 00:08:04.090 align:middle line:90%
+up to Fib(3).
+
+00:08:04.090 --> 00:08:08.060 align:middle line:84%
+And now Fib(5) is happy
+because it knows this value.
+
+00:08:08.060 --> 00:08:09.340 align:middle line:90%
+And now it knows this value.
+
+00:08:09.340 --> 00:08:10.540 align:middle line:90%
+It can add them together.
+
+00:08:10.540 --> 00:08:14.350 align:middle line:84%
+And Fib(5) now has a value
+that it can keep track of.
+
+00:08:14.350 --> 00:08:16.810 align:middle line:90%
+And now, finally, Fib(6)--
+
+00:08:16.810 --> 00:08:18.760 align:middle line:84%
+we're not even close to
+being done, you guys.
+
+00:08:18.760 --> 00:08:21.640 align:middle line:84%
+Fib(6) has a Fib(5)
+value so it has
+
+00:08:21.640 --> 00:08:23.470 align:middle line:84%
+half of the things it
+needs to figure out
+
+00:08:23.470 --> 00:08:25.750 align:middle line:84%
+what Fib(6) is
+because now it has
+
+00:08:25.750 --> 00:08:27.610 align:middle line:90%
+to figure out what Fib(4) is.
+
+00:08:27.610 --> 00:08:30.250 align:middle line:84%
+And already you can tell
+what we're going to do next.
+
+00:08:30.250 --> 00:08:32.500 align:middle line:84%
+We're going to start
+exploring the exact same way
+
+00:08:32.500 --> 00:08:33.789 align:middle line:90%
+like we did before.
+
+00:08:33.789 --> 00:08:36.010 align:middle line:84%
+Fib(4) needs to
+calculate Fib(3).
+
+00:08:36.010 --> 00:08:38.169 align:middle line:84%
+It can't do Fib(2)
+yet because Fib(3)
+
+00:08:38.169 --> 00:08:42.460 align:middle line:84%
+needs to calculate Fib(2) and
+Fib(1), pass back up the value.
+
+00:08:42.460 --> 00:08:46.840 align:middle line:84%
+Fib(4) can now finish its job by
+calculating Fib(3) and Fib(2),
+
+00:08:46.840 --> 00:08:49.840 align:middle line:84%
+pass up the value, and
+now, finally, Fib(6)
+
+00:08:49.840 --> 00:08:53.350 align:middle line:84%
+has its two halves
+here, Fib(5) and Fib(4).
+
+00:08:53.350 --> 00:08:56.270 align:middle line:84%
+And it can add them together
+and return the value.
+
+00:08:56.270 --> 00:08:57.080 align:middle line:90%
+OK.
+
+00:08:57.080 --> 00:09:02.600 align:middle line:84%
+So a super inefficient
+algorithm because there's
+
+00:09:02.600 --> 00:09:05.870 align:middle line:84%
+a lot of stuff going on
+but not much work being
+
+00:09:05.870 --> 00:09:08.030 align:middle line:90%
+done until the end.
+
+00:09:08.030 --> 00:09:10.290 align:middle line:84%
+We've got a bunch of
+base cases we get to.
+
+00:09:10.290 --> 00:09:13.170 align:middle line:84%
+And then we can start
+building back up our result.
+
+00:09:13.170 --> 00:09:15.210 align:middle line:84%
+And the reason why I
+say it's inefficient
+
+00:09:15.210 --> 00:09:18.210 align:middle line:84%
+is because, well, we're
+exploring these paths.
+
+00:09:18.210 --> 00:09:22.590 align:middle line:84%
+And as we go along the way,
+we figure out what Fib(3) is
+
+00:09:22.590 --> 00:09:23.850 align:middle line:90%
+and what Fib(4) is.
+
+00:09:23.850 --> 00:09:25.290 align:middle line:90%
+Right?
+
+00:09:25.290 --> 00:09:30.390 align:middle line:84%
+But then when we explore the
+right half of Fib(6) over here,
+
+00:09:30.390 --> 00:09:34.275 align:middle line:84%
+we're actually recalculating
+these values all over again.
+
+00:09:34.275 --> 00:09:36.150 align:middle line:84%
+That's why I said we're
+not even halfway done
+
+00:09:36.150 --> 00:09:39.720 align:middle line:84%
+because when we got Fib(5),
+we had to explore Fib(4).
+
+00:09:39.720 --> 00:09:42.360 align:middle line:84%
+And Fib(4), this
+branch down here,
+
+00:09:42.360 --> 00:09:45.820 align:middle line:84%
+is basically a copy
+of this one down here.
+
+00:09:45.820 --> 00:09:46.320 align:middle line:90%
+OK.
+
+00:09:46.320 --> 00:09:48.930 align:middle line:84%
+So there's a lot of
+work being done here
+
+00:09:48.930 --> 00:09:52.210 align:middle line:84%
+where you just do the same
+thing over and over again.
+
+00:09:52.210 --> 00:09:55.480 align:middle line:84%
+And so that leads
+me to say, well,
+
+00:09:55.480 --> 00:09:59.190 align:middle line:84%
+what if we didn't have to do
+all this work all over again?
+
+00:09:59.190 --> 00:10:01.470 align:middle line:84%
+If only there was
+some sort of data
+
+00:10:01.470 --> 00:10:04.770 align:middle line:84%
+structure that we could
+use to keep track of things
+
+00:10:04.770 --> 00:10:05.970 align:middle line:90%
+as we calculate them.
+
+00:10:05.970 --> 00:10:06.930 align:middle line:90%
+Right?
+
+00:10:06.930 --> 00:10:07.740 align:middle line:90%
+Right?
+
+00:10:07.740 --> 00:10:10.690 align:middle line:84%
+To basically map one
+thing to another.
+
+00:10:10.690 --> 00:10:14.280 align:middle line:84%
+So if we already calculated
+Fib(4) to be some value,
+
+00:10:14.280 --> 00:10:16.240 align:middle line:90%
+why don't we just look it up?
+
+00:10:16.240 --> 00:10:19.470 align:middle line:84%
+So any time we use things
+like keeping track of
+
+00:10:19.470 --> 00:10:23.640 align:middle line:84%
+and looking things
+up, that should
+
+00:10:23.640 --> 00:10:25.930 align:middle line:84%
+ring a little bell
+that says dictionaries
+
+00:10:25.930 --> 00:10:27.530 align:middle line:90%
+can help us do that.
+
+00:10:27.530 --> 00:10:29.230 align:middle line:84%
+And so what we
+can do is actually
+
+00:10:29.230 --> 00:10:33.460 align:middle line:84%
+write a more efficient
+recursive Fibonacci function
+
+00:10:33.460 --> 00:10:39.040 align:middle line:84%
+that it's still recursive but it
+uses dictionaries to keep track
+
+00:10:39.040 --> 00:10:41.720 align:middle line:90%
+of values as we calculate them.
+
+00:10:41.720 --> 00:10:42.320 align:middle line:90%
+OK.
+
+00:10:42.320 --> 00:10:46.620 align:middle line:84%
+And so this is the Fibonacci
+efficient function.
+
+00:10:46.620 --> 00:10:48.830 align:middle line:90%
+So my name is fib_efficient.
+
+00:10:48.830 --> 00:10:52.010 align:middle line:84%
+Notice we're still calculating
+Fibonacci of some n
+
+00:10:52.010 --> 00:10:54.500 align:middle line:84%
+but we're going to pass
+in another parameter,
+
+00:10:54.500 --> 00:10:55.550 align:middle line:90%
+a dictionary.
+
+00:10:55.550 --> 00:10:59.030 align:middle line:84%
+And this dictionary will keep
+track of the Fibonacci values
+
+00:10:59.030 --> 00:11:01.290 align:middle line:90%
+as we calculate them.
+
+00:11:01.290 --> 00:11:06.400 align:middle line:84%
+So the key will be the n and
+the value will be fib of that n.
+
+00:11:06.400 --> 00:11:08.440 align:middle line:84%
+And so down here
+you can see we're
+
+00:11:08.440 --> 00:11:13.030 align:middle line:84%
+going to initialize a dictionary
+that has fib of 1 maps to 1
+
+00:11:13.030 --> 00:11:14.770 align:middle line:90%
+and fib of 2 maps to 1.
+
+00:11:14.770 --> 00:11:18.450 align:middle line:90%
+Those are our base cases.
+
+00:11:18.450 --> 00:11:22.010 align:middle line:84%
+So let's take a look at our
+Fibonacci recursive function
+
+00:11:22.010 --> 00:11:24.170 align:middle line:90%
+now that uses dictionaries.
+
+00:11:24.170 --> 00:11:27.410 align:middle line:84%
+No longer do we need to
+think about the base cases
+
+00:11:27.410 --> 00:11:30.620 align:middle line:84%
+as Fibonacci of 1 is this
+and Fibonacci of 2 is this.
+
+00:11:30.620 --> 00:11:34.220 align:middle line:84%
+Now, all we need to do is
+say, well, let's look up
+
+00:11:34.220 --> 00:11:36.140 align:middle line:90%
+the value in our dictionary.
+
+00:11:36.140 --> 00:11:38.270 align:middle line:84%
+That's what our
+base case will be.
+
+00:11:38.270 --> 00:11:41.690 align:middle line:84%
+And we don't need to make a
+call to ourselves if the item is
+
+00:11:41.690 --> 00:11:43.400 align:middle line:90%
+already in the dictionary.
+
+00:11:43.400 --> 00:11:49.130 align:middle line:84%
+So we can just return the value
+associated with n in dictionary
+
+00:11:49.130 --> 00:11:53.570 align:middle line:84%
+d if that n is already
+in the dictionary.
+
+00:11:53.570 --> 00:11:56.900 align:middle line:84%
+So our two base cases
+down here will initially
+
+00:11:56.900 --> 00:11:58.250 align:middle line:90%
+be in our dictionary.
+
+00:11:58.250 --> 00:12:00.590 align:middle line:84%
+And as we figure out
+the values of Fibonacci,
+
+00:12:00.590 --> 00:12:02.280 align:middle line:84%
+we'll add them to
+our dictionary.
+
+00:12:02.280 --> 00:12:05.470 align:middle line:84%
+And that's exactly what
+the recursive step will do.
+
+00:12:05.470 --> 00:12:08.210 align:middle line:84%
+So else the value is
+not in our dictionary.
+
+00:12:08.210 --> 00:12:11.930 align:middle line:84%
+So unfortunately, we have to
+calculate it, which is fine.
+
+00:12:11.930 --> 00:12:13.720 align:middle line:84%
+We'll basically do
+that the first time
+
+00:12:13.720 --> 00:12:17.230 align:middle line:84%
+through that sort of exploring
+the left half of our path.
+
+00:12:17.230 --> 00:12:19.450 align:middle line:84%
+But that's pretty much
+the only times that we're
+
+00:12:19.450 --> 00:12:20.590 align:middle line:90%
+going to calculate it.
+
+00:12:20.590 --> 00:12:23.570 align:middle line:84%
+All the other times,
+we'll just look it up.
+
+00:12:23.570 --> 00:12:25.660 align:middle line:84%
+So this is going to
+be a little different
+
+00:12:25.660 --> 00:12:28.420 align:middle line:84%
+than what we've seen
+before because I'm not,
+
+00:12:28.420 --> 00:12:33.400 align:middle line:84%
+right off the bat, returning fib
+n minus 1 plus fib n minus 2.
+
+00:12:33.400 --> 00:12:37.240 align:middle line:84%
+I'm actually still
+running the same recursive
+
+00:12:37.240 --> 00:12:39.670 align:middle line:84%
+step, fib n minus 1
+plus fib n minus 2,
+
+00:12:39.670 --> 00:12:41.560 align:middle line:90%
+but I'm saving it in a variable.
+
+00:12:41.560 --> 00:12:44.850 align:middle line:90%
+And that's totally fine to do.
+
+00:12:44.850 --> 00:12:47.790 align:middle line:84%
+And then before I actually
+return this value,
+
+00:12:47.790 --> 00:12:49.390 align:middle line:90%
+let me add it to my dictionary.
+
+00:12:49.390 --> 00:12:52.560 align:middle line:84%
+So this is simply just
+saying this dictionary
+
+00:12:52.560 --> 00:12:55.290 align:middle line:84%
+at this particular n for
+this particular function
+
+00:12:55.290 --> 00:12:57.400 align:middle line:84%
+is equal to this thing
+that I just calculated,
+
+00:12:57.400 --> 00:13:01.170 align:middle line:84%
+just a straight-up dictionary
+addition, adding this item
+
+00:13:01.170 --> 00:13:02.960 align:middle line:90%
+to the dictionary.
+
+00:13:02.960 --> 00:13:05.030 align:middle line:84%
+And then after I've added
+it to my dictionary,
+
+00:13:05.030 --> 00:13:07.740 align:middle line:84%
+I can return the answer--
+or return that value.
+
+00:13:07.740 --> 00:13:10.790 align:middle line:84%
+So still passing it back up
+the chain of function calls,
+
+00:13:10.790 --> 00:13:14.100 align:middle line:90%
+but we'll save it first.
+
+00:13:14.100 --> 00:13:16.440 align:middle line:90%
+Everyone OK with this code?
+
+00:13:16.440 --> 00:13:17.040 align:middle line:90%
+OK.
+
+00:13:17.040 --> 00:13:21.750 align:middle line:84%
+So then this is the dictionary
+I mentioned where we
+
+00:13:21.750 --> 00:13:24.070 align:middle line:90%
+initialize our two base cases.
+
+00:13:24.070 --> 00:13:26.200 align:middle line:84%
+And then we can
+print the function.
+
+00:13:26.200 --> 00:13:30.270 align:middle line:84%
+So let's trace through the code
+to see what exactly happens
+
+00:13:30.270 --> 00:13:31.680 align:middle line:90%
+with these function calls now.
+
+00:13:31.680 --> 00:13:33.570 align:middle line:84%
+So we're initializing
+our dictionary,
+
+00:13:33.570 --> 00:13:38.550 align:middle line:84%
+where we have n1 Fibonacci of
+1 is 1 and n2 Fibonacci of 2
+
+00:13:38.550 --> 00:13:41.290 align:middle line:90%
+is 1, our base cases.
+
+00:13:41.290 --> 00:13:42.830 align:middle line:90%
+Fibonacci of 6 again.
+
+00:13:42.830 --> 00:13:44.890 align:middle line:84%
+We're doing the
+same function calls,
+
+00:13:44.890 --> 00:13:48.460 align:middle line:84%
+so that means there's
+nothing stored for fib 5,
+
+00:13:48.460 --> 00:13:52.030 align:middle line:84%
+so we still have to explore
+what value it will be.
+
+00:13:52.030 --> 00:13:53.530 align:middle line:90%
+Nothing stored for fib 4.
+
+00:13:53.530 --> 00:13:54.490 align:middle line:90%
+We're still exploring.
+
+00:13:54.490 --> 00:13:55.660 align:middle line:90%
+Nothing stored for fib 3.
+
+00:13:55.660 --> 00:13:56.740 align:middle line:90%
+We're still exploring.
+
+00:13:56.740 --> 00:13:58.550 align:middle line:90%
+We've reached a base case.
+
+00:13:58.550 --> 00:14:02.140 align:middle line:84%
+So now, the first
+thing we do is check
+
+00:14:02.140 --> 00:14:03.430 align:middle line:90%
+if it's in the dictionary.
+
+00:14:03.430 --> 00:14:06.580 align:middle line:84%
+It is, so we just
+return the 1 directly.
+
+00:14:06.580 --> 00:14:08.620 align:middle line:84%
+Check if the other half
+is in the dictionary.
+
+00:14:08.620 --> 00:14:09.610 align:middle line:90%
+Return the 1 directly.
+
+00:14:09.610 --> 00:14:12.190 align:middle line:84%
+And now, we've got
+a value for fib 3.
+
+00:14:12.190 --> 00:14:15.650 align:middle line:84%
+Before returning it, let's
+store it in our dictionary.
+
+00:14:15.650 --> 00:14:17.920 align:middle line:84%
+So I just calculated
+what fib 3 was.
+
+00:14:17.920 --> 00:14:19.840 align:middle line:90%
+Let's put it in.
+
+00:14:19.840 --> 00:14:24.820 align:middle line:90%
+The key is 3 and fib 3 is 2.
+
+00:14:24.820 --> 00:14:25.823 align:middle line:90%
+So far, so good.
+
+00:14:25.823 --> 00:14:27.740 align:middle line:84%
+It's pretty similar to
+what we've done before,
+
+00:14:27.740 --> 00:14:30.170 align:middle line:84%
+except that we're storing
+this value in the dictionary.
+
+00:14:30.170 --> 00:14:33.100 align:middle line:84%
+So now, we explore the
+right half of this fib 4,
+
+00:14:33.100 --> 00:14:35.380 align:middle line:90%
+fib 3 plus fib 2.
+
+00:14:35.380 --> 00:14:37.540 align:middle line:84%
+It's already in the
+dictionary, so it immediately
+
+00:14:37.540 --> 00:14:40.220 align:middle line:90%
+returns this addition.
+
+00:14:40.220 --> 00:14:43.870 align:middle line:84%
+Now, we know what fib 4, is so
+we add it to our dictionary.
+
+00:14:43.870 --> 00:14:47.000 align:middle line:90%
+fib 4 is 3.
+
+00:14:47.000 --> 00:14:51.290 align:middle line:84%
+Explore the right part of
+fib 5, so fib 4 plus fib 3.
+
+00:14:51.290 --> 00:14:53.480 align:middle line:90%
+Do we go further now?
+
+00:14:53.480 --> 00:14:55.790 align:middle line:84%
+In the previous case,
+we explored 2 and 1.
+
+00:14:55.790 --> 00:14:57.740 align:middle line:84%
+In this case, do
+we keep exploring?
+
+00:14:57.740 --> 00:15:00.170 align:middle line:84%
+No, exactly, because
+our base case says,
+
+00:15:00.170 --> 00:15:02.360 align:middle line:84%
+if 3 is already
+in the dictionary,
+
+00:15:02.360 --> 00:15:04.770 align:middle line:84%
+simply return the value
+associated with it.
+
+00:15:04.770 --> 00:15:06.390 align:middle line:90%
+So yep, there it is right there.
+
+00:15:06.390 --> 00:15:07.550 align:middle line:90%
+We added it a while ago.
+
+00:15:07.550 --> 00:15:09.620 align:middle line:84%
+We just return
+the 2 immediately.
+
+00:15:09.620 --> 00:15:12.800 align:middle line:90%
+No need to go down this path.
+
+00:15:12.800 --> 00:15:15.390 align:middle line:84%
+So now fib 5 is
+done pretty quickly.
+
+00:15:15.390 --> 00:15:16.530 align:middle line:90%
+So the right half.
+
+00:15:16.530 --> 00:15:18.650 align:middle line:84%
+So that means we have
+the value for fib 5
+
+00:15:18.650 --> 00:15:20.300 align:middle line:90%
+and we add it to a dictionary.
+
+00:15:20.300 --> 00:15:22.730 align:middle line:84%
+We explore the
+right half of fib 6.
+
+00:15:22.730 --> 00:15:25.560 align:middle line:84%
+Remember, beforehand, I
+said we were not done.
+
+00:15:25.560 --> 00:15:28.460 align:middle line:84%
+We don't need to explore
+this fib 4 anymore
+
+00:15:28.460 --> 00:15:31.950 align:middle line:84%
+because we added it to
+our dictionary long ago.
+
+00:15:31.950 --> 00:15:34.010 align:middle line:84%
+So now, all we need
+to do is look up
+
+00:15:34.010 --> 00:15:37.820 align:middle line:84%
+the value associated with
+4 from our dictionary.
+
+00:15:37.820 --> 00:15:39.330 align:middle line:90%
+So boom, there it is.
+
+00:15:39.330 --> 00:15:42.140 align:middle line:84%
+And then we can just add
+fib 5 and fib 4 together
+
+00:15:42.140 --> 00:15:45.560 align:middle line:84%
+and get the value for fib 6,
+store it in the dictionary,
+
+00:15:45.560 --> 00:15:47.460 align:middle line:90%
+and in this case, it's the end.
+
+00:15:47.460 --> 00:15:49.770 align:middle line:84%
+We don't need to do anything
+else with this value,
+
+00:15:49.770 --> 00:15:53.460 align:middle line:84%
+passing it back or
+anything like that.
+
+00:15:53.460 --> 00:15:56.400 align:middle line:84%
+So we're not recalculating
+anything else.
+
+00:15:56.400 --> 00:15:58.740 align:middle line:84%
+We're just checking the
+dictionary, and if need be,
+
+00:15:58.740 --> 00:15:59.710 align:middle line:90%
+we calculate it.
+
+00:15:59.710 --> 00:16:02.340 align:middle line:90%
+So it's an improvement.
+
+00:16:02.340 --> 00:16:05.820 align:middle line:84%
+But how much of an
+improvement is it, actually?
+
+00:16:05.820 --> 00:16:09.510 align:middle line:84%
+So if we run this function--
+and it's in the Python code.
+
+00:16:09.510 --> 00:16:11.160 align:middle line:84%
+You can play around
+with it yourself.
+
+00:16:11.160 --> 00:16:13.890 align:middle line:84%
+If you run the function
+that we originally
+
+00:16:13.890 --> 00:16:18.450 align:middle line:84%
+wrote, the one where we don't
+store anything in dictionary,
+
+00:16:18.450 --> 00:16:23.140 align:middle line:84%
+if we try to calculate
+Fibonacci of 34,
+
+00:16:23.140 --> 00:16:27.940 align:middle line:84%
+it results in 11.5
+million function calls.
+
+00:16:27.940 --> 00:16:31.330 align:middle line:84%
+That's a lot of function
+calls, because even
+
+00:16:31.330 --> 00:16:35.590 align:middle line:84%
+fib 6 had fib 3 being called
+twice, fib 4 being called--
+
+00:16:35.590 --> 00:16:38.642 align:middle line:84%
+fib 3 being called three times,
+fib 4 being called twice,
+
+00:16:38.642 --> 00:16:39.350 align:middle line:90%
+things like that.
+
+00:16:39.350 --> 00:16:41.410 align:middle line:84%
+So can you imagine
+how many times
+
+00:16:41.410 --> 00:16:45.100 align:middle line:84%
+fib 3 will be called when we
+are trying to calculate fib 34?
+
+00:16:45.100 --> 00:16:49.090 align:middle line:90%
+Probably thousands, if not more.
+
+00:16:49.090 --> 00:16:51.760 align:middle line:84%
+So overall, the number of
+function calls we're making
+
+00:16:51.760 --> 00:16:54.400 align:middle line:84%
+is 11.5 million with
+our original code.
+
+00:16:54.400 --> 00:17:00.480 align:middle line:84%
+But the efficient
+version only makes 65.
+
+00:17:00.480 --> 00:17:05.849 align:middle line:84%
+It's not like we went from
+11.5 million to 2 million.
+
+00:17:05.849 --> 00:17:08.280 align:middle line:84%
+We went from the
+order of millions
+
+00:17:08.280 --> 00:17:13.073 align:middle line:84%
+to tens, which is really, really
+impressive in terms of speed.
+
+00:17:13.073 --> 00:17:14.490 align:middle line:84%
+So if you try to
+run this program,
+
+00:17:14.490 --> 00:17:17.099 align:middle line:84%
+it'll take a couple
+of seconds for fib 34,
+
+00:17:17.099 --> 00:17:19.829 align:middle line:84%
+but the efficient
+one will be instant.
+
+00:17:19.829 --> 00:17:23.400 align:middle line:84%
+And all of these function
+calls have some overhead.
+
+00:17:23.400 --> 00:17:25.290 align:middle line:84%
+You need to create an
+environment in Python.
+
+00:17:25.290 --> 00:17:27.069 align:middle line:84%
+It needs to pass
+these parameters.
+
+00:17:27.069 --> 00:17:30.030 align:middle line:84%
+So all of these function
+calls take a lot of time,
+
+00:17:30.030 --> 00:17:34.020 align:middle line:84%
+whereas a dictionary lookup
+is basically instantaneous.
+
+00:17:34.020 --> 00:17:36.000 align:middle line:84%
+So in this particular
+case, we've
+
+00:17:36.000 --> 00:17:40.470 align:middle line:84%
+given up some of our
+memory to store values.
+
+00:17:40.470 --> 00:17:43.770 align:middle line:84%
+The dictionary is storing 34
+entries, which is not much,
+
+00:17:43.770 --> 00:17:47.790 align:middle line:84%
+but there are applications
+where you can't spare 34 entries
+
+00:17:47.790 --> 00:17:52.420 align:middle line:84%
+in your memory, in which case,
+you might spare some time
+
+00:17:52.420 --> 00:17:55.410 align:middle line:84%
+to continue calculating
+without taking up some memory.
+
+00:17:55.410 --> 00:17:57.660 align:middle line:84%
+So there's a little bit of
+trade-off between these two
+
+00:17:57.660 --> 00:17:58.650 align:middle line:90%
+programs.
+
+00:17:58.650 --> 00:18:01.090 align:middle line:84%
+One of them doesn't store,
+anything but is slow.
+
+00:18:01.090 --> 00:18:05.490 align:middle line:84%
+The other one stores
+things, but is fast.
+
+00:18:05.490 --> 00:18:07.680 align:middle line:84%
+Let's look at one
+more example where
+
+00:18:07.680 --> 00:18:10.350 align:middle line:90%
+we do Fibonacci on numerics.
+
+00:18:10.350 --> 00:18:14.400 align:middle line:84%
+And I don't know when you'd use
+Fibonacci in your real world--
+
+00:18:14.400 --> 00:18:17.160 align:middle line:84%
+real life, but knowing
+all the possible ways
+
+00:18:17.160 --> 00:18:19.620 align:middle line:84%
+you can make a score
+of x in basketball
+
+00:18:19.620 --> 00:18:21.190 align:middle line:90%
+is a little bit more useful.
+
+00:18:21.190 --> 00:18:24.540 align:middle line:84%
+So let's think about
+this problem recursively.
+
+00:18:24.540 --> 00:18:27.180 align:middle line:84%
+Certainly, we could do
+it iteratively and brute
+
+00:18:27.180 --> 00:18:29.640 align:middle line:84%
+force our way through all
+the possible combinations
+
+00:18:29.640 --> 00:18:31.200 align:middle line:90%
+of scores.
+
+00:18:31.200 --> 00:18:33.240 align:middle line:84%
+So in basketball,
+you can make a basket
+
+00:18:33.240 --> 00:18:35.280 align:middle line:84%
+that's worth 1 point,
+2 points, or 3 points.
+
+00:18:35.280 --> 00:18:37.447 align:middle line:84%
+So you can think about all
+the possible combinations
+
+00:18:37.447 --> 00:18:42.070 align:middle line:84%
+you can make to give
+you some score of x.
+
+00:18:42.070 --> 00:18:44.480 align:middle line:84%
+We're going to think about
+this problem recursively.
+
+00:18:44.480 --> 00:18:48.400 align:middle line:84%
+So let's start with
+our base cases.
+
+00:18:48.400 --> 00:18:51.620 align:middle line:84%
+Base cases-- we've
+got three of them.
+
+00:18:51.620 --> 00:18:55.600 align:middle line:84%
+So if we think about a score
+of 1, so if x is equal to 1,
+
+00:18:55.600 --> 00:18:58.450 align:middle line:84%
+so that means if we have a
+score of 1 in basketball,
+
+00:18:58.450 --> 00:19:01.180 align:middle line:84%
+what are all the possible
+ways we could have made a 1?
+
+00:19:01.180 --> 00:19:04.630 align:middle line:84%
+Well, you could just score
+one point and then that's it.
+
+00:19:04.630 --> 00:19:07.210 align:middle line:84%
+I just did 1 plus 0 just to
+emphasize that we're just
+
+00:19:07.210 --> 00:19:09.610 align:middle line:90%
+scoring 1 and nothing else.
+
+00:19:09.610 --> 00:19:11.860 align:middle line:84%
+If we make a basket
+that's worth 2 points--
+
+00:19:11.860 --> 00:19:13.870 align:middle line:84%
+or if we have 2
+points in basketball,
+
+00:19:13.870 --> 00:19:16.720 align:middle line:84%
+what are all the possible
+ways we could have made 2?
+
+00:19:16.720 --> 00:19:19.120 align:middle line:84%
+Well, we could have
+scored a 1 and a 1,
+
+00:19:19.120 --> 00:19:21.410 align:middle line:84%
+or we could have just
+scored 2 right off the bat.
+
+00:19:21.410 --> 00:19:25.640 align:middle line:84%
+So that's two possible
+ways to make a score of 2.
+
+00:19:25.640 --> 00:19:27.890 align:middle line:84%
+And similarly, to
+make a score of 3,
+
+00:19:27.890 --> 00:19:29.660 align:middle line:84%
+what are all the
+possible ways well?
+
+00:19:29.660 --> 00:19:32.000 align:middle line:84%
+Well, we could have scored
+a 1, then a 1, then a 1, we
+
+00:19:32.000 --> 00:19:33.633 align:middle line:84%
+could have scored
+a 2 and a 1, or we
+
+00:19:33.633 --> 00:19:35.550 align:middle line:84%
+could have square root
+of 3 right off the bat.
+
+00:19:35.550 --> 00:19:38.840 align:middle line:84%
+So that's three different
+ways you can make a score of 3
+
+00:19:38.840 --> 00:19:42.320 align:middle line:90%
+in basketball.
+
+00:19:42.320 --> 00:19:43.590 align:middle line:90%
+Everyone with me so far?
+
+00:19:43.590 --> 00:19:46.200 align:middle line:90%
+These are our base cases.
+
+00:19:46.200 --> 00:19:49.027 align:middle line:84%
+Because the recursive
+step will be very--
+
+00:19:49.027 --> 00:19:49.860 align:middle line:90%
+will blow your mind.
+
+00:19:49.860 --> 00:19:51.180 align:middle line:90%
+It's so simple.
+
+00:19:51.180 --> 00:19:54.440 align:middle line:84%
+So the recursive
+step looks like this.
+
+00:19:54.440 --> 00:19:57.150 align:middle line:90%
+
+
+00:19:57.150 --> 00:19:59.360 align:middle line:90%
+Now, somebody give me--
+
+00:19:59.360 --> 00:20:03.740 align:middle line:84%
+what's a reasonable
+basketball score for a team?
+
+00:20:03.740 --> 00:20:04.520 align:middle line:90%
+87?
+
+00:20:04.520 --> 00:20:05.570 align:middle line:90%
+OK.
+
+00:20:05.570 --> 00:20:09.230 align:middle line:84%
+It's been, probably,
+25 years since I've
+
+00:20:09.230 --> 00:20:11.450 align:middle line:84%
+played pro basketball
+in grade 5, you guys,
+
+00:20:11.450 --> 00:20:14.360 align:middle line:84%
+so I forgot what's
+a reasonable score.
+
+00:20:14.360 --> 00:20:15.530 align:middle line:90%
+So 87.
+
+00:20:15.530 --> 00:20:18.690 align:middle line:84%
+So let's say, now, we're not
+dealing with our base case.
+
+00:20:18.690 --> 00:20:21.650 align:middle line:84%
+We're dealing with some
+number that's bigger
+
+00:20:21.650 --> 00:20:23.360 align:middle line:90%
+than one of these base cases.
+
+00:20:23.360 --> 00:20:27.250 align:middle line:84%
+How do we think about
+this problem recursively?
+
+00:20:27.250 --> 00:20:30.000 align:middle line:84%
+Well, there's three
+possibilities.
+
+00:20:30.000 --> 00:20:33.690 align:middle line:84%
+If I have a final
+score of 87, let's
+
+00:20:33.690 --> 00:20:40.590 align:middle line:84%
+say that I think
+about the score of 86.
+
+00:20:40.590 --> 00:20:45.290 align:middle line:84%
+If I know all the possible
+ways I can make a score of 86,
+
+00:20:45.290 --> 00:20:50.000 align:middle line:84%
+all I need to do is
+add 1 to that score.
+
+00:20:50.000 --> 00:20:52.800 align:middle line:90%
+It'll give me 87.
+
+00:20:52.800 --> 00:20:55.970 align:middle line:90%
+So that's one possibility here.
+
+00:20:55.970 --> 00:20:59.550 align:middle line:84%
+But that's not the
+only possibility,
+
+00:20:59.550 --> 00:21:06.930 align:middle line:84%
+because I could have a score of
+85, and if I add 2 to that 85--
+
+00:21:06.930 --> 00:21:09.090 align:middle line:90%
+not two counts, just the score.
+
+00:21:09.090 --> 00:21:10.950 align:middle line:84%
+If I have an
+original score of 85,
+
+00:21:10.950 --> 00:21:13.590 align:middle line:84%
+if I just add 2 to
+that score, it gives me
+
+00:21:13.590 --> 00:21:16.200 align:middle line:90%
+my desired score of 87.
+
+00:21:16.200 --> 00:21:20.070 align:middle line:84%
+So if I know the possible
+combinations to make 85,
+
+00:21:20.070 --> 00:21:24.780 align:middle line:84%
+then I know that all I need
+to do is add a 2 to my score
+
+00:21:24.780 --> 00:21:26.010 align:middle line:90%
+and that will give me 87.
+
+00:21:26.010 --> 00:21:32.370 align:middle line:84%
+And then the last possibility
+is to know all the possible ways
+
+00:21:32.370 --> 00:21:33.990 align:middle line:90%
+to make 84--
+
+00:21:33.990 --> 00:21:34.950 align:middle line:90%
+a score of 84--
+
+00:21:34.950 --> 00:21:38.880 align:middle line:84%
+because then I would take
+that score and add a 3
+
+00:21:38.880 --> 00:21:40.710 align:middle line:90%
+to it to give me 87.
+
+00:21:40.710 --> 00:21:46.420 align:middle line:84%
+So I'm using my base cases
+to guide my recursive step.
+
+00:21:46.420 --> 00:21:50.490 align:middle line:84%
+So the number of ways I
+can make a score of 87
+
+00:21:50.490 --> 00:21:55.330 align:middle line:84%
+is the sum of all the possible
+ways I can make 86 or 85
+
+00:21:55.330 --> 00:22:01.600 align:middle line:84%
+or 84, because if I've made
+86, I would just add 1 to it,
+
+00:22:01.600 --> 00:22:04.030 align:middle line:84%
+if I made 85, I add 2
+to it, and if I made 84,
+
+00:22:04.030 --> 00:22:06.890 align:middle line:90%
+I'd add 3 to the score.
+
+00:22:06.890 --> 00:22:11.170 align:middle line:84%
+So that's essentially what
+this recursive step is doing.
+
+00:22:11.170 --> 00:22:13.150 align:middle line:84%
+I've got, these are
+all the possible ways
+
+00:22:13.150 --> 00:22:15.175 align:middle line:90%
+I can make a score of 80--
+
+00:22:15.175 --> 00:22:16.630 align:middle line:90%
+x minus 1.
+
+00:22:16.630 --> 00:22:18.730 align:middle line:90%
+So 87, 86.
+
+00:22:18.730 --> 00:22:21.220 align:middle line:84%
+And that's just me
+calling my function.
+
+00:22:21.220 --> 00:22:24.700 align:middle line:84%
+So score count x minus
+1, score count x.
+
+00:22:24.700 --> 00:22:28.650 align:middle line:84%
+Plus all the possible ways
+to make a score of x minus 2
+
+00:22:28.650 --> 00:22:31.500 align:middle line:84%
+plus all the possible ways
+to make a score of x minus 3.
+
+00:22:31.500 --> 00:22:34.390 align:middle line:84%
+So if I add all these
+three ways together,
+
+00:22:34.390 --> 00:22:38.310 align:middle line:84%
+I would get all the possible
+ways I can make a score of x.
+
+00:22:38.310 --> 00:22:40.750 align:middle line:90%
+
+
+00:22:40.750 --> 00:22:41.625 align:middle line:90%
+Does that make sense?
+
+00:22:41.625 --> 00:22:44.130 align:middle line:90%
+
+
+00:22:44.130 --> 00:22:45.540 align:middle line:90%
+OK.
+
+00:22:45.540 --> 00:22:47.400 align:middle line:90%
+So that's it.
+
+00:22:47.400 --> 00:22:48.660 align:middle line:90%
+It's pretty clean code.
+
+00:22:48.660 --> 00:22:50.400 align:middle line:90%
+It looks really nice.
+
+00:22:50.400 --> 00:22:52.110 align:middle line:84%
+If we were to write
+this iteratively,
+
+00:22:52.110 --> 00:22:55.230 align:middle line:84%
+it would be a mess,
+because we'd probably
+
+00:22:55.230 --> 00:22:57.840 align:middle line:84%
+have a whole bunch of nested
+loops to try to brute force
+
+00:22:57.840 --> 00:23:01.350 align:middle line:84%
+all the possible combinations
+of scores that we can make,
+
+00:23:01.350 --> 00:23:04.890 align:middle line:84%
+and it wouldn't look
+very nice, very pythonic.
+
+00:23:04.890 --> 00:23:08.440 align:middle line:90%
+
+
+00:23:08.440 --> 00:23:13.810 align:middle line:84%
+So let's do a trace of this code
+just to bring it all together.
+
+00:23:13.810 --> 00:23:16.600 align:middle line:84%
+The trace will be very similar
+to the Fibonacci trace,
+
+00:23:16.600 --> 00:23:19.510 align:middle line:84%
+except that now, we have
+three paths to explore
+
+00:23:19.510 --> 00:23:22.000 align:middle line:90%
+before having a return value.
+
+00:23:22.000 --> 00:23:24.880 align:middle line:84%
+So for a score of
+6, I would explore,
+
+00:23:24.880 --> 00:23:26.860 align:middle line:90%
+how can I make a score of 5?
+
+00:23:26.860 --> 00:23:28.990 align:middle line:84%
+And of course, I will
+explore how can I
+
+00:23:28.990 --> 00:23:32.890 align:middle line:84%
+make a score of 4 and 3,
+but I'm not there yet.
+
+00:23:32.890 --> 00:23:35.050 align:middle line:84%
+First, I need to explore
+how to make a score of 5,
+
+00:23:35.050 --> 00:23:36.340 align:middle line:90%
+which is a function call.
+
+00:23:36.340 --> 00:23:37.870 align:middle line:84%
+This one will
+explore how to make
+
+00:23:37.870 --> 00:23:41.950 align:middle line:84%
+a score of 4, and of course,
+a 3 and 2, but not just yet.
+
+00:23:41.950 --> 00:23:45.640 align:middle line:84%
+A score of 4 will lead
+us to our base cases.
+
+00:23:45.640 --> 00:23:48.680 align:middle line:84%
+It's just how to make a
+score of 3 and 2 and 1.
+
+00:23:48.680 --> 00:23:50.210 align:middle line:90%
+These are base cases.
+
+00:23:50.210 --> 00:23:53.120 align:middle line:84%
+They immediately return and we
+know how to make a score of 4.
+
+00:23:53.120 --> 00:23:55.760 align:middle line:84%
+A score of 3 is also a
+base case and a score of 2
+
+00:23:55.760 --> 00:23:56.730 align:middle line:90%
+is also a base case.
+
+00:23:56.730 --> 00:23:58.370 align:middle line:84%
+So these ones will
+immediately return
+
+00:23:58.370 --> 00:24:00.790 align:middle line:90%
+to give us the score of 5.
+
+00:24:00.790 --> 00:24:02.530 align:middle line:84%
+So now we know how
+to make a score of 5,
+
+00:24:02.530 --> 00:24:05.170 align:middle line:84%
+we need to follow through
+how to make a score of 4,
+
+00:24:05.170 --> 00:24:07.180 align:middle line:90%
+which is just 3 and 2 and 1.
+
+00:24:07.180 --> 00:24:10.000 align:middle line:84%
+Whoops, I should
+change that to be a 1.
+
+00:24:10.000 --> 00:24:12.760 align:middle line:84%
+And then how to
+make a score of 3.
+
+00:24:12.760 --> 00:24:15.040 align:middle line:90%
+And that's just a base case.
+
+00:24:15.040 --> 00:24:18.585 align:middle line:84%
+So very similar traits
+as the Fibonacci code.
+
+00:24:18.585 --> 00:24:22.500 align:middle line:90%
+
+
+00:24:22.500 --> 00:24:25.750 align:middle line:90%
+Questions about those examples?
+
+00:24:25.750 --> 00:24:26.440 align:middle line:90%
+Are they OK?
+
+00:24:26.440 --> 00:24:28.986 align:middle line:90%
+Do they make sense?
+
+00:24:28.986 --> 00:24:30.840 align:middle line:90%
+OK.
+
+00:24:30.840 --> 00:24:34.460 align:middle line:84%
+So there is one exercise
+in the Python file.
+
+00:24:34.460 --> 00:24:36.940 align:middle line:90%
+It's for at home.
+
+00:24:36.940 --> 00:24:40.310 align:middle line:84%
+I would like you to try
+to memo-ize this code.
+
+00:24:40.310 --> 00:24:42.650 align:middle line:84%
+So memo-ize means,
+basically, try
+
+00:24:42.650 --> 00:24:46.843 align:middle line:84%
+to use a memo, like a
+dictionary, to store values
+
+00:24:46.843 --> 00:24:48.260 align:middle line:84%
+as you calculate
+them, because you
+
+00:24:48.260 --> 00:24:51.140 align:middle line:84%
+see that it's going to be just
+as inefficient as the Fibonacci
+
+00:24:51.140 --> 00:24:51.740 align:middle line:90%
+code.
+
+00:24:51.740 --> 00:24:53.660 align:middle line:84%
+So here, we're
+calculating a score of 4
+
+00:24:53.660 --> 00:24:57.860 align:middle line:84%
+again where we had
+calculated it way back here.
+
+00:24:57.860 --> 00:25:02.300 align:middle line:84%
+And so try your hand at adding
+a dictionary to this code
+
+00:25:02.300 --> 00:25:04.505 align:middle line:90%
+to try to speed it up.
+
+00:25:04.505 --> 00:25:07.310 align:middle line:90%
+
+
+00:25:07.310 --> 00:25:10.680 align:middle line:84%
+So the second half
+of this lecture,
+
+00:25:10.680 --> 00:25:14.120 align:middle line:84%
+we're now going to move away
+from recursion on numbers
+
+00:25:14.120 --> 00:25:17.390 align:middle line:84%
+and having these nice
+mathematical operations
+
+00:25:17.390 --> 00:25:20.600 align:middle line:84%
+that we can just translate
+to code easily and start
+
+00:25:20.600 --> 00:25:25.040 align:middle line:84%
+looking at recursion on
+non-numerical things.
+
+00:25:25.040 --> 00:25:27.990 align:middle line:84%
+And we're just going to look
+at lists, but again, as I said,
+
+00:25:27.990 --> 00:25:29.900 align:middle line:84%
+you can apply these
+very similar codes
+
+00:25:29.900 --> 00:25:34.550 align:middle line:84%
+to any sequences of
+values, tuples or strings
+
+00:25:34.550 --> 00:25:36.750 align:middle line:90%
+or things like that.
+
+00:25:36.750 --> 00:25:38.810 align:middle line:84%
+So the reason why
+we're looking at lists
+
+00:25:38.810 --> 00:25:40.730 align:middle line:84%
+is because lists are
+naturally recursive.
+
+00:25:40.730 --> 00:25:44.570 align:middle line:84%
+So one of the motivations I gave
+at the end of the last lecture
+
+00:25:44.570 --> 00:25:48.230 align:middle line:84%
+is that we have lists that
+can have elements that
+
+00:25:48.230 --> 00:25:50.000 align:middle line:84%
+are other lists that
+can have elements
+
+00:25:50.000 --> 00:25:52.520 align:middle line:84%
+that are other lists that can
+have elements of other lists.
+
+00:25:52.520 --> 00:25:56.780 align:middle line:84%
+So without knowing how deep
+these lists within lists
+
+00:25:56.780 --> 00:26:00.290 align:middle line:84%
+within lists go, it's
+going to be really
+
+00:26:00.290 --> 00:26:01.760 align:middle line:90%
+hard to write iterative code.
+
+00:26:01.760 --> 00:26:04.490 align:middle line:84%
+It's possible, but it's
+going to be really hard.
+
+00:26:04.490 --> 00:26:07.520 align:middle line:84%
+And instead, we're going to
+see that the recursive version
+
+00:26:07.520 --> 00:26:10.130 align:middle line:84%
+of this code is going
+to be a lot more
+
+00:26:10.130 --> 00:26:12.290 align:middle line:90%
+intuitive in the long run--
+
+00:26:12.290 --> 00:26:16.970 align:middle line:84%
+maybe not right off the
+bat, but definitely,
+
+00:26:16.970 --> 00:26:21.350 align:middle line:84%
+it's a lot easier to
+write and to read.
+
+00:26:21.350 --> 00:26:26.810 align:middle line:84%
+So let's think about
+lists in a recursive way.
+
+00:26:26.810 --> 00:26:29.060 align:middle line:84%
+So if we were doing
+iteratively, what we'd say
+
+00:26:29.060 --> 00:26:32.660 align:middle line:84%
+is, we're going to loop through
+each element and do something.
+
+00:26:32.660 --> 00:26:35.060 align:middle line:84%
+The problem we're going
+to solve is figuring out
+
+00:26:35.060 --> 00:26:38.170 align:middle line:84%
+the sum of all the elements
+in a list to begin with.
+
+00:26:38.170 --> 00:26:40.650 align:middle line:84%
+So iteratively, we
+just said we loop over
+
+00:26:40.650 --> 00:26:43.960 align:middle line:84%
+each element in the list
+and keep it in our result.
+
+00:26:43.960 --> 00:26:45.600 align:middle line:84%
+So I've got these
+state variables
+
+00:26:45.600 --> 00:26:48.270 align:middle line:84%
+I talked about last
+time, result in e,
+
+00:26:48.270 --> 00:26:52.450 align:middle line:84%
+that keep track of which element
+we're at and what the value is.
+
+00:26:52.450 --> 00:26:56.160 align:middle line:84%
+Recursively,
+remember, we're going
+
+00:26:56.160 --> 00:26:58.530 align:middle line:84%
+to make all these function
+calls until we get to a base
+
+00:26:58.530 --> 00:27:01.530 align:middle line:84%
+case, at which point, we're
+going to start to build up
+
+00:27:01.530 --> 00:27:08.480 align:middle line:84%
+our result. So how can we think
+about this list recursively?
+
+00:27:08.480 --> 00:27:11.080 align:middle line:84%
+Well, let's say
+that we have a list
+
+00:27:11.080 --> 00:27:13.270 align:middle line:84%
+and we want to find the
+sum of all its elements.
+
+00:27:13.270 --> 00:27:16.590 align:middle line:90%
+That's our original problem.
+
+00:27:16.590 --> 00:27:20.090 align:middle line:84%
+Now, let's say that we
+take the first element
+
+00:27:20.090 --> 00:27:23.980 align:middle line:90%
+and we just extract it out.
+
+00:27:23.980 --> 00:27:26.000 align:middle line:84%
+We have this list with
+a bunch of elements.
+
+00:27:26.000 --> 00:27:27.100 align:middle line:90%
+Let's take the first one.
+
+00:27:27.100 --> 00:27:29.380 align:middle line:90%
+We know it's a 10.
+
+00:27:29.380 --> 00:27:32.650 align:middle line:84%
+And then let's consider
+the remaining elements,
+
+00:27:32.650 --> 00:27:36.130 align:middle line:90%
+so the 20 onward.
+
+00:27:36.130 --> 00:27:43.830 align:middle line:84%
+If I take my 10 and
+I know the answer
+
+00:27:43.830 --> 00:27:47.940 align:middle line:84%
+to the sum of all the
+elements in 20 onward,
+
+00:27:47.940 --> 00:27:50.010 align:middle line:84%
+then all I need to
+do to figure out
+
+00:27:50.010 --> 00:27:53.040 align:middle line:84%
+the sum of my original
+list, this one here,
+
+00:27:53.040 --> 00:27:57.300 align:middle line:84%
+is to say it's the 10
+plus the sum of whatever
+
+00:27:57.300 --> 00:28:00.720 align:middle line:90%
+the sum of the 20 onward is.
+
+00:28:00.720 --> 00:28:03.990 align:middle line:84%
+Now, the sum for
+elements 20 onward
+
+00:28:03.990 --> 00:28:06.030 align:middle line:90%
+is the same problem again.
+
+00:28:06.030 --> 00:28:07.680 align:middle line:84%
+It's the problem
+of finding the sum
+
+00:28:07.680 --> 00:28:09.420 align:middle line:90%
+of all the elements in a list.
+
+00:28:09.420 --> 00:28:13.770 align:middle line:84%
+It just so happens that our
+list is now our original list
+
+00:28:13.770 --> 00:28:16.810 align:middle line:84%
+without that first
+element in it.
+
+00:28:16.810 --> 00:28:18.805 align:middle line:90%
+Does everyone understand that?
+
+00:28:18.805 --> 00:28:20.680 align:middle line:84%
+We've got our original
+problem and we've just
+
+00:28:20.680 --> 00:28:23.590 align:middle line:84%
+made the same problem again,
+just a slightly different
+
+00:28:23.590 --> 00:28:27.080 align:middle line:84%
+version of it-- all the list
+except for that first element.
+
+00:28:27.080 --> 00:28:29.290 align:middle line:90%
+So now, we do the same thing.
+
+00:28:29.290 --> 00:28:31.390 align:middle line:90%
+Let's say this is our new list.
+
+00:28:31.390 --> 00:28:33.970 align:middle line:84%
+We extract the first
+element from it
+
+00:28:33.970 --> 00:28:38.050 align:middle line:84%
+and we consider the elements
+except for that first one
+
+00:28:38.050 --> 00:28:39.490 align:middle line:90%
+as a new list.
+
+00:28:39.490 --> 00:28:43.780 align:middle line:84%
+And again, if I knew what the
+sum of 30 all the way onto 60
+
+00:28:43.780 --> 00:28:47.050 align:middle line:84%
+was, all I need to do is add
+it to the 20 that I extracted
+
+00:28:47.050 --> 00:28:49.510 align:middle line:84%
+and I would know the
+sum of this list.
+
+00:28:49.510 --> 00:28:51.070 align:middle line:90%
+So we keep doing that.
+
+00:28:51.070 --> 00:28:53.710 align:middle line:84%
+We take our list,
+extract the 30,
+
+00:28:53.710 --> 00:28:57.220 align:middle line:84%
+and consider the remaining
+elements as a list.
+
+00:28:57.220 --> 00:28:58.240 align:middle line:90%
+Same deal.
+
+00:28:58.240 --> 00:29:00.340 align:middle line:84%
+If I knew what 40
+plus 50 plus 60
+
+00:29:00.340 --> 00:29:02.650 align:middle line:84%
+was, the sum of all the
+elements in this list,
+
+00:29:02.650 --> 00:29:05.140 align:middle line:84%
+I just add it to the 30
+and I have the answer
+
+00:29:05.140 --> 00:29:06.750 align:middle line:90%
+to that problem.
+
+00:29:06.750 --> 00:29:09.170 align:middle line:84%
+And we keep doing this,
+extracting an element
+
+00:29:09.170 --> 00:29:11.600 align:middle line:84%
+and considering the
+remaining lists, all the way
+
+00:29:11.600 --> 00:29:15.390 align:middle line:84%
+down to when we have a list
+with just one element in it.
+
+00:29:15.390 --> 00:29:18.200 align:middle line:84%
+Well, this is a pretty
+simple problem to solve.
+
+00:29:18.200 --> 00:29:19.910 align:middle line:84%
+If I have a list with
+one element in it,
+
+00:29:19.910 --> 00:29:22.160 align:middle line:84%
+the sum of the elements
+within that list
+
+00:29:22.160 --> 00:29:24.140 align:middle line:84%
+is just the value
+of that element.
+
+00:29:24.140 --> 00:29:25.490 align:middle line:90%
+It's just 60.
+
+00:29:25.490 --> 00:29:27.200 align:middle line:90%
+So very simple problem.
+
+00:29:27.200 --> 00:29:30.860 align:middle line:84%
+No need to keep going
+further, dividing this problem
+
+00:29:30.860 --> 00:29:31.820 align:middle line:90%
+into smaller pieces.
+
+00:29:31.820 --> 00:29:33.403 align:middle line:84%
+I already know the
+answer to this one.
+
+00:29:33.403 --> 00:29:34.790 align:middle line:90%
+It's very simple.
+
+00:29:34.790 --> 00:29:37.100 align:middle line:90%
+So this is our base case.
+
+00:29:37.100 --> 00:29:40.720 align:middle line:84%
+And we know the sum of the
+elements in a list with length
+
+00:29:40.720 --> 00:29:43.950 align:middle line:90%
+1 is that element.
+
+00:29:43.950 --> 00:29:47.900 align:middle line:84%
+So once we reach the base case,
+we build back up our result.
+
+00:29:47.900 --> 00:29:53.120 align:middle line:84%
+We take the 60 and we had
+extracted the 50 originally,
+
+00:29:53.120 --> 00:29:55.460 align:middle line:84%
+so we're going to
+pass the sum back up
+
+00:29:55.460 --> 00:29:57.800 align:middle line:84%
+to whoever called it,
+which was the function that
+
+00:29:57.800 --> 00:29:59.190 align:middle line:90%
+extracted the 50.
+
+00:29:59.190 --> 00:30:01.610 align:middle line:84%
+So now, the 50
+plus the 60 is 110.
+
+00:30:01.610 --> 00:30:04.670 align:middle line:84%
+Now, this 110 gets
+passed back up the chain.
+
+00:30:04.670 --> 00:30:06.947 align:middle line:84%
+When we extracted the
+40, we said, well,
+
+00:30:06.947 --> 00:30:08.780 align:middle line:84%
+I'm going to add the
+40 to the sum of the 50
+
+00:30:08.780 --> 00:30:11.570 align:middle line:90%
+and the 60, 110, which is 150.
+
+00:30:11.570 --> 00:30:13.580 align:middle line:84%
+Pass that answer
+back up the chain.
+
+00:30:13.580 --> 00:30:16.325 align:middle line:84%
+When I extracted the
+30, I said I was just
+
+00:30:16.325 --> 00:30:18.950 align:middle line:84%
+going to add the 30 with the sum
+of the remaining things, which
+
+00:30:18.950 --> 00:30:20.870 align:middle line:90%
+I figured out is 150.
+
+00:30:20.870 --> 00:30:23.660 align:middle line:84%
+The 20-- I had
+extracted it-- becomes
+
+00:30:23.660 --> 00:30:26.570 align:middle line:84%
+20 plus the sum of everybody
+else, which is 180.
+
+00:30:26.570 --> 00:30:27.690 align:middle line:90%
+So the sum is 200.
+
+00:30:27.690 --> 00:30:29.510 align:middle line:84%
+And then finally,
+my original question
+
+00:30:29.510 --> 00:30:32.940 align:middle line:84%
+was to extract the 10,
+add it to everything else,
+
+00:30:32.940 --> 00:30:34.580 align:middle line:84%
+which is the 200
+that we figured out.
+
+00:30:34.580 --> 00:30:38.670 align:middle line:90%
+So the full sum is 210.
+
+00:30:38.670 --> 00:30:40.680 align:middle line:84%
+Does that make sense,
+this animation?
+
+00:30:40.680 --> 00:30:41.220 align:middle line:90%
+OK.
+
+00:30:41.220 --> 00:30:44.310 align:middle line:84%
+So we've got the division all
+the way down to the base case
+
+00:30:44.310 --> 00:30:47.730 align:middle line:84%
+and building back up the result.
+So let's try to write it.
+
+00:30:47.730 --> 00:30:50.110 align:middle line:84%
+So we're going to
+write it in pieces.
+
+00:30:50.110 --> 00:30:52.470 align:middle line:84%
+So the function is
+called total_recur.
+
+00:30:52.470 --> 00:30:53.598 align:middle line:90%
+It takes in a list l.
+
+00:30:53.598 --> 00:30:55.140 align:middle line:84%
+We're going to
+recursively figure out
+
+00:30:55.140 --> 00:30:57.870 align:middle line:84%
+the sum of all the
+elements in this list.
+
+00:30:57.870 --> 00:31:00.620 align:middle line:84%
+So we can have a base case
+when the list is empty.
+
+00:31:00.620 --> 00:31:02.120 align:middle line:90%
+We can return 0.
+
+00:31:02.120 --> 00:31:03.260 align:middle line:90%
+Up to you.
+
+00:31:03.260 --> 00:31:04.850 align:middle line:84%
+Another base case,
+which is the one
+
+00:31:04.850 --> 00:31:06.558 align:middle line:84%
+that I illustrated on
+the previous slide,
+
+00:31:06.558 --> 00:31:10.030 align:middle line:84%
+is when the length
+of the list is 1.
+
+00:31:10.030 --> 00:31:12.100 align:middle line:84%
+So when the length
+of the list is 1,
+
+00:31:12.100 --> 00:31:13.390 align:middle line:90%
+what's the sum going to be?
+
+00:31:13.390 --> 00:31:14.540 align:middle line:90%
+No need for recursion.
+
+00:31:14.540 --> 00:31:16.410 align:middle line:90%
+It's just that element.
+
+00:31:16.410 --> 00:31:18.140 align:middle line:84%
+And so in these
+slides, what I've also
+
+00:31:18.140 --> 00:31:21.870 align:middle line:84%
+included in addition to the
+code is a little example.
+
+00:31:21.870 --> 00:31:24.560 align:middle line:84%
+So it helps you think about
+what the function returns.
+
+00:31:24.560 --> 00:31:27.320 align:middle line:84%
+So in this base case, when
+the length of the list is 1,
+
+00:31:27.320 --> 00:31:29.250 align:middle line:84%
+the list would look
+something like this.
+
+00:31:29.250 --> 00:31:33.860 align:middle line:84%
+And all I'd need to do is
+return l at index 0, so the 50.
+
+00:31:33.860 --> 00:31:35.780 align:middle line:90%
+And that's my sum.
+
+00:31:35.780 --> 00:31:39.350 align:middle line:84%
+And that's what I'm doing
+here, returning l at index 0.
+
+00:31:39.350 --> 00:31:40.370 align:middle line:90%
+Cool.
+
+00:31:40.370 --> 00:31:42.650 align:middle line:90%
+Now, the recursive step.
+
+00:31:42.650 --> 00:31:46.040 align:middle line:84%
+Remember, in the recursive step,
+I extracted the first element
+
+00:31:46.040 --> 00:31:48.900 align:middle line:84%
+and I said, let me save
+this first element.
+
+00:31:48.900 --> 00:31:52.190 align:middle line:84%
+So here it is being
+saved as l at index 0.
+
+00:31:52.190 --> 00:31:54.270 align:middle line:84%
+And I'm going to
+add it to something.
+
+00:31:54.270 --> 00:31:56.660 align:middle line:84%
+So in this example
+here, I've got
+
+00:31:56.660 --> 00:31:58.850 align:middle line:90%
+this list that's longer than 1.
+
+00:31:58.850 --> 00:32:01.010 align:middle line:84%
+I'm extracting
+the 30, l index 0,
+
+00:32:01.010 --> 00:32:03.920 align:middle line:84%
+and I'm going to
+add it to something.
+
+00:32:03.920 --> 00:32:06.770 align:middle line:84%
+Well, that something
+based on the slides.
+
+00:32:06.770 --> 00:32:10.940 align:middle line:84%
+The previous slide, where
+I did the animation,
+
+00:32:10.940 --> 00:32:15.230 align:middle line:84%
+is going to be us putting
+our trust in the fact
+
+00:32:15.230 --> 00:32:18.300 align:middle line:84%
+that we write this
+function correctly.
+
+00:32:18.300 --> 00:32:21.630 align:middle line:84%
+That something is going
+to be us figuring out
+
+00:32:21.630 --> 00:32:25.403 align:middle line:90%
+what the sum is of 40 and 50.
+
+00:32:25.403 --> 00:32:26.820 align:middle line:84%
+It's the same
+problem we're trying
+
+00:32:26.820 --> 00:32:29.070 align:middle line:84%
+to solve right now--
+the sum of 30, 40, 50--
+
+00:32:29.070 --> 00:32:32.220 align:middle line:84%
+except that now, I'm just going
+to take the sum of just the 40
+
+00:32:32.220 --> 00:32:34.040 align:middle line:90%
+and the 50.
+
+00:32:34.040 --> 00:32:37.070 align:middle line:84%
+So that something
+becomes the same function
+
+00:32:37.070 --> 00:32:41.920 align:middle line:84%
+we're writing right now,
+total_recur, except that I'm
+
+00:32:41.920 --> 00:32:45.130 align:middle line:84%
+not calling it on l, not the
+whole thing all over again.
+
+00:32:45.130 --> 00:32:46.000 align:middle line:90%
+That would be bad.
+
+00:32:46.000 --> 00:32:49.030 align:middle line:84%
+But I'm going to call it
+on L from index 1 onward,
+
+00:32:49.030 --> 00:32:53.400 align:middle line:84%
+so essentially removing
+that first element.
+
+00:32:53.400 --> 00:32:54.540 align:middle line:90%
+Is everyone OK with that?
+
+00:32:54.540 --> 00:32:58.410 align:middle line:90%
+
+
+00:32:58.410 --> 00:32:59.790 align:middle line:90%
+So that's it.
+
+00:32:59.790 --> 00:33:00.690 align:middle line:90%
+That's the function.
+
+00:33:00.690 --> 00:33:01.920 align:middle line:90%
+Nothing else to write.
+
+00:33:01.920 --> 00:33:02.820 align:middle line:90%
+No loop.
+
+00:33:02.820 --> 00:33:04.860 align:middle line:84%
+We've basically
+written a function
+
+00:33:04.860 --> 00:33:08.040 align:middle line:84%
+assuming that we wrote
+the function correctly,
+
+00:33:08.040 --> 00:33:11.903 align:middle line:84%
+which is a very strange way
+to think about recursion,
+
+00:33:11.903 --> 00:33:13.320 align:middle line:84%
+but that's essentially
+what it is.
+
+00:33:13.320 --> 00:33:16.560 align:middle line:84%
+You're trusting yourself to
+write this function correctly
+
+00:33:16.560 --> 00:33:19.480 align:middle line:84%
+such that your recursive step
+leads you to the base case
+
+00:33:19.480 --> 00:33:22.245 align:middle line:84%
+so that you can build back
+up the result correctly.
+
+00:33:22.245 --> 00:33:24.120 align:middle line:84%
+So there's a lot of
+trust involved in writing
+
+00:33:24.120 --> 00:33:25.910 align:middle line:90%
+these functions recursively.
+
+00:33:25.910 --> 00:33:30.640 align:middle line:90%
+
+
+00:33:30.640 --> 00:33:32.640 align:middle line:84%
+So I'm not going to go
+through the Python Tutor,
+
+00:33:32.640 --> 00:33:35.760 align:middle line:84%
+but you should definitely
+go through it on your own
+
+00:33:35.760 --> 00:33:39.380 align:middle line:84%
+as a practice for the
+quiz, things like that.
+
+00:33:39.380 --> 00:33:41.650 align:middle line:90%
+Let's have you write this, then.
+
+00:33:41.650 --> 00:33:43.540 align:middle line:84%
+So it's going to be
+a slight modification
+
+00:33:43.540 --> 00:33:45.620 align:middle line:90%
+to the code we just wrote.
+
+00:33:45.620 --> 00:33:49.690 align:middle line:84%
+So it's going to take in
+a list as its parameter,
+
+00:33:49.690 --> 00:33:52.510 align:middle line:84%
+and instead of summing
+the elements in the list
+
+00:33:52.510 --> 00:33:53.320 align:middle line:90%
+like we did--
+
+00:33:53.320 --> 00:33:55.030 align:middle line:90%
+10 plus 20 plus 30, whatever--
+
+00:33:55.030 --> 00:33:56.860 align:middle line:84%
+I would like you
+to sum the lengths
+
+00:33:56.860 --> 00:33:58.930 align:middle line:90%
+of the elements in the list.
+
+00:33:58.930 --> 00:34:00.800 align:middle line:84%
+So if I pass it
+in this function,
+
+00:34:00.800 --> 00:34:02.740 align:middle line:84%
+it's going to sum
+the length of this 2
+
+00:34:02.740 --> 00:34:06.190 align:middle line:84%
+plus the length of this 1 plus
+the length of this 5, 2 plus 1
+
+00:34:06.190 --> 00:34:07.570 align:middle line:90%
+plus 5.
+
+00:34:07.570 --> 00:34:10.420 align:middle line:84%
+So it'll be a very slight
+modification to the code
+
+00:34:10.420 --> 00:34:12.110 align:middle line:90%
+that we just looked at.
+
+00:34:12.110 --> 00:34:15.580 align:middle line:90%
+And here it is on line 70-ish.
+
+00:34:15.580 --> 00:34:17.860 align:middle line:90%
+So think about the base case.
+
+00:34:17.860 --> 00:34:19.810 align:middle line:84%
+If you have a list
+with one element in it,
+
+00:34:19.810 --> 00:34:20.967 align:middle line:90%
+what do you return?
+
+00:34:20.967 --> 00:34:23.050 align:middle line:84%
+And if you have a list
+with many elements, how can
+
+00:34:23.050 --> 00:34:25.239 align:middle line:84%
+you put your trust in
+something that you just wrote
+
+00:34:25.239 --> 00:34:29.800 align:middle line:90%
+to help you get to the answer?
+
+00:34:29.800 --> 00:34:31.360 align:middle line:90%
+What do you guys have for me?
+
+00:34:31.360 --> 00:34:34.540 align:middle line:84%
+So let's start
+with the base case.
+
+00:34:34.540 --> 00:34:36.520 align:middle line:84%
+And if you're having
+trouble, I encourage
+
+00:34:36.520 --> 00:34:37.929 align:middle line:84%
+you to, just in
+a little comment,
+
+00:34:37.929 --> 00:34:42.080 align:middle line:84%
+just write down what that
+base case looks like,
+
+00:34:42.080 --> 00:34:43.460 align:middle line:90%
+like I did in the slides.
+
+00:34:43.460 --> 00:34:45.260 align:middle line:90%
+It looks like this.
+
+00:34:45.260 --> 00:34:48.980 align:middle line:84%
+So what would I return if I have
+a list with one element in it?
+
+00:34:48.980 --> 00:34:49.926 align:middle line:90%
+Yeah.
+
+00:34:49.926 --> 00:34:53.190 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:34:53.190 --> 00:34:54.780 align:middle line:90%
+ANA BELL: Yep, exactly.
+
+00:34:54.780 --> 00:34:57.420 align:middle line:84%
+So we would return the
+length of that element.
+
+00:34:57.420 --> 00:35:01.320 align:middle line:84%
+So the length of whatever
+this is, ab, whatever.
+
+00:35:01.320 --> 00:35:02.280 align:middle line:90%
+Awesome.
+
+00:35:02.280 --> 00:35:06.610 align:middle line:90%
+How do we do the recursive step?
+
+00:35:06.610 --> 00:35:07.110 align:middle line:90%
+Yeah.
+
+00:35:07.110 --> 00:35:13.990 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:35:13.990 --> 00:35:15.700 align:middle line:90%
+ANA BELL: Yes, exactly.
+
+00:35:15.700 --> 00:35:20.680 align:middle line:90%
+Total len_recur with what list?
+
+00:35:20.680 --> 00:35:24.177 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:35:24.177 --> 00:35:24.760 align:middle line:90%
+ANA BELL: Yep.
+
+00:35:24.760 --> 00:35:26.468 align:middle line:84%
+So we're going to
+extract that first one.
+
+00:35:26.468 --> 00:35:30.395 align:middle line:84%
+So this will give us the sum of
+the lengths of everybody else.
+
+00:35:30.395 --> 00:35:32.620 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:35:32.620 --> 00:35:33.370 align:middle line:90%
+ANA BELL: Exactly.
+
+00:35:33.370 --> 00:35:36.800 align:middle line:90%
+So we also need to add it to--
+
+00:35:36.800 --> 00:35:39.710 align:middle line:90%
+yeah, I'll add a 0.
+
+00:35:39.710 --> 00:35:42.620 align:middle line:84%
+So it's fine to do it either
+before or after, because we're
+
+00:35:42.620 --> 00:35:43.950 align:middle line:90%
+just summing these two values.
+
+00:35:43.950 --> 00:35:47.840 align:middle line:84%
+So doesn't matter the order
+that you're summing them.
+
+00:35:47.840 --> 00:35:50.540 align:middle line:90%
+So that's perfect.
+
+00:35:50.540 --> 00:35:51.875 align:middle line:90%
+Any questions about this code?
+
+00:35:51.875 --> 00:35:54.745 align:middle line:90%
+
+
+00:35:54.745 --> 00:35:55.245 align:middle line:90%
+Yes.
+
+00:35:55.245 --> 00:36:05.410 align:middle line:84%
+AUDIENCE: [INAUDIBLE] is it more
+or less efficient than doing
+
+00:36:05.410 --> 00:36:06.670 align:middle line:90%
+the classic first?
+
+00:36:06.670 --> 00:36:08.050 align:middle line:90%
+ANA BELL: Than doing the what?
+
+00:36:08.050 --> 00:36:10.150 align:middle line:84%
+AUDIENCE: The classic
+one [INAUDIBLE]..
+
+00:36:10.150 --> 00:36:14.260 align:middle line:84%
+ANA BELL: So in
+terms of efficiency,
+
+00:36:14.260 --> 00:36:21.570 align:middle line:84%
+this function will be slightly
+less efficient, I would say,
+
+00:36:21.570 --> 00:36:24.630 align:middle line:84%
+because there's a little
+overhead in actually making
+
+00:36:24.630 --> 00:36:28.980 align:middle line:84%
+a function call, whereas if
+you use a built-in operator,
+
+00:36:28.980 --> 00:36:32.560 align:middle line:84%
+it's been optimized
+to work pretty fast.
+
+00:36:32.560 --> 00:36:33.150 align:middle line:90%
+Yeah.
+
+00:36:33.150 --> 00:36:35.670 align:middle line:84%
+AUDIENCE: [INAUDIBLE]
+doing the plus equals,
+
+00:36:35.670 --> 00:36:37.500 align:middle line:84%
+it's not doing this
+in the background?
+
+00:36:37.500 --> 00:36:38.070 align:middle line:90%
+ANA BELL: No.
+
+00:36:38.070 --> 00:36:40.140 align:middle line:84%
+When it's doing plus
+equals, it's definitely not
+
+00:36:40.140 --> 00:36:41.348 align:middle line:90%
+doing this in the background.
+
+00:36:41.348 --> 00:36:41.850 align:middle line:90%
+Exactly.
+
+00:36:41.850 --> 00:36:43.010 align:middle line:90%
+Yeah.
+
+00:36:43.010 --> 00:36:44.600 align:middle line:90%
+But this is just--
+
+00:36:44.600 --> 00:36:49.570 align:middle line:84%
+I mean, I'm trying to show
+your recursion on something
+
+00:36:49.570 --> 00:36:51.970 align:middle line:84%
+that you wouldn't
+typically use recursion
+
+00:36:51.970 --> 00:36:55.900 align:middle line:84%
+on just to help illustrate
+the idea of recursion.
+
+00:36:55.900 --> 00:36:58.540 align:middle line:84%
+Certainly, you can use an
+iterative algorithm, obviously,
+
+00:36:58.540 --> 00:37:00.640 align:middle line:84%
+to calculate the sum
+of these elements.
+
+00:37:00.640 --> 00:37:02.350 align:middle line:84%
+And it's more
+intuitive, more in line
+
+00:37:02.350 --> 00:37:03.940 align:middle line:84%
+with what we've been
+learning so far.
+
+00:37:03.940 --> 00:37:10.950 align:middle line:90%
+
+
+00:37:10.950 --> 00:37:11.640 align:middle line:90%
+Excellent.
+
+00:37:11.640 --> 00:37:17.830 align:middle line:84%
+So now, let's look at a
+slightly different problem.
+
+00:37:17.830 --> 00:37:20.820 align:middle line:84%
+So instead of finding the sum
+of all the elements in a list,
+
+00:37:20.820 --> 00:37:23.070 align:middle line:84%
+let's tackle the
+problem of looking
+
+00:37:23.070 --> 00:37:24.408 align:middle line:90%
+for an element in a list.
+
+00:37:24.408 --> 00:37:25.950 align:middle line:84%
+Completely different,
+but we're still
+
+00:37:25.950 --> 00:37:28.697 align:middle line:84%
+doing some sort of
+list operations.
+
+00:37:28.697 --> 00:37:30.780 align:middle line:84%
+We're going to start with
+an implementation that's
+
+00:37:30.780 --> 00:37:32.310 align:middle line:90%
+not quite right.
+
+00:37:32.310 --> 00:37:34.540 align:middle line:84%
+And we'll see why
+in a little bit.
+
+00:37:34.540 --> 00:37:37.020 align:middle line:84%
+So let's follow the
+same sort of pattern
+
+00:37:37.020 --> 00:37:38.530 align:middle line:84%
+that we've seen in
+the previous one.
+
+00:37:38.530 --> 00:37:42.440 align:middle line:84%
+So let's consider
+a list of length 1.
+
+00:37:42.440 --> 00:37:45.320 align:middle line:84%
+In this particular
+case, if I have a list
+
+00:37:45.320 --> 00:37:47.510 align:middle line:84%
+with only one element
+in it, how do I
+
+00:37:47.510 --> 00:37:49.970 align:middle line:84%
+know if that element is
+the one I'm looking for?
+
+00:37:49.970 --> 00:37:53.690 align:middle line:84%
+Well, I'm just going
+to return this Boolean,
+
+00:37:53.690 --> 00:37:55.520 align:middle line:90%
+whether l at index 0--
+
+00:37:55.520 --> 00:37:57.860 align:middle line:84%
+that element-- is the one
+I'm looking for, the e.
+
+00:37:57.860 --> 00:37:59.780 align:middle line:84%
+So notice, this
+n list is passing
+
+00:37:59.780 --> 00:38:03.470 align:middle line:84%
+in the list itself and the
+element I'm looking for.
+
+00:38:03.470 --> 00:38:07.440 align:middle line:90%
+
+
+00:38:07.440 --> 00:38:12.680 align:middle line:90%
+I think-- OK.
+
+00:38:12.680 --> 00:38:16.720 align:middle line:84%
+So then let's look at
+the recursive step.
+
+00:38:16.720 --> 00:38:19.010 align:middle line:84%
+The recursive step, in
+this particular case,
+
+00:38:19.010 --> 00:38:22.150 align:middle line:90%
+let's say it says, well else.
+
+00:38:22.150 --> 00:38:24.940 align:middle line:84%
+We might think to
+say, well, if it's not
+
+00:38:24.940 --> 00:38:27.310 align:middle line:84%
+the one I'm looking
+for, then let's look
+
+00:38:27.310 --> 00:38:29.150 align:middle line:90%
+in the remainder of the list.
+
+00:38:29.150 --> 00:38:31.630 align:middle line:84%
+So like we did in
+the previous case,
+
+00:38:31.630 --> 00:38:33.760 align:middle line:84%
+let's apply the
+same function we're
+
+00:38:33.760 --> 00:38:36.370 align:middle line:84%
+writing right now
+to all the elements
+
+00:38:36.370 --> 00:38:38.200 align:middle line:90%
+except for the first one.
+
+00:38:38.200 --> 00:38:40.180 align:middle line:84%
+And we're still
+looking for element e
+
+00:38:40.180 --> 00:38:45.200 align:middle line:90%
+in those remaining elements.
+
+00:38:45.200 --> 00:38:47.210 align:middle line:90%
+So we can test it out.
+
+00:38:47.210 --> 00:38:48.960 align:middle line:84%
+And if we actually run
+it-- again, please,
+
+00:38:48.960 --> 00:38:50.918 align:middle line:84%
+I encourage you to do
+Python Tutor on your own.
+
+00:38:50.918 --> 00:38:56.310 align:middle line:84%
+But we can test it out and say,
+if, in this particular case, 2,
+
+00:38:56.310 --> 00:39:00.120 align:middle line:84%
+5, 8, 1, if I actually run this
+code, it will give me true.
+
+00:39:00.120 --> 00:39:06.690 align:middle line:84%
+So it found the 1 inside the
+list 2, 5, 8, 1, which is good.
+
+00:39:06.690 --> 00:39:08.870 align:middle line:90%
+It's exactly what we wanted.
+
+00:39:08.870 --> 00:39:12.170 align:middle line:84%
+But if I change my
+input list slightly
+
+00:39:12.170 --> 00:39:15.110 align:middle line:84%
+and I've got 2, 1,
+5, 8, the element
+
+00:39:15.110 --> 00:39:17.110 align:middle line:90%
+I'm looking for is here.
+
+00:39:17.110 --> 00:39:19.960 align:middle line:84%
+The code will actually give
+me false, the one that I just
+
+00:39:19.960 --> 00:39:21.400 align:middle line:90%
+wrote, which is not OK.
+
+00:39:21.400 --> 00:39:25.860 align:middle line:90%
+I see the 1 is right over there.
+
+00:39:25.860 --> 00:39:28.400 align:middle line:90%
+And so what exactly is going on?
+
+00:39:28.400 --> 00:39:33.860 align:middle line:90%
+We can run the code here.
+
+00:39:33.860 --> 00:39:36.590 align:middle line:90%
+So this is this code here.
+
+00:39:36.590 --> 00:39:38.840 align:middle line:84%
+If you see that it gives
+you the incorrect value,
+
+00:39:38.840 --> 00:39:40.923 align:middle line:84%
+one thing you could do
+when you're doing recursion
+
+00:39:40.923 --> 00:39:45.320 align:middle line:84%
+is to put a print statement
+within the function itself.
+
+00:39:45.320 --> 00:39:48.560 align:middle line:84%
+So we can print, maybe,
+the list we're currently at
+
+00:39:48.560 --> 00:39:50.690 align:middle line:84%
+and the element
+we're looking for
+
+00:39:50.690 --> 00:39:52.620 align:middle line:90%
+and see exactly what's going on.
+
+00:39:52.620 --> 00:39:55.220 align:middle line:84%
+So if I run it,
+it will say, well,
+
+00:39:55.220 --> 00:39:58.400 align:middle line:84%
+first time through
+the function call,
+
+00:39:58.400 --> 00:40:00.890 align:middle line:84%
+I'm looking for the
+number 1 in this list.
+
+00:40:00.890 --> 00:40:03.680 align:middle line:84%
+The next time, I'm looking
+for the 1 in this list.
+
+00:40:03.680 --> 00:40:07.250 align:middle line:84%
+The next time, I'm looking
+for the 1 in this list.
+
+00:40:07.250 --> 00:40:09.770 align:middle line:84%
+And the last time,
+for my function call,
+
+00:40:09.770 --> 00:40:13.600 align:middle line:84%
+I'm looking for
+the 1 in this list.
+
+00:40:13.600 --> 00:40:16.060 align:middle line:84%
+And already, we see
+something went wrong
+
+00:40:16.060 --> 00:40:20.920 align:middle line:84%
+because as I was looking
+through these lists,
+
+00:40:20.920 --> 00:40:26.310 align:middle line:84%
+I'm basically skipping
+over important elements.
+
+00:40:26.310 --> 00:40:29.370 align:middle line:84%
+What this code is
+actually doing is only
+
+00:40:29.370 --> 00:40:34.560 align:middle line:84%
+checking if the last element
+is the one you're looking for,
+
+00:40:34.560 --> 00:40:39.420 align:middle line:84%
+because it basically ignores
+that first element in the code.
+
+00:40:39.420 --> 00:40:43.230 align:middle line:84%
+The code here, yes, it
+extracts that first element,
+
+00:40:43.230 --> 00:40:45.060 align:middle line:84%
+but it doesn't do
+anything with it.
+
+00:40:45.060 --> 00:40:47.950 align:middle line:90%
+
+
+00:40:47.950 --> 00:40:50.370 align:middle line:90%
+So that's our problem.
+
+00:40:50.370 --> 00:40:53.970 align:middle line:84%
+What we want to do is still
+look at further elements
+
+00:40:53.970 --> 00:40:54.670 align:middle line:90%
+in the list.
+
+00:40:54.670 --> 00:40:56.490 align:middle line:84%
+So that part of the
+code is correct.
+
+00:40:56.490 --> 00:40:59.520 align:middle line:84%
+But we only want to do it
+in a certain situation.
+
+00:40:59.520 --> 00:41:04.290 align:middle line:84%
+And that situation is when the
+element that we just extracted,
+
+00:41:04.290 --> 00:41:08.840 align:middle line:84%
+l at index 0, is not the
+one we're looking for,
+
+00:41:08.840 --> 00:41:11.990 align:middle line:90%
+the little else case.
+
+00:41:11.990 --> 00:41:14.480 align:middle line:84%
+So we still want to
+extract the first element
+
+00:41:14.480 --> 00:41:17.550 align:middle line:84%
+if we have a list with more
+than one element in it.
+
+00:41:17.550 --> 00:41:20.480 align:middle line:84%
+But as we've extracted
+it, check if it's
+
+00:41:20.480 --> 00:41:21.950 align:middle line:90%
+the one we're looking for.
+
+00:41:21.950 --> 00:41:23.510 align:middle line:90%
+If it is, return true.
+
+00:41:23.510 --> 00:41:25.250 align:middle line:84%
+No need to keep
+searching the rest
+
+00:41:25.250 --> 00:41:26.910 align:middle line:90%
+of the elements in the list.
+
+00:41:26.910 --> 00:41:30.170 align:middle line:84%
+If it's not the one we're
+looking for, this else here,
+
+00:41:30.170 --> 00:41:33.608 align:middle line:84%
+then we can look at the
+remaining elements in the list
+
+00:41:33.608 --> 00:41:35.150 align:middle line:84%
+and run the exact
+same function we're
+
+00:41:35.150 --> 00:41:39.840 align:middle line:84%
+writing to check if the element
+is in the remaining list.
+
+00:41:39.840 --> 00:41:41.100 align:middle line:90%
+Does this code make sense?
+
+00:41:41.100 --> 00:41:42.520 align:middle line:90%
+Is it all right?
+
+00:41:42.520 --> 00:41:44.500 align:middle line:90%
+OK.
+
+00:41:44.500 --> 00:41:48.550 align:middle line:84%
+So the way I wrote this
+code is how I personally
+
+00:41:48.550 --> 00:41:50.530 align:middle line:90%
+think about the problem.
+
+00:41:50.530 --> 00:41:52.960 align:middle line:84%
+And if we run the
+code again, it'll
+
+00:41:52.960 --> 00:41:55.340 align:middle line:84%
+give me the correct
+answers each time.
+
+00:41:55.340 --> 00:41:58.000 align:middle line:84%
+But I wanted to mention
+that we can actually
+
+00:41:58.000 --> 00:42:01.630 align:middle line:84%
+clean up the code a little bit
+and write it a little bit more
+
+00:42:01.630 --> 00:42:06.790 align:middle line:84%
+Pythonically so it's a
+little bit nicer to read,
+
+00:42:06.790 --> 00:42:08.030 align:middle line:90%
+it's more cleaned up.
+
+00:42:08.030 --> 00:42:11.770 align:middle line:84%
+But one of the things
+that was confusing for me
+
+00:42:11.770 --> 00:42:13.600 align:middle line:84%
+when I first started
+learning recursion
+
+00:42:13.600 --> 00:42:17.260 align:middle line:84%
+is that I would always see
+these beautiful, cleaned up
+
+00:42:17.260 --> 00:42:21.400 align:middle line:84%
+versions of code that
+do the recursion,
+
+00:42:21.400 --> 00:42:25.630 align:middle line:84%
+and that's not how we approach
+thinking about the problem.
+
+00:42:25.630 --> 00:42:29.270 align:middle line:84%
+I can't come up with this
+nice form right off the bat.
+
+00:42:29.270 --> 00:42:31.270 align:middle line:84%
+And this is one example,
+but there are certainly
+
+00:42:31.270 --> 00:42:33.273 align:middle line:84%
+other examples of
+more complicated code
+
+00:42:33.273 --> 00:42:35.440 align:middle line:84%
+where you see it and it's
+just-- it looks beautiful.
+
+00:42:35.440 --> 00:42:37.907 align:middle line:84%
+And yes, if I look at
+it, I can figure it out.
+
+00:42:37.907 --> 00:42:39.490 align:middle line:84%
+And I say, OK, yeah,
+that makes sense.
+
+00:42:39.490 --> 00:42:43.330 align:middle line:84%
+But I personally could never
+come up with it on my own.
+
+00:42:43.330 --> 00:42:45.500 align:middle line:84%
+So as I was writing these
+lectures, I thought, well,
+
+00:42:45.500 --> 00:42:47.390 align:middle line:84%
+how do I actually link
+about the problem?
+
+00:42:47.390 --> 00:42:48.970 align:middle line:90%
+So I just went back one slide.
+
+00:42:48.970 --> 00:42:50.770 align:middle line:84%
+And the way I think
+about the problem
+
+00:42:50.770 --> 00:42:54.910 align:middle line:84%
+is to separate it
+into these smaller--
+
+00:42:54.910 --> 00:42:58.342 align:middle line:84%
+a bunch of different base cases,
+or a bunch of different cases.
+
+00:42:58.342 --> 00:42:59.800 align:middle line:84%
+And so that's what
+I've been trying
+
+00:42:59.800 --> 00:43:01.660 align:middle line:84%
+to do in this particular
+lecture to help you
+
+00:43:01.660 --> 00:43:03.340 align:middle line:90%
+guys understand recursion.
+
+00:43:03.340 --> 00:43:05.020 align:middle line:84%
+It's, think about
+the case when we have
+
+00:43:05.020 --> 00:43:07.330 align:middle line:90%
+a list with one element in it.
+
+00:43:07.330 --> 00:43:09.057 align:middle line:84%
+How would you
+solve that problem?
+
+00:43:09.057 --> 00:43:11.140 align:middle line:84%
+And then think about the
+case when you have a list
+
+00:43:11.140 --> 00:43:12.182 align:middle line:90%
+with many elements in it.
+
+00:43:12.182 --> 00:43:14.420 align:middle line:84%
+How would you
+solve that problem?
+
+00:43:14.420 --> 00:43:15.430 align:middle line:90%
+Yes, it's true.
+
+00:43:15.430 --> 00:43:18.820 align:middle line:84%
+There are some pieces
+here that are repeating.
+
+00:43:18.820 --> 00:43:22.720 align:middle line:84%
+So we've got L at 0 equal
+e is in a couple places.
+
+00:43:22.720 --> 00:43:25.450 align:middle line:84%
+But you can do
+that cleanup later.
+
+00:43:25.450 --> 00:43:27.970 align:middle line:84%
+So here, I've got two
+test cases that return--
+
+00:43:27.970 --> 00:43:30.190 align:middle line:84%
+two cases that
+return L at 0 so we
+
+00:43:30.190 --> 00:43:33.070 align:middle line:84%
+can pop them into the
+same test case here.
+
+00:43:33.070 --> 00:43:35.857 align:middle line:84%
+And then we can check if
+the length of the list is 0.
+
+00:43:35.857 --> 00:43:36.940 align:middle line:90%
+We can add that test case.
+
+00:43:36.940 --> 00:43:39.310 align:middle line:84%
+And else, we check the
+remainder of the list.
+
+00:43:39.310 --> 00:43:40.492 align:middle line:90%
+That's totally fine.
+
+00:43:40.492 --> 00:43:42.700 align:middle line:84%
+And if it helps you think
+about the problem this way,
+
+00:43:42.700 --> 00:43:44.680 align:middle line:90%
+that's OK too.
+
+00:43:44.680 --> 00:43:46.600 align:middle line:84%
+But personally, for
+me, it was a lot easier
+
+00:43:46.600 --> 00:43:48.640 align:middle line:84%
+to think about the
+problem in terms of a list
+
+00:43:48.640 --> 00:43:50.440 align:middle line:84%
+with one element in
+it and then a list
+
+00:43:50.440 --> 00:43:51.670 align:middle line:90%
+with many elements in it.
+
+00:43:51.670 --> 00:43:56.140 align:middle line:84%
+And it's totally fine to have
+to write a little bit quote,
+
+00:43:56.140 --> 00:44:00.480 align:middle line:84%
+unquote, "inefficient-looking"
+code to begin with.
+
+00:44:00.480 --> 00:44:02.670 align:middle line:84%
+Certainly, don't hardcode
+all the base cases.
+
+00:44:02.670 --> 00:44:04.050 align:middle line:90%
+If length is 0, do this.
+
+00:44:04.050 --> 00:44:05.280 align:middle line:90%
+If length is 1, do this.
+
+00:44:05.280 --> 00:44:07.200 align:middle line:90%
+If length is 2, do this.
+
+00:44:07.200 --> 00:44:10.410 align:middle line:84%
+But some reasonable
+base cases are OK to do.
+
+00:44:10.410 --> 00:44:14.440 align:middle line:84%
+So this is just showing
+the simplified code.
+
+00:44:14.440 --> 00:44:16.290 align:middle line:84%
+One thing that I
+wanted to mention--
+
+00:44:16.290 --> 00:44:18.660 align:middle line:84%
+and hopefully, you've
+noticed this already--
+
+00:44:18.660 --> 00:44:21.810 align:middle line:84%
+is the function
+that you're writing,
+
+00:44:21.810 --> 00:44:25.230 align:middle line:84%
+all of the returns
+from this function
+
+00:44:25.230 --> 00:44:27.830 align:middle line:90%
+need to have the same type.
+
+00:44:27.830 --> 00:44:29.420 align:middle line:90%
+When we wrote--
+
+00:44:29.420 --> 00:44:30.680 align:middle line:90%
+I'll go back a couple slides.
+
+00:44:30.680 --> 00:44:33.080 align:middle line:84%
+When we wrote the function
+that calculated the sum
+
+00:44:33.080 --> 00:44:34.790 align:middle line:90%
+of all the elements in a list--
+
+00:44:34.790 --> 00:44:37.590 align:middle line:90%
+so that's this one here--
+
+00:44:37.590 --> 00:44:38.900 align:middle line:90%
+what were we returning?
+
+00:44:38.900 --> 00:44:41.240 align:middle line:84%
+Here, we were returning
+an actual number,
+
+00:44:41.240 --> 00:44:44.360 align:middle line:84%
+and then here, we were assuming
+that this function returned
+
+00:44:44.360 --> 00:44:48.020 align:middle line:84%
+an actual number that we can
+add to this actual number.
+
+00:44:48.020 --> 00:44:50.900 align:middle line:84%
+So every single
+return statement needs
+
+00:44:50.900 --> 00:44:53.600 align:middle line:84%
+to return the same
+type of object,
+
+00:44:53.600 --> 00:44:57.470 align:middle line:84%
+because if you don't, if
+you're assuming that the base
+
+00:44:57.470 --> 00:45:00.810 align:middle line:84%
+case returns a list, but then
+at some point in the code,
+
+00:45:00.810 --> 00:45:04.790 align:middle line:84%
+you're going to be working
+with a number or a Boolean,
+
+00:45:04.790 --> 00:45:06.748 align:middle line:84%
+then Python, as soon as
+it gets that base case,
+
+00:45:06.748 --> 00:45:08.207 align:middle line:84%
+is going to say,
+hey, you're trying
+
+00:45:08.207 --> 00:45:09.500 align:middle line:90%
+to add a Boolean to a list.
+
+00:45:09.500 --> 00:45:11.060 align:middle line:90%
+What's up?
+
+00:45:11.060 --> 00:45:14.210 align:middle line:84%
+And so in the summing
+of the list elements,
+
+00:45:14.210 --> 00:45:17.300 align:middle line:84%
+all the test cases
+returned a number,
+
+00:45:17.300 --> 00:45:19.640 align:middle line:84%
+and in this case
+where we are trying
+
+00:45:19.640 --> 00:45:22.700 align:middle line:84%
+to return whether the element
+is in the list or not,
+
+00:45:22.700 --> 00:45:25.250 align:middle line:84%
+notice, every single
+one of my returns
+
+00:45:25.250 --> 00:45:26.850 align:middle line:90%
+is going to return a Boolean.
+
+00:45:26.850 --> 00:45:29.550 align:middle line:84%
+So here, Boolean, here,
+a Boolean, and here,
+
+00:45:29.550 --> 00:45:31.710 align:middle line:84%
+in the recursive
+step, I'm assuming
+
+00:45:31.710 --> 00:45:33.780 align:middle line:84%
+that I'm just passing
+this Boolean back up
+
+00:45:33.780 --> 00:45:35.520 align:middle line:90%
+the chain of command.
+
+00:45:35.520 --> 00:45:37.410 align:middle line:90%
+So very, very important thing.
+
+00:45:37.410 --> 00:45:39.900 align:middle line:84%
+Again, something that
+was not made clear to me
+
+00:45:39.900 --> 00:45:41.430 align:middle line:90%
+when I first started recursion.
+
+00:45:41.430 --> 00:45:45.390 align:middle line:84%
+But once I knew this, it
+just made so much more sense
+
+00:45:45.390 --> 00:45:49.530 align:middle line:84%
+and it helped me write my
+code better, more perfectly,
+
+00:45:49.530 --> 00:45:51.560 align:middle line:90%
+right off the bat.
+
+00:45:51.560 --> 00:45:53.910 align:middle line:84%
+Let's look at a slightly
+different example now.
+
+00:45:53.910 --> 00:45:55.730 align:middle line:84%
+So we've looked
+at taking the sum
+
+00:45:55.730 --> 00:45:57.110 align:middle line:90%
+of all the elements in a list.
+
+00:45:57.110 --> 00:45:59.250 align:middle line:84%
+We've looked at figuring
+out whether an element is
+
+00:45:59.250 --> 00:45:59.750 align:middle line:90%
+in a list.
+
+00:45:59.750 --> 00:46:02.660 align:middle line:84%
+Let's do something
+completely different.
+
+00:46:02.660 --> 00:46:05.090 align:middle line:84%
+Still working with
+lists, let's say
+
+00:46:05.090 --> 00:46:08.550 align:middle line:84%
+that we now have an input
+list that looks like this.
+
+00:46:08.550 --> 00:46:09.980 align:middle line:90%
+So we've got a list.
+
+00:46:09.980 --> 00:46:13.790 align:middle line:84%
+This is my list,
+beginning and end.
+
+00:46:13.790 --> 00:46:18.030 align:middle line:84%
+And this list only has
+list elements within it.
+
+00:46:18.030 --> 00:46:19.520 align:middle line:90%
+So no integers.
+
+00:46:19.520 --> 00:46:21.500 align:middle line:90%
+But its elements are lists.
+
+00:46:21.500 --> 00:46:23.160 align:middle line:90%
+So here's one list element.
+
+00:46:23.160 --> 00:46:24.810 align:middle line:90%
+Here's another list element.
+
+00:46:24.810 --> 00:46:27.650 align:middle line:90%
+And here's another list element.
+
+00:46:27.650 --> 00:46:32.710 align:middle line:84%
+So in this example, I've got a
+list with three list elements.
+
+00:46:32.710 --> 00:46:36.370 align:middle line:84%
+What I'd like to do is to
+flatten this list, which
+
+00:46:36.370 --> 00:46:40.870 align:middle line:84%
+means that I want to remove
+any semblance of sublists
+
+00:46:40.870 --> 00:46:44.770 align:middle line:84%
+and take just all the
+elements of these sublists
+
+00:46:44.770 --> 00:46:46.720 align:middle line:90%
+and put them top-level.
+
+00:46:46.720 --> 00:46:50.280 align:middle line:90%
+
+
+00:46:50.280 --> 00:46:53.410 align:middle line:90%
+Does this task make sense?
+
+00:46:53.410 --> 00:46:54.310 align:middle line:90%
+OK.
+
+00:46:54.310 --> 00:46:56.167 align:middle line:84%
+So I'm not assuming
+I've got lists
+
+00:46:56.167 --> 00:46:57.250 align:middle line:90%
+within lists within lists.
+
+00:46:57.250 --> 00:47:00.940 align:middle line:84%
+I'm just assuming I've got lists
+with list elements that have
+
+00:47:00.940 --> 00:47:02.230 align:middle line:90%
+integers or whatever in them.
+
+00:47:02.230 --> 00:47:05.090 align:middle line:90%
+
+
+00:47:05.090 --> 00:47:08.670 align:middle line:84%
+So again, let's think
+about the base case,
+
+00:47:08.670 --> 00:47:10.220 align:middle line:84%
+let's think about
+the case when we
+
+00:47:10.220 --> 00:47:11.990 align:middle line:84%
+have a list with
+one element in it,
+
+00:47:11.990 --> 00:47:15.100 align:middle line:84%
+and then we can figure
+out the recursive step.
+
+00:47:15.100 --> 00:47:17.550 align:middle line:84%
+So if I have a list with
+one element in it-- again,
+
+00:47:17.550 --> 00:47:19.920 align:middle line:84%
+I've got an example here
+on the right-hand side.
+
+00:47:19.920 --> 00:47:24.250 align:middle line:84%
+It's a list with one
+list element in it.
+
+00:47:24.250 --> 00:47:27.070 align:middle line:84%
+That's why I've got the
+double square brackets.
+
+00:47:27.070 --> 00:47:31.900 align:middle line:84%
+If I wanted to flatten
+this, what could I do?
+
+00:47:31.900 --> 00:47:35.160 align:middle line:84%
+I could just grab the
+element at index 0,
+
+00:47:35.160 --> 00:47:38.940 align:middle line:84%
+because the element at
+index 0 is this inner list,
+
+00:47:38.940 --> 00:47:42.270 align:middle line:84%
+and it is a flattened
+version of my list.
+
+00:47:42.270 --> 00:47:46.910 align:middle line:90%
+
+
+00:47:46.910 --> 00:47:48.860 align:middle line:90%
+Else, what am I going to do?
+
+00:47:48.860 --> 00:47:50.640 align:middle line:90%
+Well, let's do the same pattern.
+
+00:47:50.640 --> 00:47:52.730 align:middle line:84%
+It seems to have
+worked so far for us.
+
+00:47:52.730 --> 00:47:55.920 align:middle line:84%
+Let's do the pattern of
+extracting that first element.
+
+00:47:55.920 --> 00:47:58.580 align:middle line:90%
+So grab element at index 0.
+
+00:47:58.580 --> 00:48:02.120 align:middle line:84%
+So here, we would grab something
+like square brackets, 1, comma,
+
+00:48:02.120 --> 00:48:07.830 align:middle line:84%
+2, and concatenate
+it with something.
+
+00:48:07.830 --> 00:48:09.240 align:middle line:84%
+OK, remember, when
+we concatenate
+
+00:48:09.240 --> 00:48:11.370 align:middle line:84%
+a list with another
+list, it gives us
+
+00:48:11.370 --> 00:48:13.860 align:middle line:84%
+a big list with all
+the elements in it,
+
+00:48:13.860 --> 00:48:17.800 align:middle line:84%
+exactly what we're looking for
+when we want to flatten a list.
+
+00:48:17.800 --> 00:48:22.950 align:middle line:84%
+So the something we're going
+to add this l at index 0 with
+
+00:48:22.950 --> 00:48:28.900 align:middle line:84%
+is just us flattening the
+remainder of our list.
+
+00:48:28.900 --> 00:48:32.380 align:middle line:84%
+Again, same pattern we've
+been seeing already.
+
+00:48:32.380 --> 00:48:34.750 align:middle line:84%
+So if I extract, in
+this example here,
+
+00:48:34.750 --> 00:48:37.200 align:middle line:84%
+the 1, comma, 2 as
+a list, I'm going
+
+00:48:37.200 --> 00:48:40.590 align:middle line:84%
+to concatenate it
+with the assumption
+
+00:48:40.590 --> 00:48:43.260 align:middle line:84%
+that the function I'm
+writing will work correctly
+
+00:48:43.260 --> 00:48:47.250 align:middle line:84%
+to flatten 3, comma, 4
+and 9, comma, 8, comma, 7.
+
+00:48:47.250 --> 00:48:50.940 align:middle line:84%
+So if I flatten that, this
+will give me just a list
+
+00:48:50.940 --> 00:48:53.800 align:middle line:90%
+with 3, 4, 9, 8, 7 in it.
+
+00:48:53.800 --> 00:48:56.580 align:middle line:84%
+And if I concatenate 1,
+comma, 2 with 3, 4, 9, 8, 7,
+
+00:48:56.580 --> 00:48:58.410 align:middle line:84%
+that just gives
+me 3, 4, 9, 8, 7.
+
+00:48:58.410 --> 00:49:01.460 align:middle line:90%
+
+
+00:49:01.460 --> 00:49:02.780 align:middle line:90%
+Everyone with me?
+
+00:49:02.780 --> 00:49:03.530 align:middle line:90%
+Is that all right?
+
+00:49:03.530 --> 00:49:04.030 align:middle line:90%
+OK, good.
+
+00:49:04.030 --> 00:49:06.470 align:middle line:84%
+I see some nods, so that's
+actually a pretty good sign.
+
+00:49:06.470 --> 00:49:09.700 align:middle line:90%
+
+
+00:49:09.700 --> 00:49:11.530 align:middle line:90%
+OK, you are with me, right?
+
+00:49:11.530 --> 00:49:14.090 align:middle line:90%
+Because now, it is your turn.
+
+00:49:14.090 --> 00:49:20.350 align:middle line:84%
+So we're going to write a
+variation of whether an element
+
+00:49:20.350 --> 00:49:21.950 align:middle line:90%
+is in a list.
+
+00:49:21.950 --> 00:49:24.790 align:middle line:84%
+So I'm going to give you
+a very similar scenario
+
+00:49:24.790 --> 00:49:25.780 align:middle line:90%
+to this flattened one.
+
+00:49:25.780 --> 00:49:29.870 align:middle line:84%
+So I'm going to give you a list
+that contains list elements.
+
+00:49:29.870 --> 00:49:33.940 align:middle line:84%
+So here's my list that
+contains list elements in it.
+
+00:49:33.940 --> 00:49:37.360 align:middle line:84%
+And what I'd like you to do
+is write a recursive function
+
+00:49:37.360 --> 00:49:40.570 align:middle line:84%
+that checks whether
+this element, whatever
+
+00:49:40.570 --> 00:49:43.570 align:middle line:84%
+the second parameter
+in my function call,
+
+00:49:43.570 --> 00:49:46.960 align:middle line:90%
+is in these list elements.
+
+00:49:46.960 --> 00:49:50.470 align:middle line:84%
+So not at the top level, like
+we wrote the at the last code
+
+00:49:50.470 --> 00:49:55.930 align:middle line:84%
+to check if an element is in
+a list, but in these sublists.
+
+00:49:55.930 --> 00:49:58.450 align:middle line:84%
+So just to show
+you the difference,
+
+00:49:58.450 --> 00:50:02.860 align:middle line:84%
+if I check whether 3 is
+in 1, comma, 2, comma, 3,
+
+00:50:02.860 --> 00:50:04.120 align:middle line:90%
+that will be true.
+
+00:50:04.120 --> 00:50:08.900 align:middle line:84%
+But if I check whether 3 is in
+the list containing the list
+
+00:50:08.900 --> 00:50:10.610 align:middle line:84%
+1, comma, 2, comma,
+3, that's false,
+
+00:50:10.610 --> 00:50:15.020 align:middle line:84%
+because it's checking whether
+the 3 is equal to this list.
+
+00:50:15.020 --> 00:50:17.750 align:middle line:84%
+It's just doing a
+top-level equality here.
+
+00:50:17.750 --> 00:50:20.320 align:middle line:90%
+
+
+00:50:20.320 --> 00:50:28.920 align:middle line:84%
+So let's have you write
+this code down on line 166.
+
+00:50:28.920 --> 00:50:32.100 align:middle line:84%
+You may use the in
+operator to check
+
+00:50:32.100 --> 00:50:34.950 align:middle line:84%
+if an element is
+in a list itself,
+
+00:50:34.950 --> 00:50:37.603 align:middle line:84%
+but obviously, you won't be
+able to use in operator--
+
+00:50:37.603 --> 00:50:40.020 align:middle line:84%
+nor should you, because then
+we're not writing a recursive
+
+00:50:40.020 --> 00:50:44.100 align:middle line:84%
+function-- to check if the
+element is within a list
+
+00:50:44.100 --> 00:50:45.250 align:middle line:90%
+element.
+
+00:50:45.250 --> 00:50:49.080 align:middle line:84%
+So have you work on it
+for a couple of minutes,
+
+00:50:49.080 --> 00:50:51.030 align:middle line:84%
+and then we can
+write it together.
+
+00:50:51.030 --> 00:50:53.860 align:middle line:90%
+
+
+00:50:53.860 --> 00:50:55.270 align:middle line:90%
+Does anyone have a start?
+
+00:50:55.270 --> 00:50:58.750 align:middle line:84%
+So let's look at the case where
+we have one element in it.
+
+00:50:58.750 --> 00:51:04.320 align:middle line:84%
+How do you check whether that
+element is within the list
+
+00:51:04.320 --> 00:51:04.820 align:middle line:90%
+inside?
+
+00:51:04.820 --> 00:51:08.650 align:middle line:90%
+
+
+00:51:08.650 --> 00:51:12.810 align:middle line:84%
+So if-- this is our case
+with one element in it.
+
+00:51:12.810 --> 00:51:17.145 align:middle line:90%
+The length of L equals 1.
+
+00:51:17.145 --> 00:51:22.190 align:middle line:90%
+
+
+00:51:22.190 --> 00:51:22.690 align:middle line:90%
+Yeah?
+
+00:51:22.690 --> 00:51:29.099 align:middle line:84%
+AUDIENCE: Um, I'm not
+sure, but [INAUDIBLE] e
+
+00:51:29.099 --> 00:51:31.080 align:middle line:90%
+and L [INAUDIBLE].
+
+00:51:31.080 --> 00:51:32.220 align:middle line:90%
+ANA BELL: Yeah, exactly.
+
+00:51:32.220 --> 00:51:36.430 align:middle line:84%
+e and L is the
+correct thing to do.
+
+00:51:36.430 --> 00:51:38.790 align:middle line:90%
+L at index 0.
+
+00:51:38.790 --> 00:51:41.880 align:middle line:84%
+So if this is our l-- that's
+why I added this little example
+
+00:51:41.880 --> 00:51:43.290 align:middle line:90%
+here, so it can help us.
+
+00:51:43.290 --> 00:51:47.370 align:middle line:84%
+So L at index 0 is this guy
+here, and all I need to do
+
+00:51:47.370 --> 00:51:50.670 align:middle line:84%
+is check if e is
+in L at index 0.
+
+00:51:50.670 --> 00:51:53.550 align:middle line:84%
+And I can just return
+that right off the bat.
+
+00:51:53.550 --> 00:51:58.160 align:middle line:90%
+
+
+00:51:58.160 --> 00:52:02.250 align:middle line:84%
+I could do if e in L0, return
+true, else, return false.
+
+00:52:02.250 --> 00:52:05.012 align:middle line:84%
+But e in L0 is
+already a Boolean.
+
+00:52:05.012 --> 00:52:06.470 align:middle line:84%
+So I can just return
+that directly.
+
+00:52:06.470 --> 00:52:10.170 align:middle line:90%
+
+
+00:52:10.170 --> 00:52:16.640 align:middle line:84%
+else, we have a list with
+more than one element in it.
+
+00:52:16.640 --> 00:52:20.250 align:middle line:90%
+So what do we do here?
+
+00:52:20.250 --> 00:52:24.915 align:middle line:84%
+Remember, extract the first
+element and then do the rest.
+
+00:52:24.915 --> 00:52:31.090 align:middle line:90%
+
+
+00:52:31.090 --> 00:52:32.200 align:middle line:90%
+So let's say this.
+
+00:52:32.200 --> 00:52:34.990 align:middle line:84%
+Let's say the first
+element is L at index 0.
+
+00:52:34.990 --> 00:52:37.150 align:middle line:84%
+That'll help us think
+about it a little bit.
+
+00:52:37.150 --> 00:52:40.150 align:middle line:90%
+
+
+00:52:40.150 --> 00:52:42.930 align:middle line:84%
+So before looking at the
+remainder of the list
+
+00:52:42.930 --> 00:52:44.760 align:middle line:84%
+and calling our
+recursive function,
+
+00:52:44.760 --> 00:52:47.580 align:middle line:84%
+what did we do when we checked
+if an element was in a list
+
+00:52:47.580 --> 00:52:49.960 align:middle line:90%
+when we just had a plain list?
+
+00:52:49.960 --> 00:52:59.990 align:middle line:84%
+We just said if e is in
+first, return true. else,
+
+00:52:59.990 --> 00:53:00.665 align:middle line:90%
+return false.
+
+00:53:00.665 --> 00:53:06.430 align:middle line:90%
+
+
+00:53:06.430 --> 00:53:10.430 align:middle line:84%
+But we don't want to do
+an else return false,
+
+00:53:10.430 --> 00:53:13.250 align:middle line:90%
+because that's not quite true.
+
+00:53:13.250 --> 00:53:19.500 align:middle line:84%
+else, we want to look at
+the remainder of the list.
+
+00:53:19.500 --> 00:53:21.240 align:middle line:90%
+We want to see if the--
+
+00:53:21.240 --> 00:53:25.110 align:middle line:84%
+obviously, if the element
+is not in the first thing
+
+00:53:25.110 --> 00:53:32.050 align:middle line:84%
+that I just extracted, this list
+here, then I would like to say,
+
+00:53:32.050 --> 00:53:35.790 align:middle line:84%
+is it in the rest
+of this list, which
+
+00:53:35.790 --> 00:53:38.040 align:middle line:84%
+is us calling the
+function that we're just
+
+00:53:38.040 --> 00:53:39.550 align:middle line:90%
+writing all over again.
+
+00:53:39.550 --> 00:53:47.278 align:middle line:84%
+So we can return the name of
+this function in lists of--
+
+00:53:47.278 --> 00:53:48.070 align:middle line:90%
+what did I call it?
+
+00:53:48.070 --> 00:53:51.380 align:middle line:90%
+Lists of lists.
+
+00:53:51.380 --> 00:53:54.945 align:middle line:84%
+And then L from 1 onward
+with the same element
+
+00:53:54.945 --> 00:53:55.820 align:middle line:90%
+we're trying to find.
+
+00:53:55.820 --> 00:54:00.720 align:middle line:90%
+
+
+00:54:00.720 --> 00:54:02.370 align:middle line:84%
+And of course, we
+can simplify this
+
+00:54:02.370 --> 00:54:04.890 align:middle line:84%
+just like we could
+simplify the previous one.
+
+00:54:04.890 --> 00:54:07.560 align:middle line:84%
+But it helps to think about
+it in these two cases,
+
+00:54:07.560 --> 00:54:09.840 align:middle line:84%
+a list with one element and
+a list with many elements.
+
+00:54:09.840 --> 00:54:18.220 align:middle line:90%
+
+
+00:54:18.220 --> 00:54:20.880 align:middle line:90%
+Any questions about this?
+
+00:54:20.880 --> 00:54:21.380 align:middle line:90%
+Yes.
+
+00:54:21.380 --> 00:54:24.235 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:54:24.235 --> 00:54:29.460 align:middle line:90%
+
+
+00:54:29.460 --> 00:54:30.830 align:middle line:90%
+ANA BELL: This one?
+
+00:54:30.830 --> 00:54:35.690 align:middle line:84%
+This one, we're considering a
+list with one list inside it.
+
+00:54:35.690 --> 00:54:36.190 align:middle line:90%
+Yeah.
+
+00:54:36.190 --> 00:54:40.070 align:middle line:90%
+
+
+00:54:40.070 --> 00:54:42.050 align:middle line:84%
+We could include another
+base case, I suppose,
+
+00:54:42.050 --> 00:54:44.090 align:middle line:84%
+if the length of L
+is 0 returned false.
+
+00:54:44.090 --> 00:54:46.170 align:middle line:84%
+That would also work,
+because obviously,
+
+00:54:46.170 --> 00:54:48.210 align:middle line:84%
+if the list is empty,
+then it's not in there.
+
+00:54:48.210 --> 00:54:51.190 align:middle line:90%
+
+
+00:54:51.190 --> 00:54:52.630 align:middle line:90%
+So when do we use recursion?
+
+00:54:52.630 --> 00:54:55.720 align:middle line:84%
+Obviously, a lot of the
+examples we've seen here,
+
+00:54:55.720 --> 00:54:58.540 align:middle line:84%
+they're very intuitive
+to write iteratively.
+
+00:54:58.540 --> 00:55:01.240 align:middle line:84%
+But I mentioned a couple
+examples last time,
+
+00:55:01.240 --> 00:55:05.500 align:middle line:84%
+where it's more intuitive
+to use recursion.
+
+00:55:05.500 --> 00:55:10.340 align:middle line:84%
+And specifically, I wanted to
+draw a little bit of a parallel
+
+00:55:10.340 --> 00:55:12.890 align:middle line:84%
+to this thing when we
+learned about while loops.
+
+00:55:12.890 --> 00:55:15.470 align:middle line:84%
+We said, well, what if we tried
+to code a little game that
+
+00:55:15.470 --> 00:55:17.870 align:middle line:90%
+just used if and elses?
+
+00:55:17.870 --> 00:55:21.590 align:middle line:84%
+I said that we would have
+a bunch of nested if/else
+
+00:55:21.590 --> 00:55:25.580 align:middle line:84%
+statements without a while loop,
+because we don't know how deep
+
+00:55:25.580 --> 00:55:29.630 align:middle line:84%
+to make these
+if/else/if statements.
+
+00:55:29.630 --> 00:55:33.740 align:middle line:84%
+And so a very similar
+idea exists with recursion
+
+00:55:33.740 --> 00:55:35.340 align:middle line:90%
+and when to use recursion.
+
+00:55:35.340 --> 00:55:38.850 align:middle line:84%
+So if I had a list with a
+whole bunch of lists in it,
+
+00:55:38.850 --> 00:55:42.240 align:middle line:84%
+and those lists could have lists
+within it, and so on and so on,
+
+00:55:42.240 --> 00:55:44.900 align:middle line:84%
+I don't know how
+long I need to--
+
+00:55:44.900 --> 00:55:47.840 align:middle line:84%
+how deep I need to
+make my code go.
+
+00:55:47.840 --> 00:55:50.630 align:middle line:84%
+So an example using a
+for loop would be to say,
+
+00:55:50.630 --> 00:55:53.383 align:middle line:84%
+for each element in
+L, I'm going to say,
+
+00:55:53.383 --> 00:55:54.800 align:middle line:84%
+I'm going to look
+at each element.
+
+00:55:54.800 --> 00:55:56.675 align:middle line:84%
+I'm going to say, well,
+if you're not a list,
+
+00:55:56.675 --> 00:55:58.800 align:middle line:84%
+then I can deal
+with you directly.
+
+00:55:58.800 --> 00:56:03.090 align:middle line:84%
+But if you are a list, then
+I need to iterate over you.
+
+00:56:03.090 --> 00:56:07.080 align:middle line:84%
+And so I've got this other
+iteration here for each j in i
+
+00:56:07.080 --> 00:56:09.070 align:middle line:90%
+for one of those lists.
+
+00:56:09.070 --> 00:56:10.750 align:middle line:84%
+Again, I would say,
+are you a list?
+
+00:56:10.750 --> 00:56:12.640 align:middle line:84%
+If not, I'll deal
+with you directly.
+
+00:56:12.640 --> 00:56:16.420 align:middle line:84%
+else, you are a list, so I
+do need to iterate over you.
+
+00:56:16.420 --> 00:56:19.780 align:middle line:84%
+And you can see this nested
+idea now comes into play here.
+
+00:56:19.780 --> 00:56:22.720 align:middle line:84%
+And of course, we could try to
+use a while loop to optimize
+
+00:56:22.720 --> 00:56:26.020 align:middle line:84%
+the code a little bit, say,
+while this element type is not
+
+00:56:26.020 --> 00:56:28.420 align:middle line:84%
+a list, do this,
+things like that.
+
+00:56:28.420 --> 00:56:33.400 align:middle line:84%
+But it leads to some
+really verbose code.
+
+00:56:33.400 --> 00:56:36.783 align:middle line:84%
+And so recursion is
+a way for us to deal
+
+00:56:36.783 --> 00:56:39.200 align:middle line:84%
+with these lists within lists
+within lists, and of course,
+
+00:56:39.200 --> 00:56:41.710 align:middle line:84%
+when you have data structures
+that you don't know how long--
+
+00:56:41.710 --> 00:56:43.130 align:middle line:90%
+or how deep they go.
+
+00:56:43.130 --> 00:56:46.480 align:middle line:84%
+So I mentioned file systems
+and a set of operations
+
+00:56:46.480 --> 00:56:49.480 align:middle line:84%
+last lecture as really nice
+places to use recursion.
+
+00:56:49.480 --> 00:56:55.397 align:middle line:84%
+Scooby-Doo gang looking
+for their culprit, rooms
+
+00:56:55.397 --> 00:56:57.730 align:middle line:84%
+that have doors that lead to
+other rooms that have doors
+
+00:56:57.730 --> 00:56:58.780 align:middle line:84%
+lead to other rooms,
+they don't know
+
+00:56:58.780 --> 00:57:00.640 align:middle line:84%
+how many doors they need to
+go through to get to a room
+
+00:57:00.640 --> 00:57:01.510 align:middle line:90%
+without doors.
+
+00:57:01.510 --> 00:57:04.100 align:middle line:84%
+Obviously, recursion,
+they should use.
+
+00:57:04.100 --> 00:57:05.830 align:middle line:84%
+And then a bunch of
+other fun examples
+
+00:57:05.830 --> 00:57:08.240 align:middle line:90%
+of places to use recursion.
+
+00:57:08.240 --> 00:57:12.020 align:middle line:84%
+So the last bit
+of class, I would
+
+00:57:12.020 --> 00:57:14.840 align:middle line:84%
+like to work
+through this example
+
+00:57:14.840 --> 00:57:17.600 align:middle line:84%
+where we're going
+to see the code
+
+00:57:17.600 --> 00:57:21.740 align:middle line:84%
+to solve lists within lists
+within lists within lists.
+
+00:57:21.740 --> 00:57:24.050 align:middle line:84%
+But before we do
+that, we're going
+
+00:57:24.050 --> 00:57:26.450 align:middle line:84%
+to talk about-- so
+we're going to do
+
+00:57:26.450 --> 00:57:29.160 align:middle line:84%
+that example in the context
+of reversing a list.
+
+00:57:29.160 --> 00:57:30.770 align:middle line:84%
+But before we look
+at a list that
+
+00:57:30.770 --> 00:57:33.180 align:middle line:84%
+has all these different
+sublists within it,
+
+00:57:33.180 --> 00:57:36.570 align:middle line:84%
+let's look at a list
+that has just integers.
+
+00:57:36.570 --> 00:57:39.530 align:middle line:84%
+How would we think about
+this problem recursively
+
+00:57:39.530 --> 00:57:43.880 align:middle line:84%
+to reverse all the
+elements in this list?
+
+00:57:43.880 --> 00:57:47.120 align:middle line:84%
+So again, we're going to use
+the very same pattern we've
+
+00:57:47.120 --> 00:57:48.980 align:middle line:84%
+been using all
+throughout today when
+
+00:57:48.980 --> 00:57:50.420 align:middle line:90%
+we've been dealing with lists.
+
+00:57:50.420 --> 00:57:54.080 align:middle line:84%
+We're going to take out the
+first element, extract it,
+
+00:57:54.080 --> 00:57:57.170 align:middle line:84%
+and we're going to deal with
+the remainder of the list,
+
+00:57:57.170 --> 00:58:00.350 align:middle line:84%
+basically, by running the
+same function we're writing
+
+00:58:00.350 --> 00:58:02.570 align:middle line:90%
+on the remainder of the list.
+
+00:58:02.570 --> 00:58:04.930 align:middle line:84%
+So let's say I have
+my original list
+
+00:58:04.930 --> 00:58:07.220 align:middle line:84%
+and I look at my first
+element, just like before.
+
+00:58:07.220 --> 00:58:08.830 align:middle line:90%
+I'm going to extract it out.
+
+00:58:08.830 --> 00:58:15.150 align:middle line:84%
+If I take this first element
+and I pop it at the end,
+
+00:58:15.150 --> 00:58:19.020 align:middle line:84%
+and then I consider the
+remainder list, everything
+
+00:58:19.020 --> 00:58:21.900 align:middle line:84%
+except for that first element
+that I put at the end,
+
+00:58:21.900 --> 00:58:23.820 align:middle line:84%
+I can just call
+the same function
+
+00:58:23.820 --> 00:58:29.460 align:middle line:84%
+I'm writing right now to reverse
+the remaining list, which
+
+00:58:29.460 --> 00:58:31.740 align:middle line:84%
+means that I'm going to
+take this remaining list,
+
+00:58:31.740 --> 00:58:34.470 align:middle line:84%
+grab the first element,
+pop it at the end,
+
+00:58:34.470 --> 00:58:38.150 align:middle line:84%
+and deal with the
+remaining list.
+
+00:58:38.150 --> 00:58:40.940 align:middle line:84%
+Again, take the first
+element, pop it at the end,
+
+00:58:40.940 --> 00:58:42.530 align:middle line:84%
+deal with the
+remaining list, until I
+
+00:58:42.530 --> 00:58:44.940 align:middle line:90%
+have a list with length 1.
+
+00:58:44.940 --> 00:58:49.110 align:middle line:84%
+How do I reverse a list that
+only has one element in it?
+
+00:58:49.110 --> 00:58:52.590 align:middle line:90%
+It's just that list.
+
+00:58:52.590 --> 00:59:01.230 align:middle line:84%
+Reversing a list L is just
+L. So that's the idea.
+
+00:59:01.230 --> 00:59:05.950 align:middle line:84%
+And notice that when we're
+building back up the result,
+
+00:59:05.950 --> 00:59:10.360 align:middle line:84%
+we took that first element
+and we tacked it onto the end.
+
+00:59:10.360 --> 00:59:12.690 align:middle line:84%
+So we're going to do
+another list concatenation
+
+00:59:12.690 --> 00:59:15.360 align:middle line:84%
+kind of deal, except
+that the thing that I'm
+
+00:59:15.360 --> 00:59:19.590 align:middle line:84%
+concatenating now, the first
+element, will be at the end.
+
+00:59:19.590 --> 00:59:22.260 align:middle line:84%
+It'll be the second
+part of my plus.
+
+00:59:22.260 --> 00:59:23.730 align:middle line:84%
+So I'm just giving
+you a heads-up.
+
+00:59:23.730 --> 00:59:25.590 align:middle line:90%
+That's what it will look like.
+
+00:59:25.590 --> 00:59:26.780 align:middle line:90%
+So let's write the code.
+
+00:59:26.780 --> 00:59:29.390 align:middle line:84%
+If the length of the
+list is 1, if I'm
+
+00:59:29.390 --> 00:59:33.170 align:middle line:84%
+reversing a list with
+one element in it,
+
+00:59:33.170 --> 00:59:34.820 align:middle line:90%
+just return that list.
+
+00:59:34.820 --> 00:59:35.960 align:middle line:90%
+Easy-peasy.
+
+00:59:35.960 --> 00:59:38.810 align:middle line:90%
+It's just the list itself.
+
+00:59:38.810 --> 00:59:43.320 align:middle line:84%
+else-- and this is
+where the fun comes in.
+
+00:59:43.320 --> 00:59:45.130 align:middle line:90%
+I've got something.
+
+00:59:45.130 --> 00:59:47.940 align:middle line:84%
+So I'm going to do
+something concatenated
+
+00:59:47.940 --> 00:59:51.340 align:middle line:90%
+with something else.
+
+00:59:51.340 --> 00:59:53.730 align:middle line:84%
+So I'm extracting
+the first element.
+
+00:59:53.730 --> 00:59:55.530 align:middle line:90%
+There it is, L at index 0.
+
+00:59:55.530 --> 00:59:57.330 align:middle line:84%
+But it's sitting
+somewhere funny that we
+
+00:59:57.330 --> 00:59:59.100 align:middle line:90%
+haven't seen it sit before.
+
+00:59:59.100 --> 01:00:02.880 align:middle line:84%
+It's sitting on the second to
+the right of the concatenation.
+
+01:00:02.880 --> 01:00:04.680 align:middle line:84%
+And that's fine, because
+what we want to do
+
+01:00:04.680 --> 01:00:07.230 align:middle line:84%
+is take the element from
+the beginning of the list
+
+01:00:07.230 --> 01:00:10.080 align:middle line:90%
+and tack it on to the end.
+
+01:00:10.080 --> 01:00:12.600 align:middle line:84%
+And there's something else
+that's funny about it.
+
+01:00:12.600 --> 01:00:16.910 align:middle line:90%
+I've put it in square brackets.
+
+01:00:16.910 --> 01:00:19.610 align:middle line:84%
+Now, again, I'm
+including this example
+
+01:00:19.610 --> 01:00:20.870 align:middle line:90%
+to help us think about it.
+
+01:00:20.870 --> 01:00:23.870 align:middle line:84%
+Why are those square
+brackets there?
+
+01:00:23.870 --> 01:00:27.230 align:middle line:84%
+Think about what we want
+this function to return.
+
+01:00:27.230 --> 01:00:29.040 align:middle line:90%
+Is it returning a number?
+
+01:00:29.040 --> 01:00:29.540 align:middle line:90%
+No.
+
+01:00:29.540 --> 01:00:30.800 align:middle line:90%
+Is it returning a Boolean?
+
+01:00:30.800 --> 01:00:31.400 align:middle line:90%
+No.
+
+01:00:31.400 --> 01:00:34.010 align:middle line:90%
+It's returning a list.
+
+01:00:34.010 --> 01:00:38.750 align:middle line:84%
+This function, I want to take in
+a list and give me back a list,
+
+01:00:38.750 --> 01:00:41.930 align:middle line:84%
+but where my elements
+are in reversed order.
+
+01:00:41.930 --> 01:00:43.570 align:middle line:90%
+So what I want to do--
+
+01:00:43.570 --> 01:00:47.470 align:middle line:84%
+you can already see this return
+over here is returning a list.
+
+01:00:47.470 --> 01:00:51.010 align:middle line:84%
+So it'll be square
+brackets 10 or whatever.
+
+01:00:51.010 --> 01:00:58.230 align:middle line:84%
+In my recursive step,
+if I'm concatenating,
+
+01:00:58.230 --> 01:01:00.460 align:middle line:84%
+I want to concatenate
+this thing here,
+
+01:01:00.460 --> 01:01:02.470 align:middle line:84%
+which I'll tell you
+about in the next slide.
+
+01:01:02.470 --> 01:01:04.290 align:middle line:84%
+But I'm going to
+concatenate it with-- it's
+
+01:01:04.290 --> 01:01:06.390 align:middle line:84%
+going to be a list
+with some other list.
+
+01:01:06.390 --> 01:01:10.530 align:middle line:84%
+If I concatenate a list with
+a number, that L at 0 is--
+
+01:01:10.530 --> 01:01:12.450 align:middle line:90%
+L at 0 is a 10.
+
+01:01:12.450 --> 01:01:14.520 align:middle line:84%
+So if I concatenate
+a list with a number,
+
+01:01:14.520 --> 01:01:17.330 align:middle line:90%
+Python will yell at me.
+
+01:01:17.330 --> 01:01:20.390 align:middle line:84%
+So what I need to do is
+make that number that I just
+
+01:01:20.390 --> 01:01:23.130 align:middle line:90%
+extracted, L at 0, be a list.
+
+01:01:23.130 --> 01:01:25.730 align:middle line:84%
+So I'm just going to slap
+a square bracket around it
+
+01:01:25.730 --> 01:01:30.580 align:middle line:84%
+and say, hey, Python, this is
+a list with one element in it.
+
+01:01:30.580 --> 01:01:32.020 align:middle line:90%
+Does that make sense?
+
+01:01:32.020 --> 01:01:32.550 align:middle line:90%
+Cool.
+
+01:01:32.550 --> 01:01:36.870 align:middle line:84%
+So then what that means is, I've
+got this 10 that I extracted.
+
+01:01:36.870 --> 01:01:38.910 align:middle line:84%
+I'm going to concatenate
+something with that 10.
+
+01:01:38.910 --> 01:01:40.470 align:middle line:84%
+And that's something
+is me putting
+
+01:01:40.470 --> 01:01:43.530 align:middle line:84%
+my trust into the function
+I'm writing to say,
+
+01:01:43.530 --> 01:01:46.690 align:middle line:84%
+that something is
+going to be the 20, 30,
+
+01:01:46.690 --> 01:01:50.430 align:middle line:84%
+40 successfully
+reversed, 40, 30, 20.
+
+01:01:50.430 --> 01:01:54.540 align:middle line:84%
+If I can do that, 40, 30, 20,
+and I concatenate it with a 10,
+
+01:01:54.540 --> 01:01:55.470 align:middle line:90%
+my job is done.
+
+01:01:55.470 --> 01:01:57.580 align:middle line:84%
+I've successfully
+reversed 10, 20, 30,
+
+01:01:57.580 --> 01:02:00.330 align:middle line:90%
+40 to be 40, 30, 20, 10.
+
+01:02:00.330 --> 01:02:03.720 align:middle line:90%
+And so let's just do that.
+
+01:02:03.720 --> 01:02:06.930 align:middle line:84%
+That's me putting my trust
+in this function I'm writing.
+
+01:02:06.930 --> 01:02:08.940 align:middle line:84%
+I'm calling the
+same function again,
+
+01:02:08.940 --> 01:02:10.650 align:middle line:84%
+saying, hey, I would
+like to reverse
+
+01:02:10.650 --> 01:02:13.660 align:middle line:84%
+the remainder of
+the list, exactly
+
+01:02:13.660 --> 01:02:16.210 align:middle line:90%
+as we have been in the past.
+
+01:02:16.210 --> 01:02:19.420 align:middle line:84%
+Super weird to think about
+still because we're trusting
+
+01:02:19.420 --> 01:02:22.150 align:middle line:90%
+something that we're writing.
+
+01:02:22.150 --> 01:02:22.650 align:middle line:90%
+Cool.
+
+01:02:22.650 --> 01:02:23.940 align:middle line:90%
+So then let's test it out.
+
+01:02:23.940 --> 01:02:24.760 align:middle line:90%
+Let's run it.
+
+01:02:24.760 --> 01:02:30.430 align:middle line:84%
+So if I run it with
+list 1, 2, abc, Python
+
+01:02:30.430 --> 01:02:31.930 align:middle line:90%
+will reverse my list.
+
+01:02:31.930 --> 01:02:36.700 align:middle line:84%
+So it will print abc,
+then the 2, then the 1.
+
+01:02:36.700 --> 01:02:40.250 align:middle line:84%
+Let's say I run it now with
+something slightly different.
+
+01:02:40.250 --> 01:02:42.590 align:middle line:90%
+So I run it with this list here.
+
+01:02:42.590 --> 01:02:44.560 align:middle line:84%
+How many elements
+does this list have?
+
+01:02:44.560 --> 01:02:47.350 align:middle line:90%
+Test.
+
+01:02:47.350 --> 01:02:49.170 align:middle line:90%
+You guys tell me.
+
+01:02:49.170 --> 01:02:49.680 align:middle line:90%
+Three.
+
+01:02:49.680 --> 01:02:50.370 align:middle line:90%
+Exactly.
+
+01:02:50.370 --> 01:02:53.100 align:middle line:84%
+The first one is an integer,
+the second one is a list,
+
+01:02:53.100 --> 01:02:55.530 align:middle line:84%
+and the last one is a list
+that's got a bunch of garbage
+
+01:02:55.530 --> 01:02:58.260 align:middle line:84%
+in it, but as
+test, I don't care,
+
+01:02:58.260 --> 01:03:01.480 align:middle line:84%
+because I just care that I
+have three elements inside.
+
+01:03:01.480 --> 01:03:05.130 align:middle line:84%
+And so when I run
+this function on test,
+
+01:03:05.130 --> 01:03:07.110 align:middle line:84%
+it will reverse
+just the top level,
+
+01:03:07.110 --> 01:03:08.550 align:middle line:84%
+because that's
+what this is doing.
+
+01:03:08.550 --> 01:03:13.860 align:middle line:84%
+Nowhere in here did I say I want
+to reverse lists within lists.
+
+01:03:13.860 --> 01:03:16.980 align:middle line:84%
+I didn't say, if you're a
+list, also reverse yourself.
+
+01:03:16.980 --> 01:03:19.500 align:middle line:84%
+I just said, top-level,
+take this element,
+
+01:03:19.500 --> 01:03:20.530 align:middle line:90%
+put it at the end.
+
+01:03:20.530 --> 01:03:25.020 align:middle line:84%
+So when I reverse test, this
+funky-looking test over here,
+
+01:03:25.020 --> 01:03:27.360 align:middle line:84%
+it will take that first
+element, put it at the end.
+
+01:03:27.360 --> 01:03:29.730 align:middle line:84%
+The middle element
+stays where it is
+
+01:03:29.730 --> 01:03:34.540 align:middle line:84%
+and the last element
+becomes first.
+
+01:03:34.540 --> 01:03:35.980 align:middle line:90%
+is everyone OK so far?
+
+01:03:35.980 --> 01:03:38.050 align:middle line:84%
+I'm worried there aren't
+many more questions.
+
+01:03:38.050 --> 01:03:40.445 align:middle line:90%
+
+
+01:03:40.445 --> 01:03:40.945 align:middle line:90%
+OK.
+
+01:03:40.945 --> 01:03:44.430 align:middle line:90%
+
+
+01:03:44.430 --> 01:03:46.380 align:middle line:90%
+So that's good.
+
+01:03:46.380 --> 01:03:52.210 align:middle line:84%
+But this is now not
+really what I'd like.
+
+01:03:52.210 --> 01:03:56.020 align:middle line:84%
+What I'd like is,
+if I have lists
+
+01:03:56.020 --> 01:03:58.120 align:middle line:84%
+within lists within
+lists within lists,
+
+01:03:58.120 --> 01:04:00.760 align:middle line:84%
+and those lists have some
+sort of elements within them--
+
+01:04:00.760 --> 01:04:03.520 align:middle line:84%
+at the lowest level,
+I've got a list
+
+01:04:03.520 --> 01:04:06.040 align:middle line:84%
+that's going to have some
+integer or string or whatever
+
+01:04:06.040 --> 01:04:06.710 align:middle line:90%
+in it--
+
+01:04:06.710 --> 01:04:11.540 align:middle line:84%
+what I would like to do is to
+reverse those elements as well.
+
+01:04:11.540 --> 01:04:13.690 align:middle line:84%
+So really, what I
+would have liked
+
+01:04:13.690 --> 01:04:17.230 align:middle line:84%
+to have if I passed in this
+function here-- this list
+
+01:04:17.230 --> 01:04:21.620 align:middle line:84%
+here-- is to say, well, why
+don't you reverse everything?
+
+01:04:21.620 --> 01:04:26.470 align:middle line:84%
+So I would like to have had
+gf as a list, and then the e,
+
+01:04:26.470 --> 01:04:29.670 align:middle line:90%
+and then the d, and then the 1.
+
+01:04:29.670 --> 01:04:34.790 align:middle line:84%
+And so this is where
+we're going to do that.
+
+01:04:34.790 --> 01:04:37.080 align:middle line:90%
+So let's say I now have a list.
+
+01:04:37.080 --> 01:04:40.460 align:middle line:84%
+So each one of these
+blue squares is my list--
+
+01:04:40.460 --> 01:04:42.890 align:middle line:84%
+or my list elements
+and my top level.
+
+01:04:42.890 --> 01:04:47.950 align:middle line:84%
+And they happen to have some
+sort of lists within them.
+
+01:04:47.950 --> 01:04:49.270 align:middle line:90%
+How do I do this?
+
+01:04:49.270 --> 01:04:53.230 align:middle line:84%
+Well, now that I have
+potential list elements,
+
+01:04:53.230 --> 01:04:56.470 align:middle line:84%
+I need to have my
+recursive function test
+
+01:04:56.470 --> 01:04:59.740 align:middle line:84%
+whether the element I'm
+currently considering is a list
+
+01:04:59.740 --> 01:05:01.350 align:middle line:90%
+or not.
+
+01:05:01.350 --> 01:05:03.890 align:middle line:84%
+If it's not, like
+the 3 and the 4,
+
+01:05:03.890 --> 01:05:05.990 align:middle line:84%
+I can treat them in
+the exact same way
+
+01:05:05.990 --> 01:05:09.240 align:middle line:84%
+that we treated
+them in this case.
+
+01:05:09.240 --> 01:05:13.070 align:middle line:84%
+But if it is a list,
+as this one is--
+
+01:05:13.070 --> 01:05:15.200 align:middle line:84%
+this is a list element,
+and this is also
+
+01:05:15.200 --> 01:05:17.490 align:middle line:84%
+a list element that has
+list elements within it.
+
+01:05:17.490 --> 01:05:18.740 align:middle line:90%
+So that's even funkier.
+
+01:05:18.740 --> 01:05:21.820 align:middle line:84%
+Then we need to consider
+them separately.
+
+01:05:21.820 --> 01:05:25.320 align:middle line:84%
+So let's take the code that we
+wrote in the previous slide,
+
+01:05:25.320 --> 01:05:30.540 align:middle line:84%
+because it's a good start,
+extract the first element,
+
+01:05:30.540 --> 01:05:32.280 align:middle line:90%
+put it at the end.
+
+01:05:32.280 --> 01:05:34.820 align:middle line:90%
+That's what we did before.
+
+01:05:34.820 --> 01:05:39.920 align:middle line:84%
+But before leaving, let's
+say, if you are a list,
+
+01:05:39.920 --> 01:05:45.620 align:middle line:84%
+if you are a list, then
+also reverse yourself.
+
+01:05:45.620 --> 01:05:49.100 align:middle line:84%
+So not only do I want,
+top-level, that list--
+
+01:05:49.100 --> 01:05:51.350 align:middle line:84%
+that element to go
+to the end, I also
+
+01:05:51.350 --> 01:05:53.600 align:middle line:90%
+want to consider what you are.
+
+01:05:53.600 --> 01:05:55.910 align:middle line:84%
+I don't want this last
+element to be 1, comma, 2.
+
+01:05:55.910 --> 01:05:58.880 align:middle line:84%
+I want to reverse its elements
+too, to be 2, comma, 1.
+
+01:05:58.880 --> 01:06:05.600 align:middle line:84%
+So in the end, what I want
+this to give me is 87654321.
+
+01:06:05.600 --> 01:06:08.930 align:middle line:84%
+So that deals with that first
+element being popped at the end
+
+01:06:08.930 --> 01:06:10.390 align:middle line:90%
+there.
+
+01:06:10.390 --> 01:06:12.340 align:middle line:90%
+Now, I consider my new list.
+
+01:06:12.340 --> 01:06:14.690 align:middle line:84%
+And again, this is going
+to be a recursive step.
+
+01:06:14.690 --> 01:06:18.050 align:middle line:84%
+The element at the front,
+again, I extract it.
+
+01:06:18.050 --> 01:06:19.460 align:middle line:90%
+It's just a number.
+
+01:06:19.460 --> 01:06:20.820 align:middle line:90%
+Nothing special here.
+
+01:06:20.820 --> 01:06:24.580 align:middle line:84%
+So you just go to the
+end, just like before.
+
+01:06:24.580 --> 01:06:25.600 align:middle line:90%
+Nothing to consider.
+
+01:06:25.600 --> 01:06:27.790 align:middle line:90%
+Nothing to reverse for that 3.
+
+01:06:27.790 --> 01:06:32.560 align:middle line:84%
+Again, the 4, just like
+before, it goes to the end.
+
+01:06:32.560 --> 01:06:36.960 align:middle line:84%
+And now, what about this list
+with lists within it and so on?
+
+01:06:36.960 --> 01:06:40.938 align:middle line:84%
+Well, we've reached sort of this
+quote, unquote, "base case."
+
+01:06:40.938 --> 01:06:42.480 align:middle line:84%
+So there's nothing
+to put at the end.
+
+01:06:42.480 --> 01:06:44.570 align:middle line:84%
+But you can imagine
+being put at the end
+
+01:06:44.570 --> 01:06:47.820 align:middle line:84%
+if there were other
+elements within it.
+
+01:06:47.820 --> 01:06:49.842 align:middle line:84%
+So this one is
+going to stay as is.
+
+01:06:49.842 --> 01:06:50.550 align:middle line:90%
+Sorry about that.
+
+01:06:50.550 --> 01:06:52.260 align:middle line:90%
+This one is going to stay as is.
+
+01:06:52.260 --> 01:06:54.300 align:middle line:84%
+But what we're going
+to do is going to say,
+
+01:06:54.300 --> 01:06:57.110 align:middle line:84%
+well, you are a list, just
+like this one was a list.
+
+01:06:57.110 --> 01:06:59.250 align:middle line:84%
+It was a list with
+two numbers in it.
+
+01:06:59.250 --> 01:07:02.700 align:middle line:84%
+So you are also a list
+with two elements in it.
+
+01:07:02.700 --> 01:07:06.320 align:middle line:84%
+So the first step I would like
+you to do is reverse yourself.
+
+01:07:06.320 --> 01:07:09.380 align:middle line:84%
+So the 7, 8 will come
+to the front and the 5,
+
+01:07:09.380 --> 01:07:11.210 align:middle line:90%
+6 will go after it.
+
+01:07:11.210 --> 01:07:13.810 align:middle line:90%
+
+
+01:07:13.810 --> 01:07:18.870 align:middle line:90%
+But its elements also are lists.
+
+01:07:18.870 --> 01:07:21.780 align:middle line:84%
+So not only do I
+want to reverse you,
+
+01:07:21.780 --> 01:07:25.840 align:middle line:84%
+but I want you to tell all your
+elements to reverse themselves.
+
+01:07:25.840 --> 01:07:32.280 align:middle line:84%
+So the 5, 6 should reverse
+to become a 6, 5, and the 7,
+
+01:07:32.280 --> 01:07:34.770 align:middle line:84%
+8 should reverse
+itself to become 8, 7.
+
+01:07:34.770 --> 01:07:38.650 align:middle line:90%
+
+
+01:07:38.650 --> 01:07:40.210 align:middle line:90%
+Does that make sense?
+
+01:07:40.210 --> 01:07:43.390 align:middle line:90%
+Conceptually, I think we got it.
+
+01:07:43.390 --> 01:07:48.010 align:middle line:84%
+So we want to reverse as far
+deep as we can until we get
+
+01:07:48.010 --> 01:07:49.180 align:middle line:90%
+to some numbers.
+
+01:07:49.180 --> 01:07:51.940 align:middle line:90%
+
+
+01:07:51.940 --> 01:07:55.690 align:middle line:90%
+So let's write the code.
+
+01:07:55.690 --> 01:07:57.970 align:middle line:84%
+We're going to do a
+very similar thing
+
+01:07:57.970 --> 01:07:59.680 align:middle line:84%
+to what we've done
+in the past, write
+
+01:07:59.680 --> 01:08:03.370 align:middle line:84%
+all of these examples following
+the exact same pattern.
+
+01:08:03.370 --> 01:08:06.160 align:middle line:84%
+Consider a list with
+one element in it,
+
+01:08:06.160 --> 01:08:10.760 align:middle line:84%
+and then consider a list
+with many elements in it.
+
+01:08:10.760 --> 01:08:14.280 align:middle line:84%
+If I have a list with
+one element in it--
+
+01:08:14.280 --> 01:08:17.990 align:middle line:90%
+so here, here's a list.
+
+01:08:17.990 --> 01:08:21.260 align:middle line:84%
+It's going to have
+only one element in it.
+
+01:08:21.260 --> 01:08:24.689 align:middle line:90%
+If the list is a--
+
+01:08:24.689 --> 01:08:29.380 align:middle line:84%
+if that element within
+that list is a number,
+
+01:08:29.380 --> 01:08:33.220 align:middle line:84%
+I'm going to do something
+different than if the element
+
+01:08:33.220 --> 01:08:36.560 align:middle line:90%
+within this list is a list.
+
+01:08:36.560 --> 01:08:40.010 align:middle line:84%
+So what I actually want to
+do inside this if len(L)
+
+01:08:40.010 --> 01:08:43.460 align:middle line:84%
+is equal to 1 is
+have two subparts
+
+01:08:43.460 --> 01:08:45.859 align:middle line:84%
+depending on whether
+it's a list or not,
+
+01:08:45.859 --> 01:08:49.790 align:middle line:84%
+because if it's
+just a number, I'm
+
+01:08:49.790 --> 01:08:51.710 align:middle line:90%
+happy to just leave it as is.
+
+01:08:51.710 --> 01:08:54.590 align:middle line:90%
+This number is already in place.
+
+01:08:54.590 --> 01:08:56.510 align:middle line:90%
+It's already reversed.
+
+01:08:56.510 --> 01:09:04.729 align:middle line:84%
+But if the element
+within it is a list,
+
+01:09:04.729 --> 01:09:08.640 align:middle line:84%
+this element is one element
+inside my list is also a list,
+
+01:09:08.640 --> 01:09:11.279 align:middle line:90%
+I want it to reverse itself.
+
+01:09:11.279 --> 01:09:17.630 align:middle line:84%
+So if the length of the list
+is 1, I now check the type.
+
+01:09:17.630 --> 01:09:21.560 align:middle line:84%
+If it's not a list, I do exactly
+the same thing as I did before.
+
+01:09:21.560 --> 01:09:24.279 align:middle line:84%
+If it's not a list, you
+are already reversed.
+
+01:09:24.279 --> 01:09:25.750 align:middle line:84%
+No need to reverse
+anything else.
+
+01:09:25.750 --> 01:09:27.839 align:middle line:90%
+Yes, question.
+
+01:09:27.839 --> 01:09:30.422 align:middle line:84%
+AUDIENCE: I guess I'm a little
+bit confused by the one element
+
+01:09:30.422 --> 01:09:32.729 align:middle line:90%
+[INAUDIBLE] first part.
+
+01:09:32.729 --> 01:09:35.160 align:middle line:84%
+ANA BELL: Yeah, so
+we're just dividing it
+
+01:09:35.160 --> 01:09:37.410 align:middle line:84%
+into one element or
+two-- or more than one.
+
+01:09:37.410 --> 01:09:41.850 align:middle line:84%
+So in the case where we have
+one element, this is my list.
+
+01:09:41.850 --> 01:09:44.290 align:middle line:90%
+And this is the one element.
+
+01:09:44.290 --> 01:09:48.779 align:middle line:84%
+And if I have an element
+that's a list itself,
+
+01:09:48.779 --> 01:09:51.609 align:middle line:90%
+then this is still one element.
+
+01:09:51.609 --> 01:09:53.245 align:middle line:90%
+Yeah.
+
+01:09:53.245 --> 01:09:55.620 align:middle line:84%
+AUDIENCE: Let's say you raise
+the brackets on the outside
+
+01:09:55.620 --> 01:09:56.760 align:middle line:90%
+of the [INAUDIBLE].
+
+01:09:56.760 --> 01:09:59.460 align:middle line:90%
+ANA BELL: Yeah.
+
+01:09:59.460 --> 01:10:03.150 align:middle line:84%
+This is now a list with
+two elements in it.
+
+01:10:03.150 --> 01:10:03.680 align:middle line:90%
+Yep.
+
+01:10:03.680 --> 01:10:04.230 align:middle line:90%
+Yep.
+
+01:10:04.230 --> 01:10:05.160 align:middle line:90%
+Exactly.
+
+01:10:05.160 --> 01:10:07.140 align:middle line:84%
+But I am considering
+the case where
+
+01:10:07.140 --> 01:10:08.640 align:middle line:90%
+I have a list with one element.
+
+01:10:08.640 --> 01:10:10.410 align:middle line:90%
+It happens to be another list.
+
+01:10:10.410 --> 01:10:13.920 align:middle line:84%
+And what's inside it, I don't
+currently care, because-- yeah.
+
+01:10:13.920 --> 01:10:17.880 align:middle line:84%
+So if it's not a list,
+it's already reversed.
+
+01:10:17.880 --> 01:10:21.700 align:middle line:90%
+Otherwise, what do we do?
+
+01:10:21.700 --> 01:10:23.755 align:middle line:84%
+Well, we want to ask
+it to reverse itself.
+
+01:10:23.755 --> 01:10:25.755 align:middle line:84%
+And that's the function
+we're currently writing.
+
+01:10:25.755 --> 01:10:31.720 align:middle line:90%
+
+
+01:10:31.720 --> 01:10:34.450 align:middle line:90%
+Is that cool, I guess?
+
+01:10:34.450 --> 01:10:35.470 align:middle line:90%
+OK.
+
+01:10:35.470 --> 01:10:37.780 align:middle line:84%
+Again, a lot of trust
+going on here, you guys.
+
+01:10:37.780 --> 01:10:41.380 align:middle line:84%
+So we're calling
+deep reverse, this
+
+01:10:41.380 --> 01:10:43.570 align:middle line:84%
+function we are
+currently writing,
+
+01:10:43.570 --> 01:10:47.440 align:middle line:84%
+on this list element,
+L at index 0.
+
+01:10:47.440 --> 01:10:49.240 align:middle line:90%
+It's our only element.
+
+01:10:49.240 --> 01:10:52.810 align:middle line:90%
+
+
+01:10:52.810 --> 01:10:57.730 align:middle line:84%
+And notice, again, I've got
+these square brackets around
+
+01:10:57.730 --> 01:11:06.690 align:middle line:84%
+here because this function
+is supposed to return a list.
+
+01:11:06.690 --> 01:11:11.050 align:middle line:90%
+
+
+01:11:11.050 --> 01:11:12.550 align:middle line:84%
+So just like in
+the previous case,
+
+01:11:12.550 --> 01:11:15.010 align:middle line:84%
+where I slapped on some square
+brackets around the number,
+
+01:11:15.010 --> 01:11:18.750 align:middle line:90%
+I have to do it here as well.
+
+01:11:18.750 --> 01:11:20.580 align:middle line:90%
+Everyone OK with this case?
+
+01:11:20.580 --> 01:11:23.430 align:middle line:84%
+Because the recursive step
+is going to be even crazier.
+
+01:11:23.430 --> 01:11:28.740 align:middle line:84%
+OK, else, we have a list with
+more than one element in it.
+
+01:11:28.740 --> 01:11:32.580 align:middle line:84%
+So we have a list
+with some stuff here,
+
+01:11:32.580 --> 01:11:35.490 align:middle line:84%
+and then I have,
+potentially, another list
+
+01:11:35.490 --> 01:11:39.210 align:middle line:84%
+and a bunch of other stuff
+here, like this, whatever it is.
+
+01:11:39.210 --> 01:11:42.910 align:middle line:84%
+So then what I
+would like to do is,
+
+01:11:42.910 --> 01:11:48.540 align:middle line:84%
+again, according to
+our sort of pattern
+
+01:11:48.540 --> 01:11:50.430 align:middle line:84%
+that we've been
+looking at, is to say,
+
+01:11:50.430 --> 01:11:53.700 align:middle line:84%
+I'm going to extract the
+first element in the list.
+
+01:11:53.700 --> 01:11:55.890 align:middle line:84%
+So if I have a list
+with many elements,
+
+01:11:55.890 --> 01:11:59.560 align:middle line:84%
+let's extract the first
+one and deal with it.
+
+01:11:59.560 --> 01:12:03.000 align:middle line:84%
+But again, I need to take care,
+because that first element may
+
+01:12:03.000 --> 01:12:07.170 align:middle line:84%
+be a number or a string or
+whatever, or it may be a list.
+
+01:12:07.170 --> 01:12:10.520 align:middle line:90%
+
+
+01:12:10.520 --> 01:12:13.380 align:middle line:84%
+And I deal with these
+two cases separately.
+
+01:12:13.380 --> 01:12:16.420 align:middle line:84%
+If it's just a number-- so
+that's this if case here.
+
+01:12:16.420 --> 01:12:18.960 align:middle line:84%
+So if the type of L at 0, the
+thing that I've extracted,
+
+01:12:18.960 --> 01:12:22.230 align:middle line:84%
+is a list, then
+what I need to do
+
+01:12:22.230 --> 01:12:24.480 align:middle line:84%
+is what I had in the
+previous example.
+
+01:12:24.480 --> 01:12:28.230 align:middle line:84%
+I grab that first element,
+slap square brackets around it,
+
+01:12:28.230 --> 01:12:32.300 align:middle line:84%
+and concatenate it with deep
+reverse of the rest of it.
+
+01:12:32.300 --> 01:12:34.100 align:middle line:84%
+Exactly the same as
+the previous case,
+
+01:12:34.100 --> 01:12:35.240 align:middle line:90%
+because it's just a number.
+
+01:12:35.240 --> 01:12:39.010 align:middle line:84%
+I do what I did before, plop
+it to the end and we're done.
+
+01:12:39.010 --> 01:12:43.910 align:middle line:84%
+And again, I'm making a
+function call here to myself.
+
+01:12:43.910 --> 01:12:49.370 align:middle line:84%
+else, this thing here, this L
+at index 0 that I've extracted,
+
+01:12:49.370 --> 01:12:52.750 align:middle line:90%
+is a list.
+
+01:12:52.750 --> 01:12:56.830 align:middle line:84%
+So not only do I have to call
+deep reverse on these guys
+
+01:12:56.830 --> 01:12:59.680 align:middle line:90%
+here, but--
+
+01:12:59.680 --> 01:13:03.490 align:middle line:84%
+everybody together-- we
+have to call deep reverse
+
+01:13:03.490 --> 01:13:06.820 align:middle line:84%
+on the first element as
+well, because it's a list.
+
+01:13:06.820 --> 01:13:08.140 align:middle line:90%
+I can't just put it to the end.
+
+01:13:08.140 --> 01:13:12.250 align:middle line:84%
+I want it to reverse
+all of its elements.
+
+01:13:12.250 --> 01:13:16.940 align:middle line:90%
+So this is the code to do that.
+
+01:13:16.940 --> 01:13:20.480 align:middle line:84%
+This bit here, deep
+reverse L 1 colon,
+
+01:13:20.480 --> 01:13:23.210 align:middle line:84%
+tells the remaining
+of the list--
+
+01:13:23.210 --> 01:13:26.410 align:middle line:84%
+the remainder of the list
+to reverse itself, exactly
+
+01:13:26.410 --> 01:13:28.480 align:middle line:90%
+like we did in the integer case.
+
+01:13:28.480 --> 01:13:29.380 align:middle line:90%
+All is the same.
+
+01:13:29.380 --> 01:13:34.210 align:middle line:84%
+But we concatenate that, again,
+by putting square brackets
+
+01:13:34.210 --> 01:13:36.730 align:middle line:84%
+around it, because we want
+to concatenate with the list.
+
+01:13:36.730 --> 01:13:39.910 align:middle line:84%
+We concatenate that with
+deep reversing our element
+
+01:13:39.910 --> 01:13:40.990 align:middle line:90%
+at index 0.
+
+01:13:40.990 --> 01:13:44.000 align:middle line:84%
+So not only do we put this
+at the end to reverse it,
+
+01:13:44.000 --> 01:13:46.600 align:middle line:84%
+but we need it to reverse
+all of its elements as well.
+
+01:13:46.600 --> 01:13:51.148 align:middle line:90%
+
+
+01:13:51.148 --> 01:13:52.690 align:middle line:84%
+There are no more
+lines to this code,
+
+01:13:52.690 --> 01:13:55.120 align:middle line:90%
+but what are your thoughts?
+
+01:13:55.120 --> 01:13:57.140 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+01:13:57.140 --> 01:13:57.850 align:middle line:90%
+ANA BELL: I know.
+
+01:13:57.850 --> 01:13:58.510 align:middle line:90%
+Yeah.
+
+01:13:58.510 --> 01:14:01.500 align:middle line:84%
+AUDIENCE: Why do you keep
+putting the square brackets?
+
+01:14:01.500 --> 01:14:02.910 align:middle line:90%
+ANA BELL: So yeah.
+
+01:14:02.910 --> 01:14:04.500 align:middle line:84%
+So we put square
+brackets because we
+
+01:14:04.500 --> 01:14:06.780 align:middle line:84%
+want to maintain the
+same structure of what
+
+01:14:06.780 --> 01:14:08.190 align:middle line:90%
+the original list was.
+
+01:14:08.190 --> 01:14:12.120 align:middle line:84%
+So if it's an integer,
+is, I guess, the simplest
+
+01:14:12.120 --> 01:14:13.210 align:middle line:90%
+case to explain it.
+
+01:14:13.210 --> 01:14:15.600 align:middle line:84%
+So if it's an integer, you
+can't concatenate the list
+
+01:14:15.600 --> 01:14:16.710 align:middle line:90%
+with the integer.
+
+01:14:16.710 --> 01:14:17.772 align:middle line:90%
+It will be a problem.
+
+01:14:17.772 --> 01:14:19.230 align:middle line:84%
+So you want to
+concatenate the list
+
+01:14:19.230 --> 01:14:23.130 align:middle line:84%
+with the integer inside a
+list as a single element.
+
+01:14:23.130 --> 01:14:26.100 align:middle line:90%
+
+
+01:14:26.100 --> 01:14:28.370 align:middle line:84%
+So what we can do is we
+can simplify the code.
+
+01:14:28.370 --> 01:14:30.890 align:middle line:84%
+Again, I personally think
+of this as a little bit
+
+01:14:30.890 --> 01:14:35.870 align:middle line:84%
+easier to think about, just
+as I'm extracting out the case
+
+01:14:35.870 --> 01:14:37.940 align:middle line:84%
+where I have a
+list with one thing
+
+01:14:37.940 --> 01:14:39.530 align:middle line:90%
+and a list with many things.
+
+01:14:39.530 --> 01:14:43.470 align:middle line:84%
+But you can certainly
+think of it like this.
+
+01:14:43.470 --> 01:14:46.040 align:middle line:84%
+So if I have an empty list,
+just return an empty list.
+
+01:14:46.040 --> 01:14:49.280 align:middle line:84%
+Else, I'm extracting the
+element at index 0 directly,
+
+01:14:49.280 --> 01:14:52.130 align:middle line:90%
+and I deep reverse that--
+
+01:14:52.130 --> 01:14:54.630 align:middle line:84%
+the rest of the list--
+concatenated with that element
+
+01:14:54.630 --> 01:14:55.130 align:middle line:90%
+at the end.
+
+01:14:55.130 --> 01:14:57.170 align:middle line:84%
+Again-- oops--
+noting that we are
+
+01:14:57.170 --> 01:15:00.050 align:middle line:90%
+putting this element as a list.
+
+01:15:00.050 --> 01:15:03.950 align:middle line:84%
+And else, we can
+deep reverse the rest
+
+01:15:03.950 --> 01:15:07.590 align:middle line:84%
+of the list concatenated with
+deep reversing this guy here.
+
+01:15:07.590 --> 01:15:09.090 align:middle line:84%
+So not only do we
+put it at the end,
+
+01:15:09.090 --> 01:15:11.880 align:middle line:84%
+but we also reverse
+all of its elements.
+
+01:15:11.880 --> 01:15:14.060 align:middle line:84%
+So this is the
+simplified version--
+
+01:15:14.060 --> 01:15:17.290 align:middle line:90%
+the simplified code.
+
+01:15:17.290 --> 01:15:22.270 align:middle line:84%
+So this recursion that we
+saw, all these examples here
+
+01:15:22.270 --> 01:15:24.490 align:middle line:84%
+that we applied to
+lists can actually
+
+01:15:24.490 --> 01:15:28.090 align:middle line:84%
+be applied to any indexable
+ordered sequences.
+
+01:15:28.090 --> 01:15:30.070 align:middle line:84%
+The same code will
+work for tuples.
+
+01:15:30.070 --> 01:15:33.455 align:middle line:84%
+The same code will
+work for strings,
+
+01:15:33.455 --> 01:15:35.830 align:middle line:84%
+except for the one where--
+because you can't have strings
+
+01:15:35.830 --> 01:15:37.180 align:middle line:90%
+within strings within strings.
+
+01:15:37.180 --> 01:15:39.850 align:middle line:84%
+But certainly, summing
+the elements in a list
+
+01:15:39.850 --> 01:15:42.040 align:middle line:84%
+and checking whether
+an element is in a list
+
+01:15:42.040 --> 01:15:44.532 align:middle line:84%
+will work for tuples as
+well, and some of these
+
+01:15:44.532 --> 01:15:46.990 align:middle line:84%
+will work for strings, as long
+as you can do that operation
+
+01:15:46.990 --> 01:15:50.410 align:middle line:84%
+on the strings, because these
+are all indexable sequences,
+
+01:15:50.410 --> 01:15:51.700 align:middle line:90%
+so it shouldn't be a problem.
+
+01:15:51.700 --> 01:15:54.490 align:middle line:90%
+
+
+01:15:54.490 --> 01:15:58.920 align:middle line:84%
+So lots of takeaways
+here with recursion.
+
+01:15:58.920 --> 01:16:01.920 align:middle line:84%
+This last example,
+namely, it looks really
+
+01:16:01.920 --> 01:16:03.510 align:middle line:90%
+nice in the cleaned-up form.
+
+01:16:03.510 --> 01:16:05.460 align:middle line:84%
+And it's, what,
+five lines of code
+
+01:16:05.460 --> 01:16:07.590 align:middle line:84%
+to solve this really
+kind of hard problem
+
+01:16:07.590 --> 01:16:09.420 align:middle line:84%
+that you would
+otherwise have to solve
+
+01:16:09.420 --> 01:16:12.340 align:middle line:84%
+using while loops and for
+loops and things like that.
+
+01:16:12.340 --> 01:16:15.240 align:middle line:84%
+So I definitely encourage you to
+take a look through the Python
+
+01:16:15.240 --> 01:16:17.190 align:middle line:90%
+Tutor links that I've put in.
+
+01:16:17.190 --> 01:16:20.340 align:middle line:84%
+My two tips, so the two
+big takeaways on recursion,
+
+01:16:20.340 --> 01:16:23.430 align:middle line:84%
+is this thing about
+base cases-- or cases.
+
+01:16:23.430 --> 01:16:25.630 align:middle line:84%
+Any time you have
+a return statement
+
+01:16:25.630 --> 01:16:27.330 align:middle line:84%
+and you're writing a
+recursive function,
+
+01:16:27.330 --> 01:16:29.250 align:middle line:84%
+make sure that
+every single return
+
+01:16:29.250 --> 01:16:32.100 align:middle line:84%
+statement is returning something
+that is of that same type.
+
+01:16:32.100 --> 01:16:35.460 align:middle line:84%
+Otherwise, you'll have type
+mismatches all over the place.
+
+01:16:35.460 --> 01:16:39.060 align:middle line:84%
+And then the recursive step
+takes advantage of the fact
+
+01:16:39.060 --> 01:16:41.550 align:middle line:84%
+that you are returning
+these kinds of types.
+
+01:16:41.550 --> 01:16:43.920 align:middle line:84%
+So then those operations
+in the recursive step
+
+01:16:43.920 --> 01:16:45.570 align:middle line:90%
+will work with those types.
+
+01:16:45.570 --> 01:16:48.270 align:middle line:84%
+And the second is,
+the function doesn't
+
+01:16:48.270 --> 01:16:50.305 align:middle line:84%
+have to be efficient
+on the first pass.
+
+01:16:50.305 --> 01:16:51.930 align:middle line:84%
+So the way we thought
+about the problem
+
+01:16:51.930 --> 01:16:54.130 align:middle line:84%
+by separating it in a
+list with one element
+
+01:16:54.130 --> 01:16:56.980 align:middle line:84%
+and many is easier
+for me to think about
+
+01:16:56.980 --> 01:17:00.250 align:middle line:84%
+because I can wrap my
+head around the problem.
+
+01:17:00.250 --> 01:17:03.040 align:middle line:84%
+And you don't have to write
+the most efficient code right
+
+01:17:03.040 --> 01:17:04.210 align:middle line:90%
+off the bat for recursion.
+
+01:17:04.210 --> 01:17:05.418 align:middle line:90%
+Certainly no need to do that.
+
+01:17:05.418 --> 01:17:06.850 align:middle line:84%
+But you can
+definitely clean it up
+
+01:17:06.850 --> 01:17:08.770 align:middle line:84%
+after you have
+something that works.
+
+01:17:08.770 --> 01:17:12.880 align:middle line:84%
+Many practice problems on
+the Python file for today.
+
+01:17:12.880 --> 01:17:14.860 align:middle line:90%
+Many, many practice problems.
+
+01:17:14.860 --> 01:17:16.390 align:middle line:90%
+Memo-izing the basketball.
+
+01:17:16.390 --> 01:17:18.250 align:middle line:90%
+Obviously, I mentioned that.
+
+01:17:18.250 --> 01:17:23.530 align:middle line:84%
+An example-- a little practice
+with no lists within lists,
+
+01:17:23.530 --> 01:17:26.110 align:middle line:84%
+a practice with lists
+within lists within lists,
+
+01:17:26.110 --> 01:17:29.680 align:middle line:84%
+and then I included three
+buggy recursion implementations
+
+01:17:29.680 --> 01:17:30.710 align:middle line:90%
+for you to try to fix.
+
+01:17:30.710 --> 01:17:32.500 align:middle line:84%
+So a little bit of
+debugging practice
+
+01:17:32.500 --> 01:17:36.100 align:middle line:90%
+plus recursion practice.
+
+01:17:36.100 --> 01:17:37.920 align:middle line:90%
+Thanks, all.
+
+01:17:37.920 --> 01:17:53.000 align:middle line:90%

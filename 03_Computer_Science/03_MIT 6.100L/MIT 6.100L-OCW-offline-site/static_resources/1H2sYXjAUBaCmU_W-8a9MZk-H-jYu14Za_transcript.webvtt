@@ -1,0 +1,5985 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:11.310 align:middle line:84%
+[SQUEAKING]
+[RUSTLING] [CLICKING]
+
+00:00:11.310 --> 00:00:14.950 align:middle line:84%
+ANA BELL: All right, let's
+begin today's lecture.
+
+00:00:14.950 --> 00:00:19.020 align:middle line:84%
+So last class, we
+began our adventure
+
+00:00:19.020 --> 00:00:21.210 align:middle line:84%
+with creating our
+own data types.
+
+00:00:21.210 --> 00:00:23.940 align:middle line:84%
+Today, we're going to start off
+with a little bit of a recap,
+
+00:00:23.940 --> 00:00:27.300 align:middle line:84%
+just to remind you of
+some of the details
+
+00:00:27.300 --> 00:00:29.250 align:middle line:84%
+about creating our
+own data types.
+
+00:00:29.250 --> 00:00:33.150 align:middle line:84%
+And then we're going to build
+upon that coordinate class we
+
+00:00:33.150 --> 00:00:36.180 align:middle line:90%
+started on last class.
+
+00:00:36.180 --> 00:00:37.620 align:middle line:90%
+We'll build a circle class.
+
+00:00:37.620 --> 00:00:41.040 align:middle line:84%
+And then we'll build
+some fraction data types.
+
+00:00:41.040 --> 00:00:43.590 align:middle line:84%
+All right, so the first
+thing I'd like to mention
+
+00:00:43.590 --> 00:00:49.020 align:middle line:84%
+is to remind you guys about
+writing code from these two
+
+00:00:49.020 --> 00:00:50.490 align:middle line:90%
+different perspectives.
+
+00:00:50.490 --> 00:00:53.610 align:middle line:84%
+So just like when
+we wrote functions,
+
+00:00:53.610 --> 00:00:56.760 align:middle line:84%
+we were writing the definition
+of the function, telling Python
+
+00:00:56.760 --> 00:00:59.580 align:middle line:84%
+we have this function that
+we're defining abstractly
+
+00:00:59.580 --> 00:01:00.670 align:middle line:90%
+and this is what it does.
+
+00:01:00.670 --> 00:01:02.580 align:middle line:84%
+And then we were calling
+the function later
+
+00:01:02.580 --> 00:01:04.769 align:middle line:84%
+on in the program
+many, many times.
+
+00:01:04.769 --> 00:01:06.750 align:middle line:90%
+Well, the same thing exists--
+
+00:01:06.750 --> 00:01:09.330 align:middle line:84%
+the same idea exists
+now that we're
+
+00:01:09.330 --> 00:01:10.890 align:middle line:90%
+creating our own data types.
+
+00:01:10.890 --> 00:01:13.660 align:middle line:84%
+We have to write code from
+the point of view of somebody
+
+00:01:13.660 --> 00:01:16.060 align:middle line:84%
+who's implementing
+the class, so deciding
+
+00:01:16.060 --> 00:01:19.840 align:middle line:84%
+all of these details that goes
+into creating the class itself,
+
+00:01:19.840 --> 00:01:24.070 align:middle line:84%
+versus somebody who's just
+using a class that's already
+
+00:01:24.070 --> 00:01:26.320 align:middle line:84%
+been written, where
+we create instances,
+
+00:01:26.320 --> 00:01:28.210 align:middle line:84%
+a bunch of different
+objects that just
+
+00:01:28.210 --> 00:01:30.470 align:middle line:90%
+happen to be this data type.
+
+00:01:30.470 --> 00:01:32.828 align:middle line:84%
+So when we implement
+the class, what
+
+00:01:32.828 --> 00:01:34.120 align:middle line:90%
+were some of the things we did?
+
+00:01:34.120 --> 00:01:38.080 align:middle line:84%
+Well, we're telling Python
+that this object now exists.
+
+00:01:38.080 --> 00:01:40.540 align:middle line:84%
+We're telling Python the
+name of the data type
+
+00:01:40.540 --> 00:01:43.960 align:middle line:84%
+that we're creating,
+something we choose.
+
+00:01:43.960 --> 00:01:45.520 align:middle line:84%
+We're making these
+design decisions
+
+00:01:45.520 --> 00:01:48.380 align:middle line:84%
+where we decide what
+attributes make up our class.
+
+00:01:48.380 --> 00:01:51.548 align:middle line:84%
+So the attributes are either
+data, like the properties--
+
+00:01:51.548 --> 00:01:53.590 align:middle line:84%
+what are the variables
+that make up your object--
+
+00:01:53.590 --> 00:01:57.670 align:middle line:84%
+and the behaviors
+through methods.
+
+00:01:57.670 --> 00:01:59.260 align:middle line:84%
+So that's implementing
+the class.
+
+00:01:59.260 --> 00:02:01.490 align:middle line:84%
+And then when we're
+using the class,
+
+00:02:01.490 --> 00:02:04.780 align:middle line:84%
+we're now saying, all right,
+let's assume that this class
+
+00:02:04.780 --> 00:02:05.920 align:middle line:90%
+definition exists.
+
+00:02:05.920 --> 00:02:08.320 align:middle line:84%
+There's this object
+that has these behaviors
+
+00:02:08.320 --> 00:02:09.639 align:middle line:90%
+and these data attributes.
+
+00:02:09.639 --> 00:02:12.940 align:middle line:84%
+Let's now create a
+whole bunch of objects
+
+00:02:12.940 --> 00:02:14.530 align:middle line:90%
+that are of this type.
+
+00:02:14.530 --> 00:02:16.600 align:middle line:84%
+And this is when we're
+creating these instances,
+
+00:02:16.600 --> 00:02:18.700 align:middle line:84%
+and then manipulating
+all of these instances
+
+00:02:18.700 --> 00:02:21.320 align:middle line:84%
+by running methods on
+them, things like that.
+
+00:02:21.320 --> 00:02:24.100 align:middle line:84%
+So when we're implementing
+the class, this thing
+
+00:02:24.100 --> 00:02:27.790 align:middle line:84%
+on the left-hand
+side, we're basically
+
+00:02:27.790 --> 00:02:30.490 align:middle line:84%
+telling Python, in
+abstract terms, what
+
+00:02:30.490 --> 00:02:33.800 align:middle line:84%
+are the common property and
+behaviors of our data type.
+
+00:02:33.800 --> 00:02:35.890 align:middle line:84%
+And then when we're
+using the class--
+
+00:02:35.890 --> 00:02:37.910 align:middle line:84%
+the thing on the
+right-hand side here--
+
+00:02:37.910 --> 00:02:41.740 align:middle line:84%
+we're creating actual objects
+with very specific values
+
+00:02:41.740 --> 00:02:43.840 align:middle line:84%
+for their data
+attributes that we can
+
+00:02:43.840 --> 00:02:46.710 align:middle line:90%
+manipulate in different ways.
+
+00:02:46.710 --> 00:02:48.710 align:middle line:84%
+So let's remember
+this coordinate class
+
+00:02:48.710 --> 00:02:51.590 align:middle line:90%
+that we wrote last lecture.
+
+00:02:51.590 --> 00:02:55.140 align:middle line:84%
+This is not new, but I will
+just go over it real quick.
+
+00:02:55.140 --> 00:02:59.690 align:middle line:84%
+So first line here tells Python
+we're creating a new data type.
+
+00:02:59.690 --> 00:03:01.250 align:middle line:90%
+Its name is coordinate.
+
+00:03:01.250 --> 00:03:03.230 align:middle line:84%
+And this keyword
+class tells Python
+
+00:03:03.230 --> 00:03:04.730 align:middle line:90%
+we're creating the data type.
+
+00:03:04.730 --> 00:03:09.140 align:middle line:84%
+The parentheses here is object,
+which stands for the Python
+
+00:03:09.140 --> 00:03:10.710 align:middle line:90%
+object data type.
+
+00:03:10.710 --> 00:03:13.190 align:middle line:84%
+So it's something
+really generic.
+
+00:03:13.190 --> 00:03:15.230 align:middle line:84%
+And this, in the
+parentheses here,
+
+00:03:15.230 --> 00:03:18.150 align:middle line:90%
+is the parent of our class.
+
+00:03:18.150 --> 00:03:21.410 align:middle line:84%
+So anything that a regular
+Python object can do,
+
+00:03:21.410 --> 00:03:24.220 align:middle line:84%
+the very basic things,
+our class can do as well.
+
+00:03:24.220 --> 00:03:27.860 align:middle line:84%
+Last lecture, I mentioned an
+example of such a basic thing
+
+00:03:27.860 --> 00:03:31.700 align:middle line:84%
+is to take a variable name and
+assign it to an object type
+
+00:03:31.700 --> 00:03:33.940 align:middle line:90%
+that we create.
+
+00:03:33.940 --> 00:03:35.950 align:middle line:84%
+The very first
+method that we should
+
+00:03:35.950 --> 00:03:39.640 align:middle line:84%
+write for a new data type that
+we create is the init method.
+
+00:03:39.640 --> 00:03:42.520 align:middle line:84%
+And this I called
+a dunder method
+
+00:03:42.520 --> 00:03:47.680 align:middle line:84%
+because it starts with double
+underscores before the init
+
+00:03:47.680 --> 00:03:49.690 align:middle line:84%
+and ends with double
+underscores after the init.
+
+00:03:49.690 --> 00:03:55.360 align:middle line:84%
+And that's the actual name
+of this method, __init__.
+
+00:03:55.360 --> 00:03:58.370 align:middle line:84%
+So this method is like a
+constructor for the class.
+
+00:03:58.370 --> 00:03:59.980 align:middle line:84%
+It tells Python
+how do you create
+
+00:03:59.980 --> 00:04:01.900 align:middle line:90%
+an actual object of this type.
+
+00:04:01.900 --> 00:04:05.080 align:middle line:90%
+So it's a function.
+
+00:04:05.080 --> 00:04:07.990 align:middle line:84%
+It's just a function that
+works only with objects
+
+00:04:07.990 --> 00:04:08.860 align:middle line:90%
+of type coordinate.
+
+00:04:08.860 --> 00:04:12.310 align:middle line:84%
+So as a function,
+it takes parameters.
+
+00:04:12.310 --> 00:04:14.680 align:middle line:84%
+You can see it takes
+three parameters here--
+
+00:04:14.680 --> 00:04:17.680 align:middle line:90%
+the self, the x, and the y.
+
+00:04:17.680 --> 00:04:19.510 align:middle line:84%
+Now, when we're actually
+creating objects
+
+00:04:19.510 --> 00:04:23.110 align:middle line:84%
+of type coordinate, we
+only pass in parameters
+
+00:04:23.110 --> 00:04:28.270 align:middle line:84%
+for everything other than self
+because self is a variable name
+
+00:04:28.270 --> 00:04:32.260 align:middle line:84%
+that we use to describe having
+an instance of the class
+
+00:04:32.260 --> 00:04:35.540 align:middle line:84%
+without actually creating one
+yet because remember what we're
+
+00:04:35.540 --> 00:04:36.950 align:middle line:90%
+doing here in this definition.
+
+00:04:36.950 --> 00:04:40.370 align:middle line:84%
+We're telling Python that
+this object type now exists.
+
+00:04:40.370 --> 00:04:42.390 align:middle line:90%
+We're writing it as we speak.
+
+00:04:42.390 --> 00:04:45.350 align:middle line:84%
+But we don't have an actual
+instance to manipulate yet.
+
+00:04:45.350 --> 00:04:47.010 align:middle line:90%
+This is just the definition.
+
+00:04:47.010 --> 00:04:49.730 align:middle line:84%
+And so the self
+tells Python that,
+
+00:04:49.730 --> 00:04:51.890 align:middle line:84%
+when we're writing
+this code, we're
+
+00:04:51.890 --> 00:04:56.960 align:middle line:84%
+going to use the self
+variable name as a formal name
+
+00:04:56.960 --> 00:04:59.600 align:middle line:84%
+to be able to run
+this method on.
+
+00:04:59.600 --> 00:05:02.990 align:middle line:84%
+So we're going to see in the
+next slide exactly what maps
+
+00:05:02.990 --> 00:05:04.310 align:middle line:90%
+to self when we run it.
+
+00:05:04.310 --> 00:05:07.970 align:middle line:84%
+But that's what the self means
+inside the parameter list
+
+00:05:07.970 --> 00:05:09.700 align:middle line:90%
+here and here.
+
+00:05:09.700 --> 00:05:14.620 align:middle line:84%
+And then beyond that, we use
+self within the init method
+
+00:05:14.620 --> 00:05:16.990 align:middle line:84%
+to tell Python which
+one of these variables
+
+00:05:16.990 --> 00:05:20.440 align:middle line:84%
+are actually data attributes
+versus which of these variables
+
+00:05:20.440 --> 00:05:23.260 align:middle line:84%
+are just plain old variables
+as we've been working with.
+
+00:05:23.260 --> 00:05:26.680 align:middle line:84%
+So any variable that's
+defined using self.--
+
+00:05:26.680 --> 00:05:29.470 align:middle line:84%
+so here, I've got and
+self.x and self.y--
+
+00:05:29.470 --> 00:05:31.670 align:middle line:90%
+are data attributes.
+
+00:05:31.670 --> 00:05:34.570 align:middle line:84%
+So that means any object
+I create that's of type
+
+00:05:34.570 --> 00:05:38.440 align:middle line:84%
+coordinate I know will
+have a variable x and y
+
+00:05:38.440 --> 00:05:42.610 align:middle line:84%
+associated with it because I've
+defined these x's and y's using
+
+00:05:42.610 --> 00:05:44.500 align:middle line:90%
+and self.x and self.y.
+
+00:05:44.500 --> 00:05:46.480 align:middle line:84%
+Now, in the last
+lecture, I actually
+
+00:05:46.480 --> 00:05:48.610 align:middle line:90%
+had these parameter lists--
+
+00:05:48.610 --> 00:05:51.730 align:middle line:84%
+the parameters in this list
+here be different than x and y.
+
+00:05:51.730 --> 00:05:54.310 align:middle line:90%
+I think I had xval, yval.
+
+00:05:54.310 --> 00:05:56.800 align:middle line:84%
+And then I had
+self.x equals xval,
+
+00:05:56.800 --> 00:05:59.620 align:middle line:84%
+where this x here to the
+right of the equal sign
+
+00:05:59.620 --> 00:06:03.220 align:middle line:84%
+is the x from the
+parameter list.
+
+00:06:03.220 --> 00:06:06.280 align:middle line:84%
+So in that sense, it doesn't
+matter what these variables
+
+00:06:06.280 --> 00:06:07.558 align:middle line:90%
+are in the parameter list.
+
+00:06:07.558 --> 00:06:09.350 align:middle line:84%
+They're just going to
+be the same over here
+
+00:06:09.350 --> 00:06:11.820 align:middle line:84%
+on the right-hand side
+of the equal sign.
+
+00:06:11.820 --> 00:06:14.030 align:middle line:90%
+But the actual parameters--
+
+00:06:14.030 --> 00:06:16.550 align:middle line:84%
+sorry, the actual
+data attributes
+
+00:06:16.550 --> 00:06:22.470 align:middle line:84%
+are self.x and
+self.y of my object.
+
+00:06:22.470 --> 00:06:23.010 align:middle line:90%
+OK.
+
+00:06:23.010 --> 00:06:25.890 align:middle line:84%
+So then we had one method
+that we wrote last lecture.
+
+00:06:25.890 --> 00:06:27.270 align:middle line:90%
+It was called distance.
+
+00:06:27.270 --> 00:06:30.310 align:middle line:84%
+And it took two parameters--
+so the first one, of course,
+
+00:06:30.310 --> 00:06:31.320 align:middle line:90%
+is self.
+
+00:06:31.320 --> 00:06:33.630 align:middle line:84%
+And this self
+represents the thing,
+
+00:06:33.630 --> 00:06:36.240 align:middle line:84%
+this object that you're
+going to call the method on.
+
+00:06:36.240 --> 00:06:38.010 align:middle line:84%
+I don't have that
+object yet, so I'm just
+
+00:06:38.010 --> 00:06:41.790 align:middle line:84%
+calling it self for now because
+this is the class definition.
+
+00:06:41.790 --> 00:06:46.650 align:middle line:84%
+And then this other parameter
+is some other coordinate
+
+00:06:46.650 --> 00:06:49.090 align:middle line:84%
+object that I'm going
+to run this method on.
+
+00:06:49.090 --> 00:06:52.980 align:middle line:84%
+So the body of distance
+says, all right, well,
+
+00:06:52.980 --> 00:06:56.140 align:middle line:84%
+how do I find the distance
+between two points in the 2D
+
+00:06:56.140 --> 00:06:56.640 align:middle line:90%
+plane?
+
+00:06:56.640 --> 00:06:58.290 align:middle line:90%
+It's just Pythagoras, right?
+
+00:06:58.290 --> 00:07:01.950 align:middle line:84%
+So that means grab the x
+value of 1 of my points,
+
+00:07:01.950 --> 00:07:04.590 align:middle line:84%
+subtract the x value of the
+other point, square them.
+
+00:07:04.590 --> 00:07:08.400 align:middle line:84%
+Same with the y's, square them,
+add them, take the square root.
+
+00:07:08.400 --> 00:07:11.160 align:middle line:84%
+So what's the x
+value of one point?
+
+00:07:11.160 --> 00:07:12.840 align:middle line:84%
+Well, one of the
+points is going to be
+
+00:07:12.840 --> 00:07:15.540 align:middle line:84%
+the thing that I'm calling
+the distance method on, self.
+
+00:07:15.540 --> 00:07:18.150 align:middle line:84%
+So I grab the x
+value of self using
+
+00:07:18.150 --> 00:07:20.370 align:middle line:90%
+this dot notation, self.x.
+
+00:07:20.370 --> 00:07:24.400 align:middle line:84%
+And then what's the x value of
+this other coordinate point?
+
+00:07:24.400 --> 00:07:27.500 align:middle line:84%
+Well, it's called other
+in my parameter list.
+
+00:07:27.500 --> 00:07:29.680 align:middle line:84%
+So I'm going to grab
+the x value of other,
+
+00:07:29.680 --> 00:07:32.540 align:middle line:90%
+again using dot notation.
+
+00:07:32.540 --> 00:07:35.640 align:middle line:90%
+And then we just do the math.
+
+00:07:35.640 --> 00:07:36.420 align:middle line:90%
+Yes?
+
+00:07:36.420 --> 00:07:39.370 align:middle line:84%
+STUDENT: Can you
+only call functions
+
+00:07:39.370 --> 00:07:44.890 align:middle line:84%
+on a class that were
+defined like this?
+
+00:07:44.890 --> 00:07:47.140 align:middle line:84%
+ANA BELL: Yeah, so
+you can make methods.
+
+00:07:47.140 --> 00:07:50.155 align:middle line:84%
+You can make methods
+for a particular class.
+
+00:07:50.155 --> 00:07:52.630 align:middle line:84%
+STUDENT: Right, but you can
+only call those functions
+
+00:07:52.630 --> 00:07:53.530 align:middle line:90%
+that you define?
+
+00:07:53.530 --> 00:07:54.970 align:middle line:84%
+You can't call
+another functions?
+
+00:07:54.970 --> 00:07:56.590 align:middle line:90%
+ANA BELL: Exactly, yeah.
+
+00:07:56.590 --> 00:07:59.170 align:middle line:90%
+Yeah.
+
+00:07:59.170 --> 00:07:59.770 align:middle line:90%
+Yeah?
+
+00:07:59.770 --> 00:08:03.220 align:middle line:84%
+STUDENT: Is there a way we could
+define a class as something
+
+00:08:03.220 --> 00:08:05.233 align:middle line:90%
+other than an object?
+
+00:08:05.233 --> 00:08:07.400 align:middle line:84%
+ANA BELL: A class as something
+other than an object?
+
+00:08:07.400 --> 00:08:10.190 align:middle line:84%
+STUDENT: Right, like say we
+put coordinate and then object,
+
+00:08:10.190 --> 00:08:11.622 align:middle line:90%
+then you put something else.
+
+00:08:11.622 --> 00:08:12.830 align:middle line:90%
+ANA BELL: In the parentheses?
+
+00:08:12.830 --> 00:08:15.360 align:middle line:84%
+Yes, we can put other
+things in the parentheses.
+
+00:08:15.360 --> 00:08:17.870 align:middle line:84%
+So that's actually what
+Monday's lecture will be about.
+
+00:08:17.870 --> 00:08:20.750 align:middle line:84%
+In that case, the thing
+in the parentheses
+
+00:08:20.750 --> 00:08:24.560 align:middle line:84%
+becomes the parent of the class
+that you're currently writing.
+
+00:08:24.560 --> 00:08:26.570 align:middle line:84%
+So I won't go into
+too much detail.
+
+00:08:26.570 --> 00:08:31.070 align:middle line:84%
+But to have this other object as
+a parent means that everything
+
+00:08:31.070 --> 00:08:34.039 align:middle line:84%
+that that object can do
+automatically your object
+
+00:08:34.039 --> 00:08:35.250 align:middle line:90%
+can do as well.
+
+00:08:35.250 --> 00:08:37.880 align:middle line:84%
+And then on top of
+that, you can decide
+
+00:08:37.880 --> 00:08:41.150 align:middle line:84%
+a bunch of additional
+stuff your new object does.
+
+00:08:41.150 --> 00:08:44.179 align:middle line:84%
+But in a sense, your
+coordinate object
+
+00:08:44.179 --> 00:08:47.460 align:middle line:84%
+is a whatever this thing
+in the parentheses is.
+
+00:08:47.460 --> 00:08:50.408 align:middle line:84%
+And then it can do a bunch
+of other stuff as well.
+
+00:08:50.408 --> 00:08:51.650 align:middle line:90%
+Yes?
+
+00:08:51.650 --> 00:08:54.460 align:middle line:84%
+STUDENT: Similarly, how
+you can copy and paste
+
+00:08:54.460 --> 00:08:57.040 align:middle line:90%
+the square brackets?
+
+00:08:57.040 --> 00:08:58.030 align:middle line:90%
+ANA BELL: Yeah?
+
+00:08:58.030 --> 00:09:00.860 align:middle line:90%
+STUDENT: How can you do that?
+
+00:09:00.860 --> 00:09:03.020 align:middle line:84%
+ANA BELL: Oh, to make
+a copy of the object?
+
+00:09:03.020 --> 00:09:03.755 align:middle line:90%
+Or--
+
+00:09:03.755 --> 00:09:06.200 align:middle line:84%
+STUDENT: To make a
+copy of the class.
+
+00:09:06.200 --> 00:09:10.280 align:middle line:84%
+ANA BELL: Oh, so here, you
+can't make a copy of the class
+
+00:09:10.280 --> 00:09:13.500 align:middle line:84%
+here specifically because
+we're just defining the class.
+
+00:09:13.500 --> 00:09:16.230 align:middle line:84%
+But when you're creating
+coordinate objects,
+
+00:09:16.230 --> 00:09:21.620 align:middle line:84%
+then you could define a
+method that copies your object
+
+00:09:21.620 --> 00:09:24.400 align:middle line:90%
+into another object.
+
+00:09:24.400 --> 00:09:27.240 align:middle line:84%
+So in essence, it would
+return a new object of type
+
+00:09:27.240 --> 00:09:32.580 align:middle line:84%
+coordinate with whatever
+parameters you'd want it to do.
+
+00:09:32.580 --> 00:09:37.010 align:middle line:84%
+So yeah, all of these
+things are possible.
+
+00:09:37.010 --> 00:09:39.370 align:middle line:84%
+So let's add one more
+method to this class.
+
+00:09:39.370 --> 00:09:43.750 align:middle line:90%
+Let's call it to_origin.
+
+00:09:43.750 --> 00:09:46.870 align:middle line:84%
+So this distance method,
+just to remind ourselves,
+
+00:09:46.870 --> 00:09:48.790 align:middle line:90%
+returned a number.
+
+00:09:48.790 --> 00:09:51.850 align:middle line:84%
+So it just took the difference
+between these two points
+
+00:09:51.850 --> 00:09:54.970 align:middle line:84%
+and it returned a number,
+just how far away they are.
+
+00:09:54.970 --> 00:09:56.800 align:middle line:84%
+But this to_origin
+method is going
+
+00:09:56.800 --> 00:09:59.080 align:middle line:84%
+to do something
+slightly different.
+
+00:09:59.080 --> 00:10:01.660 align:middle line:84%
+Essentially, what I'm going
+to have this method do
+
+00:10:01.660 --> 00:10:04.870 align:middle line:84%
+is to take my point from
+wherever it is in my 2D plane
+
+00:10:04.870 --> 00:10:08.590 align:middle line:84%
+that it has been
+initialized to and say I'm
+
+00:10:08.590 --> 00:10:12.400 align:middle line:84%
+going to reset it
+back to the origin.
+
+00:10:12.400 --> 00:10:15.160 align:middle line:84%
+So to do that, all
+that means is I'm
+
+00:10:15.160 --> 00:10:19.660 align:middle line:84%
+going to make its x value
+and its y value be 0.
+
+00:10:19.660 --> 00:10:22.990 align:middle line:84%
+So I can manipulate
+the x and y data
+
+00:10:22.990 --> 00:10:25.540 align:middle line:84%
+attributes of this
+particular object
+
+00:10:25.540 --> 00:10:27.160 align:middle line:84%
+to be whatever I
+want them to be.
+
+00:10:27.160 --> 00:10:29.650 align:middle line:84%
+So I can reset
+them both to be 0.
+
+00:10:29.650 --> 00:10:33.640 align:middle line:84%
+So if I ever call this method on
+an object whose x and y values
+
+00:10:33.640 --> 00:10:38.510 align:middle line:84%
+are something other than
+0, they'll be reset to 0.
+
+00:10:38.510 --> 00:10:41.700 align:middle line:84%
+So let's actually run the
+code that we just wrote.
+
+00:10:41.700 --> 00:10:44.670 align:middle line:84%
+So here, I've got two coordinate
+objects being created.
+
+00:10:44.670 --> 00:10:47.360 align:middle line:84%
+So the beauty of writing
+this class for us
+
+00:10:47.360 --> 00:10:49.760 align:middle line:84%
+is that now we can create
+as many coordinate objects
+
+00:10:49.760 --> 00:10:50.630 align:middle line:90%
+as we'd like.
+
+00:10:50.630 --> 00:10:52.760 align:middle line:84%
+They all will have
+an x value and a y
+
+00:10:52.760 --> 00:10:54.330 align:middle line:90%
+value associated with them.
+
+00:10:54.330 --> 00:10:57.020 align:middle line:84%
+It's just that the
+specific values for x and y
+
+00:10:57.020 --> 00:10:58.400 align:middle line:90%
+will be different.
+
+00:10:58.400 --> 00:11:02.840 align:middle line:84%
+So here, I've got a coordinate
+object with x 3 and y 4
+
+00:11:02.840 --> 00:11:03.800 align:middle line:90%
+being created.
+
+00:11:03.800 --> 00:11:06.560 align:middle line:84%
+And it's going to be bound
+by the variable name c
+
+00:11:06.560 --> 00:11:09.320 align:middle line:84%
+and here a coordinate
+object with x and y values
+
+00:11:09.320 --> 00:11:13.790 align:middle line:84%
+both 0 bound to a
+variable named origin.
+
+00:11:13.790 --> 00:11:16.550 align:middle line:84%
+So then I can use
+this dot notation
+
+00:11:16.550 --> 00:11:19.490 align:middle line:84%
+that we talked about last
+lecture to access either data
+
+00:11:19.490 --> 00:11:24.270 align:middle line:90%
+or to run methods on the object.
+
+00:11:24.270 --> 00:11:27.470 align:middle line:84%
+So in this printf
+statement here,
+
+00:11:27.470 --> 00:11:31.760 align:middle line:84%
+I'm using dot notation
+on c and origin
+
+00:11:31.760 --> 00:11:38.210 align:middle line:84%
+to grab the x values of c over
+here and origin over here.
+
+00:11:38.210 --> 00:11:41.570 align:middle line:84%
+And then I'm running the
+distance method on c.
+
+00:11:41.570 --> 00:11:45.020 align:middle line:84%
+So remember, dot notation says
+the thing before the dot is
+
+00:11:45.020 --> 00:11:47.300 align:middle line:90%
+going to be an object.
+
+00:11:47.300 --> 00:11:52.030 align:middle line:84%
+The thing after the dot is
+going to be the method name that
+
+00:11:52.030 --> 00:11:55.600 align:middle line:84%
+can run on this object of type
+whatever this is, coordinate.
+
+00:11:55.600 --> 00:11:58.030 align:middle line:84%
+And then in the parentheses,
+it's just a function.
+
+00:11:58.030 --> 00:11:59.800 align:middle line:84%
+We just pass in
+all the variables
+
+00:11:59.800 --> 00:12:01.930 align:middle line:90%
+that that method expects.
+
+00:12:01.930 --> 00:12:04.500 align:middle line:90%
+
+
+00:12:04.500 --> 00:12:09.000 align:middle line:84%
+So c.distance will print
+however far away it is, 5,
+
+00:12:09.000 --> 00:12:11.910 align:middle line:90%
+because those are nice numbers.
+
+00:12:11.910 --> 00:12:15.900 align:middle line:84%
+So then if we run this function
+that we just wrote, .to_origin,
+
+00:12:15.900 --> 00:12:18.000 align:middle line:84%
+this function,
+just to remind you,
+
+00:12:18.000 --> 00:12:20.430 align:middle line:84%
+doesn't actually
+return anything.
+
+00:12:20.430 --> 00:12:23.010 align:middle line:84%
+It just resets the
+variables x and y
+
+00:12:23.010 --> 00:12:26.470 align:middle line:84%
+for that particular
+object back to 0.
+
+00:12:26.470 --> 00:12:30.760 align:middle line:84%
+So in here, when I
+call this method here--
+
+00:12:30.760 --> 00:12:34.120 align:middle line:84%
+again, dot notation, the thing
+before the dot is an object.
+
+00:12:34.120 --> 00:12:35.050 align:middle line:90%
+It's c.
+
+00:12:35.050 --> 00:12:39.220 align:middle line:84%
+Its x and y values
+are currently 3 and 4.
+
+00:12:39.220 --> 00:12:43.540 align:middle line:84%
+But after I run this function--
+it returns none, by the way--
+
+00:12:43.540 --> 00:12:47.980 align:middle line:84%
+its x and y values will
+be changed to 0 and 0.
+
+00:12:47.980 --> 00:12:51.620 align:middle line:90%
+So if I look at my code here--
+
+00:12:51.620 --> 00:12:54.880 align:middle line:90%
+so here's this printf statement.
+
+00:12:54.880 --> 00:13:01.030 align:middle line:84%
+So c's x value is 3 and c's--
+and origin's x is 0, fine.
+
+00:13:01.030 --> 00:13:05.590 align:middle line:84%
+And then I've got these two
+calls here-- so c.to_origin.
+
+00:13:05.590 --> 00:13:07.300 align:middle line:90%
+I'm making this function call.
+
+00:13:07.300 --> 00:13:10.480 align:middle line:84%
+Before the function call,
+c's x is 3 and c's y is 4.
+
+00:13:10.480 --> 00:13:13.660 align:middle line:84%
+And after the function
+call, you can see c's x is 0
+
+00:13:13.660 --> 00:13:14.560 align:middle line:90%
+and c's y is 0.
+
+00:13:14.560 --> 00:13:19.260 align:middle line:84%
+So I'm literally changing the x
+and y values of this object, c.
+
+00:13:19.260 --> 00:13:23.860 align:middle line:90%
+
+
+00:13:23.860 --> 00:13:26.770 align:middle line:90%
+All right, so questions so far?
+
+00:13:26.770 --> 00:13:28.030 align:middle line:90%
+So far so good?
+
+00:13:28.030 --> 00:13:29.590 align:middle line:90%
+Hopefully recap?
+
+00:13:29.590 --> 00:13:30.130 align:middle line:90%
+OK.
+
+00:13:30.130 --> 00:13:33.010 align:middle line:84%
+So again, sort similar
+to the first slide
+
+00:13:33.010 --> 00:13:36.070 align:middle line:84%
+we started with, so we've got
+this class coordinate object.
+
+00:13:36.070 --> 00:13:37.660 align:middle line:90%
+The class name is our type.
+
+00:13:37.660 --> 00:13:40.600 align:middle line:84%
+So this object I'm creating
+is of type coordinate.
+
+00:13:40.600 --> 00:13:43.030 align:middle line:84%
+We're defining the
+class in a generic way,
+
+00:13:43.030 --> 00:13:44.800 align:middle line:90%
+in an abstract way.
+
+00:13:44.800 --> 00:13:49.810 align:middle line:84%
+So we have to use the
+self variable either
+
+00:13:49.810 --> 00:13:52.120 align:middle line:84%
+in the parameter list
+to tell Python what's
+
+00:13:52.120 --> 00:13:54.280 align:middle line:84%
+the thing before the dot
+going to map to-- well,
+
+00:13:54.280 --> 00:13:57.720 align:middle line:84%
+it's going to map to self
+in my parameter list.
+
+00:13:57.720 --> 00:14:01.320 align:middle line:84%
+Or we use the self to tell
+Python what the data attributes
+
+00:14:01.320 --> 00:14:02.800 align:middle line:90%
+of this object are.
+
+00:14:02.800 --> 00:14:06.810 align:middle line:84%
+So anything defined with
+self. some variable name will
+
+00:14:06.810 --> 00:14:07.860 align:middle line:90%
+be a data attribute.
+
+00:14:07.860 --> 00:14:09.690 align:middle line:84%
+That's common across
+all the instances
+
+00:14:09.690 --> 00:14:12.610 align:middle line:90%
+I create of this type.
+
+00:14:12.610 --> 00:14:15.150 align:middle line:84%
+When we create actual
+instances, that's
+
+00:14:15.150 --> 00:14:19.110 align:middle line:84%
+when our blueprint,
+our abstract definition
+
+00:14:19.110 --> 00:14:21.270 align:middle line:90%
+now gets put into use.
+
+00:14:21.270 --> 00:14:23.730 align:middle line:84%
+And now, I'm creating
+actual objects
+
+00:14:23.730 --> 00:14:27.870 align:middle line:84%
+that I can grab x values from,
+change x values from, get
+
+00:14:27.870 --> 00:14:31.530 align:middle line:84%
+distances between other
+objects, and so on, and so on.
+
+00:14:31.530 --> 00:14:32.160 align:middle line:90%
+OK.
+
+00:14:32.160 --> 00:14:37.810 align:middle line:84%
+So what I'd like to do next is
+to take this coordinate class
+
+00:14:37.810 --> 00:14:41.990 align:middle line:84%
+and build a circle
+class with it.
+
+00:14:41.990 --> 00:14:45.760 align:middle line:84%
+So this comes hand
+in hand with the idea
+
+00:14:45.760 --> 00:14:49.030 align:middle line:84%
+of when you're deciding
+how to create a class,
+
+00:14:49.030 --> 00:14:50.710 align:middle line:84%
+you get to make the
+design decision.
+
+00:14:50.710 --> 00:14:53.740 align:middle line:84%
+So when the Finger Exercise
+for Monday's lecture--
+
+00:14:53.740 --> 00:14:54.730 align:middle line:90%
+today's Wednesday, yes.
+
+00:14:54.730 --> 00:14:59.440 align:middle line:84%
+Monday's lecture-- you guys
+had to create a center--
+
+00:14:59.440 --> 00:15:01.270 align:middle line:90%
+sorry, a circle class.
+
+00:15:01.270 --> 00:15:04.300 align:middle line:84%
+But the way we defined
+the circle class
+
+00:15:04.300 --> 00:15:06.250 align:middle line:84%
+in that Finger
+Exercise was basically
+
+00:15:06.250 --> 00:15:08.270 align:middle line:90%
+by that circle's radius.
+
+00:15:08.270 --> 00:15:12.850 align:middle line:84%
+That's the only way we
+abstracted that circle.
+
+00:15:12.850 --> 00:15:15.400 align:middle line:84%
+But now, in this
+lecture, we're going
+
+00:15:15.400 --> 00:15:16.990 align:middle line:84%
+to make a different
+design decision
+
+00:15:16.990 --> 00:15:23.730 align:middle line:84%
+and say that a circle will now
+be defined using two things.
+
+00:15:23.730 --> 00:15:26.450 align:middle line:90%
+The first is the radius.
+
+00:15:26.450 --> 00:15:28.280 align:middle line:84%
+So I'm going to say
+that that's an integer.
+
+00:15:28.280 --> 00:15:32.180 align:middle line:84%
+And the second is going to
+be the center of the circle.
+
+00:15:32.180 --> 00:15:33.920 align:middle line:84%
+So as in the picture
+there, I'm going
+
+00:15:33.920 --> 00:15:38.450 align:middle line:84%
+to say that a circle is based
+on the center and this radius.
+
+00:15:38.450 --> 00:15:41.532 align:middle line:84%
+And the center is not
+going to be a float.
+
+00:15:41.532 --> 00:15:42.740 align:middle line:90%
+It's not going to be a tuple.
+
+00:15:42.740 --> 00:15:43.907 align:middle line:90%
+It's not going to be an int.
+
+00:15:43.907 --> 00:15:48.190 align:middle line:84%
+It's going to be a
+coordinate object, the data
+
+00:15:48.190 --> 00:15:49.675 align:middle line:90%
+type that we were just writing.
+
+00:15:49.675 --> 00:15:53.350 align:middle line:90%
+
+
+00:15:53.350 --> 00:15:54.460 align:middle line:90%
+All right, good.
+
+00:15:54.460 --> 00:15:56.572 align:middle line:90%
+It's not a secret.
+
+00:15:56.572 --> 00:15:58.030 align:middle line:84%
+I didn't lower my
+voice on purpose.
+
+00:15:58.030 --> 00:16:00.400 align:middle line:84%
+I just wanted to
+let that sink in.
+
+00:16:00.400 --> 00:16:04.390 align:middle line:84%
+So one of our data attributes
+for the circle class
+
+00:16:04.390 --> 00:16:06.590 align:middle line:90%
+is a coordinate object.
+
+00:16:06.590 --> 00:16:08.350 align:middle line:84%
+So we're using an
+object that we just
+
+00:16:08.350 --> 00:16:12.930 align:middle line:84%
+wrote to create a more
+complex object, a circle.
+
+00:16:12.930 --> 00:16:15.480 align:middle line:90%
+So here's my class definition.
+
+00:16:15.480 --> 00:16:17.490 align:middle line:90%
+The data type is called circle.
+
+00:16:17.490 --> 00:16:19.350 align:middle line:90%
+Again, it inherits all--
+
+00:16:19.350 --> 00:16:22.830 align:middle line:84%
+the parent of circle is just
+a generic Python object.
+
+00:16:22.830 --> 00:16:26.820 align:middle line:84%
+First method we have to
+write is the init method.
+
+00:16:26.820 --> 00:16:28.890 align:middle line:84%
+First parameter is
+self, so this thing
+
+00:16:28.890 --> 00:16:30.150 align:middle line:90%
+that I'm creating right now.
+
+00:16:30.150 --> 00:16:32.190 align:middle line:84%
+And I say that to
+create a circle,
+
+00:16:32.190 --> 00:16:33.960 align:middle line:90%
+I have to give it a center.
+
+00:16:33.960 --> 00:16:37.370 align:middle line:90%
+And I have to give it a radius.
+
+00:16:37.370 --> 00:16:41.630 align:middle line:84%
+The data attributes
+of the circle class--
+
+00:16:41.630 --> 00:16:45.710 align:middle line:84%
+so the two attributes that
+make up my circle are this
+
+00:16:45.710 --> 00:16:46.980 align:middle line:90%
+self.center--
+
+00:16:46.980 --> 00:16:50.660 align:middle line:84%
+so the center variable
+here-- and self.radius.
+
+00:16:50.660 --> 00:16:55.500 align:middle line:84%
+So these two things together
+make up our circle object.
+
+00:16:55.500 --> 00:16:57.840 align:middle line:84%
+And initially, in
+the init method
+
+00:16:57.840 --> 00:16:59.220 align:middle line:84%
+and when we
+construct our object,
+
+00:16:59.220 --> 00:17:00.595 align:middle line:84%
+we're just going
+to set these two
+
+00:17:00.595 --> 00:17:04.170 align:middle line:84%
+things to be whatever is
+passed in as parameters
+
+00:17:04.170 --> 00:17:08.690 align:middle line:90%
+in the constructor.
+
+00:17:08.690 --> 00:17:13.190 align:middle line:84%
+All right, so what
+I'd like to say
+
+00:17:13.190 --> 00:17:18.500 align:middle line:84%
+is that this center parameter
+will be a coordinate object
+
+00:17:18.500 --> 00:17:20.150 align:middle line:90%
+and radius will be an int.
+
+00:17:20.150 --> 00:17:23.810 align:middle line:84%
+Now, notice in this code, I'm
+not actually enforcing this.
+
+00:17:23.810 --> 00:17:30.290 align:middle line:84%
+I could create a circle object
+by just passing in two strings.
+
+00:17:30.290 --> 00:17:33.740 align:middle line:84%
+At this point, this
+code doesn't care.
+
+00:17:33.740 --> 00:17:36.527 align:middle line:84%
+Nowhere am I enforcing the fact
+that center is a coordinate
+
+00:17:36.527 --> 00:17:37.610 align:middle line:90%
+and radius will be an int.
+
+00:17:37.610 --> 00:17:41.470 align:middle line:84%
+But that's just
+something that we know.
+
+00:17:41.470 --> 00:17:47.350 align:middle line:84%
+So then when we create the
+actual object down here,
+
+00:17:47.350 --> 00:17:50.710 align:middle line:84%
+my_circle is going to
+be a variable that's
+
+00:17:50.710 --> 00:17:52.760 align:middle line:90%
+bound to my circle object.
+
+00:17:52.760 --> 00:17:56.260 align:middle line:84%
+So here, I'm invoking the
+name of my class, circle.
+
+00:17:56.260 --> 00:17:59.140 align:middle line:84%
+And then what are the two
+parameters I'm passing in?
+
+00:17:59.140 --> 00:18:02.080 align:middle line:84%
+Well, the first one,
+I said right up here
+
+00:18:02.080 --> 00:18:05.500 align:middle line:84%
+that it should be a
+coordinate object.
+
+00:18:05.500 --> 00:18:08.500 align:middle line:90%
+So center is a variable name.
+
+00:18:08.500 --> 00:18:09.670 align:middle line:90%
+And what is it?
+
+00:18:09.670 --> 00:18:14.140 align:middle line:84%
+Well, I had to create
+this coordinate object.
+
+00:18:14.140 --> 00:18:16.390 align:middle line:84%
+So I'm just invoking
+the name of coordinate,
+
+00:18:16.390 --> 00:18:18.730 align:middle line:84%
+this class that creates
+for me a coordinate object.
+
+00:18:18.730 --> 00:18:24.040 align:middle line:84%
+And I happen to put the
+center of the circle at 2, 2.
+
+00:18:24.040 --> 00:18:27.020 align:middle line:90%
+Yeah, OK.
+
+00:18:27.020 --> 00:18:30.010 align:middle line:84%
+So this center thing
+is a coordinate object.
+
+00:18:30.010 --> 00:18:31.760 align:middle line:84%
+It's not a tuple, or
+a float, or whatever.
+
+00:18:31.760 --> 00:18:33.020 align:middle line:90%
+It's a coordinate object.
+
+00:18:33.020 --> 00:18:36.276 align:middle line:84%
+And then the radius of
+this circle is 2, an int.
+
+00:18:36.276 --> 00:18:39.540 align:middle line:90%
+
+
+00:18:39.540 --> 00:18:40.950 align:middle line:90%
+Everyone OK with that?
+
+00:18:40.950 --> 00:18:42.420 align:middle line:90%
+OK.
+
+00:18:42.420 --> 00:18:44.520 align:middle line:84%
+So what I'd like
+you to do next is
+
+00:18:44.520 --> 00:18:46.650 align:middle line:84%
+to modify this init
+method just slightly,
+
+00:18:46.650 --> 00:18:49.860 align:middle line:84%
+just to show you that the
+init method doesn't just
+
+00:18:49.860 --> 00:18:53.370 align:middle line:84%
+always set the data
+attributes and it's done.
+
+00:18:53.370 --> 00:18:56.190 align:middle line:84%
+It can do a lot of
+initialization code.
+
+00:18:56.190 --> 00:18:58.290 align:middle line:84%
+One of the more important
+things it can do
+
+00:18:58.290 --> 00:19:05.100 align:middle line:84%
+is to try to enforce the
+types on the parameters here.
+
+00:19:05.100 --> 00:19:08.280 align:middle line:84%
+So what I'd like you to
+do is add to this code
+
+00:19:08.280 --> 00:19:12.690 align:middle line:84%
+to check that the type
+of center is a coordinate
+
+00:19:12.690 --> 00:19:15.180 align:middle line:84%
+and the type of
+radius is an integer.
+
+00:19:15.180 --> 00:19:18.460 align:middle line:84%
+And only if those
+two things are true,
+
+00:19:18.460 --> 00:19:21.930 align:middle line:84%
+then do you set the
+two data attributes.
+
+00:19:21.930 --> 00:19:26.910 align:middle line:84%
+And otherwise, raise
+for me a value error.
+
+00:19:26.910 --> 00:19:29.910 align:middle line:84%
+So that should be
+around line 48.
+
+00:19:29.910 --> 00:19:32.970 align:middle line:90%
+
+
+00:19:32.970 --> 00:19:34.290 align:middle line:90%
+OK.
+
+00:19:34.290 --> 00:19:35.970 align:middle line:84%
+Does anyone have
+some code for me?
+
+00:19:35.970 --> 00:19:40.630 align:middle line:90%
+
+
+00:19:40.630 --> 00:19:42.040 align:middle line:90%
+Yeah?
+
+00:19:42.040 --> 00:19:45.450 align:middle line:84%
+STUDENT: In type of center
+does not equal coordinate
+
+00:19:45.450 --> 00:19:47.540 align:middle line:90%
+[INAUDIBLE]
+
+00:19:47.540 --> 00:19:49.865 align:middle line:90%
+ANA BELL: Not equal coordinate--
+
+00:19:49.865 --> 00:19:53.025 align:middle line:84%
+Yep, so that's
+raise value error.
+
+00:19:53.025 --> 00:19:53.900 align:middle line:90%
+STUDENT: Value error.
+
+00:19:53.900 --> 00:19:55.320 align:middle line:90%
+ANA BELL: Yep.
+
+00:19:55.320 --> 00:19:56.973 align:middle line:90%
+Cool so that takes care of one.
+
+00:19:56.973 --> 00:19:59.691 align:middle line:90%
+Yep?
+
+00:19:59.691 --> 00:20:03.597 align:middle line:84%
+STUDENT: And they're the same
+per radius, but with the--
+
+00:20:03.597 --> 00:20:04.180 align:middle line:90%
+ANA BELL: Yep.
+
+00:20:04.180 --> 00:20:08.050 align:middle line:84%
+So if the type of radius,
+because that's the parameter
+
+00:20:08.050 --> 00:20:13.662 align:middle line:84%
+passed in, not equal to
+int, raise value error.
+
+00:20:13.662 --> 00:20:16.590 align:middle line:90%
+
+
+00:20:16.590 --> 00:20:21.300 align:middle line:84%
+So if we drop into any of
+these if's, then we immediately
+
+00:20:21.300 --> 00:20:22.650 align:middle line:90%
+raise the value error.
+
+00:20:22.650 --> 00:20:24.000 align:middle line:90%
+The code doesn't complete.
+
+00:20:24.000 --> 00:20:27.870 align:middle line:84%
+And then only if we didn't
+drop into this one or this one
+
+00:20:27.870 --> 00:20:31.540 align:middle line:84%
+do we then go on to
+create my object.
+
+00:20:31.540 --> 00:20:32.940 align:middle line:90%
+So then here we are.
+
+00:20:32.940 --> 00:20:36.150 align:middle line:84%
+These two lines
+here will succeed.
+
+00:20:36.150 --> 00:20:38.800 align:middle line:84%
+So there is no error raised
+or anything like that.
+
+00:20:38.800 --> 00:20:43.400 align:middle line:84%
+But then this line here
+raises our value error
+
+00:20:43.400 --> 00:20:45.260 align:middle line:84%
+because we tried to
+create a circle where
+
+00:20:45.260 --> 00:20:47.450 align:middle line:84%
+the center is an
+integer, obviously not
+
+00:20:47.450 --> 00:20:48.500 align:middle line:90%
+a coordinate object.
+
+00:20:48.500 --> 00:20:51.080 align:middle line:84%
+And then here, again,
+we raised a value error
+
+00:20:51.080 --> 00:20:54.980 align:middle line:84%
+because we tried to pass
+in a string as the radius.
+
+00:20:54.980 --> 00:20:56.600 align:middle line:90%
+Any questions about this code?
+
+00:20:56.600 --> 00:20:59.540 align:middle line:90%
+
+
+00:20:59.540 --> 00:21:00.465 align:middle line:90%
+Oh yeah, sorry.
+
+00:21:00.465 --> 00:21:02.840 align:middle line:84%
+STUDENT: So [INAUDIBLE] it's
+very important for these two
+
+00:21:02.840 --> 00:21:05.540 align:middle line:90%
+statements [INAUDIBLE]?
+
+00:21:05.540 --> 00:21:07.580 align:middle line:84%
+ANA BELL: Yeah, so it's
+important to place them
+
+00:21:07.580 --> 00:21:09.890 align:middle line:84%
+before you actually create
+the object because you don't
+
+00:21:09.890 --> 00:21:11.990 align:middle line:90%
+want to create it unless--
+
+00:21:11.990 --> 00:21:15.050 align:middle line:84%
+yeah, unless
+everything's appropriate.
+
+00:21:15.050 --> 00:21:19.570 align:middle line:90%
+
+
+00:21:19.570 --> 00:21:21.220 align:middle line:90%
+OK.
+
+00:21:21.220 --> 00:21:24.910 align:middle line:84%
+So now, let's add one
+more useful method
+
+00:21:24.910 --> 00:21:28.240 align:middle line:90%
+to our class, circle.
+
+00:21:28.240 --> 00:21:31.920 align:middle line:84%
+Now that we've defined
+a circle using a center
+
+00:21:31.920 --> 00:21:35.400 align:middle line:84%
+point and a radius, we can
+add this little function
+
+00:21:35.400 --> 00:21:40.730 align:middle line:84%
+that checks if another
+coordinate object is inside
+
+00:21:40.730 --> 00:21:42.830 align:middle line:90%
+our circle.
+
+00:21:42.830 --> 00:21:47.150 align:middle line:84%
+So again, I'm not going
+to be able to enforce
+
+00:21:47.150 --> 00:21:49.520 align:middle line:84%
+that this point is
+a coordinate object.
+
+00:21:49.520 --> 00:21:51.530 align:middle line:84%
+But you could do it
+in the docstring,
+
+00:21:51.530 --> 00:21:53.550 align:middle line:84%
+or you could do a check,
+or something like that.
+
+00:21:53.550 --> 00:21:55.092 align:middle line:84%
+But again, we're
+just going to assume
+
+00:21:55.092 --> 00:21:58.260 align:middle line:84%
+the user using this method
+is going to follow the rules.
+
+00:21:58.260 --> 00:22:00.620 align:middle line:84%
+So how is this
+method going to work?
+
+00:22:00.620 --> 00:22:02.810 align:middle line:84%
+The idea here is
+that we're going
+
+00:22:02.810 --> 00:22:05.390 align:middle line:84%
+to use the center, which
+is a coordinate object,
+
+00:22:05.390 --> 00:22:09.020 align:middle line:84%
+and some other point,
+p, wherever it may be.
+
+00:22:09.020 --> 00:22:10.980 align:middle line:84%
+What we're going to do
+is we're going to say,
+
+00:22:10.980 --> 00:22:13.310 align:middle line:84%
+what's the distance
+between this point
+
+00:22:13.310 --> 00:22:15.050 align:middle line:90%
+and the center of the circle?
+
+00:22:15.050 --> 00:22:17.498 align:middle line:84%
+If it's greater
+than the radius, we
+
+00:22:17.498 --> 00:22:19.040 align:middle line:84%
+know the point is
+outside the circle.
+
+00:22:19.040 --> 00:22:20.690 align:middle line:84%
+If it's smaller
+than the radius, we
+
+00:22:20.690 --> 00:22:23.120 align:middle line:90%
+know the point is in the circle.
+
+00:22:23.120 --> 00:22:26.010 align:middle line:84%
+So this code is
+just enforcing that.
+
+00:22:26.010 --> 00:22:30.200 align:middle line:84%
+So we have just a
+simple return statement
+
+00:22:30.200 --> 00:22:33.980 align:middle line:84%
+that's going to run
+the distance method.
+
+00:22:33.980 --> 00:22:41.740 align:middle line:84%
+This is a method that we wrote
+back in the coordinate class.
+
+00:22:41.740 --> 00:22:44.590 align:middle line:84%
+That's fine because
+you know what?
+
+00:22:44.590 --> 00:22:48.100 align:middle line:84%
+Point is an object
+of type coordinate.
+
+00:22:48.100 --> 00:22:52.120 align:middle line:84%
+And self.center-- so the
+center of this circle object
+
+00:22:52.120 --> 00:22:55.840 align:middle line:84%
+I'm trying to manipulate to tell
+if another point is inside me
+
+00:22:55.840 --> 00:22:56.530 align:middle line:90%
+or not--
+
+00:22:56.530 --> 00:22:59.140 align:middle line:90%
+is also a coordinate object.
+
+00:22:59.140 --> 00:23:00.970 align:middle line:90%
+So why not?
+
+00:23:00.970 --> 00:23:03.220 align:middle line:84%
+We already wrote the code
+that calculates the distance
+
+00:23:03.220 --> 00:23:04.550 align:middle line:90%
+between these two points.
+
+00:23:04.550 --> 00:23:05.568 align:middle line:90%
+So let's call it.
+
+00:23:05.568 --> 00:23:07.360 align:middle line:84%
+So here, I've got the
+thing before the dot,
+
+00:23:07.360 --> 00:23:09.790 align:middle line:84%
+a coordinate object,
+dot notation,
+
+00:23:09.790 --> 00:23:12.550 align:middle line:84%
+the method I want to run
+on this coordinate object.
+
+00:23:12.550 --> 00:23:15.340 align:middle line:84%
+And then in parentheses, this
+is another coordinate object.
+
+00:23:15.340 --> 00:23:17.770 align:middle line:84%
+So this will just tell me
+some number for how far
+
+00:23:17.770 --> 00:23:19.090 align:middle line:90%
+away these two points are.
+
+00:23:19.090 --> 00:23:21.420 align:middle line:84%
+And all we do is return
+whether that number
+
+00:23:21.420 --> 00:23:22.420 align:middle line:90%
+is less than the radius.
+
+00:23:22.420 --> 00:23:25.485 align:middle line:90%
+
+
+00:23:25.485 --> 00:23:26.360 align:middle line:90%
+Does that make sense?
+
+00:23:26.360 --> 00:23:29.680 align:middle line:90%
+
+
+00:23:29.680 --> 00:23:32.040 align:middle line:84%
+And again, this
+only works if point,
+
+00:23:32.040 --> 00:23:35.400 align:middle line:84%
+the thing that's passed in
+here, is a coordinate object.
+
+00:23:35.400 --> 00:23:37.410 align:middle line:84%
+Otherwise, this code
+will fail because it's
+
+00:23:37.410 --> 00:23:39.420 align:middle line:90%
+going to try to pass in--
+
+00:23:39.420 --> 00:23:42.180 align:middle line:84%
+it's going to try to run the
+distance method on a string,
+
+00:23:42.180 --> 00:23:42.940 align:middle line:90%
+for example.
+
+00:23:42.940 --> 00:23:46.760 align:middle line:84%
+And of course, the string
+doesn't have a distance method.
+
+00:23:46.760 --> 00:23:50.710 align:middle line:84%
+So down here, these two lines
+are exactly as we had before.
+
+00:23:50.710 --> 00:23:53.890 align:middle line:84%
+We create a circle object
+whose center is at 2,
+
+00:23:53.890 --> 00:23:55.930 align:middle line:90%
+2 and radius is 2.
+
+00:23:55.930 --> 00:23:59.080 align:middle line:84%
+And then I've got another
+coordinate object down here.
+
+00:23:59.080 --> 00:24:03.640 align:middle line:84%
+It's at 1 comma 1, so
+clearly within the circle.
+
+00:24:03.640 --> 00:24:08.110 align:middle line:84%
+So that print statement
+will then print true.
+
+00:24:08.110 --> 00:24:09.700 align:middle line:84%
+So that's just
+basically what I wrote.
+
+00:24:09.700 --> 00:24:10.867 align:middle line:90%
+This is a coordinate object.
+
+00:24:10.867 --> 00:24:11.680 align:middle line:90%
+This is the method.
+
+00:24:11.680 --> 00:24:14.760 align:middle line:84%
+This is another
+coordinate object.
+
+00:24:14.760 --> 00:24:16.500 align:middle line:90%
+All right, so let's run it.
+
+00:24:16.500 --> 00:24:19.788 align:middle line:90%
+
+
+00:24:19.788 --> 00:24:21.580 align:middle line:84%
+So this is exactly the
+code from the slide.
+
+00:24:21.580 --> 00:24:24.330 align:middle line:84%
+So if I run this method on a
+coordinate object that's 1,
+
+00:24:24.330 --> 00:24:26.940 align:middle line:90%
+1, somewhere in here, so true.
+
+00:24:26.940 --> 00:24:30.840 align:middle line:84%
+And otherwise, if I run
+it on coordinate object
+
+00:24:30.840 --> 00:24:35.145 align:middle line:84%
+here, 10, 10, clearly outside
+the circle, it prints false.
+
+00:24:35.145 --> 00:24:39.780 align:middle line:90%
+
+
+00:24:39.780 --> 00:24:40.530 align:middle line:90%
+Questions?
+
+00:24:40.530 --> 00:24:43.540 align:middle line:90%
+
+
+00:24:43.540 --> 00:24:44.040 align:middle line:90%
+OK.
+
+00:24:44.040 --> 00:24:47.570 align:middle line:90%
+
+
+00:24:47.570 --> 00:24:49.640 align:middle line:84%
+Yes, that's exactly
+what I said already.
+
+00:24:49.640 --> 00:24:51.640 align:middle line:90%
+OK, good.
+
+00:24:51.640 --> 00:24:54.070 align:middle line:84%
+So now, I want you to
+answer this question.
+
+00:24:54.070 --> 00:24:58.930 align:middle line:84%
+Nothing to code here, but
+I've got these two is_inside
+
+00:24:58.930 --> 00:24:59.510 align:middle line:90%
+methods.
+
+00:24:59.510 --> 00:25:02.050 align:middle line:84%
+So the first one here,
+is_inside1, is exactly the one
+
+00:25:02.050 --> 00:25:03.730 align:middle line:90%
+that we just saw.
+
+00:25:03.730 --> 00:25:08.760 align:middle line:84%
+It runs this distance method
+with point and self.center.
+
+00:25:08.760 --> 00:25:11.130 align:middle line:84%
+is_inside2 looks
+slightly different,
+
+00:25:11.130 --> 00:25:13.303 align:middle line:84%
+the differences I've
+highlighted in this box.
+
+00:25:13.303 --> 00:25:15.720 align:middle line:84%
+What I'd like you to tell me--
+we can do a show of hands--
+
+00:25:15.720 --> 00:25:19.650 align:middle line:84%
+is are these two methods
+functionally equivalent?
+
+00:25:19.650 --> 00:25:23.400 align:middle line:84%
+That is, will they
+return the same thing
+
+00:25:23.400 --> 00:25:25.590 align:middle line:90%
+given the same input?
+
+00:25:25.590 --> 00:25:26.790 align:middle line:90%
+So think about it.
+
+00:25:26.790 --> 00:25:31.050 align:middle line:84%
+And then I will do
+a show of hands.
+
+00:25:31.050 --> 00:25:35.390 align:middle line:90%
+
+
+00:25:35.390 --> 00:25:40.730 align:middle line:84%
+So who thinks yes they are
+functionally equivalent?
+
+00:25:40.730 --> 00:25:45.890 align:middle line:84%
+Given the same input, they
+will both return true or false?
+
+00:25:45.890 --> 00:25:49.550 align:middle line:84%
+Who thinks no they are not
+functionally equivalent?
+
+00:25:49.550 --> 00:25:50.300 align:middle line:90%
+Some?
+
+00:25:50.300 --> 00:25:52.320 align:middle line:90%
+Half and half.
+
+00:25:52.320 --> 00:25:52.980 align:middle line:90%
+OK.
+
+00:25:52.980 --> 00:25:55.620 align:middle line:84%
+Well, let's think about what
+the distance method is doing.
+
+00:25:55.620 --> 00:25:58.540 align:middle line:90%
+
+
+00:25:58.540 --> 00:26:02.800 align:middle line:84%
+It's being run on an
+object of type what?
+
+00:26:02.800 --> 00:26:05.902 align:middle line:90%
+
+
+00:26:05.902 --> 00:26:07.710 align:middle line:90%
+STUDENT: Coordinate?
+
+00:26:07.710 --> 00:26:09.240 align:middle line:90%
+ANA BELL: Coordinate, exactly.
+
+00:26:09.240 --> 00:26:13.340 align:middle line:84%
+So in here, is point an
+object of type coordinate?
+
+00:26:13.340 --> 00:26:14.480 align:middle line:90%
+Yes, OK.
+
+00:26:14.480 --> 00:26:17.960 align:middle line:84%
+And then here, what
+is the parameter
+
+00:26:17.960 --> 00:26:18.920 align:middle line:90%
+to the distance method?
+
+00:26:18.920 --> 00:26:22.510 align:middle line:84%
+Is it an object of
+type coordinate?
+
+00:26:22.510 --> 00:26:26.530 align:middle line:84%
+self.center is an object
+of type coordinate, yes.
+
+00:26:26.530 --> 00:26:29.140 align:middle line:84%
+So now, let's look
+at is_inside2.
+
+00:26:29.140 --> 00:26:31.600 align:middle line:90%
+What is the type of self.center?
+
+00:26:31.600 --> 00:26:33.165 align:middle line:90%
+STUDENT: Coordinate.
+
+00:26:33.165 --> 00:26:34.040 align:middle line:90%
+ANA BELL: Coordinate.
+
+00:26:34.040 --> 00:26:35.582 align:middle line:84%
+And we're running
+the distance method
+
+00:26:35.582 --> 00:26:37.370 align:middle line:84%
+on this object of
+type coordinate.
+
+00:26:37.370 --> 00:26:41.180 align:middle line:84%
+And what is the object in
+the parameter list here?
+
+00:26:41.180 --> 00:26:42.583 align:middle line:90%
+What's its type?
+
+00:26:42.583 --> 00:26:43.750 align:middle line:90%
+STUDENT: Coordinate.
+
+00:26:43.750 --> 00:26:45.030 align:middle line:90%
+ANA BELL: Coordinate.
+
+00:26:45.030 --> 00:26:47.100 align:middle line:84%
+So when we wrote
+the distance method,
+
+00:26:47.100 --> 00:26:51.220 align:middle line:84%
+does it matter which object
+we call the method on
+
+00:26:51.220 --> 00:26:54.440 align:middle line:84%
+to get the distance
+between these two points?
+
+00:26:54.440 --> 00:26:55.190 align:middle line:90%
+No, right?
+
+00:26:55.190 --> 00:26:57.260 align:middle line:90%
+Because the distance between--
+
+00:26:57.260 --> 00:26:59.990 align:middle line:84%
+saying I want the distance
+between this point
+
+00:26:59.990 --> 00:27:02.190 align:middle line:84%
+and this point is
+the same as saying
+
+00:27:02.190 --> 00:27:05.090 align:middle line:84%
+I want the distance between
+this point and this point.
+
+00:27:05.090 --> 00:27:08.990 align:middle line:84%
+It's just the
+order is different.
+
+00:27:08.990 --> 00:27:12.140 align:middle line:84%
+So just the way that this
+distance method works,
+
+00:27:12.140 --> 00:27:17.950 align:middle line:84%
+it doesn't actually matter which
+object I call the method on,
+
+00:27:17.950 --> 00:27:20.980 align:middle line:84%
+as long as they're both corded
+objects, which they are.
+
+00:27:20.980 --> 00:27:23.855 align:middle line:90%
+
+
+00:27:23.855 --> 00:27:24.730 align:middle line:90%
+Does that make sense?
+
+00:27:24.730 --> 00:27:25.480 align:middle line:90%
+Is that all right?
+
+00:27:25.480 --> 00:27:28.400 align:middle line:84%
+Any questions about this for
+those who were in the no pot?
+
+00:27:28.400 --> 00:27:28.900 align:middle line:90%
+Yeah.
+
+00:27:28.900 --> 00:27:33.990 align:middle line:84%
+STUDENT: So there's
+no [INAUDIBLE]
+
+00:27:33.990 --> 00:27:35.370 align:middle line:90%
+ANA BELL: self.center?
+
+00:27:35.370 --> 00:27:40.860 align:middle line:84%
+self.center is an object of
+type coordinate, not circle.
+
+00:27:40.860 --> 00:27:46.890 align:middle line:84%
+So self is a circle because self
+is talking about me, the class
+
+00:27:46.890 --> 00:27:48.450 align:middle line:90%
+that I'm currently defining.
+
+00:27:48.450 --> 00:27:52.150 align:middle line:84%
+And the class I'm currently
+defining is a circle.
+
+00:27:52.150 --> 00:27:55.990 align:middle line:84%
+But self.center--
+we even wrote code--
+
+00:27:55.990 --> 00:28:00.115 align:middle line:84%
+we would like to enforce that
+it is a coordinate object.
+
+00:28:00.115 --> 00:28:06.400 align:middle line:90%
+
+
+00:28:06.400 --> 00:28:09.640 align:middle line:84%
+So we could have put parentheses
+around this self.center,
+
+00:28:09.640 --> 00:28:12.620 align:middle line:84%
+if we wanted to, and then
+call the distance on that.
+
+00:28:12.620 --> 00:28:15.450 align:middle line:90%
+Does that make sense?
+
+00:28:15.450 --> 00:28:17.750 align:middle line:90%
+OK.
+
+00:28:17.750 --> 00:28:21.150 align:middle line:84%
+All right, so that's all I had
+regarding the circle class.
+
+00:28:21.150 --> 00:28:23.150 align:middle line:84%
+Now, we're going to switch
+gears and we're going
+
+00:28:23.150 --> 00:28:25.100 align:middle line:90%
+to look at fractions--
+
+00:28:25.100 --> 00:28:28.710 align:middle line:84%
+so numerator/denominator
+situation here.
+
+00:28:28.710 --> 00:28:32.510 align:middle line:84%
+So we're going to create a
+new data type to represent
+
+00:28:32.510 --> 00:28:35.250 align:middle line:90%
+a number as a fraction.
+
+00:28:35.250 --> 00:28:38.240 align:middle line:84%
+So first thing we need to do
+is make the design decision--
+
+00:28:38.240 --> 00:28:41.370 align:middle line:84%
+what data will
+represent our fraction?
+
+00:28:41.370 --> 00:28:43.532 align:middle line:90%
+So think about it.
+
+00:28:43.532 --> 00:28:44.240 align:middle line:90%
+You guys tell me.
+
+00:28:44.240 --> 00:28:44.990 align:middle line:90%
+What do you think?
+
+00:28:44.990 --> 00:28:48.290 align:middle line:84%
+What's a reasonable set of
+data that could represent
+
+00:28:48.290 --> 00:28:49.385 align:middle line:90%
+our number as a fraction?
+
+00:28:49.385 --> 00:28:51.940 align:middle line:90%
+
+
+00:28:51.940 --> 00:28:54.690 align:middle line:90%
+When you think of a-- yeah?
+
+00:28:54.690 --> 00:28:55.690 align:middle line:90%
+STUDENT: [INAUDIBLE].
+
+00:28:55.690 --> 00:28:58.662 align:middle line:90%
+
+
+00:28:58.662 --> 00:29:00.410 align:middle line:84%
+ANA BELL: Yeah, a
+set of two things,
+
+00:29:00.410 --> 00:29:03.710 align:middle line:84%
+maybe integers, one
+representing the numerator,
+
+00:29:03.710 --> 00:29:06.980 align:middle line:84%
+the thing above the line,
+and one the denominator,
+
+00:29:06.980 --> 00:29:08.230 align:middle line:90%
+the thing below the line.
+
+00:29:08.230 --> 00:29:10.960 align:middle line:84%
+Good, that's exactly
+what I had in mind.
+
+00:29:10.960 --> 00:29:14.400 align:middle line:84%
+What are some
+behaviors of fractions?
+
+00:29:14.400 --> 00:29:17.160 align:middle line:90%
+You guys tell me.
+
+00:29:17.160 --> 00:29:19.910 align:middle line:90%
+What things should fractions do?
+
+00:29:19.910 --> 00:29:20.915 align:middle line:90%
+Yeah?
+
+00:29:20.915 --> 00:29:23.530 align:middle line:90%
+STUDENT: [INAUDIBLE].
+
+00:29:23.530 --> 00:29:25.260 align:middle line:90%
+ANA BELL: Yeah.
+
+00:29:25.260 --> 00:29:28.530 align:middle line:84%
+Yes, adding them, multiplying
+fractions together,
+
+00:29:28.530 --> 00:29:32.310 align:middle line:84%
+dividing them, inverting
+a fraction also something
+
+00:29:32.310 --> 00:29:36.272 align:middle line:84%
+we could do, so 1 over what it
+currently is, things like that.
+
+00:29:36.272 --> 00:29:38.230 align:middle line:84%
+All right, so we're going
+to write it together.
+
+00:29:38.230 --> 00:29:40.750 align:middle line:84%
+The full code is actually
+in the Python file.
+
+00:29:40.750 --> 00:29:42.820 align:middle line:84%
+So mostly, I'm going to
+go through the slides,
+
+00:29:42.820 --> 00:29:45.160 align:middle line:84%
+just because it's incremental,
+so it's easier for me
+
+00:29:45.160 --> 00:29:46.480 align:middle line:90%
+to talk about it.
+
+00:29:46.480 --> 00:29:50.020 align:middle line:84%
+But the exact full code is
+already in the Python file,
+
+00:29:50.020 --> 00:29:52.100 align:middle line:90%
+if you're running it later.
+
+00:29:52.100 --> 00:29:53.600 align:middle line:84%
+So the first thing
+we're going to do
+
+00:29:53.600 --> 00:29:56.060 align:middle line:90%
+is create this fraction class.
+
+00:29:56.060 --> 00:29:59.390 align:middle line:84%
+And I'm actually going to
+name it SimpleFraction instead
+
+00:29:59.390 --> 00:30:01.820 align:middle line:84%
+of fraction because
+we're going to improve
+
+00:30:01.820 --> 00:30:06.060 align:middle line:84%
+upon this SimpleFraction
+object in a little bit.
+
+00:30:06.060 --> 00:30:09.290 align:middle line:84%
+So this one I'm just going
+to call SimpleFraction.
+
+00:30:09.290 --> 00:30:14.600 align:middle line:84%
+Like before, its parent is
+the generic Python object.
+
+00:30:14.600 --> 00:30:18.910 align:middle line:90%
+So again, very, very simple.
+
+00:30:18.910 --> 00:30:21.860 align:middle line:84%
+It doesn't do
+anything special yet.
+
+00:30:21.860 --> 00:30:24.780 align:middle line:84%
+The first method we need to
+write is the init method.
+
+00:30:24.780 --> 00:30:27.140 align:middle line:84%
+So how do we initialize
+a fraction object?
+
+00:30:27.140 --> 00:30:29.780 align:middle line:84%
+Obviously, we don't want the
+numerator or the denominator
+
+00:30:29.780 --> 00:30:31.160 align:middle line:90%
+to be empty.
+
+00:30:31.160 --> 00:30:33.690 align:middle line:84%
+So when we create a
+SimpleFraction object,
+
+00:30:33.690 --> 00:30:37.190 align:middle line:84%
+we want the user to tell us
+the values for the numerator
+
+00:30:37.190 --> 00:30:38.490 align:middle line:90%
+and the denominator.
+
+00:30:38.490 --> 00:30:41.630 align:middle line:84%
+So those are the two parameters
+that I would love the user
+
+00:30:41.630 --> 00:30:45.670 align:middle line:90%
+to initiate this fraction with.
+
+00:30:45.670 --> 00:30:50.230 align:middle line:84%
+And then what will be
+the two data attributes
+
+00:30:50.230 --> 00:30:51.520 align:middle line:90%
+that we had decided on?
+
+00:30:51.520 --> 00:30:55.960 align:middle line:84%
+Well, numerator-- so
+self.num and self.denom will
+
+00:30:55.960 --> 00:30:58.570 align:middle line:90%
+be the two data attributes.
+
+00:30:58.570 --> 00:31:00.940 align:middle line:84%
+So self.num and self.denom
+are data attributes.
+
+00:31:00.940 --> 00:31:02.860 align:middle line:84%
+And they're going
+to be set initially
+
+00:31:02.860 --> 00:31:09.410 align:middle line:84%
+to whatever is passed in
+that constructor call.
+
+00:31:09.410 --> 00:31:09.910 align:middle line:90%
+OK.
+
+00:31:09.910 --> 00:31:11.540 align:middle line:90%
+So far so good?
+
+00:31:11.540 --> 00:31:15.310 align:middle line:84%
+Let's write a method that
+helps us multiply two fraction
+
+00:31:15.310 --> 00:31:16.310 align:middle line:90%
+objects together.
+
+00:31:16.310 --> 00:31:18.400 align:middle line:90%
+So we'll call it times.
+
+00:31:18.400 --> 00:31:22.420 align:middle line:84%
+So this times method will be
+called on an object, the thing
+
+00:31:22.420 --> 00:31:24.040 align:middle line:90%
+before the dot.
+
+00:31:24.040 --> 00:31:26.050 align:middle line:84%
+That object, the
+thing before the dot,
+
+00:31:26.050 --> 00:31:27.970 align:middle line:90%
+will get mapped to self.
+
+00:31:27.970 --> 00:31:30.610 align:middle line:84%
+And then the thing in
+the parentheses, the one
+
+00:31:30.610 --> 00:31:35.350 align:middle line:84%
+other parameter, will
+be mapped to oth.
+
+00:31:35.350 --> 00:31:38.890 align:middle line:84%
+So how do we multiply two
+fraction objects together?
+
+00:31:38.890 --> 00:31:41.920 align:middle line:84%
+Take the numerators, multiply
+them, take the denominators,
+
+00:31:41.920 --> 00:31:44.020 align:middle line:84%
+multiply them, you've
+got your new numerator
+
+00:31:44.020 --> 00:31:46.550 align:middle line:84%
+and you've got your
+new denominator.
+
+00:31:46.550 --> 00:31:50.150 align:middle line:84%
+So how do we grab the numerators
+of both of these objects?
+
+00:31:50.150 --> 00:31:52.420 align:middle line:84%
+So the numerator of
+the thing before the
+
+00:31:52.420 --> 00:31:57.640 align:middle line:84%
+dot that maps to
+self is self.num.
+
+00:31:57.640 --> 00:32:00.370 align:middle line:84%
+And the numerator of
+the other object that's
+
+00:32:00.370 --> 00:32:02.680 align:middle line:84%
+going to be in
+the parameter list
+
+00:32:02.680 --> 00:32:10.340 align:middle line:84%
+is the name of my parameter,
+oth dot their numerator, num.
+
+00:32:10.340 --> 00:32:13.840 align:middle line:90%
+Everyone OK so far?
+
+00:32:13.840 --> 00:32:14.710 align:middle line:90%
+Yes, OK.
+
+00:32:14.710 --> 00:32:15.840 align:middle line:90%
+I saw some head nods.
+
+00:32:15.840 --> 00:32:17.070 align:middle line:90%
+That's good.
+
+00:32:17.070 --> 00:32:18.850 align:middle line:84%
+The denominator
+will be the same.
+
+00:32:18.850 --> 00:32:22.470 align:middle line:84%
+So my new denominator is just
+multiplying my denominator,
+
+00:32:22.470 --> 00:32:24.900 align:middle line:84%
+the thing before the
+dot, with the thing
+
+00:32:24.900 --> 00:32:27.970 align:middle line:90%
+in the parameter's denominator.
+
+00:32:27.970 --> 00:32:30.490 align:middle line:84%
+So I've got my new numerator,
+my new denominator.
+
+00:32:30.490 --> 00:32:32.560 align:middle line:84%
+And all I'm going to
+do is do the division
+
+00:32:32.560 --> 00:32:33.850 align:middle line:90%
+and return this value.
+
+00:32:33.850 --> 00:32:35.692 align:middle line:84%
+What's the type of
+the return here?
+
+00:32:35.692 --> 00:32:37.150 align:middle line:84%
+What's this method
+going to return?
+
+00:32:37.150 --> 00:32:37.892 align:middle line:90%
+What type?
+
+00:32:37.892 --> 00:32:38.600 align:middle line:90%
+STUDENT: A float?
+
+00:32:38.600 --> 00:32:40.000 align:middle line:90%
+ANA BELL: A float, exactly.
+
+00:32:40.000 --> 00:32:41.410 align:middle line:90%
+Yeah, good.
+
+00:32:41.410 --> 00:32:43.600 align:middle line:84%
+Yep, because all I'm doing
+is dividing one number
+
+00:32:43.600 --> 00:32:44.530 align:middle line:90%
+by another number.
+
+00:32:44.530 --> 00:32:47.600 align:middle line:90%
+
+
+00:32:47.600 --> 00:32:50.460 align:middle line:90%
+OK, perfect.
+
+00:32:50.460 --> 00:32:53.820 align:middle line:84%
+So that's what
+I've already said.
+
+00:32:53.820 --> 00:32:56.520 align:middle line:84%
+Now, we can define
+another method, plus,
+
+00:32:56.520 --> 00:32:59.610 align:middle line:84%
+to add two fraction
+objects together.
+
+00:32:59.610 --> 00:33:01.802 align:middle line:84%
+Very similar thing,
+except the top
+
+00:33:01.802 --> 00:33:03.510 align:middle line:84%
+is going to be slightly
+different, right?
+
+00:33:03.510 --> 00:33:06.750 align:middle line:84%
+You take the numerator of
+one times the denominator
+
+00:33:06.750 --> 00:33:09.810 align:middle line:84%
+of the other plus the
+numerator of the other times
+
+00:33:09.810 --> 00:33:13.800 align:middle line:84%
+the denominator of the first
+one, the criss-cross thing.
+
+00:33:13.800 --> 00:33:16.200 align:middle line:84%
+The denominator is the
+same, just multiply
+
+00:33:16.200 --> 00:33:17.340 align:middle line:90%
+the denom's together.
+
+00:33:17.340 --> 00:33:19.650 align:middle line:84%
+And again, we return
+the division-- top
+
+00:33:19.650 --> 00:33:23.760 align:middle line:84%
+divided by bottom-- again,
+the return of this method
+
+00:33:23.760 --> 00:33:24.880 align:middle line:90%
+will be a float.
+
+00:33:24.880 --> 00:33:27.720 align:middle line:84%
+So even though I'm multiplying
+or adding these two fraction
+
+00:33:27.720 --> 00:33:30.780 align:middle line:84%
+objects together, my
+return will be a float.
+
+00:33:30.780 --> 00:33:32.130 align:middle line:90%
+Fine.
+
+00:33:32.130 --> 00:33:34.160 align:middle line:90%
+So let's run the code.
+
+00:33:34.160 --> 00:33:37.340 align:middle line:84%
+I'm creating two simple
+fraction objects.
+
+00:33:37.340 --> 00:33:39.620 align:middle line:84%
+First one is going
+to be accessed
+
+00:33:39.620 --> 00:33:41.600 align:middle line:90%
+using variable named f1.
+
+00:33:41.600 --> 00:33:45.780 align:middle line:84%
+So this one represents
+the number 3 over 4.
+
+00:33:45.780 --> 00:33:49.650 align:middle line:84%
+Second one is accessed
+by variable named f2.
+
+00:33:49.650 --> 00:33:54.820 align:middle line:84%
+And this one represents
+the fraction 1 over 4.
+
+00:33:54.820 --> 00:33:59.150 align:middle line:84%
+So now, if I access
+the numerator of f1,
+
+00:33:59.150 --> 00:34:01.640 align:middle line:84%
+Python says, well, what's
+the object before the dot?
+
+00:34:01.640 --> 00:34:02.600 align:middle line:90%
+It's f1.
+
+00:34:02.600 --> 00:34:04.070 align:middle line:90%
+So what is your numerator?
+
+00:34:04.070 --> 00:34:05.180 align:middle line:90%
+Well, I set it to 3.
+
+00:34:05.180 --> 00:34:07.430 align:middle line:90%
+So this one tells me it's 3.
+
+00:34:07.430 --> 00:34:09.449 align:middle line:90%
+Pretty simple.
+
+00:34:09.449 --> 00:34:11.747 align:middle line:84%
+Same thing with the
+denominator of f1
+
+00:34:11.747 --> 00:34:13.580 align:middle line:84%
+again, it looks at the
+thing before the dot.
+
+00:34:13.580 --> 00:34:14.969 align:middle line:90%
+It's a fraction object.
+
+00:34:14.969 --> 00:34:17.449 align:middle line:84%
+It says, do you have a
+denom data attribute?
+
+00:34:17.449 --> 00:34:17.960 align:middle line:90%
+You do.
+
+00:34:17.960 --> 00:34:19.070 align:middle line:90%
+And its value is 4.
+
+00:34:19.070 --> 00:34:21.960 align:middle line:90%
+So that's 4.
+
+00:34:21.960 --> 00:34:25.650 align:middle line:84%
+Now, what's the
+result of f1.plus(f2)?
+
+00:34:25.650 --> 00:34:27.540 align:middle line:90%
+Super weird way to write it.
+
+00:34:27.540 --> 00:34:30.630 align:middle line:90%
+But it's what we've got so far.
+
+00:34:30.630 --> 00:34:34.610 align:middle line:84%
+So the thing before
+the dot is an object.
+
+00:34:34.610 --> 00:34:37.270 align:middle line:90%
+It's a simple fraction object.
+
+00:34:37.270 --> 00:34:39.940 align:middle line:84%
+And the thing before
+the dot, remember,
+
+00:34:39.940 --> 00:34:42.880 align:middle line:84%
+maps to self in
+my parameter list
+
+00:34:42.880 --> 00:34:45.560 align:middle line:90%
+because it's just a function.
+
+00:34:45.560 --> 00:34:49.130 align:middle line:84%
+So like usual functions
+a bunch of lectures ago,
+
+00:34:49.130 --> 00:34:51.730 align:middle line:84%
+we basically map the
+actual parameters
+
+00:34:51.730 --> 00:34:55.270 align:middle line:84%
+when we run the function to the
+formal parameters, the things
+
+00:34:55.270 --> 00:34:57.430 align:middle line:90%
+from my function definition.
+
+00:34:57.430 --> 00:34:59.910 align:middle line:84%
+So the actual
+parameter here for self
+
+00:34:59.910 --> 00:35:03.270 align:middle line:90%
+is the thing before the dot, f1.
+
+00:35:03.270 --> 00:35:08.560 align:middle line:84%
+And the parameter f2
+gets mapped to oth.
+
+00:35:08.560 --> 00:35:10.660 align:middle line:90%
+That's how we read that.
+
+00:35:10.660 --> 00:35:12.990 align:middle line:84%
+So this is just
+doing the addition.
+
+00:35:12.990 --> 00:35:18.370 align:middle line:84%
+So this will give me 1.0
+because it's a float.
+
+00:35:18.370 --> 00:35:21.370 align:middle line:84%
+Same with the the, thing
+before the dot maps to self.
+
+00:35:21.370 --> 00:35:23.890 align:middle line:84%
+And every other parameter
+in the parameter list
+
+00:35:23.890 --> 00:35:26.590 align:middle line:84%
+maps to everything
+else except for self.
+
+00:35:26.590 --> 00:35:32.750 align:middle line:84%
+So this one will do 3
+over 16 to give me 0.1875.
+
+00:35:32.750 --> 00:35:33.250 align:middle line:90%
+OK.
+
+00:35:33.250 --> 00:35:35.560 align:middle line:90%
+Everyone OK so far?
+
+00:35:35.560 --> 00:35:38.590 align:middle line:84%
+The trick here is to remember
+that the thing before the dot
+
+00:35:38.590 --> 00:35:42.070 align:middle line:84%
+maps to self in the
+method definition.
+
+00:35:42.070 --> 00:35:46.980 align:middle line:84%
+And then everything else maps
+to everything other than self.
+
+00:35:46.980 --> 00:35:49.410 align:middle line:90%
+OK.
+
+00:35:49.410 --> 00:35:51.270 align:middle line:84%
+I'm glad everything's
+OK so far because I'm
+
+00:35:51.270 --> 00:35:54.130 align:middle line:84%
+going to get you to
+write this code here.
+
+00:35:54.130 --> 00:35:56.940 align:middle line:84%
+It looks like a lot,
+but the first half of it
+
+00:35:56.940 --> 00:36:01.290 align:middle line:84%
+is just redefining the init
+method for SimpleFraction.
+
+00:36:01.290 --> 00:36:03.090 align:middle line:84%
+I want you to write
+these two methods.
+
+00:36:03.090 --> 00:36:05.370 align:middle line:84%
+And they're going to be
+one liners basically.
+
+00:36:05.370 --> 00:36:10.840 align:middle line:84%
+So get_inverse will
+return something.
+
+00:36:10.840 --> 00:36:15.550 align:middle line:84%
+And it returns a float
+representing 1 over myself.
+
+00:36:15.550 --> 00:36:18.580 align:middle line:84%
+So if the input, as
+in this example here,
+
+00:36:18.580 --> 00:36:22.880 align:middle line:84%
+if I have a SimpleFraction
+object representing 3 over 4,
+
+00:36:22.880 --> 00:36:27.650 align:middle line:84%
+if I call get_inverse on it
+right here, f1.get_inverse,
+
+00:36:27.650 --> 00:36:29.240 align:middle line:90%
+self becomes f1.
+
+00:36:29.240 --> 00:36:34.040 align:middle line:84%
+And I would like it to return,
+and therefore print, 4 over 3,
+
+00:36:34.040 --> 00:36:37.460 align:middle line:90%
+so 1.3333333.
+
+00:36:37.460 --> 00:36:38.660 align:middle line:90%
+That's get_inverse.
+
+00:36:38.660 --> 00:36:42.750 align:middle line:84%
+And then invert is a method
+that doesn't return anything.
+
+00:36:42.750 --> 00:36:44.270 align:middle line:90%
+So it returns none.
+
+00:36:44.270 --> 00:36:48.920 align:middle line:84%
+And instead, it just internally
+switches the numerator
+
+00:36:48.920 --> 00:36:51.290 align:middle line:90%
+and the denominator of self.
+
+00:36:51.290 --> 00:36:53.750 align:middle line:84%
+So self's numerator becomes
+whatever its denominator
+
+00:36:53.750 --> 00:36:56.400 align:middle line:90%
+is and the other way around.
+
+00:36:56.400 --> 00:36:59.060 align:middle line:84%
+So when you call it, this
+one doesn't print anything.
+
+00:36:59.060 --> 00:37:02.480 align:middle line:84%
+But instead, if we access f1's
+numerator and denominator,
+
+00:37:02.480 --> 00:37:03.695 align:middle line:90%
+they will have been switched.
+
+00:37:03.695 --> 00:37:06.640 align:middle line:90%
+
+
+00:37:06.640 --> 00:37:13.962 align:middle line:90%
+So this is down on line 133.
+
+00:37:13.962 --> 00:37:15.380 align:middle line:84%
+I'll Give you a
+couple of moments.
+
+00:37:15.380 --> 00:37:17.020 align:middle line:84%
+And then we can
+write it together.
+
+00:37:17.020 --> 00:37:19.880 align:middle line:90%
+It should not be a lot of code.
+
+00:37:19.880 --> 00:37:20.690 align:middle line:90%
+OK.
+
+00:37:20.690 --> 00:37:22.230 align:middle line:90%
+How do we write the get_inverse?
+
+00:37:22.230 --> 00:37:25.090 align:middle line:84%
+So remember, you have
+to return something.
+
+00:37:25.090 --> 00:37:26.000 align:middle line:90%
+How do we return--
+
+00:37:26.000 --> 00:37:26.500 align:middle line:90%
+yea?
+
+00:37:26.500 --> 00:37:27.657 align:middle line:90%
+1 over--
+
+00:37:27.657 --> 00:37:30.640 align:middle line:84%
+STUDENT: Does it just
+return over self?
+
+00:37:30.640 --> 00:37:33.310 align:middle line:90%
+ANA BELL: 1 over self?
+
+00:37:33.310 --> 00:37:36.970 align:middle line:84%
+So remember, self is an
+object of type SimpleFraction.
+
+00:37:36.970 --> 00:37:40.430 align:middle line:84%
+So we need to manipulate its
+numerator and the denominator,
+
+00:37:40.430 --> 00:37:45.430 align:middle line:84%
+if we want to do the return,
+because if we just do this--
+
+00:37:45.430 --> 00:37:46.120 align:middle line:90%
+is it this one?
+
+00:37:46.120 --> 00:37:50.570 align:middle line:84%
+Yep, this one here,
+then Python says--
+
+00:37:50.570 --> 00:37:54.350 align:middle line:84%
+oh sorry, it's trying
+to divide 1, an integer,
+
+00:37:54.350 --> 00:37:57.710 align:middle line:84%
+by an object of
+type SimpleFraction.
+
+00:37:57.710 --> 00:37:59.622 align:middle line:84%
+And that's the error
+that we get here.
+
+00:37:59.622 --> 00:38:02.080 align:middle line:84%
+And it doesn't know how to do
+a division between an integer
+
+00:38:02.080 --> 00:38:03.530 align:middle line:90%
+and a SimpleFraction.
+
+00:38:03.530 --> 00:38:07.628 align:middle line:84%
+So how can we do that by
+working with actual numbers that
+
+00:38:07.628 --> 00:38:08.920 align:middle line:90%
+are part of my simple fraction?
+
+00:38:08.920 --> 00:38:17.400 align:middle line:90%
+
+
+00:38:17.400 --> 00:38:17.900 align:middle line:90%
+Anyone?
+
+00:38:17.900 --> 00:38:19.310 align:middle line:90%
+Yeah?
+
+00:38:19.310 --> 00:38:20.720 align:middle line:90%
+STUDENT: [INAUDIBLE].
+
+00:38:20.720 --> 00:38:25.802 align:middle line:90%
+
+
+00:38:25.802 --> 00:38:28.220 align:middle line:84%
+ANA BELL: self.denom
+divided by self.num.
+
+00:38:28.220 --> 00:38:32.320 align:middle line:84%
+Yeah, we can do that,
+yep, or 1 over self.num
+
+00:38:32.320 --> 00:38:33.370 align:middle line:90%
+divided by self.denom.
+
+00:38:33.370 --> 00:38:34.090 align:middle line:90%
+That's also fine.
+
+00:38:34.090 --> 00:38:36.290 align:middle line:84%
+Yeah, but this is a
+little bit cleaner.
+
+00:38:36.290 --> 00:38:38.920 align:middle line:84%
+So now, denom is
+an integer, right?
+
+00:38:38.920 --> 00:38:42.460 align:middle line:84%
+Because when we create
+it, we pass in int.
+
+00:38:42.460 --> 00:38:44.560 align:middle line:84%
+So denom and num
+are integers, which
+
+00:38:44.560 --> 00:38:47.950 align:middle line:84%
+means that Python knows how to
+do a division between a number
+
+00:38:47.950 --> 00:38:51.580 align:middle line:90%
+and another number, yeah.
+
+00:38:51.580 --> 00:38:58.720 align:middle line:84%
+So if we run that, now it
+prints 1.33333 exactly.
+
+00:38:58.720 --> 00:38:59.220 align:middle line:90%
+OK.
+
+00:38:59.220 --> 00:39:04.395 align:middle line:84%
+How do we do the invert
+function-- method, sorry.
+
+00:39:04.395 --> 00:39:06.190 align:middle line:90%
+Yeah?
+
+00:39:06.190 --> 00:39:08.990 align:middle line:90%
+Sorry, go ahead.
+
+00:39:08.990 --> 00:39:11.860 align:middle line:84%
+STUDENT: I first
+assigned [INAUDIBLE]
+
+00:39:11.860 --> 00:39:14.200 align:middle line:90%
+equals self.numerator.
+
+00:39:14.200 --> 00:39:15.880 align:middle line:90%
+ANA BELL: Yep.
+
+00:39:15.880 --> 00:39:16.930 align:middle line:90%
+STUDENT: [INAUDIBLE].
+
+00:39:16.930 --> 00:39:23.040 align:middle line:90%
+
+
+00:39:23.040 --> 00:39:23.940 align:middle line:90%
+ANA BELL: Yep.
+
+00:39:23.940 --> 00:39:30.715 align:middle line:84%
+STUDENT: [INAUDIBLE] is
+equal to new_num [INAUDIBLE]..
+
+00:39:30.715 --> 00:39:37.630 align:middle line:90%
+
+
+00:39:37.630 --> 00:39:39.440 align:middle line:90%
+ANA BELL: Like that, yeah.
+
+00:39:39.440 --> 00:39:43.670 align:middle line:90%
+Yep, that's one way to do it.
+
+00:39:43.670 --> 00:39:46.040 align:middle line:84%
+Yep, so you can see now
+accessing the new numerator
+
+00:39:46.040 --> 00:39:47.510 align:middle line:84%
+and denominator
+gives me 4 over 3.
+
+00:39:47.510 --> 00:39:49.280 align:middle line:84%
+Any other ways that
+you've done it?
+
+00:39:49.280 --> 00:39:50.210 align:middle line:90%
+Yeah?
+
+00:39:50.210 --> 00:40:02.800 align:middle line:90%
+STUDENT: I used the [INAUDIBLE]
+
+00:40:02.800 --> 00:40:04.360 align:middle line:90%
+ANA BELL: Yep, the tuple trick.
+
+00:40:04.360 --> 00:40:06.290 align:middle line:90%
+I like it.
+
+00:40:06.290 --> 00:40:09.270 align:middle line:90%
+self.num, yep.
+
+00:40:09.270 --> 00:40:09.770 align:middle line:90%
+Perfect.
+
+00:40:09.770 --> 00:40:10.690 align:middle line:90%
+Yes?
+
+00:40:10.690 --> 00:40:16.190 align:middle line:84%
+STUDENT: [INAUDIBLE] I just
+said self.num equals self.denom.
+
+00:40:16.190 --> 00:40:17.480 align:middle line:90%
+But I didn't say both of them.
+
+00:40:17.480 --> 00:40:18.438 align:middle line:90%
+ANA BELL: Oh, OK, yeah.
+
+00:40:18.438 --> 00:40:19.430 align:middle line:90%
+That also works, yeah.
+
+00:40:19.430 --> 00:40:22.170 align:middle line:90%
+
+
+00:40:22.170 --> 00:40:22.860 align:middle line:90%
+Perfect.
+
+00:40:22.860 --> 00:40:26.540 align:middle line:84%
+All very valid ways
+of doing it, nice.
+
+00:40:26.540 --> 00:40:29.220 align:middle line:84%
+Yep, so notice there's
+no return for this one.
+
+00:40:29.220 --> 00:40:30.780 align:middle line:84%
+I didn't want to
+return anything.
+
+00:40:30.780 --> 00:40:32.850 align:middle line:84%
+Python will automatically
+return none.
+
+00:40:32.850 --> 00:40:36.210 align:middle line:84%
+And these internal
+numerator and denominators
+
+00:40:36.210 --> 00:40:39.590 align:middle line:90%
+will have been flipped, perfect.
+
+00:40:39.590 --> 00:40:43.580 align:middle line:90%
+Questions about this code?
+
+00:40:43.580 --> 00:40:46.490 align:middle line:90%
+OK.
+
+00:40:46.490 --> 00:40:48.360 align:middle line:84%
+So let's try it out
+a little bit more.
+
+00:40:48.360 --> 00:40:51.980 align:middle line:84%
+So here, I've got
+these two additions.
+
+00:40:51.980 --> 00:40:55.640 align:middle line:84%
+So this is exactly
+what we had previously,
+
+00:40:55.640 --> 00:40:57.140 align:middle line:90%
+the exact same code.
+
+00:40:57.140 --> 00:41:01.220 align:middle line:84%
+What's weird though-- and you
+might have been weirded out
+
+00:41:01.220 --> 00:41:05.690 align:middle line:84%
+by this too when we first ran
+it-- is I am doing operations
+
+00:41:05.690 --> 00:41:07.520 align:middle line:90%
+with two fraction objects.
+
+00:41:07.520 --> 00:41:11.270 align:middle line:84%
+And yet, the plus
+and the times methods
+
+00:41:11.270 --> 00:41:14.870 align:middle line:84%
+give me floats, which is
+a little weird, right?
+
+00:41:14.870 --> 00:41:17.420 align:middle line:84%
+Ideally, if we're working
+with fraction objects,
+
+00:41:17.420 --> 00:41:19.880 align:middle line:84%
+I would like the return
+to also be a fraction
+
+00:41:19.880 --> 00:41:23.510 align:middle line:84%
+object, so I can then work with
+mole fraction objects later on.
+
+00:41:23.510 --> 00:41:24.950 align:middle line:90%
+That's one weird thing.
+
+00:41:24.950 --> 00:41:29.600 align:middle line:84%
+Another weird thing is if we
+then print one of our objects
+
+00:41:29.600 --> 00:41:32.040 align:middle line:84%
+that we've created,
+f1 in this case--
+
+00:41:32.040 --> 00:41:35.060 align:middle line:84%
+we use print statements often,
+to debug and things like that.
+
+00:41:35.060 --> 00:41:38.090 align:middle line:84%
+If I use the print statement
+on an object of a type
+
+00:41:38.090 --> 00:41:39.230 align:middle line:90%
+that I've created--
+
+00:41:39.230 --> 00:41:40.970 align:middle line:90%
+in this case, a SimpleFraction--
+
+00:41:40.970 --> 00:41:43.820 align:middle line:90%
+Python spits this out.
+
+00:41:43.820 --> 00:41:47.900 align:middle line:84%
+It says, hey, your object is an
+object of type SimpleFraction
+
+00:41:47.900 --> 00:41:50.460 align:middle line:90%
+at this memory location.
+
+00:41:50.460 --> 00:41:51.180 align:middle line:90%
+No thank you.
+
+00:41:51.180 --> 00:41:53.460 align:middle line:84%
+That's not very
+useful to me, right?
+
+00:41:53.460 --> 00:41:56.700 align:middle line:84%
+What I'd like to know is
+maybe a nice representation
+
+00:41:56.700 --> 00:42:00.690 align:middle line:90%
+of my fraction object, like 3/4.
+
+00:42:00.690 --> 00:42:03.950 align:middle line:84%
+I don't care about what
+memory location it's at.
+
+00:42:03.950 --> 00:42:06.470 align:middle line:84%
+And one more thing we'd
+like to try to do--
+
+00:42:06.470 --> 00:42:11.340 align:middle line:84%
+this is a class that
+represents something numerical.
+
+00:42:11.340 --> 00:42:14.690 align:middle line:84%
+So something that people
+might instinctually want to do
+
+00:42:14.690 --> 00:42:18.335 align:middle line:84%
+is to use operators like
+the star, or the plus,
+
+00:42:18.335 --> 00:42:23.340 align:middle line:84%
+or the slash to divide, add,
+multiply these fraction things.
+
+00:42:23.340 --> 00:42:26.420 align:middle line:84%
+But if we run the star
+operator between object
+
+00:42:26.420 --> 00:42:31.250 align:middle line:84%
+of type SimpleFraction
+times another object of type
+
+00:42:31.250 --> 00:42:34.640 align:middle line:84%
+SimpleFraction, Python
+gives us an error.
+
+00:42:34.640 --> 00:42:44.110 align:middle line:84%
+And I'll even show you
+the error, so here.
+
+00:42:44.110 --> 00:42:46.360 align:middle line:84%
+So here, I am
+printing my object.
+
+00:42:46.360 --> 00:42:50.410 align:middle line:84%
+So it spits this out, which
+is fine, but not what I want.
+
+00:42:50.410 --> 00:42:53.410 align:middle line:84%
+This one, obviously, we've seen
+this already prints this out.
+
+00:42:53.410 --> 00:42:56.080 align:middle line:84%
+And then if I try to multiply
+my two SimpleFraction
+
+00:42:56.080 --> 00:43:01.780 align:middle line:84%
+objects together, it says,
+I don't know how to do that.
+
+00:43:01.780 --> 00:43:04.130 align:middle line:84%
+So it's unsupported
+operand types.
+
+00:43:04.130 --> 00:43:06.370 align:middle line:84%
+So the operand SimpleFraction
+and SimpleFraction
+
+00:43:06.370 --> 00:43:09.010 align:middle line:84%
+are not supported with
+the star operator.
+
+00:43:09.010 --> 00:43:10.300 align:middle line:90%
+Well, no surprise there.
+
+00:43:10.300 --> 00:43:12.220 align:middle line:84%
+How is Python
+supposed to know how
+
+00:43:12.220 --> 00:43:14.800 align:middle line:84%
+to multiply two SimpleFraction
+objects together?
+
+00:43:14.800 --> 00:43:17.050 align:middle line:84%
+Right before I even
+ran this program,
+
+00:43:17.050 --> 00:43:20.260 align:middle line:84%
+it didn't even know what a
+simple fraction object was.
+
+00:43:20.260 --> 00:43:24.280 align:middle line:84%
+So we need to tell it
+all of these details.
+
+00:43:24.280 --> 00:43:26.570 align:middle line:90%
+And we will do just that.
+
+00:43:26.570 --> 00:43:30.070 align:middle line:90%
+So all of these operators--
+
+00:43:30.070 --> 00:43:32.920 align:middle line:84%
+print, len that
+we've been using,
+
+00:43:32.920 --> 00:43:37.570 align:middle line:84%
+star, add, less than, greater
+than, even the square brackets
+
+00:43:37.570 --> 00:43:40.090 align:middle line:84%
+to index into something,
+these are actually
+
+00:43:40.090 --> 00:43:42.370 align:middle line:90%
+shorthand notations.
+
+00:43:42.370 --> 00:43:45.680 align:middle line:84%
+They're really common
+operations that you want to do.
+
+00:43:45.680 --> 00:43:50.750 align:middle line:84%
+And Python lets you use these
+common operations instead
+
+00:43:50.750 --> 00:43:54.720 align:middle line:84%
+of writing these really
+verbose function names.
+
+00:43:54.720 --> 00:43:58.270 align:middle line:84%
+But really, behind
+the scenes, all
+
+00:43:58.270 --> 00:44:03.350 align:middle line:84%
+of these shorthand operations
+actually run a method.
+
+00:44:03.350 --> 00:44:04.280 align:middle line:90%
+Again, not a secret--
+
+00:44:04.280 --> 00:44:06.280 align:middle line:84%
+I'm not lowering my voice
+because it's a secret,
+
+00:44:06.280 --> 00:44:07.410 align:middle line:90%
+but it's just really cool.
+
+00:44:07.410 --> 00:44:11.990 align:middle line:84%
+So all of these operations, like
+the multiplication or the print
+
+00:44:11.990 --> 00:44:15.830 align:middle line:84%
+statement, just gets
+replaced with a method.
+
+00:44:15.830 --> 00:44:18.170 align:middle line:84%
+And the method names
+look like this.
+
+00:44:18.170 --> 00:44:20.900 align:middle line:84%
+They are dunder methods,
+just like the init method
+
+00:44:20.900 --> 00:44:22.850 align:middle line:84%
+was a special method
+that Python ran
+
+00:44:22.850 --> 00:44:26.280 align:middle line:84%
+when something special happened,
+like you're creating an object.
+
+00:44:26.280 --> 00:44:28.700 align:middle line:84%
+Well, when something
+special happens,
+
+00:44:28.700 --> 00:44:31.340 align:middle line:84%
+like you're using the plus
+operator between an object
+
+00:44:31.340 --> 00:44:33.980 align:middle line:84%
+of your type and
+something else, Python
+
+00:44:33.980 --> 00:44:36.290 align:middle line:84%
+will also run this
+special dunder method
+
+00:44:36.290 --> 00:44:38.450 align:middle line:90%
+behind the scenes.
+
+00:44:38.450 --> 00:44:41.120 align:middle line:84%
+And same here, if I want
+to multiply my object
+
+00:44:41.120 --> 00:44:44.330 align:middle line:84%
+with something else, Python will
+run this special dunder method
+
+00:44:44.330 --> 00:44:45.500 align:middle line:90%
+behind the scenes.
+
+00:44:45.500 --> 00:44:48.320 align:middle line:84%
+If I want to print
+an object of my type,
+
+00:44:48.320 --> 00:44:50.510 align:middle line:84%
+Python will run this
+special dunder method
+
+00:44:50.510 --> 00:44:52.640 align:middle line:90%
+behind the scenes.
+
+00:44:52.640 --> 00:44:54.350 align:middle line:84%
+Even something
+like casting, if I
+
+00:44:54.350 --> 00:44:56.540 align:middle line:84%
+want to cast my
+object to a float,
+
+00:44:56.540 --> 00:44:58.550 align:middle line:84%
+or to a string, or
+something, Python
+
+00:44:58.550 --> 00:45:01.835 align:middle line:84%
+will run this special dunder
+method behind the scenes.
+
+00:45:01.835 --> 00:45:03.710 align:middle line:84%
+And then there's a whole
+bunch of other ones,
+
+00:45:03.710 --> 00:45:06.950 align:middle line:84%
+even indexing into a list--
+or sorry, not a list, indexing
+
+00:45:06.950 --> 00:45:08.220 align:middle line:90%
+into an object of your type.
+
+00:45:08.220 --> 00:45:11.090 align:middle line:84%
+So if you make an object
+like a queue or a stack,
+
+00:45:11.090 --> 00:45:14.390 align:middle line:84%
+where you know you have a
+bunch of sequences of objects,
+
+00:45:14.390 --> 00:45:19.130 align:middle line:84%
+you can tell Python how to index
+into an object of your type,
+
+00:45:19.130 --> 00:45:21.260 align:middle line:90%
+into an object that's a queue.
+
+00:45:21.260 --> 00:45:24.140 align:middle line:90%
+So all of these things--
+
+00:45:24.140 --> 00:45:27.740 align:middle line:84%
+all of these methods need
+to be implemented somewhere.
+
+00:45:27.740 --> 00:45:32.990 align:middle line:84%
+Now, most of them are not
+implemented in the basic Python
+
+00:45:32.990 --> 00:45:35.300 align:middle line:90%
+object, except for the str.
+
+00:45:35.300 --> 00:45:38.480 align:middle line:84%
+So the str method actually
+just prints the memory location
+
+00:45:38.480 --> 00:45:39.500 align:middle line:90%
+of this object.
+
+00:45:39.500 --> 00:45:42.890 align:middle line:84%
+That's exactly what we had
+seen by the default behavior.
+
+00:45:42.890 --> 00:45:45.330 align:middle line:84%
+But none of these other
+ones are really implemented.
+
+00:45:45.330 --> 00:45:48.800 align:middle line:84%
+And so if you want the
+object that you're currently
+
+00:45:48.800 --> 00:45:51.770 align:middle line:84%
+writing to work with
+the star, or the plus,
+
+00:45:51.770 --> 00:45:54.890 align:middle line:84%
+or the double equal sign
+to test for equality
+
+00:45:54.890 --> 00:45:56.690 align:middle line:84%
+between this object
+and something else,
+
+00:45:56.690 --> 00:46:02.260 align:middle line:84%
+you have to write the method
+in your class definition.
+
+00:46:02.260 --> 00:46:04.510 align:middle line:84%
+So you have to implement
+it to tell Python
+
+00:46:04.510 --> 00:46:07.180 align:middle line:84%
+that this is what you
+want to do when somebody
+
+00:46:07.180 --> 00:46:09.890 align:middle line:84%
+uses this special
+shorthand notation.
+
+00:46:09.890 --> 00:46:11.890 align:middle line:84%
+So let's start with
+the print because it's
+
+00:46:11.890 --> 00:46:14.530 align:middle line:84%
+the most basic thing you
+probably want to implement when
+
+00:46:14.530 --> 00:46:16.120 align:middle line:90%
+you create a new data type.
+
+00:46:16.120 --> 00:46:19.420 align:middle line:84%
+For debugging purposes, you'll
+find yourself instinctually
+
+00:46:19.420 --> 00:46:22.840 align:middle line:84%
+saying, hey, print f1 to
+print this fraction object
+
+00:46:22.840 --> 00:46:24.350 align:middle line:90%
+to see what it looks like.
+
+00:46:24.350 --> 00:46:27.550 align:middle line:84%
+And so the str method is one
+of the really basic things
+
+00:46:27.550 --> 00:46:31.590 align:middle line:84%
+you should implement right
+after the init method.
+
+00:46:31.590 --> 00:46:34.050 align:middle line:84%
+So let's look at
+it in the context
+
+00:46:34.050 --> 00:46:35.260 align:middle line:90%
+of the coordinate object.
+
+00:46:35.260 --> 00:46:38.340 align:middle line:84%
+So here, I've got my
+coordinate object, 3, 4.
+
+00:46:38.340 --> 00:46:40.710 align:middle line:84%
+And even when I print
+this coordinate object,
+
+00:46:40.710 --> 00:46:43.920 align:middle line:84%
+Python tells me this still
+uninformative message
+
+00:46:43.920 --> 00:46:46.950 align:middle line:84%
+that this object is of type
+coordinate at this memory
+
+00:46:46.950 --> 00:46:48.860 align:middle line:90%
+location.
+
+00:46:48.860 --> 00:46:50.270 align:middle line:90%
+OK, I don't care.
+
+00:46:50.270 --> 00:46:52.860 align:middle line:84%
+Instead, what I would
+really like to do is say,
+
+00:46:52.860 --> 00:46:55.070 align:middle line:84%
+hey, I want to represent
+a coordinate object
+
+00:46:55.070 --> 00:46:56.690 align:middle line:90%
+by something like this--
+
+00:46:56.690 --> 00:47:00.080 align:middle line:84%
+angle bracket the value
+of the x-coordinate comma
+
+00:47:00.080 --> 00:47:04.120 align:middle line:84%
+the value of the y-coordinate
+close angle bracket.
+
+00:47:04.120 --> 00:47:07.060 align:middle line:84%
+So that would be a far more
+informative print statement
+
+00:47:07.060 --> 00:47:10.480 align:middle line:84%
+than what memory location
+this thing is at.
+
+00:47:10.480 --> 00:47:12.470 align:middle line:90%
+So let's do that.
+
+00:47:12.470 --> 00:47:14.490 align:middle line:90%
+Well, here we are--
+
+00:47:14.490 --> 00:47:19.960 align:middle line:84%
+our coordinate object,
+the distance the init
+
+00:47:19.960 --> 00:47:21.070 align:middle line:90%
+like we had before.
+
+00:47:21.070 --> 00:47:26.942 align:middle line:84%
+And here, I'm defining my
+str method, so __str__,
+
+00:47:26.942 --> 00:47:29.710 align:middle line:84%
+no other parameters
+except for self,
+
+00:47:29.710 --> 00:47:33.710 align:middle line:84%
+so me calling this
+method on an object.
+
+00:47:33.710 --> 00:47:36.010 align:middle line:90%
+And what is this going to do?
+
+00:47:36.010 --> 00:47:42.570 align:middle line:84%
+It will return not
+print, return a string.
+
+00:47:42.570 --> 00:47:45.120 align:middle line:84%
+And the string is going
+to represent the thing
+
+00:47:45.120 --> 00:47:47.130 align:middle line:90%
+you want to be printed out.
+
+00:47:47.130 --> 00:47:49.020 align:middle line:84%
+So it returns a string,
+doesn't print it.
+
+00:47:49.020 --> 00:47:52.270 align:middle line:84%
+However you want to make
+up the string is up to you.
+
+00:47:52.270 --> 00:47:54.750 align:middle line:84%
+So here, I've just
+used concatenation
+
+00:47:54.750 --> 00:47:55.960 align:middle line:90%
+of a bunch of stuff.
+
+00:47:55.960 --> 00:47:58.020 align:middle line:84%
+So I'm concatenating
+the angle bracket
+
+00:47:58.020 --> 00:48:02.820 align:middle line:84%
+with the x value of
+my current object cast
+
+00:48:02.820 --> 00:48:06.060 align:middle line:84%
+to a string, concatenated
+with the comma, concatenated
+
+00:48:06.060 --> 00:48:09.270 align:middle line:84%
+with the y value of my current
+object cast to a string,
+
+00:48:09.270 --> 00:48:11.520 align:middle line:84%
+concatenated with a
+closed angle bracket.
+
+00:48:11.520 --> 00:48:14.280 align:middle line:84%
+That's the design
+decision we made
+
+00:48:14.280 --> 00:48:18.200 align:middle line:84%
+for how a coordinate
+object should be printed.
+
+00:48:18.200 --> 00:48:21.100 align:middle line:90%
+Everyone OK so far?
+
+00:48:21.100 --> 00:48:23.110 align:middle line:90%
+OK.
+
+00:48:23.110 --> 00:48:26.590 align:middle line:84%
+So if you want to use an
+f-string to make up this thing
+
+00:48:26.590 --> 00:48:28.390 align:middle line:90%
+to return, totally fine.
+
+00:48:28.390 --> 00:48:31.540 align:middle line:84%
+If you want to make a
+variable in between the return
+
+00:48:31.540 --> 00:48:34.990 align:middle line:84%
+and the definition here that you
+just keep concatenating with,
+
+00:48:34.990 --> 00:48:37.120 align:middle line:84%
+so you can concatenate it
+with new lines and things
+
+00:48:37.120 --> 00:48:39.070 align:middle line:90%
+like that, also totally fine.
+
+00:48:39.070 --> 00:48:40.840 align:middle line:84%
+At the end, you
+just have to return
+
+00:48:40.840 --> 00:48:43.300 align:middle line:84%
+that string that
+represents the thing you
+
+00:48:43.300 --> 00:48:45.970 align:middle line:90%
+want to be printed out.
+
+00:48:45.970 --> 00:48:50.310 align:middle line:84%
+So now, let's see what happens
+when we actually run the code.
+
+00:48:50.310 --> 00:48:52.420 align:middle line:84%
+So here, I'm creating
+a coordinate object.
+
+00:48:52.420 --> 00:48:54.870 align:middle line:84%
+And then I'm printing
+that coordinate object.
+
+00:48:54.870 --> 00:48:58.920 align:middle line:84%
+Well, Python says, hey, you
+just called a special shorthand
+
+00:48:58.920 --> 00:49:01.350 align:middle line:84%
+notation on an object
+of type coordinate.
+
+00:49:01.350 --> 00:49:04.530 align:middle line:84%
+Let me see if you
+implemented the str method.
+
+00:49:04.530 --> 00:49:06.630 align:middle line:84%
+It looks in the
+class definition.
+
+00:49:06.630 --> 00:49:09.310 align:middle line:84%
+It sees the str method
+implemented here.
+
+00:49:09.310 --> 00:49:11.710 align:middle line:84%
+And then it runs the
+code inside and says,
+
+00:49:11.710 --> 00:49:15.240 align:middle line:84%
+oh, you want to grab c's
+x value and c's y value
+
+00:49:15.240 --> 00:49:17.400 align:middle line:84%
+and concatenate it
+with these things here.
+
+00:49:17.400 --> 00:49:19.030 align:middle line:90%
+Sure, I can do that for you.
+
+00:49:19.030 --> 00:49:24.340 align:middle line:84%
+And then it goes and prints
+this out to the screen.
+
+00:49:24.340 --> 00:49:24.850 align:middle line:90%
+OK.
+
+00:49:24.850 --> 00:49:26.200 align:middle line:90%
+Very cool, right?
+
+00:49:26.200 --> 00:49:30.130 align:middle line:84%
+Now, we can decide how to
+print objects that we create.
+
+00:49:30.130 --> 00:49:34.360 align:middle line:84%
+All right, so let's try to wrap
+our minds around types here.
+
+00:49:34.360 --> 00:49:40.670 align:middle line:84%
+So if we print this
+c, c is an instance
+
+00:49:40.670 --> 00:49:41.870 align:middle line:90%
+of a coordinate object.
+
+00:49:41.870 --> 00:49:46.160 align:middle line:84%
+It's an actual object
+that we're manipulating.
+
+00:49:46.160 --> 00:49:47.670 align:middle line:90%
+It's not the class definition.
+
+00:49:47.670 --> 00:49:49.280 align:middle line:84%
+It's not anything
+abstract like that.
+
+00:49:49.280 --> 00:49:54.480 align:middle line:84%
+It's an actual object, like the
+integer 3 is an actual object.
+
+00:49:54.480 --> 00:49:57.380 align:middle line:84%
+So if we print that c,
+Python uses the str method.
+
+00:49:57.380 --> 00:49:59.990 align:middle line:84%
+Well, what if we
+print the type of c?
+
+00:49:59.990 --> 00:50:04.340 align:middle line:84%
+Somebody tell me,
+what's the type of c?
+
+00:50:04.340 --> 00:50:06.815 align:middle line:90%
+STUDENT: Coordinate.
+
+00:50:06.815 --> 00:50:07.690 align:middle line:90%
+ANA BELL: Coordinate.
+
+00:50:07.690 --> 00:50:10.280 align:middle line:84%
+Yeah, it's the class
+name that we defined.
+
+00:50:10.280 --> 00:50:12.760 align:middle line:84%
+So when we print the
+type of c, Python says,
+
+00:50:12.760 --> 00:50:15.700 align:middle line:84%
+this is a class coordinate,
+which makes sense
+
+00:50:15.700 --> 00:50:19.720 align:middle line:84%
+because if we just replace
+type of c here with what it is,
+
+00:50:19.720 --> 00:50:22.360 align:middle line:84%
+coordinate, we'll get
+the same print statement.
+
+00:50:22.360 --> 00:50:24.010 align:middle line:84%
+If we just print
+coordinate, Python
+
+00:50:24.010 --> 00:50:26.850 align:middle line:84%
+says this is a class
+of type coordinate.
+
+00:50:26.850 --> 00:50:30.190 align:middle line:84%
+All right, so those two
+lines are equivalent.
+
+00:50:30.190 --> 00:50:32.840 align:middle line:84%
+And then let me blow your
+minds a little bit more.
+
+00:50:32.840 --> 00:50:35.300 align:middle line:84%
+What if we print the
+type of coordinate?
+
+00:50:35.300 --> 00:50:38.420 align:middle line:90%
+Well, what is coordinate?
+
+00:50:38.420 --> 00:50:39.230 align:middle line:90%
+It's a type.
+
+00:50:39.230 --> 00:50:42.950 align:middle line:90%
+
+
+00:50:42.950 --> 00:50:46.590 align:middle line:84%
+We're defining a new type in
+Python called a coordinate.
+
+00:50:46.590 --> 00:50:49.130 align:middle line:84%
+So coordinate is a new
+data type in Python.
+
+00:50:49.130 --> 00:50:52.190 align:middle line:90%
+So its type is type.
+
+00:50:52.190 --> 00:50:55.090 align:middle line:90%
+
+
+00:50:55.090 --> 00:51:00.050 align:middle line:84%
+So everything in Python
+is an object, even types.
+
+00:51:00.050 --> 00:51:01.320 align:middle line:90%
+OK.
+
+00:51:01.320 --> 00:51:04.410 align:middle line:84%
+One more thing-- so we've
+used the type of something
+
+00:51:04.410 --> 00:51:06.150 align:middle line:84%
+equals something
+else when we checked
+
+00:51:06.150 --> 00:51:09.600 align:middle line:84%
+that the type of the circle's
+center was a coordinate.
+
+00:51:09.600 --> 00:51:11.710 align:middle line:84%
+That's one way to
+check for types.
+
+00:51:11.710 --> 00:51:15.510 align:middle line:84%
+Another way is to use this
+isinstance function, just as
+
+00:51:15.510 --> 00:51:16.320 align:middle line:90%
+an aside.
+
+00:51:16.320 --> 00:51:21.360 align:middle line:84%
+So you can check that c
+is an instance of type
+
+00:51:21.360 --> 00:51:24.090 align:middle line:84%
+coordinate by using
+this isinstance method.
+
+00:51:24.090 --> 00:51:26.130 align:middle line:90%
+And this will tell you true.
+
+00:51:26.130 --> 00:51:31.020 align:middle line:84%
+And just to draw a parallel,
+you can say isinstance 3, int.
+
+00:51:31.020 --> 00:51:35.090 align:middle line:84%
+That would also say true because
+3 is an object of type integer.
+
+00:51:35.090 --> 00:51:38.870 align:middle line:84%
+So it's just another
+way to check for types.
+
+00:51:38.870 --> 00:51:39.370 align:middle line:90%
+OK.
+
+00:51:39.370 --> 00:51:41.320 align:middle line:84%
+So the remainder
+of this class, I
+
+00:51:41.320 --> 00:51:45.520 align:middle line:84%
+would like to go back
+to our fraction class
+
+00:51:45.520 --> 00:51:49.050 align:middle line:90%
+and make it better.
+
+00:51:49.050 --> 00:51:53.550 align:middle line:84%
+Now that we know
+dunder methods, let's
+
+00:51:53.550 --> 00:51:58.320 align:middle line:84%
+implement a whole bunch of
+dunder methods to help us
+
+00:51:58.320 --> 00:52:01.020 align:middle line:84%
+and people who want to
+use our class use it
+
+00:52:01.020 --> 00:52:02.880 align:middle line:90%
+in a more efficient way.
+
+00:52:02.880 --> 00:52:04.380 align:middle line:84%
+So we're going to
+implement the star
+
+00:52:04.380 --> 00:52:06.270 align:middle line:90%
+operator, the plus operator.
+
+00:52:06.270 --> 00:52:07.770 align:middle line:84%
+We're going to
+implement the print.
+
+00:52:07.770 --> 00:52:10.050 align:middle line:84%
+And then we're
+going to implement
+
+00:52:10.050 --> 00:52:13.390 align:middle line:90%
+converting to a float.
+
+00:52:13.390 --> 00:52:16.240 align:middle line:84%
+All right, so the first thing
+that we should probably add
+
+00:52:16.240 --> 00:52:19.990 align:middle line:84%
+is the str method
+because then it
+
+00:52:19.990 --> 00:52:21.940 align:middle line:84%
+will help us in
+debugging when we print
+
+00:52:21.940 --> 00:52:24.640 align:middle line:90%
+an object of type fraction.
+
+00:52:24.640 --> 00:52:29.370 align:middle line:90%
+So let's define __str__--
+
+00:52:29.370 --> 00:52:31.140 align:middle line:84%
+again, no parameters
+except for self
+
+00:52:31.140 --> 00:52:36.990 align:middle line:84%
+because that's the object
+we're calling this method on.
+
+00:52:36.990 --> 00:52:41.110 align:middle line:84%
+And again, however you want to
+form this string is up to you.
+
+00:52:41.110 --> 00:52:42.690 align:middle line:84%
+You can use f-strings
+or a variable
+
+00:52:42.690 --> 00:52:45.120 align:middle line:90%
+that you keep adding on to.
+
+00:52:45.120 --> 00:52:48.100 align:middle line:84%
+I just did it straight in
+here with concatenation.
+
+00:52:48.100 --> 00:52:51.000 align:middle line:84%
+So I've got the numerator
+slash the denominator
+
+00:52:51.000 --> 00:52:53.940 align:middle line:84%
+as a very reasonable way
+to represent a string--
+
+00:52:53.940 --> 00:52:59.210 align:middle line:90%
+so 3/4 as 3 over 4.
+
+00:52:59.210 --> 00:52:59.840 align:middle line:90%
+OK.
+
+00:52:59.840 --> 00:53:03.080 align:middle line:84%
+So one thing, I
+guess, to keep track
+
+00:53:03.080 --> 00:53:04.730 align:middle line:84%
+of is if you're
+concatenating, you just
+
+00:53:04.730 --> 00:53:06.500 align:middle line:84%
+have to remember to
+cast the strings,
+
+00:53:06.500 --> 00:53:10.370 align:middle line:84%
+if it's a number or something
+that's not a string.
+
+00:53:10.370 --> 00:53:12.470 align:middle line:90%
+So let's try it out.
+
+00:53:12.470 --> 00:53:15.640 align:middle line:84%
+I've got three
+fraction objects here.
+
+00:53:15.640 --> 00:53:17.750 align:middle line:84%
+So the first two
+we've already seen.
+
+00:53:17.750 --> 00:53:20.090 align:middle line:84%
+So I've got a fraction
+representing 3 over 4,
+
+00:53:20.090 --> 00:53:22.090 align:middle line:84%
+a fraction
+representing 1 over 4.
+
+00:53:22.090 --> 00:53:28.480 align:middle line:84%
+And f3 is now going to be a
+fraction representing 5 over 1.
+
+00:53:28.480 --> 00:53:31.270 align:middle line:84%
+If we print f1,
+again, Python asks,
+
+00:53:31.270 --> 00:53:33.370 align:middle line:84%
+hey did you implement
+an str method
+
+00:53:33.370 --> 00:53:35.740 align:middle line:90%
+in your class definition?
+
+00:53:35.740 --> 00:53:36.700 align:middle line:90%
+Yes, you did.
+
+00:53:36.700 --> 00:53:37.240 align:middle line:90%
+Good job.
+
+00:53:37.240 --> 00:53:37.960 align:middle line:90%
+Let me use it.
+
+00:53:37.960 --> 00:53:40.030 align:middle line:90%
+So then it uses this.
+
+00:53:40.030 --> 00:53:44.380 align:middle line:84%
+So it grabs the numerator of f1
+slash the numerator of-- sorry,
+
+00:53:44.380 --> 00:53:46.150 align:middle line:90%
+the denominator of f1.
+
+00:53:46.150 --> 00:53:49.360 align:middle line:84%
+So this will print 3,
+the numerator of f1,
+
+00:53:49.360 --> 00:53:52.040 align:middle line:90%
+slash the denominator of f1.
+
+00:53:52.040 --> 00:53:54.530 align:middle line:84%
+Same with f2,
+except that now it's
+
+00:53:54.530 --> 00:54:00.320 align:middle line:84%
+going to grab f2's numerator
+and denominator, 1/4.
+
+00:54:00.320 --> 00:54:02.390 align:middle line:84%
+So notice, now it's
+not doing the divisions
+
+00:54:02.390 --> 00:54:03.410 align:middle line:90%
+like it did before--
+
+00:54:03.410 --> 00:54:04.910 align:middle line:90%
+or sorry, never mind.
+
+00:54:04.910 --> 00:54:06.330 align:middle line:90%
+We're not there yet.
+
+00:54:06.330 --> 00:54:07.490 align:middle line:90%
+There's nothing to divide.
+
+00:54:07.490 --> 00:54:10.910 align:middle line:84%
+It's just grabbing the
+numerators and denominators
+
+00:54:10.910 --> 00:54:12.680 align:middle line:90%
+and just printing them out.
+
+00:54:12.680 --> 00:54:14.680 align:middle line:90%
+It's not doing any divisions.
+
+00:54:14.680 --> 00:54:16.450 align:middle line:90%
+Now when we print 5--
+
+00:54:16.450 --> 00:54:20.350 align:middle line:90%
+
+
+00:54:20.350 --> 00:54:25.790 align:middle line:84%
+the fraction object representing
+5 over 1, it prints 5/1.
+
+00:54:25.790 --> 00:54:28.400 align:middle line:84%
+I don't like that
+because it looks weird.
+
+00:54:28.400 --> 00:54:31.270 align:middle line:90%
+
+
+00:54:31.270 --> 00:54:32.550 align:middle line:90%
+Do you like that?
+
+00:54:32.550 --> 00:54:33.760 align:middle line:90%
+No.
+
+00:54:33.760 --> 00:54:37.300 align:middle line:84%
+So then I'm going
+to have you fix it.
+
+00:54:37.300 --> 00:54:41.320 align:middle line:84%
+Change the str method
+just a little bit such
+
+00:54:41.320 --> 00:54:45.440 align:middle line:84%
+that if the
+denominator is 1, just
+
+00:54:45.440 --> 00:54:48.530 align:middle line:90%
+have it print the numerator.
+
+00:54:48.530 --> 00:54:50.480 align:middle line:84%
+And otherwise,
+the representation
+
+00:54:50.480 --> 00:54:53.526 align:middle line:84%
+should be as before,
+numerator slash denominator.
+
+00:54:53.526 --> 00:54:57.500 align:middle line:90%
+
+
+00:54:57.500 --> 00:55:01.146 align:middle line:84%
+So this should be
+down line 140--
+
+00:55:01.146 --> 00:55:03.980 align:middle line:90%
+
+
+00:55:03.980 --> 00:55:04.820 align:middle line:90%
+where is it?
+
+00:55:04.820 --> 00:55:11.260 align:middle line:90%
+
+
+00:55:11.260 --> 00:55:18.870 align:middle line:90%
+Very far down, 265.
+
+00:55:18.870 --> 00:55:20.180 align:middle line:90%
+OK.
+
+00:55:20.180 --> 00:55:21.800 align:middle line:90%
+Anyone have some code for me?
+
+00:55:21.800 --> 00:55:27.260 align:middle line:90%
+
+
+00:55:27.260 --> 00:55:28.768 align:middle line:90%
+Yes?
+
+00:55:28.768 --> 00:55:30.130 align:middle line:90%
+STUDENT: [INAUDIBLE].
+
+00:55:30.130 --> 00:55:38.217 align:middle line:90%
+
+
+00:55:38.217 --> 00:55:38.800 align:middle line:90%
+ANA BELL: Yep.
+
+00:55:38.800 --> 00:55:40.910 align:middle line:84%
+STUDENT: And then
+do an else statement
+
+00:55:40.910 --> 00:55:45.030 align:middle line:84%
+and put the figures that
+we had underneath the else?
+
+00:55:45.030 --> 00:55:47.700 align:middle line:84%
+ANA BELL: Yep, we
+can do an else.
+
+00:55:47.700 --> 00:55:49.590 align:middle line:84%
+That else is not
+needed, I don't think,
+
+00:55:49.590 --> 00:55:52.770 align:middle line:84%
+because if we dropped into the
+if, we just immediately return.
+
+00:55:52.770 --> 00:55:54.900 align:middle line:84%
+Otherwise, we would just
+do the remaining thing,
+
+00:55:54.900 --> 00:55:56.720 align:middle line:90%
+but perfectly fine.
+
+00:55:56.720 --> 00:55:59.895 align:middle line:90%
+Yeah, and let's run it.
+
+00:55:59.895 --> 00:56:03.470 align:middle line:90%
+
+
+00:56:03.470 --> 00:56:05.960 align:middle line:84%
+So a is a fraction
+representing 1 over 4.
+
+00:56:05.960 --> 00:56:07.850 align:middle line:90%
+So it nicely printed 1 over 4.
+
+00:56:07.850 --> 00:56:12.560 align:middle line:84%
+And b, the fraction 3
+over 1 is just printing 3.
+
+00:56:12.560 --> 00:56:14.900 align:middle line:90%
+Good.
+
+00:56:14.900 --> 00:56:18.600 align:middle line:90%
+Questions about this code?
+
+00:56:18.600 --> 00:56:20.070 align:middle line:90%
+OK.
+
+00:56:20.070 --> 00:56:21.780 align:middle line:84%
+For the remaining
+lecture though,
+
+00:56:21.780 --> 00:56:25.065 align:middle line:84%
+we're not going to use this
+modified, this nicer, better
+
+00:56:25.065 --> 00:56:25.930 align:middle line:90%
+str method.
+
+00:56:25.930 --> 00:56:28.200 align:middle line:84%
+So let's just forget
+what we just did
+
+00:56:28.200 --> 00:56:30.750 align:middle line:84%
+and just remember that
+it looks like this.
+
+00:56:30.750 --> 00:56:33.130 align:middle line:90%
+
+
+00:56:33.130 --> 00:56:33.630 align:middle line:90%
+OK.
+
+00:56:33.630 --> 00:56:36.150 align:middle line:84%
+So now, let's implement
+the dunder methods
+
+00:56:36.150 --> 00:56:39.520 align:middle line:84%
+for addition, multiplication,
+division, things like that.
+
+00:56:39.520 --> 00:56:41.640 align:middle line:84%
+So I'm going to do the
+multiplication just
+
+00:56:41.640 --> 00:56:44.970 align:middle line:84%
+because it's not as long
+for the numerator, so just
+
+00:56:44.970 --> 00:56:46.620 align:middle line:90%
+convenience factor here.
+
+00:56:46.620 --> 00:56:51.330 align:middle line:84%
+The left-hand side, I've got
+our old simple fraction code.
+
+00:56:51.330 --> 00:56:56.130 align:middle line:84%
+And the right-hand side
+has my new fraction code.
+
+00:56:56.130 --> 00:56:59.310 align:middle line:84%
+So the old SimpleFraction
+code, remember,
+
+00:56:59.310 --> 00:57:04.680 align:middle line:84%
+had this times method
+that took in self and oth
+
+00:57:04.680 --> 00:57:07.440 align:middle line:84%
+and calculated a new
+numerator, a new denominator,
+
+00:57:07.440 --> 00:57:09.690 align:middle line:90%
+and returned this.
+
+00:57:09.690 --> 00:57:14.640 align:middle line:84%
+Now, my new fraction code will
+no longer need to call times.
+
+00:57:14.640 --> 00:57:16.140 align:middle line:84%
+So we're not even
+going to implement
+
+00:57:16.140 --> 00:57:17.550 align:middle line:90%
+a method called times.
+
+00:57:17.550 --> 00:57:20.220 align:middle line:84%
+Instead, we're
+going to implement
+
+00:57:20.220 --> 00:57:24.930 align:middle line:84%
+the method behind the scenes
+for the shorthand notation star
+
+00:57:24.930 --> 00:57:27.930 align:middle line:84%
+to multiply two
+fraction objects.
+
+00:57:27.930 --> 00:57:32.460 align:middle line:84%
+So we need to
+implement def __mul__.
+
+00:57:32.460 --> 00:57:34.780 align:middle line:84%
+Parameter list is the
+same because we still
+
+00:57:34.780 --> 00:57:36.640 align:middle line:84%
+have a thing before
+the star and a thing
+
+00:57:36.640 --> 00:57:38.680 align:middle line:84%
+after the star as
+the two fraction
+
+00:57:38.680 --> 00:57:41.020 align:middle line:90%
+objects we'd like to multiply.
+
+00:57:41.020 --> 00:57:44.500 align:middle line:84%
+Within the code itself,
+the calculations
+
+00:57:44.500 --> 00:57:46.450 align:middle line:84%
+of the new numerator
+and the denominator
+
+00:57:46.450 --> 00:57:47.860 align:middle line:90%
+are the same as well.
+
+00:57:47.860 --> 00:57:50.800 align:middle line:84%
+We're still grabbing the
+numerators of self and other,
+
+00:57:50.800 --> 00:57:52.585 align:middle line:84%
+the denominators
+of self and other,
+
+00:57:52.585 --> 00:57:55.260 align:middle line:90%
+and multiplying those together.
+
+00:57:55.260 --> 00:57:57.900 align:middle line:84%
+What's different is
+in the returns, right?
+
+00:57:57.900 --> 00:58:01.095 align:middle line:84%
+What was the return type
+for the times method?
+
+00:58:01.095 --> 00:58:03.775 align:middle line:90%
+
+
+00:58:03.775 --> 00:58:06.457 align:middle line:90%
+STUDENT: [INAUDIBLE].
+
+00:58:06.457 --> 00:58:07.290 align:middle line:90%
+ANA BELL: A decimal.
+
+00:58:07.290 --> 00:58:08.660 align:middle line:90%
+Yeah, a float, exactly.
+
+00:58:08.660 --> 00:58:13.942 align:middle line:84%
+What's the return type of
+my new method, the mul?
+
+00:58:13.942 --> 00:58:15.420 align:middle line:90%
+STUDENT: A fraction?
+
+00:58:15.420 --> 00:58:16.800 align:middle line:90%
+ANA BELL: A fraction, exactly.
+
+00:58:16.800 --> 00:58:19.990 align:middle line:84%
+So yes, I am operating
+with fraction objects.
+
+00:58:19.990 --> 00:58:25.770 align:middle line:84%
+So I'm expecting that the return
+type of this method, the star,
+
+00:58:25.770 --> 00:58:28.560 align:middle line:84%
+__mul__, is also
+a fraction object.
+
+00:58:28.560 --> 00:58:31.020 align:middle line:84%
+So then I can just keep
+working with fraction objects
+
+00:58:31.020 --> 00:58:33.240 align:middle line:84%
+throughout my code, not
+having to worry about
+
+00:58:33.240 --> 00:58:35.470 align:middle line:84%
+whether this thing is
+now a float or not.
+
+00:58:35.470 --> 00:58:39.060 align:middle line:84%
+All right, so how are we
+creating this fraction object?
+
+00:58:39.060 --> 00:58:43.230 align:middle line:84%
+Well, just like we would create
+a regular fraction object up
+
+00:58:43.230 --> 00:58:46.200 align:middle line:90%
+in the previous slides, so here.
+
+00:58:46.200 --> 00:58:49.830 align:middle line:84%
+Here's an example of us
+creating a new fraction object--
+
+00:58:49.830 --> 00:58:52.290 align:middle line:90%
+numerator 1, denominator 4.
+
+00:58:52.290 --> 00:58:56.820 align:middle line:84%
+Well, same here, this method
+will return a new fraction
+
+00:58:56.820 --> 00:59:00.270 align:middle line:84%
+object whose numerator is the
+thing that I just calculated,
+
+00:59:00.270 --> 00:59:00.930 align:middle line:90%
+the top.
+
+00:59:00.930 --> 00:59:06.635 align:middle line:84%
+And the denominator is the thing
+that I just calculated, bottom.
+
+00:59:06.635 --> 00:59:07.510 align:middle line:90%
+Does that make sense?
+
+00:59:07.510 --> 00:59:10.660 align:middle line:90%
+
+
+00:59:10.660 --> 00:59:12.440 align:middle line:90%
+OK.
+
+00:59:12.440 --> 00:59:14.690 align:middle line:90%
+So this one returns a float.
+
+00:59:14.690 --> 00:59:18.030 align:middle line:90%
+This one returns a fraction.
+
+00:59:18.030 --> 00:59:19.160 align:middle line:90%
+Let's run it.
+
+00:59:19.160 --> 00:59:22.430 align:middle line:84%
+So a is fraction 1
+over 4. b is a fraction
+
+00:59:22.430 --> 00:59:23.930 align:middle line:90%
+representing 3 over 4.
+
+00:59:23.930 --> 00:59:26.190 align:middle line:84%
+Good, those are the numbers
+we've been working with.
+
+00:59:26.190 --> 00:59:28.460 align:middle line:84%
+If we print a, the
+print statement says,
+
+00:59:28.460 --> 00:59:33.320 align:middle line:84%
+this is the fraction object 1/4,
+whose representation is 1/4.
+
+00:59:33.320 --> 00:59:36.620 align:middle line:84%
+Now, if I use the star
+operator between a and b,
+
+00:59:36.620 --> 00:59:39.115 align:middle line:84%
+the thing before
+the star is kind
+
+00:59:39.115 --> 00:59:40.490 align:middle line:84%
+of like the thing
+before the dot.
+
+00:59:40.490 --> 00:59:41.450 align:middle line:90%
+It's the self.
+
+00:59:41.450 --> 00:59:44.630 align:middle line:84%
+It gets mapped to
+self in my __mul__.
+
+00:59:44.630 --> 00:59:48.500 align:middle line:84%
+And the thing after the
+star, the second parameter
+
+00:59:48.500 --> 00:59:54.200 align:middle line:84%
+so to speak, is the one
+parameter that my method takes,
+
+00:59:54.200 --> 00:59:55.880 align:middle line:90%
+other.
+
+00:59:55.880 --> 01:00:00.340 align:middle line:84%
+So this will run the mul
+method behind the scenes.
+
+01:00:00.340 --> 01:00:01.840 align:middle line:84%
+So Python, when
+it sees that star,
+
+01:00:01.840 --> 01:00:04.120 align:middle line:84%
+asks, do you have a
+mul method implemented
+
+01:00:04.120 --> 01:00:05.890 align:middle line:90%
+in your class fraction?
+
+01:00:05.890 --> 01:00:09.670 align:middle line:84%
+Because the thing before the
+star is a fraction object.
+
+01:00:09.670 --> 01:00:10.900 align:middle line:90%
+Yes, we do.
+
+01:00:10.900 --> 01:00:12.160 align:middle line:90%
+What does it return?
+
+01:00:12.160 --> 01:00:14.050 align:middle line:84%
+Well, it does the
+multiplication.
+
+01:00:14.050 --> 01:00:17.650 align:middle line:84%
+And in the end, the return of
+this method is this thing here.
+
+01:00:17.650 --> 01:00:20.680 align:middle line:90%
+So I literally just made this--
+
+01:00:20.680 --> 01:00:22.750 align:middle line:84%
+I just copied this
+from the return
+
+01:00:22.750 --> 01:00:24.580 align:middle line:90%
+using the numbers of a and b.
+
+01:00:24.580 --> 01:00:27.250 align:middle line:84%
+So it creates a new fraction
+object whose numerator
+
+01:00:27.250 --> 01:00:30.950 align:middle line:90%
+is 3 and denominator is 16.
+
+01:00:30.950 --> 01:00:37.280 align:middle line:84%
+So c equals fraction parentheses
+3, 16, basically just
+
+01:00:37.280 --> 01:00:38.850 align:middle line:90%
+another fraction object.
+
+01:00:38.850 --> 01:00:42.520 align:middle line:84%
+So now, when I
+print c, It's going
+
+01:00:42.520 --> 01:00:45.490 align:middle line:84%
+to use the str method
+for a fraction object
+
+01:00:45.490 --> 01:00:49.270 align:middle line:84%
+because c is a fraction
+object right there.
+
+01:00:49.270 --> 01:00:51.190 align:middle line:90%
+That's exactly what c was.
+
+01:00:51.190 --> 01:00:53.680 align:middle line:84%
+So this will also
+print the way we
+
+01:00:53.680 --> 01:00:56.480 align:middle line:84%
+asked to print fraction
+objects, numerator slash
+
+01:00:56.480 --> 01:01:00.280 align:middle line:90%
+denominator, 3/16.
+
+01:01:00.280 --> 01:01:01.500 align:middle line:90%
+Everyone OK so far?
+
+01:01:01.500 --> 01:01:07.500 align:middle line:90%
+
+
+01:01:07.500 --> 01:01:08.160 align:middle line:90%
+OK.
+
+01:01:08.160 --> 01:01:10.830 align:middle line:84%
+So the following lines
+are all equivalent.
+
+01:01:10.830 --> 01:01:13.600 align:middle line:90%
+
+
+01:01:13.600 --> 01:01:16.090 align:middle line:90%
+Using the shorthand notation--
+
+01:01:16.090 --> 01:01:19.600 align:middle line:84%
+very nice, very Pythonic way
+to multiply two fractions
+
+01:01:19.600 --> 01:01:20.500 align:middle line:90%
+together.
+
+01:01:20.500 --> 01:01:25.220 align:middle line:84%
+But behind the scenes, this
+is just running a method.
+
+01:01:25.220 --> 01:01:27.830 align:middle line:84%
+So of course, if
+you really want to,
+
+01:01:27.830 --> 01:01:32.740 align:middle line:84%
+you can just use the same
+old way of calling a method--
+
+01:01:32.740 --> 01:01:36.790 align:middle line:84%
+thing before the dot, dot,
+method name, parentheses,
+
+01:01:36.790 --> 01:01:38.820 align:middle line:90%
+parameter list.
+
+01:01:38.820 --> 01:01:43.640 align:middle line:84%
+So here, thing before the dot
+is a dot the name of my method,
+
+01:01:43.640 --> 01:01:47.930 align:middle line:84%
+__mul__, parentheses, all
+of the parameter list except
+
+01:01:47.930 --> 01:01:50.300 align:middle line:90%
+for the thing I'm calling it on.
+
+01:01:50.300 --> 01:01:51.950 align:middle line:90%
+So those two are equivalent.
+
+01:01:51.950 --> 01:01:54.980 align:middle line:84%
+And of course, last
+time, I mentioned a way
+
+01:01:54.980 --> 01:01:59.300 align:middle line:84%
+to hopefully demystify
+running these methods where
+
+01:01:59.300 --> 01:02:01.700 align:middle line:84%
+the self becomes this
+thing before the dot.
+
+01:02:01.700 --> 01:02:08.030 align:middle line:84%
+You could call the method on
+the name of your data type,
+
+01:02:08.030 --> 01:02:11.280 align:middle line:84%
+the type that you're
+currently creating, fraction.
+
+01:02:11.280 --> 01:02:13.280 align:middle line:90%
+So fraction is not an instance.
+
+01:02:13.280 --> 01:02:14.523 align:middle line:90%
+a was an instance.
+
+01:02:14.523 --> 01:02:16.190 align:middle line:84%
+It was an actual
+object that we created.
+
+01:02:16.190 --> 01:02:19.050 align:middle line:84%
+But fraction is just
+the name of my class.
+
+01:02:19.050 --> 01:02:21.860 align:middle line:84%
+So if you call the method
+on the name of your class,
+
+01:02:21.860 --> 01:02:24.980 align:middle line:84%
+then Python expects the
+full parameter list--
+
+01:02:24.980 --> 01:02:27.140 align:middle line:84%
+so something for self,
+something for other,
+
+01:02:27.140 --> 01:02:29.370 align:middle line:84%
+something for whatever
+parameters you have.
+
+01:02:29.370 --> 01:02:32.810 align:middle line:84%
+And so there, we would
+explicitly pass in both a and b
+
+01:02:32.810 --> 01:02:35.060 align:middle line:84%
+as part of my parameter
+list because the thing
+
+01:02:35.060 --> 01:02:36.630 align:middle line:90%
+before the dot is not an object.
+
+01:02:36.630 --> 01:02:39.670 align:middle line:90%
+So it doesn't map it to self.
+
+01:02:39.670 --> 01:02:45.390 align:middle line:84%
+But I would never ever,
+ever run a line of code
+
+01:02:45.390 --> 01:02:47.110 align:middle line:90%
+like this, this last one here.
+
+01:02:47.110 --> 01:02:48.730 align:middle line:84%
+This is just for
+your information.
+
+01:02:48.730 --> 01:02:49.890 align:middle line:90%
+It's non-Pythonic.
+
+01:02:49.890 --> 01:02:52.380 align:middle line:90%
+It's just very verbose.
+
+01:02:52.380 --> 01:02:58.720 align:middle line:84%
+And so these dunder methods
+help us abstract away
+
+01:02:58.720 --> 01:03:00.550 align:middle line:90%
+a bunch of these details.
+
+01:03:00.550 --> 01:03:04.450 align:middle line:84%
+So how annoying would it be
+to always use dot notation
+
+01:03:04.450 --> 01:03:06.940 align:middle line:84%
+when we want to multiply an
+integer with another integer?
+
+01:03:06.940 --> 01:03:12.160 align:middle line:84%
+Can you imagine constantly
+writing 3.__mul__(4)?
+
+01:03:12.160 --> 01:03:14.170 align:middle line:90%
+That would be very bad code.
+
+01:03:14.170 --> 01:03:15.910 align:middle line:90%
+It would take forever to read.
+
+01:03:15.910 --> 01:03:18.010 align:middle line:84%
+And so we're abstracting
+away all the details
+
+01:03:18.010 --> 01:03:20.470 align:middle line:84%
+for calling these methods into
+these nice little shorthand
+
+01:03:20.470 --> 01:03:21.400 align:middle line:90%
+notations.
+
+01:03:21.400 --> 01:03:23.260 align:middle line:84%
+And as I said, these
+shorthand notations
+
+01:03:23.260 --> 01:03:25.480 align:middle line:84%
+exist for a lot of
+different operations.
+
+01:03:25.480 --> 01:03:26.380 align:middle line:90%
+We saw print.
+
+01:03:26.380 --> 01:03:29.530 align:middle line:84%
+You can do length
+comparisons, like equality,
+
+01:03:29.530 --> 01:03:31.600 align:middle line:90%
+even indexing into things.
+
+01:03:31.600 --> 01:03:34.210 align:middle line:84%
+You can always
+abstract all of those
+
+01:03:34.210 --> 01:03:37.930 align:middle line:90%
+away into shorthand notations.
+
+01:03:37.930 --> 01:03:42.390 align:middle line:84%
+And behind the scenes,
+these methods will be run.
+
+01:03:42.390 --> 01:03:42.900 align:middle line:90%
+OK.
+
+01:03:42.900 --> 01:03:46.045 align:middle line:84%
+So big idea,
+exactly what I said,
+
+01:03:46.045 --> 01:03:47.670 align:middle line:84%
+all these special
+operations that we've
+
+01:03:47.670 --> 01:03:52.910 align:middle line:84%
+been using already, behind the
+scenes, these methods get run.
+
+01:03:52.910 --> 01:03:56.690 align:middle line:84%
+And these methods were written
+inside the class definition
+
+01:03:56.690 --> 01:03:58.940 align:middle line:84%
+for the types that
+we've been using.
+
+01:03:58.940 --> 01:04:03.560 align:middle line:84%
+So when we index into a list, l
+square brackets 3 or whatever,
+
+01:04:03.560 --> 01:04:06.890 align:middle line:84%
+there's a method being called
+behind the scenes in the list
+
+01:04:06.890 --> 01:04:10.430 align:middle line:84%
+class to grab the
+element at index 3.
+
+01:04:10.430 --> 01:04:12.650 align:middle line:84%
+I don't remember the dunder
+method name for that,
+
+01:04:12.650 --> 01:04:15.500 align:middle line:90%
+but probably like __index__.
+
+01:04:15.500 --> 01:04:16.590 align:middle line:90%
+I don't know.
+
+01:04:16.590 --> 01:04:19.940 align:middle line:84%
+But there is some method
+behind the scenes.
+
+01:04:19.940 --> 01:04:23.610 align:middle line:84%
+All right, let's do
+a couple more things.
+
+01:04:23.610 --> 01:04:24.240 align:middle line:90%
+Sorry?
+
+01:04:24.240 --> 01:04:26.820 align:middle line:84%
+STUDENT: If we forget the
+dunder name for something,
+
+01:04:26.820 --> 01:04:28.825 align:middle line:90%
+is there a way to ask Python?
+
+01:04:28.825 --> 01:04:30.450 align:middle line:84%
+ANA BELL: You can't
+ask Python, but you
+
+01:04:30.450 --> 01:04:32.100 align:middle line:90%
+can look at the documentation.
+
+01:04:32.100 --> 01:04:34.620 align:middle line:90%
+I think it's in python.org.
+
+01:04:34.620 --> 01:04:38.070 align:middle line:84%
+There's a website that lists
+basically everything that's
+
+01:04:38.070 --> 01:04:40.770 align:middle line:84%
+a dunder method, yeah,
+under categories,
+
+01:04:40.770 --> 01:04:43.410 align:middle line:84%
+like all the indexing type
+stuff, all the numerical type
+
+01:04:43.410 --> 01:04:43.980 align:middle line:90%
+stuff, yeah.
+
+01:04:43.980 --> 01:04:47.590 align:middle line:90%
+
+
+01:04:47.590 --> 01:04:48.090 align:middle line:90%
+OK.
+
+01:04:48.090 --> 01:04:49.360 align:middle line:90%
+So let's do one more thing.
+
+01:04:49.360 --> 01:04:53.080 align:middle line:84%
+Let's say that-- well, we're
+working with fraction objects.
+
+01:04:53.080 --> 01:04:56.490 align:middle line:84%
+And so the dunder methods
+that we're writing
+
+01:04:56.490 --> 01:05:00.040 align:middle line:84%
+are now returning
+other fraction objects.
+
+01:05:00.040 --> 01:05:03.540 align:middle line:84%
+So let's allow the
+user the opportunity
+
+01:05:03.540 --> 01:05:07.110 align:middle line:84%
+to cast one of these
+fraction objects to a float,
+
+01:05:07.110 --> 01:05:14.310 align:middle line:84%
+just in case they would like to
+grab the float value of 3/16.
+
+01:05:14.310 --> 01:05:16.530 align:middle line:84%
+That's a very reasonable
+thing they might want to do.
+
+01:05:16.530 --> 01:05:19.440 align:middle line:84%
+So let's get ahead
+of them and add that
+
+01:05:19.440 --> 01:05:21.940 align:middle line:90%
+as part of our class definition.
+
+01:05:21.940 --> 01:05:25.720 align:middle line:84%
+So to cast things to a float,
+in this particular case,
+
+01:05:25.720 --> 01:05:30.120 align:middle line:84%
+the dunder method for
+that is __float__.
+
+01:05:30.120 --> 01:05:34.080 align:middle line:84%
+And all it's going to do is
+grab the numerator of self
+
+01:05:34.080 --> 01:05:36.840 align:middle line:84%
+and divide it by the
+denominator of self.
+
+01:05:36.840 --> 01:05:38.490 align:middle line:90%
+So this will just do a division.
+
+01:05:38.490 --> 01:05:41.310 align:middle line:84%
+self.num is a number.
+self.denom is another number.
+
+01:05:41.310 --> 01:05:42.360 align:middle line:90%
+It does the division.
+
+01:05:42.360 --> 01:05:45.220 align:middle line:90%
+And this returns a float.
+
+01:05:45.220 --> 01:05:48.310 align:middle line:84%
+So here, when we multiply
+c is equal to a times b,
+
+01:05:48.310 --> 01:05:53.470 align:middle line:84%
+remember that c became a
+fraction object with numerator
+
+01:05:53.470 --> 01:05:55.360 align:middle line:90%
+3 and denominator 16.
+
+01:05:55.360 --> 01:05:56.800 align:middle line:90%
+Do you remember that?
+
+01:05:56.800 --> 01:06:02.510 align:middle line:84%
+So then when we cast it to a
+float, down here, Python says,
+
+01:06:02.510 --> 01:06:06.970 align:middle line:84%
+hey, did you implement the
+dunder method __float__?
+
+01:06:06.970 --> 01:06:07.780 align:middle line:90%
+Oh yeah, you did.
+
+01:06:07.780 --> 01:06:09.645 align:middle line:84%
+Let me just go ahead
+and do the thing
+
+01:06:09.645 --> 01:06:11.020 align:middle line:84%
+that you want me
+to do inside it.
+
+01:06:11.020 --> 01:06:20.400 align:middle line:84%
+So it takes the 3, divides it
+by the 16, and it prints 0.1875.
+
+01:06:20.400 --> 01:06:20.900 align:middle line:90%
+OK.
+
+01:06:20.900 --> 01:06:22.470 align:middle line:84%
+Let's try it out
+a little bit more.
+
+01:06:22.470 --> 01:06:25.880 align:middle line:84%
+So here, I've got 2
+fraction objects--
+
+01:06:25.880 --> 01:06:28.130 align:middle line:84%
+one representing 1
+over 4, the other one
+
+01:06:28.130 --> 01:06:29.840 align:middle line:90%
+representing 2 over 3.
+
+01:06:29.840 --> 01:06:31.730 align:middle line:90%
+I multiply those two together.
+
+01:06:31.730 --> 01:06:34.040 align:middle line:84%
+Again, this gives
+me a fraction object
+
+01:06:34.040 --> 01:06:36.710 align:middle line:84%
+because it's running
+the mul dunder method.
+
+01:06:36.710 --> 01:06:39.470 align:middle line:84%
+And the mul dunder
+method gives me
+
+01:06:39.470 --> 01:06:42.720 align:middle line:84%
+a fraction object with a new
+numerator and denominator.
+
+01:06:42.720 --> 01:06:46.190 align:middle line:84%
+So when I print the return
+of that, when I print c,
+
+01:06:46.190 --> 01:06:49.400 align:middle line:84%
+this prints the new
+numerator, which is 2 times 1,
+
+01:06:49.400 --> 01:06:52.160 align:middle line:84%
+divided by the new denominator,
+which is 4 times 3.
+
+01:06:52.160 --> 01:06:55.320 align:middle line:90%
+So it prints 2 over 12.
+
+01:06:55.320 --> 01:06:58.410 align:middle line:90%
+Does that look OK to you?
+
+01:06:58.410 --> 01:06:59.760 align:middle line:90%
+I mean, it looks OK.
+
+01:06:59.760 --> 01:07:02.410 align:middle line:84%
+But suppose you're
+doing calculations
+
+01:07:02.410 --> 01:07:03.660 align:middle line:90%
+with a whole bunch of numbers.
+
+01:07:03.660 --> 01:07:06.660 align:middle line:84%
+And at some point, you get
+two really big numerators
+
+01:07:06.660 --> 01:07:08.960 align:middle line:90%
+and really big denominators.
+
+01:07:08.960 --> 01:07:12.500 align:middle line:84%
+But then you stare
+at it long enough
+
+01:07:12.500 --> 01:07:15.860 align:middle line:84%
+and realize that big numerator
+divided by that big denominator
+
+01:07:15.860 --> 01:07:19.790 align:middle line:84%
+is actually something
+like 1 over 4.
+
+01:07:19.790 --> 01:07:24.230 align:middle line:84%
+So this is not
+reduced, which is fine.
+
+01:07:24.230 --> 01:07:26.840 align:middle line:84%
+Our code is not
+doing the reduction.
+
+01:07:26.840 --> 01:07:31.990 align:middle line:84%
+But it would be nice to write
+a method that allows the user
+
+01:07:31.990 --> 01:07:34.690 align:middle line:90%
+to reduce a fraction.
+
+01:07:34.690 --> 01:07:36.620 align:middle line:90%
+That would be really nice.
+
+01:07:36.620 --> 01:07:38.260 align:middle line:90%
+So can we fix this?
+
+01:07:38.260 --> 01:07:39.070 align:middle line:90%
+Yes, we can.
+
+01:07:39.070 --> 01:07:40.820 align:middle line:90%
+Otherwise, we wouldn't be here.
+
+01:07:40.820 --> 01:07:46.160 align:middle line:84%
+So let's write this method
+to reduce a fraction object.
+
+01:07:46.160 --> 01:07:50.390 align:middle line:84%
+It looks like a lot,
+but it's not, trust me.
+
+01:07:50.390 --> 01:07:52.430 align:middle line:90%
+It's just a bunch of if/else's.
+
+01:07:52.430 --> 01:07:57.320 align:middle line:84%
+So the first part of it is a
+little helper function, not
+
+01:07:57.320 --> 01:07:58.670 align:middle line:90%
+a method.
+
+01:07:58.670 --> 01:08:02.840 align:middle line:84%
+Notice, there's no self going
+on in this gcd function.
+
+01:08:02.840 --> 01:08:05.780 align:middle line:84%
+This is just a regular
+function that I
+
+01:08:05.780 --> 01:08:08.570 align:middle line:84%
+will use to help
+me get the greatest
+
+01:08:08.570 --> 01:08:14.510 align:middle line:84%
+common divisor for the
+two parameters, n and d.
+
+01:08:14.510 --> 01:08:18.260 align:middle line:84%
+Because when I have two numbers,
+if I want to reduce them,
+
+01:08:18.260 --> 01:08:20.270 align:middle line:84%
+I find the greatest
+common divisors.
+
+01:08:20.270 --> 01:08:23.990 align:middle line:84%
+And I'm going to divide the top
+and the bottom by that divisor.
+
+01:08:23.990 --> 01:08:25.890 align:middle line:90%
+And that will help me reduce it.
+
+01:08:25.890 --> 01:08:29.180 align:middle line:84%
+So this gcd function helps
+me find this greatest
+
+01:08:29.180 --> 01:08:31.115 align:middle line:90%
+common divisor.
+
+01:08:31.115 --> 01:08:33.240 align:middle line:84%
+All right, so here, I'm
+just defining the function.
+
+01:08:33.240 --> 01:08:34.890 align:middle line:90%
+I'm not actually using it.
+
+01:08:34.890 --> 01:08:40.170 align:middle line:84%
+And then I've got
+an if and an elif.
+
+01:08:40.170 --> 01:08:43.120 align:middle line:84%
+So if the denominator is
+0, something's super weird.
+
+01:08:43.120 --> 01:08:45.540 align:middle line:84%
+So I'm just going to
+return none because having
+
+01:08:45.540 --> 01:08:47.340 align:middle line:84%
+a fraction where the
+denominator is 0,
+
+01:08:47.340 --> 01:08:49.500 align:middle line:90%
+maybe something went wrong.
+
+01:08:49.500 --> 01:08:51.779 align:middle line:84%
+Else, if the
+denominator is 1, we
+
+01:08:51.779 --> 01:08:53.970 align:middle line:90%
+don't need to do any reduction.
+
+01:08:53.970 --> 01:08:55.090 align:middle line:90%
+No reducing is needed.
+
+01:08:55.090 --> 01:08:58.029 align:middle line:90%
+So we just return the numerator.
+
+01:08:58.029 --> 01:09:03.220 align:middle line:84%
+And else, I do have two
+actual numbers that I maybe
+
+01:09:03.220 --> 01:09:04.720 align:middle line:90%
+could potentially reduce.
+
+01:09:04.720 --> 01:09:07.630 align:middle line:90%
+So let's just reduce them.
+
+01:09:07.630 --> 01:09:10.120 align:middle line:84%
+The first line here
+runs this function,
+
+01:09:10.120 --> 01:09:12.340 align:middle line:84%
+this helper function
+that I wrote,
+
+01:09:12.340 --> 01:09:15.010 align:middle line:84%
+on the numerator and
+denominator to grab the greatest
+
+01:09:15.010 --> 01:09:16.609 align:middle line:90%
+common divisor.
+
+01:09:16.609 --> 01:09:21.100 align:middle line:84%
+So if it's 2 over
+12, it'll find 2.
+
+01:09:21.100 --> 01:09:25.779 align:middle line:84%
+Then the next line here
+takes the numerator
+
+01:09:25.779 --> 01:09:28.240 align:middle line:84%
+and divides by that
+greatest common divisor
+
+01:09:28.240 --> 01:09:31.600 align:middle line:84%
+and casts it to an int
+because I want my numerator
+
+01:09:31.600 --> 01:09:34.210 align:middle line:84%
+to be an int and my
+denominator to be an int.
+
+01:09:34.210 --> 01:09:37.939 align:middle line:84%
+So it'll take the numerator
+and divide by, for example, 2.
+
+01:09:37.939 --> 01:09:40.790 align:middle line:84%
+Same with denominator, I'm
+going to take my denominator
+
+01:09:40.790 --> 01:09:46.279 align:middle line:84%
+and divide by that same gcd
+I found, casting to an int.
+
+01:09:46.279 --> 01:09:49.880 align:middle line:84%
+So my new top and my
+new bottom will now
+
+01:09:49.880 --> 01:09:57.270 align:middle line:84%
+be used to create a new fraction
+object that is in reduced form,
+
+01:09:57.270 --> 01:10:01.758 align:middle line:90%
+so 1/6 for the example 2/12.
+
+01:10:01.758 --> 01:10:02.800 align:middle line:90%
+All right, so here it is.
+
+01:10:02.800 --> 01:10:05.020 align:middle line:84%
+This is my previous
+example, where I multiplied
+
+01:10:05.020 --> 01:10:10.200 align:middle line:90%
+that thing that gave me 2/12.
+
+01:10:10.200 --> 01:10:13.590 align:middle line:84%
+And then if I do
+c.reduce, Python
+
+01:10:13.590 --> 01:10:15.210 align:middle line:84%
+will call the
+reduce method on c,
+
+01:10:15.210 --> 01:10:19.720 align:middle line:84%
+so the object whose numerator
+is 2 and denominator is 12.
+
+01:10:19.720 --> 01:10:22.050 align:middle line:84%
+And then this will
+reduce it to 1 over 6.
+
+01:10:22.050 --> 01:10:25.290 align:middle line:84%
+And it will print, call
+the printstr method
+
+01:10:25.290 --> 01:10:29.685 align:middle line:84%
+on an object of type
+fraction to give me 1 over 6.
+
+01:10:29.685 --> 01:10:32.330 align:middle line:90%
+
+
+01:10:32.330 --> 01:10:33.770 align:middle line:90%
+Everyone OK?
+
+01:10:33.770 --> 01:10:34.945 align:middle line:90%
+Yes?
+
+01:10:34.945 --> 01:10:36.400 align:middle line:90%
+STUDENT: [INAUDIBLE].
+
+01:10:36.400 --> 01:10:39.310 align:middle line:90%
+
+
+01:10:39.310 --> 01:10:41.560 align:middle line:84%
+ANA BELL: You could put
+it outside the reduce.
+
+01:10:41.560 --> 01:10:44.800 align:middle line:84%
+But since it's being used
+specifically in the reduce,
+
+01:10:44.800 --> 01:10:49.030 align:middle line:84%
+we'd like to just
+keep it within.
+
+01:10:49.030 --> 01:10:51.370 align:middle line:84%
+If it doesn't need to
+be used by other things,
+
+01:10:51.370 --> 01:10:56.050 align:middle line:84%
+we'll just keep it only to the
+scope where it needs to exist.
+
+01:10:56.050 --> 01:10:58.164 align:middle line:90%
+But it can be outside, yeah.
+
+01:10:58.164 --> 01:11:02.340 align:middle line:90%
+
+
+01:11:02.340 --> 01:11:03.530 align:middle line:90%
+OK.
+
+01:11:03.530 --> 01:11:07.310 align:middle line:84%
+So one thing is weird
+here, though, right?
+
+01:11:07.310 --> 01:11:08.690 align:middle line:90%
+This elif here.
+
+01:11:08.690 --> 01:11:11.950 align:middle line:90%
+
+
+01:11:11.950 --> 01:11:15.460 align:middle line:84%
+What is the type that gets
+returned from the else?
+
+01:11:15.460 --> 01:11:16.270 align:middle line:90%
+You guys tell me.
+
+01:11:16.270 --> 01:11:19.457 align:middle line:84%
+What's this type here that
+gets returned down in the else?
+
+01:11:19.457 --> 01:11:20.200 align:middle line:90%
+Fraction.
+
+01:11:20.200 --> 01:11:24.944 align:middle line:84%
+What is the type being
+returned in the elif?
+
+01:11:24.944 --> 01:11:27.330 align:middle line:90%
+STUDENT: Is it an int?
+
+01:11:27.330 --> 01:11:29.660 align:middle line:90%
+ANA BELL: Yes, an int.
+
+01:11:29.660 --> 01:11:33.770 align:middle line:84%
+So if the denominator
+happens to be a 1,
+
+01:11:33.770 --> 01:11:37.860 align:middle line:84%
+this method, reduce,
+returns an integer.
+
+01:11:37.860 --> 01:11:40.570 align:middle line:84%
+If it's not, it
+returns a fraction.
+
+01:11:40.570 --> 01:11:44.010 align:middle line:84%
+So if at some point in
+the future you're mixing--
+
+01:11:44.010 --> 01:11:47.820 align:middle line:84%
+you happen to reduce something
+that has a denominator of 1,
+
+01:11:47.820 --> 01:11:49.530 align:middle line:84%
+you're now working
+with integers.
+
+01:11:49.530 --> 01:11:53.220 align:middle line:84%
+And then potentially, you'd
+be doing further operations
+
+01:11:53.220 --> 01:11:56.410 align:middle line:84%
+by mixing that with
+fraction objects.
+
+01:11:56.410 --> 01:12:00.060 align:middle line:84%
+So as an example here, I've
+got a fraction object--
+
+01:12:00.060 --> 01:12:03.000 align:middle line:90%
+a, 4 over 1; b, 3 over 9.
+
+01:12:03.000 --> 01:12:05.250 align:middle line:90%
+Reducing a gives me a 4.
+
+01:12:05.250 --> 01:12:07.080 align:middle line:90%
+Fine, it's the integer 4.
+
+01:12:07.080 --> 01:12:09.270 align:middle line:84%
+And reducing b
+gives me 1 over 3.
+
+01:12:09.270 --> 01:12:11.750 align:middle line:90%
+It's a fraction, 1 over 3.
+
+01:12:11.750 --> 01:12:17.030 align:middle line:84%
+So the type, just to show you
+exactly that I'm not lying--
+
+01:12:17.030 --> 01:12:19.820 align:middle line:84%
+the type of the a
+reduced is an int.
+
+01:12:19.820 --> 01:12:21.230 align:middle line:90%
+That's what the code is doing.
+
+01:12:21.230 --> 01:12:24.810 align:middle line:84%
+And the type of b
+reduced is a fraction.
+
+01:12:24.810 --> 01:12:28.550 align:middle line:84%
+So then when we do the star
+operator between ar and br,
+
+01:12:28.550 --> 01:12:30.500 align:middle line:84%
+Python is going to
+say, you're trying
+
+01:12:30.500 --> 01:12:33.330 align:middle line:84%
+to multiply an int
+with a fraction.
+
+01:12:33.330 --> 01:12:35.420 align:middle line:84%
+Did you ever tell
+me how to do that?
+
+01:12:35.420 --> 01:12:37.160 align:middle line:90%
+No, right?
+
+01:12:37.160 --> 01:12:40.220 align:middle line:84%
+We told it how to multiply a
+fraction and another fraction,
+
+01:12:40.220 --> 01:12:42.820 align:middle line:90%
+but not an int with a fraction.
+
+01:12:42.820 --> 01:12:47.050 align:middle line:90%
+And so Python will fail here.
+
+01:12:47.050 --> 01:12:50.520 align:middle line:84%
+So one thing that
+you can do to fix it
+
+01:12:50.520 --> 01:12:55.390 align:middle line:90%
+is to change this elif here.
+
+01:12:55.390 --> 01:12:57.310 align:middle line:84%
+So let's have
+everything consistent.
+
+01:12:57.310 --> 01:12:58.950 align:middle line:90%
+So I want you to do this change.
+
+01:12:58.950 --> 01:13:02.190 align:middle line:84%
+Instead of returning
+self.num, return for me
+
+01:13:02.190 --> 01:13:07.810 align:middle line:84%
+a fraction object
+representing the numerator.
+
+01:13:07.810 --> 01:13:09.160 align:middle line:90%
+All right, does anyone know?
+
+01:13:09.160 --> 01:13:10.720 align:middle line:90%
+Just a small change.
+
+01:13:10.720 --> 01:13:14.680 align:middle line:84%
+Instead of returning self.num,
+what should I return?
+
+01:13:14.680 --> 01:13:16.930 align:middle line:90%
+How do I make a fraction object?
+
+01:13:16.930 --> 01:13:20.180 align:middle line:84%
+Just invoke the name
+of a fraction, right?
+
+01:13:20.180 --> 01:13:24.360 align:middle line:84%
+What's the numerator of this
+fraction object supposed to be?
+
+01:13:24.360 --> 01:13:26.700 align:middle line:90%
+It's already there, self.num.
+
+01:13:26.700 --> 01:13:29.310 align:middle line:84%
+What's the denominator
+of this fraction object?
+
+01:13:29.310 --> 01:13:30.470 align:middle line:90%
+STUDENT: [INAUDIBLE].
+
+01:13:30.470 --> 01:13:32.160 align:middle line:90%
+ANA BELL: Yeah, exactly.
+
+01:13:32.160 --> 01:13:34.670 align:middle line:84%
+So it just returns
+a fraction object
+
+01:13:34.670 --> 01:13:39.620 align:middle line:84%
+whose numerator is self.num
+and denominator is 1, exactly.
+
+01:13:39.620 --> 01:13:41.750 align:middle line:84%
+All right, so now, all
+the different cases
+
+01:13:41.750 --> 01:13:45.470 align:middle line:84%
+except for this randomly
+weird denominator being 0--
+
+01:13:45.470 --> 01:13:49.100 align:middle line:84%
+in case that happens,
+something's gone wrong, maybe--
+
+01:13:49.100 --> 01:13:50.690 align:middle line:84%
+all the other
+cases are returning
+
+01:13:50.690 --> 01:13:54.021 align:middle line:84%
+a fraction object, which is good
+because now it's consistent.
+
+01:13:54.021 --> 01:13:54.983 align:middle line:90%
+STUDENT: [INAUDIBLE]?
+
+01:13:54.983 --> 01:14:00.275 align:middle line:90%
+
+
+01:14:00.275 --> 01:14:01.400 align:middle line:90%
+ANA BELL: Oh yeah, exactly.
+
+01:14:01.400 --> 01:14:03.580 align:middle line:84%
+So we did say we didn't
+want it to be 5 over 1.
+
+01:14:03.580 --> 01:14:07.030 align:middle line:84%
+But this is actually
+using the old str method,
+
+01:14:07.030 --> 01:14:08.710 align:middle line:90%
+where we didn't do that check.
+
+01:14:08.710 --> 01:14:10.600 align:middle line:90%
+So it will print 5 over 1.
+
+01:14:10.600 --> 01:14:16.405 align:middle line:84%
+But if we do the check if
+self.denom == 1 then return str
+
+01:14:16.405 --> 01:14:17.740 align:middle line:90%
+self.num--
+
+01:14:17.740 --> 01:14:21.370 align:middle line:84%
+if we add that, then
+it won't do that, yeah.
+
+01:14:21.370 --> 01:14:24.430 align:middle line:84%
+But this is just using the
+old method that doesn't
+
+01:14:24.430 --> 01:14:28.660 align:middle line:90%
+do that nice formatting for us.
+
+01:14:28.660 --> 01:14:31.502 align:middle line:90%
+Questions?
+
+01:14:31.502 --> 01:14:33.100 align:middle line:84%
+All right, we've
+been working a lot
+
+01:14:33.100 --> 01:14:35.530 align:middle line:84%
+with returning new
+objects of the same type
+
+01:14:35.530 --> 01:14:37.420 align:middle line:90%
+that we're writing.
+
+01:14:37.420 --> 01:14:42.220 align:middle line:90%
+That's a new thing today.
+
+01:14:42.220 --> 01:14:44.890 align:middle line:90%
+OK.
+
+01:14:44.890 --> 01:14:50.200 align:middle line:84%
+So what's the purpose
+of these two lectures?
+
+01:14:50.200 --> 01:14:59.300 align:middle line:84%
+So hopefully, it shows that
+it's very useful to bundle data
+
+01:14:59.300 --> 01:15:02.130 align:middle line:90%
+and behaviors together.
+
+01:15:02.130 --> 01:15:04.460 align:middle line:84%
+So the ultimate goal when
+we're writing programs
+
+01:15:04.460 --> 01:15:09.650 align:middle line:84%
+is to write code that's
+modular and organized
+
+01:15:09.650 --> 01:15:11.420 align:middle line:84%
+because, in the
+future, you might
+
+01:15:11.420 --> 01:15:12.890 align:middle line:90%
+want to build upon this code.
+
+01:15:12.890 --> 01:15:15.020 align:middle line:84%
+In the future, you might
+want to read this code
+
+01:15:15.020 --> 01:15:16.280 align:middle line:90%
+to use it for something else.
+
+01:15:16.280 --> 01:15:19.460 align:middle line:84%
+In the future, other people
+might want to read this code
+
+01:15:19.460 --> 01:15:21.830 align:middle line:84%
+or use this code, this
+class that you wrote,
+
+01:15:21.830 --> 01:15:24.260 align:middle line:84%
+to build more complex
+classes, like we
+
+01:15:24.260 --> 01:15:26.630 align:middle line:84%
+used the coordinate class
+to build a circle class.
+
+01:15:26.630 --> 01:15:29.192 align:middle line:84%
+Other people might use your
+circle class to build--
+
+01:15:29.192 --> 01:15:31.400 align:middle line:84%
+I don't know-- a sphere
+class or something like that,
+
+01:15:31.400 --> 01:15:32.900 align:middle line:90%
+something more complicated.
+
+01:15:32.900 --> 01:15:36.260 align:middle line:84%
+And so it's really nice to
+create these little data types
+
+01:15:36.260 --> 01:15:38.630 align:middle line:90%
+that are organized, modular.
+
+01:15:38.630 --> 01:15:43.550 align:middle line:84%
+And so we're basically
+bundling together these data--
+
+01:15:43.550 --> 01:15:46.400 align:middle line:84%
+so what makes up your object--
+and behaviors together,
+
+01:15:46.400 --> 01:15:49.950 align:middle line:84%
+so we can use these objects
+in a nicely consistent way.
+
+01:15:49.950 --> 01:15:53.820 align:middle line:84%
+So remember, back when we
+were learning about functions,
+
+01:15:53.820 --> 01:15:56.220 align:middle line:84%
+the ideas of decomposition
+and abstraction
+
+01:15:56.220 --> 01:15:57.570 align:middle line:90%
+were very important.
+
+01:15:57.570 --> 01:16:00.360 align:middle line:84%
+Functions basically
+took a chunk of code
+
+01:16:00.360 --> 01:16:02.640 align:middle line:84%
+and decomposed them
+into one module
+
+01:16:02.640 --> 01:16:05.760 align:middle line:84%
+that we could reuse many,
+many different places.
+
+01:16:05.760 --> 01:16:09.120 align:middle line:84%
+And we abstracted away the
+details of the function
+
+01:16:09.120 --> 01:16:10.770 align:middle line:84%
+through docstrings,
+so people didn't
+
+01:16:10.770 --> 01:16:12.570 align:middle line:84%
+have to slog through
+a whole bunch of code
+
+01:16:12.570 --> 01:16:14.070 align:middle line:84%
+to figure out what
+the function did.
+
+01:16:14.070 --> 01:16:15.660 align:middle line:84%
+All they did was
+read the docstring
+
+01:16:15.660 --> 01:16:18.350 align:middle line:84%
+and they knew exactly
+what we wanted.
+
+01:16:18.350 --> 01:16:21.610 align:middle line:84%
+Now, object-oriented
+programming in Python classes
+
+01:16:21.610 --> 01:16:25.450 align:middle line:84%
+have that same big decomposition
+and abstraction energy, right?
+
+01:16:25.450 --> 01:16:28.960 align:middle line:84%
+They've got a bunch of modules
+that we're creating here,
+
+01:16:28.960 --> 01:16:31.900 align:middle line:84%
+where we're bundling
+together data and behaviors,
+
+01:16:31.900 --> 01:16:34.060 align:middle line:84%
+so we can create a
+whole bunch of objects
+
+01:16:34.060 --> 01:16:36.730 align:middle line:84%
+that behave in the
+exact same way-- nicely
+
+01:16:36.730 --> 01:16:39.550 align:middle line:84%
+consistent-- so that we
+know that if I create
+
+01:16:39.550 --> 01:16:41.050 align:middle line:84%
+a coordinate object
+here, it's going
+
+01:16:41.050 --> 01:16:42.250 align:middle line:90%
+to have an x and a y value.
+
+01:16:42.250 --> 01:16:44.000 align:middle line:84%
+And if I create another
+coordinate object,
+
+01:16:44.000 --> 01:16:45.880 align:middle line:84%
+it's also going to have
+an x and a y value.
+
+01:16:45.880 --> 01:16:49.030 align:middle line:84%
+It's not suddenly going to
+have an x, y, and z value.
+
+01:16:49.030 --> 01:16:52.600 align:middle line:84%
+So creating these objects
+that work in a consistent way
+
+01:16:52.600 --> 01:16:55.540 align:middle line:90%
+is a very--
+
+01:16:55.540 --> 01:17:01.450 align:middle line:84%
+decomposition and
+abstraction are
+
+01:17:01.450 --> 01:17:03.700 align:middle line:84%
+working with the ideas of
+decomposition abstraction
+
+01:17:03.700 --> 01:17:05.800 align:middle line:90%
+just like functions did.
+
+01:17:05.800 --> 01:17:06.460 align:middle line:90%
+OK.
+
+01:17:06.460 --> 01:17:09.880 align:middle line:84%
+So next lecture, we
+will be starting on--
+
+01:17:09.880 --> 01:17:12.350 align:middle line:84%
+we'll do a little bit
+more of these classes.
+
+01:17:12.350 --> 01:17:15.430 align:middle line:84%
+And then we'll start on
+inheritance, so having parents
+
+01:17:15.430 --> 01:17:17.470 align:middle line:90%
+be objects that we created.
+
+01:17:17.470 --> 01:17:19.110 align:middle line:90%
+All right.
+
+01:17:19.110 --> 01:17:26.000 align:middle line:90%

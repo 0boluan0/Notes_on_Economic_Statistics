@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Podcasts on MIT OpenCourseWare</title>
+    <link>/resources/podcasts/</link>
+    <description>Recent content in Podcasts on MIT OpenCourseWare</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="/resources/podcasts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MIT Programmer on GenAI, Growth Mindset, and Rubber Ducks?</title>
+      <link>/resources/mit-programmer-on-genai-growth-mindset-and-rubber-ducks/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit-programmer-on-genai-growth-mindset-and-rubber-ducks/data.json</guid>
+      <description>&lt;p&gt;Learn about Python, growth mindset, and the uses of rubber ducks in this interview with MIT lecturer Ana Bell. Dr. Bell, who has been programming since she was twelve and now teaches popular introductory courses in computer science, says that coding consists of almost equal parts creativity and logic. The creative part, she explains, gets exercised particularly when you have to come up with an algorithm to solve a given problem, because for any given complex problem there are many possible approaches to tackling it. The logical part comes into play when you sit down to translate that algorithm into an unambiguous sequence of rules in a programming language, and again when you discover that the code you’ve written doesn’t work exactly as you intended it to and you have to set about debugging it. Among the topics the conversation addresses are why everyone–even in the age of generative AI– ought to study at least the basics of programming, why it can be useful to speak to an inanimate object when your coding project is stuck in the debugging stage, and how programming can help you choose your own adventure.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

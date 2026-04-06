@@ -1,0 +1,6 @@
+
+{
+  "title":"Lecture 22: Big Oh and Theta",
+  "content":"Topics: Complexity: Big-Oh notation, Big-Theta notation, complexity relations and classes, calc-complexity\nViewing videos requires an internet connection Your browser does not support some features required to play this video. Please update your browser to the latest version for the best experience. You can also download the video to watch it offline. View video page Download video Download transcript Lecture Notes Lecture 22: Big Oh and Theta\nLecture 22 Code\nReadings Ch 11\nFinger Exercise Lecture 22 Question 1: Simplify n*n + log(n) + 2**a to determine θ in terms of n. Question 2: Simplify 2**n + n*log(n) + n**2 to determine θ in terms of n. Question 3: Simplify f*log(f) + 100000 + 300*a + x*y*z to determine θ in terms of n.\n6.100L Finger Exercises Lecture 22 Solutions\n"}
+
+

@@ -1,0 +1,3926 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.437 align:middle line:84%
+[SQUEAKING]
+[RUSTLING] [CLICKING]
+
+00:00:04.437 --> 00:00:16.300 align:middle line:90%
+
+
+00:00:16.300 --> 00:00:18.500 align:middle line:84%
+ANA BELL: All right,
+let's get started.
+
+00:00:18.500 --> 00:00:21.220 align:middle line:84%
+So today, we're
+going to be starting
+
+00:00:21.220 --> 00:00:23.890 align:middle line:90%
+a completely new set of topics.
+
+00:00:23.890 --> 00:00:26.830 align:middle line:84%
+And we'll be talking about
+these topics for the next four
+
+00:00:26.830 --> 00:00:27.430 align:middle line:90%
+lectures.
+
+00:00:27.430 --> 00:00:29.660 align:middle line:90%
+And it's a big topic.
+
+00:00:29.660 --> 00:00:32.500 align:middle line:84%
+The big idea we're trying to
+accomplish in these next four
+
+00:00:32.500 --> 00:00:38.530 align:middle line:84%
+lectures is for us to start
+defining our own object types.
+
+00:00:38.530 --> 00:00:43.390 align:middle line:84%
+And we'll be defining
+these object types
+
+00:00:43.390 --> 00:00:46.300 align:middle line:84%
+through these things
+called Python classes.
+
+00:00:46.300 --> 00:00:48.370 align:middle line:84%
+So today's lecture,
+we'll just give you
+
+00:00:48.370 --> 00:00:52.000 align:middle line:84%
+a really-- we'll just define
+a really simple object type.
+
+00:00:52.000 --> 00:00:54.800 align:middle line:84%
+And then we'll build
+up from there on.
+
+00:00:54.800 --> 00:00:56.950 align:middle line:84%
+So let's take a
+step back and think
+
+00:00:56.950 --> 00:01:01.450 align:middle line:84%
+about particular objects,
+really specific objects
+
+00:01:01.450 --> 00:01:02.990 align:middle line:90%
+that we've been working with.
+
+00:01:02.990 --> 00:01:04.959 align:middle line:84%
+So for example,
+we've been working
+
+00:01:04.959 --> 00:01:08.200 align:middle line:90%
+with probably the number 1234.
+
+00:01:08.200 --> 00:01:11.500 align:middle line:84%
+We've been working with
+the float pi, 3.14159.
+
+00:01:11.500 --> 00:01:12.910 align:middle line:84%
+We've been working
+with sequences
+
+00:01:12.910 --> 00:01:17.690 align:middle line:84%
+of characters like Hello,
+with lists of numbers.
+
+00:01:17.690 --> 00:01:20.752 align:middle line:84%
+So here's a list with those
+specific elements within it.
+
+00:01:20.752 --> 00:01:22.460 align:middle line:84%
+And we've been working
+with dictionaries.
+
+00:01:22.460 --> 00:01:27.210 align:middle line:84%
+And here's a specific
+dictionary with these entries.
+
+00:01:27.210 --> 00:01:31.670 align:middle line:84%
+Now, every one of these
+things up here is an object.
+
+00:01:31.670 --> 00:01:33.590 align:middle line:90%
+We have it in our program.
+
+00:01:33.590 --> 00:01:34.650 align:middle line:90%
+We can manipulate it.
+
+00:01:34.650 --> 00:01:35.900 align:middle line:90%
+We can add it to other things.
+
+00:01:35.900 --> 00:01:36.560 align:middle line:90%
+We can index.
+
+00:01:36.560 --> 00:01:37.880 align:middle line:90%
+We can do all these things.
+
+00:01:37.880 --> 00:01:42.470 align:middle line:84%
+But every one of these objects
+basically has a certain type.
+
+00:01:42.470 --> 00:01:44.660 align:middle line:84%
+We talked about this
+back in lecture 1
+
+00:01:44.660 --> 00:01:48.150 align:middle line:84%
+when I introduced
+types of objects.
+
+00:01:48.150 --> 00:01:49.590 align:middle line:90%
+So what does that mean?
+
+00:01:49.590 --> 00:01:53.300 align:middle line:84%
+Well, in that lecture, I said
+that the type of an object
+
+00:01:53.300 --> 00:01:56.780 align:middle line:84%
+basically tells us the kinds of
+things that we can do with it.
+
+00:01:56.780 --> 00:01:58.537 align:middle line:84%
+So the things you
+can do with a number
+
+00:01:58.537 --> 00:02:00.620 align:middle line:84%
+are going to be different
+than the kinds of things
+
+00:02:00.620 --> 00:02:01.620 align:middle line:90%
+you can do with strings.
+
+00:02:01.620 --> 00:02:06.020 align:middle line:84%
+And we've been seeing this since
+that lecture up until today.
+
+00:02:06.020 --> 00:02:08.449 align:middle line:84%
+Today, we're going to see how
+we can create our own object
+
+00:02:08.449 --> 00:02:09.180 align:middle line:90%
+types.
+
+00:02:09.180 --> 00:02:12.550 align:middle line:84%
+So to do that, we have to
+understand the following thing.
+
+00:02:12.550 --> 00:02:14.550 align:middle line:84%
+And this is something
+I'll keep repeating today.
+
+00:02:14.550 --> 00:02:17.570 align:middle line:84%
+So once you decide to
+create an object type--
+
+00:02:17.570 --> 00:02:19.560 align:middle line:84%
+every one of these
+objects, for example,
+
+00:02:19.560 --> 00:02:22.280 align:middle line:84%
+has been created
+using some blueprint.
+
+00:02:22.280 --> 00:02:24.410 align:middle line:84%
+And when you're
+creating these objects,
+
+00:02:24.410 --> 00:02:25.960 align:middle line:84%
+you need to think
+about two things.
+
+00:02:25.960 --> 00:02:28.680 align:middle line:84%
+The first is what data
+will represent this object.
+
+00:02:28.680 --> 00:02:31.980 align:middle line:84%
+And the second is what
+behaviors will this object have.
+
+00:02:31.980 --> 00:02:35.250 align:middle line:84%
+Now, the objects up here
+are pretty simple, right?
+
+00:02:35.250 --> 00:02:38.640 align:middle line:84%
+The kinds of data that
+represents this integer
+
+00:02:38.640 --> 00:02:40.320 align:middle line:84%
+is-- well, there's
+no data, really.
+
+00:02:40.320 --> 00:02:41.880 align:middle line:90%
+It's just the number itself.
+
+00:02:41.880 --> 00:02:44.370 align:middle line:84%
+But it has some operations,
+some things that you
+
+00:02:44.370 --> 00:02:45.760 align:middle line:90%
+can do with this integer.
+
+00:02:45.760 --> 00:02:49.500 align:middle line:84%
+Now, the data that
+represents a list
+
+00:02:49.500 --> 00:02:51.750 align:middle line:84%
+is going to be different
+than the data that represents
+
+00:02:51.750 --> 00:02:54.000 align:middle line:84%
+an integer because the
+list is kind of made up
+
+00:02:54.000 --> 00:02:57.780 align:middle line:84%
+of a sequence of
+numbers or objects.
+
+00:02:57.780 --> 00:03:00.978 align:middle line:84%
+And then the data that makes
+up a dictionary is completely
+
+00:03:00.978 --> 00:03:02.520 align:middle line:84%
+different than the
+data that makes up
+
+00:03:02.520 --> 00:03:04.050 align:middle line:84%
+the list because
+a dictionary has
+
+00:03:04.050 --> 00:03:07.020 align:middle line:84%
+entries, where each entry
+has a key and a value pair.
+
+00:03:07.020 --> 00:03:09.630 align:middle line:84%
+And then you have a
+bunch of these entries.
+
+00:03:09.630 --> 00:03:12.118 align:middle line:84%
+So the data representing
+each one of these objects
+
+00:03:12.118 --> 00:03:12.660 align:middle line:90%
+is different.
+
+00:03:12.660 --> 00:03:15.270 align:middle line:84%
+And we're going to decide what
+data represents the new objects
+
+00:03:15.270 --> 00:03:16.900 align:middle line:90%
+that we want to create.
+
+00:03:16.900 --> 00:03:19.110 align:middle line:84%
+And of course, this
+is something we've
+
+00:03:19.110 --> 00:03:20.515 align:middle line:90%
+known from the first lecture.
+
+00:03:20.515 --> 00:03:22.890 align:middle line:84%
+The kinds of ways that we can
+interact with these objects
+
+00:03:22.890 --> 00:03:26.190 align:middle line:84%
+is also different amongst all
+these different object types.
+
+00:03:26.190 --> 00:03:30.810 align:middle line:84%
+So in terms of terminology,
+when we create an actual object
+
+00:03:30.810 --> 00:03:35.640 align:middle line:84%
+that we want to manipulate, we
+call it an instance of a type.
+
+00:03:35.640 --> 00:03:41.050 align:middle line:84%
+So this specific number, 1234,
+is an instance of an integer.
+
+00:03:41.050 --> 00:03:45.300 align:middle line:84%
+And this specific sequence of
+characters-- lowercase hello,
+
+00:03:45.300 --> 00:03:48.800 align:middle line:90%
+is an instance of a string.
+
+00:03:48.800 --> 00:03:52.250 align:middle line:84%
+All right, so the idea of
+object-oriented programming
+
+00:03:52.250 --> 00:03:55.920 align:middle line:84%
+is basically that everything
+in Python is an object.
+
+00:03:55.920 --> 00:03:58.760 align:middle line:84%
+And this we've talked about when
+we were introducing functions.
+
+00:03:58.760 --> 00:04:00.890 align:middle line:84%
+We treated functions
+like objects.
+
+00:04:00.890 --> 00:04:05.300 align:middle line:84%
+And what that means is that
+we can create new objects that
+
+00:04:05.300 --> 00:04:06.300 align:middle line:90%
+have some type.
+
+00:04:06.300 --> 00:04:09.170 align:middle line:84%
+So we actually create
+these very specific objects
+
+00:04:09.170 --> 00:04:10.580 align:middle line:90%
+that we can manipulate.
+
+00:04:10.580 --> 00:04:12.513 align:middle line:84%
+And we can also
+destroy the objects.
+
+00:04:12.513 --> 00:04:14.180 align:middle line:84%
+So you can create
+them, manipulate them,
+
+00:04:14.180 --> 00:04:15.530 align:middle line:90%
+and destroy them as you will.
+
+00:04:15.530 --> 00:04:18.680 align:middle line:84%
+But each one of these
+objects has a specific type.
+
+00:04:18.680 --> 00:04:23.290 align:middle line:84%
+So let's talk a little bit more
+about the data abstraction.
+
+00:04:23.290 --> 00:04:26.240 align:middle line:84%
+So once you have an object
+that you'd like to create--
+
+00:04:26.240 --> 00:04:31.360 align:middle line:84%
+so think of anything in
+the world, some something--
+
+00:04:31.360 --> 00:04:33.310 align:middle line:84%
+the two things that
+you need to think about
+
+00:04:33.310 --> 00:04:37.090 align:middle line:84%
+are what is going to be
+the way that you represent
+
+00:04:37.090 --> 00:04:39.490 align:middle line:90%
+the object in terms of data.
+
+00:04:39.490 --> 00:04:43.060 align:middle line:84%
+And the other thing is what are
+the behaviors of this object.
+
+00:04:43.060 --> 00:04:45.280 align:middle line:84%
+How can other programmers
+or other objects
+
+00:04:45.280 --> 00:04:48.880 align:middle line:84%
+interact with this thing
+that you're creating?
+
+00:04:48.880 --> 00:04:51.270 align:middle line:84%
+So when we're creating
+our own object type,
+
+00:04:51.270 --> 00:04:54.310 align:middle line:84%
+we have to think about
+these data abstractions.
+
+00:04:54.310 --> 00:04:57.070 align:middle line:84%
+So let's take a more
+real life example.
+
+00:04:57.070 --> 00:05:00.390 align:middle line:84%
+So let's say I have these
+two very specific cars that
+
+00:05:00.390 --> 00:05:02.440 align:middle line:84%
+actually exist in
+the real world.
+
+00:05:02.440 --> 00:05:05.010 align:middle line:84%
+So we can actually
+drive these cars around.
+
+00:05:05.010 --> 00:05:06.450 align:middle line:90%
+We can manipulate them.
+
+00:05:06.450 --> 00:05:07.800 align:middle line:90%
+They have already been created.
+
+00:05:07.800 --> 00:05:10.290 align:middle line:90%
+They are actual objects.
+
+00:05:10.290 --> 00:05:12.990 align:middle line:84%
+Well, behind the
+scenes, these objects
+
+00:05:12.990 --> 00:05:15.480 align:middle line:84%
+were created using
+some blueprint.
+
+00:05:15.480 --> 00:05:19.170 align:middle line:84%
+This blueprint is not an
+actual tangible thing.
+
+00:05:19.170 --> 00:05:22.050 align:middle line:84%
+It's basically some
+abstract notion
+
+00:05:22.050 --> 00:05:27.040 align:middle line:84%
+of how to create those specific
+objects, those specific cars.
+
+00:05:27.040 --> 00:05:30.640 align:middle line:84%
+So as we're thinking about
+creating our own object types,
+
+00:05:30.640 --> 00:05:33.940 align:middle line:84%
+we have to think about
+design decisions.
+
+00:05:33.940 --> 00:05:36.250 align:middle line:84%
+If I want to create
+a blueprint for a car
+
+00:05:36.250 --> 00:05:37.780 align:middle line:84%
+that somebody can
+then use to create
+
+00:05:37.780 --> 00:05:42.100 align:middle line:84%
+an actual car in real life,
+how do I abstract the car?
+
+00:05:42.100 --> 00:05:44.680 align:middle line:84%
+And as we're creating
+these objects ourselves,
+
+00:05:44.680 --> 00:05:46.780 align:middle line:84%
+we get to make these
+design decisions, which
+
+00:05:46.780 --> 00:05:47.840 align:middle line:90%
+is pretty cool.
+
+00:05:47.840 --> 00:05:50.950 align:middle line:84%
+So if I were creating this
+car, the blueprint for a car,
+
+00:05:50.950 --> 00:05:52.467 align:middle line:84%
+I would say, well,
+I'm going to use
+
+00:05:52.467 --> 00:05:54.550 align:middle line:84%
+maybe the length of the
+car, the width of the car,
+
+00:05:54.550 --> 00:05:57.130 align:middle line:84%
+and the height of the car,
+and the color of the car.
+
+00:05:57.130 --> 00:06:02.140 align:middle line:84%
+And those four data attributes
+will represent a car object.
+
+00:06:02.140 --> 00:06:04.420 align:middle line:84%
+But of course, that's
+my design decision.
+
+00:06:04.420 --> 00:06:05.920 align:middle line:84%
+If you were more
+familiar with cars
+
+00:06:05.920 --> 00:06:08.830 align:middle line:84%
+or if you wanted to get into
+a more detailed description
+
+00:06:08.830 --> 00:06:12.130 align:middle line:84%
+or representation,
+you would also
+
+00:06:12.130 --> 00:06:15.160 align:middle line:84%
+have a number for how
+many horsepowers it has,
+
+00:06:15.160 --> 00:06:18.400 align:middle line:84%
+how many doors it has, maybe
+how many people could fit,
+
+00:06:18.400 --> 00:06:19.880 align:middle line:90%
+other things like that.
+
+00:06:19.880 --> 00:06:22.960 align:middle line:84%
+But a very simple data
+abstraction for a car
+
+00:06:22.960 --> 00:06:26.710 align:middle line:84%
+is length, width,
+height, and color.
+
+00:06:26.710 --> 00:06:29.800 align:middle line:84%
+So that's data abstraction,
+so what data represents,
+
+00:06:29.800 --> 00:06:31.300 align:middle line:84%
+this object you're
+trying to create.
+
+00:06:31.300 --> 00:06:32.810 align:middle line:90%
+Now, how about the interface?
+
+00:06:32.810 --> 00:06:34.570 align:middle line:84%
+Well, in terms of
+the interface, we
+
+00:06:34.570 --> 00:06:37.720 align:middle line:84%
+decide what are some ways
+that programmers can interact
+
+00:06:37.720 --> 00:06:41.210 align:middle line:84%
+with the object or other objects
+can interact with this object.
+
+00:06:41.210 --> 00:06:44.980 align:middle line:84%
+So we could say that we
+could let the users change
+
+00:06:44.980 --> 00:06:47.410 align:middle line:90%
+the color of the car.
+
+00:06:47.410 --> 00:06:52.120 align:middle line:84%
+We could say that we can
+let the car make a noise.
+
+00:06:52.120 --> 00:06:56.170 align:middle line:84%
+So honk the horn could be
+maybe one thing, one function
+
+00:06:56.170 --> 00:06:57.740 align:middle line:90%
+that this car could do.
+
+00:06:57.740 --> 00:06:59.815 align:middle line:84%
+And if we say honk
+the horn, then
+
+00:06:59.815 --> 00:07:01.690 align:middle line:84%
+maybe it would print
+something to the screen,
+
+00:07:01.690 --> 00:07:02.690 align:middle line:90%
+something like that.
+
+00:07:02.690 --> 00:07:05.500 align:middle line:84%
+And then we can have the car
+drive from point A to point B.
+
+00:07:05.500 --> 00:07:09.130 align:middle line:84%
+Or we could have the
+car go in a circle.
+
+00:07:09.130 --> 00:07:10.990 align:middle line:84%
+You could have the
+car crash another car.
+
+00:07:10.990 --> 00:07:17.950 align:middle line:84%
+And all of these behaviors
+are part of this the interface
+
+00:07:17.950 --> 00:07:19.360 align:middle line:90%
+for this particular car.
+
+00:07:19.360 --> 00:07:21.370 align:middle line:84%
+But we're going to
+define them such
+
+00:07:21.370 --> 00:07:23.410 align:middle line:84%
+that any car that we
+create from here on,
+
+00:07:23.410 --> 00:07:25.210 align:middle line:84%
+any actual object
+that we create will
+
+00:07:25.210 --> 00:07:29.090 align:middle line:84%
+have all of these behaviors and
+all of these data attributes.
+
+00:07:29.090 --> 00:07:33.350 align:middle line:84%
+So an example a little
+closer to home is the list.
+
+00:07:33.350 --> 00:07:35.570 align:middle line:84%
+We've been working
+with lists so far.
+
+00:07:35.570 --> 00:07:41.360 align:middle line:84%
+So behind the scenes, somebody
+created the data type list.
+
+00:07:41.360 --> 00:07:45.050 align:middle line:84%
+So there's some code in Python
+that basically defines the data
+
+00:07:45.050 --> 00:07:47.090 align:middle line:84%
+that makes up the list,
+the data attributes--
+
+00:07:47.090 --> 00:07:49.130 align:middle line:90%
+how is a list described--
+
+00:07:49.130 --> 00:07:52.310 align:middle line:84%
+and the behaviors,
+the procedures,
+
+00:07:52.310 --> 00:07:54.770 align:middle line:84%
+the functions that
+a list can do.
+
+00:07:54.770 --> 00:07:57.050 align:middle line:84%
+So in terms of data
+attributes, well,
+
+00:07:57.050 --> 00:07:59.780 align:middle line:84%
+there's many design
+decisions that whoever
+
+00:07:59.780 --> 00:08:01.882 align:middle line:84%
+decided to create this
+list class could have done.
+
+00:08:01.882 --> 00:08:03.590 align:middle line:84%
+How could they have
+represented the list?
+
+00:08:03.590 --> 00:08:05.270 align:middle line:84%
+Well, they could
+have said, I'm going
+
+00:08:05.270 --> 00:08:09.500 align:middle line:84%
+to allocate sort of a
+contiguous block of memory.
+
+00:08:09.500 --> 00:08:11.990 align:middle line:84%
+And your elements
+will go in that order
+
+00:08:11.990 --> 00:08:15.320 align:middle line:84%
+from the smallest memory value
+to the biggest memory value.
+
+00:08:15.320 --> 00:08:16.980 align:middle line:90%
+That's one design decision.
+
+00:08:16.980 --> 00:08:20.210 align:middle line:84%
+Another one could be that,
+instead of allocating
+
+00:08:20.210 --> 00:08:22.400 align:middle line:84%
+a contiguous block of
+memory, you could say,
+
+00:08:22.400 --> 00:08:24.110 align:middle line:84%
+I can allocate memories
+here and there.
+
+00:08:24.110 --> 00:08:25.100 align:middle line:90%
+That's OK.
+
+00:08:25.100 --> 00:08:30.380 align:middle line:84%
+But then each element
+in my list will then
+
+00:08:30.380 --> 00:08:32.200 align:middle line:90%
+be represented by two things--
+
+00:08:32.200 --> 00:08:34.780 align:middle line:84%
+the first being the
+value at that location.
+
+00:08:34.780 --> 00:08:37.380 align:middle line:84%
+And the second could be maybe
+another integer or something
+
+00:08:37.380 --> 00:08:41.100 align:middle line:84%
+that tells Python which memory
+location to go to to get
+
+00:08:41.100 --> 00:08:43.000 align:middle line:90%
+the next element in the list.
+
+00:08:43.000 --> 00:08:45.270 align:middle line:90%
+So both valid design decisions--
+
+00:08:45.270 --> 00:08:48.540 align:middle line:84%
+I think Python did
+the second one.
+
+00:08:48.540 --> 00:08:52.860 align:middle line:84%
+So that's how you represent the
+data that represents the list.
+
+00:08:52.860 --> 00:08:54.747 align:middle line:84%
+And in terms of
+behaviors, well, we've
+
+00:08:54.747 --> 00:08:56.080 align:middle line:90%
+already been working with lists.
+
+00:08:56.080 --> 00:08:58.770 align:middle line:84%
+So we know a bunch of the
+behaviors that lists have.
+
+00:08:58.770 --> 00:08:59.880 align:middle line:90%
+You can index into it.
+
+00:08:59.880 --> 00:09:00.723 align:middle line:90%
+You can sort a list.
+
+00:09:00.723 --> 00:09:02.640 align:middle line:84%
+You can append an item
+to the end of the list.
+
+00:09:02.640 --> 00:09:04.770 align:middle line:84%
+You can get the maximum
+element within the list.
+
+00:09:04.770 --> 00:09:08.010 align:middle line:84%
+All of these different
+procedures, functions
+
+00:09:08.010 --> 00:09:09.765 align:middle line:84%
+are things that you
+can do with lists.
+
+00:09:09.765 --> 00:09:11.140 align:middle line:84%
+And we've been
+working with them.
+
+00:09:11.140 --> 00:09:13.557 align:middle line:84%
+And we've been working with
+lists without actually knowing
+
+00:09:13.557 --> 00:09:17.100 align:middle line:84%
+the representation-- how
+somebody decided to represent
+
+00:09:17.100 --> 00:09:18.310 align:middle line:90%
+this class--
+
+00:09:18.310 --> 00:09:20.080 align:middle line:90%
+which is pretty cool.
+
+00:09:20.080 --> 00:09:22.440 align:middle line:84%
+So a couple more
+real life examples--
+
+00:09:22.440 --> 00:09:26.530 align:middle line:84%
+if we were to think about
+representing each of these--
+
+00:09:26.530 --> 00:09:29.430 align:middle line:84%
+so if we think about
+the object, an elevator,
+
+00:09:29.430 --> 00:09:32.130 align:middle line:84%
+again, it's up to us to
+make the design decision.
+
+00:09:32.130 --> 00:09:34.692 align:middle line:84%
+It's basically a box that
+can change floors, right?
+
+00:09:34.692 --> 00:09:36.900 align:middle line:84%
+So we could represent it
+using the length, the width,
+
+00:09:36.900 --> 00:09:41.680 align:middle line:84%
+the height, which are all
+floats or something like that.
+
+00:09:41.680 --> 00:09:45.090 align:middle line:84%
+We can also represent it
+using the max capacity
+
+00:09:45.090 --> 00:09:46.990 align:middle line:90%
+and the current floor it's at.
+
+00:09:46.990 --> 00:09:52.350 align:middle line:84%
+So all five of these
+variables together,
+
+00:09:52.350 --> 00:09:55.260 align:middle line:84%
+values together,
+represent my elevator.
+
+00:09:55.260 --> 00:09:57.270 align:middle line:84%
+And again, it's my design
+decision to do this.
+
+00:09:57.270 --> 00:09:58.500 align:middle line:90%
+Yours might be different.
+
+00:09:58.500 --> 00:10:02.170 align:middle line:84%
+And in terms of things
+that the elevator can do,
+
+00:10:02.170 --> 00:10:04.860 align:middle line:84%
+well, we can change its current
+floor, which is basically
+
+00:10:04.860 --> 00:10:07.440 align:middle line:84%
+saying change the value of
+the variable current floor
+
+00:10:07.440 --> 00:10:09.240 align:middle line:90%
+to be something else.
+
+00:10:09.240 --> 00:10:11.040 align:middle line:84%
+Add people to it--
+maybe checking
+
+00:10:11.040 --> 00:10:13.770 align:middle line:84%
+if you're at max capacity or
+not and maybe printing out
+
+00:10:13.770 --> 00:10:15.690 align:middle line:84%
+a Warning if you're
+above that, removing
+
+00:10:15.690 --> 00:10:17.740 align:middle line:90%
+people, things like that.
+
+00:10:17.740 --> 00:10:22.120 align:middle line:84%
+An employee is also a pretty
+common example of something
+
+00:10:22.120 --> 00:10:25.120 align:middle line:84%
+that's typically implemented
+in a bunch of programming
+
+00:10:25.120 --> 00:10:25.700 align:middle line:90%
+languages.
+
+00:10:25.700 --> 00:10:28.930 align:middle line:84%
+So an employee, basically
+a person that has a salary,
+
+00:10:28.930 --> 00:10:31.120 align:middle line:84%
+maybe works for
+Company X. So you
+
+00:10:31.120 --> 00:10:33.963 align:middle line:84%
+could represent this
+employee using their name,
+
+00:10:33.963 --> 00:10:35.380 align:middle line:84%
+maybe a string for
+the first name,
+
+00:10:35.380 --> 00:10:38.500 align:middle line:84%
+a string for the last name, and
+then their birth date maybe,
+
+00:10:38.500 --> 00:10:43.040 align:middle line:84%
+and then their salary, which is
+a float or something like that.
+
+00:10:43.040 --> 00:10:45.547 align:middle line:84%
+And in terms of behaviors,
+what can employees do?
+
+00:10:45.547 --> 00:10:46.880 align:middle line:90%
+Well, you can change their name.
+
+00:10:46.880 --> 00:10:48.047 align:middle line:90%
+You can change their salary.
+
+00:10:48.047 --> 00:10:50.020 align:middle line:84%
+You can maybe activate
+or deactivate them
+
+00:10:50.020 --> 00:10:52.120 align:middle line:84%
+as current employees,
+things like that.
+
+00:10:52.120 --> 00:10:55.630 align:middle line:84%
+A queue at a store, also
+a really nice example.
+
+00:10:55.630 --> 00:10:59.800 align:middle line:84%
+And it kind of goes hand in
+hand with a stack of pancakes.
+
+00:10:59.800 --> 00:11:02.000 align:middle line:84%
+How would you represent
+a queue at a store?
+
+00:11:02.000 --> 00:11:06.370 align:middle line:84%
+Well, the representation isn't
+going to be a set of things.
+
+00:11:06.370 --> 00:11:08.800 align:middle line:84%
+The representation could
+be something really simple,
+
+00:11:08.800 --> 00:11:13.540 align:middle line:90%
+like just a list, which is fine.
+
+00:11:13.540 --> 00:11:15.810 align:middle line:84%
+So maybe the list
+will have some strings
+
+00:11:15.810 --> 00:11:17.880 align:middle line:84%
+with the names of the
+people who are currently
+
+00:11:17.880 --> 00:11:19.890 align:middle line:90%
+in the queue at a store.
+
+00:11:19.890 --> 00:11:23.640 align:middle line:84%
+But what's going to make
+a queue kind of special
+
+00:11:23.640 --> 00:11:27.070 align:middle line:84%
+is the way that
+we'll be using it.
+
+00:11:27.070 --> 00:11:29.500 align:middle line:84%
+So the representation
+isn't super unique.
+
+00:11:29.500 --> 00:11:31.310 align:middle line:90%
+It's just a list.
+
+00:11:31.310 --> 00:11:34.340 align:middle line:84%
+But the way that
+a queue operates
+
+00:11:34.340 --> 00:11:36.590 align:middle line:84%
+will be special because, if
+you think about the queue,
+
+00:11:36.590 --> 00:11:38.510 align:middle line:84%
+the first person who
+comes into the queue
+
+00:11:38.510 --> 00:11:40.970 align:middle line:84%
+will be the first person
+out of the queue--
+
+00:11:40.970 --> 00:11:43.478 align:middle line:84%
+first in, first out
+kind of situation.
+
+00:11:43.478 --> 00:11:45.020 align:middle line:84%
+So that means, if
+you make the design
+
+00:11:45.020 --> 00:11:48.200 align:middle line:84%
+decision to add new people
+at the end of the queue--
+
+00:11:48.200 --> 00:11:53.480 align:middle line:84%
+so if I have a new person
+that gets added here,
+
+00:11:53.480 --> 00:11:54.745 align:middle line:90%
+they're the newest person in.
+
+00:11:54.745 --> 00:11:56.870 align:middle line:84%
+That means if I'm removing
+a person from the queue,
+
+00:11:56.870 --> 00:11:58.730 align:middle line:84%
+I better remove the
+oldest one, which
+
+00:11:58.730 --> 00:12:00.830 align:middle line:84%
+is going to be
+over at the first,
+
+00:12:00.830 --> 00:12:02.450 align:middle line:90%
+at the beginning of my list.
+
+00:12:02.450 --> 00:12:04.190 align:middle line:84%
+So the way that
+you use the queue
+
+00:12:04.190 --> 00:12:07.400 align:middle line:84%
+will be consistent
+with this idea.
+
+00:12:07.400 --> 00:12:09.350 align:middle line:84%
+And then you can basically
+simulate the queue.
+
+00:12:09.350 --> 00:12:11.600 align:middle line:84%
+And the stack of
+pancakes is very similar.
+
+00:12:11.600 --> 00:12:15.770 align:middle line:84%
+If you think about pancakes,
+the first one you made
+
+00:12:15.770 --> 00:12:17.720 align:middle line:90%
+is the last one you eat.
+
+00:12:17.720 --> 00:12:20.910 align:middle line:84%
+So it's a first in, last
+out kind of situation.
+
+00:12:20.910 --> 00:12:24.230 align:middle line:84%
+So that means that we can still
+represent a stack of pancakes
+
+00:12:24.230 --> 00:12:29.090 align:middle line:90%
+using a list.
+
+00:12:29.090 --> 00:12:31.430 align:middle line:84%
+So the representation,
+the data representation
+
+00:12:31.430 --> 00:12:35.630 align:middle line:84%
+for a stack of pancakes,
+will be the same as a queue,
+
+00:12:35.630 --> 00:12:38.120 align:middle line:84%
+except that the behavior
+will be different
+
+00:12:38.120 --> 00:12:41.000 align:middle line:84%
+because if I just made a new
+pancake and it goes at the end
+
+00:12:41.000 --> 00:12:45.320 align:middle line:84%
+here, the newest one that I
+made is the first one that I'm
+
+00:12:45.320 --> 00:12:47.630 align:middle line:90%
+going to eat.
+
+00:12:47.630 --> 00:12:49.490 align:middle line:84%
+If I add a pancake to
+the end of my list,
+
+00:12:49.490 --> 00:12:51.230 align:middle line:84%
+I'm going to remove
+the pancake that I
+
+00:12:51.230 --> 00:12:55.310 align:middle line:84%
+want to eat from the
+end of my list as well.
+
+00:12:55.310 --> 00:12:56.060 align:middle line:90%
+OK.
+
+00:12:56.060 --> 00:12:58.808 align:middle line:84%
+So the idea of object-oriented
+programming and the reason
+
+00:12:58.808 --> 00:13:00.350 align:middle line:84%
+we're doing this is
+because now we're
+
+00:13:00.350 --> 00:13:05.100 align:middle line:84%
+bundling basically data and
+behaviors into one thing.
+
+00:13:05.100 --> 00:13:08.540 align:middle line:84%
+And so we can create all
+of these objects that
+
+00:13:08.540 --> 00:13:11.330 align:middle line:84%
+have the same type
+that all are going
+
+00:13:11.330 --> 00:13:13.190 align:middle line:90%
+to function in the same way.
+
+00:13:13.190 --> 00:13:15.470 align:middle line:84%
+We know they're going
+to be consistent, right?
+
+00:13:15.470 --> 00:13:17.780 align:middle line:84%
+They're going to be
+consistent in the data that
+
+00:13:17.780 --> 00:13:20.210 align:middle line:84%
+represents them and
+consistent in the way
+
+00:13:20.210 --> 00:13:22.520 align:middle line:90%
+that we use them right.
+
+00:13:22.520 --> 00:13:24.260 align:middle line:84%
+We know for sure
+that the queue is
+
+00:13:24.260 --> 00:13:28.910 align:middle line:84%
+going to be a first in,
+first out kind of situation.
+
+00:13:28.910 --> 00:13:30.410 align:middle line:84%
+And the way we're
+going to implement
+
+00:13:30.410 --> 00:13:33.260 align:middle line:84%
+this is using these things
+called Python classes.
+
+00:13:33.260 --> 00:13:35.690 align:middle line:84%
+And the reason we create
+these Python classes
+
+00:13:35.690 --> 00:13:38.400 align:middle line:84%
+is to make code that's
+very nicely reusable.
+
+00:13:38.400 --> 00:13:40.400 align:middle line:84%
+We can create really
+simple Python classes
+
+00:13:40.400 --> 00:13:41.640 align:middle line:90%
+that we'll see today.
+
+00:13:41.640 --> 00:13:44.210 align:middle line:84%
+And then we can build
+upon these Python classes
+
+00:13:44.210 --> 00:13:48.900 align:middle line:84%
+to create more complex classes,
+which we'll see on Wednesday.
+
+00:13:48.900 --> 00:13:51.150 align:middle line:84%
+But the big idea here--
+and this is something
+
+00:13:51.150 --> 00:13:53.940 align:middle line:84%
+that I was a little bit
+confused about when I first
+
+00:13:53.940 --> 00:13:56.910 align:middle line:84%
+started learning about
+object-oriented programming--
+
+00:13:56.910 --> 00:14:00.180 align:middle line:84%
+is you get to be in charge
+of the design decision.
+
+00:14:00.180 --> 00:14:03.270 align:middle line:84%
+So you get to decide what
+data represents the class.
+
+00:14:03.270 --> 00:14:06.310 align:middle line:84%
+And you decide what behaviors
+represent the class.
+
+00:14:06.310 --> 00:14:09.840 align:middle line:84%
+So if you wanted to say that--
+you represent a queue using
+
+00:14:09.840 --> 00:14:11.430 align:middle line:90%
+a list--
+
+00:14:11.430 --> 00:14:12.960 align:middle line:90%
+first in, first out--
+
+00:14:12.960 --> 00:14:15.438 align:middle line:84%
+if you add items to the
+end, you remove items
+
+00:14:15.438 --> 00:14:16.230 align:middle line:90%
+from the beginning.
+
+00:14:16.230 --> 00:14:17.710 align:middle line:90%
+That's one design decision.
+
+00:14:17.710 --> 00:14:19.255 align:middle line:84%
+Another design
+decision could be,
+
+00:14:19.255 --> 00:14:20.880 align:middle line:84%
+well, you still
+represent it as a list,
+
+00:14:20.880 --> 00:14:23.910 align:middle line:84%
+but new items get
+added to the front.
+
+00:14:23.910 --> 00:14:26.310 align:middle line:84%
+But to be consistent with the
+idea of a queue, that means
+
+00:14:26.310 --> 00:14:27.840 align:middle line:90%
+you remove items from the back.
+
+00:14:27.840 --> 00:14:30.570 align:middle line:84%
+And then the
+behavior is the same.
+
+00:14:30.570 --> 00:14:33.180 align:middle line:84%
+We're implementing
+a queue no matter
+
+00:14:33.180 --> 00:14:36.950 align:middle line:84%
+which one of those design
+decisions we've made.
+
+00:14:36.950 --> 00:14:37.450 align:middle line:90%
+OK.
+
+00:14:37.450 --> 00:14:40.040 align:middle line:84%
+So as we're going
+through today's lecture,
+
+00:14:40.040 --> 00:14:42.380 align:middle line:84%
+I want to make a note
+of a couple of things.
+
+00:14:42.380 --> 00:14:46.210 align:middle line:84%
+So I've got these little
+tabs up at the top here.
+
+00:14:46.210 --> 00:14:48.760 align:middle line:84%
+We're going to be
+basically switching
+
+00:14:48.760 --> 00:14:50.080 align:middle line:90%
+our brains a little bit today.
+
+00:14:50.080 --> 00:14:54.945 align:middle line:84%
+We're going to be
+defining a Python object.
+
+00:14:54.945 --> 00:14:56.320 align:middle line:84%
+So we're going to
+be writing code
+
+00:14:56.320 --> 00:14:59.410 align:middle line:84%
+that tells Python, hey, I
+am telling you I would like
+
+00:14:59.410 --> 00:15:00.865 align:middle line:90%
+to create this object type.
+
+00:15:00.865 --> 00:15:05.180 align:middle line:90%
+
+
+00:15:05.180 --> 00:15:07.612 align:middle line:84%
+This is the data that
+represents them, represents it.
+
+00:15:07.612 --> 00:15:09.570 align:middle line:84%
+And these are the behaviors
+that represents it.
+
+00:15:09.570 --> 00:15:12.120 align:middle line:84%
+So that's us
+implementing the class,
+
+00:15:12.120 --> 00:15:14.310 align:middle line:84%
+so telling Python that
+we are now creating
+
+00:15:14.310 --> 00:15:18.380 align:middle line:84%
+and telling you what an object
+of this type is and does.
+
+00:15:18.380 --> 00:15:21.080 align:middle line:84%
+And the other thing
+is, once we have
+
+00:15:21.080 --> 00:15:23.490 align:middle line:84%
+a definition for
+this object type,
+
+00:15:23.490 --> 00:15:26.600 align:middle line:84%
+we're going to
+actually use the type.
+
+00:15:26.600 --> 00:15:30.640 align:middle line:84%
+We're going to create
+new objects of this type.
+
+00:15:30.640 --> 00:15:32.520 align:middle line:84%
+So when we're creating
+the class, when
+
+00:15:32.520 --> 00:15:35.580 align:middle line:84%
+we're telling Python that
+an object like this exists,
+
+00:15:35.580 --> 00:15:37.810 align:middle line:84%
+we're deciding the
+name of our class.
+
+00:15:37.810 --> 00:15:40.560 align:middle line:84%
+We're deciding what
+data abstracts it.
+
+00:15:40.560 --> 00:15:43.350 align:middle line:84%
+We're deciding what
+behaviors we can do with it.
+
+00:15:43.350 --> 00:15:45.990 align:middle line:84%
+So if we think about the
+list, we haven't actually
+
+00:15:45.990 --> 00:15:47.250 align:middle line:90%
+seen the code to do this.
+
+00:15:47.250 --> 00:15:52.120 align:middle line:84%
+But someone wrote code to
+define this list class.
+
+00:15:52.120 --> 00:15:54.880 align:middle line:84%
+Now, using the class
+means that we're assuming
+
+00:15:54.880 --> 00:15:57.340 align:middle line:90%
+that this code already exists.
+
+00:15:57.340 --> 00:16:00.620 align:middle line:84%
+And you're just creating a whole
+bunch of objects of this type.
+
+00:16:00.620 --> 00:16:02.560 align:middle line:84%
+So we've been doing
+this definitely, right?
+
+00:16:02.560 --> 00:16:05.450 align:middle line:84%
+If we think about the list
+class again, here for example,
+
+00:16:05.450 --> 00:16:08.590 align:middle line:84%
+we created an actual object
+that we can manipulate.
+
+00:16:08.590 --> 00:16:10.360 align:middle line:90%
+L is equal to 1 comma 2.
+
+00:16:10.360 --> 00:16:14.350 align:middle line:84%
+We've also created L is equal
+to 3 comma 4, comma 5, and all
+
+00:16:14.350 --> 00:16:15.070 align:middle line:90%
+these things.
+
+00:16:15.070 --> 00:16:16.930 align:middle line:84%
+We're basically
+creating these instances
+
+00:16:16.930 --> 00:16:19.720 align:middle line:84%
+that we can manipulate
+and use in our program
+
+00:16:19.720 --> 00:16:21.475 align:middle line:90%
+to achieve something useful.
+
+00:16:21.475 --> 00:16:22.850 align:middle line:84%
+And today, we're
+going to see how
+
+00:16:22.850 --> 00:16:25.980 align:middle line:90%
+we can do both of those things.
+
+00:16:25.980 --> 00:16:28.935 align:middle line:84%
+I want to draw a little parallel
+with functions because it's
+
+00:16:28.935 --> 00:16:30.060 align:middle line:90%
+going to feel very similar.
+
+00:16:30.060 --> 00:16:34.830 align:middle line:84%
+And with functions, when we
+were defining a function,
+
+00:16:34.830 --> 00:16:37.350 align:middle line:84%
+we were telling
+Python that I would
+
+00:16:37.350 --> 00:16:41.550 align:middle line:84%
+like to abstract some code
+that does something useful
+
+00:16:41.550 --> 00:16:42.780 align:middle line:90%
+using this class--
+
+00:16:42.780 --> 00:16:45.210 align:middle line:90%
+using this function definition.
+
+00:16:45.210 --> 00:16:47.850 align:middle line:84%
+So we were writing the
+definition for the function
+
+00:16:47.850 --> 00:16:49.980 align:middle line:90%
+in this abstract way.
+
+00:16:49.980 --> 00:16:52.710 align:middle line:84%
+We didn't actually run the
+function at that point.
+
+00:16:52.710 --> 00:16:54.040 align:middle line:90%
+We just defined it.
+
+00:16:54.040 --> 00:16:56.070 align:middle line:84%
+And so when we define
+a class, that's
+
+00:16:56.070 --> 00:16:57.330 align:middle line:90%
+basically what we're doing.
+
+00:16:57.330 --> 00:16:58.997 align:middle line:84%
+We're telling Python
+that we're creating
+
+00:16:58.997 --> 00:17:04.650 align:middle line:84%
+this object that bundles
+data and behaviors together.
+
+00:17:04.650 --> 00:17:08.160 align:middle line:84%
+When we create an
+instances of this data type
+
+00:17:08.160 --> 00:17:10.680 align:middle line:84%
+that we're going
+to define, that's
+
+00:17:10.680 --> 00:17:14.460 align:middle line:84%
+kind of like we called
+the actual function
+
+00:17:14.460 --> 00:17:15.810 align:middle line:90%
+that we defined.
+
+00:17:15.810 --> 00:17:17.880 align:middle line:84%
+So when we called
+the function, we
+
+00:17:17.880 --> 00:17:21.270 align:middle line:84%
+were now doing something
+useful in our program.
+
+00:17:21.270 --> 00:17:23.297 align:middle line:84%
+We said, here are
+some actual parameters
+
+00:17:23.297 --> 00:17:24.839 align:middle line:84%
+I want you to run
+this function with.
+
+00:17:24.839 --> 00:17:27.232 align:middle line:90%
+Now, tell me what the output is.
+
+00:17:27.232 --> 00:17:28.690 align:middle line:84%
+And that's exactly
+what we're going
+
+00:17:28.690 --> 00:17:31.930 align:middle line:84%
+to do when we create
+instances of the data type
+
+00:17:31.930 --> 00:17:33.370 align:middle line:90%
+we're defining.
+
+00:17:33.370 --> 00:17:36.040 align:middle line:84%
+We're now creating
+actual objects
+
+00:17:36.040 --> 00:17:40.660 align:middle line:84%
+that we can manipulate
+and use in our class.
+
+00:17:40.660 --> 00:17:41.290 align:middle line:90%
+OK.
+
+00:17:41.290 --> 00:17:44.830 align:middle line:84%
+So the object we're going
+to create in today's lecture
+
+00:17:44.830 --> 00:17:48.110 align:middle line:90%
+is a coordinate in a 2D plane--
+
+00:17:48.110 --> 00:17:50.030 align:middle line:84%
+pretty simple,
+pretty mathematical.
+
+00:17:50.030 --> 00:17:52.940 align:middle line:84%
+So before we actually
+write the code,
+
+00:17:52.940 --> 00:17:55.520 align:middle line:84%
+let's think about
+what it actually
+
+00:17:55.520 --> 00:17:58.050 align:middle line:84%
+means to put a
+coordinate in a 2D plane.
+
+00:17:58.050 --> 00:18:01.160 align:middle line:84%
+So we're going to think about
+if we had a bunch of instances,
+
+00:18:01.160 --> 00:18:03.290 align:middle line:84%
+if we had a bunch of
+coordinates in a 2D plane,
+
+00:18:03.290 --> 00:18:04.590 align:middle line:90%
+what do they look like?
+
+00:18:04.590 --> 00:18:06.260 align:middle line:84%
+What kind of data
+are we interested
+
+00:18:06.260 --> 00:18:08.130 align:middle line:84%
+in grabbing from
+these instances?
+
+00:18:08.130 --> 00:18:09.840 align:middle line:84%
+What are some things
+we can do with it?
+
+00:18:09.840 --> 00:18:14.170 align:middle line:84%
+So here, I have a
+point in my 2D plane.
+
+00:18:14.170 --> 00:18:19.500 align:middle line:84%
+So if we think about how
+we look at this coordinate,
+
+00:18:19.500 --> 00:18:23.560 align:middle line:84%
+well, we know how far away the
+coordinate is on the x-axis.
+
+00:18:23.560 --> 00:18:27.630 align:middle line:84%
+And we know how far away the
+coordinate is on the y-axis.
+
+00:18:27.630 --> 00:18:31.270 align:middle line:84%
+So that's one instance
+of a coordinate object.
+
+00:18:31.270 --> 00:18:33.480 align:middle line:84%
+Now, let's say we
+had another one.
+
+00:18:33.480 --> 00:18:35.610 align:middle line:84%
+Here's another dot
+in my 2D plane.
+
+00:18:35.610 --> 00:18:38.400 align:middle line:84%
+Again, this dot will
+also know how far
+
+00:18:38.400 --> 00:18:42.870 align:middle line:84%
+away it is on the x-axis and how
+far away it is on the y-axis.
+
+00:18:42.870 --> 00:18:46.890 align:middle line:84%
+So one reasonable
+data abstraction
+
+00:18:46.890 --> 00:18:49.410 align:middle line:84%
+for a coordinate
+in a 2D plane could
+
+00:18:49.410 --> 00:18:54.810 align:middle line:84%
+be to say I want two numbers,
+one representing how far
+
+00:18:54.810 --> 00:18:57.810 align:middle line:84%
+away it is on the x-axis
+and one for how far
+
+00:18:57.810 --> 00:18:59.790 align:middle line:90%
+away it is on the y-axis.
+
+00:18:59.790 --> 00:19:01.110 align:middle line:90%
+That seems pretty reasonable.
+
+00:19:01.110 --> 00:19:04.890 align:middle line:84%
+I don't care about color, even
+though I colored these things.
+
+00:19:04.890 --> 00:19:08.472 align:middle line:84%
+But you can imagine
+making a cuter version
+
+00:19:08.472 --> 00:19:09.930 align:middle line:84%
+of this coordinate
+object that also
+
+00:19:09.930 --> 00:19:12.940 align:middle line:90%
+has a color associated with it.
+
+00:19:12.940 --> 00:19:16.480 align:middle line:84%
+So the data that will represent
+my point in a coordinate plane,
+
+00:19:16.480 --> 00:19:19.930 align:middle line:84%
+in a 2D coordinate plane
+is just two numbers--
+
+00:19:19.930 --> 00:19:22.653 align:middle line:90%
+one for the x, one for the y.
+
+00:19:22.653 --> 00:19:24.320 align:middle line:84%
+Now, what are some
+things that we can do
+
+00:19:24.320 --> 00:19:25.570 align:middle line:90%
+with these coordinate objects?
+
+00:19:25.570 --> 00:19:27.680 align:middle line:84%
+Certainly something
+really simple we can do
+
+00:19:27.680 --> 00:19:32.510 align:middle line:84%
+is to say, well, one
+of these points--
+
+00:19:32.510 --> 00:19:34.130 align:middle line:84%
+the orange one, for
+example-- tell me
+
+00:19:34.130 --> 00:19:36.590 align:middle line:84%
+how far away you
+are on the x-axis
+
+00:19:36.590 --> 00:19:39.260 align:middle line:84%
+or tell me how far away
+you are on the y-axis.
+
+00:19:39.260 --> 00:19:42.740 align:middle line:84%
+So those two commands could
+return something like 3
+
+00:19:42.740 --> 00:19:44.960 align:middle line:84%
+for that's how far away
+that point is on the x-axis
+
+00:19:44.960 --> 00:19:48.900 align:middle line:84%
+or 4 for how far away
+it is on the y-axis.
+
+00:19:48.900 --> 00:19:50.462 align:middle line:84%
+Those are pretty
+simple things to do.
+
+00:19:50.462 --> 00:19:51.920 align:middle line:84%
+One more interesting
+thing to do is
+
+00:19:51.920 --> 00:19:55.290 align:middle line:84%
+to say, well, hey, you,
+orange point right over there,
+
+00:19:55.290 --> 00:19:59.660 align:middle line:84%
+can you tell me how far away
+you are between the green point?
+
+00:19:59.660 --> 00:20:02.280 align:middle line:84%
+So that would be the Euclidean
+distance between these two
+
+00:20:02.280 --> 00:20:02.780 align:middle line:90%
+points.
+
+00:20:02.780 --> 00:20:06.500 align:middle line:84%
+And we're going to write
+a code that figures out
+
+00:20:06.500 --> 00:20:08.523 align:middle line:84%
+how far away one
+coordinate object is
+
+00:20:08.523 --> 00:20:09.815 align:middle line:90%
+from another coordinate object.
+
+00:20:09.815 --> 00:20:12.380 align:middle line:90%
+
+
+00:20:12.380 --> 00:20:16.190 align:middle line:84%
+All right, so let's start
+defining this class coordinate.
+
+00:20:16.190 --> 00:20:19.410 align:middle line:84%
+You can see here, this is the
+code that implements the class.
+
+00:20:19.410 --> 00:20:23.000 align:middle line:84%
+So this will tell Python
+that we are now creating
+
+00:20:23.000 --> 00:20:25.820 align:middle line:90%
+this object type coordinate.
+
+00:20:25.820 --> 00:20:27.020 align:middle line:90%
+So we're not using it yet.
+
+00:20:27.020 --> 00:20:30.440 align:middle line:84%
+We're not creating any
+objects, any object instances.
+
+00:20:30.440 --> 00:20:32.480 align:middle line:84%
+We're just telling
+Python that we'd like
+
+00:20:32.480 --> 00:20:34.410 align:middle line:90%
+to create this object type.
+
+00:20:34.410 --> 00:20:38.510 align:middle line:84%
+So we start with
+the keyword class.
+
+00:20:38.510 --> 00:20:40.520 align:middle line:84%
+In parallel, we started
+with the keyword def
+
+00:20:40.520 --> 00:20:41.630 align:middle line:90%
+to define a function.
+
+00:20:41.630 --> 00:20:44.550 align:middle line:84%
+Then we say the name
+of our object type.
+
+00:20:44.550 --> 00:20:47.160 align:middle line:84%
+So this will be literally
+the type of the object,
+
+00:20:47.160 --> 00:20:50.508 align:middle line:84%
+so coordinate, just like
+we had list and float, all
+
+00:20:50.508 --> 00:20:51.050 align:middle line:90%
+those things.
+
+00:20:51.050 --> 00:20:53.400 align:middle line:90%
+This will be of type coordinate.
+
+00:20:53.400 --> 00:20:55.500 align:middle line:84%
+And then in parentheses
+here, we say
+
+00:20:55.500 --> 00:20:57.460 align:middle line:90%
+to the parent of this class.
+
+00:20:57.460 --> 00:21:01.020 align:middle line:84%
+So usually, we say object until
+two lectures from now when
+
+00:21:01.020 --> 00:21:02.520 align:middle line:84%
+we're going to see
+what happens when
+
+00:21:02.520 --> 00:21:04.000 align:middle line:90%
+we put something else in there.
+
+00:21:04.000 --> 00:21:06.450 align:middle line:84%
+But when we put object
+in the parentheses there,
+
+00:21:06.450 --> 00:21:08.220 align:middle line:84%
+we're telling
+Python that anything
+
+00:21:08.220 --> 00:21:12.820 align:middle line:84%
+a generic Python object can
+do our object can do as well.
+
+00:21:12.820 --> 00:21:17.880 align:middle line:84%
+So something
+really, really basic
+
+00:21:17.880 --> 00:21:21.270 align:middle line:84%
+is saying that I'm going to
+create this object in memory
+
+00:21:21.270 --> 00:21:23.130 align:middle line:84%
+and assign a variable
+to it so that I
+
+00:21:23.130 --> 00:21:26.160 align:middle line:84%
+get a handle for that object
+using this variable-- something
+
+00:21:26.160 --> 00:21:27.120 align:middle line:90%
+super basic.
+
+00:21:27.120 --> 00:21:29.340 align:middle line:84%
+Any Python object
+has this ability.
+
+00:21:29.340 --> 00:21:32.310 align:middle line:84%
+And ours will too because
+I've put this object
+
+00:21:32.310 --> 00:21:33.360 align:middle line:90%
+in the parentheses here.
+
+00:21:33.360 --> 00:21:36.150 align:middle line:90%
+
+
+00:21:36.150 --> 00:21:39.480 align:middle line:84%
+All right, so now,
+we've told Python
+
+00:21:39.480 --> 00:21:41.910 align:middle line:84%
+we're creating a data
+type called coordinate.
+
+00:21:41.910 --> 00:21:45.190 align:middle line:84%
+What are we going to fill
+in the body of this class?
+
+00:21:45.190 --> 00:21:49.120 align:middle line:84%
+So the things we need to fill in
+are going to be our attributes.
+
+00:21:49.120 --> 00:21:50.760 align:middle line:84%
+Now, again, what
+makes up an object?
+
+00:21:50.760 --> 00:21:52.950 align:middle line:84%
+Two things-- the
+data that you want
+
+00:21:52.950 --> 00:21:56.820 align:middle line:84%
+to represent this object with
+and the procedures, a.k.a.
+
+00:21:56.820 --> 00:22:02.220 align:middle line:84%
+functions, a.k.a. behaviors that
+you'd like this object to have.
+
+00:22:02.220 --> 00:22:04.873 align:middle line:90%
+So the data will be two things.
+
+00:22:04.873 --> 00:22:06.540 align:middle line:84%
+We decided that we're
+going to represent
+
+00:22:06.540 --> 00:22:09.240 align:middle line:90%
+a coordinate using two numbers.
+
+00:22:09.240 --> 00:22:11.130 align:middle line:90%
+Now, what about behaviors?
+
+00:22:11.130 --> 00:22:13.980 align:middle line:84%
+Behaviors will
+essentially be functions
+
+00:22:13.980 --> 00:22:17.740 align:middle line:84%
+that work with objects
+of this particular type.
+
+00:22:17.740 --> 00:22:19.810 align:middle line:84%
+So we're going to define
+them as functions.
+
+00:22:19.810 --> 00:22:22.440 align:middle line:84%
+But we're going to define them
+in a really special way that
+
+00:22:22.440 --> 00:22:25.830 align:middle line:84%
+tells Python you can
+only run this function
+
+00:22:25.830 --> 00:22:29.650 align:middle line:84%
+on an object of type
+coordinate, which makes sense.
+
+00:22:29.650 --> 00:22:33.350 align:middle line:84%
+I would not like to find the
+distance between two integers
+
+00:22:33.350 --> 00:22:34.350 align:middle line:90%
+that's just subtraction.
+
+00:22:34.350 --> 00:22:36.160 align:middle line:84%
+Or I would not like to find
+the distance between two
+
+00:22:36.160 --> 00:22:36.790 align:middle line:90%
+dictionaries.
+
+00:22:36.790 --> 00:22:38.510 align:middle line:90%
+What does that even mean?
+
+00:22:38.510 --> 00:22:40.750 align:middle line:84%
+So distance method,
+that we mentioned
+
+00:22:40.750 --> 00:22:42.250 align:middle line:84%
+is one thing we'd
+like to implement,
+
+00:22:42.250 --> 00:22:45.970 align:middle line:84%
+will only work with
+objects of type coordinate.
+
+00:22:45.970 --> 00:22:50.290 align:middle line:84%
+So these special functions
+are actually called methods.
+
+00:22:50.290 --> 00:22:53.440 align:middle line:84%
+And I'm going to use this
+term a little bit today.
+
+00:22:53.440 --> 00:22:54.710 align:middle line:90%
+Hopefully, you get used to it.
+
+00:22:54.710 --> 00:22:57.610 align:middle line:84%
+And then from next
+lecture on, I'll
+
+00:22:57.610 --> 00:23:00.550 align:middle line:84%
+just use the word methods to
+refer to functions that only
+
+00:23:00.550 --> 00:23:04.330 align:middle line:90%
+work with objects of this type.
+
+00:23:04.330 --> 00:23:06.790 align:middle line:84%
+So we so far, in
+the previous slide,
+
+00:23:06.790 --> 00:23:09.370 align:middle line:90%
+had class coordinate object.
+
+00:23:09.370 --> 00:23:12.220 align:middle line:84%
+Now , what is the next
+thing you have to do?
+
+00:23:12.220 --> 00:23:14.770 align:middle line:84%
+So the next thing you
+always have to do,
+
+00:23:14.770 --> 00:23:17.230 align:middle line:84%
+when you tell Python you're
+creating a new data type,
+
+00:23:17.230 --> 00:23:23.790 align:middle line:84%
+is to tell Python how you want
+to construct this data type,
+
+00:23:23.790 --> 00:23:27.390 align:middle line:90%
+kind of a constructor function.
+
+00:23:27.390 --> 00:23:31.110 align:middle line:84%
+And the way we do this is by
+defining-- so you can see we're
+
+00:23:31.110 --> 00:23:33.240 align:middle line:90%
+defining it like a function, ef.
+
+00:23:33.240 --> 00:23:35.280 align:middle line:84%
+But we're going to
+define a function that
+
+00:23:35.280 --> 00:23:36.780 align:middle line:90%
+has a special name.
+
+00:23:36.780 --> 00:23:42.570 align:middle line:90%
+And the name is __init__.
+
+00:23:42.570 --> 00:23:44.440 align:middle line:84%
+So that's the name
+of this function.
+
+00:23:44.440 --> 00:23:47.680 align:middle line:84%
+And you can see it's a function,
+def name, and then parentheses.
+
+00:23:47.680 --> 00:23:49.680 align:middle line:84%
+And there's a bunch of
+stuff in the parentheses.
+
+00:23:49.680 --> 00:23:52.472 align:middle line:84%
+The first thing will be
+this thing called self.
+
+00:23:52.472 --> 00:23:54.180 align:middle line:84%
+So already, it's going
+to be a little bit
+
+00:23:54.180 --> 00:23:57.030 align:middle line:84%
+different than
+regular functions.
+
+00:23:57.030 --> 00:23:59.340 align:middle line:90%
+Now, I'm going to--
+
+00:23:59.340 --> 00:24:01.500 align:middle line:84%
+this is not the only
+time I'll explain self.
+
+00:24:01.500 --> 00:24:03.930 align:middle line:84%
+I'll explain it
+throughout this lecture.
+
+00:24:03.930 --> 00:24:08.010 align:middle line:84%
+But the basic idea of
+self is that it's always
+
+00:24:08.010 --> 00:24:11.850 align:middle line:84%
+going to be the first parameter
+of a method, a function that
+
+00:24:11.850 --> 00:24:13.800 align:middle line:84%
+only works with an
+object of this class--
+
+00:24:13.800 --> 00:24:15.820 align:middle line:90%
+of this type.
+
+00:24:15.820 --> 00:24:18.000 align:middle line:84%
+And the reason why
+we have it here
+
+00:24:18.000 --> 00:24:21.840 align:middle line:84%
+is because all we're doing
+here is telling Python
+
+00:24:21.840 --> 00:24:24.700 align:middle line:84%
+that we'd like to
+create this object type.
+
+00:24:24.700 --> 00:24:28.180 align:middle line:84%
+We don't have an actual
+object to manipulate.
+
+00:24:28.180 --> 00:24:30.580 align:middle line:84%
+I haven't created an
+actual object yet.
+
+00:24:30.580 --> 00:24:34.100 align:middle line:84%
+I'm just telling Python I'd
+like to create this object.
+
+00:24:34.100 --> 00:24:36.850 align:middle line:84%
+So if I don't have an
+actual object created yet,
+
+00:24:36.850 --> 00:24:41.860 align:middle line:84%
+I need some way to
+refer to an instance
+
+00:24:41.860 --> 00:24:43.870 align:middle line:90%
+without actually having one yet.
+
+00:24:43.870 --> 00:24:46.600 align:middle line:84%
+And that's what
+the self is doing.
+
+00:24:46.600 --> 00:24:49.750 align:middle line:84%
+It's basically a variable
+that tells Python
+
+00:24:49.750 --> 00:24:51.790 align:middle line:90%
+that this is an object of--
+
+00:24:51.790 --> 00:24:53.950 align:middle line:84%
+that this is a function
+that only works
+
+00:24:53.950 --> 00:24:55.390 align:middle line:90%
+with an object of this type.
+
+00:24:55.390 --> 00:25:00.160 align:middle line:84%
+And I'm going to use this
+variable, self, to refer
+
+00:25:00.160 --> 00:25:04.420 align:middle line:84%
+to this object, myself, my data
+attributes, and my methods,
+
+00:25:04.420 --> 00:25:06.250 align:middle line:90%
+and things like that.
+
+00:25:06.250 --> 00:25:07.480 align:middle line:90%
+So it will become clear.
+
+00:25:07.480 --> 00:25:08.660 align:middle line:90%
+There will be many examples.
+
+00:25:08.660 --> 00:25:11.020 align:middle line:84%
+But for now, it's
+basically a way for us
+
+00:25:11.020 --> 00:25:13.360 align:middle line:84%
+to refer to an
+object of this type--
+
+00:25:13.360 --> 00:25:17.210 align:middle line:84%
+an instance of this type without
+actually having created one.
+
+00:25:17.210 --> 00:25:20.870 align:middle line:84%
+Anything after self is
+basically parameters
+
+00:25:20.870 --> 00:25:23.280 align:middle line:84%
+you'd like to create
+this object with.
+
+00:25:23.280 --> 00:25:26.870 align:middle line:84%
+So for us, it doesn't
+make sense to say,
+
+00:25:26.870 --> 00:25:29.840 align:middle line:84%
+create this coordinate object
+without actually initializing
+
+00:25:29.840 --> 00:25:31.430 align:middle line:90%
+its x and y values.
+
+00:25:31.430 --> 00:25:33.710 align:middle line:84%
+When we put a coordinate
+object in a 2D plane,
+
+00:25:33.710 --> 00:25:36.080 align:middle line:84%
+I would like to put
+it in that 2D plane.
+
+00:25:36.080 --> 00:25:39.620 align:middle line:84%
+So it needs an initial
+x and initial y value.
+
+00:25:39.620 --> 00:25:41.480 align:middle line:84%
+So these parameters
+here will tell
+
+00:25:41.480 --> 00:25:43.940 align:middle line:84%
+Python you need to pass
+in a value for x and y
+
+00:25:43.940 --> 00:25:46.060 align:middle line:90%
+when you create your object.
+
+00:25:46.060 --> 00:25:51.880 align:middle line:84%
+And then the body of this it
+will have whatever you'd like,
+
+00:25:51.880 --> 00:25:54.910 align:middle line:84%
+whatever code you'd like
+to initialize your object.
+
+00:25:54.910 --> 00:25:57.100 align:middle line:90%
+Yes, question?
+
+00:25:57.100 --> 00:25:59.168 align:middle line:84%
+STUDENT: The way you
+put the underscores,
+
+00:25:59.168 --> 00:26:01.700 align:middle line:84%
+is that part of
+how you write it?
+
+00:26:01.700 --> 00:26:03.950 align:middle line:84%
+ANA BELL: The underscores
+is part of how you write it.
+
+00:26:03.950 --> 00:26:07.130 align:middle line:90%
+So you have to have __init__.
+
+00:26:07.130 --> 00:26:08.540 align:middle line:90%
+Yeah, it's a special function.
+
+00:26:08.540 --> 00:26:09.998 align:middle line:84%
+We'll talk about
+them next lecture.
+
+00:26:09.998 --> 00:26:13.070 align:middle line:84%
+It's called a Dunder
+function, double underscore
+
+00:26:13.070 --> 00:26:13.780 align:middle line:90%
+function, Dunder.
+
+00:26:13.780 --> 00:26:17.000 align:middle line:90%
+
+
+00:26:17.000 --> 00:26:17.500 align:middle line:90%
+OK.
+
+00:26:17.500 --> 00:26:19.480 align:middle line:84%
+So the body of this
+function can contain
+
+00:26:19.480 --> 00:26:20.980 align:middle line:90%
+a bunch of initialization code.
+
+00:26:20.980 --> 00:26:22.930 align:middle line:84%
+So anything you'd
+like to initialize
+
+00:26:22.930 --> 00:26:25.330 align:middle line:84%
+when you create an object
+of this type, that's
+
+00:26:25.330 --> 00:26:27.940 align:middle line:90%
+what you stick in here.
+
+00:26:27.940 --> 00:26:30.880 align:middle line:84%
+Usually, most of the
+time, 99% of the time,
+
+00:26:30.880 --> 00:26:35.230 align:middle line:84%
+you want to initialize the
+data that makes up your object.
+
+00:26:35.230 --> 00:26:37.300 align:middle line:84%
+So the data we decided
+makes up our object
+
+00:26:37.300 --> 00:26:40.600 align:middle line:84%
+is how far you are on the
+x-axis and how far away
+
+00:26:40.600 --> 00:26:42.080 align:middle line:90%
+you are on the y-axis.
+
+00:26:42.080 --> 00:26:46.270 align:middle line:84%
+So here, this data that
+I want every single one
+
+00:26:46.270 --> 00:26:47.770 align:middle line:90%
+of my objects to have--
+
+00:26:47.770 --> 00:26:49.510 align:middle line:84%
+a value for x and
+a value for y--
+
+00:26:49.510 --> 00:26:53.320 align:middle line:90%
+is initialized using self.--
+
+00:26:53.320 --> 00:26:56.140 align:middle line:84%
+so self. a variable
+named x and self.
+
+00:26:56.140 --> 00:26:58.040 align:middle line:90%
+a variable named y.
+
+00:26:58.040 --> 00:26:59.550 align:middle line:90%
+And the self.
+
+00:26:59.550 --> 00:27:03.710 align:middle line:84%
+before these variables
+distinguishes these variables,
+
+00:27:03.710 --> 00:27:06.890 align:middle line:84%
+x and y here, from
+regular variables.
+
+00:27:06.890 --> 00:27:10.670 align:middle line:84%
+If I were to just say x
+equals xval and y equals yval,
+
+00:27:10.670 --> 00:27:12.770 align:middle line:84%
+x and y will just be
+regular variables.
+
+00:27:12.770 --> 00:27:14.750 align:middle line:84%
+As soon as my init
+function terminates,
+
+00:27:14.750 --> 00:27:15.950 align:middle line:90%
+those variables are gone.
+
+00:27:15.950 --> 00:27:20.030 align:middle line:84%
+But because I've got
+self.x and self.y,
+
+00:27:20.030 --> 00:27:22.550 align:middle line:84%
+this means that these
+values, x and y,
+
+00:27:22.550 --> 00:27:26.270 align:middle line:84%
+will persist throughout
+the lifetime of my object
+
+00:27:26.270 --> 00:27:28.160 align:middle line:90%
+when I create my actual object.
+
+00:27:28.160 --> 00:27:30.560 align:middle line:84%
+And every single
+object I create will
+
+00:27:30.560 --> 00:27:33.040 align:middle line:90%
+have their own x and y values.
+
+00:27:33.040 --> 00:27:34.900 align:middle line:90%
+Question?
+
+00:27:34.900 --> 00:27:38.530 align:middle line:84%
+STUDENT: Does it have to
+be different to the xval?
+
+00:27:38.530 --> 00:27:41.120 align:middle line:90%
+So kind of self.xval or--
+
+00:27:41.120 --> 00:27:42.790 align:middle line:90%
+ANA BELL: Yeah, good question.
+
+00:27:42.790 --> 00:27:43.690 align:middle line:90%
+Does this self.
+
+00:27:43.690 --> 00:27:46.460 align:middle line:90%
+Thing have to be different?
+
+00:27:46.460 --> 00:27:47.860 align:middle line:90%
+It does not have to be.
+
+00:27:47.860 --> 00:27:52.360 align:middle line:84%
+So you can have self.xval equals
+xval and self.yval equals yval.
+
+00:27:52.360 --> 00:27:55.210 align:middle line:84%
+The reason I did it here is
+to showcase that they actually
+
+00:27:55.210 --> 00:27:57.280 align:middle line:90%
+do not have to be the same.
+
+00:27:57.280 --> 00:27:59.770 align:middle line:84%
+Yeah, they are
+completely different.
+
+00:27:59.770 --> 00:28:02.560 align:middle line:84%
+So self.x is
+different than xval.
+
+00:28:02.560 --> 00:28:05.230 align:middle line:84%
+We just happen to be
+assigning this value
+
+00:28:05.230 --> 00:28:06.690 align:middle line:90%
+to be whatever is passed in.
+
+00:28:06.690 --> 00:28:09.420 align:middle line:90%
+
+
+00:28:09.420 --> 00:28:10.910 align:middle line:90%
+OK.
+
+00:28:10.910 --> 00:28:16.400 align:middle line:84%
+So a little bit of, again, just
+explaining what the self is
+
+00:28:16.400 --> 00:28:18.620 align:middle line:84%
+in the context of a blueprint--
+so if we think about
+
+00:28:18.620 --> 00:28:19.970 align:middle line:90%
+a blueprint in real life--
+
+00:28:19.970 --> 00:28:22.670 align:middle line:84%
+so here, I have a
+blueprint for a room
+
+00:28:22.670 --> 00:28:24.260 align:middle line:90%
+that I might want to create.
+
+00:28:24.260 --> 00:28:26.510 align:middle line:84%
+I don't actually have
+this room created yet.
+
+00:28:26.510 --> 00:28:28.250 align:middle line:90%
+It's just an idea.
+
+00:28:28.250 --> 00:28:35.630 align:middle line:84%
+But what I know is that I'm
+going to use this blueprint
+
+00:28:35.630 --> 00:28:38.420 align:middle line:84%
+to have a room that contains
+two chairs, a coffee
+
+00:28:38.420 --> 00:28:40.130 align:middle line:90%
+table, and a sofa.
+
+00:28:40.130 --> 00:28:42.440 align:middle line:84%
+So in this blueprint, I
+don't have actual rooms
+
+00:28:42.440 --> 00:28:45.500 align:middle line:84%
+that I've implemented
+this thing in.
+
+00:28:45.500 --> 00:28:48.260 align:middle line:84%
+I don't have actual rooms where
+I've put two chairs, a coffee
+
+00:28:48.260 --> 00:28:49.340 align:middle line:90%
+table, and a sofa in.
+
+00:28:49.340 --> 00:28:51.590 align:middle line:90%
+It's just an idea.
+
+00:28:51.590 --> 00:28:55.790 align:middle line:84%
+But self is the way
+that a blueprint
+
+00:28:55.790 --> 00:28:57.920 align:middle line:90%
+accesses its attributes.
+
+00:28:57.920 --> 00:29:02.840 align:middle line:84%
+So if I say self.coffeetable,
+that means if, in the future,
+
+00:29:02.840 --> 00:29:06.230 align:middle line:84%
+I have an actual
+room, self.coffeetable
+
+00:29:06.230 --> 00:29:10.800 align:middle line:84%
+means I'm referring to
+that room's coffee table.
+
+00:29:10.800 --> 00:29:15.480 align:middle line:84%
+So the self is a
+variable that we
+
+00:29:15.480 --> 00:29:22.200 align:middle line:84%
+use to refer to data or to
+attributes for a blueprint
+
+00:29:22.200 --> 00:29:24.720 align:middle line:84%
+when I don't have
+actual rooms created.
+
+00:29:24.720 --> 00:29:27.750 align:middle line:84%
+But once I create
+instances of rooms--
+
+00:29:27.750 --> 00:29:29.610 align:middle line:84%
+so for example here,
+I have something
+
+00:29:29.610 --> 00:29:31.455 align:middle line:90%
+called livingroom created.
+
+00:29:31.455 --> 00:29:32.580 align:middle line:90%
+So I've taken my blueprint.
+
+00:29:32.580 --> 00:29:34.372 align:middle line:84%
+And now, somebody asked
+me to create a room
+
+00:29:34.372 --> 00:29:36.180 align:middle line:90%
+with this blueprint.
+
+00:29:36.180 --> 00:29:38.790 align:middle line:84%
+Now, I no longer
+use self because I
+
+00:29:38.790 --> 00:29:40.660 align:middle line:90%
+have an actual room in hand.
+
+00:29:40.660 --> 00:29:42.960 align:middle line:84%
+So now, I would
+refer to coffee table
+
+00:29:42.960 --> 00:29:46.020 align:middle line:84%
+in this living room as
+livingroom.coffeetable
+
+00:29:46.020 --> 00:29:49.380 align:middle line:84%
+or livingroom's coffeetable,
+no longer self's coffeetable.
+
+00:29:49.380 --> 00:29:54.300 align:middle line:84%
+So self is only used in the
+context of my blueprint.
+
+00:29:54.300 --> 00:29:57.450 align:middle line:84%
+And to bring the
+last point home,
+
+00:29:57.450 --> 00:29:59.190 align:middle line:84%
+the idea that with
+the blueprint you
+
+00:29:59.190 --> 00:30:01.140 align:middle line:84%
+can create many different
+instances, well,
+
+00:30:01.140 --> 00:30:04.560 align:middle line:84%
+here's a living room that
+I've applied my blueprint to.
+
+00:30:04.560 --> 00:30:06.938 align:middle line:84%
+And here's another living
+room, completely different room
+
+00:30:06.938 --> 00:30:09.480 align:middle line:84%
+that somebody asked me to use
+my blueprint for to create it--
+
+00:30:09.480 --> 00:30:11.520 align:middle line:84%
+different chairs,
+different coffee tables,
+
+00:30:11.520 --> 00:30:13.320 align:middle line:90%
+different colored things.
+
+00:30:13.320 --> 00:30:15.030 align:middle line:84%
+These are all
+different instances
+
+00:30:15.030 --> 00:30:20.330 align:middle line:84%
+that I used my one template,
+my one blueprint for the room.
+
+00:30:20.330 --> 00:30:24.080 align:middle line:84%
+So when we're defining a class,
+we don't have actual objects.
+
+00:30:24.080 --> 00:30:26.780 align:middle line:84%
+Again, that's just a
+really big idea here.
+
+00:30:26.780 --> 00:30:29.210 align:middle line:84%
+We're just telling Python,
+I'd like to create this object
+
+00:30:29.210 --> 00:30:30.530 align:middle line:90%
+and this is what it looks like.
+
+00:30:30.530 --> 00:30:33.110 align:middle line:84%
+I'm bundling this data with
+these behaviors together.
+
+00:30:33.110 --> 00:30:36.950 align:middle line:84%
+But I don't have actual objects
+of this type created yet.
+
+00:30:36.950 --> 00:30:39.110 align:middle line:84%
+So let's actually
+create some objects.
+
+00:30:39.110 --> 00:30:42.570 align:middle line:84%
+The code that does
+this is as follows.
+
+00:30:42.570 --> 00:30:47.450 align:middle line:84%
+So I've put the definition
+for my class, the constructor,
+
+00:30:47.450 --> 00:30:49.040 align:middle line:84%
+the init method for
+my class up here,
+
+00:30:49.040 --> 00:30:51.540 align:middle line:84%
+just to remind us
+what it looks like.
+
+00:30:51.540 --> 00:30:55.340 align:middle line:84%
+And with that code, we can now
+start to create actual objects
+
+00:30:55.340 --> 00:30:56.430 align:middle line:90%
+that we can manipulate.
+
+00:30:56.430 --> 00:30:58.100 align:middle line:84%
+So when we created
+something like L
+
+00:30:58.100 --> 00:31:01.820 align:middle line:84%
+is equal to square
+bracket lists 1 comma 2,
+
+00:31:01.820 --> 00:31:04.220 align:middle line:84%
+now I'm creating these
+actual coordinates
+
+00:31:04.220 --> 00:31:06.290 align:middle line:90%
+in my code using my blueprint.
+
+00:31:06.290 --> 00:31:10.650 align:middle line:84%
+So the way we do that is we
+invoke the name of our class.
+
+00:31:10.650 --> 00:31:12.980 align:middle line:84%
+So you say coordinate-- that's
+what we named it, right?
+
+00:31:12.980 --> 00:31:14.150 align:middle line:90%
+That's our data type.
+
+00:31:14.150 --> 00:31:16.940 align:middle line:84%
+And here, I'm passing in
+every single parameter
+
+00:31:16.940 --> 00:31:18.410 align:middle line:90%
+except for self.
+
+00:31:18.410 --> 00:31:23.570 align:middle line:84%
+So I initialized a coordinate
+object using xval and yval.
+
+00:31:23.570 --> 00:31:25.700 align:middle line:84%
+So I need to put
+in two parameters
+
+00:31:25.700 --> 00:31:28.040 align:middle line:90%
+here for xval and yval.
+
+00:31:28.040 --> 00:31:32.780 align:middle line:84%
+And self actually becomes this
+thing that I just created,
+
+00:31:32.780 --> 00:31:35.150 align:middle line:90%
+this object.
+
+00:31:35.150 --> 00:31:37.880 align:middle line:84%
+So coordinate 3 comma
+4 is now an object
+
+00:31:37.880 --> 00:31:43.030 align:middle line:84%
+that's being referenced by
+a variable named C, which
+
+00:31:43.030 --> 00:31:44.930 align:middle line:90%
+is why I'm not passing in self.
+
+00:31:44.930 --> 00:31:47.140 align:middle line:84%
+So it's kind of
+weird to think about.
+
+00:31:47.140 --> 00:31:49.390 align:middle line:84%
+But now, I have one
+object in memory.
+
+00:31:49.390 --> 00:31:51.010 align:middle line:90%
+It's referenced by name C.
+
+00:31:51.010 --> 00:31:54.460 align:middle line:84%
+And on the next line, I have
+another object in memory.
+
+00:31:54.460 --> 00:31:56.980 align:middle line:84%
+Again, I've invoked the name
+of my class, coordinate.
+
+00:31:56.980 --> 00:31:59.800 align:middle line:84%
+This particular object,
+x value will be 0
+
+00:31:59.800 --> 00:32:03.220 align:middle line:84%
+and y value will be 0,
+so different than the one
+
+00:32:03.220 --> 00:32:05.350 align:middle line:90%
+I just did on the previous line.
+
+00:32:05.350 --> 00:32:07.720 align:middle line:84%
+But it'll have the
+same structure.
+
+00:32:07.720 --> 00:32:10.420 align:middle line:84%
+So they will both have
+some x and y-value.
+
+00:32:10.420 --> 00:32:12.820 align:middle line:84%
+They'll just be different
+from each other.
+
+00:32:12.820 --> 00:32:15.420 align:middle line:84%
+But they'll both have x
+and they'll both have y.
+
+00:32:15.420 --> 00:32:19.270 align:middle line:84%
+The one I've named down
+here is going to be origin.
+
+00:32:19.270 --> 00:32:21.240 align:middle line:84%
+So I've got two objects
+of type coordinate.
+
+00:32:21.240 --> 00:32:23.550 align:middle line:84%
+One is referenced
+by C, by name C.
+
+00:32:23.550 --> 00:32:26.580 align:middle line:84%
+And the other one is
+referenced by name origin.
+
+00:32:26.580 --> 00:32:28.730 align:middle line:84%
+So now that I have
+these objects in hand,
+
+00:32:28.730 --> 00:32:31.340 align:middle line:84%
+I can access any of
+their attributes.
+
+00:32:31.340 --> 00:32:34.130 align:middle line:84%
+And Python will grab
+for me the attribute
+
+00:32:34.130 --> 00:32:36.590 align:middle line:90%
+of that particular object.
+
+00:32:36.590 --> 00:32:40.540 align:middle line:84%
+So here, I've got this thing
+called dot notation, which
+
+00:32:40.540 --> 00:32:41.320 align:middle line:90%
+we've seen before.
+
+00:32:41.320 --> 00:32:44.510 align:middle line:84%
+And I'll explain it again
+in a couple of slides.
+
+00:32:44.510 --> 00:32:49.000 align:middle line:84%
+But the dot notation tells
+Python to access the x data
+
+00:32:49.000 --> 00:32:54.170 align:middle line:84%
+attribute of object C.
+So this will grab for me
+
+00:32:54.170 --> 00:32:57.410 align:middle line:90%
+the x value of C, 3.
+
+00:32:57.410 --> 00:33:03.600 align:middle line:84%
+And the next line will grab for
+me the x value of origin, 0.
+
+00:33:03.600 --> 00:33:08.010 align:middle line:84%
+And this is all made
+possible because x--
+
+00:33:08.010 --> 00:33:11.940 align:middle line:84%
+and we could also access y-- x
+and y were defined in the class
+
+00:33:11.940 --> 00:33:14.060 align:middle line:90%
+definition using self.
+
+00:33:14.060 --> 00:33:17.310 align:middle line:84%
+If I didn't use self., those
+would just be variables.
+
+00:33:17.310 --> 00:33:18.990 align:middle line:84%
+And as soon as I
+created my object,
+
+00:33:18.990 --> 00:33:21.115 align:middle line:84%
+they would have gone away
+because that function had
+
+00:33:21.115 --> 00:33:21.810 align:middle line:90%
+terminated.
+
+00:33:21.810 --> 00:33:24.480 align:middle line:84%
+But in order to have
+these variables, x and y,
+
+00:33:24.480 --> 00:33:27.210 align:middle line:84%
+persist throughout the
+lifetime of my object,
+
+00:33:27.210 --> 00:33:30.690 align:middle line:84%
+I've defined them using
+self.x and self.y.
+
+00:33:30.690 --> 00:33:32.970 align:middle line:84%
+So any object I've created
+that's of type coordinate
+
+00:33:32.970 --> 00:33:36.370 align:middle line:84%
+will have some value for
+x and some value for y.
+
+00:33:36.370 --> 00:33:40.390 align:middle line:84%
+So we can access that value
+through this notation.
+
+00:33:40.390 --> 00:33:41.650 align:middle line:90%
+Does that make sense so far?
+
+00:33:41.650 --> 00:33:42.400 align:middle line:90%
+Is that all right?
+
+00:33:42.400 --> 00:33:44.940 align:middle line:90%
+
+
+00:33:44.940 --> 00:33:46.380 align:middle line:90%
+OK.
+
+00:33:46.380 --> 00:33:49.540 align:middle line:84%
+So we're going to visualize this
+in a slightly different way.
+
+00:33:49.540 --> 00:33:52.390 align:middle line:84%
+So the exact same code
+as on the previous slide,
+
+00:33:52.390 --> 00:33:56.410 align:middle line:84%
+we're now going to do it
+in our little memory type.
+
+00:33:56.410 --> 00:33:59.850 align:middle line:84%
+So here, I have C is equal to
+coordinate 3, 4, exactly what I
+
+00:33:59.850 --> 00:34:01.180 align:middle line:90%
+had on the previous slide.
+
+00:34:01.180 --> 00:34:03.480 align:middle line:84%
+So in memory, the way
+you think about it
+
+00:34:03.480 --> 00:34:06.740 align:middle line:84%
+is as we've been thinking
+about other objects.
+
+00:34:06.740 --> 00:34:07.740 align:middle line:90%
+It's not much different.
+
+00:34:07.740 --> 00:34:10.260 align:middle line:90%
+We have C is our name.
+
+00:34:10.260 --> 00:34:12.929 align:middle line:84%
+And it's bound to an
+object of type coordinate.
+
+00:34:12.929 --> 00:34:15.750 align:middle line:84%
+It just so happens we
+define this object.
+
+00:34:15.750 --> 00:34:16.980 align:middle line:90%
+But it's the same idea.
+
+00:34:16.980 --> 00:34:19.080 align:middle line:84%
+I've got a name
+bound to some object.
+
+00:34:19.080 --> 00:34:24.719 align:middle line:84%
+And this object has its own
+x value and its own y value.
+
+00:34:24.719 --> 00:34:28.389 align:middle line:84%
+So when you evaluate c.x, Python
+goes into memory and says,
+
+00:34:28.389 --> 00:34:29.610 align:middle line:90%
+hey, what type is C?
+
+00:34:29.610 --> 00:34:31.469 align:middle line:84%
+And it says, oh, it's
+a coordinate object.
+
+00:34:31.469 --> 00:34:34.230 align:middle line:84%
+Does coordinate object have
+a data attribute named x?
+
+00:34:34.230 --> 00:34:36.540 align:middle line:84%
+Yes, it does, because
+it looks at the init.
+
+00:34:36.540 --> 00:34:38.520 align:middle line:84%
+And then it says,
+well, what's its value?
+
+00:34:38.520 --> 00:34:39.090 align:middle line:90%
+It's 3.
+
+00:34:39.090 --> 00:34:42.780 align:middle line:90%
+And so it just returns that.
+
+00:34:42.780 --> 00:34:48.020 align:middle line:84%
+And so the next
+three lines here are
+
+00:34:48.020 --> 00:34:52.909 align:middle line:84%
+slightly different from two
+slides ago, but very similar.
+
+00:34:52.909 --> 00:34:56.389 align:middle line:84%
+a is equal to 0 creates for
+me a variable named a bound
+
+00:34:56.389 --> 00:34:58.850 align:middle line:84%
+to the value 0, just
+to showcase that it's
+
+00:34:58.850 --> 00:35:01.790 align:middle line:84%
+exactly the same as having
+a variable named c bound
+
+00:35:01.790 --> 00:35:04.370 align:middle line:90%
+to this object that we created.
+
+00:35:04.370 --> 00:35:09.470 align:middle line:84%
+And then when I say orig equals
+Coordinate(a,a), Python says,
+
+00:35:09.470 --> 00:35:14.570 align:middle line:84%
+all right, well, here's
+a name orig, for origin.
+
+00:35:14.570 --> 00:35:15.410 align:middle line:90%
+What is it bound to?
+
+00:35:15.410 --> 00:35:18.230 align:middle line:84%
+Well, it's also bound to an
+object of type coordinate.
+
+00:35:18.230 --> 00:35:21.370 align:middle line:90%
+And it's an object we defined.
+
+00:35:21.370 --> 00:35:23.370 align:middle line:84%
+So we defined an object
+of type coordinate
+
+00:35:23.370 --> 00:35:24.940 align:middle line:90%
+having an x and y value.
+
+00:35:24.940 --> 00:35:25.740 align:middle line:90%
+So here they are.
+
+00:35:25.740 --> 00:35:27.870 align:middle line:90%
+And they're originally 0.
+
+00:35:27.870 --> 00:35:30.310 align:middle line:84%
+They're set to 0 when
+I created this object.
+
+00:35:30.310 --> 00:35:34.140 align:middle line:84%
+So when I say orig.x,
+Python will look up orig.
+
+00:35:34.140 --> 00:35:36.180 align:middle line:84%
+It's going to say,
+hey, what type are you?
+
+00:35:36.180 --> 00:35:37.320 align:middle line:90%
+Oh, you're a coordinate.
+
+00:35:37.320 --> 00:35:39.060 align:middle line:90%
+Do you have an x value?
+
+00:35:39.060 --> 00:35:39.642 align:middle line:90%
+You do.
+
+00:35:39.642 --> 00:35:41.100 align:middle line:84%
+That's what we
+defined in the init.
+
+00:35:41.100 --> 00:35:42.780 align:middle line:90%
+Let me grab that value from you.
+
+00:35:42.780 --> 00:35:47.660 align:middle line:90%
+
+
+00:35:47.660 --> 00:35:50.390 align:middle line:84%
+So we're just manipulating
+objects in memory.
+
+00:35:50.390 --> 00:35:53.480 align:middle line:84%
+Now that we've written the code
+to work with objects that we
+
+00:35:53.480 --> 00:35:55.280 align:middle line:84%
+created, we're just
+creating a whole bunch
+
+00:35:55.280 --> 00:35:58.443 align:middle line:84%
+of these objects in memory, and
+then grabbing their x values.
+
+00:35:58.443 --> 00:36:00.110 align:middle line:84%
+And then we're going
+to get the distance
+
+00:36:00.110 --> 00:36:04.270 align:middle line:90%
+between two objects in a bit.
+
+00:36:04.270 --> 00:36:08.460 align:middle line:84%
+One more way to show you
+that exact same code is
+
+00:36:08.460 --> 00:36:10.000 align:middle line:90%
+to visualize it.
+
+00:36:10.000 --> 00:36:14.100 align:middle line:84%
+So here is the code,
+the entire code
+
+00:36:14.100 --> 00:36:17.830 align:middle line:90%
+as you would have it in a file.
+
+00:36:17.830 --> 00:36:19.920 align:middle line:84%
+So you would have
+all this altogether.
+
+00:36:19.920 --> 00:36:24.600 align:middle line:84%
+The gray box is the
+definition for my object type.
+
+00:36:24.600 --> 00:36:27.750 align:middle line:84%
+And the blue box is
+me using this object
+
+00:36:27.750 --> 00:36:30.320 align:middle line:90%
+that I just created.
+
+00:36:30.320 --> 00:36:32.940 align:middle line:84%
+I've just separated that
+out just for clarity.
+
+00:36:32.940 --> 00:36:37.100 align:middle line:84%
+So when I have my gray box,
+there's nothing to display.
+
+00:36:37.100 --> 00:36:40.510 align:middle line:90%
+It just sits in memory.
+
+00:36:40.510 --> 00:36:43.090 align:middle line:84%
+And Python knows of this
+type of class coordinate
+
+00:36:43.090 --> 00:36:45.310 align:middle line:84%
+that has two data attributes--
+the things that I've
+
+00:36:45.310 --> 00:36:48.280 align:middle line:90%
+defined using self., x and y.
+
+00:36:48.280 --> 00:36:51.400 align:middle line:84%
+When I create c is equal
+to Coordinate(3,4),
+
+00:36:51.400 --> 00:36:53.380 align:middle line:84%
+visualizing what we're
+trying to do here, here,
+
+00:36:53.380 --> 00:36:55.720 align:middle line:84%
+I've got this object
+whose name is c.
+
+00:36:55.720 --> 00:36:58.210 align:middle line:90%
+And it's at 3 comma 4.
+
+00:36:58.210 --> 00:37:01.330 align:middle line:84%
+And then I've got this
+object named origin.
+
+00:37:01.330 --> 00:37:04.750 align:middle line:84%
+And its x and y
+values are 0 comma 0.
+
+00:37:04.750 --> 00:37:06.880 align:middle line:84%
+So because I've
+created these objects
+
+00:37:06.880 --> 00:37:09.550 align:middle line:84%
+using the same blueprint,
+the coordinate blueprint
+
+00:37:09.550 --> 00:37:11.470 align:middle line:84%
+that I've defined
+up in the gray, that
+
+00:37:11.470 --> 00:37:14.470 align:middle line:84%
+means every object that
+I've created, c and origin,
+
+00:37:14.470 --> 00:37:18.100 align:middle line:90%
+has a self.x and self.y value.
+
+00:37:18.100 --> 00:37:21.580 align:middle line:84%
+It just so happens that the
+actual values for x and y
+
+00:37:21.580 --> 00:37:25.460 align:middle line:84%
+are different between
+these two objects.
+
+00:37:25.460 --> 00:37:29.240 align:middle line:84%
+So when I grab origin.x,
+I'm looking up origin
+
+00:37:29.240 --> 00:37:32.540 align:middle line:84%
+and I'm grabbing its x
+value, 0, so just another way
+
+00:37:32.540 --> 00:37:35.890 align:middle line:90%
+to visualize it.
+
+00:37:35.890 --> 00:37:37.030 align:middle line:90%
+OK.
+
+00:37:37.030 --> 00:37:39.890 align:middle line:84%
+Is everyone OK with
+these data attributes?
+
+00:37:39.890 --> 00:37:41.390 align:middle line:90%
+All right.
+
+00:37:41.390 --> 00:37:44.250 align:middle line:90%
+So now, let's add a method.
+
+00:37:44.250 --> 00:37:47.300 align:middle line:84%
+So a method, remember,
+is just a function
+
+00:37:47.300 --> 00:37:50.870 align:middle line:84%
+that works with an
+object of this type.
+
+00:37:50.870 --> 00:37:55.820 align:middle line:84%
+So the way that we tell Python
+we'd like to create a method
+
+00:37:55.820 --> 00:38:00.670 align:middle line:84%
+is by passing in self
+as the first parameter.
+
+00:38:00.670 --> 00:38:06.090 align:middle line:84%
+So let's create this
+function named distance.
+
+00:38:06.090 --> 00:38:08.310 align:middle line:84%
+If you look in the actual
+Python code for today,
+
+00:38:08.310 --> 00:38:10.680 align:middle line:84%
+I've got two more
+functions-- one
+
+00:38:10.680 --> 00:38:13.560 align:middle line:84%
+to get the x value of this
+current object and one
+
+00:38:13.560 --> 00:38:14.550 align:middle line:90%
+to get the y value.
+
+00:38:14.550 --> 00:38:16.080 align:middle line:84%
+But those are not
+as interesting.
+
+00:38:16.080 --> 00:38:19.540 align:middle line:84%
+This distance one is
+interesting, though.
+
+00:38:19.540 --> 00:38:23.070 align:middle line:84%
+So I would like to
+create this function
+
+00:38:23.070 --> 00:38:25.810 align:middle line:84%
+that only works with an
+object of type coordinate.
+
+00:38:25.810 --> 00:38:28.570 align:middle line:84%
+So what we've done so far
+is these lines up here.
+
+00:38:28.570 --> 00:38:31.000 align:middle line:84%
+So now, we've got def--
+again, it's just the function.
+
+00:38:31.000 --> 00:38:32.640 align:middle line:90%
+So we've got def--
+
+00:38:32.640 --> 00:38:36.360 align:middle line:84%
+name of it, distance,
+and then the parameters.
+
+00:38:36.360 --> 00:38:38.010 align:middle line:84%
+So again, since this
+is a function that
+
+00:38:38.010 --> 00:38:40.830 align:middle line:84%
+only works with an object
+of type coordinate,
+
+00:38:40.830 --> 00:38:43.840 align:middle line:84%
+I need to put self as
+the first parameter.
+
+00:38:43.840 --> 00:38:48.640 align:middle line:84%
+And this self will help
+us refer to the object
+
+00:38:48.640 --> 00:38:51.190 align:middle line:90%
+when I call the method on it.
+
+00:38:51.190 --> 00:38:53.870 align:middle line:84%
+So if self is the
+first parameter,
+
+00:38:53.870 --> 00:38:59.020 align:middle line:84%
+that means that this distance
+method will be called on self.
+
+00:38:59.020 --> 00:39:02.230 align:middle line:84%
+So when I have an
+actual object in hand
+
+00:39:02.230 --> 00:39:05.680 align:middle line:84%
+that I'm calling distance
+on, the self parameter
+
+00:39:05.680 --> 00:39:07.960 align:middle line:84%
+will take on the value
+that is that object.
+
+00:39:07.960 --> 00:39:10.750 align:middle line:84%
+We're going to see
+this in the next slide.
+
+00:39:10.750 --> 00:39:13.660 align:middle line:84%
+So self is the thing that
+I'm calling this function on.
+
+00:39:13.660 --> 00:39:15.520 align:middle line:84%
+And then what other
+parameters do I
+
+00:39:15.520 --> 00:39:18.490 align:middle line:90%
+want to give to this function?
+
+00:39:18.490 --> 00:39:21.670 align:middle line:84%
+Well, I want to find the
+distance between my self,
+
+00:39:21.670 --> 00:39:24.160 align:middle line:84%
+so this object that I'm
+going to call distance on,
+
+00:39:24.160 --> 00:39:27.310 align:middle line:90%
+and another coordinate object.
+
+00:39:27.310 --> 00:39:32.560 align:middle line:84%
+Now, other than maybe
+a docstring here
+
+00:39:32.560 --> 00:39:35.770 align:middle line:84%
+that says, hey,
+warning, other should
+
+00:39:35.770 --> 00:39:39.130 align:middle line:84%
+be an object of type coordinate,
+there isn't really anything
+
+00:39:39.130 --> 00:39:43.390 align:middle line:84%
+that enforces the type of other
+when you make a function call--
+
+00:39:43.390 --> 00:39:45.460 align:middle line:90%
+or when you make a method call.
+
+00:39:45.460 --> 00:39:48.760 align:middle line:84%
+So you can call
+this distance method
+
+00:39:48.760 --> 00:39:51.610 align:middle line:84%
+with other being an
+integer, which is not
+
+00:39:51.610 --> 00:39:53.110 align:middle line:90%
+an object of type coordinate.
+
+00:39:53.110 --> 00:39:55.210 align:middle line:84%
+The code will run,
+but will immediately
+
+00:39:55.210 --> 00:39:59.120 align:middle line:84%
+crash because of
+what's going on inside.
+
+00:39:59.120 --> 00:40:01.270 align:middle line:84%
+So the only way
+this code will work
+
+00:40:01.270 --> 00:40:03.850 align:middle line:84%
+is if you're calling
+it on an object of type
+
+00:40:03.850 --> 00:40:06.320 align:middle line:90%
+coordinate for the other.
+
+00:40:06.320 --> 00:40:08.272 align:middle line:84%
+So the reason for
+that is because, well,
+
+00:40:08.272 --> 00:40:10.480 align:middle line:84%
+when we think about grabbing
+the distance between two
+
+00:40:10.480 --> 00:40:13.850 align:middle line:84%
+objects that are
+coordinates in a 2D plane,
+
+00:40:13.850 --> 00:40:17.260 align:middle line:84%
+we take the difference
+between the x values,
+
+00:40:17.260 --> 00:40:19.510 align:middle line:84%
+square that, take the
+difference between the y values,
+
+00:40:19.510 --> 00:40:20.380 align:middle line:90%
+square that--
+
+00:40:20.380 --> 00:40:25.240 align:middle line:84%
+Pythagoras-- add those two
+together, take the square root.
+
+00:40:25.240 --> 00:40:28.020 align:middle line:84%
+So if I'm calling
+this distance method
+
+00:40:28.020 --> 00:40:31.350 align:middle line:84%
+on an object of type
+coordinate, i.e. self,
+
+00:40:31.350 --> 00:40:34.450 align:middle line:90%
+how do I grab my self's x value?
+
+00:40:34.450 --> 00:40:37.150 align:middle line:90%
+Well, I just say self.x.
+
+00:40:37.150 --> 00:40:39.310 align:middle line:90%
+My x value, what is it?
+
+00:40:39.310 --> 00:40:41.770 align:middle line:84%
+And then I would
+like to subtract that
+
+00:40:41.770 --> 00:40:45.753 align:middle line:84%
+from the other coordinate
+object's x value.
+
+00:40:45.753 --> 00:40:47.170 align:middle line:84%
+What's my other
+coordinate object?
+
+00:40:47.170 --> 00:40:49.670 align:middle line:84%
+It's the thing that I'm
+passing in as a parameter.
+
+00:40:49.670 --> 00:40:52.110 align:middle line:90%
+So grab their x value.
+
+00:40:52.110 --> 00:40:54.650 align:middle line:84%
+So if I take self.x
+minus other.x,
+
+00:40:54.650 --> 00:40:56.900 align:middle line:84%
+Python will grab my
+x value, subtract it
+
+00:40:56.900 --> 00:40:59.750 align:middle line:84%
+from other's x
+value, square that.
+
+00:40:59.750 --> 00:41:02.300 align:middle line:84%
+We do the exact
+same thing with y.
+
+00:41:02.300 --> 00:41:06.050 align:middle line:84%
+We grab my y value, subtract
+it from other's y value,
+
+00:41:06.050 --> 00:41:06.750 align:middle line:90%
+square that.
+
+00:41:06.750 --> 00:41:09.140 align:middle line:84%
+And then the rest
+is just Pythagoras.
+
+00:41:09.140 --> 00:41:11.120 align:middle line:84%
+Add those two and
+take the square root.
+
+00:41:11.120 --> 00:41:13.960 align:middle line:84%
+And you take it to
+the power of 1/2.
+
+00:41:13.960 --> 00:41:16.930 align:middle line:84%
+And this function is just
+a regular function other
+
+00:41:16.930 --> 00:41:19.780 align:middle line:84%
+than the self being
+the first parameter
+
+00:41:19.780 --> 00:41:23.350 align:middle line:84%
+and us working with data
+attributes of my self
+
+00:41:23.350 --> 00:41:26.260 align:middle line:84%
+and potentially
+other parameters.
+
+00:41:26.260 --> 00:41:28.420 align:middle line:84%
+But you can see it
+returns a value.
+
+00:41:28.420 --> 00:41:33.110 align:middle line:84%
+It has the def, the name,
+and things like that.
+
+00:41:33.110 --> 00:41:35.830 align:middle line:84%
+So the way we're going to use
+this method that we just wrote
+
+00:41:35.830 --> 00:41:37.030 align:middle line:90%
+is using the dot operator.
+
+00:41:37.030 --> 00:41:41.680 align:middle line:84%
+Just like we accessed a
+data attribute of an object
+
+00:41:41.680 --> 00:41:45.430 align:middle line:84%
+that I created, I can access
+a procedural attribute,
+
+00:41:45.430 --> 00:41:48.620 align:middle line:84%
+i.e. a method of an
+object I just created.
+
+00:41:48.620 --> 00:41:51.100 align:middle line:84%
+So we use the dot
+operator for this.
+
+00:41:51.100 --> 00:41:53.830 align:middle line:84%
+The thing before the
+dot is the object
+
+00:41:53.830 --> 00:41:58.000 align:middle line:84%
+I would like to call
+the method on dot
+
+00:41:58.000 --> 00:42:00.450 align:middle line:84%
+the name of the method
+I'd like to call.
+
+00:42:00.450 --> 00:42:03.010 align:middle line:84%
+And in parentheses,
+it's just a function.
+
+00:42:03.010 --> 00:42:06.820 align:middle line:84%
+So I need to give it any
+parameters this method expects.
+
+00:42:06.820 --> 00:42:08.690 align:middle line:84%
+Now this, should
+look very familiar.
+
+00:42:08.690 --> 00:42:12.160 align:middle line:84%
+We introduced dot notation
+when we worked with lists.
+
+00:42:12.160 --> 00:42:14.160 align:middle line:90%
+Remember that?
+
+00:42:14.160 --> 00:42:16.340 align:middle line:84%
+And I said, when we
+work with a list,
+
+00:42:16.340 --> 00:42:18.620 align:middle line:84%
+you, for now, have
+to remember why
+
+00:42:18.620 --> 00:42:21.920 align:middle line:84%
+we use this special way
+of writing this function.
+
+00:42:21.920 --> 00:42:23.390 align:middle line:90%
+But it was the same idea.
+
+00:42:23.390 --> 00:42:25.070 align:middle line:84%
+The thing before
+the dot was the list
+
+00:42:25.070 --> 00:42:28.100 align:middle line:84%
+I wanted to apply
+the function to.
+
+00:42:28.100 --> 00:42:31.070 align:middle line:84%
+So my_list is the name
+of a list variable.
+
+00:42:31.070 --> 00:42:33.140 align:middle line:84%
+I wanted to apply
+the function append.
+
+00:42:33.140 --> 00:42:37.080 align:middle line:84%
+And it happened to take
+an integer as a parameter.
+
+00:42:37.080 --> 00:42:39.540 align:middle line:84%
+And same with sort here
+is also another one.
+
+00:42:39.540 --> 00:42:41.250 align:middle line:84%
+But this one didn't
+take any parameters.
+
+00:42:41.250 --> 00:42:44.040 align:middle line:84%
+But it's the same
+idea, the dot notation.
+
+00:42:44.040 --> 00:42:49.580 align:middle line:84%
+So in terms of our class, here,
+I've got two corded objects.
+
+00:42:49.580 --> 00:42:53.060 align:middle line:84%
+And I've got a dot
+notation being used here
+
+00:42:53.060 --> 00:42:56.780 align:middle line:84%
+to find the distance between
+one object and another one.
+
+00:42:56.780 --> 00:42:58.780 align:middle line:84%
+So the thing before
+the dot is an object
+
+00:42:58.780 --> 00:43:01.150 align:middle line:84%
+I would like to use
+the distance method on.
+
+00:43:01.150 --> 00:43:04.960 align:middle line:84%
+Pick one of them, c.distance,
+the name of the method I
+
+00:43:04.960 --> 00:43:06.160 align:middle line:90%
+would like to call.
+
+00:43:06.160 --> 00:43:10.300 align:middle line:84%
+And in parentheses, I've got
+another coordinate object,
+
+00:43:10.300 --> 00:43:11.260 align:middle line:90%
+orig.
+
+00:43:11.260 --> 00:43:17.270 align:middle line:90%
+So here, I am using the class.
+
+00:43:17.270 --> 00:43:20.360 align:middle line:84%
+And I've got actual
+values, actual objects
+
+00:43:20.360 --> 00:43:21.980 align:middle line:90%
+that I'm manipulating--
+
+00:43:21.980 --> 00:43:23.375 align:middle line:90%
+c and orig.
+
+00:43:23.375 --> 00:43:27.030 align:middle line:90%
+
+
+00:43:27.030 --> 00:43:29.760 align:middle line:84%
+So this might look
+a little bit weird.
+
+00:43:29.760 --> 00:43:31.860 align:middle line:84%
+But when we actually call
+the function, remember,
+
+00:43:31.860 --> 00:43:33.150 align:middle line:90%
+we omitted self--
+
+00:43:33.150 --> 00:43:36.240 align:middle line:84%
+when we omitted--
+sorry, we omitted self
+
+00:43:36.240 --> 00:43:37.800 align:middle line:90%
+when we made this function call.
+
+00:43:37.800 --> 00:43:39.990 align:middle line:84%
+But that's because
+self implicitly
+
+00:43:39.990 --> 00:43:43.140 align:middle line:84%
+becomes the thing before
+the dot, the thing you're
+
+00:43:43.140 --> 00:43:46.100 align:middle line:90%
+calling this method on.
+
+00:43:46.100 --> 00:43:48.510 align:middle line:84%
+So let's visualize
+that in our memory.
+
+00:43:48.510 --> 00:43:50.900 align:middle line:84%
+So here, I've got my class
+definition for a coordinate.
+
+00:43:50.900 --> 00:43:54.500 align:middle line:84%
+It has some data attributes
+and some procedural attributes.
+
+00:43:54.500 --> 00:43:58.130 align:middle line:84%
+I've got these two
+objects being created.
+
+00:43:58.130 --> 00:44:00.738 align:middle line:84%
+c is this object of
+type coordinate. orig is
+
+00:44:00.738 --> 00:44:02.030 align:middle line:90%
+this object of type coordinate.
+
+00:44:02.030 --> 00:44:03.720 align:middle line:84%
+They've got different
+x and y values.
+
+00:44:03.720 --> 00:44:07.890 align:middle line:84%
+But they both have
+some x and y values.
+
+00:44:07.890 --> 00:44:13.090 align:middle line:84%
+When I make a
+function call to c--
+
+00:44:13.090 --> 00:44:16.270 align:middle line:84%
+sorry, a method
+call on c, Python
+
+00:44:16.270 --> 00:44:19.680 align:middle line:84%
+says, all right, let me look
+at this thing before the dot.
+
+00:44:19.680 --> 00:44:20.340 align:middle line:90%
+What is it?
+
+00:44:20.340 --> 00:44:22.050 align:middle line:84%
+It's an object of
+type coordinate.
+
+00:44:22.050 --> 00:44:24.960 align:middle line:90%
+
+
+00:44:24.960 --> 00:44:27.600 align:middle line:84%
+Then it looks at the method
+you're trying to call,
+
+00:44:27.600 --> 00:44:28.590 align:middle line:90%
+distance.
+
+00:44:28.590 --> 00:44:32.070 align:middle line:84%
+It says, hey, does coordinate
+have a distance method defined?
+
+00:44:32.070 --> 00:44:33.180 align:middle line:90%
+Why, yes, it does.
+
+00:44:33.180 --> 00:44:34.953 align:middle line:90%
+We just wrote it.
+
+00:44:34.953 --> 00:44:36.370 align:middle line:84%
+And then it says,
+all right, well,
+
+00:44:36.370 --> 00:44:38.080 align:middle line:84%
+let me call this
+distance method.
+
+00:44:38.080 --> 00:44:44.410 align:middle line:84%
+It's going to set self as
+c, the thing before the dot.
+
+00:44:44.410 --> 00:44:47.770 align:middle line:84%
+And any other parameters will
+be set in order to whatever
+
+00:44:47.770 --> 00:44:49.070 align:middle line:90%
+is being passed in here.
+
+00:44:49.070 --> 00:44:52.990 align:middle line:84%
+So orig will become
+the other parameter
+
+00:44:52.990 --> 00:44:55.105 align:middle line:84%
+from my definition
+for that function.
+
+00:44:55.105 --> 00:44:59.540 align:middle line:90%
+
+
+00:44:59.540 --> 00:45:03.742 align:middle line:84%
+So this is just the conventional
+way of calling methods.
+
+00:45:03.742 --> 00:45:05.200 align:middle line:84%
+And it's the way
+we've been working
+
+00:45:05.200 --> 00:45:07.970 align:middle line:84%
+with lists, and dictionaries,
+and things like that.
+
+00:45:07.970 --> 00:45:12.520 align:middle line:84%
+So again, we've got some object,
+the thing before the dot,
+
+00:45:12.520 --> 00:45:14.005 align:middle line:90%
+some method to run.
+
+00:45:14.005 --> 00:45:16.530 align:middle line:90%
+
+
+00:45:16.530 --> 00:45:19.320 align:middle line:84%
+And when we call it this
+way, the thing before the dot
+
+00:45:19.320 --> 00:45:22.140 align:middle line:84%
+becomes self in our
+class definition,
+
+00:45:22.140 --> 00:45:23.580 align:middle line:90%
+in our method definition.
+
+00:45:23.580 --> 00:45:25.500 align:middle line:84%
+And then all the
+other parameters
+
+00:45:25.500 --> 00:45:30.310 align:middle line:84%
+become assigned one by
+one, except for self.
+
+00:45:30.310 --> 00:45:33.220 align:middle line:84%
+Now, to demystify
+this, I would like
+
+00:45:33.220 --> 00:45:35.770 align:middle line:84%
+to show you what this is
+actually equivalent to.
+
+00:45:35.770 --> 00:45:38.050 align:middle line:84%
+So we can run the
+function, the method
+
+00:45:38.050 --> 00:45:43.720 align:middle line:84%
+that we defined by actually
+passing in a value for self,
+
+00:45:43.720 --> 00:45:45.860 align:middle line:90%
+if this is clearer to you.
+
+00:45:45.860 --> 00:45:50.410 align:middle line:84%
+So in that case, the thing
+before the dot cannot be
+
+00:45:50.410 --> 00:45:55.060 align:middle line:84%
+an object because if it is an
+object of the type coordinate,
+
+00:45:55.060 --> 00:45:57.700 align:middle line:84%
+then Python will say, well,
+this is the object I'm running
+
+00:45:57.700 --> 00:45:58.900 align:middle line:90%
+the distance method on.
+
+00:45:58.900 --> 00:46:02.260 align:middle line:84%
+So to demystify this,
+you can actually
+
+00:46:02.260 --> 00:46:04.990 align:middle line:84%
+invoke the name of
+the class, the object
+
+00:46:04.990 --> 00:46:07.990 align:middle line:84%
+that you're trying to create,
+the name, the data type,
+
+00:46:07.990 --> 00:46:08.890 align:middle line:90%
+coordinate.
+
+00:46:08.890 --> 00:46:11.140 align:middle line:84%
+And then Python says,
+oh, I see, you're
+
+00:46:11.140 --> 00:46:14.680 align:middle line:90%
+calling the name of the class.
+
+00:46:14.680 --> 00:46:16.140 align:middle line:90%
+It's not an object.
+
+00:46:16.140 --> 00:46:18.480 align:middle line:84%
+So then what do
+you want from me?
+
+00:46:18.480 --> 00:46:20.160 align:middle line:84%
+The thing after the
+dot says, I would
+
+00:46:20.160 --> 00:46:22.660 align:middle line:90%
+like to run this method on you.
+
+00:46:22.660 --> 00:46:26.190 align:middle line:84%
+But now, it needs all the
+parameters in the parameter
+
+00:46:26.190 --> 00:46:28.760 align:middle line:90%
+list, including self.
+
+00:46:28.760 --> 00:46:32.780 align:middle line:84%
+So here, I would have
+to give it explicitly
+
+00:46:32.780 --> 00:46:35.870 align:middle line:84%
+c comma 0 instead of
+just 0 because the thing
+
+00:46:35.870 --> 00:46:39.440 align:middle line:84%
+before the dot is the name of
+my class, not an actual object,
+
+00:46:39.440 --> 00:46:40.680 align:middle line:90%
+like it is on this side.
+
+00:46:40.680 --> 00:46:43.370 align:middle line:84%
+So this is actually the
+conventional way to do this.
+
+00:46:43.370 --> 00:46:45.650 align:middle line:84%
+This is the shorthand, the
+Pythonic way to do this.
+
+00:46:45.650 --> 00:46:50.570 align:middle line:84%
+But this hopefully
+demystifies the self deal
+
+00:46:50.570 --> 00:46:54.800 align:middle line:84%
+and the way we actually set that
+first parameter to the thing
+
+00:46:54.800 --> 00:46:57.490 align:middle line:90%
+before the dot.
+
+00:46:57.490 --> 00:46:58.000 align:middle line:90%
+All right.
+
+00:46:58.000 --> 00:46:58.650 align:middle line:90%
+Yes, question?
+
+00:46:58.650 --> 00:47:00.290 align:middle line:84%
+STUDENT: When you were
+going to do the first one,
+
+00:47:00.290 --> 00:47:02.520 align:middle line:84%
+you had more than one
+parameter [INAUDIBLE] 0 comma--
+
+00:47:02.520 --> 00:47:03.520 align:middle line:90%
+ANA BELL: Yeah, exactly.
+
+00:47:03.520 --> 00:47:04.978 align:middle line:84%
+If there's more
+parameter, just pop
+
+00:47:04.978 --> 00:47:08.830 align:middle line:84%
+in those extra ones with commas,
+just like a regular function.
+
+00:47:08.830 --> 00:47:12.940 align:middle line:84%
+So this dot operator basically
+accesses either our data, c.x,
+
+00:47:12.940 --> 00:47:16.180 align:middle line:84%
+or our methods,
+c.distance, or whatever,
+
+00:47:16.180 --> 00:47:18.550 align:middle line:90%
+or whatever method name we have.
+
+00:47:18.550 --> 00:47:20.850 align:middle line:84%
+So that's it for
+today's lecture.
+
+00:47:20.850 --> 00:47:23.350 align:middle line:84%
+Next lecture, we're going to
+build on this coordinate object
+
+00:47:23.350 --> 00:47:24.800 align:middle line:90%
+by creating circles.
+
+00:47:24.800 --> 00:47:26.980 align:middle line:84%
+And then we'll create
+some fraction objects.
+
+00:47:26.980 --> 00:47:30.640 align:middle line:84%
+And we'll look at
+some other objects
+
+00:47:30.640 --> 00:47:33.100 align:middle line:90%
+that we can bundle together.
+
+00:47:33.100 --> 00:47:34.650 align:middle line:90%
+OK.
+
+00:47:34.650 --> 00:47:47.000 align:middle line:90%

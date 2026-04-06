@@ -1,0 +1,6478 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.984 align:middle line:90%
+[SQUEAKING]
+
+00:00:01.984 --> 00:00:03.968 align:middle line:90%
+[RUSTLING]
+
+00:00:03.968 --> 00:00:11.410 align:middle line:90%
+[CLICKING]
+
+00:00:11.410 --> 00:00:14.600 align:middle line:84%
+ANA BELL: So let's
+start today's lecture.
+
+00:00:14.600 --> 00:00:17.720 align:middle line:84%
+We're going to be looking
+at three different topics.
+
+00:00:17.720 --> 00:00:19.900 align:middle line:84%
+The first is we're going
+to look at a new object
+
+00:00:19.900 --> 00:00:21.220 align:middle line:90%
+type called a string.
+
+00:00:21.220 --> 00:00:24.050 align:middle line:84%
+We briefly mentioned
+this word last lecture.
+
+00:00:24.050 --> 00:00:26.770 align:middle line:84%
+Then we're going to see
+how we can write programs
+
+00:00:26.770 --> 00:00:31.490 align:middle line:84%
+that start to get input from the
+user and show the user output.
+
+00:00:31.490 --> 00:00:35.260 align:middle line:84%
+And finally, we're going to
+go into writing a little bit
+
+00:00:35.260 --> 00:00:40.630 align:middle line:84%
+more interesting programs
+that make decisions
+
+00:00:40.630 --> 00:00:44.560 align:middle line:84%
+based on decisions that we
+actually input in the code, so
+
+00:00:44.560 --> 00:00:47.200 align:middle line:84%
+not decision spontaneously
+but things that we
+
+00:00:47.200 --> 00:00:49.550 align:middle line:90%
+will code within our programs.
+
+00:00:49.550 --> 00:00:51.580 align:middle line:84%
+But before we go
+on to these topics,
+
+00:00:51.580 --> 00:00:53.433 align:middle line:84%
+I just wanted to do
+a quick recap of what
+
+00:00:53.433 --> 00:00:55.600 align:middle line:84%
+we learned last lecture,
+just to make sure we're all
+
+00:00:55.600 --> 00:00:56.740 align:middle line:90%
+on the same page.
+
+00:00:56.740 --> 00:00:59.110 align:middle line:84%
+So we introduced the
+idea of an object.
+
+00:00:59.110 --> 00:01:01.850 align:middle line:84%
+And every object in Python
+has a specific type.
+
+00:01:01.850 --> 00:01:03.790 align:middle line:84%
+And the type tells
+Python the kinds
+
+00:01:03.790 --> 00:01:07.270 align:middle line:84%
+of things you're allowed
+to do with that object.
+
+00:01:07.270 --> 00:01:09.670 align:middle line:84%
+We talked about, once
+you have objects,
+
+00:01:09.670 --> 00:01:12.200 align:middle line:84%
+you can actually assign
+these objects to variables.
+
+00:01:12.200 --> 00:01:15.170 align:middle line:84%
+And these variables basically
+bind a name to the object
+
+00:01:15.170 --> 00:01:16.370 align:middle line:90%
+in memory.
+
+00:01:16.370 --> 00:01:18.860 align:middle line:84%
+With objects, you can
+also create expressions
+
+00:01:18.860 --> 00:01:20.990 align:middle line:90%
+by combining objects together.
+
+00:01:20.990 --> 00:01:23.450 align:middle line:84%
+And the expressions
+can either be things
+
+00:01:23.450 --> 00:01:26.030 align:middle line:84%
+that we've seen in math,
+like with parentheses
+
+00:01:26.030 --> 00:01:29.570 align:middle line:90%
+and with object operator object.
+
+00:01:29.570 --> 00:01:32.570 align:middle line:84%
+Or they can be things
+like this, which
+
+00:01:32.570 --> 00:01:35.000 align:middle line:90%
+was introduced in programming.
+
+00:01:35.000 --> 00:01:38.010 align:middle line:84%
+It's an expression, but
+it's a different one.
+
+00:01:38.010 --> 00:01:39.770 align:middle line:90%
+It's more like a command.
+
+00:01:39.770 --> 00:01:43.430 align:middle line:84%
+Or I'm asking Python to
+do this operation for me.
+
+00:01:43.430 --> 00:01:46.680 align:middle line:84%
+What is the object that comes
+back from this operation?
+
+00:01:46.680 --> 00:01:52.400 align:middle line:84%
+So today, I'm going to go over
+this little memory diagram we
+
+00:01:52.400 --> 00:01:53.660 align:middle line:90%
+started drawing last lecture.
+
+00:01:53.660 --> 00:01:57.210 align:middle line:84%
+And I'm going to use this
+memory diagram today as well.
+
+00:01:57.210 --> 00:01:59.730 align:middle line:84%
+Here's some lines of code
+that we wrote last lecture.
+
+00:01:59.730 --> 00:02:03.230 align:middle line:84%
+So we created-- we
+wrote a line in Python
+
+00:02:03.230 --> 00:02:04.920 align:middle line:90%
+that created an object.
+
+00:02:04.920 --> 00:02:08.449 align:middle line:84%
+Its value is 3.14,
+a float in memory.
+
+00:02:08.449 --> 00:02:12.530 align:middle line:84%
+And the name we gave this
+object was pi, so just
+
+00:02:12.530 --> 00:02:16.580 align:middle line:90%
+the name pi, P-I.
+
+00:02:16.580 --> 00:02:20.780 align:middle line:84%
+Radius = 2.2 is another
+assignment statement in Python.
+
+00:02:20.780 --> 00:02:24.510 align:middle line:84%
+And it binds the name radius
+to the value 2.2 in memory.
+
+00:02:24.510 --> 00:02:26.520 align:middle line:84%
+And once we've created
+these variables,
+
+00:02:26.520 --> 00:02:28.220 align:middle line:90%
+we can just invoke their names.
+
+00:02:28.220 --> 00:02:30.830 align:middle line:84%
+We can use their names
+to tell Python to grab
+
+00:02:30.830 --> 00:02:32.670 align:middle line:90%
+for me the values from memory.
+
+00:02:32.670 --> 00:02:38.150 align:middle line:84%
+So when Python sees pi times
+radius**2, that means take pi,
+
+00:02:38.150 --> 00:02:40.020 align:middle line:84%
+multiply it with
+the radius squared.
+
+00:02:40.020 --> 00:02:43.550 align:middle line:84%
+So behind the scenes, Python
+goes, grabs the value 3.14
+
+00:02:43.550 --> 00:02:46.100 align:middle line:84%
+from memory, replaces
+pi with that value,
+
+00:02:46.100 --> 00:02:49.640 align:middle line:84%
+grabs 2.2 from memory, replaces
+radius with that value,
+
+00:02:49.640 --> 00:02:52.940 align:middle line:84%
+does the operation according
+to the precedence rules.
+
+00:02:52.940 --> 00:02:55.040 align:middle line:84%
+And then that
+expression, the thing
+
+00:02:55.040 --> 00:03:00.950 align:middle line:84%
+on the right hand side of this
+equal sign, becomes a value.
+
+00:03:00.950 --> 00:03:04.340 align:middle line:84%
+That value is then created
+as a new object in memory
+
+00:03:04.340 --> 00:03:05.660 align:middle line:90%
+right here.
+
+00:03:05.660 --> 00:03:08.690 align:middle line:84%
+And that object in memory is
+then bound to the name area.
+
+00:03:08.690 --> 00:03:13.070 align:middle line:84%
+That's exactly what
+this assignment states.
+
+00:03:13.070 --> 00:03:16.250 align:middle line:84%
+And we can do something
+like this in Python, which
+
+00:03:16.250 --> 00:03:18.080 align:middle line:90%
+we can't actually do in math.
+
+00:03:18.080 --> 00:03:19.700 align:middle line:84%
+If we did this in
+math, the expression
+
+00:03:19.700 --> 00:03:21.860 align:middle line:90%
+would basically say 0 = 1.
+
+00:03:21.860 --> 00:03:25.790 align:middle line:84%
+But in Python, it's totally
+fine because again, we
+
+00:03:25.790 --> 00:03:28.547 align:middle line:84%
+evaluate the thing on the right
+hand side of the equal sign.
+
+00:03:28.547 --> 00:03:30.380 align:middle line:84%
+So on the right hand
+side of the equal sign,
+
+00:03:30.380 --> 00:03:33.890 align:middle line:84%
+we say I want to grab the
+value of radius, so 2.2,
+
+00:03:33.890 --> 00:03:39.140 align:middle line:84%
+add 1 to it, 3.2, create
+this object in memory, here I
+
+00:03:39.140 --> 00:03:41.450 align:middle line:84%
+have a whole new
+object in memory 3.2,
+
+00:03:41.450 --> 00:03:43.670 align:middle line:84%
+and then assign it
+to the name radius.
+
+00:03:43.670 --> 00:03:46.970 align:middle line:84%
+So I've lost the binding
+from the original 2.2
+
+00:03:46.970 --> 00:03:50.600 align:middle line:90%
+and rebound the name to 3.2.
+
+00:03:50.600 --> 00:03:53.180 align:middle line:84%
+So we're not modifying
+objects in memory.
+
+00:03:53.180 --> 00:03:55.730 align:middle line:84%
+We're creating new
+objects in memory
+
+00:03:55.730 --> 00:03:57.680 align:middle line:90%
+whenever we do such operations.
+
+00:03:57.680 --> 00:03:59.180 align:middle line:84%
+We're going to see
+how we can modify
+
+00:03:59.180 --> 00:04:02.290 align:middle line:90%
+objects way into the future.
+
+00:04:02.290 --> 00:04:06.370 align:middle line:84%
+And just for completion, when
+we have a line that says var =
+
+00:04:06.370 --> 00:04:10.580 align:middle line:84%
+type (5*4), Python also
+sees this as an expression.
+
+00:04:10.580 --> 00:04:13.070 align:middle line:84%
+And so as an expression,
+it has a value.
+
+00:04:13.070 --> 00:04:15.040 align:middle line:84%
+So the right hand side
+of this equal sign
+
+00:04:15.040 --> 00:04:18.579 align:middle line:84%
+says, well, I'm going to
+systematically evaluate
+
+00:04:18.579 --> 00:04:20.950 align:middle line:90%
+this and say, what's 5 times 4?
+
+00:04:20.950 --> 00:04:22.540 align:middle line:90%
+It's 20.
+
+00:04:22.540 --> 00:04:24.040 align:middle line:90%
+What's the type of 20?
+
+00:04:24.040 --> 00:04:25.160 align:middle line:90%
+It's an integer.
+
+00:04:25.160 --> 00:04:27.610 align:middle line:84%
+And so that's what the
+right hand side evaluates,
+
+00:04:27.610 --> 00:04:28.570 align:middle line:90%
+to an integer.
+
+00:04:28.570 --> 00:04:34.240 align:middle line:84%
+And I'm going to bind that
+value, int, to the name var.
+
+00:04:34.240 --> 00:04:35.710 align:middle line:90%
+So var is another variable name.
+
+00:04:35.710 --> 00:04:39.430 align:middle line:84%
+And its value is int,
+the type of my object,
+
+00:04:39.430 --> 00:04:40.720 align:middle line:90%
+which is a little strange.
+
+00:04:40.720 --> 00:04:43.090 align:middle line:84%
+So far, we've just put
+numbers in our memory.
+
+00:04:43.090 --> 00:04:47.580 align:middle line:84%
+But we can put any
+object type in memory.
+
+00:04:47.580 --> 00:04:52.620 align:middle line:84%
+OK, so let's move on a little
+bit onto the new object type
+
+00:04:52.620 --> 00:04:53.980 align:middle line:90%
+called a string.
+
+00:04:53.980 --> 00:04:55.800 align:middle line:84%
+So a string is
+actually a sequence
+
+00:04:55.800 --> 00:04:58.410 align:middle line:90%
+of case sensitive characters.
+
+00:04:58.410 --> 00:05:00.540 align:middle line:90%
+The characters can be anything.
+
+00:05:00.540 --> 00:05:02.940 align:middle line:84%
+We have lowercase letters,
+uppercase letters,
+
+00:05:02.940 --> 00:05:05.400 align:middle line:84%
+the numbers on your keyboard,
+the special characters
+
+00:05:05.400 --> 00:05:06.630 align:middle line:90%
+you see on the keyboard.
+
+00:05:06.630 --> 00:05:10.320 align:middle line:84%
+Even the Enter when you
+do a new line or a tab
+
+00:05:10.320 --> 00:05:13.720 align:middle line:84%
+has a special character
+associated with it.
+
+00:05:13.720 --> 00:05:16.500 align:middle line:84%
+And the way we tell Python
+we're creating an object of type
+
+00:05:16.500 --> 00:05:19.950 align:middle line:84%
+string is by enclosing
+the characters
+
+00:05:19.950 --> 00:05:22.470 align:middle line:84%
+we want to be part of that
+object in these quotation
+
+00:05:22.470 --> 00:05:23.010 align:middle line:90%
+marks.
+
+00:05:23.010 --> 00:05:24.750 align:middle line:84%
+So when Python sees
+the quotation mark,
+
+00:05:24.750 --> 00:05:26.950 align:middle line:84%
+it knows you're creating
+a string object.
+
+00:05:26.950 --> 00:05:29.640 align:middle line:84%
+So here, I'm creating
+the string object
+
+00:05:29.640 --> 00:05:33.240 align:middle line:84%
+which has the lowercase
+letter m, lowercase letter e.
+
+00:05:33.240 --> 00:05:35.610 align:middle line:84%
+And here, I'm creating
+the string object
+
+00:05:35.610 --> 00:05:38.730 align:middle line:84%
+which has the lowercase y,
+lowercase o, and lowercase u
+
+00:05:38.730 --> 00:05:39.570 align:middle line:90%
+letters.
+
+00:05:39.570 --> 00:05:43.890 align:middle line:84%
+And these objects
+are things in Python.
+
+00:05:43.890 --> 00:05:45.510 align:middle line:84%
+And we're just
+going to give them
+
+00:05:45.510 --> 00:05:49.300 align:middle line:84%
+a handle, a binding with
+some more convenient variable
+
+00:05:49.300 --> 00:05:51.460 align:middle line:90%
+names, a and z.
+
+00:05:51.460 --> 00:05:54.130 align:middle line:84%
+So in memory, the way this
+would look in our little memory
+
+00:05:54.130 --> 00:05:57.250 align:middle line:84%
+diagram is we would have
+the string characters "me"
+
+00:05:57.250 --> 00:05:59.290 align:middle line:90%
+bound to the variable a.
+
+00:05:59.290 --> 00:06:02.340 align:middle line:84%
+So basically what
+we've seen before.
+
+00:06:02.340 --> 00:06:02.840 align:middle line:90%
+All right.
+
+00:06:02.840 --> 00:06:05.450 align:middle line:84%
+So now, what are some things
+we can do with strings?
+
+00:06:05.450 --> 00:06:08.330 align:middle line:84%
+Well, some really
+common operations
+
+00:06:08.330 --> 00:06:10.220 align:middle line:84%
+are that we can
+concatenate strings
+
+00:06:10.220 --> 00:06:12.440 align:middle line:90%
+or we can repeat strings.
+
+00:06:12.440 --> 00:06:15.632 align:middle line:84%
+So here, I'm not going
+to put the z in memory.
+
+00:06:15.632 --> 00:06:17.340 align:middle line:84%
+You can imagine how
+that would look like.
+
+00:06:17.340 --> 00:06:19.070 align:middle line:84%
+But let's say I
+create now a variable
+
+00:06:19.070 --> 00:06:24.210 align:middle line:90%
+b equals the letters myself.
+
+00:06:24.210 --> 00:06:27.500 align:middle line:84%
+What if I do a plus operator
+between these two strings?
+
+00:06:27.500 --> 00:06:29.660 align:middle line:84%
+The plus operator
+tells Python that I'm
+
+00:06:29.660 --> 00:06:32.330 align:middle line:84%
+going to take these two strings,
+the individual characters
+
+00:06:32.330 --> 00:06:34.940 align:middle line:84%
+in each string, and
+just put them together
+
+00:06:34.940 --> 00:06:37.340 align:middle line:84%
+to make one new
+object that is all
+
+00:06:37.340 --> 00:06:39.060 align:middle line:90%
+of these letters put together.
+
+00:06:39.060 --> 00:06:43.820 align:middle line:84%
+So c = a + b is another
+assignment operator.
+
+00:06:43.820 --> 00:06:46.190 align:middle line:84%
+And on the right hand side,
+we have an expression,
+
+00:06:46.190 --> 00:06:48.470 align:middle line:84%
+plus operator
+between two objects.
+
+00:06:48.470 --> 00:06:52.550 align:middle line:84%
+It's going to put me,
+which is the c letters,
+
+00:06:52.550 --> 00:06:56.600 align:middle line:84%
+and the myself, the b
+letters, all together
+
+00:06:56.600 --> 00:06:59.510 align:middle line:84%
+to create a new object,
+which I then give a handle
+
+00:06:59.510 --> 00:07:01.370 align:middle line:90%
+or a binding, c.
+
+00:07:01.370 --> 00:07:05.160 align:middle line:84%
+So from now on, anytime I
+want this particular string
+
+00:07:05.160 --> 00:07:10.590 align:middle line:84%
+of characters, myself, I
+can just invoke the name c
+
+00:07:10.590 --> 00:07:11.340 align:middle line:90%
+in my program.
+
+00:07:11.340 --> 00:07:15.120 align:middle line:84%
+That's just the variable
+name that I gave it.
+
+00:07:15.120 --> 00:07:17.580 align:middle line:84%
+Now, notice it didn't
+insert a space.
+
+00:07:17.580 --> 00:07:20.070 align:middle line:84%
+It didn't do me space
+myself because we
+
+00:07:20.070 --> 00:07:22.240 align:middle line:90%
+didn't tell it to do a space.
+
+00:07:22.240 --> 00:07:24.630 align:middle line:84%
+So if we wanted to
+do a space, we'd
+
+00:07:24.630 --> 00:07:25.800 align:middle line:90%
+have to put it in ourselves.
+
+00:07:25.800 --> 00:07:27.480 align:middle line:84%
+So we can
+concatenate-- so we can
+
+00:07:27.480 --> 00:07:31.410 align:middle line:84%
+have a larger expression where
+we concatenate a with a space
+
+00:07:31.410 --> 00:07:33.850 align:middle line:90%
+and with b together.
+
+00:07:33.850 --> 00:07:36.450 align:middle line:84%
+So that will give me an
+entirely new object in memory,
+
+00:07:36.450 --> 00:07:39.660 align:middle line:90%
+the string me space myself.
+
+00:07:39.660 --> 00:07:44.490 align:middle line:84%
+This new object is
+bound to the name d.
+
+00:07:44.490 --> 00:07:45.760 align:middle line:90%
+Is that OK so far?
+
+00:07:45.760 --> 00:07:47.070 align:middle line:90%
+Does that make sense?
+
+00:07:47.070 --> 00:07:48.320 align:middle line:90%
+OK.
+
+00:07:48.320 --> 00:07:48.820 align:middle line:90%
+All right.
+
+00:07:48.820 --> 00:07:49.820 align:middle line:90%
+So that's concatenation.
+
+00:07:49.820 --> 00:07:52.090 align:middle line:84%
+It basically takes these
+two string characters,
+
+00:07:52.090 --> 00:07:54.010 align:middle line:84%
+puts them together
+in a new object.
+
+00:07:54.010 --> 00:07:55.090 align:middle line:90%
+What about the star?
+
+00:07:55.090 --> 00:07:58.000 align:middle line:84%
+I briefly talked about
+this as repeating
+
+00:07:58.000 --> 00:07:59.530 align:middle line:90%
+something last lecture.
+
+00:07:59.530 --> 00:08:03.713 align:middle line:84%
+Well, the star operator works
+between a string and a number.
+
+00:08:03.713 --> 00:08:05.630 align:middle line:84%
+It doesn't work between
+a string and a string.
+
+00:08:05.630 --> 00:08:08.410 align:middle line:84%
+It doesn't work between
+things like that.
+
+00:08:08.410 --> 00:08:10.300 align:middle line:84%
+It works between a
+string and a number
+
+00:08:10.300 --> 00:08:13.330 align:middle line:84%
+in either order, so a number
+string or a string times
+
+00:08:13.330 --> 00:08:15.160 align:middle line:90%
+number.
+
+00:08:15.160 --> 00:08:17.253 align:middle line:84%
+So here, again, it's
+an assignment operator.
+
+00:08:17.253 --> 00:08:19.170 align:middle line:84%
+The right hand side,
+we're going to figure out
+
+00:08:19.170 --> 00:08:21.480 align:middle line:90%
+what it evaluates to first.
+
+00:08:21.480 --> 00:08:24.750 align:middle line:84%
+So a times 3 means I'm going to
+repeat this particular sequence
+
+00:08:24.750 --> 00:08:27.570 align:middle line:84%
+of characters, me,
+because that's what a is,
+
+00:08:27.570 --> 00:08:29.970 align:middle line:90%
+it's me, three times.
+
+00:08:29.970 --> 00:08:32.400 align:middle line:84%
+So this line of
+code here is going
+
+00:08:32.400 --> 00:08:35.580 align:middle line:84%
+to create me, me,
+me as a new object.
+
+00:08:35.580 --> 00:08:39.120 align:middle line:84%
+And the equal sign tells it
+to bind it to the name silly.
+
+00:08:39.120 --> 00:08:42.330 align:middle line:84%
+So any time I want to grab this
+particular string of characters
+
+00:08:42.330 --> 00:08:45.540 align:middle line:84%
+from memory, I can just
+type in silly in my program
+
+00:08:45.540 --> 00:08:48.510 align:middle line:84%
+and that will automatically
+grab that particular sequence
+
+00:08:48.510 --> 00:08:51.410 align:middle line:90%
+of characters from memory.
+
+00:08:51.410 --> 00:08:51.910 align:middle line:90%
+All right.
+
+00:08:51.910 --> 00:08:53.950 align:middle line:84%
+Let's do a quick
+exercise to make sure
+
+00:08:53.950 --> 00:08:56.060 align:middle line:90%
+that you all have this.
+
+00:08:56.060 --> 00:08:59.230 align:middle line:84%
+And as you're thinking
+about what this does,
+
+00:08:59.230 --> 00:09:03.940 align:middle line:84%
+I can start typing
+it in to the console.
+
+00:09:03.940 --> 00:09:07.090 align:middle line:84%
+Or you can either even type
+it in to check yourself.
+
+00:09:07.090 --> 00:09:08.530 align:middle line:90%
+So b is going to be colon.
+
+00:09:08.530 --> 00:09:11.540 align:middle line:84%
+And c is going to be
+the close parentheses.
+
+00:09:11.540 --> 00:09:16.550 align:middle line:84%
+So if we go here, we have b
+is equal to just this colon.
+
+00:09:16.550 --> 00:09:21.350 align:middle line:84%
+And c is equal to the
+close parentheses.
+
+00:09:21.350 --> 00:09:26.720 align:middle line:84%
+And we don't have to do
+all the operations at once.
+
+00:09:26.720 --> 00:09:29.480 align:middle line:84%
+We can just do
+something like 2 times c
+
+00:09:29.480 --> 00:09:31.220 align:middle line:90%
+and figure out what that is.
+
+00:09:31.220 --> 00:09:34.130 align:middle line:84%
+It's just repeating the
+close parentheses twice.
+
+00:09:34.130 --> 00:09:37.640 align:middle line:84%
+And then we can
+do b plus 2 times
+
+00:09:37.640 --> 00:09:43.800 align:middle line:84%
+c to give us colon close
+parenthesis, close parenthesis.
+
+00:09:43.800 --> 00:09:44.640 align:middle line:90%
+So super happy.
+
+00:09:44.640 --> 00:09:47.380 align:middle line:90%
+
+
+00:09:47.380 --> 00:09:49.060 align:middle line:90%
+What about the next one?
+
+00:09:49.060 --> 00:09:51.090 align:middle line:90%
+f is a.
+
+00:09:51.090 --> 00:09:56.760 align:middle line:90%
+g is actually the space b.
+
+00:09:56.760 --> 00:09:59.910 align:middle line:84%
+So there's a space character
+in there, a little tricky.
+
+00:09:59.910 --> 00:10:03.130 align:middle line:90%
+And h is 3.
+
+00:10:03.130 --> 00:10:06.750 align:middle line:84%
+Is this the number 3
+or the string 3 for h?
+
+00:10:06.750 --> 00:10:07.800 align:middle line:90%
+Yeah, exactly.
+
+00:10:07.800 --> 00:10:10.190 align:middle line:90%
+It's the string 3.
+
+00:10:10.190 --> 00:10:12.000 align:middle line:90%
+So what is f plus g?
+
+00:10:12.000 --> 00:10:13.250 align:middle line:90%
+Again, we can do it in pieces.
+
+00:10:13.250 --> 00:10:14.270 align:middle line:90%
+What is f plus g?
+
+00:10:14.270 --> 00:10:17.860 align:middle line:90%
+
+
+00:10:17.860 --> 00:10:21.340 align:middle line:90%
+a space b, exactly right.
+
+00:10:21.340 --> 00:10:22.420 align:middle line:90%
+a is by itself.
+
+00:10:22.420 --> 00:10:24.670 align:middle line:90%
+And g is space b.
+
+00:10:24.670 --> 00:10:26.440 align:middle line:90%
+What is int h?
+
+00:10:26.440 --> 00:10:28.980 align:middle line:90%
+
+
+00:10:28.980 --> 00:10:30.420 align:middle line:90%
+Yeah, it's just 3.
+
+00:10:30.420 --> 00:10:33.310 align:middle line:90%
+What's the type of 3?
+
+00:10:33.310 --> 00:10:34.180 align:middle line:90%
+int, exactly.
+
+00:10:34.180 --> 00:10:36.010 align:middle line:90%
+I just cast it to an int.
+
+00:10:36.010 --> 00:10:47.620 align:middle line:84%
+So if I have f = a, g = space b,
+and h is equal to the string 3,
+
+00:10:47.620 --> 00:10:51.670 align:middle line:84%
+f plus g, we're doing it
+a little bit at a time,
+
+00:10:51.670 --> 00:10:53.500 align:middle line:90%
+is a space b.
+
+00:10:53.500 --> 00:10:56.840 align:middle line:84%
+And h is just see
+the string 3 here.
+
+00:10:56.840 --> 00:11:04.280 align:middle line:84%
+So if I cast it to an integer,
+it gives me just the number 3.
+
+00:11:04.280 --> 00:11:07.220 align:middle line:84%
+And we can wrap each of
+these in a type command
+
+00:11:07.220 --> 00:11:09.170 align:middle line:90%
+to see the exact type.
+
+00:11:09.170 --> 00:11:11.900 align:middle line:90%
+But we can tell right away.
+
+00:11:11.900 --> 00:11:18.940 align:middle line:84%
+So if we do f + g
+multiplied by int of 3--
+
+00:11:18.940 --> 00:11:23.980 align:middle line:84%
+or sorry, oops, int of
+h, which is just a 3,
+
+00:11:23.980 --> 00:11:27.580 align:middle line:84%
+it's going to repeat
+a space b three times.
+
+00:11:27.580 --> 00:11:30.820 align:middle line:84%
+So there's one, there's
+two, and there's three.
+
+00:11:30.820 --> 00:11:33.100 align:middle line:84%
+What would have
+happened if I forgot
+
+00:11:33.100 --> 00:11:35.440 align:middle line:90%
+to cast it to an integer?
+
+00:11:35.440 --> 00:11:39.670 align:middle line:84%
+What do you think,
+if I just did h?
+
+00:11:39.670 --> 00:11:42.910 align:middle line:90%
+An error, yeah, exactly.
+
+00:11:42.910 --> 00:11:44.080 align:middle line:90%
+They're not scary.
+
+00:11:44.080 --> 00:11:46.880 align:middle line:84%
+They're kind of informative
+once you get to know them.
+
+00:11:46.880 --> 00:11:48.010 align:middle line:90%
+So it's a type error.
+
+00:11:48.010 --> 00:11:49.600 align:middle line:84%
+Something's wrong
+with our types.
+
+00:11:49.600 --> 00:11:53.020 align:middle line:84%
+Can't multiply a
+sequence, so an integer--
+
+00:11:53.020 --> 00:11:56.810 align:middle line:84%
+or a string, a sequence,
+by a non-integer.
+
+00:11:56.810 --> 00:11:57.310 align:middle line:90%
+All right.
+
+00:11:57.310 --> 00:12:00.460 align:middle line:90%
+
+
+00:12:00.460 --> 00:12:01.420 align:middle line:90%
+OK.
+
+00:12:01.420 --> 00:12:03.100 align:middle line:84%
+So what are some
+other operations
+
+00:12:03.100 --> 00:12:04.323 align:middle line:90%
+we can do with strings?
+
+00:12:04.323 --> 00:12:05.740 align:middle line:84%
+There are some
+different things we
+
+00:12:05.740 --> 00:12:07.240 align:middle line:84%
+can do with strings
+that we actually
+
+00:12:07.240 --> 00:12:12.530 align:middle line:84%
+haven't seen with numbers
+in the last lecture.
+
+00:12:12.530 --> 00:12:14.210 align:middle line:84%
+One of the more
+common operations
+
+00:12:14.210 --> 00:12:15.630 align:middle line:84%
+is to get the
+length of a string.
+
+00:12:15.630 --> 00:12:18.690 align:middle line:84%
+So this tells us how many
+characters are in the string.
+
+00:12:18.690 --> 00:12:21.140 align:middle line:84%
+So if we say s is
+equal to abc here,
+
+00:12:21.140 --> 00:12:24.440 align:middle line:84%
+I'm creating a string with
+characters a, b, and c,
+
+00:12:24.440 --> 00:12:26.340 align:middle line:90%
+and I'm giving it the name s.
+
+00:12:26.340 --> 00:12:28.880 align:middle line:84%
+Now any time in my
+program when I say s,
+
+00:12:28.880 --> 00:12:33.240 align:middle line:84%
+Python will replace that with
+this string of characters abc.
+
+00:12:33.240 --> 00:12:36.730 align:middle line:84%
+I can wrap s in this
+lean len command.
+
+00:12:36.730 --> 00:12:39.420 align:middle line:84%
+And this len command
+is an expression.
+
+00:12:39.420 --> 00:12:41.280 align:middle line:84%
+Basically, Python
+reads this, and it
+
+00:12:41.280 --> 00:12:45.330 align:middle line:84%
+evaluates it to one value,
+so replaces this expression
+
+00:12:45.330 --> 00:12:46.560 align:middle line:90%
+with one value.
+
+00:12:46.560 --> 00:12:49.090 align:middle line:84%
+How many characters
+are in my string?
+
+00:12:49.090 --> 00:12:52.850 align:middle line:84%
+So len s basically
+become the number 3.
+
+00:12:52.850 --> 00:12:55.010 align:middle line:84%
+So in my program,
+I can say something
+
+00:12:55.010 --> 00:12:57.080 align:middle line:84%
+like another
+assignment statement
+
+00:12:57.080 --> 00:13:01.100 align:middle line:84%
+down here, chars
+is equal to len s.
+
+00:13:01.100 --> 00:13:03.980 align:middle line:84%
+This is an expression
+like in the previous line
+
+00:13:03.980 --> 00:13:05.570 align:middle line:90%
+that evaluates to 3.
+
+00:13:05.570 --> 00:13:08.420 align:middle line:84%
+So basically, this line
+says chars is equal to 3.
+
+00:13:08.420 --> 00:13:12.180 align:middle line:90%
+
+
+00:13:12.180 --> 00:13:13.313 align:middle line:90%
+OK.
+
+00:13:13.313 --> 00:13:15.230 align:middle line:84%
+That's a pretty simple
+operation with strings.
+
+00:13:15.230 --> 00:13:19.450 align:middle line:84%
+Now we're going to get into a
+little bit more detailed ones
+
+00:13:19.450 --> 00:13:23.210 align:middle line:84%
+that requires you to
+remember this Python syntax.
+
+00:13:23.210 --> 00:13:26.230 align:middle line:84%
+So one thing we
+can do with strings
+
+00:13:26.230 --> 00:13:28.600 align:middle line:84%
+is we can grab
+individual characters
+
+00:13:28.600 --> 00:13:30.770 align:middle line:90%
+at different positions.
+
+00:13:30.770 --> 00:13:33.480 align:middle line:90%
+So that's called slicing.
+
+00:13:33.480 --> 00:13:37.050 align:middle line:84%
+The syntax, or the way that
+we actually do this in Python,
+
+00:13:37.050 --> 00:13:38.800 align:middle line:90%
+is using square brackets.
+
+00:13:38.800 --> 00:13:40.630 align:middle line:90%
+So you can see this here.
+
+00:13:40.630 --> 00:13:42.870 align:middle line:84%
+We have some square
+bracket notation
+
+00:13:42.870 --> 00:13:45.370 align:middle line:84%
+and this is just
+how Python does it.
+
+00:13:45.370 --> 00:13:49.750 align:middle line:84%
+So if we have string s is
+equal to the characters abc,
+
+00:13:49.750 --> 00:13:51.880 align:middle line:84%
+the way we tell Python
+we'd like to extract
+
+00:13:51.880 --> 00:13:53.590 align:middle line:84%
+a character at a
+particular position
+
+00:13:53.590 --> 00:13:56.620 align:middle line:90%
+is by indexing into that string.
+
+00:13:56.620 --> 00:13:59.710 align:middle line:84%
+Now, in Python and modern
+programming languages,
+
+00:13:59.710 --> 00:14:01.540 align:middle line:90%
+indexing happens from 0.
+
+00:14:01.540 --> 00:14:05.870 align:middle line:84%
+We count from 0 in programming,
+in computer science.
+
+00:14:05.870 --> 00:14:11.400 align:middle line:84%
+So what that means is the
+index of the first character,
+
+00:14:11.400 --> 00:14:15.660 align:middle line:84%
+the index of a is 0, the index
+of b is 1, and the index of c
+
+00:14:15.660 --> 00:14:17.400 align:middle line:90%
+is 2.
+
+00:14:17.400 --> 00:14:20.430 align:middle line:84%
+So we can say, what's the
+character at the first position
+
+00:14:20.430 --> 00:14:21.990 align:middle line:90%
+or the first location?
+
+00:14:21.990 --> 00:14:24.120 align:middle line:84%
+But in computer
+science speak, we
+
+00:14:24.120 --> 00:14:26.430 align:middle line:84%
+say that's the
+character at index 0.
+
+00:14:26.430 --> 00:14:29.610 align:middle line:84%
+The character at index 1 is
+the character at location
+
+00:14:29.610 --> 00:14:31.470 align:middle line:90%
+2 and so on.
+
+00:14:31.470 --> 00:14:33.630 align:middle line:84%
+So when we're indexing
+into a string,
+
+00:14:33.630 --> 00:14:37.380 align:middle line:84%
+we're always starting
+to count from 0.
+
+00:14:37.380 --> 00:14:43.950 align:middle line:84%
+So s at index 0, that's
+how we call this line here.
+
+00:14:43.950 --> 00:14:46.890 align:middle line:90%
+It's another Python expression.
+
+00:14:46.890 --> 00:14:49.960 align:middle line:84%
+It just looks different than the
+expressions we've seen so far.
+
+00:14:49.960 --> 00:14:52.770 align:middle line:84%
+But this entire
+expression Python
+
+00:14:52.770 --> 00:14:54.750 align:middle line:90%
+evaluates to a particular value.
+
+00:14:54.750 --> 00:14:59.170 align:middle line:84%
+And the value it evaluates it to
+is the character at that index.
+
+00:14:59.170 --> 00:15:02.220 align:middle line:84%
+So just to show you what
+that looks like in here,
+
+00:15:02.220 --> 00:15:04.890 align:middle line:84%
+if s is equal to abc,
+all we would type
+
+00:15:04.890 --> 00:15:06.930 align:middle line:90%
+is this, s at index 0.
+
+00:15:06.930 --> 00:15:11.900 align:middle line:84%
+And this expression evaluates
+to that single character, a.
+
+00:15:11.900 --> 00:15:15.600 align:middle line:84%
+s at index 1, b,
+s at index 2, c.
+
+00:15:15.600 --> 00:15:19.490 align:middle line:84%
+S at index 3
+basically says, what
+
+00:15:19.490 --> 00:15:21.920 align:middle line:84%
+is the character at
+the fourth position?
+
+00:15:21.920 --> 00:15:24.360 align:middle line:84%
+Well, abc only has
+three positions.
+
+00:15:24.360 --> 00:15:26.780 align:middle line:84%
+So this will actually
+give us our second error
+
+00:15:26.780 --> 00:15:29.460 align:middle line:90%
+of the class, an index error.
+
+00:15:29.460 --> 00:15:31.670 align:middle line:84%
+This is a pretty common
+error as we start working
+
+00:15:31.670 --> 00:15:33.080 align:middle line:90%
+with more complex programs.
+
+00:15:33.080 --> 00:15:36.260 align:middle line:84%
+It basically means you've
+indexed too far into the list,
+
+00:15:36.260 --> 00:15:38.105 align:middle line:84%
+either to the right
+or to the left.
+
+00:15:38.105 --> 00:15:40.870 align:middle line:90%
+
+
+00:15:40.870 --> 00:15:45.800 align:middle line:84%
+You can index into a list
+with negative indices as well.
+
+00:15:45.800 --> 00:15:48.790 align:middle line:84%
+So if you ever want to grab the
+character at the last position,
+
+00:15:48.790 --> 00:15:51.250 align:middle line:84%
+so at the rightmost
+place, that's
+
+00:15:51.250 --> 00:15:54.590 align:middle line:84%
+the character at
+index negative 1.
+
+00:15:54.590 --> 00:15:57.860 align:middle line:84%
+It's a really convenient way
+to grab that last character.
+
+00:15:57.860 --> 00:16:01.040 align:middle line:84%
+You basically ask,
+what's s at negative 1?
+
+00:16:01.040 --> 00:16:03.990 align:middle line:84%
+And Python automatically grabs
+for us that last character.
+
+00:16:03.990 --> 00:16:08.840 align:middle line:84%
+So we don't have to use an
+expression like len of s
+
+00:16:08.840 --> 00:16:11.240 align:middle line:90%
+negative 1.
+
+00:16:11.240 --> 00:16:13.260 align:middle line:90%
+That would be c as well.
+
+00:16:13.260 --> 00:16:16.910 align:middle line:84%
+And here, I've inserted an
+expression, len s minus 1,
+
+00:16:16.910 --> 00:16:18.350 align:middle line:90%
+directly in that index.
+
+00:16:18.350 --> 00:16:19.560 align:middle line:90%
+And that's totally fine.
+
+00:16:19.560 --> 00:16:23.450 align:middle line:84%
+Again, Python evaluates things
+in to out, left to right.
+
+00:16:23.450 --> 00:16:26.330 align:middle line:84%
+It evaluated len
+s minus 1 to be 2.
+
+00:16:26.330 --> 00:16:29.150 align:middle line:84%
+And basically, this
+line became what's
+
+00:16:29.150 --> 00:16:32.500 align:middle line:84%
+s at index 2, which
+we knew was c.
+
+00:16:32.500 --> 00:16:36.460 align:middle line:84%
+AUDIENCE: So why did it
+make negative 1 is c?
+
+00:16:36.460 --> 00:16:40.090 align:middle line:84%
+ANA BELL: Because when you
+index into negative numbers,
+
+00:16:40.090 --> 00:16:42.160 align:middle line:84%
+we start counting from
+the right hand side,
+
+00:16:42.160 --> 00:16:43.520 align:middle line:90%
+just Python convention.
+
+00:16:43.520 --> 00:16:46.650 align:middle line:90%
+
+
+00:16:46.650 --> 00:16:49.290 align:middle line:84%
+And so s at negative
+4 will give us
+
+00:16:49.290 --> 00:16:50.760 align:middle line:84%
+an error as well,
+because now we're
+
+00:16:50.760 --> 00:16:52.230 align:middle line:90%
+indexing too far to the left.
+
+00:16:52.230 --> 00:16:54.990 align:middle line:90%
+There's nothing there.
+
+00:16:54.990 --> 00:16:55.620 align:middle line:90%
+OK.
+
+00:16:55.620 --> 00:16:58.980 align:middle line:84%
+So we can index to
+get single characters.
+
+00:16:58.980 --> 00:16:59.770 align:middle line:90%
+That's fine.
+
+00:16:59.770 --> 00:17:01.950 align:middle line:84%
+We just use square
+brackets and say the index
+
+00:17:01.950 --> 00:17:04.589 align:middle line:84%
+that we'd like to
+get the character at.
+
+00:17:04.589 --> 00:17:07.440 align:middle line:84%
+We can also slice
+to get substrings.
+
+00:17:07.440 --> 00:17:09.119 align:middle line:84%
+So instead of getting
+single characters,
+
+00:17:09.119 --> 00:17:11.609 align:middle line:84%
+we can ask Python to
+get us a substring
+
+00:17:11.609 --> 00:17:15.450 align:middle line:84%
+starting from one index,
+going up to some other index,
+
+00:17:15.450 --> 00:17:17.797 align:middle line:84%
+and potentially
+skipping characters.
+
+00:17:17.797 --> 00:17:19.589 align:middle line:84%
+You can take every
+character along the way.
+
+00:17:19.589 --> 00:17:25.230 align:middle line:84%
+You can skip every other
+character or some other pattern
+
+00:17:25.230 --> 00:17:27.700 align:middle line:90%
+like that.
+
+00:17:27.700 --> 00:17:31.750 align:middle line:84%
+The syntax for that
+is similar to slicing
+
+00:17:31.750 --> 00:17:34.960 align:middle line:84%
+to get a single character,
+slightly different, though.
+
+00:17:34.960 --> 00:17:38.890 align:middle line:84%
+It's similar in that we have
+square brackets involved.
+
+00:17:38.890 --> 00:17:40.620 align:middle line:84%
+Slightly different
+because now we
+
+00:17:40.620 --> 00:17:45.100 align:middle line:84%
+have to give three numbers
+within those square brackets
+
+00:17:45.100 --> 00:17:47.600 align:middle line:90%
+separated by colons.
+
+00:17:47.600 --> 00:17:51.560 align:middle line:84%
+The first number will represent,
+what's the start index?
+
+00:17:51.560 --> 00:17:53.810 align:middle line:84%
+So where do you want to
+start your substring from?
+
+00:17:53.810 --> 00:17:56.030 align:middle line:84%
+The second is, what's
+the stop index?
+
+00:17:56.030 --> 00:17:58.280 align:middle line:84%
+So we're going to take every
+character from that start
+
+00:17:58.280 --> 00:18:03.770 align:middle line:84%
+index, going all the way up
+to but not including the stop.
+
+00:18:03.770 --> 00:18:07.460 align:middle line:84%
+And the step means, how
+many characters do we skip?
+
+00:18:07.460 --> 00:18:10.370 align:middle line:84%
+So if the step is 1, we're
+taking every character.
+
+00:18:10.370 --> 00:18:12.650 align:middle line:84%
+If the step is 2, we'll
+take every other character.
+
+00:18:12.650 --> 00:18:17.820 align:middle line:84%
+If the step is 3, we skip
+every two characters and so on.
+
+00:18:17.820 --> 00:18:19.550 align:middle line:84%
+Now, there's a bunch
+of combinations
+
+00:18:19.550 --> 00:18:24.950 align:middle line:84%
+we can do with
+these three numbers
+
+00:18:24.950 --> 00:18:28.670 align:middle line:84%
+within the square
+brackets that, as you
+
+00:18:28.670 --> 00:18:33.620 align:middle line:84%
+work with these exercises,
+you'll get the hang of.
+
+00:18:33.620 --> 00:18:36.230 align:middle line:84%
+For now, it won't
+hurt to always give it
+
+00:18:36.230 --> 00:18:38.390 align:middle line:90%
+a start, a stop, and a step.
+
+00:18:38.390 --> 00:18:40.190 align:middle line:90%
+That's perfectly fine.
+
+00:18:40.190 --> 00:18:42.770 align:middle line:84%
+But something that's really
+common, if you're always
+
+00:18:42.770 --> 00:18:44.330 align:middle line:84%
+going to take every
+single character,
+
+00:18:44.330 --> 00:18:46.610 align:middle line:90%
+is to just omit the step part.
+
+00:18:46.610 --> 00:18:50.810 align:middle line:84%
+So if you just give it two
+numbers, number, colon, number,
+
+00:18:50.810 --> 00:18:54.330 align:middle line:84%
+Python automatically knows that
+your step will be 1 by default.
+
+00:18:54.330 --> 00:18:57.450 align:middle line:90%
+So you're not skipping anything.
+
+00:18:57.450 --> 00:19:00.090 align:middle line:84%
+If you're just giving it
+one number, no colons,
+
+00:19:00.090 --> 00:19:02.310 align:middle line:84%
+we're back to the previous
+slide, where we're just
+
+00:19:02.310 --> 00:19:05.520 align:middle line:90%
+grabbing one element.
+
+00:19:05.520 --> 00:19:08.763 align:middle line:84%
+And I know this is going
+to be a little confusing.
+
+00:19:08.763 --> 00:19:10.930 align:middle line:84%
+We're going to look at an
+example on the next slide.
+
+00:19:10.930 --> 00:19:12.305 align:middle line:84%
+But this is
+something you'll just
+
+00:19:12.305 --> 00:19:14.340 align:middle line:84%
+have to practice a
+little bit in the shell
+
+00:19:14.340 --> 00:19:16.410 align:middle line:84%
+with the following
+example, hopefully,
+
+00:19:16.410 --> 00:19:21.300 align:middle line:84%
+just when you go home, just to
+make sure that you understand
+
+00:19:21.300 --> 00:19:22.180 align:middle line:90%
+what it's doing.
+
+00:19:22.180 --> 00:19:23.850 align:middle line:84%
+If you have a
+question, like what
+
+00:19:23.850 --> 00:19:26.460 align:middle line:84%
+if I put in this
+number or this number?
+
+00:19:26.460 --> 00:19:29.440 align:middle line:84%
+just put it in the shell
+and see what happens.
+
+00:19:29.440 --> 00:19:33.050 align:middle line:84%
+So let's take a look at
+a couple of examples.
+
+00:19:33.050 --> 00:19:35.560 align:middle line:84%
+So how do we slice
+to get substrings?
+
+00:19:35.560 --> 00:19:40.230 align:middle line:84%
+Let's say our string is
+this longer thing, abcdefgh.
+
+00:19:40.230 --> 00:19:43.740 align:middle line:84%
+When we slice, the first thing
+we want to look at is the step.
+
+00:19:43.740 --> 00:19:46.250 align:middle line:90%
+Is it positive or negative?
+
+00:19:46.250 --> 00:19:49.030 align:middle line:84%
+If it's positive-- and remember,
+if you omit it by default,
+
+00:19:49.030 --> 00:19:49.960 align:middle line:90%
+it's plus 1.
+
+00:19:49.960 --> 00:19:53.500 align:middle line:84%
+So if it's positive, we're going
+to work our way left to right,
+
+00:19:53.500 --> 00:19:54.490 align:middle line:90%
+the way we read.
+
+00:19:54.490 --> 00:19:59.050 align:middle line:84%
+If it's negative, we're going
+to work our way right to left.
+
+00:19:59.050 --> 00:20:03.970 align:middle line:84%
+So what if we index
+s from 3, colon, 6?
+
+00:20:03.970 --> 00:20:05.620 align:middle line:84%
+The step is positive
+1, so we're going
+
+00:20:05.620 --> 00:20:07.830 align:middle line:90%
+to work our way left to right.
+
+00:20:07.830 --> 00:20:10.250 align:middle line:84%
+So that means we're going
+to start at index 3,
+
+00:20:10.250 --> 00:20:11.750 align:middle line:90%
+so that's the d.
+
+00:20:11.750 --> 00:20:15.080 align:middle line:84%
+So we're going to grab the D
+and we're going to go up to--
+
+00:20:15.080 --> 00:20:18.440 align:middle line:84%
+get the substring from d up to
+but not including the character
+
+00:20:18.440 --> 00:20:22.340 align:middle line:90%
+at index 6, the h-- the g.
+
+00:20:22.340 --> 00:20:23.870 align:middle line:90%
+Sorry, the g.
+
+00:20:23.870 --> 00:20:25.920 align:middle line:84%
+So the characters
+we're going to grab
+
+00:20:25.920 --> 00:20:28.160 align:middle line:90%
+are the d, the e, and the f.
+
+00:20:28.160 --> 00:20:31.790 align:middle line:84%
+We start at 3, we go up
+to but not including 6,
+
+00:20:31.790 --> 00:20:35.510 align:middle line:84%
+taking every character
+because the step is 1.
+
+00:20:35.510 --> 00:20:36.940 align:middle line:90%
+What if the step was 2?
+
+00:20:36.940 --> 00:20:40.000 align:middle line:84%
+So same thing as we just
+did, except the step is 2.
+
+00:20:40.000 --> 00:20:41.980 align:middle line:84%
+Again, the step is
+positive, so we're going
+
+00:20:41.980 --> 00:20:43.960 align:middle line:90%
+to work our way left to right.
+
+00:20:43.960 --> 00:20:46.700 align:middle line:84%
+We're going to start at index
+3, so we're going to grab the d
+
+00:20:46.700 --> 00:20:48.700 align:middle line:84%
+and we're going to create
+a new object, which is
+
+00:20:48.700 --> 00:20:50.950 align:middle line:90%
+going to be the characters d.
+
+00:20:50.950 --> 00:20:53.920 align:middle line:84%
+We're going to skip the
+e because the step is 2.
+
+00:20:53.920 --> 00:20:57.140 align:middle line:90%
+Take the f, and that's it.
+
+00:20:57.140 --> 00:20:59.870 align:middle line:84%
+We've worked our way up
+to, but not including
+
+00:20:59.870 --> 00:21:01.730 align:middle line:90%
+the element at index 6.
+
+00:21:01.730 --> 00:21:05.040 align:middle line:90%
+
+
+00:21:05.040 --> 00:21:07.170 align:middle line:90%
+There are some other things--
+
+00:21:07.170 --> 00:21:09.240 align:middle line:84%
+I guess tricks
+are-- you might want
+
+00:21:09.240 --> 00:21:10.500 align:middle line:90%
+to call them that you can do.
+
+00:21:10.500 --> 00:21:13.230 align:middle line:84%
+So if we just put
+an empty colon here,
+
+00:21:13.230 --> 00:21:15.990 align:middle line:84%
+that says just make
+the same object again.
+
+00:21:15.990 --> 00:21:21.870 align:middle line:84%
+So that will evaluate
+to just abcdefgh again.
+
+00:21:21.870 --> 00:21:25.380 align:middle line:84%
+If we do colon,
+colon, negative 1,
+
+00:21:25.380 --> 00:21:28.080 align:middle line:84%
+this is shorthand
+notation for basically
+
+00:21:28.080 --> 00:21:33.720 align:middle line:84%
+grabbing for me the string
+backward, so hgfedcba.
+
+00:21:33.720 --> 00:21:37.860 align:middle line:84%
+Just make the same string as
+the original one, but backward.
+
+00:21:37.860 --> 00:21:41.490 align:middle line:84%
+And we can do something
+like this for 1
+
+00:21:41.490 --> 00:21:44.130 align:middle line:90%
+with a step negative 2.
+
+00:21:44.130 --> 00:21:47.400 align:middle line:90%
+Now the step is negative.
+
+00:21:47.400 --> 00:21:51.210 align:middle line:84%
+So that means we're going to
+work our way right to left.
+
+00:21:51.210 --> 00:21:53.550 align:middle line:90%
+We're going to start at index 4.
+
+00:21:53.550 --> 00:21:56.900 align:middle line:84%
+So we're going to
+grab the e, we're
+
+00:21:56.900 --> 00:21:58.500 align:middle line:84%
+going to skip every
+other character.
+
+00:21:58.500 --> 00:22:02.240 align:middle line:84%
+So we're not going to take
+the d, but we will take the c,
+
+00:22:02.240 --> 00:22:05.070 align:middle line:84%
+and we're going to go down to,
+but not including the character
+
+00:22:05.070 --> 00:22:05.930 align:middle line:90%
+at index 1.
+
+00:22:05.930 --> 00:22:08.010 align:middle line:84%
+So we're going to
+stop right here.
+
+00:22:08.010 --> 00:22:11.930 align:middle line:84%
+So the characters we took in
+this order were e and then c.
+
+00:22:11.930 --> 00:22:14.130 align:middle line:84%
+So this entire expression
+evaluates to ec.
+
+00:22:14.130 --> 00:22:16.920 align:middle line:90%
+
+
+00:22:16.920 --> 00:22:17.790 align:middle line:90%
+Yes, question?
+
+00:22:17.790 --> 00:22:19.185 align:middle line:90%
+AUDIENCE: Why did you skip d?
+
+00:22:19.185 --> 00:22:20.310 align:middle line:90%
+ANA BELL: Why do we skip d?
+
+00:22:20.310 --> 00:22:22.252 align:middle line:90%
+Because the step is 2.
+
+00:22:22.252 --> 00:22:24.210 align:middle line:84%
+So when the step is 1,
+we take every character.
+
+00:22:24.210 --> 00:22:26.310 align:middle line:84%
+If the step is 2,
+skip every other one.
+
+00:22:26.310 --> 00:22:27.480 align:middle line:90%
+Yeah?
+
+00:22:27.480 --> 00:22:32.940 align:middle line:84%
+AUDIENCE: For the first one, s
+3 to 6, why is g not included?
+
+00:22:32.940 --> 00:22:35.260 align:middle line:84%
+ANA BELL: g is not included
+just by definition.
+
+00:22:35.260 --> 00:22:37.600 align:middle line:84%
+We go up to but not
+including the stop.
+
+00:22:37.600 --> 00:22:40.530 align:middle line:84%
+So we'll go up to, but not
+including the character
+
+00:22:40.530 --> 00:22:42.800 align:middle line:90%
+at index 6.
+
+00:22:42.800 --> 00:22:46.640 align:middle line:84%
+That's just the definition
+of slicing in Python.
+
+00:22:46.640 --> 00:22:48.380 align:middle line:84%
+AUDIENCE: Like a
+character that starts up
+
+00:22:48.380 --> 00:22:50.510 align:middle line:84%
+to and including stop
+minus 1 [INAUDIBLE]..
+
+00:22:50.510 --> 00:22:52.700 align:middle line:84%
+ANA BELL: So up to and
+including stop minus 1
+
+00:22:52.700 --> 00:22:54.800 align:middle line:84%
+means we go up to
+and including 5.
+
+00:22:54.800 --> 00:22:56.160 align:middle line:90%
+Right, yeah, exactly.
+
+00:22:56.160 --> 00:22:56.660 align:middle line:90%
+Yep.
+
+00:22:56.660 --> 00:23:01.840 align:middle line:90%
+
+
+00:23:01.840 --> 00:23:02.340 align:middle line:90%
+OK.
+
+00:23:02.340 --> 00:23:05.160 align:middle line:84%
+So again, if you're unsure
+of what a command does,
+
+00:23:05.160 --> 00:23:08.940 align:middle line:84%
+always try-- you can always try
+it in your console, the shell,
+
+00:23:08.940 --> 00:23:12.160 align:middle line:84%
+and here's an
+opportunity to do that.
+
+00:23:12.160 --> 00:23:17.040 align:middle line:84%
+So here's a string s,
+ABC d3f, and I'm actually
+
+00:23:17.040 --> 00:23:18.330 align:middle line:90%
+going to write this one down.
+
+00:23:18.330 --> 00:23:23.100 align:middle line:84%
+Just ABC, space-- there's
+a space here, 3d--
+
+00:23:23.100 --> 00:23:24.720 align:middle line:90%
+what do I do?
+
+00:23:24.720 --> 00:23:25.280 align:middle line:90%
+Oh, d3f.
+
+00:23:25.280 --> 00:23:30.330 align:middle line:90%
+
+
+00:23:30.330 --> 00:23:32.900 align:middle line:90%
+And then another space, and ghi.
+
+00:23:32.900 --> 00:23:38.050 align:middle line:90%
+
+
+00:23:38.050 --> 00:23:40.630 align:middle line:84%
+So what do you guys think
+the first one will be?
+
+00:23:40.630 --> 00:23:42.610 align:middle line:90%
+3, colon, len s minus 1.
+
+00:23:42.610 --> 00:23:44.620 align:middle line:84%
+I'll even do the
+indices here for you.
+
+00:23:44.620 --> 00:23:51.410 align:middle line:90%
+
+
+00:23:51.410 --> 00:23:52.235 align:middle line:90%
+What's the start?
+
+00:23:52.235 --> 00:23:55.740 align:middle line:90%
+
+
+00:23:55.740 --> 00:23:57.060 align:middle line:90%
+Yeah, the space, exactly.
+
+00:23:57.060 --> 00:23:58.990 align:middle line:84%
+So it's going to
+be a little space.
+
+00:23:58.990 --> 00:24:01.545 align:middle line:90%
+What is len minus 1?
+
+00:24:01.545 --> 00:24:03.942 align:middle line:90%
+
+
+00:24:03.942 --> 00:24:05.400 align:middle line:84%
+AUDIENCE: That's
+the length, right?
+
+00:24:05.400 --> 00:24:08.958 align:middle line:90%
+It's not [INAUDIBLE].
+
+00:24:08.958 --> 00:24:11.250 align:middle line:84%
+ANA BELL: Yeah, what's the
+length-- how many characters
+
+00:24:11.250 --> 00:24:12.150 align:middle line:90%
+are in here?
+
+00:24:12.150 --> 00:24:12.870 align:middle line:90%
+11, yep.
+
+00:24:12.870 --> 00:24:14.650 align:middle line:90%
+And minus 1 is 10.
+
+00:24:14.650 --> 00:24:17.190 align:middle line:84%
+So when we do this--
+when the stop is 10,
+
+00:24:17.190 --> 00:24:19.020 align:middle line:84%
+that means we're
+going to go up to,
+
+00:24:19.020 --> 00:24:22.330 align:middle line:84%
+but not including
+the character at 10.
+
+00:24:22.330 --> 00:24:25.170 align:middle line:84%
+So we're going to
+go up to this h.
+
+00:24:25.170 --> 00:24:30.120 align:middle line:84%
+So we're going to take
+the space, d3f, space gh,
+
+00:24:30.120 --> 00:24:32.000 align:middle line:90%
+and we stop.
+
+00:24:32.000 --> 00:24:33.013 align:middle line:90%
+Yeah.
+
+00:24:33.013 --> 00:24:35.180 align:middle line:84%
+AUDIENCE: Why do we start
+the next thing at 0 again?
+
+00:24:35.180 --> 00:24:35.780 align:middle line:90%
+It's just--
+
+00:24:35.780 --> 00:24:37.066 align:middle line:90%
+ANA BELL: Convention.
+
+00:24:37.066 --> 00:24:37.675 align:middle line:90%
+AUDIENCE: OK.
+
+00:24:37.675 --> 00:24:38.800 align:middle line:90%
+ANA BELL: Computer science.
+
+00:24:38.800 --> 00:24:41.290 align:middle line:90%
+Programming.
+
+00:24:41.290 --> 00:24:45.398 align:middle line:84%
+Except for MATLAB, I think
+they still start indexing at 1.
+
+00:24:45.398 --> 00:24:46.690 align:middle line:90%
+Other questions about this one?
+
+00:24:46.690 --> 00:24:48.760 align:middle line:90%
+Is that all right?
+
+00:24:48.760 --> 00:24:53.710 align:middle line:84%
+OK, how about the next one? s
+4, colon, 0, colon, negative 1.
+
+00:24:53.710 --> 00:24:55.195 align:middle line:90%
+What's the element at index 4?
+
+00:24:55.195 --> 00:24:58.150 align:middle line:90%
+
+
+00:24:58.150 --> 00:24:59.050 align:middle line:90%
+The d, yep.
+
+00:24:59.050 --> 00:25:01.620 align:middle line:90%
+So we're going to grab the d.
+
+00:25:01.620 --> 00:25:04.020 align:middle line:84%
+Are we working our way
+right or-- to the right
+
+00:25:04.020 --> 00:25:04.745 align:middle line:90%
+or to the left?
+
+00:25:04.745 --> 00:25:05.370 align:middle line:90%
+AUDIENCE: Left.
+
+00:25:05.370 --> 00:25:06.392 align:middle line:90%
+ANA BELL: Yeah, exactly.
+
+00:25:06.392 --> 00:25:08.850 align:middle line:84%
+So we're going to go up to,
+but not including the character
+
+00:25:08.850 --> 00:25:10.260 align:middle line:90%
+at index 0.
+
+00:25:10.260 --> 00:25:16.590 align:middle line:84%
+So we're going to get the d,
+the space, the c, the B. Am
+
+00:25:16.590 --> 00:25:18.110 align:middle line:90%
+I taking the a?
+
+00:25:18.110 --> 00:25:19.170 align:middle line:90%
+No, exactly.
+
+00:25:19.170 --> 00:25:19.860 align:middle line:90%
+So that's it.
+
+00:25:19.860 --> 00:25:22.630 align:middle line:90%
+D, space, CB.
+
+00:25:22.630 --> 00:25:23.200 align:middle line:90%
+Yes?
+
+00:25:23.200 --> 00:25:24.783 align:middle line:84%
+AUDIENCE: If we want
+to include the A,
+
+00:25:24.783 --> 00:25:28.210 align:middle line:84%
+would the second
+value be negative 1?
+
+00:25:28.210 --> 00:25:30.130 align:middle line:84%
+ANA BELL: If you did
+want to include the A,
+
+00:25:30.130 --> 00:25:35.920 align:middle line:84%
+actually, you would want to do
+something different, I think.
+
+00:25:35.920 --> 00:25:38.020 align:middle line:84%
+You can't go to negative
+1 because negative 1
+
+00:25:38.020 --> 00:25:40.090 align:middle line:90%
+is actually this right here.
+
+00:25:40.090 --> 00:25:41.390 align:middle line:90%
+That's a good question.
+
+00:25:41.390 --> 00:25:43.970 align:middle line:84%
+I'd have to try it out,
+play around with it.
+
+00:25:43.970 --> 00:25:45.970 align:middle line:84%
+But if you want to include
+it, I think maybe you
+
+00:25:45.970 --> 00:25:49.420 align:middle line:90%
+would just do an empty--
+
+00:25:49.420 --> 00:25:51.082 align:middle line:90%
+sorry, go ahead.
+
+00:25:51.082 --> 00:25:53.670 align:middle line:84%
+You would just probably
+do an empty colon,
+
+00:25:53.670 --> 00:25:56.990 align:middle line:84%
+and by default, that means
+the beginning and the end.
+
+00:25:56.990 --> 00:25:58.365 align:middle line:84%
+But I'd have to
+try it out, yeah.
+
+00:25:58.365 --> 00:26:01.190 align:middle line:90%
+
+
+00:26:01.190 --> 00:26:02.810 align:middle line:90%
+How about the last one?
+
+00:26:02.810 --> 00:26:04.655 align:middle line:90%
+6, colon, 3.
+
+00:26:04.655 --> 00:26:08.222 align:middle line:90%
+What's the element at index 6?
+
+00:26:08.222 --> 00:26:09.260 align:middle line:90%
+The empty colon work--
+
+00:26:09.260 --> 00:26:09.860 align:middle line:90%
+OK, perfect.
+
+00:26:09.860 --> 00:26:10.902 align:middle line:90%
+Thanks for trying it out.
+
+00:26:10.902 --> 00:26:12.320 align:middle line:90%
+The empty colon works, yeah.
+
+00:26:12.320 --> 00:26:16.090 align:middle line:84%
+If you wanted to grab B.
+All right, so s 6, colon, 3,
+
+00:26:16.090 --> 00:26:18.110 align:middle line:90%
+what's the element at index 6?
+
+00:26:18.110 --> 00:26:19.190 align:middle line:90%
+AUDIENCE: The F.
+
+00:26:19.190 --> 00:26:20.480 align:middle line:90%
+ANA BELL: The F. OK, great.
+
+00:26:20.480 --> 00:26:24.420 align:middle line:84%
+And we're working our way
+to the right or to the left?
+
+00:26:24.420 --> 00:26:25.870 align:middle line:90%
+To the right.
+
+00:26:25.870 --> 00:26:26.370 align:middle line:90%
+OK.
+
+00:26:26.370 --> 00:26:29.130 align:middle line:84%
+So we're going to start here,
+but we need to go this way.
+
+00:26:29.130 --> 00:26:32.220 align:middle line:90%
+But what's the stop index?
+
+00:26:32.220 --> 00:26:33.030 align:middle line:90%
+Yeah.
+
+00:26:33.030 --> 00:26:37.020 align:middle line:90%
+It's not there, it's behind us.
+
+00:26:37.020 --> 00:26:41.430 align:middle line:84%
+So this last one is
+actually an empty string.
+
+00:26:41.430 --> 00:26:44.580 align:middle line:84%
+And I'll even-- we can even-- we
+can try it with something else,
+
+00:26:44.580 --> 00:26:46.030 align:middle line:90%
+too.
+
+00:26:46.030 --> 00:26:47.970 align:middle line:90%
+So if we have this ABC--
+
+00:26:47.970 --> 00:26:53.130 align:middle line:84%
+if I'm indexing starting from
+2 and I'm going backward to 0,
+
+00:26:53.130 --> 00:26:55.390 align:middle line:84%
+then that gives me
+the empty string.
+
+00:26:55.390 --> 00:26:58.500 align:middle line:84%
+And the empty string is just
+quote, quote with nothing
+
+00:26:58.500 --> 00:27:00.790 align:middle line:90%
+inside.
+
+00:27:00.790 --> 00:27:03.480 align:middle line:84%
+So that means we didn't
+take any characters
+
+00:27:03.480 --> 00:27:04.890 align:middle line:90%
+in that particular case.
+
+00:27:04.890 --> 00:27:08.400 align:middle line:90%
+
+
+00:27:08.400 --> 00:27:09.840 align:middle line:90%
+Is that all right?
+
+00:27:09.840 --> 00:27:11.100 align:middle line:90%
+AUDIENCE: Is it valid?
+
+00:27:11.100 --> 00:27:12.040 align:middle line:90%
+ANA BELL: It's valid.
+
+00:27:12.040 --> 00:27:14.700 align:middle line:84%
+We just-- there are no
+characters in between the f
+
+00:27:14.700 --> 00:27:16.615 align:middle line:90%
+and behind the f.
+
+00:27:16.615 --> 00:27:17.115 align:middle line:90%
+Yeah.
+
+00:27:17.115 --> 00:27:20.750 align:middle line:90%
+
+
+00:27:20.750 --> 00:27:23.870 align:middle line:84%
+OK, so I'll mention the strings
+are actually immutable objects.
+
+00:27:23.870 --> 00:27:26.240 align:middle line:84%
+And really, a lot of the
+objects we've seen so far
+
+00:27:26.240 --> 00:27:26.900 align:middle line:90%
+are immutable.
+
+00:27:26.900 --> 00:27:29.690 align:middle line:84%
+That means they can't be
+modified once they're created.
+
+00:27:29.690 --> 00:27:31.400 align:middle line:90%
+We've seen this already.
+
+00:27:31.400 --> 00:27:33.500 align:middle line:84%
+When I draw the
+memory diagrams, when
+
+00:27:33.500 --> 00:27:36.770 align:middle line:84%
+I create a new object, which is,
+for example, what's the string
+
+00:27:36.770 --> 00:27:40.730 align:middle line:84%
+version of this integer or
+when I cast a float to an int,
+
+00:27:40.730 --> 00:27:43.950 align:middle line:84%
+things like that, I'm not
+changing those original objects
+
+00:27:43.950 --> 00:27:47.750 align:middle line:84%
+I've created, I'm just making
+a new green box in my memory
+
+00:27:47.750 --> 00:27:49.700 align:middle line:90%
+and reassigning the name.
+
+00:27:49.700 --> 00:27:52.760 align:middle line:84%
+And we're going to see later
+on in this course mutable
+
+00:27:52.760 --> 00:27:55.380 align:middle line:84%
+objects, which means that once
+you create them in memory,
+
+00:27:55.380 --> 00:27:58.370 align:middle line:84%
+you can modify them, but
+for now, any time you
+
+00:27:58.370 --> 00:28:00.560 align:middle line:84%
+make a change to
+such an object, well,
+
+00:28:00.560 --> 00:28:02.570 align:middle line:90%
+you can't change the object.
+
+00:28:02.570 --> 00:28:04.880 align:middle line:84%
+If you want to get a different
+version of the object,
+
+00:28:04.880 --> 00:28:08.040 align:middle line:84%
+Python will create a
+new object in memory
+
+00:28:08.040 --> 00:28:11.070 align:middle line:84%
+and you can reassign the
+variable to that new object.
+
+00:28:11.070 --> 00:28:14.210 align:middle line:84%
+So in this example,
+if I want to grab--
+
+00:28:14.210 --> 00:28:17.630 align:middle line:84%
+if I have the string
+car in memory like this
+
+00:28:17.630 --> 00:28:19.760 align:middle line:84%
+and it's bound to
+variable s and I
+
+00:28:19.760 --> 00:28:24.180 align:middle line:84%
+want to change the first letter
+to a b, I'm not allowed to.
+
+00:28:24.180 --> 00:28:26.820 align:middle line:84%
+Python won't let me do
+something like, I want to change
+
+00:28:26.820 --> 00:28:29.760 align:middle line:90%
+the letter at index 0 to a b.
+
+00:28:29.760 --> 00:28:31.500 align:middle line:90%
+That's not allowed.
+
+00:28:31.500 --> 00:28:35.890 align:middle line:84%
+You can get new versions
+of that particular string.
+
+00:28:35.890 --> 00:28:40.170 align:middle line:84%
+So you can do some
+random expression
+
+00:28:40.170 --> 00:28:42.840 align:middle line:84%
+to create the bar
+that you might want.
+
+00:28:42.840 --> 00:28:47.040 align:middle line:84%
+But then the car
+remains in memory.
+
+00:28:47.040 --> 00:28:49.560 align:middle line:84%
+So the car will still
+be there, we're just
+
+00:28:49.560 --> 00:28:51.150 align:middle line:90%
+losing the binding from it.
+
+00:28:51.150 --> 00:28:54.280 align:middle line:90%
+
+
+00:28:54.280 --> 00:28:59.670 align:middle line:84%
+So any questions so
+far on these strings?
+
+00:28:59.670 --> 00:29:02.017 align:middle line:90%
+Mostly they're new data type.
+
+00:29:02.017 --> 00:29:04.350 align:middle line:84%
+You haven't worked with them
+like you have with numbers,
+
+00:29:04.350 --> 00:29:06.250 align:middle line:90%
+so it's a little bit different.
+
+00:29:06.250 --> 00:29:08.200 align:middle line:90%
+Again, someone had a question.
+
+00:29:08.200 --> 00:29:09.570 align:middle line:90%
+How do you get the A?
+
+00:29:09.570 --> 00:29:10.590 align:middle line:90%
+Backward.
+
+00:29:10.590 --> 00:29:12.420 align:middle line:90%
+Try it out in the console.
+
+00:29:12.420 --> 00:29:15.300 align:middle line:84%
+I'm happy to answer questions,
+help you try it-- try it along
+
+00:29:15.300 --> 00:29:18.130 align:middle line:84%
+with you, but that's what
+the console is there for.
+
+00:29:18.130 --> 00:29:18.630 align:middle line:90%
+The shell.
+
+00:29:18.630 --> 00:29:20.005 align:middle line:84%
+Here, that's what
+it's there for.
+
+00:29:20.005 --> 00:29:22.050 align:middle line:84%
+It's just to try
+quick little things
+
+00:29:22.050 --> 00:29:25.560 align:middle line:84%
+if you ever have a question,
+what if this or this and you
+
+00:29:25.560 --> 00:29:27.330 align:middle line:90%
+get to try it out?
+
+00:29:27.330 --> 00:29:30.010 align:middle line:84%
+Now let's move on to
+some input/output.
+
+00:29:30.010 --> 00:29:33.750 align:middle line:84%
+So far, the programs that we
+can write are pretty stagnant.
+
+00:29:33.750 --> 00:29:35.918 align:middle line:84%
+There isn't much
+interesting things
+
+00:29:35.918 --> 00:29:36.960 align:middle line:90%
+that we can do with them.
+
+00:29:36.960 --> 00:29:39.870 align:middle line:84%
+There's no interaction
+with the user.
+
+00:29:39.870 --> 00:29:44.990 align:middle line:84%
+So so far, when we've tried
+to output things, well,
+
+00:29:44.990 --> 00:29:47.540 align:middle line:84%
+you might think, we have
+been outputting things.
+
+00:29:47.540 --> 00:29:51.950 align:middle line:84%
+So when we write in our console
+something like 3 plus 2,
+
+00:29:51.950 --> 00:29:54.590 align:middle line:84%
+Python does show
+something in the shell.
+
+00:29:54.590 --> 00:29:58.030 align:middle line:84%
+This is maybe how we
+interact with the user.
+
+00:29:58.030 --> 00:30:01.360 align:middle line:84%
+But this is not
+actual true output.
+
+00:30:01.360 --> 00:30:05.820 align:middle line:84%
+This is-- I call this
+peeking into the value
+
+00:30:05.820 --> 00:30:07.360 align:middle line:90%
+of the expression.
+
+00:30:07.360 --> 00:30:10.380 align:middle line:84%
+But if you were to
+write some expression
+
+00:30:10.380 --> 00:30:13.560 align:middle line:84%
+like this in a
+file editor, Python
+
+00:30:13.560 --> 00:30:15.160 align:middle line:90%
+wouldn't actually print it out.
+
+00:30:15.160 --> 00:30:18.780 align:middle line:84%
+And so here's all the things
+that we've already tried today.
+
+00:30:18.780 --> 00:30:22.260 align:middle line:84%
+We've created all these strings,
+we've got the length of s,
+
+00:30:22.260 --> 00:30:23.100 align:middle line:90%
+we indexed.
+
+00:30:23.100 --> 00:30:26.220 align:middle line:84%
+Anytime we typed these
+expressions in the shell,
+
+00:30:26.220 --> 00:30:29.430 align:middle line:84%
+Python automatically
+gave us our value.
+
+00:30:29.430 --> 00:30:32.550 align:middle line:84%
+But if I were to type those
+exact expressions in a file
+
+00:30:32.550 --> 00:30:35.598 align:middle line:84%
+editor on the left here,
+Python is not actually
+
+00:30:35.598 --> 00:30:36.640 align:middle line:90%
+going to print these out.
+
+00:30:36.640 --> 00:30:38.220 align:middle line:90%
+So this is the file editor.
+
+00:30:38.220 --> 00:30:41.040 align:middle line:84%
+From now on, we're just
+going to work with files.
+
+00:30:41.040 --> 00:30:44.100 align:middle line:84%
+I'm going to run it by hitting
+this little green Run button
+
+00:30:44.100 --> 00:30:46.030 align:middle line:90%
+or hitting F5.
+
+00:30:46.030 --> 00:30:47.560 align:middle line:90%
+Something happened in the shell.
+
+00:30:47.560 --> 00:30:50.310 align:middle line:90%
+My program ran.
+
+00:30:50.310 --> 00:30:52.350 align:middle line:90%
+It says here, it ran this file.
+
+00:30:52.350 --> 00:30:54.660 align:middle line:90%
+But there's no output.
+
+00:30:54.660 --> 00:30:56.235 align:middle line:90%
+Where was the length of s?
+
+00:30:56.235 --> 00:30:59.080 align:middle line:84%
+Where were all these
+indices we've done before?
+
+00:30:59.080 --> 00:31:01.230 align:middle line:84%
+And that's because these
+aren't actual outputs.
+
+00:31:01.230 --> 00:31:03.090 align:middle line:84%
+When we type them
+into the shell,
+
+00:31:03.090 --> 00:31:05.730 align:middle line:84%
+that was just us doing
+quick little expressions
+
+00:31:05.730 --> 00:31:08.490 align:middle line:90%
+in the shell giving us--
+
+00:31:08.490 --> 00:31:10.440 align:middle line:84%
+that's why I call it
+peeking into the value
+
+00:31:10.440 --> 00:31:12.990 align:middle line:90%
+because it's not true output.
+
+00:31:12.990 --> 00:31:15.478 align:middle line:84%
+If you want the
+user to see output
+
+00:31:15.478 --> 00:31:17.520 align:middle line:84%
+and the shell is how we're
+going to show the user
+
+00:31:17.520 --> 00:31:21.840 align:middle line:84%
+output from running a file, we
+have to explicitly tell Python,
+
+00:31:21.840 --> 00:31:25.440 align:middle line:84%
+hey, I want you to show the
+output from this expression,
+
+00:31:25.440 --> 00:31:29.130 align:middle line:84%
+or I want you to show the
+output from this command.
+
+00:31:29.130 --> 00:31:31.210 align:middle line:84%
+And we do this using
+the print command.
+
+00:31:31.210 --> 00:31:33.150 align:middle line:84%
+So if we take our
+expression that we
+
+00:31:33.150 --> 00:31:36.810 align:middle line:84%
+want to show the output from
+and wrap it in a print command,
+
+00:31:36.810 --> 00:31:41.400 align:middle line:84%
+Python will then show that
+output and only that output.
+
+00:31:41.400 --> 00:31:43.380 align:middle line:84%
+Can you imagine if
+we wrote a file that
+
+00:31:43.380 --> 00:31:46.662 align:middle line:84%
+did all these operations and
+all these intermediary outputs
+
+00:31:46.662 --> 00:31:47.370 align:middle line:90%
+were being shown?
+
+00:31:47.370 --> 00:31:49.600 align:middle line:84%
+That would lead to a
+really messy file--
+
+00:31:49.600 --> 00:31:51.040 align:middle line:90%
+or a messy program.
+
+00:31:51.040 --> 00:31:52.780 align:middle line:84%
+And so that's why we
+have a command where
+
+00:31:52.780 --> 00:31:55.270 align:middle line:84%
+you can explicitly tell
+Python just the things you
+
+00:31:55.270 --> 00:31:57.140 align:middle line:90%
+want to show to the user.
+
+00:31:57.140 --> 00:31:59.320 align:middle line:84%
+So here, if you want to
+print the length of s,
+
+00:31:59.320 --> 00:32:04.000 align:middle line:84%
+we can wrap the length
+of in a print statement
+
+00:32:04.000 --> 00:32:05.740 align:middle line:90%
+and then run the file.
+
+00:32:05.740 --> 00:32:08.890 align:middle line:84%
+And now, the only thing
+that gets shown to the user
+
+00:32:08.890 --> 00:32:13.090 align:middle line:84%
+is the thing I explicitly
+printed out, the 3.
+
+00:32:13.090 --> 00:32:16.990 align:middle line:84%
+And then down here, if I want
+to print this other result--
+
+00:32:16.990 --> 00:32:18.520 align:middle line:84%
+the result of this
+other expression,
+
+00:32:18.520 --> 00:32:21.580 align:middle line:84%
+I can wrap that around a print
+statement and Python will then
+
+00:32:21.580 --> 00:32:22.730 align:middle line:90%
+print that one as well.
+
+00:32:22.730 --> 00:32:26.350 align:middle line:84%
+But now I'm in charge of showing
+the user the things that I
+
+00:32:26.350 --> 00:32:27.220 align:middle line:90%
+want to show them.
+
+00:32:27.220 --> 00:32:31.210 align:middle line:90%
+
+
+00:32:31.210 --> 00:32:33.600 align:middle line:90%
+OK.
+
+00:32:33.600 --> 00:32:35.940 align:middle line:84%
+So whenever you have
+a print statement,
+
+00:32:35.940 --> 00:32:38.130 align:middle line:84%
+Python will print that
+resulting expression
+
+00:32:38.130 --> 00:32:39.460 align:middle line:90%
+and then enter a new line.
+
+00:32:39.460 --> 00:32:41.970 align:middle line:84%
+So as you saw here, we had
+two print statements one,
+
+00:32:41.970 --> 00:32:44.850 align:middle line:84%
+around len and one
+around s at negative 3.
+
+00:32:44.850 --> 00:32:48.990 align:middle line:84%
+And Python put the result of
+these expressions, each one
+
+00:32:48.990 --> 00:32:50.250 align:middle line:90%
+on a different line.
+
+00:32:50.250 --> 00:32:54.300 align:middle line:84%
+Sometimes you might want to have
+expressions on the same line--
+
+00:32:54.300 --> 00:32:57.820 align:middle line:84%
+or the results of expressions
+all on the same line.
+
+00:32:57.820 --> 00:32:58.980 align:middle line:90%
+So we can do that.
+
+00:32:58.980 --> 00:33:01.320 align:middle line:84%
+We can put all of
+these different objects
+
+00:33:01.320 --> 00:33:04.080 align:middle line:90%
+within the same print statement.
+
+00:33:04.080 --> 00:33:07.200 align:middle line:84%
+We separate them by a comma
+within the print statement.
+
+00:33:07.200 --> 00:33:09.300 align:middle line:90%
+That's down here.
+
+00:33:09.300 --> 00:33:12.600 align:middle line:84%
+Python will print
+all of our objects
+
+00:33:12.600 --> 00:33:15.300 align:middle line:84%
+no matter what type they
+are, and it will separate
+
+00:33:15.300 --> 00:33:17.720 align:middle line:90%
+each object by a space.
+
+00:33:17.720 --> 00:33:21.970 align:middle line:84%
+So there's my object "the,"
+there's my object the number 3;
+
+00:33:21.970 --> 00:33:24.190 align:middle line:84%
+and there's my object
+the string "musketeers"
+
+00:33:24.190 --> 00:33:26.733 align:middle line:84%
+and it printed it all
+on one line with a space
+
+00:33:26.733 --> 00:33:27.400 align:middle line:90%
+in between them.
+
+00:33:27.400 --> 00:33:29.560 align:middle line:84%
+And that's what this comma
+does, it automatically
+
+00:33:29.560 --> 00:33:32.690 align:middle line:90%
+inserts the space.
+
+00:33:32.690 --> 00:33:36.410 align:middle line:84%
+Now let's say you don't want
+a space for whatever reason.
+
+00:33:36.410 --> 00:33:39.570 align:middle line:84%
+What if we try concatenating
+these objects together?
+
+00:33:39.570 --> 00:33:41.030 align:middle line:84%
+Remember, we saw
+concatenation, we
+
+00:33:41.030 --> 00:33:43.010 align:middle line:84%
+said it doesn't
+automatically insert spaces,
+
+00:33:43.010 --> 00:33:45.410 align:middle line:84%
+it just merges the
+strings together.
+
+00:33:45.410 --> 00:33:46.670 align:middle line:90%
+And we run it?
+
+00:33:46.670 --> 00:33:48.570 align:middle line:90%
+Well, I already gave it away.
+
+00:33:48.570 --> 00:33:51.230 align:middle line:84%
+It's going to be an error,
+but let's see the error.
+
+00:33:51.230 --> 00:33:52.670 align:middle line:90%
+It's a type error.
+
+00:33:52.670 --> 00:33:56.300 align:middle line:84%
+It says can only concatenate
+strings, not integers
+
+00:33:56.300 --> 00:33:58.370 align:middle line:90%
+to strings.
+
+00:33:58.370 --> 00:33:59.520 align:middle line:90%
+All right, makes sense.
+
+00:33:59.520 --> 00:34:02.960 align:middle line:84%
+This is a string, this is not
+a string, so that's not OK,
+
+00:34:02.960 --> 00:34:05.040 align:middle line:90%
+and this is a string.
+
+00:34:05.040 --> 00:34:09.590 align:middle line:84%
+So instead of concatenating
+different objects together,
+
+00:34:09.590 --> 00:34:13.670 align:middle line:84%
+we now have to remember to
+cast every object that's
+
+00:34:13.670 --> 00:34:16.639 align:middle line:90%
+not a string to a string.
+
+00:34:16.639 --> 00:34:18.969 align:middle line:84%
+So this line is exactly the
+same as the previous one
+
+00:34:18.969 --> 00:34:22.690 align:middle line:84%
+except that b, which was
+the number the integer 3,
+
+00:34:22.690 --> 00:34:24.949 align:middle line:90%
+is now being cast to a string.
+
+00:34:24.949 --> 00:34:28.389 align:middle line:84%
+So I'm wrapping the
+b around the str.
+
+00:34:28.389 --> 00:34:32.139 align:middle line:84%
+And that casts my
+integer to the string,
+
+00:34:32.139 --> 00:34:34.600 align:middle line:84%
+and now Python is
+happy to concatenate
+
+00:34:34.600 --> 00:34:36.130 align:middle line:90%
+these three strings for me.
+
+00:34:36.130 --> 00:34:43.040 align:middle line:90%
+
+
+00:34:43.040 --> 00:34:46.000 align:middle line:90%
+OK that's basically what I said.
+
+00:34:46.000 --> 00:34:48.560 align:middle line:84%
+So that's output using
+the print statement.
+
+00:34:48.560 --> 00:34:51.520 align:middle line:90%
+Now how about input?
+
+00:34:51.520 --> 00:34:53.860 align:middle line:84%
+We can get input from the
+user, not surprisingly,
+
+00:34:53.860 --> 00:34:56.400 align:middle line:90%
+with a command called input.
+
+00:34:56.400 --> 00:34:59.860 align:middle line:84%
+The format of input
+is usually like this.
+
+00:34:59.860 --> 00:35:01.920 align:middle line:90%
+So we have the input command.
+
+00:35:01.920 --> 00:35:04.290 align:middle line:84%
+In the parentheses,
+we give it a string.
+
+00:35:04.290 --> 00:35:08.730 align:middle line:84%
+And then we usually want to
+save the input to a variable.
+
+00:35:08.730 --> 00:35:10.970 align:middle line:84%
+So the next few slides are
+going to go through step
+
+00:35:10.970 --> 00:35:14.630 align:middle line:84%
+by step what happens when I
+have these two lines of code.
+
+00:35:14.630 --> 00:35:17.060 align:middle line:84%
+Text equals input "Type
+anything," and then
+
+00:35:17.060 --> 00:35:20.170 align:middle line:90%
+I'm going to print 5 times text.
+
+00:35:20.170 --> 00:35:24.690 align:middle line:84%
+So when Python sees a line
+that says input and then
+
+00:35:24.690 --> 00:35:28.680 align:middle line:84%
+some string, Python will
+automatically take the string
+
+00:35:28.680 --> 00:35:30.210 align:middle line:90%
+within the input--
+
+00:35:30.210 --> 00:35:32.430 align:middle line:84%
+so in this particular case,
+here's my input command.
+
+00:35:32.430 --> 00:35:36.810 align:middle line:84%
+The string inside the input is
+"Type anything," colon, space.
+
+00:35:36.810 --> 00:35:40.780 align:middle line:84%
+On the shell, Python will
+put that string for you.
+
+00:35:40.780 --> 00:35:43.730 align:middle line:90%
+And then it will wait.
+
+00:35:43.730 --> 00:35:49.040 align:middle line:84%
+It waits for the user to type
+some stuff in and hit Enter.
+
+00:35:49.040 --> 00:35:52.800 align:middle line:84%
+As soon as the user hits Enter,
+whatever the user typed in--
+
+00:35:52.800 --> 00:35:55.130 align:middle line:84%
+so let's say the user
+typed in "howdy."
+
+00:35:55.130 --> 00:35:57.800 align:middle line:84%
+Whatever the user
+types in, will be
+
+00:35:57.800 --> 00:36:06.210 align:middle line:84%
+saved as a string replacing
+this input statement.
+
+00:36:06.210 --> 00:36:10.050 align:middle line:84%
+So you can think of the
+input like an expression.
+
+00:36:10.050 --> 00:36:12.320 align:middle line:84%
+It's a weird one because
+it's waiting for the user
+
+00:36:12.320 --> 00:36:14.450 align:middle line:90%
+to give us something.
+
+00:36:14.450 --> 00:36:19.130 align:middle line:84%
+But in the end, the input gets
+replaced by the string version
+
+00:36:19.130 --> 00:36:20.700 align:middle line:90%
+of whatever the user typed in.
+
+00:36:20.700 --> 00:36:22.730 align:middle line:84%
+So the user can
+type in something--
+
+00:36:22.730 --> 00:36:25.920 align:middle line:84%
+numbers, letters,
+characters, anything.
+
+00:36:25.920 --> 00:36:29.030 align:middle line:84%
+As soon as the user hits Enter,
+whatever the user typed in
+
+00:36:29.030 --> 00:36:33.480 align:middle line:84%
+will be saved as a string
+replacing this input.
+
+00:36:33.480 --> 00:36:36.320 align:middle line:84%
+So in memory, the way
+this looks like is--
+
+00:36:36.320 --> 00:36:38.000 align:middle line:90%
+this is our memory cloud.
+
+00:36:38.000 --> 00:36:41.430 align:middle line:84%
+Here is this-- here is this
+object that I've created,
+
+00:36:41.430 --> 00:36:46.400 align:middle line:84%
+which is the exact
+characters the user typed in.
+
+00:36:46.400 --> 00:36:49.220 align:middle line:84%
+OK, well, if the user
+typed in "howdy,"
+
+00:36:49.220 --> 00:36:50.720 align:middle line:90%
+then what does this line end up?
+
+00:36:50.720 --> 00:36:55.340 align:middle line:84%
+Being text is equal
+to the string "howdy."
+
+00:36:55.340 --> 00:36:58.128 align:middle line:84%
+And that basically is What we've
+seen on the previous two slides
+
+00:36:58.128 --> 00:36:59.420 align:middle line:90%
+when we've worked with strings.
+
+00:36:59.420 --> 00:37:02.450 align:middle line:84%
+We're going to
+assign this variable
+
+00:37:02.450 --> 00:37:07.700 align:middle line:84%
+and bind it to this particular
+string of characters.
+
+00:37:07.700 --> 00:37:09.430 align:middle line:90%
+Now the next line is easy.
+
+00:37:09.430 --> 00:37:13.090 align:middle line:84%
+We're going to print whatever
+the result of repeating text
+
+00:37:13.090 --> 00:37:14.770 align:middle line:90%
+is five times.
+
+00:37:14.770 --> 00:37:19.000 align:middle line:84%
+So the print will
+show on the shell,
+
+00:37:19.000 --> 00:37:21.940 align:middle line:90%
+howdyhowdyhowdyhowdyhowdy.
+
+00:37:21.940 --> 00:37:23.650 align:middle line:84%
+Whatever the user
+typed in five times.
+
+00:37:23.650 --> 00:37:27.290 align:middle line:90%
+
+
+00:37:27.290 --> 00:37:27.890 align:middle line:90%
+OK.
+
+00:37:27.890 --> 00:37:29.552 align:middle line:90%
+Let's look at another example.
+
+00:37:29.552 --> 00:37:31.010 align:middle line:84%
+In this particular
+one, we're going
+
+00:37:31.010 --> 00:37:32.930 align:middle line:90%
+to ask the user for a number.
+
+00:37:32.930 --> 00:37:37.520 align:middle line:84%
+And I want to print 5 times
+whatever the user types in.
+
+00:37:37.520 --> 00:37:40.250 align:middle line:90%
+So num1 will, again, grab input.
+
+00:37:40.250 --> 00:37:45.020 align:middle line:84%
+So what we're asking the user
+to do is to type in a number.
+
+00:37:45.020 --> 00:37:49.250 align:middle line:84%
+So when the Python sees this,
+it prints "Type a number"
+
+00:37:49.250 --> 00:37:51.140 align:middle line:90%
+and then waits for user input.
+
+00:37:51.140 --> 00:37:54.230 align:middle line:84%
+Let's say the user
+types in the number 3.
+
+00:37:54.230 --> 00:37:58.828 align:middle line:90%
+That gets saved as the string 3.
+
+00:37:58.828 --> 00:38:00.620 align:middle line:84%
+Again, so no matter
+what the user types in,
+
+00:38:00.620 --> 00:38:01.940 align:middle line:90%
+it's being saved as a string.
+
+00:38:01.940 --> 00:38:03.740 align:middle line:84%
+Even if it's a
+number, it's being
+
+00:38:03.740 --> 00:38:06.470 align:middle line:90%
+saved as a string that number.
+
+00:38:06.470 --> 00:38:09.230 align:middle line:90%
+So to Python, it's a character.
+
+00:38:09.230 --> 00:38:12.840 align:middle line:84%
+To us, it's a number, but to
+Python, it's still a character.
+
+00:38:12.840 --> 00:38:17.460 align:middle line:84%
+So num1 in memory basically
+becomes the string
+
+00:38:17.460 --> 00:38:21.510 align:middle line:90%
+3, just one single character 3.
+
+00:38:21.510 --> 00:38:24.660 align:middle line:84%
+When I print 5 times num1, what
+is that going to look like?
+
+00:38:24.660 --> 00:38:26.710 align:middle line:90%
+You guys tell me.
+
+00:38:26.710 --> 00:38:27.750 align:middle line:90%
+AUDIENCE: 33333.
+
+00:38:27.750 --> 00:38:28.500 align:middle line:90%
+ANA BELL: Exactly.
+
+00:38:28.500 --> 00:38:29.000 align:middle line:90%
+Right.
+
+00:38:29.000 --> 00:38:30.420 align:middle line:90%
+33333.
+
+00:38:30.420 --> 00:38:35.880 align:middle line:84%
+Because we're working with a
+string here, not an integer.
+
+00:38:35.880 --> 00:38:37.800 align:middle line:84%
+If we want to work
+with an integer,
+
+00:38:37.800 --> 00:38:40.320 align:middle line:84%
+we have to wrap
+our input statement
+
+00:38:40.320 --> 00:38:42.670 align:middle line:90%
+with a cast statement.
+
+00:38:42.670 --> 00:38:44.790 align:middle line:84%
+So again, this is
+what Python does.
+
+00:38:44.790 --> 00:38:46.740 align:middle line:84%
+We can combine
+expressions together.
+
+00:38:46.740 --> 00:38:48.360 align:middle line:84%
+In this particular
+case, we're going
+
+00:38:48.360 --> 00:38:51.930 align:middle line:84%
+to combine the
+casting, the input,
+
+00:38:51.930 --> 00:38:53.350 align:middle line:90%
+with the input statement.
+
+00:38:53.350 --> 00:38:55.950 align:middle line:84%
+So now the user can
+type in for me 3 again.
+
+00:38:55.950 --> 00:38:59.550 align:middle line:84%
+The input itself is
+going to be the string 3,
+
+00:38:59.550 --> 00:39:02.700 align:middle line:84%
+but that line
+becomes num2 equals
+
+00:39:02.700 --> 00:39:06.150 align:middle line:90%
+int, parentheses, string 3.
+
+00:39:06.150 --> 00:39:10.020 align:middle line:84%
+And that-- I did it on
+the shell earlier today.
+
+00:39:10.020 --> 00:39:13.170 align:middle line:84%
+When we cast a number--
+a string to an int,
+
+00:39:13.170 --> 00:39:15.680 align:middle line:90%
+it becomes the number, that int.
+
+00:39:15.680 --> 00:39:18.530 align:middle line:90%
+
+
+00:39:18.530 --> 00:39:23.290 align:middle line:90%
+So num2 is then going to be 3.
+
+00:39:23.290 --> 00:39:26.680 align:middle line:84%
+In memory, num2 is not
+the string 3 anymore
+
+00:39:26.680 --> 00:39:28.240 align:middle line:90%
+because we've cast it to 3.
+
+00:39:28.240 --> 00:39:30.850 align:middle line:84%
+So when we print
+5 times 3, we're
+
+00:39:30.850 --> 00:39:38.110 align:middle line:84%
+doing the mathematical
+operation 5 times 3, 15.
+
+00:39:38.110 --> 00:39:39.070 align:middle line:90%
+OK.
+
+00:39:39.070 --> 00:39:40.880 align:middle line:90%
+Let's have you code.
+
+00:39:40.880 --> 00:39:43.240 align:middle line:84%
+So I'm going to give
+you a couple of minutes.
+
+00:39:43.240 --> 00:39:46.150 align:middle line:84%
+I'm going to have you write a
+program that is interactive.
+
+00:39:46.150 --> 00:39:48.070 align:middle line:84%
+So it's going to ask
+the user for something
+
+00:39:48.070 --> 00:39:50.570 align:middle line:84%
+and it's going to print
+something back to the user.
+
+00:39:50.570 --> 00:39:52.720 align:middle line:84%
+So we're going to ask
+the user for a verb,
+
+00:39:52.720 --> 00:39:55.060 align:middle line:84%
+and then I want you to
+print two things for me.
+
+00:39:55.060 --> 00:39:57.610 align:middle line:84%
+The first is whatever the
+verb that user typed in,
+
+00:39:57.610 --> 00:40:01.240 align:middle line:84%
+you're going to write "I can
+whatever better than you"
+
+00:40:01.240 --> 00:40:02.070 align:middle line:90%
+on one line.
+
+00:40:02.070 --> 00:40:04.570 align:middle line:84%
+And then on the next line-- so
+with another print statement,
+
+00:40:04.570 --> 00:40:06.753 align:middle line:84%
+I want you to print
+that verb five times.
+
+00:40:06.753 --> 00:40:08.920 align:middle line:84%
+So if the user types in
+"run," you're going to write
+
+00:40:08.920 --> 00:40:10.360 align:middle line:90%
+"I can run better than you."
+
+00:40:10.360 --> 00:40:13.780 align:middle line:84%
+And then on the next
+line, run run run run run.
+
+00:40:13.780 --> 00:40:17.140 align:middle line:84%
+So the way these You Try
+Its work is I actually
+
+00:40:17.140 --> 00:40:18.370 align:middle line:90%
+have some space here.
+
+00:40:18.370 --> 00:40:21.770 align:middle line:84%
+I've already pre-written
+instructions for you.
+
+00:40:21.770 --> 00:40:24.280 align:middle line:84%
+And all you have to do
+is fill in the code.
+
+00:40:24.280 --> 00:40:25.780 align:middle line:84%
+So I'll give you a
+couple of minutes
+
+00:40:25.780 --> 00:40:28.750 align:middle line:84%
+and then we'll write it together
+with suggestions from you
+
+00:40:28.750 --> 00:40:32.980 align:middle line:84%
+and we'll see how far we can
+get, and we'll definitely--
+
+00:40:32.980 --> 00:40:34.486 align:middle line:84%
+we'll definitely
+finish it together
+
+00:40:34.486 --> 00:40:36.278 align:middle line:84%
+so you don't have to
+finish it on your own.
+
+00:40:36.278 --> 00:40:42.970 align:middle line:90%
+
+
+00:40:42.970 --> 00:40:43.515 align:middle line:90%
+Yeah?
+
+00:40:43.515 --> 00:40:45.856 align:middle line:84%
+AUDIENCE: It this supposed
+to have [INAUDIBLE]??
+
+00:40:45.856 --> 00:40:48.400 align:middle line:90%
+
+
+00:40:48.400 --> 00:40:49.900 align:middle line:84%
+ANA BELL: You should
+have this file.
+
+00:40:49.900 --> 00:40:53.370 align:middle line:84%
+It's part of the zip file
+you downloaded for today.
+
+00:40:53.370 --> 00:40:54.870 align:middle line:84%
+AUDIENCE: How do
+I-- oh, here it is.
+
+00:40:54.870 --> 00:40:55.495 align:middle line:90%
+ANA BELL: Yeah.
+
+00:40:55.495 --> 00:41:05.588 align:middle line:90%
+
+
+00:41:05.588 --> 00:41:07.380 align:middle line:84%
+All right, does anyone
+have a start for me?
+
+00:41:07.380 --> 00:41:10.790 align:middle line:84%
+So how can I ask
+the user for input?
+
+00:41:10.790 --> 00:41:12.386 align:middle line:90%
+Yeah?
+
+00:41:12.386 --> 00:41:16.140 align:middle line:84%
+AUDIENCE: I think the
+question was [INAUDIBLE]..
+
+00:41:16.140 --> 00:41:20.297 align:middle line:90%
+
+
+00:41:20.297 --> 00:41:20.880 align:middle line:90%
+ANA BELL: Yep.
+
+00:41:20.880 --> 00:41:22.050 align:middle line:90%
+That works for me.
+
+00:41:22.050 --> 00:41:25.260 align:middle line:84%
+And I'm adding a little extra
+space here between the colon
+
+00:41:25.260 --> 00:41:28.170 align:middle line:84%
+or whatever prompt you have just
+so that when the user types it
+
+00:41:28.170 --> 00:41:31.170 align:middle line:84%
+in, it isn't right
+beside the colon
+
+00:41:31.170 --> 00:41:34.530 align:middle line:90%
+or the end of this string.
+
+00:41:34.530 --> 00:41:37.510 align:middle line:90%
+
+
+00:41:37.510 --> 00:41:39.690 align:middle line:84%
+So as soon as we do
+this, the user will--
+
+00:41:39.690 --> 00:41:42.300 align:middle line:84%
+the program will wait, and the
+user will get to type something
+
+00:41:42.300 --> 00:41:42.800 align:middle line:90%
+in.
+
+00:41:42.800 --> 00:41:44.610 align:middle line:90%
+What's the next step?
+
+00:41:44.610 --> 00:41:49.400 align:middle line:84%
+What's the first-- how can you
+how can you use this input?
+
+00:41:49.400 --> 00:41:51.650 align:middle line:90%
+AUDIENCE: Do print.
+
+00:41:51.650 --> 00:41:52.610 align:middle line:90%
+ANA BELL: Yep.
+
+00:41:52.610 --> 00:41:53.900 align:middle line:90%
+Let's print something.
+
+00:41:53.900 --> 00:41:58.190 align:middle line:90%
+
+
+00:41:58.190 --> 00:41:59.150 align:middle line:90%
+"I can" in quotes.
+
+00:41:59.150 --> 00:42:00.710 align:middle line:90%
+Yep, "I can."
+
+00:42:00.710 --> 00:42:03.290 align:middle line:84%
+AUDIENCE: Could you, like,
+outside of the quotes,
+
+00:42:03.290 --> 00:42:05.167 align:middle line:84%
+put the question
+within [INAUDIBLE]??
+
+00:42:05.167 --> 00:42:05.750 align:middle line:90%
+ANA BELL: Yep.
+
+00:42:05.750 --> 00:42:07.250 align:middle line:90%
+We can put a question.
+
+00:42:07.250 --> 00:42:07.970 align:middle line:90%
+Yep, exactly.
+
+00:42:07.970 --> 00:42:10.880 align:middle line:84%
+"I can," question, comma,
+because it's another object,
+
+00:42:10.880 --> 00:42:12.720 align:middle line:84%
+and I'm happy to put
+a space in between it.
+
+00:42:12.720 --> 00:42:16.718 align:middle line:84%
+"I can," question, another
+string, "better than you."
+
+00:42:16.718 --> 00:42:18.032 align:middle line:90%
+Whoops.
+
+00:42:18.032 --> 00:42:19.710 align:middle line:90%
+OK.
+
+00:42:19.710 --> 00:42:20.210 align:middle line:90%
+There.
+
+00:42:20.210 --> 00:42:22.930 align:middle line:90%
+
+
+00:42:22.930 --> 00:42:25.270 align:middle line:84%
+And we don't need to write
+the full program right away.
+
+00:42:25.270 --> 00:42:27.640 align:middle line:84%
+We can just test
+this little bit out.
+
+00:42:27.640 --> 00:42:28.960 align:middle line:90%
+So choose a verb run.
+
+00:42:28.960 --> 00:42:31.510 align:middle line:90%
+The one I gave you is fine.
+
+00:42:31.510 --> 00:42:32.640 align:middle line:90%
+That looks good so far.
+
+00:42:32.640 --> 00:42:33.140 align:middle line:90%
+All right.
+
+00:42:33.140 --> 00:42:35.350 align:middle line:84%
+So then we can keep
+working on the second part.
+
+00:42:35.350 --> 00:42:41.670 align:middle line:84%
+How can I print that
+verb five times?
+
+00:42:41.670 --> 00:42:42.420 align:middle line:90%
+Yeah?
+
+00:42:42.420 --> 00:42:44.910 align:middle line:84%
+AUDIENCE: Print and
+then question times 5.
+
+00:42:44.910 --> 00:42:47.670 align:middle line:84%
+ANA BELL: Print
+question times 5.
+
+00:42:47.670 --> 00:42:50.740 align:middle line:84%
+OK, let's run it and
+see what happens.
+
+00:42:50.740 --> 00:42:53.710 align:middle line:90%
+Run.
+
+00:42:53.710 --> 00:42:54.400 align:middle line:90%
+Not quite.
+
+00:42:54.400 --> 00:42:58.030 align:middle line:84%
+I'm missing spaces, but
+this is an awesome start.
+
+00:42:58.030 --> 00:43:00.860 align:middle line:84%
+How can I add the
+spaces in there?
+
+00:43:00.860 --> 00:43:02.600 align:middle line:90%
+Yeah?
+
+00:43:02.600 --> 00:43:06.950 align:middle line:84%
+AUDIENCE: Parentheses, then
+verb plus, like, quotes
+
+00:43:06.950 --> 00:43:07.590 align:middle line:90%
+with a space.
+
+00:43:07.590 --> 00:43:08.840 align:middle line:90%
+ANA BELL: In parentheses, yep.
+
+00:43:08.840 --> 00:43:11.840 align:middle line:84%
+We can concatenate
+it with a space.
+
+00:43:11.840 --> 00:43:14.600 align:middle line:90%
+Exactly.
+
+00:43:14.600 --> 00:43:15.500 align:middle line:90%
+All of that times 5.
+
+00:43:15.500 --> 00:43:17.840 align:middle line:90%
+Yeah, let's try that.
+
+00:43:17.840 --> 00:43:19.340 align:middle line:90%
+Run.
+
+00:43:19.340 --> 00:43:19.910 align:middle line:90%
+Yep.
+
+00:43:19.910 --> 00:43:22.800 align:middle line:90%
+That looks pretty good.
+
+00:43:22.800 --> 00:43:24.210 align:middle line:90%
+I do want to mention one thing.
+
+00:43:24.210 --> 00:43:27.060 align:middle line:84%
+There is one improvement we
+can make to this program.
+
+00:43:27.060 --> 00:43:29.340 align:middle line:84%
+If we look at the
+output here, the thing
+
+00:43:29.340 --> 00:43:34.020 align:middle line:84%
+that we're actually printing
+out is this verb space.
+
+00:43:34.020 --> 00:43:38.250 align:middle line:84%
+There's 1, 2, 3,
+4-- and the last one
+
+00:43:38.250 --> 00:43:40.770 align:middle line:84%
+actually prints it with
+a space at the end.
+
+00:43:40.770 --> 00:43:44.295 align:middle line:84%
+So a challenge for you, and the
+answer is a little bit lower--
+
+00:43:44.295 --> 00:43:46.170 align:middle line:84%
+I provide you guys with
+the answers to these,
+
+00:43:46.170 --> 00:43:48.270 align:middle line:84%
+but a challenge for
+you is think about how
+
+00:43:48.270 --> 00:43:51.480 align:middle line:84%
+you can change it-- change
+this last print statement so
+
+00:43:51.480 --> 00:43:55.980 align:middle line:84%
+that this last run doesn't
+actually have that extra space.
+
+00:43:55.980 --> 00:43:58.093 align:middle line:90%
+Just think about it.
+
+00:43:58.093 --> 00:43:59.510 align:middle line:84%
+You don't have to
+do it right now.
+
+00:43:59.510 --> 00:44:03.990 align:middle line:90%
+
+
+00:44:03.990 --> 00:44:04.860 align:middle line:90%
+OK.
+
+00:44:04.860 --> 00:44:07.380 align:middle line:84%
+So with what we know
+so far, we can actually
+
+00:44:07.380 --> 00:44:11.140 align:middle line:84%
+apply some of these ideas
+to a more numerical example.
+
+00:44:11.140 --> 00:44:14.160 align:middle line:84%
+So Newton's method is
+a way to actually grab
+
+00:44:14.160 --> 00:44:17.550 align:middle line:84%
+the roots of a
+polynomial numerically
+
+00:44:17.550 --> 00:44:20.490 align:middle line:84%
+using this idea called
+successive approximation.
+
+00:44:20.490 --> 00:44:23.010 align:middle line:84%
+We can't actually write
+the full algorithm
+
+00:44:23.010 --> 00:44:24.780 align:middle line:84%
+with what we know so
+far, but we can write
+
+00:44:24.780 --> 00:44:26.290 align:middle line:90%
+a really important part of it.
+
+00:44:26.290 --> 00:44:28.170 align:middle line:84%
+The part is-- the
+part that we can
+
+00:44:28.170 --> 00:44:31.380 align:middle line:84%
+write is the one that
+gets a next guess based
+
+00:44:31.380 --> 00:44:33.920 align:middle line:90%
+on an initial guess.
+
+00:44:33.920 --> 00:44:36.950 align:middle line:84%
+So you don't need to understand
+how the algorithm works,
+
+00:44:36.950 --> 00:44:39.820 align:middle line:84%
+but basically, the next guess
+based on an original guess
+
+00:44:39.820 --> 00:44:40.510 align:middle line:90%
+looks like this.
+
+00:44:40.510 --> 00:44:41.840 align:middle line:90%
+This is the formula.
+
+00:44:41.840 --> 00:44:44.650 align:middle line:84%
+So the next guess is the
+original guess minus--
+
+00:44:44.650 --> 00:44:49.270 align:middle line:84%
+and we evaluate the
+formula for whatever
+
+00:44:49.270 --> 00:44:52.480 align:middle line:84%
+polynomial we want to find
+at the original guess divided
+
+00:44:52.480 --> 00:44:59.020 align:middle line:84%
+by the derivative of that
+function at the same guess.
+
+00:44:59.020 --> 00:45:05.050 align:middle line:84%
+So here's just some code we've
+got asking the user for input.
+
+00:45:05.050 --> 00:45:07.750 align:middle line:84%
+What x do we want to
+find the cube root of?
+
+00:45:07.750 --> 00:45:09.760 align:middle line:84%
+Then we ask the user
+for input, what guess
+
+00:45:09.760 --> 00:45:10.960 align:middle line:90%
+do you want to start with?
+
+00:45:10.960 --> 00:45:14.600 align:middle line:84%
+And then we can just print
+the current estimate cubed.
+
+00:45:14.600 --> 00:45:17.080 align:middle line:90%
+So we just guess cubed.
+
+00:45:17.080 --> 00:45:21.280 align:middle line:84%
+And then the next guess is just
+following the formula up here.
+
+00:45:21.280 --> 00:45:24.010 align:middle line:84%
+The next guess is going to
+say it's my original guess.
+
+00:45:24.010 --> 00:45:26.620 align:middle line:84%
+So the g that I read
+in from the student--
+
+00:45:26.620 --> 00:45:30.850 align:middle line:84%
+or from the input minus,
+and now I have a division.
+
+00:45:30.850 --> 00:45:34.780 align:middle line:84%
+The top of it is
+going to be f at g.
+
+00:45:34.780 --> 00:45:37.672 align:middle line:84%
+And the computer is
+not evaluating f.
+
+00:45:37.672 --> 00:45:39.880 align:middle line:84%
+We have to give-- we have
+to actually write down what
+
+00:45:39.880 --> 00:45:41.170 align:middle line:90%
+the formula is--
+
+00:45:41.170 --> 00:45:42.010 align:middle line:90%
+the function is.
+
+00:45:42.010 --> 00:45:44.680 align:middle line:84%
+We want to evaluate at g,
+so it's g cubed minus x.
+
+00:45:44.680 --> 00:45:46.090 align:middle line:90%
+That's our function up there.
+
+00:45:46.090 --> 00:45:48.350 align:middle line:90%
+Divided by the derivative.
+
+00:45:48.350 --> 00:45:50.590 align:middle line:84%
+And again, the
+program is not going
+
+00:45:50.590 --> 00:45:52.660 align:middle line:84%
+to evaluate the
+derivative automatically.
+
+00:45:52.660 --> 00:45:55.550 align:middle line:84%
+We're going to tell it what
+the derivative is manually.
+
+00:45:55.550 --> 00:45:59.600 align:middle line:84%
+So the derivative of g cubed
+minus x is just 3g squared,
+
+00:45:59.600 --> 00:46:01.780 align:middle line:84%
+so then we just
+hard code that in.
+
+00:46:01.780 --> 00:46:03.430 align:middle line:84%
+And the next guest
+to try is just
+
+00:46:03.430 --> 00:46:07.761 align:middle line:84%
+going to be that particular
+division and subtraction.
+
+00:46:07.761 --> 00:46:09.807 align:middle line:84%
+AUDIENCE: Is this a
+function of the derivative?
+
+00:46:09.807 --> 00:46:10.640 align:middle line:90%
+ANA BELL: I'm sorry?
+
+00:46:10.640 --> 00:46:10.880 align:middle line:90%
+AUDIENCE: Sorry.
+
+00:46:10.880 --> 00:46:13.550 align:middle line:84%
+Is this a function for the
+derivative of [INAUDIBLE]??
+
+00:46:13.550 --> 00:46:15.440 align:middle line:90%
+
+
+00:46:15.440 --> 00:46:17.480 align:middle line:84%
+ANA BELL: There are
+Python packages that
+
+00:46:17.480 --> 00:46:19.620 align:middle line:84%
+allow you to do that,
+but for our purposes,
+
+00:46:19.620 --> 00:46:23.630 align:middle line:84%
+we're just going to hard code
+it in this case, but yeah.
+
+00:46:23.630 --> 00:46:28.910 align:middle line:84%
+So the way this looks
+in code is as follows.
+
+00:46:28.910 --> 00:46:30.900 align:middle line:84%
+That's exactly what
+we had in there.
+
+00:46:30.900 --> 00:46:32.690 align:middle line:84%
+And if we run this
+program, all it does
+
+00:46:32.690 --> 00:46:34.898 align:middle line:84%
+is-- let's say we want to
+find the cube root of, say,
+
+00:46:34.898 --> 00:46:38.420 align:middle line:84%
+27, let's start with,
+I don't know, 5.
+
+00:46:38.420 --> 00:46:41.900 align:middle line:84%
+It tells me that 5 cubed is
+125, way too big, obviously.
+
+00:46:41.900 --> 00:46:45.847 align:middle line:84%
+So the next guest
+to try is 3.69.
+
+00:46:45.847 --> 00:46:47.180 align:middle line:90%
+And that's all the program does.
+
+00:46:47.180 --> 00:46:50.060 align:middle line:84%
+It doesn't take this next
+guess and do another guess.
+
+00:46:50.060 --> 00:46:52.260 align:middle line:84%
+We haven't learned how
+to do such a thing yet,
+
+00:46:52.260 --> 00:46:55.135 align:middle line:84%
+but we will in the next
+couple of lectures.
+
+00:46:55.135 --> 00:46:58.430 align:middle line:90%
+
+
+00:46:58.430 --> 00:46:59.930 align:middle line:84%
+One other thing
+I want to mention
+
+00:46:59.930 --> 00:47:02.810 align:middle line:84%
+is this thing
+called an f-string.
+
+00:47:02.810 --> 00:47:05.360 align:middle line:84%
+It's something that
+became available I
+
+00:47:05.360 --> 00:47:09.200 align:middle line:84%
+think a couple of years ago
+in Python with Python 3.6.
+
+00:47:09.200 --> 00:47:11.900 align:middle line:84%
+It's a way more
+convenient way for us
+
+00:47:11.900 --> 00:47:19.590 align:middle line:84%
+to print out mixtures of literal
+text and resulting expressions.
+
+00:47:19.590 --> 00:47:21.890 align:middle line:84%
+So if you have a bunch of
+complicated expressions
+
+00:47:21.890 --> 00:47:23.870 align:middle line:84%
+you want to print
+out, an f-string
+
+00:47:23.870 --> 00:47:26.720 align:middle line:90%
+is the way to do it these days.
+
+00:47:26.720 --> 00:47:28.987 align:middle line:84%
+What we know is these
+first two lines.
+
+00:47:28.987 --> 00:47:31.320 align:middle line:84%
+This is what we've learned
+in the past couple of slides.
+
+00:47:31.320 --> 00:47:34.310 align:middle line:84%
+So if you wanted to
+have these two values
+
+00:47:34.310 --> 00:47:39.680 align:middle line:84%
+and print this big number is
+whatever fraction percent out
+
+00:47:39.680 --> 00:47:44.870 align:middle line:84%
+of the original number, if you
+actually run this in the Python
+
+00:47:44.870 --> 00:47:47.180 align:middle line:84%
+file, you'll see
+that this comma here
+
+00:47:47.180 --> 00:47:51.247 align:middle line:84%
+puts an extra space between
+my number and the percent.
+
+00:47:51.247 --> 00:47:52.580 align:middle line:90%
+And that doesn't look very good.
+
+00:47:52.580 --> 00:47:54.890 align:middle line:84%
+When you have 3%, you're
+expecting the percent sign
+
+00:47:54.890 --> 00:47:57.140 align:middle line:90%
+to be right by the 3.
+
+00:47:57.140 --> 00:48:00.670 align:middle line:84%
+But this comma adds
+for me an extra space,
+
+00:48:00.670 --> 00:48:02.310 align:middle line:90%
+so it looks a little bit weird.
+
+00:48:02.310 --> 00:48:06.460 align:middle line:84%
+Which means that our solution
+was to cast things to strings.
+
+00:48:06.460 --> 00:48:08.910 align:middle line:84%
+So if we wanted to have
+that percent sign be right
+
+00:48:08.910 --> 00:48:12.910 align:middle line:84%
+beside the number, we'd
+concatenate this cast
+
+00:48:12.910 --> 00:48:15.680 align:middle line:90%
+with the percent.
+
+00:48:15.680 --> 00:48:19.010 align:middle line:84%
+But f-strings allow us
+to do this all in one.
+
+00:48:19.010 --> 00:48:22.280 align:middle line:84%
+So there's no concatenation to
+think about, there's no casting
+
+00:48:22.280 --> 00:48:23.690 align:middle line:90%
+to think about.
+
+00:48:23.690 --> 00:48:29.540 align:middle line:84%
+f-strings basically are this
+f and then a long string.
+
+00:48:29.540 --> 00:48:32.510 align:middle line:84%
+And it's a mixture of
+expressions and things
+
+00:48:32.510 --> 00:48:35.030 align:middle line:84%
+that I want to print
+literally to the screen.
+
+00:48:35.030 --> 00:48:38.660 align:middle line:84%
+So the thing that's not
+inside a curly bracket
+
+00:48:38.660 --> 00:48:41.150 align:middle line:84%
+are all things I'm going to
+print literally to the screen.
+
+00:48:41.150 --> 00:48:45.170 align:middle line:84%
+So the space is space, and
+then later on, percent, space,
+
+00:48:45.170 --> 00:48:47.420 align:middle line:84%
+"of percent," those are all
+things that will literally
+
+00:48:47.420 --> 00:48:49.160 align:middle line:90%
+be printed to the screen.
+
+00:48:49.160 --> 00:48:51.230 align:middle line:84%
+Anything that's
+within a curly bracket
+
+00:48:51.230 --> 00:48:53.540 align:middle line:84%
+is considered an
+expression in Python.
+
+00:48:53.540 --> 00:48:57.120 align:middle line:84%
+And so before Python prints
+out the thing to the screen,
+
+00:48:57.120 --> 00:49:00.290 align:middle line:84%
+it's actually going to evaluate
+whatever num times fraction is,
+
+00:49:00.290 --> 00:49:02.330 align:middle line:84%
+and it knows these are
+going to be variables.
+
+00:49:02.330 --> 00:49:05.240 align:middle line:84%
+And then later on, fraction
+times 100, and then later on,
+
+00:49:05.240 --> 00:49:05.750 align:middle line:90%
+none.
+
+00:49:05.750 --> 00:49:08.090 align:middle line:84%
+These are all variables
+or expressions
+
+00:49:08.090 --> 00:49:10.790 align:middle line:84%
+that it will evaluate
+before actually putting them
+
+00:49:10.790 --> 00:49:11.610 align:middle line:90%
+on the screen.
+
+00:49:11.610 --> 00:49:14.220 align:middle line:84%
+And now notice,
+these expressions,
+
+00:49:14.220 --> 00:49:17.100 align:middle line:84%
+we might have had to cast
+to strings beforehand
+
+00:49:17.100 --> 00:49:18.630 align:middle line:84%
+if we wanted to
+concatenate them,
+
+00:49:18.630 --> 00:49:21.420 align:middle line:84%
+but now we don't because
+they're in this special format
+
+00:49:21.420 --> 00:49:24.070 align:middle line:84%
+with the curly brackets
+of the f-string.
+
+00:49:24.070 --> 00:49:26.320 align:middle line:90%
+So just something to practice.
+
+00:49:26.320 --> 00:49:28.500 align:middle line:84%
+I'll interchange-- I'll
+use sometimes this,
+
+00:49:28.500 --> 00:49:31.410 align:middle line:84%
+I'll use sometimes casting,
+I'll use sometimes f-strings,
+
+00:49:31.410 --> 00:49:34.500 align:middle line:84%
+but if you can use
+f-strings whenever you can,
+
+00:49:34.500 --> 00:49:41.000 align:middle line:84%
+that's really the way to
+go in Python these days.
+
+00:49:41.000 --> 00:49:43.300 align:middle line:84%
+So the big idea, actually,
+even with f-strings,
+
+00:49:43.300 --> 00:49:45.580 align:middle line:84%
+is that you can place
+expressions anywhere.
+
+00:49:45.580 --> 00:49:47.410 align:middle line:90%
+We saw-- we placed expression--
+
+00:49:47.410 --> 00:49:49.930 align:middle line:84%
+I forget here-- where
+we indexed-- we placed
+
+00:49:49.930 --> 00:49:51.640 align:middle line:90%
+an expression in the index.
+
+00:49:51.640 --> 00:49:55.390 align:middle line:84%
+Now we're placing expressions
+inside print statements.
+
+00:49:55.390 --> 00:49:57.830 align:middle line:84%
+And now we're placing
+expressions inside f-strings.
+
+00:49:57.830 --> 00:49:59.770 align:middle line:84%
+So expressions can be
+placed really anywhere,
+
+00:49:59.770 --> 00:50:01.180 align:middle line:90%
+which is pretty awesome.
+
+00:50:01.180 --> 00:50:02.200 align:middle line:90%
+Very versatile.
+
+00:50:02.200 --> 00:50:04.180 align:middle line:84%
+Python will just
+evaluate them and then
+
+00:50:04.180 --> 00:50:08.040 align:middle line:90%
+just move on to the next lines.
+
+00:50:08.040 --> 00:50:08.540 align:middle line:90%
+OK.
+
+00:50:08.540 --> 00:50:09.900 align:middle line:90%
+So the last topic--
+
+00:50:09.900 --> 00:50:10.400 align:middle line:90%
+I'm sorry.
+
+00:50:10.400 --> 00:50:14.360 align:middle line:84%
+Any other questions about
+the inputs and outputs?
+
+00:50:14.360 --> 00:50:17.480 align:middle line:90%
+Is that all right?
+
+00:50:17.480 --> 00:50:18.140 align:middle line:90%
+OK.
+
+00:50:18.140 --> 00:50:21.650 align:middle line:84%
+So the last thing that
+we'll talk about today--
+
+00:50:21.650 --> 00:50:23.270 align:middle line:84%
+and we will maybe
+talk a little bit
+
+00:50:23.270 --> 00:50:27.410 align:middle line:84%
+about it next time, is
+conditions for branching.
+
+00:50:27.410 --> 00:50:30.050 align:middle line:84%
+So right now, the kinds
+of programs we can write
+
+00:50:30.050 --> 00:50:32.180 align:middle line:90%
+are basically very linear.
+
+00:50:32.180 --> 00:50:35.180 align:middle line:84%
+We have a bunch of
+lines of code and they
+
+00:50:35.180 --> 00:50:36.957 align:middle line:90%
+get evaluated one by one.
+
+00:50:36.957 --> 00:50:38.540 align:middle line:84%
+There's no way to
+skip around, there's
+
+00:50:38.540 --> 00:50:40.670 align:middle line:84%
+no way to repeat things,
+there's no decision points
+
+00:50:40.670 --> 00:50:41.510 align:middle line:90%
+in the programs.
+
+00:50:41.510 --> 00:50:43.880 align:middle line:84%
+The values that you
+get are just the values
+
+00:50:43.880 --> 00:50:45.540 align:middle line:90%
+that are in the program.
+
+00:50:45.540 --> 00:50:47.960 align:middle line:84%
+Now we're going to look
+at ways that we can add
+
+00:50:47.960 --> 00:50:50.100 align:middle line:90%
+decision points in our program.
+
+00:50:50.100 --> 00:50:52.820 align:middle line:90%
+So if some value--
+
+00:50:52.820 --> 00:50:56.060 align:middle line:84%
+if some variable value is less
+than some other variable value,
+
+00:50:56.060 --> 00:50:57.860 align:middle line:90%
+we want to evaluate some code.
+
+00:50:57.860 --> 00:51:00.650 align:middle line:84%
+And otherwise, we'll
+do some other code.
+
+00:51:00.650 --> 00:51:06.020 align:middle line:84%
+So some code can now be skipped
+in programs with this new--
+
+00:51:06.020 --> 00:51:08.770 align:middle line:90%
+with this new idea.
+
+00:51:08.770 --> 00:51:11.510 align:middle line:84%
+Before we go on to showing
+you exactly how to do that,
+
+00:51:11.510 --> 00:51:14.740 align:middle line:84%
+I'm going to talk about another
+notion of equal in programming,
+
+00:51:14.740 --> 00:51:16.660 align:middle line:84%
+and this might be more
+the notion of equal
+
+00:51:16.660 --> 00:51:19.390 align:middle line:90%
+you might be used to in math.
+
+00:51:19.390 --> 00:51:21.940 align:middle line:84%
+So the first notion of equal
+is the one we've already seen.
+
+00:51:21.940 --> 00:51:23.110 align:middle line:90%
+It's assignment.
+
+00:51:23.110 --> 00:51:25.540 align:middle line:90%
+It's done with one equal sign.
+
+00:51:25.540 --> 00:51:28.270 align:middle line:84%
+The value on the
+right-hand side is
+
+00:51:28.270 --> 00:51:30.550 align:middle line:84%
+bound to the variable
+on the left-hand side.
+
+00:51:30.550 --> 00:51:33.180 align:middle line:90%
+That we've known.
+
+00:51:33.180 --> 00:51:38.730 align:middle line:84%
+Double equal in Python
+is how we tell Python
+
+00:51:38.730 --> 00:51:41.340 align:middle line:84%
+that we'd like to know whether
+these two expressions are
+
+00:51:41.340 --> 00:51:42.750 align:middle line:90%
+equal-- or equivalent.
+
+00:51:42.750 --> 00:51:44.470 align:middle line:90%
+Sorry, not equal.
+
+00:51:44.470 --> 00:51:49.470 align:middle line:84%
+So if we're going to be
+looking at equivalency,
+
+00:51:49.470 --> 00:51:52.590 align:middle line:90%
+how do we express equivalency?
+
+00:51:52.590 --> 00:51:55.590 align:middle line:84%
+Well, if something is
+equal to something else,
+
+00:51:55.590 --> 00:51:56.820 align:middle line:90%
+we can say yes or no.
+
+00:51:56.820 --> 00:51:59.620 align:middle line:90%
+We can say true or false.
+
+00:51:59.620 --> 00:52:01.410 align:middle line:84%
+True or false
+should ring a bell.
+
+00:52:01.410 --> 00:52:05.170 align:middle line:84%
+It's the Boolean data type
+that we saw last lecture.
+
+00:52:05.170 --> 00:52:06.870 align:middle line:84%
+And so now that
+we're going to show
+
+00:52:06.870 --> 00:52:11.497 align:middle line:84%
+you equality or
+conditionals in programming,
+
+00:52:11.497 --> 00:52:13.830 align:middle line:84%
+we're going to start talking
+about Booleans a little bit
+
+00:52:13.830 --> 00:52:15.330 align:middle line:90%
+more.
+
+00:52:15.330 --> 00:52:18.990 align:middle line:84%
+So expressions don't just
+have to be numerical.
+
+00:52:18.990 --> 00:52:22.330 align:middle line:84%
+Expressions can actually
+give us Boolean results.
+
+00:52:22.330 --> 00:52:30.520 align:middle line:84%
+So for example, an
+expression like 2 less than 3
+
+00:52:30.520 --> 00:52:34.300 align:middle line:84%
+is OK in Python, and
+this expression actually
+
+00:52:34.300 --> 00:52:36.340 align:middle line:90%
+evaluates to a certain value.
+
+00:52:36.340 --> 00:52:40.250 align:middle line:84%
+It's not a number,
+it evaluates to true,
+
+00:52:40.250 --> 00:52:43.390 align:middle line:84%
+the Boolean value true,
+because, yes, 2 is less than 3.
+
+00:52:43.390 --> 00:52:46.060 align:middle line:90%
+
+
+00:52:46.060 --> 00:52:51.070 align:middle line:84%
+The equal sign here, this
+notion with a double equal,
+
+00:52:51.070 --> 00:52:53.980 align:middle line:84%
+is how we ask Python to tell
+us whether two things are
+
+00:52:53.980 --> 00:52:54.950 align:middle line:90%
+equivalent.
+
+00:52:54.950 --> 00:52:57.820 align:middle line:84%
+And this will be the
+Boolean value false.
+
+00:52:57.820 --> 00:53:02.200 align:middle line:90%
+
+
+00:53:02.200 --> 00:53:04.380 align:middle line:84%
+So here's a bunch
+of other operators
+
+00:53:04.380 --> 00:53:08.688 align:middle line:84%
+that we can run on any
+type, really, in Python.
+
+00:53:08.688 --> 00:53:10.230 align:middle line:84%
+Most of them-- most
+of the time we're
+
+00:53:10.230 --> 00:53:12.060 align:middle line:84%
+going to run them
+on numbers, but they
+
+00:53:12.060 --> 00:53:15.640 align:middle line:84%
+can be run on strings and
+things like that as well.
+
+00:53:15.640 --> 00:53:18.610 align:middle line:84%
+So obviously the double equal
+sign checks for equality.
+
+00:53:18.610 --> 00:53:21.780 align:middle line:84%
+So if i is the same as
+j, this entire expression
+
+00:53:21.780 --> 00:53:23.190 align:middle line:90%
+is replaced with true.
+
+00:53:23.190 --> 00:53:25.980 align:middle line:84%
+And if they're not equivalent,
+this entire expression
+
+00:53:25.980 --> 00:53:28.380 align:middle line:90%
+is replaced with false.
+
+00:53:28.380 --> 00:53:30.960 align:middle line:84%
+If we want to check
+for inequality,
+
+00:53:30.960 --> 00:53:34.650 align:middle line:84%
+we use not equal-- so
+exclamation mark equal
+
+00:53:34.650 --> 00:53:36.820 align:middle line:90%
+is-- it means not equal.
+
+00:53:36.820 --> 00:53:37.920 align:middle line:90%
+So if the number--
+
+00:53:37.920 --> 00:53:42.480 align:middle line:84%
+or whatever object i is
+not equal to object j,
+
+00:53:42.480 --> 00:53:45.120 align:middle line:84%
+then this entire
+expression is true.
+
+00:53:45.120 --> 00:53:50.040 align:middle line:84%
+If they are equal, then the
+entire expression is false.
+
+00:53:50.040 --> 00:53:53.130 align:middle line:84%
+And then of course, we've
+got the less than, less than
+
+00:53:53.130 --> 00:53:55.530 align:middle line:84%
+or equal to, greater,
+greater than, or equal to
+
+00:53:55.530 --> 00:53:57.040 align:middle line:90%
+to work with as well.
+
+00:53:57.040 --> 00:53:59.370 align:middle line:90%
+We can apply these to strings.
+
+00:53:59.370 --> 00:54:02.940 align:middle line:84%
+And with strings, it's important
+to be careful about case.
+
+00:54:02.940 --> 00:54:06.090 align:middle line:84%
+So for example, lower case
+a equivalent to upper case
+
+00:54:06.090 --> 00:54:09.780 align:middle line:84%
+A is false because they
+are not the same character.
+
+00:54:09.780 --> 00:54:13.730 align:middle line:90%
+
+
+00:54:13.730 --> 00:54:16.910 align:middle line:84%
+Now that we're talking
+about Boolean operators,
+
+00:54:16.910 --> 00:54:19.830 align:middle line:84%
+we can actually start to
+combine them together.
+
+00:54:19.830 --> 00:54:24.920 align:middle line:84%
+So if I have the expression,
+for example, 2 less than 3,
+
+00:54:24.920 --> 00:54:27.320 align:middle line:84%
+like I wrote on the
+board, that's true.
+
+00:54:27.320 --> 00:54:30.140 align:middle line:84%
+But I can combine that
+expression with another one.
+
+00:54:30.140 --> 00:54:33.680 align:middle line:84%
+Actually by itself, I can say,
+what is not 2 less than 3?
+
+00:54:33.680 --> 00:54:35.990 align:middle line:90%
+And that will be false.
+
+00:54:35.990 --> 00:54:37.530 align:middle line:90%
+It's the opposite of it.
+
+00:54:37.530 --> 00:54:40.740 align:middle line:84%
+But I can also combine
+Boolean expressions together.
+
+00:54:40.740 --> 00:54:45.335 align:middle line:84%
+So I can say, what's 2 less
+than 3 and 3 less than 4?
+
+00:54:45.335 --> 00:54:47.860 align:middle line:90%
+
+
+00:54:47.860 --> 00:54:50.830 align:middle line:90%
+So 2 less than 3 is true.
+
+00:54:50.830 --> 00:54:53.780 align:middle line:90%
+And 3 less than 4 is also true.
+
+00:54:53.780 --> 00:54:55.900 align:middle line:84%
+So the combination of
+these two expressions--
+
+00:54:55.900 --> 00:54:59.780 align:middle line:84%
+of these two Boolean expressions
+is what is true and true?
+
+00:54:59.780 --> 00:55:02.030 align:middle line:90%
+True.
+
+00:55:02.030 --> 00:55:04.560 align:middle line:84%
+So if one is true and
+the other one is true,
+
+00:55:04.560 --> 00:55:07.160 align:middle line:84%
+then both of them--
+and both of them
+
+00:55:07.160 --> 00:55:08.630 align:middle line:90%
+together are going to be true.
+
+00:55:08.630 --> 00:55:10.580 align:middle line:90%
+If one of these is false--
+
+00:55:10.580 --> 00:55:17.810 align:middle line:84%
+so is 3 greater than 4 is false,
+well, what's false and true
+
+00:55:17.810 --> 00:55:18.990 align:middle line:90%
+is going to be false.
+
+00:55:18.990 --> 00:55:21.570 align:middle line:84%
+So if one of these
+operators is false,
+
+00:55:21.570 --> 00:55:25.220 align:middle line:84%
+then the entire
+expression is false.
+
+00:55:25.220 --> 00:55:28.650 align:middle line:84%
+And you don't have to
+remember this truth table.
+
+00:55:28.650 --> 00:55:30.170 align:middle line:84%
+You can always
+check it like I just
+
+00:55:30.170 --> 00:55:33.530 align:middle line:90%
+did right here in the console.
+
+00:55:33.530 --> 00:55:37.280 align:middle line:84%
+But at a high level, when
+we're doing the "and" operator
+
+00:55:37.280 --> 00:55:41.000 align:middle line:84%
+between two Boolean expressions,
+we need both of the expressions
+
+00:55:41.000 --> 00:55:46.210 align:middle line:84%
+to be true for the
+result "and" to be true.
+
+00:55:46.210 --> 00:55:48.460 align:middle line:84%
+The "or" is the other
+one we usually--
+
+00:55:48.460 --> 00:55:50.050 align:middle line:90%
+we can usually do.
+
+00:55:50.050 --> 00:55:54.760 align:middle line:84%
+The "or" is always true except
+for when both of the operators
+
+00:55:54.760 --> 00:55:56.320 align:middle line:90%
+are false.
+
+00:55:56.320 --> 00:56:00.690 align:middle line:84%
+And it makes sense makes
+sense in English to write.
+
+00:56:00.690 --> 00:56:04.510 align:middle line:84%
+If either operator is true,
+then the entire result is true.
+
+00:56:04.510 --> 00:56:07.350 align:middle line:84%
+But when both are false,
+the "or" of both of them
+
+00:56:07.350 --> 00:56:09.980 align:middle line:90%
+is false as well.
+
+00:56:09.980 --> 00:56:12.980 align:middle line:84%
+So here's a little
+example where we can
+
+00:56:12.980 --> 00:56:14.990 align:middle line:90%
+use these operators in Python.
+
+00:56:14.990 --> 00:56:17.160 align:middle line:84%
+So we can draw the little
+memory diagram as well.
+
+00:56:17.160 --> 00:56:20.900 align:middle line:84%
+So pset_time is 15, there's
+my variable. sleep_time is 8,
+
+00:56:20.900 --> 00:56:22.220 align:middle line:90%
+there's my other variable.
+
+00:56:22.220 --> 00:56:24.920 align:middle line:84%
+I'm going to print sleep_time
+is greater than pset_time.
+
+00:56:24.920 --> 00:56:26.420 align:middle line:84%
+So here, my print
+statement is going
+
+00:56:26.420 --> 00:56:32.380 align:middle line:84%
+to grab that expression,
+which evaluates to false.
+
+00:56:32.380 --> 00:56:37.960 align:middle line:84%
+8 is less than 15 is false, so
+that's going to print false.
+
+00:56:37.960 --> 00:56:39.730 align:middle line:84%
+And then I have
+two more variables.
+
+00:56:39.730 --> 00:56:41.650 align:middle line:84%
+These ones just
+happen to be Booleans.
+
+00:56:41.650 --> 00:56:45.010 align:middle line:84%
+derive is true, drink is
+false, so drink and derive
+
+00:56:45.010 --> 00:56:48.660 align:middle line:84%
+is going to be false because
+one of them is false.
+
+00:56:48.660 --> 00:56:51.120 align:middle line:84%
+And so here, I've got
+this other variable both,
+
+00:56:51.120 --> 00:56:54.045 align:middle line:84%
+and then I'm going to
+print false to the console.
+
+00:56:54.045 --> 00:56:57.020 align:middle line:90%
+
+
+00:56:57.020 --> 00:56:57.650 align:middle line:90%
+OK.
+
+00:56:57.650 --> 00:56:59.880 align:middle line:90%
+Quick You Try It for you guys.
+
+00:56:59.880 --> 00:57:03.200 align:middle line:84%
+So let's have you write
+a program that saves
+
+00:57:03.200 --> 00:57:05.850 align:middle line:90%
+a secret number in a variable.
+
+00:57:05.850 --> 00:57:08.030 align:middle line:84%
+So that's going to be
+your program's secret.
+
+00:57:08.030 --> 00:57:10.095 align:middle line:84%
+Presumably people
+using your program
+
+00:57:10.095 --> 00:57:11.720 align:middle line:84%
+won't be looking at
+the program itself,
+
+00:57:11.720 --> 00:57:14.210 align:middle line:84%
+they'll just be interacting
+with the program in the shell.
+
+00:57:14.210 --> 00:57:16.340 align:middle line:84%
+So save a secret
+number in a variable,
+
+00:57:16.340 --> 00:57:19.100 align:middle line:84%
+ask the user to guess a
+number, and then print
+
+00:57:19.100 --> 00:57:20.130 align:middle line:90%
+either true or false.
+
+00:57:20.130 --> 00:57:22.680 align:middle line:84%
+If it's the same as
+your secret or not.
+
+00:57:22.680 --> 00:57:27.930 align:middle line:84%
+So it's here in this
+You Try It down here.
+
+00:57:27.930 --> 00:57:30.120 align:middle line:84%
+So you can start with
+something like secret equals
+
+00:57:30.120 --> 00:57:33.150 align:middle line:84%
+and then put your favorite
+number there, 5 whatever,
+
+00:57:33.150 --> 00:57:35.280 align:middle line:84%
+and then write the
+rest of the code.
+
+00:57:35.280 --> 00:57:37.770 align:middle line:84%
+So ask the user
+to guess a number,
+
+00:57:37.770 --> 00:57:40.290 align:middle line:84%
+print a Boolean depending
+on whether the guess
+
+00:57:40.290 --> 00:57:42.485 align:middle line:90%
+equals this secret or not.
+
+00:57:42.485 --> 00:57:44.610 align:middle line:84%
+So I'll give you a couple
+of minutes to write that.
+
+00:57:44.610 --> 00:57:47.920 align:middle line:90%
+
+
+00:57:47.920 --> 00:57:48.420 align:middle line:90%
+Yeah?
+
+00:57:48.420 --> 00:57:49.646 align:middle line:90%
+Sorry.
+
+00:57:49.646 --> 00:57:53.820 align:middle line:84%
+AUDIENCE: Do you put the symbol
+"and" similar to [INAUDIBLE]??
+
+00:57:53.820 --> 00:57:56.200 align:middle line:84%
+ANA BELL: If you use a symbol
+"and," it's not the same.
+
+00:57:56.200 --> 00:57:59.490 align:middle line:84%
+You have to actually
+type out A-N-D in Python.
+
+00:57:59.490 --> 00:58:01.530 align:middle line:90%
+The "and" means something else.
+
+00:58:01.530 --> 00:58:05.490 align:middle line:84%
+It's an operator with
+the bits of the number.
+
+00:58:05.490 --> 00:58:08.160 align:middle line:84%
+So something-- it's not going
+to give the same answers.
+
+00:58:08.160 --> 00:58:10.950 align:middle line:90%
+Yeah.
+
+00:58:10.950 --> 00:58:13.350 align:middle line:84%
+Right, you're thinking about
+Java or C++ or something,
+
+00:58:13.350 --> 00:58:13.650 align:middle line:90%
+right?
+
+00:58:13.650 --> 00:58:14.150 align:middle line:90%
+Yeah.
+
+00:58:14.150 --> 00:58:20.740 align:middle line:90%
+
+
+00:58:20.740 --> 00:58:21.240 align:middle line:90%
+All right.
+
+00:58:21.240 --> 00:58:23.490 align:middle line:84%
+Does anyone have a start
+for me for this program?
+
+00:58:23.490 --> 00:58:25.185 align:middle line:90%
+How do I grab the user input?
+
+00:58:25.185 --> 00:58:30.300 align:middle line:90%
+
+
+00:58:30.300 --> 00:58:33.375 align:middle line:90%
+guess equals input?
+
+00:58:33.375 --> 00:58:34.895 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:58:34.895 --> 00:58:35.520 align:middle line:90%
+ANA BELL: Yeah.
+
+00:58:35.520 --> 00:58:36.240 align:middle line:90%
+We can be nice.
+
+00:58:36.240 --> 00:58:37.610 align:middle line:90%
+"Please guess--"
+
+00:58:37.610 --> 00:58:38.670 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:58:38.670 --> 00:58:39.792 align:middle line:90%
+ANA BELL: What's that?
+
+00:58:39.792 --> 00:58:41.298 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:58:41.298 --> 00:58:42.840 align:middle line:84%
+ANA BELL: We want
+the user to give us
+
+00:58:42.840 --> 00:58:45.120 align:middle line:90%
+an integer-- yeah, a number.
+
+00:58:45.120 --> 00:58:46.200 align:middle line:90%
+Exactly.
+
+00:58:46.200 --> 00:58:50.660 align:middle line:90%
+So-- OK, yeah.
+
+00:58:50.660 --> 00:58:55.930 align:middle line:84%
+If we leave it like that, then
+we're just grabbing the string.
+
+00:58:55.930 --> 00:58:58.090 align:middle line:84%
+So we have to cast
+it to an integer.
+
+00:58:58.090 --> 00:58:58.590 align:middle line:90%
+Exactly.
+
+00:58:58.590 --> 00:59:01.800 align:middle line:90%
+
+
+00:59:01.800 --> 00:59:03.480 align:middle line:90%
+Now what?
+
+00:59:03.480 --> 00:59:06.820 align:middle line:84%
+How do I check for
+equivalency between my secret
+
+00:59:06.820 --> 00:59:08.195 align:middle line:90%
+and the guess?
+
+00:59:08.195 --> 00:59:12.000 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:59:12.000 --> 00:59:16.200 align:middle line:84%
+ANA BELL: secret
+equal-equal guess.
+
+00:59:16.200 --> 00:59:18.150 align:middle line:90%
+And you want to--
+
+00:59:18.150 --> 00:59:19.560 align:middle line:90%
+print this, yeah.
+
+00:59:19.560 --> 00:59:20.580 align:middle line:90%
+Let's print that.
+
+00:59:20.580 --> 00:59:23.380 align:middle line:90%
+
+
+00:59:23.380 --> 00:59:24.160 align:middle line:90%
+OK.
+
+00:59:24.160 --> 00:59:25.970 align:middle line:90%
+Run it.
+
+00:59:25.970 --> 00:59:28.340 align:middle line:84%
+Let's guess something
+that's not the same.
+
+00:59:28.340 --> 00:59:28.940 align:middle line:90%
+False.
+
+00:59:28.940 --> 00:59:29.820 align:middle line:90%
+Run it again.
+
+00:59:29.820 --> 00:59:31.668 align:middle line:84%
+Let's guess something
+that's the same, true.
+
+00:59:31.668 --> 00:59:33.710 align:middle line:84%
+And we can guess something
+that's lower to just--
+
+00:59:33.710 --> 00:59:37.850 align:middle line:90%
+
+
+00:59:37.850 --> 00:59:39.270 align:middle line:90%
+is everyone-- yeah?
+
+00:59:39.270 --> 00:59:40.550 align:middle line:90%
+AUDIENCE: Do you assign--
+
+00:59:40.550 --> 00:59:42.590 align:middle line:84%
+like for different
+[INAUDIBLE],, did you
+
+00:59:42.590 --> 00:59:47.227 align:middle line:84%
+assign the [INAUDIBLE] equal
+to guess to a container?
+
+00:59:47.227 --> 00:59:47.810 align:middle line:90%
+ANA BELL: Yep.
+
+00:59:47.810 --> 00:59:49.190 align:middle line:90%
+Yep, exactly.
+
+00:59:49.190 --> 00:59:52.250 align:middle line:90%
+Equal equals this thing.
+
+00:59:52.250 --> 00:59:55.250 align:middle line:84%
+Yep, and then you can do
+whatever you want with that.
+
+00:59:55.250 --> 00:59:56.737 align:middle line:90%
+Print equal or something.
+
+00:59:56.737 --> 00:59:58.820 align:middle line:84%
+That's the same, but yeah,
+you can do other things
+
+00:59:58.820 --> 00:59:59.630 align:middle line:90%
+with this variable.
+
+00:59:59.630 --> 01:00:01.380 align:middle line:90%
+Yeah.
+
+01:00:01.380 --> 01:00:02.190 align:middle line:90%
+Exactly.
+
+01:00:02.190 --> 01:00:03.020 align:middle line:90%
+5.
+
+01:00:03.020 --> 01:00:03.520 align:middle line:90%
+Yeah.
+
+01:00:03.520 --> 01:00:09.560 align:middle line:90%
+
+
+01:00:09.560 --> 01:00:11.270 align:middle line:84%
+If you want, at
+home, try to see what
+
+01:00:11.270 --> 01:00:15.160 align:middle line:84%
+would have happened if you
+didn't cast it to an integer.
+
+01:00:15.160 --> 01:00:16.810 align:middle line:84%
+See if the program
+would have crashed
+
+01:00:16.810 --> 01:00:19.540 align:middle line:84%
+or not, or if it would
+have just worked but given
+
+01:00:19.540 --> 01:00:21.200 align:middle line:90%
+a wrong answer.
+
+01:00:21.200 --> 01:00:23.050 align:middle line:90%
+So why do we do Booleans?
+
+01:00:23.050 --> 01:00:25.390 align:middle line:84%
+Booleans are important
+variables because they
+
+01:00:25.390 --> 01:00:27.940 align:middle line:84%
+allow us to start
+thinking about writing
+
+01:00:27.940 --> 01:00:30.580 align:middle line:90%
+programs that make decisions.
+
+01:00:30.580 --> 01:00:32.710 align:middle line:84%
+The way we talk is
+we can say something
+
+01:00:32.710 --> 01:00:35.260 align:middle line:84%
+like, if this is true, do
+this; otherwise, do this.
+
+01:00:35.260 --> 01:00:38.680 align:middle line:84%
+The Boolean part is if
+that something is true.
+
+01:00:38.680 --> 01:00:40.120 align:middle line:84%
+So the something
+is true is going
+
+01:00:40.120 --> 01:00:43.180 align:middle line:84%
+to be the Boolean that we
+can create in our programs,
+
+01:00:43.180 --> 01:00:45.265 align:middle line:84%
+and then the do this is
+some sort of command,
+
+01:00:45.265 --> 01:00:47.140 align:middle line:84%
+and then the otherwise
+do that is going to be
+
+01:00:47.140 --> 01:00:49.000 align:middle line:90%
+some other set of commands.
+
+01:00:49.000 --> 01:00:52.185 align:middle line:84%
+So a really simple
+Boolean expression
+
+01:00:52.185 --> 01:00:54.310 align:middle line:84%
+could be, it's midnight,
+you get a free food email,
+
+01:00:54.310 --> 01:00:57.580 align:middle line:84%
+do you go get the free
+food or do you sleep?
+
+01:00:57.580 --> 01:01:01.640 align:middle line:84%
+That's the very simplest
+decision point you can make.
+
+01:01:01.640 --> 01:01:03.940 align:middle line:84%
+But with conditionals,
+you can actually
+
+01:01:03.940 --> 01:01:08.950 align:middle line:84%
+write a pretty cool program
+that gets you to that free food.
+
+01:01:08.950 --> 01:01:11.740 align:middle line:84%
+So let's say this is a map of
+MIT, this is where you are,
+
+01:01:11.740 --> 01:01:14.240 align:middle line:90%
+that's where the free food is.
+
+01:01:14.240 --> 01:01:16.370 align:middle line:84%
+We can write a really
+simple algorithm
+
+01:01:16.370 --> 01:01:20.340 align:middle line:84%
+using just conditionals that
+takes you to that free food.
+
+01:01:20.340 --> 01:01:21.960 align:middle line:90%
+So the algorithm goes like this.
+
+01:01:21.960 --> 01:01:24.830 align:middle line:84%
+So I'm going to say,
+I'm going to walk always
+
+01:01:24.830 --> 01:01:25.650 align:middle line:90%
+in this direction.
+
+01:01:25.650 --> 01:01:27.470 align:middle line:84%
+So I'm either going forward,
+backward, left, and right, I'm
+
+01:01:27.470 --> 01:01:28.370 align:middle line:90%
+not turning.
+
+01:01:28.370 --> 01:01:30.350 align:middle line:84%
+And I'm going to say
+the algorithm is always
+
+01:01:30.350 --> 01:01:32.940 align:middle line:84%
+going to have my right
+hand be on a wall.
+
+01:01:32.940 --> 01:01:36.740 align:middle line:84%
+So if the right is
+clear-- so standing here,
+
+01:01:36.740 --> 01:01:38.240 align:middle line:84%
+my right is clear,
+so I'm just going
+
+01:01:38.240 --> 01:01:41.510 align:middle line:84%
+to keep swimming
+until I reach a wall.
+
+01:01:41.510 --> 01:01:45.710 align:middle line:84%
+If my right is blocked
+but my forward is clear,
+
+01:01:45.710 --> 01:01:47.750 align:middle line:84%
+I'm going to keep
+going like this all
+
+01:01:47.750 --> 01:01:53.570 align:middle line:90%
+the way to the end of the room.
+
+01:01:53.570 --> 01:01:55.953 align:middle line:84%
+If my right is
+blocked and my forward
+
+01:01:55.953 --> 01:01:58.370 align:middle line:84%
+is blocked as if I would have
+reached the end of the room,
+
+01:01:58.370 --> 01:02:00.810 align:middle line:90%
+I would have gone to the left.
+
+01:02:00.810 --> 01:02:02.690 align:middle line:84%
+And if my right,
+forward, and left
+
+01:02:02.690 --> 01:02:05.708 align:middle line:84%
+is blocked, if I'm over
+there, I would go backward.
+
+01:02:05.708 --> 01:02:06.500 align:middle line:90%
+So I'd go backward.
+
+01:02:06.500 --> 01:02:08.150 align:middle line:84%
+So basically starting
+from here, I've
+
+01:02:08.150 --> 01:02:10.260 align:middle line:84%
+made my way all the
+way around this room
+
+01:02:10.260 --> 01:02:13.580 align:middle line:84%
+and I would go out the
+door down the hallway.
+
+01:02:13.580 --> 01:02:16.640 align:middle line:84%
+And if the map of MIT
+doesn't have islands--
+
+01:02:16.640 --> 01:02:18.440 align:middle line:84%
+so if the free food
+isn't somewhere
+
+01:02:18.440 --> 01:02:20.360 align:middle line:84%
+in an island in the
+middle here, if it's just
+
+01:02:20.360 --> 01:02:22.820 align:middle line:84%
+a regular old maze,
+I would eventually
+
+01:02:22.820 --> 01:02:26.030 align:middle line:84%
+make my way to the free food
+following this really simple
+
+01:02:26.030 --> 01:02:29.460 align:middle line:90%
+conditional algorithm.
+
+01:02:29.460 --> 01:02:31.820 align:middle line:84%
+So how do we actually do
+conditionals in Python?
+
+01:02:31.820 --> 01:02:33.980 align:middle line:84%
+How do we tell Python,
+hey, I want to create--
+
+01:02:33.980 --> 01:02:37.070 align:middle line:84%
+I want to insert a
+decision point right here?
+
+01:02:37.070 --> 01:02:40.120 align:middle line:84%
+We do that using
+the keyword "if."
+
+01:02:40.120 --> 01:02:44.550 align:middle line:84%
+And the "if" starts
+a decision block.
+
+01:02:44.550 --> 01:02:49.720 align:middle line:84%
+Now the simplest decision
+block is just an if by itself.
+
+01:02:49.720 --> 01:02:53.340 align:middle line:84%
+So if Python sees that if--
+so there's some code that it's
+
+01:02:53.340 --> 01:02:57.540 align:middle line:84%
+following, and then at some
+point, it reaches the if,
+
+01:02:57.540 --> 01:03:02.640 align:middle line:84%
+the condition tells
+Python to check
+
+01:03:02.640 --> 01:03:04.200 align:middle line:90%
+whether that condition is true.
+
+01:03:04.200 --> 01:03:07.290 align:middle line:84%
+If the condition is true-- so
+this is our decision point,
+
+01:03:07.290 --> 01:03:09.870 align:middle line:84%
+then I'm going to deviate
+from my main program
+
+01:03:09.870 --> 01:03:13.560 align:middle line:84%
+and potentially-- and
+do the code that's
+
+01:03:13.560 --> 01:03:16.550 align:middle line:90%
+part of that condition.
+
+01:03:16.550 --> 01:03:19.640 align:middle line:84%
+Those, I guess, two lines,
+dot-dot-dot inside there.
+
+01:03:19.640 --> 01:03:23.600 align:middle line:84%
+If the condition is not false,
+I'm not going to go that route
+
+01:03:23.600 --> 01:03:27.590 align:middle line:84%
+and I'll just keep following
+the rest of the main program.
+
+01:03:27.590 --> 01:03:30.650 align:middle line:84%
+How does Python know how
+many code lines to execute
+
+01:03:30.650 --> 01:03:32.060 align:middle line:90%
+that's part of that condition?
+
+01:03:32.060 --> 01:03:34.080 align:middle line:84%
+Well, it looks at
+the indentation.
+
+01:03:34.080 --> 01:03:38.660 align:middle line:84%
+So notice here, I've put a
+few spaces, for these two
+
+01:03:38.660 --> 01:03:40.370 align:middle line:90%
+dot-dot-dot code blocks here.
+
+01:03:40.370 --> 01:03:43.820 align:middle line:84%
+Anything that's indented
+right after that if statement
+
+01:03:43.820 --> 01:03:47.660 align:middle line:84%
+and that colon there
+is a set of commands
+
+01:03:47.660 --> 01:03:49.020 align:middle line:90%
+that are part of that block.
+
+01:03:49.020 --> 01:03:53.300 align:middle line:84%
+So anything here will
+get executed all at once.
+
+01:03:53.300 --> 01:03:54.590 align:middle line:90%
+And that's a really simple if.
+
+01:03:54.590 --> 01:03:56.270 align:middle line:84%
+Either you do the
+set of commands,
+
+01:03:56.270 --> 01:04:00.480 align:middle line:84%
+extra commands if the condition
+is true, or you don't.
+
+01:04:00.480 --> 01:04:03.150 align:middle line:84%
+Now you can add an
+exception to that.
+
+01:04:03.150 --> 01:04:05.870 align:middle line:90%
+So if the condition is true--
+
+01:04:05.870 --> 01:04:07.400 align:middle line:84%
+again, we're
+following the program,
+
+01:04:07.400 --> 01:04:09.980 align:middle line:84%
+we reached this if
+conditional here.
+
+01:04:09.980 --> 01:04:12.230 align:middle line:84%
+If the condition is
+true, again, we're
+
+01:04:12.230 --> 01:04:13.670 align:middle line:84%
+going to deviate
+from the program
+
+01:04:13.670 --> 01:04:18.160 align:middle line:84%
+and execute this other set
+of commands right here.
+
+01:04:18.160 --> 01:04:20.382 align:middle line:84%
+Otherwise, the
+condition is not true
+
+01:04:20.382 --> 01:04:22.590 align:middle line:84%
+and we're going to execute
+this other set of commands
+
+01:04:22.590 --> 01:04:23.350 align:middle line:90%
+over here.
+
+01:04:23.350 --> 01:04:25.050 align:middle line:90%
+So these guys over here.
+
+01:04:25.050 --> 01:04:27.000 align:middle line:84%
+So either we do
+this set of commands
+
+01:04:27.000 --> 01:04:29.730 align:middle line:84%
+or the other set of commands,
+but we never do both
+
+01:04:29.730 --> 01:04:31.530 align:middle line:90%
+and we never skip both of them.
+
+01:04:31.530 --> 01:04:33.390 align:middle line:84%
+So either we do one
+set or the other.
+
+01:04:33.390 --> 01:04:36.870 align:middle line:84%
+When we're done executing
+all the indented blocks, part
+
+01:04:36.870 --> 01:04:38.340 align:middle line:84%
+of the condition
+or the other one
+
+01:04:38.340 --> 01:04:41.080 align:middle line:84%
+that if the condition
+wasn't true,
+
+01:04:41.080 --> 01:04:44.470 align:middle line:84%
+then we rejoin the rest of the
+program and continue executing.
+
+01:04:44.470 --> 01:04:46.200 align:middle line:84%
+So this is all the
+rest of the program
+
+01:04:46.200 --> 01:04:52.030 align:middle line:84%
+is at the same indentation level
+as our original if and else.
+
+01:04:52.030 --> 01:04:55.120 align:middle line:84%
+We can add a whole
+bunch of conditions.
+
+01:04:55.120 --> 01:04:58.330 align:middle line:84%
+Not just an if, do
+this, otherwise do this.
+
+01:04:58.330 --> 01:05:02.170 align:middle line:84%
+We can actually add
+a bunch of things
+
+01:05:02.170 --> 01:05:05.170 align:middle line:84%
+to check using elif,
+which basically
+
+01:05:05.170 --> 01:05:08.720 align:middle line:84%
+stands for else, if
+another condition, do this.
+
+01:05:08.720 --> 01:05:09.970 align:middle line:90%
+So here's our program.
+
+01:05:09.970 --> 01:05:11.920 align:middle line:90%
+We reach a decision point.
+
+01:05:11.920 --> 01:05:14.380 align:middle line:84%
+If the condition is
+true like before, we'll
+
+01:05:14.380 --> 01:05:17.920 align:middle line:84%
+execute this set of commands,
+but otherwise, the condition is
+
+01:05:17.920 --> 01:05:22.510 align:middle line:84%
+not true, we're going to
+check another condition.
+
+01:05:22.510 --> 01:05:26.200 align:middle line:84%
+Else, if this other
+condition is true,
+
+01:05:26.200 --> 01:05:28.690 align:middle line:84%
+we'll execute this
+other set of commands.
+
+01:05:28.690 --> 01:05:31.780 align:middle line:90%
+Otherwise, here's another elif.
+
+01:05:31.780 --> 01:05:33.730 align:middle line:90%
+We'll check another condition.
+
+01:05:33.730 --> 01:05:36.520 align:middle line:84%
+If it's true, we'll execute
+some other set of commands,
+
+01:05:36.520 --> 01:05:39.850 align:middle line:84%
+otherwise there
+can be more elifs.
+
+01:05:39.850 --> 01:05:42.370 align:middle line:84%
+And at some point,
+we're going to rejoin
+
+01:05:42.370 --> 01:05:45.260 align:middle line:90%
+the rest of the program.
+
+01:05:45.260 --> 01:05:48.520 align:middle line:84%
+Now these elifs are going
+to be-- each condition
+
+01:05:48.520 --> 01:05:50.380 align:middle line:90%
+is checked one at a time.
+
+01:05:50.380 --> 01:05:53.425 align:middle line:84%
+The very first one that's true
+is the one that gets executed.
+
+01:05:53.425 --> 01:05:56.110 align:middle line:84%
+So we're never going to
+execute more than one
+
+01:05:56.110 --> 01:05:59.770 align:middle line:84%
+because this is an if,
+else if, else if, else if.
+
+01:05:59.770 --> 01:06:02.770 align:middle line:84%
+So even in English, you're
+only going to do one of these.
+
+01:06:02.770 --> 01:06:04.430 align:middle line:84%
+You're never going
+to do all of them.
+
+01:06:04.430 --> 01:06:06.580 align:middle line:84%
+It is possible to
+skip all of them,
+
+01:06:06.580 --> 01:06:09.160 align:middle line:84%
+though, because if none of
+those conditions are true,
+
+01:06:09.160 --> 01:06:10.810 align:middle line:90%
+you just don't do any of them.
+
+01:06:10.810 --> 01:06:16.960 align:middle line:84%
+If more than one is true, you
+do the first one that is true.
+
+01:06:16.960 --> 01:06:20.050 align:middle line:84%
+If you want to have a
+catch-all, a version
+
+01:06:20.050 --> 01:06:22.990 align:middle line:84%
+of the middle if,
+elif, elif, you just
+
+01:06:22.990 --> 01:06:24.350 align:middle line:90%
+add an else at the end.
+
+01:06:24.350 --> 01:06:26.660 align:middle line:84%
+So if none of those
+conditions are true,
+
+01:06:26.660 --> 01:06:28.870 align:middle line:84%
+you can add an else,
+which says you just
+
+01:06:28.870 --> 01:06:31.800 align:middle line:90%
+do this if nothing is true.
+
+01:06:31.800 --> 01:06:33.880 align:middle line:90%
+I like what we had over here.
+
+01:06:33.880 --> 01:06:36.200 align:middle line:90%
+If this one, otherwise do this.
+
+01:06:36.200 --> 01:06:39.560 align:middle line:84%
+Well, if any of these conditions
+are true, do one of them,
+
+01:06:39.560 --> 01:06:40.900 align:middle line:90%
+otherwise do this.
+
+01:06:40.900 --> 01:06:44.530 align:middle line:90%
+
+
+01:06:44.530 --> 01:06:46.450 align:middle line:90%
+So here's an example.
+
+01:06:46.450 --> 01:06:49.575 align:middle line:84%
+We've got pset_time, we'll just
+put some variables in there.
+
+01:06:49.575 --> 01:06:51.450 align:middle line:84%
+sleep_time, we'll put
+some variables in there
+
+01:06:51.450 --> 01:06:53.040 align:middle line:90%
+and run it, see what we get.
+
+01:06:53.040 --> 01:06:57.070 align:middle line:84%
+I've got one code block here,
+an if, elif, and an else.
+
+01:06:57.070 --> 01:06:59.220 align:middle line:84%
+So the first code
+block, the condition
+
+01:06:59.220 --> 01:07:02.910 align:middle line:84%
+is, it checks that the sum of
+those two is greater than 24
+
+01:07:02.910 --> 01:07:04.200 align:middle line:90%
+and it does something.
+
+01:07:04.200 --> 01:07:07.020 align:middle line:84%
+This is the block that's
+part of that condition.
+
+01:07:07.020 --> 01:07:10.740 align:middle line:84%
+Notice, it's indented
+by usually four spaces.
+
+01:07:10.740 --> 01:07:12.857 align:middle line:84%
+Elif-- so if this
+one was not true,
+
+01:07:12.857 --> 01:07:14.940 align:middle line:84%
+then I'm going to go ahead
+and check the next one.
+
+01:07:14.940 --> 01:07:16.830 align:middle line:84%
+The next condition
+is that the addition
+
+01:07:16.830 --> 01:07:19.020 align:middle line:84%
+is greater than or equal
+to 24, and then we're
+
+01:07:19.020 --> 01:07:22.840 align:middle line:84%
+going to do this
+print statement here.
+
+01:07:22.840 --> 01:07:24.360 align:middle line:84%
+And if neither of
+those are true,
+
+01:07:24.360 --> 01:07:26.640 align:middle line:84%
+I'm going to do whatever
+is in this code block here.
+
+01:07:26.640 --> 01:07:29.010 align:middle line:90%
+I'm going to do these two lines.
+
+01:07:29.010 --> 01:07:30.225 align:middle line:90%
+So this is my--
+
+01:07:30.225 --> 01:07:32.910 align:middle line:84%
+I call it a catch-all because
+none of those other conditions
+
+01:07:32.910 --> 01:07:36.270 align:middle line:84%
+were true, so we're going to
+catch ourselves and do this--
+
+01:07:36.270 --> 01:07:38.490 align:middle line:90%
+do these commands here.
+
+01:07:38.490 --> 01:07:41.060 align:middle line:84%
+And otherwise, once
+we finish doing
+
+01:07:41.060 --> 01:07:44.360 align:middle line:84%
+either this one or this one or
+catching whatever is left over
+
+01:07:44.360 --> 01:07:47.270 align:middle line:84%
+in here, we're going to evaluate
+the print statement here
+
+01:07:47.270 --> 01:07:49.190 align:middle line:84%
+and we're going to
+print "end of day"
+
+01:07:49.190 --> 01:07:51.260 align:middle line:84%
+because this is the
+rest of my program.
+
+01:07:51.260 --> 01:07:52.760 align:middle line:84%
+Notice, it's at the
+same indentation
+
+01:07:52.760 --> 01:07:56.730 align:middle line:90%
+level as my original program.
+
+01:07:56.730 --> 01:08:01.800 align:middle line:90%
+So here is this--
+
+01:08:01.800 --> 01:08:05.020 align:middle line:90%
+oops, this program.
+
+01:08:05.020 --> 01:08:09.180 align:middle line:84%
+So if pset_time and
+sleep_time is 22 and 8,
+
+01:08:09.180 --> 01:08:11.820 align:middle line:90%
+the addition is more than 24.
+
+01:08:11.820 --> 01:08:15.660 align:middle line:84%
+So this is going to enter
+this code block here and print
+
+01:08:15.660 --> 01:08:18.439 align:middle line:90%
+impossible.
+
+01:08:18.439 --> 01:08:21.290 align:middle line:90%
+If it's exactly equal to 24--
+
+01:08:21.290 --> 01:08:24.920 align:middle line:84%
+so 22 and 2, we're not
+going to enter this one,
+
+01:08:24.920 --> 01:08:27.950 align:middle line:84%
+but we will enter this one right
+because it's exactly equal to,
+
+01:08:27.950 --> 01:08:29.450 align:middle line:84%
+it's not greater
+than, so then we're
+
+01:08:29.450 --> 01:08:31.010 align:middle line:84%
+going to print full
+schedule and then
+
+01:08:31.010 --> 01:08:34.114 align:middle line:84%
+rejoin the rest of the program
+here and print "end of day."
+
+01:08:34.114 --> 01:08:36.750 align:middle line:90%
+
+
+01:08:36.750 --> 01:08:41.010 align:middle line:84%
+And otherwise, if this is
+something low, less than 24
+
+01:08:41.010 --> 01:08:42.899 align:middle line:90%
+and not equal to 24--
+
+01:08:42.899 --> 01:08:45.370 align:middle line:84%
+so neither of these
+conditions are true,
+
+01:08:45.370 --> 01:08:47.250 align:middle line:84%
+then we're going
+to enter the else.
+
+01:08:47.250 --> 01:08:50.970 align:middle line:84%
+And we're going to evaluate--
+or run these two lines of code
+
+01:08:50.970 --> 01:08:52.300 align:middle line:90%
+here.
+
+01:08:52.300 --> 01:08:53.939 align:middle line:84%
+So the two lines
+of code here are
+
+01:08:53.939 --> 01:08:56.220 align:middle line:84%
+going to grab the
+absolute value of 24
+
+01:08:56.220 --> 01:08:59.160 align:middle line:84%
+minus the pset_time minus
+the sleep_time figuring out
+
+01:08:59.160 --> 01:09:01.569 align:middle line:84%
+how much time we
+have left in the day.
+
+01:09:01.569 --> 01:09:05.370 align:middle line:84%
+It's also going to print this
+line here and then rejoin
+
+01:09:05.370 --> 01:09:07.290 align:middle line:84%
+the rest of the program
+to print "end of day."
+
+01:09:07.290 --> 01:09:11.200 align:middle line:90%
+
+
+01:09:11.200 --> 01:09:12.490 align:middle line:90%
+OK.
+
+01:09:12.490 --> 01:09:13.510 align:middle line:90%
+Quick check.
+
+01:09:13.510 --> 01:09:16.370 align:middle line:84%
+Nothing to run-- nothing to
+write here, nothing to run.
+
+01:09:16.370 --> 01:09:17.590 align:middle line:90%
+Think about this program.
+
+01:09:17.590 --> 01:09:19.000 align:middle line:90%
+What is wrong with it?
+
+01:09:19.000 --> 01:09:22.130 align:middle line:90%
+
+
+01:09:22.130 --> 01:09:25.000 align:middle line:84%
+So I'm grabbing a number
+for x, a number for y,
+
+01:09:25.000 --> 01:09:27.490 align:middle line:84%
+and then I'm checking
+if x is the same as y,
+
+01:09:27.490 --> 01:09:29.560 align:middle line:90%
+I'm printing x is the same as y.
+
+01:09:29.560 --> 01:09:31.330 align:middle line:84%
+So if I give it 5
+and 5, I'm going
+
+01:09:31.330 --> 01:09:33.680 align:middle line:90%
+to print 5 is the same as 5.
+
+01:09:33.680 --> 01:09:36.109 align:middle line:84%
+And then I'd also like
+to print these are equal.
+
+01:09:36.109 --> 01:09:38.660 align:middle line:84%
+What's the problem
+with this program?
+
+01:09:38.660 --> 01:09:39.830 align:middle line:90%
+Yeah?
+
+01:09:39.830 --> 01:09:41.510 align:middle line:84%
+AUDIENCE: If x is
+not equal to y,
+
+01:09:41.510 --> 01:09:44.330 align:middle line:84%
+it's still going to print these
+are equal because it's not
+
+01:09:44.330 --> 01:09:44.960 align:middle line:90%
+[INAUDIBLE].
+
+01:09:44.960 --> 01:09:45.710 align:middle line:90%
+ANA BELL: Exactly.
+
+01:09:45.710 --> 01:09:50.300 align:middle line:84%
+If x is not the same as y, we
+rejoin the rest of the program
+
+01:09:50.300 --> 01:09:52.819 align:middle line:84%
+because the indentation
+level of this print statement
+
+01:09:52.819 --> 01:09:55.160 align:middle line:84%
+is the same as the
+rest of our program.
+
+01:09:55.160 --> 01:09:56.540 align:middle line:90%
+So how do we fix it?
+
+01:09:56.540 --> 01:10:01.950 align:middle line:90%
+
+
+01:10:01.950 --> 01:10:02.490 align:middle line:90%
+Indent.
+
+01:10:02.490 --> 01:10:02.990 align:middle line:90%
+Yeah.
+
+01:10:02.990 --> 01:10:05.160 align:middle line:84%
+We'll just indent that
+print statement in
+
+01:10:05.160 --> 01:10:07.890 align:middle line:84%
+to be at the same level
+as the if statement.
+
+01:10:07.890 --> 01:10:10.790 align:middle line:90%
+
+
+01:10:10.790 --> 01:10:13.780 align:middle line:84%
+So we can actually nest
+indentation statements--
+
+01:10:13.780 --> 01:10:18.490 align:middle line:84%
+we can nest conditionals
+because once we've
+
+01:10:18.490 --> 01:10:21.500 align:middle line:84%
+created a conditional,
+it's just a code block.
+
+01:10:21.500 --> 01:10:23.110 align:middle line:84%
+So here, I've got
+an if statement
+
+01:10:23.110 --> 01:10:24.640 align:middle line:90%
+with its own code block.
+
+01:10:24.640 --> 01:10:26.800 align:middle line:84%
+And inside that code
+block, I can actually
+
+01:10:26.800 --> 01:10:28.840 align:middle line:84%
+have more if statements
+that are just
+
+01:10:28.840 --> 01:10:34.190 align:middle line:84%
+going to be executed whenever
+this condition is true.
+
+01:10:34.190 --> 01:10:36.490 align:middle line:84%
+So this is the
+inside code block.
+
+01:10:36.490 --> 01:10:39.160 align:middle line:84%
+So for example,
+the place where we
+
+01:10:39.160 --> 01:10:40.930 align:middle line:84%
+would execute this
+inner code block
+
+01:10:40.930 --> 01:10:44.890 align:middle line:84%
+is when x and y are
+equivalent because then I'm
+
+01:10:44.890 --> 01:10:48.900 align:middle line:84%
+going to enter this code
+block here, this is true.
+
+01:10:48.900 --> 01:10:51.120 align:middle line:84%
+I'm going to print
+x and y are equal.
+
+01:10:51.120 --> 01:10:54.870 align:middle line:84%
+And then this second conditional
+here, y is not equal to 0,
+
+01:10:54.870 --> 01:10:56.820 align:middle line:90%
+is also true.
+
+01:10:56.820 --> 01:11:00.470 align:middle line:84%
+And then I'm going to
+print this one as well.
+
+01:11:00.470 --> 01:11:02.220 align:middle line:84%
+I've already done one
+of the conditionals.
+
+01:11:02.220 --> 01:11:04.000 align:middle line:84%
+They're true, so I'm
+going to skip the elif,
+
+01:11:04.000 --> 01:11:05.458 align:middle line:84%
+I'm going to skip
+the else, and I'm
+
+01:11:05.458 --> 01:11:08.450 align:middle line:84%
+going to rejoin the
+rest of the program.
+
+01:11:08.450 --> 01:11:11.210 align:middle line:84%
+All the other cases,
+when one value
+
+01:11:11.210 --> 01:11:14.570 align:middle line:84%
+is different than the other,
+will either take me here
+
+01:11:14.570 --> 01:11:18.910 align:middle line:84%
+in the else and then rejoin
+the rest of the program,
+
+01:11:18.910 --> 01:11:22.810 align:middle line:84%
+or when they're
+equivalent, I'm going--
+
+01:11:22.810 --> 01:11:24.130 align:middle line:90%
+or here, I don't have--
+
+01:11:24.130 --> 01:11:26.560 align:middle line:84%
+I don't actually have a case
+for that one on the slides.
+
+01:11:26.560 --> 01:11:30.400 align:middle line:84%
+But when they're equivalent
+and y is equal to 0,
+
+01:11:30.400 --> 01:11:35.020 align:middle line:84%
+I'm not actually going to
+enter this inner conditional
+
+01:11:35.020 --> 01:11:36.250 align:middle line:90%
+because y--
+
+01:11:36.250 --> 01:11:38.260 align:middle line:90%
+while x and y were true--
+
+01:11:38.260 --> 01:11:42.280 align:middle line:84%
+were equivalent, which is
+true, y was equal to 0,
+
+01:11:42.280 --> 01:11:46.380 align:middle line:90%
+so that not equal to 0 is false.
+
+01:11:46.380 --> 01:11:49.118 align:middle line:90%
+It's just backward.
+
+01:11:49.118 --> 01:11:50.910 align:middle line:84%
+And then we rejoin the
+rest of the program.
+
+01:11:50.910 --> 01:11:51.530 align:middle line:90%
+Yeah?
+
+01:11:51.530 --> 01:11:53.888 align:middle line:84%
+AUDIENCE: What did you
+do to float [INAUDIBLE]??
+
+01:11:53.888 --> 01:11:54.430 align:middle line:90%
+ANA BELL: Oh.
+
+01:11:54.430 --> 01:11:56.500 align:middle line:84%
+I'm casting the
+numbers to floats.
+
+01:11:56.500 --> 01:11:58.330 align:middle line:84%
+I could cast them
+to ints as well.
+
+01:11:58.330 --> 01:11:59.230 align:middle line:90%
+Yeah.
+
+01:11:59.230 --> 01:12:00.640 align:middle line:90%
+Yeah.
+
+01:12:00.640 --> 01:12:02.710 align:middle line:84%
+Just so I'm not
+comparing strings.
+
+01:12:02.710 --> 01:12:04.570 align:middle line:90%
+Yeah.
+
+01:12:04.570 --> 01:12:07.300 align:middle line:84%
+So now that I've
+introduced conditionals,
+
+01:12:07.300 --> 01:12:09.430 align:middle line:84%
+it's important to do a
+little bit more practice
+
+01:12:09.430 --> 01:12:10.970 align:middle line:90%
+to get a mental model--
+
+01:12:10.970 --> 01:12:13.450 align:middle line:84%
+a mental model of how
+to trace the code.
+
+01:12:13.450 --> 01:12:17.440 align:middle line:84%
+And the visual structure of
+the code actually helps a lot.
+
+01:12:17.440 --> 01:12:18.923 align:middle line:84%
+And Python is
+unique in the sense.
+
+01:12:18.923 --> 01:12:20.590 align:middle line:84%
+There's no other
+languages that actually
+
+01:12:20.590 --> 01:12:23.620 align:middle line:90%
+force you to indent things.
+
+01:12:23.620 --> 01:12:26.020 align:middle line:84%
+So other languages
+don't really force
+
+01:12:26.020 --> 01:12:27.400 align:middle line:84%
+you to have this
+visual structure
+
+01:12:27.400 --> 01:12:29.200 align:middle line:84%
+to match exactly
+what's going on.
+
+01:12:29.200 --> 01:12:31.480 align:middle line:84%
+But it's actually
+really useful in Python.
+
+01:12:31.480 --> 01:12:33.350 align:middle line:90%
+That's what I like about Python.
+
+01:12:33.350 --> 01:12:36.700 align:middle line:84%
+It just helps you see things
+that are going on immediately,
+
+01:12:36.700 --> 01:12:39.730 align:middle line:84%
+like this set of code is
+part of this code block.
+
+01:12:39.730 --> 01:12:42.973 align:middle line:84%
+And so it helps you debug a
+little bit more efficiently.
+
+01:12:42.973 --> 01:12:44.890 align:middle line:84%
+But the more practice
+you get, the more you'll
+
+01:12:44.890 --> 01:12:48.010 align:middle line:84%
+get used to tracing the
+code and knowing exactly
+
+01:12:48.010 --> 01:12:49.990 align:middle line:84%
+if these variables
+have this value exactly
+
+01:12:49.990 --> 01:12:52.280 align:middle line:90%
+where your code is going to go.
+
+01:12:52.280 --> 01:12:53.920 align:middle line:84%
+So I'm going to
+skip this You Try It
+
+01:12:53.920 --> 01:12:55.930 align:middle line:84%
+because it's just kind
+of tracing the code
+
+01:12:55.930 --> 01:12:58.280 align:middle line:84%
+and I'm going to have
+you do this one--
+
+01:12:58.280 --> 01:12:59.530 align:middle line:90%
+or we can write it real quick.
+
+01:12:59.530 --> 01:13:01.810 align:middle line:84%
+Or you can start and then
+we can write it together.
+
+01:13:01.810 --> 01:13:05.180 align:middle line:84%
+It's a variation of the
+program you just wrote.
+
+01:13:05.180 --> 01:13:08.630 align:middle line:84%
+Instead of telling me whether
+the guess is true or--
+
+01:13:08.630 --> 01:13:10.820 align:middle line:84%
+is the same as
+the secret number,
+
+01:13:10.820 --> 01:13:14.520 align:middle line:84%
+I just want you to print whether
+the guess is too low, too high,
+
+01:13:14.520 --> 01:13:16.910 align:middle line:84%
+or the same as
+the secret number.
+
+01:13:16.910 --> 01:13:19.220 align:middle line:84%
+So we're going to need to
+put a conditional in there,
+
+01:13:19.220 --> 01:13:24.778 align:middle line:84%
+if some conditional, we're
+going to print something.
+
+01:13:24.778 --> 01:13:26.570 align:middle line:84%
+So I'll give you about
+a minute and then we
+
+01:13:26.570 --> 01:13:28.850 align:middle line:84%
+can write it together
+and then we can be done.
+
+01:13:28.850 --> 01:13:31.420 align:middle line:90%
+
+
+01:13:31.420 --> 01:13:32.540 align:middle line:90%
+Oh, yeah?
+
+01:13:32.540 --> 01:13:34.947 align:middle line:84%
+AUDIENCE: Can we have two if
+statements into the program?
+
+01:13:34.947 --> 01:13:37.280 align:middle line:84%
+ANA BELL: You can have two
+if statements in the program,
+
+01:13:37.280 --> 01:13:37.420 align:middle line:90%
+yeah.
+
+01:13:37.420 --> 01:13:39.100 align:middle line:84%
+And there's actually
+some exercises
+
+01:13:39.100 --> 01:13:41.650 align:middle line:84%
+I have for you guys to
+try at home here where
+
+01:13:41.650 --> 01:13:43.610 align:middle line:84%
+there are two if
+statements in the program,
+
+01:13:43.610 --> 01:13:44.950 align:middle line:90%
+and just to see what happens.
+
+01:13:44.950 --> 01:13:46.570 align:middle line:90%
+That starts two conditionals.
+
+01:13:46.570 --> 01:13:49.760 align:middle line:84%
+So if some conditional,
+that one can be true,
+
+01:13:49.760 --> 01:13:52.510 align:middle line:84%
+and if some other conditional,
+that one can also be true,
+
+01:13:52.510 --> 01:13:54.250 align:middle line:90%
+and then both will be evaluated.
+
+01:13:54.250 --> 01:13:56.260 align:middle line:90%
+It's not an else situation.
+
+01:13:56.260 --> 01:13:56.800 align:middle line:90%
+Yeah.
+
+01:13:56.800 --> 01:13:57.758 align:middle line:90%
+That's a good question.
+
+01:13:57.758 --> 01:14:02.230 align:middle line:90%
+
+
+01:14:02.230 --> 01:14:06.740 align:middle line:84%
+So I'm just going to copy
+the input from before.
+
+01:14:06.740 --> 01:14:09.170 align:middle line:84%
+Does anyone have a
+start to my condition?
+
+01:14:09.170 --> 01:14:11.255 align:middle line:84%
+I just copied what we
+had before for the input.
+
+01:14:11.255 --> 01:14:20.670 align:middle line:90%
+
+
+01:14:20.670 --> 01:14:21.840 align:middle line:90%
+Yeah?
+
+01:14:21.840 --> 01:14:28.594 align:middle line:84%
+AUDIENCE: So if I have
+if x is [INAUDIBLE]
+
+01:14:28.594 --> 01:14:30.790 align:middle line:90%
+and equal [INAUDIBLE]?
+
+01:14:30.790 --> 01:14:33.520 align:middle line:90%
+ANA BELL: Yep.
+
+01:14:33.520 --> 01:14:34.020 align:middle line:90%
+Yep.
+
+01:14:34.020 --> 01:14:36.864 align:middle line:90%
+
+
+01:14:36.864 --> 01:14:39.240 align:middle line:90%
+AUDIENCE: And then print--
+
+01:14:39.240 --> 01:14:39.907 align:middle line:90%
+ANA BELL: Print.
+
+01:14:39.907 --> 01:14:41.365 align:middle line:84%
+AUDIENCE: Your
+guess is "too high."
+
+01:14:41.365 --> 01:14:42.000 align:middle line:90%
+ANA BELL: Yep.
+
+01:14:42.000 --> 01:14:43.350 align:middle line:90%
+"too high."
+
+01:14:43.350 --> 01:14:45.480 align:middle line:90%
+good.
+
+01:14:45.480 --> 01:14:45.980 align:middle line:90%
+Yep.
+
+01:14:45.980 --> 01:14:47.040 align:middle line:90%
+That's a great start.
+
+01:14:47.040 --> 01:14:50.240 align:middle line:84%
+So we can even run it
+and guess something
+
+01:14:50.240 --> 01:14:51.560 align:middle line:90%
+that we know is too high.
+
+01:14:51.560 --> 01:14:52.250 align:middle line:90%
+Perfect.
+
+01:14:52.250 --> 01:14:53.030 align:middle line:90%
+Too high, yep.
+
+01:14:53.030 --> 01:14:58.150 align:middle line:90%
+
+
+01:14:58.150 --> 01:14:58.650 align:middle line:90%
+Next.
+
+01:14:58.650 --> 01:15:05.468 align:middle line:90%
+
+
+01:15:05.468 --> 01:15:07.010 align:middle line:84%
+Do you want to do
+an else or an elif?
+
+01:15:07.010 --> 01:15:07.910 align:middle line:90%
+Yeah?
+
+01:15:07.910 --> 01:15:10.370 align:middle line:84%
+AUDIENCE: Actually, I would
+get rid of the equal sign
+
+01:15:10.370 --> 01:15:13.390 align:middle line:84%
+because if we put in a 5, now
+it will still say too high.
+
+01:15:13.390 --> 01:15:14.640 align:middle line:90%
+ANA BELL: That's a good point.
+
+01:15:14.640 --> 01:15:19.760 align:middle line:84%
+So if we run it now-- let's run
+it with a 5, it says too high.
+
+01:15:19.760 --> 01:15:21.110 align:middle line:90%
+Exactly, yeah.
+
+01:15:21.110 --> 01:15:23.580 align:middle line:90%
+So let's remove the equal sign.
+
+01:15:23.580 --> 01:15:26.750 align:middle line:84%
+It's a good thing
+we debugged that.
+
+01:15:26.750 --> 01:15:33.390 align:middle line:84%
+So we can do an elif, the guess
+is equivalent to the secret.
+
+01:15:33.390 --> 01:15:38.116 align:middle line:90%
+And then we can print equal.
+
+01:15:38.116 --> 01:15:38.616 align:middle line:90%
+Whoops.
+
+01:15:38.616 --> 01:15:46.410 align:middle line:90%
+
+
+01:15:46.410 --> 01:15:48.660 align:middle line:84%
+Does everyone understand why
+we remove that equal sign
+
+01:15:48.660 --> 01:15:50.100 align:middle line:90%
+from the greater than?
+
+01:15:50.100 --> 01:15:50.652 align:middle line:90%
+Yeah?
+
+01:15:50.652 --> 01:15:52.110 align:middle line:84%
+Because we would
+have missed, yeah.
+
+01:15:52.110 --> 01:15:55.300 align:middle line:84%
+We would have mistakenly
+gone into that first path.
+
+01:15:55.300 --> 01:15:57.660 align:middle line:84%
+But elif, we can
+have a case where
+
+01:15:57.660 --> 01:15:59.820 align:middle line:84%
+the guess is equivalent
+to the secret, sure,
+
+01:15:59.820 --> 01:16:01.650 align:middle line:90%
+and then we'll print equal.
+
+01:16:01.650 --> 01:16:04.440 align:middle line:84%
+And then the last one
+can either be an else
+
+01:16:04.440 --> 01:16:07.560 align:middle line:84%
+because we know the only other
+option is guess is less than,
+
+01:16:07.560 --> 01:16:09.630 align:middle line:84%
+or we can do another
+elif if we want to,
+
+01:16:09.630 --> 01:16:11.850 align:middle line:84%
+but we can leave it
+as an else, and then
+
+01:16:11.850 --> 01:16:15.000 align:middle line:90%
+we can print "too low."
+
+01:16:15.000 --> 01:16:19.130 align:middle line:90%
+
+
+01:16:19.130 --> 01:16:22.400 align:middle line:84%
+And then we can run it and we
+can guess all the variations.
+
+01:16:22.400 --> 01:16:24.680 align:middle line:84%
+So something that's
+too high, something
+
+01:16:24.680 --> 01:16:27.786 align:middle line:90%
+that's the same, and--
+
+01:16:27.786 --> 01:16:34.580 align:middle line:90%
+
+
+01:16:34.580 --> 01:16:37.380 align:middle line:90%
+I'm not sure what I did there.
+
+01:16:37.380 --> 01:16:38.600 align:middle line:90%
+I should restart my kernel.
+
+01:16:38.600 --> 01:16:46.270 align:middle line:90%
+
+
+01:16:46.270 --> 01:16:47.860 align:middle line:84%
+So we did something
+that's too high,
+
+01:16:47.860 --> 01:16:53.020 align:middle line:84%
+something that is
+equivalent, and then we
+
+01:16:53.020 --> 01:16:56.470 align:middle line:90%
+can do something that's too low.
+
+01:16:56.470 --> 01:16:57.493 align:middle line:90%
+OK-- yeah?
+
+01:16:57.493 --> 01:16:59.410 align:middle line:84%
+AUDIENCE: What's the
+difference between having
+
+01:16:59.410 --> 01:17:01.640 align:middle line:90%
+else, else-if [INAUDIBLE]?
+
+01:17:01.640 --> 01:17:03.230 align:middle line:84%
+ANA BELL: So there
+is no difference.
+
+01:17:03.230 --> 01:17:06.250 align:middle line:84%
+We can do an elif guess
+is less than secret.
+
+01:17:06.250 --> 01:17:08.680 align:middle line:84%
+That would-- the program
+would work just the same.
+
+01:17:08.680 --> 01:17:10.690 align:middle line:84%
+The else is just
+quicker because we
+
+01:17:10.690 --> 01:17:14.500 align:middle line:84%
+know there are no
+other options here.
+
+01:17:14.500 --> 01:17:17.770 align:middle line:84%
+AUDIENCE: Why wouldn't we just
+put a row of if statements?
+
+01:17:17.770 --> 01:17:20.000 align:middle line:84%
+ANA BELL: We could also--
+in this particular case,
+
+01:17:20.000 --> 01:17:22.780 align:middle line:84%
+we could also put a bunch
+of if statements in a row,
+
+01:17:22.780 --> 01:17:25.570 align:middle line:84%
+but then we'd have to
+be careful that they
+
+01:17:25.570 --> 01:17:27.470 align:middle line:90%
+are mutually exclusive.
+
+01:17:27.470 --> 01:17:30.010 align:middle line:84%
+So like in the
+previous example, if we
+
+01:17:30.010 --> 01:17:33.070 align:middle line:84%
+have a bunch of conditions
+that might all be true,
+
+01:17:33.070 --> 01:17:36.220 align:middle line:90%
+all those ifs will execute.
+
+01:17:36.220 --> 01:17:38.530 align:middle line:84%
+That's the thing-- because
+the if starts a block.
+
+01:17:38.530 --> 01:17:41.020 align:middle line:84%
+The elif is just
+associated with that block.
+
+01:17:41.020 --> 01:17:43.228 align:middle line:84%
+So either you do one or
+the other or the other.
+
+01:17:43.228 --> 01:17:44.770 align:middle line:84%
+But if you have a
+whole bunch of ifs,
+
+01:17:44.770 --> 01:17:48.100 align:middle line:84%
+then they might all be true
+and they'll all be executed.
+
+01:17:48.100 --> 01:17:50.890 align:middle line:90%
+Yeah.
+
+01:17:50.890 --> 01:17:51.400 align:middle line:90%
+Yeah?
+
+01:17:51.400 --> 01:17:52.983 align:middle line:84%
+AUDIENCE: Why don't
+we use parentheses
+
+01:17:52.983 --> 01:17:54.367 align:middle line:90%
+with an else statement?
+
+01:17:54.367 --> 01:17:55.950 align:middle line:84%
+ANA BELL: Oh, we
+could use parentheses
+
+01:17:55.950 --> 01:17:57.060 align:middle line:90%
+in the if-else statements.
+
+01:17:57.060 --> 01:17:58.110 align:middle line:90%
+You mean like this?
+
+01:17:58.110 --> 01:17:59.970 align:middle line:84%
+Yeah, we can do that,
+especially if we
+
+01:17:59.970 --> 01:18:01.780 align:middle line:84%
+have a whole bunch of
+expressions together,
+
+01:18:01.780 --> 01:18:04.080 align:middle line:84%
+but if there's just one,
+Python will automatically
+
+01:18:04.080 --> 01:18:07.830 align:middle line:84%
+know to do the expression
+first and then do the if.
+
+01:18:07.830 --> 01:18:08.700 align:middle line:90%
+Yeah.
+
+01:18:08.700 --> 01:18:12.630 align:middle line:84%
+These are all wonderful
+questions, by the way.
+
+01:18:12.630 --> 01:18:14.380 align:middle line:90%
+OK.
+
+01:18:14.380 --> 01:18:17.593 align:middle line:84%
+So as we saw, there was
+a little bug in our code.
+
+01:18:17.593 --> 01:18:18.760 align:middle line:90%
+It's a good thing we ran it.
+
+01:18:18.760 --> 01:18:21.052 align:middle line:84%
+I should have run it with a
+bunch of different options,
+
+01:18:21.052 --> 01:18:23.350 align:middle line:84%
+but it's important to
+debug early and debug often
+
+01:18:23.350 --> 01:18:25.150 align:middle line:84%
+just to make sure that
+you don't introduce
+
+01:18:25.150 --> 01:18:28.750 align:middle line:84%
+a bug that will kind of
+carry on throughout the code.
+
+01:18:28.750 --> 01:18:30.100 align:middle line:90%
+That's another big idea.
+
+01:18:30.100 --> 01:18:32.200 align:middle line:84%
+And then a quick summary
+of what we've learned.
+
+01:18:32.200 --> 01:18:35.290 align:middle line:84%
+Input and outputs obviously
+make our programs interactive.
+
+01:18:35.290 --> 01:18:37.900 align:middle line:84%
+We added branching
+as a way to introduce
+
+01:18:37.900 --> 01:18:39.430 align:middle line:90%
+decision points in our program.
+
+01:18:39.430 --> 01:18:41.930 align:middle line:84%
+And next time, we're going to
+do a little bit more branching
+
+01:18:41.930 --> 01:18:43.240 align:middle line:90%
+and then introduce looping--
+
+01:18:43.240 --> 01:18:46.760 align:middle line:84%
+so ways to repeat
+commands in our programs.
+
+01:18:46.760 --> 01:18:49.490 align:middle line:84%
+So I went a little
+bit over time.
+
+01:18:49.490 --> 01:18:51.750 align:middle line:90%
+I won't do that again.
+
+01:18:51.750 --> 01:18:58.000 align:middle line:90%

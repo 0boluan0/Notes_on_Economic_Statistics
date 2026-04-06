@@ -1,0 +1,5918 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.976 align:middle line:90%
+[SQUEAKING]
+
+00:00:01.976 --> 00:00:03.458 align:middle line:90%
+[RUSTLING]
+
+00:00:03.458 --> 00:00:04.940 align:middle line:90%
+[CLICKING]
+
+00:00:04.940 --> 00:00:17.300 align:middle line:90%
+
+
+00:00:17.300 --> 00:00:18.530 align:middle line:90%
+ANA BELL: OK.
+
+00:00:18.530 --> 00:00:21.690 align:middle line:84%
+Let's get started
+with today's lecture.
+
+00:00:21.690 --> 00:00:24.680 align:middle line:84%
+It's going to be more
+of a chill lecture
+
+00:00:24.680 --> 00:00:26.460 align:middle line:84%
+than what we've
+done in the past,
+
+00:00:26.460 --> 00:00:28.910 align:middle line:84%
+even though we've got quite
+a few things to cover,
+
+00:00:28.910 --> 00:00:31.370 align:middle line:84%
+as you can see from
+this title slide.
+
+00:00:31.370 --> 00:00:33.440 align:middle line:84%
+I'm not going to go
+super duper fast,
+
+00:00:33.440 --> 00:00:35.610 align:middle line:84%
+so please feel free to
+ask lots of questions.
+
+00:00:35.610 --> 00:00:37.423 align:middle line:84%
+And then the second
+half of the lecture
+
+00:00:37.423 --> 00:00:38.840 align:middle line:84%
+will be really
+chill because we're
+
+00:00:38.840 --> 00:00:41.420 align:middle line:84%
+going to be talking about
+testing and debugging
+
+00:00:41.420 --> 00:00:42.240 align:middle line:90%
+strategies.
+
+00:00:42.240 --> 00:00:45.180 align:middle line:90%
+So super high-level topic.
+
+00:00:45.180 --> 00:00:50.030 align:middle line:84%
+But first, we're going to tie up
+some loose ends related to lists
+
+00:00:50.030 --> 00:00:52.050 align:middle line:90%
+and relating to functions.
+
+00:00:52.050 --> 00:00:55.160 align:middle line:84%
+So we're not going to
+introduce a lot of new syntax.
+
+00:00:55.160 --> 00:00:59.210 align:middle line:84%
+These ideas are more optional
+in your day to day coding,
+
+00:00:59.210 --> 00:01:01.950 align:middle line:84%
+but they're just really,
+really nice to know.
+
+00:01:01.950 --> 00:01:05.480 align:middle line:84%
+So let's first start talking
+about this idea of a list
+
+00:01:05.480 --> 00:01:08.310 align:middle line:90%
+comprehension.
+
+00:01:08.310 --> 00:01:12.620 align:middle line:84%
+So you've been writing
+functions that deal with lists.
+
+00:01:12.620 --> 00:01:17.210 align:middle line:84%
+And one really common pattern
+that I hope you've seen so far
+
+00:01:17.210 --> 00:01:18.660 align:middle line:90%
+is the following.
+
+00:01:18.660 --> 00:01:20.930 align:middle line:84%
+So this code right
+here shows something
+
+00:01:20.930 --> 00:01:22.910 align:middle line:84%
+that we've definitely
+coded together
+
+00:01:22.910 --> 00:01:24.950 align:middle line:84%
+and you've definitely
+coded in the finger
+
+00:01:24.950 --> 00:01:27.080 align:middle line:90%
+exercises and the quizzes.
+
+00:01:27.080 --> 00:01:29.130 align:middle line:84%
+And so it is a really
+common pattern.
+
+00:01:29.130 --> 00:01:32.480 align:middle line:84%
+So the idea here is,
+you have a function that
+
+00:01:32.480 --> 00:01:35.480 align:middle line:84%
+creates a new list, where
+the elements of this new list
+
+00:01:35.480 --> 00:01:37.590 align:middle line:84%
+are a function of
+the input list.
+
+00:01:37.590 --> 00:01:38.090 align:middle line:90%
+OK?
+
+00:01:38.090 --> 00:01:41.750 align:middle line:84%
+So the pattern here is,
+we create a new empty list
+
+00:01:41.750 --> 00:01:43.370 align:middle line:90%
+inside the function.
+
+00:01:43.370 --> 00:01:46.730 align:middle line:84%
+We have a loop over every
+element in the input,
+
+00:01:46.730 --> 00:01:49.040 align:middle line:84%
+and to each one of these
+elements in the input,
+
+00:01:49.040 --> 00:01:50.700 align:middle line:90%
+we apply the same function.
+
+00:01:50.700 --> 00:01:53.270 align:middle line:84%
+So in this particular case,
+we're taking that element
+
+00:01:53.270 --> 00:01:54.680 align:middle line:90%
+and squaring it.
+
+00:01:54.680 --> 00:01:56.480 align:middle line:84%
+And each one of
+these elements we're
+
+00:01:56.480 --> 00:02:00.620 align:middle line:84%
+appending to this new list,
+originally empty, until we've
+
+00:02:00.620 --> 00:02:01.280 align:middle line:90%
+reached--
+
+00:02:01.280 --> 00:02:03.680 align:middle line:84%
+we've done this function
+to every element in L.
+
+00:02:03.680 --> 00:02:07.580 align:middle line:84%
+And then we return this
+newly created list.
+
+00:02:07.580 --> 00:02:11.850 align:middle line:84%
+So since this is a really common
+thing that programmers do,
+
+00:02:11.850 --> 00:02:16.320 align:middle line:84%
+Python allows you to do
+this exact functionality
+
+00:02:16.320 --> 00:02:18.330 align:middle line:90%
+with one line of code.
+
+00:02:18.330 --> 00:02:21.150 align:middle line:84%
+And the way we do this
+is using something
+
+00:02:21.150 --> 00:02:23.020 align:middle line:90%
+called a list comprehension.
+
+00:02:23.020 --> 00:02:26.250 align:middle line:84%
+So the way that we do a list
+comprehension, essentially
+
+00:02:26.250 --> 00:02:29.190 align:middle line:84%
+taking these four lines of
+code from this function,
+
+00:02:29.190 --> 00:02:33.870 align:middle line:84%
+we are going to write them
+in this one line of code that
+
+00:02:33.870 --> 00:02:35.700 align:middle line:90%
+looks something like this.
+
+00:02:35.700 --> 00:02:38.350 align:middle line:84%
+So the idea here is, with
+this one line of code,
+
+00:02:38.350 --> 00:02:41.280 align:middle line:84%
+we're going to
+create a new list.
+
+00:02:41.280 --> 00:02:43.790 align:middle line:84%
+We're going to have
+an iterator that
+
+00:02:43.790 --> 00:02:46.410 align:middle line:84%
+goes through some sort
+of sequence of values.
+
+00:02:46.410 --> 00:02:48.920 align:middle line:84%
+And we're going to
+apply the same function
+
+00:02:48.920 --> 00:02:50.630 align:middle line:90%
+to every one of those elements.
+
+00:02:50.630 --> 00:02:54.140 align:middle line:84%
+And the other optional piece
+that we can add inside this list
+
+00:02:54.140 --> 00:02:56.990 align:middle line:84%
+comprehension is to
+only apply that function
+
+00:02:56.990 --> 00:02:59.270 align:middle line:90%
+if some condition holds.
+
+00:02:59.270 --> 00:03:02.060 align:middle line:90%
+So let's look at this--
+
+00:03:02.060 --> 00:03:04.190 align:middle line:84%
+let's look at this
+example and see
+
+00:03:04.190 --> 00:03:07.430 align:middle line:84%
+how we can convert
+these four lines of code
+
+00:03:07.430 --> 00:03:11.480 align:middle line:84%
+to one line of list
+comprehension code.
+
+00:03:11.480 --> 00:03:16.170 align:middle line:84%
+So we've got creating
+a new empty list.
+
+00:03:16.170 --> 00:03:23.200 align:middle line:84%
+This is going to tell Python to
+create a new empty list for us.
+
+00:03:23.200 --> 00:03:25.500 align:middle line:84%
+So just open and
+closed square brackets.
+
+00:03:25.500 --> 00:03:28.020 align:middle line:84%
+And within these open and
+closed square brackets
+
+00:03:28.020 --> 00:03:31.440 align:middle line:84%
+we're going to write a
+one-liner expression.
+
+00:03:31.440 --> 00:03:34.320 align:middle line:84%
+And this one-liner is
+going to encapsulate
+
+00:03:34.320 --> 00:03:37.900 align:middle line:90%
+these two lines of code here.
+
+00:03:37.900 --> 00:03:41.250 align:middle line:84%
+So the expression--
+sorry, the function
+
+00:03:41.250 --> 00:03:43.680 align:middle line:84%
+we're going to apply
+to every element in L
+
+00:03:43.680 --> 00:03:46.435 align:middle line:84%
+is going to be taking that
+element and squaring it.
+
+00:03:46.435 --> 00:03:48.810 align:middle line:84%
+So on the right-hand side here
+in the list comprehension,
+
+00:03:48.810 --> 00:03:51.560 align:middle line:90%
+we've got some e squared.
+
+00:03:51.560 --> 00:03:52.970 align:middle line:90%
+Well, what is e?
+
+00:03:52.970 --> 00:03:57.530 align:middle line:84%
+Well, it's going to be
+every element e in L.
+
+00:03:57.530 --> 00:04:00.680 align:middle line:84%
+So if we read this in
+English, we basically say,
+
+00:04:00.680 --> 00:04:04.520 align:middle line:84%
+Lnew is going to contain
+elements e squared for e in L.
+
+00:04:04.520 --> 00:04:07.280 align:middle line:84%
+So it sounds weird, but
+it kind of makes sense,
+
+00:04:07.280 --> 00:04:09.540 align:middle line:90%
+even if we read it in English.
+
+00:04:09.540 --> 00:04:13.620 align:middle line:84%
+And behind the scenes,
+Python will take, one by one,
+
+00:04:13.620 --> 00:04:16.180 align:middle line:90%
+each element and square it.
+
+00:04:16.180 --> 00:04:17.970 align:middle line:84%
+And that's the
+sequence of elements it
+
+00:04:17.970 --> 00:04:22.360 align:middle line:90%
+will populate this Lnew with.
+
+00:04:22.360 --> 00:04:23.550 align:middle line:90%
+OK.
+
+00:04:23.550 --> 00:04:25.870 align:middle line:84%
+Now, what if we add
+a condition to that?
+
+00:04:25.870 --> 00:04:29.370 align:middle line:84%
+So let's say we want to create
+this new list of elements
+
+00:04:29.370 --> 00:04:32.790 align:middle line:90%
+only for even elements.
+
+00:04:32.790 --> 00:04:35.120 align:middle line:84%
+So we only want to
+square the even elements
+
+00:04:35.120 --> 00:04:38.360 align:middle line:84%
+within my original
+list L. Well, if we
+
+00:04:38.360 --> 00:04:41.570 align:middle line:84%
+were to write a function that
+does that, we have to add
+
+00:04:41.570 --> 00:04:43.200 align:middle line:90%
+this extra condition here.
+
+00:04:43.200 --> 00:04:47.570 align:middle line:84%
+So everything else is the same
+except for this if e%2==0.
+
+00:04:47.570 --> 00:04:50.810 align:middle line:84%
+This tells Python to
+only grab elements
+
+00:04:50.810 --> 00:04:54.630 align:middle line:90%
+that are even, divisible by 2.
+
+00:04:54.630 --> 00:04:57.850 align:middle line:84%
+So how do we write this in
+list comprehension form?
+
+00:04:57.850 --> 00:04:59.280 align:middle line:90%
+So here's a new list.
+
+00:04:59.280 --> 00:05:02.640 align:middle line:84%
+And this is the function to
+apply, only if the test is true.
+
+00:05:02.640 --> 00:05:06.430 align:middle line:84%
+In list comprehension,
+this is my new list.
+
+00:05:06.430 --> 00:05:09.880 align:middle line:84%
+I've got the for
+loop is over here.
+
+00:05:09.880 --> 00:05:16.873 align:middle line:84%
+And then the test to apply is
+at the end here, if e%2==0.
+
+00:05:16.873 --> 00:05:18.790 align:middle line:84%
+And then, what is the
+function we're applying?
+
+00:05:18.790 --> 00:05:20.620 align:middle line:84%
+It's just e squared,
+like before.
+
+00:05:20.620 --> 00:05:24.460 align:middle line:84%
+So the test just gets appended
+to the end of this list
+
+00:05:24.460 --> 00:05:28.540 align:middle line:90%
+comprehension expression here.
+
+00:05:28.540 --> 00:05:30.010 align:middle line:90%
+Yeah.
+
+00:05:30.010 --> 00:05:31.680 align:middle line:90%
+AUDIENCE: Is it running faster?
+
+00:05:31.680 --> 00:05:33.510 align:middle line:90%
+Is there a reason to do that?
+
+00:05:33.510 --> 00:05:35.170 align:middle line:90%
+ANA BELL: Does it run faster?
+
+00:05:35.170 --> 00:05:36.510 align:middle line:90%
+I'm not sure, actually.
+
+00:05:36.510 --> 00:05:40.710 align:middle line:84%
+It might run marginally faster,
+but probably not significantly.
+
+00:05:40.710 --> 00:05:44.580 align:middle line:84%
+The reason to do this
+is because, as you
+
+00:05:44.580 --> 00:05:48.300 align:middle line:84%
+get more practice with it, this
+will be easier to read in code.
+
+00:05:48.300 --> 00:05:52.270 align:middle line:84%
+And often, if you see a
+large chunk like this,
+
+00:05:52.270 --> 00:05:53.745 align:middle line:90%
+your eyes will glaze over.
+
+00:05:53.745 --> 00:05:55.870 align:middle line:84%
+You're not going to want
+to read a chunk like that.
+
+00:05:55.870 --> 00:05:58.110 align:middle line:84%
+But if you see it
+all in one line,
+
+00:05:58.110 --> 00:06:00.390 align:middle line:84%
+you're going to think,
+well, how bad can it be?
+
+00:06:00.390 --> 00:06:04.620 align:middle line:84%
+[LAUGHS] And so you can come
+up with really complicated list
+
+00:06:04.620 --> 00:06:06.390 align:middle line:90%
+comprehension expressions.
+
+00:06:06.390 --> 00:06:11.610 align:middle line:84%
+But usually, we reserve them for
+really simple, really quick ways
+
+00:06:11.610 --> 00:06:15.810 align:middle line:84%
+to create these lists that you
+just populate with some values
+
+00:06:15.810 --> 00:06:16.560 align:middle line:90%
+right off the bat.
+
+00:06:16.560 --> 00:06:18.518 align:middle line:84%
+So it just makes the code
+a lot easier to read.
+
+00:06:18.518 --> 00:06:21.680 align:middle line:90%
+
+
+00:06:21.680 --> 00:06:22.190 align:middle line:90%
+OK.
+
+00:06:22.190 --> 00:06:25.433 align:middle line:84%
+So list comprehensions
+are pretty useful.
+
+00:06:25.433 --> 00:06:27.350 align:middle line:84%
+If you get a little bit
+of practice with them,
+
+00:06:27.350 --> 00:06:30.840 align:middle line:84%
+you'll find yourself using
+them all over the place.
+
+00:06:30.840 --> 00:06:35.460 align:middle line:84%
+And they basically replace
+code that looks like this.
+
+00:06:35.460 --> 00:06:38.870 align:middle line:84%
+So these lines of code
+is a very generic way
+
+00:06:38.870 --> 00:06:43.370 align:middle line:84%
+of writing this one-liner
+list comprehension.
+
+00:06:43.370 --> 00:06:47.200 align:middle line:84%
+So here I've got a function
+f that I would like to apply.
+
+00:06:47.200 --> 00:06:51.370 align:middle line:84%
+This expr expression
+is the function
+
+00:06:51.370 --> 00:06:53.420 align:middle line:84%
+I would like to apply
+to each element,
+
+00:06:53.420 --> 00:06:56.740 align:middle line:84%
+this is the list I would like
+to apply that function to,
+
+00:06:56.740 --> 00:07:00.280 align:middle line:84%
+and the test is going
+to be the conditional.
+
+00:07:00.280 --> 00:07:04.300 align:middle line:84%
+In this particular case, this
+test means I apply it to every
+
+00:07:04.300 --> 00:07:08.350 align:middle line:84%
+single element, but you can
+imagine having a function which,
+
+00:07:08.350 --> 00:07:12.430 align:middle line:84%
+in the previous case, we
+would say lambda x x%2==0
+
+00:07:12.430 --> 00:07:13.840 align:middle line:90%
+as our condition.
+
+00:07:13.840 --> 00:07:16.810 align:middle line:84%
+And then the function that
+we're essentially replacing
+
+00:07:16.810 --> 00:07:19.840 align:middle line:84%
+is this, with list
+comprehensions.
+
+00:07:19.840 --> 00:07:21.010 align:middle line:90%
+We create this new list.
+
+00:07:21.010 --> 00:07:24.220 align:middle line:84%
+Again, this is the pattern that
+we saw in the previous slide.
+
+00:07:24.220 --> 00:07:26.380 align:middle line:84%
+We loop through every
+element in the list.
+
+00:07:26.380 --> 00:07:30.040 align:middle line:84%
+If that condition holds,
+append that function
+
+00:07:30.040 --> 00:07:31.570 align:middle line:90%
+applied to each element.
+
+00:07:31.570 --> 00:07:34.560 align:middle line:84%
+And then at the end,
+return the list.
+
+00:07:34.560 --> 00:07:36.260 align:middle line:84%
+So this is just a
+very generic way
+
+00:07:36.260 --> 00:07:39.290 align:middle line:90%
+to write a list comprehension.
+
+00:07:39.290 --> 00:07:41.300 align:middle line:84%
+So let's look at some
+concrete examples.
+
+00:07:41.300 --> 00:07:45.700 align:middle line:84%
+So here, I'm not
+applying the function
+
+00:07:45.700 --> 00:07:49.240 align:middle line:84%
+e squared to a particular
+set of elements from a list.
+
+00:07:49.240 --> 00:07:53.320 align:middle line:84%
+I'm applying it to the sequence
+of values given by range.
+
+00:07:53.320 --> 00:07:55.780 align:middle line:84%
+Remember, when we were talking
+about for loops iterating
+
+00:07:55.780 --> 00:07:59.650 align:middle line:84%
+through things, they can iterate
+through integers following
+
+00:07:59.650 --> 00:08:04.000 align:middle line:84%
+some pattern, like
+range 6, range 1, 9, 2,
+
+00:08:04.000 --> 00:08:04.990 align:middle line:90%
+something like that.
+
+00:08:04.990 --> 00:08:08.050 align:middle line:84%
+As long as you have a sequence
+of values you can iterate over,
+
+00:08:08.050 --> 00:08:11.840 align:middle line:84%
+you can plop that into
+this list comprehension.
+
+00:08:11.840 --> 00:08:14.980 align:middle line:84%
+So you can iterate over lists,
+you could iterate over tuples,
+
+00:08:14.980 --> 00:08:18.310 align:middle line:84%
+you could iterate over
+these direct ranges,
+
+00:08:18.310 --> 00:08:20.780 align:middle line:84%
+you could iterate over a
+range of the length of a list.
+
+00:08:20.780 --> 00:08:23.320 align:middle line:84%
+Whatever creates an
+iterable for you,
+
+00:08:23.320 --> 00:08:26.690 align:middle line:84%
+you can put that in
+the list comprehension.
+
+00:08:26.690 --> 00:08:29.980 align:middle line:84%
+So in this particular case,
+the way I read this is I've
+
+00:08:29.980 --> 00:08:31.510 align:middle line:90%
+got something that I'm squaring.
+
+00:08:31.510 --> 00:08:33.370 align:middle line:84%
+And what's the thing
+that I'm squaring?
+
+00:08:33.370 --> 00:08:36.490 align:middle line:84%
+It's going to be each
+value in range 6.
+
+00:08:36.490 --> 00:08:39.559 align:middle line:84%
+So I think about it like, what
+is this sequence of values
+
+00:08:39.559 --> 00:08:40.789 align:middle line:90%
+that I'm going to operate on?
+
+00:08:40.789 --> 00:08:44.020 align:middle line:84%
+Well, it's going to be the
+numbers 0, 1, 2, 3, 4, 5.
+
+00:08:44.020 --> 00:08:45.770 align:middle line:84%
+And the thing that I'm
+going to do to them
+
+00:08:45.770 --> 00:08:48.060 align:middle line:84%
+is square each one
+of those values.
+
+00:08:48.060 --> 00:08:51.680 align:middle line:84%
+So the end list that I get
+out of this one-liner here
+
+00:08:51.680 --> 00:08:55.910 align:middle line:84%
+is a list containing 0 squared,
+1 squared, 2 squared, 3 squared,
+
+00:08:55.910 --> 00:08:59.200 align:middle line:90%
+4 squared, and 5 squared.
+
+00:08:59.200 --> 00:09:00.890 align:middle line:90%
+We can add a condition to that.
+
+00:09:00.890 --> 00:09:05.350 align:middle line:84%
+So here I've got each element
+squared for e in range 8
+
+00:09:05.350 --> 00:09:09.160 align:middle line:90%
+only if e is even.
+
+00:09:09.160 --> 00:09:11.170 align:middle line:84%
+So then, the way I
+think about it is,
+
+00:09:11.170 --> 00:09:13.810 align:middle line:84%
+let's start off with what
+every element in the range is.
+
+00:09:13.810 --> 00:09:16.630 align:middle line:84%
+Well, it's 0, 1,
+2, 3, 4, 5, 6, 7.
+
+00:09:16.630 --> 00:09:19.480 align:middle line:84%
+The condition I'm applying
+to that is that it's even.
+
+00:09:19.480 --> 00:09:21.550 align:middle line:84%
+So the numbers I'm
+going to end up
+
+00:09:21.550 --> 00:09:25.150 align:middle line:84%
+with, I'm filtering all
+those to only contain
+
+00:09:25.150 --> 00:09:30.100 align:middle line:84%
+0, 2, 4, and 6, because we
+go up to but not including 8.
+
+00:09:30.100 --> 00:09:32.510 align:middle line:84%
+And then I'm going to
+square every one of those.
+
+00:09:32.510 --> 00:09:34.840 align:middle line:84%
+So the end result from
+this list comprehension
+
+00:09:34.840 --> 00:09:37.870 align:middle line:84%
+is a list containing the
+elements 0 squared, 2 squared,
+
+00:09:37.870 --> 00:09:39.880 align:middle line:90%
+4 squared, and 6 squared.
+
+00:09:39.880 --> 00:09:42.750 align:middle line:90%
+
+
+00:09:42.750 --> 00:09:47.510 align:middle line:84%
+And lastly, we've been
+doing just single integers
+
+00:09:47.510 --> 00:09:48.800 align:middle line:90%
+in the resulting list.
+
+00:09:48.800 --> 00:09:52.440 align:middle line:84%
+But as I mentioned, we can
+do more complicated things.
+
+00:09:52.440 --> 00:09:55.550 align:middle line:84%
+So as long as we can write
+a little expression here
+
+00:09:55.550 --> 00:09:59.060 align:middle line:84%
+for the thing that we'd like to
+calculate or add to the list,
+
+00:09:59.060 --> 00:10:01.800 align:middle line:84%
+we can put it in the
+list comprehension.
+
+00:10:01.800 --> 00:10:04.040 align:middle line:84%
+So in this particular
+case, the element
+
+00:10:04.040 --> 00:10:08.090 align:middle line:84%
+that I'm adding to my list
+comprehension or my resulting
+
+00:10:08.090 --> 00:10:11.520 align:middle line:84%
+list from the list
+comprehension is a list itself.
+
+00:10:11.520 --> 00:10:16.190 align:middle line:84%
+So each element in my
+resulting list is another list.
+
+00:10:16.190 --> 00:10:19.610 align:middle line:84%
+And that inner list is going
+to contain two elements
+
+00:10:19.610 --> 00:10:20.660 align:middle line:90%
+every time--
+
+00:10:20.660 --> 00:10:24.440 align:middle line:84%
+the thing I'm actually
+iterating over and it's square.
+
+00:10:24.440 --> 00:10:27.390 align:middle line:90%
+
+
+00:10:27.390 --> 00:10:29.560 align:middle line:90%
+And I've got a condition here.
+
+00:10:29.560 --> 00:10:32.730 align:middle line:84%
+So I've got the
+elements 0, 1, 2, and 3.
+
+00:10:32.730 --> 00:10:34.350 align:middle line:90%
+That's the range.
+
+00:10:34.350 --> 00:10:38.020 align:middle line:84%
+But I'm only grabbing the odd
+ones in this particular case.
+
+00:10:38.020 --> 00:10:43.930 align:middle line:84%
+So the resulting set of numbers
+that I'm going to apply this to
+
+00:10:43.930 --> 00:10:46.500 align:middle line:90%
+is going to be the number--
+
+00:10:46.500 --> 00:10:50.510 align:middle line:84%
+is the numbers 1 and
+3 because those are
+
+00:10:50.510 --> 00:10:53.430 align:middle line:90%
+the two odd numbers in range 4.
+
+00:10:53.430 --> 00:10:57.910 align:middle line:84%
+And so the resulting list is
+going to contain two elements.
+
+00:10:57.910 --> 00:11:01.410 align:middle line:84%
+So this outer square bracket
+is the list that I've created,
+
+00:11:01.410 --> 00:11:04.320 align:middle line:84%
+and its elements
+will be the element
+
+00:11:04.320 --> 00:11:09.750 align:middle line:84%
+that I have actually iterated
+over and its square as a list.
+
+00:11:09.750 --> 00:11:14.010 align:middle line:84%
+So 1 and 1 squared
+for e and e squared
+
+00:11:14.010 --> 00:11:19.860 align:middle line:84%
+when e is 1, and then 3 and
+9, 3 squared, when e is 3.
+
+00:11:19.860 --> 00:11:22.880 align:middle line:90%
+
+
+00:11:22.880 --> 00:11:23.930 align:middle line:90%
+Questions about that?
+
+00:11:23.930 --> 00:11:26.510 align:middle line:90%
+
+
+00:11:26.510 --> 00:11:27.320 align:middle line:90%
+OK.
+
+00:11:27.320 --> 00:11:28.760 align:middle line:90%
+So pretty cool.
+
+00:11:28.760 --> 00:11:31.250 align:middle line:84%
+It's a really nice way to
+create lists really quickly.
+
+00:11:31.250 --> 00:11:34.400 align:middle line:84%
+Like if you wanted to
+create a list full of zeros,
+
+00:11:34.400 --> 00:11:37.430 align:middle line:84%
+full of a hundred zeros,
+no need to do a loop.
+
+00:11:37.430 --> 00:11:39.230 align:middle line:84%
+You basically do a
+list comprehension
+
+00:11:39.230 --> 00:11:43.040 align:middle line:84%
+that says square brackets
+0 for e in range 101--
+
+00:11:43.040 --> 00:11:45.080 align:middle line:90%
+or 100.
+
+00:11:45.080 --> 00:11:47.300 align:middle line:84%
+And then you've got
+yourself a nice little list
+
+00:11:47.300 --> 00:11:48.425 align:middle line:90%
+full of a hundred zeros.
+
+00:11:48.425 --> 00:11:50.950 align:middle line:90%
+
+
+00:11:50.950 --> 00:11:51.450 align:middle line:90%
+All right.
+
+00:11:51.450 --> 00:11:55.690 align:middle line:84%
+So think about this, and then
+tell me what the answer is.
+
+00:11:55.690 --> 00:12:00.100 align:middle line:84%
+So the idea here is we have
+this list comprehension,
+
+00:12:00.100 --> 00:12:03.160 align:middle line:84%
+and just go through
+it step by step.
+
+00:12:03.160 --> 00:12:04.810 align:middle line:84%
+It looks a little
+bit intimidating,
+
+00:12:04.810 --> 00:12:07.450 align:middle line:84%
+but the first step is
+to look at the for loop
+
+00:12:07.450 --> 00:12:10.900 align:middle line:84%
+and ask yourself, what are
+the values I'm iterating over?
+
+00:12:10.900 --> 00:12:13.840 align:middle line:84%
+Then look at the
+condition, if there is one.
+
+00:12:13.840 --> 00:12:14.800 align:middle line:90%
+There is one.
+
+00:12:14.800 --> 00:12:16.280 align:middle line:84%
+In this case, it's
+at the end here.
+
+00:12:16.280 --> 00:12:18.580 align:middle line:84%
+So now, what subsets of
+those original things
+
+00:12:18.580 --> 00:12:21.070 align:middle line:84%
+you're iterating over
+are you actually keeping?
+
+00:12:21.070 --> 00:12:23.530 align:middle line:84%
+And then from those things
+that you're keeping,
+
+00:12:23.530 --> 00:12:25.360 align:middle line:90%
+what function are you applying?
+
+00:12:25.360 --> 00:12:28.200 align:middle line:84%
+It's the one right
+at the beginning.
+
+00:12:28.200 --> 00:12:31.230 align:middle line:84%
+So think about it, and then
+I'll ask you to tell me.
+
+00:12:31.230 --> 00:12:35.070 align:middle line:90%
+
+
+00:12:35.070 --> 00:12:38.370 align:middle line:84%
+So step one, what are the
+values I'm iterating over?
+
+00:12:38.370 --> 00:12:42.730 align:middle line:84%
+The full values, not
+including the condition.
+
+00:12:42.730 --> 00:12:44.883 align:middle line:90%
+Someone yell it out.
+
+00:12:44.883 --> 00:12:46.300 align:middle line:84%
+AUDIENCE: That
+list in the middle.
+
+00:12:46.300 --> 00:12:46.720 align:middle line:90%
+ANA BELL: Yeah.
+
+00:12:46.720 --> 00:12:47.750 align:middle line:90%
+That list in the middle.
+
+00:12:47.750 --> 00:12:48.040 align:middle line:90%
+Awesome.
+
+00:12:48.040 --> 00:12:48.540 align:middle line:90%
+OK.
+
+00:12:48.540 --> 00:12:58.030 align:middle line:84%
+So xy, abcd, and then 7, and
+then what's the last thing?
+
+00:12:58.030 --> 00:13:00.248 align:middle line:84%
+Is it the number
+4.0 or a string?
+
+00:13:00.248 --> 00:13:01.040 align:middle line:90%
+AUDIENCE: A string.
+
+00:13:01.040 --> 00:13:02.040 align:middle line:90%
+ANA BELL: Yeah, exactly.
+
+00:13:02.040 --> 00:13:02.990 align:middle line:90%
+4.0.
+
+00:13:02.990 --> 00:13:04.100 align:middle line:90%
+OK.
+
+00:13:04.100 --> 00:13:04.610 align:middle line:90%
+String.
+
+00:13:04.610 --> 00:13:05.240 align:middle line:90%
+String.
+
+00:13:05.240 --> 00:13:06.050 align:middle line:90%
+Step two.
+
+00:13:06.050 --> 00:13:08.270 align:middle line:84%
+From this list,
+what are the values
+
+00:13:08.270 --> 00:13:12.384 align:middle line:84%
+that I'm actually keeping
+based on the condition?
+
+00:13:12.384 --> 00:13:13.650 align:middle line:90%
+AUDIENCE: If they're a string.
+
+00:13:13.650 --> 00:13:14.610 align:middle line:90%
+ANA BELL: If they're string.
+
+00:13:14.610 --> 00:13:14.880 align:middle line:90%
+All right.
+
+00:13:14.880 --> 00:13:15.755 align:middle line:90%
+Which one's a string?
+
+00:13:15.755 --> 00:13:16.397 align:middle line:90%
+Is xy?
+
+00:13:16.397 --> 00:13:16.980 align:middle line:90%
+AUDIENCE: Yes.
+
+00:13:16.980 --> 00:13:17.820 align:middle line:90%
+ANA BELL: Yes.
+
+00:13:17.820 --> 00:13:19.067 align:middle line:90%
+Is abcd?
+
+00:13:19.067 --> 00:13:19.650 align:middle line:90%
+AUDIENCE: Yes.
+
+00:13:19.650 --> 00:13:21.000 align:middle line:90%
+ANA BELL: Yep.
+
+00:13:21.000 --> 00:13:21.928 align:middle line:90%
+Is 7?
+
+00:13:21.928 --> 00:13:22.470 align:middle line:90%
+AUDIENCE: No.
+
+00:13:22.470 --> 00:13:23.095 align:middle line:90%
+ANA BELL: Nope.
+
+00:13:23.095 --> 00:13:24.207 align:middle line:90%
+Is 4.0?
+
+00:13:24.207 --> 00:13:24.790 align:middle line:90%
+AUDIENCE: Yes.
+
+00:13:24.790 --> 00:13:25.832 align:middle line:90%
+ANA BELL: Yes, excellent.
+
+00:13:25.832 --> 00:13:27.100 align:middle line:90%
+OK, good.
+
+00:13:27.100 --> 00:13:27.600 align:middle line:90%
+OK.
+
+00:13:27.600 --> 00:13:29.910 align:middle line:84%
+So then these are the
+elements that I'm keeping.
+
+00:13:29.910 --> 00:13:31.680 align:middle line:84%
+And now, what's the
+function I'm applying,
+
+00:13:31.680 --> 00:13:33.690 align:middle line:84%
+and what's the
+result going to be?
+
+00:13:33.690 --> 00:13:36.120 align:middle line:84%
+It's going to be
+a list containing?
+
+00:13:36.120 --> 00:13:37.577 align:middle line:90%
+AUDIENCE: 2 and 4.
+
+00:13:37.577 --> 00:13:38.160 align:middle line:90%
+ANA BELL: Yep.
+
+00:13:38.160 --> 00:13:40.148 align:middle line:90%
+3--
+
+00:13:40.148 --> 00:13:41.390 align:middle line:90%
+AUDIENCE: 2, 4.
+
+00:13:41.390 --> 00:13:42.260 align:middle line:90%
+ANA BELL: 2, 4, 3.
+
+00:13:42.260 --> 00:13:46.160 align:middle line:84%
+2 because that's length 2, 4
+because that's length 4, and 3
+
+00:13:46.160 --> 00:13:48.760 align:middle line:90%
+because that's length 3.
+
+00:13:48.760 --> 00:13:51.220 align:middle line:84%
+And we've got ourselves
+a nice little list based
+
+00:13:51.220 --> 00:13:54.637 align:middle line:84%
+on that condition, that
+sequence of values,
+
+00:13:54.637 --> 00:13:55.720 align:middle line:90%
+and that function applied.
+
+00:13:55.720 --> 00:13:56.220 align:middle line:90%
+Yeah?
+
+00:13:56.220 --> 00:13:58.360 align:middle line:84%
+AUDIENCE: Why does
+it return a list?
+
+00:13:58.360 --> 00:13:59.860 align:middle line:84%
+ANA BELL: Why does
+it return a list?
+
+00:13:59.860 --> 00:14:00.550 align:middle line:90%
+AUDIENCE: Yeah.
+
+00:14:00.550 --> 00:14:02.080 align:middle line:90%
+ANA BELL: The whole thing?
+
+00:14:02.080 --> 00:14:05.120 align:middle line:84%
+AUDIENCE: Or I guess I thought
+it would just return 2, 4,
+
+00:14:05.120 --> 00:14:06.418 align:middle line:90%
+3 on separate lines.
+
+00:14:06.418 --> 00:14:07.210 align:middle line:90%
+ANA BELL: Oh, yeah.
+
+00:14:07.210 --> 00:14:09.280 align:middle line:84%
+So we're not printing
+things out here.
+
+00:14:09.280 --> 00:14:11.980 align:middle line:84%
+When we're writing this
+as a list comprehension,
+
+00:14:11.980 --> 00:14:14.050 align:middle line:84%
+we're essentially
+telling Python to create
+
+00:14:14.050 --> 00:14:15.790 align:middle line:90%
+this resulting list of values.
+
+00:14:15.790 --> 00:14:17.780 align:middle line:84%
+That's just what a list
+comprehension does.
+
+00:14:17.780 --> 00:14:19.960 align:middle line:84%
+And so just kind
+of this expression
+
+00:14:19.960 --> 00:14:21.790 align:middle line:84%
+here, with these
+outer square brackets
+
+00:14:21.790 --> 00:14:24.220 align:middle line:84%
+around our entire
+expression, tells Python
+
+00:14:24.220 --> 00:14:26.600 align:middle line:84%
+that the resulting
+thing is a list.
+
+00:14:26.600 --> 00:14:27.100 align:middle line:90%
+Yeah.
+
+00:14:27.100 --> 00:14:30.260 align:middle line:90%
+This is a good question.
+
+00:14:30.260 --> 00:14:33.134 align:middle line:90%
+Other questions?
+
+00:14:33.134 --> 00:14:35.450 align:middle line:90%
+OK.
+
+00:14:35.450 --> 00:14:35.950 align:middle line:90%
+OK.
+
+00:14:35.950 --> 00:14:37.180 align:middle line:90%
+So that-- oh, yeah.
+
+00:14:37.180 --> 00:14:38.110 align:middle line:90%
+Question.
+
+00:14:38.110 --> 00:14:40.513 align:middle line:84%
+AUDIENCE: Does it support
+multiple conditions?
+
+00:14:40.513 --> 00:14:42.430 align:middle line:84%
+ANA BELL: Does it support
+multiple conditions?
+
+00:14:42.430 --> 00:14:43.210 align:middle line:90%
+Yes.
+
+00:14:43.210 --> 00:14:47.740 align:middle line:84%
+So at the end here,
+you would say if,
+
+00:14:47.740 --> 00:14:52.150 align:middle line:84%
+and then you could wrap
+them in parentheses.
+
+00:14:52.150 --> 00:14:54.390 align:middle line:84%
+I don't know if you have
+to, but just to be safe,
+
+00:14:54.390 --> 00:14:56.140 align:middle line:84%
+I would wrap my
+conditions in parentheses.
+
+00:14:56.140 --> 00:14:58.720 align:middle line:84%
+And you'd use and
+or or or whatever
+
+00:14:58.720 --> 00:15:01.000 align:middle line:84%
+you want to combine the
+expressions or the conditions
+
+00:15:01.000 --> 00:15:01.517 align:middle line:90%
+with.
+
+00:15:01.517 --> 00:15:02.350 align:middle line:90%
+Is there a question?
+
+00:15:02.350 --> 00:15:03.199 align:middle line:90%
+Yeah?
+
+00:15:03.199 --> 00:15:07.600 align:middle line:84%
+AUDIENCE: Isn't the
+lambda [INAUDIBLE]??
+
+00:15:07.600 --> 00:15:09.070 align:middle line:90%
+ANA BELL: This one, the lambda?
+
+00:15:09.070 --> 00:15:10.760 align:middle line:90%
+AUDIENCE: Yeah.
+
+00:15:10.760 --> 00:15:12.590 align:middle line:84%
+ANA BELL: Here, this
+is a lambda function
+
+00:15:12.590 --> 00:15:14.570 align:middle line:84%
+that we talked
+about, I forget when.
+
+00:15:14.570 --> 00:15:18.470 align:middle line:84%
+A couple lectures ago it's
+basically an anonymous function,
+
+00:15:18.470 --> 00:15:22.440 align:middle line:84%
+and all it does is
+return true all the time.
+
+00:15:22.440 --> 00:15:27.550 align:middle line:84%
+So the test will
+always be true, which
+
+00:15:27.550 --> 00:15:30.970 align:middle line:84%
+means that when
+we do if test(e),
+
+00:15:30.970 --> 00:15:33.850 align:middle line:84%
+this will always be true
+in this particular case.
+
+00:15:33.850 --> 00:15:35.860 align:middle line:84%
+But when given a
+different lambda function,
+
+00:15:35.860 --> 00:15:39.220 align:middle line:90%
+that might not be the case.
+
+00:15:39.220 --> 00:15:39.820 align:middle line:90%
+OK.
+
+00:15:39.820 --> 00:15:42.010 align:middle line:84%
+So let's move on
+to the next topic.
+
+00:15:42.010 --> 00:15:44.993 align:middle line:84%
+The next, I guess, two topics
+we'll be dealing with functions.
+
+00:15:44.993 --> 00:15:46.660 align:middle line:84%
+And I want to wrap
+up a couple of things
+
+00:15:46.660 --> 00:15:50.540 align:middle line:84%
+here just to give you a couple
+more ideas regarding functions.
+
+00:15:50.540 --> 00:15:52.180 align:middle line:84%
+So the first one
+is actually related
+
+00:15:52.180 --> 00:15:55.880 align:middle line:84%
+to this last question, is the
+idea of a default parameter.
+
+00:15:55.880 --> 00:16:00.730 align:middle line:84%
+So this is going to be a
+way for us to add parameters
+
+00:16:00.730 --> 00:16:03.730 align:middle line:84%
+to our functions that
+get some default value,
+
+00:16:03.730 --> 00:16:06.700 align:middle line:84%
+and that's what that
+lambda thing actually
+
+00:16:06.700 --> 00:16:08.140 align:middle line:90%
+was in that example.
+
+00:16:08.140 --> 00:16:09.910 align:middle line:84%
+But hopefully this
+piece of the lecture
+
+00:16:09.910 --> 00:16:11.510 align:middle line:84%
+makes that a little
+bit more clear.
+
+00:16:11.510 --> 00:16:13.420 align:middle line:84%
+And then the second
+part regarding functions
+
+00:16:13.420 --> 00:16:15.190 align:middle line:84%
+we're going to go
+over is the idea
+
+00:16:15.190 --> 00:16:19.180 align:middle line:84%
+of functions as objects,
+kind of working up on that.
+
+00:16:19.180 --> 00:16:20.650 align:middle line:84%
+And we're going to
+see what happens
+
+00:16:20.650 --> 00:16:25.000 align:middle line:84%
+when we return a function
+object from another function.
+
+00:16:25.000 --> 00:16:27.530 align:middle line:84%
+We've seen functions as
+parameters to other functions,
+
+00:16:27.530 --> 00:16:28.990 align:middle line:84%
+but we're going to
+see what happens
+
+00:16:28.990 --> 00:16:30.910 align:middle line:84%
+when you make a
+function be the return
+
+00:16:30.910 --> 00:16:32.800 align:middle line:90%
+value of another function.
+
+00:16:32.800 --> 00:16:34.460 align:middle line:90%
+But that's in a little bit.
+
+00:16:34.460 --> 00:16:38.640 align:middle line:84%
+For now, let's look
+at default parameters.
+
+00:16:38.640 --> 00:16:39.180 align:middle line:90%
+OK.
+
+00:16:39.180 --> 00:16:42.570 align:middle line:90%
+We've seen this code before.
+
+00:16:42.570 --> 00:16:44.010 align:middle line:90%
+Triggering flashbacks.
+
+00:16:44.010 --> 00:16:46.530 align:middle line:90%
+So this is bisection_root.
+
+00:16:46.530 --> 00:16:50.190 align:middle line:84%
+I'll go over it, just to
+remind ourselves what it does.
+
+00:16:50.190 --> 00:16:53.970 align:middle line:84%
+We've got this code
+inside this function
+
+00:16:53.970 --> 00:16:56.160 align:middle line:90%
+we wrote a long, long time ago.
+
+00:16:56.160 --> 00:16:58.630 align:middle line:84%
+And then we decided to
+wrap it in a function
+
+00:16:58.630 --> 00:17:01.500 align:middle line:84%
+so that it's a really
+nicely useful piece of code
+
+00:17:01.500 --> 00:17:03.610 align:middle line:84%
+that we can run
+many, many times.
+
+00:17:03.610 --> 00:17:05.609 align:middle line:84%
+So the parameter
+to this function
+
+00:17:05.609 --> 00:17:11.160 align:middle line:84%
+was x, a value we'd like to
+approximate the square root of.
+
+00:17:11.160 --> 00:17:13.800 align:middle line:84%
+And the code we're
+using to approximate
+
+00:17:13.800 --> 00:17:17.680 align:middle line:84%
+is using the bisection
+search algorithm,
+
+00:17:17.680 --> 00:17:21.720 align:middle line:84%
+which initializes some
+variables, namely epsilon,
+
+00:17:21.720 --> 00:17:25.710 align:middle line:84%
+how close we want to
+be to the final answer.
+
+00:17:25.710 --> 00:17:27.119 align:middle line:90%
+Low and high endpoints.
+
+00:17:27.119 --> 00:17:28.290 align:middle line:90%
+We remember that.
+
+00:17:28.290 --> 00:17:32.220 align:middle line:84%
+And then an initial guess, the
+halfway between low and high.
+
+00:17:32.220 --> 00:17:37.620 align:middle line:84%
+And then we keep making
+guesses between low and high,
+
+00:17:37.620 --> 00:17:40.160 align:middle line:84%
+being the midpoint
+of low and high,
+
+00:17:40.160 --> 00:17:46.040 align:middle line:84%
+as long as we're not close
+enough to the final--
+
+00:17:46.040 --> 00:17:48.620 align:middle line:84%
+we're not close enough
+to the final answer.
+
+00:17:48.620 --> 00:17:52.100 align:middle line:84%
+So we're going to either
+reinitialize our low endpoint
+
+00:17:52.100 --> 00:17:55.160 align:middle line:84%
+or our high endpoint depending
+on whether that guess was
+
+00:17:55.160 --> 00:17:58.250 align:middle line:84%
+too low or too high, and
+then, within the loop,
+
+00:17:58.250 --> 00:18:00.770 align:middle line:84%
+we make another
+guess using those
+
+00:18:00.770 --> 00:18:04.610 align:middle line:84%
+changed values of either low
+or high based on if or else.
+
+00:18:04.610 --> 00:18:07.100 align:middle line:84%
+And then we keep
+doing this process
+
+00:18:07.100 --> 00:18:09.380 align:middle line:84%
+of making more guesses
+at the halfway point
+
+00:18:09.380 --> 00:18:14.610 align:middle line:84%
+as long as we're still
+farther than epsilon away.
+
+00:18:14.610 --> 00:18:15.300 align:middle line:90%
+OK.
+
+00:18:15.300 --> 00:18:18.180 align:middle line:84%
+That was a recap of
+what we've done so far.
+
+00:18:18.180 --> 00:18:21.930 align:middle line:84%
+The interesting thing that we
+had done with this function was,
+
+00:18:21.930 --> 00:18:23.700 align:middle line:84%
+or when we turned
+it into a function
+
+00:18:23.700 --> 00:18:26.200 align:middle line:90%
+was to return our approximation.
+
+00:18:26.200 --> 00:18:29.850 align:middle line:84%
+So this guess, instead of
+just printing it to the user,
+
+00:18:29.850 --> 00:18:32.130 align:middle line:84%
+we returned it so
+that it could be
+
+00:18:32.130 --> 00:18:34.210 align:middle line:84%
+useful in other
+parts of the code.
+
+00:18:34.210 --> 00:18:35.940 align:middle line:84%
+And so, when we
+called the function,
+
+00:18:35.940 --> 00:18:41.430 align:middle line:84%
+we just said name of function,
+and then some value of x.
+
+00:18:41.430 --> 00:18:46.380 align:middle line:84%
+Now, there are situations
+where a user would want
+
+00:18:46.380 --> 00:18:48.470 align:middle line:90%
+to change the value of epsilon.
+
+00:18:48.470 --> 00:18:52.830 align:middle line:84%
+Right now, the way we wrote this
+code, epsilon is set to 0.01.
+
+00:18:52.830 --> 00:18:54.420 align:middle line:84%
+And whenever you
+run the function,
+
+00:18:54.420 --> 00:18:57.180 align:middle line:84%
+it always finds
+the approximation
+
+00:18:57.180 --> 00:19:01.620 align:middle line:84%
+to the square root of x
+to that precision, 0.01.
+
+00:19:01.620 --> 00:19:04.230 align:middle line:84%
+Now, sometimes, depending
+on the application,
+
+00:19:04.230 --> 00:19:06.930 align:middle line:84%
+the user might want an
+even better approximation,
+
+00:19:06.930 --> 00:19:11.420 align:middle line:84%
+so 0.000001, or they might
+not care to be as precise,
+
+00:19:11.420 --> 00:19:15.380 align:middle line:84%
+and they want maybe approximated
+to 1 or to 0.5 or something much
+
+00:19:15.380 --> 00:19:17.470 align:middle line:90%
+bigger than 0.01.
+
+00:19:17.470 --> 00:19:20.020 align:middle line:84%
+So what are the options
+in this particular case
+
+00:19:20.020 --> 00:19:21.850 align:middle line:90%
+for these scenarios?
+
+00:19:21.850 --> 00:19:25.810 align:middle line:84%
+One option would be, obviously,
+to go inside our function
+
+00:19:25.810 --> 00:19:29.260 align:middle line:84%
+and say, well, I'm going to
+change epsilon to be something
+
+00:19:29.260 --> 00:19:31.840 align:middle line:90%
+super duper precise, 0.000001.
+
+00:19:31.840 --> 00:19:34.390 align:middle line:84%
+And so people who
+call this function
+
+00:19:34.390 --> 00:19:37.690 align:middle line:84%
+will always get an
+approximation to that precision.
+
+00:19:37.690 --> 00:19:41.530 align:middle line:84%
+But what about people who
+don't want it that precise?
+
+00:19:41.530 --> 00:19:43.960 align:middle line:84%
+So all the function
+calls are going
+
+00:19:43.960 --> 00:19:46.160 align:middle line:84%
+to be affected by
+making that change.
+
+00:19:46.160 --> 00:19:47.638 align:middle line:84%
+And so that's not
+really desirable.
+
+00:19:47.638 --> 00:19:49.180 align:middle line:84%
+We'd like to let
+the person who makes
+
+00:19:49.180 --> 00:19:52.880 align:middle line:84%
+the function call be in charge
+of what precision they'd like.
+
+00:19:52.880 --> 00:19:56.100 align:middle line:84%
+Another option is to put
+epsilon outside the function.
+
+00:19:56.100 --> 00:20:01.190 align:middle line:84%
+So to say, OK, well, the only
+parameter is going to be x.
+
+00:20:01.190 --> 00:20:03.980 align:middle line:84%
+And let's not set epsilon
+within the function.
+
+00:20:03.980 --> 00:20:07.650 align:middle line:84%
+Let's let the user maybe set
+epsilon outside the function.
+
+00:20:07.650 --> 00:20:08.900 align:middle line:90%
+And then they can use--
+
+00:20:08.900 --> 00:20:11.150 align:middle line:84%
+and then our code
+will basically pop up
+
+00:20:11.150 --> 00:20:13.940 align:middle line:84%
+one level to the global
+scope and use the epsilon
+
+00:20:13.940 --> 00:20:16.160 align:middle line:90%
+that the user chose.
+
+00:20:16.160 --> 00:20:20.780 align:middle line:84%
+Not a good idea because as
+soon as we allow somebody using
+
+00:20:20.780 --> 00:20:25.790 align:middle line:84%
+our code to make their own
+variables within our code,
+
+00:20:25.790 --> 00:20:28.370 align:middle line:84%
+we're putting our trust
+in somebody else's hands,
+
+00:20:28.370 --> 00:20:32.510 align:middle line:84%
+and they might forget
+to reset epsilon,
+
+00:20:32.510 --> 00:20:35.220 align:middle line:84%
+or they might forget to
+set it to begin with.
+
+00:20:35.220 --> 00:20:37.070 align:middle line:84%
+And so just using
+global variables
+
+00:20:37.070 --> 00:20:38.820 align:middle line:84%
+is not a good idea
+in the first place.
+
+00:20:38.820 --> 00:20:41.450 align:middle line:84%
+We'd like to keep control
+of the epsilon that's
+
+00:20:41.450 --> 00:20:45.000 align:middle line:90%
+being used inside our function.
+
+00:20:45.000 --> 00:20:47.240 align:middle line:84%
+So unsurprisingly,
+the last option
+
+00:20:47.240 --> 00:20:49.040 align:middle line:90%
+is going to be our best option.
+
+00:20:49.040 --> 00:20:52.280 align:middle line:84%
+Let's just add epsilon
+as another parameter
+
+00:20:52.280 --> 00:20:54.580 align:middle line:90%
+to the function.
+
+00:20:54.580 --> 00:20:56.190 align:middle line:90%
+So there it is.
+
+00:20:56.190 --> 00:21:00.840 align:middle line:84%
+We've got bisection_root,
+again, as a function.
+
+00:21:00.840 --> 00:21:02.580 align:middle line:90%
+We've got a parameter x.
+
+00:21:02.580 --> 00:21:05.280 align:middle line:84%
+And we have epsilon
+as a second parameter
+
+00:21:05.280 --> 00:21:10.220 align:middle line:84%
+that the user can call
+the function with.
+
+00:21:10.220 --> 00:21:10.760 align:middle line:90%
+OK.
+
+00:21:10.760 --> 00:21:16.370 align:middle line:84%
+So other than that, the function
+body is exactly the same,
+
+00:21:16.370 --> 00:21:19.250 align:middle line:84%
+except that right now, when
+we make a function call,
+
+00:21:19.250 --> 00:21:23.280 align:middle line:84%
+we have to pass in epsilon
+as the second parameter.
+
+00:21:23.280 --> 00:21:29.230 align:middle line:84%
+So in terms of code, this
+is the bisection_root
+
+00:21:29.230 --> 00:21:30.860 align:middle line:90%
+with epsilon as a parameter.
+
+00:21:30.860 --> 00:21:36.190 align:middle line:84%
+And so now the user can find
+the approximation to 123 to 0.1.
+
+00:21:36.190 --> 00:21:39.580 align:middle line:84%
+It's 11.088, in case
+you were wondering,
+
+00:21:39.580 --> 00:21:49.050 align:middle line:84%
+and then the approximation 223
+to 0.000001, which is 11.0905.
+
+00:21:49.050 --> 00:21:50.310 align:middle line:90%
+So, much better.
+
+00:21:50.310 --> 00:21:55.380 align:middle line:84%
+The user can now be in charge
+of deciding how close they'd
+
+00:21:55.380 --> 00:21:59.610 align:middle line:84%
+like the approximation to be
+for every one of their values.
+
+00:21:59.610 --> 00:22:04.520 align:middle line:84%
+But notice that this
+code is kind of verbose.
+
+00:22:04.520 --> 00:22:08.720 align:middle line:84%
+And really, most of the
+time, maybe the users
+
+00:22:08.720 --> 00:22:11.330 align:middle line:84%
+don't want to be in charge
+of setting the epsilon.
+
+00:22:11.330 --> 00:22:14.990 align:middle line:84%
+Maybe they don't know what
+a good epsilon might be.
+
+00:22:14.990 --> 00:22:18.170 align:middle line:84%
+So how do they know that they
+should choose 0.01 by default?
+
+00:22:18.170 --> 00:22:19.700 align:middle line:84%
+Maybe that's something
+you could put
+
+00:22:19.700 --> 00:22:23.550 align:middle line:84%
+in the function specification
+for anyone using your function.
+
+00:22:23.550 --> 00:22:27.450 align:middle line:84%
+But you're going
+to rely on users
+
+00:22:27.450 --> 00:22:31.510 align:middle line:84%
+reading your specification,
+and that's a little bit scary.
+
+00:22:31.510 --> 00:22:35.190 align:middle line:84%
+So instead, the functionality
+that we'd really
+
+00:22:35.190 --> 00:22:37.950 align:middle line:84%
+like to have is
+to say, OK, I want
+
+00:22:37.950 --> 00:22:41.760 align:middle line:84%
+to write a function that
+does take in two parameters.
+
+00:22:41.760 --> 00:22:45.060 align:middle line:84%
+But by default, one
+of those parameters
+
+00:22:45.060 --> 00:22:47.670 align:middle line:84%
+is something that I
+set as the person who's
+
+00:22:47.670 --> 00:22:49.710 align:middle line:90%
+writing this function.
+
+00:22:49.710 --> 00:22:51.810 align:middle line:84%
+So what I would
+really like to have
+
+00:22:51.810 --> 00:22:55.600 align:middle line:84%
+is epsilon to have some
+sort of a default value
+
+00:22:55.600 --> 00:22:58.370 align:middle line:84%
+so if users don't know
+what to call it with,
+
+00:22:58.370 --> 00:23:01.440 align:middle line:84%
+the code will just use
+that default value.
+
+00:23:01.440 --> 00:23:04.590 align:middle line:84%
+And otherwise, if the
+user is more experienced,
+
+00:23:04.590 --> 00:23:07.890 align:middle line:84%
+and they know they'd like
+an epsilon of 1 times 10
+
+00:23:07.890 --> 00:23:10.110 align:middle line:84%
+to the negative 10 or
+whatever it might be,
+
+00:23:10.110 --> 00:23:12.550 align:middle line:84%
+then they can be in
+charge of setting it.
+
+00:23:12.550 --> 00:23:16.020 align:middle line:84%
+So most of the time, we want to
+call the bisection_root function
+
+00:23:16.020 --> 00:23:19.890 align:middle line:84%
+without an epsilon parameter so
+that it may use a default one.
+
+00:23:19.890 --> 00:23:22.350 align:middle line:84%
+But sometimes we'd
+like to allow the user
+
+00:23:22.350 --> 00:23:25.110 align:middle line:90%
+to actually set the epsilon.
+
+00:23:25.110 --> 00:23:27.150 align:middle line:84%
+And so to that end,
+we're introducing
+
+00:23:27.150 --> 00:23:29.730 align:middle line:84%
+the idea of keyword
+parameters, also known
+
+00:23:29.730 --> 00:23:31.230 align:middle line:90%
+as default parameters.
+
+00:23:31.230 --> 00:23:35.530 align:middle line:90%
+And they are set like this.
+
+00:23:35.530 --> 00:23:38.130 align:middle line:84%
+So the bisection_root
+function definition still
+
+00:23:38.130 --> 00:23:41.130 align:middle line:84%
+takes in the thing we'd like to
+approximate the square root of,
+
+00:23:41.130 --> 00:23:45.330 align:middle line:84%
+x, but the second
+parameter here, epsilon,
+
+00:23:45.330 --> 00:23:48.970 align:middle line:84%
+will be equal to something
+inside the function definition.
+
+00:23:48.970 --> 00:23:51.180 align:middle line:84%
+So we, as the people who
+are writing this function,
+
+00:23:51.180 --> 00:23:58.650 align:middle line:84%
+are going to say, the default
+value of epsilon is 0.01.
+
+00:23:58.650 --> 00:24:02.730 align:middle line:84%
+So that means when we call
+the function down here,
+
+00:24:02.730 --> 00:24:06.540 align:middle line:84%
+if the user makes a function
+call without explicitly passing
+
+00:24:06.540 --> 00:24:10.620 align:middle line:84%
+in a second parameter, Python
+will use the default one
+
+00:24:10.620 --> 00:24:12.810 align:middle line:84%
+that the person who
+wrote the function set.
+
+00:24:12.810 --> 00:24:16.260 align:middle line:84%
+So Python will run
+bisection_root of 123,
+
+00:24:16.260 --> 00:24:19.440 align:middle line:90%
+with epsilon being 0.01.
+
+00:24:19.440 --> 00:24:23.010 align:middle line:84%
+And otherwise, if the user does
+want to override that epsilon,
+
+00:24:23.010 --> 00:24:24.630 align:middle line:84%
+they can just pass
+it in themselves,
+
+00:24:24.630 --> 00:24:30.910 align:middle line:84%
+and that default value of 0.01
+will be overwritten to be 0.5.
+
+00:24:30.910 --> 00:24:36.790 align:middle line:84%
+And so in our code here,
+this is the bisection_root
+
+00:24:36.790 --> 00:24:38.090 align:middle line:90%
+with the default values.
+
+00:24:38.090 --> 00:24:40.930 align:middle line:84%
+And so you can see here,
+if I run it with 123,
+
+00:24:40.930 --> 00:24:42.970 align:middle line:84%
+even though there are
+two parameters here
+
+00:24:42.970 --> 00:24:45.850 align:middle line:84%
+for the bisection
+square root function,
+
+00:24:45.850 --> 00:24:49.450 align:middle line:84%
+Python doesn't complain because
+it's using epsilon as 0.01.
+
+00:24:49.450 --> 00:24:53.430 align:middle line:84%
+So I run it, and
+it runs just fine.
+
+00:24:53.430 --> 00:24:55.910 align:middle line:84%
+But in the second line
+here, if I actually
+
+00:24:55.910 --> 00:24:59.600 align:middle line:84%
+want to use 0.5 as
+my epsilon value,
+
+00:24:59.600 --> 00:25:01.460 align:middle line:84%
+it overrides my
+default parameter,
+
+00:25:01.460 --> 00:25:03.860 align:middle line:84%
+and it calculates the
+square root of 123
+
+00:25:03.860 --> 00:25:09.550 align:middle line:90%
+with epsilon being 0.5.
+
+00:25:09.550 --> 00:25:10.465 align:middle line:90%
+Questions so far?
+
+00:25:10.465 --> 00:25:14.720 align:middle line:90%
+
+
+00:25:14.720 --> 00:25:17.440 align:middle line:84%
+So now that we've introduced
+default parameters,
+
+00:25:17.440 --> 00:25:22.180 align:middle line:84%
+there's a few rules about
+making function calls.
+
+00:25:22.180 --> 00:25:25.295 align:middle line:84%
+When you create the function
+definition-- so over here,
+
+00:25:25.295 --> 00:25:26.920 align:middle line:84%
+when you're the one
+defining a function
+
+00:25:26.920 --> 00:25:28.750 align:middle line:84%
+and you decide to
+allow some default
+
+00:25:28.750 --> 00:25:30.910 align:middle line:84%
+parameters in your
+parameter list,
+
+00:25:30.910 --> 00:25:32.830 align:middle line:84%
+everything that's
+a default parameter
+
+00:25:32.830 --> 00:25:34.390 align:middle line:90%
+needs to go at the end.
+
+00:25:34.390 --> 00:25:36.190 align:middle line:90%
+You can't switch these around.
+
+00:25:36.190 --> 00:25:39.820 align:middle line:84%
+You can't say epsilon
+equals 0.01, x.
+
+00:25:39.820 --> 00:25:42.180 align:middle line:90%
+Python will not allow that.
+
+00:25:42.180 --> 00:25:44.480 align:middle line:84%
+So any time you have
+default parameters,
+
+00:25:44.480 --> 00:25:48.140 align:middle line:84%
+they always have
+to go to the end.
+
+00:25:48.140 --> 00:25:50.480 align:middle line:84%
+That's the only rule for
+making the function call,
+
+00:25:50.480 --> 00:25:53.270 align:middle line:84%
+or defining the function
+with default parameters.
+
+00:25:53.270 --> 00:25:55.950 align:middle line:84%
+And then, once you have
+default parameters,
+
+00:25:55.950 --> 00:25:57.710 align:middle line:84%
+you can actually
+call the function
+
+00:25:57.710 --> 00:26:00.230 align:middle line:84%
+in many, many, many
+different ways.
+
+00:26:00.230 --> 00:26:02.167 align:middle line:84%
+And I know some of
+these will be confusing.
+
+00:26:02.167 --> 00:26:04.250 align:middle line:84%
+You might not know whether
+they're allowed or not.
+
+00:26:04.250 --> 00:26:06.830 align:middle line:84%
+You can never go wrong
+with the last one,
+
+00:26:06.830 --> 00:26:08.890 align:middle line:90%
+as we're going to see in a bit.
+
+00:26:08.890 --> 00:26:11.520 align:middle line:84%
+So the first one
+here showcases what
+
+00:26:11.520 --> 00:26:14.010 align:middle line:84%
+happens when you give
+values for everything that's
+
+00:26:14.010 --> 00:26:17.810 align:middle line:84%
+not a default parameter,
+in this case, just x.
+
+00:26:17.810 --> 00:26:20.960 align:middle line:84%
+If you just give a value
+for non-default parameters,
+
+00:26:20.960 --> 00:26:23.490 align:middle line:84%
+Python sets default parameters
+for everything else.
+
+00:26:23.490 --> 00:26:26.320 align:middle line:90%
+So not a big deal.
+
+00:26:26.320 --> 00:26:28.810 align:middle line:84%
+Alternatively, you can
+pass in-- just like we
+
+00:26:28.810 --> 00:26:31.150 align:middle line:84%
+have in the past when we
+write our own functions
+
+00:26:31.150 --> 00:26:34.210 align:middle line:84%
+with multiple parameters, you
+can pass in, one at a time,
+
+00:26:34.210 --> 00:26:37.990 align:middle line:84%
+in the same order, values for
+every one of those parameters,
+
+00:26:37.990 --> 00:26:38.980 align:middle line:90%
+default or not.
+
+00:26:38.980 --> 00:26:40.780 align:middle line:84%
+And if you pass in
+values for all of them,
+
+00:26:40.780 --> 00:26:42.572 align:middle line:84%
+Python will not be
+confused, and it'll just
+
+00:26:42.572 --> 00:26:45.710 align:middle line:90%
+match them one at a time.
+
+00:26:45.710 --> 00:26:47.150 align:middle line:90%
+Variations on that.
+
+00:26:47.150 --> 00:26:53.580 align:middle line:84%
+You can always pass in a
+value for a parameter name.
+
+00:26:53.580 --> 00:26:56.130 align:middle line:84%
+So looking at the
+function definition,
+
+00:26:56.130 --> 00:27:00.080 align:middle line:84%
+we can see the parameter names--
+the formal parameters are
+
+00:27:00.080 --> 00:27:02.580 align:middle line:90%
+named x and epsilon.
+
+00:27:02.580 --> 00:27:04.740 align:middle line:84%
+So when you make
+your function calls,
+
+00:27:04.740 --> 00:27:08.600 align:middle line:84%
+you can actually explicitly
+tell Python something like this,
+
+00:27:08.600 --> 00:27:12.410 align:middle line:84%
+x equals 123,
+epsilon equals 0.1.
+
+00:27:12.410 --> 00:27:13.910 align:middle line:84%
+And if you have
+more parameters, you
+
+00:27:13.910 --> 00:27:16.190 align:middle line:84%
+say that parameter
+equals whatever value you
+
+00:27:16.190 --> 00:27:17.760 align:middle line:90%
+want to run it with.
+
+00:27:17.760 --> 00:27:19.910 align:middle line:84%
+And so that will
+not confuse Python.
+
+00:27:19.910 --> 00:27:21.440 align:middle line:84%
+And if you do it
+in that way, you
+
+00:27:21.440 --> 00:27:24.380 align:middle line:84%
+can actually do it
+in any order you'd
+
+00:27:24.380 --> 00:27:26.600 align:middle line:84%
+like because Python
+will just assign
+
+00:27:26.600 --> 00:27:30.330 align:middle line:84%
+each one of these variables to
+be whatever you told them to.
+
+00:27:30.330 --> 00:27:34.460 align:middle line:84%
+So worst case, you just
+do something like this
+
+00:27:34.460 --> 00:27:37.190 align:middle line:84%
+where, one at a time, you just
+say what the formal parameter is
+
+00:27:37.190 --> 00:27:40.580 align:middle line:84%
+and its value, and then
+Python will not get confused.
+
+00:27:40.580 --> 00:27:43.950 align:middle line:84%
+The ones at the bottom, though,
+is where we run into trouble.
+
+00:27:43.950 --> 00:27:48.350 align:middle line:84%
+So for example, if you put
+the default parameter first,
+
+00:27:48.350 --> 00:27:50.540 align:middle line:84%
+and then you put an
+actual parameter-- sorry,
+
+00:27:50.540 --> 00:27:52.040 align:middle line:84%
+you put the default
+parameter first,
+
+00:27:52.040 --> 00:27:55.520 align:middle line:84%
+and then any parameter that's
+not a default one afterward,
+
+00:27:55.520 --> 00:27:59.240 align:middle line:84%
+Python gives an error
+because the default ones
+
+00:27:59.240 --> 00:28:02.320 align:middle line:84%
+have to go after the
+non-default ones.
+
+00:28:02.320 --> 00:28:05.110 align:middle line:84%
+And the last one doesn't
+actually give an error.
+
+00:28:05.110 --> 00:28:08.810 align:middle line:84%
+But Python, remember, matches
+parameters one by one.
+
+00:28:08.810 --> 00:28:11.800 align:middle line:84%
+So it's actually going
+to find an approximation
+
+00:28:11.800 --> 00:28:18.540 align:middle line:84%
+to the square root of
+0.001 to an epsilon of 123
+
+00:28:18.540 --> 00:28:20.980 align:middle line:84%
+because it's just mapping
+the parameters one at a time.
+
+00:28:20.980 --> 00:28:23.700 align:middle line:84%
+And so that's not an
+error, but it's not
+
+00:28:23.700 --> 00:28:27.150 align:middle line:90%
+exactly what we want it to do.
+
+00:28:27.150 --> 00:28:28.355 align:middle line:90%
+Questions about this?
+
+00:28:28.355 --> 00:28:31.965 align:middle line:90%
+
+
+00:28:31.965 --> 00:28:32.465 align:middle line:90%
+OK.
+
+00:28:32.465 --> 00:28:35.030 align:middle line:90%
+
+
+00:28:35.030 --> 00:28:40.640 align:middle line:84%
+So now, let's move on to another
+thing, another sort of nuance
+
+00:28:40.640 --> 00:28:42.920 align:middle line:90%
+about functions.
+
+00:28:42.920 --> 00:28:45.830 align:middle line:84%
+And we're going to go back
+to the idea of functions
+
+00:28:45.830 --> 00:28:48.550 align:middle line:90%
+being objects in Python.
+
+00:28:48.550 --> 00:28:54.760 align:middle line:84%
+So I drew this picture back when
+we first learned of functions
+
+00:28:54.760 --> 00:28:55.910 align:middle line:90%
+as objects.
+
+00:28:55.910 --> 00:28:58.520 align:middle line:84%
+So I'll just do it again,
+just to jog your memory.
+
+00:28:58.520 --> 00:29:00.730 align:middle line:84%
+So remember that when
+we make a function
+
+00:29:00.730 --> 00:29:08.670 align:middle line:84%
+definition, inside the memory,
+Python creates an object.
+
+00:29:08.670 --> 00:29:11.790 align:middle line:84%
+As soon as we see just
+this function definition,
+
+00:29:11.790 --> 00:29:14.670 align:middle line:84%
+Python doesn't care what
+code is inside here.
+
+00:29:14.670 --> 00:29:16.560 align:middle line:90%
+This code does not run.
+
+00:29:16.560 --> 00:29:18.060 align:middle line:84%
+It only runs when
+it's being called.
+
+00:29:18.060 --> 00:29:21.680 align:middle line:84%
+And right here, I have not
+made a function call at all.
+
+00:29:21.680 --> 00:29:24.180 align:middle line:84%
+All Python knows
+at this point is
+
+00:29:24.180 --> 00:29:27.360 align:middle line:84%
+that there is a function
+object inside memory
+
+00:29:27.360 --> 00:29:32.500 align:middle line:90%
+and its name is even.
+
+00:29:32.500 --> 00:29:35.920 align:middle line:84%
+And this is exactly the
+same as creating an integer
+
+00:29:35.920 --> 00:29:38.050 align:middle line:84%
+object inside memory
+and giving it the name
+
+00:29:38.050 --> 00:29:41.020 align:middle line:84%
+r through a line like
+this, or creating
+
+00:29:41.020 --> 00:29:43.780 align:middle line:84%
+a float object in memory
+and giving it the name pi.
+
+00:29:43.780 --> 00:29:47.540 align:middle line:84%
+It's just some object
+with some name.
+
+00:29:47.540 --> 00:29:51.280 align:middle line:84%
+And so that means that we
+can have some code that
+
+00:29:51.280 --> 00:29:55.270 align:middle line:84%
+looks like this, which is
+going to essentially create
+
+00:29:55.270 --> 00:29:59.600 align:middle line:84%
+an alias for that
+function object in memory.
+
+00:29:59.600 --> 00:30:06.120 align:middle line:84%
+So here, the name is_even
+refers to that function object.
+
+00:30:06.120 --> 00:30:07.890 align:middle line:84%
+And I'm telling
+Python that I would
+
+00:30:07.890 --> 00:30:11.880 align:middle line:84%
+like to refer to that function
+object using the name my_func as
+
+00:30:11.880 --> 00:30:12.640 align:middle line:90%
+well.
+
+00:30:12.640 --> 00:30:16.140 align:middle line:84%
+So both my_func and
+is_even are names that
+
+00:30:16.140 --> 00:30:19.020 align:middle line:90%
+point to this object in memory.
+
+00:30:19.020 --> 00:30:21.480 align:middle line:90%
+It's not a function call.
+
+00:30:21.480 --> 00:30:24.420 align:middle line:84%
+I'm not trying to figure
+out if some number is even.
+
+00:30:24.420 --> 00:30:29.130 align:middle line:84%
+I am literally giving another
+name to this function,
+
+00:30:29.130 --> 00:30:33.520 align:middle line:84%
+this code that does
+this thing here.
+
+00:30:33.520 --> 00:30:34.150 align:middle line:90%
+OK.
+
+00:30:34.150 --> 00:30:36.750 align:middle line:84%
+And so that means that
+if I have two names that
+
+00:30:36.750 --> 00:30:41.860 align:middle line:84%
+point to the same object, if
+I am going to invoke those two
+
+00:30:41.860 --> 00:30:45.700 align:middle line:84%
+names, as I do here,
+with some parameters,
+
+00:30:45.700 --> 00:30:47.710 align:middle line:84%
+Python is going
+to say, well, I'm
+
+00:30:47.710 --> 00:30:50.530 align:middle line:84%
+going to run the code
+pointed to by these names
+
+00:30:50.530 --> 00:30:51.920 align:middle line:90%
+with these parameters.
+
+00:30:51.920 --> 00:30:56.840 align:middle line:84%
+So they will both run the
+code that they're pointing to.
+
+00:30:56.840 --> 00:30:57.920 align:middle line:90%
+This is_even.
+
+00:30:57.920 --> 00:31:00.140 align:middle line:84%
+And so it's just going
+to return true or false.
+
+00:31:00.140 --> 00:31:03.630 align:middle line:90%
+We've seen this before.
+
+00:31:03.630 --> 00:31:08.470 align:middle line:84%
+So remember, just another name
+for that object in memory.
+
+00:31:08.470 --> 00:31:12.720 align:middle line:84%
+So we've seen already how we
+can pass functions as parameters
+
+00:31:12.720 --> 00:31:14.350 align:middle line:90%
+to other functions.
+
+00:31:14.350 --> 00:31:16.740 align:middle line:84%
+And now we're going
+to see what happens
+
+00:31:16.740 --> 00:31:21.490 align:middle line:84%
+when we return a function
+from another function.
+
+00:31:21.490 --> 00:31:25.230 align:middle line:84%
+So we're not returning
+a function call here,
+
+00:31:25.230 --> 00:31:28.850 align:middle line:84%
+we are returning
+a function object.
+
+00:31:28.850 --> 00:31:32.710 align:middle line:84%
+So in this particular code,
+we have only one function.
+
+00:31:32.710 --> 00:31:35.990 align:middle line:90%
+It's named make_prod.
+
+00:31:35.990 --> 00:31:39.170 align:middle line:84%
+And it happens to have some
+stuff going on inside it.
+
+00:31:39.170 --> 00:31:41.510 align:middle line:84%
+So what's the stuff that
+this function will do?
+
+00:31:41.510 --> 00:31:45.450 align:middle line:84%
+Well, this function itself
+will create another function.
+
+00:31:45.450 --> 00:31:51.290 align:middle line:84%
+So this g only exists
+whenever make_prod exists.
+
+00:31:51.290 --> 00:31:55.060 align:middle line:84%
+The main program--
+you can think of it
+
+00:31:55.060 --> 00:31:58.450 align:middle line:84%
+as this level of the code
+in terms of indentation.
+
+00:31:58.450 --> 00:32:02.540 align:middle line:84%
+The main program does
+not know about g.
+
+00:32:02.540 --> 00:32:05.600 align:middle line:84%
+g is only defined
+inside make_prod.
+
+00:32:05.600 --> 00:32:07.460 align:middle line:84%
+So when we first run
+this program as is,
+
+00:32:07.460 --> 00:32:09.090 align:middle line:84%
+there's no function
+call being done.
+
+00:32:09.090 --> 00:32:11.240 align:middle line:84%
+So the main program
+does not know anything
+
+00:32:11.240 --> 00:32:14.770 align:middle line:84%
+about the internals
+of make_prod.
+
+00:32:14.770 --> 00:32:17.890 align:middle line:84%
+So make_prod creates
+its own function here.
+
+00:32:17.890 --> 00:32:22.240 align:middle line:84%
+And then all it does is
+return this function object.
+
+00:32:22.240 --> 00:32:23.920 align:middle line:90%
+Notice it's not a function call.
+
+00:32:23.920 --> 00:32:25.330 align:middle line:84%
+There's no open/close
+parentheses
+
+00:32:25.330 --> 00:32:26.650 align:middle line:90%
+with a parameter in it.
+
+00:32:26.650 --> 00:32:28.900 align:middle line:90%
+It's just the name g.
+
+00:32:28.900 --> 00:32:32.110 align:middle line:90%
+It's this function object.
+
+00:32:32.110 --> 00:32:33.940 align:middle line:90%
+That's the key thing here.
+
+00:32:33.940 --> 00:32:39.180 align:middle line:84%
+So let's run two codes,
+this one and this one.
+
+00:32:39.180 --> 00:32:42.530 align:middle line:84%
+They will do the
+exact same thing.
+
+00:32:42.530 --> 00:32:47.580 align:middle line:84%
+They're going to call
+make_prod with some parameters.
+
+00:32:47.580 --> 00:32:51.530 align:middle line:84%
+And then we're going to see what
+happens when we return this g.
+
+00:32:51.530 --> 00:32:54.470 align:middle line:84%
+And notice, already it's looking
+slightly different than what
+
+00:32:54.470 --> 00:32:55.760 align:middle line:90%
+we've been doing before.
+
+00:32:55.760 --> 00:32:58.550 align:middle line:84%
+Yes, we have a call
+to make_prod here,
+
+00:32:58.550 --> 00:33:02.720 align:middle line:84%
+but we've kind of chained
+another function call
+
+00:33:02.720 --> 00:33:05.030 align:middle line:90%
+right after make_prod.
+
+00:33:05.030 --> 00:33:07.910 align:middle line:84%
+We've got make_prod
+parentheses 2, parentheses 3.
+
+00:33:07.910 --> 00:33:09.860 align:middle line:90%
+And so this is kind of like--
+
+00:33:09.860 --> 00:33:12.120 align:middle line:84%
+I think of it as chaining
+a bunch of function calls
+
+00:33:12.120 --> 00:33:12.620 align:middle line:90%
+together.
+
+00:33:12.620 --> 00:33:14.300 align:middle line:84%
+And this is possible,
+as we're going
+
+00:33:14.300 --> 00:33:18.488 align:middle line:84%
+to see when we step through
+the function environments that
+
+00:33:18.488 --> 00:33:19.280 align:middle line:90%
+are being created--
+
+00:33:19.280 --> 00:33:23.450 align:middle line:84%
+this is made possible because
+make_prod, this function call,
+
+00:33:23.450 --> 00:33:25.640 align:middle line:90%
+returns a function itself.
+
+00:33:25.640 --> 00:33:28.670 align:middle line:90%
+
+
+00:33:28.670 --> 00:33:32.980 align:middle line:84%
+So let's step through the code
+on the left very carefully,
+
+00:33:32.980 --> 00:33:35.290 align:middle line:84%
+and then I'll step through
+the code on the right, which
+
+00:33:35.290 --> 00:33:37.120 align:middle line:90%
+will do the exact same thing.
+
+00:33:37.120 --> 00:33:42.230 align:middle line:84%
+And hopefully it will clear up
+confusions if we do it twice.
+
+00:33:42.230 --> 00:33:44.350 align:middle line:84%
+So this is the
+code from the left.
+
+00:33:44.350 --> 00:33:48.620 align:middle line:84%
+Let's say we have this
+exact program here.
+
+00:33:48.620 --> 00:33:50.900 align:middle line:84%
+I've got one
+function definition,
+
+00:33:50.900 --> 00:33:53.420 align:middle line:84%
+and then I've got one
+function call here.
+
+00:33:53.420 --> 00:33:56.030 align:middle line:84%
+And then I'm going to
+print the return value.
+
+00:33:56.030 --> 00:33:58.960 align:middle line:84%
+So as soon as I
+run my code, Python
+
+00:33:58.960 --> 00:34:01.030 align:middle line:90%
+creates my global environment.
+
+00:34:01.030 --> 00:34:02.650 align:middle line:84%
+And in the global
+environment, this
+
+00:34:02.650 --> 00:34:06.640 align:middle line:84%
+is the scope of
+the main program.
+
+00:34:06.640 --> 00:34:07.730 align:middle line:90%
+What do we have?
+
+00:34:07.730 --> 00:34:10.219 align:middle line:84%
+Well, we have one
+function definition,
+
+00:34:10.219 --> 00:34:12.177 align:middle line:90%
+which has some code within it.
+
+00:34:12.177 --> 00:34:13.719 align:middle line:84%
+I don't care what
+it is at this point
+
+00:34:13.719 --> 00:34:16.449 align:middle line:84%
+because I don't have
+a function call.
+
+00:34:16.449 --> 00:34:20.010 align:middle line:84%
+So then the next thing
+that I need to do
+
+00:34:20.010 --> 00:34:23.370 align:middle line:84%
+is go down here and
+say, val equals.
+
+00:34:23.370 --> 00:34:25.080 align:middle line:84%
+So I'm going to
+create a variable val
+
+00:34:25.080 --> 00:34:27.210 align:middle line:90%
+in my global environment.
+
+00:34:27.210 --> 00:34:29.980 align:middle line:84%
+And I'm going to
+make a function call.
+
+00:34:29.980 --> 00:34:34.290 align:middle line:84%
+So function calls are done left
+to right, just like expressions.
+
+00:34:34.290 --> 00:34:37.530 align:middle line:84%
+And the first thing Python
+sees is this function call,
+
+00:34:37.530 --> 00:34:41.199 align:middle line:90%
+make_prod(2).
+
+00:34:41.199 --> 00:34:45.219 align:middle line:84%
+It's a function call, so we need
+to create another orange box
+
+00:34:45.219 --> 00:34:48.699 align:middle line:84%
+because a new environment
+gets created every time we
+
+00:34:48.699 --> 00:34:51.440 align:middle line:90%
+make a function call.
+
+00:34:51.440 --> 00:34:56.350 align:middle line:84%
+So here, I have my scope, my
+environment for make_prod.
+
+00:34:56.350 --> 00:34:58.990 align:middle line:84%
+And I'm currently
+just stuck here,
+
+00:34:58.990 --> 00:35:01.570 align:middle line:84%
+trying to figure out what
+this is going to return, just
+
+00:35:01.570 --> 00:35:03.220 align:middle line:90%
+the red box here.
+
+00:35:03.220 --> 00:35:05.350 align:middle line:84%
+Well, every time I
+have a function call,
+
+00:35:05.350 --> 00:35:07.300 align:middle line:84%
+I need to look at the
+function definition.
+
+00:35:07.300 --> 00:35:11.140 align:middle line:84%
+And the function definition says
+there's one formal parameter
+
+00:35:11.140 --> 00:35:14.830 align:middle line:84%
+a that I need to map to
+the actual parameter.
+
+00:35:14.830 --> 00:35:18.530 align:middle line:84%
+So the thing I'm calling
+make_prod with is 2.
+
+00:35:18.530 --> 00:35:20.880 align:middle line:84%
+Should be pretty
+straightforward, right?
+
+00:35:20.880 --> 00:35:27.340 align:middle line:84%
+And then I can move on to
+do the body of make_prod.
+
+00:35:27.340 --> 00:35:28.030 align:middle line:90%
+OK.
+
+00:35:28.030 --> 00:35:32.080 align:middle line:84%
+So the body of
+make_prod says, I would
+
+00:35:32.080 --> 00:35:33.910 align:middle line:84%
+like to create a
+function definition.
+
+00:35:33.910 --> 00:35:36.130 align:middle line:90%
+The name of this function is g.
+
+00:35:36.130 --> 00:35:39.610 align:middle line:84%
+So there is g, and it
+contains some code.
+
+00:35:39.610 --> 00:35:42.400 align:middle line:84%
+Again, I don't care what this
+code is because I'm not making
+
+00:35:42.400 --> 00:35:44.350 align:middle line:90%
+a function call to g yet.
+
+00:35:44.350 --> 00:35:46.201 align:middle line:90%
+Right now, I'm just defining g.
+
+00:35:46.201 --> 00:35:48.830 align:middle line:90%
+
+
+00:35:48.830 --> 00:35:50.780 align:middle line:90%
+So so far so good.
+
+00:35:50.780 --> 00:35:57.920 align:middle line:84%
+So this g, I want you to notice,
+only exists inside this call
+
+00:35:57.920 --> 00:36:00.240 align:middle line:90%
+to make_prod.
+
+00:36:00.240 --> 00:36:06.180 align:middle line:84%
+The global environment does
+not know about g at this point
+
+00:36:06.180 --> 00:36:10.350 align:middle line:84%
+because we only define
+g inside make_prod.
+
+00:36:10.350 --> 00:36:11.520 align:middle line:90%
+It's here.
+
+00:36:11.520 --> 00:36:13.800 align:middle line:84%
+I didn't define it
+outside of make_prod,
+
+00:36:13.800 --> 00:36:15.900 align:middle line:84%
+so the global scope
+doesn't know about it,
+
+00:36:15.900 --> 00:36:19.440 align:middle line:84%
+but make_prod does
+know about it.
+
+00:36:19.440 --> 00:36:22.760 align:middle line:84%
+And so the only way that
+the global environment
+
+00:36:22.760 --> 00:36:28.250 align:middle line:84%
+can know about g is if this
+make_prod function somehow
+
+00:36:28.250 --> 00:36:29.696 align:middle line:90%
+returns g.
+
+00:36:29.696 --> 00:36:33.100 align:middle line:90%
+
+
+00:36:33.100 --> 00:36:37.150 align:middle line:84%
+So if we pass g back as
+a parameter-- as a value,
+
+00:36:37.150 --> 00:36:39.460 align:middle line:84%
+sorry, to the main
+program scope,
+
+00:36:39.460 --> 00:36:41.560 align:middle line:84%
+the main program
+can know about g.
+
+00:36:41.560 --> 00:36:44.020 align:middle line:84%
+But otherwise, g
+is kind of stuck
+
+00:36:44.020 --> 00:36:48.010 align:middle line:84%
+in this little subtask, little
+environment of make_prod.
+
+00:36:48.010 --> 00:36:51.380 align:middle line:84%
+And the main program
+doesn't know about it.
+
+00:36:51.380 --> 00:36:53.860 align:middle line:84%
+And so that's what
+this code is doing.
+
+00:36:53.860 --> 00:36:56.740 align:middle line:84%
+It's essentially saying,
+well, I've made my definition,
+
+00:36:56.740 --> 00:36:58.660 align:middle line:90%
+and now I return g.
+
+00:36:58.660 --> 00:37:04.630 align:middle line:84%
+So here, this g and
+the associated code--
+
+00:37:04.630 --> 00:37:09.150 align:middle line:90%
+so this object pointed to by g--
+
+00:37:09.150 --> 00:37:13.210 align:middle line:84%
+is going to be returned
+back to the main program.
+
+00:37:13.210 --> 00:37:17.710 align:middle line:84%
+So now the main program
+knows about this object, g,
+
+00:37:17.710 --> 00:37:20.240 align:middle line:84%
+that has some code
+associated with it,
+
+00:37:20.240 --> 00:37:22.280 align:middle line:84%
+this line here where
+it returns a*b.
+
+00:37:22.280 --> 00:37:25.380 align:middle line:90%
+
+
+00:37:25.380 --> 00:37:30.600 align:middle line:84%
+So the thing that I've boxed
+in red down here is the return
+
+00:37:30.600 --> 00:37:33.490 align:middle line:90%
+value from make_prod(2).
+
+00:37:33.490 --> 00:37:36.280 align:middle line:90%
+And make_prod(2) returned g.
+
+00:37:36.280 --> 00:37:40.030 align:middle line:84%
+So this you can
+essentially say is g.
+
+00:37:40.030 --> 00:37:43.780 align:middle line:90%
+
+
+00:37:43.780 --> 00:37:44.830 align:middle line:90%
+Is that OK?
+
+00:37:44.830 --> 00:37:46.800 align:middle line:90%
+Does that make sense?
+
+00:37:46.800 --> 00:37:49.260 align:middle line:84%
+We're passing functions
+along, not function calls.
+
+00:37:49.260 --> 00:37:53.250 align:middle line:84%
+And so this is just
+a function named g.
+
+00:37:53.250 --> 00:37:56.970 align:middle line:84%
+And so now this line
+of code, val equals,
+
+00:37:56.970 --> 00:38:01.845 align:middle line:84%
+if we replace the red box
+with g, val equals g(3).
+
+00:38:01.845 --> 00:38:06.880 align:middle line:90%
+
+
+00:38:06.880 --> 00:38:10.990 align:middle line:84%
+So g(3) is another
+function call.
+
+00:38:10.990 --> 00:38:12.190 align:middle line:90%
+Just clearly.
+
+00:38:12.190 --> 00:38:13.690 align:middle line:84%
+We look at it, it's
+a function call.
+
+00:38:13.690 --> 00:38:17.450 align:middle line:84%
+It's got a function name,
+parentheses, and a parameter.
+
+00:38:17.450 --> 00:38:19.240 align:middle line:84%
+And so since it's
+a function call,
+
+00:38:19.240 --> 00:38:23.510 align:middle line:84%
+we create another scope
+for this function call.
+
+00:38:23.510 --> 00:38:27.020 align:middle line:84%
+As before, we look at what
+g takes in as a parameter.
+
+00:38:27.020 --> 00:38:29.660 align:middle line:90%
+It's a variable named b.
+
+00:38:29.660 --> 00:38:31.070 align:middle line:90%
+A formal parameter b.
+
+00:38:31.070 --> 00:38:35.870 align:middle line:84%
+And we map it to 3 because
+that's our function call, g(3).
+
+00:38:35.870 --> 00:38:38.850 align:middle line:90%
+
+
+00:38:38.850 --> 00:38:43.350 align:middle line:84%
+And then we have to
+do the body of g.
+
+00:38:43.350 --> 00:38:46.260 align:middle line:84%
+The body of g says,
+return a multiplied by b.
+
+00:38:46.260 --> 00:38:48.210 align:middle line:90%
+Well, I know what b is.
+
+00:38:48.210 --> 00:38:51.360 align:middle line:84%
+It's 3, because you just
+called me with that value.
+
+00:38:51.360 --> 00:38:52.920 align:middle line:90%
+But what is a?
+
+00:38:52.920 --> 00:38:56.330 align:middle line:90%
+The scope of g has no within it.
+
+00:38:56.330 --> 00:39:00.340 align:middle line:84%
+So thinking back to our
+lecture on functions,
+
+00:39:00.340 --> 00:39:03.880 align:middle line:84%
+if a function call doesn't
+know about a variable name
+
+00:39:03.880 --> 00:39:06.580 align:middle line:84%
+within its environment,
+within its scope,
+
+00:39:06.580 --> 00:39:10.630 align:middle line:84%
+it moves up the
+function call hierarchy.
+
+00:39:10.630 --> 00:39:13.510 align:middle line:90%
+So it says, who called me?
+
+00:39:13.510 --> 00:39:15.820 align:middle line:90%
+Where was g defined?
+
+00:39:15.820 --> 00:39:19.000 align:middle line:84%
+Well, g was defined
+inside make_prod,
+
+00:39:19.000 --> 00:39:21.820 align:middle line:84%
+and so it was called
+from make_prod.
+
+00:39:21.820 --> 00:39:25.390 align:middle line:84%
+Does make_prod have
+a variable named a?
+
+00:39:25.390 --> 00:39:26.410 align:middle line:90%
+It does.
+
+00:39:26.410 --> 00:39:28.150 align:middle line:90%
+And its value was 2.
+
+00:39:28.150 --> 00:39:31.060 align:middle line:84%
+So we didn't need to go any
+further up the hierarchy.
+
+00:39:31.060 --> 00:39:33.160 align:middle line:84%
+We've already found
+a variable named a.
+
+00:39:33.160 --> 00:39:37.890 align:middle line:84%
+So Python will use
+b is 3 and a is 2.
+
+00:39:37.890 --> 00:39:39.960 align:middle line:90%
+Multiplies that to be 6.
+
+00:39:39.960 --> 00:39:45.730 align:middle line:84%
+And then the g function
+call can return 6.
+
+00:39:45.730 --> 00:39:47.890 align:middle line:84%
+It returns it back
+to the main program
+
+00:39:47.890 --> 00:39:50.570 align:middle line:84%
+because that's where this
+function call was being done.
+
+00:39:50.570 --> 00:39:53.920 align:middle line:84%
+Remember, we had this
+replaced with g(3)
+
+00:39:53.920 --> 00:39:56.600 align:middle line:90%
+out in this global scope here.
+
+00:39:56.600 --> 00:40:00.340 align:middle line:84%
+And so that 6 gets returned
+back to the main program,
+
+00:40:00.340 --> 00:40:03.220 align:middle line:90%
+and then val becomes 6.
+
+00:40:03.220 --> 00:40:04.085 align:middle line:90%
+And we print 6.
+
+00:40:04.085 --> 00:40:07.900 align:middle line:90%
+
+
+00:40:07.900 --> 00:40:08.500 align:middle line:90%
+OK.
+
+00:40:08.500 --> 00:40:13.330 align:middle line:84%
+So that was showing you how to
+chain function calls together.
+
+00:40:13.330 --> 00:40:17.320 align:middle line:84%
+And this was only made
+possible because make_prod,
+
+00:40:17.320 --> 00:40:20.740 align:middle line:84%
+as a function, returned
+another function object.
+
+00:40:20.740 --> 00:40:23.440 align:middle line:84%
+If make_prod returned,
+I don't know,
+
+00:40:23.440 --> 00:40:26.740 align:middle line:84%
+a tuple or an integer or
+something that was not
+
+00:40:26.740 --> 00:40:30.220 align:middle line:84%
+a function, this code would
+fail because the return
+
+00:40:30.220 --> 00:40:34.180 align:middle line:84%
+from make_prod would be-- let's
+say it returned the number 10.
+
+00:40:34.180 --> 00:40:37.360 align:middle line:84%
+The return from make_prod
+would be replaced with 10,
+
+00:40:37.360 --> 00:40:40.690 align:middle line:84%
+and then Python would
+see this line as 10(3).
+
+00:40:40.690 --> 00:40:43.530 align:middle line:90%
+And what the heck is that?
+
+00:40:43.530 --> 00:40:45.520 align:middle line:90%
+And so it would completely fail.
+
+00:40:45.520 --> 00:40:47.610 align:middle line:84%
+And so this is only made
+possible by the fact
+
+00:40:47.610 --> 00:40:51.490 align:middle line:84%
+that this make_prod function
+returns a function object.
+
+00:40:51.490 --> 00:40:53.925 align:middle line:84%
+And so we're able to chain
+these function calls together.
+
+00:40:53.925 --> 00:40:56.970 align:middle line:90%
+
+
+00:40:56.970 --> 00:41:00.290 align:middle line:84%
+So let's look at the exact
+same code except this time,
+
+00:41:00.290 --> 00:41:02.670 align:middle line:84%
+instead of chaining
+them in a row,
+
+00:41:02.670 --> 00:41:08.450 align:middle line:84%
+let's explicitly save
+the intermediate steps.
+
+00:41:08.450 --> 00:41:13.160 align:middle line:84%
+So what I'm going to do is say
+make_prod(2) I'm going to save
+
+00:41:13.160 --> 00:41:21.450 align:middle line:84%
+as a variable, and then make
+that variable call the 3,
+
+00:41:21.450 --> 00:41:25.070 align:middle line:84%
+the second part of my chain
+from the previous slide.
+
+00:41:25.070 --> 00:41:27.710 align:middle line:84%
+And it's going to do
+the exact same thing.
+
+00:41:27.710 --> 00:41:30.640 align:middle line:84%
+So here, I've got
+the global scope.
+
+00:41:30.640 --> 00:41:34.270 align:middle line:84%
+Just like before, I've
+got a function definition
+
+00:41:34.270 --> 00:41:35.050 align:middle line:90%
+for make_prod.
+
+00:41:35.050 --> 00:41:36.370 align:middle line:90%
+So this is the name make_prod.
+
+00:41:36.370 --> 00:41:38.860 align:middle line:90%
+It points to some code.
+
+00:41:38.860 --> 00:41:41.260 align:middle line:84%
+And then I've got this
+variable doubler that's
+
+00:41:41.260 --> 00:41:43.470 align:middle line:90%
+going to equal something.
+
+00:41:43.470 --> 00:41:46.010 align:middle line:90%
+So this is a function call.
+
+00:41:46.010 --> 00:41:49.760 align:middle line:84%
+The function call says, here's
+my environment for make_prod
+
+00:41:49.760 --> 00:41:51.030 align:middle line:90%
+with its scope.
+
+00:41:51.030 --> 00:41:53.360 align:middle line:84%
+So in this particular
+scope, I've
+
+00:41:53.360 --> 00:41:56.060 align:middle line:84%
+got my formal
+parameter a that maps
+
+00:41:56.060 --> 00:42:01.850 align:middle line:84%
+to 2, and then the function body
+itself creates this variable g.
+
+00:42:01.850 --> 00:42:04.745 align:middle line:84%
+That's just some code,
+exactly the same as before.
+
+00:42:04.745 --> 00:42:08.450 align:middle line:90%
+
+
+00:42:08.450 --> 00:42:10.580 align:middle line:84%
+Any questions so
+far based on what
+
+00:42:10.580 --> 00:42:13.760 align:middle line:84%
+happened in the last
+sort of example and here,
+
+00:42:13.760 --> 00:42:14.930 align:middle line:90%
+or is this OK so far?
+
+00:42:14.930 --> 00:42:18.600 align:middle line:90%
+
+
+00:42:18.600 --> 00:42:20.270 align:middle line:90%
+OK.
+
+00:42:20.270 --> 00:42:23.570 align:middle line:84%
+So now I've set up my
+code, and this is where
+
+00:42:23.570 --> 00:42:25.250 align:middle line:90%
+the interesting part comes in.
+
+00:42:25.250 --> 00:42:29.180 align:middle line:84%
+make_prod is going to
+finish its call by saying,
+
+00:42:29.180 --> 00:42:30.830 align:middle line:90%
+I'm going to return something.
+
+00:42:30.830 --> 00:42:34.320 align:middle line:90%
+And the thing it returns is g.
+
+00:42:34.320 --> 00:42:37.260 align:middle line:90%
+So it returns this name, g.
+
+00:42:37.260 --> 00:42:40.140 align:middle line:84%
+Just happens to be
+a function object.
+
+00:42:40.140 --> 00:42:42.420 align:middle line:84%
+But think of it
+as anything else.
+
+00:42:42.420 --> 00:42:45.540 align:middle line:84%
+We're basically saying doubler
+equals 10 or doubler equals
+
+00:42:45.540 --> 00:42:46.980 align:middle line:90%
+some list or some tuple.
+
+00:42:46.980 --> 00:42:50.130 align:middle line:84%
+doubler is going
+to be some value.
+
+00:42:50.130 --> 00:42:55.530 align:middle line:84%
+This value is just code
+associated with a function.
+
+00:42:55.530 --> 00:42:57.770 align:middle line:84%
+So in my main
+program scope, I've
+
+00:42:57.770 --> 00:43:01.160 align:middle line:84%
+got doubler equals g, which,
+based on the memory diagram
+
+00:43:01.160 --> 00:43:03.710 align:middle line:84%
+we did five or 10
+slides ago, it's
+
+00:43:03.710 --> 00:43:06.320 align:middle line:84%
+like when we had
+my_func equals is_even.
+
+00:43:06.320 --> 00:43:11.840 align:middle line:84%
+I basically have two names
+for the same function object.
+
+00:43:11.840 --> 00:43:15.080 align:middle line:84%
+doubler is a name, and
+g is the other name.
+
+00:43:15.080 --> 00:43:18.935 align:middle line:84%
+And they both point to
+this function object.
+
+00:43:18.935 --> 00:43:22.780 align:middle line:90%
+
+
+00:43:22.780 --> 00:43:24.640 align:middle line:90%
+Does that make sense?
+
+00:43:24.640 --> 00:43:26.870 align:middle line:90%
+That's OK?
+
+00:43:26.870 --> 00:43:28.470 align:middle line:90%
+OK.
+
+00:43:28.470 --> 00:43:31.350 align:middle line:84%
+So now that I've got two names
+that point to the same function
+
+00:43:31.350 --> 00:43:37.660 align:middle line:84%
+object, we can just use this
+doubler in the next line.
+
+00:43:37.660 --> 00:43:46.207 align:middle line:84%
+And this doubler is
+like saying g(3),
+
+00:43:46.207 --> 00:43:48.540 align:middle line:84%
+except that I'm using the
+name doubler, which I saved it
+
+00:43:48.540 --> 00:43:50.490 align:middle line:90%
+as on the previous line.
+
+00:43:50.490 --> 00:43:54.910 align:middle line:84%
+So g(3) is another
+function call.
+
+00:43:54.910 --> 00:44:01.030 align:middle line:84%
+Create another environment for
+g or doubler or whatever name.
+
+00:44:01.030 --> 00:44:05.360 align:middle line:84%
+And here, I've got one
+formal parameter b.
+
+00:44:05.360 --> 00:44:06.230 align:middle line:90%
+Its value is 3.
+
+00:44:06.230 --> 00:44:08.580 align:middle line:84%
+And then we do the same
+trick where you ask,
+
+00:44:08.580 --> 00:44:09.560 align:middle line:90%
+what is the value of a?
+
+00:44:09.560 --> 00:44:12.800 align:middle line:84%
+I'm going to look up
+the hierarchy of things
+
+00:44:12.800 --> 00:44:16.640 align:middle line:84%
+that got called to see what
+is the first value of a that
+
+00:44:16.640 --> 00:44:17.420 align:middle line:90%
+I grab.
+
+00:44:17.420 --> 00:44:20.810 align:middle line:84%
+And the first value of
+a that we grab is the 2.
+
+00:44:20.810 --> 00:44:23.510 align:middle line:84%
+And so we're going to
+multiply the 2 with the 3.
+
+00:44:23.510 --> 00:44:26.390 align:middle line:84%
+And that 6 gets
+returned back to whoever
+
+00:44:26.390 --> 00:44:29.880 align:middle line:84%
+called it, which was out here
+in the main program scope.
+
+00:44:29.880 --> 00:44:32.630 align:middle line:84%
+And so this val
+will be equal to 6.
+
+00:44:32.630 --> 00:44:37.280 align:middle line:90%
+
+
+00:44:37.280 --> 00:44:38.210 align:middle line:90%
+And that's it.
+
+00:44:38.210 --> 00:44:41.210 align:middle line:90%
+
+
+00:44:41.210 --> 00:44:43.050 align:middle line:90%
+Questions?
+
+00:44:43.050 --> 00:44:44.850 align:middle line:84%
+Which one was easier
+to understand,
+
+00:44:44.850 --> 00:44:47.280 align:middle line:84%
+this one or the one where
+we did the chaining?
+
+00:44:47.280 --> 00:44:48.270 align:middle line:90%
+Just show of hands.
+
+00:44:48.270 --> 00:44:50.430 align:middle line:90%
+Who liked this one more?
+
+00:44:50.430 --> 00:44:52.125 align:middle line:90%
+Who liked the chaining more?
+
+00:44:52.125 --> 00:44:53.020 align:middle line:90%
+Oh, interesting.
+
+00:44:53.020 --> 00:44:54.330 align:middle line:90%
+OK.
+
+00:44:54.330 --> 00:44:56.730 align:middle line:84%
+Was the chaining
+just easier to grasp
+
+00:44:56.730 --> 00:44:58.350 align:middle line:90%
+because there were less names?
+
+00:44:58.350 --> 00:44:59.700 align:middle line:90%
+OK, cool.
+
+00:44:59.700 --> 00:45:01.140 align:middle line:90%
+I'm glad I showed it first then.
+
+00:45:01.140 --> 00:45:03.950 align:middle line:90%
+
+
+00:45:03.950 --> 00:45:05.570 align:middle line:90%
+Any questions though?
+
+00:45:05.570 --> 00:45:07.027 align:middle line:90%
+Yeah.
+
+00:45:07.027 --> 00:45:08.610 align:middle line:84%
+AUDIENCE: Is there
+a particular reason
+
+00:45:08.610 --> 00:45:11.320 align:middle line:84%
+we do it this way
+compared to the chaining?
+
+00:45:11.320 --> 00:45:12.730 align:middle line:90%
+ANA BELL: No reason.
+
+00:45:12.730 --> 00:45:16.120 align:middle line:84%
+In fact, you would want to do
+the chaining way because then
+
+00:45:16.120 --> 00:45:17.980 align:middle line:90%
+you avoid extra lines of code.
+
+00:45:17.980 --> 00:45:19.960 align:middle line:84%
+And again, with
+practice, it just
+
+00:45:19.960 --> 00:45:22.490 align:middle line:84%
+becomes really easy to
+know what's going on.
+
+00:45:22.490 --> 00:45:22.990 align:middle line:90%
+Yeah.
+
+00:45:22.990 --> 00:45:26.320 align:middle line:90%
+
+
+00:45:26.320 --> 00:45:27.960 align:middle line:90%
+OK.
+
+00:45:27.960 --> 00:45:34.390 align:middle line:84%
+So that might have
+been confusing.
+
+00:45:34.390 --> 00:45:36.130 align:middle line:90%
+Why do we bother doing that?
+
+00:45:36.130 --> 00:45:39.670 align:middle line:84%
+Because that particular
+example, all we were doing
+
+00:45:39.670 --> 00:45:43.015 align:middle line:84%
+is multiplying two-- or I
+guess doubling a number.
+
+00:45:43.015 --> 00:45:45.890 align:middle line:90%
+
+
+00:45:45.890 --> 00:45:48.590 align:middle line:84%
+We could have easily
+written that code
+
+00:45:48.590 --> 00:45:55.820 align:middle line:84%
+to double a number without
+actually returning a function.
+
+00:45:55.820 --> 00:46:00.590 align:middle line:84%
+That seemed way overkill for
+what that code was trying to do.
+
+00:46:00.590 --> 00:46:04.850 align:middle line:84%
+Well, it was showing you what
+you can do with an easy example,
+
+00:46:04.850 --> 00:46:09.050 align:middle line:84%
+and you would definitely
+never ever write
+
+00:46:09.050 --> 00:46:10.520 align:middle line:84%
+functions returning
+other functions
+
+00:46:10.520 --> 00:46:12.500 align:middle line:90%
+for such simple examples.
+
+00:46:12.500 --> 00:46:19.620 align:middle line:84%
+But it's really a
+method for cases
+
+00:46:19.620 --> 00:46:21.570 align:middle line:84%
+where you have
+larger pieces of code
+
+00:46:21.570 --> 00:46:26.690 align:middle line:84%
+that you'd like to write
+because if you're trying--
+
+00:46:26.690 --> 00:46:30.290 align:middle line:84%
+so if you're writing a larger
+piece of code, some software
+
+00:46:30.290 --> 00:46:33.950 align:middle line:84%
+project, and every single
+function you'd ever want to use
+
+00:46:33.950 --> 00:46:37.370 align:middle line:84%
+is kind of defined at the top
+level in the main program,
+
+00:46:37.370 --> 00:46:40.220 align:middle line:90%
+it would become really messy.
+
+00:46:40.220 --> 00:46:42.110 align:middle line:84%
+And so there are
+cases where you would
+
+00:46:42.110 --> 00:46:45.560 align:middle line:84%
+like some functions to only
+be visible or accessible
+
+00:46:45.560 --> 00:46:47.420 align:middle line:90%
+by other functions.
+
+00:46:47.420 --> 00:46:49.640 align:middle line:84%
+And so you'd only
+define those functions
+
+00:46:49.640 --> 00:46:51.980 align:middle line:84%
+within the scope
+of other functions.
+
+00:46:51.980 --> 00:46:54.540 align:middle line:90%
+That's one thing.
+
+00:46:54.540 --> 00:46:56.930 align:middle line:84%
+The other thing
+is using this sort
+
+00:46:56.930 --> 00:46:59.990 align:middle line:84%
+of chaining method
+allows you to have
+
+00:46:59.990 --> 00:47:04.550 align:middle line:84%
+some control over the flow
+of control of a program.
+
+00:47:04.550 --> 00:47:07.370 align:middle line:84%
+And so you can
+imagine in the example
+
+00:47:07.370 --> 00:47:13.340 align:middle line:84%
+here where you
+basically create this--
+
+00:47:13.340 --> 00:47:15.480 align:middle line:90%
+you have this line here.
+
+00:47:15.480 --> 00:47:18.710 align:middle line:90%
+And at some point you return g.
+
+00:47:18.710 --> 00:47:22.220 align:middle line:84%
+And you don't want to do
+the doubling right away.
+
+00:47:22.220 --> 00:47:24.530 align:middle line:84%
+So you don't want to do val
+equals doubler right away.
+
+00:47:24.530 --> 00:47:28.040 align:middle line:84%
+You can imagine having a bunch
+more lines of code here that
+
+00:47:28.040 --> 00:47:32.870 align:middle line:84%
+do other stuff before you
+actually do the doubling.
+
+00:47:32.870 --> 00:47:37.610 align:middle line:84%
+And so, in that case, in this
+larger, more complex program,
+
+00:47:37.610 --> 00:47:40.640 align:middle line:84%
+you're essentially interrupting
+the flow of control here.
+
+00:47:40.640 --> 00:47:42.770 align:middle line:84%
+You're not doing the
+doubling right away,
+
+00:47:42.770 --> 00:47:45.590 align:middle line:84%
+but you did grab
+this function back.
+
+00:47:45.590 --> 00:47:48.080 align:middle line:84%
+And then you can maybe do
+other things with that function
+
+00:47:48.080 --> 00:47:51.770 align:middle line:84%
+before finally
+doing the doubling.
+
+00:47:51.770 --> 00:47:54.680 align:middle line:84%
+And so in that case,
+you can basically
+
+00:47:54.680 --> 00:47:58.640 align:middle line:84%
+execute some code partially,
+do some other operations,
+
+00:47:58.640 --> 00:48:02.120 align:middle line:84%
+and then finish
+executing at the end
+
+00:48:02.120 --> 00:48:04.140 align:middle line:84%
+after you've done
+these operations.
+
+00:48:04.140 --> 00:48:07.430 align:middle line:84%
+So again, for this example,
+it doesn't make much sense,
+
+00:48:07.430 --> 00:48:10.980 align:middle line:84%
+but in a larger piece
+of code, this idea
+
+00:48:10.980 --> 00:48:14.940 align:middle line:84%
+of functions returning
+functions is just another tool
+
+00:48:14.940 --> 00:48:18.480 align:middle line:84%
+to achieve these ideas of
+decomposition abstraction, which
+
+00:48:18.480 --> 00:48:21.000 align:middle line:84%
+leads you to write more
+organized code, more
+
+00:48:21.000 --> 00:48:25.570 align:middle line:84%
+robust code, more easy to read
+code, and so on and so on.
+
+00:48:25.570 --> 00:48:27.780 align:middle line:84%
+So you don't have
+to do this, but you
+
+00:48:27.780 --> 00:48:29.910 align:middle line:84%
+do have to understand what
+it means for a function
+
+00:48:29.910 --> 00:48:33.780 align:middle line:90%
+to return another function.
+
+00:48:33.780 --> 00:48:37.450 align:middle line:90%
+Any other questions?
+
+00:48:37.450 --> 00:48:38.620 align:middle line:90%
+OK.
+
+00:48:38.620 --> 00:48:43.030 align:middle line:84%
+So now we're going to do the
+last piece of today's lecture,
+
+00:48:43.030 --> 00:48:46.480 align:middle line:90%
+ideas of testing and debugging.
+
+00:48:46.480 --> 00:48:51.160 align:middle line:84%
+This lecture is
+usually pretty dry,
+
+00:48:51.160 --> 00:48:56.500 align:middle line:84%
+so I'm going to try to make
+it more fun, as fun as I can.
+
+00:48:56.500 --> 00:49:00.640 align:middle line:84%
+The reason why we
+introduced this lecture now
+
+00:49:00.640 --> 00:49:04.040 align:middle line:84%
+is because I'm hoping that
+by this point in the course,
+
+00:49:04.040 --> 00:49:06.730 align:middle line:84%
+you've had a chance
+to do some testing
+
+00:49:06.730 --> 00:49:08.620 align:middle line:84%
+and debugging
+strategies on your own
+
+00:49:08.620 --> 00:49:13.510 align:middle line:84%
+by kind of a trial and error
+thing on quizzes and on P sets.
+
+00:49:13.510 --> 00:49:16.000 align:middle line:84%
+So you've gotten a chance to
+maybe use the Python Tutor,
+
+00:49:16.000 --> 00:49:19.210 align:middle line:84%
+you've gotten a chance
+to use print statements,
+
+00:49:19.210 --> 00:49:20.710 align:middle line:84%
+various things
+like that, and see
+
+00:49:20.710 --> 00:49:23.522 align:middle line:84%
+what works best for you,
+what doesn't work at all,
+
+00:49:23.522 --> 00:49:24.230 align:middle line:90%
+things like that.
+
+00:49:24.230 --> 00:49:26.500 align:middle line:84%
+So you've maybe gotten
+a little bit burned
+
+00:49:26.500 --> 00:49:28.040 align:middle line:90%
+by some of these strategies.
+
+00:49:28.040 --> 00:49:31.402 align:middle line:84%
+But I hope that by you
+being burned by some things
+
+00:49:31.402 --> 00:49:32.860 align:middle line:84%
+that you've tried
+that worked, that
+
+00:49:32.860 --> 00:49:35.208 align:middle line:84%
+didn't work, you'll maybe
+appreciate this lecture
+
+00:49:35.208 --> 00:49:37.000 align:middle line:84%
+a little bit more than
+if I just showed you
+
+00:49:37.000 --> 00:49:42.590 align:middle line:84%
+this lecture back on day one or
+day two or something like that,
+
+00:49:42.590 --> 00:49:45.530 align:middle line:84%
+because it's a lot of
+common sense stuff,
+
+00:49:45.530 --> 00:49:48.860 align:middle line:84%
+but there's a little
+bit of actual strategy
+
+00:49:48.860 --> 00:49:52.780 align:middle line:84%
+as well in this
+particular set of slides.
+
+00:49:52.780 --> 00:49:55.090 align:middle line:84%
+So your programming
+experience so far,
+
+00:49:55.090 --> 00:49:56.490 align:middle line:84%
+I know this is
+certainly mine, is
+
+00:49:56.490 --> 00:50:00.120 align:middle line:84%
+I hope that when I run my code,
+it immediately runs perfectly.
+
+00:50:00.120 --> 00:50:02.880 align:middle line:84%
+But instead, what ends
+up happening for me,
+
+00:50:02.880 --> 00:50:05.310 align:middle line:84%
+is I run my code, and
+it immediately crashes.
+
+00:50:05.310 --> 00:50:07.050 align:middle line:84%
+I've got my red
+errors on the side,
+
+00:50:07.050 --> 00:50:10.080 align:middle line:84%
+and I get a little
+bit flustered.
+
+00:50:10.080 --> 00:50:13.800 align:middle line:84%
+So this is exactly what
+happens, probably for you too.
+
+00:50:13.800 --> 00:50:16.380 align:middle line:84%
+And the idea here
+is that you want
+
+00:50:16.380 --> 00:50:20.280 align:middle line:84%
+to write the code in
+such a way that it makes
+
+00:50:20.280 --> 00:50:22.170 align:middle line:90%
+it easy to test and debug.
+
+00:50:22.170 --> 00:50:25.080 align:middle line:84%
+And I know I always say this,
+and I actually don't always
+
+00:50:25.080 --> 00:50:32.505 align:middle line:84%
+practice it, but it's important
+to write the code by writing it
+
+00:50:32.505 --> 00:50:35.820 align:middle line:84%
+by adding comments as
+you're writing the code.
+
+00:50:35.820 --> 00:50:38.940 align:middle line:84%
+So writing specifications,
+writing comments for yourself
+
+00:50:38.940 --> 00:50:41.610 align:middle line:84%
+as you're actually writing the
+code, not when you've finished
+
+00:50:41.610 --> 00:50:43.180 align:middle line:90%
+it is, very important.
+
+00:50:43.180 --> 00:50:44.880 align:middle line:84%
+It helps you as
+you're writing it,
+
+00:50:44.880 --> 00:50:48.280 align:middle line:84%
+or when you're coming back
+to it in a couple of days.
+
+00:50:48.280 --> 00:50:50.690 align:middle line:84%
+Modularizing the
+programs also helps.
+
+00:50:50.690 --> 00:50:53.800 align:middle line:84%
+So if you see a chunk of code
+that you're copying and pasting
+
+00:50:53.800 --> 00:50:57.550 align:middle line:84%
+all over the place,
+you'll want to plop it out
+
+00:50:57.550 --> 00:51:00.170 align:middle line:84%
+in a little function that
+you call multiple places.
+
+00:51:00.170 --> 00:51:03.490 align:middle line:84%
+So ideas like that
+kind of employ
+
+00:51:03.490 --> 00:51:06.160 align:middle line:84%
+this defensive
+programming mechanism,
+
+00:51:06.160 --> 00:51:10.990 align:middle line:84%
+and it allows you to
+perform really easy testing
+
+00:51:10.990 --> 00:51:13.480 align:middle line:84%
+and validation when it
+comes time to do that,
+
+00:51:13.480 --> 00:51:18.590 align:middle line:84%
+and then possibly debugging
+when it comes time to do that.
+
+00:51:18.590 --> 00:51:21.170 align:middle line:84%
+So the lecture is going to
+be divided into two pieces.
+
+00:51:21.170 --> 00:51:24.340 align:middle line:84%
+The first, we're going to talk
+about testing and validation.
+
+00:51:24.340 --> 00:51:26.157 align:middle line:90%
+Some nice testing strategies.
+
+00:51:26.157 --> 00:51:28.240 align:middle line:84%
+And then we're going to
+talk about some strategies
+
+00:51:28.240 --> 00:51:29.990 align:middle line:90%
+for debugging as well.
+
+00:51:29.990 --> 00:51:32.500 align:middle line:84%
+So the testing and
+validation part
+
+00:51:32.500 --> 00:51:36.910 align:middle line:84%
+is where you come up with a set
+of input test cases and expected
+
+00:51:36.910 --> 00:51:37.810 align:middle line:90%
+outputs.
+
+00:51:37.810 --> 00:51:40.720 align:middle line:84%
+And all you're doing
+is running the test,
+
+00:51:40.720 --> 00:51:44.110 align:middle line:84%
+running your code to make sure
+that the expected output matches
+
+00:51:44.110 --> 00:51:48.140 align:middle line:84%
+the output that you actually
+get from running the code.
+
+00:51:48.140 --> 00:51:53.090 align:middle line:84%
+The debugging part is
+where one of your tests
+
+00:51:53.090 --> 00:51:56.120 align:middle line:90%
+don't match the expected output.
+
+00:51:56.120 --> 00:51:58.890 align:middle line:84%
+One of the outputs that you get
+don't match the expected output.
+
+00:51:58.890 --> 00:52:01.730 align:middle line:84%
+And at that point, you have to
+figure out why the code is not
+
+00:52:01.730 --> 00:52:03.740 align:middle line:90%
+working, obviously.
+
+00:52:03.740 --> 00:52:08.520 align:middle line:84%
+So before you even test your
+code, as I mentioned before,
+
+00:52:08.520 --> 00:52:11.940 align:middle line:84%
+you have to set yourself up to
+do the testing and debugging.
+
+00:52:11.940 --> 00:52:17.150 align:middle line:84%
+So to ease this part, it's
+important to write documentation
+
+00:52:17.150 --> 00:52:17.678 align:middle line:90%
+very well.
+
+00:52:17.678 --> 00:52:19.970 align:middle line:84%
+So when you're writing your
+own function, not functions
+
+00:52:19.970 --> 00:52:22.520 align:middle line:84%
+that we've given you,
+document the docstring.
+
+00:52:22.520 --> 00:52:23.960 align:middle line:90%
+What are the inputs you expect?
+
+00:52:23.960 --> 00:52:25.290 align:middle line:90%
+What should the function do?
+
+00:52:25.290 --> 00:52:26.623 align:middle line:90%
+What should the function return?
+
+00:52:26.623 --> 00:52:28.040 align:middle line:90%
+Things like that.
+
+00:52:28.040 --> 00:52:29.870 align:middle line:84%
+If you're writing
+the code in sort
+
+00:52:29.870 --> 00:52:32.780 align:middle line:84%
+of a strange way or if you
+use some piece from Stack
+
+00:52:32.780 --> 00:52:35.900 align:middle line:84%
+Overflow or something like
+that, document it to make sure
+
+00:52:35.900 --> 00:52:37.760 align:middle line:84%
+that if you're looking
+at it a week from now
+
+00:52:37.760 --> 00:52:39.950 align:middle line:84%
+you still remember what
+that piece of code did.
+
+00:52:39.950 --> 00:52:42.050 align:middle line:84%
+So really, really
+simple things like that
+
+00:52:42.050 --> 00:52:44.270 align:middle line:84%
+can make a really big
+difference when it comes time
+
+00:52:44.270 --> 00:52:45.095 align:middle line:90%
+to test and debug.
+
+00:52:45.095 --> 00:52:47.650 align:middle line:90%
+
+
+00:52:47.650 --> 00:52:50.260 align:middle line:84%
+Breaking up the code,
+obviously, into smaller chunks
+
+00:52:50.260 --> 00:52:52.900 align:middle line:84%
+is very important because if
+you're copying and pasting
+
+00:52:52.900 --> 00:52:55.960 align:middle line:84%
+the same piece of code
+over and over again,
+
+00:52:55.960 --> 00:52:58.240 align:middle line:84%
+you remember to make
+a change in one place,
+
+00:52:58.240 --> 00:53:00.460 align:middle line:84%
+you might forget to
+make that same changes
+
+00:53:00.460 --> 00:53:02.210 align:middle line:90%
+in all these different places.
+
+00:53:02.210 --> 00:53:05.440 align:middle line:84%
+And so that'll be
+very frustrating
+
+00:53:05.440 --> 00:53:08.810 align:middle line:84%
+when it comes time to actually
+run and debug the code.
+
+00:53:08.810 --> 00:53:12.160 align:middle line:84%
+So once you have
+code that's written,
+
+00:53:12.160 --> 00:53:16.150 align:middle line:84%
+you would start the
+testing process.
+
+00:53:16.150 --> 00:53:18.850 align:middle line:90%
+You remove all the errors.
+
+00:53:18.850 --> 00:53:20.590 align:middle line:84%
+Static semantic errors
+and syntax errors
+
+00:53:20.590 --> 00:53:21.850 align:middle line:90%
+are really easy to remove.
+
+00:53:21.850 --> 00:53:24.070 align:middle line:84%
+Python immediately
+tells you, index error
+
+00:53:24.070 --> 00:53:26.470 align:middle line:84%
+on this line or syntax
+error on this line.
+
+00:53:26.470 --> 00:53:29.790 align:middle line:84%
+Those are really
+easy to figure out.
+
+00:53:29.790 --> 00:53:35.610 align:middle line:84%
+Using a paper and pen or typing
+it out in your Python file,
+
+00:53:35.610 --> 00:53:37.740 align:middle line:84%
+you come up with a
+bunch of test cases.
+
+00:53:37.740 --> 00:53:41.390 align:middle line:84%
+And for each one of
+those test cases,
+
+00:53:41.390 --> 00:53:46.550 align:middle line:84%
+the way we write on your
+micro quiz test cases,
+
+00:53:46.550 --> 00:53:48.710 align:middle line:84%
+you say what you expect
+the output to be.
+
+00:53:48.710 --> 00:53:50.480 align:middle line:84%
+So when you actually
+run it, you don't
+
+00:53:50.480 --> 00:53:53.030 align:middle line:84%
+need to remember what
+this output should be.
+
+00:53:53.030 --> 00:53:59.470 align:middle line:84%
+It's just written down somewhere
+on paper or on the screen.
+
+00:53:59.470 --> 00:54:02.500 align:middle line:84%
+So when you're creating
+a bunch of test cases,
+
+00:54:02.500 --> 00:54:05.430 align:middle line:84%
+you can create some
+different classes of tests.
+
+00:54:05.430 --> 00:54:08.880 align:middle line:84%
+So hopefully we're modularizing
+our programs, which means
+
+00:54:08.880 --> 00:54:11.420 align:middle line:90%
+that we're creating functions.
+
+00:54:11.420 --> 00:54:14.360 align:middle line:84%
+The simplest classes of
+tests are called unit tests,
+
+00:54:14.360 --> 00:54:21.620 align:middle line:84%
+and these tests basically test a
+function with different inputs.
+
+00:54:21.620 --> 00:54:24.800 align:middle line:84%
+So what you're going
+to do is come up
+
+00:54:24.800 --> 00:54:26.630 align:middle line:84%
+with a bunch of
+different test cases
+
+00:54:26.630 --> 00:54:30.140 align:middle line:84%
+for one particular function
+and run these test cases
+
+00:54:30.140 --> 00:54:32.540 align:middle line:90%
+on the function.
+
+00:54:32.540 --> 00:54:35.120 align:middle line:90%
+If they all work, perfect.
+
+00:54:35.120 --> 00:54:37.310 align:middle line:84%
+But if they don't,
+or if you find a bug
+
+00:54:37.310 --> 00:54:39.540 align:middle line:84%
+as you're writing test
+cases in the code,
+
+00:54:39.540 --> 00:54:41.990 align:middle line:84%
+you'll want to perform
+regression testing.
+
+00:54:41.990 --> 00:54:45.260 align:middle line:84%
+And regression testing means
+that as you find a bug,
+
+00:54:45.260 --> 00:54:50.970 align:middle line:84%
+you add a new test case for
+them, or as you fix a bug,
+
+00:54:50.970 --> 00:54:52.300 align:middle line:90%
+you run the code--
+
+00:54:52.300 --> 00:54:56.340 align:middle line:84%
+you run the same code with
+all of the previous test cases
+
+00:54:56.340 --> 00:54:58.020 align:middle line:84%
+to make sure that
+the bug you fixed
+
+00:54:58.020 --> 00:55:01.530 align:middle line:84%
+didn't introduce errors
+in a previous test case.
+
+00:55:01.530 --> 00:55:04.950 align:middle line:84%
+So there's a bunch of iterations
+of unit testing and regression
+
+00:55:04.950 --> 00:55:07.710 align:middle line:84%
+testing to test all of
+these different modules, all
+
+00:55:07.710 --> 00:55:09.210 align:middle line:90%
+the functions in your program.
+
+00:55:09.210 --> 00:55:13.110 align:middle line:84%
+And at some point, you're ready
+to do integration testing.
+
+00:55:13.110 --> 00:55:14.670 align:middle line:84%
+And in integration
+testing, you've
+
+00:55:14.670 --> 00:55:17.250 align:middle line:84%
+got all these modules, for
+example, as you did in Hangman.
+
+00:55:17.250 --> 00:55:18.810 align:middle line:84%
+You've got all these
+little functions
+
+00:55:18.810 --> 00:55:20.910 align:middle line:90%
+that do individual things.
+
+00:55:20.910 --> 00:55:23.700 align:middle line:84%
+You put them all together
+into a larger program.
+
+00:55:23.700 --> 00:55:26.370 align:middle line:84%
+In Hangman, it was
+a big while loop
+
+00:55:26.370 --> 00:55:28.140 align:middle line:84%
+where you check all
+these different things
+
+00:55:28.140 --> 00:55:29.765 align:middle line:84%
+that the user might
+input, and then you
+
+00:55:29.765 --> 00:55:31.780 align:middle line:84%
+call the different
+functions you wrote.
+
+00:55:31.780 --> 00:55:36.690 align:middle line:84%
+And as you find errors in
+the integration, when you've
+
+00:55:36.690 --> 00:55:40.620 align:middle line:84%
+written code that integrated all
+these different pieces together,
+
+00:55:40.620 --> 00:55:43.620 align:middle line:84%
+you might have to go
+back and do more unit
+
+00:55:43.620 --> 00:55:47.890 align:middle line:84%
+tests for some of the
+functions that you wrote.
+
+00:55:47.890 --> 00:55:48.700 align:middle line:90%
+OK.
+
+00:55:48.700 --> 00:55:51.070 align:middle line:84%
+So you've done unit
+testing, regression testing,
+
+00:55:51.070 --> 00:55:52.600 align:middle line:90%
+and integration testing.
+
+00:55:52.600 --> 00:55:55.270 align:middle line:84%
+What are some actual
+testing approaches?
+
+00:55:55.270 --> 00:56:00.160 align:middle line:84%
+How do you actually create these
+test cases to run your code?
+
+00:56:00.160 --> 00:56:04.740 align:middle line:84%
+So I guess the most natural way
+to write a test case is just
+
+00:56:04.740 --> 00:56:06.340 align:middle line:90%
+intuition about the problem.
+
+00:56:06.340 --> 00:56:09.998 align:middle line:84%
+So given a docstring,
+what are going
+
+00:56:09.998 --> 00:56:11.790 align:middle line:84%
+to be some natural
+boundaries, some natural
+
+00:56:11.790 --> 00:56:14.670 align:middle line:84%
+values of x and y for which
+you test this code with.
+
+00:56:14.670 --> 00:56:15.480 align:middle line:90%
+You guys tell me.
+
+00:56:15.480 --> 00:56:17.775 align:middle line:84%
+What's some values that we
+could test this code with?
+
+00:56:17.775 --> 00:56:23.690 align:middle line:90%
+
+
+00:56:23.690 --> 00:56:26.861 align:middle line:84%
+Think about the boundaries
+to the question.
+
+00:56:26.861 --> 00:56:29.831 align:middle line:84%
+AUDIENCE: That means
+the difference x to y
+
+00:56:29.831 --> 00:56:30.520 align:middle line:90%
+is [INAUDIBLE].
+
+00:56:30.520 --> 00:56:31.145 align:middle line:90%
+ANA BELL: Yeah.
+
+00:56:31.145 --> 00:56:32.110 align:middle line:90%
+3 and 4 is good.
+
+00:56:32.110 --> 00:56:35.320 align:middle line:84%
+So x is less than
+y is a good one.
+
+00:56:35.320 --> 00:56:36.970 align:middle line:90%
+Vice versa.
+
+00:56:36.970 --> 00:56:41.630 align:middle line:84%
+4 and 3 is another one
+where y is less than x.
+
+00:56:41.630 --> 00:56:43.580 align:middle line:90%
+We could test them being equal.
+
+00:56:43.580 --> 00:56:44.900 align:middle line:90%
+What about 0 and 0?
+
+00:56:44.900 --> 00:56:46.520 align:middle line:90%
+What about 1,000 and 1,000?
+
+00:56:46.520 --> 00:56:49.940 align:middle line:84%
+So we could do extremes, we
+could do bigger than, less than,
+
+00:56:49.940 --> 00:56:51.950 align:middle line:90%
+we could do equal, things that.
+
+00:56:51.950 --> 00:56:54.080 align:middle line:84%
+So mathematical
+functions are kind of
+
+00:56:54.080 --> 00:56:56.450 align:middle line:84%
+easy to apply this idea
+to because they just
+
+00:56:56.450 --> 00:56:57.890 align:middle line:90%
+have natural boundaries.
+
+00:56:57.890 --> 00:56:59.660 align:middle line:84%
+But often, there
+are functions which
+
+00:56:59.660 --> 00:57:01.400 align:middle line:84%
+don't have these
+natural boundaries,
+
+00:57:01.400 --> 00:57:04.190 align:middle line:84%
+and then we might be stuck
+doing random testing.
+
+00:57:04.190 --> 00:57:06.680 align:middle line:84%
+And in random testing,
+obviously, the more test cases
+
+00:57:06.680 --> 00:57:11.190 align:middle line:84%
+you have, the better chance
+you have of finding a bug.
+
+00:57:11.190 --> 00:57:14.590 align:middle line:84%
+But there are actual techniques
+for coming up with test cases.
+
+00:57:14.590 --> 00:57:17.430 align:middle line:84%
+So the first one is
+called black box testing.
+
+00:57:17.430 --> 00:57:20.290 align:middle line:84%
+Second is called
+glass box testing.
+
+00:57:20.290 --> 00:57:23.200 align:middle line:84%
+Now, in black box
+testing, you're
+
+00:57:23.200 --> 00:57:27.460 align:middle line:84%
+going to treat the code of
+the function as a black box.
+
+00:57:27.460 --> 00:57:30.550 align:middle line:84%
+So we don't even look at
+what the code is doing.
+
+00:57:30.550 --> 00:57:34.810 align:middle line:84%
+All we're looking at to
+guide writing our test cases
+
+00:57:34.810 --> 00:57:37.780 align:middle line:84%
+is the specification,
+the docstring.
+
+00:57:37.780 --> 00:57:40.180 align:middle line:84%
+And so hopefully the person
+who wrote this function
+
+00:57:40.180 --> 00:57:42.910 align:middle line:84%
+wrote a really nice
+docstring because that's
+
+00:57:42.910 --> 00:57:45.980 align:middle line:84%
+what we're going to use
+to write our test cases.
+
+00:57:45.980 --> 00:57:49.450 align:middle line:84%
+So the way that we're
+going to write a test
+
+00:57:49.450 --> 00:57:52.870 align:middle line:84%
+case for this square root
+function is by saying,
+
+00:57:52.870 --> 00:57:56.140 align:middle line:84%
+what is the value of x
+and epsilon according
+
+00:57:56.140 --> 00:57:59.860 align:middle line:90%
+to these constraints here?
+
+00:57:59.860 --> 00:58:02.410 align:middle line:84%
+So obviously, we're not going
+to test the code with values
+
+00:58:02.410 --> 00:58:04.812 align:middle line:84%
+that don't match those
+constraints because the person
+
+00:58:04.812 --> 00:58:06.520 align:middle line:84%
+who wrote this function
+doesn't guarantee
+
+00:58:06.520 --> 00:58:12.260 align:middle line:84%
+that this function will work
+out of those weird values.
+
+00:58:12.260 --> 00:58:15.100 align:middle line:84%
+So the good thing
+about black box testing
+
+00:58:15.100 --> 00:58:17.620 align:middle line:84%
+is if we're the ones
+testing this function,
+
+00:58:17.620 --> 00:58:19.480 align:middle line:84%
+we're only using
+the specification
+
+00:58:19.480 --> 00:58:20.990 align:middle line:90%
+to write the test cases.
+
+00:58:20.990 --> 00:58:23.890 align:middle line:84%
+So if, for example, this
+person implemented square root
+
+00:58:23.890 --> 00:58:27.010 align:middle line:84%
+using approximation
+method, I don't care.
+
+00:58:27.010 --> 00:58:29.740 align:middle line:84%
+My test cases will
+work if the person
+
+00:58:29.740 --> 00:58:33.370 align:middle line:84%
+changes their implementation
+to use the bisection method.
+
+00:58:33.370 --> 00:58:35.920 align:middle line:84%
+My set of test cases
+will still work
+
+00:58:35.920 --> 00:58:38.200 align:middle line:84%
+even if the person who
+wrote this function
+
+00:58:38.200 --> 00:58:42.950 align:middle line:84%
+changed the black box,
+the implementation.
+
+00:58:42.950 --> 00:58:47.450 align:middle line:84%
+So black box testing is
+really nice in that respect.
+
+00:58:47.450 --> 00:58:49.340 align:middle line:84%
+And so for this
+particular function,
+
+00:58:49.340 --> 00:58:52.480 align:middle line:84%
+here's a bunch of test cases
+that I would run it with.
+
+00:58:52.480 --> 00:58:55.810 align:middle line:84%
+So obviously, x being
+0, perfect square less
+
+00:58:55.810 --> 00:59:00.460 align:middle line:84%
+than 1 are kind of nice ones
+to test, irrational values,
+
+00:59:00.460 --> 00:59:04.000 align:middle line:84%
+and then a bunch of extremes
+is also good to test.
+
+00:59:04.000 --> 00:59:05.630 align:middle line:90%
+And then epsilon, the same.
+
+00:59:05.630 --> 00:59:08.080 align:middle line:84%
+We've got some reasonable
+values of epsilon, and then
+
+00:59:08.080 --> 00:59:09.280 align:middle line:90%
+some extremes.
+
+00:59:09.280 --> 00:59:12.720 align:middle line:90%
+And we can even mix and match.
+
+00:59:12.720 --> 00:59:15.110 align:middle line:84%
+We can have 0 and
+extremes epsilons,
+
+00:59:15.110 --> 00:59:18.790 align:middle line:84%
+and perfect squares and extremes
+epsilons, and things like that.
+
+00:59:18.790 --> 00:59:21.420 align:middle line:84%
+So lots more test
+cases than this,
+
+00:59:21.420 --> 00:59:24.590 align:middle line:90%
+but this is a really good start.
+
+00:59:24.590 --> 00:59:28.910 align:middle line:84%
+In glass box testing we're going
+to use the code itself to guide
+
+00:59:28.910 --> 00:59:30.560 align:middle line:90%
+the test cases that we write.
+
+00:59:30.560 --> 00:59:35.780 align:middle line:84%
+So if we write something, a
+test suite that's path complete,
+
+00:59:35.780 --> 00:59:38.570 align:middle line:84%
+that means that we're going
+to hit every single path
+
+00:59:38.570 --> 00:59:40.520 align:middle line:90%
+inside the program.
+
+00:59:40.520 --> 00:59:44.000 align:middle line:84%
+So that means we have to look at
+the code to guide the test cases
+
+00:59:44.000 --> 00:59:46.190 align:middle line:84%
+that we're writing,
+which means that we're
+
+00:59:46.190 --> 00:59:50.210 align:middle line:84%
+going to have to write a test
+case for the code hitting the if
+
+00:59:50.210 --> 00:59:52.340 align:middle line:84%
+part of a branch, we
+have to write a test case
+
+00:59:52.340 --> 00:59:54.500 align:middle line:84%
+for the code hitting the
+else part of a branch,
+
+00:59:54.500 --> 00:59:56.115 align:middle line:90%
+or the L if part of the branch.
+
+00:59:56.115 --> 00:59:58.490 align:middle line:84%
+If we have a for loop, we need
+to write a test case where
+
+00:59:58.490 --> 01:00:00.270 align:middle line:84%
+the code doesn't go
+through the loop at all,
+
+01:00:00.270 --> 01:00:02.395 align:middle line:84%
+it goes through once, or
+it goes through many times
+
+01:00:02.395 --> 01:00:03.260 align:middle line:90%
+through the loop.
+
+01:00:03.260 --> 01:00:04.310 align:middle line:90%
+Same with while loops.
+
+01:00:04.310 --> 01:00:06.560 align:middle line:84%
+We write a test case so
+that the code doesn't
+
+01:00:06.560 --> 01:00:08.000 align:middle line:84%
+go through the
+while loop at all,
+
+01:00:08.000 --> 01:00:10.880 align:middle line:84%
+it matches the condition once,
+or it matches the condition
+
+01:00:10.880 --> 01:00:11.780 align:middle line:90%
+many times.
+
+01:00:11.780 --> 01:00:14.840 align:middle line:84%
+So you can imagine that
+this glass box testing leads
+
+01:00:14.840 --> 01:00:18.080 align:middle line:84%
+to a whole lot more test
+cases, especially when we have
+
+01:00:18.080 --> 01:00:20.990 align:middle line:84%
+a whole bunch of different
+combinations of all
+
+01:00:20.990 --> 01:00:22.910 align:middle line:84%
+of these conditionals
+and loops and things
+
+01:00:22.910 --> 01:00:25.080 align:middle line:90%
+that we'd like to hit.
+
+01:00:25.080 --> 01:00:27.420 align:middle line:84%
+The problem with glass
+box testing and having
+
+01:00:27.420 --> 01:00:32.280 align:middle line:84%
+a path complete test suite
+is that we might accidentally
+
+01:00:32.280 --> 01:00:33.330 align:middle line:90%
+miss a bug.
+
+01:00:33.330 --> 01:00:36.970 align:middle line:84%
+So here's an example of a
+code that's not correct.
+
+01:00:36.970 --> 01:00:39.660 align:middle line:90%
+So it finds absolute value of x.
+
+01:00:39.660 --> 01:00:42.960 align:middle line:84%
+If x is less than negative
+1, we return negative x, else
+
+01:00:42.960 --> 01:00:44.820 align:middle line:90%
+we return x.
+
+01:00:44.820 --> 01:00:46.800 align:middle line:84%
+So a path complete
+test suite could
+
+01:00:46.800 --> 01:00:49.080 align:middle line:90%
+be testing 2 and negative 2.
+
+01:00:49.080 --> 01:00:52.880 align:middle line:84%
+The 2 brings us
+through the else.
+
+01:00:52.880 --> 01:00:54.010 align:middle line:90%
+So we return 2.
+
+01:00:54.010 --> 01:00:56.290 align:middle line:84%
+And the negative 2
+brings us through the if.
+
+01:00:56.290 --> 01:00:59.340 align:middle line:90%
+So we return 2.
+
+01:00:59.340 --> 01:01:02.330 align:middle line:84%
+We might say this code
+works, but it doesn't.
+
+01:01:02.330 --> 01:01:04.940 align:middle line:84%
+We already can tell
+that negative 1
+
+01:01:04.940 --> 01:01:09.070 align:middle line:84%
+is returned incorrectly
+as negative 1.
+
+01:01:09.070 --> 01:01:13.610 align:middle line:84%
+And so in addition to testing
+all the paths through the code,
+
+01:01:13.610 --> 01:01:15.620 align:middle line:84%
+we'll also want to look
+at boundary condition,
+
+01:01:15.620 --> 01:01:21.100 align:middle line:84%
+especially for conditionals,
+when we do glass box testing.
+
+01:01:21.100 --> 01:01:21.600 align:middle line:90%
+OK.
+
+01:01:21.600 --> 01:01:24.000 align:middle line:84%
+So we have a whole
+bunch of test cases.
+
+01:01:24.000 --> 01:01:26.250 align:middle line:84%
+We've run our code with
+all these test cases.
+
+01:01:26.250 --> 01:01:30.180 align:middle line:84%
+And then, at some point,
+we've gotten an output
+
+01:01:30.180 --> 01:01:33.630 align:middle line:84%
+from a test case that does not
+match what we expected to do.
+
+01:01:33.630 --> 01:01:37.140 align:middle line:84%
+Then we have to do
+the debugging process.
+
+01:01:37.140 --> 01:01:45.860 align:middle line:84%
+And this is where a little
+creativity is required.
+
+01:01:45.860 --> 01:01:48.190 align:middle line:84%
+There is no recipe,
+like there was
+
+01:01:48.190 --> 01:01:50.530 align:middle line:84%
+in glass box testing
+and black box testing,
+
+01:01:50.530 --> 01:01:51.620 align:middle line:90%
+for writing test cases.
+
+01:01:51.620 --> 01:01:56.990 align:middle line:84%
+There is no similar sort of
+recipe for debugging a program.
+
+01:01:56.990 --> 01:01:59.800 align:middle line:84%
+There is a lot of
+experience that's needed,
+
+01:01:59.800 --> 01:02:03.370 align:middle line:84%
+a lot of times that
+you've seen a bug crop up
+
+01:02:03.370 --> 01:02:06.080 align:middle line:84%
+in order to figure out
+what the problem might be.
+
+01:02:06.080 --> 01:02:08.020 align:middle line:84%
+And so a lot of
+experience writing code
+
+01:02:08.020 --> 01:02:12.680 align:middle line:84%
+is very useful in the
+debugging process.
+
+01:02:12.680 --> 01:02:15.710 align:middle line:84%
+There are tools to help you
+do the debugging process,
+
+01:02:15.710 --> 01:02:18.410 align:middle line:84%
+but there aren't many tools
+to actually do the debugging.
+
+01:02:18.410 --> 01:02:19.820 align:middle line:90%
+You kind of just have to do it.
+
+01:02:19.820 --> 01:02:23.030 align:middle line:84%
+So there's tools
+built into Anaconda.
+
+01:02:23.030 --> 01:02:24.450 align:middle line:90%
+They're not very good.
+
+01:02:24.450 --> 01:02:25.850 align:middle line:90%
+I've used them.
+
+01:02:25.850 --> 01:02:28.090 align:middle line:84%
+Python Tutor, obviously,
+is a really good one,
+
+01:02:28.090 --> 01:02:29.840 align:middle line:84%
+especially for small
+programs, because you
+
+01:02:29.840 --> 01:02:34.520 align:middle line:84%
+get to just go step by step and
+see the values of each variable
+
+01:02:34.520 --> 01:02:36.600 align:middle line:90%
+as the code is running.
+
+01:02:36.600 --> 01:02:37.760 align:middle line:90%
+So I like that a lot.
+
+01:02:37.760 --> 01:02:39.740 align:middle line:84%
+Print statements are
+also really good,
+
+01:02:39.740 --> 01:02:42.590 align:middle line:84%
+but you have to know
+where to put them.
+
+01:02:42.590 --> 01:02:45.210 align:middle line:84%
+And you have to use
+them effectively.
+
+01:02:45.210 --> 01:02:48.320 align:middle line:84%
+So in that sense, if you're
+not as familiar with print
+
+01:02:48.320 --> 01:02:51.950 align:middle line:84%
+statements, Python Tutor might
+be better suited for debugging.
+
+01:02:51.950 --> 01:02:54.560 align:middle line:84%
+But no matter what, it's
+important to be systematic.
+
+01:02:54.560 --> 01:02:58.760 align:middle line:84%
+Don't just start changing random
+variables or random conditions,
+
+01:02:58.760 --> 01:03:01.280 align:middle line:84%
+and then run the code
+through the tester again.
+
+01:03:01.280 --> 01:03:04.520 align:middle line:84%
+That's not going to
+work very well for us.
+
+01:03:04.520 --> 01:03:07.110 align:middle line:84%
+When we see error messages
+in the debugging process,
+
+01:03:07.110 --> 01:03:09.290 align:middle line:84%
+these are really
+easy to figure out.
+
+01:03:09.290 --> 01:03:10.610 align:middle line:90%
+IndexError.
+
+01:03:10.610 --> 01:03:11.330 align:middle line:90%
+Oh, shoot.
+
+01:03:11.330 --> 01:03:12.950 align:middle line:90%
+I got to check my indices.
+
+01:03:12.950 --> 01:03:14.900 align:middle line:90%
+Maybe I went over.
+
+01:03:14.900 --> 01:03:17.240 align:middle line:84%
+If you see an IndexError,
+you should probably
+
+01:03:17.240 --> 01:03:19.310 align:middle line:84%
+print out the
+variable that you're
+
+01:03:19.310 --> 01:03:23.030 align:middle line:90%
+indexing into or indexing with.
+
+01:03:23.030 --> 01:03:24.665 align:middle line:90%
+TypeErrors.
+
+01:03:24.665 --> 01:03:25.520 align:middle line:90%
+Oh, man, look.
+
+01:03:25.520 --> 01:03:28.500 align:middle line:84%
+I'm casting a list
+to an integer.
+
+01:03:28.500 --> 01:03:29.670 align:middle line:90%
+What is that going to do?
+
+01:03:29.670 --> 01:03:30.000 align:middle line:90%
+Nothing.
+
+01:03:30.000 --> 01:03:31.292 align:middle line:90%
+It's going to give us an error.
+
+01:03:31.292 --> 01:03:34.200 align:middle line:84%
+Or here, I'm dividing
+a string by an integer.
+
+01:03:34.200 --> 01:03:36.480 align:middle line:84%
+Again, something
+really simple to fix.
+
+01:03:36.480 --> 01:03:38.790 align:middle line:90%
+NameErrors, of course.
+
+01:03:38.790 --> 01:03:42.310 align:middle line:84%
+Here I have a variable that
+I've never initialized.
+
+01:03:42.310 --> 01:03:45.030 align:middle line:84%
+And then SyntaxErrors
+basically mean
+
+01:03:45.030 --> 01:03:46.800 align:middle line:84%
+things like your
+indentation is off
+
+01:03:46.800 --> 01:03:51.150 align:middle line:84%
+or you're missing a parentheses
+or something like that.
+
+01:03:51.150 --> 01:03:53.700 align:middle line:90%
+Logic errors are a lot harder.
+
+01:03:53.700 --> 01:03:58.750 align:middle line:84%
+These ones, you cannot just
+look at the line and say,
+
+01:03:58.750 --> 01:04:00.030 align:middle line:90%
+this is where the problem is.
+
+01:04:00.030 --> 01:04:03.240 align:middle line:84%
+These ones happen when
+your output does not
+
+01:04:03.240 --> 01:04:05.130 align:middle line:90%
+match the expected output.
+
+01:04:05.130 --> 01:04:09.810 align:middle line:84%
+And this is where engaging
+another part of your brain
+
+01:04:09.810 --> 01:04:10.870 align:middle line:90%
+is very important.
+
+01:04:10.870 --> 01:04:12.300 align:middle line:90%
+I've definitely done this a lot.
+
+01:04:12.300 --> 01:04:14.587 align:middle line:84%
+I've had some errors, I
+went for a walk, come back,
+
+01:04:14.587 --> 01:04:16.920 align:middle line:84%
+and I figured it out, or I
+figured it out in the shower,
+
+01:04:16.920 --> 01:04:19.500 align:middle line:90%
+or I figured it out in bed.
+
+01:04:19.500 --> 01:04:23.670 align:middle line:84%
+So thinking a little bit before
+you even start the problem
+
+01:04:23.670 --> 01:04:26.220 align:middle line:90%
+is good for these logic errors.
+
+01:04:26.220 --> 01:04:29.040 align:middle line:84%
+Drawing pictures, taking a
+break, talking to friends,
+
+01:04:29.040 --> 01:04:30.390 align:middle line:90%
+all these are really good.
+
+01:04:30.390 --> 01:04:33.150 align:middle line:84%
+Explaining the code to
+something else, somebody else,
+
+01:04:33.150 --> 01:04:34.950 align:middle line:84%
+is also a really
+nice thing to do.
+
+01:04:34.950 --> 01:04:37.920 align:middle line:84%
+That's me explaining
+the code for something
+
+01:04:37.920 --> 01:04:40.650 align:middle line:84%
+we're going to do in a
+couple of minutes to my son.
+
+01:04:40.650 --> 01:04:42.790 align:middle line:84%
+He's seven now, and
+he's doing Scratch.
+
+01:04:42.790 --> 01:04:43.860 align:middle line:90%
+So that's pretty cool.
+
+01:04:43.860 --> 01:04:47.250 align:middle line:84%
+But he was helping me debug,
+and now I'm helping him debug.
+
+01:04:47.250 --> 01:04:47.910 align:middle line:90%
+Yeah.
+
+01:04:47.910 --> 01:04:51.640 align:middle line:84%
+Or you can explain code to some
+inanimate object like a rubber
+
+01:04:51.640 --> 01:04:52.820 align:middle line:90%
+ducky.
+
+01:04:52.820 --> 01:04:57.650 align:middle line:84%
+Now, having said that, you
+guys came on a good day
+
+01:04:57.650 --> 01:05:05.930 align:middle line:84%
+because you will all get to
+have your own rubber duck.
+
+01:05:05.930 --> 01:05:07.250 align:middle line:90%
+Different kinds.
+
+01:05:07.250 --> 01:05:11.300 align:middle line:84%
+Grab your personality duck
+that matches your personality
+
+01:05:11.300 --> 01:05:12.470 align:middle line:90%
+after class.
+
+01:05:12.470 --> 01:05:15.870 align:middle line:84%
+I've got Minecraft ducks,
+giraffe ducks, princess ducks,
+
+01:05:15.870 --> 01:05:19.070 align:middle line:90%
+police ducks, elephant ducks.
+
+01:05:19.070 --> 01:05:22.550 align:middle line:84%
+Whatever ducks you'd
+like come grab one.
+
+01:05:22.550 --> 01:05:24.320 align:middle line:90%
+Use it for your quizzes.
+
+01:05:24.320 --> 01:05:26.780 align:middle line:90%
+Use it for your P sets.
+
+01:05:26.780 --> 01:05:30.770 align:middle line:84%
+Whatever you'd like to
+use it for, go for it.
+
+01:05:30.770 --> 01:05:31.670 align:middle line:90%
+OK.
+
+01:05:31.670 --> 01:05:35.630 align:middle line:90%
+So hopefully it comes in handy.
+
+01:05:35.630 --> 01:05:36.680 align:middle line:90%
+Use it well.
+
+01:05:36.680 --> 01:05:37.610 align:middle line:90%
+All right.
+
+01:05:37.610 --> 01:05:39.740 align:middle line:84%
+So we're not quite
+done yet, though.
+
+01:05:39.740 --> 01:05:42.980 align:middle line:90%
+
+
+01:05:42.980 --> 01:05:43.520 align:middle line:90%
+OK.
+
+01:05:43.520 --> 01:05:49.190 align:middle line:84%
+So I will give you a little
+bit of debugging tips though.
+
+01:05:49.190 --> 01:05:52.650 align:middle line:84%
+So I know I said it's
+a creative process.
+
+01:05:52.650 --> 01:05:55.410 align:middle line:84%
+I said it's really hard
+to come up with a recipe
+
+01:05:55.410 --> 01:05:57.240 align:middle line:90%
+to do the actual debugging.
+
+01:05:57.240 --> 01:06:02.920 align:middle line:84%
+But there is maybe one
+really nice way to do it.
+
+01:06:02.920 --> 01:06:07.423 align:middle line:84%
+So the idea behind debugging
+is to basically use
+
+01:06:07.423 --> 01:06:08.340 align:middle line:90%
+the scientific method.
+
+01:06:08.340 --> 01:06:11.310 align:middle line:84%
+Like I said, don't just randomly
+change things expecting for it
+
+01:06:11.310 --> 01:06:12.150 align:middle line:90%
+to work out.
+
+01:06:12.150 --> 01:06:16.050 align:middle line:84%
+What you want to do is look at a
+bunch of test cases that failed.
+
+01:06:16.050 --> 01:06:19.660 align:middle line:84%
+It's possible that they all
+have something in common.
+
+01:06:19.660 --> 01:06:21.990 align:middle line:84%
+And that might lead you
+to a small piece of code
+
+01:06:21.990 --> 01:06:24.720 align:middle line:84%
+in your program that
+is the one that you
+
+01:06:24.720 --> 01:06:26.250 align:middle line:90%
+should be focusing on changing.
+
+01:06:26.250 --> 01:06:29.460 align:middle line:84%
+So you want to look at the
+data, form a hypothesis,
+
+01:06:29.460 --> 01:06:31.980 align:middle line:84%
+and try to see if
+another test case also
+
+01:06:31.980 --> 01:06:34.430 align:middle line:90%
+fails that particular one.
+
+01:06:34.430 --> 01:06:38.240 align:middle line:84%
+As you're doing the
+debugging method,
+
+01:06:38.240 --> 01:06:42.220 align:middle line:84%
+if you really have no
+idea about where to start,
+
+01:06:42.220 --> 01:06:46.430 align:middle line:84%
+try putting print statements at
+reasonable places in the code.
+
+01:06:46.430 --> 01:06:48.130 align:middle line:84%
+So when you first
+enter functions,
+
+01:06:48.130 --> 01:06:50.860 align:middle line:84%
+when you first enter a
+loop, write all the values
+
+01:06:50.860 --> 01:06:53.375 align:middle line:84%
+of the loop variable
+and all the variables
+
+01:06:53.375 --> 01:06:55.750 align:middle line:84%
+that you're creating in the
+loop or modifying in the loop
+
+01:06:55.750 --> 01:06:56.930 align:middle line:90%
+and things like that.
+
+01:06:56.930 --> 01:07:00.400 align:middle line:84%
+And if all else fails,
+using the bisection method
+
+01:07:00.400 --> 01:07:03.290 align:middle line:84%
+is a really nice way to
+try to solve the problem.
+
+01:07:03.290 --> 01:07:05.500 align:middle line:84%
+So bisection method
+and debugging
+
+01:07:05.500 --> 01:07:08.680 align:middle line:84%
+basically says, put a print
+statement about halfway
+
+01:07:08.680 --> 01:07:10.140 align:middle line:90%
+in the code.
+
+01:07:10.140 --> 01:07:13.200 align:middle line:84%
+If everything looks right for
+all the variables at that point,
+
+01:07:13.200 --> 01:07:15.180 align:middle line:84%
+you know the problem
+is after this.
+
+01:07:15.180 --> 01:07:17.430 align:middle line:84%
+If something is wrong,
+you know the problem is
+
+01:07:17.430 --> 01:07:18.870 align:middle line:90%
+in the first half of the code.
+
+01:07:18.870 --> 01:07:22.440 align:middle line:84%
+Then put a print statement
+in a quarter of the code.
+
+01:07:22.440 --> 01:07:26.760 align:middle line:84%
+And then, at that point, see
+if all the values at that point
+
+01:07:26.760 --> 01:07:28.560 align:middle line:84%
+match what you
+expect them to be.
+
+01:07:28.560 --> 01:07:29.925 align:middle line:90%
+If they do, great.
+
+01:07:29.925 --> 01:07:33.510 align:middle line:84%
+You know the problem is in
+the second quarter, I guess.
+
+01:07:33.510 --> 01:07:35.020 align:middle line:90%
+Yes, the second quarter.
+
+01:07:35.020 --> 01:07:38.310 align:middle line:84%
+And if they don't, the problem
+is in the first quarter.
+
+01:07:38.310 --> 01:07:41.550 align:middle line:84%
+So the bisection
+method is a nice way
+
+01:07:41.550 --> 01:07:43.950 align:middle line:90%
+to try to debug the code.
+
+01:07:43.950 --> 01:07:46.228 align:middle line:84%
+So what we're going to do
+in the last bit of lecture
+
+01:07:46.228 --> 01:07:48.020 align:middle line:84%
+is we're going to debug
+some code together.
+
+01:07:48.020 --> 01:07:49.640 align:middle line:90%
+That's in the Python file.
+
+01:07:49.640 --> 01:07:54.800 align:middle line:84%
+And then what I have
+included in today's zip file
+
+01:07:54.800 --> 01:07:57.890 align:middle line:84%
+is actually a Wordle
+game that I wrote.
+
+01:07:57.890 --> 01:08:00.620 align:middle line:84%
+It's like 12_wordle.py
+or whatever.
+
+01:08:00.620 --> 01:08:02.660 align:middle line:90%
+And it's buggy.
+
+01:08:02.660 --> 01:08:04.940 align:middle line:90%
+So I introduced some bugs in it.
+
+01:08:04.940 --> 01:08:07.790 align:middle line:84%
+And if you'd like to
+practice debugging,
+
+01:08:07.790 --> 01:08:11.880 align:middle line:84%
+you can try to fix the Wordle
+game to get it to work.
+
+01:08:11.880 --> 01:08:13.340 align:middle line:84%
+And then you can
+play it yourself
+
+01:08:13.340 --> 01:08:14.900 align:middle line:84%
+or you can amaze
+your friends and get
+
+01:08:14.900 --> 01:08:18.290 align:middle line:84%
+them to play your
+game in case you'd
+
+01:08:18.290 --> 01:08:20.120 align:middle line:90%
+like to do something like that.
+
+01:08:20.120 --> 01:08:23.810 align:middle line:84%
+So before we end, I
+would like to actually
+
+01:08:23.810 --> 01:08:27.560 align:middle line:84%
+do some debugging with you,
+just to show you the bisection
+
+01:08:27.560 --> 01:08:30.040 align:middle line:90%
+method for debugging.
+
+01:08:30.040 --> 01:08:35.290 align:middle line:84%
+So the code we're going to
+debug is this one right here.
+
+01:08:35.290 --> 01:08:40.510 align:middle line:84%
+And I've already included
+the fixed code step by step,
+
+01:08:40.510 --> 01:08:43.850 align:middle line:84%
+but we're going to talk
+through it together.
+
+01:08:43.850 --> 01:08:48.410 align:middle line:90%
+So this function is buggy.
+
+01:08:48.410 --> 01:08:54.069 align:middle line:84%
+It's a function called is_pal
+that takes in a list x.
+
+01:08:54.069 --> 01:08:58.540 align:middle line:84%
+And it's supposed to return
+true if the list elements are
+
+01:08:58.540 --> 01:09:01.660 align:middle line:84%
+a palindrome and
+false otherwise.
+
+01:09:01.660 --> 01:09:07.990 align:middle line:84%
+So using the input
+abcba cast as a list--
+
+01:09:07.990 --> 01:09:12.569 align:middle line:84%
+so the input is going to
+be the string a, string b,
+
+01:09:12.569 --> 01:09:15.149 align:middle line:84%
+string c, string b,
+string a-- this list is
+
+01:09:15.149 --> 01:09:17.819 align:middle line:84%
+a palindrome because it's
+the same forwards as it
+
+01:09:17.819 --> 01:09:19.840 align:middle line:90%
+is backwards.
+
+01:09:19.840 --> 01:09:22.720 align:middle line:84%
+So if I run it, it
+should print true.
+
+01:09:22.720 --> 01:09:23.220 align:middle line:90%
+OK.
+
+01:09:23.220 --> 01:09:25.470 align:middle line:90%
+So that test case worked well.
+
+01:09:25.470 --> 01:09:27.899 align:middle line:84%
+But now, what about
+the second test case?
+
+01:09:27.899 --> 01:09:30.180 align:middle line:84%
+Surprise, it's
+not going to work.
+
+01:09:30.180 --> 01:09:33.680 align:middle line:84%
+If I pass in the list
+ab, so my input is
+
+01:09:33.680 --> 01:09:35.430 align:middle line:84%
+going to be the string
+a and the string b,
+
+01:09:35.430 --> 01:09:37.920 align:middle line:90%
+this is not a palindrome.
+
+01:09:37.920 --> 01:09:41.830 align:middle line:84%
+So I expect it to print
+false, but it prints true.
+
+01:09:41.830 --> 01:09:45.250 align:middle line:84%
+So I have a nice
+test case here that I
+
+01:09:45.250 --> 01:09:49.149 align:middle line:84%
+can make fixes with and see
+whether it actually gets fixed.
+
+01:09:49.149 --> 01:09:55.130 align:middle line:84%
+Now, of course, abcdefghijklm,
+this also doesn't work.
+
+01:09:55.130 --> 01:09:58.300 align:middle line:84%
+So this is another test case
+that's not going to work.
+
+01:09:58.300 --> 01:10:00.750 align:middle line:84%
+But I don't want to use this
+long one as my test case.
+
+01:10:00.750 --> 01:10:02.400 align:middle line:84%
+I want to use the
+simplest test case
+
+01:10:02.400 --> 01:10:04.170 align:middle line:90%
+I can find that doesn't work.
+
+01:10:04.170 --> 01:10:08.140 align:middle line:84%
+So ab seems like a really
+nice one to test with.
+
+01:10:08.140 --> 01:10:08.920 align:middle line:90%
+OK.
+
+01:10:08.920 --> 01:10:11.788 align:middle line:84%
+So now, the first thing
+we want to do, now
+
+01:10:11.788 --> 01:10:14.080 align:middle line:84%
+that we've figured out the
+input I'd like to test with,
+
+01:10:14.080 --> 01:10:17.020 align:middle line:84%
+is put a print statement about
+halfway through the code.
+
+01:10:17.020 --> 01:10:21.410 align:middle line:84%
+Yes, there's only like
+five lines of code here.
+
+01:10:21.410 --> 01:10:24.400 align:middle line:84%
+So there's only probably
+one place that makes sense
+
+01:10:24.400 --> 01:10:25.520 align:middle line:90%
+to put a print statement.
+
+01:10:25.520 --> 01:10:28.040 align:middle line:84%
+But let's just
+work with me here.
+
+01:10:28.040 --> 01:10:32.910 align:middle line:84%
+So the print statement could be
+put right here, right before the
+
+01:10:32.910 --> 01:10:33.810 align:middle line:90%
+if statement.
+
+01:10:33.810 --> 01:10:35.970 align:middle line:84%
+So I've got two lines of
+code that do something,
+
+01:10:35.970 --> 01:10:36.930 align:middle line:90%
+and then an if.
+
+01:10:36.930 --> 01:10:39.520 align:middle line:84%
+So let's just put it
+right before the if.
+
+01:10:39.520 --> 01:10:41.370 align:middle line:90%
+Scroll down.
+
+01:10:41.370 --> 01:10:42.570 align:middle line:90%
+Step two.
+
+01:10:42.570 --> 01:10:43.620 align:middle line:90%
+Here I go.
+
+01:10:43.620 --> 01:10:46.590 align:middle line:84%
+I've put my print statement
+right before the if.
+
+01:10:46.590 --> 01:10:49.740 align:middle line:90%
+
+
+01:10:49.740 --> 01:10:51.760 align:middle line:90%
+Now we can run the code again.
+
+01:10:51.760 --> 01:10:53.670 align:middle line:84%
+So I'm not going to run
+the one that worked.
+
+01:10:53.670 --> 01:10:56.250 align:middle line:84%
+Let me try to run the one
+that didn't work to figure out
+
+01:10:56.250 --> 01:10:57.190 align:middle line:90%
+what the problem is.
+
+01:10:57.190 --> 01:10:58.960 align:middle line:90%
+So I run this.
+
+01:10:58.960 --> 01:11:01.470 align:middle line:84%
+The print statement is
+printing the temp, so
+
+01:11:01.470 --> 01:11:05.960 align:middle line:90%
+the reverse of x, and x.
+
+01:11:05.960 --> 01:11:08.350 align:middle line:90%
+So what I'm expecting--
+
+01:11:08.350 --> 01:11:10.880 align:middle line:84%
+and I should have probably
+written this over here,
+
+01:11:10.880 --> 01:11:12.770 align:middle line:90%
+what I'm expecting to get.
+
+01:11:12.770 --> 01:11:16.490 align:middle line:84%
+What I'm expecting is to
+see the reverse of ab,
+
+01:11:16.490 --> 01:11:20.150 align:middle line:84%
+so ba, and then
+the original x, ab.
+
+01:11:20.150 --> 01:11:21.440 align:middle line:90%
+But I don't.
+
+01:11:21.440 --> 01:11:23.570 align:middle line:90%
+So I see ab and ab.
+
+01:11:23.570 --> 01:11:27.590 align:middle line:90%
+This first one should be ba.
+
+01:11:27.590 --> 01:11:30.830 align:middle line:84%
+So already I have something
+that's unexpected,
+
+01:11:30.830 --> 01:11:32.600 align:middle line:84%
+and so I know the
+problem is going
+
+01:11:32.600 --> 01:11:35.600 align:middle line:84%
+to be in these first two lines
+of code, somewhere in here.
+
+01:11:35.600 --> 01:11:38.030 align:middle line:90%
+
+
+01:11:38.030 --> 01:11:38.530 align:middle line:90%
+All right.
+
+01:11:38.530 --> 01:11:40.450 align:middle line:84%
+So then what I
+would like to do is
+
+01:11:40.450 --> 01:11:44.060 align:middle line:84%
+figure out which one of these
+lines of code is the problem.
+
+01:11:44.060 --> 01:11:46.360 align:middle line:84%
+So I'm going to put another
+print statement a quarter
+
+01:11:46.360 --> 01:11:48.150 align:middle line:90%
+of the way through the code.
+
+01:11:48.150 --> 01:11:48.650 align:middle line:90%
+OK.
+
+01:11:48.650 --> 01:11:50.483 align:middle line:84%
+Well, there's only one
+more place to put it.
+
+01:11:50.483 --> 01:11:51.950 align:middle line:90%
+So let's put it in here.
+
+01:11:51.950 --> 01:11:56.320 align:middle line:84%
+I've got another print statement
+right before the reverse.
+
+01:11:56.320 --> 01:11:59.940 align:middle line:84%
+So what I'm going to be
+checking is, before the reverse,
+
+01:11:59.940 --> 01:12:05.060 align:middle line:84%
+the value of my temp variable
+and my original variable,
+
+01:12:05.060 --> 01:12:09.310 align:middle line:84%
+and after the reverse, the
+value of my reverse variable
+
+01:12:09.310 --> 01:12:11.570 align:middle line:90%
+and the original variable.
+
+01:12:11.570 --> 01:12:15.820 align:middle line:84%
+So what I'm expecting
+to see is this one here,
+
+01:12:15.820 --> 01:12:18.840 align:middle line:90%
+they should be the same, ab, ab.
+
+01:12:18.840 --> 01:12:23.520 align:middle line:84%
+But this one here, I'm
+expecting to see ba, ab.
+
+01:12:23.520 --> 01:12:28.270 align:middle line:84%
+So run it with
+this buggy example.
+
+01:12:28.270 --> 01:12:31.650 align:middle line:84%
+So before the reverse,
+I'm expecting ab and ab.
+
+01:12:31.650 --> 01:12:34.480 align:middle line:84%
+And I do get that,
+so that's good.
+
+01:12:34.480 --> 01:12:35.860 align:middle line:90%
+I'm happy to see that.
+
+01:12:35.860 --> 01:12:39.300 align:middle line:84%
+And then after the
+reverse, that's my problem.
+
+01:12:39.300 --> 01:12:42.600 align:middle line:84%
+I'm expecting this one to
+be reversed, but it's not.
+
+01:12:42.600 --> 01:12:48.480 align:middle line:84%
+So now I know the problem
+lies here, temp.reverse,
+
+01:12:48.480 --> 01:12:51.480 align:middle line:84%
+because here, in this print
+statement, here temp and x
+
+01:12:51.480 --> 01:12:52.720 align:middle line:90%
+were as expected.
+
+01:12:52.720 --> 01:12:54.990 align:middle line:84%
+So what do you think the fix
+should be to the reverse?
+
+01:12:54.990 --> 01:12:55.822 align:middle line:90%
+Yeah.
+
+01:12:55.822 --> 01:12:56.970 align:middle line:84%
+AUDIENCE: We need
+to add parentheses.
+
+01:12:56.970 --> 01:12:57.960 align:middle line:90%
+ANA BELL: Yeah, exactly.
+
+01:12:57.960 --> 01:12:59.085 align:middle line:90%
+We need to add parentheses.
+
+01:12:59.085 --> 01:13:00.250 align:middle line:90%
+This is a function.
+
+01:13:00.250 --> 01:13:04.130 align:middle line:84%
+We need to call it
+like a function.
+
+01:13:04.130 --> 01:13:07.510 align:middle line:90%
+So let's do that fix.
+
+01:13:07.510 --> 01:13:08.720 align:middle line:90%
+We've done it here.
+
+01:13:08.720 --> 01:13:13.800 align:middle line:84%
+So here, I've added the
+parentheses to the reverse.
+
+01:13:13.800 --> 01:13:15.190 align:middle line:90%
+And run it again.
+
+01:13:15.190 --> 01:13:17.640 align:middle line:84%
+So now what I'm
+expecting is before
+
+01:13:17.640 --> 01:13:20.200 align:middle line:84%
+the reverse, I
+need to see ab, ab.
+
+01:13:20.200 --> 01:13:21.790 align:middle line:90%
+So this one should be the same.
+
+01:13:21.790 --> 01:13:24.690 align:middle line:84%
+It shouldn't change because
+I didn't do anything
+
+01:13:24.690 --> 01:13:26.070 align:middle line:90%
+to that temp equals x.
+
+01:13:26.070 --> 01:13:28.680 align:middle line:84%
+And after the reverse,
+I'm expecting the temp
+
+01:13:28.680 --> 01:13:32.990 align:middle line:84%
+to be ba and the x
+to be ab, unchanged.
+
+01:13:32.990 --> 01:13:33.490 align:middle line:90%
+All right.
+
+01:13:33.490 --> 01:13:34.670 align:middle line:90%
+Let's run it.
+
+01:13:34.670 --> 01:13:37.300 align:middle line:84%
+So before the reverse,
+everything looks OK.
+
+01:13:37.300 --> 01:13:39.430 align:middle line:90%
+temp and x are the same.
+
+01:13:39.430 --> 01:13:41.450 align:middle line:90%
+After the reverse, look at that.
+
+01:13:41.450 --> 01:13:44.290 align:middle line:84%
+I've got my ba as my
+reversed variable.
+
+01:13:44.290 --> 01:13:47.290 align:middle line:90%
+I'm happy.
+
+01:13:47.290 --> 01:13:50.020 align:middle line:90%
+But then my x has also changed.
+
+01:13:50.020 --> 01:13:52.150 align:middle line:90%
+I'm sad.
+
+01:13:52.150 --> 01:13:52.930 align:middle line:90%
+Yes.
+
+01:13:52.930 --> 01:13:55.310 align:middle line:84%
+AUDIENCE: You have
+to make a copy of x.
+
+01:13:55.310 --> 01:13:57.250 align:middle line:90%
+ANA BELL: Exactly.
+
+01:13:57.250 --> 01:13:58.540 align:middle line:90%
+There's a clue.
+
+01:13:58.540 --> 01:13:59.410 align:middle line:90%
+We see a clue.
+
+01:13:59.410 --> 01:14:03.810 align:middle line:84%
+We've made a change to temp
+and x has also changed.
+
+01:14:03.810 --> 01:14:06.540 align:middle line:84%
+So as was suggested
+from the back,
+
+01:14:06.540 --> 01:14:09.810 align:middle line:90%
+we need to make a copy of x.
+
+01:14:09.810 --> 01:14:14.360 align:middle line:84%
+What we've done
+here is called, when
+
+01:14:14.360 --> 01:14:16.558 align:middle line:84%
+I did temp equals x,
+on a mutable variable.
+
+01:14:16.558 --> 01:14:17.225 align:middle line:90%
+What did I make?
+
+01:14:17.225 --> 01:14:17.720 align:middle line:90%
+AUDIENCE: Alias.
+
+01:14:17.720 --> 01:14:18.512 align:middle line:90%
+ANA BELL: An alias.
+
+01:14:18.512 --> 01:14:20.510 align:middle line:90%
+Exactly.
+
+01:14:20.510 --> 01:14:26.570 align:middle line:84%
+So let's make a copy
+of that x right here.
+
+01:14:26.570 --> 01:14:32.130 align:middle line:90%
+
+
+01:14:32.130 --> 01:14:34.650 align:middle line:84%
+So hopefully that fixes
+things because I've
+
+01:14:34.650 --> 01:14:36.490 align:middle line:90%
+run out of lines to fix.
+
+01:14:36.490 --> 01:14:39.210 align:middle line:84%
+So if we run this
+code again with ab
+
+01:14:39.210 --> 01:14:44.100 align:middle line:84%
+and see the output
+before the reverse,
+
+01:14:44.100 --> 01:14:46.060 align:middle line:90%
+temp and x should be the same.
+
+01:14:46.060 --> 01:14:46.890 align:middle line:90%
+And they are.
+
+01:14:46.890 --> 01:14:48.480 align:middle line:90%
+They're both ab, ab.
+
+01:14:48.480 --> 01:14:53.160 align:middle line:84%
+And after the reverse, the
+temp should be the reversed ba,
+
+01:14:53.160 --> 01:14:53.940 align:middle line:90%
+and it is.
+
+01:14:53.940 --> 01:14:56.430 align:middle line:84%
+And the x should
+remain the same, ab.
+
+01:14:56.430 --> 01:15:01.650 align:middle line:84%
+And it's false, so
+it's not a palindrome.
+
+01:15:01.650 --> 01:15:06.300 align:middle line:84%
+Last thing I need to do is
+double-check my original test
+
+01:15:06.300 --> 01:15:07.770 align:middle line:84%
+case, the one that
+actually worked
+
+01:15:07.770 --> 01:15:11.960 align:middle line:84%
+before I made all my changes,
+to see whether it still works.
+
+01:15:11.960 --> 01:15:14.030 align:middle line:90%
+And it does.
+
+01:15:14.030 --> 01:15:17.610 align:middle line:84%
+So that particular
+list is a palindrome.
+
+01:15:17.610 --> 01:15:18.950 align:middle line:90%
+So that still returns true.
+
+01:15:18.950 --> 01:15:21.750 align:middle line:90%
+
+
+01:15:21.750 --> 01:15:22.540 align:middle line:90%
+So that's it.
+
+01:15:22.540 --> 01:15:24.300 align:middle line:84%
+So I've got a
+couple-- or just one,
+
+01:15:24.300 --> 01:15:28.470 align:middle line:84%
+I guess, list comprehension for
+you to try on your own to write.
+
+01:15:28.470 --> 01:15:31.290 align:middle line:84%
+And then, of course, the
+buggy Wordle game for you
+
+01:15:31.290 --> 01:15:33.350 align:middle line:90%
+to try as well.
+
+01:15:33.350 --> 01:15:45.000 align:middle line:90%

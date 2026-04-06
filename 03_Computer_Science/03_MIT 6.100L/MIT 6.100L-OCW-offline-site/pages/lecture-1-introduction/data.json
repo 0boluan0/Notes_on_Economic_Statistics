@@ -1,0 +1,6 @@
+
+{
+  "title":"Lecture 1: Introduction",
+  "content":"Topics: Introduction to Python: knowledge, machines, objects, types, variables, bindings, IDEs\nViewing videos requires an internet connection Your browser does not support some features required to play this video. Please update your browser to the latest version for the best experience. You can also download the video to watch it offline. View video page Download video Download transcript Lecture Notes Lecture 1: Introduction\nLecture 1 Code\nReadings Ch 1, Ch 2.1–2.2\nFinger Exercise Lecture 1 Assume 3 variables are already defined for you: a, b, and c. Create a variable called total that adds a and b then multiplies the result by c. Include a last line in your code to print the value: print(total)\n6.100L Finger Exercises Lecture 1 Solutions\nProblem Set 0 Problem Set 0\nProblem Set 0 Code\nRecitation 1 Recitations were smaller sections that reviewed the previous lectures. Recitation 1 Notes\n"}
+
+

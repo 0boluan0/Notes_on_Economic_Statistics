@@ -1,0 +1,6 @@
+
+{
+  "title":"Lecture 6: Bisection Search",
+  "content":"Topics: Simple Algorithms: bisection search, Newton-Raphson\nViewing videos requires an internet connection Your browser does not support some features required to play this video. Please update your browser to the latest version for the best experience. You can also download the video to watch it offline. View video page Download video Download transcript Lecture Notes Lecture 6: Bisection Search\nLecture 6 Code\nReadings Ch 3.4, 3.5\nFinger Exercise Lecture 6 Assume you are given an integer \\(0 \u0026lt;= N \u0026lt;=1000\\). Write a piece of Python code that uses bisection search to guess N. The code prints two lines: count: with how many guesses it took to find N, and answer: with the value of N. Hints: If the halfway value is exactly in between two integers, choose the smaller one.\n6.100L Finger Exercises Lecture 6 Solutions\n"}
+
+

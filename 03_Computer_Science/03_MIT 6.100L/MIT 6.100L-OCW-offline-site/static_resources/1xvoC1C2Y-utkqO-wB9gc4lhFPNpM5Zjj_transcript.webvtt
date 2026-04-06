@@ -1,0 +1,2547 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.405 align:middle line:90%
+[SQUEAKING]
+
+00:00:02.405 --> 00:00:04.329 align:middle line:90%
+[RUSTLING]
+
+00:00:04.329 --> 00:00:07.696 align:middle line:90%
+[CLICKING]
+
+00:00:07.696 --> 00:00:11.560 align:middle line:90%
+
+
+00:00:11.560 --> 00:00:13.100 align:middle line:90%
+ANA BELL: Let's get started.
+
+00:00:13.100 --> 00:00:15.970 align:middle line:84%
+So today's lecture
+will be super short.
+
+00:00:15.970 --> 00:00:20.230 align:middle line:84%
+We've got a 45-minute quiz on
+object-oriented programming
+
+00:00:20.230 --> 00:00:21.740 align:middle line:90%
+classes, that kind of stuff.
+
+00:00:21.740 --> 00:00:24.070 align:middle line:84%
+So I wanted to give you
+guys an extra bit of time
+
+00:00:24.070 --> 00:00:26.710 align:middle line:84%
+to work through three
+programming problems.
+
+00:00:26.710 --> 00:00:30.820 align:middle line:90%
+But the actual lecture part--
+
+00:00:30.820 --> 00:00:32.770 align:middle line:84%
+we're going to switch
+gears a little bit.
+
+00:00:32.770 --> 00:00:36.280 align:middle line:84%
+And we're going to start
+talking about something more
+
+00:00:36.280 --> 00:00:38.980 align:middle line:84%
+theoretical, which
+is how to figure out
+
+00:00:38.980 --> 00:00:41.680 align:middle line:84%
+whether the programs
+we write are efficient
+
+00:00:41.680 --> 00:00:43.280 align:middle line:90%
+and how efficient are they.
+
+00:00:43.280 --> 00:00:43.780 align:middle line:90%
+OK.
+
+00:00:43.780 --> 00:00:47.980 align:middle line:84%
+So we're going to do that
+today using the idea of timing
+
+00:00:47.980 --> 00:00:50.380 align:middle line:84%
+our programs and then counting
+the number of operations,
+
+00:00:50.380 --> 00:00:51.755 align:middle line:84%
+as I'll describe
+in a little bit.
+
+00:00:51.755 --> 00:00:54.020 align:middle line:84%
+But first of all, a
+little bit of motivation.
+
+00:00:54.020 --> 00:00:57.850 align:middle line:84%
+So why do we actually
+care about this topic?
+
+00:00:57.850 --> 00:01:01.390 align:middle line:84%
+It's a topic that's
+a high research
+
+00:01:01.390 --> 00:01:03.100 align:middle line:90%
+area in computer science.
+
+00:01:03.100 --> 00:01:04.810 align:middle line:84%
+So far in this
+class though, we've
+
+00:01:04.810 --> 00:01:06.370 align:middle line:90%
+emphasized correctness, right?
+
+00:01:06.370 --> 00:01:09.070 align:middle line:84%
+In problem sets, the
+unit tests check for
+
+00:01:09.070 --> 00:01:12.020 align:middle line:84%
+whether that the programs
+you wrote were correct.
+
+00:01:12.020 --> 00:01:16.580 align:middle line:84%
+In quizzes, we basically look
+at how many test cases you pass,
+
+00:01:16.580 --> 00:01:18.500 align:middle line:84%
+right, and to
+determine the grade.
+
+00:01:18.500 --> 00:01:22.340 align:middle line:84%
+But these days, we
+actually have a whole bunch
+
+00:01:22.340 --> 00:01:23.720 align:middle line:90%
+of data coming at us, right?
+
+00:01:23.720 --> 00:01:26.510 align:middle line:84%
+So we have a lot of data
+that we need to analyze,
+
+00:01:26.510 --> 00:01:29.720 align:middle line:84%
+we need to read, we
+need to visualize,
+
+00:01:29.720 --> 00:01:31.400 align:middle line:90%
+we need to make sense of.
+
+00:01:31.400 --> 00:01:33.860 align:middle line:84%
+And so the programs
+that we write,
+
+00:01:33.860 --> 00:01:36.900 align:middle line:84%
+yes, they have to be correct,
+which is a large part of it.
+
+00:01:36.900 --> 00:01:39.620 align:middle line:84%
+But they also have
+to be fast, right?
+
+00:01:39.620 --> 00:01:44.930 align:middle line:84%
+So if it takes a year to
+analyze a bunch of information
+
+00:01:44.930 --> 00:01:47.270 align:middle line:84%
+on YouTube videos, nobody's
+going to really want
+
+00:01:47.270 --> 00:01:48.500 align:middle line:90%
+to wait that long, right?
+
+00:01:48.500 --> 00:01:53.310 align:middle line:84%
+And so we're going to emphasize
+in the next three or four
+
+00:01:53.310 --> 00:01:53.810 align:middle line:90%
+lectures--
+
+00:01:53.810 --> 00:01:56.120 align:middle line:84%
+I forget exactly how many--
+but the next little section
+
+00:01:56.120 --> 00:01:59.570 align:middle line:84%
+in this class, the idea
+of how to determine
+
+00:01:59.570 --> 00:02:02.240 align:middle line:90%
+the efficiency of our programs.
+
+00:02:02.240 --> 00:02:04.190 align:middle line:84%
+So when we're talking
+about efficiency,
+
+00:02:04.190 --> 00:02:07.220 align:middle line:84%
+we can talk about the time
+efficiency of programs
+
+00:02:07.220 --> 00:02:09.740 align:middle line:84%
+and also the space
+efficiency of programs.
+
+00:02:09.740 --> 00:02:13.350 align:middle line:84%
+And usually, there's going to
+be a tradeoff between these two.
+
+00:02:13.350 --> 00:02:15.140 align:middle line:84%
+So very rarely
+these days can you
+
+00:02:15.140 --> 00:02:18.710 align:middle line:84%
+come up with an algorithm
+that's both efficient in time
+
+00:02:18.710 --> 00:02:22.320 align:middle line:84%
+and space compared to algorithms
+that are already out there.
+
+00:02:22.320 --> 00:02:23.630 align:middle line:90%
+So usually, there's a tradeoff.
+
+00:02:23.630 --> 00:02:28.400 align:middle line:84%
+And the best example is the
+one that we saw with Fibonacci.
+
+00:02:28.400 --> 00:02:32.420 align:middle line:84%
+So we saw a code that was
+recursive to calculate
+
+00:02:32.420 --> 00:02:33.050 align:middle line:90%
+Fibonacci.
+
+00:02:33.050 --> 00:02:35.672 align:middle line:84%
+So Fibonacci of n was
+Fibonacci of n minus 1
+
+00:02:35.672 --> 00:02:37.130 align:middle line:84%
+plus Fibonacci of
+n minus 2, right?
+
+00:02:37.130 --> 00:02:39.840 align:middle line:90%
+That was our recursive step.
+
+00:02:39.840 --> 00:02:43.710 align:middle line:84%
+That program that was
+recursive took something
+
+00:02:43.710 --> 00:02:47.280 align:middle line:84%
+like 30 million steps
+to calculate Fibonacci
+
+00:02:47.280 --> 00:02:48.780 align:middle line:90%
+of 30-something, right?
+
+00:02:48.780 --> 00:02:52.780 align:middle line:84%
+30 million recursive calls,
+which was pretty slow.
+
+00:02:52.780 --> 00:02:54.840 align:middle line:84%
+It took a couple
+seconds for it to run.
+
+00:02:54.840 --> 00:02:57.890 align:middle line:84%
+But then we saw a
+version with memoization.
+
+00:02:57.890 --> 00:02:59.340 align:middle line:90%
+No, there's no R missing there.
+
+00:02:59.340 --> 00:03:01.440 align:middle line:84%
+It's just memoization,
+sort of the process
+
+00:03:01.440 --> 00:03:03.480 align:middle line:84%
+of keeping a memo
+through a dictionary
+
+00:03:03.480 --> 00:03:05.050 align:middle line:90%
+in that particular case.
+
+00:03:05.050 --> 00:03:10.290 align:middle line:84%
+And the memoization idea was
+that we would take some values
+
+00:03:10.290 --> 00:03:11.190 align:middle line:90%
+that we calculate.
+
+00:03:11.190 --> 00:03:13.780 align:middle line:84%
+And as we calculate them,
+store them in the memo.
+
+00:03:13.780 --> 00:03:18.150 align:middle line:84%
+So in the memoization
+example, we
+
+00:03:18.150 --> 00:03:21.510 align:middle line:84%
+had given up some of
+our memory, right,
+
+00:03:21.510 --> 00:03:24.460 align:middle line:84%
+to store these values so that
+we didn't have to compute them.
+
+00:03:24.460 --> 00:03:26.580 align:middle line:84%
+And in the process
+of doing, so we
+
+00:03:26.580 --> 00:03:30.060 align:middle line:84%
+had a program that ran really,
+really quick, much quicker
+
+00:03:30.060 --> 00:03:33.690 align:middle line:84%
+than the plain recursive version
+that we had originally seen.
+
+00:03:33.690 --> 00:03:35.550 align:middle line:84%
+So there's this
+tradeoff, where you
+
+00:03:35.550 --> 00:03:38.490 align:middle line:84%
+have a program that's fast
+but might store some values
+
+00:03:38.490 --> 00:03:41.080 align:middle line:84%
+and take up more memory,
+or a program that
+
+00:03:41.080 --> 00:03:44.800 align:middle line:84%
+doesn't store anything but then
+is not going to be as fast.
+
+00:03:44.800 --> 00:03:47.530 align:middle line:84%
+It's going to be slower because
+it needs to keep computing
+
+00:03:47.530 --> 00:03:49.910 align:middle line:90%
+a bunch of different values.
+
+00:03:49.910 --> 00:03:52.000 align:middle line:84%
+So what we're going
+to do in this lecture
+
+00:03:52.000 --> 00:03:55.763 align:middle line:84%
+is show you a very simple
+way of figuring out
+
+00:03:55.763 --> 00:03:57.430 align:middle line:84%
+how efficient our
+programs are, which is
+
+00:03:57.430 --> 00:03:58.870 align:middle line:90%
+we're just going to time them.
+
+00:03:58.870 --> 00:04:01.540 align:middle line:84%
+And then we're going to count
+the number of operations
+
+00:04:01.540 --> 00:04:03.070 align:middle line:90%
+that these programs take.
+
+00:04:03.070 --> 00:04:05.380 align:middle line:84%
+But we're going to do
+so sort of with the idea
+
+00:04:05.380 --> 00:04:06.880 align:middle line:84%
+in the back of our
+mind that there's
+
+00:04:06.880 --> 00:04:09.280 align:middle line:84%
+going to be a better
+way to figure out
+
+00:04:09.280 --> 00:04:10.810 align:middle line:84%
+the efficiency of
+these programs.
+
+00:04:10.810 --> 00:04:12.880 align:middle line:84%
+And ultimately, we
+don't really want
+
+00:04:12.880 --> 00:04:15.940 align:middle line:84%
+to figure out the efficiency
+of an implementation.
+
+00:04:15.940 --> 00:04:22.150 align:middle line:84%
+An implementation means you
+implement a program that
+
+00:04:22.150 --> 00:04:23.800 align:middle line:90%
+finds a sum using a while loop.
+
+00:04:23.800 --> 00:04:26.963 align:middle line:84%
+I implement the program to
+find a sum using a for loop.
+
+00:04:26.963 --> 00:04:28.630 align:middle line:84%
+Those are two different
+implementations.
+
+00:04:28.630 --> 00:04:31.780 align:middle line:84%
+But at their core, the
+algorithms behind the scenes
+
+00:04:31.780 --> 00:04:33.200 align:middle line:90%
+is going to be the same.
+
+00:04:33.200 --> 00:04:36.010 align:middle line:84%
+And so what we want
+to do is to try
+
+00:04:36.010 --> 00:04:38.560 align:middle line:84%
+to figure out how to evaluate
+algorithms as opposed
+
+00:04:38.560 --> 00:04:40.060 align:middle line:84%
+to these different
+implementations,
+
+00:04:40.060 --> 00:04:41.470 align:middle line:84%
+because each one of
+you is going to come up
+
+00:04:41.470 --> 00:04:44.050 align:middle line:84%
+with a completely different
+implementation for today's
+
+00:04:44.050 --> 00:04:44.793 align:middle line:90%
+quiz.
+
+00:04:44.793 --> 00:04:46.210 align:middle line:84%
+But I don't want
+to evaluate that.
+
+00:04:46.210 --> 00:04:49.820 align:middle line:84%
+I would like to evaluate the
+algorithms behind the scenes.
+
+00:04:49.820 --> 00:04:50.420 align:middle line:90%
+OK.
+
+00:04:50.420 --> 00:04:53.120 align:middle line:84%
+So we're going to do-- like
+I mentioned, we're going to,
+
+00:04:53.120 --> 00:04:57.080 align:middle line:84%
+today, look at measuring
+how long our program takes
+
+00:04:57.080 --> 00:04:58.760 align:middle line:90%
+with an actual timer.
+
+00:04:58.760 --> 00:05:00.290 align:middle line:84%
+And then we're
+going to also count
+
+00:05:00.290 --> 00:05:04.180 align:middle line:84%
+how many operations
+our program takes.
+
+00:05:04.180 --> 00:05:07.240 align:middle line:84%
+And then we're not going to look
+at this other abstract notion,
+
+00:05:07.240 --> 00:05:10.980 align:middle line:84%
+we're going to look
+at that next lecture.
+
+00:05:10.980 --> 00:05:14.310 align:middle line:84%
+So today's lecture, we're
+going to use another module.
+
+00:05:14.310 --> 00:05:17.480 align:middle line:84%
+We've been looking at modules
+in the past couple of lectures
+
+00:05:17.480 --> 00:05:18.170 align:middle line:90%
+already.
+
+00:05:18.170 --> 00:05:21.560 align:middle line:84%
+We've seen the random
+module, which helps
+
+00:05:21.560 --> 00:05:23.090 align:middle line:90%
+us deal with random numbers.
+
+00:05:23.090 --> 00:05:26.840 align:middle line:84%
+We've seen the
+datetime module, which
+
+00:05:26.840 --> 00:05:29.630 align:middle line:84%
+helps us deal with, or
+was it dateutil, something
+
+00:05:29.630 --> 00:05:33.530 align:middle line:84%
+like that, which helps us
+deal with datetime objects
+
+00:05:33.530 --> 00:05:37.520 align:middle line:84%
+and converting
+dates into objects
+
+00:05:37.520 --> 00:05:39.920 align:middle line:90%
+that were nicely usable.
+
+00:05:39.920 --> 00:05:42.680 align:middle line:84%
+Today, we're going to
+use the time module--
+
+00:05:42.680 --> 00:05:47.520 align:middle line:84%
+right here-- which will help
+us deal with the system clock.
+
+00:05:47.520 --> 00:05:49.510 align:middle line:84%
+So if we're timing
+functions that we run,
+
+00:05:49.510 --> 00:05:52.010 align:middle line:84%
+we're going to want to access
+the system clock to figure out
+
+00:05:52.010 --> 00:05:54.090 align:middle line:84%
+exactly what time we
+started this function
+
+00:05:54.090 --> 00:05:56.690 align:middle line:84%
+and what time we
+ended the function.
+
+00:05:56.690 --> 00:05:58.570 align:middle line:90%
+So just a little thing--
+
+00:05:58.570 --> 00:06:00.070 align:middle line:84%
+you probably already
+know this-- how
+
+00:06:00.070 --> 00:06:02.870 align:middle line:84%
+to call these functions
+within these modules.
+
+00:06:02.870 --> 00:06:05.290 align:middle line:84%
+So the modules basically
+bring in a whole bunch
+
+00:06:05.290 --> 00:06:07.600 align:middle line:84%
+of functions and maybe
+objects and things
+
+00:06:07.600 --> 00:06:11.740 align:middle line:84%
+like that related to one topic
+or one subject into your code.
+
+00:06:11.740 --> 00:06:16.330 align:middle line:84%
+And then to run the
+functions in your code,
+
+00:06:16.330 --> 00:06:18.710 align:middle line:84%
+you just use this dot
+notation on the module name.
+
+00:06:18.710 --> 00:06:22.540 align:middle line:84%
+So if I wanted to use the sine
+function from the math module,
+
+00:06:22.540 --> 00:06:24.160 align:middle line:90%
+I would just say math.sine.
+
+00:06:24.160 --> 00:06:28.120 align:middle line:84%
+And then I have access
+to that sine function.
+
+00:06:28.120 --> 00:06:28.870 align:middle line:90%
+OK.
+
+00:06:28.870 --> 00:06:31.990 align:middle line:84%
+So let's start looking
+at timing of program.
+
+00:06:31.990 --> 00:06:35.610 align:middle line:84%
+The simplest way to figure
+out how fast the program runs.
+
+00:06:35.610 --> 00:06:38.250 align:middle line:84%
+So we're going to
+use the time module.
+
+00:06:38.250 --> 00:06:39.580 align:middle line:90%
+So I'm importing it here.
+
+00:06:39.580 --> 00:06:41.160 align:middle line:84%
+And when I do that,
+Python is going
+
+00:06:41.160 --> 00:06:44.130 align:middle line:84%
+to bring in all of these
+functions related to the time.
+
+00:06:44.130 --> 00:06:46.920 align:middle line:84%
+Now we're going to look in this
+particular lecture at three
+
+00:06:46.920 --> 00:06:47.790 align:middle line:90%
+different functions.
+
+00:06:47.790 --> 00:06:50.340 align:middle line:84%
+And we're going to time
+them, each of them.
+
+00:06:50.340 --> 00:06:52.440 align:middle line:84%
+Next lecture, we're going
+to look at a whole bunch
+
+00:06:52.440 --> 00:06:54.898 align:middle line:84%
+more functions, just to give
+you a little bit more practice
+
+00:06:54.898 --> 00:06:56.700 align:middle line:84%
+with timing and
+counting operations.
+
+00:06:56.700 --> 00:06:59.550 align:middle line:84%
+And then we'll introduce
+a more abstract notion
+
+00:06:59.550 --> 00:07:00.940 align:middle line:90%
+of this order of growth.
+
+00:07:00.940 --> 00:07:03.210 align:middle line:84%
+So the three functions
+we're going to look at
+
+00:07:03.210 --> 00:07:07.950 align:middle line:84%
+are these ones-- so Celsius to
+Fahrenheit, mysum, and square.
+
+00:07:07.950 --> 00:07:11.310 align:middle line:84%
+So Celsius to Fahrenheit--
+pretty self-explanatory.
+
+00:07:11.310 --> 00:07:13.860 align:middle line:84%
+It takes in one parameter,
+the number for a Celsius
+
+00:07:13.860 --> 00:07:16.150 align:middle line:84%
+temperature, and converts
+it to Fahrenheit.
+
+00:07:16.150 --> 00:07:18.150 align:middle line:90%
+So we did this lecture one.
+
+00:07:18.150 --> 00:07:20.010 align:middle line:90%
+Just using the formula.
+
+00:07:20.010 --> 00:07:24.630 align:middle line:84%
+This function, mysum,
+will take in a number x--
+
+00:07:24.630 --> 00:07:27.870 align:middle line:84%
+so 7, or 10, or
+100, whatever it is.
+
+00:07:27.870 --> 00:07:31.920 align:middle line:84%
+And it uses a loop,
+so computationally
+
+00:07:31.920 --> 00:07:35.070 align:middle line:84%
+uses this loop that iterates
+through each number from 0
+
+00:07:35.070 --> 00:07:39.190 align:middle line:84%
+all the way up to including
+x, and keeps a running total.
+
+00:07:39.190 --> 00:07:42.928 align:middle line:84%
+So it adds I to itself to
+the total and returns it.
+
+00:07:42.928 --> 00:07:44.470 align:middle line:84%
+So of course, we
+could have rewritten
+
+00:07:44.470 --> 00:07:47.440 align:middle line:84%
+this in a more efficient
+way by using the formula
+
+00:07:47.440 --> 00:07:50.830 align:middle line:84%
+to calculate the sum what
+is n times n plus 1 over 2.
+
+00:07:50.830 --> 00:07:54.150 align:middle line:84%
+But here, we're just doing
+it using this for loop.
+
+00:07:54.150 --> 00:07:59.710 align:middle line:84%
+And then lastly, is this
+function called square.
+
+00:07:59.710 --> 00:08:02.890 align:middle line:84%
+And this one is going to
+be even more inefficient.
+
+00:08:02.890 --> 00:08:04.970 align:middle line:84%
+We're going to
+calculate n squared.
+
+00:08:04.970 --> 00:08:08.290 align:middle line:84%
+So the parameter here
+n will be squared.
+
+00:08:08.290 --> 00:08:12.640 align:middle line:84%
+But we're not doing return
+n times n or return n
+
+00:08:12.640 --> 00:08:13.720 align:middle line:90%
+star, star two.
+
+00:08:13.720 --> 00:08:14.920 align:middle line:90%
+We're not doing any of that.
+
+00:08:14.920 --> 00:08:18.640 align:middle line:84%
+We're actually going to
+use two nested loops.
+
+00:08:18.640 --> 00:08:21.370 align:middle line:84%
+So I've got an outer for loop
+that goes through the numbers 0
+
+00:08:21.370 --> 00:08:23.522 align:middle line:90%
+to n, not including.
+
+00:08:23.522 --> 00:08:25.480 align:middle line:84%
+An inner for loop that
+goes through the numbers
+
+00:08:25.480 --> 00:08:26.950 align:middle line:90%
+0 to n, not including.
+
+00:08:26.950 --> 00:08:31.820 align:middle line:84%
+And this square sum here
+adds 1 to itself every time.
+
+00:08:31.820 --> 00:08:35.080 align:middle line:84%
+So effectively, we're
+going through and adding 1
+
+00:08:35.080 --> 00:08:38.830 align:middle line:90%
+to that sum n squared times.
+
+00:08:38.830 --> 00:08:40.299 align:middle line:90%
+So super inefficient.
+
+00:08:40.299 --> 00:08:42.650 align:middle line:90%
+But this is where we're at.
+
+00:08:42.650 --> 00:08:46.910 align:middle line:84%
+And so how do we actually
+time these functions?
+
+00:08:46.910 --> 00:08:52.490 align:middle line:84%
+So here's-- this is basically
+some lines of code in a file.
+
+00:08:52.490 --> 00:08:55.480 align:middle line:84%
+So I've got the time
+module imported here.
+
+00:08:55.480 --> 00:08:57.580 align:middle line:90%
+I've got the function here.
+
+00:08:57.580 --> 00:09:01.810 align:middle line:84%
+I'm going to call
+the time module,
+
+00:09:01.810 --> 00:09:05.210 align:middle line:84%
+and the time function
+within the datetime module.
+
+00:09:05.210 --> 00:09:08.270 align:middle line:84%
+So this tells me the
+number of seconds that have
+
+00:09:08.270 --> 00:09:11.240 align:middle line:90%
+passed since January 1, 1970.
+
+00:09:11.240 --> 00:09:14.210 align:middle line:90%
+That's called the epoch.
+
+00:09:14.210 --> 00:09:16.800 align:middle line:84%
+So the beginning of
+time in computer speak.
+
+00:09:16.800 --> 00:09:21.470 align:middle line:84%
+So if I grab how many seconds
+have passed since that time,
+
+00:09:21.470 --> 00:09:23.960 align:middle line:84%
+then tstart stores
+that number of seconds.
+
+00:09:23.960 --> 00:09:25.910 align:middle line:84%
+Then I'm going to run
+my function, Celsius
+
+00:09:25.910 --> 00:09:28.070 align:middle line:90%
+to Fahrenheit 37.
+
+00:09:28.070 --> 00:09:31.160 align:middle line:84%
+And then I'm going to get
+the time again down here
+
+00:09:31.160 --> 00:09:34.640 align:middle line:84%
+and subtract the time right
+now, after the function has
+
+00:09:34.640 --> 00:09:37.280 align:middle line:84%
+finished, minus the
+time it was right
+
+00:09:37.280 --> 00:09:39.630 align:middle line:90%
+before I started my function.
+
+00:09:39.630 --> 00:09:41.760 align:middle line:90%
+So that gives me the DT.
+
+00:09:41.760 --> 00:09:44.820 align:middle line:90%
+And then I just print that out.
+
+00:09:44.820 --> 00:09:47.220 align:middle line:90%
+So we can run it together.
+
+00:09:47.220 --> 00:09:51.660 align:middle line:84%
+The way I'm going to run it is
+by actually doing a little bit
+
+00:09:51.660 --> 00:09:53.880 align:middle line:90%
+of modularization to this code.
+
+00:09:53.880 --> 00:09:56.135 align:middle line:84%
+So I have this
+function, and this
+
+00:09:56.135 --> 00:09:57.510 align:middle line:84%
+is the only function
+I'm actually
+
+00:09:57.510 --> 00:09:59.220 align:middle line:90%
+going to run down here.
+
+00:09:59.220 --> 00:10:02.220 align:middle line:84%
+It's my-- I call
+it a time wrapper.
+
+00:10:02.220 --> 00:10:04.940 align:middle line:90%
+It's a wrapper function.
+
+00:10:04.940 --> 00:10:07.170 align:middle line:90%
+And it takes in two parameters.
+
+00:10:07.170 --> 00:10:10.140 align:middle line:84%
+The first is the actual
+function I want to run.
+
+00:10:10.140 --> 00:10:11.630 align:middle line:84%
+So I'll show you
+down here, you can
+
+00:10:11.630 --> 00:10:15.255 align:middle line:84%
+see I'm running the time
+wrapper with the name, literally
+
+00:10:15.255 --> 00:10:16.880 align:middle line:84%
+the name of the
+function I want to run.
+
+00:10:16.880 --> 00:10:18.047 align:middle line:90%
+This is not a function call.
+
+00:10:18.047 --> 00:10:20.650 align:middle line:84%
+It's just the name
+of my function.
+
+00:10:20.650 --> 00:10:21.900 align:middle line:90%
+So that's the first parameter.
+
+00:10:21.900 --> 00:10:25.170 align:middle line:84%
+And the second parameter is a
+whole bunch of different inputs
+
+00:10:25.170 --> 00:10:27.270 align:middle line:90%
+I want to run the function with.
+
+00:10:27.270 --> 00:10:31.450 align:middle line:90%
+So this LN is created up here.
+
+00:10:31.450 --> 00:10:34.150 align:middle line:84%
+And it just makes for me the
+list of all of these inputs.
+
+00:10:34.150 --> 00:10:37.860 align:middle line:84%
+So I'm going to run Celsius
+to Fahrenheit with a number 1,
+
+00:10:37.860 --> 00:10:39.420 align:middle line:84%
+Celsius to Fahrenheit
+with the number
+
+00:10:39.420 --> 00:10:41.470 align:middle line:84%
+10, Celsius to Fahrenheit
+with 100 and so on.
+
+00:10:41.470 --> 00:10:43.755 align:middle line:84%
+So these will be all my
+inputs to my function.
+
+00:10:43.755 --> 00:10:46.660 align:middle line:90%
+
+
+00:10:46.660 --> 00:10:49.200 align:middle line:84%
+And so when I call
+this wrapper, Python
+
+00:10:49.200 --> 00:10:52.020 align:middle line:84%
+is just going to replace f with
+the function that I'm actually
+
+00:10:52.020 --> 00:10:55.200 align:middle line:84%
+running, so Celsius to
+Fahrenheit, or mysum or square.
+
+00:10:55.200 --> 00:10:58.620 align:middle line:84%
+And you can see here for each
+one of the different inputs I'm
+
+00:10:58.620 --> 00:11:02.550 align:middle line:84%
+going to grab the
+time, run the function,
+
+00:11:02.550 --> 00:11:05.070 align:middle line:84%
+grab the time again
+to get the DT,
+
+00:11:05.070 --> 00:11:07.330 align:middle line:90%
+and then print how long it took.
+
+00:11:07.330 --> 00:11:09.250 align:middle line:84%
+So I'll show you
+what that looks like.
+
+00:11:09.250 --> 00:11:14.070 align:middle line:84%
+So here I ran Celsius to
+Fahrenheit with inputs 1, 10,
+
+00:11:14.070 --> 00:11:19.580 align:middle line:90%
+100, 1,000, 10,000, and so on.
+
+00:11:19.580 --> 00:11:22.700 align:middle line:90%
+It was really fast.
+
+00:11:22.700 --> 00:11:25.380 align:middle line:84%
+It took zero seconds
+every single time.
+
+00:11:25.380 --> 00:11:27.710 align:middle line:84%
+So no matter what
+the input, 0 seconds.
+
+00:11:27.710 --> 00:11:30.560 align:middle line:84%
+So fast that Python
+didn't even tell me
+
+00:11:30.560 --> 00:11:34.220 align:middle line:84%
+exactly how slow it was, 10
+to the negative 9 or whatever,
+
+00:11:34.220 --> 00:11:36.450 align:middle line:90%
+just 0 seconds.
+
+00:11:36.450 --> 00:11:38.160 align:middle line:84%
+And that's in part
+to the time function,
+
+00:11:38.160 --> 00:11:39.450 align:middle line:90%
+but we'll leave it at that.
+
+00:11:39.450 --> 00:11:41.730 align:middle line:90%
+It's just very fast.
+
+00:11:41.730 --> 00:11:45.040 align:middle line:90%
+OK, how about the next function?
+
+00:11:45.040 --> 00:11:48.310 align:middle line:90%
+Let's do mysum.
+
+00:11:48.310 --> 00:11:52.860 align:middle line:84%
+So mysum is not just doing
+calculations, it has a loop.
+
+00:11:52.860 --> 00:11:54.970 align:middle line:90%
+That's a function of the input.
+
+00:11:54.970 --> 00:11:57.250 align:middle line:90%
+So our input changes.
+
+00:11:57.250 --> 00:11:59.880 align:middle line:84%
+And you might have noticed
+that as our input got bigger,
+
+00:11:59.880 --> 00:12:02.160 align:middle line:84%
+we actually had to wait a
+little while for this result
+
+00:12:02.160 --> 00:12:03.870 align:middle line:90%
+to come by.
+
+00:12:03.870 --> 00:12:07.470 align:middle line:84%
+So we see down here,
+or up here, when
+
+00:12:07.470 --> 00:12:09.360 align:middle line:90%
+the input is pretty small--
+
+00:12:09.360 --> 00:12:10.830 align:middle line:90%
+yes, it took 0 seconds.
+
+00:12:10.830 --> 00:12:13.350 align:middle line:84%
+It's so fast that it
+didn't even register it.
+
+00:12:13.350 --> 00:12:16.630 align:middle line:84%
+But at some point, we started
+to get actual numbers.
+
+00:12:16.630 --> 00:12:21.120 align:middle line:84%
+So with 10,000, it
+took 0.00099 seconds.
+
+00:12:21.120 --> 00:12:23.700 align:middle line:90%
+With 100,000, it took 0.01.
+
+00:12:23.700 --> 00:12:28.530 align:middle line:84%
+With-- what is this, 1
+million, yeah, with 1 million
+
+00:12:28.530 --> 00:12:32.180 align:middle line:90%
+it took 0.05 seconds.
+
+00:12:32.180 --> 00:12:34.570 align:middle line:84%
+So we can actually
+see a little pattern
+
+00:12:34.570 --> 00:12:38.020 align:middle line:84%
+if we stare at it long enough,
+especially for the bigger
+
+00:12:38.020 --> 00:12:39.190 align:middle line:90%
+numbers.
+
+00:12:39.190 --> 00:12:43.300 align:middle line:84%
+So down here, these
+first two are iffy.
+
+00:12:43.300 --> 00:12:45.850 align:middle line:84%
+But when we get to a big
+number like 1 million,
+
+00:12:45.850 --> 00:12:48.160 align:middle line:90%
+we say it took 0.05 seconds.
+
+00:12:48.160 --> 00:12:51.490 align:middle line:84%
+When we increase the
+input by 10 to 10 million,
+
+00:12:51.490 --> 00:12:53.740 align:middle line:90%
+the input took 0.5 seconds.
+
+00:12:53.740 --> 00:12:58.150 align:middle line:84%
+And when we increase the input
+by 10 again, it took 5 seconds.
+
+00:12:58.150 --> 00:13:02.900 align:middle line:84%
+So we could guess that when we
+increase the input again by 10,
+
+00:13:02.900 --> 00:13:05.620 align:middle line:84%
+it will take about
+50 seconds to run.
+
+00:13:05.620 --> 00:13:07.630 align:middle line:84%
+And you can even try
+that out if you'd
+
+00:13:07.630 --> 00:13:08.846 align:middle line:90%
+like to wait for 50 seconds.
+
+00:13:08.846 --> 00:13:12.920 align:middle line:90%
+
+
+00:13:12.920 --> 00:13:14.570 align:middle line:90%
+That's the mysum function.
+
+00:13:14.570 --> 00:13:16.460 align:middle line:90%
+Now what about the square?
+
+00:13:16.460 --> 00:13:19.550 align:middle line:84%
+Remember the square had
+the two nested for loops--
+
+00:13:19.550 --> 00:13:23.430 align:middle line:84%
+for, for, and then just a
+regular addition in there.
+
+00:13:23.430 --> 00:13:26.150 align:middle line:90%
+So let's run that.
+
+00:13:26.150 --> 00:13:26.810 align:middle line:90%
+Pretty fast.
+
+00:13:26.810 --> 00:13:28.040 align:middle line:90%
+Pretty fast.
+
+00:13:28.040 --> 00:13:31.120 align:middle line:84%
+Square of 1,000 is
+already taking 0.05--
+
+00:13:31.120 --> 00:13:34.370 align:middle line:90%
+or 0.06 seconds.
+
+00:13:34.370 --> 00:13:37.850 align:middle line:84%
+Square of 10,000 is
+now taking 6 seconds.
+
+00:13:37.850 --> 00:13:40.500 align:middle line:90%
+
+
+00:13:40.500 --> 00:13:41.270 align:middle line:90%
+What do we notice?
+
+00:13:41.270 --> 00:13:44.480 align:middle line:90%
+
+
+00:13:44.480 --> 00:13:49.310 align:middle line:84%
+With one more round, if we
+waited for square of 100,000,
+
+00:13:49.310 --> 00:13:50.810 align:middle line:84%
+we might be able
+to see a pattern,
+
+00:13:50.810 --> 00:13:52.670 align:middle line:90%
+or we can guess the pattern.
+
+00:13:52.670 --> 00:13:54.650 align:middle line:84%
+Does anyone want to
+wager a guess what
+
+00:13:54.650 --> 00:13:58.430 align:middle line:84%
+the next number should be
+here when you think about it?
+
+00:13:58.430 --> 00:14:02.540 align:middle line:90%
+
+
+00:14:02.540 --> 00:14:03.670 align:middle line:90%
+AUDIENCE: About 600.
+
+00:14:03.670 --> 00:14:05.320 align:middle line:90%
+ANA BELL: Yeah, about 600.
+
+00:14:05.320 --> 00:14:08.500 align:middle line:84%
+We're going from 0.06
+to maybe about 6.
+
+00:14:08.500 --> 00:14:11.800 align:middle line:84%
+So, I don't know, we
+could say about 600.
+
+00:14:11.800 --> 00:14:14.528 align:middle line:84%
+I'm certainly not going
+to wait for 600 seconds.
+
+00:14:14.528 --> 00:14:16.570 align:middle line:84%
+And I'm actually not going
+to make my computer do
+
+00:14:16.570 --> 00:14:19.670 align:middle line:90%
+that, just in case it crashes.
+
+00:14:19.670 --> 00:14:21.680 align:middle line:84%
+But yeah, we could
+guess something
+
+00:14:21.680 --> 00:14:25.010 align:middle line:84%
+like, on the order
+of some hundreds,
+
+00:14:25.010 --> 00:14:27.890 align:middle line:90%
+600, something like that.
+
+00:14:27.890 --> 00:14:29.650 align:middle line:90%
+So that's one thing to notice.
+
+00:14:29.650 --> 00:14:33.490 align:middle line:84%
+The other thing to notice
+is that already at 10,000,
+
+00:14:33.490 --> 00:14:39.190 align:middle line:84%
+where the input is just 10,000,
+this took 5 seconds already.
+
+00:14:39.190 --> 00:14:42.490 align:middle line:84%
+In the previous
+function here, mysum,
+
+00:14:42.490 --> 00:14:49.180 align:middle line:84%
+we had to get to 100 million as
+my input to run for 5 seconds.
+
+00:14:49.180 --> 00:14:50.770 align:middle line:84%
+So that's also a
+big difference here.
+
+00:14:50.770 --> 00:14:54.490 align:middle line:84%
+Already, this program square
+is taking a really long time
+
+00:14:54.490 --> 00:14:57.640 align:middle line:84%
+to run when the input
+is not very big.
+
+00:14:57.640 --> 00:15:01.660 align:middle line:90%
+
+
+00:15:01.660 --> 00:15:05.222 align:middle line:84%
+So some things to
+notice about timing.
+
+00:15:05.222 --> 00:15:07.180 align:middle line:84%
+And as I said, we're
+going to look at some more
+
+00:15:07.180 --> 00:15:08.230 align:middle line:90%
+programs next lecture.
+
+00:15:08.230 --> 00:15:09.938 align:middle line:84%
+I just wanted to give
+you a general sense
+
+00:15:09.938 --> 00:15:12.100 align:middle line:90%
+of timing programs.
+
+00:15:12.100 --> 00:15:15.710 align:middle line:84%
+First of all, the
+green check is good.
+
+00:15:15.710 --> 00:15:17.710 align:middle line:84%
+We want all these
+to be green checks.
+
+00:15:17.710 --> 00:15:19.420 align:middle line:84%
+The green check is
+good because if we
+
+00:15:19.420 --> 00:15:21.040 align:middle line:84%
+have different
+algorithms, they're
+
+00:15:21.040 --> 00:15:22.748 align:middle line:84%
+going to take a
+different amount of time.
+
+00:15:22.748 --> 00:15:25.150 align:middle line:84%
+The time that it takes for
+these algorithms to run
+
+00:15:25.150 --> 00:15:28.060 align:middle line:84%
+will be different,
+which is good.
+
+00:15:28.060 --> 00:15:30.360 align:middle line:84%
+But if we have different
+implementations
+
+00:15:30.360 --> 00:15:33.120 align:middle line:84%
+for the same sort of program,
+for the same algorithm,
+
+00:15:33.120 --> 00:15:35.460 align:middle line:84%
+that's also going to give
+us different timings.
+
+00:15:35.460 --> 00:15:38.890 align:middle line:84%
+And really in the long run, I
+don't really care about that.
+
+00:15:38.890 --> 00:15:41.700 align:middle line:84%
+What I would really like to
+evaluate is just the algorithm
+
+00:15:41.700 --> 00:15:42.600 align:middle line:90%
+itself.
+
+00:15:42.600 --> 00:15:45.900 align:middle line:84%
+Because when we're
+talking about algorithms,
+
+00:15:45.900 --> 00:15:48.030 align:middle line:84%
+there's probably only
+a handful of algorithms
+
+00:15:48.030 --> 00:15:51.450 align:middle line:84%
+out there in the world that we
+can apply to a given problem.
+
+00:15:51.450 --> 00:15:53.340 align:middle line:84%
+Whereas there's
+probably thousands
+
+00:15:53.340 --> 00:15:56.140 align:middle line:84%
+of different implementations
+we can apply to a problem.
+
+00:15:56.140 --> 00:15:59.640 align:middle line:84%
+So for example, you could have
+a for loop versus a while loop.
+
+00:15:59.640 --> 00:16:02.610 align:middle line:84%
+You could have creating
+intermediate variables
+
+00:16:02.610 --> 00:16:03.660 align:middle line:90%
+as an implementation.
+
+00:16:03.660 --> 00:16:05.850 align:middle line:84%
+Or you could have a
+list comprehension
+
+00:16:05.850 --> 00:16:07.560 align:middle line:90%
+version of an implementation.
+
+00:16:07.560 --> 00:16:09.570 align:middle line:84%
+But underlying all
+of that is going
+
+00:16:09.570 --> 00:16:13.580 align:middle line:84%
+to be just some algorithm that
+you're trying to implement.
+
+00:16:13.580 --> 00:16:15.920 align:middle line:84%
+So the running time
+will vary between
+
+00:16:15.920 --> 00:16:19.010 align:middle line:84%
+different implementations, which
+is not really something I want.
+
+00:16:19.010 --> 00:16:21.590 align:middle line:84%
+The running time will also
+vary between computers.
+
+00:16:21.590 --> 00:16:25.160 align:middle line:84%
+If I ran the same programs
+on an older computer,
+
+00:16:25.160 --> 00:16:28.130 align:middle line:84%
+it's probably not going
+to take 5 seconds to run
+
+00:16:28.130 --> 00:16:29.720 align:middle line:90%
+with an input of 100 million.
+
+00:16:29.720 --> 00:16:31.980 align:middle line:84%
+It might take 10 or
+it might take 11.
+
+00:16:31.980 --> 00:16:33.650 align:middle line:84%
+So the timing is
+also going to differ
+
+00:16:33.650 --> 00:16:35.210 align:middle line:90%
+between different computers.
+
+00:16:35.210 --> 00:16:38.390 align:middle line:84%
+It will also differ between
+different languages,
+
+00:16:38.390 --> 00:16:41.870 align:middle line:84%
+so Java versus
+Python versus C. If C
+
+00:16:41.870 --> 00:16:44.510 align:middle line:84%
+is very efficient at
+memory management,
+
+00:16:44.510 --> 00:16:45.800 align:middle line:90%
+it's going to run very fast.
+
+00:16:45.800 --> 00:16:47.820 align:middle line:84%
+Whereas if Python is
+a little bit slower,
+
+00:16:47.820 --> 00:16:49.250 align:middle line:90%
+it's going to run slower.
+
+00:16:49.250 --> 00:16:51.320 align:middle line:84%
+So again, we're
+actually capturing--
+
+00:16:51.320 --> 00:16:55.940 align:middle line:84%
+the timing is capturing
+variations between languages.
+
+00:16:55.940 --> 00:16:59.340 align:middle line:84%
+And the timing is not very
+predictable for small inputs.
+
+00:16:59.340 --> 00:17:03.080 align:middle line:84%
+So if for some reason,
+when I was running
+
+00:17:03.080 --> 00:17:05.869 align:middle line:84%
+this square function
+here with 1,
+
+00:17:05.869 --> 00:17:08.180 align:middle line:84%
+I was also running
+Netflix in the background,
+
+00:17:08.180 --> 00:17:10.940 align:middle line:84%
+or my computer decided
+to update something.
+
+00:17:10.940 --> 00:17:12.960 align:middle line:84%
+And it decided to just
+dedicate resources
+
+00:17:12.960 --> 00:17:15.089 align:middle line:84%
+to doing that task
+at that moment
+
+00:17:15.089 --> 00:17:17.550 align:middle line:84%
+when I'm trying to
+run this square of 1,
+
+00:17:17.550 --> 00:17:21.510 align:middle line:84%
+this 0.0 seconds might
+not be 0.0 seconds.
+
+00:17:21.510 --> 00:17:26.250 align:middle line:84%
+It might take away from
+the time that it allocates
+
+00:17:26.250 --> 00:17:28.079 align:middle line:90%
+to running my square program.
+
+00:17:28.079 --> 00:17:31.890 align:middle line:84%
+And then what we'll see is that
+this will no longer be 0.0.
+
+00:17:31.890 --> 00:17:34.660 align:middle line:84%
+It might be 0.1 or
+something like that.
+
+00:17:34.660 --> 00:17:39.040 align:middle line:84%
+So timing programs
+is not very good.
+
+00:17:39.040 --> 00:17:42.120 align:middle line:84%
+It's not very
+consistent with our goal
+
+00:17:42.120 --> 00:17:45.240 align:middle line:84%
+here, which is to
+evaluate algorithms.
+
+00:17:45.240 --> 00:17:48.150 align:middle line:84%
+Let's see if we can do better
+with the idea of counting
+
+00:17:48.150 --> 00:17:50.410 align:middle line:90%
+the number of operations.
+
+00:17:50.410 --> 00:17:56.790 align:middle line:84%
+So rather than focusing on
+describing our program in terms
+
+00:17:56.790 --> 00:18:01.590 align:middle line:84%
+of human time, 1 second, 0.5
+seconds, things like that,
+
+00:18:01.590 --> 00:18:05.880 align:middle line:84%
+let's come up with some
+operations in Python that
+
+00:18:05.880 --> 00:18:08.730 align:middle line:90%
+take one time unit.
+
+00:18:08.730 --> 00:18:11.340 align:middle line:84%
+And we're going to say that
+all of these really basic
+
+00:18:11.340 --> 00:18:12.480 align:middle line:90%
+operations--
+
+00:18:12.480 --> 00:18:14.760 align:middle line:84%
+we can say that they take
+the same amount of time.
+
+00:18:14.760 --> 00:18:17.580 align:middle line:84%
+I don't care if they're like
+10 to negative 9 seconds,
+
+00:18:17.580 --> 00:18:19.800 align:middle line:84%
+or 2 times 10 to the
+negative 9 seconds.
+
+00:18:19.800 --> 00:18:20.950 align:middle line:90%
+I don't care about that.
+
+00:18:20.950 --> 00:18:23.200 align:middle line:84%
+I just know that
+they're really fast.
+
+00:18:23.200 --> 00:18:25.620 align:middle line:84%
+And if they're really fast,
+I can say that each of them
+
+00:18:25.620 --> 00:18:27.040 align:middle line:90%
+just take one unit of time.
+
+00:18:27.040 --> 00:18:30.190 align:middle line:84%
+So I'll just count them
+all as one unit of time.
+
+00:18:30.190 --> 00:18:33.600 align:middle line:84%
+So the examples of those
+are mathematical operations.
+
+00:18:33.600 --> 00:18:34.480 align:middle line:90%
+They're pretty fast.
+
+00:18:34.480 --> 00:18:36.880 align:middle line:84%
+So no matter whether I'm
+multiplying, dividing, adding,
+
+00:18:36.880 --> 00:18:39.150 align:middle line:84%
+subtracting, taking something
+to the power of something else,
+
+00:18:39.150 --> 00:18:40.830 align:middle line:84%
+I'm going to say that
+each one of those
+
+00:18:40.830 --> 00:18:44.080 align:middle line:90%
+takes one unit of time.
+
+00:18:44.080 --> 00:18:45.200 align:middle line:90%
+Comparing something.
+
+00:18:45.200 --> 00:18:48.340 align:middle line:84%
+So A less than B, 3 greater
+than 4, things like that,
+
+00:18:48.340 --> 00:18:52.690 align:middle line:84%
+equality, also super fast to
+do, also takes one unit of time.
+
+00:18:52.690 --> 00:18:53.990 align:middle line:90%
+Assigning something.
+
+00:18:53.990 --> 00:18:55.120 align:middle line:90%
+So A is equal to 3.
+
+00:18:55.120 --> 00:18:58.570 align:middle line:84%
+That assignment statement right
+there-- also pretty fast to do.
+
+00:18:58.570 --> 00:19:00.070 align:middle line:90%
+It takes one unit of time.
+
+00:19:00.070 --> 00:19:02.680 align:middle line:84%
+And then accessing
+objects in memory.
+
+00:19:02.680 --> 00:19:07.380 align:middle line:84%
+Also pretty fast,
+takes one unit of time.
+
+00:19:07.380 --> 00:19:11.060 align:middle line:84%
+So with this new definition of
+"time," quote, unquote, where
+
+00:19:11.060 --> 00:19:13.020 align:middle line:90%
+we have these units of time.
+
+00:19:13.020 --> 00:19:16.580 align:middle line:84%
+Let's figure out what
+these functions--
+
+00:19:16.580 --> 00:19:19.330 align:middle line:84%
+how long these
+functions actually take.
+
+00:19:19.330 --> 00:19:21.900 align:middle line:84%
+So our Celsius to
+Fahrenheit function
+
+00:19:21.900 --> 00:19:25.230 align:middle line:90%
+has three operations in it.
+
+00:19:25.230 --> 00:19:28.290 align:middle line:84%
+I got a multiplication, a
+division, and an addition.
+
+00:19:28.290 --> 00:19:30.600 align:middle line:84%
+I don't care-- so
+the little variations
+
+00:19:30.600 --> 00:19:33.210 align:middle line:84%
+that each one of these take
+to actually do inside computer
+
+00:19:33.210 --> 00:19:35.820 align:middle line:84%
+memory, I'm going to say that
+the Celsius to Fahrenheit
+
+00:19:35.820 --> 00:19:40.360 align:middle line:84%
+program takes three
+units of time.
+
+00:19:40.360 --> 00:19:42.670 align:middle line:84%
+So no matter what
+the input is, if I'm
+
+00:19:42.670 --> 00:19:45.940 align:middle line:84%
+converting 0 Celsius
+or 1 million Celsius,
+
+00:19:45.940 --> 00:19:49.300 align:middle line:84%
+the program will still just
+take three units of time
+
+00:19:49.300 --> 00:19:52.050 align:middle line:90%
+to complete.
+
+00:19:52.050 --> 00:19:54.660 align:middle line:90%
+How about mysum?
+
+00:19:54.660 --> 00:19:56.950 align:middle line:84%
+So we'll go through
+step by step.
+
+00:19:56.950 --> 00:20:00.910 align:middle line:84%
+So in mysum, I've got one
+assignment statement here.
+
+00:20:00.910 --> 00:20:03.486 align:middle line:84%
+So that's going to
+be one operation.
+
+00:20:03.486 --> 00:20:08.350 align:middle line:84%
+The for loop here is going to
+take I and assign it to one
+
+00:20:08.350 --> 00:20:09.700 align:middle line:90%
+of the values in the range.
+
+00:20:09.700 --> 00:20:11.300 align:middle line:84%
+That's just internally
+what it does.
+
+00:20:11.300 --> 00:20:12.758 align:middle line:84%
+So that's going to
+be one operation
+
+00:20:12.758 --> 00:20:14.860 align:middle line:90%
+each time through the loop.
+
+00:20:14.860 --> 00:20:17.860 align:middle line:84%
+And then total plus
+equals i is going
+
+00:20:17.860 --> 00:20:24.670 align:middle line:84%
+to be two operations,
+because I have total plus
+
+00:20:24.670 --> 00:20:26.320 align:middle line:90%
+i on the right hand side.
+
+00:20:26.320 --> 00:20:27.820 align:middle line:90%
+That's one operation.
+
+00:20:27.820 --> 00:20:34.610 align:middle line:84%
+And then assigning that back to
+total is my second operation.
+
+00:20:34.610 --> 00:20:37.000 align:middle line:90%
+So that's two operations there.
+
+00:20:37.000 --> 00:20:38.660 align:middle line:90%
+And that's it.
+
+00:20:38.660 --> 00:20:41.980 align:middle line:90%
+But notice our for loop.
+
+00:20:41.980 --> 00:20:45.550 align:middle line:84%
+These three operations
+here-- the one for assigning
+
+00:20:45.550 --> 00:20:46.660 align:middle line:90%
+i to be a value here.
+
+00:20:46.660 --> 00:20:52.060 align:middle line:84%
+And these two operations
+here repeat x plus 1 times.
+
+00:20:52.060 --> 00:20:53.530 align:middle line:90%
+0 all the way up to x.
+
+00:20:53.530 --> 00:20:54.985 align:middle line:90%
+That's x plus 1 total times.
+
+00:20:54.985 --> 00:20:58.300 align:middle line:90%
+
+
+00:20:58.300 --> 00:21:01.870 align:middle line:84%
+So how long does this
+program actually take?
+
+00:21:01.870 --> 00:21:03.410 align:middle line:90%
+Well, we count all that up.
+
+00:21:03.410 --> 00:21:06.760 align:middle line:84%
+So the one for the
+total equals 0 plus,
+
+00:21:06.760 --> 00:21:10.120 align:middle line:84%
+and we're multiplying
+x plus 1 times what?
+
+00:21:10.120 --> 00:21:14.990 align:middle line:84%
+The 1 plus the 2, which gives
+us 3x plus 4 total operations.
+
+00:21:14.990 --> 00:21:18.370 align:middle line:84%
+So now we're noting this in
+terms of the input, which
+
+00:21:18.370 --> 00:21:20.470 align:middle line:90%
+is kind of cool.
+
+00:21:20.470 --> 00:21:22.840 align:middle line:84%
+So now I have this
+nice little formula,
+
+00:21:22.840 --> 00:21:26.110 align:middle line:84%
+where if I know my input is
+10, I can actually tell you
+
+00:21:26.110 --> 00:21:29.050 align:middle line:84%
+how many quote, unquote,
+"units of time" this program
+
+00:21:29.050 --> 00:21:31.985 align:middle line:90%
+will take.
+
+00:21:31.985 --> 00:21:32.860 align:middle line:90%
+How about the square?
+
+00:21:32.860 --> 00:21:34.190 align:middle line:90%
+It's going to be very similar.
+
+00:21:34.190 --> 00:21:36.880 align:middle line:84%
+So I've got one operation
+for assignment here.
+
+00:21:36.880 --> 00:21:40.060 align:middle line:84%
+This is one operation
+for grabbing the i
+
+00:21:40.060 --> 00:21:42.470 align:middle line:84%
+and making it one of
+the values in the range.
+
+00:21:42.470 --> 00:21:45.280 align:middle line:84%
+Similarly for the inner
+loop, one operation there.
+
+00:21:45.280 --> 00:21:49.090 align:middle line:84%
+And then square sum plus equals
+1 for the same reason as this,
+
+00:21:49.090 --> 00:21:51.040 align:middle line:90%
+is two operations.
+
+00:21:51.040 --> 00:21:54.190 align:middle line:84%
+One for the right hand side
+doing the addition and two
+
+00:21:54.190 --> 00:21:56.670 align:middle line:90%
+for making the assignment.
+
+00:21:56.670 --> 00:21:58.410 align:middle line:90%
+Let's not forget for loops.
+
+00:21:58.410 --> 00:21:59.860 align:middle line:90%
+We've got two for loops here.
+
+00:21:59.860 --> 00:22:03.460 align:middle line:84%
+So the inner one
+will repeat n times.
+
+00:22:03.460 --> 00:22:06.990 align:middle line:84%
+And for each one of
+those outer n times,
+
+00:22:06.990 --> 00:22:10.470 align:middle line:90%
+we do the inner n times.
+
+00:22:10.470 --> 00:22:12.820 align:middle line:84%
+This nested for
+loop situation here.
+
+00:22:12.820 --> 00:22:15.690 align:middle line:84%
+So the total number
+of time units
+
+00:22:15.690 --> 00:22:18.990 align:middle line:84%
+that this square will
+take is the 1 over here
+
+00:22:18.990 --> 00:22:21.990 align:middle line:84%
+for this square sum
+equals 0, plus, and then
+
+00:22:21.990 --> 00:22:23.560 align:middle line:90%
+I've got these nested for loops.
+
+00:22:23.560 --> 00:22:26.860 align:middle line:84%
+So the other one goes
+through n times--
+
+00:22:26.860 --> 00:22:30.400 align:middle line:84%
+sorry, n times
+the one operation,
+
+00:22:30.400 --> 00:22:32.410 align:middle line:84%
+multiplied by the
+inner for loop,
+
+00:22:32.410 --> 00:22:35.740 align:middle line:84%
+also n times, times what
+is the operations done
+
+00:22:35.740 --> 00:22:36.820 align:middle line:90%
+in the inner for loop?
+
+00:22:36.820 --> 00:22:39.340 align:middle line:90%
+Well, it's this 1 plus these 2.
+
+00:22:39.340 --> 00:22:41.140 align:middle line:90%
+So the 1 plus the 2.
+
+00:22:41.140 --> 00:22:44.280 align:middle line:84%
+So in total, 3n squared
+plus 1 operations.
+
+00:22:44.280 --> 00:22:50.610 align:middle line:90%
+
+
+00:22:50.610 --> 00:22:53.320 align:middle line:90%
+So let's run this.
+
+00:22:53.320 --> 00:22:55.410 align:middle line:84%
+And now that we're
+counting operations,
+
+00:22:55.410 --> 00:22:59.800 align:middle line:84%
+we should be able to
+see a better pattern.
+
+00:22:59.800 --> 00:23:01.920 align:middle line:84%
+So here's my Celsius
+to Fahrenheit.
+
+00:23:01.920 --> 00:23:04.890 align:middle line:84%
+Mysum and square
+slightly changed
+
+00:23:04.890 --> 00:23:07.020 align:middle line:84%
+because I've got
+this little counter
+
+00:23:07.020 --> 00:23:09.630 align:middle line:90%
+variable within each function.
+
+00:23:09.630 --> 00:23:13.170 align:middle line:84%
+That is going to increment
+each time I see an operation.
+
+00:23:13.170 --> 00:23:17.460 align:middle line:84%
+So obviously, for Celsius to
+Fahrenheit, it's always 3.
+
+00:23:17.460 --> 00:23:19.560 align:middle line:84%
+So when I do my
+return, I'm just going
+
+00:23:19.560 --> 00:23:22.260 align:middle line:84%
+to return the counter variable
+and then the regular thing
+
+00:23:22.260 --> 00:23:26.080 align:middle line:84%
+that this function
+should return as a tuple.
+
+00:23:26.080 --> 00:23:29.800 align:middle line:84%
+For mysum, this
+counter equals 1 stands
+
+00:23:29.800 --> 00:23:31.540 align:middle line:90%
+for this assignment statement.
+
+00:23:31.540 --> 00:23:33.790 align:middle line:84%
+And then each time
+through the loop,
+
+00:23:33.790 --> 00:23:36.550 align:middle line:84%
+I'm going to increment
+my counter for the three
+
+00:23:36.550 --> 00:23:39.010 align:middle line:84%
+operations,
+assigning the i to be
+
+00:23:39.010 --> 00:23:40.990 align:middle line:90%
+one of the values in the range.
+
+00:23:40.990 --> 00:23:44.440 align:middle line:84%
+And then two more for
+this total plus equals i.
+
+00:23:44.440 --> 00:23:46.300 align:middle line:84%
+So that's going
+to get incremented
+
+00:23:46.300 --> 00:23:47.740 align:middle line:90%
+each time through the loop.
+
+00:23:47.740 --> 00:23:49.870 align:middle line:90%
+And then the square similarly.
+
+00:23:49.870 --> 00:23:53.320 align:middle line:84%
+So here's my counter equals
+1 for this statement here.
+
+00:23:53.320 --> 00:23:55.450 align:middle line:84%
+Counter plus equals
+1 for grabbing
+
+00:23:55.450 --> 00:23:57.400 align:middle line:90%
+the i as one of these values.
+
+00:23:57.400 --> 00:24:00.310 align:middle line:84%
+And then counter plus
+equals 3 for grabbing the j
+
+00:24:00.310 --> 00:24:05.500 align:middle line:84%
+to be one of these values
+and incrementing this mysum.
+
+00:24:05.500 --> 00:24:08.080 align:middle line:84%
+So because of where I've
+placed these counters,
+
+00:24:08.080 --> 00:24:11.830 align:middle line:84%
+Python will automatically
+count it all up no matter
+
+00:24:11.830 --> 00:24:13.330 align:middle line:90%
+how many loops I've got.
+
+00:24:13.330 --> 00:24:15.760 align:middle line:84%
+So here's my wrapper
+for counting.
+
+00:24:15.760 --> 00:24:18.430 align:middle line:84%
+Slightly different
+than the timing one,
+
+00:24:18.430 --> 00:24:20.350 align:middle line:84%
+because now I'm actually
+going to also keep
+
+00:24:20.350 --> 00:24:25.780 align:middle line:84%
+track of how many more
+operations I've done compared
+
+00:24:25.780 --> 00:24:28.920 align:middle line:90%
+to the previous input.
+
+00:24:28.920 --> 00:24:30.960 align:middle line:84%
+So let me show you
+what that means.
+
+00:24:30.960 --> 00:24:35.410 align:middle line:84%
+Let's run Celsius to Fahrenheit
+with the following inputs.
+
+00:24:35.410 --> 00:24:39.120 align:middle line:84%
+So I'm first of all reporting
+the total number of operations
+
+00:24:39.120 --> 00:24:40.480 align:middle line:90%
+just like I did with timing.
+
+00:24:40.480 --> 00:24:41.820 align:middle line:90%
+So always three operations.
+
+00:24:41.820 --> 00:24:42.690 align:middle line:90%
+No surprise there.
+
+00:24:42.690 --> 00:24:45.070 align:middle line:84%
+That's what we
+coded up basically.
+
+00:24:45.070 --> 00:24:47.440 align:middle line:84%
+But then I'm also
+reporting here.
+
+00:24:47.440 --> 00:24:49.830 align:middle line:84%
+And that's done inside the
+wrapper function, the count
+
+00:24:49.830 --> 00:24:53.370 align:middle line:84%
+wrapper, how many
+more operations is
+
+00:24:53.370 --> 00:24:54.942 align:middle line:90%
+this based on the previous one.
+
+00:24:54.942 --> 00:24:56.400 align:middle line:84%
+So the first one
+is a little weird.
+
+00:24:56.400 --> 00:25:01.650 align:middle line:84%
+But when my input is 10 times
+more, I went from 100 to 1,000,
+
+00:25:01.650 --> 00:25:04.820 align:middle line:90%
+I've done one more operation.
+
+00:25:04.820 --> 00:25:07.700 align:middle line:84%
+No change, obviously, because
+it's always three operations
+
+00:25:07.700 --> 00:25:10.250 align:middle line:90%
+done in total.
+
+00:25:10.250 --> 00:25:14.610 align:middle line:84%
+So just for completion
+sake, this is the slide.
+
+00:25:14.610 --> 00:25:17.570 align:middle line:84%
+So no matter what happens
+to the input here,
+
+00:25:17.570 --> 00:25:21.750 align:middle line:84%
+the number of operations in
+these sort of units of time,
+
+00:25:21.750 --> 00:25:26.240 align:middle line:84%
+which we're just counting the
+number of operations, is 3.
+
+00:25:26.240 --> 00:25:28.230 align:middle line:90%
+What about the sum?
+
+00:25:28.230 --> 00:25:30.950 align:middle line:84%
+So remember the sum had
+that for loop in it.
+
+00:25:30.950 --> 00:25:35.740 align:middle line:84%
+Let's run that and see how
+many operations are here.
+
+00:25:35.740 --> 00:25:39.500 align:middle line:84%
+So first I'm going to report
+the number of operations.
+
+00:25:39.500 --> 00:25:41.740 align:middle line:84%
+So when the input
+is 100, it's 304.
+
+00:25:41.740 --> 00:25:43.990 align:middle line:84%
+When the input is
+1,000, it's 3,004.
+
+00:25:43.990 --> 00:25:46.720 align:middle line:84%
+When the input is
+10,000, it's 30,004.
+
+00:25:46.720 --> 00:25:49.180 align:middle line:84%
+So that matches up the
+formula we came up with--
+
+00:25:49.180 --> 00:25:50.620 align:middle line:90%
+3x plus 4.
+
+00:25:50.620 --> 00:25:52.010 align:middle line:90%
+So that's pretty cool.
+
+00:25:52.010 --> 00:25:54.430 align:middle line:84%
+And then you can
+see now here I'm
+
+00:25:54.430 --> 00:25:58.570 align:middle line:84%
+reporting how many more
+operations is this line based
+
+00:25:58.570 --> 00:26:00.140 align:middle line:90%
+on the previous line.
+
+00:26:00.140 --> 00:26:02.410 align:middle line:90%
+So it's about 9.8 times more.
+
+00:26:02.410 --> 00:26:06.310 align:middle line:84%
+So when my input increases
+by 10, from 100 to 1,000,
+
+00:26:06.310 --> 00:26:11.020 align:middle line:84%
+I am doing approximately
+9.88 times more operations.
+
+00:26:11.020 --> 00:26:15.670 align:middle line:84%
+When my input increases from
+1,000 to 10,000, again, by 10,
+
+00:26:15.670 --> 00:26:21.450 align:middle line:84%
+I'm doing 9.988 times
+more operations.
+
+00:26:21.450 --> 00:26:26.460 align:middle line:84%
+So we see a nice little
+steady state going on here,
+
+00:26:26.460 --> 00:26:30.340 align:middle line:84%
+where when my input
+gets really, really big,
+
+00:26:30.340 --> 00:26:33.250 align:middle line:84%
+it looks like I'm approaching
+approximately 10 times
+
+00:26:33.250 --> 00:26:37.910 align:middle line:84%
+as many operations, when
+my input is 10 times more.
+
+00:26:37.910 --> 00:26:40.910 align:middle line:84%
+This is obviously more
+apparent when the input is big,
+
+00:26:40.910 --> 00:26:44.150 align:middle line:84%
+because the tiny
+variations in my formula,
+
+00:26:44.150 --> 00:26:49.010 align:middle line:84%
+the plus 4 specifically,
+makes less of an impact when
+
+00:26:49.010 --> 00:26:51.520 align:middle line:90%
+my input is really large.
+
+00:26:51.520 --> 00:26:54.460 align:middle line:84%
+And this is kind of going
+in line with our motivation.
+
+00:26:54.460 --> 00:26:56.530 align:middle line:84%
+When the input data
+is really, really big,
+
+00:26:56.530 --> 00:26:58.930 align:middle line:84%
+what I'd like to
+report is the algorithm
+
+00:26:58.930 --> 00:27:00.470 align:middle line:90%
+and how long it takes.
+
+00:27:00.470 --> 00:27:06.550 align:middle line:84%
+I don't care that the algorithm
+takes 3x plus 4, or 3x times
+
+00:27:06.550 --> 00:27:10.660 align:middle line:90%
+3x as operations.
+
+00:27:10.660 --> 00:27:12.850 align:middle line:84%
+When the input is
+really big, all I care
+
+00:27:12.850 --> 00:27:15.070 align:middle line:84%
+is that it's sort of
+on the order of x.
+
+00:27:15.070 --> 00:27:18.250 align:middle line:84%
+And that's something
+we'll get at next lecture.
+
+00:27:18.250 --> 00:27:20.110 align:middle line:90%
+But this is the big idea here.
+
+00:27:20.110 --> 00:27:25.060 align:middle line:84%
+When the input increases by 10,
+it seems like at steady state,
+
+00:27:25.060 --> 00:27:28.130 align:middle line:84%
+our number of operations
+increases by 10 as well.
+
+00:27:28.130 --> 00:27:32.710 align:middle line:84%
+So it's this linear
+relationship.
+
+00:27:32.710 --> 00:27:38.500 align:middle line:84%
+What about the last
+function, the square?
+
+00:27:38.500 --> 00:27:41.040 align:middle line:84%
+So I'm doing something
+a little special here.
+
+00:27:41.040 --> 00:27:44.920 align:middle line:84%
+I have two different inputs I'm
+going to run the square with.
+
+00:27:44.920 --> 00:27:48.480 align:middle line:90%
+So the first one is L2_a.
+
+00:27:48.480 --> 00:27:53.640 align:middle line:84%
+So I'm going to run square with
+input 128, 256, 512, 1024--
+
+00:27:53.640 --> 00:27:57.570 align:middle line:84%
+so I'm basically
+increasing my input by 2.
+
+00:27:57.570 --> 00:28:02.690 align:middle line:84%
+I'm multiplying my
+input by 2 each time.
+
+00:28:02.690 --> 00:28:05.270 align:middle line:84%
+And then I'm going
+to run it with L2_b,
+
+00:28:05.270 --> 00:28:08.980 align:middle line:84%
+where my input increases
+by 10 each time.
+
+00:28:08.980 --> 00:28:10.730 align:middle line:84%
+So we're going to see
+if we can figure out
+
+00:28:10.730 --> 00:28:13.633 align:middle line:84%
+a relationship between
+these for the square.
+
+00:28:13.633 --> 00:28:15.050 align:middle line:84%
+Because that one
+was a little hard
+
+00:28:15.050 --> 00:28:16.760 align:middle line:84%
+to figure out in
+just pure timing
+
+00:28:16.760 --> 00:28:20.270 align:middle line:84%
+without actually waiting
+for minutes or days.
+
+00:28:20.270 --> 00:28:23.780 align:middle line:90%
+
+
+00:28:23.780 --> 00:28:26.190 align:middle line:84%
+So we've got something
+to work with here.
+
+00:28:26.190 --> 00:28:27.440 align:middle line:90%
+So here I've got my square.
+
+00:28:27.440 --> 00:28:32.770 align:middle line:84%
+So this first bit here is
+when my input increased by 2.
+
+00:28:32.770 --> 00:28:34.930 align:middle line:84%
+And down here, it
+just finished, is
+
+00:28:34.930 --> 00:28:38.070 align:middle line:90%
+when my input increases by 10.
+
+00:28:38.070 --> 00:28:43.920 align:middle line:84%
+So number of operations
+when my input increases by 2
+
+00:28:43.920 --> 00:28:45.720 align:middle line:90%
+are not so important.
+
+00:28:45.720 --> 00:28:47.160 align:middle line:90%
+Yes, they're big.
+
+00:28:47.160 --> 00:28:49.260 align:middle line:84%
+But what I'm really
+interested in,
+
+00:28:49.260 --> 00:28:51.960 align:middle line:84%
+just like what we saw
+in the mysum example,
+
+00:28:51.960 --> 00:28:54.120 align:middle line:84%
+is what happens to
+the steady state
+
+00:28:54.120 --> 00:28:55.650 align:middle line:90%
+as the input gets really big.
+
+00:28:55.650 --> 00:28:58.740 align:middle line:84%
+How many more
+operations are we doing?
+
+00:28:58.740 --> 00:29:02.190 align:middle line:84%
+And what we can see is that
+the number of operations
+
+00:29:02.190 --> 00:29:07.440 align:middle line:84%
+as the input gets really big
+is approximately 4 times more,
+
+00:29:07.440 --> 00:29:11.550 align:middle line:84%
+in the case where I increase
+my input by 2 every round.
+
+00:29:11.550 --> 00:29:15.260 align:middle line:90%
+
+
+00:29:15.260 --> 00:29:22.160 align:middle line:84%
+So when I increase my input
+by 2, the number of operations
+
+00:29:22.160 --> 00:29:24.050 align:middle line:90%
+are going to be 4 times more.
+
+00:29:24.050 --> 00:29:27.050 align:middle line:84%
+Well, what about when I
+increase my input by 10?
+
+00:29:27.050 --> 00:29:29.610 align:middle line:90%
+1, 100, 1,000, and so on.
+
+00:29:29.610 --> 00:29:31.280 align:middle line:84%
+Again, I'm not so
+much interested
+
+00:29:31.280 --> 00:29:32.870 align:middle line:90%
+in number of operations.
+
+00:29:32.870 --> 00:29:35.150 align:middle line:84%
+But what happens to
+the steady state?
+
+00:29:35.150 --> 00:29:37.700 align:middle line:84%
+With very few operations,
+it's hard to tell.
+
+00:29:37.700 --> 00:29:40.160 align:middle line:84%
+But as we increase
+it, we see that it
+
+00:29:40.160 --> 00:29:43.580 align:middle line:90%
+goes towards approximately 100.
+
+00:29:43.580 --> 00:29:46.220 align:middle line:84%
+So when my input
+increases by 10,
+
+00:29:46.220 --> 00:29:49.760 align:middle line:84%
+that takes me to about
+100-fold increase
+
+00:29:49.760 --> 00:29:53.410 align:middle line:90%
+in the number of operations.
+
+00:29:53.410 --> 00:29:55.350 align:middle line:84%
+So now do you
+guys-- can you guys
+
+00:29:55.350 --> 00:29:58.170 align:middle line:84%
+see the relationship between
+the input for the square
+
+00:29:58.170 --> 00:30:01.020 align:middle line:90%
+and the number of operations?
+
+00:30:01.020 --> 00:30:01.710 align:middle line:90%
+You can, right?
+
+00:30:01.710 --> 00:30:05.850 align:middle line:84%
+So it's approximately a sort
+of an n squared relationship.
+
+00:30:05.850 --> 00:30:12.288 align:middle line:84%
+When my input is n, the
+number of operations
+
+00:30:12.288 --> 00:30:14.205 align:middle line:84%
+is going to be on the
+order of n squared more.
+
+00:30:14.205 --> 00:30:18.880 align:middle line:90%
+
+
+00:30:18.880 --> 00:30:21.940 align:middle line:84%
+So counting operations
+is actually a lot better
+
+00:30:21.940 --> 00:30:23.650 align:middle line:90%
+than timing, as we can see.
+
+00:30:23.650 --> 00:30:26.770 align:middle line:84%
+We've eliminated a
+bunch of those red X's.
+
+00:30:26.770 --> 00:30:31.960 align:middle line:84%
+We no longer have to deal with
+variations between computers,
+
+00:30:31.960 --> 00:30:35.410 align:middle line:84%
+because if we're counting
+this on a computer that's
+
+00:30:35.410 --> 00:30:36.850 align:middle line:84%
+slow or fast, we're
+still counting
+
+00:30:36.850 --> 00:30:38.775 align:middle line:90%
+the same amount of stuff.
+
+00:30:38.775 --> 00:30:40.150 align:middle line:84%
+Languages-- again,
+it's not going
+
+00:30:40.150 --> 00:30:43.930 align:middle line:84%
+to matter, because you'll
+implement it in a similar way.
+
+00:30:43.930 --> 00:30:46.840 align:middle line:84%
+Small inputs is
+still sort of iffy.
+
+00:30:46.840 --> 00:30:49.180 align:middle line:84%
+We saw the square was a
+little bit unpredictable
+
+00:30:49.180 --> 00:30:52.600 align:middle line:84%
+when the input was pretty
+small, right down here--
+
+00:30:52.600 --> 00:30:54.430 align:middle line:90%
+60 then straight up to 90.
+
+00:30:54.430 --> 00:30:57.680 align:middle line:84%
+But we didn't take long
+to see the steady state.
+
+00:30:57.680 --> 00:31:00.170 align:middle line:84%
+So it's actually better than
+before, better than timing.
+
+00:31:00.170 --> 00:31:02.480 align:middle line:90%
+It's not 0 at least.
+
+00:31:02.480 --> 00:31:04.720 align:middle line:84%
+But now the problem
+becomes sort of what's
+
+00:31:04.720 --> 00:31:07.570 align:middle line:84%
+the definition of which
+operations to count?
+
+00:31:07.570 --> 00:31:10.720 align:middle line:84%
+Notice our functions
+have a return value.
+
+00:31:10.720 --> 00:31:13.420 align:middle line:84%
+Do we count the return
+as an operation?
+
+00:31:13.420 --> 00:31:14.710 align:middle line:90%
+Technically, you should.
+
+00:31:14.710 --> 00:31:17.210 align:middle line:84%
+That's a value that's being
+passed between functions.
+
+00:31:17.210 --> 00:31:19.510 align:middle line:84%
+So that's going to
+take some time to run.
+
+00:31:19.510 --> 00:31:22.330 align:middle line:84%
+But we didn't actually
+count it in our example.
+
+00:31:22.330 --> 00:31:24.750 align:middle line:90%
+But you could if you wanted to.
+
+00:31:24.750 --> 00:31:27.500 align:middle line:90%
+So that's where we stand.
+
+00:31:27.500 --> 00:31:34.460 align:middle line:84%
+We've got timing and counting,
+just as an initial example.
+
+00:31:34.460 --> 00:31:36.830 align:middle line:84%
+Next lecture, we're going to
+look at a few more examples
+
+00:31:36.830 --> 00:31:38.720 align:middle line:90%
+with lists and things like that.
+
+00:31:38.720 --> 00:31:41.880 align:middle line:84%
+Just again, timing and
+counting those functions.
+
+00:31:41.880 --> 00:31:44.330 align:middle line:84%
+But again, the big
+idea here is that we're
+
+00:31:44.330 --> 00:31:46.760 align:middle line:84%
+trying to get at
+evaluating just a handful
+
+00:31:46.760 --> 00:31:50.720 align:middle line:84%
+of different algorithms, sort
+of what's the order of growth
+
+00:31:50.720 --> 00:31:52.850 align:middle line:84%
+as the input becomes
+really, really big?
+
+00:31:52.850 --> 00:31:54.500 align:middle line:84%
+Because all we're
+interested in is
+
+00:31:54.500 --> 00:31:56.540 align:middle line:84%
+how scalable are these
+programs that we're
+
+00:31:56.540 --> 00:31:58.640 align:middle line:84%
+running when the input
+is really big, when
+
+00:31:58.640 --> 00:32:00.240 align:middle line:90%
+we're dealing with big data.
+
+00:32:00.240 --> 00:32:02.660 align:middle line:84%
+And so that's what
+we're going to start
+
+00:32:02.660 --> 00:32:04.990 align:middle line:90%
+talking about next lecture.
+
+00:32:04.990 --> 00:32:12.000 align:middle line:90%

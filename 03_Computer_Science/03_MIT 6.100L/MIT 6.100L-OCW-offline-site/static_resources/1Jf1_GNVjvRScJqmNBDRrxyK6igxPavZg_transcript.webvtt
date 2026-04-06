@@ -1,0 +1,5575 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.800 align:middle line:84%
+[SQUEAKING]
+[RUSTLING] [CLICKING]
+
+00:00:04.800 --> 00:00:11.530 align:middle line:90%
+
+
+00:00:11.530 --> 00:00:13.868 align:middle line:84%
+ANA BELL: So welcome
+to the last class.
+
+00:00:13.868 --> 00:00:15.160 align:middle line:90%
+Please don't come on Wednesday.
+
+00:00:15.160 --> 00:00:16.540 align:middle line:90%
+I will not be here.
+
+00:00:16.540 --> 00:00:20.260 align:middle line:84%
+Today, we will just be tying
+up some loose ends regarding
+
+00:00:20.260 --> 00:00:22.760 align:middle line:84%
+some topics that we've
+seen throughout the course.
+
+00:00:22.760 --> 00:00:26.620 align:middle line:84%
+And then I'm going to do just a
+wrap up of things we've learned
+
+00:00:26.620 --> 00:00:30.890 align:middle line:84%
+and potential courses that you
+might want to take after this.
+
+00:00:30.890 --> 00:00:31.390 align:middle line:90%
+OK.
+
+00:00:31.390 --> 00:00:33.940 align:middle line:84%
+So today, as I
+mentioned, we're going
+
+00:00:33.940 --> 00:00:38.330 align:middle line:84%
+to tie up some loose ends
+regarding lists, dictionaries.
+
+00:00:38.330 --> 00:00:40.990 align:middle line:84%
+So those two topics are
+going to be combined
+
+00:00:40.990 --> 00:00:46.270 align:middle line:90%
+into one part of this lecture.
+
+00:00:46.270 --> 00:00:49.280 align:middle line:84%
+It's going to also include a
+little bit about complexity--
+
+00:00:49.280 --> 00:00:51.580 align:middle line:84%
+so just some things
+that we've learned,
+
+00:00:51.580 --> 00:00:56.080 align:middle line:84%
+demystifying some details that I
+skipped throughout the past few
+
+00:00:56.080 --> 00:00:56.890 align:middle line:90%
+lectures.
+
+00:00:56.890 --> 00:00:59.780 align:middle line:84%
+And then we're going to
+talk about simulations.
+
+00:00:59.780 --> 00:01:02.320 align:middle line:84%
+So simulations are
+very, very useful--
+
+00:01:02.320 --> 00:01:05.319 align:middle line:84%
+is a very useful idea
+that you can already
+
+00:01:05.319 --> 00:01:07.120 align:middle line:84%
+do with what you've
+learned in this class.
+
+00:01:07.120 --> 00:01:09.100 align:middle line:84%
+And I'll show you
+some useful places
+
+00:01:09.100 --> 00:01:12.230 align:middle line:84%
+where you can apply
+computation and simulation
+
+00:01:12.230 --> 00:01:15.330 align:middle line:90%
+to do some interesting things.
+
+00:01:15.330 --> 00:01:17.250 align:middle line:90%
+And then we'll do the wrap up.
+
+00:01:17.250 --> 00:01:21.000 align:middle line:84%
+So let's first start
+talking about lists.
+
+00:01:21.000 --> 00:01:25.310 align:middle line:84%
+So lists were the first data
+structure that we encountered.
+
+00:01:25.310 --> 00:01:27.080 align:middle line:90%
+That was really useful, right?
+
+00:01:27.080 --> 00:01:28.400 align:middle line:90%
+We did see strings.
+
+00:01:28.400 --> 00:01:30.750 align:middle line:84%
+And we did see tuples
+and things like that.
+
+00:01:30.750 --> 00:01:33.110 align:middle line:84%
+But once we saw
+lists, it opened up
+
+00:01:33.110 --> 00:01:35.060 align:middle line:84%
+a whole new world
+of possibilities
+
+00:01:35.060 --> 00:01:37.070 align:middle line:90%
+for how we can manipulate data.
+
+00:01:37.070 --> 00:01:39.740 align:middle line:84%
+So lists are
+sequences of objects.
+
+00:01:39.740 --> 00:01:42.080 align:middle line:84%
+I kind of skipped past
+how they're actually
+
+00:01:42.080 --> 00:01:43.200 align:middle line:90%
+implemented in memory.
+
+00:01:43.200 --> 00:01:45.660 align:middle line:84%
+So I do want to talk
+about that a little bit.
+
+00:01:45.660 --> 00:01:49.820 align:middle line:84%
+But what we did talk
+about was the complexity,
+
+00:01:49.820 --> 00:01:54.140 align:middle line:84%
+the asymptotic complexity
+of list operations.
+
+00:01:54.140 --> 00:01:56.370 align:middle line:84%
+So some of these
+were pretty obvious.
+
+00:01:56.370 --> 00:01:58.340 align:middle line:84%
+So the ones that are
+theta of n down here
+
+00:01:58.340 --> 00:02:00.920 align:middle line:84%
+were obvious because,
+well, to check
+
+00:02:00.920 --> 00:02:03.590 align:middle line:84%
+for equality between two lists
+you, of course, have to look
+
+00:02:03.590 --> 00:02:04.850 align:middle line:90%
+at each element in the list.
+
+00:02:04.850 --> 00:02:06.710 align:middle line:84%
+So that's theta of the
+length of the list.
+
+00:02:06.710 --> 00:02:10.100 align:middle line:84%
+To check whether an item is in a
+list or to iterate over a list,
+
+00:02:10.100 --> 00:02:12.200 align:middle line:84%
+obviously, it's theta
+of n because you
+
+00:02:12.200 --> 00:02:14.120 align:middle line:84%
+have to look at each
+element in the list.
+
+00:02:14.120 --> 00:02:18.060 align:middle line:84%
+But we didn't really talk
+about the complexities up here.
+
+00:02:18.060 --> 00:02:22.470 align:middle line:84%
+So accessing an item in the
+list specifically is theta of 1.
+
+00:02:22.470 --> 00:02:24.090 align:middle line:84%
+So that means, if
+you have a list
+
+00:02:24.090 --> 00:02:26.070 align:middle line:84%
+with a whole bunch
+of elements in it,
+
+00:02:26.070 --> 00:02:29.250 align:middle line:84%
+to grab the element at a
+specific memory location,
+
+00:02:29.250 --> 00:02:31.470 align:middle line:90%
+it's constant time complexity.
+
+00:02:31.470 --> 00:02:34.660 align:middle line:84%
+So it basically doesn't depend
+on the length of the list.
+
+00:02:34.660 --> 00:02:35.520 align:middle line:90%
+It's instant.
+
+00:02:35.520 --> 00:02:37.860 align:middle line:84%
+So we're going to
+see why that is.
+
+00:02:37.860 --> 00:02:40.620 align:middle line:84%
+Let's first, for
+simplicity's sake,
+
+00:02:40.620 --> 00:02:44.910 align:middle line:84%
+assume that we're storing a
+list in memory of just integers.
+
+00:02:44.910 --> 00:02:47.790 align:middle line:84%
+So I know lists can store
+other lists, and dictionaries,
+
+00:02:47.790 --> 00:02:48.780 align:middle line:90%
+and things like that.
+
+00:02:48.780 --> 00:02:52.590 align:middle line:84%
+But just for this first slide,
+let's assume all we're doing
+
+00:02:52.590 --> 00:02:54.280 align:middle line:90%
+is storing integers.
+
+00:02:54.280 --> 00:02:57.150 align:middle line:84%
+So the way Python
+does this is when
+
+00:02:57.150 --> 00:03:00.390 align:middle line:84%
+you create a list-- let's
+say you initially populate it
+
+00:03:00.390 --> 00:03:01.710 align:middle line:90%
+with length L.
+
+00:03:01.710 --> 00:03:06.780 align:middle line:84%
+Python initially allocates
+a contiguous memory block
+
+00:03:06.780 --> 00:03:10.860 align:middle line:90%
+with length L memory locations.
+
+00:03:10.860 --> 00:03:13.530 align:middle line:84%
+So if you have a list
+with 100 elements in it,
+
+00:03:13.530 --> 00:03:15.810 align:middle line:84%
+initially, populated
+with 100 elements in it,
+
+00:03:15.810 --> 00:03:17.910 align:middle line:84%
+Python will initially
+create for you
+
+00:03:17.910 --> 00:03:20.250 align:middle line:84%
+a sequence of memory
+locations that
+
+00:03:20.250 --> 00:03:22.490 align:middle line:90%
+are reserved for this list.
+
+00:03:22.490 --> 00:03:27.190 align:middle line:84%
+Then it says, well, if this is
+going to contain just integers,
+
+00:03:27.190 --> 00:03:29.620 align:middle line:84%
+I'm going to say each one
+of these memory locations
+
+00:03:29.620 --> 00:03:32.920 align:middle line:84%
+will hold four bytes
+for that integer.
+
+00:03:32.920 --> 00:03:35.230 align:middle line:84%
+That's how we
+represent an integer.
+
+00:03:35.230 --> 00:03:37.090 align:middle line:84%
+And it could be eight
+bytes, something else
+
+00:03:37.090 --> 00:03:38.360 align:middle line:90%
+for different machines.
+
+00:03:38.360 --> 00:03:40.270 align:middle line:84%
+But in this particular
+example, let's just
+
+00:03:40.270 --> 00:03:42.233 align:middle line:84%
+say each one of those
+memory locations
+
+00:03:42.233 --> 00:03:43.150 align:middle line:90%
+will store an integer.
+
+00:03:43.150 --> 00:03:45.190 align:middle line:90%
+And that's four bytes long.
+
+00:03:45.190 --> 00:03:49.630 align:middle line:84%
+Well, if this list
+is contiguous--
+
+00:03:49.630 --> 00:03:52.300 align:middle line:84%
+a bunch of blocks of
+memory all in order--
+
+00:03:52.300 --> 00:03:56.470 align:middle line:84%
+then to access the i-th
+element, all you need to do
+
+00:03:56.470 --> 00:03:58.520 align:middle line:90%
+is a little bit of math.
+
+00:03:58.520 --> 00:04:01.300 align:middle line:84%
+So here, I've got an
+integer in one position
+
+00:04:01.300 --> 00:04:02.770 align:middle line:90%
+in my contiguous block.
+
+00:04:02.770 --> 00:04:05.570 align:middle line:84%
+Then I have maybe another
+integer at the next position,
+
+00:04:05.570 --> 00:04:08.080 align:middle line:84%
+and so on, and so on until
+I have another integer
+
+00:04:08.080 --> 00:04:09.800 align:middle line:90%
+at the i-th position.
+
+00:04:09.800 --> 00:04:12.760 align:middle line:84%
+So since these are
+consecutive, to access
+
+00:04:12.760 --> 00:04:17.079 align:middle line:84%
+the location of the
+element in this i-th spot,
+
+00:04:17.079 --> 00:04:21.459 align:middle line:84%
+all I need to do is look up
+that many memory locations
+
+00:04:21.459 --> 00:04:24.650 align:middle line:90%
+from the start of my list.
+
+00:04:24.650 --> 00:04:26.030 align:middle line:90%
+So that's just pure math.
+
+00:04:26.030 --> 00:04:29.100 align:middle line:90%
+So one byte is eight bits.
+
+00:04:29.100 --> 00:04:36.970 align:middle line:84%
+So if I have 4 times
+8 bits multiplied by i
+
+00:04:36.970 --> 00:04:40.990 align:middle line:84%
+plus the first location,
+that will tell me
+
+00:04:40.990 --> 00:04:43.465 align:middle line:84%
+exactly the location
+of the i-th integer.
+
+00:04:43.465 --> 00:04:46.210 align:middle line:90%
+
+
+00:04:46.210 --> 00:04:50.590 align:middle line:84%
+So this is all made possible
+because these memory locations
+
+00:04:50.590 --> 00:04:51.580 align:middle line:90%
+are allocated in order.
+
+00:04:51.580 --> 00:04:53.620 align:middle line:84%
+If they were allocated
+not in order,
+
+00:04:53.620 --> 00:04:56.812 align:middle line:84%
+then maybe this
+would not be as easy.
+
+00:04:56.812 --> 00:04:57.796 align:middle line:90%
+Yeah?
+
+00:04:57.796 --> 00:04:58.780 align:middle line:90%
+STUDENT: Why is it 32?
+
+00:04:58.780 --> 00:05:00.340 align:middle line:90%
+ANA BELL: 32 because--
+
+00:05:00.340 --> 00:05:04.930 align:middle line:84%
+so if I say an integer
+is stored as four bytes,
+
+00:05:04.930 --> 00:05:09.250 align:middle line:84%
+in bits that's 4 times 8 because
+eight bits is in one byte.
+
+00:05:09.250 --> 00:05:15.300 align:middle line:84%
+So 8 times 4 is 32 bits
+for one byte, yeah.
+
+00:05:15.300 --> 00:05:19.890 align:middle line:84%
+All right, but this is assuming
+that I'm storing integers.
+
+00:05:19.890 --> 00:05:23.220 align:middle line:84%
+And obviously, lists
+can contain other lists.
+
+00:05:23.220 --> 00:05:24.450 align:middle line:90%
+They can contain tuples.
+
+00:05:24.450 --> 00:05:26.430 align:middle line:90%
+They can contain dictionaries.
+
+00:05:26.430 --> 00:05:29.070 align:middle line:84%
+And some of those
+objects might not
+
+00:05:29.070 --> 00:05:32.730 align:middle line:84%
+fit within this set number
+of bytes, within four bytes,
+
+00:05:32.730 --> 00:05:34.260 align:middle line:84%
+because some of
+those objects might
+
+00:05:34.260 --> 00:05:37.240 align:middle line:90%
+be very, very large themselves.
+
+00:05:37.240 --> 00:05:40.300 align:middle line:90%
+So in that particular case--
+
+00:05:40.300 --> 00:05:42.750 align:middle line:84%
+let's say the list
+is heterogeneous--
+
+00:05:42.750 --> 00:05:46.510 align:middle line:84%
+that doesn't faze us
+because we can say, well,
+
+00:05:46.510 --> 00:05:50.550 align:middle line:84%
+instead of storing the
+object itself at each memory
+
+00:05:50.550 --> 00:05:52.500 align:middle line:84%
+location-- that
+worked for integers,
+
+00:05:52.500 --> 00:05:56.070 align:middle line:84%
+but might not work when we
+have to store a list of 1,000
+
+00:05:56.070 --> 00:05:59.490 align:middle line:84%
+elements at a particular
+memory location--
+
+00:05:59.490 --> 00:06:03.660 align:middle line:84%
+instead of storing the element
+itself, let's store a pointer.
+
+00:06:03.660 --> 00:06:07.320 align:middle line:84%
+And a pointer is just
+a number that tells you
+
+00:06:07.320 --> 00:06:10.500 align:middle line:84%
+which memory location that
+list might be stored at
+
+00:06:10.500 --> 00:06:13.230 align:middle line:84%
+or that dictionary
+might be stored at.
+
+00:06:13.230 --> 00:06:17.110 align:middle line:84%
+So if we store a pointer at
+a particular memory location,
+
+00:06:17.110 --> 00:06:21.340 align:middle line:84%
+then that means that this is
+my again contiguous memory
+
+00:06:21.340 --> 00:06:24.640 align:middle line:84%
+allocated for a list of length
+L or something like that--
+
+00:06:24.640 --> 00:06:27.490 align:middle line:84%
+then here, I'm storing
+still an integer.
+
+00:06:27.490 --> 00:06:31.300 align:middle line:84%
+And that integer tells
+Python which memory location
+
+00:06:31.300 --> 00:06:35.380 align:middle line:84%
+to jump to to grab the
+integer that's stored there
+
+00:06:35.380 --> 00:06:36.820 align:middle line:90%
+or something like that.
+
+00:06:36.820 --> 00:06:39.850 align:middle line:84%
+And here, I might have
+another list that I'm storing.
+
+00:06:39.850 --> 00:06:43.510 align:middle line:84%
+But I'm not storing it exactly
+in that memory location.
+
+00:06:43.510 --> 00:06:48.220 align:middle line:84%
+It's pointed to by this pointer
+that tells Python, again,
+
+00:06:48.220 --> 00:06:50.200 align:middle line:84%
+to jump to a different
+memory location
+
+00:06:50.200 --> 00:06:53.710 align:middle line:84%
+where that list might be
+contiguously stored itself.
+
+00:06:53.710 --> 00:07:00.640 align:middle line:84%
+So here in this example,
+I'm still storing numbers.
+
+00:07:00.640 --> 00:07:02.500 align:middle line:84%
+It's just that these
+numbers correspond
+
+00:07:02.500 --> 00:07:04.720 align:middle line:84%
+to a memory location
+that tells Python
+
+00:07:04.720 --> 00:07:08.860 align:middle line:84%
+where to go to get my
+element in that list.
+
+00:07:08.860 --> 00:07:12.400 align:middle line:84%
+So in terms of the
+computation to get
+
+00:07:12.400 --> 00:07:15.260 align:middle line:84%
+the i-th element in the list,
+it's going to be the same.
+
+00:07:15.260 --> 00:07:19.030 align:middle line:84%
+I'm still allocating, in my
+original list, four bytes
+
+00:07:19.030 --> 00:07:20.830 align:middle line:90%
+to store my pointer--
+
+00:07:20.830 --> 00:07:22.250 align:middle line:90%
+again, just a number.
+
+00:07:22.250 --> 00:07:25.750 align:middle line:84%
+And so to get the i-th
+location, all I need to do
+
+00:07:25.750 --> 00:07:29.110 align:middle line:84%
+is tell Python to go
+the start of this list
+
+00:07:29.110 --> 00:07:35.850 align:middle line:84%
+plus 32 times i locations
+down to get to that element.
+
+00:07:35.850 --> 00:07:41.990 align:middle line:84%
+So this formula here,
+adding the start
+
+00:07:41.990 --> 00:07:46.700 align:middle line:84%
+of this memory location of
+the list plus 32 times i,
+
+00:07:46.700 --> 00:07:48.050 align:middle line:90%
+is just math.
+
+00:07:48.050 --> 00:07:50.090 align:middle line:84%
+There's nothing
+here that depends
+
+00:07:50.090 --> 00:07:52.160 align:middle line:90%
+on the length of the list.
+
+00:07:52.160 --> 00:07:55.820 align:middle line:84%
+So to grab the element
+at the i-th location,
+
+00:07:55.820 --> 00:07:59.720 align:middle line:84%
+somewhere within here, all
+we're doing is some math--
+
+00:07:59.720 --> 00:08:02.000 align:middle line:84%
+an addition and
+a multiplication.
+
+00:08:02.000 --> 00:08:05.240 align:middle line:90%
+And since that is just--
+
+00:08:05.240 --> 00:08:06.950 align:middle line:84%
+none of that depends
+on the length
+
+00:08:06.950 --> 00:08:09.200 align:middle line:84%
+of the list, the
+complexity to access
+
+00:08:09.200 --> 00:08:13.280 align:middle line:84%
+the i-th element in the
+list is constant, just math.
+
+00:08:13.280 --> 00:08:18.530 align:middle line:84%
+And we're using this idea that
+we know exactly how many memory
+
+00:08:18.530 --> 00:08:21.780 align:middle line:84%
+locations we need to jump
+to get to the i-th location.
+
+00:08:21.780 --> 00:08:24.260 align:middle line:90%
+Does that make sense?
+
+00:08:24.260 --> 00:08:25.670 align:middle line:90%
+OK.
+
+00:08:25.670 --> 00:08:30.180 align:middle line:84%
+So that leads us
+to the question.
+
+00:08:30.180 --> 00:08:33.590 align:middle line:84%
+Well, OK, we're storing
+a list of elements.
+
+00:08:33.590 --> 00:08:37.400 align:middle line:84%
+And we're using the
+idea that a list has
+
+00:08:37.400 --> 00:08:40.400 align:middle line:90%
+indices to tell us the value--
+
+00:08:40.400 --> 00:08:43.880 align:middle line:84%
+there's an element at index
+0, an element at index 1,
+
+00:08:43.880 --> 00:08:46.380 align:middle line:84%
+an element at
+index 2, and so on.
+
+00:08:46.380 --> 00:08:49.580 align:middle line:90%
+So there's an order to the list.
+
+00:08:49.580 --> 00:08:54.050 align:middle line:84%
+And because of that order,
+we're able to index an element
+
+00:08:54.050 --> 00:08:57.290 align:middle line:84%
+at the i-th location
+in constant time.
+
+00:08:57.290 --> 00:09:00.830 align:middle line:84%
+But let's say we wanted
+to store a dictionary.
+
+00:09:00.830 --> 00:09:04.780 align:middle line:84%
+A dictionary does not
+have an order to it.
+
+00:09:04.780 --> 00:09:06.520 align:middle line:84%
+And what does a
+dictionary store?
+
+00:09:06.520 --> 00:09:09.030 align:middle line:90%
+It stores a key value pair.
+
+00:09:09.030 --> 00:09:11.910 align:middle line:84%
+In a list, you could think
+of the, quote unquote, "key"
+
+00:09:11.910 --> 00:09:12.990 align:middle line:90%
+as the index--
+
+00:09:12.990 --> 00:09:16.410 align:middle line:84%
+0, 1, 2, 3, 4, and
+so on-- and the value
+
+00:09:16.410 --> 00:09:18.270 align:middle line:90%
+as the element at that index.
+
+00:09:18.270 --> 00:09:22.680 align:middle line:84%
+But in a dictionary,
+the key is not ordered.
+
+00:09:22.680 --> 00:09:24.130 align:middle line:90%
+The key can be anything.
+
+00:09:24.130 --> 00:09:26.400 align:middle line:84%
+So here, I've got
+a dictionary that
+
+00:09:26.400 --> 00:09:28.860 align:middle line:90%
+maps maybe a name to a Boolean.
+
+00:09:28.860 --> 00:09:32.500 align:middle line:84%
+Maybe the student is in
+this class, true or false.
+
+00:09:32.500 --> 00:09:36.640 align:middle line:84%
+So a naive implementation of
+a dictionary could be to say,
+
+00:09:36.640 --> 00:09:40.450 align:middle line:84%
+well, let's implement
+elements of the dictionary--
+
+00:09:40.450 --> 00:09:42.330 align:middle line:90%
+so a key value pair--
+
+00:09:42.330 --> 00:09:45.280 align:middle line:90%
+as a list, so just two elements.
+
+00:09:45.280 --> 00:09:47.700 align:middle line:84%
+The first element in
+that list is my key.
+
+00:09:47.700 --> 00:09:50.640 align:middle line:84%
+And the second element
+in my list is my value.
+
+00:09:50.640 --> 00:09:54.090 align:middle line:84%
+So here, a really naive
+implementation uses the list.
+
+00:09:54.090 --> 00:09:57.090 align:middle line:84%
+And I've got four
+entries in my dictionary.
+
+00:09:57.090 --> 00:09:59.460 align:middle line:84%
+The element at index
+0 are all strings.
+
+00:09:59.460 --> 00:10:03.030 align:middle line:84%
+The element at index
+1 in each location
+
+00:10:03.030 --> 00:10:06.700 align:middle line:84%
+is my value associated
+with that key.
+
+00:10:06.700 --> 00:10:10.720 align:middle line:84%
+Well, if I were to
+index into this list
+
+00:10:10.720 --> 00:10:14.140 align:middle line:84%
+to grab the value
+associated with Eric,
+
+00:10:14.140 --> 00:10:19.100 align:middle line:84%
+for example, can I do
+that in constant time?
+
+00:10:19.100 --> 00:10:20.570 align:middle line:90%
+No, right?
+
+00:10:20.570 --> 00:10:23.960 align:middle line:84%
+Because there's no
+numerical index here.
+
+00:10:23.960 --> 00:10:26.210 align:middle line:84%
+There's no order to
+this set of values.
+
+00:10:26.210 --> 00:10:29.010 align:middle line:90%
+
+
+00:10:29.010 --> 00:10:31.530 align:middle line:84%
+It's not even in
+alphabetical order--
+
+00:10:31.530 --> 00:10:34.200 align:middle line:84%
+so A, then J, then E,
+then S. And there's
+
+00:10:34.200 --> 00:10:36.910 align:middle line:84%
+no order guaranteed for
+dictionaries anyway.
+
+00:10:36.910 --> 00:10:40.120 align:middle line:84%
+So in order to look up an item
+in this naive implementation
+
+00:10:40.120 --> 00:10:41.650 align:middle line:84%
+of a dictionary,
+where you're just
+
+00:10:41.650 --> 00:10:44.650 align:middle line:84%
+putting all the elements
+in order in a list,
+
+00:10:44.650 --> 00:10:49.420 align:middle line:84%
+it's theta of n, where n
+is the length of our list.
+
+00:10:49.420 --> 00:10:55.120 align:middle line:84%
+And so this implementation
+of a dictionary doesn't work.
+
+00:10:55.120 --> 00:11:00.140 align:middle line:84%
+And yet, when I showed you
+this slide a few lectures ago,
+
+00:11:00.140 --> 00:11:01.970 align:middle line:90%
+we saw something interesting.
+
+00:11:01.970 --> 00:11:05.380 align:middle line:84%
+So this is what
+we just "proved,"
+
+00:11:05.380 --> 00:11:11.250 align:middle line:84%
+quote unquote, the access
+time in a list is constant.
+
+00:11:11.250 --> 00:11:13.440 align:middle line:84%
+But the access time
+in a dictionary
+
+00:11:13.440 --> 00:11:18.810 align:middle line:84%
+is constant as well
+in the average case.
+
+00:11:18.810 --> 00:11:21.900 align:middle line:84%
+In the worst case,
+it is theta of n.
+
+00:11:21.900 --> 00:11:24.960 align:middle line:84%
+Accessing an item in a
+dictionary is theta of n
+
+00:11:24.960 --> 00:11:27.270 align:middle line:84%
+because, in the
+worst case, we might
+
+00:11:27.270 --> 00:11:29.310 align:middle line:90%
+store the dictionary like this.
+
+00:11:29.310 --> 00:11:32.280 align:middle line:84%
+It's just a list of all
+of our dictionary entries
+
+00:11:32.280 --> 00:11:33.340 align:middle line:90%
+all in order.
+
+00:11:33.340 --> 00:11:36.750 align:middle line:84%
+So to look up one
+index, we'd have
+
+00:11:36.750 --> 00:11:38.790 align:middle line:84%
+to go through the
+entire list and check
+
+00:11:38.790 --> 00:11:42.100 align:middle line:84%
+if the element at index 0 is
+the one we're looking for,
+
+00:11:42.100 --> 00:11:45.130 align:middle line:84%
+and then grab the element
+at index 1 as its value.
+
+00:11:45.130 --> 00:11:46.827 align:middle line:84%
+But in the average
+case-- and this
+
+00:11:46.827 --> 00:11:48.160 align:middle line:90%
+is what we're going to see next.
+
+00:11:48.160 --> 00:11:51.580 align:middle line:84%
+In the average case,
+the access, the time
+
+00:11:51.580 --> 00:11:55.240 align:middle line:84%
+it takes to do a lookup
+for a key in a dictionary
+
+00:11:55.240 --> 00:11:56.200 align:middle line:90%
+is constant.
+
+00:11:56.200 --> 00:11:58.450 align:middle line:84%
+It's actually theta
+of 1, which makes
+
+00:11:58.450 --> 00:12:01.270 align:middle line:84%
+dictionaries really powerful
+data structures to use
+
+00:12:01.270 --> 00:12:03.020 align:middle line:90%
+in a lot of situations.
+
+00:12:03.020 --> 00:12:05.130 align:middle line:90%
+So why is this?
+
+00:12:05.130 --> 00:12:09.080 align:middle line:84%
+Well, it has to do with
+the idea of hashing.
+
+00:12:09.080 --> 00:12:12.710 align:middle line:84%
+So the way that dictionaries
+are actually stored in memory
+
+00:12:12.710 --> 00:12:16.380 align:middle line:84%
+is not as a list of
+a bunch of entries.
+
+00:12:16.380 --> 00:12:18.140 align:middle line:84%
+We just showed that
+that is not feasible.
+
+00:12:18.140 --> 00:12:21.150 align:middle line:84%
+That leads to a theta
+of n lookup time.
+
+00:12:21.150 --> 00:12:24.110 align:middle line:84%
+So instead, they use
+something called a hash table.
+
+00:12:24.110 --> 00:12:27.290 align:middle line:90%
+We briefly spoke about this.
+
+00:12:27.290 --> 00:12:31.580 align:middle line:84%
+A hash table is just
+like a long list.
+
+00:12:31.580 --> 00:12:35.210 align:middle line:84%
+And the indices
+of the hash table
+
+00:12:35.210 --> 00:12:40.310 align:middle line:84%
+are actually things that you
+look up using a hash function.
+
+00:12:40.310 --> 00:12:42.180 align:middle line:90%
+So how does this work?
+
+00:12:42.180 --> 00:12:47.290 align:middle line:84%
+Well, any key that you'd
+like to add to a dictionary
+
+00:12:47.290 --> 00:12:50.620 align:middle line:84%
+actually has a hash
+function run on it.
+
+00:12:50.620 --> 00:12:54.220 align:middle line:84%
+And this hash function takes
+in maybe an integer, maybe
+
+00:12:54.220 --> 00:12:57.700 align:middle line:84%
+a float, maybe a
+string, maybe a tuple.
+
+00:12:57.700 --> 00:13:01.960 align:middle line:84%
+Any hashable object
+hashes it, which
+
+00:13:01.960 --> 00:13:03.550 align:middle line:90%
+means it takes that object.
+
+00:13:03.550 --> 00:13:05.410 align:middle line:84%
+If it's a string, it'll
+give us an integer.
+
+00:13:05.410 --> 00:13:07.580 align:middle line:84%
+If it's a tuple, it'll
+give us an integer.
+
+00:13:07.580 --> 00:13:10.480 align:middle line:84%
+So if it hashes it, that means
+it takes it in as an input
+
+00:13:10.480 --> 00:13:14.350 align:middle line:84%
+and gives us back a
+number, an integer.
+
+00:13:14.350 --> 00:13:18.460 align:middle line:84%
+And that integer is what
+is used as the index
+
+00:13:18.460 --> 00:13:21.250 align:middle line:84%
+to look it up in the hash table,
+to look up the value associated
+
+00:13:21.250 --> 00:13:23.050 align:middle line:90%
+with it in a hash table.
+
+00:13:23.050 --> 00:13:26.640 align:middle line:84%
+So in that sense, the lookup
+itself is constant time
+
+00:13:26.640 --> 00:13:28.110 align:middle line:84%
+because we just
+showed looking up
+
+00:13:28.110 --> 00:13:31.480 align:middle line:84%
+an item in a dictionary using
+the index is constant time.
+
+00:13:31.480 --> 00:13:35.020 align:middle line:84%
+And if that hash function
+is also constant time,
+
+00:13:35.020 --> 00:13:37.110 align:middle line:84%
+then the time it
+takes to look up
+
+00:13:37.110 --> 00:13:40.780 align:middle line:84%
+an item in a dictionary
+is also constant time.
+
+00:13:40.780 --> 00:13:44.790 align:middle line:84%
+So here are some examples of the
+Python hash function actually
+
+00:13:44.790 --> 00:13:47.530 align:middle line:90%
+being run on different objects.
+
+00:13:47.530 --> 00:13:50.970 align:middle line:84%
+So up here, if I run--
+it's literally a function
+
+00:13:50.970 --> 00:13:51.600 align:middle line:90%
+in Python--
+
+00:13:51.600 --> 00:13:55.050 align:middle line:84%
+hash of some parameters--
+so in this case, 123--
+
+00:13:55.050 --> 00:13:56.860 align:middle line:90%
+it just gives me the value back.
+
+00:13:56.860 --> 00:14:00.370 align:middle line:84%
+So the hash of some number
+is the number itself.
+
+00:14:00.370 --> 00:14:03.600 align:middle line:90%
+We can hash a string.
+
+00:14:03.600 --> 00:14:06.310 align:middle line:84%
+That'll give us this
+particular number--
+
+00:14:06.310 --> 00:14:07.290 align:middle line:90%
+so again, an integer.
+
+00:14:07.290 --> 00:14:12.570 align:middle line:84%
+The hash of a tuple also
+gives us some number back.
+
+00:14:12.570 --> 00:14:14.850 align:middle line:84%
+So these are all
+just some function
+
+00:14:14.850 --> 00:14:18.840 align:middle line:84%
+running behind the scenes that
+takes in this hashable object
+
+00:14:18.840 --> 00:14:20.430 align:middle line:90%
+and gives us back a number.
+
+00:14:20.430 --> 00:14:21.780 align:middle line:90%
+That's it.
+
+00:14:21.780 --> 00:14:24.630 align:middle line:84%
+Now, we can't run a
+hash function on a list
+
+00:14:24.630 --> 00:14:28.140 align:middle line:84%
+because a list is mutable
+and therefore unhashable.
+
+00:14:28.140 --> 00:14:31.020 align:middle line:84%
+If the object changes,
+then the hash function
+
+00:14:31.020 --> 00:14:33.825 align:middle line:84%
+run on this object will
+give us a different value.
+
+00:14:33.825 --> 00:14:36.570 align:middle line:90%
+
+
+00:14:36.570 --> 00:14:39.390 align:middle line:84%
+So if you actually run
+this on your own computer,
+
+00:14:39.390 --> 00:14:40.860 align:middle line:90%
+you might get different answers.
+
+00:14:40.860 --> 00:14:42.360 align:middle line:84%
+Or if you run it
+at different times,
+
+00:14:42.360 --> 00:14:44.310 align:middle line:84%
+you might get different
+answers because Python
+
+00:14:44.310 --> 00:14:48.240 align:middle line:84%
+adds a little bit of
+randomness to the hash values,
+
+00:14:48.240 --> 00:14:50.710 align:middle line:84%
+just in case you want to encrypt
+data and things like that.
+
+00:14:50.710 --> 00:14:53.850 align:middle line:84%
+But generally, you will
+always get some integer back
+
+00:14:53.850 --> 00:14:59.880 align:middle line:84%
+if you run the hash function
+on an immutable object.
+
+00:14:59.880 --> 00:15:04.620 align:middle line:84%
+So then that begs the question,
+how big should a hash table be?
+
+00:15:04.620 --> 00:15:07.770 align:middle line:84%
+So if a hash table is
+basically just a long list,
+
+00:15:07.770 --> 00:15:11.040 align:middle line:84%
+and if I run a
+function on some object
+
+00:15:11.040 --> 00:15:13.860 align:middle line:84%
+to give me the value of
+an index within that list,
+
+00:15:13.860 --> 00:15:15.630 align:middle line:90%
+how big should this table be?
+
+00:15:15.630 --> 00:15:17.370 align:middle line:90%
+How many indices should I have?
+
+00:15:17.370 --> 00:15:18.390 align:middle line:90%
+1,000?
+
+00:15:18.390 --> 00:15:19.170 align:middle line:90%
+1 million?
+
+00:15:19.170 --> 00:15:20.070 align:middle line:90%
+10 million?
+
+00:15:20.070 --> 00:15:22.190 align:middle line:90%
+What's a good number?
+
+00:15:22.190 --> 00:15:25.780 align:middle line:84%
+Well, let's take an
+example of a string.
+
+00:15:25.780 --> 00:15:28.840 align:middle line:84%
+So for a string,
+what we can do is--
+
+00:15:28.840 --> 00:15:31.220 align:middle line:84%
+and we can use my
+name as an example.
+
+00:15:31.220 --> 00:15:37.390 align:middle line:84%
+If we want to hash my name such
+that every single name hashes
+
+00:15:37.390 --> 00:15:40.580 align:middle line:84%
+to something unique, what
+we can do is the following.
+
+00:15:40.580 --> 00:15:44.320 align:middle line:84%
+So we can take each
+character in somebody's name.
+
+00:15:44.320 --> 00:15:49.090 align:middle line:84%
+And behind the scenes, each
+one of these characters
+
+00:15:49.090 --> 00:15:51.940 align:middle line:90%
+actually has an integer--
+
+00:15:51.940 --> 00:15:54.680 align:middle line:84%
+sorry, an ASCII code
+associated with it,
+
+00:15:54.680 --> 00:15:56.380 align:middle line:90%
+which is something numeric.
+
+00:15:56.380 --> 00:16:00.170 align:middle line:84%
+And what we can do is just
+convert that number to binary.
+
+00:16:00.170 --> 00:16:05.530 align:middle line:84%
+So the letter capital A happens
+to be this binary value--
+
+00:16:05.530 --> 00:16:07.810 align:middle line:90%
+01000001.
+
+00:16:07.810 --> 00:16:10.150 align:middle line:90%
+The lowercase n is this value.
+
+00:16:10.150 --> 00:16:13.690 align:middle line:84%
+The lowercase a is
+this value and so on.
+
+00:16:13.690 --> 00:16:18.100 align:middle line:84%
+So I've got seven different
+groups of eight bits
+
+00:16:18.100 --> 00:16:21.130 align:middle line:84%
+here for corresponding to
+each letter in my name.
+
+00:16:21.130 --> 00:16:23.010 align:middle line:90%
+Now, if I take those bits.
+
+00:16:23.010 --> 00:16:24.710 align:middle line:84%
+And now just smush
+them together,
+
+00:16:24.710 --> 00:16:29.210 align:middle line:84%
+concatenate them to give me
+one really, really big number--
+
+00:16:29.210 --> 00:16:32.730 align:middle line:84%
+so this is all going to
+be one really big number--
+
+00:16:32.730 --> 00:16:39.440 align:middle line:84%
+the corresponding number in base
+10 is this really long thing.
+
+00:16:39.440 --> 00:16:44.220 align:middle line:84%
+And so if I do this, as long
+as someone's name is unique,
+
+00:16:44.220 --> 00:16:47.840 align:middle line:84%
+they will end up with a
+unique number associated
+
+00:16:47.840 --> 00:16:49.130 align:middle line:90%
+with their name.
+
+00:16:49.130 --> 00:16:51.140 align:middle line:84%
+And therefore,
+that unique number
+
+00:16:51.140 --> 00:16:56.500 align:middle line:84%
+can be used as a unique index
+into a really big hash table.
+
+00:16:56.500 --> 00:17:01.020 align:middle line:84%
+So let's think about hashing
+the names of MIT's 4,000
+
+00:17:01.020 --> 00:17:03.410 align:middle line:90%
+undergrads.
+
+00:17:03.410 --> 00:17:09.089 align:middle line:84%
+Let's assume that the longest
+name is 20 characters long.
+
+00:17:09.089 --> 00:17:12.319 align:middle line:84%
+So there's going to be 20
+of these different letters
+
+00:17:12.319 --> 00:17:14.210 align:middle line:90%
+that we need to hash.
+
+00:17:14.210 --> 00:17:16.560 align:middle line:90%
+So we use the same process here.
+
+00:17:16.560 --> 00:17:19.609 align:middle line:84%
+Each one of those
+20 characters gets
+
+00:17:19.609 --> 00:17:22.990 align:middle line:90%
+its own 8-bit representation.
+
+00:17:22.990 --> 00:17:25.680 align:middle line:84%
+So in total, the
+number of bits that I'm
+
+00:17:25.680 --> 00:17:28.950 align:middle line:84%
+going to use to represent
+that 20-long character
+
+00:17:28.950 --> 00:17:34.260 align:middle line:84%
+is going to be 8 times
+20, so 160 different bits.
+
+00:17:34.260 --> 00:17:35.590 align:middle line:90%
+That's a lot of bits.
+
+00:17:35.590 --> 00:17:38.130 align:middle line:84%
+And if I concatenate
+all those together,
+
+00:17:38.130 --> 00:17:41.490 align:middle line:84%
+the number that
+corresponds to is
+
+00:17:41.490 --> 00:17:45.870 align:middle line:84%
+2 to the 160, which
+is this thing here.
+
+00:17:45.870 --> 00:17:51.630 align:middle line:84%
+So if I want every single
+combination of letters
+
+00:17:51.630 --> 00:17:56.700 align:middle line:84%
+in the alphabet to be a unique
+value in this long list,
+
+00:17:56.700 --> 00:18:00.510 align:middle line:84%
+then I will need to have
+a list that is this long.
+
+00:18:00.510 --> 00:18:03.150 align:middle line:84%
+I'm not even going
+to try to figure out
+
+00:18:03.150 --> 00:18:05.110 align:middle line:84%
+or to say how big
+this number is,
+
+00:18:05.110 --> 00:18:08.150 align:middle line:90%
+but it's really, really big.
+
+00:18:08.150 --> 00:18:11.930 align:middle line:84%
+And having a list,
+a.k.a. hash table,
+
+00:18:11.930 --> 00:18:15.680 align:middle line:84%
+that has this many entries
+will guarantee for me
+
+00:18:15.680 --> 00:18:18.650 align:middle line:84%
+that names that are
+20 characters long
+
+00:18:18.650 --> 00:18:21.860 align:middle line:84%
+will each hash to
+something unique.
+
+00:18:21.860 --> 00:18:27.480 align:middle line:84%
+But I only have 4,000 names that
+I'd like to put in my table.
+
+00:18:27.480 --> 00:18:29.630 align:middle line:84%
+So I have 4,000
+names that I'd like
+
+00:18:29.630 --> 00:18:33.530 align:middle line:84%
+to put in a table that
+has this many spots.
+
+00:18:33.530 --> 00:18:35.540 align:middle line:90%
+So that's a lot of wasted space.
+
+00:18:35.540 --> 00:18:36.050 align:middle line:90%
+Yeah?
+
+00:18:36.050 --> 00:18:40.100 align:middle line:84%
+STUDENT: Sorry, is it the 160
+because you put it to binary?
+
+00:18:40.100 --> 00:18:41.810 align:middle line:90%
+ANA BELL: Yeah, exactly.
+
+00:18:41.810 --> 00:18:44.480 align:middle line:84%
+So each one of
+the characters has
+
+00:18:44.480 --> 00:18:46.280 align:middle line:90%
+eight bits associated with it.
+
+00:18:46.280 --> 00:18:49.910 align:middle line:84%
+So there's going to be 160 of
+these zeros or ones in a row.
+
+00:18:49.910 --> 00:18:54.320 align:middle line:84%
+So to tell the number that
+that's associated with,
+
+00:18:54.320 --> 00:18:57.200 align:middle line:90%
+we basically say--
+
+00:18:57.200 --> 00:19:01.400 align:middle line:84%
+we basically
+calculate 10000000--
+
+00:19:01.400 --> 00:19:03.170 align:middle line:90%
+with 20 zeros at the end.
+
+00:19:03.170 --> 00:19:07.240 align:middle line:90%
+And that gives me 2 to the 160.
+
+00:19:07.240 --> 00:19:10.114 align:middle line:84%
+That's going to be
+how big my number is.
+
+00:19:10.114 --> 00:19:11.550 align:middle line:90%
+STUDENT: [INAUDIBLE]?
+
+00:19:11.550 --> 00:19:14.640 align:middle line:90%
+ANA BELL: That is going to be--
+
+00:19:14.640 --> 00:19:16.740 align:middle line:90%
+that's going to be for one--
+
+00:19:16.740 --> 00:19:19.650 align:middle line:84%
+that's going to be how many
+slots I'll need in order
+
+00:19:19.650 --> 00:19:27.050 align:middle line:84%
+to have unique combinations of
+letters be mapped to one slot.
+
+00:19:27.050 --> 00:19:29.630 align:middle line:90%
+So 0001 will map to one thing.
+
+00:19:29.630 --> 00:19:32.060 align:middle line:90%
+00010 will map to another thing.
+
+00:19:32.060 --> 00:19:34.230 align:middle line:90%
+0011 will map to another thing.
+
+00:19:34.230 --> 00:19:36.560 align:middle line:84%
+So all these
+combinations of letters
+
+00:19:36.560 --> 00:19:38.360 align:middle line:84%
+will each map to
+something unique.
+
+00:19:38.360 --> 00:19:42.770 align:middle line:84%
+And in order to guarantee
+that, I need this many slots.
+
+00:19:42.770 --> 00:19:45.650 align:middle line:84%
+Again, since, I only have
+4,000 undergrads, well,
+
+00:19:45.650 --> 00:19:47.690 align:middle line:90%
+that's a lot of wasted space.
+
+00:19:47.690 --> 00:19:51.860 align:middle line:84%
+I'm only using 4,000 of these
+slots to hold students' names.
+
+00:19:51.860 --> 00:19:54.350 align:middle line:84%
+And that's because a lot of
+those combinations of letters
+
+00:19:54.350 --> 00:19:57.010 align:middle line:90%
+aren't really valid.
+
+00:19:57.010 --> 00:19:59.210 align:middle line:90%
+So what's the solution?
+
+00:19:59.210 --> 00:20:00.970 align:middle line:84%
+There's a lot of
+wasted space there.
+
+00:20:00.970 --> 00:20:03.820 align:middle line:84%
+So the solution would be to
+say, well, you know what?
+
+00:20:03.820 --> 00:20:07.640 align:middle line:84%
+I would be fine with having
+a smaller hash table.
+
+00:20:07.640 --> 00:20:11.110 align:middle line:84%
+I don't need that giant number
+of entries in my hash table.
+
+00:20:11.110 --> 00:20:15.730 align:middle line:84%
+I would be fine with
+maybe having 10,000 spots,
+
+00:20:15.730 --> 00:20:18.010 align:middle line:84%
+and then having some
+names that happen
+
+00:20:18.010 --> 00:20:20.320 align:middle line:84%
+to hash to the same
+thing or saying,
+
+00:20:20.320 --> 00:20:23.860 align:middle line:84%
+I'm fine with having a hash
+table that has a million spots.
+
+00:20:23.860 --> 00:20:26.890 align:middle line:84%
+And out of those 4,000,
+some will be used,
+
+00:20:26.890 --> 00:20:28.840 align:middle line:84%
+some will be unused,
+and some might
+
+00:20:28.840 --> 00:20:31.180 align:middle line:90%
+collide to the same hash value.
+
+00:20:31.180 --> 00:20:33.880 align:middle line:90%
+And that's totally OK.
+
+00:20:33.880 --> 00:20:37.310 align:middle line:84%
+So if we allow collisions, what
+is this going to look like?
+
+00:20:37.310 --> 00:20:41.030 align:middle line:84%
+So here's a visualization
+of our hash table.
+
+00:20:41.030 --> 00:20:43.390 align:middle line:84%
+So think of the hash
+table like a list.
+
+00:20:43.390 --> 00:20:46.300 align:middle line:84%
+The reason why we think of it
+as a list is because indexing
+
+00:20:46.300 --> 00:20:48.790 align:middle line:90%
+into a list is constant time.
+
+00:20:48.790 --> 00:20:50.920 align:middle line:84%
+We're taking
+advantage of the idea
+
+00:20:50.920 --> 00:20:55.020 align:middle line:84%
+that if we index into a list,
+that's going to be constant.
+
+00:20:55.020 --> 00:20:58.130 align:middle line:84%
+So let's say we're
+adding some names
+
+00:20:58.130 --> 00:21:00.990 align:middle line:90%
+and grades into our hash table.
+
+00:21:00.990 --> 00:21:04.610 align:middle line:84%
+So this is our representation
+of a dictionary.
+
+00:21:04.610 --> 00:21:09.740 align:middle line:84%
+The values here says that I
+have a hash table that has
+
+00:21:09.740 --> 00:21:13.190 align:middle line:90%
+16 different entries, 0 to 15.
+
+00:21:13.190 --> 00:21:18.920 align:middle line:84%
+And 0 to 15 corresponds
+to the list index.
+
+00:21:18.920 --> 00:21:22.460 align:middle line:84%
+So if I have a name
+and a grade that I'd
+
+00:21:22.460 --> 00:21:25.670 align:middle line:84%
+like to add to my
+hash table, I need
+
+00:21:25.670 --> 00:21:28.440 align:middle line:84%
+to run a hash
+function on the key.
+
+00:21:28.440 --> 00:21:29.930 align:middle line:90%
+So the key is the name.
+
+00:21:29.930 --> 00:21:35.150 align:middle line:84%
+And the grade is the value
+associated with the name.
+
+00:21:35.150 --> 00:21:39.290 align:middle line:84%
+So to add Ana with a grade
+of C to my hash table,
+
+00:21:39.290 --> 00:21:41.840 align:middle line:84%
+I need to take my
+Ana, which is the key,
+
+00:21:41.840 --> 00:21:44.780 align:middle line:84%
+and run a hash function
+on it such that,
+
+00:21:44.780 --> 00:21:48.050 align:middle line:84%
+when I run the hash function
+on this name, A-n-a,
+
+00:21:48.050 --> 00:21:53.150 align:middle line:84%
+it'll give me a number, an
+integer between 0 and 15.
+
+00:21:53.150 --> 00:21:57.800 align:middle line:84%
+And if I can do that, then I
+know I've added my entry here
+
+00:21:57.800 --> 00:22:01.230 align:middle line:90%
+into one of these buckets.
+
+00:22:01.230 --> 00:22:03.988 align:middle line:84%
+So a reasonable hash
+function to run on the name--
+
+00:22:03.988 --> 00:22:05.780 align:middle line:84%
+and we saw this in the
+dictionary lecture--
+
+00:22:05.780 --> 00:22:09.290 align:middle line:84%
+is to say, well, let's have
+A map to 1, B map to 2,
+
+00:22:09.290 --> 00:22:11.610 align:middle line:90%
+C map to 3, and so on.
+
+00:22:11.610 --> 00:22:17.630 align:middle line:84%
+So for my name, I've got 1
+plus 14 plus 1 equals 16.
+
+00:22:17.630 --> 00:22:21.980 align:middle line:84%
+But since I want to ensure that
+this hash function gives me
+
+00:22:21.980 --> 00:22:28.170 align:middle line:84%
+a number between 0 and 15,
+let's mod that with 16.
+
+00:22:28.170 --> 00:22:30.560 align:middle line:84%
+So I can sum all the letters
+in my name just fine.
+
+00:22:30.560 --> 00:22:32.570 align:middle line:84%
+And then let's
+finalize it by saying
+
+00:22:32.570 --> 00:22:36.590 align:middle line:84%
+mod 16 to give me the
+remainder-- either 0 1, 2,
+
+00:22:36.590 --> 00:22:37.640 align:middle line:90%
+or 15.
+
+00:22:37.640 --> 00:22:41.930 align:middle line:84%
+And if I do that, I'm
+ensured that this key value
+
+00:22:41.930 --> 00:22:46.800 align:middle line:84%
+pair will be added to one of
+these buckets from 0 to 15.
+
+00:22:46.800 --> 00:22:50.570 align:middle line:84%
+So in this particular case, Ana
+with a grade of C maps to 0.
+
+00:22:50.570 --> 00:22:54.800 align:middle line:84%
+That's what the hash function
+on my name told me to add--
+
+00:22:54.800 --> 00:22:57.140 align:middle line:84%
+the location that the
+hash function on my name
+
+00:22:57.140 --> 00:22:58.100 align:middle line:90%
+told me to add to.
+
+00:22:58.100 --> 00:23:00.450 align:middle line:84%
+So there I am putting
+my name in there.
+
+00:23:00.450 --> 00:23:02.080 align:middle line:90%
+Let's add a couple more people.
+
+00:23:02.080 --> 00:23:03.990 align:middle line:90%
+So here's Eric.
+
+00:23:03.990 --> 00:23:07.590 align:middle line:90%
+His name hashes to 35 mod 16.
+
+00:23:07.590 --> 00:23:08.910 align:middle line:90%
+So that's 3.
+
+00:23:08.910 --> 00:23:12.960 align:middle line:84%
+So I'm going to add Eric and
+his grade to bucket number 3.
+
+00:23:12.960 --> 00:23:15.450 align:middle line:84%
+Then we can add John
+with a grade of B.
+
+00:23:15.450 --> 00:23:19.050 align:middle line:90%
+His name hashes to 47 mod 16.
+
+00:23:19.050 --> 00:23:20.380 align:middle line:90%
+So that's 15.
+
+00:23:20.380 --> 00:23:23.910 align:middle line:84%
+So we can add John
+down in bucket 15.
+
+00:23:23.910 --> 00:23:26.550 align:middle line:84%
+And then let's add
+Eve with a grade of B.
+
+00:23:26.550 --> 00:23:32.370 align:middle line:84%
+So she hashes to 32 mod
+16, which is also 0.
+
+00:23:32.370 --> 00:23:33.900 align:middle line:90%
+And you know what?
+
+00:23:33.900 --> 00:23:36.720 align:middle line:84%
+Anna was already
+in the bucket 0.
+
+00:23:36.720 --> 00:23:39.720 align:middle line:84%
+But that's fine
+because you know what?
+
+00:23:39.720 --> 00:23:43.080 align:middle line:84%
+I have four names
+here, so four entries
+
+00:23:43.080 --> 00:23:46.140 align:middle line:84%
+that I want to add to my
+hash table dictionary.
+
+00:23:46.140 --> 00:23:48.930 align:middle line:90%
+And two of them collided.
+
+00:23:48.930 --> 00:23:50.020 align:middle line:90%
+That's fine.
+
+00:23:50.020 --> 00:23:53.470 align:middle line:84%
+I still have many other
+buckets that are empty here.
+
+00:23:53.470 --> 00:23:57.720 align:middle line:84%
+So if I have 10
+students in my class,
+
+00:23:57.720 --> 00:24:00.660 align:middle line:84%
+probably they won't
+all hash to 0.
+
+00:24:00.660 --> 00:24:03.550 align:middle line:84%
+They'll probably hash
+somewhere within here
+
+00:24:03.550 --> 00:24:05.220 align:middle line:90%
+so that it's nicely balanced.
+
+00:24:05.220 --> 00:24:09.990 align:middle line:84%
+And so maybe out of 10 students
+in my class, only two collided.
+
+00:24:09.990 --> 00:24:12.060 align:middle line:84%
+And that's way
+better than having
+
+00:24:12.060 --> 00:24:17.250 align:middle line:84%
+all of the students in the class
+be enumerated in one long list.
+
+00:24:17.250 --> 00:24:20.790 align:middle line:84%
+So when I look up Ana, the
+way that this works is you
+
+00:24:20.790 --> 00:24:22.590 align:middle line:90%
+hash the name Ana again.
+
+00:24:22.590 --> 00:24:26.340 align:middle line:84%
+So when you want to look up the
+grade of Ana, that's the key.
+
+00:24:26.340 --> 00:24:28.380 align:middle line:90%
+You hash the value Ana again.
+
+00:24:28.380 --> 00:24:30.690 align:middle line:90%
+You say, hey, Ana hashed to 0.
+
+00:24:30.690 --> 00:24:35.040 align:middle line:84%
+So then I'm going to look in
+bucket 0 and say, all right,
+
+00:24:35.040 --> 00:24:37.740 align:middle line:84%
+let me enumerate everybody
+who's in bucket 0
+
+00:24:37.740 --> 00:24:39.990 align:middle line:84%
+and see if I can find
+Ana with her grade.
+
+00:24:39.990 --> 00:24:41.650 align:middle line:90%
+Happens to be the first one.
+
+00:24:41.650 --> 00:24:43.590 align:middle line:84%
+But if it was later
+on, then I'd still
+
+00:24:43.590 --> 00:24:45.990 align:middle line:84%
+be able to grab it
+much faster than if I
+
+00:24:45.990 --> 00:24:48.800 align:middle line:90%
+had everybody in one long list.
+
+00:24:48.800 --> 00:24:50.430 align:middle line:90%
+Does that make sense?
+
+00:24:50.430 --> 00:24:52.075 align:middle line:84%
+Like the idea of--
+yeah, go ahead.
+
+00:24:52.075 --> 00:24:53.867 align:middle line:84%
+STUDENT: So you can
+still like access them.
+
+00:24:53.867 --> 00:24:56.330 align:middle line:84%
+It's just that you might get
+two answers instead of one.
+
+00:24:56.330 --> 00:24:57.110 align:middle line:90%
+ANA BELL: Exactly, yeah.
+
+00:24:57.110 --> 00:24:58.250 align:middle line:90%
+You can still access them.
+
+00:24:58.250 --> 00:25:00.950 align:middle line:84%
+You just might have to
+look through a list of two.
+
+00:25:00.950 --> 00:25:02.960 align:middle line:84%
+So here at bucket
+0, I'm effectively
+
+00:25:02.960 --> 00:25:06.560 align:middle line:84%
+storing a list of
+everything that hashed
+
+00:25:06.560 --> 00:25:10.160 align:middle line:90%
+to a 0, which is it's fine.
+
+00:25:10.160 --> 00:25:12.470 align:middle line:84%
+Yes, that's two that I
+have to look through.
+
+00:25:12.470 --> 00:25:13.280 align:middle line:90%
+It's not four.
+
+00:25:13.280 --> 00:25:14.030 align:middle line:90%
+It's not 10.
+
+00:25:14.030 --> 00:25:15.140 align:middle line:90%
+It's not 100.
+
+00:25:15.140 --> 00:25:19.330 align:middle line:90%
+It's not everybody all in a row.
+
+00:25:19.330 --> 00:25:20.220 align:middle line:90%
+Yeah?
+
+00:25:20.220 --> 00:25:22.060 align:middle line:84%
+STUDENT: Is the
+complexity that theta n?
+
+00:25:22.060 --> 00:25:23.518 align:middle line:84%
+ANA BELL: So the
+complexity of this
+
+00:25:23.518 --> 00:25:26.160 align:middle line:84%
+is actually going to be
+smaller than theta of n.
+
+00:25:26.160 --> 00:25:30.120 align:middle line:84%
+And it'll depend on the
+hash function that we use.
+
+00:25:30.120 --> 00:25:32.490 align:middle line:84%
+This hash function needs
+to be nicely balanced.
+
+00:25:32.490 --> 00:25:35.310 align:middle line:84%
+It shouldn't put
+everyone in bucket 0.
+
+00:25:35.310 --> 00:25:37.530 align:middle line:84%
+Then that's a useless
+hash function.
+
+00:25:37.530 --> 00:25:40.260 align:middle line:84%
+And it depends on the
+size of the hash table.
+
+00:25:40.260 --> 00:25:45.000 align:middle line:84%
+If I have maybe 1,000 people
+that I'm storing in 15 buckets,
+
+00:25:45.000 --> 00:25:47.340 align:middle line:84%
+I'm going to have a
+lot of collisions.
+
+00:25:47.340 --> 00:25:51.120 align:middle line:84%
+But if I'm only storing these
+four, or maybe eight, or 10,
+
+00:25:51.120 --> 00:25:54.000 align:middle line:84%
+or something smaller than
+the size of my table,
+
+00:25:54.000 --> 00:25:55.740 align:middle line:84%
+then there will be
+far fewer collisions.
+
+00:25:55.740 --> 00:25:58.000 align:middle line:84%
+It'll be more nicely
+balanced, yeah.
+
+00:25:58.000 --> 00:26:00.420 align:middle line:84%
+STUDENT: I meant like theta
+n like the things in 0.
+
+00:26:00.420 --> 00:26:03.150 align:middle line:84%
+ANA BELL: Oh, theta of n
+for the things in 0, yes.
+
+00:26:03.150 --> 00:26:05.250 align:middle line:84%
+And that's fine
+because usually what
+
+00:26:05.250 --> 00:26:08.910 align:middle line:84%
+we care about is theta of
+the length of the input.
+
+00:26:08.910 --> 00:26:11.460 align:middle line:84%
+So in this case,
+it's theta of-- if I
+
+00:26:11.460 --> 00:26:14.070 align:middle line:84%
+have four students
+in my class, I've
+
+00:26:14.070 --> 00:26:18.820 align:middle line:90%
+got only two that mapped to 0.
+
+00:26:18.820 --> 00:26:21.610 align:middle line:90%
+So here, it's length over 2.
+
+00:26:21.610 --> 00:26:25.210 align:middle line:84%
+But if I had more students,
+then it would be far fewer.
+
+00:26:25.210 --> 00:26:27.700 align:middle line:84%
+It would be 2 out of 10
+or maybe 2 out of 15 that
+
+00:26:27.700 --> 00:26:29.320 align:middle line:90%
+hash to the same thing, yeah.
+
+00:26:29.320 --> 00:26:33.150 align:middle line:90%
+
+
+00:26:33.150 --> 00:26:36.870 align:middle line:84%
+Yeah, so as the question said,
+what makes a good hash table
+
+00:26:36.870 --> 00:26:40.110 align:middle line:90%
+and hash function pair?
+
+00:26:40.110 --> 00:26:43.890 align:middle line:84%
+Because this only works if
+you have a really good hash
+
+00:26:43.890 --> 00:26:46.900 align:middle line:84%
+function and a nice hash
+table to go along with it.
+
+00:26:46.900 --> 00:26:50.250 align:middle line:84%
+So this is actually a problem
+in computer science, a research
+
+00:26:50.250 --> 00:26:52.000 align:middle line:90%
+problem all by itself.
+
+00:26:52.000 --> 00:26:55.530 align:middle line:84%
+So people actually study
+this for their lives,
+
+00:26:55.530 --> 00:26:59.330 align:middle line:84%
+coming up with good hash
+functions and hash tables.
+
+00:26:59.330 --> 00:27:01.700 align:middle line:90%
+So some base rules--
+
+00:27:01.700 --> 00:27:05.010 align:middle line:84%
+you want to have the
+domain of interest--
+
+00:27:05.010 --> 00:27:09.350 align:middle line:84%
+so in this particular
+case, a tuple, or a string,
+
+00:27:09.350 --> 00:27:11.630 align:middle line:90%
+or whatever it is--
+
+00:27:11.630 --> 00:27:15.210 align:middle line:84%
+mapped to integers between 0
+and the size of the hash table.
+
+00:27:15.210 --> 00:27:17.450 align:middle line:84%
+So in the previous
+example, we don't
+
+00:27:17.450 --> 00:27:19.190 align:middle line:84%
+want to have a
+hash function that
+
+00:27:19.190 --> 00:27:24.980 align:middle line:84%
+mods 2 because then everything
+will either hash to 0 or 1.
+
+00:27:24.980 --> 00:27:27.403 align:middle line:84%
+If our hash table has 15
+things, well, we better
+
+00:27:27.403 --> 00:27:29.570 align:middle line:84%
+make sure that our hash
+function is going to give us
+
+00:27:29.570 --> 00:27:32.550 align:middle line:90%
+a number between 0 and 15.
+
+00:27:32.550 --> 00:27:38.700 align:middle line:84%
+Second, you want the hash
+value to be fully determined
+
+00:27:38.700 --> 00:27:40.230 align:middle line:90%
+by the value being hashed.
+
+00:27:40.230 --> 00:27:44.010 align:middle line:84%
+So in this case, we don't
+want any sort of randomness
+
+00:27:44.010 --> 00:27:46.710 align:middle line:84%
+to go on for the
+reason that, well,
+
+00:27:46.710 --> 00:27:52.140 align:middle line:84%
+if I want to look up Eve's
+grade later on in the code
+
+00:27:52.140 --> 00:27:55.050 align:middle line:84%
+or whatever, then I need
+to run the exact same hash
+
+00:27:55.050 --> 00:27:58.060 align:middle line:84%
+function on her name
+to determine the grade.
+
+00:27:58.060 --> 00:28:01.500 align:middle line:84%
+So if there's randomness
+involved in this hash function,
+
+00:28:01.500 --> 00:28:04.710 align:middle line:84%
+then you might not get
+back the same value
+
+00:28:04.710 --> 00:28:06.540 align:middle line:90%
+that it has to originally.
+
+00:28:06.540 --> 00:28:08.430 align:middle line:84%
+So you'll be looking
+in the wrong bucket.
+
+00:28:08.430 --> 00:28:12.060 align:middle line:84%
+And you'll incorrectly say
+she doesn't have a value
+
+00:28:12.060 --> 00:28:15.080 align:middle line:90%
+or she's not there.
+
+00:28:15.080 --> 00:28:18.860 align:middle line:84%
+Third, you want to use the
+whole input to hash the--
+
+00:28:18.860 --> 00:28:21.050 align:middle line:84%
+the function should
+use the whole input
+
+00:28:21.050 --> 00:28:24.150 align:middle line:90%
+to run the hash function.
+
+00:28:24.150 --> 00:28:27.410 align:middle line:84%
+So again, in this
+example, we don't just
+
+00:28:27.410 --> 00:28:29.750 align:middle line:84%
+want to use the first
+letters of people's names
+
+00:28:29.750 --> 00:28:32.480 align:middle line:84%
+because then that will lead
+to a lot more collisions
+
+00:28:32.480 --> 00:28:36.770 align:middle line:84%
+than if we used the sum of all
+the letters in the alphabet--
+
+00:28:36.770 --> 00:28:38.180 align:middle line:84%
+or all the letters
+in their name.
+
+00:28:38.180 --> 00:28:41.120 align:middle line:90%
+
+
+00:28:41.120 --> 00:28:42.590 align:middle line:90%
+So those are really big ideas.
+
+00:28:42.590 --> 00:28:47.210 align:middle line:84%
+And then what we want
+out of our hash function
+
+00:28:47.210 --> 00:28:50.180 align:middle line:90%
+is all the values.
+
+00:28:50.180 --> 00:28:52.820 align:middle line:84%
+If you run this hash function
+on a bunch of different inputs
+
+00:28:52.820 --> 00:28:54.830 align:middle line:84%
+where you're storing
+names or you're storing--
+
+00:28:54.830 --> 00:28:57.110 align:middle line:84%
+I don't know-- tuples or
+whatever you're storing,
+
+00:28:57.110 --> 00:29:00.290 align:middle line:84%
+you want this function to
+give you a nice uniform
+
+00:29:00.290 --> 00:29:01.940 align:middle line:90%
+distribution of values.
+
+00:29:01.940 --> 00:29:04.310 align:middle line:84%
+So in our hash table
+previously here,
+
+00:29:04.310 --> 00:29:07.160 align:middle line:84%
+if I add more names
+to my hash table,
+
+00:29:07.160 --> 00:29:10.220 align:middle line:84%
+I want to ensure that they're
+going to land in buckets 2, 5,
+
+00:29:10.220 --> 00:29:12.500 align:middle line:90%
+6, 7, 8, 9, 10 11, 12, 13, 14.
+
+00:29:12.500 --> 00:29:15.800 align:middle line:84%
+I don't want everything
+to hash to number 0.
+
+00:29:15.800 --> 00:29:18.710 align:middle line:90%
+That would be very bad.
+
+00:29:18.710 --> 00:29:22.720 align:middle line:84%
+So as a side reminder, back in
+the lecture on dictionaries,
+
+00:29:22.720 --> 00:29:28.540 align:middle line:84%
+I actually said
+something like, for now,
+
+00:29:28.540 --> 00:29:32.740 align:middle line:84%
+think of the objects
+that can be keys
+
+00:29:32.740 --> 00:29:36.010 align:middle line:84%
+to a dictionary as
+immutable objects.
+
+00:29:36.010 --> 00:29:37.450 align:middle line:84%
+And I said,
+technically hashable,
+
+00:29:37.450 --> 00:29:39.320 align:middle line:84%
+but we don't need to
+know what that is.
+
+00:29:39.320 --> 00:29:43.090 align:middle line:84%
+Well, hashable means just this--
+you can run a hash function
+
+00:29:43.090 --> 00:29:46.060 align:middle line:84%
+on the object and you'll
+get the same value back
+
+00:29:46.060 --> 00:29:48.580 align:middle line:84%
+no matter how many times
+you run the hash function
+
+00:29:48.580 --> 00:29:50.530 align:middle line:90%
+on that object.
+
+00:29:50.530 --> 00:29:53.110 align:middle line:90%
+So we looked at this example.
+
+00:29:53.110 --> 00:29:56.710 align:middle line:84%
+What happens if we add a
+student whose name is not
+
+00:29:56.710 --> 00:29:58.570 align:middle line:90%
+immutable, not hashable?
+
+00:29:58.570 --> 00:30:01.250 align:middle line:90%
+So lists are mutable objects.
+
+00:30:01.250 --> 00:30:03.340 align:middle line:84%
+So as such, they
+are not hashable.
+
+00:30:03.340 --> 00:30:07.000 align:middle line:84%
+That means, if we run a hash
+function on a list today,
+
+00:30:07.000 --> 00:30:10.990 align:middle line:84%
+and then we potentially mutate
+the list, tomorrow that list
+
+00:30:10.990 --> 00:30:12.970 align:middle line:90%
+will not hash to the same thing.
+
+00:30:12.970 --> 00:30:14.390 align:middle line:90%
+So we saw this example.
+
+00:30:14.390 --> 00:30:18.390 align:middle line:84%
+Let's say Kate with a K is
+added to our hash table.
+
+00:30:18.390 --> 00:30:24.080 align:middle line:84%
+So her name currently hashes
+to 37 mod 16, which is a 5.
+
+00:30:24.080 --> 00:30:25.760 align:middle line:90%
+So we added her there.
+
+00:30:25.760 --> 00:30:28.160 align:middle line:84%
+Now, let's say tomorrow
+we want to look up
+
+00:30:28.160 --> 00:30:31.100 align:middle line:84%
+her grades to do
+whatever to integrate it
+
+00:30:31.100 --> 00:30:32.640 align:middle line:90%
+into a bigger spreadsheet.
+
+00:30:32.640 --> 00:30:36.250 align:middle line:84%
+She had changed her name
+between yesterday and today.
+
+00:30:36.250 --> 00:30:39.940 align:middle line:84%
+Now, she's Cate with a C. If
+we run the same hash function
+
+00:30:39.940 --> 00:30:45.520 align:middle line:84%
+again on her name, that leads us
+to look in a different bucket.
+
+00:30:45.520 --> 00:30:46.810 align:middle line:90%
+She's still there.
+
+00:30:46.810 --> 00:30:49.930 align:middle line:84%
+She's Kate with a K, as we
+had originally added her.
+
+00:30:49.930 --> 00:30:52.100 align:middle line:84%
+But now, her name
+is Cate with a C.
+
+00:30:52.100 --> 00:30:53.350 align:middle line:90%
+We run the same hash function.
+
+00:30:53.350 --> 00:30:55.330 align:middle line:90%
+It tells us to look bucket 13.
+
+00:30:55.330 --> 00:30:57.470 align:middle line:90%
+And she's not there.
+
+00:30:57.470 --> 00:31:02.170 align:middle line:84%
+So that's why we only want
+hashable objects to be added--
+
+00:31:02.170 --> 00:31:05.770 align:middle line:84%
+to be keys to the dictionary
+because we want the same value
+
+00:31:05.770 --> 00:31:11.290 align:middle line:84%
+to come back to us when we
+run the hash function on them.
+
+00:31:11.290 --> 00:31:11.890 align:middle line:90%
+OK.
+
+00:31:11.890 --> 00:31:18.880 align:middle line:84%
+So now, we can see, in the worst
+case scenario, everything maps
+
+00:31:18.880 --> 00:31:22.480 align:middle line:84%
+to the same bucket in
+my hash table, my list.
+
+00:31:22.480 --> 00:31:26.860 align:middle line:84%
+Every single thing I add has a
+really bad hash function on it.
+
+00:31:26.860 --> 00:31:30.640 align:middle line:84%
+Let's say the hash
+function always returns 3.
+
+00:31:30.640 --> 00:31:33.010 align:middle line:84%
+If my hash function
+always returns 3 no matter
+
+00:31:33.010 --> 00:31:35.140 align:middle line:84%
+what I'm adding
+to my dictionary--
+
+00:31:35.140 --> 00:31:38.710 align:middle line:84%
+no matter what I'm hashing,
+then every single item
+
+00:31:38.710 --> 00:31:42.820 align:middle line:84%
+essentially gets put in a really
+long list at bucket number 3.
+
+00:31:42.820 --> 00:31:47.020 align:middle line:84%
+So when I look up a value,
+well, surprise, it hashes to 3.
+
+00:31:47.020 --> 00:31:49.780 align:middle line:84%
+And now, I need to look
+through every single thing
+
+00:31:49.780 --> 00:31:53.170 align:middle line:84%
+in that bucket number 3 to
+find the one I'm looking for.
+
+00:31:53.170 --> 00:31:55.000 align:middle line:90%
+So it's just very, very bad.
+
+00:31:55.000 --> 00:31:58.000 align:middle line:84%
+And in the worst case scenario,
+this is the complexity.
+
+00:31:58.000 --> 00:32:01.030 align:middle line:84%
+It's theta of n, where n is
+the length of whatever items
+
+00:32:01.030 --> 00:32:04.430 align:middle line:84%
+we have that we're
+adding to our buckets--
+
+00:32:04.430 --> 00:32:05.570 align:middle line:90%
+to our hash table.
+
+00:32:05.570 --> 00:32:07.310 align:middle line:90%
+But in the average case--
+
+00:32:07.310 --> 00:32:11.450 align:middle line:84%
+and this is only when we
+have a hash table that's
+
+00:32:11.450 --> 00:32:14.850 align:middle line:84%
+pretty big relative to the
+things that we're adding to it
+
+00:32:14.850 --> 00:32:17.750 align:middle line:84%
+and when we have a hash
+function that's good enough,
+
+00:32:17.750 --> 00:32:20.570 align:middle line:84%
+that has a nice uniform
+distribution of values--
+
+00:32:20.570 --> 00:32:24.170 align:middle line:84%
+only in that case,
+in the average case,
+
+00:32:24.170 --> 00:32:28.160 align:middle line:84%
+the time it takes for us to
+grab a value from a dictionary
+
+00:32:28.160 --> 00:32:31.440 align:middle line:90%
+is theta of 1, constant.
+
+00:32:31.440 --> 00:32:33.900 align:middle line:84%
+And so that's why
+dictionaries are really,
+
+00:32:33.900 --> 00:32:36.680 align:middle line:84%
+really useful data
+structures to store things
+
+00:32:36.680 --> 00:32:39.200 align:middle line:90%
+and to retrieve things from.
+
+00:32:39.200 --> 00:32:42.770 align:middle line:84%
+Back when I was doing
+a little project,
+
+00:32:42.770 --> 00:32:44.547 align:middle line:84%
+I didn't know about
+Python dictionaries.
+
+00:32:44.547 --> 00:32:46.130 align:middle line:84%
+I had just learned
+about the language.
+
+00:32:46.130 --> 00:32:50.840 align:middle line:84%
+And I was actually using lists
+to read in genomic data files.
+
+00:32:50.840 --> 00:32:53.030 align:middle line:84%
+And I was storing
+everything in lists--
+
+00:32:53.030 --> 00:32:54.840 align:middle line:84%
+genomic names and
+things like that.
+
+00:32:54.840 --> 00:32:58.610 align:middle line:90%
+And it was really slow.
+
+00:32:58.610 --> 00:33:02.780 align:middle line:84%
+My advisor would be like,
+is your code done yet?
+
+00:33:02.780 --> 00:33:04.550 align:middle line:84%
+I'm like no, it's
+been a couple of days.
+
+00:33:04.550 --> 00:33:05.420 align:middle line:90%
+It's still waiting.
+
+00:33:05.420 --> 00:33:08.360 align:middle line:84%
+And then someone told me,
+hey, just use a dictionary
+
+00:33:08.360 --> 00:33:09.380 align:middle line:90%
+to store the values.
+
+00:33:09.380 --> 00:33:12.200 align:middle line:84%
+And then the lookup is
+going to be a lot faster.
+
+00:33:12.200 --> 00:33:14.510 align:middle line:84%
+It was done within
+a couple of seconds.
+
+00:33:14.510 --> 00:33:17.900 align:middle line:84%
+So very, very useful,
+the time complexity--
+
+00:33:17.900 --> 00:33:20.480 align:middle line:84%
+because genomic data,
+it's huge amounts of data.
+
+00:33:20.480 --> 00:33:24.770 align:middle line:84%
+So the theta of n versus
+theta of 1 is really--
+
+00:33:24.770 --> 00:33:26.450 align:middle line:84%
+it makes a really
+big difference when
+
+00:33:26.450 --> 00:33:28.460 align:middle line:90%
+you deal with large data sets.
+
+00:33:28.460 --> 00:33:30.390 align:middle line:90%
+It's not just on paper.
+
+00:33:30.390 --> 00:33:33.770 align:middle line:84%
+It actually makes
+a big difference.
+
+00:33:33.770 --> 00:33:34.400 align:middle line:90%
+OK.
+
+00:33:34.400 --> 00:33:35.640 align:middle line:90%
+Questions about this?
+
+00:33:35.640 --> 00:33:37.430 align:middle line:90%
+I hope this ties in--
+
+00:33:37.430 --> 00:33:38.720 align:middle line:90%
+yeah?
+
+00:33:38.720 --> 00:33:41.840 align:middle line:84%
+STUDENT: So Python uses
+a specific hash function?
+
+00:33:41.840 --> 00:33:43.010 align:middle line:90%
+ANA BELL: Yeah.
+
+00:33:43.010 --> 00:33:45.300 align:middle line:84%
+STUDENT: If Python
+updates or anything,
+
+00:33:45.300 --> 00:33:47.960 align:middle line:84%
+Can they change that function
+and nothing would change?
+
+00:33:47.960 --> 00:33:50.270 align:middle line:90%
+Or is it--
+
+00:33:50.270 --> 00:33:51.740 align:middle line:84%
+ANA BELL: Yeah, so
+Python right now
+
+00:33:51.740 --> 00:33:53.060 align:middle line:90%
+uses a specific hash function.
+
+00:33:53.060 --> 00:33:55.910 align:middle line:84%
+In a future version, they might
+use a different hash function.
+
+00:33:55.910 --> 00:33:58.250 align:middle line:84%
+We don't really use
+the numbers associated
+
+00:33:58.250 --> 00:33:59.450 align:middle line:90%
+with the hash functions.
+
+00:33:59.450 --> 00:34:01.370 align:middle line:84%
+I mean, you could
+for your programs.
+
+00:34:01.370 --> 00:34:04.280 align:middle line:84%
+But it would be, I guess,
+relative to whatever value you
+
+00:34:04.280 --> 00:34:05.390 align:middle line:90%
+get, right?
+
+00:34:05.390 --> 00:34:11.630 align:middle line:84%
+So you wouldn't hard-code
+the value for the tuple 123
+
+00:34:11.630 --> 00:34:12.530 align:middle line:90%
+as something, right?
+
+00:34:12.530 --> 00:34:14.960 align:middle line:90%
+You just get what you get.
+
+00:34:14.960 --> 00:34:17.239 align:middle line:90%
+And that's what it is, right?
+
+00:34:17.239 --> 00:34:19.429 align:middle line:84%
+But it could give you a
+different hash function.
+
+00:34:19.429 --> 00:34:21.179 align:middle line:84%
+If you ran out of your
+computer, actually,
+
+00:34:21.179 --> 00:34:24.105 align:middle line:84%
+you might get a different
+hash value than mine, yeah.
+
+00:34:24.105 --> 00:34:28.500 align:middle line:90%
+
+
+00:34:28.500 --> 00:34:32.100 align:middle line:84%
+So this topic kind of ties
+in data structures-- we've
+
+00:34:32.100 --> 00:34:35.820 align:middle line:84%
+seen lists and dictionaries,
+some of the behind
+
+00:34:35.820 --> 00:34:38.230 align:middle line:84%
+the scenes look at
+how things are stored,
+
+00:34:38.230 --> 00:34:40.469 align:middle line:84%
+puts a little complexity
+in there talking
+
+00:34:40.469 --> 00:34:42.520 align:middle line:90%
+about algorithms and runtimes.
+
+00:34:42.520 --> 00:34:44.460 align:middle line:84%
+So it ties in a
+bunch of the topics
+
+00:34:44.460 --> 00:34:48.150 align:middle line:84%
+that we've seen in this
+class really, really nicely.
+
+00:34:48.150 --> 00:34:51.989 align:middle line:84%
+So one other thing that,
+I'd like to now talk about
+
+00:34:51.989 --> 00:34:54.179 align:middle line:90%
+is the idea of a simulation.
+
+00:34:54.179 --> 00:34:56.580 align:middle line:84%
+And this hopefully is going
+to be a little bit more
+
+00:34:56.580 --> 00:35:00.660 align:middle line:84%
+useful to you if you decide to
+take another computer science
+
+00:35:00.660 --> 00:35:04.140 align:middle line:84%
+course or computation course
+in a different field, whatever
+
+00:35:04.140 --> 00:35:04.770 align:middle line:90%
+you'd like.
+
+00:35:04.770 --> 00:35:09.570 align:middle line:84%
+Computation simulations
+are very useful tools
+
+00:35:09.570 --> 00:35:11.080 align:middle line:90%
+in computer science.
+
+00:35:11.080 --> 00:35:13.650 align:middle line:84%
+So it allows you to
+computationally describe
+
+00:35:13.650 --> 00:35:14.230 align:middle line:90%
+the world.
+
+00:35:14.230 --> 00:35:16.050 align:middle line:84%
+So if you see an
+event in the world,
+
+00:35:16.050 --> 00:35:19.920 align:middle line:84%
+you can actually simulate
+it computationally.
+
+00:35:19.920 --> 00:35:21.420 align:middle line:84%
+With what you've
+learned so far, you
+
+00:35:21.420 --> 00:35:23.940 align:middle line:84%
+can totally simulate a
+whole bunch of things.
+
+00:35:23.940 --> 00:35:27.630 align:middle line:84%
+And we're using randomness to
+simulate these events that you
+
+00:35:27.630 --> 00:35:29.140 align:middle line:90%
+might see in the real world.
+
+00:35:29.140 --> 00:35:34.800 align:middle line:84%
+So for example, you might have
+seen the hurricane paths, when
+
+00:35:34.800 --> 00:35:39.300 align:middle line:84%
+you see on the news or
+whatever the most likely path
+
+00:35:39.300 --> 00:35:40.590 align:middle line:90%
+that a hurricane might take.
+
+00:35:40.590 --> 00:35:42.390 align:middle line:84%
+But then they also
+have the little models
+
+00:35:42.390 --> 00:35:44.460 align:middle line:90%
+that show other likely paths.
+
+00:35:44.460 --> 00:35:48.540 align:middle line:84%
+They simulated using
+a bunch of data
+
+00:35:48.540 --> 00:35:52.860 align:middle line:84%
+that they have the most likely
+path for that hurricane.
+
+00:35:52.860 --> 00:35:56.580 align:middle line:84%
+Another place where
+simulation is useful
+
+00:35:56.580 --> 00:35:58.680 align:middle line:84%
+is if you see a real
+world event that's
+
+00:35:58.680 --> 00:36:00.540 align:middle line:90%
+actually kind of complex.
+
+00:36:00.540 --> 00:36:04.170 align:middle line:84%
+You can take a
+simpler set of rules,
+
+00:36:04.170 --> 00:36:09.870 align:middle line:84%
+and simulate those, and
+then add in more rules
+
+00:36:09.870 --> 00:36:12.210 align:middle line:84%
+to make it closer and
+closer to the thing
+
+00:36:12.210 --> 00:36:14.670 align:middle line:84%
+that you actually observed
+in the real world.
+
+00:36:14.670 --> 00:36:17.610 align:middle line:84%
+So the idea of a
+simulation is that you have
+
+00:36:17.610 --> 00:36:19.080 align:middle line:90%
+some event in the real world.
+
+00:36:19.080 --> 00:36:22.120 align:middle line:84%
+And you want to calculate
+something about it.
+
+00:36:22.120 --> 00:36:26.310 align:middle line:84%
+We're going to use computation
+to design an experiment.
+
+00:36:26.310 --> 00:36:29.160 align:middle line:84%
+And we're going to use
+randomness for that.
+
+00:36:29.160 --> 00:36:30.930 align:middle line:84%
+Once we've done
+that, we're going
+
+00:36:30.930 --> 00:36:34.740 align:middle line:84%
+to repeat the experiment a whole
+bunch of times computationally.
+
+00:36:34.740 --> 00:36:36.450 align:middle line:84%
+And that just means
+we're going to put
+
+00:36:36.450 --> 00:36:38.610 align:middle line:84%
+a for loop around
+whatever experiment
+
+00:36:38.610 --> 00:36:40.650 align:middle line:90%
+we've designed computationally.
+
+00:36:40.650 --> 00:36:43.000 align:middle line:84%
+And if you're interested
+in some outcome,
+
+00:36:43.000 --> 00:36:44.668 align:middle line:90%
+some particular outcome, like--
+
+00:36:44.668 --> 00:36:46.710 align:middle line:84%
+as we're going to see,
+we're going to roll a die.
+
+00:36:46.710 --> 00:36:49.740 align:middle line:84%
+And we're interested in how
+many times a 4 comes up.
+
+00:36:49.740 --> 00:36:52.920 align:middle line:84%
+Then we're going to keep
+track of that outcome.
+
+00:36:52.920 --> 00:36:55.620 align:middle line:84%
+And you keep track of
+it however many times
+
+00:36:55.620 --> 00:36:59.340 align:middle line:84%
+that outcome happened in your
+whole bunch of repetitions.
+
+00:36:59.340 --> 00:37:01.920 align:middle line:84%
+And then after the end
+of the repetitions,
+
+00:37:01.920 --> 00:37:03.690 align:middle line:84%
+you can report some
+value of interest--
+
+00:37:03.690 --> 00:37:07.780 align:middle line:84%
+maybe the probability that
+a 4 comes up on a die roll.
+
+00:37:07.780 --> 00:37:09.370 align:middle line:90%
+So here's the example.
+
+00:37:09.370 --> 00:37:11.320 align:middle line:84%
+It's going to be very
+simple because it's
+
+00:37:11.320 --> 00:37:14.200 align:middle line:84%
+something we can calculate
+already right off the bat.
+
+00:37:14.200 --> 00:37:18.280 align:middle line:84%
+But it'll give you a sense of
+how you can write code around
+
+00:37:18.280 --> 00:37:20.180 align:middle line:90%
+such a real world event.
+
+00:37:20.180 --> 00:37:24.220 align:middle line:84%
+So here, we're interested
+in just rolling a dice
+
+00:37:24.220 --> 00:37:26.950 align:middle line:84%
+and seeing the
+probability to get a dot,
+
+00:37:26.950 --> 00:37:32.140 align:middle line:84%
+dot, dot, dot, to get a 4 on the
+dice, on one of the dice rolls
+
+00:37:32.140 --> 00:37:35.570 align:middle line:84%
+or the probability to
+get a dot, whichever.
+
+00:37:35.570 --> 00:37:39.200 align:middle line:84%
+So here, the event is
+that we're rolling a dice.
+
+00:37:39.200 --> 00:37:40.760 align:middle line:84%
+And then we're
+interested in getting
+
+00:37:40.760 --> 00:37:43.410 align:middle line:90%
+the probability of some face.
+
+00:37:43.410 --> 00:37:49.050 align:middle line:84%
+So we're going to design an
+experiment for that dice roll.
+
+00:37:49.050 --> 00:37:51.660 align:middle line:84%
+And this is just one way
+to design the experiment.
+
+00:37:51.660 --> 00:37:54.880 align:middle line:84%
+There are a whole other many,
+many other ways to design it.
+
+00:37:54.880 --> 00:37:58.320 align:middle line:84%
+This is just one that I chose
+that felt illustrated most
+
+00:37:58.320 --> 00:38:03.310 align:middle line:84%
+how we can take a real world
+example and put it into code.
+
+00:38:03.310 --> 00:38:06.340 align:middle line:90%
+So a die has six faces.
+
+00:38:06.340 --> 00:38:10.140 align:middle line:84%
+So what I have done here
+is I've created a list
+
+00:38:10.140 --> 00:38:12.690 align:middle line:90%
+of each one of those faces.
+
+00:38:12.690 --> 00:38:15.515 align:middle line:84%
+You could have used numbers
+as the elements in the list.
+
+00:38:15.515 --> 00:38:16.890 align:middle line:84%
+In this case, I
+just used strings
+
+00:38:16.890 --> 00:38:20.040 align:middle line:84%
+to be a little bit
+cuter, but whatever.
+
+00:38:20.040 --> 00:38:23.050 align:middle line:84%
+However you'd like to represent
+each one of those die faces,
+
+00:38:23.050 --> 00:38:25.350 align:middle line:84%
+here's a list of
+six things in it.
+
+00:38:25.350 --> 00:38:28.320 align:middle line:84%
+And then I'm using
+this choice function
+
+00:38:28.320 --> 00:38:30.030 align:middle line:90%
+from this random library.
+
+00:38:30.030 --> 00:38:33.120 align:middle line:84%
+Again, the random library is
+a super duper useful library.
+
+00:38:33.120 --> 00:38:37.110 align:middle line:84%
+random.choice will effectively
+select one of the elements
+
+00:38:37.110 --> 00:38:38.410 align:middle line:90%
+in this list for me.
+
+00:38:38.410 --> 00:38:41.580 align:middle line:84%
+So if I type in random.choice
+in the console now,
+
+00:38:41.580 --> 00:38:43.110 align:middle line:90%
+it might give me the dot dot.
+
+00:38:43.110 --> 00:38:46.290 align:middle line:84%
+If I type it in right after,
+it might give me the dot,
+
+00:38:46.290 --> 00:38:47.610 align:middle line:90%
+dot, dot, dot, whatever.
+
+00:38:47.610 --> 00:38:50.930 align:middle line:84%
+It's going to be random each
+time I run this function.
+
+00:38:50.930 --> 00:38:53.150 align:middle line:84%
+But this line of
+code effectively
+
+00:38:53.150 --> 00:38:57.020 align:middle line:84%
+simulates me taking a
+dice and rolling it.
+
+00:38:57.020 --> 00:39:00.500 align:middle line:84%
+And then we can
+repeat this experiment
+
+00:39:00.500 --> 00:39:02.780 align:middle line:90%
+a whole lot of times.
+
+00:39:02.780 --> 00:39:06.170 align:middle line:84%
+If I'm taking a dice and
+rolling it, that's like what?
+
+00:39:06.170 --> 00:39:08.040 align:middle line:90%
+One or two seconds per roll?
+
+00:39:08.040 --> 00:39:11.120 align:middle line:84%
+I don't think I have time to
+repeat that experiment 10,000
+
+00:39:11.120 --> 00:39:11.970 align:middle line:90%
+times.
+
+00:39:11.970 --> 00:39:15.530 align:middle line:84%
+But with simulation, with
+computation, with programming,
+
+00:39:15.530 --> 00:39:19.160 align:middle line:84%
+we can simulate it 10,000
+times or a million times,
+
+00:39:19.160 --> 00:39:21.530 align:middle line:84%
+and then just wait
+a couple seconds.
+
+00:39:21.530 --> 00:39:26.130 align:middle line:84%
+So very, very useful
+application of programming.
+
+00:39:26.130 --> 00:39:30.080 align:middle line:84%
+So how do you simulate this
+dice roll 10,000 times?
+
+00:39:30.080 --> 00:39:33.680 align:middle line:84%
+Just slap a for loop
+around that line of code.
+
+00:39:33.680 --> 00:39:37.040 align:middle line:84%
+So for some number
+in range 10,000,
+
+00:39:37.040 --> 00:39:42.200 align:middle line:84%
+that means I'm going to run
+this line of code 10,000 times.
+
+00:39:42.200 --> 00:39:46.270 align:middle line:84%
+All of a sudden, I've just
+rolled a dice 10,000 times.
+
+00:39:46.270 --> 00:39:50.030 align:middle line:84%
+As I'm doing so, I'm interested
+in the outcome of some event.
+
+00:39:50.030 --> 00:39:53.110 align:middle line:84%
+So let's say, how many times did
+a dot, dot, dot, dot come up,
+
+00:39:53.110 --> 00:39:54.050 align:middle line:90%
+a 4?
+
+00:39:54.050 --> 00:39:57.940 align:middle line:84%
+Well, each time
+in my for loop, I
+
+00:39:57.940 --> 00:40:00.370 align:middle line:84%
+can keep track of
+the value of roll.
+
+00:40:00.370 --> 00:40:04.150 align:middle line:84%
+If it was a 4,
+increment a counter.
+
+00:40:04.150 --> 00:40:08.610 align:middle line:84%
+If it was not a 4, I
+don't care, do nothing.
+
+00:40:08.610 --> 00:40:10.940 align:middle line:84%
+So each time I have a
+counter that tells me
+
+00:40:10.940 --> 00:40:13.440 align:middle line:90%
+how many times a 4 came up.
+
+00:40:13.440 --> 00:40:16.010 align:middle line:84%
+And then after the
+for loop is done,
+
+00:40:16.010 --> 00:40:18.620 align:middle line:84%
+I've repeated my
+experiment 10,000 times.
+
+00:40:18.620 --> 00:40:21.740 align:middle line:84%
+And I can report the
+probability to get a 4--
+
+00:40:21.740 --> 00:40:25.540 align:middle line:84%
+so the counter
+divided by 10,000.
+
+00:40:25.540 --> 00:40:27.220 align:middle line:90%
+So this is the code.
+
+00:40:27.220 --> 00:40:28.280 align:middle line:90%
+That's it.
+
+00:40:28.280 --> 00:40:30.550 align:middle line:90%
+It's super simple.
+
+00:40:30.550 --> 00:40:31.930 align:middle line:90%
+I wrote a function.
+
+00:40:31.930 --> 00:40:34.370 align:middle line:84%
+And it actually
+takes in a parameter.
+
+00:40:34.370 --> 00:40:38.380 align:middle line:84%
+So if we're interested in
+the probability for a dot,
+
+00:40:38.380 --> 00:40:40.270 align:middle line:84%
+dot, dot, dot to
+come up, then we
+
+00:40:40.270 --> 00:40:43.780 align:middle line:84%
+pass in the value
+of that particular--
+
+00:40:43.780 --> 00:40:44.860 align:middle line:90%
+of that side.
+
+00:40:44.860 --> 00:40:46.390 align:middle line:84%
+If I'm interested
+in the probability
+
+00:40:46.390 --> 00:40:51.540 align:middle line:84%
+that a dot comes up, then I
+pass in the dot as a string.
+
+00:40:51.540 --> 00:40:52.448 align:middle line:90%
+So what does it do?
+
+00:40:52.448 --> 00:40:54.990 align:middle line:84%
+Well, just like in the previous
+slide, I've got this for loop
+
+00:40:54.990 --> 00:41:00.030 align:middle line:84%
+here that tells Python how many
+times to repeat the experiment.
+
+00:41:00.030 --> 00:41:03.070 align:middle line:84%
+I have the experiment
+number here as a variable.
+
+00:41:03.070 --> 00:41:06.130 align:middle line:84%
+So I can easily just change
+it to be something else.
+
+00:41:06.130 --> 00:41:08.080 align:middle line:90%
+And then I've got my roll here.
+
+00:41:08.080 --> 00:41:11.260 align:middle line:84%
+So this is me actually
+doing the experiment.
+
+00:41:11.260 --> 00:41:13.290 align:middle line:84%
+So just here's me
+rolling the dice.
+
+00:41:13.290 --> 00:41:14.820 align:middle line:90%
+Here's roll value.
+
+00:41:14.820 --> 00:41:16.890 align:middle line:84%
+And then I check what
+the value of the roll
+
+00:41:16.890 --> 00:41:18.720 align:middle line:84%
+was and increment
+the counter if it
+
+00:41:18.720 --> 00:41:20.730 align:middle line:84%
+was the side of
+interest, the thing I've
+
+00:41:20.730 --> 00:41:22.110 align:middle line:90%
+passed in as a parameter.
+
+00:41:22.110 --> 00:41:24.390 align:middle line:84%
+And then at the end,
+I just do a print.
+
+00:41:24.390 --> 00:41:27.930 align:middle line:84%
+But you could imagine doing a
+return or something like that.
+
+00:41:27.930 --> 00:41:32.300 align:middle line:84%
+So if I run it, we're going
+to get the probability
+
+00:41:32.300 --> 00:41:35.030 align:middle line:84%
+that the side dot
+came up was 0.167
+
+00:41:35.030 --> 00:41:37.400 align:middle line:84%
+and the probability that
+dot, dot, dot, dot came up
+
+00:41:37.400 --> 00:41:40.240 align:middle line:90%
+was 0.1602.
+
+00:41:40.240 --> 00:41:42.790 align:middle line:84%
+Intuition says they
+should be the same.
+
+00:41:42.790 --> 00:41:44.824 align:middle line:90%
+But you know what?
+
+00:41:44.824 --> 00:41:46.210 align:middle line:90%
+That's our intuition.
+
+00:41:46.210 --> 00:41:47.770 align:middle line:90%
+We already know the problem.
+
+00:41:47.770 --> 00:41:49.600 align:middle line:84%
+If we didn't know
+how to calculate
+
+00:41:49.600 --> 00:41:53.200 align:middle line:84%
+the probability of one
+of these sides coming up,
+
+00:41:53.200 --> 00:41:55.960 align:middle line:90%
+this would be pretty good.
+
+00:41:55.960 --> 00:41:58.510 align:middle line:84%
+The beauty of computation
+is we can just
+
+00:41:58.510 --> 00:42:04.150 align:middle line:84%
+add two more zeros on there,
+run it, and maybe uncomment it
+
+00:42:04.150 --> 00:42:06.010 align:middle line:90%
+so we actually see the values.
+
+00:42:06.010 --> 00:42:08.500 align:middle line:84%
+Run it, we wait
+a couple seconds.
+
+00:42:08.500 --> 00:42:12.820 align:middle line:84%
+But now, the probability is
+getting closer and closer
+
+00:42:12.820 --> 00:42:15.100 align:middle line:90%
+to the true probability.
+
+00:42:15.100 --> 00:42:19.060 align:middle line:84%
+So the more experiments I do,
+the better my answer becomes.
+
+00:42:19.060 --> 00:42:20.980 align:middle line:84%
+And I just had to wait
+a couple of seconds.
+
+00:42:20.980 --> 00:42:23.650 align:middle line:84%
+If I increase it
+by 10 more, I would
+
+00:42:23.650 --> 00:42:27.570 align:middle line:84%
+have to wait 10 more
+times, 10 times as long,
+
+00:42:27.570 --> 00:42:28.490 align:middle line:90%
+so maybe 20 seconds.
+
+00:42:28.490 --> 00:42:30.730 align:middle line:90%
+I'm not going to do it.
+
+00:42:30.730 --> 00:42:32.490 align:middle line:90%
+So it's still a guesstimate.
+
+00:42:32.490 --> 00:42:35.690 align:middle line:84%
+But it's a pretty
+close guesstimate.
+
+00:42:35.690 --> 00:42:37.670 align:middle line:84%
+Now, the other beauty
+of writing code
+
+00:42:37.670 --> 00:42:42.230 align:middle line:84%
+is that we can now ask, well,
+this is a fair die, right?
+
+00:42:42.230 --> 00:42:44.060 align:middle line:84%
+Every single one of
+these sides comes up
+
+00:42:44.060 --> 00:42:45.920 align:middle line:90%
+with an equal probability.
+
+00:42:45.920 --> 00:42:47.390 align:middle line:84%
+What do you guys
+think the change
+
+00:42:47.390 --> 00:42:51.910 align:middle line:84%
+I should make to
+make an unfair die?
+
+00:42:51.910 --> 00:42:57.010 align:middle line:84%
+Let's say it's weighted
+unfairly towards the dot, the 1.
+
+00:42:57.010 --> 00:42:57.670 align:middle line:90%
+Yeah?
+
+00:42:57.670 --> 00:42:59.290 align:middle line:84%
+STUDENT: You could just
+add the dot [INAUDIBLE]..
+
+00:42:59.290 --> 00:43:00.290 align:middle line:90%
+ANA BELL: Yeah, exactly.
+
+00:43:00.290 --> 00:43:01.900 align:middle line:84%
+Let me just add
+another dot here.
+
+00:43:01.900 --> 00:43:04.390 align:middle line:90%
+Here, I've got another dot.
+
+00:43:04.390 --> 00:43:06.550 align:middle line:84%
+And now, the die is
+weighted unfairly.
+
+00:43:06.550 --> 00:43:09.950 align:middle line:84%
+It comes up more times on
+the 1 than on anything else.
+
+00:43:09.950 --> 00:43:11.920 align:middle line:84%
+So if I run the code
+again, wait a couple
+
+00:43:11.920 --> 00:43:16.240 align:middle line:84%
+of seconds, probability to get a
+1, twice as high as probability
+
+00:43:16.240 --> 00:43:17.830 align:middle line:90%
+to get a 4.
+
+00:43:17.830 --> 00:43:20.050 align:middle line:84%
+So a really easy
+change, it helped
+
+00:43:20.050 --> 00:43:22.630 align:middle line:84%
+me answer another
+question, a small variation
+
+00:43:22.630 --> 00:43:24.070 align:middle line:90%
+of my original problem.
+
+00:43:24.070 --> 00:43:34.680 align:middle line:84%
+And I didn't have to roll a dice
+10,000 times in the real world.
+
+00:43:34.680 --> 00:43:39.480 align:middle line:84%
+So that was really easy
+simulation-- the probability
+
+00:43:39.480 --> 00:43:44.650 align:middle line:84%
+of calculating sides of dies
+coming up is pretty simple.
+
+00:43:44.650 --> 00:43:46.680 align:middle line:84%
+So why did we bother
+with the code?
+
+00:43:46.680 --> 00:43:48.510 align:middle line:84%
+Because we could just
+do it mathematically.
+
+00:43:48.510 --> 00:43:50.640 align:middle line:84%
+The side question
+that I asked was also
+
+00:43:50.640 --> 00:43:52.140 align:middle line:90%
+kind of simple to figure out.
+
+00:43:52.140 --> 00:43:56.460 align:middle line:84%
+Because we can actually ask
+harder questions and harder
+
+00:43:56.460 --> 00:43:58.410 align:middle line:84%
+variations of our
+original problem,
+
+00:43:58.410 --> 00:44:01.440 align:middle line:84%
+we could certainly come up
+with mathematical solutions
+
+00:44:01.440 --> 00:44:03.360 align:middle line:84%
+to these harder
+problems as well.
+
+00:44:03.360 --> 00:44:06.600 align:middle line:84%
+But I wouldn't be as
+certain about my answers
+
+00:44:06.600 --> 00:44:10.530 align:middle line:84%
+to those as I would
+be just writing code.
+
+00:44:10.530 --> 00:44:13.020 align:middle line:84%
+For me, it would be a little
+bit easier to debug code
+
+00:44:13.020 --> 00:44:16.500 align:middle line:84%
+than it would be to
+mathematically write
+
+00:44:16.500 --> 00:44:19.240 align:middle line:84%
+probabilities to much
+harder questions.
+
+00:44:19.240 --> 00:44:21.900 align:middle line:84%
+And you can see, once
+you've written the code,
+
+00:44:21.900 --> 00:44:25.260 align:middle line:84%
+once you've framed your
+experiment in this way,
+
+00:44:25.260 --> 00:44:28.650 align:middle line:84%
+it's really easy to just
+go ahead and change it
+
+00:44:28.650 --> 00:44:29.580 align:middle line:90%
+a little bit.
+
+00:44:29.580 --> 00:44:32.620 align:middle line:84%
+So the code is easy to
+change once it's written.
+
+00:44:32.620 --> 00:44:34.540 align:middle line:90%
+So let's look at a new question.
+
+00:44:34.540 --> 00:44:40.390 align:middle line:84%
+This one says, one
+experiment is no longer
+
+00:44:40.390 --> 00:44:42.190 align:middle line:90%
+to just roll a die once.
+
+00:44:42.190 --> 00:44:47.290 align:middle line:84%
+One experiment is now that
+we're rolling a die seven times.
+
+00:44:47.290 --> 00:44:51.280 align:middle line:84%
+And I'm interested to know the
+probability to get the dot,
+
+00:44:51.280 --> 00:44:56.640 align:middle line:84%
+dot, dot, dot at least three
+times out of those seven rolls.
+
+00:44:56.640 --> 00:45:00.000 align:middle line:84%
+Much harder question
+than before.
+
+00:45:00.000 --> 00:45:03.630 align:middle line:84%
+It would require a little
+bit of thinking, some paper
+
+00:45:03.630 --> 00:45:05.650 align:middle line:90%
+to figure out.
+
+00:45:05.650 --> 00:45:08.770 align:middle line:84%
+But in terms of code, it's
+going to be really simple.
+
+00:45:08.770 --> 00:45:13.560 align:middle line:84%
+So now, one experiment is
+no longer just one choice
+
+00:45:13.560 --> 00:45:16.680 align:middle line:90%
+from my list of dice faces.
+
+00:45:16.680 --> 00:45:20.460 align:middle line:84%
+But it's going to be seven
+choices from my list of dice
+
+00:45:20.460 --> 00:45:23.190 align:middle line:84%
+faces, representing
+the seven rolls
+
+00:45:23.190 --> 00:45:26.220 align:middle line:90%
+that I have for one experiment.
+
+00:45:26.220 --> 00:45:28.440 align:middle line:84%
+And out of those
+seven rolls, what
+
+00:45:28.440 --> 00:45:31.110 align:middle line:84%
+I'm interested to
+do is keeping track
+
+00:45:31.110 --> 00:45:34.200 align:middle line:84%
+of incrementing a
+counter whenever I
+
+00:45:34.200 --> 00:45:37.860 align:middle line:90%
+see a four dot, dot, dot, dot.
+
+00:45:37.860 --> 00:45:41.190 align:middle line:84%
+And then, just like before,
+slap a for loop around it
+
+00:45:41.190 --> 00:45:44.130 align:middle line:84%
+repeat that experiment 10,000
+or 1 million times, however
+
+00:45:44.130 --> 00:45:47.580 align:middle line:84%
+many times you'd like, and then
+keep track of how many times
+
+00:45:47.580 --> 00:45:53.010 align:middle line:84%
+that 4 came up three or more
+times out of the seven rolls.
+
+00:45:53.010 --> 00:45:54.660 align:middle line:90%
+So this is our event.
+
+00:45:54.660 --> 00:45:57.490 align:middle line:84%
+Count how many times out of
+the 10,000, in that case--
+
+00:45:57.490 --> 00:46:00.480 align:middle line:84%
+but it could be a
+million, whatever it is--
+
+00:46:00.480 --> 00:46:04.320 align:middle line:84%
+we incremented our counter
+to be more than 3, more than
+
+00:46:04.320 --> 00:46:05.820 align:middle line:90%
+or equal to 3.
+
+00:46:05.820 --> 00:46:08.460 align:middle line:84%
+And then our value of
+interest is the probability
+
+00:46:08.460 --> 00:46:09.580 align:middle line:90%
+of that happening.
+
+00:46:09.580 --> 00:46:12.720 align:middle line:84%
+So take that counter
+and divide by 10,000
+
+00:46:12.720 --> 00:46:16.290 align:middle line:84%
+because that's how many times
+we repeated our experiment.
+
+00:46:16.290 --> 00:46:17.325 align:middle line:90%
+So this is the code.
+
+00:46:17.325 --> 00:46:18.850 align:middle line:90%
+It's slightly longer.
+
+00:46:18.850 --> 00:46:21.390 align:middle line:84%
+And I've actually divided
+it into two parts--
+
+00:46:21.390 --> 00:46:25.620 align:middle line:84%
+this one up here, and
+then this one down here.
+
+00:46:25.620 --> 00:46:34.440 align:middle line:84%
+So the code up here is going to
+do the simulation 10,000 times.
+
+00:46:34.440 --> 00:46:38.610 align:middle line:84%
+So I've got one for loop here
+that goes through 10,000 or 1
+
+00:46:38.610 --> 00:46:43.210 align:middle line:84%
+million-- however many times you
+want to repeat the experiment.
+
+00:46:43.210 --> 00:46:45.190 align:middle line:90%
+Within here-- sorry--
+
+00:46:45.190 --> 00:46:47.800 align:middle line:84%
+and sorry, I forgot
+to mention that here I
+
+00:46:47.800 --> 00:46:50.720 align:middle line:84%
+have a function where I've
+generalized a bunch of stuff.
+
+00:46:50.720 --> 00:46:52.670 align:middle line:84%
+So we could run it
+with different values.
+
+00:46:52.670 --> 00:46:55.390 align:middle line:84%
+So instead of three
+times out of seven rolls,
+
+00:46:55.390 --> 00:46:58.390 align:middle line:84%
+we could have 15
+times out of 3,000.
+
+00:46:58.390 --> 00:47:00.920 align:middle line:90%
+Right so we can generalize this.
+
+00:47:00.920 --> 00:47:04.060 align:middle line:84%
+So here, inside
+this for loop, I've
+
+00:47:04.060 --> 00:47:09.100 align:middle line:84%
+got the simulation of
+rolling seven times.
+
+00:47:09.100 --> 00:47:11.050 align:middle line:84%
+So here, I've got
+range of n roles.
+
+00:47:11.050 --> 00:47:12.970 align:middle line:84%
+In the previous slide,
+I said it's seven.
+
+00:47:12.970 --> 00:47:14.630 align:middle line:84%
+But it could be
+anything you'd like.
+
+00:47:14.630 --> 00:47:19.570 align:middle line:84%
+And then I've got choosing
+one of the faces seven times
+
+00:47:19.570 --> 00:47:22.720 align:middle line:84%
+and keeping track of how
+many times out of those seven
+
+00:47:22.720 --> 00:47:24.355 align:middle line:90%
+I got a dot, dot, dot, dot.
+
+00:47:24.355 --> 00:47:29.190 align:middle line:90%
+
+
+00:47:29.190 --> 00:47:32.970 align:middle line:84%
+So at the end of
+this for loop here,
+
+00:47:32.970 --> 00:47:36.060 align:middle line:84%
+I've counted how many times
+I got a dot, dot, dot, dot.
+
+00:47:36.060 --> 00:47:39.090 align:middle line:84%
+And then I'm going to
+keep track of that number
+
+00:47:39.090 --> 00:47:41.250 align:middle line:90%
+in this list how many matched.
+
+00:47:41.250 --> 00:47:43.860 align:middle line:84%
+So how many matched
+will be a list
+
+00:47:43.860 --> 00:47:50.750 align:middle line:84%
+of 10,000 elements, 10,000
+elements, one element
+
+00:47:50.750 --> 00:47:53.130 align:middle line:90%
+for each one of my experiments.
+
+00:47:53.130 --> 00:47:55.590 align:middle line:84%
+So the first time
+maybe three dot,
+
+00:47:55.590 --> 00:47:58.280 align:middle line:84%
+dot, dot, dots came up out of
+7, then the next time 1, then
+
+00:47:58.280 --> 00:48:01.520 align:middle line:84%
+the next time 5, then the
+next time 4, however many.
+
+00:48:01.520 --> 00:48:04.460 align:middle line:84%
+So now, I've got a
+list of how many times
+
+00:48:04.460 --> 00:48:07.680 align:middle line:84%
+the dot, dot, dot, dot
+came up out of 7 rolls.
+
+00:48:07.680 --> 00:48:09.087 align:middle line:90%
+So the code down here--
+
+00:48:09.087 --> 00:48:10.670 align:middle line:84%
+that's why I split
+it up, because it's
+
+00:48:10.670 --> 00:48:12.620 align:middle line:84%
+a little bit easier for
+me to think about it.
+
+00:48:12.620 --> 00:48:14.750 align:middle line:84%
+The code down here is
+now going to iterate
+
+00:48:14.750 --> 00:48:17.750 align:middle line:84%
+through this list of
+10,000 experiments
+
+00:48:17.750 --> 00:48:21.320 align:middle line:84%
+and say which one of these
+is greater or equal to 3--
+
+00:48:21.320 --> 00:48:24.090 align:middle line:90%
+this one, this one, this one.
+
+00:48:24.090 --> 00:48:27.540 align:middle line:84%
+So I'm incrementing a counter
+any time that is true.
+
+00:48:27.540 --> 00:48:30.680 align:middle line:84%
+And at the end of
+this loop down there,
+
+00:48:30.680 --> 00:48:34.940 align:middle line:84%
+I'm going to know how many
+times out of those 10,000 trials
+
+00:48:34.940 --> 00:48:38.570 align:middle line:84%
+I had three or more
+times out of seven
+
+00:48:38.570 --> 00:48:42.330 align:middle line:84%
+come up on the
+dot, dot, dot, dot.
+
+00:48:42.330 --> 00:48:44.460 align:middle line:90%
+So I can run the code.
+
+00:48:44.460 --> 00:48:47.620 align:middle line:84%
+And here, I've got the exact
+problem on the previous slide.
+
+00:48:47.620 --> 00:48:50.040 align:middle line:84%
+So if I'm interested in
+the probability of the 4
+
+00:48:50.040 --> 00:48:53.250 align:middle line:84%
+coming up at least three or
+more times out of seven roles,
+
+00:48:53.250 --> 00:48:56.250 align:middle line:90%
+that's 0.0955.
+
+00:48:56.250 --> 00:49:00.960 align:middle line:84%
+And then I also down
+here wrote it like this.
+
+00:49:00.960 --> 00:49:05.390 align:middle line:90%
+And this probability is 0.16.
+
+00:49:05.390 --> 00:49:07.280 align:middle line:90%
+What is this problem down here?
+
+00:49:07.280 --> 00:49:10.310 align:middle line:90%
+Does it look familiar?
+
+00:49:10.310 --> 00:49:12.550 align:middle line:84%
+So the probability
+of a dot, dot, dot,
+
+00:49:12.550 --> 00:49:15.205 align:middle line:84%
+dot coming up at least
+once out of one roll.
+
+00:49:15.205 --> 00:49:19.590 align:middle line:90%
+
+
+00:49:19.590 --> 00:49:23.030 align:middle line:84%
+That's just the previous
+problem on the previous slide.
+
+00:49:23.030 --> 00:49:24.050 align:middle line:90%
+I just have one roll.
+
+00:49:24.050 --> 00:49:26.990 align:middle line:84%
+And I count the
+probability to get the 4.
+
+00:49:26.990 --> 00:49:30.978 align:middle line:84%
+So this matches what I got
+with the previous function
+
+00:49:30.978 --> 00:49:31.520 align:middle line:90%
+that I wrote.
+
+00:49:31.520 --> 00:49:34.430 align:middle line:84%
+But hey, now I wrote a
+better function actually
+
+00:49:34.430 --> 00:49:35.540 align:middle line:90%
+that's more general.
+
+00:49:35.540 --> 00:49:38.870 align:middle line:84%
+And I can also run it
+to get the probability
+
+00:49:38.870 --> 00:49:40.113 align:middle line:90%
+from the previous code.
+
+00:49:40.113 --> 00:49:42.030 align:middle line:84%
+So this is actually a
+much better code to run.
+
+00:49:42.030 --> 00:49:44.700 align:middle line:90%
+
+
+00:49:44.700 --> 00:49:45.200 align:middle line:90%
+OK.
+
+00:49:45.200 --> 00:49:47.210 align:middle line:90%
+Questions about this?
+
+00:49:47.210 --> 00:49:49.280 align:middle line:90%
+Interesting?
+
+00:49:49.280 --> 00:49:50.360 align:middle line:90%
+I mean, it's dice rolls.
+
+00:49:50.360 --> 00:49:51.870 align:middle line:90%
+How interesting can it be?
+
+00:49:51.870 --> 00:49:55.580 align:middle line:84%
+But yeah, so let's look at
+a more interesting problem,
+
+00:49:55.580 --> 00:50:01.380 align:middle line:84%
+something that you might
+apply to the real world.
+
+00:50:01.380 --> 00:50:05.960 align:middle line:84%
+So you might see this in a
+calculus course or might not.
+
+00:50:05.960 --> 00:50:08.730 align:middle line:84%
+But it is more of
+a calculus problem.
+
+00:50:08.730 --> 00:50:13.880 align:middle line:84%
+So I've got water that
+runs through a faucet
+
+00:50:13.880 --> 00:50:17.450 align:middle line:84%
+at random somewhere between
+1 gallons per minute
+
+00:50:17.450 --> 00:50:19.320 align:middle line:90%
+and 3 gallons per minute.
+
+00:50:19.320 --> 00:50:21.240 align:middle line:90%
+This is the setup.
+
+00:50:21.240 --> 00:50:25.380 align:middle line:84%
+What is the time it takes
+to fill the 600 gallon pool?
+
+00:50:25.380 --> 00:50:30.780 align:middle line:84%
+Does anyone have an intuition
+for how we could solve this?
+
+00:50:30.780 --> 00:50:32.600 align:middle line:90%
+If not, I can just click Next.
+
+00:50:32.600 --> 00:50:35.025 align:middle line:90%
+STUDENT: [INAUDIBLE]
+
+00:50:35.025 --> 00:50:36.900 align:middle line:84%
+ANA BELL: Yeah, definitely
+between the lowest
+
+00:50:36.900 --> 00:50:40.350 align:middle line:84%
+rate and the highest rate,
+so between 200 gallons
+
+00:50:40.350 --> 00:50:41.130 align:middle line:90%
+per minute--
+
+00:50:41.130 --> 00:50:44.910 align:middle line:84%
+sorry, between 200
+minutes and 600 minutes,
+
+00:50:44.910 --> 00:50:50.470 align:middle line:84%
+200 at best if the water flows
+at 3 gallons per minute and 600
+
+00:50:50.470 --> 00:50:53.610 align:middle line:84%
+minutes at worst if the
+water flows super slowly,
+
+00:50:53.610 --> 00:50:56.170 align:middle line:90%
+1 gallon per minute.
+
+00:50:56.170 --> 00:51:00.990 align:middle line:84%
+So we could say, well, let's
+take the average of the flow.
+
+00:51:00.990 --> 00:51:04.200 align:middle line:84%
+The average between
+1 and 3 gallons is 2.
+
+00:51:04.200 --> 00:51:07.020 align:middle line:84%
+So if we take 600
+gallons divided
+
+00:51:07.020 --> 00:51:11.490 align:middle line:84%
+by 2 gallons per minute, that
+would give us 300 minutes.
+
+00:51:11.490 --> 00:51:12.780 align:middle line:90%
+It's a reasonable guess.
+
+00:51:12.780 --> 00:51:15.680 align:middle line:84%
+But that's not actually
+the right answer.
+
+00:51:15.680 --> 00:51:18.410 align:middle line:84%
+Another way we
+could say is, well,
+
+00:51:18.410 --> 00:51:23.710 align:middle line:84%
+let's take the slowest and
+the fastest it could run,
+
+00:51:23.710 --> 00:51:24.410 align:middle line:90%
+it could take.
+
+00:51:24.410 --> 00:51:28.330 align:middle line:84%
+So here, I've got 600
+minutes and 200 minutes
+
+00:51:28.330 --> 00:51:31.360 align:middle line:84%
+and average those
+numbers out, divide by 2.
+
+00:51:31.360 --> 00:51:33.280 align:middle line:90%
+So that's 400 minutes.
+
+00:51:33.280 --> 00:51:35.620 align:middle line:84%
+But that's actually
+not right either.
+
+00:51:35.620 --> 00:51:36.250 align:middle line:90%
+Yeah?
+
+00:51:36.250 --> 00:51:38.290 align:middle line:84%
+STUDENT: Could you take
+the integral of 600
+
+00:51:38.290 --> 00:51:40.987 align:middle line:84%
+over [INAUDIBLE] and
+have the average value?
+
+00:51:40.987 --> 00:51:42.070 align:middle line:90%
+ANA BELL: You could, yeah.
+
+00:51:42.070 --> 00:51:44.560 align:middle line:84%
+I don't want to do
+integrals, though.
+
+00:51:44.560 --> 00:51:46.515 align:middle line:84%
+Yeah, but that's exactly
+the right answer.
+
+00:51:46.515 --> 00:51:47.890 align:middle line:84%
+Yeah, you have to
+do an integral.
+
+00:51:47.890 --> 00:51:51.610 align:middle line:90%
+
+
+00:51:51.610 --> 00:51:54.620 align:middle line:84%
+Yeah, we're teaching
+computer science here.
+
+00:51:54.620 --> 00:51:57.250 align:middle line:84%
+So we're not going to do
+integrals in this class.
+
+00:51:57.250 --> 00:51:59.830 align:middle line:90%
+Instead, we're going to do code.
+
+00:51:59.830 --> 00:52:03.130 align:middle line:84%
+And the code is going
+to be like five lines
+
+00:52:03.130 --> 00:52:04.760 align:middle line:90%
+to find the answer to this.
+
+00:52:04.760 --> 00:52:08.470 align:middle line:84%
+So all we're going to do is
+grab a whole bunch of numbers
+
+00:52:08.470 --> 00:52:11.800 align:middle line:84%
+between 1 and 3, a million
+of them if you want.
+
+00:52:11.800 --> 00:52:14.530 align:middle line:84%
+These will represent a
+bunch of random values
+
+00:52:14.530 --> 00:52:18.970 align:middle line:84%
+you could have the
+water flow rate be.
+
+00:52:18.970 --> 00:52:22.810 align:middle line:84%
+And then we're going to say,
+for each one of these numbers
+
+00:52:22.810 --> 00:52:25.630 align:middle line:84%
+chosen at random, how long
+would it take to fill the pool?
+
+00:52:25.630 --> 00:52:31.890 align:middle line:84%
+So you do 600 divided by that
+rate, just how long it takes.
+
+00:52:31.890 --> 00:52:35.440 align:middle line:84%
+And then we're going to
+average all of these rates.
+
+00:52:35.440 --> 00:52:37.170 align:middle line:84%
+So we have a million
+of these numbers,
+
+00:52:37.170 --> 00:52:40.980 align:middle line:84%
+potential times that it could
+take to fill the pool, sum them
+
+00:52:40.980 --> 00:52:44.080 align:middle line:90%
+all, average them.
+
+00:52:44.080 --> 00:52:45.130 align:middle line:90%
+This is the code.
+
+00:52:45.130 --> 00:52:46.780 align:middle line:90%
+It looks like a lot.
+
+00:52:46.780 --> 00:52:49.360 align:middle line:84%
+But down here, the
+bottom half of this
+
+00:52:49.360 --> 00:52:52.210 align:middle line:84%
+is just us reporting
+the results.
+
+00:52:52.210 --> 00:52:53.450 align:middle line:90%
+Here's two print statements.
+
+00:52:53.450 --> 00:52:55.240 align:middle line:84%
+And here, I'm
+actually also plotting
+
+00:52:55.240 --> 00:52:59.950 align:middle line:84%
+what the dots look like,
+all the flow rates.
+
+00:52:59.950 --> 00:53:03.550 align:middle line:84%
+The actual code to do
+the simulation is these--
+
+00:53:03.550 --> 00:53:07.140 align:middle line:84%
+OK, I lied seven lines
+of code, not five.
+
+00:53:07.140 --> 00:53:09.930 align:middle line:84%
+So I've got a
+function-- fill_pool.
+
+00:53:09.930 --> 00:53:12.060 align:middle line:90%
+It can take in a size parameter.
+
+00:53:12.060 --> 00:53:14.310 align:middle line:84%
+We could even do a lower
+range and an upper range,
+
+00:53:14.310 --> 00:53:16.290 align:middle line:84%
+if we wanted to,
+for the flow rate.
+
+00:53:16.290 --> 00:53:19.710 align:middle line:84%
+For now, we'll just hard code
+it to be between 1 and 3.
+
+00:53:19.710 --> 00:53:21.510 align:middle line:84%
+I've got two lists
+that I'm going
+
+00:53:21.510 --> 00:53:24.580 align:middle line:84%
+to populate with a bunch of
+different random numbers.
+
+00:53:24.580 --> 00:53:27.780 align:middle line:84%
+So the flow rate will be
+chosen between 1 and 3.
+
+00:53:27.780 --> 00:53:32.430 align:middle line:84%
+So here, I've got
+random.random is
+
+00:53:32.430 --> 00:53:36.810 align:middle line:84%
+another useful random function
+from the random library that
+
+00:53:36.810 --> 00:53:39.000 align:middle line:84%
+gives me a number
+between 0 and 1.
+
+00:53:39.000 --> 00:53:43.170 align:middle line:84%
+So to get a number
+between 1 and 3 at random,
+
+00:53:43.170 --> 00:53:45.870 align:middle line:84%
+I'll just multiply
+by 2 and add 1.
+
+00:53:45.870 --> 00:53:48.090 align:middle line:90%
+So bottom case, it'll be 1.
+
+00:53:48.090 --> 00:53:52.730 align:middle line:84%
+Top case will be 2
+times 1 plus 1, 3.
+
+00:53:52.730 --> 00:53:55.280 align:middle line:84%
+So r, all we need to know,
+will be a random number
+
+00:53:55.280 --> 00:53:57.500 align:middle line:90%
+between 1 and 3, a float.
+
+00:53:57.500 --> 00:53:59.780 align:middle line:90%
+So it could be anything.
+
+00:53:59.780 --> 00:54:03.590 align:middle line:84%
+Append that random number
+to our list of flow rates.
+
+00:54:03.590 --> 00:54:08.060 align:middle line:84%
+And then using that flow rate
+that we just randomly chose,
+
+00:54:08.060 --> 00:54:09.920 align:middle line:84%
+figure out how long
+it takes to fill
+
+00:54:09.920 --> 00:54:15.800 align:middle line:84%
+the pool, the pool of size size,
+so size divided by the rate.
+
+00:54:15.800 --> 00:54:17.180 align:middle line:90%
+Just very simple math.
+
+00:54:17.180 --> 00:54:19.760 align:middle line:84%
+And then we now
+have a list that's
+
+00:54:19.760 --> 00:54:21.500 align:middle line:84%
+populated with
+all of these times
+
+00:54:21.500 --> 00:54:25.130 align:middle line:90%
+that it takes to fill the pool.
+
+00:54:25.130 --> 00:54:28.010 align:middle line:84%
+And the stuff inside
+the loop for loop
+
+00:54:28.010 --> 00:54:30.080 align:middle line:90%
+here is one experiment.
+
+00:54:30.080 --> 00:54:31.670 align:middle line:90%
+So I grabbed one random number.
+
+00:54:31.670 --> 00:54:34.130 align:middle line:84%
+I figured out how long it
+takes for me to fill my pool.
+
+00:54:34.130 --> 00:54:39.720 align:middle line:84%
+And then I repeated
+that 10,000 times.
+
+00:54:39.720 --> 00:54:43.830 align:middle line:84%
+So down here, I'm going
+to report the average flow
+
+00:54:43.830 --> 00:54:47.820 align:middle line:84%
+rate, which should be 2
+because if we're choosing
+
+00:54:47.820 --> 00:54:51.780 align:middle line:84%
+a random number between 1 and
+3, the average of those numbers
+
+00:54:51.780 --> 00:54:53.010 align:middle line:90%
+better be 2.
+
+00:54:53.010 --> 00:54:55.500 align:middle line:84%
+And then I'm reporting the
+thing that we're actually
+
+00:54:55.500 --> 00:54:58.830 align:middle line:84%
+interested in, which is the
+average fill time, which
+
+00:54:58.830 --> 00:55:00.360 align:middle line:84%
+was not either of
+those two things
+
+00:55:00.360 --> 00:55:01.410 align:middle line:90%
+we had the intuition for.
+
+00:55:01.410 --> 00:55:03.030 align:middle line:90%
+But it is the integral.
+
+00:55:03.030 --> 00:55:05.220 align:middle line:84%
+And down here, I'm
+doing some plots.
+
+00:55:05.220 --> 00:55:07.110 align:middle line:84%
+So these are the things
+that I've plotted.
+
+00:55:07.110 --> 00:55:11.130 align:middle line:84%
+So on the left side,
+I've got, on the x-axis--
+
+00:55:11.130 --> 00:55:14.580 align:middle line:84%
+apologies, I forgot to label my
+axes and put a title on this.
+
+00:55:14.580 --> 00:55:16.870 align:middle line:84%
+So I'm just going
+to talk about it.
+
+00:55:16.870 --> 00:55:21.900 align:middle line:84%
+So the x-axis is numbers 0
+through 10,000 representing
+
+00:55:21.900 --> 00:55:23.820 align:middle line:90%
+each basically--
+
+00:55:23.820 --> 00:55:27.240 align:middle line:84%
+0, 1, 2, 3, 4 represents
+one of my experiments,
+
+00:55:27.240 --> 00:55:28.590 align:middle line:90%
+choosing a random number.
+
+00:55:28.590 --> 00:55:32.730 align:middle line:84%
+And the y-axis is the random
+number that was chosen.
+
+00:55:32.730 --> 00:55:37.530 align:middle line:84%
+So this looks like a nice
+smattering of randomness
+
+00:55:37.530 --> 00:55:39.820 align:middle line:90%
+here, which is what we wanted.
+
+00:55:39.820 --> 00:55:42.640 align:middle line:84%
+And then for each
+one of these values,
+
+00:55:42.640 --> 00:55:47.150 align:middle line:84%
+I'm going to have a
+corresponding fill rate.
+
+00:55:47.150 --> 00:55:51.200 align:middle line:84%
+So for example here,
+if, at point 0,
+
+00:55:51.200 --> 00:55:55.670 align:middle line:84%
+the fill rate
+happened to be 1, then
+
+00:55:55.670 --> 00:55:58.430 align:middle line:84%
+that means the time it took
+for me to fill the pool
+
+00:55:58.430 --> 00:56:00.980 align:middle line:90%
+should be up there at about 600.
+
+00:56:00.980 --> 00:56:04.730 align:middle line:84%
+It could be that little
+point right there maybe.
+
+00:56:04.730 --> 00:56:08.000 align:middle line:84%
+So this is a graph of random
+numbers between 1 and 3,
+
+00:56:08.000 --> 00:56:09.920 align:middle line:90%
+10,000 of them chosen.
+
+00:56:09.920 --> 00:56:12.380 align:middle line:84%
+And this is the graph of
+the corresponding times
+
+00:56:12.380 --> 00:56:15.650 align:middle line:84%
+it took for me to fill the pool
+with each one of these dots
+
+00:56:15.650 --> 00:56:17.450 align:middle line:90%
+that we randomly chose.
+
+00:56:17.450 --> 00:56:21.500 align:middle line:84%
+We notice that the
+plot on the right
+
+00:56:21.500 --> 00:56:25.490 align:middle line:90%
+is not uniformly scattered.
+
+00:56:25.490 --> 00:56:30.110 align:middle line:84%
+In fact, it's more
+densely populated down
+
+00:56:30.110 --> 00:56:31.160 align:middle line:90%
+towards the bottom.
+
+00:56:31.160 --> 00:56:34.940 align:middle line:90%
+
+
+00:56:34.940 --> 00:56:41.260 align:middle line:84%
+So are two guesses were that the
+fill rate was either 300 or 400
+
+00:56:41.260 --> 00:56:43.330 align:middle line:90%
+on average.
+
+00:56:43.330 --> 00:56:46.360 align:middle line:90%
+And neither of those were right.
+
+00:56:46.360 --> 00:56:48.860 align:middle line:84%
+Let's view these graphs in
+a slightly different way.
+
+00:56:48.860 --> 00:56:50.870 align:middle line:84%
+I'm actually going
+to the values.
+
+00:56:50.870 --> 00:56:55.000 align:middle line:84%
+So right now, it was
+just a random number
+
+00:56:55.000 --> 00:56:57.610 align:middle line:90%
+gotten between 1 and 3.
+
+00:56:57.610 --> 00:56:58.770 align:middle line:90%
+But I can sort them.
+
+00:56:58.770 --> 00:57:01.270 align:middle line:84%
+It doesn't matter the order
+that I got these random numbers.
+
+00:57:01.270 --> 00:57:02.690 align:middle line:90%
+I can sort them.
+
+00:57:02.690 --> 00:57:05.600 align:middle line:84%
+And if I sort them, I get
+something that looks like this.
+
+00:57:05.600 --> 00:57:10.090 align:middle line:84%
+So again, I've got randomly
+chosen numbers, 10,000 of them.
+
+00:57:10.090 --> 00:57:13.060 align:middle line:90%
+And with equal probability--
+
+00:57:13.060 --> 00:57:14.800 align:middle line:84%
+that's why we see
+this nice line--
+
+00:57:14.800 --> 00:57:19.480 align:middle line:84%
+I chose a number
+between 1 and 3.
+
+00:57:19.480 --> 00:57:20.860 align:middle line:90%
+Does that make sense?
+
+00:57:20.860 --> 00:57:21.400 align:middle line:90%
+OK.
+
+00:57:21.400 --> 00:57:24.520 align:middle line:84%
+And so then the
+corresponding time
+
+00:57:24.520 --> 00:57:28.360 align:middle line:84%
+it took for me to fill my pool
+for each one of these numbers
+
+00:57:28.360 --> 00:57:34.840 align:middle line:84%
+is a number between 200
+and 600, as we had guessed.
+
+00:57:34.840 --> 00:57:37.960 align:middle line:84%
+Now, the average of
+the time it takes--
+
+00:57:37.960 --> 00:57:42.700 align:middle line:84%
+of the fill rate is
+2, which is true.
+
+00:57:42.700 --> 00:57:45.370 align:middle line:84%
+That is not a surprise for us
+because it's a random number
+
+00:57:45.370 --> 00:57:47.560 align:middle line:90%
+between 1 and 3.
+
+00:57:47.560 --> 00:57:51.130 align:middle line:84%
+But the actual average time
+it takes to fill my pool
+
+00:57:51.130 --> 00:57:52.130 align:middle line:90%
+is down here.
+
+00:57:52.130 --> 00:57:54.400 align:middle line:84%
+If I were to average every
+single one of these values,
+
+00:57:54.400 --> 00:57:58.020 align:middle line:90%
+it's down here at around 330.
+
+00:57:58.020 --> 00:57:59.250 align:middle line:90%
+So it's not 300.
+
+00:57:59.250 --> 00:58:00.270 align:middle line:90%
+It's not 400.
+
+00:58:00.270 --> 00:58:02.910 align:middle line:84%
+It's definitely
+between those two,
+
+00:58:02.910 --> 00:58:05.140 align:middle line:84%
+but it's not really close
+to one or the other.
+
+00:58:05.140 --> 00:58:08.730 align:middle line:84%
+That's because I've got more
+points more densely populated
+
+00:58:08.730 --> 00:58:11.610 align:middle line:84%
+down towards the
+bottom than the top.
+
+00:58:11.610 --> 00:58:15.090 align:middle line:84%
+So the actual values that I got
+for 10,000 different randomly
+
+00:58:15.090 --> 00:58:17.520 align:middle line:90%
+chosen numbers is 331.
+
+00:58:17.520 --> 00:58:20.550 align:middle line:84%
+I think the actual value,
+if we do the integral,
+
+00:58:20.550 --> 00:58:23.640 align:middle line:84%
+is like 329-point
+something or other.
+
+00:58:23.640 --> 00:58:24.900 align:middle line:90%
+So we're pretty close.
+
+00:58:24.900 --> 00:58:26.820 align:middle line:84%
+But then again, we
+only did 10,000.
+
+00:58:26.820 --> 00:58:27.840 align:middle line:90%
+We could do a million.
+
+00:58:27.840 --> 00:58:31.720 align:middle line:84%
+And we would get pretty
+close to the actual value.
+
+00:58:31.720 --> 00:58:33.900 align:middle line:90%
+So it's not 300 or 400.
+
+00:58:33.900 --> 00:58:36.180 align:middle line:84%
+And that's because,
+as was mentioned
+
+00:58:36.180 --> 00:58:40.080 align:middle line:84%
+from one of the
+fellow students, there
+
+00:58:40.080 --> 00:58:42.600 align:middle line:84%
+is an inverse relationship
+between the fill
+
+00:58:42.600 --> 00:58:46.380 align:middle line:90%
+time and the pool rate.
+
+00:58:46.380 --> 00:58:49.630 align:middle line:84%
+So it's the size of the
+pool divided by the rate.
+
+00:58:49.630 --> 00:58:51.450 align:middle line:84%
+So what we actually
+need to do, if we
+
+00:58:51.450 --> 00:58:53.700 align:middle line:84%
+want to figure out
+the value, is to solve
+
+00:58:53.700 --> 00:58:58.200 align:middle line:84%
+the integral between
+1 and 3 of dx
+
+00:58:58.200 --> 00:58:59.640 align:middle line:84%
+over x or whatever
+that would be.
+
+00:58:59.640 --> 00:59:02.150 align:middle line:90%
+
+
+00:59:02.150 --> 00:59:03.980 align:middle line:84%
+So I don't want to
+bother with that.
+
+00:59:03.980 --> 00:59:06.500 align:middle line:84%
+But I will bother with
+seven lines of code,
+
+00:59:06.500 --> 00:59:10.490 align:middle line:84%
+and then just wait five
+seconds for that code
+
+00:59:10.490 --> 00:59:13.730 align:middle line:84%
+to repeat 5 million
+times, or a million times,
+
+00:59:13.730 --> 00:59:17.140 align:middle line:90%
+or 10 million times.
+
+00:59:17.140 --> 00:59:20.020 align:middle line:90%
+Is that cool?
+
+00:59:20.020 --> 00:59:22.240 align:middle line:84%
+And this is totally
+within your reach.
+
+00:59:22.240 --> 00:59:24.190 align:middle line:90%
+It's not hard code to do.
+
+00:59:24.190 --> 00:59:25.990 align:middle line:90%
+It's just for loops.
+
+00:59:25.990 --> 00:59:29.350 align:middle line:84%
+It's using a random library
+to just randomly grab
+
+00:59:29.350 --> 00:59:31.450 align:middle line:84%
+a whole bunch of numbers,
+and then just knowing
+
+00:59:31.450 --> 00:59:32.830 align:middle line:90%
+the problem at hand--
+
+00:59:32.830 --> 00:59:36.340 align:middle line:84%
+filling a pool at a
+certain rate, simple math.
+
+00:59:36.340 --> 00:59:39.310 align:middle line:84%
+And then you get a nice
+answer, a nice approximation,
+
+00:59:39.310 --> 00:59:43.940 align:middle line:84%
+but still an answer
+to the question.
+
+00:59:43.940 --> 00:59:47.620 align:middle line:84%
+So hopefully, this shows you
+how powerful computation can be.
+
+00:59:47.620 --> 00:59:49.630 align:middle line:84%
+This is just another
+example of how you can just
+
+00:59:49.630 --> 00:59:52.630 align:middle line:84%
+apply computation
+programming to a problem
+
+00:59:52.630 --> 00:59:54.370 align:middle line:90%
+that you see in real life.
+
+00:59:54.370 --> 00:59:58.150 align:middle line:84%
+If you choose to
+do a Europe or take
+
+00:59:58.150 --> 01:00:02.830 align:middle line:84%
+future courses in a different
+field, maybe not in CS,
+
+01:00:02.830 --> 01:00:05.110 align:middle line:84%
+you will probably
+apply computation
+
+01:00:05.110 --> 01:00:09.610 align:middle line:84%
+to concepts and ideas and
+problems in those fields.
+
+01:00:09.610 --> 01:00:11.350 align:middle line:84%
+And it'll be something
+similar to this.
+
+01:00:11.350 --> 01:00:12.490 align:middle line:90%
+You observe something.
+
+01:00:12.490 --> 01:00:14.920 align:middle line:84%
+You try to think of it
+computationally, model it
+
+01:00:14.920 --> 01:00:20.410 align:middle line:84%
+with a bunch of randomness,
+and then calculate
+
+01:00:20.410 --> 01:00:23.230 align:middle line:90%
+something of interest.
+
+01:00:23.230 --> 01:00:24.620 align:middle line:90%
+OK.
+
+01:00:24.620 --> 01:00:28.850 align:middle line:90%
+So that's the end of 6.100L.
+
+01:00:28.850 --> 01:00:31.760 align:middle line:84%
+I've got a little wrap-up
+to remind ourselves
+
+01:00:31.760 --> 01:00:34.610 align:middle line:84%
+where we've been and
+where we will go.
+
+01:00:34.610 --> 01:00:36.500 align:middle line:90%
+So what did we learn?
+
+01:00:36.500 --> 01:00:40.910 align:middle line:84%
+Oh, also, these slides
+will be like a meme dump
+
+01:00:40.910 --> 01:00:43.370 align:middle line:84%
+of every remaining
+meme that I have.
+
+01:00:43.370 --> 01:00:46.550 align:middle line:84%
+So this is going to
+be very meme-heavy.
+
+01:00:46.550 --> 01:00:47.720 align:middle line:90%
+So what did we learn?
+
+01:00:47.720 --> 01:00:52.430 align:middle line:84%
+We've got, of course, we
+learned Python, programming.
+
+01:00:52.430 --> 01:00:54.680 align:middle line:84%
+We learned a lot
+of Python syntax.
+
+01:00:54.680 --> 01:00:57.650 align:middle line:84%
+Some lectures were heavier
+on Python syntax than others.
+
+01:00:57.650 --> 01:01:01.160 align:middle line:84%
+But hopefully, you've
+got a handle on that.
+
+01:01:01.160 --> 01:01:04.190 align:middle line:84%
+We learned, of course,
+flow of control
+
+01:01:04.190 --> 01:01:09.215 align:middle line:84%
+with branches, if
+statements, [INAUDIBLE]..
+
+01:01:09.215 --> 01:01:11.990 align:middle line:84%
+Else statements
+allow us to either do
+
+01:01:11.990 --> 01:01:15.170 align:middle line:84%
+one thing or another in the
+code, make a decision point.
+
+01:01:15.170 --> 01:01:17.180 align:middle line:84%
+Loops-- for loops
+and while loops,
+
+01:01:17.180 --> 01:01:19.400 align:middle line:84%
+as well as exceptions
+as a way for us
+
+01:01:19.400 --> 01:01:22.410 align:middle line:84%
+to deal with unexpected things
+coming up in the course.
+
+01:01:22.410 --> 01:01:26.520 align:middle line:84%
+The ideas here, flow of
+control, are actually
+
+01:01:26.520 --> 01:01:28.990 align:middle line:84%
+transferable to any other
+programming language.
+
+01:01:28.990 --> 01:01:30.993 align:middle line:84%
+So if you know the
+ideas, if you have
+
+01:01:30.993 --> 01:01:32.910 align:middle line:84%
+the intuition for what
+kind of flow of control
+
+01:01:32.910 --> 01:01:34.500 align:middle line:84%
+you'd like to use,
+all you'd have
+
+01:01:34.500 --> 01:01:36.270 align:middle line:90%
+to do is change the syntax.
+
+01:01:36.270 --> 01:01:40.260 align:middle line:84%
+And then suddenly, you can write
+some code in another language.
+
+01:01:40.260 --> 01:01:42.460 align:middle line:84%
+Of course, we learned
+about data structures.
+
+01:01:42.460 --> 01:01:47.400 align:middle line:84%
+So we did lists, really useful
+data structures; dictionaries,
+
+01:01:47.400 --> 01:01:51.610 align:middle line:84%
+super useful data structures;
+tuples, things like that.
+
+01:01:51.610 --> 01:01:54.480 align:middle line:84%
+So you can learn about
+more advanced data
+
+01:01:54.480 --> 01:01:57.390 align:middle line:84%
+structures in a future
+course if you'd like.
+
+01:01:57.390 --> 01:02:01.290 align:middle line:84%
+But those are really the top
+two or three most useful data
+
+01:02:01.290 --> 01:02:03.170 align:middle line:90%
+structures.
+
+01:02:03.170 --> 01:02:04.775 align:middle line:90%
+We talked a lot--
+
+01:02:04.775 --> 01:02:07.400 align:middle line:84%
+actually, it was a comment-- we
+didn't talk a lot specifically.
+
+01:02:07.400 --> 01:02:10.550 align:middle line:84%
+But it was a common theme
+in this class, organization
+
+01:02:10.550 --> 01:02:11.930 align:middle line:90%
+of code.
+
+01:02:11.930 --> 01:02:14.930 align:middle line:84%
+So these ideas of
+decomposition and abstraction,
+
+01:02:14.930 --> 01:02:17.720 align:middle line:84%
+they came up a lot when
+we talked about functions.
+
+01:02:17.720 --> 01:02:19.560 align:middle line:90%
+That's our first introduction.
+
+01:02:19.560 --> 01:02:23.780 align:middle line:84%
+So functions helped us take
+some functional piece of code,
+
+01:02:23.780 --> 01:02:27.050 align:middle line:84%
+some code that does
+something, abstract it away
+
+01:02:27.050 --> 01:02:29.450 align:middle line:84%
+into a nice little
+module, decompose it
+
+01:02:29.450 --> 01:02:30.890 align:middle line:90%
+into one little module.
+
+01:02:30.890 --> 01:02:33.830 align:middle line:84%
+You have to write it once,
+maybe write it a few times,
+
+01:02:33.830 --> 01:02:37.280 align:middle line:84%
+but debug it a few
+times, and then use it
+
+01:02:37.280 --> 01:02:40.100 align:middle line:84%
+a whole bunch of
+times without worrying
+
+01:02:40.100 --> 01:02:41.640 align:middle line:90%
+that it's going to change.
+
+01:02:41.640 --> 01:02:43.280 align:middle line:84%
+So it's just a very
+nice way for us
+
+01:02:43.280 --> 01:02:45.530 align:middle line:84%
+to decompose functional
+pieces of code.
+
+01:02:45.530 --> 01:02:48.650 align:middle line:84%
+And then we saw it come up
+again when we did classes,
+
+01:02:48.650 --> 01:02:50.690 align:middle line:90%
+object-oriented programming.
+
+01:02:50.690 --> 01:02:55.190 align:middle line:84%
+We were able to bundle
+behaviors and data together
+
+01:02:55.190 --> 01:02:58.430 align:middle line:84%
+into one nice little
+object that we could then
+
+01:02:58.430 --> 01:03:01.430 align:middle line:84%
+create many of in many
+different parts of the code,
+
+01:03:01.430 --> 01:03:04.990 align:middle line:84%
+and then manipulate
+individually.
+
+01:03:04.990 --> 01:03:08.270 align:middle line:84%
+Another common theme throughout
+this class was algorithms.
+
+01:03:08.270 --> 01:03:11.710 align:middle line:84%
+So we talked about bisection
+search algorithm way
+
+01:03:11.710 --> 01:03:13.990 align:middle line:84%
+at the beginning
+of the lectures.
+
+01:03:13.990 --> 01:03:15.760 align:middle line:90%
+We talked about it in P set 1.
+
+01:03:15.760 --> 01:03:17.830 align:middle line:84%
+And it came up again
+towards the end
+
+01:03:17.830 --> 01:03:20.680 align:middle line:84%
+when we talked about complexity
+and searching and sorting
+
+01:03:20.680 --> 01:03:22.490 align:middle line:90%
+algorithms, things like that.
+
+01:03:22.490 --> 01:03:25.750 align:middle line:84%
+So that was kind of
+your only big algorithm
+
+01:03:25.750 --> 01:03:26.890 align:middle line:90%
+that you saw in this class.
+
+01:03:26.890 --> 01:03:31.800 align:middle line:84%
+But it shows you just
+how you can implement
+
+01:03:31.800 --> 01:03:34.290 align:middle line:84%
+some code in a
+completely different way
+
+01:03:34.290 --> 01:03:37.140 align:middle line:84%
+to behave in a completely
+different way--
+
+01:03:37.140 --> 01:03:40.720 align:middle line:84%
+to be a lot faster with some
+conditions, like being sorted
+
+01:03:40.720 --> 01:03:41.710 align:middle line:90%
+and things like that.
+
+01:03:41.710 --> 01:03:43.980 align:middle line:84%
+And then lastly, the
+last part of the class
+
+01:03:43.980 --> 01:03:45.750 align:middle line:84%
+was a little bit
+more theory heavy.
+
+01:03:45.750 --> 01:03:49.170 align:middle line:84%
+We talked about computational
+complexity and that big theta
+
+01:03:49.170 --> 01:03:50.890 align:middle line:90%
+notation.
+
+01:03:50.890 --> 01:03:55.800 align:middle line:84%
+So that gave you a sense of
+how to maybe design algorithms.
+
+01:03:55.800 --> 01:03:59.490 align:middle line:84%
+So if you have a first crack of
+pseudocode on a piece of paper,
+
+01:03:59.490 --> 01:04:03.180 align:middle line:84%
+you can see, well, if I need
+to run this code on a really
+
+01:04:03.180 --> 01:04:06.210 align:middle line:84%
+large data set, it's not going
+to work because it's too slow.
+
+01:04:06.210 --> 01:04:08.500 align:middle line:84%
+You've got three nested
+loops or something like that.
+
+01:04:08.500 --> 01:04:11.640 align:middle line:84%
+So it might force you to rethink
+the design of the algorithm
+
+01:04:11.640 --> 01:04:15.420 align:middle line:84%
+sooner than having
+already implemented it.
+
+01:04:15.420 --> 01:04:17.490 align:middle line:84%
+But if you're dealing
+with small data sets,
+
+01:04:17.490 --> 01:04:18.960 align:middle line:84%
+maybe you wouldn't
+care that you've
+
+01:04:18.960 --> 01:04:22.410 align:middle line:84%
+got three nested for loops or
+a really inefficient recursion
+
+01:04:22.410 --> 01:04:23.970 align:middle line:90%
+algorithm.
+
+01:04:23.970 --> 01:04:28.920 align:middle line:84%
+So those are the big things
+that we learned in this class.
+
+01:04:28.920 --> 01:04:34.025 align:middle line:84%
+Your experience I categorize
+in three different ways.
+
+01:04:34.025 --> 01:04:35.400 align:middle line:84%
+So you might have
+been a natural.
+
+01:04:35.400 --> 01:04:38.490 align:middle line:84%
+If you joined this class
+and immediately got logic,
+
+01:04:38.490 --> 01:04:40.800 align:middle line:84%
+immediately knew how
+to do the problem
+
+01:04:40.800 --> 01:04:42.280 align:middle line:90%
+sets, that's totally fine.
+
+01:04:42.280 --> 01:04:44.340 align:middle line:84%
+I still hope you got
+something out of this class
+
+01:04:44.340 --> 01:04:46.950 align:middle line:90%
+and you learned something.
+
+01:04:46.950 --> 01:04:49.470 align:middle line:84%
+You might have joined
+the class late.
+
+01:04:49.470 --> 01:04:56.230 align:middle line:84%
+If you found 6.100A to be
+too fast or too challenging,
+
+01:04:56.230 --> 01:04:58.950 align:middle line:84%
+you might have joined it joined
+it late, kicked it to the curb,
+
+01:04:58.950 --> 01:05:00.660 align:middle line:90%
+and said, let me join 100L.
+
+01:05:00.660 --> 01:05:02.100 align:middle line:90%
+I welcomed you.
+
+01:05:02.100 --> 01:05:03.930 align:middle line:84%
+We did a little bit
+of research and found
+
+01:05:03.930 --> 01:05:06.420 align:middle line:84%
+that even if you join late,
+it does not actually hinder
+
+01:05:06.420 --> 01:05:08.310 align:middle line:90%
+your performance in the class.
+
+01:05:08.310 --> 01:05:12.770 align:middle line:84%
+So hopefully, that
+was your experience.
+
+01:05:12.770 --> 01:05:13.903 align:middle line:90%
+Did you work hard?
+
+01:05:13.903 --> 01:05:16.070 align:middle line:84%
+So maybe you didn't get all
+the concepts right away.
+
+01:05:16.070 --> 01:05:18.362 align:middle line:84%
+Maybe you struggled a little
+bit with the problem sets.
+
+01:05:18.362 --> 01:05:21.410 align:middle line:84%
+Maybe you struggled a little bit
+on the P set or on the quizzes.
+
+01:05:21.410 --> 01:05:25.320 align:middle line:84%
+But I still think that
+you learned a lot.
+
+01:05:25.320 --> 01:05:29.390 align:middle line:84%
+And the test is always
+to go back and look
+
+01:05:29.390 --> 01:05:31.200 align:middle line:90%
+at the first problem set.
+
+01:05:31.200 --> 01:05:33.620 align:middle line:84%
+So if you do that when
+you go home tonight,
+
+01:05:33.620 --> 01:05:36.140 align:middle line:84%
+you look back at the first
+problem set in this class,
+
+01:05:36.140 --> 01:05:38.000 align:middle line:84%
+you look back at the
+code that you wrote,
+
+01:05:38.000 --> 01:05:40.910 align:middle line:90%
+it will seem so easy.
+
+01:05:40.910 --> 01:05:42.410 align:middle line:90%
+I promise you this.
+
+01:05:42.410 --> 01:05:46.020 align:middle line:84%
+And that's because I think
+you all did such a good job.
+
+01:05:46.020 --> 01:05:48.590 align:middle line:84%
+You tried your
+hardest in this class.
+
+01:05:48.590 --> 01:05:50.340 align:middle line:90%
+I know it's not easy.
+
+01:05:50.340 --> 01:05:51.650 align:middle line:90%
+I know it's slower paced.
+
+01:05:51.650 --> 01:05:54.860 align:middle line:84%
+But it's still
+not an easy class.
+
+01:05:54.860 --> 01:05:56.318 align:middle line:84%
+And I think you've
+learned a lot.
+
+01:05:56.318 --> 01:05:57.860 align:middle line:84%
+Looking back at the
+first problem set
+
+01:05:57.860 --> 01:06:01.630 align:middle line:90%
+will show you that for sure.
+
+01:06:01.630 --> 01:06:03.880 align:middle line:90%
+So what's next?
+
+01:06:03.880 --> 01:06:05.710 align:middle line:84%
+There have been some
+questions about what
+
+01:06:05.710 --> 01:06:08.530 align:middle line:84%
+are some future classes
+that you might want to take
+
+01:06:08.530 --> 01:06:12.900 align:middle line:84%
+or what can you do once
+you've finished here.
+
+01:06:12.900 --> 01:06:13.690 align:middle line:90%
+Here we go.
+
+01:06:13.690 --> 01:06:16.560 align:middle line:90%
+So we've got 6.100B.
+
+01:06:16.560 --> 01:06:20.010 align:middle line:84%
+It is the most
+natural next step.
+
+01:06:20.010 --> 01:06:22.860 align:middle line:84%
+It's a half semester
+class in the second half
+
+01:06:22.860 --> 01:06:23.650 align:middle line:90%
+of the semester.
+
+01:06:23.650 --> 01:06:26.160 align:middle line:84%
+So they're finishing
+up right now basically.
+
+01:06:26.160 --> 01:06:28.530 align:middle line:84%
+It's an overview of
+really interesting topics
+
+01:06:28.530 --> 01:06:34.470 align:middle line:84%
+in computer science and with a
+focus on data science, though.
+
+01:06:34.470 --> 01:06:36.520 align:middle line:84%
+And I actually run
+that class as well.
+
+01:06:36.520 --> 01:06:40.300 align:middle line:84%
+So what we talk about there
+is optimization algorithms.
+
+01:06:40.300 --> 01:06:42.540 align:middle line:84%
+So for example,
+let's say you want
+
+01:06:42.540 --> 01:06:47.550 align:middle line:84%
+to create a schedule for
+your classes next semester.
+
+01:06:47.550 --> 01:06:49.620 align:middle line:84%
+And you will have
+some constraints.
+
+01:06:49.620 --> 01:06:51.900 align:middle line:84%
+You don't want to have classes
+at 8:00 AM, or 9:00 AM,
+
+01:06:51.900 --> 01:06:53.160 align:middle line:90%
+or 10:00 AM, or 11:00 AM.
+
+01:06:53.160 --> 01:06:56.460 align:middle line:84%
+And you want it to all be
+within some time limit or things
+
+01:06:56.460 --> 01:06:57.360 align:middle line:90%
+like that.
+
+01:06:57.360 --> 01:07:00.150 align:middle line:84%
+Optimization algorithm could
+be something that you write.
+
+01:07:00.150 --> 01:07:02.970 align:middle line:84%
+And you could just apply it
+to something that you have.
+
+01:07:02.970 --> 01:07:09.450 align:middle line:84%
+Simulations, exactly what we
+saw today of the physics filling
+
+01:07:09.450 --> 01:07:10.530 align:middle line:90%
+the pool thing--
+
+01:07:10.530 --> 01:07:16.480 align:middle line:84%
+you'll see more examples of
+that and ask different questions
+
+01:07:16.480 --> 01:07:17.390 align:middle line:90%
+about it as well.
+
+01:07:17.390 --> 01:07:22.078 align:middle line:84%
+So you'll see things
+like calculate things
+
+01:07:22.078 --> 01:07:23.120 align:middle line:90%
+like standard deviations.
+
+01:07:23.120 --> 01:07:25.910 align:middle line:84%
+How many times do we need to
+repeat this experiment in order
+
+01:07:25.910 --> 01:07:27.900 align:middle line:84%
+to be within some
+confidence interval?
+
+01:07:27.900 --> 01:07:29.960 align:middle line:84%
+So how confident are
+you about your answers?
+
+01:07:29.960 --> 01:07:31.920 align:middle line:84%
+So we'll be doing
+more things like that.
+
+01:07:31.920 --> 01:07:35.460 align:middle line:84%
+And then there's, of course, the
+machine learning aspect of it.
+
+01:07:35.460 --> 01:07:39.590 align:middle line:84%
+So if you have a
+bunch of experiments
+
+01:07:39.590 --> 01:07:42.650 align:middle line:84%
+that you do that you get a
+whole bunch of data from,
+
+01:07:42.650 --> 01:07:45.260 align:middle line:84%
+how can you fit a curve
+to those experiments?
+
+01:07:45.260 --> 01:07:47.330 align:middle line:84%
+And then for a
+future experiment,
+
+01:07:47.330 --> 01:07:48.805 align:middle line:90%
+what's the expected value?
+
+01:07:48.805 --> 01:07:50.180 align:middle line:84%
+So that's a little
+bit of machine
+
+01:07:50.180 --> 01:07:52.940 align:middle line:90%
+learning on experimental data.
+
+01:07:52.940 --> 01:07:54.800 align:middle line:84%
+And then some more
+machine learning
+
+01:07:54.800 --> 01:07:58.460 align:middle line:84%
+in a more classical
+sense is dealing
+
+01:07:58.460 --> 01:08:02.870 align:middle line:84%
+with clustering algorithms,
+and classification of data,
+
+01:08:02.870 --> 01:08:04.200 align:middle line:90%
+and things like that.
+
+01:08:04.200 --> 01:08:08.510 align:middle line:84%
+So 6.100B I know a lot about
+because I also teach it.
+
+01:08:08.510 --> 01:08:10.490 align:middle line:84%
+It's a really good
+next class, if you
+
+01:08:10.490 --> 01:08:13.410 align:middle line:84%
+want to be employable
+for an internship.
+
+01:08:13.410 --> 01:08:16.930 align:middle line:84%
+If you take this, I think
+you'll be good to go.
+
+01:08:16.930 --> 01:08:20.229 align:middle line:84%
+6.101 is also a really
+nice class to take next.
+
+01:08:20.229 --> 01:08:23.350 align:middle line:84%
+If you really enjoyed the
+programming in this class,
+
+01:08:23.350 --> 01:08:26.300 align:middle line:90%
+6.101 will be your next step.
+
+01:08:26.300 --> 01:08:28.300 align:middle line:84%
+It's called Fundamentals
+of Programming.
+
+01:08:28.300 --> 01:08:31.359 align:middle line:90%
+And it is in Python.
+
+01:08:31.359 --> 01:08:33.102 align:middle line:90%
+It's pretty fast paced.
+
+01:08:33.102 --> 01:08:34.810 align:middle line:84%
+So there will be
+problem sets every week.
+
+01:08:34.810 --> 01:08:37.930 align:middle line:84%
+And they're going to
+be pretty hardcore.
+
+01:08:37.930 --> 01:08:39.760 align:middle line:84%
+There's going to be
+a lot of debugging
+
+01:08:39.760 --> 01:08:42.069 align:middle line:90%
+involved in those problem sets.
+
+01:08:42.069 --> 01:08:46.120 align:middle line:84%
+And I actually was a recitation
+instructor for that class.
+
+01:08:46.120 --> 01:08:48.139 align:middle line:90%
+And to get a first--
+
+01:08:48.139 --> 01:08:50.680 align:middle line:90%
+
+
+01:08:50.680 --> 01:08:53.590 align:middle line:84%
+for the problem sets at least,
+to get something working
+
+01:08:53.590 --> 01:08:55.160 align:middle line:90%
+doesn't take that long.
+
+01:08:55.160 --> 01:08:58.479 align:middle line:84%
+But to make it work according
+to the specifications
+
+01:08:58.479 --> 01:09:00.729 align:middle line:84%
+that they have will
+take a little bit
+
+01:09:00.729 --> 01:09:02.050 align:middle line:90%
+of debugging and reworking.
+
+01:09:02.050 --> 01:09:05.240 align:middle line:84%
+That's because they deal with
+a lot of real world data.
+
+01:09:05.240 --> 01:09:09.279 align:middle line:84%
+So writing code that's really
+efficient is very important.
+
+01:09:09.279 --> 01:09:12.830 align:middle line:84%
+So again, writing nested
+for loops, of course,
+
+01:09:12.830 --> 01:09:14.140 align:middle line:90%
+we can totally do that.
+
+01:09:14.140 --> 01:09:18.319 align:middle line:84%
+But making it efficient using
+data structures like sets
+
+01:09:18.319 --> 01:09:23.210 align:middle line:84%
+to make the code efficient,
+using proper algorithms that
+
+01:09:23.210 --> 01:09:26.000 align:middle line:84%
+are efficient is a very
+important part of this class.
+
+01:09:26.000 --> 01:09:28.470 align:middle line:84%
+But you'll learn a lot
+if you take this class.
+
+01:09:28.470 --> 01:09:33.979 align:middle line:84%
+You'll be very employable for
+an internship in some computer
+
+01:09:33.979 --> 01:09:36.830 align:middle line:90%
+science company.
+
+01:09:36.830 --> 01:09:40.430 align:middle line:84%
+6.102 is also a nice
+next class, if you're
+
+01:09:40.430 --> 01:09:42.950 align:middle line:84%
+interested in
+software construction.
+
+01:09:42.950 --> 01:09:45.120 align:middle line:84%
+It is actually in a
+different language.
+
+01:09:45.120 --> 01:09:46.859 align:middle line:90%
+It's in TypeScript these days.
+
+01:09:46.859 --> 01:09:48.979 align:middle line:90%
+It used to be in Java.
+
+01:09:48.979 --> 01:09:50.862 align:middle line:84%
+You can take what
+you've learned here.
+
+01:09:50.862 --> 01:09:53.279 align:middle line:84%
+And if you're interested in
+learning a different language,
+
+01:09:53.279 --> 01:09:55.880 align:middle line:90%
+this is a nice one to try.
+
+01:09:55.880 --> 01:09:58.400 align:middle line:84%
+Their motto is
+you're writing code
+
+01:09:58.400 --> 01:10:00.590 align:middle line:84%
+that is safe from bugs,
+easy to understand,
+
+01:10:00.590 --> 01:10:02.040 align:middle line:90%
+and ready for change.
+
+01:10:02.040 --> 01:10:04.700 align:middle line:84%
+So they have also
+lots of problem sets.
+
+01:10:04.700 --> 01:10:06.560 align:middle line:84%
+But you're also
+working in a team.
+
+01:10:06.560 --> 01:10:09.500 align:middle line:84%
+So you get to learn
+how to work in a team
+
+01:10:09.500 --> 01:10:13.370 align:middle line:84%
+well with other students,
+how to code together,
+
+01:10:13.370 --> 01:10:18.050 align:middle line:84%
+how to write code that has
+nice documentation, lots
+
+01:10:18.050 --> 01:10:19.860 align:middle line:90%
+of debugging, things like that.
+
+01:10:19.860 --> 01:10:22.550 align:middle line:84%
+So more of that those
+ideas of decomposition
+
+01:10:22.550 --> 01:10:24.620 align:middle line:84%
+abstraction that we
+learned in this class
+
+01:10:24.620 --> 01:10:29.600 align:middle line:84%
+will definitely be prominent
+in this class, in 6.102.
+
+01:10:29.600 --> 01:10:32.720 align:middle line:84%
+And then, of course,
+we've got other classes
+
+01:10:32.720 --> 01:10:34.490 align:middle line:90%
+I'm happy to chat about.
+
+01:10:34.490 --> 01:10:38.750 align:middle line:84%
+So machine learning
+is a nice one, again,
+
+01:10:38.750 --> 01:10:41.330 align:middle line:84%
+if you have a handle on
+programming really well
+
+01:10:41.330 --> 01:10:45.290 align:middle line:84%
+and want to try just
+applying programming
+
+01:10:45.290 --> 01:10:46.460 align:middle line:90%
+to machine learning.
+
+01:10:46.460 --> 01:10:50.030 align:middle line:84%
+An algorithms class is
+also a fine next step,
+
+01:10:50.030 --> 01:10:52.850 align:middle line:84%
+if you're more interested in the
+complexity part of this class
+
+01:10:52.850 --> 01:10:56.630 align:middle line:84%
+that we saw, also very,
+very reasonable things
+
+01:10:56.630 --> 01:10:59.345 align:middle line:84%
+to try to do next
+after this class.
+
+01:10:59.345 --> 01:11:02.860 align:middle line:90%
+
+
+01:11:02.860 --> 01:11:04.930 align:middle line:90%
+Yes, last slide.
+
+01:11:04.930 --> 01:11:07.420 align:middle line:84%
+If you're not going
+to code for a while,
+
+01:11:07.420 --> 01:11:10.180 align:middle line:84%
+but think you might code
+in a couple of semesters
+
+01:11:10.180 --> 01:11:11.740 align:middle line:90%
+or something like that--
+
+01:11:11.740 --> 01:11:14.710 align:middle line:84%
+you want to take a more
+computational class
+
+01:11:14.710 --> 01:11:16.360 align:middle line:90%
+in some desired field--
+
+01:11:16.360 --> 01:11:20.310 align:middle line:84%
+I would say that you
+should try to practice
+
+01:11:20.310 --> 01:11:21.880 align:middle line:90%
+coding at least once a week.
+
+01:11:21.880 --> 01:11:25.230 align:middle line:84%
+So in our website, we've
+got a little help menu
+
+01:11:25.230 --> 01:11:27.965 align:middle line:84%
+where you can go to-- we've
+listed some other websites.
+
+01:11:27.965 --> 01:11:30.090 align:middle line:84%
+There's a little bit of
+coding practice you can do.
+
+01:11:30.090 --> 01:11:31.800 align:middle line:90%
+It doesn't need to be a lot--
+
+01:11:31.800 --> 01:11:34.080 align:middle line:84%
+30 minutes once
+a week, something
+
+01:11:34.080 --> 01:11:37.970 align:middle line:84%
+like that, just so you
+don't forget to code
+
+01:11:37.970 --> 01:11:41.310 align:middle line:84%
+can go a really long way
+because I know, over the summer,
+
+01:11:41.310 --> 01:11:42.810 align:middle line:84%
+sometimes I don't
+code for a month
+
+01:11:42.810 --> 01:11:48.300 align:middle line:84%
+or so because I do other stuff
+besides coding in my life.
+
+01:11:48.300 --> 01:11:51.390 align:middle line:84%
+And coming back into it
+takes a little bit of time.
+
+01:11:51.390 --> 01:11:54.370 align:middle line:84%
+And it's just without practice,
+like with anything else,
+
+01:11:54.370 --> 01:11:55.470 align:middle line:90%
+it's just easy to forget.
+
+01:11:55.470 --> 01:11:57.250 align:middle line:84%
+And it's hard to
+get back into it.
+
+01:11:57.250 --> 01:11:59.760 align:middle line:84%
+So even if you just do
+a little bit of coding,
+
+01:11:59.760 --> 01:12:02.250 align:middle line:84%
+write a really simple
+program once a week,
+
+01:12:02.250 --> 01:12:04.830 align:middle line:90%
+it's going to go a long way.
+
+01:12:04.830 --> 01:12:06.770 align:middle line:90%
+So that's it.
+
+01:12:06.770 --> 01:12:08.770 align:middle line:84%
+I want to thank you all
+for being in this class.
+
+01:12:08.770 --> 01:12:10.480 align:middle line:84%
+And thank you for coming
+to this last lecture.
+
+01:12:10.480 --> 01:12:11.563 align:middle line:90%
+I know you didn't have to.
+
+01:12:11.563 --> 01:12:13.590 align:middle line:90%
+But I do appreciate it.
+
+01:12:13.590 --> 01:12:14.670 align:middle line:90%
+Happy coding.
+
+01:12:14.670 --> 01:12:16.440 align:middle line:90%
+And good luck with exams.
+
+01:12:16.440 --> 01:12:18.800 align:middle line:90%
+And have a good break, everyone.
+
+01:12:18.800 --> 01:12:19.690 align:middle line:90%
+Thank you.
+
+01:12:19.690 --> 01:12:23.040 align:middle line:90%
+[APPLAUSE]
+
+01:12:23.040 --> 01:12:31.000 align:middle line:90%

@@ -1,0 +1,5811 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.435 align:middle line:90%
+[SQUEAKING]
+
+00:00:02.435 --> 00:00:04.870 align:middle line:90%
+[RUSTLING]
+
+00:00:04.870 --> 00:00:07.305 align:middle line:90%
+[CLICKING]
+
+00:00:07.305 --> 00:00:11.210 align:middle line:90%
+
+
+00:00:11.210 --> 00:00:15.150 align:middle line:84%
+ANA BELL: All right, so
+let's begin today's lecture.
+
+00:00:15.150 --> 00:00:19.490 align:middle line:84%
+We have only two lectures
+left, this one and next Monday.
+
+00:00:19.490 --> 00:00:21.560 align:middle line:84%
+I realized that
+there are no more
+
+00:00:21.560 --> 00:00:23.340 align:middle line:90%
+deliverables for this class.
+
+00:00:23.340 --> 00:00:26.390 align:middle line:84%
+No more quizzes after
+tonight, no more P sets.
+
+00:00:26.390 --> 00:00:28.670 align:middle line:84%
+So I do appreciate you
+coming to these lectures.
+
+00:00:28.670 --> 00:00:32.360 align:middle line:84%
+They're intended to be
+a little bit more fun.
+
+00:00:32.360 --> 00:00:33.410 align:middle line:90%
+No need to take notes.
+
+00:00:33.410 --> 00:00:35.690 align:middle line:84%
+Just kind of sit back
+and enjoy the content.
+
+00:00:35.690 --> 00:00:40.310 align:middle line:84%
+Today, we're going to be talking
+about a library in Python that
+
+00:00:40.310 --> 00:00:41.540 align:middle line:90%
+can help you do plotting.
+
+00:00:41.540 --> 00:00:43.945 align:middle line:84%
+And the reason why we talk
+about this plotting library as
+
+00:00:43.945 --> 00:00:46.070 align:middle line:84%
+opposed to something else
+that's maybe more machine
+
+00:00:46.070 --> 00:00:48.680 align:middle line:84%
+learning or something
+else like that is because
+
+00:00:48.680 --> 00:00:50.420 align:middle line:84%
+at one point or
+another, if you decide
+
+00:00:50.420 --> 00:00:54.470 align:middle line:84%
+to take any other course that
+kind of builds upon this intro
+
+00:00:54.470 --> 00:00:57.680 align:middle line:84%
+course, you'll probably
+want to create some graphs
+
+00:00:57.680 --> 00:00:59.570 align:middle line:90%
+or visualize something.
+
+00:00:59.570 --> 00:01:01.400 align:middle line:84%
+Even if you do a
+UROP, you'll probably
+
+00:01:01.400 --> 00:01:03.540 align:middle line:84%
+have to visualize
+some sort of data.
+
+00:01:03.540 --> 00:01:07.490 align:middle line:84%
+And it's a really nice
+next step to show you
+
+00:01:07.490 --> 00:01:09.660 align:middle line:84%
+how to use a library
+that already exists.
+
+00:01:09.660 --> 00:01:11.400 align:middle line:84%
+So somebody already
+put in the work
+
+00:01:11.400 --> 00:01:14.440 align:middle line:84%
+in creating this library
+that can plot things for us.
+
+00:01:14.440 --> 00:01:17.050 align:middle line:90%
+So let's just try to use it.
+
+00:01:17.050 --> 00:01:19.710 align:middle line:84%
+And so it's just a really,
+really nice way for us
+
+00:01:19.710 --> 00:01:25.930 align:middle line:84%
+to wrap up the course by showing
+you this visualization library.
+
+00:01:25.930 --> 00:01:28.230 align:middle line:84%
+So we're going to--
+the library we're
+
+00:01:28.230 --> 00:01:31.320 align:middle line:84%
+going to do to use
+is called matplotlib.
+
+00:01:31.320 --> 00:01:34.980 align:middle line:84%
+And it's the most basic
+plotting visualization library
+
+00:01:34.980 --> 00:01:36.240 align:middle line:90%
+that we can have.
+
+00:01:36.240 --> 00:01:38.730 align:middle line:84%
+And the way that we
+bring it into our code,
+
+00:01:38.730 --> 00:01:40.590 align:middle line:84%
+just like we have in
+the past few lectures,
+
+00:01:40.590 --> 00:01:43.080 align:middle line:90%
+is with this import statement.
+
+00:01:43.080 --> 00:01:47.580 align:middle line:84%
+And the actual file
+that comes into our--
+
+00:01:47.580 --> 00:01:49.080 align:middle line:84%
+that we would bring
+into our program
+
+00:01:49.080 --> 00:01:51.570 align:middle line:90%
+is called matplotlib.pyplot.
+
+00:01:51.570 --> 00:01:53.430 align:middle line:90%
+Now, that's kind of a mouthful.
+
+00:01:53.430 --> 00:01:56.460 align:middle line:84%
+And a lot of times when
+we want to use this--
+
+00:01:56.460 --> 00:01:58.530 align:middle line:84%
+or when we want to
+use this library,
+
+00:01:58.530 --> 00:02:02.610 align:middle line:84%
+you'd have to basically say
+matplotlib.pyplot dot function
+
+00:02:02.610 --> 00:02:04.030 align:middle line:90%
+name from that file.
+
+00:02:04.030 --> 00:02:07.240 align:middle line:84%
+And so that's a lot of
+writing and a lot of typing.
+
+00:02:07.240 --> 00:02:09.030 align:middle line:90%
+So when we bring it into our--
+
+00:02:09.030 --> 00:02:11.580 align:middle line:84%
+when we bring in this
+library into our own file,
+
+00:02:11.580 --> 00:02:13.590 align:middle line:90%
+we can actually rename it.
+
+00:02:13.590 --> 00:02:17.430 align:middle line:84%
+So "as plt" tells
+Python that now I
+
+00:02:17.430 --> 00:02:21.750 align:middle line:84%
+would like to refer to this file
+and this library as the name
+
+00:02:21.750 --> 00:02:27.480 align:middle line:84%
+plt. So if we ever want to
+call functions or maybe objects
+
+00:02:27.480 --> 00:02:29.010 align:middle line:84%
+and things like
+that from this file,
+
+00:02:29.010 --> 00:02:33.300 align:middle line:84%
+we would do it using plt dot
+and then the name of whatever we
+
+00:02:33.300 --> 00:02:34.090 align:middle line:90%
+want to use.
+
+00:02:34.090 --> 00:02:38.250 align:middle line:84%
+So it's just a much nicer way
+to grab the contents of the file
+
+00:02:38.250 --> 00:02:41.100 align:middle line:84%
+instead of always writing
+matplotlib.pyplot dot
+
+00:02:41.100 --> 00:02:41.730 align:middle line:90%
+something else.
+
+00:02:41.730 --> 00:02:42.390 align:middle line:90%
+Yeah, question.
+
+00:02:42.390 --> 00:02:44.040 align:middle line:84%
+AUDIENCE: Is plt
+a variable name?
+
+00:02:44.040 --> 00:02:46.260 align:middle line:84%
+ANA BELL: You can think
+of it as a variable name.
+
+00:02:46.260 --> 00:02:48.180 align:middle line:90%
+It's anything you want it to be.
+
+00:02:48.180 --> 00:02:51.360 align:middle line:84%
+So you can import it
+matplotlib.pyplot as ana.
+
+00:02:51.360 --> 00:02:52.980 align:middle line:84%
+And then from there
+on, you can say
+
+00:02:52.980 --> 00:02:56.890 align:middle line:84%
+ana dot process name, or
+plot, or whatever it is.
+
+00:02:56.890 --> 00:02:59.040 align:middle line:84%
+So it's just whatever
+name you want to give it.
+
+00:02:59.040 --> 00:03:02.040 align:middle line:90%
+
+
+00:03:02.040 --> 00:03:06.090 align:middle line:84%
+OK, so there are other
+visualization libraries
+
+00:03:06.090 --> 00:03:09.350 align:middle line:90%
+that exist out there.
+
+00:03:09.350 --> 00:03:12.530 align:middle line:84%
+A lot of them-- or all of
+them build upon this one.
+
+00:03:12.530 --> 00:03:15.650 align:middle line:84%
+So this is the most basic
+library that you can get.
+
+00:03:15.650 --> 00:03:18.560 align:middle line:84%
+And the other ones that
+exist build upon it
+
+00:03:18.560 --> 00:03:21.710 align:middle line:84%
+by doing some things
+behind the scenes
+
+00:03:21.710 --> 00:03:25.460 align:middle line:84%
+to maybe make your
+lives easier or to do
+
+00:03:25.460 --> 00:03:27.680 align:middle line:84%
+some really cool
+visualizations or maybe
+
+00:03:27.680 --> 00:03:31.550 align:middle line:84%
+things where you can hover
+the mouse over a coordinate
+
+00:03:31.550 --> 00:03:32.480 align:middle line:90%
+and things like that.
+
+00:03:32.480 --> 00:03:35.180 align:middle line:84%
+But we don't need to do
+any of that at this time.
+
+00:03:35.180 --> 00:03:38.390 align:middle line:84%
+It's just nice to take a look at
+this really basic visualization
+
+00:03:38.390 --> 00:03:40.560 align:middle line:90%
+library.
+
+00:03:40.560 --> 00:03:42.780 align:middle line:84%
+So throughout the
+lecture, we're going
+
+00:03:42.780 --> 00:03:44.250 align:middle line:84%
+to look a little
+bit at some code.
+
+00:03:44.250 --> 00:03:46.320 align:middle line:84%
+We're going to run
+it on the Python--
+
+00:03:46.320 --> 00:03:47.830 align:middle line:90%
+just from the Python file.
+
+00:03:47.830 --> 00:03:50.240 align:middle line:84%
+Then we'll just talk
+about it on the slides.
+
+00:03:50.240 --> 00:03:52.490 align:middle line:84%
+So whenever we're
+plotting things,
+
+00:03:52.490 --> 00:03:58.550 align:middle line:84%
+we need to tell Python a set of
+x values and a set of y values.
+
+00:03:58.550 --> 00:03:59.660 align:middle line:90%
+That's pretty common.
+
+00:03:59.660 --> 00:04:01.790 align:middle line:84%
+If you've used
+Matlab, you'll know
+
+00:04:01.790 --> 00:04:05.030 align:middle line:84%
+that that's kind of the way
+it's done-- same in Python.
+
+00:04:05.030 --> 00:04:07.790 align:middle line:84%
+So when we're creating
+the coordinates
+
+00:04:07.790 --> 00:04:10.490 align:middle line:84%
+that we'd like to
+plot in a 2D plane,
+
+00:04:10.490 --> 00:04:15.230 align:middle line:84%
+we're essentially just creating
+two lists, where index by index
+
+00:04:15.230 --> 00:04:17.420 align:middle line:84%
+we're going to have
+a list containing
+
+00:04:17.420 --> 00:04:21.680 align:middle line:84%
+all the values that we want for
+the x coordinate and a list--
+
+00:04:21.680 --> 00:04:24.620 align:middle line:84%
+and in a separate list
+all the values that we'd
+
+00:04:24.620 --> 00:04:25.860 align:middle line:90%
+like for the y coordinate.
+
+00:04:25.860 --> 00:04:28.400 align:middle line:84%
+So at index 0 in
+each of these lists,
+
+00:04:28.400 --> 00:04:31.880 align:middle line:84%
+you're basically creating
+x values at index 0,
+
+00:04:31.880 --> 00:04:35.150 align:middle line:84%
+y values at index 0 becomes
+the coordinate-- one
+
+00:04:35.150 --> 00:04:36.630 align:middle line:90%
+coordinate point.
+
+00:04:36.630 --> 00:04:39.590 align:middle line:84%
+So one of the very simplest
+things that we can do
+
+00:04:39.590 --> 00:04:42.620 align:middle line:84%
+is we can create a
+nice list of values
+
+00:04:42.620 --> 00:04:45.090 align:middle line:90%
+that will be our x values.
+
+00:04:45.090 --> 00:04:50.190 align:middle line:84%
+So our x-axis will basically
+be the numbers 0 through 29.
+
+00:04:50.190 --> 00:04:53.820 align:middle line:84%
+And then down here we can
+create four different lists
+
+00:04:53.820 --> 00:04:58.450 align:middle line:84%
+containing four different
+y value coordinates.
+
+00:04:58.450 --> 00:04:59.910 align:middle line:84%
+So when we're
+plotting, we're going
+
+00:04:59.910 --> 00:05:03.780 align:middle line:84%
+to plot this x value
+list against all
+
+00:05:03.780 --> 00:05:06.810 align:middle line:84%
+these linear points, this
+x value list against all
+
+00:05:06.810 --> 00:05:08.550 align:middle line:84%
+these quadratic points,
+and this x value
+
+00:05:08.550 --> 00:05:10.780 align:middle line:84%
+list against the cubic
+points, and so on.
+
+00:05:10.780 --> 00:05:12.990 align:middle line:84%
+So the way we're
+creating these lists
+
+00:05:12.990 --> 00:05:16.800 align:middle line:84%
+are a pretty familiar
+Python syntax.
+
+00:05:16.800 --> 00:05:19.500 align:middle line:90%
+Our n is going through 0 to 29.
+
+00:05:19.500 --> 00:05:21.660 align:middle line:84%
+And then we're
+appending to the end
+
+00:05:21.660 --> 00:05:24.060 align:middle line:84%
+of each one of these lists,
+linear, quadratic, cubic,
+
+00:05:24.060 --> 00:05:27.000 align:middle line:84%
+and exponential, some
+function of that n.
+
+00:05:27.000 --> 00:05:31.060 align:middle line:84%
+So the linear list will just
+have all the values again.
+
+00:05:31.060 --> 00:05:33.810 align:middle line:84%
+So we're plotting 0,
+0, 1, 1, 2, 2, so on.
+
+00:05:33.810 --> 00:05:38.640 align:middle line:84%
+The quadratic list, we'll be
+plotting 0, 0, 1, 1, 2, 4, 3,
+
+00:05:38.640 --> 00:05:40.000 align:middle line:90%
+9, and so on.
+
+00:05:40.000 --> 00:05:43.200 align:middle line:84%
+Same with the cubic and
+then this exponential.
+
+00:05:43.200 --> 00:05:46.180 align:middle line:84%
+I just chose randomly
+1.5 to the power of n
+
+00:05:46.180 --> 00:05:48.180 align:middle line:84%
+just because it kind of
+looked nice in the plot,
+
+00:05:48.180 --> 00:05:50.160 align:middle line:84%
+but you can imagine
+different number
+
+00:05:50.160 --> 00:05:53.210 align:middle line:90%
+for the exponential in there.
+
+00:05:53.210 --> 00:05:59.410 align:middle line:84%
+So the way we plot some values
+is by, not surprisingly,
+
+00:05:59.410 --> 00:06:00.460 align:middle line:90%
+the plot command.
+
+00:06:00.460 --> 00:06:03.790 align:middle line:84%
+So plt was how we
+decided to import
+
+00:06:03.790 --> 00:06:06.280 align:middle line:84%
+that library as, the
+name that we gave it,
+
+00:06:06.280 --> 00:06:09.310 align:middle line:84%
+dot plot tells Python
+we'd like to plot
+
+00:06:09.310 --> 00:06:11.990 align:middle line:90%
+some list of x and y values.
+
+00:06:11.990 --> 00:06:14.140 align:middle line:84%
+So the parameters
+to the plot command
+
+00:06:14.140 --> 00:06:17.270 align:middle line:84%
+are going to be two
+sequences of values.
+
+00:06:17.270 --> 00:06:20.620 align:middle line:84%
+They can be lists typically,
+but they could also be tuples.
+
+00:06:20.620 --> 00:06:23.110 align:middle line:84%
+They could also be
+the keys you get
+
+00:06:23.110 --> 00:06:26.450 align:middle line:84%
+from a dictionary that was also
+an iterable, things like that.
+
+00:06:26.450 --> 00:06:30.140 align:middle line:84%
+So we have to pass in a
+list of numerical things.
+
+00:06:30.140 --> 00:06:33.075 align:middle line:84%
+So this will be typically
+the stuff on your x-axis.
+
+00:06:33.075 --> 00:06:34.450 align:middle line:84%
+And the second
+parameter is going
+
+00:06:34.450 --> 00:06:37.850 align:middle line:84%
+to be the function of
+those values of the x-axis.
+
+00:06:37.850 --> 00:06:40.580 align:middle line:84%
+The lists have to be the
+same length, obviously,
+
+00:06:40.580 --> 00:06:43.520 align:middle line:84%
+so Python knows which
+coordinates we're plotting.
+
+00:06:43.520 --> 00:06:46.370 align:middle line:84%
+If they're not the same
+length by accident,
+
+00:06:46.370 --> 00:06:49.700 align:middle line:84%
+then Python will throw an
+error and then you don't--
+
+00:06:49.700 --> 00:06:52.890 align:middle line:90%
+it just won't plot anything.
+
+00:06:52.890 --> 00:06:58.400 align:middle line:84%
+So when we run the code, Python
+will generally plot the values
+
+00:06:58.400 --> 00:07:02.330 align:middle line:84%
+in either a new
+window or directly
+
+00:07:02.330 --> 00:07:05.820 align:middle line:84%
+in line in the console,
+so right over here.
+
+00:07:05.820 --> 00:07:08.840 align:middle line:84%
+So right in here, it
+could put the plot
+
+00:07:08.840 --> 00:07:11.480 align:middle line:84%
+directly sort of in line
+with a bunch of stuff
+
+00:07:11.480 --> 00:07:13.010 align:middle line:90%
+that you might print out.
+
+00:07:13.010 --> 00:07:15.430 align:middle line:84%
+To toggle between that,
+just out of curiosity,
+
+00:07:15.430 --> 00:07:19.070 align:middle line:84%
+you go to Tools, Preferences,
+iPython console, Graphics.
+
+00:07:19.070 --> 00:07:21.590 align:middle line:84%
+And then here you can
+choose either automatic,
+
+00:07:21.590 --> 00:07:23.528 align:middle line:84%
+which will make a new
+window for us that's
+
+00:07:23.528 --> 00:07:25.070 align:middle line:84%
+interactive, you
+can zoom in and out,
+
+00:07:25.070 --> 00:07:28.130 align:middle line:84%
+things like that, or
+inline, which will just
+
+00:07:28.130 --> 00:07:32.030 align:middle line:84%
+put the plot that you tell
+Python to generate directly
+
+00:07:32.030 --> 00:07:33.930 align:middle line:90%
+in the console here.
+
+00:07:33.930 --> 00:07:37.070 align:middle line:84%
+So I prefer the new window
+because it's easier for me
+
+00:07:37.070 --> 00:07:37.920 align:middle line:90%
+to interact with it.
+
+00:07:37.920 --> 00:07:39.810 align:middle line:90%
+So we'll do that.
+
+00:07:39.810 --> 00:07:42.710 align:middle line:84%
+So let's actually run
+one of the plot commands.
+
+00:07:42.710 --> 00:07:47.810 align:middle line:84%
+So plt.plot, we're plotting
+here the x-axis as just
+
+00:07:47.810 --> 00:07:49.340 align:middle line:90%
+the numbers 0 through 29.
+
+00:07:49.340 --> 00:07:52.700 align:middle line:84%
+And the y-axis is just going to
+also be the value 0 through 29.
+
+00:07:52.700 --> 00:07:54.710 align:middle line:84%
+So we've made a nice
+little linear plot.
+
+00:07:54.710 --> 00:07:58.160 align:middle line:84%
+And you notice it popped up a
+little window down here for me.
+
+00:07:58.160 --> 00:08:00.650 align:middle line:84%
+And this is the plot
+that it generated.
+
+00:08:00.650 --> 00:08:02.040 align:middle line:90%
+Yay, not surprising.
+
+00:08:02.040 --> 00:08:06.520 align:middle line:84%
+This is exactly what
+we expected out of it.
+
+00:08:06.520 --> 00:08:11.320 align:middle line:84%
+OK, so what do we
+notice about that plot?
+
+00:08:11.320 --> 00:08:16.510 align:middle line:84%
+We notice how Python nicely
+fit the line within this frame.
+
+00:08:16.510 --> 00:08:19.000 align:middle line:84%
+So it added a little bit
+of wiggle room to the left
+
+00:08:19.000 --> 00:08:22.540 align:middle line:84%
+and to the right of my line and
+to the below and above my line
+
+00:08:22.540 --> 00:08:26.050 align:middle line:84%
+just so it fits nicely
+within the frame.
+
+00:08:26.050 --> 00:08:29.920 align:middle line:84%
+It didn't zoom out to some
+standard 0 to 100 value.
+
+00:08:29.920 --> 00:08:33.940 align:middle line:84%
+It zoomed in to this 0 to
+30-ish range, 0 to 30-ish
+
+00:08:33.940 --> 00:08:34.990 align:middle line:90%
+on the y-axis range.
+
+00:08:34.990 --> 00:08:40.929 align:middle line:84%
+So really, really nice that
+it did all that for us.
+
+00:08:40.929 --> 00:08:44.000 align:middle line:84%
+The order of the points
+does matter in the list.
+
+00:08:44.000 --> 00:08:46.930 align:middle line:84%
+So you'll notice one of the
+other things in this plot
+
+00:08:46.930 --> 00:08:50.680 align:middle line:84%
+here is we gave it actual
+points that it needed to plot.
+
+00:08:50.680 --> 00:08:54.940 align:middle line:84%
+But the plot command doesn't
+plot the points by default.
+
+00:08:54.940 --> 00:08:57.650 align:middle line:84%
+Instead, it just connects
+all the points by line.
+
+00:08:57.650 --> 00:09:01.750 align:middle line:84%
+So it connects consecutive
+indices of points by a line.
+
+00:09:01.750 --> 00:09:06.140 align:middle line:84%
+So connected the 0, 0,
+1, 1, 2, 2, and so on.
+
+00:09:06.140 --> 00:09:08.830 align:middle line:84%
+So the order of the points
+does actually matter.
+
+00:09:08.830 --> 00:09:13.190 align:middle line:84%
+If we have a function,
+for example, in this case,
+
+00:09:13.190 --> 00:09:14.600 align:middle line:90%
+n and n squared--
+
+00:09:14.600 --> 00:09:18.274 align:middle line:84%
+so n being 0 through 29 and
+n squared being 0, 1, 2, 4--
+
+00:09:18.274 --> 00:09:22.050 align:middle line:90%
+0, 1, 4, 9, and so on--
+
+00:09:22.050 --> 00:09:24.860 align:middle line:84%
+but they're in-- but
+they're out of order,
+
+00:09:24.860 --> 00:09:27.440 align:middle line:84%
+Python will just take
+consecutive pairs
+
+00:09:27.440 --> 00:09:31.020 align:middle line:84%
+from those lists and
+connect them with a line.
+
+00:09:31.020 --> 00:09:32.700 align:middle line:90%
+So here's an example.
+
+00:09:32.700 --> 00:09:37.310 align:middle line:84%
+I've got my x values
+list is this testSamples.
+
+00:09:37.310 --> 00:09:40.280 align:middle line:84%
+It's all the numbers 0
+through 29 but out of order.
+
+00:09:40.280 --> 00:09:44.150 align:middle line:84%
+And the test values associated
+with each one of those, again,
+
+00:09:44.150 --> 00:09:46.110 align:middle line:90%
+they are correct.
+
+00:09:46.110 --> 00:09:47.180 align:middle line:90%
+This is 0 squared.
+
+00:09:47.180 --> 00:09:48.590 align:middle line:90%
+This 25 is 5 squared.
+
+00:09:48.590 --> 00:09:49.820 align:middle line:90%
+This 9 is 3 squared.
+
+00:09:49.820 --> 00:09:51.810 align:middle line:90%
+But they're out of order.
+
+00:09:51.810 --> 00:09:58.150 align:middle line:84%
+So if we run that just
+with a pure plot command,
+
+00:09:58.150 --> 00:10:03.055 align:middle line:84%
+we're going to get
+some garbage plot.
+
+00:10:03.055 --> 00:10:07.420 align:middle line:84%
+It doesn't look very
+nice, and we already
+
+00:10:07.420 --> 00:10:08.500 align:middle line:90%
+know what's wrong, right?
+
+00:10:08.500 --> 00:10:15.520 align:middle line:84%
+Python just connected 0, 0, 5,
+25, and then 3, 9 by a line--
+
+00:10:15.520 --> 00:10:18.700 align:middle line:90%
+not really very nice.
+
+00:10:18.700 --> 00:10:23.290 align:middle line:84%
+Instead, what we'd like
+to do is to just tell
+
+00:10:23.290 --> 00:10:25.040 align:middle line:90%
+Python to plot the points.
+
+00:10:25.040 --> 00:10:27.440 align:middle line:84%
+So I don't care about
+connecting them with a line.
+
+00:10:27.440 --> 00:10:29.320 align:middle line:84%
+In this case, I
+would tell Python,
+
+00:10:29.320 --> 00:10:32.680 align:middle line:84%
+instead of just plotting it, to
+create a scatter plot for me.
+
+00:10:32.680 --> 00:10:37.540 align:middle line:84%
+So plt.scatter with the
+same list of x and y values
+
+00:10:37.540 --> 00:10:41.950 align:middle line:84%
+is going to just create
+for me this nice plot where
+
+00:10:41.950 --> 00:10:43.908 align:middle line:90%
+it plots the coordinates.
+
+00:10:43.908 --> 00:10:46.450 align:middle line:84%
+It doesn't matter that they're
+out of order because they just
+
+00:10:46.450 --> 00:10:49.206 align:middle line:84%
+get plotted without
+anything connecting them.
+
+00:10:49.206 --> 00:10:52.520 align:middle line:90%
+So pretty nice.
+
+00:10:52.520 --> 00:10:55.220 align:middle line:84%
+So that's this example
+that we just did here.
+
+00:10:55.220 --> 00:10:58.640 align:middle line:84%
+And then this is us doing
+a scatter plot giving us
+
+00:10:58.640 --> 00:11:00.840 align:middle line:90%
+this nice plot.
+
+00:11:00.840 --> 00:11:03.570 align:middle line:84%
+OK, one of the other things
+that you might want to do
+
+00:11:03.570 --> 00:11:06.480 align:middle line:84%
+is to have a whole
+bunch of lines
+
+00:11:06.480 --> 00:11:09.600 align:middle line:90%
+being plotted on one window.
+
+00:11:09.600 --> 00:11:13.230 align:middle line:84%
+So to do that, all you
+have to tell Python
+
+00:11:13.230 --> 00:11:15.882 align:middle line:84%
+is just a sequence of
+all the commands, all
+
+00:11:15.882 --> 00:11:17.340 align:middle line:84%
+the plotting commands
+or everything
+
+00:11:17.340 --> 00:11:19.920 align:middle line:84%
+that you'd like to
+plot on the one figure.
+
+00:11:19.920 --> 00:11:22.110 align:middle line:84%
+So without telling
+Python you'd like
+
+00:11:22.110 --> 00:11:26.120 align:middle line:84%
+to create a new figure,
+anytime it sees a plot command,
+
+00:11:26.120 --> 00:11:29.660 align:middle line:84%
+it will just keep adding
+whatever points get generated
+
+00:11:29.660 --> 00:11:32.890 align:middle line:84%
+or whatever lines get generated
+to the current figure that's
+
+00:11:32.890 --> 00:11:33.390 align:middle line:90%
+open.
+
+00:11:33.390 --> 00:11:36.290 align:middle line:84%
+So we just have one thing
+that's open right now.
+
+00:11:36.290 --> 00:11:39.860 align:middle line:84%
+So it'll just keep adding
+stuff to our figure.
+
+00:11:39.860 --> 00:11:42.550 align:middle line:84%
+So here I've got four
+plotting commands in a row.
+
+00:11:42.550 --> 00:11:46.120 align:middle line:84%
+I never explicitly told Python
+to create a new figure for me.
+
+00:11:46.120 --> 00:11:49.570 align:middle line:84%
+So it's just going to add
+all four of these lines
+
+00:11:49.570 --> 00:11:51.070 align:middle line:90%
+to the same plot.
+
+00:11:51.070 --> 00:11:53.050 align:middle line:84%
+So it just doesn't
+create a new figure.
+
+00:11:53.050 --> 00:11:55.120 align:middle line:84%
+It just keeps adding
+stuff to my plot.
+
+00:11:55.120 --> 00:11:57.730 align:middle line:84%
+So you can imagine if I
+added a scatter plot as well,
+
+00:11:57.730 --> 00:12:00.760 align:middle line:84%
+it would just add the
+individual dots to this plot.
+
+00:12:00.760 --> 00:12:05.490 align:middle line:90%
+
+
+00:12:05.490 --> 00:12:08.620 align:middle line:90%
+OK, so again, what do we notice?
+
+00:12:08.620 --> 00:12:13.610 align:middle line:84%
+Well, Python nicely
+framed everything for me
+
+00:12:13.610 --> 00:12:16.850 align:middle line:84%
+to make sure that every
+line that I have fits
+
+00:12:16.850 --> 00:12:18.930 align:middle line:90%
+within this graph.
+
+00:12:18.930 --> 00:12:21.980 align:middle line:84%
+So my x-axis is comfortably
+between 0 and 30.
+
+00:12:21.980 --> 00:12:23.900 align:middle line:84%
+And my y-axis is
+also comfortably
+
+00:12:23.900 --> 00:12:26.540 align:middle line:90%
+between 0 and 120,000.
+
+00:12:26.540 --> 00:12:28.850 align:middle line:84%
+So there's a little bit
+of gap up at that top
+
+00:12:28.850 --> 00:12:31.670 align:middle line:90%
+of that exponential line.
+
+00:12:31.670 --> 00:12:35.330 align:middle line:84%
+But this leads us, if we
+were presented this graph,
+
+00:12:35.330 --> 00:12:39.380 align:middle line:84%
+to kind of mistakenly
+not know what's going on
+
+00:12:39.380 --> 00:12:40.940 align:middle line:90%
+with these bottom lines here.
+
+00:12:40.940 --> 00:12:43.040 align:middle line:84%
+So this is our
+linear, the blue line.
+
+00:12:43.040 --> 00:12:46.070 align:middle line:84%
+And the orange one
+is the quadratic.
+
+00:12:46.070 --> 00:12:48.350 align:middle line:84%
+We're not really sure
+what's going on down there
+
+00:12:48.350 --> 00:12:51.530 align:middle line:90%
+because the scales are just--
+
+00:12:51.530 --> 00:12:54.500 align:middle line:90%
+the y scale is just too high.
+
+00:12:54.500 --> 00:12:57.700 align:middle line:84%
+So in this particular
+case, it would be better
+
+00:12:57.700 --> 00:13:01.720 align:middle line:84%
+to visualize the data in
+separate, different windows.
+
+00:13:01.720 --> 00:13:07.930 align:middle line:84%
+So instead of having everything
+be plotted in one window,
+
+00:13:07.930 --> 00:13:11.950 align:middle line:84%
+we're going to tell Python
+to create a new window
+
+00:13:11.950 --> 00:13:14.120 align:middle line:90%
+and plot some stuff in it.
+
+00:13:14.120 --> 00:13:17.560 align:middle line:84%
+So the way we tell Python to
+create a new window for us
+
+00:13:17.560 --> 00:13:21.190 align:middle line:90%
+is with the command plt.figure.
+
+00:13:21.190 --> 00:13:24.790 align:middle line:84%
+So as soon as Python
+sees plt.figure,
+
+00:13:24.790 --> 00:13:27.610 align:middle line:84%
+it will create a new window,
+bring it to the foreground.
+
+00:13:27.610 --> 00:13:29.650 align:middle line:84%
+And any further
+plotting commands
+
+00:13:29.650 --> 00:13:31.880 align:middle line:84%
+will be added to
+this new figure.
+
+00:13:31.880 --> 00:13:34.940 align:middle line:84%
+So there's a parameter
+that this figure can take.
+
+00:13:34.940 --> 00:13:37.610 align:middle line:84%
+And that's going to be
+the name of the figure.
+
+00:13:37.610 --> 00:13:40.780 align:middle line:84%
+So you know like when you
+have a window at the top,
+
+00:13:40.780 --> 00:13:42.670 align:middle line:84%
+it has a name for the
+name of the program
+
+00:13:42.670 --> 00:13:43.690 align:middle line:90%
+or whatever is running?
+
+00:13:43.690 --> 00:13:45.580 align:middle line:84%
+Well, the string
+that you put in there
+
+00:13:45.580 --> 00:13:49.250 align:middle line:84%
+is going to be the name that
+you give to that figure.
+
+00:13:49.250 --> 00:13:53.110 align:middle line:84%
+If Python doesn't have a figure
+with that name already there,
+
+00:13:53.110 --> 00:13:55.540 align:middle line:84%
+it creates a new figure,
+brings it to the foreground.
+
+00:13:55.540 --> 00:13:58.990 align:middle line:84%
+But if there's a figure
+with that name already there
+
+00:13:58.990 --> 00:14:02.290 align:middle line:84%
+and you just happen to call
+plt.figure with that same name,
+
+00:14:02.290 --> 00:14:06.850 align:middle line:84%
+it'll just rebring that
+window up to the foreground
+
+00:14:06.850 --> 00:14:10.820 align:middle line:90%
+again to readd more stuff to it.
+
+00:14:10.820 --> 00:14:14.280 align:middle line:84%
+So we're going to look
+at this example here.
+
+00:14:14.280 --> 00:14:16.880 align:middle line:84%
+We've got a whole bunch
+of stuff being plotted.
+
+00:14:16.880 --> 00:14:19.640 align:middle line:84%
+So the first two
+lines of code here,
+
+00:14:19.640 --> 00:14:23.100 align:middle line:84%
+first we've got a new
+figure being created.
+
+00:14:23.100 --> 00:14:24.620 align:middle line:90%
+And we called it expo.
+
+00:14:24.620 --> 00:14:28.580 align:middle line:84%
+And then this plot command
+here coming up right
+
+00:14:28.580 --> 00:14:31.340 align:middle line:84%
+after the figure will
+add this exponential
+
+00:14:31.340 --> 00:14:34.360 align:middle line:84%
+that we created to
+that expo figure.
+
+00:14:34.360 --> 00:14:37.600 align:middle line:84%
+Then we've got a plt.figure
+right after that.
+
+00:14:37.600 --> 00:14:40.840 align:middle line:84%
+So Python will bring this
+new figure to the foreground.
+
+00:14:40.840 --> 00:14:42.880 align:middle line:84%
+And the plot command
+that comes right
+
+00:14:42.880 --> 00:14:46.600 align:middle line:84%
+after that will add
+the linear, this line,
+
+00:14:46.600 --> 00:14:49.570 align:middle line:84%
+to this new figure--
+one that we called lin.
+
+00:14:49.570 --> 00:14:51.670 align:middle line:84%
+A couple more times we're
+going to create and do
+
+00:14:51.670 --> 00:14:54.040 align:middle line:84%
+the same thing to create
+this quad and this cube.
+
+00:14:54.040 --> 00:14:57.570 align:middle line:84%
+And those will each get
+one line added to them.
+
+00:14:57.570 --> 00:15:01.220 align:middle line:84%
+And then down here, we're
+going to say, well, let me just
+
+00:15:01.220 --> 00:15:03.110 align:middle line:84%
+go back to that
+exponential figure
+
+00:15:03.110 --> 00:15:05.700 align:middle line:84%
+and add another different
+exponential curve to it.
+
+00:15:05.700 --> 00:15:08.940 align:middle line:84%
+So we're going to create
+the exponential curve,
+
+00:15:08.940 --> 00:15:12.080 align:middle line:84%
+this time 1.6 to the
+power of i instead of 1.5
+
+00:15:12.080 --> 00:15:13.850 align:middle line:90%
+to the power of i.
+
+00:15:13.850 --> 00:15:17.570 align:middle line:84%
+Then we're going to tell Python
+to bring the figure called expo
+
+00:15:17.570 --> 00:15:18.770 align:middle line:90%
+back up to the foreground.
+
+00:15:18.770 --> 00:15:20.900 align:middle line:84%
+So remember, we
+created it up here.
+
+00:15:20.900 --> 00:15:22.730 align:middle line:84%
+So it doesn't
+create a new figure.
+
+00:15:22.730 --> 00:15:24.260 align:middle line:84%
+It'll just bring
+that one back up.
+
+00:15:24.260 --> 00:15:26.210 align:middle line:84%
+And it already
+has a curve in it.
+
+00:15:26.210 --> 00:15:28.010 align:middle line:84%
+And then we're
+going to tell Python
+
+00:15:28.010 --> 00:15:31.900 align:middle line:90%
+to plot a second curve to it.
+
+00:15:31.900 --> 00:15:33.690 align:middle line:90%
+So let's see that.
+
+00:15:33.690 --> 00:15:37.210 align:middle line:90%
+
+
+00:15:37.210 --> 00:15:39.140 align:middle line:90%
+That's all this code right here.
+
+00:15:39.140 --> 00:15:41.900 align:middle line:90%
+Run it.
+
+00:15:41.900 --> 00:15:45.710 align:middle line:90%
+OK, so not just one figure--
+
+00:15:45.710 --> 00:15:47.660 align:middle line:84%
+one window got
+created, but four.
+
+00:15:47.660 --> 00:15:48.980 align:middle line:90%
+So this is my cube.
+
+00:15:48.980 --> 00:15:51.600 align:middle line:84%
+And you can see up in the top
+here, a little hard to see,
+
+00:15:51.600 --> 00:15:53.690 align:middle line:84%
+but that's the name
+that we gave it.
+
+00:15:53.690 --> 00:15:55.610 align:middle line:90%
+This is my quad.
+
+00:15:55.610 --> 00:15:58.580 align:middle line:90%
+This is my lin, my linear.
+
+00:15:58.580 --> 00:16:00.800 align:middle line:90%
+And this is my exponential.
+
+00:16:00.800 --> 00:16:05.090 align:middle line:84%
+So we see the exponential
+one has two lines in it
+
+00:16:05.090 --> 00:16:07.270 align:middle line:84%
+because we added one
+way at the beginning
+
+00:16:07.270 --> 00:16:09.200 align:middle line:84%
+and then we brought
+it back for processing
+
+00:16:09.200 --> 00:16:11.000 align:middle line:90%
+to add another line to it.
+
+00:16:11.000 --> 00:16:14.700 align:middle line:90%
+
+
+00:16:14.700 --> 00:16:20.580 align:middle line:84%
+So again, so these graphs
+are actually on the slide.
+
+00:16:20.580 --> 00:16:21.570 align:middle line:90%
+This is the quad one.
+
+00:16:21.570 --> 00:16:22.560 align:middle line:90%
+This is the cube one.
+
+00:16:22.560 --> 00:16:23.760 align:middle line:90%
+This is the linear one.
+
+00:16:23.760 --> 00:16:25.710 align:middle line:90%
+And this is the exponential one.
+
+00:16:25.710 --> 00:16:29.430 align:middle line:84%
+The blue line was our original
+curve, 1.5 to the power of x.
+
+00:16:29.430 --> 00:16:32.100 align:middle line:84%
+And the orange one is
+1.6 to the power of x.
+
+00:16:32.100 --> 00:16:35.090 align:middle line:84%
+So they both got added
+to the same plot.
+
+00:16:35.090 --> 00:16:35.780 align:middle line:90%
+Cool.
+
+00:16:35.780 --> 00:16:38.300 align:middle line:84%
+So again, just
+something to note,
+
+00:16:38.300 --> 00:16:42.140 align:middle line:84%
+you'll see how Python nicely
+framed our lines so that it's
+
+00:16:42.140 --> 00:16:44.840 align:middle line:84%
+able to fit everything
+that it needs
+
+00:16:44.840 --> 00:16:46.790 align:middle line:90%
+to plot within this graph.
+
+00:16:46.790 --> 00:16:50.150 align:middle line:90%
+
+
+00:16:50.150 --> 00:16:52.230 align:middle line:90%
+So what we're going to do next--
+
+00:16:52.230 --> 00:16:54.470 align:middle line:84%
+I know, that was a
+little bit tedious.
+
+00:16:54.470 --> 00:16:56.630 align:middle line:84%
+What we're going
+to do next is we're
+
+00:16:56.630 --> 00:16:59.700 align:middle line:84%
+start looking at some real
+examples, some real-world data.
+
+00:16:59.700 --> 00:17:02.480 align:middle line:84%
+So first we're going to do
+some toy real-world data.
+
+00:17:02.480 --> 00:17:05.180 align:middle line:84%
+And then soon we're
+going to start
+
+00:17:05.180 --> 00:17:08.510 align:middle line:84%
+dealing with some actual
+data sets that we're
+
+00:17:08.510 --> 00:17:11.569 align:middle line:84%
+going to read in,
+we're going to plot,
+
+00:17:11.569 --> 00:17:13.280 align:middle line:84%
+we're going to
+investigate, try to answer
+
+00:17:13.280 --> 00:17:15.690 align:middle line:84%
+some questions about them,
+and things like that.
+
+00:17:15.690 --> 00:17:20.030 align:middle line:84%
+So first, let's look at
+this real-life example
+
+00:17:20.030 --> 00:17:23.359 align:middle line:84%
+where we've got months
+and temperatures
+
+00:17:23.359 --> 00:17:24.690 align:middle line:90%
+for each of those months.
+
+00:17:24.690 --> 00:17:30.320 align:middle line:84%
+So notice the months here
+is actually the value
+
+00:17:30.320 --> 00:17:32.900 align:middle line:84%
+that this range returns,
+which is like an iterable,
+
+00:17:32.900 --> 00:17:34.050 align:middle line:90%
+like a tuple.
+
+00:17:34.050 --> 00:17:36.090 align:middle line:84%
+So it's still a
+sequence of values.
+
+00:17:36.090 --> 00:17:39.080 align:middle line:84%
+It's not a list but
+totally fine to be passed
+
+00:17:39.080 --> 00:17:43.060 align:middle line:90%
+in as an argument to the plot.
+
+00:17:43.060 --> 00:17:45.070 align:middle line:84%
+And temps, of course,
+are going to be
+
+00:17:45.070 --> 00:17:49.600 align:middle line:84%
+temperatures corresponding to
+each of those months as a list.
+
+00:17:49.600 --> 00:17:52.900 align:middle line:84%
+So the plot looks
+something like this
+
+00:17:52.900 --> 00:17:56.400 align:middle line:90%
+if we actually run that code.
+
+00:17:56.400 --> 00:17:57.340 align:middle line:90%
+What do we notice?
+
+00:17:57.340 --> 00:18:01.350 align:middle line:84%
+Well, just like before,
+matplotlib nicely framed
+
+00:18:01.350 --> 00:18:02.467 align:middle line:90%
+our data.
+
+00:18:02.467 --> 00:18:04.800 align:middle line:84%
+It's got a little bit of
+wiggle room left and right, top
+
+00:18:04.800 --> 00:18:05.640 align:middle line:90%
+and bottom.
+
+00:18:05.640 --> 00:18:09.570 align:middle line:84%
+And it automatically selected
+the scales, how low to go,
+
+00:18:09.570 --> 00:18:13.860 align:middle line:84%
+how high to go, and the
+tick marks for this.
+
+00:18:13.860 --> 00:18:19.500 align:middle line:84%
+But let's say that you're
+the advisor to a student
+
+00:18:19.500 --> 00:18:23.280 align:middle line:84%
+and they came to you with a
+plot that looked like this.
+
+00:18:23.280 --> 00:18:27.690 align:middle line:84%
+Would you be able to tell
+anything about this plot
+
+00:18:27.690 --> 00:18:30.910 align:middle line:84%
+without knowing exactly what the
+code that generated this plot
+
+00:18:30.910 --> 00:18:31.410 align:middle line:90%
+is?
+
+00:18:31.410 --> 00:18:33.360 align:middle line:90%
+Not really, right?
+
+00:18:33.360 --> 00:18:35.190 align:middle line:90%
+It just looks like a bump.
+
+00:18:35.190 --> 00:18:36.970 align:middle line:90%
+It could be any sort of data.
+
+00:18:36.970 --> 00:18:40.530 align:middle line:84%
+So what we'd like to do before
+actually-- for your apps
+
+00:18:40.530 --> 00:18:42.120 align:middle line:84%
+and things like
+that in the future,
+
+00:18:42.120 --> 00:18:45.060 align:middle line:84%
+before presenting a
+plot to somebody else,
+
+00:18:45.060 --> 00:18:50.700 align:middle line:84%
+you'll want to add a title, and
+you'll want to label your axes.
+
+00:18:50.700 --> 00:18:55.620 align:middle line:84%
+So what we want to do, in
+addition to actually plotting
+
+00:18:55.620 --> 00:18:59.850 align:middle line:84%
+the data, is to tell Python
+to add for us a title
+
+00:18:59.850 --> 00:19:02.200 align:middle line:90%
+and labels for our axes.
+
+00:19:02.200 --> 00:19:06.040 align:middle line:84%
+So we do this using these
+three lines of code here.
+
+00:19:06.040 --> 00:19:09.180 align:middle line:84%
+So since we haven't told
+Python to create a new figure
+
+00:19:09.180 --> 00:19:11.340 align:middle line:84%
+or anything like
+that, any commands
+
+00:19:11.340 --> 00:19:13.110 align:middle line:84%
+that we do with
+regards to plotting
+
+00:19:13.110 --> 00:19:15.410 align:middle line:84%
+will just get added
+on to this figure.
+
+00:19:15.410 --> 00:19:20.080 align:middle line:84%
+So here I've got Python
+adding this title, these two
+
+00:19:20.080 --> 00:19:21.910 align:middle line:90%
+labels to our axis--
+
+00:19:21.910 --> 00:19:24.500 align:middle line:90%
+to our axes.
+
+00:19:24.500 --> 00:19:29.030 align:middle line:84%
+So here I've got
+this and this plot.
+
+00:19:29.030 --> 00:19:33.280 align:middle line:84%
+So I run it, and ta-da,
+we have something
+
+00:19:33.280 --> 00:19:34.930 align:middle line:90%
+that looks much nicer.
+
+00:19:34.930 --> 00:19:37.030 align:middle line:84%
+So now we can hand
+this plot to somebody,
+
+00:19:37.030 --> 00:19:38.935 align:middle line:84%
+and they'll know
+what it's about.
+
+00:19:38.935 --> 00:19:41.840 align:middle line:90%
+
+
+00:19:41.840 --> 00:19:47.090 align:middle line:84%
+Now, that's fine, but since it's
+temperatures what I'd really
+
+00:19:47.090 --> 00:19:50.390 align:middle line:84%
+like to do is to say, well,
+the temperature-- the lowest
+
+00:19:50.390 --> 00:19:53.720 align:middle line:84%
+temperature I have should
+really start at the y-axis here,
+
+00:19:53.720 --> 00:19:55.370 align:middle line:90%
+this intersect with the y-axis.
+
+00:19:55.370 --> 00:19:57.380 align:middle line:84%
+And the highest
+temperature I've got,
+
+00:19:57.380 --> 00:19:59.060 align:middle line:84%
+I don't really want
+that wiggle room
+
+00:19:59.060 --> 00:20:02.150 align:middle line:84%
+because this is my
+last temperature value.
+
+00:20:02.150 --> 00:20:05.580 align:middle line:84%
+Let's just have the
+frame just end there.
+
+00:20:05.580 --> 00:20:09.200 align:middle line:84%
+So we can do that little
+change by setting limits
+
+00:20:09.200 --> 00:20:10.980 align:middle line:90%
+on our x-axis.
+
+00:20:10.980 --> 00:20:15.110 align:middle line:84%
+So here I'm going to limit the
+x-axis to say that it starts
+
+00:20:15.110 --> 00:20:18.780 align:middle line:90%
+from 1, and it ends at 12.
+
+00:20:18.780 --> 00:20:21.530 align:middle line:84%
+So if I do that, again,
+that's just a little command
+
+00:20:21.530 --> 00:20:24.920 align:middle line:84%
+we put in, a continuation
+with the rest of the commands.
+
+00:20:24.920 --> 00:20:27.390 align:middle line:84%
+And it gets applied
+to this plot.
+
+00:20:27.390 --> 00:20:29.510 align:middle line:84%
+So as soon as I do
+that, Python now
+
+00:20:29.510 --> 00:20:34.130 align:middle line:84%
+creates for me the same plot,
+except that the x-axis starts
+
+00:20:34.130 --> 00:20:37.730 align:middle line:84%
+at 1 and ends at 12 nicely
+framed within here, so no more
+
+00:20:37.730 --> 00:20:38.360 align:middle line:90%
+wiggle room.
+
+00:20:38.360 --> 00:20:41.110 align:middle line:90%
+
+
+00:20:41.110 --> 00:20:46.210 align:middle line:84%
+Still some improvements to be
+made to this plot as in here
+
+00:20:46.210 --> 00:20:47.530 align:middle line:90%
+the months skip.
+
+00:20:47.530 --> 00:20:53.575 align:middle line:84%
+So Python decided that it's best
+to just show 2, 4, 6, 8, 10,
+
+00:20:53.575 --> 00:20:56.500 align:middle line:90%
+12 as the ticks on the x-axis.
+
+00:20:56.500 --> 00:21:00.340 align:middle line:84%
+But I decide that
+I would-- since I'm
+
+00:21:00.340 --> 00:21:03.230 align:middle line:84%
+showing all the months of the
+year and their temperatures,
+
+00:21:03.230 --> 00:21:07.300 align:middle line:84%
+I would really like to have
+ticks for every single month.
+
+00:21:07.300 --> 00:21:11.290 align:middle line:84%
+So again, a little command
+will do that for us.
+
+00:21:11.290 --> 00:21:17.200 align:middle line:84%
+So plt.xticks takes in a
+tuple of all of the places
+
+00:21:17.200 --> 00:21:20.770 align:middle line:84%
+where you'd like one of those
+little ticks to be created.
+
+00:21:20.770 --> 00:21:22.630 align:middle line:90%
+So if we do that--
+
+00:21:22.630 --> 00:21:26.680 align:middle line:84%
+again, just another little
+command in series here--
+
+00:21:26.680 --> 00:21:30.040 align:middle line:84%
+if we do that, Python
+now fills in the ticks
+
+00:21:30.040 --> 00:21:33.430 align:middle line:84%
+for every single spot that
+we told it to fill in.
+
+00:21:33.430 --> 00:21:36.130 align:middle line:84%
+So it's looking
+way better already.
+
+00:21:36.130 --> 00:21:38.820 align:middle line:90%
+
+
+00:21:38.820 --> 00:21:40.380 align:middle line:90%
+What's still not quite right--
+
+00:21:40.380 --> 00:21:44.040 align:middle line:84%
+I promise, this will be the
+last improvement we make.
+
+00:21:44.040 --> 00:21:48.420 align:middle line:84%
+I personally find it hard to
+map numbers to the months.
+
+00:21:48.420 --> 00:21:50.430 align:middle line:90%
+I still count my fingers.
+
+00:21:50.430 --> 00:21:55.840 align:middle line:84%
+So what would be
+nice is to say, well,
+
+00:21:55.840 --> 00:21:58.810 align:middle line:84%
+instead of having
+numbers on my x-axis,
+
+00:21:58.810 --> 00:22:03.660 align:middle line:84%
+I would like to have the actual
+names of my months, Jan, Feb,
+
+00:22:03.660 --> 00:22:05.140 align:middle line:90%
+Mar, and so on.
+
+00:22:05.140 --> 00:22:07.680 align:middle line:84%
+So to do that, we're going
+to make one small change
+
+00:22:07.680 --> 00:22:10.890 align:middle line:90%
+to our xticks command here.
+
+00:22:10.890 --> 00:22:13.530 align:middle line:84%
+We're going to give
+it a second parameter.
+
+00:22:13.530 --> 00:22:17.910 align:middle line:84%
+So first one is, of course,
+what we had before, saying these
+
+00:22:17.910 --> 00:22:20.080 align:middle line:84%
+are all the ticks that
+I would like to have.
+
+00:22:20.080 --> 00:22:23.010 align:middle line:84%
+And the second
+parameter is the labels
+
+00:22:23.010 --> 00:22:24.300 align:middle line:90%
+for each one of those ticks.
+
+00:22:24.300 --> 00:22:26.770 align:middle line:84%
+So one by one,
+they'll be mapped.
+
+00:22:26.770 --> 00:22:29.250 align:middle line:84%
+So 1 will be mapped to Jan,
+2 will be mapped to February,
+
+00:22:29.250 --> 00:22:30.010 align:middle line:90%
+and so on.
+
+00:22:30.010 --> 00:22:32.430 align:middle line:84%
+So instead of using
+the numerical values,
+
+00:22:32.430 --> 00:22:38.480 align:middle line:84%
+Python will create
+for us the string
+
+00:22:38.480 --> 00:22:40.530 align:middle line:90%
+values that I've told it to do.
+
+00:22:40.530 --> 00:22:41.360 align:middle line:90%
+So here it is.
+
+00:22:41.360 --> 00:22:44.970 align:middle line:84%
+Run creates for me this
+very nice-looking plot.
+
+00:22:44.970 --> 00:22:48.230 align:middle line:84%
+So this I would be happy
+to receive as an advisor
+
+00:22:48.230 --> 00:22:50.450 align:middle line:84%
+compared to that very
+first one that we had.
+
+00:22:50.450 --> 00:22:53.400 align:middle line:90%
+
+
+00:22:53.400 --> 00:22:56.680 align:middle line:90%
+All right, questions so far?
+
+00:22:56.680 --> 00:22:58.000 align:middle line:90%
+We seem all right?
+
+00:22:58.000 --> 00:23:00.720 align:middle line:90%
+OK.
+
+00:23:00.720 --> 00:23:04.080 align:middle line:84%
+The other thing that you can do
+is potentially add grid lines
+
+00:23:04.080 --> 00:23:05.700 align:middle line:90%
+if you wanted to.
+
+00:23:05.700 --> 00:23:08.620 align:middle line:84%
+So plt.grid will either toggle
+the grid lines on and off.
+
+00:23:08.620 --> 00:23:10.540 align:middle line:84%
+So if there's
+already grid lines,
+
+00:23:10.540 --> 00:23:12.540 align:middle line:84%
+it'll toggle them off
+when it sees that command.
+
+00:23:12.540 --> 00:23:14.880 align:middle line:84%
+If there are no grid lines,
+it'll toggle them on.
+
+00:23:14.880 --> 00:23:18.120 align:middle line:84%
+So you could potentially have
+a bunch of plt.grid commands
+
+00:23:18.120 --> 00:23:22.420 align:middle line:84%
+that keep toggling things
+on and off and so on.
+
+00:23:22.420 --> 00:23:28.870 align:middle line:84%
+OK, so that was us plotting
+one city's temperature
+
+00:23:28.870 --> 00:23:31.780 align:middle line:84%
+values for a year,
+let's say, an average.
+
+00:23:31.780 --> 00:23:36.130 align:middle line:84%
+Let's say that we wanted to
+plot two different cities.
+
+00:23:36.130 --> 00:23:38.720 align:middle line:84%
+The code to do
+that is as follows.
+
+00:23:38.720 --> 00:23:42.100 align:middle line:84%
+So again, we've got months
+being this range, 1 through 12,
+
+00:23:42.100 --> 00:23:42.970 align:middle line:90%
+inclusive.
+
+00:23:42.970 --> 00:23:45.520 align:middle line:84%
+I've got a list of all the
+Boston temperatures here,
+
+00:23:45.520 --> 00:23:48.160 align:middle line:84%
+I plot that, a list of all
+the Phoenix temperatures here,
+
+00:23:48.160 --> 00:23:49.030 align:middle line:90%
+and I plot that.
+
+00:23:49.030 --> 00:23:54.390 align:middle line:84%
+And of course I'm going to
+add some labels to my graph.
+
+00:23:54.390 --> 00:23:59.380 align:middle line:90%
+So like that.
+
+00:23:59.380 --> 00:24:06.030 align:middle line:84%
+So if I run that, we get
+something that looks like this.
+
+00:24:06.030 --> 00:24:10.730 align:middle line:84%
+Now, of course, I could remove
+those little wiggle rooms
+
+00:24:10.730 --> 00:24:14.140 align:middle line:84%
+on the left and right,
+but for now it's fine.
+
+00:24:14.140 --> 00:24:16.300 align:middle line:90%
+What's missing from this plot?
+
+00:24:16.300 --> 00:24:18.220 align:middle line:84%
+Let's say you
+didn't see the code
+
+00:24:18.220 --> 00:24:20.354 align:middle line:84%
+and you were just
+given this plot.
+
+00:24:20.354 --> 00:24:22.354 align:middle line:84%
+AUDIENCE: You wouldn't
+know which city is which.
+
+00:24:22.354 --> 00:24:23.870 align:middle line:90%
+ANA BELL: Yeah, exactly.
+
+00:24:23.870 --> 00:24:25.130 align:middle line:90%
+I don't know what--
+
+00:24:25.130 --> 00:24:26.720 align:middle line:84%
+yes, these are
+different temperatures
+
+00:24:26.720 --> 00:24:30.380 align:middle line:84%
+from the title and the
+labels, but you don't know
+
+00:24:30.380 --> 00:24:32.360 align:middle line:90%
+which city is which, exactly.
+
+00:24:32.360 --> 00:24:36.230 align:middle line:84%
+So what we'd like
+to do is tell Python
+
+00:24:36.230 --> 00:24:40.060 align:middle line:90%
+how to label these two lines.
+
+00:24:40.060 --> 00:24:43.750 align:middle line:84%
+So to do that, it's
+just an extra parameter
+
+00:24:43.750 --> 00:24:45.200 align:middle line:90%
+here in the plot command.
+
+00:24:45.200 --> 00:24:48.220 align:middle line:84%
+So when you tell it
+which data to plot,
+
+00:24:48.220 --> 00:24:51.520 align:middle line:84%
+you can also tell it what
+label that data should get.
+
+00:24:51.520 --> 00:24:54.880 align:middle line:84%
+So here I've got Boston label
+for the first one, Phoenix
+
+00:24:54.880 --> 00:24:56.320 align:middle line:90%
+label for the second one.
+
+00:24:56.320 --> 00:25:01.190 align:middle line:84%
+And then you tell Python to
+add a legend to your plot.
+
+00:25:01.190 --> 00:25:04.090 align:middle line:84%
+So here the parameter is
+the location for the legend.
+
+00:25:04.090 --> 00:25:05.680 align:middle line:84%
+And best just
+means Python should
+
+00:25:05.680 --> 00:25:09.130 align:middle line:84%
+decide where to put the legend,
+top left, top right, middle,
+
+00:25:09.130 --> 00:25:12.610 align:middle line:84%
+wherever, so it doesn't really
+interfere much with the data.
+
+00:25:12.610 --> 00:25:16.420 align:middle line:84%
+Or you can just tell it
+where to put that legend.
+
+00:25:16.420 --> 00:25:21.350 align:middle line:84%
+So you can force the legend
+to be in a particular spot.
+
+00:25:21.350 --> 00:25:23.560 align:middle line:84%
+So here I've got
+already labeled data.
+
+00:25:23.560 --> 00:25:25.240 align:middle line:90%
+And then we add the legend.
+
+00:25:25.240 --> 00:25:27.560 align:middle line:84%
+And now you can see in
+this particular case,
+
+00:25:27.560 --> 00:25:29.170 align:middle line:84%
+it decided to put
+it in the top right.
+
+00:25:29.170 --> 00:25:31.630 align:middle line:84%
+But again, you can force
+it to go somewhere else.
+
+00:25:31.630 --> 00:25:34.150 align:middle line:84%
+Bottom middle seemed like
+a fine choice as well.
+
+00:25:34.150 --> 00:25:37.860 align:middle line:90%
+
+
+00:25:37.860 --> 00:25:39.450 align:middle line:90%
+OK, very nice.
+
+00:25:39.450 --> 00:25:44.610 align:middle line:90%
+So now we've got Python--
+
+00:25:44.610 --> 00:25:48.150 align:middle line:84%
+it automatically did
+the x and y-axes for us,
+
+00:25:48.150 --> 00:25:50.580 align:middle line:84%
+as we told it to do, but
+the colors that it picked
+
+00:25:50.580 --> 00:25:51.210 align:middle line:90%
+were random.
+
+00:25:51.210 --> 00:25:57.100 align:middle line:84%
+Now, we can specify a bunch of
+different details for the plot.
+
+00:25:57.100 --> 00:26:01.240 align:middle line:84%
+So we're going to do that next
+just to show you that you can.
+
+00:26:01.240 --> 00:26:03.330 align:middle line:84%
+So we're going to
+choose different colors
+
+00:26:03.330 --> 00:26:05.100 align:middle line:84%
+and different styles
+for our plots.
+
+00:26:05.100 --> 00:26:09.130 align:middle line:84%
+We're going to choose
+different widths for our lines.
+
+00:26:09.130 --> 00:26:12.840 align:middle line:84%
+And then maybe we can-- and then
+we'll also add some markers,
+
+00:26:12.840 --> 00:26:15.120 align:middle line:84%
+so where exactly-- each
+data point we have,
+
+00:26:15.120 --> 00:26:16.260 align:middle line:90%
+we're going to mark.
+
+00:26:16.260 --> 00:26:18.942 align:middle line:84%
+And then I'll show you how
+you can create subplots.
+
+00:26:18.942 --> 00:26:20.400 align:middle line:84%
+So instead of
+creating new windows,
+
+00:26:20.400 --> 00:26:24.390 align:middle line:84%
+you can actually have one window
+with different little subplots
+
+00:26:24.390 --> 00:26:26.000 align:middle line:90%
+within.
+
+00:26:26.000 --> 00:26:28.370 align:middle line:84%
+OK, so the first thing
+we're going to see
+
+00:26:28.370 --> 00:26:33.860 align:middle line:84%
+is how to customize the
+data to have a certain line
+
+00:26:33.860 --> 00:26:35.790 align:middle line:90%
+style and a certain color.
+
+00:26:35.790 --> 00:26:39.110 align:middle line:84%
+So there's a shorthand
+notation to do this.
+
+00:26:39.110 --> 00:26:43.220 align:middle line:84%
+Instead of actually passing in
+the parameter name in the plot
+
+00:26:43.220 --> 00:26:45.128 align:middle line:84%
+command, we can do a
+shorthand notation.
+
+00:26:45.128 --> 00:26:47.420 align:middle line:84%
+So you might have already
+noticed this little extra bit
+
+00:26:47.420 --> 00:26:48.240 align:middle line:90%
+here.
+
+00:26:48.240 --> 00:26:52.000 align:middle line:84%
+So the more you use it, the
+more you'll get used to it.
+
+00:26:52.000 --> 00:26:54.330 align:middle line:84%
+But this basically
+tells Python that I
+
+00:26:54.330 --> 00:26:57.780 align:middle line:84%
+would like this plot, this
+line corresponding to this data
+
+00:26:57.780 --> 00:27:00.750 align:middle line:84%
+to be blue, that's
+what the b stands for,
+
+00:27:00.750 --> 00:27:03.390 align:middle line:90%
+and to be a solid line.
+
+00:27:03.390 --> 00:27:05.280 align:middle line:84%
+That's what that
+little dash means.
+
+00:27:05.280 --> 00:27:07.800 align:middle line:84%
+The Phoenix one, you
+may have guessed,
+
+00:27:07.800 --> 00:27:11.520 align:middle line:84%
+tells Python that I would like
+this one to be red, r for red,
+
+00:27:11.520 --> 00:27:13.450 align:middle line:90%
+and to be a dashed line.
+
+00:27:13.450 --> 00:27:16.380 align:middle line:84%
+And then the last one, I'm going
+to add one more temperature
+
+00:27:16.380 --> 00:27:18.510 align:middle line:84%
+here, temperature
+data for Minneapolis--
+
+00:27:18.510 --> 00:27:24.450 align:middle line:84%
+I would like this one to be
+green and a dash-dot-dash line.
+
+00:27:24.450 --> 00:27:26.550 align:middle line:90%
+So we can run that.
+
+00:27:26.550 --> 00:27:35.410 align:middle line:90%
+
+
+00:27:35.410 --> 00:27:38.800 align:middle line:84%
+And it looks
+something like this.
+
+00:27:38.800 --> 00:27:41.530 align:middle line:84%
+All right, so I've got my
+solid blue line for Boston,
+
+00:27:41.530 --> 00:27:45.100 align:middle line:84%
+my dashed line for Phoenix,
+and my dash-dot-dash line
+
+00:27:45.100 --> 00:27:46.300 align:middle line:90%
+for Minneapolis.
+
+00:27:46.300 --> 00:27:48.910 align:middle line:90%
+
+
+00:27:48.910 --> 00:27:49.840 align:middle line:90%
+Very nice.
+
+00:27:49.840 --> 00:27:53.350 align:middle line:84%
+Now, instead of doing
+that shorthand notation
+
+00:27:53.350 --> 00:27:56.020 align:middle line:84%
+where we've got this one
+parameter that just somehow
+
+00:27:56.020 --> 00:27:59.410 align:middle line:84%
+magically knows the
+color and the style
+
+00:27:59.410 --> 00:28:01.750 align:middle line:84%
+based on just
+being passed in, we
+
+00:28:01.750 --> 00:28:08.530 align:middle line:84%
+can actually tell Python
+the parameter values that
+
+00:28:08.530 --> 00:28:10.480 align:middle line:84%
+correspond to the
+color, so here I've
+
+00:28:10.480 --> 00:28:13.840 align:middle line:84%
+got color equals b for blue,
+and then that correspond
+
+00:28:13.840 --> 00:28:14.870 align:middle line:90%
+to the line style.
+
+00:28:14.870 --> 00:28:16.390 align:middle line:84%
+So here line style
+equals-- and then
+
+00:28:16.390 --> 00:28:20.090 align:middle line:84%
+you explicitly pass in the
+line style that you'd like.
+
+00:28:20.090 --> 00:28:23.410 align:middle line:84%
+So this may be more
+intuitive, according
+
+00:28:23.410 --> 00:28:24.370 align:middle line:90%
+to what we've learned.
+
+00:28:24.370 --> 00:28:29.050 align:middle line:84%
+But Python does allow you the
+option to do it all in one.
+
+00:28:29.050 --> 00:28:32.710 align:middle line:84%
+So if we do-- if we run
+it with these specific,
+
+00:28:32.710 --> 00:28:35.740 align:middle line:84%
+explicit parameters, then
+we'll get the exact same graph
+
+00:28:35.740 --> 00:28:36.640 align:middle line:90%
+as before--
+
+00:28:36.640 --> 00:28:39.480 align:middle line:90%
+no surprise.
+
+00:28:39.480 --> 00:28:42.100 align:middle line:84%
+So there's a lot of options
+that we can have here.
+
+00:28:42.100 --> 00:28:44.530 align:middle line:84%
+So these are all the
+line style options.
+
+00:28:44.530 --> 00:28:46.980 align:middle line:84%
+So you can also add a dotted
+line, which I didn't show.
+
+00:28:46.980 --> 00:28:49.470 align:middle line:84%
+These are all the color
+options plus many more.
+
+00:28:49.470 --> 00:28:53.070 align:middle line:84%
+You could also pass in the RGB
+values or maybe the hex values
+
+00:28:53.070 --> 00:28:56.680 align:middle line:84%
+if you want a very specific
+shade of magenta or something.
+
+00:28:56.680 --> 00:29:01.110 align:middle line:84%
+And then we can also add
+markers to our lines.
+
+00:29:01.110 --> 00:29:04.270 align:middle line:84%
+We haven't seen this yet,
+but let's do that next.
+
+00:29:04.270 --> 00:29:08.430 align:middle line:84%
+So let's say that I would
+like to have the actual data
+
+00:29:08.430 --> 00:29:11.790 align:middle line:84%
+points that I've plotted
+show up in my lines.
+
+00:29:11.790 --> 00:29:14.310 align:middle line:84%
+Right now, the lines
+just get connected--
+
+00:29:14.310 --> 00:29:17.040 align:middle line:84%
+or the data points just get
+connected with our lines,
+
+00:29:17.040 --> 00:29:18.960 align:middle line:84%
+dashed or dotted or
+whatever we chose,
+
+00:29:18.960 --> 00:29:21.390 align:middle line:84%
+but the marker-- the
+data points themselves
+
+00:29:21.390 --> 00:29:23.010 align:middle line:90%
+don't show up with markers.
+
+00:29:23.010 --> 00:29:25.170 align:middle line:84%
+So again, in
+shorthand notation, we
+
+00:29:25.170 --> 00:29:27.840 align:middle line:84%
+can tell Python, hey,
+let's add these markers.
+
+00:29:27.840 --> 00:29:29.790 align:middle line:84%
+So here I'm telling
+Python to just do
+
+00:29:29.790 --> 00:29:32.820 align:middle line:90%
+a dot for this blue solid line.
+
+00:29:32.820 --> 00:29:34.920 align:middle line:84%
+Here I'm telling
+Python to do a larger
+
+00:29:34.920 --> 00:29:37.530 align:middle line:90%
+dot for this red dashed line.
+
+00:29:37.530 --> 00:29:41.440 align:middle line:84%
+And here I'm telling it to do
+a star for the green dash dot
+
+00:29:41.440 --> 00:29:44.770 align:middle line:90%
+dash dot line.
+
+00:29:44.770 --> 00:29:47.990 align:middle line:90%
+All right, so that's down here.
+
+00:29:47.990 --> 00:29:50.140 align:middle line:90%
+Run it.
+
+00:29:50.140 --> 00:29:52.080 align:middle line:84%
+And now we see
+nice little markers
+
+00:29:52.080 --> 00:29:54.120 align:middle line:84%
+for every one of
+our data points.
+
+00:29:54.120 --> 00:29:57.180 align:middle line:84%
+So we can also do triangles,
+we can do squares.
+
+00:29:57.180 --> 00:29:59.160 align:middle line:84%
+There's lots of
+other marker options,
+
+00:29:59.160 --> 00:30:04.410 align:middle line:84%
+and they all exist in the
+documentation for matplotlib.
+
+00:30:04.410 --> 00:30:08.660 align:middle line:90%
+So this is what we got, perfect.
+
+00:30:08.660 --> 00:30:14.090 align:middle line:84%
+The last thing that we can do is
+to add thickness to our lines.
+
+00:30:14.090 --> 00:30:16.820 align:middle line:84%
+So oftentimes, it's
+good to, first of all,
+
+00:30:16.820 --> 00:30:20.420 align:middle line:84%
+delineate the lines
+using dashes or dots
+
+00:30:20.420 --> 00:30:22.830 align:middle line:84%
+and things like
+that but also width.
+
+00:30:22.830 --> 00:30:26.413 align:middle line:84%
+So here another parameter
+passed in, the line width, this
+
+00:30:26.413 --> 00:30:27.830 align:middle line:84%
+is going to be a
+skinny line, this
+
+00:30:27.830 --> 00:30:30.020 align:middle line:84%
+is going to be maybe
+a thicker line,
+
+00:30:30.020 --> 00:30:32.690 align:middle line:84%
+and this one's going to
+be unreasonably thick.
+
+00:30:32.690 --> 00:30:35.930 align:middle line:84%
+So let's see exactly
+what this will look like.
+
+00:30:35.930 --> 00:30:37.970 align:middle line:90%
+It's going to look super weird.
+
+00:30:37.970 --> 00:30:43.890 align:middle line:90%
+
+
+00:30:43.890 --> 00:30:46.200 align:middle line:84%
+As I said, unreasonably
+thick line.
+
+00:30:46.200 --> 00:30:47.190 align:middle line:90%
+But there it is.
+
+00:30:47.190 --> 00:30:50.070 align:middle line:84%
+And then you can see that
+the legend itself also
+
+00:30:50.070 --> 00:30:55.515 align:middle line:84%
+adjusted to whatever you
+chose for your line styles.
+
+00:30:55.515 --> 00:31:01.420 align:middle line:90%
+
+
+00:31:01.420 --> 00:31:05.090 align:middle line:84%
+So yeah, that's
+exactly what I said.
+
+00:31:05.090 --> 00:31:05.900 align:middle line:90%
+Cool.
+
+00:31:05.900 --> 00:31:09.000 align:middle line:84%
+Last thing I want to
+talk about is subplots.
+
+00:31:09.000 --> 00:31:12.290 align:middle line:84%
+So right now, the only things
+that we've kind of learned
+
+00:31:12.290 --> 00:31:15.440 align:middle line:84%
+about plotting is you
+either plot every line
+
+00:31:15.440 --> 00:31:19.460 align:middle line:84%
+that you have on one figure,
+or you create a new figure
+
+00:31:19.460 --> 00:31:21.590 align:middle line:84%
+and then it becomes
+a new window that you
+
+00:31:21.590 --> 00:31:26.960 align:middle line:84%
+have to switch between for
+whatever you'd like to plot.
+
+00:31:26.960 --> 00:31:29.300 align:middle line:84%
+Oftentimes, what's
+really nice to do
+
+00:31:29.300 --> 00:31:32.600 align:middle line:90%
+is to create only one figure.
+
+00:31:32.600 --> 00:31:37.760 align:middle line:84%
+So you have only one thing
+that pops up, like one window.
+
+00:31:37.760 --> 00:31:41.660 align:middle line:84%
+And within that window
+with some name here--
+
+00:31:41.660 --> 00:31:43.820 align:middle line:84%
+and within that
+window, you can create
+
+00:31:43.820 --> 00:31:46.640 align:middle line:90%
+a bunch of different subplots.
+
+00:31:46.640 --> 00:31:52.920 align:middle line:84%
+So here I've created
+six different subplots.
+
+00:31:52.920 --> 00:31:55.520 align:middle line:90%
+So we can tell that to Python.
+
+00:31:55.520 --> 00:31:58.350 align:middle line:84%
+And we do that using
+the subplot command.
+
+00:31:58.350 --> 00:32:00.740 align:middle line:84%
+So in this particular
+case, I've told
+
+00:32:00.740 --> 00:32:06.750 align:middle line:84%
+Python to create for me a
+subplot with two rows, that's
+
+00:32:06.750 --> 00:32:10.440 align:middle line:84%
+what the first parameter
+says, and one column.
+
+00:32:10.440 --> 00:32:12.420 align:middle line:84%
+That's what the
+second parameter says.
+
+00:32:12.420 --> 00:32:16.620 align:middle line:84%
+So here, this is one window
+with two positions in it.
+
+00:32:16.620 --> 00:32:20.340 align:middle line:84%
+The third parameter tells Python
+which one of these positions
+
+00:32:20.340 --> 00:32:25.240 align:middle line:84%
+to open for adding
+lines to or data to.
+
+00:32:25.240 --> 00:32:28.140 align:middle line:84%
+So 1 means this is the
+one that you're opening,
+
+00:32:28.140 --> 00:32:30.840 align:middle line:84%
+and 2 means this is the second
+one that you're opening.
+
+00:32:30.840 --> 00:32:34.290 align:middle line:84%
+So you can see here
+the very top subplot
+
+00:32:34.290 --> 00:32:40.140 align:middle line:84%
+command tells Python to open
+up this one for editing,
+
+00:32:40.140 --> 00:32:40.680 align:middle line:90%
+basically.
+
+00:32:40.680 --> 00:32:43.150 align:middle line:84%
+So we're going to add to
+it the Boston temperature.
+
+00:32:43.150 --> 00:32:45.930 align:middle line:84%
+So this is all the plotting
+commands and all the labels
+
+00:32:45.930 --> 00:32:50.040 align:middle line:84%
+and everything after it belong
+to this top subplot here.
+
+00:32:50.040 --> 00:32:53.250 align:middle line:84%
+And then subplot command
+down here tells Python
+
+00:32:53.250 --> 00:32:56.910 align:middle line:84%
+that on this figure with
+two rows and one column
+
+00:32:56.910 --> 00:32:59.970 align:middle line:84%
+I would like to now open
+position number 2 for editing.
+
+00:32:59.970 --> 00:33:03.120 align:middle line:84%
+And then everything that
+I have thereafter gets
+
+00:33:03.120 --> 00:33:06.690 align:middle line:84%
+added to the subplot
+at this position.
+
+00:33:06.690 --> 00:33:09.960 align:middle line:84%
+So the way that this is
+going to look is as follows.
+
+00:33:09.960 --> 00:33:14.490 align:middle line:84%
+So I've got-- this is just
+one window that gets created.
+
+00:33:14.490 --> 00:33:17.240 align:middle line:84%
+And you can see the top one
+has the Boston temperature,
+
+00:33:17.240 --> 00:33:20.576 align:middle line:84%
+and the bottom one has
+the Phoenix temperature.
+
+00:33:20.576 --> 00:33:23.900 align:middle line:90%
+
+
+00:33:23.900 --> 00:33:28.050 align:middle line:84%
+At first glance, does this look
+right in terms of temperatures,
+
+00:33:28.050 --> 00:33:30.560 align:middle line:84%
+if you were just to look
+at the pictures themselves?
+
+00:33:30.560 --> 00:33:34.100 align:middle line:90%
+
+
+00:33:34.100 --> 00:33:38.390 align:middle line:84%
+I don't know about you,
+but at first glance,
+
+00:33:38.390 --> 00:33:40.640 align:middle line:84%
+I thought that the temperatures
+for Boston and Phoenix
+
+00:33:40.640 --> 00:33:46.998 align:middle line:84%
+were the same because I didn't
+look closely at the y-axes.
+
+00:33:46.998 --> 00:33:49.040 align:middle line:84%
+It kind of looked like,
+hey, they both bottom out
+
+00:33:49.040 --> 00:33:51.165 align:middle line:84%
+in the same way, they both
+top out in the same way.
+
+00:33:51.165 --> 00:33:52.770 align:middle line:90%
+So they look very similar to me.
+
+00:33:52.770 --> 00:33:55.350 align:middle line:84%
+But if we inspect
+the y-axes closer,
+
+00:33:55.350 --> 00:33:58.310 align:middle line:84%
+we see that the Boston
+temperature starts at 30,
+
+00:33:58.310 --> 00:33:59.180 align:middle line:90%
+goes to 70.
+
+00:33:59.180 --> 00:34:02.330 align:middle line:84%
+But the Phoenix one starts
+at, what is this, 50
+
+00:34:02.330 --> 00:34:04.570 align:middle line:90%
+and goes to 90.
+
+00:34:04.570 --> 00:34:08.550 align:middle line:84%
+So if we're presenting
+plots in one figure what
+
+00:34:08.550 --> 00:34:11.400 align:middle line:84%
+would be really nice
+to do is to make sure
+
+00:34:11.400 --> 00:34:14.980 align:middle line:84%
+that the axes are both
+bounded in a similar way,
+
+00:34:14.980 --> 00:34:18.210 align:middle line:84%
+especially if we're plotting
+similar data, temperature
+
+00:34:18.210 --> 00:34:21.179 align:middle line:90%
+in this particular case.
+
+00:34:21.179 --> 00:34:26.159 align:middle line:84%
+So in our code what
+we'd also like to do
+
+00:34:26.159 --> 00:34:30.420 align:middle line:84%
+is set limits on our
+axes, and just the y-axis
+
+00:34:30.420 --> 00:34:32.130 align:middle line:90%
+because the x-axis is the same.
+
+00:34:32.130 --> 00:34:37.770 align:middle line:84%
+So here I can limit the y-axis
+from 0 to 100, a reasonable set
+
+00:34:37.770 --> 00:34:40.370 align:middle line:90%
+of temperatures in Fahrenheit.
+
+00:34:40.370 --> 00:34:44.780 align:middle line:84%
+So if I fix these temperature
+limits from 0 to 100
+
+00:34:44.780 --> 00:34:48.260 align:middle line:84%
+and now I plot, I get
+something that looks like this.
+
+00:34:48.260 --> 00:34:52.630 align:middle line:84%
+And now at first glance, this
+makes a lot more sense to me.
+
+00:34:52.630 --> 00:34:56.560 align:middle line:84%
+I've got-- the Phoenix
+temperatures seem
+
+00:34:56.560 --> 00:35:00.730 align:middle line:84%
+to be on for this year,
+on average, higher
+
+00:35:00.730 --> 00:35:02.240 align:middle line:90%
+than the Boston temperatures.
+
+00:35:02.240 --> 00:35:07.430 align:middle line:90%
+
+
+00:35:07.430 --> 00:35:11.640 align:middle line:84%
+So we can plot now multiple--
+we can create multiple subplots.
+
+00:35:11.640 --> 00:35:15.770 align:middle line:84%
+So here in the previous example,
+I just had two, top and bottom.
+
+00:35:15.770 --> 00:35:18.020 align:middle line:84%
+But I can create
+as many subplots
+
+00:35:18.020 --> 00:35:20.690 align:middle line:90%
+as I'd like within my window.
+
+00:35:20.690 --> 00:35:25.100 align:middle line:84%
+So when I create them and
+I tell Python how many rows
+
+00:35:25.100 --> 00:35:27.860 align:middle line:84%
+and columns I have-- in this
+particular example I just
+
+00:35:27.860 --> 00:35:33.240 align:middle line:84%
+drew here, I have three
+rows and two columns.
+
+00:35:33.240 --> 00:35:35.660 align:middle line:84%
+So the third parameter
+that I pass in
+
+00:35:35.660 --> 00:35:39.230 align:middle line:84%
+will basically tell Python
+which one of these subplots
+
+00:35:39.230 --> 00:35:40.990 align:middle line:90%
+to open up for processing.
+
+00:35:40.990 --> 00:35:43.490 align:middle line:84%
+So this will be the first one,
+this will be the second one--
+
+00:35:43.490 --> 00:35:44.690 align:middle line:90%
+kind of the way we read--
+
+00:35:44.690 --> 00:35:48.470 align:middle line:90%
+third, fourth, fifth, and sixth.
+
+00:35:48.470 --> 00:35:51.620 align:middle line:84%
+So that third parameter
+to these subplot commands
+
+00:35:51.620 --> 00:35:53.930 align:middle line:84%
+will be either 1,
+2, 3, 4, 5, or 6,
+
+00:35:53.930 --> 00:35:56.600 align:middle line:84%
+telling Python which
+one of these sections
+
+00:35:56.600 --> 00:35:59.300 align:middle line:90%
+I'm going to add plots to.
+
+00:35:59.300 --> 00:36:02.210 align:middle line:84%
+In this particular case,
+I had a Boston, Phoenix,
+
+00:36:02.210 --> 00:36:03.600 align:middle line:90%
+and Minneapolis temperature.
+
+00:36:03.600 --> 00:36:06.810 align:middle line:84%
+So I'm just creating
+a two-by-two matrix.
+
+00:36:06.810 --> 00:36:09.120 align:middle line:84%
+So here I just have
+this thing that
+
+00:36:09.120 --> 00:36:12.090 align:middle line:84%
+looks like this, a figure
+with these four subplots.
+
+00:36:12.090 --> 00:36:17.070 align:middle line:84%
+And I am going to add the Boston
+one over here, the Phoenix
+
+00:36:17.070 --> 00:36:20.700 align:middle line:84%
+one over here, and
+then the Minneapolis
+
+00:36:20.700 --> 00:36:28.470 align:middle line:84%
+down here, so 1, 2, and 3 as
+my subplots that I'm opening.
+
+00:36:28.470 --> 00:36:32.220 align:middle line:84%
+Nothing in four, so that
+fourth spot will just be empty.
+
+00:36:32.220 --> 00:36:34.390 align:middle line:84%
+So the plots will look
+something like this.
+
+00:36:34.390 --> 00:36:37.420 align:middle line:84%
+And I haven't changed the line
+widths in this particular case.
+
+00:36:37.420 --> 00:36:39.390 align:middle line:90%
+I didn't need to.
+
+00:36:39.390 --> 00:36:42.810 align:middle line:84%
+And you can see everything's
+plotted with the heights,
+
+00:36:42.810 --> 00:36:45.300 align:middle line:84%
+again, limited
+from 0 to 100 just
+
+00:36:45.300 --> 00:36:46.680 align:middle line:90%
+so everything's comparable.
+
+00:36:46.680 --> 00:36:48.523 align:middle line:84%
+And notice the empty
+spot here because I
+
+00:36:48.523 --> 00:36:49.690 align:middle line:90%
+had nothing to fill in with.
+
+00:36:49.690 --> 00:36:53.200 align:middle line:90%
+
+
+00:36:53.200 --> 00:36:54.265 align:middle line:90%
+Questions about this?
+
+00:36:54.265 --> 00:36:57.510 align:middle line:90%
+Is this interesting?
+
+00:36:57.510 --> 00:37:00.000 align:middle line:90%
+OK.
+
+00:37:00.000 --> 00:37:07.010 align:middle line:84%
+All right, so that finishes up
+just some really basic things
+
+00:37:07.010 --> 00:37:12.000 align:middle line:84%
+that we can do with plotting,
+basic customizations.
+
+00:37:12.000 --> 00:37:15.860 align:middle line:84%
+Now what I'd like to do is just
+open up a few different data
+
+00:37:15.860 --> 00:37:18.950 align:middle line:90%
+sets for processing.
+
+00:37:18.950 --> 00:37:22.610 align:middle line:84%
+We can start by just
+plotting the pure values
+
+00:37:22.610 --> 00:37:24.080 align:middle line:90%
+on a regular plot.
+
+00:37:24.080 --> 00:37:26.480 align:middle line:84%
+And then we can start
+to investigate things
+
+00:37:26.480 --> 00:37:29.930 align:middle line:84%
+that we visualize,
+ask more questions,
+
+00:37:29.930 --> 00:37:32.100 align:middle line:90%
+and see where we go from there.
+
+00:37:32.100 --> 00:37:35.450 align:middle line:84%
+So the first thing I'd like
+to do is open up a file
+
+00:37:35.450 --> 00:37:37.410 align:middle line:90%
+on the US population.
+
+00:37:37.410 --> 00:37:44.220 align:middle line:84%
+So this particular file
+contains 40 different numbers.
+
+00:37:44.220 --> 00:37:51.560 align:middle line:84%
+So it has a population value
+over about 400 years, every 10
+
+00:37:51.560 --> 00:37:52.500 align:middle line:90%
+years.
+
+00:37:52.500 --> 00:37:56.150 align:middle line:84%
+So that's 40 different
+values for the temperatures,
+
+00:37:56.150 --> 00:38:00.170 align:middle line:84%
+starting from, I don't know, a
+really long time ago till about
+
+00:38:00.170 --> 00:38:03.310 align:middle line:90%
+2010 or something like that.
+
+00:38:03.310 --> 00:38:06.250 align:middle line:84%
+So the file looks
+something like this.
+
+00:38:06.250 --> 00:38:11.880 align:middle line:84%
+So it starts at 1610
+and goes down to 2010.
+
+00:38:11.880 --> 00:38:14.550 align:middle line:84%
+So this is 40 lines
+for 40 years--
+
+00:38:14.550 --> 00:38:19.660 align:middle line:90%
+400 years, every 10 years.
+
+00:38:19.660 --> 00:38:21.550 align:middle line:84%
+Then there's a
+space in the file.
+
+00:38:21.550 --> 00:38:25.350 align:middle line:84%
+And then I've got
+the population value.
+
+00:38:25.350 --> 00:38:30.640 align:middle line:84%
+So it starts at 350, increases,
+goes down to 300,000 in 2010.
+
+00:38:30.640 --> 00:38:32.277 align:middle line:84%
+So that's what the
+file looks like.
+
+00:38:32.277 --> 00:38:34.860 align:middle line:84%
+It's important to know what the
+file looks like because you're
+
+00:38:34.860 --> 00:38:37.680 align:middle line:84%
+going to have to
+read in this data
+
+00:38:37.680 --> 00:38:40.680 align:middle line:84%
+and save it in some
+sort of data structure
+
+00:38:40.680 --> 00:38:42.400 align:middle line:90%
+that's easy to manipulate.
+
+00:38:42.400 --> 00:38:44.845 align:middle line:84%
+So in our case, a
+data structure that's
+
+00:38:44.845 --> 00:38:47.220 align:middle line:84%
+really easy to manipulate
+where you have a whole sequence
+
+00:38:47.220 --> 00:38:50.100 align:middle line:90%
+of values is a list.
+
+00:38:50.100 --> 00:38:52.230 align:middle line:84%
+So what we can do
+is we can open up
+
+00:38:52.230 --> 00:38:56.370 align:middle line:84%
+this file for processing,
+read in the years as a list,
+
+00:38:56.370 --> 00:39:01.740 align:middle line:84%
+and then read in the population
+values as a list as well.
+
+00:39:01.740 --> 00:39:04.300 align:middle line:84%
+We could use a dictionary
+also if we wanted to.
+
+00:39:04.300 --> 00:39:08.030 align:middle line:84%
+But in this case, I
+just used two lists.
+
+00:39:08.030 --> 00:39:10.210 align:middle line:84%
+So let's look at
+the code to do that.
+
+00:39:10.210 --> 00:39:13.070 align:middle line:84%
+It looks like a lot,
+but I'll go through it.
+
+00:39:13.070 --> 00:39:17.290 align:middle line:84%
+So here is the function that's
+going to read in the file.
+
+00:39:17.290 --> 00:39:20.500 align:middle line:84%
+It just opens up the file,
+creates two empty lists.
+
+00:39:20.500 --> 00:39:22.240 align:middle line:90%
+One will contain the dates.
+
+00:39:22.240 --> 00:39:23.980 align:middle line:84%
+The other will contain
+the populations.
+
+00:39:23.980 --> 00:39:26.260 align:middle line:84%
+It iterates through
+each line in the file.
+
+00:39:26.260 --> 00:39:28.690 align:middle line:84%
+So I've put up what a line
+in the file kind of looks
+
+00:39:28.690 --> 00:39:29.440 align:middle line:90%
+like up here.
+
+00:39:29.440 --> 00:39:34.250 align:middle line:84%
+So it's got some number,
+space, some other number.
+
+00:39:34.250 --> 00:39:36.370 align:middle line:90%
+But when we read and file--
+
+00:39:36.370 --> 00:39:38.800 align:middle line:84%
+when we read in a
+line from a file,
+
+00:39:38.800 --> 00:39:42.020 align:middle line:84%
+Python actually
+reads it as a string.
+
+00:39:42.020 --> 00:39:45.010 align:middle line:84%
+So what that means
+for us is we're
+
+00:39:45.010 --> 00:39:48.220 align:middle line:84%
+going to have to take
+this string, each line
+
+00:39:48.220 --> 00:39:54.160 align:middle line:84%
+being the string, "1640 space
+26,634," something like that,
+
+00:39:54.160 --> 00:39:58.510 align:middle line:84%
+and somehow separate it so
+that we have the date and then
+
+00:39:58.510 --> 00:40:03.010 align:middle line:84%
+the number of the population
+and then somehow save
+
+00:40:03.010 --> 00:40:05.120 align:middle line:90%
+those two pieces to lists.
+
+00:40:05.120 --> 00:40:12.680 align:middle line:84%
+So the first thing to notice
+is that we have a pesky comma
+
+00:40:12.680 --> 00:40:17.210 align:middle line:90%
+in our population values.
+
+00:40:17.210 --> 00:40:20.300 align:middle line:84%
+Those values are human-readable,
+so it makes it easy
+
+00:40:20.300 --> 00:40:26.600 align:middle line:84%
+for us to read, but the computer
+is not so happy about them.
+
+00:40:26.600 --> 00:40:31.370 align:middle line:84%
+So if I have a
+number like 11,345,
+
+00:40:31.370 --> 00:40:36.080 align:middle line:84%
+whatever, this is read
+in as a string, right?
+
+00:40:36.080 --> 00:40:40.730 align:middle line:84%
+And if I just try to
+cast that as an integer,
+
+00:40:40.730 --> 00:40:44.090 align:middle line:84%
+straight without doing any
+sort of processing on it,
+
+00:40:44.090 --> 00:40:46.250 align:middle line:90%
+Python is very unhappy.
+
+00:40:46.250 --> 00:40:50.150 align:middle line:84%
+So what we need to do
+is remove that comma.
+
+00:40:50.150 --> 00:40:53.240 align:middle line:84%
+Because as long as I
+don't have a comma there,
+
+00:40:53.240 --> 00:41:00.020 align:middle line:84%
+Python can convert that string
+number into a regular integer
+
+00:41:00.020 --> 00:41:03.500 align:middle line:90%
+number for us to then plot.
+
+00:41:03.500 --> 00:41:06.540 align:middle line:84%
+So that's what this bit
+of the code is doing.
+
+00:41:06.540 --> 00:41:10.740 align:middle line:90%
+It's doing it in a weird way.
+
+00:41:10.740 --> 00:41:14.760 align:middle line:84%
+It's saying, hey, take this
+entire line of characters
+
+00:41:14.760 --> 00:41:19.980 align:middle line:84%
+and only keep characters that
+are either a digit or a space.
+
+00:41:19.980 --> 00:41:22.830 align:middle line:84%
+So in doing so, it
+effectively removes the comma
+
+00:41:22.830 --> 00:41:26.790 align:middle line:84%
+because it creates a new
+version of that line containing
+
+00:41:26.790 --> 00:41:28.270 align:middle line:90%
+only digits and spaces.
+
+00:41:28.270 --> 00:41:32.580 align:middle line:84%
+So it'll just take the 2, 6 and
+then the 6, 3, 4 right after.
+
+00:41:32.580 --> 00:41:36.230 align:middle line:84%
+So it just creates this new
+line that looks like that.
+
+00:41:36.230 --> 00:41:38.680 align:middle line:84%
+And then after it
+has this new line,
+
+00:41:38.680 --> 00:41:40.780 align:middle line:84%
+we're going to
+split on the space
+
+00:41:40.780 --> 00:41:44.530 align:middle line:84%
+because we note
+that every single--
+
+00:41:44.530 --> 00:41:47.260 align:middle line:84%
+after every date,
+every year, we've
+
+00:41:47.260 --> 00:41:51.290 align:middle line:84%
+got a space that separates our
+population value and our date.
+
+00:41:51.290 --> 00:41:54.580 align:middle line:84%
+So if we split on the space
+using the split command,
+
+00:41:54.580 --> 00:41:58.750 align:middle line:84%
+the thing before the space,
+so the line at index 0,
+
+00:41:58.750 --> 00:42:00.010 align:middle line:90%
+gives us the date.
+
+00:42:00.010 --> 00:42:03.970 align:middle line:84%
+We'll just cast that to an
+int and append it to dates.
+
+00:42:03.970 --> 00:42:08.560 align:middle line:84%
+And then the line at index 1
+is the thing after the space,
+
+00:42:08.560 --> 00:42:10.810 align:middle line:84%
+again without the comma
+because we did that trick.
+
+00:42:10.810 --> 00:42:13.180 align:middle line:84%
+And then we cast
+that to an integer
+
+00:42:13.180 --> 00:42:15.955 align:middle line:84%
+and append that to
+our populations value.
+
+00:42:15.955 --> 00:42:18.165 align:middle line:90%
+
+
+00:42:18.165 --> 00:42:19.290 align:middle line:90%
+So that's what we do there.
+
+00:42:19.290 --> 00:42:20.670 align:middle line:90%
+And that's what we do there.
+
+00:42:20.670 --> 00:42:22.590 align:middle line:84%
+And then, from there
+on out, we just
+
+00:42:22.590 --> 00:42:24.540 align:middle line:84%
+return the dates
+and the populations.
+
+00:42:24.540 --> 00:42:28.920 align:middle line:84%
+The dates become my
+x values for my plot,
+
+00:42:28.920 --> 00:42:31.395 align:middle line:84%
+and the populations become
+the y values for my plot.
+
+00:42:31.395 --> 00:42:33.900 align:middle line:90%
+
+
+00:42:33.900 --> 00:42:37.030 align:middle line:84%
+And then we plot it, and it
+looks something like this.
+
+00:42:37.030 --> 00:42:41.400 align:middle line:84%
+So much easier to
+read or to tell
+
+00:42:41.400 --> 00:42:44.460 align:middle line:84%
+what's going on than just
+looking at pure numbers.
+
+00:42:44.460 --> 00:42:46.980 align:middle line:84%
+Always nicer to visualize
+things than to just read
+
+00:42:46.980 --> 00:42:49.380 align:middle line:84%
+a whole bunch of numbers,
+even if it's just 40.
+
+00:42:49.380 --> 00:42:52.200 align:middle line:84%
+And in fact, we can
+tell a couple things
+
+00:42:52.200 --> 00:42:54.030 align:middle line:90%
+that we weren't able to tell--
+
+00:42:54.030 --> 00:42:56.910 align:middle line:84%
+we definitely couldn't have
+been able to tell from just
+
+00:42:56.910 --> 00:42:59.110 align:middle line:90%
+pure looking at pure numbers.
+
+00:42:59.110 --> 00:43:02.850 align:middle line:84%
+The first is that we
+notice a little bump
+
+00:43:02.850 --> 00:43:06.910 align:middle line:90%
+right here in the population.
+
+00:43:06.910 --> 00:43:09.880 align:middle line:84%
+This is the impact of World
+War II on the population.
+
+00:43:09.880 --> 00:43:12.780 align:middle line:84%
+Second, a little harder to
+tell is another little bump
+
+00:43:12.780 --> 00:43:13.770 align:middle line:90%
+down here.
+
+00:43:13.770 --> 00:43:17.220 align:middle line:84%
+And that's the impact of the
+Civil War on the population.
+
+00:43:17.220 --> 00:43:19.710 align:middle line:90%
+So nicer to visualize.
+
+00:43:19.710 --> 00:43:22.180 align:middle line:84%
+It exposes some
+interesting things.
+
+00:43:22.180 --> 00:43:24.330 align:middle line:84%
+The other thing to
+notice is, well,
+
+00:43:24.330 --> 00:43:27.290 align:middle line:90%
+what's going on down here?
+
+00:43:27.290 --> 00:43:29.870 align:middle line:84%
+It kind of looks like the
+population is not really
+
+00:43:29.870 --> 00:43:32.750 align:middle line:90%
+growing much.
+
+00:43:32.750 --> 00:43:35.240 align:middle line:84%
+And then maybe from
+1750 onward, it
+
+00:43:35.240 --> 00:43:36.650 align:middle line:90%
+starts to grow exponentially.
+
+00:43:36.650 --> 00:43:42.040 align:middle line:84%
+It's hard to tell what exactly
+is going on in that lower part.
+
+00:43:42.040 --> 00:43:46.870 align:middle line:84%
+So let's think about a different
+way of showing this data.
+
+00:43:46.870 --> 00:43:50.590 align:middle line:84%
+Instead of having a linear
+scale on our y-axis,
+
+00:43:50.590 --> 00:43:56.040 align:middle line:84%
+let's see about doing it
+in a logarithmic scale.
+
+00:43:56.040 --> 00:43:59.250 align:middle line:84%
+So we're going to
+add a command that
+
+00:43:59.250 --> 00:44:04.230 align:middle line:84%
+tells Python to make our y-axis
+a logarithmic scale, instead
+
+00:44:04.230 --> 00:44:06.060 align:middle line:90%
+of linear.
+
+00:44:06.060 --> 00:44:08.940 align:middle line:84%
+So if we do that,
+then that means
+
+00:44:08.940 --> 00:44:15.150 align:middle line:84%
+that every regular increment
+in our y-- on our y-axis
+
+00:44:15.150 --> 00:44:20.670 align:middle line:84%
+is going to imply an exponential
+increase in the population.
+
+00:44:20.670 --> 00:44:24.850 align:middle line:90%
+OK, so let's plot that.
+
+00:44:24.850 --> 00:44:28.140 align:middle line:84%
+And if we plot that, we get
+something that looks like this.
+
+00:44:28.140 --> 00:44:30.220 align:middle line:90%
+The x-axis remains unchanged.
+
+00:44:30.220 --> 00:44:33.150 align:middle line:84%
+We're still incrementing
+the years linearly.
+
+00:44:33.150 --> 00:44:37.670 align:middle line:84%
+But the y-axis is
+now logarithmic.
+
+00:44:37.670 --> 00:44:39.970 align:middle line:90%
+So what do we notice?
+
+00:44:39.970 --> 00:44:47.730 align:middle line:84%
+Well, I see a line here,
+and I see another line here.
+
+00:44:47.730 --> 00:44:52.240 align:middle line:90%
+
+
+00:44:52.240 --> 00:44:53.950 align:middle line:84%
+Again, linear growth
+on a log scale
+
+00:44:53.950 --> 00:44:58.580 align:middle line:84%
+means exponential growth
+on a linear scale.
+
+00:44:58.580 --> 00:45:01.750 align:middle line:84%
+So what we notice is that
+there's these two time
+
+00:45:01.750 --> 00:45:03.580 align:middle line:90%
+periods of exponential growth.
+
+00:45:03.580 --> 00:45:08.170 align:middle line:84%
+And in fact, those early years
+actually seem to be growing--
+
+00:45:08.170 --> 00:45:10.540 align:middle line:84%
+the population seems to
+be growing at a faster
+
+00:45:10.540 --> 00:45:13.270 align:middle line:90%
+rate than the later years.
+
+00:45:13.270 --> 00:45:17.050 align:middle line:84%
+And that was not readily
+visible on the previous graph
+
+00:45:17.050 --> 00:45:18.610 align:middle line:90%
+that we had.
+
+00:45:18.610 --> 00:45:20.070 align:middle line:90%
+So the question--
+
+00:45:20.070 --> 00:45:21.240 align:middle line:90%
+I have a question for you.
+
+00:45:21.240 --> 00:45:23.410 align:middle line:84%
+Which one of those did
+you find more informative?
+
+00:45:23.410 --> 00:45:25.320 align:middle line:84%
+Well, it kind of
+depends on what we're
+
+00:45:25.320 --> 00:45:26.970 align:middle line:90%
+interested in finding out.
+
+00:45:26.970 --> 00:45:30.480 align:middle line:84%
+If we're interested in big
+trends in the data, where
+
+00:45:30.480 --> 00:45:35.010 align:middle line:84%
+in the top left one we spotted
+here the impacts of wars
+
+00:45:35.010 --> 00:45:37.320 align:middle line:84%
+on the population,
+well, then the top
+
+00:45:37.320 --> 00:45:39.310 align:middle line:90%
+left one is the one to look at.
+
+00:45:39.310 --> 00:45:42.060 align:middle line:84%
+But if we visualize the data
+in a slightly different way,
+
+00:45:42.060 --> 00:45:44.250 align:middle line:84%
+it gives us different
+insights into what's
+
+00:45:44.250 --> 00:45:45.570 align:middle line:90%
+happened to the population.
+
+00:45:45.570 --> 00:45:48.550 align:middle line:84%
+That wasn't as apparent
+in the previous graph.
+
+00:45:48.550 --> 00:45:50.730 align:middle line:84%
+So it really kind
+of just depends
+
+00:45:50.730 --> 00:45:55.890 align:middle line:84%
+on what you're
+interested in finding out
+
+00:45:55.890 --> 00:45:59.130 align:middle line:84%
+which one of these plots
+you find more informative.
+
+00:45:59.130 --> 00:46:04.410 align:middle line:84%
+And sometimes both are probably
+necessary to figure out
+
+00:46:04.410 --> 00:46:06.710 align:middle line:90%
+exactly what happened.
+
+00:46:06.710 --> 00:46:11.990 align:middle line:84%
+OK, so that finishes our
+example on the US population.
+
+00:46:11.990 --> 00:46:15.850 align:middle line:84%
+Now let's look at a
+slightly different file.
+
+00:46:15.850 --> 00:46:17.950 align:middle line:84%
+In this particular
+file, we're going
+
+00:46:17.950 --> 00:46:20.810 align:middle line:90%
+to look at country populations.
+
+00:46:20.810 --> 00:46:23.950 align:middle line:84%
+So these are the
+populations in a whole bunch
+
+00:46:23.950 --> 00:46:25.690 align:middle line:84%
+of different
+countries-- or sorry,
+
+00:46:25.690 --> 00:46:30.220 align:middle line:84%
+all the countries, ordered
+from countries with the highest
+
+00:46:30.220 --> 00:46:33.790 align:middle line:84%
+population up at the top of
+the file down to the countries
+
+00:46:33.790 --> 00:46:36.380 align:middle line:84%
+with the lowest population
+at the bottom of the file.
+
+00:46:36.380 --> 00:46:38.440 align:middle line:84%
+So they are basically
+ranked in this order.
+
+00:46:38.440 --> 00:46:41.170 align:middle line:84%
+So I know that this
+order is correct.
+
+00:46:41.170 --> 00:46:46.250 align:middle line:84%
+So there's 237
+lines in this file.
+
+00:46:46.250 --> 00:46:47.760 align:middle line:84%
+What do we notice
+about the data?
+
+00:46:47.760 --> 00:46:49.927 align:middle line:84%
+So we need to know what the
+data looks like in order
+
+00:46:49.927 --> 00:46:50.870 align:middle line:90%
+to read the file in.
+
+00:46:50.870 --> 00:46:56.540 align:middle line:84%
+And again, we're going to
+be interested in extracting
+
+00:46:56.540 --> 00:46:57.470 align:middle line:90%
+certain parts of it.
+
+00:46:57.470 --> 00:47:01.100 align:middle line:84%
+For the particular analysis
+I'm going to do next,
+
+00:47:01.100 --> 00:47:03.900 align:middle line:84%
+I'm actually only interested
+in the population itself.
+
+00:47:03.900 --> 00:47:05.900 align:middle line:90%
+So I don't care about the rank.
+
+00:47:05.900 --> 00:47:09.890 align:middle line:84%
+And I don't actually care
+about the country either.
+
+00:47:09.890 --> 00:47:12.220 align:middle line:90%
+So all that my--
+
+00:47:12.220 --> 00:47:14.510 align:middle line:84%
+the code that's going
+to read in the file
+
+00:47:14.510 --> 00:47:17.390 align:middle line:84%
+will only be interested in
+extracting the population
+
+00:47:17.390 --> 00:47:18.300 align:middle line:90%
+value.
+
+00:47:18.300 --> 00:47:22.760 align:middle line:84%
+And notice, once again,
+we've got our commas here
+
+00:47:22.760 --> 00:47:24.470 align:middle line:90%
+in the population values right.
+
+00:47:24.470 --> 00:47:28.430 align:middle line:84%
+So we're going to use the same
+trick to get rid of those.
+
+00:47:28.430 --> 00:47:31.640 align:middle line:84%
+Again, nice human-readable
+format here but not
+
+00:47:31.640 --> 00:47:35.300 align:middle line:84%
+so good for reading in the
+file and dealing with the data
+
+00:47:35.300 --> 00:47:35.900 align:middle line:90%
+itself.
+
+00:47:35.900 --> 00:47:39.520 align:middle line:84%
+So we're going to have to take
+care of that when we read in.
+
+00:47:39.520 --> 00:47:42.850 align:middle line:84%
+So here's the function
+that reads in the file.
+
+00:47:42.850 --> 00:47:44.580 align:middle line:84%
+It's going to have
+a very similar feel
+
+00:47:44.580 --> 00:47:46.020 align:middle line:90%
+to the previous one.
+
+00:47:46.020 --> 00:47:48.120 align:middle line:84%
+Again, I've got a little
+sample of our file
+
+00:47:48.120 --> 00:47:51.250 align:middle line:84%
+up here just to remind
+ourselves what it looks like.
+
+00:47:51.250 --> 00:47:54.510 align:middle line:84%
+So this particular file, I'm
+only interested in grabbing
+
+00:47:54.510 --> 00:47:56.080 align:middle line:90%
+the population value.
+
+00:47:56.080 --> 00:47:59.440 align:middle line:84%
+And it's actually a
+tab-separated file.
+
+00:47:59.440 --> 00:48:04.890 align:middle line:84%
+So I've got rank, tab, country,
+tab, population, tab, and then
+
+00:48:04.890 --> 00:48:06.250 align:middle line:90%
+the date.
+
+00:48:06.250 --> 00:48:12.060 align:middle line:84%
+So when I take a line of code
+what I'm first going to do
+
+00:48:12.060 --> 00:48:14.730 align:middle line:84%
+is split it on
+the tab character.
+
+00:48:14.730 --> 00:48:18.530 align:middle line:84%
+And the tab character is
+this backslash t thing.
+
+00:48:18.530 --> 00:48:23.090 align:middle line:84%
+So once I split it on the tab
+character, the thing at index 0
+
+00:48:23.090 --> 00:48:25.740 align:middle line:84%
+is my rank, the thing at
+index 1 is my country,
+
+00:48:25.740 --> 00:48:28.040 align:middle line:84%
+and the thing at index
+2 is my population.
+
+00:48:28.040 --> 00:48:31.050 align:middle line:90%
+The thing at index 3 is my date.
+
+00:48:31.050 --> 00:48:33.590 align:middle line:84%
+So if I'm only interested
+in grabbing the population,
+
+00:48:33.590 --> 00:48:36.350 align:middle line:84%
+I'm going to look at
+the thing at index 2,
+
+00:48:36.350 --> 00:48:40.130 align:middle line:84%
+and this gives me the
+population as a string here.
+
+00:48:40.130 --> 00:48:41.870 align:middle line:84%
+And then we do the
+exact same trick
+
+00:48:41.870 --> 00:48:45.560 align:middle line:84%
+as before to
+eliminate the commas.
+
+00:48:45.560 --> 00:48:47.600 align:middle line:84%
+There's no space in
+this particular case
+
+00:48:47.600 --> 00:48:52.370 align:middle line:84%
+because I've just got the number
+saved because of my tab split.
+
+00:48:52.370 --> 00:48:55.610 align:middle line:84%
+So all I need to
+do is keep digits.
+
+00:48:55.610 --> 00:48:58.070 align:middle line:84%
+And then if I keep
+the digits, then I'm
+
+00:48:58.070 --> 00:49:00.950 align:middle line:84%
+just going to keep that
+number as a population.
+
+00:49:00.950 --> 00:49:02.810 align:middle line:84%
+Again, I cast it to
+an integer because I
+
+00:49:02.810 --> 00:49:05.600 align:middle line:84%
+would like to work with
+numbers in my lists as opposed
+
+00:49:05.600 --> 00:49:06.620 align:middle line:90%
+to strings.
+
+00:49:06.620 --> 00:49:07.670 align:middle line:90%
+That would be very weird.
+
+00:49:07.670 --> 00:49:12.230 align:middle line:84%
+And at the end of this function,
+I've got all of the populations
+
+00:49:12.230 --> 00:49:15.380 align:middle line:84%
+in the same order that
+they were in that file read
+
+00:49:15.380 --> 00:49:19.010 align:middle line:84%
+in as a list,
+numbers not strings.
+
+00:49:19.010 --> 00:49:22.370 align:middle line:84%
+And so if we plot
+the populations, just
+
+00:49:22.370 --> 00:49:26.000 align:middle line:84%
+pure populations, I'm going
+to have something like this.
+
+00:49:26.000 --> 00:49:32.980 align:middle line:90%
+
+
+00:49:32.980 --> 00:49:34.990 align:middle line:84%
+If I plot just the
+pure populations,
+
+00:49:34.990 --> 00:49:37.120 align:middle line:84%
+I see something that
+looks like this.
+
+00:49:37.120 --> 00:49:38.480 align:middle line:90%
+Kind of hard to tell--
+
+00:49:38.480 --> 00:49:40.240 align:middle line:84%
+I mean, it's a big
+exponential decrease,
+
+00:49:40.240 --> 00:49:43.430 align:middle line:90%
+but is that really what it is?
+
+00:49:43.430 --> 00:49:47.560 align:middle line:84%
+So again, we'll do a little
+semi-log plot on the y-axis
+
+00:49:47.560 --> 00:49:51.025 align:middle line:84%
+to see exactly if there's any
+sort of linear action going on
+
+00:49:51.025 --> 00:49:52.480 align:middle line:90%
+on that log plot.
+
+00:49:52.480 --> 00:49:57.760 align:middle line:84%
+And unsurprisingly, it kind
+of matches our intuition.
+
+00:49:57.760 --> 00:50:00.100 align:middle line:84%
+There are very
+few countries that
+
+00:50:00.100 --> 00:50:02.060 align:middle line:90%
+have a really high population.
+
+00:50:02.060 --> 00:50:05.620 align:middle line:84%
+There are very few countries
+that have a low population.
+
+00:50:05.620 --> 00:50:08.920 align:middle line:84%
+And then a bunch of countries
+that are kind of in the middle
+
+00:50:08.920 --> 00:50:12.370 align:middle line:84%
+here where the population
+just exponentially decreases.
+
+00:50:12.370 --> 00:50:15.230 align:middle line:90%
+
+
+00:50:15.230 --> 00:50:18.950 align:middle line:84%
+All right, but that's
+not the analysis
+
+00:50:18.950 --> 00:50:24.990 align:middle line:84%
+I would like to do on this data
+because that's kind of boring.
+
+00:50:24.990 --> 00:50:27.720 align:middle line:84%
+So instead what we're
+going to analyze
+
+00:50:27.720 --> 00:50:32.910 align:middle line:84%
+is actually just the first
+digits from every country's
+
+00:50:32.910 --> 00:50:35.010 align:middle line:90%
+population.
+
+00:50:35.010 --> 00:50:39.630 align:middle line:84%
+So what I'd like to do from that
+data set is once I've grabbed
+
+00:50:39.630 --> 00:50:42.810 align:middle line:84%
+a list of all of the
+country populations,
+
+00:50:42.810 --> 00:50:46.150 align:middle line:84%
+I am going to extract
+that first digit.
+
+00:50:46.150 --> 00:50:50.340 align:middle line:84%
+So the way we do it is
+if we have a population,
+
+00:50:50.340 --> 00:50:58.500 align:middle line:84%
+I don't know, 2542136, whatever,
+I'm going to take this number,
+
+00:50:58.500 --> 00:51:00.090 align:middle line:90%
+cast it to a string.
+
+00:51:00.090 --> 00:51:03.510 align:middle line:84%
+That's what this one line
+of code is doing all in one.
+
+00:51:03.510 --> 00:51:06.150 align:middle line:84%
+It casts it to a
+string, extracts
+
+00:51:06.150 --> 00:51:08.190 align:middle line:90%
+the element at index 0.
+
+00:51:08.190 --> 00:51:10.470 align:middle line:90%
+This becomes the string 2.
+
+00:51:10.470 --> 00:51:17.370 align:middle line:84%
+And then we cast that to
+an integer to give us 2.
+
+00:51:17.370 --> 00:51:20.490 align:middle line:84%
+So that line of code does
+all of those steps in order.
+
+00:51:20.490 --> 00:51:25.500 align:middle line:84%
+So at the end of this loop,
+I've got this first digits list
+
+00:51:25.500 --> 00:51:28.680 align:middle line:84%
+that contains all of the first
+digits of every single one
+
+00:51:28.680 --> 00:51:32.030 align:middle line:90%
+of those country populations.
+
+00:51:32.030 --> 00:51:33.880 align:middle line:84%
+So I'll print that for
+you, just to give you
+
+00:51:33.880 --> 00:51:35.450 align:middle line:90%
+a sense of what it looks like.
+
+00:51:35.450 --> 00:51:37.240 align:middle line:90%
+So we see this.
+
+00:51:37.240 --> 00:51:40.330 align:middle line:84%
+So we had two
+countries up at the top
+
+00:51:40.330 --> 00:51:42.310 align:middle line:90%
+that had 1 billion people--
+
+00:51:42.310 --> 00:51:43.510 align:middle line:90%
+1 billion people.
+
+00:51:43.510 --> 00:51:46.720 align:middle line:84%
+Then the next country down
+had 300 million people,
+
+00:51:46.720 --> 00:51:48.980 align:middle line:84%
+then 200 million, then 200
+million, then 200 million,
+
+00:51:48.980 --> 00:51:50.890 align:middle line:90%
+100 million, and so on.
+
+00:51:50.890 --> 00:51:52.960 align:middle line:84%
+So just extracting
+that first digit,
+
+00:51:52.960 --> 00:51:58.580 align:middle line:90%
+we see this pattern of values.
+
+00:51:58.580 --> 00:52:00.980 align:middle line:90%
+So if we plot that--
+
+00:52:00.980 --> 00:52:02.760 align:middle line:84%
+so that's exactly
+what we do down here,
+
+00:52:02.760 --> 00:52:04.250 align:middle line:84%
+and I'll just do
+it in the slides.
+
+00:52:04.250 --> 00:52:07.790 align:middle line:84%
+If we plot that
+list in that order,
+
+00:52:07.790 --> 00:52:11.520 align:middle line:84%
+we get a plot that looks
+something like this.
+
+00:52:11.520 --> 00:52:15.680 align:middle line:84%
+It's a nice little
+sawtooth pattern.
+
+00:52:15.680 --> 00:52:20.210 align:middle line:84%
+And if we stare at it a bit, it
+makes sense because the numbers
+
+00:52:20.210 --> 00:52:25.310 align:middle line:84%
+that we got right from the file
+were already in ranked order
+
+00:52:25.310 --> 00:52:29.050 align:middle line:84%
+highest population to
+the lowest population.
+
+00:52:29.050 --> 00:52:34.540 align:middle line:90%
+So down here, we had--
+
+00:52:34.540 --> 00:52:36.180 align:middle line:84%
+sorry, down here,
+this little dot right
+
+00:52:36.180 --> 00:52:40.080 align:middle line:84%
+here had two countries that
+were 1 billion, so 1, 1,
+
+00:52:40.080 --> 00:52:43.080 align:middle line:84%
+and then had one country
+that had 300 million.
+
+00:52:43.080 --> 00:52:45.780 align:middle line:84%
+And then it had three
+countries that had 200 million,
+
+00:52:45.780 --> 00:52:49.890 align:middle line:84%
+then a bunch of countries that
+had 100 million something, so
+
+00:52:49.890 --> 00:52:51.390 align:middle line:90%
+1, 1, 1, 1, 1, 1.
+
+00:52:51.390 --> 00:52:54.300 align:middle line:84%
+And then, since we're going
+in decreasing order in terms
+
+00:52:54.300 --> 00:52:56.790 align:middle line:84%
+of rank, once we've
+finished going
+
+00:52:56.790 --> 00:52:58.715 align:middle line:84%
+to that significant
+digit, when we move down,
+
+00:52:58.715 --> 00:53:00.840 align:middle line:84%
+then we're going to start
+looking at countries that
+
+00:53:00.840 --> 00:53:04.980 align:middle line:84%
+have 90 million, 90 million,
+90 million, 80 million,
+
+00:53:04.980 --> 00:53:06.280 align:middle line:90%
+80 million, and so on.
+
+00:53:06.280 --> 00:53:10.470 align:middle line:84%
+So just the order of all of
+these values, the first digits
+
+00:53:10.470 --> 00:53:12.900 align:middle line:84%
+of every one of these
+values, it makes sense
+
+00:53:12.900 --> 00:53:14.700 align:middle line:84%
+to have that sawtooth
+pattern, right?
+
+00:53:14.700 --> 00:53:19.340 align:middle line:84%
+We basically have 9, 8, 7, 6,
+5, 4, 3, 2, 1, 9, 8, 7, 6, 5, 4,
+
+00:53:19.340 --> 00:53:20.400 align:middle line:90%
+3, 2, 1, and so on.
+
+00:53:20.400 --> 00:53:24.220 align:middle line:90%
+
+
+00:53:24.220 --> 00:53:26.970 align:middle line:90%
+So we get this pattern.
+
+00:53:26.970 --> 00:53:32.940 align:middle line:84%
+What I'd like to do is
+ask how many countries
+
+00:53:32.940 --> 00:53:36.180 align:middle line:90%
+have their first digit a 1?
+
+00:53:36.180 --> 00:53:37.830 align:middle line:84%
+It seems like
+there's a lot, right?
+
+00:53:37.830 --> 00:53:41.220 align:middle line:84%
+If we count how many of these
+countries are down here,
+
+00:53:41.220 --> 00:53:42.540 align:middle line:90%
+it seems to be a lot.
+
+00:53:42.540 --> 00:53:44.850 align:middle line:84%
+How many countries have
+a first digit of 2?
+
+00:53:44.850 --> 00:53:46.500 align:middle line:84%
+So again, we count
+how many countries
+
+00:53:46.500 --> 00:53:48.600 align:middle line:90%
+are on this step of my sawtooth.
+
+00:53:48.600 --> 00:53:51.450 align:middle line:84%
+How many countries
+have the first digit 3?
+
+00:53:51.450 --> 00:53:52.470 align:middle line:90%
+And so on.
+
+00:53:52.470 --> 00:53:55.110 align:middle line:84%
+And it kind of looks
+like, I don't know,
+
+00:53:55.110 --> 00:53:58.230 align:middle line:84%
+maybe there are more countries
+that have a first digit of 1
+
+00:53:58.230 --> 00:54:01.260 align:middle line:84%
+than there are countries that
+have a first digit of 9, right?
+
+00:54:01.260 --> 00:54:03.870 align:middle line:84%
+There's only a couple
+here, maybe like five here,
+
+00:54:03.870 --> 00:54:05.790 align:middle line:84%
+maybe one here, a
+couple here, a couple
+
+00:54:05.790 --> 00:54:08.520 align:middle line:84%
+here, whereas the number
+of countries that have a 1
+
+00:54:08.520 --> 00:54:10.470 align:middle line:90%
+are actually a lot.
+
+00:54:10.470 --> 00:54:14.770 align:middle line:84%
+So let's try to plot this
+data, the values here.
+
+00:54:14.770 --> 00:54:18.820 align:middle line:84%
+So what I'm interested in
+doing is creating a histogram.
+
+00:54:18.820 --> 00:54:23.730 align:middle line:84%
+So a histogram on the
+x-axis has a bunch of bins.
+
+00:54:23.730 --> 00:54:27.090 align:middle line:84%
+In this particular case, the
+way I'd like to bin my data
+
+00:54:27.090 --> 00:54:29.700 align:middle line:84%
+is by saying my bins
+are going to be the
+
+00:54:29.700 --> 00:54:33.800 align:middle line:84%
+digits 1, 2, 3, 4,
+5, 6, 7, 8, and 9.
+
+00:54:33.800 --> 00:54:34.940 align:middle line:90%
+That's the x-axis.
+
+00:54:34.940 --> 00:54:38.840 align:middle line:84%
+And the y-axis is going to be
+a count, a frequency of how
+
+00:54:38.840 --> 00:54:41.870 align:middle line:84%
+many of my countries
+have the number
+
+00:54:41.870 --> 00:54:44.630 align:middle line:84%
+1 as their first digit, how
+many countries have the number
+
+00:54:44.630 --> 00:54:46.860 align:middle line:90%
+2 as my first digit, and so on.
+
+00:54:46.860 --> 00:54:49.670 align:middle line:84%
+So in terms of this
+list containing
+
+00:54:49.670 --> 00:54:52.370 align:middle line:84%
+all of the first digits
+of the countries,
+
+00:54:52.370 --> 00:54:54.320 align:middle line:90%
+I'm essentially have--
+
+00:54:54.320 --> 00:54:57.290 align:middle line:84%
+I essentially have one bin
+that counts how many ones I
+
+00:54:57.290 --> 00:55:00.370 align:middle line:84%
+have in this list, another
+bin that counts how many twos
+
+00:55:00.370 --> 00:55:02.870 align:middle line:84%
+I have in this list, another
+bin that counts how many threes
+
+00:55:02.870 --> 00:55:06.920 align:middle line:90%
+I have in this list, and so on.
+
+00:55:06.920 --> 00:55:12.060 align:middle line:84%
+So if I plot that histogram,
+it looks like this.
+
+00:55:12.060 --> 00:55:15.470 align:middle line:84%
+Now, I would have
+expected this histogram
+
+00:55:15.470 --> 00:55:18.680 align:middle line:90%
+to be about even, right?
+
+00:55:18.680 --> 00:55:22.310 align:middle line:84%
+Why does it matter
+the first digit?
+
+00:55:22.310 --> 00:55:24.870 align:middle line:84%
+It seems like in
+this particular case,
+
+00:55:24.870 --> 00:55:28.790 align:middle line:84%
+the first digit has a higher
+probability of being a 1
+
+00:55:28.790 --> 00:55:29.720 align:middle line:90%
+than being a 9.
+
+00:55:29.720 --> 00:55:33.080 align:middle line:84%
+But intuitively, I would've
+expected every digit
+
+00:55:33.080 --> 00:55:37.580 align:middle line:84%
+to come out with equal
+probability, 11%, 1 over 9.
+
+00:55:37.580 --> 00:55:40.890 align:middle line:84%
+But instead what we get is
+this really surprising result,
+
+00:55:40.890 --> 00:55:46.538 align:middle line:84%
+which is that the first
+digit seems to be about 30%.
+
+00:55:46.538 --> 00:55:48.830 align:middle line:84%
+To have the first-- sorry,
+to have the first digit of 1
+
+00:55:48.830 --> 00:55:51.170 align:middle line:90%
+seems to be about 30%.
+
+00:55:51.170 --> 00:55:53.870 align:middle line:84%
+To have the first
+digit being a 2
+
+00:55:53.870 --> 00:55:58.100 align:middle line:84%
+seems to be about 18
+or something percent,
+
+00:55:58.100 --> 00:55:59.400 align:middle line:90%
+and so on and so on.
+
+00:55:59.400 --> 00:56:02.100 align:middle line:84%
+And then the first digit
+being a 9 is pretty low.
+
+00:56:02.100 --> 00:56:07.710 align:middle line:84%
+It's going to be about, what is
+this, 12 out of 200 countries.
+
+00:56:07.710 --> 00:56:10.850 align:middle line:90%
+So pretty low probability.
+
+00:56:10.850 --> 00:56:14.080 align:middle line:84%
+So as it turns out,
+this graph actually
+
+00:56:14.080 --> 00:56:17.820 align:middle line:84%
+follows something
+called Benford's law.
+
+00:56:17.820 --> 00:56:20.110 align:middle line:90%
+And this is a well-proven law.
+
+00:56:20.110 --> 00:56:22.440 align:middle line:84%
+It applies to a bunch
+of different data sets
+
+00:56:22.440 --> 00:56:23.970 align:middle line:84%
+that we find in
+nature, data sets
+
+00:56:23.970 --> 00:56:26.940 align:middle line:84%
+that don't really have
+upper or lower bounds,
+
+00:56:26.940 --> 00:56:29.650 align:middle line:90%
+like country populations.
+
+00:56:29.650 --> 00:56:33.780 align:middle line:84%
+So Benford's law effectively
+says the probability
+
+00:56:33.780 --> 00:56:40.350 align:middle line:84%
+of the first digit in some big
+set of numbers being a 1, a 2,
+
+00:56:40.350 --> 00:56:44.720 align:middle line:84%
+a 3, whatever-- this d being
+the 1, a 2, or 3, or whatever--
+
+00:56:44.720 --> 00:56:45.990 align:middle line:90%
+is according to this formula.
+
+00:56:45.990 --> 00:56:49.700 align:middle line:84%
+So if we find the probability
+of that first digit being a 1,
+
+00:56:49.700 --> 00:56:55.920 align:middle line:84%
+we basically find log base
+10 of 2, which is about 0.28.
+
+00:56:55.920 --> 00:56:59.070 align:middle line:84%
+Probability of that first
+digit being a 2 is log base
+
+00:56:59.070 --> 00:57:03.000 align:middle line:84%
+10 of 1 and 1/2,
+which is about 0.17.
+
+00:57:03.000 --> 00:57:07.650 align:middle line:84%
+So our data, the
+country populations,
+
+00:57:07.650 --> 00:57:10.810 align:middle line:84%
+if we look at just the
+first digit of our data,
+
+00:57:10.810 --> 00:57:16.120 align:middle line:84%
+it also follows this law,
+which is pretty neat.
+
+00:57:16.120 --> 00:57:20.470 align:middle line:84%
+So a lot of data that we
+deal with on a daily basis
+
+00:57:20.470 --> 00:57:24.190 align:middle line:84%
+follows this law, number
+of social media followers,
+
+00:57:24.190 --> 00:57:27.820 align:middle line:84%
+number of posts people make,
+stock values, grocery prices,
+
+00:57:27.820 --> 00:57:32.260 align:middle line:84%
+sports statistics, building
+heights, income taxes, things
+
+00:57:32.260 --> 00:57:38.270 align:middle line:84%
+like that all follow this
+law, which is pretty cool.
+
+00:57:38.270 --> 00:57:43.760 align:middle line:84%
+As an aside, one of the
+ways that people figure out
+
+00:57:43.760 --> 00:57:48.590 align:middle line:84%
+tax fraud on income taxes
+is by applying Benford's law
+
+00:57:48.590 --> 00:57:50.600 align:middle line:90%
+to income taxes submitted.
+
+00:57:50.600 --> 00:57:53.300 align:middle line:84%
+People, when they submit
+fraudulent numbers,
+
+00:57:53.300 --> 00:57:55.850 align:middle line:84%
+they tend to make
+every number come up
+
+00:57:55.850 --> 00:57:57.320 align:middle line:90%
+with an equal probability.
+
+00:57:57.320 --> 00:57:59.190 align:middle line:90%
+They forget about Benford's law.
+
+00:57:59.190 --> 00:58:03.920 align:middle line:84%
+And so they run this Benford's
+law on potentially fraudulent
+
+00:58:03.920 --> 00:58:05.630 align:middle line:90%
+tax submissions.
+
+00:58:05.630 --> 00:58:08.898 align:middle line:84%
+And they figure out that
+whatever those people submitted
+
+00:58:08.898 --> 00:58:10.190 align:middle line:90%
+don't actually follow this law.
+
+00:58:10.190 --> 00:58:11.930 align:middle line:90%
+And hence, it's fraudulent.
+
+00:58:11.930 --> 00:58:18.830 align:middle line:84%
+So if you're making up numbers,
+just remember Benford's law.
+
+00:58:18.830 --> 00:58:19.580 align:middle line:90%
+Cool.
+
+00:58:19.580 --> 00:58:24.380 align:middle line:84%
+So yeah, that's a
+really interesting thing
+
+00:58:24.380 --> 00:58:26.240 align:middle line:90%
+that can come out of some data.
+
+00:58:26.240 --> 00:58:31.130 align:middle line:84%
+And again, we got to visualize
+it and see the law in action.
+
+00:58:31.130 --> 00:58:34.460 align:middle line:84%
+OK, one last example
+I want to go through.
+
+00:58:34.460 --> 00:58:39.145 align:middle line:84%
+This one will show a
+bunch of different things.
+
+00:58:39.145 --> 00:58:40.520 align:middle line:84%
+It's going to have
+a lot of code.
+
+00:58:40.520 --> 00:58:42.187 align:middle line:84%
+I'm just going to
+briefly talk about it.
+
+00:58:42.187 --> 00:58:43.850 align:middle line:90%
+But the code is in the slides--
+
+00:58:43.850 --> 00:58:45.710 align:middle line:84%
+or sorry, in the
+Python file if you want
+
+00:58:45.710 --> 00:58:48.210 align:middle line:90%
+to look at it more in depth.
+
+00:58:48.210 --> 00:58:51.540 align:middle line:84%
+I'm going to compare
+city temperatures again,
+
+00:58:51.540 --> 00:58:54.230 align:middle line:84%
+but we're going to do a more
+in-depth analysis dealing
+
+00:58:54.230 --> 00:58:56.370 align:middle line:90%
+with a whole bunch more data.
+
+00:58:56.370 --> 00:58:58.940 align:middle line:84%
+So this particular
+data set, I've
+
+00:58:58.940 --> 00:59:06.030 align:middle line:84%
+got daily temperatures for 55
+years for 21 different cities.
+
+00:59:06.030 --> 00:59:08.870 align:middle line:84%
+So the amount of
+data that I have here
+
+00:59:08.870 --> 00:59:14.370 align:middle line:84%
+is going to be 365
+times 55 times 21.
+
+00:59:14.370 --> 00:59:18.300 align:middle line:84%
+So that's how many rows
+would exist in my data set.
+
+00:59:18.300 --> 00:59:21.870 align:middle line:84%
+So that's a lot of numbers
+to look at manually.
+
+00:59:21.870 --> 00:59:25.250 align:middle line:84%
+So instead, we're going
+to rely on aggregating it
+
+00:59:25.250 --> 00:59:27.620 align:middle line:84%
+with averages and
+things like that to make
+
+00:59:27.620 --> 00:59:30.170 align:middle line:90%
+sense of all of this data.
+
+00:59:30.170 --> 00:59:32.170 align:middle line:84%
+So this is what the
+file would look like.
+
+00:59:32.170 --> 00:59:34.870 align:middle line:84%
+I've got three
+columns, effectively,
+
+00:59:34.870 --> 00:59:36.530 align:middle line:90%
+separated by commas.
+
+00:59:36.530 --> 00:59:39.220 align:middle line:84%
+So the first one
+corresponds to the city.
+
+00:59:39.220 --> 00:59:43.660 align:middle line:84%
+Second one corresponds to
+the temperature in Celsius.
+
+00:59:43.660 --> 00:59:46.940 align:middle line:84%
+And the third one is the
+date that it was taken.
+
+00:59:46.940 --> 00:59:48.610 align:middle line:90%
+So it's nicely in order.
+
+00:59:48.610 --> 00:59:52.250 align:middle line:84%
+The date is
+delineated like this.
+
+00:59:52.250 --> 00:59:55.210 align:middle line:84%
+So it's got year, year, year,
+year, month, month, day, day.
+
+00:59:55.210 --> 00:59:57.520 align:middle line:90%
+So this is 1961, January 4.
+
+00:59:57.520 --> 00:59:58.990 align:middle line:90%
+That's how we would read that.
+
+00:59:58.990 --> 01:00:03.580 align:middle line:84%
+So later, when we're trying
+to think about which one of--
+
+01:00:03.580 --> 01:00:07.360 align:middle line:84%
+grabbing particular temperatures
+for a specific year or things
+
+01:00:07.360 --> 01:00:09.920 align:middle line:84%
+like that, then we
+can use the format--
+
+01:00:09.920 --> 01:00:11.440 align:middle line:84%
+keep the format in
+mind and use that
+
+01:00:11.440 --> 01:00:14.410 align:middle line:84%
+to extract the
+relevant information.
+
+01:00:14.410 --> 01:00:18.340 align:middle line:84%
+OK, so the first thing we want
+to do is to grab this data
+
+01:00:18.340 --> 01:00:21.760 align:middle line:84%
+and save it again in a
+nice data structure that
+
+01:00:21.760 --> 01:00:24.400 align:middle line:84%
+allows us to manipulate
+it to our heart's content.
+
+01:00:24.400 --> 01:00:25.880 align:middle line:90%
+That is a list.
+
+01:00:25.880 --> 01:00:29.620 align:middle line:84%
+So we're going to open
+up our file for reading.
+
+01:00:29.620 --> 01:00:32.950 align:middle line:84%
+I'm creating two lists here,
+one for the temperatures,
+
+01:00:32.950 --> 01:00:34.300 align:middle line:90%
+the other one for the dates.
+
+01:00:34.300 --> 01:00:36.520 align:middle line:84%
+I'm going to loop through
+each line in my file.
+
+01:00:36.520 --> 01:00:38.350 align:middle line:84%
+And I know it's
+comma-separated, so I'm
+
+01:00:38.350 --> 01:00:39.970 align:middle line:90%
+going to split it on the comma.
+
+01:00:39.970 --> 01:00:42.490 align:middle line:84%
+The thing at index
+0 will be my date--
+
+01:00:42.490 --> 01:00:43.600 align:middle line:90%
+will be my city.
+
+01:00:43.600 --> 01:00:46.210 align:middle line:84%
+The thing at index 1 will
+be my temperature value.
+
+01:00:46.210 --> 01:00:49.180 align:middle line:84%
+The thing at index
+2 will be my date.
+
+01:00:49.180 --> 01:00:51.820 align:middle line:84%
+I would like to take
+the temperature value
+
+01:00:51.820 --> 01:00:56.660 align:middle line:84%
+and save it as a number because
+I want to plot these numbers.
+
+01:00:56.660 --> 01:01:01.040 align:middle line:84%
+This specific function
+will get a list
+
+01:01:01.040 --> 01:01:03.870 align:middle line:84%
+of all of the temperatures
+for a particular city.
+
+01:01:03.870 --> 01:01:06.360 align:middle line:84%
+So the city here is
+going to be a parameter.
+
+01:01:06.360 --> 01:01:09.290 align:middle line:84%
+So as I'm reading the
+file, I would only
+
+01:01:09.290 --> 01:01:12.450 align:middle line:84%
+like to grab the lines
+that match that city.
+
+01:01:12.450 --> 01:01:14.580 align:middle line:84%
+So here I've got
+this if statement.
+
+01:01:14.580 --> 01:01:17.640 align:middle line:84%
+So I'm only going to do this
+stuff inside this if statement
+
+01:01:17.640 --> 01:01:20.870 align:middle line:84%
+if the city is matching
+what I'm interested in.
+
+01:01:20.870 --> 01:01:22.380 align:middle line:90%
+And then what do we do?
+
+01:01:22.380 --> 01:01:24.650 align:middle line:84%
+Well, we're going to take
+our temperature value, which
+
+01:01:24.650 --> 01:01:28.800 align:middle line:84%
+is the thing at index 1, because
+I've split on the commas.
+
+01:01:28.800 --> 01:01:29.940 align:middle line:90%
+Convert it to a float.
+
+01:01:29.940 --> 01:01:33.340 align:middle line:84%
+There's no commas or anything
+weird like in that number.
+
+01:01:33.340 --> 01:01:36.450 align:middle line:84%
+So it's just a pure
+float, 0.55 as a string.
+
+01:01:36.450 --> 01:01:40.140 align:middle line:84%
+If we cast it to a float, Python
+will happily do that for us.
+
+01:01:40.140 --> 01:01:45.630 align:middle line:84%
+Then we're going to run a
+Celsius to Fahrenheit function,
+
+01:01:45.630 --> 01:01:49.320 align:middle line:84%
+throwback to lecture 1,
+to convert that Celsius
+
+01:01:49.320 --> 01:01:50.730 align:middle line:90%
+to Fahrenheit value.
+
+01:01:50.730 --> 01:01:53.400 align:middle line:84%
+And then we're going to append
+all of these temperatures
+
+01:01:53.400 --> 01:01:55.248 align:middle line:90%
+in a nice list.
+
+01:01:55.248 --> 01:01:56.790 align:middle line:84%
+And at the end of
+the function, we're
+
+01:01:56.790 --> 01:01:58.332 align:middle line:84%
+going to return all
+the temperatures.
+
+01:01:58.332 --> 01:02:01.470 align:middle line:84%
+So it's going to
+be 365 times 55.
+
+01:02:01.470 --> 01:02:06.050 align:middle line:84%
+That's how many temperature
+values we have for one city.
+
+01:02:06.050 --> 01:02:09.230 align:middle line:84%
+And what we'd like
+to do as a first step
+
+01:02:09.230 --> 01:02:12.260 align:middle line:84%
+is to just get a sense of
+the average temperatures
+
+01:02:12.260 --> 01:02:14.820 align:middle line:84%
+for each one of these
+different cities.
+
+01:02:14.820 --> 01:02:17.660 align:middle line:84%
+So over every single
+data point that we
+
+01:02:17.660 --> 01:02:21.650 align:middle line:84%
+have for a particular city,
+what is the average temperature
+
+01:02:21.650 --> 01:02:23.940 align:middle line:84%
+over all these days
+for all of these years?
+
+01:02:23.940 --> 01:02:26.120 align:middle line:84%
+So I would one
+number to represent
+
+01:02:26.120 --> 01:02:28.600 align:middle line:90%
+the temperature per city.
+
+01:02:28.600 --> 01:02:30.460 align:middle line:84%
+So that's what
+this code is doing.
+
+01:02:30.460 --> 01:02:33.640 align:middle line:84%
+It's going to first get all of
+the cities that are in my file,
+
+01:02:33.640 --> 01:02:35.360 align:middle line:90%
+so all the unique values.
+
+01:02:35.360 --> 01:02:39.580 align:middle line:84%
+Then it's going to get the
+average temperature over all
+
+01:02:39.580 --> 01:02:42.550 align:middle line:90%
+of those 365 times 55 years.
+
+01:02:42.550 --> 01:02:45.490 align:middle line:84%
+Then it's going to grab
+the name of my city
+
+01:02:45.490 --> 01:02:47.530 align:middle line:84%
+as just the first
+two characters,
+
+01:02:47.530 --> 01:02:50.480 align:middle line:84%
+and then it's going to
+create a nice scatter plot.
+
+01:02:50.480 --> 01:02:54.110 align:middle line:84%
+So I don't want to link all
+of these city values together.
+
+01:02:54.110 --> 01:02:58.060 align:middle line:84%
+I would just like them
+to be dots in my plot.
+
+01:02:58.060 --> 01:03:01.100 align:middle line:84%
+If we do that, we get
+something that looks like this.
+
+01:03:01.100 --> 01:03:05.860 align:middle line:84%
+So this point here represents
+the temperature in Seattle
+
+01:03:05.860 --> 01:03:08.510 align:middle line:90%
+over every day over 55 years.
+
+01:03:08.510 --> 01:03:12.160 align:middle line:84%
+So one temperature point
+that represents the Seattle
+
+01:03:12.160 --> 01:03:15.420 align:middle line:84%
+temperature for all of
+this data that I've got.
+
+01:03:15.420 --> 01:03:16.990 align:middle line:90%
+What does this tell us?
+
+01:03:16.990 --> 01:03:20.490 align:middle line:84%
+Well, not much that we
+didn't already know.
+
+01:03:20.490 --> 01:03:23.250 align:middle line:84%
+I've got these
+cities down here that
+
+01:03:23.250 --> 01:03:29.100 align:middle line:84%
+are super cold and those cities
+up there that are super warm.
+
+01:03:29.100 --> 01:03:31.380 align:middle line:84%
+And then all the
+rest of my cities
+
+01:03:31.380 --> 01:03:33.510 align:middle line:84%
+are somewhere in the
+middle on average.
+
+01:03:33.510 --> 01:03:36.690 align:middle line:84%
+So nothing that we didn't really
+know, nothing groundbreaking
+
+01:03:36.690 --> 01:03:37.870 align:middle line:90%
+here.
+
+01:03:37.870 --> 01:03:40.090 align:middle line:84%
+What would be a nicer
+thing to look at
+
+01:03:40.090 --> 01:03:43.570 align:middle line:84%
+is the temperature
+change over time.
+
+01:03:43.570 --> 01:03:49.140 align:middle line:84%
+So here, my one data point
+tells me the temperature
+
+01:03:49.140 --> 01:03:50.550 align:middle line:90%
+that represents that city.
+
+01:03:50.550 --> 01:03:52.230 align:middle line:84%
+But what I would
+like to do is grab
+
+01:03:52.230 --> 01:03:56.110 align:middle line:84%
+the temperature that represents
+that city for each year.
+
+01:03:56.110 --> 01:03:59.490 align:middle line:84%
+So for each year, I would like
+to get the average temperature
+
+01:03:59.490 --> 01:04:00.120 align:middle line:90%
+for that year.
+
+01:04:00.120 --> 01:04:02.880 align:middle line:84%
+And maybe I could see a
+trend for the temperatures
+
+01:04:02.880 --> 01:04:07.590 align:middle line:84%
+getting warmer over time or
+cooling over time or something
+
+01:04:07.590 --> 01:04:10.120 align:middle line:84%
+like-- or not having
+any change at all.
+
+01:04:10.120 --> 01:04:12.330 align:middle line:84%
+So this is the code
+that does that.
+
+01:04:12.330 --> 01:04:15.360 align:middle line:84%
+I've got get temperatures
+by year for city.
+
+01:04:15.360 --> 01:04:17.410 align:middle line:84%
+This is kind of the
+function that gets run.
+
+01:04:17.410 --> 01:04:19.270 align:middle line:90%
+And it calls the one at the top.
+
+01:04:19.270 --> 01:04:22.890 align:middle line:84%
+So here I've got the code
+from the previous slide.
+
+01:04:22.890 --> 01:04:24.660 align:middle line:84%
+It gets a list of
+all the temperatures
+
+01:04:24.660 --> 01:04:29.090 align:middle line:84%
+for a particular city, so
+over all those 55 years.
+
+01:04:29.090 --> 01:04:32.610 align:middle line:84%
+And then I'm interested in
+all of these different years.
+
+01:04:32.610 --> 01:04:34.250 align:middle line:84%
+So for each one of
+these years, I'm
+
+01:04:34.250 --> 01:04:37.370 align:middle line:84%
+going to get a
+temperature value.
+
+01:04:37.370 --> 01:04:40.220 align:middle line:84%
+This getTempsForYear is
+the function up there.
+
+01:04:40.220 --> 01:04:44.090 align:middle line:84%
+And all it does is it looks
+at that third column and grabs
+
+01:04:44.090 --> 01:04:44.840 align:middle line:90%
+the year.
+
+01:04:44.840 --> 01:04:49.940 align:middle line:84%
+It matches those first four
+characters of the year entry.
+
+01:04:49.940 --> 01:04:51.960 align:middle line:84%
+And as long as it
+matches that year,
+
+01:04:51.960 --> 01:04:54.530 align:middle line:84%
+then it's going to get
+added to this running sum.
+
+01:04:54.530 --> 01:05:00.470 align:middle line:84%
+And at the end, I'm going to
+get the average for the year.
+
+01:05:00.470 --> 01:05:04.470 align:middle line:84%
+And let's say that I'm going to
+compare four different cities.
+
+01:05:04.470 --> 01:05:09.050 align:middle line:84%
+So I've got 55 values for
+each city representing
+
+01:05:09.050 --> 01:05:12.290 align:middle line:84%
+the average temperature
+in those 55 years.
+
+01:05:12.290 --> 01:05:14.660 align:middle line:84%
+And I've got four
+cities to compare.
+
+01:05:14.660 --> 01:05:17.630 align:middle line:84%
+So this is what one plot
+would look like for Boston--
+
+01:05:17.630 --> 01:05:19.910 align:middle line:84%
+sorry, so this is what
+the plot would look like.
+
+01:05:19.910 --> 01:05:22.370 align:middle line:84%
+I've got one line for
+Boston, that's the blue;
+
+01:05:22.370 --> 01:05:24.440 align:middle line:84%
+one line for San Diego,
+the red; one line
+
+01:05:24.440 --> 01:05:29.710 align:middle line:84%
+for Phoenix, the orange; and
+one line for Miami, the green.
+
+01:05:29.710 --> 01:05:30.740 align:middle line:90%
+What do we see?
+
+01:05:30.740 --> 01:05:34.900 align:middle line:84%
+Well, yes, Boston on
+average is a lot colder
+
+01:05:34.900 --> 01:05:36.610 align:middle line:84%
+than any of the
+three other cities.
+
+01:05:36.610 --> 01:05:37.110 align:middle line:90%
+Cool.
+
+01:05:37.110 --> 01:05:39.340 align:middle line:90%
+We knew that.
+
+01:05:39.340 --> 01:05:42.550 align:middle line:84%
+Miami and Phoenix
+are nicely hot there.
+
+01:05:42.550 --> 01:05:43.870 align:middle line:90%
+I'd like to be there right now.
+
+01:05:43.870 --> 01:05:46.090 align:middle line:90%
+And what about trends?
+
+01:05:46.090 --> 01:05:47.870 align:middle line:84%
+This is why we
+did this analysis.
+
+01:05:47.870 --> 01:05:49.540 align:middle line:84%
+What do we see from
+the trends here?
+
+01:05:49.540 --> 01:05:52.690 align:middle line:84%
+Well, the Boston temperature
+maybe increases a little bit
+
+01:05:52.690 --> 01:05:54.430 align:middle line:90%
+slightly over time.
+
+01:05:54.430 --> 01:05:57.490 align:middle line:84%
+San Diego, it seems
+to stay about steady.
+
+01:05:57.490 --> 01:06:01.210 align:middle line:84%
+The Phoenix one
+seems to increase
+
+01:06:01.210 --> 01:06:05.230 align:middle line:84%
+pretty dramatically as time
+has gone by, on average.
+
+01:06:05.230 --> 01:06:09.680 align:middle line:84%
+And the Miami one maybe
+also slightly increased.
+
+01:06:09.680 --> 01:06:12.660 align:middle line:84%
+But this only tells us
+average temperatures.
+
+01:06:12.660 --> 01:06:17.870 align:middle line:84%
+So one thing that we can do
+is check out the extremes.
+
+01:06:17.870 --> 01:06:20.600 align:middle line:84%
+In addition to
+plotting the average,
+
+01:06:20.600 --> 01:06:23.990 align:middle line:84%
+let's also plot the
+minimum for Boston
+
+01:06:23.990 --> 01:06:28.600 align:middle line:84%
+and the maximum for
+Boston and see exactly how
+
+01:06:28.600 --> 01:06:30.250 align:middle line:90%
+close that average is.
+
+01:06:30.250 --> 01:06:32.140 align:middle line:84%
+Is the average in
+the middle and then
+
+01:06:32.140 --> 01:06:34.360 align:middle line:84%
+the minimum and maximums
+are super far away
+
+01:06:34.360 --> 01:06:35.230 align:middle line:90%
+from the average?
+
+01:06:35.230 --> 01:06:38.780 align:middle line:84%
+Or are they all pretty
+much close to the average?
+
+01:06:38.780 --> 01:06:41.320 align:middle line:84%
+So this is the code
+that does that.
+
+01:06:41.320 --> 01:06:45.790 align:middle line:84%
+The function here is exactly the
+same as on the previous slide.
+
+01:06:45.790 --> 01:06:48.880 align:middle line:84%
+The only difference is instead
+of returning the average,
+
+01:06:48.880 --> 01:06:51.850 align:middle line:84%
+we're also going to
+grab the max and the min
+
+01:06:51.850 --> 01:06:56.060 align:middle line:90%
+for that list of temperatures.
+
+01:06:56.060 --> 01:07:00.050 align:middle line:84%
+And then we've got all
+of the different cities
+
+01:07:00.050 --> 01:07:01.490 align:middle line:90%
+to plot this for.
+
+01:07:01.490 --> 01:07:05.870 align:middle line:84%
+So we get something
+that looks like this.
+
+01:07:05.870 --> 01:07:11.470 align:middle line:84%
+Again, at first glance, I
+tend to ignore the y-axes
+
+01:07:11.470 --> 01:07:12.460 align:middle line:90%
+at first glance.
+
+01:07:12.460 --> 01:07:15.430 align:middle line:84%
+So at first glance
+again, it looks
+
+01:07:15.430 --> 01:07:19.397 align:middle line:84%
+like, hey, the minimums
+are pretty much the same,
+
+01:07:19.397 --> 01:07:20.980 align:middle line:84%
+the maximums are
+pretty much the same,
+
+01:07:20.980 --> 01:07:22.790 align:middle line:84%
+averages are pretty
+much the same.
+
+01:07:22.790 --> 01:07:24.770 align:middle line:84%
+So, misleading to
+think about that.
+
+01:07:24.770 --> 01:07:28.840 align:middle line:84%
+So once again, let's
+help the reader
+
+01:07:28.840 --> 01:07:32.500 align:middle line:90%
+and set limits on our y-axes.
+
+01:07:32.500 --> 01:07:36.910 align:middle line:84%
+So here, I've got a limit to
+my function or to my code.
+
+01:07:36.910 --> 01:07:39.820 align:middle line:84%
+It's going to have every
+one of my graphs start at 0
+
+01:07:39.820 --> 01:07:42.660 align:middle line:90%
+and top out at 100.
+
+01:07:42.660 --> 01:07:46.050 align:middle line:84%
+And now the plots are
+nicely comparable.
+
+01:07:46.050 --> 01:07:49.030 align:middle line:84%
+So now I'm plotting the average
+temperature for each year.
+
+01:07:49.030 --> 01:07:50.850 align:middle line:84%
+So there's 55 of
+these data points,
+
+01:07:50.850 --> 01:07:52.770 align:middle line:84%
+the minimum temperature
+for each year
+
+01:07:52.770 --> 01:07:54.760 align:middle line:84%
+and the maximum
+temperature for each year.
+
+01:07:54.760 --> 01:07:58.300 align:middle line:90%
+So 55 data points being plotted.
+
+01:07:58.300 --> 01:07:59.260 align:middle line:90%
+What can we tell?
+
+01:07:59.260 --> 01:08:01.990 align:middle line:84%
+A lot easier to infer
+information from this, right?
+
+01:08:01.990 --> 01:08:05.080 align:middle line:84%
+So we could see that the
+average temperature in Boston
+
+01:08:05.080 --> 01:08:10.150 align:middle line:84%
+is the minimum temperature
+in Miami and San Diego.
+
+01:08:10.150 --> 01:08:11.200 align:middle line:90%
+What else can we see?
+
+01:08:11.200 --> 01:08:15.760 align:middle line:84%
+The variation in
+Boston is pretty high.
+
+01:08:15.760 --> 01:08:19.420 align:middle line:84%
+The variation in Miami and
+San Diego is a lot lower.
+
+01:08:19.420 --> 01:08:21.970 align:middle line:84%
+San Diego goes from 40
+to 80, whereas Boston
+
+01:08:21.970 --> 01:08:26.680 align:middle line:84%
+goes from 0 to 90, so
+pretty high variation.
+
+01:08:26.680 --> 01:08:30.490 align:middle line:84%
+The average for
+Boston and San Diego
+
+01:08:30.490 --> 01:08:34.210 align:middle line:84%
+seems to be almost the
+same, but that variation
+
+01:08:34.210 --> 01:08:36.415 align:middle line:84%
+is very different
+between these two cities.
+
+01:08:36.415 --> 01:08:42.819 align:middle line:90%
+
+
+01:08:42.819 --> 01:08:43.575 align:middle line:90%
+Yeah, question.
+
+01:08:43.575 --> 01:08:45.700 align:middle line:84%
+AUDIENCE: So what happens
+if there's a value that's
+
+01:08:45.700 --> 01:08:47.260 align:middle line:90%
+lower than the minimum y value?
+
+01:08:47.260 --> 01:08:49.990 align:middle line:84%
+ANA BELL: Oh, yeah, then
+it doesn't get plotted.
+
+01:08:49.990 --> 01:08:54.729 align:middle line:84%
+Yeah, so that was a tenuous
+there, but it didn't go down.
+
+01:08:54.729 --> 01:08:57.189 align:middle line:84%
+I could imagine the
+minimum in Boston
+
+01:08:57.189 --> 01:08:58.732 align:middle line:90%
+being below 0 for one year.
+
+01:08:58.732 --> 01:09:00.565 align:middle line:84%
+But yeah, then it just
+wouldn't get plotted.
+
+01:09:00.565 --> 01:09:04.700 align:middle line:90%
+
+
+01:09:04.700 --> 01:09:07.160 align:middle line:84%
+So you could use that
+to guide your limits.
+
+01:09:07.160 --> 01:09:12.350 align:middle line:84%
+The code here could say y limit
+equals minimum of those three
+
+01:09:12.350 --> 01:09:15.100 align:middle line:84%
+lists, and then you'll
+be sure to make sure
+
+01:09:15.100 --> 01:09:18.979 align:middle line:84%
+to-- you'll ensure
+that that minimum will
+
+01:09:18.979 --> 01:09:20.240 align:middle line:90%
+be hitting the limits.
+
+01:09:20.240 --> 01:09:22.970 align:middle line:90%
+Great question.
+
+01:09:22.970 --> 01:09:25.220 align:middle line:84%
+OK, so one other thing
+that we can look at
+
+01:09:25.220 --> 01:09:28.350 align:middle line:84%
+is the distribution
+of temperatures.
+
+01:09:28.350 --> 01:09:29.750 align:middle line:90%
+So this is a nice plot.
+
+01:09:29.750 --> 01:09:32.450 align:middle line:84%
+It gives us sort
+of an overview look
+
+01:09:32.450 --> 01:09:34.229 align:middle line:90%
+at what happens year by year.
+
+01:09:34.229 --> 01:09:38.050 align:middle line:84%
+But what if we focus
+on one specific year?
+
+01:09:38.050 --> 01:09:40.750 align:middle line:84%
+And now, for that
+year, let's think
+
+01:09:40.750 --> 01:09:45.670 align:middle line:84%
+about what the temperature
+distribution looks like.
+
+01:09:45.670 --> 01:09:49.330 align:middle line:84%
+So what I'm
+interested in plotting
+
+01:09:49.330 --> 01:09:51.290 align:middle line:90%
+is something like this.
+
+01:09:51.290 --> 01:09:55.660 align:middle line:84%
+So I've got on the
+x-axis maybe bins that
+
+01:09:55.660 --> 01:09:58.690 align:middle line:84%
+correspond to different
+temperatures, so a temperature
+
+01:09:58.690 --> 01:10:01.290 align:middle line:84%
+of 0, temperature of
+1, temperature of 2,
+
+01:10:01.290 --> 01:10:03.020 align:middle line:90%
+3, 4, and so on.
+
+01:10:03.020 --> 01:10:06.010 align:middle line:84%
+And then this is going to be
+pretty big because maybe my max
+
+01:10:06.010 --> 01:10:07.630 align:middle line:90%
+temperature will be 100.
+
+01:10:07.630 --> 01:10:12.280 align:middle line:84%
+So for one particular year, I
+would like to have 100 bins.
+
+01:10:12.280 --> 01:10:15.280 align:middle line:84%
+And the height of
+each bin is going
+
+01:10:15.280 --> 01:10:19.130 align:middle line:84%
+to be a count of how many
+days within that year
+
+01:10:19.130 --> 01:10:22.820 align:middle line:84%
+we reached a temperature of 0,
+how many days within the year
+
+01:10:22.820 --> 01:10:24.550 align:middle line:90%
+we reached a temperature of 1.
+
+01:10:24.550 --> 01:10:27.700 align:middle line:84%
+And we can average things,
+or we can round temperatures
+
+01:10:27.700 --> 01:10:30.430 align:middle line:84%
+because obviously the
+temperature would be like 20.6
+
+01:10:30.430 --> 01:10:31.780 align:middle line:90%
+or something like that.
+
+01:10:31.780 --> 01:10:36.210 align:middle line:84%
+And then we can just round it
+so it fits in one of these bins.
+
+01:10:36.210 --> 01:10:38.860 align:middle line:84%
+So that's exactly what
+this code is doing.
+
+01:10:38.860 --> 01:10:45.180 align:middle line:84%
+So here it's looping over
+every single one of the dates.
+
+01:10:45.180 --> 01:10:49.320 align:middle line:84%
+And we're creating this
+list of the temperatures.
+
+01:10:49.320 --> 01:10:51.790 align:middle line:84%
+And the list is for
+one specific year.
+
+01:10:51.790 --> 01:10:54.460 align:middle line:84%
+So this year is
+my parameter here.
+
+01:10:54.460 --> 01:10:56.760 align:middle line:84%
+So here, this is just
+going through the data
+
+01:10:56.760 --> 01:10:59.610 align:middle line:84%
+and ensuring that I'm
+grabbing only the rows that
+
+01:10:59.610 --> 01:11:02.080 align:middle line:90%
+match that year.
+
+01:11:02.080 --> 01:11:05.230 align:middle line:84%
+And then down here
+is where I'm creating
+
+01:11:05.230 --> 01:11:08.870 align:middle line:90%
+a list of 100 elements.
+
+01:11:08.870 --> 01:11:16.330 align:middle line:84%
+So this down here, you can think
+of it as a list, like this.
+
+01:11:16.330 --> 01:11:19.780 align:middle line:90%
+And the index nicely--
+
+01:11:19.780 --> 01:11:21.700 align:middle line:84%
+it worked out really
+nicely-- the index
+
+01:11:21.700 --> 01:11:23.560 align:middle line:84%
+is going to correspond
+to a temperature
+
+01:11:23.560 --> 01:11:25.510 align:middle line:90%
+value, which is weird to think.
+
+01:11:25.510 --> 01:11:27.520 align:middle line:84%
+It only works in this
+particular scenario
+
+01:11:27.520 --> 01:11:29.050 align:middle line:90%
+with Fahrenheit temperatures.
+
+01:11:29.050 --> 01:11:33.020 align:middle line:84%
+But the index in this list
+corresponds to a temperature.
+
+01:11:33.020 --> 01:11:36.760 align:middle line:84%
+So as I'm iterating through
+my list of temperatures
+
+01:11:36.760 --> 01:11:39.670 align:middle line:84%
+over 365 days in
+a year, I'm going
+
+01:11:39.670 --> 01:11:41.750 align:middle line:90%
+to round that temperature.
+
+01:11:41.750 --> 01:11:44.440 align:middle line:84%
+And I'm going to
+add it to the index
+
+01:11:44.440 --> 01:11:46.690 align:middle line:90%
+that I believe it belongs to.
+
+01:11:46.690 --> 01:11:49.720 align:middle line:84%
+So in this way,
+I'm going to have--
+
+01:11:49.720 --> 01:11:53.860 align:middle line:84%
+if the temperature was 4
+degrees, then that index 4,
+
+01:11:53.860 --> 01:11:56.320 align:middle line:84%
+I'm going to increment
+my count by one.
+
+01:11:56.320 --> 01:11:58.120 align:middle line:84%
+And if further on
+in the list I've
+
+01:11:58.120 --> 01:12:01.087 align:middle line:84%
+got another temperature
+that's 4, at index 4,
+
+01:12:01.087 --> 01:12:02.420 align:middle line:90%
+I'm going to increment it again.
+
+01:12:02.420 --> 01:12:06.220 align:middle line:84%
+So I've got this nice
+list, these nice counts
+
+01:12:06.220 --> 01:12:10.270 align:middle line:84%
+of all of the temperatures
+at different--
+
+01:12:10.270 --> 01:12:13.330 align:middle line:84%
+sorry, all of the
+counts at all of
+
+01:12:13.330 --> 01:12:15.140 align:middle line:90%
+these different temperatures.
+
+01:12:15.140 --> 01:12:17.660 align:middle line:84%
+So out of those 365
+days, how many days
+
+01:12:17.660 --> 01:12:19.450 align:middle line:90%
+had a temperature of 4?
+
+01:12:19.450 --> 01:12:22.775 align:middle line:84%
+Out of 365 days, how many
+days had a temperature of 85?
+
+01:12:22.775 --> 01:12:25.470 align:middle line:90%
+
+
+01:12:25.470 --> 01:12:26.610 align:middle line:90%
+And then we can plot it.
+
+01:12:26.610 --> 01:12:31.035 align:middle line:84%
+And we're not going to plot
+a regular plot, because we
+
+01:12:31.035 --> 01:12:32.160 align:middle line:90%
+don't want these connected.
+
+01:12:32.160 --> 01:12:34.035 align:middle line:84%
+We're not going to do
+a histogram, because we
+
+01:12:34.035 --> 01:12:36.570 align:middle line:90%
+made our own histogram here.
+
+01:12:36.570 --> 01:12:38.670 align:middle line:84%
+Instead, we're going
+to do a bar plot.
+
+01:12:38.670 --> 01:12:43.500 align:middle line:84%
+And the bar plot takes in
+my x-axis and my y-axis,
+
+01:12:43.500 --> 01:12:48.240 align:middle line:84%
+the x-axis being this
+list 0 through 100
+
+01:12:48.240 --> 01:12:50.640 align:middle line:84%
+corresponding temperatures
+and the y-axis
+
+01:12:50.640 --> 01:12:53.970 align:middle line:84%
+being the count of
+how many days had
+
+01:12:53.970 --> 01:12:55.620 align:middle line:90%
+each one of those temperatures.
+
+01:12:55.620 --> 01:12:58.620 align:middle line:84%
+And we get something
+that looks like this.
+
+01:12:58.620 --> 01:13:00.860 align:middle line:90%
+So this is only for one year.
+
+01:13:00.860 --> 01:13:06.380 align:middle line:84%
+So if we count the sum of all of
+these bars, how many times they
+
+01:13:06.380 --> 01:13:10.380 align:middle line:84%
+appear, it should
+add up to 365 days.
+
+01:13:10.380 --> 01:13:14.660 align:middle line:84%
+So this is the distribution,
+I think, in 1961.
+
+01:13:14.660 --> 01:13:17.180 align:middle line:84%
+Left is Boston and
+right is San Diego.
+
+01:13:17.180 --> 01:13:20.830 align:middle line:90%
+
+
+01:13:20.830 --> 01:13:23.710 align:middle line:84%
+Already we can tell some pretty
+interesting things from this.
+
+01:13:23.710 --> 01:13:26.890 align:middle line:84%
+So 1961, what does
+the distribution look
+
+01:13:26.890 --> 01:13:28.038 align:middle line:90%
+like for these two cities?
+
+01:13:28.038 --> 01:13:30.580 align:middle line:84%
+Well, it looks like-- this is
+something we could already tell
+
+01:13:30.580 --> 01:13:32.170 align:middle line:90%
+from the minimum and maximum--
+
+01:13:32.170 --> 01:13:34.660 align:middle line:84%
+it looks like
+temperatures in Boston
+
+01:13:34.660 --> 01:13:37.750 align:middle line:90%
+kind of went from about 0 to 85.
+
+01:13:37.750 --> 01:13:39.760 align:middle line:84%
+But what the
+distribution tells us
+
+01:13:39.760 --> 01:13:43.360 align:middle line:84%
+that the minimum and
+maximum couldn't tell
+
+01:13:43.360 --> 01:13:46.690 align:middle line:84%
+us is how many
+days were that low,
+
+01:13:46.690 --> 01:13:48.790 align:middle line:90%
+how many days were that high.
+
+01:13:48.790 --> 01:13:54.040 align:middle line:84%
+Is it that we have some sort
+of nice-looking bell-curve-type
+
+01:13:54.040 --> 01:13:56.380 align:middle line:84%
+distribution where most
+of our temperatures
+
+01:13:56.380 --> 01:13:59.260 align:middle line:84%
+land comfortably in
+this middle range?
+
+01:13:59.260 --> 01:14:00.970 align:middle line:90%
+That's one option.
+
+01:14:00.970 --> 01:14:04.900 align:middle line:84%
+Or maybe there is
+some city out there
+
+01:14:04.900 --> 01:14:09.280 align:middle line:84%
+where it just has an
+even distribution.
+
+01:14:09.280 --> 01:14:12.680 align:middle line:84%
+So basically, they're going
+to have temperatures that--
+
+01:14:12.680 --> 01:14:15.510 align:middle line:90%
+
+
+01:14:15.510 --> 01:14:18.400 align:middle line:84%
+sorry, the count of the
+temperatures basically is even.
+
+01:14:18.400 --> 01:14:20.420 align:middle line:84%
+So it doesn't really
+matter what temperature
+
+01:14:20.420 --> 01:14:22.550 align:middle line:84%
+you're talking about, there
+will be an even number
+
+01:14:22.550 --> 01:14:25.190 align:middle line:84%
+of days throughout the year
+that are at that temperature.
+
+01:14:25.190 --> 01:14:27.620 align:middle line:84%
+So this kind of graph
+can tell us this.
+
+01:14:27.620 --> 01:14:30.470 align:middle line:84%
+So it looks like the temperature
+in Boston kind of maybe
+
+01:14:30.470 --> 01:14:33.680 align:middle line:84%
+follows a very wide
+bell-shaped-curve kind
+
+01:14:33.680 --> 01:14:36.785 align:middle line:90%
+of, maybe two bumps, a bimodal.
+
+01:14:36.785 --> 01:14:41.250 align:middle line:84%
+The temperature in San
+Diego, again, much,
+
+01:14:41.250 --> 01:14:45.050 align:middle line:84%
+much lower variability but
+also seems to follow this
+
+01:14:45.050 --> 01:14:48.530 align:middle line:90%
+bell-type-curve here, where--
+
+01:14:48.530 --> 01:14:52.640 align:middle line:84%
+bimodal with two bumps here, one
+with temperatures that are just
+
+01:14:52.640 --> 01:14:55.670 align:middle line:84%
+in the 55s, very few
+temperatures in the middle,
+
+01:14:55.670 --> 01:14:59.280 align:middle line:84%
+and then a bunch of
+temperatures in the 70s.
+
+01:14:59.280 --> 01:15:02.430 align:middle line:84%
+So this is the
+distribution for 1961.
+
+01:15:02.430 --> 01:15:06.600 align:middle line:84%
+And then we can again ask what
+happens to the distribution
+
+01:15:06.600 --> 01:15:08.740 align:middle line:90%
+in a later year.
+
+01:15:08.740 --> 01:15:12.300 align:middle line:84%
+So if we take more than
+one year that we plot,
+
+01:15:12.300 --> 01:15:15.840 align:middle line:84%
+here I'm going to
+plot 1961 and 2015.
+
+01:15:15.840 --> 01:15:18.150 align:middle line:84%
+So just two years, not
+everything in between.
+
+01:15:18.150 --> 01:15:21.420 align:middle line:84%
+That would be a very,
+very cluttered graph.
+
+01:15:21.420 --> 01:15:27.030 align:middle line:84%
+I'm going to label the 1961
+temperatures blue and the 2015
+
+01:15:27.030 --> 01:15:29.770 align:middle line:90%
+temperatures red.
+
+01:15:29.770 --> 01:15:33.100 align:middle line:84%
+So then I get something
+that looks like this.
+
+01:15:33.100 --> 01:15:34.420 align:middle line:90%
+A little hard to tell.
+
+01:15:34.420 --> 01:15:37.630 align:middle line:84%
+So what we can do for this
+graph is we can actually
+
+01:15:37.630 --> 01:15:40.660 align:middle line:84%
+add something called an alpha
+value, so a transparency,
+
+01:15:40.660 --> 01:15:43.660 align:middle line:84%
+so we can see what's
+behind the red.
+
+01:15:43.660 --> 01:15:46.480 align:middle line:84%
+Does the blue go all
+the way down here?
+
+01:15:46.480 --> 01:15:49.480 align:middle line:84%
+Is the blue just
+slightly below the red?
+
+01:15:49.480 --> 01:15:50.920 align:middle line:90%
+Hard to tell from this.
+
+01:15:50.920 --> 01:15:53.800 align:middle line:84%
+One thing we can do is to add
+that transparency, like I said.
+
+01:15:53.800 --> 01:15:56.590 align:middle line:84%
+Another thing that we can
+do is to just plot them
+
+01:15:56.590 --> 01:15:59.360 align:middle line:90%
+on two separate subplots.
+
+01:15:59.360 --> 01:16:02.150 align:middle line:84%
+And then we can
+try to compare them
+
+01:16:02.150 --> 01:16:06.350 align:middle line:84%
+to see exactly what
+happened from 1961 in terms
+
+01:16:06.350 --> 01:16:09.110 align:middle line:84%
+of the distribution
+to 2015, again,
+
+01:16:09.110 --> 01:16:10.490 align:middle line:90%
+in terms of the distribution.
+
+01:16:10.490 --> 01:16:11.990 align:middle line:84%
+So you can, if you
+want, play around
+
+01:16:11.990 --> 01:16:14.330 align:middle line:84%
+with different cities,
+your home city,
+
+01:16:14.330 --> 01:16:16.970 align:middle line:84%
+and see exactly what
+happened to the temperatures
+
+01:16:16.970 --> 01:16:18.140 align:middle line:90%
+over all those years.
+
+01:16:18.140 --> 01:16:21.420 align:middle line:84%
+So it's kind of a
+cute thing to try.
+
+01:16:21.420 --> 01:16:24.370 align:middle line:90%
+Any questions?
+
+01:16:24.370 --> 01:16:27.490 align:middle line:90%
+OK, so that's the end.
+
+01:16:27.490 --> 01:16:29.950 align:middle line:84%
+We've really just scratched
+the surface of the things
+
+01:16:29.950 --> 01:16:31.730 align:middle line:84%
+that you can do
+with plotting today.
+
+01:16:31.730 --> 01:16:33.950 align:middle line:84%
+We saw how to
+customize our graphs.
+
+01:16:33.950 --> 01:16:36.880 align:middle line:84%
+We saw how to create
+labels, some really, really
+
+01:16:36.880 --> 01:16:37.940 align:middle line:90%
+basic things.
+
+01:16:37.940 --> 01:16:40.750 align:middle line:84%
+But I hope that sort of
+throughout all of this,
+
+01:16:40.750 --> 01:16:44.650 align:middle line:84%
+you saw how useful it is
+to visualize the data.
+
+01:16:44.650 --> 01:16:46.960 align:middle line:84%
+The commands are
+not so important,
+
+01:16:46.960 --> 01:16:48.530 align:middle line:84%
+because you can
+always look those up.
+
+01:16:48.530 --> 01:16:52.540 align:middle line:84%
+But what's important is to take
+some set of data, which you'll
+
+01:16:52.540 --> 01:16:55.390 align:middle line:84%
+be working with in the real
+world, if you do a UROP,
+
+01:16:55.390 --> 01:16:57.580 align:middle line:84%
+if you decide to take
+other computer science
+
+01:16:57.580 --> 01:17:00.400 align:middle line:84%
+courses in other departments,
+computation courses.
+
+01:17:00.400 --> 01:17:02.200 align:middle line:90%
+You'll be working with data.
+
+01:17:02.200 --> 01:17:03.500 align:middle line:90%
+And as soon as you get it.
+
+01:17:03.500 --> 01:17:04.960 align:middle line:84%
+It's important to
+just initialize
+
+01:17:04.960 --> 01:17:08.570 align:middle line:84%
+it to see what it looks,
+get a general sense of it.
+
+01:17:08.570 --> 01:17:10.660 align:middle line:84%
+And once you get
+a sense of it, it
+
+01:17:10.660 --> 01:17:12.490 align:middle line:84%
+can lead to more
+questions, which
+
+01:17:12.490 --> 01:17:14.830 align:middle line:84%
+will cause you to visualize
+the data in a slightly
+
+01:17:14.830 --> 01:17:18.070 align:middle line:84%
+different way, which becomes
+more useful in answering
+
+01:17:18.070 --> 01:17:21.940 align:middle line:84%
+questions and potentially posing
+new questions to investigate.
+
+01:17:21.940 --> 01:17:24.210 align:middle line:90%
+OK, so that's it for today.
+
+01:17:24.210 --> 01:17:26.660 align:middle line:84%
+Next lecture, we'll be just
+tying up some loose ends
+
+01:17:26.660 --> 01:17:31.520 align:middle line:84%
+regarding dictionaries and
+some ideas on hash tables
+
+01:17:31.520 --> 01:17:33.270 align:middle line:84%
+and how dictionaries
+are stored in memory,
+
+01:17:33.270 --> 01:17:35.960 align:middle line:84%
+as well as doing a
+little bit of preview
+
+01:17:35.960 --> 01:17:37.820 align:middle line:84%
+of simulations, which
+is something that's
+
+01:17:37.820 --> 01:17:40.280 align:middle line:90%
+a really useful technique.
+
+01:17:40.280 --> 01:17:43.190 align:middle line:84%
+Again, if you're going to do
+some more computation courses
+
+01:17:43.190 --> 01:17:44.750 align:middle line:84%
+in other departments,
+a simulation
+
+01:17:44.750 --> 01:17:47.950 align:middle line:84%
+is something that's going to
+be really, really helpful.
+
+01:17:47.950 --> 01:17:54.000 align:middle line:90%

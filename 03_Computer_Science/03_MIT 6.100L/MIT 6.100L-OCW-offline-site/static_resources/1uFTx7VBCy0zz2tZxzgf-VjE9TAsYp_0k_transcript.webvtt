@@ -1,0 +1,3557 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.988 align:middle line:90%
+[SQUEAKING]
+
+00:00:01.988 --> 00:00:04.473 align:middle line:90%
+[RUSTLING]
+
+00:00:04.473 --> 00:00:06.958 align:middle line:90%
+[CLICKING]
+
+00:00:06.958 --> 00:00:16.420 align:middle line:90%
+
+
+00:00:16.420 --> 00:00:21.140 align:middle line:84%
+ANA BELL: All right, so let's
+get started on today's lecture.
+
+00:00:21.140 --> 00:00:23.860 align:middle line:84%
+So today we're going
+to be doing one
+
+00:00:23.860 --> 00:00:26.350 align:middle line:84%
+of two lectures on the
+topic of recursion.
+
+00:00:26.350 --> 00:00:28.910 align:middle line:84%
+And you may or may not
+have heard of recursion.
+
+00:00:28.910 --> 00:00:33.730 align:middle line:84%
+It's a programming technique and
+a way to algorithmically solve
+
+00:00:33.730 --> 00:00:35.720 align:middle line:90%
+problems.
+
+00:00:35.720 --> 00:00:39.100 align:middle line:84%
+It's not something
+that's going to come easy
+
+00:00:39.100 --> 00:00:42.610 align:middle line:84%
+because it's going
+to force our brain
+
+00:00:42.610 --> 00:00:44.950 align:middle line:84%
+to think about problems
+that we've seen
+
+00:00:44.950 --> 00:00:48.130 align:middle line:90%
+in a completely different way.
+
+00:00:48.130 --> 00:00:51.310 align:middle line:84%
+So you don't have to use
+recursion if you don't want to,
+
+00:00:51.310 --> 00:00:54.820 align:middle line:84%
+but there will be problems
+where the idea of recursion
+
+00:00:54.820 --> 00:00:57.070 align:middle line:90%
+and applying--
+
+00:00:57.070 --> 00:00:58.930 align:middle line:84%
+or writing recursive
+code is going
+
+00:00:58.930 --> 00:01:02.200 align:middle line:84%
+to come a lot more
+naturally than writing code
+
+00:01:02.200 --> 00:01:03.880 align:middle line:90%
+that we have been so far.
+
+00:01:03.880 --> 00:01:05.470 align:middle line:84%
+But I'm just warning
+you, it's going
+
+00:01:05.470 --> 00:01:07.870 align:middle line:84%
+to take a little bit of
+forgetting everything
+
+00:01:07.870 --> 00:01:10.420 align:middle line:84%
+we've learned about
+loops and things
+
+00:01:10.420 --> 00:01:13.180 align:middle line:84%
+like that to train our
+brain to think recursively
+
+00:01:13.180 --> 00:01:15.130 align:middle line:90%
+for the next two lectures.
+
+00:01:15.130 --> 00:01:17.870 align:middle line:84%
+To help you, we will have
+an interactive portion
+
+00:01:17.870 --> 00:01:19.170 align:middle line:90%
+of today's lecture.
+
+00:01:19.170 --> 00:01:22.340 align:middle line:84%
+So think about whether you
+want to come up on stage,
+
+00:01:22.340 --> 00:01:25.040 align:middle line:84%
+or whatever this is,
+the front, and be
+
+00:01:25.040 --> 00:01:27.830 align:middle line:90%
+a part of the interaction.
+
+00:01:27.830 --> 00:01:33.140 align:middle line:84%
+You'll be forever immortalized
+on the OpenCourseWare--
+
+00:01:33.140 --> 00:01:38.390 align:middle line:84%
+awesome, I love it-- on
+the OpenCourseWare videos.
+
+00:01:38.390 --> 00:01:45.770 align:middle line:84%
+All right, so let's think
+about iterative algorithms
+
+00:01:45.770 --> 00:01:47.160 align:middle line:90%
+that we've seen so far.
+
+00:01:47.160 --> 00:01:49.340 align:middle line:84%
+So iterative algorithm
+basically means
+
+00:01:49.340 --> 00:01:52.220 align:middle line:84%
+we are writing code that
+has a loop within it,
+
+00:01:52.220 --> 00:01:54.470 align:middle line:84%
+so either a for loop
+or a while loop.
+
+00:01:54.470 --> 00:01:57.290 align:middle line:84%
+Writing code with these
+for loops or while loops
+
+00:01:57.290 --> 00:01:59.540 align:middle line:84%
+lead to iterative
+algorithms, so things
+
+00:01:59.540 --> 00:02:05.370 align:middle line:84%
+that do some task
+for some repetition.
+
+00:02:05.370 --> 00:02:07.850 align:middle line:84%
+So the idea of
+iterative algorithm
+
+00:02:07.850 --> 00:02:11.420 align:middle line:84%
+is that there are some
+variables that capture
+
+00:02:11.420 --> 00:02:13.320 align:middle line:90%
+the state of the computation.
+
+00:02:13.320 --> 00:02:16.130 align:middle line:84%
+So each time through the
+loop, these variables
+
+00:02:16.130 --> 00:02:17.990 align:middle line:84%
+will change their
+value, essentially
+
+00:02:17.990 --> 00:02:21.780 align:middle line:84%
+capturing what the values
+are at each step in the loop.
+
+00:02:21.780 --> 00:02:23.990 align:middle line:84%
+So when we're writing
+these iterative algorithms,
+
+00:02:23.990 --> 00:02:26.162 align:middle line:84%
+we basically think
+about, what is
+
+00:02:26.162 --> 00:02:28.370 align:middle line:84%
+something that's changing
+each time through the loop?
+
+00:02:28.370 --> 00:02:32.240 align:middle line:84%
+Like we keep a running sum,
+that's the easiest example.
+
+00:02:32.240 --> 00:02:36.395 align:middle line:84%
+What is a variable
+that's changing each time
+
+00:02:36.395 --> 00:02:38.270 align:middle line:84%
+through the loop, kind
+of like a counter that
+
+00:02:38.270 --> 00:02:41.360 align:middle line:84%
+keeps track of how many times
+we've been through a loop?
+
+00:02:41.360 --> 00:02:42.500 align:middle line:90%
+When do you stop?
+
+00:02:42.500 --> 00:02:45.440 align:middle line:84%
+So for for loops, you stop after
+you've exhausted a sequence.
+
+00:02:45.440 --> 00:02:48.230 align:middle line:84%
+For while loops, you
+stop when you have
+
+00:02:48.230 --> 00:02:49.910 align:middle line:90%
+a condition that becomes false.
+
+00:02:49.910 --> 00:02:53.180 align:middle line:84%
+And then at the end of the loop,
+you have some sort of result
+
+00:02:53.180 --> 00:02:56.540 align:middle line:84%
+that you've been storing
+and accumulating or changing
+
+00:02:56.540 --> 00:02:57.780 align:middle line:90%
+each time through the loop.
+
+00:02:57.780 --> 00:02:59.240 align:middle line:84%
+So that's an
+iterative algorithm.
+
+00:02:59.240 --> 00:03:02.120 align:middle line:84%
+And we've been working
+with these a lot.
+
+00:03:02.120 --> 00:03:04.970 align:middle line:90%
+So to show you--
+
+00:03:04.970 --> 00:03:07.850 align:middle line:84%
+we're going to go through the
+next few slides showing you
+
+00:03:07.850 --> 00:03:10.040 align:middle line:84%
+an iterative algorithm
+to do multiplication.
+
+00:03:10.040 --> 00:03:11.960 align:middle line:84%
+It's going to be
+very, very simple.
+
+00:03:11.960 --> 00:03:15.350 align:middle line:84%
+But we're also then
+after going to look
+
+00:03:15.350 --> 00:03:19.670 align:middle line:84%
+at the same problem, which
+is doing multiplication,
+
+00:03:19.670 --> 00:03:21.560 align:middle line:90%
+but in the context of recursion.
+
+00:03:21.560 --> 00:03:23.210 align:middle line:84%
+And hopefully that
+gives you a sense
+
+00:03:23.210 --> 00:03:26.060 align:middle line:84%
+for how we think about the
+exact same problem we're
+
+00:03:26.060 --> 00:03:28.820 align:middle line:84%
+trying to solve, multiplying
+two numbers together,
+
+00:03:28.820 --> 00:03:31.430 align:middle line:90%
+in a completely different way.
+
+00:03:31.430 --> 00:03:34.390 align:middle line:84%
+So this is not the function that
+I want to write with iteration.
+
+00:03:34.390 --> 00:03:37.300 align:middle line:84%
+I don't want to create a
+function named mult and then
+
+00:03:37.300 --> 00:03:39.490 align:middle line:90%
+return a*b.
+
+00:03:39.490 --> 00:03:41.570 align:middle line:84%
+I don't want to use
+the built-in function.
+
+00:03:41.570 --> 00:03:43.720 align:middle line:84%
+I want to assume
+that I don't know how
+
+00:03:43.720 --> 00:03:46.420 align:middle line:90%
+to do a star, a multiplication.
+
+00:03:46.420 --> 00:03:48.880 align:middle line:84%
+And so instead,
+what I'm going to do
+
+00:03:48.880 --> 00:03:52.660 align:middle line:84%
+is I'm going to rely on-- let's
+say I know how to do addition.
+
+00:03:52.660 --> 00:03:55.120 align:middle line:84%
+I'm going to rely on
+the idea of addition
+
+00:03:55.120 --> 00:03:59.410 align:middle line:84%
+to actually write my
+multiplication function.
+
+00:03:59.410 --> 00:04:03.300 align:middle line:84%
+So let's think about how to
+make multiplication iterative.
+
+00:04:03.300 --> 00:04:10.380 align:middle line:84%
+We can have a loop that
+adds a to itself b times.
+
+00:04:10.380 --> 00:04:13.260 align:middle line:84%
+That is the definition
+of multiplication.
+
+00:04:13.260 --> 00:04:16.730 align:middle line:84%
+So let's write a function that
+does this using a for loop.
+
+00:04:16.730 --> 00:04:19.350 align:middle line:84%
+Then we'll write it
+using a while loop.
+
+00:04:19.350 --> 00:04:23.250 align:middle line:84%
+With a for loop, we're going to
+write this iterative algorithm.
+
+00:04:23.250 --> 00:04:25.800 align:middle line:84%
+It's capturing the state
+of the computation,
+
+00:04:25.800 --> 00:04:27.840 align:middle line:90%
+just like we said we should.
+
+00:04:27.840 --> 00:04:32.670 align:middle line:84%
+So the for loop will iterate--
+will have my range of values,
+
+00:04:32.670 --> 00:04:33.960 align:middle line:90%
+being from 0 to b.
+
+00:04:33.960 --> 00:04:37.140 align:middle line:84%
+So we're going to repeat
+this loop b times.
+
+00:04:37.140 --> 00:04:41.880 align:middle line:84%
+The variable total is capturing
+my state of the computation.
+
+00:04:41.880 --> 00:04:44.700 align:middle line:84%
+It's keeping track of what
+the total is at each step
+
+00:04:44.700 --> 00:04:46.350 align:middle line:90%
+through my loop.
+
+00:04:46.350 --> 00:04:49.710 align:middle line:84%
+At the end of the loop,
+I return the total.
+
+00:04:49.710 --> 00:04:53.987 align:middle line:84%
+So very, very simple
+iterative function here.
+
+00:04:53.987 --> 00:04:56.070 align:middle line:84%
+Now, let's think about
+another iterative solution.
+
+00:04:56.070 --> 00:04:59.460 align:middle line:84%
+Instead of keeping
+a loop variable
+
+00:04:59.460 --> 00:05:03.137 align:middle line:84%
+b that goes from 0
+all the way up to b--
+
+00:05:03.137 --> 00:05:04.470 align:middle line:90%
+or what was in my loop variable?
+
+00:05:04.470 --> 00:05:04.980 align:middle line:90%
+N, I think.
+
+00:05:04.980 --> 00:05:06.647 align:middle line:84%
+Yeah, instead of
+keeping a loop variable
+
+00:05:06.647 --> 00:05:09.640 align:middle line:84%
+n that goes from 0 to b,
+let's work our way backward.
+
+00:05:09.640 --> 00:05:11.850 align:middle line:84%
+And this time, let's use
+a while loop just for fun.
+
+00:05:11.850 --> 00:05:16.860 align:middle line:84%
+Let's say that I'm going to
+start at b and count down to 0.
+
+00:05:16.860 --> 00:05:22.400 align:middle line:84%
+So again, going and
+repeating some task b times.
+
+00:05:22.400 --> 00:05:24.590 align:middle line:84%
+So what I'm going
+to do is I'm going
+
+00:05:24.590 --> 00:05:29.870 align:middle line:84%
+to have some counter that starts
+at b and decreases down to 0.
+
+00:05:29.870 --> 00:05:33.990 align:middle line:84%
+Again, within my loop, I have
+to keep track of the result.
+
+00:05:33.990 --> 00:05:36.170 align:middle line:84%
+So my total in the
+previous code is now
+
+00:05:36.170 --> 00:05:38.280 align:middle line:84%
+being called result
+in this code.
+
+00:05:38.280 --> 00:05:41.030 align:middle line:84%
+And so what I'm going
+to do is my iteration
+
+00:05:41.030 --> 00:05:42.710 align:middle line:90%
+will start right at 0.
+
+00:05:42.710 --> 00:05:46.940 align:middle line:84%
+And then I'm going to keep
+adding a to itself b times.
+
+00:05:46.940 --> 00:05:49.900 align:middle line:90%
+So the code looks like this.
+
+00:05:49.900 --> 00:05:52.780 align:middle line:84%
+I've got my while loop this
+time instead of a for loop.
+
+00:05:52.780 --> 00:05:55.350 align:middle line:84%
+I'm going to start out
+with knowing what b is.
+
+00:05:55.350 --> 00:05:59.810 align:middle line:84%
+And I'm going to decrease b by
+one each time through the loop.
+
+00:05:59.810 --> 00:06:02.590 align:middle line:84%
+So here I've got b
+equals b minus 1.
+
+00:06:02.590 --> 00:06:06.460 align:middle line:84%
+So that's capturing the state of
+the counter at each iteration.
+
+00:06:06.460 --> 00:06:09.190 align:middle line:84%
+The result, just like the
+total in the previous slide,
+
+00:06:09.190 --> 00:06:12.160 align:middle line:84%
+is capturing the state
+of my sum at each time
+
+00:06:12.160 --> 00:06:13.450 align:middle line:90%
+through the iteration.
+
+00:06:13.450 --> 00:06:16.270 align:middle line:84%
+And at the end, I return
+result. So hopefully
+
+00:06:16.270 --> 00:06:21.560 align:middle line:84%
+very simple, very
+review code here.
+
+00:06:21.560 --> 00:06:26.910 align:middle line:84%
+But now, let's look at the
+code in a recursive sense.
+
+00:06:26.910 --> 00:06:29.360 align:middle line:84%
+So here, let's not
+look at the code yet.
+
+00:06:29.360 --> 00:06:34.460 align:middle line:84%
+But let's think about is there
+some thing that we're repeating
+
+00:06:34.460 --> 00:06:36.030 align:middle line:90%
+over and over and over again?
+
+00:06:36.030 --> 00:06:39.830 align:middle line:84%
+If we recognize it, we
+can think recursively.
+
+00:06:39.830 --> 00:06:43.640 align:middle line:84%
+OK, so let's try to figure
+out this recursive pattern.
+
+00:06:43.640 --> 00:06:47.510 align:middle line:84%
+So I work best with examples,
+like actual numbers.
+
+00:06:47.510 --> 00:06:52.120 align:middle line:84%
+So instead of using an abstract
+a and b, let's use a is 5
+
+00:06:52.120 --> 00:06:54.470 align:middle line:90%
+and b is 4 as an example.
+
+00:06:54.470 --> 00:06:57.610 align:middle line:84%
+So let's say I want to use
+the star operator-- that's
+
+00:06:57.610 --> 00:07:00.280 align:middle line:84%
+basically the function I'm
+trying to implement-- the star
+
+00:07:00.280 --> 00:07:03.560 align:middle line:90%
+operator between 5 and 4.
+
+00:07:03.560 --> 00:07:06.380 align:middle line:84%
+So in the iterative sense,
+we said that's 5 plus 5
+
+00:07:06.380 --> 00:07:10.160 align:middle line:84%
+plus 5 plus 5,
+adding 5 four times.
+
+00:07:10.160 --> 00:07:12.860 align:middle line:84%
+The idea of recursion
+is that we're
+
+00:07:12.860 --> 00:07:15.050 align:middle line:84%
+trying to take our
+original problem, which
+
+00:07:15.050 --> 00:07:18.410 align:middle line:84%
+is using the star operator
+between two numbers,
+
+00:07:18.410 --> 00:07:23.280 align:middle line:84%
+and try to solve a
+very similar problem,
+
+00:07:23.280 --> 00:07:27.950 align:middle line:84%
+if not the same, but in
+a slightly changed way.
+
+00:07:27.950 --> 00:07:31.900 align:middle line:84%
+So instead of saying I'm
+going to multiply 5 by 4,
+
+00:07:31.900 --> 00:07:36.130 align:middle line:84%
+what I will do is
+recognize that 5 times 4,
+
+00:07:36.130 --> 00:07:42.140 align:middle line:84%
+which is my original problem,
+can be rewritten by extracting
+
+00:07:42.140 --> 00:07:44.180 align:middle line:90%
+out one of my 5's.
+
+00:07:44.180 --> 00:07:50.860 align:middle line:84%
+So I'm going to take a 5
+out and add it to 5 times 3.
+
+00:07:50.860 --> 00:07:53.260 align:middle line:90%
+So this is my recursive pattern.
+
+00:07:53.260 --> 00:07:57.050 align:middle line:84%
+I'm using the star operator
+between 5 and some number.
+
+00:07:57.050 --> 00:08:02.950 align:middle line:84%
+But if I extract a 5 out, I can
+use the star operator between 5
+
+00:08:02.950 --> 00:08:06.800 align:middle line:84%
+and a slightly smaller
+number, 1 less than 4.
+
+00:08:06.800 --> 00:08:09.470 align:middle line:90%
+
+
+00:08:09.470 --> 00:08:12.950 align:middle line:84%
+Well, what if I do--
+what about 5 times 3?
+
+00:08:12.950 --> 00:08:15.740 align:middle line:90%
+Can I do the same thing again?
+
+00:08:15.740 --> 00:08:17.000 align:middle line:90%
+I can, right?
+
+00:08:17.000 --> 00:08:19.580 align:middle line:84%
+For 5 times 3, I can
+again notice that I
+
+00:08:19.580 --> 00:08:21.410 align:middle line:90%
+can extract the 5 out again.
+
+00:08:21.410 --> 00:08:25.190 align:middle line:90%
+And I have 5 plus 5 times 2.
+
+00:08:25.190 --> 00:08:28.040 align:middle line:84%
+And then I can do the same
+thing again to figure out what 5
+
+00:08:28.040 --> 00:08:32.780 align:middle line:84%
+times 2 is, I can again extract
+a 5 out and be left with 5
+
+00:08:32.780 --> 00:08:35.970 align:middle line:90%
+times 1 or 5*1.
+
+00:08:35.970 --> 00:08:38.280 align:middle line:84%
+And so notice the
+thing inside the box
+
+00:08:38.280 --> 00:08:41.429 align:middle line:84%
+is basically me solving
+my original problem, which
+
+00:08:41.429 --> 00:08:44.700 align:middle line:84%
+is using the star operator
+between 5 and some number.
+
+00:08:44.700 --> 00:08:50.990 align:middle line:84%
+But that number is changing
+each time on each line.
+
+00:08:50.990 --> 00:08:53.420 align:middle line:84%
+At some point, I can
+say this problem is
+
+00:08:53.420 --> 00:08:55.500 align:middle line:90%
+so easy that I know the answer.
+
+00:08:55.500 --> 00:08:58.850 align:middle line:84%
+So 5*1, so a number
+multiplied with one,
+
+00:08:58.850 --> 00:09:00.540 align:middle line:90%
+is just the number itself.
+
+00:09:00.540 --> 00:09:02.030 align:middle line:84%
+And so at that
+point, I can say I
+
+00:09:02.030 --> 00:09:05.210 align:middle line:84%
+don't need to continue dividing
+my problem into smaller
+
+00:09:05.210 --> 00:09:06.660 align:middle line:90%
+and smaller pieces.
+
+00:09:06.660 --> 00:09:08.900 align:middle line:84%
+So just to bring the
+point home, let's use
+
+00:09:08.900 --> 00:09:12.770 align:middle line:84%
+parentheses to illustrate which
+pieces I'm replacing where.
+
+00:09:12.770 --> 00:09:17.420 align:middle line:84%
+So I've got my original problem,
+applying the star operator
+
+00:09:17.420 --> 00:09:20.240 align:middle line:84%
+in the multiplication
+on 5 and 4.
+
+00:09:20.240 --> 00:09:24.890 align:middle line:84%
+I extract the 5 out, and I
+recognize that I can have 5
+
+00:09:24.890 --> 00:09:26.600 align:middle line:90%
+plus and then solving 5*3.
+
+00:09:26.600 --> 00:09:30.910 align:middle line:90%
+
+
+00:09:30.910 --> 00:09:32.770 align:middle line:84%
+I need to have some
+trust here, right?
+
+00:09:32.770 --> 00:09:34.930 align:middle line:90%
+I don't know what 5*3 is.
+
+00:09:34.930 --> 00:09:38.320 align:middle line:84%
+But if I decompose that
+problem in the exact same way,
+
+00:09:38.320 --> 00:09:46.670 align:middle line:84%
+I can extract the 5 out
+of that and add it to 5*2.
+
+00:09:46.670 --> 00:09:49.250 align:middle line:84%
+So the thing in the
+boxes are equivalent.
+
+00:09:49.250 --> 00:09:52.973 align:middle line:84%
+And then, again, 5*2, I'm going
+to recognize this is the same
+
+00:09:52.973 --> 00:09:54.390 align:middle line:84%
+problem I've been
+trying to solve.
+
+00:09:54.390 --> 00:09:56.300 align:middle line:84%
+Let's apply the
+same solution, which
+
+00:09:56.300 --> 00:10:01.115 align:middle line:84%
+is to extract a 5 out and add
+it to the multiplication of 5
+
+00:10:01.115 --> 00:10:04.010 align:middle line:90%
+star one less.
+
+00:10:04.010 --> 00:10:07.060 align:middle line:84%
+So again, the two
+boxes are equivalent.
+
+00:10:07.060 --> 00:10:10.053 align:middle line:84%
+So this idea here, where we're
+recognizing the same problem
+
+00:10:10.053 --> 00:10:11.970 align:middle line:84%
+and kind of dividing it,
+dividing it, dividing
+
+00:10:11.970 --> 00:10:15.760 align:middle line:84%
+it, having this trust
+that at some point
+
+00:10:15.760 --> 00:10:18.580 align:middle line:84%
+we're going to divide
+it so much that we've
+
+00:10:18.580 --> 00:10:21.790 align:middle line:84%
+reached a fundamental
+fact that we can solve
+
+00:10:21.790 --> 00:10:24.910 align:middle line:90%
+is this divide step.
+
+00:10:24.910 --> 00:10:27.580 align:middle line:84%
+So we're going to divide it
+all the way up to-- all the way
+
+00:10:27.580 --> 00:10:30.850 align:middle line:84%
+down here, where
+I've got 5 plus 5*1.
+
+00:10:30.850 --> 00:10:36.010 align:middle line:84%
+At this point, I can say,
+well, 5*1 is going to be 5.
+
+00:10:36.010 --> 00:10:38.980 align:middle line:84%
+This is a basic fact
+that I can just solve.
+
+00:10:38.980 --> 00:10:42.910 align:middle line:84%
+I don't need to divide
+this problem any further.
+
+00:10:42.910 --> 00:10:45.240 align:middle line:84%
+So once I solve this
+fact, I can start
+
+00:10:45.240 --> 00:10:47.460 align:middle line:90%
+building back up my answer.
+
+00:10:47.460 --> 00:10:49.710 align:middle line:84%
+And I can start
+passing the answer back
+
+00:10:49.710 --> 00:10:55.560 align:middle line:84%
+up the chain of
+multiplication calls.
+
+00:10:55.560 --> 00:10:58.500 align:middle line:84%
+So if I'm at this step here,
+and I figured out that this is
+
+00:10:58.500 --> 00:10:59.310 align:middle line:90%
+5*1--
+
+00:10:59.310 --> 00:11:04.060 align:middle line:84%
+this 5*1 is equal to 5, I
+can just replace it with a 5.
+
+00:11:04.060 --> 00:11:08.440 align:middle line:84%
+And then I can build up
+the solution to this 5*2
+
+00:11:08.440 --> 00:11:13.920 align:middle line:84%
+because now 5*2 is
+just five plus 5.
+
+00:11:13.920 --> 00:11:16.890 align:middle line:90%
+So this is going to be 10.
+
+00:11:16.890 --> 00:11:18.610 align:middle line:90%
+It's just simple addition.
+
+00:11:18.610 --> 00:11:20.790 align:middle line:84%
+There's no more multiplication,
+which is the thing
+
+00:11:20.790 --> 00:11:23.060 align:middle line:90%
+that we were trying to avoid.
+
+00:11:23.060 --> 00:11:25.630 align:middle line:84%
+So then the 5*2 gets
+replaced with 10.
+
+00:11:25.630 --> 00:11:28.780 align:middle line:84%
+And I'm still building back
+up my solution until I get
+
+00:11:28.780 --> 00:11:30.610 align:middle line:90%
+to the 5*4.
+
+00:11:30.610 --> 00:11:34.215 align:middle line:84%
+So I was trying to
+figure out what 5*3 is,
+
+00:11:34.215 --> 00:11:36.340 align:middle line:84%
+but before I could do that,
+I had to solve the rest
+
+00:11:36.340 --> 00:11:38.540 align:middle line:90%
+of the two lines beneath it.
+
+00:11:38.540 --> 00:11:40.060 align:middle line:90%
+But now I can finally solve it.
+
+00:11:40.060 --> 00:11:42.310 align:middle line:90%
+It's just 5 plus 10.
+
+00:11:42.310 --> 00:11:44.780 align:middle line:84%
+That's the similar problem
+I was trying to solve.
+
+00:11:44.780 --> 00:11:48.570 align:middle line:84%
+So I can replace
+the 5*3 with 15.
+
+00:11:48.570 --> 00:11:53.157 align:middle line:84%
+And finally, my original problem
+was trying to figure out 5*4,
+
+00:11:53.157 --> 00:11:55.740 align:middle line:84%
+and now I can finally solve it
+because I've finally built back
+
+00:11:55.740 --> 00:11:58.140 align:middle line:90%
+up my solution as 5 plus 15.
+
+00:11:58.140 --> 00:12:00.820 align:middle line:90%
+
+
+00:12:00.820 --> 00:12:03.120 align:middle line:90%
+Any questions about these steps?
+
+00:12:03.120 --> 00:12:05.780 align:middle line:84%
+It should be pretty
+straightforward.
+
+00:12:05.780 --> 00:12:08.470 align:middle line:84%
+I know it's a weird
+roundabout way of figuring out
+
+00:12:08.470 --> 00:12:09.400 align:middle line:90%
+what the answer is.
+
+00:12:09.400 --> 00:12:11.080 align:middle line:84%
+But what I'm trying
+to get at is trying
+
+00:12:11.080 --> 00:12:13.780 align:middle line:84%
+to recognize the problem
+that we're trying to solve
+
+00:12:13.780 --> 00:12:18.700 align:middle line:84%
+and then solving a very similar
+problem just slightly changed.
+
+00:12:18.700 --> 00:12:21.190 align:middle line:84%
+In this case, we're
+multiplying 5 star
+
+00:12:21.190 --> 00:12:24.800 align:middle line:84%
+one less than what we were
+just trying to figure out.
+
+00:12:24.800 --> 00:12:28.450 align:middle line:84%
+So in terms of the recursion
+for this particular problem,
+
+00:12:28.450 --> 00:12:32.500 align:middle line:84%
+multiplying a with b, we
+recognize that a*b is going
+
+00:12:32.500 --> 00:12:36.430 align:middle line:84%
+to be a plus a plus
+a plus a b times.
+
+00:12:36.430 --> 00:12:39.610 align:middle line:84%
+If we extract an a
+out, just like when
+
+00:12:39.610 --> 00:12:42.760 align:middle line:84%
+we extracted the 5 out and
+added it to something else,
+
+00:12:42.760 --> 00:12:46.540 align:middle line:84%
+we'll recognize that that's
+just a plus a plus a plus a
+
+00:12:46.540 --> 00:12:50.490 align:middle line:90%
+plus a plus a b minus 1 times.
+
+00:12:50.490 --> 00:12:54.440 align:middle line:84%
+OK, well, that a plus a
+plus a b minus 1 times
+
+00:12:54.440 --> 00:12:57.860 align:middle line:84%
+is just our original
+problem, just
+
+00:12:57.860 --> 00:13:01.520 align:middle line:90%
+multiplying a with b minus 1.
+
+00:13:01.520 --> 00:13:04.250 align:middle line:90%
+So this is my recursive step.
+
+00:13:04.250 --> 00:13:09.230 align:middle line:84%
+We recognize that a*b is
+equal to a plus a*b minus 1.
+
+00:13:09.230 --> 00:13:11.180 align:middle line:84%
+So I'm using the
+same operation I'm
+
+00:13:11.180 --> 00:13:18.320 align:middle line:84%
+trying to find here down here
+in my quote, unquote "solution."
+
+00:13:18.320 --> 00:13:21.110 align:middle line:84%
+But this is not the
+end of recursion,
+
+00:13:21.110 --> 00:13:25.610 align:middle line:84%
+because if I just had this
+as my definition, then
+
+00:13:25.610 --> 00:13:27.320 align:middle line:90%
+I would have infinite recursion.
+
+00:13:27.320 --> 00:13:29.070 align:middle line:90%
+I don't have a way to stop.
+
+00:13:29.070 --> 00:13:31.520 align:middle line:84%
+And so this recursive
+step, in conjunction
+
+00:13:31.520 --> 00:13:36.170 align:middle line:84%
+with a base case, something
+that we know fundamentally
+
+00:13:36.170 --> 00:13:40.110 align:middle line:84%
+about the star operator, is
+going to give us our solution.
+
+00:13:40.110 --> 00:13:44.120 align:middle line:84%
+So we knew on the previous
+slide when we multiply a with 1,
+
+00:13:44.120 --> 00:13:45.590 align:middle line:90%
+we just get back a.
+
+00:13:45.590 --> 00:13:49.310 align:middle line:84%
+So our base case,
+very simple case
+
+00:13:49.310 --> 00:13:53.450 align:middle line:84%
+of multiplication between a and
+b, is going to be when b is 1.
+
+00:13:53.450 --> 00:13:57.580 align:middle line:84%
+And that's going to be
+a times b is equal to a.
+
+00:13:57.580 --> 00:14:00.400 align:middle line:84%
+So these might look like
+the mathematical definitions
+
+00:14:00.400 --> 00:14:04.030 align:middle line:84%
+that you might come up
+with in a math class.
+
+00:14:04.030 --> 00:14:05.470 align:middle line:90%
+And we have them right here.
+
+00:14:05.470 --> 00:14:07.750 align:middle line:84%
+So if b is not
+equal to 1, a times
+
+00:14:07.750 --> 00:14:10.150 align:middle line:90%
+b is a plus a times b minus 1.
+
+00:14:10.150 --> 00:14:13.450 align:middle line:84%
+And then the base case
+is when b is equal to 1,
+
+00:14:13.450 --> 00:14:15.660 align:middle line:90%
+a times b is equal to a.
+
+00:14:15.660 --> 00:14:19.350 align:middle line:84%
+So with these two
+lines, we can actually
+
+00:14:19.350 --> 00:14:24.090 align:middle line:84%
+come up with the
+code, the programming
+
+00:14:24.090 --> 00:14:27.530 align:middle line:90%
+version of this function.
+
+00:14:27.530 --> 00:14:32.540 align:middle line:84%
+So here we're creating a
+function named mult_recur.
+
+00:14:32.540 --> 00:14:35.390 align:middle line:84%
+And its parameters are
+going to be a and b.
+
+00:14:35.390 --> 00:14:38.020 align:middle line:90%
+So I'm multiplying a with b.
+
+00:14:38.020 --> 00:14:41.740 align:middle line:84%
+And I have to encode
+these two cases, when
+
+00:14:41.740 --> 00:14:44.240 align:middle line:90%
+b is 1 and otherwise.
+
+00:14:44.240 --> 00:14:46.580 align:middle line:84%
+So we usually start
+with the base case.
+
+00:14:46.580 --> 00:14:48.440 align:middle line:84%
+It's the simplest
+to think about.
+
+00:14:48.440 --> 00:14:51.700 align:middle line:84%
+So when b is 1, a
+times b is equal to a.
+
+00:14:51.700 --> 00:14:56.170 align:middle line:84%
+So if b is equal to 1,
+then what is a times b?
+
+00:14:56.170 --> 00:14:57.550 align:middle line:90%
+It's just a, right?
+
+00:14:57.550 --> 00:15:03.610 align:middle line:84%
+So the function can just
+immediately return a.
+
+00:15:03.610 --> 00:15:05.220 align:middle line:90%
+So that's our base case.
+
+00:15:05.220 --> 00:15:09.080 align:middle line:84%
+Else, this is going to
+be our recursive step.
+
+00:15:09.080 --> 00:15:13.640 align:middle line:84%
+We're not going to return
+a, but we will return this,
+
+00:15:13.640 --> 00:15:16.280 align:middle line:90%
+a plus a*b minus 1.
+
+00:15:16.280 --> 00:15:21.770 align:middle line:84%
+Well, the a is just a plus
+and this, the star operator
+
+00:15:21.770 --> 00:15:25.595 align:middle line:84%
+between a and b minus 1,
+is just the function again.
+
+00:15:25.595 --> 00:15:29.460 align:middle line:90%
+
+
+00:15:29.460 --> 00:15:31.030 align:middle line:90%
+Isn't that really cool?
+
+00:15:31.030 --> 00:15:35.820 align:middle line:84%
+We're using the function name
+in the body of this function
+
+00:15:35.820 --> 00:15:38.300 align:middle line:90%
+that we're defining.
+
+00:15:38.300 --> 00:15:41.410 align:middle line:84%
+And it's not a problem
+because the parameter
+
+00:15:41.410 --> 00:15:45.730 align:middle line:84%
+to the one at the bottom in
+the recursive step is changing.
+
+00:15:45.730 --> 00:15:48.850 align:middle line:84%
+I'm not calling mult_recur
+with a, b again.
+
+00:15:48.850 --> 00:15:51.385 align:middle line:84%
+That would be very silly
+of me because that would
+
+00:15:51.385 --> 00:15:52.510 align:middle line:90%
+lead to infinite recursion.
+
+00:15:52.510 --> 00:15:55.120 align:middle line:84%
+I'm not making any progress
+towards a base case.
+
+00:15:55.120 --> 00:15:58.230 align:middle line:84%
+But I am calling
+it with b minus 1.
+
+00:15:58.230 --> 00:16:02.130 align:middle line:84%
+So this function will just
+keep calling mult_recur
+
+00:16:02.130 --> 00:16:04.980 align:middle line:84%
+with a, with b, b minus
+1, b minus 2, b minus 3,
+
+00:16:04.980 --> 00:16:06.780 align:middle line:84%
+and so on, until
+it gets to b is 1.
+
+00:16:06.780 --> 00:16:09.030 align:middle line:84%
+And then it'll build back
+up the solution, just
+
+00:16:09.030 --> 00:16:11.460 align:middle line:84%
+like we had in the slides
+with all the parentheses
+
+00:16:11.460 --> 00:16:13.990 align:middle line:90%
+that we were replacing.
+
+00:16:13.990 --> 00:16:16.690 align:middle line:84%
+OK, so let's step
+through the Python Tutor,
+
+00:16:16.690 --> 00:16:19.360 align:middle line:84%
+and I will show
+you how it actually
+
+00:16:19.360 --> 00:16:21.370 align:middle line:84%
+looks when we make all
+these function calls.
+
+00:16:21.370 --> 00:16:24.190 align:middle line:84%
+And then we'll do
+another example.
+
+00:16:24.190 --> 00:16:28.170 align:middle line:84%
+So here I've got
+mult_recur with a is--
+
+00:16:28.170 --> 00:16:31.950 align:middle line:84%
+I think I ran it with 5 and
+4, just like the one we've
+
+00:16:31.950 --> 00:16:33.210 align:middle line:90%
+been looking at.
+
+00:16:33.210 --> 00:16:36.180 align:middle line:84%
+So this is going to
+be my main function.
+
+00:16:36.180 --> 00:16:37.920 align:middle line:84%
+It makes a function
+call to mult_recur--
+
+00:16:37.920 --> 00:16:39.990 align:middle line:90%
+[COUGHS] oh, excuse me--
+
+00:16:39.990 --> 00:16:41.550 align:middle line:90%
+5, 4.
+
+00:16:41.550 --> 00:16:45.390 align:middle line:90%
+So my a is 5, and my b is 4.
+
+00:16:45.390 --> 00:16:49.770 align:middle line:84%
+This little blue thing here
+is one function environment.
+
+00:16:49.770 --> 00:16:52.380 align:middle line:84%
+Like when I draw boxes on
+my slides that are orange,
+
+00:16:52.380 --> 00:16:53.550 align:middle line:90%
+they do them in blue.
+
+00:16:53.550 --> 00:16:56.220 align:middle line:90%
+
+
+00:16:56.220 --> 00:17:00.060 align:middle line:84%
+OK, now, in this function
+call, what do we do?
+
+00:17:00.060 --> 00:17:01.410 align:middle line:90%
+Is b 1?
+
+00:17:01.410 --> 00:17:02.160 align:middle line:90%
+No.
+
+00:17:02.160 --> 00:17:06.720 align:middle line:84%
+So we go in the else case,
+and we return 5 plus--
+
+00:17:06.720 --> 00:17:07.962 align:middle line:90%
+what happens next?
+
+00:17:07.962 --> 00:17:08.670 align:middle line:90%
+Does anyone know?
+
+00:17:08.670 --> 00:17:13.099 align:middle line:90%
+
+
+00:17:13.099 --> 00:17:13.862 align:middle line:90%
+Yeah.
+
+00:17:13.862 --> 00:17:17.319 align:middle line:84%
+AUDIENCE: Mult_recur is going
+to run again with a as 5
+
+00:17:17.319 --> 00:17:18.260 align:middle line:90%
+and b as 3.
+
+00:17:18.260 --> 00:17:20.900 align:middle line:84%
+ANA BELL: Yes, mult_recur
+will run again with a as 5
+
+00:17:20.900 --> 00:17:22.430 align:middle line:90%
+and b as 3, exactly.
+
+00:17:22.430 --> 00:17:25.220 align:middle line:90%
+It is a function call, right?
+
+00:17:25.220 --> 00:17:28.160 align:middle line:84%
+So as a function
+call, we are going
+
+00:17:28.160 --> 00:17:31.050 align:middle line:90%
+to create a new environment.
+
+00:17:31.050 --> 00:17:34.230 align:middle line:90%
+So here's, boom, another box.
+
+00:17:34.230 --> 00:17:39.010 align:middle line:84%
+My previous box is
+currently hung up.
+
+00:17:39.010 --> 00:17:43.570 align:middle line:84%
+It cannot finish, because it's
+trying to figure out what 5
+
+00:17:43.570 --> 00:17:46.720 align:middle line:84%
+plus the result of
+this function call is.
+
+00:17:46.720 --> 00:17:48.160 align:middle line:90%
+But this one is not done yet.
+
+00:17:48.160 --> 00:17:53.140 align:middle line:84%
+It's still figuring
+out its result.
+
+00:17:53.140 --> 00:17:55.140 align:middle line:90%
+So we've put that one on hold.
+
+00:17:55.140 --> 00:17:57.780 align:middle line:84%
+And now we're trying to
+figure out mult_recur 5, 3.
+
+00:17:57.780 --> 00:17:59.670 align:middle line:90%
+Well, what is mult_recur 5, 3?
+
+00:17:59.670 --> 00:18:01.780 align:middle line:90%
+It's going to be b is not 1.
+
+00:18:01.780 --> 00:18:05.550 align:middle line:84%
+So this one will
+also go in its else.
+
+00:18:05.550 --> 00:18:11.775 align:middle line:84%
+And it will recur-- it
+will return 5 plus what?
+
+00:18:11.775 --> 00:18:16.500 align:middle line:90%
+
+
+00:18:16.500 --> 00:18:21.210 align:middle line:84%
+Exactly, the function call
+when b becomes 2, exactly.
+
+00:18:21.210 --> 00:18:24.660 align:middle line:84%
+But notice it is another
+function call, right?
+
+00:18:24.660 --> 00:18:28.020 align:middle line:84%
+So here I have,
+boom, another box.
+
+00:18:28.020 --> 00:18:33.040 align:middle line:84%
+Now I've got two function calls,
+this original one back here,
+
+00:18:33.040 --> 00:18:35.820 align:middle line:84%
+which was waiting on this one
+that I've highlighted here.
+
+00:18:35.820 --> 00:18:38.190 align:middle line:84%
+But now this one that
+I've highlighted here
+
+00:18:38.190 --> 00:18:41.530 align:middle line:84%
+had to make another
+function call down here.
+
+00:18:41.530 --> 00:18:43.950 align:middle line:84%
+So I've got currently
+three function calls
+
+00:18:43.950 --> 00:18:46.980 align:middle line:84%
+in the works that are
+trying to figure out
+
+00:18:46.980 --> 00:18:48.910 align:middle line:90%
+what their results are.
+
+00:18:48.910 --> 00:18:51.360 align:middle line:84%
+All right, finally,
+this mult_recur 5, 2
+
+00:18:51.360 --> 00:18:53.950 align:middle line:84%
+is going to make
+another function call.
+
+00:18:53.950 --> 00:18:55.050 align:middle line:90%
+So its b is not one.
+
+00:18:55.050 --> 00:18:56.710 align:middle line:84%
+So we're going to
+go into the else.
+
+00:18:56.710 --> 00:18:59.580 align:middle line:90%
+
+
+00:18:59.580 --> 00:19:01.730 align:middle line:84%
+And what is its
+else going to say?
+
+00:19:01.730 --> 00:19:05.770 align:middle line:90%
+We're going to return 5 plus--
+
+00:19:05.770 --> 00:19:09.200 align:middle line:90%
+and it's another function call.
+
+00:19:09.200 --> 00:19:11.950 align:middle line:84%
+So now I'm four
+function calls deep,
+
+00:19:11.950 --> 00:19:17.190 align:middle line:84%
+and I haven't done any
+sort of visible work.
+
+00:19:17.190 --> 00:19:20.700 align:middle line:84%
+I've just kept kind of
+kicking the can down the road
+
+00:19:20.700 --> 00:19:23.430 align:middle line:84%
+to try to figure out
+what the values are.
+
+00:19:23.430 --> 00:19:25.920 align:middle line:84%
+And everybody's waiting
+for somebody else
+
+00:19:25.920 --> 00:19:29.100 align:middle line:90%
+to finally return a value.
+
+00:19:29.100 --> 00:19:33.180 align:middle line:84%
+So this first one is waiting
+for the one right underneath it
+
+00:19:33.180 --> 00:19:34.290 align:middle line:90%
+to return a value.
+
+00:19:34.290 --> 00:19:36.420 align:middle line:84%
+But this one is waiting
+for the one underneath it
+
+00:19:36.420 --> 00:19:37.630 align:middle line:90%
+to return a value.
+
+00:19:37.630 --> 00:19:39.870 align:middle line:84%
+And this one is waiting
+for the one underneath it
+
+00:19:39.870 --> 00:19:40.720 align:middle line:90%
+to return a value.
+
+00:19:40.720 --> 00:19:42.670 align:middle line:90%
+That's the chain of calls.
+
+00:19:42.670 --> 00:19:44.530 align:middle line:84%
+What's this last
+one going to do?
+
+00:19:44.530 --> 00:19:47.560 align:middle line:84%
+Is it going to make another
+function environment?
+
+00:19:47.560 --> 00:19:51.685 align:middle line:84%
+No, it's going to
+return a, which is 5.
+
+00:19:51.685 --> 00:19:54.680 align:middle line:90%
+
+
+00:19:54.680 --> 00:19:57.080 align:middle line:90%
+OK, there's my return value 5.
+
+00:19:57.080 --> 00:20:01.310 align:middle line:84%
+So this one will return
+the 5 to whoever called it.
+
+00:20:01.310 --> 00:20:05.900 align:middle line:84%
+And whoever called it was this
+one here, mult_recur 5, 2.
+
+00:20:05.900 --> 00:20:08.030 align:middle line:84%
+5, 2 was trying
+to figure out what
+
+00:20:08.030 --> 00:20:13.450 align:middle line:84%
+5 plus this bottom
+function call was.
+
+00:20:13.450 --> 00:20:17.350 align:middle line:84%
+Well, now it can figure out
+that it's going to be 5 plus 5.
+
+00:20:17.350 --> 00:20:20.130 align:middle line:90%
+So its return will be 10.
+
+00:20:20.130 --> 00:20:24.270 align:middle line:84%
+This one returns a value up
+one level to whoever called it.
+
+00:20:24.270 --> 00:20:26.490 align:middle line:90%
+And that was mult_recur 5, 3.
+
+00:20:26.490 --> 00:20:30.360 align:middle line:84%
+And now mult_recur 5,
+3 can finish its job.
+
+00:20:30.360 --> 00:20:34.710 align:middle line:84%
+It was trying to figure out what
+5 plus its function call was,
+
+00:20:34.710 --> 00:20:36.550 align:middle line:90%
+which we figured out is 10.
+
+00:20:36.550 --> 00:20:39.410 align:middle line:84%
+So this one can
+figure out it's 15.
+
+00:20:39.410 --> 00:20:42.740 align:middle line:84%
+And finally, this last
+value can return back up
+
+00:20:42.740 --> 00:20:46.600 align:middle line:84%
+to the original
+function call, 5, 4.
+
+00:20:46.600 --> 00:20:51.260 align:middle line:84%
+And 5, 4 will return 5 plus
+the 15 that got returned,
+
+00:20:51.260 --> 00:20:52.060 align:middle line:90%
+which is 20.
+
+00:20:52.060 --> 00:20:55.020 align:middle line:90%
+
+
+00:20:55.020 --> 00:20:58.515 align:middle line:84%
+OK, questions about
+what just happened?
+
+00:20:58.515 --> 00:21:01.350 align:middle line:90%
+
+
+00:21:01.350 --> 00:21:03.540 align:middle line:90%
+Does everything make sense?
+
+00:21:03.540 --> 00:21:05.500 align:middle line:90%
+All right.
+
+00:21:05.500 --> 00:21:08.818 align:middle line:84%
+So let's look at
+one more example.
+
+00:21:08.818 --> 00:21:11.110 align:middle line:84%
+I mean, we'll look at a few
+more examples this lecture,
+
+00:21:11.110 --> 00:21:14.140 align:middle line:84%
+but let's look at a real
+world example for now.
+
+00:21:14.140 --> 00:21:16.150 align:middle line:84%
+This one will
+hopefully illustrate
+
+00:21:16.150 --> 00:21:18.700 align:middle line:84%
+the difference between
+iterative algorithms
+
+00:21:18.700 --> 00:21:22.070 align:middle line:84%
+and recursive algorithms in
+a more real-life setting.
+
+00:21:22.070 --> 00:21:27.070 align:middle line:84%
+So let's assume that in
+this real-world setting,
+
+00:21:27.070 --> 00:21:29.170 align:middle line:84%
+a student asks for a
+regrade for an exam.
+
+00:21:29.170 --> 00:21:32.120 align:middle line:90%
+
+
+00:21:32.120 --> 00:21:36.950 align:middle line:84%
+In an iterative setting, we have
+basically one function call,
+
+00:21:36.950 --> 00:21:38.750 align:middle line:84%
+regrade, or whatever
+you want to call it.
+
+00:21:38.750 --> 00:21:40.810 align:middle line:90%
+There's my student.
+
+00:21:40.810 --> 00:21:44.170 align:middle line:84%
+How is the student going to
+iteratively get the regrade?
+
+00:21:44.170 --> 00:21:47.950 align:middle line:84%
+Well, the student will be in
+charge of basically looping
+
+00:21:47.950 --> 00:21:51.400 align:middle line:90%
+through each staff member.
+
+00:21:51.400 --> 00:21:54.710 align:middle line:84%
+So the student goes to
+the instructor and says,
+
+00:21:54.710 --> 00:21:57.430 align:middle line:90%
+can I have a regrade please?
+
+00:21:57.430 --> 00:21:59.390 align:middle line:84%
+The instructor may have
+graded one problem.
+
+00:21:59.390 --> 00:22:02.890 align:middle line:84%
+Maybe they didn't, but they will
+regrade the problem that maybe
+
+00:22:02.890 --> 00:22:04.790 align:middle line:90%
+they were in charge of.
+
+00:22:04.790 --> 00:22:09.260 align:middle line:84%
+Then the student will go to the
+next person on staff, the TA.
+
+00:22:09.260 --> 00:22:11.330 align:middle line:90%
+Can I have a regrade, please?
+
+00:22:11.330 --> 00:22:13.492 align:middle line:84%
+Let's say the TA maybe
+regrades the problem
+
+00:22:13.492 --> 00:22:14.450 align:middle line:90%
+they were in charge of.
+
+00:22:14.450 --> 00:22:15.890 align:middle line:84%
+Maybe they didn't,
+but in any case,
+
+00:22:15.890 --> 00:22:17.515 align:middle line:84%
+they'll give the
+score back, or they'll
+
+00:22:17.515 --> 00:22:20.610 align:middle line:90%
+answer the student's request.
+
+00:22:20.610 --> 00:22:22.440 align:middle line:84%
+The student then goes
+to the next person
+
+00:22:22.440 --> 00:22:26.442 align:middle line:90%
+on staff, the lab assistant.
+
+00:22:26.442 --> 00:22:27.650 align:middle line:90%
+Can I have a regrade, please?
+
+00:22:27.650 --> 00:22:29.660 align:middle line:84%
+The lab assistant might
+regrade the problem
+
+00:22:29.660 --> 00:22:32.420 align:middle line:84%
+they're in charge of,
+whatever, gives the grade back
+
+00:22:32.420 --> 00:22:33.260 align:middle line:90%
+to the student.
+
+00:22:33.260 --> 00:22:36.403 align:middle line:84%
+The student is keeping track
+of all these regrade scores
+
+00:22:36.403 --> 00:22:37.820 align:middle line:84%
+that they're getting
+to figure out
+
+00:22:37.820 --> 00:22:39.380 align:middle line:90%
+what their new total score is.
+
+00:22:39.380 --> 00:22:41.480 align:middle line:84%
+And finally, the
+student might go
+
+00:22:41.480 --> 00:22:46.190 align:middle line:84%
+to the grader who did
+probably most of the work,
+
+00:22:46.190 --> 00:22:47.090 align:middle line:90%
+asks for the regrade.
+
+00:22:47.090 --> 00:22:50.870 align:middle line:84%
+The grader will dutifully
+agree to do the regrade
+
+00:22:50.870 --> 00:22:53.370 align:middle line:90%
+and pass back the values.
+
+00:22:53.370 --> 00:22:57.560 align:middle line:84%
+So here, notice the student is
+in charge of iteratively going
+
+00:22:57.560 --> 00:23:02.060 align:middle line:84%
+to every single person on staff
+and getting the result back.
+
+00:23:02.060 --> 00:23:04.885 align:middle line:84%
+And the student is keeping track
+of what their new score is.
+
+00:23:04.885 --> 00:23:06.260 align:middle line:84%
+Obviously, the
+staff members will
+
+00:23:06.260 --> 00:23:08.160 align:middle line:84%
+too for the purposes
+of assigning grades,
+
+00:23:08.160 --> 00:23:10.760 align:middle line:90%
+but the student is as well.
+
+00:23:10.760 --> 00:23:13.460 align:middle line:84%
+So the student's basically
+adding up all these values.
+
+00:23:13.460 --> 00:23:15.120 align:middle line:84%
+But there's only
+one function call.
+
+00:23:15.120 --> 00:23:16.610 align:middle line:84%
+So I've denoted
+the function call
+
+00:23:16.610 --> 00:23:20.410 align:middle line:84%
+using just this
+black circle here.
+
+00:23:20.410 --> 00:23:21.792 align:middle line:90%
+OK, so that's iteration.
+
+00:23:21.792 --> 00:23:22.750 align:middle line:90%
+We know how to do that.
+
+00:23:22.750 --> 00:23:25.470 align:middle line:84%
+We've been doing this for a
+really long time in this class.
+
+00:23:25.470 --> 00:23:29.380 align:middle line:84%
+But now let's look at the
+same problem recursively.
+
+00:23:29.380 --> 00:23:33.390 align:middle line:84%
+So in recursion, we've
+got these two steps.
+
+00:23:33.390 --> 00:23:37.170 align:middle line:84%
+There's the problem of
+decreasing our original problem
+
+00:23:37.170 --> 00:23:43.490 align:middle line:84%
+into smaller problems until we
+reach some sort of base case.
+
+00:23:43.490 --> 00:23:46.570 align:middle line:84%
+And then at that
+point, we have the task
+
+00:23:46.570 --> 00:23:50.440 align:middle line:90%
+of building back up our answer.
+
+00:23:50.440 --> 00:23:52.290 align:middle line:84%
+So in the recursive
+setting, again, I've
+
+00:23:52.290 --> 00:23:54.300 align:middle line:84%
+got my one function
+called to regrade
+
+00:23:54.300 --> 00:23:56.580 align:middle line:90%
+on behalf of the student.
+
+00:23:56.580 --> 00:24:00.570 align:middle line:84%
+But the student will only
+interact with one person, maybe
+
+00:24:00.570 --> 00:24:02.430 align:middle line:90%
+the instructor.
+
+00:24:02.430 --> 00:24:05.292 align:middle line:84%
+The student will not interact
+with anybody else in staff.
+
+00:24:05.292 --> 00:24:07.750 align:middle line:84%
+The student will just go up to
+the instructor and say, hey,
+
+00:24:07.750 --> 00:24:11.250 align:middle line:84%
+I would like a
+regrade for this exam.
+
+00:24:11.250 --> 00:24:14.730 align:middle line:84%
+Now, the student
+is going to wait.
+
+00:24:14.730 --> 00:24:19.170 align:middle line:84%
+The instructor is also a
+function call to regrade.
+
+00:24:19.170 --> 00:24:21.630 align:middle line:84%
+So maybe the instructor
+didn't do any of the grading,
+
+00:24:21.630 --> 00:24:24.360 align:middle line:84%
+but the instructor will
+make their own function call
+
+00:24:24.360 --> 00:24:25.050 align:middle line:90%
+to the TA.
+
+00:24:25.050 --> 00:24:28.560 align:middle line:84%
+Can you please
+regrade this exam?
+
+00:24:28.560 --> 00:24:30.240 align:middle line:90%
+The TA maybe graded one problem.
+
+00:24:30.240 --> 00:24:32.010 align:middle line:84%
+They'll keep track of the
+problem they need to grade,
+
+00:24:32.010 --> 00:24:34.177 align:middle line:84%
+but there are other problems
+that need to be graded.
+
+00:24:34.177 --> 00:24:37.440 align:middle line:84%
+So the TA will then make
+their own function call
+
+00:24:37.440 --> 00:24:38.940 align:middle line:90%
+to the lab assistant.
+
+00:24:38.940 --> 00:24:41.220 align:middle line:84%
+Maybe the lab assistant
+graded some problems.
+
+00:24:41.220 --> 00:24:45.420 align:middle line:84%
+And then the lab assistant
+will also further the request,
+
+00:24:45.420 --> 00:24:48.240 align:middle line:84%
+sort of passing along the
+function call to the grader.
+
+00:24:48.240 --> 00:24:50.670 align:middle line:84%
+So we have the task
+of doing the grading
+
+00:24:50.670 --> 00:24:55.490 align:middle line:84%
+as a function being passed
+along all of the staff members.
+
+00:24:55.490 --> 00:24:57.410 align:middle line:84%
+When we reach the
+base case, which
+
+00:24:57.410 --> 00:25:04.070 align:middle line:84%
+is the grader that
+probably knows--
+
+00:25:04.070 --> 00:25:05.660 align:middle line:84%
+probably graded
+the last question,
+
+00:25:05.660 --> 00:25:08.060 align:middle line:84%
+we've got the answer
+being passed back
+
+00:25:08.060 --> 00:25:10.910 align:middle line:90%
+up the chain of function calls.
+
+00:25:10.910 --> 00:25:13.430 align:middle line:84%
+So the grader will say, all
+right, I've graded my problem.
+
+00:25:13.430 --> 00:25:15.090 align:middle line:84%
+There's nobody
+else I need to ask.
+
+00:25:15.090 --> 00:25:16.830 align:middle line:90%
+So here's my score.
+
+00:25:16.830 --> 00:25:19.550 align:middle line:84%
+So this score is being passed
+back up the chain of function
+
+00:25:19.550 --> 00:25:21.080 align:middle line:90%
+calls to the lab assistant.
+
+00:25:21.080 --> 00:25:22.730 align:middle line:84%
+The lab assistant
+will take that score
+
+00:25:22.730 --> 00:25:25.760 align:middle line:84%
+and add it to their
+score, passes it back up
+
+00:25:25.760 --> 00:25:30.230 align:middle line:84%
+the chain of function calls
+to the teaching assistant.
+
+00:25:30.230 --> 00:25:33.710 align:middle line:84%
+The teaching assistant adds
+that score to their score.
+
+00:25:33.710 --> 00:25:35.010 align:middle line:90%
+Maybe they graded a problem.
+
+00:25:35.010 --> 00:25:35.940 align:middle line:90%
+Maybe they didn't.
+
+00:25:35.940 --> 00:25:38.210 align:middle line:84%
+But anyway, they're
+compiling the results, little
+
+00:25:38.210 --> 00:25:41.170 align:middle line:84%
+by little, back up, until it
+passes it to the instructor.
+
+00:25:41.170 --> 00:25:42.920 align:middle line:84%
+And then the instructor
+says, here you go,
+
+00:25:42.920 --> 00:25:44.120 align:middle line:90%
+this is your score.
+
+00:25:44.120 --> 00:25:45.620 align:middle line:84%
+So you see the
+difference, right?
+
+00:25:45.620 --> 00:25:48.110 align:middle line:90%
+The student is the iteration.
+
+00:25:48.110 --> 00:25:50.270 align:middle line:90%
+They ask everybody on staff.
+
+00:25:50.270 --> 00:25:52.430 align:middle line:84%
+So they interact with
+everybody on staff.
+
+00:25:52.430 --> 00:25:55.280 align:middle line:84%
+But in recursion, the
+student is basically hung
+
+00:25:55.280 --> 00:25:59.600 align:middle line:84%
+up waiting for an answer
+until we've gone down
+
+00:25:59.600 --> 00:26:01.460 align:middle line:84%
+all these chain
+of function calls
+
+00:26:01.460 --> 00:26:03.480 align:middle line:84%
+and the answer has
+been built back up.
+
+00:26:03.480 --> 00:26:06.410 align:middle line:84%
+So the student is not keeping
+track of the answer at all.
+
+00:26:06.410 --> 00:26:11.000 align:middle line:84%
+They only get the final
+answer at the end.
+
+00:26:11.000 --> 00:26:12.690 align:middle line:90%
+Did that help at all?
+
+00:26:12.690 --> 00:26:14.720 align:middle line:84%
+OK, I've refined this
+example a couple of times.
+
+00:26:14.720 --> 00:26:17.940 align:middle line:90%
+Hopefully this is good.
+
+00:26:17.940 --> 00:26:19.850 align:middle line:84%
+So the big idea
+in recursion here
+
+00:26:19.850 --> 00:26:22.220 align:middle line:84%
+is I've got these quote,
+unquote "earlier" function
+
+00:26:22.220 --> 00:26:25.640 align:middle line:84%
+calls, the ones I've made
+way back at the beginning.
+
+00:26:25.640 --> 00:26:29.120 align:middle line:84%
+These function calls are
+just waiting on results
+
+00:26:29.120 --> 00:26:30.770 align:middle line:90%
+to come back.
+
+00:26:30.770 --> 00:26:33.230 align:middle line:84%
+They're not doing any useful
+work at the beginning.
+
+00:26:33.230 --> 00:26:35.240 align:middle line:84%
+They only do useful
+work when they're
+
+00:26:35.240 --> 00:26:38.930 align:middle line:84%
+assembling the results
+after getting a return back
+
+00:26:38.930 --> 00:26:41.700 align:middle line:90%
+from later function calls.
+
+00:26:41.700 --> 00:26:44.590 align:middle line:84%
+So hopefully that
+gives you a sense
+
+00:26:44.590 --> 00:26:46.960 align:middle line:90%
+of how we can apply recursion.
+
+00:26:46.960 --> 00:26:48.950 align:middle line:90%
+Now, what exactly is recursion?
+
+00:26:48.950 --> 00:26:51.550 align:middle line:84%
+So algorithmically,
+it's a way for us
+
+00:26:51.550 --> 00:26:53.950 align:middle line:84%
+to come up with some
+solutions to some problems
+
+00:26:53.950 --> 00:26:55.510 align:middle line:84%
+in this divide-and-conquer
+approach
+
+00:26:55.510 --> 00:26:57.250 align:middle line:84%
+or decrease-and-conquer
+approach.
+
+00:26:57.250 --> 00:26:58.840 align:middle line:90%
+You have your original problem--
+
+00:26:58.840 --> 00:27:02.410 align:middle line:84%
+you divide it so much
+into the same problem
+
+00:27:02.410 --> 00:27:05.050 align:middle line:84%
+just slightly changed,
+until you reach a base case.
+
+00:27:05.050 --> 00:27:08.020 align:middle line:84%
+That base case can kick
+off the conquer step
+
+00:27:08.020 --> 00:27:10.510 align:middle line:84%
+and start passing
+back a value that you
+
+00:27:10.510 --> 00:27:15.430 align:middle line:84%
+can start assembling from
+your earlier function calls.
+
+00:27:15.430 --> 00:27:18.003 align:middle line:84%
+Now, semantically, as
+we saw in the example
+
+00:27:18.003 --> 00:27:19.420 align:middle line:84%
+where we multiplied
+the functions,
+
+00:27:19.420 --> 00:27:22.210 align:middle line:84%
+we've got a function
+that calls itself.
+
+00:27:22.210 --> 00:27:23.650 align:middle line:84%
+Obviously, it's
+not calling itself
+
+00:27:23.650 --> 00:27:25.875 align:middle line:84%
+with the exact same
+parameters because that
+
+00:27:25.875 --> 00:27:27.250 align:middle line:84%
+would lead to
+infinite recursion,
+
+00:27:27.250 --> 00:27:28.660 align:middle line:90%
+and that's not what we want.
+
+00:27:28.660 --> 00:27:31.930 align:middle line:84%
+We're going to call ourselves
+with a slight change
+
+00:27:31.930 --> 00:27:34.540 align:middle line:84%
+in our parameters,
+in such a way that we
+
+00:27:34.540 --> 00:27:36.940 align:middle line:90%
+will reach our base case.
+
+00:27:36.940 --> 00:27:39.460 align:middle line:84%
+And once we reach the
+base case, then, again, we
+
+00:27:39.460 --> 00:27:42.310 align:middle line:84%
+kick off the conquer step, and
+we can start reassembling back.
+
+00:27:42.310 --> 00:27:45.400 align:middle line:84%
+And you saw how the
+function calls do that when
+
+00:27:45.400 --> 00:27:47.410 align:middle line:90%
+they help each other back up.
+
+00:27:47.410 --> 00:27:50.140 align:middle line:84%
+OK, I'm going to give you a
+couple of minutes to try this.
+
+00:27:50.140 --> 00:27:53.140 align:middle line:84%
+So complete the function
+that calculates n
+
+00:27:53.140 --> 00:27:54.740 align:middle line:84%
+to the power of p
+for these variables.
+
+00:27:54.740 --> 00:27:57.100 align:middle line:84%
+So if you come up with the
+mathematical definition,
+
+00:27:57.100 --> 00:28:01.570 align:middle line:84%
+it will be a pretty straight
+translation to code.
+
+00:28:01.570 --> 00:28:04.070 align:middle line:84%
+I did include two
+base cases here.
+
+00:28:04.070 --> 00:28:06.640 align:middle line:84%
+So maybe a base
+case is when n is 0
+
+00:28:06.640 --> 00:28:09.100 align:middle line:84%
+and another base
+case is when n is 1.
+
+00:28:09.100 --> 00:28:10.630 align:middle line:84%
+Figure out what
+you should return
+
+00:28:10.630 --> 00:28:13.310 align:middle line:84%
+and then how to write
+this recursive step.
+
+00:28:13.310 --> 00:28:15.955 align:middle line:90%
+So I've got a line.
+
+00:28:15.955 --> 00:28:18.980 align:middle line:90%
+
+
+00:28:18.980 --> 00:28:24.490 align:middle line:84%
+50ish is where you
+can type in the code.
+
+00:28:24.490 --> 00:28:28.560 align:middle line:84%
+All right, what's
+my first base case?
+
+00:28:28.560 --> 00:28:29.130 align:middle line:90%
+Yeah.
+
+00:28:29.130 --> 00:28:32.410 align:middle line:84%
+AUDIENCE: If p is 0,
+then it'll return 1.
+
+00:28:32.410 --> 00:28:37.370 align:middle line:84%
+ANA BELL: Yep, if p is equal
+to 0, then we can return 1.
+
+00:28:37.370 --> 00:28:38.810 align:middle line:90%
+Oops, just one time.
+
+00:28:38.810 --> 00:28:40.010 align:middle line:90%
+What's another base case?
+
+00:28:40.010 --> 00:28:46.680 align:middle line:90%
+
+
+00:28:46.680 --> 00:28:50.560 align:middle line:90%
+P is 1; we can return 1.
+
+00:28:50.560 --> 00:28:51.460 align:middle line:90%
+Awesome.
+
+00:28:51.460 --> 00:28:53.080 align:middle line:90%
+How about my recursive step?
+
+00:28:53.080 --> 00:28:58.030 align:middle line:90%
+
+
+00:28:58.030 --> 00:29:00.505 align:middle line:84%
+AUDIENCE: We can
+return n times n.
+
+00:29:00.505 --> 00:29:03.110 align:middle line:84%
+ANA BELL: Yep, we
+can return n times--
+
+00:29:03.110 --> 00:29:06.044 align:middle line:90%
+AUDIENCE: [INAUDIBLE]
+
+00:29:06.044 --> 00:29:08.000 align:middle line:90%
+
+
+00:29:08.000 --> 00:29:09.830 align:middle line:90%
+ANA BELL: Like this?
+
+00:29:09.830 --> 00:29:12.590 align:middle line:84%
+Now, let's assume I
+don't know how to do **,
+
+00:29:12.590 --> 00:29:14.930 align:middle line:84%
+how do you rewrite this in
+terms of the thing we're
+
+00:29:14.930 --> 00:29:15.950 align:middle line:90%
+trying to write?
+
+00:29:15.950 --> 00:29:17.780 align:middle line:90%
+There was a solution back there.
+
+00:29:17.780 --> 00:29:20.300 align:middle line:84%
+AUDIENCE: Power_recur
+n, p minus 1.
+
+00:29:20.300 --> 00:29:21.830 align:middle line:84%
+ANA BELL: Yep, we
+can do that too.
+
+00:29:21.830 --> 00:29:22.850 align:middle line:90%
+Yep, exactly.
+
+00:29:22.850 --> 00:29:28.100 align:middle line:84%
+So here we're assuming that
+we don't know the ** operator,
+
+00:29:28.100 --> 00:29:30.920 align:middle line:84%
+otherwise this would be a
+very easy function to write.
+
+00:29:30.920 --> 00:29:33.890 align:middle line:84%
+We are trying to define
+the ** operator ourselves
+
+00:29:33.890 --> 00:29:36.940 align:middle line:84%
+using this function
+named power_recur.
+
+00:29:36.940 --> 00:29:39.900 align:middle line:84%
+So we're just going to
+call it again down here
+
+00:29:39.900 --> 00:29:41.970 align:middle line:90%
+with n and p minus 1.
+
+00:29:41.970 --> 00:29:45.150 align:middle line:84%
+So if we run it,
+this will give us 8.
+
+00:29:45.150 --> 00:29:49.720 align:middle line:90%
+
+
+00:29:49.720 --> 00:29:50.220 align:middle line:90%
+Yeah.
+
+00:29:50.220 --> 00:29:51.887 align:middle line:84%
+AUDIENCE: What's the
+necessity of having
+
+00:29:51.887 --> 00:29:55.410 align:middle line:90%
+the p equals 1 [INAUDIBLE]?
+
+00:29:55.410 --> 00:29:57.350 align:middle line:90%
+ANA BELL: Yes, great question.
+
+00:29:57.350 --> 00:29:58.850 align:middle line:90%
+What is the necessity of this?
+
+00:29:58.850 --> 00:30:00.290 align:middle line:90%
+There is no necessity.
+
+00:30:00.290 --> 00:30:03.260 align:middle line:84%
+I actually just included
+it there to just show you
+
+00:30:03.260 --> 00:30:05.250 align:middle line:90%
+how we can have two base cases.
+
+00:30:05.250 --> 00:30:08.390 align:middle line:84%
+So in this particular case,
+we would actually never
+
+00:30:08.390 --> 00:30:11.960 align:middle line:84%
+hit this one, if n
+is greater than 1,
+
+00:30:11.960 --> 00:30:14.450 align:middle line:90%
+because we always stop here.
+
+00:30:14.450 --> 00:30:18.440 align:middle line:84%
+If the user gives us 0, we
+would just return that one.
+
+00:30:18.440 --> 00:30:20.390 align:middle line:84%
+But it would work
+if we completely
+
+00:30:20.390 --> 00:30:22.430 align:middle line:90%
+removed that as well.
+
+00:30:22.430 --> 00:30:23.390 align:middle line:90%
+Yeah, great question.
+
+00:30:23.390 --> 00:30:28.530 align:middle line:90%
+
+
+00:30:28.530 --> 00:30:32.010 align:middle line:84%
+OK, let's look at
+one more example.
+
+00:30:32.010 --> 00:30:33.660 align:middle line:84%
+And this one is the
+one that I'm going
+
+00:30:33.660 --> 00:30:35.790 align:middle line:90%
+to ask for some participation.
+
+00:30:35.790 --> 00:30:38.830 align:middle line:84%
+I would like four of you
+to come down with me.
+
+00:30:38.830 --> 00:30:42.730 align:middle line:84%
+But before we do that,
+let's think about factorial.
+
+00:30:42.730 --> 00:30:44.820 align:middle line:84%
+So the definition
+of n factorial is
+
+00:30:44.820 --> 00:30:50.040 align:middle line:84%
+n times n minus 1 times n minus
+2 times n minus 3 down to 1.
+
+00:30:50.040 --> 00:30:51.540 align:middle line:90%
+What is a base case?
+
+00:30:51.540 --> 00:30:54.720 align:middle line:84%
+What is the simplest thing
+that we know the factorial of?
+
+00:30:54.720 --> 00:30:56.676 align:middle line:90%
+You guys tell me.
+
+00:30:56.676 --> 00:30:58.866 align:middle line:90%
+AUDIENCE: 0.
+
+00:30:58.866 --> 00:31:02.560 align:middle line:84%
+ANA BELL: What is n--
+what is 0 factorial?
+
+00:31:02.560 --> 00:31:03.690 align:middle line:90%
+1, good.
+
+00:31:03.690 --> 00:31:06.990 align:middle line:90%
+I chose 1, but both could work.
+
+00:31:06.990 --> 00:31:09.540 align:middle line:84%
+If n is equal to 0,
+you can also return 1.
+
+00:31:09.540 --> 00:31:12.680 align:middle line:84%
+Or we can do n is
+equal to 1, return 1.
+
+00:31:12.680 --> 00:31:14.810 align:middle line:90%
+What's our recursive step?
+
+00:31:14.810 --> 00:31:18.310 align:middle line:84%
+Do you recognize the
+recursive pattern here?
+
+00:31:18.310 --> 00:31:19.650 align:middle line:90%
+N factorial equals--
+
+00:31:19.650 --> 00:31:25.090 align:middle line:90%
+
+
+00:31:25.090 --> 00:31:29.080 align:middle line:90%
+N times n minus 1 factorial.
+
+00:31:29.080 --> 00:31:32.140 align:middle line:84%
+If we extract the first
+n out, n minus 1 times n
+
+00:31:32.140 --> 00:31:36.080 align:middle line:84%
+minus 2 times n minus 3 and so
+on is just n minus 1 factorial.
+
+00:31:36.080 --> 00:31:38.260 align:middle line:84%
+And so our recursive
+step just says
+
+00:31:38.260 --> 00:31:43.930 align:middle line:84%
+it's n times the same function
+factorial with n minus 1.
+
+00:31:43.930 --> 00:31:45.632 align:middle line:90%
+Is everyone OK with that?
+
+00:31:45.632 --> 00:31:47.280 align:middle line:90%
+Cool.
+
+00:31:47.280 --> 00:31:50.490 align:middle line:84%
+OK, so let's look
+through this example
+
+00:31:50.490 --> 00:31:53.400 align:middle line:84%
+with some participation,
+so four people.
+
+00:31:53.400 --> 00:31:54.450 align:middle line:90%
+One, yes.
+
+00:31:54.450 --> 00:31:56.550 align:middle line:84%
+And you'll be on OCW
+forever, you guys.
+
+00:31:56.550 --> 00:31:57.540 align:middle line:90%
+Two, yep.
+
+00:31:57.540 --> 00:32:00.260 align:middle line:90%
+Two more.
+
+00:32:00.260 --> 00:32:02.700 align:middle line:90%
+Yes, thank you.
+
+00:32:02.700 --> 00:32:03.310 align:middle line:90%
+Thank you.
+
+00:32:03.310 --> 00:32:04.170 align:middle line:90%
+Awesome.
+
+00:32:04.170 --> 00:32:08.700 align:middle line:84%
+OK, and I'll have you
+guys stand right here.
+
+00:32:08.700 --> 00:32:13.670 align:middle line:84%
+I'll ask you guys to
+come in one at a time
+
+00:32:13.670 --> 00:32:15.763 align:middle line:84%
+as we are working
+through this exam.
+
+00:32:15.763 --> 00:32:17.180 align:middle line:84%
+So we're just going
+to demonstrate
+
+00:32:17.180 --> 00:32:20.540 align:middle line:84%
+sort of once again what happens
+when we make function calls.
+
+00:32:20.540 --> 00:32:22.910 align:middle line:84%
+Do you want to just stand
+right here behind my computer?
+
+00:32:22.910 --> 00:32:23.960 align:middle line:90%
+Thank you.
+
+00:32:23.960 --> 00:32:25.580 align:middle line:90%
+Yep, behind my computer.
+
+00:32:25.580 --> 00:32:26.080 align:middle line:90%
+Cool.
+
+00:32:26.080 --> 00:32:28.750 align:middle line:90%
+
+
+00:32:28.750 --> 00:32:31.290 align:middle line:90%
+OK, perfect.
+
+00:32:31.290 --> 00:32:34.120 align:middle line:90%
+OK, so I'll just stand here.
+
+00:32:34.120 --> 00:32:38.550 align:middle line:84%
+So I am going to be
+the main program.
+
+00:32:38.550 --> 00:32:42.990 align:middle line:84%
+You run this code, I am
+going to be the main program.
+
+00:32:42.990 --> 00:32:50.280 align:middle line:84%
+I am going to keep track of the
+variables and everything that's
+
+00:32:50.280 --> 00:32:52.410 align:middle line:90%
+in this global scope.
+
+00:32:52.410 --> 00:32:56.260 align:middle line:84%
+OK, so in the global scope, just
+like we have been in the past,
+
+00:32:56.260 --> 00:33:01.200 align:middle line:84%
+I've got a definition for the
+my factorial function here.
+
+00:33:01.200 --> 00:33:03.150 align:middle line:90%
+And this is just some code.
+
+00:33:03.150 --> 00:33:04.710 align:middle line:84%
+At this point, I've
+just defined it.
+
+00:33:04.710 --> 00:33:06.670 align:middle line:84%
+I don't care what
+it actually is.
+
+00:33:06.670 --> 00:33:08.860 align:middle line:90%
+But I have one function call.
+
+00:33:08.860 --> 00:33:10.980 align:middle line:84%
+So my one and only
+job is to print
+
+00:33:10.980 --> 00:33:13.170 align:middle line:90%
+the result of factorial 4.
+
+00:33:13.170 --> 00:33:15.010 align:middle line:90%
+I have a pretty easy job.
+
+00:33:15.010 --> 00:33:17.490 align:middle line:84%
+So what happens-- you
+guys, the audience,
+
+00:33:17.490 --> 00:33:21.000 align:middle line:84%
+tell me what happens when
+I've got factorial 4.
+
+00:33:21.000 --> 00:33:22.730 align:middle line:90%
+What is this?
+
+00:33:22.730 --> 00:33:26.460 align:middle line:84%
+Do I just know right off
+the bat what factorial 4 is?
+
+00:33:26.460 --> 00:33:27.120 align:middle line:90%
+No.
+
+00:33:27.120 --> 00:33:29.100 align:middle line:90%
+It is a function call, right?
+
+00:33:29.100 --> 00:33:34.050 align:middle line:84%
+So as a function call,
+what do I need to do?
+
+00:33:34.050 --> 00:33:36.480 align:middle line:90%
+AUDIENCE: Create an environment.
+
+00:33:36.480 --> 00:33:37.660 align:middle line:90%
+ANA BELL: Exactly.
+
+00:33:37.660 --> 00:33:39.010 align:middle line:90%
+I need to create an environment.
+
+00:33:39.010 --> 00:33:43.000 align:middle line:84%
+OK, so you'll be my
+first environment.
+
+00:33:43.000 --> 00:33:44.828 align:middle line:84%
+Hello, my name is--
+you can put it on you.
+
+00:33:44.828 --> 00:33:45.370 align:middle line:90%
+There you go.
+
+00:33:45.370 --> 00:33:48.040 align:middle line:84%
+Hello, my name is-- and then
+you can step right over there.
+
+00:33:48.040 --> 00:33:50.110 align:middle line:84%
+So you are my first
+function call.
+
+00:33:50.110 --> 00:33:52.960 align:middle line:90%
+Your name is fact for factorial.
+
+00:33:52.960 --> 00:33:53.470 align:middle line:90%
+Awesome.
+
+00:33:53.470 --> 00:33:54.760 align:middle line:90%
+So I have just called you.
+
+00:33:54.760 --> 00:33:58.080 align:middle line:90%
+
+
+00:33:58.080 --> 00:33:59.250 align:middle line:90%
+What is your job?
+
+00:33:59.250 --> 00:34:02.220 align:middle line:84%
+So you guys tell me,
+what factorial 4's job
+
+00:34:02.220 --> 00:34:05.350 align:middle line:90%
+is from running the code.
+
+00:34:05.350 --> 00:34:07.180 align:middle line:84%
+Are they going to do
+the if or the else?
+
+00:34:07.180 --> 00:34:07.858 align:middle line:90%
+AUDIENCE: Else.
+
+00:34:07.858 --> 00:34:08.650 align:middle line:90%
+ANA BELL: The else.
+
+00:34:08.650 --> 00:34:09.612 align:middle line:90%
+So this is your job.
+
+00:34:09.612 --> 00:34:10.570 align:middle line:90%
+You keep track of that.
+
+00:34:10.570 --> 00:34:12.159 align:middle line:90%
+Your n is going to be 4.
+
+00:34:12.159 --> 00:34:15.550 align:middle line:84%
+And your job is to return
+4 times factorial of 3.
+
+00:34:15.550 --> 00:34:18.460 align:middle line:84%
+Do you know what factorial
+of 3 is right now?
+
+00:34:18.460 --> 00:34:18.969 align:middle line:90%
+No.
+
+00:34:18.969 --> 00:34:20.052 align:middle line:90%
+So what do you need to do?
+
+00:34:20.052 --> 00:34:21.130 align:middle line:90%
+AUDIENCE: Call someone.
+
+00:34:21.130 --> 00:34:23.050 align:middle line:84%
+ANA BELL: Yes, please
+call somebody else.
+
+00:34:23.050 --> 00:34:25.330 align:middle line:90%
+Who are you going to call?
+
+00:34:25.330 --> 00:34:26.139 align:middle line:90%
+Next.
+
+00:34:26.139 --> 00:34:28.157 align:middle line:90%
+What is your name going to be?
+
+00:34:28.157 --> 00:34:29.199 align:middle line:90%
+AUDIENCE: Factorial of 3.
+
+00:34:29.199 --> 00:34:31.929 align:middle line:84%
+ANA BELL: Your name is
+also factorial, exactly.
+
+00:34:31.929 --> 00:34:34.989 align:middle line:84%
+And you are going to be
+called with n is equal to 3.
+
+00:34:34.989 --> 00:34:39.389 align:middle line:84%
+So you can stand right
+beside factorial of 4.
+
+00:34:39.389 --> 00:34:40.199 align:middle line:90%
+Very nice.
+
+00:34:40.199 --> 00:34:45.510 align:middle line:84%
+So now, notice, we've
+got two function calls.
+
+00:34:45.510 --> 00:34:48.420 align:middle line:84%
+Both of their names
+are factorial, right?
+
+00:34:48.420 --> 00:34:51.330 align:middle line:84%
+But they are completely
+separate function calls.
+
+00:34:51.330 --> 00:34:53.699 align:middle line:84%
+They are completely
+different environments.
+
+00:34:53.699 --> 00:34:55.530 align:middle line:90%
+They have their own n values.
+
+00:34:55.530 --> 00:34:58.290 align:middle line:90%
+They have their own jobs to do.
+
+00:34:58.290 --> 00:35:01.950 align:middle line:84%
+Just because their name is
+factorial for both of them
+
+00:35:01.950 --> 00:35:03.660 align:middle line:84%
+does not mean that
+they'll interfere
+
+00:35:03.660 --> 00:35:05.580 align:middle line:90%
+with each other's variables.
+
+00:35:05.580 --> 00:35:08.170 align:middle line:84%
+Very, very important
+point to make.
+
+00:35:08.170 --> 00:35:11.260 align:middle line:84%
+Factorial of 3, do you know
+what factorial of 2 is?
+
+00:35:11.260 --> 00:35:12.108 align:middle line:90%
+AUDIENCE: I do not.
+
+00:35:12.108 --> 00:35:12.650 align:middle line:90%
+ANA BELL: No.
+
+00:35:12.650 --> 00:35:13.465 align:middle line:90%
+So what do you need to do?
+
+00:35:13.465 --> 00:35:14.050 align:middle line:84%
+AUDIENCE: I need
+to call somebody.
+
+00:35:14.050 --> 00:35:15.070 align:middle line:90%
+ANA BELL: Exactly.
+
+00:35:15.070 --> 00:35:16.500 align:middle line:90%
+Who are you going to call?
+
+00:35:16.500 --> 00:35:17.912 align:middle line:90%
+AUDIENCE: Factorial.
+
+00:35:17.912 --> 00:35:18.870 align:middle line:90%
+ANA BELL: There you go.
+
+00:35:18.870 --> 00:35:22.056 align:middle line:90%
+What is your name going to be?
+
+00:35:22.056 --> 00:35:24.860 align:middle line:84%
+AUDIENCE: Factorial
+at-- is it 2 now?
+
+00:35:24.860 --> 00:35:26.360 align:middle line:84%
+ANA BELL: Yes, we
+are at 2, exactly.
+
+00:35:26.360 --> 00:35:27.470 align:middle line:90%
+So you are factorial.
+
+00:35:27.470 --> 00:35:29.390 align:middle line:90%
+Your name is also factorial.
+
+00:35:29.390 --> 00:35:32.420 align:middle line:84%
+And you are going to be
+called with n is equal to 2.
+
+00:35:32.420 --> 00:35:35.960 align:middle line:84%
+Again, now I have
+three factorial calls.
+
+00:35:35.960 --> 00:35:37.820 align:middle line:84%
+They're all to the
+name factorial,
+
+00:35:37.820 --> 00:35:40.590 align:middle line:84%
+but they're all
+independent function calls.
+
+00:35:40.590 --> 00:35:43.370 align:middle line:84%
+So your job is to return
+2 times factorial of 1.
+
+00:35:43.370 --> 00:35:45.729 align:middle line:84%
+Do you know what
+factorial of 1 is?
+
+00:35:45.729 --> 00:35:46.312 align:middle line:90%
+AUDIENCE: Yes.
+
+00:35:46.312 --> 00:35:47.020 align:middle line:90%
+Wait, no.
+
+00:35:47.020 --> 00:35:48.700 align:middle line:90%
+[LAUGHTER]
+
+00:35:48.700 --> 00:35:52.390 align:middle line:84%
+ANA BELL: As a human you do,
+but as factorial you do not.
+
+00:35:52.390 --> 00:35:53.710 align:middle line:90%
+What do you need to do?
+
+00:35:53.710 --> 00:35:54.610 align:middle line:90%
+AUDIENCE: Call her.
+
+00:35:54.610 --> 00:35:55.900 align:middle line:90%
+ANA BELL: Call her, exactly.
+
+00:35:55.900 --> 00:35:56.500 align:middle line:90%
+Here you go.
+
+00:35:56.500 --> 00:35:58.570 align:middle line:90%
+Your name is also factorial.
+
+00:35:58.570 --> 00:36:01.190 align:middle line:84%
+You can stand beside our
+lovely other factorials.
+
+00:36:01.190 --> 00:36:04.660 align:middle line:84%
+So your job-- audience,
+I've already given it away.
+
+00:36:04.660 --> 00:36:10.520 align:middle line:90%
+Your last job is to return 1.
+
+00:36:10.520 --> 00:36:11.930 align:middle line:90%
+OK, excellent.
+
+00:36:11.930 --> 00:36:14.760 align:middle line:90%
+So here is your return value.
+
+00:36:14.760 --> 00:36:18.790 align:middle line:84%
+Now, factorial of
+1, are you going
+
+00:36:18.790 --> 00:36:21.770 align:middle line:90%
+to return that value to me?
+
+00:36:21.770 --> 00:36:24.200 align:middle line:90%
+Which one will you return it to?
+
+00:36:24.200 --> 00:36:25.070 align:middle line:90%
+Exactly.
+
+00:36:25.070 --> 00:36:27.110 align:middle line:84%
+So factorial with
+n is equal to 2
+
+00:36:27.110 --> 00:36:30.920 align:middle line:84%
+can now replace their
+factorial one function with 1.
+
+00:36:30.920 --> 00:36:33.860 align:middle line:84%
+So what is your return value
+going to be, factorial of 2?
+
+00:36:33.860 --> 00:36:34.577 align:middle line:90%
+AUDIENCE: 2?
+
+00:36:34.577 --> 00:36:36.160 align:middle line:84%
+AUDIENCE: (WHISPERING)
+I got it right.
+
+00:36:36.160 --> 00:36:37.390 align:middle line:90%
+ANA BELL: 2, exactly.
+
+00:36:37.390 --> 00:36:39.970 align:middle line:84%
+So where do you pass
+your value along to?
+
+00:36:39.970 --> 00:36:42.760 align:middle line:84%
+OK, now, one thing
+we forgot, as soon
+
+00:36:42.760 --> 00:36:45.055 align:middle line:84%
+as you made the return
+value, you disappear.
+
+00:36:45.055 --> 00:36:46.800 align:middle line:90%
+[LAUGHTER]
+
+00:36:46.800 --> 00:36:48.450 align:middle line:90%
+You had a very simple job.
+
+00:36:48.450 --> 00:36:50.280 align:middle line:84%
+I'm sorry, but it
+was really important.
+
+00:36:50.280 --> 00:36:51.300 align:middle line:90%
+You were our base case.
+
+00:36:51.300 --> 00:36:55.050 align:middle line:84%
+Without you, we would have
+had infinite recursion.
+
+00:36:55.050 --> 00:36:57.730 align:middle line:84%
+OK, so you've passed
+along your value.
+
+00:36:57.730 --> 00:37:00.540 align:middle line:84%
+So as a function that's done
+its job, what do you do?
+
+00:37:00.540 --> 00:37:01.830 align:middle line:90%
+Disappear, exactly.
+
+00:37:01.830 --> 00:37:02.520 align:middle line:90%
+Thank you.
+
+00:37:02.520 --> 00:37:04.650 align:middle line:84%
+All right, factorial
+of, where are we,
+
+00:37:04.650 --> 00:37:07.560 align:middle line:84%
+3, exactly, what are you-- what
+is your value going to be now?
+
+00:37:07.560 --> 00:37:08.360 align:middle line:90%
+AUDIENCE: I'm a 6.
+
+00:37:08.360 --> 00:37:09.350 align:middle line:90%
+ANA BELL: 6, exactly.
+
+00:37:09.350 --> 00:37:10.750 align:middle line:90%
+So here's your return value.
+
+00:37:10.750 --> 00:37:13.790 align:middle line:84%
+Do you give it to me
+or-- there you go.
+
+00:37:13.790 --> 00:37:15.530 align:middle line:90%
+Exactly, very good.
+
+00:37:15.530 --> 00:37:16.400 align:middle line:90%
+We disappear.
+
+00:37:16.400 --> 00:37:18.860 align:middle line:84%
+So we've got three function
+calls that disappeared as soon
+
+00:37:18.860 --> 00:37:20.280 align:middle line:90%
+as they return to value.
+
+00:37:20.280 --> 00:37:22.332 align:middle line:90%
+And finally, 4 times 6.
+
+00:37:22.332 --> 00:37:23.660 align:middle line:90%
+AUDIENCE: 24.
+
+00:37:23.660 --> 00:37:25.997 align:middle line:84%
+ANA BELL: And who do
+you give your value?
+
+00:37:25.997 --> 00:37:27.080 align:middle line:90%
+Me, which I just gave you.
+
+00:37:27.080 --> 00:37:28.670 align:middle line:90%
+Sorry, yeah, that was confusing.
+
+00:37:28.670 --> 00:37:30.710 align:middle line:90%
+Thank you so much, you guys.
+
+00:37:30.710 --> 00:37:33.980 align:middle line:84%
+That illustrated a
+couple of things.
+
+00:37:33.980 --> 00:37:36.320 align:middle line:90%
+You guys can head back.
+
+00:37:36.320 --> 00:37:37.700 align:middle line:90%
+Thank you so much.
+
+00:37:37.700 --> 00:37:41.116 align:middle line:90%
+[APPLAUSE]
+
+00:37:41.116 --> 00:37:42.100 align:middle line:90%
+
+
+00:37:42.100 --> 00:37:44.233 align:middle line:84%
+So we illustrated a
+couple of things here.
+
+00:37:44.233 --> 00:37:45.900 align:middle line:84%
+I'm going to-- I can
+do it on the slides
+
+00:37:45.900 --> 00:37:49.730 align:middle line:84%
+as well, just to
+bring the point home.
+
+00:37:49.730 --> 00:37:51.960 align:middle line:90%
+But let's go through it.
+
+00:37:51.960 --> 00:37:53.870 align:middle line:90%
+So I've got factorial 4.
+
+00:37:53.870 --> 00:37:56.390 align:middle line:84%
+Every time I make
+a function call,
+
+00:37:56.390 --> 00:37:59.600 align:middle line:84%
+even though it's the
+same name, all factorial,
+
+00:37:59.600 --> 00:38:02.480 align:middle line:84%
+it's a completely
+separate environment.
+
+00:38:02.480 --> 00:38:04.580 align:middle line:84%
+Happens to have the same
+name, but they're just
+
+00:38:04.580 --> 00:38:06.510 align:middle line:84%
+in charge of doing
+their own job.
+
+00:38:06.510 --> 00:38:13.070 align:middle line:84%
+So here I've got factorial 4
+calling 4 times factorial of 3.
+
+00:38:13.070 --> 00:38:15.140 align:middle line:84%
+As soon as I see
+factorial of 3, this
+
+00:38:15.140 --> 00:38:16.790 align:middle line:90%
+creates another environment.
+
+00:38:16.790 --> 00:38:20.960 align:middle line:84%
+This is going to be returning
+3 times factorial of 2.
+
+00:38:20.960 --> 00:38:22.670 align:middle line:90%
+Again, another environment.
+
+00:38:22.670 --> 00:38:25.700 align:middle line:84%
+This returns 2 times
+factorial of 1.
+
+00:38:25.700 --> 00:38:27.560 align:middle line:90%
+And a final environment.
+
+00:38:27.560 --> 00:38:31.880 align:middle line:84%
+Our most important
+environment is that last one
+
+00:38:31.880 --> 00:38:32.870 align:middle line:90%
+with the base case.
+
+00:38:32.870 --> 00:38:36.360 align:middle line:84%
+It allows us to kick
+start our conquer step.
+
+00:38:36.360 --> 00:38:40.320 align:middle line:84%
+So this base step will
+return the value 1 to whoever
+
+00:38:40.320 --> 00:38:40.820 align:middle line:90%
+called it.
+
+00:38:40.820 --> 00:38:43.400 align:middle line:84%
+Again, we're not
+skipping around.
+
+00:38:43.400 --> 00:38:47.060 align:middle line:84%
+We only return the value to
+the function that called us.
+
+00:38:47.060 --> 00:38:48.920 align:middle line:84%
+And I know it gets
+really confusing
+
+00:38:48.920 --> 00:38:52.200 align:middle line:84%
+because everything is called
+fact in this particular case.
+
+00:38:52.200 --> 00:38:56.310 align:middle line:84%
+But we just have to remember
+which function called us.
+
+00:38:56.310 --> 00:38:59.070 align:middle line:84%
+And so we return
+the 1 back up here.
+
+00:38:59.070 --> 00:39:00.990 align:middle line:90%
+This becomes 2 times 1.
+
+00:39:00.990 --> 00:39:03.330 align:middle line:90%
+And they can finish their job.
+
+00:39:03.330 --> 00:39:05.220 align:middle line:84%
+So notice at this
+point, we've got--
+
+00:39:05.220 --> 00:39:07.830 align:middle line:84%
+we were 1, 2, 3, 4
+functions just kind
+
+00:39:07.830 --> 00:39:11.230 align:middle line:84%
+of hung up and waiting for
+values to be passed back to us.
+
+00:39:11.230 --> 00:39:14.290 align:middle line:84%
+But now we can finally
+finish our jobs one by one.
+
+00:39:14.290 --> 00:39:16.260 align:middle line:90%
+So this one returns a 2.
+
+00:39:16.260 --> 00:39:18.180 align:middle line:90%
+This one returns the 6.
+
+00:39:18.180 --> 00:39:22.260 align:middle line:90%
+This one returns the 24.
+
+00:39:22.260 --> 00:39:26.190 align:middle line:90%
+And the 24 gets printed out.
+
+00:39:26.190 --> 00:39:32.600 align:middle line:84%
+So big idea here, we've
+got each function call,
+
+00:39:32.600 --> 00:39:34.010 align:middle line:84%
+even though it
+has the same name,
+
+00:39:34.010 --> 00:39:37.430 align:middle line:84%
+is completely separate,
+completely independent
+
+00:39:37.430 --> 00:39:41.210 align:middle line:84%
+environment with
+their own parameters.
+
+00:39:41.210 --> 00:39:44.910 align:middle line:84%
+Those parameters can change
+within those environments.
+
+00:39:44.910 --> 00:39:46.010 align:middle line:90%
+And that's totally OK.
+
+00:39:46.010 --> 00:39:48.260 align:middle line:84%
+They won't interfere
+with any parameters
+
+00:39:48.260 --> 00:39:52.290 align:middle line:90%
+in any other environments.
+
+00:39:52.290 --> 00:39:54.060 align:middle line:90%
+All right.
+
+00:39:54.060 --> 00:39:57.420 align:middle line:84%
+So let's do the
+Python Tutor link.
+
+00:39:57.420 --> 00:40:00.120 align:middle line:84%
+And then, again, we can
+just do one more time just
+
+00:40:00.120 --> 00:40:03.090 align:middle line:84%
+to show you what this looks like
+in terms of the Python Tutor.
+
+00:40:03.090 --> 00:40:06.570 align:middle line:84%
+So here I've got my factorial
+with n is equal to 4,
+
+00:40:06.570 --> 00:40:11.250 align:middle line:84%
+calls n is equal to 3, calls
+factorial with n is equal to 2,
+
+00:40:11.250 --> 00:40:13.770 align:middle line:84%
+calls factorial with
+n is equal to 1.
+
+00:40:13.770 --> 00:40:16.920 align:middle line:84%
+At this point, just like
+with the multiplication,
+
+00:40:16.920 --> 00:40:19.570 align:middle line:84%
+I've got all these
+factorials in the works,
+
+00:40:19.570 --> 00:40:21.300 align:middle line:84%
+but we can start
+returning values
+
+00:40:21.300 --> 00:40:24.770 align:middle line:84%
+back to whoever called
+us until we get back
+
+00:40:24.770 --> 00:40:29.230 align:middle line:84%
+to the original one, the
+original function call.
+
+00:40:29.230 --> 00:40:32.843 align:middle line:84%
+OK, so this is another
+recap of the observations
+
+00:40:32.843 --> 00:40:33.510 align:middle line:90%
+that we've seen.
+
+00:40:33.510 --> 00:40:37.180 align:middle line:84%
+Each different function call
+has its own environment.
+
+00:40:37.180 --> 00:40:39.090 align:middle line:84%
+The variables within
+these environments
+
+00:40:39.090 --> 00:40:41.250 align:middle line:84%
+are specific to
+those environments.
+
+00:40:41.250 --> 00:40:44.010 align:middle line:84%
+They don't interfere
+with each other.
+
+00:40:44.010 --> 00:40:46.740 align:middle line:90%
+And the flow of control--
+
+00:40:46.740 --> 00:40:49.380 align:middle line:84%
+so when we make a
+function call, all we know
+
+00:40:49.380 --> 00:40:51.750 align:middle line:84%
+is the function
+that we call next.
+
+00:40:51.750 --> 00:40:53.100 align:middle line:90%
+We don't skip around.
+
+00:40:53.100 --> 00:40:55.860 align:middle line:84%
+All we know is who we
+call next and who we need
+
+00:40:55.860 --> 00:40:57.375 align:middle line:90%
+to give the value back up to.
+
+00:40:57.375 --> 00:41:01.500 align:middle line:90%
+
+
+00:41:01.500 --> 00:41:03.310 align:middle line:84%
+One last thing I
+wanted to point out.
+
+00:41:03.310 --> 00:41:07.110 align:middle line:84%
+So here I've got the
+code for factorial,
+
+00:41:07.110 --> 00:41:11.580 align:middle line:84%
+the iterative version and
+the recursive version.
+
+00:41:11.580 --> 00:41:14.460 align:middle line:84%
+So the one on the left is--
+sorry, the one on the right
+
+00:41:14.460 --> 00:41:17.910 align:middle line:84%
+is what we already wrote,
+so it's factorial recursive.
+
+00:41:17.910 --> 00:41:20.490 align:middle line:84%
+And the one on the left
+is the iterative version.
+
+00:41:20.490 --> 00:41:25.860 align:middle line:84%
+So I personally think
+the one on the right
+
+00:41:25.860 --> 00:41:29.940 align:middle line:84%
+is more readable because
+it's very similar to the way
+
+00:41:29.940 --> 00:41:33.360 align:middle line:84%
+that we would write the
+expression mathematically.
+
+00:41:33.360 --> 00:41:37.110 align:middle line:84%
+But if you had a little bit
+of time to think about it,
+
+00:41:37.110 --> 00:41:39.840 align:middle line:84%
+you can just as easily
+come up with code that does
+
+00:41:39.840 --> 00:41:42.090 align:middle line:90%
+the exact same job iteratively.
+
+00:41:42.090 --> 00:41:44.670 align:middle line:84%
+So remember, in iteration,
+we've got our loop.
+
+00:41:44.670 --> 00:41:47.610 align:middle line:84%
+There's no more function--
+no other function calls.
+
+00:41:47.610 --> 00:41:51.030 align:middle line:84%
+We have a loop that iterates
+some number of times.
+
+00:41:51.030 --> 00:41:53.460 align:middle line:84%
+There's some sort of loop
+variable or loop counter.
+
+00:41:53.460 --> 00:41:55.380 align:middle line:84%
+And there's a
+state variable that
+
+00:41:55.380 --> 00:41:57.120 align:middle line:84%
+keeps track of the
+answer of interest--
+
+00:41:57.120 --> 00:41:59.970 align:middle line:84%
+in this particular case,
+the product from 1 all
+
+00:41:59.970 --> 00:42:02.900 align:middle line:90%
+the way up to and including n.
+
+00:42:02.900 --> 00:42:06.080 align:middle line:84%
+So I want to end today's
+lecture with just a couple
+
+00:42:06.080 --> 00:42:07.230 align:middle line:90%
+of observations.
+
+00:42:07.230 --> 00:42:11.180 align:middle line:84%
+So today we saw some really
+simple examples of recursion.
+
+00:42:11.180 --> 00:42:15.200 align:middle line:84%
+But I think it outlined some
+really, really tricky ideas
+
+00:42:15.200 --> 00:42:19.010 align:middle line:84%
+that people usually have
+trouble grasping when you first
+
+00:42:19.010 --> 00:42:19.640 align:middle line:90%
+see recursion.
+
+00:42:19.640 --> 00:42:22.040 align:middle line:84%
+And that's because you
+basically write a function
+
+00:42:22.040 --> 00:42:23.340 align:middle line:90%
+in terms of itself.
+
+00:42:23.340 --> 00:42:25.410 align:middle line:84%
+And that can be a
+little bit confusing.
+
+00:42:25.410 --> 00:42:27.170 align:middle line:84%
+So of course, we
+applied recursion
+
+00:42:27.170 --> 00:42:29.300 align:middle line:84%
+to some really,
+really simple things.
+
+00:42:29.300 --> 00:42:35.640 align:middle line:84%
+We did multiplication,
+and we did factorial.
+
+00:42:35.640 --> 00:42:38.095 align:middle line:84%
+Depending on how you feel,
+the recursive version
+
+00:42:38.095 --> 00:42:40.470 align:middle line:84%
+or the iterative version might
+be more intuitive for you.
+
+00:42:40.470 --> 00:42:42.210 align:middle line:84%
+And certainly for
+these examples,
+
+00:42:42.210 --> 00:42:45.300 align:middle line:84%
+you did not need to
+write them recursively.
+
+00:42:45.300 --> 00:42:48.750 align:middle line:84%
+There's a lot of code out
+there that you actually don't
+
+00:42:48.750 --> 00:42:50.490 align:middle line:90%
+need to implement recursively.
+
+00:42:50.490 --> 00:42:53.610 align:middle line:84%
+The iterative solution is far
+more intuitive, especially
+
+00:42:53.610 --> 00:42:56.443 align:middle line:84%
+since you guys were first
+introduced to iteration.
+
+00:42:56.443 --> 00:42:58.110 align:middle line:84%
+You introduced for
+loops and while loops
+
+00:42:58.110 --> 00:43:01.020 align:middle line:84%
+back in lecture three
+or something like that.
+
+00:43:01.020 --> 00:43:03.060 align:middle line:84%
+So if that's the
+first thing you saw,
+
+00:43:03.060 --> 00:43:05.950 align:middle line:84%
+that's usually the first thing
+that's going to be your go-to.
+
+00:43:05.950 --> 00:43:08.010 align:middle line:84%
+But there are
+several problems that
+
+00:43:08.010 --> 00:43:11.230 align:middle line:84%
+are more intuitive to
+write using recursion.
+
+00:43:11.230 --> 00:43:14.730 align:middle line:84%
+So a couple of examples where
+recursion is more intuitive
+
+00:43:14.730 --> 00:43:19.410 align:middle line:84%
+is any time when you need to
+repeat a task for which you
+
+00:43:19.410 --> 00:43:23.740 align:middle line:84%
+don't know how deep you
+need to go, in which case
+
+00:43:23.740 --> 00:43:27.060 align:middle line:84%
+the recursive calls will
+take care of making calls
+
+00:43:27.060 --> 00:43:28.860 align:middle line:84%
+to itself to itself
+to itself to itself
+
+00:43:28.860 --> 00:43:30.280 align:middle line:90%
+until it reaches the base case.
+
+00:43:30.280 --> 00:43:33.070 align:middle line:84%
+You don't need to think
+about that in your iteration.
+
+00:43:33.070 --> 00:43:36.220 align:middle line:84%
+So an example of that is
+this kind of classic one
+
+00:43:36.220 --> 00:43:40.790 align:middle line:84%
+where we have a file
+inside a file system.
+
+00:43:40.790 --> 00:43:43.580 align:middle line:84%
+If we're looking for
+a P set, pset.txt,
+
+00:43:43.580 --> 00:43:48.710 align:middle line:84%
+we can have a student who's
+pset.txt is straight under
+
+00:43:48.710 --> 00:43:52.260 align:middle line:90%
+their user/pset.txt folder.
+
+00:43:52.260 --> 00:43:56.420 align:middle line:84%
+But we might have another person
+who's pset.txt is going to be
+
+00:43:56.420 --> 00:43:58.910 align:middle line:84%
+within their users, their
+documents, their schools,
+
+00:43:58.910 --> 00:44:02.630 align:middle line:84%
+their MIT, their classes,
+their 6.100L, their P sets,
+
+00:44:02.630 --> 00:44:05.990 align:middle line:90%
+their pset1/pset.txt.
+
+00:44:05.990 --> 00:44:08.540 align:middle line:84%
+So that uncertainty
+for how far deep
+
+00:44:08.540 --> 00:44:10.760 align:middle line:84%
+you need to search the
+file system in order
+
+00:44:10.760 --> 00:44:13.370 align:middle line:84%
+to get to the file of
+interest is a perfect place
+
+00:44:13.370 --> 00:44:14.720 align:middle line:90%
+to apply recursion.
+
+00:44:14.720 --> 00:44:17.480 align:middle line:84%
+Another one is where
+you have an expression.
+
+00:44:17.480 --> 00:44:19.430 align:middle line:84%
+If you're building your
+own calculator in code
+
+00:44:19.430 --> 00:44:22.580 align:middle line:84%
+and you have order of
+expressions-- sorry,
+
+00:44:22.580 --> 00:44:25.010 align:middle line:84%
+order of operations
+using parentheses,
+
+00:44:25.010 --> 00:44:27.140 align:middle line:84%
+again, you don't know
+how many parentheses
+
+00:44:27.140 --> 00:44:30.110 align:middle line:84%
+you might need to have a
+loop go through in order
+
+00:44:30.110 --> 00:44:33.230 align:middle line:84%
+to get to that base expression
+to figure out the one
+
+00:44:33.230 --> 00:44:34.700 align:middle line:90%
+that you need to do first.
+
+00:44:34.700 --> 00:44:42.280 align:middle line:84%
+And so that's another case where
+using recursion is very useful.
+
+00:44:42.280 --> 00:44:45.000 align:middle line:84%
+So in the next lecture
+what we're going to do
+
+00:44:45.000 --> 00:44:47.830 align:middle line:84%
+is a recap of recursion
+using another example,
+
+00:44:47.830 --> 00:44:49.590 align:middle line:90%
+a Fibonacci sequence.
+
+00:44:49.590 --> 00:44:51.510 align:middle line:84%
+And then we're going
+to start looking
+
+00:44:51.510 --> 00:44:55.170 align:middle line:90%
+at recursion applied to lists.
+
+00:44:55.170 --> 00:44:57.180 align:middle line:84%
+And specifically,
+if we have lists
+
+00:44:57.180 --> 00:44:59.730 align:middle line:84%
+within lists within
+lists within lists
+
+00:44:59.730 --> 00:45:03.360 align:middle line:84%
+and we don't know how many
+nested lists we might have,
+
+00:45:03.360 --> 00:45:06.620 align:middle line:84%
+recursion is going to be a
+perfect example for that.
+
+00:45:06.620 --> 00:45:18.000 align:middle line:90%

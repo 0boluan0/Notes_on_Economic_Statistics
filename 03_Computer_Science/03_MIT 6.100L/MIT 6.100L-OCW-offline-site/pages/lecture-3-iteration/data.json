@@ -1,0 +1,6 @@
+
+{
+  "title":"Lecture 3: Iteration",
+  "content":"Topics: Program Flow: control flow, loops\nViewing videos requires an internet connection Your browser does not support some features required to play this video. Please update your browser to the latest version for the best experience. You can also download the video to watch it offline. View video page Download video Download transcript Lecture Notes Lecture 3: Iteration\nLecture 3 Code\nReadings Ch 2.5–2.8\nFinger Exercise Lecture 3 Assume you are given a positive integer variable named N. Write a piece of Python code that prints hello world on separate lines, N times. You can use either a while loop or a for loop.\n6.100L Finger Exercises Lecture 3 Solutions\nRecitation 2 Recitations were smaller sections that reviewed the previous lectures. Files contain recitation notes and worked examples in code.\nRecitation 2 Notes and Code\n"}
+
+

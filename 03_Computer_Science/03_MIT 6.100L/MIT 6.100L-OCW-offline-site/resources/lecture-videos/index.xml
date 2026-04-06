@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lecture Videos on MIT OpenCourseWare</title>
+    <link>/resources/lecture-videos/</link>
+    <description>Recent content in Lecture Videos on MIT OpenCourseWare</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="/resources/lecture-videos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 1: Introduction to CS and Programming Using Python</title>
+      <link>/resources/6100l-lecture-1-version-2_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-1-version-2_mp4/data.json</guid>
+      <description>&lt;p&gt;An introduction to what computation is, Python basics, mathematical operations, and Python variables and types. We explore Python objects and Python programs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 10: Lists and Mutability</title>
+      <link>/resources/6100l-lecture-10-version-3_1_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-10-version-3_1_mp4/data.json</guid>
+      <description>&lt;p&gt;This lecture explores list operations and mutability: mutation, aliasing, and tricky examples with loops over L. Lists and tuples provide a way to organize data that naturally supports iterative functions. Tuples are useful when you have data that doesn’t need to change, e.g., (latitude, longitude) or (page #, line #). Lists are useful in dynamic situations, e.g., a list of daily top 40 songs or a list of recently watched movies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 11: Aliasing and Cloning</title>
+      <link>/resources/6100l-lecture-11-version-2_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-11-version-2_mp4/data.json</guid>
+      <description>&lt;p&gt;This lecture discusses aliasing, cloning, list comprehensions, and the difference between shallow copies and deep copies with mutable elements.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 12: List Comprehension, Functions as Objects, Testing, and Debugging</title>
+      <link>/resources/6100l-lecture-12-multi-version-4_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-12-multi-version-4_mp4/data.json</guid>
+      <description>&lt;p&gt;Lecture 12 continues with more functions as objects, keyword arguments, default arguments, and types of debugging: glassbox / black box testing with examples.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 13: Exceptions and Assertions</title>
+      <link>/resources/6100l-lecture-13-version-2_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-13-version-2_mp4/data.json</guid>
+      <description>&lt;p&gt;An introduction to the concepts of exceptions and assertions, how to handle exceptions, and how to raise assertion errors.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 14: Dictionaries</title>
+      <link>/resources/6100l-lecture-14-multi_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-14-multi_mp4/data.json</guid>
+      <description>&lt;p&gt;Introduces dictionaries, their keys and values, their mutability, and iteration over a dictionary with examples. Dictionaries have entries that map a key to a value. Keys are immutable/hashable and unique objects while values can be any object. Dictionaries can make code efficient implementation-wise and runtime-wise.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 15: Recursion</title>
+      <link>/resources/6100l-lecture-15-version-2_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-15-version-2_mp4/data.json</guid>
+      <description>&lt;p&gt;Recursion is a programming method and a way to divide and conquer. A problem is broken down into a base case and a recursive step.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 16: Recursion on Non-numerics</title>
+      <link>/resources/6100l-lecture-16-multi-version-2_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-16-multi-version-2_mp4/data.json</guid>
+      <description>&lt;p&gt;The recursion procedure from this lecture can be applied to any indexable ordered sequence. The same idea will work on problems involving strings or tuples.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 17: Python Classes</title>
+      <link>/resources/6100l-lecture-17-version-2_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-17-version-2_mp4/data.json</guid>
+      <description>&lt;p&gt;Prof. Bell discusses how classes make it easy to reuse code. Each class has a separate environment (no collision on function names) and inheritance allows subclasses to redefine or extend a selected subset of a superclass’s behavior.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 18: More Python Class Methods</title>
+      <link>/resources/6100l-lecture-18-multi-version-2_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-18-multi-version-2_mp4/data.json</guid>
+      <description>&lt;p&gt;This lecture discusses decomposition and abstraction at work with Python classes. Bundling data and behaviors means you can use objects consistently. Dunder methods are abstracted by common operations, but they’re just methods behind the scenes!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 19: Inheritance</title>
+      <link>/resources/6100l-lecture-19-multi-version-2_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-19-multi-version-2_mp4/data.json</guid>
+      <description>&lt;p&gt;This lecture describes how to add layers of complexity through hierarchies and child classes which inherit data and methods from parent classes. Like functions, classes are a mechanism for decomposition and abstraction in programming.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 2: Strings, Input/Output, and Branching</title>
+      <link>/resources/6100l-lecture-2-multi-version-4_1_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-2-multi-version-4_1_mp4/data.json</guid>
+      <description>&lt;p&gt;This lecture discusses the core elements of programs: strings, input/output, f-strings, operators, branching, and indentation. Big idea: Debug early, debug often. Write a little and test a little. Don’t write a complete program at once. It introduces too many errors. Use the Python Tutor to step through code when you see something unexpected!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 20: Fitness Tracker Object-Oriented Programming Example</title>
+      <link>/resources/6100l-lecture-20-version-2_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-20-version-2_mp4/data.json</guid>
+      <description>&lt;p&gt;Prof. Bell uses fitness trackers as an example to explain the difference between implementing a new object type using a class and using the object in code and the two different coding perspectives. Object-oriented programming is a powerful tool for modularizing your code and grouping state and functions together, but it’s possible to overdo it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 21: Timing Programs and Counting Operations</title>
+      <link>/resources/6100l-lecture-21-version-2_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-21-version-2_mp4/data.json</guid>
+      <description>&lt;p&gt;Learn to evaluate programs by measuring with a timer, counting the operations, and abstracting the notion of order of growth.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 22: Big Oh and Theta</title>
+      <link>/resources/6100l-lecture-22-version-2_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-22-version-2_mp4/data.json</guid>
+      <description>&lt;p&gt;This lecture explores how to compare the efficiency of algorithms by using notation that describes growth independent of machine or specific implementation. It shows how to use Theta to describe asymptotic order of growth as well as upper and lower bounds.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 23: Complexity Classes Examples</title>
+      <link>/resources/6100l-lecture-23-version-2_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-23-version-2_mp4/data.json</guid>
+      <description>&lt;p&gt;This lecture looks at complexity classes to compare the efficiency of algorithms, lower order of growth, and use Θ for an upper and lower (“tight”) bound.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 24: Sorting Algorithms</title>
+      <link>/resources/6100l-lecture-24-version-2_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-24-version-2_mp4/data.json</guid>
+      <description>&lt;p&gt;This lecture discusses different kinds of sorting and the levels of complexity of each algorithm. The sorting algorithms discussed are BOGO sort, bubble sort, selection sort, and merge sort.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 25: Plotting</title>
+      <link>/resources/6100l-lecture-25-multi_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-25-multi_mp4/data.json</guid>
+      <description>&lt;p&gt;Sooner or later, everyone needs to produce plots because they help us visualize data to see trends and pose computational questions to probe. Python libraries for plotting and numerical and stochastic computation are explored.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 26: List Access, Hashing, Simulations, and Wrap-Up</title>
+      <link>/resources/6100l-lecture-26-multi_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-26-multi_mp4/data.json</guid>
+      <description>&lt;p&gt;Prof. Bell wraps up the course by talking more about lists and how and why to use hashing, and gives some simulation examples.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 3: Iteration</title>
+      <link>/resources/6100l-lecture-3-multi_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-3-multi_mp4/data.json</guid>
+      <description>&lt;p&gt;An introduction to control flow and iteration through loops. Looping mechanisms include &lt;code&gt;while&lt;/code&gt; and for &lt;code&gt;loops&lt;/code&gt;. Lots of syntax today, be sure to get lots of practice! &lt;code&gt;While&lt;/code&gt; loops loop as long as a condition is true and you need to make sure you don’t enter an infinite loop. &lt;code&gt;For&lt;/code&gt; loops can loop over ranges of numbers and elements of a string.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 4: Loops over Strings, Guess-and-Check, and Binary</title>
+      <link>/resources/6100l-lecture-4-multi_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-4-multi_mp4/data.json</guid>
+      <description>&lt;p&gt;This lecture explains iteration in simple programs like guess-and-check, binaries, and fractions in Python. Loops can iterate over any sequence of values including a range for numbers or a string. Guess-and-check provides a simple algorithm for solving problems. When the set of potential solutions is enumerable, exhaustive enumeration is guaranteed to work (eventually). Binary numbers help us understand how the machine works. Converting to binary will help us understand how decimal numbers are stored&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 5: Floats and Approximation Methods</title>
+      <link>/resources/6100l-lecture-5-multi_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-5-multi_mp4/data.json</guid>
+      <description>&lt;p&gt;An introduction to simple algorithms, float types, and approximation methods. Floating point numbers introduce challenges as they can&amp;rsquo;t be represented in memory exactly. Approximation methods use these floating numbers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 6: Bisection Search</title>
+      <link>/resources/6100l-lecture-6-multi-version-3_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-6-multi-version-3_mp4/data.json</guid>
+      <description>&lt;p&gt;This lecture discusses the simple algorithms of bisection search and Newton-Raphson. Bisection search takes advantage of the properties of the problem. Decomposition and abstraction make code easy to create, modify, maintain, and understand.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 7: Decomposition, Abstraction, and Functions</title>
+      <link>/resources/6100l-lecture-7-multi_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-7-multi_mp4/data.json</guid>
+      <description>&lt;p&gt;An introduction to functions and their decomposition, abstractions, and specifications. Functions allow us to suppress detail from a user and capture computation within a black box. A programmer writes functions with 0 or more inputs and something to return. A function only runs when it is called and the entire function call is replaced with the return value.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 8: Functions as Objects</title>
+      <link>/resources/6100l-lecture-8-version-2_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-8-version-2_mp4/data.json</guid>
+      <description>&lt;p&gt;This lecture further explores functions and their scopes and environments as well as functions as objects. Functions are first-class objects that have a type and can be assigned as a value, used as an argument for another procedure, or returned from another procedure. Being careful about environments enables the creation of concise, easily-read code.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lecture 9: Lambda Functions, Tuples, and Lists</title>
+      <link>/resources/6100l-lecture-9-version-2_mp4/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/6100l-lecture-9-version-2_mp4/data.json</guid>
+      <description>&lt;p&gt;Prof. Bell discusses the variable types tuples and lists and how to use lambda functions. Lambda functions are useful when you need a simple function once. Tuples and lists are indexable sequences of objects.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

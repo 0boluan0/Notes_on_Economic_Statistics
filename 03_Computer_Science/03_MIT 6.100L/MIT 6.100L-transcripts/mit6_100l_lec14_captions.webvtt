@@ -1,0 +1,6032 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.940 align:middle line:90%
+[AUDIO LOGO]
+
+00:00:02.940 --> 00:00:11.760 align:middle line:90%
+
+
+00:00:11.760 --> 00:00:13.010 align:middle line:90%
+ANA BELL: All right, everyone.
+
+00:00:13.010 --> 00:00:14.690 align:middle line:90%
+Let's get started.
+
+00:00:14.690 --> 00:00:18.280 align:middle line:84%
+So today's lecture will be on
+this thing called dictionaries,
+
+00:00:18.280 --> 00:00:20.530 align:middle line:84%
+and it's not the
+dictionaries that our parents
+
+00:00:20.530 --> 00:00:22.240 align:middle line:90%
+and grandparents used.
+
+00:00:22.240 --> 00:00:26.110 align:middle line:84%
+Notice, I never actually used
+regular book dictionaries
+
+00:00:26.110 --> 00:00:29.330 align:middle line:84%
+either, maybe once
+in my entire life.
+
+00:00:29.330 --> 00:00:32.090 align:middle line:84%
+But it's actually on
+a Python dictionary.
+
+00:00:32.090 --> 00:00:35.500 align:middle line:84%
+So this is going to be a new
+data type that we have not
+
+00:00:35.500 --> 00:00:36.800 align:middle line:90%
+worked with before.
+
+00:00:36.800 --> 00:00:39.040 align:middle line:84%
+But it'll be a
+compound data type,
+
+00:00:39.040 --> 00:00:41.612 align:middle line:84%
+much like we've seen
+lists and tuples to be.
+
+00:00:41.612 --> 00:00:43.570 align:middle line:84%
+It's just going to be
+very different than lists
+
+00:00:43.570 --> 00:00:45.850 align:middle line:90%
+and tuples.
+
+00:00:45.850 --> 00:00:50.730 align:middle line:84%
+So before I introduce
+a bunch of syntax
+
+00:00:50.730 --> 00:00:53.670 align:middle line:84%
+and what a Python
+dictionary is, let's
+
+00:00:53.670 --> 00:00:57.990 align:middle line:84%
+try to just motivate the need
+for such a data structure.
+
+00:00:57.990 --> 00:01:00.800 align:middle line:84%
+So suppose we have
+the following problem.
+
+00:01:00.800 --> 00:01:02.450 align:middle line:84%
+We've been dealing
+with this problem
+
+00:01:02.450 --> 00:01:04.310 align:middle line:90%
+in many of our lectures.
+
+00:01:04.310 --> 00:01:08.970 align:middle line:84%
+But we, once again, want to
+store student information.
+
+00:01:08.970 --> 00:01:12.650 align:middle line:84%
+So let's say we want to
+store grade information
+
+00:01:12.650 --> 00:01:15.320 align:middle line:90%
+for a bunch of students.
+
+00:01:15.320 --> 00:01:20.450 align:middle line:84%
+With what we know so far, we can
+store information using lists.
+
+00:01:20.450 --> 00:01:22.430 align:middle line:84%
+It's a very reasonable
+data structure
+
+00:01:22.430 --> 00:01:25.070 align:middle line:84%
+to use because we might get
+new students in the class.
+
+00:01:25.070 --> 00:01:26.240 align:middle line:90%
+Students might drop.
+
+00:01:26.240 --> 00:01:27.870 align:middle line:84%
+Grades might change,
+things like that.
+
+00:01:27.870 --> 00:01:31.440 align:middle line:84%
+So let's use this mutable
+data structure a list.
+
+00:01:31.440 --> 00:01:36.210 align:middle line:84%
+Let's say we want to store names
+of students and their grades
+
+00:01:36.210 --> 00:01:38.190 align:middle line:84%
+in the class, like their
+final letter grade.
+
+00:01:38.190 --> 00:01:41.040 align:middle line:84%
+Additionally, we can store
+things like micro quiz grades
+
+00:01:41.040 --> 00:01:42.420 align:middle line:90%
+and psets grades.
+
+00:01:42.420 --> 00:01:43.980 align:middle line:84%
+But for now, let's
+just assume we're
+
+00:01:43.980 --> 00:01:46.450 align:middle line:84%
+storing just the names and
+the final grades in the class.
+
+00:01:46.450 --> 00:01:49.140 align:middle line:84%
+So if we do this using
+lists, one reasonable way
+
+00:01:49.140 --> 00:01:51.622 align:middle line:84%
+to store this
+information is by saying,
+
+00:01:51.622 --> 00:01:53.580 align:middle line:84%
+well, I'm going to have
+a list of all the names
+
+00:01:53.580 --> 00:01:55.070 align:middle line:90%
+of the students in my class.
+
+00:01:55.070 --> 00:01:56.820 align:middle line:84%
+I'm going to have a
+list of all the grades
+
+00:01:56.820 --> 00:01:58.470 align:middle line:90%
+of these students in the class.
+
+00:01:58.470 --> 00:02:01.470 align:middle line:84%
+And I'm basically going
+to go index by index
+
+00:02:01.470 --> 00:02:06.210 align:middle line:84%
+and make the rule that
+says, at a particular index,
+
+00:02:06.210 --> 00:02:09.220 align:middle line:84%
+I'm storing all the information
+related to this one person.
+
+00:02:09.220 --> 00:02:12.120 align:middle line:84%
+So at index 0 here,
+I'm storing the name
+
+00:02:12.120 --> 00:02:14.160 align:middle line:90%
+of the student and their grade.
+
+00:02:14.160 --> 00:02:17.250 align:middle line:84%
+At index 1, I'm storing
+the name of that student
+
+00:02:17.250 --> 00:02:18.570 align:middle line:90%
+John and their grade.
+
+00:02:18.570 --> 00:02:21.323 align:middle line:84%
+At index 2, I'm storing
+the name of that student
+
+00:02:21.323 --> 00:02:21.990 align:middle line:90%
+and their grade.
+
+00:02:21.990 --> 00:02:24.450 align:middle line:84%
+And at index 3, and
+so on and so on.
+
+00:02:24.450 --> 00:02:26.580 align:middle line:84%
+So now I basically
+have to remember
+
+00:02:26.580 --> 00:02:30.300 align:middle line:84%
+that, for a particular index, I
+am storing all the information
+
+00:02:30.300 --> 00:02:34.170 align:middle line:90%
+related to that student, right?
+
+00:02:34.170 --> 00:02:38.850 align:middle line:84%
+OK, so seems like a
+reasonable way to do this.
+
+00:02:38.850 --> 00:02:41.610 align:middle line:84%
+Now, let's say that
+I wanted to look up
+
+00:02:41.610 --> 00:02:44.110 align:middle line:84%
+the grade for a
+particular student.
+
+00:02:44.110 --> 00:02:48.150 align:middle line:84%
+So I write this function
+called get_grade.
+
+00:02:48.150 --> 00:02:49.780 align:middle line:90%
+It takes in some parameters.
+
+00:02:49.780 --> 00:02:52.560 align:middle line:84%
+So the first thing it will take
+in is the name of the student,
+
+00:02:52.560 --> 00:02:54.270 align:middle line:90%
+so Ana, for example.
+
+00:02:54.270 --> 00:02:58.077 align:middle line:84%
+And I would pass in the list
+of all the names in my class
+
+00:02:58.077 --> 00:02:59.910 align:middle line:84%
+and the list of all the
+grades in the class.
+
+00:02:59.910 --> 00:03:03.480 align:middle line:84%
+So these two lists that I've
+previously created, right?
+
+00:03:03.480 --> 00:03:05.980 align:middle line:84%
+So these get passed
+in to this function.
+
+00:03:05.980 --> 00:03:08.550 align:middle line:84%
+So you can imagine if we have
+a list of everybody at MIT,
+
+00:03:08.550 --> 00:03:11.100 align:middle line:84%
+these lists are going to
+be pretty large that we're
+
+00:03:11.100 --> 00:03:12.870 align:middle line:90%
+passing in as parameters.
+
+00:03:12.870 --> 00:03:15.810 align:middle line:84%
+How do we actually
+grab the letter grade
+
+00:03:15.810 --> 00:03:17.220 align:middle line:90%
+associated with a student?
+
+00:03:17.220 --> 00:03:18.600 align:middle line:84%
+Well, we're going
+to use the fact
+
+00:03:18.600 --> 00:03:22.890 align:middle line:84%
+that the letter grade
+for the student at index
+
+00:03:22.890 --> 00:03:31.350 align:middle line:84%
+I in the grades list is going
+to be grabbing the letter
+
+00:03:31.350 --> 00:03:34.710 align:middle line:84%
+grade for the student at that
+same index in the name list.
+
+00:03:34.710 --> 00:03:38.100 align:middle line:84%
+So we have to figure out
+this particular student being
+
+00:03:38.100 --> 00:03:42.540 align:middle line:84%
+passed in here, what index
+they're at in the names list.
+
+00:03:42.540 --> 00:03:44.610 align:middle line:84%
+So that's what this
+line of code is doing.
+
+00:03:44.610 --> 00:03:48.120 align:middle line:84%
+It's using this index
+function on the name
+
+00:03:48.120 --> 00:03:51.630 align:middle line:84%
+list with a parameter,
+for example, Ana.
+
+00:03:51.630 --> 00:03:57.040 align:middle line:84%
+So this will return for us the
+index where Ana is in my list.
+
+00:03:57.040 --> 00:04:01.350 align:middle line:84%
+So from the previous example,
+it's going to say that--
+
+00:04:01.350 --> 00:04:04.110 align:middle line:84%
+it's going to return the
+number 0 because Ana is stored
+
+00:04:04.110 --> 00:04:06.880 align:middle line:90%
+in the name list at index 0.
+
+00:04:06.880 --> 00:04:11.080 align:middle line:84%
+So now that I have that index
+in hand stored in variable I,
+
+00:04:11.080 --> 00:04:15.550 align:middle line:84%
+can just index into the grade
+list at that same index, OK?
+
+00:04:15.550 --> 00:04:18.130 align:middle line:84%
+So I can get grade
+list at index 0
+
+00:04:18.130 --> 00:04:19.750 align:middle line:84%
+will return for me
+the grade that I
+
+00:04:19.750 --> 00:04:22.300 align:middle line:84%
+got for that particular
+class or whatever
+
+00:04:22.300 --> 00:04:24.910 align:middle line:90%
+we're storing here, OK?
+
+00:04:24.910 --> 00:04:28.210 align:middle line:84%
+And then we just return the
+tuple student comma great.
+
+00:04:28.210 --> 00:04:30.760 align:middle line:84%
+So this becomes
+really messy, right?
+
+00:04:30.760 --> 00:04:32.290 align:middle line:84%
+I already mentioned
+that if I have
+
+00:04:32.290 --> 00:04:33.970 align:middle line:84%
+a list of a whole
+bunch of students
+
+00:04:33.970 --> 00:04:37.840 align:middle line:84%
+for a really large class or
+the entire university, then
+
+00:04:37.840 --> 00:04:40.450 align:middle line:84%
+it becomes really
+unwieldy to just keep
+
+00:04:40.450 --> 00:04:41.950 align:middle line:90%
+passing in all these lists.
+
+00:04:41.950 --> 00:04:44.890 align:middle line:84%
+If I have in addition
+all these micro quiz
+
+00:04:44.890 --> 00:04:46.780 align:middle line:84%
+lists and all these
+problem set lists
+
+00:04:46.780 --> 00:04:49.510 align:middle line:84%
+that also store additional
+information for the student,
+
+00:04:49.510 --> 00:04:53.320 align:middle line:84%
+I then have to pass those in
+for their respective functions.
+
+00:04:53.320 --> 00:04:56.410 align:middle line:84%
+And so it gets
+really messy, right,
+
+00:04:56.410 --> 00:04:59.380 align:middle line:84%
+writing these functions that
+retrieve this information.
+
+00:04:59.380 --> 00:05:01.870 align:middle line:84%
+And additionally, if we're
+mutating these lists,
+
+00:05:01.870 --> 00:05:03.580 align:middle line:84%
+like if a new student
+comes in and we
+
+00:05:03.580 --> 00:05:05.210 align:middle line:84%
+need to add all
+their information,
+
+00:05:05.210 --> 00:05:07.780 align:middle line:84%
+I need to make sure to update
+every single one of these lists
+
+00:05:07.780 --> 00:05:08.710 align:middle line:90%
+that I'm maintaining.
+
+00:05:08.710 --> 00:05:11.500 align:middle line:84%
+If a student leaves
+or drops the class,
+
+00:05:11.500 --> 00:05:14.710 align:middle line:84%
+I need to remember to
+remove that index from all
+
+00:05:14.710 --> 00:05:15.980 align:middle line:90%
+of these different lists.
+
+00:05:15.980 --> 00:05:17.920 align:middle line:84%
+So really, really
+messy situation
+
+00:05:17.920 --> 00:05:21.610 align:middle line:84%
+that we could get into by
+using this method to store
+
+00:05:21.610 --> 00:05:24.830 align:middle line:90%
+information about students.
+
+00:05:24.830 --> 00:05:27.230 align:middle line:84%
+So let's try a
+different approach.
+
+00:05:27.230 --> 00:05:30.160 align:middle line:84%
+Instead of using all of
+these different lists,
+
+00:05:30.160 --> 00:05:32.290 align:middle line:84%
+let's say that we're
+going to store everything
+
+00:05:32.290 --> 00:05:34.570 align:middle line:90%
+in a master list.
+
+00:05:34.570 --> 00:05:36.310 align:middle line:90%
+So we're not storing many lists.
+
+00:05:36.310 --> 00:05:39.220 align:middle line:84%
+We'll just store one list
+for the grades in the class.
+
+00:05:39.220 --> 00:05:42.220 align:middle line:84%
+And the way that
+it will be stored
+
+00:05:42.220 --> 00:05:46.780 align:middle line:84%
+according to in this slide is
+going to be this grades list.
+
+00:05:46.780 --> 00:05:49.780 align:middle line:84%
+OK, so this is one list
+with three elements in it.
+
+00:05:49.780 --> 00:05:52.510 align:middle line:84%
+And you can imagine if we have
+more students we would just
+
+00:05:52.510 --> 00:05:55.220 align:middle line:84%
+put all these students
+in this master list.
+
+00:05:55.220 --> 00:06:00.310 align:middle line:84%
+So what is each one of
+these student elements?
+
+00:06:00.310 --> 00:06:03.100 align:middle line:84%
+Well, each student
+element is itself a list.
+
+00:06:03.100 --> 00:06:05.360 align:middle line:84%
+So already, I've
+got my master list.
+
+00:06:05.360 --> 00:06:08.480 align:middle line:84%
+And each element within
+this list is also a list.
+
+00:06:08.480 --> 00:06:11.080 align:middle line:84%
+So this is a list for
+Eric, a list for Ana,
+
+00:06:11.080 --> 00:06:12.160 align:middle line:90%
+and a list for John.
+
+00:06:12.160 --> 00:06:14.410 align:middle line:90%
+These are variable names.
+
+00:06:14.410 --> 00:06:17.530 align:middle line:84%
+What are these lists
+going to be comprised of?
+
+00:06:17.530 --> 00:06:20.090 align:middle line:84%
+Well, they will be
+comprised of three things.
+
+00:06:20.090 --> 00:06:22.430 align:middle line:90%
+So notice two commas here.
+
+00:06:22.430 --> 00:06:24.340 align:middle line:84%
+So the first thing
+is their name.
+
+00:06:24.340 --> 00:06:28.150 align:middle line:84%
+The second thing is another list
+containing their problem set
+
+00:06:28.150 --> 00:06:28.870 align:middle line:90%
+grades.
+
+00:06:28.870 --> 00:06:33.280 align:middle line:84%
+And I'm using this
+element of that list
+
+00:06:33.280 --> 00:06:36.760 align:middle line:84%
+to denote what that set
+of numbers represents.
+
+00:06:36.760 --> 00:06:41.268 align:middle line:84%
+And then another list
+as my third element
+
+00:06:41.268 --> 00:06:43.060 align:middle line:84%
+being the scores for
+the micro quiz grades.
+
+00:06:43.060 --> 00:06:44.770 align:middle line:84%
+And again, I'm denoting
+the first element
+
+00:06:44.770 --> 00:06:50.800 align:middle line:84%
+of that list telling me
+what this list contains.
+
+00:06:50.800 --> 00:06:54.520 align:middle line:84%
+OK, so I've got
+lists, master list
+
+00:06:54.520 --> 00:06:56.950 align:middle line:84%
+with three sublists
+for my three students.
+
+00:06:56.950 --> 00:06:59.290 align:middle line:84%
+And each one of those lists
+contains three elements,
+
+00:06:59.290 --> 00:07:00.940 align:middle line:84%
+a string, a list,
+and another list.
+
+00:07:00.940 --> 00:07:05.410 align:middle line:84%
+And those two lists are then
+also comprised of a string
+
+00:07:05.410 --> 00:07:06.700 align:middle line:90%
+and a list themselves.
+
+00:07:06.700 --> 00:07:08.470 align:middle line:90%
+So super complex.
+
+00:07:08.470 --> 00:07:11.800 align:middle line:84%
+A data structure-- or a sort
+of composition or design
+
+00:07:11.800 --> 00:07:13.750 align:middle line:90%
+choice that I've made here.
+
+00:07:13.750 --> 00:07:17.290 align:middle line:84%
+But it solves the
+problem of maintaining
+
+00:07:17.290 --> 00:07:21.350 align:middle line:84%
+all these different lists
+in separate variables.
+
+00:07:21.350 --> 00:07:23.980 align:middle line:84%
+So now, let's say I wanted
+to write a function that
+
+00:07:23.980 --> 00:07:28.330 align:middle line:84%
+gets the grades for a particular
+student for either problem
+
+00:07:28.330 --> 00:07:31.170 align:middle line:90%
+set or micro quizzes grades.
+
+00:07:31.170 --> 00:07:33.100 align:middle line:84%
+This is the function
+that does that.
+
+00:07:33.100 --> 00:07:36.990 align:middle line:84%
+So again, it's not
+looking super nice.
+
+00:07:36.990 --> 00:07:39.210 align:middle line:84%
+So what is this function
+going to take in?
+
+00:07:39.210 --> 00:07:41.950 align:middle line:84%
+The who is going to be a
+string representing the name,
+
+00:07:41.950 --> 00:07:43.410 align:middle line:90%
+so for example, Ana.
+
+00:07:43.410 --> 00:07:46.710 align:middle line:84%
+The what will be also
+a string representing
+
+00:07:46.710 --> 00:07:51.630 align:middle line:84%
+what information I'd like
+to grab, either ps or mq.
+
+00:07:51.630 --> 00:07:55.810 align:middle line:84%
+And the data is going to be my
+master list of all the grades.
+
+00:07:55.810 --> 00:07:59.250 align:middle line:84%
+So this grades equals
+this list of every body.
+
+00:07:59.250 --> 00:08:00.930 align:middle line:84%
+So what is this
+code going to do?
+
+00:08:00.930 --> 00:08:04.820 align:middle line:84%
+Well, it has a
+for loop down here
+
+00:08:04.820 --> 00:08:07.190 align:middle line:90%
+and a nested for loop inside it.
+
+00:08:07.190 --> 00:08:09.920 align:middle line:84%
+The outer for loop
+basically looks
+
+00:08:09.920 --> 00:08:12.680 align:middle line:84%
+through each one of
+these elements here
+
+00:08:12.680 --> 00:08:16.070 align:middle line:84%
+and looks at the
+element at index 0,
+
+00:08:16.070 --> 00:08:18.620 align:middle line:84%
+so either Eric, Ana,
+or John, and grabs
+
+00:08:18.620 --> 00:08:23.690 align:middle line:84%
+only the list where that
+piece, this string here
+
+00:08:23.690 --> 00:08:25.430 align:middle line:90%
+matches the who.
+
+00:08:25.430 --> 00:08:29.030 align:middle line:84%
+So if student at index
+0 equals who right here,
+
+00:08:29.030 --> 00:08:31.220 align:middle line:84%
+then we found the student
+I'm interested in grabbing
+
+00:08:31.220 --> 00:08:32.870 align:middle line:90%
+the information for.
+
+00:08:32.870 --> 00:08:33.530 align:middle line:90%
+Cool.
+
+00:08:33.530 --> 00:08:35.840 align:middle line:84%
+So now I've gotten I've
+grabbed the right piece,
+
+00:08:35.840 --> 00:08:37.700 align:middle line:90%
+the right list.
+
+00:08:37.700 --> 00:08:42.440 align:middle line:84%
+And now I'm interested in their
+grades for a particular what,
+
+00:08:42.440 --> 00:08:44.059 align:middle line:90%
+so either mq or ps.
+
+00:08:44.059 --> 00:08:47.730 align:middle line:84%
+So I do the exact same thing
+again for that list here,
+
+00:08:47.730 --> 00:08:48.230 align:middle line:90%
+right?
+
+00:08:48.230 --> 00:08:52.310 align:middle line:84%
+So if I'm interested
+in Ana's ps grades,
+
+00:08:52.310 --> 00:08:56.300 align:middle line:90%
+I grab these lists here.
+
+00:08:56.300 --> 00:08:59.344 align:middle line:84%
+And then I'm going
+to check if the--
+
+00:08:59.344 --> 00:09:03.080 align:middle line:84%
+info at index 0, so
+either this ps or this mq
+
+00:09:03.080 --> 00:09:06.000 align:middle line:84%
+matches the what,
+so either ps or mq
+
+00:09:06.000 --> 00:09:07.830 align:middle line:84%
+to match what I'm
+interested in grabbing,
+
+00:09:07.830 --> 00:09:09.512 align:middle line:84%
+the information,
+what information I'm
+
+00:09:09.512 --> 00:09:10.470 align:middle line:90%
+interested in grabbing.
+
+00:09:10.470 --> 00:09:14.280 align:middle line:84%
+And then I'm going to go
+inside this if statement
+
+00:09:14.280 --> 00:09:17.220 align:middle line:84%
+if they match, and then I
+return the who and the info.
+
+00:09:17.220 --> 00:09:19.200 align:middle line:90%
+So again, super complex.
+
+00:09:19.200 --> 00:09:22.410 align:middle line:84%
+No need to understand this that
+well because we're not going
+
+00:09:22.410 --> 00:09:24.130 align:middle line:90%
+to use this method for long.
+
+00:09:24.130 --> 00:09:27.890 align:middle line:84%
+So this get_grades
+here, for example,
+
+00:09:27.890 --> 00:09:31.450 align:middle line:84%
+if I grab Eric's micro quiz
+grades and I run the code,
+
+00:09:31.450 --> 00:09:34.840 align:middle line:84%
+it will return for
+me this tuple that
+
+00:09:34.840 --> 00:09:36.770 align:middle line:84%
+returns for me the
+name of the student,
+
+00:09:36.770 --> 00:09:39.820 align:middle line:84%
+and then just this sublist
+of the thing that I
+
+00:09:39.820 --> 00:09:42.100 align:middle line:84%
+was interested, in
+this case, micro quiz.
+
+00:09:42.100 --> 00:09:43.940 align:middle line:84%
+And it grabs for
+me all the grades.
+
+00:09:43.940 --> 00:09:46.720 align:middle line:84%
+And then I can then
+index into this returned
+
+00:09:46.720 --> 00:09:50.390 align:middle line:84%
+tuple to grab either the first
+quiz or the second quiz grades.
+
+00:09:50.390 --> 00:09:54.360 align:middle line:90%
+OK, and same for Ana.
+
+00:09:54.360 --> 00:09:56.130 align:middle line:84%
+In this particular
+case, it grabs
+
+00:09:56.130 --> 00:09:58.830 align:middle line:84%
+for me just the
+tuple with my name
+
+00:09:58.830 --> 00:10:01.890 align:middle line:84%
+and then that sublist with
+the problem set grades.
+
+00:10:01.890 --> 00:10:04.460 align:middle line:90%
+
+
+00:10:04.460 --> 00:10:08.090 align:middle line:90%
+OK, so again, really messy.
+
+00:10:08.090 --> 00:10:09.860 align:middle line:84%
+I've made my design
+choice for how
+
+00:10:09.860 --> 00:10:13.430 align:middle line:84%
+to create all these lists
+with sublists and sublists
+
+00:10:13.430 --> 00:10:15.300 align:middle line:90%
+within those.
+
+00:10:15.300 --> 00:10:17.720 align:middle line:84%
+And so I'd have to
+document that probably
+
+00:10:17.720 --> 00:10:19.190 align:middle line:90%
+if I was using this method.
+
+00:10:19.190 --> 00:10:22.520 align:middle line:84%
+And then this function to
+grab this information, again,
+
+00:10:22.520 --> 00:10:25.100 align:middle line:90%
+super complex.
+
+00:10:25.100 --> 00:10:27.110 align:middle line:90%
+Hard to read.
+
+00:10:27.110 --> 00:10:29.810 align:middle line:84%
+So it's not really a great
+way to store information
+
+00:10:29.810 --> 00:10:32.460 align:middle line:84%
+either, but the
+idea behind this,
+
+00:10:32.460 --> 00:10:35.450 align:middle line:84%
+which is to try
+to store some data
+
+00:10:35.450 --> 00:10:40.640 align:middle line:84%
+associated with some sort
+of key, right, the ps or mq,
+
+00:10:40.640 --> 00:10:43.010 align:middle line:84%
+or in this case, I'm
+storing a bunch of grades
+
+00:10:43.010 --> 00:10:44.120 align:middle line:90%
+for Eric or Ana or John.
+
+00:10:44.120 --> 00:10:47.120 align:middle line:90%
+That idea we can explore.
+
+00:10:47.120 --> 00:10:50.490 align:middle line:84%
+And that's basically what
+dictionaries will do for us.
+
+00:10:50.490 --> 00:10:54.020 align:middle line:84%
+It will allow us to create
+data structures that
+
+00:10:54.020 --> 00:10:59.130 align:middle line:84%
+map some sort of custom
+index, a key, to some value.
+
+00:10:59.130 --> 00:11:01.460 align:middle line:84%
+So much like a book
+dictionary does,
+
+00:11:01.460 --> 00:11:04.140 align:middle line:84%
+it maps a word to
+its definition.
+
+00:11:04.140 --> 00:11:06.750 align:middle line:84%
+We'll be able to create our
+own dictionaries that map
+
+00:11:06.750 --> 00:11:09.940 align:middle line:90%
+some object to another object.
+
+00:11:09.940 --> 00:11:13.140 align:middle line:84%
+So when we create
+a dictionary, we
+
+00:11:13.140 --> 00:11:15.540 align:middle line:84%
+call every quote
+unquote "element"
+
+00:11:15.540 --> 00:11:17.370 align:middle line:90%
+in the dictionary an entry.
+
+00:11:17.370 --> 00:11:22.600 align:middle line:84%
+And that entry is that
+mapping of a key to a value.
+
+00:11:22.600 --> 00:11:25.710 align:middle line:84%
+So just to draw a
+parallel with the list,
+
+00:11:25.710 --> 00:11:28.440 align:middle line:84%
+we can think of a list
+as mapping something
+
+00:11:28.440 --> 00:11:30.390 align:middle line:90%
+to another something.
+
+00:11:30.390 --> 00:11:36.780 align:middle line:84%
+The thing that a list maps is
+this index, numbers 0, 1, 2,
+
+00:11:36.780 --> 00:11:38.370 align:middle line:90%
+3 in that order, right?
+
+00:11:38.370 --> 00:11:41.460 align:middle line:84%
+So it has to have an
+element at index 0,
+
+00:11:41.460 --> 00:11:45.450 align:middle line:84%
+and then that index increases
+by 1 from thereon, OK?
+
+00:11:45.450 --> 00:11:48.150 align:middle line:84%
+And for each one
+of these indices,
+
+00:11:48.150 --> 00:11:53.370 align:middle line:84%
+I mapping that index to some
+element in my list, right?
+
+00:11:53.370 --> 00:11:54.870 align:middle line:84%
+That's basically
+what the list does.
+
+00:11:54.870 --> 00:11:57.180 align:middle line:84%
+There's something associated
+with index 0, something
+
+00:11:57.180 --> 00:11:59.650 align:middle line:84%
+associated with
+index 1, and so on.
+
+00:11:59.650 --> 00:12:04.080 align:middle line:84%
+So it's like a very
+restrictive dictionary, right?
+
+00:12:04.080 --> 00:12:06.330 align:middle line:84%
+An actual Python
+dictionary works
+
+00:12:06.330 --> 00:12:10.740 align:middle line:84%
+in a similar way except
+that now I am not putting
+
+00:12:10.740 --> 00:12:13.800 align:middle line:90%
+any restrictions on my indices.
+
+00:12:13.800 --> 00:12:18.640 align:middle line:84%
+My indices here become these
+custom indices called a key.
+
+00:12:18.640 --> 00:12:24.220 align:middle line:84%
+And so now I'm able to associate
+a value, equivalent element
+
+00:12:24.220 --> 00:12:26.540 align:middle line:90%
+in my list, with that key.
+
+00:12:26.540 --> 00:12:32.780 align:middle line:84%
+So I can have an element
+associated with any object.
+
+00:12:32.780 --> 00:12:39.020 align:middle line:84%
+So I am using the term value
+here, and in a dictionary
+
+00:12:39.020 --> 00:12:41.580 align:middle line:84%
+the key is associated
+with a value.
+
+00:12:41.580 --> 00:12:43.610 align:middle line:84%
+And that's one entry
+in the dictionary.
+
+00:12:43.610 --> 00:12:45.770 align:middle line:84%
+Now, this is going to be
+a little bit confusing
+
+00:12:45.770 --> 00:12:47.930 align:middle line:84%
+because we've been
+using the term
+
+00:12:47.930 --> 00:12:52.130 align:middle line:84%
+value to refer to just
+some object's value,
+
+00:12:52.130 --> 00:12:53.980 align:middle line:90%
+right, like int--
+
+00:12:53.980 --> 00:12:57.900 align:middle line:84%
+variable a has value five
+or something like that.
+
+00:12:57.900 --> 00:13:00.300 align:middle line:84%
+But now I'm going to try to
+make a conscious effort, now
+
+00:13:00.300 --> 00:13:02.300 align:middle line:84%
+that we're introducing
+dictionary and dictionary
+
+00:13:02.300 --> 00:13:06.200 align:middle line:84%
+values associated with
+a key, to whenever
+
+00:13:06.200 --> 00:13:08.540 align:middle line:84%
+I'm talking about the
+dictionaries value
+
+00:13:08.540 --> 00:13:11.840 align:middle line:84%
+to say dictionary value
+just so it's not confusing.
+
+00:13:11.840 --> 00:13:13.740 align:middle line:90%
+But just keep that in mind.
+
+00:13:13.740 --> 00:13:15.588 align:middle line:84%
+It can be a little bit
+confusing at first,
+
+00:13:15.588 --> 00:13:17.630 align:middle line:84%
+now that we're using the
+same terminology for two
+
+00:13:17.630 --> 00:13:19.910 align:middle line:90%
+different things.
+
+00:13:19.910 --> 00:13:21.520 align:middle line:90%
+So we're going to go through--
+
+00:13:21.520 --> 00:13:23.260 align:middle line:84%
+in this lecture, we're
+going to introduce
+
+00:13:23.260 --> 00:13:26.170 align:middle line:84%
+a bunch of syntax and
+operations with dictionaries.
+
+00:13:26.170 --> 00:13:28.150 align:middle line:84%
+And there will be lots
+of you-try-it exercises
+
+00:13:28.150 --> 00:13:30.525 align:middle line:84%
+just to give you a little bit
+of practice with the syntax
+
+00:13:30.525 --> 00:13:33.680 align:middle line:84%
+because this is kind of
+a syntax-heavy lecture.
+
+00:13:33.680 --> 00:13:36.040 align:middle line:84%
+So hopefully it
+helps a little bit.
+
+00:13:36.040 --> 00:13:40.810 align:middle line:84%
+But let's first see how to store
+data in a Python dictionary.
+
+00:13:40.810 --> 00:13:45.120 align:middle line:84%
+So as I mentioned, a Python
+dictionary stores entries.
+
+00:13:45.120 --> 00:13:48.730 align:middle line:84%
+And that entry is
+a key value pair.
+
+00:13:48.730 --> 00:13:52.810 align:middle line:84%
+So you're mapping
+one key to its value.
+
+00:13:52.810 --> 00:13:54.678 align:middle line:84%
+The key can be any
+immutable object,
+
+00:13:54.678 --> 00:13:56.970 align:middle line:84%
+and we're going to see what
+this means in a little bit.
+
+00:13:56.970 --> 00:13:59.310 align:middle line:84%
+And the value associated
+with that key,
+
+00:13:59.310 --> 00:14:01.650 align:middle line:84%
+or the Python value
+associated with that key,
+
+00:14:01.650 --> 00:14:04.380 align:middle line:84%
+can be any object
+you'd like, even
+
+00:14:04.380 --> 00:14:07.140 align:middle line:90%
+lists or other dictionaries.
+
+00:14:07.140 --> 00:14:09.440 align:middle line:84%
+So the way we create
+a Python dictionary
+
+00:14:09.440 --> 00:14:14.100 align:middle line:84%
+is by using these open
+and closed curly braces.
+
+00:14:14.100 --> 00:14:16.550 align:middle line:84%
+So tuples were open
+and closed parentheses.
+
+00:14:16.550 --> 00:14:18.890 align:middle line:84%
+Lists were open and
+closed square brackets.
+
+00:14:18.890 --> 00:14:21.780 align:middle line:84%
+Dictionaries are open
+and closed curly braces.
+
+00:14:21.780 --> 00:14:24.860 align:middle line:84%
+And this creates inside
+memory an empty dictionary,
+
+00:14:24.860 --> 00:14:27.450 align:middle line:84%
+so a dictionary
+with zero entries.
+
+00:14:27.450 --> 00:14:31.430 align:middle line:84%
+So the length of
+that dictionary is 0.
+
+00:14:31.430 --> 00:14:33.390 align:middle line:84%
+To create a dictionary
+with one entry in it,
+
+00:14:33.390 --> 00:14:35.770 align:middle line:90%
+again, we have curly braces.
+
+00:14:35.770 --> 00:14:37.510 align:middle line:90%
+And we add one entry in it.
+
+00:14:37.510 --> 00:14:40.020 align:middle line:84%
+So this something
+colon something
+
+00:14:40.020 --> 00:14:43.050 align:middle line:84%
+else is an entry in my
+dictionary, one entry.
+
+00:14:43.050 --> 00:14:46.530 align:middle line:84%
+And the thing before
+the colon is the key.
+
+00:14:46.530 --> 00:14:48.810 align:middle line:84%
+And the thing after
+the colon is the value
+
+00:14:48.810 --> 00:14:50.070 align:middle line:90%
+associated with that key.
+
+00:14:50.070 --> 00:14:53.580 align:middle line:90%
+
+
+00:14:53.580 --> 00:14:56.270 align:middle line:84%
+So you can think of it, if we're
+drawing a parallel to lists,
+
+00:14:56.270 --> 00:15:00.740 align:middle line:84%
+this is now mapping at
+this custom index 4,
+
+00:15:00.740 --> 00:15:02.145 align:middle line:90%
+we're putting element 16.
+
+00:15:02.145 --> 00:15:05.350 align:middle line:90%
+
+
+00:15:05.350 --> 00:15:08.290 align:middle line:84%
+OK, so we can also
+create dictionaries that
+
+00:15:08.290 --> 00:15:09.950 align:middle line:90%
+aren't just full of integers.
+
+00:15:09.950 --> 00:15:12.400 align:middle line:84%
+And you can mix and match
+data types as you'd like.
+
+00:15:12.400 --> 00:15:16.390 align:middle line:84%
+But usually, in dictionaries
+we have the keys all
+
+00:15:16.390 --> 00:15:20.660 align:middle line:84%
+be the same type and the
+values all be the same type.
+
+00:15:20.660 --> 00:15:22.810 align:middle line:84%
+But you can certainly
+mix and match types, just
+
+00:15:22.810 --> 00:15:26.440 align:middle line:84%
+like you could create lists
+and tuples full of an integer
+
+00:15:26.440 --> 00:15:31.200 align:middle line:84%
+and a float and another list
+and mix and match in that way.
+
+00:15:31.200 --> 00:15:33.170 align:middle line:84%
+So here I'm creating
+a dictionary,
+
+00:15:33.170 --> 00:15:36.470 align:middle line:84%
+again, open and closed curly
+braces starts my dictionary.
+
+00:15:36.470 --> 00:15:41.640 align:middle line:84%
+And it has four elements in
+it, sorry, four entries in it.
+
+00:15:41.640 --> 00:15:44.780 align:middle line:84%
+And each entry is
+separated by a comma.
+
+00:15:44.780 --> 00:15:47.190 align:middle line:90%
+I've got here my first entry.
+
+00:15:47.190 --> 00:15:54.350 align:middle line:84%
+So it is mapping the key Ana
+to the dictionary value B.
+
+00:15:54.350 --> 00:15:58.910 align:middle line:84%
+My second entry key mapped
+to value A. Third entry maps
+
+00:15:58.910 --> 00:16:03.680 align:middle line:84%
+key John to value B. And last
+entry maps key Katy to value A.
+
+00:16:03.680 --> 00:16:07.280 align:middle line:84%
+So this is a dictionary that
+essentially maps strings
+
+00:16:07.280 --> 00:16:09.720 align:middle line:90%
+to other strings.
+
+00:16:09.720 --> 00:16:13.910 align:middle line:84%
+So you can see here I've
+visualized the dictionary
+
+00:16:13.910 --> 00:16:15.200 align:middle line:90%
+that we just created.
+
+00:16:15.200 --> 00:16:18.020 align:middle line:84%
+We've got these
+custom indices, right?
+
+00:16:18.020 --> 00:16:25.150 align:middle line:84%
+So we're basically mapping
+names to letter grades, OK?
+
+00:16:25.150 --> 00:16:26.350 align:middle line:90%
+Everything OK so far?
+
+00:16:26.350 --> 00:16:29.050 align:middle line:84%
+Does it make sense, I
+guess, conceptually?
+
+00:16:29.050 --> 00:16:32.010 align:middle line:90%
+OK, awesome.
+
+00:16:32.010 --> 00:16:35.190 align:middle line:84%
+OK, so the first
+thing we'd like to do
+
+00:16:35.190 --> 00:16:37.950 align:middle line:84%
+is, once we have a dictionary
+full of a bunch of entries,
+
+00:16:37.950 --> 00:16:40.380 align:middle line:90%
+how do we grab an entry?
+
+00:16:40.380 --> 00:16:44.930 align:middle line:84%
+How do we look up a value
+associated with a key?
+
+00:16:44.930 --> 00:16:49.900 align:middle line:84%
+So the way we do that is in
+a very similar way to the way
+
+00:16:49.900 --> 00:16:54.100 align:middle line:84%
+we look up an element
+in a list, right?
+
+00:16:54.100 --> 00:16:58.370 align:middle line:84%
+A key in a dictionary
+is just a custom index.
+
+00:16:58.370 --> 00:17:00.560 align:middle line:84%
+So how did we look up
+an element in a list?
+
+00:17:00.560 --> 00:17:03.130 align:middle line:84%
+So if I wanted the
+element at index 3,
+
+00:17:03.130 --> 00:17:05.770 align:middle line:84%
+I would basically say
+L squared brackets 3.
+
+00:17:05.770 --> 00:17:09.020 align:middle line:84%
+And that grabs for me
+the value at that index.
+
+00:17:09.020 --> 00:17:12.230 align:middle line:84%
+Well, now, I've got my
+custom indices, right?
+
+00:17:12.230 --> 00:17:15.380 align:middle line:84%
+My custom indices
+are these strings.
+
+00:17:15.380 --> 00:17:17.700 align:middle line:84%
+The syntax will be
+exactly the same.
+
+00:17:17.700 --> 00:17:19.980 align:middle line:84%
+I've got this custom
+index I'd like to look up.
+
+00:17:19.980 --> 00:17:26.490 align:middle line:84%
+So I say, dictionary, name,
+square bracket, custom index.
+
+00:17:26.490 --> 00:17:29.540 align:middle line:84%
+So if I say grade
+square bracket John,
+
+00:17:29.540 --> 00:17:32.990 align:middle line:84%
+Python will go in to my
+dictionary named grades.
+
+00:17:32.990 --> 00:17:35.770 align:middle line:90%
+It'll look up the key John.
+
+00:17:35.770 --> 00:17:37.750 align:middle line:84%
+And it'll return
+for me the value
+
+00:17:37.750 --> 00:17:41.940 align:middle line:90%
+associated with that key, B.
+
+00:17:41.940 --> 00:17:46.230 align:middle line:84%
+So this entire
+expression here evaluates
+
+00:17:46.230 --> 00:17:48.150 align:middle line:84%
+or gets replaced
+with the string B.
+
+00:17:48.150 --> 00:17:51.570 align:middle line:84%
+Just like when we indexed into
+a list, L1 square brackets 3,
+
+00:17:51.570 --> 00:17:54.660 align:middle line:84%
+we replaced that entire
+indexing operation
+
+00:17:54.660 --> 00:17:57.550 align:middle line:84%
+with the value of the
+element at that location.
+
+00:17:57.550 --> 00:17:59.680 align:middle line:90%
+So similar here.
+
+00:17:59.680 --> 00:18:02.580 align:middle line:84%
+If I try to index
+into a dictionary
+
+00:18:02.580 --> 00:18:05.130 align:middle line:84%
+and that key doesn't
+exist, so notice
+
+00:18:05.130 --> 00:18:07.350 align:middle line:84%
+my dictionary has
+no string Grace,
+
+00:18:07.350 --> 00:18:09.130 align:middle line:90%
+Python will give me a key error.
+
+00:18:09.130 --> 00:18:11.160 align:middle line:84%
+So if you run code
+with dictionaries
+
+00:18:11.160 --> 00:18:14.250 align:middle line:84%
+and you get a key error
+exception being raised
+
+00:18:14.250 --> 00:18:17.040 align:middle line:84%
+in the console, you will know
+that you're trying to index
+
+00:18:17.040 --> 00:18:19.005 align:middle line:90%
+into a key that doesn't exist.
+
+00:18:19.005 --> 00:18:22.090 align:middle line:90%
+
+
+00:18:22.090 --> 00:18:25.620 align:middle line:84%
+So the question
+might be, yes, we're
+
+00:18:25.620 --> 00:18:29.670 align:middle line:84%
+able to look up a
+value given a key.
+
+00:18:29.670 --> 00:18:31.860 align:middle line:84%
+Can we do the same
+thing but backwards?
+
+00:18:31.860 --> 00:18:36.810 align:middle line:84%
+Given a key, sorry, given a
+value, like A, B, C, whatever,
+
+00:18:36.810 --> 00:18:39.820 align:middle line:84%
+can we look up a key
+associated with that value?
+
+00:18:39.820 --> 00:18:40.950 align:middle line:90%
+And the answer is no.
+
+00:18:40.950 --> 00:18:43.470 align:middle line:84%
+We'd have to write
+some sort of loop
+
+00:18:43.470 --> 00:18:46.050 align:middle line:84%
+or some sort of code that
+goes through every item
+
+00:18:46.050 --> 00:18:50.070 align:middle line:84%
+in my dictionary
+to check each value
+
+00:18:50.070 --> 00:18:53.040 align:middle line:84%
+and see whether the key
+associated with that value
+
+00:18:53.040 --> 00:18:54.850 align:middle line:84%
+is equivalent to the
+one I'm looking for.
+
+00:18:54.850 --> 00:18:58.680 align:middle line:84%
+So there is no nice expression
+to do that backward operation.
+
+00:18:58.680 --> 00:19:02.170 align:middle line:84%
+And that's because the values in
+my dictionary can be repeated.
+
+00:19:02.170 --> 00:19:05.370 align:middle line:84%
+So if I look up
+the value B, and I
+
+00:19:05.370 --> 00:19:07.830 align:middle line:84%
+want what's the key
+associated with B,
+
+00:19:07.830 --> 00:19:09.580 align:middle line:84%
+well, there's
+actually two of them.
+
+00:19:09.580 --> 00:19:11.940 align:middle line:84%
+So how does Python know
+I want both of them?
+
+00:19:11.940 --> 00:19:13.950 align:middle line:84%
+How does it know I
+want only one of them?
+
+00:19:13.950 --> 00:19:16.650 align:middle line:84%
+How does it know I want maybe
+a list of all these things?
+
+00:19:16.650 --> 00:19:17.400 align:middle line:90%
+It doesn't, right?
+
+00:19:17.400 --> 00:19:19.440 align:middle line:84%
+So you'd have to
+write code that does
+
+00:19:19.440 --> 00:19:22.580 align:middle line:90%
+something for that operation.
+
+00:19:22.580 --> 00:19:25.960 align:middle line:84%
+And we're going to see
+how to do that later.
+
+00:19:25.960 --> 00:19:28.250 align:middle line:84%
+OK, so let's have you
+work on this You Try It.
+
+00:19:28.250 --> 00:19:31.400 align:middle line:84%
+And this is just an exercise
+in looking up a value.
+
+00:19:31.400 --> 00:19:34.570 align:middle line:84%
+So this is a function
+I'd like to write
+
+00:19:34.570 --> 00:19:36.170 align:middle line:90%
+according to the specification.
+
+00:19:36.170 --> 00:19:38.500 align:middle line:90%
+So it's called find_grades.
+
+00:19:38.500 --> 00:19:41.860 align:middle line:84%
+Grades is a dictionary mapping
+student names to grades,
+
+00:19:41.860 --> 00:19:44.110 align:middle line:84%
+so string-to-string
+exactly like we've
+
+00:19:44.110 --> 00:19:46.450 align:middle line:90%
+seen in the previous slide.
+
+00:19:46.450 --> 00:19:50.370 align:middle line:84%
+And students is going to
+be a list of student names.
+
+00:19:50.370 --> 00:19:54.090 align:middle line:84%
+So in the example here, I've
+got my input dictionary,
+
+00:19:54.090 --> 00:19:55.260 align:middle line:90%
+this thing we just saw.
+
+00:19:55.260 --> 00:19:57.240 align:middle line:84%
+And then my list
+of student grades
+
+00:19:57.240 --> 00:20:01.250 align:middle line:84%
+is, for example, these
+two strings Matt and Katy.
+
+00:20:01.250 --> 00:20:04.880 align:middle line:84%
+For a bunch of these questions,
+especially in the micro quiz
+
+00:20:04.880 --> 00:20:07.820 align:middle line:84%
+and things like that, if
+it gets a little confusing
+
+00:20:07.820 --> 00:20:12.020 align:middle line:84%
+when I try to write the
+specification in a very
+
+00:20:12.020 --> 00:20:14.000 align:middle line:84%
+detailed way to make
+it clear what I'd
+
+00:20:14.000 --> 00:20:17.810 align:middle line:84%
+like from this function,
+it's important to try
+
+00:20:17.810 --> 00:20:20.840 align:middle line:84%
+to use the example to
+help you figure out
+
+00:20:20.840 --> 00:20:22.370 align:middle line:84%
+what we'd like
+because we're writing
+
+00:20:22.370 --> 00:20:24.570 align:middle line:84%
+the specification
+in a general sense.
+
+00:20:24.570 --> 00:20:27.020 align:middle line:84%
+But the example should
+hopefully make things really
+
+00:20:27.020 --> 00:20:28.740 align:middle line:90%
+clear for what we'd like.
+
+00:20:28.740 --> 00:20:32.360 align:middle line:84%
+So in this particular case, what
+we want the function to return
+
+00:20:32.360 --> 00:20:37.470 align:middle line:84%
+is a list of the grades for
+the students being passed in,
+
+00:20:37.470 --> 00:20:37.970 align:middle line:90%
+right?
+
+00:20:37.970 --> 00:20:39.020 align:middle line:90%
+So we look up Matt.
+
+00:20:39.020 --> 00:20:41.540 align:middle line:84%
+We see that their grade
+is a C. We look up Katy.
+
+00:20:41.540 --> 00:20:44.390 align:middle line:84%
+Their grade is an A, so I want
+to return the list C comma
+
+00:20:44.390 --> 00:20:47.742 align:middle line:84%
+A in that same order that
+I passed in my students.
+
+00:20:47.742 --> 00:20:49.950 align:middle line:84%
+So I'll give you a couple
+of minutes to work on that,
+
+00:20:49.950 --> 00:20:51.580 align:middle line:84%
+and then we can
+write it together.
+
+00:20:51.580 --> 00:20:55.430 align:middle line:90%
+So that's line 94.
+
+00:20:55.430 --> 00:20:58.100 align:middle line:90%
+
+
+00:20:58.100 --> 00:21:00.100 align:middle line:84%
+So this is just an
+exercise on looking up
+
+00:21:00.100 --> 00:21:02.587 align:middle line:90%
+values in the dictionary.
+
+00:21:02.587 --> 00:21:04.420 align:middle line:84%
+All right, does anybody
+have a start for me?
+
+00:21:04.420 --> 00:21:09.120 align:middle line:90%
+
+
+00:21:09.120 --> 00:21:10.972 align:middle line:90%
+Yes, please.
+
+00:21:10.972 --> 00:21:12.700 align:middle line:90%
+STUDENT: [INAUDIBLE]
+
+00:21:12.700 --> 00:21:14.020 align:middle line:90%
+ANA BELL: Yep, Lnew.
+
+00:21:14.020 --> 00:21:17.280 align:middle line:90%
+How about that?
+
+00:21:17.280 --> 00:21:19.310 align:middle line:90%
+So this will be my results list.
+
+00:21:19.310 --> 00:21:19.820 align:middle line:90%
+Yep.
+
+00:21:19.820 --> 00:21:22.530 align:middle line:90%
+STUDENT: [INAUDIBLE]
+
+00:21:22.530 --> 00:21:24.253 align:middle line:90%
+ANA BELL: Yep, for loop.
+
+00:21:24.253 --> 00:21:27.211 align:middle line:90%
+STUDENT: [INAUDIBLE]
+
+00:21:27.211 --> 00:21:36.580 align:middle line:90%
+
+
+00:21:36.580 --> 00:21:39.550 align:middle line:84%
+ANA BELL: Yep, so grade
+square bracket lm looks up
+
+00:21:39.550 --> 00:21:45.370 align:middle line:84%
+the value associated
+with my student named lm.
+
+00:21:45.370 --> 00:21:49.580 align:middle line:84%
+And maybe we can save it
+like this grade equals this.
+
+00:21:49.580 --> 00:21:51.370 align:middle line:90%
+And then you said append?
+
+00:21:51.370 --> 00:21:57.440 align:middle line:84%
+Yep, so we can do
+Lnew.append the grade.
+
+00:21:57.440 --> 00:21:58.370 align:middle line:90%
+Anything else?
+
+00:21:58.370 --> 00:21:59.680 align:middle line:90%
+STUDENT: [INAUDIBLE]
+
+00:21:59.680 --> 00:22:00.710 align:middle line:90%
+ANA BELL: Yep, a return.
+
+00:22:00.710 --> 00:22:04.080 align:middle line:90%
+So we can return Lnew.
+
+00:22:04.080 --> 00:22:07.050 align:middle line:90%
+Yep, so very reasonable code.
+
+00:22:07.050 --> 00:22:07.950 align:middle line:90%
+I like it a lot.
+
+00:22:07.950 --> 00:22:11.110 align:middle line:90%
+
+
+00:22:11.110 --> 00:22:12.580 align:middle line:84%
+Besides the first
+lecture, I don't
+
+00:22:12.580 --> 00:22:15.130 align:middle line:84%
+know that we've written any
+code that didn't involve a loop.
+
+00:22:15.130 --> 00:22:18.550 align:middle line:84%
+So your best bet
+for writing code
+
+00:22:18.550 --> 00:22:20.080 align:middle line:84%
+for any sort of
+thing in this class
+
+00:22:20.080 --> 00:22:22.240 align:middle line:90%
+is to think, what loop can I do?
+
+00:22:22.240 --> 00:22:26.350 align:middle line:84%
+So let's run the code, and it
+should return for me C comma A.
+
+00:22:26.350 --> 00:22:26.935 align:middle line:90%
+And it does.
+
+00:22:26.935 --> 00:22:31.220 align:middle line:90%
+
+
+00:22:31.220 --> 00:22:34.520 align:middle line:84%
+Now that we can iterate--
+so I mentioned this before,
+
+00:22:34.520 --> 00:22:37.400 align:middle line:84%
+but once we're iterating over
+tuples and lists and things
+
+00:22:37.400 --> 00:22:39.020 align:middle line:84%
+like that, one
+thing I would add,
+
+00:22:39.020 --> 00:22:41.780 align:middle line:84%
+just for debugging purposes,
+is say something like lm
+
+00:22:41.780 --> 00:22:46.910 align:middle line:84%
+is, and then you can say an
+example of what it could be,
+
+00:22:46.910 --> 00:22:49.760 align:middle line:84%
+like Ana or Matt or
+whatever it could be,
+
+00:22:49.760 --> 00:22:53.000 align:middle line:84%
+just to remind yourself
+that that thing,
+
+00:22:53.000 --> 00:22:55.167 align:middle line:90%
+that loop variable is a string.
+
+00:22:55.167 --> 00:22:56.750 align:middle line:84%
+And so it's one less
+thing to remember
+
+00:22:56.750 --> 00:22:58.340 align:middle line:90%
+as you're writing further code.
+
+00:22:58.340 --> 00:22:59.465 align:middle line:90%
+But this is really nice.
+
+00:22:59.465 --> 00:23:03.940 align:middle line:90%
+
+
+00:23:03.940 --> 00:23:06.970 align:middle line:84%
+OK, so dictionaries
+are already proving
+
+00:23:06.970 --> 00:23:09.140 align:middle line:90%
+to be really, really useful.
+
+00:23:09.140 --> 00:23:13.810 align:middle line:84%
+We can create values
+associated with custom indices.
+
+00:23:13.810 --> 00:23:17.020 align:middle line:84%
+And if we want to grab the value
+associated with that custom
+
+00:23:17.020 --> 00:23:21.400 align:middle line:84%
+index, it's really just a
+matter of indexing using a key,
+
+00:23:21.400 --> 00:23:24.790 align:middle line:84%
+using that specific key,
+much like we did indexing
+
+00:23:24.790 --> 00:23:26.260 align:middle line:90%
+into a list, OK?
+
+00:23:26.260 --> 00:23:29.530 align:middle line:84%
+No need to loop, none
+of that iteration.
+
+00:23:29.530 --> 00:23:34.950 align:middle line:84%
+It's just a single line of code
+that indexes into the list.
+
+00:23:34.950 --> 00:23:36.980 align:middle line:84%
+So let's see a few more
+operations before we
+
+00:23:36.980 --> 00:23:38.730 align:middle line:90%
+do the next You Try It.
+
+00:23:38.730 --> 00:23:41.420 align:middle line:84%
+So I've got my list
+of grades that we've
+
+00:23:41.420 --> 00:23:43.970 align:middle line:84%
+been working with in the
+past couple of slides.
+
+00:23:43.970 --> 00:23:45.980 align:middle line:84%
+Let's say that we
+now want to add
+
+00:23:45.980 --> 00:23:48.410 align:middle line:90%
+a new student and their grade.
+
+00:23:48.410 --> 00:23:52.700 align:middle line:84%
+The way we do that is
+very similar to the way
+
+00:23:52.700 --> 00:23:56.100 align:middle line:84%
+that we would add
+an element to a list
+
+00:23:56.100 --> 00:23:59.870 align:middle line:84%
+once we already have an
+index for that list, right?
+
+00:23:59.870 --> 00:24:03.740 align:middle line:84%
+Here, notice we don't actually
+have a slot for Grace.
+
+00:24:03.740 --> 00:24:06.980 align:middle line:84%
+Yet, I'd like to add
+her to my dictionary.
+
+00:24:06.980 --> 00:24:08.810 align:middle line:90%
+That's OK.
+
+00:24:08.810 --> 00:24:13.760 align:middle line:84%
+With this particular syntax
+here, so grades at key Grace,
+
+00:24:13.760 --> 00:24:18.530 align:middle line:84%
+if Python does not find Grace
+in my dictionary of keys,
+
+00:24:18.530 --> 00:24:23.500 align:middle line:84%
+it will just add her, OK,
+which is really nice, right?
+
+00:24:23.500 --> 00:24:26.080 align:middle line:84%
+I don't need to check if
+she's already in there.
+
+00:24:26.080 --> 00:24:27.040 align:middle line:90%
+There's no looping.
+
+00:24:27.040 --> 00:24:29.950 align:middle line:84%
+You just say grades at
+Grace equals A. Boom,
+
+00:24:29.950 --> 00:24:32.560 align:middle line:90%
+it adds it for you.
+
+00:24:32.560 --> 00:24:35.530 align:middle line:84%
+What if I want to change
+an entry in my dictionary?
+
+00:24:35.530 --> 00:24:40.180 align:middle line:84%
+Well, let's say I want to change
+Grace's grade to a C. Grades
+
+00:24:40.180 --> 00:24:46.450 align:middle line:84%
+at custom index grace equals C.
+We'll go in, look at my keys.
+
+00:24:46.450 --> 00:24:50.860 align:middle line:84%
+When Grace didn't exist, Python
+added her with her value.
+
+00:24:50.860 --> 00:24:53.320 align:middle line:84%
+But she already exists
+there, so Python will just
+
+00:24:53.320 --> 00:24:56.760 align:middle line:90%
+overwrite her value.
+
+00:24:56.760 --> 00:25:00.200 align:middle line:84%
+So really nice, something
+to look out for in case
+
+00:25:00.200 --> 00:25:02.697 align:middle line:84%
+you already have values
+in the dictionary.
+
+00:25:02.697 --> 00:25:04.280 align:middle line:84%
+You want to be careful
+if you actually
+
+00:25:04.280 --> 00:25:05.480 align:middle line:90%
+do want to overwrite things.
+
+00:25:05.480 --> 00:25:07.610 align:middle line:84%
+But it's really,
+really nice behavior.
+
+00:25:07.610 --> 00:25:10.830 align:middle line:84%
+And it's different
+than lists, right,
+
+00:25:10.830 --> 00:25:13.290 align:middle line:84%
+especially adding an
+entry to the dictionary.
+
+00:25:13.290 --> 00:25:16.920 align:middle line:90%
+
+
+00:25:16.920 --> 00:25:18.480 align:middle line:84%
+You can delete
+entries, much like we
+
+00:25:18.480 --> 00:25:21.180 align:middle line:90%
+deleted entries from a list.
+
+00:25:21.180 --> 00:25:24.350 align:middle line:90%
+We use the del function.
+
+00:25:24.350 --> 00:25:27.860 align:middle line:84%
+And the del function
+says, what entry you'd
+
+00:25:27.860 --> 00:25:29.900 align:middle line:90%
+like to delete from what list?
+
+00:25:29.900 --> 00:25:34.790 align:middle line:84%
+So here we just say the name
+of our dictionary at index Ana.
+
+00:25:34.790 --> 00:25:38.690 align:middle line:84%
+So this will completely
+remove Ana and her value
+
+00:25:38.690 --> 00:25:42.020 align:middle line:84%
+and the value associated
+with Ana from the dictionary.
+
+00:25:42.020 --> 00:25:46.200 align:middle line:90%
+
+
+00:25:46.200 --> 00:25:49.640 align:middle line:84%
+So what I want to make a note of
+is that our dictionary is being
+
+00:25:49.640 --> 00:25:52.280 align:middle line:84%
+mutated with all of
+these different methods
+
+00:25:52.280 --> 00:25:54.590 align:middle line:84%
+or all of these different
+functions, right?
+
+00:25:54.590 --> 00:25:56.967 align:middle line:84%
+So here, when I
+added Grace, I've
+
+00:25:56.967 --> 00:25:58.550 align:middle line:84%
+mutated my original
+dictionary, right?
+
+00:25:58.550 --> 00:26:02.090 align:middle line:84%
+The animation didn't make
+a copy of this dictionary
+
+00:26:02.090 --> 00:26:04.970 align:middle line:84%
+with Grace added, leaving
+the original unchanged.
+
+00:26:04.970 --> 00:26:08.480 align:middle line:84%
+I've literally gone in and
+mutated my original dictionary
+
+00:26:08.480 --> 00:26:09.470 align:middle line:90%
+to add Grace.
+
+00:26:09.470 --> 00:26:13.040 align:middle line:84%
+I've mutated the original
+dictionary to change her grade.
+
+00:26:13.040 --> 00:26:15.050 align:middle line:84%
+I've mutated the
+original dictionary
+
+00:26:15.050 --> 00:26:17.120 align:middle line:84%
+to remove Ana from
+the dictionary, right?
+
+00:26:17.120 --> 00:26:19.910 align:middle line:84%
+So all these
+functions are actually
+
+00:26:19.910 --> 00:26:23.140 align:middle line:90%
+mutating my dictionary.
+
+00:26:23.140 --> 00:26:26.080 align:middle line:84%
+OK, one other very
+useful thing that you
+
+00:26:26.080 --> 00:26:28.900 align:middle line:84%
+can do with
+dictionaries is to check
+
+00:26:28.900 --> 00:26:31.750 align:middle line:90%
+if a key is in my dictionary.
+
+00:26:31.750 --> 00:26:35.220 align:middle line:84%
+So we do this using in
+operator, this in keyword.
+
+00:26:35.220 --> 00:26:39.900 align:middle line:84%
+We've seen in keyword being
+used to check if an element is
+
+00:26:39.900 --> 00:26:43.830 align:middle line:84%
+in a list, to check if a
+substring or a character
+
+00:26:43.830 --> 00:26:46.920 align:middle line:84%
+is in a string, to check if
+some element is in a tuple.
+
+00:26:46.920 --> 00:26:50.310 align:middle line:84%
+We can also use it to check
+if an element or a key
+
+00:26:50.310 --> 00:26:53.510 align:middle line:90%
+is in my dictionary.
+
+00:26:53.510 --> 00:26:55.480 align:middle line:90%
+So I want to make a note.
+
+00:26:55.480 --> 00:26:57.160 align:middle line:90%
+It's only checking the keys.
+
+00:26:57.160 --> 00:27:00.310 align:middle line:84%
+It does not look for the
+values in the dictionary.
+
+00:27:00.310 --> 00:27:02.860 align:middle line:84%
+We'll see how to
+check if some value is
+
+00:27:02.860 --> 00:27:04.450 align:middle line:84%
+in the dictionary
+in a little bit.
+
+00:27:04.450 --> 00:27:06.430 align:middle line:84%
+But the in keyword
+specifically only
+
+00:27:06.430 --> 00:27:08.240 align:middle line:84%
+looks at the keys
+in the dictionary.
+
+00:27:08.240 --> 00:27:11.260 align:middle line:90%
+So if I have the expression--
+
+00:27:11.260 --> 00:27:15.640 align:middle line:84%
+the string John is in grades,
+Python only looks at the keys
+
+00:27:15.640 --> 00:27:17.515 align:middle line:90%
+and say, yep, there it is.
+
+00:27:17.515 --> 00:27:19.390 align:middle line:84%
+I don't care what value's
+associated with it.
+
+00:27:19.390 --> 00:27:22.070 align:middle line:84%
+I just care that
+it's in my keys.
+
+00:27:22.070 --> 00:27:25.510 align:middle line:84%
+So this entire expression
+here, John in grades,
+
+00:27:25.510 --> 00:27:28.270 align:middle line:84%
+will evaluate, so be
+replaced with true.
+
+00:27:28.270 --> 00:27:31.310 align:middle line:84%
+Daniel, obviously, is not
+in my dictionary keys.
+
+00:27:31.310 --> 00:27:32.410 align:middle line:90%
+So it returns false.
+
+00:27:32.410 --> 00:27:37.900 align:middle line:84%
+B is not in my dictionary keys,
+even though it's in my values.
+
+00:27:37.900 --> 00:27:40.960 align:middle line:84%
+It still returns false because
+it only looks at the keys.
+
+00:27:40.960 --> 00:27:44.580 align:middle line:90%
+
+
+00:27:44.580 --> 00:27:49.490 align:middle line:84%
+All right, let's have
+you try this exercise.
+
+00:27:49.490 --> 00:27:53.470 align:middle line:84%
+So function is called
+find in L. Again,
+
+00:27:53.470 --> 00:27:56.410 align:middle line:84%
+we can use the specifications
+and the example
+
+00:27:56.410 --> 00:27:59.840 align:middle line:84%
+to help us figure out what
+we'd like from this function.
+
+00:27:59.840 --> 00:28:04.700 align:middle line:84%
+So Ld is going to be a
+list of dictionaries.
+
+00:28:04.700 --> 00:28:09.400 align:middle line:84%
+So in the example here I've
+got three dictionaries defined,
+
+00:28:09.400 --> 00:28:13.900 align:middle line:84%
+and the first parameter here,
+the thing being passed as Ld
+
+00:28:13.900 --> 00:28:17.710 align:middle line:84%
+is the list with D1,
+D2, D3 as my elements.
+
+00:28:17.710 --> 00:28:21.440 align:middle line:90%
+And k is just an integer.
+
+00:28:21.440 --> 00:28:25.970 align:middle line:84%
+What I'd like to do is
+return true from the function
+
+00:28:25.970 --> 00:28:31.460 align:middle line:84%
+if that k is a key in
+any of these dictionaries
+
+00:28:31.460 --> 00:28:32.640 align:middle line:90%
+and false otherwise.
+
+00:28:32.640 --> 00:28:36.050 align:middle line:84%
+So as soon as I see
+a key that matches k,
+
+00:28:36.050 --> 00:28:37.710 align:middle line:90%
+I want to return true.
+
+00:28:37.710 --> 00:28:42.590 align:middle line:84%
+So in this example here,
+when I look for the k 2
+
+00:28:42.590 --> 00:28:46.580 align:middle line:84%
+inside these dictionaries, D1
+doesn't have it, but D2 has it.
+
+00:28:46.580 --> 00:28:48.830 align:middle line:90%
+So I would return true.
+
+00:28:48.830 --> 00:28:52.880 align:middle line:84%
+When I look for 25 in that
+same list of dictionaries,
+
+00:28:52.880 --> 00:28:56.900 align:middle line:84%
+25 is a value in
+one of these, in D3,
+
+00:28:56.900 --> 00:28:59.495 align:middle line:84%
+but it's not a key
+in D1, D2 or D3.
+
+00:28:59.495 --> 00:29:00.620 align:middle line:90%
+So that would return false.
+
+00:29:00.620 --> 00:29:04.890 align:middle line:90%
+
+
+00:29:04.890 --> 00:29:10.442 align:middle line:84%
+All right, so that's just
+a little lower, line 115.
+
+00:29:10.442 --> 00:29:12.150 align:middle line:84%
+Give you a couple of
+moments, and then we
+
+00:29:12.150 --> 00:29:14.068 align:middle line:84%
+can write it
+together like usual.
+
+00:29:14.068 --> 00:29:16.110 align:middle line:84%
+All right, does anyone
+want to start me off here?
+
+00:29:16.110 --> 00:29:20.916 align:middle line:90%
+So how can we do this?
+
+00:29:20.916 --> 00:29:22.650 align:middle line:90%
+STUDENT: Create a loop.
+
+00:29:22.650 --> 00:29:25.040 align:middle line:90%
+ANA BELL: Create a loop, yes.
+
+00:29:25.040 --> 00:29:25.710 align:middle line:90%
+For?
+
+00:29:25.710 --> 00:29:28.520 align:middle line:84%
+STUDENT: [INAUDIBLE]
+for d in Ld.
+
+00:29:28.520 --> 00:29:29.300 align:middle line:90%
+ANA BELL: Yep.
+
+00:29:29.300 --> 00:29:32.450 align:middle line:90%
+OK, so that means that D is--
+
+00:29:32.450 --> 00:29:36.650 align:middle line:84%
+I can say like K1 mapped to
+v1 or something like that,
+
+00:29:36.650 --> 00:29:37.765 align:middle line:90%
+right, key to a value.
+
+00:29:37.765 --> 00:29:43.940 align:middle line:90%
+
+
+00:29:43.940 --> 00:29:48.930 align:middle line:90%
+If k in D?
+
+00:29:48.930 --> 00:29:52.020 align:middle line:84%
+Yep, so that will
+check for me my keys
+
+00:29:52.020 --> 00:29:56.970 align:middle line:84%
+in that particular dictionary
+that I'm looking at right now.
+
+00:29:56.970 --> 00:29:59.923 align:middle line:84%
+Yep, we can immediately
+return true, right?
+
+00:29:59.923 --> 00:30:01.590 align:middle line:84%
+As soon as we found
+it, no need to check
+
+00:30:01.590 --> 00:30:02.550 align:middle line:90%
+the other dictionaries.
+
+00:30:02.550 --> 00:30:08.125 align:middle line:84%
+Just pop out of the
+function and return true.
+
+00:30:08.125 --> 00:30:11.480 align:middle line:90%
+STUDENT: [INAUDIBLE]
+
+00:30:11.480 --> 00:30:13.715 align:middle line:84%
+ANA BELL: Same inside
+the if or inside
+
+00:30:13.715 --> 00:30:15.200 align:middle line:90%
+the for or outside the 4.
+
+00:30:15.200 --> 00:30:16.360 align:middle line:90%
+STUDENT: Outside the 4.
+
+00:30:16.360 --> 00:30:19.150 align:middle line:84%
+ANA BELL: Outside the
+for, we can return false.
+
+00:30:19.150 --> 00:30:20.820 align:middle line:90%
+Yep.
+
+00:30:20.820 --> 00:30:24.450 align:middle line:90%
+I like this code a lot.
+
+00:30:24.450 --> 00:30:28.630 align:middle line:84%
+Uses this in operator
+to do the task.
+
+00:30:28.630 --> 00:30:30.930 align:middle line:84%
+So the return false
+outside of for loop
+
+00:30:30.930 --> 00:30:32.940 align:middle line:84%
+works really well
+because if I've
+
+00:30:32.940 --> 00:30:36.060 align:middle line:84%
+gone through every
+D inside Ld here,
+
+00:30:36.060 --> 00:30:39.930 align:middle line:84%
+then I'm checking every
+single dictionary, right?
+
+00:30:39.930 --> 00:30:43.740 align:middle line:84%
+As soon as I find one
+that has that key,
+
+00:30:43.740 --> 00:30:49.290 align:middle line:84%
+this return true acts like
+a break and a return, right?
+
+00:30:49.290 --> 00:30:52.410 align:middle line:84%
+So it breaks out of the loop
+and returns immediately.
+
+00:30:52.410 --> 00:30:55.820 align:middle line:90%
+And it doesn't return false.
+
+00:30:55.820 --> 00:30:57.940 align:middle line:84%
+But if I've gone
+through every dictionary
+
+00:30:57.940 --> 00:31:03.760 align:middle line:84%
+and didn't find the key
+matching k, then I return false.
+
+00:31:03.760 --> 00:31:06.390 align:middle line:90%
+Yeah.
+
+00:31:06.390 --> 00:31:08.535 align:middle line:84%
+Did anybody try it a
+different way, or is this--
+
+00:31:08.535 --> 00:31:13.870 align:middle line:90%
+
+
+00:31:13.870 --> 00:31:17.110 align:middle line:84%
+we could certainly try it
+with a Boolean flag, right?
+
+00:31:17.110 --> 00:31:21.010 align:middle line:84%
+We could flag the fact that
+we found it through some loop.
+
+00:31:21.010 --> 00:31:23.830 align:middle line:84%
+And keep track of it, and at
+the end, just return that flag.
+
+00:31:23.830 --> 00:31:25.000 align:middle line:90%
+That's another way to do it.
+
+00:31:25.000 --> 00:31:27.460 align:middle line:84%
+But this is probably
+the most Pythonic way.
+
+00:31:27.460 --> 00:31:30.570 align:middle line:90%
+
+
+00:31:30.570 --> 00:31:33.300 align:middle line:84%
+So we can run it on these
+two examples here, right?
+
+00:31:33.300 --> 00:31:36.360 align:middle line:84%
+So I'm looking up
+2 to return true
+
+00:31:36.360 --> 00:31:38.310 align:middle line:84%
+and looking up 25
+to return false.
+
+00:31:38.310 --> 00:31:40.030 align:middle line:90%
+And it does.
+
+00:31:40.030 --> 00:31:42.730 align:middle line:84%
+Questions about this code
+or dictionary so far.
+
+00:31:42.730 --> 00:31:47.980 align:middle line:90%
+Is everything OK so far?
+
+00:31:47.980 --> 00:31:50.600 align:middle line:90%
+OK.
+
+00:31:50.600 --> 00:31:52.320 align:middle line:84%
+All right, a couple
+more operations.
+
+00:31:52.320 --> 00:31:55.130 align:middle line:84%
+So, so far, we've looked
+up values in a dictionary.
+
+00:31:55.130 --> 00:31:56.870 align:middle line:84%
+We've added stuff
+to the dictionary.
+
+00:31:56.870 --> 00:31:59.300 align:middle line:84%
+We've deleted stuff
+from the dictionary.
+
+00:31:59.300 --> 00:32:02.360 align:middle line:84%
+One really useful
+thing to do is to be
+
+00:32:02.360 --> 00:32:06.620 align:middle line:84%
+able to look at every single
+entry in my dictionary.
+
+00:32:06.620 --> 00:32:08.450 align:middle line:84%
+The reason why we'd
+want to do this
+
+00:32:08.450 --> 00:32:13.130 align:middle line:84%
+is because we should assume that
+when we create our dictionaries
+
+00:32:13.130 --> 00:32:15.650 align:middle line:90%
+there's no order to them, right?
+
+00:32:15.650 --> 00:32:17.480 align:middle line:90%
+This is very much unlike lists.
+
+00:32:17.480 --> 00:32:19.320 align:middle line:90%
+Lists had an order to them.
+
+00:32:19.320 --> 00:32:23.120 align:middle line:84%
+We knew that the first element
+in our list was at index 0.
+
+00:32:23.120 --> 00:32:25.310 align:middle line:84%
+The next one was at index
+1, and so on, right?
+
+00:32:25.310 --> 00:32:28.790 align:middle line:84%
+Lists were ordered
+sequences of elements.
+
+00:32:28.790 --> 00:32:34.460 align:middle line:84%
+But dictionaries are not
+ordered sequences of elements.
+
+00:32:34.460 --> 00:32:38.030 align:middle line:90%
+That's not super true.
+
+00:32:38.030 --> 00:32:40.460 align:middle line:84%
+Up until a very recent
+version of Python,
+
+00:32:40.460 --> 00:32:41.990 align:middle line:90%
+there was no guaranteed order.
+
+00:32:41.990 --> 00:32:46.640 align:middle line:84%
+They were put in some order
+that I couldn't figure out
+
+00:32:46.640 --> 00:32:48.470 align:middle line:90%
+how it was determined.
+
+00:32:48.470 --> 00:32:53.220 align:middle line:84%
+But I forget which Python
+version, maybe 3.6 or something
+
+00:32:53.220 --> 00:32:58.740 align:middle line:84%
+like that, started to guarantee
+an order for the dictionary
+
+00:32:58.740 --> 00:32:59.310 align:middle line:90%
+elements.
+
+00:32:59.310 --> 00:33:01.710 align:middle line:84%
+And that order
+was the same order
+
+00:33:01.710 --> 00:33:04.680 align:middle line:84%
+that you inserted
+the elements, OK?
+
+00:33:04.680 --> 00:33:07.410 align:middle line:84%
+But if you'd like to
+write robust code that
+
+00:33:07.410 --> 00:33:11.070 align:middle line:84%
+could be run by people using
+an older version of Python,
+
+00:33:11.070 --> 00:33:13.260 align:middle line:84%
+you should write
+the code assuming
+
+00:33:13.260 --> 00:33:14.880 align:middle line:90%
+that no such order exists.
+
+00:33:14.880 --> 00:33:15.480 align:middle line:90%
+And it's OK.
+
+00:33:15.480 --> 00:33:19.360 align:middle line:84%
+It doesn't make the code
+that much harder to write.
+
+00:33:19.360 --> 00:33:21.610 align:middle line:84%
+But if we're not
+assuming any order
+
+00:33:21.610 --> 00:33:25.520 align:middle line:84%
+to Python entries
+in the dictionary,
+
+00:33:25.520 --> 00:33:27.910 align:middle line:84%
+then that means a lot
+of times, we actually
+
+00:33:27.910 --> 00:33:30.100 align:middle line:84%
+have to look at each
+entry in the dictionary
+
+00:33:30.100 --> 00:33:33.170 align:middle line:90%
+to do some sort of task.
+
+00:33:33.170 --> 00:33:35.950 align:middle line:84%
+So one of the first things
+you might want to do
+
+00:33:35.950 --> 00:33:39.460 align:middle line:84%
+is to iterate through all
+the keys in the dictionary.
+
+00:33:39.460 --> 00:33:44.320 align:middle line:84%
+To do that, we use a
+function called grades.keys.
+
+00:33:44.320 --> 00:33:48.070 align:middle line:84%
+And this grades.keys
+function here
+
+00:33:48.070 --> 00:33:49.870 align:middle line:84%
+doesn't mutate the
+dictionary at all.
+
+00:33:49.870 --> 00:33:52.720 align:middle line:84%
+But instead, it returns
+for me an iterable,
+
+00:33:52.720 --> 00:33:57.640 align:middle line:84%
+a sequence of values, which are
+all the keys in my dictionary.
+
+00:33:57.640 --> 00:34:01.030 align:middle line:84%
+Now, the data type
+of this return value
+
+00:34:01.030 --> 00:34:03.880 align:middle line:90%
+is called dict_keys.
+
+00:34:03.880 --> 00:34:07.060 align:middle line:84%
+It's not a data type we've
+worked with before, OK?
+
+00:34:07.060 --> 00:34:08.770 align:middle line:90%
+It looks really weird.
+
+00:34:08.770 --> 00:34:11.230 align:middle line:84%
+But if you'd like, and
+you don't have to do this,
+
+00:34:11.230 --> 00:34:14.409 align:middle line:84%
+you can always cast this
+sequence of values--
+
+00:34:14.409 --> 00:34:17.900 align:middle line:84%
+that's type dict keys--
+to a list, like this.
+
+00:34:17.900 --> 00:34:20.469 align:middle line:84%
+So if you cast to
+a list grades.keys,
+
+00:34:20.469 --> 00:34:25.000 align:middle line:84%
+it gives for us this more
+recognizable list with each key
+
+00:34:25.000 --> 00:34:28.440 align:middle line:90%
+being an element in the list.
+
+00:34:28.440 --> 00:34:29.770 align:middle line:90%
+You don't have to do this.
+
+00:34:29.770 --> 00:34:33.239 align:middle line:84%
+But if it makes it easier
+for you, you can, OK?
+
+00:34:33.239 --> 00:34:37.060 align:middle line:84%
+So this line of code here,
+grades.keys returns for you--
+
+00:34:37.060 --> 00:34:40.335 align:middle line:84%
+you can think of it like this
+iterable, this list of all
+
+00:34:40.335 --> 00:34:41.460 align:middle line:90%
+the keys in the dictionary.
+
+00:34:41.460 --> 00:34:43.293 align:middle line:84%
+Again, they're not
+ordered, right?
+
+00:34:43.293 --> 00:34:45.210 align:middle line:84%
+They're ordered in the
+order that I added them
+
+00:34:45.210 --> 00:34:47.580 align:middle line:84%
+into the dictionary, right,
+Ana, then Matt, then John, then
+
+00:34:47.580 --> 00:34:48.090 align:middle line:90%
+Katy.
+
+00:34:48.090 --> 00:34:50.832 align:middle line:84%
+But they're not sorted
+in alphabetical order.
+
+00:34:50.832 --> 00:34:52.290 align:middle line:84%
+If you have integers,
+they won't be
+
+00:34:52.290 --> 00:34:53.969 align:middle line:84%
+sorted in ascending
+or descending order.
+
+00:34:53.969 --> 00:34:58.370 align:middle line:84%
+So it's best to just not
+assume an order to begin with.
+
+00:34:58.370 --> 00:35:01.160 align:middle line:84%
+Similarly, we can get an
+iterable of all the values
+
+00:35:01.160 --> 00:35:03.050 align:middle line:90%
+in the dictionary.
+
+00:35:03.050 --> 00:35:07.970 align:middle line:84%
+And to do this, no surprise
+there, we use grades.values.
+
+00:35:07.970 --> 00:35:10.520 align:middle line:84%
+And this is, again, a
+function which doesn't
+
+00:35:10.520 --> 00:35:11.630 align:middle line:90%
+mutate the grades at all.
+
+00:35:11.630 --> 00:35:15.530 align:middle line:84%
+But instead, it gets replaced
+with this dict values data
+
+00:35:15.530 --> 00:35:16.430 align:middle line:90%
+type.
+
+00:35:16.430 --> 00:35:18.180 align:middle line:84%
+I've never seen
+it before either.
+
+00:35:18.180 --> 00:35:20.600 align:middle line:84%
+And you can cast it
+to a list if you'd
+
+00:35:20.600 --> 00:35:23.820 align:middle line:84%
+like because it makes more sense
+to us at this point in time,
+
+00:35:23.820 --> 00:35:27.350 align:middle line:84%
+which just returns for us this
+list of every single value
+
+00:35:27.350 --> 00:35:28.550 align:middle line:90%
+in my dictionary.
+
+00:35:28.550 --> 00:35:30.050 align:middle line:90%
+Again, no order, right?
+
+00:35:30.050 --> 00:35:33.230 align:middle line:84%
+We can see that there's no
+order except for the order
+
+00:35:33.230 --> 00:35:36.600 align:middle line:84%
+that we actually
+added the elements in.
+
+00:35:36.600 --> 00:35:37.397 align:middle line:90%
+Yeah.
+
+00:35:37.397 --> 00:35:39.480 align:middle line:84%
+STUDENT: When you said
+like it acts like a couple,
+
+00:35:39.480 --> 00:35:42.750 align:middle line:84%
+you mean like if I do
+grades that, at other times,
+
+00:35:42.750 --> 00:35:44.130 align:middle line:90%
+it will print out the same list?
+
+00:35:44.130 --> 00:35:46.940 align:middle line:90%
+
+
+00:35:46.940 --> 00:35:50.720 align:middle line:84%
+ANA BELL: Yeah, yeah it'll
+print out the same iterable,
+
+00:35:50.720 --> 00:35:52.342 align:middle line:84%
+I guess, if you
+do it again, yeah.
+
+00:35:52.342 --> 00:35:54.800 align:middle line:84%
+STUDENT: If we're just doing
+like-- if we're just iterating
+
+00:35:54.800 --> 00:35:58.770 align:middle line:84%
+over the dictionary, there can
+be chances where it comes up
+
+00:35:58.770 --> 00:35:59.280 align:middle line:90%
+[INAUDIBLE].
+
+00:35:59.280 --> 00:36:01.920 align:middle line:84%
+ANA BELL: If you're iterating
+over the dictionary,
+
+00:36:01.920 --> 00:36:04.690 align:middle line:84%
+not in the Python
+version we're using.
+
+00:36:04.690 --> 00:36:08.520 align:middle line:84%
+But in a previous version,
+if you ran on your machine
+
+00:36:08.520 --> 00:36:10.562 align:middle line:84%
+or if I ran the same
+code on my machine,
+
+00:36:10.562 --> 00:36:12.270 align:middle line:84%
+it might have given
+me a different order.
+
+00:36:12.270 --> 00:36:15.080 align:middle line:90%
+
+
+00:36:15.080 --> 00:36:18.410 align:middle line:84%
+But in the versions we're
+using from now on in Python,
+
+00:36:18.410 --> 00:36:20.600 align:middle line:84%
+because you guys all probably
+downloaded the latest
+
+00:36:20.600 --> 00:36:24.620 align:middle line:84%
+version of Anaconda
+and Spyder, it
+
+00:36:24.620 --> 00:36:27.800 align:middle line:84%
+will guarantee the order that
+you inserted the elements in.
+
+00:36:27.800 --> 00:36:30.620 align:middle line:84%
+But if somebody's using
+an older version of Python
+
+00:36:30.620 --> 00:36:32.660 align:middle line:84%
+takes your code
+and runs it, they
+
+00:36:32.660 --> 00:36:37.250 align:middle line:84%
+might actually get A, A,
+B, B or some other order
+
+00:36:37.250 --> 00:36:40.547 align:middle line:90%
+for these functions here.
+
+00:36:40.547 --> 00:36:41.380 align:middle line:90%
+STUDENT: [INAUDIBLE]
+
+00:36:41.380 --> 00:36:43.570 align:middle line:90%
+ANA BELL: Yeah, you're welcome.
+
+00:36:43.570 --> 00:36:46.360 align:middle line:84%
+So these being iterable
+just means that we
+
+00:36:46.360 --> 00:36:48.940 align:middle line:90%
+can have something like 4 I--
+
+00:36:48.940 --> 00:36:52.930 align:middle line:84%
+so 4 k in grades.keys
+basically giving us
+
+00:36:52.930 --> 00:36:56.680 align:middle line:84%
+a loop where k is going to
+be each element in this list.
+
+00:36:56.680 --> 00:37:00.690 align:middle line:90%
+
+
+00:37:00.690 --> 00:37:01.770 align:middle line:90%
+So that's fine.
+
+00:37:01.770 --> 00:37:04.320 align:middle line:84%
+So we can iterate over the
+keys, or we can iterate over
+
+00:37:04.320 --> 00:37:05.410 align:middle line:90%
+the values directly.
+
+00:37:05.410 --> 00:37:08.220 align:middle line:84%
+But what I find
+personally most effective
+
+00:37:08.220 --> 00:37:11.530 align:middle line:84%
+is to iterate over each
+entry in the dictionary.
+
+00:37:11.530 --> 00:37:15.510 align:middle line:84%
+So not just over the keys
+or the values by themselves,
+
+00:37:15.510 --> 00:37:18.880 align:middle line:84%
+to iterate over the keys
+and the values together.
+
+00:37:18.880 --> 00:37:25.630 align:middle line:84%
+So to do that, we use this
+function called grades.items.
+
+00:37:25.630 --> 00:37:28.030 align:middle line:84%
+And unsurprisingly,
+this will return also
+
+00:37:28.030 --> 00:37:31.330 align:middle line:84%
+an iterable, where each
+element in my iterable
+
+00:37:31.330 --> 00:37:33.310 align:middle line:84%
+is not just the
+key or the value.
+
+00:37:33.310 --> 00:37:38.280 align:middle line:84%
+It's a tuple of the key
+comma the value, OK?
+
+00:37:38.280 --> 00:37:40.290 align:middle line:84%
+And again, we can
+cast it to a list
+
+00:37:40.290 --> 00:37:42.600 align:middle line:84%
+to give us something
+that's more recognizable.
+
+00:37:42.600 --> 00:37:45.180 align:middle line:84%
+You can see now each
+element in the returned list
+
+00:37:45.180 --> 00:37:48.150 align:middle line:84%
+is going to be the tuple
+where I have an entry, right?
+
+00:37:48.150 --> 00:37:51.960 align:middle line:84%
+So my entry Ana comma B is
+this first element in my return
+
+00:37:51.960 --> 00:37:54.310 align:middle line:84%
+list, and then Matt A and
+then John B and then Katy A.
+
+00:37:54.310 --> 00:37:57.450 align:middle line:84%
+So I grab these
+entries together where
+
+00:37:57.450 --> 00:37:59.700 align:middle line:84%
+I have access to both
+the key and the value
+
+00:37:59.700 --> 00:38:02.443 align:middle line:90%
+for that entry, which means--
+
+00:38:02.443 --> 00:38:04.110 align:middle line:84%
+and this is the
+important part-- that we
+
+00:38:04.110 --> 00:38:05.460 align:middle line:90%
+can do something like this.
+
+00:38:05.460 --> 00:38:07.960 align:middle line:84%
+And we can do this for the
+previous slide as well.
+
+00:38:07.960 --> 00:38:13.020 align:middle line:84%
+But for this particular
+grades.items iteration,
+
+00:38:13.020 --> 00:38:17.910 align:middle line:84%
+if we're grabbing a key
+value pair out of items,
+
+00:38:17.910 --> 00:38:19.980 align:middle line:84%
+that means we can do
+something like this.
+
+00:38:19.980 --> 00:38:23.940 align:middle line:84%
+For k comma v in
+grades.items means
+
+00:38:23.940 --> 00:38:28.140 align:middle line:84%
+that Python will map k
+to the key for that entry
+
+00:38:28.140 --> 00:38:30.510 align:middle line:84%
+and v to the value
+for that entry
+
+00:38:30.510 --> 00:38:34.080 align:middle line:84%
+as I'm iterating over each
+one of these pairs, right?
+
+00:38:34.080 --> 00:38:36.240 align:middle line:84%
+So with each iteration,
+I have access
+
+00:38:36.240 --> 00:38:39.310 align:middle line:84%
+to both the key and the
+value for that entry,
+
+00:38:39.310 --> 00:38:41.540 align:middle line:90%
+which is pretty useful.
+
+00:38:41.540 --> 00:38:43.930 align:middle line:84%
+So if I have this
+line of code here,
+
+00:38:43.930 --> 00:38:48.310 align:middle line:84%
+if I print key k has
+value v, the k and the v
+
+00:38:48.310 --> 00:38:50.760 align:middle line:84%
+will change with
+each entry, right?
+
+00:38:50.760 --> 00:38:53.260 align:middle line:84%
+I'm just grabbing both the key
+and the value for that entry.
+
+00:38:53.260 --> 00:38:54.310 align:middle line:90%
+Yeah, question.
+
+00:38:54.310 --> 00:38:56.200 align:middle line:84%
+STUDENT: To use
+[INAUDIBLE] that item,
+
+00:38:56.200 --> 00:38:58.110 align:middle line:84%
+is it actually like--
+is it actually tuple,
+
+00:38:58.110 --> 00:38:59.230 align:middle line:90%
+or just the actual object?
+
+00:38:59.230 --> 00:39:00.440 align:middle line:90%
+ANA BELL: It's not a tuple.
+
+00:39:00.440 --> 00:39:04.910 align:middle line:84%
+So the actual object type
+is this thing dict_items.
+
+00:39:04.910 --> 00:39:07.400 align:middle line:84%
+So again, not a type that
+we've worked with before.
+
+00:39:07.400 --> 00:39:09.520 align:middle line:90%
+But that's just the type, right?
+
+00:39:09.520 --> 00:39:12.130 align:middle line:84%
+We've seen lists,
+tuples, dictionaries.
+
+00:39:12.130 --> 00:39:15.580 align:middle line:84%
+Dict_items is another
+data type, yeah.
+
+00:39:15.580 --> 00:39:17.620 align:middle line:84%
+But the cool thing is
+that it's an iterable.
+
+00:39:17.620 --> 00:39:19.240 align:middle line:84%
+So it's a sequence
+of values, which
+
+00:39:19.240 --> 00:39:22.090 align:middle line:84%
+means that you can cast
+it to a list, which
+
+00:39:22.090 --> 00:39:23.410 align:middle line:90%
+is also a sequence of values.
+
+00:39:23.410 --> 00:39:25.090 align:middle line:84%
+And it knows how
+to do that casting.
+
+00:39:25.090 --> 00:39:26.860 align:middle line:84%
+And you get the more
+recognizable list
+
+00:39:26.860 --> 00:39:27.777 align:middle line:90%
+that we've been using.
+
+00:39:27.777 --> 00:39:30.330 align:middle line:90%
+
+
+00:39:30.330 --> 00:39:33.680 align:middle line:90%
+Other questions.
+
+00:39:33.680 --> 00:39:35.870 align:middle line:84%
+OK, so I really like
+using grade.items
+
+00:39:35.870 --> 00:39:37.260 align:middle line:90%
+to iterate over entries.
+
+00:39:37.260 --> 00:39:39.270 align:middle line:84%
+So let's have you
+try this exercise.
+
+00:39:39.270 --> 00:39:42.170 align:middle line:84%
+So it's a function
+called count matches.
+
+00:39:42.170 --> 00:39:46.410 align:middle line:90%
+It takes in one dictionary d.
+
+00:39:46.410 --> 00:39:50.380 align:middle line:84%
+I didn't say what the elements
+are, but you can mix and match.
+
+00:39:50.380 --> 00:39:54.000 align:middle line:84%
+So here, I have a dictionary
+with just int mapped to ints.
+
+00:39:54.000 --> 00:39:57.390 align:middle line:84%
+And here I've got a dictionary
+where it maps ints and strings
+
+00:39:57.390 --> 00:39:58.600 align:middle line:90%
+and things like that.
+
+00:39:58.600 --> 00:40:00.840 align:middle line:84%
+And what I want
+this function to do
+
+00:40:00.840 --> 00:40:04.050 align:middle line:84%
+is tell me how many entries
+in this input dictionaries
+
+00:40:04.050 --> 00:40:06.670 align:middle line:90%
+have the key match its value.
+
+00:40:06.670 --> 00:40:10.710 align:middle line:84%
+So here, in this first
+example, the key here is 1.
+
+00:40:10.710 --> 00:40:11.460 align:middle line:90%
+The value is 2.
+
+00:40:11.460 --> 00:40:12.450 align:middle line:90%
+So they don't match.
+
+00:40:12.450 --> 00:40:14.280 align:middle line:84%
+These don't match,
+and these don't match.
+
+00:40:14.280 --> 00:40:15.810 align:middle line:90%
+So the count should be 0.
+
+00:40:15.810 --> 00:40:19.410 align:middle line:84%
+But down here in this example,
+the 1 doesn't match 2,
+
+00:40:19.410 --> 00:40:20.200 align:middle line:90%
+so that's fine.
+
+00:40:20.200 --> 00:40:24.210 align:middle line:84%
+But the key A matches
+its value, 1 count.
+
+00:40:24.210 --> 00:40:27.010 align:middle line:84%
+Key 5 matches its
+value, 2 counts.
+
+00:40:27.010 --> 00:40:28.530 align:middle line:90%
+So this should return count 2.
+
+00:40:28.530 --> 00:40:31.270 align:middle line:90%
+
+
+00:40:31.270 --> 00:40:36.250 align:middle line:84%
+All right, let's have you
+work on that down by line 137.
+
+00:40:36.250 --> 00:40:37.690 align:middle line:84%
+And then we'll
+write it together.
+
+00:40:37.690 --> 00:40:40.942 align:middle line:90%
+
+
+00:40:40.942 --> 00:40:42.275 align:middle line:90%
+All right, how can I start this?
+
+00:40:42.275 --> 00:40:44.950 align:middle line:90%
+
+
+00:40:44.950 --> 00:40:45.550 align:middle line:90%
+Yes.
+
+00:40:45.550 --> 00:40:47.080 align:middle line:90%
+STUDENT: A count.
+
+00:40:47.080 --> 00:40:48.190 align:middle line:90%
+ANA BELL: A count, yes.
+
+00:40:48.190 --> 00:40:49.430 align:middle line:90%
+STUDENT: [INAUDIBLE]
+
+00:40:49.430 --> 00:40:50.732 align:middle line:90%
+ANA BELL: 0, yep.
+
+00:40:50.732 --> 00:40:52.210 align:middle line:90%
+STUDENT: A for loop?
+
+00:40:52.210 --> 00:40:53.737 align:middle line:90%
+ANA BELL: A for loop, yep.
+
+00:40:53.737 --> 00:41:00.360 align:middle line:84%
+STUDENT: [INAUDIBLE] v,
+k in d.items [INAUDIBLE]..
+
+00:41:00.360 --> 00:41:03.028 align:middle line:84%
+ANA BELL: Yep, as
+a function, yep.
+
+00:41:03.028 --> 00:41:05.350 align:middle line:90%
+STUDENT: If v equal to k?
+
+00:41:05.350 --> 00:41:06.640 align:middle line:90%
+ANA BELL: v equal to k.
+
+00:41:06.640 --> 00:41:09.370 align:middle line:84%
+Yep, so this is where
+my value equals my key
+
+00:41:09.370 --> 00:41:11.615 align:middle line:90%
+for that particular entry.
+
+00:41:11.615 --> 00:41:13.840 align:middle line:84%
+STUDENT: Count
+equals count plus 1
+
+00:41:13.840 --> 00:41:18.150 align:middle line:84%
+ANA BELL: Count equals
+count plus 1, perfect.
+
+00:41:18.150 --> 00:41:21.230 align:middle line:90%
+Yep, return count.
+
+00:41:21.230 --> 00:41:22.970 align:middle line:84%
+Did anybody do it
+a different way?
+
+00:41:22.970 --> 00:41:26.130 align:middle line:90%
+
+
+00:41:26.130 --> 00:41:28.050 align:middle line:90%
+OK, awesome.
+
+00:41:28.050 --> 00:41:29.350 align:middle line:90%
+Yeah.
+
+00:41:29.350 --> 00:41:32.950 align:middle line:84%
+STUDENT: Why do you have to
+call it like [INAUDIBLE]??
+
+00:41:32.950 --> 00:41:35.277 align:middle line:84%
+I had to do it a
+different way [INAUDIBLE]..
+
+00:41:35.277 --> 00:41:36.610 align:middle line:90%
+ANA BELL: We can write it, yeah.
+
+00:41:36.610 --> 00:41:39.220 align:middle line:84%
+STUDENT: Yeah, I did
+like the count equals 0,
+
+00:41:39.220 --> 00:41:42.400 align:middle line:84%
+and then I did like for
+x in like [INAUDIBLE]
+
+00:41:42.400 --> 00:41:44.560 align:middle line:84%
+that it was just going
+to call the value.
+
+00:41:44.560 --> 00:41:49.540 align:middle line:84%
+And [INAUDIBLE] like at
+x equals [INAUDIBLE]..
+
+00:41:49.540 --> 00:41:51.790 align:middle line:84%
+I thought that it was just
+going to call [INAUDIBLE]..
+
+00:41:51.790 --> 00:41:55.600 align:middle line:84%
+ANA BELL: Yeah, so we can say
+for x and d.keys or something
+
+00:41:55.600 --> 00:41:57.610 align:middle line:90%
+like that, right?
+
+00:41:57.610 --> 00:41:59.050 align:middle line:90%
+Something like that, or no?
+
+00:41:59.050 --> 00:42:01.600 align:middle line:84%
+We can also say for
+x and d, I think.
+
+00:42:01.600 --> 00:42:04.820 align:middle line:84%
+That might work too because
+it'll grab the key for us.
+
+00:42:04.820 --> 00:42:07.610 align:middle line:90%
+But just to be safe, keys.
+
+00:42:07.610 --> 00:42:09.420 align:middle line:84%
+And now we need
+to grab the value.
+
+00:42:09.420 --> 00:42:12.740 align:middle line:84%
+So how do you grab the
+value associated with key x?
+
+00:42:12.740 --> 00:42:15.680 align:middle line:90%
+STUDENT: Like key brackets.
+
+00:42:15.680 --> 00:42:16.717 align:middle line:90%
+No, brackets are--
+
+00:42:16.717 --> 00:42:18.050 align:middle line:90%
+ANA BELL: Yeah, square brackets.
+
+00:42:18.050 --> 00:42:19.133 align:middle line:90%
+It's just indexing, right?
+
+00:42:19.133 --> 00:42:21.320 align:middle line:90%
+So d square brackets x.
+
+00:42:21.320 --> 00:42:25.670 align:middle line:84%
+Oops, if d square
+brackets x equals--
+
+00:42:25.670 --> 00:42:29.900 align:middle line:84%
+so that's the value
+equals the key, right?
+
+00:42:29.900 --> 00:42:33.780 align:middle line:90%
+Then, again, we count plus 1.
+
+00:42:33.780 --> 00:42:36.540 align:middle line:90%
+So this is our other way.
+
+00:42:36.540 --> 00:42:39.530 align:middle line:90%
+
+
+00:42:39.530 --> 00:42:40.340 align:middle line:90%
+Yep.
+
+00:42:40.340 --> 00:42:43.910 align:middle line:84%
+So we don't have to use items,
+but items makes things easier
+
+00:42:43.910 --> 00:42:47.480 align:middle line:84%
+because we have in
+hand a variable that's
+
+00:42:47.480 --> 00:42:49.700 align:middle line:84%
+the value and the
+variable that's the key.
+
+00:42:49.700 --> 00:42:57.940 align:middle line:84%
+And doing things like indexing
+starts to get confusing if--
+
+00:42:57.940 --> 00:42:59.900 align:middle line:90%
+it can be confusing.
+
+00:42:59.900 --> 00:43:01.820 align:middle line:84%
+But yeah, both ways
+are very valid.
+
+00:43:01.820 --> 00:43:06.240 align:middle line:84%
+So let's run it,
+and it should work.
+
+00:43:06.240 --> 00:43:08.240 align:middle line:84%
+So the first count
+is 0, as we expected.
+
+00:43:08.240 --> 00:43:11.510 align:middle line:90%
+And the second count is 2.
+
+00:43:11.510 --> 00:43:13.040 align:middle line:90%
+Any questions about this code?
+
+00:43:13.040 --> 00:43:14.700 align:middle line:90%
+Does it make sense?
+
+00:43:14.700 --> 00:43:17.120 align:middle line:84%
+Is there another way
+that somebody tried it?
+
+00:43:17.120 --> 00:43:19.920 align:middle line:90%
+
+
+00:43:19.920 --> 00:43:20.420 align:middle line:90%
+Nope?
+
+00:43:20.420 --> 00:43:21.470 align:middle line:90%
+OK, good.
+
+00:43:21.470 --> 00:43:26.940 align:middle line:90%
+
+
+00:43:26.940 --> 00:43:31.800 align:middle line:84%
+OK, so dictionaries are
+mutable objects, right?
+
+00:43:31.800 --> 00:43:35.110 align:middle line:84%
+So all the aliasing and
+cloning rules apply.
+
+00:43:35.110 --> 00:43:37.650 align:middle line:84%
+Remember when we
+talked about lists
+
+00:43:37.650 --> 00:43:41.190 align:middle line:84%
+and using the equal
+sign between a list
+
+00:43:41.190 --> 00:43:43.410 align:middle line:90%
+and another variable name?
+
+00:43:43.410 --> 00:43:45.450 align:middle line:84%
+Just a plain old
+equal sign means
+
+00:43:45.450 --> 00:43:48.300 align:middle line:84%
+that you are making an
+alias for that list.
+
+00:43:48.300 --> 00:43:50.440 align:middle line:84%
+Same thing applies
+to dictionaries.
+
+00:43:50.440 --> 00:43:54.185 align:middle line:84%
+So saying D1 equals D2,
+where D2 is a dictionary,
+
+00:43:54.185 --> 00:43:55.560 align:middle line:84%
+it means that
+you've just created
+
+00:43:55.560 --> 00:43:57.400 align:middle line:90%
+an alias for that dictionary.
+
+00:43:57.400 --> 00:44:00.270 align:middle line:84%
+So if you change the dictionary
+for either of those variables,
+
+00:44:00.270 --> 00:44:02.910 align:middle line:84%
+you're changing
+the object itself.
+
+00:44:02.910 --> 00:44:04.530 align:middle line:84%
+If you want to
+actually make a copy,
+
+00:44:04.530 --> 00:44:07.830 align:middle line:84%
+you use d.copy where d is the
+name of the dictionary you'd
+
+00:44:07.830 --> 00:44:10.680 align:middle line:84%
+like a copy, and that gets
+you a copy of that dictionary.
+
+00:44:10.680 --> 00:44:15.030 align:middle line:84%
+And then you can change it
+without changing the original.
+
+00:44:15.030 --> 00:44:17.210 align:middle line:84%
+So let's talk a little
+bit about the values
+
+00:44:17.210 --> 00:44:19.880 align:middle line:84%
+for a dictionary and
+the keys because there
+
+00:44:19.880 --> 00:44:23.450 align:middle line:84%
+are some restrictions on
+the keys for the dictionary.
+
+00:44:23.450 --> 00:44:25.350 align:middle line:90%
+No restrictions on the values.
+
+00:44:25.350 --> 00:44:28.310 align:middle line:84%
+So dictionary values
+can be any type, right?
+
+00:44:28.310 --> 00:44:30.440 align:middle line:84%
+You can have a
+dictionary value that's
+
+00:44:30.440 --> 00:44:32.517 align:middle line:90%
+a float, int, string, tuple.
+
+00:44:32.517 --> 00:44:34.100 align:middle line:84%
+You can have a
+dictionary value that's
+
+00:44:34.100 --> 00:44:36.140 align:middle line:84%
+a list, which is
+immutable object.
+
+00:44:36.140 --> 00:44:39.230 align:middle line:84%
+You can have a dictionary value
+that's another dictionary.
+
+00:44:39.230 --> 00:44:43.020 align:middle line:84%
+All are OK, whatever you'd
+like for the values to be.
+
+00:44:43.020 --> 00:44:45.380 align:middle line:84%
+You can have dictionary
+values that are duplicates.
+
+00:44:45.380 --> 00:44:49.160 align:middle line:84%
+So you can have one key that
+maps to value 5, another key
+
+00:44:49.160 --> 00:44:51.020 align:middle line:90%
+that maps to value 5.
+
+00:44:51.020 --> 00:44:52.760 align:middle line:90%
+All good.
+
+00:44:52.760 --> 00:44:54.900 align:middle line:90%
+OK?
+
+00:44:54.900 --> 00:44:57.020 align:middle line:84%
+So the values don't
+need to be unique.
+
+00:44:57.020 --> 00:45:00.380 align:middle line:84%
+We do have restrictions
+on the keys though, OK?
+
+00:45:00.380 --> 00:45:02.330 align:middle line:84%
+The first restriction
+on the keys
+
+00:45:02.330 --> 00:45:05.030 align:middle line:84%
+is that it has to
+be unique, right?
+
+00:45:05.030 --> 00:45:11.990 align:middle line:84%
+So if you're mapping
+a key 1 to value 5,
+
+00:45:11.990 --> 00:45:18.580 align:middle line:84%
+you cannot map a key 1 to value
+6 because if you go and look up
+
+00:45:18.580 --> 00:45:23.050 align:middle line:84%
+the value associated with 1,
+how does Python know which value
+
+00:45:23.050 --> 00:45:26.080 align:middle line:84%
+you'd like, the 5
+or the 6, right?
+
+00:45:26.080 --> 00:45:30.050 align:middle line:84%
+So the keys have to be
+unique, first of all.
+
+00:45:30.050 --> 00:45:33.950 align:middle line:84%
+Second, the keys have to
+be immutable, technically
+
+00:45:33.950 --> 00:45:34.790 align:middle line:90%
+hashable.
+
+00:45:34.790 --> 00:45:37.230 align:middle line:84%
+But for the purposes
+of this class,
+
+00:45:37.230 --> 00:45:39.420 align:middle line:84%
+just think of them as
+having to be immutable.
+
+00:45:39.420 --> 00:45:42.380 align:middle line:84%
+So a key can only be one
+of these types that we've
+
+00:45:42.380 --> 00:45:45.110 align:middle line:84%
+seen so far, int, float,
+string, tuple, or bool.
+
+00:45:45.110 --> 00:45:46.760 align:middle line:84%
+You cannot have a
+key that's a list.
+
+00:45:46.760 --> 00:45:48.590 align:middle line:84%
+You cannot have a key
+that's a dictionary
+
+00:45:48.590 --> 00:45:51.620 align:middle line:90%
+because they're mutable objects.
+
+00:45:51.620 --> 00:45:56.180 align:middle line:84%
+So let's look at that a
+little bit further in detail.
+
+00:45:56.180 --> 00:46:01.990 align:middle line:84%
+So the reason why we can't
+have a key that is mutable
+
+00:46:01.990 --> 00:46:05.620 align:middle line:84%
+is because of the way keys
+are stored in Python, sorry,
+
+00:46:05.620 --> 00:46:08.280 align:middle line:84%
+the way the dictionaries
+are stored in Python.
+
+00:46:08.280 --> 00:46:10.530 align:middle line:84%
+So I'm going to show you an
+example on the next slide.
+
+00:46:10.530 --> 00:46:12.447 align:middle line:84%
+First I'm going to explain
+how they're stored,
+
+00:46:12.447 --> 00:46:14.760 align:middle line:84%
+and then we'll go through
+an example showing you
+
+00:46:14.760 --> 00:46:19.410 align:middle line:84%
+exactly why you can't
+have a mutable structure.
+
+00:46:19.410 --> 00:46:23.120 align:middle line:84%
+So the way dictionaries
+are stored in Python
+
+00:46:23.120 --> 00:46:26.940 align:middle line:84%
+is you first need a key
+to associate with a value.
+
+00:46:26.940 --> 00:46:28.910 align:middle line:84%
+So everything starts
+off with the key you'd
+
+00:46:28.910 --> 00:46:31.170 align:middle line:90%
+like to add to your dictionary.
+
+00:46:31.170 --> 00:46:35.580 align:middle line:84%
+So Python basically runs a
+function called a hash function
+
+00:46:35.580 --> 00:46:37.865 align:middle line:90%
+on the key.
+
+00:46:37.865 --> 00:46:40.490 align:middle line:84%
+For simplicity's sake, let's say
+the key you're trying to store
+
+00:46:40.490 --> 00:46:41.120 align:middle line:90%
+is a number.
+
+00:46:41.120 --> 00:46:43.730 align:middle line:84%
+That hash function might
+return that same number.
+
+00:46:43.730 --> 00:46:45.740 align:middle line:90%
+It might return something else.
+
+00:46:45.740 --> 00:46:48.980 align:middle line:84%
+If you're trying to
+store a string as a key,
+
+00:46:48.980 --> 00:46:51.680 align:middle line:84%
+Python again runs maybe
+a different hash function
+
+00:46:51.680 --> 00:46:55.580 align:middle line:84%
+that takes in that string, which
+might be a bunch of characters,
+
+00:46:55.580 --> 00:46:57.660 align:middle line:84%
+and it converts
+it to some number.
+
+00:46:57.660 --> 00:47:00.560 align:middle line:84%
+So the hash function
+always takes in your key
+
+00:47:00.560 --> 00:47:04.590 align:middle line:90%
+and converts it to a number, OK?
+
+00:47:04.590 --> 00:47:09.240 align:middle line:84%
+That number, think of it like
+representing a memory location
+
+00:47:09.240 --> 00:47:13.765 align:middle line:84%
+where you're going to store the
+value associated with that key.
+
+00:47:13.765 --> 00:47:15.390 align:middle line:84%
+So you're always
+grabbing a number that
+
+00:47:15.390 --> 00:47:16.650 align:middle line:90%
+represents a memory location.
+
+00:47:16.650 --> 00:47:19.340 align:middle line:90%
+
+
+00:47:19.340 --> 00:47:22.020 align:middle line:84%
+At that memory location,
+you'll store the value.
+
+00:47:22.020 --> 00:47:25.100 align:middle line:84%
+So next time you want to
+look up the value associated
+
+00:47:25.100 --> 00:47:27.980 align:middle line:84%
+with a key, you just run
+that same hash function.
+
+00:47:27.980 --> 00:47:29.600 align:middle line:90%
+The function won't change.
+
+00:47:29.600 --> 00:47:31.850 align:middle line:84%
+You run the same hash
+function on your object,
+
+00:47:31.850 --> 00:47:34.400 align:middle line:84%
+and you'll be able to get
+that same integer back.
+
+00:47:34.400 --> 00:47:37.250 align:middle line:84%
+You'll be able to grab
+that same value back.
+
+00:47:37.250 --> 00:47:39.400 align:middle line:84%
+But if you're storing
+mutable objects,
+
+00:47:39.400 --> 00:47:41.360 align:middle line:84%
+that means that
+object can change.
+
+00:47:41.360 --> 00:47:44.380 align:middle line:84%
+So if you run the hash function,
+the thing that gives you
+
+00:47:44.380 --> 00:47:47.770 align:middle line:84%
+a number on something
+that's changed,
+
+00:47:47.770 --> 00:47:50.767 align:middle line:84%
+that number might
+not be the same
+
+00:47:50.767 --> 00:47:52.600 align:middle line:84%
+because you've changed
+the thing that you're
+
+00:47:52.600 --> 00:47:53.990 align:middle line:90%
+passing into the function.
+
+00:47:53.990 --> 00:47:57.240 align:middle line:84%
+So why would it give
+you the same value back?
+
+00:47:57.240 --> 00:47:58.860 align:middle line:90%
+So let's look at this example.
+
+00:47:58.860 --> 00:48:00.410 align:middle line:90%
+So again, we're storing grades.
+
+00:48:00.410 --> 00:48:03.170 align:middle line:84%
+And let's say we're trying
+to store a bunch of grades
+
+00:48:03.170 --> 00:48:04.100 align:middle line:90%
+inside our memory.
+
+00:48:04.100 --> 00:48:10.580 align:middle line:84%
+And let's say our memory is just
+16 locations, so 0 through 15.
+
+00:48:10.580 --> 00:48:12.830 align:middle line:84%
+So at these locations,
+I'm going to store grades
+
+00:48:12.830 --> 00:48:14.740 align:middle line:90%
+associated with a person.
+
+00:48:14.740 --> 00:48:17.890 align:middle line:84%
+The function I'm going
+to run on the student
+
+00:48:17.890 --> 00:48:19.790 align:middle line:90%
+is using their name.
+
+00:48:19.790 --> 00:48:23.290 align:middle line:84%
+So I'm going to store
+Ana's grade somewhere.
+
+00:48:23.290 --> 00:48:26.830 align:middle line:84%
+But I need to run a function
+that takes in the string Ana
+
+00:48:26.830 --> 00:48:29.530 align:middle line:90%
+and gets for me a number.
+
+00:48:29.530 --> 00:48:32.360 align:middle line:84%
+That number is where I'm
+going to store my grade.
+
+00:48:32.360 --> 00:48:35.370 align:middle line:84%
+So a simple hash function
+we might do is to say,
+
+00:48:35.370 --> 00:48:39.560 align:middle line:84%
+well, I'm going to take A and
+map it to 1, B, map it to 2,
+
+00:48:39.560 --> 00:48:41.480 align:middle line:90%
+C map it to 3, and so on.
+
+00:48:41.480 --> 00:48:46.700 align:middle line:84%
+I can sum all of those numbers
+associated with my letters
+
+00:48:46.700 --> 00:48:48.510 align:middle line:90%
+in my name, 16.
+
+00:48:48.510 --> 00:48:52.310 align:middle line:84%
+And then I can mod it with 16,
+which is how many entries I
+
+00:48:52.310 --> 00:48:53.880 align:middle line:90%
+have in my memory.
+
+00:48:53.880 --> 00:48:56.510 align:middle line:84%
+So if I mod it with 16,
+that's going to give me
+
+00:48:56.510 --> 00:48:59.400 align:middle line:90%
+a number 0 through 15, right?
+
+00:48:59.400 --> 00:49:01.400 align:middle line:84%
+If you take the remainder
+when you divide by 16,
+
+00:49:01.400 --> 00:49:04.450 align:middle line:84%
+you'll either get 0 all
+the way up through 15.
+
+00:49:04.450 --> 00:49:06.660 align:middle line:84%
+So if I mod my
+name, that means I'm
+
+00:49:06.660 --> 00:49:13.510 align:middle line:84%
+going to store my grade
+at memory location 0.
+
+00:49:13.510 --> 00:49:15.840 align:middle line:90%
+So far, so good?
+
+00:49:15.840 --> 00:49:18.240 align:middle line:84%
+So basically, I made up
+this hash function that
+
+00:49:18.240 --> 00:49:21.160 align:middle line:90%
+tells me where to put my grade.
+
+00:49:21.160 --> 00:49:23.170 align:middle line:90%
+Now I add another person.
+
+00:49:23.170 --> 00:49:26.230 align:middle line:84%
+Again, I'm going to convert
+the letters in their name
+
+00:49:26.230 --> 00:49:30.610 align:middle line:84%
+to numbers so that I can
+easily get a number out
+
+00:49:30.610 --> 00:49:31.870 align:middle line:90%
+of their letters.
+
+00:49:31.870 --> 00:49:36.700 align:middle line:84%
+So I'm basically hashing
+their letters to a number.
+
+00:49:36.700 --> 00:49:39.130 align:middle line:84%
+Again, summing this
+for Eric is 35.
+
+00:49:39.130 --> 00:49:40.810 align:middle line:84%
+I'm going to mod
+it with 16, which
+
+00:49:40.810 --> 00:49:45.430 align:middle line:84%
+means I'm going to put
+Eric's grade at location 3.
+
+00:49:45.430 --> 00:49:47.320 align:middle line:90%
+Next person, John, same thing.
+
+00:49:47.320 --> 00:49:49.210 align:middle line:90%
+I add the numbers, mod 16.
+
+00:49:49.210 --> 00:49:51.830 align:middle line:84%
+I'm going to put
+John at location 15.
+
+00:49:51.830 --> 00:49:55.390 align:middle line:84%
+So this is my memory where I'm
+storing the values associated
+
+00:49:55.390 --> 00:49:56.540 align:middle line:90%
+with these students.
+
+00:49:56.540 --> 00:49:59.950 align:middle line:84%
+So if I want to
+grab back my grade,
+
+00:49:59.950 --> 00:50:02.750 align:middle line:84%
+I run the exact
+same hash function.
+
+00:50:02.750 --> 00:50:05.590 align:middle line:84%
+So I'm going to run the same
+hash function on my name.
+
+00:50:05.590 --> 00:50:07.000 align:middle line:90%
+My name hasn't changed, right?
+
+00:50:07.000 --> 00:50:08.140 align:middle line:90%
+It's still the string.
+
+00:50:08.140 --> 00:50:10.460 align:middle line:84%
+I'm not allowed to change
+it because it's a string.
+
+00:50:10.460 --> 00:50:13.390 align:middle line:84%
+And so I'm going to get
+the same value back, 0.
+
+00:50:13.390 --> 00:50:16.420 align:middle line:84%
+So that means to grab the
+letter associated with my name,
+
+00:50:16.420 --> 00:50:18.940 align:middle line:84%
+I just need to go straight
+into my memory location
+
+00:50:18.940 --> 00:50:23.630 align:middle line:84%
+and look up the value
+at that memory location.
+
+00:50:23.630 --> 00:50:26.150 align:middle line:90%
+So I know it's going to be a C.
+
+00:50:26.150 --> 00:50:35.280 align:middle line:84%
+Now, let's say I'm storing a
+list, a student name as a list.
+
+00:50:35.280 --> 00:50:38.660 align:middle line:84%
+So again, Ana, Eric, and
+John are immutable, right?
+
+00:50:38.660 --> 00:50:39.960 align:middle line:90%
+They will not change.
+
+00:50:39.960 --> 00:50:44.440 align:middle line:84%
+But if I store Kate as a
+list, her name might change.
+
+00:50:44.440 --> 00:50:46.690 align:middle line:84%
+Again, I can run the same
+hash function on her name.
+
+00:50:46.690 --> 00:50:48.370 align:middle line:84%
+That means her
+grade when I first
+
+00:50:48.370 --> 00:50:51.340 align:middle line:84%
+store it is going
+to be at location 5.
+
+00:50:51.340 --> 00:50:54.530 align:middle line:84%
+So I'm storing
+Kate at location 5.
+
+00:50:54.530 --> 00:50:58.340 align:middle line:84%
+All these three strings I know
+I can get back because they
+
+00:50:58.340 --> 00:51:00.000 align:middle line:90%
+cannot change.
+
+00:51:00.000 --> 00:51:03.290 align:middle line:84%
+But let's say that Kate
+goes and changes her name
+
+00:51:03.290 --> 00:51:06.970 align:middle line:84%
+from Kate with a K to
+Kate with a C. It's
+
+00:51:06.970 --> 00:51:09.880 align:middle line:84%
+the same object,
+right, the same person.
+
+00:51:09.880 --> 00:51:12.460 align:middle line:84%
+She earned her
+grade, B, originally.
+
+00:51:12.460 --> 00:51:14.830 align:middle line:84%
+So if I want to
+grab her grade back,
+
+00:51:14.830 --> 00:51:16.640 align:middle line:84%
+even though her
+name has changed,
+
+00:51:16.640 --> 00:51:18.670 align:middle line:84%
+I would still like to
+grab the B associated
+
+00:51:18.670 --> 00:51:21.240 align:middle line:90%
+with her as a person.
+
+00:51:21.240 --> 00:51:24.240 align:middle line:84%
+But Kate with a C, if I
+run that same hash function
+
+00:51:24.240 --> 00:51:28.940 align:middle line:84%
+that I ran to put her
+grade in my table,
+
+00:51:28.940 --> 00:51:32.930 align:middle line:84%
+tells me that I now need to look
+up her grade at memory location
+
+00:51:32.930 --> 00:51:37.950 align:middle line:84%
+13, no longer at
+memory location 5.
+
+00:51:37.950 --> 00:51:41.050 align:middle line:90%
+She's not there.
+
+00:51:41.050 --> 00:51:45.070 align:middle line:84%
+OK, so now it's like did the
+student disappear and all
+
+00:51:45.070 --> 00:51:46.450 align:middle line:90%
+that stuff.
+
+00:51:46.450 --> 00:51:47.140 align:middle line:90%
+So you see?
+
+00:51:47.140 --> 00:51:52.990 align:middle line:84%
+Now, that's the reason why I
+cannot have a mutable object
+
+00:51:52.990 --> 00:51:55.990 align:middle line:84%
+as a key to my list because
+if that object changes,
+
+00:51:55.990 --> 00:51:59.170 align:middle line:84%
+running that hash function on
+that changed object might not
+
+00:51:59.170 --> 00:52:01.660 align:middle line:84%
+give me the same memory location
+where I originally stored
+
+00:52:01.660 --> 00:52:05.830 align:middle line:84%
+the value associated
+with that object.
+
+00:52:05.830 --> 00:52:08.390 align:middle line:90%
+Does that make sense?
+
+00:52:08.390 --> 00:52:12.160 align:middle line:84%
+OK, so let's revisit
+our original example,
+
+00:52:12.160 --> 00:52:14.760 align:middle line:84%
+the one where we tried
+to store everything
+
+00:52:14.760 --> 00:52:17.820 align:middle line:84%
+in a master list, all these
+grades in a master list.
+
+00:52:17.820 --> 00:52:22.040 align:middle line:84%
+Now, let's store it in
+a master dictionary.
+
+00:52:22.040 --> 00:52:23.690 align:middle line:90%
+So I've got my grades.
+
+00:52:23.690 --> 00:52:26.990 align:middle line:84%
+Notice, curly bracket curly
+bracket is a dictionary.
+
+00:52:26.990 --> 00:52:31.320 align:middle line:84%
+I've got two students
+in my class, Ana, right?
+
+00:52:31.320 --> 00:52:33.120 align:middle line:84%
+So this is Ana's
+information and Bob.
+
+00:52:33.120 --> 00:52:36.840 align:middle line:90%
+That's Bob's information.
+
+00:52:36.840 --> 00:52:39.690 align:middle line:84%
+So just two students in
+my master dictionary.
+
+00:52:39.690 --> 00:52:45.470 align:middle line:84%
+So the key Ana is going
+to be one entry key.
+
+00:52:45.470 --> 00:52:47.600 align:middle line:90%
+Key Bob is the other entry key.
+
+00:52:47.600 --> 00:52:50.780 align:middle line:84%
+And what's the information
+associated with these keys--
+
+00:52:50.780 --> 00:52:53.660 align:middle line:84%
+well, with Ana, I've
+got this dictionary
+
+00:52:53.660 --> 00:52:55.400 align:middle line:90%
+associated with her name.
+
+00:52:55.400 --> 00:52:57.360 align:middle line:90%
+So that's this big thing here.
+
+00:52:57.360 --> 00:53:00.170 align:middle line:84%
+I'll explain it in a bit,
+and similarly with Bob.
+
+00:53:00.170 --> 00:53:03.140 align:middle line:84%
+Bob has one thing
+associated with him,
+
+00:53:03.140 --> 00:53:04.730 align:middle line:90%
+and it's another dictionary.
+
+00:53:04.730 --> 00:53:07.560 align:middle line:90%
+
+
+00:53:07.560 --> 00:53:10.830 align:middle line:84%
+So I'm mapping strings
+to dictionaries here.
+
+00:53:10.830 --> 00:53:13.100 align:middle line:84%
+And that's fine because
+values in a dictionary
+
+00:53:13.100 --> 00:53:15.920 align:middle line:90%
+can be other dictionaries.
+
+00:53:15.920 --> 00:53:19.150 align:middle line:84%
+So what are these
+dictionaries about?
+
+00:53:19.150 --> 00:53:22.360 align:middle line:84%
+Well, the number of
+items in the dictionary
+
+00:53:22.360 --> 00:53:25.450 align:middle line:84%
+for a particular person,
+there's three elements, right?
+
+00:53:25.450 --> 00:53:28.430 align:middle line:84%
+So comma, comma separates
+my three elements.
+
+00:53:28.430 --> 00:53:32.230 align:middle line:84%
+The first one is going
+to be mapped with key mq.
+
+00:53:32.230 --> 00:53:35.200 align:middle line:84%
+The second one mapped with
+key ps for problem set,
+
+00:53:35.200 --> 00:53:39.210 align:middle line:84%
+and the last one mapped with
+the string fin for final grade.
+
+00:53:39.210 --> 00:53:41.850 align:middle line:84%
+So each one of these
+students has this dictionary
+
+00:53:41.850 --> 00:53:42.790 align:middle line:90%
+associated with them.
+
+00:53:42.790 --> 00:53:45.060 align:middle line:84%
+And that dictionary
+then itself has
+
+00:53:45.060 --> 00:53:47.640 align:middle line:84%
+three entries, one for the
+micro quiz, one for the ps,
+
+00:53:47.640 --> 00:53:50.800 align:middle line:90%
+one for the final scores.
+
+00:53:50.800 --> 00:53:54.310 align:middle line:84%
+So now, what's the values
+associated with those keys?
+
+00:53:54.310 --> 00:53:56.530 align:middle line:84%
+Well, the micro quiz
+is going to be a list.
+
+00:53:56.530 --> 00:53:58.280 align:middle line:84%
+The problem set is
+going to be a list.
+
+00:53:58.280 --> 00:54:00.260 align:middle line:84%
+And the final is
+going to be a string.
+
+00:54:00.260 --> 00:54:05.680 align:middle line:84%
+So a really nice representation
+of my class, right?
+
+00:54:05.680 --> 00:54:07.940 align:middle line:90%
+And same for Bob.
+
+00:54:07.940 --> 00:54:11.690 align:middle line:84%
+So now, what if we want
+to grab a student's exam
+
+00:54:11.690 --> 00:54:15.770 align:middle line:84%
+grade or the student's
+list of exam grades?
+
+00:54:15.770 --> 00:54:19.130 align:middle line:84%
+Remember that big function
+with the two nested
+
+00:54:19.130 --> 00:54:20.810 align:middle line:90%
+for loops and the nested ifs?
+
+00:54:20.810 --> 00:54:25.290 align:middle line:90%
+That becomes this line.
+
+00:54:25.290 --> 00:54:25.995 align:middle line:90%
+Isn't that cool?
+
+00:54:25.995 --> 00:54:28.683 align:middle line:90%
+
+
+00:54:28.683 --> 00:54:29.600 align:middle line:90%
+Applause, I like that.
+
+00:54:29.600 --> 00:54:30.770 align:middle line:90%
+Yeah, exactly.
+
+00:54:30.770 --> 00:54:34.160 align:middle line:84%
+We should applaud this because
+look how easy it is now to--
+
+00:54:34.160 --> 00:54:35.660 align:middle line:90%
+yes, thank you, yes.
+
+00:54:35.660 --> 00:54:37.700 align:middle line:90%
+[APPLAUSE]
+
+00:54:37.700 --> 00:54:39.110 align:middle line:90%
+Dictionaries are awesome, guys.
+
+00:54:39.110 --> 00:54:42.560 align:middle line:84%
+So yeah, so look, that
+line becomes this--
+
+00:54:42.560 --> 00:54:46.100 align:middle line:84%
+grabbing one quiz score becomes
+this single line of code
+
+00:54:46.100 --> 00:54:47.480 align:middle line:90%
+right here.
+
+00:54:47.480 --> 00:54:49.720 align:middle line:90%
+So let's break it down.
+
+00:54:49.720 --> 00:54:51.970 align:middle line:84%
+Again, we do left
+to right whenever
+
+00:54:51.970 --> 00:54:54.620 align:middle line:84%
+we've got this chain
+of stuff going on.
+
+00:54:54.620 --> 00:54:57.130 align:middle line:84%
+So the first thing we say
+is, well, we're looking up
+
+00:54:57.130 --> 00:54:59.140 align:middle line:90%
+grades at some index.
+
+00:54:59.140 --> 00:55:02.110 align:middle line:84%
+So grades at some index
+gives me that dictionary,
+
+00:55:02.110 --> 00:55:06.590 align:middle line:84%
+so something like this
+whole thing here, right.
+
+00:55:06.590 --> 00:55:07.320 align:middle line:90%
+OK?
+
+00:55:07.320 --> 00:55:07.820 align:middle line:90%
+Good.
+
+00:55:07.820 --> 00:55:08.890 align:middle line:90%
+That's the first chain.
+
+00:55:08.890 --> 00:55:12.580 align:middle line:84%
+Now, this box here gets
+replaced with that dictionary.
+
+00:55:12.580 --> 00:55:15.100 align:middle line:84%
+And I'm doing another
+index into that dictionary.
+
+00:55:15.100 --> 00:55:18.790 align:middle line:84%
+So that means I'm going
+to grab the mq associated
+
+00:55:18.790 --> 00:55:23.460 align:middle line:90%
+with that dictionary.
+
+00:55:23.460 --> 00:55:29.890 align:middle line:84%
+So the value associated with mq
+is going to be this list 544.
+
+00:55:29.890 --> 00:55:33.570 align:middle line:84%
+So this box here gets
+replaced with the list 544.
+
+00:55:33.570 --> 00:55:36.660 align:middle line:84%
+And then, if I want to grab
+just the first quiz value,
+
+00:55:36.660 --> 00:55:40.110 align:middle line:84%
+I say now I'm going to index
+in the list 544 at index 0.
+
+00:55:40.110 --> 00:55:41.880 align:middle line:90%
+So that grabs for me just the 5.
+
+00:55:41.880 --> 00:55:46.630 align:middle line:84%
+So then the first quiz
+score for Ana was a 5.
+
+00:55:46.630 --> 00:55:47.410 align:middle line:90%
+It's pretty bad.
+
+00:55:47.410 --> 00:55:51.210 align:middle line:90%
+
+
+00:55:51.210 --> 00:55:59.075 align:middle line:84%
+OK, so let's have
+you think about this.
+
+00:55:59.075 --> 00:56:02.140 align:middle line:84%
+This is a function,
+nothing to code here.
+
+00:56:02.140 --> 00:56:03.160 align:middle line:90%
+Just to think.
+
+00:56:03.160 --> 00:56:08.850 align:middle line:84%
+This is a function
+that grabs the average
+
+00:56:08.850 --> 00:56:17.250 align:middle line:84%
+of every single thing where
+that thing is what in the class.
+
+00:56:17.250 --> 00:56:21.840 align:middle line:84%
+So if what is mq, as is
+down here in this example,
+
+00:56:21.840 --> 00:56:24.860 align:middle line:84%
+if what is mq, this
+code is supposed
+
+00:56:24.860 --> 00:56:27.440 align:middle line:84%
+to get the average of
+all of the micro quizzes
+
+00:56:27.440 --> 00:56:29.340 align:middle line:84%
+for all the students
+in the class.
+
+00:56:29.340 --> 00:56:32.420 align:middle line:84%
+So you basically want to
+grab the average of 10
+
+00:56:32.420 --> 00:56:34.730 align:middle line:90%
+plus 8 plus 3.
+
+00:56:34.730 --> 00:56:37.700 align:middle line:84%
+And if it's ps, I
+would like to grab
+
+00:56:37.700 --> 00:56:39.507 align:middle line:84%
+the average of all the
+problem sets for all
+
+00:56:39.507 --> 00:56:40.590 align:middle line:90%
+the students in the class.
+
+00:56:40.590 --> 00:56:44.525 align:middle line:84%
+So the average of
+10, 10, 7, 8, and 0.
+
+00:56:44.525 --> 00:56:47.240 align:middle line:90%
+
+
+00:56:47.240 --> 00:56:48.590 align:middle line:90%
+So we've got a loop.
+
+00:56:48.590 --> 00:56:51.380 align:middle line:84%
+That goes through every
+student in the keys.
+
+00:56:51.380 --> 00:56:56.540 align:middle line:84%
+So the student, stud,
+stud here is going
+
+00:56:56.540 --> 00:56:59.270 align:middle line:90%
+to be this dictionary, right?
+
+00:56:59.270 --> 00:57:02.240 align:middle line:84%
+So given this
+dictionary, what line
+
+00:57:02.240 --> 00:57:06.770 align:middle line:84%
+should you insert here such that
+you're creating a list, just
+
+00:57:06.770 --> 00:57:10.470 align:middle line:84%
+a single top-level list of
+all of the values in there?
+
+00:57:10.470 --> 00:57:12.410 align:middle line:84%
+So the thing you actually
+want to end up with,
+
+00:57:12.410 --> 00:57:14.208 align:middle line:84%
+and if we're looking
+at the ps scores
+
+00:57:14.208 --> 00:57:16.250 align:middle line:84%
+just because it's a little
+easier to think about,
+
+00:57:16.250 --> 00:57:22.970 align:middle line:84%
+is going to be 10,
+10, 7, 8, and 0.
+
+00:57:22.970 --> 00:57:25.400 align:middle line:84%
+So in the end, what
+I would like to get
+
+00:57:25.400 --> 00:57:28.700 align:middle line:84%
+in my all data, this list
+that I'm maintaining here,
+
+00:57:28.700 --> 00:57:33.510 align:middle line:84%
+is something like
+this for the ps.
+
+00:57:33.510 --> 00:57:35.850 align:middle line:84%
+So think about which
+one of these lines
+
+00:57:35.850 --> 00:57:37.170 align:middle line:90%
+will accomplish that.
+
+00:57:37.170 --> 00:57:41.250 align:middle line:90%
+
+
+00:57:41.250 --> 00:57:44.430 align:middle line:84%
+And just to help
+you out we can say
+
+00:57:44.430 --> 00:57:48.870 align:middle line:90%
+student is my dictionary of--
+
+00:57:48.870 --> 00:57:50.385 align:middle line:90%
+who thinks it's the first one?
+
+00:57:50.385 --> 00:57:53.030 align:middle line:90%
+
+
+00:57:53.030 --> 00:57:55.130 align:middle line:90%
+The second one?
+
+00:57:55.130 --> 00:57:57.270 align:middle line:90%
+Third one?
+
+00:57:57.270 --> 00:57:58.630 align:middle line:90%
+Fourth one?
+
+00:57:58.630 --> 00:58:02.550 align:middle line:90%
+
+
+00:58:02.550 --> 00:58:04.440 align:middle line:84%
+Nobody thought
+it's the first one?
+
+00:58:04.440 --> 00:58:06.900 align:middle line:90%
+Are you guys sure?
+
+00:58:06.900 --> 00:58:09.540 align:middle line:84%
+OK, why do you think
+it's the second one?
+
+00:58:09.540 --> 00:58:11.700 align:middle line:90%
+Is it because of the append?
+
+00:58:11.700 --> 00:58:12.750 align:middle line:90%
+Yeah?
+
+00:58:12.750 --> 00:58:14.020 align:middle line:90%
+Let's think about it.
+
+00:58:14.020 --> 00:58:18.240 align:middle line:84%
+So all data is a list,
+and what are we appending?
+
+00:58:18.240 --> 00:58:23.630 align:middle line:84%
+So what is data at stud
+at what going to give us?
+
+00:58:23.630 --> 00:58:29.070 align:middle line:84%
+Data at student is the
+dictionary, this dictionary
+
+00:58:29.070 --> 00:58:32.810 align:middle line:90%
+here, right, this value here.
+
+00:58:32.810 --> 00:58:36.910 align:middle line:84%
+And if we take this value
+and index into the what,
+
+00:58:36.910 --> 00:58:39.280 align:middle line:84%
+will it be an integer
+or will it be a list?
+
+00:58:39.280 --> 00:58:42.120 align:middle line:90%
+
+
+00:58:42.120 --> 00:58:43.120 align:middle line:90%
+A list.
+
+00:58:43.120 --> 00:58:46.470 align:middle line:84%
+So when we append a
+list to another list,
+
+00:58:46.470 --> 00:58:47.940 align:middle line:90%
+what is that going to give us?
+
+00:58:47.940 --> 00:58:51.300 align:middle line:90%
+
+
+00:58:51.300 --> 00:58:55.040 align:middle line:84%
+So if we have a
+list already with a,
+
+00:58:55.040 --> 00:58:57.710 align:middle line:84%
+b, c, if I append
+another list to this,
+
+00:58:57.710 --> 00:59:00.807 align:middle line:84%
+will it put the element within
+that list or the list itself?
+
+00:59:00.807 --> 00:59:01.640 align:middle line:90%
+STUDENT: [INAUDIBLE]
+
+00:59:01.640 --> 00:59:02.900 align:middle line:90%
+ANA BELL: Yeah, exactly.
+
+00:59:02.900 --> 00:59:05.850 align:middle line:90%
+
+
+00:59:05.850 --> 00:59:08.450 align:middle line:84%
+So that's not going
+to work for us.
+
+00:59:08.450 --> 00:59:11.510 align:middle line:90%
+Clearly, D is not right either.
+
+00:59:11.510 --> 00:59:14.750 align:middle line:84%
+And definitely, indexing
+into data at student at what
+
+00:59:14.750 --> 00:59:16.790 align:middle line:90%
+is not going to be right, OK?
+
+00:59:16.790 --> 00:59:21.060 align:middle line:90%
+So that leaves one other choice.
+
+00:59:21.060 --> 00:59:23.650 align:middle line:90%
+The first one.
+
+00:59:23.650 --> 00:59:26.860 align:middle line:84%
+So let's see why
+the first one works.
+
+00:59:26.860 --> 00:59:28.330 align:middle line:90%
+We're concatenating, right?
+
+00:59:28.330 --> 00:59:30.280 align:middle line:90%
+So the plus concatenates.
+
+00:59:30.280 --> 00:59:34.390 align:middle line:84%
+So let's say I already
+have a list, a, b, c.
+
+00:59:34.390 --> 00:59:35.980 align:middle line:84%
+I'm going to
+concatenate something
+
+00:59:35.980 --> 00:59:38.920 align:middle line:84%
+I already have with
+data at student
+
+00:59:38.920 --> 00:59:40.870 align:middle line:90%
+at what, which we said is what?
+
+00:59:40.870 --> 00:59:42.707 align:middle line:84%
+Is it a single element
+or another list?
+
+00:59:42.707 --> 00:59:43.540 align:middle line:90%
+STUDENT: [INAUDIBLE]
+
+00:59:43.540 --> 00:59:45.220 align:middle line:84%
+ANA BELL: Exactly,
+so we concatenate
+
+00:59:45.220 --> 00:59:49.280 align:middle line:84%
+with something like 10,
+10, or something like that.
+
+00:59:49.280 --> 00:59:54.610 align:middle line:84%
+So that will return
+for us a, b, c, 10, 10,
+
+00:59:54.610 --> 00:59:57.280 align:middle line:84%
+which will allow us to
+do something like getting
+
+00:59:57.280 --> 01:00:00.925 align:middle line:90%
+the sum of all these elements.
+
+01:00:00.925 --> 01:00:01.800 align:middle line:90%
+Questions about that?
+
+01:00:01.800 --> 01:00:02.520 align:middle line:90%
+Does that make sense?
+
+01:00:02.520 --> 01:00:03.330 align:middle line:90%
+Is that all right?
+
+01:00:03.330 --> 01:00:04.110 align:middle line:90%
+Yes.
+
+01:00:04.110 --> 01:00:06.858 align:middle line:90%
+STUDENT: [INAUDIBLE]
+
+01:00:06.858 --> 01:00:08.000 align:middle line:90%
+
+
+01:00:08.000 --> 01:00:08.625 align:middle line:90%
+ANA BELL: Yeah.
+
+01:00:08.625 --> 01:00:11.180 align:middle line:90%
+
+
+01:00:11.180 --> 01:00:14.046 align:middle line:84%
+STUDENT: Why would
+it [INAUDIBLE]??
+
+01:00:14.046 --> 01:00:18.540 align:middle line:90%
+
+
+01:00:18.540 --> 01:00:24.138 align:middle line:84%
+Like, how come it
+returns 10 [INAUDIBLE]??
+
+01:00:24.138 --> 01:00:26.790 align:middle line:84%
+ANA BELL: Because
+we're indexing into mq.
+
+01:00:26.790 --> 01:00:30.030 align:middle line:84%
+So if you index into
+mq, mq is your key.
+
+01:00:30.030 --> 01:00:32.890 align:middle line:84%
+So you grab the value
+associated with that key.
+
+01:00:32.890 --> 01:00:35.340 align:middle line:84%
+So that would be this
+list here, the 10.
+
+01:00:35.340 --> 01:00:38.770 align:middle line:84%
+Or for ps, it would
+be the list 10, 10.
+
+01:00:38.770 --> 01:00:42.880 align:middle line:84%
+So quick recap on lists and
+dictionaries before we do one
+
+01:00:42.880 --> 01:00:44.480 align:middle line:90%
+final longer example.
+
+01:00:44.480 --> 01:00:47.680 align:middle line:84%
+So again, lists are ordered
+sequences of elements, right?
+
+01:00:47.680 --> 01:00:49.820 align:middle line:84%
+There is some
+element at index 0.
+
+01:00:49.820 --> 01:00:52.540 align:middle line:84%
+There's some element at index
+1, some element at index 2.
+
+01:00:52.540 --> 01:00:56.590 align:middle line:84%
+So we do have these quote
+unquote "indices," right?
+
+01:00:56.590 --> 01:00:59.290 align:middle line:84%
+But there's an order
+to these indices,
+
+01:00:59.290 --> 01:01:02.440 align:middle line:84%
+and there has to be an
+element index 0 and further
+
+01:01:02.440 --> 01:01:04.600 align:middle line:90%
+up from there, right?
+
+01:01:04.600 --> 01:01:07.090 align:middle line:84%
+Dictionaries also have
+these quote unquote
+
+01:01:07.090 --> 01:01:08.830 align:middle line:90%
+"indices," which we call keys.
+
+01:01:08.830 --> 01:01:09.970 align:middle line:90%
+But these are custom.
+
+01:01:09.970 --> 01:01:13.360 align:middle line:90%
+So you can basically rearrange--
+
+01:01:13.360 --> 01:01:16.450 align:middle line:84%
+you can think of it as being
+allowed to rearrange indices
+
+01:01:16.450 --> 01:01:17.590 align:middle line:90%
+however you'd like, right?
+
+01:01:17.590 --> 01:01:22.470 align:middle line:84%
+There's no order to the
+indices in a dictionary.
+
+01:01:22.470 --> 01:01:25.410 align:middle line:84%
+There are some restrictions
+on the keys or these indices,
+
+01:01:25.410 --> 01:01:28.920 align:middle line:84%
+so they can't be
+immutable or hashable.
+
+01:01:28.920 --> 01:01:32.100 align:middle line:84%
+But other than that,
+the things that you
+
+01:01:32.100 --> 01:01:35.460 align:middle line:84%
+store related to that
+key can be any type,
+
+01:01:35.460 --> 01:01:39.920 align:middle line:84%
+just like you can store
+any type in a list.
+
+01:01:39.920 --> 01:01:43.963 align:middle line:84%
+So the last thing I'd like to
+go through is a larger example.
+
+01:01:43.963 --> 01:01:45.880 align:middle line:84%
+And this will showcase
+a whole bunch of things
+
+01:01:45.880 --> 01:01:47.880 align:middle line:84%
+that we've been
+talking about so far.
+
+01:01:47.880 --> 01:01:51.880 align:middle line:84%
+It'll showcase how
+to, first of all,
+
+01:01:51.880 --> 01:01:54.040 align:middle line:84%
+create dictionaries, which
+is what we did today.
+
+01:01:54.040 --> 01:01:57.080 align:middle line:84%
+It'll showcase how
+to reuse functions,
+
+01:01:57.080 --> 01:02:00.140 align:middle line:84%
+how to write functions and
+reuse functions in other places.
+
+01:02:00.140 --> 01:02:03.760 align:middle line:84%
+It will showcase a little
+bit of mutability as well.
+
+01:02:03.760 --> 01:02:06.740 align:middle line:84%
+But this is all in
+a larger example.
+
+01:02:06.740 --> 01:02:09.850 align:middle line:84%
+And if I go a little
+bit fast through this,
+
+01:02:09.850 --> 01:02:11.590 align:middle line:84%
+I've given you
+Python tutor links.
+
+01:02:11.590 --> 01:02:15.770 align:middle line:84%
+And it's also in the
+file to run on your own.
+
+01:02:15.770 --> 01:02:20.800 align:middle line:84%
+So the goal of this
+last example is
+
+01:02:20.800 --> 01:02:23.380 align:middle line:84%
+to basically find
+the most common words
+
+01:02:23.380 --> 01:02:24.700 align:middle line:90%
+in a song's lyrics.
+
+01:02:24.700 --> 01:02:27.340 align:middle line:84%
+And dictionaries are going
+to be really useful for doing
+
+01:02:27.340 --> 01:02:28.575 align:middle line:90%
+something like this.
+
+01:02:28.575 --> 01:02:30.200 align:middle line:84%
+So I'm going to show
+you, first of all,
+
+01:02:30.200 --> 01:02:31.520 align:middle line:90%
+what we want to end up with.
+
+01:02:31.520 --> 01:02:33.910 align:middle line:84%
+And then we can talk about
+how to divide this larger
+
+01:02:33.910 --> 01:02:37.980 align:middle line:90%
+problem into smaller pieces.
+
+01:02:37.980 --> 01:02:41.550 align:middle line:84%
+So OK, so those
+are all the pieces.
+
+01:02:41.550 --> 01:02:43.080 align:middle line:84%
+But basically what
+I want to end up
+
+01:02:43.080 --> 01:02:51.640 align:middle line:84%
+with is I want to have a song
+be stored as a string, OK?
+
+01:02:51.640 --> 01:02:53.908 align:middle line:84%
+You'll recognize these,
+but these are very old.
+
+01:02:53.908 --> 01:02:56.200 align:middle line:84%
+I actually haven't updated
+these songs for a few years.
+
+01:02:56.200 --> 01:02:58.060 align:middle line:90%
+But yeah, anyway, don't judge.
+
+01:02:58.060 --> 01:03:02.150 align:middle line:84%
+So I've got a song
+stored as a string.
+
+01:03:02.150 --> 01:03:04.910 align:middle line:84%
+And I'm going to run
+each individual function.
+
+01:03:04.910 --> 01:03:07.430 align:middle line:84%
+But in the end,
+what I'd like to do
+
+01:03:07.430 --> 01:03:10.560 align:middle line:84%
+is come up with
+something like this.
+
+01:03:10.560 --> 01:03:15.350 align:middle line:84%
+So I want to present the user
+the top-most common words
+
+01:03:15.350 --> 01:03:17.000 align:middle line:90%
+in the song.
+
+01:03:17.000 --> 01:03:18.517 align:middle line:90%
+So here I have a list.
+
+01:03:18.517 --> 01:03:20.600 align:middle line:84%
+So you can see open closed
+square bracket tells me
+
+01:03:20.600 --> 01:03:21.230 align:middle line:90%
+it's a list.
+
+01:03:21.230 --> 01:03:23.160 align:middle line:84%
+And I've got
+elements in my list.
+
+01:03:23.160 --> 01:03:25.340 align:middle line:84%
+So here's the first
+element in my list,
+
+01:03:25.340 --> 01:03:30.770 align:middle line:84%
+which tells the user that
+the word I occurs 18 times.
+
+01:03:30.770 --> 01:03:33.170 align:middle line:84%
+The next element in
+my list tells the user
+
+01:03:33.170 --> 01:03:35.810 align:middle line:84%
+that the word we
+occurs 17 times.
+
+01:03:35.810 --> 01:03:38.750 align:middle line:84%
+The next element tells
+the user that the words
+
+01:03:38.750 --> 01:03:43.400 align:middle line:84%
+ain't ever getting older occur
+all 16 times, and then so on.
+
+01:03:43.400 --> 01:03:46.700 align:middle line:84%
+So we're decreasing in frequency
+with the most common word
+
+01:03:46.700 --> 01:03:48.140 align:middle line:90%
+occurring 18 times.
+
+01:03:48.140 --> 01:03:55.550 align:middle line:84%
+And then I'm showing the user
+the most common words down to
+
+01:03:55.550 --> 01:03:56.540 align:middle line:90%
+and including 6.
+
+01:03:56.540 --> 01:03:58.550 align:middle line:84%
+So I would choose
+some arbitrary value
+
+01:03:58.550 --> 01:04:01.100 align:middle line:84%
+I want to find in the song
+the words that occur at least
+
+01:04:01.100 --> 01:04:03.360 align:middle line:90%
+six times, for example.
+
+01:04:03.360 --> 01:04:05.325 align:middle line:84%
+OK, so that's the
+goal of this program.
+
+01:04:05.325 --> 01:04:07.910 align:middle line:90%
+
+
+01:04:07.910 --> 01:04:09.190 align:middle line:90%
+So how will we achieve this?
+
+01:04:09.190 --> 01:04:11.350 align:middle line:84%
+It's obviously a
+pretty big task.
+
+01:04:11.350 --> 01:04:16.390 align:middle line:84%
+I wouldn't want to code the
+entire thing right off the bat.
+
+01:04:16.390 --> 01:04:20.910 align:middle line:84%
+But we can actually divide
+it into three smaller pieces.
+
+01:04:20.910 --> 01:04:23.990 align:middle line:84%
+The first piece, and we're going
+to write the code for this,
+
+01:04:23.990 --> 01:04:26.510 align:middle line:84%
+is to create something called
+a frequency dictionary.
+
+01:04:26.510 --> 01:04:28.880 align:middle line:84%
+So given a string
+of words, we're
+
+01:04:28.880 --> 01:04:32.390 align:middle line:84%
+going to create a dictionary
+that maps each word to how
+
+01:04:32.390 --> 01:04:34.020 align:middle line:90%
+often it occurs.
+
+01:04:34.020 --> 01:04:36.350 align:middle line:84%
+So fancy word,
+frequency dictionary,
+
+01:04:36.350 --> 01:04:37.560 align:middle line:90%
+but it's pretty simple.
+
+01:04:37.560 --> 01:04:42.770 align:middle line:84%
+It just maps a word to its
+count inside my long string.
+
+01:04:42.770 --> 01:04:46.780 align:middle line:84%
+So this presents the data
+which is this string of words
+
+01:04:46.780 --> 01:04:48.400 align:middle line:90%
+in a much nicer format, right?
+
+01:04:48.400 --> 01:04:52.900 align:middle line:84%
+It's a dictionary that tells
+me the frequency of each word.
+
+01:04:52.900 --> 01:04:56.080 align:middle line:84%
+Once I have that in hand,
+things get a little bit easier.
+
+01:04:56.080 --> 01:04:58.060 align:middle line:84%
+I can write another
+function that
+
+01:04:58.060 --> 01:05:02.450 align:middle line:84%
+finds the word that occurs
+most often in that dictionary.
+
+01:05:02.450 --> 01:05:04.540 align:middle line:84%
+So the way I'm going
+to do that is look up
+
+01:05:04.540 --> 01:05:07.270 align:middle line:84%
+the frequencies in
+the values, find
+
+01:05:07.270 --> 01:05:10.090 align:middle line:84%
+the maximum of those
+values, and then figure out
+
+01:05:10.090 --> 01:05:14.990 align:middle line:84%
+which keys are associated
+with that maximum value.
+
+01:05:14.990 --> 01:05:17.000 align:middle line:84%
+And this is all made
+possible because I've
+
+01:05:17.000 --> 01:05:21.200 align:middle line:84%
+reimagined my data in this
+frequency dictionary format.
+
+01:05:21.200 --> 01:05:24.580 align:middle line:84%
+The last step, once
+I figure out how
+
+01:05:24.580 --> 01:05:27.760 align:middle line:84%
+to write a function that
+returns for me the words that
+
+01:05:27.760 --> 01:05:30.550 align:middle line:84%
+occur the most times, is to
+find the words that occur
+
+01:05:30.550 --> 01:05:33.690 align:middle line:90%
+at least some number of times.
+
+01:05:33.690 --> 01:05:37.620 align:middle line:84%
+And I'll go through an example
+of this one in a few slides
+
+01:05:37.620 --> 01:05:38.670 align:middle line:90%
+when we get to it.
+
+01:05:38.670 --> 01:05:41.610 align:middle line:84%
+But this last function
+here, number three, you
+
+01:05:41.610 --> 01:05:43.653 align:middle line:84%
+can actually rewrite it
+in a whole bunch of ways.
+
+01:05:43.653 --> 01:05:45.570 align:middle line:84%
+I'm just going to show
+you one way to write it
+
+01:05:45.570 --> 01:05:47.220 align:middle line:90%
+that will involve mutability.
+
+01:05:47.220 --> 01:05:50.490 align:middle line:84%
+But you don't have to
+do it using mutability.
+
+01:05:50.490 --> 01:05:53.310 align:middle line:84%
+You can definitely do
+it in a whole bunch of--
+
+01:05:53.310 --> 01:05:56.670 align:middle line:84%
+with a whole bunch of
+other implementations.
+
+01:05:56.670 --> 01:06:01.520 align:middle line:84%
+So let's begin by first
+creating a dictionary that maps
+
+01:06:01.520 --> 01:06:03.840 align:middle line:90%
+the word to their frequencies.
+
+01:06:03.840 --> 01:06:08.540 align:middle line:84%
+So I've picked a song
+that is a real song.
+
+01:06:08.540 --> 01:06:10.940 align:middle line:90%
+And it has some repetition.
+
+01:06:10.940 --> 01:06:13.850 align:middle line:84%
+And it's short that
+it fits in one line.
+
+01:06:13.850 --> 01:06:16.010 align:middle line:90%
+So I've got this song here.
+
+01:06:16.010 --> 01:06:18.830 align:middle line:84%
+And I've got my function
+generate word dictionary.
+
+01:06:18.830 --> 01:06:22.290 align:middle line:90%
+The song is a string.
+
+01:06:22.290 --> 01:06:24.980 align:middle line:84%
+So it's basically the song
+a little bit cleaned up,
+
+01:06:24.980 --> 01:06:29.450 align:middle line:84%
+not in terms of words, but in
+terms of removing punctuation,
+
+01:06:29.450 --> 01:06:31.820 align:middle line:84%
+removing commas,
+maybe exclamation--
+
+01:06:31.820 --> 01:06:36.210 align:middle line:84%
+or I might have kept quotations
+or something like that.
+
+01:06:36.210 --> 01:06:40.040 align:middle line:84%
+But basically, it's removing
+all of the punctuation and stuff
+
+01:06:40.040 --> 01:06:43.700 align:middle line:84%
+because that will mess
+up my word counts.
+
+01:06:43.700 --> 01:06:45.280 align:middle line:84%
+So what is this
+function going to do
+
+01:06:45.280 --> 01:06:47.560 align:middle line:90%
+given a string for my song?
+
+01:06:47.560 --> 01:06:51.320 align:middle line:84%
+Well, first I'm going to convert
+all my letters to lowercase.
+
+01:06:51.320 --> 01:06:53.810 align:middle line:84%
+This means that
+capital T-H-E will
+
+01:06:53.810 --> 01:06:58.760 align:middle line:84%
+be counted as the same word
+as lowercase t-h-e, which
+
+01:06:58.760 --> 01:07:00.500 align:middle line:90%
+is the correct way to do it.
+
+01:07:00.500 --> 01:07:02.870 align:middle line:84%
+So convert everything
+to lowercase.
+
+01:07:02.870 --> 01:07:05.070 align:middle line:84%
+Then I'm going to
+use our friend,
+
+01:07:05.070 --> 01:07:08.420 align:middle line:84%
+the split function, remember,
+which takes in my string
+
+01:07:08.420 --> 01:07:09.990 align:middle line:90%
+and splits on a character.
+
+01:07:09.990 --> 01:07:12.790 align:middle line:84%
+So by default, it will
+split on the space.
+
+01:07:12.790 --> 01:07:19.600 align:middle line:84%
+This puts our string of words
+in a very manageable format,
+
+01:07:19.600 --> 01:07:21.760 align:middle line:90%
+a list of words.
+
+01:07:21.760 --> 01:07:25.830 align:middle line:84%
+Much nicer to work with lists
+than work with a string.
+
+01:07:25.830 --> 01:07:27.830 align:middle line:84%
+Now that I have
+my word list, I'm
+
+01:07:27.830 --> 01:07:29.600 align:middle line:84%
+going to create my
+empty dictionary
+
+01:07:29.600 --> 01:07:31.700 align:middle line:90%
+and then populate it.
+
+01:07:31.700 --> 01:07:35.170 align:middle line:84%
+So I'm iterating over
+my list of words.
+
+01:07:35.170 --> 01:07:37.540 align:middle line:90%
+And then I have a choice.
+
+01:07:37.540 --> 01:07:39.940 align:middle line:84%
+Either I've seen
+this word already
+
+01:07:39.940 --> 01:07:42.250 align:middle line:84%
+and I want to update
+the frequency, right?
+
+01:07:42.250 --> 01:07:44.020 align:middle line:84%
+So I want to increase
+the frequency by 1
+
+01:07:44.020 --> 01:07:47.590 align:middle line:84%
+because I've already added
+this word to my dictionary.
+
+01:07:47.590 --> 01:07:50.440 align:middle line:84%
+Or this is the first
+time I'm seeing this word
+
+01:07:50.440 --> 01:07:52.000 align:middle line:84%
+and I want to add
+it to my dictionary
+
+01:07:52.000 --> 01:07:54.050 align:middle line:90%
+with a frequency of 1.
+
+01:07:54.050 --> 01:07:58.010 align:middle line:84%
+So the first case here, the
+if, will update the frequency
+
+01:07:58.010 --> 01:08:00.300 align:middle line:84%
+because I've already seen
+the word in my dictionary.
+
+01:08:00.300 --> 01:08:03.950 align:middle line:84%
+So here I'm using in keyword
+to check if the key, the word,
+
+01:08:03.950 --> 01:08:05.540 align:middle line:90%
+is already in my dictionary.
+
+01:08:05.540 --> 01:08:08.710 align:middle line:84%
+If so, I increase
+its frequency by 1.
+
+01:08:08.710 --> 01:08:10.510 align:middle line:84%
+Otherwise, this
+is the first time
+
+01:08:10.510 --> 01:08:12.320 align:middle line:84%
+I'm adding my word
+to my dictionary.
+
+01:08:12.320 --> 01:08:15.700 align:middle line:90%
+So give it a frequency of 1.
+
+01:08:15.700 --> 01:08:17.840 align:middle line:84%
+And then I return
+the word dictionary.
+
+01:08:17.840 --> 01:08:22.279 align:middle line:84%
+So this will map
+strings to integers.
+
+01:08:22.279 --> 01:08:24.534 align:middle line:84%
+Let's work through it
+in the Python tutor.
+
+01:08:24.534 --> 01:08:30.040 align:middle line:90%
+
+
+01:08:30.040 --> 01:08:36.220 align:middle line:84%
+So step, step, step, step, step,
+lowercased my input string,
+
+01:08:36.220 --> 01:08:40.450 align:middle line:84%
+step, I've split it, so now
+I've got this list of all
+
+01:08:40.450 --> 01:08:44.100 align:middle line:90%
+of my words, step.
+
+01:08:44.100 --> 01:08:45.300 align:middle line:90%
+This is where we begin.
+
+01:08:45.300 --> 01:08:48.270 align:middle line:84%
+So I've created my empty
+dictionary over here.
+
+01:08:48.270 --> 01:08:49.910 align:middle line:90%
+Keep an eye on this area here.
+
+01:08:49.910 --> 01:08:52.220 align:middle line:90%
+It will become populated soon.
+
+01:08:52.220 --> 01:08:55.548 align:middle line:84%
+The first word,
+w, is rah, right?
+
+01:08:55.548 --> 01:08:56.840 align:middle line:90%
+It's the first word in my list.
+
+01:08:56.840 --> 01:08:59.970 align:middle line:84%
+It's obviously the first
+time I'm seeing it.
+
+01:08:59.970 --> 01:09:01.970 align:middle line:84%
+I have nothing in my
+dictionary right now.
+
+01:09:01.970 --> 01:09:04.040 align:middle line:84%
+So I'm going to pop
+in my else, and I'm
+
+01:09:04.040 --> 01:09:08.439 align:middle line:84%
+going to add it to my dictionary
+with a frequency of 1.
+
+01:09:08.439 --> 01:09:09.880 align:middle line:90%
+Yay, that worked.
+
+01:09:09.880 --> 01:09:15.550 align:middle line:84%
+Next word in my dictionary, in
+my list is this one, same word
+
+01:09:15.550 --> 01:09:17.029 align:middle line:90%
+I've already seen.
+
+01:09:17.029 --> 01:09:19.210 align:middle line:84%
+So I'm going to go inside
+the if and increase
+
+01:09:19.210 --> 01:09:21.910 align:middle line:90%
+the frequency to 2, all right?
+
+01:09:21.910 --> 01:09:23.550 align:middle line:90%
+rah is now 2.
+
+01:09:23.550 --> 01:09:26.880 align:middle line:90%
+Next is ah, right?
+
+01:09:26.880 --> 01:09:27.899 align:middle line:90%
+So here's my word.
+
+01:09:27.899 --> 01:09:29.970 align:middle line:84%
+I've got the next
+one in my list.
+
+01:09:29.970 --> 01:09:31.560 align:middle line:84%
+It's the first
+time I'm seeing it.
+
+01:09:31.560 --> 01:09:34.350 align:middle line:84%
+Add it to my dictionary
+with a frequency of 1.
+
+01:09:34.350 --> 01:09:37.380 align:middle line:90%
+Next word I'm seeing is, again.
+
+01:09:37.380 --> 01:09:39.420 align:middle line:90%
+Increase its frequency to 2.
+
+01:09:39.420 --> 01:09:41.430 align:middle line:90%
+And I'm going to go faster now.
+
+01:09:41.430 --> 01:09:44.100 align:middle line:84%
+This is increasing
+the frequency to 3
+
+01:09:44.100 --> 01:09:45.689 align:middle line:84%
+because I've seen
+it three times now.
+
+01:09:45.689 --> 01:09:49.920 align:middle line:84%
+And then I'm adding
+rom for the first time,
+
+01:09:49.920 --> 01:09:55.610 align:middle line:84%
+mah for the first time,
+and ro for the first time.
+
+01:09:55.610 --> 01:10:00.260 align:middle line:84%
+And lastly, I'm going to
+increase mah frequency
+
+01:10:00.260 --> 01:10:03.510 align:middle line:84%
+two more times because it occurs
+two more times in my song.
+
+01:10:03.510 --> 01:10:06.170 align:middle line:84%
+So it's increased to 2, and
+now it's increased to 3.
+
+01:10:06.170 --> 01:10:07.320 align:middle line:90%
+And then we're done.
+
+01:10:07.320 --> 01:10:10.220 align:middle line:84%
+So we return the
+word dictionary.
+
+01:10:10.220 --> 01:10:14.000 align:middle line:84%
+Really nice way to
+represent my list--
+
+01:10:14.000 --> 01:10:15.230 align:middle line:90%
+my song, right?
+
+01:10:15.230 --> 01:10:18.040 align:middle line:90%
+Very nice.
+
+01:10:18.040 --> 01:10:20.620 align:middle line:84%
+OK, so now that I have
+this frequency dictionary
+
+01:10:20.620 --> 01:10:24.100 align:middle line:84%
+and I've put it up here-- this
+is what we ended up with--
+
+01:10:24.100 --> 01:10:26.410 align:middle line:84%
+how can we write a function
+that returns for me
+
+01:10:26.410 --> 01:10:29.480 align:middle line:90%
+the most frequent word?
+
+01:10:29.480 --> 01:10:34.150 align:middle line:84%
+So one thing we can recognize
+is the most frequent word
+
+01:10:34.150 --> 01:10:38.170 align:middle line:84%
+has the highest value,
+Python dictionary
+
+01:10:38.170 --> 01:10:40.660 align:middle line:90%
+value in my dictionary, right?
+
+01:10:40.660 --> 01:10:46.390 align:middle line:84%
+So as a human, I would look to
+see which one of these entries
+
+01:10:46.390 --> 01:10:47.620 align:middle line:90%
+have the biggest value.
+
+01:10:47.620 --> 01:10:50.470 align:middle line:84%
+As a computer, I can't
+really do that because I
+
+01:10:50.470 --> 01:10:53.270 align:middle line:84%
+have to do it a little
+bit more systematically.
+
+01:10:53.270 --> 01:10:56.920 align:middle line:84%
+So what we can say is, well,
+let's look at our values
+
+01:10:56.920 --> 01:10:59.360 align:middle line:84%
+and grab the maximum
+of the values.
+
+01:10:59.360 --> 01:11:04.000 align:middle line:84%
+So here, I'm using this .values
+function on my dictionary
+
+01:11:04.000 --> 01:11:08.060 align:middle line:84%
+to grab for me all of the
+values in my dictionary.
+
+01:11:08.060 --> 01:11:12.310 align:middle line:84%
+So this will be the list 2
+comma 3 comma 1 comma 3 comma 1.
+
+01:11:12.310 --> 01:11:15.260 align:middle line:84%
+And then I'm running the
+max function on that list.
+
+01:11:15.260 --> 01:11:18.550 align:middle line:84%
+So max of this list of numbers
+gives me the maximum value
+
+01:11:18.550 --> 01:11:20.580 align:middle line:90%
+in that list, the 3.
+
+01:11:20.580 --> 01:11:24.600 align:middle line:84%
+So highest now has
+the value integer 3.
+
+01:11:24.600 --> 01:11:29.130 align:middle line:84%
+And now, all I need to do
+is iterate over my entries
+
+01:11:29.130 --> 01:11:30.760 align:middle line:90%
+in my dictionary.
+
+01:11:30.760 --> 01:11:33.090 align:middle line:90%
+So this is kv in the items.
+
+01:11:33.090 --> 01:11:36.180 align:middle line:84%
+And all I'm checking now
+inside this iteration
+
+01:11:36.180 --> 01:11:39.670 align:middle line:84%
+is if the value is
+equal to the highest.
+
+01:11:39.670 --> 01:11:41.370 align:middle line:84%
+So as I'm looking
+at each entry, is
+
+01:11:41.370 --> 01:11:43.890 align:middle line:84%
+the value for that entry
+the same as the highest one
+
+01:11:43.890 --> 01:11:44.820 align:middle line:90%
+I've seen?
+
+01:11:44.820 --> 01:11:47.868 align:middle line:84%
+If it is, I'm going to maintain
+a list of all the words
+
+01:11:47.868 --> 01:11:49.410 align:middle line:84%
+with that highest
+value because there
+
+01:11:49.410 --> 01:11:52.920 align:middle line:84%
+might be more than one
+word that has the highest
+
+01:11:52.920 --> 01:11:56.340 align:middle line:84%
+value, as we saw when we
+actually ran it here, right?
+
+01:11:56.340 --> 01:11:59.220 align:middle line:84%
+Here I had a list of
+all of these words
+
+01:11:59.220 --> 01:12:00.630 align:middle line:90%
+that occurred 16 times.
+
+01:12:00.630 --> 01:12:06.180 align:middle line:84%
+So that's the output that
+I want to maintain, OK?
+
+01:12:06.180 --> 01:12:07.933 align:middle line:84%
+So I'm appending
+to my words list.
+
+01:12:07.933 --> 01:12:09.600 align:middle line:84%
+And at the end, I'm
+returning this tuple
+
+01:12:09.600 --> 01:12:12.640 align:middle line:84%
+with the words comma
+that highest value.
+
+01:12:12.640 --> 01:12:18.760 align:middle line:84%
+So Python tutor, like
+in the previous time.
+
+01:12:18.760 --> 01:12:21.030 align:middle line:84%
+So let's create our
+original dictionary.
+
+01:12:21.030 --> 01:12:22.720 align:middle line:84%
+This is what we ended
+up with last time.
+
+01:12:22.720 --> 01:12:24.750 align:middle line:90%
+So the highest value is 3 here.
+
+01:12:24.750 --> 01:12:27.790 align:middle line:84%
+And I'm going to loop through
+each entry in my dictionary.
+
+01:12:27.790 --> 01:12:31.600 align:middle line:84%
+So you can say C kv is going to
+be each one of these in order.
+
+01:12:31.600 --> 01:12:34.720 align:middle line:84%
+So first it's rah w, then
+it's ah 3, and so on.
+
+01:12:34.720 --> 01:12:38.260 align:middle line:84%
+Obviously, the 2 is not equal
+to the 3, so we move on.
+
+01:12:38.260 --> 01:12:41.980 align:middle line:84%
+The 3 equals the 3, so
+we take the ah, and boom,
+
+01:12:41.980 --> 01:12:43.083 align:middle line:90%
+add it to my list here.
+
+01:12:43.083 --> 01:12:45.250 align:middle line:84%
+So this is the list I'm
+maintaining of all the words
+
+01:12:45.250 --> 01:12:48.640 align:middle line:90%
+that occur with frequency 3.
+
+01:12:48.640 --> 01:12:52.300 align:middle line:84%
+Next, no for rom,
+yes for mah, so I'm
+
+01:12:52.300 --> 01:12:53.950 align:middle line:90%
+going to add it to my list.
+
+01:12:53.950 --> 01:12:58.760 align:middle line:84%
+And then no for
+ro, and I'm done.
+
+01:12:58.760 --> 01:13:02.350 align:middle line:84%
+So the return is going
+to be this list--
+
+01:13:02.350 --> 01:13:04.480 align:middle line:84%
+this tuple here with the
+list of the words that
+
+01:13:04.480 --> 01:13:05.320 align:middle line:90%
+occur three times.
+
+01:13:05.320 --> 01:13:09.180 align:middle line:90%
+
+
+01:13:09.180 --> 01:13:12.040 align:middle line:90%
+OK, good.
+
+01:13:12.040 --> 01:13:14.500 align:middle line:84%
+Last part, I'm not going
+to go through Python tutor.
+
+01:13:14.500 --> 01:13:16.540 align:middle line:84%
+I did include a link to
+it because it becomes
+
+01:13:16.540 --> 01:13:17.920 align:middle line:90%
+very messy with the arrows.
+
+01:13:17.920 --> 01:13:21.010 align:middle line:84%
+But I do encourage you
+to try to follow it along
+
+01:13:21.010 --> 01:13:22.280 align:middle line:90%
+on your own time.
+
+01:13:22.280 --> 01:13:25.540 align:middle line:84%
+I will explain,
+however, the way that I
+
+01:13:25.540 --> 01:13:27.020 align:middle line:90%
+chose to solve this problem.
+
+01:13:27.020 --> 01:13:31.900 align:middle line:84%
+So I chose to solve this problem
+to include mutation and reusing
+
+01:13:31.900 --> 01:13:34.930 align:middle line:84%
+the function that we just
+wrote that grabs for me
+
+01:13:34.930 --> 01:13:38.380 align:middle line:84%
+the highest value and the words
+associated with that highest
+
+01:13:38.380 --> 01:13:40.900 align:middle line:90%
+frequency value.
+
+01:13:40.900 --> 01:13:43.960 align:middle line:90%
+So this is the idea.
+
+01:13:43.960 --> 01:13:47.350 align:middle line:84%
+I have my original
+word dictionary, right?
+
+01:13:47.350 --> 01:13:50.740 align:middle line:84%
+This is the frequency dictionary
+we created right off the bat.
+
+01:13:50.740 --> 01:13:56.170 align:middle line:84%
+What I'm going to do is look
+to see which words occur
+
+01:13:56.170 --> 01:13:58.460 align:middle line:90%
+with the highest frequency.
+
+01:13:58.460 --> 01:14:01.390 align:middle line:84%
+So the highest frequency,
+my function from before,
+
+01:14:01.390 --> 01:14:02.800 align:middle line:90%
+grabs for me--
+
+01:14:02.800 --> 01:14:04.570 align:middle line:90%
+it figures out that it's 3.
+
+01:14:04.570 --> 01:14:06.640 align:middle line:84%
+And it figures out
+the words associated
+
+01:14:06.640 --> 01:14:10.650 align:middle line:90%
+with that 3 are ah and mah.
+
+01:14:10.650 --> 01:14:12.930 align:middle line:90%
+That's exactly what we just did.
+
+01:14:12.930 --> 01:14:16.430 align:middle line:84%
+So I'm going to grab those
+words and those entries
+
+01:14:16.430 --> 01:14:17.510 align:middle line:90%
+in the dictionary.
+
+01:14:17.510 --> 01:14:20.270 align:middle line:84%
+And then, I'm going to
+mutate the dictionary
+
+01:14:20.270 --> 01:14:23.060 align:middle line:84%
+to remove those words because
+I know those words occur
+
+01:14:23.060 --> 01:14:26.780 align:middle line:90%
+with the highest frequency.
+
+01:14:26.780 --> 01:14:28.990 align:middle line:84%
+So now, I've
+removed those words,
+
+01:14:28.990 --> 01:14:31.660 align:middle line:84%
+and I've saved them because they
+were the result of the function
+
+01:14:31.660 --> 01:14:33.880 align:middle line:90%
+that I had just ran, right?
+
+01:14:33.880 --> 01:14:36.670 align:middle line:84%
+So I'm maintaining
+this frequency list,
+
+01:14:36.670 --> 01:14:39.340 align:middle line:84%
+which will contain all the
+words that occur at least--
+
+01:14:39.340 --> 01:14:45.430 align:middle line:84%
+I guess I said greater than one
+time, so at least two times.
+
+01:14:45.430 --> 01:14:48.320 align:middle line:84%
+So I'm going to grab the ones
+that occur 3 and 2 times.
+
+01:14:48.320 --> 01:14:52.490 align:middle line:84%
+So right now, I had just grabbed
+the words that occur 3 times.
+
+01:14:52.490 --> 01:14:54.930 align:middle line:84%
+I've removed them
+from my dictionary.
+
+01:14:54.930 --> 01:14:56.570 align:middle line:84%
+So I've actually
+mutated my dictionary
+
+01:14:56.570 --> 01:14:58.840 align:middle line:90%
+to remove those words.
+
+01:14:58.840 --> 01:15:02.080 align:middle line:84%
+Now, if I run the
+exact same function
+
+01:15:02.080 --> 01:15:04.870 align:middle line:84%
+that I just wrote on
+the previous slide
+
+01:15:04.870 --> 01:15:10.180 align:middle line:84%
+on this mutated dictionary,
+which words will it give me?
+
+01:15:10.180 --> 01:15:12.924 align:middle line:90%
+Which words occur the most now?
+
+01:15:12.924 --> 01:15:13.840 align:middle line:90%
+STUDENT: [INAUDIBLE]
+
+01:15:13.840 --> 01:15:15.100 align:middle line:90%
+ANA BELL: Exactly, right?
+
+01:15:15.100 --> 01:15:17.080 align:middle line:84%
+Now the highest value
+in my dictionary,
+
+01:15:17.080 --> 01:15:19.750 align:middle line:84%
+in this frequency
+dictionary, is 2
+
+01:15:19.750 --> 01:15:22.480 align:middle line:84%
+because I mutated to remove
+what was previously the highest
+
+01:15:22.480 --> 01:15:23.180 align:middle line:90%
+value.
+
+01:15:23.180 --> 01:15:26.710 align:middle line:84%
+So I'm running the same function
+again on the mutated dictionary
+
+01:15:26.710 --> 01:15:29.560 align:middle line:90%
+to give me just the rah, right?
+
+01:15:29.560 --> 01:15:34.450 align:middle line:84%
+So I grab that, keep track
+of that in my frequency list,
+
+01:15:34.450 --> 01:15:37.790 align:middle line:84%
+right, mutate the
+dictionary to remove that.
+
+01:15:37.790 --> 01:15:40.990 align:middle line:84%
+And as I'm doing that,
+I'm also keeping track
+
+01:15:40.990 --> 01:15:43.150 align:middle line:84%
+to make sure that the
+highest frequency I have
+
+01:15:43.150 --> 01:15:46.030 align:middle line:84%
+in the remaining dictionary
+is at least whatever
+
+01:15:46.030 --> 01:15:46.910 align:middle line:90%
+I was interested in.
+
+01:15:46.910 --> 01:15:48.580 align:middle line:90%
+So here I want it at least 2.
+
+01:15:48.580 --> 01:15:51.610 align:middle line:84%
+So this function,
+the one I will write,
+
+01:15:51.610 --> 01:15:54.730 align:middle line:84%
+will no longer grab any other
+values from the dictionary
+
+01:15:54.730 --> 01:15:57.800 align:middle line:84%
+because now frequency
+1 I don't want to grab.
+
+01:15:57.800 --> 01:16:01.007 align:middle line:90%
+So this is the resulting value.
+
+01:16:01.007 --> 01:16:01.840 align:middle line:90%
+And that's the idea.
+
+01:16:01.840 --> 01:16:03.465 align:middle line:84%
+We're using mutability
+and the function
+
+01:16:03.465 --> 01:16:05.450 align:middle line:90%
+we just wrote to do this task.
+
+01:16:05.450 --> 01:16:07.000 align:middle line:84%
+And this is the
+code that does that.
+
+01:16:07.000 --> 01:16:10.120 align:middle line:84%
+So this runs the function
+we wrote previously.
+
+01:16:10.120 --> 01:16:13.780 align:middle line:84%
+Step number 2
+gives us that tuple
+
+01:16:13.780 --> 01:16:15.490 align:middle line:90%
+with the list of all the words.
+
+01:16:15.490 --> 01:16:18.310 align:middle line:84%
+This loop here
+makes sure I still
+
+01:16:18.310 --> 01:16:22.000 align:middle line:84%
+have frequencies that are at
+least x in the dictionary.
+
+01:16:22.000 --> 01:16:25.220 align:middle line:84%
+I grab the tuple
+that I just created,
+
+01:16:25.220 --> 01:16:28.160 align:middle line:84%
+so something like this, and
+add it to my frequency list.
+
+01:16:28.160 --> 01:16:30.710 align:middle line:84%
+So this is the resulting list
+that I'm keeping track of.
+
+01:16:30.710 --> 01:16:33.980 align:middle line:84%
+And then this bit here removes
+the word from my dictionary.
+
+01:16:33.980 --> 01:16:35.740 align:middle line:84%
+So I'm mutating the
+dictionary using
+
+01:16:35.740 --> 01:16:39.980 align:middle line:84%
+this del keyword that we saw at
+the beginning of this lecture.
+
+01:16:39.980 --> 01:16:42.580 align:middle line:90%
+Yeah, question.
+
+01:16:42.580 --> 01:16:46.630 align:middle line:84%
+STUDENT: The other one like I
+know it says whilst basically
+
+01:16:46.630 --> 01:16:50.410 align:middle line:90%
+while the
+
+01:16:50.410 --> 01:16:52.156 align:middle line:90%
+ANA BELL: Yeah.
+
+01:16:52.156 --> 01:16:55.330 align:middle line:84%
+STUDENT: I guess what
+I just [INAUDIBLE]
+
+01:16:55.330 --> 01:17:01.410 align:middle line:84%
+why is still [INAUDIBLE]
+well the [INAUDIBLE]??
+
+01:17:01.410 --> 01:17:03.800 align:middle line:84%
+ANA BELL: So I think maybe
+it's because the function--
+
+01:17:03.800 --> 01:17:05.490 align:middle line:84%
+I forget what the
+specification said,
+
+01:17:05.490 --> 01:17:09.680 align:middle line:84%
+but I don't know if it said
+at least 2 or greater than 2,
+
+01:17:09.680 --> 01:17:11.900 align:middle line:90%
+or at least x or greater than x.
+
+01:17:11.900 --> 01:17:13.550 align:middle line:84%
+It depends on which
+one I actually
+
+01:17:13.550 --> 01:17:15.020 align:middle line:90%
+said in the specification.
+
+01:17:15.020 --> 01:17:17.690 align:middle line:84%
+But you can imagine changing
+this to greater than or greater
+
+01:17:17.690 --> 01:17:18.830 align:middle line:90%
+than or equal to.
+
+01:17:18.830 --> 01:17:21.080 align:middle line:84%
+And then we're running
+this function again
+
+01:17:21.080 --> 01:17:25.410 align:middle line:84%
+inside this while loop to grab
+the frequency [INAUDIBLE]..
+
+01:17:25.410 --> 01:17:27.360 align:middle line:84%
+Yeah, so these are
+just the observations
+
+01:17:27.360 --> 01:17:29.650 align:middle line:84%
+I actually stated at the
+beginning of this example,
+
+01:17:29.650 --> 01:17:32.400 align:middle line:84%
+a bunch of the different things
+that we've learned that we're
+
+01:17:32.400 --> 01:17:34.060 align:middle line:90%
+using within this example.
+
+01:17:34.060 --> 01:17:38.040 align:middle line:84%
+So slicing or splitting,
+iterating over the list
+
+01:17:38.040 --> 01:17:43.550 align:middle line:84%
+directly, mutability, using
+the items, things like that.
+
+01:17:43.550 --> 01:17:45.130 align:middle line:90%
+OK, so that's it.
+
+01:17:45.130 --> 01:17:47.080 align:middle line:90%
+That's all I have.
+
+01:17:47.080 --> 01:17:48.300 align:middle line:90%
+I'll see you guys on Monday.
+
+01:17:48.300 --> 01:17:49.710 align:middle line:90%
+Monday is Halloween.
+
+01:17:49.710 --> 01:17:54.390 align:middle line:84%
+If you'd like to bring a
+costume, I love Halloween.
+
+01:17:54.390 --> 01:17:59.510 align:middle line:84%
+I will wear something different
+than what I usually wear.
+
+01:17:59.510 --> 01:18:05.000 align:middle line:90%

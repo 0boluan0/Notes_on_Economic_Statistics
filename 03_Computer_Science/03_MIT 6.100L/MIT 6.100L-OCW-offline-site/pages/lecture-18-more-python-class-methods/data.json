@@ -1,0 +1,6 @@
+
+{
+  "title":"Lecture 18: More Python Class Methods",
+  "content":"Topics: Object Oriented Programming: dunder methods, examples\nViewing videos requires an internet connection Your browser does not support some features required to play this video. Please update your browser to the latest version for the best experience. You can also download the video to watch it offline. View video page Download video Download transcript Lecture Notes Lecture 18: More Python Class Methods\nLecture 18 Code\nReadings Ch 10.1\nFinger Exercise Lecture 18 Write the class according to the specifications below:\nclass Circle(): def __init__(self, radius): \u0026#34;\u0026#34;\u0026#34; Initializes self with radius \u0026#34;\u0026#34;\u0026#34; # your code here def get_radius(self): \u0026#34;\u0026#34;\u0026#34; Returns the radius of self \u0026#34;\u0026#34;\u0026#34; # your code here def __add__(self, c): \u0026#34;\u0026#34;\u0026#34; c is a Circle object Returns a new Circle object whose radius is the sum of self and c\u0026#39;s radius \u0026#34;\u0026#34;\u0026#34; # your code here def __str__(self): \u0026#34;\u0026#34;\u0026#34; A Circle\u0026#39;s string representation is the radius \u0026#34;\u0026#34;\u0026#34; # your code here 6.100L Finger Exercises Lecture 18 Solutions\n"}
+
+

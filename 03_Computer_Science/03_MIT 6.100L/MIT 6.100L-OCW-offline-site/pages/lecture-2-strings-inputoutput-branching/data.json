@@ -1,0 +1,6 @@
+
+{
+  "title":"Lecture 2: Strings, Input/Output, Branching",
+  "content":"Topics: Core Elements of Programs: strings, input/output, f-strings, operators, branching, indentation\nViewing videos requires an internet connection Your browser does not support some features required to play this video. Please update your browser to the latest version for the best experience. You can also download the video to watch it offline. View video page Download video Download transcript Lecture Notes Lecture 2: Strings, Input/Output, and Branching\nLecture 2 Code\nReadings Ch 2.3–2.4\nFinger Exercise Lecture 2 Assume you are given a variable named number (has a numerical value). Write a piece of Python code that prints out one of the following strings: positive if the variable number is positive negative if the variable number is negative zero if the variable number is equal to zero 6.100L Finger Exercises Lecture 2 Solutions\nProblem Set 1 Problem Set 1\nProblem Set 1 Code\n"}
+
+

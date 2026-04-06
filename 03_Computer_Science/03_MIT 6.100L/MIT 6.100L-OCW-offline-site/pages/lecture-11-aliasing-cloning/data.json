@@ -1,0 +1,6 @@
+
+{
+  "title":"Lecture 11: Aliasing, Cloning",
+  "content":"Topics: Aliasing and cloning, list comprehensions\nViewing videos requires an internet connection Your browser does not support some features required to play this video. Please update your browser to the latest version for the best experience. You can also download the video to watch it offline. View video page Download video Download transcript Lecture Notes Lecture 11: Aliasing, Cloning\nLecture 11 Code\nReadings Ch 5.3–5.5\nFinger Exercise Lecture 11 Implement the function that meets the specifications below:\ndef remove_and_sort(Lin, k): \u0026#34;\u0026#34;\u0026#34; Lin is a list of ints k is an int \u0026gt;= 0 Mutates Lin to remove the first k elements in Lin and then sorts the remaining elements in ascending order. If you run out of items to remove, Lin is mutated to an empty list. Does not return anything. \u0026#34;\u0026#34;\u0026#34; # Your code here # Examples: L = [1,6,3] k = 1 remove_and_sort(L, k) print(L) # prints the list [3, 6] 6.100L Finger Exercises Lecture 11 Solutions\n"}
+
+

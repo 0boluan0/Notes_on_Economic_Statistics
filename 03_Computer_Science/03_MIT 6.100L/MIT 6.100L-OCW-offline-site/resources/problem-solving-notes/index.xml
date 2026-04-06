@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Problem-Solving Notes on MIT OpenCourseWare</title>
+    <link>/resources/problem-solving-notes/</link>
+    <description>Recent content in Problem-Solving Notes on MIT OpenCourseWare</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="/resources/problem-solving-notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recitation 1 Notes</title>
+      <link>/resources/mit6_100l_f22_rec01_pdf/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_rec01_pdf/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recitation 10 Notes and Code</title>
+      <link>/resources/mit6_100l_f22_rec10_zip/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_rec10_zip/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recitation 2 Notes and Code</title>
+      <link>/resources/mit6_100l_f22_rec02_zip/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_rec02_zip/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recitation 3 Notes and Code</title>
+      <link>/resources/mit6_100l_f22_rec03_zip/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_rec03_zip/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recitation 4 Notes and Code</title>
+      <link>/resources/mit6_100l_f22_rec04_zip/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_rec04_zip/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recitation 5 Notes and Code</title>
+      <link>/resources/mit6_100l_f22_rec05_zip/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_rec05_zip/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recitation 6 Notes and Code</title>
+      <link>/resources/mit6_100l_f22_rec06_zip/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_rec06_zip/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recitation 7 Notes and Code</title>
+      <link>/resources/mit6_100l_f22_rec07_zip/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_rec07_zip/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recitation 8 Notes and Code</title>
+      <link>/resources/mit6_100l_f22_rec08_zip/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_rec08_zip/data.json</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recitation 9 Notes and Code</title>
+      <link>/resources/mit6_100l_f22_rec09_zip/data.json</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/resources/mit6_100l_f22_rec09_zip/data.json</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

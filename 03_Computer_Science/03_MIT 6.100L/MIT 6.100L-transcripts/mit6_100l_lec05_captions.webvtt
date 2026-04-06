@@ -1,0 +1,3464 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.898 align:middle line:90%
+[SQUEAKING]
+
+00:00:02.898 --> 00:00:04.347 align:middle line:90%
+[RUSTLING]
+
+00:00:04.347 --> 00:00:06.762 align:middle line:90%
+[CLICKING]
+
+00:00:06.762 --> 00:00:11.130 align:middle line:90%
+
+
+00:00:11.130 --> 00:00:15.190 align:middle line:84%
+ANA BELL: OK, so
+let's get started.
+
+00:00:15.190 --> 00:00:17.730 align:middle line:84%
+Today's lecture, we're
+going to do a little bit
+
+00:00:17.730 --> 00:00:20.230 align:middle line:90%
+of a recap of the last lecture.
+
+00:00:20.230 --> 00:00:23.050 align:middle line:84%
+We had begun talking
+about binary numbers.
+
+00:00:23.050 --> 00:00:26.400 align:middle line:84%
+And then, we're going to dive
+into our second algorithm
+
+00:00:26.400 --> 00:00:31.380 align:middle line:84%
+of the class, the
+approximation method algorithm.
+
+00:00:31.380 --> 00:00:34.460 align:middle line:84%
+So let's remember the
+motivation we had for
+
+00:00:34.460 --> 00:00:36.630 align:middle line:84%
+even talking about
+binary numbers
+
+00:00:36.630 --> 00:00:38.990 align:middle line:84%
+and how numbers are
+represented in a computer
+
+00:00:38.990 --> 00:00:40.670 align:middle line:84%
+in the first place,
+and the motivation
+
+00:00:40.670 --> 00:00:42.210 align:middle line:90%
+was this piece of code.
+
+00:00:42.210 --> 00:00:46.160 align:middle line:84%
+So it's very simple, we
+have an initial x is 0,
+
+00:00:46.160 --> 00:00:49.880 align:middle line:84%
+and then we have a
+loop that just adds 0.1
+
+00:00:49.880 --> 00:00:53.400 align:middle line:90%
+to itself 10 times.
+
+00:00:53.400 --> 00:00:57.720 align:middle line:84%
+And then, we printed
+whether that sum equals 1.
+
+00:00:57.720 --> 00:01:00.960 align:middle line:84%
+And what we saw was
+that it was false.
+
+00:01:00.960 --> 00:01:04.030 align:middle line:84%
+Printing x equivalent
+to 1 was false.
+
+00:01:04.030 --> 00:01:06.540 align:middle line:84%
+So then we printed what
+the actual value of x
+
+00:01:06.540 --> 00:01:10.050 align:middle line:84%
+was after adding 0.1
+to itself 10 times,
+
+00:01:10.050 --> 00:01:14.940 align:middle line:84%
+and we saw that that summation
+was actually 0.9999999.
+
+00:01:14.940 --> 00:01:18.870 align:middle line:84%
+And, of course, to Python,
+0.99999 is not equal to 1.
+
+00:01:18.870 --> 00:01:21.720 align:middle line:84%
+So that's why we
+had printed false
+
+00:01:21.720 --> 00:01:25.590 align:middle line:84%
+for x equivalent to
+1, that expression.
+
+00:01:25.590 --> 00:01:27.710 align:middle line:84%
+And so this is our
+motivation, why in the world
+
+00:01:27.710 --> 00:01:31.250 align:middle line:84%
+does this happen in
+programming and Python,
+
+00:01:31.250 --> 00:01:33.530 align:middle line:84%
+and something like this
+could really screw us up
+
+00:01:33.530 --> 00:01:36.830 align:middle line:84%
+if we're not even able to
+compare floating point numbers.
+
+00:01:36.830 --> 00:01:41.180 align:middle line:84%
+So last lecture, we ended
+with this piece of code.
+
+00:01:41.180 --> 00:01:46.580 align:middle line:84%
+It was a way for us to get
+the binary representation
+
+00:01:46.580 --> 00:01:48.590 align:middle line:90%
+of a number in base 10.
+
+00:01:48.590 --> 00:01:51.230 align:middle line:84%
+So given some number, we
+followed a really simple
+
+00:01:51.230 --> 00:01:53.180 align:middle line:84%
+recipe, a really
+simple algorithm
+
+00:01:53.180 --> 00:01:56.740 align:middle line:84%
+to convert that
+number into base 2.
+
+00:01:56.740 --> 00:02:00.860 align:middle line:84%
+The stuff that's in boxes,
+let's not worry about it for now
+
+00:02:00.860 --> 00:02:03.680 align:middle line:84%
+but let's look at just
+this part right here.
+
+00:02:03.680 --> 00:02:07.000 align:middle line:84%
+So the stuff that's in between
+the two boxes, and this
+
+00:02:07.000 --> 00:02:09.190 align:middle line:84%
+is the part that does
+most of the work for us,
+
+00:02:09.190 --> 00:02:11.260 align:middle line:90%
+or all of the work even for us.
+
+00:02:11.260 --> 00:02:15.970 align:middle line:84%
+It basically creates a
+string, initially empty,
+
+00:02:15.970 --> 00:02:18.580 align:middle line:84%
+and the idea was
+that we were going
+
+00:02:18.580 --> 00:02:23.420 align:middle line:84%
+to prepend either 0
+or 1 to that string,
+
+00:02:23.420 --> 00:02:26.380 align:middle line:84%
+depending on whether the
+number we had was odd or even.
+
+00:02:26.380 --> 00:02:29.410 align:middle line:84%
+So for a number like
+19, if we wanted
+
+00:02:29.410 --> 00:02:35.560 align:middle line:84%
+to convert 19 base 10 into base
+2, what the algorithm was doing
+
+00:02:35.560 --> 00:02:38.830 align:middle line:84%
+is over here in
+the loop, it says
+
+00:02:38.830 --> 00:02:42.340 align:middle line:84%
+while this num, whatever
+it is, initially, 19
+
+00:02:42.340 --> 00:02:46.540 align:middle line:84%
+is still greater than 0,
+let's get the remainder when
+
+00:02:46.540 --> 00:02:48.130 align:middle line:90%
+we divide the number by 2.
+
+00:02:48.130 --> 00:02:50.950 align:middle line:84%
+So that's what this
+num%2 is doing,
+
+00:02:50.950 --> 00:02:52.510 align:middle line:90%
+it's either getting a 0 or a 1.
+
+00:02:52.510 --> 00:02:58.330 align:middle line:84%
+So the remainder when
+we divide 19 by 2 is 1.
+
+00:02:58.330 --> 00:03:00.610 align:middle line:84%
+And we're going to
+prepend, so we're
+
+00:03:00.610 --> 00:03:03.220 align:middle line:84%
+casting this one
+integer to a string
+
+00:03:03.220 --> 00:03:06.400 align:middle line:84%
+and prepending it to this
+result, which is initially
+
+00:03:06.400 --> 00:03:07.860 align:middle line:90%
+empty.
+
+00:03:07.860 --> 00:03:09.380 align:middle line:84%
+So that's what
+this line is doing,
+
+00:03:09.380 --> 00:03:11.300 align:middle line:90%
+result equals this thing here.
+
+00:03:11.300 --> 00:03:15.000 align:middle line:84%
+And then, we're going to take
+our number and integer divided
+
+00:03:15.000 --> 00:03:15.500 align:middle line:90%
+by 2.
+
+00:03:15.500 --> 00:03:19.160 align:middle line:84%
+So we're going to take the
+number 19 and divide it by 2.
+
+00:03:19.160 --> 00:03:21.200 align:middle line:84%
+So that's going to
+be 9.5, but we're
+
+00:03:21.200 --> 00:03:23.780 align:middle line:84%
+only interested in the
+integer portion of it, so 9.
+
+00:03:23.780 --> 00:03:28.160 align:middle line:84%
+And then, the loop
+does the check again,
+
+00:03:28.160 --> 00:03:29.990 align:middle line:90%
+is 9 still greater than 0?
+
+00:03:29.990 --> 00:03:32.220 align:middle line:84%
+It is, so then,
+we're going to say,
+
+00:03:32.220 --> 00:03:34.820 align:middle line:84%
+what's the remainder
+when we divide 9 by 2?
+
+00:03:34.820 --> 00:03:37.130 align:middle line:84%
+It's another 1, so
+we're going to prepend
+
+00:03:37.130 --> 00:03:42.350 align:middle line:84%
+it, that remainder to the
+string that we're building up.
+
+00:03:42.350 --> 00:03:44.690 align:middle line:84%
+And again, we're going to
+divide this number by 2,
+
+00:03:44.690 --> 00:03:47.180 align:middle line:84%
+so now we have 4.5
+when we only grab
+
+00:03:47.180 --> 00:03:49.910 align:middle line:90%
+the integer portion of it, 4.
+
+00:03:49.910 --> 00:03:53.390 align:middle line:84%
+And again, we ask what
+is the remainder when
+
+00:03:53.390 --> 00:03:55.430 align:middle line:90%
+we divide 4 by 2.
+
+00:03:55.430 --> 00:04:01.430 align:middle line:84%
+it's a 0, so we prepend
+the 0 to this binary string
+
+00:04:01.430 --> 00:04:02.360 align:middle line:90%
+we're building up.
+
+00:04:02.360 --> 00:04:05.030 align:middle line:84%
+Again, we divide
+it by 2, it's a 2.
+
+00:04:05.030 --> 00:04:08.990 align:middle line:84%
+The remainder when we divide 2
+by 2 is 0, it's an even number.
+
+00:04:08.990 --> 00:04:11.660 align:middle line:84%
+Again, we divide
+2 by 2, it's a 1,
+
+00:04:11.660 --> 00:04:19.399 align:middle line:84%
+and the remainder we get
+when we divide 1 by 2 is a 1.
+
+00:04:19.399 --> 00:04:23.470 align:middle line:84%
+And so this is the string
+that we had eventually
+
+00:04:23.470 --> 00:04:27.830 align:middle line:84%
+systematically, iteratively
+built up with this loop here.
+
+00:04:27.830 --> 00:04:31.070 align:middle line:84%
+And num after we divide
+this is going to be 0,
+
+00:04:31.070 --> 00:04:35.080 align:middle line:84%
+and then we break
+out of the loop.
+
+00:04:35.080 --> 00:04:40.840 align:middle line:84%
+So the binary representation
+of 19 was 10011 base 2.
+
+00:04:40.840 --> 00:04:44.440 align:middle line:90%
+We just kept it as a string.
+
+00:04:44.440 --> 00:04:48.040 align:middle line:84%
+The parts that are
+in red boxes is us
+
+00:04:48.040 --> 00:04:50.930 align:middle line:90%
+dealing with a negative number.
+
+00:04:50.930 --> 00:04:54.280 align:middle line:84%
+So if the user wanted
+to convert negative 19
+
+00:04:54.280 --> 00:04:59.170 align:middle line:84%
+to a binary representation,
+this if else up here, says
+
+00:04:59.170 --> 00:05:03.550 align:middle line:84%
+is the number less than 0, if
+yes, let's set a negative flag
+
+00:05:03.550 --> 00:05:06.640 align:middle line:84%
+to true, and let's just
+assume the user gave us
+
+00:05:06.640 --> 00:05:07.880 align:middle line:90%
+a positive number.
+
+00:05:07.880 --> 00:05:10.360 align:middle line:84%
+So we convert that negative
+19 to the absolute value
+
+00:05:10.360 --> 00:05:12.370 align:middle line:90%
+of itself, positive 19.
+
+00:05:12.370 --> 00:05:15.400 align:middle line:84%
+This code goes
+through as if the user
+
+00:05:15.400 --> 00:05:17.150 align:middle line:90%
+had given us a positive number.
+
+00:05:17.150 --> 00:05:21.650 align:middle line:84%
+And then, at the end, we would
+get the same number as before,
+
+00:05:21.650 --> 00:05:25.430 align:middle line:84%
+except that we're going to
+prepend a negative sign.
+
+00:05:25.430 --> 00:05:29.050 align:middle line:84%
+So the binary representation
+of negative 19
+
+00:05:29.050 --> 00:05:30.700 align:middle line:90%
+is just negative the same thing.
+
+00:05:30.700 --> 00:05:33.250 align:middle line:90%
+
+
+00:05:33.250 --> 00:05:36.100 align:middle line:84%
+OK, so that was
+where we ended up,
+
+00:05:36.100 --> 00:05:40.480 align:middle line:84%
+we talked about these integers,
+but now what about fractions?
+
+00:05:40.480 --> 00:05:42.440 align:middle line:90%
+Integers seems really easy.
+
+00:05:42.440 --> 00:05:45.850 align:middle line:84%
+There's a really easy
+simple procedure algorithm
+
+00:05:45.850 --> 00:05:48.650 align:middle line:84%
+recipe for us to follow to
+get the binary representation.
+
+00:05:48.650 --> 00:05:50.970 align:middle line:90%
+But what about these fractions?
+
+00:05:50.970 --> 00:05:52.230 align:middle line:90%
+Oh yeah, sorry.
+
+00:05:52.230 --> 00:05:54.300 align:middle line:84%
+AUDIENCE: So how
+does the negative,
+
+00:05:54.300 --> 00:05:56.250 align:middle line:84%
+everything's going
+to be 0 or 1, so how
+
+00:05:56.250 --> 00:06:00.060 align:middle line:90%
+does it read the negative?
+
+00:06:00.060 --> 00:06:02.940 align:middle line:84%
+ANA BELL: Oh, it
+doesn't read it, we just
+
+00:06:02.940 --> 00:06:05.560 align:middle line:84%
+pretend like we were
+given a positive number.
+
+00:06:05.560 --> 00:06:09.360 align:middle line:84%
+And then we just do the same
+process over and over again.
+
+00:06:09.360 --> 00:06:11.940 align:middle line:84%
+AUDIENCE: OK, so the computer
+doesn't know it's negative?
+
+00:06:11.940 --> 00:06:15.780 align:middle line:84%
+ANA BELL: I mean, for the
+purposes of the algorithm,
+
+00:06:15.780 --> 00:06:18.390 align:middle line:84%
+it doesn't need to know because
+the number will come out
+
+00:06:18.390 --> 00:06:19.140 align:middle line:90%
+the same.
+
+00:06:19.140 --> 00:06:22.240 align:middle line:84%
+We just flag it as
+being a negative number.
+
+00:06:22.240 --> 00:06:23.862 align:middle line:84%
+And then at the
+end, we say, hey,
+
+00:06:23.862 --> 00:06:25.570 align:middle line:84%
+we were actually given
+a negative number.
+
+00:06:25.570 --> 00:06:28.288 align:middle line:84%
+So let's just pop this negative
+sign right in front of it.
+
+00:06:28.288 --> 00:06:28.830 align:middle line:90%
+AUDIENCE: OK.
+
+00:06:28.830 --> 00:06:33.630 align:middle line:84%
+And then when we talk about
+the powers that 2 is to,
+
+00:06:33.630 --> 00:06:37.800 align:middle line:84%
+are we going from left to right
+descending powers or ascending
+
+00:06:37.800 --> 00:06:39.000 align:middle line:90%
+powers?
+
+00:06:39.000 --> 00:06:40.822 align:middle line:84%
+ANA BELL: We are
+actually doing ascending
+
+00:06:40.822 --> 00:06:42.780 align:middle line:84%
+when we're building up
+the string because we're
+
+00:06:42.780 --> 00:06:44.963 align:middle line:90%
+going right to left.
+
+00:06:44.963 --> 00:06:46.630 align:middle line:84%
+AUDIENCE: So right
+to left is ascending?
+
+00:06:46.630 --> 00:06:47.920 align:middle line:90%
+ANA BELL: Yeah, exactly.
+
+00:06:47.920 --> 00:06:55.400 align:middle line:84%
+So this is 2 to the 0, and
+this is 2 to the 4, yeah.
+
+00:06:55.400 --> 00:06:56.930 align:middle line:84%
+So in terms of
+fractions, if we're
+
+00:06:56.930 --> 00:06:58.430 align:middle line:84%
+thinking about what
+it means to talk
+
+00:06:58.430 --> 00:07:02.210 align:middle line:84%
+about a fraction in
+human-readable base 10,
+
+00:07:02.210 --> 00:07:05.570 align:middle line:84%
+so numbers 0 through
+9, when we have 0.abc
+
+00:07:05.570 --> 00:07:08.480 align:middle line:84%
+we're basically saying
+that's a divided by 10,
+
+00:07:08.480 --> 00:07:12.300 align:middle line:84%
+plus b divided by 100, plus c
+divided by 1,000, and so on.
+
+00:07:12.300 --> 00:07:15.410 align:middle line:84%
+And in base 2, we're going to
+have the same sort of thing
+
+00:07:15.410 --> 00:07:16.340 align:middle line:90%
+going on.
+
+00:07:16.340 --> 00:07:19.880 align:middle line:84%
+If we're talking about a base
+2 representation of a number
+
+00:07:19.880 --> 00:07:26.420 align:middle line:84%
+0.abc, where now a, b, or c
+is just 0 or 1, instead of 0
+
+00:07:26.420 --> 00:07:28.590 align:middle line:84%
+through 9, it's going
+to be the same thing.
+
+00:07:28.590 --> 00:07:32.150 align:middle line:84%
+So we would have a divided
+by 2, plus b divided by 4,
+
+00:07:32.150 --> 00:07:33.750 align:middle line:90%
+plus c divided by 8, and so on.
+
+00:07:33.750 --> 00:07:38.120 align:middle line:84%
+So now we're dealing with powers
+of 2 instead of powers of 10
+
+00:07:38.120 --> 00:07:42.580 align:middle line:84%
+because our base is
+now 2 instead of 10.
+
+00:07:42.580 --> 00:07:45.090 align:middle line:84%
+So that means the binary
+representation of a decimal
+
+00:07:45.090 --> 00:07:48.900 align:middle line:84%
+fraction basically means can we
+find some sort of combination
+
+00:07:48.900 --> 00:07:54.210 align:middle line:84%
+of these values, 0.5 times
+a 01, plus 0.25 times a 01,
+
+00:07:54.210 --> 00:07:57.790 align:middle line:84%
+plus 0.125 times 01,
+and so on and so on.
+
+00:07:57.790 --> 00:08:00.370 align:middle line:84%
+So these are all
+the powers of 2.
+
+00:08:00.370 --> 00:08:02.860 align:middle line:84%
+So I'll give you
+the recipe for how
+
+00:08:02.860 --> 00:08:07.040 align:middle line:84%
+we can actually find the
+representation of a fraction.
+
+00:08:07.040 --> 00:08:09.460 align:middle line:84%
+And this is not something
+that we expect you to come up,
+
+00:08:09.460 --> 00:08:11.680 align:middle line:84%
+just like the recipe for
+this is not something
+
+00:08:11.680 --> 00:08:13.250 align:middle line:90%
+we expect you to come up with.
+
+00:08:13.250 --> 00:08:17.320 align:middle line:84%
+But given the recipe, you should
+be able to intuitively figure
+
+00:08:17.320 --> 00:08:22.420 align:middle line:84%
+out what is the code that
+actually performs this action
+
+00:08:22.420 --> 00:08:25.480 align:middle line:90%
+that does this recipe.
+
+00:08:25.480 --> 00:08:35.970 align:middle line:84%
+So the idea to convert a
+decimal fraction in base 10
+
+00:08:35.970 --> 00:08:39.940 align:middle line:84%
+to a binary fraction in
+base 2 is as follows.
+
+00:08:39.940 --> 00:08:43.860 align:middle line:84%
+So let's look at the decimal
+number 3 divided by 8 just
+
+00:08:43.860 --> 00:08:44.800 align:middle line:90%
+as an example.
+
+00:08:44.800 --> 00:08:49.110 align:middle line:84%
+So that's 0.375, but
+we know it's 3 over 8.
+
+00:08:49.110 --> 00:08:55.860 align:middle line:84%
+In base 10, so using
+numbers 0 through 9,
+
+00:08:55.860 --> 00:08:59.070 align:middle line:84%
+we end up saying it's 3
+over 10, plus 7 over 100,
+
+00:08:59.070 --> 00:09:01.950 align:middle line:84%
+plus 5 over 1,000,
+that's just base 10.
+
+00:09:01.950 --> 00:09:03.540 align:middle line:84%
+But we need to
+come up with a way
+
+00:09:03.540 --> 00:09:07.170 align:middle line:84%
+to convert this into base
+2, and so the trick here
+
+00:09:07.170 --> 00:09:12.960 align:middle line:84%
+is to basically say what is
+the biggest multiple of 2
+
+00:09:12.960 --> 00:09:18.555 align:middle line:84%
+that I can multiply my number,
+my decimal number with such
+
+00:09:18.555 --> 00:09:23.170 align:middle line:84%
+that I end up getting a
+whole number, an integer?
+
+00:09:23.170 --> 00:09:25.420 align:middle line:84%
+That's sort of the trick
+to this whole thing,
+
+00:09:25.420 --> 00:09:29.860 align:middle line:84%
+can I multiply my 0.375
+or whatever fraction
+
+00:09:29.860 --> 00:09:33.220 align:middle line:84%
+I'm interested in
+changing to base 2
+
+00:09:33.220 --> 00:09:37.300 align:middle line:84%
+by some power of 2 big
+enough such that I'm
+
+00:09:37.300 --> 00:09:40.300 align:middle line:84%
+going to get a whole number
+out of the multiplication?
+
+00:09:40.300 --> 00:09:42.760 align:middle line:84%
+And it has to be a power of
+2 because we're converting it
+
+00:09:42.760 --> 00:09:45.650 align:middle line:90%
+to binary, 0s and 1s.
+
+00:09:45.650 --> 00:09:49.660 align:middle line:84%
+So in this simple example,
+0.375 is 3 divided by 8.
+
+00:09:49.660 --> 00:09:54.310 align:middle line:84%
+So that means that the
+smallest power of 2
+
+00:09:54.310 --> 00:09:57.910 align:middle line:84%
+I can multiply 3 over 8 by
+to give me a whole number
+
+00:09:57.910 --> 00:10:01.270 align:middle line:84%
+is 8, that's 2 to
+the power of 3.
+
+00:10:01.270 --> 00:10:07.090 align:middle line:84%
+So if I multiply 0.375
+by 8, 3 over 8, times 8
+
+00:10:07.090 --> 00:10:09.940 align:middle line:90%
+gives me 3 in base 10.
+
+00:10:09.940 --> 00:10:14.290 align:middle line:84%
+And now, this whole number I
+know how to convert to binary.
+
+00:10:14.290 --> 00:10:15.880 align:middle line:90%
+I have a recipe.
+
+00:10:15.880 --> 00:10:17.260 align:middle line:90%
+We've done it on the board here.
+
+00:10:17.260 --> 00:10:19.400 align:middle line:84%
+We have the code on
+the previous slide.
+
+00:10:19.400 --> 00:10:22.390 align:middle line:84%
+So all we have to do now
+is convert the number 3
+
+00:10:22.390 --> 00:10:29.220 align:middle line:84%
+to binary, which
+is just 11, base 2.
+
+00:10:29.220 --> 00:10:32.600 align:middle line:84%
+But this 11 is a
+representation of the number 3.
+
+00:10:32.600 --> 00:10:35.640 align:middle line:84%
+So in order to
+get back to 0.375,
+
+00:10:35.640 --> 00:10:39.740 align:middle line:84%
+I need to divide my 3
+by 2 to the power of 3.
+
+00:10:39.740 --> 00:10:44.660 align:middle line:84%
+So I need to divide my 11
+by 2 to the power of 3.
+
+00:10:44.660 --> 00:10:48.560 align:middle line:84%
+And in binary, dividing
+by some power of 2
+
+00:10:48.560 --> 00:10:51.560 align:middle line:84%
+just means shifting
+the decimal point over,
+
+00:10:51.560 --> 00:10:54.980 align:middle line:84%
+just like in base 10,
+dividing by 10 means shifting
+
+00:10:54.980 --> 00:10:56.490 align:middle line:90%
+the decimal point over.
+
+00:10:56.490 --> 00:11:01.220 align:middle line:84%
+So if number 3 is 11, and
+I multiplied by 2 to the 3
+
+00:11:01.220 --> 00:11:03.980 align:middle line:84%
+to get this value, to
+divide by 2 to the 3,
+
+00:11:03.980 --> 00:11:05.570 align:middle line:84%
+I just need to move
+the decimal point
+
+00:11:05.570 --> 00:11:10.640 align:middle line:84%
+from just after the 11, over
+1, 2, and then add another 0.
+
+00:11:10.640 --> 00:11:16.880 align:middle line:84%
+So the representation
+of 0.375 becomes 0.011,
+
+00:11:16.880 --> 00:11:19.340 align:middle line:84%
+I just shifted this
+decimal point over by 3
+
+00:11:19.340 --> 00:11:21.440 align:middle line:84%
+because now we're
+dealing in base 2.
+
+00:11:21.440 --> 00:11:24.030 align:middle line:90%
+
+
+00:11:24.030 --> 00:11:26.670 align:middle line:90%
+OK, so that's the system.
+
+00:11:26.670 --> 00:11:31.230 align:middle line:84%
+That's the recipe for getting
+this binary representation out
+
+00:11:31.230 --> 00:11:33.290 align:middle line:90%
+of a decimal number.
+
+00:11:33.290 --> 00:11:36.580 align:middle line:84%
+But there's a problem, this
+is all relying on the fact
+
+00:11:36.580 --> 00:11:40.930 align:middle line:84%
+that I can find this
+magical power of 2,
+
+00:11:40.930 --> 00:11:44.500 align:middle line:84%
+that if it's big enough, I
+can find such a power of 2
+
+00:11:44.500 --> 00:11:46.820 align:middle line:84%
+that when I multiply it
+with my decimal number,
+
+00:11:46.820 --> 00:11:48.920 align:middle line:90%
+I get a whole number out of it.
+
+00:11:48.920 --> 00:11:52.270 align:middle line:84%
+And that's not always the
+case, sometimes that power of 2
+
+00:11:52.270 --> 00:11:54.280 align:middle line:84%
+is going to be
+really, really big,
+
+00:11:54.280 --> 00:11:57.700 align:middle line:90%
+or it might not even exist.
+
+00:11:57.700 --> 00:12:00.380 align:middle line:84%
+And so if it's really big,
+or if it doesn't exist,
+
+00:12:00.380 --> 00:12:02.830 align:middle line:84%
+that's where we run
+into problems as we're
+
+00:12:02.830 --> 00:12:04.660 align:middle line:90%
+going to see in a little bit.
+
+00:12:04.660 --> 00:12:06.580 align:middle line:84%
+So this is all
+relying on the fact
+
+00:12:06.580 --> 00:12:08.380 align:middle line:90%
+that I can find this power of 2.
+
+00:12:08.380 --> 00:12:12.250 align:middle line:84%
+So here's the code to
+actually do this recipe
+
+00:12:12.250 --> 00:12:14.920 align:middle line:84%
+that I had on the previous
+slide, finding the power of 2,
+
+00:12:14.920 --> 00:12:17.500 align:middle line:84%
+doing the conversion, and then
+shifting the decimal point
+
+00:12:17.500 --> 00:12:18.080 align:middle line:90%
+over.
+
+00:12:18.080 --> 00:12:20.650 align:middle line:84%
+So I'm going to do a quick
+overview of the pieces,
+
+00:12:20.650 --> 00:12:22.810 align:middle line:84%
+and then we can run
+the Python Tutor just
+
+00:12:22.810 --> 00:12:25.580 align:middle line:84%
+to show you exactly step
+by step what's going on.
+
+00:12:25.580 --> 00:12:29.320 align:middle line:84%
+So let's say I want to
+do 0.625 and convert that
+
+00:12:29.320 --> 00:12:30.670 align:middle line:90%
+to a power of 2.
+
+00:12:30.670 --> 00:12:33.540 align:middle line:84%
+So I've got my x
+initialized up there.
+
+00:12:33.540 --> 00:12:36.660 align:middle line:84%
+This bit here, so
+this big box here,
+
+00:12:36.660 --> 00:12:41.370 align:middle line:84%
+is the part that finds this
+magical power of 2 for me.
+
+00:12:41.370 --> 00:12:46.020 align:middle line:84%
+It's just a loop that keeps
+incrementing the p, the power,
+
+00:12:46.020 --> 00:12:49.740 align:middle line:84%
+such that 2 to the power
+of p multiplied by x,
+
+00:12:49.740 --> 00:12:54.270 align:middle line:84%
+this %1 just gives me the
+decimal bit out of that
+
+00:12:54.270 --> 00:12:56.560 align:middle line:90%
+multiplication is 0.
+
+00:12:56.560 --> 00:12:59.950 align:middle line:84%
+So I'm going to keep
+multiplying 2 to some power of p
+
+00:12:59.950 --> 00:13:06.850 align:middle line:84%
+by x as long as I still have
+a decimal piece to my number.
+
+00:13:06.850 --> 00:13:11.830 align:middle line:84%
+As soon as this %1 becomes 0
+that means that the number I
+
+00:13:11.830 --> 00:13:14.500 align:middle line:90%
+end up with is some number .0.
+
+00:13:14.500 --> 00:13:17.600 align:middle line:84%
+There is no more
+decimal part to it.
+
+00:13:17.600 --> 00:13:19.640 align:middle line:84%
+At that point, I
+break out of the loop
+
+00:13:19.640 --> 00:13:24.300 align:middle line:90%
+and I found my power p.
+
+00:13:24.300 --> 00:13:26.970 align:middle line:84%
+This is going to be
+the integer, so I'm
+
+00:13:26.970 --> 00:13:30.030 align:middle line:84%
+multiplying x by
+that special power,
+
+00:13:30.030 --> 00:13:34.240 align:middle line:84%
+by 2 to the power of
+that special power.
+
+00:13:34.240 --> 00:13:37.110 align:middle line:84%
+And now, I have this number,
+so on the previous slide,
+
+00:13:37.110 --> 00:13:39.180 align:middle line:90%
+it's the number 3 in base 10.
+
+00:13:39.180 --> 00:13:43.770 align:middle line:84%
+And then, this box here is
+exactly the same as two slides
+
+00:13:43.770 --> 00:13:45.990 align:middle line:90%
+ago, it's this procedure here.
+
+00:13:45.990 --> 00:13:48.720 align:middle line:84%
+It's taking my number,
+whatever it may be,
+
+00:13:48.720 --> 00:13:53.020 align:middle line:84%
+and getting the binary
+representation of it.
+
+00:13:53.020 --> 00:13:55.860 align:middle line:84%
+And after that, we
+need to figure out
+
+00:13:55.860 --> 00:13:58.620 align:middle line:84%
+how many spaces to move
+the decimal point backward.
+
+00:13:58.620 --> 00:14:02.160 align:middle line:84%
+So what is the power of p we
+multiplied that number by,
+
+00:14:02.160 --> 00:14:04.780 align:middle line:84%
+and now we need to work our
+way backward and say, well,
+
+00:14:04.780 --> 00:14:09.600 align:middle line:84%
+that dot is here let me
+move the dot back p steps.
+
+00:14:09.600 --> 00:14:11.850 align:middle line:84%
+And that's what this
+is doing, so it's
+
+00:14:11.850 --> 00:14:17.430 align:middle line:84%
+iterating through p minus
+however long this thing is,
+
+00:14:17.430 --> 00:14:21.030 align:middle line:90%
+to pad the front with 0s.
+
+00:14:21.030 --> 00:14:23.530 align:middle line:84%
+Because sometimes this is going
+to be a really small number,
+
+00:14:23.530 --> 00:14:27.330 align:middle line:84%
+so I need to add some leading 0s
+before I put my decimal point.
+
+00:14:27.330 --> 00:14:29.670 align:middle line:84%
+And then I put my
+decimal point and that's
+
+00:14:29.670 --> 00:14:34.970 align:middle line:84%
+all this line is doing,
+and then I print my result.
+
+00:14:34.970 --> 00:14:36.340 align:middle line:90%
+So Python Tutor.
+
+00:14:36.340 --> 00:14:43.870 align:middle line:90%
+
+
+00:14:43.870 --> 00:14:45.650 align:middle line:90%
+All right, so step through.
+
+00:14:45.650 --> 00:14:48.760 align:middle line:84%
+So this is 0.625 just
+like in the slides.
+
+00:14:48.760 --> 00:14:51.190 align:middle line:84%
+P is initially 0,
+so now this loop
+
+00:14:51.190 --> 00:14:53.230 align:middle line:84%
+is just incrementing
+p one by one
+
+00:14:53.230 --> 00:14:59.590 align:middle line:84%
+to find the point where
+I have a remainder of 0.
+
+00:14:59.590 --> 00:15:02.270 align:middle line:84%
+So here, I'm actually also
+printing the remainder.
+
+00:15:02.270 --> 00:15:05.110 align:middle line:84%
+So here we still have
+a non-0 remainder.
+
+00:15:05.110 --> 00:15:09.160 align:middle line:84%
+So it's 0.625 as a remainder,
+0.25 as a remainder,
+
+00:15:09.160 --> 00:15:10.610 align:middle line:90%
+0.5 as a remainder.
+
+00:15:10.610 --> 00:15:13.810 align:middle line:84%
+And then at some point,
+I had multiplied it by 2
+
+00:15:13.810 --> 00:15:17.870 align:middle line:84%
+to the power of 3 because p
+is 3, and I had a 0 remainder.
+
+00:15:17.870 --> 00:15:19.840 align:middle line:84%
+So now I've broken
+out of that loop
+
+00:15:19.840 --> 00:15:22.120 align:middle line:90%
+and I know num is equal to 5.
+
+00:15:22.120 --> 00:15:28.410 align:middle line:84%
+I multiplied by 2 to the power
+of 3, times 0.625 to give me 5.
+
+00:15:28.410 --> 00:15:30.960 align:middle line:84%
+So now I need to
+convert num, which
+
+00:15:30.960 --> 00:15:35.720 align:middle line:84%
+is 5, using this process
+we did here, into binary.
+
+00:15:35.720 --> 00:15:38.300 align:middle line:84%
+That's what this code is
+doing, and this is exactly
+
+00:15:38.300 --> 00:15:40.110 align:middle line:90%
+this process we had here.
+
+00:15:40.110 --> 00:15:42.170 align:middle line:84%
+So I'm creating
+this result string
+
+00:15:42.170 --> 00:15:46.400 align:middle line:84%
+and then prepending a 0
+or 1 whether the number is
+
+00:15:46.400 --> 00:15:49.630 align:middle line:90%
+divisible by 2 or not.
+
+00:15:49.630 --> 00:15:55.030 align:middle line:84%
+So the number 5
+in binary is 101.
+
+00:15:55.030 --> 00:15:57.640 align:middle line:90%
+So that means I have 101.
+
+00:15:57.640 --> 00:16:00.340 align:middle line:84%
+as my binary
+representation of 5.
+
+00:16:00.340 --> 00:16:03.640 align:middle line:84%
+And now the code is going to
+go through this loop, which
+
+00:16:03.640 --> 00:16:07.330 align:middle line:84%
+means it's going to move the
+decimal point to the left three
+
+00:16:07.330 --> 00:16:12.220 align:middle line:84%
+slots because I have to
+multiply by 2 to the power of 3
+
+00:16:12.220 --> 00:16:14.150 align:middle line:90%
+to get the 5.
+
+00:16:14.150 --> 00:16:19.760 align:middle line:84%
+So you can see it's going to
+go loop through three slots.
+
+00:16:19.760 --> 00:16:22.550 align:middle line:84%
+So here it is, it
+made the 0.101.
+
+00:16:22.550 --> 00:16:25.670 align:middle line:84%
+And then sorry, this bit,
+which I skipped over,
+
+00:16:25.670 --> 00:16:29.490 align:middle line:84%
+applies the dot, so it puts
+the dot in front of it.
+
+00:16:29.490 --> 00:16:32.700 align:middle line:84%
+And then, the last step is to
+just print the representation.
+
+00:16:32.700 --> 00:16:41.760 align:middle line:84%
+So the binary representation
+of 0.625 is 0.101.
+
+00:16:41.760 --> 00:16:49.680 align:middle line:84%
+So here is the code,
+and we can run it.
+
+00:16:49.680 --> 00:16:52.350 align:middle line:90%
+
+
+00:16:52.350 --> 00:16:58.790 align:middle line:84%
+So 0.5, the representation
+is 0.1, 0.625,
+
+00:16:58.790 --> 00:17:02.390 align:middle line:84%
+which is what we had just done,
+the representation is 0.101.
+
+00:17:02.390 --> 00:17:04.950 align:middle line:84%
+And we can play around with
+a bunch of these values.
+
+00:17:04.950 --> 00:17:08.240 align:middle line:84%
+But then when we do
+something like 0.1,
+
+00:17:08.240 --> 00:17:11.672 align:middle line:84%
+what is the representation
+of 0.1 going to be?
+
+00:17:11.672 --> 00:17:14.089 align:middle line:84%
+Because now we can use this
+code to get the representation
+
+00:17:14.089 --> 00:17:16.339 align:middle line:90%
+of whatever decimal we'd like.
+
+00:17:16.339 --> 00:17:18.390 align:middle line:84%
+0.1 was this
+troublesome decimal,
+
+00:17:18.390 --> 00:17:20.730 align:middle line:84%
+so let's see exactly
+what happened.
+
+00:17:20.730 --> 00:17:25.410 align:middle line:84%
+Well, it had to do a
+whole lot of divisions,
+
+00:17:25.410 --> 00:17:27.990 align:middle line:84%
+it had to test a whole
+bunch of powers of 2
+
+00:17:27.990 --> 00:17:32.610 align:middle line:84%
+before it actually
+got to a whole number.
+
+00:17:32.610 --> 00:17:34.630 align:middle line:90%
+In fact, about 50 of them.
+
+00:17:34.630 --> 00:17:38.220 align:middle line:84%
+And we know that because there's
+about 50 of these 0s and 1s
+
+00:17:38.220 --> 00:17:39.300 align:middle line:90%
+here.
+
+00:17:39.300 --> 00:17:41.190 align:middle line:84%
+So it was approximately
+2 to the power of 50
+
+00:17:41.190 --> 00:17:43.680 align:middle line:84%
+that it had to multiply
+0.1 by before it
+
+00:17:43.680 --> 00:17:45.255 align:middle line:90%
+got to a whole number.
+
+00:17:45.255 --> 00:17:52.580 align:middle line:90%
+
+
+00:17:52.580 --> 00:17:56.230 align:middle line:84%
+So what that means for
+us is a number that's
+
+00:17:56.230 --> 00:18:01.600 align:middle line:84%
+kind of a linear
+combination of powers of 2
+
+00:18:01.600 --> 00:18:04.990 align:middle line:84%
+is really easy and
+fast to compute,
+
+00:18:04.990 --> 00:18:09.520 align:middle line:84%
+something like this one here,
+1 times 2 to the negative 3
+
+00:18:09.520 --> 00:18:10.930 align:middle line:90%
+is 0.001.
+
+00:18:10.930 --> 00:18:14.110 align:middle line:84%
+But something like
+0.1, which isn't
+
+00:18:14.110 --> 00:18:17.620 align:middle line:84%
+as easy to see what the
+linear combination of all
+
+00:18:17.620 --> 00:18:21.640 align:middle line:84%
+these powers of 2 are, is
+not so easy to compute.
+
+00:18:21.640 --> 00:18:23.860 align:middle line:84%
+And in fact, we had to use
+our program to figure out
+
+00:18:23.860 --> 00:18:25.610 align:middle line:90%
+exactly what it is.
+
+00:18:25.610 --> 00:18:29.120 align:middle line:84%
+And for us, it was
+about 50 of these digits
+
+00:18:29.120 --> 00:18:31.460 align:middle line:90%
+long, which was pretty long.
+
+00:18:31.460 --> 00:18:33.620 align:middle line:84%
+And some of these numbers
+could be even longer,
+
+00:18:33.620 --> 00:18:36.380 align:middle line:90%
+potentially infinite.
+
+00:18:36.380 --> 00:18:39.550 align:middle line:84%
+So the point here is that
+everything in computer memory
+
+00:18:39.550 --> 00:18:43.840 align:middle line:84%
+is represented in terms
+of bits, 0s, and 1s.
+
+00:18:43.840 --> 00:18:46.720 align:middle line:84%
+The reason we went through
+this whole computation
+
+00:18:46.720 --> 00:18:49.630 align:middle line:84%
+is because there are some
+numbers that are just
+
+00:18:49.630 --> 00:18:55.060 align:middle line:84%
+going to be way too big to fit
+inside the computer hardware,
+
+00:18:55.060 --> 00:18:57.170 align:middle line:90%
+inside these representations.
+
+00:18:57.170 --> 00:18:59.630 align:middle line:84%
+So for integers, it's
+straightforward to deal with.
+
+00:18:59.630 --> 00:19:04.210 align:middle line:84%
+We had a really fast way
+to compute the base 2
+
+00:19:04.210 --> 00:19:07.800 align:middle line:84%
+representation, but for
+fractions, it's a lot harder,
+
+00:19:07.800 --> 00:19:11.080 align:middle line:84%
+and those numbers can
+be really, really big.
+
+00:19:11.080 --> 00:19:13.290 align:middle line:84%
+So now how are these
+numbers actually represented
+
+00:19:13.290 --> 00:19:14.490 align:middle line:90%
+inside computer memory?
+
+00:19:14.490 --> 00:19:18.770 align:middle line:84%
+So they're actually being
+represented in two pieces.
+
+00:19:18.770 --> 00:19:22.870 align:middle line:84%
+One piece is a
+significant digit,
+
+00:19:22.870 --> 00:19:27.190 align:middle line:84%
+and the other piece
+is the power of 2.
+
+00:19:27.190 --> 00:19:31.900 align:middle line:84%
+So if we had the
+representation 1,
+
+00:19:31.900 --> 00:19:35.680 align:middle line:84%
+1 inside computer memory,
+basically the significant digit
+
+00:19:35.680 --> 00:19:38.650 align:middle line:90%
+is 1, and the power of 2 is 1.
+
+00:19:38.650 --> 00:19:40.930 align:middle line:84%
+So that means we're going
+to take this one dot
+
+00:19:40.930 --> 00:19:42.460 align:middle line:90%
+and give it the power of 2.
+
+00:19:42.460 --> 00:19:44.570 align:middle line:84%
+So we're going to
+add a 0 after it.
+
+00:19:44.570 --> 00:19:47.110 align:middle line:84%
+So this is the binary
+2 representation
+
+00:19:47.110 --> 00:19:49.610 align:middle line:84%
+because we basically just move
+the dot from here to here,
+
+00:19:49.610 --> 00:19:54.167 align:middle line:84%
+and then the number
+1, 0 in base 2 is 2.0.
+
+00:19:54.167 --> 00:19:55.750 align:middle line:84%
+That's what we have
+on the first line.
+
+00:19:55.750 --> 00:19:59.020 align:middle line:84%
+1, negative 1,
+that representation
+
+00:19:59.020 --> 00:20:01.600 align:middle line:84%
+means I'm going to take
+the significant digit 1,
+
+00:20:01.600 --> 00:20:04.120 align:middle line:84%
+and the power of
+2 is negative 1,
+
+00:20:04.120 --> 00:20:05.890 align:middle line:84%
+so I'm going to take
+this decimal point
+
+00:20:05.890 --> 00:20:07.360 align:middle line:90%
+and move it to the left 1.
+
+00:20:07.360 --> 00:20:12.300 align:middle line:84%
+So this is going
+to be 0.1, that's
+
+00:20:12.300 --> 00:20:16.170 align:middle line:90%
+this, number 0.1, which is 0.5.
+
+00:20:16.170 --> 00:20:18.900 align:middle line:90%
+This is base 2, this is base 10.
+
+00:20:18.900 --> 00:20:20.640 align:middle line:84%
+And just to bring
+the point home,
+
+00:20:20.640 --> 00:20:29.730 align:middle line:84%
+125 is going to be 125
+as a significant digit,
+
+00:20:29.730 --> 00:20:33.840 align:middle line:84%
+and 2 to the negative 2,
+how is this going to work?
+
+00:20:33.840 --> 00:20:35.550 align:middle line:84%
+Well, we're going
+to take the 125
+
+00:20:35.550 --> 00:20:37.230 align:middle line:90%
+and convert it to a power of 2.
+
+00:20:37.230 --> 00:20:39.210 align:middle line:84%
+So it's what is
+this, I'm not going
+
+00:20:39.210 --> 00:20:49.510 align:middle line:84%
+to remember what it is, 1111101,
+this is what 125 is in base 2.
+
+00:20:49.510 --> 00:20:54.430 align:middle line:84%
+But the exponent here
+tells me it's -2.
+
+00:20:54.430 --> 00:20:56.270 align:middle line:84%
+So instead of
+putting the dot here.
+
+00:20:56.270 --> 00:20:58.120 align:middle line:84%
+I'm going to move
+it one, two over.
+
+00:20:58.120 --> 00:21:01.210 align:middle line:84%
+So this is the actual number
+I'm representing in memory.
+
+00:21:01.210 --> 00:21:04.400 align:middle line:84%
+And now I can just convert
+the two pieces separately.
+
+00:21:04.400 --> 00:21:11.310 align:middle line:90%
+So this is going to be 31.25.
+
+00:21:11.310 --> 00:21:14.220 align:middle line:84%
+OK, so this is how
+computers actually represent
+
+00:21:14.220 --> 00:21:17.140 align:middle line:90%
+numbers inside memory.
+
+00:21:17.140 --> 00:21:19.760 align:middle line:84%
+And we call this
+the object type,
+
+00:21:19.760 --> 00:21:22.660 align:middle line:84%
+which is decimal or
+real number float
+
+00:21:22.660 --> 00:21:27.570 align:middle line:84%
+because this decimal point
+kind of floats around.
+
+00:21:27.570 --> 00:21:32.910 align:middle line:84%
+AUDIENCE: Is it 5 or 31.25
+per number in base 10?
+
+00:21:32.910 --> 00:21:37.110 align:middle line:84%
+ANA BELL: Base 10 is
+31.25, and 125 is how
+
+00:21:37.110 --> 00:21:39.100 align:middle line:90%
+it's represented inside memory.
+
+00:21:39.100 --> 00:21:41.980 align:middle line:90%
+So it's a base 10 sort of thing.
+
+00:21:41.980 --> 00:21:43.560 align:middle line:90%
+And then what is the power of 2.
+
+00:21:43.560 --> 00:21:51.300 align:middle line:90%
+
+
+00:21:51.300 --> 00:21:53.640 align:middle line:84%
+So there's a couple
+conversions being done here.
+
+00:21:53.640 --> 00:21:59.340 align:middle line:84%
+We're representing the 125 is
+base 10, and how much we need
+
+00:21:59.340 --> 00:22:01.020 align:middle line:84%
+to move the decimal
+point, but first we
+
+00:22:01.020 --> 00:22:02.820 align:middle line:84%
+need to make the
+conversion of 125
+
+00:22:02.820 --> 00:22:05.220 align:middle line:84%
+to binary, which is
+this long thing here,
+
+00:22:05.220 --> 00:22:06.900 align:middle line:90%
+not counting this decimal point.
+
+00:22:06.900 --> 00:22:10.260 align:middle line:84%
+The negative 2 tells us we need
+to move the decimal point over,
+
+00:22:10.260 --> 00:22:13.583 align:middle line:84%
+and then we have the actual
+number we're trying to store.
+
+00:22:13.583 --> 00:22:15.000 align:middle line:84%
+And the reason
+we're doing this is
+
+00:22:15.000 --> 00:22:17.430 align:middle line:84%
+because we're mostly
+just storing numbers
+
+00:22:17.430 --> 00:22:19.470 align:middle line:84%
+as whole numbers
+inside the memory.
+
+00:22:19.470 --> 00:22:22.640 align:middle line:90%
+We're not storing fractions.
+
+00:22:22.640 --> 00:22:24.390 align:middle line:84%
+AUDIENCE: Yeah, I'm
+just a little confused
+
+00:22:24.390 --> 00:22:25.890 align:middle line:84%
+because you went
+to all that trouble
+
+00:22:25.890 --> 00:22:29.130 align:middle line:90%
+to convert the decimal to--
+
+00:22:29.130 --> 00:22:30.450 align:middle line:90%
+oh, that was for fractions.
+
+00:22:30.450 --> 00:22:31.290 align:middle line:84%
+ANA BELL: That
+was for fractions.
+
+00:22:31.290 --> 00:22:31.980 align:middle line:90%
+Exactly, yeah.
+
+00:22:31.980 --> 00:22:36.140 align:middle line:90%
+
+
+00:22:36.140 --> 00:22:40.700 align:middle line:84%
+OK, so in the end, we did
+all that because we're
+
+00:22:40.700 --> 00:22:42.890 align:middle line:84%
+trying to figure
+out the error, why
+
+00:22:42.890 --> 00:22:46.720 align:middle line:84%
+do we get this error
+inside our programs?
+
+00:22:46.720 --> 00:22:50.320 align:middle line:84%
+Well, in the end, it's because
+computers have a finite number
+
+00:22:50.320 --> 00:22:52.180 align:middle line:90%
+of bits to store data.
+
+00:22:52.180 --> 00:22:56.680 align:middle line:84%
+Most modern computers maybe
+have 32, maybe 64 bits
+
+00:22:56.680 --> 00:22:59.740 align:middle line:90%
+to represent significant digits.
+
+00:22:59.740 --> 00:23:03.820 align:middle line:84%
+So if we have 32
+slots in order to put
+
+00:23:03.820 --> 00:23:07.720 align:middle line:84%
+these significant digits,
+if our number base 2
+
+00:23:07.720 --> 00:23:10.660 align:middle line:84%
+representation was
+50 digits long,
+
+00:23:10.660 --> 00:23:13.120 align:middle line:84%
+then we're going
+to truncate at 32.
+
+00:23:13.120 --> 00:23:16.240 align:middle line:90%
+We can't store those extra bits.
+
+00:23:16.240 --> 00:23:18.790 align:middle line:84%
+And so a number like
+0.1 ends up actually
+
+00:23:18.790 --> 00:23:22.690 align:middle line:84%
+being an approximation in
+base 2 inside computer memory.
+
+00:23:22.690 --> 00:23:26.440 align:middle line:84%
+We're not able to store that
+number exactly perfectly.
+
+00:23:26.440 --> 00:23:29.020 align:middle line:90%
+So it becomes an approximation.
+
+00:23:29.020 --> 00:23:30.610 align:middle line:84%
+And the approximation
+actually ends up
+
+00:23:30.610 --> 00:23:35.080 align:middle line:84%
+being at the 32nd bit, that
+either will be 0 or 1 depending
+
+00:23:35.080 --> 00:23:37.120 align:middle line:90%
+on how we decide to truncate.
+
+00:23:37.120 --> 00:23:42.520 align:middle line:84%
+And so the error is actually
+2 to the negative 32,
+
+00:23:42.520 --> 00:23:44.110 align:middle line:84%
+which is on the
+order of 2 times 10
+
+00:23:44.110 --> 00:23:48.290 align:middle line:84%
+to the negative 10,
+which seems pretty small.
+
+00:23:48.290 --> 00:23:50.720 align:middle line:84%
+It's a very small
+error but we just
+
+00:23:50.720 --> 00:23:54.620 align:middle line:84%
+saw that that error accumulates
+really, really quickly.
+
+00:23:54.620 --> 00:23:59.870 align:middle line:84%
+So while 0.1 has an error at
+the 2 to the negative 32 slot,
+
+00:23:59.870 --> 00:24:03.710 align:middle line:84%
+if we take that error and we
+just kind of accumulate it
+
+00:24:03.710 --> 00:24:07.280 align:middle line:84%
+over 10 increments, as
+we had this loop that
+
+00:24:07.280 --> 00:24:11.090 align:middle line:84%
+went through 10 times, we
+see that that error ends up
+
+00:24:11.090 --> 00:24:12.980 align:middle line:90%
+becoming a big problem.
+
+00:24:12.980 --> 00:24:15.920 align:middle line:84%
+We see that it actually at the
+negative 16th slot or something
+
+00:24:15.920 --> 00:24:21.630 align:middle line:84%
+like that, it starts to
+round to the wrong thing.
+
+00:24:21.630 --> 00:24:26.030 align:middle line:84%
+And so we see things like
+this, we expect it to be 1,
+
+00:24:26.030 --> 00:24:27.110 align:middle line:90%
+but it's not 1.
+
+00:24:27.110 --> 00:24:30.460 align:middle line:90%
+
+
+00:24:30.460 --> 00:24:33.820 align:middle line:84%
+OK, so the moral of the
+story is we don't want to use
+
+00:24:33.820 --> 00:24:37.690 align:middle line:84%
+equivalents, the equivalent
+operator, the == operator,
+
+00:24:37.690 --> 00:24:41.530 align:middle line:90%
+when we're comparing floats.
+
+00:24:41.530 --> 00:24:44.740 align:middle line:84%
+Because of errors like this,
+the errors can accumulate
+
+00:24:44.740 --> 00:24:46.550 align:middle line:84%
+and then we start
+getting the wrong answer,
+
+00:24:46.550 --> 00:24:48.490 align:middle line:84%
+and then your programs
+end up not doing
+
+00:24:48.490 --> 00:24:50.140 align:middle line:90%
+what you expect them to do.
+
+00:24:50.140 --> 00:24:53.620 align:middle line:84%
+So we always want to test
+whether some float is
+
+00:24:53.620 --> 00:24:56.450 align:middle line:84%
+within some epsilon
+of another float,
+
+00:24:56.450 --> 00:25:00.020 align:middle line:84%
+and so that brings us to
+an approximation method.
+
+00:25:00.020 --> 00:25:02.420 align:middle line:84%
+Last lecture, we saw the
+guess-and-check method
+
+00:25:02.420 --> 00:25:04.910 align:middle line:84%
+as a really simple algorithm
+for solving problems.
+
+00:25:04.910 --> 00:25:07.910 align:middle line:84%
+We have a set number of
+solutions that we can check,
+
+00:25:07.910 --> 00:25:11.348 align:middle line:84%
+and then we check each one by
+one, and then at some point,
+
+00:25:11.348 --> 00:25:12.890 align:middle line:84%
+we either find the
+solution, or we've
+
+00:25:12.890 --> 00:25:14.630 align:middle line:84%
+checked all that
+we can check and we
+
+00:25:14.630 --> 00:25:16.760 align:middle line:90%
+haven't found the solution.
+
+00:25:16.760 --> 00:25:19.040 align:middle line:84%
+It's usually an
+integer what were
+
+00:25:19.040 --> 00:25:21.290 align:middle line:84%
+the things that we're checking
+but as long as you have
+
+00:25:21.290 --> 00:25:24.530 align:middle line:84%
+some finite set of values
+you can check for a solution
+
+00:25:24.530 --> 00:25:29.540 align:middle line:84%
+through, guess-and-check
+is totally applicable.
+
+00:25:29.540 --> 00:25:32.330 align:middle line:84%
+But the problem is it's
+a little bit limiting,
+
+00:25:32.330 --> 00:25:34.580 align:middle line:84%
+it doesn't give us an
+actual approximation
+
+00:25:34.580 --> 00:25:35.390 align:middle line:90%
+to the square root.
+
+00:25:35.390 --> 00:25:37.640 align:middle line:84%
+If you remember the code we
+wrote last time, it didn't
+
+00:25:37.640 --> 00:25:42.680 align:middle line:84%
+actually say I'm approximating
+the square root of 5
+
+00:25:42.680 --> 00:25:48.170 align:middle line:84%
+to be 1.4 something or whatever
+it is, or 2 point something,
+
+00:25:48.170 --> 00:25:51.170 align:middle line:84%
+it was just able to tell me the
+square root of a perfect square
+
+00:25:51.170 --> 00:25:55.130 align:middle line:84%
+or that the number you gave
+me is not a perfect square
+
+00:25:55.130 --> 00:25:57.080 align:middle line:84%
+and so it's a really
+limiting algorithm.
+
+00:25:57.080 --> 00:25:58.885 align:middle line:84%
+But the approximation
+method, the one
+
+00:25:58.885 --> 00:26:00.260 align:middle line:84%
+we're going to
+see today actually
+
+00:26:00.260 --> 00:26:02.630 align:middle line:84%
+is going to be able to
+give us an approximation
+
+00:26:02.630 --> 00:26:04.950 align:middle line:84%
+to the square root
+of any number.
+
+00:26:04.950 --> 00:26:06.920 align:middle line:84%
+So it's better than
+guess-and-check
+
+00:26:06.920 --> 00:26:10.650 align:middle line:84%
+because we don't just want
+the correct answer or nothing.
+
+00:26:10.650 --> 00:26:12.740 align:middle line:84%
+It's not an all-or-nothing
+kind of situation,
+
+00:26:12.740 --> 00:26:18.170 align:middle line:84%
+it's that we can approximate
+the answer to some degree.
+
+00:26:18.170 --> 00:26:19.930 align:middle line:84%
+So we're going to
+use guess-and-check
+
+00:26:19.930 --> 00:26:23.800 align:middle line:84%
+when the exact answer that we
+want might not be accessible.
+
+00:26:23.800 --> 00:26:27.580 align:middle line:84%
+We need some way to find an
+answer that's just good enough.
+
+00:26:27.580 --> 00:26:31.300 align:middle line:84%
+And approximation methods
+will not always, and not
+
+00:26:31.300 --> 00:26:32.890 align:middle line:84%
+usually, actually,
+most of the time
+
+00:26:32.890 --> 00:26:35.170 align:middle line:84%
+will not give us
+the right answer.
+
+00:26:35.170 --> 00:26:37.270 align:middle line:84%
+They'll usually give
+us an approximation
+
+00:26:37.270 --> 00:26:39.520 align:middle line:90%
+that's good enough.
+
+00:26:39.520 --> 00:26:42.580 align:middle line:84%
+And approximation methods,
+they came about because
+
+00:26:42.580 --> 00:26:44.830 align:middle line:84%
+of the exhaustive
+enumeration limitation.
+
+00:26:44.830 --> 00:26:47.980 align:middle line:84%
+We're not able to test
+all the possible values
+
+00:26:47.980 --> 00:26:50.200 align:middle line:84%
+to find the exact
+square root of a number
+
+00:26:50.200 --> 00:26:53.030 align:middle line:84%
+because those values
+are all infinite.
+
+00:26:53.030 --> 00:26:56.233 align:middle line:84%
+So floating points
+come into play here.
+
+00:26:56.233 --> 00:26:57.650 align:middle line:84%
+The whole thing
+we've been talking
+
+00:26:57.650 --> 00:27:02.240 align:middle line:84%
+about at the beginning of
+this lecture and last time,
+
+00:27:02.240 --> 00:27:05.030 align:middle line:84%
+floating points come into
+play here because they're
+
+00:27:05.030 --> 00:27:06.840 align:middle line:90%
+very important to this method.
+
+00:27:06.840 --> 00:27:09.858 align:middle line:84%
+Now that we're
+comparing floats we're
+
+00:27:09.858 --> 00:27:11.900 align:middle line:84%
+going to have to be careful
+about how we actually
+
+00:27:11.900 --> 00:27:13.720 align:middle line:90%
+do the comparison.
+
+00:27:13.720 --> 00:27:16.000 align:middle line:84%
+So how can we approximate
+the square root?
+
+00:27:16.000 --> 00:27:18.750 align:middle line:84%
+Well, instead of looking
+at just whole numbers
+
+00:27:18.750 --> 00:27:21.510 align:middle line:84%
+and saying whether we found
+the root or not, what we're
+
+00:27:21.510 --> 00:27:23.790 align:middle line:84%
+going to do is have
+smaller increments.
+
+00:27:23.790 --> 00:27:27.930 align:middle line:84%
+So no longer are we doing
+just integer guess-and-check,
+
+00:27:27.930 --> 00:27:34.290 align:middle line:84%
+we can do 0.1 0.2, 0.3, 0.4, and
+so on, until we get to a guess
+
+00:27:34.290 --> 00:27:36.645 align:middle line:90%
+that's close enough to x.
+
+00:27:36.645 --> 00:27:40.050 align:middle line:84%
+So we say that 2.1 or
+whatever is good enough
+
+00:27:40.050 --> 00:27:42.820 align:middle line:90%
+to the square root of 5.
+
+00:27:42.820 --> 00:27:45.130 align:middle line:84%
+What does it mean
+to be good enough?
+
+00:27:45.130 --> 00:27:47.530 align:middle line:84%
+Suppose we wanted to
+find this approximation
+
+00:27:47.530 --> 00:27:50.260 align:middle line:84%
+to the square root, the
+guess-and-check was not
+
+00:27:50.260 --> 00:27:54.200 align:middle line:84%
+able to do this for us but
+the approximation method can.
+
+00:27:54.200 --> 00:27:56.560 align:middle line:84%
+So what we're asking
+for can we find
+
+00:27:56.560 --> 00:27:59.320 align:middle line:84%
+a root such that that
+root, times that root,
+
+00:27:59.320 --> 00:28:03.124 align:middle line:90%
+times itself is equal to x?
+
+00:28:03.124 --> 00:28:06.480 align:middle line:84%
+And we're going to do
+this such that we have
+
+00:28:06.480 --> 00:28:08.560 align:middle line:90%
+a good enough approximation.
+
+00:28:08.560 --> 00:28:11.700 align:middle line:84%
+So that means that root
+that we're going to find,
+
+00:28:11.700 --> 00:28:16.800 align:middle line:84%
+minus x is going to be
+less than some epsilon,
+
+00:28:16.800 --> 00:28:18.990 align:middle line:84%
+or the absolute value
+of that subtraction
+
+00:28:18.990 --> 00:28:21.960 align:middle line:84%
+is going to be
+less than epsilon.
+
+00:28:21.960 --> 00:28:25.530 align:middle line:84%
+So where we did
+incremental step-by-step,
+
+00:28:25.530 --> 00:28:28.230 align:middle line:84%
+we're going to go through
+as long as we are within
+
+00:28:28.230 --> 00:28:32.800 align:middle line:84%
+or until we are within
+some epsilon of x.
+
+00:28:32.800 --> 00:28:34.875 align:middle line:84%
+So the algorithm
+will be as follows,
+
+00:28:34.875 --> 00:28:36.250 align:middle line:84%
+we're going to
+start with a guess
+
+00:28:36.250 --> 00:28:37.640 align:middle line:90%
+that we know is too small.
+
+00:28:37.640 --> 00:28:40.420 align:middle line:84%
+So for the square root of a
+number, let's start with 0.
+
+00:28:40.420 --> 00:28:41.920 align:middle line:84%
+And then we're going
+to increment it
+
+00:28:41.920 --> 00:28:43.150 align:middle line:90%
+by a really small value.
+
+00:28:43.150 --> 00:28:45.340 align:middle line:84%
+With guess-and-check, we
+incremented it by integers,
+
+00:28:45.340 --> 00:28:48.630 align:middle line:84%
+with this particular method
+we can increment it by 0.5s
+
+00:28:48.630 --> 00:28:53.380 align:middle line:84%
+or 0.1s or 0.0001,
+whatever we'd like.
+
+00:28:53.380 --> 00:28:55.960 align:middle line:84%
+That new increment
+gives us a new guess.
+
+00:28:55.960 --> 00:28:58.630 align:middle line:84%
+We're going to check whether
+this new guess is now
+
+00:28:58.630 --> 00:28:59.590 align:middle line:90%
+close enough to x.
+
+00:28:59.590 --> 00:29:01.442 align:middle line:84%
+If it is, we're good,
+and if it's not,
+
+00:29:01.442 --> 00:29:03.400 align:middle line:84%
+we're just going to keep
+incrementing the guess
+
+00:29:03.400 --> 00:29:05.380 align:middle line:84%
+until we get close enough
+to the actual answer.
+
+00:29:05.380 --> 00:29:08.090 align:middle line:90%
+
+
+00:29:08.090 --> 00:29:11.570 align:middle line:84%
+So we have two
+parameters we actually
+
+00:29:11.570 --> 00:29:14.030 align:middle line:84%
+need to set in the
+approximation algorithm.
+
+00:29:14.030 --> 00:29:17.180 align:middle line:84%
+The first is an epsilon,
+so this is down here,
+
+00:29:17.180 --> 00:29:20.630 align:middle line:84%
+how close do we want to be
+to the final answer, what's
+
+00:29:20.630 --> 00:29:22.790 align:middle line:90%
+the leeway we're going to allow?
+
+00:29:22.790 --> 00:29:26.510 align:middle line:84%
+And second, is the
+increment, so how much
+
+00:29:26.510 --> 00:29:29.600 align:middle line:84%
+do we want to
+change our guess by?
+
+00:29:29.600 --> 00:29:32.510 align:middle line:84%
+The way the algorithm
+performs depends on the values
+
+00:29:32.510 --> 00:29:33.860 align:middle line:90%
+we choose for these.
+
+00:29:33.860 --> 00:29:37.430 align:middle line:84%
+Obviously, if our
+guess is smaller,
+
+00:29:37.430 --> 00:29:39.260 align:middle line:84%
+if we decrease the
+increment, we're
+
+00:29:39.260 --> 00:29:43.100 align:middle line:84%
+going to get a much more
+accurate approximation.
+
+00:29:43.100 --> 00:29:45.800 align:middle line:90%
+
+
+00:29:45.800 --> 00:29:49.160 align:middle line:84%
+If we increase the
+epsilon, how close we
+
+00:29:49.160 --> 00:29:51.290 align:middle line:84%
+want to be to x,
+our program is going
+
+00:29:51.290 --> 00:29:53.030 align:middle line:84%
+to be faster because
+we're going to enter
+
+00:29:53.030 --> 00:29:56.340 align:middle line:84%
+that plus minus epsilon
+boundary faster,
+
+00:29:56.340 --> 00:29:59.225 align:middle line:84%
+but it's going to be less
+accurate because at some point,
+
+00:29:59.225 --> 00:30:00.600 align:middle line:84%
+we're going to
+enter the boundary
+
+00:30:00.600 --> 00:30:01.770 align:middle line:84%
+and I'm going to
+say good enough,
+
+00:30:01.770 --> 00:30:04.290 align:middle line:84%
+I'm not going to get any closer
+to x because there's no need
+
+00:30:04.290 --> 00:30:06.280 align:middle line:90%
+to, I'm already within epsilon.
+
+00:30:06.280 --> 00:30:09.900 align:middle line:84%
+So here, the good enough guess
+was to the square root of 5
+
+00:30:09.900 --> 00:30:13.290 align:middle line:84%
+was 1 point something,
+but on the previous slide,
+
+00:30:13.290 --> 00:30:15.570 align:middle line:84%
+when we had a smaller
+epsilon, the good enough guess
+
+00:30:15.570 --> 00:30:17.264 align:middle line:90%
+was 2 point something.
+
+00:30:17.264 --> 00:30:20.980 align:middle line:90%
+
+
+00:30:20.980 --> 00:30:23.430 align:middle line:84%
+So the approximation algorithm
+is like guess-and-check
+
+00:30:23.430 --> 00:30:25.470 align:middle line:84%
+except that we have
+some small increment,
+
+00:30:25.470 --> 00:30:27.960 align:middle line:84%
+we change by a
+small amount, and we
+
+00:30:27.960 --> 00:30:29.190 align:middle line:90%
+stop when we're close enough.
+
+00:30:29.190 --> 00:30:31.380 align:middle line:84%
+So we're going to check
+that the absolute value
+
+00:30:31.380 --> 00:30:36.030 align:middle line:84%
+of this solution minus
+the actual answer
+
+00:30:36.030 --> 00:30:37.880 align:middle line:90%
+is within epsilon.
+
+00:30:37.880 --> 00:30:40.330 align:middle line:84%
+So here's some code
+where we can implement
+
+00:30:40.330 --> 00:30:45.280 align:middle line:84%
+what finding the square root
+of a number with approximation
+
+00:30:45.280 --> 00:30:47.200 align:middle line:90%
+method.
+
+00:30:47.200 --> 00:30:51.460 align:middle line:84%
+We have some stuff here
+that we're initializing,
+
+00:30:51.460 --> 00:30:54.430 align:middle line:84%
+so this is the thing we want
+to find the square root of.
+
+00:30:54.430 --> 00:30:57.370 align:middle line:84%
+This is how close we want
+to be to the final answer,
+
+00:30:57.370 --> 00:30:59.680 align:middle line:90%
+and this is our increment.
+
+00:30:59.680 --> 00:31:01.510 align:middle line:84%
+Num_guesses is
+just to keep track
+
+00:31:01.510 --> 00:31:03.610 align:middle line:84%
+of how many actual
+guesses we're doing,
+
+00:31:03.610 --> 00:31:05.920 align:middle line:84%
+and we're going to start
+with a guess that we know
+
+00:31:05.920 --> 00:31:07.510 align:middle line:90%
+is too small, 0.
+
+00:31:07.510 --> 00:31:10.050 align:middle line:90%
+
+
+00:31:10.050 --> 00:31:15.080 align:middle line:84%
+This is the loop that does
+all of the work for us.
+
+00:31:15.080 --> 00:31:16.990 align:middle line:84%
+So the way we would
+say it in English,
+
+00:31:16.990 --> 00:31:20.920 align:middle line:84%
+it says basically while our
+guess is not within epsilon
+
+00:31:20.920 --> 00:31:23.660 align:middle line:90%
+keep making new guesses.
+
+00:31:23.660 --> 00:31:26.560 align:middle line:84%
+So while what does it mean
+for the guess to not be
+
+00:31:26.560 --> 00:31:28.150 align:middle line:90%
+within plus or minus epsilon?
+
+00:31:28.150 --> 00:31:31.540 align:middle line:84%
+Well, the absolute
+value of our guess
+
+00:31:31.540 --> 00:31:36.310 align:middle line:84%
+squared minus x is greater
+or equal to epsilon.
+
+00:31:36.310 --> 00:31:41.390 align:middle line:84%
+So while we're still too far
+away, let's make a new guess.
+
+00:31:41.390 --> 00:31:45.720 align:middle line:84%
+So we increment our guess
+by the increment value.
+
+00:31:45.720 --> 00:31:49.430 align:middle line:84%
+So originally, we were
+0, then we're 0.001,
+
+00:31:49.430 --> 00:31:53.540 align:middle line:84%
+then we're going to
+be 0.0002, and so on.
+
+00:31:53.540 --> 00:31:56.120 align:middle line:84%
+This num_guesses again,
+is just for us to keep
+
+00:31:56.120 --> 00:31:57.980 align:middle line:84%
+track of how many
+times we've actually
+
+00:31:57.980 --> 00:31:59.360 align:middle line:90%
+gone through this loop.
+
+00:31:59.360 --> 00:32:02.120 align:middle line:84%
+And at the end, we can print
+how many guesses we've done.
+
+00:32:02.120 --> 00:32:07.580 align:middle line:90%
+
+
+00:32:07.580 --> 00:32:13.790 align:middle line:84%
+OK, so here's the code,
+and 36, so we can run it.
+
+00:32:13.790 --> 00:32:15.900 align:middle line:90%
+What do we see?
+
+00:32:15.900 --> 00:32:19.690 align:middle line:84%
+Here's our approximation
+to the square root of 36.
+
+00:32:19.690 --> 00:32:22.840 align:middle line:84%
+Now, we know it's
+6 and, of course,
+
+00:32:22.840 --> 00:32:27.360 align:middle line:84%
+if we kept going we could
+have found probably exactly 6,
+
+00:32:27.360 --> 00:32:30.000 align:middle line:84%
+but notice this
+approximation algorithm stops
+
+00:32:30.000 --> 00:32:34.520 align:middle line:84%
+as soon as you enter that
+plus minus epsilon boundary.
+
+00:32:34.520 --> 00:32:35.600 align:middle line:90%
+Yes?
+
+00:32:35.600 --> 00:32:38.643 align:middle line:84%
+AUDIENCE: Do for loops always
+increase in integer amounts?
+
+00:32:38.643 --> 00:32:41.060 align:middle line:84%
+ANA BELL: Do for loops always
+increase in integer amounts?
+
+00:32:41.060 --> 00:32:44.670 align:middle line:84%
+Yes, the step has to be an
+integer, positive or negative,
+
+00:32:44.670 --> 00:32:45.170 align:middle line:90%
+yeah.
+
+00:32:45.170 --> 00:32:47.253 align:middle line:84%
+So exactly, a for loop
+would not have worked here.
+
+00:32:47.253 --> 00:32:49.770 align:middle line:90%
+
+
+00:32:49.770 --> 00:32:51.690 align:middle line:84%
+So here we stop this
+algorithm as soon
+
+00:32:51.690 --> 00:32:56.340 align:middle line:84%
+as we entered that plus
+minus boundary of epsilon.
+
+00:32:56.340 --> 00:33:00.060 align:middle line:84%
+And so 5.9991 is close enough
+to the square root of 6,
+
+00:33:00.060 --> 00:33:01.800 align:middle line:90%
+and that's what we're reporting.
+
+00:33:01.800 --> 00:33:06.600 align:middle line:84%
+The number of guesses
+here was about 59,992.
+
+00:33:06.600 --> 00:33:10.980 align:middle line:84%
+and that makes sense because
+our increment is 0.0001,
+
+00:33:10.980 --> 00:33:14.580 align:middle line:84%
+and we went all
+the way up to 5.99.
+
+00:33:14.580 --> 00:33:17.920 align:middle line:84%
+So with each time through the
+loop, we incremented by 0.0001.
+
+00:33:17.920 --> 00:33:21.270 align:middle line:84%
+So that's just
+this times 10,000.
+
+00:33:21.270 --> 00:33:22.690 align:middle line:90%
+That makes sense.
+
+00:33:22.690 --> 00:33:25.210 align:middle line:84%
+So let's try it with
+a couple other values.
+
+00:33:25.210 --> 00:33:29.640 align:middle line:90%
+So here it is with 24, 4.89.
+
+00:33:29.640 --> 00:33:32.610 align:middle line:84%
+Again, we're seeing these
+floating point errors pop
+
+00:33:32.610 --> 00:33:36.570 align:middle line:84%
+into play whenever we see this
+weird like 0.00000 and then
+
+00:33:36.570 --> 00:33:39.450 align:middle line:84%
+some small amount at the end,
+that's these floating point
+
+00:33:39.450 --> 00:33:44.250 align:middle line:84%
+errors just given the numbers
+we're working with adding up.
+
+00:33:44.250 --> 00:33:47.850 align:middle line:84%
+Here's the square
+root of 2, 1.41.
+
+00:33:47.850 --> 00:33:49.240 align:middle line:90%
+Again, floating point error.
+
+00:33:49.240 --> 00:33:52.710 align:middle line:84%
+But this time on the
+other side, 0.9999.
+
+00:33:52.710 --> 00:33:55.740 align:middle line:90%
+12345, run it.
+
+00:33:55.740 --> 00:33:58.170 align:middle line:84%
+It took a second, there
+was a little pause,
+
+00:33:58.170 --> 00:34:00.330 align:middle line:84%
+and then it gave us the
+answer just because it
+
+00:34:00.330 --> 00:34:06.300 align:middle line:84%
+has to loop through about,
+what is this, 1 million times,
+
+00:34:06.300 --> 00:34:10.420 align:middle line:84%
+so did that loop 1 million
+times to get us the answer?
+
+00:34:10.420 --> 00:34:15.060 align:middle line:84%
+And then we can try
+one more, 54321,
+
+00:34:15.060 --> 00:34:23.280 align:middle line:84%
+this should take about five
+times as long because 12,345
+
+00:34:23.280 --> 00:34:26.190 align:middle line:84%
+took about one second, this one
+should take about five seconds
+
+00:34:26.190 --> 00:34:27.249 align:middle line:90%
+but it's not.
+
+00:34:27.249 --> 00:34:29.940 align:middle line:90%
+
+
+00:34:29.940 --> 00:34:32.639 align:middle line:84%
+I'm pretty sure I was talking
+for more than five seconds
+
+00:34:32.639 --> 00:34:35.010 align:middle line:90%
+and this program is not ending.
+
+00:34:35.010 --> 00:34:37.000 align:middle line:90%
+So something's gone wrong.
+
+00:34:37.000 --> 00:34:38.230 align:middle line:90%
+I'm going to stop it.
+
+00:34:38.230 --> 00:34:40.440 align:middle line:84%
+Remember, you can
+stop it by clicking
+
+00:34:40.440 --> 00:34:43.277 align:middle line:84%
+the shell, hitting Control-C,
+or the little square
+
+00:34:43.277 --> 00:34:44.069 align:middle line:90%
+here in the corner.
+
+00:34:44.069 --> 00:34:46.920 align:middle line:90%
+
+
+00:34:46.920 --> 00:34:47.885 align:middle line:90%
+So what went wrong?
+
+00:34:47.885 --> 00:34:51.239 align:middle line:90%
+
+
+00:34:51.239 --> 00:34:54.239 align:middle line:84%
+Oh yes, my question is, will
+this loop always terminate?
+
+00:34:54.239 --> 00:35:00.120 align:middle line:84%
+And 54321 was an example of
+the loop not terminating.
+
+00:35:00.120 --> 00:35:02.010 align:middle line:90%
+So what happened?
+
+00:35:02.010 --> 00:35:04.010 align:middle line:90%
+We did all this.
+
+00:35:04.010 --> 00:35:07.420 align:middle line:84%
+Let's try to debug what exactly
+happened because clearly what
+
+00:35:07.420 --> 00:35:09.250 align:middle line:84%
+we have in code right
+now is not really
+
+00:35:09.250 --> 00:35:11.000 align:middle line:90%
+giving us much information.
+
+00:35:11.000 --> 00:35:14.170 align:middle line:84%
+So let's add some
+print statements.
+
+00:35:14.170 --> 00:35:16.790 align:middle line:84%
+The print statements I'm
+adding is just in here.
+
+00:35:16.790 --> 00:35:18.640 align:middle line:84%
+So everything else
+that's not boxed
+
+00:35:18.640 --> 00:35:20.750 align:middle line:84%
+is the same as on
+the previous slide.
+
+00:35:20.750 --> 00:35:25.880 align:middle line:84%
+The only thing I'm adding new
+is this if statement here.
+
+00:35:25.880 --> 00:35:32.950 align:middle line:84%
+So every 100,000 guesses,
+so every time I've
+
+00:35:32.950 --> 00:35:35.380 align:middle line:84%
+gone through this
+loop 100,000 times,
+
+00:35:35.380 --> 00:35:38.200 align:middle line:84%
+I'm going to print what
+the current guess is
+
+00:35:38.200 --> 00:35:40.810 align:middle line:84%
+and what the guess
+squared minus x is,
+
+00:35:40.810 --> 00:35:44.560 align:middle line:84%
+so how far away I am
+from x, the epsilon.
+
+00:35:44.560 --> 00:35:49.270 align:middle line:84%
+Yeah, not the epsilon but
+how far away I am from x.
+
+00:35:49.270 --> 00:35:50.695 align:middle line:90%
+So let's run that code.
+
+00:35:50.695 --> 00:35:54.910 align:middle line:90%
+
+
+00:35:54.910 --> 00:35:56.290 align:middle line:90%
+It's down here.
+
+00:35:56.290 --> 00:35:58.420 align:middle line:84%
+I added a little bit
+of extra thing, which
+
+00:35:58.420 --> 00:36:00.220 align:middle line:84%
+is just it's not
+printing the whole time,
+
+00:36:00.220 --> 00:36:01.810 align:middle line:84%
+it's just going to
+pause for me just
+
+00:36:01.810 --> 00:36:03.560 align:middle line:90%
+to talk about what's going on.
+
+00:36:03.560 --> 00:36:07.430 align:middle line:84%
+So here I have the
+code run, has run,
+
+00:36:07.430 --> 00:36:10.640 align:middle line:84%
+so my first 100,000
+times through the loop I
+
+00:36:10.640 --> 00:36:13.370 align:middle line:90%
+have my guess being about 10.
+
+00:36:13.370 --> 00:36:17.810 align:middle line:84%
+And how far I am from
+x is about 54,000.
+
+00:36:17.810 --> 00:36:21.680 align:middle line:84%
+So I want to be 0.01 away
+from x because that's
+
+00:36:21.680 --> 00:36:22.880 align:middle line:90%
+what my epsilon is.
+
+00:36:22.880 --> 00:36:25.853 align:middle line:84%
+And so here, I'm
+54,000 away from x.
+
+00:36:25.853 --> 00:36:27.020 align:middle line:90%
+So clearly, that's too much.
+
+00:36:27.020 --> 00:36:30.520 align:middle line:90%
+
+
+00:36:30.520 --> 00:36:33.250 align:middle line:84%
+Let's continue, so then
+we make more guesses,
+
+00:36:33.250 --> 00:36:37.690 align:middle line:84%
+and then here, when my guess
+is 100, I am about 44,000
+
+00:36:37.690 --> 00:36:41.830 align:middle line:84%
+away from x from
+54 so looking good.
+
+00:36:41.830 --> 00:36:42.680 align:middle line:90%
+Let's continue.
+
+00:36:42.680 --> 00:36:46.540 align:middle line:84%
+So with 120, I'm
+39,000 away from x.
+
+00:36:46.540 --> 00:36:52.120 align:middle line:84%
+With 200, I'm 14,000 away from
+x, so it's looking much better.
+
+00:36:52.120 --> 00:36:56.980 align:middle line:84%
+I'm getting closer and closer
+to getting that difference
+
+00:36:56.980 --> 00:37:00.580 align:middle line:90%
+being 0 or 0.01, continue.
+
+00:37:00.580 --> 00:37:03.310 align:middle line:84%
+With 210, I'm
+10,000 away from x,
+
+00:37:03.310 --> 00:37:05.410 align:middle line:84%
+and then I'm almost
+6,000 away from x,
+
+00:37:05.410 --> 00:37:08.580 align:middle line:90%
+and then I'm 1,000 away from x.
+
+00:37:08.580 --> 00:37:12.960 align:middle line:84%
+And then, from 230,
+as my guess, which
+
+00:37:12.960 --> 00:37:18.150 align:middle line:84%
+brought me 1,400 away from
+x, the next time, I have 240.
+
+00:37:18.150 --> 00:37:22.620 align:middle line:84%
+The next printout I have
+brings me to 3,000 away from x.
+
+00:37:22.620 --> 00:37:27.520 align:middle line:84%
+So I was 1,000
+but now I'm 3,000.
+
+00:37:27.520 --> 00:37:30.640 align:middle line:84%
+And then from there on things
+break down really quickly
+
+00:37:30.640 --> 00:37:35.080 align:middle line:84%
+because I just get now farther
+and farther away from x.
+
+00:37:35.080 --> 00:37:37.570 align:middle line:84%
+So here I am continuing the
+program for a little bit,
+
+00:37:37.570 --> 00:37:40.450 align:middle line:84%
+and then I just
+keep making guesses
+
+00:37:40.450 --> 00:37:42.500 align:middle line:84%
+because I was never
+within that epsilon.
+
+00:37:42.500 --> 00:37:47.200 align:middle line:84%
+So here's 500, and now I'm
+almost 200,000 away from x.
+
+00:37:47.200 --> 00:37:48.740 align:middle line:84%
+And so now you see
+what's happening,
+
+00:37:48.740 --> 00:37:50.200 align:middle line:84%
+this program is
+just going to keep
+
+00:37:50.200 --> 00:37:55.190 align:middle line:84%
+getting further and further
+away from where I need to be.
+
+00:37:55.190 --> 00:37:59.360 align:middle line:84%
+So let's visualize
+what exactly happened.
+
+00:37:59.360 --> 00:38:06.100 align:middle line:84%
+This is our x, 54,321,
+and this is our epsilon,
+
+00:38:06.100 --> 00:38:10.360 align:middle line:84%
+let's say it's 0.01,
+obviously not to scale.
+
+00:38:10.360 --> 00:38:12.920 align:middle line:84%
+Blue is going to be
+representing one guess.
+
+00:38:12.920 --> 00:38:15.700 align:middle line:84%
+So here's a guess,
+and then we have
+
+00:38:15.700 --> 00:38:17.990 align:middle line:90%
+the guess squared, a green.
+
+00:38:17.990 --> 00:38:20.170 align:middle line:84%
+So let's just for
+visualization purposes,
+
+00:38:20.170 --> 00:38:22.990 align:middle line:84%
+let's say this is our guess,
+and this is our guess squared.
+
+00:38:22.990 --> 00:38:26.590 align:middle line:84%
+OK, we're far away from
+x, we're definitely
+
+00:38:26.590 --> 00:38:28.120 align:middle line:90%
+outside the epsilon boundary.
+
+00:38:28.120 --> 00:38:31.250 align:middle line:84%
+We make another guess by
+incrementing it a little bit.
+
+00:38:31.250 --> 00:38:33.240 align:middle line:90%
+This is the guess squared.
+
+00:38:33.240 --> 00:38:34.950 align:middle line:84%
+We make another guess
+by incrementing it
+
+00:38:34.950 --> 00:38:36.450 align:middle line:84%
+a little bit because
+we're still far
+
+00:38:36.450 --> 00:38:38.190 align:middle line:84%
+away from that
+plus minus epsilon,
+
+00:38:38.190 --> 00:38:40.110 align:middle line:90%
+this is our guess squared.
+
+00:38:40.110 --> 00:38:42.960 align:middle line:84%
+We make another guess,
+this is our guess squared,
+
+00:38:42.960 --> 00:38:46.620 align:middle line:84%
+we're pretty darn close to that
+plus minus epsilon boundary.
+
+00:38:46.620 --> 00:38:50.290 align:middle line:84%
+We want to be within
+that plus minus epsilon.
+
+00:38:50.290 --> 00:38:53.190 align:middle line:84%
+So one more guess
+should make it right.
+
+00:38:53.190 --> 00:38:56.247 align:middle line:84%
+This is our next guess,
+but now the guess
+
+00:38:56.247 --> 00:38:57.455 align:middle line:90%
+squared is on the other side.
+
+00:38:57.455 --> 00:39:00.320 align:middle line:90%
+
+
+00:39:00.320 --> 00:39:03.660 align:middle line:84%
+This is the big
+reveal, you guys.
+
+00:39:03.660 --> 00:39:04.680 align:middle line:90%
+So what happened?
+
+00:39:04.680 --> 00:39:06.030 align:middle line:90%
+What happens now?
+
+00:39:06.030 --> 00:39:09.240 align:middle line:84%
+The program says keep
+guessing because we're not
+
+00:39:09.240 --> 00:39:10.390 align:middle line:90%
+within epsilon.
+
+00:39:10.390 --> 00:39:15.290 align:middle line:84%
+So it's going to make
+another guess, guess squared,
+
+00:39:15.290 --> 00:39:17.930 align:middle line:84%
+and it's just going
+to keep guessing.
+
+00:39:17.930 --> 00:39:19.610 align:middle line:84%
+And then our guess
+squared is just
+
+00:39:19.610 --> 00:39:21.480 align:middle line:84%
+going to keep getting
+bigger and bigger.
+
+00:39:21.480 --> 00:39:24.080 align:middle line:84%
+So we basically
+overshot the epsilon,
+
+00:39:24.080 --> 00:39:26.420 align:middle line:84%
+we've overshot our little
+plus-minus boundary
+
+00:39:26.420 --> 00:39:28.865 align:middle line:84%
+that we were interested
+in being within.
+
+00:39:28.865 --> 00:39:33.340 align:middle line:90%
+
+
+00:39:33.340 --> 00:39:36.130 align:middle line:84%
+We didn't account for that
+when we wrote the loop,
+
+00:39:36.130 --> 00:39:38.230 align:middle line:84%
+all we wanted to do
+was be within epsilon
+
+00:39:38.230 --> 00:39:39.970 align:middle line:90%
+and our program would end.
+
+00:39:39.970 --> 00:39:42.670 align:middle line:90%
+So let's fix that.
+
+00:39:42.670 --> 00:39:46.450 align:middle line:84%
+One addition will fix
+that, and it's something
+
+00:39:46.450 --> 00:39:50.080 align:middle line:84%
+that we had been doing in
+guess-and-check anyway.
+
+00:39:50.080 --> 00:39:51.850 align:middle line:84%
+In guess-and-check we
+would say something
+
+00:39:51.850 --> 00:39:56.380 align:middle line:84%
+like if we've passed the
+reasonable guess, when
+
+00:39:56.380 --> 00:39:58.240 align:middle line:84%
+we know that guess
+squared from here on out
+
+00:39:58.240 --> 00:40:00.820 align:middle line:84%
+is definitely too
+big, just stop.
+
+00:40:00.820 --> 00:40:02.200 align:middle line:90%
+Stop guessing.
+
+00:40:02.200 --> 00:40:03.380 align:middle line:90%
+Just stop.
+
+00:40:03.380 --> 00:40:04.990 align:middle line:84%
+And so we can have
+that same thing
+
+00:40:04.990 --> 00:40:08.300 align:middle line:84%
+here as just another
+ending condition.
+
+00:40:08.300 --> 00:40:10.760 align:middle line:84%
+So everything in this code
+is the same as before,
+
+00:40:10.760 --> 00:40:13.240 align:middle line:90%
+except for this red box.
+
+00:40:13.240 --> 00:40:15.910 align:middle line:84%
+We're adding another
+stopping condition
+
+00:40:15.910 --> 00:40:20.590 align:middle line:84%
+that basically says keep
+guessing while we're still
+
+00:40:20.590 --> 00:40:23.500 align:middle line:90%
+guessing something reasonable.
+
+00:40:23.500 --> 00:40:26.650 align:middle line:84%
+But when we get something
+that's not reasonable,
+
+00:40:26.650 --> 00:40:29.935 align:middle line:84%
+which is when the guess
+squared is greater than x,
+
+00:40:29.935 --> 00:40:33.230 align:middle line:84%
+we're way past it,
+stop guessing as well.
+
+00:40:33.230 --> 00:40:35.320 align:middle line:84%
+So whichever one of
+these conditions,
+
+00:40:35.320 --> 00:40:39.400 align:middle line:84%
+either this one or this one
+being within epsilon is true,
+
+00:40:39.400 --> 00:40:41.600 align:middle line:90%
+we break out of the loop.
+
+00:40:41.600 --> 00:40:44.140 align:middle line:84%
+And then, we have
+an if-else, kind
+
+00:40:44.140 --> 00:40:45.970 align:middle line:84%
+of the same sort
+of thing we've been
+
+00:40:45.970 --> 00:40:47.680 align:middle line:84%
+doing so far in the
+guess-and-check,
+
+00:40:47.680 --> 00:40:49.480 align:middle line:90%
+why did we break the loop?
+
+00:40:49.480 --> 00:40:53.940 align:middle line:84%
+Did we break it because
+we were within epsilon?
+
+00:40:53.940 --> 00:40:57.270 align:middle line:90%
+That is the else clause here.
+
+00:40:57.270 --> 00:41:00.150 align:middle line:84%
+If we did, then we say this is
+close to the square root of x.
+
+00:41:00.150 --> 00:41:03.990 align:middle line:84%
+But if we broke it because
+we've passed a reasonable number
+
+00:41:03.990 --> 00:41:06.420 align:middle line:84%
+of guesses, then
+we know we failed
+
+00:41:06.420 --> 00:41:09.600 align:middle line:84%
+to find the square root
+because we overshot the mark
+
+00:41:09.600 --> 00:41:11.920 align:middle line:90%
+or whatever.
+
+00:41:11.920 --> 00:41:18.240 align:middle line:84%
+So here is the code
+with 54321, but now
+
+00:41:18.240 --> 00:41:20.040 align:middle line:84%
+we have that extra
+condition here,
+
+00:41:20.040 --> 00:41:23.390 align:middle line:90%
+guess squared less than x.
+
+00:41:23.390 --> 00:41:28.130 align:middle line:84%
+So we see that we've done
+some number of guesses,
+
+00:41:28.130 --> 00:41:32.270 align:middle line:84%
+2,300,000, and
+the message we get
+
+00:41:32.270 --> 00:41:34.730 align:middle line:84%
+is we failed to find
+the square root,
+
+00:41:34.730 --> 00:41:37.340 align:middle line:84%
+makes sense because
+we knew we would fail,
+
+00:41:37.340 --> 00:41:40.280 align:middle line:84%
+and we're also reporting
+what the last guess was,
+
+00:41:40.280 --> 00:41:42.230 align:middle line:84%
+and the last guess
+squared just in case
+
+00:41:42.230 --> 00:41:45.650 align:middle line:84%
+the user wants to use that
+information for anything.
+
+00:41:45.650 --> 00:41:47.780 align:middle line:84%
+What are some
+solutions to fix this?
+
+00:41:47.780 --> 00:41:51.860 align:middle line:84%
+If we don't want to
+fail, what can we do?
+
+00:41:51.860 --> 00:41:53.530 align:middle line:84%
+Well, I gave you
+a hint right here.
+
+00:41:53.530 --> 00:41:56.800 align:middle line:84%
+We can decrement
+our increment, or we
+
+00:41:56.800 --> 00:41:58.600 align:middle line:90%
+can decrease our increment.
+
+00:41:58.600 --> 00:42:04.390 align:middle line:84%
+If instead of adding 0.0001
+every time through the loop,
+
+00:42:04.390 --> 00:42:10.450 align:middle line:84%
+let's add 0.00001, so let's
+make it guess 10 times as many
+
+00:42:10.450 --> 00:42:11.732 align:middle line:90%
+guesses.
+
+00:42:11.732 --> 00:42:13.940 align:middle line:84%
+We're going to have to wait
+a little bit, maybe about
+
+00:42:13.940 --> 00:42:16.760 align:middle line:84%
+10 seconds, but the
+program will end,
+
+00:42:16.760 --> 00:42:19.250 align:middle line:84%
+it's taking this long
+obviously because it's making
+
+00:42:19.250 --> 00:42:20.690 align:middle line:90%
+all of these extra guesses.
+
+00:42:20.690 --> 00:42:22.580 align:middle line:84%
+For every one guess we
+had with the program
+
+00:42:22.580 --> 00:42:25.400 align:middle line:84%
+that failed we're now
+making 10 guesses because we
+
+00:42:25.400 --> 00:42:28.580 align:middle line:90%
+decreased our increment by 10.
+
+00:42:28.580 --> 00:42:32.198 align:middle line:84%
+OK, so it ended, and we
+see exactly that idea
+
+00:42:32.198 --> 00:42:33.240 align:middle line:90%
+in the number of guesses.
+
+00:42:33.240 --> 00:42:36.720 align:middle line:84%
+So here we had 2.3 million
+guesses when our increment was
+
+00:42:36.720 --> 00:42:42.800 align:middle line:84%
+0.0001, but when our increment
+was 0.00001, four zeros,
+
+00:42:42.800 --> 00:42:44.760 align:middle line:90%
+we had 23 million guesses.
+
+00:42:44.760 --> 00:42:46.700 align:middle line:84%
+So obviously we had 10
+times as many guesses,
+
+00:42:46.700 --> 00:42:49.420 align:middle line:84%
+which made our program
+be 10 times as slow.
+
+00:42:49.420 --> 00:42:53.050 align:middle line:84%
+But now, we didn't
+fail because we were
+
+00:42:53.050 --> 00:42:57.270 align:middle line:90%
+able to go within that epsilon.
+
+00:42:57.270 --> 00:43:00.960 align:middle line:84%
+So we found that
+233.06864, which
+
+00:43:00.960 --> 00:43:03.690 align:middle line:84%
+is pretty close to
+what we had before,
+
+00:43:03.690 --> 00:43:09.040 align:middle line:90%
+is within 0.01 of epsilon.
+
+00:43:09.040 --> 00:43:10.810 align:middle line:84%
+So with approximation
+methods, it's
+
+00:43:10.810 --> 00:43:13.150 align:middle line:84%
+possible to overshoot
+the epsilon.
+
+00:43:13.150 --> 00:43:16.570 align:middle line:84%
+We have to be a little bit more
+careful now about what our end
+
+00:43:16.570 --> 00:43:17.680 align:middle line:90%
+condition is.
+
+00:43:17.680 --> 00:43:19.780 align:middle line:84%
+Yes, we can check that
+we are within epsilon,
+
+00:43:19.780 --> 00:43:22.240 align:middle line:84%
+but we have to also use a
+little bit of common sense,
+
+00:43:22.240 --> 00:43:23.920 align:middle line:84%
+maybe algebra,
+something like that,
+
+00:43:23.920 --> 00:43:26.920 align:middle line:84%
+to figure out is there a way
+we can overshoot the epsilon,
+
+00:43:26.920 --> 00:43:31.000 align:middle line:84%
+and how else can we stop
+the program without it
+
+00:43:31.000 --> 00:43:35.060 align:middle line:84%
+running into an infinite loop
+because that would be bad.
+
+00:43:35.060 --> 00:43:37.750 align:middle line:84%
+So I think I already
+went over this,
+
+00:43:37.750 --> 00:43:40.600 align:middle line:84%
+what are some observations
+about running it?
+
+00:43:40.600 --> 00:43:43.510 align:middle line:84%
+Yes, it reported failure
+so we reset the increment
+
+00:43:43.510 --> 00:43:47.710 align:middle line:84%
+down to 10 times smaller
+than what it was before.
+
+00:43:47.710 --> 00:43:51.220 align:middle line:84%
+The program was slower
+because we had more values
+
+00:43:51.220 --> 00:43:53.950 align:middle line:90%
+to check through.
+
+00:43:53.950 --> 00:43:56.170 align:middle line:84%
+So the big idea here is
+we want to be careful
+
+00:43:56.170 --> 00:43:57.160 align:middle line:90%
+when comparing floats.
+
+00:43:57.160 --> 00:44:00.640 align:middle line:84%
+If we were using
+something like == sign,
+
+00:44:00.640 --> 00:44:02.410 align:middle line:84%
+that would have been
+a complete disaster.
+
+00:44:02.410 --> 00:44:05.140 align:middle line:84%
+That we might have never been
+within epsilon or something
+
+00:44:05.140 --> 00:44:05.740 align:middle line:90%
+like that.
+
+00:44:05.740 --> 00:44:08.730 align:middle line:90%
+
+
+00:44:08.730 --> 00:44:13.590 align:middle line:84%
+Yeah, so what are some lessons
+we learned in approximation,
+
+00:44:13.590 --> 00:44:16.200 align:middle line:84%
+so we can't use == sign to
+check for exit conditions?
+
+00:44:16.200 --> 00:44:18.330 align:middle line:84%
+We always have to
+check whether we
+
+00:44:18.330 --> 00:44:23.000 align:middle line:84%
+are within plus or minus some
+epsilon of the actual answer.
+
+00:44:23.000 --> 00:44:27.080 align:middle line:84%
+We have to be careful
+that the exit condition
+
+00:44:27.080 --> 00:44:29.120 align:middle line:84%
+being plus or minus
+within some epsilon
+
+00:44:29.120 --> 00:44:32.640 align:middle line:84%
+doesn't jump over our
+exit test as we just saw.
+
+00:44:32.640 --> 00:44:35.230 align:middle line:84%
+In that case, we add
+some extra conditions.
+
+00:44:35.230 --> 00:44:37.960 align:middle line:84%
+And then we saw that we
+actually have a trade-off,
+
+00:44:37.960 --> 00:44:40.570 align:middle line:84%
+we can have a program
+that does terminate
+
+00:44:40.570 --> 00:44:42.940 align:middle line:84%
+and reports a correct
+answer, it doesn't
+
+00:44:42.940 --> 00:44:45.520 align:middle line:84%
+say we failed, but it does
+report a correct answer
+
+00:44:45.520 --> 00:44:50.050 align:middle line:84%
+but that could be a program
+that's a lot slower.
+
+00:44:50.050 --> 00:44:53.950 align:middle line:84%
+It's a lot slower because we
+had to decrease our increment.
+
+00:44:53.950 --> 00:44:57.730 align:middle line:84%
+Alternatively, we could have
+increased our epsilon boundary,
+
+00:44:57.730 --> 00:45:00.400 align:middle line:84%
+our plus minus epsilon that
+we allowed to be within
+
+00:45:00.400 --> 00:45:02.530 align:middle line:84%
+could have been
+bigger, but then we
+
+00:45:02.530 --> 00:45:04.520 align:middle line:84%
+would give up on some
+accuracy as well.
+
+00:45:04.520 --> 00:45:08.320 align:middle line:84%
+So there's always this trade-off
+of speed versus accuracy
+
+00:45:08.320 --> 00:45:11.500 align:middle line:84%
+to get the program to
+actually give you an answer
+
+00:45:11.500 --> 00:45:12.640 align:middle line:90%
+or to do what you'd like.
+
+00:45:12.640 --> 00:45:14.560 align:middle line:84%
+And depending on
+the application,
+
+00:45:14.560 --> 00:45:17.275 align:middle line:84%
+you might want accuracy
+versus speed or vice versa.
+
+00:45:17.275 --> 00:45:19.900 align:middle line:90%
+
+
+00:45:19.900 --> 00:45:25.790 align:middle line:84%
+So this approximation
+algorithm is really slow.
+
+00:45:25.790 --> 00:45:31.640 align:middle line:84%
+To get an answer for the
+square root of 54,321 we had
+
+00:45:31.640 --> 00:45:37.080 align:middle line:84%
+to decrease our increment
+to something like 0.00001.
+
+00:45:37.080 --> 00:45:40.260 align:middle line:84%
+And we ran it, and that
+program took maybe 10 seconds
+
+00:45:40.260 --> 00:45:43.620 align:middle line:84%
+to run on my computer
+because we started from 0
+
+00:45:43.620 --> 00:45:46.410 align:middle line:84%
+and we were just painfully
+incrementing that increment
+
+00:45:46.410 --> 00:45:49.920 align:middle line:84%
+one at a time, even though
+we knew sort of from what
+
+00:45:49.920 --> 00:45:54.180 align:middle line:84%
+the number actually was, 54,000,
+that the square root of it
+
+00:45:54.180 --> 00:45:56.100 align:middle line:90%
+could not really be that low.
+
+00:45:56.100 --> 00:45:58.050 align:middle line:84%
+But that's just the
+algorithm we had.
+
+00:45:58.050 --> 00:46:02.040 align:middle line:84%
+We had to start from something,
+0 just in case the user gave it
+
+00:46:02.040 --> 00:46:04.110 align:middle line:84%
+other numbers which
+didn't make sense
+
+00:46:04.110 --> 00:46:05.950 align:middle line:90%
+to start higher than that.
+
+00:46:05.950 --> 00:46:08.310 align:middle line:84%
+And so the approximation
+algorithm as you saw,
+
+00:46:08.310 --> 00:46:09.300 align:middle line:90%
+can be really slow.
+
+00:46:09.300 --> 00:46:11.550 align:middle line:84%
+The question I have is,
+is there a faster way
+
+00:46:11.550 --> 00:46:13.690 align:middle line:90%
+that still gets good answers?
+
+00:46:13.690 --> 00:46:15.930 align:middle line:84%
+And the answer,
+of course, is yes.
+
+00:46:15.930 --> 00:46:21.690 align:middle line:84%
+And we're going to see this
+algorithm in the next lecture.
+
+00:46:21.690 --> 00:46:24.810 align:middle line:84%
+So a quick summary, we
+saw floating points.
+
+00:46:24.810 --> 00:46:27.003 align:middle line:84%
+We did a lot of calculations
+with binary numbers.
+
+00:46:27.003 --> 00:46:29.170 align:middle line:84%
+You don't need to know how
+to do those calculations.
+
+00:46:29.170 --> 00:46:31.890 align:middle line:84%
+But again, given a
+recipe or an algorithm,
+
+00:46:31.890 --> 00:46:34.890 align:middle line:84%
+can you take that
+and put it into code?
+
+00:46:34.890 --> 00:46:36.977 align:middle line:84%
+Floating point numbers
+introduced a little bit
+
+00:46:36.977 --> 00:46:39.310 align:middle line:84%
+of challenge for us in comparing
+them because of the way
+
+00:46:39.310 --> 00:46:40.690 align:middle line:90%
+they're stored in memory.
+
+00:46:40.690 --> 00:46:43.760 align:middle line:84%
+We can't represent some of
+these numbers exactly in memory.
+
+00:46:43.760 --> 00:46:46.430 align:middle line:90%
+So that's a problem.
+
+00:46:46.430 --> 00:46:48.530 align:middle line:84%
+Because they're not
+represented exactly in memory,
+
+00:46:48.530 --> 00:46:52.430 align:middle line:84%
+we might magnify some errors,
+as we saw with that loop,
+
+00:46:52.430 --> 00:46:54.920 align:middle line:84%
+and the approximation
+methods use floats.
+
+00:46:54.920 --> 00:46:56.900 align:middle line:84%
+Unfortunately or
+fortunately, they
+
+00:46:56.900 --> 00:46:59.660 align:middle line:84%
+need to use floats because we
+need to have a small increment,
+
+00:46:59.660 --> 00:47:04.180 align:middle line:84%
+and we have to be mindful of
+these issues when using them.
+
+00:47:04.180 --> 00:47:10.000 align:middle line:90%

@@ -1,0 +1,6 @@
+
+{
+  "title":"Lecture 16: Recursion on Non-Numerics",
+  "content":"Topics: Recursion: Fibonacci, Fibonacci with a dict, recursion on non-numerics, recursion on lists, Towers of Hanoi (extra)\nViewing videos requires an internet connection Your browser does not support some features required to play this video. Please update your browser to the latest version for the best experience. You can also download the video to watch it offline. View video page Download video Download transcript Lecture Notes Lecture 16: Recursion on Non-Numerics\nLecture 16 Code\nReadings Ch 6.2–6.4 Finger Exercise Lecture 16 Implement the function that meets the specifications below:\ndef flatten(L): \u0026#34;\u0026#34;\u0026#34; L: a list Returns a copy of L, which is a flattened version of L \u0026#34;\u0026#34;\u0026#34; # Your code here # Examples: L = [[1,4,[6],2],[[[3]],2],4,5] print(flatten(L)) # prints the list [1,4,6,2,3,2,4,5] 6.100L Finger Exercises Lecture 16 Solutions\nProblem Set 4 Problem Set 4\nProblem Set 4 Code\nRecitation 8 Recitations were smaller sections that went over the previous lectures. Files contain recitation notes and worked examples in code.\nRecitation 8 Notes and Code\n"}
+
+

@@ -1,0 +1,6 @@
+
+{
+  "title":"Materials by Lecture",
+  "content":"Lecture 1: Introduction\nLecture 2: Strings, Input/Output, Branching\nLecture 3: Iteration\nLecture 4: Loops over Strings, Guess-and-Check, Binary\nLecture 5: Floats and Approximation Methods\nLecture 6: Bisection Search\nLecture 7: Decomposition, Abstraction, Functions\nLecture 8: Functions as Objects\nLecture 9: Lambda Functions, Tuples, and Lists\nLecture 10: Lists, Mutability\nLecture 11: Aliasing, Cloning\nLecture 12: List Comprehension, Functions as Objects, Testing, Debugging\nLecture 13: Exceptions, Assertions\nLecture 14: Dictionaries\nLecture 15: Recursion\nLecture 16: Recursion on Non-Numerics\nLecture 17: Python Classes\nLecture 18: More Python Class Methods\nLecture 19: Inheritance\nLecture 20: Fitness Tracker Object-Oriented Programming Example\nLecture 21: Timing Programs, Counting Operations\nLecture 22: Big Oh and Theta\nLecture 23: Complexity Classes Examples\nLecture 24: Sorting Algorithms\nLecture 25: Plotting\nLecture 26: List Access, Hashing, Simulations, and Wrap-Up\n"}
+
+

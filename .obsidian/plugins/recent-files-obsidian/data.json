@@ -1,6 +1,46 @@
 {
   "recentFiles": [
     {
+      "basename": "01_Introduction",
+      "path": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md"
+    },
+    {
+      "basename": "02_Strings,Input-Output and Branching",
+      "path": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md"
+    },
+    {
+      "basename": "mit6_100l_ex02_sol",
+      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-finger-exercises/mit6_100l_ex02_sol.pdf"
+    },
+    {
+      "basename": "mit6_100l_ex01_sol",
+      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-finger-exercises/mit6_100l_ex01_sol.pdf"
+    },
+    {
+      "basename": "mit6_100l_lec01",
+      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec01.pdf"
+    },
+    {
+      "basename": "04_Loops over strings, Guess-and-check and Binary",
+      "path": "03_Computer_Science/03_MIT 6.100L/04_Loops over strings, Guess-and-check and Binary.md"
+    },
+    {
+      "basename": "00_MIT OCW 18.06SC course map",
+      "path": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md"
+    },
+    {
+      "basename": "Introduction to Computation and Programming Using Python, Revised - Guttag, John V.",
+      "path": "03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf"
+    },
+    {
+      "basename": "CS50_main",
+      "path": "03_Computer_Science/01_CS50/CS50_main.md"
+    },
+    {
+      "basename": "01_building abstractions with functions",
+      "path": "03_Computer_Science/02_CS61A/01_building abstractions with functions.md"
+    },
+    {
       "basename": "2026-04-06——Mon",
       "path": "99_学习情况记录/2026-04-06——Mon.md"
     },
@@ -113,10 +153,6 @@
       "path": "04_Fragments/How To Articulate Your Thoughts Intelligently (Talk Like This) - 2026-03-28.md"
     },
     {
-      "basename": "00_MIT OCW 18.06SC course map",
-      "path": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md"
-    },
-    {
       "basename": "Null Space",
       "path": "00_factor/concept/Null Space.md"
     },
@@ -161,44 +197,8 @@
       "path": "01_Math/01_calculus/Lecture_notes/1-7.pdf"
     },
     {
-      "basename": "01_building abstractions with functions",
-      "path": "03_Computer_Science/02_CS61A/01_building abstractions with functions.md"
-    },
-    {
-      "basename": "CS50_main",
-      "path": "03_Computer_Science/01_CS50/CS50_main.md"
-    },
-    {
       "basename": "AutoResearch Clearly Explained (and how to use it) - 2026-03-28",
       "path": "04_Fragments/AutoResearch Clearly Explained (and how to use it) - 2026-03-28.md"
-    },
-    {
-      "basename": "Code Space",
-      "path": "05_tools/Code Space.md"
-    },
-    {
-      "basename": "MIT18_06SCF11_ex1",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex1.pdf"
-    },
-    {
-      "basename": "MIT18.01_Single-Variable-Calculus",
-      "path": "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md"
-    },
-    {
-      "basename": "geometric interpretation of derivative",
-      "path": "00_factor/concept/geometric interpretation of derivative.md"
-    },
-    {
-      "basename": "18-25",
-      "path": "01_Math/01_calculus/Lecture_notes/18-25.pdf"
-    },
-    {
-      "basename": "26-38",
-      "path": "01_Math/01_calculus/Lecture_notes/26-38.pdf"
-    },
-    {
-      "basename": "9-16",
-      "path": "01_Math/01_calculus/Lecture_notes/9-16.pdf"
     }
   ],
   "omittedPaths": [],

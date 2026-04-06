@@ -1,0 +1,2910 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.875 align:middle line:84%
+SARAH HANSEN: I'm Sarah
+Hansen, and today I'm
+
+00:00:01.875 --> 00:00:02.820 align:middle line:90%
+talking with Ana Bell.
+
+00:00:02.820 --> 00:00:05.190 align:middle line:84%
+She's a super smart
+programmer, author,
+
+00:00:05.190 --> 00:00:06.960 align:middle line:90%
+and senior lecturer at MIT.
+
+00:00:06.960 --> 00:00:09.230 align:middle line:84%
+Her computer science
+videos on our channel
+
+00:00:09.230 --> 00:00:12.330 align:middle line:84%
+have captivated millions of
+learners around the world.
+
+00:00:12.330 --> 00:00:14.600 align:middle line:84%
+Today we talk about
+Python, growth mindset,
+
+00:00:14.600 --> 00:00:15.780 align:middle line:90%
+and rubber ducks.
+
+00:00:15.780 --> 00:00:17.790 align:middle line:84%
+I have to know what
+the ducks are now.
+
+00:00:17.790 --> 00:00:19.340 align:middle line:90%
+I can't continue.
+
+00:00:19.340 --> 00:00:21.650 align:middle line:84%
+And I ask her, with
+the emergence of AI,
+
+00:00:21.650 --> 00:00:24.000 align:middle line:84%
+do we even still need
+to learn how to code?
+
+00:00:24.000 --> 00:00:28.020 align:middle line:84%
+What's the value proposition of
+learning a language like Python?
+
+00:00:28.020 --> 00:00:29.490 align:middle line:90%
+Do we still need to do it?
+
+00:00:29.490 --> 00:00:32.630 align:middle line:84%
+ANA BELL: So I'm not sure
+if this exactly answers
+
+00:00:32.630 --> 00:00:33.508 align:middle line:90%
+the question...
+
+00:00:33.508 --> 00:00:34.800 align:middle line:90%
+SARAH HANSEN: Oh, tell me more.
+
+00:00:34.800 --> 00:00:37.320 align:middle line:84%
+Find out her answer
+today on Chalk Radio.
+
+00:00:37.320 --> 00:00:38.210 align:middle line:90%
+Hi, Ana.
+
+00:00:38.210 --> 00:00:38.780 align:middle line:90%
+ANA BELL: Hi.
+
+00:00:38.780 --> 00:00:39.300 align:middle line:90%
+How are you?
+
+00:00:39.300 --> 00:00:40.258 align:middle line:90%
+SARAH HANSEN: I'm good.
+
+00:00:40.258 --> 00:00:40.860 align:middle line:90%
+You're here.
+
+00:00:40.860 --> 00:00:41.683 align:middle line:90%
+I'm so excited.
+
+00:00:41.683 --> 00:00:42.600 align:middle line:90%
+ANA BELL: Yes, me too.
+
+00:00:42.600 --> 00:00:46.070 align:middle line:84%
+SARAH HANSEN: This is one of our
+pilot episodes for something new
+
+00:00:46.070 --> 00:00:49.880 align:middle line:84%
+that we're trying, which is a
+video version of our Chalk Radio
+
+00:00:49.880 --> 00:00:50.850 align:middle line:90%
+podcast.
+
+00:00:50.850 --> 00:00:53.220 align:middle line:84%
+In many ways, it's
+an experiment.
+
+00:00:53.220 --> 00:00:54.810 align:middle line:84%
+How do you feel
+about experiments?
+
+00:00:54.810 --> 00:00:56.060 align:middle line:90%
+Are you an adventurous person?
+
+00:00:56.060 --> 00:00:57.030 align:middle line:90%
+ANA BELL: No, not at all.
+
+00:00:57.030 --> 00:00:57.690 align:middle line:90%
+SARAH HANSEN: Oh, great.
+
+00:00:57.690 --> 00:00:58.530 align:middle line:90%
+We're going to be great.
+
+00:00:58.530 --> 00:00:59.155 align:middle line:90%
+ANA BELL: Yeah.
+
+00:00:59.155 --> 00:01:01.472 align:middle line:84%
+I like stability, and
+I like boring days.
+
+00:01:01.472 --> 00:01:02.180 align:middle line:90%
+SARAH HANSEN: Oh.
+
+00:01:02.180 --> 00:01:03.763 align:middle line:84%
+Well, I'm not sure
+we're going to have
+
+00:01:03.763 --> 00:01:05.212 align:middle line:90%
+one of those with these ducks.
+
+00:01:05.212 --> 00:01:06.170 align:middle line:90%
+ANA BELL: That's right.
+
+00:01:06.170 --> 00:01:08.645 align:middle line:84%
+SARAH HANSEN: So I actually
+don't know what the ducks mean.
+
+00:01:08.645 --> 00:01:09.270 align:middle line:90%
+ANA BELL: Yeah.
+
+00:01:09.270 --> 00:01:10.640 align:middle line:84%
+SARAH HANSEN: So I think you're
+going to tell me a little bit
+
+00:01:10.640 --> 00:01:11.120 align:middle line:90%
+later.
+
+00:01:11.120 --> 00:01:11.820 align:middle line:90%
+ANA BELL: As we, yeah.
+
+00:01:11.820 --> 00:01:13.820 align:middle line:84%
+SARAH HANSEN: I think
+we're in for an adventure,
+
+00:01:13.820 --> 00:01:17.140 align:middle line:84%
+and a little bit maybe of a
+choose your own adventure.
+
+00:01:17.140 --> 00:01:17.900 align:middle line:90%
+ANA BELL: Mm-hmm.
+
+00:01:17.900 --> 00:01:19.830 align:middle line:90%
+SARAH HANSEN: So, you're at MIT.
+
+00:01:19.830 --> 00:01:22.370 align:middle line:84%
+You've been here
+for about 10 years.
+
+00:01:22.370 --> 00:01:25.520 align:middle line:84%
+And you spend most of
+your time thinking about
+
+00:01:25.520 --> 00:01:28.710 align:middle line:84%
+and teaching people who
+are new to programming,
+
+00:01:28.710 --> 00:01:29.960 align:middle line:90%
+introducing them.
+
+00:01:29.960 --> 00:01:33.420 align:middle line:84%
+And I'm wondering what
+that means to you,
+
+00:01:33.420 --> 00:01:35.870 align:middle line:84%
+why you're interested in
+teaching, in particular,
+
+00:01:35.870 --> 00:01:36.870 align:middle line:90%
+people like me.
+
+00:01:36.870 --> 00:01:38.390 align:middle line:90%
+What do you get out of that?
+
+00:01:38.390 --> 00:01:41.330 align:middle line:84%
+And tell me about
+that experience.
+
+00:01:41.330 --> 00:01:43.940 align:middle line:90%
+ANA BELL: So I recognize that--
+
+00:01:43.940 --> 00:01:47.370 align:middle line:84%
+well, I don't want everyone to
+become a computer scientist.
+
+00:01:47.370 --> 00:01:51.230 align:middle line:84%
+But I do think that everyone
+should learn programming
+
+00:01:51.230 --> 00:01:52.140 align:middle line:90%
+as a skill.
+
+00:01:52.140 --> 00:01:56.930 align:middle line:84%
+So programming should become
+like what math is now, where you
+
+00:01:56.930 --> 00:01:59.740 align:middle line:90%
+learn it in elementary school.
+
+00:01:59.740 --> 00:02:03.220 align:middle line:84%
+And you obviously use it here
+and there in your adult life,
+
+00:02:03.220 --> 00:02:06.910 align:middle line:84%
+but I don't know when you've
+last used calculus, right?
+
+00:02:06.910 --> 00:02:09.160 align:middle line:84%
+Like, we don't all need
+to become mathematicians
+
+00:02:09.160 --> 00:02:11.080 align:middle line:90%
+after we've learned basic math.
+
+00:02:11.080 --> 00:02:14.560 align:middle line:84%
+Similarly, I do think people
+should learn basic programming,
+
+00:02:14.560 --> 00:02:17.770 align:middle line:84%
+but they don't have to
+become computer scientists.
+
+00:02:17.770 --> 00:02:21.600 align:middle line:84%
+So the reason that I enjoy
+teaching students intro
+
+00:02:21.600 --> 00:02:24.810 align:middle line:84%
+programming and exposing them
+to intro computer science
+
+00:02:24.810 --> 00:02:29.100 align:middle line:84%
+is because it was really hard
+for me to understand programming
+
+00:02:29.100 --> 00:02:32.310 align:middle line:84%
+when I first started, and
+I just always remember
+
+00:02:32.310 --> 00:02:34.270 align:middle line:90%
+how tough it was.
+
+00:02:34.270 --> 00:02:38.580 align:middle line:84%
+And I teach at MIT,
+and there's obviously
+
+00:02:38.580 --> 00:02:40.480 align:middle line:84%
+a lot of really
+smart people here.
+
+00:02:40.480 --> 00:02:43.120 align:middle line:84%
+And I think as you
+teach more and more,
+
+00:02:43.120 --> 00:02:47.860 align:middle line:84%
+it's easy to forget how hard
+it was to start learning.
+
+00:02:47.860 --> 00:02:50.940 align:middle line:84%
+And so as an intro
+course, you might
+
+00:02:50.940 --> 00:02:53.430 align:middle line:84%
+make the problems you give
+students harder and harder
+
+00:02:53.430 --> 00:02:55.990 align:middle line:84%
+each year just because they
+get maybe boring for you.
+
+00:02:55.990 --> 00:02:57.910 align:middle line:84%
+But it's not boring
+for the students,
+
+00:02:57.910 --> 00:03:01.650 align:middle line:84%
+and I try to recognize
+that every semester.
+
+00:03:01.650 --> 00:03:03.660 align:middle line:84%
+I just remember it was
+really hard for me.
+
+00:03:03.660 --> 00:03:05.250 align:middle line:90%
+They've never seen this before.
+
+00:03:05.250 --> 00:03:06.793 align:middle line:84%
+So it's really
+important to make sure
+
+00:03:06.793 --> 00:03:08.460 align:middle line:84%
+that they have a
+really good experience.
+
+00:03:08.460 --> 00:03:10.418 align:middle line:84%
+SARAH HANSEN: You mentioned
+that when you first
+
+00:03:10.418 --> 00:03:12.260 align:middle line:84%
+started programming,
+it was difficult.
+
+00:03:12.260 --> 00:03:15.000 align:middle line:84%
+I'm wondering, what
+made it difficult?
+
+00:03:15.000 --> 00:03:17.330 align:middle line:84%
+And then, what are you
+doing in your teaching
+
+00:03:17.330 --> 00:03:19.398 align:middle line:90%
+to make it less difficult?
+
+00:03:19.398 --> 00:03:21.690 align:middle line:84%
+ANA BELL: I honestly don't
+know what made it difficult.
+
+00:03:21.690 --> 00:03:23.330 align:middle line:84%
+The beginning was
+easy, just kind
+
+00:03:23.330 --> 00:03:28.610 align:middle line:84%
+of understanding the
+basics of just writing.
+
+00:03:28.610 --> 00:03:30.350 align:middle line:84%
+The basics of
+creating an algorithm
+
+00:03:30.350 --> 00:03:32.190 align:middle line:90%
+is basically three things.
+
+00:03:32.190 --> 00:03:35.240 align:middle line:84%
+So the first is a
+sequence of steps.
+
+00:03:35.240 --> 00:03:37.700 align:middle line:84%
+So step one, step
+two, step three.
+
+00:03:37.700 --> 00:03:41.310 align:middle line:84%
+Some sort of way to control
+the flow of those steps.
+
+00:03:41.310 --> 00:03:43.440 align:middle line:90%
+So usually you go step by step.
+
+00:03:43.440 --> 00:03:46.410 align:middle line:84%
+But at some point you say,
+well, if this is true, do this.
+
+00:03:46.410 --> 00:03:47.400 align:middle line:90%
+Otherwise, do this.
+
+00:03:47.400 --> 00:03:49.770 align:middle line:90%
+So a branching kind of idea.
+
+00:03:49.770 --> 00:03:51.410 align:middle line:84%
+And then there's
+also a way to control
+
+00:03:51.410 --> 00:03:54.990 align:middle line:84%
+the flow by asking the program
+to repeat certain lines.
+
+00:03:54.990 --> 00:03:56.910 align:middle line:84%
+So it's like, well,
+if this is true,
+
+00:03:56.910 --> 00:03:58.980 align:middle line:84%
+go back and repeat
+this a million times,
+
+00:03:58.980 --> 00:04:00.990 align:middle line:84%
+which is very easy
+for a computer to do.
+
+00:04:00.990 --> 00:04:04.850 align:middle line:84%
+So a sequence of steps, a way
+to control the flow of those
+
+00:04:04.850 --> 00:04:06.587 align:middle line:90%
+steps, and then a way to stop.
+
+00:04:06.587 --> 00:04:08.670 align:middle line:84%
+Those are the three things
+that make an algorithm.
+
+00:04:08.670 --> 00:04:10.380 align:middle line:90%
+That's how you write a program.
+
+00:04:10.380 --> 00:04:13.170 align:middle line:90%
+And grasping that was not hard.
+
+00:04:13.170 --> 00:04:18.420 align:middle line:84%
+It was just once you've gotten
+over that learning curve,
+
+00:04:18.420 --> 00:04:21.795 align:middle line:84%
+it's learning some of the
+more advanced concepts that
+
+00:04:21.795 --> 00:04:26.120 align:middle line:84%
+were harder, some of
+the details for how
+
+00:04:26.120 --> 00:04:28.020 align:middle line:90%
+that specific language works.
+
+00:04:28.020 --> 00:04:32.330 align:middle line:84%
+So I started with Java, not
+Python, which was harder than--
+
+00:04:32.330 --> 00:04:33.597 align:middle line:90%
+it's a lot harder than Python.
+
+00:04:33.597 --> 00:04:36.180 align:middle line:84%
+There's a bunch of details that
+you need to think about there.
+
+00:04:36.180 --> 00:04:37.763 align:middle line:84%
+SARAH HANSEN: So I
+had the opportunity
+
+00:04:37.763 --> 00:04:39.403 align:middle line:84%
+to watch some of
+your lecture videos.
+
+00:04:39.403 --> 00:04:40.070 align:middle line:90%
+ANA BELL: Great.
+
+00:04:40.070 --> 00:04:40.862 align:middle line:90%
+SARAH HANSEN: Yeah.
+
+00:04:40.862 --> 00:04:45.290 align:middle line:84%
+And I noticed that you make
+space and time for students
+
+00:04:45.290 --> 00:04:48.827 align:middle line:84%
+to practice, like right
+in the class itself.
+
+00:04:48.827 --> 00:04:49.910 align:middle line:90%
+ANA BELL: Definitely, yes.
+
+00:04:49.910 --> 00:04:52.310 align:middle line:84%
+SARAH HANSEN: Outside the class
+as well, but in the actual space
+
+00:04:52.310 --> 00:04:53.280 align:middle line:90%
+where you're teaching.
+
+00:04:53.280 --> 00:04:56.130 align:middle line:84%
+And I'm wondering if you could
+talk about that a little bit,
+
+00:04:56.130 --> 00:04:57.320 align:middle line:90%
+why you do that.
+
+00:04:57.320 --> 00:04:58.010 align:middle line:90%
+ANA BELL: Yes.
+
+00:04:58.010 --> 00:04:59.790 align:middle line:84%
+So I think I
+mentioned this before.
+
+00:04:59.790 --> 00:05:02.460 align:middle line:84%
+I see programming
+like math is now,
+
+00:05:02.460 --> 00:05:05.180 align:middle line:84%
+but this will be
+many years from now.
+
+00:05:05.180 --> 00:05:10.410 align:middle line:84%
+It's a skill that people need
+to get that they don't have yet.
+
+00:05:10.410 --> 00:05:14.550 align:middle line:84%
+And so if we think about the
+way we learn math in school,
+
+00:05:14.550 --> 00:05:17.150 align:middle line:90%
+it's a lot, a lot of practice.
+
+00:05:17.150 --> 00:05:20.000 align:middle line:84%
+You just always
+constantly practice
+
+00:05:20.000 --> 00:05:22.950 align:middle line:84%
+adding, subtracting,
+multiplying, right, the kids.
+
+00:05:22.950 --> 00:05:23.450 align:middle line:90%
+Yeah.
+
+00:05:23.450 --> 00:05:26.570 align:middle line:84%
+So I think it's very
+important for students
+
+00:05:26.570 --> 00:05:31.860 align:middle line:84%
+to actually get the time
+to do that practice.
+
+00:05:31.860 --> 00:05:34.850 align:middle line:84%
+The way I run the class
+is a flipped classroom
+
+00:05:34.850 --> 00:05:38.060 align:middle line:84%
+or a blended learning
+style, where students watch
+
+00:05:38.060 --> 00:05:41.150 align:middle line:84%
+the basics through
+video first, and then
+
+00:05:41.150 --> 00:05:43.530 align:middle line:84%
+in the actual classroom,
+we do active learning.
+
+00:05:43.530 --> 00:05:45.920 align:middle line:84%
+So I go over maybe
+something that's
+
+00:05:45.920 --> 00:05:48.680 align:middle line:84%
+a little bit more confusing, and
+then I give them time to break,
+
+00:05:48.680 --> 00:05:53.150 align:middle line:84%
+with the hope that me forcing
+them to have them actually
+
+00:05:53.150 --> 00:05:55.880 align:middle line:84%
+start coding, they'll
+be able to see,
+
+00:05:55.880 --> 00:05:58.970 align:middle line:84%
+oh, I totally
+understood what she
+
+00:05:58.970 --> 00:06:01.680 align:middle line:84%
+was talking about in the video,
+and I can totally code that.
+
+00:06:01.680 --> 00:06:03.180 align:middle line:84%
+But then when they
+actually when I'm
+
+00:06:03.180 --> 00:06:06.060 align:middle line:84%
+forcing them to actually do it,
+starting with a blank slate,
+
+00:06:06.060 --> 00:06:07.410 align:middle line:90%
+it's pretty daunting.
+
+00:06:07.410 --> 00:06:10.430 align:middle line:84%
+And so I want them
+to get over that bump
+
+00:06:10.430 --> 00:06:13.727 align:middle line:84%
+where it's like you have a
+blank piece of, blank editor
+
+00:06:13.727 --> 00:06:16.310 align:middle line:84%
+or whatever, and then you just
+have to start writing something
+
+00:06:16.310 --> 00:06:17.430 align:middle line:90%
+down.
+
+00:06:17.430 --> 00:06:20.360 align:middle line:84%
+The more you do it, the more
+you feel comfortable with it.
+
+00:06:20.360 --> 00:06:22.730 align:middle line:84%
+So there's all these breaks
+for all these activities
+
+00:06:22.730 --> 00:06:26.420 align:middle line:84%
+that I try to keep the
+class lively, of course,
+
+00:06:26.420 --> 00:06:31.340 align:middle line:84%
+and kind of indirectly have
+them practice these skills.
+
+00:06:31.340 --> 00:06:33.600 align:middle line:90%
+Like, just write something.
+
+00:06:33.600 --> 00:06:34.980 align:middle line:90%
+Just write something down.
+
+00:06:34.980 --> 00:06:35.772 align:middle line:90%
+SARAH HANSEN: Yeah.
+
+00:06:35.772 --> 00:06:38.120 align:middle line:84%
+And also, that does
+two things, I think.
+
+00:06:38.120 --> 00:06:40.830 align:middle line:90%
+It de-emphasizes perfection.
+
+00:06:40.830 --> 00:06:42.377 align:middle line:90%
+You're like, this is practice.
+
+00:06:42.377 --> 00:06:42.960 align:middle line:90%
+ANA BELL: Yep.
+
+00:06:42.960 --> 00:06:44.793 align:middle line:84%
+SARAH HANSEN: I think
+like an artist, right?
+
+00:06:44.793 --> 00:06:47.120 align:middle line:84%
+So just get a sketch,
+write a few lines,
+
+00:06:47.120 --> 00:06:48.707 align:middle line:90%
+just get something down.
+
+00:06:48.707 --> 00:06:49.290 align:middle line:90%
+ANA BELL: Yes.
+
+00:06:49.290 --> 00:06:49.560 align:middle line:90%
+Yes.
+
+00:06:49.560 --> 00:06:50.880 align:middle line:84%
+SARAH HANSEN: And then
+we can improve it.
+
+00:06:50.880 --> 00:06:51.583 align:middle line:90%
+ANA BELL: Yep.
+
+00:06:51.583 --> 00:06:53.750 align:middle line:84%
+SARAH HANSEN: And then that
+speaks to something else
+
+00:06:53.750 --> 00:06:56.310 align:middle line:84%
+you've mentioned before,
+and that's growth mindset,
+
+00:06:56.310 --> 00:06:59.750 align:middle line:84%
+and that programming is not
+like a gift and you have it
+
+00:06:59.750 --> 00:07:02.425 align:middle line:84%
+or you don't, but it's really
+something that can be developed.
+
+00:07:02.425 --> 00:07:03.050 align:middle line:90%
+ANA BELL: Yeah.
+
+00:07:03.050 --> 00:07:05.750 align:middle line:84%
+A lot of-- you see
+some people who
+
+00:07:05.750 --> 00:07:07.080 align:middle line:90%
+are really good at programming.
+
+00:07:07.080 --> 00:07:10.880 align:middle line:84%
+They didn't get good just
+because they had that skill,
+
+00:07:10.880 --> 00:07:12.130 align:middle line:90%
+they were born with it, right?
+
+00:07:12.130 --> 00:07:14.880 align:middle line:84%
+There's a lot of growth
+mindset involved in that.
+
+00:07:14.880 --> 00:07:19.530 align:middle line:84%
+And anybody can reach that level
+of being good at something,
+
+00:07:19.530 --> 00:07:22.500 align:middle line:84%
+programming included,
+just by lots of practice,
+
+00:07:22.500 --> 00:07:24.750 align:middle line:84%
+trying different things,
+challenging themselves.
+
+00:07:24.750 --> 00:07:28.400 align:middle line:84%
+So not just sticking to things
+that are obviously way too easy,
+
+00:07:28.400 --> 00:07:30.420 align:middle line:90%
+because then you'll never grow.
+
+00:07:30.420 --> 00:07:34.380 align:middle line:84%
+But you kind of, like, I don't
+know if this, the state of flow.
+
+00:07:34.380 --> 00:07:40.280 align:middle line:84%
+It's like this chart where you
+want to be in this middle band,
+
+00:07:40.280 --> 00:07:44.480 align:middle line:84%
+but kind of oscillating between
+doing things that are too easy
+
+00:07:44.480 --> 00:07:46.670 align:middle line:84%
+and then challenging
+yourself and doing things
+
+00:07:46.670 --> 00:07:48.350 align:middle line:90%
+that are a little bit harder.
+
+00:07:48.350 --> 00:07:51.030 align:middle line:84%
+And you don't want to always
+do two things too hard,
+
+00:07:51.030 --> 00:07:53.890 align:middle line:84%
+because then that's
+discouraging and you'll stop.
+
+00:07:53.890 --> 00:07:55.390 align:middle line:84%
+But you don't want
+to do things that
+
+00:07:55.390 --> 00:07:58.462 align:middle line:84%
+are always too easy because
+then you'll never grow.
+
+00:07:58.462 --> 00:08:00.670 align:middle line:84%
+SARAH HANSEN: I wonder if
+we could write an algorithm
+
+00:08:00.670 --> 00:08:02.050 align:middle line:90%
+for staying in the flow.
+
+00:08:02.050 --> 00:08:04.335 align:middle line:84%
+Like it tracks, oh, this
+is too easy for you.
+
+00:08:04.335 --> 00:08:04.960 align:middle line:90%
+ANA BELL: Yeah.
+
+00:08:04.960 --> 00:08:07.840 align:middle line:84%
+So a lot of the
+education platforms
+
+00:08:07.840 --> 00:08:11.870 align:middle line:84%
+are trying to give students,
+based on their responses--
+
+00:08:11.870 --> 00:08:13.540 align:middle line:84%
+Even in math questions,
+they'd be like,
+
+00:08:13.540 --> 00:08:15.200 align:middle line:84%
+oh, this student
+totally got all these.
+
+00:08:15.200 --> 00:08:16.400 align:middle line:90%
+Let me give them a harder one.
+
+00:08:16.400 --> 00:08:17.660 align:middle line:84%
+And it's like, oh,
+that was too hard.
+
+00:08:17.660 --> 00:08:18.200 align:middle line:90%
+Let me--
+
+00:08:18.200 --> 00:08:18.992 align:middle line:90%
+SARAH HANSEN: Yeah.
+
+00:08:18.992 --> 00:08:21.267 align:middle line:84%
+How did you find your
+way to programming?
+
+00:08:21.267 --> 00:08:23.350 align:middle line:84%
+Is this something that
+you've always wanted to do?
+
+00:08:23.350 --> 00:08:26.860 align:middle line:90%
+Or did it develop along the way?
+
+00:08:26.860 --> 00:08:30.220 align:middle line:84%
+ANA BELL: So my parents
+emigrated from Romania,
+
+00:08:30.220 --> 00:08:32.929 align:middle line:90%
+and we immigrated to Canada.
+
+00:08:32.929 --> 00:08:35.390 align:middle line:84%
+And my dad was an
+electrical engineer,
+
+00:08:35.390 --> 00:08:37.940 align:middle line:84%
+and then he went into
+software engineering.
+
+00:08:37.940 --> 00:08:44.860 align:middle line:84%
+And being an immigrant,
+immigrant parents from Europe,
+
+00:08:44.860 --> 00:08:46.630 align:middle line:84%
+we were highly encouraged,
+my sister and I
+
+00:08:46.630 --> 00:08:50.570 align:middle line:84%
+were highly encouraged to get
+some sort of engineering job.
+
+00:08:50.570 --> 00:08:54.410 align:middle line:90%
+So it's just what is done.
+
+00:08:54.410 --> 00:08:58.910 align:middle line:84%
+And so computer engineering
+or computer science,
+
+00:08:58.910 --> 00:09:00.460 align:middle line:84%
+something along
+those lines seemed
+
+00:09:00.460 --> 00:09:04.660 align:middle line:84%
+to be the best option
+given where things
+
+00:09:04.660 --> 00:09:05.780 align:middle line:90%
+were going in the future.
+
+00:09:05.780 --> 00:09:09.890 align:middle line:84%
+This was the '90s, so just
+the beginning of the internet,
+
+00:09:09.890 --> 00:09:13.190 align:middle line:84%
+the beginning of
+all that, that boom.
+
+00:09:13.190 --> 00:09:18.530 align:middle line:84%
+So my dad recognized that
+was what the future would be.
+
+00:09:18.530 --> 00:09:22.570 align:middle line:84%
+And he said, you should
+probably learn to program
+
+00:09:22.570 --> 00:09:27.440 align:middle line:84%
+and potentially go, probably
+go into that sort of career.
+
+00:09:27.440 --> 00:09:30.830 align:middle line:84%
+And I wasn't super
+interested in anything else,
+
+00:09:30.830 --> 00:09:33.700 align:middle line:90%
+so I just said, sure.
+
+00:09:33.700 --> 00:09:38.170 align:middle line:84%
+And so he taught us Java
+when I was about 12.
+
+00:09:38.170 --> 00:09:39.975 align:middle line:90%
+I have a picture here.
+
+00:09:39.975 --> 00:09:41.350 align:middle line:84%
+SARAH HANSEN:
+Yeah, let's see it.
+
+00:09:41.350 --> 00:09:43.225 align:middle line:84%
+ANA BELL: And it's in
+this really cool frame.
+
+00:09:43.225 --> 00:09:44.840 align:middle line:84%
+SARAH HANSEN: Oh,
+I love that frame.
+
+00:09:44.840 --> 00:09:45.730 align:middle line:90%
+ANA BELL: OK.
+
+00:09:45.730 --> 00:09:46.910 align:middle line:90%
+Very fitting.
+
+00:09:46.910 --> 00:09:50.682 align:middle line:90%
+And so this is very '90s.
+
+00:09:50.682 --> 00:09:52.390 align:middle line:84%
+SARAH HANSEN: I love
+everything about it.
+
+00:09:52.390 --> 00:09:53.590 align:middle line:90%
+ANA BELL: This exudes '90s.
+
+00:09:53.590 --> 00:09:54.340 align:middle line:90%
+SARAH HANSEN: Yes.
+
+00:09:54.340 --> 00:09:56.320 align:middle line:90%
+ANA BELL: Peak '90s right there.
+
+00:09:56.320 --> 00:09:59.030 align:middle line:84%
+So we've got the room
+with the computer.
+
+00:09:59.030 --> 00:09:59.570 align:middle line:90%
+Right?
+
+00:09:59.570 --> 00:10:02.150 align:middle line:84%
+As is in the '90s, you all had
+the room with the computer.
+
+00:10:02.150 --> 00:10:02.900 align:middle line:90%
+SARAH HANSEN: Yes.
+
+00:10:02.900 --> 00:10:03.400 align:middle line:90%
+Yes.
+
+00:10:03.400 --> 00:10:06.490 align:middle line:84%
+ANA BELL: And then the big
+chair, and the side ponytail,
+
+00:10:06.490 --> 00:10:07.310 align:middle line:90%
+or whatever.
+
+00:10:07.310 --> 00:10:07.810 align:middle line:90%
+That's me.
+
+00:10:07.810 --> 00:10:08.630 align:middle line:90%
+SARAH HANSEN: The scrunchies.
+
+00:10:08.630 --> 00:10:10.100 align:middle line:84%
+ANA BELL: On the left
+there, that's me.
+
+00:10:10.100 --> 00:10:10.670 align:middle line:90%
+Yep Yep.
+
+00:10:10.670 --> 00:10:13.588 align:middle line:84%
+And that's my sister on the
+chair, sitting on the chair.
+
+00:10:13.588 --> 00:10:14.380 align:middle line:90%
+SARAH HANSEN: Yeah.
+
+00:10:14.380 --> 00:10:18.980 align:middle line:84%
+ANA BELL: And that's when
+we first, or maybe before,
+
+00:10:18.980 --> 00:10:23.750 align:middle line:84%
+very close to the time that we
+had first started programming.
+
+00:10:23.750 --> 00:10:27.770 align:middle line:84%
+My dad just said, here's
+some really basic things.
+
+00:10:27.770 --> 00:10:31.660 align:middle line:84%
+And then I only got
+to the branching part
+
+00:10:31.660 --> 00:10:32.510 align:middle line:90%
+of the control flow.
+
+00:10:32.510 --> 00:10:34.950 align:middle line:84%
+I didn't really get to the
+repeating part of the control
+
+00:10:34.950 --> 00:10:35.450 align:middle line:90%
+flow.
+
+00:10:35.450 --> 00:10:37.720 align:middle line:84%
+So I made this choose
+your own adventure program
+
+00:10:37.720 --> 00:10:39.740 align:middle line:84%
+where it was like, I
+forget what it was, like,
+
+00:10:39.740 --> 00:10:42.260 align:middle line:84%
+get out, exit a castle,
+or whatever it was.
+
+00:10:42.260 --> 00:10:45.550 align:middle line:84%
+And it was just like a bunch of
+if-else if-else if-else if-else
+
+00:10:45.550 --> 00:10:46.940 align:middle line:90%
+if-something like that.
+
+00:10:46.940 --> 00:10:48.050 align:middle line:90%
+It looked really ugly.
+
+00:10:48.050 --> 00:10:50.210 align:middle line:90%
+But I had a lot of fun doing it.
+
+00:10:50.210 --> 00:10:51.700 align:middle line:84%
+SARAH HANSEN: But
+in a way, you're
+
+00:10:51.700 --> 00:10:53.440 align:middle line:84%
+helping people choose
+their own adventure
+
+00:10:53.440 --> 00:10:56.710 align:middle line:84%
+today through programming,
+like gaining independence,
+
+00:10:56.710 --> 00:11:00.130 align:middle line:84%
+critical thinking, doing things
+that they rely on other people
+
+00:11:00.130 --> 00:11:01.910 align:middle line:90%
+to do, they can do themselves.
+
+00:11:01.910 --> 00:11:04.007 align:middle line:84%
+That's kind of incredible
+that you do that.
+
+00:11:04.007 --> 00:11:05.090 align:middle line:90%
+ANA BELL: It's pretty fun.
+
+00:11:05.090 --> 00:11:06.870 align:middle line:90%
+That's what I get out of it.
+
+00:11:06.870 --> 00:11:09.830 align:middle line:84%
+Like I said, I don't want people
+to become computer scientists.
+
+00:11:09.830 --> 00:11:12.573 align:middle line:84%
+I just want to empower
+them to, I don't know,
+
+00:11:12.573 --> 00:11:14.240 align:middle line:84%
+like if they want to
+make their own app,
+
+00:11:14.240 --> 00:11:17.500 align:middle line:84%
+they can totally do that using
+really basic computer science
+
+00:11:17.500 --> 00:11:19.550 align:middle line:90%
+skills or programming skills.
+
+00:11:19.550 --> 00:11:21.290 align:middle line:84%
+Not necessarily
+computer science skills.
+
+00:11:21.290 --> 00:11:21.580 align:middle line:90%
+But.
+
+00:11:21.580 --> 00:11:22.040 align:middle line:90%
+SARAH HANSEN: Yeah.
+
+00:11:22.040 --> 00:11:22.665 align:middle line:90%
+ANA BELL: Yeah.
+
+00:11:22.665 --> 00:11:25.960 align:middle line:84%
+SARAH HANSEN: So
+controversial question.
+
+00:11:25.960 --> 00:11:28.540 align:middle line:84%
+I asked you before
+the show a question,
+
+00:11:28.540 --> 00:11:30.010 align:middle line:84%
+and I have not seen
+the answer yet,
+
+00:11:30.010 --> 00:11:34.990 align:middle line:84%
+but the question was,
+in an environment
+
+00:11:34.990 --> 00:11:38.620 align:middle line:84%
+when there are coding
+tools out there
+
+00:11:38.620 --> 00:11:42.190 align:middle line:84%
+that allow people to
+build things, what's
+
+00:11:42.190 --> 00:11:45.850 align:middle line:84%
+the value proposition of
+learning a language like Python
+
+00:11:45.850 --> 00:11:46.550 align:middle line:90%
+to do that?
+
+00:11:46.550 --> 00:11:48.740 align:middle line:90%
+Do we still need to do it?
+
+00:11:48.740 --> 00:11:50.677 align:middle line:84%
+And what's the value
+proposition of doing it?
+
+00:11:50.677 --> 00:11:52.260 align:middle line:84%
+So you're going to
+reveal your answer.
+
+00:11:52.260 --> 00:11:52.802 align:middle line:90%
+ANA BELL: OK.
+
+00:11:52.802 --> 00:11:54.190 align:middle line:90%
+I'll reveal my answer.
+
+00:11:54.190 --> 00:11:58.400 align:middle line:84%
+So not sure if this exactly
+answers the question,
+
+00:11:58.400 --> 00:12:00.528 align:middle line:90%
+but I said, trust but verify.
+
+00:12:00.528 --> 00:12:01.820 align:middle line:90%
+SARAH HANSEN: Oh, tell me more.
+
+00:12:01.820 --> 00:12:02.362 align:middle line:90%
+ANA BELL: OK.
+
+00:12:02.362 --> 00:12:05.530 align:middle line:84%
+Yeah, I've certainly,
+definitely used AI tools before.
+
+00:12:05.530 --> 00:12:09.350 align:middle line:84%
+And even for really
+simple things,
+
+00:12:09.350 --> 00:12:15.760 align:middle line:84%
+it can get it wrong, especially
+mathematical things, and even
+
+00:12:15.760 --> 00:12:16.940 align:middle line:90%
+programming things.
+
+00:12:16.940 --> 00:12:20.980 align:middle line:84%
+And so I have, I would say a
+basic knowledge of programming.
+
+00:12:20.980 --> 00:12:21.480 align:middle line:90%
+And--
+
+00:12:21.480 --> 00:12:23.438 align:middle line:84%
+SARAH HANSEN: I, wait,
+I have to interrupt you.
+
+00:12:23.438 --> 00:12:25.990 align:middle line:84%
+I would say it's a little
+more than basic for everyone
+
+00:12:25.990 --> 00:12:26.870 align:middle line:90%
+out there.
+
+00:12:26.870 --> 00:12:28.010 align:middle line:90%
+More than basic.
+
+00:12:28.010 --> 00:12:29.020 align:middle line:90%
+Continue.
+
+00:12:29.020 --> 00:12:33.580 align:middle line:84%
+ANA BELL: And so I was able to
+start with what GenAI gave me
+
+00:12:33.580 --> 00:12:40.630 align:middle line:84%
+as a program, and tell you know
+what, in this particular test
+
+00:12:40.630 --> 00:12:42.950 align:middle line:84%
+case, it doesn't
+really work that well.
+
+00:12:42.950 --> 00:12:47.210 align:middle line:84%
+And I didn't have to go
+back and ask it to fix it,
+
+00:12:47.210 --> 00:12:49.240 align:middle line:84%
+because that requires
+a lot more back
+
+00:12:49.240 --> 00:12:52.190 align:middle line:90%
+and forth with the prompting.
+
+00:12:52.190 --> 00:12:54.860 align:middle line:84%
+And I was able to
+just fix it on my own.
+
+00:12:54.860 --> 00:12:56.960 align:middle line:90%
+It wasn't that hard of a fix.
+
+00:12:56.960 --> 00:13:02.200 align:middle line:84%
+And as soon as you go back
+and prompt the GenAI again
+
+00:13:02.200 --> 00:13:05.680 align:middle line:84%
+and again and again, you
+start to introduce variability
+
+00:13:05.680 --> 00:13:07.390 align:middle line:90%
+of English language.
+
+00:13:07.390 --> 00:13:09.500 align:middle line:84%
+Like when you're talking
+to someone online,
+
+00:13:09.500 --> 00:13:12.310 align:middle line:84%
+it's really hard to tell what
+they mean or, right, there's
+
+00:13:12.310 --> 00:13:14.050 align:middle line:90%
+all these double meanings.
+
+00:13:14.050 --> 00:13:16.520 align:middle line:90%
+And GenAI is all probabilistic.
+
+00:13:16.520 --> 00:13:20.020 align:middle line:84%
+So they're basically
+going to pick the highest
+
+00:13:20.020 --> 00:13:21.320 align:middle line:90%
+probability of what you mean.
+
+00:13:21.320 --> 00:13:23.050 align:middle line:84%
+And then when they
+give you answers back,
+
+00:13:23.050 --> 00:13:25.750 align:middle line:84%
+again, they give it to you with
+whatever the highest probability
+
+00:13:25.750 --> 00:13:28.280 align:middle line:84%
+for the next word to be, that's
+what they spit back at you.
+
+00:13:28.280 --> 00:13:31.190 align:middle line:84%
+So as soon as you introduce
+that prompting back and forth,
+
+00:13:31.190 --> 00:13:33.460 align:middle line:84%
+it can introduce
+errors that potentially
+
+00:13:33.460 --> 00:13:35.980 align:middle line:84%
+stack on top of errors
+and misunderstandings,
+
+00:13:35.980 --> 00:13:37.010 align:middle line:90%
+and things like that.
+
+00:13:37.010 --> 00:13:40.360 align:middle line:84%
+So having a really basic
+knowledge of programming
+
+00:13:40.360 --> 00:13:43.150 align:middle line:84%
+could allow you to maybe
+start with a piece of code
+
+00:13:43.150 --> 00:13:44.510 align:middle line:90%
+that the GenAI gives you back.
+
+00:13:44.510 --> 00:13:46.280 align:middle line:84%
+So you're not starting
+with a blank slate.
+
+00:13:46.280 --> 00:13:49.250 align:middle line:84%
+It's not super daunting
+to write it yourself.
+
+00:13:49.250 --> 00:13:51.160 align:middle line:84%
+But you start with
+something, and then you
+
+00:13:51.160 --> 00:13:54.037 align:middle line:84%
+potentially test it, and
+then debug it, and then
+
+00:13:54.037 --> 00:13:54.620 align:middle line:90%
+figure it out.
+
+00:13:54.620 --> 00:13:57.220 align:middle line:84%
+OK, now I trust
+that it works well.
+
+00:13:57.220 --> 00:13:57.740 align:middle line:90%
+Yeah.
+
+00:13:57.740 --> 00:13:59.698 align:middle line:84%
+SARAH HANSEN: I feel like
+the ability to verify
+
+00:13:59.698 --> 00:14:01.100 align:middle line:90%
+is the human component.
+
+00:14:01.100 --> 00:14:01.932 align:middle line:90%
+ANA BELL: Yes.
+
+00:14:01.932 --> 00:14:04.790 align:middle line:84%
+SARAH HANSEN: And that is what
+creates the balance with AI.
+
+00:14:04.790 --> 00:14:07.010 align:middle line:84%
+Like if you let AI
+make all the decisions,
+
+00:14:07.010 --> 00:14:09.035 align:middle line:84%
+then you've lost
+your self-reliance,
+
+00:14:09.035 --> 00:14:10.660 align:middle line:84%
+and you can't choose
+your own adventure
+
+00:14:10.660 --> 00:14:11.890 align:middle line:84%
+because you're going to
+get a bunch of errors
+
+00:14:11.890 --> 00:14:13.848 align:middle line:84%
+and it's going to lead
+you down the wrong path.
+
+00:14:13.848 --> 00:14:17.470 align:middle line:84%
+So you need the knowledge
+to be able to choose
+
+00:14:17.470 --> 00:14:18.770 align:middle line:90%
+a path that makes sense.
+
+00:14:18.770 --> 00:14:18.880 align:middle line:90%
+ANA BELL: Yeah.
+
+00:14:18.880 --> 00:14:21.047 align:middle line:84%
+SARAH HANSEN: I have to
+know what the ducks are now.
+
+00:14:21.047 --> 00:14:22.550 align:middle line:90%
+I can't continue.
+
+00:14:22.550 --> 00:14:23.543 align:middle line:90%
+So.
+
+00:14:23.543 --> 00:14:24.085 align:middle line:90%
+ANA BELL: OK.
+
+00:14:24.085 --> 00:14:25.480 align:middle line:90%
+SARAH HANSEN: Oh, and the pig.
+
+00:14:25.480 --> 00:14:26.105 align:middle line:90%
+ANA BELL: Yeah.
+
+00:14:26.105 --> 00:14:28.038 align:middle line:84%
+SARAH HANSEN: Is
+that noisy data?
+
+00:14:28.038 --> 00:14:29.330 align:middle line:90%
+ANA BELL: It is not noisy data.
+
+00:14:29.330 --> 00:14:30.038 align:middle line:90%
+SARAH HANSEN: OK.
+
+00:14:30.038 --> 00:14:34.840 align:middle line:84%
+ANA BELL: So every semester,
+when we run our classes on intro
+
+00:14:34.840 --> 00:14:36.680 align:middle line:84%
+to programming and
+computer science,
+
+00:14:36.680 --> 00:14:40.642 align:middle line:84%
+there is one particular
+class that is on debugging.
+
+00:14:40.642 --> 00:14:41.350 align:middle line:90%
+SARAH HANSEN: OK.
+
+00:14:41.350 --> 00:14:43.250 align:middle line:84%
+ANA BELL: Which is
+the process of, OK,
+
+00:14:43.250 --> 00:14:44.600 align:middle line:90%
+you wrote a piece of code.
+
+00:14:44.600 --> 00:14:45.433 align:middle line:90%
+SARAH HANSEN: Right.
+
+00:14:45.433 --> 00:14:47.840 align:middle line:84%
+ANA BELL: And it's not
+running as you expect it to.
+
+00:14:47.840 --> 00:14:49.430 align:middle line:90%
+So how do you fix it?
+
+00:14:49.430 --> 00:14:51.080 align:middle line:90%
+That is the debugging process.
+
+00:14:51.080 --> 00:14:54.280 align:middle line:84%
+And so a lot of times
+a bunch of the errors
+
+00:14:54.280 --> 00:14:56.750 align:middle line:84%
+might be things that
+you can easily fix.
+
+00:14:56.750 --> 00:15:01.310 align:middle line:84%
+But most of the time,
+your program runs fine
+
+00:15:01.310 --> 00:15:03.490 align:middle line:84%
+and it gives you an answer,
+but the answer is not
+
+00:15:03.490 --> 00:15:05.240 align:middle line:90%
+what you thought it should be.
+
+00:15:05.240 --> 00:15:07.660 align:middle line:84%
+That's kind of
+where programming is
+
+00:15:07.660 --> 00:15:12.920 align:middle line:84%
+kind of different than English,
+for example, because in English,
+
+00:15:12.920 --> 00:15:15.490 align:middle line:84%
+if you write a
+sentence, somebody else
+
+00:15:15.490 --> 00:15:18.320 align:middle line:84%
+can interpret it
+however they'd like.
+
+00:15:18.320 --> 00:15:20.290 align:middle line:84%
+Like one example we
+give to students is,
+
+00:15:20.290 --> 00:15:21.740 align:middle line:90%
+the chicken is ready to eat.
+
+00:15:21.740 --> 00:15:23.363 align:middle line:84%
+What do you think
+about when I say,
+
+00:15:23.363 --> 00:15:24.530 align:middle line:90%
+the chicken is ready to eat?
+
+00:15:24.530 --> 00:15:26.390 align:middle line:84%
+SARAH HANSEN: Well,
+I'm a vegetarian.
+
+00:15:26.390 --> 00:15:28.820 align:middle line:84%
+So I don't want to
+actually eat the chicken,
+
+00:15:28.820 --> 00:15:31.610 align:middle line:84%
+but I would, because
+I'm a vegetarian,
+
+00:15:31.610 --> 00:15:33.948 align:middle line:84%
+I assume the chicken
+wants to eat his food.
+
+00:15:33.948 --> 00:15:34.490 align:middle line:90%
+ANA BELL: OK.
+
+00:15:34.490 --> 00:15:35.330 align:middle line:90%
+There you go.
+
+00:15:35.330 --> 00:15:36.280 align:middle line:90%
+But I would assume--
+
+00:15:36.280 --> 00:15:37.540 align:middle line:90%
+I enjoy meat, so.
+
+00:15:37.540 --> 00:15:39.040 align:middle line:90%
+[LAUGHTER]
+
+00:15:39.040 --> 00:15:44.800 align:middle line:84%
+So my take on that is I
+have a chicken on the table
+
+00:15:44.800 --> 00:15:45.840 align:middle line:90%
+and I'm going to eat it.
+
+00:15:45.840 --> 00:15:46.340 align:middle line:90%
+Right?
+
+00:15:46.340 --> 00:15:48.260 align:middle line:84%
+So there's two
+interpretations to that.
+
+00:15:48.260 --> 00:15:51.910 align:middle line:84%
+But when we write code,
+there's only one way
+
+00:15:51.910 --> 00:15:54.470 align:middle line:84%
+to interpret that piece
+of code that is written.
+
+00:15:54.470 --> 00:15:58.690 align:middle line:84%
+So that's where things
+go wrong in our code
+
+00:15:58.690 --> 00:16:00.370 align:middle line:84%
+because we're like,
+well, it should
+
+00:16:00.370 --> 00:16:03.190 align:middle line:84%
+work because in my mind, when
+I kind of thought about it,
+
+00:16:03.190 --> 00:16:04.940 align:middle line:84%
+it's supposed to give
+me the right answer.
+
+00:16:04.940 --> 00:16:05.810 align:middle line:90%
+But it doesn't.
+
+00:16:05.810 --> 00:16:08.200 align:middle line:84%
+And so obviously, the
+program is the one
+
+00:16:08.200 --> 00:16:11.350 align:middle line:84%
+who's wrong because
+the computer is merely
+
+00:16:11.350 --> 00:16:13.670 align:middle line:84%
+following the algorithm,
+the set of instructions,
+
+00:16:13.670 --> 00:16:16.520 align:middle line:84%
+and there's only one way to
+follow those instructions.
+
+00:16:16.520 --> 00:16:18.410 align:middle line:84%
+That's basically what
+that whole lecture,
+
+00:16:18.410 --> 00:16:19.670 align:middle line:90%
+that whole class is about.
+
+00:16:19.670 --> 00:16:22.570 align:middle line:84%
+And then I bring out
+this big box of ducks
+
+00:16:22.570 --> 00:16:27.820 align:middle line:84%
+and I say, and I say,
+well, programming
+
+00:16:27.820 --> 00:16:35.050 align:middle line:84%
+is actually kind of creative
+because the solution
+
+00:16:35.050 --> 00:16:39.290 align:middle line:84%
+to a problem, I mean, you could
+brute force a bunch of things,
+
+00:16:39.290 --> 00:16:43.270 align:middle line:84%
+but oftentimes the solution
+to a debugging problem
+
+00:16:43.270 --> 00:16:46.540 align:middle line:84%
+is just to take
+time away from it,
+
+00:16:46.540 --> 00:16:52.660 align:middle line:84%
+and then potentially explain
+exactly what you think
+
+00:16:52.660 --> 00:16:56.200 align:middle line:84%
+the code is doing to
+someone who knows absolutely
+
+00:16:56.200 --> 00:16:57.880 align:middle line:90%
+nothing about programming.
+
+00:16:57.880 --> 00:16:58.555 align:middle line:90%
+It could be you.
+
+00:16:58.555 --> 00:16:59.930 align:middle line:84%
+SARAH HANSEN: Yes,
+I'm available.
+
+00:16:59.930 --> 00:17:02.012 align:middle line:84%
+ANA BELL: Or it could
+be a rubber duck.
+
+00:17:02.012 --> 00:17:02.720 align:middle line:90%
+SARAH HANSEN: Oh.
+
+00:17:02.720 --> 00:17:04.150 align:middle line:84%
+ANA BELL: So this
+is called rubber
+
+00:17:04.150 --> 00:17:08.800 align:middle line:84%
+ducky debugging because it's
+an inanimate object that
+
+00:17:08.800 --> 00:17:10.520 align:middle line:84%
+doesn't know anything
+about programming,
+
+00:17:10.520 --> 00:17:14.140 align:middle line:84%
+and it forces you to scrutinize
+every single line of code
+
+00:17:14.140 --> 00:17:17.050 align:middle line:84%
+that you wrote, even ones
+you think are correct.
+
+00:17:17.050 --> 00:17:20.290 align:middle line:84%
+Most often, it's
+the ones that you
+
+00:17:20.290 --> 00:17:23.690 align:middle line:84%
+think are correct that
+kind of are the issue.
+
+00:17:23.690 --> 00:17:26.480 align:middle line:84%
+It's kind of like, where
+did I put my glasses?
+
+00:17:26.480 --> 00:17:28.990 align:middle line:84%
+And you spend a long
+time looking for them,
+
+00:17:28.990 --> 00:17:30.400 align:middle line:90%
+and they're on top of your head.
+
+00:17:30.400 --> 00:17:31.820 align:middle line:90%
+It's like that exact feeling.
+
+00:17:31.820 --> 00:17:33.740 align:middle line:84%
+It's like, where is
+that error coming from?
+
+00:17:33.740 --> 00:17:36.110 align:middle line:84%
+And it's going to be
+something super simple.
+
+00:17:36.110 --> 00:17:41.720 align:middle line:84%
+So the rubber duck is what helps
+you figure that problem out,
+
+00:17:41.720 --> 00:17:45.740 align:middle line:84%
+because you're explaining it in
+very grave detail to something
+
+00:17:45.740 --> 00:17:46.490 align:middle line:90%
+that doesn't know.
+
+00:17:46.490 --> 00:17:49.100 align:middle line:84%
+And if ducks are not your
+thing, there are frogs.
+
+00:17:49.100 --> 00:17:49.665 align:middle line:90%
+SARAH HANSEN: Oh, and the pigs.
+
+00:17:49.665 --> 00:17:50.330 align:middle line:90%
+ANA BELL: And pigs.
+
+00:17:50.330 --> 00:17:51.330 align:middle line:90%
+SARAH HANSEN: Of course.
+
+00:17:51.330 --> 00:17:51.890 align:middle line:90%
+Of course.
+
+00:17:51.890 --> 00:17:55.575 align:middle line:84%
+ANA BELL: Or friends, if you
+want to explain it to them.
+
+00:17:55.575 --> 00:17:57.200 align:middle line:84%
+SARAH HANSEN: But
+friends can be judgy.
+
+00:17:57.200 --> 00:17:58.610 align:middle line:90%
+ANA BELL: Friends can be judgy.
+
+00:17:58.610 --> 00:17:59.110 align:middle line:90%
+Yes.
+
+00:17:59.110 --> 00:18:01.750 align:middle line:84%
+So I used to explain
+my code to my son
+
+00:18:01.750 --> 00:18:04.685 align:middle line:84%
+when he was one when I had
+issues, because he doesn't know
+
+00:18:04.685 --> 00:18:05.810 align:middle line:90%
+anything about programming.
+
+00:18:05.810 --> 00:18:06.643 align:middle line:90%
+SARAH HANSEN: Right.
+
+00:18:06.643 --> 00:18:08.480 align:middle line:84%
+And so it's the act
+of talking it through.
+
+00:18:08.480 --> 00:18:10.407 align:middle line:84%
+But you said it has
+to be in great detail.
+
+00:18:10.407 --> 00:18:10.990 align:middle line:90%
+ANA BELL: Yes.
+
+00:18:10.990 --> 00:18:13.070 align:middle line:84%
+You can't skip
+because that's when--
+
+00:18:13.070 --> 00:18:15.130 align:middle line:84%
+because you already,
+like, clearly your code
+
+00:18:15.130 --> 00:18:17.740 align:middle line:90%
+is wrong because of you.
+
+00:18:17.740 --> 00:18:18.440 align:middle line:90%
+And so--
+
+00:18:18.440 --> 00:18:19.273 align:middle line:90%
+SARAH HANSEN: Right.
+
+00:18:19.273 --> 00:18:21.290 align:middle line:84%
+ANA BELL: And so don't
+skip any details.
+
+00:18:21.290 --> 00:18:24.910 align:middle line:84%
+SARAH HANSEN: I feel like
+this is very much life outside
+
+00:18:24.910 --> 00:18:28.820 align:middle line:84%
+of academia, like 90% of the
+time the problem is probably
+
+00:18:28.820 --> 00:18:29.320 align:middle line:90%
+you.
+
+00:18:29.320 --> 00:18:29.500 align:middle line:90%
+ANA BELL: Yeah.
+
+00:18:29.500 --> 00:18:31.120 align:middle line:84%
+SARAH HANSEN: And
+it's like, you have
+
+00:18:31.120 --> 00:18:34.430 align:middle line:84%
+to figure out how to interact
+in the world or with others.
+
+00:18:34.430 --> 00:18:37.258 align:middle line:84%
+ANA BELL: So I brought all this,
+all these ducks, a wide variety.
+
+00:18:37.258 --> 00:18:38.050 align:middle line:90%
+SARAH HANSEN: Yeah.
+
+00:18:38.050 --> 00:18:40.280 align:middle line:84%
+ANA BELL: So now I have
+a question for you.
+
+00:18:40.280 --> 00:18:40.510 align:middle line:90%
+SARAH HANSEN: Uh oh.
+
+00:18:40.510 --> 00:18:42.160 align:middle line:84%
+ANA BELL: Which duck
+would you like to keep?
+
+00:18:42.160 --> 00:18:42.490 align:middle line:90%
+SARAH HANSEN: [GASPS]
+
+00:18:42.490 --> 00:18:44.660 align:middle line:84%
+ANA BELL: This is a
+hidden personality test.
+
+00:18:44.660 --> 00:18:45.400 align:middle line:90%
+SARAH HANSEN: Oh.
+
+00:18:45.400 --> 00:18:46.150 align:middle line:90%
+SARAH HANSEN: Hmm.
+
+00:18:46.150 --> 00:18:47.470 align:middle line:90%
+ANA BELL: No, it's not.
+
+00:18:47.470 --> 00:18:47.950 align:middle line:84%
+SARAH HANSEN:
+We'll probably have
+
+00:18:47.950 --> 00:18:50.230 align:middle line:84%
+to cut this because I
+might take a long time.
+
+00:18:50.230 --> 00:18:53.690 align:middle line:90%
+I would-- this guy.
+
+00:18:53.690 --> 00:18:54.500 align:middle line:90%
+This guy.
+
+00:18:54.500 --> 00:18:55.150 align:middle line:90%
+Yeah.
+
+00:18:55.150 --> 00:18:56.480 align:middle line:90%
+He's a little bit offbeat.
+
+00:18:56.480 --> 00:18:58.600 align:middle line:90%
+ANA BELL: Yeah.
+
+00:18:58.600 --> 00:19:00.400 align:middle line:90%
+SARAH HANSEN: Eye-catching.
+
+00:19:00.400 --> 00:19:02.625 align:middle line:84%
+And I feel like I could
+explain stuff to him.
+
+00:19:02.625 --> 00:19:03.250 align:middle line:90%
+ANA BELL: Yeah.
+
+00:19:03.250 --> 00:19:04.310 align:middle line:90%
+SARAH HANSEN: I get to keep him?
+
+00:19:04.310 --> 00:19:05.180 align:middle line:90%
+ANA BELL: Yeah, of course.
+
+00:19:05.180 --> 00:19:06.180 align:middle line:90%
+SARAH HANSEN: Thank you.
+
+00:19:06.180 --> 00:19:06.890 align:middle line:90%
+That's so great.
+
+00:19:06.890 --> 00:19:08.440 align:middle line:84%
+ANA BELL: You can put
+one for the set as well.
+
+00:19:08.440 --> 00:19:09.430 align:middle line:90%
+SARAH HANSEN: Really?
+
+00:19:09.430 --> 00:19:10.760 align:middle line:90%
+Oh, gosh.
+
+00:19:10.760 --> 00:19:13.520 align:middle line:84%
+Does someone from the crew want
+to pick a duck for the set?
+
+00:19:13.520 --> 00:19:14.840 align:middle line:84%
+BRETT the producer: You took
+the one I would have picked.
+
+00:19:14.840 --> 00:19:15.140 align:middle line:90%
+Oh.
+
+00:19:15.140 --> 00:19:15.905 align:middle line:90%
+ANA BELL: Oh no.
+
+00:19:15.905 --> 00:19:17.440 align:middle line:90%
+[LAUGHTER]
+
+00:19:17.440 --> 00:19:18.710 align:middle line:90%
+SARAH HANSEN: All right, then.
+
+00:19:18.710 --> 00:19:20.960 align:middle line:84%
+ANA BELL: There's another
+mohawk guy right over there.
+
+00:19:20.960 --> 00:19:21.760 align:middle line:90%
+SARAH HANSEN: Yeah.
+
+00:19:21.760 --> 00:19:22.455 align:middle line:90%
+Yeah.
+
+00:19:22.455 --> 00:19:23.330 align:middle line:90%
+We'll go two mohawks.
+
+00:19:23.330 --> 00:19:23.980 align:middle line:90%
+ANA BELL: There you go.
+
+00:19:23.980 --> 00:19:24.860 align:middle line:90%
+SARAH HANSEN: Thank you.
+
+00:19:24.860 --> 00:19:25.460 align:middle line:90%
+ANA BELL: Yeah, of course.
+
+00:19:25.460 --> 00:19:26.150 align:middle line:90%
+SARAH HANSEN: What a gift.
+
+00:19:26.150 --> 00:19:27.490 align:middle line:84%
+ANA BELL: So you can
+use it for programming
+
+00:19:27.490 --> 00:19:28.820 align:middle line:90%
+if you decide to start.
+
+00:19:28.820 --> 00:19:31.510 align:middle line:84%
+Or as you said, even in
+your day to day life,
+
+00:19:31.510 --> 00:19:33.560 align:middle line:84%
+if you just explain
+the problem to--
+
+00:19:33.560 --> 00:19:34.690 align:middle line:90%
+SARAH HANSEN: Yes.
+
+00:19:34.690 --> 00:19:36.598 align:middle line:84%
+ANA BELL: --something
+that doesn't judge.
+
+00:19:36.598 --> 00:19:37.390 align:middle line:90%
+SARAH HANSEN: Yeah.
+
+00:19:37.390 --> 00:19:39.717 align:middle line:90%
+This idea of taking a break.
+
+00:19:39.717 --> 00:19:40.300 align:middle line:90%
+ANA BELL: Yes.
+
+00:19:40.300 --> 00:19:42.040 align:middle line:84%
+SARAH HANSEN: The
+process of programming
+
+00:19:42.040 --> 00:19:44.030 align:middle line:90%
+itself seems quite intense.
+
+00:19:44.030 --> 00:19:48.250 align:middle line:84%
+There's an image in popular
+culture of a person working
+
+00:19:48.250 --> 00:19:51.130 align:middle line:84%
+alone in the dark,
+like with a hoodie,
+
+00:19:51.130 --> 00:19:55.390 align:middle line:84%
+and tap, tap, tap
+for hours on end.
+
+00:19:55.390 --> 00:19:57.760 align:middle line:90%
+That sounds intense.
+
+00:19:57.760 --> 00:19:59.500 align:middle line:90%
+So there's two pieces.
+
+00:19:59.500 --> 00:20:00.800 align:middle line:90%
+Is that accurate?
+
+00:20:00.800 --> 00:20:03.610 align:middle line:84%
+And two, do people work
+in isolation like that?
+
+00:20:03.610 --> 00:20:05.680 align:middle line:90%
+Or is it more collaborative?
+
+00:20:05.680 --> 00:20:08.300 align:middle line:84%
+ANA BELL: So I tend to
+encourage collaboration.
+
+00:20:08.300 --> 00:20:09.220 align:middle line:90%
+SARAH HANSEN: OK.
+
+00:20:09.220 --> 00:20:13.450 align:middle line:84%
+ANA BELL: I have certainly put
+a hoodie on, and the hood on
+
+00:20:13.450 --> 00:20:17.410 align:middle line:84%
+in the past, just like a
+leave me alone kind of state,
+
+00:20:17.410 --> 00:20:20.420 align:middle line:84%
+mostly for homework
+and things like that.
+
+00:20:20.420 --> 00:20:22.720 align:middle line:84%
+But for students
+learning to program,
+
+00:20:22.720 --> 00:20:24.220 align:middle line:84%
+I definitely encourage
+collaboration
+
+00:20:24.220 --> 00:20:26.210 align:middle line:84%
+because it's when you
+talk to somebody else,
+
+00:20:26.210 --> 00:20:27.980 align:middle line:90%
+you see their viewpoint.
+
+00:20:27.980 --> 00:20:31.610 align:middle line:84%
+And in programming, I know
+I talked about an algorithm,
+
+00:20:31.610 --> 00:20:34.690 align:middle line:84%
+but for a particular
+algorithm, or even just
+
+00:20:34.690 --> 00:20:36.970 align:middle line:84%
+to solve a specific
+problem, there's
+
+00:20:36.970 --> 00:20:38.750 align:middle line:90%
+a ton of ways to solve it.
+
+00:20:38.750 --> 00:20:43.150 align:middle line:84%
+So I learn from in the
+classroom when I ask students
+
+00:20:43.150 --> 00:20:45.280 align:middle line:84%
+for how did they solve a
+particular problem after I
+
+00:20:45.280 --> 00:20:46.863 align:middle line:84%
+give them some time
+to think about it.
+
+00:20:46.863 --> 00:20:49.630 align:middle line:84%
+They have so many
+different approaches to it
+
+00:20:49.630 --> 00:20:51.620 align:middle line:84%
+that I would never
+have thought of.
+
+00:20:51.620 --> 00:20:53.740 align:middle line:84%
+And it's important
+for students to see
+
+00:20:53.740 --> 00:20:56.950 align:middle line:84%
+all these different approaches,
+because my way might not
+
+00:20:56.950 --> 00:20:59.960 align:middle line:84%
+be the way that they think
+to approach the problem.
+
+00:20:59.960 --> 00:21:03.280 align:middle line:84%
+So I encourage working together,
+especially as you're learning.
+
+00:21:03.280 --> 00:21:06.700 align:middle line:84%
+Now after you find your groove,
+maybe it's not necessary.
+
+00:21:06.700 --> 00:21:08.510 align:middle line:84%
+SARAH HANSEN: Yeah, as
+an outsider to this,
+
+00:21:08.510 --> 00:21:11.360 align:middle line:84%
+I didn't realize there was such
+room for divergent thinking.
+
+00:21:11.360 --> 00:21:12.290 align:middle line:90%
+So that's really cool.
+
+00:21:12.290 --> 00:21:12.560 align:middle line:90%
+ANA BELL: Yeah.
+
+00:21:12.560 --> 00:21:14.102 align:middle line:84%
+SARAH HANSEN: But
+the taking a break.
+
+00:21:14.102 --> 00:21:17.170 align:middle line:84%
+So especially at
+a place like MIT,
+
+00:21:17.170 --> 00:21:21.280 align:middle line:84%
+I don't know if taking a
+break is on the menu really.
+
+00:21:21.280 --> 00:21:23.290 align:middle line:90%
+But it should be, I'm guessing.
+
+00:21:23.290 --> 00:21:23.750 align:middle line:90%
+ANA BELL: It should be, yeah.
+
+00:21:23.750 --> 00:21:25.250 align:middle line:84%
+SARAH HANSEN: And
+then I'm wondering
+
+00:21:25.250 --> 00:21:29.140 align:middle line:84%
+if you can talk to us about the
+thing you created in the world
+
+00:21:29.140 --> 00:21:31.395 align:middle line:84%
+to help people take a break,
+and why it's important.
+
+00:21:31.395 --> 00:21:32.020 align:middle line:90%
+ANA BELL: Sure.
+
+00:21:32.020 --> 00:21:35.150 align:middle line:90%
+So this was a project for--
+
+00:21:35.150 --> 00:21:36.155 align:middle line:90%
+I just had an idea.
+
+00:21:36.155 --> 00:21:37.780 align:middle line:84%
+I was like, let me
+just make a coloring
+
+00:21:37.780 --> 00:21:41.680 align:middle line:84%
+book, one of those
+coloring books
+
+00:21:41.680 --> 00:21:44.410 align:middle line:84%
+that you just kind
+of doodle into.
+
+00:21:44.410 --> 00:21:48.470 align:middle line:84%
+And I thought, let me just make
+it computer science themed.
+
+00:21:48.470 --> 00:21:52.540 align:middle line:84%
+And so each one of these
+is, like here's a circuit,
+
+00:21:52.540 --> 00:21:57.230 align:middle line:84%
+and it's like, here's a
+network of connected people,
+
+00:21:57.230 --> 00:22:01.040 align:middle line:84%
+and then here's a matrix
+kind of thing, with bits.
+
+00:22:01.040 --> 00:22:06.680 align:middle line:84%
+And so it was just all these
+ideas from computer science.
+
+00:22:06.680 --> 00:22:12.100 align:middle line:84%
+And the hope is that if you are
+stuck and you don't have a duck,
+
+00:22:12.100 --> 00:22:14.540 align:middle line:84%
+then you can take
+a coloring book,
+
+00:22:14.540 --> 00:22:16.750 align:middle line:84%
+it doesn't have to be this
+one, but just something
+
+00:22:16.750 --> 00:22:19.280 align:middle line:90%
+that gives your brain a break.
+
+00:22:19.280 --> 00:22:21.970 align:middle line:84%
+But it's this idea
+of mind wandering.
+
+00:22:21.970 --> 00:22:24.280 align:middle line:84%
+And this is an idea
+from psychology
+
+00:22:24.280 --> 00:22:26.780 align:middle line:90%
+where mind wandering is not bad.
+
+00:22:26.780 --> 00:22:28.640 align:middle line:84%
+Like if you're folding
+laundry, right,
+
+00:22:28.640 --> 00:22:30.910 align:middle line:84%
+you're doing a very
+repetitive task,
+
+00:22:30.910 --> 00:22:33.320 align:middle line:84%
+your brain doesn't have
+to super focus on it.
+
+00:22:33.320 --> 00:22:36.250 align:middle line:84%
+And so that's when inspiration
+comes, because you're
+
+00:22:36.250 --> 00:22:38.510 align:middle line:84%
+kind of subconsciously
+thinking about other things,
+
+00:22:38.510 --> 00:22:41.290 align:middle line:84%
+maybe problems that
+you have or things
+
+00:22:41.290 --> 00:22:42.830 align:middle line:90%
+that you're worried about.
+
+00:22:42.830 --> 00:22:44.950 align:middle line:84%
+And that's kind of
+when solutions come.
+
+00:22:44.950 --> 00:22:46.600 align:middle line:84%
+Just like when you're
+taking a shower,
+
+00:22:46.600 --> 00:22:48.750 align:middle line:84%
+that's mind wandering
+as well, because you're
+
+00:22:48.750 --> 00:22:50.680 align:middle line:84%
+doing a test that you
+already know how to do.
+
+00:22:50.680 --> 00:22:52.750 align:middle line:84%
+You don't need to dedicate
+any thought to it.
+
+00:22:52.750 --> 00:22:54.720 align:middle line:84%
+So your brain kind
+of dedicates thought
+
+00:22:54.720 --> 00:22:58.833 align:middle line:84%
+to other things that might be
+worrying you or on your mind.
+
+00:22:58.833 --> 00:23:01.000 align:middle line:84%
+SARAH HANSEN: That's great
+that you've created that.
+
+00:23:01.000 --> 00:23:05.800 align:middle line:84%
+Do you feel like
+programming is, like,
+
+00:23:05.800 --> 00:23:08.130 align:middle line:84%
+what's the percentage
+of logic to creativity
+
+00:23:08.130 --> 00:23:09.340 align:middle line:90%
+when it comes to programming?
+
+00:23:09.340 --> 00:23:10.750 align:middle line:90%
+Are we like, 50-50?
+
+00:23:10.750 --> 00:23:11.743 align:middle line:90%
+80-20?
+
+00:23:11.743 --> 00:23:12.660 align:middle line:90%
+ANA BELL: Interesting.
+
+00:23:12.660 --> 00:23:14.670 align:middle line:90%
+SARAH HANSEN: 60-40?
+
+00:23:14.670 --> 00:23:17.880 align:middle line:84%
+ANA BELL: Maybe
+50-50 I would say.
+
+00:23:17.880 --> 00:23:21.300 align:middle line:84%
+I think creativity
+comes into the process
+
+00:23:21.300 --> 00:23:23.770 align:middle line:90%
+at all the different levels.
+
+00:23:23.770 --> 00:23:26.640 align:middle line:84%
+So when you're coming up
+with a problem or something
+
+00:23:26.640 --> 00:23:28.720 align:middle line:84%
+that you want to solve
+using programming,
+
+00:23:28.720 --> 00:23:30.660 align:middle line:90%
+right, you have to be creative.
+
+00:23:30.660 --> 00:23:31.875 align:middle line:90%
+Right?
+
+00:23:31.875 --> 00:23:36.580 align:middle line:84%
+So just coming up with
+that is mostly creativity.
+
+00:23:36.580 --> 00:23:39.480 align:middle line:84%
+When you're deciding
+how to solve the problem
+
+00:23:39.480 --> 00:23:44.100 align:middle line:84%
+or how to write the code,
+maybe what algorithm to use,
+
+00:23:44.100 --> 00:23:48.030 align:middle line:84%
+or how to structure it, or
+what pieces to use and where,
+
+00:23:48.030 --> 00:23:52.320 align:middle line:84%
+that requires some creativity,
+potentially putting things
+
+00:23:52.320 --> 00:23:55.350 align:middle line:84%
+together that you might
+not have put before,
+
+00:23:55.350 --> 00:23:57.982 align:middle line:84%
+pieces of programming
+concepts together
+
+00:23:57.982 --> 00:23:59.440 align:middle line:84%
+that you might not
+have put before.
+
+00:23:59.440 --> 00:24:03.960 align:middle line:84%
+And then you're obviously
+going to run into an error
+
+00:24:03.960 --> 00:24:06.360 align:middle line:84%
+after you write the
+code the first time.
+
+00:24:06.360 --> 00:24:11.400 align:middle line:84%
+And so then, tons of creativity
+comes into play there.
+
+00:24:11.400 --> 00:24:12.330 align:middle line:90%
+SARAH HANSEN: Yeah.
+
+00:24:12.330 --> 00:24:16.005 align:middle line:84%
+ANA BELL: But drawing
+or talking to a duck--
+
+00:24:16.005 --> 00:24:18.130 align:middle line:84%
+SARAH HANSEN: I'm liking
+programming more and more,
+
+00:24:18.130 --> 00:24:18.940 align:middle line:90%
+I have to say.
+
+00:24:18.940 --> 00:24:19.648 align:middle line:90%
+ANA BELL: I know.
+
+00:24:19.648 --> 00:24:21.690 align:middle line:84%
+Once you're
+programming, it's kind
+
+00:24:21.690 --> 00:24:24.220 align:middle line:84%
+of like reading a
+really good book.
+
+00:24:24.220 --> 00:24:26.680 align:middle line:84%
+Like you're in this zen space
+where you're just like, yeah,
+
+00:24:26.680 --> 00:24:27.460 align:middle line:90%
+this is working.
+
+00:24:27.460 --> 00:24:29.890 align:middle line:84%
+I totally see where
+this is going.
+
+00:24:29.890 --> 00:24:31.920 align:middle line:84%
+I know what I want
+to write next.
+
+00:24:31.920 --> 00:24:33.730 align:middle line:84%
+The code just kind
+of fits together.
+
+00:24:33.730 --> 00:24:36.450 align:middle line:84%
+So just like being in
+a good book is awesome.
+
+00:24:36.450 --> 00:24:40.050 align:middle line:84%
+And then the more
+you program, the more
+
+00:24:40.050 --> 00:24:42.055 align:middle line:84%
+you want to program
+because you're just gaining
+
+00:24:42.055 --> 00:24:43.180 align:middle line:90%
+these skills along the way.
+
+00:24:43.180 --> 00:24:45.850 align:middle line:84%
+So it's like you're--
+like, I play video games.
+
+00:24:45.850 --> 00:24:48.630 align:middle line:84%
+So, you're just constantly
+looking for new ways
+
+00:24:48.630 --> 00:24:51.040 align:middle line:90%
+to level up, but there's no cap.
+
+00:24:51.040 --> 00:24:53.700 align:middle line:84%
+SARAH HANSEN: It's
+really fascinating
+
+00:24:53.700 --> 00:24:57.130 align:middle line:84%
+because unlike video
+games, most of them,
+
+00:24:57.130 --> 00:25:01.110 align:middle line:84%
+you could use open
+source coding languages,
+
+00:25:01.110 --> 00:25:03.330 align:middle line:84%
+and financial
+barriers don't come
+
+00:25:03.330 --> 00:25:06.190 align:middle line:84%
+into play to get
+that area for growth
+
+00:25:06.190 --> 00:25:09.095 align:middle line:84%
+and that dopamine
+hit of leveling up.
+
+00:25:09.095 --> 00:25:09.720 align:middle line:90%
+ANA BELL: Yeah.
+
+00:25:09.720 --> 00:25:10.320 align:middle line:90%
+Yeah.
+
+00:25:10.320 --> 00:25:11.440 align:middle line:84%
+SARAH HANSEN:
+Increasing your skills.
+
+00:25:11.440 --> 00:25:13.260 align:middle line:84%
+ANA BELL: It's just, yeah,
+it's just kind of a different,
+
+00:25:13.260 --> 00:25:14.802 align:middle line:84%
+like you said, it's
+a growth mindset.
+
+00:25:14.802 --> 00:25:16.650 align:middle line:90%
+It's a different way of--
+
+00:25:16.650 --> 00:25:18.010 align:middle line:90%
+it's different fun.
+
+00:25:18.010 --> 00:25:18.760 align:middle line:84%
+SARAH HANSEN: It's
+a different fun.
+
+00:25:18.760 --> 00:25:19.480 align:middle line:90%
+ANA BELL: It's a different fun.
+
+00:25:19.480 --> 00:25:21.063 align:middle line:84%
+SARAH HANSEN: I am
+like, more and more
+
+00:25:21.063 --> 00:25:23.710 align:middle line:84%
+I'm like, maybe I
+want to try this one.
+
+00:25:23.710 --> 00:25:24.352 align:middle line:90%
+ANA BELL: Well.
+
+00:25:24.352 --> 00:25:25.060 align:middle line:90%
+SARAH HANSEN: Oh.
+
+00:25:25.060 --> 00:25:26.230 align:middle line:84%
+ANA BELL: There's
+a book right here.
+
+00:25:26.230 --> 00:25:26.938 align:middle line:90%
+SARAH HANSEN: Oh.
+
+00:25:26.938 --> 00:25:27.698 align:middle line:90%
+[LAUGHTER]
+
+00:25:27.698 --> 00:25:28.990 align:middle line:90%
+SARAH HANSEN: Get Programming--
+
+00:25:28.990 --> 00:25:30.280 align:middle line:90%
+Learn to Code with Python.
+
+00:25:30.280 --> 00:25:30.905 align:middle line:90%
+ANA BELL: Yeah.
+
+00:25:30.905 --> 00:25:34.380 align:middle line:90%
+So this I wrote a while ago.
+
+00:25:34.380 --> 00:25:36.060 align:middle line:90%
+It's a book made--
+
+00:25:36.060 --> 00:25:40.000 align:middle line:84%
+lots of books or lots of things
+claim to be for beginners.
+
+00:25:40.000 --> 00:25:44.100 align:middle line:84%
+But I wanted to write something
+that is actually for people who
+
+00:25:44.100 --> 00:25:45.370 align:middle line:90%
+have never programmed before.
+
+00:25:45.370 --> 00:25:49.080 align:middle line:84%
+So I think we don't even get
+into writing code till chapter
+
+00:25:49.080 --> 00:25:50.350 align:middle line:90%
+7 or something like that.
+
+00:25:50.350 --> 00:25:55.150 align:middle line:84%
+It's mostly kind of just setting
+up motivation, but not boring.
+
+00:25:55.150 --> 00:25:57.970 align:middle line:84%
+Like I wanted it to read
+like a novel, right?
+
+00:25:57.970 --> 00:26:00.750 align:middle line:84%
+Like you're just like, oh,
+I'm just following along.
+
+00:26:00.750 --> 00:26:05.230 align:middle line:84%
+So if you want to start, you
+could also could try this book.
+
+00:26:05.230 --> 00:26:06.270 align:middle line:90%
+You can keep this copy.
+
+00:26:06.270 --> 00:26:08.050 align:middle line:84%
+SARAH HANSEN: Oh, my gosh,
+I have to tell you a secret.
+
+00:26:08.050 --> 00:26:08.633 align:middle line:90%
+ANA BELL: Yes.
+
+00:26:08.633 --> 00:26:12.420 align:middle line:84%
+SARAH HANSEN: So I requested
+this through interlibrary loan
+
+00:26:12.420 --> 00:26:15.072 align:middle line:90%
+at my home library.
+
+00:26:15.072 --> 00:26:18.852 align:middle line:84%
+And I asked one of my family
+members to pick it up,
+
+00:26:18.852 --> 00:26:21.060 align:middle line:84%
+and I was like, just so you
+know, it's really for me.
+
+00:26:21.060 --> 00:26:24.070 align:middle line:84%
+Because they would be like,
+why is she getting this book?
+
+00:26:24.070 --> 00:26:25.300 align:middle line:90%
+This must be the wrong thing.
+
+00:26:25.300 --> 00:26:27.570 align:middle line:90%
+I'm like, it's not a mistake.
+
+00:26:27.570 --> 00:26:28.630 align:middle line:90%
+It's actually for me.
+
+00:26:28.630 --> 00:26:30.370 align:middle line:84%
+But I didn't really
+believe that.
+
+00:26:30.370 --> 00:26:32.927 align:middle line:84%
+But now I feel
+like it is for me.
+
+00:26:32.927 --> 00:26:33.760 align:middle line:90%
+ANA BELL: Oh, great.
+
+00:26:33.760 --> 00:26:36.190 align:middle line:84%
+SARAH HANSEN: Like I do want
+to read it now and learn.
+
+00:26:36.190 --> 00:26:36.815 align:middle line:90%
+ANA BELL: Yeah.
+
+00:26:36.815 --> 00:26:38.100 align:middle line:90%
+Anybody can start.
+
+00:26:38.100 --> 00:26:38.680 align:middle line:90%
+For sure.
+
+00:26:38.680 --> 00:26:40.620 align:middle line:84%
+SARAH HANSEN: Yeah,
+that's just great.
+
+00:26:40.620 --> 00:26:46.338 align:middle line:84%
+Do you have any hot tips for
+newbies who might want to start?
+
+00:26:46.338 --> 00:26:48.630 align:middle line:84%
+Or even people who are like
+deep into programming, deep
+
+00:26:48.630 --> 00:26:50.160 align:middle line:90%
+into the hoodie already?
+
+00:26:50.160 --> 00:26:52.230 align:middle line:84%
+Like things you're
+interested in reading
+
+00:26:52.230 --> 00:26:54.480 align:middle line:84%
+or you think other
+people should view
+
+00:26:54.480 --> 00:26:58.900 align:middle line:84%
+or listen to to start or
+continue their journeys.
+
+00:26:58.900 --> 00:27:02.080 align:middle line:84%
+ANA BELL: Mostly tips
+for newbies, I would say.
+
+00:27:02.080 --> 00:27:03.420 align:middle line:90%
+SARAH HANSEN: OK.
+
+00:27:03.420 --> 00:27:04.840 align:middle line:90%
+ANA BELL: Don't get discouraged.
+
+00:27:04.840 --> 00:27:06.250 align:middle line:90%
+Learning curve is steep.
+
+00:27:06.250 --> 00:27:06.570 align:middle line:90%
+SARAH HANSEN: Yeah.
+
+00:27:06.570 --> 00:27:06.940 align:middle line:90%
+OK.
+
+00:27:06.940 --> 00:27:07.200 align:middle line:90%
+ANA BELL: Yeah.
+
+00:27:07.200 --> 00:27:07.918 align:middle line:90%
+It sucks.
+
+00:27:07.918 --> 00:27:09.460 align:middle line:84%
+SARAH HANSEN: Can
+I text you when I--
+
+00:27:09.460 --> 00:27:10.752 align:middle line:90%
+ANA BELL: Yes, you can text me.
+
+00:27:10.752 --> 00:27:11.752 align:middle line:90%
+SARAH HANSEN: Thank you.
+
+00:27:11.752 --> 00:27:12.820 align:middle line:90%
+If the duck doesn't work.
+
+00:27:12.820 --> 00:27:13.870 align:middle line:84%
+ANA BELL: If the
+duck doesn't work.
+
+00:27:13.870 --> 00:27:14.370 align:middle line:90%
+Yeah.
+
+00:27:14.370 --> 00:27:17.010 align:middle line:84%
+No, it's, I mean, you're
+learning a new language.
+
+00:27:17.010 --> 00:27:18.990 align:middle line:84%
+Like it's called a
+programming language, right?
+
+00:27:18.990 --> 00:27:21.510 align:middle line:84%
+And it's basically
+learning a new way
+
+00:27:21.510 --> 00:27:24.270 align:middle line:84%
+to write things that you
+already know how to do
+
+00:27:24.270 --> 00:27:26.280 align:middle line:90%
+or how to write in English.
+
+00:27:26.280 --> 00:27:29.670 align:middle line:84%
+You're just structuring it
+in a completely different way
+
+00:27:29.670 --> 00:27:30.670 align:middle line:90%
+in a different language.
+
+00:27:30.670 --> 00:27:32.560 align:middle line:90%
+So the learning curve is steep.
+
+00:27:32.560 --> 00:27:36.270 align:middle line:84%
+But don't get discouraged
+with GenAI tools
+
+00:27:36.270 --> 00:27:42.070 align:middle line:84%
+now, though, it's easy
+to get started, right,
+
+00:27:42.070 --> 00:27:43.450 align:middle line:90%
+that's not from scratch.
+
+00:27:43.450 --> 00:27:46.210 align:middle line:84%
+So like I mentioned earlier,
+if you're stuck on a problem,
+
+00:27:46.210 --> 00:27:49.260 align:middle line:84%
+just ask, prompt it to
+give you a solution,
+
+00:27:49.260 --> 00:27:53.190 align:middle line:84%
+and then work on
+the trust but verify
+
+00:27:53.190 --> 00:27:57.070 align:middle line:84%
+piece, where you'll actually get
+valuable experience debugging,
+
+00:27:57.070 --> 00:27:59.290 align:middle line:84%
+because you already start
+with a piece of code.
+
+00:27:59.290 --> 00:28:01.780 align:middle line:84%
+So the confidence level
+is already kind of there.
+
+00:28:01.780 --> 00:28:03.520 align:middle line:84%
+You're like, OK, I'm
+not starting blank.
+
+00:28:03.520 --> 00:28:09.100 align:middle line:84%
+And then you can try to fix
+it or agree that it works.
+
+00:28:09.100 --> 00:28:11.340 align:middle line:84%
+And both are really
+valuable skills
+
+00:28:11.340 --> 00:28:14.250 align:middle line:84%
+to practice as
+beginner programmers.
+
+00:28:14.250 --> 00:28:17.280 align:middle line:84%
+SARAH HANSEN: I love the
+idea of starting with code
+
+00:28:17.280 --> 00:28:18.765 align:middle line:90%
+and practicing debugging.
+
+00:28:18.765 --> 00:28:19.390 align:middle line:90%
+ANA BELL: Yeah.
+
+00:28:19.390 --> 00:28:21.280 align:middle line:84%
+SARAH HANSEN: That feels
+low stakes and doable.
+
+00:28:21.280 --> 00:28:21.690 align:middle line:90%
+ANA BELL: Totally.
+
+00:28:21.690 --> 00:28:22.740 align:middle line:90%
+SARAH HANSEN: Yeah.
+
+00:28:22.740 --> 00:28:25.453 align:middle line:84%
+What have I not asked you
+that I should have asked you?
+
+00:28:25.453 --> 00:28:27.370 align:middle line:84%
+BRETT the producer: I
+want to know what games.
+
+00:28:27.370 --> 00:28:27.970 align:middle line:90%
+ANA BELL: What games what?
+
+00:28:27.970 --> 00:28:28.960 align:middle line:84%
+SARAH HANSEN: What
+games you play.
+
+00:28:28.960 --> 00:28:29.835 align:middle line:90%
+ANA BELL: Oh my gosh.
+
+00:28:29.835 --> 00:28:30.640 align:middle line:90%
+Like video games?
+
+00:28:30.640 --> 00:28:31.530 align:middle line:90%
+CREW: Yeah.
+
+00:28:31.530 --> 00:28:33.070 align:middle line:90%
+ANA BELL: I like driving a lot.
+
+00:28:33.070 --> 00:28:33.608 align:middle line:90%
+So I drive--
+
+00:28:33.608 --> 00:28:34.900 align:middle line:90%
+SARAH HANSEN: Wait, you do not.
+
+00:28:34.900 --> 00:28:36.790 align:middle line:84%
+You said you don't like
+being stuck in traffic.
+
+00:28:36.790 --> 00:28:37.690 align:middle line:84%
+ANA BELL: No, I
+don't being stuck.
+
+00:28:37.690 --> 00:28:38.640 align:middle line:90%
+So I like to drive.
+
+00:28:38.640 --> 00:28:39.640 align:middle line:90%
+SARAH HANSEN: Oh, I see.
+
+00:28:39.640 --> 00:28:41.687 align:middle line:84%
+ANA BELL: So I also
+enjoy driving games.
+
+00:28:41.687 --> 00:28:42.395 align:middle line:90%
+SARAH HANSEN: OK.
+
+00:28:42.395 --> 00:28:43.450 align:middle line:90%
+[LAUGHTER]
+
+00:28:43.450 --> 00:28:44.950 align:middle line:84%
+ANA BELL: Not just
+around the track,
+
+00:28:44.950 --> 00:28:46.555 align:middle line:84%
+but through random
+city streets--
+
+00:28:46.555 --> 00:28:47.430 align:middle line:90%
+SARAH HANSEN: Oh wow.
+
+00:28:47.430 --> 00:28:48.810 align:middle line:84%
+ANA BELL: --and
+things like that.
+
+00:28:48.810 --> 00:28:51.020 align:middle line:84%
+Escaping the police,
+and you know.
+
+00:28:51.020 --> 00:28:53.260 align:middle line:84%
+SARAH HANSEN: You have a
+whole other side to you.
+
+00:28:53.260 --> 00:28:54.390 align:middle line:90%
+CREW: Like Need For Speed?
+
+00:28:54.390 --> 00:28:55.110 align:middle line:90%
+Like GTA?
+
+00:28:55.110 --> 00:28:55.350 align:middle line:90%
+ANA BELL: Yeah.
+
+00:28:55.350 --> 00:28:55.950 align:middle line:90%
+Yeah.
+
+00:28:55.950 --> 00:28:57.160 align:middle line:90%
+GTA I play, Need For Speed.
+
+00:28:57.160 --> 00:28:57.660 align:middle line:90%
+Yeah.
+
+00:28:57.660 --> 00:28:57.870 align:middle line:90%
+Yeah.
+
+00:28:57.870 --> 00:28:58.440 align:middle line:90%
+Yeah.
+
+00:28:58.440 --> 00:29:00.720 align:middle line:84%
+I have the setup with
+the wheel and yeah.
+
+00:29:00.720 --> 00:29:01.283 align:middle line:90%
+Yeah.
+
+00:29:01.283 --> 00:29:02.200 align:middle line:90%
+SARAH HANSEN: Oh, wow.
+
+00:29:02.200 --> 00:29:04.780 align:middle line:84%
+Well, thank you so
+much for being here.
+
+00:29:04.780 --> 00:29:06.400 align:middle line:90%
+I learned about myself.
+
+00:29:06.400 --> 00:29:07.660 align:middle line:90%
+I learned about programming.
+
+00:29:07.660 --> 00:29:10.890 align:middle line:84%
+I have a whole new world
+view on what is possible
+
+00:29:10.890 --> 00:29:13.110 align:middle line:84%
+with and through
+programming, and that's just
+
+00:29:13.110 --> 00:29:14.100 align:middle line:90%
+an incredible gift.
+
+00:29:14.100 --> 00:29:15.600 align:middle line:84%
+And I'm so glad we
+get to share that
+
+00:29:15.600 --> 00:29:18.240 align:middle line:84%
+with a lot of people who
+might also take that gift
+
+00:29:18.240 --> 00:29:19.120 align:middle line:90%
+and run with it.
+
+00:29:19.120 --> 00:29:19.662 align:middle line:90%
+So thank you.
+
+00:29:19.662 --> 00:29:20.703 align:middle line:90%
+ANA BELL: That's awesome.
+
+00:29:20.703 --> 00:29:21.400 align:middle line:90%
+Glad to hear.
+
+00:29:21.400 --> 00:29:22.360 align:middle line:90%
+Thank you for the chat.
+
+00:29:22.360 --> 00:29:23.050 align:middle line:90%
+This was awesome.
+
+00:29:23.050 --> 00:29:24.010 align:middle line:84%
+SARAH HANSEN: And
+thank you for the duck.
+
+00:29:24.010 --> 00:29:24.593 align:middle line:90%
+ANA BELL: Yes.
+
+00:29:24.593 --> 00:29:27.360 align:middle line:90%
+[MUSIC PLAYING]
+
+00:29:27.360 --> 00:29:40.000 align:middle line:90%
