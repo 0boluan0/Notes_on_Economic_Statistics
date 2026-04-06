@@ -1,16 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "the_missing_semester",
+      "path": "03_Computer_Science/99_Miscellaneous/the_missing_semester.md"
+    },
+    {
+      "basename": "01_Ax = b and the Four Subspaces",
+      "path": "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md"
+    },
+    {
+      "basename": "04_Review and exam roadmap",
+      "path": "01_Math/02_linear algebra/04_Review and exam roadmap.md"
+    },
+    {
       "basename": "2026-04-05——Sun",
       "path": "99_学习情况记录/2026-04-05——Sun.md"
     },
     {
       "basename": "2026-04-04——Sat",
       "path": "99_学习情况记录/2026-04-04——Sat.md"
-    },
-    {
-      "basename": "the_missing_semester",
-      "path": "03_Computer_Science/99_Miscellaneous/the_missing_semester.md"
     },
     {
       "basename": "01_Course Shell Exercises",
@@ -27,10 +35,6 @@
     {
       "basename": "10_Potpourri Exercises",
       "path": "03_Computer_Science/99_Miscellaneous/the_missing_semester_exercises/10_Potpourri Exercises.md"
-    },
-    {
-      "basename": "01_Ax = b and the Four Subspaces",
-      "path": "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md"
     },
     {
       "basename": "MIT18_06SCF11_Ses1.13sum",
@@ -195,10 +199,6 @@
     {
       "basename": "Column Space",
       "path": "00_factor/concept/Column Space.md"
-    },
-    {
-      "basename": "2026-03-21——Sat",
-      "path": "99_学习情况记录/2026-03-21——Sat.md"
     }
   ],
   "omittedPaths": [],
