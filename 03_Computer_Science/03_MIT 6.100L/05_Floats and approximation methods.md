@@ -1,378 +1,153 @@
 ---
-date: 2026-02-09
-科目: MIT 6.100L
+aliases:
+  - MIT 6.100L Lecture 05
+  - 6.100L L05
+  - Floats and Approximation Methods
+tags:
+  - computer-science
+  - python
+  - mit-6.100l
+  - lecture-note
+科目: Computer Science
+course: MIT 6.100L Introduction to CS and Programming Using Python
+lecture: 05
 ---
 
-# 十进制小数与二进制表示（Fractions & Binary Representation）
-
-## 1. 问题背景：为什么要讨论小数？
-
-计算机内部使用的是**二进制（base-2）**，但人类世界中的数通常是**十进制（base-10）**。  
-整数的进制转换相对直接，而**小数（fraction）**才是问题的根源。
-
-核心问题是：
-
-> 一个十进制小数，如何用二进制精确或近似表示？
-
-这正是浮点数误差的起点。
-
----
-
-## 2. 十进制小数的“位权”本质
-
-以 $\frac{3}{8}$ 为例：
-
-$$  
-\frac{3}{8} = 0.375  
-$$
-
-十进制表示并不是“整体”，而是位权展开：
-
-$$  
-0.375 = 3\times10^{-1} + 7\times10^{-2} + 5\times10^{-3}  
-$$
-
-这一步的目的不是计算，而是强调：
-
-> **任何进制下的小数，都是“数字 × 进制的负次幂”的和。**
-
----
-
-## 3. 核心思想（Recipe Idea）
-
-如果一个十进制小数 $x$，存在某个整数 $p$，使得：
-
-$$  
-x \times 2^p \in \mathbb{Z}  
-$$
-
-那么可以用以下步骤转换为二进制：
-
-1. 将 $x$ 乘以 $2^p$，得到整数
-    
-2. 把这个整数转成二进制
-    
-3. 再除以 $2^p$（即二进制小数点左移 $p$ 位）
-    
-
->[!example] 示例：$0.375$
->
-> $$  
-> 0.375 \times 2^3 = 3  
-> $$
->
-> $$  
-> 3_{10} = 11_2  
-> $$
->
-> 右移 3 位：
->
-> $$  
-> 0.375_{10} = 0.011_2  
-> $$
->
-> ---
->
-## 4. Python 实现：将十进制小数转为二进制
-
-
-
-```python
-# Convert a decimal fraction to binary representation
-# Assumption: x can be represented exactly as k / (2^p)
-
-x = 0.61   # try changing this, e.g. 0.375, 0.5, 0.1
-p = 0
-
-# Step 1: find the smallest p such that x * 2^p is an integer
-while ((2 ** p) * x) % 1 != 0:
-    remainder = (2 ** p) * x - int((2 ** p) * x)
-    print("Remainder =", remainder)
-    p += 1
-
-# Step 2: compute the integer value
-num = int(x * (2 ** p))
-
-# Step 3: convert the integer to binary
-result = ''
-if num == 0:
-    result = '0'
-
-while num > 0:
-    result = str(num % 2) + result
-    num = num // 2
-
-# Step 4: pad with leading zeros if needed
-for _ in range(p - len(result)):
-    result = '0' + result
-
-# Step 5: insert the binary point
-binary_representation = result[:-p] + '.' + result[-p:]
-
-print("The binary representation of the decimal", x, "is", binary_representation)
-
-```
-
-## 5. 代码整体逻辑概览
-
-代码分为五个阶段：
-
-1. 不断乘以 $2^p$，寻找能变成整数的 $p$
-    
-2. 得到整数 $x\times2^p$
-    
-3. 将该整数转换为二进制字符串
-    
-4. 补足长度，使小数位数正确
-    
-5. 插入二进制小数点
-    
-
----
-
-## 6. 完整代码（逐段理解）
-
-```python
-x = 0.625
-p = 0
-```
-
-目标：寻找最小的 $p$，使得 $x \times 2^p$ 为整数。
-
----
-
-### 6.1 寻找合适的 $p$
-
-```python
-while ((2**p) * x) % 1 != 0:
-    print('Remainder = ' + str((2**p)*x - int((2**p)*x)))
-    p += 1
-```
-
-解释：
-
-- `(2**p) * x`：尝试把小数放大
-    
-- `% 1 != 0`：检查是否还有小数部分
-    
-- 只要还有小数，就继续增大 $p$
-    
-
-这一步在数学上等价于：
-
-> 判断 $x$ 的分母是否能被 $2^p$ 消掉
-
----
-
-### 6.2 得到整数形式
-
-```python
-num = int(x * (2**p))
-```
-
-此时：
-
-$$  
-\text{num} = x \times 2^p \in \mathbb{Z}  
-$$
-
----
-
-### 6.3 将整数转换为二进制
-
-```python
-result = ''
-if num == 0:
-    result = '0'
-```
-
-边界情况处理。
-
-```python
-while num > 0:
-    result = str(num % 2) + result
-    num = num // 2
-```
-
-这是**最经典的整数转二进制算法**：
-
-- 不断除以 2
-    
-- 取余数
-    
-- 逆序拼接
-    
-
----
-
-### 6.4 补齐二进制长度
-
-```python
-for i in range(p - len(result)):
-    result = '0' + result
-```
-
-目的：
-
-> 确保小数点右侧有 $p$ 位二进制数字
-
----
-
-### 6.5 插入二进制小数点
-
-```python
-result = result[0:-p] + '.' + result[-p:]
-```
-
-这是整段代码最关键的一行。
-
-数学含义：
-
-$$  
-\text{binary} = \frac{\text{num}}{2^p}  
-$$
-
-字符串操作只是“形式实现”。
-
----
-
-### 6.6 输出结果
-
-```python
-print('The binary representation of the decimal ' + str(x) + ' is ' + str(result))
-```
-
----
-
-## 7. 对这段代码的关键理解
-
-1. **它只对分母是 $2^k$ 的小数有效**
-    
-    - 例如：$0.625 = \frac{5}{8}$
-        
-    - 对 $0.1$ 会无限循环
-        
-2. **这正是浮点数误差的来源**
-    
-    - 并不是 Python 的问题
-        
-    - 而是二进制表示的数学限制
-        
-3. **IEEE 754 的思想与此完全一致**
-    
-    - 只是自动化 + 位级表示
-        
-
-
-# Floats, approximation methods, and early numerical thinking
-
-## 本讲主线
-
-- 浮点数表示及其误差源头
-- 算法参数：增量与 epsilon 的权衡
-- 从穷举走向 bisection/newton 的分步优化
-
-## 1. 浮点数为什么不精确
-
-- 0.1 无法在有限二进制位精确表示；单次加法会留下小误差
-- 任何用 == 比较 floats 都是危险的
-
-```python
-x = 0
-for _ in range(10):
-    x += 0.1
-
-print(x == 1)     # False
-print(x, 10 * 0.1)
-```
-
-> [!important] Big Idea
-> 浮点是“近似表示的实数”，多次运算会放大微小误差，比较时应使用“近似相等”而非 ==。
-
-### 实数与二进制
-
-- 小数部分可以写成一串 `a*2^{-1} + b*2^{-2} + ...`
-- 整数部分的转换：持续 `% 2` 取最低位并用 `// 2` 缩减
-- 小数部分需要乘以 2 的幂再除回去才能恢复，但不总能得到整数
-
-## 2. Approximation methods（近似算法）
-
-- 不再寻找精确答案，而是设定 `epsilon`，只要 `|guess**2 - x| < epsilon` 就收手
-- 需要两个参数：`epsilon` 决定精度，`increment` 决定搜索步长
-- 减小 `increment` 会明显降低性能；增大 `epsilon` 会牺牲精度
-
-```python
-x = 35
-epsilon = 0.001
-increment = 0.0000001
-guess = 0.0
-while abs(guess**2 - x) >= epsilon and guess**2 <= x:
-    guess += increment
-print(guess, 'is close to', x)
-```
-
-- 还需要防止“跳过”近似区间，否则可能永远无法跳出 while
-- 增加 `guess**2 <= x` 条件可以阻止过冲，并能报告失败
-
-> [!tip] Big Idea
-> 近似算法是“guess-and-check + float increment”，但无法“检查是否正确”，只能检查是否“足够接近”。
-
-## 3. “好”算法：bisection、Newton-Raphson
-
-### Bisection search    
-
-- 需要：有序搜索区间 + 能告诉你猜测是偏大还是偏小
-- 每次猜 midpoint，成功则终止；否则根据反馈缩小区间到一半
-- 复杂度从线性降为 `O(log N)`，比如 `√54321` 从 23M 次降到 30 次
-
-```python
-low = 0
-high = x if x >= 1 else 1
-guess = (high + low) / 2.0
-while abs(guess**2 - x) >= epsilon:
-    if guess**2 < x:
-        low = guess
-    else:
-        high = guess
-    guess = (high + low) / 2.0
-```
-
-- `x < 1` 时要调整初始 `[low, high]`
-
-### Newton-Raphson
-
-- 通用 root finding：`guess <- guess - (guess**2 - k)/(2*guess)`
-- 迭代次数通常远低于 bisection，但需要先验导数公式
-
-## 4. 课堂练习（You Try It）
-
-- [x] 用 `epsilon` + `increment` 写一个“good enough” 的平方根，测试 `12345`、`54321` ✅ 2026-02-16
-
-```python
-n = 12345
-epsilon = 0.01
-p = 0
-increment = 0.00001
-
-while abs( p**2 - n ) >=epsilon and p**2<=n:
-	p += increment
-	
-print(p)
-print(p**2)
-
-```
-
-- [x] 实现能早早停止的 `while abs(...) < epsilon and guess**2 <= x` 版，并观察 `guess` 数量 ✅ 2026-02-16
-- [x] 比较 `increment=0.0001` 与 `0.00001` 的运行速度/命中情况 ✅ 2026-02-16
-- [ ] 用 `while` 实现 `num % 2` 还是 `range` 选择判定奇数
-- [x] “Never use == ”：设计一个条件测试 0.1 的多次累加 ✅ 2026-02-16
-
-## 小结
-
-- 浮点数是有限位的近似，千万别用 == ；用 `abs(a - b) < epsilon`
-- 近似算法需要调两个参数；减小 `increment` 或 `epsilon` 的代价是速度
-- Bisection/newton 通过 smarter guess 减少迭代次数
-
-## 资料
-
-- ![[MIT 6.100L-slides/mit6_100l_lec05.pdf]]
+# Lecture 05: Floats and Approximation Methods
+
+> [!tip] Hint
+> - 我能解释为什么 float 不是实数本身，而是有限精度近似。
+> - 我能说明 approximation algorithm 里 epsilon 的角色是什么。
+> - 我能分清‘找到精确解’和‘找到足够好的近似解’的程序结构差异。
+> - 我能解释为什么步长越小不一定越好，它会影响速度和可达精度。
+> - 我能围绕本讲的主轴 “Float 是近似表示，不是精确实数” / “Approximation method：用小步子逼近目标” / “数值算法的正确性来自 stopping rule”，不翻 slides 也把整节课重新讲一遍。
+> - 我能解释为什么 `0.1` 的累加会暴露浮点误差。
+> - 我能说明 approximation method 里 epsilon 与 increment 分别控制什么。
+> - 我能写出一个有成功与失败两种退出路径的近似程序。
+> - 我能把本讲最关键的代码模式手写出来，并解释每一步为什么这样写。
+
+> [!info] Lecture map
+> - Readings: Ch 3.2-3.3
+> - Recommended use order: read the Hint first, reconstruct the lecture from memory, then study the Core ideas, then run the official code, and only after that open the linked exercises.
+> - Main threads in this lecture: Float 是近似表示，不是精确实数 / Approximation method：用小步子逼近目标 / 数值算法的正确性来自 stopping rule
+> - Lecture 4 还在枚举整数解，这一讲开始接受‘只要足够接近就行’的连续近似思路。
+> - 浮点误差不是边角料，而是写数值程序时必须直面的事实。
+> - 后面的 bisection search、Newton-Raphson 都是在改进这一讲的 approximation 思路。
+
+## Core ideas
+### Float 是近似表示，不是精确实数
+很多初学者第一次被 `0.1 + 0.1 + ...` 吓到，其实这不是 Python 的怪脾气，而是有限精度表示的普遍现象。
+- 浮点数能表示的实数是离散的一小部分，所以某些十进制小数无法被精确存储。
+- 因此比较两个 float 时，通常不该追求 `==`，而要比较它们是否在允许误差范围内足够接近。
+- 只要程序在处理中使用 float，就要默认误差会传播；关键是管理误差，而不是假装误差不存在。
+- 数值程序的输出要看是否满足问题需求，而不是是否达到数学上的完美精确。
+
+> [!note] What to internalize
+> - One-sentence takeaway: 很多初学者第一次被 `0.1 + 0.1 + ...` 吓到，其实这不是 Python 的怪脾气，而是有限精度表示的普遍现象。
+> - Review anchor: 浮点数能表示的实数是离散的一小部分，所以某些十进制小数无法被精确存储。
+> - Review anchor: 因此比较两个 float 时，通常不该追求 `==`，而要比较它们是否在允许误差范围内足够接近。
+
+从做题角度看，只要题目在考“Float 是近似表示，不是精确实数”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：很多初学者第一次被 `0.1 + 0.1 + ...` 吓到，其实这不是 Python 的怪脾气，而是有限精度表示的普遍现象。
+
+### Approximation method：用小步子逼近目标
+当问题的解不一定是整数时，最直接的办法是从某个起点开始按固定步长移动，直到误差足够小。
+- 需要明确四个量：目标值、当前 guess、步长 increment、可接受误差 epsilon。
+- 循环 guard 通常写成 `abs(guess**2 - x) >= epsilon`，也就是‘只要还不够好，就继续试’。
+- 固定步长法的优势是简单；缺点是步长小会非常慢，步长大又可能跳过好答案。
+- 如果 guess 已经越界仍未达到误差要求，程序必须有失败分支，而不是无限尝试。
+
+> [!note] What to internalize
+> - One-sentence takeaway: 当问题的解不一定是整数时，最直接的办法是从某个起点开始按固定步长移动，直到误差足够小。
+> - Review anchor: 需要明确四个量：目标值、当前 guess、步长 increment、可接受误差 epsilon。
+> - Review anchor: 循环 guard 通常写成 `abs(guess**2 - x) >= epsilon`，也就是‘只要还不够好，就继续试’。
+
+从做题角度看，只要题目在考“Approximation method：用小步子逼近目标”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：当问题的解不一定是整数时，最直接的办法是从某个起点开始按固定步长移动，直到误差足够小。
+
+### 数值算法的正确性来自 stopping rule
+近似算法不再追求‘恰好命中’，所以你要更认真地定义什么时候可以停、什么时候必须承认失败。
+- `epsilon` 决定了答案的精细程度；它不是越小越好，而是要和成本、需求匹配。
+- 除了误差条件，还常常需要配合边界条件，例如不让 guess 走到明显不合理的范围之外。
+- 一个近似算法通常同时存在两种退出方式：成功逼近目标，或者发现当前策略不足以找到可接受答案。
+- 所以数值程序的输出应该同时报告结果和一些诊断信息，例如猜测次数、最后的误差。
+
+> [!note] What to internalize
+> - One-sentence takeaway: 近似算法不再追求‘恰好命中’，所以你要更认真地定义什么时候可以停、什么时候必须承认失败。
+> - Review anchor: `epsilon` 决定了答案的精细程度；它不是越小越好，而是要和成本、需求匹配。
+> - Review anchor: 除了误差条件，还常常需要配合边界条件，例如不让 guess 走到明显不合理的范围之外。
+
+从做题角度看，只要题目在考“数值算法的正确性来自 stopping rule”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：近似算法不再追求‘恰好命中’，所以你要更认真地定义什么时候可以停、什么时候必须承认失败。
+
+## Code patterns from lecture
+> [!note] What the official code is trying to teach
+> - The official lecture code is worth reading as a notebook of small patterns, not just as a file to run once.
+> - Best workflow: predict output first, then run the code, then rewrite the pattern in your own words or with slightly changed values.
+> - Example: successive addition
+> - 0.125 is a perfect power of 2
+> - x = 0
+> - for i in range(10)
+> - x += 0.125
+> - print(x == 1.25)
+> - When a code pattern feels too easy, change the input, break one line on purpose, and explain why the behavior changes.
+
+## Worked examples
+> [!example] 用固定步长近似平方根
+> ```python
+> x = 25
+> epsilon = 0.01
+> guess = 0.0
+> increment = 0.0001
+> while abs(guess**2 - x) >= epsilon and guess**2 <= x:
+>     guess += increment
+> print(guess)
+> ```
+> 这是最朴素的连续搜索。它展示了为什么 approximation 比整数枚举更灵活，但也暴露了速度瓶颈。
+
+> [!example] 不要直接用 `==` 比较浮点
+> ```python
+> x = 0.0
+> for _ in range(10):
+>     x += 0.1
+> print(x == 1.0)
+> print(abs(x - 1.0) < 1e-9)
+> ```
+> 第一行比较经常是 `False`，第二行更接近数值计算的正确思维：比较距离，而不是比较字面值完全一致。
+
+## Exercise log
+> [!note] Finger exercise snapshot
+> - Official prompt: Assume you are given a string variaboe named my_str . Write a piece of Python code that prints out a new string containing the even indexed characters of my_str . For exampoe, if my_str = "abcdefg" then your code shouod...
+> - What this is really testing: whether you can compress the lecture into one small, high-frequency coding move without needing the slides beside you.
+> - Where to revisit if this feels shaky: go back to the first two Core ideas sections in this note, then rerun the official lecture code once with your own input.
+> - Homework bridge: this lecture is directly connected to the following calendar milestones: PS 1 halfway hand-in due.
+
+## From lecture to recitation and homework
+> [!abstract] How this lecture shows up in practice
+> - Problem-set connection: calendar shows this lecture touching the following milestones: PS 1 halfway hand-in due。读完本讲后，不应只会解释概念，还应能把它们搬到更长的程序里。
+> - Recitation connection: there is no recitation attached to this lecture week in the official calendar.
+> - Suggested workflow: read this note once, run the lecture code, solve the smallest official exercise without peeking, then open the linked recitation or problem set materials.
+> - If you can explain the note but still cannot start the homework, the gap is usually not theory but translation: you need one more pass through the worked examples and lecture code.
+
+## Links to follow-up practice
+- Slides: [[MIT 6.100L-slides/mit6_100l_lec05.pdf|Lecture 05 slides]]
+- Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec05_code.py|Lecture 05 code (py)]]
+- Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex05_sol.pdf|Lecture 05 finger exercise solution]]
+- Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec05_transcript.pdf|Lecture 05 transcript]]
+- Recitation: none attached to this lecture week
+- PS 1 halfway hand-in due: [[MIT 6.100L-problem-sets/mit6_100l_ps1.pdf|PS1 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps1_code.zip|PS1 starter code]]
+- Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 3.2-3.3)
+
+## Review checklist
+- [ ] 我能解释为什么 `0.1` 的累加会暴露浮点误差。
+- [ ] 我能说明 approximation method 里 epsilon 与 increment 分别控制什么。
+- [ ] 我能写出一个有成功与失败两种退出路径的近似程序。
+- [ ] 我能解释为什么小步长法正确但可能极慢。
+- [ ] 我能说明何时应该用“足够接近”取代“完全相等”。
+- [ ] 我能围绕“Float 是近似表示，不是精确实数”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
+- [ ] 我能围绕“Approximation method：用小步子逼近目标”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
+- [ ] 我能说出并避免这个高频误区：把 float 当成精确实数，写大量 `==` 判断。
+- [ ] 我能说出并避免这个高频误区：只关心 epsilon，不关心步长和边界条件，导致程序极慢或失败。
+- [ ] 我能不看 slides，只看题面就判断这题主要在考本讲的哪一个知识点。
+
+> [!warning] Common mistakes
+> - 把 float 当成精确实数，写大量 `==` 判断。
+> - 只关心 epsilon，不关心步长和边界条件，导致程序极慢或失败。
+> - 近似算法没有失败分支，最后得到一个看起来像答案但其实不可信的结果。

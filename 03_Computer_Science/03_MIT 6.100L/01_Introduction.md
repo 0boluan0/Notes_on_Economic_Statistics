@@ -1,150 +1,156 @@
 ---
-date: 2026-02-02
-科目: MIT 6.100L
+aliases:
+  - MIT 6.100L Lecture 01
+  - 6.100L L01
+  - Introduction
+tags:
+  - computer-science
+  - python
+  - mit-6.100l
+  - lecture-note
+科目: Computer Science
+course: MIT 6.100L Introduction to CS and Programming Using Python
+lecture: 01
 ---
 
-# 知识类型与算法
+# Lecture 01: Introduction
 
-- Declarative knowledge：事实陈述（what is true）
-- Imperative knowledge：步骤与配方（how to）
-- 编程的核心：写“配方”来生成事实
+> [!tip] Hint
+> - 我能区分 declarative knowledge 和 imperative knowledge，并说明编程为什么更像写 recipe。
+> - 我能说出一个可执行算法至少要有哪三个组成部分。
+> - 我能解释对象、类型、表达式、赋值之间的关系，而不是只背语法。
+> - 我能从最简单的数值例子里看出“计算 = 不断改进 guess”。
+> - 我能围绕本讲的主轴 “Computation、knowledge 与 algorithm” / “Python 的对象、类型与表达式” / “变量、binding 与简单调试”，不翻 slides 也把整节课重新讲一遍。
+> - 我能不用看笔记，口头讲出 declarative knowledge 与 imperative knowledge 的区别。
+> - 我能解释为什么“有步骤”还不够，算法还必须有 flow of control 和 stopping condition。
+> - 我能说明 `type(5)` 与 `type(3.0)` 的差异为什么会影响程序行为。
+> - 我能把本讲最关键的代码模式手写出来，并解释每一步为什么这样写。
 
-> [!tip] 算法（Algorithm）的三个要素
-> 1) 简单步骤的序列
-> 2) 控制流程（何时执行哪一步）
-> 3) 停止条件
+> [!info] Lecture map
+> - Readings: Ch 1, Ch 2.1-2.2
+> - Recommended use order: read the Hint first, reconstruct the lecture from memory, then study the Core ideas, then run the official code, and only after that open the linked exercises.
+> - Main threads in this lecture: Computation、knowledge 与 algorithm / Python 的对象、类型与表达式 / 变量、binding 与简单调试
+> - 本讲是整门课的入口：先建立“计算是什么”的心智模型，再落到 Python 的对象、类型、变量和基本运算。
+> - 如果这一讲掌握得稳，后面所有控制流、函数、数据结构都会变成“在对象上做更复杂的 recipe”。
+> - 最重要的不是记住几个运算符，而是理解程序如何把模糊想法变成机器可执行的步骤。
 
->[!example] 数值例子：平方根的迭代
->- 目标：找到 $y$ 使得 $y^2 = x$
->- 过程：
-> 1. 先猜测一个$g$ 
-> 2. 若 $g^2$ 足够接近 $x$，停止
-> 3. 否则更新 $g \leftarrow \frac{g+\frac{x}{g}}{2}$ 并重复
-> - 体现“算法=配方”的思路
+## Core ideas
+### Computation、knowledge 与 algorithm
+这门课把程序看成一种把事实生产出来的 recipe。你不是直接告诉计算机答案，而是告诉它怎样一步步得到答案。
+- ==Declarative knowledge== 是事实陈述，例如“平方根是满足 y*y = x 的数”；==imperative knowledge== 是操作步骤，例如“先猜一个值，再不断修正它”。
+- 编程本质上是在写 imperative knowledge：你给机器的是一套可重复执行的过程，而不是一堆最后的结论。
+- 一个算法至少要有三件事：一串简单步骤、步骤执行的控制流程、以及清楚的停止条件。
+- 如果一个方法没有说明什么时候停，或者每一步都不够机械化，那它就不是机器友好的算法。
 
-# 计算机与程序
+> [!note] What to internalize
+> - One-sentence takeaway: 这门课把程序看成一种把事实生产出来的 recipe。你不是直接告诉计算机答案，而是告诉它怎样一步步得到答案。
+> - Review anchor: ==Declarative knowledge== 是事实陈述，例如“平方根是满足 y*y = x 的数”；==imperative knowledge== 是操作步骤，例如“先猜一个值，再不断修正它”。
+> - Review anchor: 编程本质上是在写 imperative knowledge：你给机器的是一套可重复执行的过程，而不是一堆最后的结论。
 
-- 计算机是“执行算法”的机器
-- 只做两件事：
-  - 执行大量简单操作（极高速）
-  - 记住结果（大容量存储）
-- **计算机只会做你让它做的事**
+从做题角度看，只要题目在考“Computation、knowledge 与 algorithm”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：这门课把程序看成一种把事实生产出来的 recipe。你不是直接告诉计算机答案，而是告诉它怎样一步步得到答案。
 
-## Fixed program computer
+### Python 的对象、类型与表达式
+Python 里几乎所有值都是对象。类型决定这个对象支持哪些操作，也决定不同操作组合后会得到什么。
+- `5` 是整数对象，`3.0` 是浮点对象；`type(...)` 让你先确认“我手上的值到底是什么”。
+- 表达式会先被求值，再产生一个结果对象；例如 `(4+2)*6-1` 先算括号，再算乘法，再算减法。
+- `int(...)`、`float(...)`、`round(...)` 等转换函数很重要，因为同一个数学量在不同类型下行为并不完全一样。
+- 当你觉得代码“看起来没错”，第一件事通常不是盲猜，而是先检查值和类型。
 
- 类似计算器.不太算计算机
+> [!note] What to internalize
+> - One-sentence takeaway: Python 里几乎所有值都是对象。类型决定这个对象支持哪些操作，也决定不同操作组合后会得到什么。
+> - Review anchor: `5` 是整数对象，`3.0` 是浮点对象；`type(...)` 让你先确认“我手上的值到底是什么”。
+> - Review anchor: 表达式会先被求值，再产生一个结果对象；例如 `(4+2)*6-1` 先算括号，再算乘法，再算减法。
 
-## 存储程序计算机（Stored Program Computer）
+从做题角度看，只要题目在考“Python 的对象、类型与表达式”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：Python 里几乎所有值都是对象。类型决定这个对象支持哪些操作，也决定不同操作组合后会得到什么。
 
-- 指令序列存储在机器内部
-- 基本原语：算术/逻辑、测试、数据移动
-- 解释器逐条执行；通过测试改变控制流
-- 停止条件：指令耗尽或遇到 halt
- 
-# 编程语言的组成
+### 变量、binding 与简单调试
+变量不是一个永远装着固定内容的小盒子，更准确的说法是：名字被绑定到某个对象上；重新赋值就是把名字重新指向另一个值。
+- `pi = 355/113` 与 `radius = 2.2` 建立了两个 binding，后面 `area = pi*(radius**2)` 只是把已有 binding 组合起来。
+- 变量名要表达含义。`radius` 比 `r` 更利于阅读，而 `area`、`circumference` 让结果的角色一眼就懂。
+- 代码风格也是调试工具：命名清楚、每一步含义明确，错误更容易被发现。
+- 当变量被重新赋值时，例如 `radius = radius + 1`，你要同时跟踪“名字没变”与“对象的值变了”这两件事。
 
-- Primitive constructs：基础元素（数、字符串、运算符等）
-- Syntax：句法,检查语法是否正确
-- Static semantics：语法正确但类型/含义不合法
-- Semantics：真正的含义（程序含义唯一，但可能不是你想要的）
+> [!note] What to internalize
+> - One-sentence takeaway: 变量不是一个永远装着固定内容的小盒子，更准确的说法是：名字被绑定到某个对象上；重新赋值就是把名字重新指向另一个值。
+> - Review anchor: `pi = 355/113` 与 `radius = 2.2` 建立了两个 binding，后面 `area = pi*(radius**2)` 只是把已有 binding 组合起来。
+> - Review anchor: 变量名要表达含义。`radius` 比 `r` 更利于阅读，而 `area`、`circumference` 让结果的角色一眼就懂。
 
-## 常见错误类型
+从做题角度看，只要题目在考“变量、binding 与简单调试”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：变量不是一个永远装着固定内容的小盒子，更准确的说法是：名字被绑定到某个对象上；重新赋值就是把名字重新指向另一个值。
 
-- syntactical error 语法错误（常见且易抓）
-- static semantic error 静态语义错误（类型不匹配）
-- linguistic error语义错误（跑完但结果不对/死循环/崩溃,或者跑出来的流程不是原本想要的)
+## Code patterns from lecture
+> [!note] What the official code is trying to teach
+> - The official lecture code is worth reading as a notebook of small patterns, not just as a file to run once.
+> - Best workflow: predict output first, then run the code, then rewrite the pattern in your own words or with slightly changed values.
+> - TYPE THIS IN THE CONSOLE - CHECK THE TYPE OF OBJECTS ##
+> - TYPE THIS IN THE CONSOLE - CONVERT TO ANOTHER TYPE ##
+> - TYPE THIS IN THE CONSOLE - EXPRESSIONS ##
+> - TYPE THIS IN THE CONSOLE - VARIABLES ##
+> - Compute approximate value for pi
+> - CODE STYLE ##
+> - When a code pattern feels too easy, change the input, break one line on purpose, and explain why the behavior changes.
 
-# Python 
+## Worked examples
+> [!example] 用近似法理解“算法是逐步改进 guess”
+> ```python
+> x = 16
+> guess = 3
+> new_guess = (guess + x/guess) / 2
+> print(new_guess)
+> ```
+> 这段代码不在于一行算出平方根，而在于展示一种通用套路：从一个可接受的初值出发，反复根据误差更新 guess。
 
-## python程序的形态 
+> [!example] 把物理量写成有语义的 binding
+> ```python
+> pi = 355 / 113
+> radius = 2.2
+> area = pi * (radius ** 2)
+> circumference = pi * (radius * 2)
+> print(area, circumference)
+> ```
+> 这里的重点不是公式本身，而是把问题拆成可读的中间量。只要中间量清楚，代码就更像推导而不是谜语。
 
-- 程序 = 定义（definitions） + 命令（commands）
-- 解释器在 shell 中执行命令
-- 命令可以交互输入，也可写在文件中执行
+## Exercise log
+> [!note] Finger exercise snapshot
+> - Official prompt: Assume 3 variables are already defined for you: a , b , and c . Create a variable called total that adds a and b then multiplies the result by c . Include a last line in your code to print the value: print(total)
+> - Official solution sketch:
+> ```python
+> total = (a+b)*c
+> print(total)
+> ```
+> - What this is really testing: whether you can compress the lecture into one small, high-frequency coding move without needing the slides beside you.
+> - Where to revisit if this feels shaky: go back to the first two Core ideas sections in this note, then rerun the official lecture code once with your own input.
+> - Follow-on practice path: after this finger exercise, the most natural next stop is Recitation 01.
+> - Homework bridge: this lecture is directly connected to the following calendar milestones: PS 0 out (not graded).
 
-## 对象与类型
-- 程序操作“对象”，对象有类型
-- 类型决定可做的操作
+## From lecture to recitation and homework
+> [!abstract] How this lecture shows up in practice
+> - Problem-set connection: calendar shows this lecture touching the following milestones: PS 0 out (not graded)。读完本讲后，不应只会解释概念，还应能把它们搬到更长的程序里。
+> - Recitation connection: Recitation 01 is the best place to turn the lecture ideas into shorter solved exercises.
+> - Suggested workflow: read this note once, run the lecture code, solve the smallest official exercise without peeking, then open the linked recitation or problem set materials.
+> - If you can explain the note but still cannot start the homework, the gap is usually not theory but translation: you need one more pass through the worked examples and lecture code.
 
-### 标量（Scalar）
-- int：整数
-- float：实数
-- bool：True/False
-- NoneType：None
+## Links to follow-up practice
+- Slides: [[MIT 6.100L-slides/mit6_100l_lec01.pdf|Lecture 01 slides]]
+- Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec01_code.py|Lecture 01 code (py)]]
+- Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex01_sol.pdf|Lecture 01 finger exercise solution]]
+- Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec01_transcript.pdf|Lecture 01 transcript]]
+- Recitation 1: [[MIT 6.100L-recitations/mit6_100l_rec01.pdf|Recitation 01 materials]]
+- PS 0 out (not graded): [[MIT 6.100L-problem-sets/mit6_100l_ps0.pdf|PS0 statement]], [[MIT 6.100L-problem-sets/mit6_100l_ps0_code.zip|PS0 starter code]]
+- Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 1, Ch 2.1-2.2)
 
-### 非标量（Non-scalar）
-- 字符串（序列）
-- 列表
-- 字典
+## Review checklist
+- [ ] 我能不用看笔记，口头讲出 declarative knowledge 与 imperative knowledge 的区别。
+- [ ] 我能解释为什么“有步骤”还不够，算法还必须有 flow of control 和 stopping condition。
+- [ ] 我能说明 `type(5)` 与 `type(3.0)` 的差异为什么会影响程序行为。
+- [ ] 我能解释为什么 `radius = radius + 1` 在编程里合法，但在数学等式里不合法。
+- [ ] 我能把一个生活中的 recipe 描述成算法。
+- [ ] 我能围绕“Computation、knowledge 与 algorithm”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
+- [ ] 我能围绕“Python 的对象、类型与表达式”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
+- [ ] 我能说出并避免这个高频误区：把 = 当成数学里的“左右永远相等”，而不是“把名字绑定到右边的结果”。
+- [ ] 我能说出并避免这个高频误区：不检查类型，直接假设整数和浮点的行为完全一样。
+- [ ] 我能不看 slides，只看题面就判断这题主要在考本讲的哪一个知识点。
 
-```python
-print(type(5))
-print(type(3.0))
-```
-
-### 类型转换（Casting）
-- `float(3) -> 3.0`
-- `int(3.9) -> 3`（截断）
-- `round(3.9) -> 4
-
-## 表达式与运算符
-- 表达式由对象与运算符组成
-- 表达式会被计算成一个值（**python 在memory里不存表达式，只存结果**）
-
-> [!important] Big Idea
-> 复杂表达式应系统化地化简为一个值
-
-### 基本运算符（int/float）
-- `+ - * / // % **`
-- `/` 结果总是 float
-- 其他操作：若有 float 则结果是 float
-
-### 运算优先级
-1. `**`
-2. `* / %`（从左到右）
-3. `+ -`（从左到右）
-
-## 变量与赋值
-- CS 变量与数学变量不同：
-  - 数学变量可代表“任意值”
-  - CS 变量在某一时刻绑定一个值
-- 赋值语句：先计算右侧，再绑定到左侧
-
-```python
-pi = 355/113
-radius = 2.2
-area = pi*(radius**2)
-print (pi, radius , area)
-```
-
-### 变量命名与可读性
-- 用有意义的名字，便于以后理解
-- 代码需要被“未来的你”与他人读懂
-
-### 重新绑定
-- 变量可以被新值覆盖
-- 旧值可能还在内存里，但无法再访问
-
-> [!important] Big Idea
-> 代码按顺序逐行执行（暂时不会跳行）
-
-## 课堂练习（You Try It）
-- [x] 用 `type()` 检查：`1234`, `8.99`, `9.0`, `True`, `False` ✅ 2026-02-03
-- [x] 计算并查看类型：`float(123)`, `round(7.9)`, `float(round(7.2))`, `int(7.2)`, `int(7.9)` ✅ 2026-02-03
-- [x] 计算表达式：`(13-4)/(12*12)`, `type(4*3)`, `type(4.0*3)`, `int(1/2)` ✅ 2026-02-03
-- [x] 判断赋值语句合法性：`x = 6`, `6 = x`, `x*y = 3+4`, `xy = 3+4` ✅ 2026-02-03
-- [x] 追踪执行顺序： ✅ 2026-02-03
-  - `meters = 100`
-  - `feet = 3.2808 * meters`
-  - `meters = 200`
-- [x] 修正交换变量代码（借助临时变量） ✅ 2026-02-03
-
-## 小结
-- 对象有类型，类型决定可操作性
-- 表达式会被计算成一个值
-- 变量是“名字绑定到值”，`=` 是赋值而非“相等”
-- 程序只做你要求它做的事，按顺序执行
-- 好的命名与注释提升可读性
-
-## 资料
-- ![[MIT 6.100L-slides/mit6_100l_lec01.pdf]]
+> [!warning] Common mistakes
+> - 把 `=` 当成数学里的“左右永远相等”，而不是“把名字绑定到右边的结果”。
+> - 不检查类型，直接假设整数和浮点的行为完全一样。
+> - 用没有语义的变量名，让后续代码读起来像在猜谜。

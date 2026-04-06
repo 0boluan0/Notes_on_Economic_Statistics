@@ -1,214 +1,152 @@
 ---
-date: 2026-02-08
-科目: MIT 6.100L
+aliases:
+  - MIT 6.100L Lecture 04
+  - 6.100L L04
+  - Loops over Strings, Guess-and-Check, and Binary
+tags:
+  - computer-science
+  - python
+  - mit-6.100l
+  - lecture-note
+科目: Computer Science
+course: MIT 6.100L Introduction to CS and Programming Using Python
+lecture: 04
 ---
 
-# Loops [[Over-identified|over]] strings, guess-and-check and binary
+# Lecture 04: Loops over Strings, Guess-and-Check, and Binary
 
-## 本讲主线
+> [!tip] Hint
+> - 我能说明为什么字符串处理常常依赖‘逐字符扫描 + 条件判断 + 累计结果’。
+> - 我能解释 guess-and-check 适合什么类型的问题，以及它为什么通常比较慢。
+> - 我能用程序把十进制数转成二进制，并理解过程中在累积什么。
+> - 我能看出一个枚举算法的搜索空间是怎么定义出来的。
+> - 我能围绕本讲的主轴 “循环处理字符串：scan、test、accumulate” / “Guess-and-check：先定义候选空间，再逐个验证” / “Binary representation 是‘重复拆分 + 反向拼接’”，不翻 slides 也把整节课重新讲一遍。
+> - 我能写一个按字符扫描字符串并累计结果的程序。
+> - 我能解释 guess-and-check 的正确性来自哪里，以及为什么它慢。
+> - 我能从头写出十进制转二进制的循环。
+> - 我能把本讲最关键的代码模式手写出来，并解释每一步为什么这样写。
 
-- 字符串循环与 `break`
-- Guess-and-check（穷举/试探）算法
-- 二进制表示与浮点误差直觉
+> [!info] Lecture map
+> - Readings: Ch 3.1, Ch 3.3
+> - Recommended use order: read the Hint first, reconstruct the lecture from memory, then study the Core ideas, then run the official code, and only after that open the linked exercises.
+> - Main threads in this lecture: 循环处理字符串：scan、test、accumulate / Guess-and-check：先定义候选空间，再逐个验证 / Binary representation 是‘重复拆分 + 反向拼接’
+> - 这讲把 iteration 真正用起来：不是为循环而循环，而是拿来扫描 sequence、枚举候选解、逐步构造表示。
+> - 它是搜索思想的第一次正式登场，后面 bisection search 和复杂度分析都从这里生长出来。
+> - Lecture code 中的字符串扫描、perfect square、cube root、binary conversion 都是同一种思维的不同外观。
 
-## 1. Loops [[Over-identified|over]] strings（字符串上的循环）
+## Core ideas
+### 循环处理字符串：scan、test、accumulate
+字符串题的通用套路是：按固定顺序扫描字符，对每个字符做测试，再把结果累积起来。
+- 你可以按 index 扫，也可以直接按字符扫；如果不用位置，直接 `for char in s` 往往更清楚。
+- 计数、筛选、查找、构造新字符串，本质上都是扫描过程中的不同 accumulator 设计。
+- 写字符串循环时，要提前决定：我关心的是字符值本身，还是字符所在的位置？
+- 像 cheerleader、unique letters 这样的例子都在训练你从 sequence 中提取结构化信息。
 
-### `break` 的语义
+> [!note] What to internalize
+> - One-sentence takeaway: 字符串题的通用套路是：按固定顺序扫描字符，对每个字符做测试，再把结果累积起来。
+> - Review anchor: 你可以按 index 扫，也可以直接按字符扫；如果不用位置，直接 `for char in s` 往往更清楚。
+> - Review anchor: 计数、筛选、查找、构造新字符串，本质上都是扫描过程中的不同 accumulator 设计。
 
-- `break` 会立即退出当前所在的最内层循环
-- 循环体中 `break` 后面的语句不会执行
-- 多层循环里，`break` 只影响最内层
+从做题角度看，只要题目在考“循环处理字符串：scan、test、accumulate”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：字符串题的通用套路是：按固定顺序扫描字符，对每个字符做测试，再把结果累积起来。
 
-```python
-mysum = 0
-for i in range(5, 11, 2):
-    mysum += i
-    if mysum == 5:
-        break
-    mysum += 1
-print(mysum)
-```
+### Guess-and-check：先定义候选空间，再逐个验证
+guess-and-check 的核心不是‘瞎猜’，而是系统地枚举所有可能候选，然后用条件过滤掉不合格的值。
+- 找 perfect square / cube root 时，候选空间通常是 `0` 到 `abs(x)` 这样的整数区间。
+- 关键步骤是先问‘解可能出现在哪个空间里’，再问‘如何快速检查一个 guess 是否合格’。
+- 这类方法的优点是容易写、容易保证正确性；缺点是搜索空间一大就会慢。
+- 如果问题有额外结构可用，就应该考虑比纯枚举更聪明的搜索方法。
 
-### for 循环不只遍历数字
+> [!note] What to internalize
+> - One-sentence takeaway: guess-and-check 的核心不是‘瞎猜’，而是系统地枚举所有可能候选，然后用条件过滤掉不合格的值。
+> - Review anchor: 找 perfect square / cube root 时，候选空间通常是 `0` 到 `abs(x)` 这样的整数区间。
+> - Review anchor: 关键步骤是先问‘解可能出现在哪个空间里’，再问‘如何快速检查一个 guess 是否合格’。
 
-```python
-s = "demo loops - fruit loops"
+从做题角度看，只要题目在考“Guess-and-check：先定义候选空间，再逐个验证”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：guess-and-check 的核心不是‘瞎猜’，而是系统地枚举所有可能候选，然后用条件过滤掉不合格的值。
 
-for index in range(len(s)):
-    if s[index] in 'iu':
-        print("There is an i or u")
+### Binary representation 是‘重复拆分 + 反向拼接’
+把十进制转成二进制的程序很适合训练你对循环和字符串累积的理解：每一轮都通过 `% 2` 取最低位，再通过 `// 2` 缩小问题。
+- 最低位由 `num % 2` 决定，所以新得到的 bit 往往要加到结果字符串的前面。
+- 整数除法 `num // 2` 让规模递减，因此算法天然会终止。
+- 如果输入可能为负数，常见策略是先记录符号，再对绝对值做主算法，最后补回负号。
+- 这个模式和很多 later topics 很像：把大问题拆成一串规模不断缩小的小问题。
 
-for i in s:
-    if i in 'iu':
-        print("There is an i or u")
-```
+> [!note] What to internalize
+> - One-sentence takeaway: 把十进制转成二进制的程序很适合训练你对循环和字符串累积的理解：每一轮都通过 `% 2` 取最低位，再通过 `// 2` 缩小问题。
+> - Review anchor: 最低位由 `num % 2` 决定，所以新得到的 bit 往往要加到结果字符串的前面。
+> - Review anchor: 整数除法 `num // 2` 让规模递减，因此算法天然会终止。
 
-- `for ... in range(...)`：显式使用索引
-- `for char in s`：直接遍历字符，更简洁
+从做题角度看，只要题目在考“Binary representation 是‘重复拆分 + 反向拼接’”相关的表示、判断、控制流或抽象边界，就不应该只回忆表面语法，而要先回到这一节的核心句：把十进制转成二进制的程序很适合训练你对循环和字符串累积的理解：每一轮都通过 `% 2` 取最低位，再通过 `// 2` 缩小问题。
 
-> [!tip] Big Idea
-> `for` 循环遍历的是“序列（sequence）”，不是“数字本身”。
+## Code patterns from lecture
+> [!note] What the official code is trying to teach
+> - The official lecture code is worth reading as a notebook of small patterns, not just as a file to run once.
+> - Best workflow: predict output first, then run the code, then rewrite the pattern in your own words or with slightly changed values.
+> - mysum = 0
+> - for i in range(5, 11, 2)
+> - mysum += i
+> - if mysum == 5
+> - break
+> - mysum += 1
+> - When a code pattern feels too easy, change the input, break one line on purpose, and explain why the behavior changes.
 
-### 课堂点：统计 unique letters
-
-```python
-s = "abca"
-seen = ""
-for ch in s:
-    if ch not in seen:
-        seen += ch
-print(len(seen))  # 3
-```
-
-## 2. Guess-and-check（穷举检验）
-
-### 核心模式
-
-- 先系统地产生候选解（guess）
-- 对每个候选做正确性检查（check）
-- 命中则停止，否则继续
-
-> [!important] Big Idea
-> Guess-and-check 必须有有限搜索空间；不能检查无限多个候选。
-
->[!example] 例子：平方根（整数）
->
+## Worked examples
+> [!example] 扫描字符串并统计元音
 > ```python
-> guess = 0
-> x = int(input("Enter an integer: "))
-> while guess**2 < x:
->     guess += 1
->
-> if guess**2 == x:
->     print("Square root of", x, "is", guess)
-> else:
->     print(x, "is not a perfect square")
+> s = "demo loops - fruit loops"
+> count = 0
+> for char in s:
+>     if char in "aeiou":
+>         count += 1
+> print(count)
 > ```
->
-> 负数版本要先做符号处理（或直接拒绝输入），否则循环条件可能立刻失效。
->
-### Boolean flag（布尔标记）
+> 这是最典型的 scan + test + accumulate。任何需要从 sequence 中提取结构的信息，都可以从这个骨架变形出来。
 
-```python
-secret = 7
-found = False
-for i in range(1, 11):
-    if i == secret:
-        found = True
-        break
-
-if found:
-    print("Found", secret)
-else:
-    print("Not found")
-```
-
-- `found` 作为“是否发生过某事件”的信号量
-- 代码可读性通常高于纯计数器绕写
-
-### while vs for（在穷举问题里）
-
-- `for`：候选范围已知（如 `range(abs(cube)+1)`）时更自然
-- `while`：候选生成规则更动态时更灵活
-- 如果只是在遍历一个固定范围，优先 `for`
-
->[!example] 例子：立方根（正负数）
->
+> [!example] 把正整数转成二进制字符串
 > ```python
-> cube = 1000
-> for guess in range(abs(cube) + 1):
->     if guess**3 >= abs(cube):
->         break
->
-> if guess**3 != abs(cube):
->     print(cube, "is not a perfect cube")
-> else:
->     if cube < 0:
->         guess = -guess
->     print("Cube root of", cube, "is", guess)
+> num = 13
+> result = ""
+> while num > 0:
+>     result = str(num % 2) + result
+>     num = num // 2
+> print(result)
 > ```
->
-> - 通过 `>=` + `break` 可减少不必要迭代
-> - 负数输入最终恢复符号
->
-### 应用：文字题也可穷举
+> `result` 是字符串 accumulator，`num` 是不断缩小的问题规模。这个例子把循环、算术和字符串拼接绑在了一起。
 
-- 三重循环可暴力求解条件联立问题
-- 变量规模变大时，嵌套穷举会显著变慢
-- 优化思路：用约束关系直接推导部分变量，减少循环维度
+## Exercise log
+> [!note] Finger exercise snapshot
+> - Official prompt: Assume you are given a positive integer variaboe named N . Write a piece of Python code that finds the cube root of N . he code prints the cube root if N is a perfect cube or it prints error if N is not a perfect cube....
+> - What this is really testing: whether you can compress the lecture into one small, high-frequency coding move without needing the slides beside you.
+> - Where to revisit if this feels shaky: go back to the first two Core ideas sections in this note, then rerun the official lecture code once with your own input.
 
-## 3. Binary and floats（二进制与浮点）
+## From lecture to recitation and homework
+> [!abstract] How this lecture shows up in practice
+> - Problem-set connection: this lecture does not have a direct calendar milestone attached, so use it as a consolidation lecture rather than a sprint lecture.
+> - Recitation connection: there is no recitation attached to this lecture week in the official calendar.
+> - Suggested workflow: read this note once, run the lecture code, solve the smallest official exercise without peeking, then open the linked recitation or problem set materials.
+> - If you can explain the note but still cannot start the homework, the gap is usually not theory but translation: you need one more pass through the worked examples and lecture code.
 
-### 动机：浮点并不精确
+## Links to follow-up practice
+- Slides: [[MIT 6.100L-slides/mit6_100l_lec04.pdf|Lecture 04 slides]]
+- Lecture code: [[MIT 6.100L-lecture-code/mit6_100l_lec04_code.py|Lecture 04 code (py)]]
+- Finger exercise: [[MIT 6.100L-finger-exercises/mit6_100l_ex04_sol.pdf|Lecture 04 finger exercise solution]]
+- Transcript: [[MIT 6.100L-transcripts/mit6_100l_lec04_transcript.pdf|Lecture 04 transcript]]
+- Recitation: none attached to this lecture week
+- Problem set milestone: none directly scheduled on this lecture
+- Textbook: [[Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Guttag textbook]] (Ch 3.1, Ch 3.3)
 
-```python
-x = 0
-for i in range(10):
-    x += 0.1
+## Review checklist
+- [ ] 我能写一个按字符扫描字符串并累计结果的程序。
+- [ ] 我能解释 guess-and-check 的正确性来自哪里，以及为什么它慢。
+- [ ] 我能从头写出十进制转二进制的循环。
+- [ ] 我能比较‘按 index 扫’和‘按 character 扫’各自何时更合适。
+- [ ] 我能看出一个问题的 candidate space 应该怎么定义。
+- [ ] 我能围绕“循环处理字符串：scan、test、accumulate”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
+- [ ] 我能围绕“Guess-and-check：先定义候选空间，再逐个验证”自己写出一个最小例子，并解释为什么这个例子能体现本节重点。
+- [ ] 我能说出并避免这个高频误区：明明不需要 index，却硬写 `range(len(s))`，让代码变得更绕。
+- [ ] 我能说出并避免这个高频误区：把 guess-and-check 写成随意尝试，而不是系统枚举候选空间。
+- [ ] 我能不看 slides，只看题面就判断这题主要在考本讲的哪一个知识点。
 
-print(x == 1)      # False（常见）
-print(x, 10*0.1)
-```
-
-> [!important] Big Idea
-> 浮点数是对实数的近似表示；微小误差在重复运算后可能放大为可见差异。
-
-### 为什么是二进制
-
-- 硬件更容易稳定实现“两态系统”（0/1）
-- 数据最终都以 bit 串编码
-
-十进制：
-
-$$
-1507 = 1\times10^3 + 5\times10^2 + 0\times10^1 + 7\times10^0
-$$
-
-二进制本质相同，只是底数改为 2。
-
-### 十进制整数转二进制（Python 实现思路）
-
-```python
-num = 1442
-
-is_neg = num < 0
-num = abs(num)
-
-result = ""
-if num == 0:
-    result = "0"
-
-while num > 0:
-    result = str(num % 2) + result
-    num = num // 2
-
-if is_neg:
-    result = "-" + result
-
-print(result)
-```
-
-- `% 2` 取当前最低位
-- `// 2` 右移到下一位
-- 逆序拼接得到最终二进制字符串
-
-## 课堂练习（You Try It）
-
-- [x] 统计 `range(5)`, `range(10)`, `range(2,9,3)`, `range(-4,6,2)` 中偶数个数 ✅ 2026-02-09
-- [x] 给字符串 `s` 统计 unique letters 数量（不用 set） ✅ 2026-02-09
-- [x] 写 secret number 搜索程序，对比“有/无 Boolean flag”两个版本 ✅ 2026-02-09
-- [x] 实现整数转二进制函数，测试 `0, 1, 19, -19` ✅ 2026-02-09
-- [x] 验证 `0.1 + 0.1 + ...`（10 次）与 `1` 的比较结果 ✅ 2026-02-09
-
-## 小结
-
-- `for` 可遍历任意序列（数字区间、字符串等）
-- Guess-and-check 是通用、直接但可能慢的算法框架
-- 布尔标记可清晰表达“某事件是否发生”
-- 浮点数是近似值，理解二进制表示有助于理解误差来源
-
-
-
-## 资料
-
-- ![[MIT 6.100L-slides/mit6_100l_lec04.pdf]]
+> [!warning] Common mistakes
+> - 明明不需要 index，却硬写 `range(len(s))`，让代码变得更绕。
+> - 把 guess-and-check 写成随意尝试，而不是系统枚举候选空间。
+> - 做二进制转换时把新 bit 加在字符串后面，导致结果顺序反了。

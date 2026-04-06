@@ -1,8 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "03_Iteration",
+      "path": "03_Computer_Science/03_MIT 6.100L/03_Iteration.md"
+    },
+    {
       "basename": "01_Introduction",
       "path": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md"
+    },
+    {
+      "basename": "05_Floats and approximation methods",
+      "path": "03_Computer_Science/03_MIT 6.100L/05_Floats and approximation methods.md"
+    },
+    {
+      "basename": "11_Aliasing and Cloning",
+      "path": "03_Computer_Science/03_MIT 6.100L/11_Aliasing and Cloning.md"
+    },
+    {
+      "basename": "15_Recursion",
+      "path": "03_Computer_Science/03_MIT 6.100L/15_Recursion.md"
+    },
+    {
+      "basename": "08_Functions as Objects",
+      "path": "03_Computer_Science/03_MIT 6.100L/08_Functions as Objects.md"
     },
     {
       "basename": "02_Strings,Input-Output and Branching",
@@ -179,26 +199,6 @@
     {
       "basename": "linear_algebra_and_its_applications_4th",
       "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Other/linear_algebra_and_its_applications_4th.pdf"
-    },
-    {
-      "basename": "MIT18_06SCF11_Ses1.2prob",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.2prob.pdf"
-    },
-    {
-      "basename": "MIT18_06SCF11_Ses1.1prob",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf"
-    },
-    {
-      "basename": "MIT18_06SCF11_Ses1.1sol",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.1sol.pdf"
-    },
-    {
-      "basename": "1-7",
-      "path": "01_Math/01_calculus/Lecture_notes/1-7.pdf"
-    },
-    {
-      "basename": "AutoResearch Clearly Explained (and how to use it) - 2026-03-28",
-      "path": "04_Fragments/AutoResearch Clearly Explained (and how to use it) - 2026-03-28.md"
     }
   ],
   "omittedPaths": [],
