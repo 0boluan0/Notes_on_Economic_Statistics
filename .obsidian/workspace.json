@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/03_Iteration.md",
+                "file": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "03_Iteration"
+              "title": "01_Introduction"
             }
           },
           {
@@ -351,12 +351,12 @@
   "active": "36db59183709d800",
   "lastOpenFiles": [
     "03_Computer_Science/03_MIT 6.100L/03_Iteration.md",
+    "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
     "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "03_Computer_Science/03_MIT 6.100L/05_Floats and approximation methods.md",
     "03_Computer_Science/03_MIT 6.100L/11_Aliasing and Cloning.md",
     "03_Computer_Science/03_MIT 6.100L/15_Recursion.md",
     "03_Computer_Science/03_MIT 6.100L/08_Functions as Objects.md",
-    "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
     "03_Computer_Science/03_MIT 6.100L/26_List Access, Hashing, Simulations and Wrap-Up.md",
     "03_Computer_Science/03_MIT 6.100L/25_Plotting.md",
     "03_Computer_Science/03_MIT 6.100L/24_Sorting Algorithms.md",
