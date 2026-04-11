@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
+                "file": "04_Fragments/How I'd build a one-person business (if I started over in 2026) - 2026-03-28.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_Introduction"
+              "title": "How I'd build a one-person business (if I started over in 2026) - 2026-03-28"
+            }
+          },
+          {
+            "id": "bb5393f41058a9f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/超级专注力课程.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "超级专注力课程"
             }
           },
           {
@@ -45,7 +69,8 @@
               "title": "课程概览与 shell · the missing semester of your cs education"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -295,13 +320,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
+                "file": "00_inbox/超级专注力课程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 01_Introduction"
+              "title": "Outline of 超级专注力课程"
             }
           },
           {
@@ -349,8 +374,16 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "14764de06ec90304",
+  "active": "bb5393f41058a9f1",
   "lastOpenFiles": [
+    "04_Fragments/How I'd build a one-person business (if I started over in 2026) - 2026-03-28.md",
+    "00_inbox/超级专注力课程.md",
+    "04_Fragments/How To Build A $1M One-Person Business Faster With AI - 2026-03-28.md",
+    "04_Fragments/AutoResearch Clearly Explained (and how to use it) - 2026-03-28.md",
+    "04_Fragments/The Most Important Skill To Learn Right Now - 2026-03-28.md",
+    "04_Fragments/The Future Of Work (& The New High-Income Skill Stack) - 2026-03-28.md",
+    "04_Fragments/Learning method.md",
+    "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "99_学习情况记录/2026-04-11——Sat.md",
     "99_学习情况记录/2026-04-10——Fri.md",
     "98_attachment/dashboards/2026-04-10-map.svg",
@@ -370,7 +403,6 @@
     "03_Computer_Science/03_MIT 6.100L/06_Bisection search and Newton-Raphson.md",
     "03_Computer_Science/03_MIT 6.100L/05_Floats and approximation methods.md",
     "03_Computer_Science/03_MIT 6.100L/04_Loops over strings, Guess-and-check and Binary.md",
-    "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "03_Computer_Science/03_MIT 6.100L/03_Iteration.md",
     "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
     "03_Computer_Science/03_MIT 6.100L/11_Aliasing and Cloning.md",
@@ -380,13 +412,6 @@
     "03_Computer_Science/03_MIT 6.100L/24_Sorting Algorithms.md",
     "03_Computer_Science/03_MIT 6.100L/23_Complexity Classes Examples.md",
     "03_Computer_Science/03_MIT 6.100L/22_Big Oh and Theta.md",
-    "03_Computer_Science/03_MIT 6.100L/21_Timing Programs and Counting Operations.md",
-    "03_Computer_Science/03_MIT 6.100L/20_Fitness Tracker Object-Oriented Programming Example.md",
-    "03_Computer_Science/03_MIT 6.100L/19_Inheritance.md",
-    "03_Computer_Science/03_MIT 6.100L/18_More Python Class Methods.md",
-    "03_Computer_Science/03_MIT 6.100L/17_Python Classes.md",
-    "03_Computer_Science/03_MIT 6.100L/16_Recursion on Non-Numerics.md",
-    "03_Computer_Science/03_MIT 6.100L/14_Dictionaries.md",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-finger-exercises/mit6_100l_ex02_sol.pdf",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-finger-exercises/mit6_100l_ex01_sol.pdf",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-slides/mit6_100l_lec01.pdf",
