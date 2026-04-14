@@ -1,6 +1,30 @@
 {
   "recentFiles": [
     {
+      "basename": "01_Introduction",
+      "path": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md"
+    },
+    {
+      "basename": "02_Strings,Input-Output and Branching",
+      "path": "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md"
+    },
+    {
+      "basename": "03_Iteration",
+      "path": "03_Computer_Science/03_MIT 6.100L/03_Iteration.md"
+    },
+    {
+      "basename": "06_Bisection search and Newton-Raphson",
+      "path": "03_Computer_Science/03_MIT 6.100L/06_Bisection search and Newton-Raphson.md"
+    },
+    {
+      "basename": "14_Dictionaries",
+      "path": "03_Computer_Science/03_MIT 6.100L/14_Dictionaries.md"
+    },
+    {
+      "basename": "19_Inheritance",
+      "path": "03_Computer_Science/03_MIT 6.100L/19_Inheritance.md"
+    },
+    {
       "basename": "超级专注力课程",
       "path": "00_inbox/超级专注力课程.md"
     },
@@ -27,10 +51,6 @@
     {
       "basename": "Learning method",
       "path": "04_Fragments/Learning method.md"
-    },
-    {
-      "basename": "01_Introduction",
-      "path": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md"
     },
     {
       "basename": "26_List Access, Hashing, Simulations and Wrap-Up",
@@ -179,22 +199,6 @@
     {
       "basename": "03_泊松过程",
       "path": "01_Math/05_随机过程/03_泊松过程.md"
-    },
-    {
-      "basename": "05_连续时间的马尔可夫链",
-      "path": "01_Math/05_随机过程/05_连续时间的马尔可夫链.md"
-    },
-    {
-      "basename": "02_随机过程的概念和分类",
-      "path": "01_Math/05_随机过程/02_随机过程的概念和分类.md"
-    },
-    {
-      "basename": "Introduction_to_Linear_Algebra(Strang)",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Other/Introduction_to_Linear_Algebra(Strang).pdf"
-    },
-    {
-      "basename": "linear_algebra_and_its_applications_4th",
-      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Other/linear_algebra_and_its_applications_4th.pdf"
     }
   ],
   "omittedPaths": [],
