@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
+                "file": "01_Math/04_多元统计分析/01_introduction简介.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_Introduction"
+              "title": "01_introduction简介"
             }
           },
           {
@@ -320,13 +320,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
+                "file": "01_Math/04_多元统计分析/01_introduction简介.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 01_Introduction"
+              "title": "Outline of 01_introduction简介"
             }
           },
           {
@@ -343,10 +343,24 @@
             "id": "aa29847e2d80759c",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "00_factor/concept/Factor Analysis.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Factor Analysis"
             }
           }
         ]
@@ -376,6 +390,20 @@
   },
   "active": "bb5393f41058a9f1",
   "lastOpenFiles": [
+    "04_Fragments/Textream - 2026-04-20.md",
+    "01_Math/01_calculus/Lecture_notes/1-7.pdf",
+    "01_Math/04_多元统计分析/01_introduction简介.md",
+    "00_factor/concept/Multivariate Normal Distribution.md",
+    "00_factor/concept/Factor Analysis.md",
+    "03_Computer_Science/03_MIT 6.100L/26_List Access, Hashing, Simulations and Wrap-Up.md",
+    "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
+    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-OCW-offline-site/pages/lecture-2-strings-inputoutput-branching/index.html",
+    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-OCW-offline-site/pages/lecture-2-strings-inputoutput-branching/data.json",
+    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-finger-exercises/mit6_100l_ex02_sol.pdf",
+    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-code/chapter 05/chapter5.py",
+    "03_Computer_Science/03_MIT 6.100L/08_Functions as Objects.md",
+    "03_Computer_Science/03_MIT 6.100L/13_Exceptions and Assertions.md",
+    "99_学习情况记录/2026-04-14——Tue.md",
     "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
     "03_Computer_Science/03_MIT 6.100L/03_Iteration.md",
     "03_Computer_Science/03_MIT 6.100L/06_Bisection search and Newton-Raphson.md",
@@ -384,7 +412,6 @@
     "00_inbox/超级专注力课程.md",
     "01_Math/07-6.042j/MIT-6-042j-pdf.pdf",
     "01_Math/07-6.042j",
-    "99_学习情况记录/2026-04-14——Tue.md",
     "98_attachment/dashboards/2026-04-14-map.svg",
     "98_attachment/dashboards/2026-04-14-news.json",
     "99_学习情况记录/2026-04-13——Mon.md",
@@ -399,27 +426,14 @@
     "04_Fragments/The Most Important Skill To Learn Right Now - 2026-03-28.md",
     "04_Fragments/The Future Of Work (& The New High-Income Skill Stack) - 2026-03-28.md",
     "04_Fragments/Learning method.md",
-    "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "99_学习情况记录/2026-04-11——Sat.md",
     "99_学习情况记录/2026-04-10——Fri.md",
     "98_attachment/dashboards/2026-04-10-map.svg",
-    "98_attachment/dashboards/2026-04-10-news.json",
     "98_attachment/dashboards/2026-04-11-map.svg",
-    "98_attachment/dashboards/2026-04-11-news.json",
     "99_学习情况记录/2026-04-09——Thu.md",
-    "99_学习情况记录/2026-04-08——Wed.md",
-    "99_学习情况记录/2026-04-07——Tue.md",
     "98_attachment/dashboards/2026-04-08-map.svg",
-    "98_attachment/dashboards/2026-04-08-news.json",
     "98_attachment/dashboards/2026-04-07-map.svg",
-    "98_attachment/dashboards/2026-04-07-news.json",
     "98_attachment/dashboards/2026-04-09-map.svg",
-    "98_attachment/dashboards/2026-04-09-news.json",
-    "03_Computer_Science/03_MIT 6.100L/26_List Access, Hashing, Simulations and Wrap-Up.md",
-    "03_Computer_Science/03_MIT 6.100L/05_Floats and approximation methods.md",
-    "03_Computer_Science/03_MIT 6.100L/04_Loops over strings, Guess-and-check and Binary.md",
-    "03_Computer_Science/03_MIT 6.100L/11_Aliasing and Cloning.md",
-    "03_Computer_Science/03_MIT 6.100L/15_Recursion.md",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-problem-sets/mit6_100l_ps5_code/1_ps5/image_15.png",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-problem-sets/mit6_100l_ps5_code/1_ps5/hidden2.bmp",
     "01_Math/01_calculus/01_calculus.canvas",
