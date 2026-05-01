@@ -1,16 +1,36 @@
 {
   "recentFiles": [
     {
-      "basename": "02_一元线性回归",
-      "path": "02_Economy/01_Econometrics/02_一元线性回归.md"
+      "basename": "零散知识点",
+      "path": "02_Economy/01_Econometrics/零散知识点.md"
     },
     {
-      "basename": "01_导论",
-      "path": "02_Economy/01_Econometrics/01_导论.md"
+      "basename": "太白金星v计量",
+      "path": "02_Economy/01_Econometrics/太白金星v计量.pdf"
     },
     {
-      "basename": "03_多元线性回归",
-      "path": "02_Economy/01_Econometrics/03_多元线性回归.md"
+      "basename": "13_面板数据模型",
+      "path": "02_Economy/01_Econometrics/13_面板数据模型.md"
+    },
+    {
+      "basename": "12_非平稳时间序列",
+      "path": "02_Economy/01_Econometrics/12_非平稳时间序列.md"
+    },
+    {
+      "basename": "10_虚拟变量",
+      "path": "02_Economy/01_Econometrics/10_虚拟变量.md"
+    },
+    {
+      "basename": "09_联立方程模型(内生性)",
+      "path": "02_Economy/01_Econometrics/09_联立方程模型(内生性).md"
+    },
+    {
+      "basename": "06_多重共线性",
+      "path": "02_Economy/01_Econometrics/06_多重共线性.md"
+    },
+    {
+      "basename": "07_异方差",
+      "path": "02_Economy/01_Econometrics/07_异方差.md"
     },
     {
       "basename": "04_模型设定",
@@ -21,24 +41,16 @@
       "path": "02_Economy/01_Econometrics/05_多元回归模型的矩阵表达.md"
     },
     {
-      "basename": "10_虚拟变量",
-      "path": "02_Economy/01_Econometrics/10_虚拟变量.md"
+      "basename": "02_一元线性回归",
+      "path": "02_Economy/01_Econometrics/02_一元线性回归.md"
     },
     {
-      "basename": "12_非平稳时间序列",
-      "path": "02_Economy/01_Econometrics/12_非平稳时间序列.md"
+      "basename": "01_导论",
+      "path": "02_Economy/01_Econometrics/01_导论.md"
     },
     {
-      "basename": "13_面板数据模型",
-      "path": "02_Economy/01_Econometrics/13_面板数据模型.md"
-    },
-    {
-      "basename": "09_联立方程模型(内生性)",
-      "path": "02_Economy/01_Econometrics/09_联立方程模型(内生性).md"
-    },
-    {
-      "basename": "06_多重共线性",
-      "path": "02_Economy/01_Econometrics/06_多重共线性.md"
+      "basename": "03_多元线性回归",
+      "path": "02_Economy/01_Econometrics/03_多元线性回归.md"
     },
     {
       "basename": "02_税收与收入分布",
@@ -187,18 +199,6 @@
     {
       "basename": "data",
       "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-OCW-offline-site/pages/lecture-2-strings-inputoutput-branching/data.json"
-    },
-    {
-      "basename": "mit6_100l_ex02_sol",
-      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-finger-exercises/mit6_100l_ex02_sol.pdf"
-    },
-    {
-      "basename": "chapter5",
-      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-code/chapter 05/chapter5.py"
-    },
-    {
-      "basename": "08_Functions as Objects",
-      "path": "03_Computer_Science/03_MIT 6.100L/08_Functions as Objects.md"
     }
   ],
   "omittedPaths": [],

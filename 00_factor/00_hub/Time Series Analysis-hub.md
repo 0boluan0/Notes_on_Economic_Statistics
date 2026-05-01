@@ -38,6 +38,9 @@ tags:
   - [[Yule-Walker equations]]
   - [[ARMA Model Identification Steps]]
   - [[Box-Jenkins Method]]
+  - [[ADL]]
+  - [[Adaptive Expectations Model]]
+  - [[Partial Adjustment Model]]
 
 ### 主线 3：残差诊断与波动建模
 
@@ -104,6 +107,8 @@ tags:
 - [[VAR Model]]
 - [[VMA]]
 - [[ADL]]
+- [[Adaptive Expectations Model]]
+- [[Partial Adjustment Model]]
 
 ### 单位根和平稳性检验
 
@@ -117,6 +122,7 @@ tags:
 - [[White Noise Test]]
 - [[Ljung-Box Test]]
 - [[Box-Pierce Q statistic]]
+- [[Durbin h Test]]
 
 ### 协整检验
 
