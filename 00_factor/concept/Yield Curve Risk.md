@@ -1,22 +1,45 @@
 ---
 aliases:
-- 收益率曲线风险
 - Yield Curve Risk
+- 收益率曲线风险
+- 曲线风险
 tags:
-- 金融
 - concept
+- risk-management
+- fixed-income
 ---
-收益率曲线是将不同到期期限的债券收益率连成的曲线，反映长期和短期利率的结构关系。当银行的资产和负债利率都参考某基准收益率曲线（例如国债收益率）定价时，如果**收益率曲线发生意外的平行移动或斜率陡峭度变化**，就可能使银行净利息收入或资产价值遭受不利影响，这就是收益率曲线风险 。一般情况下，收益率曲线呈正斜率（长期利率高于短期利率）时不存在收益率曲线风险；但若出现倒挂（长期利率低于短期利率），则银行持有的大量长期资产可能收益较低而成本较高，存在较大风险 。例如，中国商业银行持有的巨额国债在收益率曲线倒挂时就面临较高的收益率曲线风险 。
+# Yield Curve Risk
 
-## 课程笔记反链
+## 先记一句话
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+Yield Curve Risk 是收益率曲线形状变化带来的风险，不只是整条曲线平行上移或下移。
+
+## 它是什么
+
+收益率曲线可能发生平行移动、变陡、变平、扭曲或局部旋转。不同期限现金流暴露不同，因此同一组合对短端和长端利率变化的反应可能完全不同。
+
+## 解决什么判断
+
+它回答：“我的组合怕的是短端利率、长端利率，还是曲线斜率/曲率变化？”
+
+## 最小例子
+
+银行持有长期固定利率债券，同时用短期负债融资。若短端利率上升、长端不变，融资成本上升但资产价值不一定同步补偿。
+
+## 易混点
+
+- 普通 [[Modified Duration]] 默认平行移动；非平行移动应看 [[Key Rate Duration]]。
+- 收益率曲线风险不等于 [[Basis Risk]]；前者是期限结构变化，后者是基准传导差异。
+- 课程里 PCA 的 level、slope、[[Curvature]] 就是曲线风险的压缩表达。
+
+## 来自课程位置
+
+- [[09_利率风险]]
+- [[14_VaR参数法和模拟法]]
+
+## 关联卡片
+
+- [[Yield Curve]]
+- [[Key Rate Duration]]
+- [[Curvature]]
+- [[Basis Point Value (BPV)]]

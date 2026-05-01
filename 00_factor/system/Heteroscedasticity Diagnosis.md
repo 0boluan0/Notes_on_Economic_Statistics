@@ -1,89 +1,66 @@
 ---
 aliases:
-- 异方差检验
-- 异方差诊断
 - Heteroscedasticity Diagnosis
+- Heteroskedasticity Diagnosis
+- 异方差诊断
+- 异方差检验
 tags:
 - system
-- 计量经济学
+- econometrics
 ---
-# 异方差诊断
+# Heteroscedasticity Diagnosis
 
-## 诊断目的
+## 诊断目标
 
-检测回归模型残差的方差是否随解释变量变化而变化，评估同方差假设是否成立。
+判断回归误差方差是否随观测变化，并决定是修正标准误、改模型，还是改估计方法。
 
-## 检验方法
+## 诊断流程
 
-### 1. 图形法
+### Step 1：先看残差图
 
-绘制残差与解释变量或拟合值的散点图：
+画 $\hat u_i$ 或 $\hat u_i^2$ 对拟合值、关键解释变量的图。
 
-| 图形模式 | 诊断 |
-|----------|------|
-| 残差散布均匀 | 无异方差 |
-| 残差随X增大而扩散 | 递增型异方差 |
-| 残差随X增大而收缩 | 递减型异方差 |
-| 残差呈非线性模式 | 需要模型变换 |
+- 扇形扩散：可能异方差。
+- 某类样本波动特别大：可能组间异方差。
+- 明显曲线形态：可能是模型设定错误。
 
-### 2. White检验
+### Step 2：做正式检验
 
-构造辅助回归：
-$e_i^2 = \alpha_0 + \alpha_1 x_{1i} + \alpha_2 x_{2i} + \cdots + \alpha_k x_{ki} + \alpha_{k+1} x_{1i}^2 + \cdots + \alpha_m x_{ki}^2 + \varepsilon_i$
+- 一般性检验：[[White Test]]。
+- 方差和解释变量线性相关的检验：Breusch-Pagan。
+- 分组方差差异：Goldfeld-Quandt。
 
-检验统计量：
-$LM = n \cdot R^2 \sim \chi^2(m)$
+### Step 3：判断后果
 
-| 判断标准 | p ≤ 0.05 | p > 0.05 |
-|----------|----------|----------|
-| 诊断 | 拒绝同方差假设 | 不拒绝同方差假设 |
+若外生性仍成立：
 
-### 3. Breusch-Pagan检验（简化White检验）
+- OLS 系数通常仍无偏、一致。
+- 经典标准误错误。
+- t/F 检验和置信区间不可靠。
+- OLS 不再 BLUE。
 
-$e_i^2 = \alpha_0 + \alpha_1 x_{1i} + \cdots + \alpha_k x_{ki} + \varepsilon_i$
+### Step 4：选择处理方式
 
-检验统计量：
-$LM = n \cdot R^2 \sim \chi^2(k)$
+| 情况 | 处理 |
+| --- | --- |
+| 不知道异方差形式，只关心推断 | [[White Robust Standard Errors]] |
+| 方差形式可信 | [[Weighted Least Squares Estimation]] |
+| 方差来自遗漏变量或函数形式错误 | 先修正 [[Model Misspecification]] |
+| 时间序列同时有自相关 | [[Newey-West]] |
 
-### 4. Goldfeld-Quandt检验
+## 稳健性检查
 
-1. 将样本按可能引起异方差的变量排序
-2. 去掉中间部分观测（通常去掉c个，c ≈ n/4）
-3. 对前后两部分分别回归，得 $RSS_1$ 和 $RSS_2$
-4. 计算统计量：$GQ = RSS_2/RSS_1 \sim F(n_1-k, n_2-k)$
+- 同时报经典标准误和稳健标准误，观察结论是否变。
+- 不要只因为 White Test 显著就立刻换 WLS；权重错可能更糟。
+- 经济解释要说明为什么波动随规模或组别变化。
 
-## 后果评估
+## 来自课程位置
 
-| 情况 | 对OLS估计量的影响 |
-|------|-----------------|
-| 无偏性 | 无偏性仍成立 |
-| 一致性 | 一致性仍成立 |
-| 有效性 | 不再是BLUE，标准误有偏 |
-| 假设检验 | t检验和F检验失效（标准误错误） |
+- [[07_异方差]]
 
-## 常见问题与对策
+## 关联卡片
 
-| 问题 | 可能原因 | 解决方案 |
-|------|----------|----------|
-| 异方差显著 | 异质性数据、遗漏变量 | 使用WLS、FGLS、稳健标准误 |
-| 异方差模式复杂 | 方差与多个变量相关 | 使用White稳健标准误 |
-| 加权后模型变差 | 权重设定错误 | 使用FGLS、改用稳健标准误 |
-| 怀疑遗漏变量导致异方差 | 模型设定错误 | 重新考虑模型设定、增加变量 |
-
-## 相关概念
-[[White Robust Standard Errors|White稳健标准误]]
-[[Weighted Least Squares|加权最小二乘法]]
-[[FGLS]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Heteroskedasticity]]
+- [[White Test Steps]]
+- [[White Robust Standard Errors]]
+- [[Weighted Least Squares]]

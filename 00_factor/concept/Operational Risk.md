@@ -1,131 +1,44 @@
 ---
 aliases:
-- 操作风险
 - Operational Risk
+- 操作风险
 tags:
-- 风险管理
-- 银行风险
-- 金融
 - concept
+- risk-management
+- banking
 ---
-操作风险是指由于不完善或失败的内部流程、人员、系统或外部事件导致直接或间接损失的风险。
+# Operational Risk
 
-## 操作风险分类
+## 先记一句话
 
-### Basel II七大风险类型
+Operational Risk 是流程、人员、系统或外部事件失败造成损失的风险。
 
-1. **内部欺诈**
-   - 故意欺诈、未授权交易等
-   - 如：内部盗窃、虚假交易
+## 它是什么
 
-2. **外部欺诈**
-   - 第三方故意欺诈、盗窃
-   - 如：信用卡欺诈、抢劫
+操作风险不是由市场价格变动或借款人信用恶化直接造成，而是由内部控制、系统、流程、人员行为或外部事件导致。
 
-3. **就业政策和工作场所问题**
-   - 劳资福利、劳资纠纷等
-   - 如：歧视、违约索赔
+## 解决什么判断
 
-4. **客户、产品和业务活动**
-   - 产品缺陷、不当客户活动
-   - 如：违反保密协议、不当销售
+它回答：“损失是不是来自执行和控制失败，而不是市场或信用本身？”
 
-5. **实物资产损坏**
-   - 自然灾害、人为破坏
-   - 如：火灾、地震、恐怖袭击
+## 最小例子
 
-6. **业务中断**
-   - 系统故障、外部事件中断
-   - 如：IT系统瘫痪、停电
+交易员未授权交易、系统宕机导致无法结算、内部欺诈、网络攻击，都是操作风险。
 
-7. **执行、交割和流程管理**
-   - 流程失败、交易错误
-   - 如：数据录入错误、交易失败
+## 易混点
 
-## 操作风险度量
+- 市场大跌导致亏损是 [[Market Risk]]；风控系统未能限制头寸可能是 Operational Risk。
+- 操作风险资本可以用历史损失、情景分析和 [[EVT]] 思路估计尾部。
+- 它常需要 [[Stress Testing]] 和关键风险指标，而不是只靠 VaR。
 
-### 基本指标法（Basic Indicator Approach, BIA）
+## 来自课程位置
 
-$OpCapital = \alpha \times BI$
+- [[16_巴塞尔协议]]
+- [[22_情景分析和压力测试]]
 
-其中：
-- α：巴塞尔委员会规定的比例（15%）
-- BI（Basic Indicator）：平均收入（通常为过去3年）
+## 关联卡片
 
-### 标准化法（Standardized Approach, SA）
-
-$OpCapital = \sum_{i=1}^{8} \beta_i \times BI_i$
-
-其中：
-- β_i：各业务线的固定比例（12%, 15%, 18%等）
-- $BI_i$：各业务线的收入指标
-
-### 高级计量法（Advanced Measurement Approach, AMA）
-
-使用内部损失数据和情景分析计算操作风险资本要求。
-
-## 操作风险模型
-
-### 1. 损失分布法（LDA）
-
-- 频测损失频率（N）和损失严重性（X）
-- 年度损失分布：$L = \sum_{i=1}^{N} X_i$
-- 计算OpVaR和OpES
-
-### 2. 记分卡法（SBC）
-
-- 模型：$Y = \sum_{i=1}^{k} \beta_i x_i + \varepsilon$
-- 预测损失
-
-### 3. 极值理论（EVT）
-
-- 关注尾部极端损失
-- 使用GPD拟合损失尾部
-
-## 操作风险管理
-
-### 1. 风险识别
-
-- 风险清单
-- 风险映射
-- RCA分析（原因-影响-控制）
-
-### 2. 风险评估
-
-- 风险评分
-- 热力图分析
-- 关键风险指标（KRI）
-
-### 3. 风险控制
-
-- 预防控制
-- 检测控制
-- 应急响应
-- 恢复计划
-
-### 4. 风险监控
-
-- 损失数据收集
-- KRC（关键风险控制）监控
-- 压力测试
-
-## 巴塞尔协议要求
-
-- Basel II：首次引入操作风险资本要求
-- Basel III：强化操作风险，特别关注模型风险
-- 资本要求：OpCapital × 12个月平均值
-
-相关链接: [[Basel Accords|巴塞尔协议]], [[VaR]], [[EVT|极值理论]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Basel Accords]]
+- [[EVT]]
+- [[Scenario Analysis]]
+- [[Stress Testing]]

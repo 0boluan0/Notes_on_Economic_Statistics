@@ -1,79 +1,45 @@
 ---
 aliases:
-- Debt Valuation Adjustment
 - DVA
+- Debt Valuation Adjustment
+- 债务估值调整
 tags:
-- 风险管理
-- 衍生品
 - concept
+- credit-risk
+- derivatives
 ---
-DVA（Debt Valuation Adjustment，债务估值调整）是指当银行自身违约时，从交易对手角度看银行衍生品负债价值的变化，对银行构成的一种收益调整。
+# DVA
 
->[!note] 定义
->
-> DVA是银行自身违约风险的价值调整，反映了银行违约时对衍生品交易对手的潜在收益。
->
-> $DVA = E[\text{银行违约时的收益}]$
->
-## 计算公式
+## 先记一句话
 
-$DVA = \sum_{i=1}^{n} PD_{bank}(t_{i-1}, t_i) \cdot EAD_{counterparty}(t_i) \cdot (1-R_{bank}) \cdot DF(t_i)$
+DVA 是把“自己可能违约”对自身衍生品负债价值的影响计入估值。
 
-其中：
-- $PD_bank$(t_{i-1}, $t_i$)：银行在时间区间[t_{i-1}, $t_i$]的违约概率
-- $EAD_counterparty$($t_i$)：从交易对手角度看，$t_i$时刻的违约暴露
-- $R_bank$：银行的回收率
-- DF($t_i$)：$t_i$时刻的折现因子
+## 它是什么
 
-## 与CVA的关系
+从银行自身角度看，若自己违约时无法全额偿还衍生品负债，负债的经济价值会下降，这个调整称为 DVA。
 
-- CVA：交易对手违约对银行的成本（己方风险）
-- DVA：银行违约对交易对手的成本（对银行是收益）
+## 解决什么判断
 
-对于己方（收取现金流的）衍生品：
-- CVA为正（承担信用风险）
-- DVA为负（违约时获得收益）
+它回答：“我自己的信用风险变化，会不会改变我账上衍生品负债的估值？”
 
-## 净信用调整（FCA）
+## 最小例子
 
-$FCA = CVA + DVA$
+银行自身信用利差扩大，市场认为其违约概率上升。其衍生品负债的 fair value 可能下降，从会计上产生 DVA 收益，但这类收益质量很有争议。
 
-## DVA风险
+## 易混点
 
-DVA也是一种风险，因为：
-- 银行自身信用恶化时DVA下降（负DVA绝对值增大）
-- DVA变化影响银行价值
-- 监管开始关注DVA风险
+- [[CVA]] 是交易对手违约造成的成本；DVA 是自身违约对负债估值的影响。
+- DVA 增加不代表银行真的更健康，可能只是自身信用恶化。
+- 监管资本更重视 CVA 风险，DVA 的会计解释要谨慎。
 
-## 监管要求
+## 来自课程位置
 
-### Basel III规定
+- [[17_OTC衍生产品市场的监管]]
+- [[19_违约风险]]
 
-虽然Basel III主要关注CVA风险，但一些银行也监控DVA风险。
+## 关联卡片
 
-## 争议
-
-1. **会计处理**：DVA是否应该确认为收益存在争议
-2. **道德风险**：银行可能从自身信用恶化中"受益"
-3. **监管关注**：监管是否应该考虑DVA作为资本缓冲
-
-## 应用
-
-1. **衍生品估值**：完整反映信用风险收益
-2. **风险管理**：管理银行自身信用风险对衍生品的影响
-3. **资本管理**：考虑净信用调整的资本配置
-
-相关链接: [[CVA]], [[Credit Risk|信用风险]], [[Default Risk|违约风险]], [[VaR]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[CVA]]
+- [[Credit Risk]]
+- [[Default Risk]]
+- [[Netting]]

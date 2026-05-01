@@ -9,46 +9,93 @@ tags:
 ---
 # Testing Positive Definiteness
 
->[!note] 何时使用
-> - 题目要你判断矩阵是否 positive definite、classify a quadratic form，或解释某个临界点为何是 minimum。
-> - 这张卡默认你面对的是课程里的对称实矩阵语境。
+## 这张卡什么时候用
 
-## Step 1. 先检查是否在“对称矩阵语境”里
+题目要求你判断矩阵是否 positive definite、classify a quadratic form，或说明某个临界点是不是 minimum 时，用这张卡。
 
-- 先看 $A=A^T$ 是否成立。
-- 若题目已经说“symmetric matrix”，直接进入下一步。
-- 若不是对称矩阵，不要直接套主元判据或顺序主子式判据。
+默认语境：实对称矩阵。
 
-## Step 2. 选最快的判别入口
+## 输入
 
-- 若已经给出 eigenvalues，就直接看它们是否全大于 0。
-- 若矩阵维度小、数值明确，就优先看顺序主子式或 elimination 主元。
-- 若题目给的是 quadratic form，就尝试配方、换基或转到特征向量方向。
+- 一个实矩阵 $A$，或一个二次型 $x^TAx$。
+- 题目可能给出 eigenvalues、pivots、principal minors 或具体矩阵。
 
-## Step 3. 执行对应判别
+## 输出
 
-- 特征值路线：所有特征值都大于 0，则 positive definite。
-- 主元路线：无换行交换的消元中，所有主元都大于 0，则 positive definite。
-- 顺序主子式路线：所有 leading principal minors 都大于 0，则 positive definite。
-- 二次型路线：若对任意非零 $x$ 都有 $x^TAx>0$，则 positive definite。
+- positive definite；
+- positive semidefinite；
+- negative definite；
+- indefinite；
+- 或者说明当前判据不能直接用。
 
-## Step 4. 区分相近但不同的结论
+## Step 1. 先检查对称性
 
-- 若允许某些方向取到 0，只能说 positive semidefinite。
-- 若既能取正也能取负，就是 indefinite。
-- 若所有特征值都小于 0，则是 negative definite。
+先看
+$$
+A=A^T
+$$
+是否成立。
 
-## Step 5. 写结论时必须带判据
+若题目已经明确说 symmetric matrix，可以继续。
 
-- 不要只写“所以它正定”。
-- 要明确写出“因为它对称且所有特征值大于 0”或“因为顺序主子式全为正”等依据。
-- 若题目和极小值有关，要补一句：positive definite quadratic form implies a strict minimum at the origin。
+若不对称，不要直接套“特征值全正”“主元全正”“顺序主子式全正”这类正定判据。先回到题目要求，或改看对称部分/二次型语境。
 
-## 输出检查
+## Step 2. 选最快的判据
 
-- 我有没有先说明矩阵是否对称。
-- 我用的判据是否和题目给出的信息匹配。
-- 我有没有区分 strict positivity 与 semidefinite 的 `\ge 0`。
+- 已给 eigenvalues：直接看特征值符号。
+- 矩阵维度小：看 leading principal minors。
+- 正在做 elimination：看无换行交换时的 pivots。
+- 给的是二次型：配方或换到特征向量坐标。
+
+## Step 3. 执行判别
+
+对实对称矩阵：
+
+- 所有特征值 $>0$：positive definite。
+- 所有特征值 $\geq0$ 且至少一个为 0：positive semidefinite。
+- 所有特征值 $<0$：negative definite。
+- 有正有负：indefinite。
+
+也可以用：
+
+- 所有 pivots $>0$；
+- 所有 leading principal minors $>0$。
+
+这两条给出 positive definite。
+
+## Step 4. 写清依据
+
+结论不要只写：
+
+> $A$ is positive definite.
+
+要写成：
+
+> Since $A$ is symmetric and all eigenvalues are positive, $A$ is positive definite.
+
+或者：
+
+> Since all leading principal minors are positive, $A$ is positive definite.
+
+## Step 5. 如果题目问极小值
+
+把矩阵结论翻译回函数：
+
+- positive definite Hessian：严格局部极小值；
+- semidefinite：可能是平坦方向，不能直接说严格极小；
+- indefinite：鞍点。
+
+## 常见错误
+
+- 只看对角线元素为正就判断正定。
+- 忘记先检查对称性。
+- 把 semidefinite 的 $\geq0$ 当成 positive definite 的 $>0$。
+- determinant 为正就直接说正定；高维不够。
+
+## 来自课程位置
+
+- [[03_Positive Definite Matrices and Applications#Session 3.1 Symmetric matrices and positive definiteness|Session 3.1]]：正定矩阵的多种判据。
+- [[03_Positive Definite Matrices and Applications#Session 3.3 Positive definite matrices and minima|Session 3.3]]：正定与极小值。
 
 ## 关联卡片
 

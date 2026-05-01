@@ -1,24 +1,44 @@
 ---
 aliases:
-- 隐含期权风险
 - Implied Option Risk
+- Embedded Option Risk
+- 隐含期权风险
+- 嵌入期权风险
 tags:
-- 金融
 - concept
+- risk-management
+- banking
 ---
-商业银行许多业务中包含客户的**隐含选择权**，如贷款的提前还款权、存款的提前支取权等。当利率变化诱发客户行使这些选择权时，银行可能遭受损失，这种风险称为隐含期权风险 。
-具体而言，利率下降时，借款人可能会选择提前偿还高息贷款（银行损失未来利息收入），称为“提前偿还贷款风险” ；反之，利率上升时，存款客户可能提前支取定期存款去追求更高收益（银行需要支付意料外的资金流出），称为“提前支取存款风险” 。
-由于这些期权行为会改变资产负债的现金流时机和数量，给银行带来额外的利率风险。
+# Implied Option Risk
 
-## 课程笔记反链
+## 先记一句话
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+Implied Option Risk 是客户或发行人的选择权在利率变化时被行使，导致现金流路径突然改变。
+
+## 它是什么
+
+许多银行业务含有隐含期权，例如贷款提前还款、债券提前赎回、存款提前支取。利率变化会改变这些选择权的行使概率，从而改变资产负债现金流。
+
+## 解决什么判断
+
+它回答：“利率变化后，对手方会不会改变行为，让我的现金流不再固定？”
+
+## 最小例子
+
+利率下降时，借款人提前偿还高息贷款，银行失去未来高利息收入；这就是提前还款带来的隐含期权风险。
+
+## 易混点
+
+- 含权现金流不适合只用 [[Macaulay Duration]] 或 [[Modified Duration]]；应看 [[Effective Duration]]。
+- 隐含期权风险不是显性期权定价题，但本质仍是选择权改变现金流。
+- 它会让债券或贷款出现负凸性。
+
+## 来自课程位置
+
+- [[09_利率风险]]
+
+## 关联卡片
+
+- [[Effective Duration]]
+- [[Convexity]]
+- [[Yield Curve Risk]]

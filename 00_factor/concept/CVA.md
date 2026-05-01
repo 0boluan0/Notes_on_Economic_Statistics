@@ -1,91 +1,56 @@
 ---
 aliases:
-- 信用估值调整
-- Credit Valuation Adjustment
 - CVA
+- Credit Valuation Adjustment
+- 信用估值调整
 tags:
-- 风险管理
-- 衍生品
 - concept
+- credit-risk
+- derivatives
 ---
-CVA（Credit Valuation Adjustment，信用估值调整）是衡量衍生品交易对手违约风险的调整值，是对衍生品无违约价值的信用风险调整。
+# CVA
 
->[!note] 定义
->
-> CVA是指由于交易对手可能违约，需要对衍生品无违约价值进行调整，以反映信用风险成本。
->
-> $CVA = E[\text{损失}], \text{在交易对手违约条件下}$
->
-## 计算公式
+## 先记一句话
 
-对于单笔衍生品交易：
+CVA 是因交易对手可能违约而从无违约衍生品价值中扣掉的信用风险成本。
 
-$CVA = \sum_{i=1}^{n} PD(t_{i-1}, t_i) \cdot EAD(t_i) \cdot (1-R) \cdot DF(t_i)$
+## 它是什么
 
-其中：
-- PD(t_{i-1}, $t_i$)：时间区间[t_{i-1}, $t_i$]的违约概率
-- EAD($t_i$)：$t_i$时刻的违约暴露
-- R：回收率
-- DF($t_i$)：$t_i$时刻的折现因子
+离散近似可写为：
 
-## 风险调整后的价值
+$$
+CVA=\sum_i PD(t_{i-1},t_i)\cdot EAD(t_i)\cdot LGD\cdot DF(t_i)
+$$
 
-$V_{with\_credit\_risk} = V_{no\_default} - CVA$
+风险调整价值：
 
-## 影响因素
+$$
+V_{credit}=V_{risk-free}-CVA
+$$
 
-1. **交易对手信用质量**：违约概率PD越高，CVA越大
-2. **衍生品特征**：
-   - 衍生品己方（收取现金流）有正CVA风险
-   - 衍生品对手方（支付现金流）有负CVA（收益）
-3. **波动率**：波动率越高，违约暴露EAD越大
-4. **期限**：期限越长，CVA越大
-5. **回收率**：回收率越低，CVA越大
+## 解决什么判断
 
-## CVA风险
+它回答：“如果交易对手可能违约，这笔衍生品对我还值多少钱？”
 
-CVA本身也是一种风险，因为：
-- 交易对手信用恶化时CVA增大
-- CVA可能成为重要风险源
+## 最小例子
 
-## DVA（债务估值调整）
+一笔互换对银行为正价值。交易对手信用恶化后，银行预期能收到的钱变得不确定，CVA 增大，衍生品价值下降。
 
-对冲CVA的调整，反映银行自身违约对交易对手的收益：
+## 易混点
 
-$DVA = \text{银行违约时的收益}$
+- CVA 是交易对手违约风险；[[DVA]] 是自身违约风险对估值的调整。
+- CVA 依赖未来暴露路径，不只是当前市值。
+- [[Netting]] 和抵押品会降低 EAD，从而降低 CVA。
 
-## FVA（资金估值调整）
+## 来自课程位置
 
-考虑资金成本和收益的调整：
+- [[17_OTC衍生产品市场的监管]]
+- [[19_违约风险]]
 
-$FVA = \text{资金成本} - \text{资金收益}$
+## 关联卡片
 
-## 监管要求
-
-### Basel III规定
-
-- CVA资本要求：CVA风险的资本要求
-- CVA资本 = 12.5 × max[VaR-CVA, 0]
-- 市场风险总资本 = max[10日VaR, 10日压力VaR] + 12.5 × CVA风险
-
-## 应用
-
-1. **衍生品定价**：调整衍生品定价以反映信用风险
-2. **风险管理**：管理交易对手信用风险暴露
-3. **资本计量**：计算CVA风险相关的监管资本要求
-4. **交易决策**：考虑信用风险成本的交易评估
-
-相关链接: [[Credit Risk|信用风险]], [[Default Risk|违约风险]], [[VaR]], [[DVA]], [[Basel Accords|巴塞尔协议]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Credit Risk]]
+- [[DVA]]
+- [[EAD]]
+- [[Netting]]
+- [[Basel Accords]]

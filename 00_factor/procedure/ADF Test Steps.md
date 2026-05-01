@@ -1,124 +1,111 @@
 ---
 aliases:
-- ADF检验步骤
-- Augmented Dickey-Fuller检验
-- ADF
 - ADF Test Steps
+- ADF检验步骤
+- Augmented Dickey-Fuller检验步骤
 tags:
 - procedure
-- 01_Econometrics
-- 06_时间序列分析
+- 时间序列
+- 计量经济学
 ---
-# ADF检验步骤
+# ADF Test Steps
 
-## 适用场景
+## 这张卡什么时候用
 
-检验时间序列是否存在单位根，判断序列是否平稳。是建立时间序列模型（ARMA、GARCH）的必要前提。
+当你要判断一条时间序列是否有单位根、是否需要差分、能不能直接建 ARMA 时，用 ADF 检验。
 
-## 所需数据/条件
+## 输入
 
-- $时间序列 \{y_t\}_{t=1}^T$
-- 显著性水平 $\alpha$（通常5%）
-- 滞后阶数 $p$（需预先确定）
+- 时间序列 $y_t$；
+- 是否包含截距/趋势的判断；
+- 最大滞后阶数或信息准则；
+- 显著性水平。
 
-## 计算步骤
+## 输出
 
-### 步骤 1：确定检验模型形式
+- 拒绝单位根：序列可视为平稳；
+- 不能拒绝单位根：序列可能非平稳，需要差分或进一步分析。
 
-根据数据特征选择模型形式：
+## Step 1. 选检验形式
 
-**模型1（无常数项、无趋势）**：
-$ \Delta y_t = \gamma y_{t-1} + \sum_{i=1}^{p} \delta_i \Delta y_{t-i} + \epsilon_t $
+常见三种：
 
-**模型2（有常数项、无趋势）**：
-$ \Delta y_t = \alpha + \gamma y_{t-1} + \sum_{i=1}^{p} \delta_i \Delta y_{t-i} + \epsilon_t $
+无截距无趋势：
+$$
+\Delta y_t=\gamma y_{t-1}+\sum_{i=1}^p\delta_i\Delta y_{t-i}+\varepsilon_t.
+$$
 
-**模型3（有常数项和趋势）**：
-$ \Delta y_t = \alpha + \beta t + \gamma y_{t-1} + \sum_{i=1}^{p} \delta_i \Delta y_{t-i} + \epsilon_t $
+有截距：
+$$
+\Delta y_t=\alpha+\gamma y_{t-1}+\sum_{i=1}^p\delta_i\Delta y_{t-i}+\varepsilon_t.
+$$
 
-**注意点**：$原假设 H_0: \gamma = 0（存在单位根），备择 H_1: \gamma < 0（序列平稳）。$
+有截距和趋势：
+$$
+\Delta y_t=\alpha+\beta t+\gamma y_{t-1}+\sum_{i=1}^p\delta_i\Delta y_{t-i}+\varepsilon_t.
+$$
 
-### 步骤 2：确定滞后阶数 $p$
+## Step 2. 选滞后阶数
 
-使用信息准则选择最优滞后阶数：
+用 AIC/BIC，或从较大阶数往下删。
 
-$ \text{AIC}(p) = T \ln\left(\frac{\text{RSS}_p}{T}\right) + 2p $
-$ \text{SBC}(p) = T \ln\left(\frac{\text{RSS}_p}{T}\right) + p \ln T $
+目标是让残差不再有自相关，同时不要浪费太多自由度。
 
-选择使信息准则最小的 $p$ 值。
+## Step 3. 估计 ADF 回归
 
-**注意点**：一般从最大可能阶数开始，逐步减少，找到最优值。
+用 OLS 估计，关注 $\gamma$。
 
-### 步骤 3：估计ADF回归模型
+原假设：
+$$
+H_0:\gamma=0
+$$
+表示存在单位根。
 
-使用OLS估计选定的ADF模型，得到：
-- $\hat{\gamma}$（关键系数）
-- 标准误 $se(\hat{\gamma})$
-- 残差平方和 $\text{RSS}$
+备择假设：
+$$
+H_1:\gamma<0
+$$
+表示平稳。
 
-**注意点**：$\gamma = 0 等价于原序列存在单位根。$
+## Step 4. 比较 ADF 临界值
 
-### 步骤 4：构造t统计量
+计算统计量：
+$$
+\tau=\frac{\hat{\gamma}}{se(\hat{\gamma})}.
+$$
 
-$ \tau = \frac{\hat{\gamma}}{se(\hat{\gamma})} $
+它不服从普通 t 分布。
 
-**注意点**：此统计量不服从标准t分布，而是服从Dickey-Fuller $\tau$ 分布。
+若统计量比临界值更负，拒绝单位根。
 
-### 步骤 5：获取临界值
+## Step 5. 写结论
 
-根据样本量 $T$、显著性水平 $\alpha$ 和模型形式查ADF临界值表：
+结论要写清楚方向：
 
-**临界值示例**（近似）：
-当 $T=500, \alpha=0.05$ 时：
-- 模型1：$c_1 \approx -1.95$
-- 模型2：$c_2 \approx -2.86$
-- 模型3：$c_3 \approx -3.41$
+- “拒绝 $H_0$，认为序列平稳”；
+- “不能拒绝 $H_0$，单位根证据仍在”。
 
-**注意点**：临界值为负值，拒绝域在左尾。
+不要写成“接受平稳”或“证明非平稳”。
 
-### 步骤 6：进行假设检验
+## 常见错误
 
-**检验规则**：
-- 若 $\tau < c_{\alpha}$（统计量小于临界值），拒绝 $H_0$
-- 结论：序列平稳（无单位根）
-- 若 $\tau \ge c_{\alpha}$，无法拒绝 $H_0$
-- 结论：序列非平稳（存在单位根）
+- 忘记 ADF 的原假设是单位根。
+- 用普通 t 临界值。
+- 模型形式选错：该加趋势没加，或不该加趋势硬加。
+- 对协整残差使用普通 ADF 临界值。
 
-**注意点**：ADF检验是左单侧检验，因为 $\gamma < 0$ 时序列平稳。
+## 来自课程位置
 
-### 步骤 7：处理多阶单位根（如需）
+- [[03_平稳时间序列模型#0.回忆用|时间序列 03：单位根检验回忆]]
+- [[07_协整和误差修正模型#3.1 EG两步法|时间序列 07：残差单位根检验]]
 
-若未能拒绝原假设，可能存在更高阶单位根 I(d), d > 1：
+## 关联卡片
 
-1. 对序列做一阶差分：$\Delta y_t = y_t - y_{t-1}$
-2. 对差分序列重复ADF检验
-3. 若差分后平稳，则原序列为 I(1)
-
-**注意点**：单位根检验应从最低阶开始，逐步检验。
-
-## 关键公式
-
-**ADF模型（模型2）**：
-$\Delta y_t = \alpha + \gamma y_{t-1} + \sum_{i=1}^{p} \delta_i \Delta y_{t-i} + \epsilon_t$
-
-**检验统计量**：
-$ \tau = \frac{\hat{\gamma}}{se(\hat{\gamma})} $
-
-**PP检验统计量（替代方法）**：
-$ Z_\gamma = \frac{\tau \cdot \sigma^2 - T \cdot \hat{\gamma}^2}{\sigma \sqrt{T}} $
-
-## 常见问题
-
-1. **模型形式选择**：错误选择模型形式（是否含趋势）导致检验结论偏差。
-2. **滞后阶数**：p 太小导致误差项自相关，p 太大损失自由度。
-3. **结构断点**：存在结构变化时，ADF检验可能失效。
-4. **低功效**：小样本下，ADF检验容易接受原假设（第二类错误）。
-
-## 相关概念
-[[Unit Root Test|单位根]]
-[[Cointegration|协整]]
-[[Phillips-Perron Test|PP检验]]
-[[Unit Root Test|平稳性检验]]
+- [[Augmented Dickey-Fuller Test]]
+- [[Unit Root Test]]
+- [[Phillips-Perron Test]]
+- [[Stationarity Tests Comparison]]
+- [[First Difference]]
 
 ## 课程笔记反链
 

@@ -1,68 +1,48 @@
 ---
 aliases:
-- 条件指数
-- CI
 - Condition Index
+- CI
+- 条件指数
 tags:
 - system
-- 计量经济学
+- econometrics
 ---
-# 条件指数（CI）
+# Condition Index
 
-## 诊断目的
+## 诊断目标
 
-通过分析X'X矩阵的特征值，检测数据矩阵的病态程度，诊断多重共线性问题。
+Condition Index 从整个设计矩阵的特征值角度诊断多重共线性和矩阵病态。
 
-## 计算方法
+## 公式
 
-$CI_k = \sqrt{\frac{\lambda_{\max}}{\lambda_k}}$
+对标准化后的 $X'X$ 或相关矩阵取特征值 $\lambda_k$：
 
-其中：
-- $\lambda_{\max}$：X'X矩阵的最大特征值
-- \lambda_k：第k个特征值
+$$
+CI_k=\sqrt{\frac{\lambda_{\max}}{\lambda_k}}
+$$
 
-### 方差分解比例（Variance Decomposition Proportions）
+## 判断
 
-计算每个回归系数的方差中，有多少比例来自每个特征值：
+| CI | 解释 |
+| --- | --- |
+| < 10 | 通常无严重问题 |
+| 10-30 | 中度共线性 |
+| >= 30 | 严重共线性信号 |
 
-$\pi_{jk} = \frac{\phi_{jk}^2}{\sum_{i=1}^{p} \phi_{ji}^2}$
+Belsley 判据还要求看方差分解比例：若高 CI 维度上多个变量方差比例都很高，共线性更可信。
 
-其中 $\phi_{jk}$ 是特征向量第j行第k列的元素。
+## 使用边界
 
-## 判断标准
+- VIF 看单个变量；Condition Index 看整体矩阵。
+- 变量尺度会影响诊断，通常先中心化/标准化。
+- 高 CI 后仍要回到变量组合解释，不要只看数字。
 
-| CI值 | 多重共线性程度 | 诊断 |
-|-------|--------------|------|
-| CI < 10 | 无问题 | X矩阵条件良好 |
-| 10 ≤ CI < 30 | 中度多重共线性 | 需关注 |
-| CI ≥ 30 | 严重多重共线性 | 必须处理 |
+## 来自课程位置
 
-### Belsley判据
+- [[06_多重共线性]]
 
-当某个CI ≥ 30，且有两个或以上变量的方差分解比例在该CI上超过50%时，认为存在严重多重共线性。
+## 关联卡片
 
-## 常见问题与对策
-
-| 问题 | 可能原因 | 解决方案 |
-|------|----------|----------|
-| 多个CI > 30 | 数据矩阵严重病态 | 中心化或标准化变量、使用正则化方法 |
-| 高CI对应变量方差分解大 | 特定变量高度相关 | 识别并删除导致共线性的变量 |
-| CI波动大 | 样本不稳定 | 增大样本、使用滚动窗口分析 |
-
-## 相关概念
-[[00_factor/system/Variance Inflation Factor|方差膨胀因子]]
-[[Multicollinearity|多重共线性]]
-[[Eigenvalues|特征值]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Multicollinearity]]
+- [[Variance Inflation Factor]]
+- [[Eigenvalues]]

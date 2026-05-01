@@ -1,62 +1,90 @@
 ---
 aliases:
-- ECM
-- 误差修正模型
 - Error Correction Model
-- 误差纠正模型
-- 误差纠正机制
+- ECM
 - Error Correction Mechanism
+- 误差修正模型
+- 误差纠正模型
+- 误差修正机制
 tags:
+- concept
 - 时间序列
 - 计量经济学
-- concept
 ---
-误差修正模型（Error Correction Model, ECM）是用于描述协整系统短期动态调整的模型，结合了长期均衡关系和短期动态。
+# Error Correction Model
 
->[!note] 定义
->
-> ECM将变量的一阶差分表示为上一期偏离长期均衡（误差修正项）和其他滞后项的函数。
->
-## 模型形式
+## 先记一句话
 
-$\Delta y_t = \alpha + \gamma EC_{t-1} + \sum_{i=1}^{p-1} \phi_i \Delta y_{t-i} + \sum_{j=1}^{q-1} \theta_j \Delta x_{t-j} + \varepsilon_t$
+ECM 就是：**短期变化由两部分解释：短期冲击 + 上一期偏离长期均衡的程度**。
+
+它是协整的动态版本。
+
+## 它是什么
+
+若长期关系是
+$$
+y_t-\beta x_t=e_t,
+$$
+且 $e_t$ 平稳，那么 ECM 可写成
+$$
+\Delta y_t=\alpha+\gamma e_{t-1}+\text{short-run terms}+\varepsilon_t.
+$$
+
+其中 $e_{t-1}$ 是上一期偏离长期均衡的误差。
+
+## 它解决什么判断
+
+ECM 回答：
+
+> 当变量短期偏离长期关系后，下一期会不会被拉回去？
+
+如果 $\gamma$ 的符号和经济含义一致，并且显著，就说明误差修正机制存在。
+
+## 一个最小直觉
+
+长期均衡是：
+$$
+y_t=\beta x_t.
+$$
+
+如果上一期
+$$
+y_{t-1}>\beta x_{t-1},
+$$
+说明 $y$ 高于长期均衡。
+
+ECM 中的误差修正项会让 $\Delta y_t$ 向下调整。
+
+## VECM 版本
+
+多变量系统中：
+$$
+\Delta x_t=\alpha\beta^Tx_{t-1}+\sum_{i=1}^{p-1}\Gamma_i\Delta x_{t-i}+\varepsilon_t.
+$$
 
 其中：
-- EC_{t-1} = y_{t-1} - βx_{t-1}：上一期对长期均衡的偏离
-- γ：误差修正系数，调整速度
-- γ < 0：表示存在误差修正机制
 
-## 误差修正机制
+- $\beta$：协整向量；
+- $\alpha$：调整系数；
+- $\beta^Tx_{t-1}$：长期偏离。
 
-1. **正向修正**：当$y_t$高于均衡值（EC_{t-1} > 0），Δ$y_t$倾向为负
-2. **负向修正**：当$y_t$低于均衡值（EC_{t-1} < 0），Δ$y_t$倾向为正
-3. **调整速度**：|γ|越大，调整速度越快
+## 常见误区
 
-## 从协整到ECM
+- ECM 不是只做差分；它保留了长期均衡误差。
+- 没有协整关系时，ECM 的长期误差项没有稳定意义。
+- 调整系数的符号要结合变量定义解释，不能机械背“必须小于 0”。
 
-给定协整关系：$y_t = \alpha + \beta x_t + u_t$
+## 来自课程位置
 
-ECM形式：
-$\Delta y_t = \gamma u_{t-1} + \sum_{i=1}^{p-1} \phi_i \Delta y_{t-i} + \sum_{j=1}^{q-1} \theta_j \Delta x_{t-j} + \varepsilon_t$
+- [[07_协整和误差修正模型#2.3 协整与误差修正模型|时间序列 07：ECM 与 VECM]]
 
-## 向量ECM（VECM）
+## 关联卡片
 
-对于n维协整系统：
-
-$\Delta y_t = \Pi y_{t-1} + \sum_{i=1}^{p-1} \Gamma_i \Delta y_{t-i} + \varepsilon_t$
-
-其中Π = αβ'：
-- α：n×r的调整系数矩阵
-- β：n×r的协整向量矩阵
-- r：协整秩
-
-## 应用
-
-1. **短期动态分析**：分析变量如何向长期均衡调整
-2. **政策分析**：评估政策冲击的短期和长期效应
-3. **预测模型**：结合长期均衡和短期动态进行预测
-
-相关链接: [[Cointegration|协整]], [[VAR Model|VAR]], [[Granger Causality Test|格兰杰因果检验]]
+- [[Cointegration]]
+- [[Cointegration theorem]]
+- [[Engle-Granger Two-Step Test]]
+- [[Johansen Cointegration Test]]
+- [[VAR Model]]
 
 ## 课程笔记反链
 

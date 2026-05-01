@@ -20,6 +20,7 @@ tags:
 ### 如果题目在问“closest / best fit / minimum error / orthogonal”
 - 先走 projection / least squares 路线。
 - 关键词：orthogonal error、normal equations、projection matrix、QR。
+- 如果题目强调稳定求解或正交列，直接看 [[QR Decomposition]]。
 
 ### 如果题目在问“可逆 / 体积 / 行操作对某个量的影响”
 - 先走 determinant / inverse 路线。
@@ -49,6 +50,7 @@ tags:
 ## 关联卡片
 - [[Reading the Four Fundamental Subspaces from RREF]]
 - [[Least Squares]]
+- [[QR Decomposition]]
 - [[Determinant]]
 - [[Eigenvalues]]
 - [[Positive Definite Matrix]]
@@ -62,7 +64,7 @@ LIST FROM ""
 WHERE (
   contains(file.path, "01_Math/") OR
   contains(file.path, "02_Economy/") OR
-  contains(file.outlinks, this.file.link)
-)
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
 SORT file.mtime DESC
 ```

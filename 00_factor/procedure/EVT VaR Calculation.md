@@ -1,150 +1,107 @@
 ---
 aliases:
-- 极值理论VaR计算
-- VaR
-- EVT
 - EVT VaR Calculation
+- Extreme Value Theory VaR Calculation
+- 极值理论VaR计算
+- 极端值理论VaR计算
 tags:
 - procedure
-- 07_金融机构与风险管理
-- 经济
+- risk-management
 ---
-# 极值理论VaR计算
+# EVT VaR Calculation
 
-## 适用场景
+## 这张卡什么时候用
 
-当需要估计高置信度（如99.9%、99.99%）的VaR或ES，而历史数据不足以直接计算分位数时使用。适用于捕捉厚尾分布的极端风险。
+当题目要求估计极高置信度 VaR，且普通历史分位数尾部样本太少时，用 EVT 的 POT/GPD 方法。概念见 [[EVT]] 与 [[GPD]]。
 
-## 所需数据/条件
+## 输入
 
-- $损失序列（或收益率转换为损失）{L_t\}_{t=1}^T$
-- 阈值 $u$（通常选择经验分布95%或97.5%分位数）
-- 超过阈值的样本量 $n_u$ = |\{t: $L_t > u\}|$
+- 损失序列 $L_1,\dots,L_T$，损失为正。
+- 阈值 $u$。
+- 超过阈值的样本数 $n_u$。
+- GPD 参数 $\xi$ 与 $\beta$，或可用于估计它们的超额损失样本。
+- 置信水平 $\alpha$。
 
-## 计算步骤
+## 输出
 
-### 步骤 1：选择合适阈值
+- 高置信度 $\operatorname{VaR}_{\alpha}$。
+- 可选：[[ES]]。
 
-根据样本量选择阈值 u：
-- 样本量 T 较小时（如500），选择 u 为95%分位数
-- 样本量 T 大时，可选择更高分位数
+## Step 1：选阈值
 
-**注意点**：阈值需足够高以确保尾部样本充足，又不能过高导致尾部样本过少。
+选择足够高但仍有足够超额样本的阈值 $u$。阈值太低，GPD 近似不可信；阈值太高，样本数太少。
 
-### 步骤 2：提取超额损失
+## Step 2：提取超额损失
 
-收集所有超过阈值的损失：
-$$
-\{y_i\}_{i=1}^{n_u} = \{L_t - u : L_t > u, t=1,\dots,T\}
-$$
-
-其中 $y_i$ 为超额量，总是非负值。
-
-**注意点**：使用损失定义为正，VaR为损失的正值。
-
-### 步骤 3：估计GPD参数
-
-使用最大似然估计 GPD 参数 $\xi$（形状）和 $\beta$（尺度）：
-
-对数似然函数：
-$$
-\ell(\xi,\beta) = -n_u \ln \beta - (1 + 1/\xi) \sum_{i=1}^{n_u} \ln(1 + \xi y_i / \beta)
-$$
-
-一阶条件（对 $\beta$）：
-$$
-\frac{\partial \ell}{\partial \beta} = 0 \Rightarrow \hat{\beta} = \bar{y} \frac{\xi}{1 + \xi}
-$$
-
-需用数值方法求解 $\xi$。
-
-**注意点**：GPD 要求 $\xi > 0$（厚尾）和 $\beta > 0$。
-
-### 步骤 4：计算尾部概率
-
-计算超过阈值的经验概率：
-$$
-\hat{p} = P(L > u) \approx n_u / T
-$$
-
-**注意点**：这是尾部概率的一致估计。
-
-### 步骤 5：计算VaR
-
-给定置信水平 $\alpha$，VaR 定义为：
-
-若 VaR > 阈值（即 $\alpha > 1 - \hat{p}$）：
-$$
-\text{VaR}_{\alpha} = u + \frac{\hat{\beta}}{\hat{\xi}} \left[ \left(\frac{1-\alpha}{\hat{p}}\right)^{-\hat{\xi}} - 1 \right]
-$$
-
-若 VaR ≤ 阈值（即 $\alpha \leq 1 - \hat{p}$），用其他方法（如历史模拟）。
-
-**注意点**：此公式利用GPD外推估计高置信分位数。
-
-### 步骤 6：计算ES（预期损失）
-
-ES为超过VaR的平均损失：
+对所有 $L_t>u$ 的观测，定义：
 
 $$
-\text{ES}_{\alpha} = \frac{\text{VaR}_{\alpha}}{1 - \hat{\xi}} + \frac{\hat{\beta} - \hat{\xi} u}{1 - \hat{\xi}}
+y_i=L_t-u,\qquad i=1,\dots,n_u
 $$
 
-当 $\xi \to 0$（指数尾部）时：
-$$ 
-\text{ES}_{\alpha} = \text{VaR}_{\alpha} + \hat{\beta}
-$$
-**注意点**：ES总是大于或等于VaR。
+## Step 3：估计 GPD 参数
 
-## 关键公式
+拟合超额损失：
 
-**GPD累积分布函数**：
 $$
-F_{\text{GPD}}(y) = 1 - \left(1 + \frac{\xi y}{\beta}\right)^{-1/\xi}, \quad y \ge 0
+P(Y>y)\approx \left(1+\xi\frac{y}{\beta}\right)^{-1/\xi}
 $$
 
-**GPD密度函数**：
-$$
-f_{\text{GPD}}(y) = \frac{1}{\beta} \left(1 + \frac{\xi y}{\beta}\right)^{-1/\xi - 1}
-$$
+其中 $\xi$ 是形状参数，$\beta$ 是尺度参数。
 
-**VaR外推公式**：
+## Step 4：计算超过阈值的经验概率
+
 $$
-\text{VaR}_{\alpha} = u + \frac{\beta}{\xi} \left[ \left(\frac{1-\alpha}{\hat{p}}\right)^{-\xi} - 1 \right]
+\hat p_u=\frac{n_u}{T}
 $$
 
-**ES公式**：
+## Step 5：外推 VaR
+
+当目标分位数落在阈值以上时：
+
 $$
-\text{ES}_{\alpha} = \frac{\text{VaR}_{\alpha}}{1 - \xi} + \frac{\beta - \xi u}{1 - \xi}
+\operatorname{VaR}_{\alpha}
+=u+\frac{\beta}{\xi}
+\left[
+\left(\frac{1-\alpha}{\hat p_u}\right)^{-\xi}-1
+\right]
 $$
 
-**形状参数含义**：
-- $\xi > 0$：厚尾（重尾），极端事件概率高
-- $\xi = 0$：指数尾部
-- $\xi < 0$：有限尾部（有界）
+若 $\xi$ 接近 0，使用指数尾部极限形式。
 
-## 常见问题
+## Step 6：可选计算 ES
 
-1. **阈值选择**：阈值过高导致尾部样本过少，估计不稳定。
-2. **形状参数估计**：小样本下 $\xi$ 估计可能不准确。
-3. **外推风险**：过度外推到远超历史范围的置信度风险较大。
-4. **时间变化**：极值模型假设尾部形状参数稳定，实际可能变化。
-5. **与正态比较**：正态VaR通常低估极端风险，极值理论更保守。
+当 $\xi<1$ 时：
 
-## 相关概念
-[[VaR]]
-[[Historical Simulation VaR|历史模拟法VaR计算]]
-[[GPD]]
+$$
+\operatorname{ES}_{\alpha}
+=\frac{\operatorname{VaR}_{\alpha}}{1-\xi}
++\frac{\beta-\xi u}{1-\xi}
+$$
 
-## 课程笔记反链
+如果 $\xi\ge 1$，尾部均值不稳定，ES 不应机械报告。
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+## 检查点
+
+- EVT 是尾部外推，不是普通 VaR 的默认算法。
+- 损失方向必须统一；收益左尾要先转成损失右尾。
+- $\xi$ 对结果影响很大，必须做阈值敏感性检查。
+- 超额样本太少时，结果可能只是精致的猜测。
+
+## 常见错误
+
+- 阈值随手取，没有检查超额样本数量。
+- 把 $\alpha$ 和尾部概率 $1-\alpha$ 混用。
+- 在 $\xi\ge 1$ 时仍报告稳定 ES。
+
+## 来自课程位置
+
+- [[14_VaR参数法和模拟法]]
+
+## 关联卡片
+
+- [[EVT]]
+- [[GPD]]
+- [[VaR]]
+- [[VaR Method Selection]]
+- [[Historical Simulation VaR]]

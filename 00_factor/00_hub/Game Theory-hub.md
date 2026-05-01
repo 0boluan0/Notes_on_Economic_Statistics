@@ -1,74 +1,67 @@
 ---
 aliases:
-- 博弈论
-- 博弈论-hub
-- Game Theory
 - Game Theory-hub
+- Game Theory
+- 博弈论
+- 博弈论知识地图
 tags:
 - hub
+- game-theory
 ---
-# 博弈论 Hub
+# Game Theory-hub
+
+## 这组卡解决什么
+
+博弈论这组卡回答：多个理性参与者相互影响时，如何描述博弈、删除明显不合理策略、找到稳定结果，并判断动态博弈里的威胁是否可信。
+
+## 学习路线
+
+1. 先会描述一个博弈：[[Game Theory]]、[[player]]、[[strategies]]、[[payoffs]]、[[strategic-form Games]]。
+2. 再会简化博弈：[[Strictly Dominated Strategy]]、[[Weakly Dominated Strategy]]、[[Rationalisability]]。
+3. 然后求静态均衡：[[Nash Equilibrium]]、[[Pure Strategy Nash Equilibrium]]、[[Finding Pure Strategy Nash Equilibria]]、[[Mixed Strategy Nash Equilibrium]]、[[Finding Mixed Strategy Nash Equilibrium]]。
+4. 再处理动态博弈：[[Extensive-form Game]]、[[Information Set]]、[[Subgame]]、[[Backward Induction]]、[[Backward Induction Procedure]]、[[Subgame Perfect Nash Equilibrium]]。
+5. 最后看常见模型：[[Cournot Competition]]、[[Bertrand Competition]]、[[Repeated Games]]、[[Bayesian Game]]、[[Perfect Bayesian Equilibrium]]。
+
+## 解题入口
+
+- [[Game Theory Problem Solving Map]]：不知道从哪里下手时先看它。
+- [[Game Theory]]：博弈论适用问题、假设和边界。
+- [[Finding Pure Strategy Nash Equilibria]]：矩阵博弈找纯策略均衡。
+- [[Finding Mixed Strategy Nash Equilibrium]]：没有纯策略均衡或题目要求概率时使用。
+- [[Backward Induction Procedure]]：博弈树、进入威慑、千足虫等动态博弈使用。
 
 ## 核心概念
 
-[[strategies|策略]]
-[[player|局中人]]
-[[strategic-form Games|策略式表达]]
+- [[player]]：谁在决策。
+- [[strategies]]：每个玩家可选的完整行动方案。
+- [[payoffs]]：每个策略组合下每个玩家得到的收益。
+- [[Nash Equilibrium]]：没有人愿意单独偏离的策略组合。
+- [[Best-Reply Function]]：给定对方策略时自己的最优反应集合。
 
-## 策略均衡
+## 动态博弈
 
-### 纳什均衡
-[[Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
-[[Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
+- [[Extensive-form Game]]：用博弈树表示顺序、历史和信息。
+- [[Information Set]]：玩家在决策点知道什么。
+- [[Subgame]]：不切割信息集的后续博弈。
+- [[Subgame Perfect Nash Equilibrium]]：每个子博弈里都仍是纳什均衡，用来排除不可信威胁。
 
-### 决策分析
-[[Best-Reply Function|最优反应函数]]
-[[Rationalisability|可理性化]]
-[[Strictly Dominated Strategy|严格占优策略]]
+## 课程笔记入口
 
-## 博弈类型
+- [[01_导论]]
+- [[02_初步认识博弈]]
+- [[03_策略式博弈]]
+- [[04_案例（囚徒困境与纳什均衡）]]
+- [[06_扩展性博弈]]
+- [[07_子博弈不完全信息]]
 
-### 完全信息博弈
-[[Repeated Games|重复博弈]]
-[[Cournot Competition|古诺竞争]]
-[[Bertrand Competition|Bertrand竞争]]
-[[Hotelling Model|Hotelling模型]]
+## 复习顺序
 
-### 不完全信息博弈
-[[Bayesian Game|贝叶斯博弈]]
-[[Perfect Bayesian Equilibrium|完美贝叶斯均衡]]
-[[Information Set|信息集]]
-
-### 动态博弈
-[[Subgame|子博弈]]
-[[Backward Induction|逆向归纳法]]
-[[Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]
-
-## 信号传递
-
-[[Separating Equilibrium|分离均衡]]
-[[Pooling Equilibrium|混合均衡]]
-
-## 微观经济分析
-
-[[Edgeworth Box|埃奇沃斯框图]]
-[[Contract Curve|契约曲线]]
-[[Pareto|帕累托]]
-[[payoffs|效用]]
-[[MRS|MRS边际替代率]]
-[[MRT|MRT边际转换率]]
-[[Public Goods|公共物品]]
-[[Common Resources|公共资源]]
-[[Club Goods|俱乐部物品]]
-[[Externality|外部性]]
-[[Coase Theorem|科斯定理]]
-[[Pigouvian Tax|庇古税]]
-
-## 课程笔记
-[[Game Theory|01_博弈论基础]]
-- [[Game Theory|01_博弈论基础]]
-- [[Nash Equilibrium|02_纳什均衡]]
-- [[Repeated Games and Mixed Strategies|03_重复博弈与混合策略]]
+1. 能写出策略式三要素 $G=(N,(S_i),(u_i))$。
+2. 能区分 strategy、action、strategy profile、payoff。
+3. 能用下划线法找纯策略 NE。
+4. 能用无差异条件解混合策略 NE。
+5. 能解释 SPNE 为什么比 NE 更强。
+6. 能用逆向归纳排除不可信威胁。
 
 ## 课程笔记反链
 

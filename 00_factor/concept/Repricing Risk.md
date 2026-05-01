@@ -1,22 +1,42 @@
 ---
 aliases:
-- 重新定价风险
 - Repricing Risk
+- 重新定价风险
+- maturity mismatch risk
 tags:
-- 金融
 - concept
+- risk-management
+- banking
 ---
-这是最主要的利率风险类型 。它源自银行资产、负债及表外业务在**重新定价时点或到期日**上的不匹配。当某一期间内利率敏感资产与利率敏感负债的重新定价金额不相等时（即存在“重新定价缺口”），利率变动就会使银行收益受到影响 。例如，70年代末80年代初美国储蓄与贷款协会（S&L）的危机，就是由于资产负债重新定价期限错配遇上利率飙升，导致巨额损失。
+# Repricing Risk
 
-## 课程笔记反链
+## 先记一句话
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+Repricing Risk 来自资产和负债到期或重新定价的时间不匹配。
+
+## 它是什么
+
+银行的资产和负债即使总规模匹配，只要重新定价时点不同，利率变化就会先影响一边，导致净利息收入或经济价值波动。
+
+## 解决什么判断
+
+它回答：“利率变化后，资产收益和负债成本是不是同步调整？”
+
+## 最小例子
+
+银行用短期存款支持长期固定利率贷款。若市场利率上升，存款成本先上升，贷款收益暂时不变，利差被压缩。
+
+## 易混点
+
+- Repricing Risk 看时点错配；[[Basis Risk]] 看利率基准或调整幅度不一致。
+- 重新定价缺口主要影响净利息收入；经济价值敏感度还要看 [[Duration Gap]]。
+
+## 来自课程位置
+
+- [[09_利率风险]]
+
+## 关联卡片
+
+- [[Interest Rate Sensitivity Gap]]
+- [[Duration Gap]]
+- [[Basis Risk]]

@@ -1,149 +1,106 @@
 ---
 aliases:
-- ARMA模型定阶步骤
-- ARMA模型识别步骤
-- ARMA
-- ARMA模型识别
 - ARMA Model Identification Steps
+- ARMA模型识别步骤
+- ARMA模型定阶步骤
+- ARMA order identification
 tags:
 - procedure
-- 06_时间序列分析
-- 经济
+- 时间序列
 ---
-# ARMA模型识别步骤
+# ARMA Model Identification Steps
 
-## 适用场景
+## 这张卡什么时候用
 
-识别ARMA(p,q)模型的自回归阶数 $p$ 和移动平均阶数 $q$，用于平稳时间序列建模。
+当你有一条看起来已经平稳的单变量时间序列，要决定用 AR、MA 还是 ARMA，以及阶数 $p,q$ 时，用这张卡。
 
-## 所需数据/条件
+## 输入
 
-- $平稳时间序列 {y_t}_{t=1}^T$
-- 样本自相关函数（ACF）和偏自相关函数（PACF）
+- 序列 $y_t$；
+- 平稳性检验结果；
+- ACF/PACF 图；
+- 候选模型的 AIC/BIC；
+- 残差诊断结果。
 
-## 计算步骤
+## 输出
 
-### 步骤 1：检验序列平稳性
+- 一个候选 ARMA$(p,q)$ 模型；
+- 或者明确结论：序列不平稳，需要先差分/去趋势/做协整分析。
 
-使用ADF检验或PP检验确认序列平稳。
+## Step 1. 先确认序列平稳
 
-**不平稳时**：
-- 进行差分：$\Delta y_t = y_t - y_{t-1}$
-- 对差分序列重复检验，直到平稳
+先看图，再用 [[Unit Root Test]]。
 
-**注意点**：ARMA建模要求序列平稳，非平稳序列需先差分至平稳。
+如果序列非平稳：
 
-### 步骤 2：绘制ACF和PACF图
+- 单变量预测：转 [[ARIMA]]；
+- 多变量长期关系：转 [[Cointegration]]；
+- 不要直接拿水平序列做 ARMA。
 
-计算样本ACF和PACF，并绘制到滞后 $k = 0, 1, \ldots, K$：
+## Step 2. 看 ACF/PACF 做初筛
 
-**ACF公式**：
-$\hat{\rho}_k = \frac{\sum_{t=k+1}^T (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_{t=1}^T (y_t - \bar{y})^2}$
+| 图像 | 候选模型 |
+| --- | --- |
+| ACF 拖尾，PACF 截尾 | AR(p) |
+| ACF 截尾，PACF 拖尾 | MA(q) |
+| ACF 拖尾，PACF 拖尾 | ARMA(p,q) |
 
-**PACF计算**：
-通过估计辅助回归 $y_t = \phi_{k1}y_{t-1} + \cdots + \phi_{kk}y_{t-k} + e_t$ 得到 $\hat{\phi}_{kk}$
+这里的“截尾”是理论图像。样本中要结合显著性界限，不要机械读图。
 
-**注意点**：K 通常取样本量的10%-20%，如 K = 20。
+## Step 3. 估计几个候选模型
 
-### 步骤 3：观察ACF模式
+不要只估一个模型。
 
-根据ACF图形特征初步判断：
+根据 ACF/PACF 提出一组小范围候选，比如：
 
-| ACF模式 | 可能模型 | 说明 |
-|---------|---------|------|
-| 截尾（q阶后为0） | MA(q) | ACF在 q 处突然降为0 |
-| 拖尾（指数衰减） | AR(p) 或 ARMA(p,q) | ACF缓慢衰减至0 |
-| 阻尼阻尼衰减 | AR(p) | 正负交替衰减 |
+- AR(1), AR(2)；
+- MA(1), MA(2)；
+- ARMA(1,1)。
 
-**注意点**：纯AR(p)的ACF拖尾，纯MA(q)的ACF截尾。
+然后分别估计。
 
-### 步骤 4：观察PACF模式
+## Step 4. 用信息准则比较
 
-根据PACF图形特征初步判断：
+比较 [[AIC]] / [[BIC]]。
 
-| PACF模式 | 可能模型 | 说明 |
-|---------|---------|------|
-| 截尾（p阶后为0） | AR(p) | PACF在 p 处突然降为0 |
-| 拖尾 | MA(q) 或 ARMA(p,q) | PACF缓慢衰减至0 |
+- AIC 通常更愿意保留复杂模型；
+- BIC 惩罚更重，更偏向简洁模型。
 
-**注意点**：AR(p)模型的PACF在 p 阶处截尾是关键识别特征。
+如果两个模型表现接近，优先选更容易解释、残差更干净的模型。
 
-### 步骤 5：初步定阶
+## Step 5. 做残差诊断
 
-根据ACF和PACF模式组合确定 (p,q)：
+对残差做：
 
-**纯AR(p)**：
-- ACF拖尾（缓慢衰减）
-- PACF截尾（在 p 阶后为0）
+- [[White Noise Test]]；
+- [[Ljung-Box Test]]；
+- 残差 ACF；
+- 必要时看残差平方的 ARCH 效应。
 
-**纯MA(q)**：
-- ACF截尾（在 q 阶后为0）
-- PACF拖尾（缓慢衰减）
+如果残差仍有自相关，回到 Step 2 重新定阶。
 
-**ARMA(p,q)**：
-- ACF和PACF都拖尾
-- 需要尝试不同组合
+如果残差本身白噪声，但残差平方有结构，均值模型可能够了，方差模型要转 [[GARCH]]。
 
-**注意点**：实际数据常为ARMA(p,q)而非纯AR或纯MA。
+## 常见错误
 
-### 步骤 6：估计候选模型
+- 忘记先检验平稳性。
+- 只靠 ACF/PACF 定阶，不做信息准则和残差诊断。
+- 过度拟合：为了降低残差而加很多阶。
+- 把 ARMA 当成波动率模型；它主要描述条件均值。
 
-对候选 $(p_1, q_1)$、$(p_2, q_2)$、$\ldots$ 模型进行参数估计：
-- 纯AR部分：使用OLS
-- 含MA部分：使用MLE或数值方法
+## 来自课程位置
 
-**注意点**：MA部分需用MLE，OLS无法直接估计。
+- [[03_平稳时间序列模型#0.回忆用|时间序列 03：ARMA 识别回忆]]
+- [[03_平稳时间序列模型#3. ACF|时间序列 03：ACF/PACF 与定阶]]
 
-### 步骤 7：使用信息准则比较模型
+## 关联卡片
 
-计算各候选模型的AIC或SBC：
-
-$ \text{AIC} = T \ln(\hat{\sigma}^2) + 2(p+q) $
-$ \text{SBC} = T \ln(\hat{\sigma}^2) + (p+q) \ln T $
-
-其中 $\hat{\sigma}^2$ 为残差方差估计。
-
-**选择准则**：选择AIC或SBC最小的模型。
-
-**注意点**：SBC通常选择更简单的模型（惩罚更重）。
-
-### 步骤 8：诊断检验
-
-对选定模型进行残差诊断：
-
-1. **残差ACF检验**：使用Ljung-Box检验检验残差是否为白噪声
-2. **残差正态性**：使用Jarque-Bera检验
-3. **残差独立性**：检查Durbin-Watson统计量
-
-**注意点**：若残差不满足白噪声假设，需重新定阶。
-
-## 关键公式
-
-**样本ACF**：
-$\hat{\rho}_k = \frac{\sum_{t=k+1}^T (y_t - \bar{y})(y_{t-k} - \bar{y})}{\sum_{t=1}^T (y_t - \bar{y})^2}$
-
-**样本PACF（回归法）**：
-通过 $y_t = \phi_{k1}y_{t-1} + \cdots + \phi_{kk}y_{t-k} + e_t$ 估计 $\hat{\phi}_{kk}$
-
-**AIC信息准则**：
-$ \text{AIC} = T \ln(\sum \hat{\epsilon}_t^2 / T) + 2 \times \text{参数个数} $
-
-**Ljung-Box Q统计量**：
-$ Q = T(T+2) \sum_{k=1}^s \frac{\hat{\rho}_k^2}{T-k} $
-
-## 常见问题
-
-1. **阶数不确定**：ACF拖尾和截尾可能不明显，需尝试多个组合。
-2. **过度拟合**：增加p和q总降低残差，但导致过拟合。
-3. **小样本偏差**：小样本下ACF和PACF估计不稳定。
-4. **非平稳序列**：非平稳序列的ACF和PACF行为异常。
-
-## 相关概念
-[[Autocorrelation Function|自相关函数]]
-[[Partial Autocorrelation Function|偏自相关函数]]
-[[Stationary Time Series|平稳时间序列]]
-[[GARCH Model Estimation Steps|GARCH模型估计步骤]]
-[[Box-Jenkins Method|Box-Jenkins方法]]
+- [[ARMA]]
+- [[Autocorrelation Function]]
+- [[Partial Autocorrelation Function]]
+- [[Box-Jenkins Method]]
+- [[White Noise Test]]
+- [[GARCH Model Estimation Steps]]
 
 ## 课程笔记反链
 

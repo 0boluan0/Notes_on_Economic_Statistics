@@ -1,63 +1,56 @@
 ---
 aliases:
-- 最优反应函数
-- Best Response Function
 - Best-Reply Function
-- Best
+- Best Response Function
+- Best Reply
+- 最优反应函数
 tags:
 - concept
-- game theory
+- game-theory
 ---
-# 最优反应函数
+# Best-Reply Function
 
->[!note] 定义
->
-> 最优反应函数描述了当对手选择某个特定策略时，玩家应该如何选择策略来最大化自己的收益。
->
-## 形式化表示
+## 一句话记忆
 
-对于玩家 1，最优反应函数 $BR_1$($s_2$) 返回在对手选择策略 $s_2$ 时，玩家 1 的所有最优策略：
+最优反应函数给出：对手这么选时，我哪些策略最优。
 
-$ BR_1(s_2) = \arg\max_{s_1 \in S_1} u_1(s_1, s_2) $
+## 它是什么
 
-其中：
-- $s_1$, $s_2$ 是玩家的策略
-- $u_1$ 是玩家 1 的收益函数
-- $S_1$ 是玩家 1 的策略集合
+给定对手策略 $s_{-i}$，玩家 $i$ 的最优反应集合为：
 
-## 性质
+$$
+BR_i(s_{-i})=\arg\max_{s_i\in S_i}u_i(s_i,s_{-i})
+$$
 
-1. **多重最优**：最优反应函数可能返回多个策略（有多个策略带来相同的最大收益）
+## 解决什么判断
 
-2. **单调性**：在某些博弈中，最优反应函数是单调的
+- 某个策略是否是对对手策略的最优反应。
+- 两个玩家的最优反应是否相交。
+- 如何从反应函数图或 payoff matrix 找纳什均衡。
 
-3. **连续性**：当策略空间连续时，最优反应函数可能是连续的
+## 最小例子
 
-## 应用
+若列玩家选 $L$ 时，行玩家选 $T$ 的收益高于选 $B$，则 $T\in BR_{\text{row}}(L)$。
 
-### 寻找纳什均衡
-- 纳什均衡就是所有玩家的最优反应函数的交点
-- $当 BR_1(s_2*) = s_1* 且 BR_2(s_1*) = s_2* 时，(s_1*, s_2*) 是纳什均衡$
+## 易混点
 
-### 混合策略求解
-- 通过构建最优反应函数图形
-- 函数交点即为混合策略纳什均衡
+- 最优反应可以是集合，不一定只有一个策略。
+- 纳什均衡要求所有玩家同时处在彼此的最优反应上。
+- 连续策略下 best reply 可能是一条函数或对应关系。
 
-## 相关概念
+## 来自课程位置
 
-- [[Nash Equilibrium|纳什均衡]]
-- [[Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
-- [[Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
-- [[Cournot Competition|古诺竞争]]
+- [[03_策略式博弈#定义 8（最优反应函数, Best-reply Function）]]
+- [[04_案例（囚徒困境与纳什均衡）#最优反应函数求解纳什均衡]]
 
->[!example] 典型例子
->
-> ### 古诺竞争
-> $ q_1^* = \max \left\{0, \frac{a - c - q_2}{2}\right\} $
->
-> ### 性别博弈
-> 最优反应函数在某些区间上是多重最优的
->
+## 关联卡片
+
+- [[Nash Equilibrium]]
+- [[Finding Pure Strategy Nash Equilibria]]
+- [[Finding Mixed Strategy Nash Equilibrium]]
+- [[Cournot Competition]]
+- [[Game Theory-hub]]
+
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

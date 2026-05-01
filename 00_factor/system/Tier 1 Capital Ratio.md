@@ -1,67 +1,61 @@
 ---
 aliases:
-- 核心一级资本比率
-- 一级资本比率
-- Tier 1 Capital
-- AT1
-- CET1
 - Tier 1 Capital Ratio
+- Tier 1 Capital
+- CET1
+- AT1
+- 一级资本比率
+- 核心一级资本比率
 tags:
 - system
-- 金融机构与风险管理
-- 金融
+- banking
+- regulation
 ---
-# 一级资本比率
+# Tier 1 Capital Ratio
 
-## 诊断目的
+## 诊断目标
 
-衡量银行高质量资本（包括普通股、留存收益）对风险资产的覆盖能力，反映银行吸收损失的核心实力。
+判断银行最能吸收损失的高质量资本是否充足。
 
-## 计算方法
+## 资本构成
 
-$\text{Tier 1 比率} = \frac{\text{Tier 1 资本}}{\text{风险加权资产（RWA）}} \times 100\%$
+- CET1：普通股、留存收益等最高质量资本。
+- AT1：符合条件的附加一级资本工具。
 
-Tier 1 资本构成：
-- **CET1（普通股权一级资本）**：普通股、留存收益、少数股权
-- **AT1（附加一级资本）**：优先股、可赎回债券
+## 公式
 
-## 判断标准
+$$
+Tier\ 1\ Ratio=\frac{CET1+AT1}{RWA}
+$$
 
-| 指标 | Basel III 最低要求 | 健康水平 |
-|------|-------------------|----------|
-| Tier 1 比率 | ≥ 6.0% RWA | ≥ 10.0% RWA |
-| CET1 比率 | ≥ 4.5% RWA | ≥ 7.0% RWA |
+$$
+CET1\ Ratio=\frac{CET1}{RWA}
+$$
 
-### 监管信号灯
+## 快速阈值
 
-| 颜色 | 比率范围 | 含义 |
-|------|----------|------|
-| 绿色 | > 10% | 健康，资本充足 |
-| 黄色 | 6-10% | 需关注，考虑资本补充 |
-| 红色 | < 6% | 危险，需立即采取行动 |
+- CET1 最低 4.5% RWA。
+- Tier 1 最低 6.0% RWA。
+- 加资本留存缓冲后，CET1 常用目标为 7.0%。
 
-## 常见问题与对策
+## 诊断流程
 
-| 问题 | 可能原因 | 解决方案 |
-|------|----------|----------|
-| Tier 1 比率持续下降 | 亏损、分红过多、风险资产扩张 | 减少分红、增发股票、出售风险资产 |
-| AT1 占比过高 | 过度依赖混合资本工具 | 增加 CET1，改善资本质量 |
-| CET1 与 Tier 1 差距过大 | AT1 工具占比过高 | 限制 AT1 发行，增加股权资本 |
+1. 先看 CET1 是否达标。
+2. 再看 AT1 是否过度支撑 Tier 1。
+3. 与总资本充足率一起看资本质量。
 
-## 相关概念
-[[Basel Capital Adequacy Ratio|巴塞尔资本充足率]]
-[[Tier 1 Capital Ratio|CET1]]
-[[Tier 1 Capital Ratio|AT1]]
+## 常见风险点
 
-## 课程笔记反链
+- 分红和回购过多侵蚀 CET1。
+- RWA 快速扩张导致比率下降。
+- AT1 占比高，真实吸收损失能力弱于表面 Tier 1。
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+## 来自课程位置
+
+- [[16_巴塞尔协议]]
+
+## 关联卡片
+
+- [[Basel Capital Adequacy Ratio]]
+- [[Tier 2 Capital Ratio]]
+- [[Risk-Weighted Assets]]

@@ -1,61 +1,79 @@
 ---
 aliases:
-- 偏自相关函数
-- PACF
 - Partial Autocorrelation Function
+- PACF
+- partial autocorrelation
+- 偏自相关函数
 tags:
-- 时间序列
-- 统计学
 - concept
+- 时间序列
 ---
-偏自相关函数（Partial Autocorrelation Function, PACF）是指在控制中间值影响后，时间序列在特定滞后阶数上的相关程度。
+# Partial Autocorrelation Function
 
->[!note] 定义
->
-> 偏自相关函数 $\phi_{k,k}$ 是 $y_t$ 和 $y_{t-k}$ 在给定中间值 $y_{t-1}, y_{t-2}, \ldots, y_{t-k+1}$ 条件下的相关系数。
->
-## 与ACF的区别
+## 先记一句话
 
-- **ACF**：直接衡量 $y_t$ 和 $y_{t-k}$ 的相关性，包含中间值的间接影响
-- **PACF**：排除中间值影响后，$y_t$和y_{t-k}的直接相关性
+PACF 就是：**控制中间滞后以后，$y_t$ 和 $y_{t-k}$ 之间还剩多少直接相关**。
 
-## 在ARMA模型中的应用
+它和 ACF 的区别是：
 
-- **AR(p)过程**：PACF在p阶后截尾（为0）
-- **MA(q)过程**：PACF表现为拖尾（逐渐衰减）
-- **ARMA(p,q)过程**：PACF表现为拖尾
+- [[Autocorrelation Function]] 看总相关；
+- PACF 看直接相关。
 
-## Yule-Walker方程
+## 它是什么
 
-PACF可以通过求解Yule-Walker方程得到：
-
+滞后 $k$ 的 PACF 通常记作
 $$
-\begin{pmatrix}
-\rho_1 \\ \rho_2 \\ \vdots \\ \rho_k
-\end{pmatrix}
-=
-\begin{pmatrix}
-1 & \rho_1 & \cdots & \rho_{k-1} \\
-\rho_1 & 1 & \cdots & \rho_{k-2} \\
-\vdots & \vdots & \ddots & \vdots \\
-\rho_{k-1} & \rho_{k-2} & \cdots & 1
-\end{pmatrix}
-\begin{pmatrix}
-\phi_{k,1} \\ \phi_{k,2} \\ \vdots \\ \phi_{k,k}
-\end{pmatrix}
+\phi_{kk}.
 $$
 
-## 应用
+它可以理解为回归
+$$
+y_t=\phi_{k1}y_{t-1}+\cdots+\phi_{kk}y_{t-k}+e_t
+$$
+中最后一个系数 $\phi_{kk}$。
 
-1. 识别AR模型的阶数p
-2. 与ACF配合识别ARMA模型
+## 它解决什么判断
 
-## $source_notes$
+PACF 主要帮助识别 AR 阶数。
 
-- [[03_平稳时间序列模型#0.回忆用]]（PACF 计算提示）
-3. 评估时间序列的自相关结构
+| 模型 | PACF 图像 |
+| --- | --- |
+| AR(p) | p 阶后截尾 |
+| MA(q) | 拖尾 |
+| ARMA(p,q) | 拖尾 |
 
-相关链接: [[Autocorrelation Function|自相关函数]], [[ARMA]]
+所以看到 PACF 在某个阶数后明显不再显著，先怀疑 AR 模型。
+
+## 一个最小例子
+
+AR(1)
+$$
+y_t=a_0+a_1y_{t-1}+\varepsilon_t
+$$
+只有一阶直接影响。
+
+所以理论 PACF 在 1 阶后截尾。
+
+高阶滞后的 ACF 可能仍然不为 0，但那是通过 $y_{t-1}$ 传递出来的间接影响。
+
+## 常见误区
+
+- PACF 不是 ACF 的“修正版”，它回答的是不同问题。
+- 样本 PACF 不会完美截尾，要结合显著性界限和信息准则。
+- 纯 MA 模型的 PACF 通常拖尾，不要用 PACF 直接读 q。
+
+## 来自课程位置
+
+- [[03_平稳时间序列模型#0.回忆用|时间序列 03：PACF 回忆索引]]
+- [[03_平稳时间序列模型#3. ACF|时间序列 03：ACF/PACF 识别]]
+
+## 关联卡片
+
+- [[Autocorrelation Function]]
+- [[ARMA]]
+- [[Autoregressive Model]]
+- [[Yule-Walker equations]]
+- [[ARMA Model Identification Steps]]
 
 ## 课程笔记反链
 

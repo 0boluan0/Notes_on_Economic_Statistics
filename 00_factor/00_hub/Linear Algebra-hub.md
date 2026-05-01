@@ -29,11 +29,13 @@ tags:
 - 课程入口：[[02_Least Squares, Determinants and Eigenvalues#Session 2.1 Orthogonal vectors and subspaces|Unit II 正交主线]]
 - 先读这些卡：
   - [[Orthogonality]]
+  - [[Orthogonal Complement]]
   - [[Orthogonal Projection]]
   - [[Projection Matrix]]
   - [[Least Squares]]
   - [[Least Squares via Normal Equations]]
   - [[Gram-Schmidt Orthogonalization]]
+  - [[QR Decomposition]]
   - [[Orthogonal Matrix]]
 
 ### 主线 3：特征结构、标准形与矩阵分解
@@ -120,10 +122,12 @@ tags:
 
 ### 正交与逼近
 - [[Orthogonality]]
+- [[Orthogonal Complement]]
 - [[Orthogonal Projection]]
 - [[Projection Matrix]]
 - [[Least Squares]]
 - [[Orthogonal Matrix]]
+- [[QR Decomposition]]
 
 ### determinant / eigen / 分解
 - [[Determinant]]

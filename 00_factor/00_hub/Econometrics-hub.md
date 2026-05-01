@@ -1,111 +1,72 @@
 ---
 aliases:
-- 计量经济学
-- 计量经济学-hub
-- Econometrics
 - Econometrics-hub
+- Econometrics
+- 计量经济学
+- 计量经济学知识地图
 tags:
 - hub
-- 经济
+- econometrics
 ---
-## 计量经济学 Hub
+# Econometrics-hub
 
-## 核心概念
+## 这组卡解决什么
 
-[[OLS consistency|OLS估计量的一致性]]
-[[OLS unbiasedness|OLS估计量的无偏性]]
-[[Maximum Likelihood Estimation|极大似然估计]]
+计量经济学这组卡按“建模、估计、推断、诊断、识别”组织，而不是把所有检验堆在一起。复习时先看 OLS 主线，再看假设被破坏时该怎么诊断和修正。
 
-## 基础估计方法
+## 学习路线
 
-### 最小二乘法
-[[OLS consistency|OLS估计量的一致性]]
-[[OLS unbiasedness|OLS估计量的无偏性]]
-[[OLS Estimation Steps|OLS估计步骤]]
-[[Weighted Least Squares|加权最小二乘法(WLS)]]
+1. 回归模型入口：[[Linear Regression Model]]、[[OLS Basics]]、[[OLS Estimator]]、[[Residual]]。
+2. OLS 操作与证明：[[OLS Estimation Steps]]、[[OLS Normal Equations]]、[[OLS unbiasedness]]、[[OLS consistency]]、[[Gauss-Markov theorem]]。
+3. 推断工具：[[t Test]]、[[F-test]]、[[R-squared]]、[[AIC]]、[[BIC]]。
+4. 假设诊断：[[Heteroskedasticity]]、[[Autocorrelation]]、[[Multicollinearity]]、[[Endogeneity]]。
+5. 修正方法：[[White Robust Standard Errors]]、[[Newey-West]]、[[Weighted Least Squares]]、[[FGLS]]、[[Instrumental Variable]]、[[2SLS]]。
+6. 面板与准实验：[[Panel Data Model]]、[[Fixed Effects Model]]、[[Random Effects Model]]、[[DID-hub]]。
 
-### 极大似然估计
-[[Maximum Likelihood Estimation|极大似然估计]]
-[[MLE Estimation Steps|MLE估计步骤]]
+## OLS 与推断
 
-### 广义矩方法
-[[GMM]]
+- [[OLS Basics]]：OLS 是什么。
+- [[OLS Estimation Steps]]：怎样从数据算出回归结果。
+- [[OLS unbiasedness]]、[[OLS consistency]]、[[Gauss-Markov theorem]]：为什么在假设下成立。
+- [[t Test]]：单个系数检验。
+- [[F-test]]：联合限制或整体显著性检验。
+- [[R-squared]]：拟合优度，不等于因果可信度。
 
-## 联立方程模型
+## 回归诊断
 
-[[Simultaneous Equations Model|联立方程模型]]
-[[Reduced Form Equation|简约式方程]]
-[[Structural Equation|结构方程]]
-[[Parameter Identification|参数识别]]
-[[Just-identified|恰好识别]]
-[[Over-identified|过度识别]]
-[[Simultaneity Bias|联立性偏误]]
+- 异方差：[[Heteroscedasticity Diagnosis]]、[[White Test]]、[[White Robust Standard Errors]]、[[Weighted Least Squares]]。
+- 自相关：[[Autocorrelation Diagnosis]]、[[Durbin-Watson Statistic]]、[[Breusch-Godfrey Test]]、[[Newey-West]]、[[Cochrane-Orcutt]]。
+- 多重共线性：[[Multicollinearity]]、[[Variance Inflation Factor]]、[[Condition Index]]。
+- 异常值和影响点：[[Outlier Detection]]、[[Cook's Distance]]。
 
-## 异方差问题
+## 识别与内生性
 
-[[Heteroskedasticity|异方差]]
-[[White Test|怀特检验]]
-[[White Robust Standard Errors|White稳健标准误]]
-[[White Test Steps|White检验步骤]]
-[[Heteroscedasticity Diagnosis|异方差诊断]]
+- [[Endogeneity]]：解释变量与误差项相关。
+- [[Endogeneity Diagnosis]]：诊断来源和处理路径。
+- [[Instrumental Variable]] 与 [[2SLS]]：工具变量估计。
+- [[Hausman Test]]：比较估计量差异。
+- [[Simultaneity Bias]]、[[Simultaneous Equations Model]]、[[Parameter Identification]]：联立方程与识别。
 
-## 自相关问题
+## 离散选择与面板
 
-[[Autocorrelation|自相关]]
-[[Durbin-Watson Statistic|Durbin-Watson统计量]]
-[[Breusch-Godfrey Test|BG检验]]
-[[Cochrane-Orcutt]]
-[[Newey-West]]
-[[Autocorrelation Diagnosis|自相关诊断]]
+- [[Linear Probability Model]]
+- [[Logit Model]]
+- [[Probit Model]]
+- [[Discrete Choice Model]]
+- [[Panel Data Model]]
+- [[Fixed Effects Model]]
+- [[Random Effects Model]]
 
-## 多重共线性
+## 来自课程位置
 
-[[Multicollinearity|多重共线性]]
-[[00_factor/concept/Variance Inflation Factor|方差膨胀因子]]
-[[Condition Index|条件指数]]
-
-## 内生性问题
-
-[[Endogeneity|内生性]]
-[[Endogeneity Diagnosis|内生性诊断]]
-[[Instrumental Variable|工具变量]]
-[[2SLS]]
-[[Hausman Test|Hausman检验]]
-
-## 模型设定
-
-[[Model Misspecification|模型设定偏误]]
-[[Distributed Lag Model|分布滞后模型]]
-[[ADL]]
-[[Model Validation|模型验证]]
-[[Cook's Ratio|库克比率]]
-[[Outlier Detection|异常值检测]]
-
-## 检验统计量
-
-[[00_factor/concept/F-test|F检验]]
-[[R-squared|判定系数]]
-[[Residual|残差]]
-
-## 离散选择模型
-
-[[Logit Model|logit模型]]
-[[Probit Model|probit模型]]
-[[Linear Probability Model|LPM模型]]
-[[Discrete Choice Model|离散选择模型]]
-
-## 面板数据
-
-[[Panel Data Model|面板数据模型]]
-[[Fixed Effects Model|固定效应]]
-[[Random Effects Model|随机效应]]
-
-## 课程笔记
-
-- [[OLS Basics|01_OLS基础]]
-- [[Heteroskedasticity and Autocorrelation|02_异方差与自相关]]
-- [[Multicollinearity and Endogeneity|03_多重共线性与内生性]]
-- [[Simultaneous Equations Model|04_联立方程模型]]
+- [[02_一元线性回归]]
+- [[03_多元线性回归]]
+- [[05_多元回归模型的矩阵表达]]
+- [[06_多重共线性]]
+- [[07_异方差]]
+- [[08_自相关]]
+- [[09_联立方程模型(内生性)]]
+- [[13_面板数据模型]]
 
 ## 课程笔记反链
 

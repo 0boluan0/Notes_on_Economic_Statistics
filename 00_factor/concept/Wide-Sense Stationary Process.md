@@ -1,129 +1,92 @@
 ---
 aliases:
-- 宽平稳过程
-- WSS Process
-- Covariance Stationary Process
 - Wide-Sense Stationary Process
-- Wide
+- Weakly Stationary Process
+- Covariance Stationary Process
+- WSS
+- 宽平稳过程
+- 弱平稳过程
+- 协方差平稳过程
 tags:
 - concept
-- stochastic processes
+- 时间序列
+- 随机过程
 ---
-# 宽平稳过程
+# Wide-Sense Stationary Process
 
->[!note] 定义
->
-> 宽平稳过程（Wide-Sense Stationary Process）又称为协方差平稳过程，满足：
->
-> 1. **均值常数**：$E[X(t)] = m_X（常数，不随时间变化）$
-> 2. **相关函数仅与时间差有关**：$E[X(t)X(t+\tau)] = R_X(\tau)（仅取决于 τ）$
->
-> 数学表达：
->
-> $ E[X(t)] = \mu \quad (\text{常数}) $
-> $R_X(t_1, t_2) = R_X(t_2 - t_1) \quad (\text{仅与时间差有关})$
->
-## 相关函数性质
+## 先记一句话
 
-### 1. 非负性
+宽平稳就是：**只要求均值、方差和自协方差结构不随时间漂移的平稳性**。
 
-$ $R_X$(0) \ge 0 $
+时间序列课里说“平稳”，很多时候默认就是这个。
 
-自相关函数在零点的取值是非负的。
+## 它是什么
 
-### 2. 对称性
+过程 $\{y_t\}$ 宽平稳，如果：
 
-$R_X(\tau) = R_X(-\tau)$
+$$
+E(y_t)=\mu,
+$$
 
-自相关函数是偶函数，时间反转不影响相关性。
+$$
+\operatorname{Var}(y_t)=\sigma^2,
+$$
 
-### 3. 最大值
+并且
+$$
+\operatorname{Cov}(y_t,y_{t-s})=\gamma_s
+$$
+只依赖滞后 $s$，不依赖具体时间 $t$。
 
-$ |$R_X$(\tau)| \le $R_X$(0) $
+## 一个最小例子
 
-自相关函数在零点取最大值。
+白噪声是宽平稳。
 
-### 4. 非负定性
+AR(1)
+$$
+y_t=a_0+a_1y_{t-1}+\varepsilon_t
+$$
+在
+$$
+|a_1|<1
+$$
+时是宽平稳。
 
-对于任意实数 $t_1$, $t_2$, ..., $t_n$ 和复数 $a_1$, $a_2$, ..., $a_n$：
+## 它在题里负责什么
 
-$\sum_{i=1}^n \sum_{j=1}^n R_X(t_i - t_j) a_i \overline{a_j} \ge 0$
+- 判断 [[ARMA]] 是否可直接建模。
+- 让 [[Autocorrelation Function]] 只写成 $\rho_k$，而不是依赖 $t$ 的相关结构。
+- 支撑 Yule-Walker 方程和 Box-Jenkins 识别。
 
-### 5. 周期性
+## 和严平稳的关系
 
-对于周期为 T 的平稳过程：
+宽平稳只看二阶矩。
 
-$R_X(\tau) = R_X(\tau + T)$
+严平稳看整个分布。
 
-## 联合平稳过程
+所以：
 
->[!note] 定义
->
-> 若两个平稳过程 X(t) 和 Y(t) 的互相关函数和自相关函数仅与时间差 τ 有关，则称它们是联合平稳随机过程。
->
-### 互相关函数
+- 严平稳 + 二阶矩存在，可以推出宽平稳；
+- 宽平稳一般推不出严平稳；
+- Gaussian 情形下，两者等价。
 
-$ R_{XY}(\tau) = E[X(t)Y(t+\tau)] $
+## 常见误区
 
-衡量两个随机过程在不同时间点的相关程度。
+- 宽平稳不是“图像水平”这么粗略，而是三个数学条件。
+- 自协方差只依赖滞后，不是说自协方差必须为 0。
+- ARCH/GARCH 残差可以条件方差变化，但仍可能在无条件意义下有稳定二阶矩，要分清条件与无条件。
 
-### 性质
+## 来自课程位置
 
-1. **互相关函数幅值界限**：
+- [[03_平稳时间序列模型#2.1 平稳性定义|时间序列 03：弱平稳定义]]
 
-$ |R_{XY}(\tau)|^2 \le R_{XX}(0)R_{YY}(0) $
+## 关联卡片
 
-2. **互相关函数对称性**：
-
-$ R_{XY}(-\tau) = R_{YX}(\tau) $
-
-## 与严平稳过程的关系
-
-### 严平稳
-
-随机过程的有限维分布不随时间的推移而改变。
-
-### 两者关系：
-
-- **严平稳 ⇒ 宽平稳**（如果二阶矩存在）
-- **正态过程**：宽平稳 ⇔ 严平稳
-
-对于正态随机过程，宽平稳性和严平稳性是等价的。
-
-## 各态历经性（Ergodicity）
-
->[!note] 定义
->
-> 平稳随机过程的统计特性可以用一个样本函数的时间平均来代替。
->
-### 均值各态历经性
-
-$\lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T X(t) dt = m_X$
-
-时间平均等于统计平均。
-
-### 相关函数各态历经性
-
-$\lim_{T \to \infty} \frac{1}{2T} \int_{-T}^T |R_X(\tau) - m_X^2| d\tau = 0$
-
-## 应用
-
-1. **信号处理**：平稳信号的分析和滤波
-2. **时间序列**：经济、金融数据建模
-3. **通信系统**：噪声分析
-4. **系统识别**：系统特性分析
-
-## 相关概念
-
-- [[Strict-Sense Stationary Process|严平稳过程]]
-- [[Autocorrelation Function|自相关函数]]
-- [[Power Spectral Density|功率谱密度]]
-
-## 重要性
-
-- 简化了随机过程的统计分析
-- 允许使用时间平均代替统计平均
-- 是许多时间序列分析模型的基础假设
+- [[Stationarity]]
+- [[Strict-Sense Stationary Process]]
+- [[Autocorrelation Function]]
+- [[AR(1) stationarity]]
+- [[ARMA]]
 
 ## 课程笔记反链
 

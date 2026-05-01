@@ -1,78 +1,56 @@
 ---
 aliases:
+- White Robust Standard Errors
+- White Robust SE
+- HC standard errors
 - HC标准误
 - White稳健标准误
 - 稳健标准误
-- White Robust Standard Errors
-- White Robust SE
 tags:
 - system
-- 计量经济学
+- econometrics
 ---
-# White 稳健标准误
+# White Robust Standard Errors
 
-## 诊断目的
+## 诊断目标
 
-在异方差存在的情况下，提供一致的协方差矩阵估计，确保即使同方差假设不成立，t检验和F检验仍然渐近有效。
+在存在未知形式异方差时，不改变 OLS 系数，只把协方差矩阵估计改成异方差一致形式。
 
-## 计算方法
+## 核心公式
 
-### White 异方差一致协方差矩阵（HC0）
+HC0 形式：
 
-$Var(\hat{\beta})_{White} = (X'X)^{-1} \left[ \sum_{i=1}^n x_i x_i' e_i^2 \right] (X'X)^{-1}$
+$$
+\widehat{Var}_{HC0}(\hat\beta)
+=(X'X)^{-1}\left(\sum_{i=1}^n x_ix_i'\hat u_i^2\right)(X'X)^{-1}
+$$
 
-### 改进的White估计量
+常用软件会使用 HC1、HC2、HC3 等小样本或杠杆值修正。
 
-| 类型 | 公式 | 特点 |
-|------|------|------|
-| HC0 | $(X'X)^{-1} \left(\sum x_i x_i' e_i^2\right) (X'X)^{-1}$ | 基本White估计 |
-| HC1 | $\frac{n}{n-k}(X'X)^{-1} \left(\sum x_i x_i' e_i^2\right) (X'X)^{-1}$ | 小样本调整 |
-| HC2 | $(X'X)^{-1} \left(\sum \frac{n}{n-k}(1-h_{ii})^{-1} x_i x_i' e_i^2\right) (X'X)^{-1}$ | 杠杆值调整 |
-| HC3 | $(X'X)^{-1} \left(\sum (1-h_{ii})^{-2} x_i x_i' e_i^2\right) (X'X)^{-1}$ | 更激进调整 |
+## 什么时候用
 
-其中 $h_{ii}$ 是帽子矩阵对角元素。
+- 横截面数据存在异方差。
+- 不知道可靠的方差权重。
+- 主要目标是让 t/F 推断更可信。
 
-## 适用场景
+## 不解决什么
 
-| 场景 | White标准误适用性 |
-|------|------------------|
-| 已知异方差模式 | 更好的方法是WLS |
-| 未知异方差模式 | White标准误是最佳选择 |
-| 样本量小 | HC2或HC3更稳健 |
-| 样本量大 | HC1即可 |
+- 不修正系数估计本身。
+- 不处理 [[Endogeneity]]。
+- 不处理时间序列自相关；这时看 [[Newey-West]]。
+- 不让 OLS 重新变成最有效估计。
 
-## 判断标准
+## 报告方式
 
-比较OLS标准误与White标准误：
+报告回归系数时说明使用 heteroskedasticity-robust standard errors。若结论依赖标准误选择，应把经典标准误与稳健标准误差异说清楚。
 
-| 情况 | White标准误 vs OLS标准误 | 含义 |
-|------|------------------------|------|
-| 显著较大 | White > OLS | OLS低估标准误 |
-| 接近 | White ≈ OLS | 异方差不严重 |
-| 更小 | White < OLS | 异方差使OLS标准误过大 |
+## 来自课程位置
 
-## 常见问题与对策
+- [[07_异方差]]
 
-| 问题 | 可能原因 | 解决方案 |
-|------|----------|----------|
-| White标准误与OLS标准误差异大 | 严重异方差 | 报告两种结果、考虑模型变换 |
-| 仍然发现问题 | 异方差伴随自相关 | 使用Newey-West HAC标准误 |
-| 小样本下结果不稳定 | 样本量小 | 使用HC2或HC3、或自助法（Bootstrap） |
+## 关联卡片
 
-## 相关概念
-[[Heteroscedasticity Diagnosis|异方差诊断]]
-[[Newey-West]]
-[[FGLS]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Heteroskedasticity]]
+- [[Heteroscedasticity Diagnosis]]
+- [[White Test]]
+- [[Newey-West]]

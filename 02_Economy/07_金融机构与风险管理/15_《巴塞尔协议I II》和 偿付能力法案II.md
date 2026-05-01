@@ -118,13 +118,13 @@ VaR × mc
 |**50 %**|住宅抵押贷款|0.50|
 |**100 %**|企业贷款、股权、非常驻主权债|1.00|
 
-_表外项目_ 先乘 **转换系数 ([[Credit Risk|Credit]] Conversion [[Factor Analysis|Factor]], CCF)** 再乘风险权重，例如：
+_表外项目_ 先乘 **[[Credit Conversion Factor|信用转换系数（CCF）]]** 再乘风险权重，例如：
 
 - 授信承诺 ≤ 1 年：CCF = 20 %
 - OTC 利率互换：CCF = 0.0 %（早期免资本）
 
-[[库克比率]]
-$$\text{[[Cook's Ratio|库克比率]]}=\frac{\text{资本（一级资本+二级资本）}}{\text{[[Risk-Weighted Assets|风险加权资产]]（[[Risk-Weighted Assets|RWA]]）}}$$ 
+[[Cooke Ratio|库克比率]]
+$$\text{[[Cooke Ratio|库克比率]]}=\frac{\text{资本（一级资本+二级资本）}}{\text{[[Risk-Weighted Assets|风险加权资产]]（[[Risk-Weighted Assets|RWA]]）}}$$
 # 3.G30
 
 |**年份**|**事件**|**缺口暴露**|

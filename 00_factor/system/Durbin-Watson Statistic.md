@@ -1,84 +1,57 @@
 ---
 aliases:
-- DW检验
-- Durbin-Watson统计量
-- Durbin
 - Durbin-Watson Statistic
+- Durbin-Watson统计量
+- DW test
+- DW检验
 tags:
 - system
-- 计量经济学
-- 数学
+- econometrics
 ---
-# Durbin-Watson 统量
+# Durbin-Watson Statistic
 
-## 诊断目的
+## 诊断目标
 
-检验时间序列回归模型的一阶自相关性，判断残差是否存在序列相关。
+Durbin-Watson 统计量用于检验线性回归残差的一阶自相关。
 
-## 计算方法
+## 公式
 
-$DW = \frac{\sum_{t=2}^n (e_t - e_{t-1})^2}{\sum_{t=1}^n e_t^2}$
+$$
+DW=\frac{\sum_{t=2}^n(\hat u_t-\hat u_{t-1})^2}{\sum_{t=1}^n\hat u_t^2}
+$$
 
-### 与自相关系数的关系
+近似关系：
 
-$DW \approx 2(1 - \hat{\rho})$
+$$
+DW\approx 2(1-\hat\rho)
+$$
 
-其中 $\hat{\rho}$ 是一阶自相关系数的估计值。
+## 快速解释
 
-## 判断标准
+- $DW\approx 2$：无明显一阶自相关。
+- $DW<2$：可能正自相关。
+- $DW>2$：可能负自相关。
 
-| DW值范围 | 自相关性 | 诊断 |
-|----------|----------|------|
-$| 0 | 完全正自相关（\rho=1） | 严重问题 |$
-| 0-2 | 正自相关 | 存在正自相关 |
-$| 2 | 无自相关（\rho=0） | 理想情况 |$
-| 2-4 | 负自相关 | 存在负自相关 |
-| 4 | 完全负自相关（$\rho=-1$） | 严重问题 |
+正式判断应查 $d_L,d_U$ 临界值表。
 
-### DW检验临界值
+## 适用边界
 
-查DW检验表，根据样本量n和解释变量个数k获得 $d_L$（下限）和 $d_U$（上限）：
+- 模型应含截距。
+- 不适合含滞后因变量的模型。
+- 主要检验一阶自相关，不适合复杂高阶结构。
 
-| 区域 | 条件 | 判断 |
-|------|------|------|
-| 正自相关 | 0 < DW < d_L | 拒绝无自相关假设 |
-| 不确定 | $d_L \leq DW \leq d_U$ | 无法确定 |
-| 无自相关 | $d_U < DW < 4-d_U$ | 不拒绝无自相关假设 |
-| 不确定 | $4-d_U \leq DW \leq 4-d_L$ | 无法确定 |
-| 负自相关 | $4-d_L < DW < 4$ | 拒绝无自相关假设 |
+## 失败模式
 
-## DW检验适用条件
+- 只根据 $DW<2$ 就下结论，忽略不确定区间。
+- 动态模型仍用 DW，导致检验无效。
+- 高阶自相关漏检，应改用 [[Breusch-Godfrey Test]]。
 
-1. 回归模型包含截距项
-2. 解释变量非随机
-3. 随机误差项服从正态分布
-4. 没有滞后因变量作为解释变量
-5. 样本数据完整，无缺失值
+## 来自课程位置
 
-## 常见问题与对策
+- [[08_自相关]]
 
-| 问题 | 可能原因 | 解决方案 |
-|------|----------|----------|
-| DW值显著小于2 | 正自相关、设定遗漏 | 使用Cochrane-Orcutt迭代、Newey-West标准误 |
-| DW值显著大于2 | 负自相关、过度差分 | 检查模型设定、考虑是否过度差分 |
-| DW检验无结论 | 滞后变量、样本太小 | 使用其他自相关检验（BG检验、LM检验） |
-| 滞后因变量导致DW失效 | 模型存在内生性 | 使用工具变量法、估计动态面板模型 |
+## 关联卡片
 
-## 相关概念
-[[Autocorrelation|自相关]]
-[[Breusch-Godfrey Test|BG检验]]
-[[Q Test|Q检验]]
-[[Newey-West]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Autocorrelation]]
+- [[Autocorrelation Diagnosis]]
+- [[Breusch-Godfrey Test]]

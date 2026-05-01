@@ -1,116 +1,97 @@
 ---
 aliases:
+- Historical Simulation VaR
 - 历史模拟法VaR
 - 历史模拟法VaR计算
-- VaR
-- Historical Simulation VaR
 tags:
 - procedure
-- 07_金融机构与风险管理
+- risk-management
 ---
-# 历史模拟法VaR计算
+# Historical Simulation VaR
 
-## 适用场景
+## 这张卡什么时候用
 
-当不需要对收益分布做特定假设，希望直接利用历史数据反映真实分布（包括厚尾）时使用。适用于任意资产组合，包括含非线性衍生品的组合。
+题目给出历史收益率、历史损益或历史价格情景，并要求用经验分布取 VaR 分位数时，用这张卡。方法概念见 [[Historical Simulation Method]]。
 
-## 所需数据/条件
+## 输入
 
-- 过去 $N$ 天的历史价格或收益率数据（通常至少250天）
-- 当前投资组合权重/持仓结构
-- 置信水平 $\alpha$（如99%）
-- 持有期 $T$
+- 当前组合价值或当前持仓。
+- $N$ 个历史情景下的收益率、价格变化或组合损益。
+- [[Confidence Level|置信水平]] $\alpha$。
+- [[Holding Period|持有期]] $h$。
+- 是否需要对非线性组合重新定价。
 
-## 计算步骤
+## 输出
 
-### 步骤 1：收集历史数据
+- $\operatorname{VaR}_{\alpha,h}$。
+- 可选：[[ES]]。
+- 可选：用于 [[Backtesting|回测]] 的每日 VaR 序列。
 
-收集各资产过去 $N$ 天的历史数据：
-- 价格序列 $S_{i,0}, S_{i,1}, \dots, S_{i,N}$（资产 $i$）
-- 或直接使用收益率序列 $r_{i,t} = \ln(S_{i,t}/S_{i,t-1})$
+## Step 1：把历史情景变成组合损益
 
-**注意点**：数据量 $N$ 越大，VaR估计越稳定，但可能包含过时信息。
+线性组合可以用权重和收益率近似：
 
-### 步骤 2：构建历史收益率矩阵
-
-将历史收益率整理为 $N \times M$ 矩阵：
 $$
-R =
-\begin{pmatrix}
- r_{1,1} & r_{2,1} & \cdots & r_{M,1} \\ r_{1,2} & r_{2,2} & \cdots & r_{M,2} \\ \vdots & \vdots & \ddots & \vdots \\ r_{1,N} & r_{2,N} & \cdots & r_{M,N} 
-\end{pmatrix}
+\Delta P_t=V_0 w^\top r_t
 $$
 
-其中 $M$ 为资产数量，每行代表一个历史日的收益率向量。
+如果组合含期权或其他非线性产品，不要只做线性加权；应在每个历史情景下重新定价组合。
 
-### 步骤 3：计算组合历史损益
+## Step 2：把损益从差到好排序
 
-对每个历史日 $t$，计算组合价值变化：
-$ \Delta P_t = V_0 \times \sum_{j=1}^{M} w_j \times r_{j,t} $
+设损益从小到大为：
 
-其中 $V_0$ 为当前组合市值，$w_j$ 为资产 $j$ 的权重。
+$$
+\Delta P_{(1)}\le \Delta P_{(2)}\le \cdots \le \Delta P_{(N)}
+$$
 
-**注意点**：如果是非线性组合，需用每个历史情景重新对组合定价，而非简单线性加权。
+损失最严重的情景在左端。
 
-### 步骤 4：排序损益序列
+## Step 3：定位尾部分位数
 
-将 $\Delta P_t$ 从最大损失到最大收益排序（或从最小到最大）：
-$\Delta P_{(1)} \le \Delta P_{(2)} \le \cdots \le \Delta P_{(N)}$
+尾部概率为 $1-\alpha$，常用位置：
 
-### 步骤 5：确定VaR位置
+$$
+k=\lceil N(1-\alpha)\rceil
+$$
 
-根据置信水平 $\alpha$，确定分位数位置：
-- 尾部概率：$1 - \alpha$
-- 位置索引：$k = \lceil N \times (1-\alpha) \rceil$
+于是：
 
-例如：$\alpha = 99\%$，$N = 250$，则取第 $\lceil 250 \times 0.01 \rceil = 3$ 大损失。
+$$
+\operatorname{VaR}_{\alpha}=-\Delta P_{(k)}
+$$
 
-### 步骤 6：读取VaR值
+若题目要求插值，按相邻 order statistic 插值。
 
-$ \text{VaR}_{\alpha} = -\Delta P_{(k)} $
+## Step 4：可选计算 ES
 
-**注意点**：VaR为损失的正值。如果需要更精确的VaR，可在相邻两值间线性插值。
+取 VaR 尾部更差情景的平均损失：
 
-### 步骤 7：计算预期损失ES（可选）
+$$
+\operatorname{ES}_{\alpha}\approx -\frac{1}{k}\sum_{i=1}^{k}\Delta P_{(i)}
+$$
 
-取尾部平均：
-$ \text{ES}_{\alpha} = -\frac{1}{N(1-\alpha)} \sum_{i=1}^{N(1-\alpha)} \Delta P_{(i)} $
+## 检查点
 
-## 关键公式
+- VaR 最终报告为正的损失金额。
+- $N(1-\alpha)$ 太小时，分位数非常不稳定，要联想到 [[VaR Standard Error]]。
+- 历史窗口变化会改变结果，见 [[Observation Window]]。
+- 历史模拟不是“无需假设”：它假设历史情景对未来有代表性。
 
-**组合单日损益（线性组合）**：
-$\Delta P_t = V_0 \times \mathbf{w}^T \mathbf{r}_t$
+## 常见错误
 
-**VaR位置索引**：
-$ k = \lceil N \times (1-\alpha) \rceil $
+- 把收益从大到小排，导致取错尾部。
+- 对含期权组合仍用线性收益近似。
+- 把 99% VaR 取成第 99% 好的收益，而不是 1% 左尾损益。
 
-**VaR标准误估计**：
-$ \text{SE}(\text{VaR}_\alpha) \approx \frac{\sqrt{\alpha(1-\alpha)}}{\sqrt{N} \cdot f(x_\alpha)} $
+## 来自课程位置
 
-其中 $f(x_\alpha)$ 为VaR处损失分布的概率密度。
+- [[14_VaR参数法和模拟法]]
 
-## 常见问题
+## 关联卡片
 
-1. **历史代表性**：假设"历史会重演"，市场结构性变化时失效。
-2. **数据依赖**：高置信度（如99.9%）需要更多历史数据，否则VaR不稳定。
-3. **新组合问题**：新增资产缺乏历史数据时无法应用。
-4. **路径依赖**：无法捕捉未来不同于历史的波动模式。
-
-## 相关概念
-[[VaR]]
-[[VaR Parametric Method|VaR参数法计算]]
-[[Monte Carlo Simulation VaR|蒙特卡罗模拟法VaR计算]]
-[[EVT|极端值理论]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[VaR]]
+- [[Historical Simulation Method]]
+- [[Weighted Historical Simulation]]
+- [[Monte Carlo Simulation VaR]]
+- [[EVT VaR Calculation]]

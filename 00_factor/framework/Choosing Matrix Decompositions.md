@@ -2,6 +2,7 @@
 aliases:
 - Choosing Matrix Decompositions
 - How to Choose Matrix Decompositions
+- Matrix decomposition choice
 - 如何选择矩阵分解
 tags:
 - framework
@@ -9,48 +10,74 @@ tags:
 ---
 # Choosing Matrix Decompositions
 
-## 核心问题
-- 这张卡只回答：什么时候应该想到 diagonalization、Jordan form，什么时候应该直接转去 SVD。
+## 这张卡回答什么问题
+
+看到矩阵分解题时，不要先背公式。先判断：
+
+> 题目想利用矩阵的哪种结构？
+
+这张卡只负责分流：什么时候想 diagonalization，什么时候想 Jordan，什么时候想 SVD，什么时候想 QR。
 
 ## 一句话框架
-- 先问矩阵是不是方阵；再问它有没有足够多特征向量；再问你需要的是“动力系统解释”还是“任意矩阵的稳定结构”。
 
-## 先用 diagonalization 的场景
-- 矩阵是方阵。
-- 你关心 `A^k`、$e^{At}$、长期行为、稳态、反复作用。
-- 矩阵有足够多线性无关特征向量。
+- 反复作用、长期行为、矩阵幂：先想 [[Diagonalization]]。
+- 对角化失败：转向 [[Jordan Form]]。
+- 任意矩阵、秩、压缩、伪逆：直接想 [[Singular Value Decomposition]]。
+- 最小二乘、正交列、数值求解：想 [[QR Decomposition]]。
 
-## 必须看 Jordan form 的场景
-- 矩阵是方阵。
-- 你知道或怀疑它不可对角化。
-- 题目在问“缺了多少特征向量”“为什么不能 diagonalize”“标准形长什么样”。
+## 如何识别题型
 
-## 直接转去 SVD 的场景
-- 矩阵不一定是方阵。
-- 你关心 rank、四个基本子空间、compression、best low-rank approximation、pseudoinverse。
-- 题目不是在问“长期迭代”，而是在问“任意矩阵的几何结构”。
+| 题目信号 | 优先工具 | 原因 |
+| --- | --- | --- |
+| $A^k$、$e^{At}$、长期行为 | [[Diagonalization]] | 特征方向解耦 |
+| repeated eigenvalue 且特征向量不够 | [[Jordan Form]] | 解释对角化失败 |
+| rectangular、rank-deficient、low-rank approximation | [[Singular Value Decomposition]] | 任意矩阵都适用 |
+| least squares、orthonormal basis、stable solve | [[QR Decomposition]] | 避免直接形成 $A^TA$ |
+| symmetric / positive definite | [[Spectral Decomposition]] | 正交特征分解最强 |
 
-## 快速判断规则
-- powers of A / matrix exponential -> 先想 diagonalization。
-- repeated eigenvalue but vectors not够 -> 想 Jordan。
-- rectangular / rank-deficient / best approximation -> 想 SVD。
+## 边界和失败模式
 
-## 为什么三者不要混
-- diagonalization 是“找到不变方向后完全解耦”。
-- Jordan 是“解耦失败后最接近对角化的标准形”。
-- SVD 不依赖特征向量，而是寻找输入方向与输出方向的最佳正交坐标系。
+- 非方阵不能 diagonalize。
+- 有重复特征值时，不能默认 diagonalize。
+- 一般矩阵不能默认有 $Q\Lambda Q^T$；那是对称矩阵的谱分解。
+- SVD 很通用，但若题目明确问动力系统长期行为，eigen/diagonalization 更直接。
+- QR 适合 least squares 和正交化，但它本身不直接告诉你长期行为。
 
-## 常见误判
-- 只因为题目出现特征值，就默认一定能 diagonalize。
-- 对非方阵还想硬套 diagonalization。
-- 把 SVD 当成“特征分解的改名版”。
+## 一个最小判断例子
+
+题目问：
+
+> Compute $A^{100}$.
+
+先想 [[Diagonalization]]，因为矩阵幂在特征向量基底里最简单。
+
+题目问：
+
+> Find the best rank-1 approximation of A.
+
+直接想 [[Singular Value Decomposition]]，因为低秩近似由最大 singular values 控制。
+
+题目问：
+
+> Solve an overdetermined least squares problem stably.
+
+优先想 [[QR Decomposition]]，而不是先把 $A^TA$ 算出来。
+
+## 来自课程位置
+
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.9 Diagonalization and powers of A|Session 2.9]]：diagonalization 与 powers。
+- [[03_Positive Definite Matrices and Applications#Session 3.4 Similar matrices and Jordan form|Session 3.4]]：Jordan form。
+- [[03_Positive Definite Matrices and Applications#Session 3.5 Singular value decomposition|Session 3.5]]：SVD。
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.4 Orthogonal matrices and Gram-Schmidt|Session 2.4]]：QR。
 
 ## 关联卡片
+
 - [[Diagonalization]]
 - [[Jordan Form]]
 - [[Singular Value Decomposition]]
+- [[QR Decomposition]]
+- [[Spectral Decomposition]]
 - [[Pseudoinverse]]
-- [[Matrix Exponential]]
 
 ## 课程笔记反链
 
@@ -60,7 +87,7 @@ LIST FROM ""
 WHERE (
   contains(file.path, "01_Math/") OR
   contains(file.path, "02_Economy/") OR
-  contains(file.outlinks, this.file.link)
-)
+  contains(file.path, "03_Computer_Science/")
+) AND contains(file.outlinks, this.file.link)
 SORT file.mtime DESC
 ```

@@ -2,31 +2,47 @@
 aliases:
 - Spectral Risk Measure
 - 光谱风险度量
+- 谱风险度量
 tags:
 - concept
+- risk-management
 ---
 # Spectral Risk Measure
 
->[!note] 它是什么
-> - 「Spectral Risk Measure」是指以对分位损失加权积分定义的风险度量，权重反映风险厌恶。
->
->[!note] 最小可检索信息
-> - 定义：以对分位损失加权积分定义的风险度量，权重反映风险厌恶。
-> - 符号/公式：$\rho(X)=\int_0^1 q_p(X)\,\phi(p)\,dp。$
-> - 最小例子：对尾部分位赋予更高权重的风险度量。
->
+## 先记一句话
+
+Spectral Risk Measure 用一组风险厌恶权重对不同分位损失加权平均，越尾部的损失通常权重越高。
+
+## 它是什么
+
+令 $q_p(L)$ 是损失 $L$ 的 $p$ 分位数，谱风险度量可写为：
+
+$$
+\rho(L)=\int_0^1 \phi(p)q_p(L)\,dp
+$$
+
+其中 $\phi(p)$ 是非负权重函数，通常要求越靠近尾部权重越高。
+
+## 解决什么判断
+
+它回答：“如果不只看单一 VaR 分位点，而是按风险厌恶程度重视整个尾部，风险是多少？”
+
+## 最小例子
+
+[[ES]] 可以看作对最坏尾部区间平均加权的一类谱风险度量。
+
+## 易混点
+
+- [[VaR]] 只看一个分位点；Spectral Risk Measure 看一段分位损失的加权。
+- 权重函数必须体现风险厌恶，否则只是普通加权平均。
+- 它更像风险度量框架，不是考试里最常用的计算步骤。
+
+## 来自课程位置
+
+- [[12_VAR风险]]
+
 ## 关联卡片
-- [[VaR-hub]]
 
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Coherent Risk Measure]]
+- [[ES]]
+- [[VaR]]

@@ -1,152 +1,91 @@
 ---
 aliases:
-- 谱分解
-- Eigenvalue Decomposition
-- Spectral Theorem
 - Spectral Decomposition
+- Spectral Theorem
+- Eigenvalue Decomposition
+- 谱分解
+- 谱定理
 tags:
 - concept
-- linear algebra
+- 线性代数
 ---
-# 谱分解
+# Spectral Decomposition
 
->[!note] 定义
->
-> 谱分解（Spectral Decomposition）是将对称矩阵分解为由其特征值和特征向量定义的形式。
->
-> 对于一个 n × n 的对称矩阵 A：
->
-> $ A = Q \Lambda Q^\top $
->
-> 其中：
-> - Q：由 A 的正交特征向量组成的正交矩阵
-> - $\Lambda$：对角矩阵，对角元素是 A 的特征值
->
-## 谱分解的具体形式
+## 先记一句话
 
-假设 $A$ 是对称矩阵，其特征值为 $\lambda_1, \lambda_2, \ldots, \lambda_n$，对应的特征向量为 $v_1, v_2, \ldots, v_n$。
+谱分解就是：**把实对称矩阵拆成一组互相正交的特征方向及其伸缩倍数**。
 
-$A = \sum_{i=1}^n \lambda_i v_i v_i^\top$
+对实对称矩阵 $A$，
+$$
+A=Q\Lambda Q^T.
+$$
 
-其中：
-- $\lambda_i$：特征值
-- $v_i$：单位化的特征向量（$\|v_i\| = 1$）
-- $v_i v_i^\top$：秩为 1 的矩阵
+其中 $Q$ 的列是标准正交特征向量，$\Lambda$ 的对角元是特征值。
 
-## 存在条件
+## 它是什么
 
-**实对称谱定理**：
-- 任意实对称矩阵都可以进行谱分解
-- 特征值均为实数
-- 特征向量互相正交（可单位化）
+谱分解是 [[Symmetric Matrix]] 的最好结构。
 
-## 性质
+它说明 $A$ 的作用可以被拆成：
 
-### 1. 对称矩阵的特征值和特征向量
-- 特征值：均为实数
-- 特征向量：可构成正交基
+- 先转到正交特征向量坐标；
+- 每个方向乘以自己的特征值；
+- 再转回原坐标。
 
-### 2. 矩阵的迹与行列式
+也可以写成
+$$
+A=\lambda_1q_1q_1^T+\cdots+\lambda_nq_nq_n^T.
+$$
 
-**迹**（特征值之和）：
-$\text{tr}(A) = \sum_{i=1}^n \lambda_i$
+这里 $q_iq_i^T$ 是投影到第 $i$ 个特征方向的投影矩阵。
 
-**行列式**（特征值之积）：
-$|A| = \prod_{i=1}^n \lambda_i$
+## 一个最小例子
 
-### 3. 矩阵的幂
+如果
+$$
+A=Q
+\begin{bmatrix}
+5&0\\
+0&2
+\end{bmatrix}
+Q^T,
+$$
+那么 $A$ 在 $q_1$ 方向放大 5 倍，在 $q_2$ 方向放大 2 倍。
 
-利用谱分解可以高效计算矩阵幂：
+因为 $Q$ 是正交矩阵，这两个方向互不干扰。
 
-$ A^k = Q \Lambda^k Q^\top $
+## 它在题里负责什么
 
-其中 $\Lambda^k$ 是对角元素 $\lambda_i^k$ 的对角矩阵。
+- 快速计算矩阵幂：
+  $$
+  A^k=Q\Lambda^kQ^T.
+  $$
+- 判断正定性：特征值全正。
+- 理解二次型：
+  $$
+  x^TAx=\sum_i\lambda_i z_i^2
+  $$
+  其中 $z=Q^Tx$。
+- 解释 PCA 中主成分方向和方差大小。
 
-### 4. 矩阵的逆
+## 常见误区
 
-如果 $A$ 可逆（所有 $\lambda_i \neq 0$）：
+- 谱分解的标准版本要求实对称矩阵；一般矩阵不能直接写成 $Q\Lambda Q^T$。
+- 它不是普通 diagonalization 的同义词；普通对角化是 $S\Lambda S^{-1}$，不一定有正交 $Q$。
+- 特征向量要单位化后才能放进 $Q$。
 
-$ A^{-1} = Q \Lambda^{-1} Q^\top $
+## 来自课程位置
 
-其中 $\Lambda^{-1}$ 是对角元素 $\lambda_i^{-1}$ 的对角矩阵。
+- [[03_Positive Definite Matrices and Applications#Session 3.1 Symmetric matrices and positive definiteness|Session 3.1]]：实对称矩阵的正交对角化。
 
-### 5. 正定矩阵
+## 关联卡片
 
-- $A$ 是正为定当且仅当所有特征值 $\lambda_i > 0$
-- $A$ 是半正为定当且仅当所有特征值 $\lambda_i \geq 0$
+- [[Symmetric Matrix]]
+- [[Positive Definite Matrix]]
+- [[Orthogonal Matrix]]
+- [[Eigenvalues]]
+- [[Eigenvectors]]
 
-## 计算步骤
-
-1. **求特征值**：$解特征方程 |A - \lambda I| = 0$
-2. **求特征向量**：$对每个 \lambda_i，解 (A - \lambda_i I)v_i = 0$
-3. **单位化特征向量**：$e_i = \frac{v_i}{||v_i||}$
-4. **构造 $Q$ 和 $\Lambda$**：
-   - $Q = [e_1, e_2, \ldots, e_n]$
-   - $\Lambda = \text{diag}(\lambda_1, \lambda_2, \ldots, \lambda_n)$
-
-## 应用
-
-### 1. 主成分分析（PCA）
-- 对协方差矩阵进行谱分解
-- 特征向量对应主成分方向
-- 特征值对应主成分方差
-
-### 2. 正定矩阵平方根
-$ A^{1/2} = Q \Lambda^{1/2} Q^\top $
-
-### 3. Rayleigh 商极值
-
-$ \max_{x \neq 0} \frac{x^T A x}{x^T x} = \lambda_1 $
-$ \min_{x \neq 0} \frac{x^T A x}{x^T x} = \lambda_n $
-
-### 4. 线性变换分析
-- 理解矩阵对空间的作用
-- 对角化简化矩阵运算
-
-## 相关概念
-
-- [[Eigenvalues|特征值]]
-- [[Eigenvectors|特征向量]]
-- [[Positive Definite Matrix|正定矩阵]]
-
->[!example] 示例
->
-> 给定
-> $$
-> A =
-> \begin{pmatrix}
-> 4 & 1 \\ 1 & 3
-> \end{pmatrix}
-> $$
->
-> 1. 特征值：$\lambda_1 = 5$，$\lambda_2 = 2$
-> 2. 特征向量：
-> $$
-> v_1 = \frac{1}{\sqrt{2}}
-> \begin{pmatrix}
-> 1 \\ 1
-> \end{pmatrix},\quad
-> v_2 = \frac{1}{\sqrt{2}}
-> \begin{pmatrix}
-> -1 \\ 1
-> \end{pmatrix}
-> $$
-> 3. 谱分解：
-> $$
-> A =
-> \begin{pmatrix}
-> \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\
-> \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
-> \end{pmatrix}
-> \begin{pmatrix}
-> 5 & 0 \\ 0 & 2
-> \end{pmatrix}
-> \begin{pmatrix}
-> \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
-> -\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
-> \end{pmatrix}
-> $$
->
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

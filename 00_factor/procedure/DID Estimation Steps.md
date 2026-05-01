@@ -1,52 +1,89 @@
 ---
 aliases:
-- DID估计步骤
+- DID Estimation Steps
 - DID estimation steps
 - Difference-in-Differences estimation
+- DID估计步骤
 - 双重差分步骤
-- DID Estimation Steps
-- DID
 tags:
 - procedure
+- econometrics
+- causal-inference
 ---
 # DID Estimation Steps
 
-## 目标
-- 在可复现的数据流程中估计 DID 处理效应。
+## 这张卡什么时候用
 
-## Step 1
-- 明确处理定义（Treat）、处理时间（Post）、结果变量与样本口径。
+当研究设计已经满足 DID 基本结构，并要从数据中估计处理效应时使用。
 
-## Step 2
-- 构造变量：$Treat_i$、$Post_t$ 与交互项 $Treat_i$×$Post_t$。
+## 输入
 
-## Step 3
-- 画出处理前趋势（均值图或事件研究图），初步检查平行趋势。
+- 处理组指示 $Treat_i$。
+- 政策后指示 $Post_t$。
+- 结果变量 $Y$。
+- 个体、时间和样本口径。
+- 可选控制变量。
 
-## Step 4
-- 估计基准 DID：
-  - 简单两组两期：OLS 回归或组均值差上加差。
-  - 面板数据：加入个体固定效应与时间固定效应。
+## 输出
 
-## Step 5
-- 计算稳健标准误（常用按个体聚类）。
+- DID 处理效应估计。
+- 标准误和聚类口径。
+- 平行趋势与稳健性诊断。
 
-## Step 6
-- 做关键稳健性：不同时间窗、安慰剂检验、替代对照组。
+## Step 1：定义处理和时间
+
+明确谁被处理、什么时候开始处理、处理是否一次性或分期发生。
+
+## Step 2：构造交互项
+
+$$
+D_{it}=Treat_i\times Post_t
+$$
+
+## Step 3：先画趋势
+
+画处理组和对照组处理前后的均值趋势，初步判断 [[Parallel Trends]] 是否可信。
+
+## Step 4：估计基准 DID
+
+两组两期：
+
+$$
+Y_{it}=\alpha+\beta(Treat_i\times Post_t)+\gamma Treat_i+\delta Post_t+u_{it}
+$$
+
+多期面板常用：
+
+$$
+Y_{it}=\alpha_i+\lambda_t+\beta D_{it}+X_{it}'\theta+u_{it}
+$$
+
+## Step 5：设置标准误
+
+常见做法是按处理分配层级或个体聚类。不要只报告普通 OLS 标准误。
+
+## Step 6：做诊断和稳健性
+
+- 事件研究或处理前系数。
+- 安慰剂处理时间。
+- 替代对照组。
+- 不同时间窗口。
+- 样本构成检查。
+
+## 常见错误
+
+- 没有画处理前趋势。
+- 控制变量使用政策后受影响变量。
+- 聚类层级过低。
+- 对分期处理直接套简单 DID。
+
+## 来自课程位置
+
+- [[13_面板数据模型]]
 
 ## 关联卡片
+
+- [[DID]]
 - [[DID Diagnostics]]
 - [[DID Identification Proof]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[DID Writing Template]]

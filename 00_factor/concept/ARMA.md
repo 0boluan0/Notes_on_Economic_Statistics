@@ -1,64 +1,101 @@
 ---
 aliases:
-- 自回归移动平均模型
+- ARMA
+- ARMA Model
 - Autoregressive Moving Average Model
 - ARMA模型
-- Autoregressive Moving Average (ARMA) Model
-- ARMA
-- 自回归滑动平均模型
+- 自回归移动平均模型
 tags:
-- 时间序列
-- 波动建模
 - concept
+- 时间序列
 ---
-ARMA(p,q)模型是自回归移动平均模型，结合了AR(p)和MA(q)两种模型的特点，用于描述平稳时间序列。
+# ARMA
 
-## 模型形式
+## 先记一句话
 
-$y_t = c + \sum_{i=1}^{p} \phi_i y_{t-i} + \sum_{j=1}^{q} \theta_j \varepsilon_{t-j} + \varepsilon_t$
+ARMA 是：**用过去的序列值和过去的冲击共同解释当前值的平稳时间序列模型**。
+
+它把两种记忆放在一起：
+
+- AR：过去的 $y$ 影响现在的 $y$；
+- MA：过去的 shock 影响现在的 $y$。
+
+## 它是什么
+
+ARMA$(p,q)$ 常写成
+$$
+y_t=c+\sum_{i=1}^{p}\phi_i y_{t-i}
++\varepsilon_t+\sum_{j=1}^{q}\theta_j\varepsilon_{t-j}.
+$$
 
 其中：
-- $y_t$：时间序列在t期的值
-- c：常数项
-- φ_i：自回归系数
-- θ_j：移动平均系数
-- ε_t：白噪声误差项
 
-## 平稳性条件
+- $p$ 是 AR 阶数；
+- $q$ 是 MA 阶数；
+- $\varepsilon_t$ 通常设为 [[White Noise]]。
 
-ARMA模型平稳性仅由AR部分决定，要求特征方程的根在单位圆外：
+## 它解决什么判断
 
-$1 - \phi_1 z - \phi_2 z^2 - \cdots - \phi_p z^p = 0$
+ARMA 用来刻画已经平稳的序列里的短期动态结构。
 
-所有根|z| > 1。
+题目出现这些信号时，想到 ARMA：
 
-## 可逆性条件
+- ACF/PACF；
+- model identification；
+- white-noise residual；
+- AIC/BIC 定阶；
+- forecast stationary series。
 
-可逆性仅由MA部分决定，要求可逆性方程的根在单位圆外。
+## 平稳性和可逆性
 
-## ACF和PACF特征
+ARMA 的平稳性由 AR 部分决定：
 
-- **ACF**：拖尾（逐渐衰减）
-- **PACF**：拖尾（逐渐衰减）
+> AR characteristic roots 要在单位圆外。
 
-## 参数估计
+最简单的参照是 [[AR(1) stationarity]]：
+$$
+y_t=a_0+a_1y_{t-1}+\varepsilon_t
+$$
+平稳要求
+$$
+|a_1|<1.
+$$
 
-常用方法：
-1. **最大似然估计（MLE）**
-2. **条件最小二乘法**
-3. **Yule-Walker方程**
+MA 部分不决定平稳性，但决定可逆性。
 
-## 模型选择
+## ACF/PACF 识别
 
-使用信息准则：
-- **AIC**：-2ln(L) + 2k
-- **BIC**：-2ln(L) + k·ln(T)
+| 模型 | ACF | PACF |
+| --- | --- | --- |
+| AR(p) | 拖尾 | p 阶后截尾 |
+| MA(q) | q 阶后截尾 | 拖尾 |
+| ARMA(p,q) | 拖尾 | 拖尾 |
 
-相关链接: [[Autocorrelation Function|自相关函数]], [[Partial Autocorrelation Function|偏自相关函数]], [[ARCH]], [[GARCH]], [[Stationarity|平稳性]], [[AIC]], [[BIC]]
+实际建模见 [[ARMA Model Identification Steps]] 和 [[Box-Jenkins Method]]。
 
-## $source_notes$
+## 常见误区
 
-- [[03_平稳时间序列模型#1.1 自回归移动平均模型ARMA(p,q) model]]
+- ARMA 默认用于平稳序列；非平稳要先看 [[ARIMA]]、差分或协整。
+- ACF/PACF 是识别线索，不是机械答案；最终还要看 AIC/BIC 和残差白噪声检验。
+- ARMA 解释条件均值，不负责条件方差；若残差平方有自相关，转向 [[ARCH]] / [[GARCH]]。
+
+## 来自课程位置
+
+- [[03_平稳时间序列模型#1.1 自回归移动平均模型ARMA(p,q) model|时间序列 03：ARMA 定义]]
+- [[03_平稳时间序列模型#2.2.1 AR(1)的平稳性判断|时间序列 03：AR 平稳性]]
+- [[03_平稳时间序列模型#3. ACF|时间序列 03：ACF/PACF 识别]]
+
+## 关联卡片
+
+- [[Stationarity]]
+- [[Autoregressive Model]]
+- [[Moving Average Model]]
+- [[Autocorrelation Function]]
+- [[Partial Autocorrelation Function]]
+- [[ARMA Model Identification Steps]]
+- [[White Noise]]
+- [[ARCH]]
+- [[GARCH]]
 
 ## 课程笔记反链
 

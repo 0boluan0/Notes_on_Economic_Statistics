@@ -1,117 +1,114 @@
 ---
 aliases:
-- 期权Greeks计算
-- Greeks计算
 - Greeks Calculation
+- Greeks计算
+- 期权Greeks计算
 tags:
 - procedure
-- 07_金融机构与风险管理
+- derivatives
 ---
-# Greeks计算
+# Greeks Calculation
 
-## 适用场景
+## 这张卡什么时候用
 
-计算期权等衍生品对标的资产价格、波动率、时间等变量的敏感度，用于风险管理、对冲策略设计和组合风险评估。
+给出 Black-Scholes 参数或期权定价模型，要求计算 Delta、Gamma、Vega、Theta、Rho 时使用。
 
-## 所需数据/条件
+## 输入
 
-- 期权定价模型（Black-Scholes公式或数值定价器）
-- 标的资产当前价格 $S$
-- 执行价格 $K$
-- 无风险利率 $r$
-- 到期时间 $T$
-- 波动率 $\sigma$
-- 期权类型（看涨/看跌）
+- 标的价格 $S$。
+- 行权价 $K$。
+- 无风险利率 $r$。
+- 剩余期限 $T$。
+- 波动率 $\sigma$。
+- 看涨或看跌。
 
-## 计算步骤
+## 输出
 
-### 步骤 1：计算基础参数
+- [[Delta]]、[[Gamma]]、[[Vega]]、[[Theta]]、[[Rho]]。
 
-$ d_1 = \frac{\ln(S/K) + (r + \sigma^2/2)T}{\sigma\sqrt{T}} $
-$ d_2 = d_1 - \sigma\sqrt{T} $
+## Step 1：计算 $d_1$ 和 $d_2$
 
-**注意点**：确保所有参数单位一致（时间单位与利率匹配）。
+$$
+d_1=\frac{\ln(S/K)+(r+\sigma^2/2)T}{\sigma\sqrt{T}},
+\qquad
+d_2=d_1-\sigma\sqrt{T}
+$$
 
-### 步骤 2：计算Delta
+所有时间、利率、波动率必须使用同一年度化口径。
 
-**看涨期权**：
-$ \Delta_c = \frac{\partial c}{\partial S} = N(d_1) $
+## Step 2：计算 Delta
 
-**看跌期权**：
-$ \Delta_p = \frac{\partial p}{\partial S} = N(d_1) - 1 $
+看涨：
 
-其中 $N(\cdot)$ 为标准正态分布累积函数。
+$$
+\Delta_c=N(d_1)
+$$
 
-**注意点**：看涨期权Delta为正，看跌期权Delta为负；均在[0,1]或[-1,0]范围内。
+看跌：
 
-### 步骤 3：计算Gamma
+$$
+\Delta_p=N(d_1)-1
+$$
 
-$ \Gamma = \frac{\partial^2 V}{\partial S^2} = \frac{N'(d_1)}{S\sigma\sqrt{T}} $
+## Step 3：计算 Gamma
 
-其中 $N'(\cdot)$ 为标准正态密度函数。
+$$
+\Gamma=\frac{N'(d_1)}{S\sigma\sqrt T}
+$$
 
-**注意点**：看涨和看跌期权的Gamma相同；对于看涨期权Gamma总是正值。
+同一参数下，看涨和看跌 Gamma 相同。
 
-### 步骤 4：计算Theta
+## Step 4：计算 Vega
 
-**看涨期权**：
-$ \Theta_c = -\frac{S N'(d_1)\sigma}{2\sqrt{T}} - r K e^{-rT} N(d_2) $
+$$
+Vega=S\sqrt T N'(d_1)
+$$
 
-**看跌期权**：
-$ \Theta_p = -\frac{S N'(d_1)\sigma}{2\sqrt{T}} + r K e^{-rT} N(-d_2) $
+如果题目用“波动率上升 1 个百分点”的口径，记得把公式结果按 0.01 缩放。
 
-**注意点**：Theta通常为负值（时间衰减），深度实值看跌期权Theta可能为正。
+## Step 5：计算 Theta
 
-### 步骤 5：计算Vega
+看涨：
 
-$ \text{Vega} = \frac{\partial V}{\partial \sigma} = S\sqrt{T} N'(d_1) $
+$$
+\Theta_c=-\frac{SN'(d_1)\sigma}{2\sqrt T}-rKe^{-rT}N(d_2)
+$$
 
-**注意点**：看涨和看跌期权的Vega相同；波动率越高，期权价值越大。
+看跌：
 
-### 步骤 6：计算Rho
+$$
+\Theta_p=-\frac{SN'(d_1)\sigma}{2\sqrt T}+rKe^{-rT}N(-d_2)
+$$
 
-**看涨期权**：
-$ \rho_c = \frac{\partial c}{\partial r} = K T e^{-rT} N(d_2) $
+确认题目是按年、按月还是按日报告 Theta。
 
-**看跌期权**：
-$ \rho_p = \frac{\partial p}{\partial r} = -K T e^{-rT} N(-d_2) $
+## Step 6：计算 Rho
 
-**注意点**：利率上升增加看涨期权价值，降低看跌期权价值。
+看涨：
 
-## 关键公式
+$$
+\rho_c=KTe^{-rT}N(d_2)
+$$
 
-**标准正态密度函数**：
-$ N'(x) = \frac{1}{\sqrt{2\pi}} e^{-x^2/2} $
+看跌：
 
-**Delta-Gamma近似**：
-$ \Delta V \approx \Delta \times \Delta S + \frac{1}{2}\Gamma \times (\Delta S)^2 $
+$$
+\rho_p=-KTe^{-rT}N(-d_2)
+$$
 
-**Theta-Vega-Rho近似**：
-$ \Delta V \approx \Theta \times \Delta t + \text{Vega} \times \Delta \sigma + \rho \times \Delta r $
+## 检查点
 
-## 常见问题
+- 看涨 Delta 在 0 到 1 之间；看跌 Delta 在 -1 到 0 之间。
+- Gamma 和 Vega 对普通欧式看涨/看跌通常为正。
+- Theta 符号最容易因定义方向混乱。
+- Greeks 是局部敏感度，不替代完整重新定价。
 
-1. **符号混淆**：Theta通常定义为-∂V/∂t（时间流逝损失），正值表示损失而非收益。
-2. **单位不统一**：确保时间、利率、波动率的单位匹配。
-3. **深度实值看跌**：此时Theta可能为正，时间流逝反而增加期权价值。
-4. **近似误差**：一阶近似在小变动时准确，大幅波动需考虑高阶项。
+## 来自课程位置
 
-## 相关概念
-[[Delta]]
-[[Gamma]]
-[[Vega]]
-[[Theta]]
-[[Rho]]
+- [[08_操作员如何管理风险暴露]]
 
-## 课程笔记反链
+## 关联卡片
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Greeks Hedging Map]]
+- [[Delta Approximation]]
+- [[Delta-Gamma Approximation]]

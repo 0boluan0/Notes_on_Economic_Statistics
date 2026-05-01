@@ -1,33 +1,51 @@
 ---
 aliases:
-- Exposure at Default
 - EAD
+- Exposure at Default
 - 违约暴露
+- 违约时风险暴露
 tags:
 - concept
+- credit-risk
 ---
-# Exposure at Default (EAD)
+# EAD
 
->[!note] 它是什么
-> - 「EAD」是指违约发生时的预期敞口金额。
->
->[!note] 最小可检索信息
-> - 定义：违约发生时的预期敞口金额。
-> - 符号/公式：$EAD=\text{承诺额度}\times\text{预计动用率}。$
-> - 最小例子：1亿额度、动用率80%，EAD=8000万。
->
+## 先记一句话
+
+EAD 是违约发生那一刻，银行实际暴露在对方身上的金额。
+
+## 它是什么
+
+EAD 可以是已提款贷款余额，也可以包括未提款承诺未来可能被动用的部分：
+
+$$
+EAD=\text{当前余额}+\text{未提款额度}\times CCF
+$$
+
+其中 $CCF$ 是信用转换系数。
+
+## 解决什么判断
+
+它回答：“如果对方违约，我到底有多少金额暴露在损失风险中？”
+
+## 最小例子
+
+授信额度 1 亿元，已提款 6000 万，未提款 4000 万，CCF=50%，则 EAD=8000 万。
+
+## 易混点
+
+- EAD 不是损失；预期损失还要乘 [[PD]] 和 [[LGD]]。
+- 衍生品 EAD 会随市场价值变化，需要考虑潜在未来暴露和 [[Netting]]。
+- 表外承诺通过 CCF 转成信用等价额。
+
+## 来自课程位置
+
+- [[16_巴塞尔协议]]
+- [[21_信用在险价值]]
+
 ## 关联卡片
+
+- [[PD]]
+- [[LGD]]
+- [[Credit Risk]]
 - [[Risk-Weighted Assets]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```

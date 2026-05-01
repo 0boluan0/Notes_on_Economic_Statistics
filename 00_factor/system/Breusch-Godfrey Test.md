@@ -1,85 +1,53 @@
 ---
 aliases:
-- LM自相关检验
-- BG检验
-- BG
 - Breusch-Godfrey Test
-- Breusch
+- BG Test
+- BG检验
+- LM自相关检验
 tags:
 - system
-- 计量经济学
+- econometrics
 ---
-# BG 检验（Breusch-Godfrey 检验）
+# Breusch-Godfrey Test
 
-## 诊断目的
+## 诊断目标
 
-检验回归模型残差的高阶自相关性，克服Durbin-Watson检验只能检验一阶自相关的局限。
+BG 检验用于检验回归残差是否存在指定阶数的自相关，尤其适合 DW 不适用的动态模型。
 
-## 计算方法
+## 输入
 
-### 辅助回归
+- 原回归残差 $\hat u_t$。
+- 要检验的滞后阶数 $p$。
+- 原回归中的解释变量。
 
-将残差对其滞后项回归：
-$\hat{e}_t = \rho_1 \hat{e}_{t-1} + \rho_2 \hat{e}_{t-2} + \cdots + \rho_p \hat{e}_{t-p} + u_t$
+## 步骤
 
-### LM检验统计量
+1. 估计原模型并保存残差。
+2. 做辅助回归：把 $\hat u_t$ 对原解释变量和 $\hat u_{t-1},\dots,\hat u_{t-p}$ 回归。
+3. 取辅助回归 $R^2$。
+4. 计算：
 
-$LM = (T-p) \cdot R^2 \sim \chi^2(p)$
+$$
+LM=nR^2\sim \chi^2(p)
+$$
 
-其中：
-- T：样本量
-- p：滞后期数
-- R²：辅助回归的决定系数
+## 判断
 
-### F检验版本
+- $p$ 值小：拒绝无自相关，存在指定阶数内的自相关。
+- $p$ 值大：没有足够证据说明存在该阶数自相关。
 
-$F = \frac{R^2/p}{(1-R^2)/(T-k-p-1)} \sim F(p, T-k-p-1)$
+## 易错点
 
-## 滞后期数选择
+- 辅助回归要保留原解释变量。
+- 滞后阶数 $p$ 需要有经济或信息准则依据。
+- 发现自相关后仍要判断来源，是误差结构还是模型漏掉动态项。
 
-| 方法 | 选择策略 |
-|------|----------|
-| 固定阶数 | p=1（一阶）、p=2（二阶） |
-| 信息准则 | 根据AIC/BIC选择最优p |
-| 逐步法 | 从高阶开始逐步降低 |
+## 来自课程位置
 
-## 判断标准
+- [[08_自相关]]
 
-| 统计量 | p ≤ 0.05 | p > 0.05 |
-|--------|----------|----------|
-| LM统计量 | 拒绝无自相关假设 | 不拒绝无自相关假设 |
-| F统计量 | 拒绝无自相关假设 | 不拒绝无自相关假设 |
+## 关联卡片
 
-## 相对优势
-
-| 检验 | 适用情况 | 优势 | 局限 |
-|------|----------|------|------|
-| DW检验 | 一阶自相关、无滞后因变量 | 计算简单 | 只能检验一阶 |
-| BG检验 | 高阶自相关、有滞后因变量 | 检验阶数灵活 | 需选择滞后期 |
-| Q检验 | 纯白噪声检验 | 不需回归模型 | 未考虑解释变量 |
-
-## 常见问题与对策
-
-| 问题 | 可能原因 | 解决方案 |
-|------|----------|----------|
-| BG检验显著但DW不显著 | 高阶自相关 | 增加滞后期数 |
-| 滞后期数不确定 | 自相关结构复杂 | 使用AIC/BIC选择、试多阶数 |
-| 有滞后因变量时DW失效 | 模型动态 | 必须使用BG检验 |
-
-## 相关概念
-[[Autocorrelation Diagnosis|自相关诊断]]
-[[Q Test|Q检验]]
-[[Durbin-Watson Statistic|Durbin-Watson统计量]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Autocorrelation Diagnosis]]
+- [[Durbin-Watson Statistic]]
+- [[Newey-West]]

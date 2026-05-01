@@ -1,22 +1,21 @@
 ---
 aliases:
-- 库克比率
 - Cook's Ratio
-- Cook
+- Cook Ratio
+- 库克比率旧链接
 tags:
 - system
+- bridge
 ---
-$\text{库克比率}=\frac{\text{资本（一级资本+二级资本）}}{\text{风险加权资产（RWA）}}$ 
+# Cook's Ratio
 
-## 课程笔记反链
+## 这张卡的作用
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+这是旧链接桥接卡。金融风险课程里应写作 [[Cooke Ratio|Cooke Ratio / 库克比率]]，指 Basel I 的资本充足率口径。
+
+计量经济学里常见的是 Cook's distance，不应和这张 Basel 资本比率混用。
+
+## 关联卡片
+
+- [[Cooke Ratio]]
+- [[Basel Capital Adequacy Ratio]]

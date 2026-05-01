@@ -81,7 +81,7 @@ tags:
 | 模型复杂性过高 | 过度拟合、难以解释 | 简化模型、增强可解释性 |
 
 ## 相关概念
-[[00_factor/system/Backtesting|回溯检验]]
+[[Backtesting Diagnostics|回溯检验]]
 [[Stress Testing|压力测试]]
 [[VaR]]
 

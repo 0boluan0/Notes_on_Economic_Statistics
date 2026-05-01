@@ -1,53 +1,61 @@
 ---
 aliases:
+- DID Framework
 - Difference-in-Differences framework
 - DID framework
-- 双重差分框架
 - DID使用条件
-- DID Framework
-- DID
+- 双重差分框架
 tags:
 - framework
+- econometrics
+- causal-inference
 ---
 # DID Framework
 
 ## 什么时候用
-- 有处理组/对照组，且处理在某个时间点之后生效。
-- 无法随机实验，但可以相信处理前趋势近似相同。
-- 既可以是面板数据，也可以是重复横截面数据。
 
-## 为什么有效（直觉）
-- 用对照组“扣掉”共同的时间变化，留下处理组相对变化。
+用 DID 之前必须同时看到：
 
-## 关键假设
-- **平行趋势**：若没有处理，处理组与对照组的趋势相同。
-- **无预期效应**：处理前不应出现政策提前反应。
-- **无溢出/干扰**：处理不会影响对照组（SUTVA）。
-- **样本组成稳定**：处理前后样本口径一致。
+- 有处理组和对照组。
+- 处理在某个时间点或某些时间点后发生。
+- 能观察处理前和处理后结果。
+- 有理由相信 [[Parallel Trends]]。
 
-## 适用边界与失败模式
-- 处理组/对照组存在系统性不同趋势。
-- 处理时间错位、处理强度异质导致 TWFE 偏误。
-- 同期冲击只影响处理组（时间变动的遗漏变量）。
+## 为什么有效
 
-## 相近方法对比
-- 固定效应：DID 常用双向固定效应实现。
-- 工具变量：当平行趋势难以满足时可考虑 IV。
+DID 不是简单比较政策后水平，而是比较变化。对照组的变化用于扣除共同时间冲击，处理组相对多出来的变化被解释为处理效应。
+
+## 题型识别
+
+| 题目特征 | 判断 |
+| --- | --- |
+| 两组两期 | 用最基础 DID 均值公式 |
+| 多期面板 | 用固定效应或事件研究 |
+| 政策前趋势可画 | 必须做平行趋势检查 |
+| 不同地区分期处理 | 警惕 TWFE 异质效应偏误 |
+
+## 边界条件
+
+- 处理组和对照组不能有不同的未观测趋势。
+- 对照组不能被处理溢出影响。
+- 样本构成不能因政策发生系统性变化。
+- 不应存在明显预期效应。
+
+## 失败模式
+
+- 只因为有政策前后数据就做 DID。
+- 平行趋势图已经分叉仍强行解释。
+- 政策同期还有只影响处理组的冲击。
+- 错位处理时间下只报告一个 TWFE 系数。
+
+## 来自课程位置
+
+- [[13_面板数据模型]]
 
 ## 关联卡片
-- [[Fixed Effects Model|固定效应]]
-- [[Panel Data Model|面板数据模型]]
-- [[Instrumental Variable|工具变量]]
 
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[DID]]
+- [[Parallel Trends]]
+- [[ATT]]
+- [[Fixed Effects Model]]
+- [[DID Diagnostics]]

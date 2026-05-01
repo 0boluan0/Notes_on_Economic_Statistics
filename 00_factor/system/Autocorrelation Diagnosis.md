@@ -1,89 +1,65 @@
 ---
 aliases:
-- 序列相关诊断
-- 自相关诊断
 - Autocorrelation Diagnosis
+- 自相关诊断
+- 序列相关诊断
 tags:
 - system
-- 计量经济学
+- econometrics
 ---
-# 自相关诊断
+# Autocorrelation Diagnosis
 
-## 诊断目的
+## 诊断目标
 
-检测时间序列回归模型中残差的自相关性，评估误差项独立性假设是否成立。
+判断回归残差是否存在序列相关，并决定是修正标准误、加入动态结构，还是用 FGLS 类方法。
 
-## 检验方法
+## 诊断流程
 
-### 1. 图示法
+### Step 1：看残差时间图
 
-绘制残差的时间序列图：
+连续为正/负通常提示正自相关；正负交替可能提示负自相关。
 
-| 图形模式 | 诊断 |
-|----------|------|
-| 残差随机分布 | 无自相关 |
-| 残差连续为正或负 | 正自相关 |
-| 残差正负交替（锯齿状） | 负自相关 |
+### Step 2：选择检验
 
-### 2. Durbin-Watson检验
+| 情况 | 检验 |
+| --- | --- |
+| 只关心一阶自相关，模型无滞后因变量 | [[Durbin-Watson Statistic]] |
+| 高阶自相关或有滞后因变量 | [[Breusch-Godfrey Test]] |
+| 检查序列是否接近白噪声 | [[Q Test]] / Ljung-Box |
 
-$DW = \frac{\sum_{t=2}^n (e_t - e_{t-1})^2}{\sum_{t=1}^n e_t^2} \approx 2(1 - \hat{\rho})$
+### Step 3：判断后果
 
-| DW值范围 | 诊断 |
-|----------|------|
-| 0-2 | 正自相关 |
-| 2 | 无自相关 |
-| 2-4 | 负自相关 |
+在严格外生仍成立时：
 
-### 3. Breusch-Godfrey检验（LM检验）
+- OLS 系数通常仍无偏。
+- OLS 不再 BLUE。
+- 经典标准误通常错误。
+- t/F 检验不可靠。
 
-构造辅助回归：
-$\hat{e}_t = \rho_1 \hat{e}_{t-1} + \rho_2 \hat{e}_{t-2} + \cdots + \rho_p \hat{e}_{t-p} + u_t$
+若模型含滞后因变量且误差自相关，可能出现内生性问题。
 
-检验统计量：
-$LM = (T-p) \cdot R^2 \sim \chi^2(p)$
+### Step 4：选择处理方式
 
-### 4. Ljung-Box Q检验
+| 问题 | 处理 |
+| --- | --- |
+| 只需要稳健推断 | [[Newey-West]] |
+| 一阶 AR(1) 误差结构可信 | [[Cochrane-Orcutt]] 或 Prais-Winsten |
+| 自相关来自遗漏动态 | 增加滞后变量或改模型设定 |
+| 非平稳导致伪相关 | 先做 [[Unit Root Test]] 和差分/协整分析 |
 
-$Q = T \sum_{j=1}^p r_j^2 \sim \chi^2(p)$
+## 常见错误
 
-其中 $r_j$ 是滞后j阶的样本自相关系数。
+- 用 DW 检验含滞后因变量的模型。
+- 发现自相关后只机械差分，导致长期关系丢失。
+- 把变量自相关和残差自相关混为一谈。
 
-## 后果评估
+## 来自课程位置
 
-| 情况 | 对OLS估计量的影响 |
-|------|-----------------|
-| 无偏性 | 无偏性仍成立 |
-| 一致性 | 严格外生时一致性成立，否则不成立 |
-| 有效性 | 不再是BLUE，不是最优估计量 |
-| 标准误 | 标准误有偏，通常低估真实标准误 |
-| 假设检验 | t检验和F检验失效 |
+- [[08_自相关]]
 
-## 常见问题与对策
+## 关联卡片
 
-| 问题 | 可能原因 | 解决方案 |
-|------|----------|----------|
-| 正自相关 | 惯性、模型设定遗漏变量 | 使用FGLS、Cochrane-Orcutt迭代 |
-| 高阶自相关 | 复杂动态结构 | 使用ARIMA、增加滞后项 |
-| 负自相关 | 过度差分、模型误设 | 检查差分阶数、重新考虑模型 |
-| 滞后因变量导致DW失效 | 动态模型设定 | 使用工具变量、估计动态面板模型 |
-
-## 相关概念
-[[Durbin-Watson Statistic|Durbin-Watson统计量]]
-[[Breusch-Godfrey Test|BG检验]]
-[[Q Test|Q检验]]
-[[Newey-West]]
-[[Cochrane-Orcutt]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Autocorrelation]]
+- [[Durbin-Watson Statistic]]
+- [[Breusch-Godfrey Test]]
+- [[Newey-West]]

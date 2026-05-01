@@ -1,104 +1,65 @@
 ---
 aliases:
-- 财务管理
-- 财务管理-hub
-- Financial Management
 - Financial Management-hub
+- Financial Management
+- 财务管理
+- 财务管理知识地图
 tags:
 - hub
+- finance
 ---
-# 财务管理 Hub
+# Financial Management-hub
 
-## 核心概念
+## 这组卡解决什么
 
-[[Time Value of Money|货币时间价值]]
-[[Net Present Value (2)|净现值]]
+财务管理这组卡围绕三个问题：不同时点的钱如何比较，项目是否创造价值，企业财务状况是否健康。
+
+## 学习路线
+
+1. 先学现金流折现：[[Time Value of Money]]、[[Present Value]]、[[Future Value]]、[[Annuity]]。
+2. 再做投资决策：[[Capital Budgeting Decision Map]]、[[Net Present Value]]、[[NPV Calculation]]、[[Internal Rate of Return]]、[[IRR Calculation]]、[[Profitability Index]]。
+3. 再看证券估值：[[Bond and Stock Valuation]]、[[Bond Valuation Model]]、[[Stock Valuation Model]]、[[Yield to Maturity]]、[[CAPM]]。
+4. 债券风险接到利率风险簇：[[duration|Duration]]、[[Modified Duration]]、[[Convexity]]、[[Basis Point Value (BPV)]]。
+5. 最后做企业诊断：[[Financial Ratio Analysis]]、[[DuPont Analysis]]、[[Sustainable Growth Rate]]、[[Internal Growth Rate]]。
 
 ## 货币时间价值
 
-[[Time Value of Money|货币时间价值]]
-[[Future Value|终值]]
-[[Present Value|现值]]
-[[Annuity|年金]]
+- [[Time Value of Money]]：为什么现金流必须放到同一时点比较。
+- [[Present Value]]：未来现金流折现到今天。
+- [[Future Value]]：今天的钱复利到未来。
+- [[Annuity]]：等额现金流的现值和终值。
 
 ## 投资决策
 
-### 净现值法
-[[Net Present Value (2)|净现值]]
-[[Net Present Value|净现值法]]
-[[NPV Calculation|净现值计算]]
+- [[Net Present Value]]：项目是否创造价值的核心概念。
+- [[NPV Calculation]]：可执行计算步骤。
+- [[Internal Rate of Return]] 与 [[IRR Calculation]]：使 NPV 为 0 的折现率。
+- [[Profitability Index]]：资金受限时的相对价值指标。
+- [[Capital Budgeting Decision Map]]：判断 NPV、IRR、PI 什么时候优先。
+- [[Investment Decisions]]：把 NPV、IRR、PI 和情景分析合成决策流程。
 
-### 内部收益率
-[[Internal Rate of Return|内涵报酬率]]
-[[IRR Calculation|内部收益率计算]]
+## 证券估值
 
-### 现值指数
-[[Profitability Index|现值指数]]
-
-## 债券与股票估值
-
-### 债券
-[[Bond Valuation Model|债券估价模型]]
-[[Bond Pricing Calculation|债券定价计算]]
-[[Yield to Maturity|到期收益率]]
-[[duration|久期]]
-[[Macaulay Duration|马考利久期]]
-[[Macaulay Duration Calculation|马考利久期计算]]
-[[Modified Duration|修正久期]]
-[[Modified Duration Calculation|修正久期计算]]
-[[Key Rate Duration|局部久期]]
-[[Effective Duration|有效久期]]
-
-### 股票
-[[Stock Valuation Model|股票估价模型]]
-[[Price-to-Earnings Ratio|市盈率]]
-[[Price-to-Book Ratio|市净率]]
-[[Price-to-Sales Ratio|市销率]]
+- [[Bond and Stock Valuation]]：把债券和股票估值落到步骤。
+- [[Bond Valuation Model]]：债券价值等于票息和本金的现值。
+- [[Stock Valuation Model]]：股票价值等于未来股利或自由现金流的现值。
+- [[Yield to Maturity]]：反推债券现金流的隐含收益率。
+- [[CAPM]] 与 [[CAPM Estimation]]：估计权益资本成本和系统性风险。
 
 ## 财务比率分析
 
-### 流动性比率
-[[Current Ratio|流动比率]]
-[[Quick Ratio|速动比率]]
-[[Cash Ratio|现金比率]]
+- 流动性：[[Current Ratio]]、[[Quick Ratio]]、[[Cash Ratio]]。
+- 盈利能力：[[Return on Equity]]、[[Return on Assets]]、[[Net Profit Margin]]。
+- 杠杆和偿债：[[Debt-to-Asset Ratio]]、[[Debt-to-Equity Ratio]]、[[Times Interest Earned Ratio]]。
+- 营运效率：[[Inventory Turnover Ratio]]、[[Accounts Receivable Turnover Ratio]]。
+- 分解框架：[[DuPont Analysis]]、[[Equity Multiplier]]。
 
-### 盈利能力比率
-[[Return on Equity|权益净利率]]
-[[Return on Assets|总资产净利率]]
-[[Net Profit Margin|营业净利率]]
+## 课程笔记入口
 
-### 偿债能力比率
-[[Debt-to-Asset Ratio|资产负债率]]
-[[Debt-to-Equity Ratio|产权比率]]
-[[Times Interest Earned Ratio|利息保障倍数]]
-[[Cash Coverage Ratio|现金流量利息保障倍数]]
-[[Long-term Debt Ratio|长期资本负债率]]
-
-### 营运能力比率
-[[Inventory Turnover Ratio|存货周转率]]
-[[Accounts Receivable Turnover Ratio|应收账款周转率]]
-
-### 增长能力比率
-[[Sustainable Growth Rate|可持续增长率]]
-[[Internal Growth Rate|内含增长率]]
-
-### 杜邦分析
-[[DuPont Analysis|杜邦分析]]
-[[Equity Multiplier|权益乘数]]
-
-## 资本结构理论
-
-[[CAPM|资本资产定价模型]]
-[[Capital Market Line|资本市场线]]
-[[Principal-Agent Problem|委托-代理问题]]
-[[Alpha|阿尔法值]]
-
-## 课程笔记
-
-- [[Time Value of Money|01_货币时间价值]]
-- [[Investment Decisions|02_投资决策]]
-- [[Bond and Stock Valuation|03_债券与股票估值]]
-- [[Financial Ratio Analysis|04_财务比率分析]]
+- [[03_价值评估基准#一.货币时间价值概念(Concept of Time Value of Money)|01_货币时间价值]]
+- [[05_投资项目资本预算]]
+- [[06_债券和股票估价|03_债券与股票估值]]
+- [[02_财务报表分析和财务预测#第二节 财务比率分析|04_财务比率分析]]
 
 ## 课程笔记反链
 

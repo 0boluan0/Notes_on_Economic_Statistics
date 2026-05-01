@@ -1,36 +1,50 @@
 ---
 aliases:
-- Student's t-test
-- t-test
 - t Test
+- t-test
+- Student's t-test
 - t检验
 tags:
 - concept
+- statistics
+- econometrics
 ---
 # t Test
 
->[!note] 它是什么
-> - 「t Test」是指基于t分布的均值或系数显著性检验。
->
->[!note] 最小可检索信息
-> - 定义：基于t分布的均值或系数显著性检验。
-> - 符号/公式：$t=\frac{\bar x-\mu_0}{s/\sqrt{n}}。$
-> - 最小例子：检验样本均值是否为0。
->
+## 先记一句话
+
+t Test 用估计值除以标准误，检验一个参数或均值是否显著偏离假设值。
+
+## 它是什么
+
+回归系数检验常写为：
+
+$$
+t=\frac{\hat\beta_j-\beta_{j,0}}{SE(\hat\beta_j)}
+$$
+
+常见原假设是 $H_0:\beta_j=0$。
+
+## 解决什么判断
+
+它回答：“单个系数是否显著不同于某个假设值？”
+
+## 最小例子
+
+若教育年限系数为 0.08，标准误为 0.02，则 $t=4$，通常拒绝系数为 0 的假设。
+
+## 易混点
+
+- t 显著不等于因果成立。
+- 标准误错，t 检验就错；异方差看 [[White Robust Standard Errors]]，自相关看 [[Newey-West]]。
+- 多个系数联合检验用 [[F-test]]。
+
+## 来自课程位置
+
+- [[03_多元线性回归]]
+
 ## 关联卡片
-- [[00_factor/concept/F-test|F-test]]
+
+- [[F-test]]
 - [[R-squared]]
-- [[00_factor/concept/Variance Inflation Factor|Variance Inflation Factor]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[OLS Estimation Steps]]

@@ -1,29 +1,87 @@
 ---
 aliases:
-- 自回归积分移动平均模型
-- ARIMA模型
 - ARIMA
+- ARIMA Model
+- Autoregressive Integrated Moving Average Model
+- ARIMA模型
+- 自回归积分移动平均模型
 tags:
-- 时间序列
 - concept
+- 时间序列
 ---
-ARIMA 模型（Autoregressive Integrated Moving Average）在 ARMA 基础上引入差分阶数 $d$，用于描述经差分后平稳的非平稳序列。
+# ARIMA
 
-## 形式
+## 先记一句话
 
-对原序列 $y_t$ 做 $d$ 阶差分 $\Delta^d y_t$，若 $\Delta^d y_t$ 可由 $\text{ARMA}(p,q)$ 刻画，则称 $y_t \sim \text{ARIMA}(p,d,q)$。
+ARIMA 就是：**先把非平稳序列差分到平稳，再对差分后的序列建 ARMA**。
 
-## 何时使用
+ARIMA$(p,d,q)$ 的意思是：
 
-- 特征根含 1（单位根）导致非平稳，需要差分以达成平稳再建模。
+- $p$：AR 阶数；
+- $d$：差分阶数；
+- $q$：MA 阶数。
 
-## Connections
+## 它是什么
 
-- 相关：[[ARMA]]、[[Unit Root Test|单位根检验]]、[[Stationarity|平稳性]]
+如果
+$$
+\Delta^d y_t
+$$
+可以用 ARMA$(p,q)$ 描述，那么
+$$
+y_t\sim ARIMA(p,d,q).
+$$
 
-## source_notes
+其中
+$$
+\Delta y_t=y_t-y_{t-1}.
+$$
 
-- [[03_平稳时间序列模型#1.1.3 ARIMA过程]]
+## 它解决什么判断
+
+ARIMA 用于有单位根、但差分后可以平稳的序列。
+
+题目信号：
+
+- 原序列非平稳；
+- ADF/PP 不能拒绝单位根；
+- 一阶差分后变平稳；
+- 需要对单变量序列建模和预测。
+
+## 一个最小例子
+
+随机游走
+$$
+y_t=y_{t-1}+\varepsilon_t
+$$
+本身非平稳。
+
+一阶差分后：
+$$
+\Delta y_t=\varepsilon_t.
+$$
+
+所以它可以看成 ARIMA$(0,1,0)$。
+
+## 常见误区
+
+- ARIMA 不是“比 ARMA 更高级”，而是处理非平稳单变量序列的一种方式。
+- 差分会丢掉水平上的长期关系；如果多个 $I(1)$ 变量之间有长期均衡，应看 [[Cointegration]] 和 [[Error Correction Model]]。
+- 不要过度差分；过度差分会制造不必要的 MA 结构。
+
+## 来自课程位置
+
+- [[03_平稳时间序列模型#1.1.3 ARIMA过程|时间序列 03：ARIMA 过程]]
+- [[07_协整和误差修正模型#2.1 协整的定义|时间序列 07：差分与协整的分流]]
+
+## 关联卡片
+
+- [[ARMA]]
+- [[First Difference]]
+- [[Unit Root Test]]
+- [[Random Walk]]
+- [[Cointegration]]
+- [[Spurious Regression]]
 
 ## 课程笔记反链
 

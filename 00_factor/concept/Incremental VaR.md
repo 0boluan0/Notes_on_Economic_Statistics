@@ -1,16 +1,64 @@
 ---
 aliases:
-- 递增VaR
 - Incremental VaR
+- incremental Value at Risk
+- IVaR
+- 递增VaR
 tags:
 - concept
+- 金融风险
+- VaR
 ---
-递增VaR指**新增或剔除一笔交易对组合VaR的影响**，即比较"有该交易"和"无该交易"两种组合VaR之差。例如，计算将资产$j$从组合中去掉后VaR的变化量，或者新增一个头寸后VaR的增量。递增VaR实际上是有限幅度（非无限小）的VaR变化评估，适用于评估一项具体投资决策对整体风险的影响。对于相对小的新增头寸，递增VaR与边际VaR近似相等；对于较大调整，需重新计算组合VaR来获得精确增量。
+# Incremental VaR
 
-## 相关链接
+## 先记一句话
 
-- 基础风险度量：[[VaR]]
-- VaR分解：[[Marginal VaR|边际VaR]], [[Component VaR|成分VaR]]
+递增 VaR 就是：**加入或移除一笔具体交易后，组合 VaR 改变了多少**。
+
+它看的是有限变动，不是微小边际变化。
+
+## 它是什么
+
+若原组合 VaR 是 $VaR(P)$，加入交易 $x$ 后是 $VaR(P+x)$，则
+$$
+Incremental\ VaR=VaR(P+x)-VaR(P).
+$$
+
+也可以用来评估删除某个头寸后的 VaR 变化。
+
+## 它解决什么判断
+
+Incremental VaR 用来回答：
+
+> 这笔新交易会让组合风险增加还是减少？增加多少？
+
+它非常适合交易审批和限额管理。
+
+## 和边际 VaR 的关系
+
+小头寸时：
+$$
+Incremental\ VaR \approx Marginal\ VaR\times \Delta w.
+$$
+
+但头寸较大或组合非线性时，必须重新计算组合 VaR。
+
+## 常见误区
+
+- Incremental VaR 不是分摊总 VaR；分摊看 [[Component VaR]]。
+- 不能只看该交易自身风险，要看它与原组合的相关性。
+- 新交易可能自身有风险，但因对冲原组合而降低总 VaR。
+
+## 来自课程位置
+
+- [[12_VAR风险|金融风险管理 12：VaR 分解]]
+
+## 关联卡片
+
+- [[VaR]]
+- [[Marginal VaR]]
+- [[Component VaR]]
+- [[Position]]
 
 ## 课程笔记反链
 

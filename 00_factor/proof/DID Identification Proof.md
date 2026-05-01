@@ -1,50 +1,87 @@
 ---
 aliases:
+- DID Identification Proof
 - DID识别证明
 - Difference-in-Differences proof
 - Parallel trends proof
 - 双重差分识别
-- DID Identification Proof
-- DID
 tags:
 - proof
+- econometrics
+- causal-inference
 ---
 # DID Identification Proof
 
 ## 假设
-- **平行趋势**：
-  $E[Y_{it}(0)|G_i=1,Post_t=1]-E[Y_{it}(0)|G_i=1,Post_t=0]=E[Y_{it}(0)|G_i=0,Post_t=1]-E[Y_{it}(0)|G_i=0,Post_t=0]$
-- **无预期效应** 与 **无溢出效应**。
 
-## 推导
-设处理组指示为 $G_i$，政策后指示为 $Post_t$，处理发生于 $G_i \times Post_t$。
+处理组 $G=1$，对照组 $G=0$，处理后 $Post=1$。
 
 观察结果：
-$Y_{it} = D_{it}Y_{it}(1) + (1-D_{it})Y_{it}(0)$
 
-两组两期的差上加差：
+$$
+Y=D Y(1)+(1-D)Y(0)
+$$
+
+关键假设是 [[Parallel Trends]]：
+
+$$
+E[Y_{post}(0)-Y_{pre}(0)\mid G=1]
+=E[Y_{post}(0)-Y_{pre}(0)\mid G=0]
+$$
+
+并假设无预期效应、无溢出效应。
+
+## 推导链
+
+DID 估计量：
+
 $$
 \begin{aligned}
-DID &= [E(Y|G=1,Post=1)-E(Y|G=1,Post=0)]\\
-&\quad-[E(Y|G=0,Post=1)-E(Y|G=0,Post=0)]
+DID
+&=[E(Y\mid G=1,post)-E(Y\mid G=1,pre)]\\
+&\quad-[E(Y\mid G=0,post)-E(Y\mid G=0,pre)]
 \end{aligned}
 $$
 
-代入潜在结果并使用平行趋势，可得：
-$DID = E[Y_{it}(1)-Y_{it}(0)|G_i=1,Post_t=1] = ATT$
+处理组政策后观察到 $Y(1)$，政策前观察到 $Y(0)$：
+
+$$
+E(Y\mid G=1,post)-E(Y\mid G=1,pre)
+=E[Y_{post}(1)-Y_{pre}(0)\mid G=1]
+$$
+
+加减 $E[Y_{post}(0)\mid G=1]$：
+
+$$
+=E[Y_{post}(1)-Y_{post}(0)\mid G=1]
++E[Y_{post}(0)-Y_{pre}(0)\mid G=1]
+$$
+
+由平行趋势，第二项等于对照组未处理趋势：
+
+$$
+E[Y_{post}(0)-Y_{pre}(0)\mid G=0]
+$$
+
+而对照组未被处理，所以可观察到：
+
+$$
+E(Y\mid G=0,post)-E(Y\mid G=0,pre)
+$$
+
+相减后共同趋势抵消，留下：
+
+$$
+DID=E[Y_{post}(1)-Y_{post}(0)\mid G=1]
+$$
 
 ## 结论
-- 在平行趋势成立下，DID 识别处理组平均处理效应（ATT）。
 
-## 课程笔记反链
+在平行趋势、无预期和无溢出条件下，DID 识别处理组在处理后的平均处理效应，即 [[ATT]]。
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+## 关联卡片
+
+- [[DID]]
+- [[Parallel Trends]]
+- [[ATT]]
+- [[DID Diagnostics]]

@@ -1,49 +1,61 @@
 ---
 aliases:
+- DID Diagnostics
 - DID诊断
-- DID robust checks
 - DID稳健性
 - DID validity checklist
-- DID
-- DID Diagnostics
+- DID robust checks
 tags:
 - system
+- econometrics
+- causal-inference
 ---
 # DID Diagnostics
 
+## 诊断目标
+
+判断 DID 估计是否有可信的因果解释，尤其是 [[Parallel Trends]]、无预期效应、无溢出和样本稳定性。
+
 ## 诊断清单
-- 平行趋势：处理前事件研究系数接近 0。
-- 预期效应：政策前窗口无显著提前反应。
-- 溢出效应：对照组不被间接受到处理影响。
-- 组成变化：样本进入/退出或权重变化可控。
 
-## 稳健性与替代规格
-- 不同前后窗口、不同对照组。
-- 加入控制变量与趋势项。
-- 使用分组/加权 DID 或异质处理效应分解。
+### Step 1：平行趋势
 
-## 典型问题与排错
-- 前趋势不平行：缩小窗口、改对照组、加趋势项，或更换识别策略。
-- 处理时间错位：避免简单 TWFE，改用分期估计。
-- 处理溢出：扩大处理范围或重定义对照组。
+处理前事件研究系数应接近 0，趋势图不应系统性分叉。
 
-## 复现规范
-- 固定样本口径、时间窗口、处理定义。
-- 明确聚类维度与标准误计算方式。
+### Step 2：预期效应
+
+政策正式实施前不应已经出现处理效应。如果存在提前反应，政策时间定义或识别假设有问题。
+
+### Step 3：溢出效应
+
+对照组不能被政策间接影响。若存在跨地区流动、价格传导或行为替代，对照组不再是反事实。
+
+### Step 4：样本组成
+
+处理前后样本进入退出、权重和测量口径要稳定。
+
+### Step 5：稳健性
+
+- 改时间窗口。
+- 改对照组。
+- 安慰剂政策时间。
+- 安慰剂结果变量。
+- 加入合理控制变量和趋势项。
+
+## 失败信号
+
+- 政策前系数显著。
+- 处理组政策前趋势持续更快或更慢。
+- 政策同期有只影响处理组的事件。
+- 分期处理和异质效应明显，但只用一个 TWFE 系数。
+
+## 来自课程位置
+
+- [[13_面板数据模型]]
 
 ## 关联卡片
+
+- [[DID]]
+- [[Parallel Trends]]
 - [[DID Estimation Steps]]
-- [[Fixed Effects Model|固定效应]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[DID Framework]]

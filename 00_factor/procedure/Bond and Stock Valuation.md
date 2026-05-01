@@ -59,8 +59,8 @@ $$
 ## 相关链接
 
 - [[Bond Valuation Model|债券估价模型]]
-- [[Bond Pricing Calculation|债券定价计算]]
 - [[Stock Valuation Model|股票估价模型]]
+- [[CAPM|资本资产定价模型]]
 - [[Price-to-Earnings Ratio|市盈率]]
 
 ## 课程笔记反链

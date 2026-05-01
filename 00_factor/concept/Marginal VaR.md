@@ -1,19 +1,60 @@
 ---
 aliases:
-- 边际VaR
 - Marginal VaR
+- marginal Value at Risk
+- 边际VaR
 tags:
 - concept
+- 金融风险
+- VaR
 ---
-$边际VaR定义为组合VaR对某资产头寸的变化率，直观上是**组合VaR对单个资产头寸的偏导数**。边际VaR表示在当前组合中，若第i项资产持仓增加一微小单位，组合VaR增加多少。公式上，资产i的边际VaR = \partial \text{VaR}_{\text{组合}} / \partial w_i（w_i为资产权重或金额）。边际VaR反映了每增加一元资产i所带来的风险增量。$
+# Marginal VaR
 
-  边际VaR与资产在组合中的**系统性风险贡献**有关。对于高度分散的组合，在正态参数法框架下，可以证明资产$i$的边际VaR与其在组合中的Beta系数成正比——Beta越高（与组合高度正相关，波动贡献大），边际VaR越大；反之，如果某资产与组合低相关甚至负相关，增加它反而可能降低组合风险，此时边际VaR可以为负值（意味着增持该资产会降低总VaR）。因此，边际VaR提供了调整组合的指引：增加边际VaR小甚至为负的资产有助于降低整体风险。
+## 先记一句话
 
-## 相关链接
+边际 VaR 就是：**某个头寸微小增加 1 单位时，组合 VaR 会增加多少**。
 
-- 基础风险度量：[[VaR]]
-- VaR分解：[[Incremental VaR|递增VaR]], [[Component VaR|成分VaR]]
-- 应用：用于[[Component VaR|成分VaR]]的计算（成分VaR = 持仓 × 边际VaR）
+它是组合 VaR 对单个头寸的偏导数。
+
+## 它是什么
+
+若组合头寸向量为 $w$，则资产 $i$ 的 marginal VaR 是
+$$
+\frac{\partial VaR(w)}{\partial w_i}.
+$$
+
+它回答的是“边际风险贡献”，不是某个资产自己的 standalone VaR。
+
+## 它解决什么判断
+
+Marginal VaR 用来判断：
+
+> 如果我再加一点这个资产，组合风险会怎么变？
+
+如果某资产与组合负相关，边际 VaR 甚至可能为负，表示增加它可能降低组合 VaR。
+
+## 和其他 VaR 分解的分工
+
+- [[Marginal VaR]]：微小增加一单位的风险变化率。
+- [[Incremental VaR]]：新增/删除一笔具体交易后的有限变化。
+- [[Component VaR]]：把总 VaR 分摊到各资产。
+
+## 常见误区
+
+- 边际 VaR 不是资产自身 VaR。
+- 边际 VaR 是局部概念，大幅调仓时要重新计算 incremental VaR。
+- 在相关性强的组合里，单资产风险大小不等于边际贡献大小。
+
+## 来自课程位置
+
+- [[12_VAR风险|金融风险管理 12：VaR 分解]]
+
+## 关联卡片
+
+- [[VaR]]
+- [[Incremental VaR]]
+- [[Component VaR]]
+- [[Variance-Covariance Method]]
 
 ## 课程笔记反链
 

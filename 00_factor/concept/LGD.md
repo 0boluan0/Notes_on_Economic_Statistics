@@ -1,33 +1,50 @@
 ---
 aliases:
-- Loss Given Default
 - LGD
+- Loss Given Default
 - 违约损失率
 tags:
 - concept
+- credit-risk
 ---
-# Loss Given Default (LGD)
+# LGD
 
->[!note] 它是什么
-> - 「LGD」是指违约后无法收回的损失比例。
->
->[!note] 最小可检索信息
-> - 定义：违约后无法收回的损失比例。
-> - 符号/公式：$LGD=1-\text{Recovery Rate}。$
-> - 最小例子：回收率40%则LGD=60%。
->
+## 先记一句话
+
+LGD 是违约发生后最终收不回来的比例。
+
+## 它是什么
+
+若回收率为 $R$：
+
+$$
+LGD=1-R
+$$
+
+它反映抵押品、优先级、清收效率和法律环境对违约损失的影响。
+
+## 解决什么判断
+
+它回答：“一旦违约，敞口中有多大比例会变成损失？”
+
+## 最小例子
+
+贷款违约后回收率为 40%，则 LGD = 60%。
+
+## 易混点
+
+- PD 讲“会不会违约”，LGD 讲“违约后亏多少比例”。
+- 有抵押品不代表 LGD 一定低，仍取决于处置价值和时间。
+- 经济下行情景下，LGD 和 PD 往往同时恶化。
+
+## 来自课程位置
+
+- [[16_巴塞尔协议]]
+- [[21_信用在险价值]]
+
 ## 关联卡片
-- [[Risk-Weighted Assets]]
 
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[PD]]
+- [[EAD]]
+- [[Credit Risk]]
+- [[Credit VaR]]

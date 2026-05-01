@@ -1,22 +1,42 @@
 ---
 aliases:
-- 基差风险
 - Basis Risk
+- 基差风险
+- 利率基差风险
 tags:
-- 金融
 - concept
+- risk-management
+- banking
 ---
-当市场上一般利率水平的变化引起不同类型金融工具利率的不同比例变动时，就产生基差风险 。即使银行的资产和负债在同一时间重新定价，如果**资产利率与负债利率的调整幅度不一致**，仍会面临风险 。例如，银行的贷款利率通常参考央行公布的基准利率，而存款利率可能由市场决定。如果两者对市场利率变化的响应幅度不同，利差就会波动。随着利率市场化推进，若银行采用新的参考基准（如MLF中期借贷便利利率），存贷款利率之间的不一致变动将增加基差风险 。
+# Basis Risk
 
-## 课程笔记反链
+## 先记一句话
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+Basis Risk 是资产和负债虽然同时重新定价，但参考利率或调整幅度不同。
+
+## 它是什么
+
+当贷款、存款、互换或债券的利率参考不同基准，市场利率变化不会等比例传导到所有头寸，利差就会波动。
+
+## 解决什么判断
+
+它回答：“同一利率冲击下，我的收入端和成本端是不是按同样幅度变化？”
+
+## 最小例子
+
+贷款利率跟随 LPR，存款利率受市场资金价格影响。即使两者同月调整，调整幅度不同也会形成 basis risk。
+
+## 易混点
+
+- Basis Risk 不是 CDS-bond basis 那类信用套利 basis；这里是利率风险管理中的基准错配。
+- 它和 [[Repricing Risk]] 不同：后者是时间错配，前者是基准或幅度错配。
+
+## 来自课程位置
+
+- [[09_利率风险]]
+
+## 关联卡片
+
+- [[Repricing Risk]]
+- [[Interest Rate Sensitivity Gap]]
+- [[Yield Curve Risk]]

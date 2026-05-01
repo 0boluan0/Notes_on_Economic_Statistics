@@ -1,30 +1,49 @@
 ---
 aliases:
 - Rho
+- 期权Rho
+- 利率敏感度
+- ρ
 tags:
 - concept
+- derivatives
+- risk-management
 ---
->[!note] 定义
-> $** Rho（罗）是交易产品价值对**利率**变化的敏感度，通常指对无风险利率r变化的偏导数：\displaystyle Rho = \frac{\partial V}{\partial r}。对于涉及多个货币的衍生品（如外汇期权），会存在两个Rho，即分别对本国利率和外国利率的敏感度。$
-    
-- **意义：** $Rho$衡量利率波动对衍生品定价的影响。一般来说，看涨期权对无风险利率的$Rho$为正（利率上升使得折现的行权价价值降低，因而看涨期权价值上升），看跌期权$Rho$为负（利率上升使看跌期权价值下降）。然而，$Rho$的影响相对$\Delta$、$\Gamma$、$Vega$通常较小，因为短期内利率波动幅度通常不大。
-    
-- **使用：** $Rho$用于管理**利率风险**。对于期限较长或利率敏感的产品（如债券期权、外汇期权），交易员需要关注$Rho$值，以决定是否通过利率掉期、债券等工具对冲利率变动风险。在多数股票类期权组合中，$Rho$不是主要风险因子，但在利率剧烈波动时期（或组合高度杠杆化对利率敏感时），也需要考虑$Rho$对组合价值的影响。
+# Rho
 
-## 相关链接
+## 先记一句话
 
-- 其他希腊字母：[[Delta]], [[Gamma]], [[Vega]], [[Theta]]
-- 利率风险：[[duration|久期]], [[Curvature|曲率]]
+Rho 是产品价值对无风险利率变化的敏感度。
 
-## 课程笔记反链
+## 它是什么
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+$$
+\rho=\frac{\partial V}{\partial r}
+$$
+
+其中 $r$ 是无风险利率或对应货币的折现利率。
+
+## 解决什么判断
+
+它回答：“利率变化会通过折现和远期价格影响我的衍生品价值多少？”
+
+## 最小例子
+
+普通股票看涨期权通常 Rho 为正：无风险利率上升时，行权价现值下降，看涨期权价值上升。
+
+## 易混点
+
+- 短期期权里 Rho 常小于 Delta/Gamma/Vega 的重要性，但长期期权和外汇期权不能忽略。
+- 外汇期权可能有本币利率 Rho 和外币利率 Rho。
+- 利率产品的风险更常用 [[duration|Duration]]、[[Basis Point Value (BPV)]] 等固定收益口径。
+
+## 来自课程位置
+
+- [[08_操作员如何管理风险暴露]]
+
+## 关联卡片
+
+- [[Delta]]
+- [[Vega]]
+- [[duration|Duration]]
+- [[Basis Point Value (BPV)]]

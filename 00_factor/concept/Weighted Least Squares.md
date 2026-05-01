@@ -1,235 +1,68 @@
 ---
 aliases:
-- 加权最小二乘法(WLS)
-- WLS
-- GLS
-- Generalized Least Squares
-- 加权最小二乘法
 - Weighted Least Squares
+- WLS
+- Generalized Least Squares
+- GLS
+- 加权最小二乘法
+- 加权最小二乘法(WLS)
 tags:
-- 计量经济学
-- 估计方法
 - concept
+- econometrics
 ---
-加权最小二乘法（Weighted Least Squares，WLS）是处理异方差的一种方法，通过对观测值赋予权重，使变换后的模型满足同方差假设。广义最小二乘法（GLS）是其一般形式。
+# Weighted Least Squares
 
-## 基本思想
+## 先记一句话
 
-### 异方差问题
+WLS 通过给不同观测赋权，把异方差模型变换成更接近同方差的模型。
 
-当模型存在异方差时：
-$Var(\epsilon_i) = \sigma_i^2（不同观测值方差不同）$
+## 它是什么
 
-### 解决思路
+若：
 
-通过变换模型，使变换后的误差项同方差：
-给每个观测值赋予权重$w_i$，权重与方差成反比。
+$$
+Var(u_i\mid X)=\sigma_i^2
+$$
 
-## WLS方法
+理想权重与方差成反比：
 
-### 权重选择
+$$
+w_i=\frac{1}{\sigma_i^2}
+$$
 
-#### 理论权重
+WLS 最小化：
 
-$w_i = \frac{1}{\sigma_i^2}$
+$$
+\min_\beta \sum_i w_i(y_i-x_i'\beta)^2
+$$
 
-即权重与误差项方差成反比。
+矩阵形式：
 
-#### 实际应用
+$$
+\hat\beta_{WLS}=(X'WX)^{-1}X'Wy
+$$
 
-通常需要设定权重的函数形式，例如：
-- 权重与某个变量成比例
-- 权重与变量的平方成比例
+## 解决什么判断
 
-### 估计准则
+它回答：“如果不同观测误差方差不同，能否通过权重提高估计效率？”
 
-WLS最小化加权残差平方和：
+## 最小例子
 
-$\min_{\beta} \sum_{i=1}^n w_i (y_i - X_i\beta)^2$
+大企业销售额波动更大。若误差方差与企业规模成比例，可以给大企业观测较低权重，降低高方差观测对估计的影响。
 
-### 矩阵形式
+## 易混点
 
-设W是对角权重矩阵：
-$W = \text{diag}(w_1, w_2, \dots, w_n)$
+- WLS 改变系数估计；[[White Robust Standard Errors]] 只改变标准误。
+- 权重设错可能比不用权重更差。
+- 不知道真实方差时，用估计权重的版本叫 [[FGLS]]，步骤见 [[Weighted Least Squares Estimation]]。
 
-WLS估计量为：
-$\hat{\beta}_{WLS} = (X'WX)^{-1}X'Wy$
+## 来自课程位置
 
-## 广义最小二乘法（GLS）
+- [[07_异方差]]
 
-### 一般形式
+## 关联卡片
 
-对于误差项协方差矩阵为 $\Sigma$ 的模型：
-$Var(\epsilon) = \Sigma$
-
-GLS估计量为：
-$\hat{\beta}_{GLS} = (X'\Sigma^{-1}X)^{-1}X'\Sigma^{-1}y$
-
-### 与WLS的关系
-
-当 $\Sigma = \text{diag}(\sigma_1^2, \sigma_2^2, \dots, \sigma_n^2)$ 时：
-- $\Sigma^{-1} = W$
-- GLS 退化为 WLS
-
-### P变换法
-
-设 $\Sigma = PP'$，定义变换矩阵 $P^{-1}$：
-
-变换后的模型：
-$P^{-1}y = P^{-1}X\beta + P^{-1}\epsilon$
-
-新误差项协方差：
-$Var(P^{-1}\epsilon) = P^{-1}\Sigma(P^{-1})' = I$
-
-变换后OLS = 原模型GLS
-
-## 可行加权最小二乘法（FGLS）
-
-### 问题
-
-实际中通常不知道真实的 $\sigma_i^2$，需要估计。
-
-### FGLS步骤
-
-#### 第一阶段
-
-1. 用 OLS 估计原模型，得到残差 $\hat{\epsilon}_i$
-2. 对 $\hat{\epsilon}_i^2$ 建模，拟合方差函数
-
-常见方差函数：
-- $\sigma_i^2 = \alpha_0 + \alpha_1 z_i$
-- $\sigma_i^2 = \alpha_0 + \alpha_1 z_i + \alpha_2 z_i^2$
-
-其中 $z_i$ 是影响方差的变量（可能是原解释变量）。
-
-3. 得到方差估计 $\hat{\sigma}_i^2$
-
-#### 第二阶段
-
-1. 使用$\hat{\sigma}_i^2$构造权重：$w_i = \frac{1}{\hat{\sigma}_i^2}$
-2. 进行WLS估计
-
-### 迭代FGLS
-
-可以迭代上述过程：
-- 使用FGLS估计量计算新残差
-- 重新估计方差函数
-- 重复直到收敛
-
-## WLS的性质
-
-### 1. 有效性
-
-如果权重正确，WLS是BLUE：
-- 无偏
-- 方差最小
-- 有效
-
-### 2. 一致性
-
-即使权重不完全正确，WLS估计量仍然一致。
-
-### 3. 渐近性质
-
-FGLS在样本量趋于无穷时：
-- 收敛于GLS
-- 具有良好性质
-
-## 与OLS的比较
-
-### 同方差情况下
-
-如果真实模型同方差：
-- WLS = OLS
-- 权重不影响估计
-
-### 异方差情况下
-
-| 性质 | OLS | WLS（正确权重） |
-|------|-----|----------------|
-| 无偏性 | 无偏 | 无偏 |
-| 一致性 | 一致 | 一致 |
-| 有效性 | 非有效 | 有效（BLUE） |
-| 标准误 | 有偏 | 无偏 |
-
-## 实践考虑
-
-### 1. 权重设定
-
-#### 常见权重
-
-1. **比例权重**：$w_i = \frac{1}{x_i}$
-2. **平方权重**：$w_i = \frac{1}{x_i^2}$
-3. **方差估计权重**：$w_i = \frac{1}{\hat{\sigma}_i^2}$
-
-#### 设定原则
-
-- 基于经济理论
-- 基于残差分析
-- 尝试不同形式
-
-### 2. 权重错误的风险
-
-- 错误权重可能导致更差估计
-- WLS方差可能比OLS更大
-- 需要谨慎选择权重
-
-### 3. 稳健性
-
-- 大样本下FGLS更稳健
-- 小样本下效果可能不稳定
-- 模型设定很重要
-
-## 替代方法
-
-### 1. 怀特稳健标准误
-
-- 不改变估计量
-- 只修正标准误
-- 不需要设定权重
-
-### 2. 变量变换
-
-- 对因变量或解释变量变换
-- 对数变换
-- 可能减少异方差
-
-### 3. 模型修正
-
-- 增加遗漏变量
-- 修正函数形式
-- 非纯异方差需要先修正模型
-
-## 应用场景
-
-### 1. 经济适用
-
-- 消费函数：收入高时消费波动大
-- 企业投资：规模大时投资波动大
-- 股票收益：方差与市场波动相关
-
-### 2. 截面数据
-
-- 不同个体异质性强
-- 规模差异大
-- 适合WLS处理
-
-### 3. 时间序列
-
-- 某些形式的条件异方差
-- ARCH/GARCH模型更合适
-
-相关链接: [[Heteroskedasticity|异方差]], [[OLS]], [[White Test|怀特检验]], [[GMM]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Heteroskedasticity]]
+- [[FGLS]]
+- [[White Robust Standard Errors]]
+- [[OLS Basics]]

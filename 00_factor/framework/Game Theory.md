@@ -39,8 +39,11 @@ tags:
 
 ## 相关链接
 
+- [[Game Theory-hub|博弈论知识地图]]
+- [[Game Theory Problem Solving Map|博弈论解题框架]]
 - [[Nash Equilibrium|纳什均衡]]
 - [[Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
+- [[Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]
 - [[Repeated Games|重复博弈]]
 - [[Bayesian Game|贝叶斯博弈]]
 

@@ -1,105 +1,57 @@
 ---
 aliases:
-- 内生性问题
-- 内生性
 - Endogeneity
+- 内生性
+- 内生性问题
 tags:
-- 计量经济学
-- 估计问题
 - concept
+- econometrics
 ---
-内生性（Endogeneity）是指模型中至少一个解释变量与误差项相关的情况，导致OLS估计量有偏且不一致。
+# Endogeneity
 
-## 产生原因
+## 先记一句话
 
-1. **遗漏变量偏误（Omitted Variable Bias）**
+内生性是解释变量和误差项相关，导致 OLS 估计因果参数有偏且不一致。
 
-   真实模型：$y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \varepsilon$
+## 它是什么
 
-   估计模型：$y = \hat{\beta}_0 + \hat{\beta}_1 x_1 + \hat{\varepsilon}$
+核心问题是：
 
-   如果遗漏变量$x_2$与$x_1$相关，则$x_1$与$\hat{\varepsilon}$相关。
+$$
+E[u\mid X]\ne 0
+$$
 
-2. **联立方程偏误（Simultaneity Bias）**
+或至少：
 
-   供给和需求方程同时决定价格和数量，导致解释变量与误差项相关。
+$$
+Cov(X,u)\ne 0
+$$
 
-3. **测量误差（Measurement Error）**
+这会让 OLS 分解式中的 $(X'X)^{-1}X'u$ 不再消失。
 
-   如果解释变量存在测量误差，且误差项与测量误差相关，产生内生性。
+## 解决什么判断
 
-## 后果
+它回答：“回归系数能不能解释成因果效应，还是只是在混合相关性和遗漏因素？”
 
-1. **OLS估计量有偏**：$\hat{\beta} \neq \beta$
-2. **OLS估计量不一致**：$\hat{\beta} \xrightarrow{p} \beta + c$，c是偏误
-3. **统计检验失效**：t检验、F检验不再有效
-4. **预测有偏**：使用有偏的参数进行预测有系统性偏差
+## 最小例子
 
-## 内生性检验
+估计教育对工资的影响时，若能力影响教育也影响工资，但模型遗漏能力，教育变量就和误差项相关，OLS 教育回报率有偏。
 
-### Hausman检验
+## 易混点
 
-比较OLS和IV（或2SLS）估计量是否有显著差异。
+- 内生性会破坏一致性；[[Heteroskedasticity]] 和 [[Autocorrelation]] 在外生性仍成立时通常主要破坏标准误和效率。
+- 加控制变量能缓解遗漏变量，但不能保证所有内生性消失。
+- 常见处理是 [[Instrumental Variable]]、[[2SLS]]、固定效应、DID、RDD 或自然实验。
 
-### Durbin-Watson检验
+## 来自课程位置
 
-检验一阶自相关，可用于某些特定内生性问题。
+- [[09_联立方程模型(内生性)]]
+- [[04_模型设定]]
 
-### 其他方法
+## 关联卡片
 
-- 工具变量相关性检验
-- 过度识别检验
-
-## 解决方法
-
-### 1. 工具变量法（IV/2SLS）
-
-使用与内生变量相关但与误差项不相关的工具变量。
-
-### 2. 面板数据方法
-
-使用面板数据的固定效应模型消除不随时间变化的遗漏变量。
-
-### 3. 自然实验
-
-利用外生政策变化作为工具变量。
-
-### 4. 控制函数法
-
-建模内生变量的决定过程。
-
-## 识别条件
-
-内生性问题通常与参数识别相关：
-
-- **恰好识别**：工具变量个数 = 内生变量个数
-- **过度识别**：工具变量个数 > 内生变量个数
-- **不可识别**：工具变量个数 < 内生变量个数
-
->[!example] 示例
->
-> ### 需求-供给模型
->
-> 需求方程：$Q = \alpha_0 + \alpha_1 P + \alpha_2 Y + \varepsilon_D$
->
-> 供给方程：$Q = \beta_0 + \beta_1 P + \beta_2 W + \varepsilon_S$
->
-> 其中：
-> - P和Q由两个方程同时决定
-> - 在需求方程中，P与\varepsilon_D相关（内生）
-> - W可以作为需求方程中P的工具变量
->
-> 相关链接: [[Instrumental Variable|工具变量]], [[2SLS]], [[Hausman Test|Hausman检验]], [[Simultaneous Equations Model|联立方程模型]]
->
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Endogeneity Diagnosis]]
+- [[Instrumental Variable]]
+- [[2SLS]]
+- [[Hausman Test]]
+- [[Simultaneity Bias]]

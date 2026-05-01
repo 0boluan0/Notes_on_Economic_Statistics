@@ -1,132 +1,93 @@
 ---
 aliases:
-- 最小二乘估计步骤
-- OLS估计步骤
-- OLS
 - OLS Estimation Steps
+- OLS估计步骤
+- 最小二乘估计步骤
 tags:
 - procedure
-- 01_Econometrics
+- econometrics
 ---
-# OLS估计步骤
+# OLS Estimation Steps
 
-## 适用场景
+## 这张卡什么时候用
 
-估计线性回归模型 $y = X\beta + \epsilon$ 的参数，适用于满足经典假设的截面数据或时间序列数据。
+需要从数据矩阵出发，完整计算线性回归的 OLS 系数、残差、标准误和拟合优度时使用。
 
-## 所需数据/条件
+## 输入
 
-- 因变量向量 $y$（$n \times 1$）
-- 自变量矩阵 $X$（$n \times k$），包含常数项列
-- 满足高斯-马尔可夫假设：
-  1. 线性性：$E[y|X] = X\beta$
-  2. 外生性：$E[\epsilon|X] = 0$
-  3. 同方差：$\text{Var}[\epsilon|X] = \sigma^2 I$
-  4. 无自相关：$\text{Cov}[\epsilon_i, \epsilon_j|X] = 0, i \neq j$
-  5. 无完全多重共线性：$X$ 满秩为 $k$
+- 因变量向量 $y$。
+- 解释变量矩阵 $X$，通常包含常数项。
+- 样本量 $n$ 和参数个数 $k$。
 
-## 计算步骤
+## 输出
 
-### 步骤 1：准备数据矩阵
+- $\hat\beta$。
+- 拟合值 $\hat y$ 和残差 $\hat u$。
+- 残差方差、标准误、$t/F$ 检验、$R^2$。
 
-构造包含常数项的自变量矩阵：
+## Step 1：构造数据矩阵
+
+确认 $X$ 包含需要的常数项、虚拟变量和控制变量，并检查是否满列秩。
+
+## Step 2：计算 OLS 系数
+
 $$
-X =
-\begin{pmatrix}
- 1 & x_{11} & \cdots & x_{1,k-1} \\ 1 & x_{21} & \cdots & x_{2,k-1} \\ \vdots & \vdots & \ddots & \vdots \\ 1 & x_{n1} & \cdots & x_{n,k-1} 
-\end{pmatrix}
+\hat\beta=(X'X)^{-1}X'y
 $$
 
-**注意点**：检查 $X$ 是否满秩，避免完全多重共线性导致不可估计。
+如果 $X'X$ 不可逆，先检查完全多重共线性。
 
-### 步骤 2：计算X'X和X'y
+## Step 3：计算拟合值和残差
 
-$ X'X = \sum_{i=1}^{n} x_i x_i' $
-$ X'y = \sum_{i=1}^{n} x_i y_i $
+$$
+\hat y=X\hat\beta,\qquad \hat u=y-\hat y
+$$
 
-**注意点**：这些是 $k \times k$ 和 $k \times 1$ 矩阵。
+并检查：
 
-### 步骤 3：求解参数估计量
+$$
+X'\hat u=0
+$$
 
-$ \hat{\beta} = (X'X)^{-1}X'y $
+## Step 4：估计残差方差
 
-**注意点**：需要矩阵求逆，若 $X'X$ 接近奇异，考虑岭回归或删除相关变量。
+$$
+\hat\sigma^2=\frac{\hat u'\hat u}{n-k}
+$$
 
-### 步骤 4：计算拟合值和残差
+## Step 5：计算标准误
 
-$ \hat{y} = X\hat{\beta} $
-$ \hat{\epsilon} = y - \hat{y} $
+经典同方差标准误：
 
-### 步骤 5：估计误差方差
+$$
+Var(\hat\beta\mid X)=\hat\sigma^2(X'X)^{-1}
+$$
 
-$ \hat{\sigma}^2 = \frac{\hat{\epsilon}'\hat{\epsilon}}{n-k} $
+若存在 [[Heteroskedasticity]] 或 [[Autocorrelation]]，不要使用这个经典标准误，改用 [[White Robust Standard Errors]] 或 [[Newey-West]]。
 
-**注意点**：自由度为 $n-k$（样本量减参数数）。
+## Step 6：做推断与诊断
 
-### 步骤 6：计算参数估计量的协方差矩阵
+- 单个系数：[[t Test]]。
+- 多个限制：[[F-test]]。
+- 拟合优度：[[R-squared]]。
+- 残差诊断：[[Heteroscedasticity Diagnosis]]、[[Autocorrelation Diagnosis]]、[[Multicollinearity]]、[[Endogeneity Diagnosis]]。
 
-$ \text{Var}(\hat{\beta}) = \hat{\sigma}^2 (X'X)^{-1} $
+## 常见错误
 
-**注意点**：对角线元素为各参数估计量的方差，用于标准误计算。
+- 忘记常数项。
+- 把 OLS 系数显著当成因果成立。
+- 有异方差/自相关时仍使用经典标准误。
+- 完全共线变量同时放入模型。
 
-### 步骤 7：计算拟合优度
+## 来自课程位置
 
-**总平方和（TSS）**：
-$ \text{TSS} = (y - \bar{y}1)'(y - \bar{y}1) $
+- [[02_一元线性回归]]
+- [[03_多元线性回归]]
+- [[05_多元回归模型的矩阵表达]]
 
-**回归平方和（ESS）**：
-$ \text{ESS} = (\hat{y} - \bar{y}1)'(\hat{y} - \bar{y}1) $
+## 关联卡片
 
-**残差平方和（RSS）**：
-$ \text{RSS} = \hat{\epsilon}'\hat{\epsilon} $
-
-**判定系数 $R^2$**：
-$ R^2 = \frac{\text{ESS}}{\text{TSS}} = 1 - \frac{\text{RSS}}{\text{TSS}} $
-
-**调整 $R^2$**：
-$ \bar{R}^2 = 1 - \frac{\text{RSS}/(n-k)}{\text{TSS}/(n-1)} $
-
-**注意点**：$R^2$ 随自变量增加而单调递增，$\bar{R}^2$ 考虑了自由度惩罚。
-
-## 关键公式
-
-**正规方程组**：
-$ X'X\hat{\beta} = X'y $
-
-**参数估计量**：
-$ \hat{\beta} = (X'X)^{-1}X'y $
-
-**BLUE性质**：
-在满足高斯-马尔可夫假设下，$\hat{\beta}$ 是最佳线性无偏估计量（BLUE）。
-
-## 常见问题
-
-1. **多重共线性**：$X'X$ 接近奇异，参数估计不稳定，标准误很大。
-2. **异方差**：$\hat{\sigma}^2$ 不再一致，标准误有偏。
-3. **自相关**：时间序列数据不满足独立性假设。
-4. **内生性**：自变量与误差项相关，参数估计有偏且不一致。
-
-## 相关概念
-[[Multicollinearity|多重共线性]]
-[[Heteroskedasticity|异方差]]
-[[Autocorrelation|自相关]]
-[[Endogeneity|内生性]]
-[[MLE Estimation Steps|MLE估计步骤]]
-
-## 相关链接
-
-- OLS性质：[[Gauss-Markov theorem|高斯-马尔可夫定理]]
-- 违反假设的后果：[[Heteroskedasticity|异方差]], [[Multicollinearity|多重共线性]], [[Autocorrelation|自相关]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[OLS Basics]]
+- [[OLS Estimator]]
+- [[Residual]]
+- [[Gauss-Markov theorem]]

@@ -1,32 +1,49 @@
 ---
 aliases:
-- 局部久期
 - Key Rate Duration
+- 局部久期
+- 关键期限久期
 tags:
 - concept
+- fixed-income
+- risk-management
 ---
-局部久期指在特定到期期限上的零息收益率发生微小变化时，金融工具或投资组合价值的变化率 。Reitano等人提出了一种局部久期分析方法：假定收益率曲线在某个期限上发生极小的平移（即只有该期限对应的利率变动，曲线其他部分保持不变），测量组合价值变化 。用数学语言说，局部久期是在收益率曲线上某点利率的偏导敏感度：
+# Key Rate Duration
+
+## 先记一句话
+
+Key Rate Duration 衡量收益率曲线上某个关键期限利率单独变化时，组合价值怎么变。
+
+## 它是什么
+
+对期限点 $T_i$ 的零息收益率 $y(T_i)$，局部久期可写作：
+
 $$
-D_{\text{local}}(T) = -\frac{1}{P}\frac{\partial P}{\partial y(T)}
+D_i=-\frac{1}{P}\frac{\partial P}{\partial y(T_i)}
 $$
 
-其中 $y(T)$ 表示期限为 $T$ 的即期利率（零息利率）。通过对若干关键期限（如1年、2年、5年、10年等）分别计算局部久期，可以了解组合对不同期限利率波动的敞口分布。
+它把总利率风险拆到 1 年、2 年、5 年、10 年等关键期限上。
 
-## 相关链接
+## 解决什么判断
 
-- 一般久期：[[duration|久期]], [[Modified Duration|修正久期]], [[Effective Duration|有效久期]]
-- 利率风险：[[Yield Curve Risk|收益率曲线风险]]
-- 应用：用于管理[[Yield Curve Risk|收益率曲线风险]]
+它回答：“我的利率风险主要暴露在曲线短端、中端还是长端？”
 
-## 课程笔记反链
+## 最小例子
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+若组合 10 年 key rate duration 很高，而 1 年 key rate duration 很低，则长端利率上升对组合价格更危险。
+
+## 易混点
+
+- 普通 [[Modified Duration]] 通常默认平行移动；Key Rate Duration 处理非平行移动。
+- 它是管理 [[Yield Curve Risk]] 的工具，不是现金流平均回收期。
+- 多个 key rate duration 的加总近似总久期，但取决于期限点设置和曲线插值方法。
+
+## 来自课程位置
+
+- [[09_利率风险]]
+
+## 关联卡片
+
+- [[Yield Curve Risk]]
+- [[duration|Duration]]
+- [[Basis Point Value (BPV)]]

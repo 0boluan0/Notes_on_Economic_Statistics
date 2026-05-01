@@ -1,29 +1,50 @@
 ---
 aliases:
 - Theta
+- 期权Theta
+- 时间损耗
+- θ
 tags:
 - concept
+- derivatives
 ---
->[!note] 定义
-> $** \Theta（希腊字母西塔）是交易产品价值对**时间流逝**的敏感度，定义为在其他条件不变时，产品价值随时间每减少一单位的变化率：\displaystyle \Theta = \frac{\partial V}{\partial t}（通常t表示剩余到期时间）。\Theta也称为组合的“时间损耗”（time decay）。$
-    
-- **意义：** $\Theta$描述了衍生品因时间推移而产生的价值损耗速度。对绝大多数期权多头而言，$\Theta$为负值，因为随着到期日临近且其他条件不变，期权的时间价值不断衰减，价格下降；反之，期权空头组合通常$\Theta$为正，因为卖方受益于买方的时间价值损耗。
-    
-- **使用：** $\Theta$主要用于评估**持有期损耗风险**。虽然很难直接对冲时间流逝本身（因为时间不可避免地流逝），但交易员可以通过构建组合（如日历价差等）使总$\Theta$接近零，达到**Theta中性**，从而平衡多空头寸的时间价值收益和损失。然而，需要注意Theta中性组合不一定是Delta或Gamma中性，所以在实际对冲中，$\Theta$常被视为被动风险，即交易员更多关注$\Delta$、$\Gamma$、$Vega$等，同时接受$\Theta$带来的损耗并通过交易收益弥补。
+# Theta
 
-## 相关链接
+## 先记一句话
 
-- 其他希腊字母：[[Delta]], [[Gamma]], [[Vega]], [[Rho]]
+Theta 衡量时间流逝对衍生品价值的影响，常被叫作 time decay。
 
-## 课程笔记反链
+## 它是什么
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+Theta 常写作：
+
+$$
+\Theta=\frac{\partial V}{\partial t}
+$$
+
+实际使用时要确认 $t$ 是日历时间还是剩余到期时间；不同教材符号可能相反。
+
+## 解决什么判断
+
+它回答：“其他条件不变，过一天我的期权组合会损耗或增加多少价值？”
+
+## 最小例子
+
+期权多头 Theta = -500，表示其他条件不变，每过一天价值约下降 500。
+
+## 易混点
+
+- Theta 的符号定义容易因 $t$ 的方向不同而相反，做题要看题目约定。
+- Theta 不能像 Delta 那样直接用交易标的完全对冲，因为时间一定流逝。
+- 卖期权常有正 Theta，但会承担 Gamma/Vega 风险。
+
+## 来自课程位置
+
+- [[08_操作员如何管理风险暴露]]
+
+## 关联卡片
+
+- [[Delta]]
+- [[Gamma]]
+- [[Vega]]
+- [[Greeks Hedging Map]]

@@ -1,54 +1,49 @@
 ---
 aliases:
-- 纯策略纳什均衡
 - Pure Strategy Nash Equilibrium
+- Pure Strategy NE
+- 纯策略纳什均衡
 tags:
 - concept
-- game theory
+- game-theory
 ---
-# 纯策略纳什均衡
+# Pure Strategy Nash Equilibrium
 
->[!note] 定义
->
-> 在一个策略组合上，当所有其他人都不改变策略时，没有人会改变自己的策略，则该策略组合就是一个纳什均衡。
->
-> 换句话说，如果在一个策略组合上，任何参与人单独改变策略都不会得到好处，这就是纯策略纳什均衡。
->
-## 关键特征
+## 一句话记忆
 
-1. **互为最优反应**：每个玩家的策略都是对其他玩家策略的最优反应
-2. **自稳定性**：没有玩家有单方面偏离的激励
-3. **对称性**：纳什均衡是对称的，适用于所有玩家
+纯策略纳什均衡是每个玩家都选择一个确定策略，且互为最优反应的策略组合。
 
-## 寻找方法
+## 它是什么
 
-### 划线法
-- 对于每个玩家的每个策略，在最优反应对应的收益下划线
-- 所有玩家的收益都有划线的策略组合就是纳什均衡
+Pure Strategy Nash Equilibrium 是 [[Nash Equilibrium]] 在纯策略集合中的情形。每个玩家不是随机化，而是确定选择某个 $s_i\in S_i$。
 
-### 箭头法
-- 画出策略间的箭头，箭头指向更好的反应
-- 如果所有箭头都指向某个策略组合，该组合是纳什均衡
+## 解决什么判断
 
-## 相关概念
+- 一个 payoff matrix 中哪些格子稳定。
+- 是否存在确定策略均衡。
+- 是否需要转向 [[Mixed Strategy Nash Equilibrium]]。
 
-- [[Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
-- [[strategic-form Games|策略式表达]]
-- [[Best-Reply Function|最优反应函数]]
-- [[Rationalisability|可理性化]]
+## 最小例子
 
-## 常见例子
+猎鹿博弈中 $(Stag, Stag)$ 和 $(Hare, Hare)$ 都可能是纯策略纳什均衡，因为给定对方选择时，自己不愿单独偏离。
 
-- 囚徒困境：{D, D} 是唯一的纳什均衡
-- 性别博弈：有两个纯策略纳什均衡
-- 猎鹿博弈：有两个纯策略纳什均衡
-- 匹配硬币（Matching Pennies）：没有纯策略纳什均衡
+## 易混点
 
-## 纳什均衡的类型
+- 纯策略均衡可以不唯一。
+- 没有纯策略均衡不代表没有纳什均衡，有限博弈通常仍存在混合策略均衡。
+- 找纯策略均衡时，必须按玩家分别比较 payoff，不能跨玩家比较数字。
 
-- 纯策略纳什均衡
-- [[Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
-- [[Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]
+## 来自课程位置
+
+- [[03_策略式博弈#纯策略的纳什均衡]]
+
+## 关联卡片
+
+- [[Nash Equilibrium]]
+- [[Finding Pure Strategy Nash Equilibria]]
+- [[Best-Reply Function]]
+- [[Mixed Strategy Nash Equilibrium]]
+- [[Game Theory-hub]]
 
 ## 课程笔记反链
 

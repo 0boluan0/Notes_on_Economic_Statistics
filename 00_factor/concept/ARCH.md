@@ -1,36 +1,82 @@
 ---
 aliases:
-- 自回归条件异方差
 - ARCH
+- ARCH Model
+- Autoregressive Conditional Heteroskedasticity
+- 自回归条件异方差
 tags:
 - concept
+- 时间序列
+- 波动建模
 ---
->[!note] **ARCH(1)模型定义：**
-> $$
-> \epsilon_t = \nu_t \sqrt{\alpha_0 + \alpha_1 \epsilon_{t-1}^2}
-> $$
-> 或者写作：
-> $$
-> \begin{cases}
-> \varepsilon_t = \nu_t \sqrt{h_t} \\
-> h_t = \alpha_0 + \alpha_1 \varepsilon_{t-1}^2
-> \end{cases}
-> $$
-> 其中 $\nu_t$ 是一列独立同分布（i.i.d.）的随机变量，满足 $\mathbb{E}(\nu_t)=0$，$\operatorname{Var}(\nu_t)=1$。
-> $\alpha_0$ 和 $\alpha_1$ 为常数参数，且 $\alpha_0 > 0$ 确保为正，$0 \leq \alpha_1 < 1$ 保证平稳性。
-> $h_t$ 表示 $\varepsilon_t$ 在 $t$ 期的条件方差（即 $h_t = \mathrm{Var}(\varepsilon_t \mid \mathcal{F}_{t-1})$）。
-> 这里 $\epsilon_t$ 可以看作我们感兴趣序列（例如资产回报率）的均值已滤除后的**随机扰动**（即残差）。模型表示此残差的方差并不恒定，而是由上一期残差的平方 $\epsilon_{t-1}^2$ 决定。
+# ARCH
 
-所以它是一个鞅差分。因为 $t-1$ 期的所有项在算期望的时候都能提出来。
+## 先记一句话
 
-**关键**：在 ARCH(1) 中，$\epsilon_t$ 的 $t-1$ 期条件方差为 $\alpha_0 + \alpha_1 \epsilon_{t-1}^2$。（无条件方差就是对条件方差再取一次期望，得到 $\bar{h} = \frac{\alpha_0}{1-\alpha_1}$。）
+ARCH 就是：**用过去冲击的平方解释当前条件方差**。
 
-**其中**，常数项 $\alpha_0$ 不能被删除。因为如果给 $\epsilon_t=\alpha_1 \epsilon_{t-1}^2$ 两侧同时取期望，最后算出来 $\alpha_1$ 的值一定为 1。
+它建模的不是均值，而是波动率。
 
-## 相关链接
+## 它是什么
 
-- 扩展模型：[[GARCH]], [[TARCH]], [[EGARCH]]
-- 相关概念：[[Volatility Clustering|波动聚集]], [[Conditional Heteroskedasticity|条件异方差]], [[Historical Volatility|历史波动率]], [[Implied Volatility|隐含波动率]], [[Realized Volatility|已实现波动率]]
+ARCH(1)：
+$$
+\varepsilon_t=\nu_t\sqrt{h_t},
+\qquad
+h_t=\alpha_0+\alpha_1\varepsilon_{t-1}^2.
+$$
+
+其中：
+
+- $\nu_t$ 通常是 i.i.d.、均值 0、方差 1；
+- $h_t$ 是条件方差；
+- $\alpha_0>0$ 保证基础方差；
+- $\alpha_1\geq0$ 表示上一期冲击平方对本期波动的影响。
+
+## 它解决什么判断
+
+ARCH 用来刻画：
+
+> 大残差之后，下一期方差更大。
+
+如果均值模型残差没有自相关，但残差平方有自相关，就该考虑 ARCH/GARCH。
+
+## 一个最小直觉
+
+上一期市场大跌或大涨，$\varepsilon_{t-1}^2$ 都很大。
+
+ARCH 不关心方向，只关心冲击大小。
+
+所以正负大冲击都会提高下一期波动。
+
+## 和 GARCH 的关系
+
+ARCH 只用过去冲击平方解释方差。
+
+[[GARCH]] 还加入过去的条件方差：
+$$
+h_t=\omega+\alpha\varepsilon_{t-1}^2+\beta h_{t-1}.
+$$
+
+因此 GARCH 通常能用更少参数刻画更持久的波动。
+
+## 常见误区
+
+- ARCH 的核心是条件方差，不是残差均值。
+- $\alpha_0$ 不能随便删，否则长期方差结构会出问题。
+- ARCH 可以是 MDS，但不是 IID，因为条件方差随过去变化。
+
+## 来自课程位置
+
+- [[04_波动建模 Modeling Volatility#2.2 ARCH|时间序列 04：ARCH 模型]]
+
+## 关联卡片
+
+- [[Conditional Heteroskedasticity]]
+- [[Volatility Clustering]]
+- [[GARCH]]
+- [[ARCH LM Test]]
+- [[Martingale Difference Sequence]]
 
 ## 课程笔记反链
 

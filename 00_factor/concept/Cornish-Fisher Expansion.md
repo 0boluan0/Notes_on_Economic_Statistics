@@ -2,32 +2,48 @@
 aliases:
 - Cornish-Fisher Expansion
 - Cornish-Fisher展开
-- Cornish
+- Cornish Fisher expansion
 tags:
 - concept
+- statistics
+- risk-management
 ---
 # Cornish-Fisher Expansion
 
->[!note] 它是什么
-> - 「Cornish-Fisher Expansion」是指用偏度和峰度对正态分位点进行修正的近似方法。
->
->[!note] 最小可检索信息
-> - 定义：用偏度和峰度对正态分位点进行修正的近似方法。
-> - 符号/公式：$z_{cf}=z+\frac{1}{6}(z^2-1)S+\frac{1}{24}(z^3-3z)K-\frac{1}{36}(2z^3-5z)S^2。$
-> - 最小例子：对收益分布的VaR分位点进行偏度修正。
->
+## 先记一句话
+
+Cornish-Fisher Expansion 用偏度和峰度修正正态分位数，常用于非正态 P&L 的 VaR 近似。
+
+## 它是什么
+
+若 $z_\alpha$ 是标准正态分位数，偏度为 $S$，超额峰度为 $K$，修正分位数可近似写为：
+
+$$
+z_{CF}=z_\alpha+\frac{1}{6}(z_\alpha^2-1)S
++\frac{1}{24}(z_\alpha^3-3z_\alpha)K
+-\frac{1}{36}(2z_\alpha^3-5z_\alpha)S^2
+$$
+
+## 解决什么判断
+
+它回答：“如果收益或 P&L 分布偏斜、厚尾，正态 VaR 分位数该往哪里修？”
+
+## 最小例子
+
+期权组合的 P&L 由 Delta-Gamma 近似得到，分布可能偏斜。这时可以用 Cornish-Fisher 把正态分位数调整成考虑偏度和峰度的分位数。
+
+## 易混点
+
+- 它修正分位数，不是重新拟合完整分布。
+- 偏度、峰度估计不稳时，修正结果也不稳。
+- 它常和 [[Delta-Gamma Approximation]]、[[VaR]] 联系，而不是基本 Greeks 定义。
+
+## 来自课程位置
+
+- [[14_VaR参数法和模拟法]]
+
 ## 关联卡片
-- [[Option Greeks-hub]]
 
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Delta-Gamma Approximation]]
+- [[VaR]]
+- [[Nonlinear Products]]

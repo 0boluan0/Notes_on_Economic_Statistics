@@ -1,99 +1,88 @@
 ---
 aliases:
-- 马考利久期计算步骤
-- 马考利久期计算
 - Macaulay Duration Calculation
+- 马考利久期计算
+- 麦考利久期计算
 tags:
 - procedure
-- 07_金融机构与风险管理
+- fixed-income
 ---
-# 马考利久期计算
+# Macaulay Duration Calculation
 
-## 适用场景
+## 这张卡什么时候用
 
-衡量债券或固定收益资产的平均回收时间，用于评估债券价格对利率变动的敏感度，以及资产负债久期匹配管理。
+给出债券现金流、到期收益率和付息频率，要求计算 Macaulay duration 时使用。定义见 [[Macaulay Duration]]。
 
-## 所需数据/条件
+## 输入
 
-- 各期现金流 $CF_t$（利息或本金）
-- 到期收益率（市场利率）$y$
-- 年付息次数 $m$（年付息 $m=1$，半年付息 $m=2$）
+- 每期现金流 $CF_t$。
+- 年化到期收益率 $y$。
+- 每年付息次数 $m$。
+- 期数 $n$。
 
-## 计算步骤
+## 输出
 
-### 步骤 1：整理现金流序列
+- 债券价格 $P$。
+- Macaulay duration $D_M$，通常以年为单位。
 
-列出债券各期现金流：
-- 每期利息：$I = \text{面值} \times \text{票面利率}/m$
-- 期末本金+利息：$CF_n = \text{面值} + I$
+## Step 1：列现金流
 
-**注意点**：确保现金流时间单位与收益率一致。
+按每个付息周期列出 $CF_1,\dots,CF_n$。最后一期通常包含票息和本金。
 
-### 步骤 2：计算各期现金流现值
+## Step 2：折现现金流
 
-对每期现金流 t，计算现值：
-$ PV_t = \frac{CF_t}{(1 + y/m)^{t}} $
+周期收益率为 $y/m$：
 
-**注意点**：使用年化收益率，分母需除以 m。
+$$
+PV_t=\frac{CF_t}{(1+y/m)^t}
+$$
 
-### 步骤 3：计算总现值（债券价格）
+价格为：
 
-$ P = \sum_{t=1}^{n} PV_t $
+$$
+P=\sum_{t=1}^{n}PV_t
+$$
 
-### 步骤 4：计算时间加权的现值
+## Step 3：计算现值权重
 
-$ \text{加权和} = \sum_{t=1}^{n} t \times PV_t $
+$$
+w_t=\frac{PV_t}{P}
+$$
 
-**注意点**：若为年付息，t 直接为期数；若为半年付息，t 为半期数。
+检查所有权重应加总为 1。
 
-### 步骤 5：计算马考利久期
+## Step 4：计算加权平均时间
 
-$ D_M = \frac{\text{加权和}}{P} = \frac{\sum_{t=1}^{n} t \cdot CF_t / (1 + y/m)^t}{\sum_{t=1}^{n} CF_t / (1 + y/m)^t} $
+周期口径：
 
-**注意点**：久期单位与现金流周期单位相同。若用半期，需除以 m 转换为年。
+$$
+D_M^{period}=\sum_{t=1}^{n}t w_t
+$$
 
-### 步骤 6：转换为年久期（如需）
+年口径：
 
-$ D_M^{\text{年}} = \frac{D_M}{m} $
+$$
+D_M=\frac{D_M^{period}}{m}
+$$
 
-## 关键公式
+## 检查点
 
-**马考利久期**：
-$ D_M = \frac{\sum_{t=1}^{n} t \cdot \frac{CF_t}{(1 + y/m)^t}}{\sum_{t=1}^{n} \frac{CF_t}{(1 + y/m)^t}} $
+- 零息债券的 Macaulay duration 等于剩余期限。
+- 附息债券的 duration 通常小于到期期限。
+- 现金流周期和收益率周期必须一致。
 
-**永续债券久期**：
-$ D_M = \frac{1 + y/m}{y/m} $
+## 常见错误
 
-**零息债券久期**：
-$ D_M = n/m \text{（剩余期限）} $
+- 忘记最后一期本金。
+- 半年付息却直接用年收益率折现。
+- 把 Macaulay duration 直接用于价格百分比变化；价格敏感度见 [[Modified Duration Calculation]]。
 
-## 债券价格估计（久期近似）
+## 来自课程位置
 
-$ \frac{\Delta P}{P} \approx -D_M \times \Delta y $
+- [[09_利率风险]]
 
-**注意点**：此为线性近似，利率大幅变动时误差较大，需加入凸性修正。
+## 关联卡片
 
-## 常见问题
-
-1. **单位混淆**：现金流周期与收益率周期不匹配导致错误。
-2. **浮动利率债券**：久期近似等于下次重定价前的时期长度。
-3. **含期权债券**：马考利久期不准确，需用有效久期。
-4. **收益率变化**：久期随收益率变化而变化（凸性效应）。
-
-## 相关概念
-[[duration|久期]]
-[[Modified Duration|修正久期]]
-[[Convexity|凸性]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Macaulay Duration]]
+- [[Modified Duration]]
+- [[Convexity]]

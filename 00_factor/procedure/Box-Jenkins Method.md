@@ -177,7 +177,7 @@ $$
 5. **结构断点**：样本期间模型参数可能变化，需分段建模。
 
 ## 相关概念
-[[Stationary Time Series|平稳时间序列]]
+[[Stationarity|平稳时间序列]]
 [[ARMA Model Identification Steps|ARMA模型识别步骤]]
 [[GARCH Model Estimation Steps|GARCH模型估计步骤]]
 [[Unit Root Test|单位根]]

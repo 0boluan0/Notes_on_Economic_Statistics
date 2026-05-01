@@ -1,70 +1,54 @@
 ---
 aliases:
-- 附属资本比率
-- 二级资本比率
-- Tier 2 Capital
 - Tier 2 Capital Ratio
+- Tier 2 Capital
+- 二级资本比率
+- 附属资本比率
 tags:
 - system
-- 金融机构与风险管理
-- 金融
+- banking
+- regulation
 ---
-# 二级资本比率
+# Tier 2 Capital Ratio
 
-## 诊断目的
+## 诊断目标
 
-衡量银行附属资本（包括次级债、一般准备金等）对风险资产的补充能力，反映银行的资本补充机制。
+判断银行补充资本对总资本充足率的贡献，以及资本质量是否过度依赖附属资本。
 
-## 计算方法
+## 它是什么
 
-$\text{Tier 2 比率} = \frac{\text{Tier 2 资本}}{\text{风险加权资产（RWA）}} \times 100\%$
+Tier 2 资本通常包括次级债、一般准备等吸收损失能力弱于 CET1 的资本项目。
 
-Tier 2 资本构成：
-- 未公开储备
-- 资产重估储备
-- 一般准备金（一般损失准备）
-- 次级债务工具（长期次级债、可转债）
-- 混合资本工具（某些优先股）
+## 公式
 
-## 判断标准
+$$
+Tier\ 2\ Ratio=\frac{Tier\ 2}{RWA}
+$$
 
-| 指标 | Basel III 要求 | 限制 |
-|------|--------------|------|
-| Tier 2 最高限额 | 无明确最低 | ≤ Tier 1 资本的 100% |
-| 总资本（Tier 1 + Tier 2） | ≥ 8.0% RWA | - |
+总资本充足率使用：
 
-### 资本质量指标
+$$
+\frac{Tier\ 1+Tier\ 2}{RWA}
+$$
 
-$\text{资本质量} = \frac{\text{CET1}}{\text{总资本}}$
+## 诊断流程
 
-| 等级 | CET1占比 | 评价 |
-|------|----------|------|
-| 优秀 | ≥ 75% | 高质量资本结构 |
-| 良好 | 50-75% | 良好资本结构 |
-| 一般 | 30-50% | 需提升核心资本 |
-| 较差 | < 30% | 过度依赖附属资本 |
+1. 看总资本是否达标。
+2. 看 Tier 1 是否足够，避免总资本主要靠 Tier 2 撑起来。
+3. 检查 Tier 2 工具到期集中度。
 
-## 常见问题与对策
+## 常见风险点
 
-| 问题 | 可能原因 | 解决方案 |
-|------|----------|----------|
-| Tier 2 超过 Tier 1 | 过度依赖次级债 | 限制 Tier 2 发行，增加 Tier 1 |
-| 资本质量下降 | 频繁使用混合工具 | 提高股权融资比例，改善资本结构 |
-| Tier 2 到期集中 | 资本管理不当 | 错开到期日，建立资本续作计划 |
+- 次级债到期后资本突然下降。
+- 资本质量差，总资本达标但核心资本不足。
+- 把 Tier 2 当成和 CET1 一样可靠的损失吸收资本。
 
-## 相关概念
-[[Tier 1 Capital Ratio|一级资本比率]]
-[[Basel Capital Adequacy Ratio|巴塞尔资本充足率]]
+## 来自课程位置
 
-## 课程笔记反链
+- [[16_巴塞尔协议]]
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+## 关联卡片
+
+- [[Tier 1 Capital Ratio]]
+- [[Basel Capital Adequacy Ratio]]
+- [[Risk-Weighted Assets]]

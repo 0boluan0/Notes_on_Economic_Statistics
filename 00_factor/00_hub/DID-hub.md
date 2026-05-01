@@ -1,28 +1,46 @@
 ---
 aliases:
-- DID
-- Difference-in-Differences
-- 双重差分
-- 差分中的差分
 - DID-hub
+- DID hub
+- Difference-in-Differences hub
+- 双重差分知识地图
 tags:
 - hub
+- econometrics
+- causal-inference
 ---
-# DID Hub
+# DID-hub
 
-## 核心卡片
-- [[DID]]
-- [[DID Framework]]
-- [[DID Estimation Steps]]
-- [[DID Diagnostics]]
-- [[DID Identification Proof]]
-- [[DID Writing Template]]
+## 这组卡解决什么
 
-## 相关概念
-- [[Fixed Effects Model|固定效应]]
-- [[Panel Data Model|面板数据模型]]
-- [[Instrumental Variable|工具变量]]
-- [[Hausman Test|Hausman检验]]
+DID 用处理组与对照组的“前后变化差异”识别政策或事件的因果效应。核心不是回归式，而是 [[Parallel Trends]] 是否可信。
+
+## 学习路线
+
+1. 定义入口：[[DID]]、[[ATT]]、[[Parallel Trends]]。
+2. 使用判断：[[DID Framework]]。
+3. 估计流程：[[DID Estimation Steps]]。
+4. 识别证明：[[DID Identification Proof]]。
+5. 有效性诊断：[[DID Diagnostics]]。
+6. 写作表达：[[DID Writing Template]]。
+
+## 前置知识
+
+- [[Panel Data Model]]
+- [[Fixed Effects Model]]
+- [[Endogeneity]]
+- [[Hausman Test]]
+
+## 什么时候不要硬用 DID
+
+- 处理前趋势已经明显分叉。
+- 对照组被政策溢出影响。
+- 处理组和对照组样本构成在政策前后变化很大。
+- 错位处理时间和异质处理效应很强，却只用简单 TWFE。
+
+## 课程笔记入口
+
+- [[13_面板数据模型]]
 
 ## 课程笔记反链
 

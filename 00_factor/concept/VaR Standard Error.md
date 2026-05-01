@@ -1,50 +1,53 @@
 ---
 aliases:
-- VaR标准误
-- VaR
 - VaR Standard Error
+- VaR标准误
+- VaR估计标准误
 tags:
 - concept
+- risk-management
 ---
-**VaR标准误差的公式**
-VaR的标准误差（以分位数估计的标准误为例）：
+# VaR Standard Error
+
+## 先记一句话
+
+VaR Standard Error 衡量的是“样本分位数这个 VaR 估计本身有多不稳”。
+
+## 它是什么
+
+若 VaR 被看作损失分布的分位数估计，近似标准误为：
 
 $$
-\text{SE}(\text{VaR}) = \frac{ \sqrt{ p(1-p) } }{ n, f(\text{VaR}) }
-$$
-实际上更常见的形式是：
-$$
-\text{SE}(\text{VaR}) = \frac{1}{ f(\text{VaR}) } \cdot \sqrt{ \frac{ p(1-p) }{ n } }
-$$
-
-- $p$：VaR的置信水平（此处$0.95$）
-- $n$：样本量（此处$1000$）
-- $f(\text{VaR})$：在VaR处的概率密度函数值（此处$0.01$）
-
-==这个$f(\text{VaR})$通常会给,但是如果题目中说了正态,就是让你自己算: $==$
-
-正态分布密度函数：
-
-$$
-f(x) = \frac{1}{\sigma \sqrt{2\pi}} \exp\left( -\frac{(x-\mu)^2}{2\sigma^2} \right)
+\operatorname{SE}(\widehat{\operatorname{VaR}}_\alpha)
+\approx
+\frac{1}{f(q_\alpha)}
+\sqrt{\frac{\alpha(1-\alpha)}{n}}
 $$
 
-## 相关链接
+其中 $f(q_\alpha)$ 是 VaR 分位点处的密度，$n$ 是样本量。
 
-- 基础概念：[[VaR]]
-- 应用：用于评估[[VaR]]估计的精度，以及[[00_factor/concept/Backtesting|回溯检验]]
+## 解决什么判断
 
+它回答：“当前样本长度下，这个 VaR 数字是不是可能因为抽样误差而大幅摆动？”
 
+## 最小例子
 
-## 课程笔记反链
+历史模拟只有 250 个交易日，99% VaR 实际上由最差的 2 到 3 个观测决定；这时 VaR 标准误通常很大。
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+## 易混点
+
+- 标准误不是 VaR 本身，而是 VaR 估计的不确定性。
+- $f(q_\alpha)$ 越小，尾部越稀疏，标准误越大。
+- 增加样本量能降低抽样误差，但不能修复结构性模型错误。
+
+## 来自课程位置
+
+- [[12_VAR风险]]
+- [[14_VaR参数法和模拟法]]
+
+## 关联卡片
+
+- [[VaR]]
+- [[Historical Simulation VaR]]
+- [[Confidence Level]]
+- [[Observation Window]]

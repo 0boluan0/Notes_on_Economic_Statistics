@@ -1,72 +1,61 @@
 ---
 aliases:
-- 风险加权资产
-- RWA
 - Risk-Weighted Assets
-- Risk
+- RWA
+- 风险加权资产
 tags:
 - system
-- 金融机构与风险管理
-- 金融
+- banking
+- regulation
 ---
-# 风险加权资产
+# Risk-Weighted Assets
 
-## 诊断目的
+## 诊断目标
 
-将银行资产按照风险程度进行加权，反映银行实际承担的风险水平，为资本充足率计算提供基础。
+RWA 把不同风险程度的资产折算成资本监管分母，避免只看账面总资产。
 
-## 计算方法
+## 标准法公式
 
-$\text{RWA} = \sum_{i=1}^{n} \text{资产}_i \times \text{风险权重}_i$
+$$
+RWA=\sum_i Exposure_i\times Risk\ Weight_i
+$$
 
-### Basel I 标准法风险权重
+Basel I 常见权重包括 0%、20%、50%、100%。
 
-| 资产类别 | 风险权重 | 典型资产 |
-|----------|----------|----------|
-| 0% | 0.00 | OECD主权债、本国政府债、现金 |
-| 20% | 0.20 | OECD银行同业存放、政府机构债 |
-| 50% | 0.50 | 住宅抵押贷款 |
-| 100% | 1.00 | 企业贷款、股权、非主权债 |
+## IRB 口径
 
-### IRB 法计算
+内部评级法中常见折算关系：
 
-$\text{RWA} = 12.5 \times K \times \text{EAD}$
+$$
+RWA=12.5\times K\times EAD
+$$
 
-其中：
-- K：资本系数（基于 PD、LGD 计算）
-- EAD：违约敞口
-- 12.5 = 1/8%，来自 8% 最低资本要求
+其中 $12.5=1/8\%$，$K$ 是基于 [[PD]]、[[LGD]]、相关性和期限调整得到的资本系数。
 
-## 判断标准
+## 诊断流程
 
-| 指标 | 健康水平 | 警戒水平 |
-|------|----------|----------|
-| RWA/总资产 | < 60% | 60-80% |
-| RWA增长率 | < 业务增长率 | 显著高于业务增长率 |
+1. 判断资产或表外项目属于哪类暴露。
+2. 确定风险权重或 IRB 参数。
+3. 对衍生品先算信用等价额或 [[EAD]]，再乘权重。
+4. 加总得到 RWA。
+5. 用 RWA 计算 [[Basel Capital Adequacy Ratio]]。
 
-## 常见问题与对策
+## 常见风险点
 
-| 问题 | 可能原因 | 解决方案 |
-|------|----------|----------|
-| RWA显著高于预期 | 风险权重分类错误、资产组合高风险 | 重新审查资产分类、优化资产组合结构 |
-| RWA与经济资本差距大 | 模型假设不一致 | 统一内部模型与监管模型的风险参数 |
-| 衍生品RWA计算复杂 | 潜在未来风险估计不准确 | 定期重估衍生品风险暴露，使用净额结算协议 |
+- 表外承诺没有用 CCF 转换。
+- 衍生品没有考虑潜在未来暴露和 [[Netting]]。
+- 风险权重套错资产类别。
+- 监管 RWA 和内部经济资本差异过大。
 
-## 相关概念
-[[Basel Capital Adequacy Ratio|巴塞尔资本充足率]]
-[[PD]]
-[[LGD]]
-[[EAD]]
+## 来自课程位置
 
-## 课程笔记反链
+- [[15_《巴塞尔协议I II》和 偿付能力法案II]]
+- [[16_巴塞尔协议]]
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+## 关联卡片
+
+- [[Cooke Ratio]]
+- [[PD]]
+- [[LGD]]
+- [[EAD]]
+- [[Basel Capital Adequacy Ratio]]

@@ -1,69 +1,76 @@
 ---
 aliases:
+- Basel Capital Adequacy Ratio
 - 资本充足率
 - 巴塞尔资本充足率
-- Basel Capital Adequacy Ratio
 tags:
 - system
-- 金融机构与风险管理
-- 金融
+- banking
+- regulation
 ---
-# 巴塞尔资本充足率
+# Basel Capital Adequacy Ratio
 
-## 诊断目的
+## 诊断目标
 
-评估银行资本相对于其风险敞口的充足程度，确保银行有足够的资本缓冲吸收潜在损失，维持金融体系稳定。
+判断银行资本是否足以覆盖风险加权资产，以及资本质量是否符合监管要求。
 
-## 计算方法
+## 输入
 
-$\text{资本充足率} = \frac{\text{总资本（Tier 1 + Tier 2）}}{\text{风险加权资产（RWA）}} \times 100\%$
+- CET1、AT1、Tier 2 资本。
+- [[Risk-Weighted Assets|RWA]]。
+- 适用监管口径和资本缓冲要求。
 
-### Basel III 最低要求
+## 核心公式
 
-| 指标 | 最低要求 | 包含资本缓冲后要求 |
-|------|----------|-------------------|
-| CET1（普通股权一级资本） | 4.5% RWA | 7.0% RWA |
-| Tier 1（一级资本） | 6.0% RWA | 8.5% RWA |
-| Total Capital（总资本） | 8.0% RWA | 10.5% RWA |
+总资本充足率：
 
-### 资本缓冲
+$$
+CAR=\frac{Tier\ 1+Tier\ 2}{RWA}
+$$
 
-- **资本留存缓冲（CCB）**：2.5% RWA
-- **逆周期缓冲（CCyB）**：0-2.5% RWA（由监管机构根据信贷周期调整）
+Tier 1 比率：
 
-## 判断标准
+$$
+Tier\ 1\ Ratio=\frac{Tier\ 1}{RWA}
+$$
 
-| 范围 | 状态 | 监管措施 |
-|------|------|----------|
-| ≥ 10.5% | 正常 | 无限制 |
-| 8.0% - 10.5% | 基本达标 | 需限制分红和奖金 |
-| 6.0% - 8.0% | 不足 | 要求提交资本补充计划 |
-| < 6.0% | 严重不足 | 限制业务扩张，可能被监管接管 |
+CET1 比率：
 
-## 常见问题与对策
+$$
+CET1\ Ratio=\frac{CET1}{RWA}
+$$
 
-| 问题 | 可能原因 | 解决方案 |
-|------|----------|----------|
-| 资本充足率低于监管要求 | 业务快速扩张、资产质量恶化 | 补充资本（增发股票、留存收益）、减少风险资产 |
-| RWA计算不准确 | 风险权重应用错误、数据质量问题 | 审查风险权重映射、改进数据质量控制系统 |
-| 资本构成不符合要求 | Tier 2 比例过高 | 增加 Tier 1 资本，调整资本结构 |
-| 资本缓冲不足 | 信贷周期繁荣期未积累缓冲 | 在经济上行期主动增加资本 |
+## Basel III 快速阈值
 
-## 相关概念
-[[Cook's Ratio|库克比率]]
-[[Risk-Weighted Assets|风险加权资产]]
-[[Tier 1 Capital Ratio|Tier 1 Capital]]
-[[Tier 2 Capital Ratio|Tier 2 Capital]]
+| 指标 | 最低要求 | 加资本留存缓冲后 |
+| --- | --- | --- |
+| CET1 | 4.5% | 7.0% |
+| Tier 1 | 6.0% | 8.5% |
+| Total Capital | 8.0% | 10.5% |
 
-## 课程笔记反链
+## 诊断流程
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+1. 先确认 RWA 是否算对，见 [[Risk-Weighted Assets]]。
+2. 再看总资本是否超过 8%。
+3. 再拆资本质量：CET1、AT1、Tier 2。
+4. 最后检查资本缓冲、杠杆率和流动性约束。
+
+## 常见风险点
+
+- RWA 被低估，导致资本充足率看起来过高。
+- Tier 2 占比过高，资本质量不足。
+- 资本充足率达标但 [[Leverage Ratio]] 不达标。
+- 压力情景下资本被快速吃掉，见 [[Stress Testing]]。
+
+## 来自课程位置
+
+- [[16_巴塞尔协议]]
+- [[15_《巴塞尔协议I II》和 偿付能力法案II]]
+
+## 关联卡片
+
+- [[Cooke Ratio]]
+- [[Risk-Weighted Assets]]
+- [[Tier 1 Capital Ratio]]
+- [[Tier 2 Capital Ratio]]
+- [[Leverage Ratio]]

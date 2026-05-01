@@ -1,44 +1,49 @@
 ---
 aliases:
+- DID Writing Template
 - DID写作模板
 - DID reporting template
 - 双重差分写作
-- DID
-- DID Writing Template
 tags:
 - writing
+- econometrics
+- causal-inference
 ---
 # DID Writing Template
 
-## 研究设计段落
-- 本文采用 Difference-in-Differences（DID）方法，比较处理组与对照组在政策实施前后的变化差异，以识别政策的因果效应。
+## 研究设计
 
-## 识别假设段落
-- DID 的关键假设为平行趋势：若无政策干预，处理组与对照组的结果变量在处理前后的变化趋势应一致。
+本文采用 Difference-in-Differences（DID）设计，比较处理组与对照组在政策实施前后的结果变量变化差异，以估计政策对处理组的平均处理效应。
 
-## 回归方程段落
-- 估计方程设定为：
-  $Y_{it}=\alpha+\beta(Treat_i\times Post_t)+\gamma Treat_i+\delta Post_t+X_{it}'\theta+\varepsilon_{it}$
-  其中 $\beta$ 为 DID 估计量，标准误按个体聚类。
+## 识别假设
 
-## 结果解释段落
-- 估计结果显示 $\beta$ 为正且显著，表明政策使处理组结果变量相对对照组提高了 \% 或 $ \Delta $ 个单位。
+DID 的关键识别假设是平行趋势：在没有政策干预的反事实情形下，处理组与对照组的结果变量应具有相同趋势。本文通过处理前趋势图、事件研究系数和安慰剂检验评估该假设。
 
-## 稳健性与安慰剂段落
-- 进一步进行事件研究与安慰剂检验，处理前系数不显著，支持平行趋势假设。
+## 回归方程
 
-## 图表说明模板
-- 表 X 报告基准 DID 回归结果；图 X 展示处理前后的趋势对比。
+基准模型为：
 
-## 课程笔记反链
+$$
+Y_{it}=\alpha_i+\lambda_t+\beta D_{it}+X_{it}'\theta+\varepsilon_{it}
+$$
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+其中 $\alpha_i$ 为个体固定效应，$\lambda_t$ 为时间固定效应，$D_{it}$ 为处理状态变量，$\beta$ 为 DID 估计量。
+
+## 结果解释
+
+$\beta$ 的估计值表示政策实施后，处理组相对对照组的结果变量平均变化。若 $\beta>0$ 且统计显著，可解释为政策使处理组结果变量相对提高。
+
+## 稳健性
+
+本文进一步更换时间窗口、替代对照组、进行安慰剂政策时间检验，并按处理分配层级聚类标准误，以检查估计结果是否稳健。
+
+## 图表说明
+
+表 X 报告基准 DID 回归结果。图 X 展示处理组与对照组在政策前后的结果变量趋势；政策前趋势接近支持平行趋势假设。
+
+## 关联卡片
+
+- [[DID]]
+- [[DID Framework]]
+- [[DID Diagnostics]]
+- [[DID Identification Proof]]

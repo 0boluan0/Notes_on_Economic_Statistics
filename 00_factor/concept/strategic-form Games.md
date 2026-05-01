@@ -1,29 +1,60 @@
 ---
 aliases:
-- 策略式表达
+- Strategic-form Game
+- Strategic-form Games
 - strategic-form Games
-- strategic
+- Normal-form Game
+- 策略式博弈
+- 策略式表达
 tags:
 - concept
-科目: 博弈论
+- game-theory
 ---
-是表达博弈的两种方式之一.
+# strategic-form Games
 
-策略式表达有三要素
-### 1.player [[player|局中人]]
+## 一句话记忆
 
-A set of agents who play the game。N，局中人的集合：i，具体的某个人。
+策略式博弈用玩家、策略集合和收益函数一次性描述同时选择的博弈。
 
-### 2.strategies [[strategies|策略]]
+## 它是什么
 
-针对每一个player（局中人）的可选的选择范围。Si表示这个人能选的策略的集合. 
+Strategic-form game 通常写作：
 
-### 3.payoffs [[payoffs|效用]]
+$$
+G=(N,(S_i)_{i\in N},(u_i)_{i\in N})
+$$
 
-所有的策略组合之和，事实上在博弈的过程中，参与博弈的各方都要从自己的可选的strategies中选择一个并将所有人的选择汇总得出最后博弈的结果，这就产生了一个payoff，所有的payoff之和就是一个效用的集合。注意，同一份策略的组合对于不同人来说产生的收益完全独立，每个人都有自己的一套对与payoffs的排序。
+其中 $N$ 是玩家集合，$S_i$ 是玩家 $i$ 的策略集合，$u_i$ 是玩家 $i$ 的收益函数。
 
->[!example] 效用的例子
->现在有一个商贩在和顾客讲价，商贩最低卖40块，消费者最多出50块，那么对商贩来讲，所有的交易不成立的情况的效用一致，都是最低的排名，其次卖的越贵排名越靠前；而对于顾客来讲，交易不成立的情况与商贩一致，但是交易成立时付出的价格越低则排名越靠前
+## 解决什么判断
+
+- 一道题能否用矩阵或策略组合来表示。
+- 给定策略组合时，每个玩家收益是多少。
+- 能否用占优策略、最优反应或纳什均衡来求解。
+
+## 最小例子
+
+囚徒困境可以写成两个玩家、两个策略集合和四个收益组合的 $2\times 2$ 策略式博弈。
+
+## 易混点
+
+- 策略式博弈不等于一定“同时行动”；扩展式博弈也可以转成策略式表达。
+- 动态博弈转策略式时，策略必须写成完整计划。
+- 策略式表达会压平时间顺序，所以可信威胁要进一步用 [[Subgame Perfect Nash Equilibrium]] 检查。
+
+## 来自课程位置
+
+- [[03_策略式博弈#定义 1（策略式博弈, Strategic-form Game）]]
+- [[06_扩展性博弈#将扩展性博弈转化为策略式博弈]]
+
+## 关联卡片
+
+- [[player]]
+- [[strategies]]
+- [[payoffs]]
+- [[Nash Equilibrium]]
+- [[Extensive-form Game]]
+- [[Game Theory-hub]]
 
 ## 课程笔记反链
 

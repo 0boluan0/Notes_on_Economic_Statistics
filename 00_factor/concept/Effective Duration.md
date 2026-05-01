@@ -1,46 +1,48 @@
 ---
 aliases:
-- 有效久期
 - Effective Duration
+- 有效久期
 tags:
 - concept
+- fixed-income
+- risk-management
 ---
-有效久期（Effective Duration）是指**在考虑现金流可随市场利率变化（如含期权、可赎回债券等复杂产品）时，债券价格对利率小幅变化的敏感度**。
+# Effective Duration
 
-它反映了**实际可观察到的价格—利率关系**，是利率风险管理中对复杂债券（如含提前还款权、可赎回债券）的标准敏感性度量。
+## 先记一句话
 
-  
+Effective Duration 用“利率上下小幅移动后重新定价”的方式测敏感度，适合现金流会变的债券。
 
-**数值公式（近似数值法）：**
+## 它是什么
 
-$$
-
-\text{有效久期} = \frac{P_{-} - P_{+}}{2 \Delta y \cdot P_0}
+有效久期常用数值差分：
 
 $$
+D_{eff}=\frac{P_- - P_+}{2\Delta y P_0}
+$$
 
-- $P_{-}$：利率下降$\Delta y$后债券价格
+其中 $P_-$ 是利率下降后价格，$P_+$ 是利率上升后价格，$P_0$ 是当前价格。
 
-- $P_{+}$：利率上升$\Delta y$后债券价格
+## 解决什么判断
 
-- $P_0$：当前价格
+它回答：“如果利率变化会改变现金流本身，价格真实敏感度是多少？”
 
-- $\Delta y$：利率变动幅度（如0.01）
+## 最小例子
 
-## 相关链接
+可赎回债券在利率下降时更可能被发行人赎回，现金流缩短；此时普通 Macaulay/Modified Duration 不够，需要 Effective Duration。
 
-- 一般久期：[[duration|久期]], [[Macaulay Duration|马考利久期]], [[Modified Duration|修正久期]]
-- 应用：适用于含期权债券，考虑[[Implied Option Risk|隐含期权风险]]
+## 易混点
 
-## 课程笔记反链
+- [[Modified Duration]] 假设现金流固定；Effective Duration 允许现金流随利率变化。
+- 有效久期依赖定价模型，模型错会直接影响结果。
+- 它通常用于含权债券、MBS、可提前还款贷款等。
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+## 来自课程位置
+
+- [[09_利率风险]]
+
+## 关联卡片
+
+- [[Implied Option Risk]]
+- [[duration|Duration]]
+- [[Convexity]]

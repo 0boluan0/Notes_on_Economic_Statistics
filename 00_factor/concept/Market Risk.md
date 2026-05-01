@@ -1,117 +1,46 @@
 ---
 aliases:
-- 市场风险
 - Market Risk
+- 市场风险
 tags:
-- 风险管理
-- 银行风险
-- 金融
 - concept
+- risk-management
+- banking
 ---
-市场风险是指由于市场价格（利率、汇率、股票价格、商品价格）的不利变动而导致表内外头寸遭受损失的风险。
+# Market Risk
 
-## 市场风险分类
+## 先记一句话
 
-### 1. 利率风险
+Market Risk 是市场价格因子不利变动导致头寸亏损的风险。
 
-由于利率变动导致资产和负债价值发生不利变化的风险。
+## 它是什么
 
-- **重新定价风险**
-- **基差风险**
-- **收益率曲线风险**
-- **隐含期权风险**
+市场风险来自利率、汇率、股票价格、商品价格、信用利差和波动率等市场变量变化。它通常作用在交易簿、衍生品组合和可交易资产上。
 
-### 2. 汇率风险
+## 解决什么判断
 
-由于汇率变动导致外汇头寸价值变化的风险。
+它回答：“亏损是不是由可观察市场价格或风险因子变化造成的？”
 
-### 3. 权益价格风险
+## 最小例子
 
-由于股票价格变动导致股票头寸价值变化的风险。
+银行持有长期债券，市场利率上升导致债券价格下跌，这是市场风险中的利率风险。
 
-### 4. 商品价格风险
+## 易混点
 
-由于商品价格变动导致商品头寸价值变化的风险。
+- [[Credit Risk]] 关注对手不履约；Market Risk 关注市场因子变动。
+- 市场风险可以用 [[VaR]]、[[ES]]、[[Stressed VaR]]、[[Option Greeks-hub|Greeks]] 和 [[duration|Duration]] 度量。
+- 交易对手信用恶化导致的估值调整常落到 [[CVA]]，不只是纯市场风险。
 
-## 市场风险度量
+## 来自课程位置
 
-### 1. VaR（风险价值）
+- [[08_操作员如何管理风险暴露]]
+- [[12_VAR风险]]
+- [[16_巴塞尔协议]]
 
-在正常市场条件下，给定置信水平和持有期内，可能遭受的最大损失。
+## 关联卡片
 
-### 2. 敏感VaS
-
-用于期权等非线性产品的风险度量。
-
-### 3. 压力VaR
-
-考虑极端市场情景的风险度量。
-
-### 4. ES（预期损失）
-
-在损失超过VaR条件下的平均损失。
-
-## 风险因子映射
-
-将投资组合价值映射到基础市场风险因子（如利率、汇率等）。
-
-$V = f(\Delta S_1, \Delta S_2, ..., \Delta S_k)$
-
-## 方差-协方差方法
-
-假设收益服从正态分布，使用协方差矩阵计算VaR。
-
-### 单资产VaR
-
-$VaR = z_{\alpha} \sigma \sqrt{T}$
-
-### 组合VaR
-
-$\sigma_p^2 = \sum_{i,j} w_i w_jw \sigma_{ij}$
-
-$VaR = z_{\alpha} \sigma_p \sqrt{T}$
-
-## VaR聚合
-
-考虑不同业务单元风险的相关性：
-
-$VaR_{total} = \sqrt{\sum_{i,j} \rho_{ij}VaR_iVaR_j}$
-
-## 市场风险管理
-
-### 1. 敏感度管理
-
-通过Delta对冲管理线性风险。
-
-### 2. 凸性管理
-
-考虑Gamma的二阶风险。
-
-### 3. 多元对冲
-
-使用多种衍生品对冲多种风险因子。
-
-### 4. 压力测试
-
-模拟极端市场情景下的损失。
-
-## 巴塞尔协议要求
-
-- **交易簿**：10日99% VaR
-- **压力VaR要求**：10日99%压力VaR
-- **资本要求**：max(10日VaR, 压力VaR) + 乘数因子
-
-相关链接: [[VaR]], [[ES]], [[Stressed VaR|压力VaR]], [[duration|久期]], [[Basel Accords|巴塞尔协议]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[VaR]]
+- [[ES]]
+- [[Stressed VaR]]
+- [[Interest Rate Risk Management-hub]]
+- [[Option Greeks-hub]]

@@ -1,22 +1,48 @@
 ---
 aliases:
-- 资本金持有率
 - Capital Holding Ratio
+- 资本金持有率
+- capital-to-asset ratio
 tags:
-- 金融
 - system
+- banking
+- risk-management
 ---
-定义为 $K/A$
+# Capital Holding Ratio
 
-## 课程笔记反链
+## 诊断目标
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+资本金持有率用资产分母衡量银行要持有多少资本，常用于简化题中判断“年末股权资本为正”的安全垫。
+
+## 公式
+
+$$
+r=\frac{K}{A}
+$$
+
+其中 $K$ 是资本金，$A$ 是资产规模。
+
+## 典型题型
+
+若银行下一年度资产收益率服从正态分布，题目要求在 99% 或 99.9% 置信水平下年末资本为正，就用收益率分位数推最低资本率。
+
+## 判断步骤
+
+1. 写出资产收益率分布。
+2. 找到目标置信水平下的左尾损失分位数。
+3. 资本率至少覆盖该损失率。
+
+## 易混点
+
+- 资本金持有率使用总资产作分母；[[Basel Capital Adequacy Ratio]] 使用 [[Risk-Weighted Assets]] 作分母。
+- 它是简化风险缓冲题，不等同于完整监管资本充足率。
+
+## 来自课程位置
+
+- [[01_引言]]
+
+## 关联卡片
+
+- [[VaR]]
+- [[Basel Capital Adequacy Ratio]]
+- [[Leverage Ratio]]

@@ -1,101 +1,78 @@
 ---
 aliases:
-- 修正久期计算步骤
-- 修正久期计算
 - Modified Duration Calculation
+- 修正久期计算
 tags:
 - procedure
-- 07_金融机构与风险管理
+- fixed-income
 ---
-# 修正久期计算
+# Modified Duration Calculation
 
-## 适用场景
+## 这张卡什么时候用
 
-精确衡量债券或固定收益资产价格对利率变动的敏感度（百分比变化），用于利率风险管理和久期缺口分析。
+已经有 [[Macaulay Duration]]，并且要估计利率小幅变化对债券价格的百分比影响时使用。
 
-## 所需数据/条件
+## 输入
 
-- 马考利久期 $D_M$
-- 到期收益率（年化）$y$
-- 年付息次数 $m$
+- Macaulay duration $D_M$。
+- 年化到期收益率 $y$。
+- 每年付息次数 $m$。
+- 利率变化 $\Delta y$。
 
-## 计算步骤
+## 输出
 
-### 步骤 1：获取马考利久期
+- 修正久期 $D_{mod}$。
+- 价格百分比变化近似 $\Delta P/P$。
 
-若未计算马考利久期，先计算 $D_M$。参见[[Macaulay Duration Calculation|马考利久期计算]]。
+## Step 1：统一周期收益率
 
-**注意点**：确保 $D_M$ 的单位（年或周期）与后续计算一致。
+$$
+y_{period}=\frac{y}{m}
+$$
 
-### 步骤 2：确定收益率周期
+## Step 2：计算修正久期
 
-$ y_{\text{周期}} = \frac{y}{m} $
+$$
+D_{mod}=\frac{D_M}{1+y/m}
+$$
 
-例如：$年收益率5%，半年付息，则 y_{\text{周期}} = 2.5\%。$
+若 $D_M$ 还是周期数，先转成年，或在同一周期口径中保持一致。
 
-### 步骤 3：计算修正久期
+## Step 3：估计价格变化
 
-$ D_{\text{mod}} = \frac{D_M}{1 + y_{\text{周期}}} $
+$$
+\frac{\Delta P}{P}\approx -D_{mod}\Delta y
+$$
 
-**注意点**：$当使用连续复利收益率时，D_{\text{mod}} = D_M。$
+利率上升时 $\Delta y>0$，价格变化为负。
 
-### 步骤 4：单位统一
+## Step 4：需要金额时乘以市值
 
-若 $D_M$ 为周期久期，需转换为年久期：
-$ D_{\text{mod}}^{\text{年}} = \frac{D_{\text{mod}}}{m} $
+$$
+\Delta P\approx -D_{mod}P\Delta y
+$$
 
-### 步骤 5：验证结果
+若 $\Delta y=0.0001$，得到 1bp 变化金额，即 [[Basis Point Value (BPV)]]。
 
-检查修正久期合理性：
-- 普通修正久期小于到期期限
-- 折价债券久期较长
-- 溢价债券久期较短
+## 检查点
 
-## 关键公式
+- 修正久期通常略小于 Macaulay duration。
+- 小幅利率变化时，一阶近似更可靠。
+- 大幅利率变化要加入 [[Convexity]]。
 
-**修正久期**：
-$D_{\text{mod}} = \frac{D_M}{1 + \frac{y}{m}}$
+## 常见错误
 
-**连续复利下**：
-$D_{\text{mod}} = D_M$
+- 把 1% 写成 1，而不是 0.01。
+- 忽略负号，导致利率上升时价格也上升。
+- 把百分比敏感度误当成金额敏感度。
 
-**价格变化近似**：
-$ \frac{\Delta P}{P} \approx -D_{\text{mod}} \times \Delta y $
+## 来自课程位置
 
-**美元久期（DV01）**：
-$ \text{DV01} = -D_{\text{mod}} \times P \times 0.0001 $
+- [[09_利率风险]]
 
-## 债券价格敏感性
+## 关联卡片
 
-**1%利率变动影响**：
-$ \Delta P \approx -D_{\text{mod}} \times P \times 0.01 $
-
-**1基点利率变动影响**：
-$ \Delta P \approx -D_{\text{mod}} \times P \times 0.0001 $
-
-**注意点**：利率上升，价格下降，故取负值表示损失。
-
-## 常见问题
-
-1. **收益率符号**：确保使用正确符号的收益率变化（+表示上升）。
-2. **百分比变化**：修正久期给出的是价格百分比变化，不是绝对金额。
-3. **连续复利混淆**：连续复利与复利下公式不同，需明确。
-4. **含期权债券**：修正久期不准确，需用有效久期。
-
-## 相关概念
-[[duration|久期]]
-[[Macaulay Duration|马考利久期]]
-[[Convexity|凸性]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Modified Duration]]
+- [[Macaulay Duration Calculation]]
+- [[Dollar Duration]]
+- [[DV01 Hedge Calculation]]

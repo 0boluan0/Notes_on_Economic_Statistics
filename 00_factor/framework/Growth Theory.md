@@ -1,46 +1,56 @@
 ---
 aliases:
 - Growth Theory
-- 经济增长理论
-- 增长理论
+- Growth Theory Framework
+- 经济增长理论框架
+- 增长理论框架
 tags:
 - framework
+- economics
 ---
 # Growth Theory
 
-## 适用问题
+## 什么时候用
 
-- 解释长期经济增长来源与国家间收入差距。
-- 比较资本积累、技术进步、人口增长对稳态的影响。
+当题目要求解释长期增长来源、国家间收入差距、增长模型如何比较，或为什么某些发展中国家会卡在结构转型阶段时，用这张总框架卡。
 
-## 核心机制
+## 为什么这样看
 
-- 资本积累推动产出，但存在边际递减。
-- 技术进步决定长期增长率。
-- 人口与劳动力扩张影响人均变量路径。
+增长理论不是单一模型，而是一组视角：人口和资源约束、资本积累、稳态机制、技术进步、制度结构、产业转型。
 
-## 关键假设
+## 题型识别
 
-- 生产函数可用聚合形式表示（如 Cobb-Douglas）。
-- 技术进步外生或可由模型内生化。
-- 资源与制度约束在短期内稳定。
+- “低收入停滞”：先看 [[Malthusian Trap]]。
+- “资本积累和储蓄率”：看 [[Harrod-Domar Model]] 或 [[Solow Model]]。
+- “稳态和比较静态”：看 [[Solow Model Interpretation]] 与 [[Solow Steady State Calculation]]。
+- “现代增长特征”：看 [[Kuznets Growth Interpretation]]。
+- “农业到工业转型”：看 [[Dual Economy Model]]、[[Lewis Dual Sector Model]]、[[Fei-Ranis Model]]、[[Todaro Migration Model]]。
 
-## 边界与失败模式
+## 边界条件
 
-- 结构转型、制度变迁或政策冲击显著时，稳态分析失真。
-- 忽视人力资本与创新机制可能低估增长动力。
-- 用单一模型解释跨国差异会遗漏制度与历史因素。
+- 稳态模型适合解释长期机制，不适合包办结构转型。
+- 阶段论适合叙述发展过程，不适合精确计算。
+- 二元经济模型适合发展中国家劳动力转移，不适合直接解释技术前沿经济体。
 
-## 常见输出
+## 失败模式
 
-- 稳态水平与收敛速度。
-- 增长来源分解（资本、劳动力、TFP）。
+- 用一个模型解释所有增长问题。
+- 只讲资本积累，不讲技术进步和制度结构。
+- 把总量增长误当成人均福利改善。
 
-## 相关链接
+## 来自课程位置
 
-- [[00_factor/concept/Solow Model|索洛模型]]
-- [[00_factor/concept/Harrod-Domar Model|哈罗德-多玛模型]]
-- [[Rostow Stages of Economic Growth|罗斯托经济增长阶段论]]
+- [[06_经济增长理论]]
+- [[03_人口迁移理论]]
+
+## 关联卡片
+
+- [[Growth Theory-hub]]
+- [[Economic Growth]]
+- [[Economic Development]]
+- [[Solow Model]]
+- [[Kuznets Modern Economic Growth Theory]]
+- [[Dual Economy Model]]
 
 ## 课程笔记反链
 

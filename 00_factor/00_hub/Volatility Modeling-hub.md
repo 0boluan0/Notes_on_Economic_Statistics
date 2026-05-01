@@ -1,47 +1,85 @@
 ---
 aliases:
 - 波动建模
+- 波动率建模
 - 波动率建模-hub
 - Volatility Modeling
 - Volatility Modeling-hub
 tags:
 - hub
+- 时间序列
+- 金融风险
 ---
 # 波动率建模 Hub
 
-## 核心概念
+## 先从哪条主线进
 
-### 波动率类型
-[[Historical Volatility|历史波动率]]
-[[Implied Volatility|隐含波动率]]
-[[Realized Volatility|已实现波动率]]
+### 主线 1：先判断是不是方差问题
 
-### 波动聚集特征
-[[Volatility Clustering|波动聚集]]
-[[Conditional Heteroskedasticity|条件异方差]]
+- 课程入口：[[04_波动建模 Modeling Volatility#1.1 为什么要进行波动建模|波动建模动机]]
+- 先读这些卡：
+  - [[Conditional Heteroskedasticity]]
+  - [[Volatility Clustering]]
+  - [[White Noise]]
+  - [[Martingale Difference Sequence]]
 
-## 波动率模型
+### 主线 2：ARCH/GARCH 家族
 
-### ARCH/GARCH 家族
-[[ARCH]]
-[[GARCH]]
-[[TARCH]] (门限GARCH)
-[[EGARCH]] (指数GARCH)
-[[IGARCH]] (积整GARCH)
-[[ARCH-M]]
+- 课程入口：[[04_波动建模 Modeling Volatility#2. ARCH,GARCH|ARCH/GARCH]]
+- 先读这些卡：
+  - [[ARCH]]
+  - [[GARCH]]
+  - [[GARCH Model Estimation Steps]]
+  - [[ARCH LM Test]]
+  - [[McLeod-Li Test]]
 
-### 其他方法
-[[EWMA]] (指数加权移动平均)
+### 主线 3：持久性与非对称波动
 
-## 相关检验
+- 课程入口：[[04_波动建模 Modeling Volatility#3.4 非对称模型:TARCH,EGARCH|非对称模型]]
+- 先读这些卡：
+  - [[IGARCH]]
+  - [[EWMA]]
+  - [[TARCH]]
+  - [[EGARCH]]
+  - [[ARCH-M]]
 
-[[McLeod-Li Test|McLeod-Li检验]]
-[[00_factor/concept/ARCH LM Test|ARCH-LM检验]]
+### 主线 4：波动率度量
 
-## 课程笔记
+- 课程入口：[[10_波动率]]
+- 先读这些卡：
+  - [[Historical Volatility]]
+  - [[Implied Volatility]]
+  - [[Realized Volatility]]
+  - [[EWMA Volatility Estimation]]
 
-- [[10_波动率]]
+## 按题型找入口
+
+### 题型：残差是否需要 GARCH
+
+- [[ARCH LM Test]]
+- [[McLeod-Li Test]]
+- [[ARCH LM Test Diagnostics]]
+- [[GARCH Model Estimation Steps]]
+
+### 题型：标准 GARCH 不够用
+
+- 冲击极持久：[[IGARCH]] / [[EWMA]]
+- 负冲击影响更强：[[TARCH]] / [[EGARCH]]
+- 风险进入期望收益：[[ARCH-M]]
+
+### 题型：风险管理中给 VaR 准备波动率
+
+- [[Historical Volatility]]
+- [[EWMA Volatility Estimation]]
+- [[GARCH]]
+- [[Implied Volatility]]
+
+## 课程导航
+
 - [[04_波动建模 Modeling Volatility]]
+- [[10_波动率]]
+- [[12_VAR风险]]
+- [[14_VaR参数法和模拟法]]
 
 ## 课程笔记反链
 

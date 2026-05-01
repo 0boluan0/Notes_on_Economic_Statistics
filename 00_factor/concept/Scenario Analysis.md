@@ -4,29 +4,39 @@ aliases:
 - 情景分析
 tags:
 - concept
+- risk-management
 ---
 # Scenario Analysis
 
->[!note] 它是什么
-> - 「Scenario Analysis」是指在设定的宏观或市场情景下评估损益或风险。
->
->[!note] 最小可检索信息
-> - 定义：在设定的宏观或市场情景下评估损益或风险。
-> - 符号/公式：无固定符号。
-> - 最小例子：利率上升200bp情景下的组合损失。
->
+## 先记一句话
+
+Scenario Analysis 是先设定一组宏观或市场冲击，再重估组合损益和风险指标。
+
+## 它是什么
+
+情景可以来自历史事件，也可以是假设事件。关键不是概率估计，而是问“如果这些风险因子一起这样动，会发生什么？”
+
+## 解决什么判断
+
+它回答：“给定一套具体冲击路径，组合、资本或流动性会损失多少？”
+
+## 最小例子
+
+设定利率上升 200bp、信用利差扩大 150bp、股指下跌 30%，然后重估银行投资组合和资本充足率。
+
+## 易混点
+
+- 情景分析不一定给概率；[[VaR]] 给分位数概率口径。
+- [[Stress Testing]] 是更完整的流程，包含情景设计、损失计算、资本评估和管理动作。
+- 情景应有经济叙事，否则只是机械冲击。
+
+## 来自课程位置
+
+- [[22_情景分析和压力测试]]
+
 ## 关联卡片
-- [[Capital and Risk Management-hub]]
 
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Stress Testing]]
+- [[Stressed VaR]]
+- [[Market Risk]]
+- [[Credit Risk]]

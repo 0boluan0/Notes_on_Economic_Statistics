@@ -1,39 +1,57 @@
 ---
 aliases:
-- 久期
+- Duration
 - duration
+- 久期
+- 持续期
 tags:
 - concept
+- fixed-income
+- risk-management
 ---
-**久期**（Duration）又称**持续期**，久期原用于衡量固定收益债券的平均实际回收期，后来扩展为衡量债券对利率变动敏感性的重要指标 。简单来说，久期是债券或其他固定收益资产的所有未来现金流的加权平均到期时间，权重为每期现金流的现值占总现值的比重 。因此，久期体现了一种平均**资金回收期限**：久期越长，说明现金流越晚才能收回，债券价格对利率变化就越敏感。
+# Duration
 
-久期 $D$ 的一般计算公式为：
+## 先记一句话
+
+Duration 是固定收益工具现金流时间和利率敏感度的入口：现金流越晚回来，价格通常越怕利率上升。
+
+## 它是什么
+
+最基础的久期是未来现金流现值权重下的平均回收时间：
 
 $$
-
-D = \sum_{t=1}^{n} \frac{t \times \text{PV}(CF_t)}{\text{PV}(\text{总现金流})} = \sum_{t=1}^{n} \frac{t \times \frac{CF_t}{(1+y)^t}}{\sum_{t=1}^{n} \frac{CF_t}{(1+y)^t}} ,,
-
+D=\sum_{t=1}^{n}t\frac{PV(CF_t)}{P}
 $$
 
-  
+其中 $P=\sum_t PV(CF_t)$ 是债券价格。
 
-其中 $CF_t$ 是第 $t$ 期现金流（利息或本金），$y$ 是每期到期收益率，$\text{PV}($CF_t$)$表示该现金流按收益率折现到当前的现值。这一定义得到一个以年为单位的久期值。**Macaulay久期**即上述按实际现金流计算的久期。在商业银行资产负债管理中，常用久期来衡量资产和负债的平均期限差异（即**久期缺口**），用于分析利率变动对经济价值的影响。
+## 解决什么判断
 
-## 相关链接
+它回答两个问题：
 
-- 久期类型：[[Macaulay Duration|马考利久期]], [[Modified Duration|修正久期]], [[Effective Duration|有效久期]], [[Dollar Duration|绝对额久期]], [[Key Rate Duration|局部久期]]
-- 二阶风险：[[Curvature|曲率]]
-- 利率风险：[[Repricing Risk|重新定价风险]], [[Basis Risk|基差风险]], [[Yield Curve Risk|收益率曲线风险]], [[Implied Option Risk|隐含期权风险]]
+- 现金流平均多晚收回。
+- 利率小幅变化时，价格大约会变动多少。
 
-## 课程笔记反链
+## 最小例子
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+零息债券只有到期一次现金流，所以它的 Macaulay duration 等于剩余期限。附息债券中间有票息现金流，所以 duration 通常短于到期期限。
+
+## 易混点
+
+- [[Macaulay Duration]] 是时间口径；[[Modified Duration]] 是价格敏感度口径。
+- [[Dollar Duration]] 和 [[Basis Point Value (BPV)]] 是金额口径。
+- 利率变化较大时，单用久期会有线性近似误差，需要 [[Convexity]]。
+- 含提前还款或可赎回条款的债券，现金流会变，应看 [[Effective Duration]]。
+
+## 来自课程位置
+
+- [[09_利率风险]]
+
+## 关联卡片
+
+- [[Macaulay Duration]]
+- [[Modified Duration]]
+- [[Dollar Duration]]
+- [[Effective Duration]]
+- [[Key Rate Duration]]
+- [[Convexity]]

@@ -1,117 +1,101 @@
 ---
 aliases:
-- 蒙特卡罗模拟法VaR
-- 蒙特卡罗模拟法VaR计算
-- VaR
 - Monte Carlo Simulation VaR
+- 蒙特卡罗模拟法VaR
+- 蒙特卡罗VaR计算
 tags:
 - procedure
-- 07_金融机构与风险管理
+- risk-management
 ---
-# 蒙特卡罗模拟法VaR计算
+# Monte Carlo Simulation VaR
 
-## 适用场景
+## 这张卡什么时候用
 
-当组合包含复杂非线性衍生品、路径依赖产品，或需要评估历史未出现过的极端情景时使用。适用于需要高精度VaR估计的大型金融机构。
+当组合含非线性产品、路径依赖产品，或题目要求模拟风险因子并重新定价组合时，用这张卡。方法概念见 [[Monte Carlo Simulation Method]]。
 
-## 所需数据/条件
+## 输入
 
-- 风险因子模型（如几何布朗运动、收益率分布假设）
-- 模型参数（波动率、相关系数、漂移项等）
-- 持有期 $T$
-- 置信水平 $\alpha$
-- 模拟次数 $N_{sim}$（通常10,000-100,000次）
+- 风险因子模型：价格、利率、汇率、波动率等。
+- 参数：波动率、相关矩阵、漂移或情景假设。
+- 当前组合和定价函数。
+- 模拟次数 $M$。
+- [[Confidence Level]] $\alpha$ 与 [[Holding Period]] $h$。
 
-## 计算步骤
+## 输出
 
-### 步骤 1：设定风险因子模型
+- 模拟损益分布。
+- $\operatorname{VaR}_{\alpha,h}$。
+- 可选：[[ES]] 与情景解释。
 
-为每个风险因子选择合适的随机过程模型：
-- 股票价格：$几何布朗运动 dS = \mu S dt + \sigma S dW$
-- 利率：Vasicek/Hull-White模型
-- 汇率：GBM模型
+## Step 1：设定风险因子模型
 
-**注意点**：模型假设需与现实匹配，定期校准参数。
+明确哪些变量会动，以及怎么动。例如股票收益可用正态或厚尾分布，利率可用期限结构模型，波动率可接 [[GARCH]] 或 [[EWMA]]。
 
-### 步骤 2：估计模型参数
+## Step 2：生成相关随机冲击
 
-从历史数据估计模型参数：
-- 波动率 $\sigma$（可用GARCH、EWMA等估计）
-- 漂移项 $\mu$（通常长期取0）
-- 相关系数矩阵 $\Sigma$（相关风险因子间）
+如果风险因子相关，先分解相关矩阵：
 
-### 步骤 3：生成随机路径
+$$
+\Sigma=LL^\top,\qquad \epsilon=Lz
+$$
 
-使用Cholesky分解生成相关的随机数：
-1. 对相关矩阵 $\Sigma$ 进行Cholesky分解：$\Sigma = LL^T$
-2. 生成独立标准正态随机数 $z_1, z_2, \ldots, z_M$
-3. 计算相关随机数：$\epsilon = L \cdot z$
+其中 $z$ 是独立标准随机数。
 
-**注意点**：确保相关矩阵正定。
+## Step 3：模拟期末风险因子
 
-### 步骤 4：模拟风险因子路径
+对每条路径 $m=1,\dots,M$，得到持有期末风险因子：
 
-对每次模拟 $i = 1$ 到 $N_{sim}$：
-1. 生成随机路径：$S_{i,0}, S_{i,1}, \dots, S_{i,T}$
-2. 使用离散化：$S_{i,t+1} = S_{i,t} \cdot \exp((\mu - \sigma^2/2)\Delta t + \sigma \sqrt{\Delta t}\epsilon_{i,t})$
+$$
+X_h^{(m)}
+$$
 
-### 步骤 5：重新定价组合
+路径依赖产品需要模拟中间路径；普通欧式产品通常只需期末状态。
 
-对每次模拟，计算组合期末价值：
-$ P_i^{\text{end}} = \text{Reprice}(\text{组合}, \{S_{i,t}\}_{t=1}^T) $
+## Step 4：重新定价组合
 
-计算组合损益：
-$ \Delta P_i = P_i^{\text{end}} - P_0 $
+用模拟出的风险因子重新定价：
 
-**注意点**：路径依赖产品（如美式期权）需沿着路径逐步定价。
+$$
+\Delta P^{(m)}=P(X_h^{(m)})-P_0
+$$
 
-### 步骤 6：构建损益分布
+这是蒙特卡罗 VaR 和线性参数法的关键区别。
 
-$将所有模拟的损益 \{\Delta P_i\}_{i=1}^{N_{sim}} 从小到大排序。$
+## Step 5：排序并取分位数
 
-### 步骤 7：计算VaR
+把 $\Delta P^{(m)}$ 从小到大排序，令：
 
-取尾部 $(1-\alpha)$ 分位数：
-$ \text{VaR}_{\alpha} = -\Delta P_{(\lceil N_{sim} \times (1-\alpha) \rceil)} $
+$$
+k=\lceil M(1-\alpha)\rceil
+$$
 
-**注意点**：模拟次数 $N_{sim}$ 越大，VaR估计越精确。
+则：
 
-### 步骤 8：计算ES（可选）
+$$
+\operatorname{VaR}_{\alpha}=-\Delta P_{(k)}
+$$
 
-$ \text{ES}_{\alpha} = -\frac{1}{N_{sim}(1-\alpha)} \sum_{i=1}^{N_{sim}(1-\alpha)} \Delta P_{(i)} $
+## 检查点
 
-## 关键公式
+- 模拟次数越大，随机误差越小，但模型风险不会自动消失。
+- 相关矩阵必须可用；若不正定，先做数据和矩阵诊断。
+- 定价模型错，会直接污染 VaR。
+- 高置信度尾部需要很多路径，否则尾部分位数稀疏。
 
-**几何布朗运动离散化**：
-$ S_{t+1} = S_t \exp\left[\left(\mu - \frac{\sigma^2}{2}\right)\Delta t + \sigma \sqrt{\Delta t} z\right] $
+## 常见错误
 
-**Cholesky分解**：
-$ \Sigma = LL^T, \quad \epsilon = Lz $
+- 只模拟收益率，不重新定价非线性产品。
+- 忽略相关性，把多资产组合当成独立资产。
+- 把蒙特卡罗当作“无假设方法”；它的假设藏在风险因子模型里。
 
-**VaR估计误差**：
-$ \text{SE}(\text{VaR}) \propto \frac{1}{\sqrt{N_{sim}}} $
+## 来自课程位置
 
-## 常见问题
+- [[14_VaR参数法和模拟法]]
 
-1. **计算量大**：大量模拟耗时，需要高性能计算资源。
-2. **模型风险**：结果完全依赖于模型假设，模型错误导致VaR偏差。
-3. **随机数质量**：伪随机数发生器质量影响模拟精度。
-4. **参数不稳定**：参数估计误差会传播到VaR结果。
+## 关联卡片
 
-## 相关概念
-[[VaR]]
-[[VaR Parametric Method|VaR参数法计算]]
-[[Historical Simulation VaR|历史模拟法VaR计算]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[VaR]]
+- [[Monte Carlo Simulation Method]]
+- [[VaR Method Selection]]
+- [[Delta-Gamma Approximation]]
+- [[Historical Simulation VaR]]

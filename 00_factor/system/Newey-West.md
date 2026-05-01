@@ -1,86 +1,53 @@
 ---
 aliases:
-- HAC标准误
-- Newey-West Standard Errors
-- Newey
 - Newey-West
+- Newey-West Standard Errors
+- HAC standard errors
+- HAC标准误
 tags:
 - system
-- 计量经济学
+- econometrics
 ---
-# Newey-West 标准误
+# Newey-West
 
-## 诊断目的
+## 诊断目标
 
-在异方差和自相关同时存在的情况下，提供异方差-自相关一致（HAC）协方差矩阵估计，确保t检验和F检验的渐近有效性。
+Newey-West 提供异方差-自相关一致的协方差矩阵估计，让时间序列回归的推断在 HAC 情况下更稳健。
 
-## 计算方法
+## 什么时候用
 
-### Newey-West 估计量
+- 残差可能同时有 [[Heteroskedasticity]] 和 [[Autocorrelation]]。
+- 你不想明确建模 AR 误差结构，只想修正标准误。
+- 样本量足够大，做渐近推断。
 
-$Var(\hat{\beta})_{NW} = (X'X)^{-1} S \ (X'X)^{-1}$
+## 核心结构
 
-其中S是长期方差协方差矩阵估计：
+Newey-West 用残差和解释变量构造长期协方差矩阵，并对滞后协方差加权：
 
-$S = \hat{\Omega}_0 + \sum_{j=1}^L \omega_j (\hat{\Omega}_j + \hat{\Omega}_j')$
+$$
+S=\hat\Omega_0+\sum_{j=1}^L w_j(\hat\Omega_j+\hat\Omega_j')
+$$
 
-### 长期协方差分量
+再代入 OLS sandwich 协方差。
 
-$\hat{\Omega}_j = \frac{1}{n} \sum_{t=j+1}^n x_t x_{t-j}' e_t e_{t-j}$
+## 检查点
 
-### Bartlett权重
+- 带宽 $L$ 会影响结果，要做敏感性检查。
+- 纯异方差横截面数据通常用 [[White Robust Standard Errors]] 即可。
+- Newey-West 修正标准误，不改变 OLS 系数。
 
-$\omega_j = 1 - \frac{j}{L+1}$
+## 常见错误
 
-其中L是最大滞后阶数（带宽）。
+- 把 Newey-West 当成解决内生性的工具。
+- 小样本中盲目使用很大带宽。
+- 有明显动态设定遗漏时，只修标准误不改模型。
 
-### 带宽选择
+## 来自课程位置
 
-| 规则 | 带宽L | 适用情况 |
-|------|--------|----------|
-| Newey-West自动 | $\lfloor 4(n/100)^{2/9} \rfloor$ | 大样本 |
-| 固定带宽 | 经验值（如4-6） | 小样本 |
-| Andrews | 自动最优选择 | 精确要求高 |
+- [[08_自相关]]
 
-## 适用场景
+## 关联卡片
 
-| 场景 | Newey-West适用性 |
-|------|-----------------|
-| 纯异方差 | White标准误更有效 |
-| 纯自相关 | Cochrane-Orcutt更有效 |
-| 异方差+自相关 | Newey-West是最佳选择 |
-| 纵截面数据 | 通常不需要 |
-
-## 判断标准
-
-| 情况 | Newey-West vs White vs OLS | 含义 |
-|------|--------------------------|------|
-| NW > White > OLS | 自相关和异方差都存在 | OLS严重低估标准误 |
-| NW > White ≈ OLS | 主要自相关问题 | 需处理自相关 |
-| NW ≈ White > OLS | 主要异方差问题 | White标准误即可 |
-
-## 常见问题与对策
-
-| 问题 | 可能原因 | 解决方案 |
-|------|----------|----------|
-| 带宽选择困难 | 样本量小 | 尝试多个带宽，进行敏感性分析 |
-| 结果不稳定 | 带宽过大或过小 | 使用自动选择规则或Andrews方法 |
-| 计算缓慢 | 样本量很大、带宽大 | 限制最大滞后阶数 |
-
-## 相关概念
-[[White Robust Standard Errors|White稳健标准误]]
-[[Autocorrelation Diagnosis|自相关诊断]]
-[[Heteroscedasticity Diagnosis|异方差诊断]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Autocorrelation Diagnosis]]
+- [[White Robust Standard Errors]]
+- [[Cochrane-Orcutt]]

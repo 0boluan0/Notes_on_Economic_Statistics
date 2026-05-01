@@ -1,33 +1,75 @@
 ---
 aliases:
-- 广义自回归条件异方差
 - GARCH
+- GARCH Model
+- Generalized Autoregressive Conditional Heteroskedasticity
+- 广义自回归条件异方差
 tags:
 - concept
+- 时间序列
+- 波动建模
 ---
-ARCH的N要取得比较大.所以发明了GARCH模型,在保持对条件异方差性建模能力的同时，用更少的参数捕捉长期的波动影响。
+# GARCH
 
->[!note] GARCH(p,q)模型
-> $$
-> \begin{cases}
-> \varepsilon_t = \nu_t \sqrt{h_t} \\
-> h_t = \alpha_0 + \sum_{i=1}^{q} \alpha_i \varepsilon_{t-i}^2 + \sum_{j=1}^{p} \beta_j h_{t-j}
-> \end{cases}
-> $$
-> **其中** $h_t$ 依赖于 $q$ 阶误差平方和 $p$ 阶自身滞后。要求参数满足 $\alpha_0 > 0$，$\alpha_i \ge 0$（$i=1,\ldots,q$），$\beta_j \ge 0$（$j=1,\ldots,p$），且保证平稳性的约束 $\sum_{i=1}^q \alpha_i + \sum_{j=1}^p \beta_j < 1$。
+## 先记一句话
 
-GARCH模型通常能够用更少的滞后项达到与高阶ARCH模型同样的效果 。因此，GARCH模型在刻画长记忆的波动性时更**参数节省**（parsimonious）。
+GARCH 就是：**用过去冲击平方和过去方差一起解释当前条件方差**。
 
-条件方差：$\mathbb{E}(\varepsilon_t^2 \mid \mathcal{F}_{t-1}) = h_t = \alpha_0 + \sum_{i=1}^q \alpha_i \varepsilon_{t-i}^2 + \sum_{j=1}^p \beta_j h_{t-j}$。
-如果过程是平稳的，即满足 $\sum_{i=1}^q \alpha_i + \sum_{j=1}^p \beta_j < 1$，那么整个序列的无条件二阶矩（长期平均方差）存在，记作：$\mathbb{E}(\varepsilon_t^2) = \frac{\alpha_0}{1 - \sum_{i=1}^q \alpha_i - \sum_{j=1}^p \beta_j}$。
+它是 ARCH 的更节省参数版本。
 
-实证分析中最常用的就是GARCH(1,1)
+## 它是什么
 
-## 相关链接
+GARCH(1,1)：
+$$
+\varepsilon_t=\nu_t\sqrt{h_t},
+$$
+$$
+h_t=\omega+\alpha\varepsilon_{t-1}^2+\beta h_{t-1}.
+$$
 
-- 基础模型：[[ARCH]]
-- 扩展模型：[[TARCH]], [[EGARCH]]
-- 相关概念：[[EWMA]], [[Volatility Clustering|波动聚集]], [[Conditional Heteroskedasticity|条件异方差]]
+其中：
+
+- $\alpha$：新冲击对波动的影响；
+- $\beta$：过去波动的持续性；
+- $\alpha+\beta$：波动持久性。
+
+## 它解决什么判断
+
+GARCH 用来刻画波动聚集和持久波动。
+
+如果 ARCH 需要很多滞后阶数才能拟合，GARCH(1,1) 常常能用更少参数完成同样事情。
+
+## 长期方差
+
+若
+$$
+\alpha+\beta<1,
+$$
+则无条件方差存在：
+$$
+E(\varepsilon_t^2)=\frac{\omega}{1-\alpha-\beta}.
+$$
+
+若 $\alpha+\beta$ 接近 1，说明冲击影响很持久。
+
+## 常见误区
+
+- GARCH 不是均值模型；通常先建 ARMA 等均值模型，再对残差建 GARCH。
+- $\alpha+\beta<1$ 是平稳性/长期方差存在的重要条件。
+- $\alpha+\beta=1$ 进入 [[IGARCH]] 语境，长期方差不再均值回复。
+
+## 来自课程位置
+
+- [[04_波动建模 Modeling Volatility#2.3 GARCH|时间序列 04：GARCH 模型]]
+
+## 关联卡片
+
+- [[ARCH]]
+- [[IGARCH]]
+- [[TARCH]]
+- [[EGARCH]]
+- [[GARCH Model Estimation Steps]]
+- [[Conditional Heteroskedasticity]]
 
 ## 课程笔记反链
 

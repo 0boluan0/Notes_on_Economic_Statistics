@@ -1,37 +1,65 @@
 ---
 aliases:
-- 积整GARCH
-- Integrated GARCH
 - IGARCH
+- Integrated GARCH
+- 积整GARCH
 tags:
+- concept
 - 时间序列
 - 波动建模
-- concept
 ---
-$IGARCH（Integrated GARCH）指满足 \sum \alpha_i + \sum \beta_j = 1 的 GARCH 模型，具有高度持久的波动记忆，长期无条件方差不存在。$
+# IGARCH
 
->[!note] 定义（以 GARCH(1,1) 为例）
->
-> $$
-> \begin{cases}
-> \varepsilon_t = \nu_t \sqrt{h_t} \\
-> h_t = \alpha_0 + \alpha_1 \varepsilon_{t-1}^2 + \beta_1 h_{t-1},\quad \alpha_1+\beta_1=1
-> \end{cases}
-> $$
->
-> 性质：
-> - 冲击的影响不衰减（单位根型方差过程）；
-> - 长期方差发散（无固定无条件二阶矩）；
-> - 适合“极强持久性”的波动序列。
->
-## Connections
+## 先记一句话
 
-- 相关：[[GARCH]]、[[ARCH]]、[[TARCH]]、[[EGARCH]]
-- 估计与检验：[[Maximum Likelihood Estimation|极大似然估计]]、[[ARCH Effects Test|ARCH效应检验]]
+IGARCH 就是：**波动率方程里冲击影响像单位根一样不衰减的 GARCH**。
 
-## $source_notes$
+以 GARCH(1,1) 看：
+$$
+\alpha+\beta=1.
+$$
 
-- [[04_波动建模 Modeling Volatility#3.1 IGARCH]]
+## 它是什么
+
+GARCH(1,1)：
+$$
+h_t=\omega+\alpha\varepsilon_{t-1}^2+\beta h_{t-1}.
+$$
+
+若
+$$
+\alpha+\beta=1,
+$$
+则波动冲击具有极强持久性，长期无条件方差不再回到固定水平。
+
+## 它解决什么判断
+
+当估计出的 GARCH 模型 $\alpha+\beta$ 非常接近 1，说明波动高度持久，可能要考虑 IGARCH 或 EWMA 近似。
+
+## 和 EWMA 的关系
+
+[[EWMA]] 可以看成一种特殊的 IGARCH 风格递推：
+$$
+h_t=\lambda h_{t-1}+(1-\lambda)u_{t-1}^2.
+$$
+
+它也没有显式长期均值回归项。
+
+## 常见误区
+
+- IGARCH 不是“更稳”的 GARCH；它意味着冲击极持久。
+- $\alpha+\beta=1$ 时，标准长期方差公式不再适用。
+- 接近 1 和等于 1 在解释上不同，估计时要看统计检验和样本稳定性。
+
+## 来自课程位置
+
+- [[04_波动建模 Modeling Volatility#3.1 IGARCH|时间序列 04：IGARCH]]
+
+## 关联卡片
+
+- [[GARCH]]
+- [[EWMA]]
+- [[Volatility Clustering]]
 
 ## 课程笔记反链
 

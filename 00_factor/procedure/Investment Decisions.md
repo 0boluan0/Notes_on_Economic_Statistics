@@ -57,7 +57,7 @@ tags:
 
 ## 相关链接
 
-- [[Net Present Value (2)|净现值]]
+- [[Net Present Value|净现值]]
 - [[Internal Rate of Return|内部收益率]]
 - [[Profitability Index|现值指数]]
 

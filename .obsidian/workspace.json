@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_factor/concept/Column Space.md",
+                "file": "00_factor/00_hub/Econometrics-hub.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Column Space"
+              "title": "Econometrics-hub"
             }
           },
           {
@@ -123,8 +123,7 @@
               "title": "Search"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -321,13 +320,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_factor/concept/Column Space.md",
+                "file": "00_factor/00_hub/Econometrics-hub.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Column Space"
+              "title": "Outline of Econometrics-hub"
             }
           },
           {
@@ -389,42 +388,42 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "68e022ef2943b75b",
+  "active": "bb5393f41058a9f1",
   "lastOpenFiles": [
-    "00_factor/concept/Reduced Row Echelon Form.md",
-    "00_factor/concept/Dimension.md",
-    "00_factor/concept/Basis.md",
-    "00_factor/framework/Linear system solution structure.md",
-    "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
-    "00_factor/concept/Column Space.md",
-    "01_Math/02_linear algebra/02_Least Squares, Determinants and Eigenvalues.md",
-    "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md",
+    "00_factor/system/Variance Inflation Factor Diagnostics.md",
+    "00_factor/system/F-test Diagnostics.md",
+    "00_factor/system/Backtesting Diagnostics.md",
+    "00_factor/system/ARCH LM Test Diagnostics.md",
+    "00_factor/concept/Deadweight Loss.md",
+    "00_factor/concept/Producer Surplus.md",
+    "00_factor/procedure/Backward Induction Procedure.md",
+    "00_factor/procedure/Finding Mixed Strategy Nash Equilibrium.md",
+    "00_factor/procedure/Finding Pure Strategy Nash Equilibria.md",
+    "00_factor/framework/Game Theory Problem Solving Map.md",
+    "00_factor/procedure/Solow Steady State Calculation.md",
+    "00_factor/framework/Kuznets Growth Interpretation.md",
+    "00_factor/framework/Harrod-Domar Model Interpretation.md",
+    "00_factor/framework/Solow Model Interpretation.md",
+    "00_factor/framework/Capital Budgeting Decision Map.md",
+    "00_factor/system/Cook's Distance.md",
+    "00_factor/concept/ATT.md",
+    "00_factor/concept/Parallel Trends.md",
+    "00_factor/concept/2SLS.md",
+    "00_factor/procedure/2SLS.md",
+    "00_factor/proof/Gauss-Markov theorem.md",
+    "00_factor/proof/OLS consistency.md",
+    "00_factor/proof/OLS unbiasedness.md",
+    "00_factor/proof/OLS Normal Equations.md",
+    "00_factor/concept/OLS.md",
+    "00_factor/concept/Credit Conversion Factor.md",
     "01_Math/01_calculus/Lecture_notes/1-7.pdf",
-    "05_tools/Codebase to Course.md",
-    "05_tools/labml.ai Deep Learning Paper Implementations.md",
     "01_Math/01_calculus/Lecture_notes/9-16.pdf",
     "01_Math/01_calculus/Lecture_notes/26-38.pdf",
     "01_Math/01_calculus/Lecture_notes/18-25.pdf",
-    "99_学习情况记录/2026-04-14——Tue.md",
-    "99_学习情况记录/2026-04-21——Tue.md",
-    "04_Fragments/How To Build A $1M One-Person Business Faster With AI - 2026-03-28.md",
-    "04_Fragments/Textream - 2026-04-20.md",
-    "04_Fragments/Learning method.md",
-    "01_Math/04_多元统计分析/01_introduction简介.md",
-    "00_factor/concept/Multivariate Normal Distribution.md",
-    "00_factor/concept/Factor Analysis.md",
-    "03_Computer_Science/03_MIT 6.100L/26_List Access, Hashing, Simulations and Wrap-Up.md",
-    "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-OCW-offline-site/pages/lecture-2-strings-inputoutput-branching/index.html",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-OCW-offline-site/pages/lecture-2-strings-inputoutput-branching/data.json",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-finger-exercises/mit6_100l_ex02_sol.pdf",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-code/chapter 05/chapter5.py",
-    "03_Computer_Science/03_MIT 6.100L/08_Functions as Objects.md",
-    "03_Computer_Science/03_MIT 6.100L/13_Exceptions and Assertions.md",
-    "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
-    "03_Computer_Science/03_MIT 6.100L/03_Iteration.md",
-    "03_Computer_Science/03_MIT 6.100L/06_Bisection search and Newton-Raphson.md",
-    "03_Computer_Science/03_MIT 6.100L/14_Dictionaries.md",
     "01_Math/07-6.042j/MIT-6-042j-pdf.pdf",
     "01_Math/07-6.042j",
     "98_attachment/dashboards/2026-04-14-map.svg",

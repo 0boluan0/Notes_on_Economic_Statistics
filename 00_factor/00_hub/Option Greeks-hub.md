@@ -1,50 +1,45 @@
 ---
 aliases:
-- 期权希腊字母
-- 期权希腊字母-hub
 - Option Greeks
-- Option Greeks-hub
+- Option Greeks hub
+- 期权希腊字母
+- 希腊值知识地图
 tags:
 - hub
+- derivatives
+- risk-management
 ---
-# 期权希腊字母 Hub
+# Option Greeks-hub
 
-## 核心概念
+## 这组卡解决什么
 
-## Delta (δ)
+Option Greeks 把衍生品价值变化拆成对市场变量的局部敏感度。学习顺序应是：先分清风险因子，再看一阶/二阶近似，最后用于对冲或 VaR 近似。
 
-[[Delta]]
+## 学习路线
 
-## Gamma (γ)
+1. 先分清产品是否线性：[[Linear Products]]、[[Nonlinear Products]]。
+2. 再学五个基本 Greeks：[[Delta]]、[[Gamma]]、[[Vega]]、[[Theta]]、[[Rho]]。
+3. 然后看组合近似：[[Delta Approximation]]、[[Delta-Gamma Approximation]]、[[Cornish-Fisher Expansion]]。
+4. 最后做实操：[[Greeks Calculation]]、[[Delta Hedging]]、[[Greeks Hedging Map]]。
 
-[[Gamma]]
+## 五个 Greeks 各管什么
 
-## Vega (ν)
+- [[Delta]]：标的价格变化的一阶敏感度。
+- [[Gamma]]：Delta 对标的价格变化的敏感度，二阶价格风险。
+- [[Vega]]：隐含波动率变化风险。
+- [[Theta]]：时间流逝风险。
+- [[Rho]]：无风险利率变化风险。
 
-[[Vega]]
+## 近似与风险报告
 
-## Theta (θ)
+- [[Delta Approximation]]：小幅变动、线性产品或近似线性组合。
+- [[Delta-Gamma Approximation]]：非线性产品，标的价格变化不够小时。
+- [[Cornish-Fisher Expansion]]：分布偏度、峰度显著时，对正态分位数做修正。
 
-[[Theta]]
+## 来自课程位置
 
-## Rho (ρ)
-
-[[Rho]]
-
-## 近似方法
-
-[[Delta Approximation|Delta近似法]]
-[[Delta-Gamma Approximation|Delta-Gamma近似法]]
-[[Cornish-Fisher Expansion|Cornish-Fisher展开]]
-
-## 产品分类
-
-[[Linear Products|线性产品]]
-[[Nonlinear Products|非线性产品]]
-
-## 课程笔记
-
-- [[08_操作员如何管理风险暴露]]
+- [[08_操作员如何管理风险暴露]]：Delta/Gamma/Vega/Theta/Rho、线性与非线性产品、对冲和敏感度暴露。
+- [[14_VaR参数法和模拟法]]：Delta、Delta-Gamma 和非正态近似在 VaR 中的使用。
 
 ## 课程笔记反链
 

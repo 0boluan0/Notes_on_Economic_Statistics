@@ -1,109 +1,54 @@
 ---
 aliases:
+- Fixed Effects Model
+- Fixed Effects
 - 固定效应模型
 - 固定效应
-- Fixed Effects Model
 tags:
-- 计量经济学
-- 面板数据
 - concept
+- econometrics
 ---
-固定效应（Fixed Effects, FE）模型是面板数据模型的一种，假设个体效应与解释变量相关，通过组内变换消除个体效应。
+# Fixed Effects Model
 
-## 模型形式
+## 先记一句话
 
-$y_{it} = \alpha_i + x_{it}'\beta + \varepsilon_{it}$
+固定效应用个体或时间自己的截距，吸收不随时间或不随个体变化的遗漏因素。
 
-其中：
-- y_{it}：个体i在时期t的观测值
-- α_i：个体i的固定效应（不随时间变化）
-- x_{it}：k×1维解释变量向量
-- β：k×1维系数向量
-- ε_{it}：误差项
+## 它是什么
 
-## 关键假设
+个体固定效应模型：
 
-**固定效应假设**：α_i与x_{it}相关。
+$$
+y_{it}=\alpha_i+x_{it}'\beta+u_{it}
+$$
 
-这与随机效应模型不同，随机效应假设α_i与x_{itkt}不相关。
+双向固定效应：
 
-## 估计方法：LSDV（最小二乘虚拟变量）
+$$
+y_{it}=\alpha_i+\lambda_t+x_{it}'\beta+u_{it}
+$$
 
-通过引入个体虚拟变量直接估计：
+## 解决什么判断
 
-$y_{it} = \sum_{j=1}^{n} \alpha_j D_{jt} + x_{it}'\beta + \varepsilon_{it}$
+它回答：“有没有不随时间变化的个体特质会同时影响 $x$ 和 $y$，需要被控制掉？”
 
-其中D_{jt}是个体j的虚拟变量。
+## 最小例子
 
-## 估计方法：组内变换
+研究企业研发投入对产出的影响时，企业管理能力可能长期稳定且影响研发和产出。企业固定效应可吸收这类不随时间变化的能力差异。
 
-对每个个体i，计算均值：
+## 易混点
 
-$\bar{y}_i = \alpha_i + \bar{x}_i'\beta + \bar{\varepsilon}_i$
+- 固定效应只能控制不随时间变化的遗漏变量；时间变化的遗漏冲击仍可能造成内生性。
+- 固定效应不能估计不随时间变化变量的系数。
+- DID 常用固定效应回归，但 DID 的关键假设是 [[Parallel Trends]]。
 
-组内变换（去均值）：
+## 来自课程位置
 
-$y_{it} - \bar{y}_i = (x_{it} - \bar{x}_i)'\beta + (\varepsilon_{it} - \bar{\varepsilon}_i)$
+- [[13_面板数据模型]]
 
-消除了α_i，然后用OLS估计。
+## 关联卡片
 
-## 估计量性质
-
-1. **一致性**：在固定效应假设下，FE估计量是一致的
-2. **无偏性**：在古典假定下，FE估计量是无偏的
-3. **有效性**：仅对组内变异有效的估计，可能损失信息
-
-## 时间效应扩展
-
-可以同时包含个体固定效应和时间固定效应：
-
-$y_{it} = \alpha_i + \lambda_t + x_{it}'\beta + \varepsilon_{it}$
-
-## R²计算
-
-组内R²（Within R²）：
-
-$R^2_{within} = 1 - \frac{\sum_{i,t} \hat{\varepsilon}_{it}^2}{\sum_{i,t} (y_{it} - \bar{y}_i)^2}$
-
-## 豪斯曼检验
-
-用于选择固定效应还是随机效应模型。
-
-**H₀**：α_i与x_{itkt}不相关（应使用RE）
-**H₁**：α_i与x_{itkt}相关（应使用FE）
-
-## 适用场景
-
-1. **个体效应与解释变量相关**：如能力、天赋等
-2. **关注组内变异**：分析个体内部的变化
-3. **样本代表性不重要**：不要求样本对总体代表性
-
-## 局限性
-
-1. **损失组间信息**：仅利用组内变异
-2. **不能估计不随时间变化的变量**：如性别、种族
-3. **可能存在序列相关**：面板时间序列问题
-
-## 与随机效应比较
-
-| 特性 | 固定效应 | 随机效应 |
-|------|----------|----------|
-| 假设 | α_i与x相关 | α_i与x不相关 |
-| 估计方法 | 组内变换/OLS | GLS |
-| 一致性 | 总是有效 | 假设正确时更有效 |
-| 适用 | α_i与x相关 | α_i与x不相关，样本代表总体 |
-
-相关链接: [[Random Effects Model|随机效应]], [[Hausman Test|豪斯曼检验]], [[Panel Data Model|面板数据模型]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Panel Data Model]]
+- [[Random Effects Model]]
+- [[Hausman Test]]
+- [[DID]]

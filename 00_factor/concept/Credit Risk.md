@@ -1,119 +1,47 @@
 ---
 aliases:
-- 信用风险
 - Credit Risk
+- 信用风险
+- counterparty credit risk
 tags:
-- 风险管理
-- 银行风险
-- 金融
 - concept
+- risk-management
+- banking
 ---
-信用风险是指交易对手未能履行合约义务而造成经济损失的风险。
+# Credit Risk
 
-## 风险来源
+## 先记一句话
 
-1. **借款人违约**：无法偿还本金或利息
-2. **信用利差变化**：借款人信用评级下降
-3. **降级风险**：发行人信用评级下调
-3. **敞口变化**：衍生品交易敞口随市场变化
+Credit Risk 是借款人或交易对手不能按约履行义务而造成损失的风险。
 
-## 信用风险要素
+## 它是什么
 
-### 1. 违约概率（PD, Probability of Default）
+信用风险包括贷款违约、债券违约、交易对手违约、信用评级下调和信用利差扩大。核心损失参数通常是 [[PD]]、[[LGD]]、[[EAD]]。
 
-借款人在给定时间内违约的可能性。
+## 解决什么判断
 
-### 2. 违约损失率（LGD, Loss Given Default）
+它回答：“损失是不是因为对方信用质量变差或无法履约？”
 
-违约发生时，预期损失占敞口的比重。
+## 最小例子
 
-### 3. 违约暴露（EAD, Exposure at Default）
+企业贷款 1 亿元，借款人破产后只能回收 40%，银行损失 60%。这就是信用风险。
 
-违约时，借款人欠银行的金额。
+## 易混点
 
-### 4. 预期损失（EL, Expected Loss）
+- [[Default Risk]] 是信用风险的核心事件，但信用风险还包括评级迁移和信用利差变化。
+- [[CVA]] 是衍生品交易对手信用风险进入估值的方式。
+- 监管资本中信用风险常通过 [[Risk-Weighted Assets]] 和 IRB 参数计量。
 
-$EL = PD \times LGD \times EAD$
+## 来自课程位置
 
-### 5. 非预期损失（UL, Unexpected Loss）
+- [[19_违约风险]]
+- [[21_信用在险价值]]
+- [[16_巴塞尔协议]]
 
-$UL = ECL - EL$
+## 关联卡片
 
-其中ECL是给定置信水平下的条件预期损失。
-
-## 信用风险度量
-
-### 1. 信用VaR（Credit VaR）
-
-在给定置信水平下，信用风险损失的最大可能值。
-
-### 2. 信用VaR调整（Credit VaR Adjustment）
-
-$CVA = \sum_{i} PD_i \times EAD_i \times (1-R_i) \times LGD_i$
-
-其中$R_i$是回收率。
-
-### 3. 债务VaR调整（DVA）
-
-交易对手违约对己方的收益调整。
-
-### 4. 信用利差风险（CS）
-
-由于信用利差变化导致的损失。
-
-## 信用风险管理方法
-
-### 1. 限额管理
-
-- 客户信用额度
-- 行业集中度限制
-- 地区集中度限制
-
-### 2. 担保和抵押
-
-- 不动产抵押
-- 动产质押
-- 第三方担保
-
-### 3. 净额结算
-
-降低交易对手信用风险暴露。
-
-### 4. 信用衍生品
-
-- 信用违约互换（CDS）
-- 信用期权
-- 总收益互换
-
-### 5. 分散化
-
-通过持有多个不同风险敞口来分散信用风险。
-
-## 信用风险模型
-
-### 1. Merton模型
-
-基于期权定价理论的违约模型。
-
-### 2. Jarrow-Turnbull模型
-
-基于信用评级转移的模型。
-
-### 3. 结构化模型
-
-考虑资产价值和负债结构的模型。
-
-相关链接: [[VaR]], [[CVA]], [[DVA]], [[Default Risk|违约风险]], [[Basel Accords|巴塞尔协议]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[PD]]
+- [[LGD]]
+- [[EAD]]
+- [[Credit VaR]]
+- [[Basel Accords]]

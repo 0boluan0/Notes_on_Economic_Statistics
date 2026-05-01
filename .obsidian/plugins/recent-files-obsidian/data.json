@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Econometrics-hub",
+      "path": "00_factor/00_hub/Econometrics-hub.md"
+    },
+    {
       "basename": "Column Space",
       "path": "00_factor/concept/Column Space.md"
     },
@@ -191,14 +195,6 @@
     {
       "basename": "02_Shell Tools Exercises",
       "path": "03_Computer_Science/99_Miscellaneous/the_missing_semester_exercises/02_Shell Tools Exercises.md"
-    },
-    {
-      "basename": "11_Q&A Exercises",
-      "path": "03_Computer_Science/99_Miscellaneous/the_missing_semester_exercises/11_Q&A Exercises.md"
-    },
-    {
-      "basename": "10_Potpourri Exercises",
-      "path": "03_Computer_Science/99_Miscellaneous/the_missing_semester_exercises/10_Potpourri Exercises.md"
     }
   ],
   "omittedPaths": [],
