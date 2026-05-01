@@ -236,7 +236,7 @@ $$
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.2sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.2prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.2sol.pdf|solution]]
 
-关联卡片：[[Matrix Rank]]、[[LU Decomposition]]
+关联卡片：[[Matrix Rank]]、[[Reduced Row Echelon Form]]、[[LU Decomposition]]
 
 >[!note] 快速回忆
 > - 这讲要回答：消元究竟在做什么，以及它为什么不改变解集。
@@ -727,7 +727,7 @@ $$
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.7sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.7prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.7sol.pdf|solution]]
 
-关联卡片：[[Null Space]]、[[Matrix Rank]]
+关联卡片：[[Null Space]]、[[Reduced Row Echelon Form]]、[[Matrix Rank]]
 
 >[!note] 快速回忆
 > - 这讲要回答：为什么齐次系统是理解一切解结构的起点。
@@ -821,7 +821,7 @@ $$
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.8sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.8prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.8sol.pdf|solution]]
 
-关联卡片：[[Linear system solution structure]]、[[Null Space]]、[[Column Space]]
+关联卡片：[[Linear system solution structure]]、[[Reduced Row Echelon Form]]、[[Null Space]]、[[Column Space]]
 
 >[!note] 快速回忆
 > - 这讲要回答：一般系统 `Ax=b` 的全部解怎样描述。
@@ -927,7 +927,7 @@ $$
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.9sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.9prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.9sol.pdf|solution]]
 
-关联卡片：[[Vector Space]]、[[Subspace]]、[[Matrix Rank]]
+关联卡片：[[Vector Space]]、[[Subspace]]、[[Linear Independence]]、[[Basis]]、[[Dimension]]、[[Matrix Rank]]
 
 >[!note] 快速回忆
 > - 这讲要回答：什么叫 linear independence、basis、dimension。
@@ -1008,7 +1008,7 @@ $$
 
 资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.10sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.10prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.10sol.pdf|solution]]
 
-关联卡片：[[Column Space]]、[[Null Space]]、[[Row Space]]、[[Left Nullspace]]、[[Reading the Four Fundamental Subspaces from RREF]]
+关联卡片：[[Column Space]]、[[Null Space]]、[[Row Space]]、[[Left Nullspace]]、[[Matrix Rank]]、[[Reading the Four Fundamental Subspaces from RREF]]
 
 >[!note] 快速回忆
 > - 这讲要回答：一个矩阵为什么天然带出四个基本子空间。

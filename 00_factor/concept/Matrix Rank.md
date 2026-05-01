@@ -1,110 +1,124 @@
 ---
 aliases:
+- Matrix Rank
+- rank
 - 秩
 - 矩阵的秩
-- Matrix Rank
 tags:
 - 线性代数
-- 矩阵
-- 数学
 - concept
 ---
-矩阵的秩（Rank）是矩阵中线性无关的行向量或列向量的最大个数，反映了矩阵包含的独立信息的数量。
+# Matrix Rank
 
->[!note] 定义
->
-> ### 列秩（Column Rank）
->
-> 矩阵列空间（所有列向量的线性组合构成的子空间）的维数。
->
-> ### 行秩（Row Rank）
->
-> 矩阵行空间（所有行向量的线性组合构成的子空间）的维数。
->
-> ### 基本定理
->
-> **列秩 = 行秩**，统称为矩阵的秩，记作rank(A)或r(A)。
->
-## 计算方法
+## 先记一句话
 
-### 高斯消元法
+秩就是：**矩阵里真正独立的方向有多少个**。
 
-1. 将矩阵通过行变换化为行阶梯形式（REF）
-2. 统计主元（非零行第一个非零元素）的个数
-3. 主元的个数就是矩阵的秩
+一个矩阵看起来可能有很多行、很多列，但其中有些信息是重复的。[[Matrix Rank]] 就是在问：
 
-### 其他方法
+> 这个矩阵到底提供了几个独立方向？
 
-- 计算非零子式的最高阶数
-- 使用奇异值分解
-- 计算线性无关列向量的个数
+## 从 `Ax=b` 怎么理解
 
-## 秩的性质
+在 $Ax=b$ 里，$A$ 的列向量负责拼出右端 $b$。
 
-### 秩的范围
+- 如果列方向很多且独立，$A$ 能打出的输出范围大。
+- 如果列方向重复，$A$ 能打出的输出范围小。
 
-对于m×n矩阵A：
-0 ≤ rank(A) ≤ min(m, n)
+所以 rank 也可以理解成：
 
-### 矩阵运算的秩
+> [[Column Space]] 的维数，也就是 $A$ 能输出的有效维度。
 
-1. **转置**：rank(A) = rank(Aᵀ)
-2. **乘积**：rank(AB) ≤ min(rank(A), rank(B))
-3. **和**：rank(A + B) ≤ rank(A) + rank(B)
+## 一个最小例子
 
-### 满秩矩阵
+令
+$$
+A=\begin{bmatrix}
+1&2&3\\
+2&4&6
+\end{bmatrix}.
+$$
 
-- **列满秩**：rank(A) = n（n为列数）
-- **行满秩**：rank(A) = m（m为行数）
-- **满秩**：rank(A) = min(m, n)
+表面上它有 3 列，但三列都在同一条方向上：
+$$
+\begin{bmatrix}2\\4\end{bmatrix}=2\begin{bmatrix}1\\2\end{bmatrix},
+\qquad
+\begin{bmatrix}3\\6\end{bmatrix}=3\begin{bmatrix}1\\2\end{bmatrix}.
+$$
 
-### 可逆矩阵
+所以这个矩阵真正只有 1 个独立列方向：
+$$
+\operatorname{rank}(A)=1.
+$$
 
-方阵A可逆当且仅当rank(A) = n（n为阶数）。
+这会同时带来两个后果：
 
-## 秩与零空间
+- [[Column Space]] 只有一维，很多 $b$ 不可达。
+- [[Null Space]] 维数是 $3-1=2$，所以有两个自由方向。
 
-### 秩-零化度定理
+## 怎么从消元里读 rank
 
-对于m×n矩阵A：
-rank(A) + nullity(A) = n
+做 row reduction 后，数 pivot 的个数：
 
-其中nullity(A)是零空间的维数。
+> pivot 个数 = rank。
 
-### 应用
+直觉是：每出现一个 pivot，就说明发现了一个新的独立方向；没有 pivot 的列会变成自由变量。
 
-给定矩阵的秩，可以确定：
-- 列空间的维数 = rank(A)
-- 行空间的维数 = rank(A)
-- 零空间的维数 = n - rank(A)
+## 它在题里负责什么
 
-## 秩在方程组中的应用
+rank 是 Unit I 的“维数账本”：
 
-### 齐次方程组Ax = 0
+- $\dim C(A)=r$：列空间维数是 rank。
+- $\dim C(A^T)=r$：行空间维数也是 rank。
+- $\dim N(A)=n-r$：零空间维数是列数减 rank。
+- $\dim N(A^T)=m-r$：左零空间维数是行数减 rank。
 
-- 若rank(A) = n，只有零解
-- 若rank(A) < n，有无穷多解，自由变量个数 = n - rank(A)
+如果 $A$ 是 $m\times n$ 矩阵，记 $r=\operatorname{rank}(A)$，那么 rank 把四个基本子空间的维数全部定住。
 
-### 非齐次方程组Ax = b
+## 和可逆性的关系
 
-- 若rank(A) = rank([A|b]) = n，有唯一解
-- 若rank(A) = rank([A|b]) < n，有无穷多解
-- 若rank(A) < rank([A|b])，无解
+对 $n\times n$ 方阵：
 
-## 重要不等式
+- $\operatorname{rank}(A)=n$：满秩，$A$ 可逆。
+- $\operatorname{rank}(A)<n$：秩亏，$A$ 奇异，不可逆。
 
-### 西尔维斯特不等式
+但对非方阵，不能直接说“可逆”。这时要改说满列秩、满行秩、left inverse 或 right inverse。
 
-对于可相乘的矩阵A和B：
-rank(A) + rank(B) - n ≤ rank(AB) ≤ min(rank(A), rank(B))
+## 必要公式
 
-其中n是A的列数（也是B的行数）。
+$$
+0\leq \operatorname{rank}(A)\leq \min(m,n).
+$$
 
-### 弗罗贝尼乌斯不等式
+$$
+\operatorname{rank}(A)=\dim C(A)=\dim C(A^T).
+$$
 
-rank(AB) ≥ rank(A) + rank(B) - n
+$$
+\operatorname{rank}(A)+\dim N(A)=n.
+$$
 
-相关链接: [[Null Space|零空间]], [[Subspace|子空间]], [[Singular Matrix|奇异矩阵]]
+## 常见误区
+
+- 行数或列数多，不代表 rank 高；重复方向不增加 rank。
+- row reduction 会改变具体列向量，所以找 [[Column Space]] 的基要回到原矩阵取 pivot columns。
+- rank 不是单纯的计算结果，它同时控制可达性、自由变量、维数和可逆性。
+
+## 来自课程位置
+
+- [[01_Ax = b and the Four Subspaces#Session 1.3 Elimination with matrices|Session 1.3]]：pivot 个数就是 rank。
+- [[01_Ax = b and the Four Subspaces#Session 1.7 Column space and nullspace|Session 1.7]]：rank 是列空间维数。
+- [[01_Ax = b and the Four Subspaces#Session 1.8 Solving Ax = 0: pivot variables, special solutions|Session 1.8]]：自由变量个数是 $n-r$。
+- [[01_Ax = b and the Four Subspaces#Session 1.11 The four fundamental subspaces|Session 1.11]]：rank 决定四个基本子空间的维数。
+
+## 关联卡片
+
+- [[Column Space]]
+- [[Null Space]]
+- [[Row Space]]
+- [[Left Nullspace]]
+- [[Reduced Row Echelon Form]]
+- [[Invertible Matrix Equivalence Chain]]
 
 ## 课程笔记反链
 
