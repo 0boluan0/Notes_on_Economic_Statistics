@@ -1,105 +1,58 @@
 ---
 aliases:
-- 贝叶斯博弈
-- Bayesian Nash Equilibrium
-- Games of Incomplete Information
 - Bayesian Game
+- Games of Incomplete Information
+- 贝叶斯博弈
+- 不完全信息博弈
 tags:
 - concept
-- game theory
+- game-theory
 ---
-# 贝叶斯博弈
+# Bayesian Game
 
->[!note] 定义
->
-> 贝叶斯博弈是玩家对某些信息（如对手的类型）不确定的博弈，但知道这些不确定性的概率分布。
->
-## 五元素
+## 一句话记忆
 
-相较于普通博弈的三个要素（player, strategy, payoff），贝叶斯博弈有五个元素：
+贝叶斯博弈是玩家知道自己的类型，但不完全知道别人类型的博弈。
 
-### 1. Player（局中人）
-这里的 player 没有把不同类型的人分开，类型的分类会归后面一项来区分。
+## 它是什么
 
-### 2. Type（类型）
-同一个 player 的不同回报，每种回报认定为一个 type。
-- 每个玩家可能有多个类型
-- 玩家知道自己的类型
-- 玩家不知道对手的类型
+贝叶斯博弈在普通策略式博弈基础上加入 [[Type (Game Theory)|类型]] 和 [[Belief (Game Theory)|信念]]。
 
-### 3. Action（行动）
-每个人能够选择的行为。
-- 对于有不同 type 的 player，不同 type 的可选范围一定要相同
-- 如果存在不一样的可选范围，那么仅靠看对方的选择，另一方就能得到关于该方的 type 的信息，违背了基本假定。
+常用五元素：
 
-### 4. Belief（信念）
-一方对另一方的 type 的分布的预设，仅仅反应这一方的一厢情愿，不是对方的真的 type 的分布情况。
+| 元素 | 含义 |
+|---|---|
+| 玩家 | 谁在决策 |
+| 类型 | 玩家自己的私人信息状态 |
+| 行动 | 每个玩家可实际选择的行为 |
+| 信念 | 对其他玩家类型分布的判断 |
+| 收益 | 行动与类型共同决定的 payoff |
 
-### 5. Payoff（收益）
-不仅与行动策略组合（strategy profile）有关，也和类型组合有关。
+## 解决什么判断
 
-## 将五元素转化为 3 要素
+- 玩家不知道对方成本、偏好、能力或类型时如何建模。
+- 为什么策略必须说明每种类型下如何行动。
+- 如何把不完全信息问题转成普通策略式问题求解。
 
-### 转化方法
+## 最小例子
 
-1. **Player**：新的 player 的定义从自然人扩展到了每个自然人的每个 type 单算为一个 player
-2. **Strategy**：由于 player 的变化，strategy 也相应扩展为每个自然人的每个类型的策略选择
-3. **Payoff**：不变
+贝叶斯版性别博弈中，玩家 2 有两种类型；玩家 2 知道自己的类型，玩家 1 只知道两种类型的概率。
 
-## 贝叶斯纳什均衡
+## 易混点
 
->[!note] 定义
-> 策略组合 σ* 使得对于每个玩家 i 的每个类型 θ_i：
->
-> $ \sigma_i^*(\theta_i) \in \arg\max_{a_i} E_{\theta_{-i}|\theta_i}[u_i(a_i, \sigma_{-i}^*(\theta_{-i}), \theta)] $
->
-> 即：给定类型 θ_i，选择最优策略，最大化期望收益（期望是对对手类型的分布）。
->
-### 求解步骤
+- 类型不是行动；类型是“我处于什么私人信息状态”。
+- 贝叶斯博弈中的 strategy 是类型到行动的函数。
+- [[Bayesian Nash Equilibrium]] 是均衡概念，不应混在模型定义里。
 
-1. 将不同类型的玩家分开看待，认做是不同的 player
-2. 对于知道类型的玩家，根据类型设定策略
-3. 对于不知道类型的玩家，求解期望
-4. 使用纳什均衡的求解方法
+## 来自课程位置
 
-## 相关概念
+- [[05_贝叶斯博弈#2. 贝叶斯博弈]]
+- [[05_贝叶斯博弈#3. 将五元素转化为三要素]]
 
-- [[Pure Strategy Nash Equilibrium|纯策略纳什均衡]]
-- [[Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
-- [[Perfect Bayesian Equilibrium|完美贝叶斯均衡]]
-- [[Separating Equilibrium|分离均衡]]
-- [[Pooling Equilibrium|混合均衡]]
+## 关联卡片
 
->[!example] 典型例子
->
-> ### Bayesian Battle of the Sexes
-> 在性别博弈的基础上，女性分为两种类型：喜欢男性、厌恶男性
-> - 男性不知道女性的类型
-> - 女性知道自己的类型
-> - 求解时将女性看作两个人，男性求解期望
->
-> ### Noisy Battle of the Sexes
-> 双方都加入了一个扰动，但扰动只有自己知道
-> - 对方只知道分布而不知道值
-> - 推论：对于双方而言存在且仅存在一个临界值
-> - 在临界值的一边该 player 选某一选择，在另一边选另一个选择
->
-## 应用
-
-- 拍卖理论（一级密封拍卖、二级密封拍卖）
-- 劳动市场筛选
-- 保险市场
-- 合约设计
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Bayesian Nash Equilibrium]]
+- [[Type (Game Theory)]]
+- [[Belief (Game Theory)]]
+- [[Perfect Bayesian Equilibrium]]
+- [[Game Theory-hub]]

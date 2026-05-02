@@ -35,7 +35,7 @@ Pure Strategy Nash Equilibrium 是 [[Nash Equilibrium]] 在纯策略集合中的
 
 ## 来自课程位置
 
-- [[03_策略式博弈#纯策略的纳什均衡]]
+- [[03_策略式博弈#5. 纯策略纳什均衡]]
 
 ## 关联卡片
 

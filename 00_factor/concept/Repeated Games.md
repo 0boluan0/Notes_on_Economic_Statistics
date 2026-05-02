@@ -1,77 +1,46 @@
 ---
 aliases:
-- 重复博弈
-- Iterated Games
 - Repeated Games
+- Iterated Games
+- 重复博弈
 tags:
 - concept
-- game theory
+- game-theory
 ---
-# 重复博弈
+# Repeated Games
 
->[!note] 定义
->
-> 重复博弈是指同一个博弈多次进行，玩家可以基于历史行动来做出当前的决策。
->
-## 分类
+## 一句话记忆
 
-### 有尽头的重复博弈（Finitely Repeated Games）
-- 博弈有确定的结束轮数
-- 存在最后一天，这就是经典的囚徒困境
-- 通过逆向归纳，每一天都要选择背叛
-- **囚徒困境未被破除**
+重复博弈是同一个阶段博弈多次发生，使今天的行动影响未来惩罚或合作的博弈。
 
-### 无尽头的重复博弈（Infinitely Repeated Games）
-- 博弈没有确定的结束时间
-- 玩家考虑长远利益
-- 为了更长远利益，不会率先降价
-- **囚徒困境得以破除**
+## 它是什么
 
-## 核心思想
+Repeated game 把一次性博弈放进多期互动中。玩家可以根据历史行动调整当前策略。
 
-### 贏得历史的影响
-不仅要考虑当前策略对当期的影响，更要考虑对后续各期的影响。
+## 解决什么判断
 
-### 威胁与奖励
-- 威胁：如果对方偏离，就永远采取惩罚策略
-- 奖励：如果对方合作，就继续合作
+- 为什么一次性囚徒困境难以合作。
+- 为什么没有确定终点时合作可能维持。
+- 未来惩罚如何改变今天的偏离激励。
 
-## 著名策略
+## 最小例子
 
-### 以牙还牙（Tit-for-Tat）
-- 第一轮选择合作
-- 之后选择对方上一轮的策略
+两家公司反复定价。如果今天降价会引发未来长期价格战，那么厂商可能选择维持高价。
 
-### 冷酷策略（Grim Trigger）
-- 选择合作，直到对方背叛
-- 一旦对方背叛，永远选择背叛
+## 易混点
 
-## 应用
+- 有确定最后一期的有限重复囚徒困境，逆向归纳通常会推回每期背叛。
+- 没有确定终点或无限重复时，未来惩罚才可能支撑合作。
+- 重复博弈的策略依赖历史，不只是每期重复同一个行动。
 
-- 寡头竞争（可口可乐 vs 百事可乐）
-- 贸易战
-- 合约执行
+## 来自课程位置
 
-## 相关概念
+- [[03_策略式博弈#4.2. 重复博弈]]
 
-- [[Prisoner's Dilemma|囚徒困境]]
-- [[Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]
+## 关联卡片
 
-## 关键定理
-
-### Folk Theorem
-- 在无限重复博弈中，只要贴现因子足够大
-- 许多合作结果可以成为纳什均衡
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Prisoner's Dilemma]]
+- [[Backward Induction]]
+- [[Subgame Perfect Nash Equilibrium]]
+- [[Bertrand Competition]]
+- [[Game Theory-hub]]

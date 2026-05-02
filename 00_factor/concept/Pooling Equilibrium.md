@@ -1,104 +1,46 @@
 ---
 aliases:
-- 混合均衡
 - Pooling Equilibrium
+- 合并均衡
+- 池化均衡
 tags:
 - concept
-- game theory
+- game-theory
 ---
-# 混合均衡
+# Pooling Equilibrium
 
->[!note] 定义
->
-> 在贝叶斯博弈（特别是信号博弈）中，所有类型的发送者选择相同的信号，使得接收者无法从信号中区分发送者的类型。
->
-## 特征
+## 一句话记忆
 
-### 信号相同
-- 所有类型 θ 的发送者都选择相同信号 m
-- 接收者看到信号 m 后，仍然无法确定类型
+合并均衡是不同类型发送同一个信号，使接收者无法从路径上信号区分类型。
 
-### 信息不揭示
-- 接收者的信念保持在先验分布
-- 贝叶斯法则无法更新信念（因为观察到相同信号）
+## 它是什么
 
-### 基于先验行动
-- 接收者根据先验概率分布采取行动
-- 最优行动是期望值最大化
+在信号博弈中，若所有类型的发送者选择相同信号，接收者在均衡路径上只能依靠先验 belief 判断类型，这就是 pooling equilibrium。
 
-## 存在条件
+## 解决什么判断
 
-混合均衡的存在需要满足：
+- 信号是否不揭示类型。
+- 路径上 belief 是否等于先验更新。
+- 路径外 belief 能否阻止某些类型偏离。
 
-1. **激励相容**：每种类型都愿意选择共同信号 m，而不是偏离
+## 最小例子
 
-$ U(\theta, m) \geq U(\theta, m') \quad \forall \theta, m' $
+Beer-Quiche 博弈中，weak 和 strong 都选择 Quiche。若 Beer 不在路径上，接收者看到 Beer 后的 belief 是 off-path belief，需要在 PBE 中一起说明。
 
-2. **最优反应**：给定先验信念，接收者的行动是最优的
+## 易混点
 
-$ a^* \in \arg\max_{a} E_\theta[U(\theta, m, a)] $
+- Pooling 不是 mixed strategy equilibrium，中文应理解为合并/池化均衡。
+- pooling 能否成立通常取决于路径外 belief 如何支持接收者行动。
+- 所有类型选同一信号只是候选结构，不自动构成 PBE。
 
-## 非均衡路径上的信念
+## 来自课程位置
 
-在混合均衡中，对于未到达的信息集（非均衡路径）：
-- 贝叶斯法则无法直接应用（概率为 0）
-- 可以根据一致性要求或其他合理的准则指定信念
-- 不同的信念会影响对手的选择
+- [[07_子博弈不完全信息#6. 合并均衡]]
 
-## 与分离均衡的比较
+## 关联卡片
 
-| 特征 | 混合均衡 | 分离均衡 |
-|------|---------|---------|
-| 信号选择 | 所有类型选相同信号 | 不同类型选不同信号 |
-| 信息揭示 | 不揭示 | 完全揭示 |
-| 信念更新 | 不变（基于先验） | 完全更新（确定类型）|
-| 效率 | 低（信息不对称持续） | 高（信息不对称消除） |
-
-## 为什么有时混合均衡存在而分离均衡不存在
-
-### 成本不对称
-如果发送信号的成本相对于不同类型差异过大：
-- 高类型可能不愿支付高信号成本
-- 模仿低类型可能更优
-- 导致分离均衡不存在
-
-### 接收者反应
-如果接收者对信号的反应不敏感：
-- 发送者没有激励去区分
-- 混合均衡成为自然选择
-
->[!example] 典型例子
->
-> ### 劳动市场（某些情形）
-> - 教育成本对所有人都很高
-> - 高能力者和低能力者都选择低教育
-> - 雇主只能基于先验做出雇佣决策
->
-> ### 价格信号
-> - 高质量和低质量公司都定相同价格
-> - 消费者无法从价格推断质量
->
-## 相关概念
-
-- [[Separating Equilibrium|分离均衡]]
-- [[Perfect Bayesian Equilibrium|完美贝叶斯均衡]]
-- [[Bayesian Game|贝叶斯博弈]]
-
-## 应用
-
-- 批发中的价格制定
-- 产品包装设计
-- 广告策略
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Separating Equilibrium]]
+- [[Off-path Belief]]
+- [[Signaling Game]]
+- [[Perfect Bayesian Equilibrium]]
+- [[Belief (Game Theory)]]

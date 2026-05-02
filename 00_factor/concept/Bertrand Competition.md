@@ -1,83 +1,53 @@
 ---
 aliases:
-- Bertrand竞争
+- Bertrand Competition
 - Bertrand Model
 - Bertrand Paradox
 - Bertrand 竞争
-- Bertrand Competition
+- 伯特兰竞争
 tags:
 - concept
-- game theory
+- game-theory
 ---
-# Bertrand 竞争
+# Bertrand Competition
 
->[!note] 定义
->
-> Bertrand 竞争是静态的寡头竞争模型，厂商针对价格进行竞争。低价者获得所有市场份额。
->
-## 模型设定
+## 一句话记忆
 
-- n 个厂商同时选择价格 $p_i$
-- 产品同质
-- 边际成本 c 相同
-- 市场需求：Q = D(p)
+Bertrand 竞争是厂商同时选择价格，低价者抢走市场的寡头模型。
 
-## 纳什均衡
+## 它是什么
 
-在基本模型中：
+标准 Bertrand 模型假设产品同质、边际成本相同、消费者购买低价产品；若两家价格相同，则平分需求。
 
-$ p_1^* = p_2^* = ... = p_n^* = c $
+## 解决什么判断
 
-所有厂商的价格都等于边际成本，获得零利润。
+- 为什么价格竞争比产量竞争更激烈。
+- 为什么两家同质产品厂商就可能把价格压到边际成本。
+- 为什么差异化、产能约束或重复互动能缓解 Bertrand 悖论。
 
-## Bertrand 悖论
+## 最小例子
 
-即使是双寡头（n = 2），只要产品同质，结果也是完全竞争价格。这与直觉矛盾——两个厂商无法获得垄断利润。
+两家厂商边际成本均为 $c$，标准均衡为：
 
-### 悖论的解决方法
+$$
+p_1^*=p_2^*=c.
+$$
 
-1. **产能限制**：如果产能有限，可能获得正利润
-2. **产品差异化**：通过品牌、质量等差异化产品
-3. **重复博弈**：长期关系可能促成合谋
-4. **价格刚性**：存在价格调整成本
+若两家都定价高于 $c$，任一家都能略微降价并获得全部市场，因此不是均衡。
 
-## 性质
+## 易混点
 
-1. **赢家通吃**：价格最低的厂商获得所有需求
+- 标准同质 Bertrand 需求不连续，通常不能直接套一阶条件。
+- 可导反应函数多来自差异化产品 Bertrand 模型。
+- Bertrand 是价格竞争，Cournot 是产量竞争。
 
-2. **激烈竞争**：哪怕极小的价格优势也能赢得所有市场
+## 来自课程位置
 
-3. **不稳定**：均衡对参数变化非常敏感
+- [[04_案例（囚徒困境与纳什均衡）#4. 伯特兰竞争]]
 
-## 与古诺竞争的比较
+## 关联卡片
 
-| 特征 | Bertrand | Cournot |
-|------|----------|---------|
-| 竞争变量 | 价格 | 产量 |
-| 均衡价格 | 边际成本 | 高于边际成本 |
-| 均衡利润 | 零 | 正值 |
-| 竞争强度 | 更强 | 较弱 |
-
-## 相关概念
-
-- [[Cournot Competition|古诺竞争]]
-- [[Hotelling Model|Hotelling 模型]]
-
-## 应用
-
-- 电商价格竞争
-- 燃料价格
-- 基础日用品
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Oligopoly Competition Map]]
+- [[Cournot Competition]]
+- [[Hotelling Model]]
+- [[Repeated Games]]

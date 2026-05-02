@@ -1,93 +1,80 @@
 ---
 aliases:
-- Hotelling模型
+- Hotelling Model
 - Hotelling Competition
 - Linear City Model
 - Hotelling 模型
-- Hotelling Model
 tags:
 - concept
-- game theory
-- 经济
+- game-theory
 ---
-# Hotelling 模型
+# Hotelling Model
 
->[!note] 定义
->
-> Hotelling 模型描述在线性城市中两个厂商进行空间和价格竞争的情况。厂商位于城市两端，消费者均匀分布在城市中。
->
-## 模型设定
+## 一句话记忆
 
-- 城市长度为 1，消费者均匀分布在 [0, 1]
-- 厂商 A 位于位置 0，厂商 B 位于位置 1
-- 厂商选择价格 $p_A$, $p_B$
-- 消费者购买成本 = 商品价格 + 运输成本 × 距离
-- 运输成本为 t（单位距离成本）
+Hotelling 模型是空间差异化下的价格竞争：对手提价会把消费者推向我方。
 
-## 消费者决策
+## 它是什么
 
-消费者会选择总成本最低的厂商：
+两家厂商位于线性城市两端，消费者均匀分布。消费者比较“价格 + 运输成本”，厂商选择价格竞争。
 
-- 从 A 购买的成本：$p_A$ + t × x
-- 从 B 购买的成本：$p_B$ + t × (1 - x)
+若厂商 $i$ 位于 0 端，厂商 $j$ 位于 1 端，无差异消费者满足：
 
-其中 x 是消费者到 A 的距离。
+$$
+p_i+t\hat z=p_j+t(1-\hat z).
+$$
 
-## 无差异消费者
+因此：
 
-在位置 x* 的消费者对两厂商无差异：
+$$
+\hat z=\frac{t+p_j-p_i}{2t}.
+$$
 
-$ p_A + t x^* = p_B + t(1 - x^*) $
-$ x^* = \frac{p_B - p_A + t}{2t} $
+## 解决什么判断
 
-## 纳什均衡
+- 产品差异化如何削弱价格竞争。
+- 为什么对手提价时，我方最优价格也可能上升。
+- Hotelling 为什么和 Cournot 的反应函数方向相反。
 
-$ p_A^* = p_B^* = c + t $
+## 最小例子
 
-其中 c 是边际成本。
+厂商 $i$ 的需求：
 
-## 性质
+$$
+q_i=\frac12+\frac{p_j-p_i}{2t}.
+$$
 
-1. **产品差异化带来利润**：运输成本 t 创造了产品差异化
-2. **价格随差异化程度增加**：t 越大，均衡价格越高
-3. **当 t = 0 时退化为 Bertrand**：没有差异化，竞争回到完全竞争价格
+利润：
 
-## 与古诺竞争的比较
+$$
+\pi_i=(p_i-c)q_i.
+$$
 
-Hotelling 和古诺的辨析：
+内点最优反应：
 
-**Hotelling**：
-- 别人提价时别人的客户被推开来
-- 我的总收益增加
-- 提高价格使我的客户减少了一点，但不足以冲抵由于对方提价我的客户的增加量
-- **我的边际收益增大了**
+$$
+B_i(p_j)=\frac{t+c+p_j}{2}.
+$$
 
-**古诺模型**：
-- 对方增加产量时，市场的供给被拉高
-- 市场上的价格降低了
-- **我的边际收益下降了**，所以应降低产量
+对称均衡：
 
-## 应用
+$$
+p_i^*=p_j^*=c+t.
+$$
 
-- 加油站选址
-- 零售店位置选择
-- 品牌差异化策略
-- 政治立场（中间选民定理）
+## 易混点
 
-## 相关概念
+- $t$ 越大，差异化越强，均衡价格越高。
+- 当 $t=0$ 时产品无差异，价格竞争趋近 [[Bertrand Competition]]，不是 [[Cournot Competition]]。
+- Hotelling 价格是策略互补；Cournot 产量是策略替代。
 
-- [[Cournot Competition|古诺竞争]]
-- [[Bertrand Competition|Bertrand 竞争]]
+## 来自课程位置
 
-## 课程笔记反链
+- [[04_案例（囚徒困境与纳什均衡）#5. Hotelling 模型]]
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+## 关联卡片
+
+- [[Oligopoly Competition Map]]
+- [[Bertrand Competition]]
+- [[Cournot Competition]]
+- [[Supermodular Game]]

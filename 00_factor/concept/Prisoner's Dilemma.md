@@ -1,33 +1,50 @@
 ---
 aliases:
 - Prisoner's Dilemma
+- Prisoners' Dilemma
 - 囚徒困境
-- Prisoner
 tags:
 - concept
+- game-theory
 ---
 # Prisoner's Dilemma
 
->[!note] 它是什么
-> - 「Prisoner's Dilemma」是指个体理性导致集体非最优的博弈结构。
->
->[!note] 最小可检索信息
-> - 定义：个体理性导致集体非最优的博弈结构。
-> - 符号/公式：无固定符号。
-> - 最小例子：双方选择背叛而非合作。
->
+## 一句话记忆
+
+囚徒困境是个人理性选择导致集体非最优结果的博弈。
+
+## 它是什么
+
+两个玩家各自选择合作或背叛。对每个玩家来说，背叛都是个人最优；但两人都背叛时，结果比两人都合作更差。
+
+## 解决什么判断
+
+- 为什么纳什均衡不一定是社会最优。
+- 为什么优势策略均衡可能很糟。
+- 为什么重复博弈、制度惩罚或承诺机制可能改变结果。
+
+## 最小例子
+
+|  | C | D |
+|---|---|---|
+| **C** | $(-1,-1)$ | $(-9,0)$ |
+| **D** | $(0,-9)$ | $(-6,-6)$ |
+
+$(D,D)$ 是纳什均衡，也是优势策略均衡；但 $(C,C)$ 对两人都更好。
+
+## 易混点
+
+- 囚徒困境不是“大家都倒霉”的任何局面，而是有明确的背叛优势和合作低效结果。
+- 走出囚徒困境通常要改变重复结构、收益结构或外部约束。
+
+## 来自课程位置
+
+- [[03_策略式博弈#1. 囚徒困境]]
+- [[03_策略式博弈#4. 如何走出囚徒困境]]
+
 ## 关联卡片
+
+- [[Dominant Strategy Equilibrium]]
+- [[Nash Equilibrium]]
 - [[Repeated Games]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Game Theory-hub]]

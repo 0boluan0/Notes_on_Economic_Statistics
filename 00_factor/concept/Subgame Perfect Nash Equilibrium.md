@@ -36,7 +36,7 @@ Subgame Perfect Nash Equilibrium 是比 [[Nash Equilibrium]] 更强的动态博�
 
 ## 来自课程位置
 
-- [[06_扩展性博弈#子博弈精炼纳什均衡]]
+- [[06_扩展性博弈#8. 子博弈精炼纳什均衡]]
 
 ## 关联卡片
 

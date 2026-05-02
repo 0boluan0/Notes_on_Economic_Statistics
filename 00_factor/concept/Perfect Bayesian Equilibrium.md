@@ -1,116 +1,59 @@
 ---
 aliases:
-- 完美贝叶斯均衡
-- PBE
 - Perfect Bayesian Equilibrium
+- PBE
+- Perfect-Bayesian Equilibrium
+- 精炼贝叶斯均衡
+- 完美贝叶斯均衡
 tags:
 - concept
-- game theory
+- game-theory
 ---
-# 完美贝叶斯均衡
+# Perfect Bayesian Equilibrium
 
->[!note] 定义
->
-> 完美贝叶斯均衡是序贯博弈中均衡策略和信念的组合，满足三个条件：
->
-> 1. **序贯理性**：给定信念，每个策略都是最优反应
-> 2. **一致性**：信念必须与均衡策略一致（通过贝叶斯法则修正）
-> 3. **正确性**：在均衡路径上，信念由贝叶斯法则正确更新
->
-## 核心思想
+## 一句话记忆
 
-在讲述一个均衡时不能只说策略，同时也要说 belief。
+PBE 是“策略 + belief”共同满足顺序理性和信念一致性的动态不完全信息均衡。
 
-对于有可能发生的路径（概率大于 0 的路径）：
-- 要使用贝叶斯法则对其后验概率进行修正
-- 修正为对方看到我的选择时认定的我处于的信息点的概率
+## 它是什么
 
-对于概率为 0 的部分：
-- 不需要进行贝叶斯法则修正
-- 这一条路的 belief 可以根据自己的喜好或者做题的需要进行随意的设置
+Perfect Bayesian Equilibrium 用于扩展式博弈中存在信息集、类型或信号的情形。一个 PBE 不是单独的策略组合，而是：
 
-## 均衡条件
+$$
+(s^*,\mu^*),
+$$
 
-### 1. 策略最优性
-在每一个信息集，给定该信息集的信念，策略必须是对期望收益的最大化。
+其中 $s^*$ 是策略，$\mu^*$ 是每个信息集上的 belief。
 
-### 2. 信念一致性
-- 在均衡路径上（到达的信息集），信念必须由先验分布和贝叶斯法则正确计算
-- 在非均衡路径上（未到达的信息集），信念可以是任意合理的
+## 解决什么判断
 
-### 3. 预期一致性
-- 玩家的信念与对手的策略相一致
-- 即每个玩家都正确预期其他人的策略
+- 玩家在看不清历史或类型时如何做最优反应。
+- 路径上 belief 是否由 Bayes 法则推出。
+- 路径外 belief 能否支持均衡中的不偏离。
+- 信号博弈中 separating/pooling 候选是否成立。
 
-## 与其他均衡概念的关系
+## 最小例子
 
-```
-完美贝叶斯均衡 (PBE)
-  ⊂ 序贯均衡
-    ⊂ 完美均衡
-      ⊂ 纳什均衡 (NE)
-```
+Beer-Quiche 信号博弈中，不能只说 weak/strong 吃什么、接收者 fight 不 fight；还必须说明接收者看到 Beer 或 Quiche 后相信发送者是 weak 的概率。
 
-### 与子博弈精炼纳什均衡
-- SPNE 只适用于完美信息博弈
-- PBE 可以处理不完美信息博弈
-- 在完美信息博弈中，PBE 退化为 SPNE
+## 易混点
 
-## 求解方法
+- PBE 答案必须同时写策略和 belief。
+- 正概率到达的信息集，belief 必须由 Bayes 法则更新。
+- 零概率到达的信息集，belief 可以指定，但指定后仍要检查最优反应。
+- 不同教材对 weak PBE、sequential equilibrium 的包含关系细节不同，考试时优先写本课程的条件。
 
-### 对于扩展性博弈
+## 来自课程位置
 
-1. 列出可能的策略组合
-2. 计算信念（使用贝叶斯法则）
-3. 验证最优性
-（略）
+- [[07_子博弈不完全信息#3. 精炼贝叶斯均衡]]
+- [[07_子博弈不完全信息#6. 合并均衡]]
 
+## 关联卡片
 
-3. 策略必须满足最优性
-4. 检查一致性
-
-### 对于信号博弈（Signaling Games）
-
-1. 找到分离均衡（Pooling Equilibrium）和混合均衡（Separating Equilibrium）
-2. 对每种均衡计算信念
-3. 验证信念与策略的一致性
-
-## 相关概念
-
-- [[Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]
-- [[Bayesian Game|贝叶斯博弈]]
-- [[Separating Equilibrium|分离均衡]]
-- [[Pooling Equilibrium|混合均衡]]
-
->[!example] 典型例子
->
-> ### 协调攻击（Coordinated Attack）
-> 两方攻击还是撤退的博弈
-> - 不确定性却带来了结果的确定性
-> - 策略有互补性，信号也有协同机制
-> - 在某些参数范围内会存在一定的确定性
->
-> ### 信号博弈（Signaling Game）
-> 发送者知道类型，接收者不知道
-> - 发送者选择信号，接收者根据信号推断类型并采取行动
-> - 均衡需要同时考虑策略和信念
->
-## 应用
-
-- 劳动市场信号传递（Spence 模型）
-- 金融市场的信息披露
-- 战略性谈判
-- 机制设计
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Checking Perfect Bayesian Equilibrium]]
+- [[Belief (Game Theory)]]
+- [[Off-path Belief]]
+- [[Signaling Game]]
+- [[Separating Equilibrium]]
+- [[Pooling Equilibrium]]
+- [[Bayesian Game]]

@@ -6,46 +6,50 @@ aliases:
 - 博弈论基础
 tags:
 - framework
+- game-theory
 ---
 # Game Theory
 
-## 适用问题
+## 什么时候用
 
-- 决策结果依赖于他人行为的情形（竞争、合作、谈判、投标、定价等）。
-- 需要解释或预测策略互动结果（均衡、威胁、承诺）。
+当一个人的最优选择依赖于别人怎么选，且别人也会反过来根据你的选择调整行为时，用博弈论框架。
 
-## 核心直觉
+## 为什么这样看
 
-- 个人最优选择会受到他人预期的影响，反过来又影响他人的选择。
-- 结果取决于“相互最佳反应”的结构，而非单边最优。
+博弈论关心的不是单边最优，而是相互最优反应。结果取决于玩家如何预期对方、对方又如何预期自己。
 
-## 关键假设
+## 题型识别
 
-- 参与者目标可量化（偏好或收益函数）。
-- 决策规则相对稳定（理性或近似理性）。
-- 参与者对规则与信息结构有基本共识（完全信息或可建模的不完全信息）。
+- 多个玩家同时选择策略：先写 [[strategic-form Games]]。
+- 有行动顺序或威胁：先写 [[Extensive-form Game]]。
+- 有私人信息或类型：先写 [[Bayesian Game]]。
+- 有信号和路径外 belief：转向 [[Perfect Bayesian Equilibrium]]。
 
-## 边界与失败模式
+## 边界条件
 
-- 行为明显受情绪、规范或习惯驱动时，理性假设偏离。
-- 多重均衡导致预测不唯一，需要额外选择机制（历史、协调、制度）。
-- 信息结构错误会使推论失效（遗漏信号、类型分布不准）。
+- 参与者的偏好或收益需要能被建模。
+- 玩家至少知道规则和信息结构。
+- 多重均衡时，博弈论本身可能不能唯一预测结果。
 
-## 常见输出
+## 失败模式
 
-- 均衡类型与条件（纳什、子博弈精炼、贝叶斯均衡）。
-- 可持续合作或惩罚的区间（重复博弈）。
-- 策略混合或随机化的必要性（混合策略）。
+- 把行为习惯或道德规范直接当作 payoff，但没有解释。
+- 忽略信息结构，导致错用均衡概念。
+- 只找社会最优，不检查个体是否愿意单独偏离。
 
-## 相关链接
+## 来自课程位置
 
-- [[Game Theory-hub|博弈论知识地图]]
-- [[Game Theory Problem Solving Map|博弈论解题框架]]
-- [[Nash Equilibrium|纳什均衡]]
-- [[Mixed Strategy Nash Equilibrium|混合策略纳什均衡]]
-- [[Subgame Perfect Nash Equilibrium|子博弈精炼纳什均衡]]
-- [[Repeated Games|重复博弈]]
-- [[Bayesian Game|贝叶斯博弈]]
+- [[01_导论#1.1. 博弈论研究什么]]
+
+## 关联卡片
+
+- [[Game Theory-hub]]
+- [[Game Theory Problem Solving Map]]
+- [[Nash Equilibrium]]
+- [[Mixed Strategy Nash Equilibrium]]
+- [[Subgame Perfect Nash Equilibrium]]
+- [[Bayesian Game]]
+- [[Perfect Bayesian Equilibrium]]
 
 ## 课程笔记反链
 

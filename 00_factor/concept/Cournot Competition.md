@@ -1,92 +1,68 @@
 ---
 aliases:
-- 古诺竞争
-- Cournot Duopoly
 - Cournot Competition
+- Cournot Duopoly
+- Cournot Model
+- 古诺竞争
 tags:
 - concept
-- game theory
+- game-theory
 ---
-# 古诺竞争
+# Cournot Competition
 
->[!note] 定义
->
-> 古诺竞争是静态的寡头竞争模型，厂商针对产量进行竞争。市场价格由总产量线性决定。
->
-## 模型设定
+## 一句话记忆
 
-- n 个厂商同时选择产量 $q_i$
-- 市场价格：$p = a - Q，其中 Q = q_1 + q_2 + ... + q_n$
-- 厂商 i 的成本：$C_i$($q_i$)
-- 厂商 i 的利润：$π_i = p × q_i - C_i(q_i)$
+Cournot 竞争是厂商同时选择产量，总产量越高市场价格越低的寡头模型。
 
-## 最优反应函数
+## 它是什么
 
-对于线性需求 p = a - Q 和边际成本 c 的对称情形：
+在 Cournot 模型中，厂商的策略变量是产量 $q_i$。市场价格由总产量 $Q=\sum_i q_i$ 决定，常见线性需求为：
 
-$ q_i^* = \max\left\{0, \frac{a - c - Q_{-i}}{2}\right\} $
+$$
+P(Q)=a-bQ.
+$$
 
-其中 Q_{-i} 是其他厂商的总产量。
+双寡头对称成本 $c$ 下：
 
-## 纳什均衡
+$$
+\pi_1=x[a-b(x+y)-c],\qquad
+\pi_2=y[a-b(x+y)-c].
+$$
 
-### 双寡头情形
-$ q_1^* = q_2^* = \frac{a - c}{3} $
-$ Q^* = \frac{2(a - c)}{3} $
-$ p^* = \frac{a + 2c}{3} $
+## 解决什么判断
 
-### n 个厂商情形
-$ q_i^* = \frac{a - c}{n + 1} $
-$ Q^* = \frac{n(a - c)}{n + 1} $
-$ p^* = \frac{a + nc}{n + 1} $
+- 产量竞争下的最优反应函数是什么。
+- 为什么对手增产会使我方最优产量下降。
+- 为什么厂商数量增加会使价格接近边际成本。
 
-## 性质
+## 最小例子
 
-1. **产量随厂商数量增加**：单个厂商产量下降，但总产量上升
+内点情形下：
 
-2. **价格收敛于边际成本**：当 n → ∞ 时，p → c（完全竞争）
+$$
+B_1(y)=\frac{a-c-by}{2b}.
+$$
 
-3. **效率低于完全竞争**：价格高于边际成本，存在无谓损失
+对称均衡：
 
-## 求解方法
+$$
+x^*=y^*=\frac{a-c}{3b}.
+$$
 
-1. 写出利润函数
-2. 对自身产量求一阶条件
-3. 得到最优反应函数
-4. 所有最优反应函数的交点即为纳什均衡
+## 易混点
 
-## 与其他模型的比较
+- Cournot 是产量竞争，不是价格竞争。
+- Cournot 的反应函数通常向下倾斜，表示策略替代。
+- 不要把 Cournot 说成 Hotelling 的 $t=0$ 特例；$t=0$ 的同质价格竞争更接近 [[Bertrand Competition]]。
 
-### 与 Bertrand 竞争
-- Bertrand：价格竞争，均衡是完全竞争价格
-- Cournot：产量竞争，价格高于边际成本
+## 来自课程位置
 
-### 与 Hotelling 模型
-- Cournot 是 Hotelling 在运输成本 t = 0 时的特例
-- Hotelling 中，对手提价会增加我的边际收益
-- Cournot 中，对手增加产量会降低我的边际收益
+- [[04_案例（囚徒困境与纳什均衡）#3. 线性需求下的古诺竞争]]
 
-## 相关概念
+## 关联卡片
 
-- [[Bertrand Competition|Bertrand 竞争]]
-- [[Hotelling Model|Hotelling 模型]]
-- [[Best-Reply Function|最优反应函数]]
-
-## 应用
-
-- 石油输出国组织（OPEC）
-- 电信行业
-- 钢铁行业
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[Oligopoly Competition Map]]
+- [[Bertrand Competition]]
+- [[Hotelling Model]]
+- [[Best-Reply Function]]
+- [[Submodular Game]]

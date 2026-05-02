@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_Fragments/AutoResearch Clearly Explained (and how to use it) - 2026-03-28.md",
+                "file": "01_Math/06_时间序列分析/01_介绍时间序列.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "AutoResearch Clearly Explained (and how to use it) - 2026-03-28"
+              "title": "01_介绍时间序列"
             }
           },
           {
@@ -261,7 +261,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: Academic"
+              "title": "Terminal: ⠴ Academic"
             }
           },
           {
@@ -320,13 +320,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04_Fragments/AutoResearch Clearly Explained (and how to use it) - 2026-03-28.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of AutoResearch Clearly Explained (and how to use it) - 2026-03-28"
+              "title": "Outline"
             }
           },
           {
@@ -388,46 +387,45 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "bb5393f41058a9f1",
+  "active": "36db59183709d800",
   "lastOpenFiles": [
-    "00_factor/proof/Hotelling T2 F Distribution Proof.md",
-    "00_factor/system/Multivariate Analysis Diagnostics.md",
-    "00_factor/framework/Clustering Method Selection.md",
-    "00_factor/framework/Classification Rule Selection.md",
-    "00_factor/framework/PCA vs Factor Analysis.md",
-    "00_factor/framework/Choosing Covariance vs Correlation Matrix.md",
-    "00_factor/framework/Multivariate Mean Inference Map.md",
-    "00_factor/procedure/Multivariate Normality Check.md",
-    "00_factor/procedure/Hierarchical Clustering Procedure.md",
-    "00_factor/procedure/K-means Algorithm.md",
-    "00_factor/procedure/Fisher Discriminant Procedure.md",
-    "00_factor/procedure/Factor Analysis PC Method.md",
-    "00_factor/procedure/PCA Procedure.md",
-    "00_factor/procedure/One-way MANOVA Procedure.md",
-    "00_factor/procedure/Two-Sample Hotelling T2 Test.md",
-    "00_factor/procedure/Paired Mean Vector Comparison.md",
-    "00_factor/procedure/Hotelling T2 Test Procedure.md",
-    "00_factor/concept/Multivariate Linear Regression.md",
-    "00_factor/concept/Linkage Criterion.md",
-    "00_factor/concept/K-means Clustering.md",
-    "00_factor/concept/Hierarchical Clustering.md",
-    "00_factor/concept/Jackknife Classification.md",
-    "00_factor/concept/Actual Error Rate.md",
-    "00_factor/concept/Total Probability of Misclassification.md",
-    "00_factor/concept/Expected Cost of Misclassification.md",
-    "00_factor/concept/Fisher Linear Discriminant.md",
-    "02_Economy/04_经济思想史/04_经济思想史.canvas",
-    "02_Economy/03_货币银行学/03_货币银行学.canvas",
-    "02_Economy/01_Econometrics/太白金星v计量.pdf",
-    "01_Math/01_calculus/Lecture_notes/9-16.pdf",
-    "01_Math/01_calculus/Lecture_notes/1-7.pdf",
+    "01_Math/06_时间序列分析/01_介绍时间序列.md",
     "01_Math/01_calculus/Lecture_notes/26-38.pdf",
     "01_Math/01_calculus/Lecture_notes/18-25.pdf",
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-OCW-offline-site/pages/lecture-2-strings-inputoutput-branching/index.html",
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-OCW-offline-site/pages/lecture-2-strings-inputoutput-branching/data.json",
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-finger-exercises/mit6_100l_ex02_sol.pdf",
-    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-code/chapter 05/chapter5.py",
+    "01_Math/01_calculus/Lecture_notes/9-16.pdf",
+    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/index.md",
+    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Other/Introduction_to_Linear_Algebra(Strang).pdf",
+    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf",
+    "01_Math/03_game theory/第1次作业.pdf",
+    "01_Math/03_game theory/07_子博弈不完全信息.md",
+    "01_Math/03_game theory/第2次作业.pdf",
+    "01_Math/03_game theory/05_贝叶斯博弈.md",
+    "01_Math/03_game theory/06_扩展性博弈.md",
+    "01_Math/03_game theory/03_策略式博弈.md",
+    "01_Math/03_game theory/02_初步认识博弈.md",
+    "01_Math/06_时间序列分析/03_平稳时间序列模型.md",
+    "01_Math/06_时间序列分析/00_导论与概率论复习.md",
+    "CLAUDE.md",
+    "normalize_callouts.py",
+    "Overview & Study Record.md",
+    "README.md",
+    "00_factor/concept/Centipede Game.md",
+    "00_factor/concept/Credible Threat.md",
+    "00_factor/concept/Entry Deterrence.md",
+    "00_factor/procedure/Extensive Form to Strategic Form.md",
+    "00_factor/concept/Signaling Game.md",
+    "00_factor/concept/Off-path Belief.md",
+    "00_factor/procedure/Checking Perfect Bayesian Equilibrium.md",
+    "AGENTS.md",
+    "99_学习情况记录/2026-02-02——Mon.md",
+    "00_factor/concept/Coordinated Attack Game.md",
+    "00_factor/concept/Global Game.md",
+    "00_factor/concept/Belief (Game Theory).md",
+    "00_factor/concept/Type (Game Theory).md",
+    "01_Math/06_时间序列分析/lecture.pdf",
     "01_Math/07-6.042j/MIT-6-042j-pdf.pdf",
+    "02_Economy/04_经济思想史/04_经济思想史.canvas",
+    "02_Economy/03_货币银行学/03_货币银行学.canvas",
     "98_attachment/dashboards/2026-04-14-map.svg",
     "98_attachment/dashboards/2026-04-13-map.svg",
     "98_attachment/dashboards/2026-04-12-map.svg",
