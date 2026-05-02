@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Math/06_时间序列分析/01_介绍时间序列.md",
+                "file": "00_factor/concept/Adaptive Expectations Model.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_介绍时间序列"
+              "title": "Adaptive Expectations Model"
             }
           },
           {
@@ -320,12 +320,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "00_factor/concept/Adaptive Expectations Model.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Adaptive Expectations Model"
             }
           },
           {
@@ -387,8 +388,16 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "36db59183709d800",
+  "active": "bb5393f41058a9f1",
   "lastOpenFiles": [
+    "02_Economy/01_Econometrics/02_一元线性回归.md",
+    "02_Economy/08_经济预测与决策/08_经济预测与决策.canvas",
+    "02_Economy/05_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
+    "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
+    "01_Math/07-6.042j/MIT-6-042j-pdf.pdf",
+    "01_Math/04_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
+    "01_Math/06_时间序列分析/04_波动建模 Modeling Volatility.md",
+    "01_Math/06_时间序列分析/01_介绍时间序列.md",
     "00_factor/concept/Common Stochastic Trend.md",
     "00_factor/concept/KPSS Test.md",
     "00_factor/concept/Reduced Form VAR.md",
@@ -402,7 +411,6 @@
     "00_factor/framework/Forecast Evaluation.md",
     "00_factor/concept/Lag Operator.md",
     "00_factor/concept/Difference Operator.md",
-    "01_Math/06_时间序列分析/01_介绍时间序列.md",
     "01_Math/01_calculus/Lecture_notes/26-38.pdf",
     "01_Math/01_calculus/Lecture_notes/18-25.pdf",
     "01_Math/01_calculus/Lecture_notes/9-16.pdf",
@@ -417,14 +425,7 @@
     "01_Math/03_game theory/03_策略式博弈.md",
     "01_Math/03_game theory/02_初步认识博弈.md",
     "01_Math/06_时间序列分析/03_平稳时间序列模型.md",
-    "01_Math/06_时间序列分析/00_导论与概率论复习.md",
-    "CLAUDE.md",
     "normalize_callouts.py",
-    "Overview & Study Record.md",
-    "README.md",
-    "00_factor/concept/Centipede Game.md",
-    "01_Math/06_时间序列分析/lecture.pdf",
-    "01_Math/07-6.042j/MIT-6-042j-pdf.pdf",
     "02_Economy/04_经济思想史/04_经济思想史.canvas",
     "02_Economy/03_货币银行学/03_货币银行学.canvas",
     "98_attachment/dashboards/2026-04-14-map.svg",
@@ -443,7 +444,6 @@
     "01_Math/05_随机过程/05_随机过程.canvas",
     "01_Math/04_多元统计分析/04_多元统计分析.canvas",
     "01_Math/02_linear algebra/02_linear algebra.canvas",
-    "01_Math/03_game theory/03_game theory.canvas",
-    "02_Economy/08_经济预测与决策/08_经济预测与决策.canvas"
+    "01_Math/03_game theory/03_game theory.canvas"
   ]
 }
