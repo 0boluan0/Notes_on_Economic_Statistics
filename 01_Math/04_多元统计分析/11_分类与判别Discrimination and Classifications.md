@@ -1,6 +1,6 @@
 # 1. 第11章：分类与判别（Discrimination and Classification）
 
->[!summary] 本章主线
+>[!note] 本章主线
 > 判别关注“不同组有什么差异”，分类关注“新观测应该分到哪一组”。本章从两总体分类规则、误分类成本、Fisher 判别和分类效果评估展开。
 
 ## 1.1. 引言
@@ -78,7 +78,7 @@ $$
 
 否则分到 $R_2$。
 
->[!warning] 误链修正
+>[!attention] 误链修正
 > 这里的 ECM 是 Expected Cost of Misclassification，不是计量经济学里的 Error Correction Model。
 
 ### 1.3.4. 特殊情况

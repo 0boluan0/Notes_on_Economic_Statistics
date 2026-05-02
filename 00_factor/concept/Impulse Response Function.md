@@ -1,66 +1,65 @@
 ---
 aliases:
-- 脉冲响应函数
-- IRF
 - Impulse Response Function
+- IRF
+- Impulse Response
+- 脉冲响应函数
+- 冲击响应函数
 tags:
-- 时间序列
-- VAR模型
 - concept
+- 时间序列
 ---
-脉冲响应函数（Impulse Response Function, IRF）用于衡量一个变量的冲击对系统中其他变量的动态影响。
+# Impulse Response Function
 
->[!note] 定义
->
-> 脉冲响应函数描述在t=0时刻对某个变量施加一个单位的冲击后，该变量以及系统中其他变量在未来各期的反应。
->
-## 在VAR模型中的应用
+## 先记一句话
 
-对于VAR(p)模型，可以将其转换为VMA(∞)形式：
+脉冲响应函数就是：**一个冲击发生后，系统中变量在未来各期如何反应的路径**。
 
-$y_t = \sum_{j=0}^{\infty} \Psi_j \varepsilon_{t-j}$
+## 它是什么
 
-其中Ψ_j是脉冲响应矩阵，表示第j期后系统对冲击的反应。
+在 VMA 表示中：
+$$
+x_t=\mu+\sum_{i=0}^{\infty}\Psi(i)\varepsilon_{t-i}.
+$$
 
-## 计算
+$\Psi(i)$ 的元素表示第 $i$ 期后某个结构冲击对某个变量的影响。
 
-1. 将VAR模型转换为伴随矩阵形式
-2. 通过迭代计算Ψ_j矩阵
-3. 绘制脉冲响应图
+## 它解决什么判断
 
-## 正交化脉冲响应
+IRF 回答：
 
-由于VAR模型中误差项可能相关，需要通过Cholesky分解进行正交化：
+- 冲击当期影响多大；
+- 影响多久衰减；
+- 影响方向是否反转；
+- 一个变量的冲击如何传导到另一个变量。
 
-$\varepsilon_t = P u_t$
+## 最小例子
 
-其中P是Cholesky分解得到的下三角矩阵，$u_t$是正交化的冲击。
+AR(1)：
+$$
+y_t=a_1y_{t-1}+\varepsilon_t.
+$$
 
-## 应用
+$t$ 期一个单位冲击对 $t+j$ 期的影响是：
+$$
+a_1^j.
+$$
 
-1. **政策分析**：评估货币政策冲击对经济变量的影响
-2. **风险分析**：评估风险因子冲击对投资组合的影响
-3. **动态乘数**：计算冲击的累积效应
+## 易混点
 
-## 解释
+- 简约 VAR 的残差不一定是结构冲击，结构 IRF 需要识别约束。
+- Cholesky IRF 对变量排序敏感。
+- IRF 描述动态响应，不等于因果结论自动成立。
 
-脉冲响应图显示：
-- 冲击的即时影响（j=0）
-- 冲击的持续影响（j>0）
-- 冲击的衰减或放大过程
-- 冲击的方向（正或负）
+## 来自课程位置
 
-相关链接: [[VAR Model|VAR]], [[Variance Decomposition|方差分解]], [[Granger Causality Test|格兰杰因果检验]]
+- [[05_多方程模型Multi-equation Time Series Models#1.2. 脉冲响应函数 IRF Impulse Response Analysis|时间序列 05：干预分析中的 IRF]]
+- [[05_多方程模型Multi-equation Time Series Models#4.4. 脉冲响应函数在VAR中的应用|时间序列 05：VAR 中的 IRF]]
 
-## 课程笔记反链
+## 关联卡片
 
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[VAR Model]]
+- [[VMA]]
+- [[Structural VAR]]
+- [[Variance Decomposition]]
+- [[Intervention Analysis]]

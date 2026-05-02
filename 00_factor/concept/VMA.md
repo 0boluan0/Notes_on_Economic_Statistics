@@ -1,66 +1,66 @@
 ---
 aliases:
-- 向量移动平均
-- Vector Moving Average
 - VMA
+- Vector Moving Average
+- Vector MA
+- 向量移动平均
+- 向量移动平均表示
 tags:
-- 时间序列
-- 多变量模型
 - concept
+- 时间序列
 ---
-VMA（Vector Moving Average，向量移动平均）是VAR向量自回归模型的可逆表示形式，将当前值表示为当前和过去冲击的函数。
+# VMA
 
-## 模型形式
+## 先记一句话
 
-$\mathbf{y}_t = \sum_{j=0}^{\infty} \mathbf{\Psi}_j \mathbf{\varepsilon}_{tj}$
+VMA 是：**把 VAR 中的当前变量写成当前和过去冲击的无限加权和**。
 
-其中：
-- $\mathbf{y}_t$：n×1维的变量向量
-- $\mathbf{\Psi}_j$：$n×n维的脉冲响应矩阵，\mathbf{\Psi}_0 = \mathbf{I}$
-- $\mathbf{\varepsilon}_t$：n×1维的误差项向量
+## 它是什么
 
-## 从VAR到VMA的转换
+稳定 VAR 可以写成：
+$$
+x_t=\mu+\sum_{i=0}^{\infty}\Phi(i)e_{t-i}.
+$$
 
-对于VAR(p)模型：
+如果进一步使用结构冲击 $\varepsilon_t$，则：
+$$
+x_t=\mu+\sum_{i=0}^{\infty}\Psi(i)\varepsilon_{t-i}.
+$$
 
-$\mathbf{y}_t = \mathbf{c} + \sum_{i=1}^{p} \mathbf{A}_i \mathbf{y}_{ti} + \mathbf{\varepsilon}_t$
+## 它解决什么判断
 
-通过迭代可以得到VMA(∞)表示：
+VMA 是做以下事情的桥梁：
 
-$\mathbf{y}_t = \mu + \sum_{j=0}^{\infty} \mathbf{\Psi}_j \mathbf{\varepsilon}_{tj}$
+- 推导 [[Impulse Response Function]]；
+- 分析冲击如何跨期传导；
+- 做 [[Variance Decomposition]]；
+- 判断 VAR 冲击影响是否衰减。
 
-## 脉冲响应矩阵
+## 最小例子
 
-脉冲响应矩阵$\mathbf{\Psi}_j$的计算：
+VAR(1)：
+$$
+x_t=A_0+A_1x_{t-1}+e_t
+$$
+在稳定时可展开为：
+$$
+x_t=\mu+e_t+A_1e_{t-1}+A_1^2e_{t-2}+\cdots.
+$$
 
-$\mathbf{\Psi}_0 = \mathbf{I}$
-$\mathbf{\Psi}_1 = \mathbf{A}_1$
-$\mathbf{\Psi}_2 = \mathbf{A}_1\mathbf{\Psi}_1 + \mathbf{A}_2$
-$\mathbf{\Psi}_j = \sum_{i=1}^{p} \mathbf{A}_i \mathbf{\Psi}_{ji}$
+## 易混点
 
-## 性质
+- VMA 通常不是新估计的模型，而是稳定 VAR 的等价表示。
+- 简约冲击 $e_t$ 和结构冲击 $\varepsilon_t$ 不同。
+- 没有稳定性时，无限展开不收敛，IRF 也难以解释为衰减路径。
 
-1. **正交化脉冲响应**：通常通过Cholesky分解使误差项正交
-2. **收敛条件**：如果VAR模型平稳，则$\mathbf{\Psi}_j \to 0$当j → ∞
-3. **冲击识别**：需要额外的结构假设识别冲击
+## 来自课程位置
 
-## 应用
+- [[05_多方程模型Multi-equation Time Series Models#4.4. 脉冲响应函数在VAR中的应用|时间序列 05：VAR 的 VMA 表示]]
 
-1. **[[Impulse Response Function|脉冲响应函数]]**：通过$\mathbf{\Psi}_j$绘制脉冲响应图
-2. **冲击分析**：分析一个冲击对系统中所有变量的动态影响
-3. **方差分解**：计算各变量冲击对预测误差方差的贡献
+## 关联卡片
 
-相关链接: [[VAR Model|VAR]], [[Impulse Response Function|脉冲响应函数]], [[Variance Decomposition|方差分解]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[VAR Model]]
+- [[Reduced Form VAR]]
+- [[Structural VAR]]
+- [[Impulse Response Function]]
+- [[Variance Decomposition]]

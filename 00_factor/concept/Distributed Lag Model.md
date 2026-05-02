@@ -1,106 +1,52 @@
 ---
 aliases:
-- 分布滞后模型
-- DLM
 - Distributed Lag Model
+- DLM
+- Distributed Lag
+- 分布滞后模型
 tags:
-- 计量经济学
-- 时间序列
-- 经济
 - concept
+- 时间序列
+- 计量经济学
 ---
-分布滞后模型（Distributed Lag Model, DLM）是包含解释变量多期滞后值的回归模型，用于描述政策或冲击的长期和累积效应。
+# Distributed Lag Model
 
-## 基本形式
+## 先记一句话
 
-$y_t = \alpha + \sum_{j=0}^{q} \beta_j x_{t-j} + \varepsilon_t$
+分布滞后模型就是：**让解释变量的影响分散在多个时期逐步体现**。
 
-其中：
-- $y_t$：被解释变量
-- $x_t$：解释变量
-- β_j：滞后j期的系数
-- q：最大滞后阶数
-- ε_t：误差项
+## 它是什么
 
-## 滞后结构
+基本形式：
+$$
+y_t=\alpha+\beta_0x_t+\beta_1x_{t-1}+\cdots+\beta_qx_{t-q}+u_t.
+$$
 
-### 1. 有限分布滞后（FDL）
+每个 $\beta_j$ 表示 $x$ 在滞后 $j$ 期对当前 $y$ 的影响。
 
-滞后阶数q有限，最常用的形式。
+## 它解决什么判断
 
-### 2. 无限分布滞后（IDL）
+- 政策或冲击是否有滞后效应。
+- 当期效应、短期效应和累计效应分别多大。
+- 输入变量是否可能是 [[Leading Indicator|领先指标]]。
 
-$y_t = \alpha + \sum_{j=0}^{\infty} \beta_j x_{t-j} + \varepsilon_t$
+## 最小例子
 
-通常假设β_j按某种规律衰减（如几何衰减）。
+货币政策对产出的影响可能不是当期完成，而是在未来若干期逐步显现。
 
-## 滞后权重
+## 易混点
 
-定义滞后权重：$w_j = \beta_j / \sum_{j=0}^{q} \beta_j$
+- 分布滞后模型不一定包含 $y_{t-1}$。一旦加入 $y$ 的滞后，就进入 [[ADL]]。
+- 滞后项太多容易多重共线，需要结合信息准则和理论约束。
+- 解释累计效应时，要把相关滞后系数相加。
 
-满足：$\sum_{j=0}^{q} w_j = 1$
+## 来自课程位置
 
-## 常见滞后模式
+- [[05_多方程模型Multi-equation Time Series Models#3.1. ADL的定义|时间序列 05：分布滞后与 ADL]]
 
-### 1. 几何分布滞后（Koyck滞后）
+## 关联卡片
 
-假设β_j = βλ^j，其中0 < λ < 1
-
-模型可表示为：
-$y_t = \alpha + \beta x_t + \lambda y_{t-1} + \varepsilon_t$
-
-### 2. 多项式分布滞后（Almon滞后）
-
-假设β_j是j的多项式函数：
-$\beta_j = a_0 + a_1 j + a_2 j^2 + ... + a_m j^m$
-
-其中m < q。
-
-## 效应分析
-
-### 短期效应（短期乘数）
-
-短期乘数 = β_0
-
-### 长期效应（长期乘数）
-
-$长期乘数 = \sum_{j=0}^{q} \beta_j$
-
-### 平均滞后
-
-$\bar{L} = \frac{\sum_{j=0}^{q} j \beta_j}{\sum_{j=0}^{q} \beta_j}$
-
-## 估计问题
-
-### 多重共线性
-
-$x_t$, x_{t-1}, ..., x_{t-q}通常高度相关，导致：
-- 参数估计不稳定
-- 标准误较大
-
-### 解决方法
-
-1. **施加约束**：如几何滞后、多项式滞后
-2. **使用工具变量**：用不相关的变量作为工具
-3. **选择滞后阶数**：使用信息准则
-
-## 应用
-
-1. **政策分析**：分析财政政策、货币政策的传导
-2. **投资行为**：分析投资对收入、利率的反应
-3. **消费函数**：分析消费对收入的动态调整
-
-相关链接: [[ADL]], [[Autocorrelation|自相关]], [[Multicollinearity|多重共线性]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[ADL]]
+- [[Transfer Function Model]]
+- [[Cross-Correlation Function]]
+- [[Leading Indicator]]

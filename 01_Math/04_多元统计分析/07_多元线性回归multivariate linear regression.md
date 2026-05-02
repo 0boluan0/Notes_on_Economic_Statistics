@@ -1,6 +1,6 @@
 # 1. 第7章：多元线性回归（Multivariate Linear Regression）
 
->[!summary] 本章主线
+>[!note] 本章主线
 > 本章把线性回归写成矩阵形式。重点不是重新学习计量经济学，而是用矩阵表达 OLS、残差、平方和分解和显著性检验。
 
 ## 1.1. 模型形式
@@ -29,7 +29,7 @@ $$
 3. $\operatorname{Var}(\boldsymbol\epsilon)=\sigma^2I_n$。
 4. $\mathbf X$ 无完全多重共线性，即 $X'X$ 可逆。
 
->[!warning] 边界
+>[!attention] 边界
 > 这里的“多元线性回归”按本课语境主要是多个解释变量、一个响应变量。英文里 multivariate regression 有时指多个响应变量，阅读时要看上下文。
 
 ## 1.3. 最小二乘估计

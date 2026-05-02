@@ -1,74 +1,60 @@
 ---
 aliases:
-- 格兰杰因果关系检验
-- 格兰杰因果检验
 - Granger Causality Test
+- Granger Causality
+- 格兰杰因果检验
+- 格兰杰因果关系检验
 tags:
+- concept
 - 时间序列
 - 计量经济学
-- concept
 ---
-格兰杰因果检验（Granger Causality Test）用于检验一个时间序列对预测另一个时间序列是否有帮助。
+# Granger Causality Test
 
->[!note] 定义
->
-> 序列$x_t$被称为$y_t$的格兰杰原因，如果包含$x_t$的滞后项可以显著改善对$y_t$的预测。
->
-## 基本思想
+## 先记一句话
 
-如果$x_t$的滞后信息能够降低$y_t$的预测误差，则称$x_t$格兰杰导致$y_t$。
+格兰杰因果检验就是：**看一个变量的过去信息是否能显著改善另一个变量的预测**。
 
-## 检验方法
+## 它是什么
 
-### 1. VAR模型方法
+若加入 $x$ 的滞后项后能更好预测 $y$，则称 $x$ Granger-cause $y$。
 
-估计受限模型（不包含$x_t$滞后）和非受限模型（包含$x_t$滞后），然后使用F检验比较两者。
+在 VAR 中，检验“$x$ 是否格兰杰导致 $y$”通常就是检验 $y_t$ 方程里 $x$ 的所有滞后系数是否同时为 0。
 
-受限模型：
-$y_t = \sum_{i=1}^{p} \alpha_i y_{t-i} + \varepsilon_t$
+## 它解决什么判断
+
+- 某变量是否提供预测信息。
+- VAR 中哪些滞后项应保留。
+- 动态系统中信息传导方向。
+
+## 最小例子
 
 非受限模型：
-$y_t = \sum_{i=1}^{p} \alpha_i y_{t-i} + \sum_{j=1}^{q} \beta_j x_{t-j} + u_t$
+$$
+y_t=\alpha+\sum_i a_iy_{t-i}+\sum_i b_ix_{t-i}+u_t.
+$$
 
-### 2. F检验统计量
+原假设：
+$$
+H_0:b_1=b_2=\cdots=b_p=0.
+$$
 
-$F = \frac{(RSS_R - RSS_U)/q}{RSS_U/(T-p-q)}$
+若拒绝，说明 $x$ 的滞后项对预测 $y$ 有增量信息。
 
-其中：
-- $RSS_R$：受限模型的残差平方和
-- $RSS_U$：非受限模型的残差平方和
-- q：$x_t$滞后阶数
-- p：$y_t$滞后阶数
+## 易混点
 
-## 判断标准
+- Granger causality 不是哲学或结构因果，只是预测因果。
+- 结果对滞后阶数、平稳性和变量集合敏感。
+- 协整系统中还要考虑误差修正项，不能只看差分滞后项。
 
-- 若F统计量显著，拒绝原假设，认为$x_t$是$y_t$的格兰杰原因
-- 反之，则认为$x_t$不是$y_t$的格兰杰原因
+## 来自课程位置
 
-## 注意事项
+- [[05_多方程模型Multi-equation Time Series Models#4.5. 格兰杰因果检验|时间序列 05：VAR 中的格兰杰因果]]
+- [[07_协整和误差修正模型#2.3. 协整与误差修正模型|时间序列 07：协整系统中的因果判断]]
 
-1. **方向性**：格兰杰因果具有方向性，$x_t$→$y_t$不一定意味着$y_t$→$x_t$
-2. **非因果关系**：格兰杰因果不同于统计相关或物理因果关系
-3. **平稳性要求**：序列需要平稳或协整
-4. **滞后阶数**：检验结果对滞后阶数选择敏感
+## 关联卡片
 
-## 应用
-
-1. **政策分析**：评估政策变量的因果影响
-2. **市场研究**：分析市场之间的信息传导
-3. **宏观分析**：研究经济变量的因果关系
-
-相关链接: [[VAR Model|VAR]], [[Impulse Response Function|脉冲响应函数]], [[Cointegration|协整]]
-
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[VAR Model]]
+- [[Error Correction Model]]
+- [[Leading Indicator]]
+- [[Forecast Evaluation]]

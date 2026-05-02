@@ -1,61 +1,49 @@
 ---
 aliases:
-- 方差分解
 - Variance Decomposition
+- Forecast Error Variance Decomposition
+- FEVD
+- 方差分解
+- 预测误差方差分解
 tags:
-- 时间序列
-- VAR模型
 - concept
+- 时间序列
 ---
-方差分解（Variance Decomposition）用于分析系统中一个变量的预测误差方差可以由各变量的冲击解释的比例。
+# Variance Decomposition
 
->[!note] 定义
->
-> 方差分解将VAR模型中每个变量的预测误差方差分解为不同变量冲击的贡献。
->
-## 计算方法
+## 先记一句话
 
-对于h步预测，变量i的预测误差方差为：
+方差分解就是：**把一个变量的预测误差方差拆成不同冲击来源的贡献比例**。
 
-$\text{Var}(y_{i,t+h} - E[y_{i,t+h}|\mathcal{F}_t]) = \sum_{j=1}^{n} \sum_{k=0}^{h-1} (\Psi_k)_{ij}^2$
+## 它是什么
 
-其中n是变量个数，Ψ_k是脉冲响应矩阵。
+在 VAR/VMA 中，预测误差来自多个结构冲击。方差分解问：
 
-## 方差分解比例
+> 未来 $h$ 期的预测误差，有多少比例来自第 1 个冲击、第 2 个冲击、……？
 
-变量j对变量i的h步预测误差方差的贡献比例为：
+## 它解决什么判断
 
-$\frac{\sum_{k=0}^{h-1} (\Psi_k)_{ij}^2}{\sum_{j=1}^{n} \sum_{k=0}^{h-1} (\Psi_k)_{ij}^2}$
+- 哪个变量的冲击对目标变量预测误差最重要。
+- 冲击贡献随预测期 $h$ 如何变化。
+- 系统中信息传导的相对强弱。
 
-## 性质
+## 最小例子
 
-1. **解释比例**：所有变量解释比例之和为100%
-2. **随h变化**：分解比例随预测步数h变化
-3. **非正交问题**：变量顺序影响分解结果（取决于Cholesky分解顺序）
+如果通胀的 12 期预测误差方差中，70% 来自自身冲击，20% 来自利率冲击，10% 来自产出冲击，那么通胀自身冲击是主要来源。
 
-## 应用
+## 易混点
 
-1. **重要性排序**：识别对某变量最重要的冲击来源
-2. **传导机制分析**：分析冲击在系统中的传导路径
-3. **政策评估**：评估政策工具的相对重要性
+- 方差分解依赖冲击识别方式。
+- Cholesky 方差分解受变量排序影响。
+- 它解释的是预测误差方差贡献，不是变量水平的平均贡献。
 
-## 局限性
+## 来自课程位置
 
-1. **正交化假设**：依赖于变量顺序，不同顺序得到不同结果
-2. **线性假设**：基于线性VAR模型
-3. **结构识别**：需要额外的约束条件进行结构识别
+- [[05_多方程模型Multi-equation Time Series Models#4.4. 脉冲响应函数在VAR中的应用|时间序列 05：VMA 与冲击分析]]
 
-相关链接: [[Impulse Response Function|脉冲响应函数]], [[VAR Model|VAR]], [[Granger Causality Test|格兰杰因果检验]]
+## 关联卡片
 
-## 课程笔记反链
-
-<!-- course-backlinks-panel -->
-```dataview
-LIST FROM ""
-WHERE (
-  contains(file.path, "01_Math/") OR
-  contains(file.path, "02_Economy/") OR
-  contains(file.path, "03_Computer_Science/")
-) AND contains(file.outlinks, this.file.link)
-SORT file.mtime DESC
-```
+- [[VAR Model]]
+- [[VMA]]
+- [[Impulse Response Function]]
+- [[Structural VAR]]

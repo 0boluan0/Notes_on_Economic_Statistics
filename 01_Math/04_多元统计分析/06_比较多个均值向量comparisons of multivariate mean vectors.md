@@ -1,6 +1,6 @@
 # 1. 第6章：比较多个均值向量（Comparisons of Multivariate Mean Vectors）
 
->[!summary] 本章主线
+>[!note] 本章主线
 > 第 5 章检验一个总体均值向量，第 6 章比较两个或多个总体均值向量。两组问题优先识别“配对”还是“独立”；多组问题进入 one-way MANOVA。
 
 ## 1.1. 回忆用
@@ -11,7 +11,7 @@
 2. 两独立样本：协方差相等时使用 pooled covariance。
 3. 多个总体：使用单因子 MANOVA，核心统计量是 Wilks Lambda。
 
->[!warning] 题型边界
+>[!attention] 题型边界
 > 若 $\Sigma_1\neq\Sigma_2$，不能直接使用 pooled covariance 两样本 $T^2$。
 
 ## 1.2. 配对样本均值向量比较
@@ -177,7 +177,7 @@ $$
 $$
 标准 pooled covariance 公式不再适用。
 
->[!warning] 常见错误
+>[!attention] 常见错误
 > 题目明确协方差矩阵不等时，不要机械套 pooled 两样本 Hotelling $T^2$。
 
 ## 1.5. 多个总体均值向量比较：单因子 MANOVA
@@ -226,7 +226,7 @@ $$
 
 若 $\Lambda^*$ 很小，表示组间差异解释了较多总变异，倾向拒绝 $H_0$。
 
->[!warning] 方向
+>[!attention] 方向
 > Wilks Lambda 越小越显著，不是越大越显著。
 
 ### 1.5.5. MANOVA 表
