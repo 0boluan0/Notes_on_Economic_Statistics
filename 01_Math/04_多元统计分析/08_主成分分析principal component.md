@@ -1,97 +1,135 @@
+# 1. 第8章：主成分分析（Principal Component Analysis）
 
-# 第8章：[[PCA|主成分分析]]（[[Principal-Agent Problem|Principal]] component）
+>[!summary] 本章主线
+> PCA 的核心是把原变量旋转成一组互不相关的新变量，并按方差大小排序。它回答的是“哪些方向保留了最多信息”。
 
-**1. [[PCA|主成分分析]]（[[PCA|PCA]]）简介**
+## 1.1. PCA 的目标
 
-• 定义与目标
-• 数据降维与信息解释
+主成分分析（PCA）主要用于：
 
-**2. 理论基础**
+1. 数据降维。
+2. 用少数线性组合解释大部分变异。
+3. 发现主要变异方向。
+4. 在变量高度相关时构造互不相关的新指标。
 
-• 总体主成分
-• 主成分的定义与性质
-• 总变异性公式
-• 标准化变量的主成分
-• 标准化方法
-• 总方差性质
+>[!note] 一句话
+> PCA 不是找最重要的原变量，而是找最重要的线性组合。
 
-**3. 样本主成分**
+## 1.2. 总体主成分（Population Principal Components）
 
-• 样本协方差矩阵计算
-• 样本主成分的性质
-• 标准化变量的样本主成分
+给定随机向量
+$$
+X=(X_1,\ldots,X_p)'
+$$
+具有均值 $\mu$ 和协方差矩阵 $\Sigma$。
 
-**4. 主成分的选择**
+令
+$$
+\Sigma e_i=\lambda_i e_i,\qquad
+\lambda_1\geq\lambda_2\geq\cdots\geq\lambda_p.
+$$
 
-• 累积方差贡献率标准
-• 碎石图法（Scree Plot）
+第 $i$ 个主成分定义为
+$$
+Y_i=e_i'X.
+$$
 
-**5. 大样本性质**
+其性质为
+$$
+E(Y_i)=e_i'\mu,
+$$
+$$
+\operatorname{Var}(Y_i)=e_i'\Sigma e_i=\lambda_i,
+$$
+$$
+\operatorname{Cov}(Y_i,Y_k)=0,\quad i\neq k.
+$$
 
-• 特征值与特征向量的分布性质
-• 特征值置信区间公式
+## 1.3. 总变异与方差解释率
 
----
+总体总变异为
+$$
+\operatorname{tr}(\Sigma)=\sum_{i=1}^p\lambda_i.
+$$
 
-# **1.[[PCA|Principal Component Analysis]] ([[PCA|PCA]])**
+第 $k$ 个主成分的方差解释率为
+$$
+\frac{\lambda_k}{\sum_{i=1}^p\lambda_i}.
+$$
 
-本节概览 [[PCA|PCA]] 的目的与应用场景（降维与解释），形式化推导见后续小节。
+前 $m$ 个主成分的累计解释率为
+$$
+\frac{\sum_{i=1}^m\lambda_i}{\sum_{i=1}^p\lambda_i}.
+$$
 
-# **2. [[Population Growth and Economic Development|Population]] [[Principal-Agent Problem|Principal]] Components**
+>[!example] 课后题提示
+> 课后题出现过 $\rho_{Y_iZ_j}=w_{ij}\sqrt{\lambda_i}$ 这一类主成分和标准化变量之间相关性的表达。复习时把它理解为“载荷/相关性由特征向量元素和特征值共同决定”。
 
-## 2.1做法
+## 1.4. 标准化变量的主成分
 
-• 给定 $X = \begin{pmatrix}X_1  \\ X_2  \\  \vdots  \\  X_p\end{pmatrix}$，具有均值 $\mu$ 和协方差矩阵 $\Sigma$。
-• [[Eigenvalues|特征值]]：$\lambda_1 \geq \lambda_2 \geq \dots \geq \lambda_p$。
-• [[Eigenvectors|特征向量]]：$e_1, e_2, \dots, e_p$。
-• 主成分定义为：
-$$ Y_i = e_i’X = \sum_{j=1}^p e_{ij}X_j, \quad i = 1, 2, \dots, p $$
+如果变量量纲差异大，使用协方差矩阵会让高方差变量主导 PCA。
 
-按特征值从大到小排序；第一个主成分对应的特征向量为 $e_1$，$Y_1=e_1'X$，以此类推。
+此时可先标准化：
+$$
+Z_j=\frac{X_j-\mu_j}{\sqrt{\sigma_{jj}}},
+$$
+再对相关矩阵 $\rho$ 做特征值分解。
 
-• 相关性质：
+标准化变量的主成分为
+$$
+Y_i=e_i'Z.
+$$
 
-• $E(Y_i) = e_i’\mu$
-• $\text{Var}(Y_i) = e_i’\Sigma e_i = \lambda_i$（每个主成分的方差等于相应特征值）
-• $\text{Cov}(Y_i, Y_k) = 0, \quad i \neq k$（主成分两两不相关）
-• 总变异：$\text{tr}(\Sigma) = \sum_{i=1}^p \lambda_i = \sum_{i=1}^p \text{Var}(Y_i)$。 实务中通常选取前几个主成分以达到较高的累计方差解释率。
+>[!tip] 判断
+> 协方差矩阵 PCA 保留原始尺度；相关矩阵 PCA 相当于先让每个变量方差为 1。
 
-==课后题考到了$\rho_{Y_iZ_j} = w_{ij} \cdot \sqrt{\lambda_i}$,但是上课没教==
+## 1.5. 样本主成分
 
+实际计算中用样本协方差矩阵 $S$ 代替 $\Sigma$：
+$$
+S=\frac{1}{n-1}D'D.
+$$
 
-**总变异比例**
+对 $S$ 求特征值和特征向量：
+$$
+Se_i=\hat\lambda_i e_i.
+$$
 
-• 第 $k$ 个主成分的变异比例为：
-$$ \frac{\lambda_k}{\sum_{i=1}^p \lambda_i} $$
-• 通常前几个主成分能解释大部分变异。
+样本主成分得分由中心化后的样本代入 $e_i'X$ 得到。
 
-## **2.2Principal Components of Standardized Variables**
+## 1.6. 主成分数量选择
 
-基于协方差矩阵与基于相关矩阵的 [[PCA|PCA]] 结果不同；前者受量纲影响，后者在标准化后消除量纲差异。
+常用标准：
 
-• 标准化变量：$Z_j = \frac{X_j - \mu_j}{\sqrt{\sigma_{jj}}}$。
-• 标准化后的协方差矩阵为相关矩阵 $\rho$。
+1. 累计方差解释率达到目标阈值。
+2. 碎石图出现明显拐点。
+3. 保留后的主成分仍有可解释意义。
 
-• 主成分定义为：
-$$ Y_i = e_i’Z = e_i’(X - \mu) $$
+>[!warning] 不要机械化
+> “累计解释率超过 80%”只是经验规则。考试和实务中都要结合题目要求、变量含义和碎石图。
 
-## **2.3Sample [[Principal-Agent Problem|Principal]] Components**
+## 1.7. 大样本性质
 
-用样本协方差矩阵：$S = \frac{1}{n-1}(X - \bar{X})(X - \bar{X})’$。代替$\Sigma$,其余不变
+在正态等正则条件下，样本特征值具有渐近正态性质：
+$$
+\sqrt n(\hat\lambda_i-\lambda_i)
+\overset{a}{\sim}
+N(0,2\lambda_i^2).
+$$
 
-## **2.4决定主成分数量**
+近似置信区间可写作
+$$
+\hat\lambda_i\pm z_{\alpha/2}\sqrt{\frac{2\lambda_i^2}{n}}.
+$$
 
-• 使用样本协方差矩阵时，总变异比例为：
-$$ \frac{\sum_{i=1}^k \lambda_i}{\text{trace}(S)} $$
-• 使用相关矩阵时，总变异比例为：
-$$ \frac{\sum_{i=1}^k \lambda_i}{p} $$
-• **Scree Plot**（碎石图）：绘制特征值 $\lambda_i$ 与索引 $i$ 的关系图，通过观察“肘部”确定主成分数量。
+>[!note] 考试提示
+> 旧笔记标注“大样本性质不考”。复习时优先掌握 PCA 的定义、方差解释率、协方差矩阵 vs 相关矩阵。
 
-# **大样本性质**
+## 1.8. 关联卡片
 
-• 当样本量 $n$ 足够大且在正态等正则条件下，样本特征值具备渐近正态性：
-• $\sqrt{n}(\hat{\lambda}_i - \lambda_i) \overset{a}{\sim} N\!\big(0,\,2\lambda_i^2\big)$。
-• [[Eigenvalues|特征值]]/特征向量的联合性质依赖分布假设，独立性一般需额外条件。
-• $\lambda_i$ 的近似置信区间：
-$$ \hat{\lambda}_i \pm Z_{\alpha/2} \sqrt{\tfrac{2\lambda_i^2}{n}} $$
-==大样本性质不考==
+- [[PCA]]
+- [[PCA Procedure]]
+- [[Variance Explained]]
+- [[Scree Plot]]
+- [[Choosing Covariance vs Correlation Matrix]]
+- [[PCA vs Factor Analysis]]

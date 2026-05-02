@@ -1,107 +1,60 @@
 ---
 aliases:
-- 马哈拉诺比斯距离
 - Mahalanobis Distance
+- 马哈拉诺比斯距离
+- Mahalanobis 距离
 tags:
 - concept
 - multivariate statistics
 ---
-# 马哈拉诺比斯距离
+# Mahalanobis Distance
 
->[!note] 定义
->
-> 马哈拉诺比斯距离是考虑变量相关性和不同尺度后，衡量观测值与均值之间距离的度量。
->
-> 对于随机向量 $X \sim $N_p$(\mu, \Sigma)$：
->
-> $ D^2 = (X - \mu)'\Sigma^{-1}(X - \mu) $
->
-## 几何意义
+>[!note] 一句话记忆
+> Mahalanobis 距离是在协方差矩阵调整后的尺度上，衡量点到均值向量有多远。
 
-### 加权距离
-- 普通欧氏距离：$||X - \mu||^2 = (X - \mu)'(X - \mu)$
-- 马哈拉诺比斯距离：$(X - \mu)'\Sigma^{-1}(X - \mu)$
+## 它是什么
 
-协方差矩阵 $\Sigma^{-1}$ 充当了"权重矩阵"，考虑了：
-1. **变量尺度**：不同变量的方差不同
-2. **变量相关性**：变量之间的协方差关系
-
-### 椭球距离
-在多元正态分布的等概率密度曲线上：
-- 固定 $D^2 = c^2$ 得到的是一个椭圆（或椭球）
-- 椭圆形状由 $\Sigma$ 决定
-
-## 统计性质
-
-### 1. 服从卡方分布
-
-如果 $X \sim $N_p$(\mu, \Sigma)$，则：
-
-$ D^2 \sim \chi^2_p $
-
-这是马哈拉诺比斯距离最重要的性质。
-
-### 2. 标准化
-可以通过标准化将其转化为标准正态距离：
-
-$ Z = \Sigma^{-1/2}(X - \mu) $
-$ D^2 = Z'Z = ||Z||^2 $
-
-## 应用
-
-### 1. 异常值检测
-- 计算每个观测的马哈拉诺比斯距离
-- 如果 $D^2 > \chi^2_{p,\alpha}$，则认为是异常值
-
-### 2. 多元正态性检验
-- 将每个观测的 $D^2$ 按大小排序
-- 与 $\chi^2_p$ 分布的分位数比较
-- 绘制 $\chi^2$ QQ 图检验正态性
-
-### 3. 分类和判别
-- 在判别分析中用作距离度量
-- 用于确定观测属于哪个类别
-
-### 4. 置信椭球构造
-- 构造均值的置信区域
-- $椭球边界由 D^2 = \chi^2_{p,\alpha} 确定$
-
-## 与欧氏距离的比较
-
-| 特征 | 欧氏距离 | 马哈拉诺比斯距离 |
-|------|---------|-----------------|
-| 公式 | $(x-y)'(x-y)$ | $(x-y)'\Sigma^{-1}(x-y)$ |
-| 考虑尺度 | 否 | 是 |
-| 考虑相关性 | 否 | 是 |
-| 分布假设 | 无 | 假设多元正态 |
-
-## 计算示例
-
-### 二元情形
-对于 $X = (X_1, X_2)' \sim N_2(\mu, \Sigma)$：
+对随机向量 $X$、中心 $\mu$ 和协方差矩阵 $\Sigma$，
 $$
-\Sigma =
-\begin{pmatrix}
- \sigma_1^2 & \rho\sigma_1\sigma_2 \\ \rho\sigma_1\sigma_2 & \sigma_2^2 
-\end{pmatrix}
+D^2=(X-\mu)'\Sigma^{-1}(X-\mu).
 $$
 
+如果
 $$
-\Sigma^{-1} = \frac{1}{1-\rho^2}
-\begin{pmatrix}
- \frac{1}{\sigma_1^2} & -\frac{\rho}{\sigma_1\sigma_2} \\ -\frac{\rho}{\sigma_1\sigma_2} & \frac{1}{\sigma_2^2} 
-\end{pmatrix}
+X\sim N_p(\mu,\Sigma),
 $$
-
+则
 $$
-D^2 = \frac{1}{1-\rho^2}\left[\frac{(X_1-\mu_1)^2}{\sigma_1^2} + \frac{(X_2-\mu_2)^2}{\sigma_2^2} - \frac{2\rho(X_1-\mu_1)(X_2-\mu_2)}{\sigma_1\sigma_2}\right]
+D^2\sim\chi_p^2.
 $$
 
-## 相关概念
+## 解决什么判断
 
-- [[Multivariate Normal Distribution|多元正态分布]]
-- [[Wishart Distribution|Wishart 分布]]
-- [[Hotelling T2 Test|Hotelling T² 检验]]
+- 一个观测是否在多元意义上离中心太远。
+- 多元正态等密度椭球如何定义。
+- Hotelling $T^2$ 为什么是协方差调整后的均值距离。
+
+## 最小例子
+
+两个变量高度相关时，沿着相关方向偏离不一定异常；垂直于相关方向的小偏离可能更异常。Mahalanobis 距离会用 $\Sigma^{-1}$ 调整这种方向差异。
+
+## 易混点
+
+- 它不是普通欧氏距离，变量尺度和相关性都会影响结果。
+- 要计算样本版本，需要 $S^{-1}$ 存在。
+- 距离大通常提示异常，但是否异常要结合 $\chi_p^2$ 分位数或具体背景。
+
+## 来自课程位置
+
+- [[04_多元正态分布The Multivariate Normal Distribution#1.4. 二次型与相关分布|第4章 1.4 二次型与相关分布]]
+
+## 关联卡片
+
+- [[Multivariate Normal Distribution]]
+- [[Covariance Matrix]]
+- [[Chi-square Distribution]]
+- [[Hotelling T2 Test]]
+- [[Outlier Detection]]
 
 ## 课程笔记反链
 

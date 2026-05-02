@@ -1,90 +1,62 @@
 ---
 aliases:
+- Wishart Distribution
 - Wishart分布
 - Wishart 分布
-- Wishart Distribution
 tags:
 - concept
 - multivariate statistics
 ---
-# Wishart 分布
+# Wishart Distribution
 
->[!note] 定义
->
-> Wishart 分布是多元情形下的卡方分布（$\chi^2$ 分布）的推广，描述样本协方差矩阵的分布。
->
-> 如果总体是多元正态分布，那么样本的方差协方差矩阵就服从 Wishart 分布。
->
-> ### 记号
->
-> $(n-1)S \sim W_p(n-1, \Sigma)$
->
-> 其中：
-> - $(n-1)S$：样本协方差矩阵的无缩放版本
-> - $n-1$：自由度（degrees of freedom）
-> - $\Sigma$：底层正态分布的真实协方差矩阵
-> - $p$：维度
->
-## 形成原理
+>[!note] 一句话记忆
+> Wishart 分布是多元版卡方分布，用来描述正态样本协方差矩阵的随机性。
 
-如果 $Z_1, \ldots, Z_m$ 是相互独立的 $N_p(0, \Sigma)$ 随机向量：
+## 它是什么
 
-$\sum_{j=1}^m Z_j Z_j' \sim W_p(m, \Sigma)$
+若
+$$
+Z_1,\ldots,Z_m\overset{iid}{\sim}N_p(0,\Sigma),
+$$
+则
+$$
+\sum_{j=1}^m Z_jZ_j'\sim W_p(m,\Sigma).
+$$
 
-## 性质
+在多元正态样本中：
+$$
+(n-1)S\sim W_p(n-1,\Sigma).
+$$
 
-### 1. 独立性
-在从 $N_p(\mu, \Sigma)$ 抽样时：
-- 样本均值 $\bar{X}$ 与样本协方差矩阵 $S$ 相互独立
-- $\bar{X} \sim N_p(\mu, \frac{1}{n}\Sigma)$
+## 解决什么判断
 
-### 2. 可加性
-如果 $A_1 \sim W_{m_1}(\Sigma)$、$A_2 \sim W_{m_2}(\Sigma)$ 且相互独立：
+- 样本协方差矩阵在正态总体下如何分布。
+- Hotelling $T^2$ 的 F 分布关系从哪里来。
+- MANOVA 中 SSP 矩阵为什么有分布理论。
 
-$(A_1 + A_2) \sim W_{m_1 + m_2}(\Sigma)$
+## 最小例子
 
-这与一维 $\chi^2$ 分布的可加性类似。
+当 $p=1$ 时，Wishart 分布退化为卡方分布：
+$$
+(n-1)\frac{s^2}{\sigma^2}\sim\chi_{n-1}^2.
+$$
 
-### 3. 矩阵变换保持形式
-如果 $A \sim W_m(\Sigma)$ 且 $C$ 是可逆矩阵：
+## 易混点
 
-$CAC' \sim W_m(C\Sigma C')$
+- Wishart 描述的是矩阵随机变量，不是普通标量。
+- $(n-1)S$ 才是 Wishart 形式；不要漏掉缩放。
+- 样本均值和样本协方差矩阵独立是正态总体的重要性质。
 
-## 与 $\chi^2$ 分布的关系
+## 来自课程位置
 
-| 分布 | 形式 | 应用场景 |
-|------|------|---------|
-| $\chi^2$ | 一元 | 一维样本方差 |
-| Wishart | 多元 | 多维样本协方差矩阵 |
+- [[04_多元正态分布The Multivariate Normal Distribution#1.6. Wishart 分布|第4章 1.6 Wishart 分布]]
 
-- $当 p = 1 时，Wishart 分布退化为 \chi^2 分布$
-- Wishart 是多维情形下的"卡方分布矩阵版"
+## 关联卡片
 
-## 应用场景
-
-1. **构造多元检验统计量**：
-   - Hotelling $T^2$ 检验
-   - Wilks $\Lambda$ 检验
-   - 多元方差分析（MANOVA）
-
-2. **样本协方差的推断**：
-   - 协方差矩阵的置信区间
-   - 协方差相等性检验
-
-3. **贝叶斯统计**：
-   - 协方差矩阵的共轭先验
-
-## 相关概念
-
-- [[Multivariate Normal Distribution|多元正态分布]]
-- [[Hotelling T2 Test|Hotelling T² 检验]]
-- [[Chi-square Distribution|卡方分布]]
-
-## 性质总结
-
-- 如果总体服从多元正态，则 $(n-1)S$ 服从 Wishart
-- 自由度越大，分布越集中于真实协方差矩阵
-- 样本均值与样本协方差相互独立（正态总体性质）
+- [[Multivariate Normal Distribution]]
+- [[Sample Covariance Matrix]]
+- [[Hotelling T2 Test]]
+- [[MANOVA]]
 
 ## 课程笔记反链
 

@@ -1,471 +1,265 @@
+# 1. 第3章：样本几何与随机抽样（Sample Geometry and Random Sampling）
 
-# 第3章：样本几何与随机抽样（Sample Geometry and Random Sampling）
+>[!summary] 本章主线
+> 本章把样本矩阵看成几何对象：每个变量是一根中心化后的偏差向量，协方差来自偏差向量内积，相关系数来自偏差向量夹角，广义方差来自这些向量张成的面积或体积。
 
-## 1. 样本的几何结构（Geometry of Samples）
-- **数据矩阵表示（Data Matrix Representation）**
-  - 说明数据矩阵的结构与记号。
-- **均值修正向量与偏差向量（Mean-corrected Vector and Deviation Vector）**
-  - 给出定义与数学表示（Definition and Mathematical Representation）。
-- **偏差向量夹角（Angles Between Deviation Vectors）**
-  - 解释夹角余弦与相关系数的关系。
+## 1.1. 样本的几何结构
 
-## 2. 随机样本与样本矩（Random Samples and Sample Moments）
-- **样本协方差矩阵定义（Definition of the Sample Covariance Matrix）**
-  - 给出公式及组成项解释。
-- **广义方差（Generalized Variance）**
-  - 用协方差矩阵行列式刻画总体离散程度。
-  - 用协方差矩阵迹补充刻画总体变异。
+### 1.1.1. 数据矩阵表示
 
-## 3. 广义方差的几何解释（Geometric Interpretation of Generalized Variance）
-- **面积与体积（Area and Volume）**
-  - 对应低维到高维空间的几何解释。
-- **高维协方差特征（High-dimensional Covariance Characteristics）**
-  - 讨论样本量 \(n\) 小于变量维度 \(p\) 时的意义。
-
-## 4. 样本协方差矩阵的矩阵表示（Matrix Representation of Sample Covariance Matrix）
-- **矩阵表示（Matrix Representation）**
-  - 偏差矩阵在协方差计算中的作用。
-- **行列式与特征值（Determinant and Eigenvalues）**
-  - 用特征值解释 \(p\) 维空间的数据变异。
-- **秩亏缺情形（Rank-deficient Cases）**
-  - 处理协方差矩阵行列式为 0 的情形。
-
-## 5. 标准化协方差矩阵与相关矩阵（Standardized Covariance Matrix and Correlation Matrix）
-- **标准化（Standardization）**
-  - 通过标准化变量得到相关矩阵。
-- **相关矩阵表示（Correlation Matrix Representation）**
-  - 写出样本相关矩阵的数学表达。
-- **协方差矩阵与相关矩阵关系（Relationship Between Covariance and Correlation Matrices）**
-  - 使用对角缩放矩阵给出转换公式。
-
------
-
-# 1. 样本的几何结构（The Geometry of the Sample）
-
-## 1.1 数据矩阵表示（Data [[Matrix Inverse|Matrix]] Representation）
-
-数据矩阵（Data [[Matrix Inverse|Matrix]]）$X_{n \times p}$ 用于表示 $n$ 个观测样本在 $p$ 个变量上的取值，其结构为：
+数据矩阵为
 $$
-X_{n \times p} =
-\begin{pmatrix}
-x_{11} & x_{12} & \cdots & x_{1p} \\
-x_{21} & x_{22} & \cdots & x_{2p} \\
-\vdots & \vdots & \ddots & \vdots \\
-x_{n1} & x_{n2} & \cdots & x_{np}
-\end{pmatrix}
-$$
-其中每一行表示一个样本（Sample），每一列表示一个变量（Variable）。通过数据矩阵，我们可以对多变量样本进行统一表示。
-
-## 1.2 均值修正向量与偏差向量（[[Mean-Variance Portfolio Optimization|Mean]]-Corrected Vector and Deviation Vector）
-
-- 对于第 $i$ 个变量，其观测值组成向量 $y_i$，表示为：
-  $$
-  y_i =
-  \begin{pmatrix}
-  x_{1i} \\
-  x_{2i} \\
-  \vdots \\
-  x_{ni}
-  \end{pmatrix}
-  $$
-  其中，$x_{ji}$ 表示第 $j$ 个样本在第 $i$ 个变量上的取值。
-
-- 对 $i$ 变量的均值修正向量（[[Mean-Variance Portfolio Optimization|Mean]]-Corrected Vector），也称为偏差向量（Deviation Vector）$d_i$，定义为：
-  $$
-  d_i = y_i - \bar{x}_i \mathbf{1} =
-  \begin{pmatrix}
-  x_{1i} - \bar{x}_i \\
-  x_{2i} - \bar{x}_i \\
-  \vdots \\
-  x_{ni} - \bar{x}_i
-  \end{pmatrix}
-  $$
-  其中 $\bar{x}_i$ 是第 $i$ 个变量的均值，$\mathbf{1}$ 是 $n$ 维单位列向量。
-
-- 均值修正向量的作用是将数据中心化，使每个观测值相对于变量均值的偏差得以量化。
-
----
-
-## 1.3 偏差平方和（Sum of Squared Deviations）
-
-变量的总体变异性可以通过偏差平方和（Sum of Squared Deviations）来表示，其定义为：
-$$
-L^2(d_i) = \sum_{j=1}^n (x_{ji} - \bar{x}_i)^2
-$$
-这一指标反映了变量值相对于其均值的总偏离程度，数值越大，说明变量的分散程度越高。
-
----
-
-## 1.4 偏差向量夹角（Angles Between Deviation Vectors）
-
-- 偏差向量 $d_i$ 和 $d_k$ 之间的内积（Inner Product）定义为：
-  $$
-  d_i' d_k = \sum_{j=1}^n (x_{ji} - \bar{x}_i)(x_{jk} - \bar{x}_k)
-  $$
-  该内积反映了两个变量的联合偏差特性。
-
-- 偏差向量之间的夹角（Angle Between Vectors）$\theta_{ik}$ 的余弦值（Cosine Value）表示为：
-  $$
-  \cos(\theta_{ik}) = \frac{d_i' d_k}{L(d_i) L(d_k)} = \frac{s_{ik}}{\sqrt{s_{ii}s_{kk}}} = r_{ik}
-  $$
-  其中：
-  - $s_{ik}$ 是样本协方差（Sample Covariance）。
-  - $s_{ii}$ 和 $s_{kk}$ 分别是 $d_i$ 和 $d_k$ 的样本方差（Sample [[Variance Decomposition|Variance]]）。
-  - $r_{ik}$ 是样本相关系数（Sample [[Correlation Coefficient|Correlation Coefficient]]）。
-
-- 这一结果的几何意义是：相关系数是偏差向量夹角余弦值的标准化形式。当 $r_{ik}=1$ 时，两个变量完全正相关；当 $r_{ik}=-1$ 时，完全负相关；当 $r_{ik}=0$ 时，变量无关。
-
----
-
-# 2. 随机样本与样本均值/协方差矩阵的期望（[[Random Effects Model|Random]] Sample and the Expected Values of the Sample [[Mean-Variance Portfolio Optimization|Mean]] and Covariance [[Matrix Inverse|Matrix]]）
-
-随机样本与样本均值和协方差矩阵的期望值
-
-## 2.1 样本协方差矩阵（Sample Covariance [[Matrix Inverse|Matrix]]）
-
-样本协方差矩阵（Sample Covariance [[Matrix Inverse|Matrix]]）用于衡量变量之间的线性关系，其定义为：
-$$
-S = ((s_{ik})),
-$$
-其中协方差 $s_{ik}$ 的计算公式为：
-$$
-s_{ik} = \frac{1}{n - 1} \sum_{j=1}^n (x_{ji} - \bar{x}_i)(x_{jk} - \bar{x}_k) = \frac{1}{n - 1} d_i' d_k,
-$$
-其中：
-- $n$ 是样本数量。
-- $\bar{x}_i$ 和 $\bar{x}_k$ 分别是变量 $i$ 和变量 $k$ 的样本均值。
-- $d_i$ 和 $d_k$ 是均值修正向量（[[Mean-Variance Portfolio Optimization|Mean]]-Corrected Vectors）。
-
-样本协方差矩阵 $S$ 包含 $p$ 个变量的样本方差（对角线元素）和 ${p}^{2} = \frac{p(p - 1)}{2}$ 个不同的样本协方差（非对角线元素）。
-
-==该做法较为繁琐，建议参考下文的替代推导与结论==
-
-$$
-S = \frac{1}{n-1} D^T D.
+X_{n\times p}=
+\begin{bmatrix}
+x_{11}&x_{12}&\cdots&x_{1p}\\
+x_{21}&x_{22}&\cdots&x_{2p}\\
+\vdots&\vdots&\ddots&\vdots\\
+x_{n1}&x_{n2}&\cdots&x_{np}
+\end{bmatrix}.
 $$
 
-D是Deviation [[Matrix Inverse|Matrix]](偏差矩阵)
+每一行是一个样本，每一列是一个变量。
 
----
+### 1.1.2. 均值修正向量与偏差向量
 
-## 2.2 广义方差（Generalized [[Variance Decomposition|Variance]]）
-
-为了用一个数值总结协方差矩阵所表达的变异性，可以使用以下两种方法：
-
-### 2.2.1 $S$ 的行列式（[[Determinant|Determinant]] of $S$）
-
-样本协方差矩阵 $S$ 的行列式被称为**推广样本方差**（Generalized Sample [[Variance Decomposition|Variance]]）：
+第 $i$ 个变量的观测向量为
 $$
-|S| = \text{det}(S).
-$$
-- 几何意义：当 $p=2$ 时，$|S|$ 是协方差矩阵所表示的椭圆面积的平方；当 $p>2$ 时，$|S|$ 是高维超体积的平方。
-
-### 2.2.2 $S$ 的迹（Trace of $S$）
-
-另一种方法是使用协方差矩阵的迹（Trace），即对角线元素之和，表示总样本方差（Total Sample [[Variance Decomposition|Variance]]）：
-$$
-\text{Trace}(S) = s_{11} + s_{22} + \cdots + s_{pp}.
-$$
-- 这一值等于每个变量样本方差的总和。
-
----
-
-## 2.3 广义方差的性质（Properties of Generalized [[Variance Decomposition|Variance]]）
-
-- **高维情况**：当样本数量 $n$ 小于或等于变量数量 $p$ 时，$|S| = 0$。此时协方差矩阵的秩不足，称为高维退化（High-Dimensional Degeneracy）。
-- **变量选择的影响**：当 $|S|=0$ 时，说明至少一个变量的偏差向量是其他变量偏差向量的线性组合。此时需要移除部分变量以确保矩阵为满秩。
-
----
-
-## 2.4 广义方差的几何解释（Geometric Interpretation of Generalized [[Variance Decomposition|Variance]]）
-
-- **面积与体积**：对于二维（$p=2$）情形，推广方差与椭圆面积的平方成正比：
-  $$
-  \text{Area} = (n-1) \sqrt{s_{11}s_{22}(1 - r_{12}^2)}=(n-1)|S|^{\frac{1}{2}}.
-  $$
-  $$
-  |S| = (\text{Area})^2 \cdot (n - 1)^{-2}.
-  $$
-
-- 对于高维情形（$p>2$），推广方差与高维空间中偏差向量生成的体积（Volume）的平方成正比：
-  $$
-  |S| = (\text{Volume})^2 \cdot (n - 1)^{-p}.
-  $$
-
----
-
-# 3. 广义方差的几何解释（Geometric Interpretation of Generalized [[Variance Decomposition|Variance]]）
-
-推广方差（Generalized [[Variance Decomposition|Variance]]）通过几何视角揭示了样本协方差矩阵中变异性的分布特性，特别是在二维和高维空间中。[[Determinant|行列式]]（[[Determinant|Determinant]]）和矩阵迹（Trace）的几何意义分别对应面积、体积和总体变异性的量化。
-
----
-
-## 3.1 二维广义方差：椭圆面积（Generalized [[Variance Decomposition|Variance]] in 2D: Elliptical Area in Two Dimensions）
-
-### 椭圆面积（二维情形）
-
-当变量数 $p = 2$ 时，样本协方差矩阵 $S$ 的行列式 $|S|$ 表示的几何意义为变量生成的椭圆面积平方：
-$$
-\text{Area}^2 = |S| \cdot (n - 1)^{2},
-$$
-其中：
-- $s_{11}$ 和 $s_{22}$ 是两个变量的样本方差，分别对应椭圆的长轴和短轴方向上的伸展程度。
-- $r_{12}$ 是变量间的相关系数，反映了椭圆的倾斜角度和变量的线性相关性。
-
-椭圆面积可表示为：
-$$
-\text{Area} = (n-1)\sqrt{s_{11}s_{22}(1 - r_{12}^2)}.
+y_i=
+\begin{bmatrix}
+x_{1i}\\x_{2i}\\\vdots\\x_{ni}
+\end{bmatrix}.
 $$
 
-### 几何解释：
-
-1. **正交变量**：当 $r_{12} = 0$ 时，两个变量独立，椭圆为对称圆，面积最大。
-2. **完全线性相关**：当 $|r_{12}| = 1$ 时，两个变量共线，椭圆退化为直线，面积为零。
-
->[!example] 示例
-> 假设两个变量的协方差矩阵为：
-> $$
-> S =
-> \begin{pmatrix}
-> 4 & 2 \\
-> 2 & 3
-> \end{pmatrix}.
-> $$
-> 行列式计算为：
-> $$
-> |S| = s_{11}s_{22}(1 - r_{12}^2) = 4 \cdot 3 - 2^2 = 8.
-> $$
-> 椭圆面积为：
-> $$
-> \text{Area} = \sqrt{|S|} = \sqrt{8}.
-> $$
-
----
-
-## 3.2 高维广义方差：超体积（Generalized [[Variance Decomposition|Variance]] in Higher Dimensions: Hypervolume）
-
-### 超体积（高维情形）
-
-当 $p > 2$ 时，推广方差描述的是偏差向量 $d_1, d_2, \dots, d_p$ 在 $p$ 维空间中生成的高维超体积（Hypervolume）。超体积的平方与样本协方差矩阵的行列式相关：
+其偏差向量为
 $$
-|S| = (\text{Volume})^2 \cdot (n-1)^{-p}.
+d_i=y_i-\bar x_i\mathbf1
+=
+\begin{bmatrix}
+x_{1i}-\bar x_i\\
+x_{2i}-\bar x_i\\
+\vdots\\
+x_{ni}-\bar x_i
+\end{bmatrix}.
 $$
 
-### 几何特性：
+>[!note] 几何读法
+> 一个变量不是只被看成一列数字，而是被看成 $n$ 维空间中的一根偏差向量。
 
-1. **变量的独立性**：当所有变量完全独立（偏差向量两两正交）时，超体积达到最大值，[[Determinant|行列式]] $|S|$ 也取最大值。
-2. **变量的相关性**：当部分变量之间高度相关或完全相关时，偏差向量共线或共面，导致高维体积减小，甚至为零。
-3. **退化情况**：当样本数 $n \leq p$ 时，协方差矩阵的秩不足，高维体积退化为零（$|S| = 0$）。
+### 1.1.3. 偏差平方和
 
->[!example] 示例
-> 假设三变量的协方差矩阵为：
-> $$
-> S =
-> \begin{pmatrix}
-> 4 & 1 & 2 \\
-> 1 & 3 & 1 \\
-> 2 & 1 & 5
-> \end{pmatrix}.
-> $$
-> 行列式为：
-> $$
-> |S| = 4(3 \cdot 5 - 1 \cdot 1) - 1(1 \cdot 5 - 2 \cdot 1) + 2(1 \cdot 1 - 3 \cdot 2) = 60 - 5 - 10 = 45.
-> $$
-> 高维体积平方为：
-> $$
-> \text{Volume}^2 = |S| \cdot (n-1)^{-3}.
-> $$
-
----
-
-## 3.3 用迹衡量总体变异：替代指标（Trace as Total Variability: An Alternative Measure）
-
-矩阵迹（Trace）是另一种量化协方差矩阵总变异性的方法，其定义为对角线元素之和：
+变量 $i$ 的偏差平方和为
 $$
-\text{Trace}(S) = s_{11} + s_{22} + \cdots + s_{pp}.
+L^2(d_i)=d_i'd_i=\sum_{j=1}^n(x_{ji}-\bar x_i)^2.
 $$
-- 几何意义：Trace 反映了所有变量在各自方向上方差的总和。
-- 特点：与行列式相比，Trace 不考虑变量之间的相关性。
 
-**对比**：
-1. [[Determinant|行列式]]（$|S|$）强调变量的交互关系，通过面积或体积体现相关性。
-2. 矩阵迹（Trace）仅反映各变量单独的变异性，不受变量相关性影响。
+这就是该变量围绕均值的总偏离程度。
 
----
+### 1.1.4. 偏差向量夹角与相关系数
 
-## 3.4 特殊情形与实务考虑（Special Cases and Practical Considerations）
-### 特殊情形：
-
-1. **行列式为零（$|S| = 0$）**：
-   - 表示至少有一个变量是其他变量的线性组合。
-   - 在这种情况下，需移除冗余变量使矩阵恢复为满秩。
-2. **变量标准化**：
-   - 为避免变量量纲的影响，可使用相关矩阵代替协方差矩阵。
-   - 相关矩阵的行列式可提供标准化后的推广方差。
-
----
-# 4. 样本协方差矩阵的矩阵表示（[[Matrix Inverse|Matrix]] Representation of the Sample Covariance [[Matrix Inverse|Matrix]]）
-
-样本协方差矩阵的矩阵表示
-
-样本协方差矩阵不仅可以用基本公式定义，还可以通过矩阵形式统一表示，从而揭示其在统计计算与几何解释中的核心作用。
-
----
-
-## 4.1 矩阵表示（[[Matrix Inverse|Matrix]] Representation）
-
-### 偏差矩阵（Deviation [[Matrix Inverse|Matrix]]）的定义
-
-假设数据矩阵 $X_{n \times p}$ 表示 $n$ 个样本在 $p$ 个变量上的观测值，其均值矩阵 $X̄$ 表示为：
+两个变量 $i,k$ 的偏差向量内积为
 $$
-X̄ = \frac{1}{n} \mathbf{1}_{n \times 1} \cdot \mathbf{1}_{1 \times p} X,
+d_i'd_k=\sum_{j=1}^n(x_{ji}-\bar x_i)(x_{jk}-\bar x_k).
 $$
-其中 $\mathbf{1}_{n \times 1}$ 是 $n$ 维列向量，$\mathbf{1}_{1 \times p}$ 是 $p$ 维行向量。
 
-偏差矩阵（Deviation [[Matrix Inverse|Matrix]]）定义为：
+夹角余弦为
 $$
-D = X - \mathbf{1}_{n \times 1} X̄.
+\cos(\theta_{ik})
+=\frac{d_i'd_k}{L(d_i)L(d_k)}
+=\frac{s_{ik}}{\sqrt{s_{ii}s_{kk}}}
+=r_{ik}.
 $$
-矩阵 $D$ 的每一列是一个变量的均值修正向量（[[Mean-Variance Portfolio Optimization|Mean]]-Corrected Vector），用于计算变量的偏差。
 
-### 样本协方差矩阵的矩阵形式
+>[!tip] 关键结论
+> 样本相关系数就是两个中心化变量向量夹角的余弦。
 
-样本协方差矩阵 $S$ 的计算公式可以用偏差矩阵表示为：
+## 1.2. 随机样本与样本矩
+
+### 1.2.1. 样本协方差矩阵
+
+样本协方差矩阵 $S=((s_{ik}))$ 的元素为
 $$
-S = \frac{1}{n-1} D^T D,
+s_{ik}
+=\frac{1}{n-1}\sum_{j=1}^n(x_{ji}-\bar x_i)(x_{jk}-\bar x_k)
+=\frac{1}{n-1}d_i'd_k.
 $$
-其中：
-- $D^T$ 是偏差矩阵的转置，表示变量之间的偏差向量。
-- $D^T D$ 是偏差向量之间的内积矩阵。
 
-这一表示形式显示了协方差矩阵是变量偏差的二次型（Quadratic Form），反映了变量之间的线性相关性。
-
----
-
-## 4.2 行列式与特征值（[[Determinant|Determinant]] and [[Eigenvalues|Eigenvalues]]）
-### 协方差矩阵行列式的几何意义
-
-样本协方差矩阵的行列式（[[Determinant|Determinant]]）$|S|$ 反映了数据在 $p$ 维空间中生成的高维超体积的平方：
+令偏差矩阵
 $$
-|S| = \prod_{i=1}^p \lambda_i,
+D=
+\begin{bmatrix}
+|&|&&|\\
+d_1&d_2&\cdots&d_p\\
+|&|&&|
+\end{bmatrix},
 $$
-其中 $\lambda_1, \lambda_2, \dots, \lambda_p$ 是协方差矩阵的特征值（[[Eigenvalues|Eigenvalues]]）。
-
-### 特征值与数据变异性的关系
-
-- 每个特征值 $\lambda_i$ 表示数据在对应特征向量方向上的变异性。
-- 特征值的总和等于协方差矩阵的迹（Trace）：
-  $$
-  \text{Trace}(S) = \sum_{i=1}^p \lambda_i.
-  $$
-- 特征值的积等于行列式 $|S|$：
-  $$
-  |S| = \prod_{i=1}^p \lambda_i.
-  $$
-
-### 几何直观
-
-- 如果一个特征值为零，说明数据在该方向上没有变异性，变量间存在完全的线性相关。
-- 特征值的大小反映了不同方向上的变异性分布。例如，在主成分分析（[[PCA|PCA]]）中，特征值越大，对应的主成分方向越重要。
-
----
-
-## 4.3 秩亏缺情形（Rank-Deficient Cases）
-### 秩不足（Rank Deficiency）的定义
-
-协方差矩阵的秩（Rank）表示变量间独立方向的个数。当矩阵秩不足（Rank-Deficient）时，[[Determinant|行列式]] $|S| = 0$。这通常发生在以下情况：
-1. **样本数小于变量数（$n < p$）**：
-   - 当样本数不足以覆盖变量维度时，协方差矩阵无法生成满秩矩阵。
-   - 高维数据中常见这种情况（称为 "curse of dimensionality"）。
-2. **变量间完全线性相关**：
-   - 存在变量可以表示为其他变量的线性组合。
-
-### 处理秩不足的方法
-
-1. **移除冗余变量**：
-   - 如果变量间存在完全线性相关性，可以通过主成分分析（[[PCA|PCA]]）或变量选择方法移除冗余变量。
-2. **正则化协方差矩阵**：
-   - 在高维情况下，可以对协方差矩阵进行正则化（Regularization），例如加上小的正对角元素：
-     $$
-     S_{\text{reg}} = S + \epsilon I,
-     $$
-     其中 $\epsilon$ 是正则化参数，$I$ 是单位矩阵。
-3. **使用相关矩阵（[[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]]）替代**：
-   - 标准化变量后使用相关矩阵代替协方差矩阵，避免变量量纲差异的影响。
-
----
-
-## 5. 标准化协方差矩阵与相关矩阵（Standardized Covariance [[Matrix Inverse|Matrix]] and [[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]]）
-
-协方差矩阵描述了变量间的线性关系，但其数值受到变量量纲的影响。通过标准化，可以消除量纲差异，使变量间的关系更清晰。
-
----
-
-## 5.1 标准化（Standardization）
-### 标准化的定义
-
-为了消除变量的量纲影响，可以对变量进行标准化（Standardization），即将每个变量的均值调整为 $0$，标准差调整为 $1$。对于变量 $X_j$，其标准化形式为：
+则
 $$
-Z_j = \frac{X_j - \bar{X}_j}{\sqrt{s_{jj}}},
+S=\frac{1}{n-1}D'D.
 $$
-其中：
-- $\bar{X}_j$ 是变量 $X_j$ 的均值。
-- $s_{jj}$ 是变量 $X_j$ 的样本方差。
 
-标准化后得到的变量称为标准变量（Standardized Variables），其均值为 $0$，方差为 $1$。
+>[!warning] 易错点
+> $D$ 是中心化后的 deviation matrix。协方差矩阵不是直接由未中心化的 $X'X$ 得到。
 
-### 标准化后协方差矩阵的变化
+### 1.2.2. 样本均值向量的期望
 
-通过对数据矩阵 $X$ 标准化，生成的协方差矩阵成为相关矩阵（[[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]]），其值范围固定为 $[-1, 1]$。
-
----
-
-## 5.2 相关矩阵表示（[[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]] Representation）
-### 相关矩阵的定义
-
-相关矩阵（[[Correlation Coefficient|Correlation]] [[Matrix Inverse|Matrix]]）$R$ 是标准化后的协方差矩阵，表示变量之间的线性关系。其公式为：
+若 $X_1,\ldots,X_n$ 是来自总体均值 $\mu$ 的随机样本，则
 $$
-R = \frac{1}{n-1} Z^T Z,
+E(\bar X)=\mu.
 $$
-其中 $Z$ 是标准化后的数据矩阵。
 
-相关矩阵的元素 $r_{ij}$ 为变量 $X_i$ 和 $X_j$ 的样本相关系数，计算公式为：
+### 1.2.3. 样本协方差矩阵的期望
+
+在常规随机抽样条件下，
 $$
-r_{ij} = \frac{s_{ij}}{\sqrt{s_{ii} s_{jj}}},
+E(S)=\Sigma.
 $$
-其中：
-- $s_{ij}$ 是 $X_i$ 和 $X_j$ 的协方差。
-- $s_{ii}, s_{jj}$ 分别是 $X_i$ 和 $X_j$ 的方差。
 
-### 相关矩阵的性质
+这解释了为什么分母用 $n-1$。
 
-1. **对角线元素**：相关矩阵的对角线元素为 $1$，即 $r_{ii} = 1$，因为每个变量与自身完全相关。
-2. **对称性**：相关矩阵是对称矩阵，即 $r_{ij} = r_{ji}$。
-3. **取值范围**：[[Correlation Coefficient|相关系数]] $r_{ij}$ 的取值范围为 $[-1, 1]$。
+## 1.3. 广义方差
 
----
+### 1.3.1. 行列式作为广义方差
 
-## 5.3 协方差矩阵与相关矩阵的关系（Relationship Between Covariance and [[Correlation Coefficient|Correlation]] Matrices）
+样本广义方差定义为
+$$
+|S|.
+$$
 
-### 转换公式
+它把多维变异压缩成一个数。
 
-协方差矩阵 $S$ 和相关矩阵 $R$ 通过对角标准差矩阵 $D^{1/2}$ 相互转换：
-1. 从协方差矩阵 $S$ 得到相关矩阵 $R$：
-   $$
-   R = D^{-1/2} S D^{-1/2},
-   $$
-   其中 $D^{1/2}$ 是协方差矩阵对角线上方差的平方根矩阵：
-   $$
-   D^{1/2} =
-   \begin{pmatrix}
-   \sqrt{s_{11}} & 0 & \cdots & 0 \\
-   0 & \sqrt{s_{22}} & \cdots & 0 \\
-   \vdots & \vdots & \ddots & \vdots \\
-   0 & 0 & \cdots & \sqrt{s_{pp}}
-   \end{pmatrix}.
-   $$
+二维情形：
+$$
+|S|=s_{11}s_{22}-s_{12}^2
+=s_{11}s_{22}(1-r_{12}^2).
+$$
 
-2. 从相关矩阵 $R$ 得到协方差矩阵 $S$：
-   $$
-   S = D^{1/2} R D^{1/2}.
-   $$
+当 $|r_{12}|=1$ 时，$|S|=0$，说明两个变量完全线性相关，二维面积退化为 0。
+
+### 1.3.2. 迹作为总变异
+
+另一种汇总变异的方式是迹：
+$$
+\operatorname{tr}(S)=s_{11}+s_{22}+\cdots+s_{pp}.
+$$
+
+它只加总各变量自己的方差，不惩罚变量之间的相关性。
+
+>[!note] 对比
+> $|S|$ 看联合体积，受相关性影响；$\operatorname{tr}(S)$ 看总方差，不直接看变量之间是否重叠。
+
+## 1.4. 广义方差的几何解释
+
+### 1.4.1. 二维面积
+
+当 $p=2$ 时，两个偏差向量张成平行四边形。面积为
+$$
+\operatorname{Area}
+=(n-1)\sqrt{s_{11}s_{22}(1-r_{12}^2)}
+=(n-1)|S|^{1/2}.
+$$
+
+若两个变量正交，面积较大；若两个变量完全相关，面积为 0。
+
+### 1.4.2. 高维超体积
+
+当 $p>2$ 时，$d_1,\ldots,d_p$ 张成高维体积。
+
+有
+$$
+|S|=(\operatorname{Volume})^2(n-1)^{-p}.
+$$
+
+### 1.4.3. 秩亏缺情形
+
+若 $n\leq p$，或某个变量是其他变量的线性组合，则 $S$ 可能秩亏：
+$$
+|S|=0.
+$$
+
+此时很多需要 $S^{-1}$ 的方法会失效。
+
+可选处理：
+
+1. 删除冗余变量。
+2. 先做 PCA 降维。
+3. 使用正则化协方差矩阵。
+4. 在尺度问题明显时改用相关矩阵。
+
+## 1.5. 样本协方差矩阵的矩阵表示
+
+### 1.5.1. 中心化矩阵
+
+令
+$$
+H=I-\frac1n\mathbf1\mathbf1'.
+$$
+
+中心化后的数据矩阵可写作
+$$
+D=HX.
+$$
+
+所以
+$$
+S=\frac{1}{n-1}X'HX
+=\frac{1}{n-1}D'D.
+$$
+
+### 1.5.2. 行列式与特征值
+
+若 $S$ 的特征值为 $\lambda_1,\ldots,\lambda_p$，则
+$$
+|S|=\prod_{i=1}^p\lambda_i,
+\qquad
+\operatorname{tr}(S)=\sum_{i=1}^p\lambda_i.
+$$
+
+在 PCA 中，$\lambda_i$ 表示第 $i$ 个主成分方向上的样本方差。
+
+## 1.6. 标准化协方差矩阵与相关矩阵
+
+### 1.6.1. 标准化
+
+变量 $X_j$ 的标准化形式为
+$$
+Z_j=\frac{X_j-\bar X_j}{\sqrt{s_{jj}}}.
+$$
+
+标准化后均值为 0，方差为 1。
+
+### 1.6.2. 样本相关矩阵
+
+若 $Z$ 是标准化后的数据矩阵，则
+$$
+R=\frac{1}{n-1}Z'Z.
+$$
+
+元素为
+$$
+r_{ij}=\frac{s_{ij}}{\sqrt{s_{ii}s_{jj}}}.
+$$
+
+### 1.6.3. 协方差矩阵与相关矩阵转换
+
+令
+$$
+D_s^{1/2}=\operatorname{diag}(\sqrt{s_{11}},\ldots,\sqrt{s_{pp}}).
+$$
+
+则
+$$
+R=D_s^{-1/2}SD_s^{-1/2},
+$$
+$$
+S=D_s^{1/2}RD_s^{1/2}.
+$$
+
+## 1.7. 关联卡片
+
+- [[Sample Mean Vector]]
+- [[Sample Covariance Matrix]]
+- [[Generalized Variance]]
+- [[Correlation Matrix]]
+- [[Choosing Covariance vs Correlation Matrix]]
+- [[PCA]]
+- [[Matrix Rank]]

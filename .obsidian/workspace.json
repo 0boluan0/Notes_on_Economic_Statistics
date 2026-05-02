@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02_Economy/01_Econometrics/零散知识点.md",
+                "file": "04_Fragments/AutoResearch Clearly Explained (and how to use it) - 2026-03-28.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "零散知识点"
+              "title": "AutoResearch Clearly Explained (and how to use it) - 2026-03-28"
             }
           },
           {
@@ -123,8 +123,7 @@
               "title": "Search"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -262,7 +261,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: zsh"
+              "title": "Terminal: Academic"
             }
           },
           {
@@ -321,13 +320,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Economy/01_Econometrics/零散知识点.md",
+                "file": "04_Fragments/AutoResearch Clearly Explained (and how to use it) - 2026-03-28.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 零散知识点"
+              "title": "Outline of AutoResearch Clearly Explained (and how to use it) - 2026-03-28"
             }
           },
           {
@@ -389,35 +388,37 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "68e022ef2943b75b",
+  "active": "bb5393f41058a9f1",
   "lastOpenFiles": [
-    "00_factor/concept/Cobb-Douglas Production Function.md",
-    "00_factor/procedure/LSDV Estimation.md",
-    "00_factor/system/Hansen J Test.md",
-    "00_factor/system/Durbin h Test.md",
-    "00_factor/system/Jarque-Bera Test.md",
-    "00_factor/system/Davidson-MacKinnon J Test.md",
-    "00_factor/system/Ramsey RESET Test.md",
-    "00_factor/system/Chow Test.md",
-    "00_factor/concept/Environmental Kuznets Curve.md",
-    "00_factor/concept/Dynamic Panel Data Model.md",
-    "00_factor/concept/Partial Adjustment Model.md",
-    "00_factor/concept/Adaptive Expectations Model.md",
-    "00_factor/concept/Generalized Least Squares.md",
-    "00_factor/concept/Lagrange Multiplier Test.md",
-    "00_factor/concept/Wald Test.md",
-    "00_factor/concept/Measurement Error.md",
-    "00_factor/concept/Omitted Variable Bias.md",
-    "00_factor/concept/Confidence Interval.md",
-    "00_factor/concept/P-value.md",
-    "00_factor/concept/Multiple Linear Regression.md",
-    "00_factor/concept/Simple Linear Regression.md",
-    "00_factor/concept/Marginal Propensity to Consume.md",
+    "00_factor/proof/Hotelling T2 F Distribution Proof.md",
+    "00_factor/system/Multivariate Analysis Diagnostics.md",
+    "00_factor/framework/Clustering Method Selection.md",
+    "00_factor/framework/Classification Rule Selection.md",
+    "00_factor/framework/PCA vs Factor Analysis.md",
+    "00_factor/framework/Choosing Covariance vs Correlation Matrix.md",
+    "00_factor/framework/Multivariate Mean Inference Map.md",
+    "00_factor/procedure/Multivariate Normality Check.md",
+    "00_factor/procedure/Hierarchical Clustering Procedure.md",
+    "00_factor/procedure/K-means Algorithm.md",
+    "00_factor/procedure/Fisher Discriminant Procedure.md",
+    "00_factor/procedure/Factor Analysis PC Method.md",
+    "00_factor/procedure/PCA Procedure.md",
+    "00_factor/procedure/One-way MANOVA Procedure.md",
+    "00_factor/procedure/Two-Sample Hotelling T2 Test.md",
+    "00_factor/procedure/Paired Mean Vector Comparison.md",
+    "00_factor/procedure/Hotelling T2 Test Procedure.md",
+    "00_factor/concept/Multivariate Linear Regression.md",
+    "00_factor/concept/Linkage Criterion.md",
+    "00_factor/concept/K-means Clustering.md",
+    "00_factor/concept/Hierarchical Clustering.md",
+    "00_factor/concept/Jackknife Classification.md",
+    "00_factor/concept/Actual Error Rate.md",
+    "00_factor/concept/Total Probability of Misclassification.md",
+    "00_factor/concept/Expected Cost of Misclassification.md",
+    "00_factor/concept/Fisher Linear Discriminant.md",
+    "02_Economy/04_经济思想史/04_经济思想史.canvas",
+    "02_Economy/03_货币银行学/03_货币银行学.canvas",
     "02_Economy/01_Econometrics/太白金星v计量.pdf",
-    "02_Economy/01_Econometrics/13_面板数据模型.md",
-    "02_Economy/01_Econometrics/12_非平稳时间序列.md",
-    "02_Economy/01_Econometrics/10_虚拟变量.md",
-    "02_Economy/01_Econometrics/09_联立方程模型(内生性).md",
     "01_Math/01_calculus/Lecture_notes/9-16.pdf",
     "01_Math/01_calculus/Lecture_notes/1-7.pdf",
     "01_Math/01_calculus/Lecture_notes/26-38.pdf",
@@ -444,8 +445,6 @@
     "01_Math/04_多元统计分析/04_多元统计分析.canvas",
     "01_Math/02_linear algebra/02_linear algebra.canvas",
     "01_Math/03_game theory/03_game theory.canvas",
-    "02_Economy/08_经济预测与决策/08_经济预测与决策.canvas",
-    "02_Economy/02_public finance财政学/02_public finance财政学.canvas",
-    "02_Economy/10_发展经济学/10_发展经济学.canvas"
+    "02_Economy/08_经济预测与决策/08_经济预测与决策.canvas"
   ]
 }

@@ -1,112 +1,91 @@
 ---
 aliases:
-- 多元正态分布
-- MVN
 - Multivariate Normal Distribution
+- MVN
+- 多元正态分布
 tags:
 - concept
 - multivariate statistics
 ---
-# 多元正态分布
+# Multivariate Normal Distribution
 
->[!note] 定义
->
-> 多元正态分布是单变量正态分布的高维扩展，描述 p 维随机向量的联合分布。
->
-> $ X \sim N_p(\mu, \Sigma) $
->
-> 其中：
-> - $\mu$：p × 1 均值向量（Mean Vector）
-> - $\Sigma$：p × p 协方差矩阵（Covariance Matrix），必须是正定矩阵
->
-## 概率密度函数
+>[!note] 一句话记忆
+> 多元正态分布用均值向量和协方差矩阵描述多个连续变量的联合正态结构。
 
-$ f(X) = \frac{1}{(2\pi)^{p/2} |\Sigma|^{1/2}} e^{-\frac{1}{2} (X-\mu)'\Sigma^{-1}(X-\mu)} $
+## 它是什么
 
-### 关键组成部分
-
-1. **常数项**：$(2\pi)^{p/2} |\Sigma|^{1/2}$，确保积分为 1
-2. **指数项**：$(X-\mu)'\Sigma^{-1}(X-\mu)$，马哈拉诺比斯距离的平方
-
-## 二元正态分布特例（p = 2）
-
+若 $X$ 是 $p$ 维随机向量，
 $$
-f(X_1, X_2) = \frac{1}{2\pi|\Sigma|^{1/2}} \exp\left(-\frac{1}{2}
-\begin{pmatrix}
-X_1 - \mu_1 \\
-X_2 - \mu_2
-\end{pmatrix}' \Sigma^{-1}
-\begin{pmatrix}
-X_1 - \mu_1 \\
-X_2 - \mu_2
-\end{pmatrix}
-\right)
+X\sim N_p(\mu,\Sigma),
+$$
+则密度为
+$$
+f(x)=
+\frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}
+\exp\left[-\frac12(x-\mu)'\Sigma^{-1}(x-\mu)\right].
 $$
 
-协方差矩阵：
+其中：
+
+- $\mu$ 是 [[Mean Vector]]；
+- $\Sigma$ 是 [[Covariance Matrix]]；
+- $(x-\mu)'\Sigma^{-1}(x-\mu)$ 是平方 [[Mahalanobis Distance]]。
+
+## 解决什么判断
+
+- 多个连续变量是否可用联合正态近似。
+- 线性组合、仿射变换和条件分布是否仍然正态。
+- Hotelling $T^2$、Wishart 分布和多元正态性检查的理论来源是什么。
+
+## 最小例子
+
+二维情形：
 $$
-\Sigma =
-\begin{pmatrix}
- \sigma_1^2 & \rho\sigma_1\sigma_2 \\ \rho\sigma_1\sigma_2 & \sigma_2^2 
-\end{pmatrix}
+\begin{bmatrix}X\\Y\end{bmatrix}
+\sim N_2\left(
+\begin{bmatrix}\mu_X\\\mu_Y\end{bmatrix},
+\begin{bmatrix}
+\sigma_X^2&\rho\sigma_X\sigma_Y\\
+\rho\sigma_X\sigma_Y&\sigma_Y^2
+\end{bmatrix}
+\right).
 $$
 
 ## 核心性质
 
-### 1. 线性组合
-如果 $X \sim N_p(\mu, \Sigma)$ 且 a 是 p × 1 向量：
-$ a'X \sim N(a'\mu, a'\Sigma a) $
+1. 线性组合：
+   $$
+   a'X\sim N(a'\mu,a'\Sigma a).
+   $$
+2. 仿射变换：
+   $$
+   AX+b\sim N(A\mu+b,A\Sigma A').
+   $$
+3. 二次型：
+   $$
+   (X-\mu)'\Sigma^{-1}(X-\mu)\sim\chi_p^2.
+   $$
+4. 零协方差与独立：
+   在多元正态下，零协方差等价于独立。
 
-**反向推导**：如果对于任意向量 a，$a'X \sim N(a'\mu, a'\Sigma a)$ 都成立，则 $X \sim N_p(\mu, \Sigma)$。
+## 易混点
 
-### 2. 仿射变换
-如果 A 是 q × p 矩阵：
-$ AX \sim N_q(A\mu, A\Sigma A') $
+- 每个边际变量正态，不保证联合分布是多元正态。
+- 密度公式要求 $\Sigma$ 正定。
+- 多元正态的等密度曲线是椭圆或椭球，不是普通圆，除非协方差矩阵是标量倍的单位矩阵。
 
-### 3. 平移
-如果 d 是 p × 1 常数向量：
-$ X + d \sim N_p(\mu + d, \Sigma) $
+## 来自课程位置
 
-### 4. 条件分布（不考）
-设
-$$
-X =
-\begin{pmatrix}
-X_1 \\
-X_2
-\end{pmatrix}
-$$
-则：
-$$
-X_1 \mid X_2 = x_2 \sim N(\mu_1 + \Sigma_{12}\Sigma_{22}^{-1}(x_2 - \mu_2), \Sigma_{11} - \Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21})
-$$
+- [[04_多元正态分布The Multivariate Normal Distribution#1. 第4章：多元正态分布（The Multivariate Normal Distribution）|第4章 多元正态分布]]
 
-## 独立性
+## 关联卡片
 
-在多元正态分布中：
-- **零协方差 ⇔ 独立**
-- $\Sigma_{12} = 0$ 当且仅当 $X_1$ 与 $X_2$ 独立
-
-## 等概率密度曲线
-
-满足 $(X - \mu)'\Sigma^{-1}(X - \mu) = c^2$ 的点构成的椭圆（或椭球）：
-
-- **中心**：位于均值向量 $\mu$
-- **主轴方向**：对应 $\Sigma$ 的特征向量
-- **主轴长度**：与特征值的平方根成正比
-
-## 相关概念
-
-- [[Wishart Distribution|Wishart 分布]]
-- [[Mahalanobis Distance|马哈拉诺比斯距离]]
-- [[Hotelling T2 Test|Hotelling T² 检验]]
-
-## 应用
-
-- 主成分分析（PCA）
-- 线性判别分析（LDA）
-- 多元回归分析
-- 协方差矩阵建模
+- [[Bivariate Normal Distribution]]
+- [[Conditional Multivariate Normal Distribution]]
+- [[Wishart Distribution]]
+- [[Mahalanobis Distance]]
+- [[Hotelling T2 Test]]
+- [[Multivariate Normality Check]]
 
 ## 课程笔记反链
 

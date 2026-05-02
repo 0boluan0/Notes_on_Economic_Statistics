@@ -1,61 +1,125 @@
+# 1. 第7章：多元线性回归（Multivariate Linear Regression）
 
-# 1. [[OLS Basics|OLS]]
+>[!summary] 本章主线
+> 本章把线性回归写成矩阵形式。重点不是重新学习计量经济学，而是用矩阵表达 OLS、残差、平方和分解和显著性检验。
 
-## **1.1. 模型形式**
+## 1.1. 模型形式
 
-- 经典线性回归模型的数学形式为： $$Y = \beta_0 + \beta_1x_1 + \cdots + \beta_kx_k + \epsilon$$
-    - $Y$: 响应变量
-    - $\beta_0, \beta_1, \dots, \beta_k$: 回归系数
-    - $\epsilon$: 随机误差项
-- 矩阵形式表示： $$\mathbf{Y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon}$$
-    - $\mathbf{Y}$: $n \times 1$ 响应变量向量
-    - $\mathbf{X}$: $n \times (k+1)$ 设计矩阵 (含截距项列)
-    - $\boldsymbol{\beta}$: $(k+1) \times 1$ 回归系数向量
-    - $\boldsymbol{\epsilon}$: $n \times 1$ 误差向量
+单方程多元线性回归写作
+$$
+Y=\beta_0+\beta_1x_1+\cdots+\beta_kx_k+\epsilon.
+$$
 
-## **1.2. 模型假设**
+矩阵形式为
+$$
+\mathbf Y=\mathbf X\boldsymbol\beta+\boldsymbol\epsilon.
+$$
 
-1. 线性关系：响应变量 $Y$ 和自变量 $\mathbf{X}$ 之间呈线性关系。
-2. 误差项独立同分布：
-    - $E(\boldsymbol{\epsilon}) = 0$
-    - $Var(\boldsymbol{\epsilon}) = \sigma^2\mathbf{I}_n$
-3. 自变量无完全多重共线性。
+其中：
 
-## **1.3. 最小二乘估计**
+- $\mathbf Y$ 是 $n\times1$ 响应变量向量；
+- $\mathbf X$ 是 $n\times(k+1)$ 设计矩阵，通常含截距列；
+- $\boldsymbol\beta$ 是 $(k+1)\times1$ 系数向量；
+- $\boldsymbol\epsilon$ 是 $n\times1$ 误差向量。
 
-- 回归系数的估计量： $$\hat{\boldsymbol{\beta}} = (\mathbf{X}'\mathbf{X})^{-1}\mathbf{X}'\mathbf{Y}$$
-- 估计值的性质：
-    - 无偏性：$E(\hat{\boldsymbol{\beta}}) = \boldsymbol{\beta}$
-    - 协方差矩阵：$Var(\hat{\boldsymbol{\beta}}) = \sigma^2(\mathbf{X}'\mathbf{X})^{-1}$
-- 拟合值与残差：
-    - 拟合值：$\hat{\mathbf{Y}} = \mathbf{X}\hat{\boldsymbol{\beta}}$
-    - [[Residual|残差]]：$\hat{\boldsymbol{\epsilon}} = \mathbf{Y} - \hat{\mathbf{Y}}$
+## 1.2. 模型假设
 
-## **1.4. 总平方和分解**
+1. 线性关系成立。
+2. $E(\boldsymbol\epsilon)=0$。
+3. $\operatorname{Var}(\boldsymbol\epsilon)=\sigma^2I_n$。
+4. $\mathbf X$ 无完全多重共线性，即 $X'X$ 可逆。
 
-- 总平方和 (TSS)：$TSS = \mathbf{Y}'\mathbf{Y} - n\bar{Y}^2$
-- 回归平方和 (RSS)：$RSS = \hat{\mathbf{Y}}'\hat{\mathbf{Y}} - n\bar{Y}^2$
-- 残差平方和 (ESS)：$ESS = \hat{\boldsymbol{\epsilon}}'\hat{\boldsymbol{\epsilon}}$
-- 分解公式： TSS = RSS + ESS
+>[!warning] 边界
+> 这里的“多元线性回归”按本课语境主要是多个解释变量、一个响应变量。英文里 multivariate regression 有时指多个响应变量，阅读时要看上下文。
 
-## **1.5. 决定系数 ($R^2$)**
+## 1.3. 最小二乘估计
 
->[!note] 定义
-> $$R^2 = \frac{RSS}{TSS} = 1 - \frac{ESS}{TSS}$$
->     - 衡量模型拟合优度，取值范围 $[0, 1]$。
->     - $R^2$ 越接近 $1$，模型拟合效果越好。
-## **1.6. 假设检验**
+OLS 估计量为
+$$
+\hat{\boldsymbol\beta}=(X'X)^{-1}X'Y.
+$$
 
-1. **总体显著性检验** ([[F-test|F检验]])：
-    - 检验假设：$H_0: \beta_1 = \beta_2 = \cdots = \beta_k = 0$
-    - [[F-test|F统计量]]： $$F = \frac{\frac{RSS}{k}}{\frac{ESS}{n-k-1}}$$
-    - $F \sim F_{k, n-k-1}$。
-2. **单个变量检验** ([[t Test|t检验]])：
-    - 检验假设：$H_0: \beta_j = 0$
-    - t统计量： $$t = \frac{\hat{\beta}_j}{\sqrt{\sigma^2 (\mathbf{X}'\mathbf{X})^{-1}_{jj}}}$$
-    - $t \sim t_{n-k-1}$。
+拟合值与残差为
+$$
+\hat Y=X\hat\beta,\qquad \hat\epsilon=Y-\hat Y.
+$$
 
-## **1.7. 大样本性质**
+在经典假设下：
+$$
+E(\hat\beta)=\beta,\qquad
+\operatorname{Var}(\hat\beta)=\sigma^2(X'X)^{-1}.
+$$
 
-- 在大样本下，$\hat{\boldsymbol{\beta}}$ 的分布近似为正态分布： $$\hat{\boldsymbol{\beta}} \sim N(\boldsymbol{\beta}, \sigma^2 (\mathbf{X}'\mathbf{X})^{-1})$$
+## 1.4. 平方和分解
 
+总平方和：
+$$
+TSS=Y'Y-n\bar Y^2.
+$$
+
+回归平方和：
+$$
+RSS=\hat Y'\hat Y-n\bar Y^2.
+$$
+
+残差平方和：
+$$
+ESS=\hat\epsilon'\hat\epsilon.
+$$
+
+分解为
+$$
+TSS=RSS+ESS.
+$$
+
+## 1.5. 决定系数
+
+$$
+R^2=\frac{RSS}{TSS}=1-\frac{ESS}{TSS}.
+$$
+
+>[!note] 解读
+> $R^2$ 衡量样本内拟合比例，取值在 $[0,1]$。它不是因果强度，也不能单独证明模型正确。
+
+## 1.6. 假设检验
+
+### 1.6.1. 总体显著性 F 检验
+
+检验
+$$
+H_0:\beta_1=\cdots=\beta_k=0.
+$$
+
+统计量为
+$$
+F=\frac{RSS/k}{ESS/(n-k-1)}
+\sim F_{k,n-k-1}.
+$$
+
+### 1.6.2. 单个变量 t 检验
+
+检验
+$$
+H_0:\beta_j=0.
+$$
+
+统计量为
+$$
+t=\frac{\hat\beta_j}{\sqrt{\hat\sigma^2[(X'X)^{-1}]_{jj}}}.
+$$
+
+## 1.7. 大样本性质
+
+在常规条件下，
+$$
+\hat\beta\approx N\left(\beta,\sigma^2(X'X)^{-1}\right).
+$$
+
+## 1.8. 关联卡片
+
+- [[Multivariate Linear Regression]]
+- [[OLS Basics]]
+- [[OLS Estimator]]
+- [[Residual]]
+- [[F-test]]
+- [[t Test]]
