@@ -261,7 +261,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: Academic"
+              "title": "Terminal: zsh"
             }
           },
           {
@@ -388,7 +388,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "bb5393f41058a9f1",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
     "02_Economy/01_Econometrics/02_一元线性回归.md",
     "02_Economy/08_经济预测与决策/08_经济预测与决策.canvas",
