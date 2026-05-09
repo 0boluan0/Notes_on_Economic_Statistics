@@ -5,6 +5,10 @@
       "path": "01_Math/06_时间序列分析/Time Series Course Atlas.canvas"
     },
     {
+      "basename": "IID",
+      "path": "00_factor/concept/IID.md"
+    },
+    {
       "basename": "01_Ax = b and the Four Subspaces",
       "path": "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "AutoResearch Clearly Explained (and how to use it) - 2026-03-28",
       "path": "04_Fragments/AutoResearch Clearly Explained (and how to use it) - 2026-03-28.md"
-    },
-    {
-      "basename": "03_价值评估基准",
-      "path": "02_Economy/05_财务管理/03_价值评估基准.md"
     }
   ],
   "omittedPaths": [],
