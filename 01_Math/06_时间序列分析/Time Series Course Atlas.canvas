@@ -1,94 +1,850 @@
 {
-	"nodes":[
-		{"id":"grp-nonstationary","type":"group","x":2320,"y":-520,"width":1080,"height":1080,"color":"1","label":"7 Nonstationary layer: unit roots, trends, and cointegration"},
-		{"id":"grp-exam-route","type":"group","x":-1240,"y":1140,"width":2180,"height":520,"color":"3","label":"Exam route and decision checkpoints"},
-		{"id":"grp-baseline","type":"group","x":-160,"y":-520,"width":1120,"height":760,"color":"4","label":"3 Baseline single-series model: ARMA"},
-		{"id":"grp-volatility","type":"group","x":1100,"y":-520,"width":1080,"height":760,"color":"2","label":"5 Volatility layer: model the conditional variance"},
-		{"id":"grp-diagnostics","type":"group","x":-160,"y":340,"width":1120,"height":700,"color":"3","label":"4 Identification, diagnosis, and forecasting"},
-		{"id":"grp-multivariate","type":"group","x":1100,"y":340,"width":1080,"height":700,"color":"5","label":"6 Multivariate dynamics: transmission and systems"},
-		{"id":"grp-foundation","type":"group","x":-1240,"y":-520,"width":940,"height":760,"color":"5","label":"1 Foundation: probability language and stationarity"},
-		{"id":"grp-dynamic-grammar","type":"group","x":-1240,"y":340,"width":940,"height":620,"color":"6","label":"2 Dynamic grammar: operators and difference equations"},
-		{"id":"title","type":"text","text":"# Time Series Course Atlas\n\nHeptabase-style prototype for [[Time Series Analysis-hub|时间序列分析 Hub]].\n\n远看：整门课的地形。近看：每张卡片的角色、入口和相邻关系。","x":-1240,"y":-860,"width":720,"height":220,"color":"4"},
-		{"id":"foundation-probability","type":"text","text":"## Probability review\n\n入口：[[00_导论与概率论复习]]\n\n作用：给全课提供随机过程语言。\n\n关键词：条件期望、收敛、LLN、CLT、无偏性、一致性。","x":-1190,"y":-450,"width":260,"height":220,"color":"5"},
-		{"id":"foundation-asymptotics","type":"text","text":"## Asymptotic tools\n\n卡片：[[Law of Large Numbers]] · [[Central Limit Theorem]]\n\n作用：解释估计量为什么可以收敛、检验统计量为什么有极限分布。\n\n在考试里经常藏在推断步骤背后。","x":-1190,"y":-170,"width":260,"height":220,"color":"5"},
-		{"id":"foundation-course-four-parts","type":"text","text":"## Four-part course map\n\n[[00_导论与概率论复习]] 里已经给出整门课四块：\n\n1. [[ARMA]]：平稳单变量均值模型\n2. [[ARCH]] / [[GARCH]]：条件方差模型\n3. [[VAR Model]]：多变量动态系统\n4. Nonstationary time series：单位根、趋势、协整\n\n这张图就是把这四块摊成空间地图。","x":-890,"y":-170,"width":550,"height":220,"color":"5"},
-		{"id":"baseline-arma","type":"text","text":"## ARMA core\n\n入口：[[03_平稳时间序列模型]]\n\n卡片：[[ARMA]] · [[Autoregressive Model]] · [[Moving Average Model]]\n\n角色：平稳单变量序列的基准模型。\n\n它回答：当前值如何由过去值和过去冲击解释？","x":-110,"y":-450,"width":300,"height":260,"color":"4"},
-		{"id":"baseline-stationary-condition","type":"text","text":"## Stationarity / invertibility\n\n核心判断：AR 特征根在单位圆外，MA 部分可逆。\n\n作用：保证模型不是随机游走或爆炸过程，ACF/PACF 才有稳定含义。\n\n上游来自：差分方程与特征根。","x":240,"y":-450,"width":300,"height":260,"color":"4"},
-		{"id":"baseline-arima","type":"text","text":"## ARIMA as fallback\n\n卡片：[[ARIMA]] · [[First Difference]]\n\n角色：当原序列有单位根但差分后可建模时，用差分把问题拉回 ARMA。\n\n它连接了平稳模型区和非平稳区。","x":65,"y":-120,"width":300,"height":220,"color":"4"},
-		{"id":"baseline-box-jenkins","type":"text","text":"## Box-Jenkins loop\n\n卡片：[[Box-Jenkins Method]] · [[ARMA Model Identification Steps]]\n\n循环：识别候选模型 -> 估计 -> 诊断残差 -> 预测。\n\n这不是一个知识点，而是一条操作流程。","x":430,"y":-120,"width":360,"height":220,"color":"4"},
-		{"id":"legend","type":"text","text":"## How to read this canvas\n\n- **Blue / purple**: 前置语言和动态系统语法\n- **Green**: ARMA 作为单变量平稳模型主干\n- **Yellow**: 识别、诊断、预测这条操作线\n- **Orange**: ARMA 残差方差仍有结构时，进入 ARCH/GARCH\n- **Red**: 平稳性失败后，进入单位根、协整、ECM\n\n卡片里的链接都指向原课程笔记或 Factase 卡片。","x":-440,"y":-860,"width":820,"height":220,"color":"5"},
-		{"id":"course-spine","type":"text","text":"## Course spine\n\n这门课不是章节堆叠，而是一个建模决策树：\n\n1. 先判断序列能否作为平稳过程处理。\n2. 平稳单变量先用 ARMA 建均值模型。\n3. 残差均值干净但方差有结构，进入 ARCH/GARCH。\n4. 多个变量共同运动，进入 ADL / VAR / IRF。\n5. 非平稳但有长期关系，进入 Cointegration / ECM。","x":480,"y":-860,"width":780,"height":220,"color":"4"},
-		{"id":"foundation-iid-mds-wn","type":"text","text":"## IID / MDS / White noise\n\n卡片：[[IID]] · [[Martingale Difference Sequence]] · [[White Noise]]\n\n作用：区分“不可预测”“不相关”“独立”。\n\n后面所有残差诊断都在问：误差是否还留下可利用结构？","x":-890,"y":-450,"width":260,"height":220,"color":"5"},
-		{"id":"foundation-stationarity","type":"text","text":"## Stationarity\n\n卡片：[[Stationarity]] · [[Strict-Sense Stationary Process]] · [[Wide-Sense Stationary Process]]\n\n作用：决定是否能直接用 ACF/PACF 和 ARMA。\n\n这是进入全课模型区的门槛。","x":-590,"y":-450,"width":250,"height":220,"color":"5"},
-		{"id":"grammar-lag-diff","type":"text","text":"## Lag and difference operators\n\n入口：[[02_差分方程Difference Equation]]\n\n卡片：[[Lag Operator]] · [[Difference Operator]] · [[First Difference]]\n\n作用：把动态关系写成可操作的多项式语言。","x":-1190,"y":410,"width":260,"height":220,"color":"6"},
-		{"id":"grammar-difference-equation","type":"text","text":"## Difference equation\n\n卡片：[[Difference Equation]]\n\n作用：理解一个系统为什么会收敛、单位根、爆炸。\n\n它是 ARMA 平稳性判断的数学底座。","x":-890,"y":410,"width":260,"height":220,"color":"6"},
-		{"id":"grammar-ar1-stability","type":"text","text":"## AR(1) stability\n\n卡片：[[AR(1) stationarity]] · [[Random Walk]]\n\n角色：最低维的动态直觉。\n\n如果 AR(1) 都看不出收敛、单位根、爆炸，后面的 ARMA 根条件会变成死记硬背。","x":-560,"y":410,"width":220,"height":220,"color":"6"},
-		{"id":"grammar-characteristic-root","type":"text","text":"## Characteristic-root thinking\n\n从差分方程到 ARMA 的桥：\n\n- 差分方程：看特征根判断动态路径\n- ARMA：看算子多项式根判断平稳/可逆\n\n这一块的任务是建立“根的位置决定系统行为”的直觉。","x":-1040,"y":690,"width":420,"height":210,"color":"6"},
-		{"id":"baseline-acf-pacf","type":"text","text":"## ACF / PACF\n\n卡片：[[Autocorrelation Function]] · [[Partial Autocorrelation Function]]\n\n角色：从样本图形猜模型阶数。\n\nAR 看 PACF 截尾，MA 看 ACF 截尾，ARMA 通常两者拖尾。","x":590,"y":-450,"width":300,"height":260,"color":"4"},
-		{"id":"diagnostics-identification","type":"text","text":"## Identification\n\n从图形和准则提出候选模型：\n\n- ACF / PACF 看结构\n- [[AIC]] / [[BIC]] 平衡拟合和复杂度\n- 不要只凭一个指标决定模型","x":-110,"y":410,"width":300,"height":230,"color":"3"},
-		{"id":"diagnostics-aic-bic","type":"text","text":"## AIC / BIC\n\n卡片：[[AIC]] · [[BIC]]\n\n角色：模型阶数选择工具。\n\nAIC 更愿意保留复杂模型，BIC 对参数惩罚更重。","x":240,"y":410,"width":300,"height":230,"color":"3"},
-		{"id":"diagnostics-residual","type":"text","text":"## Residual diagnosis\n\n卡片：[[White Noise Test]]\n\n问题：ARMA 拟合后，残差是否还存在可预测结构？\n\n如果残差不白，均值模型还不够；如果残差平方有结构，转向 ARCH/GARCH。","x":590,"y":410,"width":300,"height":230,"color":"3"},
-		{"id":"diagnostics-forecast","type":"text","text":"## Forecasting\n\n角色：把模型变成交付物。\n\n关键词：one-step / multi-step forecast，rolling window，expanding window。\n\n预测不是模型结束，而是模型是否有用的检验。","x":65,"y":710,"width":300,"height":230,"color":"3"},
-		{"id":"diagnostics-evaluation","type":"text","text":"## Forecast evaluation\n\n卡片：[[Forecast Evaluation]] · [[Granger-Newbold Test]] · [[Diebold-Mariano Test]]\n\n角色：比较两个预测模型谁更好。\n\n这块把“能拟合”推进到“是否真的预测更好”。","x":430,"y":710,"width":360,"height":230,"color":"3"},
-		{"id":"volatility-motivation","type":"text","text":"## Why volatility modeling?\n\n入口：[[04_波动建模 Modeling Volatility]]\n\n卡片：[[Conditional Heteroskedasticity]] · [[Volatility Clustering]]\n\n角色：均值模型可能干净，但风险/方差仍随时间变化。","x":1150,"y":-450,"width":300,"height":240,"color":"2"},
-		{"id":"volatility-arch","type":"text","text":"## ARCH\n\n卡片：[[ARCH]]\n\n角色：用过去残差平方解释当前条件方差。\n\n核心直觉：大的冲击后，下一期更可能仍然高波动。","x":1500,"y":-450,"width":280,"height":240,"color":"2"},
-		{"id":"volatility-garch","type":"text","text":"## GARCH\n\n卡片：[[GARCH]]\n\n角色：用更少参数捕捉长期波动记忆。\n\nGARCH(1,1) 是这块的实证主力。","x":1830,"y":-450,"width":300,"height":240,"color":"2"},
-		{"id":"volatility-tests","type":"text","text":"## Detect ARCH effects\n\n卡片：[[ARCH LM Test]] · [[McLeod-Li Test]]\n\n入口问题：ARMA 残差平方是否有自相关？\n\n显著时说明“均值已经建了，但方差还没建”。","x":1230,"y":-120,"width":360,"height":230,"color":"2"},
-		{"id":"volatility-extensions","type":"text","text":"## Extensions\n\n卡片：[[IGARCH]] · [[ARCH-M]] · [[TARCH]] · [[EGARCH]]\n\n角色：处理高度持久、风险收益关系和非对称冲击。\n\n考试优先级通常低于 ARCH/GARCH 主线。","x":1640,"y":-120,"width":360,"height":230,"color":"2"},
-		{"id":"multi-intervention","type":"text","text":"## Intervention / IRF\n\n入口：[[05_多方程模型Multi-equation Time Series Models]]\n\n卡片：[[Intervention Analysis]] · [[Impulse Response Function]]\n\n角色：一个政策或冲击如何沿时间传播？","x":1150,"y":410,"width":300,"height":230,"color":"5"},
-		{"id":"multi-adl","type":"text","text":"## ADL / transfer function\n\n卡片：[[ADL]] · [[Distributed Lag Model]] · [[Transfer Function Model]]\n\n角色：外生变量 z 如何通过滞后影响 y？","x":1500,"y":410,"width":280,"height":230,"color":"5"},
-		{"id":"multi-var","type":"text","text":"## VAR system\n\n卡片：[[VAR Model]] · [[Reduced Form VAR]] · [[Structural VAR]]\n\n角色：多个变量都可能互相影响时，把系统整体建模。","x":1830,"y":410,"width":300,"height":230,"color":"5"},
-		{"id":"multi-granger","type":"text","text":"## Granger causality\n\n卡片：[[Granger Causality Test]]\n\n角色：过去的 x 是否帮助预测 y？\n\n它是预测意义上的因果，不等于结构因果。","x":1230,"y":720,"width":300,"height":230,"color":"5"},
-		{"id":"multi-irf-vd","type":"text","text":"## IRF / variance decomposition\n\n卡片：[[Impulse Response Function]] · [[Variance Decomposition]]\n\n角色：VAR 估计后，解释冲击如何传播、哪个变量贡献了多少预测误差。","x":1580,"y":720,"width":380,"height":230,"color":"5"},
-		{"id":"nonstationary-trend","type":"text","text":"## Trend models\n\n入口：[[06_含趋势的模型]]\n\n角色：先区分确定性趋势和随机趋势。\n\n关键问题：去趋势够不够，还是必须差分？","x":2370,"y":-450,"width":300,"height":230,"color":"1"},
-		{"id":"nonstationary-unit-root","type":"text","text":"## Unit root tests\n\n卡片：[[Unit Root Test]] · [[Augmented Dickey-Fuller Test]] · [[Phillips-Perron Test]] · [[KPSS Test]]\n\n角色：判断平稳性失败的类型。","x":2720,"y":-450,"width":300,"height":230,"color":"1"},
-		{"id":"nonstationary-spurious","type":"text","text":"## Spurious regression\n\n卡片：[[Spurious Regression]]\n\n角色：警告你不能把两个非平稳序列直接回归后就解释 R² 和 t 值。\n\n这是非平稳区的风险提示牌。","x":3060,"y":-450,"width":280,"height":230,"color":"1"},
-		{"id":"nonstationary-cointegration","type":"text","text":"## Cointegration\n\n入口：[[07_协整和误差修正模型]]\n\n卡片：[[Cointegration]] · [[Common Stochastic Trend]]\n\n角色：多个 I(1) 变量虽然各自乱走，但某个线性组合可能稳定。","x":2370,"y":-140,"width":300,"height":240,"color":"1"},
-		{"id":"nonstationary-ecm","type":"text","text":"## ECM / VECM\n\n卡片：[[Error Correction Model]] · [[Cointegration theorem]]\n\n角色：同时表达短期波动和长期均衡纠偏。\n\n一句话：偏离长期关系后，系统怎样被拉回来？","x":2720,"y":-140,"width":300,"height":240,"color":"1"},
-		{"id":"nonstationary-eg","type":"text","text":"## Engle-Granger test\n\n卡片：[[Engle-Granger Two-Step Test]]\n\n角色：两步检验协整。\n\n先估长期关系，再检验残差是否平稳。","x":3060,"y":-140,"width":280,"height":240,"color":"1"},
-		{"id":"nonstationary-johansen","type":"text","text":"## Johansen test\n\n卡片：[[Johansen Cointegration Test]] · [[Johansen Cointegration Test Steps]]\n\n角色：系统地检验多个协整向量。\n\n关键对象：矩阵 rank、trace test、max-eigen test。","x":2550,"y":180,"width":380,"height":240,"color":"1"},
-		{"id":"exam-start","type":"text","text":"## Exam checkpoint 1\n\n拿到一条序列，先问：\n\n- 是否平稳？\n- 是否有趋势？\n- 是否需要差分？\n\n不要一上来就套 ARMA。","x":-1190,"y":1210,"width":300,"height":220,"color":"3"},
-		{"id":"exam-arma","type":"text","text":"## Exam checkpoint 2\n\n如果可以平稳处理：\n\nACF/PACF -> 候选 ARMA -> AIC/BIC -> 残差白噪声检验 -> 预测。","x":-830,"y":1210,"width":300,"height":220,"color":"4"},
-		{"id":"exam-volatility","type":"text","text":"## Exam checkpoint 3\n\n如果残差本身不相关，但残差平方相关：\n\n进入 ARCH/GARCH，而不是继续堆 ARMA 阶数。","x":-470,"y":1210,"width":300,"height":220,"color":"2"},
-		{"id":"exam-multi","type":"text","text":"## Exam checkpoint 4\n\n如果问题是多个变量之间的传导：\n\nADL / transfer function 处理外生输入；VAR 处理系统联动；IRF 解释冲击路径。","x":-110,"y":1210,"width":300,"height":220,"color":"5"},
-		{"id":"exam-nonstationary","type":"text","text":"## Exam checkpoint 5\n\n如果变量非平稳：\n\n单变量：差分后 ARIMA。\n\n多个 I(1) 变量：先问是否协整；若有协整，用 ECM / Johansen 路线。","x":250,"y":1210,"width":360,"height":220,"color":"1"}
+	"nodes": [
+		{
+			"id": "grp-nonstationary",
+			"type": "group",
+			"x": 2970,
+			"y": -634,
+			"width": 1382,
+			"height": 1318,
+			"color": "1",
+			"label": "7 Nonstationary layer: unit roots, trends, and cointegration"
+		},
+		{
+			"id": "grp-exam-route",
+			"type": "group",
+			"x": -1587,
+			"y": 1391,
+			"width": 2790,
+			"height": 634,
+			"color": "3",
+			"label": "Exam route and decision checkpoints"
+		},
+		{
+			"id": "grp-baseline",
+			"type": "group",
+			"x": -205,
+			"y": -634,
+			"width": 1434,
+			"height": 927,
+			"color": "4",
+			"label": "3 Baseline single-series model: ARMA"
+		},
+		{
+			"id": "grp-volatility",
+			"type": "group",
+			"x": 1408,
+			"y": -634,
+			"width": 1382,
+			"height": 927,
+			"color": "2",
+			"label": "5 Volatility layer: model the conditional variance"
+		},
+		{
+			"id": "grp-diagnostics",
+			"type": "group",
+			"x": -205,
+			"y": 415,
+			"width": 1434,
+			"height": 854,
+			"color": "3",
+			"label": "4 Identification, diagnosis, and forecasting"
+		},
+		{
+			"id": "grp-multivariate",
+			"type": "group",
+			"x": 1408,
+			"y": 415,
+			"width": 1382,
+			"height": 854,
+			"color": "5",
+			"label": "6 Multivariate dynamics: transmission and systems"
+		},
+		{
+			"id": "grp-foundation",
+			"type": "group",
+			"x": -1587,
+			"y": -634,
+			"width": 1203,
+			"height": 927,
+			"color": "5",
+			"label": "1 Foundation: probability language and stationarity"
+		},
+		{
+			"id": "grp-dynamic-grammar",
+			"type": "group",
+			"x": -1587,
+			"y": 415,
+			"width": 1203,
+			"height": 756,
+			"color": "6",
+			"label": "2 Dynamic grammar: operators and difference equations"
+		},
+		{
+			"id": "title",
+			"type": "text",
+			"text": "# Time Series Course Atlas\n\nHeptabase-style prototype for [[Time Series Analysis-hub|时间序列分析 Hub]].\n\n远看：整门课的地形。近看：每张卡片的角色、入口和相邻关系。",
+			"x": -1587,
+			"y": -1049,
+			"width": 720,
+			"height": 220,
+			"color": "4"
+		},
+		{
+			"id": "foundation-probability",
+			"type": "text",
+			"text": "## Probability review\n\n入口：[[00_导论与概率论复习]]\n\n作用：给全课提供随机过程语言。\n\n关键词：条件期望、收敛、LLN、CLT、无偏性、一致性。",
+			"x": -1523,
+			"y": -549,
+			"width": 260,
+			"height": 220,
+			"color": "5"
+		},
+		{
+			"id": "foundation-asymptotics",
+			"type": "text",
+			"text": "## Asymptotic tools\n\n卡片：[[Law of Large Numbers]] · [[Central Limit Theorem]]\n\n作用：解释估计量为什么可以收敛、检验统计量为什么有极限分布。\n\n在考试里经常藏在推断步骤背后。",
+			"x": -1523,
+			"y": -207,
+			"width": 260,
+			"height": 220,
+			"color": "5"
+		},
+		{
+			"id": "foundation-course-four-parts",
+			"type": "text",
+			"text": "## Four-part course map\n\n[[00_导论与概率论复习]] 里已经给出整门课四块：\n\n1. [[ARMA]]：平稳单变量均值模型\n2. [[ARCH]] / [[GARCH]]：条件方差模型\n3. [[VAR Model]]：多变量动态系统\n4. Nonstationary time series：单位根、趋势、协整\n\n这张图就是把这四块摊成空间地图。",
+			"x": -1139,
+			"y": -207,
+			"width": 550,
+			"height": 220,
+			"color": "5"
+		},
+		{
+			"id": "baseline-arma",
+			"type": "text",
+			"text": "## ARMA core\n\n入口：[[03_平稳时间序列模型]]\n\n卡片：[[ARMA]] · [[Autoregressive Model]] · [[Moving Average Model]]\n\n角色：平稳单变量序列的基准模型。\n\n它回答：当前值如何由过去值和过去冲击解释？",
+			"x": -141,
+			"y": -549,
+			"width": 300,
+			"height": 260,
+			"color": "4"
+		},
+		{
+			"id": "baseline-stationary-condition",
+			"type": "text",
+			"text": "## Stationarity / invertibility\n\n核心判断：AR 特征根在单位圆外，MA 部分可逆。\n\n作用：保证模型不是随机游走或爆炸过程，ACF/PACF 才有稳定含义。\n\n上游来自：差分方程与特征根。",
+			"x": 307,
+			"y": -549,
+			"width": 300,
+			"height": 260,
+			"color": "4"
+		},
+		{
+			"id": "baseline-arima",
+			"type": "text",
+			"text": "## ARIMA as fallback\n\n卡片：[[ARIMA]] · [[First Difference]]\n\n角色：当原序列有单位根但差分后可建模时，用差分把问题拉回 ARMA。\n\n它连接了平稳模型区和非平稳区。",
+			"x": 83,
+			"y": -146,
+			"width": 300,
+			"height": 220,
+			"color": "4"
+		},
+		{
+			"id": "baseline-box-jenkins",
+			"type": "text",
+			"text": "## Box-Jenkins loop\n\n卡片：[[Box-Jenkins Method]] · [[ARMA Model Identification Steps]]\n\n循环：识别候选模型 -> 估计 -> 诊断残差 -> 预测。\n\n这不是一个知识点，而是一条操作流程。",
+			"x": 550,
+			"y": -146,
+			"width": 360,
+			"height": 220,
+			"color": "4"
+		},
+		{
+			"id": "legend",
+			"type": "text",
+			"text": "## How to read this canvas\n\n- **Blue / purple**: 前置语言和动态系统语法\n- **Green**: ARMA 作为单变量平稳模型主干\n- **Yellow**: 识别、诊断、预测这条操作线\n- **Orange**: ARMA 残差方差仍有结构时，进入 ARCH/GARCH\n- **Red**: 平稳性失败后，进入单位根、协整、ECM\n\n卡片里的链接都指向原课程笔记或 Factase 卡片。",
+			"x": -563,
+			"y": -1049,
+			"width": 820,
+			"height": 220,
+			"color": "5"
+		},
+		{
+			"id": "course-spine",
+			"type": "text",
+			"text": "## Course spine\n\n这门课不是章节堆叠，而是一个建模决策树：\n\n1. 先判断序列能否作为平稳过程处理。\n2. 平稳单变量先用 ARMA 建均值模型。\n3. 残差均值干净但方差有结构，进入 ARCH/GARCH。\n4. 多个变量共同运动，进入 ADL / VAR / IRF。\n5. 非平稳但有长期关系，进入 Cointegration / ECM。",
+			"x": 614,
+			"y": -1049,
+			"width": 780,
+			"height": 220,
+			"color": "4"
+		},
+		{
+			"id": "foundation-iid-mds-wn",
+			"type": "text",
+			"text": "## IID / MDS / White noise\n\n卡片：[[IID]] · [[Martingale Difference Sequence]] · [[White Noise]]\n\n作用：区分“不可预测”“不相关”“独立”。\n\n后面所有残差诊断都在问：误差是否还留下可利用结构？",
+			"x": -1139,
+			"y": -549,
+			"width": 260,
+			"height": 220,
+			"color": "5"
+		},
+		{
+			"id": "foundation-stationarity",
+			"type": "text",
+			"text": "## Stationarity\n\n卡片：[[Stationarity]] · [[Strict-Sense Stationary Process]] · [[Wide-Sense Stationary Process]]\n\n作用：决定是否能直接用 ACF/PACF 和 ARMA。\n\n这是进入全课模型区的门槛。",
+			"x": -755,
+			"y": -549,
+			"width": 250,
+			"height": 220,
+			"color": "5"
+		},
+		{
+			"id": "grammar-lag-diff",
+			"type": "text",
+			"text": "## Lag and difference operators\n\n入口：[[02_差分方程Difference Equation]]\n\n卡片：[[Lag Operator]] · [[Difference Operator]] · [[First Difference]]\n\n作用：把动态关系写成可操作的多项式语言。",
+			"x": -1523,
+			"y": 500,
+			"width": 260,
+			"height": 220,
+			"color": "6"
+		},
+		{
+			"id": "grammar-difference-equation",
+			"type": "text",
+			"text": "## Difference equation\n\n卡片：[[Difference Equation]]\n\n作用：理解一个系统为什么会收敛、单位根、爆炸。\n\n它是 ARMA 平稳性判断的数学底座。",
+			"x": -1139,
+			"y": 500,
+			"width": 260,
+			"height": 220,
+			"color": "6"
+		},
+		{
+			"id": "grammar-ar1-stability",
+			"type": "text",
+			"text": "## AR(1) stability\n\n卡片：[[AR(1) stationarity]] · [[Random Walk]]\n\n角色：最低维的动态直觉。\n\n如果 AR(1) 都看不出收敛、单位根、爆炸，后面的 ARMA 根条件会变成死记硬背。",
+			"x": -717,
+			"y": 500,
+			"width": 220,
+			"height": 220,
+			"color": "6"
+		},
+		{
+			"id": "grammar-characteristic-root",
+			"type": "text",
+			"text": "## Characteristic-root thinking\n\n从差分方程到 ARMA 的桥：\n\n- 差分方程：看特征根判断动态路径\n- ARMA：看算子多项式根判断平稳/可逆\n\n这一块的任务是建立“根的位置决定系统行为”的直觉。",
+			"x": -1331,
+			"y": 842,
+			"width": 420,
+			"height": 210,
+			"color": "6"
+		},
+		{
+			"id": "baseline-acf-pacf",
+			"type": "text",
+			"text": "## ACF / PACF\n\n卡片：[[Autocorrelation Function]] · [[Partial Autocorrelation Function]]\n\n角色：从样本图形猜模型阶数。\n\nAR 看 PACF 截尾，MA 看 ACF 截尾，ARMA 通常两者拖尾。",
+			"x": 755,
+			"y": -549,
+			"width": 300,
+			"height": 260,
+			"color": "4"
+		},
+		{
+			"id": "diagnostics-identification",
+			"type": "text",
+			"text": "## Identification\n\n从图形和准则提出候选模型：\n\n- ACF / PACF 看结构\n- [[AIC]] / [[BIC]] 平衡拟合和复杂度\n- 不要只凭一个指标决定模型",
+			"x": -141,
+			"y": 500,
+			"width": 300,
+			"height": 230,
+			"color": "3"
+		},
+		{
+			"id": "diagnostics-aic-bic",
+			"type": "text",
+			"text": "## AIC / BIC\n\n卡片：[[AIC]] · [[BIC]]\n\n角色：模型阶数选择工具。\n\nAIC 更愿意保留复杂模型，BIC 对参数惩罚更重。",
+			"x": 307,
+			"y": 500,
+			"width": 300,
+			"height": 230,
+			"color": "3"
+		},
+		{
+			"id": "diagnostics-residual",
+			"type": "text",
+			"text": "## Residual diagnosis\n\n卡片：[[White Noise Test]]\n\n问题：ARMA 拟合后，残差是否还存在可预测结构？\n\n如果残差不白，均值模型还不够；如果残差平方有结构，转向 ARCH/GARCH。",
+			"x": 755,
+			"y": 500,
+			"width": 300,
+			"height": 230,
+			"color": "3"
+		},
+		{
+			"id": "diagnostics-forecast",
+			"type": "text",
+			"text": "## Forecasting\n\n角色：把模型变成交付物。\n\n关键词：one-step / multi-step forecast，rolling window，expanding window。\n\n预测不是模型结束，而是模型是否有用的检验。",
+			"x": 83,
+			"y": 866,
+			"width": 300,
+			"height": 230,
+			"color": "3"
+		},
+		{
+			"id": "diagnostics-evaluation",
+			"type": "text",
+			"text": "## Forecast evaluation\n\n卡片：[[Forecast Evaluation]] · [[Granger-Newbold Test]] · [[Diebold-Mariano Test]]\n\n角色：比较两个预测模型谁更好。\n\n这块把“能拟合”推进到“是否真的预测更好”。",
+			"x": 550,
+			"y": 866,
+			"width": 360,
+			"height": 230,
+			"color": "3"
+		},
+		{
+			"id": "volatility-motivation",
+			"type": "text",
+			"text": "## Why volatility modeling?\n\n入口：[[04_波动建模 Modeling Volatility]]\n\n卡片：[[Conditional Heteroskedasticity]] · [[Volatility Clustering]]\n\n角色：均值模型可能干净，但风险/方差仍随时间变化。",
+			"x": 1472,
+			"y": -549,
+			"width": 300,
+			"height": 240,
+			"color": "2"
+		},
+		{
+			"id": "volatility-arch",
+			"type": "text",
+			"text": "## ARCH\n\n卡片：[[ARCH]]\n\n角色：用过去残差平方解释当前条件方差。\n\n核心直觉：大的冲击后，下一期更可能仍然高波动。",
+			"x": 1920,
+			"y": -549,
+			"width": 280,
+			"height": 240,
+			"color": "2"
+		},
+		{
+			"id": "volatility-garch",
+			"type": "text",
+			"text": "## GARCH\n\n卡片：[[GARCH]]\n\n角色：用更少参数捕捉长期波动记忆。\n\nGARCH(1,1) 是这块的实证主力。",
+			"x": 2342,
+			"y": -549,
+			"width": 300,
+			"height": 240,
+			"color": "2"
+		},
+		{
+			"id": "volatility-tests",
+			"type": "text",
+			"text": "## Detect ARCH effects\n\n卡片：[[ARCH LM Test]] · [[McLeod-Li Test]]\n\n入口问题：ARMA 残差平方是否有自相关？\n\n显著时说明“均值已经建了，但方差还没建”。",
+			"x": 1574,
+			"y": -146,
+			"width": 360,
+			"height": 230,
+			"color": "2"
+		},
+		{
+			"id": "volatility-extensions",
+			"type": "text",
+			"text": "## Extensions\n\n卡片：[[IGARCH]] · [[ARCH-M]] · [[TARCH]] · [[EGARCH]]\n\n角色：处理高度持久、风险收益关系和非对称冲击。\n\n考试优先级通常低于 ARCH/GARCH 主线。",
+			"x": 2099,
+			"y": -146,
+			"width": 360,
+			"height": 230,
+			"color": "2"
+		},
+		{
+			"id": "multi-intervention",
+			"type": "text",
+			"text": "## Intervention / IRF\n\n入口：[[05_多方程模型Multi-equation Time Series Models]]\n\n卡片：[[Intervention Analysis]] · [[Impulse Response Function]]\n\n角色：一个政策或冲击如何沿时间传播？",
+			"x": 1472,
+			"y": 500,
+			"width": 300,
+			"height": 230,
+			"color": "5"
+		},
+		{
+			"id": "multi-adl",
+			"type": "text",
+			"text": "## ADL / transfer function\n\n卡片：[[ADL]] · [[Distributed Lag Model]] · [[Transfer Function Model]]\n\n角色：外生变量 z 如何通过滞后影响 y？",
+			"x": 1920,
+			"y": 500,
+			"width": 280,
+			"height": 230,
+			"color": "5"
+		},
+		{
+			"id": "multi-var",
+			"type": "text",
+			"text": "## VAR system\n\n卡片：[[VAR Model]] · [[Reduced Form VAR]] · [[Structural VAR]]\n\n角色：多个变量都可能互相影响时，把系统整体建模。",
+			"x": 2342,
+			"y": 500,
+			"width": 300,
+			"height": 230,
+			"color": "5"
+		},
+		{
+			"id": "multi-granger",
+			"type": "text",
+			"text": "## Granger causality\n\n卡片：[[Granger Causality Test]]\n\n角色：过去的 x 是否帮助预测 y？\n\n它是预测意义上的因果，不等于结构因果。",
+			"x": 1574,
+			"y": 878,
+			"width": 300,
+			"height": 230,
+			"color": "5"
+		},
+		{
+			"id": "multi-irf-vd",
+			"type": "text",
+			"text": "## IRF / variance decomposition\n\n卡片：[[Impulse Response Function]] · [[Variance Decomposition]]\n\n角色：VAR 估计后，解释冲击如何传播、哪个变量贡献了多少预测误差。",
+			"x": 2022,
+			"y": 878,
+			"width": 380,
+			"height": 230,
+			"color": "5"
+		},
+		{
+			"id": "nonstationary-trend",
+			"type": "text",
+			"text": "## Trend models\n\n入口：[[06_含趋势的模型]]\n\n角色：先区分确定性趋势和随机趋势。\n\n关键问题：去趋势够不够，还是必须差分？",
+			"x": 3034,
+			"y": -549,
+			"width": 300,
+			"height": 230,
+			"color": "1"
+		},
+		{
+			"id": "nonstationary-unit-root",
+			"type": "text",
+			"text": "## Unit root tests\n\n卡片：[[Unit Root Test]] · [[Augmented Dickey-Fuller Test]] · [[Phillips-Perron Test]] · [[KPSS Test]]\n\n角色：判断平稳性失败的类型。",
+			"x": 3482,
+			"y": -549,
+			"width": 300,
+			"height": 230,
+			"color": "1"
+		},
+		{
+			"id": "nonstationary-spurious",
+			"type": "text",
+			"text": "## Spurious regression\n\n卡片：[[Spurious Regression]]\n\n角色：警告你不能把两个非平稳序列直接回归后就解释 R² 和 t 值。\n\n这是非平稳区的风险提示牌。",
+			"x": 3917,
+			"y": -549,
+			"width": 280,
+			"height": 230,
+			"color": "1"
+		},
+		{
+			"id": "nonstationary-cointegration",
+			"type": "text",
+			"text": "## Cointegration\n\n入口：[[07_协整和误差修正模型]]\n\n卡片：[[Cointegration]] · [[Common Stochastic Trend]]\n\n角色：多个 I(1) 变量虽然各自乱走，但某个线性组合可能稳定。",
+			"x": 3034,
+			"y": -171,
+			"width": 300,
+			"height": 240,
+			"color": "1"
+		},
+		{
+			"id": "nonstationary-ecm",
+			"type": "text",
+			"text": "## ECM / VECM\n\n卡片：[[Error Correction Model]] · [[Cointegration theorem]]\n\n角色：同时表达短期波动和长期均衡纠偏。\n\n一句话：偏离长期关系后，系统怎样被拉回来？",
+			"x": 3482,
+			"y": -171,
+			"width": 300,
+			"height": 240,
+			"color": "1"
+		},
+		{
+			"id": "nonstationary-eg",
+			"type": "text",
+			"text": "## Engle-Granger test\n\n卡片：[[Engle-Granger Two-Step Test]]\n\n角色：两步检验协整。\n\n先估长期关系，再检验残差是否平稳。",
+			"x": 3917,
+			"y": -171,
+			"width": 280,
+			"height": 240,
+			"color": "1"
+		},
+		{
+			"id": "nonstationary-johansen",
+			"type": "text",
+			"text": "## Johansen test\n\n卡片：[[Johansen Cointegration Test]] · [[Johansen Cointegration Test Steps]]\n\n角色：系统地检验多个协整向量。\n\n关键对象：矩阵 rank、trace test、max-eigen test。",
+			"x": 3264,
+			"y": 220,
+			"width": 380,
+			"height": 240,
+			"color": "1"
+		},
+		{
+			"id": "exam-start",
+			"type": "text",
+			"text": "## Exam checkpoint 1\n\n拿到一条序列，先问：\n\n- 是否平稳？\n- 是否有趋势？\n- 是否需要差分？\n\n不要一上来就套 ARMA。",
+			"x": -1523,
+			"y": 1476,
+			"width": 300,
+			"height": 220,
+			"color": "3"
+		},
+		{
+			"id": "exam-arma",
+			"type": "text",
+			"text": "## Exam checkpoint 2\n\n如果可以平稳处理：\n\nACF/PACF -> 候选 ARMA -> AIC/BIC -> 残差白噪声检验 -> 预测。",
+			"x": -1062,
+			"y": 1476,
+			"width": 300,
+			"height": 220,
+			"color": "4"
+		},
+		{
+			"id": "exam-volatility",
+			"type": "text",
+			"text": "## Exam checkpoint 3\n\n如果残差本身不相关，但残差平方相关：\n\n进入 ARCH/GARCH，而不是继续堆 ARMA 阶数。",
+			"x": -602,
+			"y": 1476,
+			"width": 300,
+			"height": 220,
+			"color": "2"
+		},
+		{
+			"id": "exam-nonstationary",
+			"type": "text",
+			"text": "## Exam checkpoint 5\n\n如果变量非平稳：\n\n单变量：差分后 ARIMA。\n\n多个 I(1) 变量：先问是否协整；若有协整，用 ECM / Johansen 路线。",
+			"x": 435,
+			"y": 1476,
+			"width": 360,
+			"height": 220,
+			"color": "1"
+		},
+		{
+			"id": "exam-multi",
+			"type": "text",
+			"text": "## Exam checkpoint 4\n\n如果问题是多个变量之间的传导：\n\nADL / transfer function 处理外生输入；VAR 处理系统联动；IRF 解释冲击路径。",
+			"x": -51,
+			"y": 1476,
+			"width": 300,
+			"height": 220,
+			"color": "5"
+		}
 	],
-	"edges":[
-		{"id":"edge-prob-iid","fromNode":"foundation-probability","fromSide":"right","toNode":"foundation-iid-mds-wn","toSide":"left","color":"5","label":"defines error language"},
-		{"id":"edge-iid-stationarity","fromNode":"foundation-iid-mds-wn","fromSide":"right","toNode":"foundation-stationarity","toSide":"left","color":"5","label":"process assumptions"},
-		{"id":"edge-stationarity-arma","fromNode":"foundation-stationarity","fromSide":"right","toNode":"baseline-arma","toSide":"left","color":"4","label":"precondition"},
-		{"id":"edge-lag-diff-equation","fromNode":"grammar-lag-diff","fromSide":"right","toNode":"grammar-difference-equation","toSide":"left","color":"6","label":"notation"},
-		{"id":"edge-difference-ar1","fromNode":"grammar-difference-equation","fromSide":"right","toNode":"grammar-ar1-stability","toSide":"left","color":"6","label":"stability"},
-		{"id":"edge-root-arma","fromNode":"grammar-characteristic-root","fromSide":"right","toNode":"baseline-stationary-condition","toSide":"left","color":"6","label":"root logic"},
-		{"id":"edge-ar1-arma","fromNode":"grammar-ar1-stability","fromSide":"right","toNode":"baseline-arma","toSide":"left","color":"6","label":"lowest-dimensional case"},
-		{"id":"edge-arma-condition","fromNode":"baseline-arma","fromSide":"right","toNode":"baseline-stationary-condition","toSide":"left","color":"4","label":"must satisfy"},
-		{"id":"edge-condition-acf","fromNode":"baseline-stationary-condition","fromSide":"right","toNode":"baseline-acf-pacf","toSide":"left","color":"4","label":"makes stable patterns"},
-		{"id":"edge-acf-identification","fromNode":"baseline-acf-pacf","fromSide":"bottom","toNode":"diagnostics-identification","toSide":"top","color":"3","label":"suggests order"},
-		{"id":"edge-identification-aic","fromNode":"diagnostics-identification","fromSide":"right","toNode":"diagnostics-aic-bic","toSide":"left","color":"3","label":"compare candidates"},
-		{"id":"edge-aic-residual","fromNode":"diagnostics-aic-bic","fromSide":"right","toNode":"diagnostics-residual","toSide":"left","color":"3","label":"then diagnose"},
-		{"id":"edge-residual-forecast","fromNode":"diagnostics-residual","fromSide":"bottom","toNode":"diagnostics-forecast","toSide":"top","color":"3","label":"if residual is clean"},
-		{"id":"edge-forecast-eval","fromNode":"diagnostics-forecast","fromSide":"right","toNode":"diagnostics-evaluation","toSide":"left","color":"3","label":"test usefulness"},
-		{"id":"edge-residual-voltest","fromNode":"diagnostics-residual","fromSide":"right","toNode":"volatility-tests","toSide":"left","color":"2","label":"squared residual still structured"},
-		{"id":"edge-voltest-motivation","fromNode":"volatility-tests","fromSide":"top","toNode":"volatility-motivation","toSide":"bottom","color":"2","label":"explains why"},
-		{"id":"edge-motivation-arch","fromNode":"volatility-motivation","fromSide":"right","toNode":"volatility-arch","toSide":"left","color":"2","label":"first model"},
-		{"id":"edge-arch-garch","fromNode":"volatility-arch","fromSide":"right","toNode":"volatility-garch","toSide":"left","color":"2","label":"parsimonious extension"},
-		{"id":"edge-garch-extensions","fromNode":"volatility-garch","fromSide":"bottom","toNode":"volatility-extensions","toSide":"top","color":"2","label":"special cases"},
-		{"id":"edge-arma-intervention","fromNode":"baseline-arma","fromSide":"right","toNode":"multi-intervention","toSide":"left","color":"5","label":"add events and shocks"},
-		{"id":"edge-intervention-adl","fromNode":"multi-intervention","fromSide":"right","toNode":"multi-adl","toSide":"left","color":"5","label":"external input over lags"},
-		{"id":"edge-adl-var","fromNode":"multi-adl","fromSide":"right","toNode":"multi-var","toSide":"left","color":"5","label":"system view"},
-		{"id":"edge-var-granger","fromNode":"multi-var","fromSide":"bottom","toNode":"multi-granger","toSide":"top","color":"5","label":"predictive direction"},
-		{"id":"edge-var-irf","fromNode":"multi-var","fromSide":"bottom","toNode":"multi-irf-vd","toSide":"top","color":"5","label":"shock interpretation"},
-		{"id":"edge-stationarity-unitroot","fromNode":"foundation-stationarity","fromSide":"right","toNode":"nonstationary-unit-root","toSide":"left","color":"1","label":"if stationarity fails"},
-		{"id":"edge-trend-unitroot","fromNode":"nonstationary-trend","fromSide":"right","toNode":"nonstationary-unit-root","toSide":"left","color":"1","label":"distinguish trend type"},
-		{"id":"edge-unitroot-spurious","fromNode":"nonstationary-unit-root","fromSide":"right","toNode":"nonstationary-spurious","toSide":"left","color":"1","label":"risk"},
-		{"id":"edge-unitroot-arima","fromNode":"nonstationary-unit-root","fromSide":"bottom","toNode":"baseline-arima","toSide":"right","color":"1","label":"difference to recover ARMA"},
-		{"id":"edge-spurious-cointegration","fromNode":"nonstationary-spurious","fromSide":"bottom","toNode":"nonstationary-cointegration","toSide":"top","color":"1","label":"unless long-run relation exists"},
-		{"id":"edge-cointegration-ecm","fromNode":"nonstationary-cointegration","fromSide":"right","toNode":"nonstationary-ecm","toSide":"left","color":"1","label":"implies correction"},
-		{"id":"edge-cointegration-eg","fromNode":"nonstationary-cointegration","fromSide":"right","toNode":"nonstationary-eg","toSide":"left","color":"1","label":"two-step test"},
-		{"id":"edge-ecm-johansen","fromNode":"nonstationary-ecm","fromSide":"bottom","toNode":"nonstationary-johansen","toSide":"top","color":"1","label":"system rank test"},
-		{"id":"edge-exam-start-arma","fromNode":"exam-start","fromSide":"right","toNode":"exam-arma","toSide":"left","color":"3","label":"if stationary"},
-		{"id":"edge-exam-arma-vol","fromNode":"exam-arma","fromSide":"right","toNode":"exam-volatility","toSide":"left","color":"2","label":"if variance remains"},
-		{"id":"edge-exam-vol-multi","fromNode":"exam-volatility","fromSide":"right","toNode":"exam-multi","toSide":"left","color":"5","label":"if multiple variables"},
-		{"id":"edge-exam-multi-nonstationary","fromNode":"exam-multi","fromSide":"right","toNode":"exam-nonstationary","toSide":"left","color":"1","label":"if I(1)"}
+	"edges": [
+		{
+			"id": "edge-prob-iid",
+			"fromNode": "foundation-probability",
+			"fromSide": "right",
+			"toNode": "foundation-iid-mds-wn",
+			"toSide": "left",
+			"color": "5",
+			"label": "defines error language"
+		},
+		{
+			"id": "edge-iid-stationarity",
+			"fromNode": "foundation-iid-mds-wn",
+			"fromSide": "right",
+			"toNode": "foundation-stationarity",
+			"toSide": "left",
+			"color": "5",
+			"label": "process assumptions"
+		},
+		{
+			"id": "edge-stationarity-arma",
+			"fromNode": "foundation-stationarity",
+			"fromSide": "right",
+			"toNode": "baseline-arma",
+			"toSide": "left",
+			"color": "4",
+			"label": "precondition"
+		},
+		{
+			"id": "edge-lag-diff-equation",
+			"fromNode": "grammar-lag-diff",
+			"fromSide": "right",
+			"toNode": "grammar-difference-equation",
+			"toSide": "left",
+			"color": "6",
+			"label": "notation"
+		},
+		{
+			"id": "edge-difference-ar1",
+			"fromNode": "grammar-difference-equation",
+			"fromSide": "right",
+			"toNode": "grammar-ar1-stability",
+			"toSide": "left",
+			"color": "6",
+			"label": "stability"
+		},
+		{
+			"id": "edge-root-arma",
+			"fromNode": "grammar-characteristic-root",
+			"fromSide": "right",
+			"toNode": "baseline-stationary-condition",
+			"toSide": "left",
+			"color": "6",
+			"label": "root logic"
+		},
+		{
+			"id": "edge-ar1-arma",
+			"fromNode": "grammar-ar1-stability",
+			"fromSide": "right",
+			"toNode": "baseline-arma",
+			"toSide": "left",
+			"color": "6",
+			"label": "lowest-dimensional case"
+		},
+		{
+			"id": "edge-arma-condition",
+			"fromNode": "baseline-arma",
+			"fromSide": "right",
+			"toNode": "baseline-stationary-condition",
+			"toSide": "left",
+			"color": "4",
+			"label": "must satisfy"
+		},
+		{
+			"id": "edge-condition-acf",
+			"fromNode": "baseline-stationary-condition",
+			"fromSide": "right",
+			"toNode": "baseline-acf-pacf",
+			"toSide": "left",
+			"color": "4",
+			"label": "makes stable patterns"
+		},
+		{
+			"id": "edge-acf-identification",
+			"fromNode": "baseline-acf-pacf",
+			"fromSide": "bottom",
+			"toNode": "diagnostics-identification",
+			"toSide": "top",
+			"color": "3",
+			"label": "suggests order"
+		},
+		{
+			"id": "edge-identification-aic",
+			"fromNode": "diagnostics-identification",
+			"fromSide": "right",
+			"toNode": "diagnostics-aic-bic",
+			"toSide": "left",
+			"color": "3",
+			"label": "compare candidates"
+		},
+		{
+			"id": "edge-aic-residual",
+			"fromNode": "diagnostics-aic-bic",
+			"fromSide": "right",
+			"toNode": "diagnostics-residual",
+			"toSide": "left",
+			"color": "3",
+			"label": "then diagnose"
+		},
+		{
+			"id": "edge-residual-forecast",
+			"fromNode": "diagnostics-residual",
+			"fromSide": "bottom",
+			"toNode": "diagnostics-forecast",
+			"toSide": "top",
+			"color": "3",
+			"label": "if residual is clean"
+		},
+		{
+			"id": "edge-forecast-eval",
+			"fromNode": "diagnostics-forecast",
+			"fromSide": "right",
+			"toNode": "diagnostics-evaluation",
+			"toSide": "left",
+			"color": "3",
+			"label": "test usefulness"
+		},
+		{
+			"id": "edge-residual-voltest",
+			"fromNode": "diagnostics-residual",
+			"fromSide": "right",
+			"toNode": "volatility-tests",
+			"toSide": "left",
+			"color": "2",
+			"label": "squared residual still structured"
+		},
+		{
+			"id": "edge-voltest-motivation",
+			"fromNode": "volatility-tests",
+			"fromSide": "top",
+			"toNode": "volatility-motivation",
+			"toSide": "bottom",
+			"color": "2",
+			"label": "explains why"
+		},
+		{
+			"id": "edge-motivation-arch",
+			"fromNode": "volatility-motivation",
+			"fromSide": "right",
+			"toNode": "volatility-arch",
+			"toSide": "left",
+			"color": "2",
+			"label": "first model"
+		},
+		{
+			"id": "edge-arch-garch",
+			"fromNode": "volatility-arch",
+			"fromSide": "right",
+			"toNode": "volatility-garch",
+			"toSide": "left",
+			"color": "2",
+			"label": "parsimonious extension"
+		},
+		{
+			"id": "edge-garch-extensions",
+			"fromNode": "volatility-garch",
+			"fromSide": "bottom",
+			"toNode": "volatility-extensions",
+			"toSide": "top",
+			"color": "2",
+			"label": "special cases"
+		},
+		{
+			"id": "edge-arma-intervention",
+			"fromNode": "baseline-arma",
+			"fromSide": "right",
+			"toNode": "multi-intervention",
+			"toSide": "left",
+			"color": "5",
+			"label": "add events and shocks"
+		},
+		{
+			"id": "edge-intervention-adl",
+			"fromNode": "multi-intervention",
+			"fromSide": "right",
+			"toNode": "multi-adl",
+			"toSide": "left",
+			"color": "5",
+			"label": "external input over lags"
+		},
+		{
+			"id": "edge-adl-var",
+			"fromNode": "multi-adl",
+			"fromSide": "right",
+			"toNode": "multi-var",
+			"toSide": "left",
+			"color": "5",
+			"label": "system view"
+		},
+		{
+			"id": "edge-var-granger",
+			"fromNode": "multi-var",
+			"fromSide": "bottom",
+			"toNode": "multi-granger",
+			"toSide": "top",
+			"color": "5",
+			"label": "predictive direction"
+		},
+		{
+			"id": "edge-var-irf",
+			"fromNode": "multi-var",
+			"fromSide": "bottom",
+			"toNode": "multi-irf-vd",
+			"toSide": "top",
+			"color": "5",
+			"label": "shock interpretation"
+		},
+		{
+			"id": "edge-stationarity-unitroot",
+			"fromNode": "foundation-stationarity",
+			"fromSide": "right",
+			"toNode": "nonstationary-unit-root",
+			"toSide": "left",
+			"color": "1",
+			"label": "if stationarity fails"
+		},
+		{
+			"id": "edge-trend-unitroot",
+			"fromNode": "nonstationary-trend",
+			"fromSide": "right",
+			"toNode": "nonstationary-unit-root",
+			"toSide": "left",
+			"color": "1",
+			"label": "distinguish trend type"
+		},
+		{
+			"id": "edge-unitroot-spurious",
+			"fromNode": "nonstationary-unit-root",
+			"fromSide": "right",
+			"toNode": "nonstationary-spurious",
+			"toSide": "left",
+			"color": "1",
+			"label": "risk"
+		},
+		{
+			"id": "edge-unitroot-arima",
+			"fromNode": "nonstationary-unit-root",
+			"fromSide": "bottom",
+			"toNode": "baseline-arima",
+			"toSide": "right",
+			"color": "1",
+			"label": "difference to recover ARMA"
+		},
+		{
+			"id": "edge-spurious-cointegration",
+			"fromNode": "nonstationary-spurious",
+			"fromSide": "bottom",
+			"toNode": "nonstationary-cointegration",
+			"toSide": "top",
+			"color": "1",
+			"label": "unless long-run relation exists"
+		},
+		{
+			"id": "edge-cointegration-ecm",
+			"fromNode": "nonstationary-cointegration",
+			"fromSide": "right",
+			"toNode": "nonstationary-ecm",
+			"toSide": "left",
+			"color": "1",
+			"label": "implies correction"
+		},
+		{
+			"id": "edge-cointegration-eg",
+			"fromNode": "nonstationary-cointegration",
+			"fromSide": "right",
+			"toNode": "nonstationary-eg",
+			"toSide": "left",
+			"color": "1",
+			"label": "two-step test"
+		},
+		{
+			"id": "edge-ecm-johansen",
+			"fromNode": "nonstationary-ecm",
+			"fromSide": "bottom",
+			"toNode": "nonstationary-johansen",
+			"toSide": "top",
+			"color": "1",
+			"label": "system rank test"
+		},
+		{
+			"id": "edge-exam-start-arma",
+			"fromNode": "exam-start",
+			"fromSide": "right",
+			"toNode": "exam-arma",
+			"toSide": "left",
+			"color": "3",
+			"label": "if stationary"
+		},
+		{
+			"id": "edge-exam-arma-vol",
+			"fromNode": "exam-arma",
+			"fromSide": "right",
+			"toNode": "exam-volatility",
+			"toSide": "left",
+			"color": "2",
+			"label": "if variance remains"
+		},
+		{
+			"id": "edge-exam-vol-multi",
+			"fromNode": "exam-volatility",
+			"fromSide": "right",
+			"toNode": "exam-multi",
+			"toSide": "left",
+			"color": "5",
+			"label": "if multiple variables"
+		},
+		{
+			"id": "edge-exam-multi-nonstationary",
+			"fromNode": "exam-multi",
+			"fromSide": "right",
+			"toNode": "exam-nonstationary",
+			"toSide": "left",
+			"color": "1",
+			"label": "if I(1)"
+		}
 	]
 }
