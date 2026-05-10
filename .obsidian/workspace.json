@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d3b3f3ab92122a15",
+        "id": "17cd1da8961a124c",
         "type": "tabs",
         "children": [
           {
-            "id": "14764de06ec90304",
+            "id": "64fab0a74d140e15",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_Fragments/How I'd build a one-person business (if I started over in 2026) - 2026-03-28.md",
+                "file": "00_Home.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,49 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "How I'd build a one-person business (if I started over in 2026) - 2026-03-28"
-            }
-          },
-          {
-            "id": "bb5393f41058a9f1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02_Economy/01_Econometrics/09_联立方程模型(内生性).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "09_联立方程模型(内生性)"
-            }
-          },
-          {
-            "id": "805b2040cc4461cb",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://missing-semester-cn.github.io/2020/course-shell/",
-                "title": "课程概览与 shell · the missing semester of your cs education",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "课程概览与 shell · the missing semester of your cs education"
+              "title": "00_Home"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -261,7 +222,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: zsh"
+              "title": "Terminal: Academic"
             }
           },
           {
@@ -320,13 +281,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02_Economy/01_Econometrics/09_联立方程模型(内生性).md",
+                "file": "00_Home.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 09_联立方程模型(内生性)"
+              "title": "Outline of 00_Home"
             }
           },
           {
@@ -368,7 +329,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 821.5
+    "width": 843.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -389,26 +351,36 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "bb5393f41058a9f1",
+  "active": "64fab0a74d140e15",
   "lastOpenFiles": [
+    "AGENTS.md",
+    "98_attachment/vault-home/index.html",
+    "98_attachment/vault-home/dashboard-data.js",
+    "98_attachment/vault-home/dashboard.js",
+    "98_attachment/vault-home/dashboard.css",
+    "98_attachment/Pasted image 20240229211911.png",
+    "98_attachment/Pasted image 20240228202716.png",
+    "00_Home.md",
+    "CLAUDE.md",
+    "Overview & Study Record.md",
+    "normalize_callouts.py",
+    "02_Economy/02_public finance财政学/02_public finance财政学.canvas",
+    "01_Math/06_时间序列分析/Time Series Course Atlas.canvas",
+    "README.md",
+    "04_Fragments/How I'd build a one-person business (if I started over in 2026) - 2026-03-28.md",
+    "02_Economy/01_Econometrics/09_联立方程模型(内生性).md",
+    "98_attachment/vault-home",
     "02_Economy/01_Econometrics/10_虚拟变量.md",
     "02_Economy/01_Econometrics/零散知识点.md",
     "02_Economy/01_Econometrics/太白金星v计量.pdf",
     "03_Computer_Science/01_CS50/CS50_main.md",
     "02_Economy/10_发展经济学/10_发展经济学.canvas",
-    "Overview & Study Record.md",
-    "normalize_callouts.py",
-    "README.md",
-    "AGENTS.md",
-    "CLAUDE.md",
     "05_tools/Code Space.md",
     "05_tools/StatsPAI The Agent-Native Causal Inference & Econometrics Toolkit for Python.md",
     "05_tools/Paper2Any.md",
     "05_tools/labml.ai Deep Learning Paper Implementations.md",
     "05_tools/FastAPI.md",
     "98_attachment/Pasted image 20240229215711.png",
-    "98_attachment/Pasted image 20240229211911.png",
-    "01_Math/06_时间序列分析/Time Series Course Atlas.canvas",
     "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
     "00_factor/concept/Reduced Row Echelon Form.md",
     "00_factor/concept/Factor Analysis.md",
@@ -420,18 +392,9 @@
     "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
     "99_学习情况记录/2026-05-09——Sat.md",
     "00_factor/concept/Adaptive Expectations Model.md",
-    "02_Economy/01_Econometrics/02_一元线性回归.md",
     "02_Economy/08_经济预测与决策/08_经济预测与决策.canvas",
     "02_Economy/05_财务管理/2023年注册会计师全国统一考试辅导教材---财务成本管理 (中国注册会计师协会) (Z-Library).pdf",
     "01_Math/07-6.042j/MIT-6-042j-pdf.pdf",
-    "01_Math/04_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
-    "01_Math/06_时间序列分析/04_波动建模 Modeling Volatility.md",
-    "01_Math/06_时间序列分析/01_介绍时间序列.md",
-    "01_Math/01_calculus/Lecture_notes/18-25.pdf",
-    "01_Math/01_calculus/Lecture_notes/9-16.pdf",
-    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Other/Introduction_to_Linear_Algebra(Strang).pdf",
-    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf",
-    "01_Math/03_game theory/第1次作业.pdf",
     "02_Economy/04_经济思想史/04_经济思想史.canvas",
     "02_Economy/03_货币银行学/03_货币银行学.canvas",
     "98_attachment/dashboards/2026-04-14-map.svg",
@@ -441,11 +404,9 @@
     "98_attachment/dashboards/2026-04-11-map.svg",
     "98_attachment/dashboards/2026-04-08-map.svg",
     "98_attachment/dashboards/2026-04-07-map.svg",
-    "98_attachment/dashboards/2026-04-09-map.svg",
     "01_Math/01_calculus/01_calculus.canvas",
     "02_Economy/01_Econometrics/01_Econometrics.canvas",
     "01_Math/06_时间序列分析/06_时间序列分析.canvas",
-    "01_Math/05_随机过程/05_随机过程.canvas",
-    "01_Math/04_多元统计分析/04_多元统计分析.canvas"
+    "01_Math/05_随机过程/05_随机过程.canvas"
   ]
 }

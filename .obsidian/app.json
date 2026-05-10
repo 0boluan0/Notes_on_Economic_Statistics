@@ -15,6 +15,5 @@
     "downscalePercent": 100
   },
   "readableLineLength": false,
-  "promptDelete": false,
-  "openBehavior": "daily"
+  "promptDelete": false
 }

@@ -29,5 +29,6 @@
   "quickadd",
   "cron",
   "terminal",
-  "obsidian-annotator"
+  "obsidian-annotator",
+  "obsidian-html-plugin"
 ]

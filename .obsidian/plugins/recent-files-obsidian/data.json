@@ -1,6 +1,50 @@
 {
   "recentFiles": [
     {
+      "basename": "00_Home",
+      "path": "00_Home.md"
+    },
+    {
+      "basename": "AGENTS",
+      "path": "AGENTS.md"
+    },
+    {
+      "basename": "index",
+      "path": "98_attachment/vault-home/index.html"
+    },
+    {
+      "basename": "dashboard-data",
+      "path": "98_attachment/vault-home/dashboard-data.js"
+    },
+    {
+      "basename": "dashboard",
+      "path": "98_attachment/vault-home/dashboard.js"
+    },
+    {
+      "basename": "dashboard",
+      "path": "98_attachment/vault-home/dashboard.css"
+    },
+    {
+      "basename": "Pasted image 20240229211911",
+      "path": "98_attachment/Pasted image 20240229211911.png"
+    },
+    {
+      "basename": "Pasted image 20240228202716",
+      "path": "98_attachment/Pasted image 20240228202716.png"
+    },
+    {
+      "basename": "CLAUDE",
+      "path": "CLAUDE.md"
+    },
+    {
+      "basename": "Overview & Study Record",
+      "path": "Overview & Study Record.md"
+    },
+    {
+      "basename": "normalize_callouts",
+      "path": "normalize_callouts.py"
+    },
+    {
       "basename": "09_联立方程模型(内生性)",
       "path": "02_Economy/01_Econometrics/09_联立方程模型(内生性).md"
     },
@@ -21,24 +65,8 @@
       "path": "03_Computer_Science/01_CS50/CS50_main.md"
     },
     {
-      "basename": "Overview & Study Record",
-      "path": "Overview & Study Record.md"
-    },
-    {
-      "basename": "normalize_callouts",
-      "path": "normalize_callouts.py"
-    },
-    {
       "basename": "README",
       "path": "README.md"
-    },
-    {
-      "basename": "AGENTS",
-      "path": "AGENTS.md"
-    },
-    {
-      "basename": "CLAUDE",
-      "path": "CLAUDE.md"
     },
     {
       "basename": "Code Space",
@@ -63,10 +91,6 @@
     {
       "basename": "Pasted image 20240229215711",
       "path": "98_attachment/Pasted image 20240229215711.png"
-    },
-    {
-      "basename": "Pasted image 20240229211911",
-      "path": "98_attachment/Pasted image 20240229211911.png"
     },
     {
       "basename": "Time Series Course Atlas",
@@ -175,30 +199,6 @@
     {
       "basename": "第2次作业",
       "path": "01_Math/03_game theory/第2次作业.pdf"
-    },
-    {
-      "basename": "05_贝叶斯博弈",
-      "path": "01_Math/03_game theory/05_贝叶斯博弈.md"
-    },
-    {
-      "basename": "06_扩展性博弈",
-      "path": "01_Math/03_game theory/06_扩展性博弈.md"
-    },
-    {
-      "basename": "03_策略式博弈",
-      "path": "01_Math/03_game theory/03_策略式博弈.md"
-    },
-    {
-      "basename": "02_初步认识博弈",
-      "path": "01_Math/03_game theory/02_初步认识博弈.md"
-    },
-    {
-      "basename": "03_平稳时间序列模型",
-      "path": "01_Math/06_时间序列分析/03_平稳时间序列模型.md"
-    },
-    {
-      "basename": "00_导论与概率论复习",
-      "path": "01_Math/06_时间序列分析/00_导论与概率论复习.md"
     }
   ],
   "omittedPaths": [],

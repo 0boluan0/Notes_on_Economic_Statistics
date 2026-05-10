@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Academic Vault Home</title>
+    <style>
+:root {
+  color-scheme: light;
+  --ink: #272625;
+  --muted: #706b63;
+  --paper: #f7f4ed;
+  --surface: rgba(255, 252, 244, 0.88);
+  --line: rgba(49, 45, 39, 0.14);
+  --green: #2fbf71;
+  --green-soft: #dff3e6;
+  --blue: #5b8def;
+  --blue-soft: #e3ecff;
+  --salmon: #ff776d;
+  --salmon-soft: #ffe3df;
+  --amber: #d99a22;
+  --amber-soft: #fff0c8;
+  --lilac: #8c79d8;
+  --lilac-soft: #eee9ff;
+  --shadow: 0 18px 60px rgba(43, 37, 28, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(91, 141, 239, 0.18), transparent 32rem),
+    radial-gradient(circle at 86% 18%, rgba(47, 191, 113, 0.16), transparent 30rem),
+    linear-gradient(135deg, #f8f5ef 0%, #f2efe7 45%, #f8f2e3 100%);
+  color: var(--ink);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.vault-shell {
+  width: min(1480px, calc(100vw - 40px));
+  margin: 0 auto;
+  padding: 28px 0 52px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 22px;
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(32px, 4vw, 56px);
+  line-height: 1;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.top-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.chip,
+.action-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #393632;
+  white-space: nowrap;
+}
+
+.action-link:hover,
+.note-link:hover,
+.course-card:hover,
+.canvas-item:hover {
+  border-color: rgba(39, 38, 37, 0.32);
+  transform: translateY(-1px);
+}
+
+.hero-board {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) minmax(360px, 0.95fr);
+  gap: 22px;
+  align-items: stretch;
+  min-height: 210px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background:
+    linear-gradient(90deg, rgba(255, 250, 240, 0.92), rgba(251, 247, 237, 0.76)),
+    repeating-linear-gradient(0deg, rgba(49, 45, 39, 0.035) 0 1px, transparent 1px 44px),
+    repeating-linear-gradient(90deg, rgba(49, 45, 39, 0.035) 0 1px, transparent 1px 44px);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hero-copy h2 {
+  max-width: 800px;
+  font-size: clamp(28px, 4vw, 48px);
+}
+
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(130px, 1fr));
+  gap: 12px;
+}
+
+.metric {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  padding: 16px;
+}
+
+.metric strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: clamp(26px, 4vw, 44px);
+  line-height: 1;
+}
+
+.metric span {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.atlas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  grid-template-areas:
+    "today map map"
+    "factase map map"
+    "canvas recent health";
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.panel {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 10px 35px rgba(49, 45, 39, 0.07);
+  padding: 18px;
+}
+
+.panel-today {
+  grid-area: today;
+  background: linear-gradient(145deg, var(--green-soft), rgba(255, 255, 255, 0.72));
+}
+
+.panel-map {
+  grid-area: map;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(227, 236, 255, 0.58));
+}
+
+.panel-factase {
+  grid-area: factase;
+  background: linear-gradient(145deg, var(--lilac-soft), rgba(255, 255, 255, 0.74));
+}
+
+.panel-canvas {
+  grid-area: canvas;
+  background: linear-gradient(145deg, var(--salmon-soft), rgba(255, 255, 255, 0.76));
+}
+
+.panel-recent {
+  grid-area: recent;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), var(--amber-soft));
+}
+
+.panel-health {
+  grid-area: health;
+}
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 14px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 5px rgba(47, 191, 113, 0.13);
+}
+
+.panel-map .dot {
+  background: var(--blue);
+  box-shadow: 0 0 0 5px rgba(91, 141, 239, 0.13);
+}
+
+.panel-canvas .dot {
+  background: var(--salmon);
+  box-shadow: 0 0 0 5px rgba(255, 119, 109, 0.14);
+}
+
+.panel-factase .dot {
+  background: var(--lilac);
+  box-shadow: 0 0 0 5px rgba(140, 121, 216, 0.14);
+}
+
+.panel-recent .dot {
+  background: var(--amber);
+  box-shadow: 0 0 0 5px rgba(217, 154, 34, 0.14);
+}
+
+.stack,
+.link-list,
+.canvas-list {
+  display: grid;
+  gap: 10px;
+}
+
+.note-link,
+.canvas-item,
+.course-card,
+.health-row {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.58);
+  padding: 12px;
+  transition:
+    transform 140ms ease,
+    border-color 140ms ease;
+}
+
+.note-link strong,
+.canvas-item strong,
+.course-title strong {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 9px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  border-radius: 999px;
+  background: rgba(39, 38, 37, 0.07);
+  padding: 3px 8px;
+  color: #5d584f;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.course-map {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.course-lane {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.lane-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 32px;
+  padding: 0 4px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.course-card {
+  min-height: 104px;
+}
+
+.course-title {
+  display: block;
+}
+
+.course-card.has-canvas {
+  border-color: rgba(47, 191, 113, 0.36);
+}
+
+.course-card .recent-mini {
+  display: grid;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.course-card .recent-mini a {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.factase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.fact-card {
+  min-height: 82px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.58);
+  padding: 12px;
+}
+
+.fact-card strong {
+  display: block;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.fact-card span {
+  display: block;
+  margin-top: 6px;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.health-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.health-row span {
+  color: var(--muted);
+}
+
+.health-row strong {
+  text-align: right;
+}
+
+.empty-state {
+  border: 1px dashed rgba(49, 45, 39, 0.24);
+  border-radius: 12px;
+  padding: 18px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+  .hero-board,
+  .atlas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atlas-grid {
+    grid-template-areas:
+      "today"
+      "map"
+      "factase"
+      "canvas"
+      "recent"
+      "health";
+  }
+
+  .course-map {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .vault-shell {
+    width: min(100vw - 22px, 1480px);
+    padding-top: 16px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .top-actions {
+    justify-content: flex-start;
+  }
+
+  .hero-board,
+  .panel {
+    border-radius: 12px;
+    padding: 16px;
+  }
+
+  .metric-strip,
+  .factase-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <main class="vault-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Academic Vault</p>
+          <h1>Vault Home</h1>
+        </div>
+        <nav class="top-actions" aria-label="Quick links">
+          <a class="action-link" href="obsidian://open?vault=Academic&amp;file=Overview%20%26%20Study%20Record.md">Study Record</a>
+<a class="action-link" href="obsidian://search?vault=Academic&amp;query=path%3A00_inbox">Inbox</a>
+<a class="action-link" href="obsidian://search?vault=Academic&amp;query=path%3A99_%E5%AD%A6%E4%B9%A0%E6%83%85%E5%86%B5%E8%AE%B0%E5%BD%95">Daily Notes</a>
+<a class="action-link" href="obsidian://open?vault=Academic&amp;file=00_factor%2F00_hub%2FTime%20Series%20Analysis-hub.md">Time Series Hub</a>
+<a class="action-link" href="obsidian://open?vault=Academic&amp;file=01_Math%2F06_%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90%2FTime%20Series%20Course%20Atlas.canvas">Time Series Atlas</a>
+        </nav>
+      </header>
+
+      <section class="hero-board" aria-label="Vault overview">
+        <div class="hero-copy">
+          <p class="eyebrow">Today</p>
+          <h2>2026-05-10 Sun</h2>
+          <p class="muted">Generated 10 May, 18:52</p>
+        </div>
+        <div class="metric-strip"><div class="metric"><strong>896</strong><span>Markdown notes</span></div>
+<div class="metric"><strong>601</strong><span>Factase cards</span></div>
+<div class="metric"><strong>5</strong><span>Canvas maps</span></div>
+<div class="metric"><strong>5/20</strong><span>Courses with maps</span></div></div>
+      </section>
+
+      <section class="atlas-grid">
+        <article class="panel panel-today">
+          <div class="panel-head">
+            <span class="dot"></span>
+            <h2>Today entry</h2>
+          </div>
+          <div class="stack">
+      <a class="note-link" href="obsidian://daily?vault=Academic">
+        <strong>Create today&#x27;s daily note</strong>
+        <div class="meta"><span class="pill">99_学习情况记录/2026-05-10——Sun.md</span></div>
+      </a>
+    
+
+      <a class="note-link" href="obsidian://search?vault=Academic&amp;query=path%3A00_inbox">
+        <strong>Inbox · 6 items</strong>
+        <div class="meta"><span class="pill">00_inbox</span></div>
+      </a>
+    </div>
+        </article>
+
+        <article class="panel panel-map">
+          <div class="panel-head">
+            <span class="dot"></span>
+            <h2>Learning map</h2>
+          </div>
+          <div class="course-map">
+            <section class="course-lane">
+              <div class="lane-title"><span>Math</span><span>7</span></div>
+              
+                <div class="course-card has-canvas">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A01_Math/06_%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90"><strong>06_时间序列分析</strong></a>
+                  <div class="meta"><span class="pill">8 notes</span><span class="pill">1 canvas</span><span class="pill">2 pdf</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=01_Math%2F06_%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90%2FTime%20Series%20Course%20Atlas.canvas">Time Series Course Atlas</a>
+<a href="obsidian://open?vault=Academic&amp;file=01_Math%2F06_%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90%2F06_%E5%90%AB%E8%B6%8B%E5%8A%BF%E7%9A%84%E6%A8%A1%E5%9E%8B.md">06_含趋势的模型</a></div>
+                </div>
+                
+                <div class="course-card">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A01_Math/04_%E5%A4%9A%E5%85%83%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90"><strong>04_多元统计分析</strong></a>
+                  <div class="meta"><span class="pill">12 notes</span><span class="pill">0 canvas</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=01_Math%2F04_%E5%A4%9A%E5%85%83%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90%2F12_%E5%B1%82%E6%AC%A1%E8%81%9A%E7%B1%BB%E5%92%8CK-means%E8%81%9A%E7%B1%BB.md">12_层次聚类和K-means聚类</a>
+<a href="obsidian://open?vault=Academic&amp;file=01_Math%2F04_%E5%A4%9A%E5%85%83%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90%2F11_%E5%88%86%E7%B1%BB%E4%B8%8E%E5%88%A4%E5%88%ABDiscrimination%20and%20Classifications.md">11_分类与判别Discrimination and Classifications</a></div>
+                </div>
+                
+                <div class="course-card">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A01_Math/05_%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B"><strong>05_随机过程</strong></a>
+                  <div class="meta"><span class="pill">8 notes</span><span class="pill">0 canvas</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=01_Math%2F05_%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%2F06_%E5%B9%B3%E7%A8%B3%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B.md">06_平稳随机过程</a>
+<a href="obsidian://open?vault=Academic&amp;file=01_Math%2F05_%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%2F04_%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E9%93%BE.md">04_马尔可夫链</a></div>
+                </div>
+                
+                <div class="course-card">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A01_Math/03_game%20theory"><strong>03_game theory</strong></a>
+                  <div class="meta"><span class="pill">7 notes</span><span class="pill">0 canvas</span><span class="pill">4 pdf</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=01_Math%2F03_game%20theory%2F07_%E5%AD%90%E5%8D%9A%E5%BC%88%E4%B8%8D%E5%AE%8C%E5%85%A8%E4%BF%A1%E6%81%AF.md">07_子博弈不完全信息</a>
+<a href="obsidian://open?vault=Academic&amp;file=01_Math%2F03_game%20theory%2F06_%E6%89%A9%E5%B1%95%E6%80%A7%E5%8D%9A%E5%BC%88.md">06_扩展性博弈</a></div>
+                </div>
+                
+                <div class="course-card">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A01_Math/02_linear%20algebra"><strong>02_linear algebra</strong></a>
+                  <div class="meta"><span class="pill">6 notes</span><span class="pill">0 canvas</span><span class="pill">108 pdf</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=01_Math%2F02_linear%20algebra%2F01_Ax%20%3D%20b%20and%20the%20Four%20Subspaces.md">01_Ax = b and the Four Subspaces</a>
+<a href="obsidian://open?vault=Academic&amp;file=01_Math%2F02_linear%20algebra%2F03_Positive%20Definite%20Matrices%20and%20Applications.md">03_Positive Definite Matrices and Applications</a></div>
+                </div>
+                
+                <div class="course-card">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A01_Math/01_calculus"><strong>01_calculus</strong></a>
+                  <div class="meta"><span class="pill">1 notes</span><span class="pill">0 canvas</span><span class="pill">4 pdf</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=01_Math%2F01_calculus%2FMIT18.01_Single-Variable-Calculus.md">MIT18.01_Single-Variable-Calculus</a></div>
+                </div>
+                
+                <div class="course-card">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A01_Math/07-6.042j"><strong>07-6.042j</strong></a>
+                  <div class="meta"><span class="pill">0 notes</span><span class="pill">0 canvas</span><span class="pill">1 pdf</span></div>
+                  <div class="recent-mini"></div>
+                </div>
+                
+            </section>
+            
+
+            <section class="course-lane">
+              <div class="lane-title"><span>Economy</span><span>9</span></div>
+              
+                <div class="course-card has-canvas">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A02_Economy/06_%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6"><strong>06_证券投资学</strong></a>
+                  <div class="meta"><span class="pill">22 notes</span><span class="pill">1 canvas</span><span class="pill">1 pdf</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=02_Economy%2F06_%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6%2F%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6%E4%BD%9C%E4%B8%9A%2F%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6%E7%AC%AC%E4%B9%9D%E7%AB%A0%E7%AC%AC%E5%8D%81%E7%AB%A0.md">证券投资学第九章第十章</a>
+<a href="obsidian://open?vault=Academic&amp;file=02_Economy%2F06_%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6%2F11_%E9%A3%8E%E9%99%A9%E8%B5%84%E4%BA%A7%E7%9A%84%E5%AE%9A%E4%BB%B7.md">11_风险资产的定价</a></div>
+                </div>
+                
+                <div class="course-card has-canvas">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A02_Economy/07_%E9%87%91%E8%9E%8D%E6%9C%BA%E6%9E%84%E4%B8%8E%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86"><strong>07_金融机构与风险管理</strong></a>
+                  <div class="meta"><span class="pill">17 notes</span><span class="pill">1 canvas</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=02_Economy%2F07_%E9%87%91%E8%9E%8D%E6%9C%BA%E6%9E%84%E4%B8%8E%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86%2F19_%E8%BF%9D%E7%BA%A6%E9%A3%8E%E9%99%A9.md">19_违约风险</a>
+<a href="obsidian://open?vault=Academic&amp;file=02_Economy%2F07_%E9%87%91%E8%9E%8D%E6%9C%BA%E6%9E%84%E4%B8%8E%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86%2F15_%E3%80%8A%E5%B7%B4%E5%A1%9E%E5%B0%94%E5%8D%8F%E8%AE%AEI%20II%E3%80%8B%E5%92%8C%20%E5%81%BF%E4%BB%98%E8%83%BD%E5%8A%9B%E6%B3%95%E6%A1%88II.md">15_《巴塞尔协议I II》和 偿付能力法案II</a></div>
+                </div>
+                
+                <div class="course-card has-canvas">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A02_Economy/02_public%20finance%E8%B4%A2%E6%94%BF%E5%AD%A6"><strong>02_public finance财政学</strong></a>
+                  <div class="meta"><span class="pill">15 notes</span><span class="pill">1 canvas</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=02_Economy%2F02_public%20finance%E8%B4%A2%E6%94%BF%E5%AD%A6%2F02_public%20finance%E8%B4%A2%E6%94%BF%E5%AD%A6.canvas">02_public finance财政学</a>
+<a href="obsidian://open?vault=Academic&amp;file=02_Economy%2F02_public%20finance%E8%B4%A2%E6%94%BF%E5%AD%A6%2F3_%E8%B4%A2%E6%94%BF%E6%94%B6%E5%85%A5%2F03_%E7%A8%8E%E6%94%B6%E4%B8%8E%E7%BB%8F%E6%B5%8E%E6%95%88%E7%8E%87.md">03_税收与经济效率</a></div>
+                </div>
+                
+                <div class="course-card has-canvas">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A02_Economy/05_%E8%B4%A2%E5%8A%A1%E7%AE%A1%E7%90%86"><strong>05_财务管理</strong></a>
+                  <div class="meta"><span class="pill">5 notes</span><span class="pill">1 canvas</span><span class="pill">1 pdf</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=02_Economy%2F05_%E8%B4%A2%E5%8A%A1%E7%AE%A1%E7%90%86%2F05_%E6%8A%95%E8%B5%84%E9%A1%B9%E7%9B%AE%E8%B5%84%E6%9C%AC%E9%A2%84%E7%AE%97.md">05_投资项目资本预算</a>
+<a href="obsidian://open?vault=Academic&amp;file=02_Economy%2F05_%E8%B4%A2%E5%8A%A1%E7%AE%A1%E7%90%86%2F01_%E8%B4%A2%E5%8A%A1%E7%AE%A1%E7%90%86%E6%A6%82%E8%BF%B0.md">01_财务管理概述</a></div>
+                </div>
+                
+                <div class="course-card">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A02_Economy/03_%E8%B4%A7%E5%B8%81%E9%93%B6%E8%A1%8C%E5%AD%A6"><strong>03_货币银行学</strong></a>
+                  <div class="meta"><span class="pill">18 notes</span><span class="pill">0 canvas</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=02_Economy%2F03_%E8%B4%A7%E5%B8%81%E9%93%B6%E8%A1%8C%E5%AD%A6%2F4_%E4%B8%AD%E5%A4%AE%E9%93%B6%E8%A1%8C%E4%B8%8E%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E7%9A%84%E5%AE%9E%E6%96%BD%2F14_%E8%B4%A7%E5%B8%81%E4%BE%9B%E7%BB%99%E8%BF%87%E7%A8%8B.md">14_货币供给过程</a>
+<a href="obsidian://open?vault=Academic&amp;file=02_Economy%2F03_%E8%B4%A7%E5%B8%81%E9%93%B6%E8%A1%8C%E5%AD%A6%2F4_%E4%B8%AD%E5%A4%AE%E9%93%B6%E8%A1%8C%E4%B8%8E%E8%B4%A7%E5%B8%81%E6%94%BF%E7%AD%96%E7%9A%84%E5%AE%9E%E6%96%BD%2F13_%E4%B8%AD%E5%A4%AE%E9%93%B6%E8%A1%8C%E4%B8%8E%E8%81%94%E9%82%A6%E5%82%A8%E5%A4%87%E4%BD%93%E7%B3%BB.md">13_中央银行与联邦储备体系</a></div>
+                </div>
+                
+                <div class="course-card">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A02_Economy/01_Econometrics"><strong>01_Econometrics</strong></a>
+                  <div class="meta"><span class="pill">14 notes</span><span class="pill">0 canvas</span><span class="pill">1 pdf</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=02_Economy%2F01_Econometrics%2F%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86%E7%82%B9.md">零散知识点</a>
+<a href="obsidian://open?vault=Academic&amp;file=02_Economy%2F01_Econometrics%2F13_%E9%9D%A2%E6%9D%BF%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B.md">13_面板数据模型</a></div>
+                </div>
+                
+                <div class="course-card">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A02_Economy/10_%E5%8F%91%E5%B1%95%E7%BB%8F%E6%B5%8E%E5%AD%A6"><strong>10_发展经济学</strong></a>
+                  <div class="meta"><span class="pill">9 notes</span><span class="pill">0 canvas</span><span class="pill">1 pdf</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=02_Economy%2F10_%E5%8F%91%E5%B1%95%E7%BB%8F%E6%B5%8E%E5%AD%A6%2F03_%E4%BA%BA%E5%8F%A3%E8%BF%81%E7%A7%BB%E7%90%86%E8%AE%BA.md">03_人口迁移理论</a>
+<a href="obsidian://open?vault=Academic&amp;file=02_Economy%2F10_%E5%8F%91%E5%B1%95%E7%BB%8F%E6%B5%8E%E5%AD%A6%2F03_%E4%BA%BA%E5%8F%A3%E8%BF%81%E7%A7%BB%E7%90%86%E8%AE%BA%202.md">03_人口迁移理论 2</a></div>
+                </div>
+                
+            </section>
+            
+
+            <section class="course-lane">
+              <div class="lane-title"><span>Computer Science</span><span>4</span></div>
+              
+                <div class="course-card">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A03_Computer_Science/03_MIT%206.100L"><strong>03_MIT 6.100L</strong></a>
+                  <div class="meta"><span class="pill">28 notes</span><span class="pill">0 canvas</span><span class="pill">177 pdf</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=03_Computer_Science%2F03_MIT%206.100L%2F02_Strings%2CInput-Output%20and%20Branching.md">02_Strings,Input-Output and Branching</a>
+<a href="obsidian://open?vault=Academic&amp;file=03_Computer_Science%2F03_MIT%206.100L%2F26_List%20Access%2C%20Hashing%2C%20Simulations%20and%20Wrap-Up.md">26_List Access, Hashing, Simulations and Wrap-Up</a></div>
+                </div>
+                
+                <div class="course-card">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A03_Computer_Science/99_Miscellaneous"><strong>99_Miscellaneous</strong></a>
+                  <div class="meta"><span class="pill">13 notes</span><span class="pill">0 canvas</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=03_Computer_Science%2F99_Miscellaneous%2Fthe_missing_semester.md">the_missing_semester</a>
+<a href="obsidian://open?vault=Academic&amp;file=03_Computer_Science%2F99_Miscellaneous%2Fthe_missing_semester_exercises%2F11_Q%26A%20Exercises.md">11_Q&amp;A Exercises</a></div>
+                </div>
+                
+                <div class="course-card">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A03_Computer_Science/01_CS50"><strong>01_CS50</strong></a>
+                  <div class="meta"><span class="pill">1 notes</span><span class="pill">0 canvas</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=03_Computer_Science%2F01_CS50%2FCS50_main.md">CS50_main</a></div>
+                </div>
+                
+                <div class="course-card">
+                  <a class="course-title" href="obsidian://search?vault=Academic&amp;query=path%3A03_Computer_Science/02_CS61A"><strong>02_CS61A</strong></a>
+                  <div class="meta"><span class="pill">1 notes</span><span class="pill">0 canvas</span></div>
+                  <div class="recent-mini"><a href="obsidian://open?vault=Academic&amp;file=03_Computer_Science%2F02_CS61A%2F01_building%20abstractions%20with%20functions.md">01_building abstractions with functions</a></div>
+                </div>
+                
+            </section>
+            </div>
+        </article>
+
+        <article class="panel panel-factase">
+          <div class="panel-head">
+            <span class="dot"></span>
+            <h2>Factase</h2>
+          </div>
+          <div class="factase-grid">
+        <a class="fact-card" href="obsidian://search?vault=Academic&amp;query=path%3A00_factor/00_hub">
+          <strong>13</strong>
+          <span>00_hub</span>
+        </a>
+        
+
+        <a class="fact-card" href="obsidian://search?vault=Academic&amp;query=path%3A00_factor/concept">
+          <strong>454</strong>
+          <span>concept</span>
+        </a>
+        
+
+        <a class="fact-card" href="obsidian://search?vault=Academic&amp;query=path%3A00_factor/framework">
+          <strong>28</strong>
+          <span>framework</span>
+        </a>
+        
+
+        <a class="fact-card" href="obsidian://search?vault=Academic&amp;query=path%3A00_factor/procedure">
+          <strong>57</strong>
+          <span>procedure</span>
+        </a>
+        
+
+        <a class="fact-card" href="obsidian://search?vault=Academic&amp;query=path%3A00_factor/proof">
+          <strong>9</strong>
+          <span>proof</span>
+        </a>
+        
+
+        <a class="fact-card" href="obsidian://search?vault=Academic&amp;query=path%3A00_factor/system">
+          <strong>39</strong>
+          <span>system</span>
+        </a>
+        
+
+        <a class="fact-card" href="obsidian://search?vault=Academic&amp;query=path%3A00_factor/writing">
+          <strong>1</strong>
+          <span>writing</span>
+        </a>
+        </div>
+        </article>
+
+        <article class="panel panel-canvas">
+          <div class="panel-head">
+            <span class="dot"></span>
+            <h2>Big Picture canvases</h2>
+          </div>
+          <div class="canvas-list">
+      <a class="canvas-item" href="obsidian://open?vault=Academic&amp;file=01_Math%2F06_%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90%2FTime%20Series%20Course%20Atlas.canvas">
+        <strong>Time Series Course Atlas</strong>
+        <div class="meta"><span class="pill">20 nodes</span><span class="pill">10 edges</span><span class="pill">01_Math/06_时间序列分析/Time Series Course Atlas.canvas</span><span class="pill">10 May, 17:57</span></div>
+      </a>
+    
+
+      <a class="canvas-item" href="obsidian://open?vault=Academic&amp;file=02_Economy%2F02_public%20finance%E8%B4%A2%E6%94%BF%E5%AD%A6%2F02_public%20finance%E8%B4%A2%E6%94%BF%E5%AD%A6.canvas">
+        <strong>02_public finance财政学</strong>
+        <div class="meta"><span class="pill">342 nodes</span><span class="pill">341 edges</span><span class="pill">02_Economy/02_public finance财政学/02_public finance财政学.canvas</span><span class="pill">10 May, 18:44</span></div>
+      </a>
+    
+
+      <a class="canvas-item" href="obsidian://open?vault=Academic&amp;file=02_Economy%2F05_%E8%B4%A2%E5%8A%A1%E7%AE%A1%E7%90%86%2F05_%E8%B4%A2%E5%8A%A1%E7%AE%A1%E7%90%86.canvas">
+        <strong>05_财务管理</strong>
+        <div class="meta"><span class="pill">308 nodes</span><span class="pill">307 edges</span><span class="pill">02_Economy/05_财务管理/05_财务管理.canvas</span><span class="pill">05 Feb, 21:13</span></div>
+      </a>
+    
+
+      <a class="canvas-item" href="obsidian://open?vault=Academic&amp;file=02_Economy%2F06_%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6%2F06_%E8%AF%81%E5%88%B8%E6%8A%95%E8%B5%84%E5%AD%A6.canvas">
+        <strong>06_证券投资学</strong>
+        <div class="meta"><span class="pill">1277 nodes</span><span class="pill">1276 edges</span><span class="pill">02_Economy/06_证券投资学/06_证券投资学.canvas</span><span class="pill">05 Feb, 21:13</span></div>
+      </a>
+    
+
+      <a class="canvas-item" href="obsidian://open?vault=Academic&amp;file=02_Economy%2F07_%E9%87%91%E8%9E%8D%E6%9C%BA%E6%9E%84%E4%B8%8E%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86%2F07_%E9%87%91%E8%9E%8D%E6%9C%BA%E6%9E%84%E4%B8%8E%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86.canvas">
+        <strong>07_金融机构与风险管理</strong>
+        <div class="meta"><span class="pill">2107 nodes</span><span class="pill">2106 edges</span><span class="pill">02_Economy/07_金融机构与风险管理/07_金融机构与风险管理.canvas</span><span class="pill">05 Feb, 21:13</span></div>
+      </a>
+    </div>
+        </article>
+
+        <article class="panel panel-recent">
+          <div class="panel-head">
+            <span class="dot"></span>
+            <h2>Recent notes</h2>
+          </div>
+          <div class="link-list">
+      <a class="note-link" href="obsidian://open?vault=Academic&amp;file=00_Home.md">
+        <strong>00_Home</strong>
+        <div class="meta"><span class="pill">00_Home.md</span><span class="pill">10 May, 18:48</span></div>
+      </a>
+    
+
+      <a class="note-link" href="obsidian://open?vault=Academic&amp;file=99_%E5%AD%A6%E4%B9%A0%E6%83%85%E5%86%B5%E8%AE%B0%E5%BD%95%2F2026-05-09%E2%80%94%E2%80%94Sat.md">
+        <strong>2026-05-09——Sat</strong>
+        <div class="meta"><span class="pill">99_学习情况记录/2026-05-09——Sat.md</span><span class="pill">09 May, 15:37</span></div>
+      </a>
+    
+
+      <a class="note-link" href="obsidian://open?vault=Academic&amp;file=04_Fragments%2FThe%20top%201%25%20Think%20on%20Paper.%20Here%E2%80%99s%20How%20To%20Do%20It%20-%202026-05-05.md">
+        <strong>The top 1% Think on Paper. Here’s How To Do It - 2026-05-05</strong>
+        <div class="meta"><span class="pill">04_Fragments/The top 1% Think on Paper. Here’s How To Do It - 2026-05-05.md</span><span class="pill">05 May, 17:47</span></div>
+      </a>
+    
+
+      <a class="note-link" href="obsidian://open?vault=Academic&amp;file=05_tools%2FStatsPAI%20The%20Agent-Native%20Causal%20Inference%20%26%20Econometrics%20Toolkit%20for%20Python.md">
+        <strong>StatsPAI The Agent-Native Causal Inference &amp; Econometrics Toolkit for Python</strong>
+        <div class="meta"><span class="pill">05_tools/StatsPAI The Agent-Native Causal Inference &amp; Econometrics Toolkit for Python.md</span><span class="pill">04 May, 14:25</span></div>
+      </a>
+    
+
+      <a class="note-link" href="obsidian://open?vault=Academic&amp;file=01_Math%2F06_%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90%2F06_%E5%90%AB%E8%B6%8B%E5%8A%BF%E7%9A%84%E6%A8%A1%E5%9E%8B.md">
+        <strong>06_含趋势的模型</strong>
+        <div class="meta"><span class="pill">01_Math/06_时间序列分析/06_含趋势的模型.md</span><span class="pill">02 May, 12:09</span></div>
+      </a>
+    
+
+      <a class="note-link" href="obsidian://open?vault=Academic&amp;file=01_Math%2F06_%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90%2F05_%E5%A4%9A%E6%96%B9%E7%A8%8B%E6%A8%A1%E5%9E%8BMulti-equation%20Time%20Series%20Models.md">
+        <strong>05_多方程模型Multi-equation Time Series Models</strong>
+        <div class="meta"><span class="pill">01_Math/06_时间序列分析/05_多方程模型Multi-equation Time Series Models.md</span><span class="pill">02 May, 12:09</span></div>
+      </a>
+    
+
+      <a class="note-link" href="obsidian://open?vault=Academic&amp;file=01_Math%2F06_%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90%2F03_%E5%B9%B3%E7%A8%B3%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E6%A8%A1%E5%9E%8B.md">
+        <strong>03_平稳时间序列模型</strong>
+        <div class="meta"><span class="pill">01_Math/06_时间序列分析/03_平稳时间序列模型.md</span><span class="pill">02 May, 12:09</span></div>
+      </a>
+    
+
+      <a class="note-link" href="obsidian://open?vault=Academic&amp;file=01_Math%2F06_%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E5%88%86%E6%9E%90%2F02_%E5%B7%AE%E5%88%86%E6%96%B9%E7%A8%8BDifference%20Equation.md">
+        <strong>02_差分方程Difference Equation</strong>
+        <div class="meta"><span class="pill">01_Math/06_时间序列分析/02_差分方程Difference Equation.md</span><span class="pill">02 May, 12:09</span></div>
+      </a>
+    
+
+      <a class="note-link" href="obsidian://open?vault=Academic&amp;file=00_factor%2Fsystem%2FDurbin%20h%20Test.md">
+        <strong>Durbin h Test</strong>
+        <div class="meta"><span class="pill">00_factor/system/Durbin h Test.md</span><span class="pill">02 May, 12:07</span></div>
+      </a>
+    
+
+      <a class="note-link" href="obsidian://open?vault=Academic&amp;file=00_factor%2Fconcept%2FVAR%20Model.md">
+        <strong>VAR Model</strong>
+        <div class="meta"><span class="pill">00_factor/concept/VAR Model.md</span><span class="pill">02 May, 12:07</span></div>
+      </a>
+    </div>
+        </article>
+
+        <article class="panel panel-health">
+          <div class="panel-head">
+            <span class="dot"></span>
+            <h2>Vault health</h2>
+          </div>
+          <div class="stack"><div class="health-row"><span>Git changed files</span><strong>13</strong></div>
+<div class="health-row"><span>Tracked notes</span><strong>896</strong></div>
+<div class="health-row"><span>Tracked canvases</span><strong>5</strong></div>
+<div class="health-row"><span>Generated</span><strong>10 May, 18:52</strong></div>
+
+            <div class="note-link">
+              <strong>Current git surface</strong>
+              <div class="meta"><span class="pill"> M .obsidian/app.json</span><span class="pill"> M .obsidian/community-plugins.json</span><span class="pill"> M .obsidian/daily-notes.json</span><span class="pill"> M .obsidian/plugins/recent-files-obsidian/data.json</span><span class="pill"> M .obsidian/workspace.json</span><span class="pill">?? .codex/tools/build_vault_home.py</span><span class="pill">?? .obsidian/plugins/obsidian-html-plugin/main.js</span><span class="pill">?? .obsidian/plugins/obsidian-html-plugin/manifest.json</span></div>
+            </div>
+            </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
