@@ -39,9 +39,9 @@
               "state": {
                 "file": "01_Math/06_时间序列分析/Time Series Course Atlas.canvas",
                 "viewState": {
-                  "x": -1437.917200269337,
-                  "y": -1460.448106300065,
-                  "zoom": -1.2392929946611633
+                  "x": -2658.4803483487362,
+                  "y": -64.3457949680323,
+                  "zoom": -0.786079679097643
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -382,7 +382,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "bb5393f41058a9f1",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
     "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
     "01_Math/06_时间序列分析/Time Series Course Atlas.canvas",
