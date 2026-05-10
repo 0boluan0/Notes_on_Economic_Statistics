@@ -1,8 +1,80 @@
 {
   "recentFiles": [
     {
+      "basename": "09_联立方程模型(内生性)",
+      "path": "02_Economy/01_Econometrics/09_联立方程模型(内生性).md"
+    },
+    {
+      "basename": "10_虚拟变量",
+      "path": "02_Economy/01_Econometrics/10_虚拟变量.md"
+    },
+    {
+      "basename": "零散知识点",
+      "path": "02_Economy/01_Econometrics/零散知识点.md"
+    },
+    {
+      "basename": "太白金星v计量",
+      "path": "02_Economy/01_Econometrics/太白金星v计量.pdf"
+    },
+    {
+      "basename": "CS50_main",
+      "path": "03_Computer_Science/01_CS50/CS50_main.md"
+    },
+    {
+      "basename": "Overview & Study Record",
+      "path": "Overview & Study Record.md"
+    },
+    {
+      "basename": "normalize_callouts",
+      "path": "normalize_callouts.py"
+    },
+    {
+      "basename": "README",
+      "path": "README.md"
+    },
+    {
+      "basename": "AGENTS",
+      "path": "AGENTS.md"
+    },
+    {
+      "basename": "CLAUDE",
+      "path": "CLAUDE.md"
+    },
+    {
+      "basename": "Code Space",
+      "path": "05_tools/Code Space.md"
+    },
+    {
+      "basename": "StatsPAI The Agent-Native Causal Inference & Econometrics Toolkit for Python",
+      "path": "05_tools/StatsPAI The Agent-Native Causal Inference & Econometrics Toolkit for Python.md"
+    },
+    {
+      "basename": "Paper2Any",
+      "path": "05_tools/Paper2Any.md"
+    },
+    {
+      "basename": "labml.ai Deep Learning Paper Implementations",
+      "path": "05_tools/labml.ai Deep Learning Paper Implementations.md"
+    },
+    {
+      "basename": "FastAPI",
+      "path": "05_tools/FastAPI.md"
+    },
+    {
+      "basename": "Pasted image 20240229215711",
+      "path": "98_attachment/Pasted image 20240229215711.png"
+    },
+    {
+      "basename": "Pasted image 20240229211911",
+      "path": "98_attachment/Pasted image 20240229211911.png"
+    },
+    {
       "basename": "Time Series Course Atlas",
       "path": "01_Math/06_时间序列分析/Time Series Course Atlas.canvas"
+    },
+    {
+      "basename": "Factor Analysis",
+      "path": "00_factor/concept/Factor Analysis.md"
     },
     {
       "basename": "IID",
@@ -15,10 +87,6 @@
     {
       "basename": "Reduced Row Echelon Form",
       "path": "00_factor/concept/Reduced Row Echelon Form.md"
-    },
-    {
-      "basename": "Factor Analysis",
-      "path": "00_factor/concept/Factor Analysis.md"
     },
     {
       "basename": "02_Least Squares, Determinants and Eigenvalues",
@@ -131,74 +199,6 @@
     {
       "basename": "00_导论与概率论复习",
       "path": "01_Math/06_时间序列分析/00_导论与概率论复习.md"
-    },
-    {
-      "basename": "CLAUDE",
-      "path": "CLAUDE.md"
-    },
-    {
-      "basename": "normalize_callouts",
-      "path": "normalize_callouts.py"
-    },
-    {
-      "basename": "Overview & Study Record",
-      "path": "Overview & Study Record.md"
-    },
-    {
-      "basename": "README",
-      "path": "README.md"
-    },
-    {
-      "basename": "AGENTS",
-      "path": "AGENTS.md"
-    },
-    {
-      "basename": "2026-02-02——Mon",
-      "path": "99_学习情况记录/2026-02-02——Mon.md"
-    },
-    {
-      "basename": "2026-02-12——Thu",
-      "path": "99_学习情况记录/2026-02-12——Thu.md"
-    },
-    {
-      "basename": "2026-02-19——Thu",
-      "path": "99_学习情况记录/2026-02-19——Thu.md"
-    },
-    {
-      "basename": "02_实证分析——positive analysis",
-      "path": "02_Economy/02_public finance财政学/1_导论/02_实证分析——positive analysis.md"
-    },
-    {
-      "basename": "01_导论",
-      "path": "02_Economy/02_public finance财政学/1_导论/01_导论.md"
-    },
-    {
-      "basename": "00_财政学课程内容分布",
-      "path": "02_Economy/02_public finance财政学/1_导论/00_财政学课程内容分布.md"
-    },
-    {
-      "basename": "06_含趋势的模型",
-      "path": "01_Math/06_时间序列分析/06_含趋势的模型.md"
-    },
-    {
-      "basename": "lecture",
-      "path": "01_Math/06_时间序列分析/lecture.pdf"
-    },
-    {
-      "basename": "07_协整和误差修正模型",
-      "path": "01_Math/06_时间序列分析/07_协整和误差修正模型.md"
-    },
-    {
-      "basename": "05_多方程模型Multi-equation Time Series Models",
-      "path": "01_Math/06_时间序列分析/05_多方程模型Multi-equation Time Series Models.md"
-    },
-    {
-      "basename": "02_差分方程Difference Equation",
-      "path": "01_Math/06_时间序列分析/02_差分方程Difference Equation.md"
-    },
-    {
-      "basename": "AutoResearch Clearly Explained (and how to use it) - 2026-03-28",
-      "path": "04_Fragments/AutoResearch Clearly Explained (and how to use it) - 2026-03-28.md"
     }
   ],
   "omittedPaths": [],
