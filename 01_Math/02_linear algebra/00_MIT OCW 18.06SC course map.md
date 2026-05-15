@@ -107,8 +107,8 @@ tags:
 - 讲义 summary：`MIT_OCW_18.06SC_PDF/05_Session_Summaries`
 - 练习与作业：`MIT_OCW_18.06SC_PDF/02_Exercises`、`03_Homework_Problems`、`04_Homework_Solutions`
 - Final review / final exam：`MIT_OCW_18.06SC_PDF/01_Exams`
-- 教材 1：[[MIT_OCW_18.06SC_PDF/99_Other/Introduction_to_Linear_Algebra(Strang).pdf|Introduction to Linear Algebra (Strang)]]
-- 教材 2：[[MIT_OCW_18.06SC_PDF/99_Other/linear_algebra_and_its_applications_4th.pdf|Linear Algebra and Its Applications (4th)]]
+- 教材 1：[[Introduction_to_Linear_Algebra(Strang).pdf|Introduction to Linear Algebra (Strang)]]
+- 教材 2：[[linear_algebra_and_its_applications_4th.pdf|Linear Algebra and Its Applications (4th)]]
 
 ## 主笔记入口
 

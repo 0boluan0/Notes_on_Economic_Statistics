@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "linear_algebra_and_its_applications_4th",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Books/linear_algebra_and_its_applications_4th.pdf"
+    },
+    {
+      "basename": "Introduction_to_Linear_Algebra(Strang)",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Books/Introduction_to_Linear_Algebra(Strang).pdf"
+    },
+    {
+      "basename": "index",
+      "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/index.md"
+    },
+    {
+      "basename": "00_MIT OCW 18.06SC course map",
+      "path": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md"
+    },
+    {
       "basename": "00_Home",
       "path": "00_Home.md"
     },
@@ -183,22 +199,6 @@
     {
       "basename": "labml.ai Deep Learning Paper Implementations",
       "path": "05_tools/labml.ai Deep Learning Paper Implementations.md"
-    },
-    {
-      "basename": "FastAPI",
-      "path": "05_tools/FastAPI.md"
-    },
-    {
-      "basename": "Pasted image 20240229215711",
-      "path": "98_attachment/Pasted image 20240229215711.png"
-    },
-    {
-      "basename": "Factor Analysis",
-      "path": "00_factor/concept/Factor Analysis.md"
-    },
-    {
-      "basename": "IID",
-      "path": "00_factor/concept/IID.md"
     }
   ],
   "omittedPaths": [],
