@@ -284,13 +284,20 @@
 .lpd-track-layers,
 .lpd-track-layer {
   position: absolute;
-  inset: 0;
   pointer-events: none;
 }
 
-.lpd-track-layer {
-  width: 0;
+.lpd-track-layers {
+  inset: 0;
+  overflow: hidden;
   border-radius: inherit;
+}
+
+.lpd-track-layer {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
 }
 
 .lpd-track-layer-learned {
