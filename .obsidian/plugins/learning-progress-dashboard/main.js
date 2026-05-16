@@ -1,7 +1,13 @@
 const { ItemView, Modal, Notice, Plugin, TFile, normalizePath } = require("obsidian");
 
+const PLUGIN_ID = "learning-progress-dashboard";
 const VIEW_TYPE = "learning-progress-dashboard-view";
 const DATA_PATH = "98_attachment/vault-home/learning-board.md";
+const PLUGIN_SOURCE_PATHS = new Set([
+  `.obsidian/plugins/${PLUGIN_ID}/main.js`,
+  `.obsidian/plugins/${PLUGIN_ID}/styles.css`,
+  `.obsidian/plugins/${PLUGIN_ID}/manifest.json`,
+]);
 
 const COURSE_ROOTS = {
   "01_Math": "Math",
@@ -28,19 +34,24 @@ const EXCLUDE_KEYWORDS = [
 
 const STATE_META = {
   raw: {
-    mark: "○",
-    label: "未处理",
-    description: "还没有开始加工",
+    depth: 0,
+    label: "未开始",
+    description: "还没有开始学习加工",
   },
-  active: {
-    mark: "◐",
-    label: "加工中",
-    description: "听过/有材料/有笔记，但还没到可复习",
+  learned: {
+    depth: 1,
+    label: "已学完",
+    description: "已经完成学习或听课",
   },
-  reviewable: {
-    mark: "●",
-    label: "可复习",
-    description: "已经整理到可回顾、可输出的程度",
+  organized: {
+    depth: 2,
+    label: "已整理",
+    description: "课程笔记已经整理到可回顾",
+  },
+  mapped: {
+    depth: 3,
+    label: "已成图",
+    description: "已经进入 Big Picture 或画图",
   },
 };
 
@@ -100,6 +111,19 @@ function compareLessons(a, b) {
   const right = lessonSortValue(b);
   if (left !== right) return left - right;
   return String(a.title || "").localeCompare(String(b.title || ""));
+}
+
+function normalizeState(state) {
+  return STATE_META[state] ? state : "raw";
+}
+
+function stateDepth(state) {
+  return STATE_META[normalizeState(state)].depth;
+}
+
+function percentage(count, total) {
+  if (!total) return "0%";
+  return `${Math.max(0, Math.min(100, (count / total) * 100)).toFixed(2)}%`;
 }
 
 function nextLessonLabel(course) {
@@ -191,6 +215,10 @@ function shouldSyncCourseFile(file) {
   return file instanceof TFile && file.extension === "md" && isCourseRootPath(file.path);
 }
 
+function isPluginSourceFile(file) {
+  return file instanceof TFile && PLUGIN_SOURCE_PATHS.has(file.path);
+}
+
 function lessonTitle(file) {
   const match = file.basename.match(LESSON_RE);
   if (!match) return file.basename;
@@ -254,7 +282,12 @@ class LearningBoardStore {
     return {
       version: 1,
       updatedAt: parsed.updatedAt || new Date().toISOString(),
-      courses: parsed.courses,
+      courses: parsed.courses.map((course) => ({
+        ...course,
+        lessons: Array.isArray(course.lessons)
+          ? course.lessons.map((lesson) => ({ ...lesson, state: normalizeState(lesson.state) }))
+          : [],
+      })),
     };
   }
 
@@ -300,7 +333,7 @@ class LearningBoardStore {
         label: labelData.label,
         title: lessonTitle(file),
         notePath: file.path,
-        state: "active",
+        state: "raw",
         remark: "",
         sort: labelData.sort,
       });
@@ -313,7 +346,9 @@ class LearningBoardStore {
       const cloned = {
         ...existingCourse,
         visible: true,
-        lessons: Array.isArray(existingCourse.lessons) ? existingCourse.lessons.map((lesson) => ({ ...lesson })) : [],
+        lessons: Array.isArray(existingCourse.lessons)
+          ? existingCourse.lessons.map((lesson) => ({ ...lesson, state: normalizeState(lesson.state) }))
+          : [],
       };
       maxOrder = Math.max(maxOrder, Number(cloned.order) || 0);
       resultByPath.set(cloned.path, cloned);
@@ -502,7 +537,10 @@ class LearningProgressDashboardView extends ItemView {
     const legend = sidebar.createDiv({ cls: "lpd-legend" });
     Object.entries(STATE_META).forEach(([state, meta]) => {
       const row = legend.createDiv({ cls: "lpd-legend-row" });
-      row.createSpan({ cls: `lpd-node lpd-state-${state}`, text: meta.mark });
+      const swatch = row.createSpan({ cls: `lpd-legend-swatch lpd-state-${state}` });
+      for (let index = 1; index <= 3; index += 1) {
+        swatch.createSpan({ cls: `lpd-legend-segment ${meta.depth >= index ? "is-filled" : ""}` });
+      }
       row.createSpan({ text: `${meta.label}：${meta.description}` });
     });
   }
@@ -513,7 +551,7 @@ class LearningProgressDashboardView extends ItemView {
     const stats = this.computeStats();
     top.createDiv({
       cls: "lpd-muted",
-      text: `${stats.courses} courses · ${stats.lessons} lessons · ${stats.reviewable} reviewable`,
+      text: `${stats.courses} courses · ${stats.lessons} lessons · ${stats.mapped} mapped`,
     });
 
     const list = main.createDiv({ cls: "lpd-rail-list" });
@@ -529,19 +567,30 @@ class LearningProgressDashboardView extends ItemView {
       courseInfo.createDiv({ cls: "lpd-course-title", text: course.title });
       courseInfo.createDiv({ cls: "lpd-course-path", text: `${course.root} · ${course.path}` });
 
+      const progress = this.courseProgress(course);
       const track = row.createDiv({ cls: "lpd-track" });
+      this.applyProgressStyles(track, progress);
+      const layers = track.createDiv({ cls: "lpd-track-layers", attr: { "aria-hidden": "true" } });
+      layers.createDiv({ cls: "lpd-track-layer lpd-track-layer-learned" });
+      layers.createDiv({ cls: "lpd-track-layer lpd-track-layer-organized" });
+      layers.createDiv({ cls: "lpd-track-layer lpd-track-layer-mapped" });
+      const nodes = track.createDiv({ cls: "lpd-track-nodes" });
       const lessons = [...(course.lessons || [])].sort(compareLessons);
       lessons.forEach((lesson) => {
-        const meta = STATE_META[lesson.state] || STATE_META.raw;
-        const node = track.createEl("button", {
-          cls: `lpd-lesson-node lpd-state-${lesson.state || "raw"} ${
+        const state = normalizeState(lesson.state);
+        const meta = STATE_META[state];
+        const node = nodes.createEl("button", {
+          cls: `lpd-lesson-node lpd-state-${state} ${
             this.selected && this.selected.courseId === course.id && this.selected.lessonId === lesson.id ? "is-selected" : ""
           }`,
           attr: {
             title: `${lesson.label} ${lesson.title} · ${meta.label}`,
           },
         });
-        node.createSpan({ cls: "lpd-node-mark", text: meta.mark });
+        const capsule = node.createSpan({ cls: "lpd-capsule" });
+        for (let index = 1; index <= 3; index += 1) {
+          capsule.createSpan({ cls: `lpd-capsule-segment ${meta.depth >= index ? "is-filled" : ""}` });
+        }
         node.createSpan({ cls: "lpd-node-label", text: lesson.label });
         node.addEventListener("click", () => {
           this.selected = { courseId: course.id, lessonId: lesson.id };
@@ -550,10 +599,9 @@ class LearningProgressDashboardView extends ItemView {
       });
 
       const courseActions = row.createDiv({ cls: "lpd-course-actions" });
-      const progress = this.courseProgress(course);
       courseActions.createDiv({
         cls: "lpd-course-progress",
-        text: `${progress.active + progress.reviewable}/${progress.total} touched · ${progress.reviewable} reviewable`,
+        text: `${progress.learned}/${progress.total} 已学 · ${progress.organized} 已整理 · ${progress.mapped} 已成图`,
       });
       const moveUp = courseActions.createEl("button", { cls: "lpd-mini", text: "↑" });
       moveUp.addEventListener("click", () => this.plugin.moveCourse(course.id, -1));
@@ -585,10 +633,10 @@ class LearningProgressDashboardView extends ItemView {
     const stateSelect = stateField.createEl("select");
     Object.entries(STATE_META).forEach(([state, meta]) => {
       const option = stateSelect.createEl("option", {
-        text: `${meta.mark} ${meta.label}`,
+        text: `${meta.label} · ${meta.description}`,
         attr: { value: state },
       });
-      option.selected = (lesson.state || "raw") === state;
+      option.selected = normalizeState(lesson.state) === state;
     });
 
     const pathField = detail.createEl("label", { cls: "lpd-field" });
@@ -635,17 +683,28 @@ class LearningProgressDashboardView extends ItemView {
     return {
       courses: courses.length,
       lessons: lessons.length,
-      reviewable: lessons.filter((lesson) => lesson.state === "reviewable").length,
+      mapped: lessons.filter((lesson) => normalizeState(lesson.state) === "mapped").length,
     };
   }
 
   courseProgress(course) {
     const lessons = course.lessons || [];
+    const total = lessons.length;
+    const learned = lessons.filter((lesson) => stateDepth(lesson.state) >= 1).length;
+    const organized = lessons.filter((lesson) => stateDepth(lesson.state) >= 2).length;
+    const mapped = lessons.filter((lesson) => stateDepth(lesson.state) >= 3).length;
     return {
-      total: lessons.length,
-      active: lessons.filter((lesson) => lesson.state === "active").length,
-      reviewable: lessons.filter((lesson) => lesson.state === "reviewable").length,
+      total,
+      learned,
+      organized,
+      mapped,
     };
+  }
+
+  applyProgressStyles(track, progress) {
+    track.style.setProperty("--lpd-learned-width", percentage(progress.learned, progress.total));
+    track.style.setProperty("--lpd-organized-width", percentage(progress.organized, progress.total));
+    track.style.setProperty("--lpd-mapped-width", percentage(progress.mapped, progress.total));
   }
 }
 
@@ -653,6 +712,8 @@ module.exports = class LearningProgressDashboardPlugin extends Plugin {
   async onload() {
     this.store = new LearningBoardStore(this.app);
     this.syncTimer = null;
+    this.reloadTimer = null;
+    this.isReloading = false;
     this.registerView(VIEW_TYPE, (leaf) => new LearningProgressDashboardView(leaf, this));
 
     this.addRibbonIcon("map", "Learning Progress Dashboard", () => this.openDashboard());
@@ -661,11 +722,19 @@ module.exports = class LearningProgressDashboardPlugin extends Plugin {
       name: "Open Learning Progress Dashboard",
       callback: () => this.openDashboard(),
     });
+    this.addCommand({
+      id: "reload-learning-progress-dashboard",
+      name: "Reload Learning Progress Dashboard plugin",
+      callback: () => this.reloadSelf(),
+    });
 
     this.registerEvent(
       this.app.vault.on("modify", (file) => {
         if (file instanceof TFile && file.path === DATA_PATH) {
           this.refreshViews();
+        }
+        if (isPluginSourceFile(file)) {
+          this.scheduleSelfReload();
         }
       })
     );
@@ -689,6 +758,7 @@ module.exports = class LearningProgressDashboardPlugin extends Plugin {
 
   onunload() {
     if (this.syncTimer) window.clearTimeout(this.syncTimer);
+    if (this.reloadTimer) window.clearTimeout(this.reloadTimer);
     this.app.workspace.detachLeavesOfType(VIEW_TYPE);
   }
 
@@ -718,6 +788,34 @@ module.exports = class LearningProgressDashboardPlugin extends Plugin {
       this.syncTimer = null;
       await this.syncCoursesQuietly();
     }, 800);
+  }
+
+  scheduleSelfReload() {
+    if (this.reloadTimer) window.clearTimeout(this.reloadTimer);
+    this.reloadTimer = window.setTimeout(() => {
+      this.reloadTimer = null;
+      this.reloadSelf();
+    }, 600);
+  }
+
+  async reloadSelf() {
+    if (this.isReloading) return;
+    const plugins = this.app.plugins;
+    const pluginId = this.manifest?.id || PLUGIN_ID;
+    if (!plugins?.disablePlugin || !plugins?.enablePlugin) {
+      new Notice("Plugin reload is unavailable; use Obsidian reload.");
+      return;
+    }
+
+    this.isReloading = true;
+    try {
+      await plugins.disablePlugin(pluginId);
+      await plugins.enablePlugin(pluginId);
+      new Notice("Learning Progress Dashboard reloaded.");
+    } catch (error) {
+      console.error(error);
+      new Notice("Plugin reload failed; use Obsidian reload.");
+    }
   }
 
   async syncCoursesQuietly() {
