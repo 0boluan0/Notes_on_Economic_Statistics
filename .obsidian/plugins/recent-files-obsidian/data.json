@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "CLAUDE",
+      "path": "CLAUDE.md"
+    },
+    {
+      "basename": "AGENTS",
+      "path": "AGENTS.md"
+    },
+    {
       "basename": "linear_algebra_and_its_applications_4th",
       "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Books/linear_algebra_and_its_applications_4th.pdf"
     },
@@ -15,10 +23,6 @@
     {
       "basename": "00_MIT OCW 18.06SC course map",
       "path": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md"
-    },
-    {
-      "basename": "AGENTS",
-      "path": "AGENTS.md"
     },
     {
       "basename": "2026-02-02——Mon",
@@ -129,16 +133,8 @@
       "path": "98_attachment/Pasted image 20240228202716.png"
     },
     {
-      "basename": "CLAUDE",
-      "path": "CLAUDE.md"
-    },
-    {
       "basename": "Overview & Study Record",
       "path": "Overview & Study Record.md"
-    },
-    {
-      "basename": "normalize_callouts",
-      "path": "normalize_callouts.py"
     },
     {
       "basename": "09_联立方程模型(内生性)",
