@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "55157c9881baeb37",
+            "id": "4d13eeed982f95ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "01_Math/01_calculus/01_Single-Variable Calculus.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,21 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "CLAUDE"
+              "title": "01_Single-Variable Calculus"
+            }
+          },
+          {
+            "id": "edcbd56e93006c7c",
+            "type": "leaf",
+            "state": {
+              "type": "learning-progress-dashboard-view",
+              "state": {},
+              "icon": "map",
+              "title": "Learning Progress Dashboard"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -352,11 +363,15 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "55157c9881baeb37",
+  "active": "edcbd56e93006c7c",
   "lastOpenFiles": [
+    "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
+    "01_Math/01_calculus/01_Single-Variable Calculus.md",
+    "01_Math/04_多元统计分析/11_分类与判别Discrimination and Classifications.md",
+    "00_inbox/Untitled Kanban.md",
+    "CLAUDE.md",
     "AGENTS.md",
     "normalize_callouts.py",
-    "CLAUDE.md",
     "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Books/linear_algebra_and_its_applications_4th.pdf",
     "98_attachment/vault-home/learning-board.md",
     "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Books/Introduction_to_Linear_Algebra(Strang).pdf",
@@ -392,9 +407,6 @@
     "05_tools/labml.ai Deep Learning Paper Implementations.md",
     "05_tools/FastAPI.md",
     "98_attachment/Pasted image 20240229215711.png",
-    "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
-    "00_factor/concept/Reduced Row Echelon Form.md",
-    "00_factor/concept/Factor Analysis.md",
     "02_Economy/08_经济预测与决策/08_经济预测与决策.canvas",
     "02_Economy/04_经济思想史/04_经济思想史.canvas",
     "02_Economy/03_货币银行学/03_货币银行学.canvas",

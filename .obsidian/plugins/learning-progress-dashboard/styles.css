@@ -144,15 +144,6 @@
   background: color-mix(in srgb, var(--lpd-blue) 13%, var(--background-primary));
 }
 
-.lpd-checkbox-line {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  color: var(--lpd-muted);
-  font-size: 12px;
-  font-weight: 700;
-}
-
 .lpd-sidebar-actions,
 .lpd-detail-actions {
   display: flex;
@@ -223,10 +214,6 @@
   border-radius: 8px;
   background: var(--background-primary);
   padding: 10px;
-}
-
-.lpd-course-row.is-hidden {
-  opacity: 0.55;
 }
 
 .lpd-course-title {
@@ -324,6 +311,20 @@
   border-radius: 8px;
   padding: 16px;
   color: var(--lpd-muted);
+}
+
+.lpd-modal {
+  display: grid;
+  gap: 14px;
+}
+
+.lpd-modal h2 {
+  margin: 0;
+}
+
+.lpd-modal-form {
+  display: grid;
+  gap: 12px;
 }
 
 @media (max-width: 1200px) {

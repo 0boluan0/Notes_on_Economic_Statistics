@@ -1,4 +1,4 @@
-const { ItemView, Notice, Plugin, TFile, normalizePath, setIcon } = require("obsidian");
+const { ItemView, Modal, Notice, Plugin, TFile, normalizePath } = require("obsidian");
 
 const VIEW_TYPE = "learning-progress-dashboard-view";
 const DATA_PATH = "98_attachment/vault-home/learning-board.md";
@@ -146,6 +146,15 @@ function isLessonFile(file) {
   return !EXCLUDE_KEYWORDS.some((keyword) => basename.includes(keyword.toLowerCase()));
 }
 
+function isCourseRootPath(path) {
+  const rootName = String(path || "").split("/")[0];
+  return Boolean(COURSE_ROOTS[rootName]);
+}
+
+function shouldSyncCourseFile(file) {
+  return file instanceof TFile && file.extension === "md" && isCourseRootPath(file.path);
+}
+
 function lessonTitle(file) {
   const match = file.basename.match(LESSON_RE);
   if (!match) return file.basename;
@@ -218,10 +227,11 @@ class LearningBoardStore {
     await this.app.vault.modify(file, serializeData(data));
   }
 
-  async rescan(existingData) {
+  async sync(existingData) {
     const data = await this.scanData(existingData);
-    await this.write(data);
-    return data;
+    const changed = JSON.stringify(existingData?.courses || []) !== JSON.stringify(data.courses);
+    if (changed) await this.write(data);
+    return { data, changed };
   }
 
   async scanData(existingData) {
@@ -306,6 +316,129 @@ class LearningBoardStore {
   }
 }
 
+class ManualCourseModal extends Modal {
+  constructor(app, defaultRoot, onSubmit) {
+    super(app);
+    this.defaultRoot = normalizeRoot(defaultRoot) || "Math";
+    this.onSubmit = onSubmit;
+  }
+
+  onOpen() {
+    const { contentEl } = this;
+    contentEl.empty();
+    contentEl.addClass("lpd-modal");
+    contentEl.createEl("h2", { text: "Add course" });
+
+    const form = contentEl.createEl("form", { cls: "lpd-modal-form" });
+    const titleField = form.createEl("label", { cls: "lpd-field" });
+    titleField.createSpan({ text: "课程名称" });
+    const titleInput = titleField.createEl("input", {
+      attr: { type: "text", placeholder: "例如 06_时间序列分析" },
+    });
+
+    const rootField = form.createEl("label", { cls: "lpd-field" });
+    rootField.createSpan({ text: "课程分类" });
+    const rootSelect = rootField.createEl("select");
+    ROOT_ORDER.forEach((root) => {
+      const option = rootSelect.createEl("option", { text: root, attr: { value: root } });
+      option.selected = root === this.defaultRoot;
+    });
+
+    const actions = form.createDiv({ cls: "lpd-detail-actions" });
+    const cancel = actions.createEl("button", {
+      cls: "lpd-ghost",
+      text: "Cancel",
+      attr: { type: "button" },
+    });
+    cancel.addEventListener("click", () => this.close());
+    actions.createEl("button", {
+      cls: "lpd-primary",
+      text: "Add",
+      attr: { type: "submit" },
+    });
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const title = titleInput.value.trim();
+      if (!title) {
+        new Notice("Course title is required.");
+        return;
+      }
+      const submitted = await this.onSubmit({ title, root: rootSelect.value });
+      if (submitted !== false) this.close();
+    });
+
+    window.setTimeout(() => titleInput.focus(), 0);
+  }
+}
+
+class ManualLessonModal extends Modal {
+  constructor(app, course, onSubmit) {
+    super(app);
+    this.course = course;
+    this.onSubmit = onSubmit;
+  }
+
+  onOpen() {
+    const { contentEl } = this;
+    contentEl.empty();
+    contentEl.addClass("lpd-modal");
+    contentEl.createEl("h2", { text: "Add lesson" });
+    contentEl.createDiv({ cls: "lpd-muted", text: this.course.title });
+
+    const form = contentEl.createEl("form", { cls: "lpd-modal-form" });
+    const labelField = form.createEl("label", { cls: "lpd-field" });
+    labelField.createSpan({ text: "课节点编号" });
+    const labelInput = labelField.createEl("input", {
+      attr: { type: "text", placeholder: "例如 08" },
+    });
+    labelInput.value = nextLessonLabel(this.course);
+
+    const titleField = form.createEl("label", { cls: "lpd-field" });
+    titleField.createSpan({ text: "课节标题" });
+    const titleInput = titleField.createEl("input", {
+      attr: { type: "text", placeholder: "例如 Unit root and ARIMA" },
+    });
+
+    const pathField = form.createEl("label", { cls: "lpd-field" });
+    pathField.createSpan({ text: "课节笔记链接，可留空" });
+    const pathInput = pathField.createEl("input", {
+      attr: { type: "text", placeholder: `${this.course.path}/...` },
+    });
+
+    const actions = form.createDiv({ cls: "lpd-detail-actions" });
+    const cancel = actions.createEl("button", {
+      cls: "lpd-ghost",
+      text: "Cancel",
+      attr: { type: "button" },
+    });
+    cancel.addEventListener("click", () => this.close());
+    actions.createEl("button", {
+      cls: "lpd-primary",
+      text: "Add",
+      attr: { type: "submit" },
+    });
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const label = labelInput.value.trim();
+      const title = titleInput.value.trim();
+      if (!label || !title) {
+        new Notice("Lesson label and title are required.");
+        return;
+      }
+      const submitted = await this.onSubmit({
+        label,
+        title,
+        notePath: pathInput.value.trim(),
+      });
+      if (submitted !== false) this.close();
+    });
+
+    window.setTimeout(() => titleInput.focus(), 0);
+  }
+}
+
 class LearningProgressDashboardView extends ItemView {
   constructor(leaf, plugin) {
     super(leaf);
@@ -313,7 +446,6 @@ class LearningProgressDashboardView extends ItemView {
     this.data = null;
     this.query = "";
     this.rootFilter = "All";
-    this.showHidden = false;
     this.selected = null;
   }
 
@@ -354,7 +486,6 @@ class LearningProgressDashboardView extends ItemView {
     const query = this.query.trim().toLowerCase();
     return [...this.data.courses]
       .sort(compareSortKey)
-      .filter((course) => this.showHidden || course.visible !== false)
       .filter((course) => this.rootFilter === "All" || course.root === this.rootFilter)
       .filter((course) => {
         if (!query) return true;
@@ -394,21 +525,8 @@ class LearningProgressDashboardView extends ItemView {
       });
     });
 
-    const showHidden = sidebar.createEl("label", { cls: "lpd-checkbox-line" });
-    const hiddenInput = showHidden.createEl("input", { attr: { type: "checkbox" } });
-    hiddenInput.checked = this.showHidden;
-    showHidden.createSpan({ text: "Show hidden courses" });
-    hiddenInput.addEventListener("change", () => {
-      this.showHidden = hiddenInput.checked;
-      this.render();
-    });
-
     const actions = sidebar.createDiv({ cls: "lpd-sidebar-actions" });
-    const rescan = actions.createEl("button", { cls: "lpd-primary", text: "Rescan courses" });
-    rescan.addEventListener("click", async () => {
-      await this.plugin.rescanCourses();
-    });
-    const addCourse = actions.createEl("button", { cls: "lpd-ghost", text: "Add course" });
+    const addCourse = actions.createEl("button", { cls: "lpd-primary", text: "Add course" });
     addCourse.addEventListener("click", () => {
       const defaultRoot = this.rootFilter === "All" ? "Math" : this.rootFilter;
       this.plugin.addManualCourse(defaultRoot);
@@ -441,7 +559,7 @@ class LearningProgressDashboardView extends ItemView {
     }
 
     courses.forEach((course) => {
-      const row = list.createDiv({ cls: `lpd-course-row ${course.visible === false ? "is-hidden" : ""}` });
+      const row = list.createDiv({ cls: "lpd-course-row" });
       const courseInfo = row.createDiv({ cls: "lpd-course-info" });
       courseInfo.createDiv({ cls: "lpd-course-title", text: course.title });
       courseInfo.createDiv({ cls: "lpd-course-path", text: `${course.root} · ${course.path}` });
@@ -478,11 +596,6 @@ class LearningProgressDashboardView extends ItemView {
       moveDown.addEventListener("click", () => this.plugin.moveCourse(course.id, 1));
       const addLesson = courseActions.createEl("button", { cls: "lpd-mini", text: "+ Lesson" });
       addLesson.addEventListener("click", () => this.plugin.addManualLesson(course.id));
-      const toggle = courseActions.createEl("button", {
-        cls: "lpd-mini",
-        text: course.visible === false ? "Show" : "Hide",
-      });
-      toggle.addEventListener("click", () => this.plugin.toggleCourseVisibility(course.id));
     });
   }
 
@@ -552,7 +665,7 @@ class LearningProgressDashboardView extends ItemView {
   }
 
   computeStats() {
-    const courses = this.data ? this.data.courses.filter((course) => course.visible !== false) : [];
+    const courses = this.data ? this.data.courses : [];
     const lessons = courses.flatMap((course) => course.lessons || []);
     return {
       courses: courses.length,
@@ -574,6 +687,7 @@ class LearningProgressDashboardView extends ItemView {
 module.exports = class LearningProgressDashboardPlugin extends Plugin {
   async onload() {
     this.store = new LearningBoardStore(this.app);
+    this.syncTimer = null;
     this.registerView(VIEW_TYPE, (leaf) => new LearningProgressDashboardView(leaf, this));
 
     this.addRibbonIcon("map", "Learning Progress Dashboard", () => this.openDashboard());
@@ -581,11 +695,6 @@ module.exports = class LearningProgressDashboardPlugin extends Plugin {
       id: "open-learning-progress-dashboard",
       name: "Open Learning Progress Dashboard",
       callback: () => this.openDashboard(),
-    });
-    this.addCommand({
-      id: "rescan-learning-progress-courses",
-      name: "Rescan learning progress courses",
-      callback: () => this.rescanCourses(),
     });
 
     this.registerEvent(
@@ -595,14 +704,26 @@ module.exports = class LearningProgressDashboardPlugin extends Plugin {
         }
       })
     );
+    this.registerEvent(
+      this.app.vault.on("create", (file) => {
+        if (shouldSyncCourseFile(file)) this.scheduleCourseSync();
+      })
+    );
+    this.registerEvent(
+      this.app.vault.on("rename", (file, oldPath) => {
+        if (shouldSyncCourseFile(file) || isCourseRootPath(oldPath)) this.scheduleCourseSync();
+      })
+    );
 
     this.app.workspace.onLayoutReady(async () => {
       await this.store.ensureDataFile();
+      await this.syncCoursesQuietly();
       await this.openDashboard();
     });
   }
 
   onunload() {
+    if (this.syncTimer) window.clearTimeout(this.syncTimer);
     this.app.workspace.detachLeavesOfType(VIEW_TYPE);
   }
 
@@ -626,11 +747,18 @@ module.exports = class LearningProgressDashboardPlugin extends Plugin {
     }
   }
 
-  async rescanCourses() {
+  scheduleCourseSync() {
+    if (this.syncTimer) window.clearTimeout(this.syncTimer);
+    this.syncTimer = window.setTimeout(async () => {
+      this.syncTimer = null;
+      await this.syncCoursesQuietly();
+    }, 800);
+  }
+
+  async syncCoursesQuietly() {
     const existing = await this.store.read();
-    await this.store.rescan(existing);
-    await this.refreshViews();
-    new Notice("Learning courses rescanned.");
+    const result = await this.store.sync(existing);
+    if (result.changed) await this.refreshViews();
   }
 
   async updateLesson(courseId, lessonId, patch) {
@@ -645,35 +773,28 @@ module.exports = class LearningProgressDashboardPlugin extends Plugin {
   }
 
   async addManualCourse(defaultRoot) {
-    const title = window.prompt("Course title");
-    if (!title || !title.trim()) return;
+    new ManualCourseModal(this.app, defaultRoot, async ({ title, root }) => {
+      const data = await this.store.read();
+      const path = `${ROOT_FOLDER_BY_LABEL[root]}/${title}`;
+      if (data.courses.some((course) => course.path === path)) {
+        new Notice("Course already exists.");
+        return false;
+      }
 
-    const rootInput = window.prompt("Course root: Math, Economy, or Computer Science", defaultRoot || "Math");
-    const root = normalizeRoot(rootInput);
-    if (!root) {
-      new Notice("Course root must be Math, Economy, or Computer Science.");
-      return;
-    }
-
-    const data = await this.store.read();
-    const path = `${ROOT_FOLDER_BY_LABEL[root]}/${title.trim()}`;
-    if (data.courses.some((course) => course.path === path)) {
-      new Notice("Course already exists.");
-      return;
-    }
-
-    data.courses.push({
-      id: makeId(path),
-      title: title.trim(),
-      root,
-      path,
-      visible: true,
-      order: nextCourseOrder(data.courses),
-      lessons: [],
-    });
-    await this.store.write(data);
-    await this.refreshViews();
-    new Notice("Course added.");
+      data.courses.push({
+        id: makeId(path),
+        title,
+        root,
+        path,
+        visible: true,
+        order: nextCourseOrder(data.courses),
+        lessons: [],
+      });
+      await this.store.write(data);
+      await this.refreshViews();
+      new Notice("Course added.");
+      return true;
+    }).open();
   }
 
   async addManualLesson(courseId) {
@@ -681,33 +802,24 @@ module.exports = class LearningProgressDashboardPlugin extends Plugin {
     const course = data.courses.find((item) => item.id === courseId);
     if (!course) return;
 
-    const label = window.prompt("Lesson label", nextLessonLabel(course));
-    if (!label || !label.trim()) return;
-    const title = window.prompt("Lesson title");
-    if (!title || !title.trim()) return;
-    const notePath = window.prompt("Lesson note path, optional", "") || "";
-
-    course.lessons = Array.isArray(course.lessons) ? course.lessons : [];
-    course.lessons.push({
-      id: makeId(`${course.path}/${label.trim()}-${title.trim()}-${Date.now()}`),
-      label: label.trim(),
-      title: title.trim(),
-      notePath: notePath.trim(),
-      state: "raw",
-      remark: "",
-    });
-    await this.store.write(data);
-    await this.refreshViews();
-    new Notice("Lesson added.");
-  }
-
-  async toggleCourseVisibility(courseId) {
-    const data = await this.store.read();
-    const course = data.courses.find((item) => item.id === courseId);
-    if (!course) return;
-    course.visible = course.visible === false ? true : false;
-    await this.store.write(data);
-    await this.refreshViews();
+    new ManualLessonModal(this.app, course, async ({ label, title, notePath }) => {
+      const latest = await this.store.read();
+      const latestCourse = latest.courses.find((item) => item.id === courseId);
+      if (!latestCourse) return;
+      latestCourse.lessons = Array.isArray(latestCourse.lessons) ? latestCourse.lessons : [];
+      latestCourse.lessons.push({
+        id: makeId(`${latestCourse.path}/${label}-${title}-${Date.now()}`),
+        label,
+        title,
+        notePath,
+        state: "raw",
+        remark: "",
+      });
+      await this.store.write(latest);
+      await this.refreshViews();
+      new Notice("Lesson added.");
+      return true;
+    }).open();
   }
 
   async moveCourse(courseId, delta) {

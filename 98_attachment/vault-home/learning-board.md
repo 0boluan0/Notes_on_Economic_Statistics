@@ -1,7 +1,7 @@
 ---
 learningBoard: true
 version: 1
-updated: "2026-05-16T19:28:23"
+updated: "2026-05-16T15:56:44.541Z"
 ---
 
 # Learning Progress Board
@@ -12,14 +12,14 @@ You can hand-edit it, but keep the fenced JSON block valid.
 ```learning-board-json
 {
   "version": 1,
-  "updatedAt": "2026-05-16T19:28:23",
+  "updatedAt": "2026-05-16T15:56:44.541Z",
   "courses": [
     {
       "id": "01-math-02-linear-algebra-v052w1",
       "title": "02_linear algebra",
       "root": "Math",
       "path": "01_Math/02_linear algebra",
-      "visible": true,
+      "visible": false,
       "order": 1,
       "lessons": [
         {
@@ -27,7 +27,7 @@ You can hand-edit it, but keep the fenced JSON block valid.
           "label": "01",
           "title": "Ax = b and the Four Subspaces",
           "notePath": "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
-          "state": "active",
+          "state": "raw",
           "remark": ""
         },
         {
@@ -363,6 +363,24 @@ You can hand-edit it, but keep the fenced JSON block valid.
           "label": "07",
           "title": "协整和误差修正模型",
           "notePath": "01_Math/06_时间序列分析/07_协整和误差修正模型.md",
+          "state": "active",
+          "remark": ""
+        }
+      ]
+    },
+    {
+      "id": "01-math-01-calculus-mzqacf",
+      "title": "01_calculus",
+      "root": "Math",
+      "path": "01_Math/01_calculus",
+      "visible": true,
+      "order": 17,
+      "lessons": [
+        {
+          "id": "01-math-01-calculus-01-single-variable-calculus-md-krx96a",
+          "label": "01",
+          "title": "Single Variable Calculus",
+          "notePath": "01_Math/01_calculus/01_Single-Variable Calculus.md",
           "state": "active",
           "remark": ""
         }
