@@ -10,11 +10,6 @@ const COURSE_ROOTS = {
 };
 
 const ROOT_ORDER = ["Math", "Economy", "Computer Science"];
-const ROOT_FOLDER_BY_LABEL = {
-  Math: "01_Math",
-  Economy: "02_Economy",
-  "Computer Science": "03_Computer_Science",
-};
 const LESSON_RE = /^(\d{1,2})[_-](.+)$/;
 const SECTION_RE = /^(\d+)[_-]/;
 const EXCLUDE_KEYWORDS = [
@@ -91,18 +86,20 @@ function compareSortKey(a, b) {
   return 0;
 }
 
-function normalizeRoot(value) {
-  const input = String(value || "").trim().toLowerCase();
-  if (["math", "01_math", "01 math"].includes(input)) return "Math";
-  if (["economy", "econ", "02_economy", "02 economy"].includes(input)) return "Economy";
-  if (["computer science", "cs", "03_computer_science", "03 computer science"].includes(input)) {
-    return "Computer Science";
-  }
-  return null;
+function lessonSortValue(lesson) {
+  const label = String(lesson.label || "");
+  const dotted = label.match(/^(\d+)\.(\d+)$/);
+  if (dotted) return Number(dotted[1]) * 100 + Number(dotted[2]);
+  const integer = label.match(/^(\d+)$/);
+  if (integer) return Number(integer[1]);
+  return 9999;
 }
 
-function nextCourseOrder(courses) {
-  return courses.reduce((max, course) => Math.max(max, Number(course.order) || 0), 0) + 1;
+function compareLessons(a, b) {
+  const left = lessonSortValue(a);
+  const right = lessonSortValue(b);
+  if (left !== right) return left - right;
+  return String(a.title || "").localeCompare(String(b.title || ""));
 }
 
 function nextLessonLabel(course) {
@@ -112,6 +109,44 @@ function nextLessonLabel(course) {
     .map((match) => Number(match[0]));
   const next = labels.length > 0 ? Math.max(...labels) + 1 : 1;
   return String(next).padStart(2, "0");
+}
+
+function normalizeLessonLabel(value) {
+  const digits = String(value || "").trim().match(/\d+$/);
+  if (!digits) return "";
+  return digits[0].padStart(2, "0");
+}
+
+function safeFileNamePart(value) {
+  return String(value || "")
+    .trim()
+    .replace(/[\\/:*?"<>|#^[\]]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function buildLessonNotePath(course, label, title) {
+  const safeTitle = safeFileNamePart(title);
+  return normalizePath(`${course.path}/${label}_${safeTitle}.md`);
+}
+
+function yamlString(value) {
+  return JSON.stringify(String(value || ""));
+}
+
+function buildLessonNoteContent(course, title) {
+  return [
+    "---",
+    "aliases: []",
+    "tags:",
+    "  - course-note",
+    `科目: ${yamlString(course.root)}`,
+    `course: ${yamlString(course.title)}`,
+    "---",
+    "",
+    `# ${title}`,
+    "",
+  ].join("\n");
 }
 
 function serializeData(data) {
@@ -143,6 +178,7 @@ function serializeData(data) {
 function isLessonFile(file) {
   const basename = file.basename.toLowerCase();
   if (!LESSON_RE.test(file.basename)) return false;
+  if (file.path.split("/").length === 3) return true;
   return !EXCLUDE_KEYWORDS.some((keyword) => basename.includes(keyword.toLowerCase()));
 }
 
@@ -236,7 +272,6 @@ class LearningBoardStore {
 
   async scanData(existingData) {
     const existing = existingData && Array.isArray(existingData.courses) ? existingData : { courses: [] };
-    const existingByPath = new Map(existing.courses.map((course) => [course.path, course]));
     const scannedCourses = new Map();
 
     for (const file of this.app.vault.getMarkdownFiles()) {
@@ -277,6 +312,7 @@ class LearningBoardStore {
     for (const existingCourse of existing.courses) {
       const cloned = {
         ...existingCourse,
+        visible: true,
         lessons: Array.isArray(existingCourse.lessons) ? existingCourse.lessons.map((lesson) => ({ ...lesson })) : [],
       };
       maxOrder = Math.max(maxOrder, Number(cloned.order) || 0);
@@ -306,6 +342,7 @@ class LearningBoardStore {
           current.lessons.push(lesson);
         }
       }
+      current.lessons = current.lessons.sort(compareLessons);
     }
 
     return {
@@ -313,62 +350,6 @@ class LearningBoardStore {
       updatedAt: new Date().toISOString(),
       courses: [...resultByPath.values()].sort(compareSortKey),
     };
-  }
-}
-
-class ManualCourseModal extends Modal {
-  constructor(app, defaultRoot, onSubmit) {
-    super(app);
-    this.defaultRoot = normalizeRoot(defaultRoot) || "Math";
-    this.onSubmit = onSubmit;
-  }
-
-  onOpen() {
-    const { contentEl } = this;
-    contentEl.empty();
-    contentEl.addClass("lpd-modal");
-    contentEl.createEl("h2", { text: "Add course" });
-
-    const form = contentEl.createEl("form", { cls: "lpd-modal-form" });
-    const titleField = form.createEl("label", { cls: "lpd-field" });
-    titleField.createSpan({ text: "课程名称" });
-    const titleInput = titleField.createEl("input", {
-      attr: { type: "text", placeholder: "例如 06_时间序列分析" },
-    });
-
-    const rootField = form.createEl("label", { cls: "lpd-field" });
-    rootField.createSpan({ text: "课程分类" });
-    const rootSelect = rootField.createEl("select");
-    ROOT_ORDER.forEach((root) => {
-      const option = rootSelect.createEl("option", { text: root, attr: { value: root } });
-      option.selected = root === this.defaultRoot;
-    });
-
-    const actions = form.createDiv({ cls: "lpd-detail-actions" });
-    const cancel = actions.createEl("button", {
-      cls: "lpd-ghost",
-      text: "Cancel",
-      attr: { type: "button" },
-    });
-    cancel.addEventListener("click", () => this.close());
-    actions.createEl("button", {
-      cls: "lpd-primary",
-      text: "Add",
-      attr: { type: "submit" },
-    });
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const title = titleInput.value.trim();
-      if (!title) {
-        new Notice("Course title is required.");
-        return;
-      }
-      const submitted = await this.onSubmit({ title, root: rootSelect.value });
-      if (submitted !== false) this.close();
-    });
-
-    window.setTimeout(() => titleInput.focus(), 0);
   }
 }
 
@@ -400,12 +381,6 @@ class ManualLessonModal extends Modal {
       attr: { type: "text", placeholder: "例如 Unit root and ARIMA" },
     });
 
-    const pathField = form.createEl("label", { cls: "lpd-field" });
-    pathField.createSpan({ text: "课节笔记链接，可留空" });
-    const pathInput = pathField.createEl("input", {
-      attr: { type: "text", placeholder: `${this.course.path}/...` },
-    });
-
     const actions = form.createDiv({ cls: "lpd-detail-actions" });
     const cancel = actions.createEl("button", {
       cls: "lpd-ghost",
@@ -430,7 +405,6 @@ class ManualLessonModal extends Modal {
       const submitted = await this.onSubmit({
         label,
         title,
-        notePath: pathInput.value.trim(),
       });
       if (submitted !== false) this.close();
     });
@@ -525,15 +499,6 @@ class LearningProgressDashboardView extends ItemView {
       });
     });
 
-    const actions = sidebar.createDiv({ cls: "lpd-sidebar-actions" });
-    const addCourse = actions.createEl("button", { cls: "lpd-primary", text: "Add course" });
-    addCourse.addEventListener("click", () => {
-      const defaultRoot = this.rootFilter === "All" ? "Math" : this.rootFilter;
-      this.plugin.addManualCourse(defaultRoot);
-    });
-    const openFile = actions.createEl("button", { cls: "lpd-ghost", text: "Open data file" });
-    openFile.addEventListener("click", () => this.plugin.openPath(DATA_PATH));
-
     const legend = sidebar.createDiv({ cls: "lpd-legend" });
     Object.entries(STATE_META).forEach(([state, meta]) => {
       const row = legend.createDiv({ cls: "lpd-legend-row" });
@@ -565,7 +530,7 @@ class LearningProgressDashboardView extends ItemView {
       courseInfo.createDiv({ cls: "lpd-course-path", text: `${course.root} · ${course.path}` });
 
       const track = row.createDiv({ cls: "lpd-track" });
-      const lessons = [...(course.lessons || [])].sort((a, b) => String(a.label).localeCompare(String(b.label)));
+      const lessons = [...(course.lessons || [])].sort(compareLessons);
       lessons.forEach((lesson) => {
         const meta = STATE_META[lesson.state] || STATE_META.raw;
         const node = track.createEl("button", {
@@ -772,52 +737,43 @@ module.exports = class LearningProgressDashboardPlugin extends Plugin {
     await this.refreshViews();
   }
 
-  async addManualCourse(defaultRoot) {
-    new ManualCourseModal(this.app, defaultRoot, async ({ title, root }) => {
-      const data = await this.store.read();
-      const path = `${ROOT_FOLDER_BY_LABEL[root]}/${title}`;
-      if (data.courses.some((course) => course.path === path)) {
-        new Notice("Course already exists.");
-        return false;
-      }
-
-      data.courses.push({
-        id: makeId(path),
-        title,
-        root,
-        path,
-        visible: true,
-        order: nextCourseOrder(data.courses),
-        lessons: [],
-      });
-      await this.store.write(data);
-      await this.refreshViews();
-      new Notice("Course added.");
-      return true;
-    }).open();
-  }
-
   async addManualLesson(courseId) {
     const data = await this.store.read();
     const course = data.courses.find((item) => item.id === courseId);
     if (!course) return;
 
-    new ManualLessonModal(this.app, course, async ({ label, title, notePath }) => {
+    new ManualLessonModal(this.app, course, async ({ label, title }) => {
+      const normalizedLabel = normalizeLessonLabel(label);
+      if (!normalizedLabel) {
+        new Notice("Lesson label must contain a number.");
+        return false;
+      }
+
       const latest = await this.store.read();
       const latestCourse = latest.courses.find((item) => item.id === courseId);
       if (!latestCourse) return;
+      const notePath = buildLessonNotePath(latestCourse, normalizedLabel, title);
+      if (this.app.vault.getAbstractFileByPath(notePath)) {
+        new Notice(`Note already exists: ${notePath}`);
+        return false;
+      }
+
+      await this.store.ensureFolder(notePath);
+      const file = await this.app.vault.create(notePath, buildLessonNoteContent(latestCourse, title));
       latestCourse.lessons = Array.isArray(latestCourse.lessons) ? latestCourse.lessons : [];
       latestCourse.lessons.push({
-        id: makeId(`${latestCourse.path}/${label}-${title}-${Date.now()}`),
-        label,
+        id: makeId(notePath),
+        label: normalizedLabel,
         title,
         notePath,
         state: "raw",
         remark: "",
       });
+      latestCourse.lessons.sort(compareLessons);
       await this.store.write(latest);
       await this.refreshViews();
-      new Notice("Lesson added.");
+      await this.app.workspace.getLeaf(false).openFile(file);
+      new Notice("Lesson note created.");
       return true;
     }).open();
   }

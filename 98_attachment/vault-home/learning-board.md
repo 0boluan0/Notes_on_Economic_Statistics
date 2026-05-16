@@ -1,7 +1,7 @@
 ---
 learningBoard: true
 version: 1
-updated: "2026-05-16T15:56:44.541Z"
+updated: "2026-05-16T16:08:05.510802Z"
 ---
 
 # Learning Progress Board
@@ -12,16 +12,42 @@ You can hand-edit it, but keep the fenced JSON block valid.
 ```learning-board-json
 {
   "version": 1,
-  "updatedAt": "2026-05-16T15:56:44.541Z",
+  "updatedAt": "2026-05-16T16:08:05.510802Z",
   "courses": [
+    {
+      "id": "01-math-01-calculus-mzqacf",
+      "title": "01_calculus",
+      "root": "Math",
+      "path": "01_Math/01_calculus",
+      "visible": true,
+      "order": 1,
+      "lessons": [
+        {
+          "id": "01-math-01-calculus-01-single-variable-calculus-md-krx96a",
+          "label": "01",
+          "title": "Single Variable Calculus",
+          "notePath": "01_Math/01_calculus/01_Single-Variable Calculus.md",
+          "state": "raw",
+          "remark": ""
+        }
+      ]
+    },
     {
       "id": "01-math-02-linear-algebra-v052w1",
       "title": "02_linear algebra",
       "root": "Math",
       "path": "01_Math/02_linear algebra",
-      "visible": false,
-      "order": 1,
+      "visible": true,
+      "order": 2,
       "lessons": [
+        {
+          "id": "01-math-02-linear-algebra-00-mit-ocw-18-06sc-course-map-md-beeoa3",
+          "label": "00",
+          "title": "MIT OCW 18.06SC course map",
+          "notePath": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md",
+          "state": "active",
+          "remark": ""
+        },
         {
           "id": "01-math-02-linear-algebra-01-ax-b-and-the-four-subspaces-md-a4w49s",
           "label": "01",
@@ -45,6 +71,14 @@ You can hand-edit it, but keep the fenced JSON block valid.
           "notePath": "01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md",
           "state": "active",
           "remark": ""
+        },
+        {
+          "id": "01-math-02-linear-algebra-04-review-and-exam-roadmap-md-gk5kme",
+          "label": "04",
+          "title": "Review and exam roadmap",
+          "notePath": "01_Math/02_linear algebra/04_Review and exam roadmap.md",
+          "state": "active",
+          "remark": ""
         }
       ]
     },
@@ -54,7 +88,7 @@ You can hand-edit it, but keep the fenced JSON block valid.
       "root": "Math",
       "path": "01_Math/03_game theory",
       "visible": true,
-      "order": 2,
+      "order": 3,
       "lessons": [
         {
           "id": "01-math-03-game-theory-01-md-pmbh4",
@@ -120,7 +154,7 @@ You can hand-edit it, but keep the fenced JSON block valid.
       "root": "Math",
       "path": "01_Math/04_多元统计分析",
       "visible": true,
-      "order": 3,
+      "order": 4,
       "lessons": [
         {
           "id": "01-math-04-01-introduction-md-qoyud2",
@@ -226,7 +260,7 @@ You can hand-edit it, but keep the fenced JSON block valid.
       "root": "Math",
       "path": "01_Math/05_随机过程",
       "visible": true,
-      "order": 4,
+      "order": 5,
       "lessons": [
         {
           "id": "01-math-05-00-md-qd9i7o",
@@ -300,7 +334,7 @@ You can hand-edit it, but keep the fenced JSON block valid.
       "root": "Math",
       "path": "01_Math/06_时间序列分析",
       "visible": true,
-      "order": 5,
+      "order": 17,
       "lessons": [
         {
           "id": "01-math-06-00-md-5wbw4j",
@@ -363,24 +397,6 @@ You can hand-edit it, but keep the fenced JSON block valid.
           "label": "07",
           "title": "协整和误差修正模型",
           "notePath": "01_Math/06_时间序列分析/07_协整和误差修正模型.md",
-          "state": "active",
-          "remark": ""
-        }
-      ]
-    },
-    {
-      "id": "01-math-01-calculus-mzqacf",
-      "title": "01_calculus",
-      "root": "Math",
-      "path": "01_Math/01_calculus",
-      "visible": true,
-      "order": 17,
-      "lessons": [
-        {
-          "id": "01-math-01-calculus-01-single-variable-calculus-md-krx96a",
-          "label": "01",
-          "title": "Single Variable Calculus",
-          "notePath": "01_Math/01_calculus/01_Single-Variable Calculus.md",
           "state": "active",
           "remark": ""
         }
@@ -853,6 +869,14 @@ You can hand-edit it, but keep the fenced JSON block valid.
       "order": 11,
       "lessons": [
         {
+          "id": "02-economy-06-00-md-8ydh1j",
+          "label": "00",
+          "title": "仅划重点",
+          "notePath": "02_Economy/06_证券投资学/00_仅划重点.md",
+          "state": "active",
+          "remark": ""
+        },
+        {
           "id": "02-economy-06-01-md-m6hifd",
           "label": "01",
           "title": "证券投资工具",
@@ -950,6 +974,14 @@ You can hand-edit it, but keep the fenced JSON block valid.
       "visible": true,
       "order": 12,
       "lessons": [
+        {
+          "id": "02-economy-07-00-md-n8fbe4",
+          "label": "00",
+          "title": "金融风险划重点",
+          "notePath": "02_Economy/07_金融机构与风险管理/00_金融风险划重点.md",
+          "state": "active",
+          "remark": ""
+        },
         {
           "id": "02-economy-07-01-md-yv8f9p",
           "label": "01",
@@ -1088,6 +1120,14 @@ You can hand-edit it, but keep the fenced JSON block valid.
       "visible": true,
       "order": 13,
       "lessons": [
+        {
+          "id": "02-economy-10-00-md-ujtrnv",
+          "label": "00",
+          "title": "导论和考试相关",
+          "notePath": "02_Economy/10_发展经济学/00_导论和考试相关.md",
+          "state": "active",
+          "remark": ""
+        },
         {
           "id": "02-economy-10-01-md-augi4o",
           "label": "01",
@@ -1309,6 +1349,14 @@ You can hand-edit it, but keep the fenced JSON block valid.
           "remark": ""
         },
         {
+          "id": "03-computer-science-03-mit-6-100l-20-fitness-tracker-object-oriented-programming-example-md-6i9esm",
+          "label": "20",
+          "title": "Fitness Tracker Object Oriented Programming Example",
+          "notePath": "03_Computer_Science/03_MIT 6.100L/20_Fitness Tracker Object-Oriented Programming Example.md",
+          "state": "active",
+          "remark": ""
+        },
+        {
           "id": "03-computer-science-03-mit-6-100l-21-timing-programs-and-counting-operations-md-tzbhtn",
           "label": "21",
           "title": "Timing Programs and Counting Operations",
@@ -1321,6 +1369,14 @@ You can hand-edit it, but keep the fenced JSON block valid.
           "label": "22",
           "title": "Big Oh and Theta",
           "notePath": "03_Computer_Science/03_MIT 6.100L/22_Big Oh and Theta.md",
+          "state": "active",
+          "remark": ""
+        },
+        {
+          "id": "03-computer-science-03-mit-6-100l-23-complexity-classes-examples-md-xv92st",
+          "label": "23",
+          "title": "Complexity Classes Examples",
+          "notePath": "03_Computer_Science/03_MIT 6.100L/23_Complexity Classes Examples.md",
           "state": "active",
           "remark": ""
         },

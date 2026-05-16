@@ -144,7 +144,6 @@
   background: color-mix(in srgb, var(--lpd-blue) 13%, var(--background-primary));
 }
 
-.lpd-sidebar-actions,
 .lpd-detail-actions {
   display: flex;
   flex-wrap: wrap;
