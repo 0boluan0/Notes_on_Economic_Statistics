@@ -30,5 +30,6 @@
   "cron",
   "terminal",
   "obsidian-annotator",
-  "obsidian-html-plugin"
+  "obsidian-html-plugin",
+  "learning-progress-dashboard"
 ]

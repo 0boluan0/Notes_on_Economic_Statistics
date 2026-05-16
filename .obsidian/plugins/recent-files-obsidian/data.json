@@ -17,10 +17,6 @@
       "path": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md"
     },
     {
-      "basename": "00_Home",
-      "path": "00_Home.md"
-    },
-    {
       "basename": "AGENTS",
       "path": "AGENTS.md"
     },
@@ -123,22 +119,6 @@
     {
       "basename": "mit6_100l_ex02_sol",
       "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-finger-exercises/mit6_100l_ex02_sol.pdf"
-    },
-    {
-      "basename": "index",
-      "path": "98_attachment/vault-home/index.html"
-    },
-    {
-      "basename": "dashboard-data",
-      "path": "98_attachment/vault-home/dashboard-data.js"
-    },
-    {
-      "basename": "dashboard",
-      "path": "98_attachment/vault-home/dashboard.js"
-    },
-    {
-      "basename": "dashboard",
-      "path": "98_attachment/vault-home/dashboard.css"
     },
     {
       "basename": "Pasted image 20240229211911",

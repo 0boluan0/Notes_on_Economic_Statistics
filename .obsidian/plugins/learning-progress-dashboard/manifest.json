@@ -1,0 +1,9 @@
+{
+  "id": "learning-progress-dashboard",
+  "name": "Learning Progress Dashboard",
+  "version": "0.1.0",
+  "minAppVersion": "0.15.0",
+  "description": "Obsidian-native course progress dashboard with course rails and editable lesson states.",
+  "author": "fengyihang",
+  "isDesktopOnly": false
+}
