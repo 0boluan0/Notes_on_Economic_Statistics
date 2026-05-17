@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "846d87e94e4aae3a",
+        "id": "8b650ceb38c4f708",
         "type": "tabs",
         "children": [
           {
-            "id": "570b1d24912c21ce",
+            "id": "23aab54f24f56f93",
             "type": "leaf",
             "state": {
               "type": "learning-progress-dashboard-view",
@@ -338,7 +338,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "570b1d24912c21ce",
+  "active": "23aab54f24f56f93",
   "lastOpenFiles": [
     "01_Math/01_calculus/Lecture_notes/1-7.pdf",
     "01_Math/02_linear algebra/04_Review and exam roadmap.md",

@@ -7,9 +7,9 @@
   --lpd-text: var(--text-normal);
   --lpd-muted: var(--text-muted);
   --lpd-faint: var(--text-faint);
-  --lpd-learned: rgba(104, 135, 174, 0.16);
-  --lpd-organized: rgba(96, 148, 129, 0.16);
-  --lpd-mapped: rgba(116, 111, 166, 0.17);
+  --lpd-learned: rgba(104, 135, 174, 0.28);
+  --lpd-organized: rgba(96, 148, 129, 0.3);
+  --lpd-mapped: rgba(116, 111, 166, 0.32);
   --lpd-learned-ink: #7e93aa;
   --lpd-organized-ink: #789e8d;
   --lpd-mapped-ink: #877fb1;
@@ -281,30 +281,29 @@
   min-width: 0;
   min-height: 42px;
   padding: 7px 0 14px;
-}
-
-.lpd-track-layers,
-.lpd-track-layer {
-  position: absolute;
-  pointer-events: none;
+  overflow: hidden;
+  border: 1px solid var(--lpd-border);
+  border-radius: 8px;
+  background: var(--lpd-surface-soft);
 }
 
 .lpd-track-layers {
-  top: 7px;
-  right: 0;
-  left: 0;
-  height: 14px;
+  position: absolute;
+  inset: 0;
   overflow: hidden;
-  border: 1px solid var(--lpd-border);
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--background-primary) 75%, var(--background-secondary));
+  border-radius: inherit;
+  pointer-events: none;
 }
 
 .lpd-track-layer {
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   width: 0;
+  height: auto;
+  border-radius: inherit;
+  pointer-events: none;
 }
 
 .lpd-track-layer-learned {
