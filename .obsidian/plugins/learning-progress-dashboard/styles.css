@@ -1,28 +1,28 @@
 .lpd-root {
   --lpd-bg: var(--background-primary);
-  --lpd-surface: color-mix(in srgb, var(--background-secondary) 68%, var(--background-primary));
-  --lpd-surface-soft: color-mix(in srgb, var(--background-secondary) 42%, var(--background-primary));
-  --lpd-border: color-mix(in srgb, var(--background-modifier-border) 78%, transparent);
-  --lpd-border-strong: color-mix(in srgb, var(--background-modifier-border) 92%, var(--text-muted));
+  --lpd-surface: color-mix(in srgb, var(--background-secondary) 42%, var(--background-primary));
+  --lpd-surface-soft: color-mix(in srgb, var(--background-secondary) 22%, var(--background-primary));
+  --lpd-border: color-mix(in srgb, var(--background-modifier-border) 62%, transparent);
+  --lpd-border-strong: color-mix(in srgb, var(--background-modifier-border) 80%, var(--text-faint));
   --lpd-text: var(--text-normal);
   --lpd-muted: var(--text-muted);
   --lpd-faint: var(--text-faint);
-  --lpd-learned: rgba(104, 135, 174, 0.2);
-  --lpd-organized: rgba(96, 148, 129, 0.2);
-  --lpd-mapped: rgba(116, 111, 166, 0.2);
-  --lpd-learned-ink: #7890ad;
-  --lpd-organized-ink: #6f9c8b;
-  --lpd-mapped-ink: #8179b1;
+  --lpd-learned: rgba(104, 135, 174, 0.16);
+  --lpd-organized: rgba(96, 148, 129, 0.16);
+  --lpd-mapped: rgba(116, 111, 166, 0.17);
+  --lpd-learned-ink: #7e93aa;
+  --lpd-organized-ink: #789e8d;
+  --lpd-mapped-ink: #877fb1;
   height: 100%;
   color: var(--lpd-text);
 }
 
 .lpd-shell {
   display: grid;
-  grid-template-columns: 240px minmax(520px, 1fr) 300px;
-  gap: 10px;
+  grid-template-columns: 230px minmax(560px, 1fr) 292px;
+  gap: 8px;
   height: 100%;
-  padding: 10px;
+  padding: 8px;
   background: var(--lpd-bg);
 }
 
@@ -40,16 +40,16 @@
 .lpd-detail {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 14px;
+  gap: 14px;
+  padding: 14px 13px;
   overflow: auto;
 }
 
 .lpd-main {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 14px;
+  gap: 10px;
+  padding: 12px 14px;
   overflow: hidden;
 }
 
@@ -70,14 +70,14 @@
 }
 
 .lpd-sidebar h1 {
-  font-size: 24px;
-  font-weight: 720;
+  font-size: 22px;
+  font-weight: 680;
 }
 
 .lpd-main h2,
 .lpd-detail h2 {
-  font-size: 18px;
-  font-weight: 680;
+  font-size: 17px;
+  font-weight: 650;
 }
 
 .lpd-muted,
@@ -96,7 +96,7 @@
   min-height: 34px;
   border: 1px solid var(--lpd-border);
   border-radius: 7px;
-  background: var(--background-primary);
+  background: color-mix(in srgb, var(--background-primary) 94%, var(--background-secondary));
   color: var(--lpd-text);
   font: inherit;
   outline: none;
@@ -141,7 +141,7 @@
 .lpd-filter,
 .lpd-ghost,
 .lpd-mini {
-  background: color-mix(in srgb, var(--background-primary) 88%, var(--background-secondary));
+  background: transparent;
   color: var(--lpd-text);
 }
 
@@ -160,7 +160,7 @@
 
 .lpd-filter.is-active {
   border-color: var(--lpd-border-strong);
-  background: color-mix(in srgb, var(--text-normal) 8%, var(--background-primary));
+  background: color-mix(in srgb, var(--text-normal) 6%, transparent);
 }
 
 .lpd-detail-actions {
@@ -242,24 +242,30 @@
 .lpd-rail-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0;
   overflow: auto;
   padding-right: 2px;
 }
 
 .lpd-course-row {
   display: grid;
-  grid-template-columns: 210px minmax(390px, 1fr) 170px;
-  gap: 12px;
+  grid-template-columns: 196px minmax(420px, 1fr) 158px;
+  gap: 14px;
   align-items: center;
-  border: 1px solid var(--lpd-border);
-  border-radius: 8px;
-  background: var(--background-primary);
-  padding: 10px;
+  border-bottom: 1px solid var(--lpd-border);
+  padding: 13px 2px;
 }
 
 .lpd-course-row:hover {
-  border-color: var(--lpd-border-strong);
+  background: color-mix(in srgb, var(--background-secondary) 14%, transparent);
+}
+
+.lpd-course-row:first-child {
+  padding-top: 8px;
+}
+
+.lpd-course-row:last-child {
+  border-bottom: 0;
 }
 
 .lpd-course-title {
@@ -273,12 +279,8 @@
 .lpd-track {
   position: relative;
   min-width: 0;
-  min-height: 58px;
-  padding: 12px 10px 18px;
-  overflow: hidden;
-  border: 1px solid var(--lpd-border);
-  border-radius: 8px;
-  background: var(--lpd-surface-soft);
+  min-height: 42px;
+  padding: 7px 0 14px;
 }
 
 .lpd-track-layers,
@@ -288,9 +290,14 @@
 }
 
 .lpd-track-layers {
-  inset: 0;
+  top: 7px;
+  right: 0;
+  left: 0;
+  height: 14px;
   overflow: hidden;
-  border-radius: inherit;
+  border: 1px solid var(--lpd-border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--background-primary) 75%, var(--background-secondary));
 }
 
 .lpd-track-layer {
@@ -320,7 +327,7 @@
   z-index: 1;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 9px;
+  gap: 7px 8px;
   min-width: 0;
 }
 
@@ -328,9 +335,9 @@
   position: relative;
   display: grid;
   place-items: start center;
-  width: 42px;
-  height: 30px;
-  padding: 1px 0 0;
+  width: 38px;
+  height: 28px;
+  padding: 0;
   border: 0;
   background: transparent;
   color: var(--lpd-text);
@@ -339,13 +346,13 @@
 .lpd-capsule {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  width: 36px;
-  height: 10px;
+  gap: 1px;
+  width: 32px;
+  height: 9px;
   padding: 2px;
-  border: 1px solid var(--lpd-border);
+  border: 1px solid color-mix(in srgb, var(--lpd-border) 78%, transparent);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--background-primary) 84%, transparent);
+  background: color-mix(in srgb, var(--background-primary) 88%, transparent);
 }
 
 .lpd-capsule-segment {
@@ -355,7 +362,11 @@
 .lpd-lesson-node:hover .lpd-capsule,
 .lpd-lesson-node.is-selected .lpd-capsule {
   border-color: var(--lpd-border-strong);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--text-accent) 12%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--text-accent) 10%, transparent);
+}
+
+.lpd-lesson-node.is-selected .lpd-node-label {
+  color: var(--lpd-text);
 }
 
 .lpd-node-label {
@@ -365,7 +376,7 @@
   transform: translateX(-50%);
   color: var(--lpd-muted);
   font-size: 9px;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .lpd-course-actions {
@@ -379,16 +390,22 @@
   flex-basis: 100%;
   color: var(--lpd-muted);
   font-size: 11px;
-  font-weight: 620;
+  font-weight: 560;
   line-height: 1.35;
   text-align: right;
 }
 
 .lpd-mini {
-  min-width: 32px;
-  min-height: 28px;
-  padding: 4px 7px;
+  min-width: 28px;
+  min-height: 26px;
+  padding: 3px 7px;
   font-size: 12px;
+}
+
+.lpd-mini:active,
+.lpd-filter:active,
+.lpd-ghost:active {
+  transform: translateY(1px);
 }
 
 .lpd-field {
