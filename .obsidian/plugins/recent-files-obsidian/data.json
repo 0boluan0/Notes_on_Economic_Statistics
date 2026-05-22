@@ -1,6 +1,78 @@
 {
   "recentFiles": [
     {
+      "basename": "GARCH Model Estimation Steps",
+      "path": "00_factor/procedure/GARCH Model Estimation Steps.md"
+    },
+    {
+      "basename": "Granger-Newbold Test",
+      "path": "00_factor/procedure/Granger-Newbold Test.md"
+    },
+    {
+      "basename": "EWMA Volatility Estimation",
+      "path": "00_factor/procedure/EWMA Volatility Estimation.md"
+    },
+    {
+      "basename": "Delta-Gamma Approximation",
+      "path": "00_factor/procedure/Delta-Gamma Approximation.md"
+    },
+    {
+      "basename": "Absolute VaR",
+      "path": "00_factor/concept/Absolute VaR.md"
+    },
+    {
+      "basename": "Cash Ratio",
+      "path": "00_factor/concept/Cash Ratio.md"
+    },
+    {
+      "basename": "Basel Accords",
+      "path": "00_factor/concept/Basel Accords.md"
+    },
+    {
+      "basename": "ARCH-M",
+      "path": "00_factor/concept/ARCH-M.md"
+    },
+    {
+      "basename": "AIC",
+      "path": "00_factor/concept/AIC.md"
+    },
+    {
+      "basename": "Adaptive Expectations Model",
+      "path": "00_factor/concept/Adaptive Expectations Model.md"
+    },
+    {
+      "basename": "Time Series Course Atlas",
+      "path": "01_Math/06_时间序列分析/Time Series Course Atlas.canvas"
+    },
+    {
+      "basename": "00_导论与概率论复习",
+      "path": "01_Math/06_时间序列分析/00_导论与概率论复习.md"
+    },
+    {
+      "basename": "06_含趋势的模型",
+      "path": "01_Math/06_时间序列分析/06_含趋势的模型.md"
+    },
+    {
+      "basename": "03_平稳时间序列模型",
+      "path": "01_Math/06_时间序列分析/03_平稳时间序列模型.md"
+    },
+    {
+      "basename": "02_差分方程Difference Equation",
+      "path": "01_Math/06_时间序列分析/02_差分方程Difference Equation.md"
+    },
+    {
+      "basename": "01_介绍时间序列",
+      "path": "01_Math/06_时间序列分析/01_介绍时间序列.md"
+    },
+    {
+      "basename": "CLAUDE",
+      "path": "CLAUDE.md"
+    },
+    {
+      "basename": "AGENTS",
+      "path": "AGENTS.md"
+    },
+    {
       "basename": "1-7",
       "path": "01_Math/01_calculus/Lecture_notes/1-7.pdf"
     },
@@ -57,14 +129,6 @@
       "path": "01_Math/04_多元统计分析/11_分类与判别Discrimination and Classifications.md"
     },
     {
-      "basename": "CLAUDE",
-      "path": "CLAUDE.md"
-    },
-    {
-      "basename": "AGENTS",
-      "path": "AGENTS.md"
-    },
-    {
       "basename": "linear_algebra_and_its_applications_4th",
       "path": "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Books/linear_algebra_and_its_applications_4th.pdf"
     },
@@ -83,10 +147,6 @@
     {
       "basename": "2026-02-03——Tue",
       "path": "99_学习情况记录/2026-02-03——Tue.md"
-    },
-    {
-      "basename": "Time Series Course Atlas",
-      "path": "01_Math/06_时间序列分析/Time Series Course Atlas.canvas"
     },
     {
       "basename": "How I'd build a one-person business (if I started over in 2026) - 2026-03-28",
@@ -139,66 +199,6 @@
     {
       "basename": "mit6_100l_podcast_transcript",
       "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-podcast/mit6_100l_podcast_transcript.pdf"
-    },
-    {
-      "basename": "index",
-      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-OCW-offline-site/lists/lecture-code/index.html"
-    },
-    {
-      "basename": "index",
-      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-OCW-offline-site/pages/calendar/index.html"
-    },
-    {
-      "basename": "data",
-      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-OCW-offline-site/pages/calendar/data.json"
-    },
-    {
-      "basename": "lec12_wordle",
-      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-lecture-code/mit6_100l_lec12_code/lec12_wordle.py"
-    },
-    {
-      "basename": "lec12",
-      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-lecture-code/mit6_100l_lec12_code/lec12.py"
-    },
-    {
-      "basename": "chapter3",
-      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-code/chapter 03/chapter3.py"
-    },
-    {
-      "basename": "chapter2",
-      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-code/chapter 02/chapter2.py"
-    },
-    {
-      "basename": "mit6_100l_ex01_sol",
-      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-finger-exercises/mit6_100l_ex01_sol.pdf"
-    },
-    {
-      "basename": "mit6_100l_ex02_sol",
-      "path": "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-finger-exercises/mit6_100l_ex02_sol.pdf"
-    },
-    {
-      "basename": "Pasted image 20240229211911",
-      "path": "98_attachment/Pasted image 20240229211911.png"
-    },
-    {
-      "basename": "Pasted image 20240228202716",
-      "path": "98_attachment/Pasted image 20240228202716.png"
-    },
-    {
-      "basename": "Overview & Study Record",
-      "path": "Overview & Study Record.md"
-    },
-    {
-      "basename": "09_联立方程模型(内生性)",
-      "path": "02_Economy/01_Econometrics/09_联立方程模型(内生性).md"
-    },
-    {
-      "basename": "10_虚拟变量",
-      "path": "02_Economy/01_Econometrics/10_虚拟变量.md"
-    },
-    {
-      "basename": "零散知识点",
-      "path": "02_Economy/01_Econometrics/零散知识点.md"
     }
   ],
   "omittedPaths": [],
