@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "00_MIT OCW 18.06SC course map",
+      "path": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md"
+    },
+    {
+      "basename": "01_Ax = b and the Four Subspaces",
+      "path": "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md"
+    },
+    {
       "basename": "GARCH Model Estimation Steps",
       "path": "00_factor/procedure/GARCH Model Estimation Steps.md"
     },
@@ -79,14 +87,6 @@
     {
       "basename": "04_Review and exam roadmap",
       "path": "01_Math/02_linear algebra/04_Review and exam roadmap.md"
-    },
-    {
-      "basename": "00_MIT OCW 18.06SC course map",
-      "path": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md"
-    },
-    {
-      "basename": "01_Ax = b and the Four Subspaces",
-      "path": "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md"
     },
     {
       "basename": "9-16",

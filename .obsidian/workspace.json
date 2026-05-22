@@ -40,9 +40,57 @@
               "icon": "lucide-file",
               "title": "GARCH Model Estimation Steps"
             }
+          },
+          {
+            "id": "b85de5566972fd34",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "01_Ax = b and the Four Subspaces"
+            }
+          },
+          {
+            "id": "3d76aee4ad5ecd5b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "00_MIT OCW 18.06SC course map"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -363,10 +411,12 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "90dd4095fc48f070",
+  "active": "3d76aee4ad5ecd5b",
   "lastOpenFiles": [
-    "00_factor/procedure/Granger-Newbold Test.md",
+    "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
+    "99_学习情况记录/完成任务的日期/2026-05-22——Fri.md",
     "00_factor/procedure/GARCH Model Estimation Steps.md",
+    "00_factor/procedure/Granger-Newbold Test.md",
     "00_factor/procedure/EWMA Volatility Estimation.md",
     "00_factor/procedure/Delta-Gamma Approximation.md",
     "00_factor/concept/Absolute VaR.md",
@@ -386,7 +436,6 @@
     "01_Math/01_calculus/Lecture_notes/1-7.pdf",
     "01_Math/02_linear algebra/04_Review and exam roadmap.md",
     "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md",
-    "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
     "01_Math/01_calculus/Lecture_notes/9-16.pdf",
     "01_Math/01_calculus/01_Single-Variable Calculus.md",
     "01_Math/07-Mathematics for Computer Science/MIT-6-042j-pdf.pdf",
@@ -396,7 +445,6 @@
     "01_Math/02_linear algebra/02_Least Squares, Determinants and Eigenvalues.md",
     "01_Math/02_linear algebra/03_Positive Definite Matrices and Applications.md",
     "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
-    "01_Math/04_多元统计分析/11_分类与判别Discrimination and Classifications.md",
     "normalize_callouts.py",
     "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Books/linear_algebra_and_its_applications_4th.pdf",
     "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Books/Introduction_to_Linear_Algebra(Strang).pdf",
