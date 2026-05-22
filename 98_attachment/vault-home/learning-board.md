@@ -1,7 +1,7 @@
 ---
 learningBoard: true
 version: 1
-updated: "2026-05-22T08:18:18.841Z"
+updated: "2026-05-22T12:01:55.661Z"
 ---
 
 # Learning Progress Board
@@ -12,7 +12,7 @@ You can hand-edit it, but keep the fenced JSON block valid.
 ```learning-board-json
 {
   "version": 1,
-  "updatedAt": "2026-05-22T08:18:18.841Z",
+  "updatedAt": "2026-05-22T12:01:55.661Z",
   "courses": [
     {
       "id": "01-math-01-calculus-mzqacf",
@@ -45,7 +45,7 @@ You can hand-edit it, but keep the fenced JSON block valid.
           "label": "00",
           "title": "MIT OCW 18.06SC course map",
           "notePath": "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md",
-          "state": "raw",
+          "state": "organized",
           "remark": ""
         },
         {
