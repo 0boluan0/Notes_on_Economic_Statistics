@@ -173,7 +173,8 @@
               "title": "Drawing 2026-05-23 18.00.12.excalidraw"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -349,12 +350,13 @@
                     "type": "integrated",
                     "useWin32Conhost": true
                   },
+                  "profileSourceId": null,
                   "serial": null
                 }
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: Academic"
+              "title": "Terminal: zsh"
             }
           },
           {
@@ -461,8 +463,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 843.5,
-    "collapsed": true
+    "width": 843.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -482,8 +483,9 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "23aab54f24f56f93",
+  "active": "36db59183709d800",
   "lastOpenFiles": [
+    "00_factor/procedure/GARCH Model Estimation Steps.md",
     "Excalidraw/Drawing 2026-05-23 18.00.12.excalidraw.md",
     "02_Economy/01_Econometrics/01_导论.md",
     "Excalidraw",
@@ -514,7 +516,6 @@
     "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md",
     "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
     "99_学习情况记录/完成任务的日期/2026-05-22——Fri.md",
-    "00_factor/procedure/GARCH Model Estimation Steps.md",
     "00_factor/procedure/Granger-Newbold Test.md",
     "00_factor/procedure/EWMA Volatility Estimation.md",
     "01_Math/01_calculus/Lecture_notes/1-7.pdf",
