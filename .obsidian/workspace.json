@@ -173,8 +173,7 @@
               "title": "Drawing 2026-05-23 18.00.12.excalidraw"
             }
           }
-        ],
-        "currentTab": 7
+        ]
       }
     ],
     "direction": "vertical"
@@ -477,18 +476,16 @@
       "bases:Create new base": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian-kanban:Create new board": false,
-      "media-extended:Open media": false,
       "obsidian-git:Open Git source control": false,
-      "omnisearch:Omnisearch": false,
       "templater-obsidian:Templater": false,
       "canvas:Create new canvas": false,
       "terminal:Open terminal": false
     }
   },
-  "active": "9f455b14e5f9d7d1",
+  "active": "23aab54f24f56f93",
   "lastOpenFiles": [
-    "02_Economy/01_Econometrics/01_导论.md",
     "Excalidraw/Drawing 2026-05-23 18.00.12.excalidraw.md",
+    "02_Economy/01_Econometrics/01_导论.md",
     "Excalidraw",
     "02_Economy/01_Econometrics/太白金星v计量.pdf",
     "02_Economy/01_Econometrics/零散知识点.md",

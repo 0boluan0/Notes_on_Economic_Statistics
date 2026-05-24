@@ -1227,20 +1227,27 @@ var HtmlSettingTab = class extends import_obsidian.PluginSettingTab {
   }
   buildHotkeySettings() {
     const { containerEl } = this;
-    let gSearch = this.app.hotkeyManager.getHotkeys("editor:open-search") || this.app.hotkeyManager.getDefaultHotkeys("editor:open-search");
+    const appAny = this.app;
+    const getHotkeysSafe = (commandId) => {
+      const manager = appAny.hotkeyManager;
+      if (!manager)
+        return [];
+      return manager.getHotkeys?.(commandId) || manager.getDefaultHotkeys?.(commandId) || [];
+    };
+    let gSearch = getHotkeysSafe("editor:open-search");
     const hkSearch = new import_obsidian.Setting(containerEl);
     hkSearch.setName("Search document text").setDesc(`Search current file.`);
     let hotkeyPairs = [
       { elm: hkSearch, settings: gSearch }
     ];
-    if (!this.app.isMobile) {
-      let gZoomIn = this.app.hotkeyManager.getHotkeys("window:zoom-in") || this.app.hotkeyManager.getDefaultHotkeys("window:zoom-in");
+    if (!appAny.isMobile) {
+      let gZoomIn = getHotkeysSafe("window:zoom-in");
       const hkZoomIn = new import_obsidian.Setting(containerEl).setName("Zoom in document").setDesc(`Zoom in current file.`);
       hotkeyPairs.push({ elm: hkZoomIn, settings: gZoomIn });
-      let gZoomOut = this.app.hotkeyManager.getHotkeys("window:zoom-out") || this.app.hotkeyManager.getDefaultHotkeys("window:zoom-out");
+      let gZoomOut = getHotkeysSafe("window:zoom-out");
       const hkZoomOut = new import_obsidian.Setting(containerEl).setName("Zoom out document").setDesc(`Zoom out current file.`);
       hotkeyPairs.push({ elm: hkZoomOut, settings: gZoomOut });
-      let gZoomReset = this.app.hotkeyManager.getHotkeys("window:reset-zoom") || this.app.hotkeyManager.getDefaultHotkeys("window:reset-zoom");
+      let gZoomReset = getHotkeysSafe("window:reset-zoom");
       const hkZoomReset = new import_obsidian.Setting(containerEl).setName("Reset document zoom").setDesc(`Reset current file zoom.`);
       hotkeyPairs.push({ elm: hkZoomReset, settings: gZoomReset });
     }
@@ -22904,10 +22911,12 @@ var HtmlView = class extends import_obsidian2.FileView {
       this.mainView.innerHTML = MAINVIEW_HTML;
       const searchBar = this.mainView.querySelector("#ohpMainView");
       const iframe = this.mainView.querySelector("#ohpIframe");
+      const baseHref = getHtmlBaseHref(this.app, file);
       let dom = null, applyAnchorFix = true;
       switch (this.settings.opMode) {
         case "BalanceMode" /* Balance */:
           dom = new window.DOMParser().parseFromString(htmlStr, "text/html");
+          ensureBaseHref(dom, baseHref);
           await removeScriptTagsAndExtScripts(dom);
           await sanitizeAndApplyPatches(dom);
           await restoreStateBySettings(dom, this.settings);
@@ -22916,22 +22925,23 @@ var HtmlView = class extends import_obsidian2.FileView {
           break;
         case "LowRestrictedMode" /* LowRestricted */:
           dom = new window.DOMParser().parseFromString(htmlStr, "text/html");
+          ensureBaseHref(dom, baseHref);
           await removeScriptTagsAndExtScripts(dom);
           await restoreStateBySettings(dom, this.settings);
           iframe.srcdoc = dom.documentElement.outerHTML;
           break;
         case "UnestrictedMode" /* Unrestricted */:
-          iframe.srcdoc = htmlStr;
+          iframe.srcdoc = injectBaseHrefToHtml(htmlStr, baseHref);
           break;
         case "HighRestrictedMode" /* HighRestricted */:
           const purifier = new window.DOMPurify();
           purifier.addHook("afterSanitizeAttributes", ohpAfterSanitizeAttributes);
-          const cleanHtmlHR = purifier.sanitize(htmlStr, hrModeConfig);
+          const cleanHtmlHR = purifier.sanitize(injectBaseHrefToHtml(htmlStr, baseHref), hrModeConfig);
           iframe.csp = "default-src 'none'; script-src 'none'; object-src 'none'; frame-src https: http: mediastream: blob:; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; ";
           iframe.srcdoc = cleanHtmlHR;
           break;
         case "TextMode" /* Text */:
-          const cleanHtmlText = new window.DOMPurify().sanitize(htmlStr, textModeConfig);
+          const cleanHtmlText = new window.DOMPurify().sanitize(injectBaseHrefToHtml(htmlStr, baseHref), textModeConfig);
           iframe.sandbox = "allow-same-origin";
           iframe.csp = "default-src 'none'; script-src 'none'; object-src 'none'; frame-src 'none'; font-src 'self' data:; img-src 'none'; style-src 'unsafe-inline'; media-src 'none'; ";
           iframe.srcdoc = cleanHtmlText;
@@ -22998,6 +23008,33 @@ var HtmlView = class extends import_obsidian2.FileView {
     return "code-glyph";
   }
 };
+function getHtmlBaseHref(app2, file) {
+  try {
+    const resourcePath = app2?.vault?.getResourcePath(file);
+    return resourcePath || "";
+  } catch {
+    return "";
+  }
+}
+function ensureBaseHref(doc, baseHref) {
+  if (!doc?.head || !baseHref) return;
+  let baseElm = doc.querySelector("base");
+  if (!baseElm) {
+    baseElm = doc.createElement("base");
+    doc.head.prepend(baseElm);
+  }
+  baseElm.setAttribute("href", baseHref);
+}
+function injectBaseHrefToHtml(htmlStr, baseHref) {
+  if (!htmlStr || !baseHref) return htmlStr;
+  try {
+    const doc = new window.DOMParser().parseFromString(htmlStr, "text/html");
+    ensureBaseHref(doc, baseHref);
+    return doc.documentElement.outerHTML;
+  } catch {
+    return htmlStr;
+  }
+}
 async function showError(e2) {
   const notice = new import_obsidian2.Notice("", 8e3);
   notice.noticeEl.createEl("strong", { text: "HTML Reader error" });
@@ -23151,7 +23188,9 @@ function isUnselectableElement(elm) {
 }
 var isAppleSys = isMacPlatform() || isIosPlatform();
 function mapNativeHotkeys(app2, cmdId) {
-  let ohks = app2.hotkeyManager.getHotkeys(cmdId) || app2.hotkeyManager.getDefaultHotkeys(cmdId);
+  const appAny = app2;
+  const manager = appAny.hotkeyManager;
+  let ohks = manager?.getHotkeys?.(cmdId) || manager?.getDefaultHotkeys?.(cmdId);
   const nhks = [];
   if (!ohks || ohks.length <= 0)
     return nhks;

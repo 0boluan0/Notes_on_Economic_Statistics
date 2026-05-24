@@ -48,6 +48,9 @@
     "周一": "date",
     "周日": "date",
     "总学习时长": "number",
-    "date": "date"
+    "date": "date",
+    "TQ_show_toolbar": "checkbox",
+    "excalidraw-export-internal-links": "checkbox",
+    "excalidraw-embed-md": "checkbox"
   }
 }

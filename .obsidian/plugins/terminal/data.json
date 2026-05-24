@@ -8,6 +8,7 @@
   "hideStatusBar": "focused",
   "interceptLogging": true,
   "language": "",
+  "macOSOptionKeyPassthrough": true,
   "newInstanceBehavior": "newHorizontalSplit",
   "noticeTimeout": 5,
   "openChangelogOnUpdate": true,
@@ -159,5 +160,9 @@
       "type": "integrated",
       "useWin32Conhost": true
     }
+  },
+  "defaultProfile": null,
+  "terminalOptions": {
+    "documentOverride": null
   }
 }

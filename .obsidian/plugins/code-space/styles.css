@@ -11,7 +11,18 @@
     background-color: var(--background-primary);
     position: relative;
     /* 强制覆盖 Obsidian 的选区颜色变量 */
-    --text-selection: #FF5555;
+    --code-space-selection-bg: hsla(var(--interactive-accent-hsl), 0.64);
+    --code-space-selection-fg: var(--text-on-accent);
+    --code-space-selection-bg-active: hsla(var(--interactive-accent-hsl), 0.7);
+    --code-space-search-bg: hsla(var(--interactive-accent-hsl), 0.22);
+    --code-space-search-outline: hsla(var(--interactive-accent-hsl), 0.5);
+    --code-space-search-current-bg: hsla(var(--interactive-accent-hsl), 0.8);
+    --code-space-search-current-fg: var(--text-on-accent);
+    --code-space-search-current-outline: hsla(var(--interactive-accent-hsl), 0.82);
+    --code-space-search-current-shadow: hsla(var(--interactive-accent-hsl), 0.28);
+    --code-space-selection-match-bg: hsla(var(--interactive-accent-hsl), 0.18);
+    --code-space-selection-match-outline: hsla(var(--interactive-accent-hsl), 0.42);
+    --text-selection: var(--code-space-selection-bg);
     --text-highlight-bg: rgba(255, 215, 0, 0.6);
 }
 
@@ -26,39 +37,43 @@ body .code-space-container .cm-selectionBackground,
 body .code-space-container ::selection,
 body .code-space-container .cm-content ::selection,
 body .code-space-container .cm-line::selection {
-    background-color: #FF5555 !important;
-    color: #FFFFFF !important;
+    background-color: var(--code-space-selection-bg);
+    color: var(--code-space-selection-fg);
 }
 
 /* 活动行内的选区也必须是淡红色 */
 body .code-space-container .cm-activeLine .cm-selectionBackground,
 body .code-space-container .cm-activeLine::selection {
-    background-color: #FF5555 !important;
-    color: #FFFFFF !important;
+    background-color: var(--code-space-selection-bg-active);
+    color: var(--code-space-selection-fg);
 }
 
 .code-space-container .cm-editor {
     flex: 1 1 auto;
     min-height: 0;
-    height: auto !important;
-    font-family: var(--font-monospace), 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Source Code Pro', Consolas, 'Courier New', monospace;
+    height: auto;
+}
+
+.code-space-container .cm-editor .cm-scroller,
+.code-embed-container .cm-editor .cm-scroller {
+    font-family: var(--font-monospace), "JetBrains Mono", "Fira Code", "Cascadia Code", "Source Code Pro", Consolas, "Courier New", monospace;
     font-feature-settings: "liga" 1, "calt" 1;
     -webkit-font-smoothing: antialiased;
 }
 
 /* 优化编辑器行号 */
 .cm-gutters {
-    background-color: var(--background-primary) !important;
+    background-color: var(--background-primary);
     color: var(--text-muted);
     border-right: 1px solid var(--background-modifier-border);
     min-width: 32px;
     z-index: 10;
-    user-select: none !important; /* 禁止选中行号区域 */
+    user-select: none; /* 禁止选中行号区域 */
 }
 
 .code-space-container .cm-lineNumbers .cm-gutterElement {
-    padding: 0 8px !important;
-    background-color: var(--background-primary) !important;
+    padding: 0 8px;
+    background-color: var(--background-primary);
     min-width: 24px;
     text-align: right;
     font-variant-numeric: tabular-nums;
@@ -68,12 +83,12 @@ body .code-space-container .cm-activeLine::selection {
 .code-space-container .cm-cursor,
 .code-space-container .cm-dropCursor {
     border-left-width: 2px;
-    border-left-color: var(--interactive-accent) !important;
+    border-left-color: var(--interactive-accent);
 }
 
 /* 优化选区 */
 .code-space-container .cm-selectionBackground {
-    background-color: hsla(var(--interactive-accent-hsl), 0.2) !important;
+    background-color: var(--code-space-selection-bg);
 }
 
 /* 优化滚动条 */
@@ -113,10 +128,6 @@ body .code-space-container .cm-activeLine::selection {
     overflow-x: hidden;
     width: 100%;
     background-color: var(--background-primary);
-}
-
-/* 平滑滚动 */
-.code-dashboard-root {
     scroll-behavior: smooth;
 }
 
@@ -205,23 +216,6 @@ body .code-space-container .cm-activeLine::selection {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5; /* 增加行高优化阅读体验 */
-}
-
-.code-dashboard-title-group .clickable-icon:hover {
-    color: var(--text-normal);
-    background-color: var(--background-modifier-hover);
-}
-
-.code-dashboard-title-group .clickable-icon svg {
-    width: 20px;
-    height: 20px;
-}
-
-.code-dashboard-subtitle {
-    margin: 0;
-    color: var(--text-muted);
-    font-size: 14px;
-    font-weight: 400;
 }
 
 /* Toolbar */
@@ -670,6 +664,68 @@ body .code-space-container .cm-activeLine::selection {
 	margin-top: 12px;
 }
 
+.ignore-manager-modal {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.ignore-manager-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	max-height: 420px;
+	overflow-y: auto;
+}
+
+.ignore-manager-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 12px 14px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 8px;
+	background-color: var(--background-secondary);
+}
+
+.ignore-manager-info {
+	flex: 1;
+	min-width: 0;
+}
+
+.ignore-manager-name {
+	font-size: 14px;
+	font-weight: 500;
+	color: var(--text-normal);
+	word-break: break-word;
+}
+
+.ignore-manager-path {
+	margin-top: 4px;
+	font-size: 12px;
+	color: var(--text-muted);
+	word-break: break-word;
+}
+
+.ignore-manager-actions {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-shrink: 0;
+}
+
+.ignore-manager-open-button,
+.ignore-manager-remove-button {
+	flex-shrink: 0;
+}
+
+.ignore-manager-empty {
+	padding: 24px 12px;
+	text-align: center;
+	color: var(--text-muted);
+}
+
 .code-file-tag-row {
     display: flex;
     align-items: center;
@@ -743,32 +799,35 @@ body .code-space-container .cm-activeLine::selection {
 /* =================================================================
    高亮配色
    ================================================================= */
-.theme-light .cmt-keyword { color: var(--code-keyword, #af00db) !important; }
-.theme-light .cmt-variableName { color: var(--code-value, #001080) !important; }
-.theme-light .cmt-typeName { color: var(--code-class, #267f99) !important; }
-.theme-light .cmt-function { color: var(--code-function, #795e26) !important; }
-.theme-light .cmt-string { color: var(--code-string, #a31515) !important; }
-.theme-light .cmt-comment { color: var(--code-comment, #008000) !important; }
-.theme-light .cmt-number { color: var(--code-value, #098658) !important; }
-.theme-light .cmt-operator { color: var(--code-operator, #383838) !important; }
-.theme-light .cmt-punctuation { color: var(--code-punctuation, #383838) !important; }
-.theme-light .cmt-meta { color: #800000 !important; }
-.theme-dark .cmt-keyword { color: var(--code-keyword, #c678dd) !important; }
-.theme-dark .cmt-variableName { color: var(--code-value, #e06c75) !important; }
-.theme-dark .cmt-typeName { color: var(--code-class, #e5c07b) !important; }
-.theme-dark .cmt-function { color: var(--code-function, #61afef) !important; }
-.theme-dark .cmt-string { color: var(--code-string, #98c379) !important; }
-.theme-dark .cmt-comment { color: var(--code-comment, #5c6370) !important; }
-.theme-dark .cmt-number { color: var(--code-value, #d19a66) !important; }
-.theme-dark .cmt-operator { color: var(--code-operator, #56b6c2) !important; }
-.theme-dark .cmt-punctuation { color: var(--code-punctuation, #abb2bf) !important; }
-.theme-dark .cmt-meta { color: #c678dd !important; }
-.cmt-invalid { color: var(--text-error, #f00) !important; text-decoration: underline wavy; }
-.cmt-link { color: var(--text-accent, #2d7fba) !important; text-decoration: underline; }
+.theme-light .cmt-keyword { color: var(--code-keyword, #af00db); }
+.theme-light .cmt-variableName { color: var(--code-value, #001080); }
+.theme-light .cmt-typeName { color: var(--code-class, #267f99); }
+.theme-light .cmt-function { color: var(--code-function, #795e26); }
+.theme-light .cmt-string { color: var(--code-string, #a31515); }
+.theme-light .cmt-comment { color: var(--code-comment, #008000); }
+.theme-light .cmt-number { color: var(--code-value, #098658); }
+.theme-light .cmt-operator { color: var(--code-operator, #383838); }
+.theme-light .cmt-punctuation { color: var(--code-punctuation, #383838); }
+.theme-light .cmt-meta { color: #800000; }
+.theme-dark .cmt-keyword { color: var(--code-keyword, #c678dd); }
+.theme-dark .cmt-variableName { color: var(--code-value, #e06c75); }
+.theme-dark .cmt-typeName { color: var(--code-class, #e5c07b); }
+.theme-dark .cmt-function { color: var(--code-function, #61afef); }
+.theme-dark .cmt-string { color: var(--code-string, #98c379); }
+.theme-dark .cmt-comment { color: var(--code-comment, #7a8394); }
+.theme-dark .cmt-number { color: var(--code-value, #d19a66); }
+.theme-dark .cmt-operator { color: var(--code-operator, #56b6c2); }
+.theme-dark .cmt-punctuation { color: var(--code-punctuation, #abb2bf); }
+.theme-dark .cmt-meta { color: #c678dd; }
+.cmt-invalid { color: var(--text-error, #ff0000); border-bottom: 1px dotted currentColor; }
+.cmt-link { color: var(--text-accent, #2d7fba); text-decoration: underline; }
 .theme-light .cm-content { caret-color: #000000; }
 .theme-dark .cm-content { caret-color: #ffffff; }
-.cm-selectionBackground { background-color: var(--text-selection) !important; }
-.cm-activeLine { background-color: var(--background-modifier-active-hover) !important; }
+.code-space-container .cm-selectionBackground,
+.code-embed-editor .cm-selectionBackground {
+    background-color: var(--text-selection);
+}
+.cm-activeLine { background-color: var(--background-modifier-active-hover); }
 
 /* =================================================================
    Code Embed Styles
@@ -819,6 +878,18 @@ body .code-space-container .cm-activeLine::selection {
 }
 
 .code-embed-editor {
+    --code-space-selection-bg: hsla(var(--interactive-accent-hsl), 0.64);
+    --code-space-selection-fg: var(--text-on-accent);
+    --code-space-selection-bg-active: hsla(var(--interactive-accent-hsl), 0.7);
+    --code-space-search-bg: hsla(var(--interactive-accent-hsl), 0.22);
+    --code-space-search-outline: hsla(var(--interactive-accent-hsl), 0.5);
+    --code-space-search-current-bg: hsla(var(--interactive-accent-hsl), 0.8);
+    --code-space-search-current-fg: var(--text-on-accent);
+    --code-space-search-current-outline: hsla(var(--interactive-accent-hsl), 0.82);
+    --code-space-search-current-shadow: hsla(var(--interactive-accent-hsl), 0.28);
+    --code-space-selection-match-bg: hsla(var(--interactive-accent-hsl), 0.18);
+    --code-space-selection-match-outline: hsla(var(--interactive-accent-hsl), 0.42);
+    --text-selection: var(--code-space-selection-bg);
     background-color: var(--background-primary);
     text-align: left; /* 确保左对齐 */
     font-family: var(--font-monospace), 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Source Code Pro', Consolas, 'Courier New', monospace;
@@ -881,14 +952,11 @@ body .code-space-container .cm-activeLine::selection {
 	background: var(--text-muted);
 }
 
-/* =================================================================
-   Static Fallback for PDF Export
-   ================================================================= */
 .code-embed-static-fallback {
 	display: none;
 }
 
-.code-embed-static {
+.code-embed-static-fallback pre {
 	margin: 0;
 	padding: 8px;
 	background-color: var(--background-primary);
@@ -898,9 +966,14 @@ body .code-space-container .cm-activeLine::selection {
 	font-family: var(--font-monospace), 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Source Code Pro', Consolas, 'Courier New', monospace;
 	font-size: var(--code-space-embed-font-size, 13px);
 	line-height: var(--code-space-embed-line-height, 20px);
+	box-shadow: none;
 }
 
-.code-embed-static code {
+.code-embed-static-fallback pre[class*="language-"] {
+	background: var(--background-primary);
+}
+
+.code-embed-static-fallback code {
 	display: block;
 	white-space: pre;
 	word-wrap: normal;
@@ -908,27 +981,98 @@ body .code-space-container .cm-activeLine::selection {
 	font-family: inherit;
 	font-size: inherit;
 	line-height: inherit;
+	padding: 0;
+}
+
+.code-embed-static-fallback .token.comment,
+.code-embed-static-fallback .token.prolog,
+.code-embed-static-fallback .token.doctype,
+.code-embed-static-fallback .token.cdata {
+	color: var(--code-comment, var(--text-muted));
+}
+
+.code-embed-static-fallback .token.punctuation,
+.code-embed-static-fallback .token.operator {
+	color: var(--code-punctuation, var(--text-normal));
+}
+
+.code-embed-static-fallback .token.property,
+.code-embed-static-fallback .token.tag,
+.code-embed-static-fallback .token.constant,
+.code-embed-static-fallback .token.symbol,
+.code-embed-static-fallback .token.deleted {
+	color: var(--code-value, #d19a66);
+}
+
+.code-embed-static-fallback .token.boolean,
+.code-embed-static-fallback .token.number {
+	color: var(--code-value, #098658);
+}
+
+.code-embed-static-fallback .token.selector,
+.code-embed-static-fallback .token.attr-name,
+.code-embed-static-fallback .token.string,
+.code-embed-static-fallback .token.char,
+.code-embed-static-fallback .token.builtin,
+.code-embed-static-fallback .token.inserted {
+	color: var(--code-string, #98c379);
+}
+
+.code-embed-static-fallback .token.atrule,
+.code-embed-static-fallback .token.attr-value,
+.code-embed-static-fallback .token.keyword {
+	color: var(--code-keyword, #c678dd);
+}
+
+.code-embed-static-fallback .token.function,
+.code-embed-static-fallback .token.class-name {
+	color: var(--code-function, #61afef);
 }
 
 /* PDF export optimization: show static fallback, hide interactive editor */
 @media print {
 	.code-embed-container {
-		break-inside: avoid;
+		page-break-inside: avoid;
 		border: 1px solid var(--background-modifier-border);
 	}
-	
+
 	.code-embed-editor {
-		display: none !important;
+		display: none;
 	}
-	
+
 	.code-embed-static-fallback {
-		display: block !important;
+		display: block;
 	}
-	
-	.code-embed-static {
+
+	.code-embed-static-fallback pre {
 		max-height: none;
 		overflow: visible;
 	}
+}
+
+body.print .code-embed-editor,
+body.mod-print .code-embed-editor,
+body.is-print .code-embed-editor,
+body.print-pdf .code-embed-editor,
+body.pdf-export .code-embed-editor {
+	display: none;
+}
+
+body.print .code-embed-static-fallback,
+body.mod-print .code-embed-static-fallback,
+body.is-print .code-embed-static-fallback,
+body.print-pdf .code-embed-static-fallback,
+body.pdf-export .code-embed-static-fallback {
+	display: block;
+}
+
+body.print .code-embed-static-fallback pre,
+body.mod-print .code-embed-static-fallback pre,
+body.is-print .code-embed-static-fallback pre,
+body.print-pdf .code-embed-static-fallback pre,
+body.pdf-export .code-embed-static-fallback pre {
+	max-height: none;
+	overflow: visible;
 }
 
 /* =================================================================
@@ -1039,38 +1183,48 @@ body .code-space-container .cm-activeLine::selection {
 
 /* 搜索匹配高亮 - 金黄色 (普通匹配) */
 .code-space-container .cm-searchMatch {
-    background-color: #FFD700 !important;
+    background-color: var(--code-space-search-bg);
     border-radius: 2px;
-    outline: 2px solid #FFD700;
-    color: #000000 !important;
+    outline: 1px solid var(--code-space-search-outline);
+    color: inherit;
 }
 
 /* 当前选中的搜索匹配 - 淡红色 (当前焦点) */
 .code-space-container .cm-searchMatch-selected {
-    background-color: #FF5555 !important;
+    background-color: var(--code-space-search-current-bg);
     border-radius: 2px;
-    outline: 3px solid #FF5555;
-    box-shadow: 0 0 8px rgba(255, 85, 85, 0.8);
-    color: #FFFFFF !important;
+    outline: 2px solid var(--code-space-search-current-outline);
+    box-shadow: 0 0 0 1px hsla(var(--interactive-accent-hsl), 0.12),
+                0 0 8px var(--code-space-search-current-shadow);
+    color: var(--code-space-search-current-fg);
 }
 
 .theme-dark .code-space-container .cm-searchMatch {
-    background-color: #FFD700 !important;
-    outline: 2px solid #FFD700;
-    color: #000000 !important;
+    background-color: var(--code-space-search-bg);
+    outline: 1px solid var(--code-space-search-outline);
+    color: inherit;
 }
 
 .theme-dark .code-space-container .cm-searchMatch-selected {
-    background-color: #FF5555 !important;
-    outline: 3px solid #FF5555;
-    box-shadow: 0 0 10px rgba(255, 85, 85, 1);
-    color: #FFFFFF !important;
+    background-color: var(--code-space-search-current-bg);
+    outline: 2px solid var(--code-space-search-current-outline);
+    box-shadow: 0 0 0 1px hsla(var(--interactive-accent-hsl), 0.12),
+                0 0 8px var(--code-space-search-current-shadow);
+    color: var(--code-space-search-current-fg);
 }
 
 /* 其他相同的词 - 金黄色 */
 .code-space-container .cm-selectionMatch {
-    background-color: rgba(255, 215, 0, 0.6) !important;
-    color: #000000 !important;
+    background-color: var(--code-space-selection-match-bg);
+    box-shadow: inset 0 0 0 1px var(--code-space-selection-match-outline);
+    color: inherit;
+    border-radius: 2px;
+}
+
+.code-space-container .cm-selectionMatch-main {
+    background-color: var(--code-space-selection-bg);
+    color: var(--code-space-selection-fg);
+    box-shadow: none;
     border-radius: 2px;
 }
 
@@ -1081,16 +1235,16 @@ body .code-space-container .cm-activeLine::selection {
 
 /* 隐藏 CodeMirror 默认的搜索面板 */
 .code-space-container .cm-panel.cm-search {
-    display: none !important;
+    display: none;
 }
 
 /* =================================================================
    自定义搜索面板样式 - VS Code 风格
    ================================================================= */
 .custom-search-panel {
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 1000 !important;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: var(--background-secondary);
     border-bottom: 1px solid var(--background-modifier-border);
     padding: 8px 12px;
@@ -1266,7 +1420,7 @@ body .code-space-container .cm-activeLine::selection {
 }
 
 .is-hidden {
-    display: none !important;
+    display: none;
 }
 
 /* =================================================================
