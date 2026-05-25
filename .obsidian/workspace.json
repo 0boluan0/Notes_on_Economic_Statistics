@@ -172,9 +172,19 @@
               "icon": "excalidraw-icon",
               "title": "Drawing 2026-05-23 18.00.12.excalidraw"
             }
+          },
+          {
+            "id": "3cc6e090e131d7cc",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -356,7 +366,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: zsh"
+              "title": "Terminal: ✳ Claude Code"
             }
           },
           {
@@ -463,7 +473,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 843.5
+    "width": 871.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -483,10 +493,11 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "36db59183709d800",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
-    "00_factor/procedure/GARCH Model Estimation Steps.md",
     "Excalidraw/Drawing 2026-05-23 18.00.12.excalidraw.md",
+    "Excalidraw/Drawing 2026-05-25 21.29.55.excalidraw.md",
+    "00_factor/procedure/GARCH Model Estimation Steps.md",
     "02_Economy/01_Econometrics/01_导论.md",
     "Excalidraw",
     "02_Economy/01_Econometrics/太白金星v计量.pdf",
@@ -517,7 +528,6 @@
     "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
     "99_学习情况记录/完成任务的日期/2026-05-22——Fri.md",
     "00_factor/procedure/Granger-Newbold Test.md",
-    "00_factor/procedure/EWMA Volatility Estimation.md",
     "01_Math/01_calculus/Lecture_notes/1-7.pdf",
     "01_Math/01_calculus/Lecture_notes/9-16.pdf",
     "01_Math/07-Mathematics for Computer Science/MIT-6-042j-pdf.pdf",
