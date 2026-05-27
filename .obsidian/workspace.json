@@ -177,14 +177,27 @@
             "id": "3cc6e090e131d7cc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "04_Fragments/How I'd build a one-person business (if I started over in 2026) - 2026-03-28.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "How I'd build a one-person business (if I started over in 2026) - 2026-03-28"
             }
           }
-        ],
-        "currentTab": 8
+        ]
       }
     ],
     "direction": "vertical"
@@ -473,7 +486,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 871.5
+    "width": 871.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -493,10 +507,11 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "3cc6e090e131d7cc",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2026-05-23 18.00.12.excalidraw.md",
+    "05_tools/Example Domain.md",
     "Excalidraw/Drawing 2026-05-25 21.29.55.excalidraw.md",
+    "Excalidraw/Drawing 2026-05-23 18.00.12.excalidraw.md",
     "00_factor/procedure/GARCH Model Estimation Steps.md",
     "02_Economy/01_Econometrics/01_导论.md",
     "Excalidraw",
@@ -507,7 +522,6 @@
     "04_Fragments/The Future Of Work (& The New High-Income Skill Stack) - 2026-03-28.md",
     "04_Fragments/AutoResearch Clearly Explained (and how to use it) - 2026-03-28.md",
     "05_tools/Codebase to Course.md",
-    "05_tools/Example Domain.md",
     "00_factor/system/Breusch-Godfrey Test.md",
     "01_Math/06_时间序列分析/Time Series Course Atlas.canvas",
     "04_Fragments/The top 1% Think on Paper. Here’s How To Do It - 2026-05-05.md",
