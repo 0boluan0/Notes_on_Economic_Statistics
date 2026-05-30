@@ -179,7 +179,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04_Fragments/How I'd build a one-person business (if I started over in 2026) - 2026-03-28.md",
+                "file": "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -194,10 +194,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "How I'd build a one-person business (if I started over in 2026) - 2026-03-28"
+              "title": "MIT18.01_Single-Variable-Calculus"
             }
           }
-        ]
+        ],
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -379,7 +380,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: ✳ Claude Code"
+              "title": "Terminal: ✳ Start learning LSE EC400"
             }
           },
           {
@@ -486,8 +487,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 871.5,
-    "collapsed": true
+    "width": 871.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -507,8 +507,15 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "3cc6e090e131d7cc",
+  "active": "36db59183709d800",
   "lastOpenFiles": [
+    "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
+    "01_Math/08_MathsCamp-EC400",
+    "01_Math/01_calculus/01_Single-Variable Calculus.md",
+    "01_Math/01_calculus/Lecture_notes/1-7.pdf",
+    "04_Fragments/How I'd build a one-person business (if I started over in 2026) - 2026-03-28.md",
+    "04_Fragments/How to fix your entire life in 1 day - 2026-03-28.md",
+    "AGENTS.md",
     "05_tools/Example Domain.md",
     "Excalidraw/Drawing 2026-05-25 21.29.55.excalidraw.md",
     "Excalidraw/Drawing 2026-05-23 18.00.12.excalidraw.md",
@@ -536,20 +543,12 @@
     "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
     "01_Math/04_多元统计分析/01_introduction简介.md",
     "99_学习情况记录/2026-02-15——Sun.md",
-    "99_学习情况记录/2026-02-14——Sat.md",
-    "99_学习情况记录/2026-02-03——Tue.md",
-    "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md",
-    "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
-    "99_学习情况记录/完成任务的日期/2026-05-22——Fri.md",
-    "00_factor/procedure/Granger-Newbold Test.md",
-    "01_Math/01_calculus/Lecture_notes/1-7.pdf",
     "01_Math/01_calculus/Lecture_notes/9-16.pdf",
     "01_Math/07-Mathematics for Computer Science/MIT-6-042j-pdf.pdf",
     "98_attachment/dashboards/2026-04-13-news.json",
     "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.1sum.pdf",
     "normalize_callouts.py",
     "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Books/linear_algebra_and_its_applications_4th.pdf",
-    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Books/Introduction_to_Linear_Algebra(Strang).pdf",
     "98_attachment/Pasted image 20240229211911.png",
     "98_attachment/Pasted image 20240228202716.png",
     "02_Economy/10_发展经济学/10_发展经济学.canvas",

@@ -3,7 +3,9 @@
     "allow": [
       "Bash(fi)",
       "Bash(done:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "WebSearch",
+      "WebFetch(domain:www.lse.ac.uk)"
     ]
   }
 }
