@@ -160,45 +160,9 @@
               "icon": "lucide-file",
               "title": "01_导论"
             }
-          },
-          {
-            "id": "9f455b14e5f9d7d1",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing 2026-05-23 18.00.12.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2026-05-23 18.00.12.excalidraw"
-            }
-          },
-          {
-            "id": "3cc6e090e131d7cc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "MIT18.01_Single-Variable-Calculus"
-            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -380,7 +344,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: ✳ Start learning LSE EC400"
+              "title": "Terminal: ✳ ec400-course-download"
             }
           },
           {
@@ -509,20 +473,29 @@
   },
   "active": "36db59183709d800",
   "lastOpenFiles": [
+    "01_Math/EC400/EC400 课程索引.md",
+    "01_Math/EC400/02_SOFP/EC400_SOFP_Handout_Nava.pdf",
+    "01_Math/EC400/04_PSI/PSI_Syllabus_2010_Schafgans.pdf",
+    "02_Economy/01_Econometrics/01_导论.md",
+    "Excalidraw/Drawing 2026-05-23 18.00.12.excalidraw.md",
+    "01_Math/EC400/03_DPDE/DPDE_ProblemSet4_Cumulative.pdf",
+    "01_Math/EC400/03_DPDE/DPDE_ProblemSet3_Differential_Equations.pdf",
+    "01_Math/EC400/03_DPDE/DPDE_ProblemSet2_Optimal_Control.pdf",
+    "01_Math/EC400/03_DPDE/DPDE_ProblemSet1_Dynamic_Programming.pdf",
+    "01_Math/EC400/03_DPDE/DPDE_Phase_Diagrams.pdf",
+    "01_Math/EC400/03_DPDE/DPDE_Notes3_Differential_Equations.pdf",
+    "01_Math/EC400/03_DPDE/DPDE_Notes2_Optimal_Control.pdf",
+    "01_Math/EC400/03_DPDE/DPDE_Notes1_Dynamic_Programming.pdf",
+    "01_Math/EC400/05_Supplementary/math-for-macro/README.md",
+    "01_Math/EC400/05_Supplementary/math-for-macro/LICENSE.md",
     "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
-    "01_Math/08_MathsCamp-EC400",
     "01_Math/01_calculus/01_Single-Variable Calculus.md",
-    "01_Math/01_calculus/Lecture_notes/1-7.pdf",
     "04_Fragments/How I'd build a one-person business (if I started over in 2026) - 2026-03-28.md",
     "04_Fragments/How to fix your entire life in 1 day - 2026-03-28.md",
     "AGENTS.md",
     "05_tools/Example Domain.md",
     "Excalidraw/Drawing 2026-05-25 21.29.55.excalidraw.md",
-    "Excalidraw/Drawing 2026-05-23 18.00.12.excalidraw.md",
     "00_factor/procedure/GARCH Model Estimation Steps.md",
-    "02_Economy/01_Econometrics/01_导论.md",
-    "Excalidraw",
-    "02_Economy/01_Econometrics/太白金星v计量.pdf",
     "02_Economy/01_Econometrics/零散知识点.md",
     "02_Economy/01_Econometrics/06_多重共线性.md",
     "04_Fragments/How To Build A $1M One-Person Business Faster With AI - 2026-03-28.md",
@@ -541,14 +514,6 @@
     "00_factor/00_hub/DID-hub.md",
     "01_Math/04_多元统计分析/03_样本几何与随机抽样Sample Geometry and Random Sampling.md",
     "01_Math/04_多元统计分析/02_矩阵代数和随机向量Matrix Algebra and Random Vectors.md",
-    "01_Math/04_多元统计分析/01_introduction简介.md",
-    "99_学习情况记录/2026-02-15——Sun.md",
-    "01_Math/01_calculus/Lecture_notes/9-16.pdf",
-    "01_Math/07-Mathematics for Computer Science/MIT-6-042j-pdf.pdf",
-    "98_attachment/dashboards/2026-04-13-news.json",
-    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.1sum.pdf",
-    "normalize_callouts.py",
-    "01_Math/02_linear algebra/MIT_OCW_18.06SC_PDF/99_Books/linear_algebra_and_its_applications_4th.pdf",
     "98_attachment/Pasted image 20240229211911.png",
     "98_attachment/Pasted image 20240228202716.png",
     "02_Economy/10_发展经济学/10_发展经济学.canvas",

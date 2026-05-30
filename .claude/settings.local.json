@@ -5,7 +5,10 @@
       "Bash(done:*)",
       "Bash(python3:*)",
       "WebSearch",
-      "WebFetch(domain:www.lse.ac.uk)"
+      "WebFetch(domain:www.lse.ac.uk)",
+      "WebFetch(domain:github.com)",
+      "Bash(curl -sL -o \"PSI_Syllabus_2010_Schafgans.pdf\" \"https://personal.lse.ac.uk/goujard/syllabus_teaching/PS-2010.pdf\")",
+      "Bash(curl -sL -o \"EC400_SOFP_Handout_Nava.pdf\" \"https://personal.lse.ac.uk/nava/Materials/EC400%20Handout.pdf\")"
     ]
   }
 }
