@@ -1,28 +1,16 @@
-# MIT 18.01 单变量微积分（Single-Variable Calculus）
+---
+aliases:
+  - MIT 18.01SC Single Variable Calculus
+  - MIT 18.01 单变量微积分
+tags:
+  - math/calculus
+  - course/mit-ocw
+---
 
-## 1. [[Derivative (2)|微分]]（Differentiation）
+# MIT 18.01SC Single Variable Calculus
 
-### Part A：定义与基本法则（Definitions and Basic Rules）
+课程资料已经整理到主目录：
 
-#### Session 1：导数导论（Introduction to Derivatives）
+- [MIT18.01SC_Single-Variable-Calculus](MIT18.01SC_Single_Variable_Calculus/MIT18.01SC_Single-Variable-Calculus.md)
 
-本课程首先回答两个核心问题：
-
-1. 导数是什么（What is a [[derivative|Derivative]]?）
-2. 如何对常见函数求导（How to differentiate common functions?）
-
-其中“导数是什么”可从以下角度理解：
-
-- 几何解释（Geometric interpretation）：[[geometric interpretation of derivative]]
-- 物理解释（Physical interpretation）
-- 测量意义（Measurement relevance）
-
-## 2. 微分应用（Applications of Differentiation）
-
-## 3. 定积分及其应用（The Definite [[Integral|Integral]] and Its Applications）
-
-## 4. 积分技巧（Techniques of Integration）
-
-## 5. 无穷过程（Exploring the Infinite）
-
-## 考试（Exam）
+该目录只保留 PDF、清单和课程索引；原始 MIT 官网离线站点已归档到 `98_attachment/_archive/MIT18.01SC_raw_site/`。
