@@ -141,24 +141,12 @@
             "id": "412deec24983f7ce",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "01_Math/EC400/03_DPDE/DPDE_ProblemSet4_Cumulative.pdf"
               },
-              "icon": "lucide-file",
-              "title": "MIT18.01_Single-Variable-Calculus"
+              "icon": "lucide-file-text",
+              "title": "DPDE_ProblemSet4_Cumulative"
             }
           }
         ],
@@ -451,7 +439,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 623.5
+    "width": 812.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -473,25 +461,25 @@
   },
   "active": "412deec24983f7ce",
   "lastOpenFiles": [
+    "01_Math/EC400/03_DPDE/DPDE_ProblemSet2_Optimal_Control.pdf",
+    "01_Math/EC400/03_DPDE/DPDE_ProblemSet1_Dynamic_Programming.pdf",
+    "01_Math/EC400/03_DPDE/DPDE_Phase_Diagrams.pdf",
+    "01_Math/EC400/03_DPDE/DPDE_Notes1_Dynamic_Programming.pdf",
+    "01_Math/EC400/03_DPDE/DPDE_Notes2_Optimal_Control.pdf",
+    "01_Math/EC400/00_Timetable/EC400-Timetable-2025.pdf",
+    "01_Math/EC400/02_SOFP/EC400_SOFP_Handout_Nava.pdf",
+    "01_Math/EC400/03_DPDE/DPDE_ProblemSet3_Differential_Equations.pdf",
+    "01_Math/EC400/05_Supplementary/math-for-macro/problemsets/ps1.pdf",
+    "01_Math/01_calculus/01_Differentiation.md",
+    "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
     "01_Math/01_calculus/18.01sc-fall-2010/resources/wohrnt9scys-17/index.html",
     "01_Math/01_calculus/18.01sc-fall-2010/resources/ubh66kvaji/index.html",
-    "01_Math/01_calculus/18.01sc-fall-2010/resources/ubh66kvaji/data.json",
-    "01_Math/01_calculus/18.01sc-fall-2010/resources/ryldydrbfvi-10/data.json",
-    "01_Math/01_calculus/18.01sc-fall-2010/resources/ryldydrbfvi-10/index.html",
-    "01_Math/01_calculus/18.01sc-fall-2010/resources/r9a_nhxrbcg-3/data.json",
-    "01_Math/01_calculus/18.01sc-fall-2010/resources/mit18_01scf10rec_36_300k-1/index.html",
-    "01_Math/01_calculus/18.01sc-fall-2010/resources/mit18_01scf10rec_36_300k-1/data.json",
-    "01_Math/01_calculus/18.01sc-fall-2010/resources/ryldydrbfvi-27/index.html",
-    "01_Math/01_calculus/18.01sc-fall-2010/resources/mit18_01scf10_ex48sol/data.json",
-    "01_Math/01_calculus/18.01sc-fall-2010/resources/mit18_01scf10rec_75_300k/data.json",
     "01_Math/EC400/05_Supplementary/math-for-macro/README.md",
     "01_Math/EC400/05_Supplementary/math-for-macro/LICENSE.md",
     "01_Math/EC400/EC400 课程索引.md",
     "01_Math/08_MathsCamp-EC400/99_Manifest_and_Index/EC400_Index.md",
     "01_Math/08_MathsCamp-EC400/99_Manifest_and_Index/Supplementary_LSE_Leads.md",
     "01_Math/08_MathsCamp-EC400/05_Moodle_or_Restricted_Pending/Restricted_Links.md",
-    "01_Math/01_calculus/01_Differentiation.md",
-    "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
     "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/mathjax/README.009b4259a26029ef2261.md",
     "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/mathjax/CONTRIBUTING.be29e891326e401c2bed.md",
     "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/warning.e29b1060a0fb05a2b927.svg",
