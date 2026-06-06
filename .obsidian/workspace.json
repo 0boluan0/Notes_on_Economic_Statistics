@@ -148,9 +148,21 @@
               "icon": "lucide-file-text",
               "title": "DPDE_ProblemSet4_Cumulative"
             }
+          },
+          {
+            "id": "564905bf8680cbcd",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "01_Math/01_calculus/18.01_Lecture_notes/1-7.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "1-7"
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -332,7 +344,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: zsh"
+              "title": "Terminal: Academic"
             }
           },
           {
@@ -459,21 +471,21 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "412deec24983f7ce",
+  "active": "36db59183709d800",
   "lastOpenFiles": [
+    "05_tools/Install Pake CLI.md",
+    "01_Math/01_calculus/18.01_Lecture_notes/1-7.pdf",
+    "01_Math/01_calculus/18.01_Lecture_notes/26-38.pdf",
+    "01_Math/01_calculus/18.01_Lecture_notes/18-25.pdf",
+    "01_Math/01_calculus/18.01_Lecture_notes/9-16.pdf",
+    "01_Math/01_calculus/01_Differentiation.md",
+    "01_Math/EC400/03_DPDE/DPDE_ProblemSet4_Cumulative.pdf",
     "01_Math/EC400/03_DPDE/DPDE_ProblemSet2_Optimal_Control.pdf",
     "01_Math/EC400/03_DPDE/DPDE_ProblemSet1_Dynamic_Programming.pdf",
     "01_Math/EC400/03_DPDE/DPDE_Phase_Diagrams.pdf",
     "01_Math/EC400/03_DPDE/DPDE_Notes1_Dynamic_Programming.pdf",
     "01_Math/EC400/03_DPDE/DPDE_Notes2_Optimal_Control.pdf",
-    "01_Math/EC400/00_Timetable/EC400-Timetable-2025.pdf",
-    "01_Math/EC400/02_SOFP/EC400_SOFP_Handout_Nava.pdf",
-    "01_Math/EC400/03_DPDE/DPDE_ProblemSet3_Differential_Equations.pdf",
-    "01_Math/EC400/05_Supplementary/math-for-macro/problemsets/ps1.pdf",
-    "01_Math/01_calculus/01_Differentiation.md",
     "01_Math/01_calculus/MIT18.01_Single-Variable-Calculus.md",
-    "01_Math/01_calculus/18.01sc-fall-2010/resources/wohrnt9scys-17/index.html",
-    "01_Math/01_calculus/18.01sc-fall-2010/resources/ubh66kvaji/index.html",
     "01_Math/EC400/05_Supplementary/math-for-macro/README.md",
     "01_Math/EC400/05_Supplementary/math-for-macro/LICENSE.md",
     "01_Math/EC400/EC400 课程索引.md",
