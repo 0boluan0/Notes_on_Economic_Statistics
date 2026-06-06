@@ -11,20 +11,21 @@ tags:
 科目: Calculus
 ---
 
-# Part A derivative 导数
+# 01 Differentiation 求导
 
 > [!note] Source
 > Based on `18.01_Lecture_notes/1-7.pdf`, Unit 1: Derivatives.
 
-## A.0 导数单元在学什么
+## Unit outline 课程大纲
 
 MIT 18.01 的 Unit 1 先回答两个问题：
 
-1. **什么是导数？**
-   - 几何上：导数是曲线在某一点的切线斜率。
-   - 物理或应用上：导数是瞬时变化率。
+1. **A. What is a derivative? 什么是导数？**
+   - Geometric interpretation 几何直观。
+   - Physical interpretation 物理直观。
+   - Importance to all measurements 对测量和敏感性分析的重要性。
 
-2. **如何对常见函数求导？**
+2. **B. How to differentiate any function 如何对任意函数求导？**
    - 幂函数、三角函数、指数函数、对数函数。
    - 加减、常数倍、乘积、商、复合函数。
    - 隐函数、反函数、对数求导。
@@ -46,9 +47,13 @@ $$
 
 Related: [[Derivative|导数]]、[[Limit|极限]]。
 
-## A.1 geometric interpretation 几何直观
+## A. What is a derivative? 什么是导数？
 
-### A.1.1 从割线到切线
+导数这一部分先不急着背公式，而是先建立三个直觉：几何上它是切线斜率，物理上它是瞬时变化率，在测量问题里它描述一个变量对另一个变量的敏感程度。
+
+### A.1 geometric interpretation 几何直观
+
+#### A.1.1 从割线到切线
 
 设曲线上固定一点
 
@@ -84,7 +89,7 @@ $$
 
 Related: [[geometric interpretation of derivative|导数的几何意义]]。
 
-### A.1.2 为什么不能直接令 $\Delta x=0$
+#### A.1.2 为什么不能直接令 $\Delta x=0$
 
 如果直接把 $\Delta x=0$ 代入差商，会得到
 
@@ -98,7 +103,7 @@ $$
 2. 化简差商，消去导致 $0/0$ 的因子。
 3. 再取极限 $\Delta x\to 0$。
 
-### A.1.3 例子：$f(x)=\frac{1}{x}$
+#### A.1.3 例子：$f(x)=\frac{1}{x}$
 
 对
 
@@ -146,7 +151,7 @@ $$
 \frac{d}{dx}\left(\frac{1}{x}\right)=-\frac{1}{x^2}
 $$
 
-### A.1.4 切线方程
+#### A.1.4 切线方程
 
 如果已知曲线 $y=f(x)$ 在 $x_0$ 处可导，那么点
 
@@ -173,9 +178,9 @@ y-\frac{1}{x_0}
 =-\frac{1}{x_0^2}(x-x_0)
 $$
 
-## A.2 physical interpretation 物理直观
+### A.2 physical interpretation 物理直观
 
-### A.2.1 平均变化率与瞬时变化率
+#### A.2.1 平均变化率与瞬时变化率
 
 差商
 
@@ -191,15 +196,7 @@ $$
 \frac{\Delta y}{\Delta x}\to \frac{dy}{dx}
 $$
 
-常见例子：
-
-| 变量 | 导数 | 含义 |
-|---|---:|---|
-| $q$ = charge 电荷 | $\frac{dq}{dt}$ | current 电流 |
-| $s$ = distance 距离 | $\frac{ds}{dt}$ | speed 速度 |
-| $T$ = temperature 温度 | $\frac{dT}{dx}$ | temperature gradient 温度梯度 |
-
-### A.2.2 Pumpkin drop 例子
+#### A.2.2 Pumpkin drop 例子
 
 MIT lecture 用南瓜从楼顶掉落说明速度。
 
@@ -247,9 +244,40 @@ $$
 
 负号表示高度 $y$ 在下降；速度大小是 $160\ \text{ft/s}$。
 
-## A.3 limits and continuity 极限与连续
+### A.3 importance to all measurements 对所有测量的重要性
 
-### A.3.1 导数为什么需要极限
+导数不只是在几何图像或物理运动里出现。只要一个量依赖另一个量，就可以问：
+
+$$
+\text{一个变量的小变化，会导致另一个变量变化多少？}
+$$
+
+这就是测量、误差传播和敏感性分析里的导数直觉。
+
+常见例子：
+
+| 变量 | 导数 | 含义 |
+|---|---:|---|
+| $q$ = charge 电荷 | $\frac{dq}{dt}$ | current 电流 |
+| $s$ = distance 距离 | $\frac{ds}{dt}$ | speed 速度 |
+| $T$ = temperature 温度 | $\frac{dT}{dx}$ | temperature gradient 温度梯度 |
+| $L$ = measured distance 测量距离 | $\frac{dL}{dh}$ | 高度误差对距离估计的影响 |
+
+MIT lecture 提到 GPS 的例子：如果卫星信号只能把高度 $h$ 测到某个精度，那么我们还要知道这个误差会怎样传到距离 $L$。这类问题本质上就是研究
+
+$$
+\frac{\Delta L}{\Delta h}\quad\text{or}\quad \frac{dL}{dh}
+$$
+
+所以导数在 economics, political science, finance, physics 等依赖测量和模型敏感性的领域都重要。
+
+## B. How to differentiate any function 如何对任意函数求导
+
+Lecture 1 把 “How to differentiate any function” 放在 Unit 1 的第二个大问题。后面几讲的目标就是建立一套求导工具：先用极限保证定义可用，再推导基本函数和组合规则，最后处理隐函数、反函数、指数、对数和对数求导。
+
+### B.1 limits and continuity 极限与连续
+
+#### B.1.1 导数为什么需要极限
 
 导数不是普通代入，而是一个极限：
 
@@ -260,7 +288,7 @@ $$
 
 注意：取极限时默认 $x\neq x_0$。所以在化简过程中可以除以 $x-x_0$，但最后才让 $x$ 靠近 $x_0$。
 
-### A.3.2 连续性
+#### B.1.2 连续性
 
 函数 $f$ 在 $x_0$ 处连续的意思是：
 
@@ -277,7 +305,7 @@ $$
 - **infinite discontinuity 无穷间断**：函数值趋向 $\pm\infty$。
 - **oscillatory discontinuity 振荡间断**：靠近一点时反复振荡，极限不存在。
 
-### A.3.3 可导推出连续
+#### B.1.3 可导推出连续
 
 定理：
 
@@ -305,7 +333,7 @@ $$
 
 注意反过来不一定成立：连续不一定可导。
 
-### A.3.4 两个重要三角极限
+#### B.1.4 两个重要三角极限
 
 Lecture 2 用单位圆直观说明：
 
@@ -321,9 +349,9 @@ $$
 
 这两个极限是推导 $\sin x$ 和 $\cos x$ 导数的基础。
 
-## A.4 differentiation rules 求导规则
+### B.2 differentiation rules 求导规则
 
-### A.4.1 幂函数
+#### B.2.1 幂函数
 
 对正整数 $n$：
 
@@ -349,7 +377,7 @@ $$
 \frac{d}{dx}x^r=rx^{r-1}
 $$
 
-### A.4.2 线性规则
+#### B.2.2 线性规则
 
 如果 $u=u(x)$，$v=v(x)$，$c$ 是常数：
 
@@ -368,7 +396,7 @@ $$
 =2x+30x^9
 $$
 
-### A.4.3 三角函数
+#### B.2.3 三角函数
 
 由三角极限可以推出：
 
@@ -390,7 +418,7 @@ $$
 \frac{d}{dx}\sec x=\sec x\tan x
 $$
 
-### A.4.4 Product rule 积法则
+#### B.2.4 Product rule 积法则
 
 如果 $u=u(x)$，$v=v(x)$：
 
@@ -407,7 +435,7 @@ $$
 =2x\sin x+x^2\cos x
 $$
 
-### A.4.5 Quotient rule 商法则
+#### B.2.5 Quotient rule 商法则
 
 如果 $v\neq 0$：
 
@@ -424,9 +452,9 @@ $$
 
 然后用积法则和链式法则推出来。
 
-## A.5 chain rule and higher derivatives 链式法则与高阶导数
+### B.3 chain rule and higher derivatives 链式法则与高阶导数
 
-### A.5.1 Chain rule 链式法则
+#### B.3.1 Chain rule 链式法则
 
 如果
 
@@ -461,7 +489,7 @@ $$
 =2t\cos(t^2)
 $$
 
-### A.5.2 函数复合不满足交换律
+#### B.3.2 函数复合不满足交换律
 
 如果
 
@@ -487,7 +515,7 @@ $$
 f\circ g\neq g\circ f
 $$
 
-### A.5.3 Higher derivatives 高阶导数
+#### B.3.3 Higher derivatives 高阶导数
 
 一阶导数：
 
@@ -525,9 +553,9 @@ $$
 n!=n(n-1)(n-2)\cdots 2\cdot 1
 $$
 
-## A.6 implicit differentiation and inverse functions 隐函数求导与反函数求导
+### B.4 implicit differentiation and inverse functions 隐函数求导与反函数求导
 
-### A.6.1 隐函数求导
+#### B.4.1 隐函数求导
 
 有些关系不方便直接写成 $y=f(x)$。例如：
 
@@ -553,7 +581,7 @@ $$
 \frac{dy}{dx}=-\frac{x}{y}
 $$
 
-### A.6.2 更一般的隐函数例子
+#### B.4.2 更一般的隐函数例子
 
 设
 
@@ -580,7 +608,7 @@ $$
 =-\frac{y^2}{3y^2+2xy}
 $$
 
-### A.6.3 反函数求导
+#### B.4.3 反函数求导
 
 如果
 
@@ -632,9 +660,9 @@ $$
 \frac{d}{dx}\arctan x=\frac{1}{1+x^2}
 $$
 
-## A.7 exponentials, logarithms, and logarithmic differentiation 指数、对数与对数求导
+### B.5 exponentials, logarithms, and logarithmic differentiation 指数、对数与对数求导
 
-### A.7.1 指数函数的导数
+#### B.5.1 指数函数的导数
 
 对 $a>1$，考虑
 
@@ -679,7 +707,7 @@ $$
 \frac{d}{dx}e^x=e^x
 $$
 
-### A.7.2 自然对数
+#### B.5.2 自然对数
 
 自然对数是 $e^x$ 的反函数。
 
@@ -725,7 +753,7 @@ $$
 \frac{d}{dx}\ln x=\frac{1}{x}
 $$
 
-### A.7.3 任意底数指数函数
+#### B.5.3 任意底数指数函数
 
 因为
 
@@ -752,7 +780,7 @@ $$
 \frac{d}{dx}a^x=(\ln a)a^x
 $$
 
-### A.7.4 Logarithmic differentiation 对数求导
+#### B.5.4 Logarithmic differentiation 对数求导
 
 对数求导适合处理“变量在底数和指数里都出现”的函数。
 
@@ -806,9 +834,9 @@ $$
 \frac{d}{dx}x^x=x^x(\ln x+1)
 $$
 
-## A.8 exam review checklist 复习清单
+### B.6 exam review checklist 复习清单
 
-### A.8.1 通用求导规则
+#### B.6.1 通用求导规则
 
 需要熟练掌握：
 
@@ -833,7 +861,7 @@ $$
 \frac{d}{dx}f(u(x))=f'(u(x))u'(x)
 $$
 
-### A.8.2 常见函数求导
+#### B.6.2 常见函数求导
 
 | 函数 | 导数 |
 |---:|---:|
@@ -848,7 +876,7 @@ $$
 | $\arctan x$ | $\frac{1}{1+x^2}$ |
 | $\arcsin x$ | $\frac{1}{\sqrt{1-x^2}}$ |
 
-### A.8.3 解题时先识别结构
+#### B.6.3 解题时先识别结构
 
 拿到一个求导题，先问：
 
@@ -895,21 +923,21 @@ $$
 \right)
 $$
 
-## A.9 这一章最容易混的点
+### B.7 这一章最容易混的点
 
-### A.9.1 导数不是 $\frac{0}{0}$
+#### B.7.1 导数不是 $\frac{0}{0}$
 
 导数来自差商的极限。$\frac{0}{0}$ 只是直接代入时出现的未定式，不是答案。
 
-### A.9.2 切线不是“只碰一次”的线
+#### B.7.2 切线不是“只碰一次”的线
 
 切线的本质是割线的极限，不是“和曲线只有一个交点”的线。
 
-### A.9.3 可导一定连续，但连续不一定可导
+#### B.7.3 可导一定连续，但连续不一定可导
 
 可导比连续更强。尖点、折点、竖直切线处可能连续但不可导。
 
-### A.9.4 链式法则是结构识别，不是死记
+#### B.7.4 链式法则是结构识别，不是死记
 
 只要看到“函数套函数”，就要找内层 $u(x)$ 和外层 $f(u)$：
 
@@ -917,7 +945,7 @@ $$
 \frac{d}{dx}f(u(x))=f'(u(x))u'(x)
 $$
 
-### A.9.5 对数求导不是只用于 $\ln x$
+#### B.7.5 对数求导不是只用于 $\ln x$
 
 对数求导用于简化复杂乘积、商、幂指数混合形式，尤其是：
 
