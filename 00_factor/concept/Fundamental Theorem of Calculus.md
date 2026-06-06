@@ -67,7 +67,7 @@ $$
 - 使微积分成为统一的理论体系
 
 ## 相关链接
-[[Derivative (2)|导数]]
+[[Derivative|导数]]
 [[Integral|积分]]
 [[Limit|极限]]
 

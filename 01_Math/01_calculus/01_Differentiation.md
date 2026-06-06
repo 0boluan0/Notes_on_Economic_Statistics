@@ -44,7 +44,7 @@ $$
 
 叫做 **difference quotient 差商**。先算差商，再让 $\Delta x\to 0$，得到瞬时变化率。
 
-Related: [[Derivative (2)|导数]]、[[Limit|极限]]。
+Related: [[Derivative|导数]]、[[Limit|极限]]。
 
 ## A.1 geometric interpretation 几何直观
 

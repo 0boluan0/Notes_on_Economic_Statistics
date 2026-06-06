@@ -77,7 +77,7 @@ $\lim_{x \to a^-} f(x) = \lim_{x \to a^+} f(x)$
 4. **连续性判定**：用极限判断函数连续性
 
 ## 相关链接
-[[Derivative (2)|导数]]
+[[Derivative|导数]]
 [[Integral|积分]]
 
 ## 课程笔记反链
