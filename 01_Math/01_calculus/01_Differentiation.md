@@ -98,7 +98,9 @@ $$
 2. 化简差商，消去导致 $0/0$ 的因子。
 3. 再取极限 $\Delta x\to 0$。
 
-### A.1.3 例子：$f(x)=\frac{1}{x}$
+### A.1.3 例子：$f(x)=\frac{1}{x}$ 和 $f(x)=x^n$
+
+#### Example 1: $f(x)=\frac{1}{x}$
 
 对
 
@@ -144,6 +146,66 @@ $$
 
 $$
 \frac{d}{dx}\left(\frac{1}{x}\right)=-\frac{1}{x^2}
+$$
+
+#### Example 2: $f(x)=x^n$
+
+Lecture 1 还用 [[Difference Quotient|差商]] 推导幂函数求导公式。设
+
+$$
+f(x)=x^n,\qquad n=1,2,3,\ldots
+$$
+
+差商为：
+
+$$
+\frac{\Delta y}{\Delta x}
+=\frac{(x+\Delta x)^n-x^n}{\Delta x}
+$$
+
+用 [[Binomial Theorem|二项式展开]]：
+
+$$
+(x+\Delta x)^n
+=x^n+nx^{n-1}\Delta x+\binom{n}{2}x^{n-2}(\Delta x)^2+\cdots+(\Delta x)^n
+$$
+
+求导时只需要保留到 $\Delta x$ 的一阶项。后面的项都至少含有 $(\Delta x)^2$，所以也可以压缩写成：
+
+$$
+(x+\Delta x)^n
+=x^n+nx^{n-1}\Delta x+O((\Delta x)^2)
+$$
+
+这里的 $O((\Delta x)^2)$ 是在 $x$ 固定、$\Delta x\to 0$ 时，把所有二阶及以上的 $\Delta x$ 项合并记号化。
+
+代回差商：
+
+$$
+\frac{\Delta y}{\Delta x}
+=
+\frac{x^n+nx^{n-1}\Delta x+O((\Delta x)^2)-x^n}{\Delta x}
+$$
+
+约掉 $x^n$，再除以 $\Delta x$：
+
+$$
+\frac{\Delta y}{\Delta x}
+=nx^{n-1}+O(\Delta x)
+$$
+
+令 $\Delta x\to 0$，高阶项消失：
+
+$$
+\frac{dy}{dx}
+=\lim_{\Delta x\to 0}\frac{\Delta y}{\Delta x}
+=nx^{n-1}
+$$
+
+所以
+
+$$
+\frac{d}{dx}x^n=nx^{n-1}
 $$
 
 ### A.1.4 切线方程
@@ -251,12 +313,12 @@ $$
 
 常见例子：
 
-| 变量 | 导数 | 含义 |
-|---|---:|---|
-| $q$ = charge 电荷 | $\frac{dq}{dt}$ | current 电流 |
-| $s$ = distance 距离 | $\frac{ds}{dt}$ | speed 速度 |
-| $T$ = temperature 温度 | $\frac{dT}{dx}$ | temperature gradient 温度梯度 |
-| $L$ = measured distance 测量距离 | $\frac{dL}{dh}$ | 高度误差对距离估计的影响 |
+| 变量                           |              导数 | 含义                        |
+| ---------------------------- | --------------: | ------------------------- |
+| $q$ = charge 电荷              | $\frac{dq}{dt}$ | current 电流                |
+| $s$ = distance 距离            | $\frac{ds}{dt}$ | speed 速度                  |
+| $T$ = temperature 温度         | $\frac{dT}{dx}$ | temperature gradient 温度梯度 |
+| $L$ = measured distance 测量距离 | $\frac{dL}{dh}$ | 高度误差对距离估计的影响              |
 
 MIT lecture 提到 GPS 的例子：如果卫星信号只能把高度 $h$ 测到某个精度，那么我们还要知道这个误差会怎样传到距离 $L$。这类问题本质上就是研究
 
@@ -354,7 +416,7 @@ $$
 \frac{d}{dx}x^n=nx^{n-1}
 $$
 
-直觉来自二项式展开：
+直觉来自 [[Binomial Theorem|二项式展开]]：
 
 $$
 (x+\Delta x)^n=x^n+n(\Delta x)x^{n-1}+O((\Delta x)^2)
