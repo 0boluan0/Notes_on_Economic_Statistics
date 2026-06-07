@@ -38,7 +38,7 @@ $$
 =\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}
 $$
 
-叫做 **difference quotient 差商**。先算差商，再让 $\Delta x\to 0$，得到瞬时变化率。
+叫做 [[Difference Quotient|difference quotient 差商]]。先算差商，再让 $\Delta x\to 0$，得到瞬时变化率。
 
 Related: [[Derivative|导数]]、[[Limit|极限]]。
 
@@ -86,7 +86,7 @@ Related: [[geometric interpretation of derivative|导数的几何意义]]。
 
 ### A.1.2 为什么不能直接令 $\Delta x=0$
 
-如果直接把 $\Delta x=0$ 代入差商，会得到
+如果直接把 $\Delta x=0$ 代入 [[Difference Quotient|差商]]，会得到
 
 $$
 \frac{0}{0}
@@ -106,7 +106,7 @@ $$
 f(x)=\frac{1}{x}
 $$
 
-在 $x_0$ 处计算差商：
+在 $x_0$ 处计算 [[Difference Quotient|差商]]：
 
 $$
 \frac{\Delta f}{\Delta x}
@@ -922,7 +922,7 @@ $$
 
 ### B.7.1 导数不是 $\frac{0}{0}$
 
-导数来自差商的极限。$\frac{0}{0}$ 只是直接代入时出现的未定式，不是答案。
+导数来自 [[Difference Quotient|差商]] 的极限。$\frac{0}{0}$ 只是直接代入时出现的未定式，不是答案。
 
 ### B.7.2 切线不是“只碰一次”的线
 

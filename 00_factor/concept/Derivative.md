@@ -24,14 +24,14 @@ tags:
 
 ## 最小理解
 
-导数来自差商的极限：
+导数来自 [[Difference Quotient|差商]] 的极限：
 
 $$
 \frac{\Delta f}{\Delta x}
 =\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}
 $$
 
-- $\frac{\Delta f}{\Delta x}$：平均变化率。
+- $\frac{\Delta f}{\Delta x}$：[[Difference Quotient|差商]]，表示平均变化率。
 - $\lim_{\Delta x\to 0}\frac{\Delta f}{\Delta x}$：瞬时变化率。
 - 直接令 $\Delta x=0$ 通常会得到 $\frac{0}{0}$，所以必须先化简差商，再取极限。
 
