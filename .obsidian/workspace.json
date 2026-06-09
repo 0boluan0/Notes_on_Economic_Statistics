@@ -213,7 +213,7 @@
               },
               "pinned": true,
               "icon": "terminal",
-              "title": "Terminal: zsh"
+              "title": "Terminal: ✳ Claude Code"
             }
           },
           {
@@ -272,13 +272,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Math/01_calculus/01_Differentiation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 01_Differentiation"
+              "title": "Outline"
             }
           },
           {
@@ -339,11 +338,12 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "0975eb512a09d235",
+  "active": "36db59183709d800",
   "lastOpenFiles": [
+    "01_Math/EC400/02_SOFP/U202216415-冯一航-形式审查表-扫描PDF版.pdf",
+    "01_Math/01_calculus/01_Differentiation.md",
     "04_Fragments/Learn anything with the -teach skill - 2026-06-09.md",
     "98_attachment/Pasted image 20240229215711.png",
-    "01_Math/01_calculus/01_Differentiation.md",
     "00_factor/concept/Binomial Theorem.md",
     "00_factor/concept/Basis.md",
     "00_factor/concept/Basel Accords.md",
@@ -377,7 +377,6 @@
     "01_Math/EC400/03_DPDE/DPDE_Phase_Diagrams.pdf",
     "01_Math/EC400/03_DPDE/DPDE_Notes1_Dynamic_Programming.pdf",
     "01_Math/EC400/03_DPDE/DPDE_Notes2_Optimal_Control.pdf",
-    "01_Math/EC400/05_Supplementary/math-for-macro/README.md",
     "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/warning.e29b1060a0fb05a2b927.svg",
     "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/x-formerly-twitter-black.f8c75ad9f42902726d25.png",
     "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/youtube.1e55fc2f8fc09d36a1a6.svg",
