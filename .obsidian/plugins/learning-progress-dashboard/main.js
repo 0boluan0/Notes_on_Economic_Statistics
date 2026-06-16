@@ -249,6 +249,18 @@ class LearningBoardStore {
     this.app = app;
   }
 
+  shouldDropStaleLesson(lesson, coursePath) {
+    const notePath = normalizePath(String(lesson.notePath || "").trim());
+    const normalizedCoursePath = normalizePath(String(coursePath || ""));
+    if (!notePath || !normalizedCoursePath) return false;
+    if (!notePath.endsWith(".md")) return false;
+    if (!notePath.startsWith(`${normalizedCoursePath}/`)) return false;
+    if (this.app.vault.getAbstractFileByPath(notePath)) return false;
+    if (normalizeState(lesson.state) !== "raw") return false;
+    if (String(lesson.remark || "").trim()) return false;
+    return true;
+  }
+
   async ensureFolder(path) {
     const parts = path.split("/");
     let current = "";
@@ -347,7 +359,9 @@ class LearningBoardStore {
         ...existingCourse,
         visible: true,
         lessons: Array.isArray(existingCourse.lessons)
-          ? existingCourse.lessons.map((lesson) => ({ ...lesson, state: normalizeState(lesson.state) }))
+          ? existingCourse.lessons
+              .map((lesson) => ({ ...lesson, state: normalizeState(lesson.state) }))
+              .filter((lesson) => !this.shouldDropStaleLesson(lesson, existingCourse.path))
           : [],
       };
       maxOrder = Math.max(maxOrder, Number(cloned.order) || 0);

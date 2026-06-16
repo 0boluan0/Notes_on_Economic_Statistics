@@ -29,14 +29,6 @@ You can hand-edit it, but keep the fenced JSON block valid.
           "notePath": "01_Math/01_calculus/01_Differentiation.md",
           "state": "raw",
           "remark": ""
-        },
-        {
-          "id": "01-math-01-calculus-01-single-variable-calculus-md-krx96a",
-          "label": "01",
-          "title": "Single Variable Calculus",
-          "notePath": "01_Math/01_calculus/01_Single-Variable Calculus.md",
-          "state": "raw",
-          "remark": ""
         }
       ]
     },
