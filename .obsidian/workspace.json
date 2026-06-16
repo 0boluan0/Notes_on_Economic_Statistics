@@ -272,13 +272,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Math/01_calculus/01_Differentiation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 01_Differentiation"
+              "title": "Outline"
             }
           },
           {
@@ -339,7 +338,7 @@
       "terminal:Open terminal": false
     }
   },
-  "active": "d3c7dbacc7288c61",
+  "active": "36db59183709d800",
   "lastOpenFiles": [
     "01_Math/01_calculus/01_Differentiation.md",
     "98_attachment/dashboards/2026-02-06-news.json",
