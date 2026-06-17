@@ -1,13 +1,13 @@
 ---
 name: today
-description: Generate today's journal note when the user says /today or asks for a daily log. Use template `00_inbox/日记模版.md` (fallback `00_inbox/日记模板.md`), create the note in `99_学习情况记录`, add a Chinese-first global situation dashboard (map + a concise table summary + finance/tech bullets under the map) for the latest 24 hours, list unfinished tasks from existing notes in `99_学习情况记录`, and list today's tasks extracted from `Overview & Study Record.md` as markdown checkboxes.
+description: Generate or update today's task-only journal note when the user says /today or asks for a daily task log. Use template `00_inbox/日记模版.md` (fallback `00_inbox/日记模板.md`), create the note in `99_学习情况记录`, list historical unfinished tasks above today's tasks, read today's focus tasks from `99_学习情况记录/workbench.md`, keep `今日完成内容`, and preserve the user's manual transfer convention `- ~~task~~（转移至 YYYY-MM-DD）`. Do not include news or depend on `Overview & Study Record.md`.
 ---
 
 # Today
 
 ## Overview
 
-Create one completed daily note with three ordered modules and save it to the study-log folder.
+Create one task-only daily note and save it to the study-log folder.
 
 Use this workflow every time the user asks for `/today`.
 
@@ -17,43 +17,41 @@ Use this workflow every time the user asks for `/today`.
    - Prefer template `00_inbox/日记模版.md`.
    - If missing, fallback to `00_inbox/日记模板.md`.
    - Use output folder `99_学习情况记录`.
-   - Use overview file `Overview & Study Record.md`.
+   - Use workbench file `99_学习情况记录/workbench.md`.
 
 2. Determine today's target filename.
    - Format: `YYYY-MM-DD——<DayAbbrev>.md` (for example `2026-02-02——Mon.md`).
    - If the file already exists, update it in place instead of creating a duplicate.
 
-3. Build module 1 (global dashboard, concise table + finance/tech bullets, Chinese-first).
-   - Run:
-     - `python3 .codex/skills/today/scripts/build_news_dashboard.py --date YYYY-MM-DD`
-   - The script creates a static SVG map in `98_attachment/dashboards` and prints the full module 1 markdown to stdout.
-   - Data source: default is `--source auto` (try World Monitor RSS digest, then fallback to GDELT). Override with `--source worldmonitor|gdelt` or env `TODAY_NEWS_SOURCE`.
-   - Use the printed markdown block directly (it already includes map embed + heat-weighted summary table + finance/tech bullets).
-   - Optional: add `--translate` and set `LIBRETRANSLATE_URL` to enable machine translation for the Chinese lines.
-   - If translation is not enabled or is inaccurate, translate the summaries manually before saving the note.
-   - Follow `references/news-format.md`.
-
-4. Build module 2 and module 3 (tasks) with the helper script.
+3. Build the task sections with the helper script.
    - Run:
      - `python3 .codex/skills/today/scripts/extract_today_tasks.py --date YYYY-MM-DD`
    - Use the generated markdown block directly.
-   - If the script reports missing data, insert explicit placeholders instead of guessing.
+   - Default behavior is read-only: do not modify old diaries.
+   - By default, historical unfinished tasks include only items explicitly marked as transferred to today with `转移至 YYYY-MM-DD`.
+   - Only add `--include-open-history` if the user explicitly asks to collect all unchecked tasks from old daily notes.
+   - Only add `--mark-moved` if the user explicitly asks to mark old unfinished tasks as transferred to today.
 
-5. Compose the final note.
+4. Compose the final note.
    - Start from the resolved diary template content.
-   - Place module order exactly:
-     - Module 1: Global Situation Dashboard (Chinese-first)
-     - Module 2: Unfinished Tasks (from old diaries)
-     - Module 3: Today's Tasks (from overview plan)
+   - Place sections in this order:
+     - `## 历史未完成任务`
+     - `## 今日任务`
+     - `## 今日完成内容`
    - Use markdown checkboxes (`- [ ]`) for all task bullets.
+   - Do not include news, maps, finance summaries, tech summaries, or global situation sections.
 
-6. Save and verify.
+5. Save and verify.
    - Confirm file is under `99_学习情况记录`.
-   - Confirm all three modules exist.
-   - Confirm module 1 includes the map embed, summary table, and finance/tech bullets within latest 24 hours.
+   - Confirm all three task sections exist.
+   - Confirm historical unfinished tasks appear above today's tasks.
+   - Confirm today's tasks come from `## 当前焦点` in `99_学习情况记录/workbench.md` when available.
 
 ## Notes
 
 - Do not edit `.obsidian/` files.
-- Do not fabricate news. If data is insufficient, state that clearly in the note.
+- Preserve manual task transfers in the form `- ~~task~~（转移至 YYYY-MM-DD）`.
+- Include transferred tasks only on the matching target date.
+- Do not pull every unchecked task from old diaries unless the user explicitly asks for a full backlog sweep.
+- Ignore placeholder tasks such as `暂无历史未完成任务` and `未识别到今日任务`.
 - Keep wording concise and execution-focused.

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Extract module 2 and module 3 task blocks for the `today` skill.
+Extract task blocks for the `today` skill.
 
 Outputs markdown by default so it can be pasted directly into a note.
 """
@@ -17,6 +17,12 @@ from typing import Dict, List, Optional, Tuple
 WEEKDAY_ZH = ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
 WEEKDAY_EN = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 DEFAULT_WEEK1_START = dt.date(2026, 2, 2)
+DAILY_NOTE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}——[A-Za-z]{3}\.md$")
+PLACEHOLDER_TASKS = {
+    "暂无历史未完成任务",
+    "未识别到今日任务，请手动检查 `Overview & Study Record.md`",
+    "从 `99_学习情况记录/workbench.md` 的 `## 当前焦点` 添加今天要做的事",
+}
 
 
 def parse_date(raw: Optional[str]) -> dt.date:
@@ -47,6 +53,13 @@ def is_moved_task_line(line: str) -> bool:
     return "转移至" in line or "~~" in line
 
 
+def is_placeholder_task(text: str) -> bool:
+    cleaned = text.strip()
+    if cleaned in PLACEHOLDER_TASKS:
+        return True
+    return "未识别到今日任务" in cleaned or "暂无历史未完成任务" in cleaned
+
+
 def find_unfinished_tasks(diary_dir: Path, exclude_filename: Optional[str]) -> List[str]:
     task_pattern = re.compile(r"^\s*-\s\[\s\]\s+(.*\S)\s*$")
     tasks: List[str] = []
@@ -54,6 +67,8 @@ def find_unfinished_tasks(diary_dir: Path, exclude_filename: Optional[str]) -> L
         return tasks
 
     for note in sorted(diary_dir.glob("*.md")):
+        if not DAILY_NOTE_RE.match(note.name):
+            continue
         if exclude_filename and note.name == exclude_filename:
             continue
         text = note.read_text(encoding="utf-8", errors="ignore")
@@ -62,7 +77,7 @@ def find_unfinished_tasks(diary_dir: Path, exclude_filename: Optional[str]) -> L
             if not match or is_moved_task_line(line):
                 continue
             task_text = match.group(1).strip()
-            if task_text == "暂无历史未完成任务":
+            if is_placeholder_task(task_text):
                 continue
             tasks.append(task_text)
     return dedupe_keep_order(tasks)
@@ -79,6 +94,8 @@ def find_tasks_moved_to_date(
         return tasks
 
     for note in sorted(diary_dir.glob("*.md")):
+        if not DAILY_NOTE_RE.match(note.name):
+            continue
         if exclude_filename and note.name == exclude_filename:
             continue
         text = note.read_text(encoding="utf-8", errors="ignore")
@@ -90,7 +107,7 @@ def find_tasks_moved_to_date(
             moved_to = match.group(2).strip()
             if moved_to != target_date.isoformat():
                 continue
-            if task_text == "暂无历史未完成任务":
+            if is_placeholder_task(task_text):
                 continue
             tasks.append(task_text)
 
@@ -111,6 +128,8 @@ def mark_tasks_moved(
     moved_count: Dict[str, int] = {}
 
     for note in sorted(diary_dir.glob("*.md")):
+        if not DAILY_NOTE_RE.match(note.name):
+            continue
         if exclude_filename and note.name == exclude_filename:
             continue
         text = note.read_text(encoding="utf-8", errors="ignore")
@@ -122,6 +141,8 @@ def mark_tasks_moved(
             if not match or is_moved_task_line(line):
                 continue
             task_text = match.group(2).strip()
+            if is_placeholder_task(task_text):
+                continue
             if task_text not in task_set:
                 continue
             lines[idx] = f"- ~~{task_text}~~（转移至 {target_date:%Y-%m-%d}）"
@@ -204,7 +225,7 @@ def extract_today_overview_tasks(
             headers = cells
             continue
 
-        if cells[0] == weekday_zh:
+        if cells[0].startswith(weekday_zh):
             row_cells = cells
             break
 
@@ -226,9 +247,41 @@ def extract_today_overview_tasks(
     return tasks, week_index, weekday_zh
 
 
+def extract_workbench_focus_tasks(workbench_path: Path) -> List[str]:
+    if not workbench_path.exists():
+        return []
+
+    text = workbench_path.read_text(encoding="utf-8", errors="ignore")
+    task_pattern = re.compile(r"^\s*-\s\[\s\]\s+(.*\S)\s*$")
+    tasks: List[str] = []
+    in_focus = False
+
+    for raw_line in text.splitlines():
+        line = raw_line.rstrip()
+        heading = re.match(r"^(#{1,6})\s+(.*\S)\s*$", line)
+        if heading:
+            level = len(heading.group(1))
+            title = heading.group(2).strip()
+            if level <= 2:
+                in_focus = title == "当前焦点"
+                continue
+        if not in_focus:
+            continue
+
+        match = task_pattern.match(line)
+        if not match:
+            continue
+        task_text = match.group(1).strip()
+        if is_placeholder_task(task_text):
+            continue
+        tasks.append(task_text)
+
+    return dedupe_keep_order(tasks)
+
+
 def build_markdown(unfinished_tasks: List[str], today_tasks: List[str]) -> str:
     out: List[str] = []
-    out.append("## 模块二｜历史未完成任务")
+    out.append("## 历史未完成任务")
     if unfinished_tasks:
         for task in unfinished_tasks:
             out.append(f"- [ ] {task}")
@@ -236,12 +289,15 @@ def build_markdown(unfinished_tasks: List[str], today_tasks: List[str]) -> str:
         out.append("- [ ] 暂无历史未完成任务")
 
     out.append("")
-    out.append("## 模块三｜今日任务（来自 Overview & Study Record）")
+    out.append("## 今日任务")
     if today_tasks:
         for task in today_tasks:
             out.append(f"- [ ] {task}")
     else:
-        out.append("- [ ] 未识别到今日任务，请手动检查 `Overview & Study Record.md`")
+        out.append("- [ ] 从 `99_学习情况记录/workbench.md` 的 `## 当前焦点` 添加今天要做的事")
+
+    out.append("")
+    out.append("## 今日完成内容")
 
     return "\n".join(out).rstrip() + "\n"
 
@@ -255,9 +311,19 @@ def main() -> None:
         help="Directory containing previous diary notes.",
     )
     parser.add_argument(
-        "--overview",
-        default="Overview & Study Record.md",
-        help="Overview file path.",
+        "--workbench",
+        default="99_学习情况记录/workbench.md",
+        help="Workbench file path.",
+    )
+    parser.add_argument(
+        "--mark-moved",
+        action="store_true",
+        help="Mark old unfinished tasks as transferred to the target date.",
+    )
+    parser.add_argument(
+        "--include-open-history",
+        action="store_true",
+        help="Include every unchecked task from old daily notes, not only tasks transferred to the target date.",
     )
     parser.add_argument(
         "--output-format",
@@ -272,35 +338,36 @@ def main() -> None:
     target_filename = f"{target_date:%Y-%m-%d}——{day_abbrev}.md"
 
     diary_dir = Path(args.diary_dir)
-    overview_path = Path(args.overview)
+    workbench_path = Path(args.workbench)
 
     moved_to_today_tasks = find_tasks_moved_to_date(
         diary_dir, exclude_filename=target_filename, target_date=target_date
     )
-    unfinished_tasks = find_unfinished_tasks(diary_dir, exclude_filename=target_filename)
-    mark_tasks_moved(
-        diary_dir,
-        exclude_filename=target_filename,
-        tasks_to_move=unfinished_tasks,
-        target_date=target_date,
+    open_history_tasks = (
+        find_unfinished_tasks(diary_dir, exclude_filename=target_filename)
+        if args.include_open_history or args.mark_moved
+        else []
     )
-    unfinished_tasks = dedupe_keep_order(moved_to_today_tasks + unfinished_tasks)
-    if overview_path.exists():
-        overview_text = overview_path.read_text(encoding="utf-8", errors="ignore")
-        today_tasks, week_index, weekday_zh = extract_today_overview_tasks(overview_text, target_date)
-    else:
-        today_tasks, week_index, weekday_zh = [], None, WEEKDAY_ZH[target_date.weekday()]
+    if args.mark_moved:
+        mark_tasks_moved(
+            diary_dir,
+            exclude_filename=target_filename,
+            tasks_to_move=open_history_tasks,
+            target_date=target_date,
+        )
+    unfinished_tasks = dedupe_keep_order(moved_to_today_tasks + open_history_tasks)
+    today_tasks = extract_workbench_focus_tasks(workbench_path)
 
     if args.output_format == "json":
         payload = {
             "date": target_date.isoformat(),
-            "weekday_zh": weekday_zh,
+            "weekday_zh": WEEKDAY_ZH[target_date.weekday()],
             "weekday_en": day_abbrev,
             "target_filename": target_filename,
             "unfinished_tasks": unfinished_tasks,
-            "overview_today_tasks": today_tasks,
-            "overview_week_index": week_index,
-            "overview_found": overview_path.exists(),
+            "today_tasks": today_tasks,
+            "workbench_found": workbench_path.exists(),
+            "workbench": str(workbench_path),
         }
         print(json.dumps(payload, ensure_ascii=False, indent=2))
         return
