@@ -27,8 +27,10 @@
       },
       "openFile": false,
       "openFileInMode": "default",
-      "fileExistsMode": "Append to the bottom of the file",
-      "setFileExistsBehavior": true
+      "fileExistsBehavior": {
+        "kind": "apply",
+        "mode": "appendBottom"
+      }
     },
     {
       "id": "add-task",
@@ -45,7 +47,7 @@
   "devMode": false,
   "templateFolderPath": "",
   "announceUpdates": "all",
-  "version": "2.12.1",
+  "version": "2.12.3",
   "globalVariables": {},
   "onePageInputEnabled": false,
   "disableOnlineFeatures": false,
@@ -132,7 +134,8 @@
     "migrateFileOpeningSettings": true,
     "backfillFileOpeningDefaults": true,
     "setProviderModelDiscoveryMode": true,
-    "migrateProviderApiKeysToSecretStorage": true
+    "migrateProviderApiKeysToSecretStorage": true,
+    "repairTemplateFileExistsBehavior": true
   },
   "macros": []
 }
