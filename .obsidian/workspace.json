@@ -30,8 +30,19 @@
               "icon": "lucide-file",
               "title": "Backtesting"
             }
+          },
+          {
+            "id": "f2feb19fdcd01cfd",
+            "type": "leaf",
+            "state": {
+              "type": "learning-progress-dashboard-view",
+              "state": {},
+              "icon": "map",
+              "title": "Learning Progress Dashboard"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -321,11 +332,20 @@
       "graph:Open graph view": false
     }
   },
-  "active": "2c9ca742cf90c221",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
+    "98_attachment/reference",
+    "04_Fragments/How To Use AI Better Than 99% Of People (This Changed My Life) - 2026-03-28.md",
+    "05_tools/Code Space.md",
+    "05_tools/FastAPI.md",
+    "05_tools/Example Domain.md",
+    "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md",
+    "01_Math/02_linear algebra/02_Least Squares, Determinants and Eigenvalues.md",
+    "Excalidraw/Drawing 2026-05-23 18.00.12.excalidraw.md",
+    "05_tools/ponytail.md",
+    "00_factor/concept/Backtesting.md",
     "00_factor/concept/Factor Analysis.md",
     "00_factor/concept/VaR.md",
-    "00_factor/concept/Backtesting.md",
     "02_Economy/07_金融机构与风险管理/12_VAR风险.md",
     "00_factor/concept/Annuity.md",
     "00_factor/concept/Actual Error Rate.md",
@@ -340,16 +360,7 @@
     "02_Economy/07_金融机构与风险管理/09_利率风险.md",
     "99_学习情况记录/2026-02-03——Tue.md",
     "99_学习情况记录/2026-02-02——Mon.md",
-    "Excalidraw/Drawing 2026-05-23 18.00.12.excalidraw.md",
-    "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
-    "00_factor/concept/Column Space.md",
-    "00_factor/concept/White Test.md",
     "01_Math/01_calculus/18.01_Lecture_notes/1-7.pdf",
-    "05_tools/Install Pake CLI.md",
-    "99_学习情况记录/2026-04-01——Wed.md",
-    "00_factor/concept/Yield Curve.md",
-    "00_factor/concept/Yield to Maturity.md",
-    "00_factor/concept/Battle of the Sexes.md",
     "99_学习情况记录/active",
     "98_attachment/dashboards/2026-02-06-news.json",
     "01_Math/EC400/02_SOFP/U202216415-冯一航-形式审查表-扫描PDF版.pdf",
