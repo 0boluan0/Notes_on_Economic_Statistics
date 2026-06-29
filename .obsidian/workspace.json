@@ -40,9 +40,43 @@
               "icon": "map",
               "title": "Learning Progress Dashboard"
             }
+          },
+          {
+            "id": "fc272e7d09b079a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "99_学习情况记录/workbench.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "workbench"
+            }
+          },
+          {
+            "id": "0cf76a127bef04a9",
+            "type": "leaf",
+            "state": {
+              "type": "mx-welcome",
+              "state": {},
+              "icon": "home",
+              "title": "Onboarding - Media Extended"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -316,6 +350,8 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "media-extended:Open media library": false,
+      "media-extended:Open media quick switcher": false,
       "learning-progress-dashboard:Learning Progress Dashboard": false,
       "code-space:Open code space dashboard": false,
       "daily-notes:Open today's daily note": false,
@@ -332,8 +368,19 @@
       "graph:Open graph view": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "0cf76a127bef04a9",
   "lastOpenFiles": [
+    "99_学习情况记录/workbench.md",
+    "99_学习情况记录/Overview & Study Record——旧版计划归档 2026-06-17.md",
+    "99_学习情况记录/完成任务的日期/2026-06-20——Sat.md",
+    "99_学习情况记录/完成任务的日期/2026-05-22——Fri.md",
+    "99_学习情况记录/完成任务的日期/2026-02-03——Tue.md",
+    "98_attachment/截屏 2024-10-11 22.32.26.jpeg",
+    "98_attachment/截屏 2024-10-10 20.04.51.jpeg",
+    "98_attachment/Pasted image 20240228202716.png",
+    "98_attachment/Pasted image 20240229211911.png",
+    "98_attachment/Pasted image 20240229215711.png",
+    "98_attachment/reference/references.bib",
     "98_attachment/reference",
     "04_Fragments/How To Use AI Better Than 99% Of People (This Changed My Life) - 2026-03-28.md",
     "05_tools/Code Space.md",
@@ -351,35 +398,24 @@
     "00_factor/concept/Actual Error Rate.md",
     "05_tools/Codebase to Course.md",
     "04_Fragments/How I'd build a one-person business (if I started over in 2026) - 2026-03-28.md",
-    "99_学习情况记录/Overview & Study Record——旧版计划归档 2026-06-17.md",
     "05_tools/PaperQuay.md",
     "05_tools/GitHub.md",
     "99_学习情况记录/2026-05-09——Sat.md",
     "01_Math/01_calculus/01_Differentiation.md",
-    "99_学习情况记录/完成任务的日期/2026-06-20——Sat.md",
     "02_Economy/07_金融机构与风险管理/09_利率风险.md",
-    "99_学习情况记录/2026-02-03——Tue.md",
-    "99_学习情况记录/2026-02-02——Mon.md",
     "01_Math/01_calculus/18.01_Lecture_notes/1-7.pdf",
     "99_学习情况记录/active",
     "98_attachment/dashboards/2026-02-06-news.json",
     "01_Math/EC400/02_SOFP/U202216415-冯一航-形式审查表-扫描PDF版.pdf",
-    "98_attachment/Pasted image 20240229215711.png",
     "01_Math/EC400/03_DPDE/DPDE_ProblemSet4_Cumulative.pdf",
     "01_Math/01_calculus/18.01_Lecture_notes/26-38.pdf",
     "01_Math/01_calculus/18.01_Lecture_notes/18-25.pdf",
     "01_Math/01_calculus/18.01_Lecture_notes/9-16.pdf",
-    "01_Math/EC400/03_DPDE/DPDE_ProblemSet2_Optimal_Control.pdf",
-    "01_Math/EC400/03_DPDE/DPDE_ProblemSet1_Dynamic_Programming.pdf",
     "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/warning.e29b1060a0fb05a2b927.svg",
     "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/x-formerly-twitter-black.f8c75ad9f42902726d25.png",
     "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/youtube.1e55fc2f8fc09d36a1a6.svg",
     "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/videojs_download.e0dbb2cfb52d2d71ba4a.svg",
     "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/search.42a42bffcdf041e57b97.svg",
-    "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/video_thumbnail.8817e5123be1e39ecd14.png",
-    "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/video_play_overlay.42e62ca534a2528e4ad0.png",
-    "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/resource-download.d374f56f2572d49418bc.svg",
-    "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/page_thumbnail.135ca83a823b6c0b4616.png",
     "01_Math/06_时间序列分析/Time Series Course Atlas.canvas",
     "02_Economy/07_金融机构与风险管理/07_金融机构与风险管理.canvas",
     "02_Economy/05_财务管理/05_财务管理.canvas",
