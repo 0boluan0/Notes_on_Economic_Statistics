@@ -32,16 +32,6 @@
             }
           },
           {
-            "id": "f2feb19fdcd01cfd",
-            "type": "leaf",
-            "state": {
-              "type": "learning-progress-dashboard-view",
-              "state": {},
-              "icon": "map",
-              "title": "Learning Progress Dashboard"
-            }
-          },
-          {
             "id": "fc272e7d09b079a6",
             "type": "leaf",
             "state": {
@@ -73,6 +63,20 @@
               "state": {},
               "icon": "home",
               "title": "Onboarding - Media Extended"
+            }
+          },
+          {
+            "id": "d3b3fad14463e048",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://www.bilibili.com/",
+                "title": "哔哩哔哩 (゜-゜)つロ 干杯~-bilibili",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "哔哩哔哩 (゜-゜)つロ 干杯~-bilibili"
             }
           }
         ],
@@ -346,7 +350,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 851.5
+    "width": 746.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -368,7 +373,7 @@
       "graph:Open graph view": false
     }
   },
-  "active": "0cf76a127bef04a9",
+  "active": "d3b3fad14463e048",
   "lastOpenFiles": [
     "99_学习情况记录/workbench.md",
     "99_学习情况记录/Overview & Study Record——旧版计划归档 2026-06-17.md",
