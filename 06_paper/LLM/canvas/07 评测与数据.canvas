@@ -1,0 +1,266 @@
+{
+  "nodes": [
+    {
+      "id": "title",
+      "type": "text",
+      "x": 0,
+      "y": -180,
+      "width": 900,
+      "height": 120,
+      "text": "# 07 评测与数据\n\n[[LLM Big Picture]] · [[LLM Map Index]] · 10 papers",
+      "color": "1"
+    },
+    {
+      "id": "route-evaluation",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 310,
+      "height": 100,
+      "text": "## Evaluation\n\n[[LLM Evaluation]]",
+      "color": "1"
+    },
+    {
+      "id": "route-reasoning",
+      "type": "text",
+      "x": 0,
+      "y": 150,
+      "width": 310,
+      "height": 100,
+      "text": "## Reasoning\n\n[[Reasoning Models]]",
+      "color": "3"
+    },
+    {
+      "id": "route-open-models",
+      "type": "text",
+      "x": 0,
+      "y": 300,
+      "width": 310,
+      "height": 100,
+      "text": "## Open Models\n\n[[Open Model Ecosystem]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-gao2020pile800gbdataset",
+      "type": "text",
+      "x": 1410,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**The Pile: An 800GB Dataset of Diverse Text for Language Modeling**\n\n2020 · [[gao2020Pile800GBDataset|note]]",
+      "color": "1"
+    },
+    {
+      "id": "paper-chen2021evaluatinglargelanguage",
+      "type": "text",
+      "x": 1740,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**Evaluating Large Language Models Trained on Code**\n\n2021 · [[chen2021EvaluatingLargeLanguage|note]]",
+      "color": "1"
+    },
+    {
+      "id": "paper-hendrycks2021measuringmathematicalproblem",
+      "type": "text",
+      "x": 1740,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**Measuring Mathematical Problem Solving With the MATH Dataset**\n\n2021 · [[hendrycks2021MeasuringMathematicalProblem|note]]",
+      "color": "1"
+    },
+    {
+      "id": "paper-lin2022truthfulqameasuringhow",
+      "type": "text",
+      "x": 2070,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**TruthfulQA: Measuring How Models Mimic Human Falsehoods**\n\n2022 · [[lin2022TruthfulQAMeasuringHow|note]]",
+      "color": "1"
+    },
+    {
+      "id": "paper-srivastava2023imitationgamequantifying",
+      "type": "text",
+      "x": 2400,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**Beyond the Imitation Game: Quantifying and extrapolating the capabilities of la...**\n\n2023 · [[srivastava2023ImitationGameQuantifying|note]]",
+      "color": "1"
+    },
+    {
+      "id": "paper-liang2023holisticevaluationlanguage",
+      "type": "text",
+      "x": 2400,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**Holistic Evaluation of Language Models**\n\n2023 · [[liang2023HolisticEvaluationLanguage|note]]",
+      "color": "1"
+    },
+    {
+      "id": "paper-zheng2023judgingllmasajudgemtbench",
+      "type": "text",
+      "x": 2400,
+      "y": 260,
+      "width": 290,
+      "height": 105,
+      "text": "**Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena**\n\n2023 · [[zheng2023JudgingLLMasaJudgeMTBench|note]]",
+      "color": "1"
+    },
+    {
+      "id": "paper-li2023starcodermaysource",
+      "type": "text",
+      "x": 2400,
+      "y": 390,
+      "width": 290,
+      "height": 105,
+      "text": "**StarCoder: may the source be with you!**\n\n2023 · [[li2023StarCoderMaySource|note]]",
+      "color": "1"
+    },
+    {
+      "id": "paper-chiang2024chatbotarenaopen",
+      "type": "text",
+      "x": 2730,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference**\n\n2024 · [[chiang2024ChatbotArenaOpen|note]]",
+      "color": "1"
+    },
+    {
+      "id": "paper-roziere2024codellamaopen",
+      "type": "text",
+      "x": 2730,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**Code Llama: Open Foundation Models for Code**\n\n2024 · [[roziere2024CodeLlamaOpen|note]]",
+      "color": "1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0001",
+      "fromNode": "route-evaluation",
+      "fromSide": "right",
+      "toNode": "paper-gao2020pile800gbdataset",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "1"
+    },
+    {
+      "id": "e0002",
+      "fromNode": "route-evaluation",
+      "fromSide": "right",
+      "toNode": "paper-chen2021evaluatinglargelanguage",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "1"
+    },
+    {
+      "id": "e0003",
+      "fromNode": "route-evaluation",
+      "fromSide": "right",
+      "toNode": "paper-hendrycks2021measuringmathematicalproblem",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "1"
+    },
+    {
+      "id": "e0004",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-hendrycks2021measuringmathematicalproblem",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0005",
+      "fromNode": "route-evaluation",
+      "fromSide": "right",
+      "toNode": "paper-lin2022truthfulqameasuringhow",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "1"
+    },
+    {
+      "id": "e0006",
+      "fromNode": "route-evaluation",
+      "fromSide": "right",
+      "toNode": "paper-srivastava2023imitationgamequantifying",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "1"
+    },
+    {
+      "id": "e0007",
+      "fromNode": "route-evaluation",
+      "fromSide": "right",
+      "toNode": "paper-liang2023holisticevaluationlanguage",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "1"
+    },
+    {
+      "id": "e0008",
+      "fromNode": "route-evaluation",
+      "fromSide": "right",
+      "toNode": "paper-zheng2023judgingllmasajudgemtbench",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "1"
+    },
+    {
+      "id": "e0009",
+      "fromNode": "route-evaluation",
+      "fromSide": "right",
+      "toNode": "paper-li2023starcodermaysource",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "1"
+    },
+    {
+      "id": "e0010",
+      "fromNode": "route-evaluation",
+      "fromSide": "right",
+      "toNode": "paper-chiang2024chatbotarenaopen",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "1"
+    },
+    {
+      "id": "e0011",
+      "fromNode": "route-evaluation",
+      "fromSide": "right",
+      "toNode": "paper-roziere2024codellamaopen",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "1"
+    },
+    {
+      "id": "e0012",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-roziere2024codellamaopen",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    }
+  ]
+}

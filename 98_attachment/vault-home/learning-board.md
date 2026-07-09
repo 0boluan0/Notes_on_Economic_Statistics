@@ -1,7 +1,7 @@
 ---
 learningBoard: true
 version: 1
-updated: "2026-06-25T00:39:56.215Z"
+updated: "2026-07-08T16:24:15.771Z"
 ---
 
 # Learning Progress Board
@@ -12,7 +12,7 @@ You can hand-edit it, but keep the fenced JSON block valid.
 ```learning-board-json
 {
   "version": 1,
-  "updatedAt": "2026-06-25T00:39:56.215Z",
+  "updatedAt": "2026-07-08T16:24:15.771Z",
   "courses": [
     {
       "id": "01-math-01-calculus-mzqacf",
@@ -27,7 +27,7 @@ You can hand-edit it, but keep the fenced JSON block valid.
           "label": "01",
           "title": "Differentiation",
           "notePath": "01_Math/01_calculus/01_Differentiation.md",
-          "state": "learned",
+          "state": "raw",
           "remark": ""
         }
       ]

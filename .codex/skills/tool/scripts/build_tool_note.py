@@ -82,6 +82,7 @@ TROUBLESHOOT_KEYWORDS = [
 ]
 
 ILLEGAL_FILENAME_CHARS = r'[\\/:*?"<>|]'
+INDEX_FILENAME = "00_content.md"
 
 
 class ToolNoteError(Exception):
@@ -259,6 +260,77 @@ def extract_first_h1(markdown: str) -> str:
         if match:
             return normalize_line(match.group(1))
     return ""
+
+
+def strip_frontmatter(markdown: str) -> str:
+    if not markdown.startswith("---\n"):
+        return markdown
+    parts = markdown.split("\n---\n", 1)
+    if len(parts) != 2:
+        return markdown
+    return parts[1]
+
+
+def extract_intro_paragraph(markdown: str) -> str:
+    body = strip_frontmatter(markdown)
+    h1 = re.search(r"^#\s+.+?\s*$", body, re.MULTILINE)
+    if not h1:
+        return "暂无一句话总结。"
+    after_h1 = body[h1.end() :]
+    next_section = re.search(r"^##\s+", after_h1, re.MULTILINE)
+    if next_section:
+        after_h1 = after_h1[: next_section.start()]
+
+    lines: List[str] = []
+    for line in after_h1.splitlines():
+        stripped = normalize_line(line)
+        if not stripped:
+            if lines:
+                break
+            continue
+        lines.append(stripped)
+    return " ".join(lines) if lines else "暂无一句话总结。"
+
+
+def table_cell(value: str) -> str:
+    return value.replace("|", "\\|").replace("\n", " ").strip()
+
+
+def rebuild_directory_page(folder: Path) -> None:
+    rows: List[Tuple[str, str, str]] = []
+    for candidate in sorted(folder.glob("*.md")):
+        if candidate.name in {INDEX_FILENAME, "目录.md"}:
+            continue
+        text = candidate.read_text(encoding="utf-8")
+        body = strip_frontmatter(text)
+        title = extract_first_h1(body) or candidate.stem
+        summary = extract_intro_paragraph(text)
+        link = f"[[{candidate.stem}|{title}]]" if candidate.stem != title else f"[[{title}]]"
+        rows.append((title.casefold(), link, summary))
+
+    lines = [
+        "---",
+        "aliases:",
+        "  - Tools 目录",
+        "tags: [index, tools]",
+        "created_by: \"tool\"",
+        "---",
+        "",
+        "# Tools",
+        "",
+        "> [!summary] 导航",
+        f"> 共 {len(rows)} 个工具。摘要取自每篇工具笔记标题后的首段。",
+        "",
+        "| 工具 | 一句话总结 |",
+        "|---|---|",
+    ]
+    if rows:
+        for _, link, summary in sorted(rows):
+            lines.append(f"| {table_cell(link)} | {table_cell(summary)} |")
+    else:
+        lines.append("- 暂无 tool 笔记。")
+    lines.append("")
+    write_markdown(folder / INDEX_FILENAME, "\n".join(lines), overwrite=True)
 
 
 def extract_code_blocks(text: str, max_blocks: int = 2) -> List[Tuple[str, str]]:
@@ -809,6 +881,7 @@ def main() -> int:
             website_info=website_info,
         )
         write_markdown(output_path, markdown, overwrite=args.overwrite)
+        rebuild_directory_page(output_path.parent)
         print(str(output_path.resolve()))
         return 0
     except ToolNoteError as exc:

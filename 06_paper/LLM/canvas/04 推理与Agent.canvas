@@ -1,0 +1,426 @@
+{
+  "nodes": [
+    {
+      "id": "title",
+      "type": "text",
+      "x": 0,
+      "y": -180,
+      "width": 900,
+      "height": 120,
+      "text": "# 04 推理与Agent\n\n[[LLM Big Picture]] · [[LLM Map Index]] · 16 papers",
+      "color": "3"
+    },
+    {
+      "id": "route-reasoning",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 310,
+      "height": 100,
+      "text": "## Reasoning\n\n[[Reasoning Models]]",
+      "color": "3"
+    },
+    {
+      "id": "route-agent",
+      "type": "text",
+      "x": 0,
+      "y": 150,
+      "width": 310,
+      "height": 100,
+      "text": "## Agent\n\n[[Agentic LLMs]]",
+      "color": "3"
+    },
+    {
+      "id": "route-efficiency-moe",
+      "type": "text",
+      "x": 0,
+      "y": 300,
+      "width": 310,
+      "height": 100,
+      "text": "## Efficiency / MoE\n\n[[LLM Efficiency Engineering]]",
+      "color": "2"
+    },
+    {
+      "id": "paper-ahn2022cannotsay",
+      "type": "text",
+      "x": 2070,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**Do As I Can, Not As I Say: Grounding Language in Robotic Affordances**\n\n2022 · [[ahn2022CanNotSay|note]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-zelikman2022starbootstrappingreasoning",
+      "type": "text",
+      "x": 2070,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**STaR: Bootstrapping Reasoning With Reasoning**\n\n2022 · [[zelikman2022STaRBootstrappingReasoning|note]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-wei2023chainofthoughtpromptingelicits",
+      "type": "text",
+      "x": 2400,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**Chain-of-Thought Prompting Elicits Reasoning in Large Language Models**\n\n2023 · [[wei2023ChainofThoughtPromptingElicits|note]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-park2023generativeagentsinteractive",
+      "type": "text",
+      "x": 2400,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**Generative Agents: Interactive Simulacra of Human Behavior**\n\n2023 · [[park2023GenerativeAgentsInteractive|note]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-patil2023gorillalargelanguage",
+      "type": "text",
+      "x": 2400,
+      "y": 260,
+      "width": 290,
+      "height": 105,
+      "text": "**Gorilla: Large Language Model Connected with Massive APIs**\n\n2023 · [[patil2023GorillaLargeLanguage|note]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-zhou2023leasttomostpromptingenables",
+      "type": "text",
+      "x": 2400,
+      "y": 390,
+      "width": 290,
+      "height": 105,
+      "text": "**Least-to-Most Prompting Enables Complex Reasoning in Large Language Models**\n\n2023 · [[zhou2023LeasttoMostPromptingEnables|note]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-lightman2023letsverifystep",
+      "type": "text",
+      "x": 2400,
+      "y": 520,
+      "width": 290,
+      "height": 105,
+      "text": "**Let's Verify Step by Step**\n\n2023 · [[lightman2023LetsVerifyStep|note]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-gao2023palprogramaidedlanguage",
+      "type": "text",
+      "x": 2400,
+      "y": 650,
+      "width": 290,
+      "height": 105,
+      "text": "**PAL: Program-aided Language Models**\n\n2023 · [[gao2023PALProgramaidedLanguage|note]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-chen2023programthoughtsprompting",
+      "type": "text",
+      "x": 2400,
+      "y": 780,
+      "width": 290,
+      "height": 105,
+      "text": "**Program of Thoughts Prompting: Disentangling Computation from Reasoning for Num...**\n\n2023 · [[chen2023ProgramThoughtsPrompting|note]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-yao2023reactsynergizingreasoning",
+      "type": "text",
+      "x": 2400,
+      "y": 910,
+      "width": 290,
+      "height": 105,
+      "text": "**ReAct: Synergizing Reasoning and Acting in Language Models**\n\n2023 · [[yao2023ReActSynergizingReasoning|note]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-shinn2023reflexionlanguageagents",
+      "type": "text",
+      "x": 2400,
+      "y": 1040,
+      "width": 290,
+      "height": 105,
+      "text": "**Reflexion: Language Agents with Verbal Reinforcement Learning**\n\n2023 · [[shinn2023ReflexionLanguageAgents|note]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-wang2023selfconsistencyimproveschain",
+      "type": "text",
+      "x": 2400,
+      "y": 1170,
+      "width": 290,
+      "height": 105,
+      "text": "**Self-Consistency Improves Chain of Thought Reasoning in Language Models**\n\n2023 · [[wang2023SelfConsistencyImprovesChain|note]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-schick2023toolformerlanguagemodels",
+      "type": "text",
+      "x": 2400,
+      "y": 1300,
+      "width": 290,
+      "height": 105,
+      "text": "**Toolformer: Language Models Can Teach Themselves to Use Tools**\n\n2023 · [[schick2023ToolformerLanguageModels|note]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-yao2023treethoughtsdeliberate",
+      "type": "text",
+      "x": 2400,
+      "y": 1430,
+      "width": 290,
+      "height": 105,
+      "text": "**Tree of Thoughts: Deliberate Problem Solving with Large Language Models**\n\n2023 · [[yao2023TreeThoughtsDeliberate|note]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-wang2023voyageropenendedembodied",
+      "type": "text",
+      "x": 2400,
+      "y": 1560,
+      "width": 290,
+      "height": 105,
+      "text": "**Voyager: An Open-Ended Embodied Agent with Large Language Models**\n\n2023 · [[wang2023VoyagerOpenEndedEmbodied|note]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-shao2024deepseekmathpushinglimits",
+      "type": "text",
+      "x": 2730,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models**\n\n2024 · [[shao2024DeepSeekMathPushingLimits|note]]",
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0001",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-ahn2022cannotsay",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0002",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-zelikman2022starbootstrappingreasoning",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0003",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-wei2023chainofthoughtpromptingelicits",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0004",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-park2023generativeagentsinteractive",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0005",
+      "fromNode": "route-agent",
+      "fromSide": "right",
+      "toNode": "paper-park2023generativeagentsinteractive",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0006",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-patil2023gorillalargelanguage",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0007",
+      "fromNode": "route-agent",
+      "fromSide": "right",
+      "toNode": "paper-patil2023gorillalargelanguage",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0008",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-zhou2023leasttomostpromptingenables",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0009",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-lightman2023letsverifystep",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0010",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-gao2023palprogramaidedlanguage",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0011",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-chen2023programthoughtsprompting",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0012",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-yao2023reactsynergizingreasoning",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0013",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-shinn2023reflexionlanguageagents",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0014",
+      "fromNode": "route-agent",
+      "fromSide": "right",
+      "toNode": "paper-shinn2023reflexionlanguageagents",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0015",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-wang2023selfconsistencyimproveschain",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0016",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-schick2023toolformerlanguagemodels",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0017",
+      "fromNode": "route-agent",
+      "fromSide": "right",
+      "toNode": "paper-schick2023toolformerlanguagemodels",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0018",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-yao2023treethoughtsdeliberate",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0019",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-wang2023voyageropenendedembodied",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0020",
+      "fromNode": "route-agent",
+      "fromSide": "right",
+      "toNode": "paper-wang2023voyageropenendedembodied",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0021",
+      "fromNode": "route-reasoning",
+      "fromSide": "right",
+      "toNode": "paper-shao2024deepseekmathpushinglimits",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0022",
+      "fromNode": "route-efficiency-moe",
+      "fromSide": "right",
+      "toNode": "paper-shao2024deepseekmathpushinglimits",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "2"
+    }
+  ]
+}

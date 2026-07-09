@@ -1,0 +1,316 @@
+{
+  "nodes": [
+    {
+      "id": "title",
+      "type": "text",
+      "x": 0,
+      "y": -180,
+      "width": 900,
+      "height": 120,
+      "text": "# 08 多模态\n\n[[LLM Big Picture]] · [[LLM Map Index]] · 9 papers",
+      "color": "6"
+    },
+    {
+      "id": "route-multimodal",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 310,
+      "height": 100,
+      "text": "## Multimodal\n\n[[Multimodal LLMs]]",
+      "color": "6"
+    },
+    {
+      "id": "route-pretraining",
+      "type": "text",
+      "x": 0,
+      "y": 150,
+      "width": 310,
+      "height": 100,
+      "text": "## Pretraining\n\n[[Pretraining Paradigm]]",
+      "color": "5"
+    },
+    {
+      "id": "route-scaling-law",
+      "type": "text",
+      "x": 0,
+      "y": 300,
+      "width": 310,
+      "height": 100,
+      "text": "## Scaling Law\n\n[[Scaling Law]]",
+      "color": "6"
+    },
+    {
+      "id": "route-open-models",
+      "type": "text",
+      "x": 0,
+      "y": 450,
+      "width": 310,
+      "height": 100,
+      "text": "## Open Models\n\n[[Open Model Ecosystem]]",
+      "color": "4"
+    },
+    {
+      "id": "route-instruction-tuning-rlhf",
+      "type": "text",
+      "x": 0,
+      "y": 600,
+      "width": 310,
+      "height": 100,
+      "text": "## Instruction Tuning / RLHF\n\n[[Instruction Tuning and RLHF]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-alayrac2022flamingovisuallanguage",
+      "type": "text",
+      "x": 2070,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**Flamingo: a Visual Language Model for Few-Shot Learning**\n\n2022 · [[alayrac2022FlamingoVisualLanguage|note]]",
+      "color": "6"
+    },
+    {
+      "id": "paper-li2023blip2bootstrappinglanguageimage",
+      "type": "text",
+      "x": 2400,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders an...**\n\n2023 · [[li2023BLIP2BootstrappingLanguageImage|note]]",
+      "color": "6"
+    },
+    {
+      "id": "paper-chen2023palijointlyscaledmultilingual",
+      "type": "text",
+      "x": 2400,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**PaLI: A Jointly-Scaled Multilingual Language-Image Model**\n\n2023 · [[chen2023PaLIJointlyScaledMultilingual|note]]",
+      "color": "6"
+    },
+    {
+      "id": "paper-bai2023qwenvlversatilevisionlanguage",
+      "type": "text",
+      "x": 2400,
+      "y": 260,
+      "width": 290,
+      "height": 105,
+      "text": "**Qwen-VL: A Versatile Vision-Language Model for Understanding, Localization, Tex...**\n\n2023 · [[bai2023QwenVLVersatileVisionLanguage|note]]",
+      "color": "6"
+    },
+    {
+      "id": "paper-liu2023visualinstructiontuning",
+      "type": "text",
+      "x": 2400,
+      "y": 390,
+      "width": 290,
+      "height": 105,
+      "text": "**Visual Instruction Tuning**\n\n2023 · [[liu2023VisualInstructionTuning|note]]",
+      "color": "6"
+    },
+    {
+      "id": "paper-team2024gemmaopenmodels",
+      "type": "text",
+      "x": 2730,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**Gemma: Open Models Based on Gemini Research and Technology**\n\n2024 · [[team2024GemmaOpenModels|note]]",
+      "color": "6"
+    },
+    {
+      "id": "paper-openai2024gpt4technicalreport",
+      "type": "text",
+      "x": 2730,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**GPT-4 Technical Report**\n\n2024 · [[openai2024GPT4TechnicalReport|note]]",
+      "color": "6"
+    },
+    {
+      "id": "paper-team2025chameleonmixedmodalearlyfusion",
+      "type": "text",
+      "x": 3060,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**Chameleon: Mixed-Modal Early-Fusion Foundation Models**\n\n2025 · [[team2025ChameleonMixedModalEarlyFusion|note]]",
+      "color": "6"
+    },
+    {
+      "id": "paper-team2025geminifamilyhighly",
+      "type": "text",
+      "x": 3060,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**Gemini: A Family of Highly Capable Multimodal Models**\n\n2025 · [[team2025GeminiFamilyHighly|note]]",
+      "color": "6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0001",
+      "fromNode": "route-multimodal",
+      "fromSide": "right",
+      "toNode": "paper-alayrac2022flamingovisuallanguage",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "6"
+    },
+    {
+      "id": "e0002",
+      "fromNode": "route-multimodal",
+      "fromSide": "right",
+      "toNode": "paper-li2023blip2bootstrappinglanguageimage",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "6"
+    },
+    {
+      "id": "e0003",
+      "fromNode": "route-pretraining",
+      "fromSide": "right",
+      "toNode": "paper-li2023blip2bootstrappinglanguageimage",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    },
+    {
+      "id": "e0004",
+      "fromNode": "route-multimodal",
+      "fromSide": "right",
+      "toNode": "paper-chen2023palijointlyscaledmultilingual",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "6"
+    },
+    {
+      "id": "e0005",
+      "fromNode": "route-scaling-law",
+      "fromSide": "right",
+      "toNode": "paper-chen2023palijointlyscaledmultilingual",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "6"
+    },
+    {
+      "id": "e0006",
+      "fromNode": "route-multimodal",
+      "fromSide": "right",
+      "toNode": "paper-bai2023qwenvlversatilevisionlanguage",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "6"
+    },
+    {
+      "id": "e0007",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-bai2023qwenvlversatilevisionlanguage",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0008",
+      "fromNode": "route-multimodal",
+      "fromSide": "right",
+      "toNode": "paper-liu2023visualinstructiontuning",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "6"
+    },
+    {
+      "id": "e0009",
+      "fromNode": "route-instruction-tuning-rlhf",
+      "fromSide": "right",
+      "toNode": "paper-liu2023visualinstructiontuning",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0010",
+      "fromNode": "route-multimodal",
+      "fromSide": "right",
+      "toNode": "paper-team2024gemmaopenmodels",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "6"
+    },
+    {
+      "id": "e0011",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-team2024gemmaopenmodels",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0012",
+      "fromNode": "route-multimodal",
+      "fromSide": "right",
+      "toNode": "paper-openai2024gpt4technicalreport",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "6"
+    },
+    {
+      "id": "e0013",
+      "fromNode": "route-pretraining",
+      "fromSide": "right",
+      "toNode": "paper-openai2024gpt4technicalreport",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    },
+    {
+      "id": "e0014",
+      "fromNode": "route-multimodal",
+      "fromSide": "right",
+      "toNode": "paper-team2025chameleonmixedmodalearlyfusion",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "6"
+    },
+    {
+      "id": "e0015",
+      "fromNode": "route-multimodal",
+      "fromSide": "right",
+      "toNode": "paper-team2025geminifamilyhighly",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "6"
+    },
+    {
+      "id": "e0016",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-team2025geminifamilyhighly",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    }
+  ]
+}

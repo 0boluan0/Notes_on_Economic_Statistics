@@ -23,11 +23,13 @@ python3 .codex/skills/tool/scripts/build_tool_note.py \
 
 4. Read script stdout and report the created/updated absolute file path.
 5. If generation fails, return the error and suggest providing a more direct project URL.
+6. After a successful write, the script regenerates `05_tools/00_content.md`.
 
 ## Output Contract
 
 - Output folder: `05_tools/`
 - Output filename: official project name sanitized for filesystem safety.
+- Directory page: `05_tools/00_content.md`, regenerated after every successful note write.
 - Existing file with same name: overwrite by default.
 - Required sections:
   - `基本信息`
@@ -48,4 +50,5 @@ python3 .codex/skills/tool/scripts/build_tool_note.py \
 ## Notes
 
 - Keep language Chinese-first and preserve key English technical terms.
+- Keep the directory page as a compact navigation table: note title + one-sentence summary.
 - Do not edit `.obsidian/`.

@@ -1,0 +1,316 @@
+{
+  "nodes": [
+    {
+      "id": "title",
+      "type": "text",
+      "x": 0,
+      "y": -180,
+      "width": 900,
+      "height": 120,
+      "text": "# 05 RAG与知识增强\n\n[[LLM Big Picture]] · [[LLM Map Index]] · 11 papers",
+      "color": "5"
+    },
+    {
+      "id": "route-rag",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 310,
+      "height": 100,
+      "text": "## RAG\n\n[[Retrieval-Augmented Generation]]",
+      "color": "5"
+    },
+    {
+      "id": "route-long-context",
+      "type": "text",
+      "x": 0,
+      "y": 150,
+      "width": 310,
+      "height": 100,
+      "text": "## Long Context\n\n[[Long Context LLMs]]",
+      "color": "2"
+    },
+    {
+      "id": "route-pretraining",
+      "type": "text",
+      "x": 0,
+      "y": 300,
+      "width": 310,
+      "height": 100,
+      "text": "## Pretraining\n\n[[Pretraining Paradigm]]",
+      "color": "5"
+    },
+    {
+      "id": "route-instruction-tuning-rlhf",
+      "type": "text",
+      "x": 0,
+      "y": 450,
+      "width": 310,
+      "height": 100,
+      "text": "## Instruction Tuning / RLHF\n\n[[Instruction Tuning and RLHF]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-khattab2020colbertefficienteffective",
+      "type": "text",
+      "x": 1410,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**ColBERT: Efficient and Effective Passage Search via Contextualized Late Interac...**\n\n2020 · [[khattab2020ColBERTEfficientEffective|note]]",
+      "color": "5"
+    },
+    {
+      "id": "paper-karpukhin2020densepassageretrieval",
+      "type": "text",
+      "x": 1410,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**Dense Passage Retrieval for Open-Domain Question Answering**\n\n2020 · [[karpukhin2020DensePassageRetrieval|note]]",
+      "color": "5"
+    },
+    {
+      "id": "paper-guu2020realmretrievalaugmentedlanguage",
+      "type": "text",
+      "x": 1410,
+      "y": 260,
+      "width": 290,
+      "height": 105,
+      "text": "**REALM: Retrieval-Augmented Language Model Pre-Training**\n\n2020 · [[guu2020REALMRetrievalAugmentedLanguage|note]]",
+      "color": "5"
+    },
+    {
+      "id": "paper-izacard2021leveragingpassageretrieval",
+      "type": "text",
+      "x": 1740,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**Leveraging Passage Retrieval with Generative Models for Open Domain Question An...**\n\n2021 · [[izacard2021LeveragingPassageRetrieval|note]]",
+      "color": "5"
+    },
+    {
+      "id": "paper-lewis2021retrievalaugmentedgenerationknowledgeintensive",
+      "type": "text",
+      "x": 1740,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks**\n\n2021 · [[lewis2021RetrievalAugmentedGenerationKnowledgeIntensive|note]]",
+      "color": "5"
+    },
+    {
+      "id": "paper-izacard2022atlasfewshotlearning",
+      "type": "text",
+      "x": 2070,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**Atlas: Few-shot Learning with Retrieval Augmented Language Models**\n\n2022 · [[izacard2022AtlasFewshotLearning|note]]",
+      "color": "5"
+    },
+    {
+      "id": "paper-gao2022precisezeroshotdense",
+      "type": "text",
+      "x": 2070,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**Precise Zero-Shot Dense Retrieval without Relevance Labels**\n\n2022 · [[gao2022PreciseZeroShotDense|note]]",
+      "color": "5"
+    },
+    {
+      "id": "paper-nakano2022webgptbrowserassistedquestionanswering",
+      "type": "text",
+      "x": 2070,
+      "y": 260,
+      "width": 290,
+      "height": 105,
+      "text": "**WebGPT: Browser-assisted question-answering with human feedback**\n\n2022 · [[nakano2022WebGPTBrowserassistedQuestionanswering|note]]",
+      "color": "5"
+    },
+    {
+      "id": "paper-asai2023selfraglearningretrieve",
+      "type": "text",
+      "x": 2400,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection**\n\n2023 · [[asai2023SelfRAGLearningRetrieve|note]]",
+      "color": "5"
+    },
+    {
+      "id": "paper-yu2024defenseragera",
+      "type": "text",
+      "x": 2730,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**In Defense of RAG in the Era of Long-Context Language Models**\n\n2024 · [[yu2024DefenseRAGEra|note]]",
+      "color": "5"
+    },
+    {
+      "id": "paper-gao2024retrievalaugmentedgenerationlarge",
+      "type": "text",
+      "x": 2730,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**Retrieval-Augmented Generation for Large Language Models: A Survey**\n\n2024 · [[gao2024RetrievalAugmentedGenerationLarge|note]]",
+      "color": "5"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0001",
+      "fromNode": "route-rag",
+      "fromSide": "right",
+      "toNode": "paper-khattab2020colbertefficienteffective",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    },
+    {
+      "id": "e0002",
+      "fromNode": "route-long-context",
+      "fromSide": "right",
+      "toNode": "paper-khattab2020colbertefficienteffective",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "2"
+    },
+    {
+      "id": "e0003",
+      "fromNode": "route-rag",
+      "fromSide": "right",
+      "toNode": "paper-karpukhin2020densepassageretrieval",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    },
+    {
+      "id": "e0004",
+      "fromNode": "route-rag",
+      "fromSide": "right",
+      "toNode": "paper-guu2020realmretrievalaugmentedlanguage",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    },
+    {
+      "id": "e0005",
+      "fromNode": "route-pretraining",
+      "fromSide": "right",
+      "toNode": "paper-guu2020realmretrievalaugmentedlanguage",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    },
+    {
+      "id": "e0006",
+      "fromNode": "route-rag",
+      "fromSide": "right",
+      "toNode": "paper-izacard2021leveragingpassageretrieval",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    },
+    {
+      "id": "e0007",
+      "fromNode": "route-rag",
+      "fromSide": "right",
+      "toNode": "paper-lewis2021retrievalaugmentedgenerationknowledgeintensive",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    },
+    {
+      "id": "e0008",
+      "fromNode": "route-rag",
+      "fromSide": "right",
+      "toNode": "paper-izacard2022atlasfewshotlearning",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    },
+    {
+      "id": "e0009",
+      "fromNode": "route-rag",
+      "fromSide": "right",
+      "toNode": "paper-gao2022precisezeroshotdense",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    },
+    {
+      "id": "e0010",
+      "fromNode": "route-rag",
+      "fromSide": "right",
+      "toNode": "paper-nakano2022webgptbrowserassistedquestionanswering",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    },
+    {
+      "id": "e0011",
+      "fromNode": "route-instruction-tuning-rlhf",
+      "fromSide": "right",
+      "toNode": "paper-nakano2022webgptbrowserassistedquestionanswering",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0012",
+      "fromNode": "route-rag",
+      "fromSide": "right",
+      "toNode": "paper-asai2023selfraglearningretrieve",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    },
+    {
+      "id": "e0013",
+      "fromNode": "route-rag",
+      "fromSide": "right",
+      "toNode": "paper-yu2024defenseragera",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    },
+    {
+      "id": "e0014",
+      "fromNode": "route-long-context",
+      "fromSide": "right",
+      "toNode": "paper-yu2024defenseragera",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "2"
+    },
+    {
+      "id": "e0015",
+      "fromNode": "route-rag",
+      "fromSide": "right",
+      "toNode": "paper-gao2024retrievalaugmentedgenerationlarge",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    }
+  ]
+}

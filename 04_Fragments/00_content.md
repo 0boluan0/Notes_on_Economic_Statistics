@@ -1,0 +1,45 @@
+---
+aliases:
+  - Fragments 目录
+tags:
+  - index
+  - fragments
+created_by: "fragments"
+---
+
+# Fragments
+
+> [!summary] 导航
+> 共 16 篇 fragment。按来源类型分组，摘要取自 `## 一句话总结`。
+
+## unknown
+
+| 标题 | 一句话总结 |
+|---|---|
+| [[Learning method\|六类学习内容]] | 暂无一句话总结。 |
+
+## web
+
+| 标题 | 一句话总结 |
+|---|---|
+| [[Textream - 2026-04-20\|Textream]] | Textream 是一个免费、开源的 macOS 提词器应用，把脚本以 Dynamic Island 风格提示层、浮窗、全屏或 Sidecar iPad 的形式放在说话者视线附近，并通过实时语音跟踪、经典自动滚动、语音触发滚动来减少直播、访谈、演讲、播客录制时的视线偏移和流程中断。 |
+
+## youtube
+
+| 标题 | 一句话总结 |
+|---|---|
+| [[AutoResearch Clearly Explained (and how to use it) - 2026-03-28\|AutoResearch Clearly Explained (and how to use it)]] | 这支视频把 Andrej Karpathy 提出的 AutoResearch 讲成了一个非常清晰的模式：固定评测、只开放一个可修改对象、给定时间预算，让 agent 持续提出假设、运行实验、保留有效改动，从而把“优化”变成一个自动循环；它真正稀缺的不是执行，而是指标设计与约束设计。 |
+| [[How I'd build a one-person business (if I started over in 2026) - 2026-03-28\|How I'd build a one-person business (if I started over in 2026)]] | 这支视频是在上一条“一人公司 + AI”思路上的进一步展开：Dan Koe 认为旧式信息产品和纯知识贩售正在失去壁垒，未来更有前景的是把个体经验、教育产品、AI 工作流和软件能力结合起来，形成一个既有人味又可扩展的一人公司模型。 |
+| [[How To Articulate Your Thoughts Intelligently (Talk Like This) - 2026-03-28\|How To Articulate Your Thoughts Intelligently (Talk Like This)]] | 这支视频不是在教“说漂亮话”，而是在讲一套更底层的表达逻辑：想把话说得聪明，前提是脑子里先有一组可反复调用的大想法，然后再用故事、金字塔结构和跨领域连接去组织这些想法；表达力的底层仍然是思考与积累，而不是临场修辞。 |
+| [[How To Build A $1M One-Person Business Faster With AI - 2026-03-28\|How To Build A $1M One-Person Business Faster With AI]] | 这支视频把“AI 时代的一人公司”拆成了一个非常清楚的链条：先用个人品牌获取注意力和信任，再用内容建立定位与问题意识，最后把这些流量导向一个真正有差异化的产品或服务；AI 是把流程压缩、提速和标准化的工具，但它不能替你形成品味、理解市场或完成长期迭代。 |
+| [[How to fix your entire life in 1 day - 2026-03-28\|How to fix your entire life in 1 day]] | 这支视频并不是真的在教你“一天修好人生”，而是在讲：真正的改变通常卡在身份、欲望、恐惧和认知层级上；如果这些不先处理，再多计划都会回到原状。Dan Koe 最后给出的落地方式，是把人生重构成一个带有愿景、反愿景、年度目标、月项目和日任务的“游戏系统”。 |
+| [[How To Think Like A Strategic Genius (5-Dimensional Thinking) - 2026-03-28\|How To Think Like A Strategic Genius (5-Dimensional Thinking)]] | 这支视频的核心论点是：决定一个人是否“战略性地聪明”的，不是单纯的高智商，而是能否跳出线性、局部和从众式思考，学会在不同层次、不同视角和不同社会叙事之间切换；所谓“高维思考”在这里更像一种认知灵活度，而不是玄学概念。 |
+| [[How To Use AI Better Than 99% Of People (This Changed My Life) - 2026-03-28\|How To Use AI Better Than 99% Of People (This Changed My Life)]] | 这支视频最值得保留的不是某个单一 prompt，而是一条很清晰的 AI 使用原则：不要让 AI 瞎猜你要什么，而要先把专家知识、任务结构、个人上下文和执行阶段都组织好，再让 AI 在这个框架里工作；本质上，Dan Koe 推的是“AI orchestration”而不是“问一句、答一句”的随手聊天。 |
+| [[If you have multiple interests, do not waste the next 2-3 years - 2026-03-28\|If you have multiple interests, do not waste the next 2-3 years]] | 这支视频试图为“兴趣很多、方向不单一”的人重新正名：多重兴趣不是缺陷，而是 AI 与知识爆炸时代的一种优势；关键不是逼自己立刻专精，而是把这些兴趣组织成一个可迁移、可变现、可持续积累的 generalist 路径。 |
+| [[Kortex- The $3 Million Dollar Mistake - 2026-03-28\|Kortex: The $3 Million Dollar Mistake]] | 这支视频是一次难得的创业复盘：Dan Koe 没把 Kortex 的失败归因于单一 bug 或某次错误决策，而是把它拆成团队结构、技术债、产品方向、节奏失控和品牌重构等一连串问题；最重要的不是“失败了”，而是他们如何从一个卡死的系统里抽身，把经验转向 Eden。 |
+| [[Learn Any Skill So Fast That People Think You're A Genius - 2026-03-28\|Learn Any Skill So Fast That People Think You're A Genius]] | 这支视频把“快速学会一项技能”压缩成一个四步框架 `SIRI`：分散学习、提高练习强度、把新知识挂接到旧知识上、用交错练习模拟真实环境；它的强项是把常见学习原则讲得很易操作，弱项是部分神经科学解释明显过度简化，最好把它当成实用框架而不是严格科学论证。 |
+| [[Learn anything with the -teach skill - 2026-06-09\|Learn anything with the /teach skill]] | Matt Pocock 展示了一个名为 `/teach` 的 Codex/Claude Code 技能：它把“老师记得学生目标、进度、资源和困难点”的能力写进文件系统状态，用 mission、resources、HTML lessons、learning records、glossary、cheat sheets 和 notes 等材料，持续为学习者生成处在“最近发展区”的个性化课程。 |
+| [[The Future Of Work (& The New High-Income Skill Stack) - 2026-03-28\|The Future Of Work (& The New High-Income Skill Stack)]] | 这支视频的核心不是“AI 会抢走工作”这种常规讨论，而是更进一步地说：当信息和执行越来越便宜，真正稀缺的会变成意义、判断、品味和能把人组织到某个方向上的能力；Dan Koe 把这套新价值结构压缩成一个层级式技能栈：agency、taste、perspective、persuasion、technical know-how。 |
+| [[The Most Important Skill To Learn Right Now - 2026-03-28\|The Most Important Skill To Learn Right Now]] | Dan Koe 在这支视频里把“agency”提升为未来最重要的元技能：真正决定你能否适应 AI 和变化世界的，不是某项具体技术，而是你能否在没有外部许可的情况下反复试错、把人生当实验、主动脱离默认路径，并借助 AI 与互联网放大这种能力。 |
+| [[The top 1% Think on Paper. Here’s How To Do It - 2026-05-05\|The top 1% Think on Paper. Here’s How To Do It.]] | Justin Sung 把“think on paper”讲成一种学习与理解方法：不要把信息、关系和疑问都塞在脑子里，而是先把关键词与关系外化到纸面，再用“先允许错、再压缩、再重组”的循环，把混乱的信息加工成更稳定的理解。 |
+

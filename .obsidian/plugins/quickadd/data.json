@@ -3,34 +3,10 @@
     {
       "id": "dfe82076-62de-4f20-8a5e-f4b5055e9330",
       "name": "add-done-item",
-      "type": "Template",
+      "type": "Macro",
       "command": true,
-      "templatePath": "00_inbox/add_done_item.md",
-      "fileNameFormat": {
-        "enabled": true,
-        "format": "{{DATE:YYYY-MM-DD——ddd}}"
-      },
-      "folder": {
-        "enabled": true,
-        "folders": [
-          "99_学习情况记录/完成任务的日期"
-        ],
-        "chooseWhenCreatingNote": false,
-        "createInSameFolderAsActiveFile": false,
-        "chooseFromSubfolders": false
-      },
-      "appendLink": false,
-      "openFileInNewTab": {
-        "enabled": false,
-        "direction": "vertical",
-        "focus": true
-      },
-      "openFile": false,
-      "openFileInMode": "default",
-      "fileExistsBehavior": {
-        "kind": "apply",
-        "mode": "appendBottom"
-      }
+      "script": "00_inbox/quickadd记录推进.js",
+      "arguments": []
     },
     {
       "id": "add-task",

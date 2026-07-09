@@ -1,0 +1,4 @@
+interface:
+  display_name: "Weekly Review"
+  short_description: "Interactive weekly review for the Academic vault"
+  default_prompt: "Run a weekly learning review from this week’s daily notes."

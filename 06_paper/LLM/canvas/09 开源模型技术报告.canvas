@@ -1,0 +1,616 @@
+{
+  "nodes": [
+    {
+      "id": "title",
+      "type": "text",
+      "x": 0,
+      "y": -180,
+      "width": 900,
+      "height": 120,
+      "text": "# 09 开源模型技术报告\n\n[[LLM Big Picture]] · [[LLM Map Index]] · 21 papers",
+      "color": "4"
+    },
+    {
+      "id": "route-open-models",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 310,
+      "height": 100,
+      "text": "## Open Models\n\n[[Open Model Ecosystem]]",
+      "color": "4"
+    },
+    {
+      "id": "route-pretraining",
+      "type": "text",
+      "x": 0,
+      "y": 150,
+      "width": 310,
+      "height": 100,
+      "text": "## Pretraining\n\n[[Pretraining Paradigm]]",
+      "color": "5"
+    },
+    {
+      "id": "route-transformer",
+      "type": "text",
+      "x": 0,
+      "y": 300,
+      "width": 310,
+      "height": 100,
+      "text": "## Transformer\n\n[[Transformer Paradigm]]",
+      "color": "5"
+    },
+    {
+      "id": "route-scaling-law",
+      "type": "text",
+      "x": 0,
+      "y": 450,
+      "width": 310,
+      "height": 100,
+      "text": "## Scaling Law\n\n[[Scaling Law]]",
+      "color": "6"
+    },
+    {
+      "id": "route-preference-optimization",
+      "type": "text",
+      "x": 0,
+      "y": 600,
+      "width": 310,
+      "height": 100,
+      "text": "## Preference Optimization\n\n[[Preference Optimization]]",
+      "color": "4"
+    },
+    {
+      "id": "route-efficiency-moe",
+      "type": "text",
+      "x": 0,
+      "y": 750,
+      "width": 310,
+      "height": 100,
+      "text": "## Efficiency / MoE\n\n[[LLM Efficiency Engineering]]",
+      "color": "2"
+    },
+    {
+      "id": "route-agent",
+      "type": "text",
+      "x": 0,
+      "y": 900,
+      "width": 310,
+      "height": 100,
+      "text": "## Agent\n\n[[Agentic LLMs]]",
+      "color": "3"
+    },
+    {
+      "id": "paper-liurobertarobustlyoptimized",
+      "type": "text",
+      "x": 1080,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**RoBERTa: A Robustly Optimized BERT Pretraining Approach**\n\n2019 · [[liuRoBERTaRobustlyOptimized|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-scaobloom176bparameteropenaccess",
+      "type": "text",
+      "x": 2070,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**BLOOM: A 176B-Parameter Open-Access Multilingual Language Model**\n\n2022 · [[scaoBLOOM176BParameterOpenAccess|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-zhangoptopenpretrained",
+      "type": "text",
+      "x": 2070,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**OPT: Open Pre-trained Transformer Language Models**\n\n2022 · [[zhangOPTOpenPretrained|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-hoffmanntrainingcomputeoptimallarge",
+      "type": "text",
+      "x": 2070,
+      "y": 260,
+      "width": 290,
+      "height": 105,
+      "text": "**Training Compute-Optimal Large Language Models**\n\n2022 · [[hoffmannTrainingComputeOptimalLarge|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-rafailovdirectpreferenceoptimization",
+      "type": "text",
+      "x": 2400,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**Direct Preference Optimization: Your Language Model is Secretly a Reward Model**\n\n2023 · [[rafailovDirectPreferenceOptimization|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-touvron2023llama2open",
+      "type": "text",
+      "x": 2400,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**Llama 2: Open Foundation and Fine-Tuned Chat Models**\n\n2023 · [[touvron2023Llama2Open|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-touvron2023llamaopenefficient",
+      "type": "text",
+      "x": 2400,
+      "y": 260,
+      "width": 290,
+      "height": 105,
+      "text": "**LLaMA: Open and Efficient Foundation Language Models**\n\n2023 · [[touvron2023LLaMAOpenEfficient|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-jiang2023mistral7b",
+      "type": "text",
+      "x": 2400,
+      "y": 390,
+      "width": 290,
+      "height": 105,
+      "text": "**Mistral 7B**\n\n2023 · [[jiang2023Mistral7B|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-bidermanpythiasuiteanalyzing",
+      "type": "text",
+      "x": 2400,
+      "y": 520,
+      "width": 290,
+      "height": 105,
+      "text": "**Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling**\n\n2023 · [[bidermanPythiaSuiteAnalyzing|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-almazroueifalconseriesopen",
+      "type": "text",
+      "x": 2400,
+      "y": 650,
+      "width": 290,
+      "height": 105,
+      "text": "**The Falcon Series of Open Language Models**\n\n2023 · [[almazroueiFalconSeriesOpen|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-deepseek-ai2024deepseekv2strongeconomical",
+      "type": "text",
+      "x": 2730,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**DeepSeek-V2: A Strong, Economical, and Efficient Mixture-of-Experts Language Model**\n\n2024 · [[deepseek-ai2024DeepSeekV2StrongEconomical|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-dai2024deepseekmoeultimateexpert",
+      "type": "text",
+      "x": 2730,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Langu...**\n\n2024 · [[dai2024DeepSeekMoEUltimateExpert|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-jiang2024mixtralexperts",
+      "type": "text",
+      "x": 2730,
+      "y": 260,
+      "width": 290,
+      "height": 105,
+      "text": "**Mixtral of Experts**\n\n2024 · [[jiang2024MixtralExperts|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-groeneveld2024olmoacceleratingscience",
+      "type": "text",
+      "x": 2730,
+      "y": 390,
+      "width": 290,
+      "height": 105,
+      "text": "**OLMo: Accelerating the Science of Language Models**\n\n2024 · [[groeneveld2024OLMoAcceleratingScience|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-muennighoffolmoeopenmixtureofexperts",
+      "type": "text",
+      "x": 2730,
+      "y": 520,
+      "width": 290,
+      "height": 105,
+      "text": "**OLMoE: Open Mixture-of-Experts Language Models**\n\n2024 · [[muennighoffOLMoEOpenMixtureofExperts|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-abdin2024phi3technicalreport",
+      "type": "text",
+      "x": 2730,
+      "y": 650,
+      "width": 290,
+      "height": 105,
+      "text": "**Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone**\n\n2024 · [[abdin2024Phi3TechnicalReport|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-yang2024qwen2technicalreport",
+      "type": "text",
+      "x": 2730,
+      "y": 780,
+      "width": 290,
+      "height": 105,
+      "text": "**Qwen2 Technical Report**\n\n2024 · [[yang2024Qwen2TechnicalReport|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-grattafiori2024llama3herd",
+      "type": "text",
+      "x": 2730,
+      "y": 910,
+      "width": 290,
+      "height": 105,
+      "text": "**The Llama 3 Herd of Models**\n\n2024 · [[grattafiori2024Llama3Herd|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-deepseek-ai2025deepseekv3technicalreport",
+      "type": "text",
+      "x": 3060,
+      "y": 0,
+      "width": 290,
+      "height": 105,
+      "text": "**DeepSeek-V3 Technical Report**\n\n2025 · [[deepseek-ai2025DeepSeekV3TechnicalReport|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-kimiteam2025kimik2open",
+      "type": "text",
+      "x": 3060,
+      "y": 130,
+      "width": 290,
+      "height": 105,
+      "text": "**Kimi K2: Open Agentic Intelligence**\n\n2025 · [[kimiteam2025KimiK2Open|note]]",
+      "color": "4"
+    },
+    {
+      "id": "paper-yang2025qwen3technicalreport",
+      "type": "text",
+      "x": 3060,
+      "y": 260,
+      "width": 290,
+      "height": 105,
+      "text": "**Qwen3 Technical Report**\n\n2025 · [[yang2025Qwen3TechnicalReport|note]]",
+      "color": "4"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0001",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-liurobertarobustlyoptimized",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0002",
+      "fromNode": "route-pretraining",
+      "fromSide": "right",
+      "toNode": "paper-liurobertarobustlyoptimized",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    },
+    {
+      "id": "e0003",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-scaobloom176bparameteropenaccess",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0004",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-zhangoptopenpretrained",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0005",
+      "fromNode": "route-transformer",
+      "fromSide": "right",
+      "toNode": "paper-zhangoptopenpretrained",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "5"
+    },
+    {
+      "id": "e0006",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-hoffmanntrainingcomputeoptimallarge",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0007",
+      "fromNode": "route-scaling-law",
+      "fromSide": "right",
+      "toNode": "paper-hoffmanntrainingcomputeoptimallarge",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "6"
+    },
+    {
+      "id": "e0008",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-rafailovdirectpreferenceoptimization",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0009",
+      "fromNode": "route-preference-optimization",
+      "fromSide": "right",
+      "toNode": "paper-rafailovdirectpreferenceoptimization",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0010",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-touvron2023llama2open",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0011",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-touvron2023llamaopenefficient",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0012",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-jiang2023mistral7b",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0013",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-bidermanpythiasuiteanalyzing",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0014",
+      "fromNode": "route-scaling-law",
+      "fromSide": "right",
+      "toNode": "paper-bidermanpythiasuiteanalyzing",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "6"
+    },
+    {
+      "id": "e0015",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-almazroueifalconseriesopen",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0016",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-deepseek-ai2024deepseekv2strongeconomical",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0017",
+      "fromNode": "route-efficiency-moe",
+      "fromSide": "right",
+      "toNode": "paper-deepseek-ai2024deepseekv2strongeconomical",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "2"
+    },
+    {
+      "id": "e0018",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-dai2024deepseekmoeultimateexpert",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0019",
+      "fromNode": "route-efficiency-moe",
+      "fromSide": "right",
+      "toNode": "paper-dai2024deepseekmoeultimateexpert",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "2"
+    },
+    {
+      "id": "e0020",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-jiang2024mixtralexperts",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0021",
+      "fromNode": "route-efficiency-moe",
+      "fromSide": "right",
+      "toNode": "paper-jiang2024mixtralexperts",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "2"
+    },
+    {
+      "id": "e0022",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-groeneveld2024olmoacceleratingscience",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0023",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-muennighoffolmoeopenmixtureofexperts",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0024",
+      "fromNode": "route-efficiency-moe",
+      "fromSide": "right",
+      "toNode": "paper-muennighoffolmoeopenmixtureofexperts",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "2"
+    },
+    {
+      "id": "e0025",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-abdin2024phi3technicalreport",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0026",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-yang2024qwen2technicalreport",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0027",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-grattafiori2024llama3herd",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0028",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-deepseek-ai2025deepseekv3technicalreport",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0029",
+      "fromNode": "route-efficiency-moe",
+      "fromSide": "right",
+      "toNode": "paper-deepseek-ai2025deepseekv3technicalreport",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "2"
+    },
+    {
+      "id": "e0030",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-kimiteam2025kimik2open",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    },
+    {
+      "id": "e0031",
+      "fromNode": "route-agent",
+      "fromSide": "right",
+      "toNode": "paper-kimiteam2025kimik2open",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "3"
+    },
+    {
+      "id": "e0032",
+      "fromNode": "route-open-models",
+      "fromSide": "right",
+      "toNode": "paper-yang2025qwen3technicalreport",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "specializes",
+      "color": "4"
+    }
+  ]
+}

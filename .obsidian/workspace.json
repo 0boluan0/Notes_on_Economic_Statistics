@@ -4,83 +4,69 @@
     "type": "split",
     "children": [
       {
-        "id": "a2df68189448bf76",
+        "id": "b3385dac95b9634b",
         "type": "tabs",
         "children": [
           {
-            "id": "d3c7dbacc7288c61",
+            "id": "c85c28c2b0b82198",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00_factor/concept/Backtesting.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Backtesting"
-            }
-          },
-          {
-            "id": "fc272e7d09b079a6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/workbench.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "workbench"
-            }
-          },
-          {
-            "id": "0cf76a127bef04a9",
-            "type": "leaf",
-            "state": {
-              "type": "mx-welcome",
+              "type": "learning-progress-dashboard-view",
               "state": {},
-              "icon": "home",
-              "title": "Onboarding - Media Extended"
+              "icon": "map",
+              "title": "Learning Progress Dashboard"
             }
           },
           {
-            "id": "d3b3fad14463e048",
+            "id": "5f9e91a78c82dc8b",
             "type": "leaf",
             "state": {
-              "type": "webviewer",
+              "type": "markdown",
               "state": {
-                "url": "https://www.bilibili.com/",
-                "title": "哔哩哔哩 (゜-゜)つロ 干杯~-bilibili",
-                "mode": "webview"
+                "file": "99_学习情况记录/2026-07-09——Thu.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "globe-2",
-              "title": "哔哩哔哩 (゜-゜)つロ 干杯~-bilibili"
+              "icon": "lucide-file",
+              "title": "2026-07-09——Thu"
+            }
+          },
+          {
+            "id": "d70dc680e14fe349",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "01_Ax = b and the Four Subspaces"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -350,8 +336,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 746.5,
-    "collapsed": true
+    "width": 746.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -373,63 +358,63 @@
       "graph:Open graph view": false
     }
   },
-  "active": "d3b3fad14463e048",
+  "active": "d70dc680e14fe349",
   "lastOpenFiles": [
+    "99_学习情况记录/2026-07-09——Thu.md",
+    "99_学习情况记录/完成任务的日期/2026-07-09——Thu.md",
+    "99_学习情况记录/完成任务的日期",
     "99_学习情况记录/workbench.md",
-    "99_学习情况记录/Overview & Study Record——旧版计划归档 2026-06-17.md",
+    "05_tools/FastAPI.md",
+    "00_inbox/quickadd记录推进.js",
+    "05_tools/Example Domain.md",
+    "05_tools/00_content.md",
+    "05_tools/StatsPAI The Agent-Native Causal Inference & Econometrics Toolkit for Python.md",
+    "00_inbox/日记模版.md",
+    "99_学习情况记录/2026-07-08——Wed.md",
+    "04_Fragments/00_content.md",
+    "05_tools/目录.md",
+    "99_学习情况记录/Overview & Study Record.md",
+    "05_tools/Code Space.md",
+    "04_Fragments/目录.md",
+    "00_inbox/2026年，普通人如何量化交易.md",
+    "05_tools/Paper2Any.md",
+    "05_tools/labml.ai Deep Learning Paper Implementations.md",
+    "05_tools/PaperQuay.md",
+    "05_tools/ponytail.md",
+    "media-lib/index.base",
+    "media-lib",
+    "99_学习情况记录/2026-04-04——Sat.md",
+    "99_学习情况记录/2026-07-03——Fri.md",
+    "99_学习情况记录/完成任务的日期/2026-07-03——Fri.md",
+    "99_学习情况记录/完成任务的日期/2026-06-29——Mon.md",
     "99_学习情况记录/完成任务的日期/2026-06-20——Sat.md",
-    "99_学习情况记录/完成任务的日期/2026-05-22——Fri.md",
-    "99_学习情况记录/完成任务的日期/2026-02-03——Tue.md",
+    "05_tools/Codebase to Course.md",
+    "01_Math/01_calculus/01_Differentiation.md",
+    "01_Math/01_calculus/18.01_Lecture_notes/1-7.pdf",
+    "06_paper/LLM/canvas/02 规模化与模型家族.canvas",
+    "06_paper/LLM/canvas/03 对齐与偏好优化.canvas",
+    "06_paper/LLM/canvas/01 架构与预训练.canvas",
+    "06_paper/LLM/LLM Big Picture.html",
+    "06_paper/LLM/canvas/09 开源模型技术报告.canvas",
+    "06_paper/LLM/canvas/08 多模态.canvas",
+    "06_paper/LLM/canvas/07 评测与数据.canvas",
+    "06_paper/LLM/canvas/06 长上下文与效率.canvas",
+    "06_paper/LLM/canvas/05 RAG与知识增强.canvas",
+    "06_paper/LLM/canvas/04 推理与Agent.canvas",
+    "06_paper/LLM/canvas",
+    "06_paper/LLM/LLM Big Picture.canvas",
+    "06_paper/LLM/papers",
+    "06_paper/LLM",
+    "06_paper",
     "98_attachment/截屏 2024-10-11 22.32.26.jpeg",
     "98_attachment/截屏 2024-10-10 20.04.51.jpeg",
     "98_attachment/Pasted image 20240228202716.png",
     "98_attachment/Pasted image 20240229211911.png",
     "98_attachment/Pasted image 20240229215711.png",
-    "98_attachment/reference/references.bib",
-    "98_attachment/reference",
-    "04_Fragments/How To Use AI Better Than 99% Of People (This Changed My Life) - 2026-03-28.md",
-    "05_tools/Code Space.md",
-    "05_tools/FastAPI.md",
-    "05_tools/Example Domain.md",
-    "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md",
-    "01_Math/02_linear algebra/02_Least Squares, Determinants and Eigenvalues.md",
-    "Excalidraw/Drawing 2026-05-23 18.00.12.excalidraw.md",
-    "05_tools/ponytail.md",
-    "00_factor/concept/Backtesting.md",
-    "00_factor/concept/Factor Analysis.md",
-    "00_factor/concept/VaR.md",
-    "02_Economy/07_金融机构与风险管理/12_VAR风险.md",
-    "00_factor/concept/Annuity.md",
-    "00_factor/concept/Actual Error Rate.md",
-    "05_tools/Codebase to Course.md",
-    "04_Fragments/How I'd build a one-person business (if I started over in 2026) - 2026-03-28.md",
-    "05_tools/PaperQuay.md",
-    "05_tools/GitHub.md",
-    "99_学习情况记录/2026-05-09——Sat.md",
-    "01_Math/01_calculus/01_Differentiation.md",
-    "02_Economy/07_金融机构与风险管理/09_利率风险.md",
-    "01_Math/01_calculus/18.01_Lecture_notes/1-7.pdf",
-    "99_学习情况记录/active",
-    "98_attachment/dashboards/2026-02-06-news.json",
-    "01_Math/EC400/02_SOFP/U202216415-冯一航-形式审查表-扫描PDF版.pdf",
-    "01_Math/EC400/03_DPDE/DPDE_ProblemSet4_Cumulative.pdf",
-    "01_Math/01_calculus/18.01_Lecture_notes/26-38.pdf",
-    "01_Math/01_calculus/18.01_Lecture_notes/18-25.pdf",
-    "01_Math/01_calculus/18.01_Lecture_notes/9-16.pdf",
     "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/warning.e29b1060a0fb05a2b927.svg",
     "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/x-formerly-twitter-black.f8c75ad9f42902726d25.png",
     "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/youtube.1e55fc2f8fc09d36a1a6.svg",
     "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/videojs_download.e0dbb2cfb52d2d71ba4a.svg",
-    "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/search.42a42bffcdf041e57b97.svg",
-    "01_Math/06_时间序列分析/Time Series Course Atlas.canvas",
-    "02_Economy/07_金融机构与风险管理/07_金融机构与风险管理.canvas",
-    "02_Economy/05_财务管理/05_财务管理.canvas",
-    "02_Economy/06_证券投资学/06_证券投资学.canvas",
-    "02_Economy/02_public finance财政学/02_public finance财政学.canvas",
-    "02_Economy/10_发展经济学/10_发展经济学.canvas",
-    "02_Economy/08_经济预测与决策/08_经济预测与决策.canvas",
-    "02_Economy/04_经济思想史/04_经济思想史.canvas",
-    "02_Economy/03_货币银行学/03_货币银行学.canvas",
-    "01_Math/01_calculus/01_calculus.canvas"
+    "98_attachment/_archive/MIT18.01SC_raw_site/static_shared/images/search.42a42bffcdf041e57b97.svg"
   ]
 }

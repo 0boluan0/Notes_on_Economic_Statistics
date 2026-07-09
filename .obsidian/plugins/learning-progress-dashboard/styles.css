@@ -239,6 +239,33 @@
   flex-shrink: 0;
 }
 
+.lpd-panel {
+  min-width: 0;
+  border: 1px solid var(--lpd-border);
+  border-radius: 8px;
+  background: var(--lpd-surface-soft);
+  padding: 10px 12px;
+}
+
+.lpd-panel h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.lpd-task-row {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 9px;
+  align-items: start;
+  border-top: 1px solid var(--lpd-border);
+  padding: 8px 0;
+}
+
+.lpd-task-row:first-of-type {
+  border-top: 0;
+}
+
 .lpd-rail-list {
   display: flex;
   flex-direction: column;
@@ -376,6 +403,26 @@
   color: var(--lpd-muted);
   font-size: 9px;
   font-weight: 600;
+}
+
+.lpd-state-raw .lpd-node-label {
+  color: var(--lpd-faint);
+}
+
+.lpd-state-active .lpd-node-label {
+  color: var(--text-accent);
+}
+
+.lpd-state-learned .lpd-node-label {
+  color: var(--lpd-learned-ink);
+}
+
+.lpd-state-organized .lpd-node-label {
+  color: var(--lpd-organized-ink);
+}
+
+.lpd-state-mapped .lpd-node-label {
+  color: var(--lpd-mapped-ink);
 }
 
 .lpd-course-actions {

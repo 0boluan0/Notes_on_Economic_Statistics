@@ -1,0 +1,37 @@
+{
+	"nodes":[
+		{"id":"title","type":"text","x":0,"y":-180,"width":900,"height":120,"text":"# 02 规模化与模型家族\n\n[[LLM Big Picture]] · [[LLM Map Index]] · 11 papers","color":"6"},
+		{"id":"route-scaling-law","type":"text","x":0,"y":0,"width":310,"height":100,"text":"## Scaling Law\n\n[[Scaling Law]]","color":"6"},
+		{"id":"route-efficiency-moe","type":"text","x":0,"y":150,"width":310,"height":100,"text":"## Efficiency / MoE\n\n[[LLM Efficiency Engineering]]","color":"2"},
+		{"id":"route-transformer","type":"text","x":0,"y":300,"width":310,"height":100,"text":"## Transformer\n\n[[Transformer Paradigm]]","color":"5"},
+		{"id":"paper-lepikhin2020gshardscalinggiant","type":"text","x":1410,"y":0,"width":290,"height":105,"text":"**GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding**\n\n2020 · [[lepikhin2020GShardScalingGiant|note]]","color":"6"},
+		{"id":"paper-brown2020languagemodelsare","type":"text","x":1410,"y":130,"width":290,"height":105,"text":"**Language Models are Few-Shot Learners**\n\n2020 · [[brown2020LanguageModelsAre|note]]","color":"6"},
+		{"id":"paper-shoeybi2020megatronlmtrainingmultibillion","type":"text","x":1410,"y":260,"width":290,"height":105,"text":"**Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Paral...**\n\n2020 · [[shoeybi2020MegatronLMTrainingMultiBillion|note]]","color":"6"},
+		{"id":"paper-kaplan2020scalinglawsneural","type":"text","x":1410,"y":390,"width":290,"height":105,"text":"**Scaling Laws for Neural Language Models**\n\n2020 · [[kaplan2020ScalingLawsNeural|note]]","color":"6"},
+		{"id":"paper-taylor2022galacticalargelanguage","type":"text","x":2070,"y":0,"width":290,"height":105,"text":"**Galactica: A Large Language Model for Science**\n\n2022 · [[taylor2022GalacticaLargeLanguage|note]]","color":"6"},
+		{"id":"paper-du2022glamefficientscaling","type":"text","x":2070,"y":130,"width":290,"height":105,"text":"**GLaM: Efficient Scaling of Language Models with Mixture-of-Experts**\n\n2022 · [[du2022GLaMEfficientScaling|note]]","color":"6"},
+		{"id":"paper-thoppilan2022lamdalanguagemodels","type":"text","x":2070,"y":260,"width":290,"height":105,"text":"**LaMDA: Language Models for Dialog Applications**\n\n2022 · [[thoppilan2022LaMDALanguageModels|note]]","color":"6"},
+		{"id":"paper-chowdhery2022palmscalinglanguage","type":"text","x":2070,"y":390,"width":290,"height":105,"text":"**PaLM: Scaling Language Modeling with Pathways**\n\n2022 · [[chowdhery2022PaLMScalingLanguage|note]]","color":"6"},
+		{"id":"paper-rae2022scalinglanguagemodels","type":"text","x":2070,"y":520,"width":290,"height":105,"text":"**Scaling Language Models: Methods, Analysis & Insights from Training Gopher**\n\n2022 · [[rae2022ScalingLanguageModels|note]]","color":"6"},
+		{"id":"paper-fedus2022switchtransformersscaling","type":"text","x":2070,"y":650,"width":290,"height":105,"text":"**Switch Transformers: Scaling to Trillion Parameter Models with Simple and Effic...**\n\n2022 · [[fedus2022SwitchTransformersScaling|note]]","color":"6"},
+		{"id":"paper-smith2022usingdeepspeedmegatron","type":"text","x":2070,"y":780,"width":290,"height":105,"text":"**Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, A Large-Scale G...**\n\n2022 · [[smith2022UsingDeepSpeedMegatron|note]]","color":"6"}
+	],
+	"edges":[
+		{"id":"e0001","fromNode":"route-scaling-law","fromSide":"right","toNode":"paper-lepikhin2020gshardscalinggiant","toSide":"left","toEnd":"arrow","label":"specializes","color":"6"},
+		{"id":"e0002","fromNode":"route-efficiency-moe","fromSide":"right","toNode":"paper-lepikhin2020gshardscalinggiant","toSide":"left","toEnd":"arrow","label":"specializes","color":"2"},
+		{"id":"e0003","fromNode":"route-scaling-law","fromSide":"right","toNode":"paper-brown2020languagemodelsare","toSide":"left","toEnd":"arrow","label":"specializes","color":"6"},
+		{"id":"e0004","fromNode":"route-scaling-law","fromSide":"right","toNode":"paper-shoeybi2020megatronlmtrainingmultibillion","toSide":"left","toEnd":"arrow","label":"specializes","color":"6"},
+		{"id":"e0005","fromNode":"route-efficiency-moe","fromSide":"right","toNode":"paper-shoeybi2020megatronlmtrainingmultibillion","toSide":"left","toEnd":"arrow","label":"specializes","color":"2"},
+		{"id":"e0006","fromNode":"route-scaling-law","fromSide":"right","toNode":"paper-kaplan2020scalinglawsneural","toSide":"left","toEnd":"arrow","label":"specializes","color":"6"},
+		{"id":"e0007","fromNode":"route-scaling-law","fromSide":"right","toNode":"paper-taylor2022galacticalargelanguage","toSide":"left","toEnd":"arrow","label":"specializes","color":"6"},
+		{"id":"e0008","fromNode":"route-scaling-law","fromSide":"right","toNode":"paper-du2022glamefficientscaling","toSide":"left","toEnd":"arrow","label":"specializes","color":"6"},
+		{"id":"e0009","fromNode":"route-efficiency-moe","fromSide":"right","toNode":"paper-du2022glamefficientscaling","toSide":"left","toEnd":"arrow","label":"specializes","color":"2"},
+		{"id":"e0010","fromNode":"route-scaling-law","fromSide":"right","toNode":"paper-thoppilan2022lamdalanguagemodels","toSide":"left","toEnd":"arrow","label":"specializes","color":"6"},
+		{"id":"e0011","fromNode":"route-scaling-law","fromSide":"right","toNode":"paper-chowdhery2022palmscalinglanguage","toSide":"left","toEnd":"arrow","label":"specializes","color":"6"},
+		{"id":"e0012","fromNode":"route-scaling-law","fromSide":"right","toNode":"paper-rae2022scalinglanguagemodels","toSide":"left","toEnd":"arrow","label":"specializes","color":"6"},
+		{"id":"e0013","fromNode":"route-scaling-law","fromSide":"right","toNode":"paper-fedus2022switchtransformersscaling","toSide":"left","toEnd":"arrow","label":"specializes","color":"6"},
+		{"id":"e0014","fromNode":"route-efficiency-moe","fromSide":"right","toNode":"paper-fedus2022switchtransformersscaling","toSide":"left","toEnd":"arrow","label":"specializes","color":"2"},
+		{"id":"e0015","fromNode":"route-scaling-law","fromSide":"right","toNode":"paper-smith2022usingdeepspeedmegatron","toSide":"left","toEnd":"arrow","label":"specializes","color":"6"},
+		{"id":"e0016","fromNode":"route-efficiency-moe","fromSide":"right","toNode":"paper-smith2022usingdeepspeedmegatron","toSide":"left","toEnd":"arrow","label":"specializes","color":"2"}
+	]
+}
