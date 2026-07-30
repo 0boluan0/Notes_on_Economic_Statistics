@@ -173,10 +173,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/First Day 2026.pdf"
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/Everyday English lesson 2026.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "First Day 2026"
+              "title": "Everyday English lesson 2026"
             }
           }
         ],
@@ -426,13 +426,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/First Day 2026.pdf",
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/Everyday English lesson 2026.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of First Day 2026"
+              "title": "Outline of Everyday English lesson 2026"
             }
           },
           {
@@ -473,11 +473,11 @@
   },
   "active": "9b786fab3b1083a3",
   "lastOpenFiles": [
-    "99_学习情况记录/2026-07-30——Thu.md",
+    "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/First Day 2026.pdf",
+    "99_学习情况记录/2026-07-30——Thu.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note",
     "02_Economy/01_Econometrics/12_非平稳时间序列.md",
-    "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
     "00_factor/00_hub/OLS-hub.canvas",
     "07_Programme/01_LN905_LSE-language-class/Media/07_Language-Skills/Pronunciation/Interactive/the-schwa-6563.h5p",
     "07_Programme/01_LN905_LSE-language-class/Media/07_Language-Skills/Pronunciation/Interactive/sentence-word-stress-6565.h5p",
