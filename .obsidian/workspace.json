@@ -179,7 +179,8 @@
               "title": "First Day 2026"
             }
           }
-        ]
+        ],
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -470,10 +471,11 @@
       "graph:Open graph view": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "9b786fab3b1083a3",
   "lastOpenFiles": [
-    "07_Programme/01_LN905_LSE-language-class/01_LN905_note",
     "99_学习情况记录/2026-07-30——Thu.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/First Day 2026.pdf",
+    "07_Programme/01_LN905_LSE-language-class/01_LN905_note",
     "02_Economy/01_Econometrics/12_非平稳时间序列.md",
     "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
     "00_factor/00_hub/OLS-hub.canvas",
@@ -485,8 +487,6 @@
     "07_Programme/01_LN905_LSE-language-class/Media/07_Language-Skills/Pronunciation/unvoiced th.m4a",
     "07_Programme/01_LN905_LSE-language-class/Media/07_Language-Skills/Pronunciation/Interactive",
     "07_Programme/01_LN905_LSE-language-class/Media/07_Language-Skills/Pronunciation",
-    "07_Programme/01_LN905_LSE-language-class/Media/05_Paper-C-Speaking-and-Listening/Presentation Guide.mp4",
-    "07_Programme/01_LN905_LSE-language-class/Media/07_Language-Skills",
     "07_Programme/01_LN905_LSE-language-class/02_Academic-Writing/LN905 Week one materials 2026 - B completed.md",
     "07_Programme/01_LN905_LSE-language-class/02_Academic-Writing/LN905 Week one materials 2026.md",
     "07_Programme/01_LN905_LSE-language-class/02_Academic-Writing/LN905 Week one materials 2026 - online blank 2026-07-29.md",
