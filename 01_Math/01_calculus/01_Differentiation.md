@@ -181,18 +181,18 @@ $$
 - [[Ses01c_Lecture_Notes.pdf#page=1|01c Geometric Definition（p.1）]]
 - [[Ses01d_Lecture_Notes.pdf#page=1|01d Slope as Ratio（p.1）]]
 - [[Ses01e_Lecture_Notes.pdf#page=1|01e Main Formula（p.1）]]
-- [[Ses01e_lec1ses1ex1_secants.pdf#page=1|课堂练习与答案：Secants and Tangents（pp.1-4）]]
-- [[Exercise001_Problems.pdf#page=1|Exercise 001 原题]] · [[Exercise001_Solutions.pdf#page=1|Exercise 001 解答]]
+-  [[Ses01e_lec1ses1ex1_secants.pdf#page=1|课堂练习与答案：Secants and Tangents（pp.1-4）]]
+- [x] [[Exercise001_Problems.pdf#page=1|Exercise 001 原题]] · [[Exercise001_Solutions.pdf#page=1|Exercise 001 解答]] ✅ 2026-07-30
 
-**知识链：**两点斜率 → 割线 → 令第二点逼近第一点 → 切线斜率 → 导数定义。
+**知识链：** 两点斜率 → 割线 → 令第二点逼近第一点 → 切线斜率 → 导数定义。
 
 ## Session 2：Examples of Derivatives
 
 ### 本节问题与前置知识
 
-**问题：**怎样把抽象差商真正算出来？幂函数的统一规则从哪里来？
+**问题：** 怎样把抽象差商真正算出来？幂函数的统一规则从哪里来？
 
-**前置知识：**导数定义、分式通分、二项式展开、直线截距与三角形面积。
+**前置知识：** 导数定义、分式通分、二项式展开、直线截距与三角形面积。
 
 ### 02a：由定义求 $f(x)=1/x$
 
@@ -329,17 +329,17 @@ $$
 - [[Ses02c_Lecture_Notes.pdf#page=1|02c Notations（p.1）]]
 - [[Ses02d_MIT18_10SCF10_Ses2d.pdf#page=1|02d Positive Integer Power Rule（pp.1-2）]]
 - [[Ses02e_lec9ses2ex1_linearprod.pdf#page=1|02e Product of Linear Approximations（p.1，超前材料）]]
-- [[Exercise002_Problems.pdf#page=1|Exercise 002：$|x|$ 的导数]] · [[Exercise002_Solutions.pdf#page=1|答案]]
+- [x] [[Exercise002_Problems.pdf#page=1|Exercise 002：$|x|$ 的导数]] · [[Exercise002_Solutions.pdf#page=1|答案]] ✅ 2026-07-30
 
-**知识链：**差商 → 代数消去 $0/0$ → 具体导数 → 二项式结构 → 正整数幂法则。
-
+**知识链：** 差商 → 代数消去 $0/0$ → 具体导数 → 二项式结构 → 正整数幂法则。
+　
 ## Session 3：Derivative as Rate of Change
 
 ### 本节问题与前置知识
 
-**问题：**切线斜率为什么也能表示速度、电流、温度梯度和测量灵敏度？
+**问题：** 切线斜率为什么也能表示速度、电流、温度梯度和测量灵敏度？
 
-**前置知识：**差商、导数定义、变量及单位、勾股定理。
+**前置知识：** 差商、导数定义、变量及单位、勾股定理。
 
 ### 03a-03b：平均变化率与瞬时变化率
 
@@ -414,7 +414,7 @@ h^2=s^2+L^2,\qquad L(h)=\sqrt{h^2-s^2}.
 $$
 
 对 $h$ 求导：
-
+#confused
 $$
 \frac{dL}{dh}=\frac{h}{\sqrt{h^2-s^2}}=\frac hL.
 $$
@@ -425,23 +425,20 @@ $$
 \Delta L\approx\frac{dL}{dh}\Delta h=\frac hL\Delta h.
 $$
 
-当接收机几乎在卫星正下方时 $L$ 很小，放大因子 $h/L$ 很大：很小的斜距误差也会造成明显的水平位置误差。这就是导数作为**灵敏度（sensitivity）**的含义。
+当接收机几乎在卫星正下方时 $L$ 很小，放大因子 $h/L$ 很大：很小的斜距误差也会造成明显的水平位置误差。这就是导数作为**灵敏度（sensitivity）** 的含义。
 
 > [!note] 近似的逻辑
 > $\Delta L/\Delta h$ 是真实有限误差比；$dL/dh$ 是其在 $\Delta h\to0$ 的极限。写 $\Delta L\approx(dL/dh)\Delta h$ 需要误差足够小，并不意味着二者在任意步长下完全相等。
 
 ### 边界情况与易错点
 
-- 位置、位移、路程不同。速度可为负，速率不能为负。
-- 平均速度用净位移除以时间；总路程必须按改变方向的时刻分段后取绝对值。
 - 求导前先说明自变量。$dT/dx$ 与 $dT/dt$ 回答不同问题。
 - 灵敏度接近无穷不表示实际误差必定无穷，只说明线性放大因子很大、测量几何很不利。
 
-### 三道自检
+### 自检
 
 1. 对 $s(t)=3t^2-2t$，求 $[1,3]$ 的平均速度和 $t=3$ 的瞬时速度。
-2. 南瓜落地时的速度为何是 $-40$ 而不是 $40$？何时应写 $40$？
-3. GPS 模型中若 $s=3,h=5$，测距误差约 $0.01$，估计 $L$ 的误差。
+2. GPS 模型中若 $s=3,h=5$，测距误差约 $0.01$，估计 $L$ 的误差。
 
 > [!success]- 自检答案
 > 1. $[s(3)-s(1)]/2=(21-1)/2=10$；$s'(t)=6t-2$，故 $s'(3)=16$。
@@ -454,7 +451,7 @@ $$
 - [[Ses03b_Lecture_Notes.pdf#page=1|03b Rates of Change（p.1）]]
 - [[Ses03c_Lecture_Notes.pdf#page=1|03c Pumpkin Drop（pp.1-2）]]
 - [[Ses03d_Lecture_Notes.pdf#page=1|03d Temperature Gradient and GPS（pp.1-2）]]
-- [[Exercise003_Problems.pdf#page=1|Exercise 003：Checking Account Balances]] · [[Exercise003_Solutions.pdf#page=1|答案]]
+- [x] [[Exercise003_Problems.pdf#page=1|Exercise 003：Checking Account Balances]] · [[Exercise003_Solutions.pdf#page=1|答案]] ✅ 2026-07-30
 
 **知识链：**几何斜率 → 单位输出/单位输入 → 平均变化率 → 区间缩到一点 → 瞬时变化率与灵敏度。
 
@@ -474,7 +471,7 @@ $$
 \lim_{x\to a}f(x)=L
 $$
 
-表示当 $x$ 取足够靠近但不等于 $a$ 的值时，$f(x)$ 可任意靠近 $L$。[[Limit|极限]]考察的是**附近行为**，所以 $f(a)$ 可以未定义，也可以与 $L$ 不同。
+表示当 $x$ 取足够靠近但不等于 $a$ 的值时，$f(x)$ 可任意靠近 $L$。极限考察的是**附近行为**，所以 $f(a)$ 可以未定义，也可以与 $L$ 不同。
 
 例如
 
@@ -564,7 +561,7 @@ $$
 
 - [[Ses04a_Lecture_Notes.pdf#page=1|04a Limits（pp.1-2）]]
 - [[Ses04b_Lecture_Notes.pdf#page=1|04b Continuity（p.1）]]
-- [[Exercise004_Problems.pdf#page=1|Exercise 004：Continuous but not Smooth]] · [[Exercise004_Solutions.pdf#page=1|答案]]
+- [ ] [[Exercise004_Problems.pdf#page=1|Exercise 004：Continuous but not Smooth]] · [[Exercise004_Solutions.pdf#page=1|答案]]
 
 **知识链：**附近行为 → 左右极限 → 双侧极限 → 极限等于函数值 → 连续。
 

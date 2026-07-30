@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 - Root is an Obsidian vault for academic notes. Key folders:
-  - `00_inbox/`: quick captures to triage.
+  - Root `00_inbox/`: the user's general capture and working area. Its existing files are durable and tracked; never bulk-empty, move, or delete this directory during knowledge or course processing. Course directories have separate ephemeral `00_inbox/` folders for raw class inputs.
   - `00_Knowledge/`: shared knowledge files in one flat knowledge area; `_hubs/` contains only a small number of genuine cross-course navigation Hubs.
   - `01_Math/`, `02_Economy/`, `03_Computer_Science/`: course and subject notebooks.
   - `04_Fragments/`: captured external material awaiting or undergoing integration.
@@ -29,17 +29,20 @@
 ### Canonical objects
 
 - **Course note**: records the course context—what the course covered, the lecturer's emphasis, examples, exercises, and sequence. It is source material, not automatically the best final explanation.
-- **Knowledge file**: one coherent recovery unit that explains a topic well enough to relearn it. It may contain definitions, intuition, assumptions, derivations, procedures, diagnostics, examples, and writing guidance when those parts serve the same learning/use context.
+- **Knowledge file**: one retrieval-atomic recovery unit that answers one stable question or supports one coherent use. It must explain that unit deeply enough to relearn and use it; definitions, intuition, assumptions, derivations, procedures, diagnostics, examples, counterexamples, and reporting guidance stay together when they serve that same retrieval intent.
 - **Atomic knowledge point**: a precisely addressable heading or block inside a knowledge file. Atomicity does not require a separate file; link directly with `[[File#Heading]]` or block links.
 - **Hub**: a scarce navigation page created only after several independent knowledge files form a genuinely dense cluster. A Hub is not a content type and must not be pre-created for every important term.
 - **Course Atlas**: a Canvas overview of a whole course. It shows the backbone, hierarchy, meaningful cross-links, current position, and next entry point. Detailed explanations live in linked knowledge files or course notes.
 
 ### Merge and split rule
 
-- Default to one file when one file can explain the subject clearly. Do not split merely because content can be labelled definition/framework/procedure/proof/system/writing.
+- A broad course block is not a knowledge-file boundary. Split peer concepts when they have independent search intent, assumptions, use cases, or cross-course reuse, even if a lecturer taught them in one chapter.
+- Do not split a single method or concept into definition/proof/procedure/diagnostic fragments when those parts are normally needed together. Atomicity is measured by retrieval intent, not by heading count or file length.
 - Keep material together when it is normally retrieved together, shares the same assumptions and use context, and forms one continuous explanation. For example, a DID file may contain its intuition, 2×2 setup, regression form, parallel trends, diagnostics, interpretation, and practical workflow.
 - Split only when a part has a materially different use case or scope, different assumptions that would be confused with the parent topic, substantial independent complexity, or repeated independent reuse elsewhere.
 - Prefer a heading/block link before extracting a new file. Promote a section to its own file only after an actual independent role appears.
+- A knowledge file is not complete merely because every syllabus term appears once. Each major claim must be explained sufficiently to reconstruct the mental model, including the mechanism, conditions, at least one worked or concrete example, important failure modes or distinctions, and the route to application where relevant. Thin survey paragraphs belong in an Atlas or overview, not in the canonical knowledge explanation.
+- Final knowledge files contain knowledge, not migration commentary. Do not leave old-topic title stubs, `original ... retained for continuity`, `原主题名称`, `从原主题保留`, compatibility headings, or explanations of where text came from. Put genuinely useful alternative names in reviewed YAML aliases, integrate substantive material into the current logic, and delete migration-only residue.
 
 ### Knowledge-file reading structure
 
@@ -55,14 +58,25 @@
 ### Course notes and knowledge files
 
 - Course notes preserve course-specific context. Knowledge files provide the clearest current explanation and may synthesize slides, syllabi, textbooks, and authoritative external sources.
+- Course notes are permanent records. Never delete, replace, collapse, or treat them as disposable because an Atlas, overview, or knowledge file covers similar material. Moving the canonical explanation into Knowledge does not remove the course note's role as the record of sequence, teaching context, notation, examples, exercises, and source provenance. Deleting any course note requires explicit, file-specific user authorization.
 - Treat each course note as a continuous reading view assembled in the course's own sequence. Keep the canonical explanation in the knowledge file and transclude required sections inline with `![[Knowledge file#Heading]]` or block embeds.
 - Use ordinary `[[...]]` links only for optional extensions that the reader does not need to open immediately. Material required to understand the current course note must appear inline.
 - Write course-specific bridge prose before and between embeds to explain why the course moves from one idea to the next. Do not produce a navigation list or an unexplained stack of embeds.
 - Design transcluded knowledge sections to remain understandable when read independently; do not make them depend on unembedded source-file context.
 - Even when a course note contains no unique substantive explanation, preserve it as a coherent assembled reading path rather than reducing it to a list of links.
 - Avoid maintaining two editable copies of the same explanation: the knowledge file is the canonical content, while the course note supplies sequence, transitions, lecturer emphasis, examples, exercises, notation, and assessment context.
-- Existing AI-generated knowledge notes have not been validated. Do not use them as authoritative sources or as automatic link targets until rewritten and checked.
+- Each course directory uses `00_课程总览.md` as its assembled continuous reading path. The original classroom notes remain separate, permanent course records; the overview may transclude or bridge them but never replaces them. Assessment, exercise, presentation, and source-context files likewise remain separate when they serve their distinct course role.
+- Do not auto-link every occurrence of a term. Add a wikilink only where opening the target helps at that exact reading point; repeated terms, mathematical symbols, formula fragments, code identifiers, and OCR noise are not navigation. When a former card becomes a heading inside a broader knowledge file, retarget the useful occurrence to `[[Knowledge file#Heading|existing display text]]` and remove meaningless generated link markup without changing the visible source text.
 - Course materials are the center of course reconstruction. If they are incomplete or poor, authoritative external sources may be used because the objective is mastery, not merely reproducing one lecturer's material.
+
+### Bilingual preservation
+
+- Course notes and knowledge files are Chinese-first bilingual notes. Preserve every existing Chinese passage verbatim, including every English term already embedded in it; do not delete, paraphrase, reorder, or translate away any part of the Chinese source text while adding English.
+- Immediately after each Chinese semantic block, add an idiomatic English translation that communicates the same meaning rather than following Chinese word order mechanically. Translate headings by adding an English subtitle below the unchanged Chinese heading so existing heading links remain valid.
+- The English block must render as English-only prose in Obsidian reading view. When a wikilink target or local source filename is Chinese, retain the target but add an idiomatic English display label, for example `[[中文目标|English label]]`; a grammatically English sentence that visibly exposes a Chinese target name is not complete.
+- Leave YAML, code, standalone formulas, block IDs, link targets, and embeds structurally unchanged. Translate visible prose around them and preserve technical notation in the English version.
+- Delimit every inserted English block with `<!-- bilingual-en:start -->` and `<!-- bilingual-en:end -->`. These comments are hidden in reading view and make it possible to remove all English additions mechanically and verify that the original Chinese layer remains byte-for-byte intact.
+- Keep bilingual preservation and link migration as two auditable operations. Adding English must be byte-for-byte reversible. A later link migration may change only wikilink targets, headings, aliases, or meaningless generated link markup when necessary, but it must preserve the rendered Chinese display text and be verified separately; it is not permission to rewrite course prose.
 
 ### Sources and `source-checked`
 
@@ -87,6 +101,17 @@
 - A knowledge file may be used by multiple courses and fields. Express these many-to-many relationships through Course Atlases, Hubs, heading/block links, and backlinks rather than a single folder location.
 - Keep each Course Atlas in its own course directory beside the corresponding course notes, for example `01_Math/05_随机过程/随机过程 Course Atlas.canvas`.
 - Keep cross-course Hubs in `00_Knowledge/_hubs/`. Create only the few Hubs justified by an already dense cluster.
+- Give every course directory its own `00_inbox/` for recordings, transcripts, handwriting exports, screenshots, and other raw inputs awaiting processing.
+- Course-local directories named `00_inbox/` are ephemeral and ignored by Git. Never use a course-local Inbox as durable storage or cite it as the permanent location of a source.
+- Root `00_inbox/` is the explicit exception: it is a durable, user-owned working area. Reading it may inform a task, but migration or course processing must not clear, reorganize, move, or delete its contents. Deleting any file there requires explicit, file-specific user authorization.
+
+### Ongoing course-processing workflow
+
+- The user places raw material in the corresponding course's `00_inbox/` and asks Codex to process that course or class session.
+- Codex reads the Course Atlas and existing course/knowledge files, processes every Inbox item, updates or creates the minimum necessary knowledge files, runs the source-based verification pass, assembles the continuous course note with transclusions, updates the Course Atlas, and verifies links and rendered continuity.
+- Keep durable authoritative material such as a syllabus, slide deck, assigned reading, or problem set only when it is needed for future traceability. Move it out of `00_inbox/` into the course directory before cleanup.
+- Treat recordings, generated transcripts, temporary exports, and processing intermediates as disposable. Delete them promptly only after confirming that their usable content has been incorporated, the resulting notes were written successfully, and any source needed for future verification has been preserved outside the Inbox.
+- After processing, that course-local `00_inbox/` must be empty. This cleanup rule never applies to root `00_inbox/`. Briefly report what was retained, moved, and deleted, including whether deletion is recoverable.
 
 ### Visual knowledge maps
 
@@ -94,25 +119,6 @@
 - A major map node must be understandable to a learner who has mostly forgotten the material. Include: what it is in plain language, a concrete example or anchor, why it matters, how it connects to prior knowledge, what the block contains, and brief sources.
 - Do not label connections only as `前置`, `相关`, or similar generic words. Use a small explanatory bridge node stating the actual relation in one or two sentences. If the relation cannot be explained, do not draw it.
 - Tasks remain in Workbench/daily notes. The Course Atlas shows only learning position and the next entry point.
-
-### Decisions still open
-
-- Complete the physical migration once, after the remaining conventions are confirmed; do not perform piecemeal moves meanwhile.
-
-### One-time migration workflow
-
-- Inventory the defined migration scope before rewriting individual knowledge files. Do not begin from the existing note boundaries, because they may encode duplicates, artificial fragments, or missing cross-course relationships.
-- Primary scope: `01_Math/`, `02_Economy/`, and `03_Computer_Science/`, including course notes and course materials stored inside those directories.
-- Supporting scope: `04_Fragments/`, `05_tools/`, `06_paper/`, and `00_inbox/`. Preserve their existing roles and extract only genuinely reusable academic knowledge when relevant.
-- Inspect the current AI-generated knowledge area only to discover existing names, links, duplication, and candidate content. It is not an evidentiary source.
-- Explicitly exclude `07_Programme/`, `98_attachment/`, and `99_学习情况记录/` from this migration. Do not scan, reorganize, mine, or infer knowledge gaps from them.
-- The idea of detecting repeated learning difficulties from future learning records is outside the current migration; current records do not support it.
-- The inventory is a temporary migration artifact, not a permanent Obsidian note layer. Remove it after migration verification succeeds.
-- For each candidate knowledge point, record where it appears, its actual use contexts, synonymous names, source quality, and the proposed destination: an existing-file heading, a new knowledge file, or a rare Hub.
-- Use the inventory to deduplicate synonyms, decide merge/split boundaries, identify shared cross-course knowledge, and derive each course's logical backbone.
-- Then execute in order: finalize file boundaries and names → construct knowledge files → run source-based verification → build Course Atlases → replace links and verify backlinks/embeds → switch to the new physical structure once.
-- Do not preserve temporary inventory tables or parallel permanent versions after the cutover.
-- Verify every course-note transclusion in Obsidian reading view, including heading/block targets, continuity around embeds, and absence of circular embeds.
 
 ## Coding Style & Naming Conventions
 - Markdown notes:

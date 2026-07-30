@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `05 RAG与知识增强`，第一版用于连接 RAG 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Retrieval-Augmented Generation]]
+[[RAG 与长上下文]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/DSIB7XUM)

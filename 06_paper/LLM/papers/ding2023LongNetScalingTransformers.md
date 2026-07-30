@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `06 长上下文与效率`，第一版用于连接 Long Context, Scaling Law, Transformer 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Long Context LLMs]], [[Scaling Law]], [[Transformer Paradigm]]
+[[RAG 与长上下文]], [[规模化、MoE 与分布式训练]], [[Transformer 与注意力机制]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/LC4BBFVG)

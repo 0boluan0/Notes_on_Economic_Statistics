@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `09 开源模型技术报告`，第一版用于连接 Open Models, Efficiency / MoE 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Open Model Ecosystem]], [[LLM Efficiency Engineering]]
+[[开放模型生态]], [[LLM 推理效率]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/3NEADV7D)

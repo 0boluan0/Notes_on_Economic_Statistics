@@ -1,0 +1,399 @@
+{
+  "nodes": [
+    {
+      "id": "1ae0c10c404baaf5",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 650,
+      "height": 240,
+      "text": "# 金融机构与风险管理\n\n从风险因子和敏感度出发，进入利率与波动依赖、损失分布、监管资本、信用与对手方风险。\n\n**当前学习位置：** 尚未记录。\n\n**下一入口：** [[市场风险、希腊字母与情景分析]]",
+      "color": "4"
+    },
+    {
+      "id": "63153b6e4944f215",
+      "type": "file",
+      "x": 700,
+      "y": 0,
+      "width": 360,
+      "height": 240,
+      "file": "02_Economy/07_金融机构与风险管理/00_课程总览.md",
+      "color": "4"
+    },
+    {
+      "id": "cfa22421469f7f84",
+      "type": "file",
+      "x": 0,
+      "y": 360,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/市场风险、希腊字母与情景分析.md"
+    },
+    {
+      "id": "65cb77338f317dfa",
+      "type": "text",
+      "x": 470,
+      "y": 360,
+      "width": 590,
+      "height": 320,
+      "text": "## 市场风险、希腊字母与情景分析\n\n**它解决什么：** 把组合价值对市场因子的小幅变化和大幅情景变化分开度量，并据此对冲或设置限额。\n**具体锚点：** 期权 Delta 为 0.5 只近似说明标的小涨 1 时价值涨 0.5；若标的大动，Gamma 和波动率变化会让线性近似失真。\n**核心难点：** Greeks 是局部敏感度且彼此随市场变化；风险中性定价参数和真实世界损益分布服务不同问题。\n**为什么重要：** 交易敞口、对冲、VaR 和压力测试都从因子—价值映射开始。\n**继续：** 小变动用 Delta/Gamma，大变动用全重估情景；聚合尾部见 [[VaR、ES、回测与压力测试]]。\n\n**简要依据：** 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。"
+    },
+    {
+      "id": "958f0b2af4107ad0",
+      "type": "file",
+      "x": 0,
+      "y": 920,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/利率风险与久期管理.md"
+    },
+    {
+      "id": "aa575b58e653f80c",
+      "type": "text",
+      "x": 470,
+      "y": 920,
+      "width": 590,
+      "height": 320,
+      "text": "## 利率风险与久期管理\n\n**它解决什么：** 衡量利率曲线变化怎样改变债券和银行资产负债价值/净利息收入，并设计对冲。\n**具体锚点：** 长久期固定利率资产配短期存款时，加息会压低资产经济价值且资金成本更快上升。\n**核心难点：** 久期是局部平行移位敏感度；曲线扭曲、期权、基差和存款行为需要 key-rate 或情景模型。\n**为什么重要：** 单看到期期限无法描述现金流时点和非线性利率风险。\n**继续：** 先区分重定价缺口与经济价值，再掌握 Macaulay、modified、DV01、convexity 和 duration gap。\n\n**简要依据：** 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。"
+    },
+    {
+      "id": "f1ff49e50cbf24ab",
+      "type": "text",
+      "x": 170,
+      "y": 740,
+      "width": 720,
+      "height": 120,
+      "text": "市场风险先把价格变动映射为损益；久期专门处理利率曲线变化对固定收益和资产负债的影响。",
+      "color": "3"
+    },
+    {
+      "id": "2502153a1a8cfa51",
+      "type": "file",
+      "x": 0,
+      "y": 1480,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/波动率、相关性与 Copula.md"
+    },
+    {
+      "id": "25a1dded676798b9",
+      "type": "text",
+      "x": 470,
+      "y": 1480,
+      "width": 590,
+      "height": 320,
+      "text": "## 波动率、相关性与 Copula\n\n**它解决什么：** 描述单个风险因子的时变波动、多资产共同变化及尾部依赖，而不把线性相关当完整联合分布。\n**具体锚点：** 两资产平时相关很低，危机时却同时大跌；一个常数相关系数会低估联合尾部损失。\n**核心难点：** 不相关不等于独立；Pearson 相关对线性和异常值敏感，Copula 分离边际与依赖但仍有模型选择风险。\n**为什么重要：** 组合 VaR、信用组合、对冲和压力测试的结果常被依赖假设主导。\n**继续：** 时间波动见 [[条件异方差：ARCH 与 GARCH]]；尾部损失见 [[历史模拟、蒙特卡罗与极值理论]]。\n\n**简要依据：** 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。"
+    },
+    {
+      "id": "6e101007e4de0483",
+      "type": "text",
+      "x": 170,
+      "y": 1300,
+      "width": 720,
+      "height": 120,
+      "text": "单个利率敏感度不足以描述风险随时间变化和多资产共同尾部，因此进入波动率、相关和 Copula。",
+      "color": "3"
+    },
+    {
+      "id": "d414ece7c419eaf7",
+      "type": "file",
+      "x": 0,
+      "y": 2040,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/VaR、ES、回测与压力测试.md"
+    },
+    {
+      "id": "d16f325153c5e168",
+      "type": "text",
+      "x": 470,
+      "y": 2040,
+      "width": 590,
+      "height": 320,
+      "text": "## VaR、ES、回测与压力测试\n\n**它解决什么：** VaR 给定期限和置信水平的损失分位点，ES 给超过该分位后平均损失；回测和压力测试检查模型在历史与极端情景中的表现。\n**具体锚点：** 一日 99% VaR 为 100 万表示模型下约 1% 日损失超过 100 万，不表示“最多亏 100 万”。\n**核心难点：** VaR 不描述分位点以外损失多大且一般不次可加；ES 看尾部但估计更噪。二者都依赖数据、持有期和模型。\n**为什么重要：** 风险限额、资本和沟通需要统一口径，但单一数字不能替代情景与流动性判断。\n**继续：** 先固定损失符号、期限和置信度，再选择方法并回测；尾部建模见 [[历史模拟、蒙特卡罗与极值理论]]。\n\n**简要依据：** 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。"
+    },
+    {
+      "id": "46425cdccc031c8a",
+      "type": "text",
+      "x": 170,
+      "y": 1860,
+      "width": 720,
+      "height": 120,
+      "text": "有了边际与依赖模型，VaR 和 ES 才能把组合损失分布压缩为可回测的风险度量。",
+      "color": "3"
+    },
+    {
+      "id": "d49549c7ea83e2bc",
+      "type": "file",
+      "x": 0,
+      "y": 2600,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/历史模拟、蒙特卡罗与极值理论.md"
+    },
+    {
+      "id": "892a8ca0531d6e89",
+      "type": "text",
+      "x": 470,
+      "y": 2600,
+      "width": 590,
+      "height": 320,
+      "text": "## 历史模拟、蒙特卡罗与极值理论\n\n**它解决什么：** 用历史重放、参数化随机生成和专门尾部模型得到组合损失分布，并处理非线性头寸。\n**具体锚点：** 对期权组合，简单方差—协方差法可能漏掉曲率；历史/Monte Carlo 对每个因子情景全重估可保留非线性。\n**核心难点：** 历史模拟受窗口限制，Monte Carlo 受模型限制，EVT 受阈值和尾部样本限制；没有无假设方法。\n**为什么重要：** 方法选择应由头寸非线性、数据量、尾部目标和计算预算共同决定。\n**继续：** 先画风险因子—价值映射，再比较三种方法并做回测/压力。\n\n**简要依据：** 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。"
+    },
+    {
+      "id": "2c8171d1da0f717f",
+      "type": "text",
+      "x": 170,
+      "y": 2420,
+      "width": 720,
+      "height": 120,
+      "text": "风险度量给出目标；历史模拟、Monte Carlo 和 EVT 是构造完整或尾部损失分布的不同计算路线。",
+      "color": "3"
+    },
+    {
+      "id": "9aecedea106ced60",
+      "type": "file",
+      "x": 0,
+      "y": 3160,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/巴塞尔资本监管与 OTC 清算.md"
+    },
+    {
+      "id": "58d60ec39fc22b77",
+      "type": "text",
+      "x": 470,
+      "y": 3160,
+      "width": 590,
+      "height": 320,
+      "text": "## 巴塞尔资本监管与 OTC 清算\n\n**它解决什么：** 规定银行用多少资本和流动性吸收信用、市场、操作和对手风险，并通过清算、保证金和披露降低系统外部性。\n**具体锚点：** 风险加权资本率高不等于现金很多；资本吸收损失，流动性资产应付现金流，二者是不同防线。\n**核心难点：** 监管比率依赖风险权重和模型；最低合规不是实际风险充分，对手风险也会迁移到 CCP。\n**为什么重要：** 2008 后改革不仅提高资本，还加入杠杆、流动性、缓冲、处置和衍生品基础设施。\n**继续：** 用当前 Basel Framework 核对口径，不背过时数字；信用/CVA 见对应知识文件。\n\n**简要依据：** 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。"
+    },
+    {
+      "id": "2e4e54d6ebd76ece",
+      "type": "text",
+      "x": 170,
+      "y": 2980,
+      "width": 720,
+      "height": 120,
+      "text": "内部度量要进入机构治理与资本要求，因此接着理解 Basel、交易账簿和 OTC 清算规则。",
+      "color": "3"
+    },
+    {
+      "id": "d1471457efe4547a",
+      "type": "file",
+      "x": 0,
+      "y": 3720,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/信用风险、CDS 与信用 VaR.md"
+    },
+    {
+      "id": "79e74c045f969491",
+      "type": "text",
+      "x": 470,
+      "y": 3720,
+      "width": 590,
+      "height": 320,
+      "text": "## 信用风险、CDS 与信用 VaR\n\n**它解决什么：** 把借款人不履约的可能性、违约时损失和组合共同违约转成定价、限额和资本指标。\n**具体锚点：** 两笔预期损失相同的贷款，若其中一笔违约与经济衰退高度相关，它的意外损失和资本需求可能更高。\n**核心难点：** 预期损失 $PD\\times LGD\\times EAD$ 与尾部意外损失不同；评级、市场利差和真实违约概率也不是同一口径。\n**为什么重要：** 信贷定价、拨备、组合集中、CDS 和银行资本都依赖这些区分。\n**继续：** 先分解 PD/LGD/EAD，再看迁移、相关和组合模型；对手方随市场变化的敞口另见 [[对手方信用风险、CVA 与 DVA]]。\n\n**简要依据：** 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。"
+    },
+    {
+      "id": "0b88d9ede7f864d2",
+      "type": "text",
+      "x": 170,
+      "y": 3540,
+      "width": 720,
+      "height": 120,
+      "text": "监管资本覆盖多类风险；信用风险模型专门刻画违约概率、回收率、相关性和信用损失分布。",
+      "color": "3"
+    },
+    {
+      "id": "ea473a7c0ae70aff",
+      "type": "file",
+      "x": 0,
+      "y": 4280,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/对手方信用风险、CVA 与 DVA.md"
+    },
+    {
+      "id": "fc7794c20c8784da",
+      "type": "text",
+      "x": 470,
+      "y": 4280,
+      "width": 590,
+      "height": 320,
+      "text": "## 对手方信用风险、CVA 与 DVA\n\n**它解决什么：** 衍生品未来市值会随市场变化，交易对手又可能在不利时违约；本主题把动态敞口与违约共同定价和管理。\n**具体锚点：** 利率互换今天价值为零不等于无信用敞口，未来利率变化可能使其对我方大幅为正，恰逢对手违约就有损失。\n**核心难点：** 敞口、PD、LGD 和市场因子可能相关；净额、抵押品和 margin period of risk 必须按法律集合建模。\n**为什么重要：** CVA 把对手信用成本纳入公允价值，资本和限额还需覆盖其波动与尾部。\n**继续：** 先建 exposure profile，再加入 default 与 recovery；监管口径见 [[巴塞尔资本监管与 OTC 清算]]。\n\n**简要依据：** 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。"
+    },
+    {
+      "id": "ae8c1dc4b37fa514",
+      "type": "text",
+      "x": 170,
+      "y": 4100,
+      "width": 720,
+      "height": 120,
+      "text": "一般信用风险进入衍生品后，暴露随市场变化且双方都可能违约，于是需要 CVA、DVA 和对手方框架。",
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "bc926b5f019c0645",
+      "fromNode": "1ae0c10c404baaf5",
+      "toNode": "63153b6e4944f215"
+    },
+    {
+      "id": "50b9b00404a3f9b7",
+      "fromNode": "cfa22421469f7f84",
+      "fromSide": "right",
+      "toNode": "65cb77338f317dfa",
+      "toSide": "left"
+    },
+    {
+      "id": "3a1abfcd2fee9ef6",
+      "fromNode": "958f0b2af4107ad0",
+      "fromSide": "right",
+      "toNode": "aa575b58e653f80c",
+      "toSide": "left"
+    },
+    {
+      "id": "6c653a04f974e23b",
+      "fromNode": "cfa22421469f7f84",
+      "fromSide": "bottom",
+      "toNode": "f1ff49e50cbf24ab",
+      "toSide": "top"
+    },
+    {
+      "id": "944968382b511ad6",
+      "fromNode": "f1ff49e50cbf24ab",
+      "fromSide": "bottom",
+      "toNode": "958f0b2af4107ad0",
+      "toSide": "top"
+    },
+    {
+      "id": "b0e3f7d055672308",
+      "fromNode": "2502153a1a8cfa51",
+      "fromSide": "right",
+      "toNode": "25a1dded676798b9",
+      "toSide": "left"
+    },
+    {
+      "id": "c4a690d8e469d32e",
+      "fromNode": "958f0b2af4107ad0",
+      "fromSide": "bottom",
+      "toNode": "6e101007e4de0483",
+      "toSide": "top"
+    },
+    {
+      "id": "df4d12a2ff7eae03",
+      "fromNode": "6e101007e4de0483",
+      "fromSide": "bottom",
+      "toNode": "2502153a1a8cfa51",
+      "toSide": "top"
+    },
+    {
+      "id": "e75a309b1fca2c85",
+      "fromNode": "d414ece7c419eaf7",
+      "fromSide": "right",
+      "toNode": "d16f325153c5e168",
+      "toSide": "left"
+    },
+    {
+      "id": "1cbcafb179a8fbe6",
+      "fromNode": "2502153a1a8cfa51",
+      "fromSide": "bottom",
+      "toNode": "46425cdccc031c8a",
+      "toSide": "top"
+    },
+    {
+      "id": "863ae5374bb2394c",
+      "fromNode": "46425cdccc031c8a",
+      "fromSide": "bottom",
+      "toNode": "d414ece7c419eaf7",
+      "toSide": "top"
+    },
+    {
+      "id": "ea8cc3a6379792cb",
+      "fromNode": "d49549c7ea83e2bc",
+      "fromSide": "right",
+      "toNode": "892a8ca0531d6e89",
+      "toSide": "left"
+    },
+    {
+      "id": "45ebdb0a3d67afee",
+      "fromNode": "d414ece7c419eaf7",
+      "fromSide": "bottom",
+      "toNode": "2c8171d1da0f717f",
+      "toSide": "top"
+    },
+    {
+      "id": "f29527c808cb2517",
+      "fromNode": "2c8171d1da0f717f",
+      "fromSide": "bottom",
+      "toNode": "d49549c7ea83e2bc",
+      "toSide": "top"
+    },
+    {
+      "id": "8d7741bfc266d59a",
+      "fromNode": "9aecedea106ced60",
+      "fromSide": "right",
+      "toNode": "58d60ec39fc22b77",
+      "toSide": "left"
+    },
+    {
+      "id": "ce8d1f5623ddfe43",
+      "fromNode": "d49549c7ea83e2bc",
+      "fromSide": "bottom",
+      "toNode": "2e4e54d6ebd76ece",
+      "toSide": "top"
+    },
+    {
+      "id": "d440068242df753e",
+      "fromNode": "2e4e54d6ebd76ece",
+      "fromSide": "bottom",
+      "toNode": "9aecedea106ced60",
+      "toSide": "top"
+    },
+    {
+      "id": "42e4e7566cc57e15",
+      "fromNode": "d1471457efe4547a",
+      "fromSide": "right",
+      "toNode": "79e74c045f969491",
+      "toSide": "left"
+    },
+    {
+      "id": "a2074d9a72440bbc",
+      "fromNode": "9aecedea106ced60",
+      "fromSide": "bottom",
+      "toNode": "0b88d9ede7f864d2",
+      "toSide": "top"
+    },
+    {
+      "id": "2db4f8f3718e0c40",
+      "fromNode": "0b88d9ede7f864d2",
+      "fromSide": "bottom",
+      "toNode": "d1471457efe4547a",
+      "toSide": "top"
+    },
+    {
+      "id": "3c189bf41c213e81",
+      "fromNode": "ea473a7c0ae70aff",
+      "fromSide": "right",
+      "toNode": "fc7794c20c8784da",
+      "toSide": "left"
+    },
+    {
+      "id": "a95985b63078b822",
+      "fromNode": "d1471457efe4547a",
+      "fromSide": "bottom",
+      "toNode": "ae8c1dc4b37fa514",
+      "toSide": "top"
+    },
+    {
+      "id": "02039b6f4f17bb4a",
+      "fromNode": "ae8c1dc4b37fa514",
+      "fromSide": "bottom",
+      "toNode": "ea473a7c0ae70aff",
+      "toSide": "top"
+    }
+  ]
+}

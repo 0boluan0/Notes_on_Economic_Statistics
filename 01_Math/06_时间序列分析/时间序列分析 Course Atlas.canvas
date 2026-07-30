@@ -1,0 +1,301 @@
+{
+  "nodes": [
+    {
+      "id": "37cbb20b1e07f299",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 650,
+      "height": 240,
+      "text": "# 时间序列分析\n\n先描述动态依赖，再分别处理均值、波动、多变量反馈、趋势和长期均衡。\n\n**当前学习位置：** 尚未记录。\n\n**下一入口：** [[差分方程与滞后算子]]",
+      "color": "4"
+    },
+    {
+      "id": "23717485026f8dab",
+      "type": "file",
+      "x": 700,
+      "y": 0,
+      "width": 360,
+      "height": 240,
+      "file": "01_Math/06_时间序列分析/00_课程总览.md",
+      "color": "4"
+    },
+    {
+      "id": "e8841baed221a15b",
+      "type": "file",
+      "x": 0,
+      "y": 360,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/差分方程与滞后算子.md"
+    },
+    {
+      "id": "8e928720862f8ab8",
+      "type": "text",
+      "x": 470,
+      "y": 360,
+      "width": 590,
+      "height": 320,
+      "text": "## 差分方程与滞后算子\n\n**它解决什么：** 把“今天由过去怎样生成”写成递推关系，并判断冲击会衰减、持续还是爆炸。\n**具体锚点：** 蛛网模型中本期供给由上期价格决定，价格偏离均衡后的路径由一个一阶差分方程控制。\n**核心难点：** 通解由齐次解和特解组成；稳定性由特征根决定，而不是看到序列暂时下降就断言稳定。\n**为什么重要：** ARMA、VAR、动态经济模型和数值算法都用同一递推骨架。\n**继续：** 有随机扰动时进入 [[平稳时间序列、相关结构与 ARMA]]；多变量动态进入 [[动态回归、VAR、脉冲响应与 Granger 因果]]。\n\n**简要依据：** [[01_Math/06_时间序列分析/lecture.pdf]] 与 [[01_Math/06_时间序列分析/lecture-dual.pdf]]：支持课程范围、记号、模型、检验与例题。"
+    },
+    {
+      "id": "8512e444dfa5913e",
+      "type": "file",
+      "x": 0,
+      "y": 920,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/平稳时间序列、相关结构与 ARMA.md"
+    },
+    {
+      "id": "ccc579f89fb0fe96",
+      "type": "text",
+      "x": 470,
+      "y": 920,
+      "width": 590,
+      "height": 320,
+      "text": "## 平稳时间序列、相关结构与 ARMA\n\n**它解决什么：** 用有限参数描述均值回归序列的动态依赖，并从 ACF/PACF、残差和预测表现判断模型是否够用。\n**具体锚点：** AR(1) $y_t=\\phi y_{t-1}+\\varepsilon_t$ 在 $|\\phi|<1$ 时冲击按 $\\phi^h$ 衰减，相关性也呈几何下降。\n**核心难点：** 平稳性、因果性和可逆性是关于表示能否稳定展开的不同条件；样本 ACF 只是有误差的线索。\n**为什么重要：** 它是时序预测、动态回归和更复杂波动/多变量模型的基线。\n**继续：** 均值结构合格但波动聚集时进入 [[条件异方差：ARCH 与 GARCH]]；趋势明显时先看 [[趋势、单位根与差分]]。\n\n**简要依据：** [[01_Math/06_时间序列分析/lecture.pdf]] 与 [[01_Math/06_时间序列分析/lecture-dual.pdf]]：支持课程范围、记号、模型、检验与例题。"
+    },
+    {
+      "id": "8db9f2d3b5b928b8",
+      "type": "text",
+      "x": 170,
+      "y": 740,
+      "width": 720,
+      "height": 120,
+      "text": "差分方程和滞后算子给出动态模型的代数；ARMA 用随机冲击把它变成可估计的平稳序列模型。",
+      "color": "3"
+    },
+    {
+      "id": "6445631f72d75930",
+      "type": "file",
+      "x": 0,
+      "y": 1480,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/条件异方差：ARCH 与 GARCH.md"
+    },
+    {
+      "id": "df96fe0c3f004bd9",
+      "type": "text",
+      "x": 470,
+      "y": 1480,
+      "width": 590,
+      "height": 320,
+      "text": "## 条件异方差：ARCH 与 GARCH\n\n**它解决什么：** 当收益均值难预测但大波动成群出现时，直接建模条件方差如何随过去信息变化。\n**具体锚点：** 金融收益可能几乎无自相关，但平方收益显著相关；这说明方向不可预测不等于风险恒定。\n**核心难点：** 条件方差必须非负且参数要满足稳定条件；标准化残差而非原残差用于检验剩余波动结构。\n**为什么重要：** 风险预测、VaR、期权与资产配置依赖随时间变化的波动率。\n**继续：** 先建好均值方程，再做 ARCH-LM；风险度量见 [[波动率、相关性与 Copula]] 和 [[VaR、ES、回测与压力测试]]。\n\n**简要依据：** [[01_Math/06_时间序列分析/lecture.pdf]] 与 [[01_Math/06_时间序列分析/lecture-dual.pdf]]：支持课程范围、记号、模型、检验与例题。"
+    },
+    {
+      "id": "3d5c4975cc643cd5",
+      "type": "text",
+      "x": 170,
+      "y": 1300,
+      "width": 720,
+      "height": 120,
+      "text": "ARMA 主要解释条件均值和线性相关；当残差方向难预测但幅度成群时，要单独建模条件方差。",
+      "color": "3"
+    },
+    {
+      "id": "f358d4da2b04ccc8",
+      "type": "file",
+      "x": 0,
+      "y": 2040,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/动态回归、VAR、脉冲响应与 Granger 因果.md"
+    },
+    {
+      "id": "d7e87f576e159085",
+      "type": "text",
+      "x": 470,
+      "y": 2040,
+      "width": 590,
+      "height": 320,
+      "text": "## 动态回归、VAR、脉冲响应与 Granger 因果\n\n**它解决什么：** 描述多个时间序列彼此滞后影响，并把一次冲击如何在系统中传播分解出来。\n**具体锚点：** 利率、通胀和产出相互影响；单方程很难预先指定谁完全外生，VAR 让每个变量都由系统过去共同解释。\n**核心难点：** reduced-form 残差通常同期相关，未经识别的“冲击”没有结构经济含义；Granger 因果只是增量预测关系。\n**为什么重要：** 它连接政策动态、预测、干预分析和结构识别。\n**继续：** 先确保平稳/协整处理，再解释 IRF；长期关系见 [[协整与误差修正模型]]。\n\n**简要依据：** [[01_Math/06_时间序列分析/lecture.pdf]] 与 [[01_Math/06_时间序列分析/lecture-dual.pdf]]：支持课程范围、记号、模型、检验与例题。"
+    },
+    {
+      "id": "58f1fc77de3cc9ca",
+      "type": "text",
+      "x": 170,
+      "y": 1860,
+      "width": 720,
+      "height": 120,
+      "text": "单变量模型忽略变量间反馈；动态回归和 VAR 把多条序列放入同一系统并分析冲击传播。",
+      "color": "3"
+    },
+    {
+      "id": "f39bc205e183d0e6",
+      "type": "file",
+      "x": 0,
+      "y": 2600,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/趋势、单位根与差分.md"
+    },
+    {
+      "id": "1ed49f9f7c98990f",
+      "type": "text",
+      "x": 470,
+      "y": 2600,
+      "width": 590,
+      "height": 320,
+      "text": "## 趋势、单位根与差分\n\n**它解决什么：** 区分可预测的确定性趋势与会永久累积冲击的随机趋势，从而避免伪回归和错误预测区间。\n**具体锚点：** 随机游走今天的一次冲击永久改变以后水平；围绕直线趋势波动的序列则会回到那条趋势。\n**核心难点：** ADF 的原假设是单位根，KPSS 的原假设是平稳；“未拒绝”不等于证明原假设为真。\n**为什么重要：** 去趋势、差分、协整和长期解释的选择都取决于这一判断。\n**继续：** 若多个 I(1) 序列可能共同移动，转到 [[协整与误差修正模型]]。\n\n**简要依据：** [[01_Math/06_时间序列分析/lecture.pdf]] 与 [[01_Math/06_时间序列分析/lecture-dual.pdf]]：支持课程范围、记号、模型、检验与例题。"
+    },
+    {
+      "id": "a92f624209d276a1",
+      "type": "text",
+      "x": 170,
+      "y": 2420,
+      "width": 720,
+      "height": 120,
+      "text": "这些模型先假定稳定依赖；趋势和单位根解释为何水平序列可能不平稳及何时需要差分。",
+      "color": "3"
+    },
+    {
+      "id": "170d5b41db21016a",
+      "type": "file",
+      "x": 0,
+      "y": 3160,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/协整与误差修正模型.md"
+    },
+    {
+      "id": "ce2a25604db9e1d6",
+      "type": "text",
+      "x": 470,
+      "y": 3160,
+      "width": 590,
+      "height": 320,
+      "text": "## 协整与误差修正模型\n\n**它解决什么：** 当多个非平稳序列各自漂移，却被某个稳定长期关系约束时，同时保留长期均衡和短期调整。\n**具体锚点：** 两个价格水平都像随机游走，但价差长期围绕常数波动；它们不是普通相关，而是共同趋势被稳定组合抵消。\n**核心难点：** 协整是变量组合的性质，不能由高相关或每条序列都是 I(1) 推出；误差修正系数要与协整向量的符号一起解释。\n**为什么重要：** 它避免对水平做伪回归，也避免只差分而丢掉长期信息。\n**继续：** 两变量先学 Engle–Granger，再进多变量 Johansen/VECM；因果措辞另需识别。\n\n**简要依据：** [[01_Math/06_时间序列分析/lecture.pdf]] 与 [[01_Math/06_时间序列分析/lecture-dual.pdf]]：支持课程范围、记号、模型、检验与例题。"
+    },
+    {
+      "id": "cf526efb1dff292d",
+      "type": "text",
+      "x": 170,
+      "y": 2980,
+      "width": 720,
+      "height": 120,
+      "text": "多个非平稳序列各自漂移却可能受长期关系约束；协整和 ECM 同时表示长期均衡与短期修正。",
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "9cdde07dbbc2212b",
+      "fromNode": "37cbb20b1e07f299",
+      "toNode": "23717485026f8dab"
+    },
+    {
+      "id": "efe694cc154745eb",
+      "fromNode": "e8841baed221a15b",
+      "fromSide": "right",
+      "toNode": "8e928720862f8ab8",
+      "toSide": "left"
+    },
+    {
+      "id": "f84ffc897232311f",
+      "fromNode": "8512e444dfa5913e",
+      "fromSide": "right",
+      "toNode": "ccc579f89fb0fe96",
+      "toSide": "left"
+    },
+    {
+      "id": "44b713b51f2227c9",
+      "fromNode": "e8841baed221a15b",
+      "fromSide": "bottom",
+      "toNode": "8db9f2d3b5b928b8",
+      "toSide": "top"
+    },
+    {
+      "id": "5820fd4cf7c1d058",
+      "fromNode": "8db9f2d3b5b928b8",
+      "fromSide": "bottom",
+      "toNode": "8512e444dfa5913e",
+      "toSide": "top"
+    },
+    {
+      "id": "de2be726c3d9843b",
+      "fromNode": "6445631f72d75930",
+      "fromSide": "right",
+      "toNode": "df96fe0c3f004bd9",
+      "toSide": "left"
+    },
+    {
+      "id": "e6ad4a6303189c63",
+      "fromNode": "8512e444dfa5913e",
+      "fromSide": "bottom",
+      "toNode": "3d5c4975cc643cd5",
+      "toSide": "top"
+    },
+    {
+      "id": "2f109495316b8418",
+      "fromNode": "3d5c4975cc643cd5",
+      "fromSide": "bottom",
+      "toNode": "6445631f72d75930",
+      "toSide": "top"
+    },
+    {
+      "id": "95f53eedfffafe03",
+      "fromNode": "f358d4da2b04ccc8",
+      "fromSide": "right",
+      "toNode": "d7e87f576e159085",
+      "toSide": "left"
+    },
+    {
+      "id": "52c0b54f44eea872",
+      "fromNode": "6445631f72d75930",
+      "fromSide": "bottom",
+      "toNode": "58f1fc77de3cc9ca",
+      "toSide": "top"
+    },
+    {
+      "id": "0d684b064a17cfe2",
+      "fromNode": "58f1fc77de3cc9ca",
+      "fromSide": "bottom",
+      "toNode": "f358d4da2b04ccc8",
+      "toSide": "top"
+    },
+    {
+      "id": "fa74d875b0d6fd63",
+      "fromNode": "f39bc205e183d0e6",
+      "fromSide": "right",
+      "toNode": "1ed49f9f7c98990f",
+      "toSide": "left"
+    },
+    {
+      "id": "86ddb8da48a6318d",
+      "fromNode": "f358d4da2b04ccc8",
+      "fromSide": "bottom",
+      "toNode": "a92f624209d276a1",
+      "toSide": "top"
+    },
+    {
+      "id": "8095a5e64624f927",
+      "fromNode": "a92f624209d276a1",
+      "fromSide": "bottom",
+      "toNode": "f39bc205e183d0e6",
+      "toSide": "top"
+    },
+    {
+      "id": "c6414f4919809af5",
+      "fromNode": "170d5b41db21016a",
+      "fromSide": "right",
+      "toNode": "ce2a25604db9e1d6",
+      "toSide": "left"
+    },
+    {
+      "id": "b08474fb50b5f890",
+      "fromNode": "f39bc205e183d0e6",
+      "fromSide": "bottom",
+      "toNode": "cf526efb1dff292d",
+      "toSide": "top"
+    },
+    {
+      "id": "6bd32097d16a74cb",
+      "fromNode": "cf526efb1dff292d",
+      "fromSide": "bottom",
+      "toNode": "170d5b41db21016a",
+      "toSide": "top"
+    }
+  ]
+}

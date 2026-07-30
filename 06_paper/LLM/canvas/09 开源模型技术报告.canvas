@@ -17,7 +17,7 @@
       "y": 0,
       "width": 310,
       "height": 100,
-      "text": "## Open Models\n\n[[Open Model Ecosystem]]",
+      "text": "## Open Models\n\n[[开放模型生态]]",
       "color": "4"
     },
     {
@@ -27,7 +27,7 @@
       "y": 150,
       "width": 310,
       "height": 100,
-      "text": "## Pretraining\n\n[[Pretraining Paradigm]]",
+      "text": "## Pretraining\n\n[[预训练、指令微调与偏好优化]]",
       "color": "5"
     },
     {
@@ -37,7 +37,7 @@
       "y": 300,
       "width": 310,
       "height": 100,
-      "text": "## Transformer\n\n[[Transformer Paradigm]]",
+      "text": "## Transformer\n\n[[Transformer 与注意力机制]]",
       "color": "5"
     },
     {
@@ -47,7 +47,7 @@
       "y": 450,
       "width": 310,
       "height": 100,
-      "text": "## Scaling Law\n\n[[Scaling Law]]",
+      "text": "## Scaling Law\n\n[[规模化、MoE 与分布式训练]]",
       "color": "6"
     },
     {
@@ -57,7 +57,7 @@
       "y": 600,
       "width": 310,
       "height": 100,
-      "text": "## Preference Optimization\n\n[[Preference Optimization]]",
+      "text": "## Preference Optimization\n\n[[预训练、指令微调与偏好优化]]",
       "color": "4"
     },
     {
@@ -67,7 +67,7 @@
       "y": 750,
       "width": 310,
       "height": 100,
-      "text": "## Efficiency / MoE\n\n[[LLM Efficiency Engineering]]",
+      "text": "## Efficiency / MoE\n\n[[LLM 推理效率]]",
       "color": "2"
     },
     {
@@ -77,7 +77,7 @@
       "y": 900,
       "width": 310,
       "height": 100,
-      "text": "## Agent\n\n[[Agentic LLMs]]",
+      "text": "## Agent\n\n[[推理模型与 LLM Agent]]",
       "color": "3"
     },
     {

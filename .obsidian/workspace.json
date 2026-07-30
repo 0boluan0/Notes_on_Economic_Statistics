@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b3385dac95b9634b",
+        "id": "51f624b0a9877cce",
         "type": "tabs",
         "children": [
           {
-            "id": "9b786fab3b1083a3",
+            "id": "d2af4f1396f927b4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/Social Media and Well-Being 中文逐段翻译与 summary.md",
+                "file": "99_学习情况记录/2026-07-30——Thu.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,23 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Social Media and Well-Being 中文逐段翻译与 summary"
-            }
-          },
-          {
-            "id": "71dd041cb5dcdecf",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/PIIS1364661320302515 social media and well being article.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "PIIS1364661320302515 social media and well being article"
+              "title": "2026-07-30——Thu"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -272,8 +259,8 @@
                 }
               },
               "pinned": true,
-              "icon": "lucide-ghost",
-              "title": "terminal:terminal"
+              "icon": "terminal",
+              "title": "Terminal: zsh"
             }
           }
         ],
@@ -290,13 +277,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/PIIS1364661320302515 social media and well being article.pdf",
+                "file": "99_学习情况记录/2026-07-30——Thu.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of PIIS1364661320302515 social media and well being article"
+              "title": "Outline of 2026-07-30——Thu"
             }
           },
           {
@@ -335,62 +322,63 @@
       "graph:Open graph view": false
     }
   },
-  "active": "71dd041cb5dcdecf",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/Social Media and Well-Being 中文逐段翻译与 summary.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/PIIS1364661320302515 social media and well being article.pdf",
-    "02_Economy/01_Econometrics/12_非平稳时间序列.md",
     "01_Math/01_calculus/01_Differentiation.md",
-    "media-lib/index.base",
-    "06_paper/LLM/canvas/01 架构与预训练.canvas",
-    "99_学习情况记录/2026-07-09——Thu.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/Contextualiser - Social Media and Well-Being.md",
-    "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Academic Interaction Roles.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading into Writing.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Academic Interaction.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading_into_Writing_AI_Feedback_Workbook.pdf",
-    "tmp/pdfs/social-media-wellbeing/page4-hi-04.png",
-    "tmp/pdfs/social-media-wellbeing/contact-sheet.jpg",
-    "tmp/pdfs/social-media-wellbeing/page-12.jpg",
-    "tmp/pdfs/social-media-wellbeing/page-11.jpg",
-    "tmp/pdfs/social-media-wellbeing/page-10.jpg",
-    "tmp/pdfs/social-media-wellbeing/page-09.jpg",
-    "tmp/pdfs/social-media-wellbeing/page-08.jpg",
-    "tmp/pdfs/social-media-wellbeing/page-07.jpg",
-    "tmp/pdfs/social-media-wellbeing/page-06.jpg",
-    "tmp/pdfs/social-media-wellbeing/page-05.jpg",
-    "tmp/pdfs/social-media-wellbeing/article.txt",
-    "tmp/pdfs/social-media-wellbeing",
-    "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/Everyday English lesson 2026.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/First Day 2026.pdf",
-    "99_学习情况记录/2026-07-30——Thu.md",
-    "00_factor/00_hub/OLS-hub.canvas",
-    "07_Programme/01_LN905_LSE-language-class/02_Academic-Writing/LN905 Week one materials 2026 - B completed.md",
-    "07_Programme/01_LN905_LSE-language-class/02_Academic-Writing/LN905 Week one materials 2026.md",
-    "07_Programme/01_LN905_LSE-language-class/02_Academic-Writing/LN905 Week one materials 2026 - online blank 2026-07-29.md",
-    "07_Programme/01_LN905_LSE-language-class/02_Academic-Writing/Examples.md",
-    "07_Programme/01_LN905_LSE-language-class/02_Academic-Writing/Session 2 - Simon.md",
-    "07_Programme/01_LN905_LSE-language-class/02_Academic-Writing/Week One Lesson 2.md",
-    "07_Programme/01_LN905_LSE-language-class/02_Academic-Writing/Week One Lesson 3.md",
-    "07_Programme/01_LN905_LSE-language-class/02_Academic-Writing/Week One Lesson 1.md",
-    "07_Programme/01_LN905_LSE-language-class/00_Course-Info/Week-1/Wk1 Group 2.md",
-    "07_Programme/01_LN905_LSE-language-class/02_Academic-Writing/Essay-Question-Rationale/intro/intro.md",
-    "07_Programme/01_LN905_LSE-language-class/00_Course-Info/First Day 2026.md",
-    "07_Programme/01_LN905_LSE-language-class/00_Course-Info/Week-1/Wk1 Group 6.md",
-    "99_学习情况记录/2026-07-29——Wed.md",
-    "02_Economy/01_Econometrics/11_平稳时间序列模型.md",
-    "00_factor/00_hub/Option Greeks-hub.md",
-    "00_factor/00_hub/VaR-hub.md",
-    "00_factor/00_hub/DID-hub.md",
-    "00_factor/00_hub/Econometrics-hub.md",
-    "06_paper/LLM/canvas/03 对齐与偏好优化.canvas",
-    "01_Math/06_时间序列分析/Time Series Course Atlas.canvas",
-    "06_paper/LLM/canvas/02 规模化与模型家族.canvas",
-    "06_paper/LLM/canvas/09 开源模型技术报告.canvas",
-    "06_paper/LLM/canvas/08 多模态.canvas",
-    "06_paper/LLM/canvas/07 评测与数据.canvas",
-    "06_paper/LLM/canvas/06 长上下文与效率.canvas",
-    "06_paper/LLM/canvas/05 RAG与知识增强.canvas"
+    "00_Knowledge/奇异值分解与低秩近似.md",
+    "00_Knowledge/对称矩阵与正定二次型.md",
+    "00_Knowledge/Smith、Ricardo 与古典政治经济学.md",
+    "00_Knowledge/重商主义与重农主义.md",
+    "00_Knowledge/特征值、对角化与线性动力系统.md",
+    "00_Knowledge/行列式.md",
+    "00_Knowledge/发展政策的国家能力、公共投入与评价.md",
+    "00_Knowledge/贸易、产业政策与全球价值链.md",
+    "00_Knowledge/广义逆与最小范数解.md",
+    "00_Knowledge/线性变换与换基.md",
+    "00_Knowledge/内生增长理论.md",
+    "00_Knowledge/Solow 增长模型、稳态与收敛.md",
+    "00_Knowledge/Harrod—Domar 增长模型.md",
+    "00_Knowledge/多元优化：无约束、Lagrange、KKT 与包络.md",
+    "00_Knowledge/多元微分：偏导、梯度、Hessian 与隐函数.md",
+    "00_Knowledge/Todaro 迁移、城市失业与非正规部门.md",
+    "00_Knowledge/Lewis—Fei–Ranis 二元经济模型.md",
+    "00_Knowledge/无穷级数与幂级数.md",
+    "00_Knowledge/反常积分.md",
+    "00_Knowledge/参数曲线与极坐标.md",
+    "00_Knowledge/积分方法.md",
+    "00_Knowledge/人口转型、生育选择与老龄化.md",
+    "00_Knowledge/马尔萨斯陷阱与现代增长转型.md",
+    "00_Knowledge/导数与求导规则.md",
+    "00_Knowledge/极限与连续.md",
+    "tmp/__pycache__/bilingualize_classroom.cpython-312.pyc",
+    "tmp/__pycache__",
+    "tmp/bilingualize_classroom.py",
+    "00_inbox/quickadd记录推进.js",
+    "00_inbox/quickadd任务添加.js",
+    "01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/06_Problem_Sets/Exercise003_Problems.pdf",
+    "01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/06_Problem_Sets/Exercise002_Solutions.pdf",
+    "01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/06_Problem_Sets/Exercise002_Problems.pdf",
+    "01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/06_Problem_Sets/Exercise001_Problems.pdf",
+    "01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/01_Differentiation/Ses01e_lec1ses1ex1_secants.pdf",
+    "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
+    "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",
+    "03_Computer_Science/03_MIT 6.100L/MIT 6.100L Course Atlas.canvas",
+    "03_Computer_Science/02_CS61A/CS61A Course Atlas.canvas",
+    "03_Computer_Science/01_CS50/CS50 Course Atlas.canvas",
+    "02_Economy/10_发展经济学/发展经济学 Course Atlas.canvas",
+    "02_Economy/08_经济预测与决策/经济预测与决策 Course Atlas.canvas",
+    "02_Economy/07_金融机构与风险管理/金融机构与风险管理 Course Atlas.canvas",
+    "02_Economy/06_证券投资学/证券投资学 Course Atlas.canvas",
+    "02_Economy/05_财务管理/财务管理 Course Atlas.canvas",
+    "tmp/source_extracts/development_pages/page-012.jpg",
+    "tmp/source_extracts/development_pages/page-011.jpg",
+    "tmp/source_extracts/development_pages/page-010.jpg",
+    "tmp/source_extracts/development_pages/page-009.jpg",
+    "tmp/source_extracts/development_pages/page-008.jpg",
+    "tmp/source_extracts/development_pages/page-007.jpg",
+    "tmp/source_extracts/development_pages/page-006.jpg",
+    "tmp/source_extracts/development_pages/page-005.jpg",
+    "tmp/source_extracts/development_pages/page-004.jpg",
+    "tmp/source_extracts/development_pages/page-003.jpg"
   ]
 }

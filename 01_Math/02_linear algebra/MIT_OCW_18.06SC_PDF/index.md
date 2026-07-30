@@ -25,7 +25,7 @@ tags:
 | Final review/exam/solutions | 3 | 位于 `01_Exams` |
 | Supplementary transcripts | 2 | 课程介绍与教学访谈 |
 
-课程导航：[[../00_MIT OCW 18.06SC course map|course map]]
+课程导航：[[01_Math/02_linear algebra/00_课程总览|线性代数课程总览]]
 
 ## Unit I
 

@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `06 长上下文与效率`，第一版用于连接 Long Context, Efficiency / MoE 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Long Context LLMs]], [[LLM Efficiency Engineering]]
+[[RAG 与长上下文]], [[LLM 推理效率]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/I8PA6SYI)

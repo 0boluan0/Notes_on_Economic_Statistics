@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `07 评测与数据`，第一版用于连接 Evaluation, Reasoning 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[LLM Evaluation]], [[Reasoning Models]]
+[[LLM 评测]], [[推理模型与 LLM Agent]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/AGI9J887)

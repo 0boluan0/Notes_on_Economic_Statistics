@@ -1,0 +1,301 @@
+{
+  "nodes": [
+    {
+      "id": "c56093c0e099ebba",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 650,
+      "height": 240,
+      "text": "# 多元统计分析\n\n从随机向量和协方差描述多变量，再进入联合分布、推断、回归、降维和分类。\n\n**当前学习位置：** 尚未记录。\n\n**下一入口：** [[多元数据、随机向量与样本协方差]]",
+      "color": "4"
+    },
+    {
+      "id": "b1203fd7bcfad90b",
+      "type": "file",
+      "x": 700,
+      "y": 0,
+      "width": 360,
+      "height": 240,
+      "file": "01_Math/04_多元统计分析/00_课程总览.md",
+      "color": "4"
+    },
+    {
+      "id": "a3fbc99ad2ca2af4",
+      "type": "file",
+      "x": 0,
+      "y": 360,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/多元数据、随机向量与样本协方差.md"
+    },
+    {
+      "id": "52925f437d22ca57",
+      "type": "text",
+      "x": 470,
+      "y": 360,
+      "width": 590,
+      "height": 320,
+      "text": "## 多元数据、随机向量与样本协方差\n\n**它解决什么：** 当每个观察对象同时有多个变量时，用向量和矩阵表达中心、离散、方向与变量间共同变化。\n**具体锚点：** 只看身高和体重的各自方差，无法知道二者是否一起升高；协方差矩阵把这种联动保留下来。\n**核心难点：** 数值大小受单位影响，协方差不等于因果，距离也取决于尺度和相关结构。\n**为什么重要：** 多元正态、回归、PCA、判别和聚类都从均值向量与协方差矩阵出发。\n**继续：** 分布假设见 [[多元正态分布与 Wishart 分布]]；降维见 [[主成分分析与因子分析]]。\n\n**简要依据：** [Penn State STAT 505](https://online.stat.psu.edu/stat505/)：核验多元正态、均值推断、MANOVA、PCA、因子分析、判别与聚类的定义和使用条件。"
+    },
+    {
+      "id": "e8b24c858a1f53ab",
+      "type": "file",
+      "x": 0,
+      "y": 920,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/多元正态分布与 Wishart 分布.md"
+    },
+    {
+      "id": "4fd487f0bf7fce8c",
+      "type": "text",
+      "x": 470,
+      "y": 920,
+      "width": 590,
+      "height": 320,
+      "text": "## 多元正态分布与 Wishart 分布\n\n**它解决什么：** 为多个连续变量提供一个可计算的联合分布，并描述样本协方差在正态抽样下如何波动。\n**具体锚点：** 身高和体重可各自近似正态，但真正的多元模型还要说明椭圆方向和相关性。\n**核心难点：** 每个边际都正态不必推出联合正态；条件分布与独立性结论依赖协方差块结构。\n**为什么重要：** Hotelling $T^2$、MANOVA、判别分析和协方差推断都建立在这里。\n**继续：** 均值检验见 [[多元均值推断与 MANOVA]]；分类见 [[判别分析与聚类]]。\n\n**简要依据：** [Penn State STAT 505](https://online.stat.psu.edu/stat505/)：核验多元正态、均值推断、MANOVA、PCA、因子分析、判别与聚类的定义和使用条件。"
+    },
+    {
+      "id": "70e82d14b14f9c69",
+      "type": "text",
+      "x": 170,
+      "y": 740,
+      "width": 720,
+      "height": 120,
+      "text": "均值向量和协方差只给前两阶描述；多元正态进一步给出可推导边际、条件和抽样分布的联合模型。",
+      "color": "3"
+    },
+    {
+      "id": "f90dcde5ce46e6e9",
+      "type": "file",
+      "x": 0,
+      "y": 1480,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/多元均值推断与 MANOVA.md"
+    },
+    {
+      "id": "bc0c6655a70d31c8",
+      "type": "text",
+      "x": 470,
+      "y": 1480,
+      "width": 590,
+      "height": 320,
+      "text": "## 多元均值推断与 MANOVA\n\n**它解决什么：** 同时比较多个相关结果变量的总体均值，而不是分别做许多单变量检验。\n**具体锚点：** 一个教育项目同时影响数学、阅读和写作成绩；三次 t 检验忽略相关性并扩大总体误报风险。\n**核心难点：** 检验对象是均值向量或其线性对比，统计量依赖组内协方差与样本量；显著后仍需解释差异方向。\n**为什么重要：** 它把“总体是否有多维差异”和“哪些变量/对比驱动差异”分成两个层次。\n**继续：** 先掌握 Hotelling $T^2$，再进入 MANOVA；多个连续响应的建模见 [[多元线性回归]]。\n\n**简要依据：** [Penn State STAT 505](https://online.stat.psu.edu/stat505/)：核验多元正态、均值推断、MANOVA、PCA、因子分析、判别与聚类的定义和使用条件。"
+    },
+    {
+      "id": "2c0483f838c20776",
+      "type": "text",
+      "x": 170,
+      "y": 1300,
+      "width": 720,
+      "height": 120,
+      "text": "有了多元正态和 Wishart 抽样理论，才能构造均值向量的置信区域、Hotelling 检验和 MANOVA。",
+      "color": "3"
+    },
+    {
+      "id": "588164ed35c348da",
+      "type": "file",
+      "x": 0,
+      "y": 2040,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/多元线性回归.md"
+    },
+    {
+      "id": "b8e42fb3b4ac36a6",
+      "type": "text",
+      "x": 470,
+      "y": 2040,
+      "width": 590,
+      "height": 320,
+      "text": "## 多元线性回归\n\n**它解决什么：** 用同一组解释变量同时解释多个连续响应，并利用响应之间的相关结构做联合推断。\n**具体锚点：** 营销投入可能同时影响销量、利润和留存率；分别回归会重复估计同一个设计矩阵，却无法直接检验联合效果。\n**核心难点：** “多元线性回归”这里指多个响应，不等同于一个响应加多个解释变量的 multiple regression。\n**为什么重要：** 它连接普通回归、MANOVA、重复测量和降维响应。\n**继续：** 单响应 OLS 见 [[OLS 线性回归]]；组均值的特殊情形见 [[多元均值推断与 MANOVA]]。\n\n**简要依据：** [Penn State STAT 505](https://online.stat.psu.edu/stat505/)：核验多元正态、均值推断、MANOVA、PCA、因子分析、判别与聚类的定义和使用条件。"
+    },
+    {
+      "id": "46c094c13e90356e",
+      "type": "text",
+      "x": 170,
+      "y": 1860,
+      "width": 720,
+      "height": 120,
+      "text": "均值比较把组别当离散解释变量；多元回归把它推广为多个连续或离散预测变量共同解释多响应。",
+      "color": "3"
+    },
+    {
+      "id": "4c1a8833875f57e1",
+      "type": "file",
+      "x": 0,
+      "y": 2600,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/主成分分析与因子分析.md"
+    },
+    {
+      "id": "023d87b32d90f043",
+      "type": "text",
+      "x": 470,
+      "y": 2600,
+      "width": 590,
+      "height": 320,
+      "text": "## 主成分分析与因子分析\n\n**它解决什么：** PCA 用少数线性组合压缩观测变异；因子分析用少数潜在因子解释变量间共同相关。\n**具体锚点：** 多个考试科目高度相关，PCA 可总结为几个综合分数；因子分析则会问是否存在“语言能力”“数量能力”等潜在来源。\n**核心难点：** 二者都用载荷却回答不同问题；主成分是数据的确定线性组合，因子是带特殊误差的统计模型。\n**为什么重要：** 错把降维当潜变量解释会产生过度命名和错误因果叙事。\n**继续：** 先明确目标是压缩还是潜在结构，再选择协方差/相关矩阵、成分/因子数和验证方式。\n\n**简要依据：** [Penn State STAT 505](https://online.stat.psu.edu/stat505/)：核验多元正态、均值推断、MANOVA、PCA、因子分析、判别与聚类的定义和使用条件。"
+    },
+    {
+      "id": "ea7b6c41f430fed4",
+      "type": "text",
+      "x": 170,
+      "y": 2420,
+      "width": 720,
+      "height": 120,
+      "text": "回归保留预先指定的响应—解释方向；PCA 和因子分析转而从协方差结构中寻找低维表示和潜在结构。",
+      "color": "3"
+    },
+    {
+      "id": "eca85f7c622f272d",
+      "type": "file",
+      "x": 0,
+      "y": 3160,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/判别分析与聚类.md"
+    },
+    {
+      "id": "b44346c9d78a394d",
+      "type": "text",
+      "x": 470,
+      "y": 3160,
+      "width": 590,
+      "height": 320,
+      "text": "## 判别分析与聚类\n\n**它解决什么：** 判别分析在已有标签时预测类别；聚类在没有标签时寻找依指定距离和算法形成的组。\n**具体锚点：** 已知历史客户是否违约时做分类；只有客户特征、想探索群体结构时做聚类。\n**核心难点：** 聚类结果不是数据里唯一“真实”的类别，强烈依赖尺度、距离、链接和簇数；分类评估必须在未参与训练的数据上进行。\n**为什么重要：** 先区分监督与无监督，能避免把探索性分组当作已验证预测。\n**继续：** 分类先读 Bayes/LDA/QDA；聚类先做标准化与距离选择，再比较层次法和 K-means。\n\n**简要依据：** [Penn State STAT 505](https://online.stat.psu.edu/stat505/)：核验多元正态、均值推断、MANOVA、PCA、因子分析、判别与聚类的定义和使用条件。"
+    },
+    {
+      "id": "d71e0b732b3b7248",
+      "type": "text",
+      "x": 170,
+      "y": 2980,
+      "width": 720,
+      "height": 120,
+      "text": "降维先提取结构，判别和聚类再利用距离、密度或中心把观察分到已知或未知的群组。",
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "77ec128b2dfbb163",
+      "fromNode": "c56093c0e099ebba",
+      "toNode": "b1203fd7bcfad90b"
+    },
+    {
+      "id": "acd26ffee86d58f8",
+      "fromNode": "a3fbc99ad2ca2af4",
+      "fromSide": "right",
+      "toNode": "52925f437d22ca57",
+      "toSide": "left"
+    },
+    {
+      "id": "e5ef3465bc27d210",
+      "fromNode": "e8b24c858a1f53ab",
+      "fromSide": "right",
+      "toNode": "4fd487f0bf7fce8c",
+      "toSide": "left"
+    },
+    {
+      "id": "09eb6f4447acc606",
+      "fromNode": "a3fbc99ad2ca2af4",
+      "fromSide": "bottom",
+      "toNode": "70e82d14b14f9c69",
+      "toSide": "top"
+    },
+    {
+      "id": "23a1b4e095e43c11",
+      "fromNode": "70e82d14b14f9c69",
+      "fromSide": "bottom",
+      "toNode": "e8b24c858a1f53ab",
+      "toSide": "top"
+    },
+    {
+      "id": "1227a101a9df09a5",
+      "fromNode": "f90dcde5ce46e6e9",
+      "fromSide": "right",
+      "toNode": "bc0c6655a70d31c8",
+      "toSide": "left"
+    },
+    {
+      "id": "0aa84276c08f69f5",
+      "fromNode": "e8b24c858a1f53ab",
+      "fromSide": "bottom",
+      "toNode": "2c0483f838c20776",
+      "toSide": "top"
+    },
+    {
+      "id": "1756284a15a58a23",
+      "fromNode": "2c0483f838c20776",
+      "fromSide": "bottom",
+      "toNode": "f90dcde5ce46e6e9",
+      "toSide": "top"
+    },
+    {
+      "id": "14fb966d2f5a92f3",
+      "fromNode": "588164ed35c348da",
+      "fromSide": "right",
+      "toNode": "b8e42fb3b4ac36a6",
+      "toSide": "left"
+    },
+    {
+      "id": "a845c3d658802aad",
+      "fromNode": "f90dcde5ce46e6e9",
+      "fromSide": "bottom",
+      "toNode": "46c094c13e90356e",
+      "toSide": "top"
+    },
+    {
+      "id": "b9f58f7bbe28eea3",
+      "fromNode": "46c094c13e90356e",
+      "fromSide": "bottom",
+      "toNode": "588164ed35c348da",
+      "toSide": "top"
+    },
+    {
+      "id": "29d3890589ce26dd",
+      "fromNode": "4c1a8833875f57e1",
+      "fromSide": "right",
+      "toNode": "023d87b32d90f043",
+      "toSide": "left"
+    },
+    {
+      "id": "025dc458695b1792",
+      "fromNode": "588164ed35c348da",
+      "fromSide": "bottom",
+      "toNode": "ea7b6c41f430fed4",
+      "toSide": "top"
+    },
+    {
+      "id": "1c5174fb97c3bf53",
+      "fromNode": "ea7b6c41f430fed4",
+      "fromSide": "bottom",
+      "toNode": "4c1a8833875f57e1",
+      "toSide": "top"
+    },
+    {
+      "id": "8f1093836d2323cf",
+      "fromNode": "eca85f7c622f272d",
+      "fromSide": "right",
+      "toNode": "b44346c9d78a394d",
+      "toSide": "left"
+    },
+    {
+      "id": "9d145fadad1968ab",
+      "fromNode": "4c1a8833875f57e1",
+      "fromSide": "bottom",
+      "toNode": "d71e0b732b3b7248",
+      "toSide": "top"
+    },
+    {
+      "id": "17bf0865db8b5ea4",
+      "fromNode": "d71e0b732b3b7248",
+      "fromSide": "bottom",
+      "toNode": "eca85f7c622f272d",
+      "toSide": "top"
+    }
+  ]
+}

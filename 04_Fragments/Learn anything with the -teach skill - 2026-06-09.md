@@ -155,22 +155,22 @@ skill 还规定了 teaching workspace 的形状，并给出一套 sectional phil
 6. 如果问题需要真实经验，把学习者引向社区或实践场景。
 
 ## 对我的启发
-- 这个视频和我的 Obsidian 工作流很贴：`04_Fragments` 负责保留来源和结构，`00_factor` 负责后续提炼；`/teach` 则说明“学习过程本身”也可以变成本地文件系统里的有状态项目。
+- 这个视频和我的 Obsidian 工作流很贴：`04_Fragments` 负责保留来源和结构，`00_Knowledge` 负责形成可快速恢复的稳定解释；`/teach` 则说明“学习过程本身”也可以变成本地文件系统里的有状态项目。
 - 如果以后为课程学习设计一个 Codex skill，可以借鉴 `mission + resources + lessons + learning records + glossary + notes` 的结构，让它围绕 MIT 18.01、EC400 或论文模型持续教学，而不是每次重新解释。
 - 对 Academic vault 来说，`learning records` 很值得单独设计。现在日记和课程笔记记录了学习内容，但不一定记录“我已经掌握什么、卡在哪里、下一步最近发展区是什么”。
 - 对代码项目 onboarding 来说，`/teach` 比传统 README 更个性化，但必须绑定真实代码证据，否则会产生漂亮但不可靠的课程。适合把 repo 文件、测试、ADR、issue 和已有文档作为 resources。
 - 对 AI skill 设计来说，关键不是让模型“一次答得更好”，而是让它能留下结构化痕迹，下一次用这些痕迹做更准的诊断。
 
 ## 待提炼知识点
-- `concept`：Stateful Skill / 有状态技能
-- `concept`：Stateless Skill / 无状态技能
-- `concept`：Zone of Proximal Development / 最近发展区
-- `framework`：Stateful Learning Workspace / 有状态学习工作区
-- `framework`：Knowledge-Skills-Wisdom Learning Layers / 知识-技能-智慧学习分层
-- `procedure`：Design a Teach Skill / 教学型 AI skill 设计流程
-- `procedure`：Codebase Onboarding with Teach Skill / 用教学型 skill 做代码库 onboarding
-- `system`：AI Lesson Reliability Checks / AI 课程可靠性检查
-- `writing`：How to Explain Stateful vs Stateless Skills / 如何解释有状态与无状态 skill
+- Stateful Skill / 有状态技能
+- Stateless Skill / 无状态技能
+- Zone of Proximal Development / 最近发展区
+- Stateful Learning Workspace / 有状态学习工作区
+- Knowledge-Skills-Wisdom Learning Layers / 知识—技能—智慧学习分层
+- Design a Teach Skill / 教学型 AI skill 设计流程
+- Codebase Onboarding with Teach Skill / 用教学型 skill 做代码库 onboarding
+- AI Lesson Reliability Checks / AI 课程可靠性检查
+- How to Explain Stateful vs Stateless Skills / 如何解释有状态与无状态 skill
 
 ## 值得继续追问的问题
 - `/teach` 生成的 resources 如何判断“高信任度”？是否需要固定白名单、引用检查或人工 review？
@@ -178,4 +178,4 @@ skill 还规定了 teaching workspace 的形状，并给出一套 sectional phil
 - learning records 应该记录到多细？如果记录太多，会不会让 agent 误判学习者状态或过拟合过去表现？
 - 对数学课、经济学课、编程课，最近发展区的诊断指标分别应该是什么？
 - 如果把 `/teach` 用在 Academic vault，输出应该放在 `04_Fragments`、课程目录、还是单独的 learning workspace？
-- 如何把 `/teach` 生成的 lesson 与 `00_factor` 卡片边界对齐，避免把课程内容直接塞进 concept/framework 卡？
+- 如何让 `/teach` 生成的 lesson 保持项目语境，同时只把经过核验、可跨场景复用的内容整合进知识文件？

@@ -16,7 +16,7 @@ created_by: "fragments"
 
 | 标题 | 作者/频道 | 日期 | 标签 | 一句话总结 |
 |---|---|---|---|---|
-| [[Learning method\|六类学习内容]] | 自写整理 | 2026-07-09 | source/note, learning/method, knowledge-management | 这篇笔记把学习拆成“能做、能长期记住、能迁移”三层目标，并用工作记忆、长期记忆、主动调用和知识卡类型来解释为什么学习会失败，以及如何把知识整理成可复用结构。 |
+| [[Learning method\|学习方法]] | 自写整理 | 2026-07-09 | source/note, learning/method, knowledge-management | 这篇笔记把学习拆成“能做、能长期记住、能迁移”三层目标，并用工作记忆、长期记忆和主动调用解释学习失败与训练流程。 |
 
 ## web
 
@@ -42,4 +42,3 @@ created_by: "fragments"
 | [[The Future Of Work (& The New High-Income Skill Stack) - 2026-03-28\|The Future Of Work (& The New High-Income Skill Stack)]] | Dan Koe | 2026-02-12 | source/youtube, creator/dan-koe, work/future-of-work, ai/meaning | 这支视频的核心不是“AI 会抢走工作”这种常规讨论，而是更进一步地说：当信息和执行越来越便宜，真正稀缺的会变成意义、判断、品味和能把人组织到某个方向上的能力；Dan Koe 把这套新价值结构压缩成一个层级式技能栈：agency、taste、perspective、persuasion、technical know-how。 |
 | [[The Most Important Skill To Learn Right Now - 2026-03-28\|The Most Important Skill To Learn Right Now]] | Dan Koe | 2025-12-21 | source/youtube, creator/dan-koe, mindset/agency, ai/adaptation | Dan Koe 在这支视频里把“agency”提升为未来最重要的元技能：真正决定你能否适应 AI 和变化世界的，不是某项具体技术，而是你能否在没有外部许可的情况下反复试错、把人生当实验、主动脱离默认路径，并借助 AI 与互联网放大这种能力。 |
 | [[The top 1% Think on Paper. Here’s How To Do It - 2026-05-05\|The top 1% Think on Paper. Here’s How To Do It.]] | Justin Sung and iCanStudy | 2026-02-14 | source/youtube, learning/study, method/note-taking, learning/self-regulated-learning | Justin Sung 把“think on paper”讲成一种学习与理解方法：不要把信息、关系和疑问都塞在脑子里，而是先把关键词与关系外化到纸面，再用“先允许错、再压缩、再重组”的循环，把混乱的信息加工成更稳定的理解。 |
-

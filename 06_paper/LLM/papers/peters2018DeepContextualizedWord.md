@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `01 架构与预训练`，第一版用于连接 Transformer, Pretraining, Long Context 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Transformer Paradigm]], [[Pretraining Paradigm]], [[Long Context LLMs]]
+[[Transformer 与注意力机制]], [[预训练、指令微调与偏好优化]], [[RAG 与长上下文]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/J3L7IM3A)

@@ -1,0 +1,252 @@
+{
+  "nodes": [
+    {
+      "id": "71ed564678296ef2",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 650,
+      "height": 240,
+      "text": "# 财政学\n\n从政府干预的福利理由出发，依次理解支出、税收归宿、效率成本与预算选择。\n\n**当前学习位置：** 尚未记录。\n\n**下一入口：** [[福利经济学与政府干预]]",
+      "color": "4"
+    },
+    {
+      "id": "0573363500db7203",
+      "type": "file",
+      "x": 700,
+      "y": 0,
+      "width": 360,
+      "height": 240,
+      "file": "02_Economy/02_public finance财政学/00_课程总览.md",
+      "color": "4"
+    },
+    {
+      "id": "fd41573e0f37b354",
+      "type": "file",
+      "x": 0,
+      "y": 360,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/福利经济学与政府干预.md"
+    },
+    {
+      "id": "6a1d0328400727a4",
+      "type": "text",
+      "x": 470,
+      "y": 360,
+      "width": 590,
+      "height": 320,
+      "text": "## 福利经济学与政府干预\n\n**它解决什么：** 建立评价资源配置和公共政策的语言：先描述行为与后果，再说明用什么价值标准判断“更好”。\n**具体锚点：** 限价可能让部分租户房租降低，却造成短缺和非价格配给；实证效果与是否值得实施是两层问题。\n**核心难点：** Pareto 标准回避人与人之间福利权衡，社会福利函数则必须显式引入价值判断；市场失灵也不自动证明政府能更好。\n**为什么重要：** 公共品、外部性、税收和社会保险的政策分析都需要这套基准。\n**继续：** 先分清实证/规范与效率/公平，再进入 [[公共品与外部性]] 和 [[税收归宿与超额负担]]。\n\n**简要依据：** [MIT OCW 14.41 Public Finance and Public Policy](https://ocw.mit.edu/courses/14-41-public-finance-and-public-policy-fall-2024/resources/lecture-notes/)：核验外部性、公共品、社会保险、税收归宿与效率。"
+    },
+    {
+      "id": "b1f06c7ee9124123",
+      "type": "file",
+      "x": 0,
+      "y": 920,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/公共品与外部性.md"
+    },
+    {
+      "id": "572e1ccfbbdd9eca",
+      "type": "text",
+      "x": 470,
+      "y": 920,
+      "width": 590,
+      "height": 320,
+      "text": "## 公共品与外部性\n\n**它解决什么：** 分析个人决策没有计入对他人影响，或无法有效排除未付费者时，市场数量为何偏离社会最优。\n**具体锚点：** 工厂排污只承担私人成本，污染损害落在居民；路灯一旦提供，新增居民使用几乎不减少他人照明且难排除。\n**核心难点：** 公共品由非竞争性和非排他性定义，不等于“政府提供的东西”；外部性要区分边际私人和社会成本/收益。\n**为什么重要：** 碳税、排放交易、疫苗、知识和公共基础设施都由这些结构决定政策。\n**继续：** 先画边际曲线和缺失市场，再比较税、补贴、数量、产权和公共供给。\n\n**简要依据：** [MIT OCW 14.41 Public Finance and Public Policy](https://ocw.mit.edu/courses/14-41-public-finance-and-public-policy-fall-2024/resources/lecture-notes/)：核验外部性、公共品、社会保险、税收归宿与效率。"
+    },
+    {
+      "id": "eed460b34da57045",
+      "type": "text",
+      "x": 170,
+      "y": 740,
+      "width": 720,
+      "height": 120,
+      "text": "福利分析先说明政府为何可能介入；公共品和外部性是市场价格未覆盖全部社会收益或成本的典型机制。",
+      "color": "3"
+    },
+    {
+      "id": "c6c879c8f1e11fff",
+      "type": "file",
+      "x": 0,
+      "y": 1480,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/公共支出、社会保险与公共选择.md"
+    },
+    {
+      "id": "abcf4421e4ddd3cb",
+      "type": "text",
+      "x": 470,
+      "y": 1480,
+      "width": 590,
+      "height": 320,
+      "text": "## 公共支出、社会保险与公共选择\n\n**它解决什么：** 判断政府为何支出、项目是否值得、风险如何在个人与社会间分担，以及政治过程如何改变资源配置。\n**具体锚点：** 失业保险平滑失业期消费，但更慷慨给付也可能改变求职激励；完整评价要同时看保险价值和行为反应。\n**核心难点：** 支出规模不是福利本身；转移支付、公共投入和政府购买的资源含义不同，社会保险还同时处理市场缺失与再分配。\n**为什么重要：** 教育、医疗、养老、基建和地方财政不能只按会计金额评价。\n**继续：** 先做项目逻辑与反事实，再比较成本收益、分配、保险和政治执行。\n\n**简要依据：** [MIT OCW 14.41 Public Finance and Public Policy](https://ocw.mit.edu/courses/14-41-public-finance-and-public-policy-fall-2024/resources/lecture-notes/)：核验外部性、公共品、社会保险、税收归宿与效率。"
+    },
+    {
+      "id": "08d5e53578739ee4",
+      "type": "text",
+      "x": 170,
+      "y": 1300,
+      "width": 720,
+      "height": 120,
+      "text": "确认市场失灵后，要看政府实际提供什么以及保险、再分配和政治过程怎样改变资源配置。",
+      "color": "3"
+    },
+    {
+      "id": "9df5d8f12b1395d8",
+      "type": "file",
+      "x": 0,
+      "y": 2040,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/税收归宿与超额负担.md"
+    },
+    {
+      "id": "83ae5a04821e0077",
+      "type": "text",
+      "x": 470,
+      "y": 2040,
+      "width": 590,
+      "height": 320,
+      "text": "## 税收归宿与超额负担\n\n**它解决什么：** 追踪税负最终由谁承担，以及税改变行为后损失了多少互利交易。\n**具体锚点：** 法律要求雇主缴工资税，不表示经济负担都由雇主承担；工资和就业调整会把一部分转给劳动者。\n**核心难点：** 法定纳税人和经济归宿不同；归宿由供需弹性和市场调整决定，不能从税单名字判断。\n**为什么重要：** 公平评价和税制设计必须看行为后的真实收入与价格，而不是只看征收环节。\n**继续：** 先做局部均衡弹性分析，再考虑一般均衡、时间范围和市场力量；设计原则见 [[最优税收、财政收入与政府预算]]。\n\n**简要依据：** [MIT OCW 14.41 Public Finance and Public Policy](https://ocw.mit.edu/courses/14-41-public-finance-and-public-policy-fall-2024/resources/lecture-notes/)：核验外部性、公共品、社会保险、税收归宿与效率。"
+    },
+    {
+      "id": "271df412b904ffa8",
+      "type": "text",
+      "x": 170,
+      "y": 1860,
+      "width": 720,
+      "height": 120,
+      "text": "支出必须由收入支持；税收分析首先区分谁依法缴税与谁因价格调整真正承担负担。",
+      "color": "3"
+    },
+    {
+      "id": "06813890bd19ae04",
+      "type": "file",
+      "x": 0,
+      "y": 2600,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/最优税收、财政收入与政府预算.md"
+    },
+    {
+      "id": "cc478a409c713814",
+      "type": "text",
+      "x": 470,
+      "y": 2600,
+      "width": 590,
+      "height": 320,
+      "text": "## 最优税收、财政收入与政府预算\n\n**它解决什么：** 在筹集既定收入或实现再分配时，怎样权衡公平、行为扭曲、行政成本和预算约束。\n**具体锚点：** 对需求不敏感的商品征税较少扭曲，但若它是穷人必需品，效率规则会与公平目标冲突。\n**核心难点：** Ramsey 规则是特定条件下的效率结论，不是完整税制处方；所得税最优设计依赖能力分布和劳动反应。\n**为什么重要：** 税种组合、债务、预算和代际分配必须在统一政府约束下分析。\n**继续：** 先明确收入目标和福利权重，再比较税基、税率、征管与预算周期。\n\n**简要依据：** [MIT OCW 14.41 Public Finance and Public Policy](https://ocw.mit.edu/courses/14-41-public-finance-and-public-policy-fall-2024/resources/lecture-notes/)：核验外部性、公共品、社会保险、税收归宿与效率。"
+    },
+    {
+      "id": "2bec180e73f3477f",
+      "type": "text",
+      "x": 170,
+      "y": 2420,
+      "width": 720,
+      "height": 120,
+      "text": "知道归宿和效率损失后，最优税收与预算才可在公平、效率、收入需求和政府融资之间作选择。",
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "bf218e7057ffbc71",
+      "fromNode": "71ed564678296ef2",
+      "toNode": "0573363500db7203"
+    },
+    {
+      "id": "a5c5d7e09b5997d6",
+      "fromNode": "fd41573e0f37b354",
+      "fromSide": "right",
+      "toNode": "6a1d0328400727a4",
+      "toSide": "left"
+    },
+    {
+      "id": "882141fb0735893d",
+      "fromNode": "b1f06c7ee9124123",
+      "fromSide": "right",
+      "toNode": "572e1ccfbbdd9eca",
+      "toSide": "left"
+    },
+    {
+      "id": "8f0805ac3476f9fc",
+      "fromNode": "fd41573e0f37b354",
+      "fromSide": "bottom",
+      "toNode": "eed460b34da57045",
+      "toSide": "top"
+    },
+    {
+      "id": "c9b407245953c219",
+      "fromNode": "eed460b34da57045",
+      "fromSide": "bottom",
+      "toNode": "b1f06c7ee9124123",
+      "toSide": "top"
+    },
+    {
+      "id": "32f6219ccb382cfa",
+      "fromNode": "c6c879c8f1e11fff",
+      "fromSide": "right",
+      "toNode": "abcf4421e4ddd3cb",
+      "toSide": "left"
+    },
+    {
+      "id": "582ee0ad40ddeb0b",
+      "fromNode": "b1f06c7ee9124123",
+      "fromSide": "bottom",
+      "toNode": "08d5e53578739ee4",
+      "toSide": "top"
+    },
+    {
+      "id": "242dd06aaa728a36",
+      "fromNode": "08d5e53578739ee4",
+      "fromSide": "bottom",
+      "toNode": "c6c879c8f1e11fff",
+      "toSide": "top"
+    },
+    {
+      "id": "69ae608e69293824",
+      "fromNode": "9df5d8f12b1395d8",
+      "fromSide": "right",
+      "toNode": "83ae5a04821e0077",
+      "toSide": "left"
+    },
+    {
+      "id": "30625159c231e547",
+      "fromNode": "c6c879c8f1e11fff",
+      "fromSide": "bottom",
+      "toNode": "271df412b904ffa8",
+      "toSide": "top"
+    },
+    {
+      "id": "2ccae15bd5cc7806",
+      "fromNode": "271df412b904ffa8",
+      "fromSide": "bottom",
+      "toNode": "9df5d8f12b1395d8",
+      "toSide": "top"
+    },
+    {
+      "id": "773c13bb9c9adf91",
+      "fromNode": "06813890bd19ae04",
+      "fromSide": "right",
+      "toNode": "cc478a409c713814",
+      "toSide": "left"
+    },
+    {
+      "id": "dd54e62d0d309b9a",
+      "fromNode": "9df5d8f12b1395d8",
+      "fromSide": "bottom",
+      "toNode": "2bec180e73f3477f",
+      "toSide": "top"
+    },
+    {
+      "id": "e7b6a57b8e33bd75",
+      "fromNode": "2bec180e73f3477f",
+      "fromSide": "bottom",
+      "toNode": "06813890bd19ae04",
+      "toSide": "top"
+    }
+  ]
+}

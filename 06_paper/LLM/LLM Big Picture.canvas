@@ -1,1106 +1,257 @@
 {
   "nodes": [
     {
-      "id": "title",
+      "id": "411d4985b796788c",
       "type": "text",
       "x": 0,
-      "y": -260,
-      "width": 880,
-      "height": 150,
-      "text": "# LLM Big Picture\n\n可读总览：路线节点 + 主题入口 + 关键锚点论文\n[[LLM Map Index]] · [[LLM Big Picture-hub]]",
-      "color": "5"
-    },
-    {
-      "id": "route-transformer",
-      "type": "text",
-      "x": 0,
-      "y": 0,
-      "width": 360,
-      "height": 150,
-      "text": "## Transformer\n\n[[Transformer Paradigm]]\n29 papers",
-      "color": "5"
-    },
-    {
-      "id": "route-pretraining",
-      "type": "text",
-      "x": 430,
-      "y": 0,
-      "width": 360,
-      "height": 150,
-      "text": "## Pretraining\n\n[[Pretraining Paradigm]]\n26 papers",
-      "color": "5"
-    },
-    {
-      "id": "route-scaling-law",
-      "type": "text",
-      "x": 860,
-      "y": 0,
-      "width": 360,
-      "height": 150,
-      "text": "## Scaling Law\n\n[[Scaling Law]]\n17 papers",
-      "color": "6"
-    },
-    {
-      "id": "route-instruction-tuning-rlhf",
-      "type": "text",
-      "x": 1290,
-      "y": 0,
-      "width": 360,
-      "height": 150,
-      "text": "## Instruction Tuning / RLHF\n\n[[Instruction Tuning and RLHF]]\n16 papers",
+      "y": -450,
+      "width": 520,
+      "height": 260,
+      "text": "# 大语言模型全图\n\n从计算骨架出发，沿训练、系统使用和评测三条线理解。\n\n**默认入口：** [[Transformer 与注意力机制]]\n\n**导航页：** [[大语言模型-hub]]",
       "color": "4"
     },
     {
-      "id": "route-preference-optimization",
+      "id": "5e0349e340408544",
       "type": "text",
       "x": 0,
-      "y": 230,
-      "width": 360,
-      "height": 150,
-      "text": "## Preference Optimization\n\n[[Preference Optimization]]\n5 papers",
-      "color": "4"
+      "y": 0,
+      "width": 600,
+      "height": 360,
+      "text": "## [[Transformer 与注意力机制]]\n\n**它解决什么：** 让序列中的每个 token 按当前任务直接选择并汇总其他 token 的信息，而不必像循环网络那样逐步传递。\n**具体锚点：** 在“银行没有批准贷款，因为它风险太高”中，“它”应重点读取“贷款”及其上下文；attention 学习这种数据依赖的读取权重。\n**核心难点：** attention 不是“理解力”本身，而是按 query–key 相似度加权 value；模型仍需位置、因果掩码、残差和训练目标才能成为语言模型。\n**为什么重要：** 预训练、长上下文、KV cache、多模态和大多数现代 LLM 都从这个计算骨架展开。\n**继续：** 先掌握一次 self-attention 的张量流，再读 [[预训练、指令微调与偏好优化#预训练：先学习续写分布|预训练]]；部署时转到 [[LLM 推理效率#Prefill 与 decoding|推理阶段]]。\n\n**论文入口：** [[canvas/01 架构与预训练.canvas]]\n\n**简要依据：** [[06_paper/LLM/LLM Map Index]] 及其链接的论文笔记：用于定位主题与原论文。"
     },
     {
-      "id": "route-reasoning",
+      "id": "41edeb623d804233",
       "type": "text",
-      "x": 430,
-      "y": 230,
-      "width": 360,
-      "height": 150,
-      "text": "## Reasoning\n\n[[Reasoning Models]]\n18 papers",
-      "color": "3"
+      "x": 820,
+      "y": -450,
+      "width": 600,
+      "height": 360,
+      "text": "## [[预训练、指令微调与偏好优化]]\n\n**它解决什么：** 把“会预测文本”的基础模型逐步变成能理解任务、遵循指令并更符合人类偏好的助手。\n**具体锚点：** 预训练模型可能自然续写问题；SFT 教它按问答格式回答，偏好优化再让“正确、相关、安全”的答案相对更可能出现。\n**核心难点：** 三阶段目标不同：预训练学分布，SFT 模仿示范，RLHF/DPO 学相对偏好；后两者不能凭空补回预训练中没有的能力或事实。\n**为什么重要：** 看到“模型更好”时，必须问清提升来自知识、指令遵循、输出风格还是评审偏好。\n**继续：** 先区分三种训练信号；若关心能力增长的来源，转到 [[规模化、MoE 与分布式训练]]；若关心怎样测量，转到 [[LLM 评测]]。\n\n**论文入口：** [[canvas/03 对齐与偏好优化.canvas]]\n\n**简要依据：** [[06_paper/LLM/LLM Map Index]] 及其链接的论文笔记：用于定位主题与原论文。"
     },
     {
-      "id": "route-agent",
+      "id": "1e2c87511acca4f6",
       "type": "text",
-      "x": 860,
-      "y": 230,
-      "width": 360,
-      "height": 150,
-      "text": "## Agent\n\n[[Agentic LLMs]]\n7 papers",
-      "color": "3"
+      "x": 820,
+      "y": 0,
+      "width": 600,
+      "height": 360,
+      "text": "## [[规模化、MoE 与分布式训练]]\n\n**它解决什么：** 决定有限算力下该训练多大的模型、喂多少数据，并把一次超大训练拆到许多设备上。\n**具体锚点：** 同样的计算预算若全用来扩大参数却不给足 token，模型可能“训练不足”；Chinchilla 一类结果正是修正这种分配。\n**核心难点：** scaling law 是特定数据与训练区间内的经验关系，不是自然定律；MoE 降低每 token 激活计算，却增加路由、通信和容量管理。\n**为什么重要：** 参数量、总训练 FLOPs、推理成本和实际质量不是同一个排行。\n**继续：** 先用预算约束理解 dense scaling，再看 MoE 和并行；部署端转到 [[LLM 推理效率]]。\n\n**论文入口：** [[canvas/02 规模化与模型家族.canvas]]\n\n**简要依据：** [[06_paper/LLM/LLM Map Index]] 及其链接的论文笔记：用于定位主题与原论文。"
     },
     {
-      "id": "route-rag",
+      "id": "f90490bd78fb3060",
       "type": "text",
-      "x": 1290,
-      "y": 230,
-      "width": 360,
-      "height": 150,
-      "text": "## RAG\n\n[[Retrieval-Augmented Generation]]\n11 papers",
-      "color": "5"
+      "x": 820,
+      "y": 450,
+      "width": 600,
+      "height": 360,
+      "text": "## [[RAG 与长上下文]]\n\n**它解决什么：** 在模型参数之外提供任务所需资料：RAG 先检索相关片段，长上下文则把更多材料直接放入一次输入。\n**具体锚点：** 回答公司最新政策时，不该期待预训练记住；系统应找到当前政策原文，把相关段落和出处交给模型。\n**核心难点：** “资料在上下文里”不等于模型会找到、理解并忠实引用；检索召回、排序、切块、位置与生成约束都会丢失信息。\n**为什么重要：** 这决定知识更新、证据可追溯、成本和延迟，也决定错误来自没找到还是没用对。\n**继续：** 先画清检索—生成管线，再按资料规模和更新频率选择 RAG、长上下文或混合；效率见 [[LLM 推理效率]]。\n\n**论文入口：** [[canvas/05 RAG与知识增强.canvas]]\n\n**简要依据：** [[06_paper/LLM/LLM Map Index]] 及其链接的论文笔记：用于定位主题与原论文。"
     },
     {
-      "id": "route-long-context",
+      "id": "97e77e14ced22868",
       "type": "text",
-      "x": 0,
-      "y": 460,
-      "width": 360,
-      "height": 150,
-      "text": "## Long Context\n\n[[Long Context LLMs]]\n16 papers",
-      "color": "2"
+      "x": 820,
+      "y": 900,
+      "width": 600,
+      "height": 360,
+      "text": "## [[多模态大模型]]\n\n**它解决什么：** 让一个生成模型联合处理文字、图像及其他模态，把感知结果接入语言推理和输出。\n**具体锚点：** 回答图表问题需要先辨认坐标轴、图例和数值关系，再用语言表达；仅生成流畅描述不代表视觉定位正确。\n**核心难点：** 模态对齐会压缩信息，模型可能靠语言先验猜答案；OCR、空间定位、细粒度计数和生成质量必须分开测。\n**为什么重要：** 不同架构都叫“多模态”，但输入粒度、融合位置、训练目标和可生成模态差异很大。\n**继续：** 先看视觉表示如何变成语言模型可读 token，再区分桥接式与早融合；用 [[LLM 评测]] 的证据原则检查。\n\n**论文入口：** [[canvas/08 多模态.canvas]]\n\n**简要依据：** [[06_paper/LLM/LLM Map Index]] 及其链接的论文笔记：用于定位主题与原论文。"
     },
     {
-      "id": "route-efficiency-moe",
+      "id": "4826db22ff87c994",
       "type": "text",
-      "x": 430,
-      "y": 460,
-      "width": 360,
-      "height": 150,
-      "text": "## Efficiency / MoE\n\n[[LLM Efficiency Engineering]]\n19 papers",
-      "color": "2"
+      "x": 1640,
+      "y": -450,
+      "width": 600,
+      "height": 360,
+      "text": "## [[推理模型与 LLM Agent]]\n\n**它解决什么：** 让模型在复杂问题上分解、验证并调用外部工具，而不是只凭一次续写直接给答案。\n**具体锚点：** 解一道多步数学题时，模型可生成中间步骤、用计算器核验，再根据失败结果重试；Agent 则把这种循环扩展到搜索、代码和环境操作。\n**核心难点：** 更长的思考不保证正确，文本“计划”也不等于可靠状态；工具权限、观测、停止条件和验证器共同决定系统是否可信。\n**为什么重要：** 推理能力与 Agent 工程经常被混称，但前者改进问题求解策略，后者还必须管理真实世界行动和风险。\n**继续：** 先区分模型内推理与环境循环，再用 [[LLM 评测#推理、工具与 Agent 评测|任务级结果]] 检验，而不是只看轨迹是否像人。\n\n**论文入口：** [[canvas/04 推理与Agent.canvas]]\n\n**简要依据：** [[06_paper/LLM/LLM Map Index]] 及其链接的论文笔记：用于定位主题与原论文。"
     },
     {
-      "id": "route-evaluation",
+      "id": "0344ef4c27818f14",
       "type": "text",
-      "x": 860,
-      "y": 460,
-      "width": 360,
-      "height": 150,
-      "text": "## Evaluation\n\n[[LLM Evaluation]]\n10 papers",
-      "color": "1"
+      "x": 1640,
+      "y": 0,
+      "width": 600,
+      "height": 360,
+      "text": "## [[LLM 推理效率]]\n\n**它解决什么：** 在显存、吞吐和响应时间约束下，把已经训练好的模型高效地服务给用户。\n**具体锚点：** 长提示先并行做 prefill，随后逐 token decoding；前者常受算力限制，后者频繁读取权重和 KV cache，瓶颈不同。\n**核心难点：** 参数量、首 token 延迟、每 token 延迟、并发吞吐和显存不能用一个数字概括；优化一种指标可能伤害另一种。\n**为什么重要：** 同一模型在不同 batch、上下文长度和硬件上的实际成本可相差很大。\n**继续：** 先测量 prefill/decode 和真实流量分布，再选 batching、量化、attention kernel 或 speculative decoding。\n\n**论文入口：** [[canvas/06 长上下文与效率.canvas]]\n\n**简要依据：** [[06_paper/LLM/LLM Map Index]] 及其链接的论文笔记：用于定位主题与原论文。"
     },
     {
-      "id": "route-multimodal",
+      "id": "6dd9a211d2da0461",
       "type": "text",
-      "x": 1290,
-      "y": 460,
-      "width": 360,
-      "height": 150,
-      "text": "## Multimodal\n\n[[Multimodal LLMs]]\n10 papers",
-      "color": "6"
+      "x": 1640,
+      "y": 450,
+      "width": 600,
+      "height": 360,
+      "text": "## [[LLM 评测]]\n\n**它解决什么：** 判断模型在具体用途上是否真的更好，并定位改进来自能力、数据、提示还是评审偏差。\n**具体锚点：** 数学基准得分上升可能来自推理更强，也可能是题目出现在训练数据、采样次数更多或答案解析更宽松。\n**核心难点：** 基准是测量工具，不是能力本身；污染、饱和、评审偏好和不可复现设置会让一个分数失真。\n**为什么重要：** 没有任务定义、基线和误差分析，排行榜无法支持模型选型或安全判断。\n**继续：** 先定义实际决策和失败代价，再组合自动指标、人类/专家评审与可复现实验；RAG 和 Agent 还要分层测管线。\n\n**论文入口：** [[canvas/07 评测与数据.canvas]]\n\n**简要依据：** [[06_paper/LLM/LLM Map Index]] 及其链接的论文笔记：用于定位主题与原论文。"
     },
     {
-      "id": "route-open-models",
+      "id": "e2b814aa3ee004f9",
       "type": "text",
-      "x": 0,
-      "y": 690,
-      "width": 360,
-      "height": 150,
-      "text": "## Open Models\n\n[[Open Model Ecosystem]]\n29 papers",
-      "color": "4"
+      "x": 1640,
+      "y": 900,
+      "width": 600,
+      "height": 360,
+      "text": "## [[开放模型生态]]\n\n**它解决什么：** 在大量“开放”模型中判断哪些权重、代码、数据和许可真正可用、可复现并适合目标任务。\n**具体锚点：** 一个可下载权重的模型可能允许研究却限制商业用途，也可能完全不公开训练数据；这和开源软件不是同一件事。\n**核心难点：** 模型名、参数量和聊天榜单口径不统一，家族不同版本又有 base/instruct、dense/MoE、上下文和许可证差异。\n**为什么重要：** 选型错误会在部署后表现为许可风险、硬件不匹配、不可验证的数据来源或无法复现实验。\n**继续：** 先确认开放层级与许可证，再比较任务质量、资源与生态；具体性能必须回到 [[LLM 评测]] 和 [[LLM 推理效率]]。\n\n**论文入口：** [[canvas/09 开源模型技术报告.canvas]]\n\n**简要依据：** [[06_paper/LLM/LLM Map Index]] 及其链接的论文笔记：用于定位主题与原论文。"
     },
     {
-      "id": "theme-01",
+      "id": "690c7eeeebd48e9b",
       "type": "text",
-      "x": 1850,
-      "y": -20,
-      "width": 420,
-      "height": 120,
-      "text": "## 01 架构与预训练\n\n[[01 架构与预训练.canvas|Open sub-canvas]]\n20 papers",
-      "color": "5"
-    },
-    {
-      "id": "theme-02",
-      "type": "text",
-      "x": 1850,
+      "x": 490,
       "y": 145,
-      "width": 420,
-      "height": 120,
-      "text": "## 02 规模化与模型家族\n\n[[02 规模化与模型家族.canvas|Open sub-canvas]]\n11 papers",
-      "color": "6"
-    },
-    {
-      "id": "theme-03",
-      "type": "text",
-      "x": 1850,
-      "y": 310,
-      "width": 420,
-      "height": 120,
-      "text": "## 03 对齐与偏好优化\n\n[[03 对齐与偏好优化.canvas|Open sub-canvas]]\n14 papers",
-      "color": "4"
-    },
-    {
-      "id": "theme-04",
-      "type": "text",
-      "x": 1850,
-      "y": 475,
-      "width": 420,
-      "height": 120,
-      "text": "## 04 推理与Agent\n\n[[04 推理与Agent.canvas|Open sub-canvas]]\n16 papers",
+      "width": 500,
+      "height": 130,
+      "text": "Transformer 给出计算骨架；预训练和对齐决定这副骨架从什么数据学到能力，以及最终偏向什么回答。",
       "color": "3"
     },
     {
-      "id": "theme-05",
+      "id": "5da95554eabf3746",
       "type": "text",
-      "x": 1850,
-      "y": 640,
-      "width": 420,
-      "height": 120,
-      "text": "## 05 RAG与知识增强\n\n[[05 RAG与知识增强.canvas|Open sub-canvas]]\n11 papers",
-      "color": "5"
-    },
-    {
-      "id": "theme-06",
-      "type": "text",
-      "x": 1850,
-      "y": 805,
-      "width": 420,
-      "height": 120,
-      "text": "## 06 长上下文与效率\n\n[[06 长上下文与效率.canvas|Open sub-canvas]]\n12 papers",
-      "color": "2"
-    },
-    {
-      "id": "theme-07",
-      "type": "text",
-      "x": 1850,
-      "y": 970,
-      "width": 420,
-      "height": 120,
-      "text": "## 07 评测与数据\n\n[[07 评测与数据.canvas|Open sub-canvas]]\n10 papers",
-      "color": "1"
-    },
-    {
-      "id": "theme-08",
-      "type": "text",
-      "x": 1850,
-      "y": 1135,
-      "width": 420,
-      "height": 120,
-      "text": "## 08 多模态\n\n[[08 多模态.canvas|Open sub-canvas]]\n9 papers",
-      "color": "6"
-    },
-    {
-      "id": "theme-09",
-      "type": "text",
-      "x": 1850,
-      "y": 1300,
-      "width": 420,
-      "height": 120,
-      "text": "## 09 开源模型技术报告\n\n[[09 开源模型技术报告.canvas|Open sub-canvas]]\n21 papers",
-      "color": "4"
-    },
-    {
-      "id": "anchor-vaswaniattentionallyou",
-      "type": "text",
-      "x": 2420,
-      "y": -20,
-      "width": 320,
-      "height": 105,
-      "text": "**Attention is All you Need**\n\n2017 · [[vaswaniAttentionAllYou|note]]",
-      "color": "5"
-    },
-    {
-      "id": "anchor-radfordimprovinglanguageunderstanding",
-      "type": "text",
-      "x": 2780,
-      "y": -20,
-      "width": 320,
-      "height": 105,
-      "text": "**Improving Language Understanding by Generative Pre-Training**\n\n2018 · [[radfordImprovingLanguageUnderstanding|note]]",
-      "color": "5"
-    },
-    {
-      "id": "anchor-radfordlanguagemodelsare",
-      "type": "text",
-      "x": 2420,
-      "y": 115,
-      "width": 320,
-      "height": 105,
-      "text": "**Language Models are Unsupervised Multitask Learners**\n\n2019 · [[radfordLanguageModelsAre|note]]",
-      "color": "5"
-    },
-    {
-      "id": "anchor-devlin2019bertpretrainingdeep",
-      "type": "text",
-      "x": 2780,
-      "y": 115,
-      "width": 320,
-      "height": 105,
-      "text": "**BERT: Pre-training of Deep Bidirectional Transformers for Language ...**\n\n2019 · [[devlin2019BERTPretrainingDeep|note]]",
-      "color": "5"
-    },
-    {
-      "id": "anchor-raffel2023exploringlimitstransfer",
-      "type": "text",
-      "x": 2420,
-      "y": 250,
-      "width": 320,
-      "height": 105,
-      "text": "**Exploring the Limits of Transfer Learning with a Unified Text-to-Te...**\n\n2023 · [[raffel2023ExploringLimitsTransfer|note]]",
-      "color": "5"
-    },
-    {
-      "id": "anchor-kaplan2020scalinglawsneural",
-      "type": "text",
-      "x": 2780,
-      "y": 250,
-      "width": 320,
-      "height": 105,
-      "text": "**Scaling Laws for Neural Language Models**\n\n2020 · [[kaplan2020ScalingLawsNeural|note]]",
-      "color": "6"
-    },
-    {
-      "id": "anchor-brown2020languagemodelsare",
-      "type": "text",
-      "x": 2420,
-      "y": 385,
-      "width": 320,
-      "height": 105,
-      "text": "**Language Models are Few-Shot Learners**\n\n2020 · [[brown2020LanguageModelsAre|note]]",
-      "color": "6"
-    },
-    {
-      "id": "anchor-hoffmanntrainingcomputeoptimallarge",
-      "type": "text",
-      "x": 2780,
-      "y": 385,
-      "width": 320,
-      "height": 105,
-      "text": "**Training Compute-Optimal Large Language Models**\n\n2022 · [[hoffmannTrainingComputeOptimalLarge|note]]",
-      "color": "4"
-    },
-    {
-      "id": "anchor-ouyang2022traininglanguagemodels",
-      "type": "text",
-      "x": 2420,
-      "y": 520,
-      "width": 320,
-      "height": 105,
-      "text": "**Training language models to follow instructions with human feedback**\n\n2022 · [[ouyang2022TrainingLanguageModels|note]]",
-      "color": "4"
-    },
-    {
-      "id": "anchor-bai2022traininghelpfulharmless",
-      "type": "text",
-      "x": 2780,
-      "y": 520,
-      "width": 320,
-      "height": 105,
-      "text": "**Training a Helpful and Harmless Assistant with Reinforcement Learni...**\n\n2022 · [[bai2022TrainingHelpfulHarmless|note]]",
-      "color": "4"
-    },
-    {
-      "id": "anchor-rafailovdirectpreferenceoptimization",
-      "type": "text",
-      "x": 2420,
-      "y": 655,
-      "width": 320,
-      "height": 105,
-      "text": "**Direct Preference Optimization: Your Language Model is Secretly a R...**\n\n2023 · [[rafailovDirectPreferenceOptimization|note]]",
-      "color": "4"
-    },
-    {
-      "id": "anchor-wei2023chainofthoughtpromptingelicits",
-      "type": "text",
-      "x": 2780,
-      "y": 655,
-      "width": 320,
-      "height": 105,
-      "text": "**Chain-of-Thought Prompting Elicits Reasoning in Large Language Models**\n\n2023 · [[wei2023ChainofThoughtPromptingElicits|note]]",
+      "x": 490,
+      "y": 370,
+      "width": 500,
+      "height": 130,
+      "text": "单个 Transformer 可直接训练；规模化研究怎样在更多数据、参数和设备上维持可计算、可通信的训练。",
       "color": "3"
     },
     {
-      "id": "anchor-yao2023reactsynergizingreasoning",
+      "id": "c76f2532d11468ee",
       "type": "text",
-      "x": 2420,
-      "y": 790,
-      "width": 320,
-      "height": 105,
-      "text": "**ReAct: Synergizing Reasoning and Acting in Language Models**\n\n2023 · [[yao2023ReActSynergizingReasoning|note]]",
+      "x": 490,
+      "y": 595,
+      "width": 500,
+      "height": 130,
+      "text": "Self-attention 允许 token 读取上下文；RAG 和长上下文进一步决定外部资料以什么范围、位置和证据进入这种读取。",
       "color": "3"
     },
     {
-      "id": "anchor-yao2023treethoughtsdeliberate",
+      "id": "a23a093680fe564d",
       "type": "text",
-      "x": 2780,
-      "y": 790,
-      "width": 320,
-      "height": 105,
-      "text": "**Tree of Thoughts: Deliberate Problem Solving with Large Language Mo...**\n\n2023 · [[yao2023TreeThoughtsDeliberate|note]]",
+      "x": 490,
+      "y": 820,
+      "width": 500,
+      "height": 130,
+      "text": "多模态模型把图像等表示转换为 Transformer 可读取或共同生成的 token，因此对齐位置和信息瓶颈成为新问题。",
       "color": "3"
     },
     {
-      "id": "anchor-lewis2021retrievalaugmentedgenerationknowledgeintensive",
+      "id": "72c890ef1a212c96",
       "type": "text",
-      "x": 2420,
-      "y": 925,
-      "width": 320,
-      "height": 105,
-      "text": "**Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks**\n\n2021 · [[lewis2021RetrievalAugmentedGenerationKnowledgeIntensive|note]]",
-      "color": "5"
+      "x": 1310,
+      "y": -80,
+      "width": 500,
+      "height": 130,
+      "text": "基础与对齐训练提供可调用的策略；推理训练、验证器和 Agent 循环再把它用于多步求解与真实行动。",
+      "color": "3"
     },
     {
-      "id": "anchor-dao2022flashattentionfastmemoryefficient",
+      "id": "dd2c1f80bf77071e",
       "type": "text",
-      "x": 2780,
-      "y": 925,
-      "width": 320,
-      "height": 105,
-      "text": "**FlashAttention: Fast and Memory-Efficient Exact Attention with IO-A...**\n\n2022 · [[dao2022FlashAttentionFastMemoryEfficient|note]]",
-      "color": "2"
+      "x": 1310,
+      "y": 370,
+      "width": 500,
+      "height": 130,
+      "text": "训练阶段决定架构、参数和精度；这些选择在部署时转化为权重读取、KV cache、通信和服务成本。",
+      "color": "3"
     },
     {
-      "id": "anchor-beltagy2020longformerlongdocumenttransformer",
+      "id": "13e7613a000ddbe0",
       "type": "text",
-      "x": 2420,
-      "y": 1060,
-      "width": 320,
-      "height": 105,
-      "text": "**Longformer: The Long-Document Transformer**\n\n2020 · [[beltagy2020LongformerLongDocumentTransformer|note]]",
-      "color": "2"
+      "x": 1310,
+      "y": 820,
+      "width": 500,
+      "height": 130,
+      "text": "检索和长上下文是多阶段系统，必须分别测召回、证据使用和最终回答，才能知道错误发生在哪一层。",
+      "color": "3"
     },
     {
-      "id": "anchor-roziere2024codellamaopen",
+      "id": "4ffc3fd069b1d398",
       "type": "text",
-      "x": 2780,
-      "y": 1060,
-      "width": 320,
-      "height": 105,
-      "text": "**Code Llama: Open Foundation Models for Code**\n\n2024 · [[roziere2024CodeLlamaOpen|note]]",
-      "color": "1"
-    },
-    {
-      "id": "anchor-touvron2023llama2open",
-      "type": "text",
-      "x": 2420,
-      "y": 1195,
-      "width": 320,
-      "height": 105,
-      "text": "**Llama 2: Open Foundation and Fine-Tuned Chat Models**\n\n2023 · [[touvron2023Llama2Open|note]]",
-      "color": "4"
-    },
-    {
-      "id": "anchor-grattafiori2024llama3herd",
-      "type": "text",
-      "x": 2780,
-      "y": 1195,
-      "width": 320,
-      "height": 105,
-      "text": "**The Llama 3 Herd of Models**\n\n2024 · [[grattafiori2024Llama3Herd|note]]",
-      "color": "4"
-    },
-    {
-      "id": "anchor-deepseek-ai2025deepseekv3technicalreport",
-      "type": "text",
-      "x": 2420,
-      "y": 1330,
-      "width": 320,
-      "height": 105,
-      "text": "**DeepSeek-V3 Technical Report**\n\n2025 · [[deepseek-ai2025DeepSeekV3TechnicalReport|note]]",
-      "color": "4"
-    },
-    {
-      "id": "anchor-deepseek-ai2025deepseekr1incentivizingreasoning",
-      "type": "text",
-      "x": 2780,
-      "y": 1330,
-      "width": 320,
-      "height": 105,
-      "text": "**DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinfor...**\n\n2025 · [[deepseek-ai2025DeepSeekR1IncentivizingReasoning|note]]",
-      "color": "5"
-    },
-    {
-      "id": "anchor-yang2025qwen3technicalreport",
-      "type": "text",
-      "x": 2420,
-      "y": 1465,
-      "width": 320,
-      "height": 105,
-      "text": "**Qwen3 Technical Report**\n\n2025 · [[yang2025Qwen3TechnicalReport|note]]",
-      "color": "4"
-    },
-    {
-      "id": "anchor-openai2024gpt4technicalreport",
-      "type": "text",
-      "x": 2780,
-      "y": 1465,
-      "width": 320,
-      "height": 105,
-      "text": "**GPT-4 Technical Report**\n\n2024 · [[openai2024GPT4TechnicalReport|note]]",
-      "color": "6"
-    },
-    {
-      "id": "anchor-chiang2024chatbotarenaopen",
-      "type": "text",
-      "x": 2420,
-      "y": 1600,
-      "width": 320,
-      "height": 105,
-      "text": "**Chatbot Arena: An Open Platform for Evaluating LLMs by Human Prefer...**\n\n2024 · [[chiang2024ChatbotArenaOpen|note]]",
-      "color": "1"
+      "x": 1310,
+      "y": 1270,
+      "width": 500,
+      "height": 130,
+      "text": "多模态能力只是选型的一维；真正部署还要同时核验权重、许可证、数据透明度、硬件和任务评测。",
+      "color": "3"
     }
   ],
   "edges": [
     {
-      "id": "e0001",
-      "fromNode": "theme-01",
-      "fromSide": "right",
-      "toNode": "anchor-vaswaniattentionallyou",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "5"
+      "id": "ea24137cffcfee64",
+      "fromNode": "5e0349e340408544",
+      "toNode": "690c7eeeebd48e9b"
     },
     {
-      "id": "e0002",
-      "fromNode": "route-transformer",
-      "fromSide": "right",
-      "toNode": "anchor-vaswaniattentionallyou",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "5"
+      "id": "7f3c586030a6765f",
+      "fromNode": "690c7eeeebd48e9b",
+      "toNode": "41edeb623d804233"
     },
     {
-      "id": "e0003",
-      "fromNode": "theme-01",
-      "fromSide": "right",
-      "toNode": "anchor-radfordimprovinglanguageunderstanding",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "5"
+      "id": "7e47422b12cbebae",
+      "fromNode": "5e0349e340408544",
+      "toNode": "5da95554eabf3746"
     },
     {
-      "id": "e0004",
-      "fromNode": "route-transformer",
-      "fromSide": "right",
-      "toNode": "anchor-radfordimprovinglanguageunderstanding",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "5"
+      "id": "096b45562183cb75",
+      "fromNode": "5da95554eabf3746",
+      "toNode": "1e2c87511acca4f6"
     },
     {
-      "id": "e0005",
-      "fromNode": "theme-01",
-      "fromSide": "right",
-      "toNode": "anchor-radfordlanguagemodelsare",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "5"
+      "id": "76871a02c8de339d",
+      "fromNode": "5e0349e340408544",
+      "toNode": "c76f2532d11468ee"
     },
     {
-      "id": "e0006",
-      "fromNode": "route-transformer",
-      "fromSide": "right",
-      "toNode": "anchor-radfordlanguagemodelsare",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "5"
+      "id": "473390812bc9be00",
+      "fromNode": "c76f2532d11468ee",
+      "toNode": "f90490bd78fb3060"
     },
     {
-      "id": "e0007",
-      "fromNode": "theme-01",
-      "fromSide": "right",
-      "toNode": "anchor-devlin2019bertpretrainingdeep",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "5"
+      "id": "0b2c7f2b2148bb06",
+      "fromNode": "5e0349e340408544",
+      "toNode": "a23a093680fe564d"
     },
     {
-      "id": "e0008",
-      "fromNode": "route-transformer",
-      "fromSide": "right",
-      "toNode": "anchor-devlin2019bertpretrainingdeep",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "5"
+      "id": "1f48ef32297cbc95",
+      "fromNode": "a23a093680fe564d",
+      "toNode": "97e77e14ced22868"
     },
     {
-      "id": "e0009",
-      "fromNode": "theme-01",
-      "fromSide": "right",
-      "toNode": "anchor-raffel2023exploringlimitstransfer",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "5"
+      "id": "8b0b14c411dc3262",
+      "fromNode": "41edeb623d804233",
+      "toNode": "72c890ef1a212c96"
     },
     {
-      "id": "e0010",
-      "fromNode": "route-transformer",
-      "fromSide": "right",
-      "toNode": "anchor-raffel2023exploringlimitstransfer",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "5"
+      "id": "a1545ec306023710",
+      "fromNode": "72c890ef1a212c96",
+      "toNode": "4826db22ff87c994"
     },
     {
-      "id": "e0011",
-      "fromNode": "theme-02",
-      "fromSide": "right",
-      "toNode": "anchor-kaplan2020scalinglawsneural",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "6"
+      "id": "7ee50b96001d1254",
+      "fromNode": "1e2c87511acca4f6",
+      "toNode": "dd2c1f80bf77071e"
     },
     {
-      "id": "e0012",
-      "fromNode": "route-scaling-law",
-      "fromSide": "right",
-      "toNode": "anchor-kaplan2020scalinglawsneural",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "6"
+      "id": "f475961433eae738",
+      "fromNode": "dd2c1f80bf77071e",
+      "toNode": "0344ef4c27818f14"
     },
     {
-      "id": "e0013",
-      "fromNode": "theme-02",
-      "fromSide": "right",
-      "toNode": "anchor-brown2020languagemodelsare",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "6"
+      "id": "0c3917608eb40d95",
+      "fromNode": "f90490bd78fb3060",
+      "toNode": "13e7613a000ddbe0"
     },
     {
-      "id": "e0014",
-      "fromNode": "route-scaling-law",
-      "fromSide": "right",
-      "toNode": "anchor-brown2020languagemodelsare",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "6"
+      "id": "30f0d1f1446b596a",
+      "fromNode": "13e7613a000ddbe0",
+      "toNode": "6dd9a211d2da0461"
     },
     {
-      "id": "e0015",
-      "fromNode": "theme-09",
-      "fromSide": "right",
-      "toNode": "anchor-hoffmanntrainingcomputeoptimallarge",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "4"
+      "id": "76bffbedf64de963",
+      "fromNode": "97e77e14ced22868",
+      "toNode": "4ffc3fd069b1d398"
     },
     {
-      "id": "e0016",
-      "fromNode": "route-open-models",
-      "fromSide": "right",
-      "toNode": "anchor-hoffmanntrainingcomputeoptimallarge",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "4"
-    },
-    {
-      "id": "e0017",
-      "fromNode": "theme-03",
-      "fromSide": "right",
-      "toNode": "anchor-ouyang2022traininglanguagemodels",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "4"
-    },
-    {
-      "id": "e0018",
-      "fromNode": "route-instruction-tuning-rlhf",
-      "fromSide": "right",
-      "toNode": "anchor-ouyang2022traininglanguagemodels",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "4"
-    },
-    {
-      "id": "e0019",
-      "fromNode": "theme-03",
-      "fromSide": "right",
-      "toNode": "anchor-bai2022traininghelpfulharmless",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "4"
-    },
-    {
-      "id": "e0020",
-      "fromNode": "route-instruction-tuning-rlhf",
-      "fromSide": "right",
-      "toNode": "anchor-bai2022traininghelpfulharmless",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "4"
-    },
-    {
-      "id": "e0021",
-      "fromNode": "theme-09",
-      "fromSide": "right",
-      "toNode": "anchor-rafailovdirectpreferenceoptimization",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "4"
-    },
-    {
-      "id": "e0022",
-      "fromNode": "route-open-models",
-      "fromSide": "right",
-      "toNode": "anchor-rafailovdirectpreferenceoptimization",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "4"
-    },
-    {
-      "id": "e0023",
-      "fromNode": "theme-04",
-      "fromSide": "right",
-      "toNode": "anchor-wei2023chainofthoughtpromptingelicits",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "3"
-    },
-    {
-      "id": "e0024",
-      "fromNode": "route-reasoning",
-      "fromSide": "right",
-      "toNode": "anchor-wei2023chainofthoughtpromptingelicits",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "3"
-    },
-    {
-      "id": "e0025",
-      "fromNode": "theme-04",
-      "fromSide": "right",
-      "toNode": "anchor-yao2023reactsynergizingreasoning",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "3"
-    },
-    {
-      "id": "e0026",
-      "fromNode": "route-reasoning",
-      "fromSide": "right",
-      "toNode": "anchor-yao2023reactsynergizingreasoning",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "3"
-    },
-    {
-      "id": "e0027",
-      "fromNode": "theme-04",
-      "fromSide": "right",
-      "toNode": "anchor-yao2023treethoughtsdeliberate",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "3"
-    },
-    {
-      "id": "e0028",
-      "fromNode": "route-reasoning",
-      "fromSide": "right",
-      "toNode": "anchor-yao2023treethoughtsdeliberate",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "3"
-    },
-    {
-      "id": "e0029",
-      "fromNode": "theme-05",
-      "fromSide": "right",
-      "toNode": "anchor-lewis2021retrievalaugmentedgenerationknowledgeintensive",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "5"
-    },
-    {
-      "id": "e0030",
-      "fromNode": "route-rag",
-      "fromSide": "right",
-      "toNode": "anchor-lewis2021retrievalaugmentedgenerationknowledgeintensive",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "5"
-    },
-    {
-      "id": "e0031",
-      "fromNode": "theme-06",
-      "fromSide": "right",
-      "toNode": "anchor-dao2022flashattentionfastmemoryefficient",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "2"
-    },
-    {
-      "id": "e0032",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "anchor-dao2022flashattentionfastmemoryefficient",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "2"
-    },
-    {
-      "id": "e0033",
-      "fromNode": "theme-06",
-      "fromSide": "right",
-      "toNode": "anchor-beltagy2020longformerlongdocumenttransformer",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "2"
-    },
-    {
-      "id": "e0034",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "anchor-beltagy2020longformerlongdocumenttransformer",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "2"
-    },
-    {
-      "id": "e0035",
-      "fromNode": "theme-07",
-      "fromSide": "right",
-      "toNode": "anchor-roziere2024codellamaopen",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "1"
-    },
-    {
-      "id": "e0036",
-      "fromNode": "route-evaluation",
-      "fromSide": "right",
-      "toNode": "anchor-roziere2024codellamaopen",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "1"
-    },
-    {
-      "id": "e0037",
-      "fromNode": "theme-09",
-      "fromSide": "right",
-      "toNode": "anchor-touvron2023llama2open",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "4"
-    },
-    {
-      "id": "e0038",
-      "fromNode": "route-open-models",
-      "fromSide": "right",
-      "toNode": "anchor-touvron2023llama2open",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "4"
-    },
-    {
-      "id": "e0039",
-      "fromNode": "theme-09",
-      "fromSide": "right",
-      "toNode": "anchor-grattafiori2024llama3herd",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "4"
-    },
-    {
-      "id": "e0040",
-      "fromNode": "route-open-models",
-      "fromSide": "right",
-      "toNode": "anchor-grattafiori2024llama3herd",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "4"
-    },
-    {
-      "id": "e0041",
-      "fromNode": "theme-09",
-      "fromSide": "right",
-      "toNode": "anchor-deepseek-ai2025deepseekv3technicalreport",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "4"
-    },
-    {
-      "id": "e0042",
-      "fromNode": "route-open-models",
-      "fromSide": "right",
-      "toNode": "anchor-deepseek-ai2025deepseekv3technicalreport",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "4"
-    },
-    {
-      "id": "e0043",
-      "fromNode": "theme-01",
-      "fromSide": "right",
-      "toNode": "anchor-deepseek-ai2025deepseekr1incentivizingreasoning",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "5"
-    },
-    {
-      "id": "e0044",
-      "fromNode": "route-transformer",
-      "fromSide": "right",
-      "toNode": "anchor-deepseek-ai2025deepseekr1incentivizingreasoning",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "5"
-    },
-    {
-      "id": "e0045",
-      "fromNode": "theme-09",
-      "fromSide": "right",
-      "toNode": "anchor-yang2025qwen3technicalreport",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "4"
-    },
-    {
-      "id": "e0046",
-      "fromNode": "route-open-models",
-      "fromSide": "right",
-      "toNode": "anchor-yang2025qwen3technicalreport",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "4"
-    },
-    {
-      "id": "e0047",
-      "fromNode": "theme-08",
-      "fromSide": "right",
-      "toNode": "anchor-openai2024gpt4technicalreport",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "6"
-    },
-    {
-      "id": "e0048",
-      "fromNode": "route-multimodal",
-      "fromSide": "right",
-      "toNode": "anchor-openai2024gpt4technicalreport",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "6"
-    },
-    {
-      "id": "e0049",
-      "fromNode": "theme-07",
-      "fromSide": "right",
-      "toNode": "anchor-chiang2024chatbotarenaopen",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "contains",
-      "color": "1"
-    },
-    {
-      "id": "e0050",
-      "fromNode": "route-evaluation",
-      "fromSide": "right",
-      "toNode": "anchor-chiang2024chatbotarenaopen",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "anchors",
-      "color": "1"
-    },
-    {
-      "id": "e0051",
-      "fromNode": "route-transformer",
-      "fromSide": "right",
-      "toNode": "route-pretraining",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "enables",
-      "color": "5"
-    },
-    {
-      "id": "e0052",
-      "fromNode": "route-pretraining",
-      "fromSide": "right",
-      "toNode": "route-scaling-law",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "scales",
-      "color": "6"
-    },
-    {
-      "id": "e0053",
-      "fromNode": "route-scaling-law",
-      "fromSide": "right",
-      "toNode": "route-instruction-tuning-rlhf",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "enables",
-      "color": "4"
-    },
-    {
-      "id": "e0054",
-      "fromNode": "route-instruction-tuning-rlhf",
-      "fromSide": "right",
-      "toNode": "route-preference-optimization",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "aligns",
-      "color": "4"
-    },
-    {
-      "id": "e0055",
-      "fromNode": "route-pretraining",
-      "fromSide": "right",
-      "toNode": "route-rag",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "extends",
-      "color": "5"
-    },
-    {
-      "id": "e0056",
-      "fromNode": "route-pretraining",
-      "fromSide": "right",
-      "toNode": "route-long-context",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "extends",
-      "color": "2"
-    },
-    {
-      "id": "e0057",
-      "fromNode": "route-long-context",
-      "fromSide": "right",
-      "toNode": "route-efficiency-moe",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "optimizes",
-      "color": "2"
-    },
-    {
-      "id": "e0058",
-      "fromNode": "route-pretraining",
-      "fromSide": "right",
-      "toNode": "route-reasoning",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "enables",
-      "color": "3"
-    },
-    {
-      "id": "e0059",
-      "fromNode": "route-reasoning",
-      "fromSide": "right",
-      "toNode": "route-agent",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "enables",
-      "color": "3"
-    },
-    {
-      "id": "e0060",
-      "fromNode": "route-pretraining",
-      "fromSide": "right",
-      "toNode": "route-multimodal",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "extends",
-      "color": "6"
-    },
-    {
-      "id": "e0061",
-      "fromNode": "route-scaling-law",
-      "fromSide": "right",
-      "toNode": "route-open-models",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "opens",
-      "color": "4"
-    },
-    {
-      "id": "e0062",
-      "fromNode": "route-evaluation",
-      "fromSide": "right",
-      "toNode": "route-reasoning",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "evaluates",
-      "color": "3"
+      "id": "e0a0e9c118a4d901",
+      "fromNode": "4ffc3fd069b1d398",
+      "toNode": "e2b814aa3ee004f9"
     }
   ]
 }

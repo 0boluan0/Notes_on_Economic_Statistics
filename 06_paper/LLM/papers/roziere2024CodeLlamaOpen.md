@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `07 评测与数据`，第一版用于连接 Evaluation, Open Models 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[LLM Evaluation]], [[Open Model Ecosystem]]
+[[LLM 评测]], [[开放模型生态]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/7DWQ9LQS)

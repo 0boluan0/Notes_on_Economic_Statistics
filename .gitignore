@@ -1,1 +1,3 @@
-reports/linking/.state.json
+**/00_inbox/
+!/00_inbox/
+!/00_inbox/**

@@ -1,0 +1,105 @@
+{
+  "nodes": [
+    {
+      "id": "5dc668efe8488419",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 650,
+      "height": 240,
+      "text": "# 经济预测与决策\n\n先定义预测对象、基准和真正的样本外评估，再选择指数平滑、回归或时间序列模型。\n\n**当前学习位置：** 尚未记录。\n\n**下一入口：** [[预测问题、基准方法与评估]]",
+      "color": "4"
+    },
+    {
+      "id": "bd1c3d0df4fb1b82",
+      "type": "file",
+      "x": 700,
+      "y": 0,
+      "width": 360,
+      "height": 240,
+      "file": "02_Economy/08_经济预测与决策/00_课程总览.md",
+      "color": "4"
+    },
+    {
+      "id": "4cfd4d790502f7ee",
+      "type": "file",
+      "x": 0,
+      "y": 360,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/预测问题、基准方法与评估.md"
+    },
+    {
+      "id": "54f2c1ea85f9590c",
+      "type": "text",
+      "x": 470,
+      "y": 360,
+      "width": 590,
+      "height": 320,
+      "text": "## 预测问题、基准方法与评估\n\n**它解决什么：** 在未来尚未发生时定义要预测的对象、期限和决策损失，用真实未见时期判断模型是否比简单基准更有用。\n**具体锚点：** 明日销量和未来一年总销量需要不同模型与误差；随机划分时间数据会把未来信息泄漏给训练集。\n**核心难点：** 拟合残差不是预测误差；评估必须保持时间顺序，并让指标与业务损失和尺度匹配。\n**为什么重要：** 没有基准和外样本评估，复杂模型只是在解释过去。\n**继续：** 先写 forecast target 与 decision，再做 naïve 基准和 rolling-origin 验证；方法见 [[指数平滑、回归与时间序列预测]]。\n\n**简要依据：** Hyndman & Athanasopoulos, [Forecasting: Principles and Practice, 3rd ed.](https://otexts.com/fpp3/)：支持预测流程、基准、评估、ETS、回归与 ARIMA。"
+    },
+    {
+      "id": "827222288054a213",
+      "type": "file",
+      "x": 0,
+      "y": 920,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/指数平滑、回归与时间序列预测.md"
+    },
+    {
+      "id": "dca76ade035f1cc9",
+      "type": "text",
+      "x": 470,
+      "y": 920,
+      "width": 590,
+      "height": 320,
+      "text": "## 指数平滑、回归与时间序列预测\n\n**它解决什么：** 根据序列的水平、趋势、季节、相关和外生驱动选择可解释预测方法，并组合不确定性。\n**具体锚点：** 零售月销量有趋势和年度季节性，ETS 直接更新这些成分；ARIMA 则用差分与自相关建模，两者不是谁完全包含谁。\n**核心难点：** 预测解释变量本身未知时，回归预测必须给其未来值/情景；自动选模仍要诊断残差和结构变化。\n**为什么重要：** 不同方法利用不同可预测结构，基准和时序验证决定是否值得使用。\n**继续：** 先分解结构，再并行比较 ETS、ARIMA 和 dynamic regression；选择依据是外样本与用途。\n\n**简要依据：** Hyndman & Athanasopoulos, [Forecasting: Principles and Practice, 3rd ed.](https://otexts.com/fpp3/)：支持预测流程、基准、评估、ETS、回归与 ARIMA。"
+    },
+    {
+      "id": "e5c624533c856cf9",
+      "type": "text",
+      "x": 170,
+      "y": 740,
+      "width": 720,
+      "height": 120,
+      "text": "先确定目标、时间切分和基准，才能判断更复杂的指数平滑、回归或 ARIMA 是否真的增加样本外价值。",
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "ea15d7f1e020279c",
+      "fromNode": "5dc668efe8488419",
+      "toNode": "bd1c3d0df4fb1b82"
+    },
+    {
+      "id": "5cd0ebe65803f198",
+      "fromNode": "4cfd4d790502f7ee",
+      "fromSide": "right",
+      "toNode": "54f2c1ea85f9590c",
+      "toSide": "left"
+    },
+    {
+      "id": "04c7c31eb7a29e3c",
+      "fromNode": "827222288054a213",
+      "fromSide": "right",
+      "toNode": "dca76ade035f1cc9",
+      "toSide": "left"
+    },
+    {
+      "id": "a3f97f6088d2ef6e",
+      "fromNode": "4cfd4d790502f7ee",
+      "fromSide": "bottom",
+      "toNode": "e5c624533c856cf9",
+      "toSide": "top"
+    },
+    {
+      "id": "76740028e5ae369d",
+      "fromNode": "e5c624533c856cf9",
+      "fromSide": "bottom",
+      "toNode": "827222288054a213",
+      "toSide": "top"
+    }
+  ]
+}

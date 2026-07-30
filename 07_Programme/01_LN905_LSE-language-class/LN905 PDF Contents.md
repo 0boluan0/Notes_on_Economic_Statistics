@@ -5,6 +5,10 @@ aliases:
 
 # LN905 PDF contents
 
+## Current project
+
+- [[LN905 Essay]]
+
 ## 00 Course info
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/First Day 2026.pdf|First Day 2026]]

@@ -1,0 +1,203 @@
+{
+  "nodes": [
+    {
+      "id": "704d475fa59fcfb7",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 650,
+      "height": 240,
+      "text": "# EC400 MathsCamp\n\n补齐后续经济学需要的线性代数、多元优化和拓扑语言，而不是按复习课页码保存。\n\n**当前学习位置：** 尚未记录。\n\n**下一入口：** [[线性方程组与四个基本子空间]]",
+      "color": "4"
+    },
+    {
+      "id": "fec95202f7f20594",
+      "type": "file",
+      "x": 700,
+      "y": 0,
+      "width": 360,
+      "height": 240,
+      "file": "01_Math/08_MathsCamp-EC400/00_课程总览.md",
+      "color": "4"
+    },
+    {
+      "id": "777a0143f0be198c",
+      "type": "file",
+      "x": 0,
+      "y": 360,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/线性方程组与四个基本子空间.md"
+    },
+    {
+      "id": "180d5be7d93c4773",
+      "type": "text",
+      "x": 470,
+      "y": 360,
+      "width": 590,
+      "height": 320,
+      "text": "## 线性方程组与四个基本子空间\n\n**它解决什么：** 判断 $Ax=b$ 是否有解、有多少解，以及矩阵把输入空间中的哪些方向送到输出空间哪里。\n**具体锚点：** 三个方程不一定给出三条独立信息；消元后出现自由变量，意味着解沿某些零空间方向移动而不改变 $Ax$。\n**核心难点：** 行空间、列空间、零空间和左零空间位于不同维度，不能只凭图形印象混用。\n**为什么重要：** 最小二乘、回归识别、Markov 链、优化和数值计算都以秩与子空间为骨架。\n**继续：** 无精确解时进入 [[正交投影与最小二乘]]；研究反复作用时进入 [[行列式、特征值与线性动力系统]]。\n\n**简要依据：** MIT 18.06SC 本地官方 lecture/recitation transcripts、session summaries、习题与解答：支持线性代数的定义、算法、证明与几何解释。"
+    },
+    {
+      "id": "6afe9264283c5405",
+      "type": "file",
+      "x": 0,
+      "y": 920,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/行列式、特征值与线性动力系统.md"
+    },
+    {
+      "id": "a41c95443f914759",
+      "type": "text",
+      "x": 470,
+      "y": 920,
+      "width": 590,
+      "height": 320,
+      "text": "## 行列式、特征值与线性动力系统\n\n**它解决什么：** 识别线性变换对体积、特殊方向和长期动态的作用。\n**具体锚点：** 若 $Ax=\\lambda x$，反复乘 A 只把该方向按 $\\lambda^k$ 缩放；长期行为因此由特征值模控制。\n**核心难点：** 行列式是全局体积因子，特征值是特殊方向缩放；两者相关但不能互相替代。\n**为什么重要：** 稳定性、Markov 稳态、差分方程、PCA 和动态系统都在寻找不混合的模式。\n**继续：** 对称情形转到 [[对称矩阵、正定性与奇异值分解]]；一般换基与 Jordan 结构见 [[线性变换、换基与广义逆]]。\n\n**简要依据：** MIT 18.06SC 本地官方 lecture/recitation transcripts、session summaries、习题与解答：支持线性代数的定义、算法、证明与几何解释。"
+    },
+    {
+      "id": "a10adda08440e745",
+      "type": "text",
+      "x": 170,
+      "y": 740,
+      "width": 720,
+      "height": 120,
+      "text": "线性方程组建立向量空间和秩；特征值进一步描述线性系统在反复作用下的方向与稳定性。",
+      "color": "3"
+    },
+    {
+      "id": "00838e2bde46a278",
+      "type": "file",
+      "x": 0,
+      "y": 1480,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/多元微分与约束优化.md"
+    },
+    {
+      "id": "09b3ff0259ed591e",
+      "type": "text",
+      "x": 470,
+      "y": 1480,
+      "width": 590,
+      "height": 320,
+      "text": "## 多元微分与约束优化\n\n**它解决什么：** 描述多个输入同时变化时函数的局部响应，并在资源或等式约束下寻找最优选择。\n**具体锚点：** 效用取决于两种商品，预算线限制组合；梯度给最快上升方向，最优内点处效用等高线与预算线相切。\n**核心难点：** 偏导只改变一个变量，全微分才组合共同变化；一阶条件是候选，Hessian、约束资格与边界决定结论。\n**为什么重要：** 微观优化、计量比较静态、机器学习和动态模型都使用这套语言。\n**继续：** 无约束先读梯度/Hessian，等式约束再用 Lagrange；局部解随参数变化见隐函数与包络。\n\n**简要依据：** [[01_Math/08_MathsCamp-EC400/01_Revision_Mathematics/Notes/Complete/Revision Maths Notes all.pdf]]：支持 EC400 课程范围、记号与例题。"
+    },
+    {
+      "id": "df2b9e66220bccba",
+      "type": "text",
+      "x": 170,
+      "y": 1300,
+      "width": 720,
+      "height": 120,
+      "text": "线性结构处理一阶近似；多元微分和 Hessian 把分析扩展到非线性目标与约束优化。",
+      "color": "3"
+    },
+    {
+      "id": "ca54e253bf16cbdc",
+      "type": "file",
+      "x": 0,
+      "y": 2040,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/拓扑基础：开集、闭集与连续.md"
+    },
+    {
+      "id": "83ff133c42ca1e9c",
+      "type": "text",
+      "x": 470,
+      "y": 2040,
+      "width": 590,
+      "height": 320,
+      "text": "## 拓扑基础：开集、闭集与连续\n\n**它解决什么：** 不依赖具体坐标公式地表达“靠近”“边界”“极限”和“连续”，为优化与分析提供语言。\n**具体锚点：** 开区间 $(0,1)$ 每个点都能容纳一个仍留在集合内的小邻域，但端点 0、1 是边界点却不属于集合。\n**核心难点：** 开与闭不是互斥日常形容词；集合可以既开又闭，也可二者都不是，判断总是相对于给定空间。\n**为什么重要：** 极值存在、约束集合、收敛和函数连续性的严谨条件都依赖这些概念。\n**继续：** 先从度量空间的球理解开集，再连接闭包、紧致与连续映射。\n\n**简要依据：** [[01_Math/08_MathsCamp-EC400/01_Revision_Mathematics/Notes/Complete/Revision Maths Notes all.pdf]]：支持 EC400 课程范围、记号与例题。"
+    },
+    {
+      "id": "987fc226adc2b8da",
+      "type": "text",
+      "x": 170,
+      "y": 1860,
+      "width": 720,
+      "height": 120,
+      "text": "优化中的连续性、极值存在和邻域语言需要更一般的空间基础，因此最后补上开集、闭集和紧致性。",
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "baa04ddb4eef5c99",
+      "fromNode": "704d475fa59fcfb7",
+      "toNode": "fec95202f7f20594"
+    },
+    {
+      "id": "2f0027f627257940",
+      "fromNode": "777a0143f0be198c",
+      "fromSide": "right",
+      "toNode": "180d5be7d93c4773",
+      "toSide": "left"
+    },
+    {
+      "id": "56eb9fa45516ddc3",
+      "fromNode": "6afe9264283c5405",
+      "fromSide": "right",
+      "toNode": "a41c95443f914759",
+      "toSide": "left"
+    },
+    {
+      "id": "41b0b4f7674a0165",
+      "fromNode": "777a0143f0be198c",
+      "fromSide": "bottom",
+      "toNode": "a10adda08440e745",
+      "toSide": "top"
+    },
+    {
+      "id": "ea9c19bc3f1e4a8b",
+      "fromNode": "a10adda08440e745",
+      "fromSide": "bottom",
+      "toNode": "6afe9264283c5405",
+      "toSide": "top"
+    },
+    {
+      "id": "baca49a6d441e116",
+      "fromNode": "00838e2bde46a278",
+      "fromSide": "right",
+      "toNode": "09b3ff0259ed591e",
+      "toSide": "left"
+    },
+    {
+      "id": "19a2e507f639c206",
+      "fromNode": "6afe9264283c5405",
+      "fromSide": "bottom",
+      "toNode": "df2b9e66220bccba",
+      "toSide": "top"
+    },
+    {
+      "id": "a3b5417b0cb0ea90",
+      "fromNode": "df2b9e66220bccba",
+      "fromSide": "bottom",
+      "toNode": "00838e2bde46a278",
+      "toSide": "top"
+    },
+    {
+      "id": "24385dd95989dc71",
+      "fromNode": "ca54e253bf16cbdc",
+      "fromSide": "right",
+      "toNode": "83ff133c42ca1e9c",
+      "toSide": "left"
+    },
+    {
+      "id": "b6af1b19905350aa",
+      "fromNode": "00838e2bde46a278",
+      "fromSide": "bottom",
+      "toNode": "987fc226adc2b8da",
+      "toSide": "top"
+    },
+    {
+      "id": "72c5cfac556c9197",
+      "fromNode": "987fc226adc2b8da",
+      "fromSide": "bottom",
+      "toNode": "ca54e253bf16cbdc",
+      "toSide": "top"
+    }
+  ]
+}

@@ -17,7 +17,7 @@
       "y": 0,
       "width": 310,
       "height": 100,
-      "text": "## Multimodal\n\n[[Multimodal LLMs]]",
+      "text": "## Multimodal\n\n[[多模态大模型]]",
       "color": "6"
     },
     {
@@ -27,7 +27,7 @@
       "y": 150,
       "width": 310,
       "height": 100,
-      "text": "## Pretraining\n\n[[Pretraining Paradigm]]",
+      "text": "## Pretraining\n\n[[预训练、指令微调与偏好优化]]",
       "color": "5"
     },
     {
@@ -37,7 +37,7 @@
       "y": 300,
       "width": 310,
       "height": 100,
-      "text": "## Scaling Law\n\n[[Scaling Law]]",
+      "text": "## Scaling Law\n\n[[规模化、MoE 与分布式训练]]",
       "color": "6"
     },
     {
@@ -47,7 +47,7 @@
       "y": 450,
       "width": 310,
       "height": 100,
-      "text": "## Open Models\n\n[[Open Model Ecosystem]]",
+      "text": "## Open Models\n\n[[开放模型生态]]",
       "color": "4"
     },
     {
@@ -57,7 +57,7 @@
       "y": 600,
       "width": 310,
       "height": 100,
-      "text": "## Instruction Tuning / RLHF\n\n[[Instruction Tuning and RLHF]]",
+      "text": "## Instruction Tuning / RLHF\n\n[[预训练、指令微调与偏好优化]]",
       "color": "4"
     },
     {

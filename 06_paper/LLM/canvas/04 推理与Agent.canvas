@@ -17,7 +17,7 @@
       "y": 0,
       "width": 310,
       "height": 100,
-      "text": "## Reasoning\n\n[[Reasoning Models]]",
+      "text": "## Reasoning\n\n[[推理模型与 LLM Agent]]",
       "color": "3"
     },
     {
@@ -27,7 +27,7 @@
       "y": 150,
       "width": 310,
       "height": 100,
-      "text": "## Agent\n\n[[Agentic LLMs]]",
+      "text": "## Agent\n\n[[推理模型与 LLM Agent]]",
       "color": "3"
     },
     {
@@ -37,7 +37,7 @@
       "y": 300,
       "width": 310,
       "height": 100,
-      "text": "## Efficiency / MoE\n\n[[LLM Efficiency Engineering]]",
+      "text": "## Efficiency / MoE\n\n[[LLM 推理效率]]",
       "color": "2"
     },
     {

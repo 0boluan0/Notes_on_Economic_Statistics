@@ -15,10 +15,10 @@ tags:
 > [!info] 课程来源与本页定位
 > 本页对应 MIT OCW 18.06SC Fall 2011 的 **Final Course Review** 与 **Final Exam**。它不是公式清单，而是把前三个 Unit 的结构压缩成一套可以实际用于判断、计算与验算的复习系统，并完整解答本地期末试卷的九道题。
 >
-> - 课程总览：[[00_MIT OCW 18.06SC course map|MIT 18.06SC course map]]
-> - Unit I：[[01_Ax = b and the Four Subspaces]]
-> - Unit II：[[02_Least Squares, Determinants and Eigenvalues]]
-> - Unit III：[[03_Positive Definite Matrices and Applications]]
+> - 课程总览：[[00_课程总览|MIT 18.06SC course map]]
+> - Unit I：[[线性方程组与四个基本子空间]]
+> - Unit II：[[正交投影与最小二乘]]
+> - Unit III：[[对称矩阵、正定性与奇异值分解]]
 > - 资料索引：[[MIT_OCW_18.06SC_PDF/index|MIT 18.06SC PDF index]]
 
 ## 本页怎么使用
@@ -48,7 +48,7 @@ $$
 A\in\mathbb F^{m\times n},\qquad x\in\mathbb F^n,\qquad b\in\mathbb F^m,
 $$
 
-其中 $\mathbb F=\mathbb R$ 或 $\mathbb C$。[[Linear system solution structure|线性方程组的解结构]]是
+其中 $\mathbb F=\mathbb R$ 或 $\mathbb C$。[[线性方程组与四个基本子空间|线性方程组的解结构]]是
 
 $$
 Ax=b\text{ 可解}
@@ -63,8 +63,8 @@ $$
 
 因此：
 
-- [[Column Space|列空间]] $C(A)\subseteq\mathbb F^m$ 控制哪些右端 $b$ 可以到达；
-- [[Null Space|零空间]] $N(A)\subseteq\mathbb F^n$ 控制解是否唯一；
+- [[线性方程组与四个基本子空间|列空间]] $C(A)\subseteq\mathbb F^m$ 控制哪些右端 $b$ 可以到达；
+- [[线性方程组与四个基本子空间|零空间]] $N(A)\subseteq\mathbb F^n$ 控制解是否唯一；
 - 行空间 $C(A^*)\subseteq\mathbb F^n$ 与 $N(A)$ 正交；
 - 左零空间 $N(A^*)\subseteq\mathbb F^m$ 与 $C(A)$ 正交。
 
@@ -85,8 +85,8 @@ $$
 
 - 从 RREF 读取主元位置、行空间与零空间；
 - 列空间的基必须回到**原矩阵**选主元列；
-- 若方阵每列都有主元，则 [[Matrix Inverse|逆矩阵]]存在；
-- 无换行消元可组织成 [[LU Decomposition|LU 分解]] $A=LU$；有换行时应写 $PA=LU$。
+- 若方阵每列都有主元，则 [[线性变换、换基与广义逆|逆矩阵]]存在；
+- 无换行消元可组织成 [[线性方程组与四个基本子空间|LU 分解]] $A=LU$；有换行时应写 $PA=LU$。
 
 可逆方阵的核心等价链为
 
@@ -105,7 +105,7 @@ $$
 \min_x\|Ax-b\|^2.
 $$
 
-最近点 $p=A\hat x$ 是 $b$ 在 $C(A)$ 上的[[Orthogonal Projection|正交投影]]，残差
+最近点 $p=A\hat x$ 是 $b$ 在 $C(A)$ 上的[[正交投影与最小二乘|正交投影]]，残差
 
 $$
 e=b-p
@@ -136,13 +136,13 @@ $$
 
 ### 4. 行列式、特征值与动力系统
 
-[[Determinant|行列式]]同时编码三件事：
+[[行列式、特征值与线性动力系统|行列式]]同时编码三件事：
 
 - $\det A=0$ 表示空间被压扁，矩阵奇异；
 - $|\det A|$ 是有向体积缩放因子的绝对值；
 - $\det A$ 等于全部特征值之积（按代数重数计）。
 
-[[Eigenvalues|特征值]]与[[Eigenvectors|特征向量]]满足
+[[行列式、特征值与线性动力系统|特征值]]与[[行列式、特征值与线性动力系统|特征向量]]满足
 
 $$
 Av=\lambda v,\qquad v\ne0.
@@ -167,13 +167,13 @@ A=Q\Lambda Q^T,
 \qquad Q^TQ=I.
 $$
 
-若所有特征值为正，则 $A$ 是[[Positive Definite Matrix|正定矩阵]]，并且
+若所有特征值为正，则 $A$ 是[[对称矩阵、正定性与奇异值分解|正定矩阵]]，并且
 
 $$
 x^TAx>0\qquad(x\ne0).
 $$
 
-任意 $m\times n$ 矩阵都具有[[Singular Value Decomposition|奇异值分解]]
+任意 $m\times n$ 矩阵都具有[[对称矩阵、正定性与奇异值分解|奇异值分解]]
 
 $$
 A=U\Sigma V^T.

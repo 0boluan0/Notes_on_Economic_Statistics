@@ -17,7 +17,7 @@
       "y": 0,
       "width": 310,
       "height": 100,
-      "text": "## Evaluation\n\n[[LLM Evaluation]]",
+      "text": "## Evaluation\n\n[[LLM 评测]]",
       "color": "1"
     },
     {
@@ -27,7 +27,7 @@
       "y": 150,
       "width": 310,
       "height": 100,
-      "text": "## Reasoning\n\n[[Reasoning Models]]",
+      "text": "## Reasoning\n\n[[推理模型与 LLM Agent]]",
       "color": "3"
     },
     {
@@ -37,7 +37,7 @@
       "y": 300,
       "width": 310,
       "height": 100,
-      "text": "## Open Models\n\n[[Open Model Ecosystem]]",
+      "text": "## Open Models\n\n[[开放模型生态]]",
       "color": "4"
     },
     {

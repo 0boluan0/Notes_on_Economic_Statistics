@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `09 开源模型技术报告`，第一版用于连接 Open Models 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Open Model Ecosystem]]
+[[开放模型生态]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/BZUE5EJ2)

@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `08 多模态`，第一版用于连接 Multimodal, Open Models 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Multimodal LLMs]], [[Open Model Ecosystem]]
+[[多模态大模型]], [[开放模型生态]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/8PBZRNFA)

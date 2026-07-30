@@ -1,0 +1,448 @@
+{
+  "nodes": [
+    {
+      "id": "6f3ca363e19623c1",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 650,
+      "height": 240,
+      "text": "# MIT 6.100L\n\n从 Python 执行模型进入抽象、数据、调试、递归、对象、复杂度和计算实验。\n\n**当前学习位置：** 尚未记录。\n\n**下一入口：** [[计算模型、Python 表达式与控制流]]",
+      "color": "4"
+    },
+    {
+      "id": "301dda896627710e",
+      "type": "file",
+      "x": 700,
+      "y": 0,
+      "width": 360,
+      "height": 240,
+      "file": "03_Computer_Science/03_MIT 6.100L/00_课程总览.md",
+      "color": "4"
+    },
+    {
+      "id": "6adcf8c197d01038",
+      "type": "file",
+      "x": 0,
+      "y": 360,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/计算模型、Python 表达式与控制流.md"
+    },
+    {
+      "id": "3b33017638a7cdb5",
+      "type": "text",
+      "x": 470,
+      "y": 360,
+      "width": 590,
+      "height": 320,
+      "text": "## 计算模型、Python 表达式与控制流\n\n**它解决什么：** 把问题写成 Python 对象、表达式和明确控制流，理解程序是状态随语句执行而变化的过程。\n**具体锚点：** `input()` 返回字符串；若要数值比较必须显式转换，否则 `\"10\" < \"2\"` 按字符顺序为真。\n**核心难点：** 对象有类型和值，名称只是绑定；分支只执行一条路径，循环需保证状态推进和终止。\n**为什么重要：** 后续函数、数据结构、测试和算法都假设能准确模拟基本求值。\n**继续：** 用小例子手工 trace 表达式、分支和循环，再写程序。\n\n**简要依据：** MIT 6.100L 本地官方 slides、transcripts、finger exercises 与 problem sets：支持每个概念、示例和课程范围。"
+    },
+    {
+      "id": "fe7dc828516a4ba5",
+      "type": "file",
+      "x": 0,
+      "y": 920,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/浮点数、近似算法与搜索.md"
+    },
+    {
+      "id": "00eae484b3706f4a",
+      "type": "text",
+      "x": 470,
+      "y": 920,
+      "width": 590,
+      "height": 320,
+      "text": "## 浮点数、近似算法与搜索\n\n**它解决什么：** 在计算机不能精确表示所有实数时，控制误差并用逐步缩小候选范围找到近似解。\n**具体锚点：** `0.1 + 0.2` 可能不精确等于 `0.3`，因为二进制浮点无法有限表示多数十进制小数。\n**核心难点：** 终止条件要用容差或区间宽度，不能依赖浮点精确相等；二分法需单调/变号不变量，Newton 法需局部导数信息。\n**为什么重要：** 数值程序的正确性是“误差在可接受范围内”，而非纸笔代数式完全相等。\n**继续：** 先识别表示误差，再比较 guess-and-check、bisection 和 Newton–Raphson。\n\n**简要依据：** MIT 6.100L 本地官方 slides、transcripts、finger exercises 与 problem sets：支持每个概念、示例和课程范围。"
+    },
+    {
+      "id": "a140247c99555e3d",
+      "type": "text",
+      "x": 170,
+      "y": 740,
+      "width": 720,
+      "height": 120,
+      "text": "基本表达式和控制流先建立可执行程序；浮点误差和搜索说明计算机如何近似数学对象。",
+      "color": "3"
+    },
+    {
+      "id": "2a352353b93a1fe1",
+      "type": "file",
+      "x": 0,
+      "y": 1480,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/Python 函数、抽象与高阶函数.md"
+    },
+    {
+      "id": "87db6ec09dc34bf9",
+      "type": "text",
+      "x": 470,
+      "y": 1480,
+      "width": 590,
+      "height": 320,
+      "text": "## Python 函数、抽象与高阶函数\n\n**它解决什么：** 用函数建立可测试接口、控制作用域，并把行为本身作为数据组合。\n**具体锚点：** `map`/自定义高阶函数可接收一个函数并把同一遍历框架用于不同转换，固定控制结构而替换行为。\n**核心难点：** 函数定义时不执行函数体；参数绑定、默认值求值和局部作用域决定调用行为。\n**为什么重要：** 良好抽象减少重复推理，而不是只减少行数。\n**继续：** 先写 contract 和纯函数，再使用 first-class function、closure 与高阶组合。\n\n**简要依据：** MIT 6.100L 本地官方 slides、transcripts、finger exercises 与 problem sets：支持每个概念、示例和课程范围。"
+    },
+    {
+      "id": "7a87a31eaf36da60",
+      "type": "text",
+      "x": 170,
+      "y": 1300,
+      "width": 720,
+      "height": 120,
+      "text": "近似算法写得越长越难验证；函数与高阶函数把步骤封装成有规格的可复用单元。",
+      "color": "3"
+    },
+    {
+      "id": "7e42ed5d52da3fc8",
+      "type": "file",
+      "x": 0,
+      "y": 2040,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/Python 序列、可变性与别名.md"
+    },
+    {
+      "id": "8d733d4d049356e2",
+      "type": "text",
+      "x": 470,
+      "y": 2040,
+      "width": 590,
+      "height": 320,
+      "text": "## Python 序列、可变性与别名\n\n**它解决什么：** 准确判断 tuple、list、string 和 dictionary 中哪些对象可变、哪些名称共享同一对象，以及修改会传播到哪里。\n**具体锚点：** `b = a` 不复制列表；`b.append(...)` 后 a 也看到变化，因为两个名称指向同一对象。\n**核心难点：** 容器不可变不等于其中对象不可变；浅拷贝只复制外层，嵌套元素仍可共享。\n**为什么重要：** 大量“莫名被修改”的 bug、默认参数陷阱和函数副作用都来自别名。\n**继续：** 画对象图而非把变量想成盒子；修改前决定共享、浅拷贝还是深拷贝。\n\n**简要依据：** MIT 6.100L 本地官方 slides、transcripts、finger exercises 与 problem sets：支持每个概念、示例和课程范围。"
+    },
+    {
+      "id": "ceb81409f8ca2795",
+      "type": "text",
+      "x": 170,
+      "y": 1860,
+      "width": 720,
+      "height": 120,
+      "text": "函数处理对象；序列、可变性和别名决定多个名字共享数据时程序状态如何变化。",
+      "color": "3"
+    },
+    {
+      "id": "e9fa2e20914df1df",
+      "type": "file",
+      "x": 0,
+      "y": 2600,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/测试、调试、异常与断言.md"
+    },
+    {
+      "id": "44228a4dfe55b7f6",
+      "type": "text",
+      "x": 470,
+      "y": 2600,
+      "width": 590,
+      "height": 320,
+      "text": "## 测试、调试、异常与断言\n\n**它解决什么：** 用可重复证据发现程序不符合规格的位置，并让预期失败以明确方式传播。\n**具体锚点：** 函数正常输入通过不代表正确；空列表、边界值、重复值和错误类型往往暴露隐含假设。\n**核心难点：** 测试证明发现过的反例，不证明没有 bug；异常用于运行时失败，断言用于程序内部本应成立的不变量。\n**为什么重要：** 没有规格和最小失败案例，调试会退化成随机改代码。\n**继续：** 先写 expected/actual，再二分定位最小失败；修根因后留下能复现的测试。\n\n**简要依据：** MIT 6.100L 本地官方 slides、transcripts、finger exercises 与 problem sets：支持每个概念、示例和课程范围。"
+    },
+    {
+      "id": "ef6062674fefa541",
+      "type": "text",
+      "x": 170,
+      "y": 2420,
+      "width": 720,
+      "height": 120,
+      "text": "状态与分支增加失败路径，因此需要测试、断言、异常和有证据的调试循环。",
+      "color": "3"
+    },
+    {
+      "id": "9408971bf813a0f1",
+      "type": "file",
+      "x": 0,
+      "y": 3160,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/递归与递归数据.md"
+    },
+    {
+      "id": "a7b81627d27d0b45",
+      "type": "text",
+      "x": 470,
+      "y": 3160,
+      "width": 590,
+      "height": 320,
+      "text": "## 递归与递归数据\n\n**它解决什么：** 当问题或数据由“较小的同类结构”组成时，用基本情况和递归步骤直接对应定义。\n**具体锚点：** 嵌套列表的元素可能又是列表；处理一个节点后递归处理子列表比预先猜层数自然。\n**核心难点：** 每次调用必须向基本情况推进；调用栈保存未完成工作，树递归会重复子问题。\n**为什么重要：** 树、文件系统、解析器、分治和搜索的结构天然递归。\n**继续：** 先写规模度量和基本情况，再手画调用树；性能问题区分重复计算与栈深。\n\n**简要依据：** MIT 6.100L 本地官方 slides、transcripts、finger exercises 与 problem sets：支持每个概念、示例和课程范围。"
+    },
+    {
+      "id": "c7995f38fa2649c8",
+      "type": "text",
+      "x": 170,
+      "y": 2980,
+      "width": 720,
+      "height": 120,
+      "text": "递归把问题还原为更小的同类问题，并用调用栈把抽象定义变成执行过程。",
+      "color": "3"
+    },
+    {
+      "id": "0a1d3bbe3a449b29",
+      "type": "file",
+      "x": 0,
+      "y": 3720,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/Python 面向对象、类与继承.md"
+    },
+    {
+      "id": "ad30e12188629d1e",
+      "type": "text",
+      "x": 470,
+      "y": 3720,
+      "width": 590,
+      "height": 320,
+      "text": "## Python 面向对象、类与继承\n\n**它解决什么：** 把状态与操作组合成有清晰不变量的对象，并在真正的“is-a”关系下复用和替换行为。\n**具体锚点：** `Account` 对象同时保存余额和存取规则；直接让任何代码随意改余额会破坏不变量。\n**核心难点：** 类属性与实例属性不同；继承不是代码去重工具，错误层级会产生脆弱耦合。\n**为什么重要：** OOP 的价值是管理状态和接口，不是把每个函数都塞进类。\n**继续：** 先设计对象责任和不变量，再选组合或继承；默认优先组合。\n\n**简要依据：** MIT 6.100L 本地官方 slides、transcripts、finger exercises 与 problem sets：支持每个概念、示例和课程范围。"
+    },
+    {
+      "id": "e7a1fb181ede73a9",
+      "type": "text",
+      "x": 170,
+      "y": 3540,
+      "width": 720,
+      "height": 120,
+      "text": "递归数据和函数仍分散状态；类与继承把数据、不变量和行为组织成抽象数据类型。",
+      "color": "3"
+    },
+    {
+      "id": "e6ca1c458fa0ec29",
+      "type": "file",
+      "x": 0,
+      "y": 4280,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/算法复杂度、排序与哈希.md"
+    },
+    {
+      "id": "c5b417804d294340",
+      "type": "text",
+      "x": 470,
+      "y": 4280,
+      "width": 590,
+      "height": 320,
+      "text": "## 算法复杂度、排序与哈希\n\n**它解决什么：** 估计输入变大时算法所需时间/空间怎样增长，并在顺序、比较和键查找任务中选择合适结构。\n**具体锚点：** 1,000 个元素的 O(n²) 排序约做百万级比较，而 O(n log n) 约万级；增长阶在规模大时主导。\n**核心难点：** Big O 是上界，Theta 才是紧确阶；平均、最坏和摊销复杂度回答不同情景。\n**为什么重要：** 先选正确算法/数据结构，通常比微优化语句收益大得多。\n**继续：** 先定义输入规模和基本操作，再分析循环/递归；排序还要看稳定性、原地性和数据分布。\n\n**简要依据：** MIT 6.100L 本地官方 slides、transcripts、finger exercises 与 problem sets：支持每个概念、示例和课程范围。"
+    },
+    {
+      "id": "ce9b87581bb8696d",
+      "type": "text",
+      "x": 170,
+      "y": 4100,
+      "width": 720,
+      "height": 120,
+      "text": "正确程序还要知道规模增大时是否可用，因此用复杂度比较算法并理解排序与哈希。",
+      "color": "3"
+    },
+    {
+      "id": "f6360cf01007a23a",
+      "type": "file",
+      "x": 0,
+      "y": 4840,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/随机模拟与数据可视化.md"
+    },
+    {
+      "id": "1caffeefc95dd446",
+      "type": "text",
+      "x": 470,
+      "y": 4840,
+      "width": 590,
+      "height": 320,
+      "text": "## 随机模拟与数据可视化\n\n**它解决什么：** 用伪随机重复实验近似难以解析的分布，并用图形把问题、比较和不确定性表达清楚。\n**具体锚点：** 估计复杂事件概率时重复模拟，样本比例会随次数增加稳定，但 Monte Carlo 标准误只按 $1/\\sqrt n$ 缩小。\n**核心难点：** 设 seed 只保证特定生成器/环境下可复现，不证明模型正确；图形必须匹配变量和问题。\n**为什么重要：** 模拟能检验直觉和传播不确定性，可视化让分布与错误比单一均值更可见。\n**继续：** 先验证模拟器对已知小例子正确，再增加次数；每张图只回答一个明确问题。\n\n**简要依据：** MIT 6.100L 本地官方 slides、transcripts、finger exercises 与 problem sets：支持每个概念、示例和课程范围。"
+    },
+    {
+      "id": "274e5b4a41e16faa",
+      "type": "text",
+      "x": 170,
+      "y": 4660,
+      "width": 720,
+      "height": 120,
+      "text": "复杂度预测资源增长；随机模拟和可视化把算法用于无法解析求解的实验，并呈现不确定性。",
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "a5424b2c53f6f8a1",
+      "fromNode": "6f3ca363e19623c1",
+      "toNode": "301dda896627710e"
+    },
+    {
+      "id": "515d57bb112cd677",
+      "fromNode": "6adcf8c197d01038",
+      "fromSide": "right",
+      "toNode": "3b33017638a7cdb5",
+      "toSide": "left"
+    },
+    {
+      "id": "e2d1b89ac88436ed",
+      "fromNode": "fe7dc828516a4ba5",
+      "fromSide": "right",
+      "toNode": "00eae484b3706f4a",
+      "toSide": "left"
+    },
+    {
+      "id": "3cbbf712ed48912b",
+      "fromNode": "6adcf8c197d01038",
+      "fromSide": "bottom",
+      "toNode": "a140247c99555e3d",
+      "toSide": "top"
+    },
+    {
+      "id": "9c25af3bf5a98d93",
+      "fromNode": "a140247c99555e3d",
+      "fromSide": "bottom",
+      "toNode": "fe7dc828516a4ba5",
+      "toSide": "top"
+    },
+    {
+      "id": "82fd8e90609dca71",
+      "fromNode": "2a352353b93a1fe1",
+      "fromSide": "right",
+      "toNode": "87db6ec09dc34bf9",
+      "toSide": "left"
+    },
+    {
+      "id": "84b492fc7df5441e",
+      "fromNode": "fe7dc828516a4ba5",
+      "fromSide": "bottom",
+      "toNode": "7a87a31eaf36da60",
+      "toSide": "top"
+    },
+    {
+      "id": "b5a0b1770927e923",
+      "fromNode": "7a87a31eaf36da60",
+      "fromSide": "bottom",
+      "toNode": "2a352353b93a1fe1",
+      "toSide": "top"
+    },
+    {
+      "id": "6e06613bf4cd1372",
+      "fromNode": "7e42ed5d52da3fc8",
+      "fromSide": "right",
+      "toNode": "8d733d4d049356e2",
+      "toSide": "left"
+    },
+    {
+      "id": "d514c44242076880",
+      "fromNode": "2a352353b93a1fe1",
+      "fromSide": "bottom",
+      "toNode": "ceb81409f8ca2795",
+      "toSide": "top"
+    },
+    {
+      "id": "106b399c4714c2cb",
+      "fromNode": "ceb81409f8ca2795",
+      "fromSide": "bottom",
+      "toNode": "7e42ed5d52da3fc8",
+      "toSide": "top"
+    },
+    {
+      "id": "e5b2a08542bf63cc",
+      "fromNode": "e9fa2e20914df1df",
+      "fromSide": "right",
+      "toNode": "44228a4dfe55b7f6",
+      "toSide": "left"
+    },
+    {
+      "id": "e8c5a54731c4ccdc",
+      "fromNode": "7e42ed5d52da3fc8",
+      "fromSide": "bottom",
+      "toNode": "ef6062674fefa541",
+      "toSide": "top"
+    },
+    {
+      "id": "dd113a8509325bfd",
+      "fromNode": "ef6062674fefa541",
+      "fromSide": "bottom",
+      "toNode": "e9fa2e20914df1df",
+      "toSide": "top"
+    },
+    {
+      "id": "c637f1db4d435295",
+      "fromNode": "9408971bf813a0f1",
+      "fromSide": "right",
+      "toNode": "a7b81627d27d0b45",
+      "toSide": "left"
+    },
+    {
+      "id": "a84cb47eb0fc4391",
+      "fromNode": "e9fa2e20914df1df",
+      "fromSide": "bottom",
+      "toNode": "c7995f38fa2649c8",
+      "toSide": "top"
+    },
+    {
+      "id": "f48fd01cb979cf31",
+      "fromNode": "c7995f38fa2649c8",
+      "fromSide": "bottom",
+      "toNode": "9408971bf813a0f1",
+      "toSide": "top"
+    },
+    {
+      "id": "c50d1954f857a7af",
+      "fromNode": "0a1d3bbe3a449b29",
+      "fromSide": "right",
+      "toNode": "ad30e12188629d1e",
+      "toSide": "left"
+    },
+    {
+      "id": "3706ee475378d6b3",
+      "fromNode": "9408971bf813a0f1",
+      "fromSide": "bottom",
+      "toNode": "e7a1fb181ede73a9",
+      "toSide": "top"
+    },
+    {
+      "id": "cace60093ab28cfa",
+      "fromNode": "e7a1fb181ede73a9",
+      "fromSide": "bottom",
+      "toNode": "0a1d3bbe3a449b29",
+      "toSide": "top"
+    },
+    {
+      "id": "e164cad0ed07f738",
+      "fromNode": "e6ca1c458fa0ec29",
+      "fromSide": "right",
+      "toNode": "c5b417804d294340",
+      "toSide": "left"
+    },
+    {
+      "id": "c1aee9bb9791b114",
+      "fromNode": "0a1d3bbe3a449b29",
+      "fromSide": "bottom",
+      "toNode": "ce9b87581bb8696d",
+      "toSide": "top"
+    },
+    {
+      "id": "1a3f01e4552c3eb6",
+      "fromNode": "ce9b87581bb8696d",
+      "fromSide": "bottom",
+      "toNode": "e6ca1c458fa0ec29",
+      "toSide": "top"
+    },
+    {
+      "id": "8d8f9a4692d8145c",
+      "fromNode": "f6360cf01007a23a",
+      "fromSide": "right",
+      "toNode": "1caffeefc95dd446",
+      "toSide": "left"
+    },
+    {
+      "id": "fae4bcd7963c9602",
+      "fromNode": "e6ca1c458fa0ec29",
+      "fromSide": "bottom",
+      "toNode": "274e5b4a41e16faa",
+      "toSide": "top"
+    },
+    {
+      "id": "a3c967b0c3334434",
+      "fromNode": "274e5b4a41e16faa",
+      "fromSide": "bottom",
+      "toNode": "f6360cf01007a23a",
+      "toSide": "top"
+    }
+  ]
+}

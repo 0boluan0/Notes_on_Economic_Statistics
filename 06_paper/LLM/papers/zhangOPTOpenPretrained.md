@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `09 开源模型技术报告`，第一版用于连接 Open Models, Transformer 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Open Model Ecosystem]], [[Transformer Paradigm]]
+[[开放模型生态]], [[Transformer 与注意力机制]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/EWY7R9LY)

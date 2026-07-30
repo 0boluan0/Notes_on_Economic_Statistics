@@ -1,0 +1,252 @@
+{
+  "nodes": [
+    {
+      "id": "fb2301ffd0a27e8e",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 650,
+      "height": 240,
+      "text": "# 线性代数\n\n从 Ax=b 的可解性建立空间观，再用正交、谱分解和变换处理近似、动力系统与数据。\n\n**当前学习位置：** 尚未记录。\n\n**下一入口：** [[线性方程组与四个基本子空间]]",
+      "color": "4"
+    },
+    {
+      "id": "99a0129902a221dd",
+      "type": "file",
+      "x": 700,
+      "y": 0,
+      "width": 360,
+      "height": 240,
+      "file": "01_Math/02_linear algebra/00_课程总览.md",
+      "color": "4"
+    },
+    {
+      "id": "bd433f9f38c78cd3",
+      "type": "file",
+      "x": 0,
+      "y": 360,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/线性方程组与四个基本子空间.md"
+    },
+    {
+      "id": "a9a0de6eb03ca768",
+      "type": "text",
+      "x": 470,
+      "y": 360,
+      "width": 590,
+      "height": 320,
+      "text": "## 线性方程组与四个基本子空间\n\n**它解决什么：** 判断 $Ax=b$ 是否有解、有多少解，以及矩阵把输入空间中的哪些方向送到输出空间哪里。\n**具体锚点：** 三个方程不一定给出三条独立信息；消元后出现自由变量，意味着解沿某些零空间方向移动而不改变 $Ax$。\n**核心难点：** 行空间、列空间、零空间和左零空间位于不同维度，不能只凭图形印象混用。\n**为什么重要：** 最小二乘、回归识别、Markov 链、优化和数值计算都以秩与子空间为骨架。\n**继续：** 无精确解时进入 [[正交投影与最小二乘]]；研究反复作用时进入 [[行列式、特征值与线性动力系统]]。\n\n**简要依据：** MIT 18.06SC 本地官方 lecture/recitation transcripts、session summaries、习题与解答：支持线性代数的定义、算法、证明与几何解释。"
+    },
+    {
+      "id": "746212e2e778855c",
+      "type": "file",
+      "x": 0,
+      "y": 920,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/正交投影与最小二乘.md"
+    },
+    {
+      "id": "758514de9bbe8d23",
+      "type": "text",
+      "x": 470,
+      "y": 920,
+      "width": 590,
+      "height": 320,
+      "text": "## 正交投影与最小二乘\n\n**它解决什么：** 当方程 $Ax=b$ 无法精确满足时，在列空间中找离 $b$ 最近的可实现向量。\n**具体锚点：** 一条直线通常穿不过所有数据点；最小二乘让残差向量与模型能产生的所有拟合方向正交。\n**核心难点：** 正规方程给出投影条件，但直接计算 $A^TA$ 可能放大数值病态；几何结论和算法选择要分开。\n**为什么重要：** OLS 回归、信号逼近、数据拟合和伪逆都由同一投影结构统一。\n**继续：** 统计解释见 [[OLS 线性回归]]；秩亏或最小范数问题见 [[线性变换、换基与广义逆#Moore–Penrose 伪逆|伪逆]]。\n\n**简要依据：** MIT 18.06SC 本地官方 lecture/recitation transcripts、session summaries、习题与解答：支持线性代数的定义、算法、证明与几何解释。"
+    },
+    {
+      "id": "f9cfbe3298153c02",
+      "type": "text",
+      "x": 170,
+      "y": 740,
+      "width": 720,
+      "height": 120,
+      "text": "解 Ax=b 先确定可解空间；当方程无解时，正交投影把目标移到列空间中并产生最小二乘。",
+      "color": "3"
+    },
+    {
+      "id": "b651eb48808163c8",
+      "type": "file",
+      "x": 0,
+      "y": 1480,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/行列式、特征值与线性动力系统.md"
+    },
+    {
+      "id": "4951f806f62206a4",
+      "type": "text",
+      "x": 470,
+      "y": 1480,
+      "width": 590,
+      "height": 320,
+      "text": "## 行列式、特征值与线性动力系统\n\n**它解决什么：** 识别线性变换对体积、特殊方向和长期动态的作用。\n**具体锚点：** 若 $Ax=\\lambda x$，反复乘 A 只把该方向按 $\\lambda^k$ 缩放；长期行为因此由特征值模控制。\n**核心难点：** 行列式是全局体积因子，特征值是特殊方向缩放；两者相关但不能互相替代。\n**为什么重要：** 稳定性、Markov 稳态、差分方程、PCA 和动态系统都在寻找不混合的模式。\n**继续：** 对称情形转到 [[对称矩阵、正定性与奇异值分解]]；一般换基与 Jordan 结构见 [[线性变换、换基与广义逆]]。\n\n**简要依据：** MIT 18.06SC 本地官方 lecture/recitation transcripts、session summaries、习题与解答：支持线性代数的定义、算法、证明与几何解释。"
+    },
+    {
+      "id": "008e353f5db61250",
+      "type": "text",
+      "x": 170,
+      "y": 1300,
+      "width": 720,
+      "height": 120,
+      "text": "最小二乘关注投影和近似；行列式与特征值转而揭示线性变换如何缩放、分解并反复演化。",
+      "color": "3"
+    },
+    {
+      "id": "2c277d590b45847e",
+      "type": "file",
+      "x": 0,
+      "y": 2040,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/对称矩阵、正定性与奇异值分解.md"
+    },
+    {
+      "id": "7a05490f6118273d",
+      "type": "text",
+      "x": 470,
+      "y": 2040,
+      "width": 590,
+      "height": 320,
+      "text": "## 对称矩阵、正定性与奇异值分解\n\n**它解决什么：** 在最稳定的线性结构中，把二次型、能量、方差和数据压缩统一到正交方向上。\n**具体锚点：** 协方差矩阵是对称半正定的，因此可沿互相正交的主成分方向分解方差。\n**核心难点：** 特征分解要求方阵且对一般矩阵可能不稳定；SVD 对任意矩阵存在，并同时描述输入、输出和奇异值。\n**为什么重要：** 优化、PCA、最小二乘、条件数和低秩近似都在使用这一结构。\n**继续：** 统计降维见 [[主成分分析与因子分析]]；伪逆见 [[线性变换、换基与广义逆]]。\n\n**简要依据：** MIT 18.06SC 本地官方 lecture/recitation transcripts、session summaries、习题与解答：支持线性代数的定义、算法、证明与几何解释。"
+    },
+    {
+      "id": "41b542a0a8291b2a",
+      "type": "text",
+      "x": 170,
+      "y": 1860,
+      "width": 720,
+      "height": 120,
+      "text": "一般矩阵的谱行为可能复杂；对称与正定结构保证实特征值和稳定几何，SVD 再把这一结构推广到任意矩阵。",
+      "color": "3"
+    },
+    {
+      "id": "c8d70b1e2f11caf6",
+      "type": "file",
+      "x": 0,
+      "y": 2600,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/线性变换、换基与广义逆.md"
+    },
+    {
+      "id": "5abbbd7accf88c03",
+      "type": "text",
+      "x": 470,
+      "y": 2600,
+      "width": 590,
+      "height": 320,
+      "text": "## 线性变换、换基与广义逆\n\n**它解决什么：** 区分“抽象线性作用”和“在某组基下写出的矩阵”，并在不可逆或非方阵时定义最佳反解。\n**具体锚点：** 同一个旋转在不同基下矩阵不同，但几何作用不变；伪逆则能给无精确解问题的最小二乘解。\n**核心难点：** 换基矩阵方向容易写反；左逆、右逆和双侧逆对应不同秩条件。\n**为什么重要：** 它把坐标选择、相似变换、SVD、最小二乘和数据压缩连成一体。\n**继续：** 先读换基方向，再读逆的层级；数值结构回到 [[对称矩阵、正定性与奇异值分解#SVD 的三层结构|SVD]]。\n\n**简要依据：** MIT 18.06SC 本地官方 lecture/recitation transcripts、session summaries、习题与解答：支持线性代数的定义、算法、证明与几何解释。"
+    },
+    {
+      "id": "407a76e36c26dc0e",
+      "type": "text",
+      "x": 170,
+      "y": 2420,
+      "width": 720,
+      "height": 120,
+      "text": "这些分解都描述线性变换；换基和广义逆把它们放回不同坐标、非方阵和不可逆问题中。",
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "3dd13066d50da10f",
+      "fromNode": "fb2301ffd0a27e8e",
+      "toNode": "99a0129902a221dd"
+    },
+    {
+      "id": "d2f87897e81c42fc",
+      "fromNode": "bd433f9f38c78cd3",
+      "fromSide": "right",
+      "toNode": "a9a0de6eb03ca768",
+      "toSide": "left"
+    },
+    {
+      "id": "154a90cedd064655",
+      "fromNode": "746212e2e778855c",
+      "fromSide": "right",
+      "toNode": "758514de9bbe8d23",
+      "toSide": "left"
+    },
+    {
+      "id": "0fa5bd99210c5497",
+      "fromNode": "bd433f9f38c78cd3",
+      "fromSide": "bottom",
+      "toNode": "f9cfbe3298153c02",
+      "toSide": "top"
+    },
+    {
+      "id": "26e31e9e561be3ee",
+      "fromNode": "f9cfbe3298153c02",
+      "fromSide": "bottom",
+      "toNode": "746212e2e778855c",
+      "toSide": "top"
+    },
+    {
+      "id": "d6fc1dea79485b3d",
+      "fromNode": "b651eb48808163c8",
+      "fromSide": "right",
+      "toNode": "4951f806f62206a4",
+      "toSide": "left"
+    },
+    {
+      "id": "f559d69ebaef933c",
+      "fromNode": "746212e2e778855c",
+      "fromSide": "bottom",
+      "toNode": "008e353f5db61250",
+      "toSide": "top"
+    },
+    {
+      "id": "6896169fbecfe7a1",
+      "fromNode": "008e353f5db61250",
+      "fromSide": "bottom",
+      "toNode": "b651eb48808163c8",
+      "toSide": "top"
+    },
+    {
+      "id": "4c5c54c34f1b2b53",
+      "fromNode": "2c277d590b45847e",
+      "fromSide": "right",
+      "toNode": "7a05490f6118273d",
+      "toSide": "left"
+    },
+    {
+      "id": "e1056393316666bf",
+      "fromNode": "b651eb48808163c8",
+      "fromSide": "bottom",
+      "toNode": "41b542a0a8291b2a",
+      "toSide": "top"
+    },
+    {
+      "id": "42126520eaf90773",
+      "fromNode": "41b542a0a8291b2a",
+      "fromSide": "bottom",
+      "toNode": "2c277d590b45847e",
+      "toSide": "top"
+    },
+    {
+      "id": "1b4b430dc3461c35",
+      "fromNode": "c8d70b1e2f11caf6",
+      "fromSide": "right",
+      "toNode": "5abbbd7accf88c03",
+      "toSide": "left"
+    },
+    {
+      "id": "03f06a4dca39d7c8",
+      "fromNode": "2c277d590b45847e",
+      "fromSide": "bottom",
+      "toNode": "407a76e36c26dc0e",
+      "toSide": "top"
+    },
+    {
+      "id": "7709929db85a190d",
+      "fromNode": "407a76e36c26dc0e",
+      "fromSide": "bottom",
+      "toNode": "c8d70b1e2f11caf6",
+      "toSide": "top"
+    }
+  ]
+}

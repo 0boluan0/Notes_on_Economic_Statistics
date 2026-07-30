@@ -29,7 +29,7 @@ Justin Sung 把“think on paper”讲成一种学习与理解方法：不要把
 - 链接：https://www.youtube.com/watch?v=tGrMjRqQGVY
 - 可用材料：YouTube 页面标题与官方描述、YouTube oEmbed 元数据、Glasp 截断转录片段、Video Highlight 带时间戳 AI 摘要
 - 素材完整性说明：本次无法取得完整字幕。`yt-dlp` 与 `youtube_transcript_api` 都被 YouTube 登录/限流拦截，Glasp 只公开转录开头，Video Highlight 的 transcript 页需要登录。因此本笔记主要依据官方描述和 Video Highlight 的时间戳摘要整理；涉及具体论证时尽量绑定到可见时间戳，并避免把第三方摘要当成逐字稿。
-- 可靠性说明：Video Highlight 页面明确提示摘要可能有误；因此这篇 fragment 适合作为初步理解材料，后续若要提炼为 `00_factor` 卡片，最好再补一次完整字幕或原视频复核。
+- 可靠性说明：Video Highlight 页面明确提示摘要可能有误；因此这篇 fragment 适合作为初步理解材料，后续若要整合进正式知识文件，最好再补一次完整字幕或原视频复核。
 
 ## 核心问题
 - 为什么把阅读、听课和思考都留在脑子里，会让学习速度下降？
@@ -75,7 +75,7 @@ Justin Sung 把“think on paper”讲成一种学习与理解方法：不要把
 
 09:55 左右的摘要指出，大量书写并不天然提升理解，过多信息反而可能造成新的压倒感。10:18 的摘要提到可以用 AI 工具作为 reference material，而不是把手写笔记当作完整资料库；10:41 又把简单笔记定位为 memory anchors，而不是追求漂亮字迹。
 
-这对当前的知识管理很有用：长笔记适合保存材料，短笔记适合驱动理解。一个 fragment 可以比较长，因为它保留来源；但在真正进入 `00_factor` 时，concept 卡就应该短，framework 卡应该讲边界，procedure 卡才保留步骤。不同笔记层级承担不同任务，不能都写成完整摘抄。
+这对当前的知识管理很有用：Fragment 可以较长，因为它保留来源；纸面或 Canvas 上的临时节点应尽量短，因为它们用于移动和比较。正式知识文件则以“能否独立完成一次快速恢复”为边界，可以在同一文件中同时放直觉、边界和步骤，不必按内容标签拆开。
 
 ### 8. 关键词笔记的认知价值：写少一点，反而逼迫更深处理
 12:55 到 13:29 的摘要进一步解释关键词的价值：像 “examine” 和 “connect” 这样的短词可以增强理解与保留；更重要的是，压缩成关键词比写完整句子需要更多认知加工。完整句子容易滑向转录，关键词则要求你判断“这个段落到底在说什么”。
@@ -122,7 +122,7 @@ Justin Sung 把“think on paper”讲成一种学习与理解方法：不要把
 ### Reference 与 thinking canvas 分离
 - Reference：保存原文、视频摘要、长摘录、资料链接，可以放在 fragment 或资料库里。
 - Thinking canvas：只保留当前理解需要操作的关键词、关系、问题和错误猜测。
-- 输出卡片：等结构稳定后，再拆成 `concept` / `framework` / `procedure` / `system` 等不同角色的 `00_factor` 卡片。
+- 输出知识：等结构稳定后，按共同检索和使用场景整合进一个或少数知识文件；可独立定位的小点先做标题或块，只有出现真正独立用途时才拆文件。
 
 ### 混乱触发器
 当笔记出现以下情况时，不要继续补内容，先重组：
@@ -133,24 +133,24 @@ Justin Sung 把“think on paper”讲成一种学习与理解方法：不要把
 - 新信息不断推翻旧分类，但旧结构还没更新
 
 ## 对我的启发
-- 对 Obsidian vault 来说，这支视频支持“fragment 先保留来源，factor 后提炼知识点”的流程：不要一开始就把视频整理成最终卡片，先用 fragment 保存材料，再用纸面/Canvas 做结构重组。
-- 对 `00_factor` 卡片重构来说，最有价值的是“短”和“重做”：concept 卡不要写成长讲义；framework 卡不要夹步骤；procedure 卡才放执行顺序。每张卡的短，不是偷懒，而是为了让角色更清楚。
+- 对 Obsidian vault 来说，这支视频支持“Fragment 先保留来源，Knowledge 后形成可恢复解释”的流程：不要一开始就把视频整理成最终知识文件，先保存材料，再用纸面或 Canvas 重组结构。
+- 对知识文件重构来说，最有价值的是“重做”而不是机械变短：思考节点保持短，最终文件则把通常一起理解和使用的内容放在一起，并用标题提供原子化入口。
 - 对课程学习来说，听课后不应只补全课堂笔记，而应另开一张纸把关键词重组：哪些是定义、哪些是假设、哪些是推导、哪些是应用条件。
 - 对论文/建模任务来说，开始实验前也可以用类似方法：先把变量、数据、假设、失败模式写成节点，再画关系，而不是直接在代码里边想边改。
 - 对 AI 使用来说，AI 更适合作为 reference 或反问工具；真正的理解仍要经过自己压缩、分组、重画结构。
 
 ## 待提炼知识点
-- `concept`：Thinking on Paper / 纸上思考
-- `concept`：Externalized Cognition / 外化认知
-- `framework`：Wrong-Short-Again Learning Loop / 错误初稿-压缩-重组学习循环
-- `procedure`：Paper Thinking Note-Taking Procedure / 纸上思考笔记流程
-- `system`：Note Messiness Diagnostics / 笔记混乱诊断
-- `framework`：Reference vs Thinking Canvas / 资料库与思考画布分离
-- `writing`：How to Explain a Learning Method from Timestamps / 如何基于时间戳解释学习方法
+- Thinking on Paper / 纸上思考
+- Externalized Cognition / 外化认知
+- Wrong-Short-Again Learning Loop / 错误初稿—压缩—重组学习循环
+- Paper Thinking Note-Taking Procedure / 纸上思考笔记流程
+- Note Messiness Diagnostics / 笔记混乱诊断
+- Reference vs Thinking Canvas / 资料库与思考画布分离
+- How to Explain a Learning Method from Timestamps / 如何基于时间戳解释学习方法
 
 ## 值得继续追问的问题
 - 完整字幕里是否有作者对“短笔记提升记忆”的研究出处？需要找到原始研究，而不是只保留视频摘要中的“research indicates”。
 - “手写”“纸面”“数字画布”在效果上到底有什么差别？核心变量是动作慢、可视化、空间布局，还是低编辑成本？
 - 这套方法和 Obsidian 的双链/Canvas/卡片盒如何结合，才能避免变成另一套复杂工具崇拜？
 - 什么时候不适合纸上思考？例如纯熟练度训练、需要大量反馈的技能、需要记忆精确细节的考试准备，可能需要其他方法配合。
-- 如果要把本 fragment 提炼成 `00_factor`，应该先做一张 framework 卡，还是先做一张 procedure 卡？
+- 这些内容应并入现有的 [[Learning method|学习方法]]，还是已形成足够独立的使用场景，需要单独建立知识文件？

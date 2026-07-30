@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `06 长上下文与效率`，第一版用于连接 Long Context, Efficiency / MoE, Transformer 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Long Context LLMs]], [[LLM Efficiency Engineering]], [[Transformer Paradigm]]
+[[RAG 与长上下文]], [[LLM 推理效率]], [[Transformer 与注意力机制]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/RR7BFZFQ)

@@ -17,7 +17,7 @@
       "y": 0,
       "width": 310,
       "height": 100,
-      "text": "## Long Context\n\n[[Long Context LLMs]]",
+      "text": "## Long Context\n\n[[RAG 与长上下文]]",
       "color": "2"
     },
     {
@@ -27,7 +27,7 @@
       "y": 150,
       "width": 310,
       "height": 100,
-      "text": "## Transformer\n\n[[Transformer Paradigm]]",
+      "text": "## Transformer\n\n[[Transformer 与注意力机制]]",
       "color": "5"
     },
     {
@@ -37,7 +37,7 @@
       "y": 300,
       "width": 310,
       "height": 100,
-      "text": "## Efficiency / MoE\n\n[[LLM Efficiency Engineering]]",
+      "text": "## Efficiency / MoE\n\n[[LLM 推理效率]]",
       "color": "2"
     },
     {
@@ -47,7 +47,7 @@
       "y": 450,
       "width": 310,
       "height": 100,
-      "text": "## Scaling Law\n\n[[Scaling Law]]",
+      "text": "## Scaling Law\n\n[[规模化、MoE 与分布式训练]]",
       "color": "6"
     },
     {

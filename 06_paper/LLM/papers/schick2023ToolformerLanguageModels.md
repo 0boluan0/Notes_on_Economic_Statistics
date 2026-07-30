@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `04 推理与Agent`，第一版用于连接 Reasoning, Agent 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Reasoning Models]], [[Agentic LLMs]]
+[[推理模型与 LLM Agent]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/H3VWITDW)

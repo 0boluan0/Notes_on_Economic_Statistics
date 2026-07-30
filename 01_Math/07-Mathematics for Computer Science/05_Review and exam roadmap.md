@@ -17,12 +17,12 @@ tags:
 
 ## 资料与使用方式
 
-- 课程总览：[[00_MIT OCW 6.042J course map|MIT 6.042J course map]]
+- 课程总览：[[00_课程总览|MIT 6.042J course map]]
 - 原题：[[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_finalexam.pdf#page=1|Final Exam p.1]]
-- Unit 1：[[01_Proofs]]
-- Unit 2：[[02_Structures]]
-- Unit 3：[[03_Counting]]
-- Unit 4：[[04_Probability]]
+- Unit 1：[[数学证明方法]]
+- Unit 2：[[数论、RSA 与图结构]]
+- Unit 3：[[计数、渐近与组合原理]]
+- Unit 4：[[离散概率]]
 
 > [!warning] 答案来源
 > MIT 公开材料没有提供本次考试的官方答案。以下均为**非官方独立题解**；每题附有定义检查、另一种推导或数值/结构验算，不能标作 official solution。
@@ -47,10 +47,10 @@ tags:
 ### Layer 2：把目标翻译成结构
 
 - “对所有 $n$”不是自动用归纳；先看 $n+1$ 情形是否可由更小规模构造。
-- “不可能到达”通常寻找 [[State Machine Invariant|不变量]]。
+- “不可能到达”通常寻找 [[数学证明方法|不变量]]。
 - “至少有一个碰撞”通常寻找对象到盒子的映射。
-- “平均有多少个”优先尝试 [[Indicator Random Variable|指示变量]]与[[Linearity of Expectation|期望线性性]]。
-- “最大偏离概率”先检查变量是否非负、是否已知方差，再选 [[Markov Inequality]] 或 [[Chebyshev Inequality]]。
+- “平均有多少个”优先尝试 [[离散概率|指示变量]]与[[离散概率|期望线性性]]。
+- “最大偏离概率”先检查变量是否非负、是否已知方差，再选 [[离散概率]] 或 [[离散概率]]。
 - “长期分布”先把平稳方程与从初始分布收敛分开；唯一性不等于收敛。
 
 ### Layer 3：选择方法，而不是套关键词

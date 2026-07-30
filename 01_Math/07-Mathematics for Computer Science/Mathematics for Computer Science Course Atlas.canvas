@@ -1,0 +1,203 @@
+{
+  "nodes": [
+    {
+      "id": "2df8331e15f5bbca",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 650,
+      "height": 240,
+      "text": "# Mathematics for Computer Science\n\n用证明方法控制论证，再建立离散结构、计数和概率这三组计算机科学数学工具。\n\n**当前学习位置：** 尚未记录。\n\n**下一入口：** [[数学证明方法]]",
+      "color": "4"
+    },
+    {
+      "id": "5f5e1a45d3605c61",
+      "type": "file",
+      "x": 700,
+      "y": 0,
+      "width": 360,
+      "height": 240,
+      "file": "01_Math/07-Mathematics for Computer Science/00_课程总览.md",
+      "color": "4"
+    },
+    {
+      "id": "52d105b62e3c647d",
+      "type": "file",
+      "x": 0,
+      "y": 360,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/数学证明方法.md"
+    },
+    {
+      "id": "ef84e6fe5c8ff504",
+      "type": "text",
+      "x": 470,
+      "y": 360,
+      "width": 590,
+      "height": 320,
+      "text": "## 数学证明方法\n\n**它解决什么：** 把“看起来是真的”变成从明示定义和已知命题推出结论的可检查论证。\n**具体锚点：** 要证明偶数之和仍为偶数，关键不是列很多例子，而是把偶数写成 $2k$ 并对任意两个对象推导。\n**核心难点：** 不同量词结构决定证明策略；反例能否定全称命题，却不能证明存在之外的普遍结论。\n**为什么重要：** 算法正确性、离散结构和数学建模都依赖清晰处理“任意”“存在”“如果”。\n**继续：** 先翻译逻辑结构，再选直接、逆否、反证、归纳或不变量。\n\n**简要依据：** [[01_Math/07-Mathematics for Computer Science/MIT-6-042j-pdf.pdf]] 与本地 MIT 6.042J OCW 材料：支持证明、离散结构、计数和概率。"
+    },
+    {
+      "id": "40c2afa1f4ec42d3",
+      "type": "file",
+      "x": 0,
+      "y": 920,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/数论、RSA 与图结构.md"
+    },
+    {
+      "id": "ec05e15b0ab3528c",
+      "type": "text",
+      "x": 470,
+      "y": 920,
+      "width": 590,
+      "height": 320,
+      "text": "## 数论、RSA 与图结构\n\n**它解决什么：** 数论研究整数的整除和同余；图论研究对象间连接。二者都把连续细节删去，只保留离散结构。\n**具体锚点：** RSA 用模幂和 Euler/Fermat 性质恢复消息；网络中的最短路、树和匹配则只依赖节点与边。\n**核心难点：** 同余除法需乘法逆元存在；图中的 walk、path、cycle 和连通性不是同一对象。\n**为什么重要：** 密码学、算法、网络、组合优化和机制匹配都使用这些基本结构。\n**继续：** 证明结论时回到 [[数学证明方法]]；随机图或随机游走连接 [[离散概率]]。\n\n**简要依据：** [[01_Math/07-Mathematics for Computer Science/MIT-6-042j-pdf.pdf]] 与本地 MIT 6.042J OCW 材料：支持证明、离散结构、计数和概率。"
+    },
+    {
+      "id": "dc77ccabc6741951",
+      "type": "text",
+      "x": 170,
+      "y": 740,
+      "width": 720,
+      "height": 120,
+      "text": "证明方法保证离散结论可被检验；数论和图论提供随后要证明的具体结构。",
+      "color": "3"
+    },
+    {
+      "id": "6db7907500de9209",
+      "type": "file",
+      "x": 0,
+      "y": 1480,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/计数、渐近与组合原理.md"
+    },
+    {
+      "id": "329b227d341ccbbc",
+      "type": "text",
+      "x": 470,
+      "y": 1480,
+      "width": 590,
+      "height": 320,
+      "text": "## 计数、渐近与组合原理\n\n**它解决什么：** 不逐个枚举地计算有限结构数量，并用渐近语言比较输入变大时的增长速度。\n**具体锚点：** 长度 n 的二进制串有 $2^n$ 个；恰有 k 个 1 的串有 $\\binom nk$ 个，因为只需选择 1 的位置。\n**核心难点：** 加法原理要求情形互斥，乘法原理要求每一步选择数在条件下正确；重复、顺序和不可区分性决定公式。\n**为什么重要：** 概率分母、算法复杂度、离散模型和随机结构都依赖可靠计数。\n**继续：** 先写对象和双射，再选排列组合、隔板、容斥或鸽巢，而不是按关键词套公式。\n\n**简要依据：** [[01_Math/07-Mathematics for Computer Science/MIT-6-042j-pdf.pdf]] 与本地 MIT 6.042J OCW 材料：支持证明、离散结构、计数和概率。"
+    },
+    {
+      "id": "1d20736b506f0d5b",
+      "type": "text",
+      "x": 170,
+      "y": 1300,
+      "width": 720,
+      "height": 120,
+      "text": "结构问题常要求计算对象数量和增长速度，因此从图与数论进入组合计数和渐近分析。",
+      "color": "3"
+    },
+    {
+      "id": "60bf38bdeb473eb4",
+      "type": "file",
+      "x": 0,
+      "y": 2040,
+      "width": 420,
+      "height": 320,
+      "file": "00_Knowledge/离散概率.md"
+    },
+    {
+      "id": "90d39967ca7a27e1",
+      "type": "text",
+      "x": 470,
+      "y": 2040,
+      "width": 590,
+      "height": 320,
+      "text": "## 离散概率\n\n**它解决什么：** 在有限或可数样本空间中计算随机事件、期望与集中程度，并用随机变量压缩复杂结果。\n**具体锚点：** 洗牌后某张牌位置均匀，但两张牌位置不独立；对称性给边际分布，约束决定依赖。\n**核心难点：** 等可能必须由随机机制证明；线性期望不需要独立，而方差相加通常需要控制协方差。\n**为什么重要：** 随机算法、哈希、图、排队和统计抽样都从离散模型开始。\n**继续：** 先明确样本空间和随机机制，再用条件化、指示变量和尾界；连续/一般框架见 [[概率论基础]]。\n\n**简要依据：** [[01_Math/07-Mathematics for Computer Science/MIT-6-042j-pdf.pdf]] 与本地 MIT 6.042J OCW 材料：支持证明、离散结构、计数和概率。"
+    },
+    {
+      "id": "cb93bb87dd85abf2",
+      "type": "text",
+      "x": 170,
+      "y": 1860,
+      "width": 720,
+      "height": 120,
+      "text": "计数把有限可能性量化；离散概率再给这些可能性赋权，并研究随机变量、期望和集中。",
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "152762f3852e0c10",
+      "fromNode": "2df8331e15f5bbca",
+      "toNode": "5f5e1a45d3605c61"
+    },
+    {
+      "id": "25d028325dbcd552",
+      "fromNode": "52d105b62e3c647d",
+      "fromSide": "right",
+      "toNode": "ef84e6fe5c8ff504",
+      "toSide": "left"
+    },
+    {
+      "id": "9280b72c733ffaeb",
+      "fromNode": "40c2afa1f4ec42d3",
+      "fromSide": "right",
+      "toNode": "ec05e15b0ab3528c",
+      "toSide": "left"
+    },
+    {
+      "id": "aa64696de49f9b32",
+      "fromNode": "52d105b62e3c647d",
+      "fromSide": "bottom",
+      "toNode": "dc77ccabc6741951",
+      "toSide": "top"
+    },
+    {
+      "id": "78a882b5f9a0da2a",
+      "fromNode": "dc77ccabc6741951",
+      "fromSide": "bottom",
+      "toNode": "40c2afa1f4ec42d3",
+      "toSide": "top"
+    },
+    {
+      "id": "451e80024137e933",
+      "fromNode": "6db7907500de9209",
+      "fromSide": "right",
+      "toNode": "329b227d341ccbbc",
+      "toSide": "left"
+    },
+    {
+      "id": "83c991a123dff2f1",
+      "fromNode": "40c2afa1f4ec42d3",
+      "fromSide": "bottom",
+      "toNode": "1d20736b506f0d5b",
+      "toSide": "top"
+    },
+    {
+      "id": "7b12fe3e78df4f37",
+      "fromNode": "1d20736b506f0d5b",
+      "fromSide": "bottom",
+      "toNode": "6db7907500de9209",
+      "toSide": "top"
+    },
+    {
+      "id": "e17a8df9dd5a7768",
+      "fromNode": "60bf38bdeb473eb4",
+      "fromSide": "right",
+      "toNode": "90d39967ca7a27e1",
+      "toSide": "left"
+    },
+    {
+      "id": "d7f22f54ae07b8b5",
+      "fromNode": "6db7907500de9209",
+      "fromSide": "bottom",
+      "toNode": "cb93bb87dd85abf2",
+      "toSide": "top"
+    },
+    {
+      "id": "bead151bd354843e",
+      "fromNode": "cb93bb87dd85abf2",
+      "fromSide": "bottom",
+      "toNode": "60bf38bdeb473eb4",
+      "toSide": "top"
+    }
+  ]
+}
