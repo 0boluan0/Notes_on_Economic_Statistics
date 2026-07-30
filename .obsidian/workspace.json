@@ -8,167 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c85c28c2b0b82198",
-            "type": "leaf",
-            "state": {
-              "type": "learning-progress-dashboard-view",
-              "state": {},
-              "icon": "map",
-              "title": "Learning Progress Dashboard"
-            }
-          },
-          {
-            "id": "5f9e91a78c82dc8b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/2026-07-09——Thu.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2026-07-09——Thu"
-            }
-          },
-          {
-            "id": "d70dc680e14fe349",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Math/01_calculus/01_Differentiation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "01_Differentiation"
-            }
-          },
-          {
-            "id": "7b01e61aacb0ac86",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Math/01_calculus/01_Differentiation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "01_Differentiation"
-            }
-          },
-          {
-            "id": "c0f82c11d4b84bdc",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "06_paper/LLM/canvas/01 架构与预训练.canvas",
-                "viewState": {
-                  "x": 750.142889173328,
-                  "y": 267.34757746060836,
-                  "zoom": -0.1511411426339423
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "01 架构与预训练"
-            }
-          },
-          {
-            "id": "df07c574d0184b85",
-            "type": "leaf",
-            "state": {
-              "type": "bases",
-              "state": {
-                "file": "media-lib/index.base",
-                "viewName": "Media Library"
-              },
-              "icon": "list-video",
-              "title": "index"
-            }
-          },
-          {
-            "id": "f974bcb732f2e1b7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01_Math/01_calculus/01_Differentiation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "01_Differentiation"
-            }
-          },
-          {
-            "id": "cd0bc725256642b2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02_Economy/01_Econometrics/12_非平稳时间序列.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "12_非平稳时间序列"
-            }
-          },
-          {
             "id": "9b786fab3b1083a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/Social Media and Well-Being 中文逐段翻译与 summary.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Social Media and Well-Being 中文逐段翻译与 summary"
+            }
+          },
+          {
+            "id": "71dd041cb5dcdecf",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -180,7 +44,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -471,13 +335,18 @@
       "graph:Open graph view": false
     }
   },
-  "active": "9b786fab3b1083a3",
+  "active": "71dd041cb5dcdecf",
   "lastOpenFiles": [
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/PIIS1364661320302515 social media and well being article.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Academic Interaction Roles.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/Contextualiser - Social Media and Well-Being.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/Social Media and Well-Being 中文逐段翻译与 summary.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/PIIS1364661320302515 social media and well being article.pdf",
+    "02_Economy/01_Econometrics/12_非平稳时间序列.md",
+    "01_Math/01_calculus/01_Differentiation.md",
+    "media-lib/index.base",
+    "06_paper/LLM/canvas/01 架构与预训练.canvas",
+    "99_学习情况记录/2026-07-09——Thu.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/Contextualiser - Social Media and Well-Being.md",
     "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Academic Interaction Roles.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading into Writing.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Academic Interaction.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading_into_Writing_AI_Feedback_Workbook.pdf",
@@ -496,8 +365,6 @@
     "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/Everyday English lesson 2026.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/First Day 2026.pdf",
     "99_学习情况记录/2026-07-30——Thu.md",
-    "07_Programme/01_LN905_LSE-language-class/01_LN905_note",
-    "02_Economy/01_Econometrics/12_非平稳时间序列.md",
     "00_factor/00_hub/OLS-hub.canvas",
     "07_Programme/01_LN905_LSE-language-class/02_Academic-Writing/LN905 Week one materials 2026 - B completed.md",
     "07_Programme/01_LN905_LSE-language-class/02_Academic-Writing/LN905 Week one materials 2026.md",
@@ -517,10 +384,7 @@
     "00_factor/00_hub/VaR-hub.md",
     "00_factor/00_hub/DID-hub.md",
     "00_factor/00_hub/Econometrics-hub.md",
-    "00_factor/00_hub/Volatility Modeling-hub.md",
-    "00_factor/00_hub/Time Series Analysis-hub.md",
     "06_paper/LLM/canvas/03 对齐与偏好优化.canvas",
-    "06_paper/LLM/canvas/01 架构与预训练.canvas",
     "01_Math/06_时间序列分析/Time Series Course Atlas.canvas",
     "06_paper/LLM/canvas/02 规模化与模型家族.canvas",
     "06_paper/LLM/canvas/09 开源模型技术报告.canvas",

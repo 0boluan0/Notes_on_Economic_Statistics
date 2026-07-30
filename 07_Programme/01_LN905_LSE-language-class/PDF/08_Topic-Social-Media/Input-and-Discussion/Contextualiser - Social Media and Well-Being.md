@@ -5,7 +5,11 @@ related: "[[Social Media and Well-Being 中文逐段翻译与 summary]]"
 
 # Contextualiser: *Social Media and Well-Being*
 
+- **Location key:** “PDF p.” refers to the file’s page counter; “journal p.” refers to the page number printed at the bottom of the article. In this file, PDF pp. 1–12 correspond to journal pp. 55–66.
+
 ## 1. The printing-press analogy is useful—but historically incomplete
+
+- **Original-text location:** **PDF p. 1 / journal p. 55**, section **“The Puzzle: Does Social Media Impact Well-Being?”**, from the paragraph beginning **“Humanity had flirted with the idea…”** to the paragraph beginning **“Looking back at it now…”**. The *Jikji* correction and the comparison with algorithmic platform design below are external contextual additions; they are not claims made in the original article.
 
 - **How the article uses the analogy:** Kross and colleagues begin with the printing press to reject a simple “technology is good” or “technology is bad” judgement. Printing made knowledge cheaper and easier to circulate, contributing to major intellectual and political changes; it also enabled propaganda, persecution and social conflict. The authors use this history to frame social media as another communication technology whose consequences depend on what people do with it.
 
@@ -22,6 +26,8 @@ related: "[[Social Media and Well-Being 中文逐段翻译与 summary]]"
 - **Why this matters for reading the article:** The historical opening is not decorative. It tells the reader not to ask whether “social media” as a whole are beneficial or harmful. The better question is which platform feature enables which behaviour, for which person, under which social conditions—and what alternative activity or institution that behaviour replaces.
 
 ## 2. The 2020 dispute explains why “the average effect is small” does not end the debate
+
+- **Original-text location:** The debate is introduced on **PDF p. 2 / journal p. 56**, in the opening two paragraphs beginning **“Over the past 15 years…”** and **“To anticipate our conclusion…”**. The small-average-effect argument appears most clearly on **PDF p. 4 / journal p. 58**, under **“So, Where Does this Leave Us?”** and **Box 2, “Meta-Analyses”**, especially the sentence beginning **“One review estimated that overall social media use explains 1%…”**. The two sides of the 2020 exchange are listed as **References 4–5 on PDF p. 10 / journal p. 64**.
 
 - **The immediate academic context:** The article appeared during an influential debate about the size and meaning of the relationship between digital-technology use and adolescent well-being. Jean Twenge and Jonathan Haidt argued that large surveys and broad measures could underestimate serious harm among particular groups, especially adolescent girls and heavy users. Amy Orben and Andrew Przybylski defended their conclusion that the average association was genuinely very small and warned against making causal claims from correlational data. [Twenge and colleagues’ comment](https://www.nature.com/articles/s41562-020-0839-4) · [Orben and Przybylski’s reply](https://www.nature.com/articles/s41562-020-0840-y)
 
@@ -40,6 +46,8 @@ related: "[[Social Media and Well-Being 中文逐段翻译与 summary]]"
 - **Why this matters for reading the article:** The article’s main contribution is not evidence that social media are harmless or harmful. It is a change of question from **“What is the average effect of social media?”** to **“Which person, using which feature, for which motive, experiences which outcome, through which mechanism?”**
 
 ## 3. Self-presentation creates an asymmetry: the same post can help the poster and harm the viewer
+
+- **Original-text location:** **PDF pp. 5–6 / journal pp. 59–60**, section **“Self-Presentation”**, from **“In 1956, Erving Goffman…”** through the concluding sentence about consequences **“for the self but negative implications for others.”** The self-versus-others asymmetry and the limits of the active/passive distinction are restated explicitly in **Box 3 on PDF p. 8 / journal p. 62**.
 
 - **Goffman’s relevant idea:** In *The Presentation of Self in Everyday Life* (1956), sociologist Erving Goffman describes social interaction through a theatrical metaphor. People perform before an audience, manage impressions and present aspects of themselves appropriate to a setting. “Front-stage” conduct is prepared for others, while “back-stage” life contains what is concealed, rehearsed or inconsistent with the public performance. [Overview of Goffman’s framework](https://web.pdx.edu/~tothm/theory/Presentation%20of%20Self.htm)
 
@@ -61,6 +69,8 @@ related: "[[Social Media and Well-Being 中文逐段翻译与 summary]]"
 
 ## 4. Emotional sharing is both a support system and an outrage amplifier
 
+- **Original-text location:** **PDF pp. 6–7 / journal pp. 60–61**, section **“Sharing Emotions”**, from **“Decades of research indicate…”** to the concluding paragraph beginning **“Taken together, these findings…”**. The contrast between supportive active use and harmful active use is also summarised in **Box 3 on PDF p. 8 / journal p. 62**.
+
 - **Rimé’s theory of emotional sharing:** Psychologist Bernard Rimé argues that emotional experiences commonly create a desire to tell other people. Sharing serves at least two kinds of need: **socio-emotional needs**, such as validation, comfort and belonging; and **cognitive needs**, such as understanding what happened, receiving advice and constructing meaning. Emotional disclosure is therefore not merely broadcasting information—it is an attempt at social and psychological regulation. [Rimé, 2009](https://journals.sagepub.com/doi/10.1177/1754073908097189)
 
 - **Why social media can improve well-being:** Platforms make an audience available quickly and can connect users to people beyond their immediate location. Someone facing bereavement, illness, discrimination or a stigmatised identity may find others with similar experiences when equivalent support is unavailable offline. Responses can supply emotional support, practical advice and a sense of belonging. This helps explain why users with depression or social difficulty may sometimes gain more—not less—from particular online communities.
@@ -80,6 +90,8 @@ related: "[[Social Media and Well-Being 中文逐段翻译与 summary]]"
 - **Why this matters for reading the article:** Emotional sharing is the strongest example of the article’s core claim. One stable human motive—the desire to share intense feelings—can generate mutual support, collective action, cyberbullying or polarisation depending on audience, norms and platform design.
 
 ## 5. The deepest research problem is that “social-media use” is often the wrong variable
+
+- **Original-text location:** The evidence problem is developed across **PDF pp. 2–4 / journal pp. 56–58**, section **“The Search for Aggregate Effects”**: first-generation studies on pp. 56–57, the **jingle-jangle problem in Box 1 on p. 57**, and measurement validity plus experiments on p. 58. The authors’ methodological recommendations appear on **PDF pp. 8–9 / journal pp. 62–63**, section **“Moving Forward”**, especially the paragraphs beginning **“Studying psychological processes requires…”** and **“More work is also needed to validate…”**. The later 2023–2024 evidence discussed below is external context published after the original article.
 
 - **First-generation evidence:** Early studies mainly asked people how much they used social media and compared their answers with a general well-being score. These cross-sectional correlations were inconsistent and could not determine direction: social-media behaviour might affect well-being, but loneliness or depression might also change how a person uses a platform.
 
