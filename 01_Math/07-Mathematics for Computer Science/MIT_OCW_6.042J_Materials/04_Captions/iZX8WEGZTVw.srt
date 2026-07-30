@@ -1,0 +1,1555 @@
+1
+00:00:00,167 --> 00:00:02,000
+PROFESSOR: So some of
+the standard questions
+
+2
+00:00:02,000 --> 00:00:04,250
+that we've examined
+already about random graphs
+
+3
+00:00:04,250 --> 00:00:07,320
+are the probability of getting
+from one place to another,
+
+4
+00:00:07,320 --> 00:00:10,339
+or the expected time to get
+from one place to another.
+
+5
+00:00:10,339 --> 00:00:11,880
+But a different kind
+of question that
+
+6
+00:00:11,880 --> 00:00:14,570
+comes up in a fundamental
+way is the probability
+
+7
+00:00:14,570 --> 00:00:16,440
+of being someplace.
+
+8
+00:00:16,440 --> 00:00:18,650
+So let's examine that.
+
+9
+00:00:18,650 --> 00:00:23,950
+Here is the graph with states
+blue, orange, and green
+
+10
+00:00:23,950 --> 00:00:25,550
+that we've seen before.
+
+11
+00:00:25,550 --> 00:00:28,810
+And suppose that I
+start at state B.
+
+12
+00:00:28,810 --> 00:00:34,030
+And I ask, what's the
+probability of being at each
+
+13
+00:00:34,030 --> 00:00:37,090
+of these states after one step?
+
+14
+00:00:37,090 --> 00:00:40,540
+So to start with, I'm
+interested in p B, p O,
+
+15
+00:00:40,540 --> 00:00:43,430
+and p G-- which is the
+probability of being at state
+
+16
+00:00:43,430 --> 00:00:45,460
+B, the probability
+of being at state O,
+
+17
+00:00:45,460 --> 00:00:47,070
+and the probability
+of being at state
+
+18
+00:00:47,070 --> 00:00:50,850
+G. The sum of the
+probabilities is going to be 1.
+
+19
+00:00:50,850 --> 00:00:53,220
+And initially when I tell
+you that I'm at state B,
+
+20
+00:00:53,220 --> 00:00:55,340
+it means the probability
+of being at B is 1,
+
+21
+00:00:55,340 --> 00:00:57,240
+and the other two is 0.
+
+22
+00:00:57,240 --> 00:01:00,380
+And I'm interested in the
+way that these probabilities
+
+23
+00:01:00,380 --> 00:01:02,160
+update after one step.
+
+24
+00:01:02,160 --> 00:01:07,270
+If p prime B is the
+probability of being in state B
+
+25
+00:01:07,270 --> 00:01:10,814
+after one step, and p
+prime O is the probability
+
+26
+00:01:10,814 --> 00:01:13,230
+of being in the orange state
+one step later-- and likewise
+
+27
+00:01:13,230 --> 00:01:15,720
+for green-- what are
+these probabilities?
+
+28
+00:01:15,720 --> 00:01:18,580
+Well it's easy to see just
+reading off this graph
+
+29
+00:01:18,580 --> 00:01:22,500
+that the only place you're
+at is B. So the only way
+
+30
+00:01:22,500 --> 00:01:24,110
+to get probability
+of being somewhere
+
+31
+00:01:24,110 --> 00:01:26,660
+is by following
+an edge out of B.
+
+32
+00:01:26,660 --> 00:01:30,610
+So the probability of being at
+one step at the orange vertex
+
+33
+00:01:30,610 --> 00:01:31,570
+is 1/4.
+
+34
+00:01:31,570 --> 00:01:35,030
+And it's likewise 1/4 for
+being at the green state.
+
+35
+00:01:35,030 --> 00:01:37,930
+And it's 1/2 for staying
+at the blue state.
+
+36
+00:01:37,930 --> 00:01:41,850
+So what we can say is that
+the updated probabilities
+
+37
+00:01:41,850 --> 00:01:43,450
+of being at these
+different states
+
+38
+00:01:43,450 --> 00:01:48,931
+is 1/2, 1/4, and 1/4,
+as we've just reasoned.
+
+39
+00:01:48,931 --> 00:01:49,430
+OK.
+
+40
+00:01:49,430 --> 00:01:51,150
+Let's keep going.
+
+41
+00:01:51,150 --> 00:01:54,450
+Given that the probability
+that I'm at the states blue,
+
+42
+00:01:54,450 --> 00:01:59,980
+orange, and green are given by
+this vector of probabilities,
+
+43
+00:01:59,980 --> 00:02:02,480
+what's the distribution
+after two steps?
+
+44
+00:02:02,480 --> 00:02:07,380
+So let p double-prime B be the
+probability of being at state B
+
+45
+00:02:07,380 --> 00:02:10,930
+after two steps,
+starting from B. Well,
+
+46
+00:02:10,930 --> 00:02:13,780
+the way we can
+figure that out is
+
+47
+00:02:13,780 --> 00:02:16,390
+by using conditional
+probabilities.
+
+48
+00:02:16,390 --> 00:02:19,090
+Let's look at the
+example of calculating
+
+49
+00:02:19,090 --> 00:02:22,740
+the probability of being
+in the orange state two
+
+50
+00:02:22,740 --> 00:02:25,690
+steps after you've
+started at the blue state.
+
+51
+00:02:25,690 --> 00:02:28,600
+So here was the probabilities
+of being at the different states
+
+52
+00:02:28,600 --> 00:02:29,770
+after one step.
+
+53
+00:02:29,770 --> 00:02:31,970
+How do I get to
+the orange state?
+
+54
+00:02:31,970 --> 00:02:36,390
+Well I can get to the orange
+state from the blue state.
+
+55
+00:02:36,390 --> 00:02:39,370
+And so the probability of
+being in the orange state
+
+56
+00:02:39,370 --> 00:02:42,680
+after two steps
+is the probability
+
+57
+00:02:42,680 --> 00:02:48,020
+of being at the blue state after
+one step times the probability
+
+58
+00:02:48,020 --> 00:02:52,600
+that I take this edge
+to the orange state.
+
+59
+00:02:52,600 --> 00:02:57,500
+That is, it's the probability
+of going from B to O-- given
+
+60
+00:02:57,500 --> 00:03:01,740
+that I'm at B-- times
+the probability of being
+
+61
+00:03:01,740 --> 00:03:03,230
+in B after one step.
+
+62
+00:03:03,230 --> 00:03:06,280
+This then is the probability
+of being in O after two steps.
+
+63
+00:03:06,280 --> 00:03:12,560
+And likewise, another
+component of the probability
+
+64
+00:03:12,560 --> 00:03:15,980
+of being at O is that if
+you're at O, and what's
+
+65
+00:03:15,980 --> 00:03:19,220
+the probability of
+going from O to O?
+
+66
+00:03:19,220 --> 00:03:22,660
+And that is this 1/3
+times the probability
+
+67
+00:03:22,660 --> 00:03:24,740
+of being at O at
+all, which is 1/4.
+
+68
+00:03:24,740 --> 00:03:29,660
+And the final case, using again
+the law of total probability,
+
+69
+00:03:29,660 --> 00:03:32,500
+breaking it up into cases,
+the third way that I
+
+70
+00:03:32,500 --> 00:03:34,990
+can get to the orange
+state on step two
+
+71
+00:03:34,990 --> 00:03:38,590
+is by being at the green
+state on step one following
+
+72
+00:03:38,590 --> 00:03:43,556
+the green to O edge-- of
+which there isn't any,
+
+73
+00:03:43,556 --> 00:03:44,930
+so that's going
+to be probability
+
+74
+00:03:44,930 --> 00:03:48,140
+0-- times the probability of
+being at the green state, which
+
+75
+00:03:48,140 --> 00:03:49,770
+is 1/4, but it won't matter.
+
+76
+00:03:49,770 --> 00:03:52,160
+So let's just fill
+in these amounts
+
+77
+00:03:52,160 --> 00:03:53,670
+looking at the first term.
+
+78
+00:03:53,670 --> 00:03:57,580
+The probability of going
+from B to O when you're at B
+
+79
+00:03:57,580 --> 00:04:01,530
+is simply the
+probability of this edge.
+
+80
+00:04:01,530 --> 00:04:04,000
+It's 1/4.
+
+81
+00:04:04,000 --> 00:04:07,375
+And likewise, the
+probability of going from O
+
+82
+00:04:07,375 --> 00:04:10,890
+to O given that you're
+at O is the probability
+
+83
+00:04:10,890 --> 00:04:13,720
+of this edge-- namely 1/3.
+
+84
+00:04:13,720 --> 00:04:14,920
+So we can fill that term in.
+
+85
+00:04:14,920 --> 00:04:19,000
+And finally the probability
+of going from G to O
+
+86
+00:04:19,000 --> 00:04:21,769
+is 0, given that you're
+at G, because there
+
+87
+00:04:21,769 --> 00:04:23,950
+isn't any vertex there.
+
+88
+00:04:23,950 --> 00:04:26,170
+And then you fill in
+those probabilities
+
+89
+00:04:26,170 --> 00:04:27,650
+and do the arithmetic.
+
+90
+00:04:27,650 --> 00:04:31,380
+You come out with
+5/24 probability
+
+91
+00:04:31,380 --> 00:04:34,770
+of being in the orange
+state after two steps.
+
+92
+00:04:34,770 --> 00:04:36,820
+Well the same calculation,
+you can figure out
+
+93
+00:04:36,820 --> 00:04:39,240
+what's the probability of
+being at the blue state
+
+94
+00:04:39,240 --> 00:04:41,030
+or the green step
+after two steps.
+
+95
+00:04:41,030 --> 00:04:42,110
+And there's the answer.
+
+96
+00:04:42,110 --> 00:04:44,420
+There's a 50/50 chance of
+being at the blue state
+
+97
+00:04:44,420 --> 00:04:48,170
+after two steps, 5/24 as
+we saw at the orange state,
+
+98
+00:04:48,170 --> 00:04:52,540
+and the rest of it is
+7/24 is the probability
+
+99
+00:04:52,540 --> 00:04:55,900
+of being at the green state.
+
+100
+00:04:55,900 --> 00:04:56,400
+OK.
+
+101
+00:04:56,400 --> 00:04:58,630
+So what's going on in general?
+
+102
+00:04:58,630 --> 00:05:02,900
+And we can explain how to do
+these calculations by using
+
+103
+00:05:02,900 --> 00:05:04,760
+a little bit of linear algebra.
+
+104
+00:05:04,760 --> 00:05:06,990
+So let's define the
+edge probability
+
+105
+00:05:06,990 --> 00:05:09,970
+matrix of a random
+walk graph is just
+
+106
+00:05:09,970 --> 00:05:13,340
+the adjacency
+matrix of the graph,
+
+107
+00:05:13,340 --> 00:05:16,050
+except that instead of using
+0's and 1's to indicate
+
+108
+00:05:16,050 --> 00:05:19,080
+whether an edge is not
+present or present,
+
+109
+00:05:19,080 --> 00:05:23,600
+I'll use in the I, J
+position of the matrix--
+
+110
+00:05:23,600 --> 00:05:27,190
+the probability of the edge
+that goes from I to J--
+
+111
+00:05:27,190 --> 00:05:31,510
+if there is an edge-- and
+0 if there isn't any edge.
+
+112
+00:05:31,510 --> 00:05:32,640
+Let's look at an example.
+
+113
+00:05:32,640 --> 00:05:34,790
+So here is the way we'd
+fill it in abstractly
+
+114
+00:05:34,790 --> 00:05:37,330
+for our three-state graph.
+
+115
+00:05:37,330 --> 00:05:40,290
+It'll be a 3 by 3 matrix
+with the probabilities
+
+116
+00:05:40,290 --> 00:05:44,700
+of the successive edges in
+the corresponding position.
+
+117
+00:05:44,700 --> 00:05:47,832
+So this is the
+position in the B,
+
+118
+00:05:47,832 --> 00:05:52,580
+B coordinate is the probability
+of the edge from B to B. The O,
+
+119
+00:05:52,580 --> 00:05:55,880
+B coordinate, if you
+think of the columns
+
+120
+00:05:55,880 --> 00:06:00,550
+as labeled blue, orange,
+green; and the rows as labeled
+
+121
+00:06:00,550 --> 00:06:01,790
+blue, orange, green.
+
+122
+00:06:01,790 --> 00:06:04,195
+And this is the orange,
+blue coordinate.
+
+123
+00:06:04,195 --> 00:06:08,580
+And it's the probability
+of the edge from 0 to B.
+
+124
+00:06:08,580 --> 00:06:12,080
+Let's fill in the first
+row, which was-- this
+
+125
+00:06:12,080 --> 00:06:14,390
+is just read directly
+off the graph.
+
+126
+00:06:14,390 --> 00:06:18,210
+It was the edges out of
+B that went from B to B,
+
+127
+00:06:18,210 --> 00:06:20,720
+from B to O, and
+from B to green-- G.
+
+128
+00:06:20,720 --> 00:06:22,220
+And it had those weights.
+
+129
+00:06:22,220 --> 00:06:24,190
+And if I fill in
+the rest of it, I
+
+130
+00:06:24,190 --> 00:06:27,350
+get the edge
+probability matrix for
+
+131
+00:06:27,350 --> 00:06:30,890
+our simple three-state graph.
+
+132
+00:06:30,890 --> 00:06:31,660
+And there it is.
+
+133
+00:06:31,660 --> 00:06:36,070
+So this last one shows the fact
+that there is a certain edge
+
+134
+00:06:36,070 --> 00:06:38,380
+from green to blue.
+
+135
+00:06:38,380 --> 00:06:40,530
+The only place you can
+go from green is to blue,
+
+136
+00:06:40,530 --> 00:06:45,490
+and you can't go to either
+orange or green in one step.
+
+137
+00:06:45,490 --> 00:06:46,110
+OK.
+
+138
+00:06:46,110 --> 00:06:49,000
+So why are we bringing
+up the matrix?
+
+139
+00:06:49,000 --> 00:06:51,900
+Well if you looked at the
+way we updated the state
+
+140
+00:06:51,900 --> 00:06:55,660
+to go from the
+one-step distribution
+
+141
+00:06:55,660 --> 00:06:58,910
+to the two-step distribution,
+it was really a matrix multiply.
+
+142
+00:06:58,910 --> 00:07:01,170
+And in general, to
+do an update, you're
+
+143
+00:07:01,170 --> 00:07:04,330
+just going to do a vector
+matrix multiplication.
+
+144
+00:07:04,330 --> 00:07:08,410
+If you have the probabilities of
+being in the successive states
+
+145
+00:07:08,410 --> 00:07:13,780
+B, O, and G, and you do a vector
+matrix multiplication using
+
+146
+00:07:13,780 --> 00:07:18,080
+the probability
+matrix of the graph,
+
+147
+00:07:18,080 --> 00:07:22,110
+you get the updated
+vector of distributions.
+
+148
+00:07:22,110 --> 00:07:24,480
+And that's easy to check
+just from the definitions,
+
+149
+00:07:24,480 --> 00:07:27,030
+and from the definition
+of vector times matrix,
+
+150
+00:07:27,030 --> 00:07:30,100
+which I assume
+you're familiar with.
+
+151
+00:07:30,100 --> 00:07:34,320
+So now we can ask what's the
+distribution after t steps,
+
+152
+00:07:34,320 --> 00:07:38,290
+starting from some particular
+given distribution-- say,
+
+153
+00:07:38,290 --> 00:07:42,000
+starting at state B, or starting
+at any possible distribution
+
+154
+00:07:42,000 --> 00:07:45,090
+of probabilities to
+the different states.
+
+155
+00:07:45,090 --> 00:07:47,517
+And the way that we can
+figure that out-- so I'm
+
+156
+00:07:47,517 --> 00:07:49,350
+interested in other
+words is the probability
+
+157
+00:07:49,350 --> 00:07:53,340
+of being in O after t
+steps G after t steps in B
+
+158
+00:07:53,340 --> 00:07:56,770
+after t steps, say,
+starting from state B.
+
+159
+00:07:56,770 --> 00:07:59,935
+And what happens also as
+t approaches infinity?
+
+160
+00:07:59,935 --> 00:08:01,920
+And these are sort of
+two basic questions
+
+161
+00:08:01,920 --> 00:08:03,310
+that we're going to be asking.
+
+162
+00:08:03,310 --> 00:08:05,240
+So first of all,
+how do you calculate
+
+163
+00:08:05,240 --> 00:08:07,507
+starting at a given
+distribution p
+
+164
+00:08:07,507 --> 00:08:10,970
+B, p O, p G where you're
+going to be after t steps?
+
+165
+00:08:10,970 --> 00:08:14,570
+Well, you're just
+continually updating, which
+
+166
+00:08:14,570 --> 00:08:19,330
+means multiplying by M t times.
+
+167
+00:08:19,330 --> 00:08:21,700
+So the distribution
+after t steps
+
+168
+00:08:21,700 --> 00:08:24,540
+is gotten by taking the
+initial distribution times
+
+169
+00:08:24,540 --> 00:08:26,200
+the t-th power of M.
+
+170
+00:08:26,200 --> 00:08:28,490
+Now this is actually already
+useful computationally,
+
+171
+00:08:28,490 --> 00:08:31,770
+because it means that since
+you can compute a matrix
+
+172
+00:08:31,770 --> 00:08:35,470
+power by successive
+squarings, you actually
+
+173
+00:08:35,470 --> 00:08:39,710
+only need about log of
+t matrix multiplications
+
+174
+00:08:39,710 --> 00:08:41,720
+in order to be
+able to figure out
+
+175
+00:08:41,720 --> 00:08:46,000
+what's the distribution
+of probabilities
+
+176
+00:08:46,000 --> 00:08:52,200
+after t steps of the graph.
+
+177
+00:08:52,200 --> 00:08:55,662
+Then the crucial concept
+that we want to examine--
+
+178
+00:08:55,662 --> 00:08:57,870
+and we'll make a lot of use
+of in the next video when
+
+179
+00:08:57,870 --> 00:09:00,810
+we talk about a page
+rank-- is the idea
+
+180
+00:09:00,810 --> 00:09:02,680
+of a stationary distribution.
+
+181
+00:09:02,680 --> 00:09:05,000
+So a stationary
+distribution means
+
+182
+00:09:05,000 --> 00:09:09,790
+that once you're in the
+stationary distribution,
+
+183
+00:09:09,790 --> 00:09:10,720
+it's stable.
+
+184
+00:09:10,720 --> 00:09:13,220
+You're going to stay
+in that distribution.
+
+185
+00:09:13,220 --> 00:09:16,620
+You're not going to be
+in any particular state,
+
+186
+00:09:16,620 --> 00:09:20,170
+but you'll have a vector
+of probabilities of being
+
+187
+00:09:20,170 --> 00:09:21,170
+in the different states.
+
+188
+00:09:21,170 --> 00:09:24,300
+And one step later, that
+vector's not going to change.
+
+189
+00:09:24,300 --> 00:09:27,310
+So what it means is that
+the next-step distribution
+
+190
+00:09:27,310 --> 00:09:30,630
+is the same as the
+current distribution.
+
+191
+00:09:30,630 --> 00:09:33,054
+What's the stationary
+distribution here?
+
+192
+00:09:33,054 --> 00:09:34,970
+Well, the way we're going
+to have to calculate
+
+193
+00:09:34,970 --> 00:09:36,630
+that is here's how you update.
+
+194
+00:09:36,630 --> 00:09:41,200
+This is the result of the
+vector matrix multiplication.
+
+195
+00:09:41,200 --> 00:09:42,890
+But let's just spell
+it out in terms
+
+196
+00:09:42,890 --> 00:09:44,560
+of the conditional
+probabilities.
+
+197
+00:09:44,560 --> 00:09:47,030
+After one step, if the
+original distribution
+
+198
+00:09:47,030 --> 00:09:52,150
+is p B, p O, p G, then
+the new probability
+
+199
+00:09:52,150 --> 00:09:53,660
+of being in state
+B, the only way
+
+200
+00:09:53,660 --> 00:09:58,125
+you can get there is by
+following the edge from B
+
+201
+00:09:58,125 --> 00:09:59,710
+to B with probability 1/2.
+
+202
+00:09:59,710 --> 00:10:02,790
+And that's times the
+probability of being at B.
+
+203
+00:10:02,790 --> 00:10:06,030
+And the other way
+you can get to B
+
+204
+00:10:06,030 --> 00:10:09,000
+is by being at the green state.
+
+205
+00:10:09,000 --> 00:10:11,620
+And then one step later
+you're certain to be at B. So
+
+206
+00:10:11,620 --> 00:10:13,730
+that adds a contribution
+of 1 times p G.
+
+207
+00:10:13,730 --> 00:10:17,784
+And likewise for p-- the
+updated probability of being
+
+208
+00:10:17,784 --> 00:10:19,450
+at the orange state
+and the green state.
+
+209
+00:10:19,450 --> 00:10:24,510
+And what we want is that
+these updated probabilities
+
+210
+00:10:24,510 --> 00:10:26,860
+are the same as the ones
+that I'm starting with.
+
+211
+00:10:26,860 --> 00:10:28,700
+That's the definition
+of stability.
+
+212
+00:10:28,700 --> 00:10:31,670
+You update the
+vector p B, p O, p G,
+
+213
+00:10:31,670 --> 00:10:33,740
+and you get the same vector.
+
+214
+00:10:33,740 --> 00:10:35,520
+That's what makes it stable.
+
+215
+00:10:35,520 --> 00:10:37,300
+And of course, a
+side constraint.
+
+216
+00:10:37,300 --> 00:10:39,960
+Since you can always solve a
+system of equations like this
+
+217
+00:10:39,960 --> 00:10:42,810
+by letting all the p's be
+0, which is degenerate,
+
+218
+00:10:42,810 --> 00:10:44,720
+we add the constraint
+that the sum
+
+219
+00:10:44,720 --> 00:10:48,880
+of the probabilities of being
+in the states has to be 1.
+
+220
+00:10:48,880 --> 00:10:53,900
+Well if we solve that simple
+3 by 3 system of equations,
+
+221
+00:10:53,900 --> 00:10:56,840
+then it turns out that the
+stable distribution is there's
+
+222
+00:10:56,840 --> 00:10:59,420
+an 8/15 chance of
+being in state B,
+
+223
+00:10:59,420 --> 00:11:02,210
+a 3/15 chance of
+being in state orange,
+
+224
+00:11:02,210 --> 00:11:06,070
+and a 4/15 chance of
+being in state green.
+
+225
+00:11:06,070 --> 00:11:07,760
+And you should
+check that yourself
+
+226
+00:11:07,760 --> 00:11:13,940
+by asking what's the probability
+of being in p B after one step
+
+227
+00:11:13,940 --> 00:11:15,399
+given these probabilities?
+
+228
+00:11:15,399 --> 00:11:17,190
+And I'm not going to
+talk you through that.
+
+229
+00:11:17,190 --> 00:11:21,020
+But just to verify and
+imprint the idea of stability,
+
+230
+00:11:21,020 --> 00:11:23,350
+that's one that's worth
+stopping the video for a moment
+
+231
+00:11:23,350 --> 00:11:26,650
+to check and do a little
+arithmetic with a pencil
+
+232
+00:11:26,650 --> 00:11:28,370
+and paper.
+
+233
+00:11:28,370 --> 00:11:29,210
+OK.
+
+234
+00:11:29,210 --> 00:11:31,950
+So in general, what
+we're going to do
+
+235
+00:11:31,950 --> 00:11:34,340
+is we're trying to find
+the stationary distribution
+
+236
+00:11:34,340 --> 00:11:38,430
+vector-- call it
+s bar, for vector.
+
+237
+00:11:38,430 --> 00:11:44,200
+And we get this by solving
+the vector matrix equation--
+
+238
+00:11:44,200 --> 00:11:49,050
+that the distribution vector
+times the edge probability
+
+239
+00:11:49,050 --> 00:11:53,100
+matrix is equal to that
+same distribution vector.
+
+240
+00:11:53,100 --> 00:11:55,870
+We want to solve this
+system of equations.
+
+241
+00:11:55,870 --> 00:11:58,510
+If there are n
+states, then this is
+
+242
+00:11:58,510 --> 00:12:01,760
+an n by n system of equations,
+with an additional constraint
+
+243
+00:12:01,760 --> 00:12:05,850
+that we want the norm of
+the stable vector to be 1,
+
+244
+00:12:05,850 --> 00:12:11,050
+because that's to avoid
+the degenerate 0 solution.
+
+245
+00:12:11,050 --> 00:12:14,520
+Well there are some problems
+with stationary distributions
+
+246
+00:12:14,520 --> 00:12:15,720
+that we want to think about.
+
+247
+00:12:15,720 --> 00:12:19,881
+First of all, what happens in
+this example where you have
+
+248
+00:12:19,881 --> 00:12:21,755
+just two states, and
+the probability of being
+
+249
+00:12:21,755 --> 00:12:23,930
+in the first state at 1
+and the second state is 0?
+
+250
+00:12:23,930 --> 00:12:28,370
+Well if you update that
+state, what happens
+
+251
+00:12:28,370 --> 00:12:31,750
+is you just go to the second
+state with probability 1.
+
+252
+00:12:31,750 --> 00:12:33,150
+And you can keep doing that.
+
+253
+00:12:33,150 --> 00:12:36,100
+And there may be a
+stable distribution here,
+
+254
+00:12:36,100 --> 00:12:39,940
+but this particular pattern
+doesn't converge to it.
+
+255
+00:12:39,940 --> 00:12:43,790
+As you go through time,
+at every other step
+
+256
+00:12:43,790 --> 00:12:47,370
+you're at state 1, and every
+other step you're at state 0.
+
+257
+00:12:47,370 --> 00:12:52,800
+But you never get to
+a stable distribution
+
+258
+00:12:52,800 --> 00:12:57,240
+where step after step you
+are at equal probability
+
+259
+00:12:57,240 --> 00:12:58,870
+of being at these two places.
+
+260
+00:12:58,870 --> 00:13:01,067
+I'm assuming here that
+this is a certain edge,
+
+261
+00:13:01,067 --> 00:13:02,150
+and that's a certain edge.
+
+262
+00:13:02,150 --> 00:13:02,830
+It has to be.
+
+263
+00:13:02,830 --> 00:13:04,440
+There's only one edge out.
+
+264
+00:13:04,440 --> 00:13:06,940
+So a stable distribution
+would be 1/2, 1/2.
+
+265
+00:13:06,940 --> 00:13:10,130
+But this thing doesn't
+converge to it.
+
+266
+00:13:10,130 --> 00:13:10,890
+OK.
+
+267
+00:13:10,890 --> 00:13:13,090
+Here's a slightly more
+complicated example,
+
+268
+00:13:13,090 --> 00:13:17,250
+where again assume that all
+the edges are equally likely.
+
+269
+00:13:17,250 --> 00:13:21,520
+There's exactly two edges
+out of each of these vertices
+
+270
+00:13:21,520 --> 00:13:23,860
+so that each edge
+has weight 1/2.
+
+271
+00:13:23,860 --> 00:13:26,810
+And the problem
+with this graph is
+
+272
+00:13:26,810 --> 00:13:29,220
+that when you ask what's
+the stable distribution
+
+273
+00:13:29,220 --> 00:13:33,570
+and, well, if you look
+at it, if you assume
+
+274
+00:13:33,570 --> 00:13:36,260
+that the probability of
+being in the middle is 0,
+
+275
+00:13:36,260 --> 00:13:39,460
+and the two places that you
+get stuck at have probability p
+
+276
+00:13:39,460 --> 00:13:42,230
+and 1 minus p,
+then that's stable,
+
+277
+00:13:42,230 --> 00:13:46,150
+because once you're at this
+state with probability p
+
+278
+00:13:46,150 --> 00:13:50,050
+you're following the one certain
+edge that goes back around
+
+279
+00:13:50,050 --> 00:13:51,260
+to this vertex.
+
+280
+00:13:51,260 --> 00:13:52,720
+And therefore
+there's probability
+
+281
+00:13:52,720 --> 00:13:54,450
+of p of being there
+one step later,
+
+282
+00:13:54,450 --> 00:13:57,000
+and likewise probability
+q of one step later.
+
+283
+00:13:57,000 --> 00:14:00,480
+So the split between p and
+q is a stable distribution
+
+284
+00:14:00,480 --> 00:14:03,770
+for this thing, with
+probability 0 and 0 there.
+
+285
+00:14:03,770 --> 00:14:07,490
+And of course p and q can be any
+real numbers between 0 and 1.
+
+286
+00:14:07,490 --> 00:14:09,720
+So there's actually
+an uncountable number
+
+287
+00:14:09,720 --> 00:14:12,870
+of stable distributions
+for this graph.
+
+288
+00:14:12,870 --> 00:14:16,310
+Problem here is it's
+not strongly connected.
+
+289
+00:14:16,310 --> 00:14:20,540
+And that turns out to be
+a sufficient condition
+
+290
+00:14:20,540 --> 00:14:27,760
+that it's got a single
+stable distribution whenever
+
+291
+00:14:27,760 --> 00:14:29,350
+it's strongly connected.
+
+292
+00:14:29,350 --> 00:14:31,180
+So in general we can
+ask the question,
+
+293
+00:14:31,180 --> 00:14:34,660
+is there always a
+stationary distribution
+
+294
+00:14:34,660 --> 00:14:37,820
+for any random graph? well,
+if the graph is finite, yes,
+
+295
+00:14:37,820 --> 00:14:42,230
+there's guaranteed to be
+a stationary distribution.
+
+296
+00:14:42,230 --> 00:14:43,530
+But is it unique?
+
+297
+00:14:43,530 --> 00:14:45,840
+Well sometimes, sometimes not.
+
+298
+00:14:45,840 --> 00:14:48,660
+If the graph is strongly
+connected, it will be unique.
+
+299
+00:14:48,660 --> 00:14:51,960
+But we've seen examples
+in the previous slide
+
+300
+00:14:51,960 --> 00:14:53,070
+where it's not unique.
+
+301
+00:14:53,070 --> 00:14:55,670
+In fact, it could
+be uncountably many.
+
+302
+00:14:55,670 --> 00:14:59,550
+And another crucial question
+is, does a random walk
+
+303
+00:14:59,550 --> 00:15:04,260
+approach the stable distribution
+no matter how you start?
+
+304
+00:15:04,260 --> 00:15:06,130
+And that first
+example was one where
+
+305
+00:15:06,130 --> 00:15:08,960
+you went between the first
+state and the second state
+
+306
+00:15:08,960 --> 00:15:09,990
+and oscillated.
+
+307
+00:15:09,990 --> 00:15:12,690
+And it never converged on
+the stable distribution
+
+308
+00:15:12,690 --> 00:15:14,160
+of 1/2 and 1/2.
+
+309
+00:15:14,160 --> 00:15:17,000
+In general, it's nice when
+you can say that no matter
+
+310
+00:15:17,000 --> 00:15:20,310
+how you start, after a
+while things stabilize,
+
+311
+00:15:20,310 --> 00:15:23,580
+and you wind up at the
+unique stable distribution.
+
+312
+00:15:23,580 --> 00:15:30,040
+So sometimes it'll be the case
+that every initial distribution
+
+313
+00:15:30,040 --> 00:15:33,040
+will eventually converge
+on the stable one
+
+314
+00:15:33,040 --> 00:15:34,420
+or the stationary one.
+
+315
+00:15:34,420 --> 00:15:35,810
+Sometimes not.
+
+316
+00:15:35,810 --> 00:15:37,470
+And then another
+crucial question
+
+317
+00:15:37,470 --> 00:15:40,920
+will be, how quickly does
+this convergence happen?
+
+318
+00:15:40,920 --> 00:15:44,780
+If we start off at some
+arbitrary probability
+
+319
+00:15:44,780 --> 00:15:46,520
+distribution, or some
+particular state,
+
+320
+00:15:46,520 --> 00:15:49,470
+how long does it take
+before by and large
+
+321
+00:15:49,470 --> 00:15:52,130
+the probabilities that were
+in the different states
+
+322
+00:15:52,130 --> 00:15:55,060
+has become pretty stationary?
+
+323
+00:15:55,060 --> 00:15:57,620
+And the rate at which
+that happens again
+
+324
+00:15:57,620 --> 00:16:01,080
+varies depending on the graph.

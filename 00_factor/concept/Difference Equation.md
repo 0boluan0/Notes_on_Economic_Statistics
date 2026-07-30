@@ -9,6 +9,7 @@ tags:
 - concept
 - 时间序列
 ---
+
 # Difference Equation
 
 ## 先记一句话
@@ -64,3 +65,9 @@ $$
 - [[AR(1) stationarity]]
 - [[Autoregressive Model]]
 - [[Random Walk]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Difference Operator]]、[[02_差分方程Difference Equation]]、[[Lag Operator]]、[[AR(1) stationarity]]、[[Autoregressive Model]]、[[Random Walk]]。

@@ -1,8 +1,10 @@
 ---
 aliases:
+  - Positional Encoding
   - "位置编码"
   - "Position Encoding"
 tags:
+  - concept
   - llm
   - llm/concept
 ---

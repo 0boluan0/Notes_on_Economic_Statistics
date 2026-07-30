@@ -5,9 +5,9 @@ aliases:
 - 隐含期权风险
 - 嵌入期权风险
 tags:
-- concept
-- risk-management
-- banking
+  - concept
+  - risk-management
+  - banking
 ---
 # Implied Option Risk
 
@@ -42,3 +42,6 @@ Implied Option Risk 是客户或发行人的选择权在利率变化时被行使
 - [[Effective Duration]]
 - [[Convexity]]
 - [[Yield Curve Risk]]
+## 符号表达
+
+将本概念记为 $C_{ImpliedOptio}$；使用时先明确对象、条件与输出，再判断 $C$ 是否满足定义。

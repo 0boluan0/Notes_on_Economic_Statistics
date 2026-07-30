@@ -3,9 +3,9 @@ aliases:
 - Market Risk
 - 市场风险
 tags:
-- concept
-- risk-management
-- banking
+  - concept
+  - risk-management
+  - banking
 ---
 # Market Risk
 
@@ -44,3 +44,6 @@ Market Risk 是市场价格因子不利变动导致头寸亏损的风险。
 - [[Stressed VaR]]
 - [[Interest Rate Risk Management-hub]]
 - [[Option Greeks-hub]]
+## 符号表达
+
+将本概念记为 $C_{MarketRisk}$；使用时先明确对象、条件与输出，再判断 $C$ 是否满足定义。

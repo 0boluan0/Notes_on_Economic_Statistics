@@ -8,6 +8,7 @@ tags:
 - procedure
 - econometrics
 - panel-data
+type: procedure
 ---
 # LSDV Estimation
 

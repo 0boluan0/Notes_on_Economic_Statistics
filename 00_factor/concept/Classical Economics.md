@@ -9,6 +9,9 @@ tags:
 - 经济
 - concept
 ---
+
+# Classical Economics
+
 古典经济学是18世纪末到19世纪中期的主流经济学流派，以亚当·斯密、大卫·李嘉图、约翰·穆勒等人为代表。
 
 ## 主要代表人物
@@ -136,6 +139,12 @@ tags:
 ## 相关链接
 [[Adam Smith's Economics|亚当斯密经济学]]
 [[Marginal Revolution|边际革命]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Adam Smith's Economics]]、[[Marginal Revolution]]。
 
 ## 课程笔记反链
 

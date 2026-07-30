@@ -6,8 +6,8 @@ aliases:
 - 矩阵的逆
 - 逆矩阵
 tags:
-- concept
-- 线性代数
+  - concept
+  - 线性代数
 ---
 # Matrix Inverse
 
@@ -86,9 +86,9 @@ $$
 
 ## 来自课程位置
 
-- [[01_Ax = b and the Four Subspaces#Session 1.6 Inverses and transposes|Session 1.6]]：inverse 与 elimination。
-- [[02_Least Squares, Determinants and Eigenvalues#Session 2.7 Cramer's rule, inverse matrix, and volume|Session 2.7]]：inverse formula 与 determinant。
-- [[03_Positive Definite Matrices and Applications#Session 3.8 Left and right inverses; pseudoinverse|Session 3.8]]：普通逆、左右逆与伪逆。
+- [[01_Ax = b and the Four Subspaces#Session 1.4 Multiplication and inverse matrices|Session 1.4]]：inverse 与 elimination。
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.7 Cramer's rule, inverse matrix and volume|Session 2.7]]：inverse formula 与 determinant。
+- [[03_Positive Definite Matrices and Applications#Session 3.8 Left and right inverses and pseudoinverse|Session 3.8]]：普通逆、左右逆与伪逆。
 
 ## 关联卡片
 
@@ -98,6 +98,10 @@ $$
 - [[Invertible Matrix Equivalence Chain]]
 - [[Pseudoinverse]]
 
+
+## 最小例子
+
+把 **Matrix Inverse** 放在最简单的可计算情形中：先给定定义所需的最小输入，再按定义计算输出；若关键关系不成立，就不能把该对象归入本概念。这个检查也能帮助区分相近概念。
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

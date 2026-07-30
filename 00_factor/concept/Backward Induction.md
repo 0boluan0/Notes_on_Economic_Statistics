@@ -8,6 +8,7 @@ tags:
 - concept
 - game-theory
 ---
+
 # Backward Induction
 
 ## 一句话记忆
@@ -45,6 +46,12 @@ Backward Induction 是求解有限完美信息动态博弈的方法。先看最�
 - [[Subgame Perfect Nash Equilibrium]]
 - [[Subgame]]
 - [[Game Theory-hub]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Subgame Perfect Nash Equilibrium]]、[[Perfect Bayesian Equilibrium]]、[[06_扩展性博弈]]、[[Backward Induction Procedure]]、[[Extensive-form Game]]、[[Subgame]]、[[Game Theory-hub]]。
 
 ## 课程笔记反链
 

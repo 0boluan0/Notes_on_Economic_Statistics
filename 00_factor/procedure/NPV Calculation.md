@@ -6,6 +6,7 @@ aliases:
 tags:
 - procedure
 - finance
+type: procedure
 ---
 # NPV Calculation
 

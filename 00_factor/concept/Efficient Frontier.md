@@ -5,7 +5,12 @@ aliases:
 tags:
 - concept
 ---
+
 # Efficient Frontier
+
+## 它是什么
+
+「Efficient Frontier」是指在给定风险下收益最大或给定收益下风险最小的组合集合。
 
 >[!note] 它是什么
 > - 「Efficient Frontier」是指在给定风险下收益最大或给定收益下风险最小的组合集合。
@@ -15,9 +20,19 @@ tags:
 > - 符号/公式：$最小方差：\min w^T\Sigma w s.t. w^T\mu=\bar\mu。$
 > - 最小例子：均值-方差模型的可行前沿曲线。
 >
+## 最小例子
+
+均值-方差模型的可行前沿曲线。
+
 ## 关联卡片
 - [[CAPM Estimation]]
 - [[Mean-Variance Portfolio Optimization]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[CAPM Estimation]]、[[Mean-Variance Portfolio Optimization]]。
 
 ## 课程笔记反链
 

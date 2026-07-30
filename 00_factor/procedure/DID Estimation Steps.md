@@ -9,6 +9,7 @@ tags:
 - procedure
 - econometrics
 - causal-inference
+type: procedure
 ---
 # DID Estimation Steps
 

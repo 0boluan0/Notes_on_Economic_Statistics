@@ -8,7 +8,12 @@ tags:
 - concept
 - public finance
 ---
+
 # 公共资源
+
+## 它是什么
+
+公共资源（Common Resources）是指具有非排他性（non-excludable）但竞争性（rivalrous）的物品或资源。
 
 >[!note] 定义
 >
@@ -152,6 +157,12 @@ Elinor Ostrom 研究表明，社区自主管理可以避免公地悲剧：
 2. **社区自治有效**：本地社区往往比中央政府更了解情况
 3. **多手段结合**：产权 + 管制 + 税收
 4. **国际协作**：跨国资源需要国际制度安排
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Public Goods]]、[[Club Goods]]、[[Externality]]、[[Coase Theorem]]。
 
 ## 课程笔记反链
 

@@ -69,6 +69,10 @@ tags:
 - [[Cobb-Douglas Production Function]]
 - [[Environmental Kuznets Curve]]
 
+## 诊断决策顺序
+
+先确认研究问题与识别假设，再估计基准模型；随后按“设定 → 异方差/自相关 → 共线性/异常值 → 内生性”的顺序诊断。每张 system 卡只负责回答“发现问题后如何判断、修正和复现”，证明链统一回到 proof 卡。
+
 ## 来自课程位置
 
 - [[01_导论]]

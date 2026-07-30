@@ -7,6 +7,7 @@ aliases:
 tags:
 - procedure
 - multivariate statistics
+type: procedure
 ---
 # Two-Sample Hotelling T2 Test
 

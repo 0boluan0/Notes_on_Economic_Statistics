@@ -6,8 +6,8 @@ aliases:
 - 脉冲响应函数
 - 冲击响应函数
 tags:
-- concept
-- 时间序列
+  - concept
+  - 时间序列
 ---
 # Impulse Response Function
 

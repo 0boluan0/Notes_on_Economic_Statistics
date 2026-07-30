@@ -11,6 +11,7 @@ tags:
 - banking
 - regulation
 ---
+
 # Basel Accords
 
 ## 先记一句话
@@ -47,3 +48,9 @@ Basel I 要求总资本 / 风险加权资产不低于 8%，这就是 [[Cooke Rat
 - [[Risk-Weighted Assets]]
 - [[Tier 1 Capital Ratio]]
 - [[Leverage Ratio]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Cooke Ratio]]、[[Risk-Weighted Assets]]、[[Leverage Ratio]]、[[LCR]]、[[NSFR]]、[[16_巴塞尔协议]]、[[15_《巴塞尔协议I II》和 偿付能力法案II]]、[[Basel Capital Adequacy Ratio]]。

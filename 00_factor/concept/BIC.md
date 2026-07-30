@@ -9,6 +9,9 @@ tags:
 - 模型选择
 - concept
 ---
+
+# BIC
+
 BIC（Bayesian Information Criterion，贝叶斯信息准则）又称施瓦茨准则（Schwarz Criterion），是衡量统计模型拟合优度与模型复杂度之间权衡的信息准则。
 
 >[!note] 定义
@@ -58,6 +61,12 @@ $BIC \approx -2 \ln(P(M|data)) + C$
 - AIC不是相合的，但渐近极小化Kullback-Leibler散度（预测准确度）
 
 相关链接: [[AIC]], [[ARMA]], [[VAR Model|VAR]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[AIC]]、[[ARMA]]、[[VAR Model]]。
 
 ## 课程笔记反链
 

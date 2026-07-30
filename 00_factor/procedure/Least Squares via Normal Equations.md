@@ -6,8 +6,18 @@ aliases:
 tags:
 - procedure
 - 线性代数
+type: procedure
 ---
 # Least Squares via Normal Equations
+
+## 输入
+
+- 设计矩阵 $A$ 与观测向量 $b$，以及题目要求的未知量、投影或残差。
+- 若 $A^TA$ 不可逆，需准备秩或伪逆的替代处理。
+
+## 输出
+
+最小二乘解 $\hat{x}$、拟合向量 $p=A\hat{x}$ 与残差 $e=b-p$，并验证 $A^Te=0$。
 
 >[!note] 何时使用
 > - 题目要求 best fit、projection onto column space、least squares，或者给出一个通常无精确解的过定方程组。

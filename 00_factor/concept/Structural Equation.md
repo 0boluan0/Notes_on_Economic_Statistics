@@ -9,6 +9,8 @@ tags:
 - concept
 - 计算机
 ---
+
+# Structural Equation
 结构方程（Structural Equation）是体现经济学理论的方程形式，描述经济变量之间的理论关系。
 
 >[!note] 定义

@@ -5,8 +5,8 @@ aliases:
 - 测量误差
 - 变量测量误差
 tags:
-- concept
-- econometrics
+  - concept
+  - econometrics
 ---
 # Measurement Error
 

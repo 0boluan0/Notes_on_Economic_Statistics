@@ -3,8 +3,8 @@ aliases:
 - Matching Pennies
 - 配对硬币
 tags:
-- concept
-- game-theory
+  - concept
+  - game-theory
 ---
 # Matching Pennies
 

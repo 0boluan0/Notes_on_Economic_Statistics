@@ -1,13 +1,15 @@
 ---
 aliases:
-  - Binomial Theorem
-  - binomial theorem
-  - 二项式定理
-  - 二项式展开
+- Binomial Theorem
+- binomial theorem
+- 二项式定理
+- 二项式展开
 tags:
-  - math/algebra
-  - math/calculus
-  - concept
+- math/algebra
+- math/calculus
+- discrete-mathematics
+- counting
+- concept
 ---
 
 # Binomial Theorem
@@ -80,6 +82,15 @@ $$
 
 - [[Derivative|导数]]
 - [[Difference Quotient|差商]]
+- [[Bijective Counting Principle|双射计数原理]]
+- [[Rule of Sum and Product|加法与乘法计数法则]]
+- [[Stars and Bars|隔板法]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Difference Quotient]]、[[Derivative]]。
 
 ## 课程笔记反链
 

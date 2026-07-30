@@ -6,6 +6,7 @@ aliases:
 tags:
 - framework
 - economics
+type: framework
 ---
 # Fei-Ranis Model
 

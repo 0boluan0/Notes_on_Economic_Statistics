@@ -9,6 +9,8 @@ tags:
 - logit模型
 - concept
 ---
+
+# Odds Ratio
 机会比率（Odds Ratio）是logit模型中常用的解释统计量，表示自变量变化对事件发生概率的相对影响。
 
 >[!note] 定义

@@ -9,6 +9,9 @@ tags:
 - 经济
 - concept
 ---
+
+# Discrete Choice Model
+
 离散选择模型（Discrete Choice Model）用于分析因变量为离散取值（通常是二元或多元）的模型，研究个体在多个离散选项之间的选择行为。
 
 ## 基本设定
@@ -263,6 +266,12 @@ $LR = -2(\ln L_{\text{restricted}} - \ln L_{\text{unrestricted}})$
    - 疾病诊断
 
 相关链接: [[Dummy Variable|虚拟变量]], [[Linear Probability Model|LPM模型]], [[Logit Model|logit模型]], [[Probit Model|probit模型]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Dummy Variable]]、[[Linear Probability Model]]、[[Logit Model]]、[[Probit Model]]。
 
 ## 课程笔记反链
 

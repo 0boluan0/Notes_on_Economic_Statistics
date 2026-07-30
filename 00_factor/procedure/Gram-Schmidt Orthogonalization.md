@@ -7,6 +7,7 @@ aliases:
 tags:
 - procedure
 - 线性代数
+type: procedure
 ---
 # Gram-Schmidt Orthogonalization
 
@@ -81,7 +82,7 @@ $$
 
 ## 来自课程位置
 
-- [[02_Least Squares, Determinants and Eigenvalues#Session 2.4 Orthogonal matrices and Gram-Schmidt|Session 2.4]]：Gram-Schmidt、orthogonal matrix 与 QR。
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.4 Orthogonal matrices and Gram–Schmidt|Session 2.4]]：Gram-Schmidt、orthogonal matrix 与 QR。
 
 ## 关联卡片
 

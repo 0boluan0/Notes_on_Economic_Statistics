@@ -11,149 +11,179 @@ tags:
 
 # MIT OCW 18.06SC course map
 
-## 如果你一时想不起整门课，先看这页
+> [!info] 课程来源
+> 本套笔记对应 MIT OpenCourseWare **18.06SC Linear Algebra, Fall 2011**，由 Gilbert Strang 教授主讲。
+>
+> - [Official syllabus](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/syllabus/)
+> - [Official resource index](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/resource-index/)
+> - [Official problem sets](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/resources/problem-sets/)
+> - [Official exams](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/resources/exams/)
 
-- 这门课不是“很多章节”，而是三条连续主线：
-  - `Ax=b` 与四个基本子空间：先搞清楚什么叫有解、唯一解、自由变量、秩。
-  - 正交与最佳逼近：当精确解不存在时，转到 projection / least squares / QR。
-  - 特征结构与矩阵分解：用 determinant、eigenvalues、positive definite、Jordan、SVD 解释矩阵的长期行为和标准形。
-- 复习顺序默认是：
-  1. 先读本页的 `三条主线` 和 `单元速览`。
-  2. 再跳到对应 unit note 的 `单元速览` 和 `Session 回忆索引`。
-  3. 最后用 [[04_Review and exam roadmap|Review and exam roadmap]] 按题型回收。
+## 从哪里开始
 
-## 课程定位
+- 第一次学习：按 Unit I → Unit II → Unit III → Final 的顺序阅读，每个 Session 完成正文、自检和对应 Homework。
+- 复习某个主题：使用下方“题型入口”直接跳到对应 Unit。
+- 考前复习：进入 [[04_Review and exam roadmap|Final Course Review and Final Exam]]。
+- 查找原始资料：进入 [[MIT_OCW_18.06SC_PDF/index|PDF and transcript index]]。
 
-- 这套笔记对应 MIT OpenCourseWare 的 18.06SC Linear Algebra（Fall 2011），课程骨架以官方 syllabus 为准。
-- 官方 syllabus：<https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/pages/syllabus/>
-- 学完后你应该能把一切题目先翻译成这几个问题之一：
-  - `Ax=b` 有没有解，为什么。
-  - 哪个子空间 / 哪个方向在控制结果。
-  - 当没有精确解时，最佳逼近是什么。
-  - 这个矩阵的长期行为由什么特征结构决定。
-  - 应该用 inverse、least squares、diagonalization、Jordan 还是 SVD。
+## 四篇主笔记
 
-## 三条主线
+| 顺序 | 主笔记 | 核心问题 | 结尾验收 |
+|---|---|---|---|
+| 1 | [[01_Ax = b and the Four Subspaces]] | $Ax=b$ 何时有解、何时唯一，秩与四个基本子空间怎样统一这些现象 | Exam 1 |
+| 2 | [[02_Least Squares, Determinants and Eigenvalues]] | 无精确解时如何最佳逼近；方阵怎样缩放体积并保留特殊方向 | Exam 2 |
+| 3 | [[03_Positive Definite Matrices and Applications]] | 对称、正定、Jordan、SVD 与伪逆怎样描述更一般的矩阵 | Exam 3 |
+| 4 | [[04_Review and exam roadmap]] | 把全课程压成题型判断系统，并完成九道 Final Exam | Final Exam |
 
-### 主线一：从解方程到子空间结构
+## 全课程的结构主线
 
-- 起点：[[01_Ax = b and the Four Subspaces|Unit I]]
-- 核心问题：什么决定 `Ax=b` 的可解性、唯一性与自由度。
-- 必会语言：pivot、rank、nullity、column space、null space、basis、dimension。
-- 看到这类题时要先想到：
-  - `b` 是否在 [[Column Space]] 里。
-  - 解是否等于“particular solution + [[Null Space]]”。
-  - 该矩阵的四个基本子空间分别在哪个空间里。
+### 主线 1：存在性与唯一性
 
-### 主线二：从正交到最佳逼近
+设 $A\in\mathbb F^{m\times n}$。求解 $Ax=b$ 时必须把两个问题分开：
 
-- 起点：[[02_Least Squares, Determinants and Eigenvalues|Unit II 前半]]
-- 核心问题：原系统无解时，怎样找到最佳近似；为什么正交是最佳逼近的语言。
-- 必会语言：[[Orthogonality]]、[[Orthogonal Projection]]、[[Least Squares]]、[[Projection Matrix]]、[[Gram-Schmidt Orthogonalization]]、QR。
-- 看到这类题时要先想到：
-  - 误差必须与目标子空间正交。
-  - 正规方程来自 `A^T(b-A\hat{x})=0`。
-  - 如果题目在问“best fit / closest / minimum error”，几乎都该走 projection / least squares 路线。
+$$
+b\in C(A)
+\quad\Longleftrightarrow\quad
+\text{至少有一个解},
+$$
 
-### 主线三：从不变量到矩阵分解
+$$
+N(A)=\{0\}
+\quad\Longleftrightarrow\quad
+\text{相容时解唯一}.
+$$
 
-- 起点：[[02_Least Squares, Determinants and Eigenvalues|Unit II 后半]] + [[03_Positive Definite Matrices and Applications|Unit III]]
-- 核心问题：矩阵如何缩放体积、保留方向、决定长期行为，以及在一般情形下如何被标准化。
-- 必会语言：[[Determinant]]、[[Eigenvalues]]、[[Diagonalization]]、[[Matrix Exponential]]、[[Positive Definite Matrix]]、[[Jordan Form]]、[[Singular Value Decomposition]]、[[Pseudoinverse]]。
-- 看到这类题时要先想到：
-  - determinant 管体积和奇异性。
-  - eigen / diagonalization 管反复作用和动力系统。
-  - symmetric / positive definite 是“最好处理”的矩阵。
-  - 一般矩阵最后统一到 SVD 与 pseudoinverse。
+消元负责计算，[[Column Space|列空间]]与[[Null Space|零空间]]负责解释。
 
-## 单元速览
+### 主线 2：精确解到最佳近似
 
-| Unit | 你在解决什么问题 | 你最后应该会什么 | 主笔记 |
-| --- | --- | --- | --- |
-| I | 什么样的线性系统有解、为什么不唯一、自由度从哪来 | 消元、读主元与自由变量、解释四个基本子空间 | [[01_Ax = b and the Four Subspaces]] |
-| II | 没有精确解时怎样做最佳逼近；方阵有哪些重要不变量 | projection / least squares / QR / determinant / eigen / matrix exponential | [[02_Least Squares, Determinants and Eigenvalues]] |
-| III | 怎样把前两单元统一到更强的结构视角 | positive definite、similarity / Jordan、SVD、linear transformation、change of basis、pseudoinverse | [[03_Positive Definite Matrices and Applications]] |
+若 $b\notin C(A)$，方程无解，但仍可寻找最接近 $b$ 的列空间向量：
 
-## Session 回忆索引
+$$
+p=A\hat x,
+\qquad
+A^T(b-A\hat x)=0.
+$$
 
-### Unit I：Ax = b and the Four Subspaces
+这条线依次经过正交、投影、[[Least Squares|最小二乘]]、Gram--Schmidt 与 QR。
 
-- 1.1 几何图像：row picture / column picture / matrix picture。
-- 1.2 课程路线图：为什么 elimination、subspace、orthogonality、eigen、SVD 会串成一门课。
-- 1.3-1.5 算法线：消元、主元、LU、可逆性。
-- 1.6-1.10 结构线：vector spaces、column space、null space、special solutions、basis、dimension。
-- 1.11-1.13 收束：four fundamental subspaces、rank-1、graphs / networks / incidence matrices。
-- 1.14 考前闭环：把“解结构 -> 子空间 -> 维数 -> 网络”串成一套解释。
+### 主线 3：反复作用与自然坐标
+
+[[Eigenvalues|特征值]]寻找在 $A$ 作用下方向不变的向量；对角化把矩阵幂和 $e^{At}$ 解耦。对称矩阵拥有正交特征基，缺陷方阵需要 Jordan 结构，而任意矩形矩阵最终都可使用 [[Singular Value Decomposition|SVD]]。
+
+### 主线 4：同一个矩阵的四种身份
+
+矩阵可以同时被看作：
+
+1. 线性方程组的系数；
+2. 一组列向量；
+3. 线性变换在给定基下的坐标表示；
+4. 将输入空间的方向拉伸、旋转、压扁到输出空间的规则。
+
+真正理解线性代数，意味着能在这四种语言之间切换，而不是只会执行矩阵运算。
+
+## 官方课程顺序
+
+### Unit I：$Ax=b$ and the Four Subspaces
+
+> [!warning] Unit I 的文件编号不是学习顺序
+> `Ses1.13` 是 Overview，官网把它放在 Geometry 后、Elimination 前。不能把本地 PDF 按文件名机械排序。
+
+| 笔记位置 | 官方主题 | 本地 summary | 作业 |
+|---:|---|---|---|
+| 1.1 | The Geometry of Linear Equations | `Ses1.1` | `Ses1.1` |
+| 1.2 | An Overview of Key Ideas | `Ses1.13` | 无 |
+| 1.3 | Elimination with Matrices | `Ses1.2` | `Ses1.2` |
+| 1.4 | Multiplication and Inverse Matrices | `Ses1.3` | `Ses1.3` |
+| 1.5 | Factorization into $A=LU$ | `Ses1.4` | `Ses1.4` |
+| 1.6 | Transposes, Permutations, Vector Spaces | `Ses1.5` | `Ses1.5` |
+| 1.7 | Column Space and Nullspace | `Ses1.6` | `Ses1.6` |
+| 1.8 | Solving $Ax=0$ | `Ses1.7` | `Ses1.7` |
+| 1.9 | Solving $Ax=b$ | `Ses1.8` | `Ses1.8` |
+| 1.10 | Independence, Basis and Dimension | `Ses1.9` | `Ses1.9` |
+| 1.11 | Four Fundamental Subspaces | `Ses1.10` | `Ses1.10` |
+| 1.12 | Matrix Spaces; Rank 1; Small World Graphs | `Ses1.11` | `Ses1.11` |
+| 1.13 | Graphs, Networks, Incidence Matrices | `Ses1.12` | `Ses1.12` |
+| 1.14 | Exam 1 Review | `Ses1.14` | 无 |
+| Exam 1 | Unit 1 Exam | `ex1/ex1s` | 完整题解在 Unit I |
 
 ### Unit II：Least Squares, Determinants and Eigenvalues
 
-- 2.1-2.4 正交主线：orthogonality -> projection -> least squares -> Gram-Schmidt / QR。
-- 2.5-2.7 determinant 主线：三条定义性性质、cofactor、inverse 与 volume。
-- 2.8-2.10 eigen 主线：eigenvalues -> diagonalization -> powers of A / $e^{At}$。
-- 2.11 应用收束：Markov / Fourier 都是在“选对基底”后解耦。
-- 2.12 考前闭环：题型在 projection、determinant、eigen 三块里来回切。
+| 笔记位置 | 官方主题 |
+|---:|---|
+| 2.1 | Orthogonal Vectors and Subspaces |
+| 2.2 | Projections onto Subspaces |
+| 2.3 | Projection Matrices and Least Squares |
+| 2.4 | Orthogonal Matrices and Gram--Schmidt |
+| 2.5 | Properties of Determinants |
+| 2.6 | Determinant Formulas and Cofactors |
+| 2.7 | Cramer's Rule, Inverse Matrix and Volume |
+| 2.8 | Eigenvalues and Eigenvectors |
+| 2.9 | Diagonalization and Powers of $A$ |
+| 2.10 | Differential Equations and $e^{At}$ |
+| 2.11 | Markov Matrices; Fourier Series |
+| 2.12 | Exam 2 Review |
+| Exam 2 | Unit 2 Exam，完整题解在 Unit II |
 
 ### Unit III：Positive Definite Matrices and Applications
 
-- 3.1-3.3 对称与正定：spectral decomposition、quadratic form、minimum。
-- 3.4-3.5 标准形：similarity / Jordan 处理一般方阵，SVD 处理任意矩阵。
-- 3.6-3.7 变换与换基：矩阵是线性变换在某组坐标下的表示。
-- 3.8 逆的推广：left inverse / right inverse / pseudoinverse。
-- 3.9 考前闭环：symmetric、positive definite、Jordan、SVD、pseudoinverse 同时归到“找对坐标和结构”。
+| 笔记位置 | 官方主题 | 原课堂讲次 |
+|---:|---|---:|
+| 3.1 | Symmetric Matrices and Positive Definiteness | Lecture 25 |
+| 3.2 | Complex Matrices; FFT | Lecture 26 |
+| 3.3 | Positive Definite Matrices and Minima | Lecture 27 |
+| 3.4 | Similar Matrices and Jordan Form | Lecture 28 |
+| 3.5 | Singular Value Decomposition | Lecture 29 |
+| 3.6 | Linear Transformations and their Matrices | Lecture 30 |
+| 3.7 | Change of Basis; Image Compression | Lecture 31 |
+| 3.8 | Left and Right Inverses; Pseudoinverse | Lecture 33 |
+| 3.9 | Exam 3 Review | Lecture 32 |
+| Exam 3 | Unit 3 Exam，重点范围截至 SVD | — |
 
-## 本地资料入口
+OCW Scholar 版主动把 Lecture 33 移到 Exam 3 Review 前，因此本笔记遵循官网导航，而不是原始录像讲次的数值顺序。
 
-- 课程 PDF 总目录：[[MIT_OCW_18.06SC_PDF/index|MIT OCW 18.06SC 题目与资料索引]]
-- 讲义 summary：`MIT_OCW_18.06SC_PDF/05_Session_Summaries`
-- 练习与作业：`MIT_OCW_18.06SC_PDF/02_Exercises`、`03_Homework_Problems`、`04_Homework_Solutions`
-- Final review / final exam：`MIT_OCW_18.06SC_PDF/01_Exams`
-- 教材 1：[[Introduction_to_Linear_Algebra(Strang).pdf|Introduction to Linear Algebra (Strang)]]
-- 教材 2：[[linear_algebra_and_its_applications_4th.pdf|Linear Algebra and Its Applications (4th)]]
+### Course close
 
-## 主笔记入口
+1. Final Course Review（Lecture 34）；
+2. Final Exam：3 小时、九道综合题；
+3. 2023 年的 Final 18.06 Lecture 是后加退休讲座，不属于 Fall 2011 主课程，本套笔记不把它算作 Session。
 
-- [[01_Ax = b and the Four Subspaces|01 Ax = b and the Four Subspaces]]
-- [[02_Least Squares, Determinants and Eigenvalues|02 Least Squares, Determinants and Eigenvalues]]
-- [[03_Positive Definite Matrices and Applications|03 Positive Definite Matrices and Applications]]
-- [[04_Review and exam roadmap|04 Review and exam roadmap]]
+## 本地资料体系
+
+| 目录 | 数量 | 用途 |
+|---|---:|---|
+| `01_Exams` | 3 | Final Review、Final Exam、Final Solutions |
+| `02_Exercises` | 6 | 实际为 Exam 1–3 及答案，保留原文件位置 |
+| `03_Homework_Problems` | 31 | 每个常规 Session 的题目 |
+| `04_Homework_Solutions` | 31 | 与 Homework 一一对应的官方答案 |
+| `05_Session_Summaries` | 35 | 全部 Session summary |
+| `06_Lecture_Transcripts` | 36 | 35 个 Session 加 Final Review 的讲课转录 |
+| `07_Recitation_Transcripts` | 36 | 对应 problem-solving / recitation 转录 |
+| `08_Supplementary_Transcripts` | 2 | 课程介绍与 Strang 教学访谈 |
+| `99_Books` | 3 | 本地教材 |
+
+全部 transcript 已按 Unit、Session 和 Lecture/Recitation 语义化命名；每节正文末尾直接链接对应文件。
 
 ## 题型入口
 
-- 解结构与四个基本子空间：[[01_Ax = b and the Four Subspaces]]
-- 投影、最小二乘、QR：[[02_Least Squares, Determinants and Eigenvalues#Session 2.1 Orthogonal vectors and subspaces|Unit II 正交主线]]
-- determinant、cofactor、volume：[[02_Least Squares, Determinants and Eigenvalues#Session 2.5 Properties of determinants|Unit II determinant 主线]]
-- eigen、diagonalization、$e^{At}$：[[02_Least Squares, Determinants and Eigenvalues#Session 2.8 Eigenvalues and eigenvectors|Unit II eigen 主线]]
-- positive definite、Jordan、SVD、pseudoinverse：[[03_Positive Definite Matrices and Applications#Session 3.1 Symmetric matrices and positive definiteness|Unit III 结构主线]]
+| 想解决的问题 | 进入哪里 | 关键工具 |
+|---|---|---|
+| 解的存在性、唯一性、自由度 | [[01_Ax = b and the Four Subspaces]] | elimination、RREF、rank、four subspaces |
+| 最接近的向量或直线 | [[02_Least Squares, Determinants and Eigenvalues]] | projection、normal equations、QR |
+| 体积、可逆性与余子式 | [[02_Least Squares, Determinants and Eigenvalues]] | determinant、cofactor、Cramer |
+| 矩阵幂、稳态、微分方程 | [[02_Least Squares, Determinants and Eigenvalues]] | eigen、diagonalization、$e^{At}$ |
+| 二次型、极小值与对称结构 | [[03_Positive Definite Matrices and Applications]] | spectral theorem、positive definiteness |
+| 缺陷方阵、矩形矩阵或压缩 | [[03_Positive Definite Matrices and Applications]] | Jordan、SVD、pseudoinverse |
+| 全课程综合题 | [[04_Review and exam roadmap]] | 题型识别、条件检查、交叉验算 |
 
-## 配套卡片入口
+## 配套知识卡入口
 
-- Hub：[[Linear Algebra-hub|线性代数 Hub]]
-- 方法卡：
-  - [[Gram-Schmidt Orthogonalization]]
-  - [[Reading the Four Fundamental Subspaces from RREF]]
-  - [[Least Squares via Normal Equations]]
-  - [[Testing Positive Definiteness]]
-  - [[Choosing Matrix Decompositions]]
-  - [[Linear Algebra Problem-Type Map]]
-- 核心概念：
-  - [[Column Space]]
-  - [[Null Space]]
-  - [[Orthogonal Projection]]
-  - [[Least Squares]]
-  - [[Projection Matrix]]
-  - [[Determinant]]
-  - [[Eigenvalues]]
-  - [[Positive Definite Matrix]]
-  - [[Singular Value Decomposition]]
-  - [[Pseudoinverse]]
+- Hub：[[Linear Algebra-hub|Linear Algebra Hub]]
+- 题型选择：[[Linear Algebra Problem-Type Map]]
+- 分解选择：[[Choosing Matrix Decompositions]]
+- 解结构：[[Linear system solution structure]]
+- 四子空间读取：[[Reading the Four Fundamental Subspaces from RREF]]
+- 最小二乘：[[Least Squares via Normal Equations]]
+- 正定判别：[[Testing Positive Definiteness]]
 
-## 使用建议
-
-- 想恢复课程全貌：先看本页，再看各 unit note 的 `单元速览`。
-- 想按题型复习：直接跳 [[04_Review and exam roadmap|Review and exam roadmap]]。
-- 想补概念：从 [[Linear Algebra-hub|hub]] 进卡片，而不是回正文里搜。
-
-## 关于旧稿
-
-- 目录下原有的 `00_perface.md`、`01_matrices and Gaussian Elimination.md`、`02_vector spaces and subspace.md` 保留为素材。
-- 正式学习路径仍以本文件和 `01` 到 `04` 这 4 份主笔记为准。
+**课程知识链：**线性组合 → $Ax=b$ → 消元与子空间 → 正交投影 → 行列式与特征结构 → 对称正定 → SVD 与伪逆。

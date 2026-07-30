@@ -8,7 +8,12 @@ tags:
 - concept
 - 时间序列
 ---
+
 # Autoregressive Model
+
+## 它是什么
+
+AR 模型就是：当前值主要由自己的过去值解释。
 
 ## 先记一句话
 
@@ -56,6 +61,12 @@ $$
 - [[Partial Autocorrelation Function]]
 - [[Autocorrelation Function]]
 - [[Yule-Walker equations]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[AR(1) stationarity]]、[[ARCH]]、[[GARCH]]、[[03_平稳时间序列模型]]、[[ARMA]]、[[Partial Autocorrelation Function]]、[[Autocorrelation Function]]、[[Yule-Walker equations]]。
 
 ## 课程笔记反链
 

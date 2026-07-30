@@ -4,10 +4,12 @@ aliases:
 - MLE
 - Maximum Likelihood Estimation
 tags:
-- 统计学
-- 估计方法
-- concept
+  - 统计学
+  - 估计方法
+  - concept
 ---
+# Maximum Likelihood Estimation
+
 极大似然估计（Maximum Likelihood Estimation, MLE）是一种参数估计方法，通过最大化样本观测值的似然函数来估计未知参数。
 
 ## 似然函数
@@ -118,6 +120,13 @@ MLE是GMM的特例，使用期望和样本矩的差作为矩条件。
 
 相关链接: [[00_factor/concept/F-test|F检验]], [[Logit Model|logit模型]], [[Probit Model|probit模型]]
 
+
+## 最小例子
+
+把 **Maximum Likelihood Estimation** 放在最简单的可计算情形中：先给定定义所需的最小输入，再按定义计算输出；若关键关系不成立，就不能把该对象归入本概念。这个检查也能帮助区分相近概念。
+## 概念边界
+
+本卡片只回答“它是什么”，集中在定义、核心关系与最小例子；具体估计步骤、证明和诊断流程应分别放在 procedure、proof 或 system 卡片中。
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

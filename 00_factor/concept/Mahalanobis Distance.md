@@ -4,8 +4,8 @@ aliases:
 - 马哈拉诺比斯距离
 - Mahalanobis 距离
 tags:
-- concept
-- multivariate statistics
+  - concept
+  - multivariate statistics
 ---
 # Mahalanobis Distance
 

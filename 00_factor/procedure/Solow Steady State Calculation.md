@@ -6,6 +6,7 @@ aliases:
 tags:
 - procedure
 - economics
+type: procedure
 ---
 # Solow Steady State Calculation
 

@@ -2,22 +2,46 @@
 aliases:
 - Taylor Expansion
 - Taylor Formula
+- Taylor series
 - 泰勒公式
 tags:
 - concept
+- calculus
 ---
 # Taylor Expansion
 
->[!note] 它是什么
-> - 「Taylor Expansion」是指在某点附近用多项式近似函数的展开。
->
->[!note] 最小可检索信息
-> - 定义：在某点附近用多项式近似函数的展开。
-> - 符号/公式：$f(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2}(x-a)^2+\cdots。$
-> - 最小例子：用二阶泰勒近似期权价格。
+## 一句话记忆
+
+Taylor expansion 用函数在展开点处的导数，构造其局部多项式近似。
+
+## 它是什么
+
+若函数在 $a$ 附近足够光滑，其 $n$ 阶 Taylor polynomial 为
+
+$$
+T_n(x)=\sum_{k=0}^{n}\frac{f^{(k)}(a)}{k!}(x-a)^k.
+$$
+
+保留有限项时是局部近似；无穷级数收敛到原函数时才可称为 Taylor series。截断误差可由余项表示，例如 Lagrange 余项为
+
+$$
+R_n(x)=\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-a)^{n+1},
+$$
+
+其中 $\xi$ 位于 $a$ 与 $x$ 之间。
+
+## 最小例子
+
+在 $a=0$ 处，$e^x\approx1+x+\frac{x^2}{2}$。目标点越接近展开点、保留项数越多，通常近似越好，但仍需注意收敛范围。
+
+## 易混点
+
+- Taylor **多项式**是有限项近似；Taylor **级数**是无穷项表达。
+- 它是局部近似工具，不自动保证远离 $a$ 时仍准确。
 >
 ## 关联卡片
 - [[Lagrange Mean Value Theorem]]
+- 余项与 Maclaurin 展开属于同一 Taylor 展开框架；本仓库暂未单独建立对应卡片。
 
 ## 课程笔记反链
 

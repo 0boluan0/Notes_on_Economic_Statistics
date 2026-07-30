@@ -5,8 +5,8 @@ aliases:
 - 领先指标
 - 先行指标
 tags:
-- concept
-- 时间序列
+  - concept
+  - 时间序列
 ---
 # Leading Indicator
 
@@ -49,4 +49,3 @@ $$
 - [[Transfer Function Model]]
 - [[Cross-Correlation Function]]
 - [[Granger Causality Test]]
-

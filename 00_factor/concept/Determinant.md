@@ -8,6 +8,7 @@ tags:
 - concept
 - 线性代数
 ---
+
 # Determinant
 
 ## 先记一句话
@@ -80,7 +81,7 @@ $$
 
 - [[02_Least Squares, Determinants and Eigenvalues#Session 2.5 Properties of determinants|Session 2.5]]：行列式性质、奇异性与体积。
 - [[02_Least Squares, Determinants and Eigenvalues#Session 2.6 Determinant formulas and cofactors|Session 2.6]]：cofactor 展开与公式。
-- [[02_Least Squares, Determinants and Eigenvalues#Session 2.7 Cramer's rule, inverse matrix, and volume|Session 2.7]]：Cramer's rule、逆矩阵与体积解释。
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.7 Cramer's rule, inverse matrix and volume|Session 2.7]]：Cramer's rule、逆矩阵与体积解释。
 
 ## 关联卡片
 
@@ -88,6 +89,12 @@ $$
 - [[Cramer's Rule]]
 - [[Eigenvalues]]
 - [[Invertible Matrix Equivalence Chain]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[02_Least Squares, Determinants and Eigenvalues]]、[[Matrix Inverse]]、[[Cramer's Rule]]、[[Eigenvalues]]、[[Invertible Matrix Equivalence Chain]]。
 
 ## 课程笔记反链
 

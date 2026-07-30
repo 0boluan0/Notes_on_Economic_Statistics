@@ -9,6 +9,9 @@ tags:
 - 金融
 - concept
 ---
+
+# Efficient Market Hypothesis
+
 有效市场假说（Efficient Market Hypothesis, EMH）认为金融市场价格完全反映所有可用信息，投资者无法持续获得超额收益。
 
 ## 三种形式
@@ -71,6 +74,12 @@ tags:
 
 相关链接: [[Random Walk|随机游走]], [[CAPM|资本资产定价模型]], [[Behavioral Finance|行为金融学]]
 ]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Random Walk]]、[[CAPM]]、[[Behavioral Finance]]。
 
 ## 课程笔记反链
 

@@ -4,10 +4,12 @@ aliases:
 - 马尔萨斯人口陷阱
 - Malthusian Trap
 tags:
-- 发展经济学
-- 经济增长理论
-- concept
+  - 发展经济学
+  - 经济增长理论
+  - concept
 ---
+# Malthusian Trap
+
 马尔萨斯人口陷阱（Malthusian Trap）是托马斯·马尔萨斯提出的理论，认为人口增长会抵消经济增长，使人均收入长期维持在生存水平附近。
 
 ## 基本假设
@@ -132,6 +134,16 @@ g(P) = f(Y/N)
 
 相关链接: [[Population Growth and Economic Development|人口增长与经济发展]], [[Ricardian Model|李嘉图模型]], [[00_factor/concept/Solow Model|索罗增长模型]]
 
+
+## 最小例子
+
+把 **Malthusian Trap** 放在最简单的可计算情形中：先给定定义所需的最小输入，再按定义计算输出；若关键关系不成立，就不能把该对象归入本概念。这个检查也能帮助区分相近概念。
+## 符号表达
+
+将本概念记为 $C_{MalthusianTr}$；使用时先明确对象、条件与输出，再判断 $C$ 是否满足定义。
+## 概念边界
+
+本卡片只回答“它是什么”，集中在定义、核心关系与最小例子；具体估计步骤、证明和诊断流程应分别放在 procedure、proof 或 system 卡片中。
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

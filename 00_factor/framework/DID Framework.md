@@ -9,6 +9,7 @@ tags:
 - framework
 - econometrics
 - causal-inference
+type: framework
 ---
 # DID Framework
 

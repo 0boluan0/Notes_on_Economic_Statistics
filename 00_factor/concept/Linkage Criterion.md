@@ -5,8 +5,8 @@ aliases:
 - 簇间距离准则
 - 层次聚类连接准则
 tags:
-- concept
-- multivariate statistics
+  - concept
+  - multivariate statistics
 ---
 # Linkage Criterion
 
@@ -46,3 +46,6 @@ tags:
 - [[Hierarchical Clustering]]
 - [[Hierarchical Clustering Procedure]]
 - [[Clustering Method Selection]]
+## 符号表达
+
+将本概念记为 $C_{LinkageCrite}$；使用时先明确对象、条件与输出，再判断 $C$ 是否满足定义。

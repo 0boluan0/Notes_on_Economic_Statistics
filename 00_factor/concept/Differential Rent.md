@@ -8,6 +8,9 @@ tags:
 - land-rent
 - concept
 ---
+
+# Differential Rent
+
 级差地租最早由古典经济学家李嘉图（David Ricardo）提出，用于解释为什么在同一市场中，不同地块（或不同质量的资源）会产生不同的地租。
 
 ## 核心观点
@@ -58,6 +61,12 @@ $$
 ## 相关链接
 [[Malthusian Trap|马尔萨斯人口陷阱]]
 [[Ricardian Model|李嘉图模型]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Malthusian Trap]]、[[Ricardian Model]]。
 
 ## 课程笔记反链
 

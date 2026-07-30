@@ -1,0 +1,388 @@
+1
+00:00:00,000 --> 00:00:02,630
+PROFESSOR: Independent events
+are events that have nothing
+
+2
+00:00:02,630 --> 00:00:04,080
+to do with each other.
+
+3
+00:00:04,080 --> 00:00:07,900
+And needless to say, it's a
+lot easier to work with them
+
+4
+00:00:07,900 --> 00:00:09,400
+because you don't
+have to figure out
+
+5
+00:00:09,400 --> 00:00:11,810
+some weird interaction
+between two events that
+
+6
+00:00:11,810 --> 00:00:13,480
+do have something to
+do with each other.
+
+7
+00:00:13,480 --> 00:00:16,200
+Typical case where
+independent events come up
+
+8
+00:00:16,200 --> 00:00:19,160
+is, for example, you
+toss a coin five times,
+
+9
+00:00:19,160 --> 00:00:21,520
+and then you're about to
+toss a coin the sixth time.
+
+10
+00:00:21,520 --> 00:00:23,070
+Is there any reason
+to think that
+
+11
+00:00:23,070 --> 00:00:25,250
+what the coins did the
+first five times is going
+
+12
+00:00:25,250 --> 00:00:27,000
+to have any
+influence on the flip
+
+13
+00:00:27,000 --> 00:00:30,720
+of the coin for the sixth time?
+
+14
+00:00:30,720 --> 00:00:33,100
+Well, it's reasonable
+to assume not,
+
+15
+00:00:33,100 --> 00:00:36,780
+which is to say that the
+outcome of the sixth toss
+
+16
+00:00:36,780 --> 00:00:40,690
+is arguably independent
+of the outcome of all
+
+17
+00:00:40,690 --> 00:00:42,450
+the previous tosses.
+
+18
+00:00:42,450 --> 00:00:43,170
+OK.
+
+19
+00:00:43,170 --> 00:00:46,570
+Let's look at a
+formal definition
+
+20
+00:00:46,570 --> 00:00:48,660
+now in this short
+video of just what
+
+21
+00:00:48,660 --> 00:00:51,520
+is the technical definition
+of independent events.
+
+22
+00:00:51,520 --> 00:00:54,741
+So what we said is that they
+are independent if they have
+
+23
+00:00:54,741 --> 00:00:55,990
+nothing to do with each other.
+
+24
+00:00:55,990 --> 00:00:59,820
+What that means is that if
+I tell you that B happened,
+
+25
+00:00:59,820 --> 00:01:03,220
+it doesn't have any effect on
+the probability of A. That is,
+
+26
+00:01:03,220 --> 00:01:06,350
+the probability of A,
+given that B happened,
+
+27
+00:01:06,350 --> 00:01:09,130
+doesn't change the
+probability of A at all.
+
+28
+00:01:09,130 --> 00:01:10,196
+That's it.
+
+29
+00:01:10,196 --> 00:01:11,320
+Now this is one definition.
+
+30
+00:01:11,320 --> 00:01:13,153
+Maybe this is the more
+intuitive definition.
+
+31
+00:01:13,153 --> 00:01:16,440
+But another definition that's
+equivalent and is standard
+
+32
+00:01:16,440 --> 00:01:19,260
+is that two events are
+equivalent if the product
+
+33
+00:01:19,260 --> 00:01:22,252
+of their probabilities is
+equal to the probability
+
+34
+00:01:22,252 --> 00:01:24,210
+that they both happen,
+that is, the probability
+
+35
+00:01:24,210 --> 00:01:25,760
+of their intersection.
+
+36
+00:01:25,760 --> 00:01:27,890
+Now definition one
+and definition two
+
+37
+00:01:27,890 --> 00:01:30,800
+are trivial equivalent,
+just using the definition
+
+38
+00:01:30,800 --> 00:01:32,239
+of conditional probability.
+
+39
+00:01:32,239 --> 00:01:34,280
+And if you don't see that,
+this would be a moment
+
+40
+00:01:34,280 --> 00:01:38,100
+to stop, get a pencil
+and paper, and write down
+
+41
+00:01:38,100 --> 00:01:43,440
+the three-line proof of the
+equivalence of these two
+
+42
+00:01:43,440 --> 00:01:44,220
+equalities.
+
+43
+00:01:44,220 --> 00:01:46,260
+In fact, the three-line proof
+has this as the first line
+
+44
+00:01:46,260 --> 00:01:47,426
+and that as the second line.
+
+45
+00:01:47,426 --> 00:01:49,800
+So you could argue it's
+really just the middle line
+
+46
+00:01:49,800 --> 00:01:51,120
+that you're adding.
+
+47
+00:01:51,120 --> 00:01:53,070
+OK.
+
+48
+00:01:53,070 --> 00:01:56,560
+Definition two has the slight
+advantage that it always works,
+
+49
+00:01:56,560 --> 00:01:58,720
+whereas definition
+one implicitly
+
+50
+00:01:58,720 --> 00:02:03,390
+requires that the divisor--
+remember probability of A given
+
+51
+00:02:03,390 --> 00:02:06,390
+B is defined as the probability
+of the intersection divided
+
+52
+00:02:06,390 --> 00:02:09,789
+by the probability B. It's only
+defined if the probability of B
+
+53
+00:02:09,789 --> 00:02:10,820
+is positive.
+
+54
+00:02:10,820 --> 00:02:12,930
+Whereas the second
+definition always works,
+
+55
+00:02:12,930 --> 00:02:15,450
+so we don't have
+to put a proviso
+
+56
+00:02:15,450 --> 00:02:17,827
+in about the probability
+of B being non-zero.
+
+57
+00:02:17,827 --> 00:02:19,535
+So that's the definition
+of independence.
+
+58
+00:02:22,637 --> 00:02:24,970
+Looking at this definition,
+what you can see immediately
+
+59
+00:02:24,970 --> 00:02:27,087
+is that it's completely
+symmetric in A and B.
+
+60
+00:02:27,087 --> 00:02:28,545
+Since multiplication
+is commutative
+
+61
+00:02:28,545 --> 00:02:31,735
+and intersection is
+commutative, which is A
+
+62
+00:02:31,735 --> 00:02:33,320
+and which is B doesn't matter.
+
+63
+00:02:33,320 --> 00:02:36,820
+And what that implies then
+is that A is independent of B
+
+64
+00:02:36,820 --> 00:02:41,370
+if and only if B is
+independent of A.
+
+65
+00:02:41,370 --> 00:02:45,660
+Now another fact that holds is
+that if the probability of B
+
+66
+00:02:45,660 --> 00:02:49,010
+happens to be zero,
+then vacuously B
+
+67
+00:02:49,010 --> 00:02:52,550
+is independent of
+everything-- even itself.
+
+68
+00:02:52,550 --> 00:02:56,880
+Which isn't important, but is a
+small technicality that's worth
+
+69
+00:02:56,880 --> 00:03:00,450
+remembering by that definition.
+
+70
+00:03:00,450 --> 00:03:03,470
+Now again, the intuitive idea
+that A and B have nothing
+
+71
+00:03:03,470 --> 00:03:07,100
+to do with each other is that
+A is independent of B means
+
+72
+00:03:07,100 --> 00:03:11,600
+that A is independent of
+whether or not B occurs.
+
+73
+00:03:11,600 --> 00:03:13,630
+That is to say, if A
+is independent of B,
+
+74
+00:03:13,630 --> 00:03:16,400
+it ought to be independent
+of the complement of B.
+
+75
+00:03:16,400 --> 00:03:18,600
+And that's a lemma that's
+also easily proved.
+
+76
+00:03:18,600 --> 00:03:20,940
+A is independent
+of B if and only
+
+77
+00:03:20,940 --> 00:03:23,890
+if A is independent of
+the complement of B.
+
+78
+00:03:23,890 --> 00:03:26,050
+It's a simple proof using
+the difference rule.
+
+79
+00:03:26,050 --> 00:03:28,370
+And again, I
+encourage you to stop
+
+80
+00:03:28,370 --> 00:03:31,090
+with a piece of
+paper and a pencil
+
+81
+00:03:31,090 --> 00:03:35,235
+and convince yourself that that
+follows with a one-line proof.

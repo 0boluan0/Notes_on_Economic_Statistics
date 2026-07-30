@@ -5,6 +5,7 @@ aliases:
 tags:
 - framework
 - 线性代数
+type: framework
 ---
 # Linear Algebra Problem-Type Map
 
@@ -46,6 +47,11 @@ tags:
 - `Ax=b` 无解时，不要继续硬求 inverse，转 least squares。
 - 有 repeated eigenvalue 时，不要默认一定能 diagonalize，先检查特征向量够不够。
 - 非方阵或秩亏矩阵，不要把普通 inverse 当默认工具，转 SVD / pseudoinverse。
+
+## 边界与失败模式
+
+- 题面关键词只是初筛；最终路线仍要由维度、秩、可逆性和目标量确认。
+- 把“求解方程组”“求最佳逼近”和“求特征结构”混为一谈，会导致公式与输出对象错位。
 
 ## 关联卡片
 - [[Reading the Four Fundamental Subspaces from RREF]]

@@ -52,7 +52,7 @@ $$
 ## 来自课程位置
 
 - [[03_Positive Definite Matrices and Applications#Session 3.4 Similar matrices and Jordan form|Session 3.4]]：similarity、diagonalization 与 Jordan form。
-- [[03_Positive Definite Matrices and Applications#Session 3.7 Change of basis; image compression|Session 3.7]]：换基如何改变矩阵表示。
+- [[03_Positive Definite Matrices and Applications#Session 3.7 Change of basis and image compression|Session 3.7]]：换基如何改变矩阵表示。
 
 ## 关联卡片
 

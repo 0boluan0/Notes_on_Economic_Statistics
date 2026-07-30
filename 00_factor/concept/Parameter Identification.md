@@ -8,6 +8,8 @@ tags:
 - 联立方程
 - concept
 ---
+
+# Parameter Identification
 参数识别（Parameter Identification）是指能否从观测数据中唯一确定模型参数的问题。
 
 >[!note] 定义

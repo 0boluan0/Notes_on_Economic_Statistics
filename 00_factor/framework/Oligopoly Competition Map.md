@@ -6,6 +6,7 @@ aliases:
 tags:
 - framework
 - game-theory
+type: framework
 ---
 # Oligopoly Competition Map
 

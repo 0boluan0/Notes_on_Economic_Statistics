@@ -9,6 +9,7 @@ tags:
 - concept
 - 时间序列
 ---
+
 # ARMA
 
 ## 先记一句话
@@ -96,6 +97,12 @@ MA 部分不决定平稳性，但决定可逆性。
 - [[White Noise]]
 - [[ARCH]]
 - [[GARCH]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[White Noise]]、[[AR(1) stationarity]]、[[ARMA Model Identification Steps]]、[[Box-Jenkins Method]]、[[ARIMA]]、[[ARCH]]、[[GARCH]]、[[03_平稳时间序列模型]]。
 
 ## 课程笔记反链
 

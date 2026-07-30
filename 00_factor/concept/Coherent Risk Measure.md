@@ -7,6 +7,7 @@ tags:
 - concept
 - risk-management
 ---
+
 # Coherent Risk Measure
 
 ## 先记一句话
@@ -47,3 +48,9 @@ tags:
 - [[VaR]]
 - [[ES]]
 - [[Spectral Risk Measure]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[ES]]、[[VaR]]、[[12_VAR风险]]、[[Spectral Risk Measure]]。

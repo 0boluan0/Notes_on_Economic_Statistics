@@ -9,6 +9,7 @@ tags:
 - concept
 - 时间序列
 ---
+
 # ARIMA
 
 ## 先记一句话
@@ -82,6 +83,12 @@ $$
 - [[Random Walk]]
 - [[Cointegration]]
 - [[Spurious Regression]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Cointegration]]、[[Error Correction Model]]、[[03_平稳时间序列模型]]、[[07_协整和误差修正模型]]、[[ARMA]]、[[First Difference]]、[[Unit Root Test]]、[[Random Walk]]。
 
 ## 课程笔记反链
 

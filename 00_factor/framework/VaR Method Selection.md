@@ -6,6 +6,7 @@ aliases:
 tags:
 - framework
 - risk-management
+type: framework
 ---
 # VaR Method Selection
 

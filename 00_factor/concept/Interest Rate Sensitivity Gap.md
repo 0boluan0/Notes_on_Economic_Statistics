@@ -5,9 +5,9 @@ aliases:
 - 利率敏感性缺口
 - 重新定价缺口
 tags:
-- concept
-- risk-management
-- banking
+  - concept
+  - risk-management
+  - banking
 ---
 # Interest Rate Sensitivity Gap
 

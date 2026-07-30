@@ -6,6 +6,7 @@ aliases:
 tags:
 - procedure
 - econometrics
+type: procedure
 ---
 # 2SLS
 

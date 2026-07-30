@@ -1,14 +1,18 @@
 ---
 aliases:
-  - difference quotient
-  - Difference Quotient
-  - 差商
+- difference quotient
+- Difference Quotient
+- 差商
 tags:
-  - math/calculus
-  - concept
+- math/calculus
+- concept
 ---
 
 # Difference Quotient
+
+## 它是什么
+
+当 $\Delta x\to 0$ 时，割线趋近于切线，差商的极限就是 [[Derivative|导数]]：
 
 Difference quotient（差商）是用两个点之间的函数值变化量除以自变量变化量，表示函数在一段区间上的**平均变化率**。
 
@@ -61,6 +65,12 @@ $$
 - [[Derivative|导数]]
 - [[Limit|极限]]
 - [[geometric interpretation of derivative|导数的几何意义]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Derivative]]、[[Limit]]、[[geometric interpretation of derivative]]。
 
 ## 课程笔记反链
 

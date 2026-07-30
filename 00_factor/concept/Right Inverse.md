@@ -59,7 +59,7 @@ $$
 
 ## 来自课程位置
 
-- [[03_Positive Definite Matrices and Applications#Session 3.8 Left and right inverses; pseudoinverse|Session 3.8]]：left inverse、right inverse 与 pseudoinverse。
+- [[03_Positive Definite Matrices and Applications#Session 3.8 Left and right inverses and pseudoinverse|Session 3.8]]：left inverse、right inverse 与 pseudoinverse。
 
 ## 关联卡片
 

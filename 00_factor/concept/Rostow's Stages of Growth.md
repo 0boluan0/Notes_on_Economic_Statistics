@@ -11,6 +11,8 @@ tags:
 - 经济
 - concept
 ---
+
+# Rostow's Stages of Growth
 罗斯托经济增长阶段论（Rostow's Stages of Growth）由沃尔特·罗斯托提出，将经济发展过程分为六个阶段，强调"起飞"在经济发展中的关键作用。
 
 ## 六个增长阶段

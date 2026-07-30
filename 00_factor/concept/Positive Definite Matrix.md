@@ -58,7 +58,7 @@ $$
 
 - $x^TAx>0$ 对所有非零 $x$ 成立；
 - 所有特征值都大于 0；
-- 无换行交换消元时，所有 pivot 都大于 0；
+- 无行交换、保持对称结构消元时，所有 pivot 都大于 0；
 - 所有 leading principal minors 都大于 0。
 
 具体执行流程见 [[Testing Positive Definiteness]]。

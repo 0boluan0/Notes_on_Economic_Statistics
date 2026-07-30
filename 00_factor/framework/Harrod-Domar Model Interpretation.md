@@ -6,6 +6,7 @@ aliases:
 tags:
 - framework
 - economics
+type: framework
 ---
 # Harrod-Domar Model Interpretation
 

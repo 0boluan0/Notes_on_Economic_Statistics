@@ -8,6 +8,7 @@ tags:
 - statistics
 - econometrics
 ---
+
 # F-test
 
 ## 先记一句话
@@ -47,3 +48,9 @@ $$
 - [[t Test]]
 - [[R-squared]]
 - [[Multicollinearity]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Multicollinearity]]、[[03_多元线性回归]]、[[t Test]]、[[R-squared]]。

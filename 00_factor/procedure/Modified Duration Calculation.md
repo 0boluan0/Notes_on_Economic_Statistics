@@ -5,6 +5,7 @@ aliases:
 tags:
 - procedure
 - fixed-income
+type: procedure
 ---
 # Modified Duration Calculation
 

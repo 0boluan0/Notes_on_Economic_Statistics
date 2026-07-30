@@ -6,8 +6,8 @@ aliases:
 - 滞后算子
 - 后移算子
 tags:
-- concept
-- 时间序列
+  - concept
+  - 时间序列
 ---
 # Lag Operator
 
@@ -65,4 +65,3 @@ $$
 - [[Difference Equation]]
 - [[ARMA]]
 - [[AR(1) stationarity]]
-

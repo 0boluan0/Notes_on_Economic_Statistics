@@ -8,6 +8,7 @@ tags:
 - concept
 - public finance
 ---
+
 # 外部性
 
 >[!note] 定义
@@ -139,6 +140,12 @@ $ MSC = MPC + MEC $
 | 庇古税 | 灵活、激励相容 | 需要准确信息 |
 | 交易制度 | 成本有效 | 需要良好运行的排放市场 |
 | 命令控制 | 确定性高 | 灵活性差、成本高 |
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Public Goods]]、[[Pigouvian Tax]]、[[Coase Theorem]]。
 
 ## 课程笔记反链
 

@@ -8,6 +8,9 @@ tags:
 - 微积分
 - concept
 ---
+
+# Fundamental Theorem of Calculus
+
 微积分基本定理是联系微分和积分的核心定理，是微积分学的基石。
 
 ## 牛顿-莱布尼茨公式
@@ -43,9 +46,10 @@ $\int_a^b f(x)dx = F(b) - F(a)$
 1. **变限积分求导**
 
    如果 F(x) = \int_{a(x)}^{b(x)} f(t)dt，则：
-$$
 
-   $F'(x) = f(b(x))b'(x) - f(a(x))a'(x)$
+   $$
+   F'(x) = f(b(x))b'(x) - f(a(x))a'(x)
+   $$
 
 2. **积分中值定理**
 
@@ -70,6 +74,12 @@ $$
 [[Derivative|导数]]
 [[Integral|积分]]
 [[Limit|极限]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Derivative]]、[[Integral]]、[[Limit]]。
 
 ## 课程笔记反链
 

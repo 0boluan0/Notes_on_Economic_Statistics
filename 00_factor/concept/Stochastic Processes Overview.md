@@ -18,6 +18,9 @@ tags:
 >
 ## 关联卡片
 - [[Poisson process memoryless property]]
+- [[Poisson Process]]
+- [[Stationary Stochastic Process]]
+- [[Stationary Distribution]]
 
 ## 课程笔记反链
 

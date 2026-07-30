@@ -7,6 +7,7 @@ tags:
 - concept
 - 线性代数
 ---
+
 # Cramer's Rule
 
 ## 先记一句话
@@ -71,13 +72,19 @@ $$
 
 ## 来自课程位置
 
-- [[02_Least Squares, Determinants and Eigenvalues#Session 2.7 Cramer's rule, inverse matrix, and volume|Session 2.7]]：Cramer's rule 与 inverse formula。
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.7 Cramer's rule, inverse matrix and volume|Session 2.7]]：Cramer's rule 与 inverse formula。
 
 ## 关联卡片
 
 - [[Determinant]]
 - [[Matrix Inverse]]
 - [[Linear system solution structure]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[02_Least Squares, Determinants and Eigenvalues]]、[[Determinant]]、[[Matrix Inverse]]、[[Linear system solution structure]]。
 
 ## 课程笔记反链
 

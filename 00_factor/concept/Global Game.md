@@ -4,8 +4,8 @@ aliases:
 - Global Games
 - 全局博弈
 tags:
-- concept
-- game-theory
+  - concept
+  - game-theory
 ---
 # Global Game
 
@@ -42,3 +42,6 @@ Global Game 在不完全信息中加入相关信号。玩家观察到自己的�
 - [[Belief (Game Theory)]]
 - [[Coordinated Attack Game]]
 - [[Supermodular Game]]
+## 符号表达
+
+将本概念记为 $C_{GlobalGame}$；使用时先明确对象、条件与输出，再判断 $C$ 是否满足定义。

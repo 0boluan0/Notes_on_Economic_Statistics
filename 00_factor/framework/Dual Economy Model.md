@@ -4,6 +4,7 @@ aliases:
 - 二元经济模型
 tags:
 - framework
+type: framework
 ---
 # Dual Economy Model
 

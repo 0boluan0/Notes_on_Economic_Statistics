@@ -5,11 +5,13 @@ aliases:
 - logit
 - Logit Model
 tags:
-- 计量经济学
-- 离散选择模型
-- 经济
-- concept
+  - 计量经济学
+  - 离散选择模型
+  - 经济
+  - concept
 ---
+# Logit Model
+
 logit模型（Logit Model）是用于分析二元被解释变量（取值为0或1）的回归模型，使用逻辑分布作为潜在变量的分布。
 
 ## 模型形式
@@ -112,6 +114,13 @@ $\text{Accuracy} = \frac{TP + TN}{TP + FP + TN + FN}$
 
 相关链接: [[Probit Model|probit模型]], [[Linear Probability Model|LPM模型]], [[Maximum Likelihood Estimation|极大似然估计]]
 
+
+## 最小例子
+
+把 **Logit Model** 放在最简单的可计算情形中：先给定定义所需的最小输入，再按定义计算输出；若关键关系不成立，就不能把该对象归入本概念。这个检查也能帮助区分相近概念。
+## 概念边界
+
+本卡片只回答“它是什么”，集中在定义、核心关系与最小例子；具体估计步骤、证明和诊断流程应分别放在 procedure、proof 或 system 卡片中。
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

@@ -5,6 +5,7 @@ aliases:
 tags:
 - framework
 - multivariate statistics
+type: framework
 ---
 # PCA vs Factor Analysis
 

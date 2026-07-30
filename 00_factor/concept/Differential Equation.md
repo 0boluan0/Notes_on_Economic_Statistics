@@ -8,6 +8,9 @@ tags:
 - 微积分
 - concept
 ---
+
+# Differential Equation
+
 微分方程是包含未知函数及其导数的方程，是描述变化率关系的重要数学工具。
 
 >[!note] 定义
@@ -117,6 +120,12 @@ $y'' + ay' + by = f(x)$
 ## 相关链接
 [[Derivative|导数]]
 [[Integral|积分]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Derivative]]、[[Integral]]。
 
 ## 课程笔记反链
 

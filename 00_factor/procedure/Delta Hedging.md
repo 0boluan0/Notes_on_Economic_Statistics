@@ -7,6 +7,7 @@ tags:
 - procedure
 - derivatives
 - risk-management
+type: procedure
 ---
 # Delta Hedging
 

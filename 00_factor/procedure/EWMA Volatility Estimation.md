@@ -7,6 +7,7 @@ tags:
 - procedure
 - 金融风险
 - 波动建模
+type: procedure
 ---
 # EWMA Volatility Estimation
 

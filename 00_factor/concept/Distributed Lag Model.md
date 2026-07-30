@@ -9,6 +9,7 @@ tags:
 - 时间序列
 - 计量经济学
 ---
+
 # Distributed Lag Model
 
 ## 先记一句话
@@ -50,3 +51,9 @@ $$
 - [[Transfer Function Model]]
 - [[Cross-Correlation Function]]
 - [[Leading Indicator]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Leading Indicator]]、[[ADL]]、[[05_多方程模型Multi-equation Time Series Models]]、[[Transfer Function Model]]、[[Cross-Correlation Function]]。

@@ -5,8 +5,8 @@ aliases:
 - 库兹涅茨现代经济增长理论
 - 库兹涅茨增长理论
 tags:
-- concept
-- economics
+  - concept
+  - economics
 ---
 # Kuznets Modern Economic Growth Theory
 
@@ -56,6 +56,10 @@ Kuznets Modern Economic Growth Theory 描述工业革命以来的现代增长事
 - [[Rostow's Stages of Growth]]
 - [[Growth Theory-hub]]
 
+
+## 符号表达
+
+将本概念记为 $C_{KuznetsModer}$；使用时先明确对象、条件与输出，再判断 $C$ 是否满足定义。
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

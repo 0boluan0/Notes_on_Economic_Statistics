@@ -1,0 +1,1063 @@
+1
+00:00:00,719 --> 00:00:02,510
+PROFESSOR: So we're
+finally ready to tie up
+
+2
+00:00:02,510 --> 00:00:06,070
+these ideas about
+mapping properties
+
+3
+00:00:06,070 --> 00:00:08,180
+to counting properties.
+
+4
+00:00:08,180 --> 00:00:10,950
+And let's begin with
+the remark we already
+
+5
+00:00:10,950 --> 00:00:14,370
+made, that if there's a
+bijection from one set
+
+6
+00:00:14,370 --> 00:00:17,250
+to another, if there's a
+bijection from a finite set
+
+7
+00:00:17,250 --> 00:00:21,450
+A to a finite set B, then
+A and B have the same size.
+
+8
+00:00:21,450 --> 00:00:24,230
+By the way, those vertical
+bars, absolute value
+
+9
+00:00:24,230 --> 00:00:26,590
+of A, when it's a set
+refers us to the size
+
+10
+00:00:26,590 --> 00:00:28,140
+of the set for finite sets.
+
+11
+00:00:28,140 --> 00:00:33,370
+So it means if A has n elements,
+then the absolute value of A
+
+12
+00:00:33,370 --> 00:00:33,870
+is n.
+
+13
+00:00:36,400 --> 00:00:36,910
+OK.
+
+14
+00:00:36,910 --> 00:00:39,090
+Let's use this bijection
+idea immediately.
+
+15
+00:00:39,090 --> 00:00:40,260
+Here's a nice example.
+
+16
+00:00:40,260 --> 00:00:43,340
+Suppose you want to figure
+out how many subsets
+
+17
+00:00:43,340 --> 00:00:46,160
+are there of a finite set A?
+
+18
+00:00:46,160 --> 00:00:47,790
+Suppose you didn't know yet.
+
+19
+00:00:47,790 --> 00:00:48,290
+All right.
+
+20
+00:00:48,290 --> 00:00:49,831
+So what we're asking
+about is, what's
+
+21
+00:00:49,831 --> 00:00:51,260
+the size of the power set of A?
+
+22
+00:00:51,260 --> 00:00:53,270
+Remember the power
+set of A is all
+
+23
+00:00:53,270 --> 00:00:57,020
+of the possible subsets
+of the set A. Well suppose
+
+24
+00:00:57,020 --> 00:00:58,080
+A has three elements.
+
+25
+00:00:58,080 --> 00:01:00,355
+What is the power
+set of A look like?
+
+26
+00:01:00,355 --> 00:01:03,370
+If capital A has
+elements little a,b,c.
+
+27
+00:01:03,370 --> 00:01:05,090
+It's a set of size three.
+
+28
+00:01:05,090 --> 00:01:08,180
+Then the power set
+of A is going to have
+
+29
+00:01:08,180 --> 00:01:12,950
+one subset with no elements,
+three subsets with one element,
+
+30
+00:01:12,950 --> 00:01:14,420
+they're listed there.
+
+31
+00:01:14,420 --> 00:01:17,080
+It's going to have three more
+subsets with two elements,
+
+32
+00:01:17,080 --> 00:01:19,760
+and one subset with
+three elements.
+
+33
+00:01:19,760 --> 00:01:27,230
+For a total of eight subsets
+in the power set of A.
+
+34
+00:01:27,230 --> 00:01:30,200
+So let's see what the counting
+argument in general would be.
+
+35
+00:01:30,200 --> 00:01:32,850
+So suppose that
+A has n elements.
+
+36
+00:01:32,850 --> 00:01:35,860
+And we'll number them from
+a 0 up through a n minus 1,
+
+37
+00:01:35,860 --> 00:01:39,420
+because computer scientists
+usually zero origin index.
+
+38
+00:01:39,420 --> 00:01:43,580
+So A is a set of n
+elements, indicated there.
+
+39
+00:01:43,580 --> 00:01:47,660
+Suppose I have some arbitrary
+subset of A. Let's suppose
+
+40
+00:01:47,660 --> 00:01:50,000
+that it has a 0,
+then there's no a 1,
+
+41
+00:01:50,000 --> 00:01:51,250
+that's what this space is for.
+
+42
+00:01:51,250 --> 00:01:51,961
+It has a 2.
+
+43
+00:01:51,961 --> 00:01:52,460
+It has a 3.
+
+44
+00:01:52,460 --> 00:01:54,650
+Doesn't have a 4.
+
+45
+00:01:54,650 --> 00:01:57,380
+And it goes on for awhile
+in some uncertain way.
+
+46
+00:01:57,380 --> 00:01:59,905
+And it ends it actually
+has the last element a
+
+47
+00:01:59,905 --> 00:02:02,300
+and minus 1 in it.
+
+48
+00:02:02,300 --> 00:02:05,210
+Well I can take the
+subset like this
+
+49
+00:02:05,210 --> 00:02:08,550
+and have it correspond
+to a bit-string,
+
+50
+00:02:08,550 --> 00:02:12,980
+where I put a 1 where the
+element is there in the subset,
+
+51
+00:02:12,980 --> 00:02:15,350
+and a 0 where the element
+is not there in the subset.
+
+52
+00:02:15,350 --> 00:02:20,090
+So there's a 1 because a 0 is
+in the subset followed by a 0,
+
+53
+00:02:20,090 --> 00:02:23,120
+because a 1 is not in the
+subset, followed by two 1's
+
+54
+00:02:23,120 --> 00:02:26,640
+because a 2 and a 3 are in
+the subset, followed by a 0
+
+55
+00:02:26,640 --> 00:02:29,280
+because a 4 is not, and
+so on, ending with a 1,
+
+56
+00:02:29,280 --> 00:02:33,550
+because a n minus
+1 is in the subset.
+
+57
+00:02:33,550 --> 00:02:39,750
+So in short, the bit-string the
+[? case ?] bit in the string
+
+58
+00:02:39,750 --> 00:02:46,110
+is 1, if and only if,
+a sub k is in the set.
+
+59
+00:02:46,110 --> 00:02:49,000
+Now this clearly
+defines a bijection
+
+60
+00:02:49,000 --> 00:02:50,380
+between subsets and strings.
+
+61
+00:02:50,380 --> 00:02:54,300
+Because given a subset, I can
+uniquely determine the string,
+
+62
+00:02:54,300 --> 00:02:56,910
+and given the string, I can
+uniquely determine the subset.
+
+63
+00:02:56,910 --> 00:02:59,820
+So there's one arrow
+in and one arrow out
+
+64
+00:02:59,820 --> 00:03:02,730
+of each of those things.
+
+65
+00:03:02,730 --> 00:03:07,370
+So I could immediately conclude
+then by this bijection theorem
+
+66
+00:03:07,370 --> 00:03:09,660
+that the number of
+n bit-strings is
+
+67
+00:03:09,660 --> 00:03:14,560
+equal to the size of the
+power set of A. Well,
+
+68
+00:03:14,560 --> 00:03:16,840
+now every computer
+scientist knows how many
+
+69
+00:03:16,840 --> 00:03:18,660
+n bit-strings there are, right?
+
+70
+00:03:18,660 --> 00:03:22,240
+There are 2 to the
+n n-bit bit-strings.
+
+71
+00:03:22,240 --> 00:03:25,970
+And therefore, the power set
+of A has 2 to the n elements.
+
+72
+00:03:25,970 --> 00:03:28,500
+We can get rid of the n
+because it was the size of A.
+
+73
+00:03:28,500 --> 00:03:30,200
+We have this nice formula.
+
+74
+00:03:30,200 --> 00:03:34,620
+The power set-- the size of
+the power set of a finite set A
+
+75
+00:03:34,620 --> 00:03:43,650
+is 2 to the size of A. Well
+there are some more counting
+
+76
+00:03:43,650 --> 00:03:46,530
+rules like the
+bijection rule that
+
+77
+00:03:46,530 --> 00:03:48,960
+relates sizes of
+sets by inequalities
+
+78
+00:03:48,960 --> 00:03:51,280
+according to whether
+the mappings are
+
+79
+00:03:51,280 --> 00:03:53,310
+surjective injective
+functions and so on.
+
+80
+00:03:53,310 --> 00:03:55,850
+So let's take a
+quick look at those.
+
+81
+00:03:55,850 --> 00:04:00,630
+Suppose that I have a
+surjective function from A
+
+82
+00:04:00,630 --> 00:04:04,300
+to B. Well that means there's
+less than or equal to 1
+
+83
+00:04:04,300 --> 00:04:08,030
+arrow out of every element of
+A, that's what function means.
+
+84
+00:04:08,030 --> 00:04:09,910
+And there is greater
+than or equal to 1 arrow
+
+85
+00:04:09,910 --> 00:04:14,070
+in to every element of B.
+That's what surjective means.
+
+86
+00:04:14,070 --> 00:04:16,980
+So here's this function from
+A to B. That means less than
+
+87
+00:04:16,980 --> 00:04:19,100
+or equal to 1 arrow out.
+
+88
+00:04:19,100 --> 00:04:23,780
+And that means that there
+have to be more elements in A
+
+89
+00:04:23,780 --> 00:04:26,210
+than there are
+arrows since there's
+
+90
+00:04:26,210 --> 00:04:28,960
+at most, one arrow out
+of every element of A
+
+91
+00:04:28,960 --> 00:04:30,940
+and that accounts
+for all the arrows.
+
+92
+00:04:30,940 --> 00:04:32,690
+So the size of A has
+to be greater than
+
+93
+00:04:32,690 --> 00:04:35,220
+or equal to the
+number of arrows when
+
+94
+00:04:35,220 --> 00:04:39,180
+you have a partial function.
+
+95
+00:04:41,760 --> 00:04:44,690
+When it's a surjection,
+that means that there's
+
+96
+00:04:44,690 --> 00:04:47,820
+an arrow coming into
+every element of B.
+
+97
+00:04:47,820 --> 00:04:52,210
+That means that there have
+to be at least as many arrows
+
+98
+00:04:52,210 --> 00:04:54,305
+as there are in B.
+Because everything in B
+
+99
+00:04:54,305 --> 00:04:56,510
+has at least one
+arrow coming in.
+
+100
+00:04:56,510 --> 00:04:58,900
+So if you look at these
+two pieces, the size of A
+
+101
+00:04:58,900 --> 00:05:01,730
+has to be greater than or
+equal to the number of arrows.
+
+102
+00:05:01,730 --> 00:05:03,956
+And the size of B
+has to be less than
+
+103
+00:05:03,956 --> 00:05:05,330
+or equal to the
+number of arrows.
+
+104
+00:05:05,330 --> 00:05:07,580
+Putting them together,
+we have the mapping rule
+
+105
+00:05:07,580 --> 00:05:08,880
+for surjections.
+
+106
+00:05:08,880 --> 00:05:12,000
+If I have a surjective
+function from A to B
+
+107
+00:05:12,000 --> 00:05:14,230
+it means the size
+of A is greater than
+
+108
+00:05:14,230 --> 00:05:18,120
+or equal to the size of
+B for finite A and B.
+
+109
+00:05:18,120 --> 00:05:20,490
+The same argument
+goes for injections.
+
+110
+00:05:20,490 --> 00:05:24,810
+With an injection, I have less
+than or equal to 1 arrow in.
+
+111
+00:05:24,810 --> 00:05:27,180
+And what does that tell me?
+
+112
+00:05:27,180 --> 00:05:32,640
+Well if it's total, then
+there's at least 1 arrow out
+
+113
+00:05:32,640 --> 00:05:34,100
+of everything.
+
+114
+00:05:34,100 --> 00:05:37,995
+And that means that the size
+of A has to be less than
+
+115
+00:05:37,995 --> 00:05:39,370
+or equal to the
+number of arrows.
+
+116
+00:05:39,370 --> 00:05:40,953
+Because every element
+in A contributes
+
+117
+00:05:40,953 --> 00:05:43,480
+an arrow, maybe more than one.
+
+118
+00:05:43,480 --> 00:05:44,120
+OK.
+
+119
+00:05:44,120 --> 00:05:46,140
+If it's an injection,
+there's less
+
+120
+00:05:46,140 --> 00:05:49,880
+than or equal to 1 arrow
+coming into each element of B.
+
+121
+00:05:49,880 --> 00:05:53,000
+That means that B had
+better be big enough
+
+122
+00:05:53,000 --> 00:05:54,580
+to catch all the arrows.
+
+123
+00:05:54,580 --> 00:05:56,800
+So the number of
+arrows has to be
+
+124
+00:05:56,800 --> 00:05:59,210
+less than or equal
+to the size of B.
+
+125
+00:05:59,210 --> 00:06:01,410
+Put those two
+inequalities together
+
+126
+00:06:01,410 --> 00:06:05,920
+and you find that if you have a
+total injective relation from A
+
+127
+00:06:05,920 --> 00:06:08,850
+to B, that implies
+that the size of A
+
+128
+00:06:08,850 --> 00:06:12,815
+is less than or equal to the
+size of B for finite A and B.
+
+129
+00:06:12,815 --> 00:06:15,190
+The statement here that it's
+a totally injective relation
+
+130
+00:06:15,190 --> 00:06:16,424
+is for generality.
+
+131
+00:06:16,424 --> 00:06:17,840
+But the truth is,
+whenever there's
+
+132
+00:06:17,840 --> 00:06:19,650
+a total injective
+relation there's also
+
+133
+00:06:19,650 --> 00:06:21,900
+a totally injective function.
+
+134
+00:06:21,900 --> 00:06:26,630
+I'll leave that to a class
+exercise to work out.
+
+135
+00:06:26,630 --> 00:06:29,670
+So to summarize,
+what we can do is
+
+136
+00:06:29,670 --> 00:06:35,270
+characterize these kinds of
+jection relations between sets.
+
+137
+00:06:35,270 --> 00:06:38,260
+So let's define A
+bij B. So this is
+
+138
+00:06:38,260 --> 00:06:41,210
+going to be a binary
+relation between two
+
+139
+00:06:41,210 --> 00:06:44,800
+sets A and B. And its meaning is
+that there's a bijection from A
+
+140
+00:06:44,800 --> 00:06:50,200
+to B. So the definition of
+bij is a binary relation where
+
+141
+00:06:50,200 --> 00:06:54,420
+the domain and the co domain
+are the class of finite sets
+
+142
+00:06:54,420 --> 00:06:58,040
+or all sets for that matter.
+
+143
+00:06:58,040 --> 00:07:01,710
+surj B, A surj B
+means that there
+
+144
+00:07:01,710 --> 00:07:05,120
+is a surjective function
+from A to B. Again,
+
+145
+00:07:05,120 --> 00:07:08,630
+surj is a binary
+relation between sets.
+
+146
+00:07:08,630 --> 00:07:11,470
+And finally, A inj
+B says, there's
+
+147
+00:07:11,470 --> 00:07:15,030
+a total injection
+relation from A to B.
+
+148
+00:07:15,030 --> 00:07:18,630
+So we have those three
+relations between sets.
+
+149
+00:07:18,630 --> 00:07:21,530
+And what we've just
+shown is that if there's
+
+150
+00:07:21,530 --> 00:07:25,170
+a bijection between
+A and B, that's true,
+
+151
+00:07:25,170 --> 00:07:28,100
+implies that the size of A
+is equal to the size of B.
+
+152
+00:07:28,100 --> 00:07:30,240
+And in fact, it's not hard
+to prove the converse.
+
+153
+00:07:30,240 --> 00:07:32,950
+If the size of A and the
+size of B are the same,
+
+154
+00:07:32,950 --> 00:07:37,780
+then it's easy enough to find
+a bijection between them.
+
+155
+00:07:37,780 --> 00:07:41,000
+Similarly, if there's a
+surjection from A to B,
+
+156
+00:07:41,000 --> 00:07:43,560
+that's true, if and
+only if, the size of A
+
+157
+00:07:43,560 --> 00:07:45,890
+is greater than or
+equal to the size of B.
+
+158
+00:07:45,890 --> 00:07:48,680
+And if there's an
+injection from A to B,
+
+159
+00:07:48,680 --> 00:07:51,650
+that's true, if and
+only if, the size of A
+
+160
+00:07:51,650 --> 00:07:53,820
+is less than or equal
+to the size of B.
+
+161
+00:07:53,820 --> 00:07:59,480
+So this-- the existence of these
+kinds of relations between sets
+
+162
+00:07:59,480 --> 00:08:04,100
+is a handle on their
+relative sizes.
+
+163
+00:08:04,100 --> 00:08:06,860
+And this applies for
+finite sets A and B.
+
+164
+00:08:06,860 --> 00:08:09,426
+Because we really know what
+the size of infinite sets are.
+
+165
+00:08:09,426 --> 00:08:11,550
+So it wouldn't make sense
+to talk about the mapping
+
+166
+00:08:11,550 --> 00:08:15,710
+Lemma for infinite sets.
+
+167
+00:08:15,710 --> 00:08:18,270
+However, we can ask some
+questions about infinite sets.
+
+168
+00:08:18,270 --> 00:08:21,580
+So one natural question
+to ask is, let's look
+
+169
+00:08:21,580 --> 00:08:23,210
+at some finite properties.
+
+170
+00:08:23,210 --> 00:08:25,680
+If the size of A and B are the
+same and the size of B and C
+
+171
+00:08:25,680 --> 00:08:29,010
+are the same, obviously, the
+size of A and C are the same.
+
+172
+00:08:29,010 --> 00:08:32,400
+And that corresponds
+directly to an insertion
+
+173
+00:08:32,400 --> 00:08:35,539
+about bij because the size
+of A equals the size of B,
+
+174
+00:08:35,539 --> 00:08:38,130
+for finite sets, is
+the same as A bij B.
+
+175
+00:08:38,130 --> 00:08:40,960
+So what this says is
+that if A bij B and B
+
+176
+00:08:40,960 --> 00:08:45,512
+bij C, then A bij C. If
+there's a bijection from A to B
+
+177
+00:08:45,512 --> 00:08:47,220
+and a bijection from
+B to C, then there's
+
+178
+00:08:47,220 --> 00:08:52,470
+a bijection from A to C.
+Corresponding property
+
+179
+00:08:52,470 --> 00:08:55,515
+for finite sets, again, is
+greater than or equal to-- if A
+
+180
+00:08:55,515 --> 00:08:57,890
+is greater than or equal to
+B greater than or equal to C,
+
+181
+00:08:57,890 --> 00:08:59,710
+then A is-- the
+size of A is greater
+
+182
+00:08:59,710 --> 00:09:02,280
+than or equal to the size of
+C. And that would correspond
+
+183
+00:09:02,280 --> 00:09:05,940
+to a similar statement about
+the surjection relation,
+
+184
+00:09:05,940 --> 00:09:09,080
+A surj B, B surj C,
+implies A surj C.
+
+185
+00:09:09,080 --> 00:09:10,910
+And finally, more
+interesting one,
+
+186
+00:09:10,910 --> 00:09:13,800
+is that if A and B
+are each greater than
+
+187
+00:09:13,800 --> 00:09:16,320
+or equal to each other, if A
+is greater than or equal to
+
+188
+00:09:16,320 --> 00:09:19,580
+B and B-- the size of B is
+greater than or equal to A,
+
+189
+00:09:19,580 --> 00:09:21,760
+then in fact, they're
+the same size.
+
+190
+00:09:21,760 --> 00:09:24,230
+A is equal to B.
+That would correspond
+
+191
+00:09:24,230 --> 00:09:27,470
+to the following statement
+in terms of jections,
+
+192
+00:09:27,470 --> 00:09:33,520
+if A surj B and B surj A, then
+A bij B. Now all of these facts
+
+193
+00:09:33,520 --> 00:09:37,630
+follow immediately for
+finite sets A and B.
+
+194
+00:09:37,630 --> 00:09:40,530
+But we're going to be
+interested in whether they
+
+195
+00:09:40,530 --> 00:09:41,492
+hold for infinite sets.
+
+196
+00:09:41,492 --> 00:09:43,950
+So they follow immediately for
+finite sets from the Mapping
+
+197
+00:09:43,950 --> 00:09:47,100
+Lemma because the Mapping Lemma
+says that these bij and surj
+
+198
+00:09:47,100 --> 00:09:49,080
+relations are the same
+is equal and greater
+
+199
+00:09:49,080 --> 00:09:52,460
+than or equal to [INAUDIBLE].
+
+200
+00:09:52,460 --> 00:09:57,120
+So again, this is immediate
+from the Mapping Lemma.
+
+201
+00:09:57,120 --> 00:10:01,320
+But now I can ask whether
+or not these same properties
+
+202
+00:10:01,320 --> 00:10:02,610
+hold for infinite sets.
+
+203
+00:10:02,610 --> 00:10:05,550
+It's an exercise in
+reasoning about properties
+
+204
+00:10:05,550 --> 00:10:08,800
+of mappings and relations.
+
+205
+00:10:08,800 --> 00:10:13,610
+And the answer is that the first
+two claims go through easily
+
+206
+00:10:13,610 --> 00:10:16,170
+if you're trying to prove
+them for finite sets,
+
+207
+00:10:16,170 --> 00:10:17,800
+for infinite sets,
+the basic ideas.
+
+208
+00:10:17,800 --> 00:10:18,966
+Let's look at the first one.
+
+209
+00:10:18,966 --> 00:10:21,900
+It says that if A-- If there's
+a bijection from A to B
+
+210
+00:10:21,900 --> 00:10:23,830
+and there's a
+bijection from B to C,
+
+211
+00:10:23,830 --> 00:10:27,110
+then there ought to be one from
+A to C. How do you find it?
+
+212
+00:10:27,110 --> 00:10:28,110
+Well it's actually easy.
+
+213
+00:10:28,110 --> 00:10:30,220
+You just compose
+the bijection from A
+
+214
+00:10:30,220 --> 00:10:33,170
+to B with the
+bijection from B to C.
+
+215
+00:10:33,170 --> 00:10:36,620
+And it's a very easy
+exercise that the composition
+
+216
+00:10:36,620 --> 00:10:38,660
+of bijection is a bijection.
+
+217
+00:10:38,660 --> 00:10:41,800
+Likewise, the composition of
+surjections is a surjection.
+
+218
+00:10:41,800 --> 00:10:44,680
+And that proves the
+second claim easily.
+
+219
+00:10:44,680 --> 00:10:49,957
+But the third claim is much more
+interesting and is not obvious.
+
+220
+00:10:49,957 --> 00:10:51,790
+It's called the
+Schroeder-Bernstein theorem.
+
+221
+00:10:51,790 --> 00:10:56,290
+And it will come up a little
+bit in a few more lectures.

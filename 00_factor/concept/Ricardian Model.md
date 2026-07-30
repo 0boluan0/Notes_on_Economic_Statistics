@@ -8,6 +8,8 @@ tags:
 - 经济
 - concept
 ---
+
+# Ricardian Model
 李嘉图模型（Ricardian Model）是大卫·李嘉图提出的经济模型，主要用于分析土地级差地租和经济增长受自然资源约束的问题。
 
 ## 基本假设

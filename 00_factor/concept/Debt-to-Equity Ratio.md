@@ -9,6 +9,13 @@ tags:
 - 财务比率
 - concept
 ---
+
+# Debt-to-Equity Ratio
+
+## 它是什么
+
+产权比率是指总负债与股东权益的比值，用于衡量企业长期偿债能力和财务结构。
+
 产权比率是指总负债与股东权益的比值，用于衡量企业长期偿债能力和财务结构。
 
 >[!note] 定义
@@ -50,6 +57,12 @@ $权益乘数 = 1 + 产权比率$
 ## 相关链接
 [[Debt-to-Asset Ratio|资产负债率]]
 [[Equity Multiplier|权益乘数]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Debt-to-Asset Ratio]]、[[Equity Multiplier]]。
 
 ## 课程笔记反链
 

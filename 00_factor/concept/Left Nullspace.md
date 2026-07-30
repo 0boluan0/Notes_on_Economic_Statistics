@@ -6,8 +6,8 @@ aliases:
 - 左零空间
 - N(A^T)
 tags:
-- 线性代数
-- concept
+  - 线性代数
+  - concept
 ---
 # Left Nullspace
 
@@ -129,7 +129,7 @@ $$
 
 - [[01_Ax = b and the Four Subspaces#Session 1.9 Solving Ax = b: row reduced form R|Session 1.9]]：相容条件可以用 left nullspace 理解。
 - [[01_Ax = b and the Four Subspaces#Session 1.11 The four fundamental subspaces|Session 1.11]]：left nullspace 与 column space 在 $\mathbb{R}^m$ 中正交互补。
-- [[01_Ax = b and the Four Subspaces#Session 1.13 Graphs, networks, incidence matrices|Session 1.13]]：网络矩阵中 left nullspace 对应连通分量等约束结构。
+- [[01_Ax = b and the Four Subspaces#Session 1.13 Graphs, networks, and incidence matrices|Session 1.13]]：网络矩阵中 left nullspace 对应连通分量等约束结构。
 
 ## 关联卡片
 
@@ -140,6 +140,10 @@ $$
 - [[Orthogonality]]
 - [[Reading the Four Fundamental Subspaces from RREF]]
 
+
+## 最小例子
+
+把 **Left Nullspace** 放在最简单的可计算情形中：先给定定义所需的最小输入，再按定义计算输出；若关键关系不成立，就不能把该对象归入本概念。这个检查也能帮助区分相近概念。
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

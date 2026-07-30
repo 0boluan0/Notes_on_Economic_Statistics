@@ -9,6 +9,8 @@ tags:
 - 经济
 - concept
 ---
+
+# Pioneers of Macroeconomics
 宏观经济理论先驱是指凯恩斯革命之前，对宏观经济问题进行早期探索的经济学家和理论。
 
 ## 历史背景
@@ -156,9 +158,9 @@ $M = kPY$
 
 ## 相关链接
 
-- 这些先驱理论为凯恩斯革命奠定了基础
-- 凯恩斯在这些理论基础上进行了革命性变革
-- 现代宏观经济学继承了这些理论的部分内容
+- 这些先驱理论为 [[Classical Economics]] 与凯恩斯革命奠定了基础。
+- 早期增长与人口思想可与 [[Population Growth and Economic Development]]、[[Solow Model]] 对照阅读。
+- 学派演化可从 [[Physiocrats]] 连接到现代宏观经济学。
 
 ## 课程笔记反链
 

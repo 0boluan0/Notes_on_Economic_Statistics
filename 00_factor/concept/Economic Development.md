@@ -6,6 +6,7 @@ tags:
 - concept
 - economics
 ---
+
 # Economic Development
 
 ## 一句话记忆
@@ -45,6 +46,12 @@ Economic Development 比 [[Economic Growth]] 更宽，除了产出增加，还�
 - [[Lewis Dual Sector Model]]
 - [[Middle-Income Trap]]
 - [[Growth Theory-hub]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Economic Growth]]、[[Kuznets Modern Economic Growth Theory]]、[[00_导论和考试相关]]、[[06_经济增长理论]]、[[Rostow's Stages of Growth]]、[[Lewis Dual Sector Model]]、[[Middle-Income Trap]]、[[Growth Theory-hub]]。
 
 ## 课程笔记反链
 

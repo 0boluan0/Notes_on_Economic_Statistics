@@ -7,6 +7,7 @@ aliases:
 tags:
 - procedure
 - 时间序列
+type: procedure
 ---
 # ARMA Model Identification Steps
 

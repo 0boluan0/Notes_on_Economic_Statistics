@@ -9,6 +9,7 @@ tags:
 - risk-management
 - statistics
 ---
+
 # EVT
 
 ## 先记一句话
@@ -44,3 +45,9 @@ Extreme Value Theory 不试图拟合整个损失分布，而是聚焦最大损�
 - [[VaR]]
 - [[ES]]
 - [[Operational Risk]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[GPD]]、[[14_VaR参数法和模拟法]]、[[EVT VaR Calculation]]、[[VaR]]、[[ES]]、[[Operational Risk]]。

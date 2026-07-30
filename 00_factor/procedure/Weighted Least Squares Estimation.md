@@ -7,6 +7,7 @@ aliases:
 tags:
 - procedure
 - econometrics
+type: procedure
 ---
 # Weighted Least Squares Estimation
 

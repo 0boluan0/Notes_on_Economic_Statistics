@@ -7,6 +7,7 @@ tags:
 - procedure
 - 时间序列
 - 波动建模
+type: procedure
 ---
 # GARCH Model Estimation Steps
 

@@ -4,9 +4,9 @@ aliases:
 - Square Root of a Matrix
 - 矩阵平方根
 tags:
-- concept
-- multivariate statistics
-- 线性代数
+  - concept
+  - multivariate statistics
+  - 线性代数
 ---
 # Matrix Square Root
 

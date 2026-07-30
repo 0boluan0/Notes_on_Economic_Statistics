@@ -4,7 +4,7 @@ aliases:
 - MIRR
 - 修正内部收益率
 tags:
-- concept
+  - concept
 ---
 # Modified Internal Rate of Return (MIRR)
 
@@ -19,6 +19,13 @@ tags:
 ## 关联卡片
 - [[IRR Calculation]]
 
+
+## 最小例子
+
+把 **MIRR** 放在最简单的可计算情形中：先给定定义所需的最小输入，再按定义计算输出；若关键关系不成立，就不能把该对象归入本概念。这个检查也能帮助区分相近概念。
+## 概念边界
+
+本卡片只回答“它是什么”，集中在定义、核心关系与最小例子；具体估计步骤、证明和诊断流程应分别放在 procedure、proof 或 system 卡片中。
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

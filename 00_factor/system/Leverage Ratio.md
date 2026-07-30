@@ -45,6 +45,10 @@ Basel III 基本最低要求常用 3%。
 
 ## 关联卡片
 
+## 复现规范
+
+记录输入数据与样本区间、模型/检验设定、阈值或显著性水平、软件版本和处理决策；保留诊断图表与原始输出，使“发现—判断—修正”链条可复核。
+
 - [[Basel Capital Adequacy Ratio]]
 - [[Risk-Weighted Assets]]
 - [[Tier 1 Capital Ratio]]

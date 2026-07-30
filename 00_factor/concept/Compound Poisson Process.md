@@ -7,6 +7,7 @@ tags:
 - concept
 - stochastic processes
 ---
+
 # 复合泊松过程
 
 >[!note] 定义
@@ -100,6 +101,12 @@ $ Var[X(10)] = 2 \times 10 \times 0.08 = 1.6 $
 - 保留了泊松过程的独立增量性质
 - 均值和方差与时间 λt 成正比
 - 可以建模"事件数量 + 每次影响"的累积过程
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Poisson Process]]、[[Renewal Process]]。
 
 ## 课程笔记反链
 

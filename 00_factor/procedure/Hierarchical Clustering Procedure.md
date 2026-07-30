@@ -5,6 +5,7 @@ aliases:
 tags:
 - procedure
 - multivariate statistics
+type: procedure
 ---
 # Hierarchical Clustering Procedure
 

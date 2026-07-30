@@ -6,6 +6,7 @@ aliases:
 tags:
 - procedure
 - multivariate statistics
+type: procedure
 ---
 # Factor Analysis PC Method
 

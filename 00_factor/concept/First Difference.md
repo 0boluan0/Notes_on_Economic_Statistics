@@ -8,7 +8,12 @@ tags:
 - concept
 - 时间序列
 ---
+
 # First Difference
+
+## 它是什么
+
+一阶差分就是：把水平值改成相邻两期的变化量。
 
 ## 先记一句话
 
@@ -67,6 +72,12 @@ $$
 - [[Unit Root Test]]
 - [[Cointegration]]
 - [[Error Correction Model]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Error Correction Model]]、[[03_平稳时间序列模型]]、[[07_协整和误差修正模型]]、[[Random Walk]]、[[ARIMA]]、[[Unit Root Test]]、[[Cointegration]]。
 
 ## 课程笔记反链
 

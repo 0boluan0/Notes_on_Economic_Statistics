@@ -6,6 +6,7 @@ aliases:
 tags:
 - framework
 - 线性代数
+type: framework
 ---
 # Invertible Matrix Equivalence Chain
 
@@ -86,6 +87,11 @@ $$
 - [[01_Ax = b and the Four Subspaces#Session 1.3 Elimination with matrices|Session 1.3]]：pivot 和 rank 暴露独立方向。
 - [[01_Ax = b and the Four Subspaces#Session 1.4 Multiplication and inverse matrices|Session 1.4]]：inverse 意味着每个 $b$ 唯一可解。
 - [[01_Ax = b and the Four Subspaces#Session 1.7 Column space and nullspace|Session 1.7]]：column space / nullspace 给出存在性和唯一性解释。
+
+## 边界与失败模式
+
+- 等价链依赖矩阵为方阵；非方阵只能讨论左逆、右逆或满秩条件，不能直接套用“可逆”。
+- 行化简适合判断秩与解结构，但不能把数值近似中的“小主元”机械当作精确零。
 
 ## 关联卡片
 

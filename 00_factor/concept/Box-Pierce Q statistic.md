@@ -11,7 +11,12 @@ tags:
 - 06_时间序列分析
 - concept
 ---
+
 # Box-Pierce 和 Ljung-Box 检验
+
+## 它是什么
+
+检验的核心思想是：如果原假设成立（即序列为白噪声），样本自相关系数 $rk$ 应该围绕 0 随机波动，其平方和不应过大。通过中心极限定理推导 $rk$ 的渐近分布，进而构造 Q 统计量。
 
 ## 定理内容
 
@@ -117,6 +122,12 @@ $df = s - p - q$
 [[White Noise|白噪声过程]]
 [[Autocorrelation Function|自相关函数 ACF]]
 [[ARMA|ARMA模型]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[White Noise]]、[[Autocorrelation Function]]、[[ARMA]]。
 
 ## 课程笔记反链
 

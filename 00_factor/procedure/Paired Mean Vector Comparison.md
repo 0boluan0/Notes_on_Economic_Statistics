@@ -7,6 +7,7 @@ aliases:
 tags:
 - procedure
 - multivariate statistics
+type: procedure
 ---
 # Paired Mean Vector Comparison
 

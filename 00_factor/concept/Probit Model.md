@@ -9,6 +9,8 @@ tags:
 - 经济
 - concept
 ---
+
+# Probit Model
 probit模型（Probit Model）是用于分析二元被解释变量（取值为0或1）的回归模型，使用标准正态分布作为潜在变量的分布。
 
 ## 模型形式

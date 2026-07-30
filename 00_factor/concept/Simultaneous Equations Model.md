@@ -8,6 +8,8 @@ tags:
 - 经济
 - concept
 ---
+
+# Simultaneous Equations Model
 联立方程模型（Simultaneous Equations Model, SEM）是指由多个相互关联的方程组成的计量经济模型，其中某些变量在多个方程中同时被决定。
 
 ## 基本结构

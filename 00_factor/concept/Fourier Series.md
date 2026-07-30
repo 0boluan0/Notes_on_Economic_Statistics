@@ -8,6 +8,7 @@ tags:
 - concept
 - 线性代数
 ---
+
 # Fourier Series
 
 ## 先记一句话
@@ -55,8 +56,8 @@ $$
 
 ## 来自课程位置
 
-- [[02_Least Squares, Determinants and Eigenvalues#Session 2.11 Markov matrices; Fourier series|Session 2.11]]：Fourier basis 作为正交基和投影思想的延伸。
-- [[03_Positive Definite Matrices and Applications#Session 3.2 Complex matrices; fast Fourier transform|Session 3.2]]：复数、Fourier matrix 与 FFT。
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.11 Markov matrices and Fourier series|Session 2.11]]：Fourier basis 作为正交基和投影思想的延伸。
+- [[03_Positive Definite Matrices and Applications#Session 3.2 Complex matrices and fast Fourier transform|Session 3.2]]：复数、Fourier matrix 与 FFT。
 
 ## 关联卡片
 
@@ -64,6 +65,12 @@ $$
 - [[Orthogonal Projection]]
 - [[Orthogonal Matrix]]
 - [[Change of Basis]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Orthogonality]]、[[Orthogonal Projection]]、[[02_Least Squares, Determinants and Eigenvalues]]、[[03_Positive Definite Matrices and Applications]]、[[Orthogonal Matrix]]、[[Change of Basis]]。
 
 ## 课程笔记反链
 

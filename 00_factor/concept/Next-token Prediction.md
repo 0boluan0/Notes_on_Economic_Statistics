@@ -1,8 +1,10 @@
 ---
 aliases:
+  - Next-token Prediction
   - "下一个token预测"
   - "Next token prediction"
 tags:
+  - concept
   - llm
   - llm/concept
 ---

@@ -8,6 +8,7 @@ aliases:
 tags:
 - framework
 - 时间序列
+type: framework
 ---
 # Forecast Evaluation
 

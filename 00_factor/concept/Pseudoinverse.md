@@ -91,7 +91,7 @@ $$
 
 ## 来自课程位置
 
-- [[03_Positive Definite Matrices and Applications#Session 3.8 Left and right inverses; pseudoinverse|Session 3.8]]：左右逆与 Moore-Penrose pseudoinverse。
+- [[03_Positive Definite Matrices and Applications#Session 3.8 Left and right inverses and pseudoinverse|Session 3.8]]：左右逆与 Moore-Penrose pseudoinverse。
 - [[03_Positive Definite Matrices and Applications#Session 3.5 Singular value decomposition|Session 3.5]]：SVD 解释伪逆结构。
 
 ## 关联卡片

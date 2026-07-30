@@ -3,8 +3,8 @@ aliases:
 - Multicollinearity
 - 多重共线性
 tags:
-- concept
-- econometrics
+  - concept
+  - econometrics
 ---
 # Multicollinearity
 

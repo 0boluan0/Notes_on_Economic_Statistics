@@ -5,8 +5,8 @@ aliases:
 - 混合策略占优
 - 被混合策略严格占优
 tags:
-- concept
-- game-theory
+  - concept
+  - game-theory
 ---
 # Mixed Strategy Dominance
 

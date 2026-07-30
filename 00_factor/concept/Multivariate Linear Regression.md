@@ -3,9 +3,9 @@ aliases:
 - Multivariate Linear Regression
 - 多元线性回归
 tags:
-- concept
-- multivariate statistics
-- econometrics
+  - concept
+  - multivariate statistics
+  - econometrics
 ---
 # Multivariate Linear Regression
 

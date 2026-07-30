@@ -3,8 +3,8 @@ aliases:
 - Information Set
 - 信息集
 tags:
-- concept
-- game-theory
+  - concept
+  - game-theory
 ---
 # Information Set
 

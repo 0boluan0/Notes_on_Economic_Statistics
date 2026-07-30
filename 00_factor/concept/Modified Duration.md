@@ -3,8 +3,8 @@ aliases:
 - Modified Duration
 - 修正久期
 tags:
-- concept
-- fixed-income
+  - concept
+  - fixed-income
 ---
 # Modified Duration
 

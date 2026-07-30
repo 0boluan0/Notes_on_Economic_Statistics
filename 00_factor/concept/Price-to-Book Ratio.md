@@ -9,6 +9,8 @@ tags:
 - 财务比率
 - concept
 ---
+
+# Price-to-Book Ratio
 市净率是指每股市价与每股净资产的比值，用于衡量股票相对于账面价值的估值水平。
 
 >[!note] 定义

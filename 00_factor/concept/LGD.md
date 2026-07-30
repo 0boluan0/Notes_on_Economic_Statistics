@@ -4,8 +4,8 @@ aliases:
 - Loss Given Default
 - 违约损失率
 tags:
-- concept
-- credit-risk
+  - concept
+  - credit-risk
 ---
 # LGD
 

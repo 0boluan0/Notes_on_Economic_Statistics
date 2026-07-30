@@ -3,8 +3,8 @@ aliases:
 - Hierarchical Clustering
 - 层次聚类
 tags:
-- concept
-- multivariate statistics
+  - concept
+  - multivariate statistics
 ---
 # Hierarchical Clustering
 
@@ -44,3 +44,6 @@ tags:
 - [[Hierarchical Clustering Procedure]]
 - [[Linkage Criterion]]
 - [[Clustering Method Selection]]
+## 核心公式
+
+$$d(A,B)=\min_{i\in A,j\in B}d(i,j)$$\n\n是 single-linkage 的一种合并准则。

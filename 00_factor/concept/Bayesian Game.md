@@ -8,6 +8,7 @@ tags:
 - concept
 - game-theory
 ---
+
 # Bayesian Game
 
 ## 一句话记忆
@@ -56,3 +57,9 @@ tags:
 - [[Belief (Game Theory)]]
 - [[Perfect Bayesian Equilibrium]]
 - [[Game Theory-hub]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Type (Game Theory)]]、[[Belief (Game Theory)]]、[[Bayesian Nash Equilibrium]]、[[05_贝叶斯博弈]]、[[Perfect Bayesian Equilibrium]]、[[Game Theory-hub]]。

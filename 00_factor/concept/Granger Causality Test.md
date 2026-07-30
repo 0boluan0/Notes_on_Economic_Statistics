@@ -5,9 +5,9 @@ aliases:
 - 格兰杰因果检验
 - 格兰杰因果关系检验
 tags:
-- concept
-- 时间序列
-- 计量经济学
+  - concept
+  - 时间序列
+  - 计量经济学
 ---
 # Granger Causality Test
 

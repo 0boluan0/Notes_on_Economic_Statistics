@@ -6,6 +6,7 @@ aliases:
 tags:
 - procedure
 - derivatives
+type: procedure
 ---
 # Greeks Calculation
 

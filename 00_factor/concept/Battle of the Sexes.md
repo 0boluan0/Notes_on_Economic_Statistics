@@ -7,6 +7,7 @@ tags:
 - concept
 - game-theory
 ---
+
 # Battle of the Sexes
 
 ## 一句话记忆
@@ -48,3 +49,9 @@ $(Cafe,Cafe)$ 和 $(Pub,Pub)$ 都是纯策略纳什均衡。
 - [[Mixed Strategy Nash Equilibrium]]
 - [[Bayesian Game]]
 - [[Bayesian Nash Equilibrium]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[03_策略式博弈]]、[[05_贝叶斯博弈]]、[[Nash Equilibrium]]、[[Mixed Strategy Nash Equilibrium]]、[[Bayesian Game]]、[[Bayesian Nash Equilibrium]]。

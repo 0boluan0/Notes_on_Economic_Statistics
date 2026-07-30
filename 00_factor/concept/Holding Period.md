@@ -5,8 +5,8 @@ aliases:
 - VaR horizon
 - 风险持有期
 tags:
-- concept
-- risk-management
+  - concept
+  - risk-management
 ---
 # Holding Period
 

@@ -8,6 +8,7 @@ tags:
 - 数学基础
 - concept
 ---
+
 # 中心极限定理（CLT）
 
 ## 定理内容
@@ -152,6 +153,12 @@ $\sqrt{n}\left(\frac{\bar{X}_n - \mu}{\sigma}\right) \xrightarrow{d} N(0, 1)$
 [[Law of Large Numbers|大数定律]]
 [[OLS consistency|OLS估计量的一致性]]
 [[Asymptotic Theory|渐近理论]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Law of Large Numbers]]、[[OLS consistency]]、[[Asymptotic Theory]]。
 
 ## 课程笔记反链
 

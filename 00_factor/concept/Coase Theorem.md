@@ -6,6 +6,7 @@ tags:
 - concept
 - public finance
 ---
+
 # 科斯定理
 
 >[!note] 定义
@@ -142,6 +143,12 @@ $ C \leq \text{支付} \leq D $
 - 强调了产权制度的重要性
 - 为环境经济学提供了理论基础
 - 影响了 deregulation 和私有化思潮
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Externality]]、[[Pigouvian Tax]]、[[Property Rights]]。
 
 ## 课程笔记反链
 

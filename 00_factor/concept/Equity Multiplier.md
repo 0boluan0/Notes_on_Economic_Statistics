@@ -8,6 +8,13 @@ tags:
 - 财务比率
 - concept
 ---
+
+# Equity Multiplier
+
+## 它是什么
+
+权益乘数是指总资产与股东权益的比值，用于衡量企业的杠杆程度和财务结构。
+
 权益乘数是指总资产与股东权益的比值，用于衡量企业的杠杆程度和财务结构。
 
 >[!note] 定义
@@ -52,6 +59,12 @@ $权益乘数 = 1 + 产权比率$
 ## 相关链接
 [[Debt-to-Equity Ratio|产权比率]]
 [[Debt-to-Asset Ratio|资产负债率]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Debt-to-Equity Ratio]]、[[Debt-to-Asset Ratio]]。
 
 ## 课程笔记反链
 

@@ -4,8 +4,14 @@ aliases:
 - 财务比率分析
 tags:
 - procedure
+type: procedure
 ---
 # Financial Ratio Analysis
+
+## 输入
+
+- 至少两期资产负债表、利润表和现金流量表数据。
+- 同业基准、历史基准与分析目标（偿债、盈利、运营或估值）。
 
 ## 适用场景
 

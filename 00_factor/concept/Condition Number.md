@@ -7,6 +7,9 @@ tags:
 - 线性代数
 - concept
 ---
+
+# Condition Number
+
 条件指数（Condition Number）是衡量矩阵数值稳定性的指标，用于检测回归模型中多重共线性的严重程度。
 
 >[!note] 定义
@@ -96,7 +99,13 @@ $\kappa(A) = \|A\| \cdot \|A^{-1}\|$
 
 其中 $\| \cdot \|$ 是矩阵范数。
 
-相关链接: [[Multicollinearity|多重共线性]], [[00_factor/concept/Variance Inflation Factor|方差膨胀因子]]
+相关链接：[[Multicollinearity|多重共线性]]、[[Variance Inflation Factor|方差膨胀因子]]。
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Multicollinearity]]。
 
 ## 课程笔记反链
 

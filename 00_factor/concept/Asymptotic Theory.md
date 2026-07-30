@@ -5,7 +5,12 @@ aliases:
 tags:
 - concept
 ---
+
 # Asymptotic Theory
+
+## 它是什么
+
+「Asymptotic Theory」是指研究样本量趋于无穷时统计量的极限性质（如一致性、渐近正态性）。
 
 >[!note] 它是什么
 > - 「Asymptotic Theory」是指研究样本量趋于无穷时统计量的极限性质（如一致性、渐近正态性）。
@@ -15,8 +20,18 @@ tags:
 > - 符号/公式：$\sqrt{n}(\hat\theta-\theta_0) \xrightarrow{d} N(0,V)$。
 > - 最小例子：样本均值的渐近分布由中心极限定理给出。
 >
+## 最小例子
+
+样本均值的渐近分布由中心极限定理给出。
+
 ## 关联卡片
 - [[Central Limit Theorem]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Central Limit Theorem]]。
 
 ## 课程笔记反链
 

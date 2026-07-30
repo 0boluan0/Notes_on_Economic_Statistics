@@ -8,6 +8,7 @@ tags:
 - procedure
 - fixed-income
 - risk-management
+type: procedure
 ---
 # DV01 Hedge Calculation
 

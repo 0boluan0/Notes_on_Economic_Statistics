@@ -6,6 +6,7 @@ aliases:
 tags:
 - procedure
 - risk-management
+type: procedure
 ---
 # Monte Carlo Simulation VaR
 

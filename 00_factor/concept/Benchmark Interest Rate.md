@@ -7,6 +7,9 @@ tags:
 - 利率
 - concept
 ---
+
+# Benchmark Interest Rate
+
 基准利率是中央银行公布的商业银行存款、贷款、贴现等业务的指导性利率，是整个利率体系的基础。
 
 >[!note] 定义
@@ -101,6 +104,12 @@ $r = r^* + RP = r^* + IP + DRP + LRP + MRP$
 ## 相关链接
 
 [[Yield to Maturity|到期收益率]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Yield to Maturity]]。
 
 ## 课程笔记反链
 

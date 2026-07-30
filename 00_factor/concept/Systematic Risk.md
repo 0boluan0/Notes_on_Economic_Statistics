@@ -17,6 +17,9 @@ tags:
 >
 ## 关联卡片
 - [[CAPM Estimation]]
+- [[Specific Variance]]
+- [[Risk-free Rate]]
+- [[Sharpe Ratio]]
 
 ## 课程笔记反链
 

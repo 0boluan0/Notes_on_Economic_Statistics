@@ -7,7 +7,12 @@ tags:
 - concept
 - 线性代数
 ---
+
 # Diagonalization
+
+## 它是什么
+
+对角化就是：找到一组特征向量基，让矩阵作用变成各方向各管各的缩放。
 
 ## 先记一句话
 
@@ -81,6 +86,12 @@ $$
 - [[Matrix Exponential]]
 - [[Jordan Form]]
 - [[Choosing Matrix Decompositions]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Jordan Form]]、[[Singular Value Decomposition]]、[[02_Least Squares, Determinants and Eigenvalues]]、[[03_Positive Definite Matrices and Applications]]、[[Eigenvalues]]、[[Eigenvectors]]、[[Matrix Exponential]]、[[Choosing Matrix Decompositions]]。
 
 ## 课程笔记反链
 

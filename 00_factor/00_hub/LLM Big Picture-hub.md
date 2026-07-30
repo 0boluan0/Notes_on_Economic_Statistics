@@ -9,6 +9,15 @@ tags:
 
 # LLM Big Picture-hub
 
+## 任务导航
+
+| 目标 | 入口 |
+| --- | --- |
+| 理解模型与训练 | [[Distributed LLM Training]]、[[LLM Efficiency Engineering]] |
+| 优化线上推理 | [[LLM Inference Optimization]] |
+| 评估能力与风险 | [[LLM Evaluation]] |
+| 追溯技术依据 | 下方 canvas 论文/技术报告索引 |
+
 这张 Hub 连接 `06_paper/LLM` 的论文网络和 `00_factor` 的可复用知识卡片。
 
 ## Canvas

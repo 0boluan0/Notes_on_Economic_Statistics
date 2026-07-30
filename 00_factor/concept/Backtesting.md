@@ -8,6 +8,7 @@ tags:
 - concept
 - risk-management
 ---
+
 # Backtesting
 
 ## 先记一句话
@@ -42,3 +43,9 @@ Backtesting 是把模型事前预测和事后实际结果对账，检查模型�
 - [[Kupiec Test]]
 - [[Christoffersen Test]]
 - [[VaR Standard Error]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Kupiec Test]]、[[Clustering Test]]、[[Backtesting Diagnostics]]、[[12_VAR风险]]、[[VaR]]、[[Christoffersen Test]]、[[VaR Standard Error]]。

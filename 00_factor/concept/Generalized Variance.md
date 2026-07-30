@@ -5,8 +5,8 @@ aliases:
 - 广义方差
 - 推广方差
 tags:
-- concept
-- multivariate statistics
+  - concept
+  - multivariate statistics
 ---
 # Generalized Variance
 

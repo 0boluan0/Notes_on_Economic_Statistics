@@ -9,6 +9,8 @@ tags:
 - 联立方程
 - concept
 ---
+
+# Reduced Form Equation
 简约式方程（Reduced Form Equation）是联立方程系统中将所有内生变量都表示为外生变量的函数，体现系统的最终解。
 
 >[!note] 定义

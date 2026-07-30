@@ -10,6 +10,7 @@ tags:
 - 时间序列
 - 计量经济学
 ---
+
 # Augmented Dickey-Fuller Test
 
 ## 先记一句话
@@ -60,6 +61,12 @@ ADF 用来判断序列是否需要差分、能否直接建平稳模型、是否�
 - [[Phillips-Perron Test]]
 - [[Stationarity]]
 - [[Cointegration]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[07_协整和误差修正模型]]、[[03_平稳时间序列模型]]、[[Unit Root Test]]、[[ADF Test Steps]]、[[Phillips-Perron Test]]、[[Stationarity]]、[[Cointegration]]。
 
 ## 课程笔记反链
 

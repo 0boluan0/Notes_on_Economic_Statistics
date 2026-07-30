@@ -77,7 +77,7 @@ $$
 
 ## 来自课程位置
 
-- [[02_Least Squares, Determinants and Eigenvalues#Session 2.4 Orthogonal matrices and Gram-Schmidt|Session 2.4]]：从 Gram-Schmidt 到 QR 分解。
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.4 Orthogonal matrices and Gram–Schmidt|Session 2.4]]：从 Gram-Schmidt 到 QR 分解。
 
 ## 关联卡片
 

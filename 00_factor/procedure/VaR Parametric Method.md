@@ -8,6 +8,7 @@ tags:
 - procedure
 - 金融风险
 - VaR
+type: procedure
 ---
 # VaR Parametric Method
 

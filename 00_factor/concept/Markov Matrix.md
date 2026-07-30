@@ -6,20 +6,18 @@ aliases:
 - 马尔可夫矩阵
 - 转移矩阵
 tags:
-- concept
-- 线性代数
+  - concept
+  - 线性代数
 ---
 # Markov Matrix
 
 ## 先记一句话
 
-Markov matrix 就是：**描述概率或人口如何在状态之间转移的矩阵**。
-
-课程里常用列随机矩阵：每列元素非负，且每列和为 1。
+Markov matrix 就是：**描述概率或人口如何在状态之间转移的随机矩阵**。必须先说明概率向量写成行还是列。
 
 ## 它是什么
 
-若状态向量 $u_k$ 表示第 $k$ 期各状态的比例或数量，转移规则写成
+若列状态向量 $u_k$ 表示第 $k$ 期各状态的比例或数量，转移规则写成
 $$
 u_{k+1}=Au_k.
 $$
@@ -28,6 +26,12 @@ $$
 $$
 \mathbf{1}^Tu_{k+1}=\mathbf{1}^Tu_k.
 $$
+
+若改用行概率向量 $d_k$ 并写成
+$$
+d_{k+1}=d_kP,
+$$
+则 $P$ 的每行非负且行和为 $1$；MIT 6.042J 的 random walks 使用这一约定。两种写法互为转置，不能混用。
 
 ## 一个最小例子
 
@@ -53,7 +57,7 @@ $$
 
 ## 稳态怎么看
 
-稳态向量满足
+列向量约定下稳态向量满足
 $$
 Au=u.
 $$
@@ -64,6 +68,8 @@ $$
 $$
 
 所以稳态是特征值 $1$ 对应的 [[Eigenvectors]]。
+
+行向量约定下则写成 $\pi P=\pi$，即 $\pi$ 是左特征向量。
 
 ## 它在题里负责什么
 
@@ -80,7 +86,7 @@ $$
 
 ## 来自课程位置
 
-- [[02_Least Squares, Determinants and Eigenvalues#Session 2.11 Markov matrices; Fourier series|Session 2.11]]：Markov matrix、稳态和特征值 1。
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.11 Markov matrices and Fourier series|Session 2.11]]：Markov matrix、稳态和特征值 1。
 
 ## 关联卡片
 
@@ -89,6 +95,11 @@ $$
 - [[Diagonalization]]
 - [[Matrix Exponential]]
 - [[Stationary Distribution]]
+
+
+## 最小例子
+
+把 **Markov Matrix** 放在最简单的可计算情形中：先给定定义所需的最小输入，再按定义计算输出；若关键关系不成立，就不能把该对象归入本概念。这个检查也能帮助区分相近概念。
 
 ## 课程笔记反链
 

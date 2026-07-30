@@ -59,4 +59,3 @@ $$
 - [[Distributed Lag Model]]
 - [[Cross-Correlation Function]]
 - [[Leading Indicator]]
-

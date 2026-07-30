@@ -9,7 +9,12 @@ tags:
 - 线性代数
 - concept
 ---
+
 # Column Space
+
+## 它是什么
+
+列空间就是：矩阵 $A$ 能做出来的所有输出。
 
 ## 先记一句话
 
@@ -151,6 +156,12 @@ $$
 - [[Linear system solution structure]]
 - [[Reading the Four Fundamental Subspaces from RREF]]
 - [[Left Nullspace]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Null Space]]、[[Matrix Rank]]、[[01_Ax = b and the Four Subspaces]]、[[Left Nullspace]]、[[Subspace]]、[[Linear system solution structure]]、[[Reading the Four Fundamental Subspaces from RREF]]。
 
 ## 课程笔记反链
 

@@ -4,8 +4,8 @@ aliases:
 - left inverse
 - 左逆
 tags:
-- concept
-- 线性代数
+  - concept
+  - 线性代数
 ---
 # Left Inverse
 
@@ -59,7 +59,7 @@ $$
 
 ## 来自课程位置
 
-- [[03_Positive Definite Matrices and Applications#Session 3.8 Left and right inverses; pseudoinverse|Session 3.8]]：left inverse、right inverse 与 pseudoinverse。
+- [[03_Positive Definite Matrices and Applications#Session 3.8 Left and right inverses and pseudoinverse|Session 3.8]]：left inverse、right inverse 与 pseudoinverse。
 
 ## 关联卡片
 
@@ -69,6 +69,10 @@ $$
 - [[Matrix Rank]]
 - [[Least Squares]]
 
+
+## 最小例子
+
+把 **Left Inverse** 放在最简单的可计算情形中：先给定定义所需的最小输入，再按定义计算输出；若关键关系不成立，就不能把该对象归入本概念。这个检查也能帮助区分相近概念。
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

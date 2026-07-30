@@ -8,6 +8,7 @@ tags:
 - concept
 - game-theory
 ---
+
 # Best-Reply Function
 
 ## 一句话记忆
@@ -50,6 +51,12 @@ $$
 - [[Finding Mixed Strategy Nash Equilibrium]]
 - [[Cournot Competition]]
 - [[Game Theory-hub]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[03_策略式博弈]]、[[04_案例（囚徒困境与纳什均衡）]]、[[Nash Equilibrium]]、[[Finding Pure Strategy Nash Equilibria]]、[[Finding Mixed Strategy Nash Equilibrium]]、[[Cournot Competition]]、[[Game Theory-hub]]。
 
 ## 课程笔记反链
 

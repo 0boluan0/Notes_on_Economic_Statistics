@@ -6,6 +6,7 @@ aliases:
 tags:
 - procedure
 - 线性代数
+type: procedure
 ---
 # Testing Positive Definiteness
 
@@ -44,7 +45,7 @@ $$
 
 - 已给 eigenvalues：直接看特征值符号。
 - 矩阵维度小：看 leading principal minors。
-- 正在做 elimination：看无换行交换时的 pivots。
+- 正在做 elimination：看无行交换、保持对称结构时的 pivots。
 - 给的是二次型：配方或换到特征向量坐标。
 
 ## Step 3. 执行判别

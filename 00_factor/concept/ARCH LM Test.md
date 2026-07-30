@@ -9,6 +9,7 @@ tags:
 - 时间序列
 - 波动建模
 ---
+
 # ARCH LM Test
 
 ## 先记一句话
@@ -62,6 +63,12 @@ ARCH-LM 回答：
 - [[ARCH]]
 - [[GARCH]]
 - [[McLeod-Li Test]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[ARCH]]、[[GARCH]]、[[04_波动建模 Modeling Volatility]]、[[Conditional Heteroskedasticity]]、[[Volatility Clustering]]、[[McLeod-Li Test]]。
 
 ## 课程笔记反链
 

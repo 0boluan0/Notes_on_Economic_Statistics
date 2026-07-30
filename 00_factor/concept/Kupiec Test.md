@@ -6,8 +6,8 @@ aliases:
 - Kupiec检验
 - 失败比例检验
 tags:
-- concept
-- risk-management
+  - concept
+  - risk-management
 ---
 # Kupiec Test
 

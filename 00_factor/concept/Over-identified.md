@@ -8,6 +8,8 @@ tags:
 - 联立方程
 - concept
 ---
+
+# Over-identified
 过度识别（Over-identified）是指联立方程系统中工具变量个数多于内生解释变量个数，参数可以确定但有多个等价估计方法的情况。
 
 >[!note] 定义

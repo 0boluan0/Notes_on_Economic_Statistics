@@ -1,7 +1,9 @@
 ---
 aliases:
+  - Quantization
   - "量化"
 tags:
+  - concept
   - llm
   - llm/concept
 ---

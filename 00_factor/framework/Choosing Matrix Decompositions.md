@@ -7,6 +7,7 @@ aliases:
 tags:
 - framework
 - 线性代数
+type: framework
 ---
 # Choosing Matrix Decompositions
 
@@ -68,7 +69,7 @@ tags:
 - [[02_Least Squares, Determinants and Eigenvalues#Session 2.9 Diagonalization and powers of A|Session 2.9]]：diagonalization 与 powers。
 - [[03_Positive Definite Matrices and Applications#Session 3.4 Similar matrices and Jordan form|Session 3.4]]：Jordan form。
 - [[03_Positive Definite Matrices and Applications#Session 3.5 Singular value decomposition|Session 3.5]]：SVD。
-- [[02_Least Squares, Determinants and Eigenvalues#Session 2.4 Orthogonal matrices and Gram-Schmidt|Session 2.4]]：QR。
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.4 Orthogonal matrices and Gram–Schmidt|Session 2.4]]：QR。
 
 ## 关联卡片
 

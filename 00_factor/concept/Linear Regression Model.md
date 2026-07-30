@@ -4,8 +4,8 @@ aliases:
 - 线性回归模型
 - linear model
 tags:
-- concept
-- econometrics
+  - concept
+  - econometrics
 ---
 # Linear Regression Model
 

@@ -8,1349 +8,2529 @@ tags:
   - course-note
 ---
 
-
-
 # Ax = b and the Four Subspaces
 
-## 单元速览
+> [!abstract] 本单元真正要解决的问题
+> 给定 $A\in\mathbb F^{m\times n}$、$x\in\mathbb F^n$、$b\in\mathbb F^m$（本单元通常取 $\mathbb F=\mathbb R$），怎样判断 $Ax=b$ 是否有解、解是否唯一，并把所有解写完整？算法上用消元；结构上用列空间、零空间、秩、基与四个基本子空间。本篇的最终目标不是“会做行运算”，而是能解释每一步行运算揭示了什么空间结构。
 
-- 这一单元真正回答的是：`Ax=b` 为什么会有解 / 无解 / 不唯一，以及这些现象如何被子空间语言统一解释。
-- 你最后必须能把题目自动分流到两条线：
-  - 算法线：elimination、pivot、row reduction、LU。
-  - 结构线：[[Column Space]]、[[Null Space]]、[[Row Space]]、[[Left Nullspace]]、rank、basis、dimension。
-- 如果复习时间很少，至少要保住这 5 个抓手：
-  - `b` 是否在 [[Column Space]] 里。
-  - 解是否等于 `particular solution + [[Null Space]]`。
-  - pivot 个数就是 rank。
-  - `rank + nullity = n`。
-  - 四个基本子空间分别活在 $\mathbb{R}^m$ 还是 $\mathbb{R}^n$。
+## 课程来源、约定与导航
 
-## 这页怎么用
+- 官方课程：MIT OCW 18.06SC *Linear Algebra, Fall 2011*；总入口见 [[00_MIT OCW 18.06SC course map|课程总览]]。
+- 本地资料索引：[[MIT_OCW_18.06SC_PDF/index|MIT 18.06SC PDF 索引]]。
+- 本篇严格按官网逻辑顺序写：Geometry → Overview → Elimination → Inverse → LU → Vector Spaces → Column/Null Spaces → $Ax=0$ → $Ax=b$ → Basis/Dimension → Four Subspaces → Matrix Spaces → Graphs → Review → Exam 1。
+- **编号提醒**：官网第二讲 Overview 的本地 summary 是 `Ses1.13sum.pdf`；官网第三至第十三讲依次使用本地 `Ses1.2–Ses1.12` 资料。
+- 尺寸检查规则：若 $A$ 是 $m\times n$，则它有 $m$ 行、$n$ 列；$Ax$ 只有在 $x\in\mathbb F^n$ 时有定义，结果属于 $\mathbb F^m$。
+- 除非特别说明，向量均写成列向量。$C(A)$、$N(A)$、$C(A^T)$、$N(A^T)$ 分别表示列空间、零空间、行空间和左零空间。
 
-- 第一次复习：先看每个 session 前面的 `快速回忆`，能口述后再读正文。
-- 第二次复习：直接跳到每讲的 `你要掌握` 和本页结尾的 `本单元复习清单`。
-- 做题卡住时，不要立刻回头重读整页，先问自己：
-  - 这是解结构题、basis 题，还是四个基本子空间题？
-  - 当前卡住的是算法步骤，还是空间解释？
+### Session 目录
 
-## Session 回忆索引
+1. [[#Session 1.1 The geometry of linear equations|线性方程的几何图像]]
+2. [[#Session 1.2 An overview of key ideas|全课程结构预览]]
+3. [[#Session 1.3 Elimination with matrices|矩阵消元]]
+4. [[#Session 1.4 Multiplication and inverse matrices|矩阵乘法与逆矩阵]]
+5. [[#Session 1.5 Factorization into A = LU|LU 分解]]
+6. [[#Session 1.6 Transposes, permutations, vector spaces|转置、置换与向量空间]]
+7. [[#Session 1.7 Column space and nullspace|列空间与零空间]]
+8. [[#Session 1.8 Solving Ax = 0: pivot variables and special solutions|齐次系统与特殊解]]
+9. [[#Session 1.9 Solving Ax = b: row reduced form R|非齐次系统与完整解]]
+10. [[#Session 1.10 Independence, basis, and dimension|线性无关、基与维数]]
+11. [[#Session 1.11 The four fundamental subspaces|四个基本子空间]]
+12. [[#Session 1.12 Matrix spaces, rank 1, and small world graphs|矩阵空间与秩一矩阵]]
+13. [[#Session 1.13 Graphs, networks, and incidence matrices|图、网络与关联矩阵]]
+14. [[#Session 1.14 Exam 1 review|Exam 1 复习]]
+15. [[#Exam 1 完整题解|Exam 1 完整题解]]
 
-- 1.1：row picture / column picture / matrix picture。
-- 1.2：整门课为什么会从消元一路走到 SVD。
-- 1.3-1.5：消元、主元、可逆性、LU。
-- 1.6-1.10：vector spaces、column/null space、special solutions、basis、dimension。
-- 1.11：四个基本子空间的总收束。
-- 1.12-1.13：rank-1、matrix spaces、graphs / incidence matrix。
-- 1.14：Exam 1 前的统一闭环。
-
-## 本单元主线
-
-Unit I 讲的是整门线性代数最基础、也最耐用的问题：给定矩阵 $A$ 和向量 $b$，方程 $Ax=b$ 什么时候有解、什么时候唯一、什么时候会出现自由度。MIT 这门课的做法不是把它停留在“解方程技巧”，而是把问题提升成“矩阵怎样把一个空间映到另一个空间”。
-
-因此这一单元有两条主线同时展开。第一条是算法线：高斯消元、回代、主元、换行、LU 分解。第二条是结构线：[[Column Space]] 决定哪些 $b$ 可达，[[Null Space]] 决定解为什么会不唯一，[[Row Space]] 与 [[Left Nullspace]] 则把矩阵的行结构和约束结构完整补齐。学完这一单元以后，任何“线性方程组”题都应该自动翻译成“列空间、零空间、秩和基”的问题。
-
-## 使用资料
-
-- 总入口：[[00_MIT OCW 18.06SC course map|课程总览]]
-- 题目索引：[[MIT_OCW_18.06SC_PDF/index|MIT OCW 18.06SC 题目与资料索引]]
-- 注意：本地 PDF 的 `An Overview of Key Ideas` 编号是 `Ses1.13sum.pdf`，但这里按 syllabus 放在 Session 1.2。
+![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit1-row-column-picture.png|760]]
 
 ## Session 1.1 The geometry of linear equations
 
-资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.1sum.pdf|summary]]
+### 本节问题与前置知识
 
-关联卡片：[[Linear system solution structure]]、[[Column Space]]、[[Vector Space]]
+**问题**：同一个方程组为什么既能看成几何对象的交，又能看成列向量的线性组合？
 
->[!note] 快速回忆
-> - 这讲要回答：同一个线性系统为什么能同时看成几何交点问题和列向量组合问题。
-> - 你要立刻想起：row picture 看交点，column picture 看 `b` 是否由列向量生成，matrix picture 看线性变换。
-> - 典型题型：把一个二元/三元系统翻译成三种 picture，并解释唯一解、无解、无穷多解。
-> - 它接到下一讲：从几何直觉升级到整门课的结构地图。
+**前置知识**：二元一次方程、向量加法与数乘。本节首次建立 [[Linear Algebra-hub|线性代数]] 的三个视角。
 
-### 核心问题
+**本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.1sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S01_Lecture_The_Geometry_of_Linear_Equations.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S01_Recitation_Geometry_of_Linear_Algebra.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.1sol.pdf#page=1|official solution p.1]]
 
-线性方程组一开始看起来像若干个公式，但它本质上是一个几何问题。每个方程都定义了一个超平面，解就是这些超平面的交点；把矩阵写出来以后，同一个问题又可以被看成“某个向量 $b$ 是否能由矩阵列向量线性组合出来”。
+### 1. 从 row picture 到 column picture
 
-### 三种图像
+考虑课堂中的系统
 
-- `row picture`：每一行给一个方程。在二维里是若干条直线，在三维里是若干个平面。解集是这些几何对象的交。
-- `column picture`：若
-  $$
-  A=\begin{bmatrix}a_1&a_2&\cdots&a_n\end{bmatrix},
-  $$
-  那么
-  $$
-  Ax=x_1a_1+\cdots+x_na_n.
-  $$
-  求解 $Ax=b$ 等价于问 $b$ 能否由这些列向量生成，以及它在这组列向量中的系数是什么。
-- `matrix picture`：把整个系统压成一个对象 $A$，从此以后不再是“若干方程”，而是“一个线性映射”。
+$$
+\begin{cases}
+2x-y=0,\\
+-x+2y=3.
+\end{cases}
+$$
 
-![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit1-row-column-picture.svg|760]]
+**行图像（row picture）**把每一个方程看成 $xy$ 平面中的直线。第一条是 $y=2x$，第二条是 $y=(x+3)/2$；交点同时满足两个方程。联立得
 
-上图把这两种最早出现的视角放在一起。左边强调“解是交点”，右边强调“解是系数”。这两个画法看起来不同，但问的是同一件事。课堂上很多同学会在这里第一次感到抽象，因为他们还把矩阵看成一个算术表格；真正跨过去的标志，是你开始把矩阵看成“组织一组向量并作用到整个空间上的规则”。
+$$
+2x=\frac{x+3}{2}\Longrightarrow 4x=x+3\Longrightarrow x=1,
+\qquad y=2.
+$$
 
->[!example] 典型例子
+因此交点是 $(1,2)$。在 $m$ 个方程、$n$ 个未知数的一般情形中，每一行在 $\mathbb R^n$ 中给出一个超平面；解集是这些超平面的交。
+
+**列图像（column picture）**把同一系统改写成
+
+$$
+x\begin{bmatrix}2\\-1\end{bmatrix}
++y\begin{bmatrix}-1\\2\end{bmatrix}
+=\begin{bmatrix}0\\3\end{bmatrix}.
+$$
+
+未知数 $x,y$ 不再只是平面坐标，而是两列的组合系数。代入 $(x,y)=(1,2)$：
+
+$$
+\begin{bmatrix}2\\-1\end{bmatrix}
++2\begin{bmatrix}-1\\2\end{bmatrix}
+=\begin{bmatrix}0\\3\end{bmatrix}.
+$$
+
+这引出 [[Column Space|列空间]]：$Ax=b$ 有解，当且仅当 $b$ 属于 $A$ 的列向量所张成的空间。
+
+### 2. 矩阵乘向量的两种等价读法
+
+设
+
+$$
+A=\begin{bmatrix}a_1&a_2&\cdots&a_n\end{bmatrix}\in\mathbb R^{m\times n},
+\qquad x=\begin{bmatrix}x_1\\\vdots\\x_n\end{bmatrix}\in\mathbb R^n.
+$$
+
+按列读：
+
+$$
+Ax=x_1a_1+\cdots+x_na_n\in\mathbb R^m.
+$$
+
+按行读：若 $r_i^T$ 是第 $i$ 行，则
+
+$$
+Ax=\begin{bmatrix}r_1^Tx\\\vdots\\r_m^Tx\end{bmatrix}.
+$$
+
+前者强调“输出是哪些列的组合”，后者强调“每个方程如何约束输入”。二者是同一次矩阵乘法，不是两个不同定义。
+
+> [!proof] 为什么列组合公式必然成立
+> **目标**：证明矩阵乘向量等于列的线性组合。
 >
-> 对系统
+> **构造**：比较等式两侧的第 $i$ 个分量。矩阵乘法定义给出
 > $$
-> \begin{cases}
-> 2x-y=0\\
-> -x+2y=3
-> \end{cases}
+> (Ax)_i=\sum_{j=1}^n a_{ij}x_j.
 > $$
-> row picture 是两条直线在平面中的交点；column picture 是
+> 第 $j$ 列 $a_j$ 的第 $i$ 个分量是 $a_{ij}$，所以
 > $$
-> x\begin{bmatrix}2\\-1\end{bmatrix}
-> +y\begin{bmatrix}-1\\2\end{bmatrix}
-> =\begin{bmatrix}0\\3\end{bmatrix}.
+> (x_1a_1+\cdots+x_na_n)_i
+> =\sum_{j=1}^n x_ja_{ij}.
 > $$
-> 当你解出 $(x,y)=(1,2)$ 时，同时完成了两件事：找到了直线交点，也找到了右端向量在列向量基底下的坐标。
+> 两式逐分量相等。
 >
-> 再往前一步看，线性系统总共有三种几何命运：
+> **边界与尺寸**：每个 $a_j\in\mathbb R^m$，所以线性组合仍在 $\mathbb R^m$；系数恰有 $n$ 个，与 $x$ 的长度一致。
 >
-> - 若几何对象交于一点，对应唯一解；
-> - 若它们互相平行或相容条件不成立，对应无解；
-> - 若它们部分重合，对应无穷多解。
->
-> 这三种命运在代数上分别对应“列独立且 $b$ 可达”“$b$ 不在列空间里”“列有冗余且 $b$ 可达”。也就是说，后面学到的列空间、零空间与秩，并不是突然引入的新对象，而是把这三种几何命运系统化后的语言。
->
-### 结构结论
+> **结论**：$Ax=\sum_jx_ja_j$。
 
-如果列向量张成的空间太小，那么有些 $b$ 根本不在里面，系统就无解；如果列向量之间有冗余，那么同一个 $b$ 可能对应多组系数，系统就不唯一。换句话说，“有解”由列空间控制，“唯一”由列向量是否独立控制。
+### 3. 三种解的几何命运
 
+- **唯一解**：$b$ 可由列生成，而且系数表示唯一。
+- **无解**：$b$ 不在列空间中。
+- **无穷多解**：$b$ 可达，但存在非零向量 $z$ 使 $Az=0$；若 $Ax_p=b$，则 $A(x_p+tz)=b$。
 
+这里已经预告了 [[Null Space|零空间]] 和 [[Linear system solution structure|线性方程组解结构]]。注意：方阵并不自动可逆；列必须既独立又张成整个输出空间。
 
-### 本讲知识点全景
+### 4. Recitation 代表例题
 
-- `row picture` 把每个方程看成一条直线、一个平面或一个超平面；求解 `Ax=b` 就是在问这些几何对象是否有公共交点。
-- `column picture` 把右端向量 $b$ 看成 A 的列向量的线性组合；未知数是这些列向量各取多少份。
-- `matrix picture` 用一句 `Ax=b` 把前两个视角合并起来。后面所有算法、分解和子空间，都是在分析这句式子何时可解、是否唯一、怎样更快求。
-- 矩阵乘向量有两种完全等价的读法：一是“列向量的线性组合”，二是“每一行对 $x$ 做点积”。这两个读法在后面会分别通向 column space 和 row space。
-- 方阵是否 `singular` 的最初几何含义很简单：它的列向量没有把整个空间铺满，于是某些 $b$ 根本到不了；若列还线性相关，则即便某个 $b$ 可达，解也可能不唯一。
-- 在二维里，两个方程可以给出唯一交点、平行无交点、或完全重合的无穷多个交点；高维情形只是这个图像的推广。
+Recitation 使用
 
->[!example] 例题
->
-> 令
+$$
+\begin{cases}
+2x+y=3,\\
+x-2y=-1.
+\end{cases}
+$$
+
+第二式给 $x=2y-1$，代入第一式：$2(2y-1)+y=3$，所以 $5y=5$、$y=1$、$x=1$。列图像为
+
+$$
+x\begin{bmatrix}2\\1\end{bmatrix}
++y\begin{bmatrix}1\\-2\end{bmatrix}
+=\begin{bmatrix}3\\-1\end{bmatrix}.
+$$
+
+右侧恰是两列各取一份。验证时既要代回两条原方程，也可直接做一次矩阵乘法。
+
+### Homework：全部题目与逐步解答
+
+> [!question]- Problem 1.1：判断三个向量的相关性
+> **题目转述**：给定
 > $$
-> A=\begin{bmatrix}1&2\\2&4\end{bmatrix}.
+> w_1=\begin{bmatrix}1\\2\\3\end{bmatrix},\quad
+> w_2=\begin{bmatrix}4\\5\\6\end{bmatrix},\quad
+> w_3=\begin{bmatrix}7\\8\\9\end{bmatrix},
 > $$
-> 若 $b=\begin{bmatrix}3\\6\end{bmatrix}$，则两行方程其实是同一条直线，系统有无穷多解；若 $b=\begin{bmatrix}3\\5\end{bmatrix}$，则第二个方程不再是第一个的倍数，几何上两条直线平行但不重合，因此无解。列图像里，这等价于说 A 的两列都落在同一条线上，所以只有那条线上的 $b$ 才能写成列的线性组合。
+> 找到非全零的 $x_1,x_2,x_3$ 使 $x_1w_1+x_2w_2+x_3w_3=0$，判断相关性并说明它们位于什么几何对象中。
+>
+> **解答**：观察相邻向量差相同：$w_2-w_1=w_3-w_2=(3,3,3)^T$，因此
+> $$
+> w_1-2w_2+w_3=0.
+> $$
+> 系数 $(1,-2,1)$ 非全零，故三向量线性相关。它们都在由 $w_1,w_2$ 张成的、经过原点的平面中；以它们为列的 $3\times3$ 矩阵没有三条独立方向，因此不可逆。
 
-### 易错点与补充
+> [!question]- Problem 1.2：矩阵乘向量
+> **题目转述**：计算
+> $$
+> \begin{bmatrix}1&2&0\\2&0&3\\4&1&1\end{bmatrix}
+> \begin{bmatrix}3\\-2\\1\end{bmatrix}.
+> $$
+>
+> **解答**：尺寸为 $(3\times3)(3\times1)=3\times1$。逐行点乘：
+> $$
+> \begin{bmatrix}
+> 1(3)+2(-2)+0(1)\\
+> 2(3)+0(-2)+3(1)\\
+> 4(3)+1(-2)+1(1)
+> \end{bmatrix}
+> =\begin{bmatrix}-1\\9\\11\end{bmatrix}.
+> $$
+> 也可读成 $3a_1-2a_2+a_3$，结果相同。
 
-- 不要把“未知数 $x,y$”只当作平面坐标；在列图像里，它们更重要的身份是“列向量的系数”。
-- `square matrix` 不自动意味着“有唯一解”；只有当列独立、确实铺满整个空间时，才会对每个 $b$ 都有唯一解。
-- `singular` 的第一层意思不是“算不出 inverse”，而是“有些方向丢了，空间没被铺满”。
-### 你要掌握
+> [!question]- Problem 1.3：矩阵乘法的尺寸
+> **题目转述**：判断“$3\times2$ 矩阵 $A$ 乘 $2\times3$ 矩阵 $B$ 得到 $3\times3$ 矩阵 $AB$”是否正确。
+>
+> **解答**：正确。一般地，
+> $$
+> A_{m\times n}B_{n\times p}=(AB)_{m\times p}.
+> $$
+> 内侧尺寸 $n$ 必须相等，外侧尺寸 $m,p$ 成为结果的尺寸。
 
-- 能把一个二元或三元线性系统同时画成 row picture 和 column picture。
-- 能用“列向量线性组合”解释矩阵乘法。
-- 能从几何上区分无解、唯一解、无穷多解。
+### 易错点、边界与反例
 
-### 回忆检查
+- 行图像位于未知数空间 $\mathbb R^n$；列图像位于输出空间 $\mathbb R^m$。当 $m\ne n$ 时，这两个空间甚至维数不同。
+- “列数多”不等于“张成空间大”；重复列会带来冗余。
+- $Ax=0$ 永远至少有零解；“无解”只可能发生在非齐次系统 $Ax=b$ 中。
 
-- 不看正文，我能说出这讲要解决的问题。
-- 我能写出本讲最关键的公式、结论或判别条件。
-- 我知道这讲最典型的题型，以及它如何接到下一讲。
+### 三道自检题
+
+> [!question]- 1. 尺寸题
+> 若 $A\in\mathbb R^{4\times3}$，那么 $x$、$b$ 分别属于什么空间？
+>
+> **答案**：$x\in\mathbb R^3$，$b=Ax\in\mathbb R^4$。
+
+> [!question]- 2. 结构题
+> 若 $Az=0$ 且 $z\ne0$，为什么 $Ax=b$ 不可能有唯一解？
+>
+> **答案**：只要有一个特解 $x_p$，便有 $A(x_p+tz)=b$；不同 $t$ 给出不同解。若没有特解，则是无解，也不是唯一解。
+
+> [!question]- 3. 计算题
+> 把 $\begin{bmatrix}1&-1\\2&3\end{bmatrix}(4,1)^T$ 同时写成列组合并算出结果。
+>
+> **答案**：$4(1,2)^T+1(-1,3)^T=(3,11)^T$。
+
+### 知识链小结
+
+方程交点 → 列向量组合 → $b\in C(A)$ 决定存在性 → $N(A)$ 决定唯一性 → 下一步用消元系统地找出这些结构。
 
 ## Session 1.2 An overview of key ideas
 
-资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.13sum.pdf|summary]]
+### 本节问题与前置知识
 
-关联卡片：[[Linear Algebra-hub|线性代数 Hub]]、[[Vector Space]]、[[Matrix Rank]]
+**问题**：消元、子空间、正交、特征值和 SVD 为什么不是彼此无关的技巧？
 
->[!note] 快速回忆
-> - 这讲要回答：为什么 elimination、subspace、orthogonality、eigen、SVD 会串成一门课。
-> - 你要立刻想起：整门课的推进顺序是 `Ax=b -> 子空间 -> 正交/最佳逼近 -> determinant/eigen -> 更一般的分解`。
-> - 典型题型：用一句话说明某个章节在整门线代里的角色。
-> - 它接到下一讲：课程地图落回具体算法，从消元开始。
+**前置知识**：能从 Session 1.1 读懂 $Ax=b$ 的行图像和列图像。
 
-### 这讲在课程里的位置
+**本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.13sum.pdf#page=1|overview summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S02_Lecture_An_Overview_of_Linear_Algebra.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S02_Recitation_An_Overview_of_Key_Ideas.pdf#page=1|recitation transcript p.1]]
 
-这一讲不是新算法，而是整门课的路线图。Strang 在这里强调：线性代数不是一堆互不相干的章节，而是一张图。你先通过消元看到解的结构，再通过子空间理解可解性，再通过正交和投影处理无解系统，最后用行列式、特征值和奇异值分解去描述矩阵的深层结构。
+### 1. 整门课围绕一个输入—输出问题
 
-### 从差分矩阵看到“可逆”与“不可逆”
+矩阵 $A\in\mathbb R^{m\times n}$ 是线性映射
 
-summary 里一个重要对比是“普通差分矩阵”和“循环差分矩阵”。前者的列独立，所以对每个 $b$ 都有唯一解；后者因为首尾也相连，会出现一条线性依赖，于是
 $$
-Cx=0
+A:\mathbb R^n\longrightarrow\mathbb R^m.
 $$
-有非零解，而
+
+课程不断追问四件事：
+
+1. 哪些输入被送到 $0$？答案是 $N(A)$。
+2. 哪些输出可以被达到？答案是 $C(A)$。
+3. 不可达时，哪个可达输出离目标最近？答案由正交投影与最小二乘给出。
+4. 哪些输入方向在作用后只改变长度、不改变方向，或对应最自然的输入—输出方向？答案通向特征向量和 SVD。
+
+### 2. 差分矩阵展示可逆与奇异
+
+普通差分矩阵
+
 $$
-Cx=b
+D=\begin{bmatrix}
+1&0&0\\
+-1&1&0\\
+0&-1&1
+\end{bmatrix}
 $$
-只有在 $b_1+b_2+b_3=0$ 之类的兼容条件满足时才有解。这个例子说明：矩阵一旦丢失秩，就同时带来两个后果，某些方向打不出来，某些输入又会被压成 0。
 
-### 课程地图
+把位置 $x=(x_1,x_2,x_3)^T$ 变为差分 $(x_1,x_2-x_1,x_3-x_2)^T$。它是下三角矩阵且三个对角元均为 $1$，因此可以从差分逐步恢复 $x$。
 
-- 消元回答“怎么解”。
-- 子空间回答“为什么有解/无解/不唯一”。
-- [[Orthogonality]] 与 [[Orthogonal Projection]] 回答“无解时的最佳近似是什么”。
-- [[Determinant]] 回答“矩阵是否把空间压扁，以及体积缩放了多少”。
-- [[Eigenvalues]] 与 [[Eigenvectors]] 回答“反复施加这个矩阵时，哪些方向会保留下来”。
-- [[Singular Value Decomposition]] 最终把一般矩阵分解成若干最自然的输入方向与输出方向。
+若首尾相连得到循环差分矩阵
 
-### 核心结构观
-
-整门课最值得养成的习惯是：不要只盯着单个数值步骤，而要不断问“这个矩阵的秩是多少，它的列空间和零空间长什么样，它在空间中丢掉了哪些方向”。秩控制有效维数，零度控制丢失自由度，二者通过
 $$
-\operatorname{rank}(A)+\operatorname{nullity}(A)=n
+C=\begin{bmatrix}
+-1&1&0\\
+0&-1&1\\
+1&0&-1
+\end{bmatrix},
 $$
-连在一起。
 
+则 $C(1,1,1)^T=0$。常数位移被完全丢失；并且每个输出 $b=Cx$ 都满足 $b_1+b_2+b_3=0$。这同时展示了奇异矩阵的两面：存在非零零空间方向，并且列空间不能覆盖整个输出空间。
 
+### 3. 课程地图
 
-### 本讲知识点全景
+- **Elimination**：把方程组变成容易读的形状。
+- **Rank / basis / dimension**：数清独立方向。
+- **Four fundamental subspaces**：统一输入端与输出端的可达、丢失结构。
+- **Orthogonality / least squares**：处理无精确解时的最佳近似。
+- **Determinant / eigenvalues**：描述体积缩放和反复作用。
+- **SVD**：为任意 $m\times n$ 矩阵找最自然的正交输入、输出方向。
 
-- 这一讲的作用不是引入新公式，而是把整门课最重要的几个问题摆出来：`Ax=b` 何时可解、何时唯一、怎样高效求解、以及矩阵结构如何控制这些答案。
-- `elimination` 是整门课的算法主线。它把原方程组改写成更容易读出主元、秩、自由变量和解结构的形式。
-- `inverse` 是“对所有右端 $b$ 一次性给出答案”的理想情形；但大多数矩阵没有这么好，因此我们才需要 LU、子空间、最小二乘和特征值这些更一般的工具。
-- `column space` 回答“哪些 $b$ 可达”，`nullspace` 回答“可达以后是否唯一”。这两者一旦分开，存在性和唯一性就不再混在一起。
-- `basis`、`dimension`、`rank` 会把“有多少独立方向”这个问题说清楚，而 `four fundamental subspaces` 会把本单元全部内容统一起来。
-- 把这一讲理解对了，后面就不会把各节当成零散技巧，而会知道它们都在回答同一类结构问题。
+其中 [[Matrix Rank|秩]] 是贯穿全课的有效维数。若 $A$ 有 $n$ 列，秩—零度关系为
 
->[!example] 例题
->
-> 对矩阵
+$$
+\operatorname{rank}(A)+\dim N(A)=n.
+$$
+
+本式将在 Session 1.10 完整证明。
+
+### 4. Recitation 反向推理例题
+
+已知 $A$ 有三列，且
+
+$$
+Ax=b\quad\text{的全部解为}\quad
+x=\begin{bmatrix}0\\1\\1\end{bmatrix}
++t\begin{bmatrix}0\\2\\1\end{bmatrix},
+\qquad b=\begin{bmatrix}1\\4\\1\\1\end{bmatrix}.
+$$
+
+尺寸先行：$x\in\mathbb R^3$、$b\in\mathbb R^4$，故 $A\in\mathbb R^{4\times3}$。记列为 $c_1,c_2,c_3$。特解给出
+
+$$
+c_2+c_3=b,
+$$
+
+齐次方向给出
+
+$$
+2c_2+c_3=0.
+$$
+
+> [!note] Transcript 勘误
+> 本地 transcript 的题首把齐次方向写成 $(1,2,1)^T$，后续计算却使用 $(0,2,1)^T$。原始 MIT Fall 1999 Quiz 1 Q4 与官方解答都确认后者正确。因此
 > $$
-> A=\begin{bmatrix}1&1\\2&2\end{bmatrix},
+> c_2+c_3=b,\qquad 2c_2+c_3=0
 > $$
-> 你应该立刻问三件事：
-> 1. 哪些 $b$ 使得 $Ax=b$ 可解？答案是所有满足 $b_2=2b_1$ 的向量，也就是 $C(A)$ 中的向量。
-> 2. 解是否唯一？不是，因为 $N(A)$ 非平凡，例如 $\begin{bmatrix}1\\-1\end{bmatrix}$ 在零空间里。
-> 3. 为什么如此？因为两列其实只有一个独立方向，rank 只有 1。
->
-> 这个小例子已经把“存在性 / 唯一性 / rank / 子空间”四个关键词串在一起了。
+> 给出 $c_2=-b,c_3=2b$。又因全部解只有一个自由方向，nullity $=1$、rank $=2$；而 $c_2,c_3$ 只张成 $\operatorname{span}(b)$，故 $c_1$ 必须不是 $b$ 的倍数，才能使列空间达到二维。
 
-### 易错点与补充
+### 5. 为什么“结构先于计算”
 
-- 这讲不是“绪论可以跳过”的内容；它决定你后面如何把各章放回同一条主线。
-- 不要把 `inverse` 当成默认工具。课程真正要教的是：当 inverse 不存在时，线性代数仍然能告诉你很多结构信息。
-- `rank` 不是孤立的数字，它会同时出现在可解性、基底个数、自由变量个数和四个基本子空间中。
-### 你要掌握
+同一道题可有很多行运算路线，但秩、零空间维数、可解条件不会随路线改变。可靠解题顺序是：
 
-- 能用一句话说清楚每个后续章节在整门课中的作用。
-- 能解释“可逆矩阵”和“列独立、满秩、零空间平凡、每个 $b$ 唯一可解”其实是同一件事的不同表述。
+1. 写尺寸；
+2. 判断题目问存在性、唯一性还是参数化；
+3. 再选择消元、子空间或分解；
+4. 最后代回或做维数检查。
 
+### 易错点与边界
+
+- $N(A)$ 在输入空间 $\mathbb R^n$，$C(A)$ 在输出空间 $\mathbb R^m$，不能相加或直接比较，除非 $m=n$ 且另有语境。
+- 秩下降同时影响存在性与唯一性，但两者不是同一句话：存在性由 $b\in C(A)$ 决定，唯一性由 $N(A)=\{0\}$ 决定。
+- Overview 是官方第二讲；不要按本地 `Ses1.13` 文件名把它放到图论之后。
+
+### 三道自检题
+
+> [!question]- 1. 为什么循环差分矩阵不可能可逆？
+> 因为 $C\mathbf1=0$ 且 $\mathbf1\ne0$，映射不是一一对应。
+
+> [!question]- 2. 若 $A\in\mathbb R^{5\times3}$ 且 nullity $=1$，rank 是多少？
+> 由 rank-nullity，$r=3-1=2$。
+
+> [!question]- 3. 若 $N(A)=\{0\}$，是否保证每个 $b\in\mathbb R^m$ 都可解？
+> 不保证。它只保证“至多一个解”；还需 $C(A)=\mathbb R^m$ 才保证存在。高矩阵可有独立列但不能覆盖全部 $\mathbb R^m$。
+
+### 知识链小结
+
+$Ax=b$ → 输入端 $N(A)$ 与输出端 $C(A)$ → rank 计数有效方向 → 正交、特征值与 SVD 将在后续单元继续刻画这些方向。
 
 ## Session 1.3 Elimination with matrices
 
-资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.2sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.2prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.2sol.pdf|solution]]
+### 本节问题与前置知识
 
-关联卡片：[[Matrix Rank]]、[[Reduced Row Echelon Form]]、[[LU Decomposition]]
+**问题**：怎样用不改变解集的操作，把 $Ax=b$ 变成可回代的上三角系统？
 
->[!note] 快速回忆
-> - 这讲要回答：消元究竟在做什么，以及它为什么不改变解集。
-> - 你要立刻想起：非零主元的个数就是 rank；遇到 0 主元要么换行，要么接受秩下降。
-> - 典型题型：手算消元、读 pivot / rank / free variables。
-> - 它接到下一讲：从消元步骤过渡到可逆性和逆矩阵。
+**前置知识**：矩阵表示、矩阵乘向量、方程组等价。
 
-### 消元在做什么
+**本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.2sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S03_Lecture_Elimination_with_Matrices.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S03_Recitation_Recitation_Elimination_with_Matrices.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.2prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.2sol.pdf#page=1|official solution p.1]]
 
-高斯消元的目标不是“把矩阵弄好看”，而是系统地消掉下三角元素，把原方程组变成一个容易回代的上三角系统。每一步都只是把一行减去另一行的倍数，因此不会改变解集。
+### 1. 三种基本行操作
 
-对矩阵
-$$
-A=\begin{bmatrix}
-1&2&1\\
-3&8&1\\
-0&4&1
-\end{bmatrix},
-$$
-先用第 1 行消去第 2 行首项，再用第 2 行消去第 3 行第二项，可以得到
-$$
-U=\begin{bmatrix}
-1&2&1\\
-0&2&-2\\
-0&0&5
-\end{bmatrix}.
-$$
-这时原系统 $Ax=b$ 已经变成了更容易处理的 $Ux=c$。
+[[Gaussian Elimination|高斯消元（Gaussian elimination）]]对增广矩阵 $[A\mid b]$ 反复使用三类可逆行操作：
 
-### 主元与秩
+1. 交换两行；
+2. 一行乘非零标量；
+3. 一行加上另一行的任意倍数。
 
-每次成功选到一个非零主元，意味着发现了一个新的独立方向。主元数就是秩，主元列是原矩阵中真正不可由前面列组合出来的列。没有主元的列会对应自由变量，说明矩阵存在冗余。
-
-### 消元矩阵
-
-把“第二行减去三倍第一行”这种操作写成矩阵，就是左乘一个消元矩阵。例如
-$$
-E_{21}=
-\begin{bmatrix}
-1&0&0\\
--3&1&0\\
-0&0&1
-\end{bmatrix}
-$$
-满足 $E_{21}A$ 正是做完第一步消元后的结果。因为 $E_{21}$ 可逆，消元过程本质上是在做一串可逆变换，所以解集不变。
-
-### 为什么有时必须换行
-
-如果某个主元位置为 0，而该列下面存在非零元素，就必须交换两行，不然消元会被卡住。如果整列都为 0，则这一列不可能提供主元，秩会下降，矩阵不再可逆。这个现象告诉你：数值上看到的“0 主元”，结构上对应的就是“没有足够独立的信息”。
-
-
-
-### 本讲知识点全景
-
-- 高斯消元的目标是把 A 变成上三角或阶梯形矩阵，使主元位置和自由变量一眼可读。
-- 每一步“用某行减去另一行的倍数”都可以写成左乘一个 `elimination matrix`。因此消元不是拍脑袋改式子，而是系统地用可逆矩阵改写方程组。
-- `pivot` 是某一步中用来消去下面元素的关键位置。主元列最终会对应独立方向，非主元列则埋下自由变量的伏笔。
-- 化到上三角矩阵 $Ux=c$ 后，求解就变成 `back substitution`。这说明消元的本质是先制造“后面的式子只含少数变量”的层级结构。
-- 若某个本该出现主元的位置是 0，就需要考虑交换行；若连交换都救不了，往往意味着秩不足。
-- 行变换不改变解集，但会改变具体的列向量；因此消元很适合读解结构，不适合直接从 rref 取列空间基。
-
->[!example] 例题
+> [!proof] 行操作为什么保持解集
+> **目标**：说明每种行操作前后方程组等价。
 >
-> 设
+> **构造与依据**：交换方程只改变书写顺序；把方程乘 $c\ne0$ 可再乘 $1/c$ 恢复；以 $R_i\leftarrow R_i-kR_j$ 替换第 $i$ 行，可用逆操作 $R_i\leftarrow R_i+kR_j$ 恢复。
+>
+> **边界**：一行乘 $0$ 不可逆，会丢掉原方程，因此不允许。
+>
+> **结论**：三种操作均可逆，故新旧系统有完全相同的解集；对应的系数矩阵彼此[[Row Equivalence|行等价（row-equivalent）]]。
+
+行操作也可以写成左乘[[Elementary Matrix|初等矩阵（elementary matrix）]]。若
+
+$$
+E_{21}=\begin{bmatrix}1&0\\-3&1\end{bmatrix},
+$$
+
+则 $E_{21}A$ 把 $A$ 的第二行替换为 $R_2-3R_1$。左乘改变行，右乘改变列，不能混淆。
+
+### 2. 主元、换行与消元失败
+
+每一步用一个非零[[Pivot Position|pivot（主元）]]消去其下方元素。若预定主元是 $0$：
+
+- 下方有非零数：交换行，将非零数换上来；
+- 整列从当前位置向下全为 $0$：这一列没有主元，后来对应自由变量；
+- 若增广列出现 $[0\ \cdots\ 0\mid c]$ 且 $c\ne0$：系统不相容。
+
+主元个数就是矩阵的秩。主元的具体数值会随行缩放改变，但主元个数不会。
+
+### 3. Recitation 完整消元例题
+
+求解
+
+$$
+\begin{cases}
+x-y-z+u=0,\\
+2x+2z=8,\\
+-y-2z=-8,\\
+3x-3y-2z+4u=7.
+\end{cases}
+$$
+
+增广矩阵尺寸是 $4\times5$：
+
+$$
+\left[\begin{array}{rrrr|r}
+1&-1&-1&1&0\\
+2&0&2&0&8\\
+0&-1&-2&0&-8\\
+3&-3&-2&4&7
+\end{array}\right].
+$$
+
+先做 $R_2\leftarrow R_2-2R_1$、$R_4\leftarrow R_4-3R_1$：
+
+$$
+\left[\begin{array}{rrrr|r}
+1&-1&-1&1&0\\
+0&2&4&-2&8\\
+0&-1&-2&0&-8\\
+0&0&1&1&7
+\end{array}\right].
+$$
+
+再做 $R_3\leftarrow R_3+\tfrac12R_2$：
+
+$$
+\left[\begin{array}{rrrr|r}
+1&-1&-1&1&0\\
+0&2&4&-2&8\\
+0&0&0&-1&-4\\
+0&0&1&1&7
+\end{array}\right].
+$$
+
+第三个预定主元为 $0$，交换 $R_3,R_4$ 得上三角系统。由下往上回代：
+
+$$
+-u=-4\Rightarrow u=4,
+$$
+$$
+z+u=7\Rightarrow z=3,
+$$
+$$
+2y+4z-2u=8\Rightarrow 2y+12-8=8\Rightarrow y=2,
+$$
+$$
+x-y-z+u=0\Rightarrow x=1.
+$$
+
+代回原四式全部成立，故解为 $(1,2,3,4)^T$。
+
+![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit1-elimination-lu.png|760]]
+
+### Homework：全部题目与逐步解答
+
+> [!question]- Problem 2.1：二元系统的消元、主元与回代
+> **题目转述**：求解
 > $$
-> \begin{aligned}
-> x+y+z&=3,\\
-> 2x+3y+7z&=0,\\
-> x+3y+4z&=1.
-> \end{aligned}
+> 2x+3y=5,\qquad 6x+15y=12,
 > $$
-> 先用第一行消去下面两行的 $x$，得到
+> 写成矩阵形式，说明消元倍数与主元，并验算。
+>
+> **解答**：
 > $$
-> \begin{aligned}
-> x+y+z&=3,\\
-> y+5z&=-6,\\
-> 2y+3z&=-2.
-> \end{aligned}
+> \left[\begin{array}{cc|c}2&3&5\\6&15&12\end{array}\right]
+> \xrightarrow{R_2-3R_1}
+> \left[\begin{array}{cc|c}2&3&5\\0&6&-3\end{array}\right].
 > $$
-> 再用第二行消去第三行的 $y$，得到上三角系统。之后自下而上回代即可。这个过程说明：消元的价值不是把题目“做机械”，而是把原本纠缠在一起的变量逐层拆开。
+> 主元为 $2,6$。回代：$6y=-3\Rightarrow y=-\tfrac12$；
+> $$
+> 2x+3(-\tfrac12)=5
+> \Rightarrow2x=\frac{13}{2}
+> \Rightarrow x=\frac{13}{4}.
+> $$
+> 验算第二式：$6(13/4)+15(-1/2)=78/4-30/4=12$。
 
-### 易错点与补充
+> [!question]- Problem 2.2：Pascal 矩阵的消元矩阵
+> **题目转述**：找下三角矩阵 $E$，把
+> $$
+> P=\begin{bmatrix}
+> 1&0&0&0\\1&1&0&0\\1&2&1&0\\1&3&3&1
+> \end{bmatrix}
+> $$
+> 化为第一列已清零的较小 Pascal 矩阵；再找 $M$ 使 $MP=I$。
+>
+> **解答**：相邻行相减由
+> $$
+> E=\begin{bmatrix}
+> 1&0&0&0\\-1&1&0&0\\0&-1&1&0\\0&0&-1&1
+> \end{bmatrix}
+> $$
+> 实现。继续对第二、第三列重复相邻行相减，三个消元矩阵的乘积为
+> $$
+> M=\begin{bmatrix}
+> 1&0&0&0\\
+> -1&1&0&0\\
+> 1&-2&1&0\\
+> -1&3&-3&1
+> \end{bmatrix}.
+> $$
+> 直接乘法给 $MP=I$，所以 $M=P^{-1}$。每个乘积均为 $(4\times4)(4\times4)$，尺寸合法。
 
-- 消元用的是 `row operations`，不是随意改列；行变换保持方程组解集，列变换则会改变未知量本身的意义。
-- “出现 0 主元”不一定立刻说明无解，也可能只是需要换行；真正的无解要等看到增广矩阵里出现 `0=非零`。
-- 回代只能在你已经得到上三角或阶梯结构后再做；中途硬回代通常会把关系看乱。
-### 你要掌握
+### 易错点、边界与反例
 
-- 能手工对一个 $3\times 3$ 或 $4\times 4$ 系统完成前向消元和回代。
-- 能根据主元位置读出秩和自由变量个数。
-- 能解释为什么消元不改变解集。
+- 行操作必须同时作用于 $b$；只消 $A$ 会得到另一个方程组。
+- “无主元”不一定无解：它可能只意味着自由变量；只有矛盾行才表示无解。
+- 初等矩阵写在左边；$AE$ 一般执行的是列操作。
+- 数值计算中若主元很小，实际算法会做 pivoting；本课先关注精确代数结构。
 
-### 回忆检查
+### 三道自检题
 
-- 不看正文，我能说出这讲要解决的问题。
-- 我能写出本讲最关键的公式、结论或判别条件。
-- 我知道这讲最典型的题型，以及它如何接到下一讲。
+> [!question]- 1. 哪个矩阵实现 $R_3\leftarrow R_3+2R_1$？
+> **答案**：$3\times3$ 单位矩阵的 $(3,1)$ 元改为 $2$，即 $E=I+2e_3e_1^T$。
+
+> [!question]- 2. 行最简过程中出现 $[0\ 0\ 0\mid5]$ 表示什么？
+> **答案**：方程 $0=5$，系统不相容，无解。
+
+> [!question]- 3. 为什么交换两行不改变解？
+> **答案**：只是交换两个必须同时满足的方程的书写顺序，且交换操作自身就是逆操作。
+
+### 知识链小结
+
+可逆行操作 → 上三角形 → 主元与 rank → 回代；下一节把行操作写成矩阵乘法，并研究对所有 $b$ 一次性求解的逆矩阵。
 
 ## Session 1.4 Multiplication and inverse matrices
 
-资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.3sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.3prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.3sol.pdf|solution]]
+### 本节问题与前置知识
 
-关联卡片：[[Matrix Inverse]]、[[Singular Matrix]]、[[Invertible Matrix Equivalence Chain]]
+**问题**：矩阵乘法如何表示变换复合？什么时候存在能撤销 $A$ 的矩阵？
 
->[!note] 快速回忆
-> - 这讲要回答：矩阵乘法怎样理解，以及 inverse 到底意味着什么。
-> - 你要立刻想起：矩阵乘法最重要的视角是“复合变换”；可逆等价于“每个 $b$ 唯一可解、零空间平凡、主元充满”。
-> - 典型题型：判断矩阵是否可逆、解释 singular 到底坏在哪。
-> - 它接到下一讲：把消元过程系统整理成 LU / PA=LU。
+**前置知识**：矩阵乘向量、初等矩阵与消元。
 
-### 矩阵乘法的四种理解
+**本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.3sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S04_Lecture_Multiplication_and_Inverse_Matrices.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S04_Recitation_Inverse_Matrices.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.3prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.3sol.pdf#page=1|official solution p.1]]
 
-矩阵乘法至少要能从四个角度理解：
+### 1. 矩阵乘法的四种读法
 
-- 行乘列：$(AB)_{ij}$ 是 A 的第 $i$ 行与 B 的第 $j$ 列点积。
-- 列组合：$Ax$ 是 A 的列向量按 $x$ 的系数组合。
-- 行组合：$y^TA$ 是 A 的行向量按 $y$ 的系数组合。
-- 复合变换：$AB$ 表示先做 B，再做 A。
+设 $A\in\mathbb R^{m\times n}$、$B\in\mathbb R^{n\times p}$，则 $AB\in\mathbb R^{m\times p}$。
 
-真正最重要的是最后一种。矩阵不是表格，而是线性变换；矩阵乘法对应变换复合。
+1. **行乘列**：$(AB)_{ij}=\sum_{k=1}^n a_{ik}b_{kj}$。
+2. **按列**：$AB$ 的第 $j$ 列是 $A$ 乘 $B$ 的第 $j$ 列。
+3. **按行**：$AB$ 的第 $i$ 行是 $A$ 的第 $i$ 行乘 $B$。
+4. **外积和**：
+   $$
+   AB=\sum_{k=1}^n A_{:k}B_{k:},
+   $$
+   每项都是列向量乘行向量的秩至多一矩阵。
 
-### 逆矩阵的含义
+矩阵乘法表示变换复合：$ABx=A(Bx)$，因此先做 $B$、后做 $A$。它满足结合律与分配律，但一般不满足交换律。
 
-[[Matrix Inverse]] 的本质不是一个公式，而是“撤销 A 的作用”。若
+### 2. 逆矩阵
+
+若方阵 $A\in\mathbb R^{n\times n}$ 存在 $A^{-1}$ 使
+
 $$
-A^{-1}A=I,\qquad AA^{-1}=I,
-$$
-则 A 把每个输入一一对应地送到一个输出，再由 $A^{-1}$ 精确取回。于是
-$$
-Ax=b \iff x=A^{-1}b.
+A^{-1}A=AA^{-1}=I_n,
 $$
 
-### 可逆性的等价条件
+则称 $A$ 可逆，$A^{-1}$ 是 [[Matrix Inverse|逆矩阵]]。于是 $Ax=b$ 的唯一解为 $x=A^{-1}b$。
 
-对 $n\times n$ 方阵，下列说法等价：
-
-- $A$ 可逆。
-- $Ax=b$ 对每个 $b$ 都有唯一解。
-- $Ax=0$ 只有零解。
-- A 的列向量线性无关。
-- A 的主元有 $n$ 个。
-- A 可以通过消元变成单位矩阵。
-
-这些等价条件值得熟到不用思考，因为后续任何题目都在它们之间切换。
-
-### 奇异矩阵在结构上意味着什么
-
-如果 A 是 [[Singular Matrix]]，那不是“某个公式算坏了”，而是 A 把空间压扁了。存在非零向量被送到 0，也存在一些目标向量永远无法被打出来。所以“零空间非平凡”和“列空间不满”其实是同一个几何现象从输入端和输出端的两种描述。
-
-
-
-### 本讲知识点全景
-
-- 矩阵乘法的最有用理解是“线性变换的复合”：`ABx=A(Bx)`，所以乘法顺序记录了先后次序。
-- 单位矩阵 I 表示“什么都不做”；逆矩阵 $A^{-1}$ 表示“把 A 的作用完全撤销”。于是 $A^{-1}A=I$ 和 $AA^{-1}=I$ 都是在说信息没有丢失。
-- 只有当 A 对每个右端 $b$ 都有唯一解时，逆矩阵才存在。这件事和“每列有主元、列独立、零空间只有 0 向量”其实是同一件事的不同说法。
-- 对乘积求逆时顺序会反过来：
-> $$(AB)^{-1}=B^{-1}A^{-1}.$$ 
-  这是因为你要先撤销 B，再撤销 A。
-- 对 $2\times2$ 矩阵
-> $$A=\begin{bmatrix}a&b\\c&d\end{bmatrix},$$
-  若 $ad-bc\neq0$，则
-> $$A^{-1}=\frac1{ad-bc}\begin{bmatrix}d&-b\\-c&a\end{bmatrix}.$$ 
-  这也预告了 determinant 和 inverse 的关系。
-- 逆矩阵把“解一个方程组”升级为“同时知道所有右端的解法”，因此它是最强但也最苛刻的结构。
-
->[!example] 例题
+> [!proof] 逆矩阵若存在则唯一
+> **目标**：若 $B$、$C$ 都是 $A$ 的双侧逆，证明 $B=C$。
 >
-> 令
+> **变形**：
 > $$
-> A=\begin{bmatrix}2&1\\1&1\end{bmatrix}.
+> B=BI=B(AC)=(BA)C=IC=C.
 > $$
-> 因为 $\det(A)=1\neq0$，所以
-> $$
-> A^{-1}=\begin{bmatrix}1&-1\\-1&2\end{bmatrix}.
-> $$
-> 这意味着无论右端 $b$ 是什么，解都可写成 $x=A^{-1}b$。例如当 $b=\begin{bmatrix}3\\2\end{bmatrix}$ 时，
-> $$
-> x=\begin{bmatrix}1&-1\\-1&2\end{bmatrix}\begin{bmatrix}3\\2\end{bmatrix}=\begin{bmatrix}1\\1\end{bmatrix}.
-> $$
-> 这里真正重要的不是算出一个数值，而是理解：一旦 inverse 存在，所有右端都会被统一解决。
+> 每一步只用单位矩阵定义和结合律。
+>
+> **边界**：此论证要求尺寸均为 $n\times n$，并使用双侧逆。
+>
+> **结论**：逆矩阵唯一。
 
-### 易错点与补充
+### 3. Gauss–Jordan 求逆的原理
 
-- 不要把矩阵乘法当成按元素相乘；它描述的是“列的线性组合”或“行与列的点积”。
-- `AB=I` 时不能随便把顺序调成 `BA=I`，除非你已经知道都是同型方阵并确实可逆。
-- 非方阵一般没有双边 inverse；后面出现的 left inverse / right inverse / pseudoinverse 正是为这种情形准备的。
-### 你要掌握
+对增广矩阵 $[A\mid I]$ 做相同行操作，相当于左乘一串初等矩阵 $E_k\cdots E_1$。若左侧最终成为 $I$，则
 
-- 能从“复合变换”解释 $(AB)^{-1}=B^{-1}A^{-1}$ 为何顺序反过来。
-- 能用上面的等价条件快速判断一个方阵是否可逆。
+$$
+E_k\cdots E_1A=I,
+$$
 
-### 回忆检查
+故 $E_k\cdots E_1=A^{-1}$，右侧同时变成 $A^{-1}$：
 
-- 不看正文，我能说出这讲要解决的问题。
-- 我能写出本讲最关键的公式、结论或判别条件。
-- 我知道这讲最典型的题型，以及它如何接到下一讲。
+$$
+[A\mid I]\longrightarrow[I\mid A^{-1}].
+$$
+
+若左侧无法产生 $n$ 个主元，$A$ 是 [[Singular Matrix|奇异矩阵]]，逆不存在。
+
+### 4. 可逆等价链
+
+对 $n\times n$ 方阵，下列命题等价：
+
+- $A$ 可逆；
+- 消元有 $n$ 个主元；
+- $Ax=0$ 只有零解；
+- 列向量线性无关；
+- 列空间为 $\mathbb R^n$；
+- 对每个 $b$，$Ax=b$ 有唯一解。
+
+这组结论集中见 [[Invertible Matrix Equivalence Chain|可逆矩阵等价链]]。其逻辑核心是：无非零丢失方向保证一一性，覆盖整个输出空间保证满射；同维有限维空间中二者等价。
+
+### 5. Recitation 的参数矩阵
+
+Recitation 计算
+
+$$
+A=\begin{bmatrix}
+a&b&b\\
+a&a&b\\
+a&a&a
+\end{bmatrix}
+$$
+
+的可逆条件和逆矩阵。先用行差制造主元：
+
+$$
+R_3\leftarrow R_3-R_2=(0,0,a-b),
+$$
+
+$$
+R_2\leftarrow R_2-R_1=(0,a-b,0),
+$$
+
+第一主元是 $a$，后两个主元是 $a-b$。若使用 Unit II 才会系统学习的行列式语言，也可把这一结果写成 $\det A=a(a-b)^2$。
+
+因此恰在
+
+$$
+a\ne0,\qquad a\ne b
+$$
+
+时可逆。继续对 $[A\mid I]$ 做 Gauss–Jordan，得到
+
+$$
+A^{-1}=\begin{bmatrix}
+\dfrac1{a-b}&0&-\dfrac{b}{a(a-b)}\\[6pt]
+-\dfrac1{a-b}&\dfrac1{a-b}&0\\[6pt]
+0&-\dfrac1{a-b}&\dfrac1{a-b}
+\end{bmatrix}.
+$$
+
+例如第一行第一列的乘积为 $a/(a-b)-b/(a-b)=1$，第一行第二列为 $b/(a-b)-b/(a-b)=0$；其余位置同理可验证 $AA^{-1}=I$。这里的关键不是记住公式，而是先识别每个可能为零的主元，再在合法条件下相除。
+
+### Homework：全部题目与逐步解答
+
+> [!question]- Problem 3.1：验证左分配律
+> **题目转述**：给定
+> $$
+> A=\begin{bmatrix}1&2\\3&4\end{bmatrix},\quad
+> B=\begin{bmatrix}1&0\\0&0\end{bmatrix},\quad
+> C=\begin{bmatrix}0&0\\5&6\end{bmatrix},
+> $$
+> 比较 $AB+AC$ 与 $A(B+C)$。
+>
+> **解答**：
+> $$
+> AB=\begin{bmatrix}1&0\\3&0\end{bmatrix},\qquad
+> AC=\begin{bmatrix}10&12\\20&24\end{bmatrix},
+> $$
+> 所以
+> $$
+> AB+AC=\begin{bmatrix}11&12\\23&24\end{bmatrix}.
+> $$
+> 又
+> $$
+> B+C=\begin{bmatrix}1&0\\5&6\end{bmatrix},\qquad
+> A(B+C)=\begin{bmatrix}11&12\\23&24\end{bmatrix}.
+> $$
+> 因而 $AB+AC=A(B+C)$。
+
+> [!question]- Problem 3.2：符号上三角矩阵的逆
+> **题目转述**：用 Gauss–Jordan 求
+> $$
+> U=\begin{bmatrix}1&a&b\\0&1&c\\0&0&1\end{bmatrix}
+> $$
+> 的逆。
+>
+> **解答**：从第三列向上清零。先 $R_1\leftarrow R_1-aR_2$、$R_2\leftarrow R_2-cR_3$，再 $R_1\leftarrow R_1-(b-ac)R_3$。得到
+> $$
+> U^{-1}=\begin{bmatrix}
+> 1&-a&ac-b\\
+> 0&1&-c\\
+> 0&0&1
+> \end{bmatrix}.
+> $$
+> 验算第一行第三列：$1(ac-b)+a(-c)+b(1)=0$；其余非对角元同样为 $0$，故 $UU^{-1}=I$。原官方解中末行把结果标成 `L^{-1}` 是排版笔误，此处应为 $U^{-1}$。
+
+### 易错点、边界与反例
+
+- $AB\ne BA$ 一般成立；甚至 $AB$ 有定义时 $BA$ 也可能无定义。
+- $(AB)^{-1}=B^{-1}A^{-1}$，顺序必须反转，因为撤销复合要先撤销最后执行的 $A$。
+- $(A+B)^{-1}$ 一般不等于 $A^{-1}+B^{-1}$。
+- 求逆只适用于方阵；解一般矩阵系统应使用消元和子空间语言。
+
+### 三道自检题
+
+> [!question]- 1. 若 $A$ 为 $2\times3$、$B$ 为 $3\times4$，$AB$ 的尺寸是什么？$BA$ 呢？
+> **答案**：$AB$ 为 $2\times4$；$BA$ 的内侧尺寸 $4$ 与 $2$ 不合，未定义。
+
+> [!question]- 2. 证明若 $A$ 可逆且 $Ax=0$，则 $x=0$。
+> **答案**：左乘 $A^{-1}$：$x=I x=A^{-1}Ax=A^{-1}0=0$。
+
+> [!question]- 3. 为什么 $[A\mid I]$ 左侧出现零行就不能得到逆？
+> **答案**：零行表示主元数少于 $n$，无法经可逆行操作把左侧变为有 $n$ 个主元的 $I$。
+
+### 知识链小结
+
+矩阵乘法 = 变换复合 → 初等矩阵 = 可逆行操作 → Gauss–Jordan 同时求出撤销变换的 $A^{-1}$ → 下一节把整串消元压缩为 $A=LU$。
 
 ## Session 1.5 Factorization into A = LU
 
-资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.4sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.4prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.4sol.pdf|solution]]
+### 本节问题与前置知识
 
-关联卡片：[[LU Decomposition]]、[[Permutation Matrix]]
+**问题**：消元产生的一整串操作，怎样保存为一次可复用的矩阵分解？
 
->[!note] 快速回忆
-> - 这讲要回答：为什么消元算法能写成矩阵分解。
-> - 你要立刻想起：不换行时是 `A=LU`；需要换行时是 `PA=LU`。
-> - 典型题型：手写 LU / PA=LU，并解释 L、U、P 各自记录了什么。
-> - 它接到下一讲：从算法对象转向“什么叫向量空间与子空间”。
+**前置知识**：初等矩阵、上三角回代、逆矩阵。
 
-### 从算法到分解
+**本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.4sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S05_Lecture_Factorization_into_A_LU.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S05_Recitation_LU_Decomposition.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.4prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.4sol.pdf#page=1|official solution p.1]]
 
-高斯消元本来是“过程”，LU 分解把这个过程固化成“结构”。如果消元中没有换行，那么对矩阵 A 进行的每一步消元都可以写成左乘一个消元矩阵，最终得到
-$$
-E_k\cdots E_2E_1A=U.
-$$
-把这些消元矩阵反过来收集，就得到
-$$
-A=LU,
-$$
-其中 $L$ 是单位下三角矩阵，记录消元乘子，$U$ 是上三角矩阵，记录被消元后的结果。
+### 1. 从消元到 [[LU Decomposition|LU 分解]]
 
-### 一个直观例子
+设消元不需要换行。若初等矩阵依次满足
 
-对
 $$
-A=\begin{bmatrix}
-1&2&1\\
-3&8&1\\
-0&4&1
-\end{bmatrix},
+E_k\cdots E_2E_1A=U,
 $$
-消元乘子是 $l_{21}=3,\ l_{32}=2$，因此
-$$
-L=\begin{bmatrix}
-1&0&0\\
-3&1&0\\
-0&2&1
-\end{bmatrix},
-\qquad
-U=\begin{bmatrix}
-1&2&1\\
-0&2&-2\\
-0&0&5
-\end{bmatrix}.
-$$
-L 记住“消掉时用了谁的多少倍”，U 记住“最后剩下什么”。
 
-如果右端是
-$$
-b=\begin{bmatrix}1\\4\\2\end{bmatrix},
-$$
-那么利用 LU 解方程的过程会被清楚地拆成两段：
-$$
-Ly=b,\qquad Ux=y.
-$$
-第一段只是沿着消元留下的依赖关系往下传信息，第二段才是标准的上三角回代。这个拆分的重要意义在于，它把“算法中的前向消元”变成了可重复使用的结构因子，所以你对同一个 A 更换多个不同的右端时，不必每次都从头消元。
+其中 $U$ 为上三角矩阵，则
 
-### 为什么有时要写成 PA=LU
+$$
+A=E_1^{-1}E_2^{-1}\cdots E_k^{-1}U=LU.
+$$
 
-一旦消元中出现换行，单纯的 $A=LU$ 就不够了，因为换行不是消元矩阵而是 [[Permutation Matrix]]。这时正确写法是
+$L$ 是单位下三角矩阵；在没有换行的标准消元中，$L$ 的下三角位置直接保存消元倍数。
+
+> [!proof] 为什么倍数可以直接放进 $L$
+> **目标**：说明消元倍数而不是它们的负数出现在 $L$ 中。
+>
+> **构造**：令 $e_i$ 表示第 $i$ 个标准基列向量。若 $E_{ij}=I-\ell_{ij}e_ie_j^T$ 实现 $R_i\leftarrow R_i-\ell_{ij}R_j$，由于 $(e_ie_j^T)^2=0$（$i\ne j$），
+> $$
+> E_{ij}^{-1}=I+\ell_{ij}e_ie_j^T.
+> $$
+> 因而撤销消元时，下三角位置是 $+\ell_{ij}$。
+>
+> **逐步依据**：$E_{ij}(I+\ell_{ij}e_ie_j^T)=I-\ell_{ij}^2(e_ie_j^T)^2=I$。
+>
+> **边界**：多个消元矩阵不可随意交换；“直接填倍数”的简洁规则依赖标准的逐列消元顺序。
+>
+> **结论**：$L$ 记录消元倍数，$U$ 记录消元后的上三角结果。
+
+### 2. 一个完整例子
+
+令
+
+$$
+A=\begin{bmatrix}2&1&1\\4&-6&0\\-2&7&2\end{bmatrix}.
+$$
+
+第一列倍数为 $\ell_{21}=2$、$\ell_{31}=-1$：
+
+$$
+R_2\leftarrow R_2-2R_1,\qquad R_3\leftarrow R_3+R_1,
+$$
+
+得到
+
+$$
+\begin{bmatrix}2&1&1\\0&-8&-2\\0&8&3\end{bmatrix}.
+$$
+
+第二列倍数 $\ell_{32}=-1$，做 $R_3\leftarrow R_3+R_2$：
+
+$$
+U=\begin{bmatrix}2&1&1\\0&-8&-2\\0&0&1\end{bmatrix},\qquad
+L=\begin{bmatrix}1&0&0\\2&1&0\\-1&-1&1\end{bmatrix}.
+$$
+
+检查 $LU$ 的三行：第一行等于 $U$ 第一行；第二行是 $2U_{1:}+U_{2:}=(4,-6,0)$；第三行是 $-U_{1:}-U_{2:}+U_{3:}=(-2,7,2)$，确实恢复 $A$。
+
+### 3. 为什么 LU 对多个右端特别有用
+
+求 $Ax=b$ 时，若 $A=LU$，则先解
+
+$$
+Lc=b
+$$
+
+（前代），再解
+
+$$
+Ux=c
+$$
+
+（回代）。$A$ 的消元只做一次；不同 $b$ 只需两次三角求解。对稠密 $n\times n$ 矩阵，分解约需 $O(n^3)$，每个新右端约需 $O(n^2)$。
+
+### 4. 换行时的 $PA=LU$
+
+若某一步必须交换行，用 [[Permutation Matrix|置换矩阵]] $P$ 记录交换。常用约定是
+
 $$
 PA=LU.
 $$
-这里 P 把原矩阵的行重新排序，让每一步都能选到合适主元。
 
-### LU 的实际价值
+例如 $A$ 第一主元为 $0$ 而下方非零，不能写无换行的标准 $A=LU$；先用 $P$ 把非零行换上来。实际数值计算还会主动选绝对值较大的主元以改善稳定性。
 
-若要反复求解同一个 A 对应的多个不同右端 $b^{(1)},b^{(2)},\dots$，直接重复消元很浪费。先做一次 LU 之后，每次只需解
-$$
-Ly=b,\qquad Ux=y.
-$$
-这就是数值线性代数里“分解一次，重复使用”的基本思想。
+### Homework：全部题目与逐步解答
 
-
-
-### 本讲知识点全景
-
-- LU 分解把“消元过程”存成两个矩阵：U 记录消元后的上三角结构，L 记录每一步用过的消元乘子。
-- 若消元过程中不需要换行，就能写成
-> $$A=LU,$$
-  其中 L 是单位下三角矩阵，U 是上三角矩阵。
-- 解方程时不必每次重新消元，只需先解
-> $$Ly=b,$$
-  再解
-> $$Ux=y.$$ 
-  这就是 LU 在数值计算中极其重要的原因。
-- 若需要换行，标准写法会变成
-> $$PA=LU,$$
-  其中 P 是置换矩阵。也就是说，行交换不是 LU 失败，而是要被显式记录下来。
-- L 的对角线通常取 1，这样消元乘子就整齐地落在下三角位置，分解的含义最清楚。
-- 这一讲说明：线性代数不仅关心“有没有解”，也关心“如何把求解步骤包装成可复用的结构”。
-
->[!example] 例题
+> [!question]- Problem 4.1：从消元矩阵恢复 $L$
+> **题目转述**：对
+> $$
+> A=\begin{bmatrix}1&3&0\\2&4&0\\2&0&1\end{bmatrix},
+> $$
+> 求 $E$ 使 $EA=U$，再用 $L=E^{-1}$ 写出 $A=LU$。
 >
-> 对
+> **解答**：依次消去 $(2,1),(3,1),(3,2)$：
 > $$
-> A=\begin{bmatrix}2&1&1\\4&-6&0\\-2&7&2\end{bmatrix},
+> R_2\leftarrow R_2-2R_1,\quad
+> R_3\leftarrow R_3-2R_1,\quad
+> R_3\leftarrow R_3-3R_2.
 > $$
-> 第一列的消元乘子分别是 $2$ 和 $-1$，第二列的消元乘子是 $-1$。于是
+> 注意第三步中的 $R_2$ 是已消元后的 $R_2=(0,-2,0)$。结果
 > $$
-> L=\begin{bmatrix}1&0&0\\2&1&0\\-1&-1&1\end{bmatrix},
-> \qquad
-> U=\begin{bmatrix}2&1&1\\0&-8&-2\\0&0&1\end{bmatrix}.
+> U=\begin{bmatrix}1&3&0\\0&-2&0\\0&0&1\end{bmatrix}.
 > $$
-> 若右端换成多个不同的 $b$，你都可以复用同一个 L 和 U，而不用重新做消元。
+> 三个消元矩阵按执行顺序相乘得
+> $$
+> E=\begin{bmatrix}1&0&0\\-2&1&0\\4&-3&1\end{bmatrix}.
+> $$
+> 其逆为
+> $$
+> L=\begin{bmatrix}1&0&0\\2&1&0\\2&3&1\end{bmatrix}.
+> $$
+> 最终
+> $$
+> A=LU=
+> \begin{bmatrix}1&0&0\\2&1&0\\2&3&1\end{bmatrix}
+> \begin{bmatrix}1&3&0\\0&-2&0\\0&0&1\end{bmatrix}.
+> $$
+> 直接相乘恢复 $A$，尺寸均为 $3\times3$。
 
-### 易错点与补充
+> [!question]- Problem 4.2：特殊对称矩阵的符号 LU
+> **题目转述**：对
+> $$
+> A=\begin{bmatrix}
+> a&a&a&a\\a&b&b&b\\a&b&c&c\\a&b&c&d
+> \end{bmatrix},
+> $$
+> 求 $L,U$，并给出有四个主元的条件。
+>
+> **解答**：先从后面三行各减第一行，再从后面两行各减新的第二行，最后第四行减第三行：
+> $$
+> U=\begin{bmatrix}
+> a&a&a&a\\
+> 0&b-a&b-a&b-a\\
+> 0&0&c-b&c-b\\
+> 0&0&0&d-c
+> \end{bmatrix}.
+> $$
+> 所有消元倍数为 $1$，故
+> $$
+> L=\begin{bmatrix}
+> 1&0&0&0\\1&1&0&0\\1&1&1&0\\1&1&1&1
+> \end{bmatrix}.
+> $$
+> 四个主元依次为 $a,b-a,c-b,d-c$，所以条件是
+> $$
+> a\ne0,\qquad b\ne a,\qquad c\ne b,\qquad d\ne c.
+> $$
+> 任一条件失败都会使对应主元为零；本题的特殊形状下没有另一个下方非零项可换上来。
 
-- L 里放的是“用来消元的乘子”，不是 U 里被消掉后的数字。
-- 一旦中途做了 row exchange，就不能还硬写 `A=LU`；要把置换矩阵 P 明确写出来。
-- LU 不是比消元多一层形式主义，它是在保存“消元的可复用信息”。
-### 你要掌握
+### 易错点、边界与反例
 
-- 能手工求一个小矩阵的 LU 分解。
-- 能解释 L 和 U 分别保存了什么信息。
-- 知道何时要改写成 $PA=LU$。
+- $L$ 中保存的是消元倍数 $\ell_{ij}$，而消元矩阵中是 $-\ell_{ij}$。
+- 若发生换行，不能只把 $P$ 忘掉后仍写 $A=LU$。
+- $A=LU$ 不是逐元素乘法；必须用矩阵乘法验算。
+- 三角矩阵可逆当且仅当所有对角元非零。
 
-### 回忆检查
+### 三道自检题
 
-- 不看正文，我能说出这讲要解决的问题。
-- 我能写出本讲最关键的公式、结论或判别条件。
-- 我知道这讲最典型的题型，以及它如何接到下一讲。
+> [!question]- 1. $A=LU$ 时，为什么先解 $Lc=b$ 再解 $Ux=c$？
+> **答案**：令 $c=Ux$，则原式 $LUx=b$ 变为 $Lc=b$；两步合起来等价于原式。
+
+> [!question]- 2. 消元倍数 $\ell_{31}=-2$ 在 $L$ 的哪里？
+> **答案**：$L_{31}=-2$；消元矩阵对应位置则是 $2$。
+
+> [!question]- 3. 若 $A=\begin{bmatrix}0&1\\2&3\end{bmatrix}$，为什么标准无换行 LU 失败？
+> **答案**：第一主元为 $0$，无法用它消去下方的 $2$；需交换两行，写 $PA=LU$。
+
+### 知识链小结
+
+消元矩阵 $E$ → $EA=U$ → 逆向恢复 $A=LU$ → 多个右端共享一次分解；接下来把矩阵本身放进更一般的向量空间语言。
 
 ## Session 1.6 Transposes, permutations, vector spaces
 
-资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.5sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.5prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.5sol.pdf|solution]]
+### 本节问题与前置知识
 
-关联卡片：[[Permutation Matrix]]、[[Vector Space]]、[[Subspace]]
+**问题**：转置和置换怎样交换行列？一个集合满足什么条件才真的是向量空间？
 
->[!note] 快速回忆
-> - 这讲要回答：为什么线代里到处在说“空间”，以及 transpose / permutation 在结构上意味着什么。
-> - 你要立刻想起：transpose 交换行列角色；vector space 关注 closure，而 permutation 只是重排坐标/方程。
-> - 典型题型：判断一个集合是不是子空间，解释转置后对象活在哪个空间。
-> - 它接到下一讲：正式进入 column space 与 nullspace。
+**前置知识**：矩阵乘法、逆矩阵、线性组合。
 
-### 转置把行和列互换
+**本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.5sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S06_Lecture_Transposes_Permutations_Vector_Spaces.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S06_Recitation_Subspaces_of_Three_Dimensional_Space.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.5prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.5sol.pdf#page=1|official solution p.1]]
 
-转置 $A^T$ 的作用是把矩阵关于主对角线翻过去，于是行和列交换位置。这个看似简单的操作有两个重要后果：
+### 1. 转置（transpose）
 
-- row space 会变成 $A^T$ 的 column space；
-- 公式顺序会反转：
-  $$
-  (AB)^T=B^TA^T.
-  $$
+若 $A\in\mathbb R^{m\times n}$，其转置 $A^T\in\mathbb R^{n\times m}$ 定义为
 
-以后所有关于对称矩阵、正交矩阵、正规方程的结构，都要靠这个转置规则。
+$$
+(A^T)_{ij}=A_{ji}.
+$$
 
-### 置换矩阵
+基本恒等式：
 
-[[Permutation Matrix]] 是把单位矩阵行或列重排得到的矩阵。左乘时重新排列行，右乘时重新排列列。它表示的不是一般线性变换，而是“基向量重新编号”，所以每行每列恰有一个 1，其余是 0。
+$$
+(A^T)^T=A,\qquad (A+B)^T=A^T+B^T,\qquad (cA)^T=cA^T,
+$$
 
-### 从“集合”升级为“空间”
+$$
+(AB)^T=B^TA^T.
+$$
 
-[[Vector Space]] 的定义非常朴素：对加法和数乘封闭，并包含零向量。[[Subspace]] 是向量空间中的线性子集，因此也必须经过原点。这个“经过原点”极其重要，因为它能一眼排除大多数不是子空间的集合。
-
-在 $R^3$ 里，典型子空间只有四类：$\{0\}$、过原点的直线、过原点的平面、整个 $R^3$。任何不经过原点的平面都不是子空间，因为不包含零向量，也不对数乘封闭。
-
-
-
-### 本讲知识点全景
-
-- 转置把矩阵的行列角色交换：
-> $$(AB)^T=B^TA^T.$$ 
-  这个顺序反转在后面处理 row space、orthogonality 和 normal equations 时会反复出现。
-- 若 $A=A^T$，则 A 是对称矩阵。对称矩阵现在只是一个定义，后面会成为最“好”的矩阵类。
-- 置换矩阵 P 只做行或列的重排，因此
-> $$P^{-1}=P^T.$$ 
-  它既是消元里记录交换的工具，也是最简单的正交矩阵例子。
-- `vector space` 的核心不是“元素长得像向量”，而是它对加法和数乘封闭，并包含零向量。
-- 判断一个集合是否为子空间，最快的思路是检查它是否对线性组合封闭。线性方程组的齐次解集天然满足这一点。
-- 非齐次条件通常会得到“平移后的平面/直线”，那是几何对象，但不是子空间。
-
->[!example] 例题
+> [!proof] 为什么乘积转置要反序
+> **目标**：证明 $(AB)^T=B^TA^T$。
 >
-> 集合
+> **逐分量比较**：
 > $$
-> S=\{(x,y,z)\in\mathbb R^3:x+y+z=0\}
+> ((AB)^T)_{ij}=(AB)_{ji}=\sum_k a_{jk}b_{ki}.
 > $$
-> 是子空间，因为两个满足和为 0 的向量相加后和仍为 0，数乘后也仍为 0。反之
+> 另一方面，
 > $$
-> T=\{(x,y,z):x+y+z=1\}
+> (B^TA^T)_{ij}=\sum_k(B^T)_{ik}(A^T)_{kj}
+> =\sum_kb_{ki}a_{jk}.
 > $$
-> 不是子空间，因为它甚至不包含零向量。这个对比会帮你理解：齐次系统的解集和非齐次系统的解集在结构上完全不同。
+> 标量相乘可交换，故两式相等。
+>
+> **尺寸检查**：$AB$ 为 $m\times p$，两边转置后均为 $p\times m$。
 
-### 易错点与补充
+若 $A^T=A$，称 $A$ 为 [[Symmetric Matrix|对称矩阵]]；若 $A^T=-A$，称为斜对称矩阵，实数情形下其对角元必须为 $0$。
 
-- “看起来像平面”不等于“是子空间”；关键要看这个平面是否经过原点。
-- 转置会反转乘法顺序，不要写成 `(AB)^T=A^TB^T`。
-- 置换矩阵虽然只是在“换顺序”，但它依然是非常正式的线性变换，不是随便记个标号。
-### 你要掌握
+### 2. 置换矩阵
 
-- 会用封闭性判断一个集合是不是 subspace。
-- 熟练使用 $(AB)^T=B^TA^T$。
-- 知道 row space 与 column space 在转置下如何互换。
+置换矩阵 $P$ 是把 $I$ 的行重新排列得到的矩阵。左乘 $PA$ 重排 $A$ 的行，右乘 $AP$ 重排 $A$ 的列。每一行、每一列恰有一个 $1$，其余为 $0$，并且
 
-### 回忆检查
+$$
+P^{-1}=P^T.
+$$
 
-- 不看正文，我能说出这讲要解决的问题。
-- 我能写出本讲最关键的公式、结论或判别条件。
-- 我知道这讲最典型的题型，以及它如何接到下一讲。
+证明：$P$ 的列是标准正交基的重排，所以 $P^TP=I$。
+
+### 3. 向量空间与子空间
+
+一个 [[Vector Space|向量空间]] 必须对向量加法和标量乘法封闭，并满足通常的加法、数乘公理。若 $S\subseteq V$ 在继承 $V$ 的运算后仍为向量空间，称 $S$ 是 [[Subspace|子空间]]。
+
+实用的子空间判别法：非空集合 $S$ 是子空间，当且仅当对任意 $u,v\in S$、任意标量 $\alpha,\beta$，有
+
+$$
+\alpha u+\beta v\in S.
+$$
+
+> [!proof] 为什么此判别已包含零向量和负向量
+> 取 $\alpha=\beta=0$ 可得 $0\in S$；取 $\alpha=-1,\beta=0$ 可得 $-u\in S$；取 $\alpha=\beta=1$ 得加法封闭。因此线性组合封闭足够。
+
+Recitation 在 $\mathbb R^3$ 中展示：一个非零向量的 span 是过原点的直线；两个不共线向量的 span 是过原点的平面。两条不同直线的并集通常不是子空间，因为分别取一条线上的向量后，它们的和一般不在并集中；但两条线的 span 是它们的和空间。
+
+### Homework：全部题目与逐步解答
+
+> [!question]- Problem 5.1：置换的周期
+> **题目转述**：（a）找 $3\times3$、$P\ne I$ 且 $P^3=I$ 的置换矩阵；（b）找 $4\times4$ 置换矩阵 $\widetilde P$ 使 $\widetilde P^4\ne I$。
+>
+> **解答**：取三循环
+> $$
+> P=\begin{bmatrix}0&0&1\\1&0&0\\0&1&0\end{bmatrix}.
+> $$
+> 它把 $e_1\to e_2\to e_3\to e_1$，所以三次后回到原处，$P^3=I$。
+> 对（b），取 $\widetilde P=\operatorname{diag}(1,P)$。因 $P^3=I$，
+> $$
+> \widetilde P^4=\operatorname{diag}(1,P^4)=\operatorname{diag}(1,P)\ne I_4.
+> $$
+
+> [!question]- Problem 5.2：对称与斜对称矩阵的自由度
+> **题目转述**：$4\times4$ 矩阵若为对称或斜对称，分别有多少个可独立选择的元素？
+>
+> **解答**：对称矩阵由对角线及上三角决定，共
+> $$
+> 4+\binom42=4+6=10.
+> $$
+> 斜对称矩阵对角元全为 $0$，下三角由上三角的负数决定，故有 $\binom42=6$ 个自由参数。
+
+> [!question]- Problem 5.3：哪些矩阵集合是子空间
+> **题目转述**：判断对称矩阵、斜对称矩阵、非对称矩阵集合是否构成矩阵空间 $M$ 的子空间。
+>
+> **解答**：若 $A^T=A,B^T=B$，则
+> $$
+> (\alpha A+\beta B)^T=\alpha A+\beta B,
+> $$
+> 所以对称矩阵构成子空间。若 $A^T=-A,B^T=-B$，同理
+> $$
+> (\alpha A+\beta B)^T=-(\alpha A+\beta B),
+> $$
+> 所以斜对称矩阵也构成子空间。非对称矩阵集合不含零矩阵，已违反必要条件；此外两个非对称矩阵也可能相加成对称矩阵，故不是子空间。
+
+### 易错点、边界与反例
+
+- 仿射平面 $ax+by+cz=1$ 不过原点，因此不是子空间；对应齐次平面 $ax+by+cz=0$ 才是。
+- “集合里有很多向量”与“是子空间”无关；关键是所有线性组合是否仍在集合中。
+- $(AB)^T$ 反序；只逐个转置但不反序是错误的。
+- $P^T=P$ 并非所有置换矩阵都成立；正确恒等式是 $P^T=P^{-1}$。
+
+### 三道自检题
+
+> [!question]- 1. $S=\{(x,y):x+y=1\}$ 是子空间吗？
+> **答案**：不是；$(0,0)$ 不满足方程。
+
+> [!question]- 2. 所有 $3\times3$ 上三角矩阵构成子空间吗？
+> **答案**：构成。和与数乘仍保持下三角位置为零。
+
+> [!question]- 3. 若 $P$ 交换第一、第三行，写出 $P$。
+> **答案**：$P=\begin{bmatrix}0&0&1\\0&1&0\\1&0&0\end{bmatrix}$，且 $P^{-1}=P^T=P$。
+
+### 知识链小结
+
+转置交换行列 → 置换矩阵实现可逆重排 → 子空间以线性组合封闭为核心 → 下一节证明列空间和零空间确实是子空间。
 
 ## Session 1.7 Column space and nullspace
 
-资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.6sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.6prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.6sol.pdf|solution]]
+### 本节问题与前置知识
 
-关联卡片：[[Column Space]]、[[Null Space]]、[[Subspace]]
+**问题**：哪些右端 $b$ 可达到？哪些输入方向被 $A$ 压成 $0$？
 
->[!note] 快速回忆
-> - 这讲要回答：column space 和 nullspace 为什么是最先必须掌握的两个子空间。
-> - 你要立刻想起：[[Column Space]] 控制哪些 $b$ 可达，[[Null Space]] 控制为什么解不唯一。
-> - 典型题型：判断系统是否相容，解释冗余列带来的后果。
-> - 它接到下一讲：先把 `Ax=0` 的结构吃透。
+**前置知识**：span、子空间判别、矩阵乘向量。
 
-### 两个最先出现的子空间
+**本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.6sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S07_Lecture_Column_Space_and_Nullspace.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S07_Recitation_Vector_Subspaces.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.6prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.6sol.pdf#page=1|official solution p.1]]
 
-[[Column Space]] 是 A 的所有列向量线性组合形成的空间：
+### 1. 定义与所在空间
+
+对 $A\in\mathbb R^{m\times n}$：
+
 $$
-C(A)=\{Ax:x\in\mathbb{R}^n\}\subseteq \mathbb{R}^m.
+C(A)=\{Ax:x\in\mathbb R^n\}
+=\operatorname{span}\{a_1,\ldots,a_n\}\subseteq\mathbb R^m,
 $$
-它回答的是“哪些右端向量可以被 A 打出来”。
 
-[[Null Space]] 是所有满足 $Ax=0$ 的向量组成的空间：
 $$
-N(A)=\{x\in\mathbb{R}^n:Ax=0\}\subseteq \mathbb{R}^n.
+N(A)=\{x\in\mathbb R^n:Ax=0\}\subseteq\mathbb R^n.
 $$
-它回答的是“哪些输入在经过 A 之后会消失”。
 
-### 为什么这两个空间足够重要
+列空间回答 $Ax=b$ 的**存在性**：
 
-如果 $b\notin C(A)$，那么 $Ax=b$ 不可能有解；如果 $N(A)$ 里除了 0 还有别的向量，那么一旦某个 $x_p$ 是解，所有
 $$
-x=x_p+x_n,\qquad x_n\in N(A)
+Ax=b\text{ 有解}\iff b\in C(A).
 $$
-也都是解。于是可解性由列空间决定，不唯一性由零空间决定。
 
-### 一个简单但关键的例子
+零空间回答齐次自由度，并控制非齐次解的**唯一性**。
 
-若
-$$
-A=\begin{bmatrix}
-1&2&3\\
-2&4&6
-\end{bmatrix},
-$$
-第二行是第一行的两倍，所以列空间其实只是一条直线；同时变量之间存在冗余，零空间至少是一维。你从“输出空间太小”和“输入空间有多余方向”两边都能看到同一个秩亏损。
-
-
-
-### 本讲知识点全景
-
-- `column space` 定义为所有形如 $Ax$ 的向量组成的集合，也就是 A 作为线性变换时真正能输出的全部结果。
-- `nullspace` 定义为所有满足 $Ax=0$ 的向量组成的集合。它衡量的是 A 把哪些输入方向压扁成了 0。
-- 因此，`Ax=b` 的存在性由 $b\in C(A)$ 决定，唯一性由 $N(A)$ 是否只剩零向量决定。
-- 列空间活在 $\mathbb R^m$，零空间活在 $\mathbb R^n$。一个回答输出能不能达到，一个回答输入有没有冗余。
-- 秩 `rank(A)` 就是列空间的维数；一旦 rank 小于列数，就必然出现自由方向，也就是非平凡零空间。
-- 这两个子空间第一次把“解方程”翻译成了“空间之间的关系”。
-
->[!example] 例题
+> [!proof] 列空间和零空间为什么都是子空间
+> **列空间**：若 $u=Ax$、$v=Ay$，则对任意 $\alpha,\beta$，
+> $$
+> \alpha u+\beta v=A(\alpha x+\beta y)\in C(A).
+> $$
+> **零空间**：若 $Ax=0$、$Ay=0$，则
+> $$
+> A(\alpha x+\beta y)=\alpha Ax+\beta Ay=0,
+> $$
+> 所以 $\alpha x+\beta y\in N(A)$。
 >
-> 对
-> $$
-> A=\begin{bmatrix}1&2&3\\2&4&6\end{bmatrix},
-> $$
-> 第二行是第一行的两倍，因此列空间其实只是一条直线，rank 为 1。于是：
-> - 只有满足 $b_2=2b_1$ 的右端才在列空间里；
-> - 零空间维数是 $3-1=2$，所以会有两个自由方向。
+> **尺寸**：前一组合发生在 $\mathbb R^m$，后一组合发生在 $\mathbb R^n$。
+
+### 2. 一个同时读出两空间的例子
+
+令
+
+$$
+A=\begin{bmatrix}1&2&3\\2&4&6\end{bmatrix}.
+$$
+
+三列都是 $(1,2)^T$ 的倍数，所以
+
+$$
+C(A)=\operatorname{span}\left\{\begin{bmatrix}1\\2\end{bmatrix}\right\}\subset\mathbb R^2.
+$$
+
+$b=(b_1,b_2)^T$ 可解当且仅当 $b_2=2b_1$。零空间方程只有一条独立约束：
+
+$$
+x_1+2x_2+3x_3=0.
+$$
+
+令 $x_2=s,x_3=t$，则
+
+$$
+x=s\begin{bmatrix}-2\\1\\0\end{bmatrix}
++t\begin{bmatrix}-3\\0\\1\end{bmatrix}.
+$$
+
+所以 $N(A)$ 是 $\mathbb R^3$ 中的二维平面。输出仅剩一维、输入丢掉二维，预告 $1+2=3$ 的秩—零度关系。
+
+### 3. Recitation 的子空间快速判别
+
+若集合由齐次线性条件 $b_1+b_2-b_3=0$ 描述，它正是矩阵 $[1\ 1\ -1]$ 的零空间，必为子空间。若条件改为 $b_3=b_1b_2$，则数乘不封闭，例如 $(1,1,1)$ 满足但 $(2,2,2)$ 不满足。若集合是固定向量加一个 span，必须检查固定向量是否已在该 span 中；否则它是仿射平移，不含 $0$。
+
+### Homework：全部题目与逐步解答
+
+> [!question]- Problem 6.1：子空间之和与并集
+> **题目转述**：若 $S,T$ 是 $V$ 的子空间，证明 $S+T=\{s+t:s\in S,t\in T\}$ 是子空间；并解释两条直线时 $S+T$、$S\cup T$ 的区别以及 $\operatorname{span}(S\cup T)=S+T$。
 >
-> 这说明一个小小的“行成倍数”事实，会同时影响可解性和解的唯一性。
+> **解答**：零向量 $0=0_S+0_T\in S+T$。若 $u=s_1+t_1$、$v=s_2+t_2$，则
+> $$
+> \alpha u+\beta v=(\alpha s_1+\beta s_2)+(\alpha t_1+\beta t_2)\in S+T,
+> $$
+> 因为 $S,T$ 各自封闭，故 $S+T$ 是子空间。若 $S,T$ 是不同直线，$S\cup T$ 只含两条线，取 $s\in S\setminus T$、$t\in T\setminus S$ 后 $s+t$ 通常不在并集中；而 $S+T$ 是它们张成的平面。$S+T$ 是包含 $S\cup T$ 的子空间，所以包含其 span；反过来 span 包含所有 $s+t$，故二者相等。
 
-### 易错点与补充
-
-- 列空间的基要从原矩阵的主元列中取，而不是直接从 rref 里抄列。
-- 零空间中的向量长度是列数 n，不是行数 m；它们描述的是输入端的自由方向。
-- `Ax=0` 总是至少有零解，所以问题不在“有没有解”，而在“是否还有别的解”。
-### 你要掌握
-
-- 能从题目语句判断它问的是列空间还是零空间。
-- 知道列空间活在 $\mathbb{R}^m$，零空间活在 $\mathbb{R}^n$，两者不是同一个空间里的对象。
-
-### 回忆检查
-
-- 不看正文，我能说出这讲要解决的问题。
-- 我能写出本讲最关键的公式、结论或判别条件。
-- 我知道这讲最典型的题型，以及它如何接到下一讲。
-
-## Session 1.8 Solving Ax = 0: pivot variables, special solutions
-
-资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.7sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.7prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.7sol.pdf|solution]]
-
-关联卡片：[[Null Space]]、[[Reduced Row Echelon Form]]、[[Matrix Rank]]
-
->[!note] 快速回忆
-> - 这讲要回答：为什么齐次系统是理解一切解结构的起点。
-> - 你要立刻想起：free variable 的个数就是零空间自由度；special solutions 构成 [[Null Space]] 的基。
-> - 典型题型：从 rref 直接写出 `Ax=0` 的通解与基。
-> - 它接到下一讲：再把一般系统写成“特解 + 零空间”。
-
-### 齐次系统为什么最重要
-
-求解 $Ax=0$ 是理解零空间最直接的入口。因为右端为 0，所以永远至少有零解；真正的问题是是否还有非零解。只要出现自由变量，就一定存在非零解。
-
-### 从 rref 读结构
-
-当消元把矩阵化到行最简形
-$$
-R=\begin{bmatrix}
-I&F\\
-0&0
-\end{bmatrix},
-$$
-前面的主元列对应主变量，后面的非主元列对应自由变量。设自由变量为参数，就能显式写出所有解。
-
-### Special solutions
-
-每个自由变量都对应一个 `special solution`：把这个自由变量设为 1，其余自由变量设为 0，然后解出主变量。这些 special solutions 构成 [[Null Space]] 的一组基。若 A 有 $n$ 列、秩为 $r$，则自由变量个数为 $n-r$，因此
-$$
-\dim N(A)=n-r.
-$$
-
->[!example] 例子
+> [!question]- Problem 6.2：仿射平面的参数式
+> **题目转述**：把平面 $x-3y-z=12$ 写成一个特解加两个齐次方向。
 >
-> 若
+> **解答**：解出 $x=12+3y+z$，所以
 > $$
-> R=\begin{bmatrix}
-> 1&0&2&-1\\
-> 0&1&-3&4\\
-> 0&0&0&0
-> \end{bmatrix},
+> \begin{bmatrix}x\\y\\z\end{bmatrix}
+> =\begin{bmatrix}12\\0\\0\end{bmatrix}
+> +y\begin{bmatrix}3\\1\\0\end{bmatrix}
+> +z\begin{bmatrix}1\\0\\1\end{bmatrix}.
 > $$
-> 则 $x_3,x_4$ 自由。令 $(x_3,x_4)=(1,0)$ 和 $(0,1)$，分别得到两组 special solutions；它们张成整个零空间。这里最容易犯的错，是只写出某一组非零解，却忘了整个解集是一个子空间。
+> 后两向量都满足齐次式 $x-3y-z=0$；特解代入非齐次式得 $12$。原题英文第二次写平面方程时把最后的 $z$ 误排成 $x$，由上下文及官方解应读作 $x-3y-z=0$。
+
+> [!question]- Problem 6.3：纵向拼接矩阵的零空间
+> **题目转述**：若 $C=\begin{bmatrix}A\\B\end{bmatrix}$，$N(C)$ 与 $N(A),N(B)$ 有什么关系？
 >
-
-
-### 本讲知识点全景
-
-- 齐次系统 `Ax=0` 永远相容，因为 $x=0$ 总是一个解。真正重要的是是否存在非零解。
-- 做到 rref 后，变量会分成 `pivot variables` 和 `free variables`。主变量由自由变量决定，自由变量的个数正是 nullity。
-- `special solutions` 的构造方法是：每次只让一个自由变量取 1，其余自由变量取 0，再解出主变量。这样得到的一组向量会张成整个零空间。
-- 这组 special solutions 之所以重要，是因为它们通常正好构成零空间的一组基。
-- 一旦零空间基写出来，所有齐次解都能写成这些基向量的线性组合。于是“求通解”就变成了“找一个基”。
-- 这一讲是把“自由变量”从纯代数现象，翻译成“空间中的独立方向”。
-
->[!example] 例题
->
-> 若 rref 为
+> **解答**：$A,B$ 必须有相同列数 $n$，于是 $x\in\mathbb R^n$。有
 > $$
-> \begin{bmatrix}
-> 1&0&2&-1\\
-> 0&1&-1&3
-> \end{bmatrix},
-> $$
-> 则 $x_3,x_4$ 自由，且
-> $$
-> x_1=-2x_3+x_4,\qquad x_2=x_3-3x_4.
-> $$
-> 令 $(x_3,x_4)=(1,0)$ 和 $(0,1)$，得到两组 special solutions：
-> $$
-> \begin{bmatrix}-2\\1\\1\\0\end{bmatrix},\qquad
-> \begin{bmatrix}1\\-3\\0\\1\end{bmatrix}.
-> $$
-> 整个零空间就是这两向量的张成空间。
-
-### 易错点与补充
-
-- `special solution` 不是“随便找一个非零解”，而是按自由变量一一对应地产生基向量。
-- 不要把自由变量也继续解成数字；它们本来就代表了解集中的自由方向。
-- 零空间的通解一定经过原点，所以最后答案必须能把 $x=0$ 包含进去。
-### 你要掌握
-
-- 能从 rref 直接写出零空间的一组基。
-- 知道自由变量个数就是零空间维数。
-- 明白“special solutions 不是某些偶然例子，而是零空间基向量”。
-
-### 回忆检查
-
-- 不看正文，我能说出这讲要解决的问题。
-- 我能写出本讲最关键的公式、结论或判别条件。
-- 我知道这讲最典型的题型，以及它如何接到下一讲。
-
-## Session 1.9 Solving Ax = b: row reduced form R
-
-资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.8sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.8prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.8sol.pdf|solution]]
-
-关联卡片：[[Linear system solution structure]]、[[Reduced Row Echelon Form]]、[[Null Space]]、[[Column Space]]
-
->[!note] 快速回忆
-> - 这讲要回答：一般系统 `Ax=b` 的全部解怎样描述。
-> - 你要立刻想起：所有解都写成 `particular solution + [[Null Space]]`；是否有解先看相容条件。
-> - 典型题型：判断相容、找一个特解、再参数化全部解。
-> - 它接到下一讲：从“会解”走到“哪些向量算 independent / basis”。
-
-### 把一般系统拆成“是否相容”与“如何参数化”
-
-当右端变成一般的 $b$ 时，问题分成两步：
-
-1. 系统是否相容，也就是 $b$ 是否落在 [[Column Space]] 中。
-2. 如果相容，所有解如何描述。
-
-行最简形最适合回答第二个问题。因为它把主变量与自由变量的关系完全显出来。
-
-### particular solution + nullspace
-
-若 $x_p$ 是某个特解，而 $x_n\in N(A)$，则
-$$
-A(x_p+x_n)=Ax_p+Ax_n=b+0=b.
-$$
-反过来，任意两个解之差都在零空间里。因此一般解有统一形式
-$$
-x=x_p+x_n,\qquad x_n\in N(A).
-$$
-这不是技巧，而是整个线性系统理论的骨架。
-
-### 相容条件从哪里来
-
-如果 rref 的某一行变成
-$$
-0=1,
-$$
-系统就矛盾；这等价于说 $b$ 不在列空间里。把这个条件翻成“某个线性关系必须由 b 也满足”，就会自然引出左零空间和 Fredholm 风格的兼容条件。
-
->[!example] 例子
->
-> 假设
-> $$
-> \begin{bmatrix}
-> 1&2\\
-> 2&4
-> \end{bmatrix}
-> \begin{bmatrix}x_1\\x_2\end{bmatrix}
-> =
-> \begin{bmatrix}b_1\\b_2\end{bmatrix}.
-> $$
-> 由于第二行是第一行的两倍，系统有解的必要充分条件是 $b_2=2b_1$。一旦这个条件成立，解不是唯一的，而是一条仿射直线，因为零空间是一维。
->
-
-
-### 本讲知识点全景
-
-- 非齐次系统 `Ax=b` 的第一步仍是消元，但重点从“有没有自由变量”扩展到“是否出现矛盾行”。
-- 若 rref 中出现
-> $$[0\ 0\ \cdots\ 0\mid c],\quad c\neq0,$$
-  则系统无解；这就是 $b\notin C(A)$ 的代数表现。
-- 若系统相容，则所有解都可写成
-> $$x=x_p+x_n,$$
-  其中 $x_p$ 是任意一个 particular solution，$x_n\in N(A)$。这就是“特解 + 零空间”。
-- 零空间只由 A 决定，因此同一个系数矩阵换不同右端，变化的只是 particular solution，不变的是所有自由方向。
-- rref 比单纯的上三角更强，因为它直接把主变量写成自由变量和右端的函数，结构最透明。
-- 这一讲把“解一个具体系统”和“理解所有解的形状”正式结合起来了。
-
->[!example] 例题
->
-> 若 rref 增广矩阵是
-> $$
-> \left[\begin{array}{ccc|c}
-> 1&0&2&1\\
-> 0&1&-1&3
-> \end{array}\right],
-> $$
-> 则取自由变量 $x_3=t$，得到
-> $$
-> x_1=1-2t,\qquad x_2=3+t.
+> Cx=\begin{bmatrix}Ax\\Bx\end{bmatrix}=0
+> \iff Ax=0\text{ 且 }Bx=0.
 > $$
 > 因而
 > $$
-> x=\begin{bmatrix}1\\3\\0\end{bmatrix}+t\begin{bmatrix}-2\\1\\1\end{bmatrix}.
+> N(C)=N(A)\cap N(B).
 > $$
-> 第一个向量是特解，第二个向量张成零空间。你应该把这看成“一个仿射平移 + 一个子空间方向”。
 
-### 易错点与补充
+### 易错点、边界与反例
 
-- particular solution 不是唯一的；换一个特解，只会把后面的零空间系数重新吸收进去。
-- 不相容系统没有任何特解，因此更谈不上“特解 + 零空间”。
-- 解集若相容但不唯一，它是一个平移后的子空间，不再经过原点。
-### 你要掌握
+- 行操作通常改变列空间中的具体列，但保持行空间与零空间；找 $C(A)$ 的基必须回到原矩阵选 pivot columns。
+- $C(A)$ 是列向量的 span，不是“列向量组成的有限集合”。
+- 非齐次解集通常不是子空间，因为不含 $0$；它是零空间的仿射平移。
 
-- 能把一般解写成“特解 + 零空间”。
-- 能从消元结果读出相容条件。
-- 明白无解的根源是 $b$ 不在列空间里。
+### 三道自检题
 
-### 回忆检查
+> [!question]- 1. $C(A)$ 位于哪里？
+> **答案**：若 $A$ 为 $m\times n$，则 $C(A)\subseteq\mathbb R^m$。
 
-- 不看正文，我能说出这讲要解决的问题。
-- 我能写出本讲最关键的公式、结论或判别条件。
-- 我知道这讲最典型的题型，以及它如何接到下一讲。
+> [!question]- 2. 为什么 $N(A)$ 一定含零向量？
+> **答案**：线性性给 $A0=0$。
+
+> [!question]- 3. 若两列相同，写出一个非零零空间向量。
+> **答案**：若 $a_i=a_j$，则 $e_i-e_j\in N(A)$，因为 $A(e_i-e_j)=a_i-a_j=0$。
+
+### 知识链小结
+
+$C(A)$ = 可达输出 → $N(A)$ = 丢失输入 → 解的存在与唯一被拆开 → 下一节用 rref 为 $N(A)$ 构造可计算的基。
+
+## Session 1.8 Solving Ax = 0: pivot variables and special solutions
+
+### 本节问题与前置知识
+
+**问题**：怎样从消元后的矩阵系统地写出 $N(A)$ 的一组基？
+
+**前置知识**：消元、主元、列空间与零空间。
+
+**本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.7sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S08_Lecture_Solving_Ax_0_Pivot_Variables_Special_Solutions.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S08_Recitation_Solving_Ax_0.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.7prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.7sol.pdf#page=1|official solution p.1]]
+
+### 1. 行最简形与变量分工
+
+把 $A$ 化为 [[Reduced Row Echelon Form|行最简形]] $R$。由于行操作等价于左乘可逆矩阵 $E$，
+
+$$
+R=EA,\qquad Rx=0\iff EAx=0\iff Ax=0,
+$$
+
+所以行操作保持零空间。
+
+- 主元列对应 **pivot variables（主元变量）**；
+- 非主元列对应 **free variables（自由变量）**；
+- 每个自由变量依次取 $1$、其余自由变量取 $0$，得到一个 **special solution（特殊解）**。
+
+若 $A$ 有 $n$ 列、rank 为 $r$，自由变量数是 $n-r$，也就是 $\dim N(A)$。
+
+### 2. 标准块形式
+
+适当重排列后，rref 可写成
+
+$$
+R=\begin{bmatrix}I_r&F\\0&0\end{bmatrix},
+$$
+
+其中 $F$ 是主元方程里自由变量的系数块。把 $x$ 分成主元部分 $x_p$ 和自由部分 $x_f$：
+
+$$
+x_p+Fx_f=0\Longrightarrow x_p=-Fx_f.
+$$
+
+因此
+
+$$
+x=\begin{bmatrix}x_p\\x_f\end{bmatrix}
+=\begin{bmatrix}-F\\I_{n-r}\end{bmatrix}x_f.
+$$
+
+矩阵 $\begin{bmatrix}-F\\I\end{bmatrix}$ 的列就是特殊解。
+
+> [!proof] 特殊解为什么构成零空间的基
+> **张成**：任意 $x_f$ 都可按标准基展开，公式表明对应 $x$ 是特殊解的相同系数组合。
+>
+> **无关**：若特殊解的线性组合为 $0$，观察其自由变量分量；这些分量正好组成单位矩阵，所以所有系数都必须为 $0$。
+>
+> **结论**：它们既张成又线性无关，构成 $N(A)$ 的基；数量为 $n-r$。
+
+### 3. Recitation：齐次平面与仿射平面
+
+非齐次平面
+
+$$
+x-5y+2z=9
+
+$$
+
+与齐次平面 $x-5y+2z=0$ 平行。齐次式以 $x$ 为主元变量、$y,z$ 为自由变量：
+
+$$
+x=5y-2z.
+$$
+
+特殊解为 $(5,1,0)^T$、$(-2,0,1)^T$，所以
+
+$$
+N(A)=\operatorname{span}\left\{
+\begin{bmatrix}5\\1\\0\end{bmatrix},
+\begin{bmatrix}-2\\0\\1\end{bmatrix}
+\right\}.
+$$
+
+非齐次平面再加特解 $(9,0,0)^T$。这是下一节完整解结构的几何原型。
+
+### Homework：全部题目与逐步解答
+
+> [!question]- Problem 7.1：求 rref、rank 与特殊解
+> **题目转述**：对
+> $$
+> A=\begin{bmatrix}1&5&7&9\\0&4&1&7\\2&-2&11&-3\end{bmatrix}
+> $$
+> 求 rref、rank 和 $Ax=0$ 的特殊解。
+>
+> **解答**：$R_3\leftarrow R_3-2R_1$ 得 $(0,-12,-3,-21)$，它是第二行的 $-3$ 倍，因此第三行归零。把第二行除以 $4$，再从第一行减 $5$ 倍第二行：
+> $$
+> R=\begin{bmatrix}
+> 1&0&23/4&1/4\\
+> 0&1&1/4&7/4\\
+> 0&0&0&0
+> \end{bmatrix}.
+> $$
+> 有两个主元，所以 rank $=2$；$x_3,x_4$ 自由。方程为
+> $$
+> x_1=-\frac{23}{4}x_3-\frac14x_4,\qquad
+> x_2=-\frac14x_3-\frac74x_4.
+> $$
+> 依次令 $(x_3,x_4)=(1,0),(0,1)$，得到
+> $$
+> s_1=\begin{bmatrix}-23/4\\-1/4\\1\\0\end{bmatrix},\qquad
+> s_2=\begin{bmatrix}-1/4\\-7/4\\0\\1\end{bmatrix}.
+> $$
+> 直接计算 $As_1=As_2=0$；两向量的自由分量分别是标准基，故线性无关。
+
+> [!question]- Problem 7.2：控制乘积的秩
+> **题目转述**：令 $B=\begin{bmatrix}1&1\\1&1\end{bmatrix}$，找 $A_1,A_2$ 使 $\operatorname{rank}(A_1B)=1$、$\operatorname{rank}(A_2B)=0$。
+>
+> **解答**：取 $A_1=I_2$，则 $A_1B=B$，两列相同且非零，rank $=1$。取
+> $$
+> A_2=\begin{bmatrix}1&-1\\1&-1\end{bmatrix}.
+> $$
+> $B$ 的每一列都是 $(1,1)^T$，而 $A_2(1,1)^T=0$，所以 $A_2B=0$、rank $=0$。平凡选择 $A_2=0$ 也成立，但此选择更能显示 $C(B)\subseteq N(A_2)$ 才是乘积为零的结构原因。
+
+### 易错点、边界与反例
+
+- 求 $N(A)$ 可使用 rref，但求 $C(A)$ 的基不能直接拿 rref 的 pivot columns；行操作改变列本身。
+- “一个自由变量”对应“一条特殊解”，不是只对应一个解；其任意标量倍数都在零空间中。
+- 零空间是子空间，参数式必须包含 $x=0$；若不包含，说明你混入了非齐次特解。
+
+### 三道自检题
+
+> [!question]- 1. $A$ 有 7 列、4 个主元，$N(A)$ 的维数是多少？
+> **答案**：$7-4=3$。
+
+> [!question]- 2. 为什么主元变量不能任意取值？
+> **答案**：它们由 rref 中的主元方程表示为自由变量的线性组合；任意选择会违反方程。
+
+> [!question]- 3. 若 $R=[I_2\ F]$ 且 $F=\begin{bmatrix}2\\-3\end{bmatrix}$，写出特殊解。
+> **答案**：$x=(-F,1)^T=(-2,3,1)^T$。
+
+### 知识链小结
+
+rref 保持 $N(A)$ → pivot/free 变量分工 → 特殊解给零空间基 → nullity $=n-r$ → 下一节把任意非齐次解写成“特解 + 零空间”。
+
+## Session 1.9 Solving Ax = b: row reduced form R
+
+### 本节问题与前置知识
+
+**问题**：非齐次系统何时相容？相容时怎样一次写出全部解？
+
+**前置知识**：rref、特殊解、列空间与零空间。
+
+**本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.8sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S09_Lecture_Solving_Ax_b_Row_Reduced_Form_R.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S09_Recitation_Solving_Ax_b.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.8prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.8sol.pdf#page=1|official solution p.1]]
+
+### 1. 相容条件必须从增广矩阵读
+
+对 $[A\mid b]$ 做相同行操作。若出现
+
+$$
+\begin{bmatrix}0&\cdots&0\mid c\end{bmatrix},\qquad c\ne0,
+$$
+
+即方程 $0=c$，则无解。否则系统相容。
+
+等价的空间说法是
+
+$$
+Ax=b\text{ 相容}\iff b\in C(A).
+$$
+
+消元给可计算判据，列空间给结构解释。
+
+### 2. 完整解 = 特解 + 零空间
+
+先找任意一个 particular solution（特解）$x_p$ 满足 $Ax_p=b$，再求 $N(A)$。所有解是
+
+$$
+x=x_p+x_n,\qquad x_n\in N(A).
+$$
+
+> [!proof] 完整解公式的双向证明
+> **目标**：证明上式不遗漏、也不加入假解。
+>
+> **正向构造**：若 $x_n\in N(A)$，则
+> $$
+> A(x_p+x_n)=Ax_p+Ax_n=b+0=b,
+> $$
+> 所以右侧每个向量都是解。
+>
+> **反向覆盖**：若 $x$ 是任意解，则
+> $$
+> A(x-x_p)=Ax-Ax_p=b-b=0,
+> $$
+> 因此 $x-x_p\in N(A)$，即 $x=x_p+x_n$。
+>
+> **边界**：若系统无特解，公式没有起点；若 $b=0$，可取 $x_p=0$，解集就是零空间本身。
+>
+> **结论**：相容系统的解集是 $N(A)$ 的一个仿射平移。
+
+![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit1-affine-solution.png|760]]
+
+### 3. Recitation：由 $b$ 决定的相容条件
+
+考虑
+
+$$
+\begin{cases}
+x-2y-2z=b_1,\\
+2x-5y-4z=b_2,\\
+4x-9y-8z=b_3.
+\end{cases}
+$$
+
+对增广矩阵做 $R_2\leftarrow R_2-2R_1$、$R_3\leftarrow R_3-4R_1$，再消第二列，最后一行变为
+
+$$
+0=-2b_1-b_2+b_3.
+$$
+
+所以相容当且仅当
+
+$$
+b_3=2b_1+b_2.
+$$
+
+相容时 $z$ 自由，取 $z=0$ 得
+
+$$
+x_p=\begin{bmatrix}5b_1-2b_2\\2b_1-b_2\\0\end{bmatrix};
+$$
+
+齐次特殊解为 $(2,0,1)^T$，故
+
+$$
+x=x_p+t\begin{bmatrix}2\\0\\1\end{bmatrix}.
+$$
+
+验算策略：先验证 $Ax_p=b$，再验证 $A(2,0,1)^T=0$；线性性便保证整族都正确。
+
+### Homework：全部题目与逐步解答
+
+> [!question]- Problem 8.1：辨析完整解的三个错误说法
+> **题目转述**：解释为什么以下说法都错：（a）完整解是 $x_p,x_n$ 的任意线性组合；（b）$Ax=b$ 至多有一个特解；（c）若 $A$ 可逆，零空间中没有解 $x_n$。
+>
+> **解答**：（a）$x_p$ 的系数必须是 $1$；若写 $\alpha x_p+x_n$，则其像为 $\alpha b$，只有 $\alpha=1$（或特殊的 $b=0$）才仍为 $b$。（b）若 $x_n\in N(A)$，则 $x_p+x_n$ 也是特解；只要零空间非平凡，就有无穷多个。（c）任何矩阵的零空间至少含 $x_n=0$；可逆只表示它不含非零向量。
+
+> [!question]- Problem 8.2：同时化简齐次与非齐次系统
+> **题目转述**：令
+> $$
+> U=\begin{bmatrix}1&2&3\\0&0&4\end{bmatrix},\qquad
+> c=\begin{bmatrix}5\\8\end{bmatrix}.
+> $$
+> 分别把 $[U\mid0]$、$[U\mid c]$ 化为 $[R\mid0]$、$[R\mid d]$，求解并代回。
+>
+> **解答**：第二行除以 $4$，第一行减 $3$ 倍第二行：
+> $$
+> R=\begin{bmatrix}1&2&0\\0&0&1\end{bmatrix}.
+> $$
+> 齐次式给 $x_1=-2x_2,x_3=0$，故
+> $$
+> x=t\begin{bmatrix}-2\\1\\0\end{bmatrix}.
+> $$
+> 官方解选择 $t=-1$，写成 $(2,-1,0)^T$，两者张成同一零空间。
+>
+> 对非齐次端，$8/4=2$，第一行右端变为 $5-3(2)=-1$：
+> $$
+> [R\mid d]=\left[\begin{array}{ccc|c}1&2&0&-1\\0&0&1&2\end{array}\right].
+> $$
+> 因而 $x_3=2$、$x_1=-1-2x_2$。取 $x_2=0$ 可得更简洁特解 $(-1,0,2)^T$；官方取 $x_2=1$ 得 $(-3,1,2)^T$。完整解为
+> $$
+> x=\begin{bmatrix}-1\\0\\2\end{bmatrix}
+> +t\begin{bmatrix}-2\\1\\0\end{bmatrix}.
+> $$
+> 代入 $Ux$：第二分量恒为 $8$，第一分量为 $(-1-2t)+2t+6=5$。
+
+> [!question]- Problem 8.3：相同解算子是否意味着矩阵相同
+> **题目转述**：若对每个 $b$，$Ax=b$ 与 $Cx=b$ 有完全相同的解集，是否必有 $A=C$？
+>
+> **解答**：是。任取尺寸合适的 $y$，令 $b=Ay$。于是 $y$ 是 $Ax=b$ 的解；按假设也是 $Cx=b$ 的解，所以 $Cy=b=Ay$。这对所有 $y$ 成立，特别对每个标准基 $e_j$ 成立，于是 $A$、$C$ 的第 $j$ 列分别为 $Ae_j,Ce_j$ 且相等。因此 $A=C$。
+
+### 易错点、边界与反例
+
+- 特解不唯一；“particular”只是任选一个方便代表。
+- 完整解不是 $\operatorname{span}\{x_p,N(A)\}$，因为那会允许改变 $x_p$ 的系数。
+- 相容条件来自左端行之间的依赖关系；消元时必须带着 $b$。
+- 若 $N(A)=\{0\}$，相容系统才唯一；它并不自动保证相容。
+
+### 三道自检题
+
+> [!question]- 1. 若 $x_1,x_2$ 都满足 $Ax=b$，$x_1-x_2$ 在哪里？
+> **答案**：在 $N(A)$，因为 $A(x_1-x_2)=b-b=0$。
+
+> [!question]- 2. 解集 $x=x_p+su+tv$ 的几何维数是多少？
+> **答案**：若 $u,v$ 线性无关，则是二维仿射平面；其方向空间是 $\operatorname{span}\{u,v\}=N(A)$。
+
+> [!question]- 3. 若 $Ax=b$ 有两个不同解，能否有恰好两个解？
+> **答案**：不能。在 $\mathbb R$ 上，它们之差给非零零空间方向，$x_1+t(x_2-x_1)$ 对每个实数 $t$ 都是解，因此有无穷多个。
+
+### 知识链小结
+
+增广消元判相容 → 特解定位仿射平移 → 零空间给全部方向 → 完整解 = $x_p+N(A)$ → 下一节用线性无关、基和维数准确计数这些方向。
 
 ## Session 1.10 Independence, basis, and dimension
 
-资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.9sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.9prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.9sol.pdf|solution]]
+### 本节问题与前置知识
 
-关联卡片：[[Vector Space]]、[[Subspace]]、[[Linear Independence]]、[[Basis]]、[[Dimension]]、[[Matrix Rank]]
+**问题**：一组生成向量中哪些方向真正不可替代？怎样用最少且不冗余的向量描述空间？
 
->[!note] 快速回忆
-> - 这讲要回答：什么叫 linear independence、basis、dimension。
-> - 你要立刻想起：basis 是“最少还能张成 / 最多仍保持独立”的那组向量；pivot column 往往直接指向 basis。
-> - 典型题型：从一组向量里挑 basis、求 dimension、说明为什么 independent。
-> - 它接到下一讲：把这些语言全部收束到四个基本子空间。
+**前置知识**：span、零空间、主元与自由变量。
 
-### 线性无关到底在说什么
+**本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.9sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S10_Lecture_Independence_Basis_and_Dimension.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S10_Recitation_Basis_and_Dimension.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.9prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.9sol.pdf#page=1|official solution p.1]]
 
-向量组 $v_1,\dots,v_k$ 线性无关，意思是
+### 1. 线性无关
+
+向量 $v_1,\ldots,v_k$ 称为 [[Linear Independence|线性无关]]，若
+
 $$
 c_1v_1+\cdots+c_kv_k=0
+
 $$
-只能由全零系数给出。这表示这些向量中没有一个是其余向量的线性组合，因此每个向量都提供了新的方向信息。
 
-### 基与维数
+只允许平凡系数 $c_1=\cdots=c_k=0$。把这些向量作为矩阵 $V$ 的列，则
 
-一组向量如果既线性无关又能张成整个空间，就构成一个 basis。基的意义不是“某组好用的坐标轴”，而是“把空间中每个向量都唯一表示出来”的最小完整系统。所有基的向量数相同，这个公共数叫做维数。
+$$
+\{v_j\}\text{ 无关}\iff N(V)=\{0\}\iff V\text{ 的每一列都是主元列}.
+$$
 
-在矩阵问题里，基和维数会不断出现：
+一组向量若包含零向量、重复向量，或某个向量是其余向量的组合，必然相关。
 
-- 列空间的基来自主元列。
-- 零空间的基来自 special solutions。
-- 行空间的基来自 rref 的非零行。
+### 2. 基与维数
 
-### 主元与独立性
+空间 $S$ 的一组 [[Basis|基]] 同时满足：
 
-矩阵的主元列恰好对应线性无关的列；非主元列则可由前面的主元列表示。于是消元不仅是求解工具，也是判断 independence 和寻找 basis 的工具。
+1. 张成 $S$；
+2. 线性无关。
 
-### 典型结论
+基实现“存在且唯一的坐标表示”。若 $v_1,\ldots,v_k$ 是基，每个 $s\in S$ 可唯一写成 $s=\sum c_iv_i$。
 
-- $n$ 个独立向量在 $\mathbb{R}^n$ 中自动构成一组基。
-- 超过 $n$ 个向量在 $\mathbb{R}^n$ 中必定线性相关。
-- 若一个子空间维数是 $r$，任何基都恰有 $r$ 个向量。
+> [!proof] 为什么基坐标唯一
+> 若 $s=\sum c_iv_i=\sum d_iv_i$，两式相减：
+> $$
+> \sum_i(c_i-d_i)v_i=0.
+> $$
+> 基向量线性无关，所以每个 $c_i-d_i=0$，即 $c_i=d_i$。
 
+有限维空间任意两组基含有相同数量的向量，这个数量称为 [[Dimension|维数]]。零空间的基由特殊解给出；列空间的基由原矩阵的主元列给出。
 
+### 3. [[Rank-Nullity Theorem|秩—零度定理]]
 
-### 本讲知识点全景
+对 $A\in\mathbb R^{m\times n}$，设 rank $=r$：
 
-- 线性无关的意义是“没有一个向量可以由其余向量线性表示”；它衡量的是冗余是否被消掉。
-- `basis` 同时满足两件事：一方面它张成整个空间，另一方面内部没有冗余。因此 basis 是“最少但够用”的坐标框架。
-- `dimension` 是任意一组基的向量个数。不同基长得可以完全不同，但个数必须相同，这是维数概念最核心的稳定性。
-- 在实际求基时，常见策略是：先给出一个生成集，再用消元找出其中的主元列，把冗余方向剔除。
-- 零空间的基来自 special solutions，列空间的基来自原矩阵主元列，行空间的基来自 rref 非零行。这些都是“basis”这个概念的具体落地。
-- 一旦你会在“生成 / 无关 / 基 / 维数”之间切换，很多题目都会从概念题变成结构题。
+$$
+\dim C(A)=r,\qquad \dim N(A)=n-r.
+$$
 
->[!example] 例题
+因此
+
+$$
+\boxed{\operatorname{rank}(A)+\operatorname{nullity}(A)=n}.
+$$
+
+> [!proof] [[Rank-Nullity Theorem Proof|目标—构造—计数证明]]
+> **目标**：证明输入空间的维数 $n$ 被行空间有效方向与零空间丢失方向分成 $r+(n-r)$。
 >
-> 在平面
+> **构造**：把 $A$ 化为 rref。恰有 $r$ 个主元列，因此有 $r$ 个主元变量；余下 $n-r$ 个变量自由。
+>
+> **逐步依据**：每个自由变量产生一条特殊解；上一节已证明这些特殊解构成 $N(A)$ 的基，所以 $\dim N(A)=n-r$。原矩阵的 $r$ 个主元列构成 $C(A)$ 的基，所以 $\dim C(A)=r$。
+>
+> **边界**：$r$ 可能为 $0$ 或 $\min(m,n)$，公式仍成立。
+>
+> **结论**：$r+(n-r)=n$。
+
+### 4. 如何从生成集抽取基
+
+若 $v_1,\ldots,v_k$ 是列向量，把它们组成 $A=[v_1\cdots v_k]$ 并消元。rref 的主元**位置**告诉你应从**原矩阵**选哪些列。行操作保持列之间的线性依赖关系，但不保持原列空间中的具体列，因此不能拿 rref 的主元列替代原列。
+
+Recitation 也讨论把向量作为行消元：非零行可构成行空间的基；但若原问题问原列向量中的一个子集，必须按列放置并回到原列选择。
+
+### Homework：全部题目与逐步解答
+
+> [!question]- Problem 9.1：六个向量中最多多少个独立
+> **题目转述**：给定 $\mathbb R^4$ 中
 > $$
-> S=\{(x,y,z):x+y+z=0\}\subset\mathbb R^3
+> v_1=(1,-1,0,0)^T, v_2=(1,0,-1,0)^T, v_3=(1,0,0,-1)^T,
 > $$
-> 中，向量
 > $$
-> v_1=\begin{bmatrix}1\\-1\\0\end{bmatrix},\qquad
-> v_2=\begin{bmatrix}1\\0\\-1\end{bmatrix}
+> v_4=(0,1,-1,0)^T, v_5=(0,1,0,-1)^T, v_6=(0,0,1,-1)^T,
 > $$
-> 线性无关，且任何满足 $x+y+z=0$ 的向量都可由它们线性表示，因此它们构成 S 的一组基，维数为 2。这说明“在三维空间里”的子空间，完全可能只有二维。
+> 求最多可选多少个线性无关向量。
+>
+> **解答**：先看依赖关系：
+> $$
+> v_4=v_2-v_1,\qquad v_5=v_3-v_1,\qquad v_6=v_3-v_2.
+> $$
+> 所以后三个不增加 span。把前三个作列，消元可得三个主元；也可直接令
+> $$
+> c_1v_1+c_2v_2+c_3v_3=0,
+> $$
+> 查看第 2、3、4 分量依次得 $c_1=c_2=c_3=0$。因此 $v_1,v_2,v_3$ 无关，最大数量为 $3$，整个 $4\times6$ 列矩阵 rank $=3$。
 
-### 易错点与补充
+> [!question]- Problem 9.2：平面、交线与正交方向的基
+> **题目转述**：求平面 $x-2y+3z=0$ 的基；求它与 $xy$ 平面的交的基；再求所有垂直于该平面的向量空间的基。
+>
+> **解答**：令 $y=s,z=t$，则 $x=2s-3t$，所以
+> $$
+> \begin{bmatrix}x\\y\\z\end{bmatrix}
+> =s\begin{bmatrix}2\\1\\0\end{bmatrix}
+> +t\begin{bmatrix}-3\\0\\1\end{bmatrix}.
+> $$
+> 两特殊解无关，构成平面基。与 $xy$ 平面相交要求 $z=0$，即 $t=0$，故交线基为 $(2,1,0)^T$。原平面的法向量是系数向量 $(1,-2,3)^T$；所有垂直于平面的向量构成其 span，基为
+> $$
+> \left\{\begin{bmatrix}1\\-2\\3\end{bmatrix}\right\}.
+> $$
+> 验证点积：$(1,-2,3)\cdot(2,1,0)=0$，与另一基向量点积也为 $0$。
 
-- “张成”不代表“无关”，一个大而冗余的集合也能张成空间；basis 需要同时满足两者。
-- 基向量本身不唯一，唯一的是基的个数，也就是维数。
-- 判断向量组是否为基，最稳妥的思路通常不是硬凑，而是转化成消元问题。
-### 你要掌握
+### 易错点、边界与反例
 
-- 能判断一组向量是否独立。
-- 能从矩阵的主元结构提取某个子空间的一组基。
-- 不把“生成”与“独立”混为一谈。
+- “张成”不保证无关；“无关”也不保证张成目标空间。
+- $k>n$ 个 $\mathbb R^n$ 向量必相关；$k<n$ 个向量不可能张成整个 $\mathbb R^n$。
+- 不同基可以长得完全不同，但基向量数量相同。
+- 行操作后选择列空间基，必须使用原矩阵对应列。
 
-### 回忆检查
+### 三道自检题
 
-- 不看正文，我能说出这讲要解决的问题。
-- 我能写出本讲最关键的公式、结论或判别条件。
-- 我知道这讲最典型的题型，以及它如何接到下一讲。
+> [!question]- 1. $\mathbb R^5$ 中能否有 6 个线性无关向量？
+> **答案**：不能；把它们作列得到 $5\times6$ 矩阵，rank 至多为 $5$。
+
+> [!question]- 2. 两个向量张成一个平面需要什么条件？
+> **答案**：二者都非零且不互为倍数，即线性无关。
+
+> [!question]- 3. $A$ 有 8 列且 $N(A)$ 的基有 3 个向量，rank 是多少？
+> **答案**：$8-3=5$。
+
+### 知识链小结
+
+无关 = 无冗余 → 基 = 无冗余且完整 → 维数 = 基的长度 → rank-nullity 计数输入自由度 → 下一节把同样的计数推广到四个基本子空间。
 
 ## Session 1.11 The four fundamental subspaces
 
-资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.10sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.10prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.10sol.pdf|solution]]
+### 本节问题与前置知识
 
-关联卡片：[[Column Space]]、[[Null Space]]、[[Row Space]]、[[Left Nullspace]]、[[Matrix Rank]]、[[Reading the Four Fundamental Subspaces from RREF]]
+**问题**：一个 $m\times n$ 矩阵在输入端和输出端分别决定哪四个空间？它们的维数和正交关系是什么？
 
->[!note] 快速回忆
-> - 这讲要回答：一个矩阵为什么天然带出四个基本子空间。
-> - 你要立刻想起：`C(A), N(A), C(A^T), N(A^T)` 分别活在不同 ambient space；正交关系和维数关系一起组成闭环。
-> - 典型题型：列出四个子空间的基、维数、所在空间与正交关系。
-> - 它接到下一讲：从向量空间走到“矩阵本身构成的空间”和 rank-1 视角。
+**前置知识**：列空间、零空间、基、维数、转置。
 
-### 四个空间的完整表
+**本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.10sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S11_Lecture_The_Four_Fundamental_Subspaces.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S11_Recitation_Computing_the_Four_Fundamental_Subspaces.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.10prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.10sol.pdf#page=1|official solution p.1]]
 
-对任意 $m\times n$ 矩阵 A，都有四个基本子空间：
+### 1. 四空间总表
 
-- [[Column Space]] $C(A)\subseteq \mathbb{R}^m$
-- [[Null Space]] $N(A)\subseteq \mathbb{R}^n$
-- [[Row Space]] $C(A^T)\subseteq \mathbb{R}^n$
-- [[Left Nullspace]] $N(A^T)\subseteq \mathbb{R}^m$
+对 $A\in\mathbb R^{m\times n}$、rank $=r$：
 
-它们不是零散定义，而是一个闭合系统。
+| 空间 | 定义 | 所在环境 | 维数 |
+|---|---|---:|---:|
+| $C(A)$ | $A$ 的列的 span | $\mathbb R^m$ | $r$ |
+| $N(A)$ | $Ax=0$ 的全部解 | $\mathbb R^n$ | $n-r$ |
+| [[Row Space|行空间]] $C(A^T)$ | $A$ 的行的 span | $\mathbb R^n$ | $r$ |
+| [[Left Nullspace|左零空间]] $N(A^T)$ | $A^Ty=0$ 的全部解 | $\mathbb R^m$ | $m-r$ |
 
-![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit1-four-subspaces.svg|820]]
+行空间与列空间维数相同，都是 rank；这就是“行秩 = 列秩”。实践中，rref 的非零行给行空间基，原矩阵的主元列给列空间基。
 
-这张图最值得反复看。很多人第一次学四个基本子空间时，会把它们都当成“和 A 有关的四个集合”，但真正应该看到的是：输入空间 $\mathbb{R}^n$ 被拆成 row space 和 nullspace，输出空间 $\mathbb{R}^m$ 被拆成 column space 和 left nullspace；A 真正可逆的部分，只发生在 row space 到 column space 之间。
+### 2. 正交关系
 
-### 维数关系
-
-若 $\operatorname{rank}(A)=r$，则
 $$
-\dim C(A)=r,\qquad \dim C(A^T)=r,
+C(A^T)=N(A)^\perp\subseteq\mathbb R^n,
 $$
+
 $$
-\dim N(A)=n-r,\qquad \dim N(A^T)=m-r.
+C(A)=N(A^T)^\perp\subseteq\mathbb R^m.
 $$
-这四个数字把输入空间和输出空间都正好拆满了。于是 rank-nullity 不只是一个公式，而是四个子空间之间的维数账本。
 
-### 正交关系
-
-row space 与 nullspace 在 $\mathbb{R}^n$ 中互为正交补，column space 与 left nullspace 在 $\mathbb{R}^m$ 中互为正交补。理由很直接：若 $x\in N(A)$，则每一行和 $x$ 的点积都为 0；若 $y\in N(A^T)$，则每一列和 $y$ 的点积都为 0。
-
-把这件事说得更“做题化”一点：只要你在某题里看见了“兼容条件”“误差正交”“残差与列空间垂直”，本质上都在调用这对正交补结构。Unit II 的最小二乘几乎就是把“$b$ 不在 column space 中怎么办”这件事系统化。
-
-### 如何找各自的基
-
-- 列空间的基：原矩阵中的主元列。
-- 零空间的基：rref 对应的 special solutions。
-- 行空间的基：rref 的非零行。
-- 左零空间的基：求解 $A^Ty=0$，或者从增广消元矩阵里读出。
-
-### 为什么这一讲是第一单元的核心
-
-前面所有内容在这里汇总。可解性、不唯一性、主元、秩、自由变量、正交关系，都可以用这四个空间重新表述。后面的投影与最小二乘，本质上也只是在列空间与左零空间这对正交补之间工作。
-
-
-
-### 本讲知识点全景
-
-- 对 $m\times n$ 矩阵 A，四个基本子空间分别是：列空间 $C(A)\subset\mathbb R^m$、零空间 $N(A)\subset\mathbb R^n$、行空间 $C(A^T)\subset\mathbb R^n$、左零空间 $N(A^T)\subset\mathbb R^m$。
-- 这四个空间不是并列罗列，而是成对正交：
-> $$C(A^T)\perp N(A),\qquad C(A)\perp N(A^T).$$
-- 若 rank 为 $r$，则四个空间维数分别是
-> $$\dim C(A)=r,\ \dim C(A^T)=r,\ \dim N(A)=n-r,\ \dim N(A^T)=m-r.$$ 
-  这就是 rank-nullity 在两端空间上的完整版本。
-- 读基的方法要分清：列空间基取自原矩阵主元列；行空间基取自 rref 的非零行；零空间基来自 special solutions；左零空间则通过解 $A^Ty=0$ 得到。
-- 一旦四个空间位置和维数都说得清，`Ax=b` 的几何、代数和维数计数就全部闭环了。
-- 这讲其实是 Unit I 的总定理：前面所有章节都在给这四个空间做准备。
-
->[!example] 例题
+> [!proof] 行空间为何与零空间正交互补
+> **正交性**：若 $x\in N(A)$，则 $Ax=0$。$Ax$ 的第 $i$ 个分量是第 $i$ 行 $r_i^T$ 与 $x$ 的点积，所以每行都与 $x$ 正交；行的任意线性组合也与 $x$ 正交。因此 $C(A^T)\subseteq N(A)^\perp$。
 >
-> 对
+> **维数闭合**：$\dim C(A^T)=r$；而
 > $$
-> A=\begin{bmatrix}1&2&3\\2&4&6\end{bmatrix},
+> \dim N(A)^\perp=n-\dim N(A)=n-(n-r)=r.
 > $$
-> rank 为 1，因此：
-> - $C(A)\subset\mathbb R^2$ 维数为 1，由原矩阵任一非零列张成；
-> - $C(A^T)\subset\mathbb R^3$ 维数也为 1，由 rref 的唯一非零行张成；
-> - $N(A)\subset\mathbb R^3$ 维数为 2；
-> - $N(A^T)\subset\mathbb R^2$ 维数为 1。
+> 一个子空间包含于另一个且维数相同，故二者相等。
 >
-> 只要一个 rank 数字，你就能把四个空间的维数全部写出来。
+> **另一对**：对 $A^T$ 应用同一论证，得到 $C(A)=N(A^T)^\perp$。
 
-### 易错点与补充
+这说明
 
-- 四个空间活在两个不同的 ambient spaces 里：列空间和左零空间在 $\mathbb R^m$，行空间和零空间在 $\mathbb R^n$。
-- 行变换保持行空间，但不保持列空间的具体列，因此列空间基绝不能直接从 rref 抄列。
-- `left nullspace` 常被忽视，但它正是“哪些输出方向与整个列空间正交”的集合。
-### 你要掌握
-
-- 能画出四个基本子空间分别活在哪个空间里。
-- 能背出四个维数公式，并理解它们为什么成立。
-- 能用四个基本子空间重述“有解、唯一、最小二乘”等问题。
-
-### 回忆检查
-
-- 不看正文，我能说出这讲要解决的问题。
-- 我能写出本讲最关键的公式、结论或判别条件。
-- 我知道这讲最典型的题型，以及它如何接到下一讲。
-
-## Session 1.12 Matrix spaces; rank 1; small world graphs
-
-资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.11sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.11prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.11sol.pdf|solution]]
-
-关联卡片：[[Matrix Rank]]、[[Symmetric Matrix]]
-
->[!note] 快速回忆
-> - 这讲要回答：为什么 rank-1 值得被单独拎出来，以及矩阵空间本身怎样组织。
-> - 你要立刻想起：rank-1 矩阵是外积块，是更复杂矩阵的基本构件。
-> - 典型题型：判断 rank-1、说明矩阵空间的维数与基。
-> - 它接到下一讲：把线代语言放进 graph / network 模型。
-
-### 矩阵本身也构成向量空间
-
-所有 $m\times n$ 矩阵在逐项加法和数乘下形成一个维数为 $mn$ 的向量空间。于是“上三角矩阵集合”“对称矩阵集合”“对角矩阵集合”都可以作为这个大空间中的子空间来研究。这一视角很重要，因为它告诉你：线性代数不只处理列向量，也处理函数、矩阵、信号等各种线性对象。
-
-### rank-1 矩阵是最基本的构件
-
-若
 $$
-A=uv^T,
+\mathbb R^n=C(A^T)\oplus N(A),\qquad
+\mathbb R^m=C(A)\oplus N(A^T),
 $$
-则 A 的每一列都是 $u$ 的倍数，每一行都是 $v^T$ 的倍数，所以 A 的秩至多为 1。rank-1 矩阵可以被看成“一个输出方向乘一个输入系数模式”。一般矩阵可以拆成若干 rank-1 矩阵之和，这为后面的 [[Singular Value Decomposition]] 埋下伏笔。
 
-### 为什么 rank-1 值得重视
+其中 $\oplus$ 表示每个向量都有唯一的“两部分相加”表示；这里两直和还是正交直和。
 
-rank-1 是“最简单但非平凡”的矩阵。它只有一个真正的方向被保留下来，其他所有信息都被压扁。因此研究 rank-1，相当于研究矩阵如何从复杂映射退化到单方向映射。
+![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit1-four-subspaces.png|760]]
 
-### small world graphs 的视角
+### 3. $A$ 如何在四空间图中作用
 
-这一讲把矩阵与图联系起来。图的邻接关系可以写成矩阵，局部连接和长距离连接会影响矩阵的稀疏结构和路径长度。虽然这里没有深入图论算法，但要记住：矩阵并不只来自方程组，也来自网络、关系和数据结构。
+- $A$ 把 $N(A)$ 中所有向量送到 $0$；
+- $A$ 把行空间中的 $r$ 维有效输入一一映到列空间；
+- $A^T$ 把左零空间送到 $0$；
+- $A^T$ 把列空间中的有效输出映回行空间。
 
+严格地说，限制映射
 
+$$
+A\big|_{C(A^T)}:C(A^T)\to C(A)
+$$
 
-### 本讲知识点全景
+是双射。它是满射，因为每个 $Ax$ 只依赖 $x$ 的行空间分量；它是单射，因为行空间与零空间交只有 $0$。
 
-- 所有 $m\times n$ 矩阵组成的集合本身就是一个向量空间，维数为 $mn$；最标准的一组基是“只在一个位置为 1，其余为 0”的矩阵基。
-- 某些矩阵集合会形成自然子空间，例如对称矩阵、上三角矩阵、零迹矩阵；但 `rank 1 matrices` 本身并不是子空间，因为两个 rank 1 矩阵相加可能得到 rank 2。
-- rank 1 矩阵可以写成外积
-> $$A=uv^T,$$
-  这表示所有列都沿着 u 的方向，所有行都沿着 $v^T$ 的方向。它是“只有一个独立输入模式和一个独立输出模式”的最简单矩阵。
-- 任意矩阵都能写成若干 rank 1 外积之和，例如按列写成
-> $$A=\sum_j a_j e_j^T.$$ 
-  这为后面 SVD 的“按模式拆分”埋了伏笔。
-- 图的邻接矩阵把网络结构编码进矩阵；矩阵幂 $A^k$ 会开始记录长度为 k 的走法数量，因此“small world”这类现象也能被矩阵语言表达。
-- 这一讲把“矩阵不仅是方程组系数，也可以是独立研究对象”这个视角彻底打开了。
+### 4. 从消元读四空间
 
->[!example] 例题
+见 [[Reading the Four Fundamental Subspaces from RREF|从 RREF 读四个基本子空间]]：
+
+1. $C(A)$：取**原矩阵**的主元列；
+2. $N(A)$：从 rref 的自由变量构造特殊解；
+3. $C(A^T)$：取 rref 的非零行；
+4. $N(A^T)$：解 $A^Ty=0$，或在完整消元矩阵 $E$ 中读取把 $A$ 消成零行的行组合。
+
+Recitation 用 $B=LU$ 的 rank-2 例子说明：取 $L$ 中与 $U$ 的两个非零 pivot positions 对应的两列，可给出 $C(B)$ 的基；$U$ 给 $N(B)$ 与行空间，$E=L^{-1}$ 中对应 $U$ 零行的那一行给左零空间向量。
+
+### Homework：全部题目与逐步解答
+
+> [!question]- Problem 10.1：由“某些 $b$ 无解”推出维数关系
+> **题目转述**：$A$ 是 $m\times n$、rank $r$。已知存在某些 $b$ 使 $Ax=b$ 无解。（a）写出 $m,n,r$ 的全部必然不等式；（b）解释为什么 $A^Ty=0$ 有非零解。
 >
-> 取
+> **解答**：总有 $r\le n$、$r\le m$。存在不可达 $b\in\mathbb R^m$ 说明 $C(A)\ne\mathbb R^m$，所以
 > $$
-> u=\begin{bmatrix}1\\2\end{bmatrix},\qquad v=\begin{bmatrix}3\\4\end{bmatrix},
+> r<m.
 > $$
-> 则
+> $m,n$ 之间没有由题设强制的大小关系；完整陈述是 $r\le n$ 且 $r<m$。左零空间维数
 > $$
-> uv^T=\begin{bmatrix}3&4\\6&8\end{bmatrix}.
+> \dim N(A^T)=m-r>0,
 > $$
-> 这个矩阵的第二列永远是第一列的 $\tfrac43$ 倍，因此 rank 只有 1。它不是“只有一个非零元素”，而是“所有列都只有一个独立方向”。
+> 因而存在 $y\ne0$ 满足 $A^Ty=0$。原官方解一处把列空间误写成 $\mathbb R^n$，按尺寸应为 $\mathbb R^m$。
 
-### 易错点与补充
-
-- `rank 1` 不等于“矩阵里只有一行或一列非零”，真正的定义是列空间和行空间都只有一个独立方向。
-- rank 1 矩阵不是子空间，这点很容易想当然写错。
-- 把矩阵看成向量空间中的点后，后面很多“矩阵分解”就能理解成“在矩阵空间里找更好的基”。
-### 你要掌握
-
-- 能把“矩阵空间”当成普通向量空间来做维数和子空间判断。
-- 能解释 rank-1 矩阵为什么等于一个列向量与一个行向量的外积。
-
-### 回忆检查
-
-- 不看正文，我能说出这讲要解决的问题。
-- 我能写出本讲最关键的公式、结论或判别条件。
-- 我知道这讲最典型的题型，以及它如何接到下一讲。
-
-## Session 1.13 Graphs, networks, incidence matrices
-
-资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.12sum.pdf|summary]] | [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.12prob.pdf|problem]] | [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.12sol.pdf|solution]]
-
-关联卡片：[[Incidence Matrix]]、[[Null Space]]、[[Left Nullspace]]
-
->[!note] 快速回忆
-> - 这讲要回答：矩阵怎样编码 graph / network 结构。
-> - 你要立刻想起：incidence matrix 把节点与边连起来；零空间和左零空间会对应回路与约束。
-> - 典型题型：写 incidence matrix、解释其 rank 和 nullspace。
-> - 它接到下一讲：Exam 1 前把算法线与结构线收成一个闭环。
-
-### 网络中的矩阵
-
-对一个图或网络，可以给每条边任意指定方向，然后构造 [[Incidence Matrix]]。矩阵的列对应边，行对应节点。若一条边从节点 $i$ 指向节点 $j$，对应列通常在第 $i$ 行放 $-1$、第 $j$ 行放 $1$，其余位置为 0。
-
-![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit1-incidence-network.svg|760]]
-
-把图变成矩阵以后，离散网络就被送进了线性代数的统一语言。你不再只是“看见三条边和三个点”，而是在看一个从边空间到点空间的线性映射。
-
-### 关联矩阵为什么重要
-
-它把图结构直接翻译成线性代数语言：
-
-- 列空间描述可能的净流入/净流出模式。
-- 零空间描述循环流，也就是沿回路流动而在每个节点守恒的边流。
-- 左零空间反映节点势能中“不改变所有边差值”的自由度，例如整体加一个常数。
-
-### 连接到物理与工程
-
-电路里的 Kirchhoff 定律、网络流、离散梯度和势函数，都可以写成关联矩阵问题。一个连通图的关联矩阵通常秩为 $n-1$，因为所有行加起来为 0；这说明“总流量守恒”带来一条必然依赖。
-
-### 一个核心例子
-
-若 $B$ 是图的 incidence matrix，则
-$$
-B^Ty
-$$
-给出节点势函数 $y$ 在各条边上的差值；而
-$$
-Bx
-$$
-则把边流 $x$ 变成各节点的净流量。这个“从点到边”和“从边到点”的结构，是离散数学和偏微分方程离散化里的基础模式。
-
-这组式子之所以重要，是因为它把“梯度”和“散度”的离散版本直接写了出来。$B^Ty$ 像是把节点势能差分成边上的落差，$Bx$ 像是把边上的流量汇总成节点净流入。于是零空间和左零空间不再只是抽象空间名称，而是在网络里分别对应“绕圈流动却不积累”和“整体加常数不改变边差”的具体现象。
-
-
-
-### 本讲知识点全景
-
-- `incidence matrix` 用矩阵记录图中“节点和边如何相连”。对每条有向边，其对应列通常含一个 $+1$ 和一个 $-1$，其余位置为 0。
-- 边的方向是人为选的坐标约定，不会改变 rank、nullspace 维数或 cycle 结构，只会改变某些向量的正负号。
-- 若 B 是“节点 × 边”的 incidence matrix，则 $Bf=0$ 表示每个节点流入流出守恒，因此 nullspace 描述的是循环流或回路流。
-- 因为每列元素和为 0，故常向量 $\mathbf 1$ 与所有列都正交；对连通图，
-> $$N(B^T)=\operatorname{span}(\mathbf 1),\qquad \operatorname{rank}(B)=n-1.$$ 
-  这说明整张图只有一个“整体平移不变”的自由度。
-- 图上的势差、流量和平衡条件，都能直接翻译成列空间与零空间的语言。
-- 这是四个基本子空间第一次和真实网络模型接上：矩阵不再只是抽象数组，而是守恒定律的编码器。
-
->[!example] 例题
+> [!question]- Problem 10.2：转置系统的存在与唯一
+> **题目转述**：$A^Ty=d$ 在 $d$ 属于哪个基本子空间时可解？在什么空间只含零向量时解唯一？
 >
-> 对三角形图，任选方向后可写
+> **解答**：$A^T$ 的列空间是 $C(A^T)$，也就是 $A$ 的行空间，所以
 > $$
-> B=\begin{bmatrix}
-> 1&0&-1\\
-> -1&1&0\\
-> 0&-1&1
+> A^Ty=d\text{ 可解}\iff d\in C(A^T).
+> $$
+> 两个解之差位于 $N(A^T)$，因此解唯一当且仅当左零空间 $N(A^T)=\{0\}$。
+
+### 易错点、边界与反例
+
+- $C(A)$ 与 $N(A^T)$ 都在 $\mathbb R^m$；$C(A^T)$ 与 $N(A)$ 都在 $\mathbb R^n$。正交只能在同一个环境空间内谈。
+- 列空间的基来自原矩阵主元列，行空间基可以来自 rref 非零行。
+- “四个空间互相正交”是错的；只有两对互为正交补。
+- $N(A)$ 的维数是 $n-r$，左零空间的维数是 $m-r$，不要把 $m,n$ 对调。
+
+### 三道自检题
+
+> [!question]- 1. $A$ 为 $7\times5$、rank $3$，四空间维数各是多少？
+> **答案**：$\dim C(A)=3$、$\dim N(A)=2$、$\dim C(A^T)=3$、$\dim N(A^T)=4$。
+
+> [!question]- 2. 若 $y\in N(A^T)$，证明它与每列正交。
+> **答案**：$A^Ty=0$ 的第 $j$ 个分量是 $a_j^Ty=0$。
+
+> [!question]- 3. 为什么 $A$ 在整个 $\mathbb R^n$ 上不一定一一对应，但在行空间上是一一对应？
+> **答案**：整个空间可能含非零 $N(A)$；行空间与 $N(A)$ 正交，交集仅有 $0$，故限制到行空间后核为零。
+
+### 知识链小结
+
+列空间/零空间 → 转置产生行空间/左零空间 → 两对正交补 → rank 同时给两个有效维数 → 四空间图统一 $A$ 的输入、输出结构。
+
+## Session 1.12 Matrix spaces, rank 1, and small world graphs
+
+### 本节问题与前置知识
+
+**问题**：向量空间的“向量”能否本身就是矩阵？为什么秩一矩阵是一般矩阵的基本构件？
+
+**前置知识**：子空间、基、维数、外积、rank。
+
+**本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.11sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S12_Lecture_Matrix_Spaces_Rank_1_Small_World_Graphs.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S12_Recitation_Matrix_Spaces.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.11prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.11sol.pdf#page=1|official solution p.1]]
+
+### 1. 矩阵空间
+
+所有 $m\times n$ 实矩阵组成向量空间 $M_{m\times n}$。标准基为
+
+$$
+E_{ij}\quad(1\le i\le m,\ 1\le j\le n),
+$$
+
+其中只有 $(i,j)$ 元为 $1$。任意矩阵唯一写成
+
+$$
+A=\sum_{i=1}^m\sum_{j=1}^n a_{ij}E_{ij},
+$$
+
+所以
+
+$$
+\dim M_{m\times n}=mn.
+$$
+
+对称矩阵、斜对称矩阵、上三角矩阵、trace 为零的方阵都可构成子空间；可逆矩阵集合不是子空间，因为不含零矩阵，且两个可逆矩阵的和可能奇异。
+
+### 2. [[Rank-One Matrix|秩一矩阵]]与外积
+
+若 $u\in\mathbb R^m$、$v\in\mathbb R^n$ 均非零，则
+
+$$
+A=uv^T
+$$
+
+是 $m\times n$ 矩阵，其第 $j$ 列为 $v_j u$，所有列都在同一直线上，所以 rank $=1$。
+
+反过来，任一非零 rank-1 矩阵的所有列都是某个非零列 $u$ 的倍数；把倍数收进 $v$，便得 $A=uv^T$。
+
+> [!proof] rank-$r$ 矩阵可分成 $r$ 个秩一矩阵
+> 取 $A$ 的 $r$ 个主元列组成 $C\in\mathbb R^{m\times r}$。每一列都由这些主元列组合，所以存在 $R\in\mathbb R^{r\times n}$ 使 $A=CR$。按内维展开：
+> $$
+> A=\sum_{k=1}^r C_{:k}R_{k:}.
+> $$
+> 每项是列乘行，rank 至多 $1$。这给出 $r$ 个秩一构件；不能少于 $r$ 个，否则秩的次可加性会使总秩小于 $r$。
+
+![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit1-rank-one.png|760]]
+
+### 3. Recitation：带固定零空间向量的矩阵子空间
+
+考虑所有满足
+
+$$
+A\begin{bmatrix}2\\1\\1\end{bmatrix}=0,\qquad A\in M_{2\times3}
+$$
+
+的矩阵。若 $A,B$ 满足条件，则 $(\alpha A+\beta B)v=0$，故它是子空间。每一行 $(a,b,c)$ 满足 $2a+b+c=0$，即
+
+$$
+(a,b,c)=a(1,0,-2)+b(0,1,-1).
+$$
+
+两行可独立选择，因此基可取
+
+$$
+\begin{bmatrix}1&0&-2\\0&0&0\end{bmatrix},
+\begin{bmatrix}0&1&-1\\0&0&0\end{bmatrix},
+\begin{bmatrix}0&0&0\\1&0&-2\end{bmatrix},
+\begin{bmatrix}0&0&0\\0&1&-1\end{bmatrix},
+$$
+
+维数为 $4$。相比之下，“列空间包含固定非零向量 $(2,1)^T$”的矩阵集合不含零矩阵，不是子空间。
+
+### 4. Small-world graph 的矩阵视角
+
+图的邻接矩阵把连接关系变为矩阵。矩阵幂 $(A^k)_{ij}$ 可计数从节点 $i$ 到 $j$ 的长度 $k$ walk；局部边加上少量远程边可能显著缩短平均路径。这里的重点不是图论细节，而是同一套矩阵乘法能编码网络中的传播与连接。
+
+### Homework：全部题目与逐步解答
+
+> [!question]- Problem 11.1（Optional）：五个置换矩阵的基
+> **题目转述**：把 $3\times3$ 单位矩阵写成其余五个置换矩阵的组合，并证明这五个矩阵线性无关；它们构成“所有行和、列和均相等”的矩阵子空间的一组基。
+>
+> **解答**：记三个换位矩阵为 $P_{21},P_{31},P_{32}$，两个三循环为 $P_{32}P_{21},P_{21}P_{32}$。前三者相加得到全一矩阵；后两者相加得到对角为 $0$、非对角为 $1$ 的矩阵，所以
+> $$
+> I=P_{21}+P_{31}+P_{32}-P_{32}P_{21}-P_{21}P_{32}.
+> $$
+> 若五者线性组合为零，查看三个对角位置可依次迫使三个换位矩阵的系数为零；再看剩余非对角位置迫使两个三循环系数为零，故五者无关。每个置换矩阵的各行和、列和都是 $1$，其组合具有共同的行和、列和。目标空间原有 $9$ 个参数；“三行和相等”给两个独立约束，“三列和相等”再给两个独立约束，而共同的行和与列和因总元素和相同而自动相等，所以维数是 $9-4=5$。已有五个无关矩阵，故它们确实是一组基。
+
+> [!question]- Problem 11.2：线性算子 $T(X)=AX$ 的核与像
+> **题目转述**：在 $M_{3\times3}$ 上令
+> $$
+> A=\begin{bmatrix}1&0&-1\\-1&1&0\\0&-1&1\end{bmatrix}.
+> $$
+> （a）哪些 $X$ 满足 $AX=0$？（b）哪些矩阵可写成 $AX$？（c）求核、像维数并解释为何和为 $9$。
+>
+> **解答**：$A(1,1,1)^T=0$ 且 rank $A=2$，故 $N(A)=\operatorname{span}\{(1,1,1)^T\}$。（a）$AX=0$ 当且仅当 $X$ 的每一列都在 $N(A)$，所以
+> $$
+> X=\begin{bmatrix}a&b&c\\a&b&c\\a&b&c\end{bmatrix},
+> $$
+> 有三个自由参数，$\dim\ker T=3$。
+>
+> （b）$AX$ 的每列均在 $C(A)$。因为 $A$ 每列分量和为 $0$ 且 $C(A)$ 为二维平面，
+> $$
+> C(A)=\{(p,q,-p-q)^T:p,q\in\mathbb R\}.
+> $$
+> 因而像中的矩阵恰为
+> $$
+> \begin{bmatrix}
+> a&b&c\\d&e&f\\-a-d&-b-e&-c-f
+> \end{bmatrix},
+> $$
+> 有六个自由参数，$\dim\operatorname{im}T=6$。
+>
+> （c）输入空间 $M_{3\times3}$ 维数为 $9$；线性算子的 rank-nullity 给 $3+6=9$。这是矩阵作为“向量”时同一维数定理的直接应用。
+
+### 易错点、边界与反例
+
+- “rank 恰为 1 的矩阵集合”不是子空间：两个 rank-1 矩阵相加可能 rank 2，且不含零矩阵。
+- $uv^T$ 的尺寸由 $u$ 的长度给行数、$v$ 的长度给列数。
+- 矩阵空间中的线性算子也有核、像、rank-nullity；不要把输入维数误写成矩阵的行数或列数，$M_{m\times n}$ 的维数是 $mn$。
+
+### 三道自检题
+
+> [!question]- 1. $M_{2\times4}$ 的维数是多少？
+> **答案**：$2\cdot4=8$。
+
+> [!question]- 2. 若 $u\ne0,v\ne0$，为什么 $uv^T$ 不可能 rank 0？
+> **答案**：取 $v_j\ne0$，第 $j$ 列 $v_ju\ne0$，矩阵非零；所有列共线，故 rank 恰为 1。
+
+> [!question]- 3. 所有 $3\times3$ 可逆矩阵构成子空间吗？
+> **答案**：不构成；零矩阵不可逆，且 $I+(-I)=0$。
+
+### 知识链小结
+
+向量空间可由矩阵充当元素 → rank-1 外积是矩阵的原子构件 → rank-$r$ 是 $r$ 个外积之和 → 矩阵算子仍满足核—像维数定理 → 下一节用关联矩阵编码图与网络。
+
+## Session 1.13 Graphs, networks, and incidence matrices
+
+### 本节问题与前置知识
+
+**问题**：怎样用一个矩阵同时编码节点、边、势差、流量守恒与网络能量？
+
+**前置知识**：四个基本子空间、转置、矩阵乘法。
+
+**本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.12sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S13_Lecture_Graphs_Networks_Incidence_Matrices.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S13_Recitation_Graphs_and_Networks.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.12prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.12sol.pdf#page=1|official solution p.1]]
+
+### 1. 关联矩阵的定义
+
+给有向图任意指定每条边的方向。若图有 $n$ 个节点、$m$ 条边，其 [[Incidence Matrix|关联矩阵]] $A\in\mathbb R^{m\times n}$ 每行对应一条边：边从节点 $i$ 指向节点 $j$，则该行在第 $i$ 列写 $-1$、第 $j$ 列写 $+1$，其余写 $0$。
+
+方向只是记号选择；反转一条边只会把对应行乘 $-1$，不改变图的连通结构或 $A^TA$。
+
+### 2. 四空间在网络中的含义
+
+令节点势（potential）为 $x\in\mathbb R^n$，则
+
+$$
+e=Ax\in\mathbb R^m
+$$
+
+给出每条有向边的终点势减起点势。
+
+- $N(A)$：所有边势差都为零的节点势。连通图中所有节点势相同，所以 $N(A)=\operatorname{span}\{\mathbf1\}$。
+- $C(A)$：可由节点势产生的边势差。
+- $N(A^T)$：满足每个节点净流量为零的边流，称为 cycle space；环流属于这里。
+- $C(A^T)$：由边量累积到节点的净注入向量；其分量总和为零。
+
+若图有 $c$ 个连通分量，则每个分量可有一个独立常势：
+
+$$
+\dim N(A)=c,\qquad \operatorname{rank}(A)=n-c,\qquad
+\dim N(A^T)=m-n+c.
+$$
+
+> [!proof] 连通图的关联矩阵为什么 rank 为 $n-1$
+> **目标**：证明 $\dim N(A)=1$，再用 rank-nullity。
+>
+> **逐步依据**：$Ax=0$ 表示每条边两端势相等。若图连通，任意两节点之间存在路径；沿路径逐边使用“端点相等”，得到所有节点势相等。因此 $x=c\mathbf1$。
+>
+> **反向**：$A\mathbf1=0$，因为每行含一个 $-1$ 和一个 $+1$。
+>
+> **结论**：$N(A)=\operatorname{span}\{\mathbf1\}$，nullity $=1$，所以 rank $=n-1$。
+>
+> **边界**：不连通时每个连通分量各有一个常数，nullity 变为连通分量数 $c$。
+
+### 3. 传导、守恒与图 Laplacian
+
+令 $C\in\mathbb R^{m\times m}$ 是对角 conductance（电导）矩阵，边流可按符号约定写成
+
+$$
+y=-CAx.
+$$
+
+若 $f\in\mathbb R^n$ 表示节点的**外部注入**，取“注入为正、网络净流出为正”的约定，则节点守恒写成
+
+$$
+-A^Ty=f.
+$$
+
+与 $y=-CAx$ 合并得
+
+$$
+A^TCAx=f.
+$$
+
+若把 $f$ 定义成外部净流出，或改用 $y=CAx$，守恒式中的符号会相应改变。重要的是从同一方向约定一致推导，不是死记正负号。矩阵
+
+$$
+L_G=A^TCA
+$$
+
+称加权[[Graph Laplacian|图 Laplacian（graph Laplacian）]]。它对称，并且
+
+$$
+x^TL_Gx=(Ax)^TC(Ax)=\sum_{e=1}^m c_e(\Delta x_e)^2\ge0.
+$$
+
+连通图中 $L_G\mathbf1=0$；势只确定到加一个常数，通常把一个节点接地来选定唯一代表。可解的注入必须满足 $\mathbf1^Tf=0$，即总流入等于总流出。
+
+![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit1-incidence-network.png|760]]
+
+### 4. Recitation：不用消元读出核
+
+五节点六边的连通图，其关联矩阵为 $6\times5$。由连通性立刻得
+
+$$
+N(A)=\operatorname{span}\{(1,1,1,1,1)^T\},\qquad \operatorname{rank}(A)=4.
+$$
+
+故 $\dim N(A^T)=6-4=2$：两个独立基本环流生成全部平衡流。大环流可以写成两个小环流之和，所以不是新独立方向。
+
+此外，$\operatorname{tr}(M)$ 表示方阵 $M$ 的对角元之和。于是
+
+$$
+\operatorname{tr}(A^TA)=\sum_{j=1}^n\|A_{:j}\|^2.
+$$
+
+关联矩阵第 $j$ 列每条相邻边贡献一个 $\pm1$，平方和等于节点度数。因此 trace 等于所有节点度数之和，也就是 $2m$；例中为 $12$。
+
+### Homework：全部题目与逐步解答
+
+> [!question]- Problem 12.1：正方形图的关联矩阵与零空间
+> **题目转述**：按图中方向写正方形四节点、四边的关联矩阵，求 $N(A)$，并说明为什么 $(1,0,0,0)$ 不在行空间。
+>
+> **解答**：按官方方向可写
+> $$
+> A=\begin{bmatrix}
+> -1&1&0&0\\
+> 0&-1&1&0\\
+> 0&0&1&-1\\
+> -1&0&0&1
 > \end{bmatrix}.
 > $$
-> 向量
+> $Ax=0$ 给
 > $$
-> f=\begin{bmatrix}1\\1\\1\end{bmatrix}
+> x_2=x_1,\quad x_3=x_2,\quad x_3=x_4,\quad x_4=x_1,
 > $$
-> 满足 $Bf=0$，表示沿三条边同方向绕一圈的循环流在每个节点都守恒。另一方面 $B^T\mathbf 1=0$，说明所有节点势同时加一个常数并不会改变边上的势差。
+> 所以
+> $$
+> N(A)=\operatorname{span}\{(1,1,1,1)^T\}.
+> $$
+> 行空间等于 $N(A)^\perp$；而
+> $$
+> (1,0,0,0)\cdot(1,1,1,1)=1\ne0,
+> $$
+> 故该向量不在行空间。
 
-### 易错点与补充
+> [!question]- Problem 12.2：电导网络
+> **题目转述**：沿用上一题，令
+> $$
+> C=\operatorname{diag}(1,2,2,1).
+> $$
+> 求 $A^TCA$；对 $f=(1,0,-1,0)^T$，求 $A^TCAx=f$ 的一个解，并求 $y=-CAx$。
+>
+> **解答**：逐项相乘得到
+> $$
+> A^TCA=\begin{bmatrix}
+> 2&-1&0&-1\\
+> -1&3&-2&0\\
+> 0&-2&4&-2\\
+> -1&0&-2&3
+> \end{bmatrix}.
+> $$
+> 该矩阵每行和为 $0$，反映常势在核中。选择节点 3 接地，即 $x_3=0$，解得
+> $$
+> x=\begin{bmatrix}3/4\\1/4\\0\\1/4\end{bmatrix}.
+> $$
+> 验算：第一行 $2(3/4)-1/4-1/4=1$；第二行 $-3/4+3/4=0$；第三行 $-2(1/4)-2(1/4)=-1$；第四行 $-3/4+3(1/4)=0$。
+>
+> 再算
+> $$
+> Ax=\begin{bmatrix}-1/2\\-1/4\\-1/4\\-1/2\end{bmatrix},
+> \qquad
+> y=-CAx=\begin{bmatrix}1/2\\1/2\\1/2\\1/2\end{bmatrix}.
+> $$
+> 此时 $-A^Ty=f$，与上面的外部注入约定一致。
+> 因 $A\mathbf1=0$，$x+c\mathbf1$ 都是势的等价解；接地只是选定一个代表。
 
-- incidence matrix 的方向约定不是物理事实，只是记号；换方向只会把某些列乘以 $-1$。
-- 对连通图，rank 是 `节点数 - 1`，不是节点数，因为整体常数方向永远落在左零空间里。
-- `Bf=0` 和 `B^Tv=0` 分别对应不同对象：前者是边流守恒，后者是节点势差为零。
-### 你要掌握
+### 易错点、边界与反例
 
-- 知道 incidence matrix 的行和列分别表示什么。
-- 能解释为什么连通图的 incidence matrix 往往少一维秩。
-- 能把零空间理解成网络中的循环流。
+- 关联矩阵的形状是“边数 $\times$ 节点数”，因为每一行对应边。
+- 边方向可任取，但一旦选定，$A$、流量和势差的符号约定必须一致。
+- 连通图的 $A^TA$ 不是可逆矩阵：常数向量总在核中。
+- 环的数量不能凭肉眼数所有闭合路径；独立环维数是 $m-n+c$。
 
-### 回忆检查
+### 三道自检题
 
-- 不看正文，我能说出这讲要解决的问题。
-- 我能写出本讲最关键的公式、结论或判别条件。
-- 我知道这讲最典型的题型，以及它如何接到下一讲。
+> [!question]- 1. 一棵有 $n$ 个节点的树有多少条边，关联矩阵 rank 多少？
+> **答案**：边数 $n-1$；树连通，所以 rank $n-1$，且 $N(A^T)$ 维数为 $0$，没有独立环流。
+
+> [!question]- 2. 为什么可解的节点注入必须总和为零？
+> **答案**：$f\in C(A^T)=N(A)^\perp$，而连通图 $N(A)=\operatorname{span}\{\mathbf1\}$，故 $\mathbf1^Tf=0$。
+
+> [!question]- 3. 反转一条边会怎样改变 $A^TA$？
+> **答案**：只把 $A$ 对应行乘 $-1$；写成 $DA$，其中 $D^TD=I$，故 $(DA)^T(DA)=A^TA$，不变。
+
+### 知识链小结
+
+关联矩阵把节点势映为边差 → $N(A)$ 表示分量常势 → $N(A^T)$ 表示环流 → $A^TCA$ 汇总守恒与能量 → 四空间获得具体网络意义。
 
 ## Session 1.14 Exam 1 review
 
-资料：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.14sum.pdf|summary]]
+### 本节问题与前置知识
 
->[!note] 快速回忆
-> - 这讲要回答：Exam 1 前最少必须保住哪条链。
-> - 你要立刻想起：`几何图像 -> 消元/秩 -> column/null space -> basis/dimension -> four fundamental subspaces -> incidence matrix`。
-> - 典型题型：消元、general solution、basis、四个基本子空间、网络矩阵。
-> - 复习时如果哪一步说不顺，就直接回对应 session，而不是从头重读整篇。
+**问题**：如何把 Unit I 的算法线和结构线压缩为一条稳定的解题流程？
 
-### Unit I 的核心闭环
+**前置知识**：Sessions 1.1–1.13 全部内容。
 
-Exam 1 前你应该已经把以下链条串起来：
+**本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.14sum.pdf#page=1|review summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S14_Lecture_Exam_1_Review.pdf#page=1|review lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S14_Recitation_Exam_1_Problem_Solving.pdf#page=1|problem-solving transcript p.1]]
 
-1. 先用 row picture 和 column picture 理解 $Ax=b$。
-2. 再用高斯消元找到主元、秩和自由变量。
-3. 用 LU 把算法过程整理成矩阵分解。
-4. 用列空间和零空间解释“有解”和“不唯一”。
-5. 最后用四个基本子空间统一整个单元。
+### 1. Unit I 解题总流程
 
-### 一定要会的典型题型
+拿到 $Ax=b$ 后依次问：
 
-- 对一个矩阵做消元，给出主元列、秩和自由变量。
-- 求解 $Ax=0$，写出零空间的一组基。
-- 判断 $Ax=b$ 是否可解，并写出全部解。
-- 从原矩阵中挑出列空间基，从 rref 中挑出行空间基。
-- 写出四个基本子空间的维数和正交关系。
-- 对简单网络写出 incidence matrix 并解释其零空间。
+1. **尺寸**：$A$ 是 $m\times n$ 吗？$x\in\mathbb R^n$、$b\in\mathbb R^m$ 吗？
+2. **消元**：$[A\mid b]$ 的主元在哪里？是否出现矛盾行？
+3. **存在性**：$b\in C(A)$ 吗？
+4. **唯一性**：$N(A)=\{0\}$ 吗？
+5. **完整解**：先取特解，再加所有特殊解。
+6. **空间基**：列空间回原矩阵取 pivot columns；行空间取 rref 非零行；两个零空间解齐次系统。
+7. **维数检查**：$r+(n-r)=n$、$r+(m-r)=m$。
+8. **验算**：代回原矩阵，而不是只代回 rref。
 
-### 考前最容易混淆的点
+### 2. 必会证明链
 
-- 列空间的基要从原矩阵取主元列，不是从 rref 直接取列。
-- 行空间的基可以从 rref 的非零行取，因为行变换保持行空间。
-- 一般解是“特解 + 零空间”，不是“随便找一个解再加常数”。
-- 列空间和左零空间活在 $\mathbb{R}^m$，行空间和零空间活在 $\mathbb{R}^n$。
+考前应能不查笔记完成：
 
+- 行操作保持解集；
+- 可逆矩阵的逆唯一；
+- $Ax=b$ 完整解是 $x_p+N(A)$；
+- 特殊解构成零空间基；
+- rank-nullity；
+- 行空间与零空间正交，列空间与左零空间正交；
+- 连通图关联矩阵的零空间由常数向量张成。
 
+### 3. Recitation 参数题完整闭环
 
-### 高频题型展开
+令
 
-- `消元诊断题`：给一个矩阵或增广矩阵，问你 rank、pivot、free variables、是否有解、是否唯一。答题顺序应固定为“先消元，再读结构，最后翻译成几何”。
-- `子空间与基`：常考列空间基、零空间基、行空间基和维数。这里最容易丢分的是把“从原矩阵取列”和“从 rref 取行”混成一个规则。
-- `general solution`：无论题面写成 $Ax=0$ 还是 $Ax=b$，都应该下意识问“自由变量是谁”“零空间方向是什么”“是否存在 particular solution”。
-- `概念解释题`：如“为什么 singular matrix 可能无解也可能不唯一”“为什么 column picture 和 row picture 等价”。这类题不能只背口号，要能回到四个基本子空间。
-- `网络矩阵题`：把 incidence matrix 的 rank、nullspace、守恒含义说清楚，往往就等于把图论题做完一半。
+$$
+A=\begin{bmatrix}1&1&1\\1&2&3\\3&4&k\end{bmatrix},
+\qquad b=\begin{bmatrix}2\\3\\7\end{bmatrix}.
+$$
 
->[!example] 例题
->
-> 若题目给出一个 $3\times4$ 矩阵并告诉你 rank 为 2，那么你无需先算具体数值，也应立刻知道：
-> - 零空间维数是 $4-2=2$；
-> - 列空间维数是 2；
-> - 左零空间维数是 $3-2=1$；
-> - 若对某个 $b$ 相容，则解集一定是“一个 particular solution 加上二维零空间”。
->
-> 这类“先用结构秒答，再补计算”的习惯，正是 Exam 1 复习最该养成的。
+对增广矩阵依次做
 
-### 易错点与补充
+$$
+R_2\leftarrow R_2-R_1,\quad
+R_3\leftarrow R_3-3R_1,\quad
+R_3\leftarrow R_3-R_2,
+$$
 
-- 复习时不要把 Unit I 看成“很多小技巧”；真正该背的是一条结构链和几类稳定题型。
-- 若一道题做不顺，先问自己卡在“消元”“子空间”“basis”“四个基本子空间”哪一层，不要无差别重读全篇。
-- Exam 1 最容易失分的不是大计算，而是会算却说不清“这个计算在结构上说明什么”。
-### 你要掌握
+得到
 
-- 能把 Unit I 压缩成 `几何图像 -> 消元 -> 子空间 -> 基与维数 -> 四个基本子空间` 这一条链。
-- 能从题目表述快速判断该回哪一节，而不是重读整篇。
-- 能说清楚 Exam 1 里最常见的计算题和概念题分别在考什么。
+$$
+\left[\begin{array}{ccc|c}
+1&1&1&2\\
+0&1&2&1\\
+0&0&k-5&0
+\end{array}\right].
+$$
 
-### 回忆检查
+- 若 $k\ne5$，三个主元，$x_3=0,x_2=1,x_1=1$，唯一解 $(1,1,0)^T$。
+- 若 $k=5$，第三行是 $0=0$，令 $x_3=t$：
+  $$
+  x_2=1-2t,\qquad x_1=1+t,
+  $$
+  $$
+  x=\begin{bmatrix}1\\1\\0\end{bmatrix}
+  +t\begin{bmatrix}1\\-2\\1\end{bmatrix}.
+  $$
 
-- 不看正文，我能口头复述 Unit I 的主线推进顺序。
-- 我能立即举出 Unit I 最典型的三类题：消元、general solution、four fundamental subspaces。
-- 如果我在某一环卡住，我知道应该回哪个 session，而不是只能从头重读。
+消元倍数为 $1,3,1$，所以
 
-## 本单元复习清单
+$$
+L=\begin{bmatrix}1&0&0\\1&1&0\\3&1&1\end{bmatrix},\qquad
+U=\begin{bmatrix}1&1&1\\0&1&2\\0&0&k-5\end{bmatrix}.
+$$
 
-- 我能把一个线性系统翻译成 row picture、column picture 和 matrix picture。
-- 我能用消元求秩、主元和自由变量，并能解释这些量的几何意义。
-- 我能从 rref 写出零空间基，并从原矩阵写出列空间基。
-- 我能说清楚四个基本子空间分别是什么、在哪里、维数是多少。
-- 我能把“可逆、唯一解、零空间平凡、主元充满、列独立”这些说法互相转换。
-- 我能看懂 incidence matrix，并把它和流、势、回路联系起来。
+即使 $k=5$，分解仍成立，只是 $U$ 奇异。
+
+### 4. 考试中的错误诊断
+
+- **只报 rank 不报尺寸**：rank 必须同时满足 $r\le m,n$。
+- **把 rref 主元列当列空间基**：应回原矩阵取同编号列。
+- **参数题不分特殊值**：任何可能成为 $0$ 的主元都必须单独讨论。
+- **只给一组解却声称完整**：有自由变量时必须写参数族。
+- **把左零空间写进 $\mathbb R^n$**：它属于 $\mathbb R^m$。
+- **用 $A^TA$ 消元替代 $A$**：会改变条件数且不是本单元必要步骤；直接消元更清楚。
+
+### 三道自检题
+
+> [!question]- 1. 若 $A$ 是 $4\times6$、rank $4$，对每个 $b\in\mathbb R^4$ 解的情况如何？
+> **答案**：列空间是 $\mathbb R^4$，所以每个 $b$ 都可解；nullity $=2$，所以每个相容系统都有无穷多解。
+
+> [!question]- 2. 若 $A$ 是 $6\times4$、rank $4$，解的情况如何？
+> **答案**：$N(A)=\{0\}$，所以至多一个解；列空间是 $\mathbb R^6$ 中四维子空间，并非每个 $b$ 可解。
+
+> [!question]- 3. 一个 $n\times n$ 方阵有 $n$ 个主元时，列出三条立即可得的结论。
+> **答案**：可逆；$N(A)=\{0\}$；$C(A)=\mathbb R^n$；等价地每个 $b$ 有唯一解，任选三条即可。
+
+### 知识链小结
+
+尺寸 → 消元 → rank → 相容性 → 特解与零空间 → 四空间基与维数 → 代回验算；下面用 Exam 1 的四道题把这条链完整实践。
+
+## Exam 1 完整题解
+
+**本地试卷**：[[MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex1.pdf#page=1|Unit 1 Exam p.1]]
+
+**官方答案**：[[MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex1s.pdf#page=1|Unit 1 Exam Solutions p.1]]
+
+> [!warning] PDF 文本层说明
+> 官方答案 PDF 的文本层编码损坏，但页面公式可正常阅读。本节按题目页面、答案页面与直接代数验算交叉核对；所有矩阵均额外做尺寸和乘积检查。
+
+### Exam Problem 1：由存在性与唯一性反推尺寸和秩
+
+题设：$A$ 为 $m\times n$，
+
+$$
+Ax=\begin{bmatrix}1\\1\\1\end{bmatrix}\text{ 无解},
+\qquad
+Ax=\begin{bmatrix}0\\1\\0\end{bmatrix}\text{ 恰有一解}.
+$$
+
+#### (a) 求 $m,n,r$ 的全部可能信息
+
+**已知与目标**：两个右端都有三个分量，所以输出空间是 $\mathbb R^3$；要从一个无解和一个唯一解推断 rank。
+
+**逐步推导**：
+
+1. $Ax$ 有三个分量，故 $m=3$。
+2. 第二个系统存在且唯一。若 $N(A)$ 含非零 $z$，则由一个解 $x_p$ 可产生 $x_p+tz$ 的无穷多个解，矛盾。因此 $N(A)=\{0\}$。
+3. rank-nullity 给 $r+n-r=n$ 且 nullity $=0$，所以 $r=n$。
+4. 第一个系统无解，说明 $C(A)\ne\mathbb R^3$，所以 $r<3$。
+5. rank 为非负整数，而第二个非零右端可达，所以 $r\ge1$。
+
+因此
+
+$$
+\boxed{m=3,\qquad r=n\in\{1,2\}.}
+$$
+
+#### (b) 求 $Ax=0$ 的全部解
+
+由上一步 $N(A)=\{0\}$：
+
+$$
+\boxed{x=0\in\mathbb R^n.}
+$$
+
+#### (c) 给出一个例子
+
+取 $n=r=1$：
+
+$$
+A=\begin{bmatrix}0\\1\\0\end{bmatrix}.
+$$
+
+则 $Ax=(0,x,0)^T$。右端 $(0,1,0)^T$ 唯一对应 $x=1$；$(1,1,1)^T$ 不在 $A$ 的一维列空间中。也可取 $n=r=2$ 的例子
+
+$$
+A=\begin{bmatrix}1&0\\0&1\\0&0\end{bmatrix}.
+$$
+
+#### 错误诊断
+
+- 仅从“一个 $b$ 唯一可解”不能推出 $C(A)=\mathbb R^3$；它只推出核为零。
+- $r=n$ 不等于 $r=m$；本题恰因 $r<m$ 才有不可达右端。
+
+### Exam Problem 2：初等矩阵、逆矩阵与 LU
+
+题设：$A$ 经以下顺序化为 $I$：
+
+1. $E_{21}$：$R_2\leftarrow R_2-4R_1$；
+2. $E_{31}$：$R_3\leftarrow R_3-3R_1$；
+3. $E_{23}$：$R_2\leftarrow R_2-R_3$。
+
+对应矩阵为
+
+$$
+E_{21}=\begin{bmatrix}1&0&0\\-4&1&0\\0&0&1\end{bmatrix},
+$$
+
+$$
+E_{31}=\begin{bmatrix}1&0&0\\0&1&0\\-3&0&1\end{bmatrix},
+\qquad
+E_{23}=\begin{bmatrix}1&0&0\\0&1&-1\\0&0&1\end{bmatrix}.
+$$
+
+#### (a) 求 $A^{-1}$
+
+因
+
+$$
+E_{23}E_{31}E_{21}A=I,
+$$
+
+所以
+
+$$
+A^{-1}=E_{23}E_{31}E_{21}.
+$$
+
+先乘后两项，再左乘 $E_{23}$（即把第二行减第三行）：
+
+$$
+A^{-1}
+=\begin{bmatrix}
+1&0&0\\
+-1&1&-1\\
+-3&0&1
+\end{bmatrix}.
+$$
+
+#### (b) 求原矩阵 $A$
+
+撤销操作时顺序反转且符号改变：
+
+$$
+A=E_{21}^{-1}E_{31}^{-1}E_{23}^{-1}
+=\begin{bmatrix}
+1&0&0\\
+4&1&1\\
+3&0&1
+\end{bmatrix}.
+$$
+
+验算：
+
+$$
+AA^{-1}
+=\begin{bmatrix}1&0&0\\4&1&1\\3&0&1\end{bmatrix}
+\begin{bmatrix}1&0&0\\-1&1&-1\\-3&0&1\end{bmatrix}
+=I_3.
+$$
+
+#### (c) 求 $A=LU$ 中的 $L$
+
+LU 只消到上三角，不必把上方的 $1$ 再消掉。对 $A$：
+
+$$
+R_2\leftarrow R_2-4R_1,\qquad
+R_3\leftarrow R_3-3R_1,
+$$
+
+得到
+
+$$
+U=\begin{bmatrix}1&0&0\\0&1&1\\0&0&1\end{bmatrix}.
+$$
+
+所以
+
+$$
+\boxed{L=\begin{bmatrix}1&0&0\\4&1&0\\3&0&1\end{bmatrix}.}
+$$
+
+直接计算 $LU=A$。第三个 Gauss–Jordan 操作 $E_{23}$ 是把 $U$ 进一步化为 $I$，不属于标准 LU 的下三角消元，因此其倍数不放进 $L$。
+
+### Exam Problem 3：参数矩阵的列空间、零空间与完整解
+
+题设
+
+$$
+A=\begin{bmatrix}
+1&1&2&4\\
+3&c&2&8\\
+0&0&2&2
+\end{bmatrix}.
+$$
+
+做
+
+$$
+R_2\leftarrow R_2-3R_1
+$$
+
+得到第二行 $(0,c-3,-4,-4)$；第三行是 $(0,0,2,2)$。特殊值只有 $c=3$。
+
+#### (a) 对每个 $c$ 求列空间基
+
+若 $c\ne3$，第二列产生第二个主元，第三列产生第三个主元，rank $=3$。取原矩阵前三个主元列：
+
+$$
+\boxed{
+\left\{
+\begin{bmatrix}1\\3\\0\end{bmatrix},
+\begin{bmatrix}1\\c\\0\end{bmatrix},
+\begin{bmatrix}2\\2\\2\end{bmatrix}
+\right\}.}
+$$
+
+若 $c=3$，第二列与第一列相同，且消元后的第二、第三非零行互为倍数，rank $=2$。主元列为原第 1、3 列：
+
+$$
+\boxed{
+\left\{
+\begin{bmatrix}1\\3\\0\end{bmatrix},
+\begin{bmatrix}2\\2\\2\end{bmatrix}
+\right\}.}
+$$
+
+#### (b) 对每个 $c$ 求零空间基
+
+齐次系统第三行给 $x_3=-x_4$。第二行化简为
+
+$$
+(c-3)x_2-4x_3-4x_4=(c-3)x_2=0.
+$$
+
+若 $c\ne3$，$x_2=0$；第一行给 $x_1=-2x_4$，所以
+
+$$
+\boxed{N(A)=\operatorname{span}\left\{
+\begin{bmatrix}-2\\0\\-1\\1\end{bmatrix}
+\right\}.}
+$$
+
+若 $c=3$，$x_2,x_4$ 都自由，且
+
+$$
+x_1=-x_2-2x_4,\qquad x_3=-x_4.
+$$
+
+因此
+
+$$
+\boxed{N(A)=\operatorname{span}\left\{
+\begin{bmatrix}-1\\1\\0\\0\end{bmatrix},
+\begin{bmatrix}-2\\0\\-1\\1\end{bmatrix}
+\right\}.}
+$$
+
+维数检查：$c\ne3$ 时 $r+\text{nullity}=3+1=4$；$c=3$ 时 $2+2=4$。
+
+#### (c) 求 $Ax=(1,c,0)^T$ 的完整解
+
+容易验证
+
+$$
+x_p=\begin{bmatrix}0\\1\\0\\0\end{bmatrix}
+$$
+
+对所有 $c$ 都满足 $Ax_p=(1,c,0)^T$。因此把对应零空间加上即可。
+
+若 $c\ne3$：
+
+$$
+\boxed{x=\begin{bmatrix}0\\1\\0\\0\end{bmatrix}
++t\begin{bmatrix}-2\\0\\-1\\1\end{bmatrix}.}
+$$
+
+若 $c=3$：
+
+$$
+\boxed{x=\begin{bmatrix}0\\1\\0\\0\end{bmatrix}
++s\begin{bmatrix}-1\\1\\0\\0\end{bmatrix}
++t\begin{bmatrix}-2\\0\\-1\\1\end{bmatrix}.}
+$$
+
+#### 错误诊断
+
+- 参数矩阵必须在 $c=3$ 分情况；否则会非法除以 $c-3$。
+- 列空间基必须取原矩阵列，不取消元结果的列。
+- 特解对全部 $c$ 都成立，是本题最省计算的入口。
+
+### Exam Problem 4：矩形矩阵、列关系与 RREF 空间
+
+#### (a) $3\times5$ 矩阵的零空间信息
+
+$A$ 有 $5$ 列而 rank $r\le3$，所以
+
+$$
+\dim N(A)=5-r\ge2.
+$$
+
+因此 $N(A)$ 是 $\mathbb R^5$ 的子空间，至少有两个线性无关的非零方向；$Ax=0$ 必有无穷多个解。
+
+#### (b) 由给定 rref 推断原列关系
+
+给定
+
+$$
+R=\operatorname{rref}(A)=
+\begin{bmatrix}
+1&4&0&0&0\\
+0&0&0&1&0\\
+0&0&0&0&1
+\end{bmatrix}.
+$$
+
+主元列是 $1,4,5$，所以原矩阵的 $a_1,a_4,a_5$ 线性无关，并构成 $C(A)$ 的基。rank $=3=m$，故
+
+$$
+C(A)=\mathbb R^3.
+$$
+
+消元保持列之间的线性关系。由 $R$ 的列可见
+
+$$
+R_{:2}=4R_{:1},\qquad R_{:3}=0,
+$$
+
+因此原列满足
+
+$$
+\boxed{a_2=4a_1,\qquad a_3=0.}
+$$
+
+完整信息可概括为：三条 pivot columns $a_1,a_4,a_5$ 是 $\mathbb R^3$ 的一组基；其余两列分别是 $4a_1$ 与零列。
+
+#### (c) 所有 $3\times3$ RREF 张成什么子空间
+
+任何 rref 的第 $i$ 个主元位置至少在第 $i$ 列，且主元左侧为零、零行在底部。因此每个 $3\times3$ rref 都是上三角矩阵，故其 span 包含于上三角矩阵空间
+
+$$
+S=\left\{
+\begin{bmatrix}a&b&c\\0&d&e\\0&0&f\end{bmatrix}:a,b,c,d,e,f\in\mathbb R
+\right\}.
+$$
+
+反过来，六个上三角标准基矩阵均可由 rref 的差得到：
+
+- $E_{11}$ 本身是 rref；
+- $E_{12}=\begin{bmatrix}1&1&0\\0&0&0\\0&0&0\end{bmatrix}-E_{11}$，$E_{13}$ 同理；
+- $E_{22}=\operatorname{diag}(1,1,0)-E_{11}$；
+- $E_{23}$ 可由 $\begin{bmatrix}1&0&0\\0&1&1\\0&0&0\end{bmatrix}-\operatorname{diag}(1,1,0)$ 得到；
+- $E_{33}=I-\operatorname{diag}(1,1,0)$。
+
+所以所有上三角矩阵都在该 span 中，最终
+
+$$
+\boxed{S=\{3\times3\text{ 上三角矩阵}\},\qquad \dim S=6.}
+$$
+
+### Exam 1 题后复盘
+
+四题分别检查了 Unit I 的四个层次：
+
+1. 从存在性/唯一性反推维数结构；
+2. 把行操作、逆与 LU 串起来；
+3. 对参数值做 rank、四空间和完整解分流；
+4. 把矩形矩阵及矩阵空间纳入统一的基与维数语言。
+
+若某题计算正确却无法解释“为什么要分情况、这个向量位于哪个空间、维数是否闭合”，说明还停留在算法层，尚未完成 Unit I 的结构化理解。
+
+## 本单元最终检查表
+
+### 概念与尺寸
+
+- [ ] 我能在任何 $m\times n$ 矩阵旁立刻写出四个基本子空间所在的 $\mathbb R^m$ 或 $\mathbb R^n$。
+- [ ] 我能区分行图像、列图像与线性映射图像。
+- [ ] 我能解释 rank 是有效方向数，nullity 是丢失的输入自由度。
+
+### 算法
+
+- [ ] 我能用增广矩阵消元，并在需要时换行。
+- [ ] 我能从消元倍数构造 $L$，从结果读出 $U$，并处理 $PA=LU$。
+- [ ] 我能由 rref 构造零空间特殊解，并从原矩阵挑列空间基。
+- [ ] 我能把相容系统写成 $x_p+N(A)$，再代回原式验算。
+
+### 证明
+
+- [ ] 我能证明行操作保持解集、逆矩阵唯一、完整解公式和 rank-nullity。
+- [ ] 我能证明两对基本子空间互为正交补。
+- [ ] 我能证明连通图的关联矩阵零空间由常数向量张成。
+
+### 下一单元接口
+
+Unit II 将从
+
+$$
+C(A^T)\perp N(A),\qquad C(A)\perp N(A^T)
+$$
+
+出发，研究正交投影、最小二乘和正交基；也就是说，当 $b\notin C(A)$、精确方程无解时，我们将寻找 $C(A)$ 中离 $b$ 最近的向量。

@@ -9,6 +9,8 @@ tags:
 - 财务比率
 - concept
 ---
+
+# Price-to-Sales Ratio
 市销率是指每股市价与每股营业收入的比值，用于衡量股票相对于收入的估值水平。
 
 >[!note] 定义

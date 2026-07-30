@@ -1,19 +1,20 @@
 ---
 name: tool
-description: Generate or update a detailed markdown note in 05_tools from a project URL. Use when user says `tool` with a URL in the same message, or sends a standalone GitHub/website URL and wants intro + installation + first-run + daily usage + troubleshooting + references in Chinese-first style.
+description: Compatibility entry for old `tool` requests. Prefer the unified `fragments` skill, which routes project/tool URLs to `05_tools` and general source digests to `04_Fragments`.
 ---
 
 # Tool
 
 ## Overview
 
-Convert one project URL into one structured note under `05_tools/`, using GitHub metadata/README/releases and optional website metadata.
+Compatibility wrapper for the unified `fragments` skill.
+
+Use this only when the user explicitly invokes `tool`. Otherwise use `fragments` and let it route the input.
 
 ## Workflow
 
-1. Parse the first valid URL from the user message.
-2. If the user sends only `tool` without URL, ask for one URL in a single follow-up.
-3. Run:
+1. If the user sends only `tool` without URL, ask for one URL in a single follow-up.
+2. For `tool <url>` or an explicitly tool-oriented request, run the same tool-note path used by `fragments`:
 
 ```bash
 python3 .codex/skills/tool/scripts/build_tool_note.py \
@@ -21,9 +22,9 @@ python3 .codex/skills/tool/scripts/build_tool_note.py \
   --vault-root "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic"
 ```
 
-4. Read script stdout and report the created/updated absolute file path.
-5. If generation fails, return the error and suggest providing a more direct project URL.
-6. After a successful write, the script regenerates `05_tools/00_content.md`.
+3. Read script stdout and report the created/updated absolute file path.
+4. If generation fails, return the error and suggest providing a more direct project URL.
+5. After a successful write, the script regenerates `05_tools/00_content.md`.
 
 ## Output Contract
 
@@ -50,5 +51,5 @@ python3 .codex/skills/tool/scripts/build_tool_note.py \
 ## Notes
 
 - Keep language Chinese-first and preserve key English technical terms.
-- Keep the directory page as a compact navigation table: note title + one-sentence summary.
+- Keep the directory page as a detailed navigation table: tool title, language/platform, source, install status, first-run status, cleanup gaps, and one-sentence summary.
 - Do not edit `.obsidian/`.

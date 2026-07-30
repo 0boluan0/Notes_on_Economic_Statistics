@@ -9,6 +9,8 @@ tags:
 - 财务比率
 - concept
 ---
+
+# Price-to-Earnings Ratio
 市盈率是指每股市价与每股收益的比值，是衡量股票估值的重要指标。
 
 >[!note] 定义

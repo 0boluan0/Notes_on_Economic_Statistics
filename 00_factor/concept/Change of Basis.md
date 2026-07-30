@@ -9,6 +9,7 @@ tags:
 - concept
 - 线性代数
 ---
+
 # Change of Basis
 
 ## 先记一句话
@@ -61,7 +62,7 @@ $$
 
 ## 来自课程位置
 
-- [[03_Positive Definite Matrices and Applications#Session 3.7 Change of basis; image compression|Session 3.7]]：换基、图像压缩和表示变化。
+- [[03_Positive Definite Matrices and Applications#Session 3.7 Change of basis and image compression|Session 3.7]]：换基、图像压缩和表示变化。
 - [[02_Least Squares, Determinants and Eigenvalues#Session 2.9 Diagonalization and powers of A|Session 2.9]]：换到特征向量基底计算矩阵幂。
 
 ## 关联卡片
@@ -71,6 +72,12 @@ $$
 - [[Diagonalization]]
 - [[Spectral Decomposition]]
 - [[Singular Value Decomposition]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Similar Matrix]]、[[Diagonalization]]、[[03_Positive Definite Matrices and Applications]]、[[02_Least Squares, Determinants and Eigenvalues]]、[[Linear Transformation]]、[[Spectral Decomposition]]、[[Singular Value Decomposition]]。
 
 ## 课程笔记反链
 

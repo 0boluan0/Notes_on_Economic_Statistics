@@ -6,6 +6,7 @@ aliases:
 tags:
 - framework
 - finance
+type: framework
 ---
 # Capital Budgeting Decision Map
 

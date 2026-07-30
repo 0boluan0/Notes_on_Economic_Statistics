@@ -11,6 +11,7 @@ tags:
 - 时间序列
 - 计量经济学
 ---
+
 # Error Correction Model
 
 ## 先记一句话
@@ -85,6 +86,12 @@ $$
 - [[Engle-Granger Two-Step Test]]
 - [[Johansen Cointegration Test]]
 - [[VAR Model]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[07_协整和误差修正模型]]、[[Cointegration]]、[[Cointegration theorem]]、[[Engle-Granger Two-Step Test]]、[[Johansen Cointegration Test]]、[[VAR Model]]。
 
 ## 课程笔记反链
 

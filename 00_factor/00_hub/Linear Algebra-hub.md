@@ -22,6 +22,8 @@ tags:
   - [[Row Space]]
   - [[Left Nullspace]]
   - [[Matrix Rank]]
+  - [[Rank-Nullity Theorem]]
+  - [[Gaussian Elimination]]
   - [[Reading the Four Fundamental Subspaces from RREF]]
 
 ### 主线 2：正交、投影、最佳逼近
@@ -43,6 +45,8 @@ tags:
 - 课程入口：[[02_Least Squares, Determinants and Eigenvalues#Session 2.8 Eigenvalues and eigenvectors|Unit II eigen 主线]]、[[03_Positive Definite Matrices and Applications]]
 - 先读这些卡：
   - [[Determinant]]
+  - [[Characteristic Polynomial]]
+  - [[Algebraic and Geometric Multiplicity]]
   - [[Eigenvalues]]
   - [[Eigenvectors]]
   - [[Diagonalization]]
@@ -51,6 +55,8 @@ tags:
   - [[Jordan Form]]
   - [[Singular Value Decomposition]]
   - [[Pseudoinverse]]
+  - [[Singular Value]]
+  - [[Low-Rank Approximation]]
   - [[Choosing Matrix Decompositions]]
 
 ## 按题型找入口
@@ -72,7 +78,7 @@ tags:
 
 - [[02_Least Squares, Determinants and Eigenvalues#Session 2.2 Projections onto subspaces|projection]]
 - [[02_Least Squares, Determinants and Eigenvalues#Session 2.3 Projection matrices and least squares|least squares]]
-- [[02_Least Squares, Determinants and Eigenvalues#Session 2.4 Orthogonal matrices and Gram-Schmidt|QR]]
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.4 Orthogonal matrices and Gram–Schmidt|QR]]
 - [[Least Squares via Normal Equations]]
 
 ### 题型：求 determinant、cofactor、inverse、volume
@@ -94,7 +100,7 @@ tags:
 - [[03_Positive Definite Matrices and Applications#Session 3.1 Symmetric matrices and positive definiteness|positive definite]]
 - [[03_Positive Definite Matrices and Applications#Session 3.4 Similar matrices and Jordan form|Jordan]]
 - [[03_Positive Definite Matrices and Applications#Session 3.5 Singular value decomposition|SVD]]
-- [[03_Positive Definite Matrices and Applications#Session 3.8 Left and right inverses; pseudoinverse|pseudoinverse]]
+- [[03_Positive Definite Matrices and Applications#Session 3.8 Left and right inverses and pseudoinverse|pseudoinverse]]
 - [[Testing Positive Definiteness]]
 
 ## 课程导航
@@ -115,10 +121,16 @@ tags:
 - [[Dimension]]
 - [[Matrix Rank]]
 - [[Reduced Row Echelon Form]]
+- [[Pivot Position]]
+- [[Row Equivalence]]
+- [[Elementary Matrix]]
 - [[Column Space]]
 - [[Row Space]]
 - [[Null Space]]
 - [[Left Nullspace]]
+- [[Rank-Nullity Theorem]]
+- [[Rank-One Matrix]]
+- [[Graph Laplacian]]
 
 ### 正交与逼近
 - [[Orthogonality]]
@@ -131,6 +143,8 @@ tags:
 
 ### determinant / eigen / 分解
 - [[Determinant]]
+- [[Characteristic Polynomial]]
+- [[Algebraic and Geometric Multiplicity]]
 - [[Matrix Inverse]]
 - [[Eigenvalues]]
 - [[Eigenvectors]]
@@ -139,8 +153,16 @@ tags:
 - [[Symmetric Matrix]]
 - [[Positive Definite Matrix]]
 - [[Spectral Decomposition]]
+- [[Spectral Radius]]
+- [[Hermitian Matrix]]
+- [[Unitary Matrix]]
+- [[Normal Matrix]]
+- [[Positive Semidefinite Matrix]]
+- [[Hessian Matrix]]
 - [[Jordan Form]]
+- [[Singular Value]]
 - [[Singular Value Decomposition]]
+- [[Low-Rank Approximation]]
 - [[Pseudoinverse]]
 
 ### 变换与表示
@@ -152,12 +174,23 @@ tags:
 ## 方法卡
 
 - [[Linear system solution structure]]
+- [[Gaussian Elimination]]
 - [[Reading the Four Fundamental Subspaces from RREF]]
 - [[Gram-Schmidt Orthogonalization]]
+- [[Cofactor Expansion]]
+- [[Computing Eigenpairs]]
+- [[Computing an SVD]]
+- [[Radix-2 FFT]]
 - [[Least Squares via Normal Equations]]
 - [[Testing Positive Definiteness]]
 - [[Choosing Matrix Decompositions]]
 - [[Linear Algebra Problem-Type Map]]
+
+## 关键证明
+
+- [[Rank-Nullity Theorem Proof]]
+- [[Spectral Theorem Proof]]
+- [[SVD Existence Proof]]
 
 ## 课程笔记反链
 

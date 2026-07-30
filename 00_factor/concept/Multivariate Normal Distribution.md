@@ -4,8 +4,8 @@ aliases:
 - MVN
 - 多元正态分布
 tags:
-- concept
-- multivariate statistics
+  - concept
+  - multivariate statistics
 ---
 # Multivariate Normal Distribution
 

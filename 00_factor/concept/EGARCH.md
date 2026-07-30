@@ -8,6 +8,7 @@ tags:
 - 时间序列
 - 波动建模
 ---
+
 # EGARCH
 
 ## 先记一句话
@@ -63,6 +64,12 @@ EGARCH 用于：
 - [[TARCH]]
 - [[Conditional Heteroskedasticity]]
 - [[Volatility Clustering]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[TARCH]]、[[04_波动建模 Modeling Volatility]]、[[GARCH]]、[[Conditional Heteroskedasticity]]、[[Volatility Clustering]]。
 
 ## 课程笔记反链
 

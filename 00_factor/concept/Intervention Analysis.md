@@ -5,8 +5,8 @@ aliases:
 - 干预分析
 - 干预模型
 tags:
-- concept
-- 时间序列
+  - concept
+  - 时间序列
 ---
 # Intervention Analysis
 
@@ -54,4 +54,3 @@ $$
 - [[ARMA]]
 - [[Chow Test]]
 - [[Forecast Evaluation]]
-

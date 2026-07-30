@@ -5,6 +5,7 @@ aliases:
 tags:
 - framework
 - multivariate statistics
+type: framework
 ---
 # Multivariate Mean Inference Map
 

@@ -135,7 +135,7 @@ $$
 ## 来自课程位置
 
 - [[01_Ax = b and the Four Subspaces#Session 1.7 Column space and nullspace|Session 1.7]]：零空间控制为什么解不唯一。
-- [[01_Ax = b and the Four Subspaces#Session 1.8 Solving Ax = 0: pivot variables, special solutions|Session 1.8]]：用 free variables 和 special solutions 写出零空间基。
+- [[01_Ax = b and the Four Subspaces#Session 1.8 Solving Ax = 0: pivot variables and special solutions|Session 1.8]]：用 free variables 和 special solutions 写出零空间基。
 - [[01_Ax = b and the Four Subspaces#Session 1.9 Solving Ax = b: row reduced form R|Session 1.9]]：一般解写成 particular solution + nullspace。
 - [[01_Ax = b and the Four Subspaces#Session 1.11 The four fundamental subspaces|Session 1.11]]：零空间是四个基本子空间之一，与 [[Row Space]] 正交互补。
 

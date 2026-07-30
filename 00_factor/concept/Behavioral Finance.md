@@ -5,7 +5,12 @@ aliases:
 tags:
 - concept
 ---
+
 # Behavioral Finance
+
+## 它是什么
+
+「Behavioral Finance」是指研究心理偏差与市场摩擦如何导致投资者非理性与市场异象的金融学分支。
 
 >[!note] 它是什么
 > - 「Behavioral Finance」是指研究心理偏差与市场摩擦如何导致投资者非理性与市场异象的金融学分支。
@@ -15,8 +20,18 @@ tags:
 > - 符号/公式：无固定符号。
 > - 最小例子：损失厌恶导致处置效应与动量收益。
 >
+## 最小例子
+
+损失厌恶导致处置效应与动量收益。
+
 ## 关联卡片
 - [[Efficient Market Hypothesis]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Efficient Market Hypothesis]]。
 
 ## 课程笔记反链
 

@@ -26,3 +26,12 @@ LLM Efficiency Engineering 关注训练和推理成本如何被架构、内核�
 
 ## 相关卡片
 [[Mixture of Experts]]、[[KV Cache]]、[[Quantization]]、[[Distributed LLM Training]]、[[LLM Inference Optimization]]
+
+## 诊断与稳健性
+
+- 每项优化同时测质量、吞吐、延迟、显存、成本和故障率，避免只优化单一指标。
+- MoE 检查路由负载均衡；KV cache 检查上下文长度与并发；量化检查长尾输入和任务回归。
+
+## 复现规范
+
+记录模型/数据版本、硬件、软件栈、并行策略、精度、量化配置、基线指标和测量脚本；结果必须能与未优化基线逐项比较。

@@ -6,7 +6,12 @@ aliases:
 tags:
 - concept
 ---
+
 # Feasible Generalized Least Squares (FGLS)
+
+## 它是什么
+
+「FGLS」是指在误差协方差未知时，用估计的协方差进行GLS的估计方法。
 
 >[!note] 它是什么
 > - 「FGLS」是指在误差协方差未知时，用估计的协方差进行GLS的估计方法。
@@ -16,10 +21,20 @@ tags:
 > - 符号/公式：$\hat\beta_{FGLS}=(X'\hat\Omega^{-1}X)^{-1}X'\hat\Omega^{-1}y。$
 > - 最小例子：先用OLS估计异方差结构，再做GLS。
 >
+## 最小例子
+
+先用OLS估计异方差结构，再做GLS。
+
 ## 关联卡片
 - [[Cochrane-Orcutt]]
 - [[Heteroscedasticity Diagnosis]]
 - [[White Robust Standard Errors]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Cochrane-Orcutt]]、[[Heteroscedasticity Diagnosis]]、[[White Robust Standard Errors]]。
 
 ## 课程笔记反链
 

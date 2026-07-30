@@ -4,8 +4,8 @@ aliases:
 - Hausman检验
 - 豪斯曼检验
 tags:
-- concept
-- econometrics
+  - concept
+  - econometrics
 ---
 # Hausman Test
 

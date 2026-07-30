@@ -17,6 +17,9 @@ tags:
 >
 ## 关联卡片
 - [[Club Goods]]
+- [[Public Goods]]
+- [[Opportunity Cost]]
+- [[Production Possibility Frontier (PPF)]]
 
 ## 课程笔记反链
 

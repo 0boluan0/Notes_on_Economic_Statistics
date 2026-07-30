@@ -10,6 +10,7 @@ tags:
 - 05_随机过程
 - concept
 ---
+
 # Chapman-Kolmogorov 方程
 
 ## 定理内容
@@ -126,6 +127,12 @@ $p_{ij}(s+t) = \sum_{k \in S} p_{ik}(s) p_{kj}(t)$
 ## 相关概念
 [[Markov Process|马尔可夫过程]]
 [[Stationary Stochastic Process|平稳随机过程]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Markov Process]]、[[Stationary Stochastic Process]]。
 
 ## 课程笔记反链
 

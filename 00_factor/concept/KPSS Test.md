@@ -5,8 +5,8 @@ aliases:
 - KPSS检验
 - Kwiatkowski-Phillips-Schmidt-Shin Test
 tags:
-- concept
-- 时间序列
+  - concept
+  - 时间序列
 ---
 # KPSS Test
 
@@ -52,4 +52,9 @@ KPSS 把序列拆成趋势部分和误差部分。如果趋势部分像随机游
 - [[Augmented Dickey-Fuller Test]]
 - [[Phillips-Perron Test]]
 - [[Stationarity Tests Comparison]]
+## 最小例子
 
+把 **KPSS Test** 放在最简单的可计算情形中：先给定定义所需的最小输入，再按定义计算输出；若关键关系不成立，就不能把该对象归入本概念。这个检查也能帮助区分相近概念。
+## 核心公式
+
+$$\operatorname{KPSS}=\frac{1}{T^2\hat\sigma^2}\sum_{t=1}^{T}S_t^2,\qquad S_t=\sum_{i=1}^{t}\hat u_i.$$

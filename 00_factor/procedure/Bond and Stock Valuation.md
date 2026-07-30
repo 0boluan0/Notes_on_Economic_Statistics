@@ -4,8 +4,14 @@ aliases:
 - 债券与股票估值
 tags:
 - procedure
+type: procedure
 ---
 # Bond and Stock Valuation
+
+## 输入
+
+- 债券或股票的预期现金流、期限、增长假设和与风险匹配的折现率。
+- 需要明确估值日、币种、名义/实际口径及是否使用连续复利。
 
 ## 适用场景
 

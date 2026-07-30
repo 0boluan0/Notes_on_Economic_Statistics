@@ -10,6 +10,13 @@ tags:
 - 金融
 - concept
 ---
+
+# Debt-to-Asset Ratio
+
+## 它是什么
+
+资产负债率是指总负债与总资产的比值，用于衡量企业长期偿债能力和资本结构。
+
 资产负债率是指总负债与总资产的比值，用于衡量企业长期偿债能力和资本结构。
 
 >[!note] 定义
@@ -49,6 +56,12 @@ tags:
 [[Debt-to-Equity Ratio|产权比率]]
 [[Equity Multiplier|权益乘数]]
 [[Long-term Debt Ratio|长期资本负债率]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Debt-to-Equity Ratio]]、[[Equity Multiplier]]、[[Long-term Debt Ratio]]。
 
 ## 课程笔记反链
 

@@ -4,8 +4,8 @@ aliases:
 - 线性产品
 - linear derivatives
 tags:
-- concept
-- derivatives
+  - concept
+  - derivatives
 ---
 # Linear Products
 

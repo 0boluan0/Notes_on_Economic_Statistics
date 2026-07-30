@@ -8,6 +8,7 @@ tags:
 - concept
 - game-theory
 ---
+
 # Coordinated Attack Game
 
 ## 一句话记忆
@@ -53,3 +54,9 @@ $$
 - [[Mixed Strategy Nash Equilibrium]]
 - [[Supermodular Game]]
 - [[Bayesian Game]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[05_贝叶斯博弈]]、[[Global Game]]、[[Mixed Strategy Nash Equilibrium]]、[[Supermodular Game]]、[[Bayesian Game]]。

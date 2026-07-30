@@ -42,6 +42,15 @@ DID 用处理组与对照组的“前后变化差异”识别政策或事件的�
 
 - [[13_面板数据模型]]
 
+## 交付物导航
+
+| 你要完成的事 | 入口卡 | 输出 |
+| --- | --- | --- |
+| 判断能否识别 | [[DID Framework]]、[[DID Diagnostics]] | 假设与诊断清单 |
+| 写出估计式 | [[DID Estimation Steps]] | 回归式、固定效应与聚类层级 |
+| 解释识别逻辑 | [[DID Identification Proof]] | ATT 的反事实分解 |
+| 写入报告 | [[DID Writing Template]] | 可直接替换占位符的段落 |
+
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

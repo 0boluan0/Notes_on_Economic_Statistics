@@ -6,8 +6,8 @@ aliases:
 - Hotelling T² 检验
 - Hotelling T2 检验
 tags:
-- concept
-- multivariate statistics
+  - concept
+  - multivariate statistics
 ---
 # Hotelling T2 Test
 

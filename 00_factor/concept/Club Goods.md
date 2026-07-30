@@ -7,7 +7,12 @@ tags:
 - concept
 - public finance
 ---
+
 # 俱乐部物品
+
+## 它是什么
+
+俱乐部物品（Club Goods）是指具有排他性（excludable）但非竞争性（non-rival）的物品或服务。
 
 >[!note] 定义
 >
@@ -141,6 +146,12 @@ $ P = AC $
 ### 3. 反垄断
 - 防止滥用市场势力
 - 促进竞争（在可能的情况下）
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Public Goods]]、[[Common Resources]]、[[Natural Monopoly]]。
 
 ## 课程笔记反链
 

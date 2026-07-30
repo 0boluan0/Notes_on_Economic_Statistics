@@ -86,7 +86,7 @@ $$
 ## 来自课程位置
 
 - [[01_Ax = b and the Four Subspaces#Session 1.3 Elimination with matrices|Session 1.3]]：消元让 pivot / rank / free variables 可读。
-- [[01_Ax = b and the Four Subspaces#Session 1.8 Solving Ax = 0: pivot variables, special solutions|Session 1.8]]：从 rref 读 nullspace。
+- [[01_Ax = b and the Four Subspaces#Session 1.8 Solving Ax = 0: pivot variables and special solutions|Session 1.8]]：从 rref 读 nullspace。
 - [[01_Ax = b and the Four Subspaces#Session 1.9 Solving Ax = b: row reduced form R|Session 1.9]]：从 rref 读一般解和相容条件。
 - [[01_Ax = b and the Four Subspaces#Session 1.11 The four fundamental subspaces|Session 1.11]]：从 rref 读四个基本子空间。
 

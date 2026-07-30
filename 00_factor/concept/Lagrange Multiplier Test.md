@@ -5,9 +5,9 @@ aliases:
 - LM检验
 - 拉格朗日乘数检验
 tags:
-- concept
-- econometrics
-- statistics
+  - concept
+  - econometrics
+  - statistics
 ---
 # Lagrange Multiplier Test
 

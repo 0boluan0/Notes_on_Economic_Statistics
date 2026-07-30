@@ -6,6 +6,7 @@ aliases:
 tags:
 - procedure
 - game-theory
+type: procedure
 ---
 # Checking Perfect Bayesian Equilibrium
 

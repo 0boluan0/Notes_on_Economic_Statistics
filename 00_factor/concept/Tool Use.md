@@ -2,9 +2,11 @@
 aliases:
   - "工具使用"
   - "Tool Calling"
+  - "Function Calling"
 tags:
   - llm
   - llm/concept
+  - concept
 ---
 
 # Tool Use
@@ -14,8 +16,19 @@ Tool Use 是让 LLM 调用搜索、代码、数据库、API 等外部工具来�
 ## 最小定义
 模型决定何时调用什么工具，并把工具结果纳入后续推理。
 
+## 核心组成
+
+- **工具描述**：名称、用途、参数 schema 与约束。
+- **调用决策**：模型生成结构化调用，而不是把参数混在自然语言中。
+- **执行与返回**：外部系统校验并执行，再把结果作为新的上下文交回模型。
+- **最终响应**：模型解释结果，必要时继续调用其他工具。
+
+工具负责执行动作，模型负责选择和组织调用；权限、输入校验、超时、幂等性与敏感信息处理不能依赖模型自觉。
+
 ## 最小例子
 模型调用计算器完成精确算术，再把结果写进回答。
 
 ## 相关卡片
-[[Agentic LLMs]]、[[RAG Pipeline]]
+- [[Agentic LLMs]]
+- [[RAG Pipeline]]
+- [[Retrieval-Augmented Generation]]

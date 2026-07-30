@@ -9,7 +9,12 @@ tags:
 - concept
 - 时间序列
 ---
+
 # Autocorrelation Function
+
+## 它是什么
+
+ACF 就是：序列和自己滞后多少期之后还剩多少相关性。
 
 ## 先记一句话
 
@@ -76,6 +81,12 @@ $$
 - [[Yule-Walker equations]]
 - [[White Noise Test]]
 - [[Ljung-Box Test]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[White Noise]]、[[Partial Autocorrelation Function]]、[[03_平稳时间序列模型]]、[[ARMA]]、[[Yule-Walker equations]]、[[White Noise Test]]、[[Ljung-Box Test]]。
 
 ## 课程笔记反链
 

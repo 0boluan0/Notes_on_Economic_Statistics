@@ -65,4 +65,3 @@ $$
 - [[Structural VAR]]
 - [[VMA]]
 - [[Impulse Response Function]]
-

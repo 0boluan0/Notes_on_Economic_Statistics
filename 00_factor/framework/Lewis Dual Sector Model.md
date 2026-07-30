@@ -7,6 +7,7 @@ aliases:
 tags:
 - framework
 - economics
+type: framework
 ---
 # Lewis Dual Sector Model
 

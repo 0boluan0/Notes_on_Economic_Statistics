@@ -8,6 +8,8 @@ tags:
 - 内生性
 - concept
 ---
+
+# Simultaneity Bias
 联立性偏误（Simultaneity Bias）是由于联立方程系统中解释变量是被解释变量的函数，导致解释变量与误差项相关而产生的偏误。
 
 ## 联立方程系统

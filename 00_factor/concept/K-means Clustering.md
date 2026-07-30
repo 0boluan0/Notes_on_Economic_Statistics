@@ -5,8 +5,8 @@ aliases:
 - K 均值聚类
 - K-means 聚类
 tags:
-- concept
-- multivariate statistics
+  - concept
+  - multivariate statistics
 ---
 # K-means Clustering
 

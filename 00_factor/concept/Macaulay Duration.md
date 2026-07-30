@@ -4,8 +4,8 @@ aliases:
 - 马考利久期
 - 麦考利久期
 tags:
-- concept
-- fixed-income
+  - concept
+  - fixed-income
 ---
 # Macaulay Duration
 

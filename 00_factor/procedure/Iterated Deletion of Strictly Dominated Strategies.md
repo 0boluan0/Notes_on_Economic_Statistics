@@ -7,6 +7,7 @@ aliases:
 tags:
 - procedure
 - game-theory
+type: procedure
 ---
 # Iterated Deletion of Strictly Dominated Strategies
 

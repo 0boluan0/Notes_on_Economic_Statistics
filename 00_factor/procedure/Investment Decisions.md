@@ -4,8 +4,14 @@ aliases:
 - 投资决策
 tags:
 - procedure
+type: procedure
 ---
 # Investment Decisions
+
+## 输入
+
+- 项目的增量现金流、初始投资、寿命、残值和折现率。
+- 资本约束、风险情景、税收/折旧口径及可接受的决策阈值。
 
 ## 适用场景
 

@@ -8,6 +8,7 @@ tags:
 - concept
 - finance
 ---
+
 # DuPont Analysis
 
 ## 一句话记忆
@@ -60,6 +61,12 @@ $$
 - [[Return on Assets]]
 - [[Equity Multiplier]]
 - [[Sustainable Growth Rate]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Return on Equity]]、[[02_财务报表分析和财务预测]]、[[Financial Ratio Analysis]]、[[Net Profit Margin]]、[[Return on Assets]]、[[Equity Multiplier]]、[[Sustainable Growth Rate]]。
 
 ## 课程笔记反链
 

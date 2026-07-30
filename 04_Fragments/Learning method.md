@@ -1,3 +1,24 @@
+---
+aliases:
+  - 六类学习内容
+  - 学习方法
+tags:
+  - fragment
+  - source/note
+  - learning/method
+  - knowledge-management
+date: "2026-07-09"
+source_type: "note"
+source_title: "六类学习内容"
+source_author: "自写整理"
+created_by: "manual"
+---
+
+# 六类学习内容
+
+## 一句话总结
+这篇笔记把学习拆成“能做、能长期记住、能迁移”三层目标，并用工作记忆、长期记忆、主动调用和知识卡类型来解释为什么学习会失败，以及如何把知识整理成可复用结构。
+
 ## 1) 学习的本质
 
 1. 能做出来的能力(最基本的,会)
@@ -73,7 +94,7 @@
 
 ---
 
-# 六类学习内容
+## 六类学习内容
 
 ## `concept`（概念卡 / 名词卡 / 原子知识）
 #concept

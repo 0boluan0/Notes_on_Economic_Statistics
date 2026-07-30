@@ -7,6 +7,7 @@ tags:
 - concept
 - multivariate statistics
 ---
+
 # Correlation Matrix
 
 >[!note] 一句话记忆
@@ -49,3 +50,9 @@ $$
 - [[Covariance Matrix]]
 - [[Choosing Covariance vs Correlation Matrix]]
 - [[Correlation Coefficient]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[02_矩阵代数和随机向量Matrix Algebra and Random Vectors]]、[[03_样本几何与随机抽样Sample Geometry and Random Sampling]]、[[Covariance Matrix]]、[[Choosing Covariance vs Correlation Matrix]]、[[Correlation Coefficient]]。

@@ -8,6 +8,7 @@ aliases:
 tags:
 - procedure
 - 时间序列
+type: procedure
 ---
 # Granger-Newbold Test
 

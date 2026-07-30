@@ -6,6 +6,7 @@ tags:
 - procedure
 - 时间序列
 - 计量经济学
+type: procedure
 ---
 # Johansen Cointegration Test Steps
 

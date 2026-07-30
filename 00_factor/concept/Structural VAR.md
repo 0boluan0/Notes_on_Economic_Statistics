@@ -51,4 +51,3 @@ $B$ 描述同期关系，$\varepsilon_t$ 是结构冲击。
 - [[Reduced Form VAR]]
 - [[VMA]]
 - [[Impulse Response Function]]
-

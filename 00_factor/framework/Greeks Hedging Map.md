@@ -7,6 +7,7 @@ tags:
 - framework
 - derivatives
 - risk-management
+type: framework
 ---
 # Greeks Hedging Map
 

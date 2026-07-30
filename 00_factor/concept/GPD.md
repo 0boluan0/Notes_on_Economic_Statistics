@@ -4,9 +4,9 @@ aliases:
 - Generalized Pareto Distribution
 - 广义帕累托分布
 tags:
-- concept
-- risk-management
-- statistics
+  - concept
+  - risk-management
+  - statistics
 ---
 # GPD
 

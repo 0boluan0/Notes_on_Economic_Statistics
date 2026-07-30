@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "13_时间序列分析/06_含趋势的模型.md",
+                "file": "01_Math/01_calculus/01_Differentiation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "06_含趋势的模型"
+              "title": "01_Differentiation"
             }
           }
         ]
@@ -50,7 +50,7 @@
             "autoReveal": false
           },
           "icon": "lucide-folder-closed",
-          "title": "Files"
+          "title": "文件列表"
         }
       },
       {
@@ -89,8 +89,8 @@
         "state": {
           "type": "bookmarks",
           "state": {},
-          "icon": "lucide-file",
-          "title": "Plugin no longer active"
+          "icon": "lucide-ghost",
+          "title": "bookmarks"
         }
       },
       {
@@ -99,8 +99,8 @@
         "state": {
           "type": "recent-files",
           "state": {},
-          "icon": "clock",
-          "title": "Recent Files"
+          "icon": "lucide-ghost",
+          "title": "recent-files"
         }
       },
       {
@@ -130,7 +130,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "13_时间序列分析/06_含趋势的模型.md",
+            "file": "01_Math/08_MathsCamp-EC400/01_Revision_Mathematics/Notes/Complete/Revision Maths Notes all.pdf",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "unlinkedCollapsed": true
           },
           "icon": "links-coming-in",
-          "title": "Backlinks"
+          "title": "反向链接"
         }
       },
       {
@@ -175,8 +175,8 @@
         "state": {
           "type": "calendar",
           "state": {},
-          "icon": "calendar-with-checkmark",
-          "title": "Calendar"
+          "icon": "lucide-ghost",
+          "title": "calendar"
         }
       }
     ],
@@ -184,22 +184,23 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
-      "graph:Open graph view": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "workspaces:Manage workspace layouts": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian-kanban:Create new board": false,
-      "templater-obsidian:Templater": false,
-      "obsidian-git:Open Git source control": false,
-      "omnisearch:Omnisearch": false
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "workspaces:管理工作区布局": false,
+      "bases:新建数据库": false
     }
   },
   "active": "c54aa921b2ccf57b",
   "lastOpenFiles": [
+    "01_Math/01_calculus/18.01_Lecture_notes/1-7.pdf",
+    "01_Math/08_MathsCamp-EC400/01_Revision_Mathematics/Notes/Complete/Revision Maths Notes all.pdf",
+    "01_Math/08_MathsCamp-EC400/01_Revision_Mathematics/Notes/By_Topic/Revision Maths Notes 1, Content and Introduction.pdf",
+    "01_Math/08_MathsCamp-EC400/00_General/EC400_Timetable_2026.pdf",
+    "01_Math/01_calculus/01_Differentiation.md",
+    "01_Math/01_calculus/02_Applications_of_Differentiation.md",
     "99_学习情况记录/2025-05-26——Mon.md",
     "13_时间序列分析/06_含趋势的模型.md",
     "99_学习情况记录/2025-05-24——Sat.md",
@@ -226,10 +227,7 @@
     "01_Econometrics/05_多元回归模型的矩阵表达.md",
     "01_Econometrics/04_模型设定.md",
     "01_Econometrics/10_虚拟变量.md",
-    "99_学习情况记录/2024-06-25——星期二.md",
-    "99_学习情况记录/2024-06-12——星期三.md",
     "01_Econometrics/太白金星v计量.pdf",
-    "01_Econometrics/零散知识点.md",
     "02_game theory/第1次作业补充.pdf",
     "02_game theory/第三次作业.pdf",
     "03_public finance",

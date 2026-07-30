@@ -5,8 +5,8 @@ aliases:
 - Jackknife 分类
 - 留一法分类
 tags:
-- concept
-- multivariate statistics
+  - concept
+  - multivariate statistics
 ---
 # Jackknife Classification
 

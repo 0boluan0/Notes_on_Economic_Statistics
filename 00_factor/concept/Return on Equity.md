@@ -9,6 +9,8 @@ tags:
 - 财务比率
 - concept
 ---
+
+# Return on Equity
 权益净利率是指净利润与股东权益的比值，反映每一元股东权益赚取的净利润。
 
 >[!note] 定义

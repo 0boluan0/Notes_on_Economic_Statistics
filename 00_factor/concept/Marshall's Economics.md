@@ -5,11 +5,13 @@ aliases:
 - Marshall's Economics
 - Marshall
 tags:
-- 经济思想史
-- 经济学派
-- 经济
-- concept
+  - 经济思想史
+  - 经济学派
+  - 经济
+  - concept
 ---
+# Marshall's Economics
+
 马歇尔经济学是19世纪末20世纪初英国主流经济学理论，以阿尔弗雷德·马歇尔为代表，是新古典经济学的集大成者。
 
 ## 主要代表
@@ -170,6 +172,16 @@ tags:
 ## 相关链接
 [[Marginal Revolution|边际革命]]
 
+
+## 最小例子
+
+把 **Marshall's Economics** 放在最简单的可计算情形中：先给定定义所需的最小输入，再按定义计算输出；若关键关系不成立，就不能把该对象归入本概念。这个检查也能帮助区分相近概念。
+## 符号表达
+
+将本概念记为 $C_{MarshallsEco}$；使用时先明确对象、条件与输出，再判断 $C$ 是否满足定义。
+## 概念边界
+
+本卡片只回答“它是什么”，集中在定义、核心关系与最小例子；具体估计步骤、证明和诊断流程应分别放在 procedure、proof 或 system 卡片中。
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

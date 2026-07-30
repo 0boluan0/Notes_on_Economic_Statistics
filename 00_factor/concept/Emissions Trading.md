@@ -6,7 +6,12 @@ aliases:
 tags:
 - concept
 ---
+
 # Emissions Trading
+
+## 它是什么
+
+「Emissions Trading」是指在总量控制下允许排放配额交易的制度（碳交易）。
 
 >[!note] 它是什么
 > - 「Emissions Trading」是指在总量控制下允许排放配额交易的制度（碳交易）。
@@ -16,8 +21,18 @@ tags:
 > - 符号/公式：无固定符号。
 > - 最小例子：EU ETS 允许企业买卖排放配额。
 >
+## 最小例子
+
+EU ETS 允许企业买卖排放配额。
+
 ## 关联卡片
 - [[Pigouvian Tax]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Pigouvian Tax]]。
 
 ## 课程笔记反链
 

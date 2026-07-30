@@ -4,9 +4,9 @@ aliases:
 - 局部久期
 - 关键期限久期
 tags:
-- concept
-- fixed-income
-- risk-management
+  - concept
+  - fixed-income
+  - risk-management
 ---
 # Key Rate Duration
 

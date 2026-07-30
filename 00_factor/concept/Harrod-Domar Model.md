@@ -6,8 +6,8 @@ aliases:
 - 哈罗德-多玛模型
 - 哈罗德多玛模型
 tags:
-- concept
-- economics
+  - concept
+  - economics
 ---
 # Harrod-Domar Model
 

@@ -10,6 +10,7 @@ tags:
 - concept
 - finance
 ---
+
 # Annuity
 
 ## 一句话记忆
@@ -59,6 +60,12 @@ $$
 - [[Future Value]]
 - [[Net Present Value]]
 - [[Bond Valuation Model]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[03_价值评估基准]]、[[06_债券和股票估价]]、[[Time Value of Money]]、[[Present Value]]、[[Future Value]]、[[Net Present Value]]、[[Bond Valuation Model]]。
 
 ## 课程笔记反链
 

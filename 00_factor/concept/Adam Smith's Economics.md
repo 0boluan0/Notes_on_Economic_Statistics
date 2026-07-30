@@ -9,6 +9,9 @@ tags:
 - 经济
 - concept
 ---
+
+# Adam Smith's Economics
+
 亚当·斯密经济学是古典经济学的奠基理论，以《国富论》为核心，标志着现代经济学的诞生。
 
 ## 核心理论
@@ -110,6 +113,12 @@ tags:
 ## 相关链接
 [[Mercantilism|重商主义]]
 [[Physiocrats|重农学派]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Mercantilism]]、[[Physiocrats]]。
 
 ## 课程笔记反链
 

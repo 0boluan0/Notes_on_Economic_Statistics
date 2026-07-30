@@ -4,8 +4,8 @@ aliases:
 - Multivariate Analysis of Variance
 - 多元方差分析
 tags:
-- concept
-- multivariate statistics
+  - concept
+  - multivariate statistics
 ---
 # MANOVA
 

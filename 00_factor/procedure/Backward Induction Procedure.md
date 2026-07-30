@@ -6,6 +6,7 @@ aliases:
 tags:
 - procedure
 - game-theory
+type: procedure
 ---
 # Backward Induction Procedure
 

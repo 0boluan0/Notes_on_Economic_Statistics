@@ -7,6 +7,7 @@ aliases:
 tags:
 - framework
 - game-theory
+type: framework
 ---
 # Game Theory
 

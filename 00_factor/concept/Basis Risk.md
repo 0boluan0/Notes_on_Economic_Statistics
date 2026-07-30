@@ -8,6 +8,7 @@ tags:
 - risk-management
 - banking
 ---
+
 # Basis Risk
 
 ## 先记一句话
@@ -40,3 +41,9 @@ Basis Risk 是资产和负债虽然同时重新定价，但参考利率或调整
 - [[Repricing Risk]]
 - [[Interest Rate Sensitivity Gap]]
 - [[Yield Curve Risk]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Repricing Risk]]、[[09_利率风险]]、[[Interest Rate Sensitivity Gap]]、[[Yield Curve Risk]]。

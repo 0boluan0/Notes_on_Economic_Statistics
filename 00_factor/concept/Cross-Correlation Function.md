@@ -9,6 +9,7 @@ tags:
 - concept
 - 时间序列
 ---
+
 # Cross-Correlation Function
 
 ## 先记一句话
@@ -51,3 +52,8 @@ $i>0$ 时，比较的是 $y_t$ 和过去的 $z_{t-i}$。
 - [[Leading Indicator]]
 - [[Autocorrelation Function]]
 
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Transfer Function Model]]、[[05_多方程模型Multi-equation Time Series Models]]、[[ADL]]、[[Leading Indicator]]、[[Autocorrelation Function]]。

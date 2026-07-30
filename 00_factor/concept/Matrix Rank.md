@@ -5,8 +5,8 @@ aliases:
 - 秩
 - 矩阵的秩
 tags:
-- 线性代数
-- concept
+  - 线性代数
+  - concept
 ---
 # Matrix Rank
 
@@ -108,7 +108,7 @@ $$
 
 - [[01_Ax = b and the Four Subspaces#Session 1.3 Elimination with matrices|Session 1.3]]：pivot 个数就是 rank。
 - [[01_Ax = b and the Four Subspaces#Session 1.7 Column space and nullspace|Session 1.7]]：rank 是列空间维数。
-- [[01_Ax = b and the Four Subspaces#Session 1.8 Solving Ax = 0: pivot variables, special solutions|Session 1.8]]：自由变量个数是 $n-r$。
+- [[01_Ax = b and the Four Subspaces#Session 1.8 Solving Ax = 0: pivot variables and special solutions|Session 1.8]]：自由变量个数是 $n-r$。
 - [[01_Ax = b and the Four Subspaces#Session 1.11 The four fundamental subspaces|Session 1.11]]：rank 决定四个基本子空间的维数。
 
 ## 关联卡片
@@ -120,6 +120,10 @@ $$
 - [[Reduced Row Echelon Form]]
 - [[Invertible Matrix Equivalence Chain]]
 
+
+## 最小例子
+
+把 **Matrix Rank** 放在最简单的可计算情形中：先给定定义所需的最小输入，再按定义计算输出；若关键关系不成立，就不能把该对象归入本概念。这个检查也能帮助区分相近概念。
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

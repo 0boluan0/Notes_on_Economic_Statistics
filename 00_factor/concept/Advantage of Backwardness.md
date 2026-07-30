@@ -9,6 +9,13 @@ tags:
 - 经济
 - concept
 ---
+
+# Advantage of Backwardness
+
+## 它是什么
+
+落后本身就是一种优势：相对后发的国家或地区能够直接利用先发国家的经验、技术和制度，实现跨越式发展。
+
 格申克（Gerschenkron）的后发优势理论认为：经济上的相对落后有助于一个国家或地区实现爆发性的经济增长。
 
 ## 核心观点
@@ -54,6 +61,12 @@ tags:
 ## 相关链接
 [[Rostow's Stages of Growth|罗斯托经济增长阶段论]]
 [[Middle-Income Trap|中等收入陷阱]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Rostow's Stages of Growth]]、[[Middle-Income Trap]]。
 
 ## 课程笔记反链
 

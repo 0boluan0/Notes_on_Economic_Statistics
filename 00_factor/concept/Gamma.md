@@ -4,9 +4,9 @@ aliases:
 - 期权Gamma
 - Γ
 tags:
-- concept
-- derivatives
-- risk-management
+  - concept
+  - derivatives
+  - risk-management
 ---
 # Gamma
 

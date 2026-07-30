@@ -4,8 +4,8 @@ aliases:
 - IV
 - 工具变量
 tags:
-- concept
-- econometrics
+  - concept
+  - econometrics
 ---
 # Instrumental Variable
 

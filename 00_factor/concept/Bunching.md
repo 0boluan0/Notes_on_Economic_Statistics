@@ -8,6 +8,9 @@ tags:
 - VaR模型
 - concept
 ---
+
+# Bunching
+
 聚束效应（Bunching）指VaR例外事件在时间上成堆出现的现象，即超VaR损失事件并非随机分布，而是在某些时期集中发生。
 
 >[!note] 定义
@@ -47,6 +50,12 @@ tags:
 4. **提高置信水平**：在模型表现不佳时使用更保守的设置
 
 相关链接: [[VaR]], [[00_factor/concept/Backtesting|回溯检验]], [[Christoffersen Test|Christoffersen检验]], [[GARCH]], [[Volatility Clustering|波动聚集]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[VaR]]、[[Christoffersen Test]]、[[GARCH]]、[[Volatility Clustering]]。
 
 ## 课程笔记反链
 

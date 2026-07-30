@@ -7,6 +7,7 @@ aliases:
 tags:
 - procedure
 - risk-management
+type: procedure
 ---
 # EVT VaR Calculation
 

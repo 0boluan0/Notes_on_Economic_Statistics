@@ -5,11 +5,13 @@ aliases:
 - Long
 - Long-term Debt Ratio
 tags:
-- 财务管理
-- 财务比率
-- 金融
-- concept
+  - 财务管理
+  - 财务比率
+  - 金融
+  - concept
 ---
+# Long-term Debt Ratio
+
 长期资本负债率是指非流动负债占长期资本的比率，用于衡量企业长期资本结构。
 
 >[!note] 定义
@@ -50,6 +52,13 @@ tags:
 [[Debt-to-Asset Ratio|资产负债率]]
 [[Debt-to-Equity Ratio|产权比率]]
 
+
+## 最小例子
+
+把 **Long-term Debt Ratio** 放在最简单的可计算情形中：先给定定义所需的最小输入，再按定义计算输出；若关键关系不成立，就不能把该对象归入本概念。这个检查也能帮助区分相近概念。
+## 概念边界
+
+本卡片只回答“它是什么”，集中在定义、核心关系与最小例子；具体估计步骤、证明和诊断流程应分别放在 procedure、proof 或 system 卡片中。
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

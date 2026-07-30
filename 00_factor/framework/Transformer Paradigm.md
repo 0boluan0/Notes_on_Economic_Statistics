@@ -5,6 +5,7 @@ aliases:
 tags:
   - llm
   - llm/route
+type: framework
 ---
 
 # Transformer Paradigm

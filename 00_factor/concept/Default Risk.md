@@ -7,6 +7,7 @@ tags:
 - credit-risk
 - risk-management
 ---
+
 # Default Risk
 
 ## 先记一句话
@@ -43,3 +44,9 @@ Default Risk 是债务人不能按约偿还本金、利息或履行合约义务�
 - [[LGD]]
 - [[EAD]]
 - [[Credit VaR]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Credit Risk]]、[[PD]]、[[LGD]]、[[EAD]]、[[Merton Model]]、[[19_违约风险]]、[[21_信用在险价值]]、[[Credit VaR]]。

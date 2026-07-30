@@ -5,8 +5,8 @@ aliases:
 - 内部收益率
 - 内含报酬率
 tags:
-- concept
-- finance
+  - concept
+  - finance
 ---
 # Internal Rate of Return
 

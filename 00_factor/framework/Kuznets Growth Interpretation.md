@@ -6,6 +6,7 @@ aliases:
 tags:
 - framework
 - economics
+type: framework
 ---
 # Kuznets Growth Interpretation
 

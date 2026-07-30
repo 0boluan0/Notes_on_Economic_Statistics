@@ -5,8 +5,8 @@ aliases:
 - 均值向量
 - 总体均值向量
 tags:
-- concept
-- multivariate statistics
+  - concept
+  - multivariate statistics
 ---
 # Mean Vector
 

@@ -6,6 +6,7 @@ aliases:
 tags:
 - procedure
 - 线性代数
+type: procedure
 ---
 # Reading the Four Fundamental Subspaces from RREF
 
@@ -156,7 +157,7 @@ $$
 
 ## 来自课程位置
 
-- [[01_Ax = b and the Four Subspaces#Session 1.8 Solving Ax = 0: pivot variables, special solutions|Session 1.8]]：special solutions 生成 nullspace。
+- [[01_Ax = b and the Four Subspaces#Session 1.8 Solving Ax = 0: pivot variables and special solutions|Session 1.8]]：special solutions 生成 nullspace。
 - [[01_Ax = b and the Four Subspaces#Session 1.10 Independence, basis, and dimension|Session 1.10]]：basis 和 dimension 的语言。
 - [[01_Ax = b and the Four Subspaces#Session 1.11 The four fundamental subspaces|Session 1.11]]：四个基本子空间的总收束。
 

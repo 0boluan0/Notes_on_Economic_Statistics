@@ -4,8 +4,8 @@ aliases:
 - Chicken Game
 - 鹰鸽博弈
 tags:
-- concept
-- game-theory
+  - concept
+  - game-theory
 ---
 # Hawk-Dove Game
 

@@ -8,6 +8,7 @@ tags:
 - econometrics
 - time-series
 ---
+
 # Adaptive Expectations Model
 
 ## 先记一句话
@@ -45,3 +46,9 @@ $\lambda$ 是调整速度。
 - [[ADL]]
 - [[Distributed Lag Model]]
 - [[Partial Adjustment Model]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[ADL]]、[[11_平稳时间序列模型]]、[[Distributed Lag Model]]、[[Partial Adjustment Model]]。

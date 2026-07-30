@@ -5,8 +5,8 @@ aliases:
 - 异方差
 - 异方差性
 tags:
-- concept
-- econometrics
+  - concept
+  - econometrics
 ---
 # Heteroskedasticity
 

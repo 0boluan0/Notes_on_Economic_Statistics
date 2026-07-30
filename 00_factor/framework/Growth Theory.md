@@ -7,6 +7,7 @@ aliases:
 tags:
 - framework
 - economics
+type: framework
 ---
 # Growth Theory
 

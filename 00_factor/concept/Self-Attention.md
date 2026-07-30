@@ -1,9 +1,11 @@
 ---
 aliases:
+  - Self-Attention
   - "自注意力"
   - "Self Attention"
   - "Self-attention"
 tags:
+  - concept
   - llm
   - llm/concept
 ---

@@ -7,7 +7,12 @@ tags:
 - 线性代数
 - concept
 ---
+
 # Dimension
+
+## 它是什么
+
+维数就是：描述一个空间最少需要几个独立方向。
 
 ## 先记一句话
 
@@ -93,6 +98,12 @@ $$
 - [[Null Space]]
 - [[Row Space]]
 - [[Left Nullspace]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Basis]]、[[01_Ax = b and the Four Subspaces]]、[[Linear Independence]]、[[Matrix Rank]]、[[Column Space]]、[[Null Space]]、[[Row Space]]、[[Left Nullspace]]。
 
 ## 课程笔记反链
 

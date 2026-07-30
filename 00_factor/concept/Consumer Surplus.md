@@ -6,6 +6,7 @@ tags:
 - concept
 - economics
 ---
+
 # Consumer Surplus
 
 ## 一句话记忆
@@ -48,6 +49,12 @@ $$
 - [[Deadweight Loss]]
 - [[Externality]]
 - [[Public Goods]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[03_税收与经济效率]]、[[Producer Surplus]]、[[Deadweight Loss]]、[[Externality]]、[[Public Goods]]。
 
 ## 课程笔记反链
 

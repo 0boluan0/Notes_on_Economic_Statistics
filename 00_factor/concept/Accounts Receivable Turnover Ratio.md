@@ -8,6 +8,13 @@ tags:
 - 财务比率
 - concept
 ---
+
+# Accounts Receivable Turnover Ratio
+
+## 它是什么
+
+应收账款周转率是指营业收入与应收账款的比值，用于衡量企业应收账款回收速度。
+
 应收账款周转率是指营业收入与应收账款的比值，用于衡量企业应收账款回收速度。
 
 ## 计算方式
@@ -57,6 +64,12 @@ $应收账款与收入比 = \frac{应收账款}{营业收入}$
 
 ## 相关链接
 [[Inventory Turnover Ratio|存货周转率]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Inventory Turnover Ratio]]。
 
 ## 课程笔记反链
 

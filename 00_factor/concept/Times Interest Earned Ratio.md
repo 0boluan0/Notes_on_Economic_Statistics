@@ -8,6 +8,8 @@ tags:
 - 财务比率
 - concept
 ---
+# Times Interest Earned Ratio
+
 利息保障倍数是指息税前利润与利息支出的比值，用于衡量企业支付利息的能力。
 
 >[!note] 定义

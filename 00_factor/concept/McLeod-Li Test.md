@@ -4,9 +4,9 @@ aliases:
 - McLeod-Li Portmanteau Test
 - McLeod-Li检验
 tags:
-- concept
-- 时间序列
-- 波动建模
+  - concept
+  - 时间序列
+  - 波动建模
 ---
 # McLeod-Li Test
 
@@ -59,6 +59,10 @@ McLeod-Li 回答：
 - [[Conditional Heteroskedasticity]]
 - [[GARCH]]
 
+
+## 最小例子
+
+把 **McLeod-Li Test** 放在最简单的可计算情形中：先给定定义所需的最小输入，再按定义计算输出；若关键关系不成立，就不能把该对象归入本概念。这个检查也能帮助区分相近概念。
 ## 课程笔记反链
 
 <!-- course-backlinks-panel -->

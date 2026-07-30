@@ -71,7 +71,7 @@ $$
 
 ## 来自课程位置
 
-- [[02_Least Squares, Determinants and Eigenvalues#Session 2.4 Orthogonal matrices and Gram-Schmidt|Session 2.4]]：正交矩阵、Gram-Schmidt 与 QR。
+- [[02_Least Squares, Determinants and Eigenvalues#Session 2.4 Orthogonal matrices and Gram–Schmidt|Session 2.4]]：正交矩阵、Gram-Schmidt 与 QR。
 - [[03_Positive Definite Matrices and Applications#Session 3.1 Symmetric matrices and positive definiteness|Session 3.1]]：对称矩阵的正交对角化。
 
 ## 关联卡片

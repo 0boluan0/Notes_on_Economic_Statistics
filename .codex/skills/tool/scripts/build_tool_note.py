@@ -296,8 +296,35 @@ def table_cell(value: str) -> str:
     return value.replace("|", "\\|").replace("\n", " ").strip()
 
 
+def extract_section(markdown: str, heading: str) -> str:
+    pattern = re.compile(rf"^##\s+{re.escape(heading)}\s*$", re.MULTILINE)
+    match = pattern.search(markdown)
+    if not match:
+        return ""
+    section = markdown[match.end() :]
+    next_heading = re.search(r"^##\s+", section, re.MULTILINE)
+    return section[: next_heading.start()] if next_heading else section
+
+
+def extract_bullet_value(markdown: str, label: str) -> str:
+    pattern = re.compile(rf"^-\s+{re.escape(label)}：(.+)$", re.MULTILINE)
+    match = pattern.search(markdown)
+    if not match:
+        return ""
+    return normalize_line(match.group(1))
+
+
+def section_state(markdown: str, heading: str) -> str:
+    section = extract_section(markdown, heading)
+    if not section:
+        return "缺章节"
+    if "信息不足" in section or "TODO" in section:
+        return "待补"
+    return "已记录"
+
+
 def rebuild_directory_page(folder: Path) -> None:
-    rows: List[Tuple[str, str, str]] = []
+    rows: List[Tuple[str, str, str, str, str, str, str, str]] = []
     for candidate in sorted(folder.glob("*.md")):
         if candidate.name in {INDEX_FILENAME, "目录.md"}:
             continue
@@ -305,8 +332,20 @@ def rebuild_directory_page(folder: Path) -> None:
         body = strip_frontmatter(text)
         title = extract_first_h1(body) or candidate.stem
         summary = extract_intro_paragraph(text)
+        language = extract_bullet_value(body, "主要语言") or extract_bullet_value(body, "技术栈") or "未标注"
+        source = extract_bullet_value(body, "GitHub 仓库") or extract_bullet_value(body, "项目地址") or extract_bullet_value(body, "输入链接") or "未标注"
+        install = section_state(body, "安装方法（Installation）")
+        first_run = section_state(body, "首次使用（First run）")
+        daily = section_state(body, "后续使用（Daily usage）")
+        missing = ", ".join(name for name, state in [
+            ("安装", install),
+            ("首次使用", first_run),
+            ("后续使用", daily),
+        ] if state != "已记录") or "完整"
         link = f"[[{candidate.stem}|{title}]]" if candidate.stem != title else f"[[{title}]]"
-        rows.append((title.casefold(), link, summary))
+        rows.append((title.casefold(), link, language, source, install, first_run, missing, summary))
+
+    needs_cleanup = [row for row in rows if row[6] != "完整"]
 
     lines = [
         "---",
@@ -321,12 +360,23 @@ def rebuild_directory_page(folder: Path) -> None:
         "> [!summary] 导航",
         f"> 共 {len(rows)} 个工具。摘要取自每篇工具笔记标题后的首段。",
         "",
-        "| 工具 | 一句话总结 |",
-        "|---|---|",
+        "> [!info] 字段说明",
+        "> `待补` 表示对应章节仍含 `信息不足` 或 `TODO`。",
+        "",
     ]
+    if needs_cleanup:
+        lines.append("> [!warning] 待补信息")
+        for _, link, _, _, _, _, missing, _ in sorted(needs_cleanup):
+            lines.append(f"> - {link}：{missing}")
+        lines.append("")
+
+    lines.extend([
+        "| 工具 | 语言/平台 | 来源 | 安装 | 首次使用 | 待补 | 一句话总结 |",
+        "|---|---|---|---|---|---|---|",
+    ])
     if rows:
-        for _, link, summary in sorted(rows):
-            lines.append(f"| {table_cell(link)} | {table_cell(summary)} |")
+        for _, link, language, source, install, first_run, missing, summary in sorted(rows):
+            lines.append(f"| {table_cell(link)} | {table_cell(language)} | {table_cell(source)} | {table_cell(install)} | {table_cell(first_run)} | {table_cell(missing)} | {table_cell(summary)} |")
     else:
         lines.append("- 暂无 tool 笔记。")
     lines.append("")

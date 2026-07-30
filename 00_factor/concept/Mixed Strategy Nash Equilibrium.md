@@ -4,8 +4,8 @@ aliases:
 - Mixed Strategy NE
 - 混合策略纳什均衡
 tags:
-- concept
-- game-theory
+  - concept
+  - game-theory
 ---
 # Mixed Strategy Nash Equilibrium
 

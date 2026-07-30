@@ -5,6 +5,8 @@ aliases:
 tags:
 - concept
 ---
+
+# Production Possibility Frontier (PPF)
 生产可能性曲线（Production Possibility Frontier，简称PPF）是经济学中的一个概念，用于描述在给定资源和技术条件下，经济体所能生产的不同商品或服务的最大可能组合。PPF曲线展示了在资源有限的情况下，经济体在生产两种产品时面临的权衡（trade-off）。
 
 PPF曲线的特点包括：
@@ -20,6 +22,12 @@ PPF曲线的特点包括：
 5. **替代率**：PPF曲线的斜率代表了两种商品之间的替代率，即为了生产更多的一种商品而必须放弃的另一种商品的数量。‘
 
 ![[Pasted image 20240311232621.png]]
+
+## 关联卡片
+
+- [[Opportunity Cost]]：PPF 斜率刻画边际机会成本。
+- [[Producer Surplus]]：生产者剩余与有效率配置相关。
+- [[Economic Growth]]：资源或技术进步会使生产可能性边界外移。
 
 ## 课程笔记反链
 

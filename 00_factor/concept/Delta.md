@@ -8,6 +8,7 @@ tags:
 - derivatives
 - risk-management
 ---
+
 # Delta
 
 ## 先记一句话
@@ -48,3 +49,9 @@ $$
 - [[Delta Approximation]]
 - [[Delta Hedging]]
 - [[Greeks Hedging Map]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Gamma]]、[[Linear Products]]、[[Nonlinear Products]]、[[08_操作员如何管理风险暴露]]、[[Delta Approximation]]、[[Delta Hedging]]、[[Greeks Hedging Map]]。

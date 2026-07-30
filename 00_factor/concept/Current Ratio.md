@@ -8,6 +8,13 @@ tags:
 - 财务比率
 - concept
 ---
+
+# Current Ratio
+
+## 它是什么
+
+流动比率是指流动资产与流动负债的比值，用于衡量企业短期偿债能力。
+
 流动比率是指流动资产与流动负债的比值，用于衡量企业短期偿债能力。
 
 >[!note] 定义
@@ -41,6 +48,12 @@ tags:
 ## 相关链接
 [[Quick Ratio|速动比率]]
 [[Cash Ratio|现金比率]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Quick Ratio]]、[[Cash Ratio]]、[[Working Capital]]。
 
 ## 课程笔记反链
 

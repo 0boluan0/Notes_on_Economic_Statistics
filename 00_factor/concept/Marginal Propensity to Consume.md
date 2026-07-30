@@ -4,9 +4,9 @@ aliases:
 - MPC
 - 边际消费倾向
 tags:
-- concept
-- econometrics
-- macroeconomics
+  - concept
+  - econometrics
+  - macroeconomics
 ---
 # Marginal Propensity to Consume
 

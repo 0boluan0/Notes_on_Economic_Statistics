@@ -8,7 +8,12 @@ tags:
 - 线性代数
 - concept
 ---
+
 # Basis
+
+## 它是什么
+
+基就是：刚好够用、没有冗余的一组向量。
 
 ## 先记一句话
 
@@ -86,6 +91,12 @@ $$
 - [[Null Space]]
 - [[Row Space]]
 - [[Reading the Four Fundamental Subspaces from RREF]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[Column Space]]、[[Row Space]]、[[Null Space]]、[[Left Nullspace]]、[[Dimension]]、[[01_Ax = b and the Four Subspaces]]、[[Linear Independence]]、[[Matrix Rank]]。
 
 ## 课程笔记反链
 

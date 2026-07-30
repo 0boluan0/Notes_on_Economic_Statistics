@@ -4,8 +4,8 @@ aliases:
 - GLS
 - 广义最小二乘
 tags:
-- concept
-- econometrics
+  - concept
+  - econometrics
 ---
 # Generalized Least Squares
 

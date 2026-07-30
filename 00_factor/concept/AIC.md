@@ -8,6 +8,9 @@ tags:
 - 模型选择
 - concept
 ---
+
+# AIC
+
 AIC（Akaike Information Criterion，赤池信息准则）是衡量统计模型拟合优度与模型复杂度之间权衡的信息准则。
 
 >[!note] 定义
@@ -55,6 +58,12 @@ AIC（Akaike Information Criterion，赤池信息准则）是衡量统计模型�
 - 应用：[[ARMA]]模型选择
 
 相关链接: [[BIC]], [[ARMA]], [[VAR Model|VAR]]
+
+## 边界与相关概念
+
+本卡片只保留该概念的定义、记号与最小直觉；具体估计步骤、证明或完整应用应放在对应的 `procedure`、`proof` 或 `framework` 卡片中。
+
+相关卡片：[[BIC]]、[[ARMA]]、[[VAR Model]]。
 
 ## 课程笔记反链
 

@@ -4,8 +4,8 @@ aliases:
 - All-pay Investment Game
 - 投资竞争博弈
 tags:
-- concept
-- game-theory
+  - concept
+  - game-theory
 ---
 # Investment Competition Game
 
