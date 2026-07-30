@@ -88,6 +88,9 @@ DDD or staggered-adoption DID may eventually become separate files because their
 - Continuation links point to a relevant heading, related knowledge file, or Course Atlas. Do not fill the callout with a generic list of “related notes.”
 - Standardize only this recovery entry. The detailed body follows the topic's own knowledge logic rather than a universal template.
 - Write the callout for a reader who has mostly forgotten the subject; formal definitions and derivations come after the basic mental model.
+- Before `## 来源与核验`, add `## 最小自检` with 3–5 substantive questions and collapsed `> [!answer]-` answers.
+- Include at least one explain-in-your-own-words question and one application, diagnosis, or distinction question. Avoid trivia and prompts answerable by merely copying the preceding sentence.
+- The self-check is a two-minute recovery check, not a mandatory spaced-repetition system. Do not create review schedules or recurring tasks from it unless the user later requests them.
 
 ### Course notes versus knowledge files
 

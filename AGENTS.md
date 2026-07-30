@@ -48,6 +48,9 @@
 - Make the continuation links specific: link to a relevant heading, related knowledge file, or Course Atlas rather than listing generic related notes.
 - Only the quick-recovery entry is standardized. Organize the detailed body according to the topic's actual knowledge logic; do not force every file into one universal section template.
 - A reader who has mostly forgotten the topic should gain a basic mental model from the callout before encountering formal definitions or derivations.
+- Before `## 来源与核验`, add `## 最小自检` with 3–5 substantive questions and collapsed `> [!answer]-` answers.
+- Include at least one explain-in-your-own-words question and one application, diagnosis, or distinction question. Avoid trivia and prompts answerable by merely copying the preceding sentence.
+- The self-check is a two-minute recovery check, not a mandatory spaced-repetition system. Do not create review schedules or recurring tasks from it unless the user later requests them.
 
 ### Course notes and knowledge files
 
