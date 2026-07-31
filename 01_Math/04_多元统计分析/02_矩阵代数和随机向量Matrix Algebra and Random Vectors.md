@@ -6,7 +6,6 @@
 >[!note] 本章主线
 > 多元统计把“多个变量一起变化”写成向量和矩阵。本章是后续多元正态、Hotelling $T^2$、PCA 和因子分析的线性代数入口。
 > <!-- bilingual-en:start -->
-> [!note] Chapter roadmap
 > Multivariate statistics represents the joint variation of several variables with vectors and matrices. This chapter provides the linear-algebra foundation for the multivariate normal distribution, Hotelling's $T^2$, PCA, and factor analysis.
 > <!-- bilingual-en:end -->
 
@@ -70,7 +69,6 @@ When $x'y=0$, the two vectors are orthogonal.
 >[!note] 几何直觉
 > 相关系数可以看成两个中心化变量向量夹角的余弦。第 3 章会把这个直觉用于样本几何。
 > <!-- bilingual-en:start -->
-> [!note] Geometric intuition
 > A correlation coefficient can be viewed as the cosine of the angle between two centered variable vectors. Chapter 3 applies this intuition to sample geometry.
 > <!-- bilingual-en:end -->
 
@@ -215,7 +213,6 @@ then $A$ is invertible.
 >[!attention] 多元统计里的关键边界
 > 总体协方差矩阵常假设为正定，因此可逆；样本协方差矩阵不一定可逆，尤其当 $n\leq p$ 或变量完全线性相关时。
 > <!-- bilingual-en:start -->
-> [!attention] A crucial boundary in multivariate statistics
 > A population covariance matrix is often assumed to be positive definite and is therefore invertible. A sample covariance matrix need not be invertible, especially when $n\leq p$ or some variables are perfectly linearly dependent.
 > <!-- bilingual-en:end -->
 
@@ -364,10 +361,9 @@ $$
 $$
 
 >[!note] 后续用途
-> 协方差矩阵的行列式就是 [[Generalized Variance]]；它衡量多维数据联合变异的体积。
+> 协方差矩阵的行列式就是 [[多元数据、随机向量与样本协方差#广义方差与可视化|Generalized Variance]]；它衡量多维数据联合变异的体积。
 > <!-- bilingual-en:start -->
-> [!note] Later use
-> The determinant of a covariance matrix is the [[Generalized Variance]]. It measures the volume of joint variation in multivariate data.
+> The determinant of a covariance matrix is the [[多元数据、随机向量与样本协方差#广义方差与可视化|Generalized Variance]]. It measures the volume of joint variation in multivariate data.
 > <!-- bilingual-en:end -->
 
 ## 1.4. 特征值与特征向量
@@ -447,7 +443,6 @@ $$
 >[!item] 复习连接
 > PCA 正是对协方差矩阵做谱分解：特征向量给方向，特征值给该方向的方差。
 > <!-- bilingual-en:start -->
-> [!item] Review connection
 > PCA performs a spectral decomposition of the covariance matrix: eigenvectors determine the directions, and eigenvalues give the variance along those directions.
 > <!-- bilingual-en:end -->
 
@@ -762,7 +757,6 @@ In general, however, zero covariance does not imply independence.
 >[!note] 特例
 > 在多元正态分布中，零协方差可以推出独立。
 > <!-- bilingual-en:start -->
-> [!note] Special case
 > In a multivariate normal distribution, zero covariance does imply independence.
 > <!-- bilingual-en:end -->
 
@@ -809,7 +803,6 @@ $$
 >[!item] 选择矩阵
 > 变量量纲差异大时，用相关矩阵更稳；量纲相同且方差大小本身有意义时，用协方差矩阵更自然。
 > <!-- bilingual-en:start -->
-> [!item] Choosing a matrix
 > Use the correlation matrix when variables have very different measurement scales. Use the covariance matrix when the variables share a scale and the magnitudes of their variances are substantively meaningful.
 > <!-- bilingual-en:end -->
 
@@ -818,19 +811,19 @@ $$
 *Related Cards*
 <!-- bilingual-en:end -->
 
-- [[Matrix Operations]]
-- [[Matrix Inverse]]
-- [[Matrix Rank]]
-- [[Determinant]]
-- [[Eigenvalues]]
-- [[Eigenvectors]]
-- [[Spectral Decomposition]]
-- [[Singular Value Decomposition]]
-- [[Positive Definite Matrix]]
-- [[Matrix Square Root]]
-- [[Quadratic Form]]
-- [[Rayleigh Quotient]]
-- [[Random Vector]]
-- [[Mean Vector]]
-- [[Covariance Matrix]]
-- [[Correlation Matrix]]
+- [[多元数据、随机向量与样本协方差#数据矩阵与随机向量|Matrix Operations]]
+- [[广义逆与最小范数解#左逆、右逆与可逆|Matrix Inverse]]
+- [[线性方程组与四个基本子空间#基、维数与秩|Matrix Rank]]
+- [[行列式#行列式的结构含义|Determinant]]
+- [[对称矩阵与正定二次型#对称矩阵与谱定理|Eigenvalues]]
+- [[对称矩阵与正定二次型#对称矩阵与谱定理|Eigenvectors]]
+- [[对称矩阵与正定二次型#对称矩阵与谱定理|Spectral Decomposition]]
+- [[奇异值分解与低秩近似#SVD 的三层结构|Singular Value Decomposition]]
+- [[对称矩阵与正定二次型#二次型与正定性|Positive Definite Matrix]]
+- [[对称矩阵与正定二次型#二次型与正定性|Matrix Square Root]]
+- [[对称矩阵与正定二次型#二次型与正定性|Quadratic Form]]
+- [[主成分分析 PCA#PCA 的方差最大化|Rayleigh Quotient]]
+- [[多元数据、随机向量与样本协方差#数据矩阵与随机向量|Random Vector]]
+- [[多元数据、随机向量与样本协方差#均值、协方差与相关|Mean Vector]]
+- [[多元数据、随机向量与样本协方差#均值、协方差与相关|Covariance Matrix]]
+- [[多元数据、随机向量与样本协方差#均值、协方差与相关|Correlation Matrix]]

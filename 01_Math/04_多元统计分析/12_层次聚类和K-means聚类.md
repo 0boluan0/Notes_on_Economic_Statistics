@@ -6,7 +6,6 @@
 >[!note] 本章主线
 > 聚类是无监督分组：没有预先给定类别标签，只根据样本之间的距离或相似性形成类别。
 > <!-- bilingual-en:start -->
-> [!note] Chapter backbone
 > Clustering is unsupervised grouping: no class labels are supplied in advance, and groups are formed only from distances or similarities among observations.
 > <!-- bilingual-en:end -->
 
@@ -32,7 +31,6 @@ Before clustering, settle three questions:
 >[!attention] 尺度问题
 > 如果一个变量以“万元”为单位，另一个变量以“百分比”为单位，直接用欧氏距离会让量纲大的变量主导聚类。
 > <!-- bilingual-en:start -->
-> [!attention] Scale
 > If one variable is measured in tens of thousands of currency units and another in percentages, using Euclidean distance directly will allow the larger-scale variable to dominate the clustering.
 > <!-- bilingual-en:end -->
 
@@ -83,7 +81,6 @@ Three linkage rules are commonly examined:
 >[!note] 读树状图
 > dendrogram 的纵轴通常表示合并距离。切割高度越低，类别越多；切割高度越高，类别越少。
 > <!-- bilingual-en:start -->
-> [!note] Reading a dendrogram
 > The vertical axis of a dendrogram usually represents the merge distance. Cutting at a lower height produces more clusters; cutting at a higher height produces fewer clusters.
 > <!-- bilingual-en:end -->
 
@@ -149,9 +146,9 @@ $$
 *1.5. Related Cards*
 <!-- bilingual-en:end -->
 
-- [[Clustering Method Selection]]
-- [[Hierarchical Clustering]]
-- [[Hierarchical Clustering Procedure]]
-- [[Linkage Criterion]]
-- [[K-means Clustering]]
-- [[K-means Algorithm]]
+- [[聚类：层次聚类与 K-means#表示、尺度与距离|Clustering Method Selection]]
+- [[聚类：层次聚类与 K-means#层次聚类|Hierarchical Clustering]]
+- [[聚类：层次聚类与 K-means#层次聚类|Hierarchical Clustering Procedure]]
+- [[聚类：层次聚类与 K-means#层次聚类|Linkage Criterion]]
+- [[聚类：层次聚类与 K-means#K-means|K-means Clustering]]
+- [[聚类：层次聚类与 K-means#K-means|K-means Algorithm]]

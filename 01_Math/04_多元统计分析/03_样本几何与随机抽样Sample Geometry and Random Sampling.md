@@ -6,7 +6,6 @@
 >[!note] 本章主线
 > 本章把样本矩阵看成几何对象：每个变量是一根中心化后的偏差向量，协方差来自偏差向量内积，相关系数来自偏差向量夹角，广义方差来自这些向量张成的面积或体积。
 > <!-- bilingual-en:start -->
-> [!note] Chapter backbone
 > This chapter treats the sample matrix as a geometric object. Each variable becomes a centred deviation vector; covariance comes from inner products, correlation from angles between deviation vectors, and generalised variance from the area or volume spanned by those vectors.
 > <!-- bilingual-en:end -->
 
@@ -73,7 +72,6 @@ $$
 >[!note] 几何读法
 > 一个变量不是只被看成一列数字，而是被看成 $n$ 维空间中的一根偏差向量。
 > <!-- bilingual-en:start -->
-> [!note] Geometric interpretation
 > A variable is viewed not merely as a column of numbers but as a deviation vector in an $n$-dimensional space.
 > <!-- bilingual-en:end -->
 
@@ -122,7 +120,6 @@ $$
 >[!item] 关键结论
 > 样本相关系数就是两个中心化变量向量夹角的余弦。
 > <!-- bilingual-en:start -->
-> [!item] Key conclusion
 > The sample correlation coefficient is the cosine of the angle between two centred variable vectors.
 > <!-- bilingual-en:end -->
 
@@ -169,7 +166,6 @@ $$
 >[!attention] 易错点
 > $D$ 是中心化后的 deviation matrix。协方差矩阵不是直接由未中心化的 $X'X$ 得到。
 > <!-- bilingual-en:start -->
-> [!attention] Common error
 > $D$ is the centred deviation matrix. The covariance matrix is not obtained directly from an uncentred $X'X$.
 > <!-- bilingual-en:end -->
 
@@ -262,7 +258,6 @@ It simply adds the variables' own variances and does not penalise correlation am
 >[!note] 对比
 > $|S|$ 看联合体积，受相关性影响；$\operatorname{tr}(S)$ 看总方差，不直接看变量之间是否重叠。
 > <!-- bilingual-en:start -->
-> [!note] Comparison
 > $|S|$ measures joint volume and is affected by correlation; $\operatorname{tr}(S)$ measures total marginal variance without directly reflecting overlap among variables.
 > <!-- bilingual-en:end -->
 
@@ -471,10 +466,10 @@ $$
 *1.7. Related Cards*
 <!-- bilingual-en:end -->
 
-- [[Sample Mean Vector]]
-- [[Sample Covariance Matrix]]
-- [[Generalized Variance]]
-- [[Correlation Matrix]]
-- [[Choosing Covariance vs Correlation Matrix]]
-- [[PCA]]
-- [[Matrix Rank]]
+- [[多元数据、随机向量与样本协方差#样本协方差矩阵|Sample Mean Vector]]
+- [[多元数据、随机向量与样本协方差#样本协方差矩阵|Sample Covariance Matrix]]
+- [[多元数据、随机向量与样本协方差#广义方差与可视化|Generalized Variance]]
+- [[多元数据、随机向量与样本协方差#均值、协方差与相关|Correlation Matrix]]
+- [[主成分分析 PCA#标准化与成分选择|Choosing Covariance vs Correlation Matrix]]
+- [[主成分分析 PCA#PCA 的方差最大化|PCA]]
+- [[线性方程组与四个基本子空间#基、维数与秩|Matrix Rank]]

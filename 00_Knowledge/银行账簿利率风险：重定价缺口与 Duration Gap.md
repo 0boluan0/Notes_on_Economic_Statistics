@@ -18,14 +18,13 @@ status: source-checked
 > **核心难点：** 无到期存款和提前还款没有固定现金流；重定价缺口看收入时点，Duration Gap 看经济价值，二者可能方向不同。
 > **为什么重要：** 一家账面资本充足的银行仍可能因持续净息差压缩或经济价值损失变得脆弱，单一到期表无法揭示这种风险。
 > **继续：** 先分别建立 NII 与 EVE 视角，再对存款 beta、流失、提前还款和曲线扭曲做共同压力；证券久期基础见 [[债券久期、凸性与收益率曲线风险]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** It jointly measures how rate changes affect a bank's short-run net interest income and long-run economic value of equity while incorporating behavioral options in deposits, prepayment, and basis.
 > **Concrete anchor:** When long-term fixed-rate loans are funded by deposits that reprice quickly, a rate increase raises liability cost first and compresses net interest income while also reducing the loans' economic value.
 > **Central difficulty:** Non-maturity deposits and prepayments have no fixed cash-flow schedule. Repricing gap examines earnings timing, while duration gap examines economic value, and the two can point in different directions.
 > **Why it matters:** A bank with adequate book capital can still become fragile through persistent margin compression or economic-value loss; a simple maturity table does not reveal the risk.
 > **Continue:** Build NII and EVE views separately, then jointly stress deposit beta, runoff, prepayment, and curve twists. For security-duration foundations, see [[债券久期、凸性与收益率曲线风险|Bond Duration, Convexity, and Yield-Curve Risk]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。
@@ -34,15 +33,14 @@ status: source-checked
 > - 本库货币银行学课程笔记：支持课程范围、案例和课堂顺序。
 > - [Federal Reserve Education](https://www.federalreserveeducation.org/) 与各专题官方说明：核验中央银行、货币政策、银行体系与金融市场机制。
 > - Basel Committee《[Interest rate risk in the banking book](https://www.bis.org/bcbs/publ/d368.htm)》：核验 EVE、NII、行为与基差风险框架。
-<!-- bilingual-en:start -->
-> [!source] Basis for this section
+> <!-- bilingual-en:start -->
 > - The vault's Financial Institutions and Risk Management course notes support course scope, classroom examples, and notation.
 > - The [Basel Framework](https://www.bis.org/basel_framework/) verifies regulatory conventions for capital, market risk, credit risk, and CVA.
 > - Hull, *Risk Management and Financial Institutions*, cross-checks VaR, ES, Greeks, interest-rate risk, credit risk, and simulation methods.
 > - The vault's Money and Banking course notes support course scope, examples, and lecture sequence.
 > - [Federal Reserve Education](https://www.federalreserveeducation.org/) and its official topic pages verify central banking, monetary policy, banking-system, and financial-market mechanisms.
 > - The Basel Committee's “[Interest rate risk in the banking book](https://www.bis.org/bcbs/publ/d368.htm)” verifies the EVE, NII, behavioral-risk, and basis-risk framework.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 两种视角先分开
 <!-- bilingual-en:start -->
@@ -134,10 +132,9 @@ Loan prepayment is also a customer-held rate option. When rates fall, fixed-rate
 
 > [!answer]- 答案
 > 需建立余额稳定性和存款利率 beta 的行为模型，并在不同流失/重定价情景下压力测试。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Build behavioral models of balance stability and deposit-rate beta and stress them under different runoff and repricing scenarios.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话解释：NII gap 与 Duration Gap 为什么可能给出不同方向？
 <!-- bilingual-en:start -->
@@ -146,10 +143,9 @@ Loan prepayment is also a customer-held rate option. When rates fall, fixed-rate
 
 > [!answer]- 答案
 > NII 看短期内哪些利率先重定价，Duration Gap 看全部未来现金流现值；浮息资产可迅速增加收入，却不能抵消长期固定现金流因贴现率上升而产生的价值损失。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > NII asks which rates reprice first over a short horizon; duration gap values all future cash flows. Floating-rate assets can quickly raise income yet fail to offset the present-value loss on long fixed cash flows when discount rates rise.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 资产负债久期匹配后为什么仍需再平衡？
 <!-- bilingual-en:start -->
@@ -158,10 +154,9 @@ Loan prepayment is also a customer-held rate option. When rates fall, fixed-rate
 
 > [!answer]- 答案
 > 时间经过、利率变化、客户行为和现金流实现会改变现值、久期与凸性；一次匹配只在当前点对特定小冲击近似免疫。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Passage of time, rate changes, customer behavior, and realized cash flows alter present values, durations, and convexities. One match immunizes only approximately at the current point against a specified small shock.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

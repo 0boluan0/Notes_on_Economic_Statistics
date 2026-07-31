@@ -6,7 +6,6 @@
 >[!note] 本章主线
 > 判别关注“不同组有什么差异”，分类关注“新观测应该分到哪一组”。本章从两总体分类规则、误分类成本、Fisher 判别和分类效果评估展开。
 > <!-- bilingual-en:start -->
-> [!note] Chapter backbone
 > Discrimination asks how groups differ, while classification asks which group should receive a new observation. This chapter develops two-population classification rules, misclassification costs, Fisher discrimination, and the evaluation of classification performance.
 > <!-- bilingual-en:end -->
 
@@ -168,7 +167,6 @@ and otherwise assign it to $R_2$.
 >[!attention] 误链修正
 > 这里的 ECM 是 Expected Cost of Misclassification，不是计量经济学里的 Error Correction Model。
 > <!-- bilingual-en:start -->
-> [!attention] Link correction
 > Here ECM means Expected Cost of Misclassification, not the Error Correction Model used in econometrics.
 > <!-- bilingual-en:end -->
 
@@ -238,7 +236,6 @@ assign to $\pi_1$ when the inequality holds, and otherwise to $\pi_2$.
 >[!note] 做题重点
 > 核心不是背公式，而是先求 $\hat a$，再把新样本和两个组均值都投影到同一条线上。
 > <!-- bilingual-en:start -->
-> [!note] Solution focus
 > The key is not memorising the formula. First find $\hat a$, then project the new observation and both group means onto the same line.
 > <!-- bilingual-en:end -->
 
@@ -341,10 +338,10 @@ $$
 *1.8. Related Cards*
 <!-- bilingual-en:end -->
 
-- [[Classification Rule Selection]]
-- [[Expected Cost of Misclassification]]
-- [[Total Probability of Misclassification]]
-- [[Fisher Linear Discriminant]]
-- [[Fisher Discriminant Procedure]]
-- [[Actual Error Rate]]
-- [[Jackknife Classification]]
+- [[判别分析：Bayes、LDA 与 QDA#Bayes 分类与判别规则|Classification Rule Selection]]
+- [[判别分析：Bayes、LDA 与 QDA#Bayes 分类与判别规则|Expected Cost of Misclassification]]
+- [[判别分析：Bayes、LDA 与 QDA#Bayes 分类与判别规则|Total Probability of Misclassification]]
+- [[判别分析：Bayes、LDA 与 QDA#LDA、QDA 与 Fisher 判别|Fisher Linear Discriminant]]
+- [[判别分析：Bayes、LDA 与 QDA#LDA、QDA 与 Fisher 判别|Fisher Discriminant Procedure]]
+- [[判别分析：Bayes、LDA 与 QDA#分类评估|Actual Error Rate]]
+- [[判别分析：Bayes、LDA 与 QDA#分类评估|Jackknife Classification]]

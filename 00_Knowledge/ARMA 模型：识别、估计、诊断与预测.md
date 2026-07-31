@@ -18,23 +18,21 @@ status: source-checked
 > **核心难点：** 平稳性、因果性和可逆性是关于表示能否稳定展开的不同条件；样本 ACF 只是有误差的线索。
 > **为什么重要：** 它是时序预测、动态回归和更复杂波动/多变量模型的基线。
 > **继续：** 均值结构合格但波动聚集时进入 [[条件异方差：ARCH 与 GARCH]]；趋势明显时先看 [[趋势、单位根与差分]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** ARMA uses a finite number of parameters to describe dynamic dependence in a mean-reverting series, then tests adequacy through ACF/PACF, residuals, and forecasting performance.
 > **Concrete anchor:** In the AR(1) model $y_t=\phi y_{t-1}+\varepsilon_t$, $|\phi|<1$ makes a shock and the autocorrelation decay geometrically as $\phi^h$.
 > **Central difficulty:** Stationarity, causal representation, and invertibility are distinct conditions about stable expansions. A sample ACF is noisy evidence, not a model identifier.
 > **Why it matters:** ARMA is a baseline for time-series forecasting, dynamic regression, conditional-volatility models, and multivariate dynamics.
 > **Continue with:** Move to [[条件异方差：ARCH 与 GARCH|ARCH and GARCH]] when mean residuals are uncorrelated but volatility clusters, or first examine [[趋势、单位根与差分|trends, unit roots, and differencing]] when the level is nonstationary.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - [[01_Math/06_时间序列分析/lecture.pdf]] 与 [[01_Math/06_时间序列分析/lecture-dual.pdf]]：支持课程范围、记号、模型、检验与例题。
 > - Hyndman & Athanasopoulos, [Forecasting: Principles and Practice](https://otexts.com/fpp3/)：交叉核验预测、ARIMA、诊断与时序交叉验证。
-<!-- bilingual-en:start -->
-> [!source] Sources for this section
+> <!-- bilingual-en:start -->
 > - [[01_Math/06_时间序列分析/lecture.pdf|time-series lecture notes]] and [[01_Math/06_时间序列分析/lecture-dual.pdf|bilingual time-series lecture notes]] were checked for definitions, operator conventions, ACF/PACF patterns, estimation, diagnostics, and forecast formulas.
 > - Hyndman and Athanasopoulos, [Forecasting: Principles and Practice](https://otexts.com/fpp3/), was used to cross-check ARIMA modelling, residual diagnostics, and time-series cross-validation.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 弱平稳与白噪声
 <!-- bilingual-en:start -->
@@ -43,10 +41,9 @@ status: source-checked
 
 > [!note] 理论与实操的分工
 > 下面一段保留课程中使用 ARMA 所需的最小前提；平稳性、遍历性和谱的完整理论见 [[平稳性、遍历性与谱]]。
-<!-- bilingual-en:start -->
-> [!note] Division between theory and practice
+> <!-- bilingual-en:start -->
 > The next paragraph retains the minimum prerequisite needed to use ARMA in this course. See [[平稳性、遍历性与谱|stationarity, ergodicity, and spectral analysis]] for the full theory.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 弱平稳要求均值不随时间变、协方差只依赖滞后。白噪声均值为零、方差恒定、不同期不相关；它不必独立或正态。模型残差“近似白噪声”表示线性均值结构未留下可预测自相关，不等于所有结构都正确。
 <!-- bilingual-en:start -->
@@ -180,10 +177,9 @@ Structural breaks, nonlinearity, heavy tails, and conditional heteroskedasticity
 
 > [!answer]- 答案
 > 不是。定义通常只要求零均值、恒方差和零自协方差；独立或 Gaussian 是更强条件。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > No. The usual definition requires only zero mean, constant variance, and zero autocovariance; independence or Gaussianity is stronger.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### AR(1) 的 $|\phi|<1$ 同时带来什么直觉？
 <!-- bilingual-en:start -->
@@ -192,10 +188,9 @@ Structural breaks, nonlinearity, heavy tails, and conditional heteroskedasticity
 
 > [!answer]- 答案
 > 冲击几何衰减、存在稳定无限 MA 表示、无条件方差有限且相关随滞后衰减。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Shocks decay geometrically, a stable infinite-MA representation exists, unconditional variance is finite, and autocorrelation decays with lag.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么不能只凭样本 ACF 截尾就确定模型阶数？
 <!-- bilingual-en:start -->
@@ -204,10 +199,9 @@ Structural breaks, nonlinearity, heavy tails, and conditional heteroskedasticity
 
 > [!answer]- 答案
 > 样本 ACF 有抽样误差，近单位根、混合 ARMA、季节性和结构突变都会模糊理论图形。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The sample ACF has sampling error, and near-unit roots, mixed ARMA terms, seasonality, and structural breaks all blur theoretical patterns.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话区分因果表示与可逆表示。
 <!-- bilingual-en:start -->
@@ -216,10 +210,9 @@ Structural breaks, nonlinearity, heavy tails, and conditional heteroskedasticity
 
 > [!answer]- 答案
 > 因果表示用当前和过去冲击稳定地生成观测；可逆表示用当前和过去观测稳定地恢复冲击。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > A causal representation stably generates observations from current and past innovations; an invertible representation stably recovers innovations from current and past observations.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

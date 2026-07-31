@@ -18,25 +18,23 @@ status: source-checked
 > **核心难点：** 敞口、PD、LGD 和市场因子可能相关；净额、抵押品和 margin period of risk 必须按法律集合建模。
 > **为什么重要：** CVA 把对手信用成本纳入公允价值，资本和限额还需覆盖其波动与尾部。
 > **继续：** 先建 exposure profile，再加入 default 与 recovery；监管口径见 [[巴塞尔银行资本与流动性监管|巴塞尔资本监管与 OTC 清算]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** A derivative's future value changes with markets while the counterparty may default in adverse states; this topic jointly prices and manages dynamic exposure and default.
 > **Concrete anchor:** A swap worth zero today is not free of credit exposure. Future rate changes can make it substantially positive to us precisely when the counterparty defaults.
 > **Central difficulty:** Exposure, PD, LGD, and market factors can be dependent. Netting, collateral, and the margin period of risk must be modeled by legally enforceable sets.
 > **Why it matters:** CVA incorporates counterparty credit cost into fair value, while capital and limits must also cover its volatility and tail.
 > **Continue:** Build an exposure profile first, then add default and recovery. For regulatory conventions, see [[巴塞尔银行资本与流动性监管|Basel Bank Capital and Liquidity Regulation]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。
 > - [Basel Framework](https://www.bis.org/basel_framework/)：核验资本、市场风险、信用风险、CVA 与监管口径。
 > - Hull, *Risk Management and Financial Institutions*：交叉核验 VaR、ES、Greek、利率风险、信用风险与模拟方法。
-<!-- bilingual-en:start -->
-> [!source] Basis for this section
+> <!-- bilingual-en:start -->
 > - The vault's Financial Institutions and Risk Management course notes support course scope, classroom examples, and notation.
 > - The [Basel Framework](https://www.bis.org/basel_framework/) verifies regulatory conventions for capital, market risk, credit risk, and CVA.
 > - Hull, *Risk Management and Financial Institutions*, cross-checks VaR, ES, Greeks, interest-rate risk, credit risk, and simulation methods.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 信用敞口为何随市场变化
 <!-- bilingual-en:start -->
@@ -175,10 +173,9 @@ Manage current exposure and PFE, wrong-way risk, concentration, rating triggers,
 
 > [!answer]- 答案
 > 未来市场变化会使 replacement value 为正，而对手可能在那时违约；风险来自未来敞口分布。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Future market changes can make replacement value positive, and the counterparty may default then; risk comes from the future exposure distribution.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### wrong-way risk 是什么？
 <!-- bilingual-en:start -->
@@ -187,10 +184,9 @@ Manage current exposure and PFE, wrong-way risk, concentration, rating triggers,
 
 > [!answer]- 答案
 > 对手违约可能性升高的状态恰好也是我方对其敞口升高的状态。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It is the state in which counterparty default likelihood rises at the same time as our exposure to that counterparty rises.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 净额与抵押品是否把敞口降到零？
 <!-- bilingual-en:start -->
@@ -199,10 +195,9 @@ Manage current exposure and PFE, wrong-way risk, concentration, rating triggers,
 
 > [!answer]- 答案
 > 通常不会；估值变化、门槛、转移滞后、争议和补救期会留下 gap，且法律可执行性是前提。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Usually not. Valuation change, thresholds, transfer delays, disputes, and the margin period leave a gap, and legal enforceability is a prerequisite.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话解释：为什么 PFE 不等于信用损失分位？
 <!-- bilingual-en:start -->
@@ -211,10 +206,9 @@ Manage current exposure and PFE, wrong-way risk, concentration, rating triggers,
 
 > [!answer]- 答案
 > PFE 只描述未来正重置价值的高分位，尚未加入对手是否违约和违约时回收；信用损失还需把敞口与违约、LGD 联合。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > PFE is only a high quantile of future positive replacement value before counterparty default and recovery. Credit loss must combine exposure jointly with default and LGD.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

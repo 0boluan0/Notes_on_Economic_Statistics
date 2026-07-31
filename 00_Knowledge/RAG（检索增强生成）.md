@@ -12,11 +12,11 @@ status: source-checked
 <!-- bilingual-en:end -->
 
 > [!summary] 快速恢复
-> **它解决什么：** 在模型参数之外提供任务所需资料：RAG 先检索相关片段，长上下文则把更多材料直接放入一次输入。
+> **它解决什么：** 从模型参数之外检索与问题相关的证据，再让生成器基于这些证据回答并给出可追溯来源。
 > **具体锚点：** 回答公司最新政策时，不该期待预训练记住；系统应找到当前政策原文，把相关段落和出处交给模型。
 > **核心难点：** “资料在上下文里”不等于模型会找到、理解并忠实引用；检索召回、排序、切块、位置与生成约束都会丢失信息。
-> **为什么重要：** 这决定知识更新、证据可追溯、成本和延迟，也决定错误来自没找到还是没用对。
-> **继续：** 先画清检索—生成管线，再按资料规模和更新频率选择 RAG、长上下文或混合；效率见 [[LLM 推理效率]]。
+> **为什么重要：** 它让知识可以独立更新并使答案可核验，也能把错误定位为没有索引、没有召回、排序错误或没有正确使用证据。
+> **继续：** 先画清检索—排序—组装—生成管线，再逐层测 recall、ranking 和 citation entailment；设计比较见 [[长上下文语言模型]]。
 > <!-- bilingual-en:start -->
 > **Problem addressed:** Supply task-relevant evidence outside model parameters. RAG retrieves selected passages, while a long-context design directly places more material into one input.
 > **Concrete anchor:** A system answering questions about the latest company policy should retrieve the current source document and pass supported passages and provenance to the model rather than expecting pretraining to remember it.
@@ -147,10 +147,9 @@ Classify errors as missing index entries, retrieval failures, ranking failures, 
 
 > [!answer]- 答案
 > 检索/索引层；生成器没有看到证据，换提示通常不能根治。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Fix retrieval or indexing. The generator never saw the evidence, so prompt changes usually cannot address the root cause.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 政策资料既更新快又要求可引用，应优先哪种设计？
 <!-- bilingual-en:start -->
@@ -159,10 +158,9 @@ Classify errors as missing index entries, retrieval failures, ranking failures, 
 
 > [!answer]- 答案
 > 带版本与来源元数据的 RAG，必要时再把召回文档以较长上下文综合。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Use RAG with version and provenance metadata, then provide the retrieved documents in a longer context for synthesis when needed.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 正确 passage 已召回但答案仍错，下一步看什么？
 <!-- bilingual-en:start -->
@@ -171,10 +169,9 @@ Classify errors as missing index entries, retrieval failures, ranking failures, 
 
 > [!answer]- 答案
 > 看 rerank 后位置、实际组装上下文、版本冲突、生成指令与答案是否由 passage 支持，把排序与证据使用分开测。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Inspect rank after reranking, the assembled context, version conflicts, generation instructions, and whether the passage entails the answer; measure ranking and evidence use separately.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->
@@ -197,4 +194,3 @@ Classify errors as missing index entries, retrieval failures, ranking failures, 
   <!-- bilingual-en:start -->
   [Karpukhin et al. (2020), Dense Passage Retrieval](https://arxiv.org/abs/2004.04906) verifies dual-encoder dense passage retrieval and top-k recall evaluation.
   <!-- bilingual-en:end -->
-

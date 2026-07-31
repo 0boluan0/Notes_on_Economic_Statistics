@@ -139,10 +139,9 @@ Suppose sources A and B each contain one million tokens but receive sampling wei
 
 > [!answer]- 答案
 > 要在多样文本中持续预测正确 token，模型必须压缩语法、语义、事实、文体和跨段依赖等可复用规律；这些内部表示可迁移到很多任务，但目标本身不保证其可靠调用。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Consistently predicting tokens across diverse text requires compressing reusable regularities in syntax, semantics, facts, style, and long-range dependence. Those representations transfer to many tasks, although the objective does not guarantee reliable elicitation.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### perplexity 更低为什么不能直接证明助手更好？
 <!-- bilingual-en:start -->
@@ -151,10 +150,9 @@ Suppose sources A and B each contain one million tokens but receive sampling wei
 
 > [!answer]- 答案
 > perplexity 测量匹配数据分布下的 token 预测；助手质量还包含指令遵循、事实性、安全、校准和交互效用，而且不同 tokenizer 下数值不可直接比。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Perplexity measures token prediction on a matched data distribution. Assistant quality also involves instruction following, factuality, safety, calibration, and interactive utility, and values under different tokenizers are not directly comparable.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 固定计算预算下把参数翻倍时，还应追问什么？
 <!-- bilingual-en:start -->
@@ -163,10 +161,9 @@ Suppose sources A and B each contain one million tokens but receive sampling wei
 
 > [!answer]- 答案
 > 每 token 计算增加后还能训练多少 token、数据是否足够多样、是否进入训练不足区，以及生命周期推理成本是否改变最优选择。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Ask how many tokens remain affordable after per-token compute rises, whether data remain sufficiently diverse, whether the model becomes undertrained, and whether lifecycle inference cost changes the optimum.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 数据去重过强和过弱分别会造成什么问题？
 <!-- bilingual-en:start -->
@@ -175,10 +172,9 @@ Suppose sources A and B each contain one million tokens but receive sampling wei
 
 > [!answer]- 答案
 > 过强会删除独立但相似的有价值表达并缩窄覆盖；过弱会让模板与镜像重复支配训练，增加记忆和评测污染。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Excessive deduplication removes valuable independent but similar expressions and narrows coverage. Weak deduplication lets templates and mirrors dominate training and increases memorization and evaluation contamination.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

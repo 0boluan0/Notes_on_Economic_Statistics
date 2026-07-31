@@ -17,23 +17,21 @@ status: source-checked
 > **核心难点：** “每名劳动者”和“每单位有效劳动”不是同一变量；稳态中后者不变，前者仍可随技术增长。
 > **为什么重要：** 它是区分资本积累的水平效应、过渡增长和长期技术增长的基准。
 > **继续：** 若要解释技术进步为什么发生，进入 [[内生增长理论]]；若要比较固定比例的不稳定，回到 [[Harrod—Domar 增长模型]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** Given saving, population, depreciation, and exogenous technological growth, it explains how capital per unit of effective labor approaches a steady state and whether policy changes a growth rate or an income level.
 > **Concrete anchor:** After the saving rate rises, investment temporarily exceeds the amount needed to offset dilution. Capital deepening accelerates output-per-person growth, but once the economy reaches a higher steady state, growth per person is not permanently faster without faster technology.
 > **Central difficulty:** “Per worker” and “per unit of effective labor” are different variables. The latter is constant in steady state while the former can still grow with technology.
 > **Why it matters:** It is the benchmark for distinguishing the level effect of capital accumulation, transitional growth, and long-run technological growth.
 > **Continue:** To explain why technology advances, see [[内生增长理论|Endogenous Growth Theory]]. To compare fixed-proportion instability, return to [[Harrod—Domar 增长模型|The Harrod–Domar Growth Model]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - Solow（1956）《[A Contribution to the Theory of Economic Growth](https://doi.org/10.2307/1884513)》：核验可替代生产函数、资本动态与稳定调整。
 > - Solow（1957）《[Technical Change and the Aggregate Production Function](https://doi.org/10.2307/1926047)》：核验增长核算与技术残差的原始口径。
-<!-- bilingual-en:start -->
-> [!source] Basis for this section
+> <!-- bilingual-en:start -->
 > - Solow (1956), “[A Contribution to the Theory of Economic Growth](https://doi.org/10.2307/1884513),” verifies substitutable production, capital dynamics, and stable adjustment.
 > - Solow (1957), “[Technical Change and the Aggregate Production Function](https://doi.org/10.2307/1926047),” verifies the original growth-accounting and technical-residual convention.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 基本动态方程
 <!-- bilingual-en:start -->
@@ -134,10 +132,9 @@ Exogenous technological growth determines long-run growth per person in Solow, b
 
 > [!answer]- 答案
 > 在外生技术增长率不变时，主要提高稳态人均产出水平并产生过渡增长，不永久提高稳态人均增长率。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > With unchanged exogenous technological growth, it mainly raises the steady-state level of output per person and creates transitional growth, not a permanent increase in the steady-state growth rate per person.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话解释 break-even investment。
 <!-- bilingual-en:start -->
@@ -146,10 +143,9 @@ Exogenous technological growth determines long-run growth per person in Solow, b
 
 > [!answer]- 答案
 > 它是用于补偿折旧，并为新增人口和有效劳动配备资本，从而仅保持现有每有效劳动资本不变的投资。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It is the investment needed to replace depreciation and equip additional population and effective labor, merely keeping capital per effective worker unchanged.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 增长核算的 TFP 残差能否直接叫纯技术进步？
 <!-- bilingual-en:start -->
@@ -158,10 +154,9 @@ Exogenous technological growth determines long-run growth per person in Solow, b
 
 > [!answer]- 答案
 > 不能；还含测量误差、产能利用、资源配置和遗漏投入质量。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > No. It can also contain measurement error, capacity utilization, resource allocation, and omitted input quality.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

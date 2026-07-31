@@ -12,17 +12,17 @@ status: source-checked
 <!-- bilingual-en:end -->
 
 > [!summary] 快速恢复
-> **它解决什么：** 数论研究整数的整除和同余；图论研究对象间连接。二者都把连续细节删去，只保留离散结构。
-> **具体锚点：** RSA 用模幂和 Euler/Fermat 性质恢复消息；网络中的最短路、树和匹配则只依赖节点与边。
-> **核心难点：** 同余除法需乘法逆元存在；图中的 walk、path、cycle 和连通性不是同一对象。
-> **为什么重要：** 密码学、算法、网络、组合优化和机制匹配都使用这些基本结构。
-> **继续：** 证明结论时回到 [[数学证明方法]]；随机图或随机游走连接 [[离散概率]]。
+> **它解决什么：** 用整除、同余和模逆把无限整数压缩到有限剩余类，并理解 RSA 正确性所依赖的数论机制。
+> **具体锚点：** 扩展 Euclidean algorithm 在 $\gcd(e,\varphi(n))=1$ 时求出私钥指数 $d$，使 $ed\equiv1\pmod{\varphi(n)}$。
+> **核心难点：** 模运算中的“除法”只有在逆元存在时才合法；RSA 的教学正确性证明也不等于现实实现已经安全。
+> **为什么重要：** 这些结构支撑公钥密码学、哈希中的模运算和大量离散算法。
+> **继续：** 先掌握 GCD、Bézout 与模逆，再理解 RSA 的 key generation 和 modular exponentiation；图结构另见 [[图的基本结构、路径与遍历|图、树、匹配与着色]]。
 > <!-- bilingual-en:start -->
-> **Problem addressed:** Number theory studies divisibility and congruence, while graph theory studies connections among objects; both retain discrete structure while discarding continuous detail.
-> **Concrete anchor:** RSA recovers a message through modular exponentiation and Euler or Fermat properties, whereas shortest paths, trees, and matchings depend only on vertices and edges.
-> **Central difficulty:** Division in modular arithmetic requires an inverse, while graph walks, paths, cycles, and connectivity are distinct notions.
-> **Why it matters:** Cryptography, algorithms, networks, combinatorial optimization, and matching mechanisms use these structures.
-> **Continue with:** This card follows the integer/RSA chain; graph structure is now in [[图、树、匹配与着色|Graphs, Trees, Matching, and Coloring]]. Return to [[数学证明方法|Proof Methods]] for proofs.
+> **Problem addressed:** Use divisibility, congruence, and modular inverses to reduce infinitely many integers to finite residue classes and understand the number-theoretic mechanism behind RSA correctness.
+> **Concrete anchor:** When $\gcd(e,\varphi(n))=1$, the extended Euclidean algorithm finds the private exponent $d$ satisfying $ed\equiv1\pmod{\varphi(n)}$.
+> **Central difficulty:** “Division” modulo $n$ is valid only when an inverse exists, and a classroom proof of RSA correctness does not make a real implementation secure.
+> **Why it matters:** These structures support public-key cryptography, modular arithmetic in hashing, and many discrete algorithms.
+> **Continue with:** Master GCDs, Bézout's identity, and modular inverses before RSA key generation and modular exponentiation; see [[图的基本结构、路径与遍历|graph fundamentals, paths, and traversal]] for graph structure.
 > <!-- bilingual-en:end -->
 
 > [!source] 本节依据
@@ -106,10 +106,9 @@ If the gcd is not one, no inverse exists, and that factor cannot simply be cance
 
 > [!answer]- 答案
 > 该因子与模数互素、因而存在模逆元时；否则约分可能丢失解或产生错误。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > When the factor is coprime to the modulus and therefore has a modular inverse; otherwise cancellation can lose solutions or produce an invalid conclusion.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### RSA 的数学正确性与现实安全为何不是一回事？
 <!-- bilingual-en:start -->
@@ -118,10 +117,9 @@ If the gcd is not one, no inverse exists, and that factor cannot simply be cance
 
 > [!answer]- 答案
 > 模幂可恢复消息只证明功能；安全还依赖困难假设、随机填充、密钥长度和抗侧信道实现。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Recovering a message by modular exponentiation proves functionality only; security also depends on hardness assumptions, randomized padding, key length, and side-channel-resistant implementation.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### Bézout 系数如何给出模逆元？
 <!-- bilingual-en:start -->
@@ -130,10 +128,9 @@ If the gcd is not one, no inverse exists, and that factor cannot simply be cance
 
 > [!answer]- 答案
 > 若 $ax+ny=1$，对 n 取模得到 $ax\equiv1\pmod n$，所以 x 是 a 的逆元类。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > If $ax+ny=1$, reducing modulo n gives $ax\equiv1\pmod n$, so x represents the inverse of a.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

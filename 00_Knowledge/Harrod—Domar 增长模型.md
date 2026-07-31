@@ -17,23 +17,21 @@ status: source-checked
 > **核心难点：** $s/v$ 不是无条件的长期增长预测；它来自固定资本系数、投资转化为产能和计划利用率等特定假设。
 > **为什么重要：** 它说明“多投资”不只是供给问题；如果需求、产能和劳动力的增长率不匹配，失业或过度利用可以累积。
 > **继续：** 若需要用可替代要素和资本边际收益递减解决不稳定，进入 [[Solow 增长模型、稳态与收敛]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** It asks how quickly an economy must grow for investment's simultaneous creation of current demand and future capacity to deliver the utilization rate firms expected.
 > **Concrete anchor:** If the saving rate is $s=20\%$ and four units of capital are needed for one extra unit of output, so the capital–output ratio is $v=4$, the warranted growth rate is approximately $g_w=s/v=5\%$.
 > **Central difficulty:** $s/v$ is not an unconditional long-run growth forecast. It follows from particular assumptions about fixed capital coefficients, conversion of investment into capacity, and planned utilization.
 > **Why it matters:** “More investment” is not only a supply-side issue. When demand, capacity, and labor-force growth are mismatched, unemployment or overutilization can accumulate.
 > **Continue:** To address instability through factor substitution and diminishing returns to capital, see [[Solow 增长模型、稳态与收敛|The Solow Growth Model, Steady State, and Convergence]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - Harrod（1939）《[An Essay in Dynamic Theory](https://doi.org/10.2307/2225181)》：核验实际、保证与自然增长率的区分及动态不稳定。
 > - Domar（1946）《[Capital Expansion, Rate of Growth, and Employment](https://doi.org/10.2307/1905364)》：核验投资的收入创造与产能创造两面。
-<!-- bilingual-en:start -->
-> [!source] Basis for this section
+> <!-- bilingual-en:start -->
 > - Harrod (1939), “[An Essay in Dynamic Theory](https://doi.org/10.2307/2225181),” verifies the distinction among actual, warranted, and natural growth and the dynamic instability.
 > - Domar (1946), “[Capital Expansion, Rate of Growth, and Employment](https://doi.org/10.2307/1905364),” verifies the income-creating and capacity-creating sides of investment.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 从投资的两面到 $g=s/v$
 <!-- bilingual-en:start -->
@@ -77,24 +75,6 @@ This equality does not prove that the economy automatically reaches that rate. I
 If $g_a>g_w$, firms may observe tighter-than-planned capacity and invest more, amplifying overheating. If $g_a<g_w$, idle capacity causes investment cuts that can deepen weakness. This is the economic intuition of the knife edge: adjustment may move away from the warranted path rather than back toward it.
 <!-- bilingual-en:end -->
 
-## 从原主题保留的全局定位
-<!-- bilingual-en:start -->
-*Global orientation retained from the original topic*
-<!-- bilingual-en:end -->
-
-> **它解决什么：** 分解资本积累、人口、技术和制度怎样决定人均产出路径，并区分过渡增长与长期持续增长。
-> **具体锚点：** 提高储蓄率在 Solow 模型中提高稳态人均产出，但没有持续技术进步时不会永久提高稳态人均增长率。
-> **核心难点：** Harrod–Domar 的固定比例和刀锋不稳定、Solow 的递减资本回报、内生增长的知识外部性是不同机制，不能混成一条公式。
-> **为什么重要：** 它提供判断“投资率高所以永远增长快”这类主张的基准。
-> **继续：** 先画资本/有效劳动相图，再比较模型对长期技术进步的处理；分别进入 [[Solow 增长模型、稳态与收敛|Solow 模型]] 和 [[内生增长理论|内生增长]]。
-<!-- bilingual-en:start -->
-> **What it solves:** It separates how capital accumulation, population, technology, and institutions determine output per person and distinguishes transitional from sustained long-run growth.
-> **Concrete anchor:** A higher saving rate raises steady-state output per person in the Solow model, but without sustained technological progress it does not permanently raise the steady-state growth rate of output per person.
-> **Central difficulty:** Harrod–Domar's fixed proportions and knife-edge instability, Solow's diminishing returns to capital, and knowledge externalities in endogenous growth are different mechanisms and cannot be collapsed into one formula.
-> **Why it matters:** It provides a benchmark for judging claims such as “a high investment rate means permanently faster growth.”
-> **Continue:** Draw the capital-per-effective-worker phase diagram, then compare how models treat long-run technological progress. See [[Solow 增长模型、稳态与收敛|the Solow model]] and [[内生增长理论|endogenous growth]].
-<!-- bilingual-en:end -->
-
 ## 失败诊断
 <!-- bilingual-en:start -->
 *Failure diagnosis*
@@ -121,10 +101,9 @@ If $g_a>g_w$, firms may observe tighter-than-planned capacity and invest more, a
 
 > [!answer]- 答案
 > 固定比例和不同增长率条件下，偏离均衡会改变投资/产能，使偏离可能自我放大而缺少平滑回归机制。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Under fixed proportions, deviations change investment and capacity in ways that can amplify the deviation rather than smoothly return the economy to the warranted path.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话解释投资的“需求面”和“产能面”。
 <!-- bilingual-en:start -->
@@ -133,10 +112,9 @@ If $g_a>g_w$, firms may observe tighter-than-planned capacity and invest more, a
 
 > [!answer]- 答案
 > 投资支出当期直接增加总需求；新资本建成后又增加未来可生产的产能。两者需要一致的增长路径。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Investment spending immediately adds to aggregate demand, while completed capital raises future productive capacity. A consistent growth path must reconcile both.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 已知 $s=0.18$ 且 $v=3$，保证增长率的简化值是多少，为什么它不是预测？
 <!-- bilingual-en:start -->
@@ -145,10 +123,9 @@ If $g_a>g_w$, firms may observe tighter-than-planned capacity and invest more, a
 
 > [!answer]- 答案
 > $g_w=0.18/3=0.06$，即 6%。它是特定固定系数和储蓄—投资转化假设下的一致条件，不保证实际需求、利用率与劳动供给会配合。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > $g_w=0.18/3=0.06$, or 6%. It is a consistency condition under fixed coefficients and saving-to-investment conversion, not a guarantee that demand, utilization, and labor supply will align.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

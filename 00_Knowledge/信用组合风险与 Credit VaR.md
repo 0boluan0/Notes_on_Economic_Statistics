@@ -17,25 +17,23 @@ status: source-checked
 > **核心难点：** 单体 PD/LGD 不够，尾部由违约依赖、敞口集中、迁移、市值重估和参数不确定性共同决定。
 > **为什么重要：** 资本、组合限额、行业集中与信用风险转移关注的是坏状态中的共同损失，而不是逐笔平均相加。
 > **继续：** 单体参数见 [[信用风险：PD、LGD、EAD 与评级迁移]]；风险度量定义见 [[VaR、ES 与回测]]；依赖建模见 [[相关性、Copula 与尾部依赖]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** It combines default, rating migration, and common systematic factors across many borrowers into a loss distribution and separates tail unexpected loss and concentration from average expected loss.
 > **Concrete anchor:** Two loans each have 1% PD. If independent, joint default is about 0.01%; if both are driven by the same property shock, joint default probability can be far above the independence product.
 > **Central difficulty:** Individual PD and LGD are insufficient. Tail risk jointly depends on default dependence, exposure concentration, migration, mark-to-market change, and parameter uncertainty.
 > **Why it matters:** Capital, portfolio limits, industry concentration, and credit-risk transfer concern common losses in bad states rather than a sum of stand-alone averages.
 > **Continue:** For single-name parameters, see [[信用风险：PD、LGD、EAD 与评级迁移|Credit Risk: PD, LGD, EAD, and Rating Migration]]. For risk-measure definitions, see [[VaR、ES 与回测|VaR, Expected Shortfall, and Backtesting]]. For dependence modeling, see [[相关性、Copula 与尾部依赖|Correlation, Copulas, and Tail Dependence]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。
 > - [Basel Framework](https://www.bis.org/basel_framework/)：核验资本、市场风险、信用风险、CVA 与监管口径。
 > - Hull, *Risk Management and Financial Institutions*：交叉核验 VaR、ES、Greek、利率风险、信用风险与模拟方法。
-<!-- bilingual-en:start -->
-> [!source] Basis for this section
+> <!-- bilingual-en:start -->
 > - The vault's Financial Institutions and Risk Management course notes support course scope, classroom examples, and notation.
 > - The [Basel Framework](https://www.bis.org/basel_framework/) verifies regulatory conventions for capital, market risk, credit risk, and CVA.
 > - Hull, *Risk Management and Financial Institutions*, cross-checks VaR, ES, Greeks, interest-rate risk, credit risk, and simulation methods.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 预期损失与意外损失
 <!-- bilingual-en:start -->
@@ -130,10 +128,9 @@ Portfolio A has 100 loans of one unit each, each with PD 1% and LGD 100%, approx
 
 > [!answer]- 答案
 > 预期损失是平均可预见损失，通常由定价/拨备覆盖；信用 VaR/资本关注尾部意外损失。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Expected loss is the average foreseeable loss normally covered by pricing and provisions; credit VaR and capital focus on tail unexpected loss.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么信用组合相关很重要？
 <!-- bilingual-en:start -->
@@ -142,10 +139,9 @@ Portfolio A has 100 loans of one unit each, each with PD 1% and LGD 100%, approx
 
 > [!answer]- 答案
 > 违约共同发生会使损失无法靠分散平均，尾部集中度和资本需求显著上升。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Joint defaults prevent losses from averaging away through diversification and materially raise tail concentration and capital needs.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话解释：为什么 100 笔小贷款与一笔同额大贷款即使 EL 相同也不等价？
 <!-- bilingual-en:start -->
@@ -154,10 +150,9 @@ Portfolio A has 100 loans of one unit each, each with PD 1% and LGD 100%, approx
 
 > [!answer]- 答案
 > 小贷款若依赖较低，个别违约可被大量存续贷款平均；单笔大贷款一旦违约便一次损失全部集中，尾部分布与风险贡献完全不同。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > If small loans have limited dependence, individual defaults are averaged against many survivors. One large loan produces a concentrated full loss upon default, giving a very different tail distribution and risk contribution.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

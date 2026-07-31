@@ -6,7 +6,6 @@
 >[!note] 本章主线
 > 本章把线性回归写成矩阵形式。重点不是重新学习计量经济学，而是用矩阵表达 OLS、残差、平方和分解和显著性检验。
 > <!-- bilingual-en:start -->
-> [!note] Chapter backbone
 > This chapter expresses linear regression in matrix form. The aim is not to relearn econometrics, but to represent OLS, residuals, the decomposition of sums of squares, and significance tests with matrices.
 > <!-- bilingual-en:end -->
 
@@ -66,7 +65,6 @@ where:
 >[!attention] 边界
 > 这里的“多元线性回归”按本课语境主要是多个解释变量、一个响应变量。英文里 multivariate regression 有时指多个响应变量，阅读时要看上下文。
 > <!-- bilingual-en:start -->
-> [!attention] Scope
 > In this course, the term used in the Chinese title mainly means several explanatory variables with one response. In English, *multivariate regression* can instead refer to several response variables, so the intended meaning must be inferred from context.
 > <!-- bilingual-en:end -->
 
@@ -149,7 +147,6 @@ $$
 >[!note] 解读
 > $R^2$ 衡量样本内拟合比例，取值在 $[0,1]$。它不是因果强度，也不能单独证明模型正确。
 > <!-- bilingual-en:start -->
-> [!note] Interpretation
 > $R^2$ measures the share of in-sample variation fitted by the model and lies in $[0,1]$. It is not a measure of causal strength and cannot, by itself, establish that the model is correct.
 > <!-- bilingual-en:end -->
 
@@ -219,9 +216,9 @@ $$
 *1.8. Related Cards*
 <!-- bilingual-en:end -->
 
-- [[Multivariate Linear Regression]]
-- [[OLS Basics]]
-- [[OLS Estimator]]
-- [[Residual]]
-- [[F-test]]
-- [[t Test]]
+- [[多元线性回归#模型与维度|Multivariate Linear Regression]]
+- [[OLS 线性回归#模型、条件均值与线性投影|OLS Basics]]
+- [[多元线性回归#最小二乘估计|OLS Estimator]]
+- [[多元线性回归#诊断与边界|Residual]]
+- [[多元线性回归#线性假设与解释|F-test]]
+- [[多元线性回归#线性假设与解释|t Test]]

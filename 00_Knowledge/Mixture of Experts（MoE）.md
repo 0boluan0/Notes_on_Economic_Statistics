@@ -110,10 +110,9 @@ Changing top-1 to top-2 can improve redundancy and expressiveness, but roughly i
 
 > [!answer]- 答案
 > 总 expert 参数很多，但 router 对每个 token 只激活少数 expert；代价转向路由、容量和通信。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The total expert parameter set is large, but the router activates only a few experts for each token; costs shift toward routing, capacity, and communication.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么负载均衡损失不能无限增大？
 <!-- bilingual-en:start -->
@@ -122,10 +121,9 @@ Changing top-1 to top-2 can improve redundancy and expressiveness, but roughly i
 
 > [!answer]- 答案
 > 强制完全均匀会压制由数据产生的有意义专门化，而且辅助目标可能与主语言建模目标冲突。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Enforcing perfect uniformity suppresses meaningful data-driven specialization, and the auxiliary objective can conflict with the main language-modeling objective.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 哪些指标能区分算术节省与系统真正加速？
 <!-- bilingual-en:start -->
@@ -134,10 +132,9 @@ Changing top-1 to top-2 can improve redundancy and expressiveness, but roughly i
 
 > [!answer]- 答案
 > 同时报 active FLOPs、路由分布、token drop、all-to-all 时间、设备利用率、端到端吞吐/延迟和质量。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Report active FLOPs, routing distribution, token drops, all-to-all time, device utilization, end-to-end throughput or latency, and quality together.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

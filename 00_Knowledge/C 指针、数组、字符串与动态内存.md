@@ -127,10 +127,9 @@ AddressSanitizer is effective at detecting out-of-bounds access and use-after-fr
 
 > [!answer]- 答案
 > 数组是固定数量元素的对象；多数表达式中会转换为首元素指针，转换后长度和数组对象语义丢失。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > An array is an object containing a fixed number of elements. In most expressions it converts to a pointer to the first element, after which length and array-object semantics are lost.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### `malloc` 成功后最少需要管理什么？
 <!-- bilingual-en:start -->
@@ -139,10 +138,9 @@ AddressSanitizer is effective at detecting out-of-bounds access and use-after-fr
 
 > [!answer]- 答案
 > 分配大小和类型、空返回、初始化、唯一所有权、所有访问边界以及恰好一次释放。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Allocation size and type, null failure, initialization, unique ownership, every access bound, and exactly one release.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么只把释放后的指针设成 `NULL` 不能消除 use-after-free？
 <!-- bilingual-en:start -->
@@ -151,10 +149,9 @@ AddressSanitizer is effective at detecting out-of-bounds access and use-after-fr
 
 > [!answer]- 答案
 > 其他别名仍可能保存旧地址；根本办法是控制所有权与借用生命周期，而不只是修改一个名称。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Other aliases may still retain the old address; the root solution is controlling ownership and borrowing lifetimes, not changing one name.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

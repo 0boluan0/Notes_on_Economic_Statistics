@@ -17,23 +17,21 @@ status: source-checked
 > **核心难点：** 检验对象是均值向量或其线性对比，统计量依赖组内协方差与样本量；显著后仍需解释差异方向。
 > **为什么重要：** 它把“总体是否有多维差异”和“哪些变量/对比驱动差异”分成两个层次。
 > **继续：** 先掌握 Hotelling $T^2$，再进入 MANOVA；多个连续响应的建模见 [[多元线性回归]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** It compares a population mean vector, or two mean vectors, while accounting for correlation among outcomes.
 > **Concrete anchor:** An educational programme may affect mathematics, reading, and writing scores jointly. Three separate t-tests ignore their correlation and inflate the chance of at least one false positive.
 > **Central difficulty:** The target is an entire mean vector or a prespecified linear contrast. The statistic depends on covariance and sample size, and a significant omnibus result still requires localisation.
 > **Why it matters:** It separates the global question of whether a multidimensional difference exists from the follow-up question of which outcomes or contrasts create it.
 > **Continue with:** Use [[MANOVA 多元方差分析|MANOVA]] when more than two groups or factorial effects are the target, and [[多元线性回归|multivariate linear regression]] for general predictor matrices.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - [Penn State STAT 505](https://online.stat.psu.edu/stat505/)：核验多元正态、均值推断、MANOVA、PCA、因子分析、判别与聚类的定义和使用条件。
 > - Johnson & Wichern, *Applied Multivariate Statistical Analysis*, 6th ed.：核验矩阵公式与抽样分布。
-<!-- bilingual-en:start -->
-> [!source] Sources for this section
+> <!-- bilingual-en:start -->
 > - [Penn State STAT 505](https://online.stat.psu.edu/stat505/) was checked for the definitions and assumptions of multivariate mean inference.
 > - Johnson and Wichern, *Applied Multivariate Statistical Analysis*, 6th ed., was checked for matrix formulas and exact sampling distributions.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 单总体 Hotelling $T^2$
 <!-- bilingual-en:start -->
@@ -124,10 +122,9 @@ The ellipsoid answers where the whole vector may lie; an interval answers where 
 
 > [!answer]- 答案
 > 它忽略变量相关结构且若不校正会膨胀家族错误率；多元检验针对整个均值向量。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > They ignore dependence among outcomes and, without adjustment, inflate family-wise error. A multivariate test targets the mean vector as a whole.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 配对多元数据为什么先取差向量？
 <!-- bilingual-en:start -->
@@ -136,10 +133,9 @@ The ellipsoid answers where the whole vector may lie; an interval answers where 
 
 > [!answer]- 答案
 > 配对依赖由同一对象内的差消化，问题转成差向量总体均值是否为零。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Within-unit differencing absorbs the paired dependence and turns the question into whether the population mean of the difference vector is zero.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么 $p\ge n$ 时不能直接做经典 Hotelling $T^2$？
 <!-- bilingual-en:start -->
@@ -148,10 +144,9 @@ The ellipsoid answers where the whole vector may lie; an interval answers where 
 
 > [!answer]- 答案
 > 中心化样本协方差的秩至多为 $n-1$，因而 $S$ 奇异、$S^{-1}$ 不存在，参考 F 分布的自由度也失效。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > A centred sample covariance matrix has rank at most $n-1$, so $S$ is singular, $S^{-1}$ does not exist, and the reference $F$ distribution no longer has valid degrees of freedom.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话说明“全局显著”为什么不等于“每个响应都显著”。
 <!-- bilingual-en:start -->
@@ -160,10 +155,9 @@ The ellipsoid answers where the whole vector may lie; an interval answers where 
 
 > [!answer]- 答案
 > 全局检验可由某一个响应或几个响应的线性组合驱动；它只否定整个均值向量假设，并没有分别否定每个分量假设。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The global result may be driven by one outcome or by a linear combination of several outcomes. It rejects a vector hypothesis, not every componentwise hypothesis separately.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

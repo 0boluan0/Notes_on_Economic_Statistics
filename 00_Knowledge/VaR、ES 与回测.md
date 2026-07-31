@@ -18,27 +18,25 @@ status: source-checked
 > **核心难点：** VaR 不告诉你越过门槛后亏多少，ES 尾部信息更完整却更难估准；两者都依赖损失符号、期限、置信度、数据与模型。
 > **为什么重要：** 风险限额、资本和跨组合沟通需要共同口径，但只有把预测和回测闭环，数字才具有可诊断意义。
 > **继续：** 分布估计方法见 [[历史模拟与 Monte Carlo 风险模拟]] 和 [[极值理论 EVT 与尾部风险]]；模型覆盖不到的结构断点见 [[压力测试与逆向压力测试]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** It summarizes the loss distribution through a horizon-specific quantile and tail mean and uses realized profit and loss to test whether forecasts cover at the right rate and whether breaches cluster over time.
 > **Concrete anchor:** A one-day 99% VaR of one million means that under the model roughly 1% of trading days lose more than one million. It never means the maximum possible loss is one million.
 > **Central difficulty:** VaR says nothing about loss magnitude beyond the threshold, while ES provides richer tail information but is harder to estimate. Both depend on loss sign, horizon, confidence, data, and model.
 > **Why it matters:** Limits, capital, and cross-portfolio communication need common conventions, but the number becomes diagnostically meaningful only when prediction is closed with backtesting.
 > **Continue:** For distribution-estimation methods, see [[历史模拟与 Monte Carlo 风险模拟|Historical and Monte Carlo Risk Simulation]] and [[极值理论 EVT 与尾部风险|Extreme Value Theory and Tail Risk]]. For structural breaks outside model coverage, see [[压力测试与逆向压力测试|Stress Testing and Reverse Stress Testing]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。
 > - [Basel Framework](https://www.bis.org/basel_framework/)：核验资本、市场风险、信用风险、CVA 与监管口径。
 > - Hull, *Risk Management and Financial Institutions*：交叉核验 VaR、ES、Greek、利率风险、信用风险与模拟方法。
 > - Artzner 等（1999）《[Coherent Measures of Risk](https://doi.org/10.1111/1467-9965.00068)》：核验一致风险度量与 VaR 次可加性的边界。
-<!-- bilingual-en:start -->
-> [!source] Basis for this section
+> <!-- bilingual-en:start -->
 > - The vault's Financial Institutions and Risk Management course notes support course scope, classroom examples, and notation.
 > - The [Basel Framework](https://www.bis.org/basel_framework/) verifies regulatory conventions for capital, market risk, credit risk, and CVA.
 > - Hull, *Risk Management and Financial Institutions*, cross-checks VaR, ES, Greeks, interest-rate risk, credit risk, and simulation methods.
 > - Artzner et al. (1999), “[Coherent Measures of Risk](https://doi.org/10.1111/1467-9965.00068),” verifies coherent risk measures and the boundary of VaR subadditivity.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 先固定随机变量与口径
 <!-- bilingual-en:start -->
@@ -135,24 +133,6 @@ Evaluate ES jointly with the corresponding VaR by comparing exception losses wit
 Report method, data period, horizon, confidence, covered assets, major assumptions, and recent exceptions together. A VaR number without this context is uninterpretable.
 <!-- bilingual-en:end -->
 
-## 从原主题保留的全局定位
-<!-- bilingual-en:start -->
-*Global orientation retained from the original topic*
-<!-- bilingual-en:end -->
-
-> **它解决什么：** VaR 给定期限和置信水平的损失分位点，ES 给超过该分位后平均损失；回测和压力测试检查模型在历史与极端情景中的表现。
-> **具体锚点：** 一日 99% VaR 为 100 万表示模型下约 1% 日损失超过 100 万，不表示“最多亏 100 万”。
-> **核心难点：** VaR 不描述分位点以外损失多大且一般不次可加；ES 看尾部但估计更噪。二者都依赖数据、持有期和模型。
-> **为什么重要：** 风险限额、资本和沟通需要统一口径，但单一数字不能替代情景与流动性判断。
-> **继续：** 先固定损失符号、期限和置信度，再选择方法并回测；尾部建模见 [[极值理论 EVT 与尾部风险|历史模拟、蒙特卡罗与极值理论]]。
-<!-- bilingual-en:start -->
-> **What it solves:** VaR gives a loss quantile at a specified horizon and confidence, ES gives the average loss beyond that quantile, and backtesting plus stress testing examine performance in historical data and extreme scenarios.
-> **Concrete anchor:** A one-day 99% VaR of one million means that under the model about 1% of daily losses exceed one million; it does not mean the maximum loss is one million.
-> **Central difficulty:** VaR does not describe loss magnitude beyond the quantile and is not generally subadditive; ES describes the tail but is noisier to estimate. Both depend on data, horizon, and model.
-> **Why it matters:** Limits, capital, and communication need common conventions, but one number cannot replace scenario and liquidity judgment.
-> **Continue:** Fix loss sign, horizon, and confidence before choosing and backtesting a method. For tail modeling, see [[极值理论 EVT 与尾部风险|Extreme Value Theory and Tail Risk]].
-<!-- bilingual-en:end -->
-
 ## 失败诊断
 <!-- bilingual-en:start -->
 *Failure diagnosis*
@@ -181,10 +161,9 @@ Report method, data period, horizon, confidence, covered assets, major assumptio
 
 > [!answer]- 答案
 > 把它说成最大损失；正确是模型下约 1% 情况损失会超过该阈值，超出幅度未由 VaR 给出。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Calling it the maximum loss. Correctly interpreted, about 1% of model outcomes exceed the threshold, and VaR does not specify by how much.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### ES 相比 VaR 增加了什么信息？
 <!-- bilingual-en:start -->
@@ -193,10 +172,9 @@ Report method, data period, horizon, confidence, covered assets, major assumptio
 
 > [!answer]- 答案
 > 它描述进入最坏尾部后平均损失大小，而不仅是进入尾部的门槛。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It describes the average loss after entering the worst tail rather than only the threshold for entering it.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 回测 exception 数量正确为何仍可能模型有问题？
 <!-- bilingual-en:start -->
@@ -205,10 +183,9 @@ Report method, data period, horizon, confidence, covered assets, major assumptio
 
 > [!answer]- 答案
 > exception 可能时间聚集、特定因子集中或超越损失过大；还需独立性和尾部大小诊断。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Exceptions may cluster in time, concentrate in one factor, or have excessive magnitude; independence and tail-size diagnostics are also needed.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话解释：为什么 ES 更关注尾部却不必更容易验证？
 <!-- bilingual-en:start -->
@@ -217,10 +194,9 @@ Report method, data period, horizon, confidence, covered assets, major assumptio
 
 > [!answer]- 答案
 > ES 需要估计罕见超越事件的平均大小；有效样本远少于中部观测，少数极端值又影响很大，所以估计方差和检验不确定性更高。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > ES estimates the average magnitude of rare exceedances. There are far fewer effective tail observations than central observations, and a few extremes have large influence, so estimation variance and testing uncertainty are higher.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

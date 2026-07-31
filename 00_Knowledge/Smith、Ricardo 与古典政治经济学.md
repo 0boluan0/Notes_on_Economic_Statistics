@@ -17,23 +17,21 @@ status: source-checked
 > **核心难点：** 不能把 Smith 缩成“看不见的手”，也不能把 Ricardo 缩成“比较优势”；两人都在处理长期价格、积累、阶级收入与制度。
 > **为什么重要：** 现代的生产率、经济增长、贸易和功能分配问题，仍在重复他们建立的许多分析对象。
 > **继续：** Marx 如何从劳动力商品、剩余价值与资本循环重写积累，见 [[Marx 的价值、剩余与资本积累]]；价值分析如何转向边际选择，见 [[边际革命与 Marshall 综合]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** Smith explains how division of labor, market extent, capital accumulation, and institutions enlarge national wealth. Ricardo explains how wages, profits, and rent are distributed during growth.
 > **Concrete anchor:** Smith's pin factory shows specialization sharply raising labor productivity, while the division of labor remains limited by market extent. Ricardo's marginal-land analysis shows expanding population and food demand raising rent and squeezing profit.
 > **Central difficulty:** Smith cannot be reduced to the “invisible hand,” nor Ricardo to “comparative advantage.” Both analyze long-run prices, accumulation, class incomes, and institutions.
 > **Why it matters:** Modern questions of productivity, growth, trade, and functional income distribution still revisit many objects they established.
 > **Continue:** For Marx's reformulation of accumulation through labor power, surplus value, and capital circulation, see [[Marx 的价值、剩余与资本积累|Marx on Value, Surplus, and Capital Accumulation]]. For the shift from value to marginal choice, see [[边际革命与 Marshall 综合|The Marginal Revolution and Marshallian Synthesis]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - Smith, *[The Wealth of Nations](https://www.econlib.org/library/Smith/smWN.html)*：核验分工、市场范围、自然/市场价格、资本积累与制度论述。
 > - Ricardo, *[On the Principles of Political Economy and Taxation](https://www.econlib.org/library/Ricardo/ricP.html)*：核验地租、工资—利润分配与比较成本。
-<!-- bilingual-en:start -->
-> [!source] Basis for this section
+> <!-- bilingual-en:start -->
 > - Smith's *[The Wealth of Nations](https://www.econlib.org/library/Smith/smWN.html)* verifies division of labor, market extent, natural and market prices, capital accumulation, and institutional arguments.
 > - Ricardo's *[On the Principles of Political Economy and Taxation](https://www.econlib.org/library/Ricardo/ricP.html)* verifies rent, wage–profit distribution, and comparative cost.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## Smith 的分工、市场与积累
 <!-- bilingual-en:start -->
@@ -111,10 +109,9 @@ The example establishes potential aggregate gains given technologies, complete a
 
 > [!answer]- 答案
 > 专门从事一个极细任务需要足够多购买者吸收产出；交通、城市或贸易扩大需求后，更细分工才可存续。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Specializing in a very narrow task requires enough buyers to absorb output. Transport, cities, or trade expand demand and make finer specialization sustainable.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 在算例中，为什么 A 在两种商品上都更高效，B 仍可在酒上有比较优势？
 <!-- bilingual-en:start -->
@@ -123,10 +120,9 @@ The example establishes potential aggregate gains given technologies, complete a
 
 > [!answer]- 答案
 > 因为比较优势看相对机会成本；B 牺牲 1.5 布便可生产 1 酒，少于 A 的 2 布。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Comparative advantage uses relative opportunity cost. B gives up 1.5 cloth for one wine, less than A's 2 cloth.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### Ricardo 的边际土地为什么把地租与利润联系起来？
 <!-- bilingual-en:start -->
@@ -135,10 +131,9 @@ The example establishes potential aggregate gains given technologies, complete a
 
 > [!answer]- 答案
 > 更劣土地进入使粮食的边际成本上升，较优土地获得差额地租；粮食变贵又可推高维持实际工资的成本，从而挤压利润。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Cultivating inferior land raises marginal food cost and creates differential rent on better land. Dearer food can also raise the cost of maintaining real wages, squeezing profit.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

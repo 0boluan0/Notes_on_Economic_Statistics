@@ -17,23 +17,21 @@ status: source-checked
 > **核心难点：** 不同教材对尺度与逆尺度参数化不同；自由度不足时矩阵必奇异，不能套用需要求逆的公式。
 > **为什么重要：** Hotelling $T^2$、MANOVA、Gaussian covariance estimation 和 Bayesian inverse-Wishart 模型都以此为基础。
 > **继续：** 先掌握 [[多元正态分布]] 和 [[多元数据、随机向量与样本协方差]]，再核对参数化与秩条件。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** It describes random variation in the covariance matrix of a multivariate normal sample and supplies sampling distributions for multivariate mean tests, covariance tests, and discriminant analysis.
 > **Concrete anchor:** A scaled sample variance from a univariate normal sample has a $\chi^2$ distribution. In several dimensions, squared terms become sums of outer products, producing the Wishart distribution.
 > **Central difficulty:** Textbooks use different scale and inverse-scale parameterisations. With insufficient degrees of freedom, the matrix is necessarily singular and formulas requiring inversion do not apply.
 > **Why it matters:** Hotelling's $T^2$, MANOVA, Gaussian covariance estimation, and Bayesian inverse-Wishart models all rely on it.
 > **Continue with:** First master [[多元正态分布|the multivariate normal distribution]] and [[多元数据、随机向量与样本协方差|multivariate data and sample covariance]], then check parameterisation and rank conditions.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - [Penn State STAT 505, Lessons 4–7](https://online.stat.psu.edu/stat505/)：核验正态抽样下样本均值、样本协方差与多元推断。
 > - Johnson & Wichern, *Applied Multivariate Statistical Analysis*, 6th ed.：核验 Wishart 参数化、矩与秩条件。
-<!-- bilingual-en:start -->
-> [!source] Sources for this section
+> <!-- bilingual-en:start -->
 > - [Penn State STAT 505, Lessons 4–7](https://online.stat.psu.edu/stat505/) was used to verify sample means, sample covariance, and multivariate inference under normal sampling.
 > - Johnson and Wichern, *Applied Multivariate Statistical Analysis*, 6th ed., was used to verify Wishart parameterisation, moments, and rank conditions.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## Wishart 与样本协方差
 <!-- bilingual-en:start -->
@@ -97,10 +95,9 @@ Wishart results rely on an iid multivariate normal sample. Heavy tails, correlat
 
 > [!answer]- 答案
 > 它描述正态样本协方差矩阵的抽样波动，类似卡方分布描述一元样本方差。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It describes sampling variation in the covariance matrix of a normal sample, analogous to the way a chi-square distribution describes a univariate sample variance.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么 $n\le p$ 时样本协方差必然奇异？
 <!-- bilingual-en:start -->
@@ -109,10 +106,9 @@ Wishart results rely on an iid multivariate normal sample. Heavy tails, correlat
 
 > [!answer]- 答案
 > 中心化后的 n 个向量最多张成 n−1 维空间，外积和的秩至多 n−1，小于 p。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > After centring, $n$ vectors span at most an $(n-1)$-dimensional space. Their sum of outer products therefore has rank at most $n-1<p$.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 使用 Wishart 软件函数前为何必须核对参数化？
 <!-- bilingual-en:start -->
@@ -121,10 +117,9 @@ Wishart results rely on an iid multivariate normal sample. Heavy tails, correlat
 
 > [!answer]- 答案
 > 不同定义把参数写成尺度或逆尺度，期望与密度中的矩阵位置随之改变；混用会得到系统性错误。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Different definitions use a scale or inverse scale, changing where the matrix appears in expectations and densities. Mixing conventions produces systematic errors.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

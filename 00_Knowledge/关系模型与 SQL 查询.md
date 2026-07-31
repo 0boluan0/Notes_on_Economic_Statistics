@@ -12,7 +12,7 @@ status: source-checked
 <!-- bilingual-en:end -->
 
 > [!summary] 快速恢复
-> **它解决什么：** 用表、键和声明式查询从关系数据中筛选、连接、聚合，并在并发更新下保持约束。
+> **它解决什么：** 用表、键和声明式查询从关系数据中筛选、连接、聚合，得到粒度明确且可解释的结果。
 > **具体锚点：** `JOIN` 不是把两张表“贴上”，而是按条件形成匹配行；一对多连接会增加行数并可能重复聚合。
 > **核心难点：** SQL 是集合/多重集语义，`NULL` 使用三值逻辑；查询结果正确性取决于粒度和键。
 > **为什么重要：** 在分析前弄清一行代表什么，比写出能运行的查询更重要。
@@ -23,12 +23,6 @@ status: source-checked
 > **Central difficulty:** SQL uses set or multiset semantics, while `NULL` participates in three-valued logic; query correctness depends on row grain and keys.
 > **Why it matters:** Establishing what one row represents matters more than producing a query that happens to run.
 > **Continue with:** Define table grain and primary/foreign keys, then reason through FROM/JOIN/WHERE/GROUP/HAVING/SELECT in logical order.
-> <!-- bilingual-en:end -->
-
-> [!source] 本节依据
-> - [MIT Missing Semester official course](https://missing.csail.mit.edu/2020/) 与本地练习：支持 shell、Git、调试、构建与安全工作流。
-> <!-- bilingual-en:start -->
-> - The [official MIT Missing Semester course](https://missing.csail.mit.edu/2020/) and local exercises support shell, Git, debugging, build, and security workflows; this retained legacy source line does not substantiate SQL claims.
 > <!-- bilingual-en:end -->
 
 > [!source] SQL 核验依据
@@ -149,10 +143,9 @@ GROUP BY o.customer_id;
 
 > [!answer]- 答案
 > 一侧金额会随多侧匹配行重复，若直接求和会重复计；应先按正确粒度聚合或明确分配。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The value on the “one” side is repeated for each matching row on the “many” side, so direct summation double-counts it; aggregate to the intended grain first or define an explicit allocation.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### `COUNT(*)` 与 `COUNT(col)` 有何差别？
 <!-- bilingual-en:start -->
@@ -161,10 +154,9 @@ GROUP BY o.customer_id;
 
 > [!answer]- 答案
 > 前者计所有行，后者只计该列非 NULL 的行。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The former counts every row; the latter counts only rows where that column is not `NULL`.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么无 `ORDER BY` 的结果不能当成稳定顺序？
 <!-- bilingual-en:start -->
@@ -173,20 +165,15 @@ GROUP BY o.customer_id;
 
 > [!answer]- 答案
 > 关系本身没有顺序，执行计划、并行与存储布局都可改变返回次序；只有显式排序建立契约。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > A relation is unordered, and plan choice, parallelism, or storage layout can alter output order; only an explicit ordering creates that contract.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->
 *Sources and Verification*
 <!-- bilingual-en:end -->
 
-- [MIT Missing Semester official course](https://missing.csail.mit.edu/2020/) 与本地练习：支持 shell、Git、调试、构建与安全工作流。
-  <!-- bilingual-en:start -->
-  The [official MIT Missing Semester course](https://missing.csail.mit.edu/2020/) and local exercises support shell, Git, debugging, build, and security workflows; this retained legacy line is not used as evidence for SQL.
-  <!-- bilingual-en:end -->
 - [PostgreSQL SQL Language documentation](https://www.postgresql.org/docs/current/sql.html)：核验 SELECT 处理、数据定义、函数与类型语义。
   <!-- bilingual-en:start -->
   The [PostgreSQL SQL Language documentation](https://www.postgresql.org/docs/current/sql.html) verifies SELECT processing, data definition, functions, and type semantics.

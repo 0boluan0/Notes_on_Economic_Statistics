@@ -6,14 +6,12 @@
 >[!note] 本章主线
 > 多元正态分布是后续 Hotelling $T^2$、Wishart 分布、判别分析和多元正态性检验的基础。复习时抓住三个对象：均值向量 $\mu$、协方差矩阵 $\Sigma$、二次型 $(X-\mu)'\Sigma^{-1}(X-\mu)$。
 > <!-- bilingual-en:start -->
-> [!note] Chapter roadmap
 > The multivariate normal distribution underpins Hotelling's $T^2$, the Wishart distribution, discriminant analysis, and tests of multivariate normality. For review, focus on three objects: the mean vector $\mu$, the covariance matrix $\Sigma$, and the quadratic form $(X-\mu)'\Sigma^{-1}(X-\mu)$.
 > <!-- bilingual-en:end -->
 
 >[!note] 课堂提示
 > 旧笔记标注“证明不要求掌握，但要知道关键性质”。因此本章整理以定义、性质、公式识别和应用为主。
 > <!-- bilingual-en:start -->
-> [!note] Classroom guidance
 > The original note says that proofs are not required, but the key properties must be understood. This chapter therefore emphasizes definitions, properties, recognition of formulas, and applications.
 > <!-- bilingual-en:end -->
 
@@ -112,7 +110,6 @@ Here:
 >[!attention] 条件
 > 这里的密度公式要求 $\Sigma$ 正定，因此 $|\Sigma|>0$ 且 $\Sigma^{-1}$ 存在。
 > <!-- bilingual-en:start -->
-> [!attention] Condition
 > This density formula requires $\Sigma$ to be positive definite, so $|\Sigma|>0$ and $\Sigma^{-1}$ exists.
 > <!-- bilingual-en:end -->
 
@@ -286,7 +283,6 @@ $$
 >[!note] 记忆点
 > 条件均值会随 $x_2-\mu_2$ 变化；条件协方差只由 $\Sigma$ 的分块决定。
 > <!-- bilingual-en:start -->
-> [!note] Key point to remember
 > The conditional mean changes with $x_2-\mu_2$, whereas the conditional covariance depends only on the blocks of $\Sigma$.
 > <!-- bilingual-en:end -->
 
@@ -433,7 +429,6 @@ $$
 >[!attention] 分母区别
 > MLE 用 $n$；无偏样本协方差矩阵用 $n-1$。考试中要看题目问的是 MLE 还是 sample covariance。
 > <!-- bilingual-en:start -->
-> [!attention] Different denominators
 > The MLE uses $n$, whereas the unbiased sample covariance matrix uses $n-1$. In an exam, check whether the question asks for the MLE or the sample covariance.
 > <!-- bilingual-en:end -->
 
@@ -602,7 +597,6 @@ A common procedure is to:
 >[!attention] 诊断边界
 > 单变量正态不保证多元正态；多元异常点也可能不在任何单变量图里显得极端。
 > <!-- bilingual-en:start -->
-> [!attention] Diagnostic boundary
 > Univariate normality does not guarantee multivariate normality, and a multivariate outlier may not look extreme in any individual variable plot.
 > <!-- bilingual-en:end -->
 
@@ -611,11 +605,11 @@ A common procedure is to:
 *Related Cards*
 <!-- bilingual-en:end -->
 
-- [[Multivariate Normal Distribution]]
-- [[Bivariate Normal Distribution]]
-- [[Conditional Multivariate Normal Distribution]]
-- [[Mahalanobis Distance]]
-- [[Wishart Distribution]]
-- [[Multivariate Normality Check]]
-- [[Chi-square Distribution]]
-- [[Matrix Square Root]]
+- [[多元正态分布#密度与椭球几何|Multivariate Normal Distribution]]
+- [[多元正态分布#边际、条件与独立|Bivariate Normal Distribution]]
+- [[多元正态分布#边际、条件与独立|Conditional Multivariate Normal Distribution]]
+- [[多元数据、随机向量与样本协方差#距离与几何|Mahalanobis Distance]]
+- [[Wishart 分布与样本协方差推断|Wishart Distribution]]
+- [[多元正态分布#正态性诊断|Multivariate Normality Check]]
+- [[多元正态分布#二次型与卡方|Chi-square Distribution]]
+- [[对称矩阵与正定二次型#二次型与正定性|Matrix Square Root]]

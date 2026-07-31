@@ -12,17 +12,17 @@ status: source-checked
 <!-- bilingual-en:end -->
 
 > [!summary] 快速恢复
-> **它解决什么：** 用 Git 保存可解释的历史，用系统化调试定位根因，用构建/依赖工具复现结果，并在密码学威胁模型下保护数据。
+> **它解决什么：** 用 Git 把项目状态保存成可追踪的快照图，从而比较、分支、合并和安全回退。
 > **具体锚点：** Git commit 是项目快照及父指针，不是“文件差异袋”；分支只是可移动的 commit 名称。
-> **核心难点：** 工具解决不同层级：版本控制不等备份，测试不等安全，哈希不等加密。
-> **为什么重要：** 可靠开发来自可回退、可复现、可验证和最小权限，而不是记命令。
-> **继续：** 先建立 Git 数据模型和调试循环，再理解依赖/CI 与密码学原语的用途边界。
+> **核心难点：** 工作区、暂存区、commit、branch、HEAD 和远程引用是不同状态；命令的安全性取决于它改动图中的哪一层。
+> **为什么重要：** 理解数据模型后，恢复、协作和处理冲突都不再依赖死记命令；同时也能看清版本控制不等于备份。
+> **继续：** 先建立 object/commit/ref 模型，再练习 staging、分支、合并与恢复；调试、构建和安全分别见对应知识文件。
 > <!-- bilingual-en:start -->
-> **Problem addressed:** Use Git for explainable history, systematic debugging for root causes, build and dependency tools for reproducibility, and a cryptographic threat model for data protection.
+> **Problem addressed:** Store project states as a traceable snapshot graph so they can be compared, branched, merged, and safely restored.
 > **Concrete anchor:** A Git commit is a project snapshot plus parent links, not a bag of file differences; a branch is merely a movable name for a commit.
-> **Central difficulty:** These tools operate at different layers: version control is not backup, testing is not security, and hashing is not encryption.
-> **Why it matters:** Reliable development comes from recoverability, reproducibility, verification, and least privilege rather than memorizing commands.
-> **Continue with:** Establish the Git data model here, use [[测试、调试、异常与断言|testing and debugging]] for failures, then continue to [[构建、依赖与 CI|Builds, Dependencies, and CI]] and [[密码学原语与安全模型|Cryptographic Primitives and Security Models]].
+> **Central difficulty:** The working tree, index, commits, branches, HEAD, and remote references are distinct states; a command's safety depends on which layer it changes.
+> **Why it matters:** Once the data model is clear, recovery, collaboration, and conflict handling no longer depend on memorized commands, and it becomes obvious why version control is not backup.
+> **Continue with:** Build the object–commit–reference model, then practice staging, branching, merging, and recovery; use [[测试、调试、异常与断言|Testing and Debugging]], [[构建、依赖与 CI|Builds, Dependencies, and CI]], and [[密码学原语与安全模型|Cryptographic Primitives and Security Models]] for their separate concerns.
 > <!-- bilingual-en:end -->
 
 > [!source] 本节依据
@@ -111,10 +111,9 @@ If a faulty commit has been pushed and others have built on it, `git revert <com
 
 > [!answer]- 答案
 > 一个可移动的名字/引用，指向某个 commit；提交后该引用前移。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It is a movable name or reference to a commit; making a new commit advances the current branch reference.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么 commit 不是 diff？
 <!-- bilingual-en:start -->
@@ -123,10 +122,9 @@ If a faulty commit has been pushed and others have built on it, `git revert <com
 
 > [!answer]- 答案
 > commit 指向完整 tree 和父节点；diff 是选择两个快照后计算出的比较视图。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > A commit points to a complete tree and its parents; a diff is a comparison view computed after choosing two snapshots.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 已共享提交为什么通常用 revert 而非 reset？
 <!-- bilingual-en:start -->
@@ -135,10 +133,9 @@ If a faulty commit has been pushed and others have built on it, `git revert <com
 
 > [!answer]- 答案
 > revert 追加可追踪的反向提交，不改他人已依赖的历史；reset 会移动引用并可能要求危险的强制推送。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Revert appends a traceable inverse commit without rewriting history on which others rely; reset moves a reference and may require a dangerous force push.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

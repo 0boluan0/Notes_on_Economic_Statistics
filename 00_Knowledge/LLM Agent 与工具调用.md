@@ -152,10 +152,9 @@ Reproducible evaluation fixes the initial environment state, tool versions, and 
 
 > [!answer]- 答案
 > 任务能由一次模型回答或确定性函数完成、无需跨步骤环境反馈时，Agent 只增加失败面。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > When one model response or a deterministic function completes the task without multi-step environmental feedback, an agent only adds failure surface.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 给能删除文件的 Agent 加一步数上限是否足够安全？
 <!-- bilingual-en:start -->
@@ -164,10 +163,9 @@ Reproducible evaluation fixes the initial environment state, tool versions, and 
 
 > [!answer]- 答案
 > 不够；还需精确目标解析、权限限制、可恢复操作、结果检查以及高风险动作前确认。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > No. Exact target resolution, permission limits, recoverable operations, result checks, and confirmation before high-risk actions are also required.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 工具调用返回“成功”后为什么还要检查 postcondition？
 <!-- bilingual-en:start -->
@@ -176,10 +174,9 @@ Reproducible evaluation fixes the initial environment state, tool versions, and 
 
 > [!answer]- 答案
 > 调用成功只说明接口接受或完成某一步；目标对象可能不对、外部状态可能未改变，或业务验收条件仍未满足。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Call success may mean only that the interface accepted or completed one step. The target may be wrong, external state may be unchanged, or business acceptance criteria may remain unmet.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 怎样判断任务应使用 Agent 还是固定 workflow？
 <!-- bilingual-en:start -->
@@ -188,10 +185,9 @@ Reproducible evaluation fixes the initial environment state, tool versions, and 
 
 > [!answer]- 答案
 > 步骤和分支若可预先穷举、错误处理明确，固定 workflow 更可控；只有需要依据新观测动态选择动作时，才增加 Agent 决策层。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > A fixed workflow is more controllable when steps, branches, and error handling can be enumerated in advance. Add agentic decision-making only when new observations require dynamic action choice.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

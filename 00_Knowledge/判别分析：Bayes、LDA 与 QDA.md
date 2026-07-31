@@ -17,23 +17,21 @@ status: source-checked
 > **核心难点：** 聚类结果不是数据里唯一“真实”的类别，强烈依赖尺度、距离、链接和簇数；分类评估必须在未参与训练的数据上进行。
 > **为什么重要：** 先区分监督与无监督，能避免把探索性分组当作已验证预测。
 > **继续：** 分类先读 Bayes/LDA/QDA；聚类先做标准化与距离选择，再比较层次法和 K-means。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** Discriminant analysis predicts classes when labels are available; clustering searches for groups defined by a chosen distance and algorithm when labels are absent.
 > **Concrete anchor:** With historical default labels, classify new customers. With only customer features and a desire to explore population structure, use clustering.
 > **Central difficulty:** Clusters are not unique “true” classes hidden in the data; they depend strongly on scaling, distance, linkage, and the number of clusters. Classification must be evaluated on data not used for training.
 > **Why it matters:** Distinguishing supervised from unsupervised learning prevents exploratory groupings from being presented as validated predictions.
 > **Continue with:** For classification, begin with Bayes, LDA, and QDA. For unlabelled grouping, see [[聚类：层次聚类与 K-means|hierarchical clustering and K-means]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - [Penn State STAT 505](https://online.stat.psu.edu/stat505/)：核验多元正态、均值推断、MANOVA、PCA、因子分析、判别与聚类的定义和使用条件。
 > - Johnson & Wichern, *Applied Multivariate Statistical Analysis*, 6th ed.：核验矩阵公式与抽样分布。
-<!-- bilingual-en:start -->
-> [!source] Sources for this section
+> <!-- bilingual-en:start -->
 > - [Penn State STAT 505](https://online.stat.psu.edu/stat505/) was used to verify definitions and conditions for multivariate normal models, mean inference, MANOVA, PCA, factor analysis, discriminant analysis, and clustering.
 > - Johnson and Wichern, *Applied Multivariate Statistical Analysis*, 6th ed., was used to verify matrix formulas and sampling distributions.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## Bayes 分类与判别规则
 <!-- bilingual-en:start -->
@@ -117,10 +115,9 @@ Check label quality, prior shift, outliers, multivariate-normal and covariance a
 
 > [!answer]- 答案
 > 聚类优化的是内部距离结构，不利用标签或预测损失，得到的簇未必对应目标类别。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Clustering optimises internal distance structure without using labels or predictive loss, so its groups need not correspond to the target classes.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### LDA 和 QDA 的关键假设差别是什么？
 <!-- bilingual-en:start -->
@@ -129,10 +126,9 @@ Check label quality, prior shift, outliers, multivariate-normal and covariance a
 
 > [!answer]- 答案
 > LDA 假设各类协方差相同从而边界线性；QDA 允许不同协方差，边界更灵活但估计参数更多。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > LDA assumes equal covariance matrices across classes and therefore has linear boundaries. QDA allows different covariances, making boundaries more flexible but increasing the number of estimated parameters.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 类别 1 很稀有时，为什么 accuracy 可能很高却没有用？
 <!-- bilingual-en:start -->
@@ -141,10 +137,9 @@ Check label quality, prior shift, outliers, multivariate-normal and covariance a
 
 > [!answer]- 答案
 > 永远预测多数类就可能有很高准确率，却把所有稀有目标漏掉；应结合 recall、precision、损失和校准评估。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Always predicting the majority class can achieve high accuracy while missing every rare target. Recall, precision, decision loss, and calibration must also be assessed.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

@@ -168,10 +168,9 @@ Structural mutation during iteration can skip elements or raise an error. Build 
 
 > [!answer]- 答案
 > 前者共享同一列表；后者复制外层列表，但嵌套元素仍可能共享。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The former shares one list; the latter copies the outer list, although nested elements may still be shared.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### tuple 为什么可能间接变化？
 <!-- bilingual-en:start -->
@@ -180,10 +179,9 @@ Structural mutation during iteration can skip elements or raise an error. Build 
 
 > [!answer]- 答案
 > tuple 的引用槽固定，但若槽指向可变对象，该对象内部可修改。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > A tuple's reference slots are fixed, but an object referenced by a slot can still be mutable internally.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么 list 不能作 dict key？
 <!-- bilingual-en:start -->
@@ -192,10 +190,9 @@ Structural mutation during iteration can skip elements or raise an error. Build 
 
 > [!answer]- 答案
 > list 可变，内容变化会破坏哈希值稳定性和哈希表查找不变量。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > A list is mutable, so content changes would violate hash stability and the lookup invariant of the hash table.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 一个函数应修改传入列表还是返回新列表，怎样决定？
 <!-- bilingual-en:start -->
@@ -204,10 +201,9 @@ Structural mutation during iteration can skip elements or raise an error. Build 
 
 > [!answer]- 答案
 > 由接口契约决定：若共享状态是明确目的，可原地修改并清楚命名；否则优先返回新对象，减少隐藏副作用。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The interface contract decides. Mutate in place, with explicit naming, when shared state is intentional; otherwise prefer a new object to reduce hidden side effects.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

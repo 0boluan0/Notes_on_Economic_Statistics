@@ -1,6 +1,8 @@
 ---
 aliases:
   - "ARCH and GARCH"
+  - "ARCH"
+  - "GARCH"
   - "Volatility Models"
   - "条件异方差模型"
 status: source-checked
@@ -16,15 +18,14 @@ status: source-checked
 > **具体锚点：** 金融收益可能几乎无自相关，但平方收益显著相关；这说明方向不可预测不等于风险恒定。
 > **核心难点：** 条件方差必须非负且参数要满足稳定条件；标准化残差而非原残差用于检验剩余波动结构。
 > **为什么重要：** 风险预测、VaR、期权与资产配置依赖随时间变化的波动率。
-> **继续：** 先建好均值方程，再做 ARCH-LM；风险度量见 [[波动率、相关性与 Copula]] 和 [[VaR、ES、回测与压力测试]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> **继续：** 先建好均值方程，再做 ARCH-LM；风险度量见 [[波动率度量：历史、实现与隐含波动率|波动率]]、[[相关性、Copula 与尾部依赖|相关性与 Copula]] 和 [[VaR、ES 与回测|VaR、ES、回测]][[压力测试与逆向压力测试|与压力测试]]。
+> <!-- bilingual-en:start -->
 > **What it solves:** When returns have little predictable mean but large movements arrive in clusters, ARCH/GARCH models the conditional variance using past information.
 > **Concrete anchor:** Financial returns may have almost no autocorrelation while squared returns are strongly autocorrelated. Unpredictable direction does not imply constant risk.
 > **Central difficulty:** Conditional variance must remain nonnegative and parameters must satisfy stability conditions. Remaining volatility structure is diagnosed with standardised, not raw, residuals.
 > **Why it matters:** Risk forecasts, VaR, options, and asset allocation depend on time-varying volatility.
-> **Continue with:** Specify the conditional mean first, test for ARCH effects, then connect volatility forecasts to [[波动率、相关性与 Copula|volatility, dependence, and copulas]] and [[VaR、ES、回测与压力测试|VaR, ES, backtesting, and stress testing]].
-<!-- bilingual-en:end -->
+> **Continue with:** Specify the conditional mean first, test for ARCH effects, then connect volatility forecasts to [[波动率度量：历史、实现与隐含波动率|volatility measurement]], [[相关性、Copula 与尾部依赖|dependence and copulas]], [[VaR、ES 与回测|VaR, ES, and backtesting]], and [[压力测试与逆向压力测试|stress testing]].
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - [[01_Math/06_时间序列分析/lecture.pdf]] 与 [[01_Math/06_时间序列分析/lecture-dual.pdf]]：支持课程范围、记号、模型、检验与例题。
@@ -32,12 +33,11 @@ status: source-checked
 > - 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。
 > - [Basel Framework](https://www.bis.org/basel_framework/)：核验资本、市场风险、信用风险、CVA 与监管口径。
 > - Hull, *Risk Management and Financial Institutions*：交叉核验 VaR、ES、Greek、利率风险、信用风险与模拟方法。
-<!-- bilingual-en:start -->
-> [!source] Sources for this section
+> <!-- bilingual-en:start -->
 > - [[01_Math/06_时间序列分析/lecture.pdf|time-series lecture notes]] and [[01_Math/06_时间序列分析/lecture-dual.pdf|bilingual time-series lecture notes]] were checked for ARCH/GARCH definitions, diagnostics, estimation, forecasts, and extensions.
 > - Engle (1982) and Bollerslev (1986) were checked for the ARCH and GARCH formulations and stationarity conditions.
 > - Hull, *Risk Management and Financial Institutions*, and the [Basel Framework](https://www.bis.org/basel_framework/) were used only for downstream risk-measurement context.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 条件方差与波动聚集
 <!-- bilingual-en:start -->
@@ -177,10 +177,9 @@ Let $\omega=0.02$, $\alpha=0.08$, and $\beta=0.90$. Then $\alpha+\beta=0.98$ and
 
 > [!answer]- 答案
 > 均值可近似不可预测，但平方或绝对收益可能相关，说明条件方差随时间变化。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The conditional mean may be nearly unpredictable while squared or absolute returns remain dependent, showing that conditional variance changes over time.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### GARCH(1,1) 中 $\alpha+\beta$ 接近 1 表示什么？
 <!-- bilingual-en:start -->
@@ -189,10 +188,9 @@ Let $\omega=0.02$, $\alpha=0.08$, and $\beta=0.90$. Then $\alpha+\beta=0.98$ and
 
 > [!answer]- 答案
 > 波动冲击衰减很慢、条件方差高度持久，长期方差估计也更敏感。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Volatility shocks decay slowly, conditional variance is highly persistent, and the long-run variance estimate becomes sensitive.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 拟合后为什么检查标准化残差平方？
 <!-- bilingual-en:start -->
@@ -201,10 +199,9 @@ Let $\omega=0.02$, $\alpha=0.08$, and $\beta=0.90$. Then $\alpha+\beta=0.98$ and
 
 > [!answer]- 答案
 > 它剔除了模型预测的时变尺度；若仍有相关，说明条件方差动态没有被充分吸收。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Standardisation removes the model's predicted time-varying scale. Remaining dependence in the squares means conditional-variance dynamics were not fully absorbed.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话解释为什么高估 $\beta$ 可能是结构突变的假象。
 <!-- bilingual-en:start -->
@@ -213,10 +210,9 @@ Let $\omega=0.02$, $\alpha=0.08$, and $\beta=0.90$. Then $\alpha+\beta=0.98$ and
 
 > [!answer]- 答案
 > 若样本中方差水平永久换档，固定参数 GARCH 只能用缓慢衰减追赶新水平，于是把制度变化误记为单次冲击的长持续。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > If variance shifts permanently within the sample, a fixed-parameter GARCH can only approach the new level through slow decay, misreading a regime change as persistence of one shock.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

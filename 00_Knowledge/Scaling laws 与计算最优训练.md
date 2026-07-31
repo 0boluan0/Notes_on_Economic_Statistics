@@ -12,9 +12,9 @@ status: source-checked
 <!-- bilingual-en:end -->
 
 > [!summary] 快速恢复
-> **它解决什么：** 决定有限算力下该训练多大的模型、喂多少数据，并把一次超大训练拆到许多设备上。
+> **它解决什么：** 用经验 scaling law 决定有限训练算力应怎样分配给模型参数量和训练 token 数。
 > **具体锚点：** 同样的计算预算若全用来扩大参数却不给足 token，模型可能“训练不足”；Chinchilla 一类结果正是修正这种分配。
-> **核心难点：** scaling law 是特定数据与训练区间内的经验关系，不是自然定律；MoE 降低每 token 激活计算，却增加路由、通信和容量管理。
+> **核心难点：** scaling law 是特定数据、模型族和训练区间内的经验关系，不是可无条件外推的自然定律；不同论文的参数、token 和 FLOPs 口径也必须对齐。
 > **为什么重要：** 参数量、总训练 FLOPs、推理成本和实际质量不是同一个排行。
 > **继续：** 先用预算约束理解 dense scaling，再看 MoE 和并行；部署端转到 [[LLM 推理效率]]。
 > <!-- bilingual-en:start -->
@@ -133,10 +133,9 @@ First align definitions: dense or MoE, total or active parameters, pretraining o
 
 > [!answer]- 答案
 > 更大模型消耗更多每 token 计算，可能被迫看到更少数据而训练不足；需联合选择参数与 token。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > A larger model costs more per token and may therefore see too little data and remain undertrained; parameters and tokens must be chosen jointly.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 比较两个模型训练规模时至少要问哪些口径？
 <!-- bilingual-en:start -->
@@ -145,10 +144,9 @@ First align definitions: dense or MoE, total or active parameters, pretraining o
 
 > [!answer]- 答案
 > 总/激活参数、训练 token、数据组成、数值精度、训练 FLOPs/硬件，以及 dense 或 MoE。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Check total and active parameters, training tokens, data composition, numerical precision, training FLOPs and hardware, and whether the model is dense or MoE.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 某 scaling 曲线拟合很好，为什么仍不能叫自然定律？
 <!-- bilingual-en:start -->
@@ -157,10 +155,9 @@ First align definitions: dense or MoE, total or active parameters, pretraining o
 
 > [!answer]- 答案
 > 它来自有限范围和特定数据、架构、优化配方；分布或配方变化、远距离外推和能力指标都可能破坏原关系。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It comes from a finite range under a particular data distribution, architecture, and optimization recipe. Distribution or recipe changes, distant extrapolation, and capability metrics can break the relationship.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

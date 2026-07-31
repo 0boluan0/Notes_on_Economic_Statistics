@@ -12,17 +12,17 @@ status: source-checked
 <!-- bilingual-en:end -->
 
 > [!summary] 快速恢复
-> **它解决什么：** 用伪随机重复实验近似难以解析的分布，并用图形把问题、比较和不确定性表达清楚。
+> **它解决什么：** 用伪随机重复实验近似难以解析求出的概率、期望和分布。
 > **具体锚点：** 估计复杂事件概率时重复模拟，样本比例会随次数增加稳定，但 Monte Carlo 标准误只按 $1/\sqrt n$ 缩小。
-> **核心难点：** 设 seed 只保证特定生成器/环境下可复现，不证明模型正确；图形必须匹配变量和问题。
-> **为什么重要：** 模拟能检验直觉和传播不确定性，可视化让分布与错误比单一均值更可见。
-> **继续：** 先验证模拟器对已知小例子正确，再增加次数；每张图只回答一个明确问题。
+> **核心难点：** 必须把模型误设、实现错误与 Monte Carlo 抽样误差分开；设 seed 只保证特定生成器和环境下可复现。
+> **为什么重要：** 当解析计算太难时，模拟仍能比较方案、传播不确定性并量化估计精度。
+> **继续：** 先用已知小例子验证模拟器，再增加次数并报告 Monte Carlo 标准误；结果表达见 [[数据可视化与不确定性表达]]。
 > <!-- bilingual-en:start -->
-> **Problem addressed:** Approximate analytically difficult distributions through repeated pseudorandom experiments; visual communication continues in [[数据可视化与不确定性表达|Data Visualization and Uncertainty Communication]].
+> **Problem addressed:** Approximate probabilities, expectations, and distributions that are difficult to derive analytically through repeated pseudorandom experiments.
 > **Concrete anchor:** Repeated simulation can estimate a complicated event probability, but Monte Carlo standard error shrinks only as $1/\sqrt n$.
-> **Central difficulty:** A seed reproduces a sequence in a particular generator and environment but does not establish model correctness; a plot must still match its variables and question.
-> **Why it matters:** Simulation tests intuition and propagates uncertainty, while visualization makes distributions and errors more visible than a single mean.
-> **Continue with:** Validate the simulator against a known small case before increasing the run count.
+> **Central difficulty:** Model misspecification, implementation errors, and Monte Carlo sampling error must be separated; a seed only reproduces a sequence for a particular generator and environment.
+> **Why it matters:** When analytic calculation is impractical, simulation can still compare alternatives, propagate uncertainty, and quantify estimation precision.
+> **Continue with:** Validate the simulator against a known small case, then increase the run count and report Monte Carlo standard error; present results with [[数据可视化与不确定性表达|Data Visualization and Uncertainty Communication]].
 > <!-- bilingual-en:end -->
 
 > [!source] 本节依据
@@ -122,10 +122,9 @@ def estimate_pi(trials, seed=0):
 
 > [!answer]- 答案
 > 在独立同分布条件下减半，因为标准误按 $1/\sqrt n$ 缩小。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It halves under independent, identically distributed trials because standard error scales as $1/\sqrt n$.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 设置 seed 能保证什么，不能保证什么？
 <!-- bilingual-en:start -->
@@ -134,10 +133,9 @@ def estimate_pi(trials, seed=0):
 
 > [!answer]- 答案
 > 帮助复现伪随机序列；不能保证随机模型、代码或结论正确。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It helps reproduce a pseudorandom sequence; it does not guarantee that the stochastic model, code, or conclusion is correct.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么模拟前先做解析小例子？
 <!-- bilingual-en:start -->
@@ -146,10 +144,9 @@ def estimate_pi(trials, seed=0):
 
 > [!answer]- 答案
 > 能验证生成和汇总逻辑；否则大量重复只会更精确地估计错误程序。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It validates generation and aggregation logic; otherwise many repetitions merely estimate an incorrect program more precisely.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->
@@ -164,4 +161,3 @@ def estimate_pi(trials, seed=0):
   <!-- bilingual-en:start -->
   [[03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Introduction to Computation and Programming Using Python]] cross-checks simulation design, error, and validation.
   <!-- bilingual-en:end -->
-

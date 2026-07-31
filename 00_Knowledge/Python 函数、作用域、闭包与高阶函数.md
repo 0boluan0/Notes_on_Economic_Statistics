@@ -12,14 +12,14 @@ status: source-checked
 
 > [!summary] 快速恢复
 > **它解决什么：** 用函数建立可测试接口、控制作用域，并把行为本身作为数据组合。
-> **具体锚点：** `map`/自定义高阶函数可接收一个函数并把同一遍历框架用于不同转换，固定控制结构而替换行为。
-> **核心难点：** 函数定义时不执行函数体；参数绑定、默认值求值和局部作用域决定调用行为。
+> **具体锚点：** `make_adder(3)` 返回的函数以后仍记得 `3`，因为闭包保存函数代码和定义时环境。
+> **核心难点：** 函数定义时不执行函数体；调用会建立新 frame，而参数绑定、默认值求值和 lexical scope 决定名称怎样解析。
 > **为什么重要：** 良好抽象减少重复推理，而不是只减少行数。
 > **继续：** 先写 contract 和纯函数，再使用 first-class function、closure 与高阶组合。
 > <!-- bilingual-en:start -->
 > **Problem addressed:** Build testable interfaces with functions, control scope, and compose behavior as data.
-> **Concrete anchor:** `map` or a custom higher-order function accepts a function, retaining one traversal structure while substituting different behavior.
-> **Central difficulty:** Defining a function does not execute its body; parameter binding, default-value evaluation, and lexical scope determine each call.
+> **Concrete anchor:** A function returned by `make_adder(3)` still remembers `3` because a closure stores both function code and its defining environment.
+> **Central difficulty:** Defining a function does not execute its body. A call creates a new frame, while parameter binding, default-value evaluation, and lexical scope determine name resolution.
 > **Why it matters:** A good abstraction reduces repeated reasoning, not merely lines of code.
 > **Continue with:** Write a contract and a pure function first, then introduce first-class functions, closures, and higher-order composition.
 > <!-- bilingual-en:end -->
@@ -30,31 +30,6 @@ status: source-checked
 > <!-- bilingual-en:start -->
 > - Local official MIT 6.100L slides, transcripts, finger exercises, and problem sets support the concepts, examples, and course scope.
 > - [[03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Introduction to Computation and Programming Using Python]] cross-checks Python, algorithms, complexity, object-oriented programming, and simulation.
-> <!-- bilingual-en:end -->
-
-## 函数与递归的统一视角
-<!-- bilingual-en:start -->
-*A Unified View of Functions and Recursion*
-<!-- bilingual-en:end -->
-
-> [!summary] 快速恢复
-> **它解决什么：** 用函数把“做什么”与“怎样做”分开，并用环境模型解释名称绑定、高阶函数和递归调用。
-> **具体锚点：** `make_adder(3)` 返回的函数以后仍记得 `3`，因为闭包捕获定义时环境，不是把数字藏进函数名字。
-> **核心难点：** 表达式求值发生在具体 frame；递归不是函数复制自己，而是每次调用建立新 frame 并等待子调用返回。
-> **为什么重要：** 这是 CS61A 后续数据抽象、解释器和声明式编程的共同基础。
-> **继续：** 先用环境图追踪调用，再写高阶函数与递归；不能画清 frame 就不要只靠运行猜。
-> <!-- bilingual-en:start -->
-> **Problem addressed:** Separate what a computation does from how it does it, and use the environment model to explain name binding, higher-order functions, and recursive calls.
-> **Concrete anchor:** A function returned by `make_adder(3)` still remembers `3` because a closure captures its defining environment; the number is not hidden in the function's name.
-> **Central difficulty:** Expressions are evaluated in concrete frames. Recursion is not a function copying itself; every call creates a fresh frame and waits for a subcall to return.
-> **Why it matters:** This is the common foundation for later CS61A work on data abstraction, interpreters, and declarative programming.
-> **Continue with:** Trace calls with environment diagrams before writing higher-order and recursive functions; if the frames cannot be drawn, do not rely on running the code and guessing.
-> <!-- bilingual-en:end -->
-
-> [!source] 本节依据
-> - [Composing Programs](https://www.composingprograms.com/) 与本地 CS61A 教材：核验函数抽象、环境模型和递归。
-> <!-- bilingual-en:start -->
-> - [Composing Programs](https://www.composingprograms.com/) and the local CS61A text verify functional abstraction, the environment model, and recursion.
 > <!-- bilingual-en:end -->
 
 ## 分解与抽象
@@ -215,10 +190,9 @@ Test normal, boundary, and error behavior at the interface instead of testing on
 
 > [!answer]- 答案
 > 默认对象在函数定义时创建一次，后续调用未传该参数时复用同一对象。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The default object is created once when the function is defined and reused whenever a later call omits that argument.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 传 `f` 与传 `f()` 有什么区别？
 <!-- bilingual-en:start -->
@@ -227,10 +201,9 @@ Test normal, boundary, and error behavior at the interface instead of testing on
 
 > [!answer]- 答案
 > 前者传函数对象供以后调用，后者立即调用并传它的返回值。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The former passes the function object for later use; the latter calls it immediately and passes its return value.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 函数抽象的价值为什么不只是减少代码行？
 <!-- bilingual-en:start -->
@@ -239,10 +212,9 @@ Test normal, boundary, and error behavior at the interface instead of testing on
 
 > [!answer]- 答案
 > 它建立稳定 contract，让调用者无需反复理解实现，并把变化隔离在一个位置。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It establishes a stable contract, lets callers avoid repeatedly understanding the implementation, and isolates change in one place.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 闭包为什么在外层函数返回后仍记得变量？
 <!-- bilingual-en:start -->
@@ -251,10 +223,9 @@ Test normal, boundary, and error behavior at the interface instead of testing on
 
 > [!answer]- 答案
 > 函数对象携带定义时环境的引用，调用时名称查找仍能到该环境。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The function object retains a reference to its defining environment, so name lookup can still reach that environment when the function is called.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 环境模型中一次函数调用创建什么？
 <!-- bilingual-en:start -->
@@ -263,10 +234,9 @@ Test normal, boundary, and error behavior at the interface instead of testing on
 
 > [!answer]- 答案
 > 创建新 frame，把形参绑定到实参，并以函数定义环境为 parent。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It creates a new frame, binds parameters to arguments, and uses the function's defining environment as the parent.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->
@@ -281,9 +251,9 @@ Test normal, boundary, and error behavior at the interface instead of testing on
   <!-- bilingual-en:start -->
   [[03_Computer_Science/03_MIT 6.100L/Introduction to Computation and Programming Using Python, Revised - Guttag, John V..pdf|Introduction to Computation and Programming Using Python]] cross-checks Python, algorithms, complexity, object-oriented programming, and simulation.
   <!-- bilingual-en:end -->
-- [Composing Programs](https://www.composingprograms.com/) 与本地 CS61A 教材：核验函数抽象、环境模型和递归。
+- [Composing Programs](https://www.composingprograms.com/) 与本地 CS61A 教材：核验函数抽象与环境模型。
   <!-- bilingual-en:start -->
-[Composing Programs](https://www.composingprograms.com/) and the local CS61A text verify functional abstraction and the environment model; recursion is consolidated in [[递归与递归数据|Recursion and Recursive Data]].
+  [Composing Programs](https://www.composingprograms.com/) and the local CS61A text verify functional abstraction and the environment model.
   <!-- bilingual-en:end -->
 - [The Python Tutorial: Defining Functions](https://docs.python.org/3/tutorial/controlflow.html#defining-functions)：复核默认参数、关键字参数、lambda 与文档字符串语义。
   <!-- bilingual-en:start -->

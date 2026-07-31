@@ -17,25 +17,23 @@ status: source-checked
 > **核心难点：** CDS 报价隐含风险中性违约与回收假设，还含流动性、融资、对手方和技术供需；不能用 spread/LGD 直接当真实 PD。
 > **为什么重要：** CDS 用于对冲、交易和价格发现，也会产生基差、wrong-way risk 与结算条款风险。
 > **继续：** 单体参数基础见 [[信用风险：PD、LGD、EAD 与评级迁移]]；对手方与 CVA 见 [[对手方信用风险、CVA 与 DVA]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** It explains how CDS protection buyers and sellers transfer credit-event risk on a reference entity and how CDS spreads, bond spreads, and default probability are connected yet can diverge.
 > **Concrete anchor:** The protection buyer pays a periodic spread; if a contractually defined credit event occurs and settles, the protection seller compensates loss on eligible reference obligations.
 > **Central difficulty:** A CDS quote embeds risk-neutral default and recovery assumptions plus liquidity, funding, counterparty effects, and technical supply and demand. Spread divided by LGD is not a real-world PD.
 > **Why it matters:** CDS support hedging, trading, and price discovery while creating basis, wrong-way risk, and settlement-term risk.
 > **Continue:** For single-name parameter foundations, see [[信用风险：PD、LGD、EAD 与评级迁移|Credit Risk: PD, LGD, EAD, and Rating Migration]]. For counterparty risk and CVA, see [[对手方信用风险、CVA 与 DVA|Counterparty Credit Risk, CVA, and DVA]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。
 > - [Basel Framework](https://www.bis.org/basel_framework/)：核验资本、市场风险、信用风险、CVA 与监管口径。
 > - Hull, *Risk Management and Financial Institutions*：交叉核验 VaR、ES、Greek、利率风险、信用风险与模拟方法。
-<!-- bilingual-en:start -->
-> [!source] Basis for this section
+> <!-- bilingual-en:start -->
 > - The vault's Financial Institutions and Risk Management course notes support course scope, classroom examples, and notation.
 > - The [Basel Framework](https://www.bis.org/basel_framework/) verifies regulatory conventions for capital, market risk, credit risk, and CVA.
 > - Hull, *Risk Management and Financial Institutions*, cross-checks VaR, ES, Greeks, interest-rate risk, credit risk, and simulation methods.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 信用利差与 CDS
 <!-- bilingual-en:start -->
@@ -105,10 +103,9 @@ A negative-basis trade commonly buys the bond, buys CDS protection, and finances
 
 > [!answer]- 答案
 > 只能在很强简化下近似风险中性概率；现实还含期限结构、流动性、风险溢价和对手因素。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Only as an approximation to a risk-neutral probability under strong simplifications; reality also contains term structure, liquidity, risk premium, and counterparty effects.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话解释：保护买方支付 spread 换到了什么？
 <!-- bilingual-en:start -->
@@ -117,10 +114,9 @@ A negative-basis trade commonly buys the bond, buys CDS protection, and finances
 
 > [!answer]- 答案
 > 在参考实体发生合同覆盖的信用事件时，按结算机制获得合格债务价值损失的补偿；保护不是对所有市场跌价或任何借款人问题无条件赔付。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > If the reference entity experiences a contractually covered credit event, the buyer receives compensation for loss in value on eligible obligations under the settlement mechanism. Protection does not cover every market decline or every borrower problem unconditionally.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么相同公司的债券利差与 CDS spread 可以不同？
 <!-- bilingual-en:start -->
@@ -129,10 +125,9 @@ A negative-basis trade commonly buys the bond, buys CDS protection, and finances
 
 > [!answer]- 答案
 > 两市场的融资、流动性、供需、对手方、合同条款和资产负债表成本不同，理论复制条件不完整，所以基差不必为零。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Funding, liquidity, supply and demand, counterparty risk, contractual terms, and balance-sheet costs differ across the two markets, so theoretical replication is incomplete and basis need not be zero.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

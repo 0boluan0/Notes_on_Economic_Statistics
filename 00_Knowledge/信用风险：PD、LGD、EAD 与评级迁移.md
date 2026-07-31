@@ -16,25 +16,23 @@ status: source-checked
 > **核心难点：** PD、LGD 与 EAD 必须共享违约定义、期限和经济情景，并可能在衰退中同时恶化；市场隐含与真实世界参数也不可混用。
 > **为什么重要：** 信贷定价、拨备、限额、抵押品与资本都建立在这些参数上，错误口径会在整个系统中重复放大。
 > **继续：** 市场转移信用风险见 [[CDS、信用利差与基差]]；多个借款人共同违约见 [[信用组合风险与 Credit VaR]]；衍生品未来敞口见 [[对手方信用风险、CVA 与 DVA]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** It decomposes one borrower's credit loss into probability of default, loss severity at default, and exposure at default, while tracking deterioration before default through rating migration.
 > **Concrete anchor:** With one-year PD of 2%, LGD of 40%, and EAD of one million, expected loss is 8,000. Actual loss does not remain near 8,000; this is an average across many comparable exposures.
 > **Central difficulty:** PD, LGD, and EAD must share a default definition, horizon, and economic scenario and can all worsen together in a downturn. Market-implied and real-world parameters cannot be mixed casually.
 > **Why it matters:** Credit pricing, provisioning, limits, collateral, and capital all build on these parameters, so inconsistent conventions propagate through the system.
 > **Continue:** For transferring credit risk in markets, see [[CDS、信用利差与基差|CDS, Credit Spreads, and Basis]]. For common default across borrowers, see [[信用组合风险与 Credit VaR|Credit Portfolio Risk and Credit VaR]]. For dynamic derivative exposure, see [[对手方信用风险、CVA 与 DVA|Counterparty Credit Risk, CVA, and DVA]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。
 > - [Basel Framework](https://www.bis.org/basel_framework/)：核验资本、市场风险、信用风险、CVA 与监管口径。
 > - Hull, *Risk Management and Financial Institutions*：交叉核验 VaR、ES、Greek、利率风险、信用风险与模拟方法。
-<!-- bilingual-en:start -->
-> [!source] Basis for this section
+> <!-- bilingual-en:start -->
 > - The vault's Financial Institutions and Risk Management course notes support course scope, classroom examples, and notation.
 > - The [Basel Framework](https://www.bis.org/basel_framework/) verifies regulatory conventions for capital, market risk, credit risk, and CVA.
 > - Hull, *Risk Management and Financial Institutions*, cross-checks VaR, ES, Greeks, interest-rate risk, credit risk, and simulation methods.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## PD、LGD、EAD 与预期损失
 <!-- bilingual-en:start -->
@@ -95,24 +93,6 @@ A Merton-style structural model defines default through firm assets falling belo
 Structural models are most useful for connecting capital structure, asset volatility, and distance to default. Intensity models are most useful for matching credit-spread term structures and random default timing. The question should determine the model; fitting prices does not prove that a model's real default mechanism is correct.
 <!-- bilingual-en:end -->
 
-## 从原主题保留的全局定位
-<!-- bilingual-en:start -->
-*Global orientation retained from the original topic*
-<!-- bilingual-en:end -->
-
-> **它解决什么：** 把借款人不履约的可能性、违约时损失和组合共同违约转成定价、限额和资本指标。
-> **具体锚点：** 两笔预期损失相同的贷款，若其中一笔违约与经济衰退高度相关，它的意外损失和资本需求可能更高。
-> **核心难点：** 预期损失 $PD\times LGD\times EAD$ 与尾部意外损失不同；评级、市场利差和真实违约概率也不是同一口径。
-> **为什么重要：** 信贷定价、拨备、组合集中、CDS 和银行资本都依赖这些区分。
-> **继续：** 先分解 PD/LGD/EAD，再看迁移、相关和组合模型；对手方随市场变化的敞口另见 [[对手方信用风险、CVA 与 DVA]]。
-<!-- bilingual-en:start -->
-> **What it solves:** It turns a borrower's probability of non-performance, loss at default, and joint portfolio default into pricing, limit, and capital measures.
-> **Concrete anchor:** Two loans can have equal expected loss, yet the one whose default is more correlated with recession may have greater unexpected loss and capital need.
-> **Central difficulty:** Expected loss $PD\times LGD\times EAD$ differs from tail unexpected loss; ratings, market spreads, and real-world default probabilities are also different conventions.
-> **Why it matters:** Credit pricing, provisions, portfolio concentration, CDS, and bank capital depend on these distinctions.
-> **Continue:** Decompose PD, LGD, and EAD first, then examine migration, dependence, and portfolio models. For counterparty exposure that changes with markets, see [[对手方信用风险、CVA 与 DVA|Counterparty Credit Risk, CVA, and DVA]].
-<!-- bilingual-en:end -->
-
 ## 失败诊断
 <!-- bilingual-en:start -->
 *Failure diagnosis*
@@ -141,10 +121,9 @@ Structural models are most useful for connecting capital structure, asset volati
 
 > [!answer]- 答案
 > 单笔贷款通常要么不违约损失接近零，要么违约产生较大损失；PD×LGD×EAD 是这些状态按概率加权的平均，不必等于任何实际状态。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > One loan normally either survives with near-zero credit loss or defaults with a substantial loss. PD times LGD times EAD is the probability-weighted average of those states and need not equal any realized state.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 有抵押品为什么仍不能把 LGD 设为零？
 <!-- bilingual-en:start -->
@@ -153,10 +132,9 @@ Structural models are most useful for connecting capital structure, asset volati
 
 > [!answer]- 答案
 > 抵押品价值会变化，处置有时间与成本，法律优先权可能不完整，且违约往往与抵押品价格下跌同时发生。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Collateral value changes, workout takes time and costs money, legal priority may be incomplete, and default often coincides with falling collateral prices.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 评级迁移矩阵为什么不能无条件重复乘来预测多年？
 <!-- bilingual-en:start -->
@@ -165,10 +143,9 @@ Structural models are most useful for connecting capital structure, asset volati
 
 > [!answer]- 答案
 > 重复乘隐含转移只依赖当前等级且概率随时间不变；周期、评级历史和政策变化会破坏 Markov 与时间同质假设。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Repeated multiplication assumes transition depends only on current grade and probabilities remain constant. Cycles, rating history, and policy change violate Markov and time-homogeneity assumptions.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->
@@ -178,10 +155,10 @@ Structural models are most useful for connecting capital structure, asset volati
 - 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。
 - [Basel Framework](https://www.bis.org/basel_framework/)：核验资本、市场风险、信用风险、CVA 与监管口径。
 - Hull, *Risk Management and Financial Institutions*：交叉核验 VaR、ES、Greek、利率风险、信用风险与模拟方法。
-- 已按共同期限与违约定义复核 PD、LGD、EAD 和迁移口径；新增衰退算例按三参数联合变化重新计算。
+- 已按共同期限与违约定义复核 PD、LGD、EAD 和迁移口径；衰退算例按三参数联合变化重新计算。
 <!-- bilingual-en:start -->
 - The vault's Financial Institutions and Risk Management course notes support course scope, classroom examples, and notation.
 - The [Basel Framework](https://www.bis.org/basel_framework/) verifies regulatory conventions for capital, market risk, credit risk, and CVA.
 - Hull, *Risk Management and Financial Institutions*, cross-checks VaR, ES, Greeks, interest-rate risk, credit risk, and simulation methods.
-- PD, LGD, EAD, and migration conventions were checked under common horizons and default definitions; the added recession example was recomputed with joint movement in all three parameters.
+- PD, LGD, EAD, and migration conventions were checked under common horizons and default definitions; the recession example was recomputed with joint movement in all three parameters.
 <!-- bilingual-en:end -->

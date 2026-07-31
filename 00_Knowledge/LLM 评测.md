@@ -166,10 +166,9 @@ Record model snapshot, system prompt, sampling parameters, tool versions, date, 
 
 > [!answer]- 答案
 > 需知道任务是否匹配、差异不确定性、污染、推理预算、成本和关键失败；单个平均分不足。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Task match, uncertainty in the difference, contamination, inference budget, cost, and critical failures are all required; one average score is insufficient.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 使用 LLM judge 至少要防哪类偏差？
 <!-- bilingual-en:start -->
@@ -178,10 +177,9 @@ Record model snapshot, system prompt, sampling parameters, tool versions, date, 
 
 > [!answer]- 答案
 > 位置、长度/风格、自我偏好和提示敏感；应随机化、用 rubric 并与人类校准。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Control position, length and style, self-preference, and prompt sensitivity through randomization, a rubric, and calibration against humans.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### Agent 轨迹写得很漂亮但最终文件错误，应如何计分？
 <!-- bilingual-en:start -->
@@ -190,10 +188,9 @@ Record model snapshot, system prompt, sampling parameters, tool versions, date, 
 
 > [!answer]- 答案
 > 任务失败；先以可验证的最终环境状态计分，再用轨迹定位工具选择或执行错误。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The task failed. Score the verifiable final environment state first, then use the trace to locate tool-selection or execution errors.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 一个 test set 被用来改了十次 prompt 后，为什么不再是独立测试？
 <!-- bilingual-en:start -->
@@ -202,10 +199,9 @@ Record model snapshot, system prompt, sampling parameters, tool versions, date, 
 
 > [!answer]- 答案
 > 选择过程已经根据 test error 适配 prompt，导致对该集合过拟合；需要未参与选择的新 held-out 数据评价最终方案。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The selection process adapted the prompt to test errors and overfit that set. New held-out data untouched by selection are needed for final evaluation.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

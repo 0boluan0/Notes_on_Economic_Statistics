@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Listening into Writing 0001 · The Paradox of Choice</title>
+  <style>
+    :root { color-scheme: light dark; --accent:#a4192e; --muted:#69707a; --card:#f5f6f8; }
+    * { box-sizing:border-box; }
+    body { max-width:900px; margin:0 auto; padding:32px 20px 64px; font:16px/1.6 system-ui,-apple-system,sans-serif; }
+    header, section { margin-bottom:28px; }
+    h1 { line-height:1.2; }
+    h2 { margin-bottom:8px; }
+    .meta, .hint { color:var(--muted); }
+    .card { padding:18px; border:1px solid #c9cdd2; border-radius:12px; background:var(--card); }
+    a.button, button { display:inline-block; padding:9px 13px; border:0; border-radius:8px; background:var(--accent); color:white; text-decoration:none; cursor:pointer; }
+    button.secondary { background:#555d68; }
+    textarea { width:100%; min-height:190px; padding:12px; border:1px solid #9da3aa; border-radius:8px; font:15px/1.5 ui-monospace,SFMono-Regular,monospace; }
+    #summary { min-height:300px; }
+    .timer { font:700 34px/1 ui-monospace,SFMono-Regular,monospace; margin:12px 0; }
+    .controls { display:flex; flex-wrap:wrap; gap:8px; }
+    label.check { display:block; margin:7px 0; }
+    details { margin:12px 0; }
+    @media (prefers-color-scheme:dark) { :root { --card:#20242a; --muted:#abb2bd; } }
+    @media print { .controls, a.button { display:none; } body { max-width:none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="meta">2026-07-31 · Lesson 0001 · 约 45 分钟</p>
+    <h1>The Paradox of Choice</h1>
+    <p><strong>今日唯一重点：</strong>区分总论点、分论点和 supporting examples。先抓结构，不追求记录每句话。</p>
+    <p><a class="button" href="https://www.youtube.com/watch?v=VO6XEQIsCoM" target="_blank" rel="noreferrer">打开 YouTube（20:23）</a></p>
+  </header>
+
+  <section class="card">
+    <h2>计时器</h2>
+    <div id="timer" class="timer">20:23</div>
+    <div class="controls">
+      <button data-seconds="1223">听力 20:23</button>
+      <button data-seconds="300">整理 5:00</button>
+      <button data-seconds="900">写作 15:00</button>
+      <button data-seconds="300">核对 5:00</button>
+      <button id="pause" class="secondary">暂停／继续</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>1. 听一遍</h2>
+    <p>关闭字幕，不暂停、不回放。只记录关键词和关系；例子写在对应主张下面，不把例子误当成新主张。</p>
+    <textarea id="notes" aria-label="听力笔记" placeholder="P（purpose / overall claim）:
+
+1（main claim）:
+  E（evidence / example）:
+  →（result / implication）:
+
+2（main claim）:
+  E:
+  →:
+
+3（main claim）:
+  E:
+  →:
+
+?（limitation / question）:"></textarea>
+  </section>
+
+  <section>
+    <h2>2. 五分钟恢复结构</h2>
+    <p>只看自己的笔记，用一句话回答每题：</p>
+    <ol>
+      <li>讲者反对的 “official dogma” 是什么？</li>
+      <li>过多选择造成哪两个总体后果？</li>
+      <li>讲者用哪些机制解释其中一个后果？</li>
+      <li>哪些内容只是例子，哪些才是主张？</li>
+      <li>最终结论有没有限定，而不是简单主张“选择越少越好”？</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>3. 十五分钟 mini critical summary</h2>
+    <p>写 <strong>180–220 词</strong>：交代中心论点；概括两个总体后果及其机制；保留一个最有用的例子；加入一句与演讲证据直接相连的评价。不要补充演讲之外的个人经历。</p>
+    <textarea id="summary" aria-label="summary"></textarea>
+    <p><strong>Words:</strong> <span id="words">0</span></p>
+  </section>
+
+  <section>
+    <h2>4. 五分钟反馈</h2>
+    <p>完成写作后才打开 transcript。</p>
+    <details>
+      <summary>核对来源与结构提示</summary>
+      <p><a href="https://www.ted.com/talks/barry_schwartz_the_paradox_of_choice?view=transcript" target="_blank" rel="noreferrer">TED 官方 transcript</a></p>
+      <p><strong>结构骨架：</strong>讲者先质疑“增加选择会增加自由与福祉”的信念；随后把过多选择的后果概括为行动瘫痪与较低满意度，并用后悔、机会成本、预期上升和自我归咎解释满意度下降；结论是一定程度的选择有益，但选择并非越多越好，适当限制可能改善结果。</p>
+      <p class="hint">商店商品、退休计划、医疗方案和牛仔裤等属于支持性例证，不应与两个总体后果并列成同级分点。</p>
+    </details>
+    <label class="check"><input type="checkbox"> 中心论点与讲者立场准确</label>
+    <label class="check"><input type="checkbox"> 区分了主张、机制和例子</label>
+    <label class="check"><input type="checkbox"> 没有连续照搬超过四个词</label>
+    <label class="check"><input type="checkbox"> 评价有演讲中的证据支撑</label>
+    <label class="check"><input type="checkbox"> 字数在 180–220 之间</label>
+  </section>
+
+  <section class="card">
+    <h2>完成后只选一个瓶颈</h2>
+    <p><strong>L</strong> 听辨 · <strong>S</strong> 结构 · <strong>N</strong> 笔记 · <strong>W</strong> 写作速度/表达 · <strong>C</strong> 批判评价</p>
+    <textarea id="reflection" aria-label="练习复盘" placeholder="今天的主要瓶颈：
+下一次只调整："></textarea>
+    <p class="hint">页面会自动保存在本浏览器。需要反馈时，把笔记、summary 和瓶颈发给 Codex。</p>
+  </section>
+
+  <footer class="meta">
+    Sources: <a href="https://www.youtube.com/watch?v=VO6XEQIsCoM">TED YouTube</a> ·
+    <a href="https://www.ted.com/talks/barry_schwartz_the_paradox_of_choice?view=transcript">TED transcript</a> ·
+    <a href="../../../../07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Marking-Criteria/Paper%20A_Marking%20Criteria_Listening%20into%20Writing.pdf">LN905 criteria</a>
+  </footer>
+
+  <script>
+    const key = "liw-0001-";
+    const fields = ["notes", "summary", "reflection"];
+    for (const id of fields) {
+      const el = document.getElementById(id);
+      el.value = localStorage.getItem(key + id) || "";
+      el.addEventListener("input", () => {
+        localStorage.setItem(key + id, el.value);
+        if (id === "summary") countWords();
+      });
+    }
+    function countWords() {
+      const text = document.getElementById("summary").value.trim();
+      document.getElementById("words").textContent = text ? text.split(/\s+/).length : 0;
+    }
+    countWords();
+
+    let remaining = 1223, handle = null;
+    const display = document.getElementById("timer");
+    function render() {
+      display.textContent = `${String(Math.floor(remaining / 60)).padStart(2,"0")}:${String(remaining % 60).padStart(2,"0")}`;
+    }
+    function start(seconds) {
+      clearInterval(handle);
+      remaining = seconds;
+      render();
+      handle = setInterval(() => {
+        if (remaining > 0) { remaining--; render(); }
+        else { clearInterval(handle); handle = null; }
+      }, 1000);
+    }
+    document.querySelectorAll("[data-seconds]").forEach(button =>
+      button.addEventListener("click", () => start(Number(button.dataset.seconds)))
+    );
+    document.getElementById("pause").addEventListener("click", () => {
+      if (handle) { clearInterval(handle); handle = null; }
+      else { start(remaining); }
+    });
+  </script>
+</body>
+</html>

@@ -17,23 +17,21 @@ status: source-checked
 > **核心难点：** 二者都用载荷却回答不同问题；主成分是数据的确定线性组合，因子是带特殊误差的统计模型。
 > **为什么重要：** 错把降维当潜变量解释会产生过度命名和错误因果叙事。
 > **继续：** 先明确目标是压缩还是潜在结构，再选择协方差/相关矩阵、成分/因子数和验证方式。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** PCA compresses observed variation into a small number of linear combinations, whereas factor analysis explains shared correlations through a small number of latent factors.
 > **Concrete anchor:** When several examination subjects are strongly correlated, PCA can summarise them into a few composite scores. Factor analysis instead asks whether latent sources such as verbal and quantitative ability generate their common variation.
 > **Central difficulty:** Both methods use loadings but answer different questions. A principal component is a deterministic linear combination of observed data; a factor belongs to a statistical model with specific errors.
 > **Why it matters:** Treating dimension reduction as latent-variable discovery leads to overconfident labels and false causal narratives.
 > **Continue with:** First decide whether the goal is compression or latent structure, then select a covariance or correlation matrix, a number of components or factors, and a validation method. For the latent-model route, see [[因子分析|factor analysis]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - [Penn State STAT 505](https://online.stat.psu.edu/stat505/)：核验多元正态、均值推断、MANOVA、PCA、因子分析、判别与聚类的定义和使用条件。
 > - Johnson & Wichern, *Applied Multivariate Statistical Analysis*, 6th ed.：核验矩阵公式与抽样分布。
-<!-- bilingual-en:start -->
-> [!source] Sources for this section
+> <!-- bilingual-en:start -->
 > - [Penn State STAT 505](https://online.stat.psu.edu/stat505/) was used to verify definitions and conditions for multivariate normal models, mean inference, MANOVA, PCA, factor analysis, discriminant analysis, and clustering.
 > - Johnson and Wichern, *Applied Multivariate Statistical Analysis*, 6th ed., was used to verify matrix formulas and sampling distributions.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## PCA 的方差最大化
 <!-- bilingual-en:start -->
@@ -117,10 +115,9 @@ PCA is sensitive to outliers and heavy tails because the covariance matrix is se
 
 > [!answer]- 答案
 > PCA 问怎样用线性组合保留最多总变异；因子分析问哪些潜在公共因子能解释变量间协方差。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > PCA asks which linear combinations retain the most total variation. Factor analysis asks which latent common factors explain covariance among observed variables.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 什么时候应优先基于相关矩阵做 PCA？
 <!-- bilingual-en:start -->
@@ -129,10 +126,9 @@ PCA is sensitive to outliers and heavy tails because the covariance matrix is se
 
 > [!answer]- 答案
 > 变量量纲或自然尺度差异很大、且不希望大方差单位自动主导结果时。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > When variables have very different units or natural scales and large-variance units should not automatically dominate the result.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 累计解释率达到 90% 是否自动说明选出的成分足够？
 <!-- bilingual-en:start -->
@@ -141,10 +137,9 @@ PCA is sensitive to outliers and heavy tails because the covariance matrix is se
 
 > [!answer]- 答案
 > 不自动。阈值未考虑下游用途、小方差但重要的信号、样本稳定性和新数据表现，需要结合任务验证。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > No. The threshold ignores downstream purpose, low-variance but important signals, sampling stability, and performance on new data. It must be combined with task-specific validation.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

@@ -153,10 +153,9 @@ When a model cannot perform a task, first distinguish insufficient base capabili
 
 > [!answer]- 答案
 > SFT 模仿给定目标答案；偏好优化比较多个回答的相对好坏并改变策略偏向。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > SFT imitates a provided target response; preference optimization compares the relative quality of multiple responses and changes the policy's preference.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### DPO 为什么不是“完全没有奖励模型假设”？
 <!-- bilingual-en:start -->
@@ -165,10 +164,9 @@ When a model cannot perform a task, first distinguish insufficient base capabili
 
 > [!answer]- 答案
 > 它把隐式奖励与 KL 正则后的最优策略关系写进直接分类式目标，仍依赖偏好数据、参考模型和温度。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It embeds the relationship between an implicit reward and a KL-regularized optimal policy in a direct classification objective, while still depending on preference data, a reference model, and temperature.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 模型更少拒答后，为什么不能直接说对齐更好？
 <!-- bilingual-en:start -->
@@ -177,10 +175,9 @@ When a model cannot perform a task, first distinguish insufficient base capabili
 
 > [!answer]- 答案
 > 拒答只是一个行为维度；还需检查有用性、事实性、风险内容和错误服从，且不同目标可能互相冲突。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Refusal is only one behavioral dimension. Helpfulness, factuality, risky content, and incorrect compliance must also be examined, and these objectives can conflict.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 怎样区分“能力没学会”和“能力被后训练压制”？
 <!-- bilingual-en:start -->
@@ -189,10 +186,9 @@ When a model cannot perform a task, first distinguish insufficient base capabili
 
 > [!answer]- 答案
 > 在受控提示、格式和解码下比较基座与后训练模型，加入少量示例或绕开拒答表面形式，并检查过程与答案；基座也不会时，更可能是能力不足。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Compare the base and post-trained models under controlled prompts, formats, and decoding; add demonstrations or vary refusal framing and inspect both process and answer. If the base model also fails, insufficient capability is more likely.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

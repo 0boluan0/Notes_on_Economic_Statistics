@@ -40,12 +40,12 @@
     },
     {
       "id": "40c2afa1f4ec42d3",
-      "type": "file",
+      "type": "text",
       "x": 0,
       "y": 920,
       "width": 420,
-      "height": 320,
-      "file": "00_Knowledge/数论、RSA 与图结构.md"
+      "height": 440,
+      "text": "## 本板块的知识主干\n\n1. [[模运算、欧几里得算法与 RSA]]：整数的整除、同余与构造算法。\n\n2. [[图的基本结构、路径与遍历]]：先确定 vertex/edge 的含义，再回答 reachability、distance 与 traversal。\n   - 去掉 cycle、保留最小骨架或依赖顺序 → [[无环图：树、生成树、DAG 与拓扑排序]]\n   - edge 表示冲突、要把 vertices 分成无冲突组 → [[图着色与色数]]\n   - 图已分成左右两侧、要从 allowed edges 中做不争用 assignment → [[二分图匹配与 Hall 定理]]"
     },
     {
       "id": "ec05e15b0ab3528c",
@@ -53,8 +53,8 @@
       "x": 470,
       "y": 920,
       "width": 590,
-      "height": 320,
-      "text": "## 数论、RSA 与图结构\n\n**它解决什么：** 数论研究整数的整除和同余；图论研究对象间连接。二者都把连续细节删去，只保留离散结构。\n**具体锚点：** RSA 用模幂和 Euler/Fermat 性质恢复消息；网络中的最短路、树和匹配则只依赖节点与边。\n**核心难点：** 同余除法需乘法逆元存在；图中的 walk、path、cycle 和连通性不是同一对象。\n**为什么重要：** 密码学、算法、网络、组合优化和机制匹配都使用这些基本结构。\n**继续：** 证明结论时回到 [[数学证明方法]]；随机图或随机游走连接 [[离散概率]]。\n\n**简要依据：** [[01_Math/07-Mathematics for Computer Science/MIT-6-042j-pdf.pdf]] 与本地 MIT 6.042J OCW 材料：支持证明、离散结构、计数和概率。"
+      "height": 440,
+      "text": "## 数论、RSA 与图结构\n\n**它解决什么：** 数论研究整数的整除与同余；图论先表示对象间关系，再按 edge 的含义分成可达、无环、冲突分组和允许配对问题。\n**具体锚点：** RSA 用模逆与模幂恢复消息；地铁网络用 BFS 找无权最短路；先修关系用 DAG 排序；考试冲突用 coloring 分时段；学生与项目用 matching 分配。\n**核心难点：** 同余除法要求 inverse 存在；图论中同一张图会因问题不同而寻找 path、tree、coloring 或 matching，不能只见关键词就套算法。\n**为什么重要：** 这些结构支撑密码学、算法、网络、调度和组合优化。\n**继续：** 图论默认从 [[图的基本结构、路径与遍历]] 进入，再按实际 edge 语义沿左侧分支选择；证明结论时回到 [[数学证明方法]]。\n\n**简要依据：** [[01_Math/07-Mathematics for Computer Science/MIT-6-042j-pdf.pdf]] Chapters 10、12 与本地 Sessions 16–22，分别核验 graph language、acyclic structures、coloring、matching 与 Hall theorem。"
     },
     {
       "id": "dc77ccabc6741951",
@@ -68,18 +68,18 @@
     },
     {
       "id": "6db7907500de9209",
-      "type": "file",
+      "type": "text",
       "x": 0,
-      "y": 1480,
+      "y": 1600,
       "width": 420,
       "height": 320,
-      "file": "00_Knowledge/计数、渐近与组合原理.md"
+      "text": "## 本板块的知识单元\n\n1. [[组合计数原理]]\n2. [[渐近记号与算法复杂度]]"
     },
     {
       "id": "329b227d341ccbbc",
       "type": "text",
       "x": 470,
-      "y": 1480,
+      "y": 1600,
       "width": 590,
       "height": 320,
       "text": "## 计数、渐近与组合原理\n\n**它解决什么：** 不逐个枚举地计算有限结构数量，并用渐近语言比较输入变大时的增长速度。\n**具体锚点：** 长度 n 的二进制串有 $2^n$ 个；恰有 k 个 1 的串有 $\\binom nk$ 个，因为只需选择 1 的位置。\n**核心难点：** 加法原理要求情形互斥，乘法原理要求每一步选择数在条件下正确；重复、顺序和不可区分性决定公式。\n**为什么重要：** 概率分母、算法复杂度、离散模型和随机结构都依赖可靠计数。\n**继续：** 先写对象和双射，再选排列组合、隔板、容斥或鸽巢，而不是按关键词套公式。\n\n**简要依据：** [[01_Math/07-Mathematics for Computer Science/MIT-6-042j-pdf.pdf]] 与本地 MIT 6.042J OCW 材料：支持证明、离散结构、计数和概率。"
@@ -88,7 +88,7 @@
       "id": "1d20736b506f0d5b",
       "type": "text",
       "x": 170,
-      "y": 1300,
+      "y": 1420,
       "width": 720,
       "height": 120,
       "text": "结构问题常要求计算对象数量和增长速度，因此从图与数论进入组合计数和渐近分析。",
@@ -96,27 +96,27 @@
     },
     {
       "id": "60bf38bdeb473eb4",
-      "type": "file",
+      "type": "text",
       "x": 0,
-      "y": 2040,
+      "y": 2160,
       "width": 420,
-      "height": 320,
-      "file": "00_Knowledge/离散概率.md"
+      "height": 500,
+      "text": "## 本板块的知识主干\n\n1. [[概率空间、条件概率与 Bayes 法则]]：定义 outcomes、events、conditioning 与 Bayes update。\n2. [[随机变量、分布与矩]]：把 outcomes 映射为数值，并描述 mean、variance 与 covariance。\n3. [[条件期望与独立性]]：获得信息后更新平均，并区分不同 independence 概念。\n4. [[指示变量与随机计数]]：把 count 拆成 event indicators；求 mean 不需 independence。\n5. [[概率不等式与集中界]]：按 nonnegativity、variance、independence 与 boundedness 控制 tails。"
     },
     {
       "id": "90d39967ca7a27e1",
       "type": "text",
       "x": 470,
-      "y": 2040,
+      "y": 2160,
       "width": 590,
-      "height": 320,
-      "text": "## 离散概率\n\n**它解决什么：** 在有限或可数样本空间中计算随机事件、期望与集中程度，并用随机变量压缩复杂结果。\n**具体锚点：** 洗牌后某张牌位置均匀，但两张牌位置不独立；对称性给边际分布，约束决定依赖。\n**核心难点：** 等可能必须由随机机制证明；线性期望不需要独立，而方差相加通常需要控制协方差。\n**为什么重要：** 随机算法、哈希、图、排队和统计抽样都从离散模型开始。\n**继续：** 先明确样本空间和随机机制，再用条件化、指示变量和尾界；连续/一般框架见 [[概率论基础]]。\n\n**简要依据：** [[01_Math/07-Mathematics for Computer Science/MIT-6-042j-pdf.pdf]] 与本地 MIT 6.042J OCW 材料：支持证明、离散结构、计数和概率。"
+      "height": 500,
+      "text": "## 离散概率\n\n**它解决什么：** 先给随机 outcomes 赋予 probability，再把它们压缩成 variables、counts 与 deviation events。\n**具体锚点：** birthday collision 中，sample space 决定每组生日的概率；pair indicators 给 expected collision count；variance 与 tail bounds 再回答 count 是否会偏离很多。\n**核心难点：** 等可能必须由 mechanism 证明；linearity of expectation 不需要 independence，variance simplification 需要 covariance control，exponential bounds 还需要更强的 independence/boundedness。\n**为什么重要：** 这条链连接随机算法、hash collisions、sampling 与随机过程的基础语言。\n**继续：** 从左侧第 1 项开始；若问题已明确是随机 count，可直接进入 [[指示变量与随机计数]]，若已知 mean/variance 并追问 tail，则进入 [[概率不等式与集中界]]。\n\n**简要依据：** [[01_Math/07-Mathematics for Computer Science/MIT-6-042j-pdf.pdf]] Chapters 17–20 与本地 Sessions 28–34，分别核验 finite probability、random variables、expectation、indicators、variance 与 concentration。"
     },
     {
       "id": "cb93bb87dd85abf2",
       "type": "text",
       "x": 170,
-      "y": 1860,
+      "y": 1980,
       "width": 720,
       "height": 120,
       "text": "计数把有限可能性量化；离散概率再给这些可能性赋权，并研究随机变量、期望和集中。",

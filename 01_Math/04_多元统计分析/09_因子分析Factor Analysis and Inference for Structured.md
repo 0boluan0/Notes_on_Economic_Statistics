@@ -6,7 +6,6 @@
 >[!note] 本章主线
 > 因子分析可以看成 PCA 之后更进一步的问题：不仅想降维，还想用少数不可观测的公共因子解释变量之间的协方差结构。
 > <!-- bilingual-en:start -->
-> [!note] Chapter backbone
 > Factor analysis goes beyond PCA: it seeks not only to reduce dimension, but also to explain the covariance structure among variables with a small number of unobserved common factors.
 > <!-- bilingual-en:end -->
 
@@ -125,7 +124,6 @@ where:
 >[!note] 复习核心
 > 因子分析最重要的公式就是 $\Sigma=LL'+\Psi$。PCA 没有这个“公共部分 + 特殊部分”的模型分解。
 > <!-- bilingual-en:start -->
-> [!note] Core point for review
 > The central formula in factor analysis is $\Sigma=LL'+\Psi$. PCA does not contain this model-based decomposition into common and specific components.
 > <!-- bilingual-en:end -->
 
@@ -161,7 +159,6 @@ $$
 >[!attention] Heywood case
 > 如果估计出 $\hat\psi_i<0$，通常说明模型或因子数设定有问题，不应机械接受。
 > <!-- bilingual-en:start -->
-> [!attention] Heywood case
 > An estimate with $\hat\psi_i<0$ usually indicates a problem with the model or the chosen number of factors and should not be accepted mechanically.
 > <!-- bilingual-en:end -->
 
@@ -243,7 +240,6 @@ $$
 >[!example] 做题顺序
 > 先求特征值和特征向量，再取前 $m$ 个构造 $\hat L$，最后逐个变量算公共度和特殊方差。
 > <!-- bilingual-en:start -->
-> [!example] Solution order
 > First compute the eigenvalues and eigenvectors, use the leading $m$ to construct $\hat L$, and then calculate each variable's communality and specific variance.
 > <!-- bilingual-en:end -->
 
@@ -267,7 +263,6 @@ $L$ and $\Psi$ can be estimated subject to the constraint that $L'\Psi^{-1}L$ is
 >[!note] 课堂提示
 > 旧笔记标注“考试不会考”。本轮整理只保留识别信息，不展开推导。
 > <!-- bilingual-en:start -->
-> [!note] Class note
 > The old note says that this material will not be examined. This revision retains only enough information to recognise the method and does not develop the derivation.
 > <!-- bilingual-en:end -->
 
@@ -297,7 +292,6 @@ Common criteria include:
 >[!attention] 解释优先
 > 因子数量不是越多越好；因子数量过多会失去“用少数潜在维度解释结构”的意义。
 > <!-- bilingual-en:start -->
-> [!attention] Interpretation comes first
 > More factors are not automatically better. Too many factors undermine the purpose of explaining structure with a small number of latent dimensions.
 > <!-- bilingual-en:end -->
 
@@ -306,9 +300,9 @@ Common criteria include:
 *1.7. Related Cards*
 <!-- bilingual-en:end -->
 
-- [[Factor Analysis]]
-- [[Factor Analysis PC Method]]
-- [[Factor Loadings]]
-- [[Communality]]
-- [[Specific Variance]]
-- [[PCA vs Factor Analysis]]
+- [[因子分析#因子模型|Factor Analysis]]
+- [[因子分析#因子模型|Factor Analysis PC Method]]
+- [[因子分析#因子模型|Factor Loadings]]
+- [[因子分析#因子模型|Communality]]
+- [[因子分析#因子模型|Specific Variance]]
+- [[主成分分析 PCA#PCA 与因子分析的选择|PCA vs Factor Analysis]]

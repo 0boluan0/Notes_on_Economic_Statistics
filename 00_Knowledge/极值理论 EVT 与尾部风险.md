@@ -17,25 +17,23 @@ status: source-checked
 > **核心难点：** 阈值太低违反尾部近似、太高样本太少；shape 参数决定尾厚甚至 ES 是否存在，估计不确定性很大。
 > **为什么重要：** 保险、操作风险、市场跳跃与极端信用损失常关心样本外尾部，但外推必须比经验分位更透明地暴露假设。
 > **继续：** 先用 mean-excess、参数稳定图和诊断选阈值，再报告阈值敏感性与置信区间；普通损失分布生成见 [[历史模拟与 Monte Carlo 风险模拟]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** Instead of fitting one distribution to all observations, it uses extreme-value asymptotics to model losses above a high threshold and extrapolate rare quantiles and ES.
 > **Concrete anchor:** If 100 of 2,000 daily losses exceed a threshold, EVT uses the shape of those 100 excesses to estimate tail behavior beyond the historical maximum rather than pretending to possess equally many extreme observations.
 > **Central difficulty:** A threshold that is too low violates the tail approximation, while one that is too high leaves too little data. The shape parameter determines tail thickness and even whether ES exists, and estimation uncertainty is large.
 > **Why it matters:** Insurance, operational risk, market jumps, and extreme credit losses often concern out-of-sample tails, but extrapolation must expose assumptions more transparently than an empirical quantile.
 > **Continue:** Use mean-excess, parameter-stability plots, and diagnostics to choose a threshold, then report threshold sensitivity and confidence intervals. For ordinary loss-distribution generation, see [[历史模拟与 Monte Carlo 风险模拟|Historical and Monte Carlo Risk Simulation]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。
 > - [Basel Framework](https://www.bis.org/basel_framework/)：核验资本、市场风险、信用风险、CVA 与监管口径。
 > - Hull, *Risk Management and Financial Institutions*：交叉核验 VaR、ES、Greek、利率风险、信用风险与模拟方法。
-<!-- bilingual-en:start -->
-> [!source] Basis for this section
+> <!-- bilingual-en:start -->
 > - The vault's Financial Institutions and Risk Management course notes support course scope, classroom examples, and notation.
 > - The [Basel Framework](https://www.bis.org/basel_framework/) verifies regulatory conventions for capital, market risk, credit risk, and CVA.
 > - Hull, *Risk Management and Financial Institutions*, cross-checks VaR, ES, Greeks, interest-rate risk, credit risk, and simulation methods.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 两条极值入口
 <!-- bilingual-en:start -->
@@ -138,10 +136,9 @@ Candidate thresholds should be assessed jointly through approximate linearity of
 
 > [!answer]- 答案
 > 阈值低有更多数据但渐近尾模型偏差大；阈值高更符合尾部近似但样本少、方差大。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > A low threshold provides more data but greater bias from the asymptotic tail model; a high threshold better fits the tail approximation but leaves fewer observations and higher variance.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话解释：为什么 EVT 不是“预测黑天鹅”的魔法？
 <!-- bilingual-en:start -->
@@ -150,10 +147,9 @@ Candidate thresholds should be assessed jointly through approximate linearity of
 
 > [!answer]- 答案
 > 它在尾部属于稳定极值域等条件下外推已观察极值的规律；结构断点、新机制和极少样本仍无法由渐近公式消除。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It extrapolates the pattern of observed extremes under assumptions such as belonging to a stable extreme-value domain. Asymptotic formulas cannot eliminate structural breaks, new mechanisms, or very sparse data.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### shape 参数为什么会决定 ES 是否存在？
 <!-- bilingual-en:start -->
@@ -162,10 +158,9 @@ Candidate thresholds should be assessed jointly through approximate linearity of
 
 > [!answer]- 答案
 > shape 控制尾部衰减速度；当 $\xi\ge1$ 时尾部太厚，损失条件均值发散，因此有限分位仍可存在但尾均值无限。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Shape controls how slowly the tail decays. When $\xi\ge1$, the tail is so heavy that conditional mean loss diverges; finite quantiles may still exist while the tail mean is infinite.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

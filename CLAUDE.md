@@ -113,8 +113,10 @@ DDD or staggered-adoption DID may eventually become separate files because their
 ### Bilingual preservation
 
 - Course notes and knowledge files are Chinese-first bilingual notes. Preserve every existing Chinese passage verbatim, including English terms embedded in it; never delete, paraphrase, reorder, or translate away the Chinese layer when adding English.
-- Add an idiomatic English translation immediately after each Chinese semantic block. Keep Chinese headings unchanged and place their English subtitle below them so heading links do not break.
+- Add an idiomatic English translation immediately after each Chinese semantic block. Keep Chinese headings unchanged and place an italic or plain-text English subtitle below them; never create a second Markdown heading, so the outline and heading links remain stable.
+- Pure navigation controls are the exception: do not duplicate quick-jump lists, tables of contents, local-material lists, index-only sections, or link-only blocks in English. Preserve the original Chinese or mixed-language navigation once; these blocks do not carry explanatory knowledge.
 - Require English-only visible prose in Obsidian reading view. Preserve Chinese wikilink targets and source paths, but give them idiomatic English display labels such as `[[中文目标|English label]]`; do not leave visibly Chinese link text inside an English block.
+- Keep translated callout content inside the original callout. Every marker, English line, and blank line belonging to the translation must carry the same `>` nesting prefix. Do not add a second bare English callout title such as `Self-test answer`; the existing Chinese callout title remains the single control label.
 - Keep YAML, code, standalone formulas, block IDs, link targets, and embeds structurally unchanged. Translate visible prose around them while preserving notation.
 - Wrap every inserted English block between `<!-- bilingual-en:start -->` and `<!-- bilingual-en:end -->` so the English layer can be removed mechanically and the original Chinese layer verified byte-for-byte.
 - Treat bilingual preservation and link migration as separate auditable operations. Adding English must be byte-for-byte reversible. A later link migration may change only wikilink targets, headings, aliases, or meaningless generated link markup when necessary, while preserving the rendered Chinese display text; it does not authorise rewriting course prose.
@@ -220,14 +222,14 @@ Only Python, TypeScript, and JavaScript run in the local sandbox. Other language
 
 ## Templates and Learning Records
 
-Durable Obsidian templates and QuickAdd scripts are stored in `05_tools/Obsidian/`. Inbox directories contain only unprocessed raw inputs and must be emptied after processing.
+Durable Obsidian templates and QuickAdd scripts are stored in `05_tools/Obsidian/`. Course-local `00_inbox/` directories contain raw inputs and are emptied after successful processing; root `00_inbox/` is the durable user-owned exception and is never cleared by this workflow.
 
 Daily notes live in `99_学习情况记录` and use the `YYYY-MM-DD——ddd` format.
 
 ## Git and Safety
 
 - The Obsidian Git plugin creates automated daily commits in the form `自动: YYYY-MM-DD HH:MM`.
-- The vault's `.gitignore` excludes private or transient areas including daily logs, inbox material, thesis work, and innovation-project work; verify the current file before relying on this summary.
+- The vault's `.gitignore` ignores course-local `00_inbox/` contents while explicitly keeping root `00_inbox/` trackable; inspect the file before assuming any additional path is ignored.
 - Do not commit secrets or personal tokens.
 - Preserve unrelated user changes. Review `git diff` before committing.
 - When reorganizing notes, update links or use Obsidian rename behavior so references are not broken.

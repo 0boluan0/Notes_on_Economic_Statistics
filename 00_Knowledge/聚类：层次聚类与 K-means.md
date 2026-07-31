@@ -17,23 +17,21 @@ status: source-checked
 > **核心难点：** 尺度、距离、链接、初始值和簇数都会改变结果；可视化漂亮不等于稳定或有用。
 > **为什么重要：** 市场细分、生态群落、基因表达和异常探索都使用聚类，但误读也极常见。
 > **继续：** 先写对象与变量含义并标准化，再比较层次法与 K-means；已有标签时应转到 [[判别分析：Bayes、LDA 与 QDA]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** Without known labels, it explores which observations form relatively similar groups under an explicitly chosen representation, distance, and algorithm.
 > **Concrete anchor:** With customer spending features but no type labels, one may explore whether stable groups exist. The result is a partition under the analysis definition, not automatic discovery of natural kinds.
 > **Central difficulty:** Scaling, distance, linkage, initialisation, and the number of clusters can all change the result. An attractive visualisation does not establish stability or usefulness.
 > **Why it matters:** Market segmentation, ecological communities, gene expression, and anomaly exploration all use clustering, and all are vulnerable to overinterpretation.
 > **Continue with:** Define observations and variables and choose scaling before comparing hierarchical methods with K-means. If labels already exist, go to [[判别分析：Bayes、LDA 与 QDA|discriminant analysis]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - [Penn State STAT 505, Lesson 14](https://online.stat.psu.edu/stat505/Lesson14)：核验距离、凝聚层次聚类、Ward 方法、K-means 与后续描述。
 > - Johnson & Wichern, *Applied Multivariate Statistical Analysis*, 6th ed.：核验目标函数与聚类诊断。
-<!-- bilingual-en:start -->
-> [!source] Sources for this section
+> <!-- bilingual-en:start -->
 > - [Penn State STAT 505, Lesson 14](https://online.stat.psu.edu/stat505/Lesson14) was used to verify distances, agglomerative hierarchical clustering, Ward's method, K-means, and post-cluster description.
 > - Johnson and Wichern, *Applied Multivariate Statistical Analysis*, 6th ed., was used to verify objectives and diagnostics for clustering.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 表示、尺度与距离
 <!-- bilingual-en:start -->
@@ -112,10 +110,9 @@ Internal indices such as silhouette width assess compactness and separation unde
 
 > [!answer]- 答案
 > 平方 Euclidean 距离会让数值尺度大的变量主导簇划分；标准化使各维权重更可控。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Squared Euclidean distance lets numerically large-scale variables dominate the partition. Standardisation makes the relative weight of each dimension more controllable.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### dendrogram 的一次明显断层是否自动给出真实簇数？
 <!-- bilingual-en:start -->
@@ -124,10 +121,9 @@ Internal indices such as silhouette width assess compactness and separation unde
 
 > [!answer]- 答案
 > 不自动。断层依赖距离、链接、尺度和样本；还需稳定性、领域意义与外部验证。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > No. The gap depends on distance, linkage, scaling, and the sample. Stability, domain meaning, and external validation are still required.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 不同合理预处理产生完全不同聚类时应怎样报告？
 <!-- bilingual-en:start -->
@@ -136,10 +132,9 @@ Internal indices such as silhouette width assess compactness and separation unde
 
 > [!answer]- 答案
 > 把敏感性作为主要结论，展示哪些选择改变结果，不应只挑最容易解释的一次分组。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Treat sensitivity as a central result, showing which choices change the partition rather than selecting only the easiest grouping to explain.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

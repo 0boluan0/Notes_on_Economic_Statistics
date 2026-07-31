@@ -17,25 +17,23 @@ status: source-checked
 > **核心难点：** Greeks 是会随市场和时间变化的局部导数；对冲一个因子会留下曲率、基差、跳跃、交易成本与模型风险。
 > **为什么重要：** 交易敞口、对冲、VaR 与损益归因都从风险因子—价值函数开始，名义金额本身不能说明风险。
 > **继续：** 小变动用 Delta/Gamma 近似并持续再平衡；严重多因子变化交给 [[压力测试与逆向压力测试]]，尾部分布聚合见 [[VaR、ES 与回测]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** It maps portfolio value to risk factors such as prices, rates, exchange rates, and volatility and uses local first- and second-order sensitivities to explain P&L and design dynamic hedges.
 > **Concrete anchor:** An option delta of 0.5 means only that at the current point, holding other inputs fixed and for a small underlying move, a rise of 1 changes option value by about 0.5. Large moves make gamma and volatility changes invalidate the approximation.
 > **Central difficulty:** Greeks are local derivatives that change with market state and time. Hedging one factor leaves curvature, basis, jumps, transaction costs, and model risk.
 > **Why it matters:** Trading exposure, hedging, VaR, and P&L attribution all begin with a risk-factor–value function; notional amount alone does not describe risk.
 > **Continue:** Use delta and gamma approximations for small moves and rebalance continually. Send severe multi-factor changes to [[压力测试与逆向压力测试|Stress Testing and Reverse Stress Testing]], and aggregate tail distributions in [[VaR、ES 与回测|VaR, Expected Shortfall, and Backtesting]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。
 > - [Basel Framework](https://www.bis.org/basel_framework/)：核验资本、市场风险、信用风险、CVA 与监管口径。
 > - Hull, *Risk Management and Financial Institutions*：交叉核验 VaR、ES、Greek、利率风险、信用风险与模拟方法。
-<!-- bilingual-en:start -->
-> [!source] Basis for this section
+> <!-- bilingual-en:start -->
 > - The vault's Financial Institutions and Risk Management course notes support course scope, classroom examples, and notation.
 > - The [Basel Framework](https://www.bis.org/basel_framework/) verifies regulatory conventions for capital, market risk, credit risk, and CVA.
 > - Hull, *Risk Management and Financial Institutions*, cross-checks VaR, ES, Greeks, interest-rate risk, credit risk, and simulation methods.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 风险因子与价值映射
 <!-- bilingual-en:start -->
@@ -112,24 +110,6 @@ Dynamic-hedging outcomes depend on the path. Continuous-time, frictionless repli
 The risk-neutral measure supports no-arbitrage pricing, with drift governed by funding and related inputs; the real-world measure is used to forecast actual P&L, capital, and stress. Using risk-neutral scenarios to estimate real-world frequencies, or real-world probabilities directly for arbitrage-free pricing, confuses objectives.
 <!-- bilingual-en:end -->
 
-## 从原主题保留的全局定位
-<!-- bilingual-en:start -->
-*Global orientation retained from the original topic*
-<!-- bilingual-en:end -->
-
-> **它解决什么：** 把组合价值对市场因子的小幅变化和大幅情景变化分开度量，并据此对冲或设置限额。
-> **具体锚点：** 期权 Delta 为 0.5 只近似说明标的小涨 1 时价值涨 0.5；若标的大动，Gamma 和波动率变化会让线性近似失真。
-> **核心难点：** Greeks 是局部敏感度且彼此随市场变化；风险中性定价参数和真实世界损益分布服务不同问题。
-> **为什么重要：** 交易敞口、对冲、VaR 和压力测试都从因子—价值映射开始。
-> **继续：** 小变动用 Delta/Gamma，大变动用全重估情景；聚合尾部见 [[VaR、ES 与回测|VaR、ES、回测与压力测试]]。
-<!-- bilingual-en:start -->
-> **What it solves:** It measures small market-factor changes and large scenario changes separately and uses them for hedging or limits.
-> **Concrete anchor:** An option delta of 0.5 only approximates a value rise of 0.5 for a small underlying rise of 1; a large move makes gamma and volatility changes invalidate the linear approximation.
-> **Central difficulty:** Greeks are local sensitivities and change together with markets; risk-neutral pricing inputs and real-world P&L distributions serve different questions.
-> **Why it matters:** Trading exposure, hedging, VaR, and stress testing all begin with a factor–value map.
-> **Continue:** Use delta and gamma for small moves and fully revalued scenarios for large moves. For aggregated tails, see [[VaR、ES 与回测|VaR, Expected Shortfall, and Backtesting]].
-<!-- bilingual-en:end -->
-
 ## 失败诊断
 <!-- bilingual-en:start -->
 *Failure diagnosis*
@@ -158,10 +138,9 @@ The risk-neutral measure supports no-arbitrage pricing, with drift governed by f
 
 > [!answer]- 答案
 > Delta 会随价格、时间和波动变化，仍有 Gamma、Vega、跳跃、基差、流动性和再平衡成本。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Delta changes with price, time, and volatility; gamma, vega, jumps, basis, liquidity, and rebalancing cost remain.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 什么时候 Delta–Gamma 近似仍不够？
 <!-- bilingual-en:start -->
@@ -170,10 +149,9 @@ The risk-neutral measure supports no-arbitrage pricing, with drift governed by f
 
 > [!answer]- 答案
 > 大幅/离散冲击、强路径依赖、障碍或提前行权附近，应对每个情景全重估。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Under large or discrete shocks, strong path dependence, barriers, or near early-exercise boundaries, fully revalue each scenario.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 风险中性与真实世界情景各用于什么？
 <!-- bilingual-en:start -->
@@ -182,10 +160,9 @@ The risk-neutral measure supports no-arbitrage pricing, with drift governed by f
 
 > [!answer]- 答案
 > 前者主要用于无套利定价，后者用于实际损益分布、风险、资本和情景概率判断。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The former is primarily for no-arbitrage pricing; the latter is for actual P&L distributions, risk, capital, and scenario-probability judgment.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话解释：动态 Delta 对冲为什么仍会有损益？
 <!-- bilingual-en:start -->
@@ -194,10 +171,9 @@ The risk-neutral measure supports no-arbitrage pricing, with drift governed by f
 
 > [!answer]- 答案
 > Delta 只在瞬时局部成立；价格跳跃、Gamma、波动率变化、离散再平衡和交易成本使复制不完整，模型与实际路径的差异形成对冲损益。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Delta is instantaneous and local. Price jumps, gamma, volatility changes, discrete rebalancing, and transaction costs make replication incomplete, so differences between model and realized path create hedge P&L.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

@@ -190,10 +190,9 @@ Write examples and specify inputs and outputs first, then divide the work into t
 
 > [!answer]- 答案
 > 通常先求右侧对象，再让名称绑定到它；不可变对象本身不被修改。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Normally the right-hand object is evaluated first and the name is then bound to it; an immutable object itself is not modified.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### `is` 和 `==` 何时不同？
 <!-- bilingual-en:start -->
@@ -202,10 +201,9 @@ Write examples and specify inputs and outputs first, then divide the work into t
 
 > [!answer]- 答案
 > `==` 比较值是否相等，`is` 比较是否同一对象；普通数值/字符串应使用 `==`。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > `==` asks whether values are equal, while `is` asks whether two references designate the same object; ordinary numbers and strings should be compared with `==`.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 一个 `while` 循环如何证明会终止？
 <!-- bilingual-en:start -->
@@ -214,10 +212,9 @@ Write examples and specify inputs and outputs first, then divide the work into t
 
 > [!answer]- 答案
 > 找一个每轮严格朝边界推进、且有下界/上界的度量，并确保所有分支都更新它。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Identify a measure with a lower or upper bound that moves strictly toward that bound on every iteration, and verify that every branch updates it.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么 `input()` 后立即做边界验证比在每个分支里补检查更可靠？
 <!-- bilingual-en:start -->
@@ -226,10 +223,9 @@ Write examples and specify inputs and outputs first, then divide the work into t
 
 > [!answer]- 答案
 > 它在共同信任边界一次排除非法状态，使后续每条路径都能依赖同一前提，避免某个分支漏检。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It rejects invalid states once at the shared trust boundary, allowing every later path to rely on the same precondition and preventing a branch from omitting validation.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

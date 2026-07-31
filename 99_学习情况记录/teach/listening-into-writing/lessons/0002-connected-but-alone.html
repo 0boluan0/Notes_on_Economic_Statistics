@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Listening into Writing 0002 · Connected, but alone?</title>
+  <style>
+    :root { color-scheme:light dark; --accent:#a4192e; --muted:#69707a; --card:#f5f6f8; }
+    * { box-sizing:border-box; }
+    body { max-width:900px; margin:auto; padding:32px 20px 64px; font:16px/1.6 system-ui,sans-serif; }
+    header, section { margin-bottom:28px; }
+    .meta,.hint { color:var(--muted); }
+    .card { padding:18px; border:1px solid #aeb4bb; border-radius:12px; background:var(--card); }
+    a.button,button { padding:9px 13px; border:0; border-radius:8px; background:var(--accent); color:#fff; text-decoration:none; cursor:pointer; }
+    button.secondary { background:#555d68; }
+    textarea { width:100%; min-height:190px; padding:12px; border:1px solid #9da3aa; border-radius:8px; font:15px/1.5 ui-monospace,monospace; }
+    #summary { min-height:300px; }
+    .timer { margin:12px 0; font:700 34px/1 ui-monospace,monospace; }
+    .controls { display:flex; flex-wrap:wrap; gap:8px; }
+    label { display:block; margin:7px 0; }
+    @media (prefers-color-scheme:dark) { :root { --card:#20242a; --muted:#abb2bd; } }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="meta">2026-07-31 · Social media · Lesson 0002 · 约 45 分钟</p>
+    <h1>Connected, but alone?</h1>
+    <p><strong>今日唯一重点：</strong>区分讲者的 central claim、观察性例证与因果判断。</p>
+    <p><a class="button" href="https://www.youtube.com/watch?v=t7Xr3AsBEK4" target="_blank" rel="noreferrer">打开 TED YouTube（19:27）</a></p>
+  </header>
+
+  <section class="card">
+    <h2>计时器</h2>
+    <div id="timer" class="timer">19:27</div>
+    <div class="controls">
+      <button data-seconds="1167">听力 19:27</button>
+      <button data-seconds="300">整理 5:00</button>
+      <button data-seconds="900">写作 15:00</button>
+      <button data-seconds="300">核对 5:00</button>
+      <button id="pause" class="secondary">暂停／继续</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>1. 听一遍</h2>
+    <p>关闭字幕，不暂停、不回放。每个例子旁标记它支持哪一个 claim；无法判断时写 <code>?</code>，不要假装它是证据。</p>
+    <textarea id="notes" aria-label="听力笔记" placeholder="P（purpose / overall claim）:
+
+C1（claim）:
+  Ex（example / observation）:
+  Link（why it supports C1）:
+
+C2:
+  Ex:
+  Link:
+
+C3:
+  Ex:
+  Link:
+
+Q（qualification / limitation）:"></textarea>
+  </section>
+
+  <section>
+    <h2>2. 五分钟恢复结构</h2>
+    <ol>
+      <li>Turkle 认为技术只是改变我们的行为，还是也改变我们自身？</li>
+      <li>她如何区分 connection 与 conversation？</li>
+      <li>她描述了哪几种人们从技术中寻求的心理满足？</li>
+      <li>哪些材料来自观察、访谈或故事，而不是实验性因果证据？</li>
+      <li>她最后建议改变什么？</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>3. 十五分钟 mini critical summary</h2>
+    <p>写 <strong>180–220 词</strong>：准确概括中心论点和两个主要机制，只保留一个关键例子；再用一句话评价其证据是否足以支持广泛的因果结论。评价必须针对演讲中的证据类型。</p>
+    <textarea id="summary" aria-label="summary"></textarea>
+    <p><strong>Words:</strong> <span id="words">0</span></p>
+  </section>
+
+  <section>
+    <h2>4. 完成后核对</h2>
+    <details>
+      <summary>打开 transcript 与结构骨架</summary>
+      <p><a href="https://www.ted.com/talks/sherry_turkle_connected_but_alone?view=transcript" target="_blank" rel="noreferrer">TED 官方 transcript</a></p>
+      <p><strong>结构骨架：</strong>Turkle 认为持续在线让人获得陪伴的感觉，却可能削弱面对面交谈、亲密关系与独处能力。她用家庭、工作场所和个人访谈中的观察说明人们逐渐以可控制的数字连接替代更复杂的交谈，并建议建立不使用设备的空间、重新练习倾听与独处。</p>
+      <p class="hint">她的例子能展示机制并增强解释力，但大多不是用于估计平均因果效应的实验或代表性数据；critical comment 应准确限定这一点，而不是简单说演讲“没有证据”。</p>
+    </details>
+    <label><input type="checkbox"> 报告了讲者观点，没有把自己的意见写成讲者观点</label>
+    <label><input type="checkbox"> 至少说明一个例子如何支持相应 claim</label>
+    <label><input type="checkbox"> 区分了观察性材料和因果结论</label>
+    <label><input type="checkbox"> 没有连续照搬超过四个词</label>
+    <label><input type="checkbox"> 字数在 180–220 之间</label>
+  </section>
+
+  <section class="card">
+    <h2>瓶颈记录</h2>
+    <p><strong>L</strong> 听辨 · <strong>S</strong> 结构 · <strong>N</strong> 笔记 · <strong>W</strong> 写作 · <strong>C</strong> 批判评价</p>
+    <textarea id="reflection" aria-label="练习复盘" placeholder="主要瓶颈：
+下一次只调整："></textarea>
+    <p class="hint">页面会自动保存。需要反馈时，把笔记、summary 和瓶颈发给 Codex。</p>
+  </section>
+
+  <footer class="meta">Sources: <a href="https://www.youtube.com/watch?v=t7Xr3AsBEK4">TED YouTube</a> · <a href="https://www.ted.com/talks/sherry_turkle_connected_but_alone?view=transcript">TED transcript</a> · <a href="../../../../07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Marking-Criteria/Paper%20A_Marking%20Criteria_Listening%20into%20Writing.pdf">LN905 criteria</a></footer>
+
+  <script>
+    const key="liw-0002-", fields=["notes","summary","reflection"];
+    function count(){const value=document.getElementById("summary").value.trim();document.getElementById("words").textContent=value?value.split(/\s+/).length:0;}
+    for(const id of fields){const el=document.getElementById(id);el.value=localStorage.getItem(key+id)||"";el.addEventListener("input",()=>{localStorage.setItem(key+id,el.value);if(id==="summary")count();});} count();
+    let remaining=1167, handle=null; const display=document.getElementById("timer");
+    function render(){display.textContent=`${String(Math.floor(remaining/60)).padStart(2,"0")}:${String(remaining%60).padStart(2,"0")}`;}
+    function start(seconds){clearInterval(handle);remaining=seconds;render();handle=setInterval(()=>{if(remaining>0){remaining--;render();}else{clearInterval(handle);handle=null;}},1000);}
+    document.querySelectorAll("[data-seconds]").forEach(button=>button.addEventListener("click",()=>start(Number(button.dataset.seconds))));
+    document.getElementById("pause").addEventListener("click",()=>{if(handle){clearInterval(handle);handle=null;}else start(remaining);});
+  </script>
+</body>
+</html>

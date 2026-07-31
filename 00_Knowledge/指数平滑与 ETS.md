@@ -18,24 +18,22 @@ status: source-checked
 > **核心难点：** 预测解释变量本身未知时，回归预测必须给其未来值/情景；自动选模仍要诊断残差和结构变化。
 > **为什么重要：** 不同方法利用不同可预测结构，基准和时序验证决定是否值得使用。
 > **继续：** 先分解结构，再并行比较 ETS、ARIMA 和 dynamic regression；选择依据是外样本与用途。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** ETS forecasts a series by recursively updating level, trend, and seasonal states, with a statistical error model that supplies likelihoods and intervals.
 > **Concrete anchor:** Monthly retail sales can have a changing level, a damped trend, and annual seasonality; ETS updates those components directly as each observation arrives.
 > **Central difficulty:** Additive versus multiplicative components, damping, and initial states change both forecast shape and uncertainty. Automatic selection still requires residual and out-of-sample checks.
 > **Why it matters:** ETS offers an interpretable baseline for many operational series and provides structures that ARIMA does not fully contain.
 > **Continue with:** Compare it against [[ARMA 模型：识别、估计、诊断与预测|ARIMA-family models]] and [[回归预测与动态回归|dynamic regression]] under the evaluation design in [[预测问题、基准方法与评估|forecasting workflow and evaluation]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - Hyndman & Athanasopoulos, [Forecasting: Principles and Practice, 3rd ed.](https://otexts.com/fpp3/)：支持预测流程、基准、评估、ETS、回归与 ARIMA。
 > - [[01_Math/06_时间序列分析/lecture.pdf]] 与 [[01_Math/06_时间序列分析/lecture-dual.pdf]]：支持课程范围、记号、模型、检验与例题。
 > - Hyndman & Athanasopoulos, [Forecasting: Principles and Practice](https://otexts.com/fpp3/)：交叉核验预测、ARIMA、诊断与时序交叉验证。
-<!-- bilingual-en:start -->
-> [!source] Sources for this section
+> <!-- bilingual-en:start -->
 > - Hyndman and Athanasopoulos, [Forecasting: Principles and Practice, 3rd ed.](https://otexts.com/fpp3/), was checked for decomposition, simple exponential smoothing, Holt and damped trend, Holt–Winters, innovations state-space ETS, and forecast intervals.
 > - [[01_Math/06_时间序列分析/lecture.pdf|time-series lecture notes]] and [[01_Math/06_时间序列分析/lecture-dual.pdf|bilingual time-series lecture notes]] were checked for course notation and comparisons with ARIMA.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 分解与季节性
 <!-- bilingual-en:start -->
@@ -122,9 +120,9 @@ ETS 以成分演化描述趋势/季节，ARIMA 以差分后自相关描述；部
 ETS describes evolving trend and seasonal components, whereas ARIMA describes autocorrelation after differencing. Some linear models are equivalent, but each family also contains structures absent from the other. Choose by rolling-origin performance across relevant horizons, not by a universal ranking.
 <!-- bilingual-en:end -->
 
-例如 simple exponential smoothing 对应特定 ARIMA(0,1,1) 表示，Holt 线性法与某些 ARIMA(0,2,2) 有对应；但带乘法季节或非线性状态更新的 ETS 不是普通线性 ARIMA。这些等价是理解模型的桥，不是说两个家族可以合并成一张卡。
+例如 simple exponential smoothing 对应特定 ARIMA(0,1,1) 表示，Holt 线性法与某些 ARIMA(0,2,2) 有对应；但带乘法季节或非线性状态更新的 ETS 不是普通线性 ARIMA。这些等价只提供概念桥梁，不表示两类模型可互换使用。
 <!-- bilingual-en:start -->
-For example, simple exponential smoothing corresponds to a particular ARIMA(0,1,1) representation, and Holt's linear method has links to some ARIMA(0,2,2) models. ETS models with multiplicative seasonality or nonlinear state updates are not ordinary linear ARIMA models. These equivalences are conceptual bridges, not evidence that the two families should be collapsed into one card.
+For example, simple exponential smoothing corresponds to a particular ARIMA(0,1,1) representation, and Holt's linear method has links to some ARIMA(0,2,2) models. ETS models with multiplicative seasonality or nonlinear state updates are not ordinary linear ARIMA models. These equivalences are conceptual bridges; they do not make the two model families interchangeable.
 <!-- bilingual-en:end -->
 
 ## Worked example：月度零售销量
@@ -164,10 +162,9 @@ Automatic ETS selection ordinarily compares information criteria across permitte
 
 > [!answer]- 答案
 > ETS 直接更新水平/趋势/季节成分，ARIMA 通过差分和自相关结构描述序列；二者部分重叠但不互相完全包含。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > ETS directly updates level, trend, and seasonal states, whereas ARIMA describes a series through differencing and autocorrelation. They overlap partly but neither fully contains the other.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### $\alpha$ 较大在简单指数平滑中意味着什么？
 <!-- bilingual-en:start -->
@@ -176,10 +173,9 @@ Automatic ETS selection ordinarily compares information criteria across permitte
 
 > [!answer]- 答案
 > 最新观测获得更大权重，水平对变化反应更快，但也更容易追随短期噪声。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The newest observation receives more weight, so the level reacts faster to change but follows short-run noise more readily.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么长期预测常考虑阻尼趋势？
 <!-- bilingual-en:start -->
@@ -188,10 +184,9 @@ Automatic ETS selection ordinarily compares information criteria across permitte
 
 > [!answer]- 答案
 > Holt 线性趋势会把最近斜率无限延伸，阻尼让趋势贡献随 horizon 逐渐封顶，常能避免不合理的远期爆炸。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Holt's linear method extrapolates the latest slope indefinitely; damping caps the cumulative trend contribution as horizon grows and often avoids implausible distant explosion.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话区分“乘法季节”和“乘法误差”。
 <!-- bilingual-en:start -->
@@ -200,10 +195,9 @@ Automatic ETS selection ordinarily compares information criteria across permitte
 
 > [!answer]- 答案
 > 乘法季节说季节效应以比率与水平结合；乘法误差说随机创新的尺度随预测水平缩放。一个是系统成分，一个是随机误差机制。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Multiplicative seasonality combines seasonal effects with the level as ratios; multiplicative errors scale random innovations with the forecast level. One is a systematic component and the other an error mechanism.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

@@ -45,9 +45,9 @@ Enumerating and checking candidates suits a small discrete space or a baseline. 
 Binary search on a sorted list preserves the invariant that an existing target lies inside the current half-open interval and halves it each step. Root-finding bisection requires a continuous function with opposite endpoint signs and keeps a root bracketed. Both halve uncertainty geometrically, but their preconditions differ.
 <!-- bilingual-en:end -->
 
-数组查找的完整算法边界在 [[渐近记号与算法复杂度#搜索复杂度入口|搜索复杂度入口]]；本卡只保留这段原有比较，并集中解释连续函数求根。
+数组查找的完整算法边界在 [[渐近记号与算法复杂度#搜索复杂度入口|搜索复杂度入口]]；这里用它与 bisection 对照，以区分离散索引搜索和连续函数求根。
 <!-- bilingual-en:start -->
-The complete boundary for array search is in [[渐近记号与算法复杂度#搜索复杂度入口|Search Complexity]]. This note retains the original comparison but focuses on root-finding for continuous functions.
+The full treatment of array search is in [[渐近记号与算法复杂度#搜索复杂度入口|Search Complexity]]. It is contrasted with bisection here to distinguish discrete index search from root-finding for continuous functions.
 <!-- bilingual-en:end -->
 
 ## Newton–Raphson
@@ -125,10 +125,9 @@ Newton's method from $x_0=1.5$ uses $x_{k+1}=(x_k+2/x_k)/2$ and approaches $\sqr
 
 > [!answer]- 答案
 > 连续函数在当前区间两端异号，因此区间内至少有一个根。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The continuous function has opposite signs at the current endpoints, so the interval contains at least one root.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### Newton 法快，为什么仍需最大迭代和失败处理？
 <!-- bilingual-en:start -->
@@ -137,10 +136,9 @@ Newton's method from $x_0=1.5$ uses $x_{k+1}=(x_k+2/x_k)/2$ and approaches $\sqr
 
 > [!answer]- 答案
 > 初值、零导数或非良性函数可使其发散、震荡或溢出。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > A poor initial value, zero derivative, or ill-behaved function can make it diverge, oscillate, or overflow.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么停止条件要匹配最终误差目标？
 <!-- bilingual-en:start -->
@@ -149,10 +147,9 @@ Newton's method from $x_0=1.5$ uses $x_{k+1}=(x_k+2/x_k)/2$ and approaches $\sqr
 
 > [!answer]- 答案
 > 小步长、小残差和小位置误差并不无条件等价；只有在相应数学条件下，一个指标才能控制另一个。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > A small step, residual, and position error are not unconditionally equivalent; one controls another only under appropriate mathematical conditions.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

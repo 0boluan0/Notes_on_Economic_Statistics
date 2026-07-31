@@ -6,7 +6,6 @@
 >[!note] 本章主线
 > 第 5 章检验一个总体均值向量，第 6 章比较两个或多个总体均值向量。两组问题优先识别“配对”还是“独立”；多组问题进入 one-way MANOVA。
 > <!-- bilingual-en:start -->
-> [!note] Chapter backbone
 > Chapter 5 tests one population mean vector; Chapter 6 compares the mean vectors of two or more populations. For two groups, first distinguish paired from independent samples. With several groups, use one-way MANOVA.
 > <!-- bilingual-en:end -->
 
@@ -32,7 +31,6 @@ The chapter has three core cases:
 >[!attention] 题型边界
 > 若 $\Sigma_1\neq\Sigma_2$，不能直接使用 pooled covariance 两样本 $T^2$。
 > <!-- bilingual-en:start -->
-> [!attention] Scope condition
 > If $\Sigma_1\neq\Sigma_2$, the pooled-covariance two-sample $T^2$ test cannot be used directly.
 > <!-- bilingual-en:end -->
 
@@ -193,7 +191,6 @@ At $\alpha=0.05$, the critical value is approximately $9.47$, so $H_0$ is reject
 >[!note] 解读
 > 即使单个分量的同时区间可能包含 0，联合检验仍可能拒绝。这说明两个变量合在一起呈现了显著差异。
 > <!-- bilingual-en:start -->
-> [!note] Interpretation
 > The joint test may reject even when the simultaneous interval for an individual component contains zero. The two variables can be jointly different even when neither is decisive on its own.
 > <!-- bilingual-en:end -->
 
@@ -314,7 +311,6 @@ the standard pooled-covariance formula no longer applies.
 >[!attention] 常见错误
 > 题目明确协方差矩阵不等时，不要机械套 pooled 两样本 Hotelling $T^2$。
 > <!-- bilingual-en:start -->
-> [!attention] Common error
 > When a question explicitly states that the covariance matrices differ, do not mechanically apply the pooled two-sample Hotelling $T^2$ test.
 > <!-- bilingual-en:end -->
 
@@ -414,7 +410,6 @@ A small $\Lambda^*$ means that between-group differences explain a substantial s
 >[!attention] 方向
 > Wilks Lambda 越小越显著，不是越大越显著。
 > <!-- bilingual-en:start -->
-> [!attention] Direction
 > A smaller Wilks' Lambda is more significant, not a larger one.
 > <!-- bilingual-en:end -->
 
@@ -487,11 +482,11 @@ The exact or approximate distribution in MANOVA depends on sample size, the numb
 *1.8. Related Cards*
 <!-- bilingual-en:end -->
 
-- [[Paired Mean Vector Comparison]]
-- [[Two-Sample Hotelling T2 Test]]
-- [[Hotelling T2 Test]]
-- [[MANOVA]]
-- [[One-way MANOVA Procedure]]
-- [[Wilks Lambda]]
-- [[SSP Matrix]]
-- [[Multivariate Mean Inference Map]]
+- [[Hotelling T² 与多元均值推断#配对与两独立总体|Paired Mean Vector Comparison]]
+- [[Hotelling T² 与多元均值推断#配对与两独立总体|Two-Sample Hotelling T2 Test]]
+- [[Hotelling T² 与多元均值推断#单总体 Hotelling $T^2$|Hotelling T2 Test]]
+- [[MANOVA 多元方差分析#MANOVA 的模型|MANOVA]]
+- [[MANOVA 多元方差分析#MANOVA 的模型|One-way MANOVA Procedure]]
+- [[MANOVA 多元方差分析#$H$ 与 $E$ 矩阵|Wilks Lambda]]
+- [[MANOVA 多元方差分析#$H$ 与 $E$ 矩阵|SSP Matrix]]
+- [[Hotelling T² 与多元均值推断|Multivariate Mean Inference Map]]

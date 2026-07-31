@@ -11,25 +11,19 @@ status: source-checked
 *Oligopoly Competition: Cournot, Bertrand, and Stackelberg*
 <!-- bilingual-en:end -->
 
-兼容主题名称：Cournot、Bertrand 与 Stackelberg
-<!-- bilingual-en:start -->
-Legacy topic name: Cournot, Bertrand, and Stackelberg
-<!-- bilingual-en:end -->
-
 > [!summary] 快速恢复
 > **它解决什么：** 比较少数企业选择产量、价格或行动时序时，相互最佳反应怎样决定市场价格、总量与利润。
 > **具体锚点：** Cournot 企业选择产量时，每家的最优产量取决于对手产量；反应函数的交点就是均衡。
 > **核心难点：** Cournot、Bertrand 与 Stackelberg 的结论由战略变量、可观察时序、产品差异和容量约束共同决定，不能互换公式。
 > **为什么重要：** 它把市场结构落到可检验的企业行为，并解释为何相似企业数目下价格竞争强度可能完全不同。
 > **继续：** 先用 [[纳什均衡与混合策略]] 掌握相互最佳反应；有可信承诺时再用 [[扩展式博弈、逆向归纳与子博弈完美均衡]] 检查先后行动。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** Compare how mutual best responses determine market price, total output, and profit when a small number of firms choose quantities, prices, or the timing of moves.
 > **Concrete anchor:** In Cournot competition, each firm chooses output in response to its rival's output; the intersection of their reaction functions is the equilibrium.
 > **Central difficulty:** Cournot, Bertrand, and Stackelberg conclusions depend jointly on the strategic variable, observable timing, product differentiation, and capacity constraints; their formulas are not interchangeable.
 > **Why it matters:** The models translate market structure into testable firm behavior and explain why price competition can differ radically with a similar number of firms.
 > **Continue with:** First use [[纳什均衡与混合策略|Nash Equilibrium and Mixed Strategies]] to master mutual best responses; when commitment is credible, use [[扩展式博弈、逆向归纳与子博弈完美均衡|Extensive-form Games, Backward Induction, and Subgame-perfect Equilibrium]] to analyze sequential moves.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 寡头模型回答的是：少数企业相互预见对方行为时，战略变量、行动时序和产品环境怎样决定价格、产量与利润。先判断企业选择的是数量还是价格、同时还是先后行动，再选择模型；不能先背公式再给市场贴标签。
 <!-- bilingual-en:start -->
@@ -40,12 +34,11 @@ Oligopoly models ask how strategic variables, timing, and product-market conditi
 > - [[01_Math/03_game theory/第1次作业.pdf]]—[[01_Math/03_game theory/第3次作业.pdf]]：支持课程覆盖、课堂模型与题目语境。
 > - [MIT OCW 14.12 Game Theory lecture notes](https://ocw.mit.edu/courses/14-12-economic-applications-of-game-theory-fall-2012/pages/lecture-notes/)：核验策略式、扩展式、Nash、Bayesian 与精炼概念。
 > - [MIT OCW 15.040 Game Theory for Managers](https://ocw.mit.edu/courses/15-040-game-theory-for-managers-spring-2004/pages/lecture-notes/)：核验同时行动、序贯行动、承诺和市场进入的战略逻辑。
-<!-- bilingual-en:start -->
-> [!source] Basis for this section
+> <!-- bilingual-en:start -->
 > - [[01_Math/03_game theory/第1次作业.pdf|Game Theory Assignment 1]]—[[01_Math/03_game theory/第3次作业.pdf|Game Theory Assignment 3]]: support the course coverage, classroom models, and problem context.
 > - [MIT OCW 14.12 Game Theory lecture notes](https://ocw.mit.edu/courses/14-12-economic-applications-of-game-theory-fall-2012/pages/lecture-notes/): verifies strategic-form and extensive-form games, Nash and Bayesian equilibrium, and refinements.
 > - [MIT OCW 15.040 Game Theory for Managers](https://ocw.mit.edu/courses/15-040-game-theory-for-managers-spring-2004/pages/lecture-notes/): verifies the strategic logic of simultaneous moves, sequential moves, commitment, and market entry.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 三个模型的共同骨架
 <!-- bilingual-en:start -->
@@ -129,10 +122,9 @@ Begin with four questions: What variable do firms actually control? Can rivals o
 
 > [!answer]- 答案
 > 战略变量都可为产量，但 Stackelberg 有可观察的先后顺序，先行者把跟随者反应函数纳入自己的优化。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Both may use quantity as the strategic variable, but Stackelberg has an observable order of moves, so the leader incorporates the follower's reaction function into its own optimization.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 同质产品 Bertrand 均衡为什么会逼近边际成本？
 <!-- bilingual-en:start -->
@@ -141,10 +133,9 @@ Begin with four questions: What variable do firms actually control? Can rivals o
 
 > [!answer]- 答案
 > 只要共同价格高于边际成本，一家企业就能略微降价并在无容量约束下夺走全部需求；该偏离直到价格降至边际成本才停止有利。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Whenever the common price exceeds marginal cost, one firm can undercut slightly and capture all demand when capacity is unconstrained; the deviation stops being profitable only at marginal cost.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 观察到价格高于边际成本，为什么不能直接否定 Bertrand 逻辑？
 <!-- bilingual-en:start -->
@@ -153,10 +144,9 @@ Begin with four questions: What variable do firms actually control? Can rivals o
 
 > [!answer]- 答案
 > 现实可能存在产品差异、搜索成本、容量约束、重复互动或成本差异；应先判断基准假设是否成立。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Product differentiation, search costs, capacity constraints, repeated interaction, or cost asymmetry may be present, so the benchmark assumptions must be assessed before rejecting the logic.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

@@ -33,7 +33,7 @@ lecture: 21
 > - The first method for measuring efficiency is timing, observing how long a program takes with different input sizes.
 > - `c_to_f`, `mysum`, and `square` illustrate constant-, linear-, and quadratic-time growth.
 > - Timing is intuitive, but machine load, implementation details, and measurement error on small inputs can all affect the result.
-> - The second method involves counting operations, tallying key operations in the code.
+> - The second method counts operations by tallying the key steps executed by the code.
 > - Counting operations is more abstract than timing but more stable and closer to the complexity theory that will follow.
 > - Throughout the lecture, the instructor asks what happens to runtime or operation count when the input grows tenfold.
 > - By the end of the lecture, you should understand why a single timing result is not enough to decide whether a program is fast.
@@ -43,7 +43,7 @@ lecture: 21
 
 ### 1. 课程目标从 correctness 转向 efficiency
 <!-- bilingual-en:start -->
-*1. Shifting Course Objectives from Correctness to Efficiency*
+*1. Expanding the Course Objective from Correctness to Efficiency*
 <!-- bilingual-en:end -->
 Lecture 21 一开始就说明要换挡。
 <!-- bilingual-en:start -->
@@ -57,24 +57,24 @@ The focus of previous problem sets and quizzes has been on:
 
 - 程序是否正确
 <!-- bilingual-en:start -->
-- Program correctness
+- Program correctness.
 <!-- bilingual-en:end -->
 
 但现实里的程序通常还得考虑：
 <!-- bilingual-en:start -->
-In practice, however, a program must also consider:
+In practice, we must also ask:
 <!-- bilingual-en:end -->
 
 - 时间上够不够快
 - 空间上占不占资源
 <!-- bilingual-en:start -->
-- Whether it runs fast enough
-- How much memory it uses
+- Whether the program runs fast enough.
+- How much memory it uses.
 <!-- bilingual-en:end -->
 
 这节课因此正式开启复杂度单元，开始讨论 how efficient our programs are。
 <!-- bilingual-en:start -->
-This lecture thus formally introduces the complexity unit, beginning a discussion on how efficient our programs are.
+This lecture therefore opens the complexity unit and begins a systematic comparison of program efficiency.
 <!-- bilingual-en:end -->
 
 ### 2. 先讲 time vs space tradeoff
@@ -84,8 +84,7 @@ This lecture thus formally introduces the complexity unit, beginning a discussio
 老师先没有直接上 timing，而是先给一个动机：  
 程序效率常常不是单维度的。
 <!-- bilingual-en:start -->
-Rather than jumping straight into timing, the instructor first establishes the motivation:
-Program efficiency is rarely one-dimensional.
+Rather than jumping straight into timing, the instructor establishes the motivation first: program efficiency is rarely one-dimensional.
 <!-- bilingual-en:end -->
 
 最典型例子就是前面见过的 Fibonacci：
@@ -96,8 +95,8 @@ The familiar Fibonacci example makes this tradeoff concrete:
 - naive recursion：省空间，但会做海量重复工作
 - memoization：额外占用字典空间，但速度快很多
 <!-- bilingual-en:start -->
-- Naive recursion: saves space but performs a great deal of redundant work
-- Memoization: uses extra dictionary space but runs much faster
+- Naive recursion uses less auxiliary storage but repeats a great deal of work.
+- Memoization spends extra dictionary space to run much faster.
 <!-- bilingual-en:end -->
 
 这让课程一开始就把一个很重要的观念钉住：
@@ -118,8 +117,7 @@ This drives home an important concept early in the course:
 接着老师进入第一种评估效率的方法：  
 直接计时。
 <!-- bilingual-en:start -->
-The instructor then introduces the first way to evaluate efficiency:
-time the program directly.
+The instructor then introduces the first way to evaluate efficiency: time the program directly.
 <!-- bilingual-en:end -->
 
 代码里用到 `time.time()`，大致做法是：
@@ -132,10 +130,10 @@ Using `time.time()`, the general approach is:
 3. 记录结束时间
 4. 相减得到耗时
 <!-- bilingual-en:start -->
-1. Record start time
-2. Run function
-3. Record end time
-4. Subtract to get duration
+1. Record the start time.
+2. Run the function.
+3. Record the end time.
+4. Subtract to obtain the duration.
 <!-- bilingual-en:end -->
 
 这在直觉上最容易理解，因为你直接看到“这段代码花了多久”。
@@ -145,7 +143,7 @@ This is intuitive because it directly tells you “how long this code took.”
 
 ### 4. 用三类函数建立 timing 直觉
 <!-- bilingual-en:start -->
-*4. Building Timing Intuition with Three Types of Functions*
+*4. Building Timing Intuition with Three Growth Patterns*
 <!-- bilingual-en:end -->
 老师故意选了三种非常不同的函数：
 <!-- bilingual-en:start -->
@@ -156,14 +154,14 @@ The instructor intentionally selects three very different functions:
 - `mysum(x)`：线性时间
 - `square(n)`：双重循环，近似二次时间
 <!-- bilingual-en:start -->
-- `c_to_f(c)`: Constant time
-- `mysum(x)`: Linear time
-- `square(n)`: Double loop, approximately quadratic time
+- `c_to_f(c)`: constant time.
+- `mysum(x)`: linear time.
+- `square(n)`: a double loop with approximately quadratic growth.
 <!-- bilingual-en:end -->
 
 然后让输入规模按：
 <!-- bilingual-en:start -->
-Then run with input sizes scaled by:
+The functions are then run on inputs that increase by factors of ten:
 <!-- bilingual-en:end -->
 
 - `1`
@@ -185,9 +183,9 @@ The point here is not precise measurement, but intuition about scale:
 - 线性函数增长比较平稳
 - 二次函数会很快变得难以忍受
 <!-- bilingual-en:start -->
-- Constant functions hardly change at all
-- Linear functions grow steadily
-- Quadratic functions quickly become impractical
+- Constant-time functions hardly change at all.
+- Linear-time functions grow steadily.
+- Quadratic-time functions quickly become impractical.
 <!-- bilingual-en:end -->
 
 ### 5. timing 的长处：真实、直观
@@ -196,7 +194,7 @@ The point here is not precise measurement, but intuition about scale:
 <!-- bilingual-en:end -->
 老师并没有一开始就批 timing，而是先承认它的优点。
 <!-- bilingual-en:start -->
-The instructor does not begin by criticizing timing; first, she acknowledges its advantages.
+The instructor first acknowledges timing's strengths before discussing its limitations.
 <!-- bilingual-en:end -->
 
 timing 的好处包括：
@@ -208,9 +206,9 @@ The benefits of timing include:
 - 不需要先抽象出理论模型
 - 对新手特别直观
 <!-- bilingual-en:start -->
-- Reflects performance in a real execution environment
-- Requires no theoretical model up front
-- Is especially intuitive for beginners
+- It reflects performance in a real execution environment.
+- It requires no theoretical model up front.
+- It is especially intuitive for beginners.
 <!-- bilingual-en:end -->
 
 如果你只是粗略比较两个实现，timing 常常是第一步。
@@ -220,7 +218,7 @@ For a rough comparison of two implementations, timing is often the natural first
 
 ### 6. timing 的局限：噪声很多，解释不稳定
 <!-- bilingual-en:start -->
-*6. Limitations of timing: noisy measurements and unstable conclusions*
+*6. Limitations of Timing: Noisy Measurements and Unstable Conclusions*
 <!-- bilingual-en:end -->
 但老师很快也指出 timing 的局限。
 <!-- bilingual-en:start -->
@@ -256,8 +254,8 @@ Therefore:
 - 很小的输入规模上，timing 可能几乎看不出区别
 - 同一函数多跑几次，也可能拿到不同时间
 <!-- bilingual-en:start -->
-- With very small inputs, timing may reveal almost no difference
-- Even running the same function multiple times can yield different timings
+- With very small inputs, timing may reveal almost no difference.
+- Repeated runs of the same function can still produce different timings.
 <!-- bilingual-en:end -->
 
 这就引出第二条路线。
@@ -267,7 +265,7 @@ This leads to the second approach.
 
 ### 7. 第二条路线：counting operations
 <!-- bilingual-en:start -->
-*7. Second approach: counting operations*
+*7. Second Approach: Counting Operations*
 <!-- bilingual-en:end -->
 老师随后转到 counting operations。
 <!-- bilingual-en:start -->
@@ -295,9 +293,9 @@ The benefits of this approach are:
 - 更稳定
 - 不那么依赖机器和环境噪声
 <!-- bilingual-en:start -->
-- More abstract
-- More stable
-- Less dependent on machine and environmental noise
+- It is more abstract.
+- It is more stable.
+- It depends less on the machine and environmental noise.
 <!-- bilingual-en:end -->
 
 当然代价是你得自己建模“哪些东西算一次操作”。
@@ -307,7 +305,7 @@ The tradeoff is that you must decide what counts as a single operation.
 
 ### 8. 从常数函数开始数：`c_to_f`
 <!-- bilingual-en:start -->
-*8. Starting with constant functions: `c_to_f`*
+*8. Starting with a Constant-Time Function: `c_to_f`*
 <!-- bilingual-en:end -->
 以最简单的 `c_to_f(c)` 为例，老师把几步乘法、除法、加法粗略记成固定个数操作。
 <!-- bilingual-en:start -->
@@ -326,12 +324,12 @@ Combined with the timing results, this gives the first intuition about growth:
 
 - 不是所有函数的运行成本都随输入值本身变化
 <!-- bilingual-en:start -->
-- A function's running cost does not necessarily grow with the numerical value of its input
+- A function's running cost does not necessarily grow with the numerical value of its input.
 <!-- bilingual-en:end -->
 
 ### 9. 线性例子：`mysum(x)`
 <!-- bilingual-en:start -->
-*9. Linear example: `mysum(x)`*
+*9. Linear Example: `mysum(x)`*
 <!-- bilingual-en:end -->
 对于：
 <!-- bilingual-en:start -->
@@ -370,8 +368,8 @@ Although specific constant terms may vary, the core phenomenon is clear:
 - 输入 `x` 扩大大约 10 倍
 - 操作数也会大约扩大 10 倍
 <!-- bilingual-en:start -->
-- Input `x` grows roughly tenfold
-- The operation count also grows roughly tenfold
+- Input `x` grows roughly tenfold.
+- The operation count also grows roughly tenfold.
 <!-- bilingual-en:end -->
 
 这就是线性增长。
@@ -419,8 +417,8 @@ This explains why, when the input size grows tenfold:
 - 线性函数可能只慢约 10 倍
 - 二次函数可能慢约 100 倍
 <!-- bilingual-en:start -->
-- A linear function may take about 10 times as long
-- A quadratic function may take about 100 times as long
+- A linear function may take about 10 times as long.
+- A quadratic function may take about 100 times as long.
 <!-- bilingual-en:end -->
 
 ### 11. timing 和 counting 的关系
@@ -440,8 +438,8 @@ Their relationship can be summarized as:
 - timing：真实世界表现，直观但 noisy
 - counting：抽象模型，更稳定但需要人为设定
 <!-- bilingual-en:start -->
-- Timing: Real-world performance, intuitive but noisy
-- Counting: An abstract model that is more stable but requires a chosen definition of an operation
+- Timing measures real-world performance; it is intuitive but noisy.
+- Counting supplies a more stable abstract model, but requires a chosen definition of a basic operation.
 <!-- bilingual-en:end -->
 
 老师希望你意识到：
@@ -452,8 +450,8 @@ The instructor wants you to recognize that:
 - 仅靠 timing 看一眼，不够稳
 - 仅靠 operation counting，不够贴近真实机器
 <!-- bilingual-en:start -->
-- Relying solely on timing for a single measurement is not reliable
-- Operation counting alone does not fully capture performance on a real machine
+- A single timing measurement is not reliable on its own.
+- Operation counting alone does not fully capture performance on a real machine.
 <!-- bilingual-en:end -->
 
 后面的复杂度理论，其实是在 counting 的基础上进一步抽象。
@@ -463,7 +461,7 @@ The complexity theory introduced later abstracts this counting framework one ste
 
 ### 12. 课程这时还没正式进入 Big Theta，但地基已经搭好了
 <!-- bilingual-en:start -->
-*12. The lecture has not formally introduced Big Theta yet, but the foundation is in place*
+*12. Preparing the Foundation for Big Theta*
 <!-- bilingual-en:end -->
 Lecture 21 的任务不是正式定义 Big O / Theta。  
 它更像是先让你接受：
@@ -476,9 +474,9 @@ Its purpose is to establish that:
 - 输入规模变化比单次运行结果更重要
 - constant / linear / quadratic 的增长差异是真实会咬人的
 <!-- bilingual-en:start -->
-- Program efficiency can be systematically compared
-- Changes in input size are more important than single-run results
-- Differences in constant, linear, and quadratic growth rates have real consequences
+- Program efficiency can be compared systematically.
+- Changes in input size matter more than the result of one run.
+- Differences among constant, linear, and quadratic growth rates have real consequences.
 <!-- bilingual-en:end -->
 
 这让下节课进入 order of growth 时不会显得凭空抽象。

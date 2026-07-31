@@ -12,14 +12,14 @@ status: source-checked
 
 > [!summary] 快速恢复
 > **它解决什么：** 用接近机器内存模型的语言表达控制流和数据，理解源代码怎样被编译成程序。
-> **具体锚点：** C 字符串是以 `\0` 结尾的一段字符数组；忘记边界或终止符会读写不属于它的内存。
-> **核心难点：** 类型和数组不自动防越界，指针只是地址语义，不等于“复杂数组”。
+> **具体锚点：** `mean(values, n)` 可能分别在编译、链接或运行时失败；错误出现在哪个阶段，决定先检查声明、定义还是输入边界。
+> **核心难点：** C 的类型和控制流接近机器执行方式；必须分清值传递、作用域、整数表示和循环不变量。
 > **为什么重要：** C 让函数、内存、编译和数据结构的底层关系可见，是理解高级语言抽象成本的好入口。
 > **继续：** 先会编译、类型、分支、循环和函数，再进入数组、字符串、指针和动态内存。
 > <!-- bilingual-en:start -->
 > **Problem addressed:** Express data and control flow in a language close to the machine memory model, and understand how source code becomes an executable program.
-> **Concrete anchor:** A C string is a character array terminated by `\0`; losing the boundary or terminator can read or write memory outside the string.
-> **Central difficulty:** Types and arrays do not automatically prevent out-of-bounds access, and a pointer denotes an address rather than a “complicated array.”
+> **Concrete anchor:** A call to `mean(values, n)` can fail during compilation, linking, or execution; the stage of failure tells you whether to inspect declarations, definitions, or input bounds first.
+> **Central difficulty:** C exposes machine-level execution choices, so you must distinguish value passing, scope, integer representation, and loop invariants.
 > **Why it matters:** C exposes the relationships among functions, memory, compilation, and data structures, making the cost of higher-level abstractions visible.
 > **Continue with:** Learn compilation, types, branching, loops, and functions before moving to [[C 指针、数组、字符串与动态内存|pointers and dynamic memory]].
 > <!-- bilingual-en:end -->
@@ -128,10 +128,9 @@ double mean(const int values[], size_t n) {
 
 > [!answer]- 答案
 > 把变量地址传入，函数通过指针解引用修改；参数本身仍是按值传递的地址副本。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Pass the variable's address and modify the object through pointer dereference; the parameter itself is still a by-value copy of the address.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么 signed overflow 不能按“自动绕回”推理？
 <!-- bilingual-en:start -->
@@ -140,10 +139,9 @@ double mean(const int values[], size_t n) {
 
 > [!answer]- 答案
 > C 将其定义为未定义行为，编译器可据“不会溢出”的假设优化；需要更宽类型、显式边界检查或合适的 unsigned 语义。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > C defines it as undefined behavior, so a compiler may optimize under the assumption that it never occurs; use a wider type, explicit bounds checks, or deliberately chosen unsigned semantics.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 一个错误应从哪个构建阶段开始排查？
 <!-- bilingual-en:start -->
@@ -152,10 +150,9 @@ double mean(const int values[], size_t n) {
 
 > [!answer]- 答案
 > 从实际报告它的最早阶段开始：语法/类型看编译，缺定义看链接，非法状态和内存访问看运行时。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Begin at the earliest stage that reports it: syntax and types during compilation, missing definitions during linking, and invalid state or memory access at runtime.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->
@@ -166,4 +163,3 @@ double mean(const int values[], size_t n) {
   <!-- bilingual-en:start -->
   The [official CS50x 2026 course](https://cs50.harvard.edu/x/) verifies C, memory, algorithms, and the course scope.
   <!-- bilingual-en:end -->
-

@@ -18,25 +18,23 @@ status: source-checked
 > **核心难点：** 历史模拟把代表性风险放在窗口选择，Monte Carlo 把风险放在模型设定；一个“精确”分位可能只是精确估计了错误模型。
 > **为什么重要：** VaR、ES、PFE 和非线性风险都需要损失分布，方法选择必须匹配头寸、数据、期限和计算预算。
 > **继续：** 先画风险因子—价值映射并决定全重估或近似；极端尾部外推见 [[极值理论 EVT 与尾部风险]]，最终验证见 [[VaR、ES 与回测]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** It generates a full P&L distribution for the current portfolio from risk-factor scenarios, especially for options and other positions that cannot be described by linear variance alone.
 > **Concrete anchor:** Historical simulation applies each past day's joint changes in rates, prices, and volatility to today's portfolio. Monte Carlo generates many new paths from explicit marginal, dependence, and dynamic models.
 > **Central difficulty:** Historical simulation places representativeness risk in window choice, while Monte Carlo places it in model specification. A precise quantile may precisely estimate the wrong model.
 > **Why it matters:** VaR, ES, PFE, and nonlinear risk require a loss distribution, and method choice must match positions, data, horizon, and computation budget.
 > **Continue:** Draw the risk-factor–value map first and decide between full revaluation and approximation. For extrapolating extreme tails, see [[极值理论 EVT 与尾部风险|Extreme Value Theory and Tail Risk]]; for final validation, see [[VaR、ES 与回测|VaR, Expected Shortfall, and Backtesting]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - 本库金融机构与风险管理课程笔记：支持课程范围、课堂例题和记号。
 > - [Basel Framework](https://www.bis.org/basel_framework/)：核验资本、市场风险、信用风险、CVA 与监管口径。
 > - Hull, *Risk Management and Financial Institutions*：交叉核验 VaR、ES、Greek、利率风险、信用风险与模拟方法。
-<!-- bilingual-en:start -->
-> [!source] Basis for this section
+> <!-- bilingual-en:start -->
 > - The vault's Financial Institutions and Risk Management course notes support course scope, classroom examples, and notation.
 > - The [Basel Framework](https://www.bis.org/basel_framework/) verifies regulatory conventions for capital, market risk, credit risk, and CVA.
 > - Hull, *Risk Management and Financial Institutions*, cross-checks VaR, ES, Greeks, interest-rate risk, credit risk, and simulation methods.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 方差—协方差基准
 <!-- bilingual-en:start -->
@@ -103,24 +101,6 @@ Simulation standard error falls approximately as $1/\sqrt{N}$, so halving error 
 Compare out-of-sample exceptions, tail losses, alternative windows and distributions, and stress scenarios. Hybrid methods can be reasonable: GARCH filters volatility, empirical methods or copulas preserve dependence, and EVT adjusts tails, but each layer adds model risk.
 <!-- bilingual-en:end -->
 
-## 从原主题保留的全局定位
-<!-- bilingual-en:start -->
-*Global orientation retained from the original topic*
-<!-- bilingual-en:end -->
-
-> **它解决什么：** 用历史重放、参数化随机生成和专门尾部模型得到组合损失分布，并处理非线性头寸。
-> **具体锚点：** 对期权组合，简单方差—协方差法可能漏掉曲率；历史/Monte Carlo 对每个因子情景全重估可保留非线性。
-> **核心难点：** 历史模拟受窗口限制，Monte Carlo 受模型限制，EVT 受阈值和尾部样本限制；没有无假设方法。
-> **为什么重要：** 方法选择应由头寸非线性、数据量、尾部目标和计算预算共同决定。
-> **继续：** 先画风险因子—价值映射，再比较三种方法并做回测/压力。
-<!-- bilingual-en:start -->
-> **What it solves:** It obtains portfolio loss distributions through historical replay, parametric random generation, and specialized tail models while handling nonlinear positions.
-> **Concrete anchor:** For an option portfolio, a simple variance–covariance method can miss curvature; historical or Monte Carlo full revaluation under each factor scenario preserves nonlinearity.
-> **Central difficulty:** Historical simulation is limited by its window, Monte Carlo by its model, and EVT by its threshold and tail sample. No method is assumption-free.
-> **Why it matters:** Method choice should jointly reflect position nonlinearity, data quantity, tail objective, and computational budget.
-> **Continue:** Draw the risk-factor–value map first, then compare the three methods and conduct backtesting and stress testing.
-<!-- bilingual-en:end -->
-
 ## 失败诊断
 <!-- bilingual-en:start -->
 *Failure diagnosis*
@@ -149,10 +129,9 @@ Compare out-of-sample exceptions, tail losses, alternative windows and distribut
 
 > [!answer]- 答案
 > 不是。它隐含历史窗口代表未来、历史共同变化可重用于当前头寸等强假设。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > No. It assumes that the historical window represents the future and that past joint changes can be applied to current positions.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### Monte Carlo 结果为何可能很精确却很错？
 <!-- bilingual-en:start -->
@@ -161,10 +140,9 @@ Compare out-of-sample exceptions, tail losses, alternative windows and distribut
 
 > [!answer]- 答案
 > 模拟误差可很小，但若边际、依赖或动态模型错设，结果会精确地逼近错误模型。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Sampling error can be small, but if marginals, dependence, or dynamics are misspecified, the simulation precisely approximates the wrong model.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话解释：历史模拟为什么必须把同一天的因子变化一起重放？
 <!-- bilingual-en:start -->
@@ -173,10 +151,9 @@ Compare out-of-sample exceptions, tail losses, alternative windows and distribut
 
 > [!answer]- 答案
 > 同一天的利率、价格、波动和汇率变化包含历史依赖；分开抽样会制造从未出现的组合并抹去共同压力，使组合尾部失真。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Same-day moves in rates, prices, volatility, and exchange rates contain historical dependence. Sampling them separately creates combinations that never occurred and removes common stress, distorting portfolio tails.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

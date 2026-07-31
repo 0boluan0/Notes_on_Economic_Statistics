@@ -26,11 +26,29 @@ lecture: 02
 > - Newton cube-root 例子不是为了教数值方法本身，而是为了说明：即使现在还不会循环，也已经能写出“一步更新”的数值程序。
 > - branching 先从 Boolean expression 和 ` == ` / ` != ` 讲起，再进入 `if`、`elif`、`else`；老师是在先铺“条件”，再铺“分支”。
 > - 本讲结尾的所有 bug 都围着三件事转：缩进、条件覆盖顺序、以及把多个独立 `if` 错当成 `elif` 链。
+> <!-- bilingual-en:start -->
+> - The lecture begins by revisiting the memory diagram because strings, input, and branching all depend on the same model of names bound to objects.
+> - A string is introduced as a sequence rather than merely as intuitive “text.”
+> - The order moves from string `+` and `*` to `len`, indexing, and slicing—from the most intuitive operations to the most error-prone boundaries.
+> - The main boundary rules are zero-based indexing, negative indexes counted from the right, and a slice whose stop position is excluded.
+> - Strings are explicitly identified as immutable, explaining why one character cannot be changed in place.
+> - The point of `print` is that seeing an expression's value in the shell is not the same as producing output for a program's user.
+> - No matter what a user's input looks like, `input()` initially returns it as a string.
+> - The Newton cube-root example is not intended to teach the full numerical method; it shows that input, expressions, and output already suffice to implement one update step before loops are available.
+> - Branching is built from Boolean expressions and comparisons such as `==` and `!=` before introducing `if`, `elif`, and `else`: conditions come before branches.
+> - The closing bugs concern indentation, the order and coverage of conditions, and the difference between independent `if` statements and an `elif` chain.
+> <!-- bilingual-en:end -->
 
 ## Lecture flow
 
 ### 1. 开场先复习上一讲：对象、表达式、变量绑定
+<!-- bilingual-en:start -->
+*1. Opening Review: Objects, Expressions, and Name Binding*
+<!-- bilingual-en:end -->
 Lecture 2 没有直接跳到 string，而是先把上一讲的 memory diagram 又画了一遍。
+<!-- bilingual-en:start -->
+Lecture 2 redraws the preceding memory diagram before introducing strings.
+<!-- bilingual-en:end -->
 
 老师先回顾：
 
@@ -38,27 +56,54 @@ Lecture 2 没有直接跳到 string，而是先把上一讲的 memory diagram �
 - variable 是 name 到 object 的 binding
 - expression 在右边先求值，再把结果绑定给左边变量
 - `radius = radius + 1` 这种语句在 Python 里合法，因为它是 reassignment，不是数学等式
+<!-- bilingual-en:start -->
+- Objects in memory have types.
+- A variable is a name bound to an object.
+- The expression on the right is evaluated before its result is bound to the name on the left.
+- `radius = radius + 1` is valid reassignment, not a mathematical equation.
+<!-- bilingual-en:end -->
 
 这一段虽然是 recap，但其实在给今天铺地基。因为：
 
 - string 也是 object
 - `input(...)` 读进来的也是 object
 - 分支判断依赖的也是 expression 是否求值为 `True` / `False`
+<!-- bilingual-en:start -->
+The review is foundational: strings and input values are objects, and a branch depends on an expression evaluating to `True` or `False`.
+<!-- bilingual-en:end -->
 
 如果上一讲“绑定”和“表达式先求值”的图景没稳住，今天后半讲会很容易乱。
+<!-- bilingual-en:start -->
+Without a stable model of binding and expression evaluation, the second half of the lecture becomes difficult to follow.
+<!-- bilingual-en:end -->
 
 ### 2. string 作为新对象类型，是按 sequence 引入的
+<!-- bilingual-en:start -->
+*2. Introducing Strings as Sequences*
+<!-- bilingual-en:end -->
 老师介绍 string 时，第一句不是“它表示文本”，而是：
+<!-- bilingual-en:start -->
+The definition emphasizes sequence structure rather than a vague notion of text:
+<!-- bilingual-en:end -->
 
 > a string is a sequence of case sensitive characters
+> <!-- bilingual-en:start -->
+> A string is a sequence of case-sensitive characters.
+> <!-- bilingual-en:end -->
 
 这句话非常重要，因为它直接决定了后面所有操作：
 
 - 既然是 sequence，就有位置
 - 既然有位置，就能按位置取字符
 - 既然有顺序，就能取 substring
+<!-- bilingual-en:start -->
+Because a string is a sequence, its characters occupy positions, can be accessed by position, and can form ordered substrings.
+<!-- bilingual-en:end -->
 
 创建 string 的语法就是把字符放进引号里：
+<!-- bilingual-en:start -->
+A string literal places characters inside quotation marks:
+<!-- bilingual-en:end -->
 
 ```python
 a = "me"
@@ -66,12 +111,25 @@ z = 'you'
 ```
 
 单双引号都行，重点只是要配对一致。
+<!-- bilingual-en:start -->
+Single and double quotes are both valid as long as the opening and closing quotes match.
+<!-- bilingual-en:end -->
 
 ### 3. 先做最直观的操作：concatenation 和 repetition
+<!-- bilingual-en:start -->
+*3. Beginning with the Intuitive Operations of Concatenation and Repetition*
+<!-- bilingual-en:end -->
 老师没有一上来就讲 indexing，而是先讲两个最直觉的 string 操作：
+<!-- bilingual-en:start -->
+Before indexing, the instructor presents two intuitive string operations:
+<!-- bilingual-en:end -->
 
 - `+`：把两个字符串接起来
 - `*`：把字符串重复若干次
+<!-- bilingual-en:start -->
+- `+` concatenates two strings.
+- `*` repeats a string an integer number of times.
+<!-- bilingual-en:end -->
 
 ```python
 a = "me"
@@ -85,6 +143,9 @@ silly = a * 3
 
 1. `a + b` 不会自动加空格，所以 `me` 和 `myself` 会变成 `memyself`
 2. `*` 是 string 和 integer 之间的操作，不是 string 和 string 的操作
+<!-- bilingual-en:start -->
+Two details matter: concatenation does not insert a space automatically, and repetition combines a string with an integer rather than with another string.
+<!-- bilingual-en:end -->
 
 > [!example]
 > 如果 `b = ":"`，`c = ")"`，那么
@@ -95,9 +156,18 @@ silly = a * 3
 >
 > 得到的是 `:))`。  
 > 这类题训练的是：你是否真把 `+` 理解成“拼接”，把 `*` 理解成“重复”。
+> <!-- bilingual-en:start -->
+> The result is `:))`. The exercise checks whether `+` is understood as concatenation and `*` as repetition.
+> <!-- bilingual-en:end -->
 
 ### 4. 接着补上 string 的长度、单字符访问和 slicing
+<!-- bilingual-en:start -->
+*4. Adding Length, Character Access, and Slicing*
+<!-- bilingual-en:end -->
 有了最基础的拼接和重复后，老师开始把 sequence 的性质讲完整。
+<!-- bilingual-en:start -->
+After concatenation and repetition, the lecture develops the remaining sequence operations.
+<!-- bilingual-en:end -->
 
 第一步是 `len()`：
 
@@ -107,12 +177,18 @@ len(s)   # 3
 ```
 
 它回答的是“这个 sequence 里一共有多少个字符”。
+<!-- bilingual-en:start -->
+`len()` returns the number of characters in the sequence.
+<!-- bilingual-en:end -->
 
 然后才进入 indexing。老师把规则讲得非常明确：
 
 - Python 从 `0` 开始计数
 - 第一个字符的 index 是 `0`
 - 最后一个字符也可以写成 `-1`
+<!-- bilingual-en:start -->
+Indexing is zero-based: the first character is at `0`, and the final character may also be addressed as `-1`.
+<!-- bilingual-en:end -->
 
 ```python
 s = "abc"
@@ -123,12 +199,21 @@ s[-1]  # "c"
 ```
 
 如果访问越界，比如 `s[3]`，就会得到 `IndexError`。
+<!-- bilingual-en:start -->
+An out-of-range access such as `s[3]` raises `IndexError`.
+<!-- bilingual-en:end -->
 
 > [!warning]
 > `index` 说的是位置，不是“第几个”这个自然语言直觉。  
 > 讲义里说 “the first character is at index 0”，你必须开始习惯这种说法。
+> <!-- bilingual-en:start -->
+> An index is a position, not an ordinal in everyday language. Begin to read “the first character is at index 0” literally.
+> <!-- bilingual-en:end -->
 
 然后老师继续讲 slicing，也就是取 substring。规则是：
+<!-- bilingual-en:start -->
+Slicing then extracts a substring according to:
+<!-- bilingual-en:end -->
 
 ```python
 s[start:stop:step]
@@ -139,6 +224,11 @@ s[start:stop:step]
 - 从 `start` 开始
 - 走到 `stop` 之前停止
 - 每次跨 `step` 个位置
+<!-- bilingual-en:start -->
+- Begin at `start`.
+- Stop before `stop`.
+- Advance by `step` positions each time.
+<!-- bilingual-en:end -->
 
 课堂里重点讲了几个判断顺序：
 
@@ -146,6 +236,9 @@ s[start:stop:step]
 2. `step > 0` 时从左往右
 3. `step < 0` 时从右往左
 4. `stop` 永远不包含自己
+<!-- bilingual-en:start -->
+Read a slice by checking the sign of `step` first: a positive step moves left to right, a negative step moves right to left, and the stop position itself is always excluded.
+<!-- bilingual-en:end -->
 
 > [!example]
 > `s = "abcdefgh"`
@@ -159,9 +252,18 @@ s[start:stop:step]
 > ```
 
 老师在这里不断鼓励大家去 shell 里试。原因很直接：slicing 的边界和方向感，不靠眼熟代码解决，必须靠你自己多试几次。
+<!-- bilingual-en:start -->
+The instructor encourages repeated shell experiments because slice boundaries and direction become intuitive through execution, not passive visual familiarity.
+<!-- bilingual-en:end -->
 
 ### 5. string 是 immutable，所以“改一个字符”这件事根本不被允许
+<!-- bilingual-en:start -->
+*5. String Immutability Forbids Changing One Character in Place*
+<!-- bilingual-en:end -->
 讲完 indexing 和 slicing 之后，老师顺势补充一个非常关键的性质：string 是 immutable object。
+<!-- bilingual-en:start -->
+After indexing and slicing, the instructor introduces the crucial fact that a string is immutable.
+<!-- bilingual-en:end -->
 
 这意味着，string 一旦创建出来，不能在原地改某个位置的字符。比如：
 
@@ -171,6 +273,9 @@ s = "car"
 ```
 
 你能做的是创建一个新的 string：
+<!-- bilingual-en:start -->
+You cannot assign to one character position. Instead, construct a new string:
+<!-- bilingual-en:end -->
 
 ```python
 s = "b" + s[1:len(s)]
@@ -181,13 +286,28 @@ s = "b" + s[1:len(s)]
 - 原来的 `"car"` 还在那里
 - 你只是新造了一个 `"bar"`
 - 然后把变量 `s` 重新绑定到了新对象
+<!-- bilingual-en:start -->
+The original object `"car"` remains unchanged; a new `"bar"` is created, and `s` is rebound to it.
+<!-- bilingual-en:end -->
 
 这一段和 Lecture 1 的 reassignment 其实是连在一起的。老师是在反复巩固同一个想法：变量变了，不代表对象被原地修改。
+<!-- bilingual-en:start -->
+This reconnects to Lecture 1: a change in a variable's binding does not imply that an object was mutated.
+<!-- bilingual-en:end -->
 
 ### 6. 接下来从“表达式结果”过渡到真正的输出：print
+<!-- bilingual-en:start -->
+*6. Moving from Expression Results to Explicit Output with `print`*
+<!-- bilingual-en:end -->
 讲完 strings 后，老师把视角转到 input/output。这里她先纠正了一个初学者非常容易误会的点：
+<!-- bilingual-en:start -->
+The input/output section begins by correcting a common misconception:
+<!-- bilingual-en:end -->
 
 > 在 shell 里输入表达式后看到结果，不等于程序已经在“给用户输出”。
+> <!-- bilingual-en:start -->
+> Seeing a value after entering an expression in the shell is not the same as a program producing output for its user.
+> <!-- bilingual-en:end -->
 
 在 shell 里输入：
 
@@ -198,8 +318,14 @@ s[-3]
 
 你会看到结果，是因为 shell 在帮你 “peek into the value”。  
 但如果把同样的语句写进 `.py` 文件里运行，Python 不会自动把它们显示出来。
+<!-- bilingual-en:start -->
+The interactive shell displays expression values for inspection. The same bare expressions in a `.py` file produce no visible output.
+<!-- bilingual-en:end -->
 
 所以真正要给用户显示结果，必须显式写：
+<!-- bilingual-en:start -->
+User-visible output therefore requires an explicit call:
+<!-- bilingual-en:end -->
 
 ```python
 print(len(s))
@@ -207,6 +333,9 @@ print(s[-3])
 ```
 
 老师还顺带解释了 `print` 的两个常见写法：
+<!-- bilingual-en:start -->
+The instructor also compares two common styles:
+<!-- bilingual-en:end -->
 
 ```python
 print(a, b, c)
@@ -217,15 +346,30 @@ print(a + str(b) + c)
 
 - 用逗号分隔时，Python 自动插入空格
 - 用 `+` 拼接时，不会自动插空格，而且类型必须一致
+<!-- bilingual-en:start -->
+Comma-separated arguments receive spaces automatically. Concatenation with `+` inserts no spaces and requires compatible string operands.
+<!-- bilingual-en:end -->
 
 > [!warning]
 > `print(a + b + c)` 里只要 `b` 不是 string，就会触发 `TypeError`。  
 > 这不是 `print` 自己的问题，而是你在进入 `print` 之前，就先要求 Python 去做非法的 string concatenation。
+> <!-- bilingual-en:start -->
+> If `b` is not a string, `print(a + b + c)` raises `TypeError` before `print` is called because the requested concatenation is invalid.
+> <!-- bilingual-en:end -->
 
 ### 7. input 的真正规则：不管用户输入看起来像什么，先都读成 string
+<!-- bilingual-en:start -->
+*7. The Rule for `input`: Every User Entry Arrives as a String*
+<!-- bilingual-en:end -->
 输出讲完以后，老师马上进入 input。
+<!-- bilingual-en:start -->
+After output, the instructor turns immediately to input.
+<!-- bilingual-en:end -->
 
 基本格式是：
+<!-- bilingual-en:start -->
+The basic form is:
+<!-- bilingual-en:end -->
 
 ```python
 text = input("Type anything... ")
@@ -236,8 +380,14 @@ text = input("Type anything... ")
 1. 先把括号里的 prompt 显示出来
 2. 等待用户输入并按下 Enter
 3. 把用户输入保存为一个 string
+<!-- bilingual-en:start -->
+When this line executes, Python displays the prompt, waits for the user to press Enter, and stores the entered characters as a string.
+<!-- bilingual-en:end -->
 
 老师反复强调第三点。哪怕用户输入的是数字 `3`，程序里拿到的也先是字符串 `"3"`。
+<!-- bilingual-en:start -->
+The third step is the crucial one: even an entry that looks like the number `3` arrives as the string `"3"`.
+<!-- bilingual-en:end -->
 
 所以这两段代码会产生完全不同的结果：
 
@@ -254,19 +404,37 @@ print(5 * num2)
 ```
 
 第一段会打印 `33333`，因为 `"3"` 被重复了五次；第二段才会打印 `15`，因为输入先被 cast 成了 integer。
+<!-- bilingual-en:start -->
+The first program prints `33333` because it repeats the string five times. The second prints `15` because `int(...)` converts the input before multiplication.
+<!-- bilingual-en:end -->
 
 > [!note]
 > 这一讲里，`input()` 最重要的知识点甚至不是“怎么写 prompt”，而是“它返回 string”。  
 > 只要这个点没记牢，后面分支、循环、数值程序都会频繁出错。
+> <!-- bilingual-en:start -->
+> The most important fact about `input()` here is not prompt syntax but its string return value. Forgetting that fact causes repeated errors in branches, loops, and numerical programs.
+> <!-- bilingual-en:end -->
 
 ### 8. 第一个完整交互程序：让用户输一个 verb
+<!-- bilingual-en:start -->
+*8. First Complete Interactive Program: Asking for a Verb*
+<!-- bilingual-en:end -->
 老师接着安排了一个非常典型的课堂练习：
+<!-- bilingual-en:start -->
+The next classroom exercise asks the user for a verb.
+<!-- bilingual-en:end -->
 
 - ask the user for a verb
 - print `I can <verb> better than you`
 - 再把这个 verb 打印五次
+<!-- bilingual-en:start -->
+It prints `I can <verb> better than you` and then repeats the verb five times.
+<!-- bilingual-en:end -->
 
 现场写出来的程序大致是：
+<!-- bilingual-en:start -->
+The resulting program is approximately:
+<!-- bilingual-en:end -->
 
 ```python
 verb = input("Type a verb: ")
@@ -276,14 +444,29 @@ print((verb + " ") * 5)
 
 然后老师指出一个小瑕疵：最后会多出一个 trailing space。  
 这类小问题看起来不起眼，但它提醒你：
+<!-- bilingual-en:start -->
+The instructor notices the trailing space in the final output. That small defect illustrates that successful execution is not the same as well-formed output.
+<!-- bilingual-en:end -->
 
 - 程序“能运行”不等于输出已经写得好
 - 字符串处理常常要关心空格、换行、边界这些细节
+<!-- bilingual-en:start -->
+String processing must account for spaces, line breaks, and boundary details.
+<!-- bilingual-en:end -->
 
 ### 9. Newton cube-root 例子：虽然还不会循环，但已经能写“一步更新”
+<!-- bilingual-en:start -->
+*9. Newton's Cube-Root Example: Implementing One Update Before Learning Loops*
+<!-- bilingual-en:end -->
 在进入 branching 之前，老师插了一个数值例子：Newton's method 求 cube root 的 next guess。
+<!-- bilingual-en:start -->
+Before branching, the instructor inserts a numerical example that computes the next cube-root guess under Newton's method.
+<!-- bilingual-en:end -->
 
 这里她明确说，现在还不会把整个算法写完，因为我们还没有 loop；但已经可以写出“一次更新”的那一步：
+<!-- bilingual-en:start -->
+The full iterative method is not yet possible without loops, but one update step can already be expressed:
+<!-- bilingual-en:end -->
 
 ```python
 x = int(input("What x to find the cube root of? "))
@@ -299,11 +482,20 @@ print("Next guess to try =", next_g)
 - 交互输入
 - 表达式计算
 - 输出结果
+<!-- bilingual-en:start -->
+The point is not a proof of Newton's method, but that interactive input, expression evaluation, and output already form a meaningful small program.
+<!-- bilingual-en:end -->
 
 已经足够组成一个像样的小程序。
 
 ### 10. f-string：把“字面文本 + 表达式”写得更自然
+<!-- bilingual-en:start -->
+*10. F-Strings: Combining Literal Text and Expressions Naturally*
+<!-- bilingual-en:end -->
 老师接下来介绍了 f-string，理由非常务实：如果继续用逗号和字符串拼接来做格式化输出，很快会变得笨拙。
+<!-- bilingual-en:start -->
+F-strings are introduced for a practical reason: formatting output with only commas and concatenation quickly becomes cumbersome.
+<!-- bilingual-en:end -->
 
 f-string 的形式是：
 
@@ -317,20 +509,35 @@ print(f"{num*fraction} is {fraction*100}% of {num}")
 
 - 花括号外面的内容原样打印
 - 花括号里面的内容按 expression 求值
+<!-- bilingual-en:start -->
+Text outside braces is printed literally, while the expression inside each pair of braces is evaluated.
+<!-- bilingual-en:end -->
 
 老师特别强调，这再一次说明：
 
 > [!note]
 > expressions 几乎可以出现在任何需要 value 的位置。  
 > 你已经在 `type(...)`、index、print、f-string 里见过这一点了。
+> <!-- bilingual-en:start -->
+> Expressions can appear almost anywhere a value is required, as already seen in `type(...)`, indexes, `print`, and f-strings.
+> <!-- bilingual-en:end -->
 
 ### 11. branching 先从 Boolean expression 开始，而不是先背 if 语法
+<!-- bilingual-en:start -->
+*11. Branching Begins with Boolean Expressions, Not `if` Syntax*
+<!-- bilingual-en:end -->
 进入 branching 之前，老师没有直接写 `if`，而是先讲条件到底是什么。
+<!-- bilingual-en:start -->
+Before writing `if`, the instructor establishes what a condition is.
+<!-- bilingual-en:end -->
 
 第一步是区分两种“等号”：
 
 - `=` 是 assignment
 - `==` 是 equivalence test
+<!-- bilingual-en:start -->
+First, `=` is assignment, whereas `==` tests equality.
+<!-- bilingual-en:end -->
 
 随后她把 comparison operator 系统列了出来：
 
@@ -342,6 +549,9 @@ print(f"{num*fraction} is {fraction*100}% of {num}")
 - `>=`
 
 这些表达式的结果不是 number，而是 `bool`。
+<!-- bilingual-en:start -->
+Comparison expressions evaluate to Boolean values rather than numbers.
+<!-- bilingual-en:end -->
 
 ```python
 2 < 3      # True
@@ -350,25 +560,45 @@ print(f"{num*fraction} is {fraction*100}% of {num}")
 ```
 
 字符串比较同样是 case sensitive，所以 `"right"` 和 `"RIGHT"` 不一样。
+<!-- bilingual-en:start -->
+String comparisons are case-sensitive, so `"right"` and `"RIGHT"` are unequal.
+<!-- bilingual-en:end -->
 
 然后老师继续讲 Boolean operator：
 
 - `not`
 - `and`
 - `or`
+<!-- bilingual-en:start -->
+The lecture then adds the Boolean operators `not`, `and`, and `or`.
+<!-- bilingual-en:end -->
 
 她没有要求死背真值表，而是让大家先抓住高层直觉：
 
 - `and` 需要两边都真
 - `or` 只要有一边真
 - `not` 取反
+<!-- bilingual-en:start -->
+At a high level, `and` requires both operands to be true, `or` requires at least one, and `not` negates its operand.
+<!-- bilingual-en:end -->
 
 ### 12. 先做一个小练习：secret number 和 guess 是否相等
+<!-- bilingual-en:start -->
+*12. Short Exercise: Does a Guess Equal the Secret Number?*
+<!-- bilingual-en:end -->
 Boolean 讲完以后，老师安排了一个很短但很关键的练习：
+<!-- bilingual-en:start -->
+After Boolean expressions, a short exercise connects the pieces:
+<!-- bilingual-en:end -->
 
 - save a secret number
 - ask the user for a guess
 - print whether the guess matches the secret
+<!-- bilingual-en:start -->
+- Store a secret number.
+- Ask the user for a guess.
+- Print whether the guess matches the secret.
+<!-- bilingual-en:end -->
 
 核心代码就是：
 
@@ -384,14 +614,32 @@ print(secret == guess)
 - 所以要先 `int(...)`
 - `==` 返回的是 bool
 - `print(...)` 把 bool 显示给用户
+<!-- bilingual-en:start -->
+The exercise uses the whole first half: `input` returns a string, `int(...)` converts it, `==` produces a Boolean, and `print(...)` displays that Boolean.
+<!-- bilingual-en:end -->
 
 ### 13. 为什么需要 branching：程序终于可以出现 decision point
+<!-- bilingual-en:start -->
+*13. Why Branching Is Needed: Programs Gain Decision Points*
+<!-- bilingual-en:end -->
 讲到这里，老师才正式进入 `if` 的语法。她先用一个“半夜收到免费食物邮件”的例子说明 decision point 的意义，再用一个迷宫/找免费食物的路线例子说明：只要条件不同，程序就该走不同路径。
+<!-- bilingual-en:start -->
+Only now does the instructor introduce `if`. Examples involving a late-night free-food email and routes through a maze show why different conditions should lead a program down different paths.
+<!-- bilingual-en:end -->
 
 这个动机很重要。因为 `if` 不是为了增加一种语法花样，而是为了让程序不再只是线性执行到底。
+<!-- bilingual-en:start -->
+`if` is not syntactic ornament; it allows execution to diverge instead of following one linear path to the end.
+<!-- bilingual-en:end -->
 
 ### 14. 最简单的 `if`，再到 `if/else`，再到 `if/elif/else`
+<!-- bilingual-en:start -->
+*14. From `if` to `if/else` to `if/elif/else`*
+<!-- bilingual-en:end -->
 接下来老师按照最自然的顺序介绍三种结构。
+<!-- bilingual-en:start -->
+The three structures are introduced in increasing order of expressiveness.
+<!-- bilingual-en:end -->
 
 最简单的是：
 
@@ -404,6 +652,9 @@ if <condition>:
 
 - 条件真，就执行缩进块
 - 条件假，就跳过这块，继续往后走
+<!-- bilingual-en:start -->
+A simple `if` executes its indented block when the condition is true and otherwise skips it.
+<!-- bilingual-en:end -->
 
 然后是：
 
@@ -418,6 +669,9 @@ else:
 
 - 两个分支二选一
 - 不会都执行，也不会都跳过
+<!-- bilingual-en:start -->
+An `if/else` chooses exactly one of two branches.
+<!-- bilingual-en:end -->
 
 最后是：
 
@@ -436,13 +690,25 @@ else:
 
 1. `elif` 链会按顺序检查
 2. 只执行第一个为真的分支
+<!-- bilingual-en:start -->
+An `if/elif/else` chain tests conditions in order and executes only the first branch whose condition is true.
+<!-- bilingual-en:end -->
 
 > [!warning]
 > `elif` 链不是“所有真条件都执行”，而是“找到第一个真条件就停”。  
 > 这一点和多个独立 `if` 很不一样。
+> <!-- bilingual-en:start -->
+> An `elif` chain does not execute every true condition; it stops at the first true branch. Several independent `if` statements behave differently.
+> <!-- bilingual-en:end -->
 
 ### 15. 用 pset_time / sleep_time 的例子体会条件覆盖
+<!-- bilingual-en:start -->
+*15. The `pset_time` / `sleep_time` Example and Exhaustive Conditions*
+<!-- bilingual-en:end -->
 老师随后拿一个非常生活化的例子说明 `if/elif/else`：
+<!-- bilingual-en:start -->
+The instructor illustrates `if/elif/else` with a daily-time example:
+<!-- bilingual-en:end -->
 
 ```python
 pset_time = 22
@@ -462,11 +728,23 @@ print("end of day")
 - 大于 24
 - 等于 24
 - 小于 24
+<!-- bilingual-en:start -->
+The branches cover totals greater than 24, equal to 24, and less than 24.
+<!-- bilingual-en:end -->
 
 如果你漏了一种情况，程序就会在某些输入上行为不完整。
+<!-- bilingual-en:start -->
+Omitting one case leaves the program's behavior undefined for some inputs.
+<!-- bilingual-en:end -->
 
 ### 16. 缩进不是风格问题，而是语义本身
+<!-- bilingual-en:start -->
+*16. Indentation Is Semantics, Not Style*
+<!-- bilingual-en:end -->
 接着老师给了一个故意写错的程序：
+<!-- bilingual-en:start -->
+The instructor then presents an intentionally incorrect program:
+<!-- bilingual-en:end -->
 
 ```python
 x = int(input("Enter a number for x: "))
@@ -478,15 +756,27 @@ print("These are equal!")
 
 问题在于最后一行的缩进层级不对。  
 如果 `x != y`，它仍然会打印 `These are equal!`，因为那一行根本不在 `if` block 里面。
+<!-- bilingual-en:start -->
+The final line is indented incorrectly. It prints `These are equal!` even when `x != y` because it is outside the `if` block.
+<!-- bilingual-en:end -->
 
 这是本讲必须建立的一个观念：
 
 > [!warning]
 > Python 里的 indentation 不只是排版。  
 > 它直接决定某一行代码属于哪个 block，也就决定它何时会被执行。
+> <!-- bilingual-en:start -->
+> In Python, indentation is not formatting. It determines block membership and therefore when a statement executes.
+> <!-- bilingual-en:end -->
 
 ### 17. nested conditionals 和 “多个 if 不等于 elif”
+<!-- bilingual-en:start -->
+*17. Nested Conditionals and Why Several `if`s Are Not an `elif` Chain*
+<!-- bilingual-en:end -->
 老师最后又往前推了一步，讲了 nested branching。也就是一个 `if` block 里面还可以继续有 `if`。
+<!-- bilingual-en:start -->
+The lecture next nests one conditional inside another.
+<!-- bilingual-en:end -->
 
 例如：
 
@@ -505,21 +795,41 @@ else:
 
 - 先判断外层
 - 只有进了外层 block，内层判断才有机会执行
+<!-- bilingual-en:start -->
+Tracing follows the indentation: evaluate the outer condition first, and evaluate the inner condition only if execution enters the outer block.
+<!-- bilingual-en:end -->
 
 老师最后还特别回答了一个问题：能不能写两个独立的 `if`？答案是当然可以，但语义就不同了。
 
 - 多个独立 `if`：每个都可能执行
 - `if/elif/else` 链：只会执行其中一个
+<!-- bilingual-en:start -->
+Independent `if` statements may all execute; an `if/elif/else` chain selects only one branch.
+<!-- bilingual-en:end -->
 
 ### 18. 课堂最后用“guess too high / too low / same”收束
+<!-- bilingual-en:start -->
+*18. Closing with “Too High / Too Low / Same”*
+<!-- bilingual-en:end -->
 最后一个小练习，是把前面的 secret-number 程序升级成三种输出：
+<!-- bilingual-en:start -->
+The final exercise extends the secret-number program to three mutually exclusive outputs:
+<!-- bilingual-en:end -->
 
 - too high
 - too low
 - same
+<!-- bilingual-en:start -->
+- Too high.
+- Too low.
+- The same.
+<!-- bilingual-en:end -->
 
 这其实就是最标准的 `if / elif / else` 应用场景。  
 如果你写成多个独立 `if`，虽然有时也能工作，但逻辑就不再体现“互斥分支”的意图了。
+<!-- bilingual-en:start -->
+This is the canonical use of `if/elif/else`: independent `if` statements might happen to work, but would not express the intended mutual exclusion.
+<!-- bilingual-en:end -->
 
 所以这节课的真正收尾不是某个具体程序，而是你开始会问：
 
@@ -527,10 +837,16 @@ else:
 - 这些情况是不是互斥？
 - 有没有 catch-all 的 `else`？
 - 缩进到底把哪些行纳入了同一个 block？
+<!-- bilingual-en:start -->
+The closing questions are whether a condition belongs in `if` or `elif`, whether cases are mutually exclusive, whether a catch-all `else` is needed, and which statements indentation places in each block.
+<!-- bilingual-en:end -->
 
 ## Exercise log
 > [!example] Finger exercise 02
 > 题目要求：给定变量 `number`，打印 `positive`、`negative` 或 `zero`。
+> <!-- bilingual-en:start -->
+> Given `number`, the exercise prints `positive`, `negative`, or `zero`.
+> <!-- bilingual-en:end -->
 >
 > ```python
 > if number > 0:
@@ -542,13 +858,22 @@ else:
 > ```
 >
 > 这题直接对应本讲最后三分之一的 branching 主线。
+> <!-- bilingual-en:start -->
+> The exercise directly practices the branching material from the final third of the lecture.
+> <!-- bilingual-en:end -->
 >
 > 它真正检查的是三件事：
 > - 你会不会写 comparison expression
 > - 你会不会用 `elif` 表达互斥情况
 > - 你会不会用 `else` 接住剩下那一种情况
+> <!-- bilingual-en:start -->
+> It tests whether you can write comparison expressions, use `elif` for mutually exclusive cases, and let `else` cover the remaining case.
+> <!-- bilingual-en:end -->
 >
 > 如果你写成多个独立 `if`，或者漏掉 `zero`，就说明你还没有把“条件覆盖”这件事真正内化。
+> <!-- bilingual-en:start -->
+> Writing independent `if` statements or omitting `zero` reveals that exhaustive condition coverage is not yet secure.
+> <!-- bilingual-en:end -->
 
 ## Links to follow-up practice
 - Slides: [[MIT 6.100L-slides/mit6_100l_lec02.pdf|Lecture 02 slides]]
@@ -570,8 +895,25 @@ else:
 - [ ] 我能区分 `=` 和 `==`，并能写出 `and`、`or`、`not` 的基本判断。
 - [ ] 我能说明 `if`、`if/else`、`if/elif/else` 各自适合什么情形。
 - [ ] 我能只看缩进就判断一段 branching code 到底会不会误打印、漏打印或重复执行。
+<!-- bilingual-en:start -->
+- [ ] I can explain why the memory diagram is reviewed before strings and branching.
+- [ ] I can describe a string as a sequence and thereby explain `len`, indexing, and slicing.
+- [ ] I can evaluate forward and reverse slices, including the exclusion of the stop position.
+- [ ] I can explain string immutability and why assigning to one character fails.
+- [ ] I can distinguish the shell's automatic display of an expression value from explicit program output with `print(...)`.
+- [ ] I can state that `input()` returns a string and decide when a cast is required.
+- [ ] I can explain why f-strings express formatted output more naturally than repeated concatenation or comma-separated arguments.
+- [ ] I can distinguish `=` from `==` and write basic conditions with `and`, `or`, and `not`.
+- [ ] I can choose appropriately among `if`, `if/else`, and `if/elif/else`.
+- [ ] I can use indentation alone to identify whether branching code may print incorrectly, omit output, or execute more than one path.
+<!-- bilingual-en:end -->
 
 > [!warning] Common mistakes
 > - 忘记 `input()` 返回的是 string，直接拿去和数字比较。
 > - 把多个互斥条件写成多个独立 `if`，结果重复执行多个分支。
 > - 把 `print("These are equal!")` 这种语句放错缩进层级，导致它无条件执行。
+> <!-- bilingual-en:start -->
+> - Forgetting that `input()` returns a string and comparing it directly with a number.
+> - Expressing mutually exclusive cases as independent `if` statements and executing more than one branch.
+> - Misindenting a statement such as `print("These are equal!")` so that it runs unconditionally.
+> <!-- bilingual-en:end -->

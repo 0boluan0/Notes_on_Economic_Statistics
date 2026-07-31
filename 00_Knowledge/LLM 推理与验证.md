@@ -12,10 +12,10 @@ status: source-checked
 <!-- bilingual-en:end -->
 
 > [!summary] 快速恢复
-> **它解决什么：** 让模型在复杂问题上分解、验证并调用外部工具，而不是只凭一次续写直接给答案。
-> **具体锚点：** 解一道多步数学题时，模型可生成中间步骤、用计算器核验，再根据失败结果重试；Agent 则把这种循环扩展到搜索、代码和环境操作。
-> **核心难点：** 更长的思考不保证正确，文本“计划”也不等于可靠状态；工具权限、观测、停止条件和验证器共同决定系统是否可信。
-> **为什么重要：** 推理能力与 Agent 工程经常被混称，但前者改进问题求解策略，后者还必须管理真实世界行动和风险。
+> **它解决什么：** 让模型在复杂问题上分解、搜索候选并验证结果，而不是只凭一次续写直接给答案。
+> **具体锚点：** 解一道多步数学题时，模型可生成若干候选步骤，用独立计算或规则检查结果，再根据失败反馈重试。
+> **核心难点：** 更长的思考不保证正确，表面流畅的 reasoning trace 也不是证明；验证器必须检查真正决定答案的条件，并与生成器保持足够独立。
+> **为什么重要：** 它把“答案像不像推理”改成“搜索和验证是否提高最终正确率”，避免把可读轨迹误当可靠性。
 > **继续：** 先区分模型内推理与环境循环，再用 [[LLM 评测#推理、工具与 Agent 评测|任务级结果]] 检验，而不是只看轨迹是否像人。
 > <!-- bilingual-en:start -->
 > **Problem addressed:** Improve performance on complex tasks by decomposing, searching, and verifying instead of producing an answer in one unexamined continuation.
@@ -137,10 +137,9 @@ With a verifier that genuinely checks constraints, gains jointly depend on candi
 
 > [!answer]- 答案
 > 它可能是事后合理化或在中间步骤悄悄出错；仍需可独立核验的结果、约束或 verifier。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It may be a post-hoc rationalization or contain a hidden intermediate error; independently checkable results, constraints, or a verifier are still required.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### self-consistency 在什么条件下最可能有用？
 <!-- bilingual-en:start -->
@@ -149,10 +148,9 @@ With a verifier that genuinely checks constraints, gains jointly depend on candi
 
 > [!answer]- 答案
 > 单条路径有一定正确率、采样能产生实质不同路径、错误不高度相关，而且最终答案可可靠聚合。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Individual paths must have some competence, sampling must produce substantively different paths, errors must not be highly correlated, and final answers must be aggregable reliably.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么可执行 verifier 通常比“再问模型一次是否正确”更强？
 <!-- bilingual-en:start -->
@@ -161,10 +159,9 @@ With a verifier that genuinely checks constraints, gains jointly depend on candi
 
 > [!answer]- 答案
 > 执行可对明确约束给独立结果；同一模型的自评容易重复生成时的偏差，但执行也只覆盖被编码的测试与条件。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Execution gives an independent result for explicit constraints. Self-evaluation by the same model can repeat generation bias, although execution still covers only encoded tests and conditions.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->
@@ -195,4 +192,3 @@ With a verifier that genuinely checks constraints, gains jointly depend on candi
   <!-- bilingual-en:start -->
   [DeepSeek-AI et al. (2025), DeepSeek-R1](https://arxiv.org/abs/2501.12948) verifies a public instance of reasoning-oriented reinforcement learning, sampling compute, and behavioral boundaries on verifiable tasks.
   <!-- bilingual-en:end -->
-

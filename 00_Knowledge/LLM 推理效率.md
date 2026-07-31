@@ -177,10 +177,9 @@ Fix model version, precision, hardware, input and output length distributions, a
 
 > [!answer]- 答案
 > 每层要为每个历史位置保存 key/value，缓存随序列长度和并发近似线性增长。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Every layer stores keys and values for each historical position, so cache grows approximately linearly with sequence length and concurrency.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### FlashAttention 是否通过近似 softmax 换速度？
 <!-- bilingual-en:start -->
@@ -189,10 +188,9 @@ Fix model version, precision, hardware, input and output length distributions, a
 
 > [!answer]- 答案
 > 不是；它重排分块与内存访问来精确计算 attention，主要减少 HBM IO。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > No. It reorganizes tiling and memory access to compute exact attention, mainly reducing high-bandwidth-memory I/O.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 一种 INT4 方案吞吐更高，能否直接说更优？
 <!-- bilingual-en:start -->
@@ -201,10 +199,9 @@ Fix model version, precision, hardware, input and output length distributions, a
 
 > [!answer]- 答案
 > 不能；还要在目标硬件和流量下比较延迟、显存、成本及质量退化。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > No. Latency, memory, cost, and quality degradation must also be compared on the target hardware and traffic.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 怎样判断一次优化改善了 prefill 还是 decode？
 <!-- bilingual-en:start -->
@@ -213,10 +210,9 @@ Fix model version, precision, hardware, input and output length distributions, a
 
 > [!answer]- 答案
 > 分别固定输入长度、输出长度和并发，报告 TTFT 与 TPOT，并用 profiler 检查算力、带宽、attention 和权重读取时间。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Control input length, output length, and concurrency separately; report TTFT and TPOT and profile compute, bandwidth, attention, and weight-reading time.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

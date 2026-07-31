@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2026-07-30——Thu.md",
+                "file": "01_Math/01_calculus/01_Differentiation.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-07-30——Thu"
+              "title": "01_Differentiation"
+            }
+          },
+          {
+            "id": "f18be1d48f9ff5be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_Math/01_calculus/01_Differentiation.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "01_Differentiation"
+            }
+          },
+          {
+            "id": "7e166a09329e6ffc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "LN905 PDF Contents"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -157,8 +206,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           },
           {
@@ -167,10 +216,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "00_factor/concept/Backtesting.md"
+                "file": "01_Math/01_calculus/01_Differentiation.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Backtesting"
+              "title": "File properties for 01_Differentiation"
             }
           },
           {
@@ -277,13 +326,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2026-07-30——Thu.md",
+                "file": "01_Math/01_calculus/01_Differentiation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-07-30——Thu"
+              "title": "Outline of 01_Differentiation"
             }
           },
           {
@@ -322,44 +371,54 @@
       "graph:Open graph view": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "f18be1d48f9ff5be",
   "lastOpenFiles": [
+    "tmp/polish_calc01_headings.py",
+    "tmp/__pycache__/polish_calculus_english.cpython-312.pyc",
+    "tmp/polish_calculus_english.py",
+    "tmp/restore_bilingual_source.py",
+    "tmp/__pycache__/bilingual_callout_cleanup.cpython-312.pyc",
+    "tmp/__pycache__/normalize_bilingual_callouts.cpython-312.pyc",
+    "tmp/normalize_bilingual_callouts.py",
+    "tmp/bilingual_callout_cleanup.py",
+    "tmp/apply_patch_range_probe.txt",
     "01_Math/01_calculus/01_Differentiation.md",
-    "00_Knowledge/奇异值分解与低秩近似.md",
-    "00_Knowledge/对称矩阵与正定二次型.md",
-    "00_Knowledge/Smith、Ricardo 与古典政治经济学.md",
-    "00_Knowledge/重商主义与重农主义.md",
-    "00_Knowledge/特征值、对角化与线性动力系统.md",
-    "00_Knowledge/行列式.md",
-    "00_Knowledge/发展政策的国家能力、公共投入与评价.md",
-    "00_Knowledge/贸易、产业政策与全球价值链.md",
-    "00_Knowledge/广义逆与最小范数解.md",
-    "00_Knowledge/线性变换与换基.md",
-    "00_Knowledge/内生增长理论.md",
-    "00_Knowledge/Solow 增长模型、稳态与收敛.md",
-    "00_Knowledge/Harrod—Domar 增长模型.md",
-    "00_Knowledge/多元优化：无约束、Lagrange、KKT 与包络.md",
-    "00_Knowledge/多元微分：偏导、梯度、Hessian 与隐函数.md",
-    "00_Knowledge/Todaro 迁移、城市失业与非正规部门.md",
-    "00_Knowledge/Lewis—Fei–Ranis 二元经济模型.md",
-    "00_Knowledge/无穷级数与幂级数.md",
-    "00_Knowledge/反常积分.md",
-    "00_Knowledge/参数曲线与极坐标.md",
-    "00_Knowledge/积分方法.md",
-    "00_Knowledge/人口转型、生育选择与老龄化.md",
-    "00_Knowledge/马尔萨斯陷阱与现代增长转型.md",
-    "00_Knowledge/导数与求导规则.md",
-    "00_Knowledge/极限与连续.md",
-    "tmp/__pycache__/bilingualize_classroom.cpython-312.pyc",
-    "tmp/__pycache__",
-    "tmp/bilingualize_classroom.py",
-    "00_inbox/quickadd记录推进.js",
-    "00_inbox/quickadd任务添加.js",
-    "01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/06_Problem_Sets/Exercise003_Problems.pdf",
-    "01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/06_Problem_Sets/Exercise002_Solutions.pdf",
-    "01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/06_Problem_Sets/Exercise002_Problems.pdf",
-    "01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/06_Problem_Sets/Exercise001_Problems.pdf",
-    "01_Math/01_calculus/MIT18.01SC_Single_Variable_Calculus/01_Differentiation/Ses01e_lec1ses1ex1_secants.pdf",
+    "04_Fragments/How to fix your entire life in 1 day - 2026-03-28.md",
+    "99_学习情况记录/teach/reading-into-writing/practice/0001-social-media-source-pack.pdf",
+    "99_学习情况记录/teach/reading-into-writing/practice/0001-social-media-source-pack.aux",
+    "99_学习情况记录/teach/reading-into-writing/practice/0001-social-media-response.md",
+    "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-6.jpg",
+    "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-5.jpg",
+    "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-4.jpg",
+    "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-3.jpg",
+    "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-2.jpg",
+    "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-1.jpg",
+    "99_学习情况记录/teach/reading-into-writing/NOTES.md",
+    "99_学习情况记录/teach/reading-into-writing/RESOURCES.md",
+    "99_学习情况记录/teach/reading-into-writing/MISSION.md",
+    "tmp/pdfs/reading-into-writing/workbook-contact.png",
+    "tmp/pdfs/reading-into-writing/intro-contact.png",
+    "tmp/pdfs/reading-into-writing/criteria-contact.png",
+    "tmp/pdfs/reading-into-writing/workbook-26.png",
+    "99_学习情况记录/2026-07-31——Fri.md",
+    "00_inbox/Evaluation.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Reading to Writing.md",
+    "00_Knowledge/异常值、杠杆与影响诊断.md",
+    "00_Knowledge/多重共线性与设计矩阵诊断.md",
+    "00_Knowledge/回归模型设定与函数形式.md",
+    "00_Knowledge/回归模型比较与选择.md",
+    "00_Knowledge/回归系数推断与线性假设检验.md",
+    "00_Knowledge/概率不等式与集中界.md",
+    "00_Knowledge/指示变量与随机计数.md",
+    "00_Knowledge/交换经济、Edgeworth box 与福利定理.md",
+    "00_Knowledge/图着色与色数.md",
+    "00_Knowledge/二分图匹配与 Hall 定理.md",
+    "00_Knowledge/无环图：树、生成树、DAG 与拓扑排序.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
+    "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
+    "00_Knowledge/图的基本结构、路径与遍历.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/Social Media and Well-Being 中文逐段翻译与 summary.md",
+    "00_Knowledge/面板数据：Pooled OLS、固定效应与随机效应.md",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L Course Atlas.canvas",
@@ -369,16 +428,6 @@
     "02_Economy/08_经济预测与决策/经济预测与决策 Course Atlas.canvas",
     "02_Economy/07_金融机构与风险管理/金融机构与风险管理 Course Atlas.canvas",
     "02_Economy/06_证券投资学/证券投资学 Course Atlas.canvas",
-    "02_Economy/05_财务管理/财务管理 Course Atlas.canvas",
-    "tmp/source_extracts/development_pages/page-012.jpg",
-    "tmp/source_extracts/development_pages/page-011.jpg",
-    "tmp/source_extracts/development_pages/page-010.jpg",
-    "tmp/source_extracts/development_pages/page-009.jpg",
-    "tmp/source_extracts/development_pages/page-008.jpg",
-    "tmp/source_extracts/development_pages/page-007.jpg",
-    "tmp/source_extracts/development_pages/page-006.jpg",
-    "tmp/source_extracts/development_pages/page-005.jpg",
-    "tmp/source_extracts/development_pages/page-004.jpg",
-    "tmp/source_extracts/development_pages/page-003.jpg"
+    "02_Economy/05_财务管理/财务管理 Course Atlas.canvas"
   ]
 }

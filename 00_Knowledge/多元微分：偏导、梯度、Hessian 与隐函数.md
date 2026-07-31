@@ -18,21 +18,19 @@ status: source-checked
 > **核心难点：** 偏导只改变一个变量，全微分才组合共同变化；一阶条件是候选，Hessian、约束资格与边界决定结论。
 > **为什么重要：** 微观优化、计量比较静态、机器学习和动态模型都使用这套语言。
 > **继续：** 无约束先读梯度/Hessian，等式约束再用 Lagrange；局部解随参数变化见隐函数与包络。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** Multivariable differentiation combines local responses to simultaneous changes in several inputs.
 > **Concrete anchor:** For a utility function of two goods, partial derivatives measure one-good changes, the gradient collects both marginal effects, and the total differential approximates a joint change.
 > **Central difficulty:** A partial derivative freezes other coordinates, whereas a total differential follows a specified joint movement. Hessian conclusions depend on definiteness, not isolated diagonal entries.
 > **Why it matters:** Comparative statics, statistical approximations, machine learning, and multivariable optimisation all use these objects.
 > **Continue with:** Learn the local linear and quadratic structures here, then use them in [[多元优化：无约束、Lagrange、KKT 与包络|multivariable optimisation]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - [[01_Math/08_MathsCamp-EC400/01_Revision_Mathematics/Notes/Complete/Revision Maths Notes all.pdf]]：支持 EC400 课程范围、记号与例题。
-<!-- bilingual-en:start -->
-> [!source] Sources for this section
+> <!-- bilingual-en:start -->
 > - [[01_Math/08_MathsCamp-EC400/01_Revision_Mathematics/Notes/Complete/Revision Maths Notes all.pdf|EC400 revision mathematics notes]] were checked for partial derivatives, gradients, total differentials, Hessians, definiteness, and implicit differentiation.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 偏导、梯度与全微分
 <!-- bilingual-en:start -->
@@ -104,10 +102,9 @@ At $(1,2)$, a move $dx=0.01,dy=-0.02$ gives the first-order approximation $df\ap
 
 > [!answer]- 答案
 > 偏导看单一坐标方向；全微分把所有输入的共同小变化按梯度加权汇总。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > A partial derivative moves along one coordinate while holding the others fixed; a total differential weights and combines all simultaneous small input changes.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### Hessian 半正定能否证明严格最小？
 <!-- bilingual-en:start -->
@@ -116,10 +113,9 @@ At $(1,2)$, a move $dx=0.01,dy=-0.02$ gives the first-order approximation $df\ap
 
 > [!answer]- 答案
 > 一般不能，二阶检验可能无结论；需更高阶、结构凸性或直接比较。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Not in general. The second-order test may be inconclusive; higher-order terms, structural convexity, or direct comparison may be needed.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 梯度为什么会指向最快上升方向？
 <!-- bilingual-en:start -->
@@ -128,10 +124,9 @@ At $(1,2)$, a move $dx=0.01,dy=-0.02$ gives the first-order approximation $df\ap
 
 > [!answer]- 答案
 > 单位方向 $v$ 上的变化率是 $\nabla f^Tv$，Cauchy–Schwarz 表明其最大值为 $\|\nabla f\|$，在 $v$ 与梯度同向时取到。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The directional derivative is $\nabla f^Tv$. Cauchy–Schwarz bounds it by $\|\nabla f\|$, with equality when $v$ points along the gradient.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 隐函数定理中 Jacobian 非奇异为什么重要？
 <!-- bilingual-en:start -->
@@ -140,10 +135,9 @@ At $(1,2)$, a move $dx=0.01,dy=-0.02$ gives the first-order approximation $df\ap
 
 > [!answer]- 答案
 > 它允许局部解出内生变量对参数的唯一光滑反应；奇异时可能出现多解、分支或竖直关系。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It permits a locally unique, smooth solution for endogenous variables as functions of parameters. Singularity may produce multiple branches or vertical relations.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

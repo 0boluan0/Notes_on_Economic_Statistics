@@ -17,23 +17,21 @@ status: source-checked
 > **核心难点：** 城市高工资同时提高成功后回报和迁移人数；若岗位增长不足，提高工资可反而提高均衡城市失业。
 > **为什么重要：** 它防止政策只看已就业城市工人的工资，而忽略求职队列、非正规就业和迁移响应。
 > **继续：** 若关注从剩余劳动力到工资转折的宏观积累过程，回到 [[Lewis—Fei–Ranis 二元经济模型]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** It explains why rural workers can rationally migrate despite urban unemployment: they compare expected income from a chance of obtaining a high-wage formal job, not guaranteed income.
 > **Concrete anchor:** If rural income is 60, the formal urban wage is 120, and the probability of formal employment is 60%, simplified expected urban income is 72. Migration can remain attractive despite a 40% risk of unemployment.
 > **Central difficulty:** A high urban wage raises both the payoff from success and the number of migrants. If job creation lags, raising the wage can raise equilibrium urban unemployment.
 > **Why it matters:** It prevents policy from observing only wages among employed urban workers while ignoring the job queue, informal work, and migration response.
 > **Continue:** For the macro accumulation process from surplus labor to a wage turning point, return to [[Lewis—Fei–Ranis 二元经济模型|The Lewis–Fei–Ranis Dual-Economy Model]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - [[02_Economy/10_发展经济学/发展经济学拍屏ppt.pdf]]：支持课程范围、案例和课堂模型。
 > - Harris 与 Todaro（1970）《[Migration, Unemployment and Development](https://www.aeaweb.org/aer/top20/60.1.126-142.pdf)》：核验预期城乡收入差、城市失业和工资政策的原始两部门机制。
-<!-- bilingual-en:start -->
-> [!source] Basis for this section
+> <!-- bilingual-en:start -->
 > - The course slide PDF supports course scope, examples, and classroom models.
 > - Harris and Todaro (1970), “[Migration, Unemployment and Development](https://www.aeaweb.org/aer/top20/60.1.126-142.pdf),” verifies the original two-sector mechanism linking expected rural–urban income differences, urban unemployment, and wage policy.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 预期收入而非观察工资
 <!-- bilingual-en:start -->
@@ -119,10 +117,9 @@ Education, housing, registration rules, infrastructure, agricultural productivit
 
 > [!answer]- 答案
 > 城市收入乘就业概率等形成的预期收入，与农村收入及迁移成本比较。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > They compare expected urban income, formed from wages and employment probabilities, with rural income and migration cost.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 提高城市工资为何可能增加城市失业？
 <!-- bilingual-en:start -->
@@ -131,10 +128,9 @@ Education, housing, registration rules, infrastructure, agricultural productivit
 
 > [!answer]- 答案
 > 若岗位数量响应不足，更高工资提高预期城市收益，吸引的迁移可能超过新增就业。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > If jobs respond weakly, the higher wage raises expected urban returns and can attract more migrants than the number of new jobs.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话说明非正规收入 $w_I$ 为什么改变迁移诊断。
 <!-- bilingual-en:start -->
@@ -143,10 +139,9 @@ Education, housing, registration rules, infrastructure, agricultural productivit
 
 > [!answer]- 答案
 > 求职期间若能有非正规收入，获得不到正式岗位不再等于零收入，因而预期城市收益、停留时间和政策效果都会变。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > If job seekers can earn informal income, failure to obtain a formal job no longer means zero income. Expected urban returns, duration of stay, and policy effects all change.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

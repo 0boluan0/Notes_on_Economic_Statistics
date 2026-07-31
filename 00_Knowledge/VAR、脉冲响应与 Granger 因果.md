@@ -3,7 +3,9 @@ aliases:
   - "VAR Model"
   - "Vector Autoregression"
   - "Impulse Response"
+  - "Impulse Response Function"
   - "Granger Causality"
+  - "Granger Causality Test"
   - "Dynamic Regression and VAR"
 status: source-checked
 ---
@@ -19,23 +21,21 @@ status: source-checked
 > **核心难点：** reduced-form 残差通常同期相关，未经识别的“冲击”没有结构经济含义；Granger 因果只是增量预测关系。
 > **为什么重要：** 它连接政策动态、预测、干预分析和结构识别。
 > **继续：** 先确保平稳/协整处理，再解释 IRF；长期关系见 [[协整与误差修正模型]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** VAR describes lagged interactions among several time series and traces how an innovation propagates through the system.
 > **Concrete anchor:** Interest rates, inflation, and output influence one another. Rather than declaring one variable fully exogenous, a VAR lets every variable depend on the system's past.
 > **Central difficulty:** Reduced-form residuals are usually contemporaneously correlated, so an unidentified "shock" has no structural economic meaning. Granger causality is only incremental predictive content.
 > **Why it matters:** VAR connects policy dynamics, forecasting, intervention analysis, and structural identification.
 > **Continue with:** Establish stationarity or cointegration before interpreting impulse responses; see [[协整与误差修正模型|cointegration and error correction]] for long-run restrictions.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - [[01_Math/06_时间序列分析/lecture.pdf]] 与 [[01_Math/06_时间序列分析/lecture-dual.pdf]]：支持课程范围、记号、模型、检验与例题。
 > - Hyndman & Athanasopoulos, [Forecasting: Principles and Practice](https://otexts.com/fpp3/)：交叉核验预测、ARIMA、诊断与时序交叉验证。
-<!-- bilingual-en:start -->
-> [!source] Sources for this section
+> <!-- bilingual-en:start -->
 > - [[01_Math/06_时间序列分析/lecture.pdf|time-series lecture notes]] and [[01_Math/06_时间序列分析/lecture-dual.pdf|bilingual time-series lecture notes]] were checked for reduced and structural VARs, stability, estimation, identification, IRFs, FEVD, and Granger tests.
 > - Lütkepohl, *New Introduction to Multiple Time Series Analysis*, was checked for VAR representation, stability, forecasting, and structural analysis.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## VAR
 <!-- bilingual-en:start -->
@@ -167,10 +167,9 @@ Let $y_t=(\text{output growth},\text{policy rate})^T$. A Cholesky ordering with 
 
 > [!answer]- 答案
 > 不同方程残差可同期相关，只表示无法由过去预测的组合；需要额外识别限制分解为有含义的正交冲击。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Residuals across equations can be contemporaneously correlated and represent only combinations unpredictable from the past. Additional restrictions are needed to decompose them into meaningful orthogonal shocks.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### Granger 因果能否证明政策变量造成结果变化？
 <!-- bilingual-en:start -->
@@ -179,10 +178,9 @@ Let $y_t=(\text{output growth},\text{policy rate})^T$. A Cholesky ordering with 
 
 > [!answer]- 答案
 > 不能。它只说明滞后信息提高预测，仍可能由遗漏变量、预期或共同冲击产生。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > No. It says only that lagged information improves prediction; omitted variables, expectations, or common shocks may still generate the relation.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### IRF 为什么要报告变量排序或识别方法？
 <!-- bilingual-en:start -->
@@ -191,10 +189,9 @@ Let $y_t=(\text{output growth},\text{policy rate})^T$. A Cholesky ordering with 
 
 > [!answer]- 答案
 > 冲击正交化不是数据唯一决定的；不同限制会改变冲击定义和传播路径。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Orthogonalisation is not uniquely determined by the data; different restrictions change both shock definitions and propagation paths.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话区分 IRF 与 FEVD 回答的问题。
 <!-- bilingual-en:start -->
@@ -203,10 +200,9 @@ Let $y_t=(\text{output growth},\text{policy rate})^T$. A Cholesky ordering with 
 
 > [!answer]- 答案
 > IRF 追踪给定结构冲击对变量的时间路径；FEVD 衡量在给定 horizon 的预测误差不确定性中，各结构冲击占多少。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > An IRF traces the time path after one identified shock; an FEVD measures how much each identified shock contributes to forecast-error uncertainty at a given horizon.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

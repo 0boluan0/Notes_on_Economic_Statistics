@@ -179,10 +179,9 @@ The objective appears here only to complete the architectural explanation. Data,
 
 > [!answer]- 答案
 > query 表示当前位置想找什么，key 表示每个位置可怎样被匹配，value 是匹配后实际被汇总的信息。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > A query represents what the current position seeks, a key represents how each position can be matched, and a value contains the information aggregated after matching.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么 decoder 训练能并行而生成仍常逐 token？
 <!-- bilingual-en:start -->
@@ -191,10 +190,9 @@ The objective appears here only to complete the architectural explanation. Data,
 
 > [!answer]- 答案
 > 训练时完整目标序列已知，可用 causal mask 同时算所有位置；生成时下一个输入依赖刚生成的 token。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > During training the complete target sequence is known, so a causal mask permits all positions to be computed together. During generation, the next input depends on the token just generated.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 只增加 attention 层为什么还不构成语言模型？
 <!-- bilingual-en:start -->
@@ -203,10 +201,9 @@ The objective appears here only to complete the architectural explanation. Data,
 
 > [!answer]- 答案
 > 还需要 token/位置表示、前馈与残差结构、输出分布和训练目标；attention 只是信息路由机制。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Token and position representations, feed-forward and residual structure, an output distribution, and a training objective are also required; attention is only the information-routing mechanism.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### causal mask 应该在 softmax 前还是后应用，为什么？
 <!-- bilingual-en:start -->
@@ -215,10 +212,9 @@ The objective appears here only to complete the architectural explanation. Data,
 
 > [!answer]- 答案
 > 在 softmax 前把未来位置分数设为 $-\infty$，归一化后其概率才严格为零；若之后再乘零，剩余权重不再保持正确归一化。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Future scores should become $-\infty$ before softmax so their normalized probabilities are exactly zero. Multiplying by zero afterward leaves the remaining weights incorrectly normalized.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

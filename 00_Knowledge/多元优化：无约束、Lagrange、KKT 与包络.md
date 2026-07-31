@@ -19,21 +19,19 @@ status: source-checked
 > **核心难点：** 一阶条件只在正则内点上给候选；KKT 需同时检查可行性、乘子符号、驻点和互补松弛。
 > **为什么重要：** 微观经济、资源分配、估计、机器学习与政策比较静态都是约束优化。
 > **继续：** 先定义可行域与边界，再根据约束类型选无约束、Lagrange 或 KKT，最后用凸性/凹性或值比较确认。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** Multivariable optimisation finds and verifies optima with several choices and equality or inequality constraints.
 > **Concrete anchor:** A consumer chooses two goods on a budget line. At a regular interior optimum, the utility contour is tangent to the budget line, whereas a corner solution need not satisfy the same tangency equation.
 > **Central difficulty:** First-order conditions generate candidates only at regular points. KKT requires feasibility, multiplier signs, stationarity, and complementary slackness together.
 > **Why it matters:** Resource allocation, estimation, machine learning, and comparative statics are constrained optimisation problems.
 > **Continue with:** Define the feasible set first, choose the condition set that matches the constraints, and verify local versus global optimality.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - [[01_Math/08_MathsCamp-EC400/01_Revision_Mathematics/Notes/Complete/Revision Maths Notes all.pdf]]：支持 EC400 课程范围、记号与例题。
-<!-- bilingual-en:start -->
-> [!source] Sources for this section
+> <!-- bilingual-en:start -->
 > - [[01_Math/08_MathsCamp-EC400/01_Revision_Mathematics/Notes/Complete/Revision Maths Notes all.pdf|EC400 revision mathematics notes]] were checked for unconstrained first- and second-order conditions, equality constraints, Lagrange multipliers, inequality constraints, KKT conditions, and comparative statics.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 无约束优化
 <!-- bilingual-en:start -->
@@ -107,10 +105,9 @@ For every optimisation problem, state the objective, variables, parameters, and 
 
 > [!answer]- 答案
 > 正则最优下，它等于约束右端小幅放宽对最优目标值的边际影响，符号取决于 Lagrangian 约定。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > At a regular optimum, it is the marginal change in the optimal value caused by a small relaxation of the constraint's right-hand side, with sign determined by the Lagrangian convention.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么不能把所有不等式预先都当成等式？
 <!-- bilingual-en:start -->
@@ -119,10 +116,9 @@ For every optimisation problem, state the objective, variables, parameters, and 
 
 > [!answer]- 答案
 > 最优点可能严格位于某个约束内部；互补松弛要求“约束松弛或对应乘子为零”，绑定状态必须由解确定。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > The optimum may lie strictly inside an inequality. Complementary slackness requires either slackness or a zero multiplier, so binding status must be determined by the solution.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话说明一阶条件为什么只生成候选。
 <!-- bilingual-en:start -->
@@ -131,10 +127,9 @@ For every optimisation problem, state the objective, variables, parameters, and 
 
 > [!answer]- 答案
 > 它只排除正则内点上存在明显改善方向的情况，不区分最大、最小或鞍点，也不覆盖边界与不正则点。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > They only rule out an obvious improving direction at a regular interior point. They do not distinguish maxima, minima, and saddles or cover boundaries and irregular points.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 包络定理为什么能忽略最优选择的间接变化？
 <!-- bilingual-en:start -->
@@ -143,10 +138,9 @@ For every optimisation problem, state the objective, variables, parameters, and 
 
 > [!answer]- 答案
 > 在正则内点最优处，目标沿可行选择方向的一阶导数已为零，因此选择变化对价值的一阶间接项消失，只留参数的直接效应。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > At a regular interior optimum, the objective's first-order derivative along feasible choice directions is already zero. The optimiser's indirect first-order contribution therefore vanishes, leaving the parameter's direct effect.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

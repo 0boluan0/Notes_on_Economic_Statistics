@@ -6,7 +6,6 @@
 >[!note] 本章主线
 > PCA 的核心是把原变量旋转成一组互不相关的新变量，并按方差大小排序。它回答的是“哪些方向保留了最多信息”。
 > <!-- bilingual-en:start -->
-> [!note] Chapter backbone
 > PCA rotates the original variables into a set of uncorrelated new variables and orders them by variance. It asks which directions preserve the most information.
 > <!-- bilingual-en:end -->
 
@@ -34,7 +33,6 @@ Principal component analysis is mainly used to:
 >[!note] 一句话
 > PCA 不是找最重要的原变量，而是找最重要的线性组合。
 > <!-- bilingual-en:start -->
-> [!note] In one sentence
 > PCA does not identify the most important original variable; it identifies the most important linear combinations.
 > <!-- bilingual-en:end -->
 
@@ -118,7 +116,6 @@ $$
 >[!example] 课后题提示
 > 课后题出现过 $\rho_{Y_iZ_j}=w_{ij}\sqrt{\lambda_i}$ 这一类主成分和标准化变量之间相关性的表达。复习时把它理解为“载荷/相关性由特征向量元素和特征值共同决定”。
 > <!-- bilingual-en:start -->
-> [!example] Exercise note
 > An exercise used an expression such as $\rho_{Y_iZ_j}=w_{ij}\sqrt{\lambda_i}$ for the correlation between a principal component and a standardised variable. Interpret it as saying that a loading or correlation is jointly determined by an eigenvector element and its eigenvalue.
 > <!-- bilingual-en:end -->
 
@@ -155,7 +152,6 @@ $$
 >[!item] 判断
 > 协方差矩阵 PCA 保留原始尺度；相关矩阵 PCA 相当于先让每个变量方差为 1。
 > <!-- bilingual-en:start -->
-> [!item] Distinction
 > Covariance-matrix PCA preserves the original scales; correlation-matrix PCA is equivalent to first giving every variable unit variance.
 > <!-- bilingual-en:end -->
 
@@ -207,7 +203,6 @@ Common criteria include:
 >[!attention] 不要机械化
 > “累计解释率超过 80%”只是经验规则。考试和实务中都要结合题目要求、变量含义和碎石图。
 > <!-- bilingual-en:start -->
-> [!attention] Do not apply a rule mechanically
 > A cumulative explained variance above 80% is only a rule of thumb. In both examinations and practice, the decision should reflect the task, the meaning of the variables, and the scree plot.
 > <!-- bilingual-en:end -->
 
@@ -237,7 +232,6 @@ $$
 >[!note] 考试提示
 > 旧笔记标注“大样本性质不考”。复习时优先掌握 PCA 的定义、方差解释率、协方差矩阵 vs 相关矩阵。
 > <!-- bilingual-en:start -->
-> [!note] Examination note
 > The old note says that large-sample properties are not examined. Prioritise the definition of PCA, explained-variance ratios, and the choice between covariance and correlation matrices.
 > <!-- bilingual-en:end -->
 
@@ -246,9 +240,9 @@ $$
 *1.8. Related Cards*
 <!-- bilingual-en:end -->
 
-- [[PCA]]
-- [[PCA Procedure]]
-- [[Variance Explained]]
-- [[Scree Plot]]
-- [[Choosing Covariance vs Correlation Matrix]]
-- [[PCA vs Factor Analysis]]
+- [[主成分分析 PCA#PCA 的方差最大化|PCA]]
+- [[主成分分析 PCA#PCA 的方差最大化|PCA Procedure]]
+- [[主成分分析 PCA#标准化与成分选择|Variance Explained]]
+- [[主成分分析 PCA#标准化与成分选择|Scree Plot]]
+- [[主成分分析 PCA#标准化与成分选择|Choosing Covariance vs Correlation Matrix]]
+- [[主成分分析 PCA#PCA 与因子分析的选择|PCA vs Factor Analysis]]

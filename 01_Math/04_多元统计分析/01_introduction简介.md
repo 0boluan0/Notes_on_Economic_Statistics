@@ -6,7 +6,6 @@
 >[!note] 本章主线
 > 多元统计分析的对象不是“一个变量”，而是一个由多个变量组成的观测向量。第 1 章先建立三个入口：数据矩阵、描述统计矩阵、图形与距离。
 > <!-- bilingual-en:start -->
-> [!note] Chapter backbone
 > Multivariate statistical analysis studies an observation vector made up of several variables, not a single variable. Chapter 1 establishes three entry points: the data matrix, descriptive-statistics matrices, and graphical and distance-based views.
 > <!-- bilingual-en:end -->
 
@@ -36,7 +35,6 @@ Multivariate methods commonly serve five types of task:
 >[!note] 复习抓手
 > 一元统计只问“某个变量怎样”；多元统计多问一步：“多个变量如何一起变化”。
 > <!-- bilingual-en:start -->
-> [!note] Review anchor
 > Univariate statistics asks what happens to one variable; multivariate statistics adds the question of how several variables move together.
 > <!-- bilingual-en:end -->
 
@@ -209,7 +207,6 @@ $$
 >[!attention] 容易错
 > 协方差矩阵必须用中心化后的偏差矩阵 $D$。直接写成 $\frac1{n-1}X'X$ 只有在每一列已经中心化时才成立。
 > <!-- bilingual-en:start -->
-> [!attention] Common error
 > The covariance matrix must use the centred deviation matrix $D$. Writing it directly as $\frac1{n-1}X'X$ is valid only when every column of $X$ has already been centred.
 > <!-- bilingual-en:end -->
 
@@ -345,10 +342,9 @@ A distance function normally satisfies:
 <!-- bilingual-en:end -->
 
 >[!item] 后续连接
-> 多元正态中的 [[Mahalanobis Distance]] 是普通距离的协方差调整版；聚类中的距离会直接决定分组结果。
+> 多元正态中的 [[多元数据、随机向量与样本协方差#距离与几何|Mahalanobis Distance]] 是普通距离的协方差调整版；聚类中的距离会直接决定分组结果。
 > <!-- bilingual-en:start -->
-> [!item] Where this leads
-> [[Mahalanobis Distance]] is a covariance-adjusted version of ordinary distance for multivariate normal data; in clustering, the chosen distance directly determines the grouping result.
+> [[多元数据、随机向量与样本协方差#距离与几何|Mahalanobis Distance]] is a covariance-adjusted version of ordinary distance for multivariate normal data; in clustering, the chosen distance directly determines the grouping result.
 > <!-- bilingual-en:end -->
 
 ## 1.7. 关联卡片
@@ -356,9 +352,9 @@ A distance function normally satisfies:
 *1.7. Related Cards*
 <!-- bilingual-en:end -->
 
-- [[Multivariate Statistics-hub]]
-- [[Random Vector]]
-- [[Sample Mean Vector]]
-- [[Sample Covariance Matrix]]
-- [[Correlation Matrix]]
-- [[Mahalanobis Distance]]
+- [[多元统计分析 Course Atlas|Multivariate Statistics-hub]]
+- [[多元数据、随机向量与样本协方差#数据矩阵与随机向量|Random Vector]]
+- [[多元数据、随机向量与样本协方差#样本协方差矩阵|Sample Mean Vector]]
+- [[多元数据、随机向量与样本协方差#样本协方差矩阵|Sample Covariance Matrix]]
+- [[多元数据、随机向量与样本协方差#均值、协方差与相关|Correlation Matrix]]
+- [[多元数据、随机向量与样本协方差#距离与几何|Mahalanobis Distance]]

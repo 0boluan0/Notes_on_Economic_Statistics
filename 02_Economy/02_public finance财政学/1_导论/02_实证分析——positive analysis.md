@@ -1,4 +1,4 @@
-# 基础信息([[Positive Definite Matrix|Positive]] Analysis)
+# 基础信息(Positive Analysis)
 <!-- bilingual-en:start -->
 *Foundations of Positive Analysis*
 <!-- bilingual-en:end -->
@@ -31,9 +31,9 @@ An economic model provides a framework for identifying and reasoning about the f
 *Scenario*
 <!-- bilingual-en:end -->
 >假设一个人每天的时间是一定的，那么他应该如何分配他的工作和休息时间以达到最爽的状态。（每小时时薪是10美刀）
-<!-- bilingual-en:start -->
+> <!-- bilingual-en:start -->
 >Suppose a person has a fixed amount of time each day. How should they divide it between work and leisure to achieve the greatest satisfaction if the hourly wage is ten dollars?
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 在这种情况下，应该会有一个比较均衡的分配以使得这个人既有钱花又有时间花钱。
 此处不妨将休息看作是一个消耗10美刀又一小时的商品。
@@ -55,9 +55,9 @@ Because the [[收入效应与替代效应|income and substitution effects]] work
 <!-- bilingual-en:end -->
 
 >在这个问题中，对问题的分析仰赖于两个模型，这部分工作就是实证分析。
-<!-- bilingual-en:start -->
+> <!-- bilingual-en:start -->
 >The analysis relies on two theoretical effects. Using those models to determine what can be inferred is an example of positive analysis.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 # 因果推断
 <!-- bilingual-en:start -->
@@ -80,7 +80,7 @@ For $X$ to cause $Y$, $X$ must occur before $Y$.
 <!-- bilingual-en:end -->
 
 
-## [[DID|DID]]
+## [[双重差分法（DID）|DID]]
 <!-- bilingual-en:start -->
 *Difference in Differences (DID)*
 <!-- bilingual-en:end -->

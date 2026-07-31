@@ -43,7 +43,7 @@ In the terminal, run `make hello` directly; do not include the `.c` extension.
 
 ### run the file
 
-./<filename(no c, [[Just-identified|just]] file name)>
+./<filename(no c, just file name)>
 eg : ./hello
 ### print
 

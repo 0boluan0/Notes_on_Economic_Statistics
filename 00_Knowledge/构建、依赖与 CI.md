@@ -84,10 +84,9 @@ A minimal pipeline normally installs locked dependencies, generates or compiles,
 
 > [!answer]- 答案
 > 节点是目标或中间产物，边表示一个目标依赖哪些输入，因此输入变化决定哪些节点必须重建。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Nodes are targets or intermediate artifacts, and edges state which inputs a target depends on; changed inputs determine which nodes must be rebuilt.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么锁文件仍不能独自保证可复现？
 <!-- bilingual-en:start -->
@@ -96,10 +95,9 @@ A minimal pipeline normally installs locked dependencies, generates or compiles,
 
 > [!answer]- 答案
 > 工具链、操作系统、环境变量、外部下载和生成步骤也影响产物，必须一并声明或控制。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Toolchains, operating systems, environment variables, external downloads, and generation steps also affect artifacts and must be declared or controlled.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 如何判断缓存只是优化？
 <!-- bilingual-en:start -->
@@ -108,10 +106,9 @@ A minimal pipeline normally installs locked dependencies, generates or compiles,
 
 > [!answer]- 答案
 > 从空缓存运行仍得到正确产物并通过验证；差别只应是时间和资源消耗。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > A run from an empty cache still produces correct artifacts and passes validation; only time and resource use should differ.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

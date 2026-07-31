@@ -167,10 +167,9 @@ When an object is mainly a data carrier, `dataclass` can generate boilerplate. F
 
 > [!answer]- 答案
 > 所有未遮蔽它的实例共享同一对象，一个实例修改会被其他实例看到。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Every instance that has not shadowed the attribute shares the same object, so one instance's mutation is visible to the others.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 什么时候组合优于继承？
 <!-- bilingual-en:start -->
@@ -179,10 +178,9 @@ When an object is mainly a data carrier, `dataclass` can generate boilerplate. F
 
 > [!answer]- 答案
 > 关系是 has-a、只想复用行为、需要运行时替换，或子对象不满足父类完整契约时。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > When the relationship is “has-a,” only behavior reuse is needed, runtime substitution matters, or the child does not satisfy the parent's complete contract.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 子类可替换父类意味着什么？
 <!-- bilingual-en:start -->
@@ -191,10 +189,9 @@ When an object is mainly a data carrier, `dataclass` can generate boilerplate. F
 
 > [!answer]- 答案
 > 调用者只依赖父类契约时，换成子类仍保持前置/后置条件和可观察行为。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > A caller relying only on the parent contract should observe valid preconditions, postconditions, and behavior after the subclass is substituted.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么把余额设成只读 property 仍不能自动保证账户正确？
 <!-- bilingual-en:start -->
@@ -203,10 +200,9 @@ When an object is mainly a data carrier, `dataclass` can generate boilerplate. F
 
 > [!answer]- 答案
 > 所有内部修改方法仍必须维护不变量，而且可变成员对象也可能从其他路径泄露；property 只是一个入口控制工具。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Every internal mutator must still preserve the invariant, and mutable member objects can leak through other paths; a property controls one entry point only.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

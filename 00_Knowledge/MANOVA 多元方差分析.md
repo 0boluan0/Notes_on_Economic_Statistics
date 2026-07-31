@@ -17,23 +17,21 @@ status: source-checked
 > **核心难点：** 总体检验比较假设 SSP 矩阵 $H$ 与误差 SSP 矩阵 $E$；Wilks、Pillai 等统计量摘要同一组特征根却有不同稳健性。
 > **为什么重要：** 它先控制全局问题，再通过预定义对比和同时区间定位差异，避免将一串单变量检验误当整体结论。
 > **继续：** 两组或单一均值向量问题见 [[Hotelling T² 与多元均值推断]]；一般设计矩阵表达见 [[多元线性回归]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** When groups or experimental factors may change several correlated outcomes at once, MANOVA tests whether the whole mean vector varies with those factors.
 > **Concrete anchor:** Compare three teaching programmes on mathematics, reading, and writing jointly instead of running three unrelated ANOVAs.
 > **Central difficulty:** The omnibus test compares a hypothesis SSP matrix $H$ with an error SSP matrix $E$. Wilks, Pillai, and related statistics summarise the same characteristic roots differently and have different robustness properties.
 > **Why it matters:** It controls the global question first and then localises differences with prespecified contrasts and simultaneous intervals, avoiding the mistake of treating a collection of univariate tests as one joint conclusion.
 > **Continue with:** See [[Hotelling T² 与多元均值推断|Hotelling's T-squared]] for one-vector or two-group problems and [[多元线性回归|multivariate linear regression]] for the general design-matrix formulation.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - [Penn State STAT 505, Lesson 8](https://online.stat.psu.edu/stat505/Lesson08)：核验 MANOVA 的 SSP 分解、统计量、对比与解释步骤。
 > - Johnson & Wichern, *Applied Multivariate Statistical Analysis*, 6th ed.：核验一般线性假设、特征根表示与经典假设。
-<!-- bilingual-en:start -->
-> [!source] Sources for this section
+> <!-- bilingual-en:start -->
 > - [Penn State STAT 505, Lesson 8](https://online.stat.psu.edu/stat505/Lesson08) was checked for SSP decomposition, omnibus statistics, contrasts, and interpretation.
 > - Johnson and Wichern, *Applied Multivariate Statistical Analysis*, 6th ed., was checked for general linear hypotheses, characteristic-root representations, and classical assumptions.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## MANOVA 的模型
 <!-- bilingual-en:start -->
@@ -128,10 +126,9 @@ Suppose three student groups have response vector $(\text{mathematics},\text{rea
 
 > [!answer]- 答案
 > 不能。总体结论只说明某个线性组合或某些均值差异，需要后续对比和区间定位。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > No. The omnibus result establishes only that some response combination or mean contrast differs; follow-up contrasts and intervals are needed to locate it.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### Wilks' lambda 越小表示什么？
 <!-- bilingual-en:start -->
@@ -140,10 +137,9 @@ Suppose three student groups have response vector $(\text{mathematics},\text{rea
 
 > [!answer]- 答案
 > $H$ 相对 $E$ 越大，完整模型未被零假设解释的响应组合越明显，因而反对零假设的证据越强。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > $H$ is larger relative to $E$, so response variation attributable to the tested effect is more pronounced and evidence against the null is stronger.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么不能把 MANOVA 当成混杂的补救方法？
 <!-- bilingual-en:start -->
@@ -152,10 +148,9 @@ Suppose three student groups have response vector $(\text{mathematics},\text{rea
 
 > [!answer]- 答案
 > MANOVA 只联合建模多个响应，不会创造未观察混杂因素的信息，也不会修复非随机分组或选择偏差。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > MANOVA models several responses jointly; it does not create information about unobserved confounders or repair non-random assignment and selection bias.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话解释 $H$ 与 $E$ 分别表示什么。
 <!-- bilingual-en:start -->
@@ -164,10 +159,9 @@ Suppose three student groups have response vector $(\text{mathematics},\text{rea
 
 > [!answer]- 答案
 > $H$ 表示被检验因素所对应的多响应变异，$E$ 表示完整模型仍未解释的多响应变异；检验问前者是否相对后者过大。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > $H$ represents multivariate variation associated with the tested effect, whereas $E$ represents multivariate variation left unexplained by the full model. The test asks whether the former is large relative to the latter.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

@@ -14,7 +14,6 @@ status: source-checked
 > 论文笔记按论文保存，知识文件按可恢复的主题保存；本页只负责在两者之间导航。
 > 先用 [[06_paper/LLM/LLM Big Picture.canvas|LLM Big Picture]] 看整体，再进入一个主题。需要追溯论文时，打开相应专题 Canvas 或 [[06_paper/LLM/LLM Map Index|论文索引]]。
 > <!-- bilingual-en:start -->
-> [!summary] What this Hub is for
 > Paper notes are organised by paper, while Knowledge files are organised as recoverable topics. This page only connects the two layers.
 > Begin with [[06_paper/LLM/LLM Big Picture.canvas|LLM Big Picture]], then enter one topic below. To trace a claim back to papers, open the relevant thematic Canvas or the [[06_paper/LLM/LLM Map Index|Paper Index]].
 > <!-- bilingual-en:end -->
@@ -46,9 +45,6 @@ status: source-checked
 <!-- bilingual-en:end -->
 
 ## 论文专题入口
-<!-- bilingual-en:start -->
-*Thematic Paper Maps*
-<!-- bilingual-en:end -->
 
 - [[06_paper/LLM/canvas/01 架构与预训练.canvas|架构与预训练]]
 - [[06_paper/LLM/canvas/02 规模化与模型家族.canvas|规模化与模型家族]]
@@ -59,17 +55,6 @@ status: source-checked
 - [[06_paper/LLM/canvas/07 评测与数据.canvas|评测与数据]]
 - [[06_paper/LLM/canvas/08 多模态.canvas|多模态]]
 - [[06_paper/LLM/canvas/09 开源模型技术报告.canvas|开放模型技术报告]]
-<!-- bilingual-en:start -->
-- [[06_paper/LLM/canvas/01 架构与预训练.canvas|Architecture and Pretraining]]
-- [[06_paper/LLM/canvas/02 规模化与模型家族.canvas|Scaling and Model Families]]
-- [[06_paper/LLM/canvas/03 对齐与偏好优化.canvas|Alignment and Preference Optimisation]]
-- [[06_paper/LLM/canvas/04 推理与Agent.canvas|Reasoning and Agents]]
-- [[06_paper/LLM/canvas/05 RAG与知识增强.canvas|RAG and Knowledge Augmentation]]
-- [[06_paper/LLM/canvas/06 长上下文与效率.canvas|Long Context and Efficiency]]
-- [[06_paper/LLM/canvas/07 评测与数据.canvas|Evaluation and Data]]
-- [[06_paper/LLM/canvas/08 多模态.canvas|Multimodality]]
-- [[06_paper/LLM/canvas/09 开源模型技术报告.canvas|Open-Model Technical Reports]]
-<!-- bilingual-en:end -->
 
 ## 边界
 <!-- bilingual-en:start -->

@@ -17,14 +17,13 @@ status: source-checked
 > **核心难点：** beta 不是总风险，市场组合不可完全观察，估计区间、杠杆与所选市场代理都会改变结果。
 > **为什么重要：** 它把分散化直觉连接到估值贴现率、项目资本成本、绩效 alpha 与风险归因，但只能作为模型基准。
 > **继续：** beta 的组合基础见 [[均值—方差投资组合理论]]；alpha 与有效性检验见 [[有效市场假说与事件研究]]；估值应用见 [[股票与企业价值评估]]。
-<!-- bilingual-en:start -->
-> [!summary] Quick recovery
+> <!-- bilingual-en:start -->
 > **What it solves:** Under a stated set of assumptions, it translates an asset's exposure to common market risk into a required return and supplies a benchmark cost of equity.
 > **Concrete anchor:** With a 3% risk-free rate, a 5% market risk premium, and stock beta of 1.2, CAPM required return is $3\%+1.2\times5\%=9\%$.
 > **Central difficulty:** Beta is not total risk, the market portfolio is not fully observable, and the estimation window, leverage, and chosen market proxy all change the result.
 > **Why it matters:** It connects diversification to valuation discount rates, project costs of capital, performance alpha, and risk attribution—but only as a model benchmark.
 > **Continue:** For beta's portfolio foundation, see [[均值—方差投资组合理论|Mean–Variance Portfolio Theory]]. For alpha and efficiency tests, see [[有效市场假说与事件研究|The Efficient-Market Hypothesis and Event Studies]]. For valuation use, see [[股票与企业价值评估|Equity and Enterprise Valuation]].
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 > [!source] 本节依据
 > - [[02_Economy/06_证券投资学/证券投资学.pdf]]：支持证券工具、市场、基本面、技术分析、组合与资产定价的课程范围。
@@ -32,14 +31,13 @@ status: source-checked
 > - [Basel Framework](https://www.bis.org/basel_framework/)：核验资本、市场风险、信用风险、CVA 与监管口径。
 > - Hull, *Risk Management and Financial Institutions*：交叉核验 VaR、ES、Greek、利率风险、信用风险与模拟方法。
 > - Sharpe（1964）《[Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk](https://doi.org/10.1111/j.1540-6261.1964.tb02865.x)》：核验资本市场线、市场均衡与系统风险定价的原始推导。
-<!-- bilingual-en:start -->
-> [!source] Basis for this section
+> <!-- bilingual-en:start -->
 > - [[02_Economy/06_证券投资学/证券投资学.pdf|Securities Investment Textbook]] supports the course scope for securities, markets, fundamental analysis, technical analysis, portfolios, and asset pricing.
 > - The vault's Financial Institutions and Risk Management course notes support course scope, classroom examples, and notation.
 > - The [Basel Framework](https://www.bis.org/basel_framework/) verifies regulatory conventions for capital, market risk, credit risk, and CVA.
 > - Hull, *Risk Management and Financial Institutions*, cross-checks VaR, ES, Greeks, interest-rate risk, credit risk, and simulation methods.
 > - Sharpe (1964), “[Capital Asset Prices: A Theory of Market Equilibrium under Conditions of Risk](https://doi.org/10.1111/j.1540-6261.1964.tb02865.x),” verifies the original derivation of the capital market line, market equilibrium, and pricing of systematic risk.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 从分散化到系统风险定价
 <!-- bilingual-en:start -->
@@ -134,10 +132,9 @@ Cost-of-capital applications must especially avoid using one company beta for ev
 
 > [!answer]- 答案
 > beta 只度量与市场组合共同变化的系统暴露，总波动还含可分散的特有风险。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Beta measures only systematic exposure that co-moves with the market portfolio; total volatility also contains diversifiable idiosyncratic risk.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 用自己的话解释：为什么可分散风险在 CAPM 中没有单独风险溢价？
 <!-- bilingual-en:start -->
@@ -146,10 +143,9 @@ Cost-of-capital applications must especially avoid using one company beta for ev
 
 > [!answer]- 答案
 > 投资者能以持有其他资产低成本抵消这种风险；市场无需为可以在组合中消除的边际波动支付均衡补偿，只有共同市场风险无法这样消除。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Investors can offset that risk cheaply by holding other assets. The market need not pay equilibrium compensation for marginal volatility that disappears in a portfolio; common market risk cannot be eliminated that way.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 一只 beta 为 0.8、特有波动很大的股票是否一定比 beta 为 1.2 的股票要求回报高？
 <!-- bilingual-en:start -->
@@ -158,10 +154,9 @@ Cost-of-capital applications must especially avoid using one company beta for ev
 
 > [!answer]- 答案
 > 按 CAPM 不一定；基准要求回报由 beta 决定，特有波动可分散。但现实模型可能包含其他系统因子、摩擦和集中持仓成本，所以还需检验模型边界。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Not under CAPM; benchmark required return is determined by beta, and idiosyncratic volatility is diversifiable. Realistic models may include other systematic factors, frictions, and concentration costs, so model boundaries still require testing.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->

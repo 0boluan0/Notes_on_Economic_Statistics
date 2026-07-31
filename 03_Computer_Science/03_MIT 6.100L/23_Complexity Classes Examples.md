@@ -30,11 +30,11 @@ lecture: 23
 > - The lecture begins by reviewing the main Theta principles from the previous class: define the input size, identify the dominant term, and ignore constants.
 > - It then uses many code examples to lay out the standard complexity classes instead of merely presenting a table of formulas.
 > - Each category—constant, linear, quadratic, exponential, logarithmic—is paired with specific functions.
-> - The real challenge isn't memorizing `Theta(n^2)`, but rather identifying which parts of the code depend on input size.
+> - The real challenge is not memorizing `Theta(n^2)`, but identifying which parts of the code depend on input size.
 > - Even when the growth is linear, `Theta(a)`, `Theta(len(s))`, and `Theta(n_months)` refer to different measures of input size.
-> - This lecture will bring searching algorithms back into focus, comparing the costs of unsorted, sorted, and binary search approaches.
+> - The lecture returns to search algorithms and compares unsorted linear search, sorted linear search, and binary search.
 > - Both `bisect_search1` and `bisect_search2` matter: the first exposes the cost of copying slices, while the second shows an index-based recursive approach.
-> - The instructor repeatedly emphasizes that complexity analysis isn't just about counting loop levels but also considering loop boundaries, recursion trees, and auxiliary operations.
+> - The instructor repeatedly emphasizes that complexity analysis requires more than counting loop levels: loop bounds, recursion trees, and auxiliary operations also matter.
 > - In essence, this lecture trains you to translate code into Theta notation.
 > - After this lecture, you should be able to independently determine the complexity of many small functions, not just recognize a few templates.
 > <!-- bilingual-en:end -->
@@ -43,7 +43,7 @@ lecture: 23
 
 ### 1. 先把上节规则重新说一遍
 <!-- bilingual-en:start -->
-*1. Reviewing the previous lecture's rules*
+*1. Reviewing the Previous Lecture's Rules*
 <!-- bilingual-en:end -->
 Lecture 23 开场先回顾上节最后几条最重要的分析原则：
 <!-- bilingual-en:start -->
@@ -55,10 +55,10 @@ Lecture 23 begins with a review of the most important analysis principles from l
 - 抓 dominant term
 - 丢掉加法常数和乘法常数
 <!-- bilingual-en:start -->
-- Define input size first
-- Only care about growth trends
-- Identify the dominant term
-- Ignore additive and multiplicative constants
+- Define the input size first.
+- Focus on the growth rate.
+- Identify the dominant term.
+- Ignore additive and multiplicative constants.
 <!-- bilingual-en:end -->
 
 老师这样做很合理，因为本讲几乎全是在这些规则上做实战。
@@ -68,7 +68,7 @@ The review is useful because almost the entire lecture consists of hands-on prac
 
 ### 2. Constant class：最快速的是“不随输入规模增长”
 <!-- bilingual-en:start -->
-*2. Constant time: the amount of work does not grow with the input size*
+*2. Constant Time: Work Does Not Grow with Input Size*
 <!-- bilingual-en:end -->
 老师先从最简单的常数类开始。
 <!-- bilingual-en:start -->
@@ -96,8 +96,7 @@ The key point is:
 - 无论输入值本身是大是小
 - 执行步骤数大致不变
 <!-- bilingual-en:start -->
-- Regardless of whether the input value itself is large or small
-- The number of execution steps remains roughly the same
+- Whether the input value itself is large or small, the number of execution steps remains roughly the same.
 <!-- bilingual-en:end -->
 
 所以它们属于 `Theta(1)`。
@@ -107,7 +106,7 @@ They therefore run in `Theta(1)` time.
 
 ### 3. Linear class：输入规模增大一倍，工作量也大致跟着增一倍
 <!-- bilingual-en:start -->
-*3. Linear time: doubling the input size roughly doubles the work*
+*3. Linear Time: Doubling Input Size Roughly Doubles the Work*
 <!-- bilingual-en:end -->
 接下来老师列出一组线性例子：
 <!-- bilingual-en:start -->
@@ -121,12 +120,12 @@ Next, the instructor lists a group of linear examples:
 - `compound(..., n_months)` 对月份数线性
 - `fib_iter(n)` 对 `n` 线性
 <!-- bilingual-en:start -->
-- `mul(x, y)` is linear in `y`
-- `add_digits(s)` is linear in string length
-- `fact_iter(a)` is linear in `a`
-- `fact_recur(x)` is linear in `x`
-- `compound(..., n_months)` is linear in number of months
-- `fib_iter(n)` is linear in `n`
+- `mul(x, y)` is linear in `y`.
+- `add_digits(s)` is linear in the length of `s`.
+- `fact_iter(a)` is linear in `a`.
+- `fact_recur(x)` is linear in `x`.
+- `compound(..., n_months)` is linear in the number of months.
+- `fib_iter(n)` is linear in `n`.
 <!-- bilingual-en:end -->
 
 这组例子特别重要，因为它强调：
@@ -137,8 +136,8 @@ This set of examples is particularly important because it emphasizes:
 - “线性”不是指所有参数都线性
 - 而是指相对某个输入规模维度线性
 <!-- bilingual-en:start -->
-- Calling a function linear does not mean its runtime is linear in every parameter
-- It means the runtime grows linearly with one specified measure of input size
+- Calling a function linear does not mean that its runtime is linear in every parameter.
+- It means that runtime grows linearly with a specified measure of input size.
 <!-- bilingual-en:end -->
 
 > [!note]
@@ -149,7 +148,7 @@ This set of examples is particularly important because it emphasizes:
 
 ### 4. 同样是线性，问题规模定义却可以完全不同
 <!-- bilingual-en:start -->
-*4. Linear time can refer to very different measures of input size*
+*4. Linear Time Can Refer to Different Measures of Input Size*
 <!-- bilingual-en:end -->
 老师在这一部分一直逼你说清：
 <!-- bilingual-en:start -->
@@ -174,9 +173,9 @@ Because:
 - 增长维度不同
 - 所以分析变量必须明说
 <!-- bilingual-en:start -->
-- Different input objects
-- Different growth dimensions
-- The variable used in the analysis must therefore be stated explicitly
+- The input objects differ.
+- The growing dimensions differ.
+- The variable used in the analysis must therefore be stated explicitly.
 <!-- bilingual-en:end -->
 
 这一步是本讲最重要的习惯训练之一。
@@ -186,7 +185,7 @@ This is one of the most important analytical habits developed in this lecture.
 
 ### 5. Polynomial / Quadratic：嵌套扫描开始出现
 <!-- bilingual-en:start -->
-*5. Polynomial and quadratic time: nested scans begin to appear*
+*5. Polynomial and Quadratic Time: Nested Scans Appear*
 <!-- bilingual-en:end -->
 接着课堂切到二次复杂度。
 <!-- bilingual-en:start -->
@@ -216,7 +215,7 @@ Their common feature is:
 
 - 某一层工作里又包含一层与输入规模相关的完整扫描
 <!-- bilingual-en:start -->
-- One layer of work contains another full scan whose length depends on the input size
+- One layer of work contains another full scan whose length depends on the input size.
 <!-- bilingual-en:end -->
 
 尤其像 `is_subset(L1, L2)` 这类题，老师在强调：
@@ -227,13 +226,13 @@ For functions such as `is_subset(L1, L2)`, the instructor emphasizes:
 - 不能只看有几个循环
 - 还要看每层循环跑多长
 <!-- bilingual-en:start -->
-- Don't just look at how many loops there are
-- Also check how long each loop runs
+- Do not look only at the number of loops.
+- Check how long each loop runs as well.
 <!-- bilingual-en:end -->
 
 ### 6. Exponential：最容易失控的一类
 <!-- bilingual-en:start -->
-*6. Exponential time: where the cost grows out of control most quickly*
+*6. Exponential Time: Rapidly Expanding Cost*
 <!-- bilingual-en:end -->
 老师随后用两类经典函数展示指数复杂度：
 <!-- bilingual-en:start -->
@@ -251,20 +250,19 @@ They share the following structure:
 - 每层调用会分叉成多个子调用
 - 整体展开像一棵快速膨胀的树
 <!-- bilingual-en:start -->
-- Each call branches into multiple sub-calls
-- The overall expansion resembles a rapidly growing tree
+- Each call branches into several subcalls.
+- The overall expansion resembles a rapidly growing tree.
 <!-- bilingual-en:end -->
 
 因此即使代码很短，复杂度也可能极高。  
 这再次提醒你：代码行数和复杂度没有直接关系。
 <!-- bilingual-en:start -->
-A short program can therefore still require an enormous amount of work.
-This is another reminder that code length and computational complexity are not directly related.
+A short program can therefore require an enormous amount of work. Code length and computational complexity are not directly related.
 <!-- bilingual-en:end -->
 
 ### 7. Logarithmic：每次都大幅缩小问题规模
 <!-- bilingual-en:start -->
-*7. Logarithmic time: each step removes a large fraction of the problem*
+*7. Logarithmic Time: Each Step Removes a Large Fraction of the Problem*
 <!-- bilingual-en:end -->
 在 logarithmic 一类里，老师拿：
 <!-- bilingual-en:start -->
@@ -291,13 +289,13 @@ Functions in this class share a common pattern:
 - 每一步都把剩余问题砍掉一大块
 - 所以总步数是“能砍多少次才见底”
 <!-- bilingual-en:start -->
-- Each step eliminates a large fraction of the remaining problem
-- The total number of steps is the number of reductions needed to reach the base case
+- Each step eliminates a large fraction of the remaining problem.
+- The number of steps is the number of reductions required to reach the base case.
 <!-- bilingual-en:end -->
 
 ### 8. 搜索算法再回归：这次重点是复杂度分类
 <!-- bilingual-en:start -->
-*8. Returning to search algorithms, now with a focus on complexity classes*
+*8. Returning to Search Algorithms with a Complexity Lens*
 <!-- bilingual-en:end -->
 后半段课堂回到 searching。
 <!-- bilingual-en:start -->
@@ -312,8 +310,8 @@ The instructor first presents:
 - `linear_search(L, e)`：无序列表线性扫
 - `search(L, e)`：有序列表上线性扫，但可提前停
 <!-- bilingual-en:start -->
-- `linear_search(L, e)`: Linear scan on an unordered list
-- `search(L, e)`: Linear scan on a sorted list, but can stop early
+- `linear_search(L, e)`: a linear scan of an unordered list.
+- `search(L, e)`: a linear scan of a sorted list that may stop early.
 <!-- bilingual-en:end -->
 
 然后再引出：
@@ -332,13 +330,13 @@ The question is not simply which algorithm is faster, but:
 - 为什么是这个复杂度
 - 有哪些额外成本
 <!-- bilingual-en:start -->
-- Why each algorithm falls into its complexity class
-- What additional costs are involved
+- Why each algorithm belongs to its complexity class.
+- Which additional operations contribute to its cost.
 <!-- bilingual-en:end -->
 
 ### 9. `bisect_search1`：切片版递归会带来复制成本
 <!-- bilingual-en:start -->
-*9. `bisect_search1`: recursive slicing adds copying overhead*
+*9. `bisect_search1`: Recursive Slicing Adds Copying Overhead*
 <!-- bilingual-en:end -->
 `bisect_search1` 的写法里用到了：
 <!-- bilingual-en:start -->
@@ -351,18 +349,17 @@ The question is not simply which algorithm is faster, but:
 这说明每次递归除了逻辑判断，还在做切片复制。  
 所以老师把它单独拿出来很有意义，因为它提醒你：
 <!-- bilingual-en:start -->
-Each recursive call therefore performs not only logical checks but also a slice copy.
-The instructor highlights this version because it shows that:
+Each recursive call therefore performs both logical checks and a slice copy. The instructor highlights this version because it shows that:
 <!-- bilingual-en:end -->
 
 - 递归本身之外，辅助操作也可能影响复杂度和常数项
 <!-- bilingual-en:start -->
-- Beyond recursion itself, auxiliary operations can affect both asymptotic complexity and constant factors
+- Beyond recursion itself, auxiliary operations can affect both asymptotic complexity and constant factors.
 <!-- bilingual-en:end -->
 
 ### 10. `bisect_search2`：索引版更贴近真正的二分思路
 <!-- bilingual-en:start -->
-*10. `bisect_search2`: the index-based version more closely matches binary search*
+*10. `bisect_search2`: The Index-Based Version More Closely Matches Binary Search*
 <!-- bilingual-en:end -->
 相对地，`bisect_search2` 用的是：
 <!-- bilingual-en:start -->
@@ -386,8 +383,8 @@ This is closer to a direct implementation of binary search because it:
 - 不复制子列表
 - 只是缩小索引区间
 <!-- bilingual-en:start -->
-- Does not copy sublists
-- Only narrows the index range
+- It does not copy sublists.
+- It only narrows the index range.
 <!-- bilingual-en:end -->
 
 这让你看到复杂度分析不只是“这是不是递归”，还要看递归每层具体做了什么。
@@ -397,7 +394,7 @@ This shows that complexity analysis is not just about whether a function is recu
 
 ### 11. 这节课是在做代码阅读训练
 <!-- bilingual-en:start -->
-*11. This lecture is an exercise in reading code*
+*11. Treating the Lecture as an Exercise in Reading Code*
 <!-- bilingual-en:end -->
 Lecture 23 的整体感觉会比前一讲更“碎”，因为它几乎没有一个单一大主题例子，而是很多 ছোট代码。
 <!-- bilingual-en:start -->
@@ -411,7 +408,7 @@ But all these examples serve the same goal:
 
 - 训练你从真实代码结构直接读出 complexity class
 <!-- bilingual-en:start -->
-- Train you to infer a complexity class directly from real code structure
+- Train you to infer a complexity class directly from real code structure.
 <!-- bilingual-en:end -->
 
 所以本讲的正确学习方式不是背完整张表，而是每看到一个函数，都问：

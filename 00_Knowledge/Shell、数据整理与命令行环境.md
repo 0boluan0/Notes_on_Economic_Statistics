@@ -161,10 +161,9 @@ PATH 决定命令解析，环境变量传配置。dotfiles 版本化时避免 se
 
 > [!answer]- 答案
 > 把 a 的标准输出作为 b 的标准输入；a 的 stderr 默认不进入管道。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > It makes the standard output of `a` the standard input of `b`; by default, `a`'s stderr does not enter the pipe.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 为什么 shell 变量通常要写成 `"$var"`？
 <!-- bilingual-en:start -->
@@ -173,10 +172,9 @@ PATH 决定命令解析，环境变量传配置。dotfiles 版本化时避免 se
 
 > [!answer]- 答案
 > 避免值中的空格、通配符或空字符串被再次分词/glob，改变参数边界。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Quoting prevents spaces, glob characters, or an empty value from undergoing word splitting or filename expansion and changing argument boundaries.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ### 批量修改前最小安全步骤是什么？
 <!-- bilingual-en:start -->
@@ -185,10 +183,9 @@ PATH 决定命令解析，环境变量传配置。dotfiles 版本化时避免 se
 
 > [!answer]- 答案
 > 用只读命令解析并列出精确目标，确认路径不宽泛，再执行可恢复或有备份的操作。
-<!-- bilingual-en:start -->
-> [!answer]- Answer
+> <!-- bilingual-en:start -->
 > Resolve and list exact targets with a read-only command, verify that the path is not overly broad, and then use a recoverable or backed-up operation.
-<!-- bilingual-en:end -->
+> <!-- bilingual-en:end -->
 
 ## 来源与核验
 <!-- bilingual-en:start -->
