@@ -26,6 +26,45 @@ Numbered prefixes define folder ordering:
 
 Do not hand-edit `.obsidian/`.
 
+## Student operating system (active decisions)
+
+### Design intent
+
+- “All in one” means one coherent workflow and entry system, not one monolithic Markdown file.
+- Optimize first for not missing school obligations and for reducing the user's micro-decisions. Ask only when a choice would materially change the result; decide small scheduling and presentation details autonomously.
+- Keep operational pressure separate from the progress views that provide motivation. Do not turn a workload-driven pause into a false failure signal.
+
+### Canonical roles
+
+- **Today** is the daily home page: the day's scheduled actions, check-off surface, `今日已完成`, and an optional free-writing/closing area. It is the primary place where the user completes tasks.
+- **Workbench** is the operational and risk queue. It aggregates current next actions across projects. A standalone one-off task may live there; a course or project task remains in its own source plan and is only shown in Workbench as a view.
+- **Overall** is the human-readable source of truth for what the user has committed to learn. It lists both currently active and confirmed-to-learn tracks. Short plans may live inline; long sequential plans live in a linked or embedded plan file. Current position is derived from the first incomplete real unit, not maintained as a second manual status.
+- **Dashboard** is a read-only learning and school-growth board that provides progress visibility and emotional value. It is not a second Workbench and does not carry deadline warnings, administrative chores, task-completion controls, or urgent decisions.
+- **Deadlines** stores dated constraints and verified submission state. **Calendar** stores fixed commitments and generated study blocks. Together they prevent omissions and drive scheduling without polluting the growth Dashboard.
+- The Course Atlas remains a knowledge map. It may show a learning position and next entry point, but operational tasks stay in the student operating system above.
+
+### One task, one checkbox
+
+- Every actionable item has exactly one canonical checkbox. Never copy the same task into Overall, a plan, Workbench, Today, and Dashboard as independently editable checkboxes.
+- Today and Workbench show dynamic views of canonical tasks. Completing a task in Today updates its source, records the actual completion date, removes it from `今日安排`, and makes it appear in that date's `今日已完成` section.
+- `⌘+Enter` is an alternative interface for completing or capturing against the same canonical task; it must not create another completion state.
+- `今日已完成` includes every task actually completed that day, including useful work that was not originally scheduled.
+- For formal submissions, “content complete” and “submitted” are separate states. Only a verified Moodle/Turnitin status or submission receipt closes the hard obligation.
+
+### Learning tracks and progress
+
+- Every user-confirmed must-learn track remains visible: detailed when active, compact in the confirmed queue when not yet started, and retained in a completed-results area after completion.
+- Finite courses use real units and can display completed/total progress. Ongoing capabilities such as listening or reading-to-writing use the current practice plan and recent completed sessions; never invent a fake percentage.
+- Multi-stage school projects may appear on the Dashboard as stage progress. One-off school tasks appear as recent accomplishments after completion rather than becoming permanent Dashboard cards.
+- Show school responsibilities and self-directed growth as distinct kinds of accomplishment.
+- For video courses, one lecture is one task. It is complete when the user has watched it and judges that they understood it. Do not add mandatory notes, exercises, tests, or mastery gates unless the agreed course plan explicitly includes them.
+
+### Maintenance contract
+
+- This section records durable, confirmed workflow decisions, not mutable daily progress or speculative ideas. Current progress belongs in Overall or the relevant source plan; deadlines belong in Deadlines.
+- Whenever the user later confirms a material change to this workflow, update this section in both `AGENTS.md` and `CLAUDE.md` in the same change. Keep the two copies semantically aligned.
+- The latest explicit user decision wins over an older rule. Update the files when that happens rather than preserving contradictory compatibility text.
+
 ## Active Knowledge Architecture
 
 ### Goal and organizing principle

@@ -1,0 +1,3 @@
+To what extent do the predictive gains of complex machine-learning models over logistic regression justify reduced interpretability in consumer credit scoring?
+
+I choose this question because it connects the statistical modelling and machine-learning content of ST447 and ST443 with the data-management and classifier-evaluation skills developed in ST445. Credit scoring provides a concrete, high-stakes application in which predictive performance, interpretability and model governance must be considered together. This topic also relates with my previous study of econometrics and financial risk management and can also provide a useful conceptual foundation for a later Capstone Project involving finance or another regulated domain.
