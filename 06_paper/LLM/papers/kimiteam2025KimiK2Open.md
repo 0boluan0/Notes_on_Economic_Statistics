@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `09 开源模型技术报告`，第一版用于连接 Open Models, Agent 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[开放模型生态]], [[推理模型与 LLM Agent]]
+[[开放模型生态]], 推理模型与 LLM Agent
 
 ## 来源
 - [Zotero item](zotero://select/library/items/DTNSFBKV)

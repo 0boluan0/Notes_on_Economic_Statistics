@@ -275,9 +275,11 @@ Selection sort therefore proceeds position by position:
 2. 再把第 1 个位置该放什么找出来
 3. 依此类推
 <!-- bilingual-en:start -->
-1. First, determine what should go in position 0
-2. Then, determine what should go in position 1
-3. And so on
+
+&nbsp;
+**1.** First, determine what should go in position 0<br>
+**2.** Then, determine what should go in position 1<br>
+**3.** And so on<br>
 <!-- bilingual-en:end -->
 
 ### 8. selection sort 和 bubble sort 的差别
@@ -371,9 +373,11 @@ The structure of merge sort is:
 2. recursively sort 两半
 3. merge：把两个已排序子列表线性合并
 <!-- bilingual-en:start -->
-1. Divide: Split the list into two halves
-2. Recursively sort each half
-3. Merge: Combine the two sorted sublists in linear time
+
+&nbsp;
+**1.** Divide: Split the list into two halves<br>
+**2.** Recursively sort each half<br>
+**3.** Merge: Combine the two sorted sublists in linear time<br>
 <!-- bilingual-en:end -->
 
 这一步非常重要，因为它把排序问题重新写成了递归问题。

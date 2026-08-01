@@ -402,12 +402,14 @@ After testing, the instructor presents a concrete debugging method.
 5. 一次只修一个问题
 6. 修完再重新测试
 <!-- bilingual-en:start -->
-1. Reproduce the bug.
-2. Choose the smallest useful test case.
-3. Add diagnostic output at key points.
-4. Find the first step at which expected and actual behavior diverge.
-5. Repair one problem at a time.
-6. Test again after each repair.
+
+&nbsp;
+**1.** Reproduce the bug.<br>
+**2.** Choose the smallest useful test case.<br>
+**3.** Add diagnostic output at key points.<br>
+**4.** Find the first step at which expected and actual behavior diverge.<br>
+**5.** Repair one problem at a time.<br>
+**6.** Test again after each repair.<br>
 <!-- bilingual-en:end -->
 
 这套 recipe 是整节课最值得模仿的部分，因为它把 debugging 从“靠感觉”变成了一个过程。

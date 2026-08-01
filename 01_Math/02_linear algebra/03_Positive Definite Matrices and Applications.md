@@ -18,7 +18,7 @@ tags:
 
 ## 0. 本单元要解决什么
 <!-- bilingual-en:start -->
-*0. What is addressed in this module*
+*0. What this module addresses*
 <!-- bilingual-en:end -->
 
 前两单元已经回答了“怎样解 $Ax=b$”和“怎样利用正交、行列式与特征值理解方阵”。Unit III 进一步追问：
@@ -32,11 +32,13 @@ The first two units answered “How do we solve $Ax=b$?” and “How do orthogo
 4. 为什么同一个线性映射会有许多不同矩阵？答案是基、坐标与换基。
 5. 当真正的逆不存在时，怎样保留“能逆的那一部分”？答案是左右逆与 Moore–Penrose 伪逆。
 <!-- bilingual-en:start -->
-1. Which matrices have the most stable and transparent spectral structure? Symmetric and positive-definite matrices.
-2. When a square matrix is not diagonalizable, how do we describe the missing eigenvectors precisely? Similarity transformations and Jordan form.
-3. For a rectangular or rank-deficient matrix, or one without an eigendecomposition, how do we find the most useful input and output coordinates? The singular value decomposition (SVD).
-4. Why can the same linear map be represented by many different matrices? Bases, coordinates, and change of basis.
-5. When an ordinary inverse does not exist, how do we retain the invertible part of the map? Left and right inverses and the Moore–Penrose pseudoinverse.
+
+&nbsp;
+**1.** Which matrices have the most stable and transparent spectral structure? Symmetric and positive-definite matrices.<br>
+**2.** When a square matrix is not diagonalizable, how do we describe the missing eigenvectors precisely? Similarity transformations and Jordan form.<br>
+**3.** For a rectangular or rank-deficient matrix, or one without an eigendecomposition, how do we find the most useful input and output coordinates? The singular value decomposition (SVD).<br>
+**4.** Why can the same linear map be represented by many different matrices? Bases, coordinates, and change of basis.<br>
+**5.** When an ordinary inverse does not exist, how do we retain the invertible part of the map? Left and right inverses and the Moore–Penrose pseudoinverse.<br>
 <!-- bilingual-en:end -->
 
 本单元的统一图景是
@@ -55,7 +57,7 @@ $$
 
 ## 1. 全局约定与阅读导航
 <!-- bilingual-en:start -->
-*1. Global Engagement and Reading Navigation*
+*1. Overall structure and reading guide*
 <!-- bilingual-en:end -->
 
 ### 1.1 域、尺寸和共轭
@@ -107,7 +109,7 @@ $$
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 本节要回答：为什么实对称矩阵是特征值理论中最“友好”的矩阵？怎样从特征值、主元和顺序主子式判断正定？
@@ -121,23 +123,17 @@ Prerequisites: eigenvalues and eigenvectors, diagonalization, orthogonal matrice
 <!-- bilingual-en:end -->
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.1sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S01_Lecture_Lecture_25_Symmetric_Matrices_and_Positive_Definiteness.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S01_Recitation_Problem_Solving_Symmetric_Matrices_and_Positive_Definiteness.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.1prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.1sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:start -->
-Data portal: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.1sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S01_Lecture_Lecture_25_Symmetric_Matrices_and_Positive_Definiteness.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S01_Recitation_Problem_Solving_Symmetric_Matrices_and_Positive_Definiteness.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.1prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.1sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:end -->
 
 关联卡片：[[对称矩阵与正定二次型#对称矩阵与谱定理|对称矩阵]]、[[对称矩阵与正定二次型#二次型与正定性|正定矩阵]]、[[对称矩阵与正定二次型#对称矩阵与谱定理|谱分解]]、[[对称矩阵与正定二次型#二次型与正定性|正定性判别]]。
-<!-- bilingual-en:start -->
-Associated cards: [[对称矩阵与正定二次型#对称矩阵与谱定理|symmetric matrices]], [[对称矩阵与正定二次型#二次型与正定性|positive-definite matrices]], [[对称矩阵与正定二次型#对称矩阵与谱定理|spectral decomposition]], [[对称矩阵与正定二次型#二次型与正定性|tests for positive definiteness]].
-<!-- bilingual-en:end -->
 
 ### 3.1.1 实对称矩阵的谱定理
 <!-- bilingual-en:start -->
-*3.1.1 Spectral Theorems of Real Symmetric Matrices*
+*3.1.1 The spectral theorem for real symmetric matrices*
 <!-- bilingual-en:end -->
 
 若 $A=A^T$，称 $A$ 为实[[对称矩阵与正定二次型#对称矩阵与谱定理|对称矩阵]]。课程采用的实谱定理（spectral theorem）是：
 <!-- bilingual-en:start -->
-If $A=A^T$, call $A$ [[对称矩阵与正定二次型#对称矩阵与谱定理|symmetric matrix]].  The real spectrum theorem adopted in the course is:
+If $A=A^T$, then $A$ is a real [[对称矩阵与正定二次型#对称矩阵与谱定理|symmetric matrix]]. The version of the real spectral theorem used in this course is:
 <!-- bilingual-en:end -->
 
 > [!theorem] [[对称矩阵与正定二次型#对称矩阵与谱定理|实谱定理]]
@@ -152,9 +148,9 @@ If $A=A^T$, call $A$ [[对称矩阵与正定二次型#对称矩阵与谱定理|s
 > $$
 > <!-- bilingual-en:start -->
 > For each $A\in\mathbb R^{n\times n}$, if $A=A^T$:
-> 1. All the eigenvalues of $A$ are real numbers;
-> 2. Eigenvectors corresponding to distinct eigenvalues are mutually orthogonal;
-> 3. $\mathbb R^n$ has an orthonormal basis consisting of eigenvectors of $A$.
+> **1.** All the eigenvalues of $A$ are real numbers;<br>
+> **2.** Eigenvectors corresponding to distinct eigenvalues are mutually orthogonal;<br>
+> **3.** $\mathbb R^n$ has an orthonormal basis consisting of eigenvectors of $A$.<br>
 > Thus there exist an orthogonal matrix $Q=[q_1\ \cdots\ q_n]$ and a real diagonal matrix $\Lambda=\operatorname{diag}(\lambda_1,\ldots,\lambda_n)$ such that
 > <!-- bilingual-en:end -->
 
@@ -165,7 +161,7 @@ This course proves the first two statements in full. For the third, it gives a c
 
 #### 证明一：特征值为何一定是实数
 <!-- bilingual-en:start -->
-*Proof 1: Why Eigenvalues Must Be Real Numbers*
+*Proof 1: why the eigenvalues must be real*
 <!-- bilingual-en:end -->
 
 **目标。** 已知 $Ax=\lambda x$、$x\ne0$，证明 $\lambda=\overline\lambda$。
@@ -189,7 +185,7 @@ $$
 
 另一方面，对 $Ax=\lambda x$ 取共轭转置：
 <!-- bilingual-en:start -->
-On the other hand, conjugate transpose $Ax=\lambda x$:
+On the other hand, take the conjugate transpose of $Ax=\lambda x$:
 <!-- bilingual-en:end -->
 
 $$
@@ -198,7 +194,7 @@ $$
 
 因为 $A$ 实对称，所以 $A^*=A^T=A$。右乘 $x$ 得
 <!-- bilingual-en:start -->
-$A^*=A^T=A$ because $A$ is symmetric.  Right by $x$
+Because $A$ is real symmetric, $A^*=A^T=A$. Multiplying on the right by $x$ gives
 <!-- bilingual-en:end -->
 
 $$
@@ -207,7 +203,7 @@ $$
 
 比较 (1)、(2)：
 <!-- bilingual-en:start -->
-Compare (1), (2):
+Comparing (1) and (2) gives
 <!-- bilingual-en:end -->
 
 $$
@@ -216,7 +212,7 @@ $$
 
 而
 <!-- bilingual-en:start -->
-but
+But
 <!-- bilingual-en:end -->
 
 $$
@@ -225,23 +221,23 @@ $$
 
 是严格正实数，所以只能有 $\lambda=\overline\lambda$，即 $\lambda\in\mathbb R$。
 <!-- bilingual-en:start -->
-is strictly positive real, so you can only have $\lambda=\overline\lambda$, or $\lambda\in\mathbb R$.
+is a strictly positive real number, so $\lambda=\overline\lambda$ and hence $\lambda\in\mathbb R$.
 <!-- bilingual-en:end -->
 
 > [!warning] 本单元必须修正的旧稿错误
 > 对复特征向量不能写“$x^Tx>0$”。例如 $x=(i,1)^T\ne0$，但 $x^Tx=i^2+1=0$。正确的正量是 $x^*x=|i|^2+|1|^2=2$。
 > <!-- bilingual-en:start -->
-> "$x^Tx>0$" cannot be written for complex eigenvectors.  For example, $x=(i,1)^T\ne0$, but $x^Tx=i^2+1=0$.  The correct positive is $x^*x=|i|^2+|1|^2=2$.
+> For a complex eigenvector, one cannot claim that $x^Tx>0$. For example, $x=(i,1)^T\ne0$, yet $x^Tx=i^2+1=0$. The correct positive quantity is $x^*x=|i|^2+|1|^2=2$.
 > <!-- bilingual-en:end -->
 
 #### 证明二：不同特征值的特征向量正交
 <!-- bilingual-en:start -->
-*Proof 2: Orthogonality of eigenvectors corresponding to distinct eigenvalues*
+*Proof 2: orthogonality of eigenvectors associated with distinct eigenvalues*
 <!-- bilingual-en:end -->
 
 设 $Ax=\lambda x$、$Ay=\mu y$，其中 $\lambda\ne\mu$。因为 $A=A^*$，
 <!-- bilingual-en:start -->
-Set $Ax=\lambda x$, $Ay=\mu y$, where $\lambda\ne\mu$.  Because $A=A^*$,
+Let $Ax=\lambda x$ and $Ay=\mu y$, where $\lambda\ne\mu$. Because $A=A^*$,
 <!-- bilingual-en:end -->
 
 $$
@@ -250,7 +246,7 @@ $$
 
 代入特征方程：
 <!-- bilingual-en:start -->
-Substitute characteristic equation:
+Substituting the eigenvalue equations gives
 <!-- bilingual-en:end -->
 
 $$
@@ -259,7 +255,7 @@ $$
 
 上一证明已知 $\lambda$ 为实数，所以
 <!-- bilingual-en:start -->
-The previous proof knew that $\lambda$ was real, so
+The preceding proof shows that $\lambda$ is real, so
 <!-- bilingual-en:end -->
 
 $$
@@ -268,17 +264,17 @@ $$
 
 因 $\lambda\ne\mu$，得到 $\langle x,y\rangle=0$。
 <!-- bilingual-en:start -->
-Because of $\lambda\ne\mu$, we got $\langle x,y\rangle=0$.
+Because $\lambda\ne\mu$, it follows that $\langle x,y\rangle=0$.
 <!-- bilingual-en:end -->
 
 #### 证明三：为什么能得到一整组标准正交特征向量
 <!-- bilingual-en:start -->
-*Proof 3: Why can we get a whole set of orthonormal eigenvectors?*
+*Proof 3: why a complete orthonormal eigenbasis exists*
 <!-- bilingual-en:end -->
 
 前两步已经说明：在 $\mathbb C$ 中出现的特征值实际都为实数。取一个实特征值 $\lambda_1$，因为 $A-\lambda_1I$ 是实奇异矩阵，它有非零实零空间；从中选单位特征向量 $q_1$。
 <!-- bilingual-en:start -->
-The first two steps have shown that the eigenvalues that appear in $\mathbb C$ are actually real numbers.  We choose a real eigenvalue $\lambda_1$, because $A-\lambda_1I$ is a real singular matrix and it has a non-zero real nullspace, and select the unit eigenvector $q_1$ from it.
+The first two steps show that every eigenvalue obtained over $\mathbb C$ is in fact real. Choose one such eigenvalue $\lambda_1$. Because $A-\lambda_1I$ is a real singular matrix, it has a nonzero real nullspace; choose a unit eigenvector $q_1$ from that nullspace.
 <!-- bilingual-en:end -->
 
 关键是证明正交补 $q_1^\perp$ 在 $A$ 下保持不变。若 $y\in q_1^\perp$，则
@@ -301,12 +297,12 @@ $$
 
 这一步使用的背景事实只有：特征多项式在 $\mathbb C$ 上至少有一个根；这是代数学基本定理在本课程中的使用位置。
 <!-- bilingual-en:start -->
-The only background facts used in this step are that the characteristic polynomial has at least one root on $\mathbb C$; this is where the basic theorem of algebra is used in this course.
+The only additional background fact used here is that the characteristic polynomial has at least one root over $\mathbb C$. This is where the fundamental theorem of algebra enters the course.
 <!-- bilingual-en:end -->
 
 #### 从谱分解到投影分解
 <!-- bilingual-en:start -->
-*From Spectral Decomposition to Projection Decomposition*
+*From spectral decomposition to a sum of projections*
 <!-- bilingual-en:end -->
 
 把 $Q\Lambda Q^T$ 按列展开：
@@ -367,10 +363,12 @@ For real symmetric $A$, the following conditions are equivalent:
    $$
    都为正（Sylvester criterion）。
 <!-- bilingual-en:start -->
-1. $x^TAx>0$ for every $x\ne0$;
-2. All eigenvalues $\lambda_i>0$;
-3. Every pivot $d_i$ in symmetry-preserving elimination without row exchanges is positive;
-4. Every leading principal minor
+
+&nbsp;
+**1.** $x^TAx>0$ for every $x\ne0$;<br>
+**2.** All eigenvalues $\lambda_i>0$;<br>
+**3.** Every pivot $d_i$ in symmetry-preserving elimination without row exchanges is positive;<br>
+**4.** Every leading principal minor<br>
    $$
    \Delta_k=\det A_{1:k,1:k}>0,\qquad k=1,\ldots,n,
    $$
@@ -487,7 +485,7 @@ Therefore, “all pivots are positive” is equivalent to “all leading princip
 
 ### 3.1.3 Recitation：四个性质
 <!-- bilingual-en:start -->
-*3.1.3 Recitation: Four Properties*
+*3.1.3 Recitation: four properties*
 <!-- bilingual-en:end -->
 
 1. **正定矩阵必可逆。** 所有特征值正，因此 $\det A=\prod_i\lambda_i>0$。
@@ -499,11 +497,12 @@ Therefore, “all pivots are positive” is equivalent to “all leading princip
    $$
    但取 $x=e_1$，有 $x^TSx=-3<0$。
 <!-- bilingual-en:start -->
-1.**The positive definite matrix must be invertible.**All eigenvalues are positive, so $\det A=\prod_i\lambda_i>0$.
-2.**The only positive and definite projection matrix is $I$.**The projection matrix satisfies $P^2=P$, so the eigenvalue can only be $0,1$; positive definite exclusion $0$, spectral decomposition is given $P=QIQ^T=I$.
-3.**The positive diagonal matrix is positive definite.**$x^TDx=\sum d_ix_i^2>0$ if $D=\operatorname{diag}(d_i)$ and $d_i>0$.
-4.**$\det S>0$ is not enough to launch Positive Determination.**For example
-   But take $x=e_1$, there is $x^TSx=-3<0$.
+
+&nbsp;
+**1.** **Every positive-definite matrix is invertible.** All eigenvalues are positive, so $\det A=\prod_i\lambda_i>0$.<br>
+**2.** **The only positive-definite projection matrix is $I$.** A projection satisfies $P^2=P$, so its eigenvalues can only be $0$ or $1$. Positive definiteness rules out $0$, and the spectral decomposition therefore gives $P=QIQ^T=I$.<br>
+**3.** **Every diagonal matrix with positive diagonal entries is positive definite.** If $D=\operatorname{diag}(d_i)$ and every $d_i>0$, then $x^TDx=\sum d_ix_i^2>0$ for every nonzero $x$.<br>
+**4.** **$\det S>0$ is not sufficient for positive definiteness.** For the displayed example, taking $x=e_1$ gives $x^TSx=-3<0$.<br>
 <!-- bilingual-en:end -->
 
 ### 3.1.4 Homework：完整题解
@@ -614,8 +613,8 @@ Therefore, “all pivots are positive” is equivalent to “all leading princip
 - “主元符号与特征值符号数相同”是对实对称矩阵的惯性定律语境；不能任意推广到非对称矩阵。
 - 半正定情形不能把“所有顺序主子式非负”当作充分条件；完整半正定判据要求所有主子式非负，而不只顺序主子式。
 <!-- bilingual-en:start -->
-- The positive diagonal element is only a necessary condition for positive definite, not a sufficient condition; the $\begin{bmatrix}1&2\\2&1\end{bmatrix}$ diagonal element is positive, but has the eigenvalue $3,-1$.
-- Under the real symmetry of this section, $\det A>0$**forces the number of negative eigenvalues of**to be even, but it cannot be excluded that there are two or four such negative eigenvalues; therefore, it is far from sufficient to derive positive definiteness.
+- Positive diagonal entries are necessary but not sufficient for positive definiteness. The matrix $\begin{bmatrix}1&2\\2&1\end{bmatrix}$ has positive diagonal entries but eigenvalues $3$ and $-1$.
+- For a real symmetric matrix, $\det A>0$ forces the number of negative eigenvalues to be even, but it does not rule out two, four, or more negative eigenvalues. It is therefore far from sufficient for positive definiteness.
 - For a real symmetric matrix, the law of inertia says that the numbers of positive, negative, and zero pivots match the corresponding counts of eigenvalues. This statement does not extend unchanged to nonsymmetric matrices.
 - For positive semidefiniteness, nonnegative leading principal minors are not sufficient. The complete criterion requires every principal minor—not only the leading ones—to be nonnegative.
 <!-- bilingual-en:end -->
@@ -646,7 +645,7 @@ Therefore, “all pivots are positive” is equivalent to “all leading princip
 > [!success]- 答案
 > $A=Q\Lambda Q^T$，故 $A^{-1}=Q\Lambda^{-1}Q^T$；$\Lambda^{-1}$ 的对角元 $1/\lambda_i$ 全正。因此 $A^{-1}$ 对称正定。
 > <!-- bilingual-en:start -->
-> $A=Q\Lambda Q^T$, hence $A^{-1}=Q\Lambda^{-1}Q^T$; the diagonal element $1/\lambda_i$ of $\Lambda^{-1}$ is perfect.  Therefore, the $A^{-1}$ symmetry is positive definite.
+> Since $A=Q\Lambda Q^T$, we have $A^{-1}=Q\Lambda^{-1}Q^T$. Every diagonal entry $1/\lambda_i$ of $\Lambda^{-1}$ is positive, so $A^{-1}$ is symmetric positive definite.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 3（条件诊断）
@@ -663,7 +662,7 @@ Therefore, “all pivots are positive” is equivalent to “all leading princip
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 $$
@@ -683,12 +682,12 @@ Positive definiteness connects [[特征值、对角化与线性动力系统#特�
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 本节要回答：进入 $\mathbb C^n$ 后，长度、正交、对称和正交矩阵应怎样改写？离散 Fourier 矩阵为何能被递归分解，从 $O(n^2)$ 降为 $O(n\log n)$？
 <!-- bilingual-en:start -->
-In this section, you will be asked how the length, orthogonality, symmetry, and orthogonality matrices should be rewritten after entering $\mathbb C^n$.  Why can the discrete Fourier matrix be decomposed recursively from $O(n^2)$ to $O(n\log n)$?
+This section asks how length, orthogonality, symmetry, and orthogonal matrices must be reformulated over $\mathbb C^n$, and why the discrete Fourier transform can be factored recursively to reduce the cost from $O(n^2)$ to $O(n\log n)$.
 <!-- bilingual-en:end -->
 
 前置知识：复数及其共轭、内积、正交矩阵、矩阵分块。设 $z\in\mathbb C^n$；Fourier 矩阵 $F_n\in\mathbb C^{n\times n}$，下标从 $0$ 到 $n-1$。
@@ -697,18 +696,12 @@ Prerequisites: complex numbers and conjugation, inner products, orthogonal matri
 <!-- bilingual-en:end -->
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.2sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S02_Lecture_Lecture_26_Complex_Matrices_Fast_Fourier_Transform_FFT.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S02_Recitation_Problem_Solving_Complex_Matrices.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.2prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.2sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:start -->
-Data portal: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.2sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S02_Lecture_Lecture_26_Complex_Matrices_Fast_Fourier_Transform_FFT.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S02_Recitation_Problem_Solving_Complex_Matrices.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.2prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.2sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:end -->
 
 关联卡片：[[正交投影与最小二乘#正交补与最近点|正交性]]、[[对称矩阵与正定二次型#对称矩阵与谱定理|正交矩阵]]、[[特征值、对角化与线性动力系统#对角化与矩阵幂|Fourier 展开]]。
-<!-- bilingual-en:start -->
-Associated Cards: [[正交投影与最小二乘#正交补与最近点|orthogonal]], [[对称矩阵与正定二次型#对称矩阵与谱定理|orthogonal matrix]], [[特征值、对角化与线性动力系统#对角化与矩阵幂|Fourier Expansion]].
-<!-- bilingual-en:end -->
 
 ### 3.2.1 复向量的长度与 Hermitian 内积
 <!-- bilingual-en:start -->
-*3.2.1 Length of Complex Vector and Hermitian Internal Product*
+*3.2.1 Lengths of complex vectors and the Hermitian inner product*
 <!-- bilingual-en:end -->
 
 旧公式 $z^Tz$ 不再代表长度平方。例如 $z=(1,i)^T$ 时 $z^Tz=1+i^2=0$。正确公式是
@@ -731,22 +724,24 @@ It satisfies:
 2. $\langle z,w\rangle=\overline{\langle w,z\rangle}$；
 3. 对第二个变量线性，对第一个变量共轭线性。
 <!-- bilingual-en:start -->
-1. $\langle z,z\rangle\ge0$, and the equal sign only holds if $z=0$;
-2. $\langle z,w\rangle=\overline{\langle w,z\rangle}$;
-3. Linear for the second variable, conjugate linear for the first variable.
+
+&nbsp;
+**1.** $\langle z,z\rangle\ge0$, with equality only when $z=0$;<br>
+**2.** $\langle z,w\rangle=\overline{\langle w,z\rangle}$;<br>
+**3.** The inner product is linear in its second argument and conjugate-linear in its first.<br>
 <!-- bilingual-en:end -->
 
 > [!definition] Hermitian 与 unitary
 > - $A\in\mathbb C^{n\times n}$ 若 $A=A^*$，称为[[对称矩阵与正定二次型#对称矩阵与谱定理|Hermitian 矩阵]]；它是实对称矩阵的复数推广。
 > - $Q\in\mathbb C^{n\times n}$ 若 $Q^*Q=QQ^*=I$，称为[[对称矩阵与正定二次型#对称矩阵与谱定理|unitary 矩阵]]；它是实正交矩阵的复数推广。
 > <!-- bilingual-en:start -->
-> - $A\in\mathbb C^{n\times n}$ If $A=A^*$, it is called [[对称矩阵与正定二次型#对称矩阵与谱定理|Hermitian matrix]]; it is a complex generalization of a real symmetric matrix.
-> - $Q\in\mathbb C^{n\times n}$ If $Q^*Q=QQ^*=I$, it is called [[对称矩阵与正定二次型#对称矩阵与谱定理|unitary matrix]]; it is a complex generalization of a real orthogonal matrix.
+> - A matrix $A\in\mathbb C^{n\times n}$ is [[对称矩阵与正定二次型#对称矩阵与谱定理|Hermitian]] if $A=A^*$; this is the complex analogue of a real symmetric matrix.
+> - A matrix $Q\in\mathbb C^{n\times n}$ is [[对称矩阵与正定二次型#对称矩阵与谱定理|unitary]] if $Q^*Q=QQ^*=I$; this is the complex analogue of a real orthogonal matrix.
 > <!-- bilingual-en:end -->
 
 Hermitian 谱定理把 3.1 的所有 $T$ 换为 $*$：特征值为实数，可以选 unitary 特征向量矩阵 $Q$，并写成
 <!-- bilingual-en:start -->
-The Hermitian spectral theorem replaces all $T$ of 3.1 with $*$: the eigenvalues are real numbers and the unitary eigenvector matrix $Q$ can be chosen and written as
+The Hermitian spectral theorem replaces every transpose in Section 3.1 by a conjugate transpose: the eigenvalues are real, an orthonormal eigenbasis can be chosen, and with the resulting unitary matrix $Q$ we may write
 <!-- bilingual-en:end -->
 
 $$
@@ -755,12 +750,12 @@ $$
 
 ### 3.2.2 Recitation：完整对角化一个 Hermitian 矩阵
 <!-- bilingual-en:start -->
-*3.2.2 Recitation: Full Diagonalization of a Hermitian Matrix*
+*3.2.2 Recitation: diagonalizing a Hermitian matrix completely*
 <!-- bilingual-en:end -->
 
 取
 <!-- bilingual-en:start -->
-take
+Consider
 <!-- bilingual-en:end -->
 
 $$
@@ -779,12 +774,12 @@ $$
 
 故 $\lambda_1=1$、$\lambda_2=4$，确实都是实数。
 <!-- bilingual-en:start -->
-So $\lambda_1=1$, $\lambda_2=4$, are real numbers.
+Thus $\lambda_1=1$ and $\lambda_2=4$, both real as the theorem predicts.
 <!-- bilingual-en:end -->
 
 当 $\lambda_1=1$ 时，可取
 <!-- bilingual-en:start -->
-When $\lambda_1=1$,
+For $\lambda_1=1$, we may take
 <!-- bilingual-en:end -->
 
 $$
@@ -793,7 +788,7 @@ $$
 
 当 $\lambda_2=4$ 时，可取
 <!-- bilingual-en:start -->
-When $\lambda_2=4$,
+For $\lambda_2=4$, we may take
 <!-- bilingual-en:end -->
 
 $$
@@ -812,7 +807,7 @@ $$
 
 两向量的长度平方都为 $3$，因此
 <!-- bilingual-en:start -->
-The square of the length of both vectors is $3$, so
+Both vectors have squared norm $3$, so
 <!-- bilingual-en:end -->
 
 $$
@@ -822,7 +817,7 @@ $$
 
 并有
 <!-- bilingual-en:start -->
-there is
+and therefore
 <!-- bilingual-en:end -->
 
 $$
@@ -833,7 +828,7 @@ $$
 
 ### 3.2.3 离散 Fourier 矩阵
 <!-- bilingual-en:start -->
-*3.2.3 Discrete Fourier Matrix*
+*3.2.3 The discrete Fourier matrix*
 <!-- bilingual-en:end -->
 
 令
@@ -911,17 +906,17 @@ $$
 
 若 $e_0=(1,0,0,0)^T$，则 $F_4e_0=(1,1,1,1)^T$：时间域的单个脉冲包含所有频率，且幅度相同。
 <!-- bilingual-en:start -->
-If $e_0=(1,0,0,0)^T$, then $F_4e_0=(1,1,1,1)^T$: A single pulse in the time domain contains all frequencies and has the same amplitude.
+If $e_0=(1,0,0,0)^T$, then $F_4e_0=(1,1,1,1)^T$: a single impulse in the time domain contains all frequencies with equal amplitude.
 <!-- bilingual-en:end -->
 
 ### 3.2.4 [[特征值、对角化与线性动力系统#对角化与矩阵幂|FFT 的偶奇递归]]
 <!-- bilingual-en:start -->
-*3.2.4 [[特征值、对角化与线性动力系统#对角化与矩阵幂|Even-odd recursion of FFT]]*
+*3.2.4 [[特征值、对角化与线性动力系统#对角化与矩阵幂|Even–odd recursion in the FFT]]*
 <!-- bilingual-en:end -->
 
 普通矩阵—向量乘法 $F_nx$ 需要约 $n^2$ 次标量运算。对 $n=2m$，先用置换矩阵 $P$ 把输入排成偶数下标、奇数下标：
 <!-- bilingual-en:start -->
-Ordinary matrix—vector multiplication $F_nx$ requires about $n^2$ scalar operations.  For $n=2m$, the input is first arranged into even subscripts and odd subscripts by permutation matrix $P$:
+Direct matrix–vector multiplication by $F_n$ requires about $n^2$ scalar operations. For $n=2m$, a permutation matrix $P$ first groups the even-indexed and odd-indexed entries of the input:
 <!-- bilingual-en:end -->
 
 $$
@@ -941,12 +936,12 @@ $$
 
 原因是 $\omega_{2m}^{2jk}=\omega_m^{jk}$：偶数样本与奇数样本各自形成一个长度 $m$ 的 DFT，$D$ 提供奇数部分的相位修正（twiddle factors），最后用加减法合并。
 <!-- bilingual-en:start -->
-The reason is that $\omega_{2m}^{2jk}=\omega_m^{jk}$: the even sample and the odd sample form a DFT of length $m$ respectively, $D$ provides the phase correction of the odd part, and finally the addition and subtraction are combined.
+The identity $\omega_{2m}^{2jk}=\omega_m^{jk}$ explains the factorization: the even-indexed and odd-indexed samples each form a length-$m$ DFT, $D$ supplies the phase correction for the odd part, and the two results are combined by addition and subtraction.
 <!-- bilingual-en:end -->
 
 若 $T(n)$ 是运算量，则
 <!-- bilingual-en:start -->
-If $T(n)$ is operand, then
+If $T(n)$ denotes the operation count, then
 <!-- bilingual-en:end -->
 
 $$
@@ -955,7 +950,7 @@ $$
 
 递归 $\log_2n$ 层，得到 $T(n)=O(n\log n)$。这不是近似算法；它与直接乘 $F_n$ 得到完全相同的结果，只是利用结构避免重复计算。
 <!-- bilingual-en:start -->
-Recursive $\log_2n$ layer to get $T(n)=O(n\log n)$.  This is not an approximation algorithm; it gets exactly the same result as the direct multiplication of $F_n$, only using the structure to avoid double calculation.
+The recursion has $\log_2n$ levels, giving $T(n)=O(n\log n)$. This is not an approximation: it produces exactly the same result as direct multiplication by $F_n$, while exploiting structure to avoid repeated work.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit3-fft-butterfly.png|820]]
@@ -986,7 +981,7 @@ Recursive $\log_2n$ layer to get $T(n)=O(n\log n)$.  This is not an approximatio
 > \begin{bmatrix}F_2&0\\0&F_2\end{bmatrix}P.
 > $$
 > <!-- bilingual-en:start -->
-> seek
+> Find the matrices $D$ and $P$ in the displayed factorization and verify the result.
 > <!-- bilingual-en:end -->
 
 > [!success]- 解答
@@ -1017,10 +1012,7 @@ Recursive $\log_2n$ layer to get $T(n)=O(n\log n)$.  This is not an approximatio
 > \end{bmatrix}=F_4.
 > $$
 > <!-- bilingual-en:start -->
-> the fourth root is $1,i,-1,-i$, so
-> $P$ ranks $(x_0,x_1,x_2,x_3)^T$ as $(x_0,x_2,x_1,x_3)^T$:
-> Start with the middle two:
-> Multiply the butterfly matrix to the left and get
+> The fourth roots of unity are $1,i,-1,-i$, which gives the displayed matrix $D$. The permutation matrix $P$ reorders $(x_0,x_1,x_2,x_3)^T$ as $(x_0,x_2,x_1,x_3)^T$. Multiplying the middle block first and then the butterfly matrix produces the displayed matrix $F_4$.
 > <!-- bilingual-en:end -->
 
 ### 3.2.6 边界、反例与易错点
@@ -1035,8 +1027,8 @@ Recursive $\log_2n$ layer to get $T(n)=O(n\log n)$.  This is not an approximatio
 <!-- bilingual-en:start -->
 - $A^T=A$ is different from $A^*=A$ in the complex field; complex symmetric matrices do not necessarily have real eigenvalues.
 - $F_n$ is not unitary per se; $(1/\sqrt n)F_n$ is.  If other DFT symbolic conventions are used, the exponent may be written as $-2\pi i/n$, and the sign of the inverse transform is exchanged accordingly.
-- "Complex eigenvalues of real matrices are conjugate pairs" only depend on the coefficients of the characteristic polynomials as the facts and do not require matrix symmetry.
-- The $O(n\log n)$ conclusion of FFT usually assumes that the $n$ is recursive; other lengths also have algorithms, but this lesson only requires knowledge of binary decomposition.
+- The fact that nonreal eigenvalues of a real matrix occur in conjugate pairs follows from the real coefficients of its characteristic polynomial; it does not require the matrix to be symmetric.
+- The simplest $O(n\log n)$ FFT derivation assumes that $n$ can be split recursively in half. Algorithms also exist for other lengths, but this course requires only the radix-2 decomposition.
 <!-- bilingual-en:end -->
 
 ### 3.2.7 三道自检题
@@ -1053,7 +1045,7 @@ Recursive $\log_2n$ layer to get $T(n)=O(n\log n)$.  This is not an approximatio
 > [!success]- 答案
 > 它可能为零或非实数，即使 $z\ne0$。例如 $(1,i)^T(1,i)=0$；$z^*z=\sum|z_i|^2$ 才满足正定性。
 > <!-- bilingual-en:start -->
-> It may be zero or non-real, even if $z\ne0$.  For example, $(1,i)^T(1,i)=0$;$z^*z=\sum|z_i|^2$ satisfies positive definiteness.
+> It may be zero or nonreal even when $z\ne0$. For example, $(1,i)^T(1,i)=0$. By contrast, $z^*z=\sum|z_i|^2$ is positive for every nonzero $z$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 2（计算）
@@ -1071,7 +1063,7 @@ Recursive $\log_2n$ layer to get $T(n)=O(n\log n)$.  This is not an approximatio
 > [!question]- 自检 3（证明）
 > 证明 unitary 矩阵保持长度。
 > <!-- bilingual-en:start -->
-> It is proved that the unitary matrix holds the length.
+> Prove that a unitary matrix preserves length.
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
@@ -1080,12 +1072,12 @@ Recursive $\log_2n$ layer to get $T(n)=O(n\log n)$.  This is not an approximatio
 > \|Qx\|^2=(Qx)^*(Qx)=x^*Q^*Qx=x^*x=\|x\|^2.
 > $$
 > <!-- bilingual-en:start -->
-> If $Q^*Q=I$,
+> If $Q^*Q=I$, the displayed calculation gives $\|Qx\|^2=\|x\|^2$, and hence $\|Qx\|=\|x\|$.
 > <!-- bilingual-en:end -->
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 $$
@@ -1101,12 +1093,12 @@ $$
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 本节要回答：正定性为什么等价于一个二次函数沿每个方向都向上？消元、配方、Hessian 与极小值为什么会出现同一组数？
 <!-- bilingual-en:start -->
-In this section, you will answer: Why is positive qualitatively equivalent to a quadratic function going up in each direction?  Why do elimination, formula, Hessian, and minimum values appear in the same set?
+This section asks why positive definiteness means that a quadratic function curves upward in every direction, and why elimination, completing the square, the Hessian, and minimum values all involve the same quantities.
 <!-- bilingual-en:end -->
 
 前置知识：3.1 的正定判据、多元微积分中的临界点、$LDL^T$ 分解。设 $A\in\mathbb R^{n\times n}$ 对称，$x\in\mathbb R^n$；二次型（quadratic form）是 $q(x)=x^TAx$。
@@ -1115,23 +1107,17 @@ Prerequisites: the positive-definiteness criteria from Session 3.1, critical poi
 <!-- bilingual-en:end -->
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.3sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S03_Lecture_Lecture_27_Positive_Definite_Matrices_and_Minima.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S03_Recitation_Problem_Solving_Positive_Definite_Matrices_and_Minima.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.3prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.3sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:start -->
-Data portal: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.3sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S03_Lecture_Lecture_27_Positive_Definite_Matrices_and_Minima.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S03_Recitation_Problem_Solving_Positive_Definite_Matrices_and_Minima.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.3prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.3sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:end -->
 
 关联卡片：[[对称矩阵与正定二次型#二次型与正定性|正定矩阵]]、[[对称矩阵与正定二次型#二次型与正定性|二次型]]、[[对称矩阵与正定二次型#二次型与正定性|正定性判别]]、[[正交投影与最小二乘#最小二乘与正规方程|最小二乘]]。
-<!-- bilingual-en:start -->
-Associated cards: [[对称矩阵与正定二次型#二次型与正定性|positive-definite matrices]], [[对称矩阵与正定二次型#二次型与正定性|quadratic forms]], [[对称矩阵与正定二次型#二次型与正定性|tests for positive definiteness]], [[正交投影与最小二乘#最小二乘与正规方程|least squares]].
-<!-- bilingual-en:end -->
 
 ### 3.3.1 二阶二次型的四个判据
 <!-- bilingual-en:start -->
-*3.3.1 Four Criterions of Second Order Quadratic Form*
+*3.3.1 Four criteria for a two-variable quadratic form*
 <!-- bilingual-en:end -->
 
 对称矩阵
 <!-- bilingual-en:start -->
-symmetric matrix
+The symmetric matrix
 <!-- bilingual-en:end -->
 
 $$
@@ -1140,7 +1126,7 @@ $$
 
 对应
 <!-- bilingual-en:start -->
-mapping
+corresponds to the quadratic form
 <!-- bilingual-en:end -->
 
 $$
@@ -1150,7 +1136,7 @@ $$
 
 $A$ 正定等价于以下任一条件：
 <!-- bilingual-en:start -->
-$A$ is positive equivalent to any of the following:
+$A$ is positive definite if and only if any—and therefore all—of the following conditions hold:
 <!-- bilingual-en:end -->
 
 1. 两个特征值都正；
@@ -1158,15 +1144,17 @@ $A$ is positive equivalent to any of the following:
 3. 两个对称消元主元 $a$ 与 $(ac-b^2)/a$ 都正；
 4. $q(x,y)>0$ 对所有 $(x,y)\ne(0,0)$ 成立。
 <!-- bilingual-en:start -->
-1. Both eigenvalues are positive;
-2. $a>0$ and $ac-b^2>0$;
-3. Both $a$ and $(ac-b^2)/a$ are positive;
-4. $q(x,y)>0$ is true for all $(x,y)\ne(0,0)$.
+
+&nbsp;
+**1.** Both eigenvalues are positive;<br>
+**2.** $a>0$ and $ac-b^2>0$;<br>
+**3.** Both $a$ and $(ac-b^2)/a$ are positive;<br>
+**4.** $q(x,y)>0$ for every $(x,y)\ne(0,0)$.<br>
 <!-- bilingual-en:end -->
 
 以
 <!-- bilingual-en:start -->
-with
+For example, consider
 <!-- bilingual-en:end -->
 
 $$
@@ -1194,17 +1182,17 @@ $$
 
 但在 $(x_1,x_2)=(3,-1)$ 处为零，因此只是正半定。
 <!-- bilingual-en:start -->
-But it's zero at $(x_1,x_2)=(3,-1)$, so it's just a positive semidefinite.
+But it equals zero at $(x_1,x_2)=(3,-1)$, so the matrix is positive semidefinite but not positive definite.
 <!-- bilingual-en:end -->
 
 ### 3.3.2 配方就是 $LDL^T$
 <!-- bilingual-en:start -->
-*3.3.2 The formula is $LDL^T$*
+*3.3.2 Completing the square is $LDL^T$ factorization*
 <!-- bilingual-en:end -->
 
 课件比较
 <!-- bilingual-en:start -->
-courseware comparison
+The course materials compare
 <!-- bilingual-en:end -->
 
 $$
@@ -1213,7 +1201,7 @@ $$
 
 与
 <!-- bilingual-en:start -->
-and
+with
 <!-- bilingual-en:end -->
 
 $$
@@ -1222,7 +1210,7 @@ $$
 
 逐步配方：
 <!-- bilingual-en:start -->
-Step-by-step recipe:
+Completing the square step by step gives
 <!-- bilingual-en:end -->
 
 $$
@@ -1232,7 +1220,7 @@ $$
 
 对非零 $(x,y)$ 成立；而
 <!-- bilingual-en:start -->
-is true for non-zero $(x,y)$; and
+for every nonzero $(x,y)$, whereas
 <!-- bilingual-en:end -->
 
 $$
@@ -1242,7 +1230,7 @@ $$
 
 在 $(x,y)=(-3,1)$ 处为负。配方中的系数 $2,2$ 和 $2,-11$，恰好是对应矩阵消元后的主元：
 <!-- bilingual-en:start -->
-Negative at $(x,y)=(-3,1)$.  The coefficients $2,2$ and $2,-11$ in the formula are exactly the pivots of the corresponding matrix after elimination:
+is negative at $(x,y)=(-3,1)$. The coefficients $2,2$ and $2,-11$ in these completed-square expressions are exactly the pivots obtained by eliminating the corresponding matrices:
 <!-- bilingual-en:end -->
 
 $$
@@ -1268,19 +1256,19 @@ $$
 
 这就是高维“配方”：$L^Tx$ 给出新的线性表达式，$D$ 的主元给出每个平方项前的系数。
 <!-- bilingual-en:start -->
-This is the high-dimensional "recipe": $L^Tx$ gives a new linear expression, and $D$'s pivots give the coefficients before each square term.
+This is completing the square in higher dimensions: $L^Tx$ supplies the new linear combinations, and the pivots in $D$ are the coefficients of the resulting squared terms.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit3-quadratic-bowl.png|820]]
 
 ### 3.3.3 [[对称矩阵与正定二次型#二次型与正定性|Hessian]] 与极小值
 <!-- bilingual-en:start -->
-*3.3.3 [[对称矩阵与正定二次型#二次型与正定性|Hessian]] and Minimums*
+*3.3.3 The [[对称矩阵与正定二次型#二次型与正定性|Hessian]] and minima*
 <!-- bilingual-en:end -->
 
 对二次函数
 <!-- bilingual-en:start -->
-Quadratic function
+For the quadratic function
 <!-- bilingual-en:end -->
 
 $$
@@ -1289,7 +1277,7 @@ $$
 
 梯度与 Hessian 为
 <!-- bilingual-en:start -->
-Gradient vs. Hessian
+the gradient and Hessian are
 <!-- bilingual-en:end -->
 
 $$
@@ -1298,7 +1286,7 @@ $$
 
 若 $A\succ0$，则临界点唯一：
 <!-- bilingual-en:start -->
-If $A\succ0$, the threshold is unique:
+If $A\succ0$, there is a unique critical point:
 <!-- bilingual-en:end -->
 
 $$
@@ -1321,12 +1309,12 @@ $$
 
 因为 $A\succ0$，$h\ne0$ 时 $h^TAh>0$，所以 $f(x)>f(x_*)$。这同时证明了局部极小与全局唯一性。
 <!-- bilingual-en:start -->
-$f(x)>f(x_*)$ because $A\succ0$, $h\ne0$ $h^TAh>0$.  This proves both local minima and global uniqueness.
+Because $A\succ0$, every nonzero $h$ satisfies $h^TAh>0$, so $f(x)>f(x_*)$ whenever $x\ne x_*$. This proves both strict local minimality and global uniqueness.
 <!-- bilingual-en:end -->
 
 边界情况：
 <!-- bilingual-en:start -->
-Boundary Condition:
+Boundary cases:
 <!-- bilingual-en:end -->
 
 - $A\succeq0$ 时函数是凸的，但可能沿零空间方向平坦，极小点可能不唯一；若 $b$ 在 $A$ 的列空间之外，甚至可能无下界。
@@ -1358,7 +1346,7 @@ $$
 
 因此 $A\succ0$。相应主元为
 <!-- bilingual-en:start -->
-So $A\succ0$.  The corresponding pivot is
+Thus $A\succ0$. The corresponding pivots are
 <!-- bilingual-en:end -->
 
 $$
@@ -1367,7 +1355,7 @@ $$
 
 二次型
 <!-- bilingual-en:start -->
-quadratic
+The quadratic form
 <!-- bilingual-en:end -->
 
 $$
@@ -1376,12 +1364,12 @@ $$
 
 的等值面 $x^TAx=1$ 是椭球；特征向量给出主轴方向，半轴长度与 $1/\sqrt{\lambda_i}$ 成正比。
 <!-- bilingual-en:start -->
-The iso-surface $x^TAx=1$ is ellipsoid; the eigenvector gives the principal axis direction, and the length of the semi-axis is proportional to $1/\sqrt{\lambda_i}$.
+The level set $x^TAx=1$ is an ellipsoid. Its eigenvectors give the principal-axis directions, and the corresponding semiaxis lengths are proportional to $1/\sqrt{\lambda_i}$.
 <!-- bilingual-en:end -->
 
 ### 3.3.4 Recitation：带参数的三种判别
 <!-- bilingual-en:start -->
-*3.3.4 Recitation: Three discriminations with parameters*
+*3.3.4 Recitation: three parameter-dependent cases*
 <!-- bilingual-en:end -->
 
 设
@@ -1517,8 +1505,8 @@ Therefore:
 - 对一般 $C^2$ 函数，$\nabla^2f(x_*)\succ0$ 只先给出局部极小；二次函数或全局 Hessian 半正定时才能直接推全局凸性。
 - “所有顺序主子式非负”不足以判正半定；$c=0$ 的例子可由结构直接验证，但一般半正定要检查所有主子式或特征值。
 <!-- bilingual-en:start -->
-Positive definiteness of the Hessian is sufficient for a critical point to be a strict local minimum. If the Hessian is only positive semidefinite, the second-order test may be inconclusive and higher-order terms must be examined.
-- For general $C^2$ functions, $\nabla^2f(x_*)\succ0$ only gives local minima; quadratic functions or global Hessian semipositive timing can directly infer global convexity.
+- A positive-definite Hessian is sufficient for a critical point to be a strict local minimum. If the Hessian is only positive semidefinite, the second-order test may be inconclusive and higher-order terms must be examined.
+- For a general $C^2$ function, $\nabla^2f(x_*)\succ0$ guarantees only a local minimum. Global convexity follows directly for a quadratic function, or when the Hessian is positive semidefinite everywhere.
 - Nonnegative leading principal minors alone are not sufficient for positive semidefiniteness. The case $c=0$ can be verified directly from the structure, but in general one must check all principal minors or the eigenvalues.
 <!-- bilingual-en:end -->
 
@@ -1530,7 +1518,7 @@ Positive definiteness of the Hessian is sufficient for a critical point to be a 
 > [!question]- 自检 1（配方）
 > 把 $3x^2+6xy+5y^2$ 配成平方和并判断正定性。
 > <!-- bilingual-en:start -->
-> Formulate the $3x^2+6xy+5y^2$ as a sum of squares and determine the positive definiteness.
+> Write $3x^2+6xy+5y^2$ as a sum of squares and determine whether the associated matrix is positive definite.
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
@@ -1539,7 +1527,7 @@ Positive definiteness of the Hessian is sufficient for a critical point to be a 
 > $$
 > 对非零 $(x,y)$ 成立，因此对应矩阵正定。
 > <!-- bilingual-en:start -->
-> It is true for non-zero $(x,y)$, so the corresponding matrix is positive definite.
+> The displayed expression is strictly positive for every nonzero $(x,y)$, so the associated matrix is positive definite.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 2（半正定边界）
@@ -1557,7 +1545,7 @@ Positive definiteness of the Hessian is sufficient for a critical point to be a 
 > [!question]- 自检 3（极小值）
 > 若 $A\succ0$，求 $f(x)=\tfrac12x^TAx-b^Tx$ 的最小点与最小值表达式。
 > <!-- bilingual-en:start -->
-> If $A\succ0$, calculate the minimum point and minimum value expression of $f(x)=\tfrac12x^TAx-b^Tx$.
+> If $A\succ0$, find the minimizer and minimum value of $f(x)=\tfrac12x^TAx-b^Tx$.
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
@@ -1566,12 +1554,12 @@ Positive definiteness of the Hessian is sufficient for a critical point to be a 
 > f(x_*)=-\frac12b^TA^{-1}b.
 > $$
 > <!-- bilingual-en:start -->
-> $x_*=A^{-1}b$;substitution
+> The minimizer is $x_*=A^{-1}b$. Substitution gives the displayed minimum value $f(x_*)=-\tfrac12b^TA^{-1}b$.
 > <!-- bilingual-en:end -->
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 $$
@@ -1586,7 +1574,7 @@ $$
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 本节先补齐 Lecture 28 开头关于正定矩阵封闭性质与 $A^TA$ 的结论，再回答：相似矩阵为何表示“同一个线性变换的不同坐标”？当特征向量不足时，Jordan 链怎样补足基？Jordan 块怎样影响矩阵幂和微分方程长期行为？
@@ -1600,18 +1588,12 @@ Prerequisites are diagonalization $A=S\Lambda S^{-1}$, eigenspaces, and matrix p
 <!-- bilingual-en:end -->
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.4sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S04_Lecture_Lecture_28_Similar_Matrices_and_Jordan_Form.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S04_Recitation_Problem_Solving_Similar_Matrices.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.4prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.4sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:start -->
-Data portal: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.4sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S04_Lecture_Lecture_28_Similar_Matrices_and_Jordan_Form.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S04_Recitation_Problem_Solving_Similar_Matrices.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.4prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.4sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:end -->
 
 关联卡片：[[对称矩阵与正定二次型#二次型与正定性|正定矩阵]]、[[线性变换与换基#换基与相似|相似矩阵]]、[[特征值、对角化与线性动力系统#对角化与矩阵幂|对角化]]、[[特征值、对角化与线性动力系统#Jordan 结构的边界|Jordan 形]]、[[特征值、对角化与线性动力系统#对角化与矩阵幂|矩阵指数]]。
-<!-- bilingual-en:start -->
-Associated cards: [[对称矩阵与正定二次型#二次型与正定性|positive-definite matrices]], [[线性变换与换基#换基与相似|similarity transformations]], [[特征值、对角化与线性动力系统#对角化与矩阵幂|diagonalization]], [[特征值、对角化与线性动力系统#Jordan 结构的边界|Jordan form]], and [[特征值、对角化与线性动力系统#对角化与矩阵幂|matrix powers]].
-<!-- bilingual-en:end -->
 
 ### 3.4.1 Lecture 28 开头：正定矩阵的封闭性质与 $A^TA$
 <!-- bilingual-en:start -->
-*3.4.1 Lecture 28 Beginning: Closure Properties of Positive Definite Matrices and $A^TA$*
+*3.4.1 Opening of Lecture 28: closure properties of positive-definite matrices and $A^TA$*
 <!-- bilingual-en:end -->
 
 这一段属于官方 Session 3.4，而不是上一节的二次型例题。以下每个结论都保留假设；尤其“正定”默认矩阵为实对称方阵。
@@ -1621,7 +1603,7 @@ This material belongs to the official Session 3.4, not to the quadratic-form exa
 
 #### 正定矩阵之和仍正定
 <!-- bilingual-en:start -->
-*The sum of positive definite matrices is still positive definite*
+*The sum of positive-definite matrices is positive definite*
 <!-- bilingual-en:end -->
 
 若 $A\succ0$、$B\succ0$ 且尺寸相同，则 $A+B$ 对称，并且对任意 $x\ne0$，
@@ -1640,12 +1622,12 @@ Hence $A+B\succ0$. The statement does not remain true if “sum” is replaced b
 
 #### 正定矩阵之逆仍正定
 <!-- bilingual-en:start -->
-*The Inverse of Positive Definite Matrix is Still Positive Definite*
+*The inverse of a positive-definite matrix is positive definite*
 <!-- bilingual-en:end -->
 
 由谱定理，$A=Q\Lambda Q^T$，其中 $\lambda_i>0$。于是
 <!-- bilingual-en:start -->
-From the spectral theorem, $A=Q\Lambda Q^T$, where $\lambda_i>0$.  therefore
+By the spectral theorem, $A=Q\Lambda Q^T$ with every $\lambda_i>0$. Therefore,
 <!-- bilingual-en:end -->
 
 $$
@@ -1675,7 +1657,7 @@ $$
 
 故 $C^TC\succeq0$。进一步，
 <!-- bilingual-en:start -->
-So, $C^TC\succeq0$.  further,
+Thus $C^TC\succeq0$. Moreover,
 <!-- bilingual-en:end -->
 
 $$
@@ -1695,7 +1677,7 @@ Thus $C^TC$ is invertible if and only if $C$ has full column rank. In that case 
 
 ### 3.4.2 相似关系保存什么
 <!-- bilingual-en:start -->
-*3.4.2 What similarity holds*
+*3.4.2 What similarity preserves*
 <!-- bilingual-en:end -->
 
 > [!definition] 相似矩阵
@@ -1705,13 +1687,12 @@ Thus $C^TC$ is invertible if and only if $C$ has full column rank. In that case 
 > $$
 > 则称 $A$ 与 $B$ 相似。$M$ 的列通常是新基在旧坐标中的表示。
 > <!-- bilingual-en:start -->
-> If there is a invertible $M\in\mathbb F^{n\times n}$
-> It is also known that $A$ is similar to $B$.  The column for $M$ is usually the representation of the new basis in the old coordinates.
+> If there is an invertible matrix $M\in\mathbb F^{n\times n}$ such that $B=M^{-1}AM$, then $A$ and $B$ are similar. The columns of $M$ usually contain the new basis vectors expressed in the old coordinates.
 > <!-- bilingual-en:end -->
 
 相似变换保存：
 <!-- bilingual-en:start -->
-Similar Transformation Save:
+Similarity transformations preserve:
 <!-- bilingual-en:end -->
 
 - 特征多项式、特征值及其代数重数；
@@ -1722,14 +1703,14 @@ Similar Transformation Save:
 <!-- bilingual-en:start -->
 - Characteristic polynomials, eigenvalues and their algebraic multiplicities;
 - Geometric multiplicity of each eigenvalue;
-- rank, determinant, footprint;
-- Minimum polynomial and Jordan block size;
+- rank, determinant, and trace;
+- the minimal polynomial and Jordan-block sizes;
 - For any polynomial $p$, $p(B)=M^{-1}p(A)M$.
 <!-- bilingual-en:end -->
 
 #### 证明特征值保存
 <!-- bilingual-en:start -->
-*proof eigenvalue preservation*
+*Proof that eigenvalues are preserved*
 <!-- bilingual-en:end -->
 
 若 $Ax=\lambda x$，令 $y=M^{-1}x\ne0$。则
@@ -1748,12 +1729,12 @@ Thus $\lambda$ is also an eigenvalue of $B$. Applying the same argument in the r
 
 #### 证明多项式保持相似
 <!-- bilingual-en:start -->
-*proving polynomial similarity*
+*Proof that polynomial expressions remain similar*
 <!-- bilingual-en:end -->
 
 先看幂：
 <!-- bilingual-en:start -->
-Begin with Power:
+Begin with powers:
 <!-- bilingual-en:end -->
 
 $$
@@ -1762,7 +1743,7 @@ $$
 
 中间的 $MM^{-1}$ 消去。归纳得 $B^k=M^{-1}A^kM$，于是
 <!-- bilingual-en:start -->
-The $MM^{-1}$ in the middle goes away.  $B^k=M^{-1}A^kM$, so
+The middle factors $MM^{-1}$ cancel. Induction gives $B^k=M^{-1}A^kM$, so
 <!-- bilingual-en:end -->
 
 $$
@@ -1773,17 +1754,17 @@ $$
 
 相同论证还能通过收敛幂级数给出 $e^B=M^{-1}e^AM$。
 <!-- bilingual-en:start -->
-The same argument can also give $e^B=M^{-1}e^AM$ by converging power series.
+Applying the same argument term by term to the convergent power series gives $e^B=M^{-1}e^AM$.
 <!-- bilingual-en:end -->
 
 ### 3.4.3 对角化与重复特征值
 <!-- bilingual-en:start -->
-*3.4.3 Diagonalizing and Repeating Eigenvalues*
+*3.4.3 Diagonalization and repeated eigenvalues*
 <!-- bilingual-en:end -->
 
 若 $A$ 有 $n$ 个线性无关特征向量，取 $S=[x_1\ \cdots\ x_n]$，则
 <!-- bilingual-en:start -->
-If $A$ has $n$ linear independent eigenvectors and $S=[x_1\ \cdots\ x_n]$, then
+If $A$ has $n$ linearly independent eigenvectors and $S=[x_1\ \cdots\ x_n]$, then
 <!-- bilingual-en:end -->
 
 $$
@@ -1815,7 +1796,7 @@ has only a one-dimensional eigenspace. The two matrices therefore cannot be simi
 
 ### 3.4.4 Jordan 链与 Jordan 标准形
 <!-- bilingual-en:start -->
-*3.4.4 Jordan Chains and Jordan Standardization*
+*3.4.4 Jordan chains and Jordan canonical form*
 <!-- bilingual-en:end -->
 
 对特征值 $\lambda$，大小为 $k$ 的 Jordan 块是
@@ -1848,19 +1829,19 @@ $$
 
 在特征多项式分裂的条件下，存在可逆 $S$ 使 $S^{-1}AS$ 为 Jordan 块的直和。课程重点是理解块结构与计算，不从头证明整个存在性定理。
 <!-- bilingual-en:start -->
-Under the condition of characteristic polynomial splitting, there exists a invertible $S$ such that $S^{-1}AS$ is the straight sum of Jordan blocks.  The focus of the course is on understanding block structure and computation without proving the entire existence theorem from scratch.
+If the characteristic polynomial splits over the underlying field, there is an invertible matrix $S$ such that $S^{-1}AS$ is a direct sum of Jordan blocks. The course focuses on understanding and computing with this block structure rather than proving the full existence theorem from first principles.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit3-jordan-chain.png|820]]
 
 #### Jordan 块的幂和指数
 <!-- bilingual-en:start -->
-*Power sum exponent of Jordan block*
+*Powers and exponentials of a Jordan block*
 <!-- bilingual-en:end -->
 
 因为 $\lambda I$ 与 $N$ 可交换，
 <!-- bilingual-en:start -->
-Because $\lambda I$ and $N$ are interchangeable,
+Because $\lambda I$ and $N$ commute,
 <!-- bilingual-en:end -->
 
 $$
@@ -1892,12 +1873,12 @@ So the long-term behavior is not only determined by $e^{\lambda t}$: the Jordan 
 
 ### 3.4.5 课件与 Recitation 例子
 <!-- bilingual-en:start -->
-*3.4.5 Courseware and Recitation Examples*
+*3.4.5 Examples from the course materials and recitation*
 <!-- bilingual-en:end -->
 
 课件用
 <!-- bilingual-en:start -->
-courseware
+The course materials use
 <!-- bilingual-en:end -->
 
 $$
@@ -1906,21 +1887,23 @@ $$
 
 说明同一个相似类有许多矩阵。$A$ 的特征值是 $3,1$，故相似于 $\operatorname{diag}(3,1)$。任取可逆 $M$，$M^{-1}AM$ 仍有相同谱结构，但条目可能完全不同。
 <!-- bilingual-en:start -->
-It shows that there are many matrices in the same similar class.  The eigenvalue of $A$ is $3,1$, so it is similar to $\operatorname{diag}(3,1)$.  For any invertible $M$, $M^{-1}AM$ still have the same spectral structure, but the entries may be completely different.
+to show that one similarity class contains many matrices. The eigenvalues of $A$ are $3$ and $1$, so $A$ is similar to $\operatorname{diag}(3,1)$. For any invertible $M$, the matrix $M^{-1}AM$ has the same spectral structure even though its entries may look entirely different.
 <!-- bilingual-en:end -->
 
 Recitation 的核心判断：
 <!-- bilingual-en:start -->
-Recitation's core judgment:
+The recitation emphasizes three structural tests:
 <!-- bilingual-en:end -->
 
 1. 若 $A\sim B$，则 $2A^3+A-3I\sim2B^3+B-3I$，因为多项式保持相似。
 2. 两个 $3\times3$ 矩阵若都有互异特征值 $1,0,-1$，则都相似于同一对角矩阵，故彼此相似。
 3. 两个 Jordan 形即使特征值相同，若某个 $\dim N(J-\lambda I)$ 不同，就不相似。更一般地，$\dim N((A-\lambda I)^j)$ 的序列能恢复 Jordan 块尺寸。
 <!-- bilingual-en:start -->
-1. If $A\sim B$, then $2A^3+A-3I\sim2B^3+B-3I$, because the polynomials remain similar.
-2. If two $3\times3$ matrices each have the three distinct eigenvalues $1,0,-1$, both are similar to the same diagonal matrix and hence to each other.
-3. Two Jordan forms with the same eigenvalues are not similar if, for some $\lambda$, their values of $\dim N(J-\lambda I)$ differ. More generally, the sequence $\dim N((A-\lambda I)^j)$ determines the Jordan block sizes.
+
+&nbsp;
+**1.** If $A\sim B$, then $2A^3+A-3I\sim2B^3+B-3I$, because the polynomials remain similar.<br>
+**2.** If two $3\times3$ matrices each have the three distinct eigenvalues $1,0,-1$, both are similar to the same diagonal matrix and hence to each other.<br>
+**3.** Two Jordan forms with the same eigenvalues are not similar if, for some $\lambda$, their values of $\dim N(J-\lambda I)$ differ. More generally, the sequence $\dim N((A-\lambda I)^j)$ determines the Jordan block sizes.<br>
 <!-- bilingual-en:end -->
 
 ### 3.4.6 Homework：完整题解
@@ -1936,7 +1919,6 @@ Recitation's core judgment:
 > $$
 > 对一般 $M=(m_{ij})$，证明 $JM=MK$ 会迫使 $M$ 不可逆。
 > <!-- bilingual-en:start -->
-> if
 > For a general matrix $M=(m_{ij})$, prove that $JM=MK$ forces $M$ to be singular.
 > <!-- bilingual-en:end -->
 
@@ -1996,13 +1978,11 @@ Recitation's core judgment:
 >
 > **(e)** 设 $P$ 交换前两坐标，则 $P^{-1}=P$。先交换 $A$ 的前两行是 $PA$，再交换前两列是 $PAP=P^{-1}AP$，所以新矩阵与 $A$ 相似。
 > <!-- bilingual-en:start -->
-> **(a)**If $A=M^{-1}BM$
-> So, $A^2\sim B^2$.
-> **(b)** The converse is false.
-> then $A^2=B^2=0$, but the rank of $A$ is $0$, and the rank of $B$ is $1$, so $A\not\sim B$.
-> **(c)**$\operatorname{diag}(3,4)$ and $\begin{bmatrix}3&1\\0&4\end{bmatrix}$ both have two distinct eigenvalues $3,4$, so they are diagonalizable and similar to each other.  Explicitly Available
-> **(d)**$3I$ is not similar to $\begin{bmatrix}3&1\\0&3\end{bmatrix}$.  The dimension of the former is $2$, and the latter is only $1$. Moreover, $M^{-1}(3I)M=3I$ is invariant to any invertible $M$.
-> **(e)**Let $P$ exchange the first two coordinates, and then $P^{-1}=P$.  The first two rows of $A$ are swapped for $PA$, and then the first two columns are swapped for $PAP=P^{-1}AP$, so the new matrix is similar to $A$.
+> **(a)** If $A=M^{-1}BM$, then squaring and cancelling the middle factors gives $A^2=M^{-1}B^2M$, so $A^2\sim B^2$.
+> **(b)** The converse is false. For the displayed matrices, $A^2=B^2=0$, but $\operatorname{rank}(A)=0$ and $\operatorname{rank}(B)=1$, so $A\not\sim B$.
+> **(c)** $\operatorname{diag}(3,4)$ and $\begin{bmatrix}3&1\\0&4\end{bmatrix}$ both have the two distinct eigenvalues $3$ and $4$, so both are diagonalizable and they are similar to each other. The displayed matrix $M$ gives an explicit similarity.
+> **(d)** $3I$ is not similar to $\begin{bmatrix}3&1\\0&3\end{bmatrix}$. The eigenspace for the former has dimension $2$, whereas that for the latter has dimension $1$. Moreover, $M^{-1}(3I)M=3I$ for every invertible $M$.
+> **(e)** Let $P$ exchange the first two coordinates, so $P^{-1}=P$. Left multiplication by $P$ swaps the first two rows of $A$, and right multiplication swaps the first two columns. Thus the resulting matrix $PAP=P^{-1}AP$ is similar to $A$.
 > <!-- bilingual-en:end -->
 
 ### 3.4.7 边界、反例与易错点
@@ -2029,7 +2009,7 @@ Recitation's core judgment:
 > [!question]- 自检 1（结构）
 > $J=\begin{bmatrix}2&1\\0&2\end{bmatrix}$ 的 $J^m$ 是什么？
 > <!-- bilingual-en:start -->
-> What is $J=\begin{bmatrix}2&1\\0&2\end{bmatrix}$'s $J^m$?
+> For $J=\begin{bmatrix}2&1\\0&2\end{bmatrix}$, find $J^m$.
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
@@ -2039,7 +2019,7 @@ Recitation's core judgment:
 > =\begin{bmatrix}2^m&m2^{m-1}\\0&2^m\end{bmatrix}.
 > $$
 > <!-- bilingual-en:start -->
-> Written as $J=2I+N$, $N^2=0$:
+> Write $J=2I+N$, where $N^2=0$, and apply the binomial formula to obtain the displayed expression.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 2（稳定性）
@@ -2054,24 +2034,24 @@ Recitation's core judgment:
 > $$
 > 模长含线性因子 $t$，故不有界；纯虚谱不足以保证有界。
 > <!-- bilingual-en:start -->
-> The moduli are not bounded because they contain a linear factor $t$. The pure imaginary spectrum is not sufficient to guarantee boundedness.
+> The norm is unbounded because the exponential contains a linear factor $t$. A purely imaginary spectrum alone is therefore insufficient to guarantee boundedness.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 3（判断）
 > 迹和行列式都相同的两个 $2\times2$ 矩阵一定相似吗？
 > <!-- bilingual-en:start -->
-> Do the two $2\times2$ matrices that have the same trace and determinant have to be similar?
+> Must two $2\times2$ matrices with the same trace and determinant be similar?
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
 > 不一定。$3I$ 与 $\begin{bmatrix}3&1\\0&3\end{bmatrix}$ 迹、行列式相同，却因几何重数不同而不相似。
 > <!-- bilingual-en:start -->
-> Not necessarily.  $3I$ is the same as $\begin{bmatrix}3&1\\0&3\end{bmatrix}$ trace and determinant, but not similar due to different geometric multiplicity.
+> No. The matrices $3I$ and $\begin{bmatrix}3&1\\0&3\end{bmatrix}$ have the same trace and determinant but are not similar because their eigenspaces have different dimensions.
 > <!-- bilingual-en:end -->
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 $$
@@ -2089,12 +2069,12 @@ $$
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 本节要回答：一个任意矩阵 $A\in\mathbb R^{m\times n}$ 如何在输入空间与输出空间分别选择最佳的正交坐标，使它只剩沿互相垂直方向的伸缩？
 <!-- bilingual-en:start -->
-In this section, we should answer: How does an arbitrary matrix $A\in\mathbb R^{m\times n}$ choose the best orthogonal coordinates in the input space and the best orthogonal coordinates in the output space, so that it only has to be stretched in the vertical direction to each other?
+This section asks how an arbitrary matrix $A\in\mathbb R^{m\times n}$ can use one orthogonal coordinate system in its input space and another in its output space so that its action reduces to independent stretches along mutually perpendicular directions.
 <!-- bilingual-en:end -->
 
 前置知识：谱定理、四个基本子空间、$A^TA$ 的半正定性。尺寸必须始终检查：
@@ -2107,18 +2087,12 @@ A_{m\times n}=U_{m\times m}\Sigma_{m\times n}V^T_{n\times n}.
 $$
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.5sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S05_Lecture_Lecture_29_Singular_Value_Decomposition.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S05_Recitation_Problem_Solving_Computing_the_Singular_Value_Decomposition.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.5prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.5sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:start -->
-Data portal: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.5sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S05_Lecture_Lecture_29_Singular_Value_Decomposition.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S05_Recitation_Problem_Solving_Computing_the_Singular_Value_Decomposition.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.5prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.5sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:end -->
 
 关联卡片：[[奇异值分解与低秩近似#SVD 的三层结构|奇异值分解]]、[[对称矩阵与正定二次型#对称矩阵与谱定理|谱分解]]、[[正交投影与最小二乘#正交补与最近点|正交性]]、[[线性方程组与四个基本子空间#基、维数与秩|矩阵秩]]。
-<!-- bilingual-en:start -->
-Associated Cards: [[奇异值分解与低秩近似#SVD 的三层结构|singular value decomposition]], [[对称矩阵与正定二次型#对称矩阵与谱定理|spectral decomposition]], [[正交投影与最小二乘#正交补与最近点|orthogonal]], [[线性方程组与四个基本子空间#基、维数与秩|matrix rank]].
-<!-- bilingual-en:end -->
 
 ### 3.5.1 SVD 定理与几何意义
 <!-- bilingual-en:start -->
-*3.5.1 SVD Theorem and Geometric Significance*
+*3.5.1 The SVD theorem and its geometric meaning*
 <!-- bilingual-en:end -->
 
 > [!theorem] 奇异值分解（SVD）
@@ -2132,14 +2106,12 @@ Associated Cards: [[奇异值分解与低秩近似#SVD 的三层结构|singular 
 > $$
 > 排列，称为[[奇异值分解与低秩近似#SVD 的三层结构|奇异值（singular value）]]；$r=\operatorname{rank}(A)$。
 > <!-- bilingual-en:start -->
-> For each $A\in\mathbb R^{m\times n}$, there are orthogonal matrices $U\in\mathbb R^{m\times m}$, $V\in\mathbb R^{n\times n}$, and $\Sigma\in\mathbb R^{m\times n}$ that may be non-zero only on the major diagonal, such that
-> non-zero diagonal primitives
-> Arrange, known as [[奇异值分解与低秩近似#SVD 的三层结构|singular value]];$r=\operatorname{rank}(A)$.
+> For every $A\in\mathbb R^{m\times n}$, there are orthogonal matrices $U\in\mathbb R^{m\times m}$ and $V\in\mathbb R^{n\times n}$, together with a rectangular diagonal matrix $\Sigma\in\mathbb R^{m\times n}$, such that $A=U\Sigma V^T$. The nonzero diagonal entries are ordered as $\sigma_1\ge\cdots\ge\sigma_r>0$ and are called the [[奇异值分解与低秩近似#SVD 的三层结构|singular values]] of $A$, where $r=\operatorname{rank}(A)$.
 > <!-- bilingual-en:end -->
 
 等价地，若 $v_i$ 是 $V$ 的第 $i$ 列、$u_i$ 是 $U$ 的第 $i$ 列，则
 <!-- bilingual-en:start -->
-Equivalently, if $v_i$ is the $i$ column of $V$ and $u_i$ is the $i$ column of $U$
+Equivalently, if $v_i$ is the $i$th column of $V$ and $u_i$ is the $i$th column of $U$, then
 <!-- bilingual-en:end -->
 
 $$
@@ -2148,24 +2120,24 @@ $$
 
 而 $Av_i=0$（$i>r$）。因此 $V^T$ 先把输入转到右奇异向量坐标，$\Sigma$ 沿正交坐标轴伸缩或压扁，$U$ 再把结果旋转/反射到输出空间。
 <!-- bilingual-en:start -->
-$Av_i=0$ ($i>r$).  So $V^T$ turns the input to the right singular vector coordinate, $\Sigma$ stretches or flattens along the orthogonal coordinate axis, and $U$ rotates/reflects the result to the output space.
+$Av_i=0$ for $i>r$. Thus $V^T$ converts the input into right-singular-vector coordinates, $\Sigma$ stretches or collapses the independent coordinate directions, and $U$ rotates or reflects the result into the output space.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit3-svd-geometry.png|860]]
 
 单位球经 $A$ 映成椭球：轴方向为 $u_i$，半轴长度为 $\sigma_i$；零奇异值把相应输入方向压到零。
 <!-- bilingual-en:start -->
-The unit sphere is mapped into an ellipsoid by $A$: the axis direction is $u_i$, the semiaxis length is $\sigma_i$; and the corresponding input direction is pressed to zero by zero singular value.
+The matrix $A$ maps the unit sphere to an ellipsoid whose principal directions are the $u_i$ and whose semiaxis lengths are the $\sigma_i$. An input direction associated with a zero singular value is collapsed to zero.
 <!-- bilingual-en:end -->
 
 ### 3.5.2 [[奇异值分解与低秩近似#SVD 的三层结构|SVD 的课程级存在性证明]]
 <!-- bilingual-en:start -->
-*3.5.2 [[奇异值分解与低秩近似#SVD 的三层结构|Proof of the Course-level Existence of SVD]]*
+*3.5.2 [[奇异值分解与低秩近似#SVD 的三层结构|A course-level existence proof for the SVD]]*
 <!-- bilingual-en:end -->
 
 **目标。** 从已经证明的实对称谱定理构造 $U,\Sigma,V$。
 <!-- bilingual-en:start -->
-**Objective.**Construct a $U,\Sigma,V$ from the proved real symmetric spectral theorem.
+**Goal.** Construct $U,\Sigma,V$ from the spectral theorem for real symmetric matrices.
 <!-- bilingual-en:end -->
 
 **第一步：对角化 $A^TA$。**
@@ -2175,7 +2147,7 @@ The unit sphere is mapped into an ellipsoid by $A$: the axis direction is $u_i$,
 
 $A^TA\in\mathbb R^{n\times n}$ 对称半正定，因为
 <!-- bilingual-en:start -->
-$A^TA\in\mathbb R^{n\times n}$ symmetric semipositive definite because
+$A^TA\in\mathbb R^{n\times n}$ is symmetric positive semidefinite because
 <!-- bilingual-en:end -->
 
 $$
@@ -2193,7 +2165,7 @@ $$
 
 按 $\lambda_1\ge\cdots\ge\lambda_n$ 排列，定义
 <!-- bilingual-en:start -->
-$\lambda_1\ge\cdots\ge\lambda_n$, defining
+Order the eigenvalues so that $\lambda_1\ge\cdots\ge\lambda_n$, and define
 <!-- bilingual-en:end -->
 
 $$
@@ -2202,12 +2174,12 @@ $$
 
 **第二步：由右奇异向量构造左奇异向量。**
 <!-- bilingual-en:start -->
-**Step 2: The left singular vector is constructed from the right singular vector.**
+**Step 2: Construct the left singular vectors from the right singular vectors.**
 <!-- bilingual-en:end -->
 
 对 $\sigma_i>0$，定义
 <!-- bilingual-en:start -->
-for $\sigma_i>0$, defining
+For each $\sigma_i>0$, define
 <!-- bilingual-en:end -->
 
 $$
@@ -2216,7 +2188,7 @@ $$
 
 验证长度：
 <!-- bilingual-en:start -->
-Validate length:
+Verify the norm:
 <!-- bilingual-en:end -->
 
 $$
@@ -2227,7 +2199,7 @@ $$
 
 验证不同 $u_i$ 正交：若 $i\ne j$，
 <!-- bilingual-en:start -->
-Verify different $u_i$ orthogonality: If $i\ne j$,
+Verify orthogonality between distinct $u_i$: if $i\ne j$,
 <!-- bilingual-en:end -->
 
 $$
@@ -2243,7 +2215,7 @@ Therefore the vectors $u_1,\ldots,u_r$ corresponding to nonzero singular values 
 
 **第三步：处理零空间与补齐基。**
 <!-- bilingual-en:start -->
-**Step three: handle the nullspace and complete the bases.**
+**Step 3: Handle the nullspace and complete both bases.**
 <!-- bilingual-en:end -->
 
 $\lambda_i=0$ 当且仅当
@@ -2281,12 +2253,12 @@ $$
 > [!note] 证明层级说明
 > 这个证明把 SVD 的存在性完全归约到实对称谱定理。若要从实数公理开始完整证明谱定理，还需补入代数学基本定理或等价的紧致性论证；MIT 18.06SC 把谱定理作为本课程已建立的核心结果。
 > <!-- bilingual-en:start -->
-> This proof reduces the existence of SVD completely to the real symmetric spectral theorem.  In order to prove the spectral theorem completely from the real number axiom, the basic theorem of algebra or the equivalent compactness argument should be added; MIT 18.06SC has made the spectral theorem the core result of this course.
+> This argument reduces existence of the SVD entirely to the spectral theorem for real symmetric matrices. A proof of that theorem from more elementary foundations additionally requires the fundamental theorem of algebra or an equivalent compactness argument. MIT 18.06SC treats the spectral theorem as a central result already established in the course.
 > <!-- bilingual-en:end -->
 
 ### 3.5.3 四个基本子空间在 SVD 中的归位
 <!-- bilingual-en:start -->
-*3.5.3 The homing of the four basic subspaces in SVD*
+*3.5.3 Locating the four fundamental subspaces in the SVD*
 <!-- bilingual-en:end -->
 
 若 $\operatorname{rank}(A)=r$，则
@@ -2324,7 +2296,7 @@ Each $u_iv_i^T$ takes a component of the input along the $v_i$ and outputs it al
 
 ### 3.5.4 课件例题：按[[奇异值分解与低秩近似#SVD 的三层结构|标准流程计算 SVD]]
 <!-- bilingual-en:start -->
-*3.5.4 Course example: Compute an SVD by the [[奇异值分解与低秩近似#SVD 的三层结构|standard workflow]]*
+*3.5.4 Course example: computing an SVD with the [[奇异值分解与低秩近似#SVD 的三层结构|standard workflow]]*
 <!-- bilingual-en:end -->
 
 设
@@ -2390,7 +2362,7 @@ $$
 
 所以 $u_2=(0,-1)^T$。最终
 <!-- bilingual-en:start -->
-So, $u_2=(0,-1)^T$.  final
+Thus $u_2=(0,-1)^T$, giving the final decomposition below.
 <!-- bilingual-en:end -->
 
 $$
@@ -2407,7 +2379,7 @@ Check $U^TU=V^TV=I$ and verify $U\Sigma V^T=A$ by multiplying it directly.
 > [!warning] SVD 的符号配对
 > $A^TA$ 的特征向量可乘 $-1$，但 $u_i,v_i$ 的符号必须成对协调，使 $Av_i=\sigma_i u_i$。先随意求 $U$、$V$ 再拼起来，最容易出现一列符号错误。
 > <!-- bilingual-en:start -->
-> The eigenvectors of $A^TA$ can be multiplied by $-1$, but the symbols of $u_i,v_i$ must be coordinated in pairs so that $Av_i=\sigma_i u_i$.  $U$ and $V$ are the easiest to get in a row of symbol errors.
+> An eigenvector of $A^TA$ may be multiplied by $-1$, but the signs of $u_i$ and $v_i$ must be changed together so that $Av_i=\sigma_i u_i$ remains true. Choosing $U$ and $V$ independently is a common source of a one-column sign error.
 > <!-- bilingual-en:end -->
 
 ### 3.5.5 Recitation 例题：$C=\begin{bmatrix}5&5\\-1&7\end{bmatrix}$
@@ -2421,7 +2393,7 @@ $$
 
 特征多项式
 <!-- bilingual-en:start -->
-characteristic polynomial
+The characteristic polynomial is
 <!-- bilingual-en:end -->
 
 $$
@@ -2430,7 +2402,7 @@ $$
 
 所以奇异值为 $2\sqrt5,4\sqrt5$。按从大到小排列可取
 <!-- bilingual-en:start -->
-So the singular value is $2\sqrt5,4\sqrt5$.  Sort Largest to Smallest
+The singular values are therefore $2\sqrt5$ and $4\sqrt5$. Ordering them from largest to smallest, take
 <!-- bilingual-en:end -->
 
 $$
@@ -2481,8 +2453,7 @@ The last matrix is $V^T$, not $V$; this is the focus of the size and transpose c
 > \Sigma=\begin{bmatrix}\frac{1+\sqrt5}{2}&0\\0&\frac{\sqrt5-1}{2}\end{bmatrix}.
 > $$
 > <!-- bilingual-en:start -->
-> Yes
-> verification
+> Verify the proposed singular-value matrix $\Sigma$ for the displayed Fibonacci matrix.
 > <!-- bilingual-en:end -->
 
 > [!success]- 解答
@@ -2509,18 +2480,13 @@ The last matrix is $V^T$, not $V$; this is the focus of the size and transpose c
 > $$
 > 二者均非负且按降序排列，因此给出的 $\Sigma$ 正确。
 > <!-- bilingual-en:start -->
-> Because $A=A^T$,
-> The characteristic polynomial is
-> therefore
-> The singular value is a positive square root.  Validation by Item:
-> Both are non-negative and in descending order, so the $\Sigma$ given is correct.
+> Since $A=A^T$, the displayed calculation gives $A^TA=A^2$. Its characteristic polynomial is $\lambda^2-3\lambda+1$, so the eigenvalues are $(3\pm\sqrt5)/2$. Singular values are the nonnegative square roots of these eigenvalues. Squaring the two proposed diagonal entries gives exactly those two eigenvalues, and the entries are nonnegative and in descending order, so the proposed $\Sigma$ is correct.
 > <!-- bilingual-en:end -->
 
 > [!question]- Problem 29.2：已知 $A$ 的列正交，直接写出 SVD
 > 设 $A=[w_1\ \cdots\ w_n]$ 的列彼此正交，且 $\|w_i\|=\sigma_i>0$。计算 $A^TA$，并给出 $U,\Sigma,V$。
 > <!-- bilingual-en:start -->
-> directly
-> Let the rows of $A=[w_1\ \cdots\ w_n]$ be orthogonal to each other and $\|w_i\|=\sigma_i>0$.  The $A^TA$ is calculated and the $U,\Sigma,V$ is given.
+> Let the columns of $A=[w_1\ \cdots\ w_n]$ be mutually orthogonal, with $\|w_i\|=\sigma_i>0$. Compute $A^TA$ and construct $U,\Sigma,V$ directly.
 > <!-- bilingual-en:end -->
 
 > [!success]- 解答
@@ -2547,10 +2513,7 @@ The last matrix is $V^T$, not $V$; this is the focus of the size and transpose c
 > $$
 > 从而 $\widetilde U\Sigma V^T=\widetilde U_0\Sigma_0=A$。若需要完整 SVD 且 $m>n$，最后再把 $\widetilde U$ 补成 $m\times m$ 正交矩阵，并把 $\Sigma$ 补成 $m\times n$。若某列长度为零，则它属于零空间，需要把零奇异值单独处理，不能除以 $\sigma_i=0$。
 > <!-- bilingual-en:start -->
-> Item $(i,j)$ of $A^TA$ is $w_i^Tw_j$, so
-> Since it is already diagonal in the standard basis, we obtain
-> Give a thin, unsorted decomposition $A=\widetilde U_0\Sigma_0V_0^T$.  Here the non-zero singular direction satisfies
-> These columns are orthonormal.  If the convention of "Singular values in descending order" is adhered to in the full text, and permutation matrix $P\in\mathbb R^{n\times n}$ orders $\sigma_i$ in descending order, thin SVD can be written as
+> Entry $(i,j)$ of $A^TA$ is $w_i^Tw_j$, so $A^TA$ is already diagonal in the standard basis. This gives the thin, unsorted decomposition $A=\widetilde U_0\Sigma_0V_0^T$ shown above, with $u_i=w_i/\sigma_i$. These columns are orthonormal. If singular values are to be listed in descending order, let a permutation matrix $P\in\mathbb R^{n\times n}$ reorder the $\sigma_i$; the resulting thin SVD is the one displayed above.
 > Hence $\widetilde U\Sigma V^T=\widetilde U_0\Sigma_0=A$. If a full SVD is required and $m>n$, extend $\widetilde U$ to an $m\times m$ orthogonal matrix and pad $\Sigma$ to size $m\times n$. If a column is zero, it lies in the nullspace; the corresponding zero singular value must be handled separately and must never be used as a divisor.
 > <!-- bilingual-en:end -->
 
@@ -2566,10 +2529,10 @@ The last matrix is $V^T$, not $V$; this is the focus of the size and transpose c
 - 重复奇异值对应的奇异向量不唯一，但相应子空间唯一。
 <!-- bilingual-en:start -->
 - Singular values are never negative; negative signs should be absorbed into $u_i$ or $v_i$ and cannot be written into $\Sigma$.
-- $A^TA$ and $AA^T$ have the same non-zero eigenvalues and are both $\sigma_i^2$; the number of zero eigenvalues may vary depending on $m,n$.
+- $A^TA$ and $AA^T$ have the same nonzero eigenvalues, namely the values $\sigma_i^2$; their numbers of zero eigenvalues may differ when $m\ne n$.
 - Eigenvalues are only applicable to square matrices; SVD is applicable to arbitrary matrices.
-- The singular value of a symmetric matrix is the absolute value of the eigenvalue.  Only symmetric positive half-time can directly make $U=V=Q$, $\Sigma=\Lambda$.
-- The singular vector corresponding to the repeated singular value is not unique, but the corresponding subspace is unique.
+- The singular values of a symmetric matrix are the absolute values of its eigenvalues. Only when the matrix is symmetric positive semidefinite may one directly take $U=V=Q$ and $\Sigma=\Lambda$.
+- Singular vectors within a repeated-singular-value subspace are not unique, but the subspace itself is unique.
 <!-- bilingual-en:end -->
 
 ### 3.5.8 三道自检题
@@ -2580,7 +2543,7 @@ The last matrix is $V^T$, not $V$; this is the focus of the size and transpose c
 > [!question]- 自检 1（尺寸）
 > $A\in\mathbb R^{4\times2}$ 的完整 SVD 中，$U,\Sigma,V$ 的尺寸分别是什么？
 > <!-- bilingual-en:start -->
-> What is the size of the $U,\Sigma,V$ in the full SVD of the $A\in\mathbb R^{4\times2}$?
+> What are the dimensions of $U,\Sigma,V$ in the full SVD of $A\in\mathbb R^{4\times2}$?
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
@@ -2592,19 +2555,19 @@ The last matrix is $V^T$, not $V$; this is the focus of the size and transpose c
 > [!question]- 自检 2（子空间）
 > 哪些奇异向量张成 $N(A)$？
 > <!-- bilingual-en:start -->
-> Which singular vectors are $N(A)$?
+> Which singular vectors span $N(A)$?
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
 > 与零奇异值对应的右奇异向量，即 $v_{r+1},\ldots,v_n$。
 > <!-- bilingual-en:start -->
-> The right singular vector corresponding to zero singular value is $v_{r+1},\ldots,v_n$.
+> The right singular vectors corresponding to zero singular values, $v_{r+1},\ldots,v_n$, span $N(A)$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 3（证明）
 > 证明 $\|A\|_2=\max_{\|x\|=1}\|Ax\|=\sigma_1$。
 > <!-- bilingual-en:start -->
-> Proof $\|A\|_2=\max_{\|x\|=1}\|Ax\|=\sigma_1$.
+> Prove that $\|A\|_2=\max_{\|x\|=1}\|Ax\|=\sigma_1$.
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
@@ -2614,13 +2577,12 @@ The last matrix is $V^T$, not $V$; this is the focus of the size and transpose c
 > $$
 > 取 $x=v_1$ 时等号成立。
 > <!-- bilingual-en:start -->
-> Write $x=Vy$, then $\|y\|=1$, and
-> The equal sign holds when $x=v_1$ is taken.
+> Write $x=Vy$. Then $\|y\|=1$, and the displayed inequality gives $\|Ax\|\le\sigma_1$. Equality is attained by taking $x=v_1$.
 > <!-- bilingual-en:end -->
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 $$
@@ -2636,28 +2598,22 @@ $$
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 本节要回答：矩阵为什么不是线性变换本身，而是线性变换在选定输入基和输出基下的坐标表示？怎样从基向量的像逐列构造矩阵？
 <!-- bilingual-en:start -->
-In this section, we will answer: Why is the matrix not a linear transformation per se, but a coordinate representation of the linear transformation in selected input and output bases?  How to construct the matrix from the image of the basis vector column by column?
+This section asks why a matrix is not the linear transformation itself but its coordinate representation in chosen input and output bases, and how to construct that matrix column by column from the images of the input basis vectors.
 <!-- bilingual-en:end -->
 
 前置知识：向量空间、基、坐标向量、矩阵乘法。设 $T:V\to W$，$\dim V=n$、$\dim W=m$；选定基后，$[T]$ 的尺寸是 $m\times n$。
 <!-- bilingual-en:start -->
-Prerequisite knowledge: vector space, basis, coordinate vector, matrix multiplication.  Suppose $T:V\to W$, $\dim V=n$, $\dim W=m$; the size of $[T]$ is $m\times n$ when the basis is selected.
+Prerequisites: vector spaces, bases, coordinate vectors, and matrix multiplication. If $T:V\to W$, $\dim V=n$, and $\dim W=m$, then after bases are chosen the matrix $[T]$ has size $m\times n$.
 <!-- bilingual-en:end -->
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.6sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S06_Lecture_Lecture_30_Linear_Transformations_and_their_Matrices.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S06_Recitation_Problem_Solving_Linear_Transformations.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.6prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.6sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:start -->
-Data portal: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.6sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S06_Lecture_Lecture_30_Linear_Transformations_and_their_Matrices.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S06_Recitation_Problem_Solving_Linear_Transformations.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.6prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.6sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:end -->
 
 关联卡片：[[线性变换与换基#线性变换与矩阵表示|线性变换]]、[[线性方程组与四个基本子空间#基、维数与秩|基]]、[[线性变换与换基#换基与相似|换基]]。
-<!-- bilingual-en:start -->
-Associated cards: [[线性变换与换基#线性变换与矩阵表示|linear transformations]], [[线性方程组与四个基本子空间#基、维数与秩|bases]], [[线性变换与换基#换基与相似|change of basis]].
-<!-- bilingual-en:end -->
 
 ### 3.6.1 定义与立刻可推出的性质
 <!-- bilingual-en:start -->
@@ -2670,12 +2626,12 @@ Associated cards: [[线性变换与换基#线性变换与矩阵表示|linear tra
 > T(cv+dw)=cT(v)+dT(w).
 > $$
 > <!-- bilingual-en:start -->
-> $T:V\to W$ is called linear transformation, if for all $v,w\in V$ and scalar $c,d\in\mathbb F$,
+> A map $T:V\to W$ is a linear transformation if, for all $v,w\in V$ and all scalars $c,d\in\mathbb F$, it satisfies the displayed linearity identity.
 > <!-- bilingual-en:end -->
 
 把 $c=d=1$ 得加法保持。要得到齐次性，在定义中令 $d=0$：
 <!-- bilingual-en:start -->
-Keep the addition of $c=d=1$.  For homogeneity, let $d=0$:
+Setting $c=d=1$ gives additivity. To obtain homogeneity, set $d=0$:
 <!-- bilingual-en:end -->
 
 $$
@@ -2684,7 +2640,7 @@ $$
 
 再令 $c=0$，得到
 <!-- bilingual-en:start -->
-And then $c=0$, get
+Setting $c=0$ also gives
 <!-- bilingual-en:end -->
 
 $$
@@ -2717,7 +2673,7 @@ $$
 
 线性性给出
 <!-- bilingual-en:start -->
-linearity
+By linearity,
 <!-- bilingual-en:end -->
 
 $$
@@ -2726,12 +2682,12 @@ $$
 
 因此只需知道 $n$ 个基向量的像，就知道 $T$ 在所有向量上的作用。
 <!-- bilingual-en:start -->
-So we only need to know the image of the $n$ basis vectors, and we can know the function of $T$ on all vectors.
+Thus the images of the $n$ basis vectors determine the value of $T$ on every vector in $V$.
 <!-- bilingual-en:end -->
 
 再选 $W$ 的基 $\mathcal C=(w_1,\ldots,w_m)$，把每个像展开：
 <!-- bilingual-en:start -->
-Then choose $W$'s basis $\mathcal C=(w_1,\ldots,w_m)$ and expand each image:
+Now choose a basis $\mathcal C=(w_1,\ldots,w_m)$ of $W$ and expand each image:
 <!-- bilingual-en:end -->
 
 $$
@@ -2740,7 +2696,7 @@ $$
 
 定义
 <!-- bilingual-en:start -->
-defined
+Define
 <!-- bilingual-en:end -->
 
 $$
@@ -2754,7 +2710,7 @@ $$
 
 第 $j$ 列正是 $[T(v_j)]_{\mathcal C}$。于是对任意 $v$，
 <!-- bilingual-en:start -->
-The $j$ column is exactly $[T(v_j)]_{\mathcal C}$.  So any $v$,
+The $j$th column is exactly $[T(v_j)]_{\mathcal C}$. Therefore, for every $v$,
 <!-- bilingual-en:end -->
 
 $$
@@ -2764,22 +2720,22 @@ $$
 
 这个箭头记号明确区分输入基与输出基，可以避免“到底乘哪个换基矩阵”的混乱。
 <!-- bilingual-en:start -->
-This arrow mark clearly distinguishes the input basis from the output basis, and can avoid the confusion of "which basis matrix to multiply".
+The arrow notation explicitly distinguishes the input basis from the output basis and prevents ambiguity about which change-of-basis matrix is required.
 <!-- bilingual-en:end -->
 
 ### 3.6.3 课件例子
 <!-- bilingual-en:start -->
-*3.6.3 Courseware Examples*
+*3.6.3 Examples from the course materials*
 <!-- bilingual-en:end -->
 
 #### 例 1：逆时针旋转 $45^\circ$
 <!-- bilingual-en:start -->
-*Example 1: Rotate $45^\circ$ CCW*
+*Example 1: counterclockwise rotation by $45^\circ$*
 <!-- bilingual-en:end -->
 
 Lecture 30 从旋转说明“矩阵的列是基向量的像”。标准基下
 <!-- bilingual-en:start -->
-Lecture 30 explains from rotation that "columns of a matrix are images of a basis vector."  standard basis
+Lecture 30 uses rotation to illustrate that the columns of a matrix are the images of the input basis vectors. In the standard basis,
 <!-- bilingual-en:end -->
 
 $$
@@ -2797,12 +2753,12 @@ The first column is $R e_1=(1/\sqrt2,1/\sqrt2)^T$, and the second column is $R e
 
 #### 补充例：反射
 <!-- bilingual-en:start -->
-*Supplementary example: Reflection*
+*Supplementary example: reflection*
 <!-- bilingual-en:end -->
 
 标准基下
 <!-- bilingual-en:start -->
-standard basis
+In the standard basis,
 <!-- bilingual-en:end -->
 
 $$
@@ -2811,17 +2767,17 @@ $$
 
 把 $(x,y)$ 映到 $(x,-y)$，即关于 $x$ 轴反射。两个标准基向量分别映到 $e_1$ 与 $-e_2$，恰好形成矩阵两列。
 <!-- bilingual-en:start -->
-The $(x,y)$ is mapped to the $(x,-y)$, i.e., the reflection on the $x$ axis.  The two standard basis vectors are mapped to $e_1$ and $-e_2$, respectively, forming two columns of the matrix.
+This maps $(x,y)$ to $(x,-y)$, a reflection across the $x$-axis. The two standard basis vectors map to $e_1$ and $-e_2$, respectively, and those images form the two columns of the matrix.
 <!-- bilingual-en:end -->
 
 #### 例 2：投影到 $45^\circ$ 直线
 <!-- bilingual-en:start -->
-*Example 2: Projection to a $45^\circ$ Line*
+*Example 2: projection onto a line at $45^\circ$*
 <!-- bilingual-en:end -->
 
 令 $a=(1,1)^T$。标准基下正交投影矩阵是
 <!-- bilingual-en:start -->
-Get $a=(1,1)^T$.  Orthogonal projection matrix in standard basis is
+Let $a=(1,1)^T$. In the standard basis, the orthogonal projection matrix is
 <!-- bilingual-en:end -->
 
 $$
@@ -2840,7 +2796,7 @@ $$
 
 同一个变换的矩阵变成
 <!-- bilingual-en:start -->
-The Matrix of the Same Transformation becomes
+the matrix of the same transformation becomes
 <!-- bilingual-en:end -->
 
 $$
@@ -2854,7 +2810,7 @@ The transformation itself has not changed; only its coordinate representation ha
 
 #### 例 3：微分算子
 <!-- bilingual-en:start -->
-*Example 3: Differential Operator*
+*Example 3: the differentiation operator*
 <!-- bilingual-en:end -->
 
 令 $V=P_2$ 为次数不超过 $2$ 的多项式空间，输入基 $(1,x,x^2)$；输出落在 $P_1$，取基 $(1,x)$。微分算子 $D(p)=p'$ 满足
@@ -2878,12 +2834,12 @@ $$
 
 尺寸 $2\times3$ 与“输入维数 3、输出维数 2”完全一致。
 <!-- bilingual-en:start -->
-The dimension $2\times3$ is exactly the same as the "input dimension 3, output dimension 2".
+The size $2\times3$ agrees exactly with input dimension $3$ and output dimension $2$.
 <!-- bilingual-en:end -->
 
 ### 3.6.4 复合、逆、核与像
 <!-- bilingual-en:start -->
-*3.6.4 Composite, inverse, nuclear and imaging*
+*3.6.4 Composition, inverses, kernels, and images*
 <!-- bilingual-en:end -->
 
 若 $T_1:V\to W$、$T_2:W\to Z$，并且中间空间使用同一基，则
@@ -2897,7 +2853,7 @@ $$
 
 顺序与函数复合相反：先做 $T_1$，矩阵写在右边。
 <!-- bilingual-en:start -->
-The order is the opposite of function composition: $T_1$ first, with the matrix written on the right.
+The matrix for the transformation applied first, $T_1$, appears on the right, matching the usual right-to-left order of function composition.
 <!-- bilingual-en:end -->
 
 若 $T:V\to W$ 双射，则 $\dim V=\dim W$，矩阵方阵可逆，而且
@@ -2929,12 +2885,12 @@ $$
 
 ### 3.6.5 Recitation：转置算子在两组基下
 <!-- bilingual-en:start -->
-*3.6.5 Recitation: The transpose operator in two different bases*
+*3.6.5 Recitation: the transpose operator in two different bases*
 <!-- bilingual-en:end -->
 
 在 $M_{2\times2}(\mathbb R)$ 上定义 $T(A)=A^T$。因为
 <!-- bilingual-en:start -->
-Define $T(A)=A^T$ on $M_{2\times2}(\mathbb R)$.  because
+Define $T(A)=A^T$ on $M_{2\times2}(\mathbb R)$. Because
 <!-- bilingual-en:end -->
 
 $$
@@ -2943,12 +2899,12 @@ $$
 
 所以 $T$ 线性；又 $(A^T)^T=A$，故 $T^{-1}=T$。
 <!-- bilingual-en:start -->
-So $T$ linear; and $(A^T)^T=A$, so $T^{-1}=T$.
+$T$ is linear; moreover, $(A^T)^T=A$, so $T^{-1}=T$.
 <!-- bilingual-en:end -->
 
 标准基
 <!-- bilingual-en:start -->
-standard basis
+In the standard basis
 <!-- bilingual-en:end -->
 
 $$
@@ -2972,7 +2928,7 @@ $$
 
 改用三个对称矩阵加一个斜对称矩阵组成的基
 <!-- bilingual-en:start -->
-Instead, a basis consisting of three symmetric matrices plus a skew symmetric matrix is used
+Now use a basis consisting of three symmetric matrices and one skew-symmetric matrix:
 <!-- bilingual-en:end -->
 
 $$
@@ -2982,7 +2938,7 @@ $$
 
 则前三个满足 $T(w_i)=w_i$，最后一个满足 $T(w_4)=-w_4$，故
 <!-- bilingual-en:start -->
-the first three satisfy $T(w_i)=w_i$, the last satisfy $T(w_4)=-w_4$, therefore
+The first three vectors satisfy $T(w_i)=w_i$, while the last satisfies $T(w_4)=-w_4$. Therefore,
 <!-- bilingual-en:end -->
 
 $$
@@ -3002,7 +2958,7 @@ This also reveals that $M_{2\times2}$ decomposes into symmetric and skew-symmetr
 > [!question]- Problem 30.1：极坐标中的径向放大是否线性？
 > $T(r,\theta)=(2r,\theta)$：判断线性，改写为直角坐标，求矩阵。
 > <!-- bilingual-en:start -->
-> $T(r,\theta)=(2r,\theta)$: Judging the linearity, rewriting it to rectangular coordinates, and calculating the matrix.
+> For $T(r,\theta)=(2r,\theta)$, determine whether the map is linear, rewrite it in Cartesian coordinates, and find its matrix.
 > <!-- bilingual-en:end -->
 
 > [!success]- 解答
@@ -3046,9 +3002,7 @@ This also reveals that $M_{2\times2}$ decomposes into symmetric and skew-symmetr
 > $$
 > 取 $c=2,y=1$ 即可看出失败。另一个例子是 $T(x,y)=(x,|y|)$：它保持零，却不满足 $T(-v)=-T(v)$。
 > <!-- bilingual-en:start -->
-> For example
-> It satisfies $T(0,0)=(0,0)$, but typically
-> Taking $c=2$ and $y=1$ exhibits the failure. Another example is $T(x,y)=(x,|y|)$: it maps zero to zero but does not satisfy $T(-v)=-T(v)$.
+> For example, the displayed map satisfies $T(0,0)=(0,0)$ but generally fails homogeneity. Taking $c=2$ and $y=1$ makes the failure explicit. Another example is $T(x,y)=(x,|y|)$: it fixes zero but does not satisfy $T(-v)=-T(v)$.
 > <!-- bilingual-en:end -->
 
 ### 3.6.7 边界、反例与易错点
@@ -3061,7 +3015,7 @@ This also reveals that $M_{2\times2}$ decomposes into symmetric and skew-symmetr
 - 同一个线性变换在不同基下矩阵不同；反过来，同一矩阵若作用在不同坐标约定下，也可能代表不同几何变换。
 - 仿射映射 $x\mapsto Ax+b$ 在 $b\ne0$ 时不是线性映射，但可在增广坐标中表示。
 <!-- bilingual-en:start -->
-- $T(0)=0$ is a necessary and not a sufficient condition for linearity.
+- $T(0)=0$ is necessary but not sufficient for linearity.
 - “The columns of a matrix are the images of basis vectors” is complete only after both the input and output bases have been specified.
 - The same linear transformation has different matrices in different bases. Conversely, the same numerical matrix can represent different geometric transformations under different coordinate conventions.
 - The affine map $x\mapsto Ax+b$ is not linear when $b\ne0$, but can be represented in augmented coordinates.
@@ -3098,18 +3052,18 @@ This also reveals that $M_{2\times2}$ decomposes into symmetric and skew-symmetr
 > [!question]- 自检 3（复合）
 > $T_1$ 的矩阵为 $A$，$T_2$ 的矩阵为 $B$，先做 $T_1$ 再做 $T_2$ 的矩阵是什么？
 > <!-- bilingual-en:start -->
-> The matrix of $T_1$ is $A$, the matrix of $T_2$ is $B$. What is the matrix of $T_1$ and $T_2$?
+> The matrix of $T_1$ is $A$ and that of $T_2$ is $B$. What matrix represents applying $T_1$ first and then $T_2$?
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
 > $BA$，前提是 $A$ 的输出坐标基与 $B$ 的输入坐标基一致。
 > <!-- bilingual-en:start -->
-> $BA$, provided that the output coordinate of $A$ is consistent with the input coordinate of $B$.
+> $BA$, provided that the output basis used for $A$ is the same as the input basis used for $B$.
 > <!-- bilingual-en:end -->
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 $$
@@ -3124,7 +3078,7 @@ $$
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 本节要回答：同一个向量如何在两组基之间换坐标？同一个线性算子的矩阵为何通过相似变换改变？为什么换到 Fourier、wavelet 或 SVD 基后，图像可以只保留少量系数？
@@ -3138,14 +3092,8 @@ Prerequisites: bases and coordinates, linear transformations, similarity, orthog
 <!-- bilingual-en:end -->
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.7sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S07_Lecture_Lecture_31_Change_of_Basis_Image_Compression.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S07_Recitation_Problem_Solving_Change_of_Basis.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.7prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.7sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:start -->
-Data portal: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.7sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S07_Lecture_Lecture_31_Change_of_Basis_Image_Compression.pdf#page=1|Lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S07_Recitation_Problem_Solving_Change_of_Basis.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.7prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.7sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:end -->
 
 关联卡片：[[线性变换与换基#换基与相似|换基]]、[[线性变换与换基#换基与相似|相似矩阵]]、[[奇异值分解与低秩近似#SVD 的三层结构|奇异值分解]]、[[特征值、对角化与线性动力系统#对角化与矩阵幂|Fourier 展开]]。
-<!-- bilingual-en:start -->
-Associated cards: [[线性变换与换基#换基与相似|change of basis]], [[线性变换与换基#换基与相似|similarity transformations]], [[奇异值分解与低秩近似#SVD 的三层结构|singular value decomposition]], [[特征值、对角化与线性动力系统#对角化与矩阵幂|diagonalization]].
-<!-- bilingual-en:end -->
 
 ### 3.7.1 向量换基：先说明矩阵的方向
 <!-- bilingual-en:start -->
@@ -3172,7 +3120,7 @@ $$
 
 所以旧基坐标满足
 <!-- bilingual-en:start -->
-So the old coordinates are satisfied
+Therefore the old-coordinate vector is
 <!-- bilingual-en:end -->
 
 $$
@@ -3181,7 +3129,7 @@ $$
 
 反向为
 <!-- bilingual-en:start -->
-Reverse To
+Conversely,
 <!-- bilingual-en:end -->
 
 $$
@@ -3208,7 +3156,7 @@ $$
 
 给出；在标准实坐标中是 $c_i=w_i^Tx$，在标准复坐标中是 $c_i=w_i^*x$。
 <!-- bilingual-en:start -->
-Given; $c_i=w_i^Tx$ in standard real coordinates and $c_i=w_i^*x$ in standard complex coordinates.
+Thus $c_i=w_i^Tx$ in standard real coordinates and $c_i=w_i^*x$ in standard complex coordinates.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit3-change-of-basis.png|820]]
@@ -3216,26 +3164,28 @@ Given; $c_i=w_i^Tx$ in standard real coordinates and $c_i=w_i^*x$ in standard co
 > [!warning] 主动变换与被动换基
 > $Wx$ 若把 $W$ 看作一个线性算子，是主动地移动向量；式 (1) 中 $W$ 是坐标翻译器，几何向量并未改变。两者数值公式可能相同，含义不同。
 > <!-- bilingual-en:start -->
-> If $Wx$ regards $W$ as a linear operator, it is an active moving vector; in formula (1), $W$ is a coordinate translator, and the geometric vector does not change.  The two may have the same numerical formula but different meanings.
+> When $W$ is interpreted as a linear operator, $Wx$ actively moves the geometric vector. In formula (1), however, $W$ is a coordinate converter and the geometric vector itself does not change. The numerical formulas may look identical even though their meanings differ.
 > <!-- bilingual-en:end -->
 
 ### 3.7.2 线性算子的换基公式
 <!-- bilingual-en:start -->
-*3.7.2 Basis Conversion Formula for Linear Operators*
+*3.7.2 Change-of-basis formula for linear operators*
 <!-- bilingual-en:end -->
 
 设同一个 $T:V\to V$ 在旧基 $\mathcal E$ 下矩阵为 $A$，在新基 $\mathcal W$ 下矩阵为 $B$。从新坐标 $c=[x]_{\mathcal W}$ 出发：
 <!-- bilingual-en:start -->
-Suppose that the same $T:V\to V$ matrix is $A$ in the old basis $\mathcal E$ and $B$ in the new basis $\mathcal W$.  From the new coordinates $c=[x]_{\mathcal W}$:
+Suppose the same operator $T:V\to V$ has matrix $A$ in the old basis $\mathcal E$ and matrix $B$ in the new basis $\mathcal W$. Starting from the new-coordinate vector $c=[x]_{\mathcal W}$:
 <!-- bilingual-en:end -->
 
 1. 用 $Wc$ 转为旧坐标；
 2. 用 $A$ 作用，得到 $AWc$；
 3. 用 $W^{-1}$ 转回新坐标。
 <!-- bilingual-en:start -->
-1. Use $Wc$ to change to the old coordinates;
-2. $AWc$ was obtained by the action of $A$;
-3. Use $W^{-1}$ to return to the new coordinates.
+
+&nbsp;
+**1.** Use $Wc$ to convert to old coordinates;<br>
+**2.** Apply $A$, producing $AWc$;<br>
+**3.** Use $W^{-1}$ to convert the result back to new coordinates.<br>
 <!-- bilingual-en:end -->
 
 因此
@@ -3249,7 +3199,7 @@ $$
 
 对所有 $c$ 成立，即
 <!-- bilingual-en:start -->
-for all $c$, that is,
+for every $c$. Hence,
 <!-- bilingual-en:end -->
 
 $$
@@ -3258,7 +3208,7 @@ $$
 
 这就是相似变换的坐标意义。若 $W$ 的列是 $A$ 的特征向量，则 $B=\Lambda$；若列是广义特征向量，则 $B=J$。
 <!-- bilingual-en:start -->
-This is the coordinate meaning of similarity transformation.  $B=\Lambda$ if the column of $W$ is the eigenvector of $A$, and $B=J$ if the column is the generalized eigenvector.
+This is the coordinate meaning of a similarity transformation. If the columns of $W$ are eigenvectors of $A$, then $B=\Lambda$; if they form a basis of generalized eigenvectors, then $B=J$.
 <!-- bilingual-en:end -->
 
 ### 3.7.3 图像为什么是向量，压缩为什么是换基
@@ -3293,32 +3243,34 @@ $$
 
 好的压缩基同时满足：
 <!-- bilingual-en:start -->
-A useful compression basis should satisfy both of the following:
+A useful compression basis should satisfy all of the following:
 <!-- bilingual-en:end -->
 
 1. $W$ 与 $W^{-1}$ 乘法快；
 2. 典型信号的系数稀疏或快速衰减；
 3. 丢弃小系数造成的视觉误差可控。
 <!-- bilingual-en:start -->
-1. $W$ and $W^{-1}$ multiplication fast;
-2. Coefficient sparse or fast attenuation of typical signal;
-3. The visual error caused by discarding small coefficients can be controlled.
+
+&nbsp;
+**1.** multiplication by $W$ and $W^{-1}$ is fast;<br>
+**2.** typical signals have sparse or rapidly decaying coefficients; and<br>
+**3.** discarding small coefficients introduces a controllable visual error.<br>
 <!-- bilingual-en:end -->
 
 Fourier 基擅长全局频率；Haar wavelet 同时具有尺度和位置局部性。JPEG 实际主要使用分块离散余弦变换，而不是直接使用复 Fourier 矩阵；课程用 Fourier 思想解释其结构。
 <!-- bilingual-en:start -->
-The Fourier basis is good at global frequency; the Haar wavelet has both scale and location locality.  In practice, JPEG mainly uses the block discrete cosine transform rather than the complex Fourier matrix; the course explains its structure with the idea of Fourier.
+The Fourier basis captures global frequency content, whereas Haar wavelets are localized in both scale and position. In practice, JPEG primarily uses blockwise discrete cosine transforms rather than the complex Fourier matrix; the course uses Fourier ideas to explain the underlying structure.
 <!-- bilingual-en:end -->
 
 ### 3.7.4 课程外补充：SVD 的[[奇异值分解与低秩近似#低秩近似与压缩|低秩近似与压缩]]
 <!-- bilingual-en:start -->
-*3.7.4 Out-of-Course Replenishment: [[奇异值分解与低秩近似#低秩近似与压缩|Low-rank Approximation and Compression]] for SVD*
+*3.7.4 Supplement: SVD-based [[奇异值分解与低秩近似#低秩近似与压缩|low-rank approximation and compression]]*
 <!-- bilingual-en:end -->
 
 > [!note] 与 Lecture 31 的边界
 > 官方 Lecture 31 的图像压缩主线是 Fourier/Haar 等固定基中的坐标稀疏化。下面的 Eckart–Young 低秩近似是基于 SVD 的自然延伸，用来补充“矩阵图像”的另一种压缩视角，不把它误记为本讲采用的证明或算法。
 > <!-- bilingual-en:start -->
-> The main line of image compression in the official Lecture 31 is coordinate sparse in a fixed basis such as Fourier/Haar.  The following Eckart-Young low rank approximation is a natural extension of SVD, which is used to complement another compression perspective of "matrix images", without misrepresenting it as the proof or algorithm used in this paper.
+> Official Lecture 31 develops image compression through sparse coordinates in a fixed Fourier or Haar basis. The Eckart–Young low-rank approximation below is a natural SVD extension that gives a second perspective for images represented as matrices; it should not be mistaken for the proof or algorithm taught in that lecture.
 > <!-- bilingual-en:end -->
 
 若把灰度图本身看成矩阵 $A\in\mathbb R^{m\times n}$，SVD 给出
@@ -3332,7 +3284,7 @@ $$
 
 对 $0\le k<r$，保留前 $k$ 项得到秩至多 $k$ 的近似
 <!-- bilingual-en:start -->
-For $0\le k<r$, retaining the previous $k$ term yields an approximation of rank up to $k$
+For $0\le k<r$, retaining the first $k$ terms gives an approximation of rank at most $k$:
 <!-- bilingual-en:end -->
 
 $$
@@ -3341,7 +3293,7 @@ $$
 
 Eckart–Young 定理说明，在所有秩至多 $k$ 的矩阵中，$A_k$ 同时最小化谱范数误差与 Frobenius 范数误差：
 <!-- bilingual-en:start -->
-Eckart-Young's theorem shows that $A_k$ minimizes both the spectral norm error and the $k$ norm error in all matrices of rank up to Frobenius:
+The Eckart–Young theorem states that, among all matrices of rank at most $k$, $A_k$ minimizes both the spectral-norm error and the Frobenius-norm error:
 <!-- bilingual-en:end -->
 
 $$
@@ -3354,12 +3306,12 @@ $$
 
 若 $k\ge r$，则 $A_k=A$，上述两种误差都为零。Eckart–Young 的完整极小化证明通常放在后续数值线性代数课程；这里把结论作为拓展而不冒充 Lecture 31 的内容。存储 $A_k$ 约需 $k(m+n+1)$ 个数；只有当它显著小于 $mn$ 时才真正节省空间。
 <!-- bilingual-en:start -->
-If $k\ge r$, $A_k=A$, both errors are zero.  Complete minimization proofs for Eckart-Young are usually presented in a subsequent course on numerical linear algebra; here the conclusion is taken as an extension without pretending to be the content of Lecture 31.  It takes about $k(m+n+1)$ to store $A_k$; it only really saves space if it is significantly smaller than $mn$.
+If $k\ge r$, then $A_k=A$ and both errors are zero. A complete proof of the Eckart–Young minimization result is usually given in a later numerical linear algebra course; here it is presented as an extension, not as content taught in Lecture 31. Storing $A_k$ requires about $k(m+n+1)$ numbers, so it saves space only when that quantity is substantially smaller than $mn$.
 <!-- bilingual-en:end -->
 
 ### 3.7.5 Recitation：插值基、换基与微分矩阵
 <!-- bilingual-en:start -->
-*3.7.5 Recitation: Interpolation, Substitution and Differential Matrices*
+*3.7.5 Recitation: interpolation bases, change of basis, and differentiation matrices*
 <!-- bilingual-en:end -->
 
 在 $P_2$ 中，设 $w_1,w_2,w_3$ 满足
@@ -3373,7 +3325,7 @@ $$
 
 也就是说，$w_1,w_2,w_3$ 是节点 $-1,0,1$ 的 Lagrange 基。
 <!-- bilingual-en:start -->
-That is, $w_1,w_2,w_3$ is the Lagrange basis of the node $-1,0,1$.
+Thus $w_1,w_2,w_3$ form the Lagrange basis associated with the nodes $-1,0,1$.
 <!-- bilingual-en:end -->
 
 #### (a) 不显式求基也能求坐标
@@ -3392,7 +3344,7 @@ $$
 
 对 $y=\alpha w_1+\beta w_2+\gamma w_3$ 在三个节点取值，立刻得
 <!-- bilingual-en:start -->
-For $y=\alpha w_1+\beta w_2+\gamma w_3$ to take the value in three nodes, immediately
+Evaluating $y=\alpha w_1+\beta w_2+\gamma w_3$ at the three nodes immediately gives
 <!-- bilingual-en:end -->
 
 $$
@@ -3444,7 +3396,7 @@ $$
 
 它的列给出
 <!-- bilingual-en:start -->
-It's listed
+Its columns give the polynomials
 <!-- bilingual-en:end -->
 
 $$
@@ -3483,7 +3435,7 @@ $$
 
 这个三矩阵乘法恰好对应“新坐标 → 旧坐标 → 微分 → 新坐标”。
 <!-- bilingual-en:start -->
-This trimatrix multiplication corresponds exactly to "new coordinates→old coordinates→differential→new coordinates".
+This product of three matrices corresponds exactly to “new coordinates → old coordinates → differentiation → new coordinates.”
 <!-- bilingual-en:end -->
 
 ### 3.7.6 Homework：完整题解
@@ -3523,11 +3475,7 @@ This trimatrix multiplication corresponds exactly to "new coordinates→old coor
 > $$
 > 八个非零正交向量自动线性无关，在八维空间中因此构成基。
 > <!-- bilingual-en:start -->
-> The $\mathbb R^8$ Haar vector given in the course can be written as
-> Vectors with different scales either have disjoint support and zero inner product, or one vector has the same number of $+1$, $-1$ on the support of another vector and the cancelation is zero.  So the two of them are orthogonal.
-> Length is
-> So the orthonormal basis is
-> The eight non-zero orthogonal vectors are automatically linearly independent and form a basis in the eight-dimensional space.
+> The Haar vectors in $\mathbb R^8$ used in the course are listed above. Two vectors at different scales either have disjoint supports, giving inner product zero, or one has equal numbers of $+1$ and $-1$ over the support of the other, so the contributions cancel. Hence the vectors are pairwise orthogonal. Their norms are the values displayed above; dividing each vector by its norm gives the stated orthonormal basis. Eight nonzero pairwise orthogonal vectors are automatically linearly independent and therefore form a basis of the eight-dimensional space.
 > <!-- bilingual-en:end -->
 
 > [!question]- Problem 31.2：为 $M_{2\times2}(\mathbb R)$ 给出两组基，并比较用途
@@ -3574,8 +3522,8 @@ This trimatrix multiplication corresponds exactly to "new coordinates→old coor
 <!-- bilingual-en:start -->
 - Before writing a change-of-basis formula, state the basis in which the columns of the matrix are expressed; do not write only "$W$" or "$W^{-1}$" without this context.
 - If the columns of $W$ are the new basis vectors expressed in the old coordinates, then $W^{-1}=W^T$ requires the coordinate matrix itself to be orthogonal—for example, both old and new bases may be orthonormal. It is not enough that the new basis is geometrically orthonormal when the old basis is arbitrary.
-- Threshold zeroing is lossy compression; invertible fundamentals do not lose information.
-- The SVD low-rank approximation is optimal for a given matrix, but calculating the full SVD can be expensive; JPEG uses fixed fast bases instead of each small block to find the global SVD.
+- Setting small coefficients to zero is lossy; an invertible change of basis by itself loses no information.
+- The truncated SVD is optimal for a given matrix and rank, but computing a full SVD can be expensive. JPEG instead uses fixed, fast transform bases rather than computing a separate global SVD for every image block.
 <!-- bilingual-en:end -->
 
 ### 3.7.8 三道自检题
@@ -3586,7 +3534,7 @@ This trimatrix multiplication corresponds exactly to "new coordinates→old coor
 > [!question]- 自检 1（方向）
 > $W$ 的列是新基向量的旧坐标。已知旧坐标 $x$，怎样求新坐标？
 > <!-- bilingual-en:start -->
-> The column of $W$ is the old coordinate of the new basis vector.  If the old coordinate $x$ is known, how do we find the new coordinate?
+> The columns of $W$ are the new basis vectors expressed in old coordinates. Given a vector's old-coordinate representation, how do we find its new-coordinate representation?
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
@@ -3621,7 +3569,7 @@ This trimatrix multiplication corresponds exactly to "new coordinates→old coor
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 $$
@@ -3636,7 +3584,7 @@ $$
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 本节要回答：长方矩阵何时有左逆或右逆？秩亏时怎样利用 SVD 定义在行空间—列空间之间真正可逆的部分？伪逆为何同时给出最小二乘解和最小范数解？
@@ -3646,18 +3594,12 @@ This section asks: when does a rectangular matrix have a left or right inverse? 
 
 前置知识：秩、四个基本子空间、最小二乘、SVD。始终设 $A\in\mathbb R^{m\times n}$、$\operatorname{rank}(A)=r$。
 <!-- bilingual-en:start -->
-Prerequisite knowledge: rank, four basic subspaces, least squares, SVD.  Always set $A\in\mathbb R^{m\times n}$, $\operatorname{rank}(A)=r$.
+Prerequisites: rank, the four fundamental subspaces, least squares, and the SVD. Throughout this section, let $A\in\mathbb R^{m\times n}$ with $\operatorname{rank}(A)=r$.
 <!-- bilingual-en:end -->
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.8sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S08_Lecture_Lecture_33_Left_and_Right_Inverses_Pseudoinverse.pdf#page=1|Lecture 33 transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S08_Recitation_Problem_Solving_Pseudoinverses.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.8prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.8sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:start -->
-Data portal: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.8sum.pdf#page=1|Summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S08_Lecture_Lecture_33_Left_and_Right_Inverses_Pseudoinverse.pdf#page=1|Lecture 33 transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S08_Recitation_Problem_Solving_Pseudoinverses.pdf#page=1|Recitation p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses3.8prob.pdf#page=1|Homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses3.8sol.pdf#page=1|Official solution p.1]]
-<!-- bilingual-en:end -->
 
 关联卡片：[[广义逆与最小范数解#左逆、右逆与可逆|左逆]]、[[广义逆与最小范数解#左逆、右逆与可逆|右逆]]、[[广义逆与最小范数解#Moore–Penrose 伪逆|伪逆]]、[[正交投影与最小二乘#最小二乘与正规方程|最小二乘]]、[[正交投影与最小二乘#投影矩阵|正交投影]]。
-<!-- bilingual-en:start -->
-Associated cards: [[广义逆与最小范数解#左逆、右逆与可逆|left inverse]], [[广义逆与最小范数解#左逆、右逆与可逆|right inverse]], [[广义逆与最小范数解#Moore–Penrose 伪逆|pseudoinverse]], [[正交投影与最小二乘#最小二乘与正规方程|least squares]], and [[正交投影与最小二乘#投影矩阵|orthogonal projection]].
-<!-- bilingual-en:end -->
 
 ### 3.8.1 左逆与满列秩
 <!-- bilingual-en:start -->
@@ -3680,7 +3622,7 @@ then $L$ is a left inverse of $A$. If $Ax=0$, multiplying on the left by $L$ giv
 
 反之，若 $r=n$，则 $A^TA$ 正定可逆，并且
 <!-- bilingual-en:start -->
-Conversely, if $r=n$, then $A^TA$ is positive definite invertible, and
+Conversely, if $r=n$, then $A^TA$ is positive definite and therefore invertible, and
 <!-- bilingual-en:end -->
 
 $$
@@ -3689,7 +3631,7 @@ $$
 
 满足
 <!-- bilingual-en:start -->
-satisfied
+satisfies
 <!-- bilingual-en:end -->
 
 $$
@@ -3731,7 +3673,7 @@ Then $R$ is a right inverse of $A$. Every $b\in\mathbb R^m$ equals $A(Rb)$, so $
 
 反之，若 $r=m$，则 $AA^T$ 正定可逆，且
 <!-- bilingual-en:start -->
-Conversely, if $r=m$, then $AA^T$ is positive definite invertible, and
+Conversely, if $r=m$, then $AA^T$ is positive definite and therefore invertible, and
 <!-- bilingual-en:end -->
 
 $$
@@ -3765,7 +3707,7 @@ Then $Ax=b$ is solvable for every $b$. If $n>m$, however, $\dim N(A)=n-m>0$, so 
 
 设完整 SVD 为
 <!-- bilingual-en:start -->
-Set full SVD to
+Write the full SVD as
 <!-- bilingual-en:end -->
 
 $$
@@ -3786,7 +3728,7 @@ $$
 
 它的作用是
 <!-- bilingual-en:start -->
-Its role is
+On the singular-vector basis, it acts by
 <!-- bilingual-en:end -->
 
 $$
@@ -3795,7 +3737,7 @@ $$
 
 并把 $N(A^T)$ 中的分量映为零。于是
 <!-- bilingual-en:start -->
-and map the components in $N(A^T)$ to zero.  therefore
+and maps every component in $N(A^T)$ to zero. Therefore,
 <!-- bilingual-en:end -->
 
 $$
@@ -3815,17 +3757,17 @@ $$
 
 是投影到 $C(A)$ 的正交投影。
 <!-- bilingual-en:start -->
-is the orthogonal projection projected to the $C(A)$.
+is the orthogonal projector onto $C(A)$.
 <!-- bilingual-en:end -->
 
 #### 为什么行空间到列空间的映射可逆
 <!-- bilingual-en:start -->
-*Why the Mapping of Row Space to Column Space Is Invertible*
+*Why the map from row space to column space is invertible*
 <!-- bilingual-en:end -->
 
 限制映射
 <!-- bilingual-en:start -->
-limit mapping
+Consider the restricted map
 <!-- bilingual-en:end -->
 
 $$
@@ -3843,7 +3785,7 @@ $$
 
 唯一分解 $z=z_r+z_0$，其中 $z_r\in C(A^T)$、$z_0\in N(A)$。于是
 <!-- bilingual-en:start -->
-Unique split $z=z_r+z_0$ where $z_r\in C(A^T)$, $z_0\in N(A)$.  therefore
+Decompose $z$ uniquely as $z=z_r+z_0$, where $z_r\in C(A^T)$ and $z_0\in N(A)$. Therefore,
 <!-- bilingual-en:end -->
 
 $$
@@ -3866,7 +3808,7 @@ $$
 
 所以 $x-y\in N(A)$；同时行空间对子法封闭，故 $x-y\in C(A^T)$。而
 <!-- bilingual-en:start -->
-So $x-y\in N(A)$;The simultaneous row space is closed to sublaws, so $x-y\in C(A^T)$. And
+Thus $x-y\in N(A)$. Because the row space is closed under subtraction, we also have $x-y\in C(A^T)$. Moreover,
 <!-- bilingual-en:end -->
 
 $$
@@ -3880,12 +3822,12 @@ Their intersection contains only the zero vector, so $x-y=0$. The pseudoinverse 
 
 ### 3.8.4 Moore–Penrose 四条件
 <!-- bilingual-en:start -->
-*3.8.4 Moore-Penrose Quad Condition*
+*3.8.4 The four Moore–Penrose conditions*
 <!-- bilingual-en:end -->
 
 $A^+$ 是唯一满足下列四式的矩阵：
 <!-- bilingual-en:start -->
-$A^+$ is the only matrix that satisfies the following four expressions:
+$A^+$ is the unique matrix satisfying the following four identities:
 <!-- bilingual-en:end -->
 
 $$
@@ -3903,7 +3845,7 @@ The first two identities say that moving through the invertible part and back ch
 
 ### 3.8.5 伪逆同时解决两类“最佳解”
 <!-- bilingual-en:start -->
-*3.8.5 How the pseudoinverse solves two kinds of “best solution”*
+*3.8.5 How the pseudoinverse solves two kinds of “best” problem*
 <!-- bilingual-en:end -->
 
 对任意 $b\in\mathbb R^m$，令
@@ -3917,7 +3859,7 @@ $$
 
 则
 <!-- bilingual-en:start -->
-then
+Then
 <!-- bilingual-en:end -->
 
 $$
@@ -3935,12 +3877,12 @@ $$
 
 所以 $A^+b$ 还是所有最小二乘解中范数最小者。
 <!-- bilingual-en:start -->
-So $A^+b$ is also the least norm of all the least squares solutions.
+Therefore $A^+b$ is the minimum-norm member of the set of all least-squares solutions.
 <!-- bilingual-en:end -->
 
 特殊情况：
 <!-- bilingual-en:start -->
-Special circumstances:
+Important special cases are:
 <!-- bilingual-en:end -->
 
 $$
@@ -3959,7 +3901,7 @@ $$
 
 $A\in\mathbb R^{1\times2}$，$AA^T=[5]$，所以它满行秩并且
 <!-- bilingual-en:start -->
-$A\in\mathbb R^{1\times2}$, $AA^T=[5]$, so it's all over the line and
+$A\in\mathbb R^{1\times2}$ and $AA^T=[5]$, so $A$ has full row rank and
 <!-- bilingual-en:end -->
 
 $$
@@ -3982,7 +3924,7 @@ $$
 
 后者投影到 $C(A^T)=\operatorname{span}((1,2)^T)$：
 <!-- bilingual-en:start -->
-The latter projects to the $C(A^T)=\operatorname{span}((1,2)^T)$:
+The second matrix projects onto $C(A^T)=\operatorname{span}((1,2)^T)$:
 <!-- bilingual-en:end -->
 
 - 若 $x\in N(A)=\operatorname{span}((-2,1)^T)$，则 $A^+Ax=0$；
@@ -3994,7 +3936,7 @@ The latter projects to the $C(A^T)=\operatorname{span}((1,2)^T)$:
 
 这里右下角必须是 $4/5$；任何写成 $1/5$ 的版本都会使投影矩阵不幂等，是可通过 $P^2=P$ 发现的算术错误。
 <!-- bilingual-en:start -->
-The lower right corner here must be $4/5$; any version written as $1/5$ will make the projection matrix irequal, an arithmetic error that can be found via $P^2=P$.
+The lower-right entry must be $4/5$. Writing $1/5$ instead makes the projection matrix non-idempotent, so the arithmetic error is exposed by checking $P^2=P$.
 <!-- bilingual-en:end -->
 
 ### 3.8.7 Homework：完整题解
@@ -4009,8 +3951,7 @@ The lower right corner here must be $4/5$; any version written as $1/5$ will mak
 > $$
 > 求右逆。
 > <!-- bilingual-en:start -->
-> Yes
-> Find the right inverse.
+> Find a right inverse.
 > <!-- bilingual-en:end -->
 
 > [!success]- 解答
@@ -4036,10 +3977,7 @@ The lower right corner here must be $4/5$; any version written as $1/5$ will mak
 > $$
 > 右逆不唯一；例如改变第一列为 $(t,0,1-t)^T$ 仍可得到第一标准基向量。
 > <!-- bilingual-en:start -->
-> The two rows of $A$ are independent, so $A$ has full row rank: $r=m=2$. Therefore a right inverse exists.
-> Solving column by column gives
-> hence
-> Verification:
+> The two rows of $A$ are independent, so $A$ has full row rank: $r=m=2$. Therefore a right inverse exists. The formula $R=A^T(AA^T)^{-1}$ gives the matrix displayed above, and direct multiplication verifies that $AR=I_2$.
 > The right inverse is not unique. For example, replacing its first column by $(t,0,1-t)^T$ still maps that column to the first standard basis vector.
 > <!-- bilingual-en:end -->
 
@@ -4050,8 +3988,7 @@ The lower right corner here must be $4/5$; any version written as $1/5$ will mak
 > $$
 > 判断并求适当的逆。
 > <!-- bilingual-en:start -->
-> For
-> determine which inverses exist and compute the appropriate one.
+> For the displayed rank-one matrix $A$, determine which kinds of inverse exist and compute the appropriate generalized inverse.
 > <!-- bilingual-en:end -->
 
 > [!success]- 解答
@@ -4100,8 +4037,8 @@ The lower right corner here must be $4/5$; any version written as $1/5$ will mak
 <!-- bilingual-en:start -->
 - A left inverse requires full column rank, whereas a right inverse requires full row rank. The dimensions of the identity matrices—$LA=I_n$ and $AR=I_m$—make the distinction easy to remember.
 - $(A^TA)^{-1}A^T$ exists only when $A$ has full column rank; it cannot define the pseudoinverse for every matrix.
-The results show that the noise is amplified by the reciprocal of small singular value, and the existence of theoretical pseudoinverse does not indicate numerical stability.  In practice, truncation SVD or regularization is commonly used.
-- $A^+A$ and $AA^+$ are usually not unit matrices but orthogonal projections on two different spaces.
+- Taking reciprocals of small singular values amplifies noise. The theoretical existence of a pseudoinverse therefore does not guarantee numerical stability; truncated SVD or regularization is commonly used in practice.
+- $A^+A$ and $AA^+$ are usually not identity matrices; they are orthogonal projections onto two different subspaces.
 <!-- bilingual-en:end -->
 
 ### 3.8.9 三道自检题
@@ -4112,31 +4049,31 @@ The results show that the noise is amplified by the reciprocal of small singular
 > [!question]- 自检 1（存在性）
 > $A\in\mathbb R^{3\times5}$ 能有左逆吗？能有右逆吗？
 > <!-- bilingual-en:start -->
-> $A\in\mathbb R^{3\times5}$, can you make a left reversal?  Can there be a right reversal?
+> Can $A\in\mathbb R^{3\times5}$ have a left inverse? Can it have a right inverse?
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
 > 不可能有左逆，因为秩至多 $3<5$；若秩为 $3$，则有右逆。
 > <!-- bilingual-en:start -->
-> There can be no left inversion because the rank is at most $3<5$; if the rank is $3$, there is a right inversion.
+> It cannot have a left inverse because its rank is at most $3<5$. If its rank is $3$, it does have a right inverse.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 2（投影）
 > $A^+A$ 投影到哪里？其零空间是什么？
 > <!-- bilingual-en:start -->
-> Where does the $A^+A$ project?  What is its nullspace?
+> Onto which subspace does $A^+A$ project, and what is its nullspace?
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
 > 投影到行空间 $C(A^T)$，零空间为 $N(A)$。
 > <!-- bilingual-en:start -->
-> Projection to the row space $C(A^T)$, nullspace is $N(A)$.
+> It projects onto the row space $C(A^T)$, and its nullspace is $N(A)$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 3（最小范数）
 > 为什么 $A^+b$ 在所有最小二乘解中范数最小？
 > <!-- bilingual-en:start -->
-> Why is the norm of $A^+b$ minimum in all least squares solutions?
+> Why does $A^+b$ have minimum norm among all least-squares solutions?
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
@@ -4147,7 +4084,7 @@ The results show that the noise is amplified by the reciprocal of small singular
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 $$
@@ -4166,7 +4103,7 @@ $$
 
 ### 本节问题、官方范围与资料
 <!-- bilingual-en:start -->
-*Issues, official scope and information for this section*
+*Questions, official scope, and source information for this section*
 <!-- bilingual-en:end -->
 
 Session 3.9 对应 Lecture 32 的 Exam 3 review。官方明确说明：**Exam 3 的主要范围截至 Session 3.5 SVD**；Session 3.6 线性变换、3.7 换基/压缩和 3.8 伪逆主要进入 Final Exam。不过前三单元知识会交叉，因此复习必须能把早先的特征值、微分方程、投影和 Markov 矩阵与本单元结构连接起来。
@@ -4175,13 +4112,10 @@ Session 3.9 corresponds to Lecture 32, the Exam 3 review. The official scope sta
 <!-- bilingual-en:end -->
 
 资料入口：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.9sum.pdf#page=1|Review summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S09_Lecture_Exam_3_Review.pdf#page=1|Lecture 32 transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S09_Recitation_Exam_3_Problem_Solving.pdf#page=1|Review recitation p.1]]
-<!-- bilingual-en:start -->
-Data portal: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses3.9sum.pdf#page=1|Review summary p.1]] [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U3_S09_Lecture_Exam_3_Review.pdf#page=1|Lecture 32 transcript p.1]] [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U3_S09_Recitation_Exam_3_Problem_Solving.pdf#page=1|Review recitation p.1]]
-<!-- bilingual-en:end -->
 
 ### 3.9.1 一张表完成题目分流
 <!-- bilingual-en:start -->
-*3.9.1 A one-table guide for choosing an approach*
+*3.9.1 A single-table guide to choosing an approach*
 <!-- bilingual-en:end -->
 
 | 看到的结构 | 立刻检查 | 首选表示 |
@@ -4253,7 +4187,7 @@ $$
 
 所以复形式通解为
 <!-- bilingual-en:start -->
-So the general solution of complex form is
+Thus the general solution in complex form is
 <!-- bilingual-en:end -->
 
 $$
@@ -4262,7 +4196,7 @@ $$
 
 因 $A$ 实且初值实，取 $c_1\in\mathbb R$、$c_3=\overline{c_2}$，则后两项互为共轭：
 <!-- bilingual-en:start -->
-Because $A$ is real and the initial value is real, take $c_1\in\mathbb R$, $c_3=\overline{c_2}$, then the latter two are conjugated with each other:
+Because $A$ and the initial condition are real, take $c_1\in\mathbb R$ and $c_3=\overline{c_2}$. The last two terms are then complex conjugates:
 <!-- bilingual-en:end -->
 
 $$
@@ -4282,7 +4216,7 @@ Thus the final solution $u(t)$ is real. We deliberately choose $x_3=\overline{x_
 
 非零频率为 $\sqrt2$，因此所有解都满足共同周期
 <!-- bilingual-en:start -->
-The non-zero frequency is $\sqrt2$, so all solutions satisfy the common period
+The nonzero frequency is $\sqrt2$, so every solution has the common period
 <!-- bilingual-en:end -->
 
 $$
@@ -4291,7 +4225,7 @@ $$
 
 只要解含非零振荡分量，这也是它的基本周期；若初值完全落在零特征空间，解为常向量，只能说任意正数都是周期，并不存在最小的正基本周期。
 <!-- bilingual-en:start -->
-If the initial value of the solution is completely in the zero eigenspace and the solution is a constant vector, it can only be said that any positive number is a period, and there is no minimum positive fundamental period.
+If the initial condition lies entirely in the zero eigenspace, the solution is constant. In that special case every positive number is a period, so there is no smallest positive fundamental period.
 <!-- bilingual-en:end -->
 
 这里 $A$ 是实斜对称，亦是[[对称矩阵与正定二次型#对称矩阵与谱定理|normal matrix]]；它可 unitary 对角化，没有非平凡 Jordan 块，所以纯虚谱确实给出有界振荡。不能把这个结论推广到带 Jordan 块的任意纯虚谱矩阵。
@@ -4317,7 +4251,7 @@ $$
 
 并且
 <!-- bilingual-en:start -->
-and
+For the remaining pair,
 <!-- bilingual-en:end -->
 
 $$
@@ -4328,7 +4262,7 @@ $$
 
 这完成了 Review Problem 1(c) 要求的显式验证，而不只引用一般定理。
 <!-- bilingual-en:start -->
-This completes the explicit validation required by Review Problem 1(c), and does not refer only to general theorems.
+This supplies the explicit verification requested in Review Problem 1(c), rather than relying only on the general theorem.
 <!-- bilingual-en:end -->
 
 #### (d) 计算 $e^{tA}$
@@ -4358,7 +4292,7 @@ $$
 
 所以流保持长度。
 <!-- bilingual-en:start -->
-So the flow remains long.
+Thus the flow preserves length.
 <!-- bilingual-en:end -->
 
 ### 3.9.3 Review Problem 2：由谱数据识别矩阵类别
@@ -4368,7 +4302,7 @@ So the flow remains long.
 
 已知 $3\times3$ 矩阵 $A$ 的特征值为 $0,c,2$，对应特征向量
 <!-- bilingual-en:start -->
-The eigenvalue of the known $3\times3$ matrix $A$ is $0,c,2$, corresponding to the eigenvector
+The $3\times3$ matrix $A$ has eigenvalues $0,c,2$ with corresponding eigenvectors
 <!-- bilingual-en:end -->
 
 $$
@@ -4379,7 +4313,7 @@ $$
 
 三向量两两正交，因而一定独立。
 <!-- bilingual-en:start -->
-Three vectors are orthogonal in two, so they must be independent.
+The three vectors are pairwise orthogonal and therefore linearly independent.
 <!-- bilingual-en:end -->
 
 1. **何时可对角化？** 对所有 $c$ 都可，因为已经给出三个独立特征向量，即使特征值重合也不影响这组基的独立性。
@@ -4388,11 +4322,13 @@ Three vectors are orthogonal in two, so they must be independent.
 4. **是否可能是 Markov 矩阵？** 不可能；Markov 矩阵的谱半径为 $1$，而这里有特征值 $2$。
 5. **$P=A/2$ 何时可能是投影？** 投影特征值必须为 $0$ 或 $1$，故 $c/2\in\{0,1\}$，即 $c=0$ 或 $c=2$。又已有正交特征基，所以此时确实为正交投影。
 <!-- bilingual-en:start -->
-1. **For which values of $c$ is diagonalisation possible?** For every $c$, because three linearly independent eigenvectors are already given. Coincident eigenvalues do not destroy the independence of this eigenbasis.
-2. When is**symmetric?**If $c\in\mathbb R$, normalizes the eigenvectors into orthogonal $Q$, then $A=Q\operatorname{diag}(0,c,2)Q^T$ symmetry.  If $c$ is not real, it cannot be a real symmetric matrix.
-3. When will**be finalized?**never positive, because zero eigenvalues are fixed.  $c\ge0$ is positive semidefinite.
-4. Is**a possible Markov matrix?**Impossible; The spectral radius of the Markov matrix is $1$, and here the eigenvalue $2$.
-5. When might**$P=A/2$ be a projection?**The projection eigenvalue must be $0$ or $1$, so $c/2\in\{0,1\}$ is $c=0$ or $c=2$.  There are also orthogonal eigenbases, so it is the orthogonal projection.
+
+&nbsp;
+**1.** **For which values of $c$ is $A$ diagonalizable?** For every $c$, because three linearly independent eigenvectors are already given. Coincident eigenvalues do not destroy the independence of this eigenbasis.<br>
+**2.** **When is $A$ symmetric?** If $c\in\mathbb R$, normalize the eigenvectors to form an orthogonal matrix $Q$. Then $A=Q\operatorname{diag}(0,c,2)Q^T$, which is symmetric. If $c$ is nonreal, $A$ cannot be a real symmetric matrix.<br>
+**3.** **When is $A$ positive definite?** Never, because it always has a zero eigenvalue. It is positive semidefinite when $c\ge0$.<br>
+**4.** **Can $A$ be a Markov matrix?** No. A Markov matrix has spectral radius $1$, whereas $A$ has eigenvalue $2$.<br>
+**5.** **When can $P=A/2$ be a projection?** A projection can have only eigenvalues $0$ and $1$, so $c/2\in\{0,1\}$ and therefore $c=0$ or $c=2$. Because the matrix also has an orthogonal eigenbasis, it is then an orthogonal projection.<br>
 <!-- bilingual-en:end -->
 
 ### 3.9.4 Review Problem 3：只看 $\Sigma$ 读出结构
@@ -4418,12 +4354,12 @@ Because $U$ and $V$ are $2\times2$ orthogonal matrices, $A=U\Sigma V^T$ is an in
 - 若 $\Sigma=\operatorname{diag}(3,0)$，则 $\operatorname{rank}(A)=1$，$\dim N(A)=1$；$V$ 的第二列张成 $N(A)$，$U$ 的第二列张成 $N(A^T)$。
 <!-- bilingual-en:start -->
 - $\operatorname{diag}(3,-5)$ cannot be a $\Sigma$ for SVD because singular values must be non-negative.
-- If $\Sigma=\operatorname{diag}(3,0)$, the second row of $\operatorname{rank}(A)=1$,$\dim N(A)=1$;$V$ is set to $N(A)$, and the second row of $U$ is set to $N(A^T)$.
+- If $\Sigma=\operatorname{diag}(3,0)$, then $\operatorname{rank}(A)=1$ and $\dim N(A)=1$. The second column of $V$ spans $N(A)$, while the second column of $U$ spans $N(A^T)$.
 <!-- bilingual-en:end -->
 
 ### 3.9.5 Review Problem 4：矩阵同时对称且正交
 <!-- bilingual-en:start -->
-*3.9.5 Review Problem 4: Matrices are Symmetric and Orthogonal*
+*3.9.5 Review Problem 4: a matrix that is both symmetric and orthogonal*
 <!-- bilingual-en:end -->
 
 若 $A=A^T$ 且 $A^TA=I$，则 $A^2=I$。因此每个特征值满足
@@ -4453,17 +4389,17 @@ $\lambda=\pm1$.  From this:
 - Eigenvalues can be repeated;
 - $A$ can be orthogonally diagonalized and must be invertible;
 - $P=(A+I)/2$ is a projection because
-  and $P^T=P$, so it's an orthogonal projection.
+  the displayed calculation gives $P^2=P$, and $P^T=P$, so it is an orthogonal projection.
 <!-- bilingual-en:end -->
 
 ### 3.9.6 Recitation：投影、旋转与反射的谱
 <!-- bilingual-en:start -->
-*3.9.6 Recitation: Spectrum for Projection, Rotation and Reflection*
+*3.9.6 Recitation: spectra of a projection, rotation, and reflection*
 <!-- bilingual-en:end -->
 
 令 $a=(3,4)^T$。
 <!-- bilingual-en:start -->
-Get $a=(3,4)^T$.
+Let $a=(3,4)^T$.
 <!-- bilingual-en:end -->
 
 1. 投影
@@ -4478,11 +4414,11 @@ Get $a=(3,4)^T$.
    有特征值 $0.6\pm0.8i$，对应复特征向量可取 $(1,\mp i)^T$。非平凡平面旋转没有实特征方向。
 3. 反射 $R=2P-I$ 与 $P$ 有同一组特征向量；特征值由 $\lambda_R=2\lambda_P-1$ 得 $1,-1$。投影方向保持，垂直方向反向。
 <!-- bilingual-en:start -->
-1. Projection
-   Characteristic pairs: $a\leftrightarrow1$, $(-4,3)^T\leftrightarrow0$.
-2. Rotate
-   There is an eigenvalue $0.6\pm0.8i$, and the corresponding complex eigenvector can be $(1,\mp i)^T$.Non-trivial plane rotation has no real characteristic direction.
-3. The reflection $R=2P-I$ and $P$ have the same set of eigenvectors; the eigenvalue is $\lambda_R=2\lambda_P-1$ to $1,-1$.The projection direction is held and the vertical direction is reversed.
+
+&nbsp;
+**1.** **Projection.** The eigenpairs are $a\leftrightarrow1$ and $(-4,3)^T\leftrightarrow0$.<br>
+**2.** **Rotation.** The eigenvalues are $0.6\pm0.8i$, with corresponding complex eigenvectors $(1,\mp i)^T$. A nontrivial planar rotation has no real eigendirection.<br>
+**3.** **Reflection.** The reflection $R=2P-I$ and the projection $P$ have the same eigenvectors. Their eigenvalues are related by $\lambda_R=2\lambda_P-1$, giving $1$ and $-1$: the projection direction is fixed and the perpendicular direction is reversed.<br>
 <!-- bilingual-en:end -->
 
 ### 3.9.7 三道自检题
@@ -4493,19 +4429,19 @@ Get $a=(3,4)^T$.
 > [!question]- 自检 1（谱分类）
 > 一个实对称矩阵所有特征值都在 $\{0,1\}$，它一定是什么矩阵？
 > <!-- bilingual-en:start -->
-> All the eigenvalues of a real symmetric matrix are in $\{0,1\}$. What matrix is it?
+> All eigenvalues of a real symmetric matrix lie in $\{0,1\}$. What kind of matrix must it be?
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
 > 正交投影矩阵。谱分解给 $P^2=Q\Lambda^2Q^T=Q\Lambda Q^T=P$。
 > <!-- bilingual-en:start -->
-> orthogonal projection matrix.  The spectrum is decomposed to $P^2=Q\Lambda^2Q^T=Q\Lambda Q^T=P$.
+> It is an orthogonal projection matrix. Its spectral decomposition gives $P^2=Q\Lambda^2Q^T=Q\Lambda Q^T=P$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 2（SVD）
 > 若 $A\in\mathbb R^{5\times3}$ 有两个非零奇异值，四个基本子空间维数是什么？
 > <!-- bilingual-en:start -->
-> If $A\in\mathbb R^{5\times3}$ has two non-zero singular values, what are the dimensions of the four elementary subspaces?
+> If $A\in\mathbb R^{5\times3}$ has two nonzero singular values, what are the dimensions of its four fundamental subspaces?
 > <!-- bilingual-en:end -->
 
 > [!success]- 答案
@@ -4528,7 +4464,7 @@ Get $a=(3,4)^T$.
 
 ### Review 知识链
 <!-- bilingual-en:start -->
-*Review Knowledge Chain*
+*Review knowledge chain*
 <!-- bilingual-en:end -->
 
 $$
@@ -4553,7 +4489,7 @@ $$
 
 ### Exam Problem 1（34 分）：SVD、谱分解与矩阵类别
 <!-- bilingual-en:start -->
-*Exam Problem 1 (34 points): SVD, spectral decomposition and matrix categories*
+*Exam Problem 1 (34 points): SVD, spectral decomposition, and matrix classes*
 <!-- bilingual-en:end -->
 
 > [!question] 题目
@@ -4572,10 +4508,9 @@ $$
 >
 > (c) 从 (a) 的类别列表中分别判断 $B,C$ 属于哪些类。
 > <!-- bilingual-en:start -->
-> (a) All the $n$ singular values of the square $A$ are equal to $1$.  What basic matrix categories must it belong to: singular, symmetric, orthogonal, positive definite/semidefinite, diagonal?
-> (b) The orthonormal column of $H$ is the eigenvector of $B$:
-> The eigenvalue of $B$ is $0,1,2,3$ in turn.  We can write $B$ as the product of three concrete matrices, and write $C=(B+I)^{-1}$ as the product of three matrices.
-> (c) Determine which classes $B,C$ belongs to from the list of categories in (a).
+> (a) Every one of the $n$ singular values of the square matrix $A$ equals $1$. Which of the listed matrix classes must $A$ belong to: singular, symmetric, orthogonal, positive definite or semidefinite, and diagonal?
+> (b) The orthonormal columns of $H$ are eigenvectors of $B$, with corresponding eigenvalues $0,1,2,3$ in order. Write $B$ as a product of three explicit matrices, and do the same for $C=(B+I)^{-1}$.
+> (c) Using the list in part (a), classify $B$ and $C$.
 > <!-- bilingual-en:end -->
 
 > [!success]- 完整解答
@@ -4647,7 +4582,7 @@ $$
 
 ### Exam Problem 2（33 分）：对角化、矩阵幂与 $A^TA$
 <!-- bilingual-en:start -->
-*Exam Problem 2 (33 points): Diagonalization, Matrix Power and $A^TA$*
+*Exam Problem 2 (33 points): diagonalization, matrix powers, and $A^TA$*
 <!-- bilingual-en:end -->
 
 > [!question] 题目
@@ -4757,7 +4692,7 @@ $$
 
 ### Exam Problem 3（33 分）：正交特征基中的求逆与解方程
 <!-- bilingual-en:start -->
-*Exam Problem 3(33 points): Inverse and Solution Equation in Orthogonal Eigenbasis*
+*Exam Problem 3 (33 points): inversion and solving in an orthonormal eigenbasis*
 <!-- bilingual-en:end -->
 
 > [!question] 题目
@@ -4769,10 +4704,10 @@ $$
 >
 > (c) 若 $A^{-1}b=d_1q_1+\cdots+d_nq_n$，快速求 $d_1$。
 > <!-- bilingual-en:start -->
-> $A\in\mathbb R^{n\times n}$ has the orthonormal eigenvector $q_1,\ldots,q_n$ and the positive eigenvalue $\lambda_1,\ldots,\lambda_n$, namely $Aq_j=\lambda_jq_j$.
-> (a) What are the eigenvalues and eigenvectors of $A^{-1}$?  Proof.
-> (b) If $b=c_1q_1+\cdots+c_nq_n$, use orthogonality to get $c_1$ quickly.
-> (c) If $A^{-1}b=d_1q_1+\cdots+d_nq_n$, seek $d_1$ promptly.
+> The matrix $A\in\mathbb R^{n\times n}$ has orthonormal eigenvectors $q_1,\ldots,q_n$ with positive eigenvalues $\lambda_1,\ldots,\lambda_n$, so $Aq_j=\lambda_jq_j$.
+> (a) Find and justify the eigenvalues and eigenvectors of $A^{-1}$.
+> (b) If $b=c_1q_1+\cdots+c_nq_n$, use orthonormality to find $c_1$ quickly.
+> (c) If $A^{-1}b=d_1q_1+\cdots+d_nq_n$, find $d_1$ quickly.
 > <!-- bilingual-en:end -->
 
 > [!success]- 完整解答
@@ -4844,12 +4779,12 @@ $$
 
 ## 本单元最终检查表
 <!-- bilingual-en:start -->
-*Final Checklist in this module*
+*Final checklist for this module*
 <!-- bilingual-en:end -->
 
 ### 理论与证明
 <!-- bilingual-en:start -->
-*theory and proof*
+*Theory and proof*
 <!-- bilingual-en:end -->
 
 - [ ] 能用 $x^*x>0$ 正确证明实对称/Hermitian 矩阵的特征值为实，不再误用复数情形的 $x^Tx$。
@@ -4877,7 +4812,7 @@ $$
 
 ### 计算技能
 <!-- bilingual-en:start -->
-*computing skills*
+*Computational skills*
 <!-- bilingual-en:end -->
 
 - [ ] 会用特征值、顺序主子式、主元和二次型至少两种方法判断正定。
@@ -4891,19 +4826,19 @@ $$
 - [ ] 已独立重做三道 Unit 3 Exam，并用定义或代回检查最终答案。
 <!-- bilingual-en:start -->
 - [ ] I can establish positive definiteness by at least two methods: eigenvalues, leading principal minors, pivots, or the quadratic form.
-- [ ] The Hermitian matrix is diagonalized and the conjugate transpose is used properly.
-- [ ] Writes $F_4$ explaining the Fourier column orthogonal and FFT even-odd decomposition.
-- [ ] identifies similarity invariants and excludes erroneous similarity relationships with geometric multiplicity/Jordan blocks.
-- [ ] The SVD is calculated consistently as "$A^TA\to V,\Sigma\to u_i=Av_i/\sigma_i$".
-- [ ] Rank, nullspace dimension, spectral norm, and four subspaces are read directly by $\Sigma$.
+- [ ] I can diagonalize a Hermitian matrix and use the conjugate transpose correctly.
+- [ ] I can write $F_4$ and explain both orthogonality of its Fourier columns and the FFT's even–odd decomposition.
+- [ ] I can identify similarity invariants and use geometric multiplicity or Jordan blocks to rule out false similarity claims.
+- [ ] I can compute an SVD reliably using the sequence $A^TA\to V,\Sigma\to u_i=Av_i/\sigma_i$.
+- [ ] I can read the rank, nullspace dimensions, spectral norm, and four fundamental subspaces directly from $\Sigma$.
 - [ ] I can convert vector coordinates and transformation matrices between two bases.
 - [ ] I can compute the left inverse for a full-column-rank matrix, the right inverse for a full-row-rank matrix, and the SVD pseudoinverse.
-- [ ] Redid the three Unit 3 Exam independently and checked the final answer with a definition or substitution.
+- [ ] I have independently redone all three Unit 3 Exam problems and checked each final answer from a definition or by substitution.
 <!-- bilingual-en:end -->
 
 ## 全单元知识链
 <!-- bilingual-en:start -->
-*whole unit knowledge chain*
+*Whole-unit knowledge chain*
 <!-- bilingual-en:end -->
 
 $$

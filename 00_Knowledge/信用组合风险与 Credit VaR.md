@@ -92,12 +92,14 @@ Portfolio A has 100 loans of one unit each, each with PD 1% and LGD 100%, approx
 5. 计算 EL、分位、ES 与贡献，并对集中和相关做压力。
 6. 用实际迁移、违约、回收与组合损失验证不同层级。
 <!-- bilingual-en:start -->
-1. Fix loss convention, horizon, portfolio boundary, and default definition.
-2. Calibrate individual PD, LGD, EAD, or migration matrices.
-3. Choose common factors, asset correlation, or copula and map industry and geographic exposure.
-4. Simulate systematic states, conditional default or migration, and recovery, then aggregate loss.
-5. Calculate EL, quantiles, ES, and contributions and stress concentration plus dependence.
-6. Validate at multiple levels using realized migration, default, recovery, and portfolio loss.
+
+&nbsp;
+**1.** Fix loss convention, horizon, portfolio boundary, and default definition.<br>
+**2.** Calibrate individual PD, LGD, EAD, or migration matrices.<br>
+**3.** Choose common factors, asset correlation, or copula and map industry and geographic exposure.<br>
+**4.** Simulate systematic states, conditional default or migration, and recovery, then aggregate loss.<br>
+**5.** Calculate EL, quantiles, ES, and contributions and stress concentration plus dependence.<br>
+**6.** Validate at multiple levels using realized migration, default, recovery, and portfolio loss.<br>
 <!-- bilingual-en:end -->
 
 ## 失败诊断

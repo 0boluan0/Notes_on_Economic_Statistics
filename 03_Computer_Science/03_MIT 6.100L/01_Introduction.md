@@ -148,9 +148,9 @@ The instructor immediately turns the declarative square-root statement into an e
 > 3. 用新 guess 重复这个过程。
 > <!-- bilingual-en:start -->
 > To find `sqrt(16)` without knowing that the answer is 4, begin with a guess such as `g = 3`:
-> 1. Stop if `g*g` is sufficiently close to 16.
-> 2. Otherwise update the guess to `(g + x/g) / 2`.
-> 3. Repeat using the new guess.
+> **1.** Stop if `g*g` is sufficiently close to 16.<br>
+> **2.** Otherwise update the guess to `(g + x/g) / 2`.<br>
+> **3.** Repeat using the new guess.<br>
 > <!-- bilingual-en:end -->
 
 老师现场按这个流程走了几轮：
@@ -196,9 +196,11 @@ The square-root example is generalized into three required components:
 2. flow of control
 3. a means of determining when to stop
 <!-- bilingual-en:start -->
-1. A sequence of simple steps.
-2. A flow of control.
-3. A means of determining when to stop.
+
+&nbsp;
+**1.** A sequence of simple steps.<br>
+**2.** A flow of control.<br>
+**3.** A means of determining when to stop.<br>
 <!-- bilingual-en:end -->
 
 这三个要素分别对应刚才平方根例子的三个面向：

@@ -35,11 +35,11 @@ The multivariate normal distribution is the higher-dimensional extension of the 
 <!-- bilingual-en:start -->
 It matters because:
 
-1. linear transformations remain normal;
-2. conditional distributions remain normal;
-3. quadratic forms are connected to the chi-square distribution;
-4. the sample mean and sample covariance matrix have tractable distributions;
-5. many multivariate inference procedures use it as their exact small-sample foundation.
+**1.** linear transformations remain normal;<br>
+**2.** conditional distributions remain normal;<br>
+**3.** quadratic forms are connected to the chi-square distribution;<br>
+**4.** the sample mean and sample covariance matrix have tractable distributions;<br>
+**5.** many multivariate inference procedures use it as their exact small-sample foundation.<br>
 <!-- bilingual-en:end -->
 
 ## 1.2. 多元正态密度及等密度曲线
@@ -557,10 +557,10 @@ $$
 <!-- bilingual-en:start -->
 Begin by checking each variable with:
 
-1. a histogram;
-2. a box plot;
-3. a univariate QQ plot;
-4. a check for conspicuous outliers.
+**1.** a histogram;<br>
+**2.** a box plot;<br>
+**3.** a univariate QQ plot;<br>
+**4.** a check for conspicuous outliers.<br>
 <!-- bilingual-en:end -->
 
 ### 1.8.2. 多变量正态性检查
@@ -589,9 +589,9 @@ If multivariate normality is a reasonable approximation, the $d_j^2$ values shou
 <!-- bilingual-en:start -->
 A common procedure is to:
 
-1. sort the $d_j^2$ values from smallest to largest;
-2. plot them against the theoretical quantiles of $\chi_p^2$;
-3. regard multivariate normality as more plausible when the points lie approximately on a straight line.
+**1.** sort the $d_j^2$ values from smallest to largest;<br>
+**2.** plot them against the theoretical quantiles of $\chi_p^2$;<br>
+**3.** regard multivariate normality as more plausible when the points lie approximately on a straight line.<br>
 <!-- bilingual-en:end -->
 
 >[!attention] 诊断边界

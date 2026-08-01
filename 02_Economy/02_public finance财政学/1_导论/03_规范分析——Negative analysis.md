@@ -137,9 +137,11 @@ Government intervention may be justified by market failure or by an inequitable 
 4. [[外部性与内部化政策|外部性]]
 对于后三种情况而言，市场已经不存在了。
 <!-- bilingual-en:start -->
-1. Monopoly: one side of a transaction possesses market power that the other lacks.
-2. Information asymmetry: one side possesses information that the other lacks.
-3. Public goods.
-4. Externalities.
+
+&nbsp;
+**1.** Monopoly: one side of a transaction possesses market power that the other lacks.<br>
+**2.** Information asymmetry: one side possesses information that the other lacks.<br>
+**3.** Public goods.<br>
+**4.** Externalities.<br>
 For the last three cases, the assumptions needed for a complete competitive market are absent.
 <!-- bilingual-en:end -->

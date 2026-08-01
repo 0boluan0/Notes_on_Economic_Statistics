@@ -212,12 +212,12 @@ If $MRS>MRT$, consumers are willing to give up more $y$ for an extra unit of $x$
 <!-- bilingual-en:start -->
 When reading an Edgeworth-box problem, check in this order:
 
-1. what the box dimensions and the two origins represent;
-2. whether the stated point satisfies resource feasibility;
-3. whether the initial indifference curves enclose a mutually beneficial lens;
-4. whether the problem has an interior tangency or an edge or corner solution;
-5. if a competitive equilibrium is requested, whether both individual optimality and market clearing hold;
-6. if a social judgement is requested, whether Pareto efficiency is being mistaken for equity.
+**1.** what the box dimensions and the two origins represent;<br>
+**2.** whether the stated point satisfies resource feasibility;<br>
+**3.** whether the initial indifference curves enclose a mutually beneficial lens;<br>
+**4.** whether the problem has an interior tangency or an edge or corner solution;<br>
+**5.** if a competitive equilibrium is requested, whether both individual optimality and market clearing hold;<br>
+**6.** if a social judgement is requested, whether Pareto efficiency is being mistaken for equity.<br>
 <!-- bilingual-en:end -->
 
 最常见的错误是看到 $MRS_A=MRS_B$ 就宣布“公平且均衡”。这个等式只提供内点交换效率；要成为竞争均衡，还要有一条由价格和禀赋决定的共同预算线并使市场出清；要判断公平，则必须另给分配标准或社会福利权重。

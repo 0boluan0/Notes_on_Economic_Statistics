@@ -56,10 +56,12 @@ where:
 3. $\operatorname{Var}(\boldsymbol\epsilon)=\sigma^2I_n$。
 4. $\mathbf X$ 无完全多重共线性，即 $X'X$ 可逆。
 <!-- bilingual-en:start -->
-1. The relationship is linear.
-2. $E(\boldsymbol\epsilon)=0$.
-3. $\operatorname{Var}(\boldsymbol\epsilon)=\sigma^2I_n$.
-4. $\mathbf X$ has no perfect multicollinearity, so $X'X$ is invertible.
+
+&nbsp;
+**1.** The relationship is linear.<br>
+**2.** $E(\boldsymbol\epsilon)=0$.<br>
+**3.** $\operatorname{Var}(\boldsymbol\epsilon)=\sigma^2I_n$.<br>
+**4.** $\mathbf X$ has no perfect multicollinearity, so $X'X$ is invertible.<br>
 <!-- bilingual-en:end -->
 
 >[!attention] 边界

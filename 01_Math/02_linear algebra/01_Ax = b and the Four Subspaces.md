@@ -18,7 +18,7 @@ tags:
 
 ## 课程来源、约定与导航
 <!-- bilingual-en:start -->
-*Course Source, Engagement and Navigation*
+*Course sources, conventions, and navigation*
 <!-- bilingual-en:end -->
 
 - 官方课程：MIT OCW 18.06SC *Linear Algebra, Fall 2011*；总入口见 [[00_MIT OCW 18.06SC course map|课程总览]]。
@@ -28,10 +28,8 @@ tags:
 - 尺寸检查规则：若 $A$ 是 $m\times n$，则它有 $m$ 行、$n$ 列；$Ax$ 只有在 $x\in\mathbb F^n$ 时有定义，结果属于 $\mathbb F^m$。
 - 除非特别说明，向量均写成列向量。$C(A)$、$N(A)$、$C(A^T)$、$N(A^T)$ 分别表示列空间、零空间、行空间和左零空间。
 <!-- bilingual-en:start -->
-- Official course: MIT OCW 18.06SC *Linear Algebra, Fall 2011*; see [[00_MIT OCW 18.06SC course map|Course Overview]] for the main entrance.
-- Local Data Index: [[MIT_OCW_18.06SC_PDF/index|MIT 18.06SC PDF Index]].
-- This story is written in strict order on the official website: Geometry → Overview → Elimination → Inverse → LU → Vector Spaces → Column/Null Spaces → $Ax=0$ → $Ax=b$ → Basis/Dimension → Four Subspaces → Matrix Spaces → Graphs → Review → Exam 1.
--**Code alert**: Lecture 2 on the official website, Overview's local summary is `Ses1.13sum.pdf`; Lecture 3 to 13 on the official website, use local `Ses1.2–Ses1.12` data in turn.
+- The note follows the conceptual order of the official site: Geometry → Overview → Elimination → Inverses → LU → Vector Spaces → Column and Null Spaces → $Ax=0$ → $Ax=b$ → Bases and Dimension → Four Subspaces → Matrix Spaces → Graphs → Review → Exam 1.
+- **Numbering note**: The local summary for the official second lecture, Overview, is `Ses1.13sum.pdf`; the official third through thirteenth lectures use the local files `Ses1.2–Ses1.12`, respectively.
 - Dimension check rule: If $A$ is $m\times n$, it has $m$ rows, $n$ columns; $Ax$ is only defined when $x\in\mathbb F^n$, and the result is $\mathbb F^m$.
 - Vectors are written as column vectors unless otherwise specified.  $C(A)$, $N(A)$, $C(A^T)$, $N(A^T)$ represent column space, nullspace, row space, and left nullspace, respectively.
 <!-- bilingual-en:end -->
@@ -74,9 +72,6 @@ tags:
 <!-- bilingual-en:end -->
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.1sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S01_Lecture_The_Geometry_of_Linear_Equations.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S01_Recitation_Geometry_of_Linear_Algebra.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.1sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:start -->
-**Local**: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.1sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S01_Lecture_The_Geometry_of_Linear_Equations.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S01_Recitation_Geometry_of_Linear_Algebra.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.1prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.1sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:end -->
 
 ### 1. 从 row picture 到 column picture
 <!-- bilingual-en:start -->
@@ -85,7 +80,7 @@ tags:
 
 考虑课堂中的系统
 <!-- bilingual-en:start -->
-Consider systems in the classroom
+Consider the system used in the lecture:
 <!-- bilingual-en:end -->
 
 $$
@@ -107,12 +102,12 @@ $$
 
 因此交点是 $(1,2)$。在 $m$ 个方程、$n$ 个未知数的一般情形中，每一行在 $\mathbb R^n$ 中给出一个超平面；解集是这些超平面的交。
 <!-- bilingual-en:start -->
-So the intersection is $(1,2)$.  In the general case of $m$ equations and $n$ unknowns, each row gives a hyperplane in $\mathbb R^n$; the solution set is the intersection of these hyperplanes.
+Thus the intersection is $(1,2)$. In a general system of $m$ equations in $n$ unknowns, each row defines a hyperplane in $\mathbb R^n$, and the solution set is the intersection of those hyperplanes.
 <!-- bilingual-en:end -->
 
 **列图像（column picture）**把同一系统改写成
 <!-- bilingual-en:start -->
-**column picture**rewrites the same system as
+The **column picture** rewrites the same system as
 <!-- bilingual-en:end -->
 
 $$
@@ -123,7 +118,7 @@ $$
 
 未知数 $x,y$ 不再只是平面坐标，而是两列的组合系数。代入 $(x,y)=(1,2)$：
 <!-- bilingual-en:start -->
-The unknown $x,y$ is no longer just a planar coordinate, but a combination of two columns.  Introduce $(x,y)=(1,2)$:
+The unknowns $x$ and $y$ are now coefficients in a linear combination of the two columns, not merely planar coordinates. Substituting $(x,y)=(1,2)$ gives:
 <!-- bilingual-en:end -->
 
 $$
@@ -134,17 +129,17 @@ $$
 
 这引出 [[线性方程组与四个基本子空间#四个基本子空间|列空间]]：$Ax=b$ 有解，当且仅当 $b$ 属于 $A$ 的列向量所张成的空间。
 <!-- bilingual-en:start -->
-This leads to a [[线性方程组与四个基本子空间#四个基本子空间|column space]]:$Ax=b$ solution if and only if the $b$ belongs to the space spanned by the column vector of $A$.
+This leads to the [[线性方程组与四个基本子空间#四个基本子空间|column space]]: $Ax=b$ has a solution if and only if $b$ belongs to the span of the columns of $A$.
 <!-- bilingual-en:end -->
 
 ### 2. 矩阵乘向量的两种等价读法
 <!-- bilingual-en:start -->
-*2. Two kinds of equivalent reading methods of matrix multiplication vector*
+*2. Two equivalent ways to read matrix–vector multiplication*
 <!-- bilingual-en:end -->
 
 设
 <!-- bilingual-en:start -->
-if
+Let
 <!-- bilingual-en:end -->
 
 $$
@@ -154,7 +149,7 @@ $$
 
 按列读：
 <!-- bilingual-en:start -->
-Read by column:
+Read by columns:
 <!-- bilingual-en:end -->
 
 $$
@@ -163,7 +158,7 @@ $$
 
 按行读：若 $r_i^T$ 是第 $i$ 行，则
 <!-- bilingual-en:start -->
-Read By Row: If $r_i^T$ is row $i$, then
+Read by rows: if $r_i^T$ denotes row $i$, then
 <!-- bilingual-en:end -->
 
 $$
@@ -172,7 +167,7 @@ $$
 
 前者强调“输出是哪些列的组合”，后者强调“每个方程如何约束输入”。二者是同一次矩阵乘法，不是两个不同定义。
 <!-- bilingual-en:start -->
-The former emphasizes "which columns the output is a combination of" and the latter emphasizes "how each equation constrains the input".  The two are the same matrix multiplication, not two different definitions.
+The first view emphasizes which columns combine to produce the output; the second emphasizes how each equation constrains the input. They are two readings of the same matrix multiplication, not two different definitions.
 <!-- bilingual-en:end -->
 
 > [!proof] 为什么列组合公式必然成立
@@ -193,17 +188,15 @@ The former emphasizes "which columns the output is a combination of" and the lat
 >
 > **结论**：$Ax=\sum_jx_ja_j$。
 > <!-- bilingual-en:start -->
-> **Target**: Prove that the matrix multiplier vector is equal to a linear combination of columns.
-> **Construct**: Compares the $i$ component on either side of the equation.  The definition of matrix multiplication is given
-> the $j$ column The $i$ component of $a_j$ is $a_{ij}$, so
-> The two formulas are equal one by one.
+> **Goal**: Prove that a matrix–vector product equals a linear combination of the matrix's columns.
+> **Argument**: Compare the $i$th component on both sides. By definition, $(Ax)_i=\sum_{j=1}^n a_{ij}x_j$. The $i$th component of column $a_j$ is $a_{ij}$, so the $i$th component of $x_1a_1+\cdots+x_na_n$ is also $\sum_{j=1}^n x_ja_{ij}$. The two expressions agree component by component.
 > **Boundary and Dimensions**: Each $a_j\in\mathbb R^m$, so the linear combination is still $\mathbb R^m$; the coefficients are exactly $n$, consistent with the length of $x$.
 > **Conclusion**: $Ax=\sum_jx_ja_j$.
 > <!-- bilingual-en:end -->
 
 ### 3. 三种解的几何命运
 <!-- bilingual-en:start -->
-*3. Geometric fate of the three solutions*
+*3. The three possible solution patterns*
 <!-- bilingual-en:end -->
 
 - **唯一解**：$b$ 可由列生成，而且系数表示唯一。
@@ -222,12 +215,12 @@ This already anticipates the [[线性方程组与四个基本子空间#四个基
 
 ### 4. Recitation 代表例题
 <!-- bilingual-en:start -->
-*4. Recitation representative example*
+*4. Representative recitation example*
 <!-- bilingual-en:end -->
 
 Recitation 使用
 <!-- bilingual-en:start -->
-Recitation using
+The recitation uses
 <!-- bilingual-en:end -->
 
 $$
@@ -239,7 +232,7 @@ $$
 
 第二式给 $x=2y-1$，代入第一式：$2(2y-1)+y=3$，所以 $5y=5$、$y=1$、$x=1$。列图像为
 <!-- bilingual-en:start -->
-The second model is given to $x=2y-1$, and the first model is given to $2(2y-1)+y=3$, so $5y=5$, $y=1$, $x=1$.  Column image is
+The second equation gives $x=2y-1$. Substituting into the first gives $2(2y-1)+y=3$, so $5y=5$, $y=1$, and $x=1$. The column picture is
 <!-- bilingual-en:end -->
 
 $$
@@ -250,7 +243,7 @@ $$
 
 右侧恰是两列各取一份。验证时既要代回两条原方程，也可直接做一次矩阵乘法。
 <!-- bilingual-en:start -->
-On the right is two columns, one for each.  In the verification, the two original equations should be substituted back, and the matrix multiplication can also be done directly.
+The right-hand side is obtained by taking one copy of each column. We can verify the answer either by substituting it into both original equations or by performing the matrix–vector multiplication directly.
 <!-- bilingual-en:end -->
 
 ### Homework：全部题目与逐步解答
@@ -273,8 +266,7 @@ On the right is two columns, one for each.  In the verification, the two origina
 > $$
 > 系数 $(1,-2,1)$ 非全零，故三向量线性相关。它们都在由 $w_1,w_2$ 张成的、经过原点的平面中；以它们为列的 $3\times3$ 矩阵没有三条独立方向，因此不可逆。
 > <!-- bilingual-en:start -->
-> **Title Restatement**: Given
-> Locate a non-all-zero $x_1,x_2,x_3$ to make $x_1w_1+x_2w_2+x_3w_3=0$, determine the correlation, and explain what geometry they are in.
+> **Restatement**: Given the displayed vectors, find coefficients $x_1,x_2,x_3$, not all zero, such that $x_1w_1+x_2w_2+x_3w_3=0$. Decide whether the vectors are linearly independent and describe the geometric object containing them.
 > **Answer**: Observe the same difference between adjacent vectors: $w_2-w_1=w_3-w_2=(3,3,3)^T$, so
 > The coefficients $(1,-2,1)$ are not all zero, so the three vectors are linearly dependent. They lie in the plane through the origin spanned by $w_1$ and $w_2$; the $3\times3$ matrix having these vectors as columns therefore lacks three independent directions and is singular.
 > <!-- bilingual-en:end -->
@@ -310,9 +302,8 @@ On the right is two columns, one for each.  In the verification, the two origina
 > $$
 > 内侧尺寸 $n$ 必须相等，外侧尺寸 $m,p$ 成为结果的尺寸。
 > <!-- bilingual-en:start -->
-> **Title**: Determine whether "$3\times2$ matrix $A$ multiplied by $2\times3$ matrix $B$ to get $3\times3$ matrix $AB$" is correct.
-> **Answer**: Correct.  In general,
-> The inner dimensions $n$ must agree, and the outer dimensions $m,p$ determine the size of the product.
+> **Restatement**: Decide whether multiplying a $3\times2$ matrix $A$ by a $2\times3$ matrix $B$ produces a $3\times3$ matrix $AB$.
+> **Answer**: Yes. In general, $A_{m\times n}B_{n\times p}=(AB)_{m\times p}$. The inner dimensions $n$ must match, and the outer dimensions $m,p$ determine the size of the product.
 > <!-- bilingual-en:end -->
 
 ### 易错点、边界与反例
@@ -324,7 +315,7 @@ On the right is two columns, one for each.  In the verification, the two origina
 - “列数多”不等于“张成空间大”；重复列会带来冗余。
 - $Ax=0$ 永远至少有零解；“无解”只可能发生在非齐次系统 $Ax=b$ 中。
 <!-- bilingual-en:start -->
-- The row image is in the unknown space $\mathbb R^n$; the column image is in the output space $\mathbb R^m$.  When $m\ne n$, the two spaces have different dimensions.
+- The row picture lives in the unknown space $\mathbb R^n$, while the column picture lives in the output space $\mathbb R^m$. When $m\ne n$, the two spaces even have different dimensions.
 - More columns do not necessarily produce a larger span; repeated or dependent columns add redundancy.
 - $Ax=0$ always has at least the zero solution; only a nonhomogeneous system $Ax=b$ can be inconsistent.
 <!-- bilingual-en:end -->
@@ -339,7 +330,7 @@ On the right is two columns, one for each.  In the verification, the two origina
 >
 > **答案**：$x\in\mathbb R^3$，$b=Ax\in\mathbb R^4$。
 > <!-- bilingual-en:start -->
-> If $A\in\mathbb R^{4\times3}$, then what space does $x$ and $b$ belong to?
+> If $A\in\mathbb R^{4\times3}$, to which spaces do $x$ and $b$ belong?
 > **Answer**: $x\in\mathbb R^3$, $b=Ax\in\mathbb R^4$.
 > <!-- bilingual-en:end -->
 
@@ -357,18 +348,18 @@ On the right is two columns, one for each.  In the verification, the two origina
 >
 > **答案**：$4(1,2)^T+1(-1,3)^T=(3,11)^T$。
 > <!-- bilingual-en:start -->
-> Write $\begin{bmatrix}1&-1\\2&3\end{bmatrix}(4,1)^T$ as a column combination and calculate the results.
+> Write $\begin{bmatrix}1&-1\\2&3\end{bmatrix}(4,1)^T$ as a column combination and compute the result.
 > **Answer**: $4(1,2)^T+1(-1,3)^T=(3,11)^T$.
 > <!-- bilingual-en:end -->
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 方程交点 → 列向量组合 → $b\in C(A)$ 决定存在性 → $N(A)$ 决定唯一性 → 下一步用消元系统地找出这些结构。
 <!-- bilingual-en:start -->
-The intersection of the equations → the combination of the column vectors → $b\in C(A)$ determines the existence → $N(A)$ determines the uniqueness → the next step is to systematically identify these structures by elimination.
+Intersection of equations → combinations of columns → $b\in C(A)$ determines existence → $N(A)$ determines uniqueness → elimination systematically reveals these structures.
 <!-- bilingual-en:end -->
 
 ## Session 1.2 An overview of key ideas
@@ -385,22 +376,19 @@ The intersection of the equations → the combination of the column vectors → 
 
 **前置知识**：能从 Session 1.1 读懂 $Ax=b$ 的行图像和列图像。
 <!-- bilingual-en:start -->
-**Prerequisites**: $Ax=b$ row and column images are readable from Session 1.1.
+**Prerequisites**: the row and column pictures of $Ax=b$ from Session 1.1.
 <!-- bilingual-en:end -->
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.13sum.pdf#page=1|overview summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S02_Lecture_An_Overview_of_Linear_Algebra.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S02_Recitation_An_Overview_of_Key_Ideas.pdf#page=1|recitation transcript p.1]]
-<!-- bilingual-en:start -->
-**Local**: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.13sum.pdf#page=1|overview summary p.1]] [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S02_Lecture_An_Overview_of_Linear_Algebra.pdf#page=1|lecture transcript p.1]] [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S02_Recitation_An_Overview_of_Key_Ideas.pdf#page=1|recitation transcript p.1]]
-<!-- bilingual-en:end -->
 
 ### 1. 整门课围绕一个输入—输出问题
 <!-- bilingual-en:start -->
-*1. The whole course revolves around one input—output*
+*1. The whole course revolves around one input–output map*
 <!-- bilingual-en:end -->
 
 矩阵 $A\in\mathbb R^{m\times n}$ 是线性映射
 <!-- bilingual-en:start -->
-Matrix $A\in\mathbb R^{m\times n}$ is a linear mapping
+The matrix $A\in\mathbb R^{m\times n}$ represents a linear map
 <!-- bilingual-en:end -->
 
 $$
@@ -409,7 +397,7 @@ $$
 
 课程不断追问四件事：
 <!-- bilingual-en:start -->
-Four things are being asked:
+The course repeatedly asks four questions:
 <!-- bilingual-en:end -->
 
 1. 哪些输入被送到 $0$？答案是 $N(A)$。
@@ -417,10 +405,12 @@ Four things are being asked:
 3. 不可达时，哪个可达输出离目标最近？答案由正交投影与最小二乘给出。
 4. 哪些输入方向在作用后只改变长度、不改变方向，或对应最自然的输入—输出方向？答案通向特征向量和 SVD。
 <!-- bilingual-en:start -->
-1. Which inputs are sent to $0$?  The answer is $N(A)$.
-2. Which outputs can be achieved?  The answer is $C(A)$.
-3. When unreachable, which reachable output is the closest to the target?  The answer is given by orthogonal projection and least squares.
-4. Which input directions are merely rescaled rather than rotated, and which paired input–output directions are most natural for the transformation? These questions lead to eigenvectors and the SVD.
+
+&nbsp;
+**1.** Which inputs are sent to $0$? The answer is $N(A)$.<br>
+**2.** Which outputs are attainable? The answer is $C(A)$.<br>
+**3.** If the target is unattainable, which attainable output is closest to it? Orthogonal projection and least squares answer this question.<br>
+**4.** Which input directions are merely rescaled rather than rotated, and which paired input–output directions are most natural for the transformation? These questions lead to eigenvectors and the SVD.<br>
 <!-- bilingual-en:end -->
 
 ### 2. 差分矩阵展示可逆与奇异
@@ -430,7 +420,7 @@ Four things are being asked:
 
 普通差分矩阵
 <!-- bilingual-en:start -->
-ordinary difference matrix
+The ordinary difference matrix
 <!-- bilingual-en:end -->
 
 $$
@@ -443,7 +433,7 @@ $$
 
 把位置 $x=(x_1,x_2,x_3)^T$ 变为差分 $(x_1,x_2-x_1,x_3-x_2)^T$。它是下三角矩阵且三个对角元均为 $1$，因此可以从差分逐步恢复 $x$。
 <!-- bilingual-en:start -->
-Change the position $x=(x_1,x_2,x_3)^T$ into the differential $(x_1,x_2-x_1,x_3-x_2)^T$.  It is a lower triangular matrix and all three diagonal elements are $1$, so $x$ can be recovered from the difference step by step.
+maps the position vector $x=(x_1,x_2,x_3)^T$ to the differences $(x_1,x_2-x_1,x_3-x_2)^T$. It is lower triangular with all three diagonal entries equal to $1$, so $x$ can be recovered from the differences one component at a time.
 <!-- bilingual-en:end -->
 
 若首尾相连得到循环差分矩阵
@@ -476,12 +466,12 @@ $C(1,1,1)^T=0$. Constant displacements are therefore lost completely, and every 
 - **Determinant / eigenvalues**：描述体积缩放和反复作用。
 - **SVD**：为任意 $m\times n$ 矩阵找最自然的正交输入、输出方向。
 <!-- bilingual-en:start -->
--**Elimination**: Make the equations easy to read.
--**Rank / basis / dimension**: Count independent directions.
-- **Four fundamental subspaces**: unify the reachable and lost directions on the input and output sides.
-- **Orthogonality / least squares**: provide the best approximation when no exact solution exists.
-- **Determinant / eigenvalues**: describe volume scaling and repeated application of a matrix.
-- **SVD**: finds the most natural orthogonal input and output directions for any $m\times n$ matrix.
+- **Elimination**: Put the equations into a form that is easy to read and solve.
+- **Rank / basis / dimension**: Count independent directions.
+- **Four fundamental subspaces**: Unify the attainable and lost directions on the input and output sides.
+- **Orthogonality / least squares**: Find the best approximation when no exact solution exists.
+- **Determinants / eigenvalues**: Describe volume scaling and repeated application of a matrix.
+- **SVD**: Find the most natural orthogonal input and output directions for any $m\times n$ matrix.
 <!-- bilingual-en:end -->
 
 其中 [[线性方程组与四个基本子空间#基、维数与秩|秩]] 是贯穿全课的有效维数。若 $A$ 有 $n$ 列，秩—零度关系为
@@ -505,7 +495,7 @@ This identity is proved in full in Session 1.10.
 
 已知 $A$ 有三列，且
 <!-- bilingual-en:start -->
-$A$ is known to have three columns, and
+Suppose $A$ has three columns and
 <!-- bilingual-en:end -->
 
 $$
@@ -517,7 +507,7 @@ $$
 
 尺寸先行：$x\in\mathbb R^3$、$b\in\mathbb R^4$，故 $A\in\mathbb R^{4\times3}$。记列为 $c_1,c_2,c_3$。特解给出
 <!-- bilingual-en:start -->
-Size First: $x\in\mathbb R^3$, $b\in\mathbb R^4$, so $A\in\mathbb R^{4\times3}$.  It's listed as $c_1,c_2,c_3$.  give out
+Start with the dimensions: $x\in\mathbb R^3$ and $b\in\mathbb R^4$, so $A\in\mathbb R^{4\times3}$. Denote its columns by $c_1,c_2,c_3$. The particular solution gives
 <!-- bilingual-en:end -->
 
 $$
@@ -526,7 +516,7 @@ $$
 
 齐次方向给出
 <!-- bilingual-en:start -->
-Homogeneous direction given
+The homogeneous direction gives
 <!-- bilingual-en:end -->
 
 $$
@@ -540,8 +530,7 @@ $$
 > $$
 > 给出 $c_2=-b,c_3=2b$。又因全部解只有一个自由方向，nullity $=1$、rank $=2$；而 $c_2,c_3$ 只张成 $\operatorname{span}(b)$，故 $c_1$ 必须不是 $b$ 的倍数，才能使列空间达到二维。
 > <!-- bilingual-en:start -->
-> Local transcript's title begins with the homogeneous direction as $(1,2,1)^T$, but subsequent calculations use $(0,2,1)^T$.  The original MIT Fall 1999 Quiz 1 Q4 and the official answer both confirm the latter is correct.  therefore
-> Give $c_2=-b,c_3=2b$.  Because all solutions have only one free direction, nullity $=1$, rank $=2$, and $c_2,c_3$ is only $\operatorname{span}(b)$, $c_1$ must not be a multiple of $b$ to make the column space reach two-dimensional.
+> The local transcript initially gives the homogeneous direction as $(1,2,1)^T$, but its subsequent calculations use $(0,2,1)^T$. The original MIT Fall 1999 Quiz 1 Q4 and the official solution confirm that the latter is correct. Therefore the two displayed equations yield $c_2=-b$ and $c_3=2b$. Because the complete solution has exactly one free direction, the nullity is $1$ and the rank is $2$. Since $c_2$ and $c_3$ span only $\operatorname{span}(b)$, $c_1$ must not be a multiple of $b$ if the column space is to be two-dimensional.
 > <!-- bilingual-en:end -->
 
 ### 5. 为什么“结构先于计算”
@@ -559,24 +548,26 @@ The same problem may admit many computational routes, but rank, nullity, and con
 3. 再选择消元、子空间或分解；
 4. 最后代回或做维数检查。
 <!-- bilingual-en:start -->
-1. Write size;
-2. To judge the existence, uniqueness or parameterization of the question;
-3. Choosing elimination, subspace or decomposition;
-4. Last generation or dimension check.
+
+&nbsp;
+**1.** Write down all dimensions.<br>
+**2.** Decide whether the problem asks about existence, uniqueness, or a parametrization.<br>
+**3.** Choose the appropriate tool: elimination, subspaces, or a factorization.<br>
+**4.** Finally, substitute the result back or perform a dimension check.<br>
 <!-- bilingual-en:end -->
 
 ### 易错点与边界
 <!-- bilingual-en:start -->
-*Fault-prone points and boundaries*
+*Common pitfalls and boundaries*
 <!-- bilingual-en:end -->
 
 - $N(A)$ 在输入空间 $\mathbb R^n$，$C(A)$ 在输出空间 $\mathbb R^m$，不能相加或直接比较，除非 $m=n$ 且另有语境。
 - 秩下降同时影响存在性与唯一性，但两者不是同一句话：存在性由 $b\in C(A)$ 决定，唯一性由 $N(A)=\{0\}$ 决定。
 - Overview 是官方第二讲；不要按本地 `Ses1.13` 文件名把它放到图论之后。
 <!-- bilingual-en:start -->
-- $N(A)$ in input space $\mathbb R^n$, $C(A)$ in output space $\mathbb R^m$, cannot be added or compared directly, unless $m=n$ and there is another context.
-- Rank decline affects both existence and uniqueness, but they are not the same sentence: existence is determined by $b\in C(A)$ and uniqueness by $N(A)=\{0\}$.
-- Overview is the official second lecture; do not put it after the graph by the local `Ses1.13` filename.
+- $N(A)$ lies in the input space $\mathbb R^n$, whereas $C(A)$ lies in the output space $\mathbb R^m$. They cannot be added or compared directly unless $m=n$ and the context supplies an identification between the two spaces.
+- A drop in rank can affect both existence and uniqueness, but these are distinct questions: existence is determined by $b\in C(A)$, while uniqueness is determined by $N(A)=\{0\}$.
+- Overview is the official second lecture; do not place it after the graph lecture merely because its local filename is `Ses1.13`.
 <!-- bilingual-en:end -->
 
 ### 三道自检题
@@ -599,12 +590,12 @@ The same problem may admit many computational routes, but rank, nullity, and con
 > [!question]- 3. 若 $N(A)=\{0\}$，是否保证每个 $b\in\mathbb R^m$ 都可解？
 > 不保证。它只保证“至多一个解”；还需 $C(A)=\mathbb R^m$ 才保证存在。高矩阵可有独立列但不能覆盖全部 $\mathbb R^m$。
 > <!-- bilingual-en:start -->
-> No promises.  It only guarantees "at most one solution"; it also requires $C(A)=\mathbb R^m$ to guarantee existence.  High matrices can have independent columns but cannot overwrite all $\mathbb R^m$.
+> No. It guarantees only that there is at most one solution. Existence for every $b$ additionally requires $C(A)=\mathbb R^m$. A tall matrix may have independent columns without spanning all of $\mathbb R^m$.
 > <!-- bilingual-en:end -->
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 $Ax=b$ → 输入端 $N(A)$ 与输出端 $C(A)$ → rank 计数有效方向 → 正交、特征值与 SVD 将在后续单元继续刻画这些方向。
@@ -630,9 +621,6 @@ $Ax=b$ → the input-side nullspace $N(A)$ and output-side column space $C(A)$ �
 <!-- bilingual-en:end -->
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.2sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S03_Lecture_Elimination_with_Matrices.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S03_Recitation_Recitation_Elimination_with_Matrices.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.2prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.2sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:start -->
-**Local**: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.2sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S03_Lecture_Elimination_with_Matrices.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S03_Recitation_Recitation_Elimination_with_Matrices.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.2prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.2sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:end -->
 
 ### 1. 三种基本行操作
 <!-- bilingual-en:start -->
@@ -648,9 +636,11 @@ $Ax=b$ → the input-side nullspace $N(A)$ and output-side column space $C(A)$ �
 2. 一行乘非零标量；
 3. 一行加上另一行的任意倍数。
 <!-- bilingual-en:start -->
-1. Exchange two lines;
-2. Multiply one row by a non-zero scalar;
-3. One row plus any multiple of the other.
+
+&nbsp;
+**1.** Swap two rows;<br>
+**2.** Multiply a row by a nonzero scalar;<br>
+**3.** Add any multiple of one row to another row.<br>
 <!-- bilingual-en:end -->
 
 > [!proof] 行操作为什么保持解集
@@ -665,12 +655,12 @@ $Ax=b$ → the input-side nullspace $N(A)$ and output-side column space $C(A)$ �
 > **Goal:** prove that the systems before and after each operation are equivalent.
 > **Argument:** Swapping two equations changes only their order. Multiplying an equation by $c\ne0$ is reversed by multiplying by $1/c$. Replacing $R_i$ by $R_i-kR_j$ is reversed by $R_i\leftarrow R_i+kR_j$. Since each operation is reversible, it neither loses nor introduces solutions.
 > **Boundary:** Multiplying a row by $0$ is not invertible: it destroys the original equation and is therefore not an allowed elementary row operation.
-> **Conclusion**:The three operations are invertible, so the old and new systems have the same solution set;the corresponding coefficient matrices are [[线性方程组与四个基本子空间#消元、主元与 LU|row-equivalent]] to each other.
+> **Conclusion**: The three operations are invertible, so the original and transformed systems have exactly the same solution set; their coefficient matrices are [[线性方程组与四个基本子空间#消元、主元与 LU|row-equivalent]].
 > <!-- bilingual-en:end -->
 
 行操作也可以写成左乘[[线性方程组与四个基本子空间#消元、主元与 LU|初等矩阵（elementary matrix）]]。若
 <!-- bilingual-en:start -->
-Row operations can also be written as left times [[线性方程组与四个基本子空间#消元、主元与 LU|elementary matrix]]. If
+Row operations can also be represented by left multiplication with an [[线性方程组与四个基本子空间#消元、主元与 LU|elementary matrix]]. If
 <!-- bilingual-en:end -->
 
 $$
@@ -689,7 +679,7 @@ $E_{21}A$ replaces the second row of $A$ by $R_2-3R_1$. Left multiplication perf
 
 每一步用一个非零[[线性方程组与四个基本子空间#消元、主元与 LU|pivot（主元）]]消去其下方元素。若预定主元是 $0$：
 <!-- bilingual-en:start -->
-Each step eliminates the elements below it with a non-zero [[线性方程组与四个基本子空间#消元、主元与 LU|pivot]].  If the intended pivot is $0$:
+Each step uses a nonzero [[线性方程组与四个基本子空间#消元、主元与 LU|pivot]] to eliminate the entries below it. If the intended pivot is $0$:
 <!-- bilingual-en:end -->
 
 - 下方有非零数：交换行，将非零数换上来；
@@ -703,17 +693,17 @@ Each step eliminates the elements below it with a non-zero [[线性方程组与�
 
 主元个数就是矩阵的秩。主元的具体数值会随行缩放改变，但主元个数不会。
 <!-- bilingual-en:start -->
-The number of pivots is the rank of the matrix.  The exact number of pivots varies by scaling, but the number of pivots does not.
+The number of pivots is the rank of the matrix. Row scaling may change the numerical values of the pivots, but it cannot change how many pivots there are.
 <!-- bilingual-en:end -->
 
 ### 3. Recitation 完整消元例题
 <!-- bilingual-en:start -->
-*3. Recitation complete elimination problem*
+*3. Complete recitation example using elimination*
 <!-- bilingual-en:end -->
 
 求解
 <!-- bilingual-en:start -->
-solving
+Solve
 <!-- bilingual-en:end -->
 
 $$
@@ -769,7 +759,7 @@ $$
 
 第三个预定主元为 $0$，交换 $R_3,R_4$ 得上三角系统。由下往上回代：
 <!-- bilingual-en:start -->
-The third pivot is $0$, and the exchange $R_3,R_4$ is triangulated.  Descending from Bottom:
+The intended third pivot is $0$, so swap $R_3$ and $R_4$ to obtain an upper triangular system. Then back-substitute from the bottom row upward:
 <!-- bilingual-en:end -->
 
 $$
@@ -864,10 +854,10 @@ The solution is $(1,2,3,4)^T$.
 - 初等矩阵写在左边；$AE$ 一般执行的是列操作。
 - 数值计算中若主元很小，实际算法会做 pivoting；本课先关注精确代数结构。
 <!-- bilingual-en:start -->
-- Row operations must also act on $b$; only $A$ gets another set of equations.
-- "No pivot" does not necessarily mean no solution: it may mean only free variables; only contradictory lines mean no solution.
+- Row operations must act on $b$ as well as on $A$; reducing only $A$ would describe a different system of equations.
+- A missing pivot does not necessarily mean that there is no solution: it may simply indicate a free variable. Only a contradictory row proves inconsistency.
 - The elementary matrix is written on the left; $AE$ typically performs column operations.
-- In numerical calculations, if the pivot is small, the actual algorithm will be pivoting; this lesson first focuses on exact algebraic structures.
+- In numerical computation, practical algorithms use pivoting when a prospective pivot is small. This lesson first focuses on the exact algebraic structure.
 <!-- bilingual-en:end -->
 
 ### 三道自检题
@@ -884,7 +874,7 @@ The solution is $(1,2,3,4)^T$.
 > [!question]- 2. 行最简过程中出现 $[0\ 0\ 0\mid5]$ 表示什么？
 > **答案**：方程 $0=5$，系统不相容，无解。
 > <!-- bilingual-en:start -->
-> **Answer**: Equation $0=5$, System incompatible, No solution.
+> **Answer**: The equation $0=5$ is impossible, so the system is inconsistent and has no solution.
 > <!-- bilingual-en:end -->
 
 > [!question]- 3. 为什么交换两行不改变解？
@@ -895,7 +885,7 @@ The solution is $(1,2,3,4)^T$.
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 可逆行操作 → 上三角形 → 主元与 rank → 回代；下一节把行操作写成矩阵乘法，并研究对所有 $b$ 一次性求解的逆矩阵。
@@ -912,18 +902,15 @@ Invertible row operations → upper triangular form → pivots and rank → back
 
 **问题**：矩阵乘法如何表示变换复合？什么时候存在能撤销 $A$ 的矩阵？
 <!-- bilingual-en:start -->
-**Problem**: How does matrix multiplication represent transform composition?  When is there a matrix that revokes $A$?
+**Questions**: How does matrix multiplication represent composition of transformations? When does a matrix exist that reverses the action of $A$?
 <!-- bilingual-en:end -->
 
 **前置知识**：矩阵乘向量、初等矩阵与消元。
 <!-- bilingual-en:start -->
-**Prerequisite knowledge**: matrix multiplication vector, elementary matrix and elimination.
+**Prerequisites**: matrix–vector multiplication, elementary matrices, and elimination.
 <!-- bilingual-en:end -->
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.3sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S04_Lecture_Multiplication_and_Inverse_Matrices.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S04_Recitation_Inverse_Matrices.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.3prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.3sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:start -->
-**Local**: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.3sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S04_Lecture_Multiplication_and_Inverse_Matrices.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S04_Recitation_Inverse_Matrices.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.3prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.3sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:end -->
 
 ### 1. 矩阵乘法的四种读法
 <!-- bilingual-en:start -->
@@ -932,7 +919,7 @@ Invertible row operations → upper triangular form → pivots and rank → back
 
 设 $A\in\mathbb R^{m\times n}$、$B\in\mathbb R^{n\times p}$，则 $AB\in\mathbb R^{m\times p}$。
 <!-- bilingual-en:start -->
-Let $A\in\mathbb R^{m\times n}$, $B\in\mathbb R^{n\times p}$, then $AB\in\mathbb R^{m\times p}$.
+Let $A\in\mathbb R^{m\times n}$ and $B\in\mathbb R^{n\times p}$. Then $AB\in\mathbb R^{m\times p}$.
 <!-- bilingual-en:end -->
 
 1. **行乘列**：$(AB)_{ij}=\sum_{k=1}^n a_{ik}b_{kj}$。
@@ -944,16 +931,18 @@ Let $A\in\mathbb R^{m\times n}$, $B\in\mathbb R^{n\times p}$, then $AB\in\mathbb
    $$
    每项都是列向量乘行向量的秩至多一矩阵。
 <!-- bilingual-en:start -->
-1.**Line multiplication column**: $(AB)_{ij}=\sum_{k=1}^n a_{ik}b_{kj}$.
-2.**By column**: The $j$ column of $AB$ is the $A$ multiplied by the $B$ column of $j$.
-3.**By line**: $AB$ Line $i$ is $A$ Line $i$ Ride $B$.
-4.**External product sum**:
-   Each term is a rank of column vectors multiplied by at most one matrix of row vectors.
+
+&nbsp;
+**1.** **Row times column**: $(AB)_{ij}=\sum_{k=1}^n a_{ik}b_{kj}$.<br>
+**2.** **By columns**: Column $j$ of $AB$ is $A$ times column $j$ of $B$.<br>
+**3.** **By rows**: Row $i$ of $AB$ is row $i$ of $A$ multiplied by $B$.<br>
+**4.** **Sum of outer products**: $AB=\sum_{k=1}^n A_{:k}B_{k:}$.<br>
+   Each term is the outer product of a column vector and a row vector, and therefore has rank at most one.
 <!-- bilingual-en:end -->
 
 矩阵乘法表示变换复合：$ABx=A(Bx)$，因此先做 $B$、后做 $A$。它满足结合律与分配律，但一般不满足交换律。
 <!-- bilingual-en:start -->
-The matrix multiplication represents the transform composition: $ABx=A(Bx)$, so do $B$ first, then $A$.  It satisfies the combination law and the distribution law, but does not satisfy the exchange law generally.
+Matrix multiplication represents composition of transformations: $ABx=A(Bx)$, so $B$ acts first and $A$ second. Matrix multiplication is associative and distributive, but generally not commutative.
 <!-- bilingual-en:end -->
 
 ### 2. 逆矩阵
@@ -963,7 +952,7 @@ The matrix multiplication represents the transform composition: $ABx=A(Bx)$, so 
 
 若方阵 $A\in\mathbb R^{n\times n}$ 存在 $A^{-1}$ 使
 <!-- bilingual-en:start -->
-If $A^{-1}$ is present in the square $A\in\mathbb R^{n\times n}$,
+If a square matrix $A\in\mathbb R^{n\times n}$ has a matrix $A^{-1}$ satisfying
 <!-- bilingual-en:end -->
 
 $$
@@ -972,7 +961,7 @@ $$
 
 则称 $A$ 可逆，$A^{-1}$ 是 [[线性方程组与四个基本子空间#可解性与完整解|逆矩阵]]。于是 $Ax=b$ 的唯一解为 $x=A^{-1}b$。
 <!-- bilingual-en:start -->
-$A$ is invertible, and $A^{-1}$ is [[线性方程组与四个基本子空间#可解性与完整解|inverse matrix]].  So the only solution of $Ax=b$ is $x=A^{-1}b$.
+then $A$ is invertible and $A^{-1}$ is its [[线性方程组与四个基本子空间#可解性与完整解|inverse]]. Hence $Ax=b$ has the unique solution $x=A^{-1}b$.
 <!-- bilingual-en:end -->
 
 > [!proof] 逆矩阵若存在则唯一
@@ -988,21 +977,20 @@ $A$ is invertible, and $A^{-1}$ is [[线性方程组与四个基本子空间#可
 >
 > **结论**：逆矩阵唯一。
 > <!-- bilingual-en:start -->
-> **Target**: If both $B$ and $C$ are $A$'s two-sided inverse, prove $B=C$.
-> **Transformation**:
-> In each step, only the identity matrix is used to define the combination law.
-> **Boundary**: This argument requires that the dimensions be $n\times n$ and that the two-sided inversion be used.
-> **Conclusion**: The inverse matrix is unique.
+> **Goal**: If both $B$ and $C$ are two-sided inverses of $A$, prove that $B=C$.
+> **Calculation**: $B=BI=B(AC)=(BA)C=IC=C$. Each step uses only the definition of the identity matrix and associativity.
+> **Boundary**: This argument requires square $n\times n$ matrices and two-sided inverses.
+> **Conclusion**: A two-sided inverse is unique.
 > <!-- bilingual-en:end -->
 
 ### 3. Gauss–Jordan 求逆的原理
 <!-- bilingual-en:start -->
-*3. Principle of Gauss-Jordan's inversion*
+*3. Why Gauss–Jordan elimination finds the inverse*
 <!-- bilingual-en:end -->
 
 对增广矩阵 $[A\mid I]$ 做相同行操作，相当于左乘一串初等矩阵 $E_k\cdots E_1$。若左侧最终成为 $I$，则
 <!-- bilingual-en:start -->
-Do the same row operation to the augmented matrix $[A\mid I]$, equivalent to left multiplying a string of elementary matrix $E_k\cdots E_1$.  If the left side ultimately becomes $I$, then
+Applying the same row operations to the augmented matrix $[A\mid I]$ is equivalent to left-multiplying by a product of elementary matrices, $E_k\cdots E_1$. If the left block becomes $I$, then
 <!-- bilingual-en:end -->
 
 $$
@@ -1011,7 +999,7 @@ $$
 
 故 $E_k\cdots E_1=A^{-1}$，右侧同时变成 $A^{-1}$：
 <!-- bilingual-en:start -->
-So $E_k\cdots E_1=A^{-1}$, the right side becomes $A^{-1}$:
+Thus $E_k\cdots E_1=A^{-1}$, and the right block simultaneously becomes $A^{-1}$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1020,17 +1008,17 @@ $$
 
 若左侧无法产生 $n$ 个主元，$A$ 是 [[线性方程组与四个基本子空间#可解性与完整解|奇异矩阵]]，逆不存在。
 <!-- bilingual-en:start -->
-If $n$ primitives cannot be generated on the left, $A$ is [[线性方程组与四个基本子空间#可解性与完整解|singular matrix]] and non-existent.
+If the left block cannot produce $n$ pivots, then $A$ is a [[线性方程组与四个基本子空间#可解性与完整解|singular matrix]] and has no inverse.
 <!-- bilingual-en:end -->
 
 ### 4. 可逆等价链
 <!-- bilingual-en:start -->
-*4. Invertible equivalence chains*
+*4. Equivalent conditions for invertibility*
 <!-- bilingual-en:end -->
 
 对 $n\times n$ 方阵，下列命题等价：
 <!-- bilingual-en:start -->
-For the $n\times n$ matrix, the following propositions are equivalent:
+For an $n\times n$ matrix, the following statements are equivalent:
 <!-- bilingual-en:end -->
 
 - $A$ 可逆；
@@ -1050,17 +1038,17 @@ For the $n\times n$ matrix, the following propositions are equivalent:
 
 这组结论集中见 [[线性方程组与四个基本子空间#基、维数与秩|可逆矩阵等价链]]。其逻辑核心是：无非零丢失方向保证一一性，覆盖整个输出空间保证满射；同维有限维空间中二者等价。
 <!-- bilingual-en:start -->
-See the [[线性方程组与四个基本子空间#基、维数与秩|invertible-matrix equivalence chain]] for the complete set of statements. The central idea is that having no nonzero direction mapped to zero gives injectivity, while reaching the entire output space gives surjectivity; for finite-dimensional spaces of equal dimension, these two properties are equivalent.
+For a square matrix, having no nonzero direction mapped to zero gives injectivity, while reaching the entire output space gives surjectivity. In finite-dimensional spaces of equal dimension, these two properties are equivalent and are also equivalent to invertibility.
 <!-- bilingual-en:end -->
 
 ### 5. Recitation 的参数矩阵
 <!-- bilingual-en:start -->
-*5. Parameter matrix of Recitation*
+*5. Parameter matrix from the recitation*
 <!-- bilingual-en:end -->
 
 Recitation 计算
 <!-- bilingual-en:start -->
-Recitation Computing
+The recitation computes
 <!-- bilingual-en:end -->
 
 $$
@@ -1073,7 +1061,7 @@ $$
 
 的可逆条件和逆矩阵。先用行差制造主元：
 <!-- bilingual-en:start -->
-the invertible condition and the inverse matrix.  To manufacture a pivot with line differences:
+its invertibility conditions and inverse. Create pivots by taking row differences:
 <!-- bilingual-en:end -->
 
 $$
@@ -1086,7 +1074,7 @@ $$
 
 第一主元是 $a$，后两个主元是 $a-b$。若使用 Unit II 才会系统学习的行列式语言，也可把这一结果写成 $\det A=a(a-b)^2$。
 <!-- bilingual-en:start -->
-The first pivot is $a$, and the second two pivots are $a-b$.  This result can also be written as $\det A=a(a-b)^2$ if the determinant language is learned by Unit II.
+The first pivot is $a$, and the other two are both $a-b$. In the determinant language introduced systematically in Unit II, this is equivalent to $\det A=a(a-b)^2$.
 <!-- bilingual-en:end -->
 
 因此恰在
@@ -1100,7 +1088,7 @@ $$
 
 时可逆。继续对 $[A\mid I]$ 做 Gauss–Jordan，得到
 <!-- bilingual-en:start -->
-Invertible.  Keep Gauss-Jordan on $[A\mid I]$, get
+Under these conditions the matrix is invertible. Continuing Gauss–Jordan elimination on $[A\mid I]$ gives
 <!-- bilingual-en:end -->
 
 $$
@@ -1113,7 +1101,7 @@ $$
 
 例如第一行第一列的乘积为 $a/(a-b)-b/(a-b)=1$，第一行第二列为 $b/(a-b)-b/(a-b)=0$；其余位置同理可验证 $AA^{-1}=I$。这里的关键不是记住公式，而是先识别每个可能为零的主元，再在合法条件下相除。
 <!-- bilingual-en:start -->
-For example, the product of the first column of the first row is $a/(a-b)-b/(a-b)=1$, and the second column of the first row is $b/(a-b)-b/(a-b)=0$; the rest of the same location verifies $AA^{-1}=I$.  The key here is not to memorize the formula, but to identify each pivot that may be zero before dividing it under legitimate conditions.
+For example, the first-row, first-column entry of $AA^{-1}$ is $a/(a-b)-b/(a-b)=1$, while its first-row, second-column entry is $b/(a-b)-b/(a-b)=0$. Checking the remaining entries similarly verifies $AA^{-1}=I$. The point is not to memorize the formula, but to identify every pivot that might vanish before dividing under the appropriate conditions.
 <!-- bilingual-en:end -->
 
 ### Homework：全部题目与逐步解答
@@ -1146,12 +1134,8 @@ For example, the product of the first column of the first row is $a/(a-b)-b/(a-b
 > $$
 > 因而 $AB+AC=A(B+C)$。
 > <!-- bilingual-en:start -->
-> **Title Restatement**: Given
-> Compare $AB+AC$ with $A(B+C)$.
-> **Answer**:
-> therefore
-> also
-> So $AB+AC=A(B+C)$.
+> **Restatement**: For the displayed matrices, compare $AB+AC$ with $A(B+C)$.
+> **Answer**: Direct multiplication gives the displayed matrices $AB$ and $AC$, so $AB+AC=\begin{bmatrix}11&12\\23&24\end{bmatrix}$. Computing $B+C$ first gives the same matrix after multiplication by $A$. Hence $AB+AC=A(B+C)$.
 > <!-- bilingual-en:end -->
 
 > [!question]- Problem 3.2：符号上三角矩阵的逆
@@ -1171,10 +1155,9 @@ For example, the product of the first column of the first row is $a/(a-b)-b/(a-b
 > $$
 > 验算第一行第三列：$1(ac-b)+a(-c)+b(1)=0$；其余非对角元同样为 $0$，故 $UU^{-1}=I$。原官方解中末行把结果标成 `L^{-1}` 是排版笔误，此处应为 $U^{-1}$。
 > <!-- bilingual-en:start -->
-> **Title Restatement**: Gauss-Jordan
-> Reverse.
-> **Answer**: Zero from third column up.  $R_1\leftarrow R_1-aR_2$, $R_2\leftarrow R_2-cR_3$, $R_1\leftarrow R_1-(b-ac)R_3$.  get
-> The first row, third column: $1(ac-b)+a(-c)+b(1)=0$; the remaining non-diagonal elements are also $0$, so $UU^{-1}=I$.  The final line of the original official text marked the result as `L^{-1}` is a typesetting error, which should be $U^{-1}$.
+> **Restatement**: Use Gauss–Jordan elimination to find the inverse of the displayed upper triangular matrix.
+> **Answer**: Clear the third column upward. Apply $R_1\leftarrow R_1-aR_2$, $R_2\leftarrow R_2-cR_3$, and then $R_1\leftarrow R_1-(b-ac)R_3$ to obtain the displayed inverse.
+> Checking the first-row, third-column entry gives $1(ac-b)+a(-c)+b(1)=0$; the other off-diagonal entries are also zero, so $UU^{-1}=I$. The final line of the official solution labels the result `L^{-1}`, but this is a typographical error: it should be $U^{-1}$.
 > <!-- bilingual-en:end -->
 
 ### 易错点、边界与反例
@@ -1187,10 +1170,10 @@ For example, the product of the first column of the first row is $a/(a-b)-b/(a-b
 - $(A+B)^{-1}$ 一般不等于 $A^{-1}+B^{-1}$。
 - 求逆只适用于方阵；解一般矩阵系统应使用消元和子空间语言。
 <!-- bilingual-en:start -->
-- $AB\ne BA$ is generally true; even if $AB$ is defined, $BA$ may be undefined.
-- $(AB)^{-1}=B^{-1}A^{-1}$, the order must be reversed because undoing a composite requires undoing the last executed $A$ first.
+- In general, $AB\ne BA$; even when $AB$ is defined, $BA$ may be undefined.
+- $(AB)^{-1}=B^{-1}A^{-1}$. The order reverses because undoing a composition requires undoing the last transformation first.
 - $(A+B)^{-1}$ is not usually equal to $A^{-1}+B^{-1}$.
-- Inversion is only suitable for square matrix; elimination and subspace language should be used for solving general matrix system.
+- Inverses exist only for square matrices; use elimination and subspace language for general linear systems.
 <!-- bilingual-en:end -->
 
 ### 三道自检题
@@ -1201,13 +1184,13 @@ For example, the product of the first column of the first row is $a/(a-b)-b/(a-b
 > [!question]- 1. 若 $A$ 为 $2\times3$、$B$ 为 $3\times4$，$AB$ 的尺寸是什么？$BA$ 呢？
 > **答案**：$AB$ 为 $2\times4$；$BA$ 的内侧尺寸 $4$ 与 $2$ 不合，未定义。
 > <!-- bilingual-en:start -->
-> **Answer**: $AB$ is $2\times4$; $BA$'s inside dimensions, $4$, do not fit $2$ and are undefined.
+> **Answer**: $AB$ is $2\times4$. The inner dimensions of $BA$ are $4$ and $2$, which do not match, so $BA$ is undefined.
 > <!-- bilingual-en:end -->
 
 > [!question]- 2. 证明若 $A$ 可逆且 $Ax=0$，则 $x=0$。
 > **答案**：左乘 $A^{-1}$：$x=I x=A^{-1}Ax=A^{-1}0=0$。
 > <!-- bilingual-en:start -->
-> **Answer**: Left-multiply $A^{-1}$:$x=I x=A^{-1}Ax=A^{-1}0=0$.
+> **Answer**: Left-multiply by $A^{-1}$: $x=Ix=A^{-1}Ax=A^{-1}0=0$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 3. 为什么 $[A\mid I]$ 左侧出现零行就不能得到逆？
@@ -1218,12 +1201,12 @@ For example, the product of the first column of the first row is $a/(a-b)-b/(a-b
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 矩阵乘法 = 变换复合 → 初等矩阵 = 可逆行操作 → Gauss–Jordan 同时求出撤销变换的 $A^{-1}$ → 下一节把整串消元压缩为 $A=LU$。
 <!-- bilingual-en:start -->
-matrix multiplication = transform complex → elementary matrix = invertible operation → Gauss-Jordan and $A^{-1}$ to cancel the transform → the next section compresses the whole series of elimination to $A=LU$.
+Matrix multiplication represents composition → elementary matrices represent invertible row operations → Gauss–Jordan elimination constructs $A^{-1}$, which undoes the transformation → the next section compresses the entire elimination process into $A=LU$.
 <!-- bilingual-en:end -->
 
 ## Session 1.5 Factorization into A = LU
@@ -1235,7 +1218,7 @@ matrix multiplication = transform complex → elementary matrix = invertible ope
 
 **问题**：消元产生的一整串操作，怎样保存为一次可复用的矩阵分解？
 <!-- bilingual-en:start -->
-**Problem**: How to save the whole series of operations generated by elimination as a reusable matrix factorization?
+**Question**: How can the entire sequence of elimination operations be stored as a reusable matrix factorization?
 <!-- bilingual-en:end -->
 
 **前置知识**：初等矩阵、上三角回代、逆矩阵。
@@ -1244,9 +1227,6 @@ matrix multiplication = transform complex → elementary matrix = invertible ope
 <!-- bilingual-en:end -->
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.4sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S05_Lecture_Factorization_into_A_LU.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S05_Recitation_LU_Decomposition.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.4prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.4sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:start -->
-**Local**: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.4sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S05_Lecture_Factorization_into_A_LU.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S05_Recitation_LU_Decomposition.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.4prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.4sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:end -->
 
 ### 1. 从消元到 [[线性方程组与四个基本子空间#消元、主元与 LU|LU 分解]]
 <!-- bilingual-en:start -->
@@ -1316,7 +1296,7 @@ $$
 
 第一列倍数为 $\ell_{21}=2$、$\ell_{31}=-1$：
 <!-- bilingual-en:start -->
-The first column is multiplied by $\ell_{21}=2$, $\ell_{31}=-1$:
+The elimination multipliers in the first column are $\ell_{21}=2$ and $\ell_{31}=-1$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1334,7 +1314,7 @@ $$
 
 第二列倍数 $\ell_{32}=-1$，做 $R_3\leftarrow R_3+R_2$：
 <!-- bilingual-en:start -->
-The second column is multiplied by $\ell_{32}=-1$ to do $R_3\leftarrow R_3+R_2$:
+The second-column multiplier is $\ell_{32}=-1$, so perform $R_3\leftarrow R_3+R_2$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1349,12 +1329,12 @@ Check the three rows of $LU$: the first equals the first row of $U$; the second 
 
 ### 3. 为什么 LU 对多个右端特别有用
 <!-- bilingual-en:start -->
-*3. Why LUs are particularly useful for multiple right-hand ends*
+*3. Why LU is especially useful for multiple right-hand sides*
 <!-- bilingual-en:end -->
 
 求 $Ax=b$ 时，若 $A=LU$，则先解
 <!-- bilingual-en:start -->
-When seeking $Ax=b$, if $A=LU$, the first solution
+To solve $Ax=b$ when $A=LU$, first solve
 <!-- bilingual-en:end -->
 
 $$
@@ -1363,7 +1343,7 @@ $$
 
 （前代），再解
 <!-- bilingual-en:start -->
-(previous generation), then solve
+(by forward substitution), and then solve
 <!-- bilingual-en:end -->
 
 $$
@@ -1372,7 +1352,7 @@ $$
 
 （回代）。$A$ 的消元只做一次；不同 $b$ 只需两次三角求解。对稠密 $n\times n$ 矩阵，分解约需 $O(n^3)$，每个新右端约需 $O(n^2)$。
 <!-- bilingual-en:start -->
-(Back).  The elimination of $A$ is only done once; the different $b$ only need to be triangulated twice.  For the dense $n\times n$ matrix, the decomposition takes about $O(n^3)$ and each new right-hand side takes about $O(n^2)$.
+(by back-substitution). Eliminate $A$ only once; each new right-hand side requires just two triangular solves. For a dense $n\times n$ matrix, the factorization costs about $O(n^3)$ operations, while each new right-hand side costs about $O(n^2)$.
 <!-- bilingual-en:end -->
 
 ### 4. 换行时的 $PA=LU$
@@ -1484,7 +1464,7 @@ For example, if the first pivot of $A$ is $0$ but a lower entry in the same colu
 - $A=LU$ 不是逐元素乘法；必须用矩阵乘法验算。
 - 三角矩阵可逆当且仅当所有对角元非零。
 <!-- bilingual-en:start -->
-- In $L$, the elimination multiple $\ell_{ij}$ is saved, and in the elimination matrix, $-\ell_{ij}$ is saved.
+- $L$ stores the elimination multiplier $\ell_{ij}$, whereas the corresponding elimination matrix stores $-\ell_{ij}$.
 - If a row exchange occurs, do not omit $P$ and write only $A=LU$.
 - $A=LU$ is not element-by-element multiplication; it must be checked with matrix multiplication.
 - A triangular matrix is invertible if and only if every diagonal entry is nonzero.
@@ -1498,13 +1478,13 @@ For example, if the first pivot of $A$ is $0$ but a lower entry in the same colu
 > [!question]- 1. $A=LU$ 时，为什么先解 $Lc=b$ 再解 $Ux=c$？
 > **答案**：令 $c=Ux$，则原式 $LUx=b$ 变为 $Lc=b$；两步合起来等价于原式。
 > <!-- bilingual-en:start -->
-> **Answer**: Let $c=Ux$, the original $LUx=b$ becomes $Lc=b$; two steps together are equivalent to the original.
+> **Answer**: Let $c=Ux$. Then $LUx=b$ becomes $Lc=b$, so the two triangular solves are together equivalent to the original system.
 > <!-- bilingual-en:end -->
 
 > [!question]- 2. 消元倍数 $\ell_{31}=-2$ 在 $L$ 的哪里？
 > **答案**：$L_{31}=-2$；消元矩阵对应位置则是 $2$。
 > <!-- bilingual-en:start -->
-> **Answer**:$L_{31}=-2$;The corresponding position of the elimination matrix is $2$.
+> **Answer**: $L_{31}=-2$; the corresponding entry of the elimination matrix is $2$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 3. 若 $A=\begin{bmatrix}0&1\\2&3\end{bmatrix}$，为什么标准无换行 LU 失败？
@@ -1515,12 +1495,12 @@ For example, if the first pivot of $A$ is $0$ but a lower entry in the same colu
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 消元矩阵 $E$ → $EA=U$ → 逆向恢复 $A=LU$ → 多个右端共享一次分解；接下来把矩阵本身放进更一般的向量空间语言。
 <!-- bilingual-en:start -->
-The elimination matrix $E$ → $EA=U$ → reverse recovery $A=LU$ → multiple right-hand sides share a decomposition; the matrix itself is then placed into a more general vector space language.
+Elimination matrix $E$ → $EA=U$ → undo elimination to recover $A=LU$ → multiple right-hand sides reuse one factorization → next, matrices themselves are placed in the broader language of vector spaces.
 <!-- bilingual-en:end -->
 
 ## Session 1.6 Transposes, permutations, vector spaces
@@ -1532,22 +1512,19 @@ The elimination matrix $E$ → $EA=U$ → reverse recovery $A=LU$ → multiple r
 
 **问题**：转置和置换怎样交换行列？一个集合满足什么条件才真的是向量空间？
 <!-- bilingual-en:start -->
-**Question**: How do you swap rows and columns by transposing and permuting?  What condition does a set meet to be really a vector space?
+**Questions**: How do transposition and permutation rearrange rows and columns? What conditions make a set a vector space?
 <!-- bilingual-en:end -->
 
 **前置知识**：矩阵乘法、逆矩阵、线性组合。
 <!-- bilingual-en:start -->
-**Prerequisite knowledge**: Matrix multiplication, inverse matrix, linear combination.
+**Prerequisites**: matrix multiplication, inverse matrices, and linear combinations.
 <!-- bilingual-en:end -->
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.5sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S06_Lecture_Transposes_Permutations_Vector_Spaces.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S06_Recitation_Subspaces_of_Three_Dimensional_Space.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.5prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.5sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:start -->
-**Local**: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.5sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S06_Lecture_Transposes_Permutations_Vector_Spaces.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S06_Recitation_Subspaces_of_Three_Dimensional_Space.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.5prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.5sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:end -->
 
 ### 1. 转置（transpose）
 <!-- bilingual-en:start -->
-*1. transpose*
+*1. Transpose*
 <!-- bilingual-en:end -->
 
 若 $A\in\mathbb R^{m\times n}$，其转置 $A^T\in\mathbb R^{n\times m}$ 定义为
@@ -1561,7 +1538,7 @@ $$
 
 基本恒等式：
 <!-- bilingual-en:start -->
-Basic identity:
+Basic identities:
 <!-- bilingual-en:end -->
 
 $$
@@ -1589,10 +1566,8 @@ $$
 > **尺寸检查**：$AB$ 为 $m\times p$，两边转置后均为 $p\times m$。
 > <!-- bilingual-en:start -->
 > **Goal**: Prove that $(AB)^T=B^TA^T$.
-> **Component-by-Component Comparison**:
-> On the other hand,
-> Scalar multiplication is commutative, so the two forms are equal.
-> **Size Check**: $m\times p$ for $AB$ and $p\times m$ for both sides.
+> **Componentwise comparison**: The $(i,j)$ entry of $(AB)^T$ is $(AB)_{ji}=\sum_k a_{jk}b_{ki}$. On the other hand, the $(i,j)$ entry of $B^TA^T$ is $\sum_k b_{ki}a_{jk}$. Since scalar multiplication is commutative, these entries are equal.
+> **Dimension check**: If $AB$ is $m\times p$, then both $(AB)^T$ and $B^TA^T$ are $p\times m$.
 > <!-- bilingual-en:end -->
 
 若 $A^T=A$，称 $A$ 为 [[对称矩阵与正定二次型#对称矩阵与谱定理|对称矩阵]]；若 $A^T=-A$，称为斜对称矩阵，实数情形下其对角元必须为 $0$。
@@ -1602,7 +1577,7 @@ If $A^T=A$, then $A$ is a [[对称矩阵与正定二次型#对称矩阵与谱定
 
 ### 2. 置换矩阵
 <!-- bilingual-en:start -->
-*2. Permutation Matrix*
+*2. Permutation matrices*
 <!-- bilingual-en:end -->
 
 置换矩阵 $P$ 是把 $I$ 的行重新排列得到的矩阵。左乘 $PA$ 重排 $A$ 的行，右乘 $AP$ 重排 $A$ 的列。每一行、每一列恰有一个 $1$，其余为 $0$，并且
@@ -1621,7 +1596,7 @@ The columns of $P$ are a permutation of the standard orthonormal basis, so $P^TP
 
 ### 3. 向量空间与子空间
 <!-- bilingual-en:start -->
-*3. Vector Space and Subspace*
+*3. Vector spaces and subspaces*
 <!-- bilingual-en:end -->
 
 一个 [[线性方程组与四个基本子空间#基、维数与秩|向量空间]] 必须对向量加法和标量乘法封闭，并满足通常的加法、数乘公理。若 $S\subseteq V$ 在继承 $V$ 的运算后仍为向量空间，称 $S$ 是 [[线性方程组与四个基本子空间#基、维数与秩|子空间]]。
@@ -1669,7 +1644,7 @@ The recitation illustrates in $\mathbb R^3$ that the span of one nonzero vector 
 > <!-- bilingual-en:start -->
 > **Restatement**: (a) Find a $3\times3$ permutation matrix $P\ne I$ with $P^3=I$; (b) find a $4\times4$ permutation matrix $\widetilde P$ with $\widetilde P^4\ne I$.
 > **Answer**: Choose the displayed 3-cycle. It sends $e_1\to e_2\to e_3\to e_1$, so three applications return every basis vector to its starting point and $P^3=I$.
-> For (b), take $\widetilde P=\operatorname{diag}(1,P)$.  Because $P^3=I$,
+> For (b), take $\widetilde P=\operatorname{diag}(1,P)$. Because $P^3=I$, the displayed calculation gives $\widetilde P^4=\operatorname{diag}(1,P)\ne I_4$.
 > <!-- bilingual-en:end -->
 
 > [!question]- Problem 5.2：对称与斜对称矩阵的自由度
@@ -1700,10 +1675,8 @@ The recitation illustrates in $\mathbb R^3$ that the span of one nonzero vector 
 > $$
 > 所以斜对称矩阵也构成子空间。非对称矩阵集合不含零矩阵，已违反必要条件；此外两个非对称矩阵也可能相加成对称矩阵，故不是子空间。
 > <!-- bilingual-en:start -->
-> **Title**: Judging whether the set of symmetric, skew symmetric and asymmetric matrices constitutes a subspace of the matrix space $M$.
-> **Answer**: If $A^T=A,B^T=B$, then
-> So the symmetric matrix constitutes a subspace.  The same holds true for $A^T=-A,B^T=-B$
-> So the skew symmetric matrix also constitutes the subspace.  The set of asymmetric matrices does not contain zero matrices, which has violated the necessary conditions, and the two asymmetric matrices may add to a symmetric matrix, so they are not subspaces.
+> **Restatement**: Determine whether the sets of symmetric, skew-symmetric, and nonsymmetric matrices are subspaces of the matrix space $M$.
+> **Answer**: If $A^T=A$ and $B^T=B$, then the displayed calculation shows that every linear combination is symmetric, so the symmetric matrices form a subspace. The same argument with $A^T=-A$ and $B^T=-B$ proves that the skew-symmetric matrices form a subspace. The set of nonsymmetric matrices is not a subspace: it does not contain the zero matrix, and two nonsymmetric matrices may sum to a symmetric matrix.
 > <!-- bilingual-en:end -->
 
 ### 易错点、边界与反例
@@ -1716,10 +1689,10 @@ The recitation illustrates in $\mathbb R^3$ that the span of one nonzero vector 
 - $(AB)^T$ 反序；只逐个转置但不反序是错误的。
 - $P^T=P$ 并非所有置换矩阵都成立；正确恒等式是 $P^T=P^{-1}$。
 <!-- bilingual-en:start -->
-- The affine plane $ax+by+cz=1$ is not a subspace because it is not an origin; the corresponding homogeneous plane $ax+by+cz=0$ is.
-- "There are many vectors in the set" is independent of "is a subspace"; the key is whether all linear combinations are still in the set.
-- $(AB)^T$ reverse; it is wrong to invert only one by one, but not reverse.
-- $P^T=P$ Not all permutation matrices hold; the correct identity is $P^T=P^{-1}$.
+- The affine plane $ax+by+cz=1$ is not a subspace because it does not contain the origin; the corresponding homogeneous plane $ax+by+cz=0$ is a subspace.
+- The number of vectors in a set is irrelevant to whether it is a subspace; the key question is whether the set is closed under all linear combinations.
+- Transposition reverses the order of a product: $(AB)^T=B^TA^T$. Transposing the factors without reversing their order is incorrect.
+- The identity $P^T=P$ does not hold for every permutation matrix. The general identity is $P^T=P^{-1}$.
 <!-- bilingual-en:end -->
 
 ### 三道自检题
@@ -1747,12 +1720,12 @@ The recitation illustrates in $\mathbb R^3$ that the span of one nonzero vector 
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 转置交换行列 → 置换矩阵实现可逆重排 → 子空间以线性组合封闭为核心 → 下一节证明列空间和零空间确实是子空间。
 <!-- bilingual-en:start -->
-permuting rows and columns → permuting matrices for invertible rearrangement → subspaces are linearly combinatorial closed → the next section proves that the column space and the null space are indeed subspaces.
+Transposition swaps rows and columns → permutation matrices perform invertible reorderings → closure under linear combinations characterizes subspaces → the next section proves that column spaces and nullspaces are subspaces.
 <!-- bilingual-en:end -->
 
 ## Session 1.7 Column space and nullspace
@@ -1764,22 +1737,19 @@ permuting rows and columns → permuting matrices for invertible rearrangement �
 
 **问题**：哪些右端 $b$ 可达到？哪些输入方向被 $A$ 压成 $0$？
 <!-- bilingual-en:start -->
-**Q**: Which right-end $b$ are reachable?  Which input directions are pressed into $0$ by $A$?
+**Question**: Which right-hand sides $b$ are attainable, and which input directions does $A$ send to $0$?
 <!-- bilingual-en:end -->
 
 **前置知识**：span、子空间判别、矩阵乘向量。
 <!-- bilingual-en:start -->
-**Prerequisite knowledge**:span, subspace discrimination, matrix multiplication vector.
+**Prerequisites**: spans, the subspace test, and matrix–vector multiplication.
 <!-- bilingual-en:end -->
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.6sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S07_Lecture_Column_Space_and_Nullspace.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S07_Recitation_Vector_Subspaces.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.6prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.6sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:start -->
-**Local**: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.6sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S07_Lecture_Column_Space_and_Nullspace.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S07_Recitation_Vector_Subspaces.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.6prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.6sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:end -->
 
 ### 1. 定义与所在空间
 <!-- bilingual-en:start -->
-*1. Definition and space*
+*1. Definitions and ambient spaces*
 <!-- bilingual-en:end -->
 
 对 $A\in\mathbb R^{m\times n}$：
@@ -1798,7 +1768,7 @@ $$
 
 列空间回答 $Ax=b$ 的**存在性**：
 <!-- bilingual-en:start -->
-Column Space Answer**Existence of $Ax=b$**:
+The column space answers the **existence** question for $Ax=b$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1823,15 +1793,14 @@ The nullspace describes the homogeneous degrees of freedom and therefore control
 >
 > **尺寸**：前一组合发生在 $\mathbb R^m$，后一组合发生在 $\mathbb R^n$。
 > <!-- bilingual-en:start -->
-> **Row space**: If $u=Ax$, $v=Ay$, for any $\alpha,\beta$,
-> **Nullspace**: If $Ax=0$, $Ay=0$, then
-> So, $\alpha x+\beta y\in N(A)$.
-> **Size**: The previous set occurs at $\mathbb R^m$ and the latter set at $\mathbb R^n$.
+> **Column space**: If $u=Ax$ and $v=Ay$, then for any scalars $\alpha,\beta$, $\alpha u+\beta v=A(\alpha x+\beta y)\in C(A)$.
+> **Nullspace**: If $Ax=0$ and $Ay=0$, then $A(\alpha x+\beta y)=\alpha Ax+\beta Ay=0$, so $\alpha x+\beta y\in N(A)$.
+> **Dimensions**: The first linear combination takes place in $\mathbb R^m$, whereas the second takes place in $\mathbb R^n$.
 > <!-- bilingual-en:end -->
 
 ### 2. 一个同时读出两空间的例子
 <!-- bilingual-en:start -->
-*2. An example of simultaneous readout of two spaces*
+*2. One example that reveals both spaces*
 <!-- bilingual-en:end -->
 
 令
@@ -1854,7 +1823,7 @@ $$
 
 $b=(b_1,b_2)^T$ 可解当且仅当 $b_2=2b_1$。零空间方程只有一条独立约束：
 <!-- bilingual-en:start -->
-$b=(b_1,b_2)^T$ is solvable if and only if $b_2=2b_1$.  The null space equation has only one independent constraint:
+$b=(b_1,b_2)^T$ is attainable if and only if $b_2=2b_1$. The nullspace equation has only one independent constraint:
 <!-- bilingual-en:end -->
 
 $$
@@ -1863,7 +1832,7 @@ $$
 
 令 $x_2=s,x_3=t$，则
 <!-- bilingual-en:start -->
-Let $x_2=s,x_3=t$, then
+Let $x_2=s$ and $x_3=t$. Then
 <!-- bilingual-en:end -->
 
 $$
@@ -1934,8 +1903,7 @@ If a set is described by the homogeneous linear condition $b_1+b_2-b_3=0$, it is
 > $$
 > <!-- bilingual-en:start -->
 > **Restatement:** If $C=\begin{bmatrix}A\\B\end{bmatrix}$, how is $N(C)$ related to $N(A)$ and $N(B)$?
-> **Answer:** $A$ and $B$ must have the same number of columns, say $n$, so $x\in\mathbb R^n$. Then
-> and therefore
+> **Answer:** $A$ and $B$ must have the same number of columns, say $n$, so $x\in\mathbb R^n$. Then $Cx=0$ if and only if both $Ax=0$ and $Bx=0$. Therefore $N(C)=N(A)\cap N(B)$.
 > <!-- bilingual-en:end -->
 
 ### 易错点、边界与反例
@@ -1947,9 +1915,9 @@ If a set is described by the homogeneous linear condition $b_1+b_2-b_3=0$, it is
 - $C(A)$ 是列向量的 span，不是“列向量组成的有限集合”。
 - 非齐次解集通常不是子空间，因为不含 $0$；它是零空间的仿射平移。
 <!-- bilingual-en:start -->
-- Row operations usually change specific columns in the column space, but maintain row space and nullspace; the basis for finding $C(A)$ must go back to the original matrix and select pivot columns.
-- $C(A)$ is a span of column vectors, not a "limited set of column vectors".
-- A nonhomogeneous solution set is usually not a subspace because it does not contain $0$; it is an affine translation of a null space.
+- Row operations change the actual columns and usually change the column space, although they preserve the row space and nullspace. To find a basis of $C(A)$, return to the original matrix and select its pivot columns.
+- $C(A)$ is the span of the columns, not merely the finite set of columns themselves.
+- A nonhomogeneous solution set is usually not a subspace because it does not contain $0$; it is an affine translate of the nullspace.
 <!-- bilingual-en:end -->
 
 ### 三道自检题
@@ -1966,7 +1934,7 @@ If a set is described by the homogeneous linear condition $b_1+b_2-b_3=0$, it is
 > [!question]- 2. 为什么 $N(A)$ 一定含零向量？
 > **答案**：线性性给 $A0=0$。
 > <!-- bilingual-en:start -->
-> **Answer**: Linearity for $A0=0$.
+> **Answer**: Linearity gives $A0=0$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 3. 若两列相同，写出一个非零零空间向量。
@@ -1977,7 +1945,7 @@ If a set is described by the homogeneous linear condition $b_1+b_2-b_3=0$, it is
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 $C(A)$ = 可达输出 → $N(A)$ = 丢失输入 → 解的存在与唯一被拆开 → 下一节用 rref 为 $N(A)$ 构造可计算的基。
@@ -1999,22 +1967,19 @@ $C(A)$ describes the reachable outputs → $N(A)$ describes input directions los
 
 **前置知识**：消元、主元、列空间与零空间。
 <!-- bilingual-en:start -->
-**Prerequisite knowledge**: elimination, pivot, column space and nullspace.
+**Prerequisites**: elimination, pivots, column space, and nullspace.
 <!-- bilingual-en:end -->
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.7sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S08_Lecture_Solving_Ax_0_Pivot_Variables_Special_Solutions.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S08_Recitation_Solving_Ax_0.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.7prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.7sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:start -->
-**Local**: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.7sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S08_Lecture_Solving_Ax_0_Pivot_Variables_Special_Solutions.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S08_Recitation_Solving_Ax_0.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.7prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.7sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:end -->
 
 ### 1. 行最简形与变量分工
 <!-- bilingual-en:start -->
-*1. Line simplest and variable division*
+*1. Reduced row-echelon form and the roles of the variables*
 <!-- bilingual-en:end -->
 
 把 $A$ 化为 [[线性方程组与四个基本子空间#消元、主元与 LU|行最简形]] $R$。由于行操作等价于左乘可逆矩阵 $E$，
 <!-- bilingual-en:start -->
-Turn $A$ into [[线性方程组与四个基本子空间#消元、主元与 LU|Line simplest]] $R$.  since that row operation is equivalent to the left multiply invertible matrix $E$,
+Reduce $A$ to [[线性方程组与四个基本子空间#消元、主元与 LU|reduced row-echelon form]] $R$. Since row operations are equivalent to left multiplication by an invertible matrix $E$,
 <!-- bilingual-en:end -->
 
 $$
@@ -2023,7 +1988,7 @@ $$
 
 所以行操作保持零空间。
 <!-- bilingual-en:start -->
-So the row operations keep nullspace.
+row operations preserve the nullspace.
 <!-- bilingual-en:end -->
 
 - 主元列对应 **pivot variables（主元变量）**；
@@ -2031,13 +1996,13 @@ So the row operations keep nullspace.
 - 每个自由变量依次取 $1$、其余自由变量取 $0$，得到一个 **special solution（特殊解）**。
 <!-- bilingual-en:start -->
 - Pivot columns correspond to **pivot variables**;
-- Non-primitive column mappings**free variables (free variables)**;
+- Nonpivot columns correspond to **free variables**;
 - Set one free variable to $1$ and all the others to $0$ in turn to obtain a **special solution**.
 <!-- bilingual-en:end -->
 
 若 $A$ 有 $n$ 列、rank 为 $r$，自由变量数是 $n-r$，也就是 $\dim N(A)$。
 <!-- bilingual-en:start -->
-If $A$ has $n$ rows, rank is $r$, and the number of free variables is $n-r$, that is, $\dim N(A)$.
+If $A$ has $n$ columns and rank $r$, then it has $n-r$ free variables, so $\dim N(A)=n-r$.
 <!-- bilingual-en:end -->
 
 ### 2. 标准块形式
@@ -2047,7 +2012,7 @@ If $A$ has $n$ rows, rank is $r$, and the number of free variables is $n-r$, tha
 
 适当重排列后，rref 可写成
 <!-- bilingual-en:start -->
-When properly rearranged, rref can be written as
+After arranging pivot and free columns in the appropriate order, the RREF can be written as
 <!-- bilingual-en:end -->
 
 $$
@@ -2092,12 +2057,12 @@ The columns of $\begin{bmatrix}-F\\I\end{bmatrix}$ are the special solutions.
 
 ### 3. Recitation：齐次平面与仿射平面
 <!-- bilingual-en:start -->
-*3. Recitation: Homogeneous and Affine Planes*
+*3. Recitation: homogeneous and affine planes*
 <!-- bilingual-en:end -->
 
 非齐次平面
 <!-- bilingual-en:start -->
-inhomogeneous plane
+The nonhomogeneous plane
 <!-- bilingual-en:end -->
 
 $$
@@ -2107,7 +2072,7 @@ $$
 
 与齐次平面 $x-5y+2z=0$ 平行。齐次式以 $x$ 为主元变量、$y,z$ 为自由变量：
 <!-- bilingual-en:start -->
-Parallel to the homogeneous plane $x-5y+2z=0$.  Homogeneity takes $x$ as the main variable and $y,z$ as the free variable:
+is parallel to the homogeneous plane $x-5y+2z=0$. In the homogeneous equation, $x$ is the pivot variable and $y,z$ are free:
 <!-- bilingual-en:end -->
 
 $$
@@ -2128,7 +2093,7 @@ $$
 
 非齐次平面再加特解 $(9,0,0)^T$。这是下一节完整解结构的几何原型。
 <!-- bilingual-en:start -->
-The inhomogeneous plane plus the extra solution $(9,0,0)^T$.  This is the geometric prototype of the complete solution structure in the next section.
+Adding the particular solution $(9,0,0)^T$ translates this nullspace plane to the nonhomogeneous plane. This is the geometric prototype of the complete-solution structure developed in the next section.
 <!-- bilingual-en:end -->
 
 ### Homework：全部题目与逐步解答
@@ -2180,8 +2145,7 @@ The inhomogeneous plane plus the extra solution $(9,0,0)^T$.  This is the geomet
 > $B$ 的每一列都是 $(1,1)^T$，而 $A_2(1,1)^T=0$，所以 $A_2B=0$、rank $=0$。平凡选择 $A_2=0$ 也成立，但此选择更能显示 $C(B)\subseteq N(A_2)$ 才是乘积为零的结构原因。
 > <!-- bilingual-en:start -->
 > **Restatement**: For $B=\begin{bmatrix}1&1\\1&1\end{bmatrix}$, find $A_1,A_2$ such that $\operatorname{rank}(A_1B)=1$ and $\operatorname{rank}(A_2B)=0$.
-> **Answer**: Take $A_1=I_2$, then $A_1B=B$, both columns are the same and non-zero, rank $=1$. Take
-> Each column of $B$ is $(1,1)^T$, and $A_2(1,1)^T=0$, so $A_2B=0$ and its rank is $0$. The trivial choice $A_2=0$ also works, but the displayed choice better reveals the structural reason: $C(B)\subseteq N(A_2)$.
+> **Answer**: Take $A_1=I_2$. Then $A_1B=B$ has two identical nonzero columns, so its rank is $1$. For the displayed $A_2$, every column of $B$ is $(1,1)^T$ and $A_2(1,1)^T=0$, so $A_2B=0$ and its rank is $0$. The trivial choice $A_2=0$ also works, but the displayed choice reveals the structural reason: $C(B)\subseteq N(A_2)$.
 > <!-- bilingual-en:end -->
 
 ### 易错点、边界与反例
@@ -2193,9 +2157,9 @@ The inhomogeneous plane plus the extra solution $(9,0,0)^T$.  This is the geomet
 - “一个自由变量”对应“一条特殊解”，不是只对应一个解；其任意标量倍数都在零空间中。
 - 零空间是子空间，参数式必须包含 $x=0$；若不包含，说明你混入了非齐次特解。
 <!-- bilingual-en:start -->
-- The basis for seeking $N(A)$ can use rref, but the basis for seeking $C(A)$ cannot directly take the pivot columns of the rref; row operations alter the column itself.
+- A basis for $N(A)$ can be read from the RREF, but a basis for $C(A)$ cannot use the RREF's pivot columns directly because row operations alter the actual columns.
 - One free variable corresponds to one special solution, not to only one nullspace vector; all scalar multiples of that special solution also lie in the nullspace.
-- Nullspace is a subspace, and the argument must contain $x=0$; if not, you are mixing inhomogeneous solutions.
+- The nullspace is a subspace, so its parametrization must include $x=0$. If it does not, a nonhomogeneous particular solution has been mixed in.
 <!-- bilingual-en:end -->
 
 ### 三道自检题
@@ -2212,7 +2176,7 @@ The inhomogeneous plane plus the extra solution $(9,0,0)^T$.  This is the geomet
 > [!question]- 2. 为什么主元变量不能任意取值？
 > **答案**：它们由 rref 中的主元方程表示为自由变量的线性组合；任意选择会违反方程。
 > <!-- bilingual-en:start -->
-> **Answer**: They are represented by the pivot equations in rref as linear combinations of free variables; any choice violates the equations.
+> **Answer**: The pivot equations in the RREF express them as linear combinations of the free variables, so arbitrary independent choices would violate those equations.
 > <!-- bilingual-en:end -->
 
 > [!question]- 3. 若 $R=[I_2\ F]$ 且 $F=\begin{bmatrix}2\\-3\end{bmatrix}$，写出特殊解。
@@ -2223,12 +2187,12 @@ The inhomogeneous plane plus the extra solution $(9,0,0)^T$.  This is the geomet
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 rref 保持 $N(A)$ → pivot/free 变量分工 → 特殊解给零空间基 → nullity $=n-r$ → 下一节把任意非齐次解写成“特解 + 零空间”。
 <!-- bilingual-en:start -->
-rref preserves $N(A)$ → separate pivot and free variables → construct special solutions as a nullspace basis → nullity $=n-r$ → the next section writes every solution of an inhomogeneous system as “particular solution + nullspace.”
+RREF preserves $N(A)$ → separate pivot and free variables → construct special solutions as a nullspace basis → nullity $=n-r$ → the next section writes every solution of a nonhomogeneous system as “particular solution + nullspace.”
 <!-- bilingual-en:end -->
 
 ## Session 1.9 Solving Ax = b: row reduced form R
@@ -2240,27 +2204,24 @@ rref preserves $N(A)$ → separate pivot and free variables → construct specia
 
 **问题**：非齐次系统何时相容？相容时怎样一次写出全部解？
 <!-- bilingual-en:start -->
-**Q**: When are non-homogeneous systems compatible?  How do I write all the answers at once when I'm compatible?
+**Questions**: When is a nonhomogeneous system consistent? When it is consistent, how can all solutions be written at once?
 <!-- bilingual-en:end -->
 
 **前置知识**：rref、特殊解、列空间与零空间。
 <!-- bilingual-en:start -->
-**Prerequisites**: rref, Special Solutions, Column Space, and Nullspace.
+**Prerequisites**: RREF, special solutions, column space, and nullspace.
 <!-- bilingual-en:end -->
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.8sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S09_Lecture_Solving_Ax_b_Row_Reduced_Form_R.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S09_Recitation_Solving_Ax_b.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.8prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.8sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:start -->
-**Local**: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.8sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S09_Lecture_Solving_Ax_b_Row_Reduced_Form_R.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S09_Recitation_Solving_Ax_b.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.8prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.8sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:end -->
 
 ### 1. 相容条件必须从增广矩阵读
 <!-- bilingual-en:start -->
-*1. Compatibility conditions must be read from the augmentation matrix*
+*1. Consistency conditions must be read from the augmented matrix*
 <!-- bilingual-en:end -->
 
 对 $[A\mid b]$ 做相同行操作。若出现
 <!-- bilingual-en:start -->
-Do the same row operation on $[A\mid b]$.  if
+Apply the same row operations to the entire augmented matrix $[A\mid b]$. If a row of the form
 <!-- bilingual-en:end -->
 
 $$
@@ -2269,12 +2230,12 @@ $$
 
 即方程 $0=c$，则无解。否则系统相容。
 <!-- bilingual-en:start -->
-Namely the equation $0=c$, then there is no solution.  Otherwise, the system is compatible.
+appears, it represents the impossible equation $0=c$, so the system has no solution. Otherwise, the system is consistent.
 <!-- bilingual-en:end -->
 
 等价的空间说法是
 <!-- bilingual-en:start -->
-The equivalent space claim is
+Equivalently, in subspace language,
 <!-- bilingual-en:end -->
 
 $$
@@ -2319,12 +2280,10 @@ $$
 >
 > **结论**：相容系统的解集是 $N(A)$ 的一个仿射平移。
 > <!-- bilingual-en:start -->
-> **Goal:** show both that every true solution is included and that no false solution is introduced.
-> **Forward construct**: If $x_n\in N(A)$, then
-> So each vector on the right is a solution.
-> **Backward Override**: If $x$ is an arbitrary solution, then
-> Therefore, $x-x_p\in N(A)$, or $x=x_p+x_n$.
-> **Boundary**: If the system has no particular solution, the formula has no starting point; if $b=0$, $x_p=0$ is preferred, and the solution set is the null space itself.
+> **Goal:** Show both that every genuine solution is included and that no extraneous solution is introduced.
+> **Forward direction**: If $x_n\in N(A)$, then $A(x_p+x_n)=Ax_p+Ax_n=b+0=b$, so every vector of the displayed form is a solution.
+> **Reverse direction**: If $x$ is any solution, then $A(x-x_p)=Ax-Ax_p=b-b=0$. Therefore $x-x_p\in N(A)$, so $x=x_p+x_n$ for some $x_n\in N(A)$.
+> **Boundary**: If the system has no particular solution, the formula has no starting point. If $b=0$, choose $x_p=0$, and the solution set is the nullspace itself.
 > **Conclusion**: The solution set of the compatible system is an affine translation of $N(A)$.
 > <!-- bilingual-en:end -->
 
@@ -2332,12 +2291,12 @@ $$
 
 ### 3. Recitation：由 $b$ 决定的相容条件
 <!-- bilingual-en:start -->
-*3. Recitation: Compatibility condition determined by $b$*
+*3. Recitation: a consistency condition determined by $b$*
 <!-- bilingual-en:end -->
 
 考虑
 <!-- bilingual-en:start -->
-consider
+Consider
 <!-- bilingual-en:end -->
 
 $$
@@ -2350,7 +2309,7 @@ $$
 
 对增广矩阵做 $R_2\leftarrow R_2-2R_1$、$R_3\leftarrow R_3-4R_1$，再消第二列，最后一行变为
 <!-- bilingual-en:start -->
-Do $R_2\leftarrow R_2-2R_1$, $R_3\leftarrow R_3-4R_1$ for the augmented matrix, then cancel the second column, the last row becomes
+On the augmented matrix, perform $R_2\leftarrow R_2-2R_1$ and $R_3\leftarrow R_3-4R_1$, then eliminate the second-column entry. The last row becomes
 <!-- bilingual-en:end -->
 
 $$
@@ -2359,7 +2318,7 @@ $$
 
 所以相容当且仅当
 <!-- bilingual-en:start -->
-So compatible if and only if
+Thus the system is consistent if and only if
 <!-- bilingual-en:end -->
 
 $$
@@ -2368,7 +2327,7 @@ $$
 
 相容时 $z$ 自由，取 $z=0$ 得
 <!-- bilingual-en:start -->
-Compatible $z$ free, take $z=0$
+When the condition holds, $z$ is free. Setting $z=0$ gives
 <!-- bilingual-en:end -->
 
 $$
@@ -2446,7 +2405,7 @@ Check strategy: Verify $Ax_p=b$ first, then verify $A(2,0,1)^T=0$; linearity gua
 > **解答**：是。任取尺寸合适的 $y$，令 $b=Ay$。于是 $y$ 是 $Ax=b$ 的解；按假设也是 $Cx=b$ 的解，所以 $Cy=b=Ay$。这对所有 $y$ 成立，特别对每个标准基 $e_j$ 成立，于是 $A$、$C$ 的第 $j$ 列分别为 $Ae_j,Ce_j$ 且相等。因此 $A=C$。
 > <!-- bilingual-en:start -->
 > **Question**: If for each $b$, $Ax=b$ has exactly the same solution set as $Cx=b$, is $A=C$ required?
-> **Answer**: Yes.  Choose the right size of $y$ to make $b=Ay$.  So $y$ is the solution of $Ax=b$; it is also the solution of $Cx=b$, so $Cy=b=Ay$.  This holds for all $y$, especially for each standard basis $e_j$, so that the $j$ columns of $A$ and $C$ are $Ae_j,Ce_j$ and equal, respectively.  So $A=C$.
+> **Answer**: Yes. Choose any vector $y$ of the appropriate dimension and set $b=Ay$. Then $y$ solves $Ax=b$, so by hypothesis it also solves $Cx=b$. Hence $Cy=Ay$ for every $y$. In particular, $Ce_j=Ae_j$ for every standard basis vector $e_j$, so the corresponding columns of $C$ and $A$ are equal. Therefore $A=C$.
 > <!-- bilingual-en:end -->
 
 ### 易错点、边界与反例
@@ -2459,7 +2418,7 @@ Check strategy: Verify $Ax_p=b$ first, then verify $A(2,0,1)^T=0$; linearity gua
 - 相容条件来自左端行之间的依赖关系；消元时必须带着 $b$。
 - 若 $N(A)=\{0\}$，相容系统才唯一；它并不自动保证相容。
 <!-- bilingual-en:start -->
-- The Special Rapporteur is not unique; the "particular" is simply an optional facilitative representative.
+- A particular solution is not unique; “particular” simply means that one convenient representative has been chosen.
 - The complete solution is not $\operatorname{span}\{x_p,N(A)\}$ because it allows the coefficient of $x_p$ to be changed.
 - Compatibility conditions are derived from dependencies between left-hand rows; they must be eliminated with $b$.
 - For $N(A)=\{0\}$, a compatible system is unique; it does not automatically guarantee compatibility.
@@ -2473,7 +2432,7 @@ Check strategy: Verify $Ax_p=b$ first, then verify $A(2,0,1)^T=0$; linearity gua
 > [!question]- 1. 若 $x_1,x_2$ 都满足 $Ax=b$，$x_1-x_2$ 在哪里？
 > **答案**：在 $N(A)$，因为 $A(x_1-x_2)=b-b=0$。
 > <!-- bilingual-en:start -->
-> **Answer**: In $N(A)$, because of $A(x_1-x_2)=b-b=0$.
+> **Answer**: It lies in $N(A)$ because $A(x_1-x_2)=b-b=0$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 2. 解集 $x=x_p+su+tv$ 的几何维数是多少？
@@ -2485,17 +2444,17 @@ Check strategy: Verify $Ax_p=b$ first, then verify $A(2,0,1)^T=0$; linearity gua
 > [!question]- 3. 若 $Ax=b$ 有两个不同解，能否有恰好两个解？
 > **答案**：不能。在 $\mathbb R$ 上，它们之差给非零零空间方向，$x_1+t(x_2-x_1)$ 对每个实数 $t$ 都是解，因此有无穷多个。
 > <!-- bilingual-en:start -->
-> **Answer**: No.  On the $\mathbb R$, their difference gives the non-zero null space direction, and $x_1+t(x_2-x_1)$ is the solution for each real $t$, so there are infinitely many.
+> **Answer**: No. Over $\mathbb R$, their difference is a nonzero nullspace direction, and $x_1+t(x_2-x_1)$ is a solution for every real $t$. Thus there are infinitely many solutions.
 > <!-- bilingual-en:end -->
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 增广消元判相容 → 特解定位仿射平移 → 零空间给全部方向 → 完整解 = $x_p+N(A)$ → 下一节用线性无关、基和维数准确计数这些方向。
 <!-- bilingual-en:start -->
-Augmented elimination criterion compatibility→particular solution location affine translation→null space to all directions→complete solution = $x_p+N(A)$→the next section counts these directions exactly with linear independence, basis and dimension.
+Augmented elimination tests consistency → a particular solution locates the affine translate → the nullspace supplies every direction → complete solution $=x_p+N(A)$ → the next section counts these directions using independence, bases, and dimension.
 <!-- bilingual-en:end -->
 
 ## Session 1.10 Independence, basis, and dimension
@@ -2516,9 +2475,6 @@ Augmented elimination criterion compatibility→particular solution location aff
 <!-- bilingual-en:end -->
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.9sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S10_Lecture_Independence_Basis_and_Dimension.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S10_Recitation_Basis_and_Dimension.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.9prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.9sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:start -->
-**Local**: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.9sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S10_Lecture_Independence_Basis_and_Dimension.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S10_Recitation_Basis_and_Dimension.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.9prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.9sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:end -->
 
 ### 1. 线性无关
 <!-- bilingual-en:start -->
@@ -2546,7 +2502,7 @@ $$
 
 一组向量若包含零向量、重复向量，或某个向量是其余向量的组合，必然相关。
 <!-- bilingual-en:start -->
-A set of vectors that contains zero vectors, repeating vectors, or a vector that is a combination of the rest of the vectors is necessarily relevant.
+A set containing the zero vector, duplicate vectors, or a vector that is a linear combination of the others is necessarily linearly dependent.
 <!-- bilingual-en:end -->
 
 ### 2. 基与维数
@@ -2556,19 +2512,21 @@ A set of vectors that contains zero vectors, repeating vectors, or a vector that
 
 空间 $S$ 的一组 [[线性方程组与四个基本子空间#基、维数与秩|基]] 同时满足：
 <!-- bilingual-en:start -->
-A set of [[线性方程组与四个基本子空间#基、维数与秩|basis]] for the space $S$ simultaneously satisfies:
+A [[线性方程组与四个基本子空间#基、维数与秩|basis]] for a space $S$ must satisfy both conditions:
 <!-- bilingual-en:end -->
 
 1. 张成 $S$；
 2. 线性无关。
 <!-- bilingual-en:start -->
-1. Chang Cheng $S$;
-2. Linear independence.
+
+&nbsp;
+**1.** it spans $S$;<br>
+**2.** it is linearly independent.<br>
 <!-- bilingual-en:end -->
 
 基实现“存在且唯一的坐标表示”。若 $v_1,\ldots,v_k$ 是基，每个 $s\in S$ 可唯一写成 $s=\sum c_iv_i$。
 <!-- bilingual-en:start -->
-The basis implements an "existing and unique coordinate representation".  If $v_1,\ldots,v_k$ is basis, each $s\in S$ can be uniquely written as a $s=\sum c_iv_i$.
+A basis gives every vector an existing and unique coordinate representation. If $v_1,\ldots,v_k$ is a basis, each $s\in S$ can be written uniquely as $s=\sum c_iv_i$.
 <!-- bilingual-en:end -->
 
 > [!proof] 为什么基坐标唯一
@@ -2578,8 +2536,7 @@ The basis implements an "existing and unique coordinate representation".  If $v_
 > $$
 > 基向量线性无关，所以每个 $c_i-d_i=0$，即 $c_i=d_i$。
 > <!-- bilingual-en:start -->
-> If $s=\sum c_iv_i=\sum d_iv_i$, two-fold subtraction:
-> The basis vectors are linear, so each $c_i-d_i=0$ is $c_i=d_i$.
+> If $s=\sum c_iv_i=\sum d_iv_i$, subtract the two representations to obtain $\sum_i(c_i-d_i)v_i=0$. Because the basis vectors are linearly independent, every $c_i-d_i$ is zero, so $c_i=d_i$ for all $i$.
 > <!-- bilingual-en:end -->
 
 有限维空间任意两组基含有相同数量的向量，这个数量称为 [[线性方程组与四个基本子空间#基、维数与秩|维数]]。零空间的基由特殊解给出；列空间的基由原矩阵的主元列给出。
@@ -2594,7 +2551,7 @@ Any two bases of a finite-dimensional vector space contain the same number of ve
 
 对 $A\in\mathbb R^{m\times n}$，设 rank $=r$：
 <!-- bilingual-en:start -->
-For $A\in\mathbb R^{m\times n}$, set rank $=r$:
+For $A\in\mathbb R^{m\times n}$, let $\operatorname{rank}(A)=r$:
 <!-- bilingual-en:end -->
 
 $$
@@ -2622,20 +2579,20 @@ $$
 > **结论**：$r+(n-r)=n$。
 > <!-- bilingual-en:start -->
 > **Goal**: Show that the $n$ input dimensions split into $r$ effective row-space directions and $n-r$ directions lost in the nullspace.
-> **Construct**: Convert $A$ to rref.  There are exactly $r$ pivot columns, so there are $r$ pivot variables; the remaining $n-r$ variables are free.
-> **Step by step:** Each free variable produces one special solution. The previous section showed that these special solutions form a basis of $N(A)$, so $\dim N(A)=n-r$. The $r$ pivot columns of the original matrix form a basis of $C(A)$, so $\dim C(A)=r$.
+> **Construction**: Reduce $A$ to RREF. There are exactly $r$ pivot columns and hence $r$ pivot variables; the remaining $n-r$ variables are free.
+> **Step by step:** Each free variable produces one special solution. The previous section showed that these solutions form a basis of $N(A)$, so $\dim N(A)=n-r$. The $r$ pivot rows give an $r$-dimensional row space; equivalently, the $r$ pivot columns of the original matrix give an $r$-dimensional column space. Thus the effective dimension is $r$.
 > **Boundary**: $r$ may be $0$ or $\min(m,n)$, and the formula still holds.
 > **Conclusion**: $r+(n-r)=n$.
 > <!-- bilingual-en:end -->
 
 ### 4. 如何从生成集抽取基
 <!-- bilingual-en:start -->
-*4. How to Extract a Basis from a Generated Set*
+*4. How to extract a basis from a spanning set*
 <!-- bilingual-en:end -->
 
 若 $v_1,\ldots,v_k$ 是列向量，把它们组成 $A=[v_1\cdots v_k]$ 并消元。rref 的主元**位置**告诉你应从**原矩阵**选哪些列。行操作保持列之间的线性依赖关系，但不保持原列空间中的具体列，因此不能拿 rref 的主元列替代原列。
 <!-- bilingual-en:start -->
-Place the vectors $v_1,\ldots,v_k$ as the columns of $A=[v_1\cdots v_k]$ and row-reduce the matrix. The **pivot positions in rref** tell you which columns to select from **the original matrix**. Row operations preserve linear dependence relations among columns but not the actual column vectors or the original column space, so pivot columns of rref cannot replace the corresponding original columns.
+Place the vectors $v_1,\ldots,v_k$ as the columns of $A=[v_1\cdots v_k]$ and row-reduce the matrix. The **pivot positions in the RREF** tell you which columns to select from **the original matrix**. Row operations preserve linear dependence relations among columns but not the actual column vectors or the original column space, so pivot columns of the RREF cannot replace the corresponding original columns.
 <!-- bilingual-en:end -->
 
 Recitation 也讨论把向量作为行消元：非零行可构成行空间的基；但若原问题问原列向量中的一个子集，必须按列放置并回到原列选择。
@@ -2668,11 +2625,8 @@ The recitation also treats vectors as rows: the nonzero rows after row reduction
 > $$
 > 查看第 2、3、4 分量依次得 $c_1=c_2=c_3=0$。因此 $v_1,v_2,v_3$ 无关，最大数量为 $3$，整个 $4\times6$ 列矩阵 rank $=3$。
 > <!-- bilingual-en:start -->
-> **Title Restatement**: In the given $\mathbb R^4$
-> Find the maximum number of linearly independent vectors that can be selected.
-> **Answer**: See dependencies first:
-> So the last three do not add span.  By taking the first three as a row, the elimination may obtain three pivots; it may also be directly ordered that
-> $c_1=c_2=c_3=0$ for components 2, 3, and 4.  Therefore, $v_1,v_2,v_3$ is independent, the maximum number is $3$, the entire $4\times6$ column matrix rank $=3$.
+> **Restatement**: From the six displayed vectors in $\mathbb R^4$, find the largest linearly independent subset.
+> **Answer**: First observe the displayed dependencies, which show that the last three vectors add nothing to the span. Placing the first three vectors in columns and reducing gives three pivots. Equivalently, the second, third, and fourth components of $c_1v_1+c_2v_2+c_3v_3=0$ force $c_1=c_2=c_3=0$. Thus $v_1,v_2,v_3$ are linearly independent, the maximum number is $3$, and the full $4\times6$ column matrix has rank $3$.
 > <!-- bilingual-en:end -->
 
 > [!question]- Problem 9.2：平面、交线与正交方向的基
@@ -2690,10 +2644,8 @@ The recitation also treats vectors as rows: the nonzero rows after row reduction
 > $$
 > 验证点积：$(1,-2,3)\cdot(2,1,0)=0$，与另一基向量点积也为 $0$。
 > <!-- bilingual-en:start -->
-> **Title**: Find the basis of the plane $x-2y+3z=0$; Find the basis of the intersection of it and the plane $xy$; Find the basis of all vector spaces perpendicular to the plane.
-> **Answer**: $y=s,z=t$, then $x=2s-3t$, so
-> The two special solutions are linearly independent and form a basis of the plane. Intersecting with the $xy$-plane requires $z=0$, hence $t=0$, so a basis of the line of intersection is $(2,1,0)^T$. The normal vector of the original plane is the coefficient vector $(1,-2,3)^T$; the vectors perpendicular to the plane form its span, with basis
-> As a check, $(1,-2,3)\cdot(2,1,0)=0$, and its dot product with the other basis vector is also $0$.
+> **Restatement**: Find a basis for the plane $x-2y+3z=0$, a basis for its intersection with the $xy$-plane, and a basis for the space of all vectors perpendicular to the original plane.
+> **Answer**: Set $y=s$ and $z=t$, so $x=2s-3t$. The two displayed special solutions are linearly independent and form a basis of the plane. Intersecting with the $xy$-plane requires $z=0$, hence $t=0$, so $(2,1,0)^T$ is a basis for the line of intersection. The coefficient vector $(1,-2,3)^T$ is normal to the original plane, so its span is precisely the space of perpendicular vectors. As a check, it has zero dot product with both basis vectors of the plane.
 > <!-- bilingual-en:end -->
 
 ### 易错点、边界与反例
@@ -2706,10 +2658,10 @@ The recitation also treats vectors as rows: the nonzero rows after row reduction
 - 不同基可以长得完全不同，但基向量数量相同。
 - 行操作后选择列空间基，必须使用原矩阵对应列。
 <!-- bilingual-en:start -->
-- "Jang Sung" does not guarantee irrelevance; "irrelevance" does not guarantee that Jang Sung's target space.
-- $k>n$ $\mathbb R^n$ vectors are correlated; $k<n$ vectors cannot be spanned into an entire $\mathbb R^n$.
-- Different bases can be completely different in length, but have the same number of basis vectors.
-- Columns must be mapped using the original matrix when the column space basis is selected after the row operation.
+- Spanning does not imply linear independence, and linear independence does not imply that the vectors span the target space.
+- Any collection of $k>n$ vectors in $\mathbb R^n$ is linearly dependent, while $k<n$ vectors cannot span all of $\mathbb R^n$.
+- Different bases may contain entirely different vectors, but every basis of the same finite-dimensional space has the same number of vectors.
+- After row reduction, a basis for the column space must be selected from the corresponding columns of the original matrix.
 <!-- bilingual-en:end -->
 
 ### 三道自检题
@@ -2720,13 +2672,13 @@ The recitation also treats vectors as rows: the nonzero rows after row reduction
 > [!question]- 1. $\mathbb R^5$ 中能否有 6 个线性无关向量？
 > **答案**：不能；把它们作列得到 $5\times6$ 矩阵，rank 至多为 $5$。
 > <!-- bilingual-en:start -->
-> **Answer**: No; list them as $5\times6$ matrices, rank at most $5$.
+> **Answer**: No. Placing them as columns produces a $5\times6$ matrix whose rank is at most $5$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 2. 两个向量张成一个平面需要什么条件？
 > **答案**：二者都非零且不互为倍数，即线性无关。
 > <!-- bilingual-en:start -->
-> **Answer**: Both are non-zero and are not multiples of each other, i.e. linear.
+> **Answer**: Both vectors must be nonzero and neither may be a scalar multiple of the other; equivalently, they must be linearly independent.
 > <!-- bilingual-en:end -->
 
 > [!question]- 3. $A$ 有 8 列且 $N(A)$ 的基有 3 个向量，rank 是多少？
@@ -2737,12 +2689,12 @@ The recitation also treats vectors as rows: the nonzero rows after row reduction
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 无关 = 无冗余 → 基 = 无冗余且完整 → 维数 = 基的长度 → rank-nullity 计数输入自由度 → 下一节把同样的计数推广到四个基本子空间。
 <!-- bilingual-en:start -->
-Independent = non-redundant → basis = non-redundant and complete → dimension = length of basis → rank-nullity count input degrees of freedom → The next section extends the same count to four basic subspaces.
+Independence means no redundancy → a basis is both nonredundant and complete → dimension is the number of vectors in a basis → rank–nullity counts input degrees of freedom → the next section extends this count to the four fundamental subspaces.
 <!-- bilingual-en:end -->
 
 ## Session 1.11 The four fundamental subspaces
@@ -2754,27 +2706,24 @@ Independent = non-redundant → basis = non-redundant and complete → dimension
 
 **问题**：一个 $m\times n$ 矩阵在输入端和输出端分别决定哪四个空间？它们的维数和正交关系是什么？
 <!-- bilingual-en:start -->
-**Problem**: Which four spaces are determined on the input side and the output side of a $m\times n$ matrix?  What are their dimensions and orthogonality?
+**Questions**: Which four spaces does an $m\times n$ matrix determine on its input and output sides? What are their dimensions and orthogonality relations?
 <!-- bilingual-en:end -->
 
 **前置知识**：列空间、零空间、基、维数、转置。
 <!-- bilingual-en:start -->
-**Prerequisites**: Column Space, Nullspace, Basis, Dimension, Transpose.
+**Prerequisites**: column space, nullspace, bases, dimension, and transposition.
 <!-- bilingual-en:end -->
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.10sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S11_Lecture_The_Four_Fundamental_Subspaces.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S11_Recitation_Computing_the_Four_Fundamental_Subspaces.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.10prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.10sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:start -->
-**Local**: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.10sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S11_Lecture_The_Four_Fundamental_Subspaces.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S11_Recitation_Computing_the_Four_Fundamental_Subspaces.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.10prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.10sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:end -->
 
 ### 1. 四空间总表
 <!-- bilingual-en:start -->
-*1. Four-space matrix*
+*1. Overview of the four spaces*
 <!-- bilingual-en:end -->
 
 对 $A\in\mathbb R^{m\times n}$、rank $=r$：
 <!-- bilingual-en:start -->
-For $A\in\mathbb R^{m\times n}$, rank $=r$:
+For $A\in\mathbb R^{m\times n}$ with rank $r$:
 <!-- bilingual-en:end -->
 
 | 空间 | 定义 | 所在环境 | 维数 |
@@ -2794,7 +2743,7 @@ For $A\in\mathbb R^{m\times n}$, rank $=r$:
 
 行空间与列空间维数相同，都是 rank；这就是“行秩 = 列秩”。实践中，rref 的非零行给行空间基，原矩阵的主元列给列空间基。
 <!-- bilingual-en:start -->
-The row space and column space have the same dimension, namely the rank: this is the theorem that row rank equals column rank. In practice, the nonzero rows of rref form a row-space basis, while the pivot columns of the original matrix form a column-space basis.
+The row space and column space have the same dimension, namely the rank: this is the theorem that row rank equals column rank. In practice, the nonzero rows of the RREF form a row-space basis, while the pivot columns of the original matrix form a column-space basis.
 <!-- bilingual-en:end -->
 
 ### 2. 正交关系
@@ -2821,10 +2770,9 @@ $$
 >
 > **另一对**：对 $A^T$ 应用同一论证，得到 $C(A)=N(A^T)^\perp$。
 > <!-- bilingual-en:start -->
-> **Orthogonality**: If $x\in N(A)$, then $Ax=0$.  The $i$ component of $Ax$ is the dot product of the $i$ row $r_i^T$ and $x$, so each row is orthogonal to $x$; any linear combination of rows is also orthogonal to $x$.  So $C(A^T)\subseteq N(A)^\perp$.
-> **Closed**:$\dim C(A^T)=r$;and
-> One subspace is contained in the other and has the same dimension, so the two subspaces are equal.
-> **Another pair of**: Apply the same argument to $A^T$, resulting in $C(A)=N(A^T)^\perp$.
+> **Orthogonality**: If $x\in N(A)$, then $Ax=0$. The $i$th component of $Ax$ is the dot product of row $i$, $r_i^T$, with $x$. Thus every row is orthogonal to $x$, and so is every linear combination of rows. Hence $C(A^T)\subseteq N(A)^\perp$.
+> **Dimension argument**: Both spaces have dimension $r$: $\dim C(A^T)=r$, while $\dim N(A)^\perp=n-\dim N(A)=n-(n-r)=r$. Since one is contained in the other and their dimensions agree, they are equal.
+> **The other pair**: Applying the same argument to $A^T$ gives $C(A)=N(A^T)^\perp$.
 > <!-- bilingual-en:end -->
 
 这说明
@@ -2839,14 +2787,14 @@ $$
 
 其中 $\oplus$ 表示每个向量都有唯一的“两部分相加”表示；这里两直和还是正交直和。
 <!-- bilingual-en:start -->
-where $\oplus$ denotes that each vector has a unique "two-part addition"; here two straight sums or orthogonal straight sums.
+Here $\oplus$ means that every vector has a unique decomposition into one component from each subspace. In both cases the direct sum is orthogonal.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit1-four-subspaces.png|760]]
 
 ### 3. $A$ 如何在四空间图中作用
 <!-- bilingual-en:start -->
-*3. How $A$ Works in Four-Space Diagram*
+*3. How $A$ acts in the four-subspace diagram*
 <!-- bilingual-en:end -->
 
 - $A$ 把 $N(A)$ 中所有向量送到 $0$；
@@ -2855,14 +2803,14 @@ where $\oplus$ denotes that each vector has a unique "two-part addition"; here t
 - $A^T$ 把列空间中的有效输出映回行空间。
 <!-- bilingual-en:start -->
 - $A$ sends all vectors in $N(A)$ to $0$;
-- $A$ maps the $r$ dimension in row space to column space one by one;
+- $A$ maps the $r$-dimensional row space bijectively onto the column space;
 - $A^T$ sends left nullspace to $0$;
-- $A^T$ maps valid output in column space back to row space.
+- $A^T$ maps the effective output directions in the column space back into the row space.
 <!-- bilingual-en:end -->
 
 严格地说，限制映射
 <!-- bilingual-en:start -->
-Strictly speaking, limit mapping
+More precisely, the restricted map
 <!-- bilingual-en:end -->
 
 $$
@@ -2876,23 +2824,22 @@ This restricted map is a bijection. It is surjective because every $Ax$ depends 
 
 ### 4. 从消元读四空间
 <!-- bilingual-en:start -->
-*4. Reading the Four Spaces from Elimination*
+*4. Reading the four spaces from elimination*
 <!-- bilingual-en:end -->
 
 见 [[线性方程组与四个基本子空间#四个基本子空间|从 RREF 读四个基本子空间]]：
-<!-- bilingual-en:start -->
-See [[线性方程组与四个基本子空间#四个基本子空间|Reading Four Basic Subspaces from RREF]]:
-<!-- bilingual-en:end -->
 
 1. $C(A)$：取**原矩阵**的主元列；
 2. $N(A)$：从 rref 的自由变量构造特殊解；
 3. $C(A^T)$：取 rref 的非零行；
 4. $N(A^T)$：解 $A^Ty=0$，或在完整消元矩阵 $E$ 中读取把 $A$ 消成零行的行组合。
 <!-- bilingual-en:start -->
-1. $C(A)$: take the pivot columns of the **original matrix**;
-2. $N(A)$: Construct the special solutions from the free variables in rref;
-3. $C(A^T)$: take the non-zero row of rref;
-4. $N(A^T)$: Solve $A^Ty=0$, or read the combination of rows that eliminate $A$ to zero in the complete elimination matrix $E$.
+
+&nbsp;
+**1.** $C(A)$: take the pivot columns of the **original matrix**;<br>
+**2.** $N(A)$: construct the special solutions from the free variables in the RREF;<br>
+**3.** $C(A^T)$: take the nonzero rows of the RREF;<br>
+**4.** $N(A^T)$: solve $A^Ty=0$, or read from the full elimination matrix $E$ the row combinations that reduce rows of $A$ to zero.<br>
 <!-- bilingual-en:end -->
 
 Recitation 用 $B=LU$ 的 rank-2 例子说明：取 $L$ 中与 $U$ 的两个非零 pivot positions 对应的两列，可给出 $C(B)$ 的基；$U$ 给 $N(B)$ 与行空间，$E=L^{-1}$ 中对应 $U$ 零行的那一行给左零空间向量。
@@ -2931,9 +2878,8 @@ In the recitation's rank-two example $B=LU$, the two columns of $L$ correspondin
 > $$
 > 两个解之差位于 $N(A^T)$，因此解唯一当且仅当左零空间 $N(A^T)=\{0\}$。
 > <!-- bilingual-en:start -->
-> **Question**: $A^Ty=d$ is solvable when $d$ belongs to which basic subspace?  When there is only zero vector in what space?
-> **Answer**: $A^T$'s column space is $C(A^T)$, which is $A$'s row space, so
-> The difference between the two solutions lies in $N(A^T)$, so the solutions are unique if and only if the left null space $N(A^T)=\{0\}$.
+> **Question**: To which fundamental subspace must $d$ belong for $A^Ty=d$ to be solvable? Which subspace must be trivial for the solution to be unique?
+> **Answer**: The column space of $A^T$ is $C(A^T)$, the row space of $A$, so the system is solvable exactly when $d\in C(A^T)$. The difference of any two solutions lies in $N(A^T)$, so the solution is unique exactly when the left nullspace $N(A^T)=\{0\}$.
 > <!-- bilingual-en:end -->
 
 ### 易错点、边界与反例
@@ -2946,10 +2892,10 @@ In the recitation's rank-two example $B=LU$, the two columns of $L$ correspondin
 - “四个空间互相正交”是错的；只有两对互为正交补。
 - $N(A)$ 的维数是 $n-r$，左零空间的维数是 $m-r$，不要把 $m,n$ 对调。
 <!-- bilingual-en:start -->
-- $C(A)$ and $N(A^T)$ in $\mathbb R^m$; $C(A^T)$ and $N(A)$ in $\mathbb R^n$.  Orthogonality can only be discussed in the same environmental space.
-- A basis of the column space comes from the pivot columns of the original matrix; a basis of the row space can be taken from the nonzero rows of rref.
-- "Four spaces are orthogonal to each other" is wrong; only two pairs are orthogonal to each other.
-- The dimension of $N(A)$ is $n-r$, the dimension of left nullspace is $m-r$, do not adjust $m,n$.
+- $C(A)$ and $N(A^T)$ lie in $\mathbb R^m$, while $C(A^T)$ and $N(A)$ lie in $\mathbb R^n$. Orthogonality can be discussed only between subspaces of the same ambient space.
+- A basis of the column space comes from the pivot columns of the original matrix; a basis of the row space can be taken from the nonzero rows of the RREF.
+- It is wrong to say that all four spaces are mutually orthogonal; only the two specified pairs are orthogonal complements.
+- The dimensions are $\dim N(A)=n-r$ and $\dim N(A^T)=m-r$; do not interchange $m$ and $n$.
 <!-- bilingual-en:end -->
 
 ### 三道自检题
@@ -2977,12 +2923,12 @@ In the recitation's rank-two example $B=LU$, the two columns of $L$ correspondin
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 列空间/零空间 → 转置产生行空间/左零空间 → 两对正交补 → rank 同时给两个有效维数 → 四空间图统一 $A$ 的输入、输出结构。
 <!-- bilingual-en:start -->
-column space/nullspace→transpose produces row space/left nullspace→two pairs of orthogonal complements→rank gives two effective dimensions→four-space diagrams unify the input and output structures of $A$.
+Column space and nullspace → transposition produces row space and left nullspace → two pairs of orthogonal complements → rank gives the two effective dimensions → the four-subspace diagram unifies the input and output structure of $A$.
 <!-- bilingual-en:end -->
 
 ## Session 1.12 Matrix spaces, rank 1, and small world graphs
@@ -2994,18 +2940,15 @@ column space/nullspace→transpose produces row space/left nullspace→two pairs
 
 **问题**：向量空间的“向量”能否本身就是矩阵？为什么秩一矩阵是一般矩阵的基本构件？
 <!-- bilingual-en:start -->
-**Problem**: Can a vector in vector space be a matrix in itself?  Why is a rank-one matrix a fundamental component of a general matrix?
+**Questions**: Can the “vectors” in a vector space themselves be matrices? Why are rank-one matrices fundamental building blocks of general matrices?
 <!-- bilingual-en:end -->
 
 **前置知识**：子空间、基、维数、外积、rank。
 <!-- bilingual-en:start -->
-**Prerequisites**: Subspace, Basis, Dimension, Product, rank.
+**Prerequisites**: subspaces, bases, dimension, outer products, and rank.
 <!-- bilingual-en:end -->
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.11sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S12_Lecture_Matrix_Spaces_Rank_1_Small_World_Graphs.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S12_Recitation_Matrix_Spaces.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.11prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.11sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:start -->
-**Local**: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.11sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S12_Lecture_Matrix_Spaces_Rank_1_Small_World_Graphs.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S12_Recitation_Matrix_Spaces.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.11prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.11sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:end -->
 
 ### 1. 矩阵空间
 <!-- bilingual-en:start -->
@@ -3075,15 +3018,14 @@ Conversely, every column of a nonzero rank-one matrix is a scalar multiple of so
 > $$
 > 每项是列乘行，rank 至多 $1$。这给出 $r$ 个秩一构件；不能少于 $r$ 个，否则秩的次可加性会使总秩小于 $r$。
 > <!-- bilingual-en:start -->
-> Form $C\in\mathbb R^{m\times r}$ from the $r$ pivot columns of $A$. Every column of $A$ is a linear combination of these pivot columns, so some $R\in\mathbb R^{r\times n}$ satisfies $A=CR$. Expanding through the inner dimension gives
-> Each term is an outer product of a column and a row, so it has rank at most $1$. This produces $r$ rank-one components. Fewer than $r$ cannot suffice, because subadditivity of rank would then make the total rank smaller than $r$.
+> Form $C\in\mathbb R^{m\times r}$ from the $r$ pivot columns of $A$. Every column of $A$ is a linear combination of these pivot columns, so some $R\in\mathbb R^{r\times n}$ satisfies $A=CR$. Expanding over the inner dimension yields the displayed sum. Each term is an outer product of a column and a row, so it has rank at most $1$. This produces $r$ rank-one components. Fewer than $r$ cannot suffice, because subadditivity of rank would then force the sum to have rank less than $r$.
 > <!-- bilingual-en:end -->
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit1-rank-one.png|760]]
 
 ### 3. Recitation：带固定零空间向量的矩阵子空间
 <!-- bilingual-en:start -->
-*3. Recitation: Matrix Subspace with Fixed Nullspace Vector*
+*3. Recitation: a matrix subspace with a fixed nullspace vector*
 <!-- bilingual-en:end -->
 
 考虑所有满足
@@ -3223,7 +3165,7 @@ A graph's adjacency matrix encodes its connections algebraically. The entry $(A^
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 向量空间可由矩阵充当元素 → rank-1 外积是矩阵的原子构件 → rank-$r$ 是 $r$ 个外积之和 → 矩阵算子仍满足核—像维数定理 → 下一节用关联矩阵编码图与网络。
@@ -3249,13 +3191,10 @@ Matrices can themselves be elements of a vector space → rank-one outer product
 <!-- bilingual-en:end -->
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.12sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S13_Lecture_Graphs_Networks_Incidence_Matrices.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S13_Recitation_Graphs_and_Networks.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.12prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.12sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:start -->
-**Local**: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.12sum.pdf#page=1|summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S13_Lecture_Graphs_Networks_Incidence_Matrices.pdf#page=1|lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S13_Recitation_Graphs_and_Networks.pdf#page=1|recitation transcript p.1]] · [[MIT_OCW_18.06SC_PDF/03_Homework_Problems/MIT18_06SCF11_Ses1.12prob.pdf#page=1|homework p.1]] · [[MIT_OCW_18.06SC_PDF/04_Homework_Solutions/MIT18_06SCF11_Ses1.12sol.pdf#page=1|official solution p.1]]
-<!-- bilingual-en:end -->
 
 ### 1. 关联矩阵的定义
 <!-- bilingual-en:start -->
-*1. Definition of Incidence Matrix*
+*1. Definition of the incidence matrix*
 <!-- bilingual-en:end -->
 
 给有向图任意指定每条边的方向。若图有 $n$ 个节点、$m$ 条边，其 [[图的基本结构、路径与遍历|关联矩阵]] $A\in\mathbb R^{m\times n}$ 每行对应一条边：边从节点 $i$ 指向节点 $j$，则该行在第 $i$ 列写 $-1$、第 $j$ 列写 $+1$，其余写 $0$。
@@ -3284,7 +3223,7 @@ $$
 
 给出每条有向边的终点势减起点势。
 <!-- bilingual-en:start -->
-each component gives the terminal potential minus the initial potential along one oriented edge.
+Each component is the terminal potential minus the initial potential along one oriented edge.
 <!-- bilingual-en:end -->
 
 - $N(A)$：所有边势差都为零的节点势。连通图中所有节点势相同，所以 $N(A)=\operatorname{span}\{\mathbf1\}$。
@@ -3385,7 +3324,7 @@ For a connected graph, $L_G\mathbf1=0$. Potentials are therefore determined only
 
 ### 4. Recitation：不用消元读出核
 <!-- bilingual-en:start -->
-*4. Recitation: Read out the kernel without elimination*
+*4. Recitation: reading the kernel without elimination*
 <!-- bilingual-en:end -->
 
 五节点六边的连通图，其关联矩阵为 $6\times5$。由连通性立刻得
@@ -3399,7 +3338,7 @@ $$
 
 故 $\dim N(A^T)=6-4=2$：两个独立基本环流生成全部平衡流。大环流可以写成两个小环流之和，所以不是新独立方向。
 <!-- bilingual-en:start -->
-Thus, $\dim N(A^T)=6-4=2$: Two separate fundamental circulations generate all the equilibrium flows.  The large circulation can be written as the sum of two small circulation currents, so it is not a new independent direction.
+Thus $\dim N(A^T)=6-4=2$: two independent fundamental circulations generate all balanced flows. A larger circulation can be written as the sum of two smaller ones, so it does not add a new independent direction.
 <!-- bilingual-en:end -->
 
 此外，$\operatorname{tr}(M)$ 表示方阵 $M$ 的对角元之和。于是
@@ -3499,8 +3438,8 @@ Column $j$ of the incidence matrix contains one $\pm1$ for each edge incident to
 - 连通图的 $A^TA$ 不是可逆矩阵：常数向量总在核中。
 - 环的数量不能凭肉眼数所有闭合路径；独立环维数是 $m-n+c$。
 <!-- bilingual-en:start -->
-- The shape of the incidence matrix is "number of edges $\times$ nodes" because each row corresponds to an edge.
-- The edge direction is optional, but once selected, the sign conventions for $A$, flow, and potential differences must be consistent.
+- An incidence matrix has shape “number of edges $\times$ number of vertices” because each row represents one edge.
+- Edge orientations are arbitrary, but once chosen, the sign conventions for $A$, flows, and potential differences must remain consistent.
 - For a connected graph, $A^TA$ is not invertible because the constant vectors always lie in its nullspace.
 - Do not count every visibly closed path as an independent cycle; the dimension of the cycle space is $m-n+c$.
 <!-- bilingual-en:end -->
@@ -3525,12 +3464,12 @@ Column $j$ of the incidence matrix contains one $\pm1$ for each edge incident to
 > [!question]- 3. 反转一条边会怎样改变 $A^TA$？
 > **答案**：只把 $A$ 对应行乘 $-1$；写成 $DA$，其中 $D^TD=I$，故 $(DA)^T(DA)=A^TA$，不变。
 > <!-- bilingual-en:start -->
-> **Answer**: Only multiply the corresponding rows of $A$ by $-1$; write as $DA$, where $D^TD=I$, and therefore $(DA)^T(DA)=A^TA$, unchanged.
+> **Answer**: Reversing one edge multiplies the corresponding row of $A$ by $-1$. Write the new incidence matrix as $DA$, where $D^TD=I$. Then $(DA)^T(DA)=A^TA$, so $A^TA$ is unchanged.
 > <!-- bilingual-en:end -->
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 关联矩阵把节点势映为边差 → $N(A)$ 表示分量常势 → $N(A^T)$ 表示环流 → $A^TCA$ 汇总守恒与能量 → 四空间获得具体网络意义。
@@ -3547,18 +3486,15 @@ The incidence matrix maps vertex potentials to edge differences → $N(A)$ consi
 
 **问题**：如何把 Unit I 的算法线和结构线压缩为一条稳定的解题流程？
 <!-- bilingual-en:start -->
-**Problem**: How to compress the algorithm line and structure line of Unit I into a stable problem solving flow?
+**Question**: How can Unit I's computational and structural ideas be compressed into a reliable problem-solving workflow?
 <!-- bilingual-en:end -->
 
 **前置知识**：Sessions 1.1–1.13 全部内容。
 <!-- bilingual-en:start -->
-**Prerequisites**: Sessions 1.1-1.13.
+**Prerequisites**: Sessions 1.1–1.13.
 <!-- bilingual-en:end -->
 
 **本地资料**：[[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.14sum.pdf#page=1|review summary p.1]] · [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S14_Lecture_Exam_1_Review.pdf#page=1|review lecture transcript p.1]] · [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S14_Recitation_Exam_1_Problem_Solving.pdf#page=1|problem-solving transcript p.1]]
-<!-- bilingual-en:start -->
-**Local**: [[MIT_OCW_18.06SC_PDF/05_Session_Summaries/MIT18_06SCF11_Ses1.14sum.pdf#page=1|review summary p.1]] [[MIT_OCW_18.06SC_PDF/06_Lecture_Transcripts/U1_S14_Lecture_Exam_1_Review.pdf#page=1|review lecture transcript p.1]] [[MIT_OCW_18.06SC_PDF/07_Recitation_Transcripts/U1_S14_Recitation_Exam_1_Problem_Solving.pdf#page=1|problem-solving transcript p.1]]
-<!-- bilingual-en:end -->
 
 ### 1. Unit I 解题总流程
 <!-- bilingual-en:start -->
@@ -3579,14 +3515,16 @@ Given $Ax=b$, ask the following questions in order:
 7. **维数检查**：$r+(n-r)=n$、$r+(m-r)=m$。
 8. **验算**：代回原矩阵，而不是只代回 rref。
 <!-- bilingual-en:start -->
-1. **Dimensions**: Is $A$ an $m\times n$ matrix, with $x\in\mathbb R^n$ and $b\in\mathbb R^m$?
-2. **Elimination:** Where are the pivots of $[A\mid b]$? Does a contradictory row appear?
-3. **Existence**: Is $b\in C(A)$?
-4. **Uniqueness**: Is $N(A)=\{0\}$?
-5. **Complete solution:** First find one particular solution, then add every homogeneous solution.
-6. **Bases for the subspaces**: For the column space, return to the original matrix and select its pivot columns; for the row space, use the nonzero rows of the RREF; obtain the two nullspaces by solving the corresponding homogeneous systems.
-7. **Dimension check**: Verify $r+(n-r)=n$ and $r+(m-r)=m$.
-8. **Verification**: Substitute into the original matrix, not only into its RREF.
+
+&nbsp;
+**1.** **Dimensions**: Is $A$ an $m\times n$ matrix, with $x\in\mathbb R^n$ and $b\in\mathbb R^m$?<br>
+**2.** **Elimination:** Where are the pivots of $[A\mid b]$? Does a contradictory row appear?<br>
+**3.** **Existence**: Is $b\in C(A)$?<br>
+**4.** **Uniqueness**: Is $N(A)=\{0\}$?<br>
+**5.** **Complete solution:** First find one particular solution, then add every homogeneous solution.<br>
+**6.** **Bases for the subspaces**: For the column space, return to the original matrix and select its pivot columns; for the row space, use the nonzero rows of the RREF; obtain the two nullspaces by solving the corresponding homogeneous systems.<br>
+**7.** **Dimension check**: Verify $r+(n-r)=n$ and $r+(m-r)=m$.<br>
+**8.** **Verification**: Substitute into the original matrix, not only into its RREF.<br>
 <!-- bilingual-en:end -->
 
 ### 2. 必会证明链
@@ -3608,12 +3546,12 @@ Before the exam, you should be able to prove the following without consulting yo
 - 连通图关联矩阵的零空间由常数向量张成。
 <!-- bilingual-en:start -->
 - row operations keep the solution set;
-- Inverse uniqueness of invertible matrices;
-- The complete $Ax=b$ solution is $x_p+N(A)$;
+- uniqueness of the inverse of an invertible matrix;
+- the complete solution of $Ax=b$ is $x_p+N(A)$;
 - The special solutions form a basis of the nullspace;
-- rank-nullity;
+- rank–nullity;
 - row space is orthogonal to nullspace, column space is orthogonal to left nullspace;
-- The nullspace of the incidence matrix of a connected graph is spanned by the constant vector.
+- the nullspace of the incidence matrix of a connected graph is spanned by the constant vector.
 <!-- bilingual-en:end -->
 
 ### 3. Recitation 参数题完整闭环
@@ -3671,7 +3609,7 @@ $$
 
 消元倍数为 $1,3,1$，所以
 <!-- bilingual-en:start -->
-The elimination multiplier is $1,3,1$, so
+The elimination multipliers are $1,3,1$, so
 <!-- bilingual-en:end -->
 
 $$
@@ -3729,12 +3667,12 @@ The factorization remains valid when $k=5$; in that case $U$ is singular.
 
 ### 知识链小结
 <!-- bilingual-en:start -->
-*summary of knowledge chain*
+*Knowledge-chain summary*
 <!-- bilingual-en:end -->
 
 尺寸 → 消元 → rank → 相容性 → 特解与零空间 → 四空间基与维数 → 代回验算；下面用 Exam 1 的四道题把这条链完整实践。
 <!-- bilingual-en:start -->
-Dimensions → elimination → rank → consistency → particular solutions and nullspace → bases and dimensions of the four fundamental subspaces → verification by substitution. The following Exam 1 problem exercises this entire chain.
+Dimensions → elimination → rank → consistency → a particular solution plus the nullspace → bases and dimensions of the four fundamental subspaces → verification by substitution. The following four Exam 1 problems exercise this entire chain.
 <!-- bilingual-en:end -->
 
 ## Exam 1 完整题解
@@ -3743,19 +3681,13 @@ Dimensions → elimination → rank → consistency → particular solutions and
 <!-- bilingual-en:end -->
 
 **本地试卷**：[[MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex1.pdf#page=1|Unit 1 Exam p.1]]
-<!-- bilingual-en:start -->
-**Local Quiz Paper**:[[MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex1.pdf#page=1|Unit 1 Exam p.1]]
-<!-- bilingual-en:end -->
 
 **官方答案**：[[MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex1s.pdf#page=1|Unit 1 Exam Solutions p.1]]
-<!-- bilingual-en:start -->
-**Official answer**: [[MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex1s.pdf#page=1|Unit 1 Exam Solutions p.1]]
-<!-- bilingual-en:end -->
 
 > [!warning] PDF 文本层说明
 > 官方答案 PDF 的文本层编码损坏，但页面公式可正常阅读。本节按题目页面、答案页面与直接代数验算交叉核对；所有矩阵均额外做尺寸和乘积检查。
 > <!-- bilingual-en:start -->
-> The official answer PDF's text-layer encoding is corrupted, but the page formula reads correctly.  This section cross-checks by topic page, answer page, and direct algebraic checking; all matrices are additionally checked for size and product.
+> The official answer PDF has a corrupted text layer, although the formulas render correctly on the page. This section cross-checks the question pages, solution pages, and direct algebra; every matrix is also checked for compatible dimensions and correct products.
 > <!-- bilingual-en:end -->
 
 ### Exam Problem 1：由存在性与唯一性反推尺寸和秩
@@ -3765,7 +3697,7 @@ Dimensions → elimination → rank → consistency → particular solutions and
 
 题设：$A$ 为 $m\times n$，
 <!-- bilingual-en:start -->
-Question: $A$ is $m\times n$.
+The question states that $A$ is $m\times n$ and gives the two systems displayed below.
 <!-- bilingual-en:end -->
 
 $$
@@ -3786,7 +3718,7 @@ $$
 
 **逐步推导**：
 <!-- bilingual-en:start -->
-**Derive step by step**:
+**Step-by-step derivation**:
 <!-- bilingual-en:end -->
 
 1. $Ax$ 有三个分量，故 $m=3$。
@@ -3795,11 +3727,13 @@ $$
 4. 第一个系统无解，说明 $C(A)\ne\mathbb R^3$，所以 $r<3$。
 5. rank 为非负整数，而第二个非零右端可达，所以 $r\ge1$。
 <!-- bilingual-en:start -->
-1. Since $Ax$ has three components, $m=3$.
-2. The second system has exactly one solution. If $N(A)$ contained a nonzero vector $z$, one solution $x_p$ would generate infinitely many solutions $x_p+tz$, a contradiction. Hence $N(A)=\{0\}$.
-3. Rank–nullity gives $r+(n-r)=n$. Since the nullity is zero, $r=n$.
-4. The first system is inconsistent, so $C(A)\ne\mathbb R^3$ and therefore $r<3$.
-5. The rank is an integer, and the nonzero second right-hand side is attainable, so $r\ge1$.
+
+&nbsp;
+**1.** Since $Ax$ has three components, $m=3$.<br>
+**2.** The second system has exactly one solution. If $N(A)$ contained a nonzero vector $z$, one solution $x_p$ would generate infinitely many solutions $x_p+tz$, a contradiction. Hence $N(A)=\{0\}$.<br>
+**3.** Rank–nullity gives $r+(n-r)=n$. Since the nullity is zero, $r=n$.<br>
+**4.** The first system is inconsistent, so $C(A)\ne\mathbb R^3$ and therefore $r<3$.<br>
+**5.** The rank is an integer, and the nonzero second right-hand side is attainable, so $r\ge1$.<br>
 <!-- bilingual-en:end -->
 
 因此
@@ -3818,7 +3752,7 @@ $$
 
 由上一步 $N(A)=\{0\}$：
 <!-- bilingual-en:start -->
-From the previous $N(A)=\{0\}$:
+From the preceding result, $N(A)=\{0\}$, so
 <!-- bilingual-en:end -->
 
 $$
@@ -3841,7 +3775,7 @@ $$
 
 则 $Ax=(0,x,0)^T$。右端 $(0,1,0)^T$ 唯一对应 $x=1$；$(1,1,1)^T$ 不在 $A$ 的一维列空间中。也可取 $n=r=2$ 的例子
 <!-- bilingual-en:start -->
-$Ax=(0,x,0)^T$.  The right-hand $(0,1,0)^T$ uniquely corresponds to $x=1$; $(1,1,1)^T$ is not in the one-dimensional column space of $A$.  An example of $n=r=2$ may also be used
+$Ax=(0,x,0)^T$. The right-hand side $(0,1,0)^T$ has the unique solution $x=1$, whereas $(1,1,1)^T$ does not lie in the one-dimensional column space of $A$. One may also use the displayed example with $n=r=2$.
 <!-- bilingual-en:end -->
 
 $$
@@ -3862,12 +3796,12 @@ $$
 
 ### Exam Problem 2：初等矩阵、逆矩阵与 LU
 <!-- bilingual-en:start -->
-*Exam Problem 2: Elementary Matrix, Inverse Matrix and LU*
+*Exam Problem 2: elementary matrices, inverses, and LU*
 <!-- bilingual-en:end -->
 
 题设：$A$ 经以下顺序化为 $I$：
 <!-- bilingual-en:start -->
-Title: $A$ is converted to $I$ in the following order:
+The question states that $A$ is reduced to $I$ by the following operations, in order:
 <!-- bilingual-en:end -->
 
 1. $E_{21}$：$R_2\leftarrow R_2-4R_1$；
@@ -3876,7 +3810,7 @@ Title: $A$ is converted to $I$ in the following order:
 
 对应矩阵为
 <!-- bilingual-en:start -->
-The mapping matrix is
+The corresponding elementary matrices are
 <!-- bilingual-en:end -->
 
 $$
@@ -3896,7 +3830,7 @@ $$
 
 因
 <!-- bilingual-en:start -->
-because
+Since
 <!-- bilingual-en:end -->
 
 $$
@@ -3997,12 +3931,12 @@ Direct multiplication verifies that $LU=A$. The third Gauss–Jordan operation, 
 
 ### Exam Problem 3：参数矩阵的列空间、零空间与完整解
 <!-- bilingual-en:start -->
-*Exam Problem 3: Column Space, Nullspace and Complete Solution of Parameter Matrix*
+*Exam Problem 3: column space, nullspace, and the complete solution for a parameterized matrix*
 <!-- bilingual-en:end -->
 
 题设
 <!-- bilingual-en:start -->
-question creation
+The matrix in the question is
 <!-- bilingual-en:end -->
 
 $$
@@ -4015,7 +3949,7 @@ $$
 
 做
 <!-- bilingual-en:start -->
-do
+Perform
 <!-- bilingual-en:end -->
 
 $$
@@ -4029,7 +3963,7 @@ This produces row two $(0,c-3,-4,-4)$ and row three $(0,0,2,2)$. The only specia
 
 #### (a) 对每个 $c$ 求列空间基
 <!-- bilingual-en:start -->
-*(a) Column space basis for each $c$*
+*(a) A basis for the column space for each $c$*
 <!-- bilingual-en:end -->
 
 若 $c\ne3$，第二列产生第二个主元，第三列产生第三个主元，rank $=3$。取原矩阵前三个主元列：
@@ -4061,7 +3995,7 @@ $$
 
 #### (b) 对每个 $c$ 求零空间基
 <!-- bilingual-en:start -->
-*(b) Basis of nullspace for each $c$*
+*(b) A basis for the nullspace for each $c$*
 <!-- bilingual-en:end -->
 
 齐次系统第三行给 $x_3=-x_4$。第二行化简为
@@ -4107,17 +4041,17 @@ $$
 
 维数检查：$c\ne3$ 时 $r+\text{nullity}=3+1=4$；$c=3$ 时 $2+2=4$。
 <!-- bilingual-en:start -->
-Dimension checking: $r+\text{nullity}=3+1=4$ for $c\ne3$; $2+2=4$ for $c=3$.
+Dimension check: $r+\text{nullity}=3+1=4$ when $c\ne3$, and $2+2=4$ when $c=3$.
 <!-- bilingual-en:end -->
 
 #### (c) 求 $Ax=(1,c,0)^T$ 的完整解
 <!-- bilingual-en:start -->
-*(c) Finding the complete solution of $Ax=(1,c,0)^T$*
+*(c) The complete solution of $Ax=(1,c,0)^T$*
 <!-- bilingual-en:end -->
 
 容易验证
 <!-- bilingual-en:start -->
-Easy to verify
+It is easy to verify that
 <!-- bilingual-en:end -->
 
 $$
@@ -4126,7 +4060,7 @@ $$
 
 对所有 $c$ 都满足 $Ax_p=(1,c,0)^T$。因此把对应零空间加上即可。
 <!-- bilingual-en:start -->
-$Ax_p=(1,c,0)^T$ is satisfied for all $c$.  So we can add the corresponding nullspace.
+satisfies $Ax_p=(1,c,0)^T$ for every $c$. The complete solution is therefore obtained by adding the corresponding nullspace.
 <!-- bilingual-en:end -->
 
 若 $c\ne3$：
@@ -4166,12 +4100,12 @@ $$
 
 ### Exam Problem 4：矩形矩阵、列关系与 RREF 空间
 <!-- bilingual-en:start -->
-*Exam Problem 4: Rectangular Matrices, Column Relationships and RREF Spaces*
+*Exam Problem 4: rectangular matrices, column relations, and the span of RREF matrices*
 <!-- bilingual-en:end -->
 
 #### (a) $3\times5$ 矩阵的零空间信息
 <!-- bilingual-en:start -->
-*(a) Zero-space information of $3\times5$ matrices*
+*(a) Nullspace information for a $3\times5$ matrix*
 <!-- bilingual-en:end -->
 
 $A$ 有 $5$ 列而 rank $r\le3$，所以
@@ -4190,12 +4124,12 @@ Therefore $N(A)$ is a subspace of $\mathbb R^5$ with at least two linearly indep
 
 #### (b) 由给定 rref 推断原列关系
 <!-- bilingual-en:start -->
-*(b) Inference of original column relationship from given rref*
+*(b) Inferring relations among the original columns from the given RREF*
 <!-- bilingual-en:end -->
 
 给定
 <!-- bilingual-en:start -->
-given
+The given RREF is
 <!-- bilingual-en:end -->
 
 $$
@@ -4227,7 +4161,7 @@ $$
 
 因此原列满足
 <!-- bilingual-en:start -->
-So the original column satisfies
+Therefore the original columns satisfy
 <!-- bilingual-en:end -->
 
 $$
@@ -4246,7 +4180,7 @@ The complete information can be summarized as follows: the three pivot columns $
 
 任何 rref 的第 $i$ 个主元位置至少在第 $i$ 列，且主元左侧为零、零行在底部。因此每个 $3\times3$ rref 都是上三角矩阵，故其 span 包含于上三角矩阵空间
 <!-- bilingual-en:start -->
-In any RREF matrix, the $i$th pivot can occur no earlier than column $i$; entries to the left of each pivot are zero, and all zero rows lie at the bottom. Thus every $3\times3$ RREF matrix is upper triangular, so their span is contained in the space of upper triangular matrices
+In any RREF matrix, the $i$th pivot can occur no earlier than column $i$; entries to the left of each pivot are zero, and all zero rows lie at the bottom. Thus every $3\times3$ RREF matrix is upper triangular, so the span of all such matrices is contained in the space of upper triangular matrices
 <!-- bilingual-en:end -->
 
 $$
@@ -4257,7 +4191,7 @@ $$
 
 反过来，六个上三角标准基矩阵均可由 rref 的差得到：
 <!-- bilingual-en:start -->
-Conversely, the six upper triangular standard basis matrices can be obtained by the difference of rref:
+Conversely, each of the six standard basis matrices for the upper triangular space can be written as a difference of RREF matrices:
 <!-- bilingual-en:end -->
 
 - $E_{11}$ 本身是 rref；
@@ -4266,7 +4200,7 @@ Conversely, the six upper triangular standard basis matrices can be obtained by 
 - $E_{23}$ 可由 $\begin{bmatrix}1&0&0\\0&1&1\\0&0&0\end{bmatrix}-\operatorname{diag}(1,1,0)$ 得到；
 - $E_{33}=I-\operatorname{diag}(1,1,0)$。
 <!-- bilingual-en:start -->
-- $E_{11}$ itself is rref;
+- $E_{11}$ itself is in RREF;
 - $E_{12}=\begin{bmatrix}1&1&0\\0&0&0\\0&0&0\end{bmatrix}-E_{11}$, $E_{13}$ likewise;
 - $E_{22}=\operatorname{diag}(1,1,0)-E_{11}$;
 - $E_{23}$ can be obtained by $\begin{bmatrix}1&0&0\\0&1&1\\0&0&0\end{bmatrix}-\operatorname{diag}(1,1,0)$;
@@ -4284,7 +4218,7 @@ $$
 
 ### Exam 1 题后复盘
 <!-- bilingual-en:start -->
-*Review after Exam 1*
+*Review of Exam 1*
 <!-- bilingual-en:end -->
 
 四题分别检查了 Unit I 的四个层次：
@@ -4297,10 +4231,12 @@ The four questions examine the four levels of Unit I:
 3. 对参数值做 rank、四空间和完整解分流；
 4. 把矩形矩阵及矩阵空间纳入统一的基与维数语言。
 <!-- bilingual-en:start -->
-1. Infer dimensions and rank from existence and uniqueness;
-2. connect row operations, inverses, and LU factorization;
-3. separate parameter cases and determine rank, fundamental subspaces, and complete solutions;
-4. describe rectangular matrices and matrix spaces in one language of bases and dimensions.
+
+&nbsp;
+**1.** Infer dimensions and rank from existence and uniqueness;<br>
+**2.** connect row operations, inverses, and LU factorization;<br>
+**3.** separate parameter cases and determine rank, fundamental subspaces, and complete solutions;<br>
+**4.** describe rectangular matrices and matrix spaces in one language of bases and dimensions.<br>
 <!-- bilingual-en:end -->
 
 若某题计算正确却无法解释“为什么要分情况、这个向量位于哪个空间、维数是否闭合”，说明还停留在算法层，尚未完成 Unit I 的结构化理解。
@@ -4310,12 +4246,12 @@ If you can compute an answer but cannot explain why cases must be separated, whi
 
 ## 本单元最终检查表
 <!-- bilingual-en:start -->
-*Final Checklist in this module*
+*Final checklist for this unit*
 <!-- bilingual-en:end -->
 
 ### 概念与尺寸
 <!-- bilingual-en:start -->
-*Concepts and Dimensions*
+*Concepts and dimensions*
 <!-- bilingual-en:end -->
 
 - [ ] 我能在任何 $m\times n$ 矩阵旁立刻写出四个基本子空间所在的 $\mathbb R^m$ 或 $\mathbb R^n$。
@@ -4329,7 +4265,7 @@ If you can compute an answer but cannot explain why cases must be separated, whi
 
 ### 算法
 <!-- bilingual-en:start -->
-*algorithm*
+*Algorithms*
 <!-- bilingual-en:end -->
 
 - [ ] 我能用增广矩阵消元，并在需要时换行。
@@ -4339,32 +4275,32 @@ If you can compute an answer but cannot explain why cases must be separated, whi
 <!-- bilingual-en:start -->
 - [ ] I can perform elimination on an augmented matrix and swap rows when needed.
 - [ ] I can construct $L$ from the elimination multipliers, read $U$ from the result, and handle the factorization $PA=LU$.
-- [ ] I can construct special nullspace solutions from rref and choose bases for the relevant subspaces from the original matrix.
+- [ ] I can construct special nullspace solutions from the RREF and choose bases for the relevant subspaces from the original matrix.
 - [ ] I can write a consistent system's complete solution as $x_p+N(A)$ and verify it in the original equation.
 <!-- bilingual-en:end -->
 
 ### 证明
 <!-- bilingual-en:start -->
-*prove*
+*Proofs*
 <!-- bilingual-en:end -->
 
 - [ ] 我能证明行操作保持解集、逆矩阵唯一、完整解公式和 rank-nullity。
 - [ ] 我能证明两对基本子空间互为正交补。
 - [ ] 我能证明连通图的关联矩阵零空间由常数向量张成。
 <!-- bilingual-en:start -->
-- [ ] I can prove that row operations preserve the solution set, inverse matrix uniqueness, the complete solution formula, and rank-nullity.
-- [ ] I can prove that two pairs of elementary subspaces complement each other orthogonally.
+- [ ] I can prove that row operations preserve the solution set, that an inverse is unique, the complete-solution formula, and rank–nullity.
+- [ ] I can prove that the two relevant pairs of fundamental subspaces are orthogonal complements.
 - [ ] I can prove that the nullspace of the incidence matrix of a connected graph is spanned by a constant vector.
 <!-- bilingual-en:end -->
 
 ### 下一单元接口
 <!-- bilingual-en:start -->
-*Next Unit Interface*
+*Bridge to the next unit*
 <!-- bilingual-en:end -->
 
 Unit II 将从
 <!-- bilingual-en:start -->
-The Unit II will be launched from the
+Unit II starts from the orthogonality relations
 <!-- bilingual-en:end -->
 
 $$
@@ -4373,5 +4309,5 @@ $$
 
 出发，研究正交投影、最小二乘和正交基；也就是说，当 $b\notin C(A)$、精确方程无解时，我们将寻找 $C(A)$ 中离 $b$ 最近的向量。
 <!-- bilingual-en:start -->
-In other words, when $b\notin C(A)$, the exact equation has no solution, we will look for the vector in $C(A)$ which is closest to $b$.
+In other words, when $b\notin C(A)$ and the exact equation has no solution, we will seek the vector in $C(A)$ closest to $b$.
 <!-- bilingual-en:end -->

@@ -282,11 +282,13 @@ Common criteria include:
 4. 信息准则，如 AIC 和 BIC。
 5. 似然比检验。
 <!-- bilingual-en:start -->
-1. A scree plot.
-2. Cumulative explained variance.
-3. The residual matrix $S-(LL'+\Psi)$.
-4. Information criteria such as AIC and BIC.
-5. A likelihood-ratio test.
+
+&nbsp;
+**1.** A scree plot.<br>
+**2.** Cumulative explained variance.<br>
+**3.** The residual matrix $S-(LL'+\Psi)$.<br>
+**4.** Information criteria such as AIC and BIC.<br>
+**5.** A likelihood-ratio test.<br>
 <!-- bilingual-en:end -->
 
 >[!attention] 解释优先

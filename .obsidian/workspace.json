@@ -83,8 +83,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
-                "mode": "source",
+                "file": "01_Math/01_calculus/05_Infinite_Series_and_Improper_Integrals.md",
+                "mode": "preview",
                 "source": false,
                 "backlinks": true,
                 "backlinkOpts": {
@@ -98,11 +98,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "LN905 PDF Contents"
+              "title": "05_Infinite_Series_and_Improper_Integrals"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -350,6 +350,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "01_Math/01_calculus/05_Infinite_Series_and_Improper_Integrals.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -372,7 +373,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 683.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -394,8 +395,14 @@
       "graph:Open graph view": false
     }
   },
-  "active": "f43cd937f6e699e4",
+  "active": "7e166a09329e6ffc",
   "lastOpenFiles": [
+    "02_Economy/07_金融机构与风险管理/01_引言.md",
+    "02_Economy/07_金融机构与风险管理/17_OTC衍生产品市场的监管.md",
+    "01_Math/01_calculus/05_Infinite_Series_and_Improper_Integrals.md",
+    "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
+    "01_Math/01_calculus/02_Applications_of_Differentiation.md",
+    "tmp/__pycache__/restore_bilingual_source.cpython-312.pyc",
     "tmp/polish_calc01_headings.py",
     "tmp/__pycache__/polish_calculus_english.cpython-312.pyc",
     "tmp/polish_calculus_english.py",
@@ -407,8 +414,6 @@
     "tmp/apply_patch_range_probe.txt",
     "01_Math/01_calculus/01_Differentiation.md",
     "04_Fragments/How to fix your entire life in 1 day - 2026-03-28.md",
-    "99_学习情况记录/teach/reading-into-writing/practice/0001-social-media-source-pack.pdf",
-    "99_学习情况记录/teach/reading-into-writing/practice/0001-social-media-source-pack.aux",
     "99_学习情况记录/teach/reading-into-writing/practice/0001-social-media-response.md",
     "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-6.jpg",
     "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-5.jpg",
@@ -438,10 +443,6 @@
     "00_Knowledge/二分图匹配与 Hall 定理.md",
     "00_Knowledge/无环图：树、生成树、DAG 与拓扑排序.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
-    "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
-    "00_Knowledge/图的基本结构、路径与遍历.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/Social Media and Well-Being 中文逐段翻译与 summary.md",
-    "00_Knowledge/面板数据：Pooled OLS、固定效应与随机效应.md",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L Course Atlas.canvas",

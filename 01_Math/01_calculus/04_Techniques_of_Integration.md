@@ -15,7 +15,7 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 > [!abstract] 本章主线
 > 求导有一套局部规则，积分却没有能机械处理一切函数的单一算法。本章的核心是识别结构并进行[[积分方法#积分方法选择树|积分技巧选择]]：三角恒等式处理三角幂，三角代换消去二次根式，部分分式拆开有理函数，分部积分逆用乘积法则。随后把同一个“微元—累加—取极限”的思想用于弧长、旋转曲面、参数曲线与极坐标面积。
 > <!-- bilingual-en:start -->
-> There is a set of local rules for derivation, but there is no single algorithm for integration that mechanically handles all functions.  The core of this chapter is to identify the structure and carry out [[积分方法#积分方法选择树|integral skill selection]]: trigonometric identities deal with trigonometric powers, trigonometric substitution eliminates quadratic roots, some split rational functions, and some integral inverse product rule.  Then the same idea of "infinitesimal—summation—taking limit" is applied to arc length, revolved surface, parametric curve and polar area.
+> Differentiation has a set of local rules, but integration has no single algorithm that mechanically handles every function. The central task in this chapter is to recognize structure and choose an [[积分方法#积分方法选择树|integration technique]]: trigonometric identities handle powers of trigonometric functions, trigonometric substitution removes quadratic radicals, partial fractions split rational functions, and integration by parts reverses the product rule. The same idea of “small elements, accumulation, and a limiting process” is then applied to arc length, surfaces of revolution, parametric curves, and polar area.
 > <!-- bilingual-en:end -->
 
 - 官方课程：[MIT OCW 18.01SC — Unit 4: Techniques of Integration](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/unit-4-techniques-of-integration/)
@@ -31,7 +31,7 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 
 ## 学习目标
 <!-- bilingual-en:start -->
-*learning objectives*
+*Learning Objectives*
 <!-- bilingual-en:end -->
 
 完成本章后，应当能够：
@@ -47,13 +47,15 @@ After completing this chapter, you should be able to:
 6. 在直角坐标、参数方程和极坐标之间转换，并正确判断轨迹、方向、重复描画和积分范围。
 7. 独立完成 Problem Set 9–11 与 Exam 4 的全部指定题。
 <!-- bilingual-en:start -->
-1. Evaluate $\int\sin^n x\cos^m x\,dx$ by using parity, and handle powers of $\tan,\sec,\cot,\csc$.
-2. Choose the appropriate trigonometric substitution from the form of the radical, controlling the angle range, absolute values, and back-substitution.
-3. Apply polynomial long division to an improper rational function, factor the denominator, and write the complete partial-fraction decomposition.
-4. Derive integration by parts from the product rule and decide which factor to differentiate.
-5. Derive arc length from polygonal approximation and surface area of revolution from narrow frusta.
-6. Move between Cartesian, parametric, and polar descriptions while checking the path, orientation, repeated tracing, and integration interval.
-7. Complete all assigned problems from Problem Sets 9–11 and Exam 4 independently.
+
+&nbsp;
+**1.** Evaluate $\int\sin^n x\cos^m x\,dx$ by using parity, and handle powers of $\tan,\sec,\cot,\csc$.<br>
+**2.** Choose the appropriate trigonometric substitution from the form of the radical, controlling the angle range, absolute values, and back-substitution.<br>
+**3.** Apply polynomial long division to an improper rational function, factor the denominator, and write the complete partial-fraction decomposition.<br>
+**4.** Derive integration by parts from the product rule and decide which factor to differentiate.<br>
+**5.** Derive arc length from polygonal approximation and surface area of revolution from narrow frusta.<br>
+**6.** Move between Cartesian, parametric, and polar descriptions while checking the path, orientation, repeated tracing, and integration interval.<br>
+**7.** Complete all assigned problems from Problem Sets 9–11 and Exam 4 independently.<br>
 <!-- bilingual-en:end -->
 
 ## 一张决策表：看到积分先问什么
@@ -87,7 +89,7 @@ After completing this chapter, you should be able to:
 
 1. [[#Session 74：Integration by partial fractions|Session 74：部分分式]]
 2. [[#Session 75：Advanced partial fractions|Session 75：进阶部分分式]]
-3. [[#Session 76：Integration by parts|Session 76：分部积分]]
+3. [[#Session 76：分部积分|Session 76：分部积分]]
 4. [[#Session 77：Volume of a wine glass|Session 77：酒杯体积]]
 5. [[#Session 78：Computing the length of a curve|Session 78：弧长]]
 6. [[#Session 79：Surface area|Session 79：旋转曲面面积]]
@@ -242,9 +244,11 @@ Here we can think of $\cos^0x$: zero is even, and the sinusoidal exponent $3$ is
 > 2. $\int\sin^2x\cos^3x\,dx=\sin^3x/3-\sin^5x/5+C$。
 > 3. 若 $n,m$ 都是奇数，两种保留法都可用；通常保留次数较低的一侧使展开更短。
 > <!-- bilingual-en:start -->
-> 1. $\int\sin x\cos^4x\,dx=-\cos^5x/5+C$.
-> 2. $\int\sin^2x\cos^3x\,dx=\sin^3x/3-\sin^5x/5+C$.
-> 3. If $n,m$ are odd, both retention methods are available; typically the side with lower retention times makes the expansion shorter.
+>
+> &nbsp;
+> **1.** $\int\sin x\cos^4x\,dx=-\cos^5x/5+C$.<br>
+> **2.** $\int\sin^2x\cos^3x\,dx=\sin^3x/3-\sin^5x/5+C$.<br>
+> **3.** If $n,m$ are odd, both retention methods are available; typically the side with lower retention times makes the expansion shorter.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -376,9 +380,11 @@ For higher powers, apply the power-reduction identities repeatedly. The goal is 
 > 2. $\int\sin^2(3x)\,dx=x/2-\sin6x/12+C$。
 > 3. $\int\sin^4x\,dx=3x/8-\sin2x/4+\sin4x/32+C$。
 > <!-- bilingual-en:start -->
-> 1. $\int\sin^2x\,dx=x/2-\sin2x/4+C$.
-> 2. $\int\sin^2(3x)\,dx=x/2-\sin6x/12+C$.
-> 3. $\int\sin^4x\,dx=3x/8-\sin2x/4+\sin4x/32+C$.
+>
+> &nbsp;
+> **1.** $\int\sin^2x\,dx=x/2-\sin2x/4+C$.<br>
+> **2.** $\int\sin^2(3x)\,dx=x/2-\sin6x/12+C$.<br>
+> **3.** $\int\sin^4x\,dx=3x/8-\sin2x/4+\sin4x/32+C$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -477,9 +483,11 @@ The first term is the sector area, and the second term is the triangle area, so 
 > 2. $b=0$ 时两项都为零。
 > 3. $dA/db=\sqrt{a^2-b^2}$，正好等于新增水平薄片的长度。
 > <!-- bilingual-en:start -->
-> 1. $b=a$ yields $\pi a^2/4$, i.e. a quarter-circle area.
-> 2. At $b=0$, both are zero.
-> 3. $dA/db=\sqrt{a^2-b^2}$, which is exactly the length of the new horizontal slice.
+>
+> &nbsp;
+> **1.** $b=a$ yields $\pi a^2/4$, i.e. a quarter-circle area.<br>
+> **2.** At $b=0$, both are zero.<br>
+> **3.** $dA/db=\sqrt{a^2-b^2}$, which is exactly the length of the new horizontal slice.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -609,9 +617,11 @@ $$
 > 2. $\int\csc^2x\,dx=-\cot x+C$。
 > 3. $\int\sec x\tan x\,dx=\sec x+C$。
 > <!-- bilingual-en:start -->
-> 1. $\int\sec^4x\,dx=\tan x+\tan^3x/3+C$.
-> 2. $\int\csc^2x\,dx=-\cot x+C$.
-> 3. $\int\sec x\tan x\,dx=\sec x+C$.
+>
+> &nbsp;
+> **1.** $\int\sec^4x\,dx=\tan x+\tan^3x/3+C$.<br>
+> **2.** $\int\csc^2x\,dx=-\cot x+C$.<br>
+> **3.** $\int\sec x\tan x\,dx=\sec x+C$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -701,11 +711,13 @@ $$
 4. 用三角形或代数恒等式回到 $x$。
 5. 对结果求导；若是定积分，优先在代换时直接改上下限，避免回代。
 <!-- bilingual-en:start -->
-1. Rewrite the quadratic expression in one of the three standard forms.
-2. Compute $dx$ and state the range of $\theta$.
-3. Use the relevant identity to eliminate the radical and evaluate the trigonometric integral.
-4. Return to $x$ using a reference triangle or an algebraic identity.
-5. Differentiate to check the result. For a definite integral, preferably transform the limits during substitution so that no back-substitution is needed.
+
+&nbsp;
+**1.** Rewrite the quadratic expression in one of the three standard forms.<br>
+**2.** Compute $dx$ and state the range of $\theta$.<br>
+**3.** Use the relevant identity to eliminate the radical and evaluate the trigonometric integral.<br>
+**4.** Return to $x$ using a reference triangle or an algebraic identity.<br>
+**5.** Differentiate to check the result. For a definite integral, preferably transform the limits during substitution so that no back-substitution is needed.<br>
 <!-- bilingual-en:end -->
 
 > [!example]- 配套 Exercise 072：两种方法计算 $\int x\sqrt{x^2-9}\,dx$
@@ -737,9 +749,11 @@ $$
 > 2. $\sqrt{a^2+x^2}$ 选 $x=a\tan\theta$，因为 $1+\tan^2\theta=\sec^2\theta$。
 > 3. 定积分代换后上下限的顺序若反转，应保留负号或交换上下限并改号，不能两者都做。
 > <!-- bilingual-en:start -->
-> 1. $\int dx/\sqrt{a^2-x^2}=\arcsin(x/a)+C$.
-> 2. $\sqrt{a^2+x^2}$ chooses $x=a\tan\theta$ because of $1+\tan^2\theta=\sec^2\theta$.
-> 3. If the order of the upper and lower bounds after replacing the definite integral is reversed, the minus sign or the commutation upper and lower bounds shall be kept and changed, and not both.
+>
+> &nbsp;
+> **1.** $\int dx/\sqrt{a^2-x^2}=\arcsin(x/a)+C$.<br>
+> **2.** $\sqrt{a^2+x^2}$ chooses $x=a\tan\theta$ because of $1+\tan^2\theta=\sec^2\theta$.<br>
+> **3.** If the order of the upper and lower bounds after replacing the definite integral is reversed, the minus sign or the commutation upper and lower bounds shall be kept and changed, and not both.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -843,9 +857,11 @@ The last line absorbs the constant $-\ln2$. The real domain is $x\le-4$ or $x\ge
 > 2. $-x^2+4x+5=9-(x-2)^2$，因此适合正弦代换。
 > 3. $\int dx/(x^2+4x+13)^{3/2}=(x+2)/(9\sqrt{x^2+4x+13})+C$。
 > <!-- bilingual-en:start -->
-> 1. $x^2-6x+13=(x-3)^2+4$.
-> 2. $-x^2+4x+5=9-(x-2)^2$, and thus suitable for sinusoidal substitution.
-> 3. $\int dx/(x^2+4x+13)^{3/2}=(x+2)/(9\sqrt{x^2+4x+13})+C$.
+>
+> &nbsp;
+> **1.** $x^2-6x+13=(x-3)^2+4$.<br>
+> **2.** $-x^2+4x+5=9-(x-2)^2$, and thus suitable for sinusoidal substitution.<br>
+> **3.** $\int dx/(x^2+4x+13)^{3/2}=(x+2)/(9\sqrt{x^2+4x+13})+C$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -1111,8 +1127,10 @@ A rational function has the form $R(x)=P(x)/Q(x)$, where $P$ and $Q$ are polynom
 1. $\deg P<\deg Q$，即真分式；
 2. $Q$ 分解为互异的一次因子。
 <!-- bilingual-en:start -->
-1. $\deg P<\deg Q$, which is true fraction;
-2. $Q$ is decomposed into distinct first-order factors.
+
+&nbsp;
+**1.** $\deg P<\deg Q$, which is true fraction;<br>
+**2.** $Q$ is decomposed into distinct first-order factors.<br>
 <!-- bilingual-en:end -->
 
 ### 74a：为什么拆分有效
@@ -1132,7 +1150,7 @@ $$
 
 乘回公共分母得多项式恒等式
 <!-- bilingual-en:start -->
-Multiply back common denominator to obtain polynomial identities
+Multiply through by the common denominator to obtain the polynomial identity
 <!-- bilingual-en:end -->
 
 $$
@@ -1141,7 +1159,7 @@ $$
 
 令 $x=1$ 消掉 $B$ 项，得 $3=3A$，故 $A=1$；令 $x=-2$ 消掉 $A$ 项，得 $-9=-3B$，故 $B=3$。因此
 <!-- bilingual-en:start -->
-$x=1$ cancels the $B$ term to get $3=3A$, so $A=1$; $x=-2$ cancels the $A$ term to get $-9=-3B$, so $B=3$.  therefore
+Setting $x=1$ eliminates the $B$ term and gives $3=3A$, so $A=1$. Setting $x=-2$ eliminates the $A$ term and gives $-9=-3B$, so $B=3$. Therefore,
 <!-- bilingual-en:end -->
 
 $$
@@ -1151,12 +1169,12 @@ $$
 
 ### 74b–74c：遮盖法的本质与算法
 <!-- bilingual-en:start -->
-*74b-74c: The Essence and Algorithm of the Cover Method*
+*74b–74c: Why the Cover-Up Method Works and How to Use It*
 <!-- bilingual-en:end -->
 
 对互异一次因子，系数可由“遮盖法”（cover-up method）快速求出：若
 <!-- bilingual-en:start -->
-For the dissimilar first-order factors, the coefficients can be quickly determined by the "cover-up method" if
+For distinct linear factors, the coefficients can be found quickly by the cover-up method. If
 <!-- bilingual-en:end -->
 
 $$
@@ -1166,7 +1184,7 @@ $$
 
 则乘以 $x-r_j$ 后令 $x=r_j$，得到
 <!-- bilingual-en:start -->
-multiply $x-r_j$ by $x=r_j$ to get
+multiply both sides by $x-r_j$ and then set $x=r_j$ to obtain
 <!-- bilingual-en:end -->
 
 $$
@@ -1223,9 +1241,11 @@ This is not ingenuity, but choosing an input that makes the other terms zero in 
 > 2. $\int dx/(x^2-1)=\tfrac12\ln|(x-1)/(x+1)|+C$。
 > 3. 分解后随机代入一个非极点能发现大多数符号错误，但严格保证来自乘回分母后比较恒等式。
 > <!-- bilingual-en:start -->
-> 1. $\dfrac1{(x-1)(x+1)}=\dfrac12\left(\dfrac1{x-1}-\dfrac1{x+1}\right)$.
-> 2. $\int dx/(x^2-1)=\tfrac12\ln|(x-1)/(x+1)|+C$.
-> 3. Substituting a convenient non-pole after decomposition catches many sign errors, but a rigorous check comes from recombining the fractions over the common denominator and verifying the identity.
+>
+> &nbsp;
+> **1.** $\dfrac1{(x-1)(x+1)}=\dfrac12\left(\dfrac1{x-1}-\dfrac1{x+1}\right)$.<br>
+> **2.** $\int dx/(x^2-1)=\tfrac12\ln|(x-1)/(x+1)|+C$.<br>
+> **3.** Substituting a convenient non-pole after decomposition catches many sign errors, but a rigorous check comes from recombining the fractions over the common denominator and verifying the identity.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -1353,10 +1373,10 @@ $$
 5. 逐项积分并求导检查。
 <!-- bilingual-en:start -->
 1.**divide**until true fraction.
-2. On the real number, the denominator is completely divided into the primary factor and irreducible secondary factor.
-3. List all the powers for each repeating factor; list the linear numerator for each re-factor of each quadratic factor.
-4. Multiply through by the common denominator, then solve using the cover-up method, convenient substitutions, or equating coefficients.
-5. Integrate item by item and check the derivation.
+**2.** On the real number, the denominator is completely divided into the primary factor and irreducible secondary factor.<br>
+**3.** List all the powers for each repeating factor; list the linear numerator for each re-factor of each quadratic factor.<br>
+**4.** Multiply through by the common denominator, then solve using the cover-up method, convenient substitutions, or equating coefficients.<br>
+**5.** Integrate item by item and check the derivation.<br>
 <!-- bilingual-en:end -->
 
 > [!example]- 配套 Exercise 075（两份）
@@ -1394,9 +1414,11 @@ $$
 > 2. $1/[(x^2+1)(x-2)]$ 的模板是 $(Ax+B)/(x^2+1)+C/(x-2)$。
 > 3. $x^2/(x-1)=x+1+1/(x-1)$。
 > <!-- bilingual-en:start -->
-> 1. The template for $1/[x(x+1)^2]$ is $A/x+B/(x+1)+C/(x+1)^2$.
-> 2. The template for $1/[(x^2+1)(x-2)]$ is $(Ax+B)/(x^2+1)+C/(x-2)$.
-> 3. $x^2/(x-1)=x+1+1/(x-1)$.
+>
+> &nbsp;
+> **1.** The template for $1/[x(x+1)^2]$ is $A/x+B/(x+1)+C/(x+1)^2$.<br>
+> **2.** The template for $1/[(x^2+1)(x-2)]$ is $(Ax+B)/(x^2+1)+C/(x-2)$.<br>
+> **3.** $x^2/(x-1)=x+1+1/(x-1)$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -1549,9 +1571,11 @@ $$
 > 2. $\int x\sin xdx=-x\cos x+\sin x+C$。
 > 3. $\int\arctan xdx=x\arctan x-\tfrac12\ln(1+x^2)+C$。
 > <!-- bilingual-en:start -->
-> 1. $\int xe^x dx=e^x(x-1)+C$.
-> 2. $\int x\sin xdx=-x\cos x+\sin x+C$.
-> 3. $\int\arctan xdx=x\arctan x-\tfrac12\ln(1+x^2)+C$.
+>
+> &nbsp;
+> **1.** $\int xe^x dx=e^x(x-1)+C$.<br>
+> **2.** $\int x\sin xdx=-x\cos x+\sin x+C$.<br>
+> **3.** $\int\arctan xdx=x\arctan x-\tfrac12\ln(1+x^2)+C$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -1568,12 +1592,12 @@ $$
 
 ### 本节问题与几何模型
 <!-- bilingual-en:start -->
-*This section of the problem and geometric model*
+*The Problem and Its Geometric Model*
 <!-- bilingual-en:end -->
 
 把 $y=e^x$ 从 $(0,1)$ 到 $(1,e)$ 的弧绕 $y$ 轴旋转，并以 $y=e$ 封口，所得“指数酒杯”的容积是多少？同一立体可用水平圆盘或竖直圆柱壳计算，答案应一致。
 <!-- bilingual-en:start -->
-What is the volume of the "exponential wine glass" obtained by rotating the arc of $y=e^x$ from $(0,1)$ to $(1,e)$ around the $y$ axis and sealing it in $y=e$?  The same solid can be calculated by using a horizontal disk or a vertical cylindrical shell, and the answers should be consistent.
+What is the volume of the “exponential wine glass” formed by rotating the arc of $y=e^x$ from $(0,1)$ to $(1,e)$ about the $y$-axis and closing it with the plane $y=e$? The same solid can be computed with horizontal disks or vertical cylindrical shells, and the two methods must agree.
 <!-- bilingual-en:end -->
 
 ### 77a：水平切片——圆盘法
@@ -1583,7 +1607,7 @@ What is the volume of the "exponential wine glass" obtained by rotating the arc 
 
 由 $y=e^x$ 得 $x=\ln y$。高度 $y$ 处截面是半径 $\ln y$ 的圆盘：
 <!-- bilingual-en:start -->
-$x=\ln y$ by $y=e^x$.  The section at height $y$ is a disk of radius $\ln y$:
+Since $y=e^x$, we have $x=\ln y$. The cross-section at height $y$ is a disk of radius $\ln y$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1592,7 +1616,7 @@ $$
 
 用 Session 76 的递推：
 <!-- bilingual-en:start -->
-With Session 76:
+Using the recurrence from Session 76,
 <!-- bilingual-en:end -->
 
 $$
@@ -1610,12 +1634,12 @@ $$
 
 ### 77b：竖直切片——圆柱壳法
 <!-- bilingual-en:start -->
-*77b: vertical slice—cylindrical shell method*
+*77b: Vertical Slices—the Cylindrical-Shell Method*
 <!-- bilingual-en:end -->
 
 在 $x$ 处，壳半径为 $x$，周长 $2\pi x$，高度 $e-e^x$，厚度 $dx$：
 <!-- bilingual-en:start -->
-At $x$, the radius of shell is $x$, the circumference is $2\pi x$, the height is $e-e^x$, and the thickness is $dx$:
+At position $x$, a shell has radius $x$, circumference $2\pi x$, height $e-e^x$, and thickness $dx$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1627,12 +1651,12 @@ $$
 
 分部积分给 $\int_0^1xe^xdx=[e^x(x-1)]_0^1=1$，故仍为 $\pi(e-2)$。
 <!-- bilingual-en:start -->
-The segment credits are to $\int_0^1xe^xdx=[e^x(x-1)]_0^1=1$ and hence remain as $\pi(e-2)$.
+Integration by parts gives $\int_0^1xe^x\,dx=[e^x(x-1)]_0^1=1$, so the volume is again $\pi(e-2)$.
 <!-- bilingual-en:end -->
 
 两种方法使用不同积分变量与技巧，却描述同一组体积微元；相等不是巧合，而是体积的唯一性。
 <!-- bilingual-en:start -->
-The two methods use different integration variables and techniques, but describe the same set of volume differentials; equality is not a coincidence, but the volume is unique.
+The two methods use different variables and integration techniques, but decompose the same solid into volume elements. Their agreement is not a coincidence: the solid has one well-defined volume.
 <!-- bilingual-en:end -->
 
 > [!warning] 易错点
@@ -1646,9 +1670,11 @@ The two methods use different integration variables and techniques, but describe
 > 2. $e-2>0$，故体积为正，且小于外包圆柱 $\pi e$。
 > 3. 若上端改为 $x=b$，圆盘形式为 $\pi\int_1^{e^b}(\ln y)^2dy$。
 > <!-- bilingual-en:start -->
-> 1. Why is the shell height $e-e^x$? Because each vertical strip extends from the lower boundary $y=e^x$ to the upper boundary $y=e$.
-> 2. $e-2>0$, so the volume is positive and smaller than the outer cylinder $\pi e$.
-> 3. If the upper end is changed to $x=b$, the disk form is $\pi\int_1^{e^b}(\ln y)^2dy$.
+>
+> &nbsp;
+> **1.** Why is the shell height $e-e^x$? Because each vertical strip extends from the lower boundary $y=e^x$ to the upper boundary $y=e$.<br>
+> **2.** $e-2>0$, so the volume is positive and smaller than the outer cylinder $\pi e$.<br>
+> **3.** If the upper end is changed to $x=b$, the disk form is $\pi\int_1^{e^b}(\ln y)^2dy$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -1689,7 +1715,7 @@ $$
 
 弦长和取极限得到
 <!-- bilingual-en:start -->
-chord length and taking limit to get
+Taking the limit of the sums of chord lengths gives
 <!-- bilingual-en:end -->
 
 $$
@@ -1698,7 +1724,7 @@ $$
 
 严格条件通常取 $f'$ 连续；这样上述 Riemann 和确实收敛到[[参数曲线与极坐标#弧长、曲面与检查|弧长]]。
 <!-- bilingual-en:start -->
-Strict conditions are usually $f'$ continuous; so that the above Riemann and do converge to [[参数曲线与极坐标#弧长、曲面与检查|arc length]].
+A standard sufficient condition is that $f'$ be continuous; then the Riemann sums above converge to the [[参数曲线与极坐标#弧长、曲面与检查|arc length]].
 <!-- bilingual-en:end -->
 
 ![[unit04-arc-length-element.png|820]]
@@ -1750,7 +1776,7 @@ $$
 
 这里用 $2x=\tan\theta$；弧长即使曲线简单，也常产生对数或反双曲函数。
 <!-- bilingual-en:start -->
-In this paper, we use $2x=\tan\theta$;the arc length often produces logarithmic or inverse hyperbolic functions even if the curve is simple.
+Here we use $2x=\tan\theta$. Even a simple curve can produce logarithmic or inverse-hyperbolic terms in its arc length.
 <!-- bilingual-en:end -->
 
 > [!example]- 配套 Exercise 078
@@ -1780,9 +1806,11 @@ In this paper, we use $2x=\tan\theta$;the arc length often produces logarithmic 
 > 2. 若改用 $x=g(y)$，则 $L=\int\sqrt{1+(dx/dy)^2}\,dy$。
 > 3. 弧长不小于端点直线距离；数值结果若更小，必有错误。
 > <!-- bilingual-en:start -->
-> 1. The horizontal line is $b-a$ in length on the $[a,b]$.
-> 2. If using $x=g(y)$ instead, $L=\int\sqrt{1+(dx/dy)^2}\,dy$.
-> 3. Arc length is not less than the end of the straight-line distance, numerical results are smaller, there must be errors.
+>
+> &nbsp;
+> **1.** The horizontal line is $b-a$ in length on the $[a,b]$.<br>
+> **2.** If using $x=g(y)$ instead, $L=\int\sqrt{1+(dx/dy)^2}\,dy$.<br>
+> **3.** Arc length is not less than the end of the straight-line distance, numerical results are smaller, there must be errors.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -1910,9 +1938,11 @@ The whole spherical surface area is $4\pi R^2$ if $a=-R,b=R$, and the area of th
 > 2. 单位上半圆绕 $x$ 轴给 $4\pi$，不是 $2\pi$，因为 $x$ 从 $-1$ 到 $1$。
 > 3. 绕直线 $y=k$ 时半径为 $|f(x)-k|$。
 > <!-- bilingual-en:start -->
-> 1. Rotating the horizontal segment $y=c>0$ of length $L$ about the $x$-axis gives lateral area $2\pi cL$.
-> 2. Rotating the upper unit semicircle about the $x$-axis gives area $4\pi$, not $2\pi$, because $x$ runs from $-1$ to $1$.
-> 3. When the axis of rotation is $y=k$, the radius is $|f(x)-k|$.
+>
+> &nbsp;
+> **1.** Rotating the horizontal segment $y=c>0$ of length $L$ about the $x$-axis gives lateral area $2\pi cL$.<br>
+> **2.** Rotating the upper unit semicircle about the $x$-axis gives area $4\pi$, not $2\pi$, because $x$ runs from $-1$ to $1$.<br>
+> **3.** When the axis of rotation is $y=k$, the radius is $|f(x)-k|$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -2126,7 +2156,7 @@ The official assignments are 5E: 2, 3, 5, 6, 10h; and 5F: 1a, 2d, then 2b and 3.
 
 [[参数曲线与极坐标#参数曲线|参数曲线]]（parametric curve）把位置的两个坐标都写成第三个变量的函数：
 <!-- bilingual-en:start -->
-[[参数曲线与极坐标#参数曲线|parametric curve]] (parametric curve) writes the two coordinates of the position as a function of the third variable:
+A [[参数曲线与极坐标#参数曲线|parametric curve]] expresses both coordinates of a point as functions of a third variable:
 <!-- bilingual-en:end -->
 
 $$
@@ -2135,7 +2165,7 @@ $$
 
 $t$ 常表示时间，但也可以只是编号点的参数。参数化不只给出点集，还给出起点、方向、速度以及某些部分被描画多少次；同一几何曲线可以有许多不同参数化。
 <!-- bilingual-en:start -->
-$t$ is often a representation of time, but can be a parameter to only the encoding point.  Parameterization not only gives the point set, but also the starting point, direction, velocity and how many times some parts are described; the same geometric curve can have many different parameterizations.
+$t$ often represents time, but it may simply be a parameter that labels points. A parametrization specifies not only the set of points, but also the starting point, direction, velocity, and how many times each part is traced. The same geometric curve can have many parametrizations.
 <!-- bilingual-en:end -->
 
 ### 80a：从运动理解曲线
@@ -2149,12 +2179,12 @@ $$
 
 满足 $x^2+y^2=a^2$。当 $t=0$ 位于 $(a,0)$，且速度 $(-a\sin t,a\cos t)$ 在 $t=0$ 指向上方，所以它以恒速 $a$ 逆时针描圆。
 <!-- bilingual-en:start -->
-Meet $x^2+y^2=a^2$.  When $t=0$ is at $(a,0)$ and the speed $(-a\sin t,a\cos t)$ is pointing upwards at $t=0$, it plots the circle counterclockwise at a constant speed of $a$.
+These equations satisfy $x^2+y^2=a^2$. At $t=0$ the point is $(a,0)$, and the velocity vector $(-a\sin t,a\cos t)$ points upward there, so the circle is traced counterclockwise at constant speed $a$.
 <!-- bilingual-en:end -->
 
 若 $x'(t)\ne0$，链式法则给切线斜率
 <!-- bilingual-en:start -->
-If $x'(t)\ne0$, the chain law gives the tangent slope
+If $x'(t)\ne0$, the chain rule gives the tangent slope
 <!-- bilingual-en:end -->
 
 $$
@@ -2168,7 +2198,7 @@ A denominator of zero cannot simply be interpreted as "no tangent"; a vertical t
 
 ### 80b：参数曲线弧长
 <!-- bilingual-en:start -->
-*80b: Arc length of parametric curve*
+*80b: Arc Length of a Parametric Curve*
 <!-- bilingual-en:end -->
 
 局部位移的勾股关系为
@@ -2200,17 +2230,17 @@ $$
 
 若曲线在参数区间内重复描画，公式会按实际运动路程重复计数；要算几何曲线一次的长度，必须选择只描一次的区间。
 <!-- bilingual-en:start -->
-If the curve is repeated in the parameter interval, the formula will be repeated in the actual movement distance; to calculate the length of the geometric curve once, you must select the interval that is only repeated once.
+If the parametrization retraces part of the curve, the formula counts that travelled distance again. To obtain the length of the geometric curve only once, choose an interval that traces it exactly once.
 <!-- bilingual-en:end -->
 
 ### 80c：微分记号的严格解释
 <!-- bilingual-en:start -->
-*80c: Strict interpretation of differential notation*
+*80c: A Rigorous Interpretation of Differential Notation*
 <!-- bilingual-en:end -->
 
 $ds^2=dx^2+dy^2$ 是上述导数公式的紧凑记法，不是把有限小量当普通代数数而无需极限。合法操作可由链式法则验证：
 <!-- bilingual-en:start -->
-$ds^2=dx^2+dy^2$ is a compact notation of the above-mentioned derivative formulae, and does not treat the finite small quantities as ordinary algebras without limits.  The legal operation can be verified by the chain rule:
+$ds^2=dx^2+dy^2$ is compact notation for the derivative formula above; it does not license treating finite increments as ordinary algebra without a limiting argument. The calculation is justified by the chain rule:
 <!-- bilingual-en:end -->
 
 $$
@@ -2219,7 +2249,7 @@ $$
 
 在 $t$ 递增且 $dt>0$ 的定积分解释下成立；一般方向问题应使用 $|dt|$ 或确保上下限有序。
 <!-- bilingual-en:start -->
-It holds under the $t$ increment and $dt>0$'s definite integral interpretation; the general direction problem should use $|dt|$ or ensure that the upper and lower bounds are ordered.
+This form is valid when the definite integral is taken with increasing $t$ and $dt>0$. More generally, use $|dt|$ or ensure that the limits are ordered consistently with the direction of traversal.
 <!-- bilingual-en:end -->
 
 ![[unit04-parametric-motion.png|820]]
@@ -2263,9 +2293,11 @@ It holds under the $t$ increment and $dt>0$'s definite integral interpretation; 
 > 2. $x=t^2,y=t^4$ 满足 $y=x^2$，但 $t\in\mathbb R$ 时只覆盖 $x\ge0$ 且除原点外每点描两次。
 > 3. $d^2y/dx^2=\dfrac{d}{dt}(dy/dx)\big/x'(t)$，前提是相关导数存在且 $x'(t)\ne0$。
 > <!-- bilingual-en:start -->
-> 1. $x=\cos2t,y=\sin2t,0\le t\le2\pi$ traces the unit circle counterclockwise twice.
-> 2. $x=t^2,y=t^4$ satisfies $y=x^2$, but for $t\in\mathbb R$ it covers only $x\ge0$ and traces every nonzero point twice.
-> 3. $d^2y/dx^2=\dfrac{d}{dt}(dy/dx)\big/x'(t)$, provided that the relevant derivative exists and $x'(t)\ne0$.
+>
+> &nbsp;
+> **1.** $x=\cos2t,y=\sin2t,0\le t\le2\pi$ traces the unit circle counterclockwise twice.<br>
+> **2.** $x=t^2,y=t^4$ satisfies $y=x^2$, but for $t\in\mathbb R$ it covers only $x\ge0$ and traces every nonzero point twice.<br>
+> **3.** $d^2y/dx^2=\dfrac{d}{dt}(dy/dx)\big/x'(t)$, provided that the relevant derivative exists and $x'(t)\ne0$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -2390,9 +2422,11 @@ With $u=\cos t$, this becomes $4\pi\int_{-1}^{1}\sqrt{1+3u^2}\,du$, which can be
 > 2. 同一椭圆若 $t$ 从 $0$ 到 $2\pi$ 再绕 $y$ 轴，曲面被计算两次。
 > 3. 参数曲线绕 $x$ 轴的表面积是 $2\pi\int|y(t)|\sqrt{x'^2+y'^2}dt$。
 > <!-- bilingual-en:start -->
-> 1. The ellipse has a vertical tangent at $t=\pi/2$ because $x'=0$ and $y'=-1$.
-> 2. If the same ellipse is traced over $0\le t\le2\pi$ and revolved about the $y$-axis, the resulting surface is counted twice.
-> 3. The surface area of the parametric curve around the $x$ axis is $2\pi\int|y(t)|\sqrt{x'^2+y'^2}dt$.
+>
+> &nbsp;
+> **1.** The ellipse has a vertical tangent at $t=\pi/2$ because $x'=0$ and $y'=-1$.<br>
+> **2.** If the same ellipse is traced over $0\le t\le2\pi$ and revolved about the $y$-axis, the resulting surface is counted twice.<br>
+> **3.** The surface area of the parametric curve around the $x$ axis is $2\pi\int|y(t)|\sqrt{x'^2+y'^2}dt$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -2414,7 +2448,7 @@ With $u=\cos t$, this becomes $4\pi\int_{-1}^{1}\sqrt{1+3u^2}\,du$, which can be
 
 [[参数曲线与极坐标#极坐标|极坐标]]（polar coordinates）用到原点的有向距离 $r$ 和方向角 $\theta$ 描述点：
 <!-- bilingual-en:start -->
-[[参数曲线与极坐标#极坐标|polar coordinates]] (polar coordinates) uses the orientation distance $r$ and the direction angle $\theta$ to describe the point:
+[[参数曲线与极坐标#极坐标|Polar coordinates]] describe a point using the signed radial distance $r$ from the origin and the direction angle $\theta$:
 <!-- bilingual-en:end -->
 
 $$
@@ -2427,7 +2461,7 @@ $$
 
 （最后一式不能单独判断象限）。
 <!-- bilingual-en:start -->
-(The final formula does not allow for a separate quadrant determination.)
+(The final formula alone does not determine the quadrant.)
 <!-- bilingual-en:end -->
 
 ### 82a–82b：同一点有无穷多表示
@@ -2441,7 +2475,7 @@ $$
 
 负半径不是“负距离”，而是沿角度 $\theta$ 的反方向走 $|r|$。因此从直角坐标求角时应结合点所在象限，实际计算可用双参数反正切的思想，而非只用 $\arctan(y/x)$。
 <!-- bilingual-en:start -->
-The negative radius is not a "negative distance", but goes $|r|$ in the opposite direction of the angle $\theta$.  Therefore, the quadrant of the point should be considered when the angle is calculated from the rectangular coordinate. The idea of two-parameter arctangent can be used in the actual calculation, not only $\arctan(y/x)$.
+A negative radius is not a “negative distance”; it places the point a distance $|r|$ in the direction opposite to angle $\theta$. When converting from Cartesian coordinates, the point's quadrant must therefore be taken into account. In practice, use the two-argument arctangent rather than relying only on $\arctan(y/x)$.
 <!-- bilingual-en:end -->
 
 例如 $(x,y)=(1,-1)$ 可写为 $(\sqrt2,-\pi/4)$，也可写为 $(\sqrt2,7\pi/4)$ 或 $(-\sqrt2,3\pi/4)$。
@@ -2456,7 +2490,7 @@ For example, $(x,y)=(1,-1)$ can be written as $(\sqrt2,-\pi/4)$, or as $(\sqrt2,
 
 代入 $y=r\sin\theta$：
 <!-- bilingual-en:start -->
-Introduce $y=r\sin\theta$:
+Substitute $y=r\sin\theta$:
 <!-- bilingual-en:end -->
 
 $$
@@ -2511,9 +2545,11 @@ For $a>0$, take $-\pi/2\le\theta\le\pi/2$ to $r\ge0$ and stroke the circle once.
 > 2. $x^2+y^2=4$ 化为 $r=2$（也可用 $r=-2$ 配合角平移）。
 > 3. $r=2a\sin\theta$ 是圆心 $(0,a)$、半径 $a$ 的圆。
 > <!-- bilingual-en:start -->
-> 1. $x=1$ becomes $r=\sec\theta$.
-> 2. $x^2+y^2=4$ becomes $r=2$ (also translated with $r=-2$ angle).
-> 3. $r=2a\sin\theta$ is a circle with center $(0,a)$ and radius $a$.
+>
+> &nbsp;
+> **1.** $x=1$ becomes $r=\sec\theta$.<br>
+> **2.** $x^2+y^2=4$ becomes $r=2$ (also translated with $r=-2$ angle).<br>
+> **3.** $r=2a\sin\theta$ is a circle with center $(0,a)$ and radius $a$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -2611,9 +2647,11 @@ The results are consistent with the circular area of radius $a$, which verifies 
 > 2. $r=2\cos\theta$ 只算上半圆可取 $0\le\theta\le\pi/2$，面积为 $\pi/2$。
 > 3. 若 $r$ 在某区间为负，$r^2$ 仍为正，但区域解释和是否重复描画必须单独检查。
 > <!-- bilingual-en:start -->
-> 1. $r=R$, $0\le\theta\le2\pi$ to $A=\pi R^2$.
-> 2. $r=2\cos\theta$ is $0\le\theta\le\pi/2$ with an area of $\pi/2$ and only half a circle is included.
-> 3. If $r$ is negative on part of the interval, $r^2$ remains positive, but the geometric region and any repeated tracing must still be checked separately.
+>
+> &nbsp;
+> **1.** $r=R$, $0\le\theta\le2\pi$ to $A=\pi R^2$.<br>
+> **2.** $r=2\cos\theta$ is $0\le\theta\le\pi/2$ with an area of $\pi/2$ and only half a circle is included.<br>
+> **3.** If $r$ is negative on part of the interval, $r^2$ remains positive, but the geometric region and any repeated tracing must still be checked separately.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -2634,7 +2672,7 @@ The results are consistent with the circular area of radius $a$, which verifies 
 
 画 $r=f(\theta)$ 时按以下顺序：
 <!-- bilingual-en:start -->
-$r=f(\theta)$ is drawn in the following order:
+To sketch $r=f(\theta)$, use the following sequence:
 <!-- bilingual-en:end -->
 
 1. 找周期与对称性：$f(-\theta)$、$f(\pi-\theta)$、$f(\theta+\pi)$。
@@ -2643,16 +2681,18 @@ $r=f(\theta)$ is drawn in the following order:
 4. 用少量关键角度描点，标出随 $\theta$ 增大的方向。
 5. 确认完整曲线何时开始重复。
 <!-- bilingual-en:start -->
-1. Find the period and symmetry: $f(-\theta)$, $f(\pi-\theta)$, $f(\theta+\pi)$.
-2. Find the $r=0$, $|r|$ extremum, and undefined angle.
-3. Judging the positive and negative $r$ between partitions; the negative radius puts the point in the opposite direction.
-4. Describe the points with a small number of key angles to indicate the direction in which $\theta$ increases.
-5. Confirm when the complete curve begins to repeat.
+
+&nbsp;
+**1.** Find the period and symmetry: $f(-\theta)$, $f(\pi-\theta)$, $f(\theta+\pi)$.<br>
+**2.** Find the zeros of $r$, extrema of $|r|$, and angles where the formula is undefined.<br>
+**3.** Determine the sign of $r$ on each interval; a negative radius places the point in the opposite direction.<br>
+**4.** Plot a few key angles and indicate the direction in which the curve is traced as $\theta$ increases.<br>
+**5.** Confirm when the complete curve begins to repeat.<br>
 <!-- bilingual-en:end -->
 
 ### 84a：$r=2a\cos\theta$ 的范围
 <!-- bilingual-en:start -->
-*84a Scope: $r=2a\cos\theta$*
+*84a: The Tracing Interval for $r=2a\cos\theta$*
 <!-- bilingual-en:end -->
 
 在 $[-\pi/2,\pi/2]$ 已描完整个圆。继续增加 $\theta$ 时 $r<0$，点转到反方向，再次描同一个圆；因此 $[0,2\pi]$ 会重复，而不是产生第二个圆。
@@ -2662,12 +2702,12 @@ The entire circle has been traced in $[-\pi/2,\pi/2]$.  When you continue to inc
 
 ### 84b：玫瑰线 $r=\sin2\theta$
 <!-- bilingual-en:start -->
-*84b: Rose Line $r=\sin2\theta$*
+*84b: The Rose Curve $r=\sin2\theta$*
 <!-- bilingual-en:end -->
 
 $0\le\theta\le\pi/2$ 时 $r\ge0$，从原点出发，在 $\theta=\pi/4$ 达 $r=1$，再回原点，形成第一瓣。接着 $r<0$ 把点画到相反方向；完整曲线有四瓣。这里“频率 2”不能简单理解为“两瓣”，负半径使偶数频率 $n$ 的 $r=\sin n\theta$ 通常产生 $2n$ 瓣。
 <!-- bilingual-en:start -->
-$0\le\theta\le\pi/2$ $r\ge0$, from the origin, at $\theta=\pi/4$ up to $r=1$, back to the origin, forming the first lobe.  $r<0$ then draws the points in the opposite direction; the complete curve has four loops.  Here," frequency 2" cannot be understood simply as" two lobe", and a negative radius causes that $r=\sin n\theta$ of even frequency $n$ usually produce a $2n$ lobe.
+For $0\le\theta\le\pi/2$, $r\ge0$: the curve leaves the origin, reaches $r=1$ at $\theta=\pi/4$, and returns to the origin, forming one petal. The subsequent negative values of $r$ place points in the opposite direction, and the complete curve has four petals. Thus “frequency 2” does not simply mean two petals; for even $n$, the curve $r=\sin n\theta$ typically has $2n$ petals.
 <!-- bilingual-en:end -->
 
 ### 84c：圆锥曲线与开普勒联系
@@ -2677,7 +2717,7 @@ $0\le\theta\le\pi/2$ $r\ge0$, from the origin, at $\theta=\pi/4$ up to $r=1$, ba
 
 对
 <!-- bilingual-en:start -->
-Yes
+Consider
 <!-- bilingual-en:end -->
 
 $$
@@ -2686,7 +2726,7 @@ $$
 
 当 $\cos\theta=-1/2$，即 $\theta=\pm2\pi/3$ 时分母趋零，曲线趋向无穷。转换为直角坐标：
 <!-- bilingual-en:start -->
-When $\cos\theta=-1/2$, namely $\theta=\pm2\pi/3$, the denominator tends to zero, the curve tends to infinity.  To convert to rectangular coordinates:
+When $\cos\theta=-1/2$, at $\theta=\pm2\pi/3$, the denominator tends to zero and the curve goes to infinity. To convert to Cartesian coordinates,
 <!-- bilingual-en:end -->
 
 $$
@@ -2696,7 +2736,7 @@ $$
 
 平方并用 $r^2=x^2+y^2$：
 <!-- bilingual-en:start -->
-Square and $r^2=x^2+y^2$:
+Square the equation and use $r^2=x^2+y^2$:
 <!-- bilingual-en:end -->
 
 $$
@@ -2705,7 +2745,7 @@ $$
 
 二次项异号，故为双曲线。平方后还应以 $r=1-2x$ 检查分支。
 <!-- bilingual-en:start -->
-The quadratic term is not signed, so it is hyperbolic.  The square should be followed by a $r=1-2x$ check for branches.
+The quadratic terms have opposite signs, so the curve is a hyperbola. Because the equation was squared, its branches must still be checked against $r=1-2x$.
 <!-- bilingual-en:end -->
 
 若天体轨迹写成焦点在原点的极坐标曲线，开普勒第二定律“等时扫过等面积”就是
@@ -2751,9 +2791,11 @@ That is, the geometric form of the conservation of angular momentum.
 > 2. $r=\cos3\theta$ 有三瓣；一段完整描画可取 $0\le\theta\le\pi$。
 > 3. $r=1/(1+e\cos\theta)$ 中 $0<e<1,e=1,e>1$ 分别对应椭圆、抛物线、双曲线（适当缩放下）。
 > <!-- bilingual-en:start -->
-> 1. $r=1-\cos\theta$ is symmetric about the $x$ axis because $f(-\theta)=f(\theta)$.
-> 2. $r=\cos3\theta$ has three lobes; a complete description may be $0\le\theta\le\pi$.
-> 3. In $r=1/(1+e\cos\theta)$, $0<e<1,e=1,e>1$ corresponds to ellipse, parabola, hyperbola (appropriate scaling).
+>
+> &nbsp;
+> **1.** $r=1-\cos\theta$ is symmetric about the $x$ axis because $f(-\theta)=f(\theta)$.<br>
+> **2.** $r=\cos3\theta$ has three lobes; a complete description may be $0\le\theta\le\pi$.<br>
+> **3.** In $r=1/(1+e\cos\theta)$, $0<e<1,e=1,e>1$ corresponds to ellipse, parabola, hyperbola (appropriate scaling).<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链
@@ -2990,12 +3032,14 @@ The weighting in the slides is approximately 55% integration techniques and 45% 
 5. 弧长/表面积：先写 $ds$ 和半径，再代入参数。
 6. 极坐标：先确定只描目标区域一次的角区间。
 <!-- bilingual-en:start -->
-1. Trigonometric Power: Checks for parity and pairable derivatives.
-2. For a quadratic radical, complete the square first and then choose a trigonometric substitution.
-3. Rational functions: divide by length and factorize, and then list the complete partial fraction.
-4. Logarithmic/inverse trigonometric/polynomial multiplier: Consider partial integration.
-5. Arc length/surface area: Write $ds$ and radius first, and then replace the parameter.
-6. Polar coordinates: First, determine the angle interval that traces the target area only once.
+
+&nbsp;
+**1.** Trigonometric Power: Checks for parity and pairable derivatives.<br>
+**2.** For a quadratic radical, complete the square first and then choose a trigonometric substitution.<br>
+**3.** Rational functions: divide by length and factorize, and then list the complete partial fraction.<br>
+**4.** Logarithmic/inverse trigonometric/polynomial multiplier: Consider partial integration.<br>
+**5.** Arc length/surface area: Write $ds$ and radius first, and then replace the parameter.<br>
+**6.** Polar coordinates: First, determine the angle interval that traces the target area only once.<br>
 <!-- bilingual-en:end -->
 
 ### 85a–85b：边界说明
@@ -3057,9 +3101,11 @@ This problem combines integration by parts, rational simplification, and inverse
 > 2. 参数曲面公式必须使用速率 $\sqrt{x'^2+y'^2}$，不能用带符号的 $dx/dt$。
 > 3. 最后五分钟优先检查：链式常数、对数绝对值、定积分上下限、表面积半径和极坐标重复描画。
 > <!-- bilingual-en:start -->
-> 1. $\int x^3/(x^2+1)dx$ should divide by $x-x/(x^2+1)$ and answer $x^2/2-\tfrac12\ln(x^2+1)+C$.
-> 2. Parametric surface formulas must use a rate of $\sqrt{x'^2+y'^2}$, not a signed $dx/dt$.
-> 3. The last five minutes are checked first: chain constant, logarithmic absolute value, upper and lower limit of definite integral, radius of surface area and repeated drawing in polar coordinates.
+>
+> &nbsp;
+> **1.** $\int x^3/(x^2+1)dx$ should divide by $x-x/(x^2+1)$ and answer $x^2/2-\tfrac12\ln(x^2+1)+C$.<br>
+> **2.** Parametric surface formulas must use a rate of $\sqrt{x'^2+y'^2}$, not a signed $dx/dt$.<br>
+> **3.** The last five minutes are checked first: chain constant, logarithmic absolute value, upper and lower limit of definite integral, radius of surface area and repeated drawing in polar coordinates.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料与知识链

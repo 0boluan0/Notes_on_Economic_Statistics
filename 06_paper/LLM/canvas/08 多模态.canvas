@@ -27,7 +27,7 @@
       "y": 150,
       "width": 310,
       "height": 100,
-      "text": "## Pretraining\n\n[[预训练、指令微调与偏好优化]]",
+      "text": "## Pretraining\n\n预训练、指令微调与偏好优化",
       "color": "5"
     },
     {
@@ -37,7 +37,7 @@
       "y": 300,
       "width": 310,
       "height": 100,
-      "text": "## Scaling Law\n\n[[规模化、MoE 与分布式训练]]",
+      "text": "## Scaling Law\n\n规模化、MoE 与分布式训练",
       "color": "6"
     },
     {
@@ -57,7 +57,7 @@
       "y": 600,
       "width": 310,
       "height": 100,
-      "text": "## Instruction Tuning / RLHF\n\n[[预训练、指令微调与偏好优化]]",
+      "text": "## Instruction Tuning / RLHF\n\n预训练、指令微调与偏好优化",
       "color": "4"
     },
     {

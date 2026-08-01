@@ -286,10 +286,10 @@ $$
 <!-- bilingual-en:start -->
 Useful properties:
 
-1. $\operatorname{tr}(A+B)=\operatorname{tr}(A)+\operatorname{tr}(B)$.
-2. $\operatorname{tr}(cA)=c\operatorname{tr}(A)$.
-3. $\operatorname{tr}(A)=\operatorname{tr}(A')$.
-4. $\operatorname{tr}(AB)=\operatorname{tr}(BA)$.
+**1.** $\operatorname{tr}(A+B)=\operatorname{tr}(A)+\operatorname{tr}(B)$.<br>
+**2.** $\operatorname{tr}(cA)=c\operatorname{tr}(A)$.<br>
+**3.** $\operatorname{tr}(A)=\operatorname{tr}(A')$.<br>
+**4.** $\operatorname{tr}(AB)=\operatorname{tr}(BA)$.<br>
 <!-- bilingual-en:end -->
 
 ## 1.3. 行列式（Determinants）
@@ -331,10 +331,12 @@ $$
 3. $|A'|=|A|$。
 4. 若 $|A|\neq0$，则 $A$ 可逆。
 <!-- bilingual-en:start -->
-1. $|AB|=|A||B|$.
-2. If $A$ is invertible, then $|A^{-1}|=1/|A|$.
-3. $|A'|=|A|$.
-4. If $|A|\neq0$, then $A$ is invertible.
+
+&nbsp;
+**1.** $|AB|=|A||B|$.<br>
+**2.** If $A$ is invertible, then $|A^{-1}|=1/|A|$.<br>
+**3.** $|A'|=|A|$.<br>
+**4.** If $|A|\neq0$, then $A$ is invertible.<br>
 <!-- bilingual-en:end -->
 
 正交矩阵满足

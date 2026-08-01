@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `08 多模态`，第一版用于连接 Multimodal, Scaling Law 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[多模态大模型]], [[规模化、MoE 与分布式训练]]
+[[多模态大模型]], 规模化、MoE 与分布式训练
 
 ## 来源
 - [Zotero item](zotero://select/library/items/Z6DAT935)

@@ -20,13 +20,6 @@ tags:
 > 官方来源：https://missing-semester-cn.github.io/2020/qa/
 > 
 > 官方状态：官方页面未提供单独的 `课后练习` 章节。
-> <!-- bilingual-en:start -->
-> Main note: [[the_missing_semester#第 11 讲 提问&回答|Lecture 11: Questions and Answers]]
->
-> Official lesson: https://missing-semester-cn.github.io/2020/qa/
->
-> Official status: the official lesson does not include a separate `Exercises` section.
-> <!-- bilingual-en:end -->
 
 ## 说明
 <!-- bilingual-en:start -->

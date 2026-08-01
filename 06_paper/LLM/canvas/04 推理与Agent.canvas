@@ -17,7 +17,7 @@
       "y": 0,
       "width": 310,
       "height": 100,
-      "text": "## Reasoning\n\n[[推理模型与 LLM Agent]]",
+      "text": "## Reasoning\n\n推理模型与 LLM Agent",
       "color": "3"
     },
     {
@@ -27,7 +27,7 @@
       "y": 150,
       "width": 310,
       "height": 100,
-      "text": "## Agent\n\n[[推理模型与 LLM Agent]]",
+      "text": "## Agent\n\n推理模型与 LLM Agent",
       "color": "3"
     },
     {

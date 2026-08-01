@@ -361,7 +361,7 @@ $$
 > $$
 > 则 $ac\equiv bc\equiv0\pmod5$，但 $1\not\equiv2\pmod5$。
 > <!-- bilingual-en:start -->
-> See [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_finalexam.pdf#page=4|Final p.4]]. All variables are integers.
+> All variables are integers.
 >
 > **(a) False.** The statement that for every $a,b$ there are $x,y$ with $ax+by=1$ holds only when $\gcd(a,b)=1$. Taking $a=b=2$ makes the left-hand side even, so it cannot equal $1$.
 >

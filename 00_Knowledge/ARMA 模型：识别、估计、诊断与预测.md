@@ -108,11 +108,11 @@ Plot the series and address obvious trend or seasonality before using ACF/PACF a
 <!-- bilingual-en:start -->
 A practical acceptance sequence is:
 
-1. Verify causal and invertible parameter regions and the absence of nearly cancelling AR–MA factors.
-2. Inspect the standardised residual path and residual ACF for remaining structure.
-3. Use Ljung–Box tests at several prespecified lags, without interpreting failure to reject as proof that the model is true.
-4. Inspect squared residuals, unusual observations, and structural breaks as well.
-5. Compare against naïve and other small models under rolling-origin evaluation.
+**1.** Verify causal and invertible parameter regions and the absence of nearly cancelling AR–MA factors.<br>
+**2.** Inspect the standardised residual path and residual ACF for remaining structure.<br>
+**3.** Use Ljung–Box tests at several prespecified lags, without interpreting failure to reject as proof that the model is true.<br>
+**4.** Inspect squared residuals, unusual observations, and structural breaks as well.<br>
+**5.** Compare against naïve and other small models under rolling-origin evaluation.<br>
 <!-- bilingual-en:end -->
 
 ## 预测

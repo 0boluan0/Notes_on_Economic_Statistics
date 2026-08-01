@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `02 规模化与模型家族`，第一版用于连接 Scaling Law, Efficiency / MoE, Transformer 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[规模化、MoE 与分布式训练]], [[LLM 推理效率]], [[Transformer 与注意力机制]]
+规模化、MoE 与分布式训练, [[LLM 推理效率]], [[Transformer 与注意力机制]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/WSEBEV8K)

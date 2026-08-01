@@ -455,10 +455,12 @@ The title can make Lecture 9 look fragmented, but its progression has a clear th
 3. 函数接口也可以返回 tuple 这样的复合结果
 4. 接下来我们需要更通用的 sequence 来装数据，于是引出 list
 <!-- bilingual-en:start -->
-1. Because functions are objects, an anonymous lambda can represent a small one.
-2. A function interface can accept behavior itself as an argument.
-3. It can return a compound result packaged in a tuple.
-4. The need for more general-purpose sequences then motivates lists.
+
+&nbsp;
+**1.** Because functions are objects, an anonymous lambda can represent a small one.<br>
+**2.** A function interface can accept behavior itself as an argument.<br>
+**3.** It can return a compound result packaged in a tuple.<br>
+**4.** The need for more general-purpose sequences then motivates lists.<br>
 <!-- bilingual-en:end -->
 
 所以它不是跳跃，而是在慢慢把“函数接口”和“数据组织”同时扩展。

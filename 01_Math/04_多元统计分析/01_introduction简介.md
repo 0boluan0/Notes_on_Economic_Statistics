@@ -25,11 +25,13 @@ Multivariate methods commonly serve five types of task:
 4. 预测。
 5. 构建和检验关于多个变量的统计假设。
 <!-- bilingual-en:start -->
-1. Compress data or simplify structure.
-2. Order or group observations.
-3. Examine dependence among variables.
-4. Make predictions.
-5. Construct and test statistical hypotheses involving several variables.
+
+&nbsp;
+**1.** Compress data or simplify structure.<br>
+**2.** Order or group observations.<br>
+**3.** Examine dependence among variables.<br>
+**4.** Make predictions.<br>
+**5.** Construct and test statistical hypotheses involving several variables.<br>
 <!-- bilingual-en:end -->
 
 >[!note] 复习抓手
@@ -294,10 +296,12 @@ A boxplot gives a quick view of a variable's location, dispersion, and outliers.
 3. 再看须和异常点，判断尾部和离群点。
 4. 最后看左右是否对称，判断偏态。
 <!-- bilingual-en:start -->
-1. Start with the median to assess central location.
-2. Examine the height of the box to assess dispersion.
-3. Inspect the whiskers and outliers to assess tails and unusual observations.
-4. Finally, assess symmetry to identify skewness.
+
+&nbsp;
+**1.** Start with the median to assess central location.<br>
+**2.** Examine the height of the box to assess dispersion.<br>
+**3.** Inspect the whiskers and outliers to assess tails and unusual observations.<br>
+**4.** Finally, assess symmetry to identify skewness.<br>
 <!-- bilingual-en:end -->
 
 ### 1.5.3. 直方图
@@ -335,10 +339,12 @@ A distance function normally satisfies:
 3. 对称性：$d(p,q)=d(q,p)$。
 4. 三角不等式：$d(p,r)\leq d(p,q)+d(q,r)$。
 <!-- bilingual-en:start -->
-1. Non-negativity: $d(p,q)\geq0$.
-2. Identity: $d(p,q)=0$ if and only if $p=q$.
-3. Symmetry: $d(p,q)=d(q,p)$.
-4. The triangle inequality: $d(p,r)\leq d(p,q)+d(q,r)$.
+
+&nbsp;
+**1.** Non-negativity: $d(p,q)\geq0$.<br>
+**2.** Identity: $d(p,q)=0$ if and only if $p=q$.<br>
+**3.** Symmetry: $d(p,q)=d(q,p)$.<br>
+**4.** The triangle inequality: $d(p,r)\leq d(p,q)+d(q,r)$.<br>
 <!-- bilingual-en:end -->
 
 >[!item] 后续连接

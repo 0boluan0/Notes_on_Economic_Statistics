@@ -24,7 +24,7 @@ status: complete
 
 本笔记严格依照 MIT OCW Spring 2015 Unit 3 的 block/video 顺序整理：Session 23 → Session 24 → Problem Set 9 → Midterm 3 → Session 25 → Session 26 → Session 27 → Problem Set 10。课程入口见 [MIT OCW 6.042J](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/)；本地总索引见 [[MIT_OCW_6.042J_Materials/index|MIT 6.042J materials index]]。
 <!-- bilingual-en:start -->
-This notebook is organized in the block/video order of MIT OCW Spring 2015 Unit 3: Session 23 → Session 24 → Problem Set 9 → Midterm 3 → Session 25 → Session 26 → Session 27 → Problem Set 10.  For the course entry see [MIT OCW 6.042J](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/); for the local total index see [[MIT_OCW_6.042J_Materials/index|MIT 6.042J materials index]].
+This notebook follows the block/video order of MIT OCW Spring 2015 Unit 3: Session 23 → Session 24 → Problem Set 9 → Midterm 3 → Session 25 → Session 26 → Session 27 → Problem Set 10. For the course page, see [MIT OCW 6.042J](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/); for the local index, see [[MIT_OCW_6.042J_Materials/index|MIT 6.042J materials index]].
 <!-- bilingual-en:end -->
 
 > [!info] 题解来源与严谨性
@@ -73,7 +73,7 @@ This notebook is organized in the block/video order of MIT OCW Spring 2015 Unit 
 
 **前置知识**：有限求和符号、极限、导数与定积分、归纳法、质心。首次正式使用 [[无穷级数与幂级数#数项级数与必要条件|级数]]、[[定积分与微积分基本定理#从黎曼和到定积分|积分]] 与 [[货币时间价值与贴现#年金、永续年金与增长永续年金|年金]]。
 <!-- bilingual-en:start -->
-**Prerequisites**: Finite Sum Symbol, Limits, Derivatives and Definite Integrals, Inductive Method, Centroid.  First live use of [[无穷级数与幂级数#数项级数与必要条件|series]], [[定积分与微积分基本定理#从黎曼和到定积分|Integral]], and [[货币时间价值与贴现#年金、永续年金与增长永续年金|Annuity]].
+**Prerequisites**: finite sums, limits, derivatives, definite integrals, induction, and centres of mass. This session gives the first formal use of [[无穷级数与幂级数#数项级数与必要条件|series]], [[定积分与微积分基本定理#从黎曼和到定积分|integration]], and [[货币时间价值与贴现#年金、永续年金与增长永续年金|annuities]].
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session23.pdf#page=1|Session 23 reading, pp. 1–24]]
@@ -81,13 +81,10 @@ This notebook is organized in the block/video order of MIT OCW Spring 2015 Unit 
 
 ### 3.1.1 Arithmetic Sums — 配对扰动
 <!-- bilingual-en:start -->
-*3.1.1 Arithmetic Sums — Pair Disturbance*
+*3.1.1 Arithmetic Sums — Pairing as a Perturbation*
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_Arithmetic.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/v6axtBS6IF8.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=v6axtBS6IF8)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_Arithmetic.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/v6axtBS6IF8.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=v6axtBS6IF8)
-<!-- bilingual-en:end -->
 
 设等差数列首项为 $a$、公差为 $d$、共有 $n$ 项：
 <!-- bilingual-en:start -->
@@ -129,18 +126,12 @@ This is not a formula to memorize; it is a **perturbation** argument: construct 
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.2_perturbation-by-young-gauss|3.1.2]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.2_perturbation-by-young-gauss|3.1.2]]
-<!-- bilingual-en:end -->
 
 > [!question] O23-01
 > 年幼的 Gauss 用什么扰动快速求从 89 开始、公差 13 的 30 个整数之和？
 > <!-- bilingual-en:start -->
 > What rearrangement does young Gauss use to sum quickly the 30-term arithmetic progression with first term 89 and common difference 13?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 
 > [!success]- 官方答案与反馈
 > 把和式与其逆序形式相加，使对应项的和相同。官方材料写成 $30(89+479)$ 后再除以 $2$；其要点是“正序 + 逆序”，而不是先调用现成闭式。注意：若严格按“首项 89、公差 13、共 30 项”，末项应为 $89+29\cdot13=466$；官方题面中的 479 与这三个数据存在一项偏差。本笔记保留官方答案，同时把这个边界不一致明确指出。
@@ -150,13 +141,10 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 
 ### 3.1.3 Geometric Sums — 移位相减
 <!-- bilingual-en:start -->
-*3.1.3 Geometric Sums—Shift Subtraction*
+*3.1.3 Geometric Sums — Shift and Subtract*
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_GeometricSum.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/ZDQk45NQbEo.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=ZDQk45NQbEo)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_GeometricSum.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/ZDQk45NQbEo.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=ZDQk45NQbEo)
-<!-- bilingual-en:end -->
 
 #### 有限几何和
 <!-- bilingual-en:start -->
@@ -183,7 +171,7 @@ $$
 
 相减得到 $(1-x)S_n=1-x^{n+1}$。因此，当 $x\ne1$ 时，
 <!-- bilingual-en:start -->
-Subtract to get $(1-x)S_n=1-x^{n+1}$.  So, when $x\ne1$,
+Subtracting gives $(1-x)S_n=1-x^{n+1}$. Thus, when $x\ne1$,
 <!-- bilingual-en:end -->
 
 $$
@@ -192,7 +180,7 @@ $$
 
 当 $x=1$ 时不能除以 $1-x$，必须回到原定义：$S_n=n+1$。这正是公式的适用边界。
 <!-- bilingual-en:start -->
-Cannot divide by $1-x$ when $x=1$, must return to the original definition: $S_n=n+1$.  This is the boundary of the formula.
+When $x=1$, division by $1-x$ is invalid, so return to the definition: $S_n=n+1$. This is precisely the exceptional case excluded by the closed form.
 <!-- bilingual-en:end -->
 
 #### 无限几何级数及其必要条件
@@ -202,7 +190,7 @@ Cannot divide by $1-x$ when $x=1$, must return to the original definition: $S_n=
 
 所谓无限和，是部分和的极限：
 <!-- bilingual-en:start -->
-The so-called infinite sum is the limit of the partial sum:
+An infinite sum is defined as the limit of its partial sums:
 <!-- bilingual-en:end -->
 
 $$
@@ -225,7 +213,7 @@ If $|x|\ge1$, the term $x^i$ does not tend to $0$ (for $x=-1$ it oscillates). Ev
 
 #### 对几何和求导：带权和
 <!-- bilingual-en:start -->
-*Deriving for Geometric Sums: Weighted Sums*
+*Differentiating a Geometric Sum: Weighted Sums*
 <!-- bilingual-en:end -->
 
 有限多项式可逐项求导：
@@ -250,7 +238,7 @@ $$
 
 再乘 $x$：
 <!-- bilingual-en:start -->
-Multiply $x$:
+Multiplying by $x$ gives:
 <!-- bilingual-en:end -->
 
 $$
@@ -260,7 +248,7 @@ $$
 
 当 $|x|<1$，$n|x|^n\to0$，从而
 <!-- bilingual-en:start -->
-When $|x|<1$ $n|x|^n\to0$,
+When $|x|<1$, we have $n|x|^n\to0$, and therefore
 <!-- bilingual-en:end -->
 
 $$
@@ -273,13 +261,10 @@ $$
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.4_annuities|3.1.4]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.4_annuities|3.1.4]]
-<!-- bilingual-en:end -->
 
 一笔在第 $i$ 年末收到的 $m$ 元，若年利率为 $p$，今天的现值是 $m/(1+p)^i$。从一年后开始、永久每年支付 $m$ 的永续年金现值为
 <!-- bilingual-en:start -->
-A sum of $m$ received at the end of $i$, with an annual interest rate of $p$, is now $m/(1+p)^i$.  The present value of perpetuity for permanent annual payments of $m$, commencing after one year
+A payment of $m$ received at the end of year $i$ has present value $m/(1+p)^i$ when the annual interest rate is $p$. A perpetuity that pays $m$ once a year, beginning one year from today, therefore has present value
 <!-- bilingual-en:end -->
 
 $$
@@ -290,22 +275,19 @@ $$
 
 若第一次支付就在今天，则还要加 $m$，现值为 $m(1+p)/p$。时间点差一年，答案便差一个 $m$，这是金融题最常见的错误源。
 <!-- bilingual-en:start -->
-If the first payment is today, then add $m$, the present value is $m(1+p)/p$.  By a year, the answer is a $m$, the most common source of error for financial questions.
+If the first payment is made today, add $m$, giving a present value of $m(1+p)/p$. Shifting the first payment by one year changes the answer by exactly $m$; this timing issue is a common source of errors in finance problems.
 <!-- bilingual-en:end -->
 
 > [!question] O23-02
 > 年收益率恒为 $4\%$，从一年后起每年永久支付 $10{,}000$ 美元，今天应投入多少？
 > <!-- bilingual-en:start -->
-> With an annual rate of return of $4\%$ and a permanent payment of $10{,}000$ dollars a year from a year later, how much should I invest today?
+> If the annual return is fixed at $4\%$ and the perpetuity pays $10{,}000$ dollars each year beginning one year from now, how much must be invested today?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 
 > [!success]- 官方答案与反馈
 > $V=10{,}000/0.04=\boxed{250{,}000}$。等价直觉：$250{,}000$ 每年的 $4\%$ 利息恰为 $10{,}000$，不动本金即可永久支付。
 > <!-- bilingual-en:start -->
-> $V=10{,}000/0.04=\boxed{250{,}000}$.  Equivalent Intuition: $250{,}000$'s annual interest rate of $4\%$ is exactly $10{,}000$, and the principal can be paid permanently without any change.
+> $V=10{,}000/0.04=\boxed{250{,}000}$. Equivalently, the annual interest on $250{,}000$ at $4\%$ is exactly $10{,}000$, so the payment can continue forever without drawing down the principal.
 > <!-- bilingual-en:end -->
 
 ### 3.1.5 Book Stacking — 调和数从质心出现
@@ -314,18 +296,15 @@ If the first payment is today, then add $m$, the present value is $m(1+p)/p$.  B
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_BookStacking.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/CdhuVhWTSMI.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=CdhuVhWTSMI)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_BookStacking.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/CdhuVhWTSMI.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=CdhuVhWTSMI)
-<!-- bilingual-en:end -->
 
 每本书长度归一化为 $1$、质量相同。要使最上方 $n$ 本书在下一本书边缘上恰好稳定，它们的共同质心必须落在该边缘正上方。
 <!-- bilingual-en:start -->
-Each book is normalized to be $1$ in length and of the same quality.  For the topmost $n$ book to be just right on the edge of the next one, their common center of mass must fall just above that edge.
+Each book has unit length and the same mass. For the top $n$ books to be just stable at the edge of the book beneath them, their common centre of mass must lie directly above that edge.
 <!-- bilingual-en:end -->
 
 设已有 $n$ 本书相对其支撑边缘的最大伸出量为 $B_n$。在下面加第 $n+1$ 本书并把上面 $n$ 本整体向右移动 $\Delta$。以新书中心为力矩原点：上面 $n$ 本的总质量为 $n$，其质心向右 $\Delta$；新书质量为 $1$，其中心距右边缘 $1/2$，向左的力臂是 $1/2-\Delta$。临界平衡要求
 <!-- bilingual-en:start -->
-Suppose there is already a $n$ book with a maximum protrusion of $B_n$ from its supporting edge.  Add the $n+1$ book underneath and move the $n$ book entirely to the right, $\Delta$.  Taking the center of the new book as the moment origin: the total mass of the $n$ book on the top is $n$, and its centroid is $\Delta$ to the right; the mass of the new book is $1$, the center is $1/2$ from the right edge, and the left arm of the force is $1/2-\Delta$.  critical equilibrium requirement
+Suppose the top $n$ books can overhang their supporting edge by at most $B_n$. Add book $n+1$ underneath and shift the block of $n$ books to the right by $\Delta$. Taking moments about the centre of the new book, the upper block has total mass $n$ and centre of mass $\Delta$ to the right, while the new book has mass $1$ and a leftward lever arm of $1/2-\Delta$. At the limiting equilibrium,
 <!-- bilingual-en:end -->
 
 $$
@@ -336,7 +315,7 @@ $$
 
 于是
 <!-- bilingual-en:start -->
-therefore
+Therefore,
 <!-- bilingual-en:end -->
 
 $$
@@ -345,7 +324,7 @@ $$
 
 迭代得
 <!-- bilingual-en:start -->
-iterative
+Iterating the recurrence gives
 <!-- bilingual-en:end -->
 
 $$
@@ -359,7 +338,7 @@ where [[组合计数原理#求和与渐近|harmonic number]] $H_n=\sum_{k=1}^{n}
 
 由于调和级数发散，理论上可以把书伸出任意远；但 $H_n$ 只像 $\ln n$ 增长，代价呈指数级。
 <!-- bilingual-en:start -->
-Because of the divergence of the harmonic series, the book can theoretically be extended any distance; but $H_n$ only grows like $\ln n$ at an exponential cost.
+Because the harmonic series diverges, the stack can in principle overhang by any prescribed distance. However, $H_n$ grows only like $\ln n$, so the number of books required grows exponentially with the desired overhang.
 <!-- bilingual-en:end -->
 
 ### 3.1.6 Harmonic Numbers — 官方在线题 O23-03
@@ -368,34 +347,25 @@ Because of the divergence of the harmonic series, the book can theoretically be 
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.6_harmonic-numbers|3.1.6]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.6_harmonic-numbers|3.1.6]]
-<!-- bilingual-en:end -->
 
 > [!question] O23-03
 > 在四个陈述中选真命题：调和数有简单和式定义；$H_n=\sum_{i=0}^n1/i$；$n$ 本书伸出量为 $H_n$；新增一本时 $\Delta=\frac{1/2}{n+1}$ 来自 $n\Delta=1(1/2-\Delta)$。
 > <!-- bilingual-en:start -->
-> Select the true proposition in four statements: harmonic numbers are simply and formally defined; $H_n=\sum_{i=0}^n1/i$; $n$ book protrusions are $H_n$; and when a new one is added, $\Delta=\frac{1/2}{n+1}$ is from $n\Delta=1(1/2-\Delta)$.
+> Select the true statements: harmonic numbers have a simple summation definition; $H_n=\sum_{i=0}^n1/i$; the overhang of $n$ books is $H_n$; and the increment $\Delta=\frac{1/2}{n+1}$ follows from $n\Delta=1(1/2-\Delta)$.
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 
 > [!success]- 官方答案与反馈
 > 第 1、4 项正确。定义从 $i=1$ 开始，$H_n=\sum_{i=1}^n1/i$；最大伸出量是 $H_n/2$，不是 $H_n$。
 > <!-- bilingual-en:start -->
-> Item 1 and 4 are correct.  Definitions begin with $i=1$, $H_n=\sum_{i=1}^n1/i$; maximum protrusion is $H_n/2$, not $H_n$.
+> Statements 1 and 4 are correct. The sum starts at $i=1$, so $H_n=\sum_{i=1}^n1/i$; the maximum overhang is $H_n/2$, not $H_n$.
 > <!-- bilingual-en:end -->
 
 ### 3.1.7 Integral Method — 用面积夹住离散和
 <!-- bilingual-en:start -->
-*3.1.7 Integral Method —Squeeze discrete and*
+*3.1.7 Integral Method — Bounding a Discrete Sum by Areas*
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_IntegralMeth.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/EegG5TPL29c.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=EegG5TPL29c)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_IntegralMeth.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/EegG5TPL29c.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=EegG5TPL29c)
-<!-- bilingual-en:end -->
 
 令 $f:\mathbb R^+\to\mathbb R^+$，
 <!-- bilingual-en:start -->
@@ -408,12 +378,12 @@ $$
 
 #### 单调递增情形的完整证明
 <!-- bilingual-en:start -->
-*Full proof of monotonically increasing case*
+*Full Proof for the Nondecreasing Case*
 <!-- bilingual-en:end -->
 
 若 $f$ 弱递增，则对每个整数 $i=1,\ldots,n-1$ 以及 $x\in[i,i+1]$，
 <!-- bilingual-en:start -->
-if $f$ is weak increment, $i=1,\ldots,n-1$ and $x\in[i,i+1]$ for each integer,
+If $f$ is nondecreasing, then for every integer $i=1,\ldots,n-1$ and every $x\in[i,i+1]$,
 <!-- bilingual-en:end -->
 
 $$
@@ -422,7 +392,7 @@ $$
 
 区间长度为 $1$，积分后得
 <!-- bilingual-en:start -->
-The interval length is $1$, the integral is
+Because the interval has length $1$, integration gives
 <!-- bilingual-en:end -->
 
 $$
@@ -431,7 +401,7 @@ $$
 
 对 $i=1$ 到 $n-1$ 求和：
 <!-- bilingual-en:start -->
-Sum $i=1$ to $n-1$:
+Summing from $i=1$ to $n-1$ gives
 <!-- bilingual-en:end -->
 
 $$
@@ -440,7 +410,7 @@ $$
 
 左式加 $f(n)$、右式加 $f(1)$ 并改写为 $S$：
 <!-- bilingual-en:start -->
-Left with $f(n)$, Right with $f(1)$ and rewritten as $S$:
+Add $f(n)$ to the left inequality and $f(1)$ to the right, then rewrite both sums in terms of $S$:
 <!-- bilingual-en:end -->
 
 $$
@@ -449,12 +419,12 @@ $$
 
 #### 单调递减情形的完整证明
 <!-- bilingual-en:start -->
-*Complete proof of monotonic decreasing case*
+*Complete proof for the nonincreasing case*
 <!-- bilingual-en:end -->
 
 若 $f$ 弱递减，不等号方向反转：对 $x\in[i,i+1]$，
 <!-- bilingual-en:start -->
-If $f$ is weakly decreasing, the direction of the unequal sign is reversed: for $x\in[i,i+1]$,
+If $f$ is nonincreasing, the inequalities reverse: for $x\in[i,i+1]$,
 <!-- bilingual-en:end -->
 
 $$
@@ -463,7 +433,7 @@ $$
 
 同样积分、求和得到
 <!-- bilingual-en:start -->
-Equal Integral, Sum
+Integrating and summing in the same way gives
 <!-- bilingual-en:end -->
 
 $$
@@ -472,7 +442,7 @@ $$
 
 即
 <!-- bilingual-en:start -->
-that is
+that is,
 <!-- bilingual-en:end -->
 
 $$
@@ -481,7 +451,7 @@ $$
 
 严格单调只会让相应不等号变严格，不改变界的表达式。条件“正值”保证可用上下界判断收敛；“单调”保证每个单位区间上的矩形方向一致。
 <!-- bilingual-en:start -->
-Strict monotonicity only makes the corresponding inequality strict, without changing the boundary expression.  The condition "positive value" guarantees convergence by upper and lower bounds, and "monotone" guarantees the rectangle direction in each unit interval is consistent.
+Strict monotonicity merely makes the corresponding inequalities strict; it does not change the form of the bounds. Positivity lets these bounds be used in convergence arguments, while monotonicity fixes which endpoint rectangle lies above or below the curve on every unit interval.
 <!-- bilingual-en:end -->
 
 #### 例：$\sum_{i=1}^{n}\sqrt i$
@@ -491,7 +461,7 @@ Strict monotonicity only makes the corresponding inequality strict, without chan
 
 $f(x)=\sqrt x$ 递增，且
 <!-- bilingual-en:start -->
-$f(x)=\sqrt x$ increments, and
+$f(x)=\sqrt x$ is increasing, and
 <!-- bilingual-en:end -->
 
 $$
@@ -500,7 +470,7 @@ $$
 
 所以
 <!-- bilingual-en:start -->
-therefore
+therefore,
 <!-- bilingual-en:end -->
 
 $$
@@ -511,17 +481,17 @@ $$
 
 主导项两边相同，故 $\sum_{i=1}^n\sqrt i\sim\frac23n^{3/2}$。
 <!-- bilingual-en:start -->
-$\sum_{i=1}^n\sqrt i\sim\frac23n^{3/2}$.
+The two bounds have the same leading term, so $\sum_{i=1}^n\sqrt i\sim\frac23n^{3/2}$.
 <!-- bilingual-en:end -->
 
 #### 调和数的界与发散
 <!-- bilingual-en:start -->
-*Boundary and Divergence of Harmonic Numbers*
+*Bounds and Divergence of the Harmonic Numbers*
 <!-- bilingual-en:end -->
 
 对递减函数 $f(x)=1/x$，直接应用定理得
 <!-- bilingual-en:start -->
-For the decreasing function $f(x)=1/x$, the theorem is directly applied to get
+Applying the theorem to the decreasing function $f(x)=1/x$ gives
 <!-- bilingual-en:end -->
 
 $$
@@ -530,7 +500,7 @@ $$
 
 把每个 $1/i$ 看成区间 $[i,i+1]$ 上 $1/x$ 的左端矩形，还可得到更常用的下界
 <!-- bilingual-en:start -->
-Each $1/i$ is treated as a rectangle at the left end of the $1/x$ on the interval $[i,i+1]$, and more commonly used lower bounds can also be obtained
+Viewing each $1/i$ as the left-endpoint rectangle for $1/x$ on $[i,i+1]$ also gives the more familiar lower bound
 <!-- bilingual-en:end -->
 
 $$
@@ -539,7 +509,7 @@ $$
 
 两边除以 $\ln n$ 均趋于 $1$，由夹逼定理
 <!-- bilingual-en:start -->
-The division of $\ln n$ between two sides tends to $1$, which is determined by the pinch theorem.
+After division by $\ln n$, both bounds tend to $1$; the squeeze theorem therefore gives
 <!-- bilingual-en:end -->
 
 $$
@@ -548,18 +518,15 @@ $$
 
 且下界 $\ln(n+1)\to\infty$，所以 [[无穷级数与幂级数#数项级数与必要条件|调和级数发散]]。
 <!-- bilingual-en:start -->
-and the lower bound is $\ln(n+1)\to\infty$, so [[无穷级数与幂级数#数项级数与必要条件|harmonic series divergence]].
+Moreover, the lower bound $\ln(n+1)\to\infty$, so the [[无穷级数与幂级数#数项级数与必要条件|harmonic series diverges]].
 <!-- bilingual-en:end -->
 
 ### 3.1.8 Integral Method Demystified — 官方在线题 O23-04 至 O23-11
 <!-- bilingual-en:start -->
-*3.1.8 Integral Method Demystified — official online questions O23-04 through O23-11*
+*3.1.8 Integral Method Demystified — Official Online Questions O23-04 through O23-11*
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.8_integral-method-demystified|3.1.8]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.8_integral-method-demystified|3.1.8]]
-<!-- bilingual-en:end -->
 
 | 编号 | 问题 | 官方答案 | 为什么 |
 |---|---|---|---|
@@ -572,31 +539,28 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 | O23-10 | $H_n$ 的下界 | $\ln(n+1)$ | 用 $[i,i+1]$ 面积求和 |
 | O23-11 | $H_n$ 的渐近等价 | $\ln n$ | 上下界之比都趋于 $1$ |
 <!-- bilingual-en:start -->
-|Number|Question|Official Answer|Why|
-|—|—|—|—|
-| O23-04 | Upper bound of $S$ when $f$ is weakly increasing | $I+f(n)$ | Right rectangle over curve |
-| O23-05 | Upper bound of $S$ when $f$ is weakly decreasing | $I+f(1)$ | Left rectangle over curve |
-| O23-06 | Lower Bound of $S$ for Weak Increment of $f$ | $I+f(1)$ | Rectangle Below Curve After Removing End Term |
-| O23-07 | Lower Bound of $S$ when $f$ is weakly decreasing | $I+f(n)$ | Rectangle under curve after first term is removed |
-| O23-08 | Strictly monotonous Whether to change the boundary expression | No | Change $\le$ to $<$ only |
-| O23-09 | Upper bound for $H_n$ | $1+\ln n$ | Decrementing |
-| O23-10 | Lower bound of $H_n$ | $\ln(n+1)$ | Sum by $[i,i+1]$ area |
-| O23-11 | Asymptotic equivalence of $H_n$ | $\ln n$ | ratio of upper to lower bounds tends to $1$ |
+| Number | Question | Official answer | Reason |
+|---|---|---|---|
+| O23-04 | Upper bound for $S$ when $f$ is nondecreasing | $I+f(n)$ | Right-endpoint rectangles lie above the curve |
+| O23-05 | Upper bound for $S$ when $f$ is nonincreasing | $I+f(1)$ | Left-endpoint rectangles lie above the curve |
+| O23-06 | Lower bound for $S$ when $f$ is nondecreasing | $I+f(1)$ | After the last term is removed, the rectangles lie below the curve |
+| O23-07 | Lower bound for $S$ when $f$ is nonincreasing | $I+f(n)$ | After the first term is removed, the rectangles lie below the curve |
+| O23-08 | Does strict monotonicity change the form of the bounds? | No | It changes only $\le$ to $<$ |
+| O23-09 | Upper bound for $H_n$ | $1+\ln n$ | Apply the decreasing case |
+| O23-10 | Lower bound for $H_n$ | $\ln(n+1)$ | Sum the areas over $[i,i+1]$ |
+| O23-11 | Asymptotic equivalent of $H_n$ | $\ln n$ | Both normalized bounds tend to $1$ |
 <!-- bilingual-en:end -->
 
 ### 3.1.9 Stirling's Formula — 阶乘的规模
 <!-- bilingual-en:start -->
-*3.1.9 Stirling's Formula—Scale of the factorial*
+*3.1.9 Stirling's Formula — The Scale of a Factorial*
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_StirlingForm.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/lU_QT5GSuxI.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=lU_QT5GSuxI)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_StirlingForm.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/lU_QT5GSuxI.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=lU_QT5GSuxI)
-<!-- bilingual-en:end -->
 
 乘积先取对数：
 <!-- bilingual-en:start -->
-Product first logarithm:
+Take logarithms to turn the product into a sum:
 <!-- bilingual-en:end -->
 
 $$
@@ -605,7 +569,7 @@ $$
 
 特别地，$\ln(n!)=\sum_{i=1}^n\ln i$。积分法先给出粗界
 <!-- bilingual-en:start -->
-In particular, $\ln(n!)=\sum_{i=1}^n\ln i$.  The coarse bound is given by the integral method
+In particular, $\ln(n!)=\sum_{i=1}^n\ln i$. The integral method first gives the coarse bounds
 <!-- bilingual-en:end -->
 
 $$
@@ -614,7 +578,7 @@ $$
 
 指数化后：
 <!-- bilingual-en:start -->
-Indexed:
+Exponentiating gives:
 <!-- bilingual-en:end -->
 
 $$
@@ -672,7 +636,7 @@ converges to $\sqrt{2\pi}$.
 
 **步骤 1：证明 $a_n$ 有有限正极限。** 计算相邻项对数差：
 <!-- bilingual-en:start -->
-**Step 1: Prove that $a_n$ has a finite positive limit.**Calculate the logarithmic difference between adjacent terms:
+**Step 1: Prove that $a_n$ has a finite positive limit.** Calculate the logarithmic difference between consecutive terms:
 <!-- bilingual-en:end -->
 
 $$
@@ -760,18 +724,12 @@ Comparing this with $W_n\to\pi/2$ gives $C^2/4=\pi/2$, hence $C=\sqrt{2\pi}$. Th
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.10_applying-stirling-s-formula|3.1.10]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.10_applying-stirling-s-formula|3.1.10]]
-<!-- bilingual-en:end -->
 
 > [!question] O23-12
 > 化简 $\dfrac{(2n)!}{2^{2n}(n!)^2}$ 的渐近等价式。
 > <!-- bilingual-en:start -->
-> The asymptotic equivalence of $\dfrac{(2n)!}{2^{2n}(n!)^2}$ is simplified.
+> Find a simplified asymptotic equivalent of $\dfrac{(2n)!}{2^{2n}(n!)^2}$.
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 
 > [!success]- 官方答案与逐步化简
 > $$
@@ -786,7 +744,7 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 > $$
 > 每一项的指数因子全部消掉，只剩平方根尺度。
 > <!-- bilingual-en:start -->
-> The exponential factor of each item is eliminated completely, and only the square root scale is left.
+> All exponential factors cancel, leaving only the square-root scale.
 > <!-- bilingual-en:end -->
 
 ### 3.1.11 Convergence of Geometric Series — 官方在线题 O23-13
@@ -795,38 +753,29 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.11_convergence-of-geometric-series|3.1.11]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.11_convergence-of-geometric-series|3.1.11]]
-<!-- bilingual-en:end -->
 
 > [!question] O23-13
 > $r\in\{0,-0.5,0.5,1\}$ 时，哪个公比使几何级数不收敛？
 > <!-- bilingual-en:start -->
 > For $r\in\{0,-0.5,0.5,1\}$, which common ratio makes the geometric series diverge?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 
 > [!success]- 官方答案与反馈
 > $\boxed{r=1}$；几何级数收敛当且仅当 $|r|<1$。
 > <!-- bilingual-en:start -->
-> $\boxed{r=1}$;The geometric series converges if and only if $|r|<1$.
+> $\boxed{r=1}$. A geometric series converges if and only if $|r|<1$.
 > <!-- bilingual-en:end -->
 
 ### 3.1.12 Summation — 官方在线题 O23-14、O23-15
 <!-- bilingual-en:start -->
-*3.1.12 Summation—official online questions O23-14, O23-15*
+*3.1.12 Summation — Official Online Questions O23-14 and O23-15*
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.12_summation|3.1.12]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.12_summation|3.1.12]]
-<!-- bilingual-en:end -->
 
 考察 $p$-级数 $\sum_{i=1}^{\infty}i^p$。对 $p\ne-1$，
 <!-- bilingual-en:start -->
-Examine the $p$-series $\sum_{i=1}^{\infty}i^p$.  For $p\ne-1$,
+Examine the $p$-series $\sum_{i=1}^{\infty}i^p$. For $p\ne-1$,
 <!-- bilingual-en:end -->
 
 $$
@@ -852,13 +801,10 @@ $$
 
 ### 3.1.13 Sum's Upper/Lower Bounds — 官方在线题 O23-16
 <!-- bilingual-en:start -->
-*3.1.13 Sum's Upper/Lower Bounds — official online O23-16*
+*3.1.13 Upper and Lower Bounds for a Sum — official online O23-16*
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.13_sum-s-upper-lower-bounds|3.1.13]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S23_3.1.13_sum-s-upper-lower-bounds|3.1.13]]
-<!-- bilingual-en:end -->
 
 令
 <!-- bilingual-en:start -->
@@ -896,11 +842,13 @@ $f$ is decreasing, so the difference between the bounds is $f(1)-f(57)=1/2-1/4=1
 4. **积分法必须看单调方向**：递增函数的右端矩形给上界，递减函数恰好相反。
 5. **$\sim$ 不能只比较对数**：$\ln(n!)\sim n\ln n$ 并不直接推出 $n!\sim n^n$；指数化会放大较小的加性误差。
 <!-- bilingual-en:start -->
-1.**Infinite sums are not formal algebras**: define partial sums before taking limits; $1/(1-r)$ cannot be wrapped when $|r|\ge1$.
-2.**Endpoint is out of place**: $\sum_{i=0}^{n}$ has a $n+1$ term; the highest term after derivation is $nx^{n-1}$.
-3.**Annuity time point**: The difference between the down payment today and the down payment one year later is one $m$.
-4.**Integral method must look at the monotonic direction**: the right rectangle of the increasing function gives the upper bound, the decreasing function is just the opposite.
-5.**$\sim$ cannot compare only logarithms**: $\ln(n!)\sim n\ln n$ does not directly deduce $n!\sim n^n$; exponentiation magnifies small additive errors.
+
+&nbsp;
+**1.** **An infinite sum is not merely formal algebra**: define the partial sums before taking a limit; the formula $1/(1-r)$ is invalid when $|r|\ge1$.<br>
+**2.** **Off-by-one endpoints**: $\sum_{i=0}^{n}$ has $n+1$ terms; after differentiation, its highest-degree term is $nx^{n-1}$.<br>
+**3.** **Timing of an annuity**: a first payment today versus one year from today changes the present value by exactly one payment $m$.<br>
+**4.** **The integral method depends on monotonicity**: right-endpoint rectangles give an upper bound for increasing functions, while the direction reverses for decreasing functions.<br>
+**5.** **$\sim$ cannot be inferred by comparing logarithms alone**: $\ln(n!)\sim n\ln n$ does not imply $n!\sim n^n$, because exponentiation magnifies smaller additive errors.<br>
 <!-- bilingual-en:end -->
 
 ### Session 23 自检
@@ -911,19 +859,19 @@ $f$ is decreasing, so the difference between the bounds is $f(1)-f(57)=1/2-1/4=1
 > [!question] 自检 23-1
 > 求 $\sum_{i=0}^{n}3\cdot2^i$，并说明何时能取 $n\to\infty$。
 > <!-- bilingual-en:start -->
-> Request $\sum_{i=0}^{n}3\cdot2^i$ and specify when $n\to\infty$ is available.
+> Evaluate $\sum_{i=0}^{n}3\cdot2^i$, and state when the limit $n\to\infty$ may be taken.
 > <!-- bilingual-en:end -->
 
 > [!answer]- 答案
 > 有限和为 $3(2^{n+1}-1)$。公比 $2$ 的绝对值不小于 $1$，故无限级数发散。
 > <!-- bilingual-en:start -->
-> Limited sum is $3(2^{n+1}-1)$.  The absolute value of the common ratio $2$ is not less than $1$, so the infinite series is divergent.
+> The finite sum is $3(2^{n+1}-1)$. Since the common ratio has absolute value $2\ge1$, the corresponding infinite series diverges.
 > <!-- bilingual-en:end -->
 
 > [!question] 自检 23-2
 > 用积分法给 $\sum_{i=1}^{n}i^2$ 一个足以证明 $\Theta(n^3)$ 的上下界。
 > <!-- bilingual-en:start -->
-> The $\sum_{i=1}^{n}i^2$ is given an upper bound and a lower bound sufficient to prove the $\Theta(n^3)$ by the integral method.
+> Use the integral method to bound $\sum_{i=1}^{n}i^2$ tightly enough to prove that it is $\Theta(n^3)$.
 > <!-- bilingual-en:end -->
 
 > [!answer]- 答案
@@ -933,31 +881,27 @@ $f$ is decreasing, so the difference between the bounds is $f(1)-f(57)=1/2-1/4=1
 > $$
 > 两边均为 $\Theta(n^3)$。
 > <!-- bilingual-en:start -->
-> $f(x)=x^2$ increments, $I=(n^3-1)/3$, so
-> Both sides are $\Theta(n^3)$.
+> The function $f(x)=x^2$ is increasing and $I=(n^3-1)/3$, so the displayed bounds follow. Both bounds are $\Theta(n^3)$.
 > <!-- bilingual-en:end -->
 
 > [!question] 自检 23-3
 > 为什么 $H_n$ 发散却增长得非常慢？
 > <!-- bilingual-en:start -->
-> Why is $H_n$ diverging and growing very slowly?
+> Why does $H_n$ diverge even though it grows very slowly?
 > <!-- bilingual-en:end -->
 
 > [!answer]- 答案
 > 因为 $\ln(n+1)\le H_n\le1+\ln n$。下界无界保证发散，但要让 $H_n$ 增加固定量 $c$，$n$ 大约要乘以 $e^c$。
 > <!-- bilingual-en:start -->
-> Because of $\ln(n+1)\le H_n\le1+\ln n$.  The lower bound guarantees divergence, but to increase $H_n$ by a fixed amount of $c$, $n$ is approximately multiplied by $e^c$.
+> Because $\ln(n+1)\le H_n\le1+\ln n$. The unbounded lower bound proves divergence, but increasing $H_n$ by a fixed amount $c$ requires multiplying $n$ by roughly $e^c$.
 > <!-- bilingual-en:end -->
 
 ### Classroom Problems 23 — 5 题完整独立题解
 <!-- bilingual-en:start -->
-*Classroom Problems 23 — 5 Complete Independent Questions*
+*Classroom Problems 23 — complete independent solutions to five problems*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp23.pdf#page=1|cp23 pp. 1–3]]
-<!-- bilingual-en:start -->
-Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp23.pdf#page=1|cp23 pp. 1–3]]
-<!-- bilingual-en:end -->
 
 > [!example]- C23-1 酒与水反复交换
 > **已知**：两个杯子各一品脱，第一杯水、第二杯酒。每轮从第一杯倒 $1/3$ 品脱到第二杯，搅匀，再倒 $1/3$ 品脱回第一杯。
@@ -978,12 +922,10 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > $$
 > 总酒量恒为 $1$，第二杯酒量为 $(3/4)^n$。所以 $n\to\infty$ 时第一杯酒趋于 $1$ 品脱、第二杯趋于 $0$。这看似反直觉，但流程有方向性：每轮都先从第一杯取样、再从更大体积的第二杯只取回四分之一。
 > <!-- bilingual-en:start -->
-> **Known**: Two cups each pint, the first glass of water, the second glass of wine.  In each round, pint $1/3$ from that first cup to the second cup, stir well, then pint $1/3$ back to the first cup.
-> **Target**: $n$ first round and limit to two glasses.
-> Make $x_n$ the first drink after round $n$, $x_0=0$.  At the start of the round, the first glass had a total volume of $1$, of which the wine was $x_n$.  After the first pour, the first glass was $2x_n/3$, and the second glass was $4/3$ in volume and $1+x_n/3$ in volume.  Pour back $1/3$ pints is equivalent to pour back the second cup of $1/4$, bring back the wine
-> therefore
-> The fixed point is $1$.  $y_n=1-x_n$, $y_{n+1}=\frac34y_n$, $y_0=1$, and
-> The total volume of wine was $1$, and the second volume was $(3/4)^n$.  So at $n\to\infty$, the first glass tends to be $1$ pints and the second to $0$.  It may seem counter-intuitive, but the process is directional: each round takes a sample from the first cup and then only a quarter from the second, larger one.
+> **Given:** Two cups each hold one pint. The first initially contains water and the second wine. In each round, pour $1/3$ pint from the first cup into the second, mix, and then pour $1/3$ pint back.
+> **Goal:** Find the amount of wine in the first cup after $n$ rounds and the limiting amounts in both cups.
+> Let $x_n$ be the amount of wine in the first cup after round $n$, with $x_0=0$. At the start of a round, the first cup contains $x_n$ pints of wine. The first pour leaves $2x_n/3$ there. The second cup then has volume $4/3$ and contains $1+x_n/3$ pints of wine. Pouring back $1/3$ pint transfers one quarter of the second cup, so the recurrence is $x_{n+1}=\frac34x_n+\frac14$.
+> Its fixed point is $1$. Setting $y_n=1-x_n$ gives $y_{n+1}=\frac34y_n$ and hence $x_n=1-(3/4)^n$. The total amount of wine remains one pint, so the second cup contains $(3/4)^n$ pints. Thus the first cup tends to one pint of wine and the second to none. The directional order of the two pours explains the apparently surprising limit.
 > <!-- bilingual-en:end -->
 
 > [!example]- C23-2 沙漠缓存与调和数
@@ -1016,9 +958,8 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > <!-- bilingual-en:start -->
 > **(a)** With only one gallon and a required return trip, the traveller can go at most half a day away, because the outward and return legs consume equal amounts.
 > **(b)** With two gallons, first establish a cache one quarter of a day away, then use the remaining gallon for a further half-day round trip. The total distance is $1/4+1/2=3/4$.
-> **(c) Recursive proof.** Suppose $n$ gallons permit a round-trip distance $D_n$. To move the base forward by $\delta$, the first $n-1$ journeys traverse the new segment in both directions, while the last traverses it only outward. Accounting for the water returned to the old base gives $n\delta=1(1/2-\delta)$, hence $\delta=1/(2n)$ and $D_n=D_{n-1}+1/(2n)$. Therefore $D_n=H_n/2$. Since $H_n\to\infty$, every finite distance is eventually reachable.
-> **(d)** Reaching distance $10$ requires $H_n/2\gtrsim10$, so $\ln n\gtrsim20$ and $n\gtrsim e^{20}\approx4.85\times10^8$. Even the required water-collection trips exceed a million years.
-> A maximum of one gallon per day is taken from the oasis, and the number of water withdrawals alone exceeds $4.85\times10^8$ days, approximately $1.33\times10^6$ years, and indeed more than a million years.
+> **(c) Recursive proof.** Suppose a total of $n$ gallons permits a round-trip distance $D_n$. To move the base forward by $\delta$, the first $n-1$ loads cross the new segment in both directions and the last crosses it only outward. The water accumulated at the new base is $n-(2n-1)\delta$. This must equal the $n-1$ gallons needed for the recursive trip plus the $\delta$ gallons needed to return to the old base, so $\delta=1/(2n)$. Hence $D_n=D_{n-1}+1/(2n)$ and $D_n=H_n/2$. Since $H_n\to\infty$, every fixed distance is eventually reachable.
+> **(d)** Reaching distance $10$ requires $H_n/2\gtrsim10$, so $\ln n\gtrsim20$ and $n\gtrsim e^{20}\approx4.85\times10^8$. At most one gallon can be collected from the oasis per day, so the collection trips alone require about $1.33\times10^6$ years—indeed more than a million years.
 > <!-- bilingual-en:end -->
 
 > [!example]- C23-3 递减函数积分界证明
@@ -1031,8 +972,7 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > \boxed{I+f(n)\le S\le I+f(1)}.
 > $$
 > <!-- bilingual-en:start -->
-> For $x\in[i,i+1]$, $f(i+1)\le f(x)\le f(i)$ is given in decreasing order.  Integral and sum from $i=1$ to $n-1$:
-> Let $S=\sum_{i=1}^nf(i)$, $I=\int_1^nf(x)dx$, both sides patch the missing items
+> For $x\in[i,i+1]$, monotonic decrease gives $f(i+1)\le f(x)\le f(i)$. Integrating and summing from $i=1$ to $n-1$ yields the displayed inequalities. With $S=\sum_{i=1}^nf(i)$ and $I=\int_1^nf(x)\,dx$, restoring the omitted endpoint terms gives $I+f(n)\le S\le I+f(1)$.
 > <!-- bilingual-en:end -->
 
 > [!example]- C23-4 Sammy the Shark 复利债务
@@ -1057,13 +997,11 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > \approx\boxed{749.35\text{ 美元}}.
 > $$
 > <!-- bilingual-en:start -->
-> $D_0=m$ $D_d$ $d$ day end debt.  $f$ and then the interest factor $p$:
-> **(a)**$D_1=p(m+f)$.
-> **(b)**$D_2=p[p(m+f)+f]=p^2m+fp(p+1)$.
-> **(c)**Expansion Recursion:
-> If $p\ne1$,
-> If $p=1$, $D_d=m+df$.
-> **(d)**$m=10,f=0.1,p=1.01,d=365$:
+> Let $D_d$ be the debt at the end of day $d$, with $D_0=m$. Each day the service fee $f$ is added first, and the result is then multiplied by the interest factor $p$: $D_d=p(D_{d-1}+f)$.
+> **(a)** $D_1=p(m+f)$.
+> **(b)** $D_2=p[p(m+f)+f]=p^2m+fp(p+1)$.
+> **(c)** Expanding the recurrence gives $D_d=p^dm+fp(1+p+\cdots+p^{d-1})$. Thus, for $p\ne1$, $D_d=p^dm+fp(p^d-1)/(p-1)$; for $p=1$, $D_d=m+df$.
+> **(d)** With $m=10,f=0.1,p=1.01,d=365$, the displayed formula gives approximately $\boxed{749.35\text{ dollars}}$.
 > <!-- bilingual-en:end -->
 
 > [!example]- C23-5 带权几何和
@@ -1110,12 +1048,12 @@ $$
 
 **学习问题**：什么时候两个函数“增长一样快”？$O$、$o$、$\Theta$ 与 $\sim$ 各自表达什么逻辑关系？怎样写出带有统一常数与阈值的证明，而不是凭最高次项猜答案？
 <!-- bilingual-en:start -->
-**Learning problem**: When do two functions "grow as fast"?  What is the logical relationship between $O$, $o$, $\Theta$ and $\sim$?  How to write a proof with a uniform constant and a threshold instead of guessing the answer by the highest order term?
+**Learning questions**: When do two functions have the same growth rate? What logical relationship does each of $O$, $o$, $\Theta$, and $\sim$ express? How can one prove such a claim with a single constant and threshold instead of guessing from the leading term?
 <!-- bilingual-en:end -->
 
 **前置知识**：函数极限、绝对值、关系的自反/对称/传递/反对称性质。首次正式使用 [[渐近记号与算法复杂度#O、Omega 与 Theta|渐近记号与 Θ 同阶关系]]。
 <!-- bilingual-en:start -->
-**Prerequisite knowledge**: functional limits, absolute values, reflexive/symmetric/transitive/antisymmetric properties of relations.  Getting Started with [[渐近记号与算法复杂度#O、Omega 与 Theta|Asymptotic Sign and Θ Same Order Relation]].
+**Prerequisites**: limits of functions, absolute values, and the reflexive, symmetric, transitive, and antisymmetric properties of relations. This session gives the first formal use of [[渐近记号与算法复杂度#O、Omega 与 Theta|asymptotic notation and the Θ relation]].
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session24.pdf#page=1|Session 24 reading, pp. 1–8]]
@@ -1127,13 +1065,10 @@ $$
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymNotation.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/CWkh5kb4TGc.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=CWkh5kb4TGc)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymNotation.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/CWkh5kb4TGc.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=CWkh5kb4TGc)
-<!-- bilingual-en:end -->
 
 以下默认 $f,g$ 在充分大的 $x$ 上有定义，且 $g(x)>0$；若 $f$ 可取负值，Big O 定义使用 $|f|$。
 <!-- bilingual-en:start -->
-The following default $f,g$ is defined on a sufficiently large $x$, and $g(x)>0$; if $f$ can take a negative value, the Big O definition uses $|f|$.
+Unless stated otherwise, assume that $f$ and $g$ are defined for all sufficiently large $x$ and that $g(x)>0$. If $f$ may be negative, the Big O definition uses $|f(x)|$.
 <!-- bilingual-en:end -->
 
 #### 渐近等价 $f\sim g$
@@ -1147,12 +1082,12 @@ $$
 
 它说相对误差趋于零：$f=g(1+o(1))$。例如 $n^2+n\sim n^2$，但 $2n^2\not\sim n^2$。
 <!-- bilingual-en:start -->
-It says that the relative error tends to zero: $f=g(1+o(1))$.  For example, $n^2+n\sim n^2$, but $2n^2\not\sim n^2$.
+It says that the relative error tends to zero: $f=g(1+o(1))$. For example, $n^2+n\sim n^2$, but $2n^2\not\sim n^2$.
 <!-- bilingual-en:end -->
 
 #### 严格低阶 $f=o(g)$
 <!-- bilingual-en:start -->
-*strict low-order $f=o(g)$*
+*Strictly lower order: $f=o(g)$*
 <!-- bilingual-en:end -->
 
 $$
@@ -1161,12 +1096,12 @@ $$
 
 它说无论给定多小的 $\varepsilon>0$，总存在 $x_0$，使 $x\ge x_0$ 时 $|f(x)|\le\varepsilon g(x)$。
 <!-- bilingual-en:start -->
-It says that no matter how small a $\varepsilon>0$ is given, there is always a $x_0$ such that $x\ge x_0$ is $|f(x)|\le\varepsilon g(x)$.
+Equivalently, for every $\varepsilon>0$ there exists $x_0$ such that $|f(x)|\le\varepsilon g(x)$ whenever $x\ge x_0$.
 <!-- bilingual-en:end -->
 
 #### 上界关系 $f=O(g)$
 <!-- bilingual-en:start -->
-*upper bound relation $f=O(g)$*
+*Upper-Bound Relation $f=O(g)$*
 <!-- bilingual-en:end -->
 
 $$
@@ -1177,7 +1112,7 @@ $$
 
 若商不一定有普通极限，也可写成
 <!-- bilingual-en:start -->
-If quotient doesn't have to have a normal limit, it can also be written as
+Even when the quotient has no ordinary limit, the condition can be expressed as
 <!-- bilingual-en:end -->
 
 $$
@@ -1186,12 +1121,12 @@ $$
 
 Big O 只给**渐近上界**；它允许常数倍差异，也允许有界振荡。
 <!-- bilingual-en:start -->
-Big O only gives**an asymptotic upper bound of**; it allows constant-times difference and bounded oscillations.
+Big O gives only an **asymptotic upper bound**; it allows constant-factor differences and bounded oscillation.
 <!-- bilingual-en:end -->
 
 #### 同阶 $f=\Theta(g)$ 与下界 $\Omega$
 <!-- bilingual-en:start -->
-*Same Order $f=\Theta(g)$ and Lower Bound $\Omega$*
+*Same order $f=\Theta(g)$ and lower bound $\Omega$*
 <!-- bilingual-en:end -->
 
 $$
@@ -1200,7 +1135,7 @@ $$
 
 等价地，存在 $c_1,c_2>0$ 与 $x_0$，使充分大时
 <!-- bilingual-en:start -->
-Equivalently, there are $c_1,c_2>0$ and $x_0$, which make the time
+Equivalently, there exist $c_1,c_2>0$ and $x_0$ such that, for all sufficiently large $x$,
 <!-- bilingual-en:end -->
 
 $$
@@ -1219,27 +1154,24 @@ $f=\Omega(g)$ is defined as $g=O(f)$; $f=\omega(g)$ is defined as $g=o(f)$.
 > $$
 > 但逆命题均不成立：$2g=\Theta(g)$ 却不与 $g$ 渐近等价；$1=O(n)$ 却不是 $\Theta(n)$。
 > <!-- bilingual-en:start -->
-> But neither of the converse propositions holds: $2g=\Theta(g)$ is not asymptotically equivalent to $g$; $1=O(n)$ is not $\Theta(n)$.
+> But neither converse holds: $2g=\Theta(g)$ is not asymptotically equivalent to $g$; $1=O(n)$ is not $\Theta(n)$.
 > <!-- bilingual-en:end -->
 
 ### 3.2.2 Asymptotics as Relations — 官方在线题 O24-01、O24-02
 <!-- bilingual-en:start -->
-*3.2.2 Asymptotics as Relations—official online questions O24-01, O24-02*
+*3.2.2 Asymptotics as Relations — Official Online Questions O24-01 and O24-02*
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S24_3.2.2_asymptotics-as-relations|3.2.2]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S24_3.2.2_asymptotics-as-relations|3.2.2]]
-<!-- bilingual-en:end -->
 
 > [!success]- 官方答案与反馈
 > **O24-01（哪些关系对称）**：$\sim$ 与 $\Theta$。
 > **O24-02（哪些关系表示同一增长阶）**：$\sim$ 与 $\Theta$。
 > $f=o(g)$ 与 $f=O(g)$ 一般都不对称；$\sim$ 比 $\Theta$ 更强，因为它要求比值趋于 $1$。
 > <!-- bilingual-en:start -->
-> **O24-01 (which relationships are symmetrical)**: $\sim$ and $\Theta$.
-> **O24-02 (which relationships represent the same growth order)**: $\sim$ and $\Theta$.
-> $f=o(g)$ and $f=O(g)$ are generally asymmetric; $\sim$ is stronger than $\Theta$ because it requires the ratio to be $1$.
+> **O24-01 (which relations are symmetric?)**: $\sim$ and $\Theta$.
+> **O24-02 (which relations express the same order of growth?)**: $\sim$ and $\Theta$.
+> The relations $f=o(g)$ and $f=O(g)$ are generally not symmetric. The relation $\sim$ is stronger than $\Theta$ because it requires the ratio to tend to $1$.
 > <!-- bilingual-en:end -->
 
 ### 3.2.3 Asymptotic Properties — 关系结构与增长层级
@@ -1248,13 +1180,10 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymProperti.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/HeyEK0TWiBw.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=HeyEK0TWiBw)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymProperti.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/HeyEK0TWiBw.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=HeyEK0TWiBw)
-<!-- bilingual-en:end -->
 
 #### 关系性质
 <!-- bilingual-en:start -->
-*relation property*
+*Properties of the relations*
 <!-- bilingual-en:end -->
 
 - $\sim$ 是等价关系：自反来自 $f/f=1$；对称来自倒数；传递来自 $(f/g)(g/h)=f/h$。
@@ -1263,16 +1192,16 @@ Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymPropert
 - $O$ 是预序：自反、传递，但不反对称。不同函数 $f=n$ 与 $g=2n$ 互为 Big O。
 - 关系“$f=O(g)$ 且 $g\ne O(f)$”是严格偏序，表达“严格不快于”。它比 $o$ 弱，因为商可能在 $0$ 与正常数量级之间振荡。
 <!-- bilingual-en:start -->
-- $\sim$ is the equivalence relation: reflexive from $f/f=1$; symmetric from reciprocal; pass from $(f/g)(g/h)=f/h$.
-- $\Theta$ is the equivalence relation: reflexive apparent; definition itself symmetric; transitivity of Big O to pass.
-- $o$ is a strictly partial order relation: non-reflexive and transitive.  If $f=o(g)$, it is not possible to $g=O(f)$ at the same time; otherwise, it is sufficient to $g\le C|f|$ and $|f|/g\to0$ conflicts with $1\le C|f|/g$.
-- $O$ is a preorder: reflexive, transitive, but not asymmetric.  The different functions $f=n$ and $g=2n$ are Big O each other.
-- The relation "$f=O(g)$ and $g\ne O(f)$" is strictly partial order and expresses "strictly not faster than".  It is weaker than $o$ because quotient can oscillate between $0$ and normal orders of magnitude.
+- $\sim$ is an equivalence relation: reflexivity follows from $f/f=1$, symmetry from taking reciprocals, and transitivity from $(f/g)(g/h)=f/h$.
+- $\Theta$ is also an equivalence relation: reflexivity is immediate, the definition is symmetric, and transitivity follows from the transitivity of Big O.
+- $o$ behaves like a strict partial order: it is irreflexive and transitive. If $f=o(g)$, then $g=O(f)$ is impossible; otherwise $g\le C|f|$ eventually, contradicting $|f|/g\to0$.
+- $O$ is a preorder: it is reflexive and transitive but not antisymmetric. For example, the distinct functions $f(n)=n$ and $g(n)=2n$ are Big O of each other.
+- The relation "$f=O(g)$ and $g\ne O(f)$" is a strict partial order expressing that $f$ grows strictly no faster than $g$. It is weaker than $f=o(g)$ because the quotient may oscillate between values near zero and values of ordinary size.
 <!-- bilingual-en:end -->
 
 #### 对数慢于任意正幂
 <!-- bilingual-en:start -->
-*Logarithm slower than any positive power*
+*Logarithms grow more slowly than every positive power*
 <!-- bilingual-en:end -->
 
 对任意 $\varepsilon>0$，令 $t=\ln x$，则
@@ -1296,17 +1225,17 @@ $$
 
 故 $\ln x=o(x^\varepsilon)$，不需要把“对数很慢”当作直觉口号。
 <!-- bilingual-en:start -->
-So, $\ln x=o(x^\varepsilon)$, you don't have to think of "logarithmically slow" as an intuitive slogan.
+Thus $\ln x=o(x^\varepsilon)$; “logarithms grow slowly” is a proved comparison, not merely an intuition.
 <!-- bilingual-en:end -->
 
 #### 指数快于任意固定多项式
 <!-- bilingual-en:start -->
-*Exponentially faster than any fixed polynomial*
+*Exponentials grow faster than every fixed polynomial*
 <!-- bilingual-en:end -->
 
 设 $a>1$、$c\ge0$，考察 $u_n=n^c/a^n$：
 <!-- bilingual-en:start -->
-Set up $a>1$, $c\ge0$, inspect $u_n=n^c/a^n$:
+Let $a>1$ and $c\ge0$, and consider $u_n=n^c/a^n$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1315,7 +1244,7 @@ $$
 
 取 $q$ 满足 $1/a<q<1$，则充分大时 $u_{n+1}\le q u_n$，故尾部被收敛几何数列控制，$u_n\to0$。所以
 <!-- bilingual-en:start -->
-If $q$ satisfies $1/a<q<1$, then $u_{n+1}\le q u_n$ when it is sufficiently large, so the tail is controlled by the convergent geometric sequence, $u_n\to0$.  therefore
+Choose $q$ with $1/a<q<1$. For all sufficiently large $n$, $u_{n+1}\le q u_n$, so the tail is dominated by a convergent geometric sequence and $u_n\to0$. Therefore,
 <!-- bilingual-en:end -->
 
 $$
@@ -1324,7 +1253,7 @@ $$
 
 典型增长层级为
 <!-- bilingual-en:start -->
-Typical growth levels are
+A typical growth hierarchy is
 <!-- bilingual-en:end -->
 
 $$
@@ -1333,56 +1262,47 @@ $$
 
 其中 $\prec$ 表示左边是右边的 little o；幂指数的具体顺序需满足 $0<\varepsilon<c$。
 <!-- bilingual-en:start -->
-where $\prec$ denotes little o on the left and $0<\varepsilon<c$ on the right; the order of the power exponents must be specified.
+where $f\prec g$ means $f=o(g)$. The displayed ordering of powers assumes $0<\varepsilon<c$.
 <!-- bilingual-en:end -->
 
 ### 3.2.4 Little oh / Big Oh — 官方在线题 O24-03 至 O24-05
 <!-- bilingual-en:start -->
-*3.2.4 Little oh / Big Oh —official online questions O24-03 through O24-05*
+*3.2.4 Little oh / Big Oh — Official Online Questions O24-03 through O24-05*
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S24_3.2.4_little-oh-big-oh|3.2.4]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S24_3.2.4_little-oh-big-oh|3.2.4]]
-<!-- bilingual-en:end -->
 
 > [!success]- 官方答案与反馈
 > **O24-03**：以下四项为真：$f=o(g)\Rightarrow f=O(g)$；$f=o(g)\Rightarrow g\ne O(f)$；$f\sim g$ 时 $f=O(g)$；即使 $f\not\sim g$，只要 $f=o(g)$ 仍有 $f=O(g)$。`O ⇒ o` 为假。
 > **O24-04**：错误陈述是“对所有整数 $a,b$ 都有 $x^a=o(x^b)$”；正确条件是 $a<b$。其余核心事实是 $\log x=o(x^\varepsilon)$ 与任意固定幂 $x^c=o(a^x)$（$a>1$）。
 > **O24-05**：Big O 用 $\limsup$ 是为了容纳商没有普通极限但始终被常数控制的振荡情形；$\limsup$ 不是“更严格的普通极限”。
 > <!-- bilingual-en:start -->
-> **O24-03**: The following four items are true: $f=o(g)\Rightarrow f=O(g)$; $f=o(g)\Rightarrow g\ne O(f)$; $f=O(g)$ at $f\sim g$; and $f=O(g)$ even if $f\not\sim g$, as long as the $f=o(g)$ still has it.  `O ⇒ o` is fake.
-> **O24-04**: Error statement is "$x^a=o(x^b)$ for all integer $a,b$"; correct condition is $a<b$.  The remaining core facts are $\log x=o(x^\varepsilon)$ and any fixed power $x^c=o(a^x)$ ($a>1$).
-> **O24-05**:Big O uses $\limsup$ to accommodate oscillations in which the quotient has no ordinary limit but is always controlled by a constant; $\limsup$ is not a "tighter ordinary limit".
+> **O24-03**: All four listed implications are true: $f=o(g)\Rightarrow f=O(g)$; $f=o(g)\Rightarrow g\ne O(f)$; $f\sim g\Rightarrow f=O(g)$; and $f=o(g)$ can imply $f=O(g)$ even when $f\not\sim g$. The converse `O ⇒ o` is false.
+> **O24-04**: The false statement is "$x^a=o(x^b)$ for all integers $a,b$"; the correct condition is $a<b$. The other key facts are $\log x=o(x^\varepsilon)$ and $x^c=o(a^x)$ for every fixed $c$ when $a>1$.
+> **O24-05**: Big O uses $\limsup$ to allow bounded oscillation when the quotient has no ordinary limit. A limit superior is not simply a “stricter ordinary limit.”
 > <!-- bilingual-en:end -->
 
 ### 3.2.5 Theta — 官方在线题 O24-06、O24-07
 <!-- bilingual-en:start -->
-*3.2.5 Theta—official online questions O24-06, O24-07*
+*3.2.5 Theta — Official Online Questions O24-06 and O24-07*
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S24_3.2.5_theta|3.2.5]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S24_3.2.5_theta|3.2.5]]
-<!-- bilingual-en:end -->
 
 > [!success]- 官方答案与反馈
 > **O24-06（若 $f=\Theta(g)$，哪些必须真）**：$g=\Theta(f)$、$f=O(g)$、$g=O(f)$。
 > **O24-07（哪些可能真）**：除上述三项外，$f\sim g$ 也可能真；但 $f=o(g)$ 或 $g=o(f)$ 都不可能与互相 Big O 并存。
 > <!-- bilingual-en:start -->
-> **O24-06 (which must be true if $f=\Theta(g)$)**:$g=\Theta(f)$, $f=O(g)$, $g=O(f)$.
-> **O24-07**: Except for the three above, $f\sim g$ may be true; however, neither $f=o(g)$ nor $g=o(f)$ may coexist with Big O.
+> **O24-06 (what must be true if $f=\Theta(g)$?)**: $g=\Theta(f)$, $f=O(g)$, and $g=O(f)$.
+> **O24-07 (what may also be true?)**: In addition to those three statements, $f\sim g$ may hold. Neither $f=o(g)$ nor $g=o(f)$ can coexist with mutual Big O bounds.
 > <!-- bilingual-en:end -->
 
 ### 3.2.6 Asymptotic Blunders — 语法错往往对应逻辑错
 <!-- bilingual-en:start -->
-*3.2.6 Asymptotic Blunders—Syntax Errors Match Logical Errors*
+*3.2.6 Asymptotic Blunders — Syntactic Errors Often Reveal Logical Errors*
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymBlunders.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/Y9Blo_G-Mvg.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=Y9Blo_G-Mvg)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymBlunders.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/Y9Blo_G-Mvg.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=Y9Blo_G-Mvg)
-<!-- bilingual-en:end -->
 
 1. **把关系写成数量**：$O(n^2)$ 不是一个可比较大小的数，而是一类函数或二元关系的右侧。
 2. **说“至少 $O(n^2)$”**：Big O 是上界。“$f$ 至少像 $n^2$”应写 $n^2=O(f)$ 或 $f=\Omega(n^2)$。
@@ -1390,46 +1310,42 @@ Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_AsymBlunder
 4. **随意对渐近关系做非线性运算**：$f\sim g$ 不保证 $3^f=\Theta(3^g)$。例：$f=n+\sqrt n$、$g=n$，虽 $f/g\to1$，但 $3^f/3^g=3^{\sqrt n}\to\infty$。
 5. **忽略常数与交叉点**：渐近阶只描述充分大输入；实际系统中 $1000n$ 可能在很长区间内慢于 $n^2$，也可能快于带巨大常数的低阶算法。
 <!-- bilingual-en:start -->
-1.**Write the relation as a number**: $O(n^2)$ is not a comparable-sized number, but is the right-hand side of a class of functions or binary relations.
-2.**Say "at least $O(n^2)$"**: Big O is the upper bound.  '$f$ at least like $n^2$' should be written as $n^2=O(f)$ or $f=\Omega(n^2)$.
-3.**Consider the term-by-term constant as a uniform constant**: For fixed $i$, $i=O(1)$, but here the hidden constant depends on $i$.  The sum to $n$ cannot control all $i$ with the same constant, the actual $\sum_{i=1}^ni=\Theta(n^2)$.
-4.**Do non-linear operation on asymptotic relation at will**:$f\sim g$ does not guarantee $3^f=\Theta(3^g)$.  Examples: $f=n+\sqrt n$, $g=n$, although $f/g\to1$, but $3^f/3^g=3^{\sqrt n}\to\infty$.
-5.**Ignore constants and intersections**: The asymptotic order only describes sufficiently large inputs; in real systems, $1000n$ may be slower than $n^2$ in a very long range, or faster than lower-order algorithms with large constants.
+
+&nbsp;
+**1.** **Treating a relation as a number**: $O(n^2)$ is not a numerical quantity that can be compared by size; it denotes a class of functions, or the right-hand side of an asymptotic relation.<br>
+**2.** **Saying “at least $O(n^2)$”**: Big O is an upper bound. “$f$ grows at least as fast as $n^2$” should be written $n^2=O(f)$ or $f=\Omega(n^2)$.<br>
+**3.** **Mistaking pointwise constants for one uniform constant**: For fixed $i$, we may write $i=O(1)$, but the hidden constant depends on $i$. No single constant bounds every term up to $n$; in fact, $\sum_{i=1}^ni=\Theta(n^2)$.<br>
+**4.** **Applying nonlinear operations indiscriminately**: $f\sim g$ does not imply $3^f=\Theta(3^g)$. For $f=n+\sqrt n$ and $g=n$, the ratio $f/g\to1$, but $3^f/3^g=3^{\sqrt n}\to\infty$.<br>
+**5.** **Ignoring constants and crossover points**: Asymptotic order describes only sufficiently large inputs. In practice, $1000n$ may exceed $n^2$ over a long range, while a lower-order algorithm with a huge constant may still be slower.<br>
 <!-- bilingual-en:end -->
 
 ### 3.2.7 Asymptotics the Right Way — 官方在线题 O24-08 至 O24-10
 <!-- bilingual-en:start -->
-*3.2.7 Asymptotics the Right Way — official online questions O24-08 through O24-10*
+*3.2.7 Asymptotics the Right Way — Official Online Questions O24-08 through O24-10*
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S24_3.2.7_asymptotics-the-right-way|3.2.7]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S24_3.2.7_asymptotics-the-right-way|3.2.7]]
-<!-- bilingual-en:end -->
 
 > [!success]- 官方答案与反馈
 > **O24-08**：$O(\cdot)$、$o(\cdot)$、$\Theta(\cdot)$ 放在等号右侧，例如 $f=O(n^2)$。
 > **O24-09**：“$f$ 至少是 $O(n^2)$”四方面都错：$O(n^2)$ 不是数量；Big O 表示上界；它是关系；“至少 $n^2$”应写 $n^2=O(f)$。
 > **O24-10**：$\sum_{i=1}^ni=O(n)$ 错在逐项 $O(1)$ 没有统一常数；正确结果是 $\Theta(n^2)$，且 $O(1)$ 不能当作普通数字相加。
 > <!-- bilingual-en:start -->
-> **O24-08**:$O(\cdot)$, $o(\cdot)$, $\Theta(\cdot)$ to the right of the equal sign, for example, $f=O(n^2)$.
-> **O24-09**: '$f$ is at least $O(n^2)$' is all wrong: $O(n^2)$ is not a quantity; Big O represents an upper bound; it is a relation; 'at least $n^2$' should be written as $n^2=O(f)$.
-> The**O24-10**:$\sum_{i=1}^ni=O(n)$ error does not have a uniform constant in term-by-term $O(1)$; the correct result is $\Theta(n^2)$, and $O(1)$ cannot be added as an ordinary number.
+> **O24-08**: Put $O(\cdot)$, $o(\cdot)$, and $\Theta(\cdot)$ on the right-hand side of an equality, for example $f=O(n^2)$.
+> **O24-09**: “$f$ is at least $O(n^2)$” is wrong in four ways: $O(n^2)$ is not a quantity; Big O denotes an upper bound; it is a relation; and “at least $n^2$” should be written $n^2=O(f)$.
+> **O24-10**: The claim $\sum_{i=1}^ni=O(n)$ wrongly assumes that the termwise $O(1)$ bounds share one uniform constant. The correct order is $\Theta(n^2)$, and $O(1)$ cannot be added as though it were an ordinary number.
 > <!-- bilingual-en:end -->
 
 ### 3.2.8 Practice with Big O — 官方在线题 O24-11 至 O24-17
 <!-- bilingual-en:start -->
-*3.2.8 Practice with Big O — official online questions O24-11 through O24-17*
+*3.2.8 Practice with Big O — Official Online Questions O24-11 through O24-17*
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S24_3.2.8_practice-with-big-o|3.2.8]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S24_3.2.8_practice-with-big-o|3.2.8]]
-<!-- bilingual-en:end -->
 
 题目要求最小非负整数 $k$，使 $f(x)=O(x^k)$：
 <!-- bilingual-en:start -->
-The title requires a minimum non-negative integer $k$ such that $f(x)=O(x^k)$:
+Each question asks for the smallest nonnegative integer $k$ such that $f(x)=O(x^k)$:
 <!-- bilingual-en:end -->
 
 | 编号 | $f(x)$ | 官方答案 | 核心化简 |
@@ -1442,26 +1358,23 @@ The title requires a minimum non-negative integer $k$ such that $f(x)=O(x^k)$:
 | O24-16 | $(x^4+5\log x)/(x^4+1)$ | $0$ | 比值趋于 $1$ |
 | O24-17 | $2^{3\log_2x^2}$ | $6$ | $2^{\log_2x^6}=x^6$ |
 <!-- bilingual-en:start -->
-|Encoding | $f(x)$ | Official Answers | Core Simplification |
-|—|—|—:|—|
+| Number | $f(x)$ | Official answer | Key simplification |
+|---|---|---:|---|
 | O24-11 | $2x^3+x^2\log x$ | $3$ | $x^2\log x=o(x^3)$ |
 | O24-12 | $2x^2+x^3\log x$ | $4$ | $x^3\log x=o(x^4)$, but not $O(x^3)$ |
-| O24-13 | $1.1^x$ | none | Exponent faster than any polynomial |
+| O24-13 | $1.1^x$ | none | An exponential grows faster than every polynomial |
 | O24-14 | $0.1^x$ | $0$ | tends to $0$, so $O(1)$ |
-| O24-15 | $(x^4+x^2+1)/(x^3+1)$ | $1$ | Ratio major is $x$ |
+| O24-15 | $(x^4+x^2+1)/(x^3+1)$ | $1$ | The leading ratio is $x$ |
 | O24-16 | $(x^4+5\log x)/(x^4+1)$ | $0$ | The ratio tends to $1$ |
 | O24-17 | $2^{3\log_2x^2}$ | $6$ | $2^{\log_2x^6}=x^6$ |
 <!-- bilingual-en:end -->
 
 ### 3.2.9 Practice with Order of Growth — 官方在线题 O24-18 至 O24-21
 <!-- bilingual-en:start -->
-*3.2.9 Practice with Order of Growth — official online questions O24-18 through O24-21*
+*3.2.9 Practice with Order of Growth — Official Online Questions O24-18 through O24-21*
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S24_3.2.9_practice-with-order-of-growth|3.2.9]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S24_3.2.9_practice-with-order-of-growth|3.2.9]]
-<!-- bilingual-en:end -->
 
 | 编号 | $f,g$ | 官方答案 | 检查 |
 |---|---|---|---|
@@ -1470,12 +1383,12 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 | O24-20 | $1+\cos(\pi n/2),1+\sin(\pi n/2)$ | 所列均不成立 | 两函数交替取零，商无法统一控制 |
 | O24-21 | $1.01^n,n^{100}$ | 所列均不成立 | 实际 $g=o(f)$，但选项只问 $f$ 相对 $g$ |
 <!-- bilingual-en:start -->
-|Encoding | $f,g$ | Official Answer | Check |
-|—|—|—|—|
-| O24-18 | $\log_3n,\log_7n$ | $f=O(g)$ and $f=\Theta(g)$ | ratio $\ln7/\ln3\ne1$, so not $\sim$ |
-| O24-19 | $0,33$ | $f=o(g)$ and $f=O(g)$ | quotient constant is $0$ |
-| O24-20 | $1+\cos(\pi n/2),1+\sin(\pi n/2)$ | None of the lists are true | The two functions are alternately zeroed and quotient cannot be uniformly controlled |
-| O24-21 | $1.01^n,n^{100}$ | None of the lists are true | Actual $g=o(f)$, but the option is to ask $f$ only relative $g$ |
+| Number | $f,g$ | Official answer | Check |
+|---|---|---|---|
+| O24-18 | $\log_3n,\log_7n$ | $f=O(g)$ and $f=\Theta(g)$ | The ratio is $\ln7/\ln3\ne1$, so the functions are not asymptotically equivalent |
+| O24-19 | $0,33$ | $f=o(g)$ and $f=O(g)$ | The quotient is identically $0$ |
+| O24-20 | $1+\cos(\pi n/2),1+\sin(\pi n/2)$ | None of the listed relations holds | The functions alternate between zero and positive values, preventing either quotient from being uniformly controlled |
+| O24-21 | $1.01^n,n^{100}$ | None of the listed relations holds | In fact $g=o(f)$, whereas the choices compare only $f$ with $g$ |
 <!-- bilingual-en:end -->
 
 ### Session 24 易错点与反例
@@ -1489,11 +1402,13 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 4. 若 $g$ 有无限多个零点，商式定义要谨慎；最好直接用最终不等式定义检查。
 5. $4^n\ne O(2^n)$，因为比值 $2^n$ 无界；底数的常数差不能丢进 Big O。
 <!-- bilingual-en:start -->
-1. $f=O(g)$ does not mean that $f$ is "equal" to a specific function; nor does it mean that this is the tightest upper bound.
-2. $f=\Theta(g)$ allows constant times, $f\sim g$ requires constant exactly $1$.
-3. Prove that Big O must give**the same**$c$ and $x_0$, which cannot change with the input $x$.
-4. If $g$ has infinite number of zeros, the definition of quotient should be carefully defined; it is best to check directly with the definition of final inequality.
-5. $4^n\ne O(2^n)$, because the ratio $2^n$ is unbounded; the constant difference of the base number cannot be dropped into Big O.
+
+&nbsp;
+**1.** $f=O(g)$ does not mean that $f$ is "equal" to a specific function; nor does it mean that this is the tightest upper bound.<br>
+**2.** $f=\Theta(g)$ allows a constant-factor difference, whereas $f\sim g$ requires the limiting factor to be exactly $1$.<br>
+**3.** A Big O proof must provide **one fixed** pair $c,x_0$; neither may vary with the input $x$.<br>
+**4.** If $g$ has infinitely many zeros, quotient-based formulations require care. It is safer to check the eventual inequality definition directly.<br>
+**5.** $4^n\ne O(2^n)$ because their ratio $2^n$ is unbounded; a constant difference between exponential bases cannot be absorbed into Big O.<br>
 <!-- bilingual-en:end -->
 
 ### Session 24 自检
@@ -1513,19 +1428,19 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 > $$
 > 所以 $n\log n=o(n^{1.1})$。
 > <!-- bilingual-en:start -->
-> So, $n\log n=o(n^{1.1})$.
+> Thus, $n\log n=o(n^{1.1})$.
 > <!-- bilingual-en:end -->
 
 > [!question] 自检 24-2
 > 给出 $f=O(g)$ 但既不 $f=o(g)$、也不 $f=\Theta(g)$ 的例子。
 > <!-- bilingual-en:start -->
-> An example of $f=O(g)$ but neither $f=o(g)$ nor $f=\Theta(g)$ is given.
+> Give an example in which $f=O(g)$ but neither $f=o(g)$ nor $f=\Theta(g)$.
 > <!-- bilingual-en:end -->
 
 > [!answer]- 答案
 > 在正整数上令 $f(n)=n$（$n$ 为偶数）而 $f(n)=1$（$n$ 为奇数），令 $g(n)=n$。有 $f\le g$，故 $f=O(g)$；商在 $1$ 与 $1/n$ 间振荡，不趋零；反向 $g=O(f)$ 在奇数点失败，故不为 $\Theta$。
 > <!-- bilingual-en:start -->
-> On positive integers, let $f(n)=n$ ($n$ is even) and $f(n)=1$ ($n$ is odd), and let $g(n)=n$.  There is $f\le g$, so $f=O(g)$; the quotient oscillates between $1$ and $1/n$ and does not go to zero; the reverse $g=O(f)$ fails at the odd point and thus is not $\Theta$.
+> On the positive integers, let $f(n)=n$ for even $n$ and $f(n)=1$ for odd $n$, and set $g(n)=n$. Since $f\le g$, we have $f=O(g)$. The ratio $f/g$ alternates between $1$ and $1/n$, so it does not tend to zero. Conversely, $g=O(f)$ fails along the odd integers, so $f$ is not $\Theta(g)$.
 > <!-- bilingual-en:end -->
 
 > [!question] 自检 24-3
@@ -1537,18 +1452,15 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 > [!answer]- 答案
 > 即使每次都有统一常数 $C$，总成本也至多 $nC=O(n)$；不能把 $O(1)$ 当成相加后仍不变的数字。若每次隐藏常数还依赖循环下标，错误更严重。
 > <!-- bilingual-en:start -->
-> Even if there is a uniform constant $C$ at each time, the total cost is at most $nC=O(n)$; $O(1)$ cannot be considered a constant number after addition.  Errors are more serious if each hidden constant also depends on a cyclic subscript.
+> Even if every iteration is bounded by the same constant $C$, the total cost is at most $nC=O(n)$. The notation $O(1)$ cannot be added as though it were a number that remains unchanged. The error is worse if the hidden constant also depends on the loop index.
 > <!-- bilingual-en:end -->
 
 ### Classroom Problems 24 — 5 题完整独立题解
 <!-- bilingual-en:start -->
-*Classroom Problems 24 — 5 complete independent questions*
+*Classroom Problems 24 — complete independent solutions to five problems*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp24.pdf#page=1|cp24 pp. 1–3]]
-<!-- bilingual-en:start -->
-Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp24.pdf#page=1|cp24 pp. 1–3]]
-<!-- bilingual-en:end -->
 
 > [!example]- C24-1 用定义找最小整数常数与阈值
 > 课程定义 $f=O(g)$ 要求 $c,n_0\in\mathbb N$ 且 $n\ge n_0$ 时 $|f(n)|\le c g(n)$。
@@ -1560,11 +1472,10 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > 因而最小 $n_0=15$。
 > **(c)** $f=1+[n\sin(n\pi/2)]^2,g=3n$。偶数 $n$ 时 $f=1$；奇数 $n$ 时 $f=1+n^2$。奇数子列使 $f/g$ 无界，故 $f\ne O(g)$；偶数子列使 $g/f=3n$ 无界，故 $g\ne O(f)$。振荡可以让两个方向都失败。
 > <!-- bilingual-en:start -->
-> Course Definition $f=O(g)$ requires $c,n_0\in\mathbb N$ and $|f(n)|\le c g(n)$ at $n\ge n_0$.
-> **(a)**$f=n^2,g=3n$.  $f/g=n/3$ is unbounded, so $f\ne O(g)$.  Reverse request $3n\le cn^2$.  The smallest positive integer, $c=1$; this is true for all $n\ge3$, and the smallest $n_0=3$.
-> **(b)**$f=(3n-7)/(n+4),g=4$.  There is a $|f|\le4$ for all $n\ge0$, so the minimum $c=1,n_0=0$ for $f=O(g)$.  Reverse $4\le c|f|$; $c=1$ is never possible because $f\to3$.  Minimum $c=2$ at $n\ge15$
-> So that a minimum $n_0=15$ is obtain.
-> **(c)**$f=1+[n\sin(n\pi/2)]^2,g=3n$.  $f=1$ for even $n$ and $f=1+n^2$ for odd $n$.  The odd subcolumn makes $f/g$ unbounded, so $f\ne O(g)$; the even subcolumn makes $g/f=3n$ unbounded, so $g\ne O(f)$.  Oscillations can fail in both directions.
+> The course definition of $f=O(g)$ requires $c,n_0\in\mathbb N$ such that $|f(n)|\le c g(n)$ for every $n\ge n_0$.
+> **(a)** For $f=n^2$ and $g=3n$, the ratio $f/g=n/3$ is unbounded, so $f\ne O(g)$. In the reverse direction we need $3n\le cn^2$. The smallest positive integer is $c=1$, and then the least valid threshold is $n_0=3$.
+> **(b)** For $f=(3n-7)/(n+4)$ and $g=4$, we have $|f|\le4$ for all $n\ge0$, so the smallest values for $f=O(g)$ are $c=1,n_0=0$. Conversely, $4\le c|f|$ cannot hold eventually with $c=1$ because $f\to3$. With the smallest possible $c=2$, the inequality holds exactly from $n=15$ onward, so the least threshold is $n_0=15$.
+> **(c)** For $f=1+[n\sin(n\pi/2)]^2$ and $g=3n$, we have $f=1$ on even $n$ and $f=1+n^2$ on odd $n$. Along the odd subsequence $f/g$ is unbounded, so $f\ne O(g)$; along the even subsequence $g/f=3n$ is unbounded, so $g\ne O(f)$. Oscillation can make both directions fail.
 > <!-- bilingual-en:end -->
 
 > [!example]- C24-2 把渐近关系分类
@@ -1589,15 +1500,14 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > 后一个严格 Big O 不推出 little o；可用自检 24-2 的振荡函数作为反例。
 > <!-- bilingual-en:start -->
 > **(a)**
-> | Relationships | Categorizations | Key Reasons |
-> |—|—|—|
-> | $f\sim g$ | Equivalence relation E | Reflexive, Symmetric, Pass|
-> | $f=o(g)$ | strictly partial order S | non-reflexive, transitive, and impossible to reverse Big O |
-> | $f=O(g)$ | N | is a preorder, but $f=n,g=2n$ breaks the antisymmetry |
-> | $f=\Theta(g)$ | equivalence relation E | mutual Big O |
-> | $f=O(g)$ and $g\ne O(f)$ | strictly partial order S | non-reflexive; pass can be passed by Big O and exclude the reverse relationship |
-> **(b) Major implication**:
-> The latter strict Big O does not deduce little o; the oscillatory function of self-test 24-2 can be used as a counterexample.
+> | Relation | Classification | Key reason |
+> |---|---|---|
+> | $f\sim g$ | Equivalence relation (E) | Reflexive, symmetric, and transitive |
+> | $f=o(g)$ | Strict partial order (S) | Irreflexive and transitive; reverse Big O is impossible |
+> | $f=O(g)$ | Neither (N) | A preorder, but $f=n,g=2n$ violates antisymmetry |
+> | $f=\Theta(g)$ | Equivalence relation (E) | Defined by mutual Big O bounds |
+> | $f=O(g)$ and $g\ne O(f)$ | Strict partial order (S) | Irreflexive; transitivity follows from Big O while the reverse relation is excluded |
+> **(b) Main implications:** $f\sim g\Rightarrow f=\Theta(g)\Rightarrow[f=O(g)\land g=O(f)]$, and $f=o(g)\Rightarrow[f=O(g)\land g\ne O(f)]$. The latter strict Big O relation does not imply little o; the oscillating function from Self-test 24-2 is a counterexample.
 > <!-- bilingual-en:end -->
 
 > [!example]- C24-3 错误归纳“$2^n=O(1)$”
@@ -1614,10 +1524,12 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > 3. $n^{\sin(n\pi/2)+1}=o(n^2)$：**假**。当 $n\equiv1\pmod4$ 时指数为 $2$，比值等于 $1$，不能趋零。
 > 4. $n=\Theta\!\left(\dfrac{3n^3}{(n+1)(n-1)}\right)$：**真**。对 $n\ge2$，右式与 $3n$ 之比趋于 $1$，故与 $n$ 同阶；也可直接夹在正的常数倍 $n$ 之间。
 > <!-- bilingual-en:start -->
-> 1. $n^2\sim n^2+n$: **true**, because $n^2/(n^2+n)=1/(1+1/n)\to1$.
-> 2. $3^n=O(2^n)$: **false**, because $(3/2)^n\to\infty$.
-> 3. $n^{\sin(n\pi/2)+1}=o(n^2)$: **false**. When $n\equiv1\pmod4$, the exponent is $2$, so the ratio equals $1$ and cannot tend to zero.
-> 4. $n=\Theta\!\left(\dfrac{3n^3}{(n+1)(n-1)}\right)$: **true**. For $n\ge2$, the expression on the right is asymptotic to $3n$, and it can also be bounded directly between positive constant multiples of $n$.
+>
+> &nbsp;
+> **1.** $n^2\sim n^2+n$: **true**, because $n^2/(n^2+n)=1/(1+1/n)\to1$.<br>
+> **2.** $3^n=O(2^n)$: **false**, because $(3/2)^n\to\infty$.<br>
+> **3.** $n^{\sin(n\pi/2)+1}=o(n^2)$: **false**. When $n\equiv1\pmod4$, the exponent is $2$, so the ratio equals $1$ and cannot tend to zero.<br>
+> **4.** $n=\Theta\!\left(\dfrac{3n^3}{(n+1)(n-1)}\right)$: **true**. For $n\ge2$, the expression on the right is asymptotic to $3n$, and it can also be bounded directly between positive constant multiples of $n$.<br>
 > <!-- bilingual-en:end -->
 
 > [!example]- C24-5 不用 Stirling 证明 $\log(n!)=\Theta(n\log n)$
@@ -1636,10 +1548,8 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > $$
 > 因而 $\boxed{\log(n!)=\Theta(n\log n)}$。
 > <!-- bilingual-en:start -->
-> Upper bound: $i\le n$ per factor, so
-> Lower bound: Retain the last $\lfloor n/2\rfloor$ terms of the sum; each is at least $\log(n/2)$:
-> $n\ge4$ $\log n-\log2\ge\frac12\log n$, so..
-> So $\boxed{\log(n!)=\Theta(n\log n)}$.
+> For the upper bound, every factor satisfies $i\le n$, so $\log(n!)=\sum_{i=1}^n\log i\le n\log n$.
+> For the lower bound, keep only the last $\lfloor n/2\rfloor$ terms; each is at least $\log(n/2)$. For $n\ge4$, $\log n-\log2\ge\frac12\log n$, giving $\frac14n\log n\le\log(n!)\le n\log n$. Hence $\boxed{\log(n!)=\Theta(n\log n)}$.
 > <!-- bilingual-en:end -->
 
 ### Session 24 知识链小结
@@ -1661,9 +1571,6 @@ $$
 ## Problem Set 9 — after Session 24
 
 原题：[[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps9.pdf#page=1|Problem Set 9, pp. 1–2]]。以下为非官方独立题解。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps9.pdf#page=1|Problem Set 9, pp. 1–2]].  The following are unofficial independent questions.
-<!-- bilingual-en:end -->
 
 > [!example]- PS9-1 求 $\sum_{i=1}^{n}i^3$ 的多项式
 > **目标**：找出闭式并验证。结论为
@@ -1682,9 +1589,7 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps9.pdf#
 > $$
 > 所以对所有 $n\ge1$ 成立。
 > <!-- bilingual-en:start -->
-> **Target**: Locate closed and verify.  The conclusion is
-> On the right is the square of the sum of the first $n$ integers.  By inductive verification, both sides are $1$ when $n=1$.  Assuming it is true for $n$, then
-> So it's true for all $n\ge1$.
+> **Goal:** Find and verify a closed form. The result is the displayed square of the sum of the first $n$ positive integers. For $n=1$, both sides equal $1$. Assuming the formula holds for $n$, adding $(n+1)^3$ and factoring gives the corresponding formula for $n+1$. Hence it holds for every $n\ge1$.
 > <!-- bilingual-en:end -->
 
 > [!example]- PS9-2 证明 $\ln((n^2)!)=\Theta(n^2\ln n)$
@@ -1705,10 +1610,7 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps9.pdf#
 > $$
 > 定义域检查：$n$ 为正整数；对数底数换成任意固定 $>1$ 的底只差常数倍。
 > <!-- bilingual-en:start -->
-> Get $N=n^2$.  Stirling formula
-> Introduce $N=n^2$:
-> The dominant term is $2n^2\ln n$. After division by $n^2\ln n$, every remaining term tends to zero, so
-> Domain checking: $n$ is a positive integer; the base of the logarithm is replaced by a constant multiple of the base of any fixed $>1$.
+> Let $N=n^2$. Stirling's formula gives the displayed expansion for $\ln(N!)$. Substituting $N=n^2$ makes the leading term $2n^2\ln n$; every remaining term tends to zero after division by $n^2\ln n$. Therefore $\ln((n^2)!)\sim2n^2\ln n$ and hence $\ln((n^2)!)=\Theta(n^2\ln n)$. Here $n$ is a positive integer; changing to any fixed logarithm base greater than $1$ only multiplies the expression by a constant.
 > <!-- bilingual-en:end -->
 
 > [!example]- PS9-3 证明 $\sum_{k=1}^{n}k^6=\Theta(n^7)$
@@ -1723,8 +1625,7 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps9.pdf#
 > \boxed{\sum_{k=1}^{n}k^6=\Theta(n^7)}.
 > $$
 > <!-- bilingual-en:start -->
-> $f(x)=x^6$ is positive and ascending.  integral method
-> When $n\ge2$, the left is at least $n^7/7$; the right is at most $n^7/7+n^7=8n^7/7$.  So we can use $c_1=1/7,c_2=8/7,n_0=2$ to strictly meet the definition of Theta:
+> The function $f(x)=x^6$ is positive and increasing, so the integral method gives the displayed bounds. When $n\ge2$, the lower bound is at least $n^7/7$ and the upper bound is at most $n^7/7+n^7=8n^7/7$. Thus $c_1=1/7,c_2=8/7,n_0=2$ satisfy the definition of Theta exactly.
 > <!-- bilingual-en:end -->
 
 ---
@@ -1743,7 +1644,7 @@ Original paper: [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm3.pdf#pa
 
 题图见 [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm3.pdf#page=2|Midterm 3 p. 2]]。[[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|DAG]] 的边为
 <!-- bilingual-en:start -->
-For the inscription, see [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm3.pdf#page=2|Midterm 3 p. 2]].  The edge of the [[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|DAG]] is
+The [[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|DAG]] has edges
 <!-- bilingual-en:end -->
 
 $$
@@ -1774,13 +1675,9 @@ $$
 > $$
 > 满足全部先决条件，因此仍为 $\boxed{4}$。
 > <!-- bilingual-en:start -->
-> **(a)**In transitive comparability, $A<D<E<G$,$B<E<G$ and $B<F<H$,$C<F<H$.  Width is $3$; the two largest antichains are
-> Cannot have 4-ary inverse chain: $E$ or $F$ to exclude multiple precursors/successors; directly by layer or covered with minimal chain
-> It is known that at most one element of any inverse chain is taken from each of the three chains.
-> **(b)**The minimum time equals the number of tasks in the longest chain for infinite processors.  Chain $A\to D\to E\to G$ has 4 tasks, so at least 4; press
-> It can be done in 4, so answer $\boxed{4}$.
-> **(c)**The lower bound for workload is $\lceil8/2\rceil=4$ and the lower bound for critical path is still 4 for up to 2 tasks in parallel.  arrange
-> All prerequisites are met and therefore remain $\boxed{4}$.
+> **(a)** The transitive comparabilities include $A<D<E<G$, $B<E<G$, $B<F<H$, and $C<F<H$. The width is $3$, and the two maximum antichains are $\{A,B,C\}$ and $\{B,C,D\}$. A four-element antichain is impossible: the chain cover $A<D<E<G$, $B$, and $C<F<H$ shows that any antichain contains at most one element from each of three chains.
+> **(b)** With unlimited processors, the minimum completion time equals the number of tasks on a longest chain. The chain $A\to D\to E\to G$ gives a lower bound of $4$, and the displayed four-step schedule achieves it. Thus the answer is $\boxed{4}$.
+> **(c)** With at most two parallel tasks, both the workload bound $\lceil8/2\rceil=4$ and the critical-path bound equal $4$. The displayed schedule satisfies every prerequisite in four steps, so the answer remains $\boxed{4}$.
 > <!-- bilingual-en:end -->
 
 ### Problem 2 — Partial Orders & Equivalence（20 分）
@@ -1790,7 +1687,7 @@ $$
 
 首次回链 [[02_Structures#Session 18 — Partial Orders and Equivalence|等价关系]] 与 [[02_Structures#Session 18 — Partial Orders and Equivalence|弱偏序]]。
 <!-- bilingual-en:start -->
-[[02_Structures#Session 18 — Partial Orders and Equivalence|equivalent relation]] and [[02_Structures#Session 18 — Partial Orders and Equivalence|weak partial order]].
+This problem first reconnects to [[02_Structures#Session 18 — Partial Orders and Equivalence|equivalence relations]] and [[02_Structures#Session 18 — Partial Orders and Equivalence|weak partial orders]].
 <!-- bilingual-en:end -->
 
 > [!answer]- 完整解答
@@ -1801,9 +1698,8 @@ $$
 > 即 $aI_Ab\iff a=b$。它自反、对称、传递，所以是等价关系；也自反、反对称、传递，所以是弱偏序。
 > **(b) 唯一性证明**：设 $R$ 同时是等价关系和弱偏序。若 $aRb$，等价关系的对称性给 $bRa$；弱偏序的反对称性于是给 $a=b$。故 $R\subseteq I_A$。另一方面，$R$ 的自反性保证每个 $(a,a)\in R$，故 $I_A\subseteq R$。两边合并，$R=I_A$。
 > <!-- bilingual-en:start -->
-> **(a)**The only candidate is the identity relation
-> $aI_Ab\iff a=b$.  It is reflexive, symmetric and transitive, so it is equivalent relation; it is also reflexive, anti-symmetric and transitive, so it is weak partial order.
-> **(b) Uniqueness proof**: Let $R$ be both equivalence relation and weak partial order.  If $aRb$, the symmetry of the equivalence relation is given to $bRa$; the antisymmetry of the weak partial order is given to $a=b$.  So, $R\subseteq I_A$.  On the other hand, the reflexivity of $R$ guarantees each $(a,a)\in R$, so $I_A\subseteq R$.  $R=I_A$.
+> **(a)** The only candidate is the identity relation $I_A$, defined by $aI_Ab\iff a=b$. It is reflexive, symmetric, and transitive, so it is an equivalence relation; it is also reflexive, antisymmetric, and transitive, so it is a weak partial order.
+> **(b) Uniqueness proof:** Suppose $R$ is both an equivalence relation and a weak partial order. If $aRb$, symmetry gives $bRa$, and antisymmetry then gives $a=b$. Hence $R\subseteq I_A$. Conversely, reflexivity places every $(a,a)$ in $R$, so $I_A\subseteq R$. Therefore $R=I_A$.
 > <!-- bilingual-en:end -->
 
 ### Problem 3 — Simple Graphs（20 分）
@@ -1830,7 +1726,7 @@ $$
 
 首次回链 [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|树]] 与 [[图着色与色数#如何证明 chromatic number|图着色]]。
 <!-- bilingual-en:start -->
-[[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|tree]] and [[图着色与色数#如何证明 chromatic number|graph coloring]].
+This problem reconnects to [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|trees]] and [[图着色与色数#如何证明 chromatic number|graph colouring]].
 <!-- bilingual-en:end -->
 
 > [!answer]- 完整归纳证明
@@ -1858,7 +1754,7 @@ $$
 
 首次回链 [[02_Structures#Session 22 — Stable Matching and Hall's Theorem|稳定匹配]]。题目把未婚男子与更偏爱他的已婚女子也视作 rogue couple；男子数可以多于女子数。
 <!-- bilingual-en:start -->
-[[02_Structures#Session 22 — Stable Matching and Hall's Theorem|stable matching]].  The topic also considered unmarried men and married women who preferred him as rogue couple; the number of men could be greater than that of women.
+This problem reconnects to [[02_Structures#Session 22 — Stable Matching and Hall's Theorem|stable matching]]. Here an unmarried man and a married woman who prefers him to her current partner also count as a rogue couple, and there may be more men than women.
 <!-- bilingual-en:end -->
 
 > [!answer]- 完整判断
@@ -1872,14 +1768,14 @@ $$
 > - **(f)** Bob 没有追求 Alice：他可能在被更高偏好女子拒绝后轮到 Alice，故不保持。
 > - **(g)** Bob 的名单为空：名单只删不增，故保持。
 > <!-- bilingual-en:start -->
-> The retention invariant is $\boxed{(a),(d),(g)}$.  To check for status transitions on a case by case basis:
-> -**(a)**Alice already has a suitor she prefers to Bob: women only retain their current favorite suitor, after which the retainer is only likely to become better, so that nature remains.
-> -**(b)**Bob's list is Alice only: if Alice rejects Bob, she will be deleted and the list will be empty and therefore not maintained.
-> -**(c)**Alice has no suitor: the next step may be a proposal from her and therefore not maintained.
-> -**(d)**Bob prefers Alice to the woman he's currently pursuing: the man who is rejected will only move down the preference table; if the relationship is true, then the person he's after will be less preferred, so stay.
-> -**(e)**Bob is pursuing the possibility that Alice:Alice may reject him and therefore not keep it.
-> -**(f)**Bob did not pursue Alice: he may have been turned down by a woman with a higher preference, and therefore not held on to Alice.
-> -**(g)**Bob's list is empty: the list is deleted but not added, so it remains.
+> The invariants are $\boxed{(a),(d),(g)}$. Check each property under one transition:
+> - **(a)** Alice already has a suitor she prefers to Bob. A woman keeps only her favourite proposal so far, and that retained suitor can only improve, so the property persists.
+> - **(b)** Bob's list contains only Alice. If Alice rejects him, she is deleted and the list becomes empty, so the property need not persist.
+> - **(c)** Alice has no suitor. Someone may propose to her next, so the property need not persist.
+> - **(d)** Bob prefers Alice to the woman he is currently pursuing. After rejection, a man moves only downward through his preference list, so every later target is still less preferred than Alice; the property persists.
+> - **(e)** Bob is currently proposing to Alice. She may reject him, so the property need not persist.
+> - **(f)** Bob is not proposing to Alice. Rejections from women he ranks above Alice may eventually bring him to her, so the property need not persist.
+> - **(g)** Bob's list is empty. Entries are deleted but never restored, so the property persists.
 > <!-- bilingual-en:end -->
 
 ### Problem 6 — Sums & Integrals（10 分）
@@ -1897,7 +1793,7 @@ $$
 
 ### Midterm 3 错误诊断
 <!-- bilingual-en:start -->
-*Midterm 3 Troubleshooting*
+*Midterm 3 Error Diagnosis*
 <!-- bilingual-en:end -->
 
 - 调度时间看最长**链的顶点数**，不是边数；并行上限还要同时看总工作量。
@@ -1906,11 +1802,11 @@ $$
 - 树着色归纳必须说明删叶后仍是树，以及扩展恰为 $n-1$ 对一。
 - 不变量题问的是每次转移后的保持性，不是某个状态下偶然为真。
 <!-- bilingual-en:start -->
-- The longest scheduling time**the number of vertices in the chain**not the number of edges; the upper limit of parallelism also depends on the total workload.
-- "Symmetry + antisymmetry" is not a contradiction; together, they compress the relationship diagonally.
-- The two paths guarantee that there is a loop somewhere and that the endpoints are not on the loop.
-- Tree coloring induction must show that leaves are still trees after deletion and that the extension is exactly $n-1$ to one.
-- The invariant question is about retention after each transfer, not accidental truth in a state.
+- Scheduling time is governed by the **number of vertices on a longest chain**, not the number of edges; a bound on parallelism also introduces a total-work lower bound.
+- Symmetry and antisymmetry are not contradictory. Together they force every related pair onto the diagonal.
+- Two distinct paths guarantee a cycle somewhere in the graph, but not necessarily a cycle through the endpoints.
+- An induction for tree colouring must show that deleting a leaf leaves a tree and that each colouring extends in exactly $n-1$ ways.
+- An invariant question asks whether a property survives every transition, not whether it happens to hold in one state.
 <!-- bilingual-en:end -->
 
 ---
@@ -1924,12 +1820,12 @@ $$
 
 **学习问题**：一个对象能分成互斥情形时怎样相加？由连续选择构造时怎样相乘？当原对象难数时，怎样用一个可逆编码把它搬到熟悉集合？
 <!-- bilingual-en:start -->
-**Learning Problem**: How do objects add when they can be divided into mutually exclusive situations?  How are multiplications constructed from sequential selections?  When the original object is hard to be counted, how to transfer it to the familiar set with a reversible code?
+**Learning questions**: How should counts be added when objects split into mutually exclusive cases? How should choices be multiplied when an object is built through successive decisions? When the original objects are hard to count, how can a reversible encoding transfer the problem to a familiar set?
 <!-- bilingual-en:end -->
 
 **前置知识**：有限集合、函数、单射/满射/双射、笛卡尔积。首次正式使用 [[组合计数原理#加法、乘法与双射|加法与乘法法则]]、[[组合计数原理#加法、乘法与双射|双射计数原理]] 与 [[组合计数原理#加法、乘法与双射|计数策略选择框架]]。
 <!-- bilingual-en:start -->
-**Prerequisite knowledge**: Finite sets, functions, monojets/surjections/bijections, Cartesian products.  First live use of [[组合计数原理#加法、乘法与双射|addition and multiplication rules]], [[组合计数原理#加法、乘法与双射|double-fire counting principle]], and [[组合计数原理#加法、乘法与双射|Counting Policy Selection Framework]].
+**Prerequisites**: finite sets, functions, injections, surjections, bijections, and Cartesian products. This session gives the first formal use of the [[组合计数原理#加法、乘法与双射|sum and product rules]], the [[组合计数原理#加法、乘法与双射|bijection rule]], and the [[组合计数原理#加法、乘法与双射|framework for choosing a counting strategy]].
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session25.pdf#page=1|Session 25 reading, pp. 1–6]]
@@ -1937,13 +1833,10 @@ $$
 
 ### 3.3.1 Sum and Product Rules — 先确认集合结构
 <!-- bilingual-en:start -->
-*3.3.1 Sum and Product Rules—First Confirm Collection Structure*
+*3.3.1 Sum and Product Rules — Identify the Set Structure First*
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_SumProduct.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/yTrtVwKZkwU.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=yTrtVwKZkwU)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_SumProduct.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/yTrtVwKZkwU.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=yTrtVwKZkwU)
-<!-- bilingual-en:end -->
 
 #### 加法法则（Sum Rule）
 <!-- bilingual-en:start -->
@@ -1952,7 +1845,7 @@ Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_SumProduct.
 
 若有限集合 $A_1,\ldots,A_k$ **两两不交**，则
 <!-- bilingual-en:start -->
-If the finite set $A_1,\ldots,A_k$**two disjoint**
+If the finite sets $A_1,\ldots,A_k$ are **pairwise disjoint**, then
 <!-- bilingual-en:end -->
 
 $$
@@ -1962,7 +1855,7 @@ $$
 
 证明很直接但条件不可省：并集中的每个对象恰属于一个 $A_i$，所以右边恰数一次。若集合重叠，右边会重复计数，需等到 Session 27 用容斥修正。
 <!-- bilingual-en:start -->
-The proof is straightforward, but the condition is inescapable: each object in the union belongs to exactly one $A_i$, so the right hand side is exactly once.  If the collections overlap, the right side will repeat the count, waiting until Session 27 is filled.
+The proof is simple, but the condition is essential: every object in the union belongs to exactly one $A_i$, so the right-hand side counts it once. If the sets overlap, the sum double-counts some objects and must be corrected by inclusion–exclusion in Session 27.
 <!-- bilingual-en:end -->
 
 #### 乘法法则（Product Rule）
@@ -1972,7 +1865,7 @@ The proof is straightforward, but the condition is inescapable: each object in t
 
 对有限集合 $A_1,\ldots,A_k$，
 <!-- bilingual-en:start -->
-For a finite set $A_1,\ldots,A_k$,
+For finite sets $A_1,\ldots,A_k$,
 <!-- bilingual-en:end -->
 
 $$
@@ -1982,14 +1875,14 @@ $$
 
 证明可对 $k$ 归纳。$k=2$ 时，对每个 $a_1\in A_1$ 恰有 $|A_2|$ 个有序对 $(a_1,a_2)$，共 $|A_1||A_2|$；归纳步把前 $k-1$ 个坐标视作一个整体。
 <!-- bilingual-en:start -->
-The proof can be generalized to $k$.  When $k=2$, there are exactly $|A_2|$ ordered pairs of $(a_1,a_2)$ for each $a_1\in A_1$, altogether $|A_1||A_2|$; the induction step treats the first $k-1$ coordinates as a whole.
+The proof proceeds by induction on $k$. When $k=2$, each $a_1\in A_1$ can be paired with exactly $|A_2|$ choices of $a_2$, giving $|A_1||A_2|$ ordered pairs. For the induction step, treat the first $k-1$ coordinates as one combined choice.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit03-sum-product-rule.png|900]]
 
 读图：互斥分支对应并集，所以把各分支数量相加；连续决策对应笛卡尔积，所以把每一步可选数量相乘。判断“分支还是步骤”比记公式更重要。
 <!-- bilingual-en:start -->
-Reading image: Mutually exclusive branches correspond to union, so the number of each branch is added; Continuous decision corresponds to Cartesian product, so the number of each step can be multiplied.  Determining whether a branch or step is more important than memorizing a formula.
+How to read the diagram: mutually exclusive branches form a union, so their counts are added; successive decisions form a Cartesian product, so the number of choices at each step is multiplied. Deciding whether the structure is “cases” or “steps” matters more than memorising a formula.
 <!-- bilingual-en:end -->
 
 #### 例：密码
@@ -1999,7 +1892,7 @@ Reading image: Mutually exclusive branches correspond to union, so the number of
 
 密码长度为 6、7 或 8；首字符必须是 52 个大小写字母之一，其余位置可用 62 个字母或数字。不同长度互斥，所以
 <!-- bilingual-en:start -->
-Passwords are 6, 7, or 8 in length; the first character must be one of 52 upper and lower case letters, and 62 letters or numbers are available in the remaining locations.  different length are mutually exclusive, so
+A password has length 6, 7, or 8. Its first character must be one of 52 uppercase or lowercase letters, while each remaining position may contain any of 62 letters or digits. The three lengths are mutually exclusive, so
 <!-- bilingual-en:end -->
 
 $$
@@ -2009,35 +1902,29 @@ $$
 
 ### 3.3.2 Counting Practice — 官方在线题 O25-01、O25-02
 <!-- bilingual-en:start -->
-*3.3.2 Counting Practice—official online questions O25-01, O25-02*
+*3.3.2 Counting Practice — Official Online Questions O25-01 and O25-02*
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S25_3.3.2_counting-practice|3.3.2]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S25_3.3.2_counting-practice|3.3.2]]
-<!-- bilingual-en:end -->
 
 > [!success]- 官方答案与反馈
 > **O25-01**：5 位 PIN 每位有 10 种选择，前导零允许，所以 $10^5=\boxed{100000}$。
 > **O25-02**：上衣有 $3+2=5$ 种，下装有 $4+4=8$ 种，搭配数 $5\cdot8=\boxed{40}$。
 > <!-- bilingual-en:start -->
-> **O25-01**:5 bit PINs have 10 choices per pin, leading zeroes allow, so $10^5=\boxed{100000}$.
-> **O25-02**: $3+2=5$ for tops, $4+4=8$ for underwear and $5\cdot8=\boxed{40}$ for number of pairs.
+> **O25-01**: A five-digit PIN has 10 choices in each position, and leading zeros are allowed, so there are $10^5=\boxed{100000}$ PINs.
+> **O25-02**: There are $3+2=5$ choices of top and $4+4=8$ choices of bottoms, giving $5\cdot8=\boxed{40}$ outfits.
 > <!-- bilingual-en:end -->
 
 ### 3.3.3 Counting with Bijections — 把“难数”变成“已知可数”
 <!-- bilingual-en:start -->
-*3.3.3 Counting with Bijections—Turning "hard" into "known to count"*
+*3.3.3 Counting with Bijections — Transforming a Difficult Set into a Familiar One*
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_Bijections.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/n0lce1dMAh8.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=n0lce1dMAh8)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_Bijections.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/n0lce1dMAh8.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=n0lce1dMAh8)
-<!-- bilingual-en:end -->
 
 #### 双射法则
 <!-- bilingual-en:start -->
-*bijective rule*
+*The bijection rule*
 <!-- bilingual-en:end -->
 
 若存在双射 $f:A\to B$，则
@@ -2056,12 +1943,12 @@ $$
 
 #### Stars and Bars：有重复选择
 <!-- bilingual-en:start -->
-*Stars and Bars: Duplicate Selection*
+*Stars and Bars: Choosing with Repetition*
 <!-- bilingual-en:end -->
 
 从 $k$ 种甜甜圈中选 $n$ 个，令 $x_i$ 是第 $i$ 种数量，则需数
 <!-- bilingual-en:start -->
-Select $n$ from $k$ doughnuts, making $x_i$ the $i$, then count
+To choose $n$ doughnuts from $k$ flavours, let $x_i$ be the number chosen of flavour $i$. The problem is to count the solutions of
 <!-- bilingual-en:end -->
 
 $$
@@ -2070,7 +1957,7 @@ $$
 
 编码为 $n$ 个星与 $k-1$ 个隔板：
 <!-- bilingual-en:start -->
-Numbered $n$ stars and $k-1$ partitions:
+Encode a solution using $n$ stars and $k-1$ bars:
 <!-- bilingual-en:end -->
 
 $$
@@ -2081,7 +1968,7 @@ $$
 
 总位置 $n+k-1$，任选 $k-1$ 个放隔板（或任选 $n$ 个放星），故
 <!-- bilingual-en:start -->
-Total $n+k-1$, optional $k-1$ shelves (or optional $n$ shelves), so
+There are $n+k-1$ positions in total. Choose $k-1$ of them for the bars, or equivalently choose $n$ for the stars, so
 <!-- bilingual-en:end -->
 
 $$
@@ -2101,7 +1988,7 @@ This is a genuine bijection: a vector determines a unique stars-and-bars string,
 
 设 $A=\{a_1,\ldots,a_m\}$、$|B|=q$。全函数 $f:A\to B$ 与向量
 <!-- bilingual-en:start -->
-$A=\{a_1,\ldots,a_m\}$, $|B|=q$.  Full Function $f:A\to B$ and Vector
+Let $A=\{a_1,\ldots,a_m\}$ and $|B|=q$. A total function $f:A\to B$ is represented by the vector
 <!-- bilingual-en:end -->
 
 $$
@@ -2110,7 +1997,7 @@ $$
 
 双射，因此共有
 <!-- bilingual-en:start -->
-are in bijection, so there are
+This representation is a bijection, so there are
 <!-- bilingual-en:end -->
 
 $$
@@ -2119,7 +2006,7 @@ $$
 
 个。每个定义域元素都是一个独立位置，每个位置有 $q$ 种选择。
 <!-- bilingual-en:start -->
-.  Each domain element is a separate location, with $q$ choices for each location.
+total functions. Each element of the domain is an independent position with $q$ possible images.
 <!-- bilingual-en:end -->
 
 ### 3.3.4 Selecting Donuts — 官方在线题 O25-03
@@ -2128,14 +2015,11 @@ $$
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S25_3.3.4_selecting-donuts|3.3.4]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S25_3.3.4_selecting-donuts|3.3.4]]
-<!-- bilingual-en:end -->
 
 > [!success]- 官方答案与反馈
 > 选 13 个、4 种口味对应 13 个零（甜甜圈）与 3 个一（隔板），故与“长度 16、恰有 3 个 1 的二进制串”双射。答案为 $\binom{16}{3}$ 个。
 > <!-- bilingual-en:start -->
-> 13, 4 flavors correspond to 13 zeros (doughnuts) and 3 ones (separators), thus being biased to a "binary string of length 16 and exactly 3 ones".  The answer is $\binom{16}{3}$.
+> Choosing 13 doughnuts from four flavours corresponds to a string of 13 zeros (doughnuts) and three ones (bars). This is a bijection with length-16 bit strings containing exactly three ones, so the answer is $\binom{16}{3}$.
 > <!-- bilingual-en:end -->
 
 ### 3.3.5 Counting Functions — 官方在线题 O25-04
@@ -2144,9 +2028,6 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S25_3.3.5_counting-functions|3.3.5]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S25_3.3.5_counting-functions|3.3.5]]
-<!-- bilingual-en:end -->
 
 > [!success]- 官方答案与反馈
 > 若 $|A|=3,|B|=7$，全函数 $A\to B$ 与 $B^3$ 的向量双射，所以共有 $\boxed{7^3}$ 个。
@@ -2165,11 +2046,13 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 4. Stars and Bars 只处理非负整数解；若每类至少一个，先令 $y_i=x_i-1$。
 5. PIN、字符串通常允许前导零；“五位整数”通常不允许，两个样本空间不同。
 <!-- bilingual-en:start -->
-1. The addition rule requires that the categories are mutually exclusive; "shirt" and "red jacket" overlap and cannot be added directly.
-2. The number of multiplication rules is an ordered decision sequence; if the final object does not remember the order, it may need to be bijective or division to eliminate duplication.
-3. Bijection cannot say only "apparent correspondence"; it must state the inverse mapping, or it may be many-to-one.
-4. Stars and Bars directly handles nonnegative integer solutions. If each class must contain at least one object, first set $y_i=x_i-1$.
-5. PINs, strings, usually allow leading zeros; "five-digit integers" are not allowed, and the two sample spaces are different.
+
+&nbsp;
+**1.** The addition rule requires that the categories are mutually exclusive; "shirt" and "red jacket" overlap and cannot be added directly.<br>
+**2.** The product rule counts ordered sequences of decisions. If the final object forgets that order, use a bijection or the division rule to remove duplicates.<br>
+**3.** A bijection argument cannot stop at “the correspondence is obvious”; it must give the inverse map, or the proposed map may be many-to-one.<br>
+**4.** Stars and Bars directly handles nonnegative integer solutions. If each class must contain at least one object, first set $y_i=x_i-1$.<br>
+**5.** PINs and strings usually allow leading zeros, while five-digit integers do not. These are different sample spaces.<br>
 <!-- bilingual-en:end -->
 
 ### Session 25 自检
@@ -2186,25 +2069,25 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 > [!answer]- 答案
 > 选 3 个位置放 1：$\binom83=56$。
 > <!-- bilingual-en:start -->
-> Select 3 locations for 1:$\binom83=56$.
+> Choose the three positions occupied by 1s: $\binom83=56$.
 > <!-- bilingual-en:end -->
 
 > [!question] 自检 25-2
 > 非负整数解 $x_1+x_2+x_3=10$ 有多少个？若每个 $x_i\ge1$ 呢？
 > <!-- bilingual-en:start -->
-> How many non-negative integer solutions are $x_1+x_2+x_3=10$?  What about every $x_i\ge1$?
+> How many nonnegative integer solutions does $x_1+x_2+x_3=10$ have? What if every $x_i\ge1$?
 > <!-- bilingual-en:end -->
 
 > [!answer]- 答案
 > 非负解 $\binom{12}{2}=66$。正整数解令 $y_i=x_i-1$，则 $y_1+y_2+y_3=7$，有 $\binom92=36$。
 > <!-- bilingual-en:start -->
-> non-negative solution $\binom{12}{2}=66$.  A positive integer solution is $y_i=x_i-1$, then $y_1+y_2+y_3=7$, and has $\binom92=36$.
+> There are $\binom{12}{2}=66$ nonnegative solutions. For positive solutions, set $y_i=x_i-1$; then $y_1+y_2+y_3=7$, giving $\binom92=36$ solutions.
 > <!-- bilingual-en:end -->
 
 > [!question] 自检 25-3
 > 为什么“从 5 人选主席和副主席”是 $5\cdot4$，不是 $\binom52$？
 > <!-- bilingual-en:start -->
-> Why is the "From 5 Chair and Vice chair" $5\cdot4$, not $\binom52$?
+> Why are there $5\cdot4$ ways to choose a chair and vice-chair from five people, rather than $\binom52$?
 > <!-- bilingual-en:end -->
 
 > [!answer]- 答案
@@ -2215,13 +2098,10 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 
 ### Classroom Problems 25 — 4 题完整独立题解
 <!-- bilingual-en:start -->
-*Classroom Problems 25 — 4 complete independent questions*
+*Classroom Problems 25 — complete independent solutions to four problems*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp25.pdf#page=1|cp25 pp. 1–3]]
-<!-- bilingual-en:start -->
-Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp25.pdf#page=1|cp25 pp. 1–3]]
-<!-- bilingual-en:end -->
 
 > [!example]- C25-1 含数字 1 与不相邻选书
 > **(a)** 把 $1,\ldots,999{,}999{,}999$ 写成 9 位、允许前导零的串。每位避开 1 有 9 种，共 $9^9$ 个串，其中全零不在正整数范围，所以该区间不含 1 的数有 $9^9-1$ 个；$10^9$ 本身含 1。总共有 $10^9$ 个整数，因此
@@ -2235,10 +2115,8 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > $$
 > 则 $1\le j_1<\cdots<j_6\le15$，在长度 15 的串中把第 $j_r$ 位设为 1。逆映射是 $i_r=j_r+(r-1)$，自动保证间隔至少 2。故所求与恰含 6 个 1 的 15 位串双射，数量 $\boxed{\binom{15}{6}}$。
 > <!-- bilingual-en:start -->
-> **(a)**Writes $1,\ldots,999{,}999{,}999$ as a 9-bit string that allows leading zeros.  There are 9 of $9^9$ strings for each bypass 1, where all zeros are not in the range of positive integers, so there are $9^9-1$ numbers for the interval without a 1; $10^9$ itself contains a 1.  There are a total of $10^9$ integers, so
-> If you change the sample space to $0$ to $10^9-1$, the answer is less than 1; this explains the common $10^9-9^9$ versions.
-> **(b)**Set the book location to $1\le i_1<\cdots<i_6\le20$ and $i_{r+1}\ge i_r+2$.  defined
-> $1\le j_1<\cdots<j_6\le15$; put a 1 in positions $j_1,\ldots,j_6$ of a length-15 bit string. The inverse map is $i_r=j_r+(r-1)$, which automatically restores a gap of at least 2. Hence the desired selections are in bijection with length-15 bit strings containing six 1s, so their number is $\boxed{\binom{15}{6}}$.
+> **(a)** Write each integer from $1$ to $999{,}999{,}999$ as a nine-digit string with leading zeros. Each position has nine choices if the digit 1 is forbidden, giving $9^9$ strings, but the all-zero string is not a positive integer. Thus $9^9-1$ integers in that range avoid 1, while $10^9$ itself contains 1. Among the $10^9$ integers in total, the answer is $10^9-9^9+1=612{,}579{,}512$. If the sample space were instead $0$ through $10^9-1$, the answer would be smaller by one; this explains the common $10^9-9^9$ version.
+> **(b)** Let the selected book positions be $1\le i_1<\cdots<i_6\le20$ with $i_{r+1}\ge i_r+2$, and define $j_r=i_r-(r-1)$. Then $1\le j_1<\cdots<j_6\le15$. Marking positions $j_1,\ldots,j_6$ with 1s gives a length-15 bit string containing six 1s. The inverse $i_r=j_r+(r-1)$ restores gaps of at least two, so this is a bijection and the count is $\boxed{\binom{15}{6}}$.
 > <!-- bilingual-en:end -->
 
 > [!example]- C25-2 最大叶编码与 Cayley 公式
@@ -2251,7 +2129,7 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > <!-- bilingual-en:start -->
 > Repeatedly delete the currently largest leaf and record its adjacent vertex, producing a code of length $n-2$.
 > **Inverse algorithm:** Given the remaining code $c_1,\ldots,c_r$ and the set of labels not yet deleted, choose the largest label $\ell$ that does not appear in the remaining code. Add the edge $\{\ell,c_1\}$, remove $\ell$ and the first code entry $c_1$, and repeat. When the code is exhausted, connect the final two labels.
-> **Why the choice exists and is unique:** In the remaining tree, the labels absent from the remaining code are exactly the vertices eligible to be deleted as leaves before ever appearing as a recorded neighbour. Choosing the largest one reproduces the encoding rule. Each forward deletion is undone by one inverse step, so the procedure reconstructs a unique tree. Thus labelled trees are in bijection with $\{1,\ldots,n\}^{n-2}$,
+> **Why the choice exists and is unique:** In the remaining tree, the labels absent from the remaining code are exactly the vertices eligible to be deleted as leaves before ever appearing as a recorded neighbour. Choosing the largest one reproduces the encoding rule. Each forward deletion is undone by one inverse step, so the procedure reconstructs a unique tree. Thus labelled trees are in bijection with $\{1,\ldots,n\}^{n-2}$ and their number is $n^{n-2}$.
 > <!-- bilingual-en:end -->
 
 > [!example]- C25-3 两层双射
@@ -2267,8 +2145,7 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > 则 $x_i\ge0$ 且 $\sum_{i=1}^kx_i=y_k\le n$，得到 $S_{n,k}$。逆映射为 $y_i=\sum_{j=1}^ix_j$。因此两集合双射，大小均为 $\binom{n+k}{k}$。
 > <!-- bilingual-en:start -->
 > **(a)** For $S_{n,k}=\{(x_1,\ldots,x_k)\in\mathbb N^k:\sum x_i\le n\}$, introduce the slack variable $x_{k+1}=n-\sum_{i=1}^kx_i$. Encode the vector as a string containing exactly $n$ zeros and $k$ ones. Splitting the string at its ones and counting the zeros in each segment recovers the vector, so the map is bijective.
-> **(b)**For weakly increasing sequences $0\le y_1\le\cdots\le y_k\le n$,
-> $x_i\ge0$ and $\sum_{i=1}^kx_i=y_k\le n$, resulting in $S_{n,k}$.  The inverse mapping is $y_i=\sum_{j=1}^ix_j$.  Therefore, the two sets are bijective, the size of which is $\binom{n+k}{k}$.
+> **(b)** For a weakly increasing sequence $0\le y_1\le\cdots\le y_k\le n$, set $x_1=y_1$ and $x_i=y_i-y_{i-1}$ for $i\ge2$. Then every $x_i\ge0$ and $\sum_{i=1}^kx_i=y_k\le n$, giving an element of $S_{n,k}$. The inverse map is $y_i=\sum_{j=1}^ix_j$. Hence the two sets are bijective and both have size $\binom{n+k}{k}$.
 > <!-- bilingual-en:end -->
 
 > [!example]- C25-4 关系、函数、部分函数、子集与置换
@@ -2287,11 +2164,10 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > **(e)** 双射 $X\to X$ 按固定标签次序写出像序列，恰是 $X$ 的一个排列；逆向由排列定义函数。因此有 $\boxed{m!}$ 个。
 > <!-- bilingual-en:start -->
 > Let $|X|=m,|Y|=q$ and assume $Y\ne\varnothing$.
-> **(a)**The binary relation is any subset of $X\times Y$
+> **(a)** A binary relation is an arbitrary subset of $X\times Y$, so there are $\boxed{2^{mq}}$ relations.
 > **(b)** Fix an ordering $X=(x_1,\ldots,x_m)$. The map $f\mapsto(f(x_1),\ldots,f(x_m))$ is a bijection from the set of total functions $X\to Y$ to $Y^m$, so there are $\boxed{q^m}$ such functions.
-> **(c)**Some of the functions have an additional choice of $q$ images or "undefined" for each $x$ of $\boxed{(q+1)^m}$.  their ratio to the number of whole functions
-> For a fixed $q$, the growth is exponential and is $O(2^m)$, not $O(1)$ or $O(m)$.
-> **(d)**The subset $S\subseteq X$ is mapped to the characteristic function $\mathbf1_S:X\to\{0,1\}$; the inverse mapping is $f^{-1}(1)$, so $|\operatorname{pow}(X)|=2^m$.
+> **(c)** For each $x$, a partial function has $q$ possible images plus the additional choice “undefined,” giving $\boxed{(q+1)^m}$ functions. The ratio to the number of total functions is $(1+1/q)^m$. For fixed $q$, it grows exponentially and is $O(2^m)$, not $O(1)$ or $O(m)$.
+> **(d)** Map a subset $S\subseteq X$ to its characteristic function $\mathbf1_S:X\to\{0,1\}$. The inverse sends $f$ to $f^{-1}(1)$, so $|\operatorname{pow}(X)|=2^m$.
 > **(e)** For a bijection $X\to X$, list the images in a fixed order of the domain. This produces a permutation of $X$, and every permutation defines a unique bijection in reverse. Hence there are $\boxed{m!}$ bijections.
 > <!-- bilingual-en:end -->
 
@@ -2319,12 +2195,12 @@ $$
 
 **学习问题**：多对一映射怎样安全地除掉重复？有重复字母的排列、无序分组、组合数与多项式系数为何是同一个结构？
 <!-- bilingual-en:start -->
-**Learning Questions**: How can many-to-one mappings safely eliminate duplicates?  Why is the arrangement of repeating letters, unordered grouping, number of combinations, and polynomial coefficients the same structure?
+**Learning questions**: How can a many-to-one map remove overcounting safely? Why do permutations with repeated letters, unlabeled groupings, binomial coefficients, and multinomial coefficients all share the same structure?
 <!-- bilingual-en:end -->
 
 **前置知识**：Session 25 的和、积、双射；阶乘；集合与序列。
 <!-- bilingual-en:start -->
-**Prerequisites**: Sum, Product, Bijective; Factorial; Set and Sequence for Session 25.
+**Prerequisites**: the sum rule, product rule, and bijections from Session 25; factorials; sets; and sequences.
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session26.pdf#page=1|Session 26 reading, pp. 1–15]]
@@ -2332,17 +2208,14 @@ $$
 
 ### 3.4.1 Generalized Counting Rules — 依赖选择与除法
 <!-- bilingual-en:start -->
-*3.4.1 Generalized Counting Rules—Dependent Selection and Division*
+*3.4.1 Generalized Counting Rules — Dependent Choices and Division*
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_Generalized.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/iDfyX8WRIyM.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=iDfyX8WRIyM)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_Generalized.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/iDfyX8WRIyM.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=iDfyX8WRIyM)
-<!-- bilingual-en:end -->
 
 #### 广义乘法法则
 <!-- bilingual-en:start -->
-*generalized multiplication rule*
+*The generalized product rule*
 <!-- bilingual-en:end -->
 
 若一个合法对象由 $k$ 步构造，并且对每个合法的前 $i-1$ 步前缀，第 $i$ 步都**恰有** $m_i$ 种合法延伸，则对象数为
@@ -2391,12 +2264,12 @@ $$
 
 #### 圆排列
 <!-- bilingual-en:start -->
-*Circle arrangement*
+*Circular permutations*
 <!-- bilingual-en:end -->
 
 $n$ 个不同对象排成圆，若旋转视为相同，则线性排列到圆排列是 $n$-to-1，数量
 <!-- bilingual-en:start -->
-$n$ different objects arranged in circles, if rotation is treated as the same, the linear arrangement to circles arrangement is $n$-to-1, quantity
+Arrange $n$ distinct objects on a circle and regard rotations as identical. The map from linear permutations to circular arrangements is $n$-to-1, so the number of arrangements is
 <!-- bilingual-en:end -->
 
 $$
@@ -2409,9 +2282,6 @@ $$
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S26_3.4.2_choosing-integers|3.4.2]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S26_3.4.2_choosing-integers|3.4.2]]
-<!-- bilingual-en:end -->
 
 > [!success]- 官方答案与反馈
 > 闭区间 $[3,15]$ 含 $15-3+1=13$ 个整数，任选 2 个有
@@ -2420,23 +2290,19 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 > $$
 > 种。
 > <!-- bilingual-en:start -->
-> Closed interval $[3,15]$ contains $15-3+1=13$ integers, optionally 2 have
-> Seed.
+> The closed interval $[3,15]$ contains $15-3+1=13$ integers. Choosing any two gives $\boxed{\binom{13}{2}=78}$ possibilities.
 > <!-- bilingual-en:end -->
 
 ### 3.4.3 Two Pair Poker Hands — 先选结构，再选位置
 <!-- bilingual-en:start -->
-*3.4.3 Two Pair Poker Hands—structure first, then location*
+*3.4.3 Two-Pair Poker Hands — Choose the Structure, Then the Suits*
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_TwoPairPoker.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/HswnmlLPGZ4.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=HswnmlLPGZ4)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_TwoPairPoker.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/HswnmlLPGZ4.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=HswnmlLPGZ4)
-<!-- bilingual-en:end -->
 
 标准 52 张牌有 13 个点数、每点数 4 个花色。计数时把“点数角色”与“花色位置”分开：
 <!-- bilingual-en:start -->
-The standard 52 cards have 13 points and 4 colors per point.  Separate Point Role from Fancy Position when counting:
+A standard 52-card deck has 13 ranks and four suits for each rank. Count the roles played by the ranks separately from the choices of suits:
 <!-- bilingual-en:end -->
 
 - 四条：选四条点数 $13$；选边牌点数 $12$；选边牌花色 $4$：
@@ -2446,11 +2312,11 @@ The standard 52 cards have 13 points and 4 colors per point.  Separate Point Rol
 - 两对：先选两个对子点数（无序），为各对选 2 花色，再选第五张点数与花色：
   $$\boxed{\binom{13}{2}\binom42^2\cdot11\cdot4}.$$
 <!-- bilingual-en:start -->
-- Four: select four points $13$; select side card points $12$; select side card suits $4$:
+- Four of a kind: choose its rank in $13$ ways, the kicker's rank in $12$ ways, and the kicker's suit in $4$ ways:
   $$13\cdot12\cdot4=624.$$
-- Gourd: Choose 3 points and 3 suits, then choose a pair of sub points and 2 suits:
+- Full house: choose the rank and three suits for the triple, then the rank and two suits for the pair:
   $$13\binom43\cdot12\binom42.$$
-- Two pairs: first select two pairs of sub-points (out of order), select 2 suits for each pair, and then select the fifth pair of points and suits:
+- Two pair: choose the two pair ranks as an unordered set, choose two suits for each pair, then choose the fifth card's rank and suit:
   $$\boxed{\binom{13}{2}\binom42^2\cdot11\cdot4}.$$
 <!-- bilingual-en:end -->
 
@@ -2461,17 +2327,14 @@ If the two pairs are selected in an ordered first-pair/second-pair procedure, ea
 
 ### 3.4.4 Binomial Theorem — 系数就是选择位置
 <!-- bilingual-en:start -->
-*3.4.4 Binomial Theorem — Coefficient is the location of the selection*
+*3.4.4 Binomial Theorem — Coefficients Count Choices of Positions*
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_BinomialTheo.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/jwjDj4GoSV0.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=jwjDj4GoSV0)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_BinomialTheo.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/jwjDj4GoSV0.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=jwjDj4GoSV0)
-<!-- bilingual-en:end -->
 
 [[组合计数原理#二项式、鸽巢与容斥|二项式定理]]：对非负整数 $n$，
 <!-- bilingual-en:start -->
-[[组合计数原理#二项式、鸽巢与容斥|binomial theorem]]: non-negative integer $n$,
+The [[组合计数原理#二项式、鸽巢与容斥|binomial theorem]] states that, for every nonnegative integer $n$,
 <!-- bilingual-en:end -->
 
 $$
@@ -2480,19 +2343,19 @@ $$
 
 **完整组合证明**：把左边写成 $n$ 个因子的积。展开中的每一项都从每个因子选一次 $a$ 或 $b$。要得到 $a^{n-k}b^k$，必须在恰好 $k$ 个因子位置选 $b$；位置集合有 $\binom nk$ 种。每种选择贡献同一个单项式，故其系数为 $\binom nk$。所有 $k=0,\ldots,n$ 情形互斥且穷尽，定理成立。
 <!-- bilingual-en:start -->
-**Complete combination proof**: Write the left side as a product of $n$ factors.  Each item in the expansion selects $a$ or $b$ from each factor once.  To get $a^{n-k}b^k$, you must select $b$ in exactly $k$ factor positions; the set of positions has $\binom nk$ types.  Each choice contributes to the same monomial, so its coefficient is $\binom nk$.  All $k=0,\ldots,n$ cases are mutually exclusive and exhaustive, and the theorem holds.
+**Complete combinatorial proof:** Write the left-hand side as a product of $n$ factors. Each term in the expansion chooses either $a$ or $b$ from every factor. To obtain $a^{n-k}b^k$, choose $b$ from exactly $k$ factor positions; there are $\binom nk$ such position sets. Every choice contributes the same monomial, so its coefficient is $\binom nk$. The cases $k=0,\ldots,n$ are disjoint and exhaustive.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit03-binomial-paths.png|900]]
 
 读图：从格点起点到终点的每条最短路径对应一个由“横步/竖步”组成的二进制串；固定竖步数就是选择这些步出现的位置，因此路径数与二项式系数是同一个计数对象。
 <!-- bilingual-en:start -->
-Read: Each shortest path from the start point to the end point of the grid corresponds to a binary string consisting of "horizontal/vertical steps"; the fixed number of vertical steps is to select the location where these steps occur, so the number of paths and the binomial coefficient are the same counting object.
+How to read the diagram: every shortest lattice path corresponds to a binary string of horizontal and vertical steps. Fixing the number of vertical steps amounts to choosing their positions, so counting paths and computing a binomial coefficient are the same counting problem.
 <!-- bilingual-en:end -->
 
 #### Pascal 恒等式
 <!-- bilingual-en:start -->
-*Pascal identities*
+*Pascal's identity*
 <!-- bilingual-en:end -->
 
 从 $n$ 元集合选 $k$ 个，固定元素 $x$：不选 $x$ 有 $\binom{n-1}{k}$ 种，选 $x$ 后还需从其余选 $k-1$ 个，有 $\binom{n-1}{k-1}$ 种。两类互斥且穷尽，所以
@@ -2508,22 +2371,19 @@ $$
 
 读图：星代表被分配的相同对象，隔板把它们切成各变量的数量；选择隔板位置等价于选择一个组合，因此非负整数解数是 $\binom{n+k-1}{k-1}$。
 <!-- bilingual-en:start -->
-Read: stars represent the same objects that are assigned, and the clapboard cuts them into the number of variables; selecting the position of the clapboard is equivalent to selecting a combination, so the non-negative integer solution is $\binom{n+k-1}{k-1}$.
+How to read the diagram: stars represent identical objects being distributed, and bars divide them into the amounts assigned to each variable. Choosing the bar positions is an ordinary subset choice, so the number of nonnegative integer solutions is $\binom{n+k-1}{k-1}$.
 <!-- bilingual-en:end -->
 
 ### 3.4.5 Multinomial Theorem — 多种选择的统一形式
 <!-- bilingual-en:start -->
-*3.4.5 Multinomial Theorem—Unified Form of Multiple Choices*
+*3.4.5 Multinomial Theorem — A Unified Form for Several Choices*
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_Bookkeeper.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/juGgfHsO-xM.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=juGgfHsO-xM)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_Bookkeeper.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/juGgfHsO-xM.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=juGgfHsO-xM)
-<!-- bilingual-en:end -->
 
 [[组合计数原理#排列、组合与重复|多项式定理（multinomial theorem）]]从多类位置分配出发。若 $k_1+\cdots+k_m=n$，把 $n$ 个不同位置分成大小分别为 $k_1,\ldots,k_m$ 的有标号组，方式数为多项式系数
 <!-- bilingual-en:start -->
-[[组合计数原理#排列、组合与重复|multinomial theorem]] starts with multi-class location assignment.  If $k_1+\cdots+k_m=n$, $n$ different locations are divided into labeled groups of $k_1,\ldots,k_m$ in size, and the mode number is polynomial coefficient
+The [[组合计数原理#排列、组合与重复|multinomial theorem]] begins with assigning positions to several labelled classes. If $k_1+\cdots+k_m=n$, the number of ways to divide $n$ distinct positions into labelled groups of sizes $k_1,\ldots,k_m$ is the multinomial coefficient
 <!-- bilingual-en:end -->
 
 $$
@@ -2538,7 +2398,7 @@ There are $n!$ linear orderings of all positions. Within a fixed grouping, the $
 
 多项式定理为
 <!-- bilingual-en:start -->
-Polynomial theorem is
+The multinomial theorem is
 <!-- bilingual-en:end -->
 
 $$
@@ -2583,11 +2443,13 @@ Temporarily distinguish repeated letters with subscripts, giving $n!$ permutatio
 4. 两对扑克的两个对子无标签，若有序选点数就会重复两次。
 5. 多项式系数的下标必须和为总次数，否则该单项式系数为 $0$。
 <!-- bilingual-en:start -->
-1. Division Rule requires the original number of pixels to be identical for each target object; "most have $k$" is not enough.
-2. Circular alignments do not automatically eliminate reflections except for rotation; if the mirrors are also considered identical, a symmetry analysis is also required.
-3. Choose Stars and Bars for the same object and $\binom nk$ for a subset of different objects, so there is no confusion.
-4. Two pairs of poker are unlabeled and repeat twice if you select points in an orderly fashion.
-5. The subscript of the polynomial coefficient must be summed up to the total number of times, otherwise the monomial coefficient is $0$.
+
+&nbsp;
+**1.** The division rule requires every target object to have exactly the same number of preimages; “most have $k$” is not enough.<br>
+**2.** Circular permutations identify rotations, not reflections. If mirror images are also identical, analyse that additional symmetry separately.<br>
+**3.** Use Stars and Bars for identical objects chosen with repetition; use $\binom nk$ for subsets of distinct objects.<br>
+**4.** The two pair ranks in a two-pair poker hand are unlabeled. Choosing them in order counts every hand twice.<br>
+**5.** The lower indices of a multinomial coefficient must sum to the total degree; otherwise the corresponding monomial has coefficient $0$.<br>
 <!-- bilingual-en:end -->
 
 ### Session 26 自检
@@ -2605,14 +2467,14 @@ Temporarily distinguish repeated letters with subscripts, giving $n!$ permutatio
 > 共 11 个字母，$I$ 有 4 个、$S$ 有 4 个、$P$ 有 2 个、$M$ 有 1 个：
 > $$\frac{11!}{4!4!2!}.$$
 > <!-- bilingual-en:start -->
-> There are 4 for $I$, 4 for $S$, 2 for $P$, 1 for $M$, 1 for 11 letters:
+> There are 11 letters: four $I$s, four $S$s, two $P$s, and one $M$. Therefore the number of distinct permutations is
 > $$\frac{11!}{4!4!2!}.$$
 > <!-- bilingual-en:end -->
 
 > [!question] 自检 26-2
 > 求 $(2x-y)^5$ 中 $x^3y^2$ 的系数。
 > <!-- bilingual-en:start -->
-> The coefficients of $x^3y^2$ in $(2x-y)^5$ are calculated.
+> Find the coefficient of $x^3y^2$ in $(2x-y)^5$.
 > <!-- bilingual-en:end -->
 
 > [!answer]- 答案
@@ -2626,7 +2488,7 @@ Temporarily distinguish repeated letters with subscripts, giving $n!$ permutatio
 > [!question] 自检 26-3
 > 10 个不同学生围圆桌就座，旋转相同、反射不同，有多少种？
 > <!-- bilingual-en:start -->
-> 10 different students sit around a round table, rotating the same, reflecting different, how many?
+> How many seatings are there for 10 distinct students around a round table if rotations are identical but reflections are distinct?
 > <!-- bilingual-en:end -->
 
 > [!answer]- 答案
@@ -2637,13 +2499,10 @@ Temporarily distinguish repeated letters with subscripts, giving $n!$ permutatio
 
 ### Classroom Problems 26 — 5 题完整独立题解
 <!-- bilingual-en:start -->
-*Classroom Problems 26 — 5 complete independent questions*
+*Classroom Problems 26 — complete independent solutions to five problems*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp26.pdf#page=1|cp26 pp. 1–4]]
-<!-- bilingual-en:start -->
-Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp26.pdf#page=1|cp26 pp. 1–4]]
-<!-- bilingual-en:end -->
 
 > [!example]- C26-1 把 12 人分成 4 个三人组
 > **(a)** 线性名单按连续 3 人切成有序四组。每组内部 $3!$ 种排列不改变组序，所以映射为
@@ -2705,24 +2564,24 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > **(o)** 长 52 串恰有 17 个 2、23 个 5、12 个 9：
 > $$\boxed{\frac{52!}{17!23!12!}}.$$
 > <!-- bilingual-en:start -->
-> The letters in `POKE` are distinct, so there are $4!=24$ permutations.
+> **(a)** The letters in `POKE` are distinct, so there are $4!=24$ permutations.
 > **(b)** The symbols in `BO₁O₂K` are distinct, so there are $4!=24$ permutations.
 > **(c)** Erase the subscripts on the two O's. For example, `O₂BO₁K` and `O₁BO₂K` both map to `OBOK`; `KO₂BO₁` and `KO₁BO₂` both map to `KOBO`; and `BO₁O₂K` and `BO₂O₁K` both map to `BOOK`.
 > **(d)** Every unsubscripted arrangement has exactly $2!$ preimages, so the map is $2$-to-1.
-> **(e)**`BOOK`:$4!/2!=12$.
+> **(e)** `BOOK`: $4!/2!=12$.
 > **(f)** The six symbols in `KE₁E₂PE₃R` are distinct, so there are $6!=720$ permutations.
 > **(g)** The six preimages of `REPEEK` are
 > `RE₁PE₂E₃K`,`RE₁PE₃E₂K`,`RE₂PE₁E₃K`,`RE₂PE₃E₁K`,`RE₃PE₁E₂K`,`RE₃PE₂E₁K`.
-> **(h)**This is $3!=6$-to-1.
-> **(i)**`KEEPER`:$6!/3!=120$.
+> **(h)** This map is $3!=6$-to-1.
+> **(i)** `KEEPER`: $6!/3!=120$.
 > **(j)** The ten symbols in `BO₁O₂K₁K₂E₁E₂PE₃R` are distinct, so there are $10!$ permutations.
-> **(k)**Two O's are the same: $10!/2!$.
-> **(l)**Two O's, two K's the same: $10!/(2!2!)$.
-> **(m)**Two O, Two K, Three E in `BOOKKEEPER`:
+> **(k)** Identifying the two O's gives $10!/2!$.
+> **(l)** Identifying both O's and both K's gives $10!/(2!2!)$.
+> **(m)** `BOOKKEEPER` has two O's, two K's, and three E's:
 > $$\boxed{\frac{10!}{2!2!3!}=151200}.$$
-> **(n)**Five O, two D, two L in `VOODOODOLL`:
+> **(n)** `VOODOODOLL` has five O's, two D's, and two L's:
 > $$\boxed{\frac{10!}{5!2!2!}=7560}.$$
-> **(o)**17 x2, 23 x5, 12 x9 for 52 long strings:
+> **(o)** A length-52 string with seventeen 2s, twenty-three 5s, and twelve 9s has
 > $$\boxed{\frac{52!}{17!23!12!}}.$$
 > <!-- bilingual-en:end -->
 
@@ -2732,10 +2591,10 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > $$\boxed{\binom{17}{8}3^8 2^9}.$$
 > **(c)** $(a^2+b^3)^5$ 中 $a^6b^6$：需选 3 个 $a^2$、2 个 $b^3$，系数 $\boxed{\binom53=10}$。
 > <!-- bilingual-en:start -->
-> **(a)**$x^5$ coefficient in $(1+x)^{11}$: $\boxed{\binom{11}{5}}$.
-> **(b)**$x^8y^9$ coefficient in $(3x+2y)^{17}$:
+> **(a)** The coefficient of $x^5$ in $(1+x)^{11}$ is $\boxed{\binom{11}{5}}$.
+> **(b)** The coefficient of $x^8y^9$ in $(3x+2y)^{17}$ is
 > $$\boxed{\binom{17}{8}3^8 2^9}.$$
-> **(c)**$a^6b^6$ in $(a^2+b^3)^5$: 3 $a^2$ required, 2 $b^3$ required, factor $\boxed{\binom53=10}$.
+> **(c)** To obtain $a^6b^6$ in $(a^2+b^3)^5$, choose $a^2$ from three factors and $b^3$ from two. The coefficient is $\boxed{\binom53=10}$.
 > <!-- bilingual-en:end -->
 
 > [!example]- C26-5 分配任务与六位数字
@@ -2748,8 +2607,8 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > \boxed{6\binom{12}{4}=2970}.
 > $$
 > <!-- bilingual-en:start -->
-> **(a)**Nine people are assigned five tagged tasks each with a $1,2,3,1,2$ population:
-> **(b)**Writes a non-negative integer less than $10^6$ as a six-bit, allowing leading zeros.  Choose the location of the only number 9. There are six.  The sum of the remaining five digits is $8$; any single component of the non-negative solution is automatically no more than $8$, so there is no additional numerical upper bound problem.  The number of solutions is $\binom{12}{4}$, total
+> **(a)** Assign nine people to five labelled tasks whose group sizes are $1,2,3,1,2$. The number of assignments is $\binom{9}{1,2,3,1,2}=9!/(1!2!3!1!2!)$.
+> **(b)** Write each nonnegative integer below $10^6$ as a six-digit string with leading zeros. Choose the position of the unique digit 9 in six ways. The other five digits must sum to $8$; every component of a nonnegative solution is automatically at most $8$, so no extra digit bound is needed. There are $\binom{12}{4}$ such solutions, giving $\boxed{6\binom{12}{4}=2970}$ in total.
 > <!-- bilingual-en:end -->
 
 ### Session 26 知识链小结
@@ -2777,12 +2636,12 @@ $$
 
 **学习问题**：不知道对象具体分布时，怎样仅凭数量保证碰撞？多个“坏事件”重叠时，怎样既不漏数也不重复计数？
 <!-- bilingual-en:start -->
-**Learning Problem**: How to guarantee collision only by quantity when the object's distribution is unknown?  How do I count without missing or repeating when multiple "bad events" overlap?
+**Learning questions**: When the exact distribution is unknown, how can sheer quantity force a collision? When several “bad events” overlap, how can they be counted without omissions or duplicates?
 <!-- bilingual-en:end -->
 
 **前置知识**：函数与单射、组合数、二项式定理、加法法则。首次正式使用 [[组合计数原理#二项式、鸽巢与容斥|鸽巢原理]] 与 [[组合计数原理#二项式、鸽巢与容斥|容斥原理]]。
 <!-- bilingual-en:start -->
-**Prerequisite knowledge:** functions and injections, binomial coefficients, the binomial theorem, and the addition rule. This session gives the first formal use of the [[组合计数原理#二项式、鸽巢与容斥|pigeonhole principle]] and the [[组合计数原理#二项式、鸽巢与容斥|inclusion–exclusion principle]].
+**Prerequisites:** functions and injections, binomial coefficients, the binomial theorem, and the addition rule. This session gives the first formal use of the [[组合计数原理#二项式、鸽巢与容斥|pigeonhole principle]] and the [[组合计数原理#二项式、鸽巢与容斥|inclusion–exclusion principle]].
 <!-- bilingual-en:end -->
 
 - Reading：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session27.pdf#page=1|Session 27 reading, pp. 1–11]]
@@ -2790,17 +2649,14 @@ $$
 
 ### 3.5.1 The Pigeonhole Principle — 数量迫使碰撞
 <!-- bilingual-en:start -->
-*3.5.1 The Pigeonhole Principle — Quantity Forced Collision*
+*3.5.1 The Pigeonhole Principle — Quantity Forces a Collision*
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_ThePigeonhol.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/4Dz4vNUxnZM.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=4Dz4vNUxnZM)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_ThePigeonhol.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/4Dz4vNUxnZM.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=4Dz4vNUxnZM)
-<!-- bilingual-en:end -->
 
 #### 基本形式
 <!-- bilingual-en:start -->
-*basic form*
+*Basic form*
 <!-- bilingual-en:end -->
 
 若有限集合 $A,B$ 满足 $|A|>|B|$，则任何全函数 $f:A\to B$ 都不是单射。
@@ -2815,16 +2671,18 @@ If finite sets $A$ and $B$ satisfy $|A|>|B|$, then no total function $f:A\to B$ 
 
 在应用中必须明确三件事：
 <!-- bilingual-en:start -->
-There are three things to be clear about an app:
+Every application must identify three things clearly:
 <!-- bilingual-en:end -->
 
 1. pigeons 是哪些对象；
 2. holes 是哪些类别；
 3. 函数怎样把每个对象唯一分配到一个类别。
 <!-- bilingual-en:start -->
-1. What objects are pigeons;
-2. What categories of holes are;
-3. How the function assigns each object uniquely to a category.
+
+&nbsp;
+**1.** which objects are the pigeons;<br>
+**2.** which categories are the holes;<br>
+**3.** how the function assigns each object to exactly one category.<br>
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit03-pigeonhole-principle.png|900]]
@@ -2836,7 +2694,7 @@ How to read the diagram: a function sends each pigeon to a hole. If there are mo
 
 #### 广义形式
 <!-- bilingual-en:start -->
-*generalized form*
+*Generalised form*
 <!-- bilingual-en:end -->
 
 把 $N$ 个对象放入 $m$ 个类别，至少有一个类别含
@@ -2850,12 +2708,12 @@ $$
 
 个对象。等价地，若 $N>km$，某类至少有 $k+1$ 个。
 <!-- bilingual-en:start -->
-objects.  Equivalently, if $N>km$, there are at least $k+1$ of a certain class.
+objects. Equivalently, if $N>km$, some category contains at least $k+1$ objects.
 <!-- bilingual-en:end -->
 
 **证明**：反设每类至多 $k$ 个，则总对象数至多 $km$，与 $N>km$ 矛盾。取 $k=\lceil N/m\rceil-1$ 即得向上取整形式。
 <!-- bilingual-en:start -->
-**Proof**: If there are no more than $k$ objects in each class, the total number of objects is no more than $km$, which is in contradiction with $N>km$.  $k=\lceil N/m\rceil-1$ is rounded up.
+**Proof:** If every category contained at most $k$ objects, the total would be at most $km$, contradicting $N>km$. Taking $k=\lceil N/m\rceil-1$ gives the ceiling form.
 <!-- bilingual-en:end -->
 
 > [!tip] 反向设计阈值
@@ -2864,7 +2722,7 @@ objects.  Equivalently, if $N>km$, there are at least $k+1$ of a certain class.
 > (r-1)m+1.
 > $$
 > <!-- bilingual-en:start -->
-> To ensure that a nest has at least $r$, the worst-case scenario would be to put $r-1$ in each nest first, so the minimum sufficient total is
+> To guarantee that some hole contains at least $r$ objects, the worst case fills every hole with $r-1$ objects first. The smallest sufficient total is therefore
 > <!-- bilingual-en:end -->
 
 ### 3.5.2 Rolling Dice — 官方在线题 O27-01
@@ -2873,13 +2731,10 @@ objects.  Equivalently, if $N>km$, there are at least $k+1$ of a certain class.
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S27_3.5.2_rolling-dice|3.5.2]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S27_3.5.2_rolling-dice|3.5.2]]
-<!-- bilingual-en:end -->
 
 掷两枚骰子 25 次，记录和。可能的和是整数 $2,3,\ldots,12$，共
 <!-- bilingual-en:start -->
-25 dice tossed, and...  Possible sums are integers $2,3,\ldots,12$ of
+Roll two dice 25 times and record each sum. The possible sums are the integers $2,3,\ldots,12$, giving
 <!-- bilingual-en:end -->
 
 $$
@@ -2888,42 +2743,39 @@ $$
 
 个巢，故至少一个和出现 $\lceil25/11\rceil=3$ 次。
 <!-- bilingual-en:start -->
-Nest, so at least one and appear $\lceil25/11\rceil=3$ times.
+holes. Therefore at least one sum appears $\lceil25/11\rceil=3$ times.
 <!-- bilingual-en:end -->
 
 > [!success]- 官方答案与勘误
 > **O27-01**：$\boxed{3}$。官方反馈写作 $\lceil25/(12-2)\rceil=3$，分母少了端点计数的 $+1$；正确巢数是 11。这个笔误不改变最终答案，因为 $\lceil25/10\rceil$ 与 $\lceil25/11\rceil$ 都是 3。
 > <!-- bilingual-en:start -->
-> **O27-01**:$\boxed{3}$.  Official feedback is written as $\lceil25/(12-2)\rceil=3$, with the denominator minus the $+1$ of the endpoint count; the correct number of nests is 11.  This error does not change the final answer, because $\lceil25/10\rceil$ and $\lceil25/11\rceil$ are both 3.
+> **O27-01:** $\boxed{3}$. The official feedback writes $\lceil25/(12-2)\rceil=3$, omitting the $+1$ required when counting both endpoints. The correct number of holes is 11. This typo does not change the final answer because both $\lceil25/10\rceil$ and $\lceil25/11\rceil$ equal 3.
 > <!-- bilingual-en:end -->
 
 ### 3.5.3 Inclusion–Exclusion Example — 从 6042 模式看三集合
 <!-- bilingual-en:start -->
-*3.5.3 Inclusion-Exclusion Example—View three collections from 6042 mode*
+*3.5.3 Inclusion–Exclusion Example — Three Sets from the Pattern 6042*
 <!-- bilingual-en:end -->
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_InculionExcl.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/51-b2mgZVNY.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=51-b2mgZVNY)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_InculionExcl.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/51-b2mgZVNY.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=51-b2mgZVNY)
-<!-- bilingual-en:end -->
 
 考虑数字 $0,1,\ldots,9$ 的排列，求至少含连续模式 `60`、`04`、`42` 之一的排列数。令 $P_{60},P_{04},P_{42}$ 分别表示含对应模式的集合。
 <!-- bilingual-en:start -->
-Consider the arrangement of the number $0,1,\ldots,9$, find the number of the arrangement containing at least one of the continuous modes `60`, `04`, `42`.  Let $P_{60},P_{04},P_{42}$ represent the set with corresponding patterns respectively.
+Consider permutations of the digits $0,1,\ldots,9$. Count those containing at least one of the consecutive patterns `60`, `04`, or `42`. Let $P_{60},P_{04},P_{42}$ denote the sets containing the corresponding patterns.
 <!-- bilingual-en:end -->
 
 - 单个模式视作一个块，与其余 8 个数字共 9 个对象，所以每个 $|P_x|=9!$。
 - 任意两个模式同时出现时都可压成 8 个对象：不重叠的 `60` 与 `42` 是两个块；相接的 `60` 与 `04` 压成 `604`。故每个二重交集为 $8!$。
 - 三者同时出现必须含 `6042`，把它视为一个块后共 7 个对象，所以三重交集为 $7!$。
 <!-- bilingual-en:start -->
-- A single pattern is treated as a block with 9 objects for the remaining 8 numbers, so each $|P_x|=9!$.
+- Treating one pattern as a block leaves nine objects in total, so each $|P_x|=9!$.
 - When any two patterns occur together, they can be compressed into 8 objects: the disjoint patterns `60` and `42` form two blocks, while the adjacent patterns `60` and `04` combine into the single block `604`. Therefore, each pairwise intersection has size $8!$.
-- All three must contain `6042`, which is treated as a block and has a total of seven objects, so the triple intersection is $7!$.
+- If all three patterns occur, they form `6042`. Treating this as one block leaves seven objects, so the triple intersection has size $7!$.
 <!-- bilingual-en:end -->
 
 容斥给出
 <!-- bilingual-en:start -->
-inclusion-exclusion
+Inclusion–exclusion gives
 <!-- bilingual-en:end -->
 
 $$
@@ -2939,18 +2791,15 @@ Adding the three single-set counts includes every pairwise overlap twice, so tho
 ### 3.5.4 Inclusion–Exclusion: Two Sets and General Form
 
 资源：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_InclExclEx.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/nwpzBE9IwJQ.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=nwpzBE9IwJQ)
-<!-- bilingual-en:start -->
-Resources: [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS16_InclExclEx.pdf#page=1|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/nwpzBE9IwJQ.pdf#page=1|transcript]] · [video](https://www.youtube.com/watch?v=nwpzBE9IwJQ)
-<!-- bilingual-en:end -->
 
 #### 两集合公式的严格证明
 <!-- bilingual-en:start -->
-*Strict Proof of Two-Set Formula*
+*A rigorous proof of the two-set formula*
 <!-- bilingual-en:end -->
 
 集合 $A\cup B$ 可写成不交并
 <!-- bilingual-en:start -->
-The set $A\cup B$ can be written as a disjoint
+The set $A\cup B$ can be written as the disjoint union
 <!-- bilingual-en:end -->
 
 $$
@@ -2959,7 +2808,7 @@ $$
 
 所以 $|A\cup B|=|A|+|B\setminus A|$。另一方面，$B$ 是不交并
 <!-- bilingual-en:start -->
-So, $|A\cup B|=|A|+|B\setminus A|$.  On the other hand, $B$ is disjoint
+Hence $|A\cup B|=|A|+|B\setminus A|$. On the other hand, $B$ is the disjoint union
 <!-- bilingual-en:end -->
 
 $$
@@ -2968,7 +2817,7 @@ $$
 
 所以 $|B\setminus A|=|B|-|A\cap B|$。代入即得
 <!-- bilingual-en:start -->
-So, $|B\setminus A|=|B|-|A\cap B|$.  be easily received
+Thus $|B\setminus A|=|B|-|A\cap B|$. Substitution gives
 <!-- bilingual-en:end -->
 
 $$
@@ -2979,17 +2828,17 @@ $$
 
 读图：直接相加 $|A|+|B|$ 会把交集数两次；减去一次交集后，每个并集元素恰被数一次。三集合及一般形式继续按“奇数层加、偶数层减”修正。
 <!-- bilingual-en:start -->
-Read: Add $|A|+|B|$ directly to count the number of intersections twice; subtract one intersection to count each union element exactly once.  The three sets and the general form are further modified by adding odd layers and subtracting even layers.
+How to read the diagram: adding $|A|+|B|$ counts every element of the intersection twice. Subtracting $|A\cap B|$ once makes every element of the union count exactly once. For three or more sets, continue the correction by adding odd-order intersections and subtracting even-order intersections.
 <!-- bilingual-en:end -->
 
 #### 一般容斥公式及完整计数证明
 <!-- bilingual-en:start -->
-*General Inclusion Formula and Complete Count Proof*
+*The general inclusion–exclusion formula and an elementwise proof*
 <!-- bilingual-en:end -->
 
 对有限集合 $A_1,\ldots,A_n$，
 <!-- bilingual-en:start -->
-For a finite set $A_1,\ldots,A_n$,
+For finite sets $A_1,\ldots,A_n$,
 <!-- bilingual-en:end -->
 
 $$
@@ -3002,7 +2851,7 @@ $$
 
 固定任一元素 $x$。若 $x$ 不在任何集合中，它对两边都贡献 0。若 $x$ 恰在 $r\ge1$ 个集合中，那么右侧所有包含 $x$ 的 $j$ 重交集共有 $\binom rj$ 个，它的总计数权重为
 <!-- bilingual-en:start -->
-Pin either element $x$.  If $x$ is not in any set, it contributes 0 to both sides.  If the $x$ is exactly in the $r\ge1$ set, then the right-hand side of all the $j$ containing the $x$ has a total of $\binom rj$, its total count weight is
+Fix an element $x$. If it belongs to none of the sets, it contributes zero to both sides. If it belongs to exactly $r\ge1$ sets, then it appears in $\binom rj$ of the $j$-fold intersections on the right. Its total weight is therefore
 <!-- bilingual-en:end -->
 
 $$
@@ -3013,18 +2862,15 @@ $$
 
 所以每个并集元素恰被计一次，外部元素不计；两边逐元素相同，公式得证。
 <!-- bilingual-en:start -->
-So every union element is counted once, the exterior element is not counted; the two sides are the same element by element, the formula is proved.
+Thus every element of the union is counted exactly once, while every outside element is counted zero times. The two sides agree element by element, proving the formula.
 <!-- bilingual-en:end -->
 
 ### 3.5.5 Pigeonhole Principle — 官方在线题 O27-02 至 O27-06
 <!-- bilingual-en:start -->
-*3.5.5 Pigeonhole Principle — official online questions O27-02 through O27-06*
+*3.5.5 Pigeonhole Principle — Official Online Questions O27-02 through O27-06*
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S27_3.5.5_pigeonhole-principle|3.5.5]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S27_3.5.5_pigeonhole-principle|3.5.5]]
-<!-- bilingual-en:end -->
 
 | 编号 | 要保证的性质 | 官方答案 | 最坏分布 |
 |---|---|---:|---|
@@ -3034,12 +2880,12 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 | O27-05 | 至少 4 人同月出生 | $37$ | 12 月先各放 3 人 |
 | O27-06 | 至少 2 人生日恰相隔一周 | nh | 所有人可同一天出生 |
 <!-- bilingual-en:start -->
-|Encoding|The nature to be guaranteed|Official Answers|Worst-case Distribution|
-|—|—|—:|—|
-| O27-02 | At least 2 people have birthdays on the same day of the same month | $366$ | 1 person each for 365 days |
+| Number | Property to guarantee | Official answer | Worst-case distribution |
+|---|---|---:|---|
+| O27-02 | At least 2 people share the same birthday | $366$ | First place one person on each of 365 days |
 | O27-03 | At least 2 people born on January 1 | nh | Any number of people can be born on another day |
-| O27-04 | At least 3 people born in the same week | $15$ | 7 categories, 2 people each |
-| O27-05 | At least 4 people born in the same month | $37$ | 3 people each in December |
+| O27-04 | At least 3 people were born on the same day of the week | $15$ | First place 2 people in each of 7 weekday classes |
+| O27-05 | At least 4 people were born in the same month | $37$ | First place 3 people in each of 12 months |
 | O27-06 | At least 2 births occur exactly one week apart | nh | All births occur on the same day |
 <!-- bilingual-en:end -->
 
@@ -3050,17 +2896,14 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 
 ### 3.5.6 6.042 TEAL Table — 官方在线题 O27-07 至 O27-10
 <!-- bilingual-en:start -->
-*3.5.6 6.042 TEAL Table —official online questions O27-07 through O27-10*
+*3.5.6 6.042 TEAL Table — Official Online Questions O27-07 through O27-10*
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S27_3.5.6_6-042-teal-table|3.5.6]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S27_3.5.6_6-042-teal-table|3.5.6]]
-<!-- bilingual-en:end -->
 
 8 名学生围圆桌，旋转相同、反射不同：
 <!-- bilingual-en:start -->
-8 students round table, same rotation, different reflexes:
+Eight students sit around a round table, with rotations identified but reflections treated as distinct:
 <!-- bilingual-en:end -->
 
 | 编号 | 限制 | 官方答案 | 方法 |
@@ -3070,12 +2913,12 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 | O27-09 | Ben 同时邻 Alyssa、Carlos | $2\cdot5!=240$ | 三人块且 Ben 居中 |
 | O27-10 | Ben 邻 Alyssa 或 Carlos | $4\cdot6!-2\cdot5!=2640$ | 两个事件容斥 |
 <!-- bilingual-en:start -->
-|Encoding|Restrictions|Official Answers|Methods|
-|—|—|—:|—|
-| O27-07 | Unlimited | $7!=5040$ | Pin One Eliminate Rotation|
-| O27-08 | Ben | $2\cdot6!=1440$, Alyssa | Treat them as blocks, internal 2nd order |
-| O27-09 | Ben Concurrent with Alyssa, Carlos | $2\cdot5!=240$ | Triple and Ben Centered |
-| O27-10 | Alyssa or Carlos for Ben | $4\cdot6!-2\cdot5!=2640$ | Two events are mutually exclusive |
+| Number | Restriction | Official answer | Method |
+|---|---|---:|---|
+| O27-07 | No restriction | $7!=5040$ | Fix one person to remove rotational symmetry |
+| O27-08 | Alyssa sits next to Ben | $2\cdot6!=1440$ | Treat them as a block with two internal orders |
+| O27-09 | Ben sits next to both Alyssa and Carlos | $2\cdot5!=240$ | Treat the three as a block with Ben in the middle |
+| O27-10 | Ben sits next to Alyssa or Carlos | $4\cdot6!-2\cdot5!=2640$ | Apply inclusion–exclusion to the two adjacency events |
 <!-- bilingual-en:end -->
 
 ### 3.5.7 Class Schedules — 官方在线题 O27-11
@@ -3084,14 +2927,11 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 <!-- bilingual-en:end -->
 
 原题与官方反馈：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S27_3.5.7_class-schedules|3.5.7]]
-<!-- bilingual-en:start -->
-Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S27_3.5.7_class-schedules|3.5.7]]
-<!-- bilingual-en:end -->
 
 > [!success]- 官方答案与反馈
 > 11 门课中恰选 4 门，共 $\binom{11}{4}=330$ 种课表（巢）。要保证两名学生同课表，需要 $330+1=\boxed{331}$ 名学生。
 > <!-- bilingual-en:start -->
-> Out of 11 courses, exactly 4 of them were chosen, with $\binom{11}{4}=330$ class schedules (nests).  $330+1=\boxed{331}$ students are required to ensure two students have the same timetable.
+> Choosing exactly four of 11 courses gives $\binom{11}{4}=330$ possible schedules, which serve as the holes. Therefore $330+1=\boxed{331}$ students guarantee that two students have the same schedule.
 > <!-- bilingual-en:end -->
 
 ### Session 27 易错点与反例
@@ -3105,11 +2945,13 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 4. 容斥的二重交集要减，三重交集要加；符号为 $(-1)^{|S|+1}$。
 5. 把字符串模式视作块时，必须检查模式能否重叠、重叠方向是否唯一。
 <!-- bilingual-en:start -->
-1. The integer of the closed interval is "end-first + 1"; there are 11 kinds of dice and $2$ to $12$.
-2. The pigeonhole principle proves existence; it does not identify exactly where the collision occurs.
-3. "Guaranteeing that there are two persons on a given date" is not a collision problem; it can be avoided by any number of persons.
-4. Inclusive double intersection to subtract, triple intersection to add; the symbol is $(-1)^{|S|+1}$.
-5. When treating a string pattern as a block, you must check whether the patterns overlap and whether the direction of the overlap is unique.
+
+&nbsp;
+**1.** The number of integers in a closed interval is “last minus first plus one”; the possible sums from $2$ through $12$ number 11.<br>
+**2.** The pigeonhole principle proves existence; it does not identify exactly where the collision occurs.<br>
+**3.** “Guarantee that two people were born on one specified date” is not a collision problem; arbitrarily many people may all avoid that date.<br>
+**4.** Inclusion–exclusion subtracts pairwise intersections and adds triple intersections; the sign is $(-1)^{|S|+1}$.<br>
+**5.** When treating a string pattern as a block, you must check whether the patterns overlap and whether the direction of the overlap is unique.<br>
 <!-- bilingual-en:end -->
 
 ### Session 27 自检
@@ -3120,25 +2962,25 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 > [!question] 自检 27-1
 > 至少多少个整数可保证其中两个模 10 同余？
 > <!-- bilingual-en:start -->
-> At least how many integers can guarantee that two of the modules 10 are congruent?
+> How many integers are needed to guarantee that two are congruent modulo 10?
 > <!-- bilingual-en:end -->
 
 > [!answer]- 答案
 > 模 10 有 10 个余数类，需 $10+1=11$ 个整数。
 > <!-- bilingual-en:start -->
-> Module 10 has 10 remainder classes and requires $10+1=11$ integers.
+> There are 10 residue classes modulo 10, so $10+1=11$ integers are required.
 > <!-- bilingual-en:end -->
 
 > [!question] 自检 27-2
 > 100 个对象放入 9 类，至少一类有多少个？
 > <!-- bilingual-en:start -->
-> 100 objects in 9 categories, how many in at least one category?
+> If 100 objects are placed into nine categories, how many objects must some category contain?
 > <!-- bilingual-en:end -->
 
 > [!answer]- 答案
 > $\lceil100/9\rceil=12$。若每类至多 11 个，总数至多 99，矛盾。
 > <!-- bilingual-en:start -->
-> $\lceil100/9\rceil=12$.  If there are at most 11 in each category, the total is at most 99.
+> $\lceil100/9\rceil=12$. If every category contained at most 11 objects, the total would be at most 99, a contradiction.
 > <!-- bilingual-en:end -->
 
 > [!question] 自检 27-3
@@ -3155,13 +2997,10 @@ Origin and official feedback: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises
 
 ### Classroom Problems 27 — 5 题完整独立题解
 <!-- bilingual-en:start -->
-*Classroom Problems 27 — 5 complete independent questions*
+*Classroom Problems 27 — complete independent solutions to five problems*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp27.pdf#page=1|cp27 pp. 1–3]]
-<!-- bilingual-en:start -->
-Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp27.pdf#page=1|cp27 pp. 1–3]]
-<!-- bilingual-en:end -->
 
 > [!example]- C27-1 四个鸽巢构造
 > **(a)** 9 位 ID 首位固定为 9，其数字和最小 $9$、最大 $9+8\cdot9=81$，只有 $81-9+1=73$ 个可能和。75 名学生映到 73 个和，必有两人同和。
@@ -3197,12 +3036,10 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > \boxed{10!-7!-6!-5!+3!+2!=3{,}622{,}928}.
 > $$
 > <!-- bilingual-en:start -->
-> cword is an arrangement of `a,d,e,f,i,l,o,p,r,s`, totaling $10!$.  Let $F,D,R$ denote the subwords `fails`, `failed`, and `drop`, respectively.
-> **(a)**Treat `drop` as one block with the remaining 6 characters for a total of 7 objects: $\boxed{|R|=7!}$.
-> **(b)**The `drop` and `fails` characters do not overlap and are treated as two blocks, with the character `e`, for a total of three objects: $\boxed{|R\cap F|=3!=6}$.
-> **(c)**
-> `fails` and `failed` need to repeat `fail` or `s/e` after the same prefix, so $F\cap D=\varnothing$.  `drop` and `failed` can only share a unique `d` and form a block `failedrop`; then they are arranged with `s`, so $|D\cap R|=2!$.  The triple intersection is empty.  So bad cword number
-> Number of Passwords is
+> A cword is a permutation of `a,d,e,f,i,l,o,p,r,s`, so there are $10!$ in total. Let $F,D,R$ denote the sets containing the substrings `fails`, `failed`, and `drop`, respectively.
+> **(a)** Treat `drop` as one block together with the other six characters, giving seven objects and $\boxed{|R|=7!}$.
+> **(b)** The characters of `drop` and `fails` are disjoint. Treating them as two blocks together with `e` leaves three objects, so $\boxed{|R\cap F|=3!=6}$.
+> **(c)** We have $|F|=6!$, $|D|=5!$, and $|R|=7!$. The substrings `fails` and `failed` cannot both occur without repeating `fail` or placing both `s` and `e` immediately after the same prefix, so $F\cap D=\varnothing$. The substrings `drop` and `failed` can share only their single `d`, forming the block `failedrop`; arranging that block with `s` gives $|D\cap R|=2!$. The triple intersection is empty. Thus the number of bad cwords is $6!+5!+7!-3!-2!$, and the number of valid passwords is $\boxed{10!-7!-6!-5!+3!+2!=3{,}622{,}928}$.
 > <!-- bilingual-en:end -->
 
 > [!example]- C27-3 避开两个障碍的格路径
@@ -3227,10 +3064,7 @@ Original Question: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15
 > +\binom{21}{10}\binom{20}{11}\binom{59}{29}}.
 > $$
 > <!-- bilingual-en:start -->
-> The monotonic path from $(0,0)$ to $(50,50)$ consists of 50 horizontal steps and 50 vertical steps, totaling $\binom{100}{50}$.  Get $A=(10,11),B=(21,20)$.  Number of paths through $A$
-> Number of paths through $B$
-> After both, we can only press $A\to B$, quantity
-> So the number of paths to avoid two boulders is
+> A monotone path from $(0,0)$ to $(50,50)$ consists of 50 horizontal and 50 vertical steps, so there are $\binom{100}{50}$ paths in total. Let $A=(10,11)$ and $B=(21,20)$. The numbers passing through $A$ and $B$ are $N_A=\binom{21}{10}\binom{79}{40}$ and $N_B=\binom{41}{21}\binom{59}{29}$. A path passing through both must visit them in the order $A\to B$, giving $N_{A\cap B}=\binom{21}{10}\binom{20}{11}\binom{59}{29}$. Inclusion–exclusion therefore gives the displayed count of paths avoiding both boulders.
 > <!-- bilingual-en:end -->
 
 > [!example]- C27-4 只含 7 与尾随 0 的倍数
@@ -3278,9 +3112,6 @@ $$
 ## Problem Set 10 — after Session 27
 
 原题：[[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps10.pdf#page=1|Problem Set 10, pp. 1–3]]。以下为非官方独立题解。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps10.pdf#page=1|Problem Set 10, pp. 1–3]].  The following are unofficial independent questions.
-<!-- bilingual-en:end -->
 
 > [!example]- PS10-1 七枚彩色骰子
 > 七枚骰子颜色不同，所以一次结果是按彩虹顺序排列的 7 元组。
@@ -3298,11 +3129,11 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps10.pdf
 > $$
 > 每组数据都能唯一恢复骰子结果，反之也唯一抽取，故确为双射。
 > <!-- bilingual-en:start -->
-> The colors of the seven dice are different, so the result at a time is a seven-tuple in rainbow order.
-> **(a) Exactly two of them are 6, and the remaining five have two different values**: Since the remaining par value can only come from $1,\ldots,5$ and needs five different values, it is used exactly once.  The bijection data is "showing two color subsets of 6 + one bijection of the remaining five colors to $1,\ldots,5$", so
-> **(b) Exactly one pair of digits, the remaining five digits are two different**: select the pair of digits from the six values; select the two colors; arrange the remaining five digits into the remaining colors:
-> **(c) Multiplicity type is $(3,2,2)$**: select three face values of six; select two pairs of sub-values out of order from the remaining five; select three colors; select two of the remaining four colors to give the smaller pair of sub-values, the remaining automatically give the other:
-> Each set of data can recover the dice results uniquely, and vice versa, so it is indeed bijective.
+> The seven dice have distinct colours, so an outcome is a seven-tuple listed in rainbow order.
+> **(a) Exactly two dice show 6 and the other five values are all distinct:** The remaining faces must be $1,\ldots,5$, each used once. Choose the two colours showing 6 and then biject the other five colours with $1,\ldots,5$, giving $\boxed{\binom72 5!=2520}$.
+> **(b) Exactly one pair and all other values distinct:** Choose the repeated face value, choose the two colours that show it, and permute the other five face values among the remaining colours. The count is $\boxed{6\binom72 5!=15120}$.
+> **(c) Multiplicity pattern $(3,2,2)$:** Choose the face value appearing three times, choose an unordered pair of values for the two pairs, choose the three colours in the triple, and choose two of the remaining four colours for the smaller pair value. This gives $\boxed{6\binom52\binom73\binom42=12600}$.
+> In each case the chosen data uniquely determine the dice outcome and can be uniquely recovered from it, so the constructions are genuine bijections.
 > <!-- bilingual-en:end -->
 
 > [!example]- PS10-2 四个计数问题
@@ -3358,10 +3189,9 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps10.pdf
 > 上述“取 $n$ 个变量”先直接覆盖正整数 $n$；若允许负整数，取其模 $p$ 的非零代表元 $r\in\{1,\ldots,p-1\}$，由 $n\equiv r\pmod p$ 即得同一结论。
 > 这条证明独立于 Fermat 小定理本身，没有循环论证。
 > <!-- bilingual-en:start -->
-> **(a)**Polynomial expansion as
+> **(a)** Expand by the multinomial theorem.
 > Unless the exponent vector is a pure term with one $k_i=p$ and all other entries zero, at least two $k_i$ are positive and every positive $k_i<p$. The prime $p$ occurs once in the numerator $p!$, while none of the denominator factors $k_i!$ contains $p$. Hence every mixed multinomial coefficient is divisible by $p$. Modulo $p$, all mixed terms vanish and only the pure terms remain:
-> **(b)**Make all $x_i=1$, get
-> If $p\nmid n$, then the $n$ module $p$ has the inverse multiplicative element;both sides eliminate $n$:
+> **(b)** Setting every $x_i=1$ gives $n^p\equiv n\pmod p$. If $p\nmid n$, then $n$ has a multiplicative inverse modulo $p$, so cancelling $n$ yields $n^{p-1}\equiv1\pmod p$.
 > Taking $n$ variables proves the claim directly for positive integers $n$. For a negative integer, choose its nonzero representative $r\in\{1,\ldots,p-1\}$ modulo $p$; since $n\equiv r\pmod p$, the same conclusion follows.
 > This argument does not invoke Fermat's little theorem, so it is not circular.
 > <!-- bilingual-en:end -->
@@ -3370,7 +3200,7 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps10.pdf
 
 ## 全章方法地图
 <!-- bilingual-en:start -->
-*full chapter method map*
+*Method Map for the Entire Chapter*
 <!-- bilingual-en:end -->
 
 | 题目特征 | 首选工具 | 必做检查 |
@@ -3386,40 +3216,30 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps10.pdf
 | 只需保证碰撞 | 鸽巢原理 | pigeons、holes、映射、端点 |
 | 多个重叠事件的并 | 容斥 | 交集是否可行、奇加偶减 |
 <!-- bilingual-en:start -->
-|Subject Characteristics|Preferred Tools|Required Checks|
-|—|—|—|
-|Long Sum, Positive Monotone Term|Perturbation, Integral Method|Endpoint and Monotone Direction|
-| Factorial or Large Product | Take Logarithm, Stirling | Is $\Theta$ or $\sim$ |
-|Only care about size | $O,o,\Theta,\sim$ | Uniform constant, threshold, direction |
-|Mutually Exclusive Classifications|Addition Rule|Whether Categories Overlapped|
-|Sequential Selection|Generalized Multiplication|Is the number of extensions per prefix fixed|
-|Difficult objects, easy encoding|Bijection|Forward map, inverse map, and proof that they are inverses|
-|Same number of times each result is counted| Division Rule |Is the number of preimages constant?|
-| Duplicate Objects/Exponential Allocations | Stars and Bars, Polynomial Coefficients | Object Similarities, Order Importance |
-|Only a collision must be guaranteed|Pigeonhole principle|Pigeons, holes, mapping, and endpoint cases|
-|Union of several overlapping events|Inclusion–exclusion|Feasible intersections and alternating signs|
+| Problem structure | Preferred tool | Required check |
+|---|---|---|
+| Long sum with positive monotone terms | Perturbation or the integral method | Endpoints and direction of monotonicity |
+| Factorial or large product | Logarithms and Stirling's formula | Whether the claim is $\Theta$ or $\sim$ |
+| Only the scale matters | $O,o,\Theta,\sim$ | One uniform constant, a threshold, and the direction of the relation |
+| Mutually exclusive cases | Sum rule | Whether the cases overlap |
+| Sequential choices | Generalised product rule | Whether every valid prefix has the same number of extensions |
+| Objects are hard to count but easy to encode | Bijection | Forward map, inverse map, and proof that they are inverses |
+| Every result is counted the same number of times | Division rule | Whether the number of preimages is constant |
+| Repeated objects or allocation of exponents | Stars and Bars or multinomial coefficients | Whether objects are identical and whether order matters |
+| Only a collision must be guaranteed | Pigeonhole principle | Pigeons, holes, mapping, and endpoint cases |
+| Union of overlapping events | Inclusion–exclusion | Feasible intersections and alternating signs |
 <!-- bilingual-en:end -->
 
 ## 覆盖与资源核对
-<!-- bilingual-en:start -->
-*Coverage and Resource Reconciliation*
-<!-- bilingual-en:end -->
 
 - 官方在线题：Session 23 的 O23-01–O23-16（16 个）、Session 24 的 O24-01–O24-21（21 个）、Session 25 的 O25-01–O25-04（4 个）、Session 26 的 O26-01（1 个）、Session 27 的 O27-01–O27-11（11 个），合计 **53**。
 - Classroom Problems：C23-1–5、C24-1–5、C25-1–4、C26-1–5、C27-1–5，合计 **24**；每题及全部子问均在对应 Session 末给出。
 - 作业：PS9 3 题位于 Session 24 后；PS10 3 题及全部子问位于 Session 27 后。
 - 考试：Midterm 3 共 6 题及全部子问位于 Session 24 后；第 1 题 DAG 已按原 PDF 图逐边读取。
 - 视频顺序：17 个视频均按 3.1.1→3.5.4 官方 block 次序出现，并同时链接 slides、transcript 与在线 video。
-<!-- bilingual-en:start -->
-- Official online titles: O23-01-O23-16 (16) for Session 23, O24-01-O24-21 (21) for Session 24, O25-01-O25-04 (4) for Session 25, O26-01 (1) for Session 26, O27-01-O27-11 (11) for Session 27, total**53**.
-- Classroom Problems:C23-1-5, C24-1-5, C25-1-4, C26-1-5, C27-1-5, totaling**24**; each question and all subquestions are given at the end of the corresponding Session.
-- Job: PS9 3 questions are located after Session 24; PS10 3 questions and all subquestions are located after Session 27.
-- Quiz: Midterm 3 with 6 questions and all questions behind Session 24; Question 1 DAG has been read side by side as per the original PDF.
-- Video Order: Seventeen videos appear in the official block order of 3.1.1→3.5.4, linking slides, transcript, and online video.
-<!-- bilingual-en:end -->
 
 > [!summary] 一句话收束
 > **和式**把局部贡献累积起来，**渐近**压缩其规模，**双射与除法**把对象搬到标准模型，**鸽巢**从数量推出必然性，**容斥**修复重叠；五者合起来就是离散计数的主干。
 > <!-- bilingual-en:start -->
-> summation accumulates local contributions, asymptotics compresses their scale, bijections and division move objects to standard counting models, the pigeonhole principle extracts unavoidable collisions from quantities, and inclusion–exclusion corrects overlap; together these form the backbone of discrete counting.
+> **Sums** accumulate local contributions, **asymptotics** compress their scale, **bijections and division** transfer objects to standard counting models, the **pigeonhole principle** extracts unavoidable collisions from quantities, and **inclusion–exclusion** corrects overlap. Together, these form the backbone of discrete counting.
 > <!-- bilingual-en:end -->

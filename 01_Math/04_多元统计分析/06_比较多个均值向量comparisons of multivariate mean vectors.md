@@ -23,9 +23,11 @@ The chapter has three core cases:
 2. 两独立样本：协方差相等时使用 pooled covariance。
 3. 多个总体：使用单因子 MANOVA，核心统计量是 Wilks Lambda。
 <!-- bilingual-en:start -->
-1. Paired samples: form difference vectors and apply a one-sample Hotelling $T^2$ test.
-2. Two independent samples: use a pooled covariance matrix when the population covariance matrices are equal.
-3. Several populations: use one-way MANOVA, with Wilks' Lambda as the central statistic.
+
+&nbsp;
+**1.** Paired samples: form difference vectors and apply a one-sample Hotelling $T^2$ test.<br>
+**2.** Two independent samples: use a pooled covariance matrix when the population covariance matrices are equal.<br>
+**3.** Several populations: use one-way MANOVA, with Wilks' Lambda as the central statistic.<br>
 <!-- bilingual-en:end -->
 
 >[!attention] 题型边界
@@ -450,9 +452,11 @@ The exact or approximate distribution in MANOVA depends on sample size, the numb
 2. Wilks Lambda 的定义和方向。
 3. 显著后需要进一步解释变量或线性组合。
 <!-- bilingual-en:start -->
-1. The matrix decomposition $T=H+E$.
-2. The definition and direction of Wilks' Lambda.
-3. The need to interpret variables or linear combinations after a significant result.
+
+&nbsp;
+**1.** The matrix decomposition $T=H+E$.<br>
+**2.** The definition and direction of Wilks' Lambda.<br>
+**3.** The need to interpret variables or linear combinations after a significant result.<br>
 <!-- bilingual-en:end -->
 
 ## 1.7. 题型识别表

@@ -391,11 +391,13 @@ The course provides both `for` and `while` versions. Their shared reasoning is:
 4. 更新累计结果
 5. return 最终值
 <!-- bilingual-en:start -->
-1. Initialize an accumulator.
-2. Visit the candidate values.
-3. Select the values satisfying the condition.
-4. Update the accumulated result.
-5. Return the final value.
+
+&nbsp;
+**1.** Initialize an accumulator.<br>
+**2.** Visit the candidate values.<br>
+**3.** Select the values satisfying the condition.<br>
+**4.** Update the accumulated result.<br>
+**5.** Return the final value.<br>
 <!-- bilingual-en:end -->
 
 ### 9. `return` 的位置决定函数什么时候结束
@@ -508,10 +510,12 @@ For `keep_consonants`, a natural decomposition is:
 3. 逐字符扫描输入
 4. 只把 consonant 接到答案里
 <!-- bilingual-en:start -->
-1. Define which characters count as vowels.
-2. Initialize an empty output string.
-3. Traverse the input one character at a time.
-4. Append only consonants to the output.
+
+&nbsp;
+**1.** Define which characters count as vowels.<br>
+**2.** Initialize an empty output string.<br>
+**3.** Traverse the input one character at a time.<br>
+**4.** Append only consonants to the output.<br>
 <!-- bilingual-en:end -->
 
 而 `first_to_last_diff` 更像是训练“先找第一个，再找最后一个，再组合结果”这种程序分解能力。

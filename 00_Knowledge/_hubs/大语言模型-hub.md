@@ -33,15 +33,17 @@ status: source-checked
 8. [[多模态大模型]]：视觉等模态怎样与语言表示对齐并共同生成。
 9. [[开放模型生态]]：怎样从权重、数据、许可证、资源和任务效果选择可用模型。
 <!-- bilingual-en:start -->
-1. [[Transformer 与注意力机制|Transformers and Attention]]: the shared computational backbone through which models read sequences, supporting later training, long context, and multimodality.
-2. [[LLM 预训练|LLM Pretraining]] → [[LLM 后训练：SFT、RLHF 与 DPO|LLM Post-Training: SFT, RLHF, and DPO]]: first learn general capabilities from the continuation distribution, then shape those capabilities into useful and controllable assistant behaviour.
-3. [[Scaling laws 与计算最优训练|Scaling Laws and Compute-Optimal Training]] → [[Mixture of Experts（MoE）|Mixture of Experts (MoE)]] / [[大模型分布式训练|Distributed Training for Large Models]]: first allocate the parameter, data, and compute budget, then understand conditional computation and execution across devices.
-4. [[LLM 推理与验证|LLM Reasoning and Verification]] → [[LLM Agent 与工具调用|LLM Agents and Tool Use]]: first understand how a model decomposes and verifies an answer, then how reasoning becomes a sequence of actions in an external environment.
-5. [[RAG（检索增强生成）|Retrieval-Augmented Generation (RAG)]] ↔ [[长上下文语言模型|Long-Context Language Models]]: both provide knowledge outside the parameters, but RAG emphasizes retrieval, updating, and provenance, while long context emphasizes holding and using more input at once.
-6. [[LLM 推理效率|LLM Inference Efficiency]]: controlling time to first token, throughput, and memory after training.
-7. [[LLM 评测|LLM Evaluation]]: establishing whether capability, reliability, and cost actually satisfy the intended use.
-8. [[多模态大模型|Multimodal Large Models]]: aligning visual and other modalities with language representations for joint generation.
-9. [[开放模型生态|Open Model Ecosystems]]: choosing a usable model from its weights, data, licence, resource requirements, and task performance.
+
+&nbsp;
+**1.** [[Transformer 与注意力机制|Transformers and Attention]]: the shared computational backbone through which models read sequences, supporting later training, long context, and multimodality.<br>
+**2.** [[LLM 预训练|LLM Pretraining]] → [[LLM 后训练：SFT、RLHF 与 DPO|LLM Post-Training: SFT, RLHF, and DPO]]: first learn general capabilities from the continuation distribution, then shape those capabilities into useful and controllable assistant behaviour.<br>
+**3.** [[Scaling laws 与计算最优训练|Scaling Laws and Compute-Optimal Training]] → [[Mixture of Experts（MoE）|Mixture of Experts (MoE)]] / [[大模型分布式训练|Distributed Training for Large Models]]: first allocate the parameter, data, and compute budget, then understand conditional computation and execution across devices.<br>
+**4.** [[LLM 推理与验证|LLM Reasoning and Verification]] → [[LLM Agent 与工具调用|LLM Agents and Tool Use]]: first understand how a model decomposes and verifies an answer, then how reasoning becomes a sequence of actions in an external environment.<br>
+**5.** [[RAG（检索增强生成）|Retrieval-Augmented Generation (RAG)]] ↔ [[长上下文语言模型|Long-Context Language Models]]: both provide knowledge outside the parameters, but RAG emphasizes retrieval, updating, and provenance, while long context emphasizes holding and using more input at once.<br>
+**6.** [[LLM 推理效率|LLM Inference Efficiency]]: controlling time to first token, throughput, and memory after training.<br>
+**7.** [[LLM 评测|LLM Evaluation]]: establishing whether capability, reliability, and cost actually satisfy the intended use.<br>
+**8.** [[多模态大模型|Multimodal Large Models]]: aligning visual and other modalities with language representations for joint generation.<br>
+**9.** [[开放模型生态|Open Model Ecosystems]]: choosing a usable model from its weights, data, licence, resource requirements, and task performance.<br>
 <!-- bilingual-en:end -->
 
 ## 论文专题入口

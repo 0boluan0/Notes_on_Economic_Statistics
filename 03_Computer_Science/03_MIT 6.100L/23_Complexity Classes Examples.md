@@ -421,10 +421,12 @@ The right way to study this lecture is therefore not to memorize a complete tabl
 3. 是顺序相加还是嵌套相乘
 4. 是否有递归分叉或规模折半
 <!-- bilingual-en:start -->
-1. How is the input size defined?
-2. Which statements depend on the input?
-3. Are costs added sequentially or multiplied through nesting?
-4. Does the recursion branch, or does it halve the problem size?
+
+&nbsp;
+**1.** How is the input size defined?<br>
+**2.** Which statements depend on the input?<br>
+**3.** Are costs added sequentially or multiplied through nesting?<br>
+**4.** Does the recursion branch, or does it halve the problem size?<br>
 <!-- bilingual-en:end -->
 
 ## Exercise log

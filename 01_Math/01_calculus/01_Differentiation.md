@@ -48,11 +48,13 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 4. 每节最后完成三道自检题。答案折叠，适合第二次复习时主动回忆。
 5. 题目图形若依赖原印刷页，正文会给出解析描述，同时链接对应 PDF 页。
 <!-- bilingual-en:start -->
-1. Begin each section with “Questions and Prerequisites” so that you know exactly what problem the section is solving.
-2. Do not memorize a proof only as a conclusion. Check its goal, construction, justification for each step, assumptions, and boundary cases.
-3. Hide the solution to each representative problem and attempt it first. Then check the sign, domain, units, and qualitative graph behavior.
-4. Complete the three self-check questions at the end of each section. Their answers are collapsed so that you can use them for active recall on a second pass.
-5. When a problem depends on a figure from the printed material, the note provides an analytic description and links to the relevant PDF page.
+
+&nbsp;
+**1.** Begin each section with “Questions and Prerequisites” so that you know exactly what problem the section is solving.<br>
+**2.** Do not memorize a proof only as a conclusion. Check its goal, construction, justification for each step, assumptions, and boundary cases.<br>
+**3.** Hide the solution to each representative problem and attempt it first. Then check the sign, domain, units, and qualitative graph behavior.<br>
+**4.** Complete the three self-check questions at the end of each section. Their answers are collapsed so that you can use them for active recall on a second pass.<br>
+**5.** When a problem depends on a figure from the printed material, the note provides an analytic description and links to the relevant PDF page.<br>
 <!-- bilingual-en:end -->
 
 ## 学习目标
@@ -73,20 +75,22 @@ Upon completion of this chapter, you shall be able to:
 6. 理解 $e$ 的选择、指数与对数互逆、对数求导、变量幂和双曲函数。
 7. 独立完成本章两套指定作业和 Exam 1，并能说明每个步骤使用了什么规则。
 <!-- bilingual-en:start -->
-1. Define the derivative as a limit of secant slopes and interpret it in terms of geometry, motion, units, and error propagation.
-2. Distinguish a function value, a limit, continuity, and differentiability; identify removable, jump, infinite, and oscillatory discontinuities.
-3. Prove the linearity and product rules from the definition, and apply the power, product, quotient, and chain rules fluently.
-4. Prove the basic trigonometric limits in radians and use them to derive the derivatives of sine, cosine, and the other trigonometric functions.
-5. Differentiate implicit relations and derive the derivative rules for inverse and inverse-trigonometric functions.
-6. Understand why the base $e$ is special, how exponential and logarithmic functions are inverses, and how to use logarithmic differentiation, variable powers, and hyperbolic functions.
-7. Complete both assigned problem sets and Exam 1 independently, explaining the rule used at every step.
+
+&nbsp;
+**1.** Define the derivative as a limit of secant slopes and interpret it in terms of geometry, motion, units, and error propagation.<br>
+**2.** Distinguish a function value, a limit, continuity, and differentiability; identify removable, jump, infinite, and oscillatory discontinuities.<br>
+**3.** Prove the linearity and product rules from the definition, and apply the power, product, quotient, and chain rules fluently.<br>
+**4.** Prove the basic trigonometric limits in radians and use them to derive the derivatives of sine, cosine, and the other trigonometric functions.<br>
+**5.** Differentiate implicit relations and derive the derivative rules for inverse and inverse-trigonometric functions.<br>
+**6.** Understand why the base $e$ is special, how exponential and logarithmic functions are inverses, and how to use logarithmic differentiation, variable powers, and hyperbolic functions.<br>
+**7.** Complete both assigned problem sets and Exam 1 independently, explaining the rule used at every step.<br>
 <!-- bilingual-en:end -->
 
 ## 课程导航
 
 | 官方位置      | 内容                                       |                                                                    |                                                                            |                                                   |                                                                                       |                                                                                  |                                                               |                                                            |                                       |                                        |                                      |                                               |            |
 | --------- | ---------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------- | -------------------------------------- | ------------------------------------ | --------------------------------------------- | ---------- |
-| Part A    | [[#Session 1：Introduction to Derivatives | S1 导数简介]] · [[#Sesion 2：Examples of Derivatives                    | S2 定义计算]] · [[#Session 3：Derivative as Rate of Change                      | S3 变化率]] · [[#Session 4：Limits and Continuity     | S4 极限与连续]] · [[#Session 5：Discontinuity                                               | S5 间断]] · [[#Session 6：Calculating Derivatives                                   | S6 基本规则]] · [[#Session 7：Derivatives of Sine and Cosine       | S7 正余弦导数]] · [[#Session 8：Limits of Sine and Cosine        | S8 三角极限]] · [[#Session 9：Product Rule | S9 积法则]] · [[#Session 10：Quotient Rule | S10 商法则]] · [[#Session 11：Chain Rule | S11 链式法则]] · [[#Session 12：Higher Derivatives | S12 高阶导数]] |
+| Part A    | [[#Session 1：Introduction to Derivatives | S1 导数简介]] · [[#Session 2：Examples of Derivatives                    | S2 定义计算]] · [[#Session 3：Derivative as Rate of Change                      | S3 变化率]] · [[#Session 4：Limits and Continuity     | S4 极限与连续]] · [[#Session 5：Discontinuity                                               | S5 间断]] · [[#Session 6：Calculating Derivatives                                   | S6 基本规则]] · [[#Session 7：Derivatives of Sine and Cosine       | S7 正余弦导数]] · [[#Session 8：Limits of Sine and Cosine        | S8 三角极限]] · [[#Session 9：Product Rule | S9 积法则]] · [[#Session 10：Quotient Rule | S10 商法则]] · [[#Session 11：Chain Rule | S11 链式法则]] · [[#Session 12：Higher Derivatives | S12 高阶导数]] |
 | Part A 练习 | [[#Problem Set 1                         | Problem Set 1]]                                                    |                                                                            |                                                   |                                                                                       |                                                                                  |                                                               |                                                            |                                       |                                        |                                      |                                               |            |
 | Part B    | [[#Session 13：Implicit Differentiation   | S13 隐函数与有理幂]] · [[#Session 14：Examples of Implicit Differentiation | S14 隐函数例题]] · [[#Session 15：Implicit Differentiation and Inverse Functions | S15 反函数]] · [[#Session 16：The Derivative of $a^x$ | S16 $a^x$]] · [[#Session 17：The Exponential Function, Its Derivative, and Its Inverse | S17 $e^x$ 与 $\ln x$]] · [[#Session 18：Derivatives of Other Exponential Functions | S18 对数求导]] · [[#Session 19：An Interesting Limit Involving $e$ | S19 关于 $e$ 的极限]] · [[#Session 20：Hyperbolic Trig Functions | S20 双曲函数]]                            |                                        |                                      |                                               |            |
 | Part B 练习 | [[#Problem Set 2                         | Problem Set 2]]                                                    |                                                                            |                                                   |                                                                                       |                                                                                  |                                                               |                                                            |                                       |                                        |                                      |                                               |            |
@@ -250,21 +254,23 @@ The secant slopes for $h=-0.5,-0.25,0.25,0.5$ in the exercise table are approxim
 
 ### 为什么不能直接令 $h=0$
 <!-- bilingual-en:start -->
-*Why can't you just tell $h=0$*
+*Why Can't We Set $h=0$ Directly?*
 <!-- bilingual-en:end -->
 
 在原差商中令 $h=0$ 会得到 $0/0$，这不是一个数。正确顺序是：
 <!-- bilingual-en:start -->
-Making $h=0$ get $0/0$ in the original difference quotient is not a number.  The correct order is:
+Setting $h=0$ in the original difference quotient gives $0/0$, which is not a number. The correct order is:
 <!-- bilingual-en:end -->
 
 1. 只讨论 $h\ne0$；
 2. 用代数变形消去导致 $0/0$ 的公共因子；
 3. 再研究 $h\to0$ 时化简后表达式趋向什么。
 <!-- bilingual-en:start -->
-1. Work with $h\ne0$.
-2. Use algebra to cancel the common factor responsible for the indeterminate form $0/0$.
-3. Then determine the limit of the simplified expression as $h\to0$.
+
+&nbsp;
+**1.** Work with $h\ne0$.<br>
+**2.** Use algebra to cancel the common factor responsible for the indeterminate form $0/0$.<br>
+**3.** Then determine the limit of the simplified expression as $h\to0$.<br>
 <!-- bilingual-en:end -->
 
 极限允许变量任意接近零，但不要求它在计算过程中等于零。
@@ -297,9 +303,11 @@ Limits allow a variable to be arbitrarily close to zero, but do not require it t
 2. 为什么“直线只与曲线相交一点”不能定义切线？
 3. 对 $f(x)=\frac12x^3-x$，在 $x=0$ 且 $h=0.25$ 时，割线斜率与切线斜率相差多少？
 <!-- bilingual-en:start -->
-1. Write out the difference quotient of $f(x)=x^2$ in $x=3$, and find the tangent.
-2. Why can a tangent line not be defined merely as a line that intersects the curve at one point?
-3. For $f(x)=\frac12x^3-x$ at $x=0$ with $h=0.25$, what is the difference between the secant slope and the tangent slope?
+
+&nbsp;
+**1.** Write the difference quotient for $f(x)=x^2$ at $x=3$, and find the tangent line.<br>
+**2.** Why can a tangent line not be defined merely as a line that intersects the curve at one point?<br>
+**3.** For $f(x)=\frac12x^3-x$ at $x=0$ with $h=0.25$, what is the difference between the secant slope and the tangent slope?<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -307,9 +315,11 @@ Limits allow a variable to be arbitrarily close to zero, but do not require it t
 > 2. 切线可能在别处再交曲线；相交次数是全局性质，不能刻画一点附近的方向。割线极限才是局部定义。
 > 3. 割线斜率为 $\frac12h^2-1=-0.96875$，切线斜率 $f'(0)=-1$，绝对误差 $0.03125$。
 > <!-- bilingual-en:start -->
-> 1. $[(3+h)^2-9]/h=6+h\to6$, tangent $y-9=6(x-3)$.
-> 2. The tangent line may re-intersect the curve elsewhere; the number of intersections is a global property and cannot characterize the direction near a point.  The secant limit is the local definition.
-> 3. The secant slope is $\frac12h^2-1=-0.96875$, the tangent slope is $f'(0)=-1$, and the absolute difference is $0.03125$.
+>
+> &nbsp;
+> **1.** $[(3+h)^2-9]/h=6+h\to6$, tangent $y-9=6(x-3)$.<br>
+> **2.** The tangent line may re-intersect the curve elsewhere; the number of intersections is a global property and cannot characterize the direction near a point.  The secant limit is the local definition.<br>
+> **3.** The secant slope is $\frac12h^2-1=-0.96875$, the tangent slope is $f'(0)=-1$, and the absolute difference is $0.03125$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -451,12 +461,12 @@ $f'(x_0)$ explicitly denotes the value at $x_0$, while $dy/dx$ emphasizes the va
 
 ### 02d：正整数幂法则的完整推导
 <!-- bilingual-en:start -->
-*02d: A Complete Derivation of the Positive-Integer Power Rule*
+*02d: A Complete Proof of the Positive-Integer Power Rule*
 <!-- bilingual-en:end -->
 
 对正整数 $n$，从定义出发：
 <!-- bilingual-en:start -->
-For a positive integer $n$, from the definition:
+For a positive integer $n$, start from the definition:
 <!-- bilingual-en:end -->
 
 $$
@@ -474,7 +484,7 @@ $$
 
 减去 $x^n$，每一项都有因子 $h$：
 <!-- bilingual-en:start -->
-Subtract $x^n$, each item has a factor $h$:
+After subtracting $x^n$, every term has a factor of $h$:
 <!-- bilingual-en:end -->
 
 $$
@@ -484,7 +494,7 @@ $$
 
 当 $h\to0$，除第一项外其余项都至少含一个 $h$，所以趋于零：
 <!-- bilingual-en:start -->
-When $h\to0$, all but the first term contains at least one $h$, so it tends to zero:
+As $h\to0$, every term except the first still contains at least one factor of $h$ and therefore tends to zero:
 <!-- bilingual-en:end -->
 
 > [!important] 正整数幂法则
@@ -504,7 +514,7 @@ This also explains the $O(h^2)$ notation in the lecture notes: it collects terms
 
 本地 `Ses02e` 的文件名归入 Session 2，但内容使用了稍后才正式证明的积法则，并预告 Unit 2 的线性近似。若
 <!-- bilingual-en:start -->
-The filenames of the local `Ses02e` are attributed to Session 2, but the content uses a product rule that is later formally proven and predicts a linear approximation of Unit 2. If
+The local `Ses02e` files are assigned to Session 2, but their content uses the product rule before its formal proof and previews the linear approximation developed in Unit 2. If
 <!-- bilingual-en:end -->
 
 $$
@@ -514,7 +524,7 @@ $$
 
 则相乘得到
 <!-- bilingual-en:start -->
-multiply by
+then multiplying the approximations gives
 <!-- bilingual-en:end -->
 
 $$
@@ -523,7 +533,7 @@ $$
 
 忽略二阶小量 $(\Delta x)^2$，一次项系数正是积法则。这里应把它理解为直觉预告，不用它反过来证明本节幂法则。
 <!-- bilingual-en:start -->
-Ignoring the second order small quantity $(\Delta x)^2$, the coefficient of the first term is the product rule.  It should be understood as an intuitive prediction, without which to prove the power law of this section.
+After neglecting the second-order term $(\Delta x)^2$, the coefficient of the linear term is exactly the expression in the product rule. This is only an intuitive preview; it should not be used circularly to prove the power rule in this section.
 <!-- bilingual-en:end -->
 
 ### 边界情况与易错点
@@ -537,9 +547,9 @@ Ignoring the second order small quantity $(\Delta x)^2$, the coefficient of the 
 - 直线题要先写点斜式，再分别令 $x=0$、$y=0$ 求截距；不要把切点坐标误当截距。
 <!-- bilingual-en:start -->
 - The derivative formula for $1/x$ is meaningful only when $x\ne0$; differentiation cannot create domain points at which the function itself is undefined.
-- Binomial proofs currently cover only positive integer indices; negative integers, rational numbers, and real indices will be progressively expanded in Session 10, 13, and 18.
-- $O(h^2)$ is not a fixed constant, but a collection of items that are "at most comparable in magnitude to $h^2$".
-- On the question of lines, write the point oblique form first, and then ask $x=0$, $y=0$ to calculate the intercept separately; do not mistake the coordinates of tangent points for the intercept.
+- The binomial proof currently covers only positive integer exponents; negative-integer, rational, and real exponents are developed in Sessions 10, 13, and 18.
+- $O(h^2)$ is not a fixed constant. It denotes terms whose magnitude is bounded by a constant multiple of $h^2$ near $h=0$.
+- In line problems, write the point-slope form first, then set $x=0$ and $y=0$ separately to find the intercepts; do not mistake the point of tangency for an intercept.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -551,9 +561,11 @@ Ignoring the second order small quantity $(\Delta x)^2$, the coefficient of the 
 2. $y=1/x$ 在 $x_0=-2$ 的切线是什么？
 3. 为什么二项式展开中只有 $nx^{n-1}h$ 对极限留下贡献？
 <!-- bilingual-en:start -->
-1. Calculate the derivative of $f(x)=x^3$ by definition, without directly quoting the power law.
-2. What is $y=1/x$'s tangent in $x_0=-2$?
-3. Why does only $nx^{n-1}h$ leave contributions to the limit in the binomial expansion?
+
+&nbsp;
+**1.** Compute the derivative of $f(x)=x^3$ from the definition, without invoking the power rule.<br>
+**2.** What is the tangent line to $y=1/x$ at $x_0=-2$?<br>
+**3.** Why is $nx^{n-1}h$ the only term in the binomial expansion that contributes to the limit?<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -561,9 +573,11 @@ Ignoring the second order small quantity $(\Delta x)^2$, the coefficient of the 
 > 2. 点 $(-2,-1/2)$，斜率 $-1/4$，故 $y+1/2=-\frac14(x+2)$，即 $y=-x/4-1$。
 > 3. 减去 $x^n$ 并除以 $h$ 后，第一项不再含 $h$；其他项仍至少含一个 $h$，在 $h\to0$ 时趋零。
 > <!-- bilingual-en:start -->
-> 1. $[(x+h)^3-x^3]/h=3x^2+3xh+h^2\to3x^2$.
-> 2. Point $(-2,-1/2)$, slope $-1/4$, so $y+1/2=-\frac14(x+2)$, that is $y=-x/4-1$.
-> 3. After subtracting $x^n$ and dividing by $h$, the first term no longer contains $h$; the other terms still contain at least one $h$ and tend to zero at $h\to0$.
+>
+> &nbsp;
+> **1.** $[(x+h)^3-x^3]/h=3x^2+3xh+h^2\to3x^2$.<br>
+> **2.** Point $(-2,-1/2)$, slope $-1/4$, so $y+1/2=-\frac14(x+2)$, that is $y=-x/4-1$.<br>
+> **3.** After subtracting $x^n$ and dividing by $h$, the first term no longer contains $h$; the other terms still contain at least one $h$ and tend to zero at $h\to0$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -613,7 +627,7 @@ $$
 
 是单位输入变化所对应的平均输出变化。令区间长度 $h\to0$，得到瞬时变化率
 <!-- bilingual-en:start -->
-is the average output change corresponding to the unit input change.  The instantaneous rate of change is obtained by making the interval length $h\to0$
+is the average change in output per unit change in input. Letting the interval length $h\to0$ gives the instantaneous rate of change
 <!-- bilingual-en:end -->
 
 $$
@@ -641,7 +655,7 @@ $$
 
 落地时间由 $h(t)=0$ 得
 <!-- bilingual-en:start -->
-Time to land was given by $h(t)=0$
+The time of impact is found by solving $h(t)=0$:
 <!-- bilingual-en:end -->
 
 $$
@@ -659,7 +673,7 @@ $$
 
 由幂法则，瞬时速度
 <!-- bilingual-en:start -->
-From the power law, the instantaneous velocity
+By the power rule, the instantaneous velocity is
 <!-- bilingual-en:end -->
 
 $$
@@ -776,9 +790,11 @@ When the receiver is almost directly below the satellite, $L$ is small and the a
 2. 南瓜落地时的速度为何是 $-40$ 而不是 $40$？何时应写 $40$？
 3. GPS 模型中若 $s=3,h=5$，测距误差约 $0.01$，估计 $L$ 的误差。
 <!-- bilingual-en:start -->
-1. For $s(t)=3t^2-2t$, find the average velocity on $[1,3]$ and the instantaneous velocity at $t=3$.
-2. Why is the pumpkin's velocity at impact $-40$ rather than $40$? When should the answer be $40$?
-3. In the GPS model, if $s=3$, $h=5$, and the ranging error is approximately $0.01$, estimate the error in $L$.
+
+&nbsp;
+**1.** For $s(t)=3t^2-2t$, find the average velocity on $[1,3]$ and the instantaneous velocity at $t=3$.<br>
+**2.** Why is the pumpkin's velocity at impact $-40$ rather than $40$? When should the answer be $40$?<br>
+**3.** In the GPS model, if $s=3$, $h=5$, and the ranging error is approximately $0.01$, estimate the error in $L$.<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -786,9 +802,11 @@ When the receiver is almost directly below the satellite, $L$ is small and the a
 > 2. 选向上为正时下落方向为负，所以速度 $-40\text{ m/s}$；若问速率或速度大小，写 $40\text{ m/s}$。
 > 3. $L=\sqrt{25-9}=4$，$dL/dh=5/4$，故 $|\Delta L|\approx(5/4)(0.01)=0.0125$。
 > <!-- bilingual-en:start -->
-> 1. $[s(3)-s(1)]/2=(21-1)/2=10$; since $s'(t)=6t-2$, $s'(3)=16$.
-> 2. If upward is positive, downward motion has negative velocity, so the velocity is $-40\text{ m/s}$. If the question asks for speed or the magnitude of velocity, report $40\text{ m/s}$.
-> 3. $L=\sqrt{25-9}=4$ and $dL/dh=5/4$, so $|\Delta L|\approx(5/4)(0.01)=0.0125$.
+>
+> &nbsp;
+> **1.** $[s(3)-s(1)]/2=(21-1)/2=10$; since $s'(t)=6t-2$, $s'(3)=16$.<br>
+> **2.** If upward is positive, downward motion has negative velocity, so the velocity is $-40\text{ m/s}$. If the question asks for speed or the magnitude of velocity, report $40\text{ m/s}$.<br>
+> **3.** $L=\sqrt{25-9}=4$ and $dL/dh=5/4$, so $|\Delta L|\approx(5/4)(0.01)=0.0125$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -813,7 +831,7 @@ When the receiver is almost directly below the satellite, $L$ is small and the a
 
 **问题：**“趋近”究竟依赖函数在目标点的值吗？什么条件保证可以直接代入？
 <!-- bilingual-en:start -->
-**Problem:** Does a limit depend on the function's value at the target point? Under what conditions is direct substitution valid?
+**Question:** Does a limit depend on the function's value at the target point? Under what conditions is direct substitution valid?
 <!-- bilingual-en:end -->
 
 **前置知识：**函数图像、单侧趋近、代数化简。
@@ -852,12 +870,12 @@ $$
 
 因为分母在 $3$ 附近不为零，函数在此连续，可直接代入。相反，导数差商在 $h=0$ 总得到 $0/0$，必须先化简；涉及除零或无穷远的极限也通常不能直接代入。
 <!-- bilingual-en:start -->
-Because the denominator is not zero near $3$, the function is continuous here and can be substituted directly.  On the contrary, the derivative difference quotient is $0/0$ in $h=0$, which must be reduced first; the limit involving division by zero or infinity cannot usually be substituted directly.
+Because the denominator is nonzero near $3$, the function is continuous there and direct substitution is valid. By contrast, substituting $h=0$ into a derivative difference quotient always gives $0/0$, so the expression must first be simplified. Limits involving division by zero or behavior at infinity also generally require more analysis than direct substitution.
 <!-- bilingual-en:end -->
 
 ### 左右极限
 <!-- bilingual-en:start -->
-*left and right limits*
+*Left- and Right-Hand Limits*
 <!-- bilingual-en:end -->
 
 $$
@@ -900,7 +918,7 @@ $$
 
 左右不同，所以 $\lim_{x\to0}f(x)$ 不存在；虽然 $f(0)=0$，它不能改变右侧附近的行为。
 <!-- bilingual-en:start -->
-The left and right sides are different, so $\lim_{x\to0}f(x)$ does not exist; although $f(0)=0$, it does not change behavior near the right side.
+The one-sided limits differ, so $\lim_{x\to0}f(x)$ does not exist. Although $f(0)=0$, that single value cannot change the function's behavior immediately to the right of $0$.
 <!-- bilingual-en:end -->
 
 ### 04b：连续的三个条件
@@ -914,10 +932,10 @@ The left and right sides are different, so $\lim_{x\to0}f(x)$ does not exist; al
 > 2. $\lim_{x\to a}f(x)$ 存在；
 > 3. $\lim_{x\to a}f(x)=f(a)$。
 > <!-- bilingual-en:start -->
-> $f$ has [[极限与连续#极限与连续|continuity]] on $x=a$ when and only when:
-> 1. $f(a)$ is defined;
-> 2. The existence of $\lim_{x\to a}f(x)$;
-> 3. $\lim_{x\to a}f(x)=f(a)$.
+> $f$ is [[极限与连续#极限与连续|continuous]] at $x=a$ if and only if:
+> **1.** $f(a)$ is defined;<br>
+> **2.** $\lim_{x\to a}f(x)$ exists;<br>
+> **3.** $\lim_{x\to a}f(x)=f(a)$.<br>
 > <!-- bilingual-en:end -->
 
 等价地说，左右极限和函数值三者相等。连续意味着小输入变化只造成小输出变化，不会突然跳跃；但这不等同于“可导”，因为曲线仍可能有尖角。
@@ -927,12 +945,12 @@ Equivalently, the left-hand limit, the right-hand limit, and the function value 
 
 ### 极限定律为何能用
 <!-- bilingual-en:start -->
-*Why the Limit Law Works*
+*Why the Limit Laws Work*
 <!-- bilingual-en:end -->
 
 若 $\lim f=L$、$\lim g=M$，则在相应极限存在时：
 <!-- bilingual-en:start -->
-If $\lim f=L$, $\lim g=M$, then when the corresponding limit exists:
+If $\lim f=L$ and $\lim g=M$, then, whenever the displayed operation is defined,
 <!-- bilingual-en:end -->
 
 $$
@@ -945,7 +963,7 @@ $$
 
 这些定律将在求导规则证明中拆分复杂差商。分母极限为零时，最后一条不能直接使用。
 <!-- bilingual-en:start -->
-These laws split the complex differencing quotient in the proof of the derivative rule.  When the denominator limit is zero, the last entry cannot be used directly.
+These laws let us break complicated difference quotients into simpler pieces when proving differentiation rules. If the denominator tends to zero, the quotient law cannot be applied directly.
 <!-- bilingual-en:end -->
 
 ### 边界情况与易错点
@@ -958,10 +976,10 @@ These laws split the complex differencing quotient in the proof of the derivativ
 - 直接代入是连续性的结果，不是极限定义本身。
 - 图上空心点表示该点未取值；实心点表示函数值，二者不要混作极限。
 <!-- bilingual-en:start -->
-- "Limits do not exist" and "Limits are infinite" are strictly different; the latter describes a definite divergence.
-- Endpoints require continuity on only one side inside the domain; for example, $\sqrt{x}$ discusses right continuity at $0$.
-- Substitution is a consequence of continuity, not the definition of limits themselves.
-- A hollow point on the graph indicates that the point is not valued; a solid point indicates a function value, and the two do not mix to limit.
+- “The limit does not exist” and “the function tends to infinity” are distinct statements; the latter describes a specific form of divergence.
+- At an endpoint, continuity is required only from within the domain; for example, $\sqrt{x}$ is right-continuous at $0$.
+- Direct substitution is a consequence of continuity, not the definition of a limit.
+- An open circle marks a value that the graph does not attain at that point, whereas a filled point marks the actual function value; neither should be confused with the limit.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -973,9 +991,11 @@ These laws split the complex differencing quotient in the proof of the derivativ
 2. 构造一个 $f(0)=7$ 但 $\lim_{x\to0}f(x)=2$ 的函数。
 3. 分段函数 $f(x)=x+a$（$x>1$），$f(x)=x^2$（$x\le1$）在 $1$ 连续时 $a$ 为何值？
 <!-- bilingual-en:start -->
-1. Calculate the $\lim_{x\to2}(x^2-4)/(x-2)$ and explain why it cannot be substituted initially.
-2. Construct a $f(0)=7$ but $\lim_{x\to0}f(x)=2$ function.
-3. What is the $a$ value of the piecewise function $f(x)=x+a$ ($x>1$) and $f(x)=x^2$ ($x\le1$) when $1$ is continuous?
+
+&nbsp;
+**1.** Compute $\lim_{x\to2}(x^2-4)/(x-2)$ and explain why direct substitution cannot be used at the outset.<br>
+**2.** Construct a function with $f(0)=7$ but $\lim_{x\to0}f(x)=2$.<br>
+**3.** For the piecewise function $f(x)=x+a$ when $x>1$ and $f(x)=x^2$ when $x\le1$, what value of $a$ makes $f$ continuous at $1$?<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -983,9 +1003,11 @@ These laws split the complex differencing quotient in the proof of the derivativ
 > 2. 例如 $f(x)=2$（$x\ne0$），$f(0)=7$。
 > 3. 左侧及函数值为 $1$，右极限为 $1+a$，故 $a=0$。
 > <!-- bilingual-en:start -->
-> 1. For $x\ne2$, the expression simplifies to $x+2$, so the limit is $4$. Direct substitution into the unsimplified expression gives the indeterminate form $0/0$, not a numerical value.
-> 2. For example, let $f(x)=2$ for $x\ne0$ and define $f(0)=7$.
-> 3. The left-hand limit and the function value are both $1$, while the right-hand limit is $1+a$; therefore $a=0$.
+>
+> &nbsp;
+> **1.** For $x\ne2$, the expression simplifies to $x+2$, so the limit is $4$. Direct substitution into the unsimplified expression gives the indeterminate form $0/0$, not a numerical value.<br>
+> **2.** For example, let $f(x)=2$ for $x\ne0$ and define $f(0)=7$.<br>
+> **3.** The left-hand limit and the function value are both $1$, while the right-hand limit is $1+a$; therefore $a=0$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -1023,7 +1045,7 @@ These laws split the complex differencing quotient in the proof of the derivativ
 
 [[极限与连续#极限与连续|间断]]按连续条件失败的方式分类：
 <!-- bilingual-en:start -->
-[[极限与连续#极限与连续|discontinuity]] is categorized by consecutive conditional failures:
+[[极限与连续#极限与连续|Discontinuities]] are classified by which condition for continuity fails:
 <!-- bilingual-en:end -->
 
 1. **跳跃间断（jump discontinuity）**：左右极限都存在但不相等。上一节分段函数在 $0$ 即为例子。
@@ -1031,10 +1053,12 @@ These laws split the complex differencing quotient in the proof of the derivativ
 3. **无穷间断（infinite discontinuity）**：至少一个单侧极限为 $+\infty$ 或 $-\infty$。例如 $1/x$ 在 $0$；这里有竖直渐近线。
 4. **振荡间断（oscillatory discontinuity）**：靠近目标点时无限振荡，没有单侧极限。例如 $\sin(1/x)$ 在 $0$。
 <!-- bilingual-en:start -->
-1. **jump discontinuity**: Both the left and right limits exist but are not equal.  An example of the previous section's piecewise function is $0$.
-2. **removable discontinuity**: The left and right limits are equal and finite, but the function is undefined or the value of the function is not equal to the limit.  The correct function value is added to make it continuous.  For example, $(x^2-1)/(x-1)$'s hole in $x=1$.
-3. **infinite discontinuity**: At least one unilateral limit is $+\infty$ or $-\infty$.  For example, $1/x$ is in $0$; here is a vertical asymptote.
-4. **oscillatory discontinuity**: infinite oscillations near the target point, without unilateral limits.  For example, $\sin(1/x)$ is in $0$.
+
+&nbsp;
+**1.** **Jump discontinuity:** Both one-sided limits exist, but they are unequal. The piecewise function at $0$ in the preceding section is an example.<br>
+**2.** **Removable discontinuity:** The one-sided limits agree and are finite, but the function is undefined or has a different value at the point. Defining the function to equal the limit repairs continuity. The hole in $(x^2-1)/(x-1)$ at $x=1$ is an example.<br>
+**3.** **Infinite discontinuity:** At least one one-sided limit is $+\infty$ or $-\infty$. The function $1/x$ at $0$ is an example, with a vertical asymptote there.<br>
+**4.** **Oscillatory discontinuity:** The function oscillates indefinitely near the target point, so a one-sided limit fails to exist. The function $\sin(1/x)$ at $0$ is an example.<br>
 <!-- bilingual-en:end -->
 
 课件还比较 $f(x)=1/x$ 与 $f'(x)=-1/x^2$：原函数为奇函数，导函数为偶函数；$f'(x)<0$ 准确记录两支图像都向右下降，而导函数形状无需像原函数。
@@ -1128,7 +1152,7 @@ $$
 - $\infty$ 不是普通实数，不能在代数式中任意做 $\infty-\infty$。
 - 一条结论的逆命题必须单独证明；不能因“可导蕴含连续”就反向使用。
 <!-- bilingual-en:start -->
-- Continuity can be repaired by redefining the value of the function at the discontinuities that can be removed; jumping, infinity, and oscillating discontinuities cannot be repaired by changing only one point.
+- At a removable discontinuity, continuity can be repaired by redefining the function value. Jump, infinite, and oscillatory discontinuities cannot be repaired by changing a single point.
 - For a piecewise function to be differentiable at a joining point, first match the function values and then match the one-sided derivatives; matching the slopes alone is not enough.
 - $\infty$ is not an ordinary real number, so expressions such as $\infty-\infty$ cannot be manipulated algebraically without further analysis.
 - The converse of a result must be proved separately; “differentiability implies continuity” cannot simply be used in reverse.
@@ -1143,9 +1167,11 @@ $$
 2. 分类 $1/(x-3)^2$ 在 $x=3$ 的间断，并给左右行为。
 3. 证明若函数在一点不连续，则它在该点一定不可导。
 <!-- bilingual-en:start -->
-1. Classify the discontinuities of $f(x)=(x^2-4)/(x-2)$ in $x=2$.
-2. Classify the discontinuities of $1/(x-3)^2$ in $x=3$ and give left and right behavior.
-3. Prove that if a function is discontinuous at a point, then it cannot be differentiable there.
+
+&nbsp;
+**1.** Classify the discontinuity of $f(x)=(x^2-4)/(x-2)$ at $x=2$.<br>
+**2.** Classify the discontinuity of $1/(x-3)^2$ at $x=3$ and describe its behavior from both sides.<br>
+**3.** Prove that if a function is discontinuous at a point, then it cannot be differentiable there.<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -1153,9 +1179,11 @@ $$
 > 2. 无穷间断；左右都趋于 $+\infty$。
 > 3. 使用“可导蕴含连续”的逆否命题：若不连续，则不可能可导。这不是逆命题，而是逻辑等价的逆否命题。
 > <!-- bilingual-en:start -->
-> 1. For $x\ne2$, $f=x+2$, the limit is $4$, but the original is undefined and is discontinuous.
-> 2. This is an infinite discontinuity; both one-sided limits tend to $+\infty$.
-> 3. Use the contrapositive of “differentiability implies continuity”: if the function is discontinuous, then it is not differentiable. This is the contrapositive, not the converse.
+>
+> &nbsp;
+> **1.** For $x\ne2$, $f=x+2$, so the limit is $4$; the original expression is undefined at $2$, making this a removable discontinuity.<br>
+> **2.** This is an infinite discontinuity; both one-sided limits tend to $+\infty$.<br>
+> **3.** Use the contrapositive of “differentiability implies continuity”: if the function is discontinuous, then it is not differentiable. This is the contrapositive, not the converse.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -1186,7 +1214,7 @@ $$
 
 **前置知识：**导数定义、极限定律、幂法则、可导蕴含连续。
 <!-- bilingual-en:start -->
-**Prerequisite knowledge:** Definition of the derivative, limit laws, the power rule, and the fact that differentiability implies continuity.
+**Prerequisites:** The definition of the derivative, limit laws, the power rule, and the fact that differentiability implies continuity.
 <!-- bilingual-en:end -->
 
 ### 06a：两类公式
@@ -1202,7 +1230,7 @@ The slides distinguish between:
 - **特定函数公式**：例如 $(x^n)'=nx^{n-1}$；
 - **一般组合规则**：例如 $(u+v)'=u'+v'$、$(cu)'=cu'$。
 <!-- bilingual-en:start -->
-- **Specific function formula**: for example, $(x^n)'=nx^{n-1}$;
+- **Specific formulas for functions:** for example, $(x^n)'=nx^{n-1}$;
 - **General combination rules**: for example, $(u+v)'=u'+v'$, $(cu)'=cu'$.
 <!-- bilingual-en:end -->
 
@@ -1218,7 +1246,7 @@ Together, these formulas let us differentiate a polynomial term by term.
 
 常数函数 $f(x)=C$ 的差商恒为零：
 <!-- bilingual-en:start -->
-The difference quotient of constant function $f(x)=C$ is always zero:
+The difference quotient of the constant function $f(x)=C$ is always zero:
 <!-- bilingual-en:end -->
 
 $$
@@ -1240,7 +1268,7 @@ $$
 
 ### 06b：和法则的完整证明
 <!-- bilingual-en:start -->
-*06b: Complete proof of the sum rule*
+*06b: A Complete Proof of the Sum Rule*
 <!-- bilingual-en:end -->
 
 假设 $u,v$ 在 $x$ 可导。由定义：
@@ -1261,7 +1289,7 @@ $$
 
 两个差商极限分别存在，所以可以使用极限的和法则：
 <!-- bilingual-en:start -->
-The two difference quotient limits exist separately, so we can use the sum rule of limit:
+The two difference-quotient limits exist separately, so the sum law for limits applies:
 <!-- bilingual-en:end -->
 
 $$
@@ -1270,7 +1298,7 @@ $$
 
 同理 $(u-v)'=u'-v'$。推广到有限多项之和，可以逐项求导。
 <!-- bilingual-en:start -->
-The same is true of $(u-v)'=u'-v'$.  The method can be extended to the sum of finite polynomials and the derivation can be done item by item.
+Similarly, $(u-v)'=u'-v'$. The rule extends to any finite sum, allowing a polynomial to be differentiated term by term.
 <!-- bilingual-en:end -->
 
 ### 例：多项式
@@ -1293,7 +1321,7 @@ Each term uses both the constant-times rule and the power rule.
 
 ### 易错点与适用条件
 <!-- bilingual-en:start -->
-*Fault-prone Points and Applicable Conditions*
+*Boundary Cases and Common Pitfalls*
 <!-- bilingual-en:end -->
 
 - $(u+v)'=u'+v'$，但后面将看到 $(uv)'\ne u'v'$。
@@ -1302,9 +1330,9 @@ Each term uses both the constant-times rule and the power rule.
 - 幂法则对不同指数的适用范围要按课程进度区分，不要提前把未证明范围当作已证。
 <!-- bilingual-en:start -->
 - $(u+v)'=u'+v'$, but you will see $(uv)'\ne u'v'$ later.
-- "Constant" means constant with respect to the current argument.  For example, $a$ can be a constant when deriving from $x$; if $a=a(x)$, the law of constant multiplication cannot be used.
-- Limits and laws require that limits exist; two divergent quantities cannot be canceled after they are disassembled at will.
-- The application of the power law to different indices should be distinguished according to the progress of the course, and the uncertified range should not be considered as certified in advance.
+- “Constant” means constant with respect to the current independent variable. For example, $a$ may be treated as constant when differentiating with respect to $x$; if $a=a(x)$, the constant-multiple rule does not apply.
+- The sum law for limits requires the component limits to exist; two divergent expressions cannot be split apart and cancelled without justification.
+- The domain and proof of the power rule depend on the type of exponent. Do not treat cases not yet established in the course as already proved.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -1316,9 +1344,11 @@ Each term uses both the constant-times rule and the power rule.
 2. 求 $D(2x^7-\pi x^2+e^2)$；此处 $e^2$ 是什么？
 3. 若 $u'(2)=3,v'(2)=-5$，求 $(4u-2v)'(2)$。
 <!-- bilingual-en:start -->
-1. Certify $(u-v)'=u'-v'$ by definition.
-2. Request $D(2x^7-\pi x^2+e^2)$; what is $e^2$ here?
-3. If $u'(2)=3,v'(2)=-5$, ask $(4u-2v)'(2)$.
+
+&nbsp;
+**1.** Prove $(u-v)'=u'-v'$ from the definition.<br>
+**2.** Find $D(2x^7-\pi x^2+e^2)$; what role does $e^2$ play here?<br>
+**3.** If $u'(2)=3$ and $v'(2)=-5$, find $(4u-2v)'(2)$.<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -1326,9 +1356,11 @@ Each term uses both the constant-times rule and the power rule.
 > 2. $14x^6-2\pi x$；$e^2$ 是常数，导数为零。
 > 3. $4u'(2)-2v'(2)=12+10=22$。
 > <!-- bilingual-en:start -->
-> 1. The difference quotient is split into $[u(x+h)-u(x)]/h-[v(x+h)-v(x)]/h$ and the limits are taken respectively.
-> 2. $14x^6-2\pi x$; $e^2$ is a constant and the derivative is zero.
-> 3. $4u'(2)-2v'(2)=12+10=22$.
+>
+> &nbsp;
+> **1.** The difference quotient is split into $[u(x+h)-u(x)]/h-[v(x+h)-v(x)]/h$ and the limits are taken respectively.<br>
+> **2.** $14x^6-2\pi x$; $e^2$ is a constant and the derivative is zero.<br>
+> **3.** $4u'(2)-2v'(2)=12+10=22$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -1337,9 +1369,7 @@ Each term uses both the constant-times rule and the power rule.
 - [[Ses06b_Lecture_Notes.pdf#page=1|06b Derivative of a Sum（p.1）]]
 - 本地资料库没有 `Exercise006`；本节自检题用于补足练习入口。
 <!-- bilingual-en:start -->
-- [[Ses06a_Lecture_Notes.pdf#page=1|06a Introduction to Differentiation(p.1)]]
-- [[Ses06b_Lecture_Notes.pdf#page=1|06b Derivative of a Sum(p.1)]]
-- `Exercise006` is not available in the local repository; this section of the self-test is used to replenish the exercise entry.
+- `Exercise006` is not available in the local archive, so the self-checks in this section provide the missing practice component.
 <!-- bilingual-en:end -->
 
 **知识链：**特定导数公式 + 极限线性 → 常数、常数倍、和差法则 → 多项式逐项求导。
@@ -1374,7 +1404,7 @@ $$
 
 本节暂时把两个基本极限当作已知；Session 8 再证明它们：
 <!-- bilingual-en:start -->
-For the time being, this section takes two fundamental limits as known; Session 8 proves them again:
+For now, this section takes two fundamental limits as given; Session 8 proves them independently:
 <!-- bilingual-en:end -->
 
 $$
@@ -1385,12 +1415,12 @@ $$
 
 ### 07a：正弦导数的代数推导
 <!-- bilingual-en:start -->
-*07a: Algebraic Derivation of the Derivative of Sine*
+*07a: An Algebraic Proof of the Derivative of Sine*
 <!-- bilingual-en:end -->
 
 从定义开始：
 <!-- bilingual-en:start -->
-From definition:
+Start from the definition:
 <!-- bilingual-en:end -->
 
 $$
@@ -1404,7 +1434,7 @@ $$
 
 把含 $\sin x$ 和 $\cos x$ 的部分分开：
 <!-- bilingual-en:start -->
-Separate the sections that contain $\sin x$ and $\cos x$:
+Separate the terms containing $\sin x$ and $\cos x$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1420,12 +1450,12 @@ $$
 
 每一步的依据依次是：角和公式、代数分组、极限线性、两个基本极限。
 <!-- bilingual-en:start -->
-The basis of each step is angle and formula, algebraic grouping, limit linear, two basic limits.
+The steps use, in order, the angle-addition identity, algebraic grouping, linearity of limits, and the two fundamental limits.
 <!-- bilingual-en:end -->
 
 ### 07b：余弦导数的代数推导
 <!-- bilingual-en:start -->
-*07b: Algebraic Derivation of the Derivative of Cosine*
+*07b: An Algebraic Proof of the Derivative of Cosine*
 <!-- bilingual-en:end -->
 
 $$
@@ -1448,7 +1478,7 @@ The minus sign has a clear graphical meaning: near $x=\pi/2$, the cosine curve c
 
 ### 为什么必须用弧度
 <!-- bilingual-en:start -->
-*Why must we use radians?*
+*Why Must We Use Radians?*
 <!-- bilingual-en:end -->
 
 若角度以度为单位，令 $x_{\rm rad}=\pi x_{\rm deg}/180$，则链式法则会给
@@ -1463,12 +1493,12 @@ $$
 
 只有弧度制使单位圆弧长等于角度数值，从而 $\lim_{h\to0}\sin h/h=1$，也只有此时导数公式具有最简形式。
 <!-- bilingual-en:start -->
-Only the radian system makes the unit arc length equal to the angle value, so that $\lim_{h\to0}\sin h/h=1$, and only then the derivative formula has the simplest form.
+Only in radians does an angle's numerical value equal the corresponding arc length on the unit circle. This makes $\lim_{h\to0}\sin h/h=1$ and gives the derivative formula its simplest form.
 <!-- bilingual-en:end -->
 
 ### 图像检查
 <!-- bilingual-en:start -->
-*Graphical check*
+*Graphical Check*
 <!-- bilingual-en:end -->
 
 - $\sin x$ 在 $x=\pi/2+k\pi$ 处切线水平，对应 $\cos x=0$。
@@ -1476,8 +1506,8 @@ Only the radian system makes the unit arc length equal to the angle value, so th
 - $\cos x$ 是偶函数，导数 $-\sin x$ 是奇函数，与“偶函数导数为奇函数”一致。
 <!-- bilingual-en:start -->
 - $\sin x$ is tangent horizontally at $x=\pi/2+k\pi$, corresponding to $\cos x=0$.
-$\sin x$ rises fastest at $x=2k\pi$ with a derivative of $1$, and drops fastest at $x=(2k+1)\pi$ with a derivative of $-1$.
-- $\cos x$ is an even function and the derivative $-\sin x$ is an odd function, consistent with "even function derivative is odd function".
+- $\sin x$ rises fastest at $x=2k\pi$, where its derivative is $1$, and falls fastest at $x=(2k+1)\pi$, where its derivative is $-1$.
+- $\cos x$ is even and its derivative $-\sin x$ is odd, as expected for the derivative of an even function.
 <!-- bilingual-en:end -->
 
 ### 边界情况与易错点
@@ -1490,10 +1520,10 @@ $\sin x$ rises fastest at $x=2k\pi$ with a derivative of $1$, and drops fastest 
 - $\sin^2x$ 表示 $(\sin x)^2$，其导数不是 $\cos^2x$；要等链式法则后算作 $2\sin x\cos x$。
 - 角度单位若不是弧度，必须额外乘换算因子。
 <!-- bilingual-en:start -->
-- Non-cyclic argumentation: The derivation in this section relies on two fundamental limits that Session 8 must prove independently.
-- $\cos h-1$ and $1-\cos h$ are opposite each other; limits are all zero, but intermediate symbols cannot be missed.
-- $\sin^2x$ denotes $(\sin x)^2$ and its derivative is not $\cos^2x$; it is counted as $2\sin x\cos x$ after equating the chain rule.
-- Angle units that are not radians must have an extra multiplication factor.
+- Avoid circular reasoning: the derivation here depends on two fundamental limits, which Session 8 must prove independently.
+- $\cos h-1$ and $1-\cos h$ are negatives of one another. Their limits are both zero, but the sign matters in the intermediate algebra.
+- $\sin^2x$ means $(\sin x)^2$, whose derivative is not $\cos^2x$; once the chain rule is available, its derivative is $2\sin x\cos x$.
+- If angles are not measured in radians, an additional conversion factor is required.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -1505,9 +1535,11 @@ $\sin x$ rises fastest at $x=2k\pi$ with a derivative of $1$, and drops fastest 
 2. 求 $\sin x$ 在 $x=\pi$ 的切线。
 3. 不画图，说明 $\sin x$ 在 $x=3\pi/2$ 附近为何切线水平且是局部最低点。
 <!-- bilingual-en:start -->
-1. Rewrite each step of $(\cos x)'$ using only the cosine addition formula and two fundamental limits.
-2. Find the tangent of $\sin x$ at $x=\pi$.
-3. Without drawing, explain why $\sin x$ is tangent level and locally lowest near $x=3\pi/2$.
+
+&nbsp;
+**1.** Rewrite each step of $(\cos x)'$ using only the cosine addition formula and two fundamental limits.<br>
+**2.** Find the tangent line to $\sin x$ at $x=\pi$.<br>
+**3.** Without drawing a graph, explain why $\sin x$ has a horizontal tangent and a local minimum at $x=3\pi/2$.<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -1515,9 +1547,11 @@ $\sin x$ rises fastest at $x=2k\pi$ with a derivative of $1$, and drops fastest 
 > 2. 点 $(\pi,0)$，斜率 $\cos\pi=-1$，切线 $y=-(x-\pi)$。
 > 3. 导数 $\cos(3\pi/2)=0$；其左右 $\cos x$ 从负变正，所以函数先降后升。
 > <!-- bilingual-en:start -->
-> 1. Four lines of body 07b; the key grouping is $\cos x(\cos h-1)-\sin x\sin h$.
-> 2. Point $(\pi,0)$, slope $\cos\pi=-1$, tangent $y=-(x-\pi)$.
-> 3. The derivative $\cos(3\pi/2)=0$, whose left and right $\cos x$ changes from negative to positive, so the function first decreases and then increases.
+>
+> &nbsp;
+> **1.** Follow the four displayed lines in Section 07b; the key grouping is $\cos x(\cos h-1)-\sin x\sin h$.<br>
+> **2.** The point is $(\pi,0)$ and the slope is $\cos\pi=-1$, so the tangent line is $y=-(x-\pi)$.<br>
+> **3.** We have $\cos(3\pi/2)=0$, and $\cos x$ changes from negative to positive across that point, so the function decreases and then increases.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -1557,7 +1591,7 @@ The lecture notes begin with the geometric intuition: in the unit circle, the ch
 
 对 $0<\theta<\pi/2$，单位圆内三角形、扇形、外切三角形面积满足
 <!-- bilingual-en:start -->
-For $0<\theta<\pi/2$, the area of the inner triangle, sector triangle, and circumscribed triangle satisfies
+For $0<\theta<\pi/2$, the areas of the inscribed triangle, circular sector, and circumscribed triangle satisfy
 <!-- bilingual-en:end -->
 
 $$
@@ -1568,7 +1602,7 @@ $$
 
 左边是圆内接直角三角形面积，中央是扇形面积，右边是外切三角形面积。分别整理两侧不等式：
 <!-- bilingual-en:start -->
-The left side is the inscribed right-angled triangle area of the circle, the center is the fan area, and the right side is the circumscribed triangle area.  Sort out the inequality on both sides:
+The left expression is the area of the inscribed right triangle, the middle expression is the area of the sector, and the right expression is the area of the circumscribed triangle. Rearranging the two inequalities gives
 <!-- bilingual-en:end -->
 
 $$
@@ -1590,7 +1624,7 @@ $$
 
 合并得到
 <!-- bilingual-en:start -->
-merged
+Combining them gives
 <!-- bilingual-en:end -->
 
 $$
@@ -1599,7 +1633,7 @@ $$
 
 当 $\theta\to0^+$，两端 $\cos\theta$ 与 $1/\cos\theta$ 都趋于 $1$，夹逼定理给
 <!-- bilingual-en:start -->
-When $\theta\to0^+$, both $\cos\theta$ and $1/\cos\theta$ tend to $1$, the clipping theorem
+As $\theta\to0^+$, both $\cos\theta$ and $1/\cos\theta$ tend to $1$, so the squeeze theorem gives
 <!-- bilingual-en:end -->
 
 $$
@@ -1608,7 +1642,7 @@ $$
 
 又因 $\sin(-\theta)/(-\theta)=\sin\theta/\theta$，该比值是偶函数，左极限相同：
 <!-- bilingual-en:start -->
-Also because $\sin(-\theta)/(-\theta)=\sin\theta/\theta$, the ratio is even function, the left limit is the same:
+Moreover, $\sin(-\theta)/(-\theta)=\sin\theta/\theta$, so the ratio is even and the left-hand limit is the same:
 <!-- bilingual-en:end -->
 
 $$
@@ -1621,7 +1655,7 @@ $$
 
 课件用“圆弧与弦之间的水平缝隙比弧长缩得更快”解释。代数上可以由第一个极限严格推出：
 <!-- bilingual-en:start -->
-Geometrically, the horizontal gap between the arc and the chord shrinks faster than the arc length. Algebraically, the first limit follows rigorously:
+Geometrically, the horizontal gap between the arc and the chord shrinks faster than the arc length. Algebraically, the desired result follows rigorously from the first limit:
 <!-- bilingual-en:end -->
 
 $$
@@ -1636,7 +1670,7 @@ $$
 
 第一因子趋于 $1$，第二因子趋于 $0/2=0$，所以
 <!-- bilingual-en:start -->
-The first factor tends to be $1$, and the second factor tends to be $0/2=0$, so
+The first factor tends to $1$, while the second tends to $0/2=0$, so
 <!-- bilingual-en:end -->
 
 $$
@@ -1645,7 +1679,7 @@ $$
 
 相应地 $(\cos\theta-1)/\theta$ 也趋于 $0$。这里分子和分母都趋零，但分子是二阶小量：由半角公式 $1-\cos\theta=2\sin^2(\theta/2)$ 可看出其数量级约为 $\theta^2/2$。
 <!-- bilingual-en:start -->
-Correspondingly, $(\cos\theta-1)/\theta$ also tends to $0$.  Here the numerator and denominator both go to zero, but the numerator is a second-order small quantity: from the half-angle formula $1-\cos\theta=2\sin^2(\theta/2)$, it can be seen that its order of magnitude is about $\theta^2/2$.
+Consequently, $(\cos\theta-1)/\theta$ also tends to $0$. Both numerator and denominator tend to zero, but the numerator is second order: the half-angle identity $1-\cos\theta=2\sin^2(\theta/2)$ shows that its leading size is approximately $\theta^2/2$.
 <!-- bilingual-en:end -->
 
 ### 08d：正弦导数的几何图像
@@ -1655,7 +1689,7 @@ Correspondingly, $(\cos\theta-1)/\theta$ also tends to $0$.  Here the numerator 
 
 单位圆上点 $P$ 的角为 $\theta$，邻点 $Q$ 的角为 $\theta+\Delta\theta$。小弧 $PQ$ 的长度为 $\Delta\theta$，而其竖直变化为
 <!-- bilingual-en:start -->
-The angle of the point $P$ on the unit circle is $\theta$, and the angle of the neighboring point $Q$ is $\theta+\Delta\theta$.  The length of the small arc $PQ$ is $\Delta\theta$, and its vertical variation is
+Let $P$ have angle $\theta$ on the unit circle and let a nearby point $Q$ have angle $\theta+\Delta\theta$. The short arc $PQ$ has length $\Delta\theta$, and the vertical change is
 <!-- bilingual-en:end -->
 
 $$
@@ -1664,7 +1698,7 @@ $$
 
 当 $\Delta\theta$ 很小时，弦方向接近切线方向；圆的切线垂直于半径，因此切线与竖直方向的夹角对应 $\theta$，竖直分量与弧长之比趋于 $\cos\theta$：
 <!-- bilingual-en:start -->
-When $\Delta\theta$ is very small, the chord direction is close to the tangent direction;the tangent of the circle is perpendicular to the radius, so the angle between the tangent and the vertical direction corresponds to $\theta$, and the ratio of the vertical component to the arc length tends to $\cos\theta$:
+When $\Delta\theta$ is small, the chord direction approaches the tangent direction. Since the tangent to a circle is perpendicular to the radius, its vertical component relative to arc length tends to $\cos\theta$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1673,12 +1707,12 @@ $$
 
 这是几何直观；严格代数证明仍以 07a 的角和公式与刚证明的极限为准。
 <!-- bilingual-en:start -->
-This is geometric intuitive; the exact algebraic proof is still based on the angle and formula of 07a and the limit of the rigid proof.
+This supplies the geometric intuition. The rigorous algebraic proof remains the argument in Section 07a using the angle-addition identity and the limits just established.
 <!-- bilingual-en:end -->
 
 ### sinc 函数
 <!-- bilingual-en:start -->
-*sinc function*
+*The sinc Function*
 <!-- bilingual-en:end -->
 
 $$
@@ -1687,7 +1721,7 @@ $$
 
 极限告诉我们在 $x=0$ 只差一个可去间断。定义 $\operatorname{sinc}(0)=1$ 后连续。它是偶函数，在 $x=k\pi$（非零整数 $k$）取零，振幅受 $1/|x|$ 包络并逐渐衰减；这正是信号处理中常见的振荡形状。
 <!-- bilingual-en:start -->
-Extreme limits tell us there's only one discontinuity left in $x=0$.  Continuous after $\operatorname{sinc}(0)=1$ is defined.  It is an even function, taking zero at $x=k\pi$ (non-zero integer $k$), and the amplitude is enveloped by $1/|x|$ and decays gradually; this is the common shape of the oscillation in signal processing.
+The limit shows that the only defect at $x=0$ is a removable discontinuity. Defining $\operatorname{sinc}(0)=1$ makes the function continuous. It is even, vanishes at $x=k\pi$ for nonzero integers $k$, and has a decaying envelope $1/|x|$—a familiar oscillatory shape in signal processing.
 <!-- bilingual-en:end -->
 
 ### 边界情况与易错点
@@ -1700,10 +1734,10 @@ Extreme limits tell us there's only one discontinuity left in $x=0$.  Continuous
 - $\sin\theta\sim\theta$ 是极限等价，不是对非零 $\theta$ 的恒等式。
 - 本证明依赖弧度；角度制下单位圆弧长不等于角度数值。
 <!-- bilingual-en:start -->
-- Area inequalities are first written only to $0<\theta<\pi/2$; the left side is padded by even.
-- When taking the countdown, you must verify that the quantities are positive and reverse the inequality sign.
-- $\sin\theta\sim\theta$ is a limit equivalent, not an identity for non-zero $\theta$.
-- This proof depends on radians; the unit arc length under the angle system is not equal to the angle value.
+- The area inequalities are first established for $0<\theta<\pi/2$; evenness supplies the limit from the left.
+- Before taking reciprocals, verify that the quantities are positive and reverse the inequality direction.
+- $\sin\theta\sim\theta$ is an asymptotic equivalence, not an identity for nonzero $\theta$.
+- The proof depends on radian measure; in degrees, an angle's numerical value is not the corresponding arc length on the unit circle.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -1715,9 +1749,11 @@ Extreme limits tell us there's only one discontinuity left in $x=0$.  Continuous
 2. 求 $\lim_{x\to0}(1-\cos x)/x^2$，可用半角公式。
 3. sinc 补定义后为何在 $0$ 连续，但原始分式在 $0$ 不可谈导数？
 <!-- bilingual-en:start -->
-1. Find $\lim_{x\to0}\sin(5x)/x$.
-2. Find $\lim_{x\to0}(1-\cos x)/x^2$ using a half-angle identity if helpful.
-3. Why does the continuously extended sinc function become continuous at $0$, while differentiability at $0$ is not even defined for the original quotient?
+
+&nbsp;
+**1.** Find $\lim_{x\to0}\sin(5x)/x$.<br>
+**2.** Find $\lim_{x\to0}(1-\cos x)/x^2$ using a half-angle identity if helpful.<br>
+**3.** Why does the continuously extended sinc function become continuous at $0$, while differentiability at $0$ is not even defined for the original quotient?<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -1725,9 +1761,11 @@ Extreme limits tell us there's only one discontinuity left in $x=0$.  Continuous
 > 2. $2\sin^2(x/2)/x^2=\frac12[\sin(x/2)/(x/2)]^2\to1/2$。
 > 3. 原始分式在 $0$ 未定义；先定义 sinc$(0)=1$ 才得到新函数。连续性由极限等于补入值保证，之后才可进一步研究导数。
 > <!-- bilingual-en:start -->
-> 1. $5\,[\sin(5x)/(5x)]\to5$.
-> 2. $2\sin^2(x/2)/x^2=\frac12[\sin(x/2)/(x/2)]^2\to1/2$.
-> 3. The original fraction is not defined in $0$; define sinc$(0)=1$ before getting the new function.  The continuity is guaranteed by the limit equal to the input value, after which the derivative can be studied further.
+>
+> &nbsp;
+> **1.** $5\,[\sin(5x)/(5x)]\to5$.<br>
+> **2.** $2\sin^2(x/2)/x^2=\frac12[\sin(x/2)/(x/2)]^2\to1/2$.<br>
+> **3.** The original quotient is undefined at $0$. Defining $\operatorname{sinc}(0)=1$ creates a new extended function; the equality between the limit and the inserted value makes it continuous, after which differentiability can be investigated.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -1757,7 +1795,7 @@ Extreme limits tell us there's only one discontinuity left in $x=0$.  Continuous
 
 **前置知识：**导数定义、可导蕴含连续、极限乘法与加法法则。
 <!-- bilingual-en:start -->
-**Prerequisite knowledge:** Definition of the derivative, differentiability implies continuity, and the product and sum laws for limits.
+**Prerequisites:** The definition of the derivative, the fact that differentiability implies continuity, and the product and sum laws for limits.
 <!-- bilingual-en:end -->
 
 ### 09a-09b：规则与直觉
@@ -1767,7 +1805,7 @@ Extreme limits tell us there's only one discontinuity left in $x=0$.  Continuous
 
 若矩形边长为 $u,v$，小变化为 $\Delta u,\Delta v$，面积增量为
 <!-- bilingual-en:start -->
-If the side length of the rectangle is $u,v$, the small change is $\Delta u,\Delta v$, and the area increment is
+If a rectangle has side lengths $u$ and $v$, and these change by $\Delta u$ and $\Delta v$, then its area changes by
 <!-- bilingual-en:end -->
 
 $$
@@ -1777,7 +1815,7 @@ $$
 
 除以输入变化后，最后一项是两个小量的乘积，取极限时消失；保留下来的正是“一次只改变一个因子”的两部分。
 <!-- bilingual-en:start -->
-Divide by the input change, the last item is the product of two small quantities, and disappears when the limit is taken; what remains are the two parts of "only change one factor at a time".
+After division by the input change, the final term contains a product of two small increments and vanishes in the limit. The two remaining terms correspond to changing one factor at a time.
 <!-- bilingual-en:end -->
 
 > [!important] 积法则
@@ -1791,12 +1829,12 @@ Divide by the input change, the last item is the product of two small quantities
 
 ### 09c：由定义证明
 <!-- bilingual-en:start -->
-*09c: Certified by definition*
+*09c: Proof from the Definition*
 <!-- bilingual-en:end -->
 
 从积的差商开始，并加减中间项 $u(x+h)v(x)$：
 <!-- bilingual-en:start -->
-Start from the product of the difference quotient, and add or subtract the middle term $u(x+h)v(x)$:
+Start from the difference quotient of the product, then add and subtract the intermediate term $u(x+h)v(x)$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1829,7 +1867,7 @@ This step explicitly uses the fact that differentiability implies continuity. Wi
 
 ### 代表例题
 <!-- bilingual-en:start -->
-*representative example*
+*Representative Example*
 <!-- bilingual-en:end -->
 
 $$
@@ -1839,7 +1877,7 @@ $$
 
 三个因子时重复应用：
 <!-- bilingual-en:start -->
-Three factors are repeated:
+For three factors, apply the product rule repeatedly:
 <!-- bilingual-en:end -->
 
 $$
@@ -1848,7 +1886,7 @@ $$
 
 一般而言，有限多个因子求导就是“每一项只对一个因子求导，其余保持原样，再相加”。
 <!-- bilingual-en:start -->
-In general, the derivative of a limited number of factors is "each item is only a factor of the derivative, the rest to remain as is, and then add".
+In general, for a finite product, differentiate one factor at a time, leave all the others unchanged, and add the resulting terms.
 <!-- bilingual-en:end -->
 
 ### Exercise 009：拼接多项式
@@ -1899,9 +1937,11 @@ On both sides of $0$, the function values are automatically $6$; the left-hand d
 2. 求 $D[x^2\cos x]$，并在 $x=0$ 检查。
 3. 写出 $(uvwx)'$（最后一个 $x$ 是自变量）的展开式。
 <!-- bilingual-en:start -->
-1. Why add or subtract $u(x+h)v(x)$ when proving with definition?
-2. Request $D[x^2\cos x]$ and check at $x=0$.
-3. Write out an expansion of $(uvwx)'$ (the last $x$ is an argument).
+
+&nbsp;
+**1.** Why do we add and subtract $u(x+h)v(x)$ in the proof from the definition?<br>
+**2.** Find $D[x^2\cos x]$ and check the result at $x=0$.<br>
+**3.** Expand $(uvwx)'$, where the final $x$ is the independent variable.<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -1909,9 +1949,11 @@ On both sides of $0$, the function values are automatically $6$; the left-hand d
 > 2. $2x\cos x-x^2\sin x$；在 $0$ 为 $0$，与 $x^2\cos x$ 在原点的水平切线一致。
 > 3. $u'vwx+uv'wx+uvw'x+uvw$。
 > <!-- bilingual-en:start -->
-> 1. It splits an otherwise unrecognisable product increment into two standard difference quotients. Adding and subtracting the same term leaves the numerator unchanged.
-> 2. $2x\cos x-x^2\sin x$; $0$ at $0$, consistent with the horizontal tangent of $x^2\cos x$ at the origin.
-> 3. $u'vwx+uv'wx+uvw'x+uvw$.
+>
+> &nbsp;
+> **1.** It splits an otherwise unrecognisable product increment into two standard difference quotients. Adding and subtracting the same term leaves the numerator unchanged.<br>
+> **2.** $2x\cos x-x^2\sin x$; $0$ at $0$, consistent with the horizontal tangent of $x^2\cos x$ at the origin.<br>
+> **3.** $u'vwx+uv'wx+uvw'x+uvw$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -1940,12 +1982,12 @@ On both sides of $0$, the function values are automatically $6$; the left-hand d
 
 **前置知识：**分式通分、积法则、可导蕴含连续。
 <!-- bilingual-en:start -->
-**Prerequisite knowledge:** Combining rational expressions over a common denominator, the product rule, and the fact that differentiability implies continuity.
+**Prerequisites:** Combining rational expressions over a common denominator, the product rule, and the fact that differentiability implies continuity.
 <!-- bilingual-en:end -->
 
 ### 10a：商法则推导
 <!-- bilingual-en:start -->
-*10a: Derivation of the Quotient Rule*
+*10a: Deriving the Quotient Rule*
 <!-- bilingual-en:end -->
 
 设 $v(x)\ne0$，且在 $x$ 附近分母也不为零。记
@@ -1960,7 +2002,7 @@ $$
 
 则 $u(x+h)=u+\Delta u$、$v(x+h)=v+\Delta v$。商的增量为
 <!-- bilingual-en:start -->
-$u(x+h)=u+\Delta u$, $v(x+h)=v+\Delta v$.  The increment of quotient is
+Then $u(x+h)=u+\Delta u$ and $v(x+h)=v+\Delta v$. The increment in the quotient is
 <!-- bilingual-en:end -->
 
 $$
@@ -1973,7 +2015,7 @@ $$
 
 再除以 $h$：
 <!-- bilingual-en:start -->
-Divide by $h$:
+Dividing by $h$ gives
 <!-- bilingual-en:end -->
 
 $$
@@ -1983,7 +2025,7 @@ $$
 
 令 $h\to0$。因 $v$ 可导所以连续，$\Delta v\to0$；差商趋于导数：
 <!-- bilingual-en:start -->
-Get $h\to0$.  Because $v$ can lead to continuous, $\Delta v\to0$;Difference quotient tends to derivative:
+Let $h\to0$. Since $v$ is differentiable, it is continuous and hence $\Delta v\to0$; the two difference quotients tend to the corresponding derivatives:
 <!-- bilingual-en:end -->
 
 > [!important] 商法则
@@ -1998,7 +2040,7 @@ As a mnemonic, read it as “bottom times the derivative of the top, minus top t
 
 ### 10b：倒数与负整数幂
 <!-- bilingual-en:start -->
-*10b: Reciprocal and negative integer powers*
+*10b: Reciprocals and Negative-Integer Powers*
 <!-- bilingual-en:end -->
 
 令 $u=1$：
@@ -2023,7 +2065,7 @@ $$
 
 因此幂法则从正整数扩展到负整数：
 <!-- bilingual-en:start -->
-So the power law extends from positive integers to negative integers:
+Thus the power rule extends from positive integers to negative integers:
 <!-- bilingual-en:end -->
 
 $$
@@ -2061,9 +2103,9 @@ $$
 - 先约分可能改变定义域。例如 $(x^2-1)/(x-1)=x+1$ 只在 $x\ne1$ 相等。
 <!-- bilingual-en:start -->
 - The resulting denominator is $v^2$ and does not remove the original restriction $v\ne0$.
-- The numerator order is inverted by an overall minus sign; can be checked by a simple function such as $1/x$.
-- If rewritable as $uv^{-1}$, the product + chain rule is often more reliable than the rote quotient rule; this is the subject of the next exercise.
-- The preamble may change the domain.  For example, $(x^2-1)/(x-1)=x+1$ is equal only at $x\ne1$.
+- Reversing the order of the numerator terms changes the overall sign; check the formula on a simple function such as $1/x$.
+- If the quotient can be written as $uv^{-1}$, the product and chain rules are often more reliable than memorizing the quotient rule mechanically; this is the theme of the next exercise.
+- Simplifying first can change the apparent domain. For example, $(x^2-1)/(x-1)$ equals $x+1$ only when $x\ne1$.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -2075,9 +2117,11 @@ $$
 2. 用倒数公式重新求 $(1/x)'$。
 3. 为什么 $\tan x$ 的导数公式不能在 $x=\pi/2$ 使用？
 <!-- bilingual-en:start -->
-1. Request $D[x^2/(x+1)]$ and simplify.
-2. Recalculate $(1/x)'$ with the reciprocal formula.
-3. Why can't the derivative formula for $\tan x$ be used in $x=\pi/2$?
+
+&nbsp;
+**1.** Find $D[x^2/(x+1)]$ and simplify.<br>
+**2.** Recalculate $(1/x)'$ with the reciprocal formula.<br>
+**3.** Why can't the derivative formula for $\tan x$ be used at $x=\pi/2$?<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -2085,9 +2129,11 @@ $$
 > 2. 取 $v=x,v'=1$，得到 $-1/x^2$。
 > 3. $\cos(\pi/2)=0$，原函数 $\tan x$ 未定义；求导公式不能补出原函数的定义点。
 > <!-- bilingual-en:start -->
-> 1. $[2x(x+1)-x^2]/(x+1)^2=x(x+2)/(x+1)^2$,$x\ne-1$.
-> 2. Take $v=x,v'=1$ to get $-1/x^2$.
-> 3. Since $\cos(\pi/2)=0$, the function $\tan x$ is undefined there; its derivative formula cannot extend the function's domain.
+>
+> &nbsp;
+> **1.** $[2x(x+1)-x^2]/(x+1)^2=x(x+2)/(x+1)^2$,$x\ne-1$.<br>
+> **2.** Take $v=x,v'=1$ to get $-1/x^2$.<br>
+> **3.** Since $\cos(\pi/2)=0$, the function $\tan x$ is undefined there; its derivative formula cannot extend the function's domain.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -2120,12 +2166,12 @@ $$
 
 ### 11a：中间变量与变化率相乘
 <!-- bilingual-en:start -->
-*11a: Multiply intermediate variable by rate of change*
+*11a: Intermediate Variables and Multiplication of Rates*
 <!-- bilingual-en:end -->
 
 设
 <!-- bilingual-en:start -->
-if
+Let
 <!-- bilingual-en:end -->
 
 $$
@@ -2134,7 +2180,7 @@ $$
 
 有限变化时，若 $\Delta x\ne0$，
 <!-- bilingual-en:start -->
-With limited variation, if $\Delta x\ne0$,
+For finite changes with $\Delta x\ne0$,
 <!-- bilingual-en:end -->
 
 $$
@@ -2161,17 +2207,17 @@ As $\Delta t\to0$, differentiability implies $\Delta x\to0$, and the two factors
 
 直觉是“每单位 $t$ 产生多少 $x$”乘“每单位 $x$ 产生多少 $y$”。单位也会相消：$(y/x)(x/t)=y/t$。
 <!-- bilingual-en:start -->
-The intuition is "how much $t$ per unit of $x$ is produced" times "how much $y$ is produced per unit of $x$".  The units are also canceled: $(y/x)(x/t)=y/t$.
+The intuition is “how much $x$ is produced per unit of $t$” multiplied by “how much $y$ is produced per unit of $x$.” The intermediate units cancel: $(y/x)(x/t)=y/t$.
 <!-- bilingual-en:end -->
 
 ### 不跳过 $\Delta x=0$ 的证明细节
 <!-- bilingual-en:start -->
-*Do not skip proof details for $\Delta x=0$*
+*Do Not Skip the $\Delta x=0$ Detail in the Proof*
 <!-- bilingual-en:end -->
 
 直接约掉 $\Delta x$ 在某些步长上可能遇到 $\Delta x=0$。定义辅助函数
 <!-- bilingual-en:start -->
-Just ask $\Delta x$ out. You might run into $\Delta x=0$ at some pace.  defining auxiliary functions
+Cancelling $\Delta x$ directly can fail for increments at which $\Delta x=0$. Define the auxiliary function
 <!-- bilingual-en:end -->
 
 $$
@@ -2213,7 +2259,7 @@ Let $h\to0$. Because $g$ is differentiable, it is continuous, so $u\to0$. The fi
 
 令 $x=\sin t$、$y=x^{10}$：
 <!-- bilingual-en:start -->
-To make $x=\sin t$, $y=x^{10}$:
+Let $x=\sin t$ and $y=x^{10}$:
 <!-- bilingual-en:end -->
 
 $$
@@ -2241,12 +2287,12 @@ $$
 
 注意 $\sin^{10}t$ 与 $\sin(10t)$ 完全不同：前者是函数值的十次幂，后者是角度放大十倍。
 <!-- bilingual-en:start -->
-Note that $\sin^{10}t$ is completely different from $\sin(10t)$: the former is the tenth power of the function value, and the latter is the ten-fold angular amplification.
+Notice that $\sin^{10}t$ and $\sin(10t)$ mean entirely different things: the former is the tenth power of a function value, while the latter evaluates sine at an angle multiplied by ten.
 <!-- bilingual-en:end -->
 
 ### 多层复合
 <!-- bilingual-en:start -->
-*multi-layer composite*
+*Compositions with Several Layers*
 <!-- bilingual-en:end -->
 
 $$
@@ -2257,7 +2303,7 @@ $$
 
 从最外层向内层逐层求导；每经过一层就乘该层内函数的导数，直到自变量。
 <!-- bilingual-en:start -->
-Derive from the outermost layer to the innermost layer; multiply the derivative of the function in each layer until the argument.
+Differentiate from the outermost layer inward, multiplying by the derivative contributed by each layer until reaching the independent variable.
 <!-- bilingual-en:end -->
 
 ### 边界情况与易错点
@@ -2270,10 +2316,10 @@ Derive from the outermost layer to the innermost layer; multiply the derivative 
 - 链式法则要求外函数在内函数输出处可导、内函数在当前点可导。
 - Leibniz 记号提供记忆直觉，但正式依据是复合函数的极限证明。
 <!-- bilingual-en:start -->
-- The most common error is to calculate the outer derivative only and to miss the inner derivative.
-- $f'(g(x))$ means replace $g(x)$ with $f'$ first; not $f'(x)g(x)$.
-- The chain rule requires that the outer function is derivative at the output of the inner function and the inner function is derivative at the current point.
-- The Leibniz notation provides a memory intuition, but is formally based on a limit proof of the composite function.
+- The most common error is differentiating only the outer function and omitting the derivative of the inner function.
+- $f'(g(x))$ means evaluate $f'$ at $g(x)$; it does not mean $f'(x)g(x)$.
+- The chain rule requires the outer function to be differentiable at the inner function's output and the inner function to be differentiable at the current point.
+- Leibniz notation provides a useful mnemonic, but the formal justification is the limit proof for a composite function.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -2285,9 +2331,11 @@ Derive from the outermost layer to the innermost layer; multiply the derivative 
 2. 比较 $D[\cos^2x]$ 与 $D[\cos(x^2)]$。
 3. 若温度 $T$ 随高度 $z$ 变化，气球高度随时间变化，解释 $dT/dt=(dT/dz)(dz/dt)$ 的单位。
 <!-- bilingual-en:start -->
-1. Find $D[(3x^2-1)^5]$.
-2. Compare $D[\cos^2x]$ with $D[\cos(x^2)]$.
-3. If temperature $T$ varies with altitude $z$, while the balloon's altitude varies with time, explain the units in $dT/dt=(dT/dz)(dz/dt)$.
+
+&nbsp;
+**1.** Find $D[(3x^2-1)^5]$.<br>
+**2.** Compare $D[\cos^2x]$ with $D[\cos(x^2)]$.<br>
+**3.** If temperature $T$ varies with altitude $z$, while the balloon's altitude varies with time, explain the units in $dT/dt=(dT/dz)(dz/dt)$.<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -2295,9 +2343,11 @@ Derive from the outermost layer to the innermost layer; multiply the derivative 
 > 2. $D[\cos^2x]=-2\sin x\cos x$；$D[\cos(x^2)]=-2x\sin(x^2)$。
 > 3. $(\text{度}/\text{米})(\text{米}/\text{秒})=\text{度}/\text{秒}$，表示气球经历的温度随时间变化率。
 > <!-- bilingual-en:start -->
-> 1. $5(3x^2-1)^4\cdot6x=30x(3x^2-1)^4$.
-> 2. $D[\cos^2x]=-2\sin x\cos x$;$D[\cos(x^2)]=-2x\sin(x^2)$.
-> 3. $(\text{Degree}/\text{Mee})(\text{Mee}/\text{Seconds})=\text{Degree}/\text{Seconds}$, which represents the rate of change in temperature experienced by the balloon over time.
+>
+> &nbsp;
+> **1.** $5(3x^2-1)^4\cdot6x=30x(3x^2-1)^4$.<br>
+> **2.** $D[\cos^2x]=-2\sin x\cos x$;$D[\cos(x^2)]=-2x\sin(x^2)$.<br>
+> **3.** $(\text{degrees}/\text{metre})(\text{metres}/\text{second})=\text{degrees}/\text{second}$, the rate at which the balloon experiences a change in temperature over time.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -2325,12 +2375,12 @@ Derive from the outermost layer to the innermost layer; multiply the derivative 
 
 **前置知识：**基本求导规则、正余弦导数、运动的速度解释。
 <!-- bilingual-en:start -->
-**Prerequisite knowledge:**Basic derivative rules, sine and cosine derivatives, velocity interpretation of motion.
+**Prerequisites:** Basic differentiation rules, the derivatives of sine and cosine, and the interpretation of velocity in motion.
 <!-- bilingual-en:end -->
 
 ### 12a：定义、记号与解释
 <!-- bilingual-en:start -->
-*12a: Definition, marking and interpretation*
+*12a: Definition, Notation, and Interpretation*
 <!-- bilingual-en:end -->
 
 若 $f'$ 仍可导，则
@@ -2344,7 +2394,7 @@ $$
 
 继续求导：
 <!-- bilingual-en:start -->
-Continue derivative:
+Continuing to differentiate gives
 <!-- bilingual-en:end -->
 
 $$
@@ -2353,7 +2403,7 @@ $$
 
 这里 $f^{(n)}$ 是[[导数与求导规则#从差商到导数|高阶导数]]，不是 $f$ 的 $n$ 次幂。Leibniz 记号中的 $d^2f/dx^2$ 也是一个整体，不应读成普通分数平方。
 <!-- bilingual-en:start -->
-Here $f^{(n)}$ is [[导数与求导规则#从差商到导数|high-order derivative]], not the $n$ power of $f$.  The $d^2f/dx^2$ in the Leibniz notation is also a whole and should not be read as a normal score squared.
+Here $f^{(n)}$ denotes the [[导数与求导规则#从差商到导数|$n$th derivative]], not the $n$th power of $f$. Likewise, $d^2f/dx^2$ is a single piece of Leibniz notation and should not be read as the square of an ordinary fraction.
 <!-- bilingual-en:end -->
 
 运动中
@@ -2372,7 +2422,7 @@ On the graph, $f''>0$ means that the slope $f'$ increases with $x$ (concave up),
 
 ### 正弦的四阶循环
 <!-- bilingual-en:start -->
-*sine fourth-order cycle*
+*The Four-Derivative Cycle of Sine*
 <!-- bilingual-en:end -->
 
 $$
@@ -2384,7 +2434,7 @@ $$
 
 因此阶数对 $4$ 取余即可。例如 $101\equiv1\pmod4$，
 <!-- bilingual-en:start -->
-So the order is covariance with $4$.  For example, $101\equiv1\pmod4$,
+Thus only the derivative order modulo $4$ matters. For example, $101\equiv1\pmod4$, so
 <!-- bilingual-en:end -->
 
 $$
@@ -2393,7 +2443,7 @@ $$
 
 同时 $\sin x$ 与 $\cos x$ 都满足
 <!-- bilingual-en:start -->
-Both $\sin x$ and $\cos x$ meet
+Both $\sin x$ and $\cos x$ satisfy
 <!-- bilingual-en:end -->
 
 $$
@@ -2402,14 +2452,14 @@ $$
 
 这是简谐振动微分方程的核心形式。
 <!-- bilingual-en:start -->
-This is the core form of the simple harmonic vibration differential equation.
+This is the fundamental differential equation for simple harmonic motion.
 <!-- bilingual-en:end -->
 
 ### 12b：$D^nx^n=n!$
 
 逐次求导：
 <!-- bilingual-en:start -->
-Sequential Derivation:
+Differentiating successively gives
 <!-- bilingual-en:end -->
 
 $$
@@ -2422,7 +2472,7 @@ $$
 
 第 $k$ 阶为
 <!-- bilingual-en:start -->
-$k$ order is
+The $k$th derivative is
 <!-- bilingual-en:end -->
 
 $$
@@ -2440,7 +2490,7 @@ $$
 
 再求一次，常数导数为零：$D^{n+1}x^n=0$；更高阶也全为零。
 <!-- bilingual-en:start -->
-Again, the constant derivative is zero: $D^{n+1}x^n=0$; higher orders are all zero.
+Differentiating once more gives zero because the derivative of a constant is zero: $D^{n+1}x^n=0$. Every higher derivative is also zero.
 <!-- bilingual-en:end -->
 
 ### 乘积高阶导数：Leibniz 公式
@@ -2450,7 +2500,7 @@ Again, the constant derivative is zero: $D^{n+1}x^n=0$; higher orders are all ze
 
 重复使用积法则会出现二项式系数：
 <!-- bilingual-en:start -->
-The binomial coefficient appears when the product method is reused:
+Repeated use of the product rule produces binomial coefficients:
 <!-- bilingual-en:end -->
 
 $$
@@ -2469,7 +2519,7 @@ $$
 
 中间系数 $2$ 来自两条不同求导路径。
 <!-- bilingual-en:start -->
-The intermediate coefficient $2$ comes from two different derivation paths.
+The middle coefficient $2$ comes from two distinct differentiation paths.
 <!-- bilingual-en:end -->
 
 ### 边界情况与易错点
@@ -2483,9 +2533,9 @@ The intermediate coefficient $2$ comes from two different derivation paths.
 - 物理中加速度与速度同号表示速率增加，异号表示速率减少；不能只看 $a$ 正负。
 <!-- bilingual-en:start -->
 - Second derivative notation is $d^2y/dx^2$, not $(dy/dx)^2$.
-- $f''(a)=0$ is not sufficient to assert an inflection point; also check to see if the reentrant has changed.
-- The higher-order derivative time-product rules result in coefficients that accumulate and cannot be computed to the same order for each factor.
-- In physics, the same sign for acceleration and velocity indicates an increase in rate, and the opposite sign indicates a decrease in rate; you cannot look only at the $a$ plus or minus.
+- $f''(a)=0$ is not enough to establish an inflection point; check whether the concavity actually changes.
+- Repeated product rules generate accumulated coefficients in higher derivatives; it is not enough simply to differentiate each factor to the same order once.
+- In mechanics, velocity and acceleration with the same sign mean speed is increasing, while opposite signs mean speed is decreasing; the sign of acceleration alone is not enough.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -2497,9 +2547,11 @@ The intermediate coefficient $2$ comes from two different derivation paths.
 2. 求 $D^{2026}\cos x$。
 3. 展开 $(uv)'''$。
 <!-- bilingual-en:start -->
-1. Find $D^6x^4$.
-2. Find $D^{2026}\cos x$.
-3. Expand $(uv)^{(3)}$.
+
+&nbsp;
+**1.** Find $D^6x^4$.<br>
+**2.** Find $D^{2026}\cos x$.<br>
+**3.** Expand $(uv)^{(3)}$.<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -2507,9 +2559,11 @@ The intermediate coefficient $2$ comes from two different derivation paths.
 > 2. $2026\equiv2\pmod4$，故为 $-\cos x$。
 > 3. $u'''v+3u''v'+3u'v''+uv'''$。
 > <!-- bilingual-en:start -->
-> 1. $4!=24$ after the fourth order and zero from the fifth order, so answer $0$.
-> 2. $2026\equiv2\pmod4$, hence $-\cos x$.
-> 3. $u'''v+3u''v'+3u'v''+uv'''$.
+>
+> &nbsp;
+> **1.** The fourth derivative is $4!=24$, and every derivative from the fifth onward is zero, so the answer is $0$.<br>
+> **2.** $2026\equiv2\pmod4$, hence $-\cos x$.<br>
+> **3.** $u'''v+3u''v'+3u'v''+uv'''$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -2527,7 +2581,7 @@ The intermediate coefficient $2$ comes from two different derivation paths.
 
 官方在 Part A 后指定同一份 Differentiation 题册中的 1A、1B、1C、1D、1E、1F、1G、1J 选题。下列编号严格按[官网 Problem Set 1](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/problem-set-1/)；不是整本题册的所有题。
 <!-- bilingual-en:start -->
-After Part A, the official designated 1A, 1B, 1C, 1D, 1E, 1F, 1G, 1J of the same Differentiation title book.  The following numbers are strictly [Problem Set 1](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/problem-set-1/); not all of the questions in the entire book.
+After Part A, the official course assigns selected problems from Sections 1A, 1B, 1C, 1D, 1E, 1F, 1G, and 1J of the same Differentiation problem booklet. The numbering below follows [Problem Set 1](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/pages/1.-differentiation/part-a-definition-and-basic-rules/problem-set-1/) exactly; it is not a list of every problem in the booklet.
 <!-- bilingual-en:end -->
 
 - [[PSet01_Problems.pdf#page=1|Differentiation 原题（pp.1-13）]]
@@ -2805,11 +2859,11 @@ After Part A, the official designated 1A, 1B, 1C, 1D, 1E, 1F, 1G, 1J of the same
 > <!-- bilingual-en:start -->
 > Consult [[PSet01_Problems.pdf#page=3|the original printed page 3]] for the five graphs. Apply these rules to each one:
 >
-> 1. **Semicircle:** For the upper semicircle $y=\sqrt{R^2-x^2}$, $y'=-x/\sqrt{R^2-x^2}$. The derivative is zero at the center, tends to $+\infty$ and $-\infty$ at the two endpoints, respectively, and is an odd function.
-> 2. **Parabola:** The slope varies linearly with $x$; the derivative is zero at the vertex and has opposite signs on the two sides.
-> 3. **Given odd function:** Its derivative should be even; reflect slope values across the $y$-axis.
-> 4. **Given even function:** Its derivative should be odd; if it is differentiable at the origin, then $f'(0)=0$.
-> 5. **Periodic function:** Its derivative has the same period. Local maxima and minima correspond to zeros of the derivative when the function is differentiable; the derivative is positive on increasing intervals and negative on decreasing intervals.
+> **1.** **Semicircle:** For the upper semicircle $y=\sqrt{R^2-x^2}$, $y'=-x/\sqrt{R^2-x^2}$. The derivative is zero at the center, tends to $+\infty$ and $-\infty$ at the two endpoints, respectively, and is an odd function.<br>
+> **2.** **Parabola:** The slope varies linearly with $x$; the derivative is zero at the vertex and has opposite signs on the two sides.<br>
+> **3.** **Given odd function:** Its derivative should be even; reflect slope values across the $y$-axis.<br>
+> **4.** **Given even function:** Its derivative should be odd; if it is differentiable at the origin, then $f'(0)=0$.<br>
+> **5.** **Periodic function:** Its derivative has the same period. Local maxima and minima correspond to zeros of the derivative when the function is differentiable; the derivative is positive on increasing intervals and negative on decreasing intervals.<br>
 >
 > To check the sketch, first mark nondifferentiable points and zeros, then determine the sign, and finally estimate the magnitude. Do not confuse the function's height with the value of its derivative.
 > <!-- bilingual-en:end -->
@@ -3208,7 +3262,7 @@ After Part A, the official designated 1A, 1B, 1C, 1D, 1E, 1F, 1G, 1J of the same
 
 [[导数与求导规则#Worked example：用隐式求导找圆的切线|隐函数求导]]从关系式
 <!-- bilingual-en:start -->
-[[导数与求导规则#Worked example：用隐式求导找圆的切线|implicit function derivative]] Slave Relationship
+[[导数与求导规则#Worked example：用隐式求导找圆的切线|Implicit differentiation]] starts from a relation such as
 <!-- bilingual-en:end -->
 
 $$
@@ -3217,7 +3271,7 @@ $$
 
 可能描述多条分支，甚至不能在整个图形上写成单一函数 $y=f(x)$。但在非竖直切线附近，一小段曲线通常仍可把 $y$ 看成由 $x$ 决定。于是对等式两边关于 $x$ 求导：
 <!-- bilingual-en:start -->
-It is possible to describe multiple branches, or even to write a single function $y=f(x)$ on the entire graph.  However, in the vicinity of a non-vertical tangent, a small segment of the curve can still be considered to be determined by $y$ as $x$.  So we derive the derivative of $x$ on both sides of the equation:
+Such a relation may describe several branches and may not define a single global function $y=f(x)$. Near a point with a nonvertical tangent, however, a small segment can usually be regarded as having $y$ determined by $x$. We therefore differentiate both sides with respect to $x$:
 <!-- bilingual-en:end -->
 
 $$
@@ -3226,7 +3280,7 @@ $$
 
 关键规则：每当对含 $y$ 的表达式求导，都要乘 $y'=dy/dx$。例如
 <!-- bilingual-en:start -->
-Key Rule: Multiply $y$ every time you differentiate an expression that contains $y'=dy/dx$.  For example
+Key rule: whenever an expression involving $y$ is differentiated, multiply by $y'=dy/dx$. For example,
 <!-- bilingual-en:end -->
 
 $$
@@ -3240,12 +3294,12 @@ This is not an "extra rule", but the chain rule of the outer function $u^n$ and 
 
 ### 13b：有理指数幂法则的完整推导
 <!-- bilingual-en:start -->
-*13b: A Complete Derivation of the Rational-Exponent Power Rule*
+*13b: A Complete Proof of the Rational-Exponent Power Rule*
 <!-- bilingual-en:end -->
 
 设
 <!-- bilingual-en:start -->
-if
+Let
 <!-- bilingual-en:end -->
 
 $$
@@ -3254,7 +3308,7 @@ $$
 
 其中 $m\in\mathbb Z,n\in\mathbb N$。为消去分数指数，两边取 $n$ 次幂：
 <!-- bilingual-en:start -->
-where $m\in\mathbb Z,n\in\mathbb N$.  To eliminate the fractional index, take the $n$ power on both sides:
+where $m\in\mathbb Z$ and $n\in\mathbb N$. To eliminate the fractional exponent, raise both sides to the $n$th power:
 <!-- bilingual-en:end -->
 
 $$
@@ -3263,7 +3317,7 @@ $$
 
 关于 $x$ 求导：
 <!-- bilingual-en:start -->
-About $x$ Derivation:
+Differentiate with respect to $x$:
 <!-- bilingual-en:end -->
 
 $$
@@ -3272,7 +3326,7 @@ $$
 
 在 $y\ne0$ 处解出：
 <!-- bilingual-en:start -->
-Dissolve at $y\ne0$:
+At points where $y\ne0$, solve for $y'$:
 <!-- bilingual-en:end -->
 
 $$
@@ -3281,7 +3335,7 @@ $$
 
 代回 $y=x^{m/n}$：
 <!-- bilingual-en:start -->
-Bring back $y=x^{m/n}$:
+Substitute $y=x^{m/n}$ back into the result:
 <!-- bilingual-en:end -->
 
 $$
@@ -3298,17 +3352,17 @@ $$
 > \boxed{\frac d{dx}x^r=rx^{r-1}},\qquad r\in\mathbb Q.
 > $$
 > <!-- bilingual-en:start -->
-> in that interval where the function has a real number definition and the above expression is meaningful,
+> On any interval where the function is real-valued and the displayed expression is defined,
 > <!-- bilingual-en:end -->
 
 ### 定义域和零点必须另查
 <!-- bilingual-en:start -->
-*Domain and Zero must be looked up separately*
+*The Domain and Zeros Must Be Checked Separately*
 <!-- bilingual-en:end -->
 
 代数推导中除以了 $y^{n-1}$，所以 $y=0$ 处不能仅凭该步骤断言。还要考虑：
 <!-- bilingual-en:start -->
-The algebraic derivation is divided by $y^{n-1}$, so the $y=0$ cannot be asserted solely by that step.  Also consider:
+The algebraic derivation divides by $y^{n-1}$, so it says nothing by itself about points where $y=0$. Also consider the following:
 <!-- bilingual-en:end -->
 
 - $n$ 为偶数时，实函数 $x^{m/n}$ 通常只在 $x\ge0$ 定义；
@@ -3324,12 +3378,12 @@ The algebraic derivation is divided by $y^{n-1}$, so the $y=0$ cannot be asserte
 
 ### Exercise 013：隐函数二阶导数
 <!-- bilingual-en:start -->
-*Exercise 013: Second derivative of implicit function*
+*Exercise 013: The Second Derivative of an Implicit Function*
 <!-- bilingual-en:end -->
 
 由
 <!-- bilingual-en:start -->
-by
+Starting from
 <!-- bilingual-en:end -->
 
 $$
@@ -3338,7 +3392,7 @@ $$
 
 第一次求导：
 <!-- bilingual-en:start -->
-First derivation:
+Differentiate once:
 <!-- bilingual-en:end -->
 
 $$
@@ -3349,7 +3403,7 @@ $$
 
 再次求导，使用商法则：
 <!-- bilingual-en:start -->
-Derive again, using the law of quotient:
+Differentiate again using the quotient rule:
 <!-- bilingual-en:end -->
 
 $$
@@ -3363,7 +3417,7 @@ $$
 
 原曲线给 $x^2+4y^2=1$，故
 <!-- bilingual-en:start -->
-The original curve was given to $x^2+4y^2=1$, so
+The original relation gives $x^2+4y^2=1$, so
 <!-- bilingual-en:end -->
 
 $$
@@ -3372,7 +3426,7 @@ $$
 
 当 $y=0$ 时第一次导数公式已无定义，对应椭圆左右端点的竖直切线；二阶公式也不适用。
 <!-- bilingual-en:start -->
-When $y=0$, the first derivative formula has no definition, corresponding to the vertical tangent of the left and right ends of the ellipse, and the second-order formula is also not applicable.
+When $y=0$, the first-derivative formula is undefined, corresponding to the vertical tangents at the left and right endpoints of the ellipse. The second-derivative formula is therefore inapplicable there as well.
 <!-- bilingual-en:end -->
 
 ### 边界情况与易错点
@@ -3385,9 +3439,9 @@ When $y=0$, the first derivative formula has no definition, corresponding to the
 - 除以含 $x,y$ 的因子后，要记录该因子为零的点并单独分析。
 - $F(x,y)=0$ 在某点未必真能局部表示为 $y(x)$；若 $F_y=0$，公式 $y'=-F_x/F_y$ 失效，常对应竖直切线或更复杂奇点。
 <!-- bilingual-en:start -->
-- Implicit derivation does not take $y$ as a constant;$D(y^4)=4y^3y'$.
-- Calculate the general formula and then replace the points to avoid changing the variables into constants prematurely.
-- After dividing by a factor with $x,y$, record the point where the factor is zero and analyze separately.
+- Implicit differentiation does not treat $y$ as a constant: $D(y^4)=4y^3y'$.
+- Derive a general formula before substituting the point, so variables are not turned into constants prematurely.
+- After dividing by a factor involving $x$ or $y$, record the points where that factor is zero and analyse them separately.
 - $F(x,y)=0$ may not be locally expressed as $y(x)$ at some point; if $F_y=0$, the formula $y'=-F_x/F_y$ fails, often corresponding to a vertical tangent or more complex singular point.
 <!-- bilingual-en:end -->
 
@@ -3400,9 +3454,11 @@ When $y=0$, the first derivative formula has no definition, corresponding to the
 2. 从 $y=x^{2/3}$ 出发，用 $y^3=x^2$ 推导导数，并讨论 $x=0$。
 3. 若 $F(x,y)=0$，形式上为什么 $y'=-F_x/F_y$？
 <!-- bilingual-en:start -->
-1. Find the $y'$ of $x^2+y^2=25$ and the tangent at $(3,4)$.
-2. From $y=x^{2/3}$, the derivative is derived by $y^3=x^2$, and $x=0$ is discussed.
-3. If $F(x,y)=0$, why $y'=-F_x/F_y$ in form?
+
+&nbsp;
+**1.** Find $y'$ for $x^2+y^2=25$ and the tangent line at $(3,4)$.<br>
+**2.** Starting from $y=x^{2/3}$, derive the derivative using $y^3=x^2$ and discuss what happens at $x=0$.<br>
+**3.** If $F(x,y)=0$, why does the formal calculation give $y'=-F_x/F_y$?<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -3410,9 +3466,11 @@ When $y=0$, the first derivative formula has no definition, corresponding to the
 > 2. $3y^2y'=2x$，$y'=2x/(3y^2)=\frac23x^{-1/3}$（$x\ne0$）。在 $0$ 差商为 $|h|^{2/3}/h$，大小趋无穷且左右符号相反，形成尖点/竖直切线，不可导。
 > 3. 链式法则给 $F_x+F_y y'=0$；若 $F_y\ne0$，解得 $y'=-F_x/F_y$。
 > <!-- bilingual-en:start -->
-> 1. $2x+2yy'=0$, $y'=-x/y$; at $(3,4)$ slope $-3/4$, tangent $y-4=-\frac34(x-3)$.
-> 2. $3y^2y'=2x$, so $y'=2x/(3y^2)=\frac23x^{-1/3}$ for $x\ne0$. At $x=0$, the difference quotient is $|h|^{2/3}/h$; its magnitude diverges and its sign differs on the two sides, producing a cusp or vertical tangent, so the function is not differentiable there.
-> 3. The chain rule gives $F_x+F_y y'=0$; if $F_y\ne0$, solving yields $y'=-F_x/F_y$.
+>
+> &nbsp;
+> **1.** $2x+2yy'=0$, $y'=-x/y$; at $(3,4)$ slope $-3/4$, tangent $y-4=-\frac34(x-3)$.<br>
+> **2.** $3y^2y'=2x$, so $y'=2x/(3y^2)=\frac23x^{-1/3}$ for $x\ne0$. At $x=0$, the difference quotient is $|h|^{2/3}/h$; its magnitude diverges and its sign differs on the two sides, producing a cusp or vertical tangent, so the function is not differentiable there.<br>
+> **3.** The chain rule gives $F_x+F_y y'=0$; if $F_y\ne0$, solving yields $y'=-F_x/F_y$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -3445,12 +3503,12 @@ When $y=0$, the first derivative formula has no definition, corresponding to the
 
 ### 14a：圆的直接法
 <!-- bilingual-en:start -->
-*14a: direct method of circles*
+*14a: The Direct Method for a Circle*
 <!-- bilingual-en:end -->
 
 单位圆
 <!-- bilingual-en:start -->
-unit circle
+The unit circle
 <!-- bilingual-en:end -->
 
 $$
@@ -3459,7 +3517,7 @@ $$
 
 不是全局的 $y=f(x)$，因为同一 $x\in(-1,1)$ 对应两个 $y$。若只取上半圆，
 <!-- bilingual-en:start -->
-Not a global $y=f(x)$ because the same $x\in(-1,1)$ corresponds to two $y$.  If you take only the upper half of the circle,
+does not define a single global function $y=f(x)$, because each $x\in(-1,1)$ corresponds to two values of $y$. If we restrict attention to the upper semicircle,
 <!-- bilingual-en:end -->
 
 $$
@@ -3468,7 +3526,7 @@ $$
 
 链式法则给
 <!-- bilingual-en:start -->
-chain rule to
+the chain rule gives
 <!-- bilingual-en:end -->
 
 $$
@@ -3489,7 +3547,7 @@ This direct method must first select the upper branch; the lower branch must be 
 
 直接对原关系求导：
 <!-- bilingual-en:start -->
-Direct derivation of the original relation:
+Differentiate the original relation directly:
 <!-- bilingual-en:end -->
 
 $$
@@ -3500,7 +3558,7 @@ $$
 
 它同时覆盖上下半圆。几何检查：半径向量 $(x,y)$ 与切向量 $(1,y')$ 的点积
 <!-- bilingual-en:start -->
-It covers both the upper and lower semicircles.  Geometry Check: The dot product of the semi-radial quantity $(x,y)$ and the tangent vector $(1,y')$
+This single calculation covers both semicircles. As a geometric check, take the dot product of the radial vector $(x,y)$ with the tangent vector $(1,y')$:
 <!-- bilingual-en:end -->
 
 $$
@@ -3509,7 +3567,7 @@ $$
 
 因此切线确实垂直于半径。$y=0$ 时公式分母为零，对应 $(\pm1,0)$ 的竖直切线。
 <!-- bilingual-en:start -->
-So the tangent is really normal to the radius.  When $y=0$, the denominator of the formula is zero, corresponding to the vertical tangent of $(\pm1,0)$.
+Thus the tangent is perpendicular to the radius. When $y=0$, the formula's denominator vanishes, corresponding to the vertical tangents at $(\pm1,0)$.
 <!-- bilingual-en:end -->
 
 ### 14c：课件原例 $y^4+xy^2-2=0$
@@ -3519,7 +3577,7 @@ So the tangent is really normal to the radius.  When $y=0$, the denominator of t
 
 这道题不能误记成别的三次曲线。逐项求导：
 <!-- bilingual-en:start -->
-This problem cannot be mistakenly remembered as another cubic curve.  Derive item by item:
+Do not confuse this equation with a different cubic curve. Differentiate it term by term:
 <!-- bilingual-en:end -->
 
 $$
@@ -3528,7 +3586,7 @@ $$
 
 第一项用链式法则，第二项同时用积法则和链式法则：
 <!-- bilingual-en:start -->
-The first term uses chain rule, the second term uses product rule and chain rule:
+The first term uses the chain rule; the second uses both the product and chain rules:
 <!-- bilingual-en:end -->
 
 $$
@@ -3561,7 +3619,7 @@ Keeping the uncancelled form makes each division step visible. After cancellatio
 
 ### Exercise 014：双曲线分支
 <!-- bilingual-en:start -->
-*Exercise 014: Hyperbolic branch*
+*Exercise 014: Branches of a Hyperbola*
 <!-- bilingual-en:end -->
 
 $$
@@ -3570,7 +3628,7 @@ $$
 
 隐式求导：
 <!-- bilingual-en:start -->
-Implicit derivative:
+Implicit differentiation gives
 <!-- bilingual-en:end -->
 
 $$
@@ -3581,12 +3639,12 @@ $$
 
 当 $y=-1$ 时曲线上只有 $x=0$，斜率 $0$；当 $x=1$ 时 $y=\pm\sqrt2$，两支斜率分别 $\pm1/\sqrt2$。对上支直接写 $y=\sqrt{x^2+1}$，得到 $y'=x/\sqrt{x^2+1}=x/y$，与隐式法一致。
 <!-- bilingual-en:start -->
-When $y=-1$, the slope of the curve is only $x=0$, and $0$; when $x=1$, the slope of the two branches is respectively $\pm1/\sqrt2$, and $y=\pm\sqrt2$.  Write $y=\sqrt{x^2+1}$ directly to the upper branch and get $y'=x/\sqrt{x^2+1}=x/y$, which is consistent with the implicit method.
+When $y=-1$, the only point on the curve has $x=0$, and its slope is $0$. When $x=1$, we have $y=\pm\sqrt2$, giving slopes $\pm1/\sqrt2$ on the two branches. On the upper branch, writing $y=\sqrt{x^2+1}$ directly gives $y'=x/\sqrt{x^2+1}=x/y$, in agreement with implicit differentiation.
 <!-- bilingual-en:end -->
 
 ### 通用工作流
 <!-- bilingual-en:start -->
-*generic workflow*
+*General Workflow*
 <!-- bilingual-en:end -->
 
 1. 写清每一项使用和、积、链式中的哪一条规则；
@@ -3595,11 +3653,13 @@ When $y=-1$, the slope of the curve is only $x=0$, and $0$; when $x=1$, the slop
 4. 除以前先记录可能为零的因子；
 5. 最后才代入指定点并写切线。
 <!-- bilingual-en:start -->
-1. To clarify each use and, product, chain of which rule;
-2. All the items with $y'$ move to the same side;
-3. Extract $y'$;
-4. Except for factors that may have been previously recorded as zero;
-5. The specified point is substituted at the end and the tangent is written.
+
+&nbsp;
+**1.** State which sum, product, or chain rule is used for each term.<br>
+**2.** Move every term containing $y'$ to the same side.<br>
+**3.** Factor out $y'$.<br>
+**4.** Before dividing, record any factor that could be zero.<br>
+**5.** Only then substitute the specified point and write the tangent line.<br>
 <!-- bilingual-en:end -->
 
 ### 边界情况与易错点
@@ -3612,10 +3672,10 @@ When $y=-1$, the slope of the curve is only $x=0$, and $0$; when $x=1$, the slop
 - $y'=0$ 表示水平切线；公式分母为零且分子非零常表示竖直切线。
 - 若分子、分母同时为零，不能直接判断，可能是交叉点、尖点或更高阶接触。
 <!-- bilingual-en:start -->
-- $D(xy^2)=y^2+2xyy'$, it's wrong to miss any of them.
-- An implicit equation can have multiple branches; different $y$ on the same $x$ may give different slopes.
-- $y'=0$ indicates horizontal tangent; formula denominator is zero and non-zero constant indicates vertical tangent.
-- If both numerator and denominator are zero, cannot be directly determined, may be a cross point, cusp or higher order contact.
+- $D(xy^2)=y^2+2xyy'$; omitting either term is an error.
+- An implicit equation may have several branches, and different values of $y$ at the same $x$ may give different slopes.
+- $y'=0$ indicates a horizontal tangent. A zero denominator with a nonzero numerator often indicates a vertical tangent.
+- If both numerator and denominator vanish, no immediate conclusion is possible; the point may be a crossing, a cusp, or a higher-order contact.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -3627,9 +3687,11 @@ When $y=-1$, the slope of the curve is only $x=0$, and $0$; when $x=1$, the slop
 2. 求 $x^2+xy+y^2=7$ 在 $(1,2)$ 的切线。
 3. 对 $y^4+xy^2-2=0$，说明为何不能把 $D(xy^2)$ 写成 $2xyy'$。
 <!-- bilingual-en:start -->
-1. Request $y'$ from $x^3+y^3=6xy$.
-2. Find the tangent of $x^2+xy+y^2=7$ at $(1,2)$.
-3. For $y^4+xy^2-2=0$, explain why $D(xy^2)$ cannot be written as $2xyy'$.
+
+&nbsp;
+**1.** Find $y'$ for $x^3+y^3=6xy$.<br>
+**2.** Find the tangent line to $x^2+xy+y^2=7$ at $(1,2)$.<br>
+**3.** For $y^4+xy^2-2=0$, explain why $D(xy^2)$ cannot be written as $2xyy'$.<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -3637,9 +3699,11 @@ When $y=-1$, the slope of the curve is only $x=0$, and $0$; when $x=1$, the slop
 > 2. $2x+y+xy'+2yy'=0$，$y'=-(2x+y)/(x+2y)$；在 $(1,2)$ 为 $-4/5$，切线 $y-2=-\frac45(x-1)$。
 > 3. $x$ 与 $y^2$ 都随 $x$ 变化，积法则给 $x' y^2+x(y^2)'=y^2+2xyy'$；漏掉 $y^2$ 等于错误地把 $x$ 当常数。
 > <!-- bilingual-en:start -->
-> 1. $3x^2+3y^2y'=6y+6xy'$, hence $y'=(2y-x^2)/(y^2-2x)$.
-> 2. $2x+y+xy'+2yy'=0$, $y'=-(2x+y)/(x+2y)$; $-4/5$ at $(1,2)$, tangent $y-2=-\frac45(x-1)$.
-> 3. Both $x$ and $y^2$ vary with $x$, so the product rule gives $x'y^2+x(y^2)'=y^2+2xyy'$. Omitting the $y^2$ term amounts to treating $x$ as a constant.
+>
+> &nbsp;
+> **1.** $3x^2+3y^2y'=6y+6xy'$, hence $y'=(2y-x^2)/(y^2-2x)$.<br>
+> **2.** $2x+y+xy'+2yy'=0$, $y'=-(2x+y)/(x+2y)$; $-4/5$ at $(1,2)$, tangent $y-2=-\frac45(x-1)$.<br>
+> **3.** Both $x$ and $y^2$ vary with $x$, so the product rule gives $x'y^2+x(y^2)'=y^2+2xyy'$. Omitting the $y^2$ term amounts to treating $x$ as a constant.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -3687,7 +3751,7 @@ $$
 
 两边求导：
 <!-- bilingual-en:start -->
-Two-sided derivation:
+Differentiate both sides:
 <!-- bilingual-en:end -->
 
 $$
@@ -3738,7 +3802,7 @@ $$
 
 按主值范围 $y\in(-\pi/2,\pi/2)$，等价于 $\tan y=x$。求导：
 <!-- bilingual-en:start -->
-Equivalent to $\tan y=x$ by main value range $y\in(-\pi/2,\pi/2)$.  Derivation:
+On the principal-value range $y\in(-\pi/2,\pi/2)$, this is equivalent to $\tan y=x$. Differentiate:
 <!-- bilingual-en:end -->
 
 $$
@@ -3758,14 +3822,14 @@ $$
 
 导数恒正，与 $\arctan x$ 单调增加一致；当 $|x|\to\infty$，导数趋零，与水平渐近线 $y=\pm\pi/2$ 一致。
 <!-- bilingual-en:start -->
-The results show that the derivative is constant positive, which is consistent with the monotonous increase of $\arctan x$, and when $|x|\to\infty$, the derivative tends to zero, which is consistent with the horizontal asymptotic line $y=\pm\pi/2$.
+The derivative is positive everywhere, consistent with the fact that $\arctan x$ is strictly increasing. As $|x|\to\infty$, the derivative tends to zero, consistent with the horizontal asymptotes $y=\pm\pi/2$.
 <!-- bilingual-en:end -->
 
 ### 15c：$\arcsin x$
 
 令
 <!-- bilingual-en:start -->
-order
+Let
 <!-- bilingual-en:end -->
 
 $$
@@ -3785,7 +3849,7 @@ $$
 
 因主值范围内 $\cos y\ge0$，
 <!-- bilingual-en:start -->
-because of $\cos y\ge0$ in the primary range,
+Because $\cos y\ge0$ on the principal-value range,
 <!-- bilingual-en:end -->
 
 $$
@@ -3803,17 +3867,17 @@ $$
 
 在 $x=\pm1$ 分母为零，反正弦图像有竖直切线；函数在端点连续，但没有有限导数。
 <!-- bilingual-en:start -->
-At $x=\pm1$ the denominator is zero, so the graph of $rcsin x$ has vertical tangents. The function remains continuous at the endpoints, but has no finite derivative there.
+At $x=\pm1$ the denominator is zero, so the graph of $\arcsin x$ has vertical tangents. The function remains continuous at the endpoints, but has no finite derivative there.
 <!-- bilingual-en:end -->
 
 ### Exercise 015：平方根是平方函数的反函数
 <!-- bilingual-en:start -->
-*Exercise 015: The square root is the inverse of a square function*
+*Exercise 015: The Square Root as the Inverse of a Squaring Function*
 <!-- bilingual-en:end -->
 
 限制 $f(x)=x^2$ 的定义域为 $x>0$，使其一一对应。若 $y=f^{-1}(x)$，则 $y^2=x$。隐式求导：
 <!-- bilingual-en:start -->
-Limit the domain of the $f(x)=x^2$ to $x>0$, making it one-to-one.  If $y=f^{-1}(x)$, $y^2=x$.  Implicit derivative:
+Restrict the domain of $f(x)=x^2$ to $x>0$ so that it is one-to-one. If $y=f^{-1}(x)$, then $y^2=x$. Implicit differentiation gives
 <!-- bilingual-en:end -->
 
 $$
@@ -3824,7 +3888,7 @@ $$
 
 直接写 $y=\sqrt x=x^{1/2}$ 用有理幂法则得到同一结果。
 <!-- bilingual-en:start -->
-Writing $y=\sqrt x=x^{1/2}$ directly gives the same result by rational power law.
+Writing $y=\sqrt x=x^{1/2}$ directly gives the same result by the rational-exponent power rule.
 <!-- bilingual-en:end -->
 
 ### 边界情况与易错点
@@ -3837,10 +3901,10 @@ Writing $y=\sqrt x=x^{1/2}$ directly gives the same result by rational power law
 - 推导反三角函数必须声明主值范围，平方根符号才能确定。
 - 反函数存在需要一一对应；$x^2$ 在整个实数轴上没有函数意义的全局反函数。
 <!-- bilingual-en:start -->
-- $(f^{-1})'(x)$ is not $1/f'(x)$; denominator should be evaluated at $f^{-1}(x)$.
-- $f^{-1}$ indicates an inverse function, not an inverse $1/f$.
-- The derivation of the inverse trigonometric function must declare a principal value range for the square root sign to be determined.
-- The existence of inverse functions requires one-to-one correspondence; $x^2$ is a global inverse function with no functional meaning on the entire real axis.
+- $(f^{-1})'(x)$ is not $1/f'(x)$; the denominator must be evaluated at $f^{-1}(x)$.
+- $f^{-1}$ denotes an inverse function, not the reciprocal $1/f$.
+- When deriving an inverse-trigonometric derivative, state the principal-value range so the sign of the square root is determined.
+- An inverse function requires a one-to-one restriction; $x^2$ has no global inverse function on the entire real line.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -3852,9 +3916,11 @@ Writing $y=\sqrt x=x^{1/2}$ directly gives the same result by rational power law
 2. 推导 $(\arccos x)'$，注意主值范围。
 3. 求 $D[\arctan(3x)]$。
 <!-- bilingual-en:start -->
-1. If $f(2)=5$ and $f'(2)=-3$, find $(f^{-1})'(5)$.
-2. Derive $(\arccos x)'$, taking care with its principal-value range.
-3. Find $D[\arctan(3x)]$.
+
+&nbsp;
+**1.** If $f(2)=5$ and $f'(2)=-3$, find $(f^{-1})'(5)$.<br>
+**2.** Derive $(\arccos x)'$, taking care with its principal-value range.<br>
+**3.** Find $D[\arctan(3x)]$.<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -3862,9 +3928,11 @@ Writing $y=\sqrt x=x^{1/2}$ directly gives the same result by rational power law
 > 2. 令 $y=\arccos x\in[0,\pi]$，$\cos y=x$，故 $-\sin y\,y'=1$；$\sin y=\sqrt{1-x^2}\ge0$，所以 $y'=-1/\sqrt{1-x^2}$。
 > 3. 链式法则给 $3/(1+9x^2)$。
 > <!-- bilingual-en:start -->
-> 1. $-1/3$.
-> 2. Let $y=\arccos x\in[0,\pi]$, $\cos y=x$, hence $-\sin y\,y'=1$; $\sin y=\sqrt{1-x^2}\ge0$, hence $y'=-1/\sqrt{1-x^2}$.
-> 3. Chain rule to $3/(1+9x^2)$.
+>
+> &nbsp;
+> **1.** $-1/3$.<br>
+> **2.** Let $y=\arccos x\in[0,\pi]$, $\cos y=x$, hence $-\sin y\,y'=1$; $\sin y=\sqrt{1-x^2}\ge0$, hence $y'=-1/\sqrt{1-x^2}$.<br>
+> **3.** The chain rule gives $3/(1+9x^2)$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -3903,7 +3971,7 @@ Writing $y=\sqrt x=x^{1/2}$ directly gives the same result by rational power law
 
 [[导数与求导规则|指数函数]]取 $a>0$。整数指数由重复相乘与倒数定义；对有理数 $p/q$，定义
 <!-- bilingual-en:start -->
-[[导数与求导规则|exponential function]] to $a>0$.  Integer exponents are defined by repeated multiplication and reciprocal; for rational numbers $p/q$, they are defined
+For the [[导数与求导规则|exponential function]], take $a>0$. Integer exponents are defined by repeated multiplication and reciprocals; for a rational exponent $p/q$, define
 <!-- bilingual-en:end -->
 
 $$
@@ -3912,7 +3980,7 @@ $$
 
 指数律
 <!-- bilingual-en:start -->
-exponential law
+The exponent law
 <!-- bilingual-en:end -->
 
 $$
@@ -3926,7 +3994,7 @@ The identity holds first for rational exponents. For irrational $x$, define $a^x
 
 ### 16c：从定义分离出 $x$
 <!-- bilingual-en:start -->
-*16c: Detach $x$ from definition*
+*16c: Separating $x$ in the Difference Quotient*
 <!-- bilingual-en:end -->
 
 $$
@@ -3940,7 +4008,7 @@ $$
 
 定义只依赖底数的常数
 <!-- bilingual-en:start -->
-Define base-only constants
+Define the constant depending only on the base:
 <!-- bilingual-en:end -->
 
 $$
@@ -3964,7 +4032,7 @@ This step is already strong: the slope of an exponential function at any point e
 
 ### 16d：$M(a)$ 的几何意义
 <!-- bilingual-en:start -->
-*Geometric Meaning of 16d:$M(a)$*
+*16d: The Geometric Meaning of $M(a)$*
 <!-- bilingual-en:end -->
 
 在 $x=0$，$a^0=1$，所以
@@ -3978,17 +4046,17 @@ $$
 
 因此 $M(a)$ 是 $y=a^x$ 在 $(0,1)$ 的切线斜率。知道这一点的斜率，就通过 $M(a)a^x$ 知道整条曲线上每一点的斜率。对于 $a>1$，$M(a)>0$；$a=1$ 时 $M(1)=0$；$0<a<1$ 时 $M(a)<0$。
 <!-- bilingual-en:start -->
-Therefore, $M(a)$ is the tangent slope of $y=a^x$ at $(0,1)$.  Knowing the slope of this point, we can know the slope of every point on the whole curve through $M(a)a^x$.  For $a>1$, $M(a)>0$; $M(1)=0$ for $a=1$; $M(a)<0$ for $0<a<1$.
+Thus $M(a)$ is the slope of the tangent to $y=a^x$ at $(0,1)$. Once this one slope is known, the formula $M(a)a^x$ gives the slope at every point on the curve. For $a>1$, $M(a)>0$; for $a=1$, $M(1)=0$; and for $0<a<1$, $M(a)<0$.
 <!-- bilingual-en:end -->
 
 ### Exercise 016：复利
 <!-- bilingual-en:start -->
-*Exercise 016: Compound*
+*Exercise 016: Compound Interest*
 <!-- bilingual-en:end -->
 
 本金 $P$、名义年利率 $r$，一年复利 $k$ 次：
 <!-- bilingual-en:start -->
-principal amount of $P$, nominal interest rate of $r$ per annum, annual compound interest rate of $k$ per annum:
+With principal $P$, nominal annual interest rate $r$, and $k$ compounding periods per year,
 <!-- bilingual-en:end -->
 
 $$
@@ -3997,7 +4065,7 @@ $$
 
 等效年收益率为
 <!-- bilingual-en:start -->
-Equivalent annual return
+The effective annual return is
 <!-- bilingual-en:end -->
 
 $$
@@ -4012,13 +4080,13 @@ Substitute:
 - $5\%$ 月复利：$5.1162\%$；日复利：$5.1267\%$；
 - $10\%$ 月复利：$10.4713\%$；双周复利（$k=26$）：$10.4959\%$；日复利：$10.5156\%$。
 <!-- bilingual-en:start -->
-- $5\%$: $5.1162\%$; $5.1267\%$;
-- $10\%$ Monthly Compound: $10.4713\%$; Biweekly Compound ($k=26$): $10.4959\%$; Daily Compound: $10.5156\%$.
+- At a nominal rate of $5\%$: monthly compounding gives $5.1162\%$, and daily compounding gives $5.1267\%$.
+- At a nominal rate of $10\%$: monthly compounding gives $10.4713\%$, biweekly compounding ($k=26$) gives $10.4959\%$, and daily compounding gives $10.5156\%$.
 <!-- bilingual-en:end -->
 
 连续复利的极限将在 Session 19 得到 $e^r-1$。
 <!-- bilingual-en:start -->
-The limit of continuous compound interest will be $e^r-1$ at Session 19.
+Session 19 will show that the corresponding continuously compounded return is $e^r-1$.
 <!-- bilingual-en:end -->
 
 ### 边界情况与易错点
@@ -4031,10 +4099,10 @@ The limit of continuous compound interest will be $e^r-1$ at Session 19.
 - $M(a)$ 目前只是极限定义，尚未证明等于 $\ln a$；Session 17 才完成识别。
 - 名义利率 $r$ 与等效年收益率不同；复利次数越多，后者通常越大但有有限上界。
 <!-- bilingual-en:start -->
-- The real index base requires $a>0$; negative bases cannot give real-valued continuous functions for all real indexes.
-- $a$ is a fixed base; this section of the formula does not apply directly if the base also changes to $x^x$ with $x$.
-- $M(a)$ is currently limited to $\ln a$; Session 17 has not been identified.
-- Nominal interest rate $r$ is different from the equivalent annual rate of return; the more compound interest, the larger the latter is usually, but with a limited upper bound.
+- For arbitrary real exponents, the base must satisfy $a>0$; a negative base cannot define a real-valued continuous function for every real exponent.
+- Here $a$ is fixed. If the base also varies, as in $x^x$, the formula in this section does not apply directly.
+- At this stage, $M(a)$ is defined only by a limit; its identification as $\ln a$ comes in Session 17.
+- The nominal rate $r$ differs from the effective annual return. More frequent compounding usually increases the latter, but only up to a finite limit.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -4046,9 +4114,11 @@ The limit of continuous compound interest will be $e^r-1$ at Session 19.
 2. $M(1)$ 是多少？与图像如何对应？
 3. 若 $M(4)=2M(2)$，可从哪条指数关系直观预期这一点？
 <!-- bilingual-en:start -->
-1. From the definition, prove that $(a^x)'/a^x$ is not related to $x$.
-2. What is $M(1)$, and how is it reflected in the graph?
-3. Which exponent law makes the relation $M(4)=2M(2)$ intuitively plausible?
+
+&nbsp;
+**1.** From the definition, prove that $(a^x)'/a^x$ is independent of $x$.<br>
+**2.** What is $M(1)$, and how is it reflected in the graph?<br>
+**3.** Which exponent law makes the relation $M(4)=2M(2)$ intuitively plausible?<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -4056,9 +4126,11 @@ The limit of continuous compound interest will be $e^r-1$ at Session 19.
 > 2. $M(1)=\lim(1^h-1)/h=0$；$y=1$ 是水平线。
 > 3. $4^x=(2^x)^2$；用积法则求导得 $(4^x)'=2\cdot2^x(2^x)'=2M(2)4^x$，故 $M(4)=2M(2)$。
 > <!-- bilingual-en:start -->
-> 1. The text 16c mentions $a^x$ beyond the limit, the remaining limit contains only $a,h$.
-> 2. $M(1)=\lim(1^h-1)/h=0$; $y=1$ is the horizontal line.
-> 3. $4^x=(2^x)^2$;$(4^x)'=2\cdot2^x(2^x)'=2M(2)4^x$ is obtained by the product rule, so $M(4)=2M(2)$.
+>
+> &nbsp;
+> **1.** Section 16c factors $a^x$ outside the limit; the remaining limit depends only on $a$ and $h$.<br>
+> **2.** $M(1)=\lim(1^h-1)/h=0$; $y=1$ is the horizontal line.<br>
+> **3.** $4^x=(2^x)^2$;$(4^x)'=2\cdot2^x(2^x)'=2M(2)4^x$ is obtained by the product rule, so $M(4)=2M(2)$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -4093,7 +4165,7 @@ The limit of continuous compound interest will be $e^r-1$ at Session 19.
 
 ### 17a：用斜率定义 $e$
 <!-- bilingual-en:start -->
-*17a: Define $e$ with slope*
+*17a: Defining $e$ by Its Slope*
 <!-- bilingual-en:end -->
 
 Session 16 得到
@@ -4109,7 +4181,7 @@ $$
 
 定义 $e$ 为使 $M(e)=1$ 的唯一正底数：
 <!-- bilingual-en:start -->
-Define $e$ as the unique positive base for $M(e)=1$:
+Define $e$ as the unique positive base satisfying $M(e)=1$:
 <!-- bilingual-en:end -->
 
 $$
@@ -4133,12 +4205,12 @@ Geometrically, $y=e^x$ has tangent slope $1$ at $(0,1)$. The lecture notes locat
 
 ### 17b：[[导数与求导规则|自然对数]]是 $e^x$ 的反函数
 <!-- bilingual-en:start -->
-*17b:[[导数与求导规则|natural logarithm]] is the inverse of $e^x$*
+*17b: The [[导数与求导规则|Natural Logarithm]] Is the Inverse of $e^x$*
 <!-- bilingual-en:end -->
 
 定义
 <!-- bilingual-en:start -->
-defined
+Define
 <!-- bilingual-en:end -->
 
 $$
@@ -4160,7 +4232,7 @@ $$
 
 令 $w=\ln x$，则 $e^w=x$。隐式求导：
 <!-- bilingual-en:start -->
-Let $w=\ln x$, then $e^w=x$.  Implicit derivative:
+Let $w=\ln x$, so $e^w=x$. Implicit differentiation gives
 <!-- bilingual-en:end -->
 
 $$
@@ -4181,7 +4253,7 @@ And $e^w=x$, so
 
 ### 17c：识别一般底数的 $M(a)$
 <!-- bilingual-en:start -->
-*17c: $M(a)$ for identifying a common base*
+*17c: Identifying $M(a)$ for a General Base*
 <!-- bilingual-en:end -->
 
 因为 $a=e^{\ln a}$，
@@ -4195,7 +4267,7 @@ $$
 
 链式法则给
 <!-- bilingual-en:start -->
-chain rule to
+the chain rule gives
 <!-- bilingual-en:end -->
 
 $$
@@ -4229,12 +4301,12 @@ If $a>1$, $\ln a>0$, the exponential function increases; if $0<a<1$, $\ln a<0$, 
 
 ### 17d：为什么自然对数“自然”
 <!-- bilingual-en:start -->
-*17d: Why natural logarithms are "natural"*
+*17d: Why the Natural Logarithm Is “Natural”*
 <!-- bilingual-en:end -->
 
 若价格 $p(t)>0$，相对变化率为
 <!-- bilingual-en:start -->
-If the price is $p(t)>0$, the relative change rate is
+If a price satisfies $p(t)>0$, its relative rate of change is
 <!-- bilingual-en:end -->
 
 $$
@@ -4243,7 +4315,7 @@ $$
 
 链式法则恰好给
 <!-- bilingual-en:start -->
-The chain rule just gives
+The chain rule gives exactly
 <!-- bilingual-en:end -->
 
 $$
@@ -4252,7 +4324,7 @@ $$
 
 它把乘法增长变成加法，把绝对变化除以当前规模，因此适合比较不同规模资产、人口或浓度的增长。若改用 $\log_{10}$，导数会多出 $1/\ln10$，形式不再直接等于相对增长率。
 <!-- bilingual-en:start -->
-It turns multiplicative growth into addition, dividing absolute change by current size, and is therefore suitable for comparing growth in assets, populations, or concentrations of different sizes.  If $\log_{10}$ is used instead, the derivative is $1/\ln10$ more than the relative growth rate, and the form is no longer directly equal to the relative growth rate.
+The logarithm turns multiplicative growth into addition and scales absolute change by the current level, making it suitable for comparing assets, populations, or concentrations of different sizes. With $\log_{10}$ instead, the derivative carries an extra factor $1/\ln10$ and no longer equals the relative growth rate directly.
 <!-- bilingual-en:end -->
 
 ### Exercise 017：指数与对数方程的检查法
@@ -4281,7 +4353,7 @@ $$
 
 由 $y>1$ 选正根：
 <!-- bilingual-en:start -->
-Select the positive root by $y>1$:
+The condition $y>1$ selects the positive root:
 <!-- bilingual-en:end -->
 
 $$
@@ -4290,7 +4362,7 @@ $$
 
 取对数或指数化都可能引入分支选择，最后必须回到原定义域检查。
 <!-- bilingual-en:start -->
-Logarithmic or exponentiation can introduce branch selection and must eventually be checked back to the original domain.
+Taking logarithms or exponentiating can introduce branch choices, so the result must be checked against the original domain.
 <!-- bilingual-en:end -->
 
 ### 边界情况与易错点
@@ -4303,9 +4375,9 @@ Logarithmic or exponentiation can introduce branch selection and must eventually
 - $(e^{u(x)})'=e^u u'$，不能因 $e^x$ 自导就漏掉链式因子。
 - $\log$ 的底数在不同学科可能表示 $10$、$e$ 或 $2$；本笔记用 $\ln$ 明确自然对数。
 <!-- bilingual-en:start -->
-- $\ln x$ is defined only for $x>0$; $(\ln|x|)'=1/x$ overrides $x<0$'s interval.
-- $\ln(u+v)$ cannot be disassembled into $\ln u+\ln v$; only products can be disassembled.
-- $(e^{u(x)})'=e^u u'$, the chain factor should not be missed due to $e^x$ homing.
+- $\ln x$ is defined only for $x>0$; $(\ln|x|)'=1/x$ extends the derivative formula to intervals where $x<0$.
+- $\ln(u+v)$ cannot be split into $\ln u+\ln v$; logarithms split products, not sums.
+- $(e^{u(x)})'=e^u u'$; the fact that $e^x$ is its own derivative does not remove the chain-rule factor.
 - The base of the $\log$ may represent $10$, $e$, or $2$ in different disciplines; this notebook uses $\ln$ for unambiguous natural logarithms.
 <!-- bilingual-en:end -->
 
@@ -4318,9 +4390,11 @@ Logarithmic or exponentiation can introduce branch selection and must eventually
 2. 求 $D[\ln(5x)]$，并解释常数 $5$ 为何消失。
 3. 若 $p'/p=0.04$，$D(\ln p)$ 是多少？其单位是什么？
 <!-- bilingual-en:start -->
-1. Find $D[e^{3x^2}]$.
-2. Find $D[\ln(5x)]$ and explain why the constant $5$ disappears.
-3. If $p'/p=0.04$, what is $D(\ln p)$, and what are its units?
+
+&nbsp;
+**1.** Find $D[e^{3x^2}]$.<br>
+**2.** Find $D[\ln(5x)]$ and explain why the constant $5$ disappears.<br>
+**3.** If $p'/p=0.04$, what is $D(\ln p)$, and what are its units?<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -4328,9 +4402,11 @@ Logarithmic or exponentiation can introduce branch selection and must eventually
 > 2. 直接链式为 $5/(5x)=1/x$；或 $\ln(5x)=\ln5+\ln x$，常数导数为零。定义域 $x>0$。
 > 3. $0.04$；若自变量是年，则单位为每年。$\ln p$ 无量纲，相对增长率的单位来自时间倒数。
 > <!-- bilingual-en:start -->
-> 1. $6xe^{3x^2}$.
-> 2. The direct chain is $5/(5x)=1/x$; or $\ln(5x)=\ln5+\ln x$, the constant derivative is zero.  Domain $x>0$.
-> 3. $0.04$; if the argument is a year, the unit is a year.  $\ln p$ is dimensionless and the unit of relative growth rate comes from the reciprocal of time.
+>
+> &nbsp;
+> **1.** $6xe^{3x^2}$.<br>
+> **2.** Direct use of the chain rule gives $5/(5x)=1/x$. Alternatively, $\ln(5x)=\ln5+\ln x$, and the derivative of the constant is zero. The domain is $x>0$.<br>
+> **3.** The value is $0.04$. If time is measured in years, the unit is per year. Although $\ln p$ is dimensionless, its rate of change has units of inverse time.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -4355,7 +4431,7 @@ Logarithmic or exponentiation can introduce branch selection and must eventually
 
 **问题：**怎样系统求一般指数、变量幂和任意实数幂的导数？
 <!-- bilingual-en:start -->
-**Problem:** How to find the derivatives of general exponents, variable powers and any real powers?
+**Question:** How can we systematically differentiate general exponentials, variable powers, and arbitrary real powers?
 <!-- bilingual-en:end -->
 
 **前置知识：**$e^x,\ln x$ 的导数、积与链式法则、对数性质。
@@ -4365,12 +4441,12 @@ Logarithmic or exponentiation can introduce branch selection and must eventually
 
 ### 18a：$2^x$ 与 $10^x$
 <!-- bilingual-en:start -->
-*18a:$2^x$ and $10^x$*
+*18a: $2^x$ and $10^x$*
 <!-- bilingual-en:end -->
 
 一般公式立即给
 <!-- bilingual-en:start -->
-General Formula Now
+The general formula immediately gives
 <!-- bilingual-en:end -->
 
 $$
@@ -4381,12 +4457,12 @@ $$
 
 即便从人类习惯的底数 $2$ 或 $10$ 出发，自然对数仍自动出现；$e$ 的特殊之处正是 $\ln e=1$。
 <!-- bilingual-en:start -->
-Natural logarithms appear automatically even from the base of human habit, $2$ or $10$; the peculiarity of $e$ is $\ln e=1$.
+Even with the familiar bases $2$ and $10$, the natural logarithm appears automatically. The special feature of $e$ is precisely that $\ln e=1$.
 <!-- bilingual-en:end -->
 
 ### 18b：[[导数与求导规则#求导规则为何成立|对数求导]]的核心公式
 <!-- bilingual-en:start -->
-*18b:[[导数与求导规则#求导规则为何成立|logarithmic derivative]] core formula*
+*18b: The Core Formula for [[导数与求导规则#求导规则为何成立|Logarithmic Differentiation]]*
 <!-- bilingual-en:end -->
 
 若 $u(x)>0$，链式法则给
@@ -4400,7 +4476,7 @@ $$
 
 因此若先容易求 $(\ln u)'$，可反解
 <!-- bilingual-en:start -->
-Therefore, if it is easy to find the $(\ln u)'$ first, it can be inverted.
+Thus, if $(\ln u)'$ is easier to compute first, we can recover $u'$ from
 <!-- bilingual-en:end -->
 
 $$
@@ -4422,12 +4498,12 @@ $$
 
 ### 18c：移动底数与移动指数 $x^x$
 <!-- bilingual-en:start -->
-*18c: Mobility Base and Mobility Index $x^x$*
+*18c: A Variable Base and Variable Exponent: $x^x$*
 <!-- bilingual-en:end -->
 
 设 $v=x^x$，在实数课程中先取 $x>0$。取自然对数：
 <!-- bilingual-en:start -->
-For $v=x^x$, take $x>0$ first in real number courses.  Natural logarithm:
+For $v=x^x$, restrict first to $x>0$ in the real-valued setting and take natural logarithms:
 <!-- bilingual-en:end -->
 
 $$
@@ -4436,7 +4512,7 @@ $$
 
 两边求导，右边使用积法则：
 <!-- bilingual-en:start -->
-Derive on both sides, and use the product rule on the right:
+Differentiate both sides, using the product rule on the right:
 <!-- bilingual-en:end -->
 
 $$
@@ -4445,7 +4521,7 @@ $$
 
 乘回 $v=x^x$：
 <!-- bilingual-en:start -->
-Multiply back to $v=x^x$:
+Multiply through by $v=x^x$:
 <!-- bilingual-en:end -->
 
 $$
@@ -4454,7 +4530,7 @@ $$
 
 一般地，若 $y=u(x)^{v(x)}$ 且 $u>0$：
 <!-- bilingual-en:start -->
-Generally, if $y=u(x)^{v(x)}$ and $u>0$:
+More generally, if $y=u(x)^{v(x)}$ with $u>0$, then
 <!-- bilingual-en:end -->
 
 $$
@@ -4463,7 +4539,7 @@ $$
 
 求导后得到
 <!-- bilingual-en:start -->
-derivation
+differentiation gives
 <!-- bilingual-en:end -->
 
 $$
@@ -4472,12 +4548,12 @@ $$
 
 两项分别记录指数变化与底数变化；漏掉任一项都错。
 <!-- bilingual-en:start -->
-Both record exponential and base changes; it is wrong to miss either.
+The two terms record changes in the exponent and the base, respectively; neither may be omitted.
 <!-- bilingual-en:end -->
 
 ### 18d：实数幂法则
 <!-- bilingual-en:start -->
-*18d: real power law*
+*18d: The Real-Exponent Power Rule*
 <!-- bilingual-en:end -->
 
 对固定实数 $r$、$x>0$：
@@ -4503,26 +4579,26 @@ $$
 
 至此幂法则从正整数 → 负整数 → 有理数 → 实数完成扩展。对特殊 $r$，定义域有时可延伸到 $x\le0$；但上述 $e^{r\ln x}$ 证明本身只覆盖 $x>0$。
 <!-- bilingual-en:start -->
-At this point the power law extends from positive integer→negative integer→rational number→real number.  For special $r$, the domain can sometimes extend to $x\le0$; however, the above $e^{r\ln x}$ proof itself only covers $x>0$.
+The power rule has now been extended from positive integers to negative integers, rational numbers, and finally real numbers. For special values of $r$, the domain may extend to $x\le0$; however, the proof using $e^{r\ln x}$ itself applies only when $x>0$.
 <!-- bilingual-en:end -->
 
 ### 对数求导何时特别有用
 <!-- bilingual-en:start -->
-*When logarithmic derivatives are particularly useful*
+*When Logarithmic Differentiation Is Especially Useful*
 <!-- bilingual-en:end -->
 
 - 多个幂的乘除：$y=(x-1)^3(x+2)^5/x^7$；
 - 变量在指数中：$x^{\sin x}$、$(1+x)^{1/x}$；
 - 直接反复积法则过长的表达式。
 <!-- bilingual-en:start -->
-- Multiplication and division of multiple powers: $y=(x-1)^3(x+2)^5/x^7$;
-- Variable in index: $x^{\sin x}$, $(1+x)^{1/x}$;
-- Expressions with overly long direct iteration rules.
+- Products and quotients of several powers: $y=(x-1)^3(x+2)^5/x^7$;
+- A variable in the exponent: $x^{\sin x}$ or $(1+x)^{1/x}$;
+- Expressions for which repeated direct use of the product rule would be unwieldy.
 <!-- bilingual-en:end -->
 
 例如 $y=(x-1)^3(x+2)^5/x^7$（在各因子符号固定且可取对数的区间）：
 <!-- bilingual-en:start -->
-For example, $y=(x-1)^3(x+2)^5/x^7$:
+For example, on an interval where the factors have fixed signs and logarithms are valid, let $y=(x-1)^3(x+2)^5/x^7$:
 <!-- bilingual-en:end -->
 
 $$
@@ -4531,7 +4607,7 @@ $$
 
 最后乘回 $y$ 即可。若因子可能为负，可在固定不穿零的区间使用 $\ln|u|$。
 <!-- bilingual-en:start -->
-Finally, multiply back to $y$.  If the factor may be negative, $\ln|u|$ can be used in a fixed interval that does not wear zero.
+Finally, multiply through by $y$. If a factor may be negative, use $\ln|u|$ on a fixed interval that does not cross a zero of $u$.
 <!-- bilingual-en:end -->
 
 ### 边界情况与易错点
@@ -4544,9 +4620,9 @@ Finally, multiply back to $y$.  If the factor may be negative, $\ln|u|$ can be u
 - $x^r=e^{r\ln x}$ 的证明只在 $x>0$；不能无说明地把结论扩到负底数的任意实数幂。
 - 求出 $y'/y$ 后不要忘记乘回 $y$。
 <!-- bilingual-en:start -->
-- Guarantee positive expressions before logarithmic derivation, or use absolute values without crossing the zero interval.
-- $D(x^x)$ is neither $xx^{x-1}$ nor $x^x\ln x$; base and exponent are variable and must have two entries.
-- $x^r=e^{r\ln x}$'s proof is only in $x>0$; the conclusion cannot be extended to any real power of a negative base without explanation.
+- Before logarithmic differentiation, ensure that the expression is positive, or use absolute values on an interval that does not cross zero.
+- $D(x^x)$ is neither $xx^{x-1}$ nor $x^x\ln x$; both base and exponent vary, so the derivative contains two contributions.
+- The proof using $x^r=e^{r\ln x}$ is valid only for $x>0$; it does not justify arbitrary real powers of negative bases.
 - Don't forget to multiply back to $y$ after finding $y'/y$.
 <!-- bilingual-en:end -->
 
@@ -4559,9 +4635,11 @@ Finally, multiply back to $y$.  If the factor may be negative, $\ln|u|$ can be u
 2. 求 $D[(2x+1)^{x}]$（$2x+1>0$）。
 3. 用对数求导求 $D[(x^2+1)^5/x^3]$。
 <!-- bilingual-en:start -->
-1. Find $D[x^{\sin x}]$ for $x>0$.
-2. Find $D[(2x+1)^x]$ for $2x+1>0$.
-3. Use logarithmic differentiation to find $D[(x^2+1)^5/x^3]$.
+
+&nbsp;
+**1.** Find $D[x^{\sin x}]$ for $x>0$.<br>
+**2.** Find $D[(2x+1)^x]$ for $2x+1>0$.<br>
+**3.** Use logarithmic differentiation to find $D[(x^2+1)^5/x^3]$.<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -4569,9 +4647,11 @@ Finally, multiply back to $y$.  If the factor may be negative, $\ln|u|$ can be u
 > 2. $(2x+1)^x[\ln(2x+1)+2x/(2x+1)]$。
 > 3. 令 $y=(x^2+1)^5x^{-3}$，$y'/y=10x/(x^2+1)-3/x$，故 $y'=y[10x/(x^2+1)-3/x]$；定义域 $x\ne0$。
 > <!-- bilingual-en:start -->
-> 1. $x^{\sin x}[\cos x\ln x+(\sin x)/x]$.
-> 2. $(2x+1)^x[\ln(2x+1)+2x/(2x+1)]$.
-> 3. Let $y=(x^2+1)^5x^{-3}$, $y'/y=10x/(x^2+1)-3/x$, so $y'=y[10x/(x^2+1)-3/x]$; the domain $x\ne0$.
+>
+> &nbsp;
+> **1.** $x^{\sin x}[\cos x\ln x+(\sin x)/x]$.<br>
+> **2.** $(2x+1)^x[\ln(2x+1)+2x/(2x+1)]$.<br>
+> **3.** Let $y=(x^2+1)^5x^{-3}$. Then $y'/y=10x/(x^2+1)-3/x$, so $y'=y[10x/(x^2+1)-3/x]$; the domain is $x\ne0$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -4582,11 +4662,7 @@ Finally, multiply back to $y$.  If the factor may be negative, $\ln|u|$ can be u
 - [[Ses18d_Lecture_Notes.pdf#page=1|18d Real Power Rule（pp.1-2）]]
 - 本地资料库没有 `Exercise018`；本节三道自检覆盖变量幂与对数求导。
 <!-- bilingual-en:start -->
-- [[Ses18a_Lecture_Notes.pdf#page=1|18a The Functions $10^x$ and $2^x$ (p.1)]]
-- [[Ses18b_Lecture_Notes.pdf#page=1|18b Logarithmic Differentiation (p.1)]]
-- [[Ses18c_Lecture_Notes.pdf#page=1|18c Example $x^x$ (p.1)]]
-- [[Ses18d_Lecture_Notes.pdf#page=1|18d Real Power Rule (pp.1-2)]]
-- There is no `Exercise018` in the local repository; in this section, the three self-test override variables are exponential and logarithmic.
+- There is no `Exercise018` in the local archive, so the three self-checks in this section cover variable powers and logarithmic differentiation.
 <!-- bilingual-en:end -->
 
 **知识链：**$\ln$ 把指数移到乘法位置 → 隐式求导 → 变量幂统一公式 → 实数幂法则。
@@ -4618,7 +4694,7 @@ Finally, multiply back to $y$.  If the factor may be negative, $\ln|u|$ can be u
 
 设
 <!-- bilingual-en:start -->
-if
+Let
 <!-- bilingual-en:end -->
 
 $$
@@ -4627,7 +4703,7 @@ $$
 
 直接看是 $1^\infty$ 型，不能把底数极限和指数极限分别代入。先取对数，把移动指数变成乘法：
 <!-- bilingual-en:start -->
-It is $1^\infty$ type. The base limit and the exponential limit can not be substituted respectively.  First, take the logarithm and turn the moving exponent into multiplication:
+This has the indeterminate form $1^\infty$, so the limits of the base and exponent cannot be substituted separately. First take logarithms, turning the varying exponent into a multiplicative factor:
 <!-- bilingual-en:end -->
 
 $$
@@ -4646,7 +4722,7 @@ $$
 
 这正是 $\ln x$ 在 $x=1$ 的导数：
 <!-- bilingual-en:start -->
-This is the derivative of $\ln x$ in $x=1$:
+This is exactly the derivative of $\ln x$ at $x=1$:
 <!-- bilingual-en:end -->
 
 $$
@@ -4656,7 +4732,7 @@ $$
 
 所以 $\ln a_n\to1$。指数函数连续，
 <!-- bilingual-en:start -->
-So, $\ln a_n\to1$.  Exponential function continuous,
+Thus $\ln a_n\to1$. By continuity of the exponential function,
 <!-- bilingual-en:end -->
 
 $$
@@ -4675,12 +4751,12 @@ This also gives a numerical approximation of $e$, for example, about $2.71815$ f
 
 ### 19b：为什么不是 $1$
 <!-- bilingual-en:start -->
-*19b: Why not $1$*
+*19b: Why the Limit Is Not $1$*
 <!-- bilingual-en:end -->
 
 底数 $1+1/n\to1$，但指数 $n\to\infty$；“非常小的增长”累计“非常多次”，总效应不能只看底数。对数后变成
 <!-- bilingual-en:start -->
-The base number is $1+1/n\to1$, but the exponent is $n\to\infty$; "very small growth" accumulates "very many times", and the total effect cannot be just the base number.  logarithmically
+The base $1+1/n$ tends to $1$, but the exponent $n$ tends to infinity. A very small increase repeated very many times has a cumulative effect that cannot be read from the base alone. After taking logarithms, the expression becomes
 <!-- bilingual-en:end -->
 
 $$
@@ -4689,17 +4765,17 @@ $$
 
 其中一个因子趋无穷、一个趋零，乘积极限需要上述导数计算，不能写成 $\infty\cdot0=0$。
 <!-- bilingual-en:start -->
-One of the factors tends to infinity, and the other tends to zero. The multiplicative limit of the multiplier requires the above derivative and cannot be written as $\infty\cdot0=0$.
+One factor tends to infinity and the other to zero. This product limit requires the derivative calculation above; the indeterminate form $\infty\cdot0$ cannot simply be assigned the value zero.
 <!-- bilingual-en:end -->
 
 ### 推广
 <!-- bilingual-en:start -->
-*promotion*
+*Generalization*
 <!-- bilingual-en:end -->
 
 对固定常数 $c,d$，在底数最终为正时：
 <!-- bilingual-en:start -->
-For the fixed constant $c,d$, when the base is positive:
+For fixed constants $c$ and $d$, provided the base is eventually positive,
 <!-- bilingual-en:end -->
 
 $$
@@ -4737,10 +4813,10 @@ $$
 - $h=1/n$ 只从正侧趋零；本题足够，因为 $\ln$ 在 $1$ 两侧导数一致。
 - 有限 $n$ 的复利值不等于 $e^r$，只是随 $n$ 增大趋近。
 <!-- bilingual-en:start -->
-- $1^\infty$ is an undefined tag, not an answer $1$.
-- Logarithmic must be followed by an exponential function continuity to return to the original limit.
+- $1^\infty$ labels an indeterminate form; it is not the answer $1$.
+- After taking logarithms, use continuity of the exponential function to return to the original limit.
 - $h=1/n$ goes to zero only from the positive side; this is sufficient because $\ln$ has the same derivative on both sides of $1$.
-- The compound interest value of a finite $n$ is not equal to $e^r$, but tends to increase with $n$.
+- For finite $n$, the compounded value is not equal to $e^r$; it approaches $e^r$ as $n$ grows.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -4752,9 +4828,11 @@ $$
 2. 求 $\lim_{n\to\infty}(1+2/n)^{5n}$。
 3. 解释 $\lim_{h\to0}(1+h)^{1/h}=e$ 与本节公式的关系。
 <!-- bilingual-en:start -->
-1. Find $\lim_{n\to\infty}(1+1/n)^{3n}$.
-2. Find $\lim_{n\to\infty}(1+2/n)^{5n}$.
-3. Explain how $\lim_{h\to0}(1+h)^{1/h}=e$ is related to the formula in this section.
+
+&nbsp;
+**1.** Find $\lim_{n\to\infty}(1+1/n)^{3n}$.<br>
+**2.** Find $\lim_{n\to\infty}(1+2/n)^{5n}$.<br>
+**3.** Explain how $\lim_{h\to0}(1+h)^{1/h}=e$ is related to the formula in this section.<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -4762,9 +4840,11 @@ $$
 > 2. $e^{10}$。
 > 3. 令 $h=1/n$ 得同一序列形式；更一般地取对数，$\ln[(1+h)^{1/h}]=\ln(1+h)/h\to1$，所以原式趋 $e$。
 > <!-- bilingual-en:start -->
-> 1. $e^3$.
-> 2. $e^{10}$.
-> 3. Let $h=1/n$ have the same sequence form; more generally take logarithm, $\ln[(1+h)^{1/h}]=\ln(1+h)/h\to1$, so the original form tends to $e$.
+>
+> &nbsp;
+> **1.** $e^3$.<br>
+> **2.** $e^{10}$.<br>
+> **3.** Setting $h=1/n$ gives the same sequence form. More generally, take logarithms: $\ln[(1+h)^{1/h}]=\ln(1+h)/h\to1$, so the original expression tends to $e$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -4774,10 +4854,7 @@ $$
 - [[Exercise019_Problems.pdf#page=1|Exercise 019：Evaluating an Interesting Limit]] · [[Exercise019_Solutions.pdf#page=1|答案]]
 - 资料库另有同内容副本 `Exercise019_Problems_2.pdf` / `Solutions_2.pdf`；正文只链接一份，避免重复导航。
 <!-- bilingual-en:start -->
-- [[Ses19a_Lecture_Notes.pdf#page=1|19a Another Moving Exponent (pp.1-2)]]
-- [[Ses19b_Lecture_Notes.pdf#page=1|19b A Formula for $e$ (p.1)]]
-- [[Exercise019_Problems.pdf#page=1|Exercise 019:Evaluating an Interesting Limit]] · [[Exercise019_Solutions.pdf#page=1|Answer]]
-- Repository has a separate copy of the content `Exercise019_Problems_2.pdf` / `Solutions_2.pdf`; the body is linked to one copy, avoiding repeated navigation.
+- The archive also contains duplicate files, `Exercise019_Problems_2.pdf` and `Solutions_2.pdf`; the note links only one copy to avoid redundant navigation.
 <!-- bilingual-en:end -->
 
 **知识链：**移动指数 → 取对数 → 换元成 $\ln$ 在 $1$ 的导数 → 指数化返回 → 连续复利。
@@ -4809,7 +4886,7 @@ $$
 
 [[导数与求导规则|双曲函数]]中的双曲正弦（hyperbolic sine）和双曲余弦（hyperbolic cosine）定义为：
 <!-- bilingual-en:start -->
-Hyperbolic sine and hyperbolic cosine in [[导数与求导规则|hyperbolic function]] are defined as:
+The [[导数与求导规则|hyperbolic functions]] hyperbolic sine and hyperbolic cosine are defined by
 <!-- bilingual-en:end -->
 
 $$
@@ -4820,7 +4897,7 @@ $$
 
 注意 $(e^{-x})'=-e^{-x}$。因此
 <!-- bilingual-en:start -->
-Note $(e^{-x})'=-e^{-x}$.  therefore
+Since $(e^{-x})'=-e^{-x}$,
 <!-- bilingual-en:end -->
 
 $$
@@ -4834,12 +4911,12 @@ $$
 
 与圆三角函数不同，$\cosh$ 求导没有负号。
 <!-- bilingual-en:start -->
-Unlike circular trigonometric functions, $\cosh$ derivations do not have a negative sign.
+Unlike the circular trigonometric functions, differentiating $\cosh$ introduces no minus sign.
 <!-- bilingual-en:end -->
 
 ### 核心恒等式的逐步证明
 <!-- bilingual-en:start -->
-*The Proof of Core Inequality*
+*A Step-by-Step Proof of the Core Identity*
 <!-- bilingual-en:end -->
 
 $$
@@ -4853,7 +4930,7 @@ $$
 
 所以点
 <!-- bilingual-en:start -->
-So point
+Therefore, the point
 <!-- bilingual-en:end -->
 
 $$
@@ -4862,14 +4939,14 @@ $$
 
 满足 $u^2-v^2=1$，位于单位双曲线右支；这就是“hyperbolic”的来源。圆三角对应 $\cos^2x+\sin^2x=1$。
 <!-- bilingual-en:start -->
-Satisfies $u^2-v^2=1$, on the right branch of the unit hyperbola; this is where the "hyperbolic" comes from.  The circle triangle corresponds to $\cos^2x+\sin^2x=1$.
+satisfies $u^2-v^2=1$ and lies on the right branch of the unit hyperbola; this is the source of the word “hyperbolic.” The circular-trigonometric counterpart is $\cos^2x+\sin^2x=1$.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/MIT18.01SC/unit01-hyperbolic.png|900]]
 
 ### 由定义推出其他公式
 <!-- bilingual-en:start -->
-*Derive additional formulas from definitions*
+*Deriving Further Formulas from the Definitions*
 <!-- bilingual-en:end -->
 
 $$
@@ -4878,7 +4955,7 @@ $$
 
 商法则与恒等式给
 <!-- bilingual-en:start -->
-The Law of Quotient and the Inequality to
+The quotient rule and the preceding identity give
 <!-- bilingual-en:end -->
 
 $$
@@ -4899,7 +4976,7 @@ Parity: $\sinh$ is an odd function and $\cosh$ is an even function; this is also
 
 从指数定义展开：
 <!-- bilingual-en:start -->
-Expand from index definition:
+Expand from the exponential definitions:
 <!-- bilingual-en:end -->
 
 $$
@@ -4913,7 +4990,7 @@ $$
 
 同理
 <!-- bilingual-en:start -->
-the same
+Similarly,
 <!-- bilingual-en:end -->
 
 $$
@@ -4922,7 +4999,7 @@ $$
 
 第二式中间是加号，而圆三角的 $\cos(x+y)$ 公式中间是减号；根源是双曲恒等式使用差平方。
 <!-- bilingual-en:start -->
-In the second formula, the plus sign is in the middle and the minus sign is in the middle of the $\cos(x+y)$ formula for circular triangles; the hyperbolic identity is derived by using the difference square.
+The second formula has a plus sign where the circular identity for $\cos(x+y)$ has a minus sign. The difference comes from the difference-of-squares identity underlying the hyperbolic functions.
 <!-- bilingual-en:end -->
 
 ### 边界情况与易错点
@@ -4935,10 +5012,10 @@ In the second formula, the plus sign is in the middle and the minus sign is in t
 - $\cosh^{-1}x$ 常表示反双曲余弦，不是 $1/\cosh x$；倒数写作 $\operatorname{sech}x$。
 - 双曲角的几何解释与普通圆角不同，本章只需要指数定义和代数恒等式。
 <!-- bilingual-en:start -->
-- $\cosh x\ge1$, never zero, so $\tanh x$ defines all real numbers.
-- $\sinh$, $\sin$ names are similar but have different derivative loops; do not manipulate with symbols.
-- $\cosh^{-1}x$ constants denote inverse hyperbolic cosine, not $1/\cosh x$; reciprocal is written as $\operatorname{sech}x$.
-- The geometric interpretation of hyperbolic angles differs from that of ordinary filets in that this chapter requires only exponential definitions and algebraic identities.
+- Since $\cosh x\ge1$, it never vanishes, so $\tanh x$ is defined for every real $x$.
+- The names $\sinh$ and $\sin$ look similar, but their derivative cycles differ; do not transfer formulas mechanically from one to the other.
+- $\cosh^{-1}x$ commonly denotes inverse hyperbolic cosine, not $1/\cosh x$; the reciprocal is written $\operatorname{sech}x$.
+- Hyperbolic angles have a different geometric interpretation from ordinary circular angles; this chapter needs only the exponential definitions and algebraic identities.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -4950,9 +5027,11 @@ In the second formula, the plus sign is in the middle and the minus sign is in t
 2. 证明 $\cosh x\ge1$。
 3. 求 $D[\operatorname{sech}x]$。
 <!-- bilingual-en:start -->
-1. Find $D[\sinh(3x)]$.
-2. Prove that $\cosh x\ge1$.
-3. Find $D[\operatorname{sech}x]$.
+
+&nbsp;
+**1.** Find $D[\sinh(3x)]$.<br>
+**2.** Prove that $\cosh x\ge1$.<br>
+**3.** Find $D[\operatorname{sech}x]$.<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -4960,9 +5039,11 @@ In the second formula, the plus sign is in the middle and the minus sign is in t
 > 2. $\cosh x=(e^x+e^{-x})/2\ge\sqrt{e^xe^{-x}}=1$（AM-GM），等号仅在 $x=0$。
 > 3. sech$\,x=1/\cosh x$，故导数 $-\sinh x/\cosh^2x=-\operatorname{sech}x\tanh x$。
 > <!-- bilingual-en:start -->
-> 1. $3\cosh(3x)$.
-> 2. $\cosh x=(e^x+e^{-x})/2\ge\sqrt{e^xe^{-x}}=1$ (AM-GM), equal sign $x=0$ only.
-> 3. sech$\,x=1/\cosh x$, so the derivative $-\sinh x/\cosh^2x=-\operatorname{sech}x\tanh x$.
+>
+> &nbsp;
+> **1.** $3\cosh(3x)$.<br>
+> **2.** By AM–GM, $\cosh x=(e^x+e^{-x})/2\ge\sqrt{e^xe^{-x}}=1$, with equality only at $x=0$.<br>
+> **3.** sech$\,x=1/\cosh x$, so the derivative $-\sinh x/\cosh^2x=-\operatorname{sech}x\tanh x$.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -4979,7 +5060,7 @@ In the second formula, the plus sign is in the middle and the minus sign is in t
 
 官网在 Part B 后同时指定两本题册：Differentiation 的 1F-1I，以及 Integration Techniques 的 5A。5A 在此只承担反三角与双曲函数练习，不表示课程已经进入积分技巧。
 <!-- bilingual-en:start -->
-After Part B, the official website designated two titles at the same time: 1F-1I of Differentiation and 5A of Integration Techniques.  5A only undertakes the inverse trigonometric and hyperbolic exercises here, not that the course has entered the integral technique.
+After Part B, the official course assigns problems from two booklets: Sections 1F–1I of Differentiation and Section 5A of Integration Techniques. Here 5A supplies practice on inverse-trigonometric and hyperbolic functions; it does not mean that the course has already moved into techniques of integration.
 <!-- bilingual-en:end -->
 
 - [[PSet01_Problems.pdf#page=6|Differentiation 原题（相关页 pp.6-10）]]
@@ -5436,7 +5517,7 @@ After Part B, the official website designated two titles at the same time: 1F-1I
 
 ### 21a：公式总表与隐式流程
 <!-- bilingual-en:start -->
-*21a: Formula Summary and Implicit Process*
+*21a: Formula Summary and an Implicit-Differentiation Workflow*
 <!-- bilingual-en:end -->
 
 $$
@@ -5475,12 +5556,12 @@ $$
 
 ### 21b：链式法则为何是乘法
 <!-- bilingual-en:start -->
-*21b: Why the chain rule is multiplication*
+*21b: Why the Chain Rule Multiplies Rates*
 <!-- bilingual-en:end -->
 
 若 $y=10x+b$，则 $dy/dx=10$；若 $x=5t+a$，则 $dx/dt=5$。代入得到
 <!-- bilingual-en:start -->
-$dy/dx=10$ if $y=10x+b$, $dx/dt=5$ if $x=5t+a$.  substitution
+If $y=10x+b$, then $dy/dx=10$; if $x=5t+a$, then $dx/dt=5$. Substitution gives
 <!-- bilingual-en:end -->
 
 $$
@@ -5489,7 +5570,7 @@ $$
 
 故 $dy/dt=50=10\cdot5$。这是“输出相对中间量的倍率 × 中间量相对输入的倍率”。链式法则还可把商改写为积：
 <!-- bilingual-en:start -->
-So, $dy/dt=50=10\cdot5$.  This is "the multiple of the output relative to the intermediate amount × the multiple of the intermediate amount relative to the input."  Chain rules can also rewrite quotient as product:
+Hence $dy/dt=50=10\cdot5$: the rate of output change per unit of the intermediate variable is multiplied by the rate of intermediate-variable change per unit of input. The chain rule also lets us rewrite a quotient as a product:
 <!-- bilingual-en:end -->
 
 $$
@@ -5500,7 +5581,7 @@ $$
 
 ### 21c-21f：按真实片段顺序的四个例子
 <!-- bilingual-en:start -->
-*21c-21f: Four examples in real fragment order*
+*21c–21f: Four Examples in the Actual Slide Sequence*
 <!-- bilingual-en:end -->
 
 **21c - $\sec x$：**
@@ -5528,7 +5609,7 @@ $$
 
 没有要求展开时，因式形式更容易检查且信息更清楚。
 <!-- bilingual-en:start -->
-When unfolding is not required, factorization is easier to examine and the information is clearer.
+When expansion is not required, the factored form is easier to check and preserves more structural information.
 <!-- bilingual-en:end -->
 
 **21f - $e^{x\arctan x}$：** 课件实际是整个 $x\arctan x$ 位于指数中，不是 $e^x\arctan x$。设 $u=x\arctan x$：
@@ -5558,7 +5639,7 @@ $$
 
 考试可能把导数定义伪装成极限。例如
 <!-- bilingual-en:start -->
-Exams can disguise derivative definitions as limits.  For example
+An exam may disguise a derivative definition as a limit. For example,
 <!-- bilingual-en:end -->
 
 $$
@@ -5568,7 +5649,7 @@ $$
 
 看到
 <!-- bilingual-en:start -->
-see
+Similarly, the expression
 <!-- bilingual-en:end -->
 
 $$
@@ -5582,7 +5663,7 @@ This should be recognised immediately as $f'(a)$. To judge differentiability fro
 
 ### 考场决策顺序
 <!-- bilingual-en:start -->
-*Examination room decision sequence*
+*Exam-Day Decision Sequence*
 <!-- bilingual-en:end -->
 
 1. 先写原函数定义域，标出不可求导点。
@@ -5591,11 +5672,13 @@ This should be recognised immediately as $f'(a)$. To judge differentiability fro
 4. 切线题写“点 + 斜率”；运动题先找速度零点再分段算路程。
 5. 最后检查奇偶性、符号、单位、简单点和是否漏了定义域。
 <!-- bilingual-en:start -->
-1. Write down the domain of the function and mark every point at which it is not differentiable.
-2. Circle the outermost operation: sum, product, quotient, or composite.
-3. Composite functions are layered from outside to inside; Implicit functions each $y$ term has a chain factor.
-4. For a tangent line, write “point + slope.” For a motion problem, first find the times at which velocity is zero, then compute distance piecewise.
-5. Finally, check for parity, symbols, units, simple points, and whether domains are missing.
+
+&nbsp;
+**1.** Write down the domain of the function and mark every point at which it is not differentiable.<br>
+**2.** Circle the outermost operation: sum, product, quotient, or composite.<br>
+**3.** Differentiate a composite function from the outside inward; in implicit differentiation, every differentiated term involving $y$ carries a chain-rule factor $y'$.<br>
+**4.** For a tangent line, write “point + slope.” For a motion problem, first find the times at which velocity is zero, then compute distance piecewise.<br>
+**5.** Finally, check parity, signs, units, simple test points, and whether any domain restrictions were omitted.<br>
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -5607,9 +5690,11 @@ This should be recognised immediately as $f'(a)$. To judge differentiability fro
 2. 把 $\lim_{h\to0}[\ln(2+h)-\ln2]/h$ 识别为导数并求值。
 3. 分段函数在接点处可导需要哪两个独立条件？
 <!-- bilingual-en:start -->
-1. Request $D[e^{x\arctan x}]$ and explain which two layers of rules are used.
-2. Recognize $\lim_{h\to0}[\ln(2+h)-\ln2]/h$ as a derivative and evaluate.
-3. What two independent conditions are required for a piecewise function to be differentiable at a joining point?
+
+&nbsp;
+**1.** Find $D[e^{x\arctan x}]$ and explain which rules are used at the two layers.<br>
+**2.** Recognize $\lim_{h\to0}[\ln(2+h)-\ln2]/h$ as a derivative and evaluate.<br>
+**3.** What two independent conditions are required for a piecewise function to be differentiable at a joining point?<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -5617,9 +5702,11 @@ This should be recognised immediately as $f'(a)$. To judge differentiability fro
 > 2. 是 $(\ln x)'|_{x=2}=1/2$。
 > 3. 先连续：左右极限和函数值相等；再匹配左右导数。第二条件不能替代第一条件。
 > <!-- bilingual-en:start -->
-> 1. Text 21f; outer layer using the exponential chain rule, inner exponential using the product rule and $\arctan$ derivative.
-> 2. It's $(\ln x)'|_{x=2}=1/2$.
-> 3. First continuous: left and right limits and function values are equal; then match the left and right derivatives.  The second condition does not replace the first condition.
+>
+> &nbsp;
+> **1.** See Section 21f: use the chain rule for the outer exponential, then the product rule and the derivative of $\arctan$ inside the exponent.<br>
+> **2.** It is $(\ln x)'|_{x=2}=1/2$.<br>
+> **3.** First establish continuity by matching both one-sided limits with the function value; then match the one-sided derivatives. The second condition cannot replace the first.<br>
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -5641,7 +5728,7 @@ This should be recognised immediately as $f'(a)$. To judge differentiability fro
 
 ### 本节问题与作答标准
 <!-- bilingual-en:start -->
-*Questions and Answers in this section*
+*Questions and Answer Standards for This Section*
 <!-- bilingual-en:end -->
 
 **问题：**怎样把本章的定义、规则、隐式关系和运动解释组合成一套完整考试解答？
@@ -5713,7 +5800,7 @@ $$
 
 先逐阶观察：
 <!-- bilingual-en:start -->
-First step:
+First inspect the pattern in the successive derivatives:
 <!-- bilingual-en:end -->
 
 $$
@@ -5726,7 +5813,7 @@ $$
 
 提出一般命题 $f^{(n)}=(x+n)e^x$。若第 $n$ 阶成立，则
 <!-- bilingual-en:start -->
-$f^{(n)}=(x+n)e^x$.  If the $n$ order is true, then
+Conjecture that $f^{(n)}=(x+n)e^x$. If the formula holds at order $n$, then
 <!-- bilingual-en:end -->
 
 $$
@@ -5735,7 +5822,7 @@ $$
 
 所以由归纳法成立。取 $n=5$：
 <!-- bilingual-en:start -->
-So it's established by induction.  Take $n=5$:
+This proves the formula by induction. Taking $n=5$ gives
 <!-- bilingual-en:end -->
 
 $$
@@ -5754,7 +5841,7 @@ You can also use the Leibniz formula: $x$ has zero second-order and higher deriv
 
 曲线
 <!-- bilingual-en:start -->
-curve
+Consider the curve
 <!-- bilingual-en:end -->
 
 $$
@@ -5763,7 +5850,7 @@ $$
 
 在 $(-\sqrt{27},1)$ 处。先验点：$-\sqrt{27}=-3^{3/2}$，故
 <!-- bilingual-en:start -->
-At $(-\sqrt{27},1)$.  A priori: $-\sqrt{27}=-3^{3/2}$, therefore
+at $(-\sqrt{27},1)$. First verify the point: since $-\sqrt{27}=-3^{3/2}$,
 <!-- bilingual-en:end -->
 
 $$
@@ -5772,7 +5859,7 @@ $$
 
 隐式求导：
 <!-- bilingual-en:start -->
-Implicit derivative:
+Implicit differentiation gives
 <!-- bilingual-en:end -->
 
 $$
@@ -5781,7 +5868,7 @@ $$
 
 解出
 <!-- bilingual-en:start -->
-dissolve
+Solving for $y'$ gives
 <!-- bilingual-en:end -->
 
 $$
@@ -5799,7 +5886,7 @@ $$
 
 点斜式：
 <!-- bilingual-en:start -->
-Dot Slant:
+The point-slope form is
 <!-- bilingual-en:end -->
 
 $$
@@ -5817,17 +5904,17 @@ $$
 
 **检查。** 代切点：$(-\sqrt{27})/\sqrt3+4=-3+4=1$；切线确实过指定点。分数幂在负数处按实立方根理解，不能错误地把 $x^{1/3}$ 取成正根。
 <!-- bilingual-en:start -->
-**Check.** At the alternative tangency point, $(-\sqrt{27})/\sqrt3+4=-3+4=1$, so the tangent does pass through the specified point. For negative inputs, the fractional power is interpreted using the real cube root; $x^{1/3}$ must not be treated as a nonnegative principal square root.
+**Check.** At the specified point, $(-\sqrt{27})/\sqrt3+4=-3+4=1$, so the tangent line does pass through it. For negative inputs, the fractional power is interpreted using the real cube root; $x^{1/3}$ must not be treated as a nonnegative principal square root.
 <!-- bilingual-en:end -->
 
 ### Problem 3：前三秒的总路程
 <!-- bilingual-en:start -->
-*Problem 3: Last three seconds total*
+*Problem 3: Total Distance During the First Three Seconds*
 <!-- bilingual-en:end -->
 
 位置
 <!-- bilingual-en:start -->
-location
+The position is
 <!-- bilingual-en:end -->
 
 $$
@@ -5836,7 +5923,7 @@ $$
 
 速度
 <!-- bilingual-en:start -->
-speed
+The velocity is
 <!-- bilingual-en:end -->
 
 $$
@@ -5845,7 +5932,7 @@ $$
 
 在 $[0,3]$ 内只有 $t=1$ 使速度为零；$0<t<1$ 时 $v<0$，$t>1$ 时 $v>0$，所以粒子在 $t=1$ 改变方向。各关键位置：
 <!-- bilingual-en:start -->
-Only $t=1$ makes the velocity zero in $[0,3]$, $v<0$ at $0<t<1$ and $v>0$ at $t>1$, so the particle changes direction in $t=1$.  Key locations:
+Within $[0,3]$, velocity vanishes only at $t=1$. Since $v<0$ for $0<t<1$ and $v>0$ for $t>1$, the particle changes direction at $t=1$. The key positions are
 <!-- bilingual-en:end -->
 
 $$
@@ -6028,7 +6115,7 @@ $$
 
 已知对所有实数 $x,y$：
 <!-- bilingual-en:start -->
-Known to all real $x,y$:
+Suppose that, for all real $x$ and $y$,
 <!-- bilingual-en:end -->
 
 $$
@@ -6072,7 +6159,7 @@ The limit condition also indicates that $f(x)=x[f(x)/x]\to0$ is compatible with 
 
 直接使用定义和 (a)：
 <!-- bilingual-en:start -->
-Direct use of definitions and (a):
+Use the definition directly together with part (a):
 <!-- bilingual-en:end -->
 
 $$
@@ -6097,7 +6184,7 @@ $$
 
 移项并除以 $h\ne0$：
 <!-- bilingual-en:start -->
-Move items and divide by $h\ne0$:
+Rearrange and divide by $h\ne0$:
 <!-- bilingual-en:end -->
 
 $$
@@ -6134,16 +6221,18 @@ which holds identically and confirms the result.
 
 ### Exam 1 三道收尾自检
 <!-- bilingual-en:start -->
-*Exam 1 3-way Final Self Test*
+*Three Final Self-Checks for Exam 1*
 <!-- bilingual-en:end -->
 
 1. Problem 2 中若忘记先验点，会漏掉什么潜在问题？
 2. Problem 5 为什么必须先连续、再匹配导数？
 3. Problem 6(c) 中哪一步真正使用了额外极限条件？
 <!-- bilingual-en:start -->
-1. What potential problems are missed in Problem 2 if a priori is forgotten?
-2. Why does Problem 5 have to be continuous and then match the derivative?
-3. Which step in Problem 6(c) actually uses the extra limit condition?
+
+&nbsp;
+**1.** What potential problem would be missed in Problem 2 if the point were not checked first?<br>
+**2.** Why must Problem 5 establish continuity before matching derivatives?<br>
+**3.** Which step in Problem 6(c) actually uses the extra limit condition?<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -6151,9 +6240,11 @@ which holds identically and confirms the result.
 > 2. 可导必连续；即使左右导数形式碰巧相等，函数值若跳跃仍不可导。连续条件还决定参数的一部分。
 > 3. 令 $h\to0$ 时把 $f(h)/h$ 替换为 $1$；其余项只用代数和导数定义。
 > <!-- bilingual-en:start -->
-> 1. The specified point may not be on the curve at all; the Tangent to that point is meaningless.  The checkpoint also checks the real interpretation of the fractional power.
-> 2. The derivative must be continuous; even if the forms of left and right derivatives happen to be equal, the function value will still not be derivative if jumping.  The continuity condition also determines a portion of the parameter.
-> 3. Replace $f(h)/h$ with $1$ when you make $h\to0$; the remainder is defined only with algebras and derivatives.
+>
+> &nbsp;
+> **1.** The specified point might not lie on the curve at all, in which case a tangent “at that point” is meaningless. Checking the point also verifies the real-valued interpretation of the fractional power.<br>
+> **2.** Differentiability implies continuity. Even if the two derivative expressions happen to match, a jump in the function values still prevents differentiability. The continuity conditions also determine some of the parameters.<br>
+> **3.** The extra condition is used when $h\to0$ and $f(h)/h$ is replaced by $1$; every other step uses only algebra and the definition of the derivative.<br>
 > <!-- bilingual-en:end -->
 
 **Session 22 小结：**Exam 1 同时检查计算与论证。高分答案不只给最终式，还会指出定义域、转向点、连续性条件，以及证明中使用“可导蕴含连续”的位置。
@@ -6165,12 +6256,12 @@ which holds identically and confirms the result.
 
 ## 全章知识链与复习清单
 <!-- bilingual-en:start -->
-*Chapter knowledge chain and review checklist*
+*Chapter Knowledge Chain and Review Checklist*
 <!-- bilingual-en:end -->
 
 ### 一条主链
 <!-- bilingual-en:start -->
-*a main chain*
+*The Main Chain*
 <!-- bilingual-en:end -->
 
 $$
@@ -6187,7 +6278,7 @@ $$
 
 ### 必须能独立重建的证明
 <!-- bilingual-en:start -->
-*Proof that it must be rebuilt independently*
+*Proofs You Must Be Able to Reconstruct Independently*
 <!-- bilingual-en:end -->
 
 1. 可导蕴含连续：把函数增量写成“差商 × 输入增量”。
@@ -6200,20 +6291,22 @@ $$
 8. $e^x,\ln x$ 导数：$M(e)=1$ 与反函数求导。
 9. $\lim(1+1/n)^n=e$：取对数化成 $\ln x$ 在 $1$ 的导数。
 <!-- bilingual-en:start -->
-1. Differentiability implies continuity: write the function increment as “difference quotient × input increment.”
-2. The positive integer power rule: the binomial expansion is divided by $h$.
-3. $\sin x/x$ limit: unit circle area pinch, and explain the radian condition.
-4. Sine-cosine derivative: angle and formula + two fundamental limits.
-5. Product rule: add and subtract an intermediate term, then use differentiability implies continuity.
-6. Chain rule: multiply local multiples and deal with $\Delta x=0$'s auxiliary functions.
-7. Inverse-function derivative: differentiate $f(f^{-1}(x))=x$.
-8. $e^x,\ln x$ derivative: $M(e)=1$ and inverse function derivative.
-9. $\lim(1+1/n)^n=e$: Take the logarithm to the derivative of $\ln x$ at $1$.
+
+&nbsp;
+**1.** Differentiability implies continuity: write the function increment as “difference quotient × input increment.”<br>
+**2.** The positive-integer power rule: expand with the binomial theorem and divide by $h$.<br>
+**3.** The limit of $\sin x/x$: squeeze areas in the unit circle and explain why radians are required.<br>
+**4.** The derivatives of sine and cosine: combine the angle-addition identities with the two fundamental limits.<br>
+**5.** The product rule: add and subtract an intermediate term, then use the fact that differentiability implies continuity.<br>
+**6.** The chain rule: multiply local rates and use the auxiliary function to handle $\Delta x=0$.<br>
+**7.** The inverse-function derivative: differentiate $f(f^{-1}(x))=x$.<br>
+**8.** The derivatives of $e^x$ and $\ln x$: use $M(e)=1$ and the inverse-function rule.<br>
+**9.** $\lim(1+1/n)^n=e$: take logarithms and reduce the limit to the derivative of $\ln x$ at $1$.<br>
 <!-- bilingual-en:end -->
 
 ### 每次求导的五项检查
 <!-- bilingual-en:start -->
-*Five Checks for Each Derivation*
+*Five Checks for Every Differentiation*
 <!-- bilingual-en:end -->
 
 - **定义域：**原函数在哪里有意义？答案不能扩张原定义域。

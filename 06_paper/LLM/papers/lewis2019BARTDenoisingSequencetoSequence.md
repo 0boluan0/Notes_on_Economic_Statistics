@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `01 架构与预训练`，第一版用于连接 Transformer, Pretraining 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Transformer 与注意力机制]], [[预训练、指令微调与偏好优化]]
+[[Transformer 与注意力机制]], 预训练、指令微调与偏好优化
 
 ## 来源
 - [Zotero item](zotero://select/library/items/7TW36XWN)

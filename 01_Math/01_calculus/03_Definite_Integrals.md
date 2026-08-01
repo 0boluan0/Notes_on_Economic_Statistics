@@ -142,13 +142,13 @@ A negative function contributes negative signed area, so a definite integral is 
 > <!-- bilingual-en:start -->
 > The three plots use different horizontal and vertical scales. Read the scales first, then compare each shaded region with triangles and rectangles whose areas can be calculated.
 >
-> 1. The first shaded region is exactly a triangle with base $2$ and height $4$, so
+> **1.** The first shaded region is exactly a triangle with base $2$ and height $4$, so<br>
 >    $$
 >    \int f(x)\,dx=\frac12\cdot2\cdot4=\boxed{4}.
 >    $$
 >    Choose (b).
-> 2. In the second plot, the area under the curve is less than the enclosing triangle's area $1/2$, but clearly closer to $1/2$ than to $1/4$. The best estimate is $\boxed{1/2}$, so choose (c).
-> 3. The third region can be approximated by a rectangle of area about $1/2$ plus an additional part of area about $1/4$. The best estimate is therefore $\boxed{3/4}$, so choose (b).
+> **2.** In the second plot, the area under the curve is less than the enclosing triangle's area $1/2$, but clearly closer to $1/2$ than to $1/4$. The best estimate is $\boxed{1/2}$, so choose (c).<br>
+> **3.** The third region can be approximated by a rectangle of area about $1/2$ plus an additional part of area about $1/4$. The best estimate is therefore $\boxed{3/4}$, so choose (b).<br>
 >
 > The task is not exact integration; it tests whether area estimates are consistent with the coordinate scale. See [[Exercise043_Problems.pdf#page=1|page 1 of the original problem]].
 > <!-- bilingual-en:end -->
@@ -158,7 +158,11 @@ A negative function contributes negative signed area, so a definite integral is 
 >
 > 答：可积要求选点差异在细分后消失；\(dx\) 来自 \(\Delta x_i\)；结果为 \(c(b-a)\)。
 > <!-- bilingual-en:start -->
-> 1. Why may the sample point in each subinterval be chosen arbitrarily? 2. What does $dx$ correspond to? 3. What is the integral when $f\equiv c$?
+>
+> &nbsp;
+> **1.** Why may the sample point in each subinterval be chosen arbitrarily?<br>
+> **2.** What does $dx$ correspond to?<br>
+> **3.** What is the integral when $f\equiv c$?<br>
 >
 > Answer: Integrability means that differences caused by the sample-point choices vanish as the partition is refined; $dx$ arises from $\Delta x_i$; the result is $c(b-a)$.
 > <!-- bilingual-en:end -->
@@ -247,7 +251,11 @@ $$
 >
 > 答：右端点是每段最大值；不改变；结果为 \(2\)。
 > <!-- bilingual-en:start -->
-> 1. Why does a right-endpoint sum overestimate an increasing function? 2. Does using midpoints change the limiting integral? 3. What is $\int_0^2x\,dx$?
+>
+> &nbsp;
+> **1.** Why does a right-endpoint sum overestimate an increasing function?<br>
+> **2.** Does using midpoints change the limiting integral?<br>
+> **3.** What is $\int_0^2x\,dx$?<br>
 >
 > Answer: The right endpoint gives the maximum value on each subinterval; no; the integral is $2$.
 > <!-- bilingual-en:end -->
@@ -327,7 +335,11 @@ $$
 >
 > 答：\(16\)；正负在 \(\int f\) 中会抵消；相邻区间累计量相加。
 > <!-- bilingual-en:start -->
-> 1. What is \(\int_{-2}^2(x^3+4)dx\)? 2. Why is \(\int|f|\ge|\int f|\)? 3. How should interval additivity be interpreted?
+>
+> &nbsp;
+> **1.** What is \(\int_{-2}^2(x^3+4)dx\)?<br>
+> **2.** Why is \(\int|f|\ge|\int f|\)?<br>
+> **3.** How should interval additivity be interpreted?<br>
 >
 > Answer: \(16\); positive and negative contributions can cancel in \(\int f\); accumulated quantities over adjacent intervals add together.
 > <!-- bilingual-en:end -->
@@ -399,7 +411,11 @@ The units reduce from “dollars per year × years” to dollars. The local file
 >
 > 答：\(n(3/n)=3\)；样本点写成 \(a+i\Delta x\)；函数单位乘自变量单位。
 > <!-- bilingual-en:start -->
-> 1. How can the interval length be read from $3/n$? 2. Where does the translation by $a$ appear? 3. How should the units be checked?
+>
+> &nbsp;
+> **1.** How can the interval length be read from $3/n$?<br>
+> **2.** Where does the translation by $a$ appear?<br>
+> **3.** How should the units be checked?<br>
 >
 > Answer: $n(3/n)=3$; sample points take the form $a+i\Delta x$; multiply the units of the function by the units of the independent variable.
 > <!-- bilingual-en:end -->
@@ -481,7 +497,11 @@ Continuity makes the area of the narrow strip approximately \(f(x)h\), so the di
 >
 > 答：\(t\) 是哑变量；\(F\) 递减；\(F(a)=0\)。
 > <!-- bilingual-en:start -->
-> 1. Why is the integration variable written as $t$? 2. What happens to $F$ when $f<0$? 3. What is $F(a)$?
+>
+> &nbsp;
+> **1.** Why is the integration variable written as $t$?<br>
+> **2.** What happens to $F$ when $f<0$?<br>
+> **3.** What is $F(a)$?<br>
 >
 > Answer: $t$ is a dummy variable; $F$ decreases; $F(a)=0$.
 > <!-- bilingual-en:end -->
@@ -574,7 +594,11 @@ Thus the difference quotient tends to \(f(x)\). The proof never assumes \(f\ge0\
 >
 > 答：控制 (|f(t)-f(x)|)；估计使用 (|h|)，反向积分的符号也包含在等式中；结果为 (f(x))。
 > <!-- bilingual-en:start -->
-> 1. In the proof of FTC I, which quantity is controlled by continuity? 2. Why does the proof also cover $h<0$? 3. What is $\frac d{dx}\int_2^x f(t)dt$?
+>
+> &nbsp;
+> **1.** In the proof of FTC I, which quantity is controlled by continuity?<br>
+> **2.** Why does the proof also cover $h<0$?<br>
+> **3.** What is $\frac d{dx}\int_2^x f(t)dt$?<br>
 >
 > Answer: Continuity controls $|f(t)-f(x)|$; the estimate uses $|h|$, while the sign of reversing an integral is already built into the equation; the derivative is $f(x)$.
 > <!-- bilingual-en:end -->
@@ -683,7 +707,11 @@ You do not need to find an antiderivative of \(\sin(t^3)\) first. If the substit
 >
 > 答：\(-f(x)\)；\(2xe^{x^4}-e^{x^2}\)；因为上限移动速度不一定为 1。
 > <!-- bilingual-en:start -->
-> 1. What is $d/dx\int_x^0f(t)dt$? 2. What is $d/dx\int_x^{x^2}e^{t^2}dt$? 3. Why must the derivative of the inner limit be included?
+>
+> &nbsp;
+> **1.** What is $d/dx\int_x^0f(t)dt$?<br>
+> **2.** What is $d/dx\int_x^{x^2}e^{t^2}dt$?<br>
+> **3.** Why must the derivative of the inner limit be included?<br>
 >
 > Answer: $-f(x)$; $2xe^{x^4}-e^{x^2}$; because an integration limit need not move at unit speed.
 > <!-- bilingual-en:end -->
@@ -756,7 +784,11 @@ $$
 >
 > 答：保证 MVT/FTC 可用且平均值被取得；连续平均值；能，用上下界。
 > <!-- bilingual-en:start -->
-> 1. Where is continuity used? 2. What kind of average is $f(c)$? 3. Can an integral be estimated without finding an antiderivative?
+>
+> &nbsp;
+> **1.** Where is continuity used?<br>
+> **2.** What kind of average is $f(c)$?<br>
+> **3.** Can an integral be estimated without finding an antiderivative?<br>
 >
 > Answer: Continuity makes the MVT/FTC applicable and ensures the average value is attained; $f(c)$ is the continuous average value; yes, by using upper and lower bounds.
 > <!-- bilingual-en:end -->
@@ -899,7 +931,9 @@ $$
 >    \int_0^\pi\sin x\,dx=[-\cos x]_0^\pi=\boxed{2}.
 >    $$
 > <!-- bilingual-en:start -->
-> **1.** Let $u=x-2$; the endpoints $3,6$ become $1,4$:
+>
+> &nbsp;
+> **1.** Let $u=x-2$; the endpoints $3,6$ become $1,4$:<br>
 > $$
 > \int_3^6\frac{dx}{\sqrt{x-2}}
 > =\int_1^4u^{-1/2}du
@@ -967,12 +1001,14 @@ $$
 >    =\boxed{\frac{rx_0}{k}\left(1-e^{-60k}\right)}.
 >    $$
 > <!-- bilingual-en:start -->
-> **1.** A cylindrical shaft has diameter $1$, so its cross-sectional area is $\pi(1/2)^2=\pi/4$. Let $y$ be the distance through which a layer of water is lifted. A layer of thickness $dy$ has volume $(\pi/4)dy$. If lifting one unit of volume through one unit of distance requires energy $k$, the requested setup is
+>
+> &nbsp;
+> **1.** A cylindrical shaft has diameter $1$, so its cross-sectional area is $\pi(1/2)^2=\pi/4$. Let $y$ be the distance through which a layer of water is lifted. A layer of thickness $dy$ has volume $(\pi/4)dy$. If lifting one unit of volume through one unit of distance requires energy $k$, the requested setup is<br>
 > $$
 > \boxed{E=\frac{\pi k}{4}\int_0^{100}y\,dy}.
 > $$
 > The factor $y$ is essential because water at different depths travels different distances.
-> **2.** If the initial amount of radioactive material is $x_0$, the amount remaining at time $t$ is $x_0e^{-kt}$. If the count rate per unit amount is $r$, the instantaneous count rate is $rx_0e^{-kt}$. The total count over one hour, $0\le t\le60$, is
+> **2.** If the initial amount of radioactive material is $x_0$, the amount remaining at time $t$ is $x_0e^{-kt}$. If the count rate per unit amount is $r$, the instantaneous count rate is $rx_0e^{-kt}$. The total count over one hour, $0\le t\le60$, is<br>
 > $$
 > R=\int_0^{60}rx_0e^{-kt}dt
 > =\boxed{\frac{rx_0}{k}\left(1-e^{-60k}\right)}.
@@ -1012,7 +1048,11 @@ Use this procedure: find an antiderivative → write \([F]_a^b\) → subtract th
 >
 > 答：常数抵消；\(10\)；任意两原函数只差常数。
 > <!-- bilingual-en:start -->
-> 1. Why is there no \(+C\)? 2. Evaluate \(\int_1^3(2x+1)dx\). 3. Antiderivatives are not unique, so why is the definite integral unique?
+>
+> &nbsp;
+> **1.** Why is there no \(+C\)?<br>
+> **2.** Evaluate \(\int_1^3(2x+1)dx\).<br>
+> **3.** Antiderivatives are not unique, so why is the definite integral unique?<br>
 >
 > Answer: The constant cancels; the value is \(10\); any two antiderivatives differ only by a constant.
 > <!-- bilingual-en:end -->
@@ -1082,7 +1122,11 @@ $$
 >
 > 答：二者导数都等于 \(f\)；由 MVT；代入 \(x=a\) 使用 \(A(a)=0\)。
 > <!-- bilingual-en:start -->
-> 1. Why compare \(A-F\) in the proof? 2. Why does a zero derivative imply a constant function? 3. How is that constant determined?
+>
+> &nbsp;
+> **1.** Why compare \(A-F\) in the proof?<br>
+> **2.** Why does a zero derivative imply a constant function?<br>
+> **3.** How is that constant determined?<br>
 >
 > Answer: Both derivatives equal \(f\); the mean value theorem makes a function with zero derivative constant; substitute \(x=a\) and use \(A(a)=0\).
 > <!-- bilingual-en:end -->
@@ -1123,7 +1167,11 @@ Then \(L'(x)=1/x\) and \(L(1)=0\). The next section proves the logarithmic produ
 >
 > 答：\(E\) 为奇函数；\(1/t\) 在 0 奇异；不等于，定积分仍能定义新函数。
 > <!-- bilingual-en:start -->
-> 1. Is \(E\) even or odd? 2. Why is the domain of \(L\) positive? 3. Does the absence of an elementary antiderivative mean that the integral does not exist?
+>
+> &nbsp;
+> **1.** Is \(E\) even or odd?<br>
+> **2.** Why is the domain of \(L\) positive?<br>
+> **3.** Does the absence of an elementary antiderivative mean that the integral does not exist?<br>
 >
 > Answer: \(E\) is odd; \(1/t\) is singular at zero; no—a definite integral can still define a new function.
 > <!-- bilingual-en:end -->
@@ -1213,7 +1261,11 @@ Because \(L'(x)=1/x>0\), \(L\) is strictly increasing and therefore invertible; 
 >
 > 答：把二元恒等式化成单变量；\(G\) 为常数；保证 \(L\) 一一对应并存在反函数。
 > <!-- bilingual-en:start -->
-> 1. Why fix \(y\) and study \(G(x)\)? 2. What follows from \(G'=0\)? 3. Why is \(L'(x)>0\) useful?
+>
+> &nbsp;
+> **1.** Why fix \(y\) and study \(G(x)\)?<br>
+> **2.** What follows from \(G'=0\)?<br>
+> **3.** Why is \(L'(x)>0\) useful?<br>
 >
 > Answer: It turns a two-variable identity into a one-variable problem; \(G\) is constant; strict monotonicity makes \(L\) one-to-one and gives it an inverse.
 > <!-- bilingual-en:end -->
@@ -1320,7 +1372,11 @@ is another example of constructing a new function from an existing one.
 >
 > 答：递增；可能是凹凸性改变的候选点；FTC 已把其导数直接写成 \(f\)。
 > <!-- bilingual-en:start -->
-> 1. How does the accumulation function behave when \(f>0\)? 2. What can \(f'=0\) mean for the accumulation function? 3. Why is its explicit formula unnecessary?
+>
+> &nbsp;
+> **1.** How does the accumulation function behave when \(f>0\)?<br>
+> **2.** What can \(f'=0\) mean for the accumulation function?<br>
+> **3.** Why is its explicit formula unnecessary?<br>
 >
 > Answer: It is increasing; the point may be a candidate for a change in concavity; the FTC already identifies its derivative as \(f\).
 > <!-- bilingual-en:end -->
@@ -1401,7 +1457,11 @@ Choose \(dx\) or \(dy\) to minimise inverse solving, piecewise cases, and absolu
 >
 > 答：小条高度必须非负；水平切片能减少反解或分段时；在交点拆分并重新判断次序。
 > <!-- bilingual-en:start -->
-> 1. Why must we subtract the lower curve from the upper curve? 2. When is \(dy\) preferable? 3. What should be done when the curves cross?
+>
+> &nbsp;
+> **1.** Why must we subtract the lower curve from the upper curve?<br>
+> **2.** When is \(dy\) preferable?<br>
+> **3.** What should be done when the curves cross?<br>
 >
 > Answer: The strip height must be nonnegative; use horizontal slices when they require fewer inverse branches or pieces; split at each intersection and re-establish the ordering.
 > <!-- bilingual-en:end -->
@@ -1491,7 +1551,11 @@ The washer slice is perpendicular to the axis of rotation, and the shell slice i
 >
 > 答：切片垂直于轴；\(2\pi r\)；切片直接决定半径、高度、厚度与积分变量。
 > <!-- bilingual-en:start -->
-> 1. How is a washer oriented relative to the axis of rotation? 2. What is the circumference factor in the shell method? 3. Why draw a representative slice first?
+>
+> &nbsp;
+> **1.** How is a washer oriented relative to the axis of rotation?<br>
+> **2.** What is the circumference factor in the shell method?<br>
+> **3.** Why draw a representative slice first?<br>
 >
 > Answer: A washer is perpendicular to the axis; the factor is \(2\pi r\); the slice determines the radius, height, thickness, and variable of integration.
 > <!-- bilingual-en:end -->
@@ -1556,7 +1620,11 @@ $$
 >
 > 答：\(\pi(R^2-x^2)\)；旋转后同一圆盘只算一次；面积乘厚度。
 > <!-- bilingual-en:start -->
-> 1. What is the cross-sectional area? 2. Why are the upper and lower semicircles not added separately? 3. Why does the answer have cubic units?
+>
+> &nbsp;
+> **1.** What is the cross-sectional area?<br>
+> **2.** Why are the upper and lower semicircles not added separately?<br>
+> **3.** Why does the answer have cubic units?<br>
 >
 > Answer: \(\pi(R^2-x^2)\); rotation produces the same disk from either semicircle, so it is counted once; area multiplied by thickness has units of volume.
 > <!-- bilingual-en:end -->
@@ -1627,7 +1695,11 @@ Dimensional warning: if both \(x\) and \(y\) have units of length, \(y=x^2\) is 
 >
 > 答：\(1/2\)；水平圆盘半径容易表示；\(1/\text{length}\)。
 > <!-- bilingual-en:start -->
-> 1. What fraction of the volume of a cylinder with the same base and height does the paraboloid occupy? 2. Why integrate with respect to \(y\)? 3. What are the dimensions of \(k\) in \(y=kx^2\)?
+>
+> &nbsp;
+> **1.** What fraction of the volume of a cylinder with the same base and height does the paraboloid occupy?<br>
+> **2.** Why integrate with respect to \(y\)?<br>
+> **3.** What are the dimensions of \(k\) in \(y=kx^2\)?<br>
 >
 > Answer: \(1/2\); horizontal slices make the disk radius easy to express; \(1/\text{length}\).
 > <!-- bilingual-en:end -->
@@ -1734,13 +1806,15 @@ Dimensional warning: if both \(x\) and \(y\) have units of length, \(y=x^2\) is 
 >    $$
 >    两种切片的一致性完成核对。
 > <!-- bilingual-en:start -->
-> **2.** Rotate the region $0\le y\le x^2$, $0\le x\le1$ about the $y$-axis. The shell radius is $x$ and its height is $x^2$:
+>
+> &nbsp;
+> **2.** Rotate the region $0\le y\le x^2$, $0\le x\le1$ about the $y$-axis. The shell radius is $x$ and its height is $x^2$:<br>
 > $$
 > V=2\pi\int_0^1x(x^2)dx
 > =2\pi\left[\frac{x^4}{4}\right]_0^1
 > =\boxed{\frac\pi2}.
 > $$
-> **3.** Rotate the region $\sqrt x\le y\le1$, $x\ge0$ about the $y$-axis. With shells, $0\le x\le1$ and the shell height is $1-\sqrt x$:
+> **3.** Rotate the region $\sqrt x\le y\le1$, $x\ge0$ about the $y$-axis. With shells, $0\le x\le1$ and the shell height is $1-\sqrt x$:<br>
 > $$
 > V=2\pi\int_0^1x(1-\sqrt x)dx
 > =2\pi\left(\frac12-\frac25\right)
@@ -1864,7 +1938,11 @@ $$
 >
 > 答：除以总权重；连续时由积分平均值定理取得；等权对象是弧长而非水平投影。
 > <!-- bilingual-en:start -->
-> 1. Why is a continuous average divided by \(b-a\)? 2. Must a function attain its average value? 3. Why does an average along a curve use \(ds\)?
+>
+> &nbsp;
+> **1.** Why is a continuous average divided by \(b-a\)?<br>
+> **2.** Must a function attain its average value?<br>
+> **3.** Why does an average along a curve use \(ds\)?<br>
 >
 > Answer: We divide by the total weight; a continuous function attains its average by the mean value theorem for integrals; along a curve, equal weight is assigned by arc length rather than horizontal projection.
 > <!-- bilingual-en:end -->
@@ -1949,7 +2027,11 @@ The key in “Boiling Cauldron” is to decide whether sampling is by length, ar
 >
 > 答：总权重；等于 1；关于原点的一阶矩 \(\int xw(x)dx\)。
 > <!-- bilingual-en:start -->
-> 1. What does the denominator \(\int w\) represent? 2. What is the denominator when \(w\) is already a probability density? 3. What is the numerator in the centroid formula?
+>
+> &nbsp;
+> **1.** What does the denominator \(\int w\) represent?<br>
+> **2.** What is the denominator when \(w\) is already a probability density?<br>
+> **3.** What is the numerator in the centroid formula?<br>
 >
 > Answer: Total weight; it equals \(1\); the first moment about the origin, \(\int xw(x)\,dx\).
 > <!-- bilingual-en:end -->
@@ -1992,7 +2074,11 @@ A density may exceed $1$; it is the area representing a probability that must li
 >
 > 答：能；若期望存在则为 0；零宽区间的积分为 0。
 > <!-- bilingual-en:start -->
-> 1. Can a density exceed one? 2. What is the mean of a symmetric density? 3. Why does a single point have probability zero?
+>
+> &nbsp;
+> **1.** Can a density exceed one?<br>
+> **2.** What is the mean of a symmetric density?<br>
+> **3.** Why does a single point have probability zero?<br>
 >
 > Answer: Yes; the mean is zero when it exists and the density is symmetric about zero; a point is an interval of zero width, whose integral is zero.
 > <!-- bilingual-en:end -->
@@ -2081,7 +2167,11 @@ $$
 >
 > 答：\(n+1\)；每段梯形面积是两端矩形面积平均；每两个小区间拟合一条抛物线。
 > <!-- bilingual-en:start -->
-> 1. How many endpoints do \(n\) subintervals have? 2. Why is the trapezoidal rule the average of the left- and right-endpoint rules? 3. Why does Simpson's rule require an even number of subintervals?
+>
+> &nbsp;
+> **1.** How many endpoints do \(n\) subintervals have?<br>
+> **2.** Why is the trapezoidal rule the average of the left- and right-endpoint rules?<br>
+> **3.** Why does Simpson's rule require an even number of subintervals?<br>
 >
 > Answer: \(n+1\); each trapezoid has the average of the two endpoint heights; Simpson's rule fits one parabola across each pair of subintervals.
 > <!-- bilingual-en:end -->
@@ -2204,7 +2294,11 @@ Expanding the weights shows that the endpoints have weight \(1\), even-indexed i
 >
 > 答：弦位于图像上方；\(1,4,2,\ldots,4,1\)；四阶导数。
 > <!-- bilingual-en:start -->
-> 1. Why does the trapezoidal rule overestimate a convex function? 2. How are Simpson's weights arranged? 3. Which derivative controls Simpson's leading error?
+>
+> &nbsp;
+> **1.** Why does the trapezoidal rule overestimate a convex function?<br>
+> **2.** How are Simpson's weights arranged?<br>
+> **3.** Which derivative controls Simpson's leading error?<br>
 >
 > Answer: Each chord lies above the graph; $1,4,2,\ldots,4,1$; the fourth derivative.
 > <!-- bilingual-en:end -->
@@ -2240,7 +2334,11 @@ $$
 >
 > 答：使总面积为 1；只算半边再倍增；用数值积分或累计分布函数表。
 > <!-- bilingual-en:start -->
-> 1. What does the normalising constant do? 2. How does symmetry reduce the computation? 3. How can probabilities be found without an elementary antiderivative?
+>
+> &nbsp;
+> **1.** What does the normalising constant do?<br>
+> **2.** How does symmetry reduce the computation?<br>
+> **3.** How can probabilities be found without an elementary antiderivative?<br>
 >
 > Answer: It makes the total area \(1\); compute one half and reflect it; use numerical integration or a cumulative-distribution table.
 > <!-- bilingual-en:end -->
@@ -2371,12 +2469,14 @@ $$
 5. 数值法不混淆节点数与区间数；
 6. 混合问题写“流入率 − 流出率”及初值。
 <!-- bilingual-en:start -->
-1. Read the interval, \(\Delta x\), sample points, and integrand from a sum.
-2. Distinguish differentiating an integral with FTC I from evaluating endpoint values with FTC II.
-3. Choose \(dx\) or \(dy\) for area; for volume, draw the representative slice first.
-4. Use the correct weights for averages and probabilities.
-5. Do not confuse the number of nodes with the number of subintervals in a numerical rule.
-6. For a mixing problem, write “inflow rate − outflow rate” and the initial condition.
+
+&nbsp;
+**1.** Read the interval, \(\Delta x\), sample points, and integrand from a sum.<br>
+**2.** Distinguish differentiating an integral with FTC I from evaluating endpoint values with FTC II.<br>
+**3.** Choose \(dx\) or \(dy\) for area; for volume, draw the representative slice first.<br>
+**4.** Use the correct weights for averages and probabilities.<br>
+**5.** Do not confuse the number of nodes with the number of subintervals in a numerical rule.<br>
+**6.** For a mixing problem, write “inflow rate − outflow rate” and the initial condition.<br>
 <!-- bilingual-en:end -->
 
 > [!question]- 三问自检
@@ -2384,7 +2484,11 @@ $$
 >
 > 答：\(\Delta x\) 与样本点；代表性切片；当前溶质量除以当前总体积。
 > <!-- bilingual-en:start -->
-> 1. What should be identified first in a Riemann sum? 2. What should be drawn first for a solid of revolution? 3. How is concentration written in a mixing model?
+>
+> &nbsp;
+> **1.** What should be identified first in a Riemann sum?<br>
+> **2.** What should be drawn first for a solid of revolution?<br>
+> **3.** How is concentration written in a mixing model?<br>
 >
 > Answer: \(\Delta x\) and the sample points; a representative slice; the current mass of dissolved material divided by the current total volume.
 > <!-- bilingual-en:end -->
@@ -2583,7 +2687,11 @@ $$
 >
 > 答：几何面积是小条绝对高度累计；逐点展开并比较权重；解 \(e^{kt}=1/2\)。
 > <!-- bilingual-en:start -->
-> 1. Why must geometric area be nonnegative? 2. How is Simpson's identity proved? 3. How is the half-life of exponential decay found?
+>
+> &nbsp;
+> **1.** Why must geometric area be nonnegative?<br>
+> **2.** How is Simpson's identity proved?<br>
+> **3.** How is the half-life of exponential decay found?<br>
 >
 > Answer: Geometric area accumulates nonnegative strip heights; expand the formulas and compare the weights node by node; solve \(e^{kt}=1/2\).
 > <!-- bilingual-en:end -->
@@ -2600,12 +2708,14 @@ $$
 5. 没有初等原函数时仍可定义新函数并数值计算；
 6. 应用题先明确小量、单位、积分方向和边界，再选择公式。
 <!-- bilingual-en:start -->
-1. Riemann sums turn finite approximations into definite integrals.
-2. FTC I says that the derivative of an accumulation function is the current density.
-3. FTC II evaluates a definite integral as the endpoint difference of an antiderivative.
-4. Area, volume, mass, averages, and probabilities all accumulate “density × a small scale.”
-5. Even without an elementary antiderivative, an integral can define a new function and be approximated numerically.
-6. In an application, first identify the small quantity, units, orientation, and boundaries; only then choose a formula.
+
+&nbsp;
+**1.** Riemann sums turn finite approximations into definite integrals.<br>
+**2.** FTC I says that the derivative of an accumulation function is the current density.<br>
+**3.** FTC II evaluates a definite integral as the endpoint difference of an antiderivative.<br>
+**4.** Area, volume, mass, averages, and probabilities all accumulate “density × a small scale.”<br>
+**5.** Even without an elementary antiderivative, an integral can define a new function and be approximated numerically.<br>
+**6.** In an application, first identify the small quantity, units, orientation, and boundaries; only then choose a formula.<br>
 <!-- bilingual-en:end -->
 
 > [!tip] 一遍读懂后的最低验收

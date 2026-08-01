@@ -170,10 +170,12 @@ Execution proceeds as follows:
 3. 执行完后自动回去再检查同一个 condition
 4. 直到 condition 为 `False` 才离开循环
 <!-- bilingual-en:start -->
-1. Evaluate the condition.
-2. If it is `True`, execute the indented body.
-3. Return automatically to the same condition.
-4. Exit only when the condition is `False`.
+
+&nbsp;
+**1.** Evaluate the condition.<br>
+**2.** If it is `True`, execute the indented body.<br>
+**3.** Return automatically to the same condition.<br>
+**4.** Exit only when the condition is `False`.<br>
 <!-- bilingual-en:end -->
 
 这四步里，最关键的是第 3 步。  
@@ -408,10 +410,12 @@ The instructor now abstracts a common pattern:
 3. 在 body 里做工作
 4. 同时更新这个 variable
 <!-- bilingual-en:start -->
-1. Initialize a loop variable before the loop.
-2. Use it in the guard.
-3. Perform the work in the body.
-4. Update the variable so that the next guard test changes appropriately.
+
+&nbsp;
+**1.** Initialize a loop variable before the loop.<br>
+**2.** Use it in the guard.<br>
+**3.** Perform the work in the body.<br>
+**4.** Update the variable so that the next guard test changes appropriately.<br>
 <!-- bilingual-en:end -->
 
 例如：
@@ -761,9 +765,11 @@ The point is not merely the correction `end + 1`, but a debugging method:
 2. 在 loop body 里临时加 `print(i)`
 3. 看程序实际走了哪些步
 <!-- bilingual-en:start -->
-1. Question which values the sequence actually generates.
-2. Add a temporary `print(i)` inside the body.
-3. Observe the values the loop actually visits.
+
+&nbsp;
+**1.** Question which values the sequence actually generates.<br>
+**2.** Add a temporary `print(i)` inside the body.<br>
+**3.** Observe the values the loop actually visits.<br>
 <!-- bilingual-en:end -->
 
 于是问题就暴露了：`range(start, end)` 不会包含 `end`。

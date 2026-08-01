@@ -16,12 +16,14 @@
 3. 稳定的特解,存在的条件
 4. 平稳过程,单位根过程,爆炸过程的判别(使用算子多项式和特征方程都要会)
 <!-- bilingual-en:start -->
-1. What is a linear difference equation?
-2. How do we solve one?
-	1. By iteration
-	2. By the characteristic equation
-3. What is a stable particular solution, and when does it exist?
-4. How do we distinguish stationary, unit-root, and explosive processes using both operator polynomials and characteristic equations?
+
+&nbsp;
+**1.** What is a linear difference equation?<br>
+**2.** How do we solve one?<br>
+↳ **1.** By iteration<br>
+↳ **2.** By the characteristic equation<br>
+**3.** What is a stable particular solution, and when does it exist?<br>
+**4.** How do we distinguish stationary, unit-root, and explosive processes using both operator polynomials and characteristic equations?<br>
 <!-- bilingual-en:end -->
 
 # 1. 介绍
@@ -39,9 +41,9 @@
 A mapping from one topological space to another.
 <!-- bilingual-en:end -->
 
-## 1.2. 术语：差分算子（[[Difference Equation|Difference]] operator）
+## 1.2. 术语：差分算子（[[差分方程与滞后算子|Difference]] operator）
 <!-- bilingual-en:start -->
-*1.2. Terminology: difference operator ([[Difference Equation|difference]] operator)*
+*1.2. Terminology: difference operator ([[差分方程与滞后算子|difference]] operator)*
 <!-- bilingual-en:end -->
 
 >[!note] 差分算子 $\Delta$的定义
@@ -97,9 +99,9 @@ $$y_t=T_t+S_t+I_t,$$
 where
 $$T_t=1+0.1t,\quad S_t=1.6\sin\left(\frac{t\pi}{6}\right),\quad I_t=0.7I_{t-1}+\varepsilon_t.$$
 
-1. **Trend $T_t$:** a linear increase of $0.1$ per period.
-2. **Seasonality $S_t$:** a sinusoid with period 12, which gives annual seasonality to monthly data.
-3. **Irregular component $I_t$:** an [[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|AR(1) process]] driven by unpredictable innovations. Since $|0.7|<1$, it is stationary and mean-reverting.
+**1.** **Trend $T_t$:** a linear increase of $0.1$ per period.<br>
+**2.** **Seasonality $S_t$:** a sinusoid with period 12, which gives annual seasonality to monthly data.<br>
+**3.** **Irregular component $I_t$:** an [[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|AR(1) process]] driven by unpredictable innovations. Since $|0.7|<1$, it is stationary and mean-reverting.<br>
 <!-- bilingual-en:end -->
 
 ==差分方程最一般的形~~势~~式就是某个变量当前的取值可由自身的滞后项、时间以及其他变量的函数共同决定。==
@@ -107,7 +109,7 @@ $$T_t=1+0.1t,\quad S_t=1.6\sin\left(\frac{t\pi}{6}\right),\quad I_t=0.7I_{t-1}+\
 ==A difference equation makes a current value a function of its own lags, time, and other variables.==
 <!-- bilingual-en:end -->
 
-# 2. 线性差分方程和其解Linear [[Difference Equation|Difference Equation]] and Its Solution
+# 2. 线性差分方程和其解Linear [[差分方程与滞后算子|Difference Equation]] and Its Solution
 <!-- bilingual-en:start -->
 *2. Linear difference equations and their solutions*
 <!-- bilingual-en:end -->
@@ -243,7 +245,7 @@ $$y_0=a_0+a_1y_{-1}+\varepsilon_0.$$
 Substituting backward gives
 $$y_t=a_0\sum_{i=0}^{t}a_1^i+\sum_{i=0}^{t}a_1^i\varepsilon_{t-i}+a_1^{t+1}y_{-1}.$$
 Continuing $m$ further periods gives
-$$y_t=a_0\sum_{i=0}^{t+m}a_1^i+\sum_{i=0}^{t+m}a_1^i\varepsilon_{t-i}+a_1^{t+m+1}y_{-m-1}.
+$$y_t=a_0\sum_{i=0}^{t+m}a_1^i+\sum_{i=0}^{t+m}a_1^i\varepsilon_{t-i}+a_1^{t+m+1}y_{-m-1}.$$
 <!-- bilingual-en:end -->
 
 >[!example] 反向迭代的例子
@@ -261,14 +263,14 @@ $$y_t=a_0\sum_{i=0}^{t+m}a_1^i+\sum_{i=0}^{t+m}a_1^i\varepsilon_{t-i}+a_1^{t+m+1
 > For $I_t=0.7I_{t-1}+\varepsilon_t$, $k$ substitutions give
 > $$I_t=0.7^kI_{t-k}+\sum_{i=0}^{k-1}0.7^i\varepsilon_{t-i}.$$
 > Since $|0.7|<1$, the initial-condition term vanishes as $k\to\infty$, leaving
-> $$I_t=\sum_{i=0}^{\infty}0.7^i\varepsilon_{t-i}.
+> $$I_t=\sum_{i=0}^{\infty}0.7^i\varepsilon_{t-i}.$$
 > <!-- bilingual-en:end -->
 
 >[!attention] 注意:稳定的特解
 >和正向迭代不同,当 $m$ 趋于无穷大（即将初始时刻推至远过去）时，结果取决于 $a_1$ 的大小：如果 $|a_1|<1$，则 $a_1^{t+m} y_{t-m}$ 项随着 $m \to \infty$ 衰减为0 。此时我们得到**稳定的特解**（particular solution）：$$y_t = \frac{a_0}{1 - a_1} + \sum_{i=0}^{\infty} a_1^i\varepsilon_{t-i}$$
 > <!-- bilingual-en:start -->
 > If $|a_1|<1$, pushing the initial date into the remote past makes the initial-condition term vanish, leaving
-> $$y_t=\frac{a_0}{1-a_1}+\sum_{i=0}^{\infty}a_1^i\varepsilon_{t-i}.
+> $$y_t=\frac{a_0}{1-a_1}+\sum_{i=0}^{\infty}a_1^i\varepsilon_{t-i}.$$
 > <!-- bilingual-en:end -->
 
 其中第一项 $\frac{a_0}{1-a_1}$ 是系统在没有随机波动时的稳态水平（因为设置 $\varepsilon_t = 0$ 时，该值使 $y_t = y_{t-1}$），第二项是所有过去随机冲击经过衰减后的累计影响 。由于此解不包含任意常数，它是特定于假设“远过去无影响”的特解。
@@ -321,10 +323,12 @@ Procedure:
 4. **利用初始条件确定常数。**
 根据给定的初始条件（一般需要给定 $n$ 个初始值，例如 $y_0, y_1, \dots, y_{n-1}$），构造方程并解出上述线性组合中的$n$个常数，从而得到满足初值条件的唯一特定解。
 <!-- bilingual-en:start -->
-1. **Find all homogeneous solutions.** Remove constants and forcing terms, then find $n$ linearly independent solutions.
-2. **Find one particular solution** $y_t^p$ to the nonhomogeneous equation.
-3. **Form the general solution:** particular solution plus a linear combination of homogeneous solutions.
-4. **Use $n$ initial conditions** to determine the $n$ constants.
+
+&nbsp;
+**1.** **Find all homogeneous solutions.** Remove constants and forcing terms, then find $n$ linearly independent solutions.<br>
+**2.** **Find one particular solution** $y_t^p$ to the nonhomogeneous equation.<br>
+**3.** **Form the general solution:** particular solution plus a linear combination of homogeneous solutions.<br>
+**4.** **Use $n$ initial conditions** to determine the $n$ constants.<br>
 <!-- bilingual-en:end -->
 
 >[!example] **例子：二阶线性差分方程的求解**
@@ -452,17 +456,19 @@ $$A = p_0 - \frac{a - b}{\gamma + \beta} + \frac{1}{\gamma} \sum_{i=0}^{\infty} 
 	• 第二部分 $-\frac{1}{\gamma}\sum_{i=0}^{t-1}(-\frac{\beta}{\gamma})^i \varepsilon_{t-i}$ 是**冲击的短期影响**累积项。它捕捉了供给冲击对价格的即时和滞后影响。在稳定情形下，冲击的影响会逐步衰减（因为$|-\beta/\gamma|<1$时高次项很小），表示市场对供给扰动的短期调整过程。
 	• 第三部分 $\Big(-\frac{\beta}{\gamma}\Big)^t\Big(p_0 - \frac{a - b}{\gamma + \beta}\Big)$ 是**初始偏离的影响**。它代表了初始价格偏离均衡时，价格如何随着时间动态调整回归均衡。如果$\beta/\gamma<1$，这一项会随着$t$增大而衰减（因为$|-\beta/\gamma|<1$），表明初始条件的影响逐渐消失；如果$\beta/\gamma>1$，这一项将随时间放大，体现出市场不稳定性。
 <!-- bilingual-en:start -->
-1. ==Homogeneous solution:==
+
+&nbsp;
+**1.** ==Homogeneous solution:==<br>
    $$p_t^h=A\left(-\frac{\beta}{\gamma}\right)^t.$$
-2. ==Particular solution:==
+**2.** ==Particular solution:==<br>
    $$p^*=\frac{a-b}{\gamma+\beta}.$$
-3. ==General solution:== add the equilibrium, shock filter, and homogeneous term.
-4. ==Initial condition:== determine $A$ from $p_0$.
+**3.** ==General solution:== add the equilibrium, shock filter, and homogeneous term.<br>
+**4.** ==Initial condition:== determine $A$ from $p_0$.<br>
 
 The resulting expression separates the long-run equilibrium, accumulated short-run supply shocks, and the initial deviation. Under stability, shock weights and the initial deviation decay.
 <!-- bilingual-en:end -->
 
-# 4. 解二阶齐次微分方程Solving Second order Homogeneous [[Difference Equation|Difference]] Equations
+# 4. 解二阶齐次微分方程Solving Second order Homogeneous [[差分方程与滞后算子|Difference]] Equations
 <!-- bilingual-en:start -->
 *4. Solving second-order homogeneous difference equations*
 <!-- bilingual-en:end -->
@@ -472,7 +478,7 @@ The resulting expression separates the long-run equilibrium, accumulated short-r
 *Exam focus:* <span style="color: yellow;">Only real-root cases are examined; an unexpected complex root signals a calculation error.</span>
 <!-- bilingual-en:end -->
 
-是对前面的[[02_差分方程Difference Equation#2.3.2. 特征方程法（Characteristic Equation)|02_差分方程Difference Equation#2.3.2特征方程法（Characteristic Equation)]]的拓展.
+是对前面的[[02_差分方程Difference Equation#2.3.2. 特征方程法（Characteristic Equation)|02_差分方程Difference Equation > 2.3.2特征方程法（Characteristic Equation)]]的拓展.
 <!-- bilingual-en:start -->
 This extends the earlier [[02_差分方程Difference Equation#2.3.2. 特征方程法（Characteristic Equation)|characteristic-equation method]].
 <!-- bilingual-en:end -->
@@ -482,15 +488,17 @@ This extends the earlier [[02_差分方程Difference Equation#2.3.2. 特征方�
 *4.1. Cases determined by the discriminant*
 <!-- bilingual-en:end -->
 
-1. 当构筑的方程的根为两个不相等实根时,依照[[02_差分方程Difference Equation#2.3.2. 特征方程法（Characteristic Equation)|02_差分方程Difference Equation#2.3.2特征方程法（Characteristic Equation)]]来正常解.
+1. 当构筑的方程的根为两个不相等实根时,依照[[02_差分方程Difference Equation#2.3.2. 特征方程法（Characteristic Equation)|02_差分方程Difference Equation > 2.3.2特征方程法（Characteristic Equation)]]来正常解.
 2. 当构筑的方程的根中含有相等的实根时,此时仅有一个独立的解$A_1 \alpha_1^t$是不够的——我们需要找到另一个线性独立的齐次解。经验上，当重根出现时，可以尝试第二个解为$y_t = t \alpha^t$形式。因此，当$\alpha_1 = \alpha_2$时，齐次通解可以写为：
 $$y_t^h = A_1 {\alpha_1}^t + A_2t{\alpha_1}^t$$
 3. 当构筑的方程有虚数解的时候(这个不考).如果存在**共轭复根**：设一对复根为 $\lambda_{1,2} = \mu \pm i \nu$（其中 $\mu,\nu \in \mathbb{R}$，且 $\nu \neq 0$）。可以将它们表示为极坐标形式 $\lambda_{1,2} = r e^{\pm i \theta}$，其中 $r = \sqrt{\mu^2 + \nu^2}$，$\cos \theta = \mu/r$，$\sin \theta = \nu/r$。对应的齐次解可以用实数函数表示为：$$y_t^h = B_1 r^t \cos(\theta t) + B_2 r^t \sin(\theta t)$$或等价地写成 $y_t^h = C_1r^t \cos(\theta t + \phi)$ 的形式（$C_1,\phi$为常数），这与前述 $\beta_1 r^t \cos(\theta t + \beta_2)$ 表达一致 。这种形式保证了解为实数。从物理意义看，$r^t$部分决定振幅的膨胀或收缩，$\cos/\sin$部分决定震荡。比如若$r<1$，则振荡幅度随时间递减。
 <!-- bilingual-en:start -->
-1. With distinct real roots, apply the [[02_差分方程Difference Equation#2.3.2. 特征方程法（Characteristic Equation)|standard method]].
-2. With a repeated root,
+
+&nbsp;
+**1.** With distinct real roots, apply the [[02_差分方程Difference Equation#2.3.2. 特征方程法（Characteristic Equation)|standard method]].<br>
+**2.** With a repeated root,<br>
    $$y_t^h=A_1\alpha_1^t+A_2t\alpha_1^t.$$
-3. With roots $re^{\pm i\theta}$,
+**3.** With roots $re^{\pm i\theta}$,<br>
    $$y_t^h=B_1r^t\cos(\theta t)+B_2r^t\sin(\theta t).$$
    The factor $r^t$ controls the amplitude; it decays when $r<1$.
 <!-- bilingual-en:end -->
@@ -503,7 +511,7 @@ $$y_t^h = A_1 {\alpha_1}^t + A_2t{\alpha_1}^t$$
 对于二阶差分方程，稳定性可以通过特征根的大小来判断。一般地，**稳定要求所有特征根的绝对值都小于1**（即根落在复平面的单位圆内）。复数根就看模是否大于1.$$|\lambda| = r = \sqrt{(\text{实部})^2 + (\text{虚部})^2}$$
 <!-- bilingual-en:start -->
 Stability requires every characteristic root to have modulus below one. For a complex root,
-$$|\lambda|=\sqrt{(\text{real part})^2+(\text{imaginary part})^2}.
+$$|\lambda|=\sqrt{(\text{real part})^2+(\text{imaginary part})^2}.$$
 <!-- bilingual-en:end -->
 
 更一般的: 一个$n$阶差分方程稳定（解不发散）当且仅当**所有特征根都位于单位圆内部**，即$|\alpha_i|<1$对于$i=1,\ldots,n$均成立。通常有一些快速判别稳定性的充分必要条件：
@@ -523,7 +531,7 @@ For an $n$th-order recurrence, the roots remain the definitive stability test. T
 *5. Finding a particular solution*
 <!-- bilingual-en:end -->
 
-可以理解为对[[02_差分方程Difference Equation#2.3.2. 特征方程法（Characteristic Equation)|02_差分方程Difference Equation#2.3.2特征方程法（Characteristic Equation)]]中讲到的第二步的深入探讨
+可以理解为对[[02_差分方程Difference Equation#2.3.2. 特征方程法（Characteristic Equation)|02_差分方程Difference Equation > 2.3.2特征方程法（Characteristic Equation)]]中讲到的第二步的深入探讨
 <!-- bilingual-en:start -->
 This develops the particular-solution step of the earlier [[02_差分方程Difference Equation#2.3.2. 特征方程法（Characteristic Equation)|procedure]].
 <!-- bilingual-en:end -->
@@ -640,7 +648,7 @@ Use the same idea as above, building the trial from time functions, constants, a
 >[!example] 一阶待定系数法的例子
 >例如，在一阶随机方程$y_t = a_0 + a_1 y_{t-1} + \varepsilon_t$中，我们可以假设：$$y_t^p = b_0 + b_1 t + \sum_{i=0}^{\infty} \alpha_i \varepsilon_{t-i}$$
 > <!-- bilingual-en:start -->
-> $$y_t^p=b_0+b_1t+\sum_{i=0}^{\infty}\alpha_i\varepsilon_{t-i}.
+> $$y_t^p=b_0+b_1t+\sum_{i=0}^{\infty}\alpha_i\varepsilon_{t-i}.$$
 > <!-- bilingual-en:end -->
 
 ### (2) 滞后算子法
@@ -656,7 +664,7 @@ This method requires stability. Dynamic roots lie inside the unit circle, while 
 算子多项式记为$A(L)$：$$A(L) = 1 - a_1L - a_2 L^2 - \cdots - a_p L^p$$
 <!-- bilingual-en:start -->
 Write
-$$A(L)=1-a_1L-\cdots-a_pL^p.
+$$A(L)=1-a_1L-\cdots-a_pL^p.$$
 <!-- bilingual-en:end -->
 
 核心是将$y_{t-1}$写为$Ly$.使用滞后算子来替代滞后项.==滞后算子L不能进行简单的等式由左移到右乘变除.而是要进行求逆.过程类似反向的等比数列求和.==
@@ -664,7 +672,7 @@ $$A(L)=1-a_1L-\cdots-a_pL^p.
 $$\frac{1}{1 - a_1 L} = 1 + a_1 L + a_1^2 L^2 + a_1^3 L^3 + \cdots.$$（这类似于$\frac{1}{1-x} = 1 + x + x^2 + \cdots$在$|x|<1$时成立）。
 <!-- bilingual-en:start -->
 Write $y_{t-1}=Ly_t$. Moving a lag polynomial across an equation means applying its inverse. When $|a_1|<1$,
-$$\frac{1}{1-a_1L}=1+a_1L+a_1^2L^2+\cdots.
+$$\frac{1}{1-a_1L}=1+a_1L+a_1^2L^2+\cdots.$$
 <!-- bilingual-en:end -->
 
 >[!example] 二阶线性差分方程的求解
@@ -697,28 +705,15 @@ $$\frac{1}{1-a_1L}=1+a_1L+a_1^2L^2+\cdots.
 
 
 # 6. 关联卡片
-<!-- bilingual-en:start -->
-*6. Related notes*
-<!-- bilingual-en:end -->
 
 - Time Series Analysis-hub
-- [[Difference Equation]]
+- [[差分方程与滞后算子|Difference Equation]]
 - [[差分方程与滞后算子#滞后与差分算子|Difference Operator]]
-- [[Lag Operator]]
+- [[差分方程与滞后算子#滞后与差分算子|Lag Operator]]
 - [[趋势、单位根与差分#差分与整合阶数|First Difference]]
 - [[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|Autoregressive Model]]
 - [[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|AR(1) stationarity]]
 - [[趋势、单位根与差分#确定性与随机趋势|Random Walk]]
-<!-- bilingual-en:start -->
-- Time Series Analysis-hub
-- [[Difference Equation]]
-- [[差分方程与滞后算子#滞后与差分算子|Difference operator]]
-- [[Lag Operator]]
-- [[趋势、单位根与差分#差分与整合阶数|First difference]]
-- [[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|Autoregressive model]]
-- [[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|AR(1) stationarity]]
-- [[趋势、单位根与差分#确定性与随机趋势|Random walk]]
-<!-- bilingual-en:end -->
 
 # 7. 作业
 <!-- bilingual-en:start -->
@@ -730,7 +725,7 @@ $$\frac{1}{1-a_1L}=1+a_1L+a_1^2L^2+\cdots.
 *1. Question 1*
 <!-- bilingual-en:end -->
 
-1. Consider the [[Difference Equation|difference equation]] $y_t=a_0+a_1y_{t-1}$ with the initial condition $y_0$. Jill solved the difference equation by iterating backward:$$\begin{aligned}y_t &= a_0+a_1y_{t-1}\\   &= a_0+a_1(a_0+a_1y_{t-2})\\    &= a_0+a_0a_1+a_0a_1^2+\cdots+a_0a_1^{t-1}+a_1^ty_0\end{aligned}$$Bill added the homogeneous and particular solutions to obtain$$y_t=\frac{a_0}{1-a_1}+a_1^t\left[y_0-\frac{a_0}{1-a_1}\right].$$
+1. Consider the [[差分方程与滞后算子|difference equation]] $y_t=a_0+a_1y_{t-1}$ with the initial condition $y_0$. Jill solved the difference equation by iterating backward:$$\begin{aligned}y_t &= a_0+a_1y_{t-1}\\   &= a_0+a_1(a_0+a_1y_{t-2})\\    &= a_0+a_0a_1+a_0a_1^2+\cdots+a_0a_1^{t-1}+a_1^ty_0\end{aligned}$$Bill added the homogeneous and particular solutions to obtain$$y_t=\frac{a_0}{1-a_1}+a_1^t\left[y_0-\frac{a_0}{1-a_1}\right].$$
 	1. A. Show that the two solutions are identical for $|a_1|<1$.
 	2. B. Show that for $a_1=1$, Jill's solution is equivalent to $y_t=a_0t+y_0$. How would you use Bill's method to arrive at this same conclusion in the case $a_1=1$?
 
@@ -768,7 +763,9 @@ a) 求齐次解并给出稳定性条件；
 b) 用待定系数法求特解；
 c) 证明与滞后算子法得到相同结果。
 <!-- bilingual-en:start -->
-7. Consider the stochastic process
+
+&nbsp;
+**7.** Consider the stochastic process<br>
 $$
 y_t=a_0+a_1y_{t-1}+\varepsilon_t.
 $$
@@ -779,9 +776,8 @@ c) Show that the lag-operator method gives the same result.
 
 a)正常的操作而已
 b)设为常数然后解方程
-c)[[02_差分方程Difference Equation#(2) 滞后算子法|02_差分方程Difference Equation#(2)滞后算子法]]
+c)[[02_差分方程Difference Equation#(2) 滞后算子法|02_差分方程Difference Equation > (2)滞后算子法]]
 <!-- bilingual-en:start -->
 a) Apply the standard homogeneous-solution procedure.
 b) Try a constant particular solution.
-c) See the [[02_差分方程Difference Equation#(2) 滞后算子法|lag-operator method]].
 <!-- bilingual-en:end -->

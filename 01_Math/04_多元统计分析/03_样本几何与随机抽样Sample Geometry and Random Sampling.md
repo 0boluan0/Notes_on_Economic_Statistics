@@ -332,10 +332,12 @@ Possible responses include:
 3. 使用正则化协方差矩阵。
 4. 在尺度问题明显时改用相关矩阵。
 <!-- bilingual-en:start -->
-1. Remove redundant variables.
-2. Apply PCA first to reduce dimension.
-3. Use a regularised covariance matrix.
-4. Use the correlation matrix when scale differences are substantial.
+
+&nbsp;
+**1.** Remove redundant variables.<br>
+**2.** Apply PCA first to reduce dimension.<br>
+**3.** Use a regularised covariance matrix.<br>
+**4.** Use the correlation matrix when scale differences are substantial.<br>
 <!-- bilingual-en:end -->
 
 ## 1.5. 样本协方差矩阵的矩阵表示

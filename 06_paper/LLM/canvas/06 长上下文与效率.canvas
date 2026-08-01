@@ -17,7 +17,7 @@
       "y": 0,
       "width": 310,
       "height": 100,
-      "text": "## Long Context\n\n[[RAG 与长上下文]]",
+      "text": "## Long Context\n\nRAG 与长上下文",
       "color": "2"
     },
     {
@@ -47,7 +47,7 @@
       "y": 450,
       "width": 310,
       "height": 100,
-      "text": "## Scaling Law\n\n[[规模化、MoE 与分布式训练]]",
+      "text": "## Scaling Law\n\n规模化、MoE 与分布式训练",
       "color": "6"
     },
     {

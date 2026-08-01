@@ -1,11 +1,11 @@
 {
 	"nodes":[
 		{"id":"title","type":"text","x":0,"y":-180,"width":900,"height":120,"text":"# 03 对齐与偏好优化\n\n[[LLM Big Picture]] · [[LLM Map Index]] · 14 papers","color":"4"},
-		{"id":"route-instruction-tuning-rlhf","type":"text","x":0,"y":0,"width":310,"height":100,"text":"## Instruction Tuning / RLHF\n\n[[预训练、指令微调与偏好优化]]","color":"4"},
+		{"id":"route-instruction-tuning-rlhf","type":"text","x":0,"y":0,"width":310,"height":100,"text":"## Instruction Tuning / RLHF\n\n预训练、指令微调与偏好优化","color":"4"},
 		{"id":"route-open-models","type":"text","x":0,"y":150,"width":310,"height":100,"text":"## Open Models\n\n[[开放模型生态]]","color":"4"},
-		{"id":"route-scaling-law","type":"text","x":0,"y":300,"width":310,"height":100,"text":"## Scaling Law\n\n[[规模化、MoE 与分布式训练]]","color":"6"},
+		{"id":"route-scaling-law","type":"text","x":0,"y":300,"width":310,"height":100,"text":"## Scaling Law\n\n规模化、MoE 与分布式训练","color":"6"},
 		{"id":"route-efficiency-moe","type":"text","x":0,"y":450,"width":310,"height":100,"text":"## Efficiency / MoE\n\n[[LLM 推理效率]]","color":"2"},
-		{"id":"route-preference-optimization","type":"text","x":0,"y":600,"width":310,"height":100,"text":"## Preference Optimization\n\n[[预训练、指令微调与偏好优化]]","color":"4"},
+		{"id":"route-preference-optimization","type":"text","x":0,"y":600,"width":310,"height":100,"text":"## Preference Optimization\n\n预训练、指令微调与偏好优化","color":"4"},
 		{"id":"paper-li2021prefixtuningoptimizingcontinuous","type":"text","x":1740,"y":0,"width":290,"height":105,"text":"**Prefix-Tuning: Optimizing Continuous Prompts for Generation**\n\n2021 · [[li2021PrefixTuningOptimizingContinuous|note]]","color":"4"},
 		{"id":"paper-lester2021powerscaleparameterefficient","type":"text","x":1740,"y":130,"width":290,"height":105,"text":"**The Power of Scale for Parameter-Efficient Prompt Tuning**\n\n2021 · [[lester2021PowerScaleParameterEfficient|note]]","color":"4"},
 		{"id":"paper-bai2022constitutionalaiharmlessness","type":"text","x":2070,"y":0,"width":290,"height":105,"text":"**Constitutional AI: Harmlessness from AI Feedback**\n\n2022 · [[bai2022ConstitutionalAIHarmlessness|note]]","color":"4"},

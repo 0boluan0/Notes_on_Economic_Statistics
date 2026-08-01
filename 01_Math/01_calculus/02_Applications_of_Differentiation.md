@@ -48,12 +48,14 @@ After completing this chapter, you should be able to:
 5. 准确陈述 MVT 的全部假设，用它证明单调性、常函数结论和不等式。
 6. 理解微分、反导数、换元和分离变量之间的知识链，并能检查初值、平衡解与最大定义区间。
 <!-- bilingual-en:start -->
-1. Construct a linearization $L_a(x)$ and a quadratic approximation $Q_a(x)$, explain which derivatives they match, and explain why error grows with distance from the base point.
-2. Use the domain, endpoints, discontinuities, and the signs of $f'$ and $f''$ to sketch a qualitatively correct, fully labeled graph.
-3. Translate optimization and related-rates problems into variables, constraints, and objective functions, and check endpoints, discontinuities, and units in addition to critical points.
-4. Derive and carry out Newton iteration, and recognize failures caused by a horizontal tangent, convergence to the wrong root, oscillation, or a poor initial guess.
-5. State every hypothesis of the MVT precisely, and use the theorem to prove monotonicity, constancy, and inequalities.
-6. Understand how differentials, antiderivatives, substitution, and separation of variables connect, and check initial conditions, equilibrium solutions, and maximal intervals of existence.
+
+&nbsp;
+**1.** Construct a linearization $L_a(x)$ and a quadratic approximation $Q_a(x)$, explain which derivatives they match, and explain why error grows with distance from the base point.<br>
+**2.** Use the domain, endpoints, discontinuities, and the signs of $f'$ and $f''$ to sketch a qualitatively correct, fully labeled graph.<br>
+**3.** Translate optimization and related-rates problems into variables, constraints, and objective functions, and check endpoints, discontinuities, and units in addition to critical points.<br>
+**4.** Derive and carry out Newton iteration, and recognize failures caused by a horizontal tangent, convergence to the wrong root, oscillation, or a poor initial guess.<br>
+**5.** State every hypothesis of the MVT precisely, and use the theorem to prove monotonicity, constancy, and inequalities.<br>
+**6.** Understand how differentials, antiderivatives, substitution, and separation of variables connect, and check initial conditions, equilibrium solutions, and maximal intervals of existence.<br>
 <!-- bilingual-en:end -->
 
 ## 课程目录
@@ -263,11 +265,13 @@ The calculator values are approximately $0.0099998333$, $0.0998334166$, and $0.8
 > 3. 为什么不能用 $\ln(1+x)\approx x$ 估计 $\ln101$？
 > 此时 $x=100$ 不接近 $0$；应另选靠近 $101$ 且函数值已知的基点。
 > <!-- bilingual-en:start -->
-> 1. Linearization of $\sqrt{x}$ at $a=4$?
+>
+> &nbsp;
+> **1.** Linearization of $\sqrt{x}$ at $a=4$?<br>
 > $L(x)=2+\frac14(x-4)$.
-> 2. Use it to estimate $\sqrt{4.1}$.
+> **2.** Use it to estimate $\sqrt{4.1}$.<br>
 > $2+\frac14(0.1)=2.025$.
-> 3. Why can't $\ln101$ be estimated using $\ln(1+x)\approx x$?
+> **3.** Why can't $\ln101$ be estimated using $\ln(1+x)\approx x$?<br>
 > Here $x=100$ is nowhere near the base point $0$. Instead, choose a base point near $101$ at which the function value is known.
 > <!-- bilingual-en:end -->
 
@@ -477,11 +481,13 @@ The first two terms form the linearization of $fg$; the only discrepancy is quad
 > 3. 为什么 $x^2$ 比 $x$ 小必须附带条件？
 > 只有 $|x|<1$ 时 $|x^2|<|x|$；近似还要求 $x$ 足够接近展开点。
 > <!-- bilingual-en:start -->
-> 1. Linearize $(1+2x)^3e^{-x}$.
+>
+> &nbsp;
+> **1.** Linearize $(1+2x)^3e^{-x}$.<br>
 > $(1+6x)(1-x)\approx1+5x$.
-> 2. If the true value is $1000$ and the estimate is $1002$, what are the absolute and relative errors?
+> **2.** If the true value is $1000$ and the estimate is $1002$, what are the absolute and relative errors?<br>
 > $2$ and $0.002=0.2\%$.
-> 3. Why does the claim that $x^2$ is smaller than $x$ require a condition?
+> **3.** Why does the claim that $x^2$ is smaller than $x$ require a condition?<br>
 > $|x^2|<|x|$ only for $|x|<1$; the approximation also requires $x$ to be close enough to the point of expansion.
 > <!-- bilingual-en:end -->
 
@@ -642,11 +648,13 @@ The true values are approximately $1.010050167$, $1.105170918$, and $2.718281828
 > 3. $Q_a$ 与 $f$ 在 $a$ 处共匹配几项信息？
 > 函数值、一阶导、二阶导，共三项。
 > <!-- bilingual-en:start -->
-> 1. What is the quadratic approximation to $\sqrt{1+x}$ at $0$?
+>
+> &nbsp;
+> **1.** What is the quadratic approximation to $\sqrt{1+x}$ at $0$?<br>
 > $1+\frac12x-\frac18x^2$.
-> 2. Why is $\cos x$'s linearization blind to bending?
+> **2.** Why is $\cos x$'s linearization blind to bending?<br>
 > $\cos'(0)=0$, the linearization is horizontal; $\cos''(0)=-1$ records the downward bend.
-> 3. Which pieces of information do $Q_a$ and $f$ match at $a$?
+> **3.** Which pieces of information do $Q_a$ and $f$ match at $a$?<br>
 > The function value, first derivative, and second derivative: three pieces in total.
 > <!-- bilingual-en:end -->
 
@@ -835,11 +843,13 @@ This is already the structure of the Taylor polynomial. This chapter uses only t
 > 3. 二次近似能否自动给出严格误差上界？
 > 不能；还需控制区间上的三阶导数等余项信息。
 > <!-- bilingual-en:start -->
-> 1. Find the quadratic approximation of $e^x(1+x)^{-1}$.
+>
+> &nbsp;
+> **1.** Find the quadratic approximation of $e^x(1+x)^{-1}$.<br>
 > $(1+x+x^2/2)(1-x+x^2)\approx1+x^2/2$.
-> 2. Why is the denominator of the cubic coefficient $3!$?
+> **2.** Why is the denominator of the cubic coefficient $3!$?<br>
 > $d^3(a_3x^3)/dx^3=3!a_3$.
-> 3. Does a quadratic approximation automatically provide a rigorous upper bound on the error?
+> **3.** Does a quadratic approximation automatically provide a rigorous upper bound on the error?<br>
 > No. One also needs remainder information, such as a bound on the third derivative over the interval.
 > <!-- bilingual-en:end -->
 
@@ -1014,13 +1024,15 @@ The left branch is concave up and the right branch is concave down. Nevertheless
 > 3. $\frac1x$ 能否说在整个定义域递减？
 > 按全局定义不能；它分别在两支递减，但例如 $-1<1$ 而 $f(-1)<f(1)$。
 > <!-- bilingual-en:start -->
-> 1. Is $x=0$ an inflection point of $x^4$?
+>
+> &nbsp;
+> **1.** Is $x=0$ an inflection point of $x^4$?<br>
 > No. Since $f''=12x^2$ is nonnegative on both sides, the concavity does not change.
 >
-> 2. Should $x=0$ be checked when sketching $|x|$?
+> **2.** Should $x=0$ be checked when sketching $|x|$?<br>
 > Yes. The function exists there but its derivative does not; the point is both a cusp and a minimum.
 >
-> 3. Is $1/x$ decreasing on its entire domain?
+> **3.** Is $1/x$ decreasing on its entire domain?<br>
 > Not under the global definition of a decreasing function. It decreases separately on each branch, but, for example, $-1<1$ while $f(-1)<f(1)$.
 > <!-- bilingual-en:end -->
 
@@ -1063,11 +1075,13 @@ The left branch is concave up and the right branch is concave down. Nevertheless
 4. **查二阶信息：**求 $f''$，找凹凸区间及真正拐点。
 5. **合成并复核：**图像必须同时满足函数值、极限、单调、凹凸；若冲突，回查代数。
 <!-- bilingual-en:start -->
-1. **Do the preliminary algebra first:** Find the domain, symmetry, intercepts, and any easy reference points.
-2. **Check boundaries:** Evaluate endpoints, one-sided limits at discontinuities, and behavior as $x\to\pm\infty$; mark any asymptotes.
-3. **Check first-order information:** Find $f'$, list every critical-point candidate, construct a sign chart, and evaluate the function at the necessary points.
-4. **Check second-order information:** Find $f''$, determine intervals of concavity, and identify genuine inflection points.
-5. **Assemble and verify:** The graph must simultaneously agree with function values, limits, monotonicity, and concavity. If these conflict, revisit the algebra.
+
+&nbsp;
+**1.** **Do the preliminary algebra first:** Find the domain, symmetry, intercepts, and any easy reference points.<br>
+**2.** **Check boundaries:** Evaluate endpoints, one-sided limits at discontinuities, and behavior as $x\to\pm\infty$; mark any asymptotes.<br>
+**3.** **Check first-order information:** Find $f'$, list every critical-point candidate, construct a sign chart, and evaluate the function at the necessary points.<br>
+**4.** **Check second-order information:** Find $f''$, determine intervals of concavity, and identify genuine inflection points.<br>
+**5.** **Assemble and verify:** The graph must simultaneously agree with function values, limits, monotonicity, and concavity. If these conflict, revisit the algebra.<br>
 <!-- bilingual-en:end -->
 
 ### 28b：完整例题 $f(x)=\dfrac{x}{\ln x}$
@@ -1200,11 +1214,13 @@ $D$ produces only a vertical shift and does not affect monotonicity or concavity
 > 3. 加常数 $D$ 会改变什么？
 > 只竖直平移；不改变 $f'$、$f''$、临界点横坐标和凹凸。
 > <!-- bilingual-en:start -->
-> 1. Why is differentiation not the first step in graph sketching?
+>
+> &nbsp;
+> **1.** Why is differentiation not the first step in graph sketching?<br>
 > The domain and discontinuities determine how the sign chart must be partitioned, and they may reveal the graph's most prominent features immediately.
-> 2. In this example, why is $x=e$ the absolute minimum of the right branch?
+> **2.** In this example, why is $x=e$ the absolute minimum of the right branch?<br>
 > The right branch decreases from $+\infty$ to $e$, and then increases to $+\infty$.
-> 3. What does the addition of the constant $D$ change?
+> **3.** What does the addition of the constant $D$ change?<br>
 > It produces only a vertical translation; it does not change $f'$, $f''$, the $x$-coordinates of critical points, or concavity.
 > <!-- bilingual-en:end -->
 
@@ -1493,7 +1509,7 @@ $D$ produces only a vertical shift and does not affect monotonicity or concavity
 
 ### Problem Set 3 错误检查
 <!-- bilingual-en:start -->
-*Problem Set 3 Bugcheck*
+*Problem Set 3 error check*
 <!-- bilingual-en:end -->
 
 - 拐点必须是函数图像上的点，不能只写 $x$ 值而忽略连续性。
@@ -1507,7 +1523,7 @@ $D$ produces only a vertical shift and does not affect monotonicity or concavity
 
 **本组小结：**PS3 把“按阶展开”和“按导数符号读图”连在一起：近似研究一个点附近，作图研究由这些局部信息拼成的全局结构。
 <!-- bilingual-en:start -->
-** Summary of this group:**PS3 Joins "expansion by order" and "reading by derivative symbols": Approximately studies the vicinity of a point, and plots the global structure composed of these local information.
+**Set summary:** Problem Set 3 connects truncating an expansion by order with reading a graph from derivative signs. Approximation studies what happens near one point; graph sketching assembles local information into a global structure.
 <!-- bilingual-en:end -->
 
 ---
@@ -1538,16 +1554,18 @@ $D$ produces only a vertical shift and does not affect monotonicity or concavity
 
 [[导数的应用#优化：把目标变成一阶条件|导数优化]]先列候选。若 $f$ 在闭区间 $[a,b]$ 连续，极值定理保证绝对最大、最小存在。它们只能出现在：
 <!-- bilingual-en:start -->
-[[导数的应用#优化：把目标变成一阶条件|derivative optimization]] first.  If $f$ is $[a,b]$ continuous in the closed interval, the extremum theorem guarantees absolute maximum and minimum existence.  They can only appear in:
+[[导数的应用#优化：把目标变成一阶条件|Derivative-based optimization]] begins by listing candidates. If $f$ is continuous on the closed interval $[a,b]$, the Extreme Value Theorem guarantees that an absolute maximum and minimum exist. They can occur only at
 <!-- bilingual-en:end -->
 
 1. 内点且 $f'(x)=0$；
 2. 内点且 $f'$ 不存在；
 3. 端点 $a,b$。
 <!-- bilingual-en:start -->
-1. interior point and $f'(x)=0$;
-2. Inner point and $f'$ does not exist;
-3. Endpoint $a,b$.
+
+&nbsp;
+**1.** an interior point where $f'(x)=0$;<br>
+**2.** an interior point where $f'$ does not exist;<br>
+**3.** an endpoint, $a$ or $b$.<br>
 <!-- bilingual-en:end -->
 
 若定义域不是闭区间，还必须检查开端点的单侧极限、无穷远和间断点附近。求出候选只是第一步，最后要**比较目标函数值**。
@@ -1571,7 +1589,7 @@ $$
 
 两正方形边长分别为 $x/4,(1-x)/4$，总面积
 <!-- bilingual-en:start -->
-The length of the two squares is $x/4,(1-x)/4$, and the total area of the two squares is respectively
+The side lengths of the two squares are $x/4$ and $(1-x)/4$, so their total area is
 <!-- bilingual-en:end -->
 
 $$
@@ -1589,7 +1607,7 @@ $$
 
 唯一内点候选 $x=1/2$，此时
 <!-- bilingual-en:start -->
-$x=1/2$, which is the only inside point candidate
+The only interior candidate is $x=1/2$, where
 <!-- bilingual-en:end -->
 
 $$
@@ -1612,7 +1630,7 @@ Thus splitting the wire equally gives the **minimum** total area, $1/32$, while 
 
 ### 极大/极小、极值点与极值
 <!-- bilingual-en:start -->
-*Maximum/Minimum, Extreme Point and Extreme Value*
+*Maximum and minimum values, locations, and points*
 <!-- bilingual-en:end -->
 
 - “最大值是多少？”答函数值，例如 $1/16$。
@@ -1620,15 +1638,15 @@ Thus splitting the wire equally gives the **minimum** total area, $1/32$, while 
 - 图像上的完整信息是点 $(x,A(x))$。
 - 局部极值只比较附近；绝对极值比较整个定义域。
 <!-- bilingual-en:start -->
-- "What is the maximum value?" Answer function value, for example, $1/16$.
-- "Where do you get it?" Answer arguments, such as $x=0$ or $1$.
+- “What is the maximum value?” asks for a function value, such as $1/16$.
+- “Where is it attained?” asks for an input, such as $x=0$ or $x=1$.
 - The complete graphical information is the point $(x,A(x))$.
 - Local extrema compare nearby points; absolute extrema compare the entire domain.
 <!-- bilingual-en:end -->
 
 ### 易错点与边界
 <!-- bilingual-en:start -->
-*Fault-prone points and boundaries*
+*Common mistakes and limits of the method*
 <!-- bilingual-en:end -->
 
 - 没有把几何限制翻译为定义域。
@@ -1637,9 +1655,9 @@ Thus splitting the wire equally gives the **minimum** total area, $1/32$, while 
 - 对开放定义域写出并不存在的“端点取值”，应使用极限。
 <!-- bilingual-en:start -->
 - Failing to translate geometric constraints into a feasible domain.
-- Stop when a critical point is found, without comparing endpoints.
-- Confuse "maximum area" with "location where maximum area occurs".
-- Write an "endpoint value" for an open domain that does not exist, and use limits.
+- Stopping after finding a critical point instead of comparing endpoint values as well.
+- Confusing the maximum area with the input at which that maximum occurs.
+- Assigning a nonexistent endpoint value on an open domain; use a one-sided limit instead.
 <!-- bilingual-en:end -->
 
 > [!question]- 三道自检题与答案
@@ -1652,11 +1670,13 @@ Thus splitting the wire equally gives the **minimum** total area, $1/32$, while 
 > 3. 本例 $A''=1/4>0$ 能说明什么？
 > 内点 $x=1/2$ 是局部最小；最大值仍需由端点比较确定。
 > <!-- bilingual-en:start -->
-> 1. Why do continuous functions have to look up endpoints in a closed interval?
-> Absolute extremes can be reached at endpoints that do not require a derivative of zero.
-> 2. If the $f'$ internal point does not exist, is it automatically extremum?
+>
+> &nbsp;
+> **1.** Why must endpoints be checked for a continuous function on a closed interval?<br>
+> An absolute extremum may occur at an endpoint, where the derivative need not be zero.
+> **2.** If $f'$ does not exist at an interior point, is that point automatically an extremum?<br>
 > No. It is only a candidate; for example, $x^{1/3}$ has an infinite slope at $0$ but remains increasing through that point.
-> 3. What does this $A''=1/4>0$ tell you?
+> **3.** What does $A''=1/4>0$ tell us in this example?<br>
 > The interior point $x=1/2$ is a local minimum, and the maximum value is still determined by the comparison of endpoints.
 > <!-- bilingual-en:end -->
 
@@ -1667,7 +1687,7 @@ Thus splitting the wire equally gives the **minimum** total area, $1/32$, while 
 
 **知识链小结：**优化的可靠流程是“建模并定域 → 列全部候选 → 比较目标值 → 用单位和图形复核”。
 <!-- bilingual-en:start -->
-** Knowledge Chain Summary: The reliable process for ** optimization is "Modeling and Localizing → Column All Candidates → Comparing Target Values → Unit and Graph Reviews."
+**Knowledge-chain summary:** A reliable optimization workflow is: model the problem and determine the feasible domain → list every candidate → compare objective values → check the result against units and geometry.
 <!-- bilingual-en:end -->
 
 ## Session 30：Optimization Problems II
@@ -1689,12 +1709,12 @@ Thus splitting the wire equally gives the **minimum** total area, $1/32$, while 
 
 ### 30a：无盖方盒的最小表面积
 <!-- bilingual-en:start -->
-*30a: Minimum surface area of uncapped box*
+*30a: Minimizing the surface area of an open-top box*
 <!-- bilingual-en:end -->
 
 设正方形底边为 $x>0$、高为 $y>0$，固定体积 $V$：
 <!-- bilingual-en:start -->
-Suppose the square bottom edge is $x>0$, the height is $y>0$, the fixed volume is $V$:
+Let the square base have side length $x>0$ and the box have height $y>0$, with fixed volume $V$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1703,7 +1723,7 @@ $$
 
 无盖盒表面积
 <!-- bilingual-en:start -->
-lidless box surface area
+The surface area of the open-top box is
 <!-- bilingual-en:end -->
 
 $$
@@ -1712,7 +1732,7 @@ $$
 
 由约束 $y=V/x^2$ 消去 $y$：
 <!-- bilingual-en:start -->
-The constraint $y=V/x^2$ eliminates $y$:
+Use the constraint $y=V/x^2$ to eliminate $y$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1734,7 +1754,7 @@ $$
 
 相应
 <!-- bilingual-en:start -->
-corresponding
+The corresponding height is
 <!-- bilingual-en:end -->
 
 $$
@@ -1754,17 +1774,17 @@ $$
 
 且只有一个临界点，所以它给出全局最小。比例 $x/y=2$ 是无量纲结论，比含 $V$ 的尺寸式更能说明“最佳形状”。
 <!-- bilingual-en:start -->
-And there is only one critical point, so it gives the global minimum.  The scale $x/y=2$ is a dimensionless conclusion that better describes the "best shape" than the dimensional formula containing $V$.
+There is only one critical point, so it gives the global minimum. The ratio $x/y=2$ is dimensionless and describes the optimal shape more clearly than the formulas for dimensions that depend on $V$.
 <!-- bilingual-en:end -->
 
 ### 30b：用隐式求导直接得到比例
 <!-- bilingual-en:start -->
-*30b: The ratio is obtained directly by implicit derivation*
+*30b: Obtaining the optimal ratio directly by implicit differentiation*
 <!-- bilingual-en:end -->
 
 保持 $V$ 不变，对约束求导：
 <!-- bilingual-en:start -->
-Keeping $V$ unchanged, the constraint derivation:
+Holding $V$ constant, differentiate the constraint with respect to $x$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1775,7 +1795,7 @@ $$
 
 对面积求导：
 <!-- bilingual-en:start -->
-Derive area:
+Differentiate the area:
 <!-- bilingual-en:end -->
 
 $$
@@ -1785,7 +1805,7 @@ $$
 
 临界条件直接给
 <!-- bilingual-en:start -->
-critical condition directly to
+The critical-point condition gives directly
 <!-- bilingual-en:end -->
 
 $$
@@ -1794,17 +1814,17 @@ $$
 
 此法更快地产生比例，但没有自动完成“这是最小而非最大”的边界论证，仍要补查。
 <!-- bilingual-en:start -->
-This method produces proportions more quickly, but does not automatically complete the "This is the smallest, not the largest" boundary argument and still needs to be reexamined.
+This method produces the ratio more quickly, but it does not establish by itself that the point is a minimum rather than a maximum; a boundary check is still required.
 <!-- bilingual-en:end -->
 
 ### 配套练习：体积 $1000\ \mathrm{cm^3}$ 的封闭圆罐
 <!-- bilingual-en:start -->
-*Complementary Exercise: Closed Cylinder of $1000\ \mathrm{cm^3}$ Volume*
+*Supporting exercise: a closed cylindrical can of volume $1000\ \mathrm{cm^3}$*
 <!-- bilingual-en:end -->
 
 圆罐表面积与体积为
 <!-- bilingual-en:start -->
-The surface area and volume of the circular tank are
+The surface area and volume of the cylinder are
 <!-- bilingual-en:end -->
 
 $$
@@ -1814,7 +1834,7 @@ $$
 
 代入 $h=1000/(\pi r^2)$：
 <!-- bilingual-en:start -->
-Introduce $h=1000/(\pi r^2)$:
+Substitute $h=1000/(\pi r^2)$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1844,7 +1864,7 @@ $S\to\infty$ when $r\to0^+$ or $r\to\infty$, so this is the global minimum.
 
 ### 易错点与边界
 <!-- bilingual-en:start -->
-*Fault-prone points and boundaries*
+*Common mistakes and limits of the method*
 <!-- bilingual-en:end -->
 
 - 约束方程和目标函数角色不同：一个消元，一个优化。
@@ -1852,10 +1872,10 @@ $S\to\infty$ when $r\to0^+$ or $r\to\infty$, so this is the global minimum.
 - 隐式法得到临界比例后漏掉边界检查。
 - 尺寸带单位，比例无单位；答案应按题目要求给全。
 <!-- bilingual-en:start -->
-- Different roles for constraint equations and objective functions: one elimination, one optimization.
-- Make the fixed quantity $V$ a variable when deriving.
-- Implicit method missing boundary check after getting critical ratio.
-- Dimensions are in units and scale is in units; answers should be given in full as required by the topic.
+- The constraint and objective play different roles: the former eliminates a variable, while the latter is optimized.
+- Do not differentiate a fixed quantity such as $V$ as though it were variable.
+- After implicit differentiation yields a critical ratio, do not omit the boundary check.
+- Dimensions carry units, whereas ratios do not; report both when the problem calls for them.
 <!-- bilingual-en:end -->
 
 > [!question]- 三道自检题与答案
@@ -1868,12 +1888,14 @@ $S\to\infty$ when $r\to0^+$ or $r\to\infty$, so this is the global minimum.
 > 3. $S''>0$ 是否可以替代全部边界检查？
 > 若能证明定义域上处处 $S''>0$，临界点唯一且为全局最小；但仍应说明定义域和极端形状。
 > <!-- bilingual-en:start -->
-> 1. Why is it that an uncapped box has only two free dimensions and is ultimately a unitary problem?
-> The fixed volume constraint associates the $x,y$ with only one degree of freedom remaining.
-> 2. If the pot is uncapped, will the optimal ratio be $h=2r$?
+>
+> &nbsp;
+> **1.** Why does an open-top box with two dimensions reduce to a one-variable problem?<br>
+> The fixed-volume constraint links $x$ and $y$, leaving only one degree of freedom.
+> **2.** If the pot is uncapped, will the optimal ratio be $h=2r$?<br>
 > No; the target surface area changes and must be rederived.
-> 3. Can $S''>0$ override all bounds checking?
-> If the $S''>0$ at the domain can be proved, the critical point is unique and global minimum; however, the domain and extreme shape should be described.
+> **3.** Can $S''>0$ replace every boundary check?<br>
+> If $S''>0$ throughout the domain, then a critical point is the unique global minimum. Even so, the domain and the behavior of extreme shapes should be stated.
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -1911,7 +1933,7 @@ $S\to\infty$ when $r\to0^+$ or $r\to\infty$, so this is the global minimum.
 
 警车距道路垂直距离 $30$ ft；车与警车直线距离 $D=50$ ft 时，雷达测得
 <!-- bilingual-en:start -->
-The distance between the police car and the road is $30$ ft, and the distance between the car and the police car is $D=50$ ft
+The police car is parked $30$ ft from the road. At the instant when the straight-line distance from the moving car to the police car is $D=50$ ft, the radar measures
 <!-- bilingual-en:end -->
 
 $$
@@ -1920,7 +1942,7 @@ $$
 
 设车沿道路到垂足的有向距离为 $x$。几何关系
 <!-- bilingual-en:start -->
-The distance from the vehicle to the foot is $x$.  geometric relation
+Let $x$ be the signed distance along the road from the car to the foot of the perpendicular. The geometric relation is
 <!-- bilingual-en:end -->
 
 $$
@@ -1929,7 +1951,7 @@ $$
 
 此刻 $x=40$。**先求导、后代数值：**
 <!-- bilingual-en:start -->
-$x=40$.  ** Derive First, Descendent Value: **
+At this instant, $x=40$. **Differentiate first, substitute values afterward:**
 <!-- bilingual-en:end -->
 
 $$
@@ -1950,23 +1972,23 @@ $$
 
 负号表示朝垂足方向运动；速率大小 $100\ \mathrm{ft/s}\approx68.2\ \mathrm{mph}$，超过 $65\ \mathrm{mph}$。
 <!-- bilingual-en:start -->
-A negative sign indicates a vertical motion; the rate size is $100\ \mathrm{ft/s}\approx68.2\ \mathrm{mph}$, exceeding $65\ \mathrm{mph}$.
+The negative sign means the car is moving toward the foot of the perpendicular. Its speed is $100\ \mathrm{ft/s}\approx68.2\ \mathrm{mph}$, which exceeds $65\ \mathrm{mph}$.
 <!-- bilingual-en:end -->
 
 > [!warning] 为何不能先代 $D=50$？
 > $D$ 是随时间变化的函数，只在所问瞬间取值 $50$。若求导前替成常数，错误得到 $D'=0$，抹掉了已知速率。
 > <!-- bilingual-en:start -->
-> $D$ is a function that changes with time and takes the value of $50$ only at the instant being asked.  If the derivative is replaced by a constant, the error is $D'=0$, which erases the known rate.
+> $D$ varies with time and equals $50$ only at the instant in question. Replacing it by the constant $50$ before differentiating would incorrectly give $D'=0$ and erase the known rate.
 > <!-- bilingual-en:end -->
 
 ### 31c：锥形水箱
 <!-- bilingual-en:start -->
-*31c: Tapered tank*
+*31c: Conical water tank*
 <!-- bilingual-en:end -->
 
 水箱高 $10$ ft、顶半径 $4$ ft；水深 $h$、水面半径 $r$。相似三角形：
 <!-- bilingual-en:start -->
-The height of the water tank is $10$ ft, the top radius is $4$ ft, the water depth is $h$, and the water surface radius is $r$.  Similar triangle:
+The tank is $10$ ft high with top radius $4$ ft. Let $h$ be the water depth and $r$ the radius of its surface. Similar triangles give
 <!-- bilingual-en:end -->
 
 $$
@@ -1976,7 +1998,7 @@ $$
 
 水体积
 <!-- bilingual-en:start -->
-volume of water
+The volume of water is
 <!-- bilingual-en:end -->
 
 $$
@@ -1986,7 +2008,7 @@ $$
 
 求时间导数：
 <!-- bilingual-en:start -->
-To calculate the time derivative:
+Differentiate with respect to time:
 <!-- bilingual-en:end -->
 
 $$
@@ -2009,7 +2031,7 @@ $$
 
 ### 一般流程
 <!-- bilingual-en:start -->
-*General Process*
+*General workflow*
 <!-- bilingual-en:end -->
 
 1. 画图，标出**会变**与**不变**的量。
@@ -2018,21 +2040,23 @@ $$
 4. 再代入所问瞬间的数值，解未知速率。
 5. 检查符号、单位和量级。
 <!-- bilingual-en:start -->
-1. Paint to indicate the amount by which ** changes ** and ** does not change **.
-2. Writing an equation which is established at all times by using the geometric/physical relation.
-3. Derive the time $t$ and supply the chain factor for each variable.
-4. The unknown rate is solved by substituting the values of the instant in question.
-5. Check symbols, units and scales.
+
+&nbsp;
+**1.** Draw a diagram and label which quantities **change** and which remain **constant**.<br>
+**2.** Use the geometric or physical relationship to write an equation valid at every instant.<br>
+**3.** Differentiate with respect to time $t$, including the chain-rule factor for every variable.<br>
+**4.** Substitute the values at the instant in question, then solve for the unknown rate.<br>
+**5.** Check the sign, units, and order of magnitude.<br>
 <!-- bilingual-en:end -->
 
 ### 配套练习：半球顶粮仓的隐式优化
 <!-- bilingual-en:start -->
-*Supporting Exercise: Implicit Optimization of Hemisphere Top Grain Warehouse*
+*Supporting exercise: implicit optimization of a silo with a hemispherical roof*
 <!-- bilingual-en:end -->
 
 设柱高 $h$、半径 $r$，体积
 <!-- bilingual-en:start -->
-The height of the column is $h$, the radius is $r$, and the volume is 100%
+Let the cylindrical section have height $h$ and radius $r$. The volume is
 <!-- bilingual-en:end -->
 
 $$
@@ -2041,7 +2065,7 @@ $$
 
 固定 $V$ 对 $r$ 求导：
 <!-- bilingual-en:start -->
-Fixed $V$ to $r$ derivative:
+Hold $V$ fixed and differentiate with respect to $r$:
 <!-- bilingual-en:end -->
 
 $$
@@ -2051,7 +2075,7 @@ $$
 
 有地板时 $S=2\pi rh+3\pi r^2$：
 <!-- bilingual-en:start -->
-$S=2\pi rh+3\pi r^2$ with flooring:
+With a floor, $S=2\pi rh+3\pi r^2$:
 <!-- bilingual-en:end -->
 
 $$
@@ -2060,7 +2084,7 @@ $$
 
 临界条件 $h=r$，结合体积得
 <!-- bilingual-en:start -->
-The critical condition is $h=r$, and the binding volume is
+The critical-point condition is $h=r$. Combining it with the volume constraint gives
 <!-- bilingual-en:end -->
 
 $$
@@ -2069,12 +2093,12 @@ $$
 
 并由极端形状比较确认最小。无地板时 $S=2\pi rh+2\pi r^2$，同法得 $S'=-2\pi h<0$，最小出现在边界 $h=0$，即只有半球。该练习再次说明：导数零点之外必须检查边界。
 <!-- bilingual-en:start -->
-The minimum is confirmed by the extreme shape comparison.  $S=2\pi rh+2\pi r^2$ without floor, $S'=-2\pi h<0$, $h=0$, i.e. only hemisphere.  This exercise again shows that you must check the boundary outside of the zero derivative.
+Comparison with extreme shapes confirms that this is the minimum. Without a floor, $S=2\pi rh+2\pi r^2$ and the same method gives $S'=-2\pi h<0$; the minimum occurs at the boundary $h=0$, leaving only a hemisphere. This again shows why boundary cases must be checked in addition to zeros of the derivative.
 <!-- bilingual-en:end -->
 
 ### 易错点与边界
 <!-- bilingual-en:start -->
-*Fault-prone points and boundaries*
+*Common mistakes and limits of the method*
 <!-- bilingual-en:end -->
 
 - 把“正在减小”的已知速率写成正数。
@@ -2082,10 +2106,10 @@ The minimum is confirmed by the extreme shape comparison.  $S=2\pi rh+2\pi r^2$ 
 - 相似三角形中的 $r,h$ 必须来自水体小锥，而不是混用水箱固定尺寸。
 - 速率的单位比原变量多一个“每时间”。
 <!-- bilingual-en:start -->
-- Write the known rate of "decreasing" as a positive number.
-- Leaves $2xx'$ to $x(t)^2$.
-- The $r,h$ in a similar triangle must come from a water cone, not a mixing tank fixed dimension.
-- The rate has one more "per time" per unit than the original variable.
+- Writing a known decreasing rate as a positive number.
+- Forgetting the factor $2xx'$ when differentiating $x(t)^2$.
+- In the similar-triangle relation, $r$ and $h$ must describe the smaller cone of water, not a mixture of water dimensions and fixed tank dimensions.
+- A rate's units contain an additional “per unit time” compared with the original variable.
 <!-- bilingual-en:end -->
 
 > [!question]- 三道自检题与答案
@@ -2098,12 +2122,14 @@ The minimum is confirmed by the extreme shape comparison.  $S=2\pi rh+2\pi r^2$ 
 > 3. 何时可以在求导前代常数？
 > 只有题意保证该量在整个过程中恒定，例如警车到道路的垂距 $30$。
 > <!-- bilingual-en:start -->
-> 1. $A=\pi r^2$, if $r'=3$, then $A'$?
-> $A'=2\pi rr'=6\pi r$; cannot give a numeric value without the current $r$.
-> 2. Why is the relevant rate of change inherently chained?
-> Geometric quantities are all composite functions of $t$, such as $dV(h(t))/dt=(dV/dh)h'$.
-> 3. When can the derivative precedent constants be obtained?
-> Only the question ensures that the amount is constant throughout the process, such as the vertical distance from the police car to the road $30$.
+>
+> &nbsp;
+> **1.** If $A=\pi r^2$ and $r'=3$, what is $A'$?<br>
+> $A'=2\pi rr'=6\pi r$; without the current value of $r$, no numerical answer is possible.
+> **2.** Why are related-rates problems fundamentally applications of the chain rule?<br>
+> Each geometric quantity is a composite function of $t$; for example, $dV(h(t))/dt=(dV/dh)h'$.
+> **3.** When may a numerical value be substituted before differentiating?<br>
+> Only when the problem states that the quantity is constant throughout the process, such as the police car's fixed $30$ ft perpendicular distance from the road.
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -2127,7 +2153,7 @@ The minimum is confirmed by the extreme shape comparison.  $S=2\pi rh+2\pi r^2$ 
 
 **问题：**一个圆环在固定长度的绳上自由滑动，最低点为何满足两侧绳与竖直方向夹角相等？
 <!-- bilingual-en:start -->
-**Question:**A ring slides freely on a fixed length rope. Why does the lowest point meet the condition that the angles between the two sides of the rope are equal to the vertical direction?
+**Question:** A ring slides freely along a rope of fixed length. Why, at its lowest position, do the two rope segments make equal angles with the vertical?
 <!-- bilingual-en:end -->
 
 **前置：**距离公式、隐式求导、约束极小值。
@@ -2137,12 +2163,12 @@ The minimum is confirmed by the extreme shape comparison.  $S=2\pi rh+2\pi r^2$ 
 
 ### 建模：固定长度产生椭圆约束
 <!-- bilingual-en:start -->
-*Modeling: Fixed Length Generates Ellipse Constraints*
+*Modeling: fixed length produces an elliptical constraint*
 <!-- bilingual-en:end -->
 
 绳端固定在 $(0,0)$ 与 $(a,b)$，圆环位于 $(x,y)$。总长 $L$ 固定：
 <!-- bilingual-en:start -->
-The rope ends are fixed at $(0,0)$ and $(a,b)$, and the ring is at $(x,y)$.  Total length $L$ fixed:
+The rope ends are fixed at $(0,0)$ and $(a,b)$, and the ring is at $(x,y)$. The total length $L$ is fixed:
 <!-- bilingual-en:end -->
 
 $$
@@ -2188,7 +2214,7 @@ $$
 
 两边分别是左右绳段与竖直线夹角 $\alpha,\beta$ 的正弦，所以
 <!-- bilingual-en:start -->
-The two sides are respectively the sine of the angle $\alpha,\beta$ between the left and right rope segments and the vertical line, so
+The two sides are the sines of the angles $\alpha$ and $\beta$ made by the left and right rope segments with the vertical, so
 <!-- bilingual-en:end -->
 
 $$
@@ -2197,7 +2223,7 @@ $$
 
 实际几何中两角均为锐角，故
 <!-- bilingual-en:start -->
-In real geometry, both corners are acute, so
+In this geometry both angles are acute, so
 <!-- bilingual-en:end -->
 
 $$
@@ -2216,7 +2242,7 @@ This is also the condition for mechanical equilibrium: the horizontal components
 
 由水平投影相加可得
 <!-- bilingual-en:start -->
-Available by Horizontal Projection Add
+Adding the horizontal projections gives
 <!-- bilingual-en:end -->
 
 $$
@@ -2227,7 +2253,7 @@ $$
 
 竖直投影关系给
 <!-- bilingual-en:start -->
-vertical projection relation to
+The vertical projections give
 <!-- bilingual-en:end -->
 
 $$
@@ -2236,7 +2262,7 @@ $$
 
 再由相似三角形可求
 <!-- bilingual-en:start -->
-then be solved by a similar triangle
+and similar triangles then give
 <!-- bilingual-en:end -->
 
 $$
@@ -2250,16 +2276,16 @@ The presence of a true slack position also requires that the length be sufficien
 
 ### 易错点与边界
 <!-- bilingual-en:start -->
-*Fault-prone points and boundaries*
+*Common mistakes and limits of the method*
 <!-- bilingual-en:end -->
 
 - $y'=0$ 只适用于光滑内点；若绳长退化或最低点落在端部，要另查边界。
 - 平方距离后求导常会引入不属于原椭圆的点；保留根式更忠实。
 - $\sin\alpha=\sin\beta$ 一般还可能有补角；本题由角的几何范围排除。
 <!-- bilingual-en:start -->
-- $y'=0$ is only available for smooth interior points; if the length of the rope is degenerated or the lowest point is at the end, check the boundary separately.
+- The condition $y'=0$ applies only at a smooth interior point. If the rope configuration degenerates or the lowest point lies at an endpoint, check that boundary case separately.
 - Squaring a distance equation can introduce points that do not satisfy the original ellipse; retaining the radicals preserves the original constraint more faithfully.
-- $\sin\alpha=\sin\beta$ generally also has a supplementary angle; this problem is excluded by the geometry of the angle.
+- In general, $\sin\alpha=\sin\beta$ also permits supplementary angles; the geometric range of the angles rules that out here.
 <!-- bilingual-en:end -->
 
 > [!question]- 三道自检题与答案
@@ -2272,11 +2298,13 @@ The presence of a true slack position also requires that the length be sufficien
 > 3. 椭圆知识是否是求等角条件的前提？
 > 不是；距离约束与隐式求导已经足够。
 > <!-- bilingual-en:start -->
-> 1. What does the formula give when $b=0$?
-> $x=a/2$, the lowest point is below the horizontal midpoint at both ends.
-> 2. Why is the $y$ minimized instead of the length of the rope?
+>
+> &nbsp;
+> **1.** What does the formula give when $b=0$?<br>
+> $x=a/2$; the lowest point lies below the horizontal midpoint between the endpoints.
+> **2.** Why is the $y$ minimized instead of the length of the rope?<br>
 > The length of the rope is already a constraint constant and the gravitational potential energy increases with the height $y$.
-> 3. Is the knowledge of ellipse the premise of finding the equiangular condition?
+> **3.** Is prior knowledge of ellipses required to derive the equal-angle condition?<br>
 > No. The distance constraint and implicit differentiation are sufficient.
 > <!-- bilingual-en:end -->
 
@@ -2298,12 +2326,12 @@ The presence of a true slack position also requires that the length be sufficien
 
 **问题：**没有代数公式可解 $f(x)=0$ 时，怎样用切线快速逼近根？什么时候会失败？
 <!-- bilingual-en:start -->
-**Problem:**When there is no algebraic formula to solve $f(x)=0$, how to use tangent to approach root quickly?  When will it fail?
+**Question:** When $f(x)=0$ has no closed-form algebraic solution, how can tangent lines rapidly approximate a root, and when can the method fail?
 <!-- bilingual-en:end -->
 
 **前置：**线性化、切线方程和迭代序列。
 <!-- bilingual-en:start -->
-**Leading: **Linearization, tangent equations, and iteration sequences.
+**Prerequisites:** Linearization, tangent-line equations, and iterative sequences.
 <!-- bilingual-en:end -->
 
 ### 33a：迭代公式的推导
@@ -2322,7 +2350,7 @@ $$
 
 代替 $f$。让切线而非原曲线取零：
 <!-- bilingual-en:start -->
-Instead of $f$.  Zero the tangent instead of the original curve:
+to replace $f$. Set the tangent-line approximation, rather than the original curve, equal to zero:
 <!-- bilingual-en:end -->
 
 $$
@@ -2362,7 +2390,7 @@ $$
 
 已经非常接近 $\sqrt5\approx2.236068$。
 <!-- bilingual-en:start -->
-We're close to $\sqrt5\approx2.236068$.
+This is already very close to $\sqrt5\approx2.236068$.
 <!-- bilingual-en:end -->
 
 ### 33b：为何通常非常快
@@ -2372,7 +2400,7 @@ We're close to $\sqrt5\approx2.236068$.
 
 设真根为 $r$，误差 $e_n=x_n-r$。若 $f'(r)\ne0$ 且二阶导在附近受控，Taylor 展开给
 <!-- bilingual-en:start -->
-The real root is $r$, and the error is $e_n=x_n-r$.  If $f'(r)\ne0$ and the second derivative is controlled nearby, Taylor expands to
+Let the true root be $r$ and define the error by $e_n=x_n-r$. If $f'(r)\ne0$ and the second derivative is bounded nearby, a Taylor expansion gives
 <!-- bilingual-en:end -->
 
 $$
@@ -2382,7 +2410,7 @@ $$
 
 误差大致平方，所以当误差小于 $1$ 后，有效数字常近似翻倍。这叫二次收敛（quadratic convergence），但它是局部结论。
 <!-- bilingual-en:start -->
-The error is about square, so when the error is less than $1$, the effective number is often approximately doubled.  This is called quadratic convergence, but it is a local conclusion.
+The error is approximately squared at each step, so once it is below $1$, the number of correct digits often roughly doubles. This is called quadratic convergence, but it is only a local result.
 <!-- bilingual-en:end -->
 
 ### 33c：四类失败
@@ -2395,10 +2423,12 @@ The error is about square, so when the error is less than $1$, the effective num
 3. 曲率过大或初值太远，切线零点反而更远。
 4. 迭代进入周期，例如两点来回跳动。
 <!-- bilingual-en:start -->
-1. If $f'(x_n)=0$, the tangent is horizontal and has no finite $x$-intercept.
-2. The initial value may lie in the basin of attraction of another root and converge to the “wrong” root.
-3. If the curvature is too large or the initial value too far away, the tangent's zero may be even farther from the desired root.
-4. The iteration may enter a cycle, such as oscillating between two points.
+
+&nbsp;
+**1.** If $f'(x_n)=0$, the tangent is horizontal and has no finite $x$-intercept.<br>
+**2.** The initial value may lie in the basin of attraction of another root and converge to the “wrong” root.<br>
+**3.** If the curvature is too large or the initial value too far away, the tangent's zero may be even farther from the desired root.<br>
+**4.** The iteration may enter a cycle, such as oscillating between two points.<br>
 <!-- bilingual-en:end -->
 
 因此每步应检查 $|f(x_n)|$ 是否变小、$f'(x_n)$ 是否接近 $0$，不能只机械按键。
@@ -2408,7 +2438,7 @@ Therefore, at each step check whether $|f(x_n)|$ is decreasing and whether $f'(x
 
 ### 配套练习：$f(x)=x^3$ 永远不会有限步到根
 <!-- bilingual-en:start -->
-*Complementary Exercise: $f(x)=x^3$ will never be limited to the root*
+*Supporting exercise: Newton's method for $f(x)=x^3$ never reaches the root in finitely many steps*
 <!-- bilingual-en:end -->
 
 若 $x_n\ne0$，
@@ -2424,7 +2454,7 @@ $$
 
 归纳得
 <!-- bilingual-en:start -->
-induces
+By induction,
 <!-- bilingual-en:end -->
 
 $$
@@ -2433,12 +2463,12 @@ $$
 
 若 $x_0\ne0$，任何有限 $n$ 都有 $x_n\ne0$，但 $x_n\to0$。这里根是重根且 $f'(0)=0$，只呈线性收敛，而不是通常的二次收敛。
 <!-- bilingual-en:start -->
-If $x_0\ne0$, any limited $n$ has $x_n\ne0$, but $x_n\to0$.  Here the root is multiple and $f'(0)=0$, only linear convergence, not the usual quadratic convergence.
+If $x_0\ne0$, then $x_n\ne0$ for every finite $n$, although $x_n\to0$. Here the root is multiple and $f'(0)=0$, so convergence is only linear rather than the usual quadratic convergence.
 <!-- bilingual-en:end -->
 
 ### 易错点与边界
 <!-- bilingual-en:start -->
-*Fault-prone points and boundaries*
+*Common mistakes and limits of the method*
 <!-- bilingual-en:end -->
 
 - 分母必须是 $f'(x_n)$，不能写成 $f'(x_{n+1})$。
@@ -2446,7 +2476,7 @@ If $x_0\ne0$, any limited $n$ has $x_n\ne0$, but $x_n\to0$.  Here the root is mu
 - 重根处 $f'(r)=0$，普通快速收敛理论不适用。
 <!-- bilingual-en:start -->
 - The denominator must be $f'(x_n)$ and cannot be written as $f'(x_{n+1})$.
-- "Continuous bits unchanged" is one of the stop criteria, but it is more reliable to check the residual $|f(x_n)|$ at the same time.
+- Several unchanged decimal places can be used as one stopping criterion, but it is safer to check the residual $|f(x_n)|$ as well.
 - $f'(r)=0$ at multiple roots. The ordinary fast convergence theory is not applicable.
 <!-- bilingual-en:end -->
 
@@ -2460,12 +2490,14 @@ If $x_0\ne0$, any limited $n$ has $x_n\ne0$, but $x_n\to0$.  Here the root is mu
 > 3. 为何初值应尽量靠近目标根？
 > 线性化只在局部可信，靠近后才进入误差平方的收敛区。
 > <!-- bilingual-en:start -->
-> 1. Using Newton method to solve $1/a$.
+>
+> &nbsp;
+> **1.** What equation could be used to compute $1/a$ with Newton's method?<br>
 > For example, $f(x)=1/x-a$ or $f(x)=1-ax$; the latter itself is linear and arrives in one step.
-> 2. What if $f(x_n)=0$?
-> Found exact root, formula for $x_{n+1}=x_n$ (only $f'(x_n)\ne0$).
-> 3. Why should initial values be as close to the target root as possible?
-> The linearization is only locally credible and enters the convergence region of the square error when it is close.
+> **2.** What if $f(x_n)=0$?<br>
+> An exact root has been found, and the formula gives $x_{n+1}=x_n$ provided $f'(x_n)\ne0$.
+> **3.** Why should initial values be as close to the target root as possible?<br>
+> Linearization is reliable only locally; a nearby starting value is more likely to enter the region where the error is squared at each step.
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -2477,7 +2509,7 @@ If $x_0\ne0$, any limited $n$ has $x_n\ne0$, but $x_n\to0$.  Here the root is mu
 
 **知识链小结：**Newton 法反复把非线性方程局部线性化；速度来自误差平方，风险也来自切线只代表局部。
 <!-- bilingual-en:start -->
-** Knowledge Chain Summary: **Newton method repeatedly linearizes the non-linear equation locally; speed from the square of error, risk also from the tangent only represents the local.
+**Knowledge-chain summary:** Newton's method repeatedly linearizes a nonlinear equation. Its speed comes from squaring the local error; its risks arise because each tangent line represents the function only locally.
 <!-- bilingual-en:end -->
 
 ## Problem Set 4
@@ -2858,21 +2890,21 @@ If $x_0\ne0$, any limited $n$ has $x_n\ne0$, but $x_n\to0$.  Here the root is mu
 
 ### Problem Set 4 错误检查
 <!-- bilingual-en:start -->
-*Problem Set 4 Error Checking*
+*Problem Set 4 error check*
 <!-- bilingual-en:end -->
 
 - 优化题必须把物理/几何可行域写进定义域。
 - 相关变化率的正负来自坐标方向；若只问 speed，应报告绝对值并解释方向。
 - Newton 法每步同时检查分母与残差；迭代数值不能替代唯一性证明。
 <!-- bilingual-en:start -->
-- The optimization problem must write the physical/geometric feasible domain into the domain.
-- The sign of the relevant rate of change comes from the coordinate direction; if only speed is asked, the absolute value should be reported and the direction explained.
-- The Newton method checks both the denominator and the residual at each step; iterative values cannot substitute for the proof of uniqueness.
+- In an optimization problem, include all physical and geometric feasibility constraints in the domain.
+- The sign of a related rate depends on the chosen coordinate direction. If the problem asks only for speed, report the absolute value and explain the direction separately.
+- In Newton's method, check both the denominator and the residual at each step. Numerical iterates do not replace a proof that the root is unique.
 <!-- bilingual-en:end -->
 
 **本组小结：**PS4 的共同结构是“变量受关系约束”：优化对自由变量求极值，相关变化率对时间求导，Newton 法则用切线约束产生下一次猜测。
 <!-- bilingual-en:start -->
-**The common structure of **PS4 is "variable is constrained by the relation": the optimization is to find the extremum of the free variable, the relevant rate of change is to derive the derivative of time, and Newton's rule is to use tangent constraint to generate the next guess.
+**Set summary:** Every problem in Problem Set 4 involves variables constrained by a relationship. Optimization finds an extremum over the remaining degree of freedom; related rates differentiate the constraint with respect to time; Newton's method uses a tangent-line equation to generate the next approximation.
 <!-- bilingual-en:end -->
 
 ---
@@ -2903,21 +2935,23 @@ If $x_0\ne0$, any limited $n$ has $x_n\ne0$, but $x_n\to0$.  Here the root is mu
 
 [[导数的应用|拉格朗日中值定理]]要求 $f$ 满足：
 <!-- bilingual-en:start -->
-[[导数的应用|Lagrange's Mean Value Theorem]] requires $f$ to:
+[[导数的应用|Lagrange's Mean Value Theorem]] requires $f$ to satisfy three hypotheses:
 <!-- bilingual-en:end -->
 
 1. 在闭区间 $[a,b]$ 上连续；
 2. 在开区间 $(a,b)$ 上可导；
 3. $a<b$；
 <!-- bilingual-en:start -->
-1. Continuous in the closed interval $[a,b]$;
-2. Differentiable on the open interval $(a,b)$;
-3. $a<b$;
+
+&nbsp;
+**1.** $f$ is continuous on the closed interval $[a,b]$;<br>
+**2.** $f$ is differentiable on the open interval $(a,b)$;<br>
+**3.** $a<b$.<br>
 <!-- bilingual-en:end -->
 
 则存在至少一个 $c\in(a,b)$，使
 <!-- bilingual-en:start -->
-then there is at least one $c\in(a,b)$ that causes
+Then there is at least one $c\in(a,b)$ such that
 <!-- bilingual-en:end -->
 
 $$
@@ -2935,7 +2969,7 @@ The right-hand side is the slope of the secant through the endpoints, while the 
 
 ### 从 Fermat 引理到 Rolle 定理
 <!-- bilingual-en:start -->
-*From Fermat Lemma to Rolle Theorem*
+*From Fermat's Lemma to Rolle's Theorem*
 <!-- bilingual-en:end -->
 
 **Fermat 引理：**若 $f$ 在内点 $c$ 可导且在 $c$ 取局部极大或极小，则 $f'(c)=0$。
@@ -2945,7 +2979,7 @@ The right-hand side is the slope of the secant through the endpoints, while the 
 
 以局部极大为例。足够小的 $h>0$ 有
 <!-- bilingual-en:start -->
-Take local maxima.  $h>0$ small enough to have
+Consider a local maximum. For every sufficiently small $h>0$,
 <!-- bilingual-en:end -->
 
 $$
@@ -2963,7 +2997,7 @@ $$
 
 若两侧极限共同存在，只能同时等于 $0$。
 <!-- bilingual-en:start -->
-If both side limits exist, they can only be equal to $0$.
+If the two one-sided limits exist and agree, their common value can only be $0$.
 <!-- bilingual-en:end -->
 
 **[[导数的应用|罗尔定理]]：**若 $f$ 在 $[a,b]$ 连续、在 $(a,b)$ 可导且 $f(a)=f(b)$，则存在 $c\in(a,b)$ 使 $f'(c)=0$。
@@ -2973,17 +3007,17 @@ If both side limits exist, they can only be equal to $0$.
 
 证明：连续函数由极值定理在闭区间达到最大、最小。若二者相同，$f$ 为常函数，任取内点即可。若不同，因为两端函数值相等，至少一个非平凡极值必须在内点取得；Fermat 引理给 $f'(c)=0$。
 <!-- bilingual-en:start -->
-It is proved that the continuous function reaches the maximum and minimum in the closed interval by the extremum theorem.  If the two are the same, $f$ is a constant function, choose any interior point.  If not, because the end function values are equal, at least one non-trivial extreme value must be obtained at an interior point; the Fermat lemma is given to $f'(c)=0$.
+Proof: By the Extreme Value Theorem, a continuous function attains both a maximum and a minimum on the closed interval. If these values are equal, $f$ is constant and any interior point works. Otherwise, because the endpoint values are equal, at least one nontrivial extremum must occur at an interior point; Fermat's lemma then gives $f'(c)=0$.
 <!-- bilingual-en:end -->
 
 ### [[导数的应用|平均值定理证明]]
 <!-- bilingual-en:start -->
-*[[导数的应用|proof of mean value theorem]]*
+*[[导数的应用|Proof of the Mean Value Theorem]]*
 <!-- bilingual-en:end -->
 
 令割线斜率
 <!-- bilingual-en:start -->
-Make Secant Slope
+Let the secant slope be
 <!-- bilingual-en:end -->
 
 $$
@@ -3014,7 +3048,7 @@ $$
 
 所以 $g(a)=g(b)$。由 Rolle 定理，某个 $c\in(a,b)$ 满足
 <!-- bilingual-en:start -->
-So, $g(a)=g(b)$.  By Rolle's theorem, a certain $c\in(a,b)$ satisfies
+Thus $g(a)=g(b)$. By Rolle's theorem, some $c\in(a,b)$ satisfies
 <!-- bilingual-en:end -->
 
 $$
@@ -3028,7 +3062,7 @@ Therefore $f'(c)=m$, completing the proof.
 
 ### 34b：三个重要推论
 <!-- bilingual-en:start -->
-*34b: Three important consequences*
+*34b: Three Important Consequences*
 <!-- bilingual-en:end -->
 
 在区间 $I$ 上，若对所有内点：
@@ -3050,7 +3084,7 @@ $$
 
 证明以递增为例：任取 $x_1<x_2$，MVT 给
 <!-- bilingual-en:start -->
-It is proved that, as an example, $x_1<x_2$, MVT
+For example, to prove the increasing case, choose any $x_1<x_2$. The MVT gives
 <!-- bilingual-en:end -->
 
 $$
@@ -3064,12 +3098,12 @@ The MVT turns local derivative information into a statement comparing any two po
 
 ### 配套练习：Taylor 余项的模式
 <!-- bilingual-en:start -->
-*Complementary Exercise: Modes for Taylor Remainder*
+*Supplementary Exercise: The Taylor Remainder Pattern*
 <!-- bilingual-en:end -->
 
 $n$ 次 Taylor 多项式
 <!-- bilingual-en:start -->
-$n$ degree Taylor polynomials
+The degree-$n$ Taylor polynomial is
 <!-- bilingual-en:end -->
 
 $$
@@ -3089,7 +3123,7 @@ $$
 
 练习取 $f(x)=x^3+2x+1,a=1,b=3,n=2$。有
 <!-- bilingual-en:start -->
-Practice getting $f(x)=x^3+2x+1,a=1,b=3,n=2$. Yes
+In the exercise, take $f(x)=x^3+2x+1$, $a=1$, $b=3$, and $n=2$. Then
 <!-- bilingual-en:end -->
 
 $$
@@ -3112,12 +3146,12 @@ $$
 
 与实际误差完全一致。本课只验证模式，严格的一般证明留到 Taylor 单元。
 <!-- bilingual-en:start -->
-The results are in good agreement with the actual ones.  This lesson validates only the schema, leaving the strict generic proof in the Taylor module.
+This agrees exactly with the actual error. Here we only verify the pattern; a rigorous general proof is deferred to the Taylor-series unit.
 <!-- bilingual-en:end -->
 
 ### 易错点与边界
 <!-- bilingual-en:start -->
-*Fault-prone points and boundaries*
+*Boundary Cases and Common Pitfalls*
 <!-- bilingual-en:end -->
 
 - 闭区间要求连续，开区间要求可导；端点不要求双侧导数。
@@ -3126,8 +3160,8 @@ The results are in good agreement with the actual ones.  This lesson validates o
 - MVT 的 $c$ 可能不止一个。
 <!-- bilingual-en:start -->
 - Continuity is required on the closed interval, while differentiability is required only on the open interval; two-sided derivatives are not required at the endpoints.
-- $|x|$ cannot use MVT directly in an interval spanning $0$ because the interior point $0$ is not differentiable.
-- The jump function destroys continuity and the average velocity may not have a corresponding instantaneous velocity.
+- The MVT cannot be applied directly to $|x|$ on an interval containing $0$ in its interior, because the function is not differentiable at $0$.
+- A jump discontinuity violates continuity, so an average velocity need not equal any instantaneous velocity.
 - MVT may have more than one $c$.
 <!-- bilingual-en:end -->
 
@@ -3141,12 +3175,14 @@ The results are in good agreement with the actual ones.  This lesson validates o
 > 3. 定理能否由端点值直接求出 $c$？
 > 一般不能；还需函数具体形式，且可能多解。
 > <!-- bilingual-en:start -->
-> 1. $f(x)=x^2$ at $[0,2]$'s MVT?
+>
+> &nbsp;
+> **1.** What point does the MVT guarantee for $f(x)=x^2$ on $[0,2]$?<br>
 > The secant slope is $2$, so $f'(c)=2c=2$ and hence $c=1$.
-> 2. If $f(a)=f(b)$, why MVT?
-> Rolle theorem: some interior point $f'(c)=0$.
-> 3. Can the theorem get $c$ directly from the endpoint values?
-> In general, it is not; it also need function concrete form and may have many solutions.
+> **2.** What does the MVT reduce to when $f(a)=f(b)$?<br>
+> Rolle's theorem: $f'(c)=0$ at some interior point.
+> **3.** Can the theorem determine $c$ from the endpoint values alone?<br>
+> Not in general. One also needs the form of the function, and there may be several solutions.
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -3169,12 +3205,12 @@ The results are in good agreement with the actual ones.  This lesson validates o
 
 **问题：**MVT 与线性近似有何不同？怎样把导数上下界变成函数差值和不等式？
 <!-- bilingual-en:start -->
-** Question: What is the difference between **MVT and linear approximation?  How to change the upper and lower bounds of the derivative into the difference and inequality of the function?
+**Question:** How does the MVT differ from linear approximation? How can bounds on a derivative be converted into bounds on changes in the function?
 <!-- bilingual-en:end -->
 
 **前置：**Session 34 的定理及单调性推论。
 <!-- bilingual-en:start -->
-**Preamble:**Theorem and monotonic inference of Session 34.
+**Prerequisites:** The theorem and monotonicity consequences from Session 34.
 <!-- bilingual-en:end -->
 
 ### 35a：精确存在式与近似式
@@ -3184,7 +3220,7 @@ The results are in good agreement with the actual ones.  This lesson validates o
 
 线性近似在 $a$ 附近写成
 <!-- bilingual-en:start -->
-The linear approximation is written near $a$
+Near $a$, linear approximation gives
 <!-- bilingual-en:end -->
 
 $$
@@ -3193,7 +3229,7 @@ $$
 
 MVT 则精确地说
 <!-- bilingual-en:start -->
-MVT is more precise
+The MVT gives the exact statement
 <!-- bilingual-en:end -->
 
 $$
@@ -3202,12 +3238,12 @@ $$
 
 其中 $c$ 位于 $a,b$ 之间，却通常未知。若 $f'$ 在短区间上变化很小，$f'(c)\approx f'(a)$，前者便解释了后者为何可靠。
 <!-- bilingual-en:start -->
-where $c$ is between $a,b$ and is usually unknown.  If the $f'$ varies only slightly over a short interval, the $f'(c)\approx f'(a)$ explains why the latter is reliable.
+where $c$ lies between $a$ and $b$ but is usually unknown. If $f'$ varies little over a short interval, then $f'(c)\approx f'(a)$, which explains why the linear approximation is reliable.
 <!-- bilingual-en:end -->
 
 若 $m\le f'(x)\le M$ 在 $[a,b]$ 上成立，则
 <!-- bilingual-en:start -->
-If $m\le f'(x)\le M$ is true on $[a,b]$, then
+If $m\le f'(x)\le M$ throughout $[a,b]$, then
 <!-- bilingual-en:end -->
 
 $$
@@ -3224,12 +3260,12 @@ This is called the "finite increment form" of the derivative bound.
 
 ### 35b：用单调性证明指数不等式
 <!-- bilingual-en:start -->
-*35b: Proving exponential inequalities with monotonicity*
+*35b: Proving Exponential Inequalities with Monotonicity*
 <!-- bilingual-en:end -->
 
 证明 $e^x>1+x$（$x>0$）。令
 <!-- bilingual-en:start -->
-Attestation $e^x>1+x$ ($x>0$).
+To prove $e^x>1+x$ for $x>0$, let
 <!-- bilingual-en:end -->
 
 $$
@@ -3247,12 +3283,12 @@ $$
 
 所以 $F$ 在 $(0,\infty)$ 递增，$F(x)>F(0)=0$。
 <!-- bilingual-en:start -->
-So $F$ in $(0,\infty)$ increments $F(x)>F(0)=0$.
+Thus $F$ is increasing on $(0,\infty)$, so $F(x)>F(0)=0$.
 <!-- bilingual-en:end -->
 
 进一步证明
 <!-- bilingual-en:start -->
-further proof
+Next, prove
 <!-- bilingual-en:end -->
 
 $$
@@ -3261,7 +3297,7 @@ $$
 
 令
 <!-- bilingual-en:start -->
-order
+Let
 <!-- bilingual-en:end -->
 
 $$
@@ -3279,12 +3315,12 @@ $$
 
 正是上一结论，所以 $G(x)>0$。这展示了“前一个不等式成为下一个不等式的导数判据”。
 <!-- bilingual-en:start -->
-That's exactly the conclusion, $G(x)>0$.  This shows that "the former inequality becomes the derivative criterion of the next inequality".
+by the preceding result, so $G(x)>0$. This shows how one inequality can supply the derivative test needed to prove the next.
 <!-- bilingual-en:end -->
 
 ### 配套练习：正弦差的 Lipschitz 界
 <!-- bilingual-en:start -->
-*Complementary Exercise: Lipschitz Boundary for Sine Difference*
+*Supplementary Exercise: A Lipschitz Bound for Differences of Sines*
 <!-- bilingual-en:end -->
 
 对任意 $a\ne b$，MVT 给某个 $c$：
@@ -3307,21 +3343,21 @@ $$
 
 这说明正弦函数的输出变化绝不会超过输入变化；“导数绝对值不超过 $1$”控制了全局变化。
 <!-- bilingual-en:start -->
-This shows that the output of sine function will never exceed the input change, and the "absolute value of the derivative does not exceed $1$" controls the global change.
+This shows that the change in the sine function never exceeds the change in its input: the global change is controlled by the bound $|f'|\le1$.
 <!-- bilingual-en:end -->
 
 ### 易错点与边界
 <!-- bilingual-en:start -->
-*Fault-prone points and boundaries*
+*Boundary Cases and Common Pitfalls*
 <!-- bilingual-en:end -->
 
 - 当 $b<a$ 时直接乘不等式会翻转方向；用绝对值形式可避免。
 - 要证明 $F(x)>0$，需同时给基准值和单调方向，仅算 $F'>0$ 不够。
 - $f'$ 的最大/最小若不存在，可使用任意已知上下界，不必真的求极值。
 <!-- bilingual-en:start -->
-- When $b<a$, the direct multiplication inequality flips the direction; it can be avoided in absolute terms.
-- To prove a $F(x)>0$, both the base value and the monotone direction need to be given; $F'>0$ alone is not sufficient.
-- Maximum/Minimum of $f'$ If not present, use any known upper and lower bounds without actually having to perform an extremum.
+- If $b<a$, multiplying an inequality by $b-a$ reverses its direction; an absolute-value formulation avoids this issue.
+- To prove $F(x)>0$, give both a reference value and the direction of monotonicity; $F'>0$ alone is not enough.
+- If $f'$ does not attain a maximum or minimum, any known upper and lower bounds may be used; there is no need to find actual extrema.
 <!-- bilingual-en:end -->
 
 > [!question]- 三道自检题与答案
@@ -3334,12 +3370,14 @@ This shows that the output of sine function will never exceed the input change, 
 > 3. 证明 $\ln(1+x)<x$（$x>0$）。
 > 令 $H=x-\ln(1+x)$；$H(0)=0$，$H'=x/(1+x)>0$。
 > <!-- bilingual-en:start -->
-> 1. If $|f'|\le K$, what can be launched?
+>
+> &nbsp;
+> **1.** What follows if $|f'|\le K$?<br>
 > $|f(b)-f(a)|\le K|b-a|$.
-> 2. Why does this give a coarse error control for linear approximations?
-> By using MVT again for the remainder function, the error can be transformed into the interval length of the derivative difference.
-> 3. Proof $\ln(1+x)<x$ ($x>0$).
-> $H=x-\ln(1+x)$; $H(0)=0$, $H'=x/(1+x)>0$.
+> **2.** Why does this give a coarse error control for linear approximations?<br>
+> Apply the MVT to the remainder function: the error is bounded by a bound on the derivative difference times the interval length.
+> **3.** Prove that $\ln(1+x)<x$ for $x>0$.<br>
+> Let $H=x-\ln(1+x)$. Then $H(0)=0$ and $H'=x/(1+x)>0$.
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -3350,7 +3388,7 @@ This shows that the output of sine function will never exceed the input change, 
 
 **知识链小结：**MVT 把导数的界积分式地累积成函数差的界；线性近似可看作区间很短时把未知 $f'(c)$ 换成已知 $f'(a)$。
 <!-- bilingual-en:start -->
-** Knowledge chain summary: **MVT integrally cumulates the bound of the derivative into the bound of the difference of functions; linear approximation can be seen as the interval is very short, the unknown $f'(c)$ is replaced by the known $f'(a)$.
+**Knowledge chain summary:** The MVT converts derivative bounds into bounds on finite changes in a function. Linear approximation amounts to replacing the unknown $f'(c)$ by the known $f'(a)$ when the interval is short.
 <!-- bilingual-en:end -->
 
 ## Session 36：Differentials
@@ -3362,12 +3400,12 @@ This shows that the output of sine function will never exceed the input change, 
 
 **问题：**$dy=f'(x)\,dx$ 是什么对象？它和真实改变量 $\Delta y$ 有何差别？
 <!-- bilingual-en:start -->
-** Question: What is **$dy=f'(x)\,dx$?  How is it different from the real variable $\Delta y$?
+**Question:** What kind of object is $dy=f'(x)\,dx$? How does it differ from the actual change $\Delta y$?
 <!-- bilingual-en:end -->
 
 **前置：**线性近似、Leibniz 记号与链式法则。
 <!-- bilingual-en:start -->
-** Preamble: ** Linear approximation, Leibniz notation and chain rule.
+**Prerequisites:** Linear approximation, Leibniz notation, and the chain rule.
 <!-- bilingual-en:end -->
 
 ### 36a：定义
@@ -3404,17 +3442,17 @@ $$
 
 故 $dy$ 是真实变化的一阶主部，而不是与 $\Delta y$ 永远相等。
 <!-- bilingual-en:start -->
-Therefore, $dy$ is the first-order principal part of real change, not always equal to $\Delta y$.
+Thus $dy$ is the leading first-order part of the actual change; it is not identically equal to $\Delta y$.
 <!-- bilingual-en:end -->
 
 ### 36b：估计 $\sqrt[3]{64.1}$
 <!-- bilingual-en:start -->
-*36b: Estimated $\sqrt[3]{64.1}$*
+*36b: Estimating $\sqrt[3]{64.1}$*
 <!-- bilingual-en:end -->
 
 令 $y=x^{1/3}$，基点 $x=64$：
 <!-- bilingual-en:start -->
-Let $y=x^{1/3}$, base point $x=64$:
+Let $y=x^{1/3}$ and use the base point $x=64$:
 <!-- bilingual-en:end -->
 
 $$
@@ -3424,7 +3462,7 @@ $$
 
 在 $x=64$，
 <!-- bilingual-en:start -->
-In $x=64$,
+At $x=64$,
 <!-- bilingual-en:end -->
 
 $$
@@ -3449,7 +3487,7 @@ Units also propagate with the derivative: If the unit of $x$ is volume, $dy/dx$ 
 
 ### 微分形式的链式法则
 <!-- bilingual-en:start -->
-*chain rule of differential form*
+*The Chain Rule in Differential Form*
 <!-- bilingual-en:end -->
 
 若 $y=f(u),u=g(x)$，
@@ -3463,7 +3501,7 @@ $$
 
 代入即
 <!-- bilingual-en:start -->
-immediately
+Substitution gives
 <!-- bilingual-en:end -->
 
 $$
@@ -3472,17 +3510,17 @@ $$
 
 Leibniz 记号看似约分，背后的严格依据仍是复合函数链式法则。
 <!-- bilingual-en:start -->
-The Leibniz notation appears to be reductive, and the strict basis behind it is still the chain rule of composite functions.
+Leibniz notation may look like cancellation of fractions, but its rigorous justification is still the chain rule for composite functions.
 <!-- bilingual-en:end -->
 
 ### 配套练习：固定点的吸引性
 <!-- bilingual-en:start -->
-*Companion exercise: Attracting fixed points*
+*Supplementary Exercise: Attracting Fixed Points*
 <!-- bilingual-en:end -->
 
 若 $P(x_0)=x_0$ 且 $|P'(x_0)|<1$，线性化给
 <!-- bilingual-en:start -->
-If $P(x_0)=x_0$ and $|P'(x_0)|<1$, linearize to
+If $P(x_0)=x_0$ and $|P'(x_0)|<1$, linearization gives
 <!-- bilingual-en:end -->
 
 $$
@@ -3533,7 +3571,7 @@ $$
 
 ### 易错点与边界
 <!-- bilingual-en:start -->
-*Fault-prone points and boundaries*
+*Boundary Cases and Common Pitfalls*
 <!-- bilingual-en:end -->
 
 - $dx$ 与 $\Delta x$ 可以取同一个数，但概念不同：前者进入线性映射，后者进入原函数真实差值。
@@ -3542,7 +3580,7 @@ $$
 <!-- bilingual-en:start -->
 - $dx$ and $\Delta x$ may have the same numerical value, but they play different roles: $dx$ is the input to a linear approximation, whereas $\Delta x$ produces the function's actual change.
 - The fraction-like appearance of differentials is not permission to manipulate them as pure algebra without the chain rule.
-- $|P'(x_0)|<1$'s strict attraction conclusion requires neighborhood control; a single point of linearity is just intuition.
+- A rigorous conclusion of local attraction from $|P'(x_0)|<1$ requires control on a neighborhood; linearization at a single point supplies only the intuition.
 <!-- bilingual-en:end -->
 
 > [!question]- 三道自检题与答案
@@ -3555,12 +3593,14 @@ $$
 > 3. 固定点导数为 $-1/2$ 有何直觉？
 > 偏差每步约缩半并交替换侧。
 > <!-- bilingual-en:start -->
-> 1. $y=x^2$ at $x=3,dx=0.01$ $dy$?
+>
+> &nbsp;
+> **1.** For $y=x^2$ at $x=3$ with $dx=0.01$, what is $dy$?<br>
 > $dy=2x\,dx=0.06$.
-> 2. True $\Delta y$?
-> $(3.01)^2-9=0.0601$, $0.0001=(dx)^2$ less than $dy$.
-> 3. What is the intuition of the fixed-point derivative $-1/2$?
-> The deviation is reduced by about half in each step and the replacement side is interchanged.
+> **2.** What is the actual change $\Delta y$ in the same example?<br>
+> $(3.01)^2-9=0.0601$, which differs from $dy$ by $0.0001=(dx)^2$.
+> **3.** What is the intuition when the derivative at a fixed point is $-1/2$?<br>
+> Each iteration roughly halves the deviation and alternates from one side of the fixed point to the other.
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -3583,12 +3623,12 @@ $$
 
 **问题：**已知变化率 $f$，怎样恢复原函数？为什么答案必然带常数？
 <!-- bilingual-en:start -->
-**Problem:** Given a rate of change $f$, how do we recover an antiderivative? Why must the answer include an arbitrary constant?
+**Question:** Given a rate of change $f$, how do we recover the original function? Why must the answer include an arbitrary constant?
 <!-- bilingual-en:end -->
 
 **前置：**求导公式、MVT 的常函数推论。
 <!-- bilingual-en:start -->
-**Preamble:** Derivative formula, constant function inference for MVT.
+**Prerequisites:** Differentiation formulas and the MVT consequence for functions with zero derivative.
 <!-- bilingual-en:end -->
 
 ### 37a：定义与不定积分
@@ -3598,7 +3638,7 @@ $$
 
 若
 <!-- bilingual-en:start -->
-if
+If
 <!-- bilingual-en:end -->
 
 $$
@@ -3607,7 +3647,7 @@ $$
 
 则称 $F$ 是 $f$ 的[[定积分与微积分基本定理#两个基本定理怎样把导数与积分接起来|反导数]]（antiderivative）。记号
 <!-- bilingual-en:start -->
-$F$ is $f$'s [[定积分与微积分基本定理#两个基本定理怎样把导数与积分接起来|antiderivative]] (antiderivative).  Token
+then $F$ is called an [[定积分与微积分基本定理#两个基本定理怎样把导数与积分接起来|antiderivative]] of $f$. The notation
 <!-- bilingual-en:end -->
 
 $$
@@ -3616,7 +3656,7 @@ $$
 
 叫[[定积分与微积分基本定理#积分应用的建模顺序|积分]]（这里是不定积分，indefinite integral）。积分号表示“寻找全部反导数”，$dx$ 指明积分变量。
 <!-- bilingual-en:start -->
-Call it [[定积分与微积分基本定理#积分应用的建模顺序|Integral]]. (Here's indefinite integral.)  The integral sign indicates "Find all antiderivatives" and $dx$ indicates the integral variable.
+is called an [[定积分与微积分基本定理#积分应用的建模顺序|integral]]—specifically, an indefinite integral here. The integral sign means “find all antiderivatives,” and $dx$ identifies the variable of integration.
 <!-- bilingual-en:end -->
 
 例如
@@ -3630,12 +3670,12 @@ $$
 
 ### 37b–37c：基本公式
 <!-- bilingual-en:start -->
-*37b-37c: Base Formula*
+*37b–37c: Basic Formulas*
 <!-- bilingual-en:end -->
 
 从求导公式反读：
 <!-- bilingual-en:start -->
-Reverse Reading from Derivative Formula:
+Read the differentiation formulas in reverse:
 <!-- bilingual-en:end -->
 
 $$
@@ -3653,7 +3693,7 @@ $$
 
 绝对值确保在 $x<0$ 的区间也有
 <!-- bilingual-en:start -->
-Absolute values ensure that they also exist in the $x<0$ range
+The absolute value makes the formula valid on intervals where $x<0$ as well:
 <!-- bilingual-en:end -->
 
 $$
@@ -3662,7 +3702,7 @@ $$
 
 其他常用式：
 <!-- bilingual-en:start -->
-Other common usage:
+Other common formulas are
 <!-- bilingual-en:end -->
 
 $$
@@ -3684,12 +3724,12 @@ Each antiderivative formula is restricted to its domain; for example, the two br
 
 ### 37d：唯一性证明
 <!-- bilingual-en:start -->
-*37d: proof of uniqueness*
+*37d: Proof of Uniqueness*
 <!-- bilingual-en:end -->
 
 若在同一连通区间上
 <!-- bilingual-en:start -->
-If they are on the same connectivity interval
+If, on the same connected interval,
 <!-- bilingual-en:end -->
 
 $$
@@ -3707,7 +3747,7 @@ $$
 
 由 MVT 的推论，$F-G$ 在该区间为常数：
 <!-- bilingual-en:start -->
-According to MVT's inference, $F-G$ is a constant in this interval:
+By the corresponding consequence of the MVT, $F-G$ is constant on that interval:
 <!-- bilingual-en:end -->
 
 $$
@@ -3716,12 +3756,12 @@ $$
 
 这证明了“$+C$”已经穷尽所有可能，而不是随手附加。
 <!-- bilingual-en:start -->
-This proves that "$+C$" has been exhausted, not appended.
+This proves that “$+C$” accounts for every possible antiderivative; it is not an arbitrary afterthought.
 <!-- bilingual-en:end -->
 
 ### 配套练习：从求导法则反读积分法则
 <!-- bilingual-en:start -->
-*Supporting Exercise: Reverse Reading Integral Rule from Derivation Rule*
+*Supplementary Exercise: Reading Integration Rules from Differentiation Rules*
 <!-- bilingual-en:end -->
 
 和法则给线性性：
@@ -3735,7 +3775,7 @@ $$
 
 乘积法则
 <!-- bilingual-en:start -->
-product rule
+The product rule
 <!-- bilingual-en:end -->
 
 $$
@@ -3744,7 +3784,7 @@ $$
 
 反读得
 <!-- bilingual-en:start -->
-read inversely
+can be read in reverse as
 <!-- bilingual-en:end -->
 
 $$
@@ -3753,7 +3793,7 @@ $$
 
 移项得到后续的分部积分雏形：
 <!-- bilingual-en:start -->
-Shift term gets the embryonic form of the following partial integral:
+Rearranging gives the basic form of the integration-by-parts rule developed later:
 <!-- bilingual-en:end -->
 
 $$
@@ -3762,7 +3802,7 @@ $$
 
 ### 易错点与边界
 <!-- bilingual-en:start -->
-*Fault-prone points and boundaries*
+*Boundary Cases and Common Pitfalls*
 <!-- bilingual-en:end -->
 
 - $\int x^{-1}dx$ 不能套幂公式，因为分母 $n+1=0$。
@@ -3770,10 +3810,10 @@ $$
 - 两个看似不同的答案可能只差常数；用恒等式或相减求导检查。
 - 反导数通常应在一个连通区间内讨论。
 <!-- bilingual-en:start -->
-- $\int x^{-1}dx$ cannot overlay the power formula because the denominator $n+1=0$.
-- Indefinite integral answer omits $C$.
-- Two seemingly different answers may differ only by a constant; check with identity or subtraction.
-- The antiderivative should normally be discussed in a connected interval.
+- The power rule cannot be applied to $\int x^{-1}dx$, because its denominator $n+1$ would be zero.
+- Do not omit $C$ from an indefinite integral.
+- Two apparently different answers may differ only by a constant; check by using an identity or differentiating their difference.
+- Antiderivatives should normally be discussed on a connected interval.
 <!-- bilingual-en:end -->
 
 > [!question]- 三道自检题与答案
@@ -3786,12 +3826,14 @@ $$
 > 3. 怎样最快检查不定积分？
 > 对答案求导，确认回到原被积函数，并检查定义域。
 > <!-- bilingual-en:start -->
-> 1. $\int3x^2dx$?
+>
+> &nbsp;
+> **1.** $\int3x^2dx$?<br>
 > $x^3+C$.
-> 2. Why are $\frac12\sin^2x$ and $-\frac12\cos^2x$ antiderivatives of $\sin x\cos x$?
-> The derivatives of the two are the same, and the difference constant is $1/2$.
-> 3. What's the quickest way to check indefinite points?
-> Derive the answer, confirm a return to the original product function, and examine the domain.
+> **2.** Why are $\frac12\sin^2x$ and $-\frac12\cos^2x$ antiderivatives of $\sin x\cos x$?<br>
+> They have the same derivative and differ by the constant $1/2$.
+> **3.** What is the quickest way to check an indefinite integral?<br>
+> Differentiate the answer, confirm that it recovers the original integrand, and check the domain.
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -3821,12 +3863,12 @@ $$
 
 **前置：**微分、基本反导数与链式法则。
 <!-- bilingual-en:start -->
-**Preamble: **Differential, Basic Antiderivative, and Chain Rule.
+**Prerequisites:** Differentials, basic antiderivatives, and the chain rule.
 <!-- bilingual-en:end -->
 
 ### 38a：[[积分方法#积分方法选择树|换元积分]]的来源
 <!-- bilingual-en:start -->
-*38a: Where [[积分方法#积分方法选择树|integration by substitution]] comes from*
+*38a: The Basis of [[积分方法#积分方法选择树|Integration by Substitution]]*
 <!-- bilingual-en:end -->
 
 链式法则：
@@ -3840,7 +3882,7 @@ $$
 
 若 $F'=f$，反读为
 <!-- bilingual-en:start -->
-If $F'=f$, read back as
+If $F'=f$, reading this identity in reverse gives
 <!-- bilingual-en:end -->
 
 $$
@@ -3849,7 +3891,7 @@ $$
 
 写 $u=g(x),du=g'(x)dx$，就得到
 <!-- bilingual-en:start -->
-Write $u=g(x),du=g'(x)dx$ and you'll get
+Writing $u=g(x)$ and $du=g'(x)\,dx$ gives
 <!-- bilingual-en:end -->
 
 $$
@@ -3863,7 +3905,7 @@ This is not a formal cancellation of $dx$; it is a structural use of the chain r
 
 **讲义例题：**
 <!-- bilingual-en:start -->
-** Handout Example: **
+**Handout example:**
 <!-- bilingual-en:end -->
 
 $$
@@ -3886,12 +3928,12 @@ $$
 
 ### 38b–38c：“高级猜测”与常数修正
 <!-- bilingual-en:start -->
-*38b-38c: "Advanced Guess" and Constant Correction*
+*38b–38c: “Advanced Guessing” and Constant-Factor Corrections*
 <!-- bilingual-en:end -->
 
 对
 <!-- bilingual-en:start -->
-Yes
+Consider
 <!-- bilingual-en:end -->
 
 $$
@@ -3900,7 +3942,7 @@ $$
 
 看到内层 $1+x^2$ 的导数含 $x$，猜结果形如 $\sqrt{1+x^2}$。验证：
 <!-- bilingual-en:start -->
-The derivative of the inner $1+x^2$ is found to contain $x$, and the guessing result is $\sqrt{1+x^2}$.  Validation:
+The derivative of the inner expression $1+x^2$ contains the factor $x$, suggesting an antiderivative of the form $\sqrt{1+x^2}$. Check it by differentiating:
 <!-- bilingual-en:end -->
 
 $$
@@ -3910,7 +3952,7 @@ $$
 
 所以答案直接得到。对 $\int e^{6x}dx$，猜 $e^{6x}$ 后求导多出因子 $6$，于是
 <!-- bilingual-en:start -->
-So the answer is straight.  For $\int e^{6x}dx$, the derivative of $e^{6x}$ is calculated to get the additional factor $6$, so
+This gives the answer immediately. For $\int e^{6x}dx$, differentiating $e^{6x}$ produces an extra factor of $6$, so
 <!-- bilingual-en:end -->
 
 $$
@@ -3924,7 +3966,7 @@ A "guess" must be checked by differentiation. It is practiced pattern recognitio
 
 ### 配套练习：同一积分的两种换元
 <!-- bilingual-en:start -->
-*Companion exercise: Two substitutions for the same integral*
+*Supplementary Exercise: Two Substitutions for the Same Integral*
 <!-- bilingual-en:end -->
 
 $$
@@ -3942,7 +3984,7 @@ $$
 
 令 $v=\sec x,dv=\sec x\tan x\,dx$，把原式写成 $\sec x(\sec x\tan x\,dx)$：
 <!-- bilingual-en:start -->
-Let $v=\sec x,dv=\sec x\tan x\,dx$ write the original $\sec x(\sec x\tan x\,dx)$:
+Alternatively, let $v=\sec x$ and $dv=\sec x\tan x\,dx$, after writing the integrand as $\sec x(\sec x\tan x\,dx)$:
 <!-- bilingual-en:end -->
 
 $$
@@ -3956,7 +3998,7 @@ By $\sec^2x-\tan^2x=1$, the two answers differ by $1/2$, so they are equivalent.
 
 ### 易错点与边界
 <!-- bilingual-en:start -->
-*Fault-prone points and boundaries*
+*Boundary Cases and Common Pitfalls*
 <!-- bilingual-en:end -->
 
 - 只替换内层表达式却没替换对应微分因子。
@@ -3964,7 +4006,7 @@ By $\sec^2x-\tan^2x=1$, the two answers differ by $1/2$, so they are equivalent.
 - 常数因子漏乘倒数；最稳妥的校验是对最终答案求导。
 - $\ln$ 型答案应根据定义域写绝对值。
 <!-- bilingual-en:start -->
-- Replace only the inner expression without replacing the corresponding differential factor.
+- Do not replace the inner expression without also replacing the corresponding differential factor.
 - Failing to substitute back for $u$ after completing the integration.
 - Forgetting the reciprocal of a constant factor; the safest check is to differentiate the final answer.
 - Logarithmic answers should use absolute values where required by the domain.
@@ -3980,12 +4022,14 @@ By $\sec^2x-\tan^2x=1$, the two answers differ by $1/2$, so they are equivalent.
 > 3. 为什么令 $u=x$ 对任何积分都“合法”却没帮助？
 > 它没有简化结构；好换元要把复合内层及其导数同时吸收。
 > <!-- bilingual-en:start -->
-> 1. $\int2x\cos(x^2)dx$?
+>
+> &nbsp;
+> **1.** $\int2x\cos(x^2)dx$?<br>
 > $\sin(x^2)+C$.
-> 2. $\int x e^{x^2}dx$?
+> **2.** $\int x e^{x^2}dx$?<br>
 > $\frac12e^{x^2}+C$.
-> 3. Why is it not helpful to make $u=x$ "legal" for any points?
-> It does not have a simplified structure; the good substitution element must absorb the composite inner layer and its derivative simultaneously.
+> **3.** Why is the formally valid substitution $u=x$ unhelpful for any integral?<br>
+> It does not simplify the structure. A useful substitution absorbs both the inner function of a composition and its derivative.
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -4071,7 +4115,7 @@ $$
 
 指数化并把符号吸收到任意常数 $A$：
 <!-- bilingual-en:start -->
-Exponentiation and absorption of the sign to an arbitrary constant $A$:
+Exponentiating and absorbing the choice of sign into an arbitrary constant $A$ gives
 <!-- bilingual-en:end -->
 
 $$
@@ -4094,12 +4138,12 @@ $A=0$ is also valid, restoring the zero solution that may have been lost when we
 
 ### 39b：一般分离变量框架
 <!-- bilingual-en:start -->
-*39b: General separation of variables framework*
+*39b: General Framework for Separation of Variables*
 <!-- bilingual-en:end -->
 
 若
 <!-- bilingual-en:start -->
-if
+If
 <!-- bilingual-en:end -->
 
 $$
@@ -4117,7 +4161,7 @@ $$
 
 若 $H'(y)=1/g(y)$、$F'(x)=f(x)$，则
 <!-- bilingual-en:start -->
-If $H'(y)=1/g(y)$, $F'(x)=f(x)$
+If $H'(y)=1/g(y)$ and $F'(x)=f(x)$, then
 <!-- bilingual-en:end -->
 
 $$
@@ -4133,7 +4177,7 @@ This may already be a valid implicit general solution. Only when inversion is co
 
 ### 配套练习：代回检查候选解
 <!-- bilingual-en:start -->
-*Complementary Exercise: Check Back Candidate Solution*
+*Supplementary Exercise: Checking Candidate Solutions by Substitution*
 <!-- bilingual-en:end -->
 
 **(a)** $y=e^x/3$：
@@ -4146,7 +4190,7 @@ $$
 
 故满足 $4y''-y=e^x$。
 <!-- bilingual-en:start -->
-Therefore, $4y''-y=e^x$ is satisfied.
+Therefore, this function satisfies $4y''-y=e^x$.
 <!-- bilingual-en:end -->
 
 **(b)** $y=1/x$（$x\ne0$）：
@@ -4167,7 +4211,7 @@ Substitution checks the algebra and also exposes the domain restriction $x\ne0$.
 
 ### 易错点与边界
 <!-- bilingual-en:start -->
-*Fault-prone points and boundaries*
+*Boundary Cases and Common Pitfalls*
 <!-- bilingual-en:end -->
 
 - 通解是一族函数；初值才选择常数。
@@ -4175,9 +4219,9 @@ Substitution checks the algebra and also exposes the domain restriction $x\ne0$.
 - 除以 $g(y)$ 会丢掉 $g(y)=0$ 的平衡解。
 - 隐式解不必强行解出 $y$；强行开根号还可能漏分支。
 <!-- bilingual-en:start -->
-- General solutions are a family of functions; constants are selected for initial values.
-- The two-sided integration requires only one arbitrary constant, because $C_2-C_1$ is still an arbitrary constant.
-- Dividing by $g(y)$ will lose the equilibrium solution for $g(y)=0$.
+- A general solution is a family of functions; an initial condition selects the constant.
+- Integrating both sides requires only one arbitrary constant, because $C_2-C_1$ is still arbitrary.
+- Dividing by $g(y)$ can discard equilibrium solutions satisfying $g(y)=0$.
 - An implicit solution need not be solved explicitly for $y$; forcing a square root can also lose a branch.
 <!-- bilingual-en:end -->
 
@@ -4191,11 +4235,13 @@ Substitution checks the algebra and also exposes the domain restriction $x\ne0$.
 > 3. 初值 $y(0)=0$ 选出哪条解？
 > $A=0$，即 $y\equiv0$。
 > <!-- bilingual-en:start -->
-> 1. How to confirm the candidate function is the solution?
-> The required derivatives of the equation are obtained and replaced by the original equation. The equation is established point by point in its defined interval.
-> 2. Why can $A$ be negative and $e^C$ only positive?
-> Remove the positive and negative branches from $|y|=e^Ce^{-x^2/2}$ and incorporate the symbols into $A$.
-> 3. Which solution is selected by the initial $y(0)=0$?
+>
+> &nbsp;
+> **1.** How do you verify that a candidate function is a solution?<br>
+> Compute every derivative required by the equation and substitute them into the original equation, checking that it holds at every point of the proposed interval of definition.
+> **2.** Why can $A$ be negative and $e^C$ only positive?<br>
+> Split $|y|=e^Ce^{-x^2/2}$ into positive and negative branches, then absorb the sign into $A$.
+> **3.** Which solution is selected by the initial condition $y(0)=0$?<br>
 > $A=0$, or $y\equiv0$.
 > <!-- bilingual-en:end -->
 
@@ -4224,12 +4270,12 @@ Substitution checks the algebra and also exposes the domain restriction $x\ne0$.
 
 **前置：**Session 39 的一般框架、$\int dx/x$ 与隐式曲线。
 <!-- bilingual-en:start -->
-**Preamble: **Session 39's general frame, $\int dx/x$, and implicit curves.
+**Prerequisites:** The general framework from Session 39, $\int dx/x$, and implicit curves.
 <!-- bilingual-en:end -->
 
 ### 40a：最简单的[[导数的应用#微分方程与增长率|分离变量法]]
 <!-- bilingual-en:start -->
-*40a: Easiest [[导数的应用#微分方程与增长率|separation of variables method]]*
+*40a: The Simplest Case of [[导数的应用#微分方程与增长率|Separation of Variables]]*
 <!-- bilingual-en:end -->
 
 $$
@@ -4247,12 +4293,12 @@ This shows that ordinary antidifferentiation is a special case of separation of 
 
 ### 40b：切线斜率是径向斜率的两倍
 <!-- bilingual-en:start -->
-*40b: Tangent slope is twice radial slope*
+*40b: The Tangent Slope Is Twice the Radial Slope*
 <!-- bilingual-en:end -->
 
 点 $(x,y)$ 到原点的射线斜率为 $y/x$。条件给
 <!-- bilingual-en:start -->
-Point $(x,y)$ to the origin of the slope of the ray is $y/x$.  Condition to
+The ray from the origin to $(x,y)$ has slope $y/x$. The stated condition gives
 <!-- bilingual-en:end -->
 
 $$
@@ -4275,7 +4321,7 @@ $$
 
 指数化：
 <!-- bilingual-en:start -->
-Indexation:
+Exponentiating gives
 <!-- bilingual-en:end -->
 
 $$
@@ -4293,17 +4339,17 @@ $$
 
 代回 $y'=2Ax=2y/x$ 对 $x\ne0$ 成立。注意原方程在 $x=0$ 未规定斜率，因此穿过 $x=0$ 时可能把左右不同参数的抛物线拼接；这是奇点导致的非唯一性。
 <!-- bilingual-en:start -->
-Replacing $y'=2Ax=2y/x$ is true for $x\ne0$.  Note that the original equation does not prescribe a slope in $x=0$, so it is possible to stitch parabolas of different parameters of left and right when passing through $x=0$; this is non-uniqueness caused by singularities.
+Substitution verifies that $y'=2Ax=2y/x$ for $x\ne0$. Notice that the original equation does not prescribe a slope at $x=0$. A curve passing through $x=0$ may therefore splice together parabolas with different parameters on the left and right; this is nonuniqueness caused by the singular point.
 <!-- bilingual-en:end -->
 
 ### 40c：与抛物线正交的轨线
 <!-- bilingual-en:start -->
-*40c: Trace orthogonal to parabola*
+*40c: Trajectories Orthogonal to a Family of Parabolas*
 <!-- bilingual-en:end -->
 
 抛物线族 $y=ax^2$ 在点 $(x,y)$ 的斜率为 $2y/x$。正交曲线斜率取负倒数：
 <!-- bilingual-en:start -->
-The slope of the parabola family $y=ax^2$ at point $(x,y)$ is $2y/x$.  Negative reciprocal of slope of orthogonal curve:
+The family of parabolas $y=ax^2$ has slope $2y/x$ at $(x,y)$. An orthogonal trajectory must have the negative reciprocal slope:
 <!-- bilingual-en:end -->
 
 $$
@@ -4312,7 +4358,7 @@ $$
 
 分离并积分：
 <!-- bilingual-en:start -->
-Separate and Integrate:
+Separate and integrate:
 <!-- bilingual-en:end -->
 
 $$
@@ -4332,7 +4378,7 @@ $$
 
 $C>0$ 时是一族椭圆。写成显式分支
 <!-- bilingual-en:start -->
-$C>0$ is a family of ellipses.  Write as Explicit Branch
+For $C>0$, these curves form a family of ellipses. Written as explicit branches,
 <!-- bilingual-en:end -->
 
 $$
@@ -4341,17 +4387,17 @@ $$
 
 可看出顶、底半支分别是函数；在 $y=0$ 处有竖直切线，原斜率式分母也为零。
 <!-- bilingual-en:start -->
-It can be seen that the top and bottom half-branches are functions respectively, and there is a vertical tangent line at $y=0$, and the original slope denominator is also zero.
+the upper and lower halves are separate functions. At $y=0$ the ellipse has a vertical tangent, which is also where the denominator in the original slope formula vanishes.
 <!-- bilingual-en:end -->
 
 ### 配套练习：指数与受限增长
 <!-- bilingual-en:start -->
-*Complementary Exercise: Index and Limited Growth*
+*Supplementary Exercise: Exponential and Bounded Growth*
 <!-- bilingual-en:end -->
 
 **指数增长**
 <!-- bilingual-en:start -->
-** exponential growth **
+**Exponential growth**
 <!-- bilingual-en:end -->
 
 $$
@@ -4364,7 +4410,7 @@ $$
 
 **Logistic 型受限增长**
 <!-- bilingual-en:start -->
-**Logistic-type restricted growth **
+**Logistic-type bounded growth**
 <!-- bilingual-en:end -->
 
 $$
@@ -4373,7 +4419,7 @@ $$
 
 先记录平衡解 $y=0,s$。对其他解：
 <!-- bilingual-en:start -->
-Record the equilibrium solution $y=0,s$ first.  For other solutions:
+First record the equilibrium solutions $y=0$ and $y=s$. For all other solutions,
 <!-- bilingual-en:end -->
 
 $$
@@ -4382,7 +4428,7 @@ $$
 
 利用
 <!-- bilingual-en:start -->
-utilization
+use the identity
 <!-- bilingual-en:end -->
 
 $$
@@ -4391,7 +4437,7 @@ $$
 
 积分：
 <!-- bilingual-en:start -->
-Credits:
+Integrating gives
 <!-- bilingual-en:end -->
 
 $$
@@ -4400,7 +4446,7 @@ $$
 
 令指数常数为 $A$：
 <!-- bilingual-en:start -->
-Make the exponential constant $A$:
+After absorbing the exponential constant into $A$,
 <!-- bilingual-en:end -->
 
 $$
@@ -4409,7 +4455,7 @@ $$
 
 解出
 <!-- bilingual-en:start -->
-dissolve
+Solving for $y$ gives
 <!-- bilingual-en:end -->
 
 $$
@@ -4418,12 +4464,12 @@ $$
 
 对典型初值 $0<y_0<s$ 有 $A>0$，且 $x\to\infty$ 时 $y\to s$，与 $0<y<s$ 时 $y'>0$ 的符号分析相符。
 <!-- bilingual-en:start -->
-For the typical initial value of $0<y_0<s$ is $A>0$, and $y\to s$ when $x\to\infty$, which is consistent with the sign analysis of $y'>0$ when $0<y<s$.
+For a typical initial condition with $0<y_0<s$, we have $A>0$ and $y\to s$ as $x\to\infty$. This agrees with the sign analysis $y'>0$ whenever $0<y<s$.
 <!-- bilingual-en:end -->
 
 ### 易错点与边界
 <!-- bilingual-en:start -->
-*Fault-prone points and boundaries*
+*Boundary Cases and Common Pitfalls*
 <!-- bilingual-en:end -->
 
 - 负倒数斜率只适用于有限非零斜率；水平/竖直需单独解释。
@@ -4447,12 +4493,14 @@ For the typical initial value of $0<y_0<s$ is $A>0$, and $y\to s$ when $x\to\inf
 > 3. 正交曲线方程为何可保留隐式？
 > 椭圆整体不是单值函数，隐式式同时表示上下分支且更自然。
 > <!-- bilingual-en:start -->
-> 1. Is the zero solution of $y'=ky$ included in $Ae^{kx}$?
-> Contains, take $A=0$.
-> 2. The direction of the Logistic equation at $y>s$?
-> If $r>0$, $y(s-y)<0$, so $y$ down towards $s$.
-> 3. Why can orthogonal curve equations remain implicit?
-> The ellipse as a whole is not a single-valued function, implicitly representing both the upper and lower branches and more naturally.
+>
+> &nbsp;
+> **1.** Is the zero solution of $y'=ky$ included in $Ae^{kx}$?<br>
+> Yes; take $A=0$.
+> **2.** In which direction does a solution of the logistic equation move when $y>s$?<br>
+> If $r>0$, then $y(s-y)<0$, so $y$ decreases toward $s$.
+> **3.** Why is it natural to leave the equation of an orthogonal trajectory implicit?<br>
+> An entire ellipse is not the graph of a single-valued function. The implicit equation represents its upper and lower branches together.
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -4464,7 +4512,7 @@ For the typical initial value of $0<y_0<s$ is $A>0$, and $y\to s$ when $x\to\inf
 
 **知识链小结：**分离变量把斜率关系转为两个反导数的等式；平衡解、奇点和分支决定公式真正代表哪些曲线。
 <!-- bilingual-en:start -->
-**Knowledge chain summary:**Separation of variables transforms the slope relation into an equation of two antiderivatives; equilibrium solutions, singularities, and branches determine which curves the formula really represents.
+**Knowledge chain summary:** Separation of variables transforms a slope relation into an equation between two antiderivatives; equilibrium solutions, singularities, and branches determine which curves the resulting formula actually represents.
 <!-- bilingual-en:end -->
 
 ## Problem Set 5
@@ -4577,7 +4625,7 @@ For the typical initial value of $0<y_0<s$ is $A>0$, and $y\to s$ when $x\to\inf
 ### 3A：Differentials and Indefinite Integration
 
 <!-- bilingual-en:start -->
-*3A: Differentials and indefinite integration*
+*3A: Differentials and Indefinite Integration*
 <!-- bilingual-en:end -->
 > [!example]- 3A-1d、3A-1e：计算微分
 > **(d)** $f(x)=e^{3x}\sin x$。由乘积与链式法则：
@@ -4760,7 +4808,7 @@ For the typical initial value of $0<y_0<s$ is $A>0$, and $y\to s$ when $x\to\inf
 ### 3F：Differential Equations — Separation of Variables
 
 <!-- bilingual-en:start -->
-*3F: Differential equations—separation of variables*
+*3F: Differential Equations—Separation of Variables*
 <!-- bilingual-en:end -->
 > [!example]- 3F-1c：$y'=3/\sqrt y$
 > 方程要求 $y>0$。分离：
@@ -4994,7 +5042,7 @@ For the typical initial value of $0<y_0<s$ is $A>0$, and $y\to s$ when $x\to\inf
 
 ### Problem Set 5 错误检查
 <!-- bilingual-en:start -->
-*Problem Set 5 Bugcheck*
+*Problem Set 5: Error Checks*
 <!-- bilingual-en:end -->
 
 - MVT/Rolle 每次使用都要重新核对连续与可导区间。
@@ -5003,14 +5051,14 @@ For the typical initial value of $0<y_0<s$ is $A>0$, and $y\to s$ when $x\to\inf
 - 初值问题的常数、符号和定义域是答案的一部分，不是可省略的附注。
 <!-- bilingual-en:start -->
 - Whenever MVT or Rolle's theorem is used, recheck continuity on the closed interval and differentiability on its interior.
-- The anti-missile answer is a derivative test; this step identifies an official typographical error in 3A-2e.
-- Separate the equilibrium solution of the $g(y)=0$ in front of the variable, and then set the maximum interval.
-- The constants, symbols, and domains of the initial value question are part of the answer, not an omitted note.
+- Check an antiderivative by differentiating it; this step exposes the official typesetting error in 3A-2e.
+- List the equilibrium solutions satisfying $g(y)=0$ before separating variables, and determine the maximal interval after solving.
+- In an initial-value problem, the constant, sign, and domain are part of the answer rather than optional remarks.
 <!-- bilingual-en:end -->
 
 **本组小结：**PS5 把 MVT 的严谨推理、微分记号、反向链式法则和微分方程连成一条完整链：导数控制函数，反导数重建函数。
 <!-- bilingual-en:start -->
-**This group of summaries:**PS5 connects the rigorous reasoning of MVT, the differential notation, the inverse chain rule and the differential equation into a complete chain: the derivative control function, the inverse derivative reconstruction function.
+**Problem-set summary:** PS5 connects rigorous MVT arguments, differential notation, the chain rule in reverse, and differential equations into one chain: derivatives constrain functions, and antiderivatives reconstruct them.
 <!-- bilingual-en:end -->
 
 ---
@@ -5026,17 +5074,17 @@ For the typical initial value of $0<y_0<s$ is $A>0$, and $y\to s$ when $x\to\inf
 
 **问题：**如何在考试前把本章看似分散的方法压缩成少数稳定流程？
 <!-- bilingual-en:start -->
-** Question: ** How do I compress this chapter's seemingly decentralized approach into a few stable processes prior to the exam?
+**Question:** How can the chapter's apparently disparate methods be condensed into a few reliable workflows before the exam?
 <!-- bilingual-en:end -->
 
 **前置：**Session 23–40 全部内容，尤其是定义域与边界检查。
 <!-- bilingual-en:start -->
-** Preamble: **Session 23-40 All, especially domain and boundary checking.
+**Prerequisites:** All material from Sessions 23–40, especially domain and boundary checks.
 <!-- bilingual-en:end -->
 
 ### 41a：六类题的最短检查表
 <!-- bilingual-en:start -->
-*41a: Minimum checklist for six categories of questions*
+*41a: A Minimal Checklist for Six Types of Problem*
 <!-- bilingual-en:end -->
 
 1. **线性/二次近似**
@@ -5069,31 +5117,33 @@ For the typical initial value of $0<y_0<s$ is $A>0$, and $y\to s$ when $x\to\inf
    - 初值定常数；
    - 写最大定义区间。
 <!-- bilingual-en:start -->
-1. **Linear and quadratic approximation**
+
+&nbsp;
+**1.** **Linear and quadratic approximation**<br>
    - State the base point $a$ first.
    - Compute $f(a)$, $f'(a)$, and $f''(a)$.
    - Include the factor $1/2$ in the quadratic term.
    - In products of expansions, truncate by total degree.
-2. **Curve sketching**
+**2.** **Curve sketching**<br>
    - Determine the domain, discontinuities, endpoints, and behavior at infinity.
    - Use the sign of $f'$ and the critical points.
    - Use the sign of $f''$ and identify genuine inflection points.
    - Check intercepts and symmetry.
-3. **Optimization**
+**3.** **Optimization**<br>
    - Draw a diagram and choose variables.
    - Write the constraint, objective, and feasible domain.
    - Reduce the problem to one free variable.
    - Compare critical points, endpoints, and discontinuities.
-4. **Related rates**
+**4.** **Related rates**<br>
    - Write a relation that holds at every time.
    - Differentiate with respect to $t$.
    - Substitute the instantaneous values only afterward.
    - Report direction, units, and speed or magnitude.
-5. **MVT**
+**5.** **MVT**<br>
    - State the continuity and differentiability assumptions first.
    - Then write $f(b)-f(a)=f'(c)(b-a)$.
    - Finish the argument using the sign or bounds of the derivative.
-6. **Antiderivatives and differential equations**
+**6.** **Antiderivatives and differential equations**<br>
    - Differentiate the result to check it.
    - Look for equilibrium solutions before separation.
    - Use the initial condition to determine the constant.
@@ -5102,17 +5152,17 @@ For the typical initial value of $0<y_0<s$ is $A>0$, and $y\to s$ when $x\to\inf
 
 ### 贯穿全章的一个问题
 <!-- bilingual-en:start -->
-*a question that runs through the chapter*
+*One Question Running Through the Entire Chapter*
 <!-- bilingual-en:end -->
 
 本章所有方法都在回答：
 <!-- bilingual-en:start -->
-All methods in this chapter are answering:
+Every method in this chapter addresses the same question:
 <!-- bilingual-en:end -->
 
 > 已知函数的导数，能对函数本身说什么？
 > <!-- bilingual-en:start -->
-> What can be said about the function itself when the derivative of the function is known?
+> Given information about a function's derivative, what can we conclude about the function itself?
 > <!-- bilingual-en:end -->
 
 - $f'(a)$ 给局部直线；
@@ -5122,17 +5172,17 @@ All methods in this chapter are answering:
 - 反导数从全部斜率恢复函数；
 - 微分方程从变化规律选出函数族。
 <!-- bilingual-en:start -->
-- $f'(a)$ to local lines;
-- $f''(a)$ gives local curvature;
-- $f'$'s sign is monotonous;
-- MVT turns local slopes into global differences;
-- The inverse derivative recovers the function from the total slope;
-- Differential equations select a family of functions from the law of change.
+- $f'(a)$ gives a local linear model.
+- $f''(a)$ describes local curvature.
+- The sign of $f'$ determines monotonicity.
+- The MVT turns local slope information into bounds on finite changes.
+- Antidifferentiation recovers a function from its rate of change.
+- A differential equation selects a family of functions consistent with a law of change.
 <!-- bilingual-en:end -->
 
 ### 易错点与考试策略
 <!-- bilingual-en:start -->
-*False Points and Examination Strategies*
+*Common Pitfalls and Exam Strategy*
 <!-- bilingual-en:end -->
 
 - 先写结构再代数，避免在长计算中忘记定义域和所求量。
@@ -5154,13 +5204,15 @@ All methods in this chapter are answering:
 > 3. 哪两类题最适合用求导回验？
 > 不定积分和微分方程。
 > <!-- bilingual-en:start -->
-> 1. Which problems most often lose marks because endpoints were omitted?
+>
+> &nbsp;
+> **1.** Which problems most often lose marks because endpoints were omitted?<br>
 > Optimization and absolute-extremum problems.
 >
-> 2. In which problems must you “differentiate first, then substitute values”?
+> **2.** In which problems must you “differentiate first, then substitute values”?<br>
 > Related-rates problems.
 >
-> 3. Which two types of problem are especially well suited to checking by differentiation?
+> **3.** Which two types of problem are especially well suited to checking by differentiation?<br>
 > Indefinite integrals and differential equations.
 > <!-- bilingual-en:end -->
 
@@ -5170,7 +5222,7 @@ All methods in this chapter are answering:
 
 **知识链小结：**考试复习不是再记一遍公式，而是把每类题的输入、主步骤、边界检查和回验固定成流程。
 <!-- bilingual-en:start -->
-** Knowledge Chain Summary:**Examination review is not a one-time formula, but the input of each type of questions, the main steps, boundary check and feedback fixed into a process.
+**Knowledge chain summary:** Exam review is not another round of memorizing formulas. It means turning each type of problem into a stable workflow with known inputs, main steps, boundary checks, and a way to verify the result.
 <!-- bilingual-en:end -->
 
 ## Session 42：Materials for Exam 2
@@ -5205,7 +5257,7 @@ All methods in this chapter are answering:
 
 **(a)** 令二次多项式在 $a$ 匹配 $f,f',f''$：
 <!-- bilingual-en:start -->
-**(a)**Let the quadratic polynomial match $f,f',f''$ at $a$:
+**(a)** Let the quadratic polynomial match $f$, $f'$, and $f''$ at $a$:
 <!-- bilingual-en:end -->
 
 $$
@@ -5216,7 +5268,7 @@ $$
 
 **(b)** 取 $f(x)=\ln x,a=1$：
 <!-- bilingual-en:start -->
-** (b) **Take $f(x)=\ln x,a=1$:
+**(b)** Take $f(x)=\ln x$ and $a=1$:
 <!-- bilingual-en:end -->
 
 $$
@@ -5245,23 +5297,23 @@ The true value is approximately $0.18232$, giving an error of about $0.00232$; t
 > [!warning] 常见错误
 > 忘记 $f''(a)/2$ 的 $1/2$；把展开点错取为 $0$，而 $\ln0$ 无定义。
 > <!-- bilingual-en:start -->
-> Forget $f''(a)/2$'s $1/2$; misplace the expansion point as $0$, and $\ln0$ is undefined.
+> Common errors are omitting the factor $1/2$ in $f''(a)/2$, or expanding about $0$ even though $\ln0$ is undefined.
 > <!-- bilingual-en:end -->
 
 ### Exam 2 第 2 题：圆锥盐堆
 <!-- bilingual-en:start -->
-*Exam 2 Question 2: Conical salt stack*
+*Exam 2 Question 2: A Conical Pile of Salt*
 <!-- bilingual-en:end -->
 
 > [!example] 题目
 > 盐以 $30\ \mathrm{ft^3/min}$ 落下形成圆锥，圆锥高度始终等于底面直径。高为 $10$ ft 时，求高度增长率。
 > <!-- bilingual-en:start -->
-> Salt falls at $30\ \mathrm{ft^3/min}$ to form a cone, which is always the same height as the bottom diameter.  When the height is $10$ ft, the height growth rate is calculated.
+> Salt falls at $30\ \mathrm{ft^3/min}$ and forms a cone whose height always equals its base diameter. Find the rate at which the height is increasing when it reaches $10$ ft.
 > <!-- bilingual-en:end -->
 
 设半径 $r$、高 $h$。条件 $h=2r$，即 $r=h/2$。体积
 <!-- bilingual-en:start -->
-Set a radius of $r$ and a height of $h$.  The condition $h=2r$, or $r=h/2$.  volume
+Let $r$ be the radius and $h$ the height. The condition is $h=2r$, or $r=h/2$. The volume is
 <!-- bilingual-en:end -->
 
 $$
@@ -5282,7 +5334,7 @@ $$
 
 代入 $dV/dt=30,h=10$：
 <!-- bilingual-en:start -->
-Introduce $dV/dt=30,h=10$:
+Substitute $dV/dt=30$ and $h=10$:
 <!-- bilingual-en:end -->
 
 $$
@@ -5296,7 +5348,7 @@ $$
 > [!warning] 常见错误
 > 把“高度等于直径”写成 $h=r$；或在求导前把 $h=10$ 当成恒定值。
 > <!-- bilingual-en:start -->
-> Write "height equals diameter" as $h=r$; or consider $h=10$ as a constant value before deriving.
+> Do not translate “height equals diameter” as $h=r$, and do not treat $h=10$ as a constant before differentiating with respect to time.
 > <!-- bilingual-en:end -->
 
 ### Exam 2 第 3 题：$f(x)=x-3x^{1/3}$ 作图
@@ -5376,23 +5428,23 @@ Thus the local maximum is $\boxed{(-1,2)}$ and the local minimum is $\boxed{(1,-
 > [!warning] 官方勘误
 > 本地官方解答文字把局部最大点写成了 $(1,2)$；由函数值与奇对称性可确认应为 $\boxed{(-1,2)}$。
 > <!-- bilingual-en:start -->
-> The local official answer is written as $(1,2)$; the value of the function and the odd symmetry confirm that it should be $\boxed{(-1,2)}$.
+> The local copy of the official solution gives the local maximum as $(1,2)$. Direct evaluation and odd symmetry confirm that it should be $\boxed{(-1,2)}$.
 > <!-- bilingual-en:end -->
 
 ### Exam 2 第 4 题：圆柱加半球顶储罐
 <!-- bilingual-en:start -->
-*Exam 2 Question 4: Cylindrical plus hemispherical top tanks*
+*Exam 2 Question 4: A Cylindrical Tank with a Hemispherical Top*
 <!-- bilingual-en:end -->
 
 > [!example] 题目
 > 圆柱有底、上接半球顶，固定体积 $V$；求耗金属最少的尺寸。
 > <!-- bilingual-en:start -->
-> The cylinder has a bottom and an upper hemispherical top, and the fixed volume is $V$; and the dimension which consumes the least metal is calculated.
+> A tank consists of a cylinder with a bottom and a hemispherical top. Its volume is fixed at $V$; find the dimensions that use the least metal.
 > <!-- bilingual-en:end -->
 
 设共同半径 $r>0$，圆柱部分高 $h\ge0$。体积：
 <!-- bilingual-en:start -->
-A common radius of $r>0$ is set, and the height of the cylindrical part is $h\ge0$.  Volume:
+Let the common radius be $r>0$, and let the height of the cylindrical portion be $h\ge0$. The volume is
 <!-- bilingual-en:end -->
 
 $$
@@ -5401,7 +5453,7 @@ $$
 
 外表面积包含圆柱底、圆柱侧面、半球曲面：
 <!-- bilingual-en:start -->
-The outer surface area includes the bottom of the cylinder, the side of the cylinder, the hemispherical surface:
+The exterior surface area consists of the circular base, the cylindrical side, and the curved surface of the hemisphere:
 <!-- bilingual-en:end -->
 
 $$
@@ -5411,7 +5463,7 @@ $$
 
 由体积约束
 <!-- bilingual-en:start -->
-Constrained by Volume
+The volume constraint gives
 <!-- bilingual-en:end -->
 
 $$
@@ -5446,7 +5498,7 @@ $$
 
 由 $V=\frac53\pi r^3$ 回代：
 <!-- bilingual-en:start -->
-Generated by $V=\frac53\pi r^3$:
+Substitute $V=\frac53\pi r^3$ back into the constraint:
 <!-- bilingual-en:end -->
 
 $$
@@ -5464,7 +5516,7 @@ $$
 
 并且
 <!-- bilingual-en:start -->
-and
+Moreover,
 <!-- bilingual-en:end -->
 
 $$
@@ -5479,18 +5531,18 @@ Therefore, $S$ is strictly convex and the only feasible critical point is the gl
 > [!warning] 常见错误
 > 漏算底面积或把半球曲面写成 $4\pi r^2$；求出 $r$ 后忘记回答 $h$。
 > <!-- bilingual-en:start -->
-> We can omit the bottom area or write the hemispherical surface as $4\pi r^2$; we can't answer $h$ when we get $r$.
+> Common errors are omitting the base area, using $4\pi r^2$ for the curved surface of a hemisphere, or finding $r$ but failing to report $h$.
 > <!-- bilingual-en:end -->
 
 ### Exam 2 第 5 题：Newton 法为什么失败
 <!-- bilingual-en:start -->
-*Exam 2 Question 5: Why Newton failed*
+*Exam 2 Question 5: Why Newton's Method Fails*
 <!-- bilingual-en:end -->
 
 > [!example] 题目
 > $f(x)=x^3-3x+7$，初值 $x_1=2$，解释为何迭代最终失败。
 > <!-- bilingual-en:start -->
-> $f(x)=x^3-3x+7$, the initial value $x_1=2$, explains why the iteration ultimately fails.
+> For $f(x)=x^3-3x+7$ with initial guess $x_1=2$, explain why Newton's iteration eventually fails.
 > <!-- bilingual-en:end -->
 
 $$
@@ -5499,7 +5551,7 @@ $$
 
 第一步：
 <!-- bilingual-en:start -->
-Step 1:
+The first step is
 <!-- bilingual-en:end -->
 
 $$
@@ -5512,7 +5564,7 @@ $$
 
 但
 <!-- bilingual-en:start -->
-but
+However,
 <!-- bilingual-en:end -->
 
 $$
@@ -5521,7 +5573,7 @@ $$
 
 所以下一步
 <!-- bilingual-en:start -->
-so next step
+so the next step would be
 <!-- bilingual-en:end -->
 
 $$
@@ -5530,7 +5582,7 @@ $$
 
 分母为零而无定义。几何上，$(1,5)$ 处切线水平，不与 $x$ 轴相交，无法产生下一猜测。
 <!-- bilingual-en:start -->
-The denominator is zero and has no definition.  Geometrically, the tangent at $(1,5)$ is horizontal and does not intersect the $x$ axis to produce the next guess.
+This expression is undefined because its denominator is zero. Geometrically, the tangent at $(1,5)$ is horizontal and therefore never meets the $x$-axis, so it cannot produce a next guess.
 <!-- bilingual-en:end -->
 
 $$
@@ -5540,7 +5592,7 @@ $$
 > [!warning] 常见错误
 > 只说“除以零”而没有展示哪一步到达该点；或误以为 $f'(1)=0$ 表示 $x=1$ 是方程的根。
 > <!-- bilingual-en:start -->
-> Just say "divide by zero" without showing which step reaches the point; or mistakenly assume that $f'(1)=0$ means $x=1$ is the root of the equation.
+> Do not merely say “division by zero” without showing which iteration reaches the problematic point, and do not mistake $f'(1)=0$ for evidence that $x=1$ is a root of $f$.
 > <!-- bilingual-en:end -->
 
 ### Exam 2 第 6 题：用 MVT 证明平方根不等式
@@ -5562,7 +5614,7 @@ $$
 
 令
 <!-- bilingual-en:start -->
-order
+Let
 <!-- bilingual-en:end -->
 
 $$
@@ -5571,7 +5623,7 @@ $$
 
 $g$ 在 $[0,x]$ 连续、在 $(0,x)$ 可导，且
 <!-- bilingual-en:start -->
-$g$ is continuous at $[0,x]$, differentiable at $(0,x)$, and
+$g$ is continuous on $[0,x]$, differentiable on $(0,x)$, and
 <!-- bilingual-en:end -->
 
 $$
@@ -5598,7 +5650,7 @@ $$
 
 故 $g'(t)>0$。MVT 的单调性推论给 $g(x)>g(0)=0$，即
 <!-- bilingual-en:start -->
-So, $g'(t)>0$.  The monotonicity of MVT is inferred to $g(x)>g(0)=0$, i.e.
+Thus $g'(t)>0$. The monotonicity consequence of the MVT gives $g(x)>g(0)=0$, so
 <!-- bilingual-en:end -->
 
 $$
@@ -5607,13 +5659,13 @@ $$
 
 也可直接对 $\sqrt{1+t}$ 在 $[0,x]$ 应用 MVT，得到同一证明。
 <!-- bilingual-en:start -->
-The same proof can also be obtained by applying MVT directly to $\sqrt{1+t}$ in $[0,x]$.
+The same result follows by applying the MVT directly to $\sqrt{1+t}$ on $[0,x]$.
 <!-- bilingual-en:end -->
 
 > [!warning] 常见错误
 > 用“图上看切线在曲线上方”代替证明；正确逻辑需要由导数符号或凹性定理推出。
 > <!-- bilingual-en:start -->
-> Instead of proving, "see tangent above curve on graph"; the correct logic needs to be deduced from the derivative sign or the concave theorem.
+> A picture suggesting that the tangent lies above the curve is not a proof; the conclusion must follow from the sign of a derivative or from a theorem about concavity.
 > <!-- bilingual-en:end -->
 
 ### Exam 2 总结与错误诊断
@@ -5632,16 +5684,16 @@ The same proof can also be obtained by applying MVT directly to $\sqrt{1+t}$ in 
 
 ### 易错点与边界
 <!-- bilingual-en:start -->
-*Fault-prone points and boundaries*
+*Boundary Cases and Common Pitfalls*
 <!-- bilingual-en:end -->
 
 - 计算正确但不回答单位、位置或全部尺寸，仍是不完整答案。
 - 图像题的 $f'$ 不存在点与优化题的可行边界都必须主动加入候选。
 - 使用官方答案时也应回验；本卷第 3 题的极大点文字确有笔误。
 <!-- bilingual-en:start -->
-- Calculate correctly without answering units, positions, or all dimensions, and remain incomplete.
-- The $f'$ dots of the image problem and the feasible boundary of the optimization problem must be actively added candidates.
-- Use of official answers should also be checked; the maximalist wording of question 3 of this volume is incorrect.
+- A numerically correct calculation is still incomplete if it omits units, locations, or some of the requested dimensions.
+- Points where $f'$ does not exist in a graphing problem, and feasible boundary points in an optimization problem, must be included among the candidates.
+- Official solutions should also be checked: the stated local maximum in Question 3 contains a genuine typographical error.
 <!-- bilingual-en:end -->
 
 > [!question]- 三道综合自检与答案
@@ -5654,12 +5706,14 @@ The same proof can also be obtained by applying MVT directly to $\sqrt{1+t}$ in 
 > 3. 第 6 题为何是严格小于而非小于等于？
 > $x>0$ 时区间内部 $g'(t)>0$，故 $g(x)>g(0)$；只有 $x=0$ 取等。
 > <!-- bilingual-en:start -->
-> 1. Question 2 How does the high growth rate change if the salt inflow rate doubles?
-> Linear doubling at the same height, because $h'$ is proportional to $V'$.
-> 2. In Question 4, is the total height of the hemisphere equal to $r$?
+>
+> &nbsp;
+> **1.** In Question 2, what happens to the rate of increase of the height if the salt inflow rate doubles?<br>
+> It doubles at the same height, because $h'$ is proportional to $V'$.
+> **2.** In Question 4, is the total height of the tank equal to $r$?<br>
 > No; $h=r$ refers to the height of the cylindrical portion and the total tank height is $h+r=2r$.
-> 3. Why is Question 6 strictly less than, not less than or equal to?
-> $x>0$ is $g'(t)>0$ inside the interval, so $g(x)>g(0)$; only $x=0$ is equal.
+> **3.** Why does Question 6 give a strict inequality rather than a non-strict one?<br>
+> For $x>0$, we have $g'(t)>0$ throughout the interior of the interval, so $g(x)>g(0)$; equality occurs only at $x=0$.
 > <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -5705,10 +5759,10 @@ $$
 - [ ] 我能完整写出 MVT 的闭区间连续、开区间可导和 $c\in(a,b)$。
 - [ ] 我会对不定积分和微分方程解求导回验，并补回平衡解、定义区间。
 <!-- bilingual-en:start -->
-- [ ] I can explain which derivatives are matched by linearization, quadratic approximation and not just by formulae.
+- [ ] I can explain which derivatives linearization and quadratic approximation match, rather than merely applying the formulas.
 - [ ] When sketching a graph, I always write the domain first and distinguish among critical points, discontinuities, and genuine inflection points.
-- [ ] I compare endpoints when doing optimization; I derive descendants when doing related rate of change.
-- [ ] I can deduce the Newton formula from the tangent equation and identify the failure of the $f'=0$.
+- [ ] I compare endpoints in optimization problems; in related-rates problems, I differentiate before substituting instantaneous values.
+- [ ] I can derive Newton's formula from the tangent-line equation and recognize failure when $f'=0$.
 - [ ] I can state the MVT completely: continuity on the closed interval, differentiability on the open interval, and $c\in(a,b)$.
-- [ ] I will do derivative tests on the solutions of indefinite integrals and differential equations, and replenish the equilibrium solutions and define the intervals.
+- [ ] I check indefinite integrals and differential-equation solutions by differentiation, restore any omitted equilibrium solutions, and state the relevant intervals of definition.
 <!-- bilingual-en:end -->

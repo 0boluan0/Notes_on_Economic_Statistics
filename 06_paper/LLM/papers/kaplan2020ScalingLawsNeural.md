@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `02 规模化与模型家族`，第一版用于连接 Scaling Law 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[规模化、MoE 与分布式训练]]
+规模化、MoE 与分布式训练
 
 ## 来源
 - [Zotero item](zotero://select/library/items/U3GUCWSX)

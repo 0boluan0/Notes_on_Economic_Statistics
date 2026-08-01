@@ -24,10 +24,12 @@ Principal component analysis is mainly used to:
 3. 发现主要变异方向。
 4. 在变量高度相关时构造互不相关的新指标。
 <!-- bilingual-en:start -->
-1. Reduce the dimensionality of data.
-2. Explain most variation with a small number of linear combinations.
-3. Discover the main directions of variation.
-4. Construct uncorrelated new indices when the original variables are highly correlated.
+
+&nbsp;
+**1.** Reduce the dimensionality of data.<br>
+**2.** Explain most variation with a small number of linear combinations.<br>
+**3.** Discover the main directions of variation.<br>
+**4.** Construct uncorrelated new indices when the original variables are highly correlated.<br>
 <!-- bilingual-en:end -->
 
 >[!note] 一句话
@@ -195,9 +197,11 @@ Common criteria include:
 2. 碎石图出现明显拐点。
 3. 保留后的主成分仍有可解释意义。
 <!-- bilingual-en:start -->
-1. The cumulative explained variance reaches a target threshold.
-2. The scree plot has a clear elbow.
-3. The retained components remain interpretable.
+
+&nbsp;
+**1.** The cumulative explained variance reaches a target threshold.<br>
+**2.** The scree plot has a clear elbow.<br>
+**3.** The retained components remain interpretable.<br>
 <!-- bilingual-en:end -->
 
 >[!attention] 不要机械化

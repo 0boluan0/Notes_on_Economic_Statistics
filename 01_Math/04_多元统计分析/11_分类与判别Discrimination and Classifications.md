@@ -27,8 +27,10 @@ The main objectives are to:
 1. 用图形或代数方法描述组间差异。
 2. 将观测分为两个或多个标记类别。
 <!-- bilingual-en:start -->
-1. Describe differences among groups graphically or algebraically.
-2. Classify observations into two or more labelled categories.
+
+&nbsp;
+**1.** Describe differences among groups graphically or algebraically.<br>
+**2.** Classify observations into two or more labelled categories.<br>
 <!-- bilingual-en:end -->
 
 术语区分：
@@ -87,9 +89,11 @@ Typical examples include:
 2. 误分类成本：$c(2|1),c(1|2)$。
 3. 条件密度函数：$f_1(x),f_2(x)$。
 <!-- bilingual-en:start -->
-1. Prior probabilities: $P_1,P_2$.
-2. Misclassification costs: $c(2|1),c(1|2)$.
-3. Conditional density functions: $f_1(x),f_2(x)$.
+
+&nbsp;
+**1.** Prior probabilities: $P_1,P_2$.<br>
+**2.** Misclassification costs: $c(2|1),c(1|2)$.<br>
+**3.** Conditional density functions: $f_1(x),f_2(x)$.<br>
 <!-- bilingual-en:end -->
 
 ### 1.3.2. 分类区域
@@ -287,10 +291,12 @@ AER estimates the true error rate from sample classifications. Training-set AER 
 3. 分类被移除的观测。
 4. 对所有观测重复并汇总错分次数。
 <!-- bilingual-en:start -->
-1. Remove one observation at a time.
-2. Build the classifier from the remaining sample.
-3. Classify the omitted observation.
-4. Repeat for every observation and total the misclassifications.
+
+&nbsp;
+**1.** Remove one observation at a time.<br>
+**2.** Build the classifier from the remaining sample.<br>
+**3.** Classify the omitted observation.<br>
+**4.** Repeat for every observation and total the misclassifications.<br>
 <!-- bilingual-en:end -->
 
 条件误分类概率可估计为

@@ -48,9 +48,11 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 > 2. 隐式曲线的水平切线检查哪一项？答案：在 $F_y\ne0$ 时检查 $F_x=0$，因为 $y'=-F_x/F_y$。
 > 3. 七阶三角导数如何防止符号错位？答案：同时追踪 $2^7$ 与四阶函数循环。
 > <!-- bilingual-en:start -->
-> 1. When may a factor tending to zero be canceled in a difference quotient? Answer: simplify algebraically on a punctured neighborhood first, then take the limit.
-> 2. What condition identifies a horizontal tangent on an implicit curve? Answer: when $F_y\ne0$, check $F_x=0$, since $y'=-F_x/F_y$.
-> 3. How can you avoid a sign error in a seventh trigonometric derivative? Answer: track both the factor $2^7$ and the four-derivative function cycle.
+>
+> &nbsp;
+> **1.** When may a factor tending to zero be canceled in a difference quotient? Answer: simplify algebraically on a punctured neighborhood first, then take the limit.<br>
+> **2.** What condition identifies a horizontal tangent on an implicit curve? Answer: when $F_y\ne0$, check $F_x=0$, since $y'=-F_x/F_y$.<br>
+> **3.** How can you avoid a sign error in a seventh trigonometric derivative? Answer: track both the factor $2^7$ and the four-derivative function cycle.<br>
 > <!-- bilingual-en:end -->
 
 ### Unit 2：Applications of Differentiation
@@ -71,9 +73,11 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 > 2. 相关变化率为何必须最后代瞬时数值？答案：变量在整个过程中变化，提前代值会把变量误当常数。
 > 3. MVT 的两个正则性假设？答案：闭区间连续、开区间可导。
 > <!-- bilingual-en:start -->
-> 1. After finding $A'=0$ in an optimization problem, what is still missing? Answer: the feasible domain, endpoints or limiting behavior, and a check of global optimality.
-> 2. Why must numerical values in a related-rates problem be substituted only after differentiating? Answer: the variables change throughout the process; substituting too early incorrectly treats them as constants.
-> 3. What are the two regularity assumptions for the MVT? Answer: continuity on the closed interval and differentiability on the open interval.
+>
+> &nbsp;
+> **1.** After finding $A'=0$ in an optimization problem, what is still missing? Answer: the feasible domain, endpoints or limiting behavior, and a check of global optimality.<br>
+> **2.** Why must numerical values in a related-rates problem be substituted only after differentiating? Answer: the variables change throughout the process; substituting too early incorrectly treats them as constants.<br>
+> **3.** What are the two regularity assumptions for the MVT? Answer: continuity on the closed interval and differentiability on the open interval.<br>
 > <!-- bilingual-en:end -->
 
 ### Unit 3：Definite Integrals
@@ -92,9 +96,11 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 > 2. $\frac1h\int_a^{a+h}f$ 在 $h\to0$ 时趋于什么？答案：若 $f$ 在 $a$ 连续，则趋于 $f(a)$。
 > 3. 两个梯形需要几个等距节点？答案：三个。
 > <!-- bilingual-en:start -->
-> 1. How do you identify $\Delta x$ in a sum? Answer: find the common small width multiplying each summand.
-> 2. What does $\frac1h\int_a^{a+h}f$ approach as $h\to0$? Answer: if $f$ is continuous at $a$, it approaches $f(a)$.
-> 3. How many equally spaced nodes are required for two trapezoids? Answer: three.
+>
+> &nbsp;
+> **1.** How do you identify $\Delta x$ in a sum? Answer: find the common small width multiplying each summand.<br>
+> **2.** What does $\frac1h\int_a^{a+h}f$ approach as $h\to0$? Answer: if $f$ is continuous at $a$, it approaches $f(a)$.<br>
+> **3.** How many equally spaced nodes are required for two trapezoids? Answer: three.<br>
 > <!-- bilingual-en:end -->
 
 ### Unit 4：Techniques of Integration
@@ -113,9 +119,11 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 > 2. 分部积分如何回验？答案：对结果求导，确认边界项与剩余积分的符号。
 > 3. 参数曲线弧长为何用速度大小？答案：长度累积的是位移向量的欧氏范数，不能让方向相消。
 > <!-- bilingual-en:start -->
-> 1. What substitution is preferred for $\sqrt{a^2-x^2}$? Answer: use $x=a\sin\theta$ on the appropriate real interval.
-> 2. How can an integration-by-parts result be checked? Answer: differentiate the result and verify the signs of the boundary term and remaining integral.
-> 3. Why does the arc length of a parametric curve use speed? Answer: length accumulates the Euclidean norm of displacement, so opposite directions cannot cancel.
+>
+> &nbsp;
+> **1.** What substitution is preferred for $\sqrt{a^2-x^2}$? Answer: use $x=a\sin\theta$ on the appropriate real interval.<br>
+> **2.** How can an integration-by-parts result be checked? Answer: differentiate the result and verify the signs of the boundary term and remaining integral.<br>
+> **3.** Why does the arc length of a parametric curve use speed? Answer: length accumulates the Euclidean norm of displacement, so opposite directions cannot cancel.<br>
 > <!-- bilingual-en:end -->
 
 ### Unit 5：Exploring the Infinite
@@ -132,9 +140,11 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 > 2. Taylor 不等式的 $M$ 应在哪个区间取？答案：只需覆盖展开点与目标点之间的区间。
 > 3. 交错级数的首项误差界是什么？答案：不超过第一个被省略项的绝对值。
 > <!-- bilingual-en:start -->
-> 1. After the ratio test gives $|x|<R$, what remains to be done? Answer: test the two endpoints separately.
-> 2. Over what interval should $M$ be chosen in Taylor's inequality? Answer: only an interval containing both the expansion point and the target point is required.
-> 3. What is the first-omitted-term error bound for an alternating series? Answer: the error is no larger than the absolute value of the first omitted term.
+>
+> &nbsp;
+> **1.** After the ratio test gives $|x|<R$, what remains to be done? Answer: test the two endpoints separately.<br>
+> **2.** Over what interval should $M$ be chosen in Taylor's inequality? Answer: only an interval containing both the expansion point and the target point is required.<br>
+> **3.** What is the first-omitted-term error bound for an alternating series? Answer: the error is no larger than the absolute value of the first omitted term.<br>
 > <!-- bilingual-en:end -->
 
 ---
@@ -1193,12 +1203,14 @@ $$
 7. 相关变化率明确符号方向；
 8. 微分方程必须带初值并检查指数无量纲。
 <!-- bilingual-en:start -->
-1. In derivative problems, check every chain-rule factor.
-2. When substituting in a definite integral, transform the limits at the same time.
-3. Area and volume must be nonnegative and have the correct units.
-4. For limits, first look for a derivative or Riemann-sum form before considering L'Hôpital's rule.
-5. In optimization, explain why the critical point is a minimum.
-6. Check series endpoints and remainders separately.
-7. State the sign convention and direction explicitly in related-rates problems.
-8. A differential-equation solution must include the initial condition, and its exponent must be dimensionless.
+
+&nbsp;
+**1.** In derivative problems, check every chain-rule factor.<br>
+**2.** When substituting in a definite integral, transform the limits at the same time.<br>
+**3.** Area and volume must be nonnegative and have the correct units.<br>
+**4.** For limits, first look for a derivative or Riemann-sum form before considering L'Hôpital's rule.<br>
+**5.** In optimization, explain why the critical point is a minimum.<br>
+**6.** Check series endpoints and remainders separately.<br>
+**7.** State the sign convention and direction explicitly in related-rates problems.<br>
+**8.** A differential-equation solution must include the initial condition, and its exponent must be dimensionless.<br>
 <!-- bilingual-en:end -->

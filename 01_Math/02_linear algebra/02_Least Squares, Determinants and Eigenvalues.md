@@ -16,7 +16,7 @@ tags:
 > 本文按 MIT 18.06SC Fall 2011 官方顺序组织：Session 2.1–2.11 → Session 2.12 Exam Review → Exam 2。正文自足；PDF 用于核对原材料，而不是理解正文的前提。
 > <!-- bilingual-en:start -->
 > Unit II develops three connected themes. First, **orthogonality** turns an inconsistent system $Ax=b$ into a uniquely defined best approximation. Second, the **determinant** tests invertibility and measures oriented volume. Third, **eigenvectors** identify directions that a matrix does not rotate, making matrix powers, matrix exponentials, and long-run behavior easier to compute.
-> This article is organized in the official order MIT 18.06SC Fall 2011: Session 2.1-2.11 → Session 2.12 Exam Review → Exam 2.  Body self-sufficiency; PDFs are used to check raw materials, not to understand the body.
+> This note follows the official MIT 18.06SC Fall 2011 order: Sessions 2.1–2.11 → Session 2.12 Exam Review → Exam 2. The body is designed to stand on its own; the PDFs serve as source material for verification rather than as required reading.
 > <!-- bilingual-en:end -->
 
 ## 记号、空间与尺寸约定
@@ -34,7 +34,7 @@ tags:
 - $C(A)\subseteq\mathbb R^m$ is column space and $C(A^T)\subseteq\mathbb R^n$ is row space; $N(A)\subseteq\mathbb R^n$, $N(A^T)\subseteq\mathbb R^m$.
 - $x^Ty$ is the Euclidean inner product and $\|x\|=\sqrt{x^Tx}$. When complex vectors appear later in the unit, the inner product must be written as $x^*y$.
 - $I_m$ denotes the $m\times m$ identity matrix; write simply $I$ when its size is unambiguous.
-- $\hat x$ for the least squares solution, $p=A\hat x$ for the projection, and $e=b-p$ for the residual.
+- $\hat x$ denotes the least-squares solution, $p=A\hat x$ the projection, and $e=b-p$ the residual.
 <!-- bilingual-en:end -->
 
 ## Session 导航
@@ -59,7 +59,7 @@ tags:
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 本节回答三个问题：怎样把“垂直”推广到任意维；四个基本子空间为什么成对正交；为什么 $A^TA$ 可逆恰好等价于 $A$ 的列向量线性无关。
@@ -80,7 +80,7 @@ The prerequisites are the four fundamental subspaces, the rank–nullity theorem
 
 ### Lecture：从正交向量到四个基本子空间
 <!-- bilingual-en:start -->
-*Lecture: From Orthogonal Vector to Four Basic Subspaces*
+*Lecture: from orthogonal vectors to the four fundamental subspaces*
 <!-- bilingual-en:end -->
 
 两个向量 $x,y\in\mathbb R^n$ 的[[正交投影与最小二乘#正交补与最近点|正交性（orthogonality）]]定义为
@@ -150,12 +150,12 @@ $$
 
 #### 四个基本子空间的两对正交关系
 <!-- bilingual-en:start -->
-*Two-pair Orthogonal Relations of Four Basic Subspaces*
+*The two orthogonal pairs among the four fundamental subspaces*
 <!-- bilingual-en:end -->
 
 设 $A$ 的行向量为 $r_1^T,\dots,r_m^T$。若 $x\in N(A)$，则
 <!-- bilingual-en:start -->
-Let $A$'s row vector be $r_1^T,\dots,r_m^T$.  If $x\in N(A)$,
+Let the rows of $A$ be $r_1^T,\dots,r_m^T$. If $x\in N(A)$,
 <!-- bilingual-en:end -->
 
 $$
@@ -191,7 +191,7 @@ $$
 
 两者维数相加为 $n$。因此它们不仅正交，而且互为正交补：
 <!-- bilingual-en:start -->
-The sum of the two dimensions is $n$.  So they are not only orthogonal, but also complementary to each other:
+Their dimensions sum to $n$, so the two subspaces are not merely orthogonal; they are orthogonal complements:
 <!-- bilingual-en:end -->
 
 $$
@@ -209,14 +209,14 @@ $$
 
 唯一性证明：若 $v=r_1+n_1=r_2+n_2$，则 $r_1-r_2=n_2-n_1$ 同时属于两个正交补；它与自身正交，只能是零向量，故 $r_1=r_2,n_1=n_2$。
 <!-- bilingual-en:start -->
-The uniqueness proof is that if $v=r_1+n_1=r_2+n_2$, $r_1-r_2=n_2-n_1$ belongs to two orthogonal complements at the same time; it is orthogonal to itself and can only be a zero vector, so $r_1=r_2,n_1=n_2$.
+To prove uniqueness, suppose $v=r_1+n_1=r_2+n_2$. Then $r_1-r_2=n_2-n_1$ lies in both orthogonal-complementary subspaces. It is therefore orthogonal to itself and must be zero, so $r_1=r_2$ and $n_1=n_2$.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit2-orthogonal-complements.png|760]]
 
 #### 为什么 $N(A^TA)=N(A)$
 <!-- bilingual-en:start -->
-*Why, $N(A^TA)=N(A)$*
+*Why $N(A^TA)=N(A)$*
 <!-- bilingual-en:end -->
 
 > [!note] 定理
@@ -231,7 +231,7 @@ The uniqueness proof is that if $v=r_1+n_1=r_2+n_2$, $r_1-r_2=n_2-n_1$ belongs t
 
 **第一方向。** 若 $Ax=0$，左乘 $A^T$ 得 $A^TAx=0$，所以 $N(A)\subseteq N(A^TA)$。
 <!-- bilingual-en:start -->
-**First direction.**If $Ax=0$, take $A^T$ on the left to get $A^TAx=0$, so $N(A)\subseteq N(A^TA)$.
+**First direction.** If $Ax=0$, left-multiply by $A^T$ to obtain $A^TAx=0$, so $N(A)\subseteq N(A^TA)$.
 <!-- bilingual-en:end -->
 
 **反方向。** 若 $A^TAx=0$，左乘 $x^T$：
@@ -255,7 +255,7 @@ Because $A^TA$ is an $n\times n$ square matrix, it is invertible exactly when $N
 
 ### Recitation：求 $S^\perp$ 并证明正交分解唯一
 <!-- bilingual-en:start -->
-*Recitation: Finding $S^\perp$ and Proving the Uniqueness of Orthogonal Decomposition*
+*Recitation: finding $S^\perp$ and proving uniqueness of the orthogonal decomposition*
 <!-- bilingual-en:end -->
 
 令
@@ -333,14 +333,14 @@ The two vectors in parentheses therefore form a basis for $S^\perp$. The origina
 > Given nonzero vectors $r,n,c,\ell\in\mathbb R^2$, under what conditions can they serve as bases for $C(A^T),N(A),C(A),N(A^T)$, respectively? Construct such a matrix $A$ when the conditions hold.
 > **Solution.** The necessary conditions are
 > $$r^Tn=0,\qquad c^T\ell=0.$$
-> The four vectors are all non-zero, so the four spaces are all one-dimensional, and the dimensionality condition is automatically satisfied.
+> The four vectors are all nonzero, so all four prescribed spaces are one-dimensional and the dimension requirements are automatically satisfied.
 > $$A=cr^T.$$
 > Every column of $A$ is a multiple of $c$, so $C(A)=\operatorname{span}(c)$; every row is a multiple of $r^T$, so $C(A^T)=\operatorname{span}(r)$. Since each nullspace is the orthogonal complement of the corresponding row or column space, the prescribed vectors $n$ and $\ell$ span them. Any nonzero scalar multiple $\alpha cr^T$ also works.
 > <!-- bilingual-en:end -->
 
 ### 边界、反例与易错点
 <!-- bilingual-en:start -->
-*Boundaries, Counterexamples and Errors*
+*Boundaries, counterexamples, and common errors*
 <!-- bilingual-en:end -->
 
 - $S\perp T$ 强于 $S\cap T=\{0\}$；两条不垂直但不同的直线交集也是 $\{0\}$。
@@ -362,29 +362,29 @@ The two vectors in parentheses therefore form a basis for $S^\perp$. The origina
 > [!question]- 1. 若 $A\in\mathbb R^{7\times4}$ 且 $\operatorname{rank}(A)=3$，四个基本子空间的维数分别是多少？
 > $\dim C(A)=\dim C(A^T)=3$，$\dim N(A)=4-3=1$，$\dim N(A^T)=7-3=4$。
 > <!-- bilingual-en:start -->
-> $\dim C(A)=\dim C(A^T)=3$,$\dim N(A)=4-3=1$,$\dim N(A^T)=7-3=4$.
+> $\dim C(A)=\dim C(A^T)=3$, $\dim N(A)=4-3=1$, and $\dim N(A^T)=7-3=4$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 2. 证明 $C(A^T)\cap N(A)=\{0\}$。
 > 设 $z$ 同时属于两空间。因为二者正交，$z^Tz=0$，所以 $z=0$。
 > <!-- bilingual-en:start -->
-> Let $z$ belong to both spaces.  Because they're orthogonal, $z^Tz=0$, $z=0$.
+> Let $z$ belong to both spaces. Since the spaces are orthogonal, $z$ is orthogonal to itself, so $z^Tz=0$ and hence $z=0$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 3. 若 $A\in\mathbb R^{3\times5}$，$A^TA$ 能否可逆？
 > 不能。五个列向量位于 $\mathbb R^3$，不可能线性无关，所以 $N(A)\ne\{0\}$；由 $N(A^TA)=N(A)$，$A^TA$ 奇异。
 > <!-- bilingual-en:start -->
-> No.  The five column vectors are located at $\mathbb R^3$ and cannot be linearly independent, so $N(A)\ne\{0\}$; by $N(A^TA)=N(A)$, $A^TA$ is singular.
+> No. Five columns in $\mathbb R^3$ cannot be linearly independent, so $N(A)\ne\{0\}$. Since $N(A^TA)=N(A)$, the matrix $A^TA$ is singular.
 > <!-- bilingual-en:end -->
 
 ### 知识链
 <!-- bilingual-en:start -->
-*knowledge chain*
+*Knowledge chain*
 <!-- bilingual-en:end -->
 
 [[线性方程组与四个基本子空间#四个基本子空间|列空间]]与[[线性方程组与四个基本子空间#四个基本子空间|零空间]] → 正交补 → $N(A^TA)=N(A)$ → 下一节的[[正交投影与最小二乘#投影矩阵|正交投影]]。
 <!-- bilingual-en:start -->
-[[线性方程组与四个基本子空间#四个基本子空间|column space]] and [[线性方程组与四个基本子空间#四个基本子空间|null space]]→orthogonal complement→$N(A^TA)=N(A)$→[[正交投影与最小二乘#投影矩阵|orthogonal projection]] in the next section.
+[[线性方程组与四个基本子空间#四个基本子空间|Column space]] and [[线性方程组与四个基本子空间#四个基本子空间|nullspace]] → orthogonal complements → $N(A^TA)=N(A)$ → [[正交投影与最小二乘#投影矩阵|orthogonal projection]] in the next section.
 <!-- bilingual-en:end -->
 
 ---
@@ -393,7 +393,7 @@ The two vectors in parentheses therefore form a basis for $S^\perp$. The origina
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 给定 $b\in\mathbb R^m$ 和子空间 $S\subseteq\mathbb R^m$，怎样严格找出 $S$ 中离 $b$ 最近的向量？若 $S=C(A)$ 且 $A\in\mathbb R^{m\times n}$ 满列秩，投影系数 $\hat x\in\mathbb R^n$，投影 $p=A\hat x\in\mathbb R^m$，残差 $e=b-p\in\mathbb R^m$。
@@ -409,7 +409,7 @@ Given $b\in\mathbb R^m$ and a subspace $S\subseteq\mathbb R^m$, how can we find 
 
 ### Lecture：最近点由“残差正交”唯一决定
 <!-- bilingual-en:start -->
-*Lecture: Orthogonality of the residual uniquely determines the nearest point*
+*Lecture: residual orthogonality uniquely determines the nearest point*
 <!-- bilingual-en:end -->
 
 先投影到直线 $S=\operatorname{span}(a)$，其中 $a\ne0$。因为 $p\in S$，写成 $p=\hat xa$。正交投影要求误差 $e=b-p$ 与 $a$ 垂直：
@@ -447,12 +447,12 @@ The denominator $a^Ta$ is a scalar, whereas the numerator $aa^T$ is an $m\times 
 
 #### 为什么正交条件保证最近
 <!-- bilingual-en:start -->
-*Why Orthogonal Conditions Guarantee Nearest*
+*Why the orthogonality condition guarantees the nearest point*
 <!-- bilingual-en:end -->
 
 设 $p$ 满足 $p\in S$ 且 $e=b-p\perp S$。对任意 $s\in S$，
 <!-- bilingual-en:start -->
-Let $p$ satisfy $p\in S$ and $e=b-p\perp S$.  For any $s\in S$,
+Suppose $p\in S$ and $e=b-p\perp S$. For any $s\in S$,
 <!-- bilingual-en:end -->
 
 $$
@@ -470,17 +470,17 @@ $$
 
 等号要求 $p-s=0$，即 $s=p$。因此 $p$ 不只是局部极小，而是唯一的全局最近点。
 <!-- bilingual-en:start -->
-The equal sign requires $p-s=0$, or $s=p$.  Therefore, $p$ is not only a local minimum, but also a unique global closest point.
+Equality holds only when $p-s=0$, that is, when $s=p$. Therefore $p$ is the unique global closest point, not merely a local minimizer.
 <!-- bilingual-en:end -->
 
 #### 投影到列空间
 <!-- bilingual-en:start -->
-*Projection into Column Space*
+*Projection onto a column space*
 <!-- bilingual-en:end -->
 
 令 $S=C(A)$，所以 $p=A\hat x$。要求残差与 $A$ 的每一列正交：
 <!-- bilingual-en:start -->
-$S=C(A)$, so $p=A\hat x$.  Require the residual to be orthogonal to each column of $A$:
+Let $S=C(A)$, so $p=A\hat x$. Require the residual to be orthogonal to every column of $A$:
 <!-- bilingual-en:end -->
 
 $$
@@ -508,7 +508,7 @@ $$
 
 因此投影到 $C(A)$ 的[[正交投影与最小二乘#投影矩阵|投影矩阵（projection matrix）]]是
 <!-- bilingual-en:start -->
-So the [[正交投影与最小二乘#投影矩阵|projection matrix]] projected onto the $C(A)$ is
+Thus the [[正交投影与最小二乘#投影矩阵|projection matrix]] onto $C(A)$ is
 <!-- bilingual-en:end -->
 
 $$
@@ -522,7 +522,7 @@ Check the dimensions one by one: $A^T b\in\mathbb R^n$, $(A^TA)^{-1}\in\mathbb R
 
 #### 投影矩阵的结构
 <!-- bilingual-en:start -->
-*The Structure of Projection Matrix*
+*The structure of an orthogonal projection matrix*
 <!-- bilingual-en:end -->
 
 在满列秩条件下，
@@ -549,7 +549,7 @@ $$
 
 所以正交投影矩阵同时满足**对称**与**幂等**。还有
 <!-- bilingual-en:start -->
-So the orthogonal projection matrices satisfy**symmetry**and**idempotence**.  and
+Thus an orthogonal projection matrix is both **symmetric** and **idempotent**. Moreover,
 <!-- bilingual-en:end -->
 
 $$
@@ -565,12 +565,12 @@ The first is because $Pb$ is always in $C(A)$ and has $Pp=p$ for $p\in C(A)$; th
 
 ### Recitation：投影到平面 $x+y-z=0$
 <!-- bilingual-en:start -->
-*Recitation:projecting to a plane $x+y-z=0$*
+*Recitation: projecting onto the plane $x+y-z=0$*
 <!-- bilingual-en:end -->
 
 平面的法向量是 $n=(1,1,-1)^T$。可以选平面基
 <!-- bilingual-en:start -->
-The normal vector of the plane is $n=(1,1,-1)^T$.  You can select a planar basis
+The plane has normal vector $n=(1,1,-1)^T$. One may choose the basis
 <!-- bilingual-en:end -->
 
 $$
@@ -579,7 +579,7 @@ $$
 
 再代入 $A(A^TA)^{-1}A^T$。更短的办法是先投影到法线，再用互补投影：
 <!-- bilingual-en:start -->
-and then repopulate the $A(A^TA)^{-1}A^T$.  A shorter approach is to project to the normal first, and then project with complementary projections:
+and then compute $A(A^TA)^{-1}A^T$. A shorter route is to project onto the normal direction first and use the complementary projector:
 <!-- bilingual-en:end -->
 
 $$
@@ -621,8 +621,8 @@ Check that $P_{\text{plane}}n=0$ and $P_{\text{plane}}a_i=a_i$, and that the mat
 > $$
 > 残差 $(0,0,0,4)^T$ 与前三个坐标方向正交。
 > <!-- bilingual-en:start -->
-> $A$ is the $4\times3$ matrix obtained by deleting the last column from the $4\times4$ identity matrix.  Projection $b=(1,2,3,4)^T$ to $C(A)$, and write out the size and value of $P$.
-> **Solution.**$C(A)=\{(x_1,x_2,x_3,0)^T\}$.  Input and output are both at $\mathbb R^4$, so $P\in\mathbb R^{4\times4}$:
+> Let $A$ be the $4\times3$ matrix obtained by deleting the last column of $I_4$. Project $b=(1,2,3,4)^T$ onto $C(A)$, and state the dimensions and entries of $P$.
+> **Solution.** $C(A)=\{(x_1,x_2,x_3,0)^T\}$. Both the input and output of the projection lie in $\mathbb R^4$, so $P\in\mathbb R^{4\times4}$:
 > The residual $(0,0,0,4)^T$ is orthogonal to the first three coordinate directions.
 > <!-- bilingual-en:end -->
 
@@ -639,10 +639,8 @@ Check that $P_{\text{plane}}n=0$ and $P_{\text{plane}}a_i=a_i$, and that the mat
 > $$
 > 它投影到 $C(A)^\perp=N(A^T)=\operatorname{span}(e_4)$，即 $A$ 的左零空间。
 > <!-- bilingual-en:start -->
-> Known $P^2=P$, certifies $(I-P)^2=I-P$; explains where the $I-P$ from the previous question is projected.
-> **Solution.**Because of $IP=PI=P$,
-> above question
-> It projects to $C(A)^\perp=N(A^T)=\operatorname{span}(e_4)$, the left nullspace of $A$.
+> Given $P^2=P$, prove that $(I-P)^2=I-P$ and identify the range of $I-P$ for the preceding example.
+> **Solution.** Since $IP=PI=P$, expanding gives $(I-P)^2=I-2P+P^2=I-P$. In the preceding example, $I-P$ projects onto $C(A)^\perp=N(A^T)=\operatorname{span}(e_4)$, the left nullspace of $A$.
 > <!-- bilingual-en:end -->
 
 ### 边界、反例与易错点
@@ -656,9 +654,9 @@ Check that $P_{\text{plane}}n=0$ and $P_{\text{plane}}a_i=a_i$, and that the mat
 - 投影到同一个子空间的矩阵与所选基无关；系数 $\hat x$ 会随基改变，几何向量 $p$ 不变。
 <!-- bilingual-en:start -->
 - $(A^TA)^{-1}$ exists only when $A$ has full column rank. If the columns are dependent, remove redundant columns, choose a basis for the same column space, or use the pseudoinverse introduced in Unit III.
-- $P^2=P$ only states the idempotence in the sense of "projection"; in addition to**orthogonal**projection, $P^T=P$ is required.  Oblique projections can be idempotent but asymmetric.
+- $P^2=P$ gives idempotence, which is shared by all projection matrices. An **orthogonal** projector must also satisfy $P^T=P$; oblique projectors may be idempotent but nonsymmetric.
 - In general, $(A^TA)^{-1}$ cannot be rewritten as $A^{-1}(A^T)^{-1}$ because a rectangular matrix $A$ has no two-sided inverse.
-- The matrix projected onto the same subspace is independent of the basis selected; the coefficient $\hat x$ changes with the basis and the geometric vector $p$ remains unchanged.
+- The projection matrix onto a fixed subspace is independent of the basis chosen for that subspace. The coefficient vector $\hat x$ changes with the basis, but the geometric projection $p$ does not.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -689,12 +687,12 @@ Check that $P_{\text{plane}}n=0$ and $P_{\text{plane}}a_i=a_i$, and that the mat
 
 ### 知识链
 <!-- bilingual-en:start -->
-*knowledge chain*
+*Knowledge chain*
 <!-- bilingual-en:end -->
 
 正交补 → [[正交投影与最小二乘#投影矩阵|正交投影]] → 正规方程 → 下一节的[[正交投影与最小二乘#最小二乘与正规方程|最小二乘]]与残差分析。
 <!-- bilingual-en:start -->
-Orthogonal complement→[[正交投影与最小二乘#投影矩阵|orthogonal projection]]→Normal equation→[[正交投影与最小二乘#最小二乘与正规方程|least squares]] and residual analysis in the next section.
+Orthogonal complement → [[正交投影与最小二乘#投影矩阵|orthogonal projection]] → normal equations → [[正交投影与最小二乘#最小二乘与正规方程|least squares]] and residual analysis in the next section.
 <!-- bilingual-en:end -->
 
 ---
@@ -703,7 +701,7 @@ Orthogonal complement→[[正交投影与最小二乘#投影矩阵|orthogonal pr
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 当 $Ax=b$ 因 $b\notin C(A)$ 而无解时，我们不伪造精确解，而是在所有 $Ax$ 中寻找离 $b$ 最近的一个。本节把这个几何问题写成[[正交投影与最小二乘#最小二乘与正规方程|最小二乘（least squares）]]，并解释正规方程的来源、解的唯一性条件和残差所属的子空间。
@@ -724,12 +722,12 @@ Let $A\in\mathbb R^{m\times n}$ and $b\in\mathbb R^m$. If $A$ has full column ra
 
 ### Lecture：把“拟合”翻译成列空间投影
 <!-- bilingual-en:start -->
-*Lecture: Translating Fit into Column Space Projection*
+*Lecture: translating a fit into projection onto the column space*
 <!-- bilingual-en:end -->
 
 最小二乘问题是
 <!-- bilingual-en:start -->
-least squares problem
+The least-squares problem is
 <!-- bilingual-en:end -->
 
 $$
@@ -765,7 +763,7 @@ These are the [[正交投影与最小二乘#最小二乘与正规方程|normal e
 
 若希望用微积分核对，令
 <!-- bilingual-en:start -->
-If you want to use calculus to check,
+As a calculus check, define
 <!-- bilingual-en:end -->
 
 $$
@@ -774,7 +772,7 @@ $$
 
 展开为
 <!-- bilingual-en:start -->
-Expand As
+Expanding gives
 <!-- bilingual-en:end -->
 
 $$
@@ -801,7 +799,7 @@ $$
 
 两项正交，因而
 <!-- bilingual-en:start -->
-Two Orthogonal
+The two terms are orthogonal.
 <!-- bilingual-en:end -->
 
 $$
@@ -810,7 +808,7 @@ $$
 
 #### 唯一性究竟在哪里
 <!-- bilingual-en:start -->
-*Where the Uniqueness Is*
+*What is unique?*
 <!-- bilingual-en:end -->
 
 - 投影 $p$ 总是唯一，因为子空间中的最近点唯一。
@@ -827,7 +825,7 @@ $$
 
 投影矩阵与互补投影为
 <!-- bilingual-en:start -->
-Projection Matrix and Complementary Projection as
+The projection matrix and complementary projector are
 <!-- bilingual-en:end -->
 
 $$
@@ -845,12 +843,12 @@ $$
 
 ### 课堂例题：三点的最佳拟合直线
 <!-- bilingual-en:start -->
-*Classroom Example: Best Fit Line of Three Points*
+*Classroom example: the best-fit line through three points*
 <!-- bilingual-en:end -->
 
 拟合 $(1,1),(2,2),(3,2)$，设直线 $y=C+Dt$。则
 <!-- bilingual-en:start -->
-Fit $(1,1),(2,2),(3,2)$ and set the line $y=C+Dt$. Then
+Fit the points $(1,1),(2,2),(3,2)$ with a line $y=C+Dt$. Then
 <!-- bilingual-en:end -->
 
 $$
@@ -861,7 +859,7 @@ $$
 
 原系统三式两未知，一般不相容。正规方程是
 <!-- bilingual-en:start -->
-The original system is unknown and generally incompatible.  The normal equation is
+The original system is overdetermined and generally inconsistent. The normal equations are
 <!-- bilingual-en:end -->
 
 $$
@@ -873,7 +871,7 @@ $$
 
 第一式乘 $2$ 后从第二式相减：$2\hat D=1$，所以 $\hat D=1/2$；代回得 $\hat C=2/3$。于是
 <!-- bilingual-en:start -->
-The first formula is multiplied by $2$ and subtracted from the second formula: $2\hat D=1$, so $\hat D=1/2$; $\hat C=2/3$ is substituted.  therefore
+Subtracting twice the first equation from the second gives $2\hat D=1$, so $\hat D=1/2$. Substitution gives $\hat C=2/3$. Therefore
 <!-- bilingual-en:end -->
 
 $$
@@ -885,7 +883,7 @@ $$
 
 直接验算
 <!-- bilingual-en:start -->
-direct checking
+A direct check gives
 <!-- bilingual-en:end -->
 
 $$
@@ -905,7 +903,7 @@ The first line indicates that the sum of the residuals is zero, and the second l
 
 ### Recitation：过原点的最佳二次曲线，并修正转录算术
 <!-- bilingual-en:start -->
-*Recitation: Optimal conic over origin and modified transcription arithmetic*
+*Recitation: fitting a quadratic through the origin and correcting a transcript error*
 <!-- bilingual-en:end -->
 
 对点 $(1,1),(2,5),(-1,-2)$ 拟合 $y=ct+dt^2$。设计矩阵为
@@ -920,7 +918,7 @@ $$
 
 按定义逐项计算：
 <!-- bilingual-en:start -->
-Calculate by definition:
+Compute directly from the definitions:
 <!-- bilingual-en:end -->
 
 $$
@@ -985,7 +983,7 @@ $$
 > Write the three equations and solve for $\hat x=(C,D)^T$.
 > **Solution.** The equations are $C-D=7$, $C+D=7$, and $C+2D=21$. Solving the normal equations $3C+2D=35$ and $2C+6D=42$ gives
 > $$\boxed{C=9,\quad D=4},$$
-> That's the best line, $b=9+4t$.
+> Thus the best-fit line is $b=9+4t$.
 > <!-- bilingual-en:end -->
 
 > [!question]- Problem 16.2：求投影与残差，并解释 $Pe=0$
@@ -997,7 +995,7 @@ $$
 > 验算 $A^Te=(2-6+4,-2-6+8)^T=0$，故 $e\in N(A^T)=C(A)^\perp$。投影到 $C(A)$ 后为零，即 $Pe=0$；也可写成 $Pe=P(b-p)=Pb-Pp=p-p=0$。
 > <!-- bilingual-en:start -->
 > **Solution.**
-> $A^Te=(2-6+4,-2-6+8)^T=0$, so $e\in N(A^T)=C(A)^\perp$.  It is zero after projection into $C(A)$, which is $Pe=0$; it can be written as $Pe=P(b-p)=Pb-Pp=p-p=0$.
+> $A^Te=(2-6+4,-2-6+8)^T=0$, so $e\in N(A^T)=C(A)^\perp$. Its orthogonal projection onto $C(A)$ is therefore zero: $Pe=P(b-p)=Pb-Pp=p-p=0$.
 > <!-- bilingual-en:end -->
 
 > [!question]- Problem 16.3：把上一题的误差本身当成新数据
@@ -1031,7 +1029,7 @@ $$
 > $$\boxed{b=1-t}.$$
 > 预测值为 $(3,2,1,0,-1)^T$，残差 $(1,0,-2,0,1)^T$；其总和和时间加权和都为零。
 > <!-- bilingual-en:start -->
-> In $t=-2,-1,0,1,2$, the data is $4,2,-1,0,0$.  Find the best line, $C+Dt$.
+> At $t=-2,-1,0,1,2$, the observed values are $4,2,-1,0,0$. Find the best-fit line $C+Dt$.
 > **Solution.**
 > The symmetric sampling times give $\sum t_i=0$, so the normal equations decouple. Solving gives $C=1,D=-1$, and the best-fit line is
 > $$\boxed{b=1-t}.$$
@@ -1040,7 +1038,7 @@ $$
 
 ### 边界、反例与易错点
 <!-- bilingual-en:start -->
-*Boundaries, Counterexamples and Errors*
+*Boundaries, counterexamples, and common errors*
 <!-- bilingual-en:end -->
 
 - “least squares” 最小化的是残差平方和 $\sum e_i^2$，不是 $\sum e_i$；后者可由正负抵消。
@@ -1079,12 +1077,12 @@ $$
 
 ### 知识链
 <!-- bilingual-en:start -->
-*knowledge chain*
+*Knowledge chain*
 <!-- bilingual-en:end -->
 
 投影 → 正规方程 → 残差 $N(A^T)$ → 下一节用[[正交投影与最小二乘#Gram–Schmidt 与 QR|Gram–Schmidt]]和 QR 更稳定地求投影系数。
 <!-- bilingual-en:start -->
-Projection → normal equations → residual in $N(A^T)$ → more stable computation of projection coefficients by [[正交投影与最小二乘#Gram–Schmidt 与 QR|Gram–Schmidt]] and QR in the next section.
+Projection → normal equations → residual in $N(A^T)$ → more stable computation of projection coefficients using [[正交投影与最小二乘#Gram–Schmidt 与 QR|Gram–Schmidt]] and QR in the next section.
 <!-- bilingual-en:end -->
 
 ---
@@ -1093,7 +1091,7 @@ Projection → normal equations → residual in $N(A^T)$ → more stable computa
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 怎样把任意一组线性无关向量变成张成同一子空间的标准正交基？为什么在标准正交坐标中，投影、最小二乘和坐标恢复都会变简单？
@@ -1114,12 +1112,12 @@ Let $A=[a_1\ \cdots\ a_n]\in\mathbb R^{m\times n}$ have linearly independent col
 
 ### Lecture：标准正交列为何特别方便
 <!-- bilingual-en:start -->
-*Lecture: Why orthonormal columns are so convenient*
+*Lecture: why orthonormal columns are so convenient*
 <!-- bilingual-en:end -->
 
 向量 $q_1,\dots,q_n$ **标准正交（orthonormal）**，是指
 <!-- bilingual-en:start -->
-Vector $q_1,\dots,q_n$**orthonormal**means
+Vectors $q_1,\dots,q_n$ are **orthonormal** when
 <!-- bilingual-en:end -->
 
 $$
@@ -1156,7 +1154,7 @@ $$
 
 一般是秩为 $n$ 的投影矩阵。
 <!-- bilingual-en:start -->
-Generally, it is a projection matrix with rank $n$.
+In general, $QQ^T$ is a projection matrix of rank $n$.
 <!-- bilingual-en:end -->
 
 正交矩阵保持内积和长度：
@@ -1170,12 +1168,12 @@ $$
 
 因此它只执行旋转、反射或这些变换的组合，不拉伸长度。
 <!-- bilingual-en:start -->
-So it performs only rotation, reflection, or a combination of these transformations, without stretching the length.
+Thus an orthogonal matrix performs a rotation, a reflection, or a combination of the two, without changing lengths.
 <!-- bilingual-en:end -->
 
 #### 标准正交向量必线性无关
 <!-- bilingual-en:start -->
-*Orthonormal vectors are linearly independent*
+*Why orthonormal vectors are linearly independent*
 <!-- bilingual-en:end -->
 
 若 $Qx=0$，左乘 $Q^T$：
@@ -1194,7 +1192,7 @@ Thus $N(Q)=\{0\}$ and the columns are linearly independent. Note that $Q$ may be
 
 #### Gram–Schmidt 的逐步构造
 <!-- bilingual-en:start -->
-*Stepwise Construction of Gram-Schmidt*
+*Step-by-step construction of Gram–Schmidt*
 <!-- bilingual-en:end -->
 
 先取
@@ -1208,7 +1206,7 @@ $$
 
 第二个向量减去在 $q_1$ 上的投影：
 <!-- bilingual-en:start -->
-The second vector subtracts the projection on the $q_1$:
+For the second vector, subtract its projection onto $q_1$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1237,7 +1235,7 @@ $$
 
 每一步只从 $a_k$ 中减去先前向量的线性组合，所以
 <!-- bilingual-en:start -->
-Each step only subtracts the linear combination of the previous vectors from the $a_k$, so
+Each step subtracts only a linear combination of the preceding vectors from $a_k$, so
 <!-- bilingual-en:end -->
 
 $$
@@ -1247,7 +1245,7 @@ $$
 
 列独立保证 $u_k\ne0$；若某一步 $u_k=0$，正说明 $a_k$ 已落入前面列的张成空间。
 <!-- bilingual-en:start -->
-Column independence guarantee $u_k\ne0$; if a step $u_k=0$, the $a_k$ is already in the row row row's cast space.
+Linear independence of the original columns guarantees $u_k\ne0$. If some step produced $u_k=0$, then $a_k$ would already lie in the span of the preceding columns.
 <!-- bilingual-en:end -->
 
 #### 从 Gram–Schmidt 到 [[正交投影与最小二乘#Gram–Schmidt 与 QR|QR 分解]]
@@ -1266,7 +1264,7 @@ $$
 
 把这些系数排成上三角矩阵 $R$，便有
 <!-- bilingual-en:start -->
-Put these coefficients in the upper triangular matrix $R$, and there are
+Place these coefficients in the upper triangular matrix $R$. Then
 <!-- bilingual-en:end -->
 
 $$
@@ -1302,7 +1300,7 @@ Only the upper-triangular system needs to be solved, avoiding explicit formation
 
 ### Recitation：完整 QR 计算
 <!-- bilingual-en:start -->
-*Recitation: Full QR Calculation*
+*Recitation: a complete QR calculation*
 <!-- bilingual-en:end -->
 
 给定
@@ -1330,7 +1328,7 @@ $$
 
 故 $q_2=(0,0,1)^T$。再算
 <!-- bilingual-en:start -->
-So, $q_2=(0,0,1)^T$.  then count
+Thus $q_2=(0,0,1)^T$. Next compute
 <!-- bilingual-en:end -->
 
 $$
@@ -1344,7 +1342,7 @@ $$
 
 所以 $q_3=(0,1,0)^T$。于是
 <!-- bilingual-en:start -->
-So, $q_3=(0,1,0)^T$.  therefore
+Thus $q_3=(0,1,0)^T$. Therefore
 <!-- bilingual-en:end -->
 
 $$
@@ -1354,7 +1352,7 @@ $$
 
 $R$ 的第 $j$ 列正是 $a_j$ 在标准正交基 $q_i$ 下的坐标。
 <!-- bilingual-en:start -->
-The $j$ column of $R$ is exactly the coordinate of $a_j$ in the orthonormal basis $q_i$.
+Column $j$ of $R$ contains the coordinates of $a_j$ in the orthonormal basis formed by the $q_i$.
 <!-- bilingual-en:end -->
 
 ### Homework
@@ -1392,8 +1390,7 @@ The $j$ column of $R$ is exactly the coordinate of $a_j$ in the orthonormal basi
 > $$
 > 直接检查 $A^TB=A^TC=B^TC=0$。此外 $a,b,c$ 各分量之和为零，因此都垂直于 $d$；$A,B,C$ 亦然。$d^\perp\subseteq\mathbb R^4$ 是一个三维子空间，三条非零正交向量自动独立，故 $\{A,B,C\}$ 是其一组基。Gram–Schmidt 不改变张成空间，所以 $\{a,b,c\}$ 也是同一空间的一组基。
 > <!-- bilingual-en:start -->
-> **Given**
-> Find orthogonal vectors spanning the same subspace, and prove that both the new vectors and the original vectors form bases of the orthogonal complement of $d=(1,1,1,1)$.
+> **Problem.** Find orthogonal vectors spanning the same subspace, and prove that both the new vectors and the original vectors form bases of the orthogonal complement of $d=(1,1,1,1)$.
 > **Solution.** Start with
 > $$A=a=(1,-1,0,0).$$
 > Because $A^Tb=-1,A^TA=2$,
@@ -1403,7 +1400,7 @@ The $j$ column of $R$ is exactly the coordinate of $a_j$ in the orthonormal basi
 
 ### 边界、反例与易错点
 <!-- bilingual-en:start -->
-*Boundaries, Counterexamples and Errors*
+*Boundaries, counterexamples, and common errors*
 <!-- bilingual-en:end -->
 
 - “orthonormal matrix” 常泛指列标准正交的长方矩阵；只有方阵才有 $Q^{-1}=Q^T$。
@@ -1425,7 +1422,7 @@ The $j$ column of $R$ is exactly the coordinate of $a_j$ in the orthonormal basi
 > [!question]- 1. $Q\in\mathbb R^{5\times3}$ 且 $Q^TQ=I_3$。$QQ^T$ 的尺寸、秩与行列式分别是什么？
 > $QQ^T$ 是 $5\times5$，秩为 $3$，是投影到 $C(Q)$ 的矩阵；因秩小于 $5$，行列式为 $0$。
 > <!-- bilingual-en:start -->
-> $QQ^T$ is $5\times5$, the rank is $3$, is the projection to $C(Q)$ matrix; because the rank is less than $5$, the determinant is $0$.
+> $QQ^T$ is a $5\times5$ matrix of rank $3$. It is the orthogonal projector onto $C(Q)$, and because its rank is less than $5$, its determinant is $0$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 2. 对 $a_1=(1,0)^T,a_2=(1,1)^T$ 做 Gram–Schmidt。
@@ -1442,12 +1439,12 @@ The $j$ column of $R$ is exactly the coordinate of $a_j$ in the orthonormal basi
 
 ### 知识链
 <!-- bilingual-en:start -->
-*knowledge chain*
+*Knowledge chain*
 <!-- bilingual-en:end -->
 
 正交投影 → 标准正交基 → [[正交投影与最小二乘#Gram–Schmidt 与 QR|Gram–Schmidt 正交化]] → QR → 更稳定的最小二乘。
 <!-- bilingual-en:start -->
-Orthogonal projection→orthonormal basis→[[正交投影与最小二乘#Gram–Schmidt 与 QR|Gram-Schmidt orthogonalization]]→QR→more stable least squares.
+Orthogonal projection → orthonormal basis → [[正交投影与最小二乘#Gram–Schmidt 与 QR|Gram–Schmidt orthogonalization]] → QR → more stable least squares.
 <!-- bilingual-en:end -->
 
 ---
@@ -1456,12 +1453,12 @@ Orthogonal projection→orthonormal basis→[[正交投影与最小二乘#Gram�
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 本节不把行列式当成待背的展开式，而是从三条基本性质推出所有计算规则。[[行列式#行列式的结构含义|行列式（determinant）]]只对方阵 $A\in\mathbb R^{n\times n}$ 定义，输出一个标量 $\det A$。
 <!-- bilingual-en:start -->
-This section does not treat determinants as expansions to be followed, but rather derives all the rules of calculation from three basic properties.  The [[行列式#行列式的结构含义|determinant]] is defined only by the matrix $A\in\mathbb R^{n\times n}$ and outputs a scalar $\det A$.
+Rather than treating the determinant as an expansion formula to memorize, this section derives its computational rules from three basic properties. The [[行列式#行列式的结构含义|determinant]] is defined for a square matrix $A\in\mathbb R^{n\times n}$ and returns the scalar $\det A$.
 <!-- bilingual-en:end -->
 
 > [!info] 本地材料
@@ -1472,7 +1469,7 @@ This section does not treat determinants as expansions to be followed, but rathe
 
 ### Lecture：三条公理推出整套规则
 <!-- bilingual-en:start -->
-*Lecture: Three axioms that lay out the rules*
+*Lecture: three axioms that determine all the rules*
 <!-- bilingual-en:end -->
 
 行列式由以下三条性质唯一确定：
@@ -1489,9 +1486,11 @@ The determinant is uniquely determined by the following three properties:
    +\beta\det\begin{bmatrix}v\\\text{其余各行}\end{bmatrix}.
    $$
 <!-- bilingual-en:start -->
-1. $\det I=1$.
-2. Swapping two rows changes the sign of the determinant.
-3. With all other rows fixed, the determinant is linear in any one row. For example,
+
+&nbsp;
+**1.** $\det I=1$.<br>
+**2.** Swapping two rows changes the sign of the determinant.<br>
+**3.** With all other rows fixed, the determinant is linear in any one row. For example,<br>
 <!-- bilingual-en:end -->
 
 #### 推论 1：有两行相同则行列式为零
@@ -1538,7 +1537,7 @@ $$
 
 对上三角矩阵，从左上角开始利用行线性和零元素，或沿用消元规则，得到
 <!-- bilingual-en:start -->
-For upper triangular matrices, row linearities and zero elements are used from the upper left corner, or the elimination rules are used to get the final result
+For an upper triangular matrix, repeated expansion along a row or column with many zeros—or, equivalently, the elimination rules—gives
 <!-- bilingual-en:end -->
 
 $$
@@ -1552,7 +1551,7 @@ If elimination transforms $A$ into $U$ using no row exchanges, then $\det A=\det
 
 #### 乘法与转置
 <!-- bilingual-en:start -->
-*Multiplication and Transpose*
+*Products and transposes*
 <!-- bilingual-en:end -->
 
 重要结论为
@@ -1566,7 +1565,7 @@ $$
 
 第一式可从“左乘初等矩阵对应一次行操作”证明：每类初等矩阵对行列式的影响与乘法相容，任意可逆 $A$ 都是初等矩阵的乘积；奇异情形两边同为零。由 $AA^{-1}=I$ 还得
 <!-- bilingual-en:start -->
-The first formula can be proved from the following proof: the influence of each kind of elementary matrix on the determinant is compatible with multiplication, any invertible $A$ is the product of the elementary matrix, and both sides of the singular case are zero.  By $AA^{-1}=I$.
+The first identity follows by tracking determinants under elementary row operations: each elementary matrix scales the determinant in the same way as the corresponding row operation, every invertible matrix is a product of elementary matrices, and both sides vanish when either factor is singular. The identity $AA^{-1}=I$ also gives
 <!-- bilingual-en:end -->
 
 $$
@@ -1575,7 +1574,7 @@ $$
 
 对标量 $c$，$cA$ 是把 **每一行** 放大 $c$，所以
 <!-- bilingual-en:start -->
-For the scalar $c$, $cA$ magnifies**every row**$c$, so
+For a scalar $c$, the matrix $cA$ multiplies **every row** by $c$, so
 <!-- bilingual-en:end -->
 
 $$
@@ -1584,12 +1583,12 @@ $$
 
 不是一般的 $c\det A$。
 <!-- bilingual-en:start -->
-Not just any $c\det A$.
+The factor is $c^n$, not merely $c$.
 <!-- bilingual-en:end -->
 
 ### Recitation：先识别结构，再决定算法
 <!-- bilingual-en:start -->
-*Recitation: Identify the structure before deciding on the algorithm*
+*Recitation: identify the structure before choosing an algorithm*
 <!-- bilingual-en:end -->
 
 1. 若相邻两行相减后出现两条相同行，行列式立即为零，不必展开大数。
@@ -1610,10 +1609,12 @@ Not just any $c\det A$.
    $$\begin{bmatrix}0&1\\-1&0\end{bmatrix}$$
    的行列式为 $1$。
 <!-- bilingual-en:start -->
-1. Subtracting two adjacent rows makes two rows identical, so the determinant is immediately zero; no large cofactor expansion is needed.
-2. For the Vandermonde matrix, perform $R_2-R_1$ and $R_3-R_1$, factor out $(b-a)$ and $(c-a)$, and eliminate once more to obtain $\det V=(b-a)(c-a)(c-b)$.
-3. Every row of the outer product $uv^T\in\mathbb R^{3\times3}$ is a scalar multiple of every other row, so $\operatorname{rank}(uv^T)\le1<3$ and its determinant is zero. If both $u$ and $v$ are nonzero, its rank is exactly $1$.
-4. If $D^T=-D$ and $n$ is odd, then $\det D=(-1)^n\det D=-\det D$, so $\det D=0$. An even-order skew-symmetric matrix need not be singular; for example,
+
+&nbsp;
+**1.** Subtracting two adjacent rows makes two rows identical, so the determinant is immediately zero; no large cofactor expansion is needed.<br>
+**2.** For the Vandermonde matrix, perform $R_2-R_1$ and $R_3-R_1$, factor out $(b-a)$ and $(c-a)$, and eliminate once more to obtain $\det V=(b-a)(c-a)(c-b)$.<br>
+**3.** Every row of the outer product $uv^T\in\mathbb R^{3\times3}$ is a scalar multiple of every other row, so $\operatorname{rank}(uv^T)\le1<3$ and its determinant is zero. If both $u$ and $v$ are nonzero, its rank is exactly $1$.<br>
+**4.** If $D^T=-D$ and $n$ is odd, then $\det D=(-1)^n\det D=-\det D$, so $\det D=0$. An even-order skew-symmetric matrix need not be singular; for example,<br>
    $$\begin{bmatrix}0&1\\-1&0\end{bmatrix}$$
    has determinant $1$.
 <!-- bilingual-en:end -->
@@ -1663,8 +1664,8 @@ Not just any $c\det A$.
 - $\det(AB)=\det A\det B$，但一般 $\det(A+B)$ 没有类似公式。
 - $\det A=0$ 只告诉你至少一个方向被压扁；它不告诉你秩具体缺几维。
 <!-- bilingual-en:start -->
-- The determinant is not element-by-element linear, nor is it linear to the entire matrix: typically $\det(A+B)\ne\det A+\det B$.
-- Row addition does not change the determinant; the rows swap the numbers; the rows scale year-over-year.  Do three things without remembering.
+- The determinant is not entrywise linear or linear in the matrix as a whole: typically $\det(A+B)\ne\det A+\det B$.
+- Adding a multiple of one row to another preserves the determinant; swapping two rows changes its sign; scaling one row by $c$ scales the determinant by $c$. Keep these three effects distinct.
 - $\det(AB)=\det A\det B$, but there is no similar formula for a typical $\det(A+B)$.
 - $\det A=0$ tells you only that at least one direction is flattened; it does not tell you how many dimensions the rank is missing.
 <!-- bilingual-en:end -->
@@ -1683,7 +1684,7 @@ Not just any $c\det A$.
 > [!question]- 2. 消元中交换两次行并把一行乘以 $5$，最后上三角对角为 $2,3,4$。原矩阵行列式是多少？
 > 两次交换符号抵消；缩放后的矩阵行列式为 $2\cdot3\cdot4=24$，它是原值的 $5$ 倍，所以原值为 $24/5$。
 > <!-- bilingual-en:start -->
-> Two swaps are canceled; the scaled matrix determinant is $2\cdot3\cdot4=24$, which is $5$ times the original value, so the original value is $24/5$.
+> The two row swaps cancel each other's signs. The final scaled matrix has determinant $2\cdot3\cdot4=24$, which is $5$ times the original determinant, so the original value is $24/5$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 3. 奇数阶斜对称矩阵为什么一定不可逆？
@@ -1694,7 +1695,7 @@ Not just any $c\det A$.
 
 ### 知识链
 <!-- bilingual-en:start -->
-*knowledge chain*
+*Knowledge chain*
 <!-- bilingual-en:end -->
 
 消元与可逆性 → [[行列式#行列式的结构含义|行列式]]三公理 → 大公式与余子式 → 下一节的可计算公式。
@@ -1708,7 +1709,7 @@ Elimination and invertibility → the three axioms of the [[行列式#行列式�
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 三条性质说明“行列式应怎样变化”，本节把它们变成两个通用计算公式：含 $n!$ 项的排列公式，以及沿任意一行或一列展开的余子式公式。
@@ -1769,7 +1770,7 @@ $$
 
 符号棋盘为
 <!-- bilingual-en:start -->
-symbol checkerboard as
+The signs follow the checkerboard pattern
 <!-- bilingual-en:end -->
 
 $$
@@ -1783,7 +1784,7 @@ $$
 
 把排列大公式按第一行所选列分组，就得到第一行展开：
 <!-- bilingual-en:start -->
-Grouping large equations into the first row of selected columns gives you the first row to expand:
+Grouping the Leibniz terms by which column is selected from the first row gives the first-row expansion:
 <!-- bilingual-en:end -->
 
 $$
@@ -1792,7 +1793,7 @@ $$
 
 若改为按“第 $i$ 行选中了哪一列”给排列项分组，就得到第 $i$ 行展开；按“第 $j$ 列选中了哪一行”分组，则得到第 $j$ 列展开：
 <!-- bilingual-en:start -->
-If you instead group the permutations by "which column is selected in row $i$", you get row $i$ expanded; if you group by "which row is selected in column $j$", you get column $j$ expanded:
+More generally, grouping permutations by the column selected in row $i$ gives expansion along row $i$; grouping them by the row selected in column $j$ gives expansion along column $j$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1802,17 +1803,17 @@ $$
 
 实际选择零最多的一行或一列，可显著减少子式数量。
 <!-- bilingual-en:start -->
-You can significantly reduce the number of subformulas by actually selecting a row or column with the most zeros.
+In practice, choosing a row or column with many zeros greatly reduces the number of terms.
 <!-- bilingual-en:end -->
 
 ### Recitation：按矩阵结构混合三种方法
 <!-- bilingual-en:start -->
-*Recitation: Mix three methods by matrix structure*
+*Recitation: combining methods according to matrix structure*
 <!-- bilingual-en:end -->
 
 第一类 $5\times5$ 稀疏循环矩阵在对角线上为 $x$，循环邻位为 $y$。沿第一列展开，只剩两个三角子式，得到
 <!-- bilingual-en:start -->
-The first kind of $5\times5$ sparse cyclic matrix is $x$ on the diagonal and $y$ on the adjacent cyclic bits.  Expanding along the first column, there are only two trigonometrics left, giving
+The first $5\times5$ sparse cyclic matrix has $x$ on the diagonal and $y$ on the cyclic off-diagonal positions. Expanding along the first column leaves only two nonzero terms, giving
 <!-- bilingual-en:end -->
 
 $$
@@ -1821,7 +1822,7 @@ $$
 
 第二类矩阵 $B$ 的对角线全为 $x$、非对角线全为 $y$。用相邻行相减，再累加列，可化为对角线包含 $x+4y$ 与四个 $x-y$ 的三角矩阵：
 <!-- bilingual-en:start -->
-The diagonal of the second kind of matrix $B$ is all $x$, and the off-diagonal is all $y$.  Subtract adjacent rows and then add columns to reduce to a diagonal triangular matrix containing $x+4y$ and four $x-y$:
+The second matrix $B$ has $x$ on the diagonal and $y$ in every off-diagonal entry. Subtracting adjacent rows and then combining columns reduces it to triangular form with diagonal entries $x+4y$ and four copies of $x-y$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1867,7 +1868,7 @@ The same result can be anticipated from the eigendirections: $\mathbf1$ has eige
 
 ### 边界、反例与易错点
 <!-- bilingual-en:start -->
-*Boundaries, Counterexamples and Errors*
+*Boundaries, counterexamples, and common errors*
 <!-- bilingual-en:end -->
 
 - minor $\det M_{ij}$ 与 cofactor $C_{ij}$ 相差符号 $(-1)^{i+j}$。
@@ -1906,7 +1907,7 @@ Cofactor expansion is fully general, but recursive expansion is very slow for la
 
 ### 知识链
 <!-- bilingual-en:start -->
-*knowledge chain*
+*Knowledge chain*
 <!-- bilingual-en:end -->
 
 行列式性质 → 排列大公式 → cofactor 展开 → 下一节的 adjugate、[[行列式#乘法性与可逆性|Cramer 法则]]与体积。
@@ -1920,7 +1921,7 @@ Determinant properties → permutation formula → cofactor expansion → adjuga
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 本节把 cofactor 矩阵用于三个方向：构造逆矩阵、推导 Cramer 法则、解释坐标变换的面积或体积缩放。设 $A\in\mathbb R^{n\times n}$；逆矩阵与 Cramer 法则都要求 $\det A\ne0$。
@@ -1936,7 +1937,7 @@ This section uses cofactors in three ways: to construct the inverse, derive Cram
 
 ### Lecture：为什么 cofactor 的转置给出逆矩阵
 <!-- bilingual-en:start -->
-*Lecture: Why the transpose of the cofactor matrix gives the inverse*
+*Lecture: why transposing the cofactor matrix gives the inverse*
 <!-- bilingual-en:end -->
 
 令 $C=(C_{ij})$ 为 cofactor 矩阵。考察 $AC^T$ 的 $(i,j)$ 元素：
@@ -1966,7 +1967,7 @@ $$
 
 $C^T$ 称为伴随矩阵 $\operatorname{adj}(A)$。当 $\det A\ne0$ 时，两边除以 $\det A$，得到[[线性方程组与四个基本子空间#可解性与完整解|逆矩阵]]公式：
 <!-- bilingual-en:start -->
-$C^T$ is the adjugate matrix $\operatorname{adj}(A)$. When $\det A\ne0$, dividing both sides by $\det A$ gives the [[线性方程组与四个基本子空间#可解性与完整解|inverse-matrix]] formula:
+$C^T$ is the adjugate matrix $\operatorname{adj}(A)$. When $\det A\ne0$, dividing both sides by $\det A$ gives the [[线性方程组与四个基本子空间#可解性与完整解|inverse-matrix formula]]:
 <!-- bilingual-en:end -->
 
 $$
@@ -1976,7 +1977,7 @@ $$
 
 这个公式适合理论推导和小矩阵，不适合大型数值求逆。
 <!-- bilingual-en:start -->
-This formula is suitable for theoretical derivation and small matrix, and is not suitable for large-scale numerical inversion.
+This formula is useful for theoretical derivations and very small matrices, but not for large-scale numerical inversion.
 <!-- bilingual-en:end -->
 
 #### Cramer 法则
@@ -1986,7 +1987,7 @@ This formula is suitable for theoretical derivation and small matrix, and is not
 
 对 $Ax=b$，第 $j$ 个分量
 <!-- bilingual-en:start -->
-For $Ax=b$, the $j$ component
+For $Ax=b$, the $j$th component satisfies
 <!-- bilingual-en:end -->
 
 $$
@@ -2005,17 +2006,17 @@ $$
 
 这就是[[行列式#乘法性与可逆性|Cramer 法则（Cramer's rule）]]。它清楚揭示解对数据的依赖，但求全部分量需要许多行列式，计算上通常不如消元。
 <!-- bilingual-en:start -->
-That's [[行列式#乘法性与可逆性|Cramer's rule]].  It clearly reveals the dependence of the solution on the data, but it requires many determinants to obtain all the quantities, which are usually less computationally efficient than elimination.
+This is [[行列式#乘法性与可逆性|Cramer's rule]]. It makes the solution's dependence on the data explicit, but computing every component requires many determinants and is usually less efficient than elimination.
 <!-- bilingual-en:end -->
 
 #### 行列式的几何意义
 <!-- bilingual-en:start -->
-*The Geometric Meaning of Determinants*
+*The geometric meaning of determinants*
 <!-- bilingual-en:end -->
 
 矩阵 $A=[a_1\ \cdots\ a_n]$ 把单位立方体映成由列向量张成的平行多面体。其 $n$ 维体积为
 <!-- bilingual-en:start -->
-The matrix $A=[a_1\ \cdots\ a_n]$ maps the unit cube to a parallel polyhedron spanned by row vectors.  Its $n$ dimension volume is
+The matrix $A=[a_1\ \cdots\ a_n]$ maps the unit cube to the parallelepiped spanned by its column vectors. Its $n$-dimensional volume is
 <!-- bilingual-en:end -->
 
 $$
@@ -2031,7 +2032,7 @@ The absolute value gives ordinary volume, while the sign records whether orienta
 
 ### Recitation：四面体体积与“不改变高度”的行操作
 <!-- bilingual-en:start -->
-*Recitation: tetrahedral volume and No Height Change row operations*
+*Recitation: tetrahedral volume and row operations that preserve height*
 <!-- bilingual-en:end -->
 
 四面体顶点为
@@ -2045,7 +2046,7 @@ $$
 
 三条边张成的平行六面体体积为
 <!-- bilingual-en:start -->
-The parallel hexahedron volume spanned by the three edges is
+The parallelepiped spanned by the three edge vectors has volume
 <!-- bilingual-en:end -->
 
 $$
@@ -2054,7 +2055,7 @@ $$
 
 同底同高关系给出四面体体积是平行六面体的 $1/6$：
 <!-- bilingual-en:start -->
-The tetrahedron volume is the $1/6$ of the parallelohedron.
+The tetrahedron has one sixth of the parallelepiped's volume.
 <!-- bilingual-en:end -->
 
 $$
@@ -2063,7 +2064,7 @@ $$
 
 若把 $A_3$ 移到 $A_3'=(-201,-199,104)$，则
 <!-- bilingual-en:start -->
-If you move $A_3$ to $A_3'=(-201,-199,104)$,
+If $A_3$ is moved to $A_3'=(-201,-199,104)$,
 <!-- bilingual-en:end -->
 
 $$
@@ -2072,7 +2073,7 @@ $$
 
 这对应第三行减第一行的 $100$ 倍，不改变行列式；几何上沿底面方向移动顶点，不改变到底面的高度。因此新四面体体积仍为 $2$。
 <!-- bilingual-en:start -->
-This corresponds to the third row minus the first row by a factor of $100$, without changing the determinant; moving the vertex geometrically along the bottom without changing the height of the bottom.  The volume of the new tetrahedron is thus still $2$.
+This replaces the third row by the third row minus $100$ times the first, which leaves the determinant unchanged. Geometrically, the vertex moves parallel to the base without changing its height above the base, so the tetrahedron's volume remains $2$.
 <!-- bilingual-en:end -->
 
 ### Homework
@@ -2100,8 +2101,7 @@ This corresponds to the third row minus the first row by a factor of $100$, with
 > <!-- bilingual-en:start -->
 > Find the cofactor matrix $C$, $AC^T$ and $\det A$; explain why changing $a_{13}=4$ to $100$ does not change the determinant.
 > **Solution.** Delete each row and column in turn and apply the appropriate cofactor sign to obtain the displayed matrix $C$.
-> thus
-> So, $\det A=3$.  cofactor $C_{13}=0$ of $a_{13}$; The linear coefficient of determinant to this element is $C_{13}$, so changing $4$ to any number does not change $\det A$.
+> Thus $AC^T=(\det A)I$, so $\det A=3$. The cofactor of $a_{13}$ is $C_{13}=0$. Because the determinant is linear in that entry with coefficient $C_{13}$, changing $4$ to any other value leaves $\det A$ unchanged.
 > <!-- bilingual-en:end -->
 
 > [!question]- Problem 20.2：球坐标 Jacobian
@@ -2129,7 +2129,7 @@ This corresponds to the third row minus the first row by a factor of $100$, with
 > $$
 > 在通常范围 $\rho\ge0,0\le\phi\le\pi$，该值非负，所以体积元为 $dV=\rho^2\sin\phi\,d\rho\,d\phi\,d\theta$。
 > <!-- bilingual-en:start -->
-> given
+> Given the spherical-coordinate transformation
 > $$x=\rho\sin\phi\cos\theta,\quad y=\rho\sin\phi\sin\theta,\quad z=\rho\cos\phi,$$
 > Find the determinant of the partial derivative matrix.
 > **Solution.** The Jacobian matrix is shown above. Expanding its determinant along the third row yields the displayed calculation.
@@ -2138,7 +2138,7 @@ This corresponds to the third row minus the first row by a factor of $100$, with
 
 ### 边界、反例与易错点
 <!-- bilingual-en:start -->
-*Boundaries, Counterexamples and Errors*
+*Boundaries, counterexamples, and common errors*
 <!-- bilingual-en:end -->
 
 - 逆矩阵公式使用 $C^T$，不是 $C$；转置来自 $(AC^T)_{ij}$ 中固定 cofactor 的“行”。
@@ -2160,24 +2160,24 @@ This corresponds to the third row minus the first row by a factor of $100$, with
 > [!question]- 1. 若 $\det A=-4$，$A$ 把单位立方体的体积与定向怎样改变？
 > 体积放大为 $4$ 倍；负号表示定向翻转。
 > <!-- bilingual-en:start -->
-> The volume is $4$ times larger; a negative sign indicates directional flip.
+> The volume is four times larger; a negative sign indicates a reversal of orientation.
 > <!-- bilingual-en:end -->
 
 > [!question]- 2. 为什么 $AC^T$ 的非对角元为零？
 > $(i,j)$ 非对角元等于把第 $j$ 行替换成第 $i$ 行后沿第 $j$ 行展开；所得矩阵有两行相同，行列式为零。
 > <!-- bilingual-en:start -->
-> The $(i,j)$ off-diagonal element is expanded along the $j$ after replacing the $j$ row with the $i$ row; the resulting matrix has two identical rows and the determinant is zero.
+> The off-diagonal entry $(i,j)$ equals the determinant obtained by replacing row $j$ with row $i$ and expanding along row $j$. That matrix has two identical rows, so its determinant is zero.
 > <!-- bilingual-en:end -->
 
 > [!question]- 3. 三维四面体由同一点出发的边向量组成列矩阵 $A$，体积公式是什么？
 > 平行六面体体积为 $|\det A|$，四面体体积为 $|\det A|/6$。
 > <!-- bilingual-en:start -->
-> The parallel hexahedron volume is $|\det A|$, and the tetrahedron volume is $|\det A|/6$.
+> The parallelepiped has volume $|\det A|$, and the tetrahedron has volume $|\det A|/6$.
 > <!-- bilingual-en:end -->
 
 ### 知识链
 <!-- bilingual-en:start -->
-*knowledge chain*
+*Knowledge chain*
 <!-- bilingual-en:end -->
 
 cofactor → adjugate 与[[线性方程组与四个基本子空间#可解性与完整解|逆矩阵]] → [[行列式#乘法性与可逆性|Cramer 法则]] → 体积缩放 → 下一节由 $\det(A-\lambda I)=0$ 寻找特征方向。
@@ -2191,7 +2191,7 @@ cofactor → adjugate and [[线性方程组与四个基本子空间#可解性与
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 一般向量被矩阵作用后会改变方向。哪些特殊方向只被缩放而不转向？设 $A\in\mathbb R^{n\times n}$；只有方阵才能在同一空间中比较 $x$ 与 $Ax$ 的方向。
@@ -2207,7 +2207,7 @@ A general vector changes direction when a matrix acts on it. Which special direc
 
 ### Lecture：从 $Ax=\lambda x$ 到特征方程
 <!-- bilingual-en:start -->
-*Lecture: From $Ax=\lambda x$ to Characteristic Equations*
+*Lecture: from $Ax=\lambda x$ to the characteristic equation*
 <!-- bilingual-en:end -->
 
 非零向量 $x\ne0$ 若满足
@@ -2221,7 +2221,7 @@ $$
 
 则 $x$ 是 $A$ 的[[特征值、对角化与线性动力系统#特征值与特征向量|特征向量（eigenvector）]]，$\lambda$ 是对应的[[特征值、对角化与线性动力系统#特征值与特征向量|特征值（eigenvalue）]]。必须排除 $x=0$，因为零向量会对任意 $\lambda$ 满足等式，却不代表任何方向。
 <!-- bilingual-en:start -->
-Then $x$ is the [[特征值、对角化与线性动力系统#特征值与特征向量|eigenvector]] of $A$, and $\lambda$ is the corresponding [[特征值、对角化与线性动力系统#特征值与特征向量|eigenvalue]].  $x=0$ must be excluded because the zero vector satisfies the equation for any $\lambda$ but does not represent any direction.
+Then $x$ is an [[特征值、对角化与线性动力系统#特征值与特征向量|eigenvector]] of $A$, and $\lambda$ is its corresponding [[特征值、对角化与线性动力系统#特征值与特征向量|eigenvalue]]. The case $x=0$ is excluded because the zero vector satisfies the equation for every $\lambda$ but represents no direction.
 <!-- bilingual-en:end -->
 
 移项得
@@ -2235,7 +2235,7 @@ $$
 
 要有非零解，$A-\lambda I$ 必须奇异，所以
 <!-- bilingual-en:start -->
-To have a non-zero solution, $A-\lambda I$ must be singular, so
+For a nonzero solution to exist, $A-\lambda I$ must be singular, so
 <!-- bilingual-en:end -->
 
 $$
@@ -2250,8 +2250,10 @@ This is the **characteristic equation** associated with the [[特征值、对角
 1. 解标量多项式 $\det(A-\lambda I)=0$ 得特征值；
 2. 对每个 $\lambda$ 解零空间 $N(A-\lambda I)$ 得特征向量。
 <!-- bilingual-en:start -->
-1. Solve the scalar polynomial equation $\det(A-\lambda I)=0$ for the eigenvalues.
-2. For each eigenvalue $\lambda$, compute the eigenspace $N(A-\lambda I)$; its nonzero vectors are eigenvectors.
+
+&nbsp;
+**1.** Solve the scalar polynomial equation $\det(A-\lambda I)=0$ for the eigenvalues.<br>
+**2.** For each eigenvalue $\lambda$, compute the eigenspace $N(A-\lambda I)$; its nonzero vectors are eigenvectors.<br>
 <!-- bilingual-en:end -->
 
 > [!example] 一个 $2\times2$ 例子
@@ -2271,12 +2273,12 @@ This is the **characteristic equation** associated with the [[特征值、对角
 
 #### 行列式、迹与特征值
 <!-- bilingual-en:start -->
-*determinant, trace and eigenvalue*
+*Determinant, trace, and eigenvalues*
 <!-- bilingual-en:end -->
 
 把特征多项式写成
 <!-- bilingual-en:start -->
-write characteristic polynomial as
+Write the characteristic polynomial as
 <!-- bilingual-en:end -->
 
 $$
@@ -2308,7 +2310,7 @@ $$
 
 更一般地，对多项式 $p$，
 <!-- bilingual-en:start -->
-more generally, for polynomial $p$,
+More generally, for any polynomial $p$,
 <!-- bilingual-en:end -->
 
 $$
@@ -2351,7 +2353,7 @@ $$
 
 用第二式减去 $\lambda_k$ 倍第一式：
 <!-- bilingual-en:start -->
-Subtract $\lambda_k$ times the first formula with the second formula:
+Subtract $\lambda_k$ times the first equation from the second:
 <!-- bilingual-en:end -->
 
 $$
@@ -2360,17 +2362,17 @@ $$
 
 由归纳假设和 $\lambda_i-\lambda_k\ne0$，得 $c_1=\cdots=c_{k-1}=0$。代回原式，$c_kx_k=0$，因 $x_k\ne0$，故 $c_k=0$。所以全部系数为零，证毕。
 <!-- bilingual-en:start -->
-From the inductive hypothesis and $\lambda_i-\lambda_k\ne0$, we get $c_1=\cdots=c_{k-1}=0$.  $c_kx_k=0$, $c_k=0$ because of $x_k\ne0$.  So all the coefficients are zero.
+The inductive hypothesis and $\lambda_i-\lambda_k\ne0$ imply $c_1=\cdots=c_{k-1}=0$. The original relation then reduces to $c_kx_k=0$; since $x_k\ne0$, we have $c_k=0$. Thus every coefficient is zero.
 <!-- bilingual-en:end -->
 
 ### Recitation：不直接平方或求逆
 <!-- bilingual-en:start -->
-*Recitation: Do not square or invert directly*
+*Recitation: avoid squaring or inverting the matrix directly*
 <!-- bilingual-en:end -->
 
 取
 <!-- bilingual-en:start -->
-take
+Consider
 <!-- bilingual-en:end -->
 
 $$
@@ -2405,19 +2407,19 @@ $$
 
 不用计算 $A^2$ 或 $A^{-1}$：
 <!-- bilingual-en:start -->
-Do not calculate $A^2$ or $A^{-1}$:
+There is no need to compute $A^2$ or $A^{-1}$ directly:
 <!-- bilingual-en:end -->
 
 - $A^2$ 的特征值是 $1,4,9$，特征向量仍为 $x_i$；
 - $A^{-1}-I$ 的特征值是 $1/\lambda_i-1$，即 $0,-1/2,-2/3$，特征向量仍为 $x_i$。
 <!-- bilingual-en:start -->
-- $A^2$'s eigenvalue is $1,4,9$, and the eigenvector is still $x_i$;
-- The eigenvalue of $A^{-1}-I$ is $1/\lambda_i-1$, i.e. $0,-1/2,-2/3$, and the eigenvector is still $x_i$.
+- The eigenvalues of $A^2$ are $1,4,9$, with the same eigenvectors $x_i$.
+- The eigenvalues of $A^{-1}-I$ are $1/\lambda_i-1$, namely $0,-1/2,-2/3$, again with the same eigenvectors.
 <!-- bilingual-en:end -->
 
 这展示了特征坐标的优势：矩阵函数在特征方向上退化为标量函数。
 <!-- bilingual-en:start -->
-This shows the advantage of the characteristic coordinates: the matrix function reduces to the scalar function in the characteristic direction.
+This is the advantage of eigenvector coordinates: along each eigendirection, a matrix function reduces to the corresponding scalar function of the eigenvalue.
 <!-- bilingual-en:end -->
 
 ### Homework
@@ -2475,8 +2477,8 @@ This shows the advantage of the characteristic coordinates: the matrix function 
 - 重复特征值未必提供足够多独立特征向量；代数重数与特征空间维数要分开。
 <!-- bilingual-en:start -->
 - The eigenvector cannot be zero; any non-zero multiple in the same eigenspace is an eigenvector.
-The eigenvalues of $B$ cannot usually be deduced from the eigenvalues of $B^TB$; the latter is a singular value problem.
-- The real matrix may not have enough real eigenvalues, such as $\pm i$ for the two-dimensional rotation $90^\circ$.
+- The eigenvalues of $B$ cannot usually be deduced from those of $B^TB$; the latter are determined by singular values, not eigenvalues of $B$ alone.
+- A real matrix may not have enough real eigenvalues; for example, a $90^\circ$ rotation in two dimensions has eigenvalues $\pm i$.
 - Repeated eigenvalues may fail to provide enough linearly independent eigenvectors; algebraic multiplicity must be distinguished from eigenspace dimension.
 <!-- bilingual-en:end -->
 
@@ -2505,7 +2507,7 @@ The eigenvalues of $B$ cannot usually be deduced from the eigenvalues of $B^TB$;
 
 ### 知识链
 <!-- bilingual-en:start -->
-*knowledge chain*
+*Knowledge chain*
 <!-- bilingual-en:end -->
 
 $\det(A-\lambda I)=0$ → [[特征值、对角化与线性动力系统#特征值与特征向量|特征值]]与[[特征值、对角化与线性动力系统#特征值与特征向量|特征向量]] → 独立特征方向 → 下一节的[[特征值、对角化与线性动力系统#对角化与矩阵幂|对角化]]。
@@ -2519,7 +2521,7 @@ $\det(A-\lambda I)=0$ → [[特征值、对角化与线性动力系统#特征值
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 什么时候能选一组特征向量作为整个空间的基？一旦做到，为什么 $A^k$ 会变成只对标量取幂？本节始终假设 $A\in\mathbb F^{n\times n}$，其中 $\mathbb F$ 至少包含所需的特征值。
@@ -2535,7 +2537,7 @@ When can a set of eigenvectors be chosen as a basis for the whole space? Once th
 
 ### Lecture：把全部特征方程并排放置
 <!-- bilingual-en:start -->
-*Lecture: Putting All Characteristic Equations Parallel*
+*Lecture: placing all eigenvector equations side by side*
 <!-- bilingual-en:end -->
 
 若 $A$ 有 $n$ 个线性无关特征向量 $x_1,\dots,x_n$，令
@@ -2550,7 +2552,7 @@ $$
 
 把 $Ax_i=\lambda_i x_i$ 并排写：
 <!-- bilingual-en:start -->
-Tile $Ax_i=\lambda_i x_i$:
+Stack the equations $Ax_i=\lambda_i x_i$ by columns:
 <!-- bilingual-en:end -->
 
 $$
@@ -2561,7 +2563,7 @@ $$
 
 $S$ 的列独立，所以可逆。右乘 $S^{-1}$ 得
 <!-- bilingual-en:start -->
-The columns of $S$ are independent, so they are invertible.  Right by $S^{-1}$
+The columns of $S$ are independent, so $S$ is invertible. Right-multiplying by $S^{-1}$ gives
 <!-- bilingual-en:end -->
 
 $$
@@ -2607,7 +2609,7 @@ The eigenvalue $1$ has algebraic multiplicity $2$, but its eigenspace $N(A-I)$ i
 
 #### 矩阵幂
 <!-- bilingual-en:start -->
-*matrix power*
+*Matrix powers*
 <!-- bilingual-en:end -->
 
 利用中间的 $S^{-1}S=I$：
@@ -2686,7 +2688,7 @@ $$
 
 相乘得到
 <!-- bilingual-en:start -->
-multiply
+Multiplying the factors gives
 <!-- bilingual-en:end -->
 
 $$
@@ -2717,9 +2719,9 @@ Setting $k=1$ recovers the original matrix, an essential algebraic check. If $a=
 > $$
 > 因 $A^{-1}=S\Lambda^{-1}S^{-1}$，同样这些 $S$ 也对角化 $A^{-1}$，特征值变成 $1/4,1/2$。
 > <!-- bilingual-en:start -->
-> describing all diagonalizable $A$
+> Describe every matrix $S$ that diagonalizes $A$.
 > **Solution.** The eigenvalues are $4$ and $2$. For $\lambda=4$, solving $(A-4I)x=0$ gives $x_1=2x_2$, so use $(2,1)^T$. For $\lambda=2$, solving gives $x_1=0$, so use $(0,1)^T$. Therefore, in every matrix $S$ that diagonalizes $A$, the two columns must be nonzero multiples of these two eigendirections, possibly in the opposite order:
-> Due to $A^{-1}=S\Lambda^{-1}S^{-1}$, these same $S$ also diagonalize $A^{-1}$, and the eigenvalues become $1/4,1/2$.
+> Since $A^{-1}=S\Lambda^{-1}S^{-1}$, the same matrices $S$ diagonalize $A^{-1}$, whose eigenvalues are $1/4$ and $1/2$.
 > <!-- bilingual-en:end -->
 
 > [!question]- Problem 22.2：Markov 型矩阵的幂极限
@@ -2751,7 +2753,7 @@ Setting $k=1$ recovers the original matrix, an essential algebraic check. If $a=
 
 ### 边界、反例与易错点
 <!-- bilingual-en:start -->
-*Boundaries, Counterexamples and Errors*
+*Boundaries, counterexamples, and common errors*
 <!-- bilingual-en:end -->
 
 - 行化简一般改变特征值；对角化是相似变换 $S^{-1}AS$，不是消元。
@@ -2790,7 +2792,7 @@ Setting $k=1$ recovers the original matrix, an essential algebraic check. If $a=
 
 ### 知识链
 <!-- bilingual-en:start -->
-*knowledge chain*
+*Knowledge chain*
 <!-- bilingual-en:end -->
 
 独立特征向量 → [[特征值、对角化与线性动力系统#对角化与矩阵幂|对角化]] → $A^k$ 与差分方程 → 下一节把标量 $e^{\lambda t}$ 提升为[[特征值、对角化与线性动力系统#对角化与矩阵幂|矩阵指数]]。
@@ -2804,12 +2806,12 @@ Independent eigenvectors → [[特征值、对角化与线性动力系统#对角
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 如何求解耦合常系数系统
 <!-- bilingual-en:start -->
-How to Solve the Coupling Constant Coefficient System
+How can we solve the coupled constant-coefficient system
 <!-- bilingual-en:end -->
 
 $$
@@ -2818,7 +2820,7 @@ $$
 
 核心思想是：特征向量方向把向量微分方程化为标量指数增长；把全部方向合起来得到[[特征值、对角化与线性动力系统#对角化与矩阵幂|矩阵指数（matrix exponential）]] $e^{At}\in\mathbb R^{n\times n}$。
 <!-- bilingual-en:start -->
-The main idea is that the eigenvector direction converts the vector differential equation into a scalar exponential growth, and all the eigenvector directions are combined to form a [[特征值、对角化与线性动力系统#对角化与矩阵幂|matrix exponential]] $e^{At}\in\mathbb R^{n\times n}$.
+The central idea is that each eigendirection reduces the vector differential equation to scalar exponential growth. Combining all eigendirections produces the [[特征值、对角化与线性动力系统#对角化与矩阵幂|matrix exponential]] $e^{At}\in\mathbb R^{n\times n}$.
 <!-- bilingual-en:end -->
 
 > [!info] 本地材料
@@ -2829,7 +2831,7 @@ The main idea is that the eigenvector direction converts the vector differential
 
 ### Lecture：每个特征方向是一种指数模式
 <!-- bilingual-en:start -->
-*Lecture: Each eigendirection evolves as an exponential mode*
+*Lecture: each eigendirection evolves as an exponential mode*
 <!-- bilingual-en:end -->
 
 若 $Ax=\lambda x$，尝试
@@ -2870,7 +2872,7 @@ $$
 
 这与离散系统 $u_k=A^ku_0$ 完全平行：$\lambda_i^k$ 被 $e^{\lambda_i t}$ 取代。
 <!-- bilingual-en:start -->
-This is completely parallel to the discrete system $u_k=A^ku_0$: $\lambda_i^k$ was replaced by $e^{\lambda_i t}$.
+This is exactly parallel to the discrete system $u_k=A^ku_0$: the factor $\lambda_i^k$ is replaced by $e^{\lambda_i t}$.
 <!-- bilingual-en:end -->
 
 #### 矩阵指数的定义与推导
@@ -2900,7 +2902,7 @@ $$
 
 并且 $e^{A\cdot0}=I$，所以
 <!-- bilingual-en:start -->
-And $e^{A\cdot0}=I$, so
+Since $e^{A\cdot0}=I$,
 <!-- bilingual-en:end -->
 
 $$
@@ -2940,12 +2942,12 @@ $$
 
 ### Recitation：三阶 ODE 化为一阶矩阵系统
 <!-- bilingual-en:start -->
-*Recitation: Third-order ODE into First-order Matrix System*
+*Recitation: converting a third-order ODE into a first-order matrix system*
 <!-- bilingual-en:end -->
 
 考虑
 <!-- bilingual-en:start -->
-consider
+Consider
 <!-- bilingual-en:end -->
 
 $$
@@ -3005,7 +3007,7 @@ $$
 
 令 $S=[x_1\ x_2\ x_3]$。$S^{-1}$ 第一列为 $(1/6,-1/2,1/3)^T$，因此 $e^{At}=Se^{\Lambda t}S^{-1}$ 的第一列为
 <!-- bilingual-en:start -->
-Get $S=[x_1\ x_2\ x_3]$.  The first column of $S^{-1}$ is $(1/6,-1/2,1/3)^T$, so the first column of $e^{At}=Se^{\Lambda t}S^{-1}$ is
+Let $S=[x_1\ x_2\ x_3]$. The first column of $S^{-1}$ is $(1/6,-1/2,1/3)^T$, so the first column of $e^{At}=Se^{\Lambda t}S^{-1}$ is
 <!-- bilingual-en:end -->
 
 $$
@@ -3014,7 +3016,7 @@ $$
 
 这里只计算所需的一列，体现了“先判断输出需求，再做最少矩阵乘法”的策略。
 <!-- bilingual-en:start -->
-Here, only one column is calculated, which reflects the strategy of "first determine the output requirements, then do the least matrix multiplication".
+Only the required column is computed. This illustrates the strategy: identify the requested output first, then perform only the necessary matrix multiplication.
 <!-- bilingual-en:end -->
 
 ### Homework
@@ -3049,12 +3051,10 @@ Here, only one column is calculated, which reflects the strategy of "first deter
 > $$
 > 当 $w=0$ 时 $A=0$，轨迹同样退化为初始点。
 > <!-- bilingual-en:start -->
-> if
-> Find $\frac d{dt}\|u(t)\|^2$.
-> **Solution 1: Component.** **Solution 2: Matrix.**
-> So, $\|u(t)\|=\|u(0)\|$.  $w=(a,b,c)^T$; directly calculate $w^TA=0$, therefore
-> When $w\ne0$, the trajectory lies on both the sphere $\|u\|=\|u(0)\|$ and the fixed plane $w^Tu=w^Tu(0)$, so it is an intersection circle between them, or it is reduced to a point when the initial value is parallel to $w$.  Circle radius is
-> When $w=0$, $A=0$, the trajectory also reduces to the initial point.
+> For the displayed skew-symmetric system, find $\frac d{dt}\|u(t)\|^2$.
+> **Solution 1: components.** Differentiating $u_1^2+u_2^2+u_3^2$ and substituting the three component equations makes all cross-terms cancel.
+> **Solution 2: matrices.** Since $A^T=-A$, $\frac d{dt}(u^Tu)=u^T(A^T+A)u=0$. Hence $\|u(t)\|=\|u(0)\|$.
+> Let $w=(a,b,c)^T$. Direct calculation gives $w^TA=0$, so $w^Tu$ is also constant. When $w\ne0$, the trajectory lies on both the sphere $\|u\|=\|u(0)\|$ and the fixed plane $w^Tu=w^Tu(0)$; their intersection is a circle, degenerating to a point when the initial condition is parallel to $w$. Its radius is the displayed expression. When $w=0$, $A=0$ and the trajectory remains at its initial point.
 > <!-- bilingual-en:end -->
 
 > [!question]- Problem 23.2：由对角化计算 $e^{At}$
@@ -3089,7 +3089,7 @@ Here, only one column is calculated, which reflects the strategy of "first deter
 
 ### 边界、反例与易错点
 <!-- bilingual-en:start -->
-*Boundaries, Counterexamples and Errors*
+*Boundaries, counterexamples, and common errors*
 <!-- bilingual-en:end -->
 
 - $e^{At}$ 不是把 $A$ 的每个元素分别取指数；定义来自矩阵幂级数。
@@ -3100,7 +3100,7 @@ Here, only one column is calculated, which reflects the strategy of "first deter
 - $e^{At}$ is not obtained by exponentiating the entries of $A$ separately; it is defined by the matrix power series.
 - The formula $Se^{\Lambda t}S^{-1}$ can be used directly only when $A$ is diagonalizable; the power-series definition is valid for every square matrix.
 - $\lambda<0$ indicates that the eigenmode decays with $t\to\infty$; it does not mean that the solution vector is "negative."
-- The complex conjugate eigenvalues produce a real form of sine—cosine oscillation; the imaginary part cannot be simply discarded.
+- Complex-conjugate eigenvalues combine to produce real sine–cosine oscillations; the imaginary parts cannot simply be discarded.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -3123,17 +3123,17 @@ Here, only one column is calculated, which reflects the strategy of "first deter
 > [!question]- 3. $e^{At}e^{Bt}=e^{(A+B)t}$ 总成立吗？
 > 不成立。矩阵乘法不交换会使幂级数交叉项次序不同；当 $AB=BA$ 时才成立。
 > <!-- bilingual-en:start -->
-> Not true.  The order of the cross-terms of the power series is different if the matrix multiplication is not commutative; it is valid only when $AB=BA$.
+> No. If matrix multiplication is noncommutative, the cross-terms in the two power series occur in different orders. The identity holds when $AB=BA$.
 > <!-- bilingual-en:end -->
 
 ### 知识链
 <!-- bilingual-en:start -->
-*knowledge chain*
+*Knowledge chain*
 <!-- bilingual-en:end -->
 
 对角化 → 特征模式 $e^{\lambda t}x$ → [[特征值、对角化与线性动力系统#对角化与矩阵幂|矩阵指数]] → 连续动力系统 → 下一节的概率稳态与正交函数展开。
 <!-- bilingual-en:start -->
-diagonalization → eigenmodes $e^{\lambda t}x$ → [[特征值、对角化与线性动力系统#对角化与矩阵幂|matrix exponential]] → continuous-time dynamical systems → the next section's stationary probability distributions and orthogonal function expansions.
+Diagonalization → eigenmodes $e^{\lambda t}x$ → [[特征值、对角化与线性动力系统#对角化与矩阵幂|matrix exponential]] → continuous-time dynamical systems → steady-state probability distributions and orthogonal function expansions in the next section.
 <!-- bilingual-en:end -->
 
 ---
@@ -3142,12 +3142,12 @@ diagonalization → eigenmodes $e^{\lambda t}x$ → [[特征值、对角化与�
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 本节把此前工具用于两个看似不同的问题：概率在状态之间转移时为什么会趋于稳态；函数怎样像向量一样投影到正交“坐标轴”上。二者共同核心是：选择能让变换解耦的基。
 <!-- bilingual-en:start -->
-This section applies the previous tool to two seemingly different questions: why probability tends to stabilize as it transitions between states; and how functions are projected as vectors onto orthogonal "axes."  The common core of the two methods is to choose the basis which can decouple the transformation.
+This section applies earlier tools to two apparently different questions: why a probability distribution can approach a steady state as it moves among states, and how a function can be projected onto orthogonal basis functions just as a vector is projected onto coordinate axes. Both problems become simpler after choosing a basis that decouples the transformation.
 <!-- bilingual-en:end -->
 
 > [!info] 本地材料
@@ -3158,12 +3158,12 @@ This section applies the previous tool to two seemingly different questions: why
 
 ### Lecture A：Markov 矩阵与稳态
 <!-- bilingual-en:start -->
-*Lecture A:Markov Matrix and Steady State*
+*Lecture A: Markov matrices and steady states*
 <!-- bilingual-en:end -->
 
 课程采用“列随机”约定：[[特征值、对角化与线性动力系统#Markov 矩阵与稳态|Markov 矩阵（Markov matrix）]] $A=(a_{ij})$ 满足
 <!-- bilingual-en:start -->
-Course uses the "column random" convention: [[特征值、对角化与线性动力系统#Markov 矩阵与稳态|Markov matrix]] $A=(a_{ij})$ meets
+The course uses the column-stochastic convention: the [[特征值、对角化与线性动力系统#Markov 矩阵与稳态|Markov matrix]] $A=(a_{ij})$ satisfies
 <!-- bilingual-en:end -->
 
 $$
@@ -3172,7 +3172,7 @@ $$
 
 $a_{ij}$ 表示“当前在状态 $j$，下一步到状态 $i$”的概率。若 $p_k$ 是分量非负、和为 $1$ 的概率列向量，则
 <!-- bilingual-en:start -->
-$a_{ij}$ represents the probability of "currently in state $j$, next to state $i$".  If $p_k$ is a probability column vector whose components are non-negative and $1$, then
+$a_{ij}$ is the probability of moving from current state $j$ to next state $i$. If $p_k$ is a probability column vector with nonnegative entries that sum to $1$, then
 <!-- bilingual-en:end -->
 
 $$
@@ -3213,7 +3213,7 @@ is called a **steady state**.
 
 若 $A$ 可对角化，特征值 $1$ 是单特征值，并且其他特征值均满足 $|\lambda_i|<1$，则
 <!-- bilingual-en:start -->
-If $A$ is diagonalizable, the eigenvalue $1$ is a single eigenvalue, and all other eigenvalues satisfy $|\lambda_i|<1$, then
+If $A$ is diagonalizable, the eigenvalue $1$ is simple, and every other eigenvalue satisfies $|\lambda_i|<1$, then
 <!-- bilingual-en:end -->
 
 $$
@@ -3223,14 +3223,14 @@ $$
 
 归一化使极限分量和为 $1$。若 $1$ 的重数大于 $1$，稳态可能不唯一；若还存在 $\lambda=-1$ 或其他单位圆上的特征值，则可能周期振荡而不收敛。因此“Markov”本身并不自动保证收敛到唯一稳态。有限状态的正矩阵满足更强的 Perron--Frobenius 条件，本节图中的具体矩阵正是这一情形。
 <!-- bilingual-en:start -->
-The limiting component is normalized to be $1$.  If the multiplicity of $1$ is greater than $1$, the steady state may not be unique, and if there are eigenvalues on $\lambda=-1$ or other unit circles, it may oscillate periodically without convergence.  Therefore, "Markov" itself does not automatically guarantee convergence to a unique steady state.  Positive matrices in finite states satisfy the stronger Perron—Frobenius condition, which is the case for the specific matrices in the figure in this section.
+The limiting vector is normalized so that its entries sum to $1$. If the eigenvalue $1$ has multiplicity greater than one, the steady state may not be unique. If another eigenvalue, such as $-1$, lies on the unit circle, the chain may oscillate periodically rather than converge. Thus being a Markov matrix alone does not guarantee convergence to a unique steady state. Finite-state positive matrices satisfy the stronger Perron–Frobenius conditions; the specific matrices illustrated in this section fall into that setting.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit2-markov-steady-state.png|760]]
 
 ### Recitation：两状态粒子的长期分布
 <!-- bilingual-en:start -->
-*Recitation: Long-Term Distribution of Two-State Particles*
+*Recitation: long-run distribution of a two-state particle*
 <!-- bilingual-en:end -->
 
 粒子在 $A,B$ 两状态之间跳转：从 $A$ 留在 $A$ 的概率 $0.6$、到 $B$ 的概率 $0.4$；从 $B$ 到 $A$ 的概率 $0.2$、留在 $B$ 的概率 $0.8$。所以
@@ -3253,7 +3253,7 @@ $$
 
 由
 <!-- bilingual-en:start -->
-by
+The decomposition
 <!-- bilingual-en:end -->
 
 $$
@@ -3291,7 +3291,7 @@ The decay factor $(0.4)^n$ gives the exact rate at which the chain forgets its i
 
 有限维中，若 $q_1,\dots,q_n$ 是标准正交基，
 <!-- bilingual-en:start -->
-In finite dimensions, if $q_1,\dots,q_n$ is an orthonormal basis,
+In finite dimensions, if $q_1,\dots,q_n$ is an orthonormal basis, then
 <!-- bilingual-en:end -->
 
 $$
@@ -3309,7 +3309,7 @@ $$
 
 函数 $1,\cos nx,\sin nx$ 两两正交，例如
 <!-- bilingual-en:start -->
-The function $1,\cos nx,\sin nx$ is biorthogonal, for example
+The functions $1,\cos(nx),\sin(nx)$ are pairwise orthogonal, for example
 <!-- bilingual-en:end -->
 
 $$
@@ -3318,7 +3318,7 @@ $$
 
 但它们尚未全部归一化：$\|1\|^2=2\pi$，$\|\cos nx\|^2=\|\sin nx\|^2=\pi$。因此[[特征值、对角化与线性动力系统#对角化与矩阵幂|Fourier 级数（Fourier series）]]写成
 <!-- bilingual-en:start -->
-But they have not all been normalized: $\|1\|^2=2\pi$, $\|\cos nx\|^2=\|\sin nx\|^2=\pi$.  So [[特征值、对角化与线性动力系统#对角化与矩阵幂|Fourier series]] wrote
+They are not all normalized: $\|1\|^2=2\pi$, while $\|\cos(nx)\|^2=\|\sin(nx)\|^2=\pi$. Therefore the [[特征值、对角化与线性动力系统#对角化与矩阵幂|Fourier series]] is written as
 <!-- bilingual-en:end -->
 
 $$
@@ -3327,7 +3327,7 @@ $$
 
 其中投影系数为
 <!-- bilingual-en:start -->
-where the projection coefficient is
+where the projection coefficients are
 <!-- bilingual-en:end -->
 
 $$
@@ -3341,12 +3341,12 @@ $$
 
 注意这里采用课程的“常数项写 $a_0$”约定；另一些教材写 $a_0/2$，相应地把 $a_0$ 定义为 $\frac1\pi\int f$。
 <!-- bilingual-en:start -->
-Note that the "constant term writes $a_0$" convention is used here; some textbooks write $a_0/2$, and define $a_0$ as $\frac1\pi\int f$ accordingly.
+This note follows the course convention of writing the constant term as $a_0$. Some textbooks write it as $a_0/2$ and accordingly define $a_0=\frac1\pi\int f$.
 <!-- bilingual-en:end -->
 
 截断到有限个三角函数时，Fourier 部分和就是在所张成函数子空间中的最小二乘投影；残差与每个保留的基函数正交。
 <!-- bilingual-en:start -->
-When truncated to a finite number of trigonometric functions, the Fourier partial sum is the least squares projection in the subspace of the expanded function; the residual is orthogonal to each preserved basis function.
+After truncation to finitely many trigonometric functions, the Fourier partial sum is the least-squares projection onto their span; the residual is orthogonal to every retained basis function.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/linear_algebra/mit18_06sc/mit18.06sc-unit2-fourier-basis.png|780]]
@@ -3401,7 +3401,7 @@ When truncated to a finite number of trigonometric functions, the Fourier partia
 
 ### 边界、反例与易错点
 <!-- bilingual-en:start -->
-*Boundaries, Counterexamples and Errors*
+*Boundaries, counterexamples, and common errors*
 <!-- bilingual-en:end -->
 
 - 本课用“列和为 $1$、概率列向量左乘”的约定；采用行向量的教材常定义行和为 $1$，两者互为转置。
@@ -3423,29 +3423,29 @@ When truncated to a finite number of trigonometric functions, the Fourier partia
 > [!question]- 1. 为什么列随机矩阵保持概率总和？
 > 列和为 $1$ 等价于 $\mathbf1^TA=\mathbf1^T$，所以 $\mathbf1^TAp=\mathbf1^Tp$。
 > <!-- bilingual-en:start -->
-> Column and are $1$ equivalent to $\mathbf1^TA=\mathbf1^T$, so $\mathbf1^TAp=\mathbf1^Tp$.
+> Having every column sum to $1$ is equivalent to $\mathbf1^TA=\mathbf1^T$, so $\mathbf1^TAp=\mathbf1^Tp$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 2. 若 Markov 矩阵特征值为 $1,0.8,-0.2$，长期收敛速度由哪个数控制？
 > 除稳态外最大模为 $0.8$，误差通常按 $0.8^k$ 的量级衰减。
 > <!-- bilingual-en:start -->
-> Except for steady state, the maximum mode is $0.8$, and the error usually attenuates by the order of $0.8^k$.
+> Excluding the steady-state mode, the largest eigenvalue magnitude is $0.8$, so the error typically decays on the order of $0.8^k$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 3. 在 $[0,2\pi]$ 上，为什么 $\cos x$ 的投影系数分母是 $\pi$？
 > 因 $\langle\cos x,\cos x\rangle=\int_0^{2\pi}\cos^2x\,dx=\pi$。
 > <!-- bilingual-en:start -->
-> Because of $\langle\cos x,\cos x\rangle=\int_0^{2\pi}\cos^2x\,dx=\pi$.
+> Because $\langle\cos x,\cos x\rangle=\int_0^{2\pi}\cos^2x\,dx=\pi$.
 > <!-- bilingual-en:end -->
 
 ### 知识链
 <!-- bilingual-en:start -->
-*knowledge chain*
+*Knowledge chain*
 <!-- bilingual-en:end -->
 
 矩阵幂 → [[特征值、对角化与线性动力系统#Markov 矩阵与稳态|Markov 稳态]]；标准正交投影 → [[特征值、对角化与线性动力系统#对角化与矩阵幂|Fourier 展开]]。两条线都体现“在合适的基中解耦”。
 <!-- bilingual-en:start -->
-Matrix Power → [[特征值、对角化与线性动力系统#Markov 矩阵与稳态|Markov steady state]]; Orthonormal Projection → [[特征值、对角化与线性动力系统#对角化与矩阵幂|Fourier Expansion]].  Both lines represent "decoupling in the proper basis".
+Matrix powers → [[特征值、对角化与线性动力系统#Markov 矩阵与稳态|Markov steady states]]; orthogonal projection → [[特征值、对角化与线性动力系统#对角化与矩阵幂|Fourier expansion]]. Both threads express the same idea: decouple the problem in an appropriate basis.
 <!-- bilingual-en:end -->
 
 ---
@@ -3454,7 +3454,7 @@ Matrix Power → [[特征值、对角化与线性动力系统#Markov 矩阵与�
 
 ### 本节问题、前置知识与尺寸
 <!-- bilingual-en:start -->
-*Questions, Prerequisites, and Dimensions for this section*
+*Questions, prerequisites, and dimensions for this section*
 <!-- bilingual-en:end -->
 
 本节不增加新定理，而是训练在有限时间内识别题型、先做结构判断、再选择计算工具。Exam 2 Review 串联三块内容：正交/投影/最小二乘/QR；行列式/cofactor/逆矩阵；特征值/对角化/矩阵幂。
@@ -3502,7 +3502,7 @@ Rather than adding new theorems, this section trains you to identify the problem
 
 ### Review lecture：一题串起投影、秩、特征值和动力学
 <!-- bilingual-en:start -->
-*Review lecture: A Series of Projections, Rank, Eigenvalues and Dynamics*
+*Review lecture: one problem connecting projections, rank, eigenvalues, and dynamics*
 <!-- bilingual-en:end -->
 
 令 $a=(2,1,2)^T$，投影到 $\operatorname{span}(a)$：
@@ -3520,10 +3520,10 @@ $$
 - 因 $P^2=P$，对 $k\ge1$ 有 $P^k=P$。
 - 若 $u_{k+1}=Pu_k$，只做一次投影后便稳定：$u_k=Pu_0$（$k\ge1$）。
 <!-- bilingual-en:start -->
-- $\operatorname{rank}(P)=1$,$C(P)=\operatorname{span}(a)$.
-- $a$ is the eigenvector of the eigenvalue $1$; two independent directions in $a^\perp$ correspond to the eigenvalue $0$.
-- $P^k=P$ for $k\ge1$ due to $P^2=P$.
-- For $u_{k+1}=Pu_k$, stabilization occurs after one drop: $u_k=Pu_0$ ($k\ge1$).
+- $\operatorname{rank}(P)=1$, and $C(P)=\operatorname{span}(a)$.
+- $a$ is an eigenvector with eigenvalue $1$; two independent directions in $a^\perp$ have eigenvalue $0$.
+- Since $P^2=P$, we have $P^k=P$ for every $k\ge1$.
+- If $u_{k+1}=Pu_k$, the sequence stabilizes after the first projection: $u_k=Pu_0$ for every $k\ge1$.
 <!-- bilingual-en:end -->
 
 这类综合题应先利用矩阵类别，而不是重新展开特征多项式或反复相乘。
@@ -3533,7 +3533,7 @@ Such synthesis questions should first use the matrix category rather than reexpa
 
 另一个 review 例子是拟合过原点直线 $y=Dt$ 到 $(1,4),(2,5),(3,8)$：
 <!-- bilingual-en:start -->
-Another example of review is the fitting of the origin line $y=Dt$ to $(1,4),(2,5),(3,8)$:
+Another review example fits the line through the origin, $y=Dt$, to $(1,4),(2,5),(3,8)$:
 <!-- bilingual-en:end -->
 
 $$
@@ -3544,17 +3544,17 @@ $$
 
 这里只有一个未知数，不应人为添加截距列。
 <!-- bilingual-en:start -->
-There is only one unknown and you should not add intercept columns artificially.
+There is only one unknown, so an intercept column should not be added.
 <!-- bilingual-en:end -->
 
 ### Recitation：15 分钟行列式综合题
 <!-- bilingual-en:start -->
-*Recitation:15 Minute Determinant Synthesis*
+*Recitation: a 15-minute determinant synthesis problem*
 <!-- bilingual-en:end -->
 
 考虑
 <!-- bilingual-en:start -->
-consider
+Consider
 <!-- bilingual-en:end -->
 
 $$
@@ -3580,7 +3580,7 @@ $$
 
 第一行 cofactors 为
 <!-- bilingual-en:start -->
-The first line of cofactors is
+The cofactors along the first row are
 <!-- bilingual-en:end -->
 
 $$
@@ -3598,7 +3598,7 @@ $$
 
 考试策略是让前一问的结果直接服务后一问，并在每阶段做一次低成本核对。
 <!-- bilingual-en:start -->
-The test strategy is to have the results of the previous question serve the latter directly, with a low-cost check done at each stage.
+The exam strategy is to reuse each part's result in the next part and perform one inexpensive check at every stage.
 <!-- bilingual-en:end -->
 
 ### 边界、反例与易错点
@@ -3611,10 +3611,10 @@ The test strategy is to have the results of the previous question serve the latt
 - 行列式大公式中的“最多次数”由每项每行每列各选一个元素限制。
 - Exam 中写出尺寸和一行验算，常能及时发现把 $Q^TQ$ 与 $QQ^T$ 交换等错误。
 <!-- bilingual-en:start -->
-- Determinant of the projection matrix: If it is not an identity projection, there is at least one zero eigenvalue, so the determinant of the square projection must be zero.
-- $P_A=P_Q$ is due to projection into the same subspace, not $A=Q$.
-- The Maximum Number of Times in a large determinant formula is limited by one element per row and column.
-- Exam writes out size and a line of checking, often finding errors such as swapping $Q^TQ$ with $QQ^T$ in time.
+- Determinant of a projection matrix: unless the projection is the identity, it has at least one zero eigenvalue, so its determinant is zero.
+- $P_A=P_Q$ because both matrices project onto the same subspace, not because $A=Q$.
+- In the Leibniz formula, the maximum degree of a parameter is constrained by the rule that each term selects exactly one entry from every row and every column.
+- On an exam, writing down matrix dimensions and one quick check often reveals errors such as confusing $Q^TQ$ with $QQ^T$.
 <!-- bilingual-en:end -->
 
 ### 三道自检
@@ -3631,23 +3631,23 @@ The test strategy is to have the results of the previous question serve the latt
 > [!question]- 2. $P^2=P$ 的特征值只能是多少？
 > 若 $Px=\lambda x$，则 $P^2x=\lambda^2x$，又等于 $Px=\lambda x$，故 $\lambda(\lambda-1)=0$，只能是 $0$ 或 $1$。
 > <!-- bilingual-en:start -->
-> If $Px=\lambda x$, then $P^2x=\lambda^2x$ is equal to $Px=\lambda x$, so $\lambda(\lambda-1)=0$ can only be $0$ or $1$.
+> If $Px=\lambda x$, then $P^2x=\lambda^2x$. Because $P^2=P$, this also equals $Px=\lambda x$, so $\lambda(\lambda-1)=0$ and $\lambda$ must be $0$ or $1$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 3. 若 $A$ 有特征值 $2,1/2,-1$，$A^k$ 长期一定收敛吗？
 > 不一定且通常发散：特征值 $2$ 的分量指数增长；即使初值无该分量，$-1$ 分量也会交替而不收敛。
 > <!-- bilingual-en:start -->
-> Not necessarily and usually divergent: the component of the eigenvalue $2$ grows exponentially; even if the initial value does not have the component, the $-1$ component alternates without convergence.
+> Not necessarily; in general it diverges. The component associated with eigenvalue $2$ grows exponentially. Even if the initial vector has no such component, a component associated with $-1$ alternates in sign and therefore does not converge.
 > <!-- bilingual-en:end -->
 
 ### 知识链
 <!-- bilingual-en:start -->
-*knowledge chain*
+*Knowledge chain*
 <!-- bilingual-en:end -->
 
 投影/QR、行列式/cofactor、eigen/diagonalization 三条线在 Unit II 与 Exam 2 Review 中汇合；下一单元将用对称性把它们进一步统一为正交对角化、正定性与 SVD。
 <!-- bilingual-en:start -->
-Projection/QR, determinant/cofactor and eigen/diagonalization are combined in Unit II and Exam 2 Review; the next unit will further unify them into orthogonal diagonalization, positive definiteness and SVD by symmetry.
+The projection/QR, determinant/cofactor, and eigenvalue/diagonalization strands come together in Unit II and the Exam 2 review. The next unit uses symmetry to unify them further through orthogonal diagonalization, positive definiteness, and the SVD.
 <!-- bilingual-en:end -->
 
 ---
@@ -3660,22 +3660,15 @@ Projection/QR, determinant/cofactor and eigen/diagonalization are combined in Un
 > - [Exam 2 原题，第 3 题](MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2.pdf#page=3)
 > - [Exam 2 原题，第 4 题](MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2.pdf#page=4)
 > - [官方答案，第 1 题](MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2s.pdf#page=1) · [第 2 题](MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2s.pdf#page=3) · [第 3 题](MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2s.pdf#page=4) · [第 4 题](MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2s.pdf#page=5)
-> <!-- bilingual-en:start -->
-> - [Exam 2 Original Question 1](MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2.pdf#page=1)
-> - [Exam 2 Original Question 2](MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2.pdf#page=2)
-> - [Exam 2 Original Question 3](MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2.pdf#page=3)
-> - [Exam 2 Original Question 4](MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2.pdf#page=4)
-> - [Official Answer, Question 1](MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2s.pdf#page=1) · [Question 2](MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2s.pdf#page=3) · [Question 3](MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2s.pdf#page=4) · [Question 4](MIT_OCW_18.06SC_PDF/02_Exercises/MIT18_06SCF11_ex2s.pdf#page=5)
-> <!-- bilingual-en:end -->
 
 ## Problem 1：标准正交基构成的三个行列式
 <!-- bilingual-en:start -->
-*Problem 1: Three Determinants of Orthonormal Bases*
+*Problem 1: three determinants formed from an orthonormal basis*
 <!-- bilingual-en:end -->
 
 设 $q_1,q_2,q_3$ 是 $\mathbb R^3$ 中的标准正交向量。求下列行列式的所有可能值，并说明理由。
 <!-- bilingual-en:start -->
-Let $q_1,q_2,q_3$ be the orthonormal vector in $\mathbb R^3$.  Find all possible values for the following determinants and explain the reasons.
+Let $q_1,q_2,q_3$ be orthonormal vectors in $\mathbb R^3$. Find all possible values of the following determinants and justify each answer.
 <!-- bilingual-en:end -->
 
 ### (a) $\det[q_1\ q_2\ q_3]$
@@ -3691,10 +3684,9 @@ Let $q_1,q_2,q_3$ be the orthonormal vector in $\mathbb R^3$.  Find all possible
 > $$\boxed{\det Q=\pm1}.$$
 > 正号对应保持定向的标准正交基，负号对应翻转定向的标准正交基。
 > <!-- bilingual-en:start -->
-> Get $Q=[q_1\ q_2\ q_3]$.  The orthonormality condition is given
+> Let $Q=[q_1\ q_2\ q_3]$. Orthonormality gives
 > $$Q^TQ=I.$$
-> Both sides take the determinant:
-> because the real square is $1$,
+> Taking determinants yields $(\det Q)^2=1$. Since $\det Q$ is real,
 > $$\boxed{\det Q=\pm1}.$$
 > A positive sign corresponds to an orientation-preserving orthonormal basis, while a negative sign corresponds to an orientation-reversing orthonormal basis.
 > <!-- bilingual-en:end -->
@@ -3716,11 +3708,9 @@ Let $q_1,q_2,q_3$ be the orthonormal vector in $\mathbb R^3$.  Find all possible
 > $$\boxed{\pm2}.$$
 > 这也可由行列式对各列的线性性展开；含重复列的项全部为零，只留下两个同号的循环排列项。
 > <!-- bilingual-en:start -->
-> The new column is written as the product of $Q$ and coefficient matrix:
-> The determinant of the coefficient matrix is
-> So the new determinant is $2\det Q$, and all possible values are
+> Write the matrix of new columns as $Q$ times the coefficient matrix displayed above. The coefficient matrix has determinant $2$, so the new determinant is $2\det Q$ and its possible values are
 > $$\boxed{\pm2}.$$
-> This can also be expanded by the linearity of the columns by the determinant; items with duplicate columns are all zeroes, leaving only two circularly arranged items of the same sign.
+> The same result follows by multilinearity in the columns: every term with repeated columns vanishes, leaving two cyclic-permutation terms with the same sign.
 > <!-- bilingual-en:end -->
 
 ### (c) $\det[q_1\ q_2\ q_3]\det[q_2\ q_3\ q_1]$
@@ -3733,8 +3723,8 @@ Let $q_1,q_2,q_3$ be the orthonormal vector in $\mathbb R^3$.  Find all possible
 > 乘积为 $(\det Q)^2=1$，故
 > $$\boxed{1}.$$
 > <!-- bilingual-en:start -->
-> The second column order is changed from $(1,2,3)$ to $(2,3,1)$, which is a three-cycle, and can be completed by two exchanges, so it is even arrangement, the determinant is unchanged:
-> Product is $(\det Q)^2=1$, so
+> The column order changes from $(1,2,3)$ to $(2,3,1)$. This three-cycle is the product of two transpositions, so it is an even permutation and the determinant is unchanged:
+> The product is therefore $(\det Q)^2=1$, so
 > $$\boxed{1}.$$
 > <!-- bilingual-en:end -->
 
@@ -3746,17 +3736,17 @@ Let $q_1,q_2,q_3$ be the orthonormal vector in $\mathbb R^3$.  Find all possible
 
 ## Problem 2：21 个数据点的最小二乘直线
 <!-- bilingual-en:start -->
-*Problem 2:Least Squares Line for 21 Data Points*
+*Problem 2: Least-squares line for 21 data points*
 <!-- bilingual-en:end -->
 
 在 $t=-10,-9,\dots,9,10$ 共 21 个时刻测量。除 $t=0$ 的测量为 $1$ 外，其余测量全为 $0$。
 <!-- bilingual-en:start -->
-It was measured at $t=-10,-9,\dots,9,10$ for 21 times.  All measurements are $0$ except for the $t=0$ measurement of $1$.
+Measurements are taken at the 21 times $t=-10,-9,\dots,9,10$. Every measured value is $0$ except the value at $t=0$, which is $1$.
 <!-- bilingual-en:end -->
 
 ### (a) 求最佳直线 $C+Dt$
 <!-- bilingual-en:start -->
-*(a) For the best straight line $C+Dt$*
+*(a) Find the best-fitting line $C+Dt$*
 <!-- bilingual-en:end -->
 
 > [!success]- 完整解答
@@ -3791,14 +3781,14 @@ It was measured at $t=-10,-9,\dots,9,10$ for 21 times.  All measurements are $0$
 > $$\boxed{\hat C=\frac1{21},\qquad \hat D=0}.$$
 > 最佳直线是所有测量的平均高度 $y=1/21$；对称性使斜率为零。
 > <!-- bilingual-en:start -->
-> The design matrix and data vector are the ones displayed above. Symmetry of the time points gives $\sum_i t_i=0$, while $\sum_i t_i^2=770$, $\sum_i b_i=1$, and $\sum_i t_ib_i=0$. Therefore the normal equations decouple and give
+> The design matrix and data vector are shown above. Symmetry of the time points gives $\sum_i t_i=0$, while $\sum_i t_i^2=770$, $\sum_i b_i=1$, and $\sum_i t_ib_i=0$. Therefore the normal equations decouple and give
 > $$\boxed{\hat C=\frac1{21},\qquad \hat D=0}.$$
 > The best line is the average height of all measurements $y=1/21$; symmetry makes the slope zero.
 > <!-- bilingual-en:end -->
 
 ### (b) 投影到哪个子空间？给出一个非零正交向量
 <!-- bilingual-en:start -->
-*(b) Onto which subspace is the projection? Give a nonzero orthogonal vector*
+*(b) What is the target subspace? Give a nonzero vector orthogonal to it*
 <!-- bilingual-en:end -->
 
 > [!success]- 完整解答
@@ -3823,12 +3813,12 @@ It was measured at $t=-10,-9,\dots,9,10$ for 21 times.  All measurements are $0$
 > [!warning] 常见错误
 > 目标子空间不是 $(t,y)$ 平面中的一条直线，而是 $\mathbb R^{21}$ 中由常数列和时间列张成的二维列空间。
 > <!-- bilingual-en:start -->
-> The target subspace is not a line in the $(t,y)$ plane, but a two-dimensional column space spanned by a constant column and a time column in the $\mathbb R^{21}$.
+> The target subspace is not a line in the $(t,y)$ plane. It is the two-dimensional subspace of $\mathbb R^{21}$ spanned by the constant and time columns.
 > <!-- bilingual-en:end -->
 
 ## Problem 3：Gram–Schmidt、两个投影矩阵与新向量
 <!-- bilingual-en:start -->
-*Problem 3:Gram-Schmidt, Two Projection Matrices and New Vectors*
+*Problem 3: Gram–Schmidt, two projection matrices, and a new vector*
 <!-- bilingual-en:end -->
 
 独立向量 $a_1,a_2,a_3\in\mathbb R^5$ 经 Gram–Schmidt 得到标准正交向量 $q_1,q_2,q_3$。令
@@ -3856,14 +3846,12 @@ $$
 > $$
 > 两者都是 $5\times5$，因为它们把 $\mathbb R^5$ 中的向量映回 $\mathbb R^5$。
 > <!-- bilingual-en:start -->
-> $A$'s in full order, so
-> $Q^TQ=I_3$, so
-> Both are $5\times5$ because they map the vectors in $\mathbb R^5$ back to $\mathbb R^5$.
+> Because $A$ has full column rank, its projection matrix is $P_A=A(A^TA)^{-1}A^T$. Since $Q^TQ=I_3$, its projection matrix simplifies to $P_Q=QQ^T$. Both matrices are $5\times5$ because they map vectors in $\mathbb R^5$ back into $\mathbb R^5$.
 > <!-- bilingual-en:end -->
 
 ### (b) 比较 $P_A,P_Q$；求 $P_QQ$ 与 $\det P_Q$
 <!-- bilingual-en:start -->
-*(b) Comparing $P_A,P_Q$; seeking $P_QQ$ with $\det P_Q$*
+*(b) Compare $P_A$ and $P_Q$; find $P_QQ$ and $\det P_Q$*
 <!-- bilingual-en:end -->
 
 > [!success]- 完整解答
@@ -3879,19 +3867,18 @@ $$
 > $$\boxed{\det P_Q=0}.$$
 > 等价地，$C(Q)^\perp$ 中的两个独立方向都是特征值 $0$ 的特征向量。
 > <!-- bilingual-en:start -->
-> Gram-Schmidt doesn't change the growth space, so
+> Gram–Schmidt does not change the span, so
 > $$C(A)=C(Q).$$
-> The orthogonal projection to the same subspace is unique, so
+> The orthogonal projection onto a given subspace is unique, so
 > $$\boxed{P_A=P_Q}.$$
-> furthermore
-> $P_Q$ is $5\times5$ but the rank is only $3$, so it is odd:
+> Furthermore, $P_QQ=Q$. Although $P_Q$ is $5\times5$, its rank is only $3$, so it is singular:
 > $$\boxed{\det P_Q=0}.$$
-> Equivalently, the two independent directions in $C(Q)^\perp$ are the eigenvectors of the eigenvalue $0$.
+> Equivalently, the two independent directions in $C(Q)^\perp$ are eigenvectors with eigenvalue $0$.
 > <!-- bilingual-en:end -->
 
 ### (c) 加入独立向量 $a_4$，哪一个是新的 $q_4$？
 <!-- bilingual-en:start -->
-*(c) Add the independent vector $a_4$, which is the new $q_4$?*
+*(c) After adding an independent vector $a_4$, what is the new $q_4$?*
 <!-- bilingual-en:end -->
 
 > [!success]- 完整解答
@@ -3906,14 +3893,13 @@ $$
 > 即题目选项 3。逐项写成 $a_i$ 的简单投影系数通常错误，因为原始 $a_i$ 不正交；若改用 $q_i$，才可直接求和 $\sum(q_i^Ta_4)q_i$。
 > <!-- bilingual-en:start -->
 > First, we remove the component of $a_4$ in the old subspace $C(A)=C(Q)$:
-> Because $a_4$ is separate from the first three columns, $u_4\ne0$.  normalized
-> This is Question 3. Simply using the original $a_i$ as though their coefficients could be computed independently is usually wrong, because the $a_i$ are not orthogonal. With the orthonormal vectors $q_i$, however, the projection is obtained directly as $\sum(q_i^Ta_4)q_i$.
+> Because $a_4$ is linearly independent of the first three columns, $u_4\ne0$. Normalizing $u_4$ gives the displayed formula for $q_4$, which is option 3. Computing separate projection coefficients against the original $a_i$ is generally wrong because those vectors are not orthogonal. With the orthonormal vectors $q_i$, however, the projection is obtained directly as $\sum(q_i^Ta_4)q_i$.
 > <!-- bilingual-en:end -->
 
 > [!warning] 常见错误
 > $Q^TQ=I_3$ 不代表 $QQ^T=I_5$；后者是秩 3 投影，正因此行列式为零。
 > <!-- bilingual-en:start -->
-> $Q^TQ=I_3$ does not represent $QQ^T=I_5$; the latter is a rank 3 projection, so the determinant is zero.
+> $Q^TQ=I_3$ does not imply $QQ^T=I_5$; the latter is a rank-$3$ projection, so its determinant is zero.
 > <!-- bilingual-en:end -->
 
 ## Problem 4：同一个参数占据第一行和第一列
@@ -3928,7 +3914,7 @@ The first row and first column of a $4\times4$ matrix are all parameters $x$, an
 
 ### (a) $\det A$ 作为 $x$ 的多项式，最高可能几次？
 <!-- bilingual-en:start -->
-*(a) $\det A$ as a polynomial of $x$, up to how many times?*
+*(a) What is the largest possible degree of $\det A$ as a polynomial in $x$?*
 <!-- bilingual-en:end -->
 
 > [!success]- 完整解答
@@ -3996,14 +3982,14 @@ $$
 > [!warning] 常见错误
 > 参数出现七个位置，并不意味着次数可到 7；同一排列项受到“每行、每列只取一次”的严格限制。
 > <!-- bilingual-en:start -->
-> The seven positions of the argument do not mean that the number of times can be up to seven; the same permutation is strictly limited to "take once per row, once per column."
+> The fact that the parameter appears in seven positions does not make the determinant a degree-seven polynomial. Every permutation term is constrained to select exactly one entry from each row and each column.
 > <!-- bilingual-en:end -->
 
 ---
 
 ## Unit II 知识闭环
 <!-- bilingual-en:start -->
-*Unit II knowledge closed loop*
+*Unit II knowledge loop*
 <!-- bilingual-en:end -->
 
 $$

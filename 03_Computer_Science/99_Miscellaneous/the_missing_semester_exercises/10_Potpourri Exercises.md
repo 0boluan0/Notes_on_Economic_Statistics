@@ -20,13 +20,6 @@ tags:
 > 官方来源：https://missing-semester-cn.github.io/2020/potpourri/
 > 
 > 官方状态：官方页面未提供单独的 `课后练习` 章节。
-> <!-- bilingual-en:start -->
-> Main note: [[the_missing_semester#第 10 讲 大杂烩|Lecture 10: Potpourri]]
->
-> Official lesson: https://missing-semester-cn.github.io/2020/potpourri/
->
-> Official status: the official lesson does not include a separate `Exercises` section.
-> <!-- bilingual-en:end -->
 
 ## 说明
 <!-- bilingual-en:start -->

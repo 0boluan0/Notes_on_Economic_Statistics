@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `01 架构与预训练`，第一版用于连接 Transformer, Pretraining, Agent 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[Transformer 与注意力机制]], [[预训练、指令微调与偏好优化]], [[推理模型与 LLM Agent]]
+[[Transformer 与注意力机制]], 预训练、指令微调与偏好优化, 推理模型与 LLM Agent
 
 ## 来源
 - [Zotero item](zotero://select/library/items/EK9D9GRX)

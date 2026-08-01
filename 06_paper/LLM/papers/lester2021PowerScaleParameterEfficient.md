@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `03 对齐与偏好优化`，第一版用于连接 Instruction Tuning / RLHF, Scaling Law 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[预训练、指令微调与偏好优化]], [[规模化、MoE 与分布式训练]]
+预训练、指令微调与偏好优化, 规模化、MoE 与分布式训练
 
 ## 来源
 - [Zotero item](zotero://select/library/items/4G665PJR)

@@ -634,11 +634,13 @@ The resulting OOP workflow is:
 4. 通过子类表达差异
 5. 让外部通过统一接口使用不同对象
 <!-- bilingual-en:start -->
-1. Identify common structure.
-2. Design the parent interface.
-3. Encapsulate general logic in class variables and methods.
-4. Express meaningful differences through subclasses.
-5. Let callers use different objects through a uniform interface.
+
+&nbsp;
+**1.** Identify common structure.<br>
+**2.** Design the parent interface.<br>
+**3.** Encapsulate general logic in class variables and methods.<br>
+**4.** Express meaningful differences through subclasses.<br>
+**5.** Let callers use different objects through a uniform interface.<br>
 <!-- bilingual-en:end -->
 
 ## Exercise log

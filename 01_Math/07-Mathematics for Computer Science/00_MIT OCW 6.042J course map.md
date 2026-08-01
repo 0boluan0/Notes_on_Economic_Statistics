@@ -21,12 +21,6 @@ tags:
 > - [Lecture videos](https://www.youtube.com/playlist?list=PLUl4u3cNGP60UlabZBeeqOuoLuj_KNphQ)
 > <!-- bilingual-en:start -->
 > These notes correspond to MIT OpenCourseWare **6.042J / 18.062J Mathematics for Computer Science, Spring 2015**, taught by Albert R. Meyer and Adam Chlipala.
->
-> - [Official course](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/)
-> - [Syllabus](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/pages/syllabus/)
-> - [Official readings](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/pages/readings/)
-> - [Open Learning Library courseware](https://openlearninglibrary.mit.edu/courses/course-v1%3AOCW%2B6.042J%2B2T2019/course/)
-> - [Lecture videos](https://www.youtube.com/playlist?list=PLUl4u3cNGP60UlabZBeeqOuoLuj_KNphQ)
 > <!-- bilingual-en:end -->
 
 ## 从哪里开始
@@ -40,14 +34,6 @@ tags:
 - 考前复习：进入 [[05_Review and exam roadmap|全课程复习与期末考试]]。
 - 查原始资料：进入 [[MIT_OCW_6.042J_Materials/index|课程材料总索引]]。
 - 查可复用知识卡：进入 [[Mathematics for Computer Science Course Atlas|Discrete Mathematics Hub]]。
-<!-- bilingual-en:start -->
-- First study: read Proofs → Structures → Counting → Probability → Final Review in order.
-- For each session: identify the question first, then read the theory and proofs, and finally complete the online feedback exercises, in-class questions, and three self-check questions.
-- To review a proof method: start from [[01_Proofs#证明方法总图|the proof-method map]] or the problem-type entry points on this page.
-- Exam review: open [[05_Review and exam roadmap|Whole-course review and final exam]].
-- Original materials: open [[MIT_OCW_6.042J_Materials/index|Course materials master index]].
-- Reusable knowledge notes: open [[Mathematics for Computer Science Course Atlas|Discrete Mathematics Hub]].
-<!-- bilingual-en:end -->
 
 ## 五篇主笔记
 <!-- bilingual-en:start -->
@@ -161,16 +147,15 @@ Every formal answer should address at least:
 3. 是否存在未处理的边界情形？
 4. 小规模实例、反例或另一种方法是否支持结果？
 <!-- bilingual-en:start -->
-1. Which definitions and assumptions are being used?
-2. Which theorem or algebraic rule justifies each step?
-3. Are any boundary cases untreated?
-4. Does a small example, counterexample, or alternative method support the result?
+
+&nbsp;
+**1.** Which definitions and assumptions are being used?<br>
+**2.** Which theorem or algebraic rule justifies each step?<br>
+**3.** Are any boundary cases untreated?<br>
+**4.** Does a small example, counterexample, or alternative method support the result?<br>
 <!-- bilingual-en:end -->
 
 ## 官方课程顺序
-<!-- bilingual-en:start -->
-*Official course order*
-<!-- bilingual-en:end -->
 
 ### Unit 1: Proofs
 
@@ -187,21 +172,6 @@ Every formal answer should address at least:
 | 9 | State Machines—Invariants | |
 | 10 | Recursive Definition | |
 | 11 | Infinite Sets | Problem Set 4 |
-<!-- bilingual-en:start -->
-| Session | Topic | Assignment or exam |
-|---:|---|---|
-| 1 | Introduction to Proofs | |
-| 2 | Proof Methods | |
-| 3 | Well Ordering Principle | |
-| 4 | Logic & Propositions | Problem Set 1 |
-| 5 | Quantifiers & Predicate Logic | |
-| 6 | Sets | Problem Set 2 |
-| 7 | Binary Relations | |
-| 8 | Induction | Problem Set 3; Midterm 1 |
-| 9 | State Machines—Invariants | |
-| 10 | Recursive Definition | |
-| 11 | Infinite Sets | Problem Set 4 |
-<!-- bilingual-en:end -->
 
 ### Unit 2: Structures
 
@@ -218,21 +188,6 @@ Every formal answer should address at least:
 | 20 | Coloring & Connectivity | |
 | 21 | Trees | |
 | 22 | Stable Matching | Problem Set 8 |
-<!-- bilingual-en:start -->
-| Session | Topic | Assignment or exam |
-|---:|---|---|
-| 12 | GCDs | |
-| 13 | Congruences | |
-| 14 | Euler's Theorem | Problem Set 5 |
-| 15 | RSA Encryption | |
-| 16 | Digraphs: Walks & Paths | Problem Set 6; Midterm 2 |
-| 17 | Directed Acyclic Graphs | |
-| 18 | Partial Orders and Equivalence | |
-| 19 | Degrees & Isomorphism | Problem Set 7 |
-| 20 | Coloring & Connectivity | |
-| 21 | Trees | |
-| 22 | Stable Matching | Problem Set 8 |
-<!-- bilingual-en:end -->
 
 ### Unit 3: Counting
 
@@ -243,15 +198,6 @@ Every formal answer should address at least:
 | 25 | Counting with Bijections | |
 | 26 | Repetitions & Binomial Theorem | |
 | 27 | Pigeonhole Principle, Inclusion-Exclusion | Problem Set 10 |
-<!-- bilingual-en:start -->
-| Session | Topic | Assignment or exam |
-|---:|---|---|
-| 23 | Sums & Products | |
-| 24 | Asymptotics | Problem Set 9; Midterm 3 |
-| 25 | Counting with Bijections | |
-| 26 | Repetitions & Binomial Theorem | |
-| 27 | Pigeonhole Principle, Inclusion-Exclusion | Problem Set 10 |
-<!-- bilingual-en:end -->
 
 ### Unit 4: Probability
 
@@ -265,18 +211,6 @@ Every formal answer should address at least:
 | 33 | Deviation: Markov & Chebyshev Bounds | 无新作业 |
 | 34 | Sampling & Confidence | 无新作业 |
 | 35 | Random Walks & PageRank | 无新作业；随后 Final Exam |
-<!-- bilingual-en:start -->
-| Session | Topic | Assignment or exam |
-|---:|---|---|
-| 28 | Introduction to Discrete Probability | |
-| 29 | Conditional Probability | Problem Set 11 |
-| 30 | Independence & Causality | |
-| 31 | Random Variables, Density Functions | |
-| 32 | Expectation | Problem Set 12 |
-| 33 | Deviation: Markov & Chebyshev Bounds | No new assignment |
-| 34 | Sampling & Confidence | No new assignment |
-| 35 | Random Walks & PageRank | No new assignment; Final Exam follows |
-<!-- bilingual-en:end -->
 
 ## 材料版本说明
 <!-- bilingual-en:start -->
@@ -305,9 +239,6 @@ Every formal answer should address at least:
 > <!-- bilingual-en:start -->
 > The public MIT package does not provide official solutions to the problem sets, in-class questions, or exams. These notes therefore supply **unofficial, independently derived solutions**, checked with truth tables, exhaustive enumeration, small graphs, modular arithmetic, or probability recalculation. Only the correct choices and feedback embedded in the online feedback exercises are labeled official answers.
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 
 > [!success] 596 个问题入口已全部落入笔记
 > - 在线 feedback prompts：**376**，保留官方正确答案与反馈并逐项解释；
@@ -326,9 +257,6 @@ Every formal answer should address at least:
 > <!-- bilingual-en:end -->
 
 ## 本地材料体系
-<!-- bilingual-en:start -->
-*Local material structure*
-<!-- bilingual-en:end -->
 
 | 目录 | 预期数量 | 用途 |
 |---|---:|---|
@@ -342,20 +270,6 @@ Every formal answer should address at least:
 | `08_Courseware_Exercises` | 结构化清单 | 在线题、答案、反馈与 block 顺序 |
 | `09_Courseware_Images` | 17 | 在线题所需图像 |
 | `99_Books` | 1 PDF | 2015 完整教材；2018 版仍留在课程根目录 |
-<!-- bilingual-en:start -->
-| Directory | Expected count | Purpose |
-|---|---:|---|
-| `01_Session_Readings` | 35 PDFs | Chapter excerpts corresponding to sessions |
-| `02_Lecture_Slides` | 113 PDFs | Lecture-slide handouts divided into segments |
-| `03_Video_Transcripts` | 111 PDFs | Locally searchable transcripts |
-| `04_Captions` | 111 SRT files | Video captions and time locations |
-| `05_In_Class_Questions` | 35 PDFs | Team-based classroom questions |
-| `06_Problem_Sets` | 12 PDFs | PS1–PS12 |
-| `07_Exams` | 4 PDFs | Midterms 1–3 and Final |
-| `08_Courseware_Exercises` | Structured inventory | Online problems, answers, feedback, and block order |
-| `09_Courseware_Images` | 17 | Images required by online problems |
-| `99_Books` | 1 PDF | Complete 2015 textbook; the 2018 edition remains in the course root |
-<!-- bilingual-en:end -->
 
 视频不重复存入 iCloud：每段保留 transcript、SRT、YouTube ID 与 Internet Archive 入口，正文仍按视频顺序组织。
 <!-- bilingual-en:start -->

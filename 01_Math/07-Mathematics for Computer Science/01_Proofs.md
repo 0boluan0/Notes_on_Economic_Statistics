@@ -27,12 +27,12 @@ sessions: 1-11
 
 ## 本单元要解决什么
 <!-- bilingual-en:start -->
-*What is addressed in this module*
+*What this unit is designed to answer*
 <!-- bilingual-en:end -->
 
 离散数学中的结论通常不是靠连续图像或数值近似得到，而是靠有限的逻辑链条。一个可检查的证明必须同时回答：
 <!-- bilingual-en:start -->
-The conclusion in discrete mathematics is usually not obtained by continuous image or numerical approximation, but by limited logic chain.  A verifiable proof must also answer:
+Conclusions in discrete mathematics usually come from finite chains of logical reasoning rather than continuous graphs or numerical approximation. A checkable proof must answer all of the following questions:
 <!-- bilingual-en:end -->
 
 1. **对象是什么？** 变量的论域（domain）与符号是否明确？
@@ -41,17 +41,16 @@ The conclusion in discrete mathematics is usually not obtained by continuous ima
 4. **为什么每一步成立？** 是否误用了逆命题、除以零、遗漏情形或循环论证？
 5. **边界是否覆盖？** 空集、零、最小规模、非终止过程与无限集合常常是漏洞所在。
 <!-- bilingual-en:start -->
-1. What is the**object?**Is the domain and symbol of the variable clear?
-2. What is known about**?**What are definitions, assumptions, prior theorems, or axioms?
-3. What is**to prove?**What are the quantifiers and logical shapes of conclusions?
-4. **Why is each step valid?** Does it misuse the converse, divide by zero, omit a case, or argue circularly?
-5. Does**the boundary cover?**Empty sets, zeros, minimum sizes, non-terminating processes, and infinite sets are often vulnerabilities.
+
+&nbsp;
+**1.** **What are the objects?** Are the variables, their domains, and the notation clearly specified?<br>
+**2.** **What is already known?** Which statements are definitions, assumptions, earlier theorems, or axioms?<br>
+**3.** **What must be proved?** What are the quantifiers and logical form of the conclusion?<br>
+**4.** **Why is each step valid?** Does it misuse the converse, divide by zero, omit a case, or argue circularly?<br>
+**5.** **Have all boundary cases been covered?** Empty sets, zero, the smallest possible size, nonterminating processes, and infinite sets are common sources of gaps.<br>
 <!-- bilingual-en:end -->
 
 ## 导航
-<!-- bilingual-en:start -->
-*navigation*
-<!-- bilingual-en:end -->
 
 - [[#Session 1 — Introduction to Proofs|S1 证明是什么]]
 - [[#Session 2 — Proof Methods|S2 反证与分类]]
@@ -69,33 +68,12 @@ The conclusion in discrete mathematics is usually not obtained by continuous ima
 - [[#Session 10 — Recursive Definitions|S10 递归定义与结构归纳]]
 - [[#Session 11 — Infinite Sets|S11 无限集合]]
 - [[#Problem Set 4 — Sessions 9–11|PS4]]
-<!-- bilingual-en:start -->
-- [[#Session 1 — Introduction to Proofs|What is the S1 proof?]]
-- [[#Session 2 — Proof Methods|S2 Contraposition, contradiction, and cases]]
-- [[#Session 3 — Well Ordering Principle|S3 well-ordered principle]]
-- [[#Session 4 — Logic and Propositions|S4 propositional logic]]
-- [[#Problem Set 1 — Sessions 1–4|PS1]]
-- [[#Session 5 — Quantifiers and Predicate Logic|S5 Quantifier and Predicate Logic]]
-- [[#Session 6 — Sets|S6 Collection]]
-- [[#Problem Set 2 — Sessions 5–6|PS2]]
-- [[#Session 7 — Binary Relations|S7 binary relation]]
-- [[#Session 8 — Induction|S8 induction]]
-- [[#Problem Set 3 — Sessions 7–8|PS3]]
-- [[#Midterm 1 — Sessions 1–8|Midterm 1]]
-- [[#Session 9 — State Machines and Invariants|S9 State Machine and Invariant]]
-- [[#Session 10 — Recursive Definitions|S10 Recursive Definition and Structure Induction]]
-- [[#Session 11 — Infinite Sets|S11 infinite set]]
-- [[#Problem Set 4 — Sessions 9–11|PS4]]
-<!-- bilingual-en:end -->
 
 ## 官方 courseware block 顺序
-<!-- bilingual-en:start -->
-*Official courseware block Order*
-<!-- bilingual-en:end -->
 
 正文会合并重复解释，但以下新增知识严格按官方页面出现次序吸收；在线题仍在对应 Session 的折叠区逐项给出答案。
 <!-- bilingual-en:start -->
-The text merges and repeats the explanations, but the following new knowledge is absorbed strictly in the order in which the official pages appear; the online questions are still answered item by item in the fold corresponding to Session.
+The main text consolidates repeated explanations, but introduces new material in the order used on the official courseware pages. Online exercises remain answered item by item in the collapsible section for the corresponding session.
 <!-- bilingual-en:end -->
 
 | Session | 官方片段顺序 |
@@ -111,32 +89,17 @@ The text merges and repeats the explanations, but the following new knowledge is
 | 9 | State-machine invariants → invariant exercise → Derived variables → termination exercise → Integer multiplication → Chocolate bars |
 | 10 | Recursive data → Matching brackets → F18 → Structural induction → template → case count → Recursive functions |
 | 11 | Cardinality → Cantor/Schröder–Bernstein → Countable sets → Cantor theorem → Diagonal argument → Countability quiz → Halting → Russell → ZFC axioms |
-<!-- bilingual-en:start -->
-| Session | Official Fragment Order |
-|—:|—|
-| 1 | Welcome → Intro to Proofs I → Intro to Proofs II → Definitions → Modus Ponens |
-| 2 | Contradiction video → Contradiction exercise → Cases video → When to use cases → Friends/Strangers → Bogus cases → Bogus contradiction |
-| 3 | WOP I → Domain → WOP II → Counterexamples → WOP III → Geometric sum → Examples → Bogus WOP |
-| 4 | Operators → operator exercise → Digital logic → Truth tables → Equivalence → Implies → Propositional logic → Soundness → Connectives |
-| 5 | Predicate I → Predicate II → Satisfiability → Predicate III → Name that predicate → Quantifiers → Quantified propositions → Validity |
-| 6 | Set definitions → Set operations → Difference |
-| 7 | Relations → Range → Relational mappings → Total injection → Finite cardinality → $A\operatorname{inj}B$ → Total/Surjective → Inverse → In/Sur/Bijections → Mapping lemma |
-| 8 | Induction → Bogus induction → Horses → Strong induction → Unstacking → WOP comparison → $n+3$ → Rules → Postage → Bogus proof diagnosis |
-| 9 | State-machine invariants → invariant exercise → Derived variables → termination exercise → Integer multiplication → Chocolate bars |
-| 10 | Recursive data → Matching brackets → F18 → Structural induction → template → case count → Recursive functions |
-| 11 | Cardinality → Cantor/Schröder-Bernstein → Countable sets → Cantor theorem → Diagonal argument → Countability quiz → Halting → Russell → ZFC axioms |
-<!-- bilingual-en:end -->
 
 ## 证明方法总图
 <!-- bilingual-en:start -->
-*proof method diagram*
+*Proof-method map*
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit01-proof-method-map.png|900]]
 
 读图：先按目标命题的逻辑形状选择入口，再沿分支检查该方法必须建立的假设与最容易遗漏的条件。
 <!-- bilingual-en:start -->
-Read: First, the entry is selected according to the logical shape of the target proposition, and then the assumptions that must be established and the conditions that are most likely to be missed are checked along the branches.
+How to read the map: begin with the logical form of the statement you want to prove, then follow the relevant branch to check the assumptions that method requires and the conditions most often overlooked.
 <!-- bilingual-en:end -->
 
 | 目标的逻辑形状 | 首选结构 | 开头必须写出 | 最常见漏洞 |
@@ -151,14 +114,14 @@ Read: First, the entry is selected according to the logical shape of the target 
 | 程序永不进入坏状态 | [[数学证明方法#不变量与算法正确性|不变量]] | 初始成立、转移保持 | 只证明“保持”，没证明初始成立 |
 | 递归生成的所有对象 | [[数学证明方法#归纳法|结构归纳]] | 每个 base/constructor | 漏掉某个构造器 |
 <!-- bilingual-en:start -->
-| Logical shape of target | Preferred structure | Must start with | Most common vulnerabilities |
-|—|—|—|—|
+| Logical form of the target | Preferred structure | What the proof must establish first | Most common failure mode |
+|---|---|---|---|
 | $P\Rightarrow Q$ | [[数学证明方法#命题、量词与否定|direct proof]] | Assume $P$ | Silently assumes $Q$; proves the converse instead |
 | $P\Rightarrow Q$, and $\neg Q$ is easier to use | [[数学证明方法#直接证明、逆否与反证|proof by contrapositive]] | Assume $\neg Q$ | Writes $\neg P\Rightarrow\neg Q$ instead |
 | A nonexistence claim, or an assumption that should lead to a conflict | [[数学证明方法#直接证明、逆否与反证|proof by contradiction]] | Assume the target statement is false | The contradiction does not actually depend on that assumption |
 | The domain naturally splits into exhaustive cases | [[数学证明方法#直接证明、逆否与反证|proof by cases]] | List cases covering every possibility | Omits $0$, the empty set, or a boundary case |
 | For each $n\in\mathbb N$ | [[数学证明方法#归纳法|mathematical induction]] | Proposition $P(n)$ and base case | Inductive step not connected to the next integer |
-| $P(n)$ relies on multiple smaller sizes | [[数学证明方法#归纳法|strong induction]] | All $P(k),k<n$ | not enough base cases to start recursion |
+| $P(n)$ relies on multiple smaller cases | [[数学证明方法#归纳法|strong induction]] | All $P(k),k<n$ | Too few base cases to start the recurrence |
 | Assuming a least counterexample makes descent easier | [[数学证明方法#良序与最小反例|well-ordering principle]] | Counterexample set $C\subseteq\mathbb N$ | The constructed smaller object does not belong to $C$ |
 | A program never reaches a bad state | [[数学证明方法#不变量与算法正确性|invariant]] | Establish it initially and prove every transition preserves it | Proves preservation but not the initial case |
 | All recursively generated objects | [[数学证明方法#归纳法|structural induction]] | Every base case and constructor | Omits a constructor |
@@ -186,17 +149,17 @@ No prior theorem is required. The central questions are what it means for a clai
 
 ### 1.1 命题、谓词与证明
 <!-- bilingual-en:start -->
-*1.1 Proposition, Predicate and Proof*
+*1.1 Propositions, predicates, and proofs*
 <!-- bilingual-en:end -->
 
 [[数学证明方法#命题、量词与否定|命题（proposition）]]是一个具有确定真值的陈述；它要么真，要么假。例如“$2+3=5$”是命题，“$x+3=5$”在没有指定 $x$ 时不是命题。
 <!-- bilingual-en:start -->
-[[数学证明方法#命题、量词与否定|proposition]] is a statement with a definite truth value; it is either true or false.  For example, "$2+3=5$" is a proposition, and "$x+3=5$" is not a proposition when $x$ is not specified.
+A [[数学证明方法#命题、量词与否定|proposition]] is a statement with a definite truth value: it is either true or false. For example, "$2+3=5$" is a proposition, whereas "$x+3=5$" is not a proposition unless $x$ is specified.
 <!-- bilingual-en:end -->
 
 [[数学证明方法#命题、量词与否定|谓词（predicate）]] $P(x)$ 是含自由变量的真假条件。给定论域并代入 $x$，或给变量加量词后，它才成为命题。例如
 <!-- bilingual-en:start -->
-[[数学证明方法#命题、量词与否定|predicate]] $P(x)$ is a true and false condition with free variables.  It becomes a proposition only when a domain is given and replaced by a $x$, or a variable is quantified.  For example
+A [[数学证明方法#命题、量词与否定|predicate]] $P(x)$ is a truth-valued condition containing one or more free variables. Once a domain has been specified, substituting a value for $x$ or binding $x$ with a quantifier turns it into a proposition. For example,
 <!-- bilingual-en:end -->
 
 $$
@@ -210,7 +173,7 @@ In the universe $\mathbb Z$, $P(2)$ is true, $P(1)$ is false, and $\exists x\,P(
 
 [[数学证明方法#命题、量词与否定|公理（axiom）]]是在某个形式系统内接受为起点的命题；[[数学证明方法#命题、量词与否定|定理（theorem）]]是重要且已证明的命题；[[数学证明方法#命题、量词与否定|引理（lemma）]]为后续定理服务；[[数学证明方法#命题、量词与否定|推论（corollary）]]由已有定理经过很短推导得到。
 <!-- bilingual-en:start -->
-[[数学证明方法#命题、量词与否定|axiom]] is a proposition that is accepted as the starting point in a formal system; [[数学证明方法#命题、量词与否定|theorem]] is an important and proven proposition; [[数学证明方法#命题、量词与否定|lemma]] serves as a follow-up theorem; and [[数学证明方法#命题、量词与否定|corollary]] is derived from existing theorems in a very short time.
+An [[数学证明方法#命题、量词与否定|axiom]] is a proposition accepted as a starting point within a formal system; a [[数学证明方法#命题、量词与否定|theorem]] is an important proposition that has been proved; a [[数学证明方法#命题、量词与否定|lemma]] is a supporting result used to prove a later theorem; and a [[数学证明方法#命题、量词与否定|corollary]] follows from an established theorem in only a few steps.
 <!-- bilingual-en:end -->
 
 [[数学证明方法#命题、量词与否定|证明（proof）]]是从定义、公理、假设及已经证明的结论出发，按有效推理规则得到目标命题的有限序列。这里有两个关键限定：
@@ -239,12 +202,12 @@ The implication $P\Rightarrow Q$ states that whenever the antecedent $P$ is true
 
 读图：重点看 $P$ 为真而 $Q$ 为假的唯一失败格；其余三格都不构成对蕴含的反例。
 <!-- bilingual-en:start -->
-Read: The only failure lattice where $P$ is true and $Q$ is false; none of the remaining three lattices constitute a counterexample to implication.
+How to read the table: focus on the single cell in which $P$ is true and $Q$ is false. None of the other three truth-value combinations is a counterexample to the implication.
 <!-- bilingual-en:end -->
 
 最基本的推理规则是肯定前件（Modus Ponens）：
 <!-- bilingual-en:start -->
-The most basic rule of reasoning is the Modus Ponens:
+The most basic rule of inference is modus ponens:
 <!-- bilingual-en:end -->
 
 $$
@@ -253,12 +216,12 @@ $$
 
 这不是代数分式，而是“已知横线上方两项，即可推出横线下方结论”。相反，由 $P\Rightarrow Q$ 和 $Q$ 推出 $P$ 是**肯定后件谬误**。
 <!-- bilingual-en:start -->
-This is not an algebraic fraction, but rather "the above two terms of the known horizon are used to derive the conclusion below the horizon".  Instead, the introduction of $P$ by $P\Rightarrow Q$ and $Q$ is**sure of the fallacy**behind it.
+This is not an algebraic fraction. It says that the two premises above the inference bar justify the conclusion below it. By contrast, inferring $P$ from $P\Rightarrow Q$ and $Q$ is the **fallacy of affirming the consequent**.
 <!-- bilingual-en:end -->
 
 ### 1.3 直接证明的标准结构
 <!-- bilingual-en:start -->
-*1.3 Standard Structure of Direct Proof*
+*1.3 The standard structure of a direct proof*
 <!-- bilingual-en:end -->
 
 要证明 $P\Rightarrow Q$：
@@ -271,10 +234,12 @@ To prove $P\Rightarrow Q$:
 3. 到达 $Q$；
 4. 用 $\square$ 或 QED 结束。
 <!-- bilingual-en:start -->
-1. Explicitly state "hypothetical $P$";
-2. Only use the assumption, definition and known theorem deformation;
-3. Arrival at $Q$;
-4. Exit with $\square$ or QED.
+
+&nbsp;
+**1.** Explicitly state, “Assume $P$.”<br>
+**2.** Reason using only that assumption, definitions, and established results.<br>
+**3.** Derive $Q$.<br>
+**4.** End with $\square$ or QED.<br>
 <!-- bilingual-en:end -->
 
 **示例：若整数 $n$ 为偶数，则 $n^2$ 为偶数。**
@@ -284,7 +249,7 @@ To prove $P\Rightarrow Q$:
 
 目标是 $P(n)\Rightarrow Q(n)$，其中 $P(n)$ 为“$n$ 偶”，$Q(n)$ 为“$n^2$ 偶”。假设 $n$ 偶，按定义存在 $k\in\mathbb Z$ 使 $n=2k$。于是
 <!-- bilingual-en:start -->
-The target is $P(n)\Rightarrow Q(n)$, where $P(n)$ is "$n$ even" and $Q(n)$ is "$n^2$ even".  Suppose that $n$ is even, there is $k\in\mathbb Z$ by definition to make $n=2k$.  therefore
+The target has the form $P(n)\Rightarrow Q(n)$, where $P(n)$ means “$n$ is even” and $Q(n)$ means “$n^2$ is even.” Assume that $n$ is even. By definition, there is some $k\in\mathbb Z$ such that $n=2k$. Therefore,
 <!-- bilingual-en:end -->
 
 $$
@@ -293,12 +258,12 @@ $$
 
 因 $2k^2\in\mathbb Z$，所以 $n^2$ 可写成 $2$ 乘某整数，故为偶数。$\square$
 <!-- bilingual-en:start -->
-Because $2k^2\in\mathbb Z$, $n^2$ can be written as $2$ times an integer, and thus even.  $\square$
+Because $2k^2\in\mathbb Z$, $n^2$ is twice an integer and is therefore even. $\square$
 <!-- bilingual-en:end -->
 
 ### 1.4 先找“第一处错误”
 <!-- bilingual-en:start -->
-*1.4 Find the First Error*
+*1.4 Find the first error*
 <!-- bilingual-en:end -->
 
 审查证明时，不要只说“答案不对”，而要找**第一处不再由前文推出的步骤**。常见来源：
@@ -328,9 +293,6 @@ When auditing a proof, do not merely say that the conclusion is wrong. Locate **
 >
 > **Modus Ponens 1–6：**`IF P THEN Q` 是 implication；$P,P\Rightarrow Q\vdash Q$ 是 Modus Ponens；横线上方是 antecedent，横线下方既是 consequent 也是 conclusion；$P\Rightarrow Q$ 的逆否为 $\neg Q\Rightarrow\neg P$；证明通常以 QED 或 $\Box$ 收尾。官方反馈特别提醒：逆否命题与原命题等价，但 converse 不等价。
 > <!-- bilingual-en:start -->
-> **Local entry:**
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S01_1.1.4_definitions-to-know-for-proofs|1.1.4 Definitions To Know For Proofs]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S01_1.1.5_modus-ponens|1.1.5 Modus Ponens]]
 > **Definitions 1–7:** A statement with a definite truth value is a proposition; a truth-valued expression depending on variables is a predicate; an axiom is accepted as true; a proof is a valid chain from axioms and established results to the target statement; a theorem is an important proved statement; a lemma is a supporting result used later; and a corollary follows from a theorem in a few steps.
 > **Modus Ponens 1–6:** `IF P THEN Q` is an implication; $P,P\Rightarrow Q\vdash Q$ is Modus Ponens. Above the inference bar are the premises; below it is the conclusion. The contrapositive of $P\Rightarrow Q$ is $\neg Q\Rightarrow\neg P$. A proof usually ends with QED or $\Box$. The official feedback emphasizes that a statement is logically equivalent to its contrapositive, but not generally to its converse.
 > <!-- bilingual-en:end -->
@@ -359,17 +321,20 @@ When auditing a proof, do not merely say that the conclusion is wrong. Locate **
 > 3. 从 $x=y$ 推到 $x^2=xy$ 是否可逆？在什么条件下？
 >
 > <!-- bilingual-en:start -->
-> 1. Why is it invalid to begin a direct proof of “$n^2$ even $\Rightarrow n$ even” by writing $n=2k$?
-> 2. Explain why “the first 1000 primes are odd” is false, and give a counterexample.
-> 3. Is the step from $x=y$ to $x^2=xy$ reversible? Under what additional condition?
+>
+> &nbsp;
+> **1.** Why is it invalid to begin a direct proof of “$n^2$ even $\Rightarrow n$ even” by writing $n=2k$?<br>
+> **2.** Explain why “the first 1000 primes are odd” is false, and give a counterexample.<br>
+> **3.** Is the step from $x=y$ to $x^2=xy$ reversible? Under what additional condition?<br>
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 1. $n=2k$ 正是待证结论，等于预设结论；应证逆否“$n$ 奇则 $n^2$ 奇”或用素因子性质。2. 素数 $2$ 为偶数。3. 正向恒可；反向由 $x(x-y)=0$ 只能得到 $x=0$ 或 $x=y$，若另知 $x\ne0$ 才可推出 $x=y$。
 > <!-- bilingual-en:start -->
-> 1. Writing $n=2k$ assumes exactly the conclusion to be proved. Instead prove the contrapositive, “$n$ odd implies $n^2$ odd,” or use prime factorisation. 2. The prime number $2$ is even. 3. The forward implication always holds. In reverse, $x(x-y)=0$ gives only $x=0$ or $x=y$; the additional assumption $x\ne0$ is needed to conclude $x=y$.
+>
+> &nbsp;
+> **1.** Writing $n=2k$ assumes exactly the conclusion to be proved. Instead prove the contrapositive, “$n$ odd implies $n^2$ odd,” or use prime factorisation.<br>
+> **2.** The prime number $2$ is even.<br>
+> **3.** The forward implication always holds. In reverse, $x(x-y)=0$ gives only $x=0$ or $x=y$; the additional assumption $x\ne0$ is needed to conclude $x=y$.<br>
 > <!-- bilingual-en:end -->
 
 **知识链：**命题/谓词 → 蕴含 → 有效推理 → 直接证明 → 错误定位。
@@ -398,7 +363,7 @@ When a direct derivation from $P$ to $Q$ is difficult, how can the proof task be
 
 ### 2.1 逆否证明
 <!-- bilingual-en:start -->
-*2.1 Inverse proof*
+*2.1 Proof by contraposition*
 <!-- bilingual-en:end -->
 
 命题 $P\Rightarrow Q$ 与逆否命题 $\neg Q\Rightarrow\neg P$ 等价，因为
@@ -461,7 +426,7 @@ The contradiction must depend on the assumption $\neg T$. If it can be derived w
 
 [[数学证明方法#直接证明、逆否与反证|分类证明]]把论域写成覆盖全部可能的若干情形 $C_1,\dots,C_k$，分别证明 $C_i\Rightarrow T$。分类不一定互斥，但必须穷尽：
 <!-- bilingual-en:start -->
-[[数学证明方法#直接证明、逆否与反证|proof of classification]] wrote the domain as covering all possible cases $C_1,\dots,C_k$, proving $C_i\Rightarrow T$ respectively.  Categorization is not necessarily mutually exclusive, but it must be exhausted:
+A [[数学证明方法#直接证明、逆否与反证|proof by cases]] divides the domain into cases $C_1,\dots,C_k$ that cover every possibility and proves $C_i\Rightarrow T$ for each case. The cases need not be mutually exclusive, but they must be exhaustive:
 <!-- bilingual-en:end -->
 
 $$
@@ -483,13 +448,13 @@ $$
 >
 > 1. $\sqrt2$ 反证依赖“奇数乘积仍为奇数”（等价地素因子分解的奇偶性质）与整数素因子分解。2. 适合分类的条件：论域能拆分、各分支更易证、分支合起来覆盖全部；“直接证明不可行”本身不是充分标准。3. 朋友/陌生人论证给出 $R(3,3)\le6$。4. 伪分类“整数只有正、负两类”漏掉 $a=0$。5. $\sqrt4$ 伪反证两次误用“$4\mid n^2\Rightarrow4\mid n$”；正确只能推出 $2\mid n$。
 > <!-- bilingual-en:start -->
-> **Local entry:**
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S02_1.2.2_proof-by-contradiction|1.2.2 Proof By Contradiction]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S02_1.2.4_when-to-prove-by-cases|1.2.4 When to Prove by Cases]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S02_1.2.5_friends-and-strangers|1.2.5 Friends and Strangers]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S02_1.2.6_a-bogus-proof-by-cases|1.2.6 A Bogus Proof by Cases]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S02_1.2.7_a-bogus-proof-by-contradiction|1.2.7 A Bogus Proof by Contradiction]]
-> 1. The contradiction proof for $\sqrt2$ uses unique prime factorisation, equivalently the fact that a product of odd integers is odd. 2. Proof by cases is appropriate when the domain can be split into exhaustive cases that are easier to prove separately; the mere failure of a direct proof is not sufficient. 3. The friends-and-strangers argument proves $R(3,3)\le6$. 4. The bogus split “every integer is positive or negative” omits $0$. 5. The bogus proof about $\sqrt4$ twice misuses $4\mid n^2\Rightarrow4\mid n$; the valid conclusion is only $2\mid n$.
+>
+> &nbsp;
+> **1.** The contradiction proof for $\sqrt2$ uses unique prime factorisation, equivalently the fact that a product of odd integers is odd.<br>
+> **2.** Proof by cases is appropriate when the domain can be split into exhaustive cases that are easier to prove separately; the mere failure of a direct proof is not sufficient.<br>
+> **3.** The friends-and-strangers argument proves $R(3,3)\le6$.<br>
+> **4.** The bogus split “every integer is positive or negative” omits $0$.<br>
+> **5.** The bogus proof about $\sqrt4$ twice misuses $4\mid n^2\Rightarrow4\mid n$; the valid conclusion is only $2\mid n$.<br>
 > <!-- bilingual-en:end -->
 
 > [!example]- CP2 非官方独立题解（4 道）
@@ -504,7 +469,7 @@ $$
 > **1. If $ab=n$, then $a\le\sqrt n$ or $b\le\sqrt n$.** Suppose instead that both are greater than $\sqrt n$. Since they are nonnegative, multiplication preserves the inequalities and gives $ab>n$, contradicting $ab=n$.
 > **2. Generalising to $\sqrt3$.** Assume that $\sqrt3=a/b$ in lowest terms. Then $a^2=3b^2$. The only quadratic residues modulo $3$ are $0$ and $1$, so $3\mid a^2$ implies $3\mid a$. Writing $a=3k$ gives $b^2=3k^2$, hence $3\mid b$, a contradiction. The same template applies to any prime $p$ that is not a perfect square.
 > **3. An irrational number raised to an irrational power can be rational.** Let $x=(\sqrt2)^{\sqrt2}$. If $x\in\mathbb Q$, choose $a=b=\sqrt2$. If $x\notin\mathbb Q$, choose $a=x$ and $b=\sqrt2$; then $a^b=((\sqrt2)^{\sqrt2})^{\sqrt2}=(\sqrt2)^2=2$. These two cases are exhaustive.
-> **4. Constructive examples.**$a=\sqrt2$, $b=2\log_2 3$.  If $b=r/s\in\mathbb Q$($s>0$), then $2^{r/s}=3^2=9$, so $2^r=9^s=3^{2s}$; the only prime factorization makes the left prime factor $2$, the right only $3$, impossible.  So $b$ is irrational, and $a^b=2^{b/2}=2^{\log_2 3}=3$.
+> **4. A constructive example.** Let $a=\sqrt2$ and $b=2\log_2 3$. If $b=r/s\in\mathbb Q$ with $s>0$, then $2^{r/s}=3^2=9$, so $2^r=9^s=3^{2s}$. This is impossible by unique prime factorisation: the left-hand side has only the prime factor $2$, whereas the right-hand side has only the prime factor $3$. Thus $b$ is irrational, while $a^b=2^{b/2}=2^{\log_2 3}=3$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 三道自检
@@ -513,17 +478,20 @@ $$
 > 3. 为何由 $p\mid n^2$ 推 $p\mid n$ 要求 $p$ 为素数？
 >
 > <!-- bilingual-en:start -->
-> 1. What assumptions do proof by contradiction and proof by contrapositive make, respectively?
-> 2. Do the cases “nonnegative” and “nonpositive” form a valid case split for all real numbers?
-> 3. Why does the implication $p\mid n^2\Rightarrow p\mid n$ require $p$ to be prime?
+>
+> &nbsp;
+> **1.** What assumptions do proof by contradiction and proof by contrapositive make, respectively?<br>
+> **2.** Do the cases “nonnegative” and “nonpositive” form a valid case split for all real numbers?<br>
+> **3.** Why does the implication $p\mid n^2\Rightarrow p\mid n$ require $p$ to be prime?<br>
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 1. 反证假设整个目标为假；逆否证明在 $P\Rightarrow Q$ 中假设 $\neg Q$ 并证 $\neg P$。2. 合法且覆盖全部实数，$0$ 同时落入两类不妨碍证明。3. 合数反例：$4\mid 2^2$，但 $4\nmid2$。
 > <!-- bilingual-en:start -->
-> 1. Proof by contradiction assumes that the target statement is false; proof by contrapositive assumes $\neg Q$ and proves $\neg P$ when the target is $P\Rightarrow Q$. 2. Yes. The cases cover all real numbers, and their overlap at $0$ does not invalidate the proof. 3. A composite counterexample is $4\mid2^2$ but $4\nmid2$.
+>
+> &nbsp;
+> **1.** Proof by contradiction assumes that the target statement is false; proof by contrapositive assumes $\neg Q$ and proves $\neg P$ when the target is $P\Rightarrow Q$.<br>
+> **2.** Yes. The cases cover all real numbers, and their overlap at $0$ does not invalidate the proof.<br>
+> **3.** A composite counterexample is $4\mid2^2$ but $4\nmid2$.<br>
 > <!-- bilingual-en:end -->
 
 **知识链：**蕴含等价变形 → 逆否 → 反证 → 穷尽分类 → 识别伪证。
@@ -557,7 +525,7 @@ How can “if a counterexample exists, choose the least one and construct a stil
 
 [[数学证明方法#良序与最小反例|良序原理（Well-Ordering Principle, WOP）]]：每个非空的非负整数集合 $S\subseteq\mathbb N$ 都有最小元素。
 <!-- bilingual-en:start -->
-[[数学证明方法#良序与最小反例|Well-Ordering Principle (WOP)]]: Each non-empty non-negative integer collection $S\subseteq\mathbb N$ has a minimum element.
+The [[数学证明方法#良序与最小反例|Well-Ordering Principle (WOP)]] states that every nonempty set of nonnegative integers $S\subseteq\mathbb N$ has a least element.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit01-well-ordering-descent.png|900]]
@@ -578,36 +546,38 @@ A template for proving $\forall n\in\mathbb N,P(n)$:
 4. 用 $m$ 的性质构造 $m'<m$，并严格验证 $m'\in C$；
 5. 与 $m$ 最小矛盾，因此 $C=\varnothing$。
 <!-- bilingual-en:start -->
-1. Define the counterexample set $C=\{n\in\mathbb N:\neg P(n)\}$;
-2. Suppose for contradiction that $C\ne\varnothing$;
-3. WOP gives $m=\min C$;
-4. Construct $m'<m$ with the properties of $m$ and strictly verify $m'\in C$;
-5. This contradicts the minimality of $m$, so $C=\varnothing$.
+
+&nbsp;
+**1.** Define the counterexample set $C=\{n\in\mathbb N:\neg P(n)\}$;<br>
+**2.** Suppose for contradiction that $C\ne\varnothing$;<br>
+**3.** WOP gives $m=\min C$;<br>
+**4.** Use the properties of $m$ to construct $m'<m$, and verify carefully that $m'\in C$;<br>
+**5.** This contradicts the minimality of $m$, so $C=\varnothing$.<br>
 <!-- bilingual-en:end -->
 
 “$m'<m$”本身不够：若 $m'$ 为负数、未满足问题定义域、或根本不是反例，就没有矛盾。
 <!-- bilingual-en:start -->
-"$m'<m$" is not enough per se: there is no contradiction if $m'$ is negative, does not satisfy the problem domain, or is not at all a counterexample.
+The inequality $m'<m$ is not enough by itself. There is no contradiction if $m'$ is negative, lies outside the problem's domain, or is not actually a counterexample.
 <!-- bilingual-en:end -->
 
 ### 3.2 每个大于 1 的整数都是素数乘积
 <!-- bilingual-en:start -->
-*3.2 Each integer greater than 1 is a prime product*
+*3.2 Every integer greater than 1 is a product of primes*
 <!-- bilingual-en:end -->
 
 令 $C$ 为不能写成素数乘积的、$>1$ 的整数集合。若非空，取最小 $m$。$m$ 不可能是素数，否则它本身就是一个素数乘积。所以 $m=ab$，其中 $1<a,b<m$。由 $m$ 的最小性，$a,b$ 都能写成素数乘积；相乘便给出 $m$ 的素数乘积分解，与 $m\in C$ 矛盾。
 <!-- bilingual-en:start -->
-Let $C$ be a collection of $>1$ integers that cannot be written as a product of primes.  If not empty, take the smallest $m$.  $m$ cannot be a prime number, otherwise it is itself a prime product.  So $m=ab$, where $1<a,b<m$.  From the minimality of $m$, $a,b$ can be written as a prime product, and the solution of $m$'s prime product is given by the product, which is contradictory to $m\in C$.
+Let $C$ be the set of integers greater than $1$ that cannot be written as a product of primes. Suppose $C$ is nonempty and let $m$ be its least element. The number $m$ cannot itself be prime, because then it would already be a product of primes. Hence $m=ab$ for some $1<a,b<m$. By the minimality of $m$, both $a$ and $b$ can be written as products of primes. Multiplying those factorisations gives a prime factorisation of $m$, contradicting $m\in C$.
 <!-- bilingual-en:end -->
 
 这段证明的下降量是整数大小；严格边界 $1<a,b<m$ 保证可调用最小性。
 <!-- bilingual-en:start -->
-The amount of descent for this proof is an integer size; the strict bound $1<a,b<m$ guarantees callable minimality.
+The descent measure in this proof is the integer's value. The strict bounds $1<a,b<m$ are what allow the minimality of $m$ to be applied to both factors.
 <!-- bilingual-en:end -->
 
 ### 3.3 几何级数公式
 <!-- bilingual-en:start -->
-*3.3 Geometric Series Formulas*
+*3.3 The geometric-series formula*
 <!-- bilingual-en:end -->
 
 对 $r\ne1$，目标为
@@ -621,7 +591,7 @@ $$
 
 若有反例，取最小 $m$。$m\ne0$，因两边均为 $1$。于是 $m-1\ge0$ 且不是反例：
 <!-- bilingual-en:start -->
-If there is a counterexample, the smallest $m$ is taken.  $m\ne0$, since both sides are $1$.  So $m-1\ge0$, not the counter example:
+If a counterexample exists, let $m$ be the least one. We have $m\ne0$, because for $m=0$ both sides equal $1$. Hence $m-1\ge0$, and by the minimality of $m$, $m-1$ is not a counterexample:
 <!-- bilingual-en:end -->
 
 $$
@@ -630,7 +600,7 @@ $$
 
 两边加 $r^m$：
 <!-- bilingual-en:start -->
-Add $r^m$ on both sides:
+Add $r^m$ to both sides:
 <!-- bilingual-en:end -->
 
 $$
@@ -641,7 +611,7 @@ $$
 
 所以 $m$ 也不是反例，矛盾。条件 $r\ne1$ 是因分母；$r=1$ 时和为 $n+1$，需单独处理。
 <!-- bilingual-en:start -->
-So $m$'s not the opposite. Contradiction.  The condition $r\ne1$ is denominator; $r=1$ and is $n+1$ and should be treated separately.
+Thus $m$ is not a counterexample after all, a contradiction. The condition $r\ne1$ is needed because the formula divides by $r-1$. When $r=1$, the sum is $n+1$ and must be handled separately.
 <!-- bilingual-en:end -->
 
 > [!question]- 官方在线 feedback exercises（5 prompts）
@@ -654,13 +624,13 @@ So $m$'s not the opposite. Contradiction.  The condition $r\ne1$ is denominator;
 >
 > 1. WOP 的论域是 nonnegative integers。2. 素数乘积分解证明最终说明反例集合为空。3. 几何和证明的矛盾是“最小反例 $m$ 实际也满足公式”。4. well-ordered 的选项包括：整数下界截尾集、有限集合、分母有统一有限上界的正有理数集合、$\{n/(n+1)\}$、$\mathbb N\cup\{n/(n+1)\}$，以及“每个元素下方仅有限多元素”的实数子集；$\{1/n:n\ge1\}$ 和 $\mathbb Q\cap[\sqrt2,\infty)$ 没有最小元。5. “所有 Fibonacci 数均偶”的伪 WOP 证明漏掉 $m=1$。
 > <!-- bilingual-en:start -->
-> **Local entry:**
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S03_1.3.2_domain-for-well-ordering-principle|1.3.2 Domain for Well Ordering Principle]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S03_1.3.4_well-ordering-proofs-and-counterexamples|1.3.4 Well Ordering Proofs and Counterexamples]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S03_1.3.6_wop-proof-for-geometric-sum|1.3.6 WOP Proof for Geometric Sum]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S03_1.3.7_well-ordering-principle-examples|1.3.7 Well Ordering Principle — Examples]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S03_1.3.8_a-bogus-well-ordering-principle-proof|1.3.8 A Bogus Well Ordering Principle Proof]]
-> 1. WOP is applied to subsets of the nonnegative integers. 2. The prime-factorisation argument ultimately proves that the counterexample set is empty. 3. In the geometric proof, the contradiction is that the least counterexample $m$ also satisfies the formula. 4. Well-ordered examples include a lower-truncated subset of the integers, any finite set, positive rationals whose denominators have a common finite upper bound, $\{n/(n+1)\}$, $\mathbb N\cup\{n/(n+1)\}$, and any subset of the reals with only finitely many elements below each member. By contrast, $\{1/n:n\ge1\}$ and $\mathbb Q\cap[\sqrt2,\infty)$ have no least element. 5. The bogus WOP proof that all Fibonacci numbers are even overlooks $m=1$.
+>
+> &nbsp;
+> **1.** WOP is applied to subsets of the nonnegative integers.<br>
+> **2.** The prime-factorisation argument ultimately proves that the counterexample set is empty.<br>
+> **3.** In the geometric proof, the contradiction is that the least counterexample $m$ also satisfies the formula.<br>
+> **4.** Well-ordered examples include any subset of the integers that is bounded below, any finite set, positive rationals whose denominators have a common finite upper bound, $\{n/(n+1)\}$, $\mathbb N\cup\{n/(n+1)\}$, and any subset of the reals with only finitely many elements below each member. By contrast, $\{1/n:n\ge1\}$ and $\mathbb Q\cap[\sqrt2,\infty)$ have no least element.<br>
+> **5.** The bogus WOP proof that all Fibonacci numbers are even overlooks $m=1$.<br>
 > <!-- bilingual-en:end -->
 
 > [!example]- CP3 非官方独立题解（5 道）
@@ -705,17 +675,20 @@ So $m$'s not the opposite. Contradiction.  The condition $r\ne1$ is denominator;
 > 3. 证明 $2^n\ge n+1$ 时，下降到 $m-1$ 还需检查什么？
 >
 > <!-- bilingual-en:start -->
-> 1. Why can WOP not be applied directly to the real interval $(0,1)$?
-> 2. In a least-counterexample proof, what exactly does the minimality of $m$ allow you to conclude?
-> 3. When proving $2^n\ge n+1$, what must be checked before descending from $m$ to $m-1$?
+>
+> &nbsp;
+> **1.** Why can WOP not be applied directly to the real interval $(0,1)$?<br>
+> **2.** In a least-counterexample proof, what exactly does the minimality of $m$ allow you to conclude?<br>
+> **3.** When proving $2^n\ge n+1$, what must be checked before descending from $m$ to $m-1$?<br>
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 1. 它非空但没有最小元素。2. 只能对同一反例集合中所有严格小于 $m$ 的合法对象断言它们不是反例。3. 先排除 $m=0$，确保 $m-1\in\mathbb N$；再验证由 $P(m-1)$ 可推出 $P(m)$。
 > <!-- bilingual-en:start -->
-> 1. The interval is nonempty but has no least element. 2. Every valid object in the same domain that is strictly smaller than $m$ is not a counterexample. 3. First exclude $m=0$ so that $m-1\in\mathbb N$; then verify that $P(m-1)$ implies $P(m)$.
+>
+> &nbsp;
+> **1.** The interval is nonempty but has no least element.<br>
+> **2.** Every valid object in the same domain that is strictly smaller than $m$ is not a counterexample.<br>
+> **3.** First exclude $m=0$ so that $m-1\in\mathbb N$; then verify that $P(m-1)$ implies $P(m)$.<br>
 > <!-- bilingual-en:end -->
 
 **知识链：**反证 → 反例集合 → 最小反例 → 严格下降 → 归纳法的等价思想。
@@ -734,7 +707,7 @@ So $m$'s not the opposite. Contradiction.  The condition $r\ne1$ is denominator;
 
 如何把自然语言规格翻译成可由真值表检查的公式？如何区分“某次为真”“总为真”和“可同时为真”？
 <!-- bilingual-en:start -->
-How do I translate natural language specifications into formulas that can be checked by truth tables?  How do I distinguish between "once true", "always true" and "can be true at the same time"?
+How can natural-language specifications be translated into formulas that truth tables can check? How do we distinguish a formula that is true under one assignment, one that is true under every assignment, and a collection of formulas that can all be true simultaneously?
 <!-- bilingual-en:end -->
 
 > [!note] 本地材料
@@ -744,12 +717,12 @@ How do I translate natural language specifications into formulas that can be che
 
 ### 4.1 逻辑运算符
 <!-- bilingual-en:start -->
-*4.1 Logical Operators*
+*4.1 Logical operators*
 <!-- bilingual-en:end -->
 
 [[数学证明方法#命题、量词与否定|命题逻辑]]的基本运算：
 <!-- bilingual-en:start -->
-Basic operation of [[数学证明方法#命题、量词与否定|propositional logic]]:
+The basic operators of [[数学证明方法#命题、量词与否定|propositional logic]] are:
 <!-- bilingual-en:end -->
 
 | 公式 | 何时为真 | 常用等价式 |
@@ -761,24 +734,24 @@ Basic operation of [[数学证明方法#命题、量词与否定|propositional l
 | $P\Rightarrow Q$ | 除 $P=T,Q=F$ 外 | $\neg P\lor Q$ |
 | $P\Leftrightarrow Q$ | 真值相同 | $(P\Rightarrow Q)\land(Q\Rightarrow P)$ |
 <!-- bilingual-en:start -->
-|Formula|When is true|Common Equivalents|
-|—|—|—|
-| $\neg P$ | $P$ False | — |
-| $P\land Q$ | Both | — |
+| Formula | When it is true | Common equivalent form |
+|---|---|---|
+| $\neg P$ | $P$ is false | — |
+| $P\land Q$ | Both are true | — |
 | $P\lor Q$ | At least one true | inclusive OR |
 | $P\oplus Q$ | Exactly one true | $(P\lor Q)\land\neg(P\land Q)$ |
 | $P\Rightarrow Q$ | Except for $P=T,Q=F$ | $\neg P\lor Q$ |
-| $P\Leftrightarrow Q$ | Same Truth | $(P\Rightarrow Q)\land(Q\Rightarrow P)$ |
+| $P\Leftrightarrow Q$ | They have the same truth value | $(P\Rightarrow Q)\land(Q\Rightarrow P)$ |
 <!-- bilingual-en:end -->
 
 自然语言“$P$ only if $Q$”是 $P\Rightarrow Q$；“$P$ if $Q$”是 $Q\Rightarrow P$；“$P$ iff $Q$”才是双向蕴含。
 <!-- bilingual-en:start -->
-The natural language "$P$ only if $Q$" is $P\Rightarrow Q$, "$P$ if $Q$" is $Q\Rightarrow P$, and "$P$ iff $Q$" is bidirectional.
+In natural language, “$P$ only if $Q$” means $P\Rightarrow Q$, “$P$ if $Q$” means $Q\Rightarrow P$, and “$P$ iff $Q$” expresses a biconditional.
 <!-- bilingual-en:end -->
 
 ### 4.2 真值表、有效、可满足与等价
 <!-- bilingual-en:start -->
-*4.2 Truth Table, Valid, Satisfiable and Equivalent*
+*4.2 Truth tables, validity, satisfiability, and equivalence*
 <!-- bilingual-en:end -->
 
 有 $n$ 个命题变量时，[[数学证明方法#命题、量词与否定|真值表]]有 $2^n$ 行。两个公式在每个环境（truth assignment）下真值相同，称[[数学证明方法#命题、量词与否定|逻辑等价]]。
@@ -799,7 +772,7 @@ With $n$ propositional variables, a [[数学证明方法#命题、量词与否�
 
 关系是：$P$ valid 当且仅当 $\neg P$ unsatisfiable。要判断推理
 <!-- bilingual-en:start -->
-The relationship is: $P$ valid if and only if $\neg P$ unsatisfiable.  To judge the reasoning
+A formula $P$ is valid if and only if $\neg P$ is unsatisfiable. To test whether the inference
 <!-- bilingual-en:end -->
 
 $$
@@ -808,12 +781,12 @@ $$
 
 是否 sound，只需检查公式 $(P_1\land\cdots\land P_k)\Rightarrow Q$ 是否 valid。
 <!-- bilingual-en:start -->
-Whether sound, simply check that the formula $(P_1\land\cdots\land P_k)\Rightarrow Q$ is valid.
+is sound, check whether $(P_1\land\cdots\land P_k)\Rightarrow Q$ is valid.
 <!-- bilingual-en:end -->
 
 ### 4.3 De Morgan 与分配律
 <!-- bilingual-en:start -->
-*4.3 De Morgan and the Law of Distribution*
+*4.3 De Morgan's laws and distributivity*
 <!-- bilingual-en:end -->
 
 $$
@@ -828,7 +801,7 @@ $$
 
 每条都可用真值表证明。代数式“看起来像”并非证明；逻辑等价要求最后一列逐行相同。
 <!-- bilingual-en:start -->
-Each can be proved by a truth table.  Algebraic "looks" are not proofs; logical equivalence requires that the last column be identical row by row.
+Each identity can be proved with a truth table. Merely “looking algebraically similar” is not a proof: logical equivalence requires the final columns to match in every row.
 <!-- bilingual-en:end -->
 
 ### 4.4 数字电路：逻辑不是抽象装饰
@@ -838,7 +811,7 @@ Each can be proved by a truth table.  Algebraic "looks" are not proofs; logical 
 
 用 $T/F$ 表示 $1/0$。一位全加器输入 $a_i,b_i,c_i$，输出
 <!-- bilingual-en:start -->
-$T/F$ for $1/0$.  One-bit full adder input $a_i,b_i,c_i$, output
+Represent $1$ and $0$ by $T$ and $F$. A one-bit full adder takes $a_i,b_i,c_i$ as input and outputs
 <!-- bilingual-en:end -->
 
 $$
@@ -847,7 +820,7 @@ $$
 
 进位为“至少两个输入为 1”：
 <!-- bilingual-en:start -->
-Round to At least two inputs are 1:
+The carry bit is $1$ when at least two inputs are $1$:
 <!-- bilingual-en:end -->
 
 $$
@@ -856,7 +829,7 @@ $$
 
 串行 ripple-carry 的关键路径为 $\Theta(n)$；后续作业的并行结构用预计算降低深度，这正是“公式等价但电路代价不同”的例子。
 <!-- bilingual-en:start -->
-The critical path for serial ripple-carry is $\Theta(n)$; the parallel structure of subsequent jobs is reduced in depth with precomputation, which is an example of "formula equivalent but different circuit costs".
+A serial ripple-carry adder has critical-path depth $\Theta(n)$. A later problem set uses precomputation to reduce the depth of a parallel design, illustrating that logically equivalent formulas can have different circuit costs.
 <!-- bilingual-en:end -->
 
 > [!question]- 官方在线 feedback exercises（10 prompts）
@@ -870,13 +843,8 @@ The critical path for serial ripple-carry is $\Theta(n)$; the parallel structure
 >
 > **Equivalence：**比较 truth tables 的 final column。**Soundness：**当前件全真时后件必真，等价于相应蕴含 valid。**Connectives 1–4：**$P\Rightarrow Q\equiv\neg P\lor Q$；IFF $\equiv(P\land Q)\lor(\neg P\land\neg Q)$；XOR $\equiv(P\land\neg Q)\lor(\neg P\land Q)$；NOR $\equiv\neg P\land\neg Q$。
 > <!-- bilingual-en:start -->
-> **Local entry:**
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S04_1.4.2_propositional-operators|1.4.2 Propositional Operators]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S04_1.4.5_equivalence-and-truth-table|1.4.5 Equivalence and Truth Table]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S04_1.4.8_soundness-and-validity|1.4.8 Soundness and Validity]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S04_1.4.9_logical-connectives|1.4.9 Logical Connectives]]
-> **Operators 1-4:**Comes environment-by-environment.  $(T,T)$:AND, OR, $P\lor\neg Q$;$(F,F)$:$\neg(P\land Q),\neg(P\lor Q),\neg P,\neg Q,P\lor\neg Q$;$(T,F)$:XOR, OR, $\neg(P\land Q),\neg Q,P\lor\neg Q$;$(F,T)$:XOR, OR, $\neg(P\land Q),\neg P,\neg P\land Q$.
-> **Equivalence:**Compare the final column of the truth tables.**Soundness:**When the current piece is true, the subsequent piece must be true, which is equivalent to the corresponding implication of valid.**Connectives 1-4:**$P\Rightarrow Q\equiv\neg P\lor Q$;IFF $\equiv(P\land Q)\lor(\neg P\land\neg Q)$;XOR $\equiv(P\land\neg Q)\lor(\neg P\land Q)$;NOR $\equiv\neg P\land\neg Q$.
+> **Operators 1–4:** Evaluate each expression under the given assignment. For $(T,T)$, the true expressions are AND, OR, and $P\lor\neg Q$; for $(F,F)$, they are $\neg(P\land Q),\neg(P\lor Q),\neg P,\neg Q,P\lor\neg Q$; for $(T,F)$, they are XOR, OR, $\neg(P\land Q),\neg Q,P\lor\neg Q$; and for $(F,T)$, they are XOR, OR, $\neg(P\land Q),\neg P,\neg P\land Q$.
+> **Equivalence:** Compare the final columns of the truth tables. **Soundness:** Whenever all premises are true, the conclusion must also be true; equivalently, the corresponding implication is valid. **Connectives 1–4:** $P\Rightarrow Q\equiv\neg P\lor Q$; IFF $\equiv(P\land Q)\lor(\neg P\land\neg Q)$; XOR $\equiv(P\land\neg Q)\lor(\neg P\land Q)$; NOR $\equiv\neg P\land\neg Q$.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP4 非官方独立题解（4 道）
@@ -889,8 +857,8 @@ The critical path for serial ripple-carry is $\Theta(n)$; the parallel structure
 > **4. 数学家与母亲。** 数学陈述旨在表达必要条件：不可导可能还有别的原因，所以只有 $D\Rightarrow C$。母亲的规则在会话语用中同时表达许可与禁止，即把做作业作为看电视的充要条件，故建模为 $H\Leftrightarrow T$ 合理；自然语言的 IF–THEN 需结合意图建模。
 > <!-- bilingual-en:start -->
 > **1. Distributivity of OR over AND.** The eight-row truth table can be checked directly. More compactly, split on $P$: if $P=T$, both expressions are true; if $P=F$, both reduce to $Q\land R$.
-> **2. File system specifications.**Formulas are $\neg L\Rightarrow Q$, $\neg L\Rightarrow B$, $\neg L\Leftrightarrow N$, $\neg Q\Rightarrow B$, $\neg B$.  $L$ from $\neg B$ and second; the dual condition then requires $N=F$.  Formula 4 requires $Q=T$ under $B=F$.  The unique assignment is $(L,Q,B,N)=(T,T,F,F)$, which is verbose.
-> **3. Binary adders.**Add a bit $b$:$c_0=b$, $s_i=a_i\oplus c_i$, $c_{i+1}=a_i\land c_i$, and eventually $c=c_{n+1}$.  The sum of the two numbers is $s_i=a_i\oplus b_i\oplus c_i$,$c_{i+1}=(a_i\land b_i)\lor(c_i\land(a_i\oplus b_i))$.  Two XORs, two ANDs, one ORs are available for each, so the $n+1$ bits are $2(n+1)$ XOR, $2(n+1)$ AND, $n+1$ OR (with three majority formulas, the gate count varies by the selected implementation, which must be declared).
+> **2. File-system specifications.** The formulas are $\neg L\Rightarrow Q$, $\neg L\Rightarrow B$, $\neg L\Leftrightarrow N$, $\neg Q\Rightarrow B$, and $\neg B$. From $\neg B$ and the second formula we obtain $L$; the biconditional then requires $N=F$. Under $B=F$, the fourth formula requires $Q=T$. The unique assignment is $(L,Q,B,N)=(T,T,F,F)$, and it satisfies every formula.
+> **3. Binary adders.** To add one bit $b$, set $c_0=b$, $s_i=a_i\oplus c_i$, $c_{i+1}=a_i\land c_i$, and finally $c=c_{n+1}$. To add two numbers, use $s_i=a_i\oplus b_i\oplus c_i$ and $c_{i+1}=(a_i\land b_i)\lor(c_i\land(a_i\oplus b_i))$. Each bit can be implemented with two XOR gates, two AND gates, and one OR gate, giving $2(n+1)$ XOR, $2(n+1)$ AND, and $n+1$ OR gates for $n+1$ bits. If the three-term majority formula is used instead, the count depends on the chosen implementation and must be stated.
 > **4. Mathematicians and mothers.** The mathematical statement expresses only a necessary condition: a function may fail to be differentiable for other reasons, so the correct formalisation is merely $D\Rightarrow C$. In ordinary conversation, a mother's rule can convey both permission and prohibition—homework is treated as both necessary and sufficient for watching television—so $H\Leftrightarrow T$ is a reasonable model. Natural-language “if–then” statements must be interpreted in context.
 > <!-- bilingual-en:end -->
 
@@ -900,22 +868,25 @@ The critical path for serial ripple-carry is $\Theta(n)$; the parallel structure
 > 3. 为什么“前件假”的蕴含定义为真？
 >
 > <!-- bilingual-en:start -->
-> 1. Rewrite $P\Rightarrow(Q\land R)$ without using implication.
-> 2. Is valid available in satisfiable?  Give the counterexample.
-> 3. Why is an implication with a false premise defined to be true?
+>
+> &nbsp;
+> **1.** Rewrite $P\Rightarrow(Q\land R)$ without using implication.<br>
+> **2.** Does satisfiability imply validity? Give a counterexample.<br>
+> **3.** Why is an implication with a false premise defined to be true?<br>
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 1. $\neg P\lor(Q\land R)$。2. 不推出；$P$ 在环境 $P=T$ 下可满足，但不是恒真。3. 蕴含只禁止“承诺条件出现而结论失败”的环境；当前件未发生时没有反例。
 > <!-- bilingual-en:start -->
-> 1. $\neg P\lor(Q\land R)$. 2. No. The proposition $P$ is satisfiable in a valuation with $P=T$, but it is not valid. 3. An implication rules out only valuations in which its premise is true and its conclusion false; a false premise therefore creates no counterexample.
+>
+> &nbsp;
+> **1.** $\neg P\lor(Q\land R)$.<br>
+> **2.** No. The proposition $P$ is satisfiable in a valuation with $P=T$, but it is not valid.<br>
+> **3.** An implication rules out only valuations in which its premise is true and its conclusion false; a false premise therefore creates no counterexample.<br>
 > <!-- bilingual-en:end -->
 
 **知识链：**逻辑运算 → 真值环境 → 等价/有效/可满足 → 规格一致性 → 数字电路。
 <!-- bilingual-en:start -->
-**Knowledge chain:**Logical operations → Truth environment → Equivalence/Effectiveness/Satisfiability → Specification consistency → Digital circuits.
+**Knowledge chain:** logical operators → truth assignments → equivalence, validity, and satisfiability → consistency of specifications → digital circuits.
 <!-- bilingual-en:end -->
 
 ---
@@ -925,7 +896,7 @@ The critical path for serial ripple-carry is $\Theta(n)$; the parallel structure
 > [!note] 原题与答案性质
 > [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps1.pdf|Problem Set 1 PDF]]。以下 4 道均为非官方独立题解。
 > <!-- bilingual-en:start -->
-> [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps1.pdf|Problem Set 1 PDF]].  The following 4 questions are unofficial and independent.
+> [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps1.pdf|Problem Set 1 PDF]]. The four solutions below are independent and unofficial.
 > <!-- bilingual-en:end -->
 
 > [!example]- Problem 1：证明 $\log_4 6$ 无理
@@ -937,11 +908,11 @@ The critical path for serial ripple-carry is $\Theta(n)$; the parallel structure
 >
 > **检查：**不能只说 $4^m$ 与 $6^n$“显然不同”；矛盾来自素因子 $3$。
 > <!-- bilingual-en:start -->
-> **Known:**$4,6>1$.**Target:**$\log_4 6\notin\mathbb Q$.
-> Inversely, $\log_4 6=m/n$, where $m,n\in\mathbb Z$, $n>0$, and the positive logarithm is $m>0$.  by definition
+> **Given:** $4,6>1$. **Goal:** $\log_4 6\notin\mathbb Q$.
+> Suppose for contradiction that $\log_4 6=m/n$, where $m,n\in\mathbb Z$ and $n>0$. Because the logarithm is positive, we may also take $m>0$. By definition,
 > $$4^{m/n}=6\quad\Longrightarrow\quad4^m=6^n.$$
-> The prime factorization on the left is $2^{2m}$ and on the right is $2^n3^n$.  Unique prime factorization requires that the right $3$ number is also $0$, that is, $n=0$, which is inconsistent with $n>0$.  So $\log_4 6$ is irrational.  $\square$
-> **Check:**It is not enough to say that $4^m$ and $6^n$ are "obviously different"; the contradiction comes from the prime factor $3$.
+> The prime factorisation on the left is $2^{2m}$, whereas the right-hand side is $2^n3^n$. By uniqueness of prime factorisation, the exponent of $3$ would have to be $0$, forcing $n=0$ and contradicting $n>0$. Therefore $\log_4 6$ is irrational. $\square$
+> **Check:** It is not enough to say that $4^m$ and $6^n$ are “obviously different”; the contradiction comes from the prime factor $3$.
 > <!-- bilingual-en:end -->
 
 > [!example]- Problem 2：用 WOP 证明 $n\le3^{n/3}$
@@ -953,14 +924,13 @@ The critical path for serial ripple-carry is $\Theta(n)$; the parallel structure
 > $$m-3\le3^{(m-3)/3}.$$
 > 乘 $3$ 得 $3(m-3)\le3^{m/3}$；而 $m\ge5$ 意味着 $m\le3m-9=3(m-3)$。所以 $m\le3^{m/3}$，与 $m\in C$ 矛盾。故 $C$ 为空。
 > <!-- bilingual-en:start -->
-> Proof with WOP
-> Target is true for all $n\in\mathbb N$.
+> **Proof using WOP.** The goal is to prove the inequality for every $n\in\mathbb N$. Let
 > $$C=\{n\in\mathbb N:n>3^{n/3}\}.$$
-> Optionally, set $C\ne\varnothing$ to $m=\min C$.  direct inspection
+> Suppose for contradiction that $C\ne\varnothing$, and let $m=\min C$. Direct calculation gives
 > $$0\le1,\qquad1\le3^{1/3},\qquad2\le3^{2/3},\qquad3=3,\qquad4<3^{4/3},$$
-> So $m\ge5$, so $m-3\in\mathbb N$ and $m-3<m$.  give out minimally
+> Hence $m\ge5$, so $m-3\in\mathbb N$ and $m-3<m$. By the minimality of $m$,
 > $$m-3\le3^{(m-3)/3}.$$
-> Multiply $3$ to get $3(m-3)\le3^{m/3}$; $m\ge5$ means $m\le3m-9=3(m-3)$.  So $m\le3^{m/3}$, contradicts $m\in C$.  $C$ is null.
+> Multiplying by $3$ gives $3(m-3)\le3^{m/3}$. Since $m\ge5$, we also have $m\le3m-9=3(m-3)$. Therefore $m\le3^{m/3}$, contradicting $m\in C$. Thus $C=\varnothing$.
 > <!-- bilingual-en:end -->
 
 > [!example]- Problem 3：有效、等价、可满足与一致
@@ -985,21 +955,21 @@ The critical path for serial ripple-carry is $\Theta(n)$; the parallel structure
 > $$S=\neg(P_1\land\cdots\land P_k)$$
 > valid。
 > <!-- bilingual-en:start -->
-> **(a)**Truth table:
-> | $P$ | $Q$ | $P\Rightarrow Q$ | $Q\Rightarrow P$ | Both OR |
-> |—|—|—|—|—|
+> **(a)** Truth table:
+> | $P$ | $Q$ | $P\Rightarrow Q$ | $Q\Rightarrow P$ | Their disjunction |
+> |---|---|---|---|---|
 > | T | T | T | T | T |
 > | T | F | F | T | T |
 > | F | T | T | F | T |
 > | F | F | T | T | T |
-> The last line is constant, so the formula valid.
-> **(b)**take
+> The final column is true in every row, so the formula is valid.
+> **(b)** Let
 > $$R=(P\land Q)\lor(\neg P\land\neg Q).$$
-> It is true, and only if the $P,Q$ truth value is the same.  Thus, $R$ valid is equivalent if and only if $P,Q$ is the same value in each environment.
-> **(c)**$P$ valid means that there is no environment that falsifies $P$; this is exactly the same as there is no environment that makes $\neg P$ true, $\neg P$ unsatisfiable.
-> **(d)**$P_1,\dots,P_k$ is inconsistent if and only if $P_1\land\cdots\land P_k$ is unsatisfiable if and only if
+> The formula is true exactly when $P$ and $Q$ have the same truth value. Hence $R$ is valid if and only if $P$ and $Q$ agree under every assignment, which is precisely logical equivalence.
+> **(c)** $P$ is valid exactly when no assignment makes $P$ false. Equivalently, no assignment makes $\neg P$ true, so $\neg P$ is unsatisfiable.
+> **(d)** $P_1,\dots,P_k$ are inconsistent if and only if $P_1\land\cdots\land P_k$ is unsatisfiable, which holds if and only if
 > $$S=\neg(P_1\land\cdots\land P_k)$$
-> valid.
+> is valid.
 > <!-- bilingual-en:end -->
 
 > [!example]- Problem 4：并行 half-adder
@@ -1019,17 +989,17 @@ The critical path for serial ripple-carry is $\Theta(n)$; the parallel structure
 > $$D(2N)\le D(N)+O(1),$$
 > 解得 $D(N)=O(\log N)$。ripple-carry 的最高位必须等待 $N$ 次进位传播，深度 $\Theta(N)$；所以并行版本在电路深度上指数改进。门总数仍为多项式，题目比较的是**最长依赖链**而非物理时间的无条件保证。
 > <!-- bilingual-en:start -->
-> **(a)**One add1 input $a_0$, output $a_0+1$ two-bit representation:
+> **(a)** A one-bit `add1` circuit takes $a_0$ as input and outputs the two-bit representation of $a_0+1$:
 > $$p_0=\neg a_0,\qquad c=a_0.$$
-> **(b)**If the control bit is $b=0$, half-adder should output $a_i$ as it is; If $b=1$, add1 should choose $p_i$:
+> **(b)** If the control bit is $b=0$, the half-adder should output $a_i$ unchanged; if $b=1$, it should select the precomputed `add1` output $p_i$:
 > $$o_i=(\neg b\land a_i)\lor(b\land p_i).$$
-> **(c)**The lower half overflows $c^{(1)}=1$ and the upper half needs to be added one; the entire double module overflows and requires the upper half to be pre-calculated, so
+> **(c)** The high half needs to be incremented only when the low half overflows, so $c^{(1)}=1$. The full doubled module overflows only when the precomputed high half also overflows, hence
 > $$c=c^{(1)}\land c^{(2)}.$$
-> **(d)**For $n+1\le i\le2n+1$, let $j=i-(n+1)$:
+> **(d)** For $n+1\le i\le2n+1$, let $j=i-(n+1)$:
 > $$p_i=(\neg c^{(1)}\land a_i)\lor(c^{(1)}\land r_j).$$
-> **(e)**Let $D(N)$ be the maximum logical depth for any output of the $N$ bit add1.  The multiplication construct only adds a constant number of AND/OR/NOT layers after the sub-module, so
+> **(e)** Let $D(N)$ be the maximum logical depth of any output of the $N$-bit `add1` circuit. The doubling construction adds only a constant number of AND/OR/NOT layers after each submodule, so
 > $$D(2N)\le D(N)+O(1),$$
-> $D(N)=O(\log N)$.  The highest bit of the ripple-carry must wait for the $N$ carry to propagate at a depth of $\Theta(N)$; so the parallel version improves exponentially in circuit depth.  The total number of gates is still polynomial and the topic is compared**the longest dependent chain**rather than the unconditional guarantee of physical time.
+> which solves to $D(N)=O(\log N)$. The highest bit of a ripple-carry circuit must wait for $N$ carry propagations, giving depth $\Theta(N)$; the parallel construction therefore gives an exponential improvement in circuit depth. The total gate count remains polynomial. The comparison concerns the **longest dependency chain**, not an unconditional guarantee about physical running time.
 > <!-- bilingual-en:end -->
 
 ---
@@ -1043,7 +1013,7 @@ The critical path for serial ripple-carry is $\Theta(n)$; the parallel structure
 
 同一句“每个程序都有一个输入”与“有一个输入适用于每个程序”为什么完全不同？本节把自由变量、论域和量词写进公式。
 <!-- bilingual-en:start -->
-Why is the same sentence "one input per program" different from "one input per program"?  This section writes free variables, discourse and quantifiers into formulas.
+Why are “every program has some input” and “there is one input that works for every program” completely different statements? This section makes free variables, domains, and quantifiers explicit in formulas.
 <!-- bilingual-en:end -->
 
 > [!note] 本地材料
@@ -1053,22 +1023,22 @@ Why is the same sentence "one input per program" different from "one input per p
 
 ### 5.1 论域、自由变量与绑定变量
 <!-- bilingual-en:start -->
-*5.1 Discourse Domain, Free Variable and Binding Variable*
+*5.1 Domain of discourse, free variables, and bound variables*
 <!-- bilingual-en:end -->
 
 [[01_Proofs#Session 5 — Quantifiers and Predicate Logic|谓词逻辑（predicate logic）]]允许对象变量、谓词和量词。$P(x,y)$ 中未被量词控制的变量是自由变量；在 $\forall x\exists y\,P(x,y)$ 中二者都被绑定，整个式子才是命题。
 <!-- bilingual-en:start -->
-[[01_Proofs#Session 5 — Quantifiers and Predicate Logic|predicate logic]] allows object variables, predicates, and quantifiers.  In $P(x,y)$, the variables which are not controlled by quantifiers are free variables; in $\forall x\exists y\,P(x,y)$, both are bound, and the whole formula is proposition.
+[[01_Proofs#Session 5 — Quantifiers and Predicate Logic|Predicate logic]] allows object variables, predicates, and quantifiers. In $P(x,y)$, variables not governed by a quantifier are free. In $\forall x\exists y\,P(x,y)$, both variables are bound, so the entire formula is a proposition.
 <!-- bilingual-en:end -->
 
 论域必须明确。同一公式 $\exists x(x^2=2)$ 在 $\mathbb Q$ 中为假，在 $\mathbb R$ 中为真。若论域为空，$\forall xP(x)$ 真（没有反例），$\exists xP(x)$ 假；本课程通常默认非空论域，但证明时仍应知道这一边界。
 <!-- bilingual-en:start -->
-The context must be clear.  The same formula $\exists x(x^2=2)$ is false in $\mathbb Q$ and true in $\mathbb R$.  If the domain is empty, $\forall xP(x)$ is true (there is no counterexample) and $\exists xP(x)$ is false; this course usually defaults to non-empty domains, but this boundary should still be known at the time of proof.
+The domain must be explicit. The same formula $\exists x(x^2=2)$ is false over $\mathbb Q$ but true over $\mathbb R$. If the domain is empty, $\forall xP(x)$ is true because it has no counterexample, while $\exists xP(x)$ is false. This course usually assumes a nonempty domain, but a rigorous proof should still recognise this boundary case.
 <!-- bilingual-en:end -->
 
 ### 5.2 量词的语义与顺序
 <!-- bilingual-en:start -->
-*5.2 The Semantics and Order of Quantifiers*
+*5.2 The semantics and order of quantifiers*
 <!-- bilingual-en:end -->
 
 $$
@@ -1081,7 +1051,7 @@ $$
 
 同类量词可交换：$\forall x\forall yP\equiv\forall y\forall xP$，$\exists x\exists yP\equiv\exists y\exists xP$。异类通常不可交换：
 <!-- bilingual-en:start -->
-Similar quantifiers are interchangeable: $\forall x\forall yP\equiv\forall y\forall xP$, $\exists x\exists yP\equiv\exists y\exists xP$.  Heterogeneous is usually not interchangeable:
+Quantifiers of the same kind commute: $\forall x\forall yP\equiv\forall y\forall xP$ and $\exists x\exists yP\equiv\exists y\exists xP$. Quantifiers of different kinds generally do not:
 <!-- bilingual-en:end -->
 
 $$
@@ -1090,17 +1060,17 @@ $$
 
 允许 $y$ 随 $x$ 改变；$\exists y\forall x(y>x)$ 要求一个统一的最大上界。在 $\mathbb N$ 中前者真、后者假。
 <!-- bilingual-en:start -->
-Allow $y$ to change with $x$; $\exists y\forall x(y>x)$ requires a uniform maximum upper bound.  In $\mathbb N$, the former is true and the latter is false.
+The first formula allows $y$ to depend on $x$; the second requires a single $y$ greater than every $x$. Over $\mathbb N$, the former is true and the latter is false.
 <!-- bilingual-en:end -->
 
 ### 5.3 否定穿过量词
 <!-- bilingual-en:start -->
-*5.3 Negative Through Quantifier*
+*5.3 Negating quantifiers*
 <!-- bilingual-en:end -->
 
 De Morgan 规律推广为
 <!-- bilingual-en:start -->
-De Morgan's law is generalized as
+De Morgan's laws extend to quantifiers as follows:
 <!-- bilingual-en:end -->
 
 $$
@@ -1111,17 +1081,17 @@ $$
 
 因此，“并非每个算法都终止”是“存在一个算法不终止”，不是“每个算法都不终止”。否定多层量词时逐层交换 $\forall\leftrightarrow\exists$ 并否定最内层谓词。
 <!-- bilingual-en:start -->
-Therefore, "not every algorithm terminates" is "there is an algorithm that does not terminate", not "every algorithm does not terminate".  When you negate a multilevel quantifier, you exchange $\forall\leftrightarrow\exists$ layer by layer and negate the innermost predicate.
+Therefore, “not every algorithm terminates” means “there exists an algorithm that does not terminate,” not “every algorithm fails to terminate.” To negate several nested quantifiers, swap $\forall\leftrightarrow\exists$ one layer at a time and negate the innermost predicate.
 <!-- bilingual-en:end -->
 
 ### 5.4 可满足性与见证
 <!-- bilingual-en:start -->
-*5.4 Satisfiability and Witness*
+*5.4 Satisfiability and witnesses*
 <!-- bilingual-en:end -->
 
 谓词 $P(x)$ satisfiable 意味着 $\exists xP(x)$。证明存在命题最直接的方法是给出见证并验证；否定存在命题则必须对任意候选排除。
 <!-- bilingual-en:start -->
-The predicate $P(x)$ satisfiable means $\exists xP(x)$.  The most direct way to prove the existence of a proposition is to give a witness and verify it; negation of the existence of a proposition requires the exclusion of any candidate.
+A predicate $P(x)$ is satisfiable when $\exists xP(x)$ is true. The most direct way to prove an existential statement is to provide a witness and verify that it satisfies the predicate. To refute an existential statement, every possible candidate must be ruled out.
 <!-- bilingual-en:end -->
 
 > [!question]- 官方在线 feedback exercises（7 prompts）
@@ -1146,19 +1116,15 @@ The predicate $P(x)$ satisfiable means $\exists xP(x)$.  The most direct way to 
 >
 > 7. “每个整数都有某个素因子”的量词顺序是 $\forall i\exists p$，不能要求同一素数除尽所有整数。
 > <!-- bilingual-en:start -->
-> **Local entry:**
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S05_1.5.3_satisfiability|1.5.3 Satisfiability]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S05_1.5.5_name-that-predicate|1.5.5 Name That Predicate!]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S05_1.5.6_quantifiers|1.5.6 Quantifiers]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S05_1.5.7_propositions-with-quantifiers|1.5.7 Propositions with Quantifiers]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S05_1.5.8_predicate-logic|1.5.8 Predicate Logic]]
-> 1. Formulae that guarantee $P$ to be satisfied: $\forall xP(x)$, $\exists xP(x)$, $\neg\forall x\neg P(x)$, $\neg\exists x\neg P(x)$ (last equivalent to $\forall xP$, default domain is non-empty).
-> 2. $\neg\exists x\exists yQ(x,y)$ is equivalent to $\forall x\forall y\neg Q(x,y)$.
-> 3. Valid formulas: $\exists x\exists yP\Rightarrow\exists y\exists xP$, $\exists x\forall yR\Rightarrow\forall y\exists xR$ and $\neg\exists xS\Leftrightarrow\forall x\neg S$.
-> 4. When the universe is $\mathbb N$, the title given to the five is really $\forall x\exists y(2x-y=0)$ and $\forall x[x<10\Rightarrow\forall y(y<x\Rightarrow y<9)]$.
-> 5. When the universe is $\mathbb Z$, $\forall x\exists y[y>x\land\exists z(y+z=100)]$ is true except for the above two; $x-2y=0$ is still negated by the odd counter-example.
-> 6. When discussing $\mathbb R$, it is really $\forall x\exists y(2x-y=0)$, $\forall x\exists y(x-2y=0)$ and the "find a bigger $y$" formula of the previous article; the course feedback to $x=9.5$ as a counterexample to the whole bound.
-> 7. The quantifier order for “each integer has a prime factor” is $\forall i\exists p$; it does not require one prime to divide every integer.
+>
+> &nbsp;
+> **1.** Formulas that guarantee $P$ is satisfiable are $\forall xP(x)$, $\exists xP(x)$, $\neg\forall x\neg P(x)$, and $\neg\exists x\neg P(x)$. The last is equivalent to $\forall xP(x)$, and the domain is assumed nonempty.<br>
+> **2.** $\neg\exists x\exists yQ(x,y)$ is equivalent to $\forall x\forall y\neg Q(x,y)$.<br>
+> **3.** Valid formulas: $\exists x\exists yP\Rightarrow\exists y\exists xP$, $\exists x\forall yR\Rightarrow\forall y\exists xR$ and $\neg\exists xS\Leftrightarrow\forall x\neg S$.<br>
+> **4.** Over $\mathbb N$, the true formulas among the five given are $\forall x\exists y(2x-y=0)$ and $\forall x[x<10\Rightarrow\forall y(y<x\Rightarrow y<9)]$.<br>
+> **5.** Over $\mathbb Z$, those two remain true, and $\forall x\exists y[y>x\land\exists z(y+z=100)]$ is also true. The formula involving $x-2y=0$ still fails for odd $x$.<br>
+> **6.** Over $\mathbb R$, the true formulas are $\forall x\exists y(2x-y=0)$, $\forall x\exists y(x-2y=0)$, and the preceding “find a larger $y$” formula. The course feedback uses $x=9.5$ as a counterexample to the formula with integer bounds.<br>
+> **7.** The quantifier order for “each integer has a prime factor” is $\forall i\exists p$; it does not require one prime to divide every integer.<br>
 > <!-- bilingual-en:end -->
 
 > [!example]- CP5 非官方独立题解（5 道）
@@ -1192,25 +1158,25 @@ The predicate $P(x)$ satisfiable means $\exists xP(x)$.  The most direct way to 
 >
 > **5. Cabal（补充题）。** (a) 至少三人；(b) Siggi 与 Annie 不能同时在；(c) Elizabeth 若在则所有人都在；(d) Annie 在则 Siggi 在；(e) Ben 或 Albert 在则 Tom 不在；(f) Ben 或 Siggi 在则 Adam 不在。由 (b)(c) 得 Elizabeth 不在；由 (b)(d) 得 Annie 不在。若 Ben 不在，进一步分 Siggi 在/不在都会与“至少三人”和 (e)(f) 冲突，故 Ben 在。于是 (e)(f) 给出 Tom、Adam 不在；要达到三人，只能 Albert、Siggi 都在。唯一 cabal 是 $\{\text{Ben, Albert, Siggi}\}$。
 > <!-- bilingual-en:start -->
-> **1. Truth table of discourse.**
+> **1. Truth values across domains.**
 > | Formula | $\mathbb N$ | $\mathbb Z$ | $\mathbb Q$ | $\mathbb R$ | $\mathbb C$ |
-> |—|:—:|:—:|:—:|:—:|:—:|
+> |---|:---:|:---:|:---:|:---:|:---:|
 > | $\exists x:x^2=2$ | F | F | F | T | T |
 > | $\forall x\exists y:x^2=y$ | T | T | T | T | T |
 > | $\forall y\exists x:x^2=y$ | F | F | F | F | T |
 > | $\forall x\ne0\exists y:xy=1$ | F | F | T | T | T |
 > | $\exists x,y:x+2y=2\land2x+4y=5$ | F | F | F | F | F |
-> The last row, since the second left side is always twice the first left side, should equal $4$ instead of $5$.
-> **2. Translation of binary strings.**Let `PREFIX`, `SUBSTRING`, `NO-1S` as defined:
+> In the last row, the left-hand side of the second equation is always twice that of the first, so it would have to equal $4$, not $5$.
+> **2. Translating binary-string statements.** Let `PREFIX`, `SUBSTRING`, and `NO-1S` be defined as in the problem:
 > (a)$\exists y(x=yyy)$;
 > (b)$\exists y(x=yy\land\mathrm{NO\mbox{-}1S}(y))$;
 > (c)$\neg(\mathrm{SUBSTRING}(0,x)\land\mathrm{SUBSTRING}(1,x))$;
 > (d)$x=10\lor\exists y(x=1y1\land\mathrm{NO\mbox{-}1S}(y))$;
 > (e) If $x$ is an all-zero string, then clearly $x$ is a prefix of $0x$. Conversely, if $x$ contains a first 1, comparing the corresponding positions in $x$ and $0x$ propagates equality one place to the left until that first 1 is forced to equal 0, a contradiction. Thus, `PREFIX(x,0x)` describes exactly the all-zero strings, including the empty string.
-> **3. Email no more than two other classmates.**
-> The $y,z$ can be the same or equal to $x$, so it covers 0, 1, and 2 recipients at the same time.
-> **4. Exchange quantifiers.**Formula one is invalid: if $\{1,2\}$ is $P(x,y)\equiv(x\ne y)$ in the domain, then each $x$ has a different $y$, but there is no $y$ that is different from all $x$.  The second is valid: if there is a fixed $y_0$ to make all $x$ satisfy $P(x,y_0)$, then take the same $y_0$ for each $x$.
-> **5.  Cabal.**(a) at least three people; (b) Siggi and Annie cannot be present at the same time; (c) Elizabeth is present, all people are present; (d) Annie is present, Siggi is present; (e) Ben or Albert is not present, Tom is not present; (f) Ben or Siggi is not present, Adam is not present.  Elizabeth is absent from (b)(c) and Annie is absent from (b)(d).  If Ben is absent, further differentiation as to whether Siggi is present or absent will result in a conflict with "at least three" and (e)(f), so Ben is present.  So (e) (f) gives Tom and Adam are not there; to reach three, only Albert and Siggi are there.  The only cabal is $\{\text{Ben, Albert, Siggi}\}$.
+> **3. Email at most two other classmates.**
+> The variables $y$ and $z$ may be equal to each other or to $x$, so the formula also covers the cases of zero or one recipient.
+> **4. Swapping quantifiers.** The first formula is invalid. On the domain $\{1,2\}$, let $P(x,y)\equiv(x\ne y)$. Every $x$ has some different $y$, but there is no single $y$ that differs from every $x$. The second formula is valid: if a fixed $y_0$ makes $P(x,y_0)$ true for every $x$, then each $x$ can use that same witness $y_0$.
+> **5. Cabal.** (a) At least three people belong; (b) Siggi and Annie cannot both belong; (c) if Elizabeth belongs, everyone belongs; (d) if Annie belongs, Siggi belongs; (e) if Ben or Albert belongs, Tom does not; (f) if Ben or Siggi belongs, Adam does not. Conditions (b) and (c) imply that Elizabeth is absent, while (b) and (d) imply that Annie is absent. If Ben were absent, splitting on whether Siggi is present would in either case conflict with the requirement of at least three members together with (e) and (f). Thus Ben is present. Conditions (e) and (f) then exclude Tom and Adam; to reach three members, Albert and Siggi must both be present. The unique cabal is $\{\text{Ben, Albert, Siggi}\}$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 三道自检
@@ -1219,22 +1185,25 @@ The predicate $P(x)$ satisfiable means $\exists xP(x)$.  The most direct way to 
 > 3. 证明 $\exists xP(x)$ 时，一个例子何时足够？
 >
 > <!-- bilingual-en:start -->
-> 1. Negative $\forall x\exists yP(x,y)$.
-> 2. In $\mathbb Z$, is $\forall x\exists y(x=2y)$ really?
-> 3. When is an example sufficient to prove $\exists xP(x)$?
+>
+> &nbsp;
+> **1.** Negate $\forall x\exists yP(x,y)$.<br>
+> **2.** Is $\forall x\exists y(x=2y)$ true over $\mathbb Z$?<br>
+> **3.** When is an example sufficient to prove $\exists xP(x)$?<br>
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 1. $\exists x\forall y\neg P(x,y)$。2. 假；$x=1$ 没有整数见证。3. 当例子确属声明的论域并逐项满足谓词时足够。
 > <!-- bilingual-en:start -->
-> 1. $\exists x\forall y\neg P(x,y)$.  2. False; $x=1$ has no integer witness.  3. It is sufficient when the example is indeed the domain of the declaration and the predicate is satisfied item by item.
+>
+> &nbsp;
+> **1.** $\exists x\forall y\neg P(x,y)$.<br>
+> **2.** No; when $x=1$, there is no integer witness $y$.<br>
+> **3.** One example is sufficient when it lies in the stated domain and satisfies every condition in the predicate.<br>
 > <!-- bilingual-en:end -->
 
 **知识链：**谓词 → 论域 → 量词顺序 → 量词否定 → 见证/反模型。
 <!-- bilingual-en:start -->
-**knowledge chain:**predicate→domain→order of quantifier→negation of quantifier→witness/inverse model.
+**Knowledge chain:** predicate → domain → quantifier order → negating quantifiers → witness or countermodel.
 <!-- bilingual-en:end -->
 
 ---
@@ -1248,7 +1217,7 @@ The predicate $P(x)$ satisfiable means $\exists xP(x)$.  The most direct way to 
 
 集合运算为什么与逻辑运算一一对应？怎样用逐元素双向蕴含证明集合相等？
 <!-- bilingual-en:start -->
-Why does a set operation correspond to a logical operation one to one?  How to use element-by-element bidirectional implication to prove the equality of sets?
+Why do set operations correspond directly to logical operators? How can elementwise implications in both directions prove that two sets are equal?
 <!-- bilingual-en:end -->
 
 > [!note] 本地材料
@@ -1263,7 +1232,7 @@ Why does a set operation correspond to a logical operation one to one?  How to u
 
 [[01_Proofs#Session 6 — Sets|集合（set）]]由其元素决定；$x\in A$ 表示成员关系。外延性（extensionality）给出
 <!-- bilingual-en:start -->
-[[01_Proofs#Session 6 — Sets|set]] is determined by its elements; $x\in A$ represents the membership.  extensionality
+A [[01_Proofs#Session 6 — Sets|set]] is determined by its elements, and $x\in A$ denotes membership. The axiom of extensionality states that
 <!-- bilingual-en:end -->
 
 $$
@@ -1272,24 +1241,24 @@ $$
 
 子集 $A\subseteq B$ 意味着 $\forall x(x\in A\Rightarrow x\in B)$；真子集还要求 $A\ne B$。空集 $\varnothing$ 是每个集合的子集，因为不存在使蕴含失败的 $x\in\varnothing$。
 <!-- bilingual-en:start -->
-Subset $A\subseteq B$ means $\forall x(x\in A\Rightarrow x\in B)$; true subsets also require $A\ne B$.  An empty set $\varnothing$ is a subset of each set because there is no $x\in\varnothing$ that fails the entailment.
+The relation $A\subseteq B$ means $\forall x(x\in A\Rightarrow x\in B)$; a proper subset additionally requires $A\ne B$. The empty set $\varnothing$ is a subset of every set because no $x\in\varnothing$ can make the implication fail.
 <!-- bilingual-en:end -->
 
 幂集 $\operatorname{pow}(A)=\{S:S\subseteq A\}$。若有限集 $|A|=n$，每个元素独立选择“进/不进”子集，所以 $|\operatorname{pow}(A)|=2^n$。
 <!-- bilingual-en:start -->
-The power set $\operatorname{pow}(A)=\{S:S\subseteq A\}$.  If the finite set $|A|=n$, each element independently selects the "in/out" subset, so $|\operatorname{pow}(A)|=2^n$.
+The power set is $\operatorname{pow}(A)=\{S:S\subseteq A\}$. If $A$ is finite and $|A|=n$, each element can independently be included in or excluded from a subset, so $|\operatorname{pow}(A)|=2^n$.
 <!-- bilingual-en:end -->
 
 ### 6.2 运算与逻辑对应
 <!-- bilingual-en:start -->
-*6.2 Operations and Logical Correspondence*
+*6.2 Set operations and their logical counterparts*
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit01-set-operations.png|900]]
 
 读图：把每个阴影区域逐点翻译成成员谓词，交、并、差分别对应 AND、OR 与 AND-NOT。
 <!-- bilingual-en:start -->
-Read Figure: Each shadow area is translated into a member predicate point by point, and the intersection, union, and difference correspond to AND, OR, and AND-NOT.
+How to read the figure: translate each shaded region point by point into a membership predicate. Intersection, union, and difference correspond respectively to AND, OR, and AND-NOT.
 <!-- bilingual-en:end -->
 
 | 集合条件 | 元素谓词 | 逻辑运算 |
@@ -1300,18 +1269,18 @@ Read Figure: Each shadow area is translated into a member predicate point by poi
 | $x\in A-B$ | $x\in A$ 且 $x\notin B$ | $P\land\neg Q$ |
 | $x\in A\triangle B$ | 恰属于一个 | XOR |
 <!-- bilingual-en:start -->
-|Collection Condition|Element Predicate|Logical Operation|
-|—|—|—|
+| Set-membership condition | Element predicate | Logical operator |
+|---|---|---|
 | $x\in A\cap B$ | $x\in A$ and $x\in B$ | AND |
 | $x\in A\cup B$ | belongs to at least one | OR |
 | $x\in\overline A$ | $x\notin A$ | NOT |
 | $x\in A-B$ | $x\in A$ and $x\notin B$ | $P\land\neg Q$ |
-| $x\in A\triangle B$ | of exactly one | XOR |
+| $x\in A\triangle B$ | belongs to exactly one | XOR |
 <!-- bilingual-en:end -->
 
 所以逻辑等价可逐字搬到集合恒等式。例如
 <!-- bilingual-en:start -->
-So the logical equivalence can be transposed verbatim to set identities.  For example
+Logical equivalences can therefore be translated directly into set identities. For example,
 <!-- bilingual-en:end -->
 
 $$
@@ -1320,7 +1289,7 @@ $$
 
 来自 $P\land\neg(Q\lor R)\equiv(P\land\neg Q)\land(P\land\neg R)$。
 <!-- bilingual-en:start -->
-From $P\land\neg(Q\lor R)\equiv(P\land\neg Q)\land(P\land\neg R)$.
+This identity follows from $P\land\neg(Q\lor R)\equiv(P\land\neg Q)\land(P\land\neg R)$.
 <!-- bilingual-en:end -->
 
 ### 6.3 集合相等证明模板
@@ -1330,7 +1299,7 @@ From $P\land\neg(Q\lor R)\equiv(P\land\neg Q)\land(P\land\neg R)$.
 
 任选任意 $x$，建立 IFF 链：
 <!-- bilingual-en:start -->
-Choose any $x$ to create an IFF chain:
+Choose an arbitrary $x$ and build a chain of biconditionals:
 <!-- bilingual-en:end -->
 
 $$
@@ -1341,17 +1310,17 @@ $$
 
 由于 $x$ 任意，外延性给出 $L=R$。另一种写法是分别证 $L\subseteq R$ 与 $R\subseteq L$；不能只画 Venn 图替代一般证明。
 <!-- bilingual-en:start -->
-Since $x$ is arbitrary, epitaxy gives $L=R$.  The other is to prove $L\subseteq R$ and $R\subseteq L$ separately; you cannot just draw Venn diagrams instead of general proofs.
+Because $x$ was arbitrary, extensionality gives $L=R$. Alternatively, prove $L\subseteq R$ and $R\subseteq L$ separately. A Venn diagram alone cannot replace a general proof.
 <!-- bilingual-en:end -->
 
 ### 6.4 有序对为什么不能用 $\{a,b\}$
 <!-- bilingual-en:start -->
-*6.4 Ordered Pairs Why Not $\{a,b\}$*
+*6.4 Why an ordered pair cannot be represented by $\{a,b\}$*
 <!-- bilingual-en:end -->
 
 $\{a,b\}=\{b,a\}$，会丢失顺序。课程使用
 <!-- bilingual-en:start -->
-$\{a,b\}=\{b,a\}$, the order is lost.  Course Usage
+Because $\{a,b\}=\{b,a\}$, an ordinary two-element set loses the order. The course uses the encoding
 <!-- bilingual-en:end -->
 
 $$
@@ -1360,7 +1329,7 @@ $$
 
 在所采用的集合论基础下，这个编码能恢复首、次项。关键不是必须记住某一种编码，而是知道“序列”可由集合构造，并且编码要保持顺序与重复项。
 <!-- bilingual-en:start -->
-Based on the adopted set theory, this code can recover the first and second terms.  The key is not to have to remember a particular kind of code, but to know that the "sequence" can be constructed by a set and that the code is to be kept in order and repetition.
+Within the underlying set theory, this encoding lets us recover the first and second coordinates. The important point is not to memorise one particular encoding, but to understand that sequences can be constructed from sets and that the encoding must preserve both order and repeated entries.
 <!-- bilingual-en:end -->
 
 > [!question]- 官方在线 feedback exercise（1 prompt）
@@ -1368,8 +1337,7 @@ Based on the adopted set theory, this code can recover the first and second term
 >
 > $A-B$ 唯一正确的谓词形式是 $\{x:(x\in A)\land(x\notin B)\}$；它不是交换运算，且必须同时保留“在 $A$ 中”和“不在 $B$ 中”。
 > <!-- bilingual-en:start -->
-> **Local entry:**[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S06_1.6.3_difference|1.6.3 Difference]]
-> The only correct predicate form for $A-B$ is $\{x:(x\in A)\land(x\notin B)\}$; it is not a commutation and must both be "in $A$" and "not in $B$".
+> The correct predicate form for $A-B$ is $\{x:(x\in A)\land(x\notin B)\}$. Set difference is not commutative, and the definition must retain both conditions: membership in $A$ and nonmembership in $B$.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP6 非官方独立题解（4 道）
@@ -1394,9 +1362,9 @@ Based on the adopted set theory, this code can recover the first and second term
 >
 > 三种第一步规模已经穷尽所有非空真子集，所以四元素情形第二位玩家必胜。
 > <!-- bilingual-en:start -->
-> **1. Decomposition of the identities.**The proposition should be $(P\land\neg Q)\lor(P\land Q)\equiv P$.  Anything $x$:
+> **1. Decomposition identity.** The corresponding propositional identity is $(P\land\neg Q)\lor(P\land Q)\equiv P$. For an arbitrary $x$,
 > $$x\in(A-B)\cup(A\cap B)\Leftrightarrow[(x\in A\land x\notin B)\lor(x\in A\land x\in B)]\Leftrightarrow x\in A.$$
-> **2. We only use $\in$'s set-theoretic formulas.**
+> **2. Set-theoretic formulas using only $\in$.**
 > (a)$x=\varnothing:\ \forall z(z\notin x)$;
 > (b)$x=\{y,z\}:\ \forall w(w\in x\Leftrightarrow(w=y\lor w=z))$;
 > (c)$x\subseteq y:\ \forall w(w\in x\Rightarrow w\in y)$;
@@ -1404,11 +1372,11 @@ Based on the adopted set theory, this code can recover the first and second term
 > (e) $x=y-z$: replace OR with $w\in y\land w\notin z$;
 > (f)$x=\operatorname{pow}(y):\ \forall w(w\in x\Leftrightarrow w\subseteq y)$;
 > (g)$x=\bigcup y:\ \forall w(w\in x\Leftrightarrow\exists z(z\in y\land w\in z))$.
-> **3. Ordered pair coding.**The $\{a,b\}$ tune is unchanged; $\{a,\{b\}\}$ can also be confused, for example, when sets of different levels are exactly equal.  For $\{a,\{a,b\}\}$, if $a=b$ is encoded as $\{a\}$, $(a,a)$ is still restored; if $a\ne b$, the only object encoded as an outer element that appears in the set of binary inner layers at the same time is $a$, the other is $b$.  Fundamental axioms exclude the false identities caused by member loops.
-> **4. The four-element subset take-away.**Set $A=\{1,2,3,4\}$ to sort by first-hand first-step size.
-> - If you take a 1-tuple set (or 3-tuple set) first, then take its complement.  After that, the legal choice is all in the remaining three-element bottom set. The situation is equivalent to the initial situation of the three elements which has been verified by the question stem.
-> - If you take a 2-tuple set first, you might want to take $\{1,2\}$, then take the complement set $\{3,4\}$.  Thereafter the legal set is just four single points and four "cross binary sets" $\{1,3\},\{1,4\},\{2,3\},\{2,4\}$.  The hindhand pushes a fixed pair response: $\{1\}\leftrightarrow\{2\}$, $\{3\}\leftrightarrow\{4\}$, $\{1,3\}\leftrightarrow\{2,4\}$, $\{1,4\}\leftrightarrow\{2,3\}$.  Both sets of each pair are legal under the previous selection; after one is taken, the other still does not contain any old selections.  Therefore, the first hand has a response after every step, and ultimately the first hand has no legal step.
-> Three first-step sizes have exhausted all non-empty true subsets, so the four-element scenario will be won by the second player.
+> **3. Encoding ordered pairs.** The set $\{a,b\}$ is unchanged when its entries are swapped. The encoding $\{a,\{b\}\}$ can also be ambiguous when sets at different nesting levels happen to be equal. For $\{a,\{a,b\}\}$, if $a=b$, the encoding collapses to $\{a\}$ but still identifies the pair $(a,a)$. If $a\ne b$, then $a$ is the unique object that appears both as an outer element and inside the two-element inner set; the remaining object is $b$. The foundational axioms rule out spurious identifications caused by membership cycles.
+> **4. Four-element subset take-away.** Let $A=\{1,2,3,4\}$ and split according to the size of the first player's opening move.
+> - If the first player takes a one-element set or a three-element set, the second player takes its complement. Every subsequent legal choice then lies inside the remaining three-element ground set, reducing the game to the three-element losing position established in the problem, with the first player to move.
+> - If the first player takes a two-element set, assume without loss of generality that it is $\{1,2\}$; the second player takes the complement $\{3,4\}$. The remaining legal sets are the four singletons and the four “cross pairs” $\{1,3\},\{1,4\},\{2,3\},\{2,4\}$. The second player responds according to the fixed pairing $\{1\}\leftrightarrow\{2\}$, $\{3\}\leftrightarrow\{4\}$, $\{1,3\}\leftrightarrow\{2,4\}$, and $\{1,4\}\leftrightarrow\{2,3\}$. The two sets in each pair are legal together under all earlier choices; after one is taken, its partner still contains none of the previously selected sets. Thus every move by the first player has a paired response, and the first player is eventually the first to have no legal move.
+> These three possible opening sizes exhaust all nonempty proper subsets, so the second player wins the four-element game.
 > <!-- bilingual-en:end -->
 
 > [!question]- 三道自检
@@ -1417,22 +1385,25 @@ Based on the adopted set theory, this code can recover the first and second term
 > 3. $|\operatorname{pow}(\varnothing)|$ 是多少？
 >
 > <!-- bilingual-en:start -->
-> 1. What is the difference between $\varnothing\in A$ and $\varnothing\subseteq A$?
-> 2. Proof $A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$.
-> 3. What is $|\operatorname{pow}(\varnothing)|$?
+>
+> &nbsp;
+> **1.** What is the difference between $\varnothing\in A$ and $\varnothing\subseteq A$?<br>
+> **2.** Prove $A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$.<br>
+> **3.** What is $|\operatorname{pow}(\varnothing)|$?<br>
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 1. 前者要求空集本身是 $A$ 的元素，不总成立；后者对每个 $A$ 都成立。2. 对任意 $x$，把成员条件化成 $P\land(Q\lor R)\equiv(P\land Q)\lor(P\land R)$。3. $1$，唯一子集是 $\varnothing$。
 > <!-- bilingual-en:start -->
-> 1. The former requires that the empty set itself be an element of the $A$, and does not always hold; the latter holds for each $A$.  2. For any $x$, the membership is reduced to a $P\land(Q\lor R)\equiv(P\land Q)\lor(P\land R)$.  3.  $1$, the only subset is $\varnothing$.
+>
+> &nbsp;
+> **1.** The former says that the empty set itself is an element of $A$, which need not hold; the latter holds for every $A$.<br>
+> **2.** For an arbitrary $x$, reduce the membership condition to $P\land(Q\lor R)\equiv(P\land Q)\lor(P\land R)$.<br>
+> **3.** It is $1$; the only subset is $\varnothing$.<br>
 > <!-- bilingual-en:end -->
 
 **知识链：**成员谓词 → 逻辑运算 → 集合运算 → 外延性 → 数据类型编码。
 <!-- bilingual-en:start -->
-**Knowledge Chain:**Member Predicates→Logical Operations→Set Operations→Extensibility→Data Type Encoding.
+**Knowledge chain:** membership predicates → logical operators → set operations → extensionality → encoding data types.
 <!-- bilingual-en:end -->
 
 ---
@@ -1442,7 +1413,7 @@ Based on the adopted set theory, this code can recover the first and second term
 > [!note] 原题与答案性质
 > [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps2.pdf|Problem Set 2 PDF]]。以下 3 道均为非官方独立题解。
 > <!-- bilingual-en:start -->
-> [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps2.pdf|Problem Set 2 PDF]].  The following 3 questions are unofficial and independent.
+> [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps2.pdf|Problem Set 2 PDF]]. The three solutions below are independent and unofficial.
 > <!-- bilingual-en:end -->
 
 > [!example]- Problem 1：用集合论表达 pair
@@ -1454,14 +1425,13 @@ Based on the adopted set theory, this code can recover the first and second term
 > $$\mathrm{Second}(p,b):\Longleftrightarrow\exists a\,\mathrm{Pair}(p,a,b).$$
 > 每个辅助式都只是成员谓词、量词与逻辑运算的缩写，所以最终确为集合论公式。
 > <!-- bilingual-en:start -->
-> by Set Theory
-> defined
+> Define
 > $$\mathrm{Members}(p,a,b):\Longleftrightarrow\forall x(x\in p\Leftrightarrow(x=a\lor x=b)).$$
-> therefore
+> Then
 > $$\mathrm{Pair}(p,a,b):\Longleftrightarrow\exists q(\mathrm{Members}(q,a,b)\land\mathrm{Members}(p,a,q)).$$
-> Here's $q=\{a,b\}$, and $p=\{a,q\}=\{a,\{a,b\}\}$.  last
+> Here $q=\{a,b\}$ and $p=\{a,q\}=\{a,\{a,b\}\}$. Finally,
 > $$\mathrm{Second}(p,b):\Longleftrightarrow\exists a\,\mathrm{Pair}(p,a,b).$$
-> Each auxiliary is simply an abbreviation for member predicates, quantifiers and logical operations, so it is indeed a set theory formula.
+> Each auxiliary expression abbreviates a formula built only from membership predicates, quantifiers, and logical operators, so the final result is genuinely a formula of set theory.
 > <!-- bilingual-en:end -->
 
 > [!example]- Problem 2：集合版 De Morgan
@@ -1478,8 +1448,8 @@ Based on the adopted set theory, this code can recover the first and second term
 > $$
 > 由外延性，$\overline{A\cap B}=\overline A\cup\overline B$。
 > <!-- bilingual-en:start -->
-> The complement is relative to the same set.  Optional $x$:
-> By epitaxy, $\overline{A\cap B}=\overline A\cup\overline B$.
+> Complements are taken relative to the same universal set. Choose an arbitrary $x$:
+> By extensionality, $\overline{A\cap B}=\overline A\cup\overline B$.
 > <!-- bilingual-en:end -->
 
 > [!example]- Problem 3：star-free languages
@@ -1505,16 +1475,16 @@ Based on the adopted set theory, this code can recover the first and second term
 >
 > **(h)** 有限语言均 0-finite；(f)(g) 证明 union/concatenation 保持 boring，complement 只交换“自身 0-finite”与“补集 0-finite”。结构归纳得全部 c-d 语言 boring。因 (e) 的 $(00)^*$ 不 boring，它不是 c-d。
 > <!-- bilingual-en:start -->
-> Note that $B=\{0,1\}^*$, the complement is relative to $B$.
-> **(a)**$R\cap S=\overline{\overline R\cup\overline S}$, so the c-d language is closed.
-> **(b)**$0B\cap B1$ starts with 0 and ends with 1.
-> **(c)**All 0-string language: $0^*=\overline{B1B}$, because on the right is exactly all strings without a 1, including empty strings.
+> Let $B=\{0,1\}^*$, with all complements taken relative to $B$.
+> **(a)** $R\cap S=\overline{\overline R\cup\overline S}$, so the class of c-d languages is closed under intersection.
+> **(b)** The language of strings that begin with $0$ and end with $1$ is $0B\cap B1$.
+> **(c)** The language of all-zero strings is $0^*=\overline{B1B}$, because the right-hand side contains exactly the strings with no $1$, including the empty string.
 > **(d)**
-> A non-empty string starts with 0, ends with 1, and has no adjacent identical bits if and only if it alternates with several 01.
-> **(e)**$(00)^*\cap0^*$ contains infinite number of even-length all-0 strings; its complement intersects $0^*$ with infinite number of odd-length all-0 strings, so neither it nor the complement is 0-finite, that is, not boring.
-> **(f)**If both $R,S$ are 0-finite, then they are still finite; if at least one (e.g., $R$) is co-0-finite, then $\overline{R\cup S}\cap0^*\subseteq\overline R\cap0^*$ is finite.  So keep boring.
-> **(g)**If $R,S$ are all 0-finite, the candidates that can be spelled into all 0 strings are from two finite sets, so the product 0-finite.  If a language does not have an all-zero string, the product does not.  In the remaining case, at least one of the $R$ includes all but a limited number of all zeros, and the other includes a fixed $0^k$; therefore, a sufficiently large $0^n$ can be written as $0^{n-k}0^k\in R\cdot S$.  So the product's tween only leaves out a limited number of all-0 strings, still boring.
-> **(h)**Finite languages are all 0-finite;(f)(g) Prove that union/concatenation keeps boring and complement only exchanges "self 0-finite" and "complement 0-finite".  The structure is summarized into the whole c-d language boring.  Because the $(00)^*$ of (e) is not boring, it is not c-d.
+> A nonempty string begins with $0$, ends with $1$, and has no equal adjacent bits exactly when it is a repetition of $01$.
+> **(e)** $(00)^*\cap0^*$ contains infinitely many even-length all-zero strings, while its complement intersects $0^*$ in infinitely many odd-length all-zero strings. Thus neither the language nor its complement is 0-finite, so it is not boring.
+> **(f)** If both $R$ and $S$ are 0-finite, their union is still 0-finite. If at least one, say $R$, is co-0-finite, then $\overline{R\cup S}\cap0^*\subseteq\overline R\cap0^*$ is finite. Hence union preserves boring languages.
+> **(g)** If both $R$ and $S$ are 0-finite, only finitely many pairs of their all-zero strings can be concatenated, so the product is 0-finite. If either language contains no all-zero string, neither does the product. In the remaining case, one language, say $R$, contains all but finitely many all-zero strings, while the other contains some fixed $0^k$. Every sufficiently long $0^n$ can then be written as $0^{n-k}0^k\in R\cdot S$. The complement of the product therefore omits only finitely many all-zero strings, so the product is still boring.
+> **(h)** Every finite language is 0-finite. Parts (f) and (g) show that union and concatenation preserve the boring property, while complement merely swaps “the language is 0-finite” with “its complement is 0-finite.” Structural induction therefore proves that every c-d language is boring. Since $(00)^*$ from part (e) is not boring, it is not c-d.
 > <!-- bilingual-en:end -->
 
 ---
@@ -1528,7 +1498,7 @@ Based on the adopted set theory, this code can recover the first and second term
 
 函数只是关系的一种。怎样用“每个点有几条入边/出边”统一定义 total、function、injection、surjection 和 bijection？
 <!-- bilingual-en:start -->
-Functions are just a kind of relation.  How do I define total, function, injection, surjection, and bijection uniformly with "How many in/out edges per point"?
+A function is only one kind of relation. How can totality, functionality, injectivity, surjectivity, and bijectivity all be defined by counting the incoming and outgoing edges at each point?
 <!-- bilingual-en:end -->
 
 > [!note] 本地材料
@@ -1538,7 +1508,7 @@ Functions are just a kind of relation.  How do I define total, function, injecti
 
 ### 7.1 关系、像与逆像
 <!-- bilingual-en:start -->
-*7.1 Relationship, Image and Inversion*
+*7.1 Relations, images, and inverses*
 <!-- bilingual-en:end -->
 
 [[01_Proofs#Session 7 — Binary Relations|二元关系（binary relation）]] $R$ from $A$ to $B$ 是笛卡尔积 $A\times B$ 的子集。写 $aRb$ 表示 $(a,b)\in R$。$A$ 是声明的 domain，$B$ 是 codomain；真正有出边的元素集合与真正被命中的 range 不一定等于二者。
@@ -1548,7 +1518,7 @@ A [[01_Proofs#Session 7 — Binary Relations|binary relation]] $R$ from $A$ to $
 
 对 $X\subseteq A$，像为
 <!-- bilingual-en:start -->
-For $X\subseteq A$, like
+For $X\subseteq A$, its image is
 <!-- bilingual-en:end -->
 
 $$
@@ -1562,12 +1532,12 @@ The inverse $R^{-1}\subseteq B\times A$ is defined by $bR^{-1}a\Leftrightarrow a
 
 ### 7.2 用箭头计数定义映射性质
 <!-- bilingual-en:start -->
-*7.2 Defining Mapping Properties with Arrow Counts*
+*7.2 Defining mapping properties by counting arrows*
 <!-- bilingual-en:end -->
 
 课程把各性质用于一般关系，而不预设“函数必 total”：
 <!-- bilingual-en:start -->
-The course uses each property in a general relation, without presetting the "function must total":
+The course defines these properties for arbitrary relations, without assuming in advance that every function is total:
 <!-- bilingual-en:end -->
 
 | 性质 | 每个 domain 点出边 | 每个 codomain 点入边 |
@@ -1578,8 +1548,8 @@ The course uses each property in a general relation, without presetting the "fun
 | surjection | 无限制 | $\ge1$ |
 | bijection | $=1$ | $=1$ |
 <!-- bilingual-en:start -->
-| Nature | Edges per domain point | Edges per codomain point |
-|—|—:|—:|
+| Property | Outgoing edges per domain point | Incoming edges per codomain point |
+|---|---:|---:|
 | function | $\le1$ | Unlimited|
 | total | $\ge1$ | Unlimited|
 | injection | Unlimited | $\le1$ |
@@ -1589,7 +1559,7 @@ The course uses each property in a general relation, without presetting the "fun
 
 因此常规数学中的“函数 $f:A\to B$”对应这里的 **total function**。inverse 会交换 in/out：
 <!-- bilingual-en:start -->
-So "function $f:A\to B$" in general mathematics corresponds to**total function**.  inverse swaps in/out:
+Thus what standard mathematical usage calls a “function $f:A\to B$” is a **total function** in this terminology. Taking the inverse swaps incoming and outgoing edges:
 <!-- bilingual-en:end -->
 
 $$
@@ -1600,22 +1570,22 @@ $$
 
 ### 7.3 有限基数与 Mapping Rule
 <!-- bilingual-en:start -->
-*7.3 Finite Cardinality and Mapping Rule*
+*7.3 Finite cardinality and the Mapping Rule*
 <!-- bilingual-en:end -->
 
 [[01_Proofs#Session 11 — Infinite Sets|基数（cardinality）]] $|A|$ 表示有限集元素数。若存在 $A$ 到 $B$ 的 bijection，则 $|A|=|B|$。若存在 total injection，则 $|A|\le|B|$；若存在 total surjective function，则 $|A|\ge|B|$。
 <!-- bilingual-en:start -->
-[[01_Proofs#Session 11 — Infinite Sets|cardinality]] $|A|$ indicates the number of finite set elements.  If there is a bijection from $A$ to $B$, $|A|=|B|$.  $|A|\le|B|$ if total injection is present, $|A|\ge|B|$ if total surjective function is present.
+For a finite set, its [[01_Proofs#Session 11 — Infinite Sets|cardinality]] $|A|$ is its number of elements. A bijection from $A$ to $B$ gives $|A|=|B|$; a total injection gives $|A|\le|B|$; and a total surjective function gives $|A|\ge|B|$.
 <!-- bilingual-en:end -->
 
 证明的箭头计数本质：total injection 从每个 $a$ 发出一条、不同 $a$ 不能落到同一 $b$，所以 $B$ 至少有 $|A|$ 个落点。
 <!-- bilingual-en:start -->
-The arrowhead count nature of the proof: total injection emits one $a$ from each $a$ and different $b$ cannot fall to the same $B$, so there are at least $|A|$ drop points.
+The proof is fundamentally an arrow-counting argument. A total injection sends at least one arrow from every $a\in A$, and no two distinct elements of $A$ can land on the same $b\in B$. Therefore $B$ must contain at least $|A|$ distinct targets.
 <!-- bilingual-en:end -->
 
 ### 7.4 组合的性质不能凭感觉传递
 <!-- bilingual-en:start -->
-*7.4 The nature of the combination cannot be transmitted by sensation*
+*7.4 Composition does not preserve properties automatically*
 <!-- bilingual-en:end -->
 
 若 $h=f\circ g$：
@@ -1627,9 +1597,9 @@ If $h=f\circ g$:
 - $h$ injective 强迫 $g$ injective，因为 $g$ 若碰撞，$h$ 必碰撞；
 - 反方向通常只对 $g(A)$ 范围内有效，不能约束未被 $g$ 命中的 $B$ 元素。
 <!-- bilingual-en:start -->
-- $h$ surjective forces $f$ surjective because $h(A)\subseteq f(B)$;
-- $h$ injective forces $g$ injective, because if $g$ collides, $h$ must collide;
-- The reverse direction is usually only valid in the $g(A)$ range and cannot constrain $B$ elements that are not hit by a $g$.
+- If $h$ is surjective, then $f$ must be surjective because $h(A)\subseteq f(B)$.
+- If $h$ is injective, then $g$ must be injective, because any collision under $g$ would also be a collision under $h$.
+- Converse claims usually hold only on the image $g(A)$ and cannot constrain elements of $B$ that $g$ never reaches.
 <!-- bilingual-en:end -->
 
 > [!question]- 官方在线 feedback exercises（22 prompts）
@@ -1647,17 +1617,15 @@ If $h=f\circ g$:
 >
 > 11–14. inverse 对应：function ↔ injection，surjection ↔ total，injection ↔ function，bijection ↔ bijection。15–21（论域/陪域均 $\mathbb R$）：$x+2$ B，$2x$ B，$x^2$ N，$x^3$ B，$\sin x$ N，$x\sin x$ S-not-B，$e^x$ I-not-B。22. 对有限集，$A\operatorname{inj}B$ 等价：存在 total injective relation $A\to B$、surjective function $B\to A$、$A$ 与 $B$ 某子集间 bijection，以及 $|A|\le|B|$。
 > <!-- bilingual-en:start -->
-> **Local entry:**
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S07_1.7.2_range-of-a-relation|1.7.2 Range of a Relation]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S07_1.7.4_total-injection|1.7.4 Total Injection]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S07_1.7.6_a-inj-b|1.7.6 A inj B]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S07_1.7.7_total-relations|1.7.7 Total Relations]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S07_1.7.8_surjective-relations|1.7.8 Surjective Relations]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S07_1.7.9_inverse-relations|1.7.9 Inverse Relations]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S07_1.7.10_in-sur-and-bijections|1.7.10 In-, Sur-, and Bijections]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S07_1.7.11_mapping-lemma-sizes-of-domains-and-codomains|1.7.11 Mapping Lemma: Sizes of Domains and Codomains]]
-> 1. range is no greater than codomain.  2-3. total injection is $\ge1$ out, $\le1$ in.  4. total is equivalent to $R^{-1}(B)=A$ and $\ge1$ out.  5. surjective is equivalent to $R(A)=B$.  6-10.  $|R(A)|\le|B|$; $|A|\ge|B|$, $|R(A)|=|B|$ for surjective; $|R(A)|=|A|$ for injective; $|A|=|B|$ for bijective.
-> 11-14. inverse mappings: function ↔ injection, surjection ↔ total, injection ↔ function, bijection ↔ bijection.  15-21 (domain/codomain $\mathbb R$): $x+2$ B, $2x$ B, $x^2$ N, $x^3$ B, $\sin x$ N, $x\sin x$ S-not-B, $e^x$ I-not-B.  22. For finite sets, $A\operatorname{inj}B$ is equivalent: there is bijection between a subset of total injective relation $A\to B$, surjective function $B\to A$, $A$ and $B$, and $|A|\le|B|$.
+>
+> &nbsp;
+> **1.** The range cannot be larger than the codomain.<br>
+> **2–3.** A total injection has at least one outgoing edge per domain element and at most one incoming edge per codomain element.<br>
+> **4.** Totality is equivalent to $R^{-1}(B)=A$, or to every domain element having at least one outgoing edge.<br>
+> **5.** Surjectivity is equivalent to $R(A)=B$.<br>
+> **6–10.** In general, $|R(A)|\le|B|$; for a surjection, $|A|\ge|B|$ and $|R(A)|=|B|$; for an injection, $|R(A)|=|A|$; and for a bijection, $|A|=|B|$.<br>
+> **11–14.** Under inversion: function ↔ injection, surjection ↔ total, injection ↔ function, and bijection ↔ bijection. 15–21, with domain and codomain both $\mathbb R$: $x+2$ is B, $2x$ is B, $x^2$ is N, $x^3$ is B, $\sin x$ is N, $x\sin x$ is S-not-B, and $e^x$ is I-not-B.<br>
+> **22.** For finite sets, $A\operatorname{inj}B$ is equivalent to each of the following: a total injective relation $A\to B$ exists; a surjective function $B\to A$ exists; $A$ is in bijection with a subset of $B$; and $|A|\le|B|$.<br>
 > <!-- bilingual-en:end -->
 
 > [!example]- CP7 非官方独立题解（5 道）
@@ -1673,13 +1641,13 @@ If $h=f\circ g$:
 >
 > **5. inj/surj 的组合。** (a) 合成两个 surjective relations：对每个 $c$，先取 $bRc$，再取 $aSb$，得到 $a$ 到 $c$，故仍 surjective。(b) $A\operatorname{surj}B$ 当且仅当把箭头反向得到 $B\operatorname{inj}A$。(c) 对 (a) 取 inverse，得到 injection 的传递性。(d) 从 total injective relation 每个 $a$ 选一条出边；删边不会破坏 $\le1$ in，得到 total injective function。有限情形可逐点选择；任意集合的统一陈述涉及 choice。
 > <!-- bilingual-en:start -->
-> **1. Table of inverse relations.**total ↔ inverse surjection;function ↔ inverse injection;surjection ↔ inverse total;injection ↔ inverse function;bijection ↔ inverse bijection.  Each becomes Inset only after the Out edge is flipped.
-> **2.  $|A\times B|=mn$.**$A=\{a_0,\dots,a_{n-1}\}$, $B=\{b_0,\dots,b_{m-1}\}$.  defined
+> **1. Table of inverse relations.** Total ↔ inverse surjection; function ↔ inverse injection; surjection ↔ inverse total; injection ↔ inverse function; bijection ↔ inverse bijection. Each statement simply observes that reversing every arrow turns outgoing-edge conditions into incoming-edge conditions.
+> **2. $|A\times B|=mn$.** Let $A=\{a_0,\dots,a_{n-1}\}$ and $B=\{b_0,\dots,b_{m-1}\}$. Define
 > $$f(a_i,b_j)=im+j.$$
-> The value domain is $0,\dots,mn-1$.  If $im+j=i'm+j'$, because $0\le j,j'<m$, the quotient remainder of Euclidean division is unique, $i=i',j=j'$; conversely, any $k<mn$ is unique as $k=im+j$.  So, $f$ bijective.
-> **3. Strongest comparison sign.**(a)$|f(A)|\le|B|$;(b)$|A|\ge|B|$ at surjective;(c)$|f(A)|=|B|$;(d)$|f(A)|=|A|$ at injective;(e)$|A|=|B|$ at bijective.
-> **4. Generic Mapping Rule.**Sets the number of arrows from $X$ to $E$.  Since $R$ is function and each $x\in X$ has at most one outside edge, $E\le|X|$; elements in each $R(X)$ are attached to at least one edge from $X$, $|R(X)|\le E$.  So, $|R(X)|\le|X|$.
-> **5. Combining injection and surjection properties.** (a) The composition of two surjective relations is surjective: for each $c$, choose $b$ with $bRc$, then choose $a$ with $aSb$, producing a relation from $a$ to $c$. (b) $A\operatorname{surj}B$ if and only if reversing all arrows gives $B\operatorname{inj}A$. (c) Taking inverses in part (a) gives transitivity of injection. (d) From a total injective relation, choose one outgoing edge for each $a$. Removing other edges preserves the at-most-one-incoming-edge property and produces a total injective function. For finite sets the choices can be made one at a time; the uniform statement for arbitrary sets invokes a choice principle.
+> Its range is $0,\dots,mn-1$. If $im+j=i'm+j'$ with $0\le j,j'<m$, uniqueness of quotient and remainder in Euclidean division gives $i=i'$ and $j=j'$. Conversely, every $k<mn$ has a unique representation $k=im+j$. Thus $f$ is bijective.
+> **3. Strongest comparison sign.** (a) $|f(A)|\le|B|$; (b) if $f$ is surjective, $|A|\ge|B|$; (c) $|f(A)|=|B|$; (d) if $f$ is injective, $|f(A)|=|A|$; (e) if $f$ is bijective, $|A|=|B|$.
+> **4. Generalised Mapping Rule.** Let $E$ be the number of arrows leaving $X$. Because $R$ is a function, each $x\in X$ has at most one outgoing edge, so $E\le|X|$. Every element of $R(X)$ receives at least one edge from $X$, so $|R(X)|\le E$. Hence $|R(X)|\le|X|$.
+> **5. Combining injection and surjection properties.** (a) The composition of two surjective relations is surjective: for each $c$, choose $b$ with $bRc$, then choose $a$ with $aSb$, producing an edge from $a$ to $c$ in the composite relation. (b) $A\operatorname{surj}B$ if and only if reversing all arrows gives $B\operatorname{inj}A$. (c) Taking inverses in part (a) gives transitivity of injection. (d) From a total injective relation, choose one outgoing edge for each $a$. Removing other edges preserves the at-most-one-incoming-edge property and produces a total injective function. For finite sets the choices can be made one at a time; the uniform statement for arbitrary sets invokes a choice principle.
 > <!-- bilingual-en:end -->
 
 > [!question]- 三道自检
@@ -1688,22 +1656,25 @@ If $h=f\circ g$:
 > 3. 若 $A$ 空、$B$ 非空，空关系有哪些性质？
 >
 > <!-- bilingual-en:start -->
-> 1. Can a relation be function but not total?
-> 2. Why is $f(A)=B$ not required when $f:A\to B$ is injection?
-> 3. If $A$ null and $B$ non-null, what is the nature of the null relationship?
+>
+> &nbsp;
+> **1.** Can a relation be a function without being total?<br>
+> **2.** Why can $f(A)$ be a proper subset of $B$ when $f:A\to B$ is injective?<br>
+> **3.** If $A$ is empty and $B$ is nonempty, which properties does the empty relation have?<br>
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 1. 可以，例如 $A=\{1,2\},R=\{(1,a)\}$。2. injection 只限制碰撞，不要求覆盖。3. 它是 function 和 injection（条件真空成立），不是 total，也不是 surjection。
 > <!-- bilingual-en:start -->
-> 1. Yes, for example, $A=\{1,2\},R=\{(1,a)\}$.  2. injection only restricts the collision and does not require coverage.  3. It is function and injection (conditional vacuum holds), not total, not surjection.
+>
+> &nbsp;
+> **1.** Yes; for example, take $A=\{1,2\}$ and $R=\{(1,a)\}$.<br>
+> **2.** Injectivity only forbids collisions; it does not require the codomain to be covered.<br>
+> **3.** It is a function and an injection, because those conditions hold vacuously, but it is neither total nor surjective.<br>
 > <!-- bilingual-en:end -->
 
 **知识链：**笛卡尔积 → relation → 箭头约束 → inverse/composition → finite cardinality。
 <!-- bilingual-en:start -->
-**Knowledge Chain:**Cartesian Product→relation→Arrow Constraint→inverse/composition→finite cardinality.
+**Knowledge chain:** Cartesian product → relation → arrow-count constraints → inverse and composition → finite cardinality.
 <!-- bilingual-en:end -->
 
 ---
@@ -1717,7 +1688,7 @@ If $h=f\circ g$:
 
 怎样证明无限多个整数命题而只写有限证明？归纳假设为什么必须足够强、基例为什么必须足够多？
 <!-- bilingual-en:start -->
-How to prove infinitely many integer propositions and write only finite proofs?  Why do generalization assumptions have to be strong enough, and why do basis examples have to be strong enough?
+How can a finite proof establish infinitely many statements about integers? Why must the induction hypothesis be strong enough, and why must there be enough base cases?
 <!-- bilingual-en:end -->
 
 > [!note] 本地材料
@@ -1727,12 +1698,12 @@ How to prove infinitely many integer propositions and write only finite proofs? 
 
 ### 8.1 普通归纳
 <!-- bilingual-en:start -->
-*8.1 General induction*
+*8.1 Ordinary induction*
 <!-- bilingual-en:end -->
 
 [[数学证明方法#归纳法|普通归纳原理]]：若
 <!-- bilingual-en:start -->
-[[数学证明方法#归纳法|general induction principle]]: If
+The [[数学证明方法#归纳法|ordinary induction principle]] states that if
 <!-- bilingual-en:end -->
 
 $$
@@ -1741,14 +1712,14 @@ $$
 
 则 $\forall n\in\mathbb N,P(n)$。
 <!-- bilingual-en:start -->
-$\forall n\in\mathbb N,P(n)$.
+then $\forall n\in\mathbb N,P(n)$.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit01-induction-dominoes.png|900]]
 
 读图：基例推倒第一块骨牌，归纳步只保证任意一块倒下会带动下一块；两项缺一都不能覆盖整条序列。
 <!-- bilingual-en:start -->
-Reading: The base case pushes down the first domino, and the induction step only ensures that any one piece falls down and drives the next piece; neither of the two items can cover the entire sequence.
+How to read the diagram: the base case knocks down the first domino, while the inductive step says that any falling domino knocks down the next one. Neither condition alone covers the entire sequence.
 <!-- bilingual-en:end -->
 
 证明流程必须分开：
@@ -1761,10 +1732,12 @@ The proof must keep these stages separate:
 3. induction step：固定任意 $n$，**假设** $P(n)$，证明 $P(n+1)$；
 4. 调用归纳原理。
 <!-- bilingual-en:start -->
-1. Define $P(n)$.
-2. Base case: prove $P(0)$, or the appropriate initial case.
-3. Inductive step: fix an arbitrary $n$, assume $P(n)$, and prove $P(n+1)$.
-4. Invoke the induction principle.
+
+&nbsp;
+**1.** Define $P(n)$.<br>
+**2.** Base case: prove $P(0)$, or the appropriate initial case.<br>
+**3.** Inductive step: fix an arbitrary $n$, assume $P(n)$, and prove $P(n+1)$.<br>
+**4.** Invoke the induction principle.<br>
 <!-- bilingual-en:end -->
 
 归纳假设不是把目标当已知：它只在“证明相邻传递规则”的局部步骤中暂时成立。
@@ -1774,12 +1747,12 @@ The induction hypothesis does not assume the whole theorem; it is a temporary as
 
 ### 8.2 强归纳与普通归纳等价
 <!-- bilingual-en:start -->
-*8.2 Strong Induction and General Induction Equivalence*
+*8.2 Equivalence of strong and ordinary induction*
 <!-- bilingual-en:end -->
 
 [[数学证明方法#归纳法|强归纳]]的归纳步允许假设所有更小情形：
 <!-- bilingual-en:start -->
-[[数学证明方法#归纳法|strong induction]]'s induction step allows for all the smaller scenarios:
+The inductive step in [[数学证明方法#归纳法|strong induction]] may assume every strictly smaller case:
 <!-- bilingual-en:end -->
 
 $$
@@ -1788,7 +1761,7 @@ $$
 
 它并不更“有证明力”。令 $Q(n)=\forall k\le nP(k)$，对 $Q$ 做普通归纳即可模拟强归纳。反过来，普通归纳只是强归纳中只使用 $P(n)$ 的特例。
 <!-- bilingual-en:start -->
-It is not more "proving".  Let $Q(n)=\forall k\le nP(k)$ do the general induction to $Q$ and then simulate the strong induction.  Conversely, general induction is a special case of strong induction where only $P(n)$ is used.
+This does not make strong induction more powerful. Defining $Q(n)=\forall k\le nP(k)$ and applying ordinary induction to $Q$ simulates strong induction. Conversely, ordinary induction is the special case of strong induction that uses only $P(n)$.
 <!-- bilingual-en:end -->
 
 ### 8.3 基例的数量由递推跨度决定
@@ -1798,12 +1771,12 @@ It is not more "proving".  Let $Q(n)=\forall k\le nP(k)$ do the general inductio
 
 若归纳步是 $P(n)\Rightarrow P(n+3)$，只证明 $P(0)$ 只能覆盖 $0,3,6,\dots$。要覆盖所有足够大的整数，必须为模 $3$ 的三个余数类各提供一个起点，例如 $P(5),P(6),P(7)$。
 <!-- bilingual-en:start -->
-If the induction step is $P(n)\Rightarrow P(n+3)$, it is proved that $P(0)$ can only cover $0,3,6,\dots$.  To override all sufficiently large integers, you must provide a starting point for each of the three remainder classes modulo $3$, for example, $P(5),P(6),P(7)$.
+If the inductive step is $P(n)\Rightarrow P(n+3)$, proving only $P(0)$ covers just $0,3,6,\dots$. To cover all sufficiently large integers, provide a starting point in each of the three residue classes modulo $3$, for example $P(5),P(6),P(7)$.
 <!-- bilingual-en:end -->
 
 ### 8.4 “所有马同色”漏洞
 <!-- bilingual-en:start -->
-*8.4 "All Horses Same Color" Vulnerability*
+*8.4 The flaw in the “all horses have the same colour” proof*
 <!-- bilingual-en:end -->
 
 伪证把 $n+1$ 匹马分成前 $n$ 与后 $n$，声称两组各同色且因重叠而颜色一致。由 $n=1$ 推 $n=2$ 时两组没有共同马，所以“重叠传递颜色”第一次失效。真正的审查目标是第一处无依据的推断，不是只说结论荒谬。
@@ -1818,7 +1791,7 @@ The bogus proof divides the $n+1$ horses into the first $n$ and the last $n$, cl
 
 若归纳结论失败，WOP 可取最小反例；它之前所有整数都成立，归纳步会推出最小反例也成立。反向也可用归纳证明非空自然数集合有最小元。因此三种方法在课程范围内等价，但表达便利不同。
 <!-- bilingual-en:start -->
-If the conclusion of induction fails, the WOP can obtain the smallest counterexample; all the integers before it hold, and the step of induction can also obtain the smallest counterexample.  Inversion can also be used to prove that the set of non-empty natural numbers has a minimum element.  Therefore, the three methods are equivalent within the curriculum, but the expression is convenient.
+If an inductive claim fails, WOP supplies a least counterexample. Every smaller integer satisfies the claim, so the inductive step forces the least counterexample to satisfy it as well, a contradiction. Conversely, induction can prove that every nonempty set of natural numbers has a least element. Thus ordinary induction, strong induction, and WOP are equivalent within this course, though different problems are easier to express with different forms.
 <!-- bilingual-en:end -->
 
 > [!question]- 官方在线 feedback exercises（13 prompts）
@@ -1833,15 +1806,15 @@ If the conclusion of induction fails, the WOP can obtain the smallest counterexa
 >
 > 1. Horses 伪证在 $P(1)\Rightarrow P(2)$ 处失败。2. unstacking 总分与策略无关且为 $n(n-1)/2$。3–4. ordinary/strong/WOP 等价；强归纳转普通归纳用 $Q(n)=\forall k\le nP(k)$。5–6. $P(n)\Rightarrow P(n+3)$ 从 $P(5)$ 得 $5,8,11,\dots$；覆盖所有 $n\ge5$ 需三个不同模 3 余数的基例，如 $5,6,7$。7–11. 五条规则依次是 Strong、Ordinary、WOP、None（漏掉 $0\to1$）、Strong（$m=0$ 时前件真空成立提供基例）。12. 邮资题三种方法均可，但 strong/WOP 更自然。13. Fibonacci 伪强归纳漏证 $P(1)$，最后调用归纳原理无效。
 > <!-- bilingual-en:start -->
-> **Local entry:**
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S08_1.8.3_same-colored-horses|1.8.3 Same Colored Horses]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S08_1.8.5_unstacking-game-score|1.8.5 Unstacking Game Score]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S08_1.8.7_strong-vs-ordinary-induction-vs-wop|1.8.7 Strong vs Ordinary Induction vs WOP (optional)]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S08_1.8.8_induction-by-n-3|1.8.8 Induction by n+3]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S08_1.8.9_induction-rules|1.8.9 Induction Rules]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S08_1.8.10_postage-by-induction|1.8.10 Postage by Induction]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S08_1.8.11_a-bogus-induction|1.8.11 A Bogus Induction]]
-> 1. The all-horses-the-same-colour proof fails at $P(1)\Rightarrow P(2)$. 2. The total unstacking score is independent of strategy and equals $n(n-1)/2$. 3–4. Ordinary induction, strong induction, and WOP are equivalent; convert strong induction to ordinary induction by defining $Q(n)=\forall k\le nP(k)$. 5–6. From $P(5)$ and $P(n)\Rightarrow P(n+3)$ we obtain only $5,8,11,\dots$; covering all $n\ge5$ requires base cases in all three residue classes modulo $3$, such as $5,6,7$. 7–11. The five rules are Strong, Ordinary, WOP, None (the step $0\to1$ is missing), and Strong (when $m=0$, the vacuous hypothesis supplies the base case). 12. The postage problem can be proved by all three methods, though strong induction or WOP is more natural. 13. The bogus strong-induction proof for Fibonacci numbers omits $P(1)$, so its final invocation of induction is invalid.
+>
+> &nbsp;
+> **1.** The all-horses-the-same-colour proof fails at $P(1)\Rightarrow P(2)$.<br>
+> **2.** The total unstacking score is independent of strategy and equals $n(n-1)/2$.<br>
+> **3–4.** Ordinary induction, strong induction, and WOP are equivalent; convert strong induction to ordinary induction by defining $Q(n)=\forall k\le nP(k)$.<br>
+> **5–6.** From $P(5)$ and $P(n)\Rightarrow P(n+3)$ we obtain only $5,8,11,\dots$; covering all $n\ge5$ requires base cases in all three residue classes modulo $3$, such as $5,6,7$.<br>
+> **7–11.** The five rules are Strong, Ordinary, WOP, None (the step $0\to1$ is missing), and Strong (when $m=0$, the vacuous hypothesis supplies the base case).<br>
+> **12.** The postage problem can be proved by all three methods, though strong induction or WOP is more natural.<br>
+> **13.** The bogus strong-induction proof for Fibonacci numbers omits $P(1)$, so its final invocation of induction is invalid.<br>
 > <!-- bilingual-en:end -->
 
 > [!example]- CP8 非官方独立题解（4 道）
@@ -1855,12 +1828,12 @@ If the conclusion of induction fails, the WOP can obtain the smallest counterexa
 >
 > **4. 素数整除乘积的伪证。** 首次无依据处发生在由 $n=1$ 推 $n+1=2$：看到 $p\mid x_1x_2$ 后，论证又对“两项乘积”调用强归纳，但 $P(2)$ 正是当前要证，不能由只含 $P(1)$ 的假设得到。修复：把 Euclid lemma（两因子情形）作为独立基例/已知定理，再从 $n\ge2$ 做归纳。
 > <!-- bilingual-en:start -->
-> **1. Proof $\sum_{k=1}^n1/k^2<2-1/n$ ($n>1$).**Base case $n=2$:$5/4<3/2$.  Assuming it is true for $n$, then
+> **1. Prove $\sum_{k=1}^n1/k^2<2-1/n$ for $n>1$.** The base case $n=2$ is $5/4<3/2$. Assuming the claim for $n$ gives
 > $$\sum_{k=1}^{n+1}\frac1{k^2}<2-\frac1n+\frac1{(n+1)^2}.$$
-> $1/(n+1)^2<1/[n(n+1)]=1/n-1/(n+1)$, right $<2-1/(n+1)$, summed up.
-> **2.  L-tromino tile.**(a) An induction into $n$.  $2^0\times2^0$ statue corners, no tiles.  The $2^{n+1}$ compound is divided into four $2^n$ quadrants; the quadrants containing statue are laid by inductive hypothesis, and a piece of L-bricks occupies the central corners of the other three quadrants in the center, and then these three quadrants become "one lattice missing in the corner" $2^n$ problems respectively, and all the quadrants can be laid.  (b) When statue is in the center, consider it as the central angle of a quadrant, and place the L-bricks in the other three centers, and all four quadrants call (a).
-> **3. 3 Zim/7 Zinc.**Summarize strong.  $12=4\cdot3$,$13=2\cdot3+7$,$14=2\cdot7$.  For $N\ge15$, $N-3\ge12$, it can be represented by a strong inductive hypothesis plus a 3.  Therefore, all $N\ge12$ are expressible; replacing the title mark with the title mark means that all $S(n)$ are true.
-> **4. Falsification of products of prime integers and divisions.**First unsupported occurrence in the $n+1=2$ by $n=1$: After seeing $p\mid x_1x_2$, the argument calls a strong induction for the "two products", but $P(2)$ is the current proof and cannot be derived from the assumption that only $P(1)$ exists.  Repair: Take Euclid lemma (two-factor case) as an independent basis/known theorem, and then generalize from $n\ge2$.
+> Since $1/(n+1)^2<1/[n(n+1)]=1/n-1/(n+1)$, the right-hand side is less than $2-1/(n+1)$, completing the induction.
+> **2. Tiling with L-trominoes.** (a) Induct on $n$. A $2^0\times2^0$ courtyard consists only of the corner statue and needs no tile. Divide the $2^{n+1}\times2^{n+1}$ courtyard into four $2^n\times2^n$ quadrants. Tile the quadrant containing the statue by the induction hypothesis. Place one L-tromino over the three central squares belonging to the other three quadrants; each of those quadrants is now a $2^n\times2^n$ courtyard missing one corner and can also be tiled by the induction hypothesis. (b) If the statue is at the centre, regard it as the central corner of one quadrant, cover the other three central squares with an L-tromino, and apply part (a) to all four quadrants.
+> **3. Postage using 3¢ and 7¢ stamps.** Use strong induction. The base cases are $12=4\cdot3$, $13=2\cdot3+7$, and $14=2\cdot7$. For $N\ge15$, we have $N-3\ge12$, so the strong induction hypothesis represents $N-3$; adding one 3¢ stamp represents $N$. Hence every $N\ge12$ is representable, which is exactly the assertion that all the stated $S(n)$ hold.
+> **4. A bogus proof about a prime dividing a product.** The first unsupported step occurs when the proof tries to pass from $n=1$ to $n+1=2$. After obtaining $p\mid x_1x_2$, it invokes strong induction on a product of two factors, but $P(2)$ is the very case being proved and cannot follow from a hypothesis containing only $P(1)$. To repair the proof, establish Euclid's lemma for two factors as an independent base case or prior theorem, then induct from $n\ge2$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 三道自检
@@ -1869,22 +1842,25 @@ If the conclusion of induction fails, the WOP can obtain the smallest counterexa
 > 3. 递推使用 $P(n-2)$ 时，至少要检查哪些基例？
 >
 > <!-- bilingual-en:start -->
-> 1. What $P$ will be available for $P(0)$ and $P(n)\Rightarrow P(n+2)$?
-> 2. In strong induction, can we suppose $P(n)$ to prove $P(n)$?
-> 3. At least which base cases should be checked when using $P(n-2)$ recursively?
+>
+> &nbsp;
+> **1.** Which instances of $P$ follow from $P(0)$ and $P(n)\Rightarrow P(n+2)$?<br>
+> **2.** In strong induction, can we suppose $P(n)$ to prove $P(n)$?<br>
+> **3.** At least which base cases should be checked when using $P(n-2)$ recursively?<br>
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 1. 只能推出偶数指标。2. 不能；假设只包括严格更小指标。3. 通常需连续两个起始指标，使每条递推链都能启动。
 > <!-- bilingual-en:start -->
-> 1. Only even indicators can be introduced.  2. No; the assumption is that only strictly smaller indicators are included.  3. Typically, two consecutive starting indicators are required so that each recursive chain can be activated.
+>
+> &nbsp;
+> **1.** Only instances with even indices follow.<br>
+> **2.** No; the hypothesis contains only cases with strictly smaller indices.<br>
+> **3.** Usually two consecutive base cases are needed so that both recurrence chains can start.<br>
 > <!-- bilingual-en:end -->
 
 **知识链：**WOP 最小反例 ↔ 普通归纳 ↔ 强归纳 → 足够强的假设 → 递归对象。
 <!-- bilingual-en:start -->
-**Knowledge chain:**WOP minimal counterexample↔general induction↔strong induction→strong enough hypothesis→recursive object.
+**Knowledge chain:** WOP and least counterexamples ↔ ordinary induction ↔ strong induction → a sufficiently strong hypothesis → recursive objects.
 <!-- bilingual-en:end -->
 
 ---
@@ -1894,7 +1870,7 @@ If the conclusion of induction fails, the WOP can obtain the smallest counterexa
 > [!note] 原题与答案性质
 > [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps3.pdf|Problem Set 3 PDF]]。以下 3 道均为非官方独立题解。
 > <!-- bilingual-en:start -->
-> [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps3.pdf|Problem Set 3 PDF]].  The following 3 questions are unofficial and independent.
+> [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps3.pdf|Problem Set 3 PDF]]. The three solutions below are independent and unofficial.
 > <!-- bilingual-en:end -->
 
 > [!example]- Problem 1：Binet 公式
@@ -1913,11 +1889,10 @@ If the conclusion of induction fails, the WOP can obtain the smallest counterexa
 > $$
 > 最后一步用了 $p+1=p^2,q+1=q^2$。
 > <!-- bilingual-en:start -->
-> if
+> Let
 > $$p=\frac{1+\sqrt5}{2},\qquad q=\frac{1-\sqrt5}{2}.$$
-> Both meet $x^2=x+1$.  $F_n=(p^n-q^n)/\sqrt5$ is proved by strong induction.
-> $0$ for $n=0$, $(p-q)/\sqrt5=1$ for $n=1$.  For $n\ge2$, it is assumed by recursion and induction:
-> $p+1=p^2,q+1=q^2$.
+> Both satisfy $x^2=x+1$. We prove $F_n=(p^n-q^n)/\sqrt5$ by strong induction.
+> For $n=0$, the right-hand side is $0$; for $n=1$, it is $(p-q)/\sqrt5=1$. For $n\ge2$, substitute the induction hypotheses into the recurrence, as shown above. The final equality uses $p+1=p^2$ and $q+1=q^2$.
 > <!-- bilingual-en:end -->
 
 > [!example]- Problem 2：Block Stacking
@@ -1930,10 +1905,9 @@ If the conclusion of induction fails, the WOP can obtain the smallest counterexa
 > $$\mathrm{score}=\Phi(A)-\Phi(B).$$
 > 游戏结束时全为单块，$\Phi(B)=0$；初始为一栈 $n$，故总分恒为 $n(n-1)/2$。不存在更优策略：所有合法完整策略都并列最优。
 > <!-- bilingual-en:start -->
-> The potential energy of $k$ is $\phi(k)=k(k-1)/2$.  Break the $a+b$ into a $a,b$ at a time:
-> That's exactly the point of the step.  Therefore, the total score of the arbitrary action sequence is the telescope with the descending potential energy and:
+> Define the potential of a stack of height $k$ by $\phi(k)=k(k-1)/2$. When one stack of height $a+b$ is split into stacks of heights $a$ and $b$, the calculation above shows that the potential decreases by exactly $ab$, the score earned on that move. Therefore the total score along any sequence of moves is the telescoping decrease in total potential:
 > $$\mathrm{score}=\Phi(A)-\Phi(B).$$
-> At the end of the game, the game is all single, $\Phi(B)=0$; initially a stack of $n$, so the total score is $n(n-1)/2$.  There is no better policy: all legitimate full policies are optimized side by side.
+> At the end of the game every stack is a singleton, so $\Phi(B)=0$. The initial state is one stack of height $n$, so every complete play has total score $n(n-1)/2$. No strategy can do better: all legal strategies that finish the game tie for the optimum.
 > <!-- bilingual-en:end -->
 
 > [!example]- Problem 3：函数复合
@@ -1948,10 +1922,10 @@ If the conclusion of induction fails, the WOP can obtain the smallest counterexa
 > **(d) 真。** 若 $g(a)=g(a')$，因 $f$ total，二者均可代入并得 $h(a)=f(g(a))=f(g(a'))=h(a')$；$h$ injective 给出 $a=a'$，所以 $g$ injective。
 > <!-- bilingual-en:start -->
 > Set $h=f\circ g$.
-> **(a) True.**If $c\in C$, $h$ surjective gives $a$ to make $f(g(a))=c$; $b=g(a)$ to make $f$ hit $c$.
-> **(b) False.**$A=\{1\},B=\{1,2\},C=\{c\}$, $g(1)=1$, $f(1)=f(2)=c$.  $h$ shot full, but $g$ missed 2.
-> **(c) False.**In the same counterexample, the $h$ is monochromatic and the $f(1)=f(2)$ is non-monochromatic.
-> **(d) True.**If $g(a)=g(a')$, because $f$ total, both can be substituted and merged into $h(a)=f(g(a))=f(g(a'))=h(a')$; $h$ injective gives $a=a'$, so $g$ injective.
+> **(a) True.** For any $c\in C$, surjectivity of $h$ gives an $a$ with $f(g(a))=c$. Setting $b=g(a)$ shows that $f$ reaches $c$.
+> **(b) False.** Let $A=\{1\}$, $B=\{1,2\}$, and $C=\{c\}$, with $g(1)=1$ and $f(1)=f(2)=c$. Then $h$ is surjective, but $g$ does not reach $2$.
+> **(c) False.** In the same counterexample, $h$ is injective because its domain has one element, whereas $f$ is not injective because $f(1)=f(2)$.
+> **(d) True.** If $g(a)=g(a')$, totality of $f$ allows both values to be evaluated, giving $h(a)=f(g(a))=f(g(a'))=h(a')$. Injectivity of $h$ then gives $a=a'$, so $g$ is injective.
 > <!-- bilingual-en:end -->
 
 ---
@@ -1961,7 +1935,7 @@ If the conclusion of induction fails, the WOP can obtain the smallest counterexa
 > [!note] 原题与答案性质
 > [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm1.pdf|Midterm 1 PDF]]。以下 5 道均为非官方独立题解。
 > <!-- bilingual-en:start -->
-> [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm1.pdf|Midterm 1 PDF]].  The following five questions are unofficial and independent.
+> [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm1.pdf|Midterm 1 PDF]]. The five solutions below are independent and unofficial.
 > <!-- bilingual-en:end -->
 
 > [!example]- Problem 1：$\sqrt[7]{35}$ 无理
@@ -2002,15 +1976,15 @@ If the conclusion of induction fails, the WOP can obtain the smallest counterexa
 > $$\exists p\,[\mathrm{Prime}(p)\land p\mid n\land\forall q((\mathrm{Prime}(q)\land q\mid n)\Rightarrow q=p)].$$
 > 唯一素因子分解保证只有一个素因子的正整数恰为该素数的幂；$1$ 因没有素因子、$0$ 因被所有素数整除，均被排除。
 > <!-- bilingual-en:start -->
-> The domain is $\mathbb N$.  Define first
+> The domain is $\mathbb N$. First define
 > $$\mathrm{One}(x):\Longleftrightarrow\forall y(xy=y).$$
-> **(a)**$x=1$ is $\mathrm{One}(x)$.
-> **(b)**$m\mid n$:$\exists k(mk=n)$.
+> **(a)** The formula for $x=1$ is $\mathrm{One}(x)$.
+> **(b)** The formula for $m\mid n$ is $\exists k(mk=n)$.
 > **(c)**
 > $$\mathrm{Prime}(n):\Longleftrightarrow\neg\mathrm{One}(n)\land\forall m(m\mid n\Rightarrow(\mathrm{One}(m)\lor m=n)).$$
-> **(d)**"$n$ is a positive integer power of a prime number" can be written without exponentiation
+> **(d)** The statement “$n$ is a positive integer power of some prime” can be written without exponentiation as
 > $$\exists p\,[\mathrm{Prime}(p)\land p\mid n\land\forall q((\mathrm{Prime}(q)\land q\mid n)\Rightarrow q=p)].$$
-> Unique factorisation says that a positive integer with exactly one prime factor is a power of that prime. The definition excludes $1$, which has no prime factors, and $0$, which is divisible by every prime.
+> Unique factorisation says that a positive integer with exactly one distinct prime factor is a power of that prime. The definition excludes $1$, which has no prime factors, and $0$, which is divisible by every prime.
 > <!-- bilingual-en:end -->
 
 > [!example]- Problem 4：$\mathbb Z\to\mathbb Z$ 的映射类型
@@ -2024,9 +1998,9 @@ If the conclusion of induction fails, the WOP can obtain the smallest counterexa
 > $$18=7+7+4,\qquad19=7+4+4+4,\qquad20=5\cdot4,\qquad21=3\cdot7.$$
 > 对 $n\ge4$，$(n+18)-4=(n-4)+18$，由强归纳假设可组队；再增加一个 4 人队即可。因此所有 $n\ge0$ 的 $S(n)$ 成立。
 > <!-- bilingual-en:start -->
-> $S(n)$: "$n+18$ people can be divided into 4/7 teams".  Continuous base case:
+> Use strong induction on $S(n)$: “$n+18$ people can be divided into teams of size $4$ or $7$.” The consecutive base cases are
 > $$18=7+7+4,\qquad19=7+4+4+4,\qquad20=5\cdot4,\qquad21=3\cdot7.$$
-> For $n\ge4$, $(n+18)-4=(n-4)+18$, the team can be formed by the strong induction hypothesis, and an additional team of four can be formed.  Therefore, all $n\ge0$'s $S(n)$ are valid.
+> For $n\ge4$, $(n+18)-4=(n-4)+18$ can be partitioned into teams by the strong induction hypothesis; adding one more four-person team handles $n+18$. Therefore $S(n)$ holds for every $n\ge0$.
 > <!-- bilingual-en:end -->
 
 ---
@@ -2040,7 +2014,7 @@ If the conclusion of induction fails, the WOP can obtain the smallest counterexa
 
 怎样证明一个可能运行任意久的过程永远不会到达坏状态？怎样把“值一直下降”变成终止性证明？
 <!-- bilingual-en:start -->
-How do you prove that a process that may run for any length of time never reaches a bad state?  How do you turn "value keeps dropping" into a termination certificate?
+How do you prove that a process that may run for any length of time never reaches a bad state? How do you turn “a value keeps decreasing” into a proof of termination?
 <!-- bilingual-en:end -->
 
 > [!note] 本地材料
@@ -2050,12 +2024,12 @@ How do you prove that a process that may run for any length of time never reache
 
 ### 9.1 状态机模型
 <!-- bilingual-en:start -->
-*9.1 state machine model*
+*9.1 The state-machine model*
 <!-- bilingual-en:end -->
 
 [[数学证明方法#不变量与算法正确性|状态机（state machine）]]由状态集合 $Q$、开始状态 $q_0$、转移关系 $\delta\subseteq Q\times Q$ 构成。状态 $r$ **reachable**，若存在有限路径
 <!-- bilingual-en:start -->
-[[数学证明方法#不变量与算法正确性|state machine]] is composed of state collection $Q$, start state $q_0$ and transition relation $\delta\subseteq Q\times Q$.  Status $r$**reachable**if finite path exists
+A [[数学证明方法#不变量与算法正确性|state machine]] consists of a state set $Q$, a start state $q_0$, and a transition relation $\delta\subseteq Q\times Q$. A state $r$ is **reachable** if there is a finite path
 <!-- bilingual-en:end -->
 
 $$
@@ -2064,17 +2038,17 @@ $$
 
 建模时要分清：哪些信息足以决定下一步、什么是合法转移、何时无转移。若状态遗漏必要历史，所谓“不变量”可能根本无法表达。
 <!-- bilingual-en:start -->
-Modeling is about identifying what information is sufficient to determine the next step, what is a legal transfer, and when there is no transfer.  If that state omit the necessary history, the so-called" invariant" may not be express at all.
+Modelling requires deciding which information is sufficient to determine the next step, which transitions are legal, and when no transition is available. If the state omits necessary history, the intended invariant may not even be expressible.
 <!-- bilingual-en:end -->
 
 ### 9.2 preserved invariant 与 invariant
 <!-- bilingual-en:start -->
-*9.2 preserved invariant and invariant*
+*9.2 Preserved invariants and invariants*
 <!-- bilingual-en:end -->
 
 谓词 $P$ 是 **preserved invariant**，若每条转移 $q\to q'$ 都满足
 <!-- bilingual-en:start -->
-The predicate $P$ is**preserved invariant**if each transition $q\to q'$ satisfies
+A predicate $P$ is a **preserved invariant** if every transition $q\to q'$ satisfies
 <!-- bilingual-en:end -->
 
 $$
@@ -2083,45 +2057,45 @@ $$
 
 若再有 $P(q_0)$，Floyd invariant principle 给出所有 reachable $r$ 均满足 $P(r)$。证明是对路径长度归纳：长度 0 为开始状态；长度 $n+1$ 的路径由长度 $n$ 的可达状态再走一步，应用保持性。
 <!-- bilingual-en:start -->
-If there is another $P(q_0)$, Floyd invariant principle gives that all reachable $r$ satisfy $P(r)$.  The proof is to conclude the length of the path: the length of 0 is the beginning state; the length of $n+1$ path from the length of $n$ can reach the state of another step, the application of retention.
+If $P(q_0)$ also holds, Floyd's invariant principle implies that every reachable state $r$ satisfies $P(r)$. The proof is by induction on path length: a path of length $0$ ends at the start state; a path of length $n+1$ consists of a length-$n$ path followed by one transition, to which preservation applies.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit01-state-machine-invariant.png|900]]
 
 读图：初始状态位于不变量区域内，而每条合法转移都留在该区域；因此区域外的坏状态不可达。
 <!-- bilingual-en:start -->
-Read: The initial state is within the invariant region, and each legal transition remains within the region; therefore, a bad state outside the region is not reachable.
+How to read the diagram: the initial state lies inside the invariant region, and every legal transition remains inside it. Therefore bad states outside the region are unreachable.
 <!-- bilingual-en:end -->
 
 > [!warning] 两个词不能混用
 > preserved 只表示“一旦成立就保持”，未保证开始时成立；invariant 是“所有可达状态都成立”。
 > <!-- bilingual-en:start -->
-> preserved simply states "hold as soon as it is established" and there is no guarantee that it will be established at the beginning; invariant is "all reachable states are established".
+> “Preserved” means only that once the predicate holds, every transition keeps it true; it does not say that the predicate holds initially. An invariant holds in every reachable state.
 > <!-- bilingual-en:end -->
 
 ### 9.3 找不变量：从转移变化量入手
 <!-- bilingual-en:start -->
-*9.3 Looking for the invariant: Starting with the quantity of change*
+*9.3 Finding invariants from transition deltas*
 <!-- bilingual-en:end -->
 
 若状态为向量 $(x_1,\dots,x_k)$，先列每类转移的 $\Delta x_i$，再寻找线性组合 $a_1x_1+\cdots+a_kx_k$ 使每类变化为 0，或模 $m$ 为 0。整数网格机器人适合模不变量，资源守恒适合线性等式，排列谜题常用 parity。
 <!-- bilingual-en:start -->
-If the state is vector $(x_1,\dots,x_k)$, first list the $\Delta x_i$ of each class, and then look for the linear combination $a_1x_1+\cdots+a_kx_k$ to make each class change to 0, or the module $m$ is 0.  Integer grid robots are suitable for modular invariants, resource conservation is suitable for linear equations, and puzzles are often arranged by parity.
+If a state is a vector $(x_1,\dots,x_k)$, first list the changes $\Delta x_i$ for every type of transition. Then seek a linear combination $a_1x_1+\cdots+a_kx_k$ whose change is $0$ under every transition, either exactly or modulo $m$. Modular invariants suit robots on integer grids; linear equalities suit conservation of resources; and permutation puzzles often use parity.
 <!-- bilingual-en:end -->
 
 ### 9.4 partial correctness 与 termination 分开
 <!-- bilingual-en:start -->
-*9.4 partial correctness separate from termination*
+*9.4 Separating partial correctness from termination*
 <!-- bilingual-en:end -->
 
 **部分正确性（partial correctness）**只说“若算法停，则答案正确”；**全正确性**还要证一定停。
 <!-- bilingual-en:start -->
-**partial correctness**just say "if the algorithm stops, then the answer is correct";**complete correctness**and verify that it stops.
+**Partial correctness** says only, “if the algorithm terminates, its answer is correct.” **Total correctness** additionally proves that the algorithm must terminate.
 <!-- bilingual-en:end -->
 
 [[数学证明方法#不变量与算法正确性|秩函数/derived variable]] $V:Q\to W$ 若每步严格下降，而 $W$ well-ordered，则不存在无限转移链。仅 weakly decreasing 不足，例如保持常数的过程可以永远运行。
 <!-- bilingual-en:start -->
-If [[数学证明方法#不变量与算法正确性|rank function/derived variable]] $V:Q\to W$ drops strictly at each step, and $W$ well-ordered, there is no infinite transfer chain.  Only weakly decreasing is insufficient, for example, a constant-keeping procedure can run forever.
+If a [[数学证明方法#不变量与算法正确性|rank function or derived variable]] $V:Q\to W$ decreases strictly at every step and $W$ is well ordered, then no infinite transition chain exists. Weak decrease alone is insufficient: a process can remain constant forever.
 <!-- bilingual-en:end -->
 
 ### 9.5 俄式整数乘法
@@ -2131,7 +2105,7 @@ If [[数学证明方法#不变量与算法正确性|rank function/derived variab
 
 状态 $(r,s,a)$ 从 $(x,y,0)$ 开始；$s$ 偶时转到 $(2r,s/2,a)$，$s$ 奇时转到 $(2r,(s-1)/2,a+r)$。不变量为
 <!-- bilingual-en:start -->
-Status $(r,s,a)$ starts with $(x,y,0)$; $s$ goes to $(2r,s/2,a)$ even, $s$ goes to $(2r,(s-1)/2,a+r)$ odd.  The invariant is
+The state $(r,s,a)$ starts at $(x,y,0)$. When $s$ is even, the transition is to $(2r,s/2,a)$; when $s$ is odd, it is to $(2r,(s-1)/2,a+r)$. The invariant is
 <!-- bilingual-en:end -->
 
 $$
@@ -2140,7 +2114,7 @@ $$
 
 偶转移后 $(2r)(s/2)+a=rs+a$；奇转移后
 <!-- bilingual-en:start -->
-$(2r)(s/2)+a=rs+a$ after even transfer; after odd transfer
+After an even transition, $(2r)(s/2)+a=rs+a$; after an odd transition,
 <!-- bilingual-en:end -->
 
 $$
@@ -2149,7 +2123,7 @@ $$
 
 终态只能有 $s=0$，于是 $a=xy$。同时 $s$ 每步变为 $\lfloor s/2\rfloor$，故转移次数 $O(\log(y+1))$。
 <!-- bilingual-en:start -->
-There's only $s=0$, so $a=xy$.  At the same time, $s$ becomes $\lfloor s/2\rfloor$ in each step, so the number of transfer is $O(\log(y+1))$.
+At a terminal state, necessarily $s=0$, so the invariant gives $a=xy$. Because each step replaces $s$ by $\lfloor s/2\rfloor$, the number of transitions is $O(\log(y+1))$.
 <!-- bilingual-en:end -->
 
 > [!question]- 官方在线 feedback exercises（14 prompts）
@@ -2165,14 +2139,12 @@ There's only $s=0$, so $a=xy$.  At the same time, $s$ becomes $\lfloor s/2\rfloo
 >
 > 9–10. 乘法算法唯一同时被两类命令保持的是 $xy+p=ab$；每步严格变小的是 $x$，而 $xy$ 仅 weakly decreasing。11–14. 巧克力拆分中 $s=p-1$ 与 $s\ne p$ preserved；$mn-p$ 每步减小；终态 $p=mn$；因此拆分次数 $s=mn-1$。
 > <!-- bilingual-en:start -->
-> **Local entry:**
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S09_1.9.2_state-machine-invariants|1.9.2 State Machine Invariants]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S09_1.9.4_derived-variables-and-termination|1.9.4 Derived Variables and Termination]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S09_1.9.5_integer-multiplication|1.9.5 Integer Multiplication]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S09_1.9.6_chocolate-bars|1.9.6 Chocolate Bars]]
-> 1-4.  The Die Hard state is that that amount of water in the two jugs is $(b,l)$; in the example, the amount of water in each jug is divide by 3 all the time; the legal example of Diagonal Robot is $(-11,3),(3,7)$; the Floyd principle is the induction of the length of the path, and the preserved is established for all the reachable states at first.
-> 5-8. derived variable is a function that assigns a real value to the state;the robot case is $(x+y)\bmod2$;constant is equivalent to weakly increasing/decreasing;the value is well-ordered set and strictly decreasing is guaranteed to terminate in each step.
-> 9-10. The only multiplication algorithm that is maintained by both types of commands is $xy+p=ab$; each step is strictly smaller than $x$, while $xy$ is only weakly decreasing.  11-14. $s=p-1$ and $s\ne p$ preserved in chocolate splitting; $mn-p$ is reduced in each step; the final state is $p=mn$; therefore, the splitting times are $s=mn-1$.
+>
+> &nbsp;
+> **1–4.** A Die Hard state records the amounts of water in the two jugs as $(b,l)$; in the example, both amounts remain divisible by $3$. Legal Diagonal Robot examples include $(-11,3)$ and $(3,7)$. Floyd's principle is proved by induction on path length: if the predicate holds initially and is preserved, then it holds in every reachable state.<br>
+> **5–8.** A derived variable is a real-valued function of the state. In the robot example it is $(x+y)\bmod2$. Being constant is equivalent to being both weakly increasing and weakly decreasing. A variable taking values in a well-ordered set and decreasing strictly at every step guarantees termination.<br>
+> **9–10.** The only expression preserved by both commands in the multiplication algorithm is $xy+p=ab$. The variable $x$ decreases strictly at every step, whereas $xy$ is only weakly decreasing.<br>
+> **11–14.** In the chocolate-splitting process, $s=p-1$ and $s\ne p$ are preserved; $mn-p$ decreases at every step; and the terminal state has $p=mn$. Therefore the number of splits is $s=mn-1$.<br>
 > <!-- bilingual-en:end -->
 
 > [!example]- CP9 非官方独立题解（4 道）
@@ -2197,19 +2169,19 @@ There's only $s=0$, so $a=xy$.  At the same time, $s$ becomes $\lfloor s/2\rfloo
 >
 > **4. Beaver flu（补充题）。** 把已感染格子的 perimeter 定义为感染区域与未感染/教室外部之间的单位边数。新感染格若有 $k\ge2$ 个已感染邻居，perimeter 变化 $4-2k\le0$。若初始感染 $m<n$ 人，perimeter 至多 $4m<4n$；若最终全班感染，$n\times n$ 方形 perimeter 恰为 $4n$。非增量不可能从 $<4n$ 到 $4n$，故至少一人永不感染。
 > <!-- bilingual-en:start -->
-> **1. shift-and-add.**(a) The $rs+a=xy$ preserved has been validated class by class above.  (b) No transfer means $s=0$, substituting the invariant as $a=xy$.  (c) The positive integer $s$ is changed to $\lfloor s/2\rfloor$ in each step, and at most $\lfloor\log_2y\rfloor+1$ is returned to zero.
-> **2.  Fifteen Puzzle.**(a) Initial list is $(1,2,\dots,15)$, space $(4,4)$; target list is $(15,14,\dots,1)$, space $(4,4)$.  (b) The initial state inversion number $0$, plus the space line number is even; the target reversal inversion number is $\binom{15}{2}=105$, and $105+4=109$ is odd.  (c) Horizontal movement does not change the list after the blanks are removed, nor does it change the line numbers; vertical movement causes a card to be flipped across three cards in the list, with inversion parity flipped, while the blanks line number changes 1, also flipped.  The sum of the two modes 2 is constant, so the target is unreachable.
-> **3.  Zakim bridge.**In-bridge transfer (condition $A-B<T_0$) is $(A,B,C)\to(A+3,B,C+1)$; Out-bridge ($C>0$) is $(A,B,C)\to(A,B+2,C-1)$.
-> derived variables classification: $A$ WI, $B$ WI, $A+B$ SI, $A-B$ N, $3C-A$ WD, $2A-3B$ N, $B+3C$ N, $2A-3B-6C$ constant, $2A-2B-3C$ N.  Key Variations:
+> **1. Shift-and-add.** (a) The calculation above verifies, transition by transition, that $rs+a=xy$ is preserved. (b) If no transition is available, then $s=0$, and substituting this into the invariant gives $a=xy$. (c) Each step replaces the positive integer $s$ by $\lfloor s/2\rfloor$, so it reaches zero within at most $\lfloor\log_2y\rfloor+1$ steps.
+> **2. Fifteen Puzzle.** (a) The initial tile list is $(1,2,\dots,15)$ with the blank at $(4,4)$; the target list is $(15,14,\dots,1)$ with the blank again at $(4,4)$. (b) Initially the inversion count is $0$, and adding the blank's row number gives an even value. The reversed target list has $\binom{15}{2}=105$ inversions, and $105+4=109$ is odd. (c) A horizontal move changes neither the tile list with the blank removed nor the blank's row. A vertical move passes one tile across three others in that list, flipping inversion parity, while the blank moves by one row, flipping the row parity as well. Their sum modulo $2$ is therefore invariant, so the target is unreachable.
+> **3. Zakim Bridge.** An entering transition, allowed when $A-B<T_0$, is $(A,B,C)\to(A+3,B,C+1)$; an exiting transition, allowed when $C>0$, is $(A,B,C)\to(A,B+2,C-1)$.
+> The derived-variable classifications are: $A$ WI, $B$ WI, $A+B$ SI, $A-B$ N, $3C-A$ WD, $2A-3B$ N, $B+3C$ N, $2A-3B-6C$ constant, and $2A-2B-3C$ N. The key changes are:
 > | Quantity | In Bridge $\Delta$ | Out Bridge $\Delta$ |
-> |—|—:|—:|
+> |---|---:|---:|
 > | $A-B-3C$ | $0$ | $+1$ |
 > | $2A-3B-6C$ | $0$ | $0$ |
-> Let $J=A-B-3C$, then $J\ge J_0=A_0-B_0-3C_0$ preserved.  If $C=1000$, yes
+> Let $J=A-B-3C$. Then $J\ge J_0=A_0-B_0-3C_0$ is preserved. If $C=1000$, then
 > $$A-B\ge A_0-B_0+3(1000-C_0)=T_0,$$
-> So the bridge entry condition fails; the bridge exit will only decrease $C$.  So $P:(C\le1000\land J\ge J_0)$ is the invariant that starts and excludes collapsed state.
-> The deadlock does: First let the original $C_0$ cars out, at this point $C=0$, $A-B=A_0-B_0-2C_0<T_0$.  Repeatedly "put a car in, let it out immediately", each round back to $C=0$ and $A-B$ net $1$.  When it increases to $T_0$, there is no car to go out, and no car to go in because of the failure of strict inequality.
-> **4.  Beaver flu.**Defines the number of unit edges between the infected area and the uninfected/outside of the classroom as the perimeter of the infected grid.  If there are $k\ge2$ infected neighbors in the newly infected cell, the change of perimeter is $4-2k\le0$.  perimeter is $4m<4n$ $n\times n$ at most if $m<n$ is initially infected, and $4n$ is perimeter squared if the entire class is eventually infected.  Non-incremental cannot go from $<4n$ to $4n$, so at least one person is never infected.
+> so the condition for entering the bridge fails; an exit can only decrease $C$. Thus $P:(C\le1000\land J\ge J_0)$ holds initially, is preserved, and rules out the collapsed state.
+> A deadlock is nevertheless reachable. First let all $C_0$ cars initially on the bridge exit. Then $C=0$ and $A-B=A_0-B_0-2C_0<T_0$. Repeatedly let one car enter and immediately exit; each round returns to $C=0$ while increasing $A-B$ by $1$. Once $A-B=T_0$, no car can exit because $C=0$, and no car can enter because the strict inequality is false.
+> **4. Beaver flu.** Define the perimeter of the infected region as the number of unit edges separating an infected square from either an uninfected square or the outside of the classroom. If a newly infected square has $k\ge2$ infected neighbours, the perimeter changes by $4-2k\le0$. With $m<n$ initially infected students, the perimeter is at most $4m<4n$. If the entire $n\times n$ classroom became infected, its perimeter would be exactly $4n$. A nonincreasing quantity cannot rise from below $4n$ to $4n$, so at least one student is never infected.
 > <!-- bilingual-en:end -->
 
 > [!question]- 三道自检
@@ -2218,22 +2190,25 @@ There's only $s=0$, so $a=xy$.  At the same time, $s$ becomes $\lfloor s/2\rfloo
 > 3. invariant 排除坏状态，是否说明所有好状态都 reachable？
 >
 > <!-- bilingual-en:start -->
-> 1. What else does preserved invariant lack to introduce security?
-> 2. Does $V$ have to terminate per-step reduction and always be a non-negative real number?
-> 3. Does invariant rule out bad states, which means all good states are reachable?
+>
+> &nbsp;
+> **1.** What additional condition turns a preserved predicate into a safety invariant?<br>
+> **2.** If $V$ decreases at every step and remains a nonnegative real number, must the process terminate?<br>
+> **3.** If an invariant excludes every bad state, does that imply that every good state is reachable?<br>
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 1. 它在 start state 成立。2. 不一定，如 $1,1/2,1/4,\dots$；需要 well-founded/良序下降。3. 不说明；不变量通常只是可达集的 over-approximation。
 > <!-- bilingual-en:start -->
-> 1. It was established in start state.  2. Not necessarily, e.g. $1,1/2,1/4,\dots$; well-founded/well-ordered decline required.  3. No description; invariants are usually only over-approximation of reachable sets.
+>
+> &nbsp;
+> **1.** It must hold in the start state.<br>
+> **2.** Not necessarily; consider $1,1/2,1/4,\dots$. The decrease must be well founded, for example in a well-ordered set.<br>
+> **3.** No. An invariant is usually only an over-approximation of the reachable set.<br>
 > <!-- bilingual-en:end -->
 
 **知识链：**归纳 → 路径长度 → preserved invariant → safety；良序下降 → termination。
 <!-- bilingual-en:start -->
-**Knowledge chain:**Summarization→Path length→preserved invariant→safety; Well-ordered descent→termination.
+**Knowledge chain:** induction → path length → preserved invariant → safety; well-ordered descent → termination.
 <!-- bilingual-en:end -->
 
 ---
@@ -2247,7 +2222,7 @@ There's only $s=0$, so $a=xy$.  At the same time, $s$ becomes $\lfloor s/2\rfloo
 
 对象若不是按整数大小而是按语法树生成，怎样定义“全部对象”，又怎样证明每种对象都有性质 $P$？
 <!-- bilingual-en:start -->
-How to define "all objects" and how to prove that each object has a property $P$?
+When objects are generated by a syntax tree rather than indexed by integer size, how can “all objects” be defined, and how can we prove that every generated object has property $P$?
 <!-- bilingual-en:end -->
 
 > [!note] 本地材料
@@ -2257,12 +2232,12 @@ How to define "all objects" and how to prove that each object has a property $P$
 
 ### 10.1 递归数据类型
 <!-- bilingual-en:start -->
-*10.1 Recursive Data Types*
+*10.1 Recursive data types*
 <!-- bilingual-en:end -->
 
 [[01_Proofs#Session 10 — Recursive Definitions|递归定义（recursive definition）]]包含 base cases、constructor cases 与 closure clause。例如匹配括号串 $M$：
 <!-- bilingual-en:start -->
-[[01_Proofs#Session 10 — Recursive Definitions|recursive definition]] includes base cases, constructor cases, and closure clause.  For example, match the parenthetical string $M$:
+A [[01_Proofs#Session 10 — Recursive Definitions|recursive definition]] includes base cases, constructor cases, and a closure clause. For example, the set $M$ of matched-bracket strings is defined by:
 <!-- bilingual-en:end -->
 
 - $\lambda\in M$；
@@ -2271,44 +2246,44 @@ How to define "all objects" and how to prove that each object has a property $P$
 <!-- bilingual-en:start -->
 - $\lambda\in M$;
 - If $s,t\in M$, $[s]t\in M$;
-- Strings generated using the above rule only a limited number of times are in $M$.
+- Only strings generated by finitely many applications of the preceding rules belong to $M$.
 <!-- bilingual-en:end -->
 
 最后一条排除无限构造链产生的非有限串，也防止凭直觉额外加入对象。
 <!-- bilingual-en:start -->
-The last one eliminates the non-finite string generated by the infinite construction chain and also prevents the addition of objects by intuition.
+The last clause excludes infinite strings arising from an endless construction chain and prevents us from adding extra objects merely because they seem intuitively related.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit01-recursive-structure.png|900]]
 
 读图：从叶端的 base objects 向上经过 constructors 形成有限构造树，结构归纳正是沿同一依赖方向传播性质。
 <!-- bilingual-en:start -->
-Reading map:From the base objects of the leaf end through the constructors to form the finite structure tree, the structure induction is propagating along the same direction of dependence.
+How to read the diagram: base objects form the leaves, and constructors combine them upward into a finite construction tree. Structural induction propagates a property along this same direction of dependence.
 <!-- bilingual-en:end -->
 
 ### 10.2 结构归纳原理
 <!-- bilingual-en:start -->
-*10.2 Structural Inductive Principles*
+*10.2 The structural-induction principle*
 <!-- bilingual-en:end -->
 
 [[数学证明方法#归纳法|结构归纳]]要求：对每个 base object 证明 $P$；对每个 constructor，假设直接子对象均满足 $P$，证明构造结果满足 $P$。证明依据是有限构造树，而不是表面的数值大小。若有 3 个 bases、4 个 constructors，就有 7 个逻辑分支。
 <!-- bilingual-en:start -->
-[[数学证明方法#归纳法|structure induction]] requires proving $P$ for each base object, and for each constructor, assuming that the direct child objects satisfy $P$ and the result of proof construction satisfies $P$.  The proof is based on the finite construction tree, not the numerical size of the surface.  If there are 3 bases, 4 constructors, there are 7 logical branches.
+[[数学证明方法#归纳法|Structural induction]] requires proving $P$ for every base object and, for each constructor, assuming $P$ for its immediate subobjects and proving $P$ for the constructed result. The proof follows the finite construction tree rather than an object's superficial numerical size. Three base cases and four constructors therefore produce seven proof branches.
 <!-- bilingual-en:end -->
 
 ### 10.3 递归函数与良定义
 <!-- bilingual-en:start -->
-*10.3 Recursive Functions and Good Definitions*
+*10.3 Recursive functions and well-definedness*
 <!-- bilingual-en:end -->
 
 对二叉树，`size`、`flatten` 等函数也按 base/constructor 定义：叶子直接给值，内部节点从左右子树的结果组合。若语法可能给同一对象多种解析，还需证明不同解析结果相同，或改用 unambiguous grammar。
 <!-- bilingual-en:start -->
-For binary trees, `size`, `flatten` and other functions are also defined in terms of base/constructor: the leaves give values directly, and the internal nodes are combined from the results of the left and right sub-trees.  If the syntax may give more than one parse to the same object, you may want to prove that different parses produce the same result, or use unambiguous grammar instead.
+Functions such as `size` and `flatten` on binary trees are likewise defined by base and constructor cases: leaves receive values directly, while an internal node combines the results from its left and right subtrees. If the grammar permits multiple parses of the same object, one must prove that every parse yields the same result or replace it with an unambiguous grammar.
 <!-- bilingual-en:end -->
 
 普通归纳适合唯一数值前驱，强归纳适合任意更小规模，结构归纳适合直接组成部件。结构归纳可转成对构造树高度的归纳，但直接写更贴近信息流。
 <!-- bilingual-en:start -->
-The general induction is suitable for the unique value precursor, the strong induction is suitable for any smaller scale, and the structural induction is suitable for the direct component.  Structural induction can be converted into the induction of the height of the tectonic tree, but direct writing is closer to the information flow.
+Ordinary induction suits a unique numerical predecessor, strong induction suits dependence on arbitrary smaller cases, and structural induction suits dependence on immediate components. Structural induction can be recast as induction on construction-tree height, but the direct form follows the information flow more naturally.
 <!-- bilingual-en:end -->
 
 > [!question]- 官方在线 feedback exercises（9 prompts）
@@ -2320,12 +2295,12 @@ The general induction is suitable for the unique value precursor, the strong ind
 >
 > 1. matched-parentheses 中：没有串以右括号开头、集合无限、每串长度偶数；“每串以左括号开头”被空串反例否定。2–3. 用 $\cos x=\sin(x+\pi/2)$ 需要 identity、constant、sine 三个 base，并使用 addition 与 composition。4–8. 结构归纳模板五个 placeholder 依次为 $x,b,R,c(x),x$。9. 3 个 base、4 个 constructor 共需 7 个证明分支。
 > <!-- bilingual-en:start -->
-> **Local entry:**
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S10_1.10.2_matching-parentheses|1.10.2 Matching Parentheses]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S10_1.10.3_functions-of-f18|1.10.3 Functions of F18]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S10_1.10.5_structural-induction-definition|1.10.5 Structural Induction: Definition]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S10_1.10.6_counting-cases|1.10.6 Counting Cases]]
-> 1. For matched-parenthesis strings, no string begins with a closing parenthesis, the set is infinite, and every string has even length. The claim that every string begins with an opening parenthesis is refuted by the empty string. 2–3. Expressing $\cos x=\sin(x+\pi/2)$ requires the identity, constant, and sine base cases, together with addition and composition. 4–8. The five placeholders in the structural-induction template are $x,b,R,c(x),x$, in that order. 9. Three base cases and four constructors require seven proof branches in total.
+>
+> &nbsp;
+> **1.** For matched-parenthesis strings, no string begins with a closing parenthesis, the set is infinite, and every string has even length. The claim that every string begins with an opening parenthesis is refuted by the empty string.<br>
+> **2–3.** Expressing $\cos x=\sin(x+\pi/2)$ requires the identity, constant, and sine base cases, together with addition and composition.<br>
+> **4–8.** The five placeholders in the structural-induction template are $x,b,R,c(x),x$, in that order.<br>
+> **9.** Three base cases and four constructors require seven proof branches in total.<br>
 > <!-- bilingual-en:end -->
 
 > [!example]- CP10 非官方独立题解（4 道）
@@ -2346,16 +2321,16 @@ The general induction is suitable for the unique value precursor, the strong ind
 > `flatten(leaf,l)=(l)`；`flatten(bintree,G1,G2)=flatten(G1)++flatten(G2)`。结构归纳：叶子时 $2\cdot1=1+1$；内部节点由 IH：
 > $$2(\ell_1+\ell_2)=(|G_1|+1)+(|G_2|+1)=|G_1|+|G_2|+2=|G|+1.$$
 > <!-- bilingual-en:start -->
-> **1.  Elementary 18.01 Functions.**(a) $e(x)=2^x$ is F18 and inverse $\ell=e^{-1}=\log_2x$ is F18; therefore, $2^{-\ell(x)}=1/x$ is F18 on $x>0$.  In the $x<0$ branch, write $-2^{-\log_2(-x)}$.  The course treats them as elementary branches;$\mathrm{id}^{-1}=\mathrm{id}$, not reciprocal.
-> (b) Structural induction of the structure.  bases:$\mathrm{id}'=1$, constant derivative $0$; $\sin'x=\cos x=\sin(x+\pi/2)$.  If $f',g'$ is already F18:
+> **1. Elementary 18.01 Functions.** (a) The function $e(x)=2^x$ is F18, and so is its inverse $\ell=e^{-1}=\log_2x$. Hence $2^{-\ell(x)}=1/x$ is F18 on $x>0$. On the branch $x<0$, write the function as $-2^{-\log_2(-x)}$. The course treats these as elementary branches with their natural domains. Note that $\mathrm{id}^{-1}=\mathrm{id}$; it is not the reciprocal function.
+> (b) Use structural induction on the construction of the function. For the base cases, $\mathrm{id}'=1$, the derivative of a constant is $0$, and $\sin'x=\cos x=\sin(x+\pi/2)$. If $f'$ and $g'$ are already F18, then
 > $$(f+g)'=f'+g',\quad(fg)'=f'g+fg',\quad(2^g)'=(\ln2)2^gg',\quad(f\circ g)'=(f'\circ g)g'.$$
-> If $h=f^{-1}$ and locally reversible, $f'(h(x))\ne0$, then $h'(x)=1/f'(h(x))$, from (a) and composition is still F18.  Reversible interval and non-zero derivative are necessary conditions.
-> **2.  Erasable = RecMatch.**Summarize the structure of RecMatch: $\lambda$ can erase; if $s,t$ can erase, $[s]t$ erases $s$, erases `[]`, erases $t$, so RecMatch $\subseteq$ Erasable.
-> Inverse induction of string length.  Length 0 is only $\lambda$.  $x=[]$ if one erasure changes $x$ to $y\in$ RecMatch:$y=\lambda$; otherwise $y=[s]t$.  A `[]` that is patched may only be in the first, $s$, or $t$.  The first $x=[][s]t=[\lambda]([s]t)$, the latter two produce shorter erasable substrings, which are induced into RecMatch and then constructor.  The three categories are exhausted by grammatical position.
-> **3. Recursive definitions.**(a)$S$:base $1$;constructors $x\mapsto2x,3x,5x$.  (b) $T$:base $1$; constructors $x\mapsto18x,15x,5x$, corresponding to an increase of $k,m,n$, respectively.  (c) $L'$:base $(0,0)$; constructors $(a,b)\mapsto(a\pm1,b\pm1)$ (same number) and $(a,b)\mapsto(a\pm3,b)$.  (d) $a-b\equiv0\pmod3$ per constructor, so $L'\subseteq L$.  (e) If $a-b=3k$, first synchronously move to $(b,b)$ and then move the first coordinate to $3k$, so $L\subseteq L'$.  (f) To be unambiguous, the unique regular form $(k,b)\mapsto(b+3k,b)$ may be used, and the integers $k,b$ are each encoded as sign plus natural magnitude.
-> **4. binary-2PTG.**in the picture
+> If $h=f^{-1}$ is locally invertible and $f'(h(x))\ne0$, then $h'(x)=1/f'(h(x))$, which is still F18 by part (a) and composition. An interval of invertibility and a nonzero derivative are necessary conditions.
+> **2. Erasable = RecMatch.** First use structural induction on RecMatch. The empty string $\lambda$ is erasable. If $s$ and $t$ are erasable, then $[s]t$ can be erased by erasing $s$, deleting the resulting `[]`, and then erasing $t$. Hence RecMatch $\subseteq$ Erasable.
+> For the reverse inclusion, use strong induction on string length. At length $0$, the only string is $\lambda$. Suppose one deletion turns $x$ into some $y\in$ RecMatch. If $y=\lambda$, then $x=[]$. Otherwise write $y=[s]t$. The restored `[]` can occur only at the front, inside $s$, or inside $t$. In the first case, $x=[][s]t=[\lambda]([s]t)$. In the other two cases, strong induction puts the shorter erasable substring in RecMatch, after which the constructor applies. These three cases exhaust the possible grammatical positions.
+> **3. Recursive definitions.** (a) $S$: base $1$; constructors $x\mapsto2x,3x,5x$. (b) $T$: base $1$; constructors $x\mapsto18x,15x,5x$, corresponding respectively to increasing $k,m,n$. (c) $L'$: base $(0,0)$; constructors $(a,b)\mapsto(a\pm1,b\pm1)$ with matching signs, and $(a,b)\mapsto(a\pm3,b)$. (d) Every constructor preserves $a-b\equiv0\pmod3$, so $L'\subseteq L$. (e) If $a-b=3k$, first move both coordinates together to reach $(b,b)$, then move the first coordinate by $3k$; hence $L\subseteq L'$. (f) For an unambiguous definition, use the unique normal form $(k,b)\mapsto(b+3k,b)$ and encode each integer $k,b$ as a sign plus a natural-number magnitude.
+> **4. Binary-2PTG.** In the diagram,
 > $$G=\langle bintree,\langle bintree,\langle leaf,win\rangle,\langle bintree,\langle leaf,lose\rangle,\langle leaf,win\rangle\rangle\rangle,\langle leaf,win\rangle\rangle.$$
-> `flatten(leaf,l)=(l)`;`flatten(bintree,G1,G2)=flatten(G1)++flatten(G2)`.  Structure induction:Leaf time $2\cdot1=1+1$;Internal nodes by IH:
+> `flatten(leaf,l)=(l)` and `flatten(bintree,G1,G2)=flatten(G1)++flatten(G2)`. Use structural induction. For a leaf, $2\cdot1=1+1$. For an internal node, the induction hypotheses give:
 > $$2(\ell_1+\ell_2)=(|G_1|+1)+(|G_2|+1)=|G_1|+|G_2|+2=|G|+1.$$
 > <!-- bilingual-en:end -->
 
@@ -2365,22 +2340,25 @@ The general induction is suitable for the unique value precursor, the strong ind
 > 3. 若允许无限次 constructor，会发生什么？
 >
 > <!-- bilingual-en:start -->
-> 1. Why only prove that all base cases are insufficient?
-> 2. Who is the hypothesis for structural induction?
-> 3. What happens if you allow an infinite number of constructor?
+>
+> &nbsp;
+> **1.** Why is proving all the base cases alone insufficient?<br>
+> **2.** To which objects does the structural-induction hypothesis apply?<br>
+> **3.** What happens if infinitely many constructor applications are allowed?<br>
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 1. constructors 会产生新对象，必须证性质在每个 constructor 下保持。2. 当前 constructor 的直接子对象。3. 可能加入无限树/无限串，有限结构归纳不再自动适用。
 > <!-- bilingual-en:start -->
-> 1. constructors generates a new object and must be certified under each constructor.  2. The immediate child object of the current constructor.  3. Infinite trees/infinite strings may be added, and finite structure induction is no longer automatically applicable.
+>
+> &nbsp;
+> **1.** Constructors generate new objects, so the property must be proved to survive every constructor.<br>
+> **2.** It applies to the immediate subobjects of the current constructor.<br>
+> **3.** Infinite trees or strings may enter the class, and induction over finite construction trees no longer applies automatically.<br>
 > <!-- bilingual-en:end -->
 
 **知识链：**induction → construction tree → recursive datatype → structural induction → recursive function。
 <!-- bilingual-en:start -->
-**Knowledge Chain:**induction → construction tree → recursive datatype → structural induction → recursive function.
+**Knowledge chain:** induction → construction tree → recursive data type → structural induction → recursive function.
 <!-- bilingual-en:end -->
 
 ---
@@ -2394,7 +2372,7 @@ The general induction is suitable for the unique value precursor, the strong ind
 
 两个无限集合怎样比较大小？为什么整数、整数对和有理数一样多，而实数更多？为什么“所有集合的集合”和“万能程序分析器”会触发同一种对角矛盾？
 <!-- bilingual-en:start -->
-How do two infinite sets compare in size?  Why are there as many integers, pairs of integers, and rational numbers as there are real numbers?  Why do the "set of all sets" and the "universal analyser" trigger the same kind of diagonal contradiction?
+How can two infinite sets be compared in size? Why are the integers, pairs of integers, and rational numbers all equally numerous, while the real numbers are strictly more numerous? Why do a “set of all sets” and a “universal program analyser” lead to the same kind of diagonal contradiction?
 <!-- bilingual-en:end -->
 
 > [!note] 本地材料
@@ -2404,7 +2382,7 @@ How do two infinite sets compare in size?  Why are there as many integers, pairs
 
 ### 11.1 无限基数与 bijection
 <!-- bilingual-en:start -->
-*11.1 Infinite Cardinality and bijection*
+*11.1 Infinite cardinality and bijections*
 <!-- bilingual-en:end -->
 
 两个集合等势，定义为存在 bijection。有限集不可能与增加一个新元素后的集合等势；无限集的特征之一恰是可以做到。例如
@@ -2434,23 +2412,23 @@ A [[01_Proofs#11.2 可数集合|countable]] set is finite or is in bijection wit
 
 整数可按 $0,1,-1,2,-2,\dots$ 枚举。整数对按对角线 $a+b=0,1,2,\dots$ 枚举，因此 $\mathbb N^2$ 可数。正有理数是正整数对映射 $(a,b)\mapsto a/b$ 的像；虽有重复，但取每个有理数首次出现位置即可得到 injection，故 $\mathbb Q$ 可数。
 <!-- bilingual-en:start -->
-Integers can be enumerated by $0,1,-1,2,-2,\dots$.  Integer pairs are enumerated diagonally by $a+b=0,1,2,\dots$, so $\mathbb N^2$ is countable.  A positive rational number is an image of a positive integer pair mapped to $(a,b)\mapsto a/b$. Although there is a repetition, injection can be obtained by taking the first occurrence position of each rational number, so $\mathbb Q$ is countable.
+The integers can be enumerated as $0,1,-1,2,-2,\dots$. Pairs of natural numbers can be enumerated along the diagonals $a+b=0,1,2,\dots$, so $\mathbb N^2$ is countable. Every positive rational occurs in the image of the map $(a,b)\mapsto a/b$ from pairs of positive integers. Although values repeat, assigning each rational its first position in the enumeration gives an injection into $\mathbb N$. Hence $\mathbb Q$ is countable.
 <!-- bilingual-en:end -->
 
 > [!warning] “稠密”与“基数大”不同
 > $\mathbb Q$ 在任意实数区间中都有点，却仍可数；拓扑上的稠密性和集合基数是不同性质。
 > <!-- bilingual-en:start -->
-> The results show that $\mathbb Q$ is a bit in any real number interval, but it is still countable, and the density and cardinality are different in topology.
+> Every real interval contains rational numbers, yet $\mathbb Q$ is still countable. Topological density and set cardinality are different properties.
 > <!-- bilingual-en:end -->
 
 ### 11.3 Cantor 对角论证
 <!-- bilingual-en:start -->
-*11.3 Cantor Diagonal Argumentation*
+*11.3 Cantor's diagonal argument*
 <!-- bilingual-en:end -->
 
 [[01_Proofs#11.3 Cantor 对角论证|Cantor 对角论证]]证明无限二进制序列集合 $\{0,1\}^{\omega}$ 不可数。反设存在列表
 <!-- bilingual-en:start -->
-[[01_Proofs#11.3 Cantor 对角论证|Cantor diagonal argument]] proved that the infinite set of binary sequences, $\{0,1\}^{\omega}$, is uncountable.  Invert Presence List
+[[01_Proofs#11.3 Cantor 对角论证|Cantor's diagonal argument]] proves that the set of infinite binary sequences $\{0,1\}^{\omega}$ is uncountable. Suppose for contradiction that there is a complete list
 <!-- bilingual-en:end -->
 
 $$
@@ -2459,19 +2437,19 @@ $$
 
 定义新序列 $d$ 的第 $n$ 位为 $1-s_n(n)$。于是 $d$ 与 $s_n$ 在第 $n$ 位不同，所以不等于任何 $s_n$，与列表完备矛盾。
 <!-- bilingual-en:start -->
-The $n$ bit that defines the new sequence $d$ is $1-s_n(n)$.  So $d$ and $s_n$ are different in $n$ bit, so it is not equal to any $s_n$, contradicting with complete list.
+Define the $n$th bit of a new sequence $d$ to be $1-s_n(n)$. Then $d$ differs from $s_n$ in position $n$, so $d$ is unequal to every sequence on the list, contradicting its assumed completeness.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit01-cantor-diagonal.png|900]]
 
 读图：沿列表主对角线逐位取反得到 $d$；第 $n$ 个反转位保证 $d$ 与列表第 $n$ 行至少有一位不同。
 <!-- bilingual-en:start -->
-Read: $d$ is inverted bit by bit along the main diagonal of the list; the $n$-th inverted bit guarantees that $d$ is at least one bit different from the $n$-th row of the list.
+How to read the diagram: construct $d$ by flipping the entries along the list's main diagonal. The flipped $n$th bit guarantees that $d$ differs from the $n$th row in at least one position.
 <!-- bilingual-en:end -->
 
 更一般的 [[01_Proofs#11.3 Cantor 对角论证|Cantor 定理]]：对任何集合 $A$，不存在 surjection $f:A\to\operatorname{pow}(A)$。若有，定义
 <!-- bilingual-en:start -->
-More general [[01_Proofs#11.3 Cantor 对角论证|Cantor theorem]]: No surjection $f:A\to\operatorname{pow}(A)$ exists for any collection $A$.  if so, definition
+More generally, [[01_Proofs#11.3 Cantor 对角论证|Cantor's theorem]] says that no surjection $f:A\to\operatorname{pow}(A)$ exists for any set $A$. Suppose one did, and define
 <!-- bilingual-en:end -->
 
 $$
@@ -2494,12 +2472,12 @@ This is a contradiction. Therefore $|A|<|\operatorname{pow}(A)|$. The argument d
 
 ### 11.4 Russell 悖论与受限 comprehension
 <!-- bilingual-en:start -->
-*11.4 Russell Paradox and Restricted comprehension*
+*11.4 Russell's paradox and restricted comprehension*
 <!-- bilingual-en:end -->
 
 若假设任意谓词都定义一个集合，令 $W=\{x:x\notin x\}$，便有
 <!-- bilingual-en:start -->
-Suppose that any predicate defines a set, let $W=\{x:x\notin x\}$, there is
+If we assume that every predicate defines a set and let $W=\{x:x\notin x\}$, then
 <!-- bilingual-en:end -->
 
 $$
@@ -2508,7 +2486,7 @@ $$
 
 正确结论不是逻辑失效，而是“$W$ 是集合”的 unrestricted comprehension 假设不允许。ZFC 的 separation 只允许从已有集合 $S$ 中切出 $\{x\in S:P(x)\}$，不承诺“所有对象”构成集合。
 <!-- bilingual-en:start -->
-The correct conclusion is not that logic is ineffective, but that the unrestricted comprehension assumption that "$W$ is a collection" is not allowed.  ZFC's separation only allows $\{x\in S:P(x)\}$ to be cut out of an existing collection, $S$, and does not promise "all objects" to form a collection.
+The correct conclusion is not that logic has failed, but that unrestricted comprehension cannot be used to assume that $W$ is a set. ZFC's separation scheme permits $\{x\in S:P(x)\}$ to be selected only from an existing set $S$; it does not assert that “all objects” form a set.
 <!-- bilingual-en:end -->
 
 ### 11.5 Halting Problem
@@ -2532,12 +2510,12 @@ Both cases are contradictory, so no total decision procedure can always answer c
 
 ### 11.6 ZFC 只需知道的边界
 <!-- bilingual-en:start -->
-*11.6 ZFC only needs to know the boundaries*
+*11.6 The ZFC boundaries needed here*
 <!-- bilingual-en:end -->
 
 课程不是集合论公理课，但以下职责要分清：extensionality 由成员决定集合；pairing/union/power set/infinity 允许受控构造；separation 在已有集合中筛选；foundation 排除无限向下成员环；choice 支持对任意非空集合族同时选择代表。使用“从无限集合持续选出不同元素”时，严格背景可能涉及 choice。
 <!-- bilingual-en:start -->
-The course is not an axiomatic course in set theory, but the following are important to clarify: extensionality determines sets by members; pairing/union/power set/infinity allows controlled constructs; separation filters in existing sets; foundation excludes infinite downward member loops; choice supports simultaneous selection of representatives for any family of non-empty sets.  When using Persistent Selection of Different Elements from an Infinite Set, strict backgrounds may involve choice.
+This is not a course in axiomatic set theory, but the roles of the relevant axioms should be kept distinct. Extensionality determines sets by their members; pairing, union, power set, and infinity permit controlled constructions; separation filters an existing set; foundation excludes infinite descending membership chains; and choice supports selecting a representative simultaneously from every set in an arbitrary family of nonempty sets. A rigorous justification for repeatedly choosing distinct elements from an infinite set may therefore involve choice.
 <!-- bilingual-en:end -->
 
 > [!question]- 官方在线 feedback exercises（23 prompts）
@@ -2555,16 +2533,14 @@ The course is not an axiomatic course in set theory, but the following are impor
 >
 > 11–12. Russell 矛盾来自错误假设 $W$ 是集合；ZFC 避免 unrestricted comprehension。ZFC 用谓词逻辑表达，含 extensionality、power set、foundation 等公理，但不允许无约束造集合。13–23. 四条公理识别依次包含 Power Set、Comprehension/Separation、Foundation、Extensionality；对题给成员环，$\varnothing,T,\{T\},\{V,T\},\{U,V,T\},\{T,U,V\},\{\varnothing,T,U,V\}$ 是否含 $\in$-minimal 元素的答案依次为 No、Maybe、Yes、Yes、No、No、Yes。
 > <!-- bilingual-en:start -->
-> **Local entry:**
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S11_1.11.2_cantor-schroeder-bernstein|1.11.2 Cantor, Schroeder–Bernstein]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S11_1.11.5_cantor-s-diagonal-argument|1.11.5 Cantor's Diagonal Argument]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S11_1.11.6_countable-and-uncountable-sets|1.11.6 Countable and Uncountable Sets]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S11_1.11.8_halting-problem-basics|1.11.8 Halting Problem Basics (optional)]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S11_1.11.10_russell-s-paradox-and-zfc-optional|1.11.10 Russell's Paradox and ZFC (optional)]]
-> - [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S11_1.11.12_set-theory-axioms|1.11.12 Set Theory Axioms (optional)]]
-> 1–3. Equal cardinality is defined by a bijection. The surjection version of Schröder–Bernstein says that surjections in both directions imply a bijection. An infinite set may be in bijection with the result of adjoining one new element. 4–8. A diagonal argument constructs an infinite sequence missing from any proposed list; therefore $\mathbb N$ cannot surject onto all infinite bit strings. Cantor's theorem states that $|A|<|\mathcal P(A)|$.
-> 9. The countable choices are $\mathbb N,\mathbb Z,\mathbb N^2,\mathbb Q,\mathbb Z^+$, and the set of bit strings of any fixed finite length. The sets $\mathbb R,\mathbb C,\{0,1\}^{\omega},\mathbb Q^{\omega}$ are uncountable. 10. The Halting Problem asks whether a program eventually halts; it is undecidable, and the proof uses diagonalization and contradiction.
-> 11–12. Russell's paradox arises from the false assumption that $W$ is a set. ZFC avoids unrestricted comprehension: it is formulated in predicate logic and includes axioms such as extensionality, power set, and foundation, but it does not permit unrestricted set formation. 13–23. The four axioms identified in order are Power Set, Comprehension/Separation, Foundation, and Extensionality. For the given membership cycles, the answers to whether $\varnothing,T,\{T\},\{V,T\},\{U,V,T\},\{T,U,V\},\{\varnothing,T,U,V\}$ contain an $\in$-minimal element are respectively No, Maybe, Yes, Yes, No, No, and Yes.
+>
+> &nbsp;
+> **1–3.** Equal cardinality is defined by a bijection. The surjection version of Schröder–Bernstein says that surjections in both directions imply a bijection. An infinite set may be in bijection with the result of adjoining one new element.<br>
+> **4–8.** A diagonal argument constructs an infinite sequence missing from any proposed list; therefore $\mathbb N$ cannot surject onto all infinite bit strings. Cantor's theorem states that $|A|<|\mathcal P(A)|$.<br>
+> **9.** The countable choices are $\mathbb N,\mathbb Z,\mathbb N^2,\mathbb Q,\mathbb Z^+$, and the set of bit strings of any fixed finite length. The sets $\mathbb R,\mathbb C,\{0,1\}^{\omega},\mathbb Q^{\omega}$ are uncountable.<br>
+> **10.** The Halting Problem asks whether a program eventually halts; it is undecidable, and the proof uses diagonalization and contradiction.<br>
+> **11–12.** Russell's paradox arises from the false assumption that $W$ is a set. ZFC avoids unrestricted comprehension: it is formulated in predicate logic and includes axioms such as extensionality, power set, and foundation, but it does not permit unrestricted set formation.<br>
+> **13–23.** The four axioms identified in order are Power Set, Comprehension/Separation, Foundation, and Extensionality. For the given membership cycles, the answers to whether $\varnothing,T,\{T\},\{V,T\},\{U,V,T\},\{T,U,V\},\{\varnothing,T,U,V\}$ contain an $\in$-minimal element are respectively No, Maybe, Yes, Yes, No, No, and Yes.<br>
 > <!-- bilingual-en:end -->
 
 > [!example]- CP11 非官方独立题解（4 道）
@@ -2582,16 +2558,16 @@ The course is not an axiomatic course in set theory, but the following are impor
 > $$t\in N\Longleftrightarrow t\notin f(t)=N,$$
 > 矛盾。(d) 因此不存在能对任意程序精确判断所有非平凡行为集合的万能 analyzer；具体受限程序类仍可能可判定，结论不是“任何分析都不可能”。
 > <!-- bilingual-en:start -->
-> **1. Infinite sets and sequences.**(a) "Continue to pick a new element" is formalized in standard ZFC; but in weak set theory without choice, "every infinite set has countable infinite subsets" is not automatic, so the concern is relevant.  (b) For the selected distinct sequence $a_0,a_1,\dots$, define $f(a_n)=n$, the remaining $a\in A$ map to 0; this is $A\twoheadrightarrow\mathbb N$.
-> **2. surjection image is countable.**If $f:\mathbb N\twoheadrightarrow S$, define a value for each $s\in S$
+> **1. Infinite sets and sequences.** (a) “Keep choosing a new element” can be formalised in standard ZFC. In weaker set theories without choice, however, the statement that every infinite set contains a countably infinite subset is not automatic, so the concern is legitimate. (b) For a chosen sequence of distinct elements $a_0,a_1,\dots$, define $f(a_n)=n$ and send every other $a\in A$ to $0$. This gives a surjection $A\twoheadrightarrow\mathbb N$.
+> **2. The image of a surjection from $\mathbb N$ is countable.** If $f:\mathbb N\twoheadrightarrow S$, define for each $s\in S$
 > $$g(s)=\min\{n\in\mathbb N:f(n)=s\}.$$
-> The set is non-empty, and WOP guarantees minimal elements.  If $g(s)=g(t)$, then $s=f(g(s))=f(g(t))=t$, so $g:S\hookrightarrow\mathbb N$,$S$ is countable.  This is the mathematical form of "filter duplicates when enumerating".
-> **3. There are positive rational numbers.**(a) For $a,b\in\mathbb Z^+$, Cantor pairing
+> The set inside the minimum is nonempty, and WOP guarantees a least element. If $g(s)=g(t)$, then $s=f(g(s))=f(g(t))=t$, so $g:S\hookrightarrow\mathbb N$ and $S$ is countable. This formalises “filtering out duplicates during an enumeration.”
+> **3. The positive rationals are countable.** (a) For $a,b\in\mathbb Z^+$, the Cantor pairing function
 > $$\pi(a,b)=\frac{(a+b-2)(a+b-1)}2+a$$
-> is the bijection to $\mathbb Z^+$: each diagonal $a+b$ occupies a continuous segment within which $a$ uniquely locates.  (b) Map $(a,b)\mapsto a/b$ from $\mathbb Z^+\times\mathbb Z^+$ surject to $\mathbb Q^+$; by Problem 2, like countable.
+> is a bijection to $\mathbb Z^+$: each diagonal $a+b$ occupies a consecutive interval, and $a$ uniquely locates a pair within that interval. (b) The map $(a,b)\mapsto a/b$ is a surjection from $\mathbb Z^+\times\mathbb Z^+$ onto $\mathbb Q^+$. By Problem 2, its image is countable.
 > **4. An unrecognizable language.** (a) The recognizer checks that the string has even length and that every adjacent pair consists of the same letter from `a`–`z`; otherwise it returns False. (b) Compile each string $s$ as a program $P_s$, and let $f(s)$ be the language recognized by that program. Then $\operatorname{range}(f)$ is exactly the class of recognizable languages. (c) Define $N=\{s:s\notin f(s)\}$. If $N$ were recognizable, then $N=f(t)$ for some program string $t$; hence
 > $$t\in N\Longleftrightarrow t\notin f(t)=N,$$
-> Contradiction.  (d) There is therefore no universal analyzer that can accurately determine the set of all non-trivial behaviors for any program; the specific restricted program class may still be decidable and the conclusion is not "impossible for any analysis".
+> a contradiction. (d) Therefore no universal analyser can decide every nontrivial behavioural property of arbitrary programs exactly. Particular restricted classes of programs may still be decidable; the conclusion is not that all program analysis is impossible.
 > <!-- bilingual-en:end -->
 
 > [!question]- 三道自检
@@ -2600,22 +2576,25 @@ The course is not an axiomatic course in set theory, but the following are impor
 > 3. 停机不可判定是否等于任何实例都不能判断？
 >
 > <!-- bilingual-en:start -->
-> 1. Why is a surjection $\mathbb N\to S$ likely to be duplicated but still sufficient to indicate that a $S$ is countable?
-> 2. Why must the definition of the Cantor collection $D$ rely on $f(a)$?
-> 3. Does undecidability of the Halting Problem mean that no individual instance can be decided?
+>
+> &nbsp;
+> **1.** Why can a surjection $\mathbb N\to S$ contain repetitions and still suffice to prove that $S$ is countable?<br>
+> **2.** Why must the definition of Cantor's set $D$ depend on $f(a)$?<br>
+> **3.** Does undecidability of the Halting Problem mean that no individual instance can be decided?<br>
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 1. 为每个 $s$ 取首次出现位置得到 injection。2. 它要在每个候选 $f(a)$ 的“自身坐标”上反转，才能保证与每个候选不同。3. 不是；许多具体程序显然停或不停，不存在的是覆盖全部程序输入的总正确算法。
 > <!-- bilingual-en:start -->
-> 1. Take the first occurrence position for each $s$ to get injection.  2. It needs to be reversed on the "own coordinates" of each candidate $f(a)$ to be guaranteed to be different from each candidate.  3. No; many specific programs apparently stop or do not stop, and what does not exist is a total correct algorithm that covers all program inputs.
+>
+> &nbsp;
+> **1.** Assign each $s$ the position of its first occurrence to obtain an injection.<br>
+> **2.** The construction must flip each candidate $f(a)$ at its own coordinate $a$ so that $D$ is guaranteed to differ from every candidate.<br>
+> **3.** No. Many particular programs can plainly be shown to halt or to run forever; what does not exist is a total, always-correct algorithm covering every program-input pair.<br>
 > <!-- bilingual-en:end -->
 
 **知识链：**bijection → countability → diagonalization → power set → Russell/Halting self-reference。
 <!-- bilingual-en:start -->
-**Knowledge Chain:**bijection → countability → diagonalization → power set → Russell/Halting self-reference.
+**Knowledge chain:** bijection → countability → diagonalisation → power set → self-reference in Russell's paradox and the Halting Problem.
 <!-- bilingual-en:end -->
 
 ---
@@ -2625,7 +2604,7 @@ The course is not an axiomatic course in set theory, but the following are impor
 > [!note] 原题与答案性质
 > [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps4.pdf|Problem Set 4 PDF]]。以下 3 道均为非官方独立题解。
 > <!-- bilingual-en:start -->
-> [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps4.pdf|Problem Set 4 PDF]].  The following 3 questions are unofficial and independent.
+> [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps4.pdf|Problem Set 4 PDF]]. The three solutions below are independent and unofficial.
 > <!-- bilingual-en:end -->
 
 > [!example]- Problem 1：网格机器人不可达 $(1,1)$
@@ -2633,9 +2612,9 @@ The course is not an axiomatic course in set theory, but the following are impor
 > $$I(x,y)=3x-y\pmod7.$$
 > 对 $(2,-1)$，$\Delta I=3\cdot2-(-1)=7\equiv0$；对 $(1,3)$，$\Delta I=3-3=0$，反向动作同样为 0。因此 $I$ 是 preserved invariant。起点 $I(0,0)=0$，而目标 $I(1,1)=2\not\equiv0\pmod7$，所以不可达。
 > <!-- bilingual-en:start -->
-> The four actions are $\pm(2,-1)$ and $\pm(1,3)$.  inspection
+> The four moves are $\pm(2,-1)$ and $\pm(1,3)$. Consider
 > $$I(x,y)=3x-y\pmod7.$$
-> For $(2,-1)$, $\Delta I=3\cdot2-(-1)=7\equiv0$; for $(1,3)$, $\Delta I=3-3=0$, the reverse action is also 0.  So $I$ is preserved invariant.  The starting point is $I(0,0)=0$ and the target is $I(1,1)=2\not\equiv0\pmod7$, so it is not reachable.
+> For $(2,-1)$, $\Delta I=3\cdot2-(-1)=7\equiv0$; for $(1,3)$, $\Delta I=3-3=0$, and the reverse moves also change $I$ by $0$ modulo $7$. Thus $I$ is a preserved invariant. The start has $I(0,0)=0$, while the target has $I(1,1)=2\not\equiv0\pmod7$, so the target is unreachable.
 > <!-- bilingual-en:end -->
 
 > [!example]- Problem 2：unique-label LBT
@@ -2649,14 +2628,14 @@ The course is not an axiomatic course in set theory, but the following are impor
 > $$f_T=(n_B+1)+(n_C+1)=n_B+n_C+2=n_T+1.$$
 > “唯一标签”正是在把 union 的基数写成和时使用；若标签重合，该等式会重复计数。
 > <!-- bilingual-en:start -->
-> Summarize the LBT structure.  base $\langle l,leaf\rangle$ has $f_B=1,n_B=0$, so $f_B=n_B+1$.
-> constructor $T=\langle l,B,C\rangle$.  The unique label condition guarantees that $B,C$'s leaf-label sets do not intersect each other, so
+> Use structural induction on the LBT. The base $\langle l,leaf\rangle$ has $f_B=1$ and $n_B=0$, so $f_B=n_B+1$.
+> For the constructor $T=\langle l,B,C\rangle$, the unique-label condition guarantees that the leaf-label sets of $B$ and $C$ are disjoint, so
 > $$f_T=f_B+f_C.$$
-> it also ensure that that set of two subtrees internal-label are not intersect and the new label $l$ does not appear, so
+> It also guarantees that the internal-label sets of the two subtrees are disjoint and that the new label $l$ has not appeared before, so
 > $$n_T=n_B+n_C+1.$$
-> With IH:
+> By the induction hypotheses,
 > $$f_T=(n_B+1)+(n_C+1)=n_B+n_C+2=n_T+1.$$
-> Unique Tags is used precisely when writing the cardinality of a union as and; if the tags are coincident, the equation is repeated.
+> The unique-label condition is used precisely when the cardinality of a union is written as a sum. If labels overlap, this equation double-counts them.
 > <!-- bilingual-en:end -->
 
 > [!example]- Problem 3：$(0,1]$ 与非负平面等势
@@ -2679,7 +2658,7 @@ The course is not an axiomatic course in set theory, but the following are impor
 > <!-- bilingual-en:start -->
 > **(a)**
 > $$h:(0,1]\to[0,\infty),\qquad h(x)=\frac1x-1,$$
-> The inverse is $h^{-1}(y)=1/(y+1)$, so bijective.
+> Its inverse is $h^{-1}(y)=1/(y+1)$, so $h$ is bijective.
 > **(b)** Map a long digit sequence $(d_1,d_2,\dots)$ to $0.d_1d_2\dots$. The convention that a representation does not end in all zeros selects a unique decimal expansion for every real number in $(0,1]$: use the trailing-$9$ representation for terminating decimals, including $1=0.999\dots$. The number $0$ has no long representation.
 > **(c)** On inputs whose odd-position and even-position subsequences are both long, define
 > $$F(d_1d_2d_3d_4\dots)=((d_1,d_3,\dots),(d_2,d_4,\dots)).$$
@@ -2694,7 +2673,7 @@ The course is not an axiomatic course in set theory, but the following are impor
 
 ## Unit 1 总结：怎样独立完成一份证明
 <!-- bilingual-en:start -->
-*Unit 1 Summary: How to Complete a Proof Independently*
+*Unit 1 summary: how to complete a proof independently*
 <!-- bilingual-en:end -->
 
 拿到新题时按以下顺序，不要先堆公式：
@@ -2709,17 +2688,19 @@ When approaching a new problem, use the following order instead of immediately p
 5. 单独检查零、空集、最小规模、定义域、除法分母、基例数量和终止性；
 6. 用一个小实例或反例逆向审查结论强度。
 <!-- bilingual-en:start -->
-1. State the universe of discourse, free variables, and quantifiers.
-2. Recast the goal as an implication $P\Rightarrow Q$, a set equality, a universal statement, an unreachability claim, or an equinumerosity problem.
-3. Choose a method that matches the goal: direct proof, contrapositive, contradiction, cases, induction, invariant, or bijection.
-4. Write down the objects that method requires: a counterexample set, induction predicate, states and transitions, invariant, or a map and its inverse.
-5. Check zero, the empty set, the smallest case, the domain, possible zero denominators, the required base cases, and termination separately.
-6. Test the strength of the conclusion against a small example or counterexample.
+
+&nbsp;
+**1.** State the universe of discourse, free variables, and quantifiers.<br>
+**2.** Recast the goal as an implication $P\Rightarrow Q$, a set equality, a universal statement, an unreachability claim, or an equinumerosity problem.<br>
+**3.** Choose a method that matches the goal: direct proof, contrapositive, contradiction, cases, induction, invariant, or bijection.<br>
+**4.** Write down the objects that method requires: a counterexample set, induction predicate, states and transitions, invariant, or a map and its inverse.<br>
+**5.** Check zero, the empty set, the smallest case, the domain, possible zero denominators, the required base cases, and termination separately.<br>
+**6.** Test the strength of the conclusion against a small example or counterexample.<br>
 <!-- bilingual-en:end -->
 
 ### 覆盖核对
 <!-- bilingual-en:start -->
-*coverage check*
+*Coverage check*
 <!-- bilingual-en:end -->
 
 | 来源 | 已覆盖数量 | 位置 |
@@ -2730,23 +2711,23 @@ When approaching a new problem, use the following order instead of immediately p
 | Midterm 1 main problems | 5 | Midterm 1 |
 | Session self-checks | 33 | 每节 3 道 |
 <!-- bilingual-en:start -->
-|Source|Overridden Quantity|Location|
-|—|—:|—|
-| Official online feedback prompts | 122 | each Session "Official Online feedback exercises" |
-| In-Class main problems | 48 | CP1-CP89% discount stack |
+| Source | Number covered | Location |
+|---|---:|---|
+| Official online feedback prompts | 122 | “Official online feedback exercises” in each session |
+| In-class main problems | 48 | CP1–CP11 collapsible solution sections |
 | Problem Set main problems | 13 | PS1-PS4 |
 | Midterm 1 main problems | 5 | Midterm 1 |
-| Session self-checks | 33 | 3 tracks per section |
+| Session self-checks | 33 | Three questions per session |
 <!-- bilingual-en:end -->
 
 下一单元从证明语言转入可计算结构：[[02_Structures|Unit 2: Structures]]。
 <!-- bilingual-en:start -->
-The next unit moves from the proof language to the computable structure: [[02_Structures|Unit 2: Structures]].
+The next unit moves from the language of proof to computable structures: [[02_Structures|Unit 2: Structures]].
 <!-- bilingual-en:end -->
 
 ## 课程笔记反链
 <!-- bilingual-en:start -->
-*course note inverse chain*
+*Course-note backlinks*
 <!-- bilingual-en:end -->
 
 ```dataview

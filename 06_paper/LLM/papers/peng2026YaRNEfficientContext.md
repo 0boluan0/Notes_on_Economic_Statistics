@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `06 长上下文与效率`，第一版用于连接 Long Context 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[RAG 与长上下文]]
+RAG 与长上下文
 
 ## 来源
 - [Zotero item](zotero://select/library/items/JIY7U5IV)

@@ -44,10 +44,12 @@ When you first review, complete the following four steps in turn:
 3. 完成 Final Course Review 的五组代表题。
 4. 合上答案，限时完成 Final Exam，再逐题对照本页的完整题解。
 <!-- bilingual-en:start -->
-1. Without looking at the formulas, explain the "five structural chains of the course" aloud.
-2. Read the "problem-type entry points" and practice selecting the right tool from the wording of each question.
-3. Complete the five sets of representative questions for Final Course Review.
-4. Hide the answers, complete the Final Exam under timed conditions, and then compare your work with the full solutions on this page, question by question.
+
+&nbsp;
+**1.** Without looking at the formulas, explain the "five structural chains of the course" aloud.<br>
+**2.** Read the "problem-type entry points" and practice selecting the right tool from the wording of each question.<br>
+**3.** Complete the five sets of representative questions for Final Course Review.<br>
+**4.** Hide the answers, complete the Final Exam under timed conditions, and then compare your work with the full solutions on this page, question by question.<br>
 <!-- bilingual-en:end -->
 
 如果某道题算错，不要只改最后一个数；应判断错误属于哪一层：
@@ -546,7 +548,9 @@ provided that the entries of the initial state sum to $10$.
 
 1. 投影到 $a=(4,-3)^T$ 所张成直线：
 <!-- bilingual-en:start -->
-1. Projection onto the line spanned by $a=(4,-3)^T$:
+
+&nbsp;
+**1.** Projection onto the line spanned by $a=(4,-3)^T$:<br>
 <!-- bilingual-en:end -->
 
    $$
@@ -561,7 +565,9 @@ Checking: $P^T=P$, $P^2=P$, $Pa=a$.
 
 2. 给定特征对
 <!-- bilingual-en:start -->
-2. Given the eigenpairs
+
+&nbsp;
+**2.** Given the eigenpairs<br>
 <!-- bilingual-en:end -->
 
    $$
@@ -595,7 +601,9 @@ Then,
 
 3. 任意非对称实矩阵都不可能写成 $B^TB$，因为 $B^TB$ 必对称。例如
 <!-- bilingual-en:start -->
-3. Any asymmetric real matrix cannot be written as $B^TB$ because $B^TB$ must be symmetric.  For example
+
+&nbsp;
+**3.** Any asymmetric real matrix cannot be written as $B^TB$ because $B^TB$ must be symmetric.  For example<br>
 <!-- bilingual-en:end -->
 
    $$
@@ -691,8 +699,8 @@ The following questions are transcribed faithfully from the locally stored exam.
 > 2. 求四个基本子空间的维数，并尽可能给出基。
 > <!-- bilingual-en:start -->
 > Let $A$ be a $3\times4$ matrix for which $Ax=0$ has exactly the following two special solutions.
-> 1. Find the reduced row-echelon form $R$ of $A$.
-> 2. Find the dimensions of the four fundamental subspaces and give bases wherever possible.
+> **1.** Find the reduced row-echelon form $R$ of $A$.<br>
+> **2.** Find the dimensions of the four fundamental subspaces and give bases wherever possible.<br>
 > <!-- bilingual-en:end -->
 
 > [!success]- 完整解答
@@ -774,9 +782,9 @@ The following questions are transcribed faithfully from the locally stored exam.
 > <!-- bilingual-en:start -->
 > Let
 > where $a,b,c,d,e,f$ are all nonzero.
-> 1. Find $U^{-1}$.
-> 2. If the columns of $U$ form a complete set of eigenvectors of a matrix $A$, prove that $A$ is also upper triangular.
-> 3. Explain why this $U$ cannot be the matrix of left singular vectors in an SVD $A=U\Sigma V^T$.
+> **1.** Find $U^{-1}$.<br>
+> **2.** If the columns of $U$ form a complete set of eigenvectors of a matrix $A$, prove that $A$ is also upper triangular.<br>
+> **3.** Explain why this $U$ cannot be the matrix of left singular vectors in an SVD $A=U\Sigma V^T$.<br>
 > <!-- bilingual-en:end -->
 
 > [!success]- 完整解答
@@ -863,9 +871,11 @@ The following questions are transcribed faithfully from the locally stored exam.
 > 2. 若 $B=A^2$，再次比较二者。
 > 3. 若 $A$ 是秩为 $r$ 的 $m\times n$ 矩阵，求 $N(A)$ 与 $N([A\ A])$ 的维数。
 > <!-- bilingual-en:start -->
-> 1. If the number of rows in $A,B$ is the same, compare $\operatorname{rank}(A)$ with $\operatorname{rank}[A\ B]$.
-> 2. If $B=A^2$, compare the two again.
-> 3. If $A$ is a $m\times n$ matrix with rank $r$, calculate the dimensions of $N(A)$ and $N([A\ A])$.
+>
+> &nbsp;
+> **1.** If the number of rows in $A,B$ is the same, compare $\operatorname{rank}(A)$ with $\operatorname{rank}[A\ B]$.<br>
+> **2.** If $B=A^2$, compare the two again.<br>
+> **3.** If $A$ is a $m\times n$ matrix with rank $r$, calculate the dimensions of $N(A)$ and $N([A\ A])$.<br>
 > <!-- bilingual-en:end -->
 
 > [!success]- 完整解答
@@ -920,9 +930,9 @@ The following questions are transcribed faithfully from the locally stored exam.
 > 3. 令 $B=(A^TA)^{-1}A^T$，说明它是哪一侧的逆，并解释为什么不是双侧逆。
 > <!-- bilingual-en:start -->
 > Let $A$ be a $5\times3$ matrix and $Ax=0$ be true only when $x=0$.
-> 1. State what this implies about the columns of $A$.
-> 2. Prove that $A^TAx=0$ also has only the zero solution.
-> 3. Let $B=(A^TA)^{-1}A^T$. Determine on which side it is an inverse of $A$, and explain why it is not a two-sided inverse.
+> **1.** State what this implies about the columns of $A$.<br>
+> **2.** Prove that $A^TAx=0$ also has only the zero solution.<br>
+> **3.** Let $B=(A^TA)^{-1}A^T$. Determine on which side it is an inverse of $A$, and explain why it is not a two-sided inverse.<br>
 > <!-- bilingual-en:end -->
 
 > [!success]- 完整解答
@@ -1033,9 +1043,9 @@ The following questions are transcribed faithfully from the locally stored exam.
 > 3. 只用 $Q$ 写出投影到 $\operatorname{span}(u,v)$ 的矩阵。
 > <!-- bilingual-en:start -->
 > Given linearly independent vectors $u$ and $v$:
-> 1. Find a nonzero vector $w$, formed as a linear combination of $u$ and $v$, that is orthogonal to $u$.
-> 2. For $A=[u\ v]$, find a factorization $A=QR$.
-> 3. Using only $Q$, write the matrix that projects onto $\operatorname{span}(u,v)$.
+> **1.** Find a nonzero vector $w$, formed as a linear combination of $u$ and $v$, that is orthogonal to $u$.<br>
+> **2.** For $A=[u\ v]$, find a factorization $A=QR$.<br>
+> **3.** Using only $Q$, write the matrix that projects onto $\operatorname{span}(u,v)$.<br>
 > <!-- bilingual-en:end -->
 
 > [!success]- 完整解答
@@ -1179,9 +1189,9 @@ The following questions are transcribed faithfully from the locally stored exam.
 > 求投影到 $C(A)$ 的矩阵。
 > <!-- bilingual-en:start -->
 > Suppose the columns of a rectangular matrix $A$ are linearly independent.
-> 1. Write the least-squares solution $\hat x$ and the projection $p=A\hat x$.
-> 2. State which fundamental subspaces contain $p$ and $e=b-p$.
-> 3. For the matrix shown below, find the matrix that projects onto $C(A)$.
+> **1.** Write the least-squares solution $\hat x$ and the projection $p=A\hat x$.<br>
+> **2.** State which fundamental subspaces contain $p$ and $e=b-p$.<br>
+> **3.** For the matrix shown below, find the matrix that projects onto $C(A)$.<br>
 > <!-- bilingual-en:end -->
 
 > [!success]- 完整解答
@@ -1247,9 +1257,9 @@ The following questions are transcribed faithfully from the locally stored exam.
 > 3. 用对应二阶矩阵的特征值判断 $D_n$ 的增长率，并求 $D_5$。
 > <!-- bilingual-en:start -->
 > Let $A_n$ be the $n\times n$ tridiagonal matrix with $3$ on the main diagonal, $2$ on the superdiagonal, and $1$ on the subdiagonal, and define $D_n=\det A_n$.
-> 1. Find $D_2$ and $D_3$.
-> 2. Derive $D_n=aD_{n-1}+bD_{n-2}$.
-> 3. Use the eigenvalues of the corresponding $2\times2$ matrix to determine the growth rate of $D_n$, and compute $D_5$.
+> **1.** Find $D_2$ and $D_3$.<br>
+> **2.** Derive $D_n=aD_{n-1}+bD_{n-2}$.<br>
+> **3.** Use the eigenvalues of the corresponding $2\times2$ matrix to determine the growth rate of $D_n$, and compute $D_5$.<br>
 > <!-- bilingual-en:end -->
 
 > [!success]- 完整解答
@@ -1344,9 +1354,11 @@ The following questions are transcribed faithfully from the locally stored exam.
 2. 比较 eigen-decomposition 与 SVD：各自需要什么条件，输入输出方向分别是什么？
 3. 若一个计算结果声称 $P$ 是正交投影矩阵，至少应检查哪三条性质？
 <!-- bilingual-en:start -->
-1. For $A\in\mathbb R^{m\times n}$, explain what $N(A)=\{0\}$ means for columns, $A^TA$, least squares solution, and left inverse.
-2. Comparing eigen-decomposition and SVD: What are the conditions and the input and output directions?
-3. If a calculation indicates that $P$ is an orthogonal projection matrix, at least which three properties should be examined?
+
+&nbsp;
+**1.** For $A\in\mathbb R^{m\times n}$, explain what $N(A)=\{0\}$ means for columns, $A^TA$, least squares solution, and left inverse.<br>
+**2.** Comparing eigen-decomposition and SVD: What are the conditions and the input and output directions?<br>
+**3.** If a calculation indicates that $P$ is an orthogonal projection matrix, at least which three properties should be examined?<br>
 <!-- bilingual-en:end -->
 
 > [!success]- 自检答案
@@ -1354,9 +1366,11 @@ The following questions are transcribed faithfully from the locally stored exam.
 > 2. 特征分解 $A=S\Lambda S^{-1}$ 要求方阵且有完整特征向量组，描述同一空间中的不变方向；SVD 对任意矩形矩阵存在，$v_i$ 是输入方向、$u_i$ 是输出方向，二者由 $Av_i=\sigma_i u_i$ 相连。
 > 3. 检查 $P^T=P$、$P^2=P$，并检查 $C(P)$ 是否等于目标子空间；还可检查特征值只能是 $0,1$。
 > <!-- bilingual-en:start -->
-> 1. $N(A)=\{0\}$ is equivalent to linear independence of the columns and to $r=n$. Consequently, $A^TA$ is positive definite and invertible, every least-squares problem has a unique coefficient vector, and the left inverse $(A^TA)^{-1}A^T$ exists.
-> 2. The eigendecomposition $A=S\Lambda S^{-1}$ requires a square matrix with a complete set of eigenvectors and describes invariant directions within one space. An SVD exists for every rectangular matrix; $v_i$ is an input direction, $u_i$ is an output direction, and they are related by $Av_i=\sigma_i u_i$.
-> 3. Check $P^T=P$ and $P^2=P$, and verify that $C(P)$ is the intended target subspace. You can also check that every eigenvalue is either $0$ or $1$.
+>
+> &nbsp;
+> **1.** $N(A)=\{0\}$ is equivalent to linear independence of the columns and to $r=n$. Consequently, $A^TA$ is positive definite and invertible, every least-squares problem has a unique coefficient vector, and the left inverse $(A^TA)^{-1}A^T$ exists.<br>
+> **2.** The eigendecomposition $A=S\Lambda S^{-1}$ requires a square matrix with a complete set of eigenvectors and describes invariant directions within one space. An SVD exists for every rectangular matrix; $v_i$ is an input direction, $u_i$ is an output direction, and they are related by $Av_i=\sigma_i u_i$.<br>
+> **3.** Check $P^T=P$ and $P^2=P$, and verify that $C(P)$ is the intended target subspace. You can also check that every eigenvalue is either $0$ or $1$.<br>
 > <!-- bilingual-en:end -->
 
 ## 本地材料

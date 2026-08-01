@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `09 开源模型技术报告`，第一版用于连接 Open Models, Pretraining 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[开放模型生态]], [[预训练、指令微调与偏好优化]]
+[[开放模型生态]], 预训练、指令微调与偏好优化
 
 ## 来源
 - [Zotero item](zotero://select/library/items/KK4WCHZK)

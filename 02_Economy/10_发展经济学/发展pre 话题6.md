@@ -511,7 +511,9 @@ These details come from Reuters, AP, The Daily Star, as well as relevant economi
 
 6. 世界新闻网 – _白宫：对中国104%关税自9日零时1分生效_
 <!-- bilingual-en:start -->
-6. World News Network – White House: China tariff of 104% takes effect at 12:01 a.m. on the 9th.
+
+&nbsp;
+**6.** World News Network – White House: China tariff of 104% takes effect at 12:01 a.m. on the 9th.<br>
 <!-- bilingual-en:end -->
 
 7. The Guardian – _IMF warns of significant risk to global economy from Trump tariffs_

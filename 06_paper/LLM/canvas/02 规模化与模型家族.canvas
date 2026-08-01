@@ -1,7 +1,7 @@
 {
 	"nodes":[
 		{"id":"title","type":"text","x":0,"y":-180,"width":900,"height":120,"text":"# 02 规模化与模型家族\n\n[[LLM Big Picture]] · [[LLM Map Index]] · 11 papers","color":"6"},
-		{"id":"route-scaling-law","type":"text","x":0,"y":0,"width":310,"height":100,"text":"## Scaling Law\n\n[[规模化、MoE 与分布式训练]]","color":"6"},
+		{"id":"route-scaling-law","type":"text","x":0,"y":0,"width":310,"height":100,"text":"## Scaling Law\n\n规模化、MoE 与分布式训练","color":"6"},
 		{"id":"route-efficiency-moe","type":"text","x":0,"y":150,"width":310,"height":100,"text":"## Efficiency / MoE\n\n[[LLM 推理效率]]","color":"2"},
 		{"id":"route-transformer","type":"text","x":0,"y":300,"width":310,"height":100,"text":"## Transformer\n\n[[Transformer 与注意力机制]]","color":"5"},
 		{"id":"paper-lepikhin2020gshardscalinggiant","type":"text","x":1410,"y":0,"width":290,"height":105,"text":"**GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding**\n\n2020 · [[lepikhin2020GShardScalingGiant|note]]","color":"6"},

@@ -34,14 +34,18 @@ tags:
    - 比较两者谁更强
    - 若攻击者每秒尝试 1 万个密码，估算破解时间
 <!-- bilingual-en:start -->
-1. **Entropy:** Suppose a password is formed by concatenating four random lowercase words, each selected uniformly from a dictionary of 100,000 words. Calculate its entropy. Then calculate the entropy of an eight-character password whose characters are selected at random from uppercase letters, lowercase letters, and digits. Compare their strength and estimate the cracking time if an attacker can try 10,000 passwords per second.
+
+&nbsp;
+**1.** **Entropy:** Suppose a password is formed by concatenating four random lowercase words, each selected uniformly from a dictionary of 100,000 words. Calculate its entropy. Then calculate the entropy of an eight-character password whose characters are selected at random from uppercase letters, lowercase letters, and digits. Compare their strength and estimate the cracking time if an attacker can try 10,000 passwords per second.<br>
 <!-- bilingual-en:end -->
 2. 密码散列函数：
    - 从 Debian 镜像站下载一个光盘映像
    - 用 `sha256sum` 计算本地文件哈希
    - 与 Debian 官方公布的哈希值对比
 <!-- bilingual-en:start -->
-2. **Cryptographic hash functions:** Download a disc image from a Debian mirror, compute the local file's hash with `sha256sum`, and compare it with the hash published by Debian.
+
+&nbsp;
+**2.** **Cryptographic hash functions:** Download a disc image from a Debian mirror, compute the local file's hash with `sha256sum`, and compare it with the hash published by Debian.<br>
 <!-- bilingual-en:end -->
 3. 对称加密：
    - 使用 OpenSSL 的 AES 模式加密一个文件
@@ -49,7 +53,9 @@ tags:
    - 再解密回来
    - 用 `cmp` 验证解密后文件与原文件一致
 <!-- bilingual-en:start -->
-3. **Symmetric encryption:** Encrypt a file using an OpenSSL AES mode, compare the plaintext and ciphertext with `cat` or `hexdump`, decrypt the file, and use `cmp` to verify that the decrypted file is identical to the original.
+
+&nbsp;
+**3.** **Symmetric encryption:** Encrypt a file using an OpenSSL AES mode, compare the plaintext and ciphertext with `cat` or `hexdump`, decrypt the file, and use `cmp` to verify that the decrypted file is identical to the original.<br>
 <!-- bilingual-en:end -->
 4. 非对称加密：
    - 在本机生成更安全的 ED25519 SSH 密钥对，并给私钥加密码
@@ -57,5 +63,7 @@ tags:
    - 给 Anish 发送一封加密邮件
    - 用 `git commit -S` 或 `git tag -s` 进行签名，并验证签名
 <!-- bilingual-en:start -->
-4. **Asymmetric cryptography:** Generate a stronger ED25519 SSH key pair locally and protect the private key with a passphrase. Configure GPG, send Anish an encrypted email, and create and verify a signed Git commit or tag with `git commit -S` or `git tag -s`.
+
+&nbsp;
+**4.** **Asymmetric cryptography:** Generate a stronger ED25519 SSH key pair locally and protect the private key with a passphrase. Configure GPG, send Anish an encrypted email, and create and verify a signed Git commit or tag with `git commit -S` or `git tag -s`.<br>
 <!-- bilingual-en:end -->

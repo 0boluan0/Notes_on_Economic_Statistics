@@ -17,19 +17,16 @@ sessions: 12-22
 > [!info] 这篇笔记解决什么问题
 > 本单元把第一单元的证明工具用于三类真正的计算结构：整数的整除结构、任务的先后结构、网络的连接结构。顺序严格对应 MIT 6.042J Spring 2015：Session 12–22；PS5 位于 Session 14 后，PS6 与 Midterm 2 位于 Session 16 后，PS7 位于 Session 19 后，PS8 位于 Session 22 后。
 > <!-- bilingual-en:start -->
-> The unit uses the proving tool of the first unit for three kinds of real computing structures: the integer division structure, the sequential structure of tasks, and the connection structure of the network.  MIT 6.042J Spring 2015:Session 12-22 is mapped sequentially; PS5 is behind Session 14, PS6 and Midterm 2 are behind Session 16, PS7 is behind Session 19, and PS8 is behind Session 22.
+> This unit applies the proof techniques from Unit 1 to three structures central to computing: divisibility among integers, precedence among tasks, and connectivity in networks. It follows MIT 6.042J Spring 2015 in order from Sessions 12 through 22: PS5 follows Session 14; PS6 and Midterm 2 follow Session 16; PS7 follows Session 19; and PS8 follows Session 22.
 > <!-- bilingual-en:end -->
 
 > [!warning] 答案来源
 > “在线反馈题”中的答案和反馈来自官方离线 courseware；课堂题、Problem Set 与 Midterm 2 没有公开官方解答，以下均为**非官方独立题解**。每个正式题解都给出足够的推导，以便自行复算。
 > <!-- bilingual-en:start -->
-> Answers and feedback in the "Online Feedback Questions" come from the official offline courseware; Classroom questions, Problem Set and Midterm 2 do not have public official answers, and the following are all**unofficial independent answers**.  Each formal problem solution gives sufficient derivation to allow for self-recalculation.
+> Answers and feedback in the “Online Feedback Questions” come from the official offline courseware. No official public solutions are available for the in-class questions, problem sets, or Midterm 2, so the solutions below are **unofficial and independently derived**. Each formal solution includes enough reasoning to be checked independently.
 > <!-- bilingual-en:end -->
 
 ## 导航
-<!-- bilingual-en:start -->
-*navigation*
-<!-- bilingual-en:end -->
 
 - [[#Session 12 — GCDs|12 GCDs]]
 - [[#Session 13 — Congruences|13 Congruences]]
@@ -69,7 +66,7 @@ sessions: 12-22
 
 [[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|整除]]定义为
 <!-- bilingual-en:start -->
-[[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|division]] defined as
+[[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|divisibility]] is defined by
 <!-- bilingual-en:end -->
 
 $$
@@ -78,7 +75,7 @@ $$
 
 这里 $a\mid b$ 是一个命题，不是分数。由定义可逐步得到：
 <!-- bilingual-en:start -->
-Here $a\mid b$ is a proposition, not a score.  From the definition can get:
+Here $a\mid b$ is a proposition, not a fraction. The definition immediately gives:
 <!-- bilingual-en:end -->
 
 - $a\mid 0$，因为 $0=a\cdot0$；
@@ -86,21 +83,21 @@ Here $a\mid b$ is a proposition, not a score.  From the definition can get:
 - 若 $a\mid b$ 且 $b\mid c$，则 $b=ar,c=bs$，故 $c=a(rs)$，即 $a\mid c$；
 - 若 $a\mid b$ 且 $a\mid c$，则对任意 $x,y\in\mathbb Z$，$a\mid xb+yc$。
 <!-- bilingual-en:start -->
-- $a\mid 0$, because of $0=a\cdot0$;
+- $a\mid 0$, because $0=a\cdot0$;
 - $1\mid a$ and $-1\mid a$;
-- if $a\mid b$ and $b\mid c$, $b=ar,c=bs$, so $c=a(rs)$, that is, $a\mid c$;
-- If $a\mid b$ and $a\mid c$, for any $x,y\in\mathbb Z$, $a\mid xb+yc$.
+- if $a\mid b$ and $b\mid c$, write $b=ar$ and $c=bs$; then $c=a(rs)$, so $a\mid c$;
+- if $a\mid b$ and $a\mid c$, then $a\mid xb+yc$ for any $x,y\in\mathbb Z$.
 <!-- bilingual-en:end -->
 
 最后一条说明：**共同因子必定整除任意整数线性组合**。它是本节所有算法正确性的入口。
 <!-- bilingual-en:start -->
-The last note:**The common factor must be integer-divisible for any linear combination of integers**.  It is the entry point for the correctness of all algorithms in this section.
+The last property says that **every common divisor divides every integer linear combination**. It is the key fact behind the correctness of every algorithm in this section.
 <!-- bilingual-en:end -->
 
 > [!definition] 最大公因数
 > 对不全为零的整数 $a,b$，[[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|最大公因数]] $\gcd(a,b)$ 是同时整除 $a,b$ 的最大正整数。约定 $\gcd(0,0)=0$，且 $\gcd(a,b)=\gcd(|a|,|b|)$。
 > <!-- bilingual-en:start -->
-> For an integer $a,b$ that is not all zero, [[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|Max Common Factor]] $\gcd(a,b)$ is the largest positive integer that divides $a,b$ simultaneously.  The contract is $\gcd(0,0)=0$, and $\gcd(a,b)=\gcd(|a|,|b|)$.
+> For integers $a,b$ that are not both zero, the [[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|greatest common divisor]] $\gcd(a,b)$ is the greatest positive integer that divides both $a$ and $b$. By convention, $\gcd(0,0)=0$, and $\gcd(a,b)=\gcd(|a|,|b|)$.
 > <!-- bilingual-en:end -->
 
 ### 12.2 Division Algorithm 与 Euclidean Algorithm
@@ -110,7 +107,7 @@ The last note:**The common factor must be integer-divisible for any linear combi
 
 **除法定理。** 若 $n>0$，则对每个整数 $a$，存在唯一整数 $q,r$ 使
 <!-- bilingual-en:start -->
-**Except statutory reason.**If $n>0$, for each integer $a$, there is a unique integer $q,r$ such that
+**Division algorithm.** If $n>0$, then for every integer $a$ there are unique integers $q,r$ such that
 <!-- bilingual-en:end -->
 
 $$
@@ -119,12 +116,12 @@ $$
 
 记 $r=\operatorname{rem}(a,n)$。唯一性证明不能跳步：若又有 $a=q'n+r'$ 且 $0\le r,r'<n$，相减得 $(q-q')n=r'-r$。右侧严格位于 $(-n,n)$，其中唯一的 $n$ 的倍数是 $0$，所以 $r=r'$，继而 $q=q'$。
 <!-- bilingual-en:start -->
-Remember $r=\operatorname{rem}(a,n)$.  The uniqueness proof cannot skip: if there is another $a=q'n+r'$ and $0\le r,r'<n$, subtract $(q-q')n=r'-r$.  The right side is strictly located at $(-n,n)$, where the only multiple of $n$ is $0$, so $r=r'$, and then $q=q'$.
+Write $r=\operatorname{rem}(a,n)$. The uniqueness proof is worth making explicit: if also $a=q'n+r'$ with $0\le r,r'<n$, subtraction gives $(q-q')n=r'-r$. The right-hand side lies strictly between $-n$ and $n$, where the only multiple of $n$ is $0$. Hence $r=r'$ and then $q=q'$.
 <!-- bilingual-en:end -->
 
 [[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|Euclidean algorithm]]依赖等式
 <!-- bilingual-en:start -->
-[[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|Euclidean algorithm]] dependency equality
+The [[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|Euclidean algorithm]] relies on the identity
 <!-- bilingual-en:end -->
 
 $$
@@ -133,19 +130,19 @@ $$
 
 **完整证明。** 写 $a=qb+r$。若 $d\mid a$ 且 $d\mid b$，则 $d\mid(a-qb)=r$；反过来若 $d\mid b$ 且 $d\mid r$，则 $d\mid(qb+r)=a$。因此两对数的共同因子集合完全相同，最大正元素也相同。
 <!-- bilingual-en:start -->
-**Complete proof.**Write $a=qb+r$.  If $d\mid a$ and $d\mid b$, $d\mid(a-qb)=r$; conversely, if $d\mid b$ and $d\mid r$, $d\mid(qb+r)=a$.  Therefore, the set of common factors for the two logarithms is identical, and the maximum positive element is also identical.
+**Complete proof.** Write $a=qb+r$. If $d\mid a$ and $d\mid b$, then $d\mid(a-qb)=r$. Conversely, if $d\mid b$ and $d\mid r$, then $d\mid(qb+r)=a$. Thus $(a,b)$ and $(b,r)$ have exactly the same common divisors, so their greatest positive common divisors are equal.
 <!-- bilingual-en:end -->
 
 每一步把第二个正参数换成更小的余数，故余数构成严格下降的非负整数列；良序原理保证它最终到达 $0$。若最后一行是 $r_{k-1}=q_kr_k+0$，则答案为 $r_k$。
 <!-- bilingual-en:start -->
-The second positive parameter is replaced by a smaller remainder at each step, so the remainder constitutes a non-negative integer sequence that is strictly descending; the good order principle guarantees that it eventually reaches $0$.  If the last line is $r_{k-1}=q_kr_k+0$, the answer is $r_k$.
+At each step, the second positive argument is replaced by a smaller nonnegative remainder. The remainders therefore form a strictly decreasing sequence of nonnegative integers, which must eventually reach $0$ by the well-ordering principle. If the final equation is $r_{k-1}=q_kr_k+0$, then the gcd is $r_k$.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit02-euclidean-algorithm.png|900]]
 
 读图：每一行都把上一行的除数变成新被除数、余数变成新除数，最后一个非零余数就是 gcd。
 <!-- bilingual-en:start -->
-Read: Each row changes the divisor of the previous row into the new divisor, the remainder into the new divisor, and the last non-zero remainder is gcd.
+How to read the diagram: in each row, the previous divisor becomes the new dividend and the previous remainder becomes the new divisor. The final nonzero remainder is the gcd.
 <!-- bilingual-en:end -->
 
 **例：**
@@ -178,7 +175,7 @@ So, $\gcd(1944,874)=2$.
 
 [[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|Bézout identity]]断言：若 $(a,b)\ne(0,0)$，则存在 $s,t\in\mathbb Z$ 使
 <!-- bilingual-en:start -->
-[[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|Bézout identity]] asserts: If $(a,b)\ne(0,0)$, there is a $s,t\in\mathbb Z$ that causes
+The [[模运算、欧几里得算法与 RSA#GCD、Euclidean algorithm 与 Bézout|Bézout identity]] states that if $(a,b)\ne(0,0)$, then there exist $s,t\in\mathbb Z$ such that
 <!-- bilingual-en:end -->
 
 $$
@@ -187,7 +184,7 @@ $$
 
 **为什么反向代入一定成功？** Euclidean algorithm 的每个余数都是前两个余数的整数线性组合。初始的 $a,b$ 显然是 $a,b$ 的线性组合；若 $r_{i-2}$ 与 $r_{i-1}$ 都是线性组合，则
 <!-- bilingual-en:start -->
-**Why do reverse substitutions always work?**Each remainder of Euclidean algorithm is an integer linear combination of the first two remainders.  The initial $a,b$ is obviously a linear combination of $a,b$; if both $r_{i-2}$ and $r_{i-1}$ are linear combinations, then
+**Why does back-substitution always work?** Every remainder produced by the Euclidean algorithm is an integer linear combination of the original inputs. Initially, $a$ and $b$ are trivially linear combinations of themselves. If both $r_{i-2}$ and $r_{i-1}$ are such linear combinations, then
 <!-- bilingual-en:end -->
 
 $$
@@ -196,7 +193,7 @@ $$
 
 仍是线性组合。最后一个非零余数就是 gcd，故结论成立。这也是扩展 Euclidean algorithm（课中称 **Pulverizer**）的循环不变量。
 <!-- bilingual-en:start -->
-It's still a linear combination.  The last non-zero remainder is gcd, so the conclusion is true.  This is also a cyclic invariant that extends Euclidean algorithm (called**Pulverizer**in the class).
+is another integer linear combination. The last nonzero remainder is the gcd, which proves the identity. This is also the loop invariant behind the extended Euclidean algorithm, called the **Pulverizer** in the course.
 <!-- bilingual-en:end -->
 
 例如
@@ -219,7 +216,7 @@ $$
 
 ### 12.4 素数分解为什么唯一
 <!-- bilingual-en:start -->
-*Why is 12.4 the prime number decomposition unique*
+*12.4 Why prime factorization is unique*
 <!-- bilingual-en:end -->
 
 关键引理是 Euclid's lemma：若素数 $p\mid ab$，则 $p\mid a$ 或 $p\mid b$。
@@ -234,7 +231,7 @@ The key step is Euclid's lemma: if a prime $p$ divides $ab$, then $p$ divides $a
 
 **唯一分解证明。** 假设
 <!-- bilingual-en:start -->
-**Unique factorization proof.**Assumptions
+**Proof of unique factorization.** Suppose
 <!-- bilingual-en:end -->
 
 $$
@@ -247,9 +244,6 @@ Both products are prime factorizations. Since $p_1$ divides $q_1\cdots q_s$, Euc
 <!-- bilingual-en:end -->
 
 ### 官方 block 与视频顺序
-<!-- bilingual-en:start -->
-*Official block and Video Order*
-<!-- bilingual-en:end -->
 
 | 顺序 | 内容 | 本地入口 |
 |---:|---|---|
@@ -261,27 +255,12 @@ Both products are prime factorizations. Since $p_1$ divides $q_1\cdots q_s$, Euc
 | 2.1.6 | Die Hard Primes | [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Hard_Primes.pdf|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/c3qNBNl1h8g.pdf|transcript]] |
 | 2.1.7 | Unique Factorization | [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/QsKtEuUyIdw.pdf]] |
 | 2.1.8–10 | Unique Primes；Divisors；GCDs II | 在线题 |
-<!-- bilingual-en:start -->
-|Order|Content|Local Portal|
-|---:|---|---|
-| 2.1.1 | GCDs & Linear Combinations | [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/et3FOZdI6pk.pdf|et3FOZdI6pk]] · [[MIT_OCW_6.042J_Materials/04_Captions/et3FOZdI6pk.srt|et3FOZdI6pk]] |
-| 2.1.2 | Euclidean Algorithm | [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/dW0f62lcCLE.pdf|dW0f62lcCLE]] |
-| 2.1.3 | Run Euclid Run | Online Questions |
-| 2.1.4 | Pulverizer | [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/yzKPotFLfsc.pdf|yzKPotFLfsc]] |
-| 2.1.5 | GCDs I | Online Questions |
-| 2.1.6 | Die Hard Primes | [[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Hard_Primes.pdf|slides]] · [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/c3qNBNl1h8g.pdf|transcript]] |
-| 2.1.7 | Unique Factorization | [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/QsKtEuUyIdw.pdf|QsKtEuUyIdw]] |
-| 2.1.8-10 | Unique Primes;Divisors;GCDs II | Online Questions |
-<!-- bilingual-en:end -->
 
 阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session12.pdf]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_GCDsandLinear.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_EuclidnAlgori.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Pulverizer.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_UniqueFactor.pdf]]。
-<!-- bilingual-en:start -->
-Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session12.pdf|MIT6_042JS15_Session12]].  Slides:[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_GCDsandLinear.pdf|MIT6_042JS15_GCDsandLinear]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_EuclidnAlgori.pdf|MIT6_042JS15_EuclidnAlgori]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Pulverizer.pdf|MIT6_042JS15_Pulverizer]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_UniqueFactor.pdf|MIT6_042JS15_UniqueFactor]].
-<!-- bilingual-en:end -->
 
 ### 在线反馈题（9 prompts，官方答案）
 <!-- bilingual-en:start -->
-*9 prompts (official answer)*
+*Online feedback questions (9 prompts, official answers)*
 <!-- bilingual-en:end -->
 
 | block | 题意 | 官方答案与检查 |
@@ -293,35 +272,29 @@ Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session12.pdf|
 | 2.1.10 Q1 | 两个给定素因数分解的 gcd | $37^2\cdot59^{29}$；共同素数取较小指数 |
 <!-- bilingual-en:start -->
 | block | Question | Official Answers and Checks |
-|—|—|—|
-| 2.1.3 Q1 | $\gcd(874,1944)$ with Euclid algorithm | $2$; see above for complete remainder chain |
-| 2.1.5 Q1-Q2 | $\gcd(21212121,12121212)$; used gcd recursion several times | $3030303$;$3$ |
-| 2.1.8 Q1-Q2 | Total number of prime factors (multiplicity in terms) and number of different prime factors for $40500$ | $40500=2^2 3^4 5^3$, Answer $9$ and $3$ |
-| 2.1.9 Q1-Q3 | $12$ Different prime factors, positive factors, integer factors | $2,6,12$ |
-| 2.1.10 Q1 | gcd | $37^2\cdot59^{29}$ for two given prime factorizations; the common prime takes the smaller exponent |
+|---|---|---|
+| 2.1.3 Q1 | $\gcd(874,1944)$ using the Euclidean algorithm | $2$; see above for the complete remainder chain |
+| 2.1.5 Q1-Q2 | Compute $\gcd(21212121,12121212)$; count the gcd recurrence steps | $3030303$; $3$ steps |
+| 2.1.8 Q1-Q2 | Total number of prime factors of $40500$, counting multiplicity, and number of distinct prime factors | $40500=2^2 3^4 5^3$; the answers are $9$ and $3$ |
+| 2.1.9 Q1-Q3 | Number of distinct prime factors, positive divisors, and integer divisors of $12$ | $2,6,12$ |
+| 2.1.10 Q1 | Gcd of two numbers given by prime factorizations | $37^2\cdot59^{29}$; take the smaller exponent of every common prime |
 <!-- bilingual-en:end -->
 
 原始练习：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S12_2.1.3_run-euclid-run.md|2.1.3]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S12_2.1.5_gcds-i.md|2.1.5]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S12_2.1.8_unique-primes.md|2.1.8]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S12_2.1.9_divisors.md|2.1.9]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S12_2.1.10_gcds-ii.md|2.1.10]]
-<!-- bilingual-en:start -->
-Original Activity: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S12_2.1.3_run-euclid-run.md|2.1.3]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S12_2.1.5_gcds-i.md|2.1.5]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S12_2.1.8_unique-primes.md|2.1.8]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S12_2.1.9_divisors.md|2.1.9]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S12_2.1.10_gcds-ii.md|2.1.10]]
-<!-- bilingual-en:end -->
 
 ### 课堂题（非官方独立题解）
 <!-- bilingual-en:start -->
-*Classroom Questions (Unofficial Independent Questions)*
+*In-class questions (unofficial independent solutions)*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp12.pdf]]。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp12.pdf|MIT6_042JS15_cp12]].
-<!-- bilingual-en:end -->
 
 > [!example]- CP12 Problem 1：Pulverizer
 > (a) 上文已得 $3(30)-4(22)=2$，故 $(x,y)=(3,-4)$。
 >
 > (b) 方程除以 $2$ 为 $15x+11y=1$。通解为 $x=3+11t,y=-4-15t$。取 $t=-1$，得 $(x',y')=(-8,11)$，且 $0\le11<30$。代回：$-8(30)+11(22)=2$。
 > <!-- bilingual-en:start -->
-> (a) As $3(30)-4(22)=2$ was obtained above, $(x,y)=(3,-4)$ accordingly.
+> (a) Since $3(30)-4(22)=2$, one solution is $(x,y)=(3,-4)$.
 > (b) Dividing the equation by $2$ gives $15x+11y=1$. The general solution is $x=3+11t,y=-4-15t$. Taking $t=-1$ gives $(x',y')=(-8,11)$ with $0\le11<30$. Substitution checks that $-8(30)+11(22)=2$.
 > <!-- bilingual-en:end -->
 
@@ -331,11 +304,10 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > $$\operatorname{lcm}(m,n)=2^9 5^{24}7^{22}11^{21}13\,17^{12}19^2.$$
 > 对任意素数 $p$，两式乘积中 $p$ 的指数为 $\min(\alpha_p,\beta_p)+\max(\alpha_p,\beta_p)=\alpha_p+\beta_p$，正好等于 $mn$ 中的指数，故 $\gcd(m,n)\operatorname{lcm}(m,n)=mn$。
 > <!-- bilingual-en:start -->
-> from prime factorization
-> For each prime number, the exponents are compared: gcd is the smallest exponent and lcm is the largest.  hence the question
+> Compare exponents prime by prime: the gcd takes the smaller exponent, while the lcm takes the larger. Therefore, in this problem,
 > $$\gcd(m,n)=2^3 11^7 17^9,$$
 > $$\operatorname{lcm}(m,n)=2^9 5^{24}7^{22}11^{21}13\,17^{12}19^2.$$
-> For any prime number $p$, the exponent of $p$ in the product of two is $\min(\alpha_p,\beta_p)+\max(\alpha_p,\beta_p)=\alpha_p+\beta_p$, just equal to the exponent of $mn$, so $\gcd(m,n)\operatorname{lcm}(m,n)=mn$.
+> For every prime $p$, the exponent of $p$ in the product of these two expressions is $\min(\alpha_p,\beta_p)+\max(\alpha_p,\beta_p)=\alpha_p+\beta_p$, exactly its exponent in $mn$. Hence $\gcd(m,n)\operatorname{lcm}(m,n)=mn$.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP12 Problem 3：Binary GCD 状态机
@@ -345,9 +317,9 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > (c) 在规则 (7) 之前始终有 $x,y>0$，考察正整数势函数 $P=xy$。把转移分块：规则 (2) 一步使 $P$ 变为 $P/4$，规则 (3),(4) 一步使 $P$ 变为 $P/2$。若下一步是规则 (5) 且 $x>y$，则此时 $x,y$ 都为奇数；减法后 $x-y$ 为偶数、$y$ 为奇数，所以紧接着必执行规则 (3)。这两步把乘积变为 $((x-y)/2)y<xy/2$；规则 (6) 完全对称。因此每个至多含两步的块都使 $P$ 至少减半。由初值 $P=ab$ 且终止前 $P\ge1$，这样的块不超过 $\log_2(ab)=\log_2a+\log_2b$个。再加最后的规则 (7)，转移数至多 $1+2(\log_2a+\log_2b)$，当然也满足题目要求的较粗上界 $1+3(\log_2a+\log_2b)$。
 > <!-- bilingual-en:start -->
-> (a) Take the invariant $e\gcd(x,y)=\gcd(a,b)$.  The initial $(a,b,1)$ is true.  When two numbers are even, $\gcd(x,y)=2\gcd(x/2,y/2)$. When only one number is even and the other number is odd, the factor $2$ which eliminates the even number does not change gcd.  Rule (7) changes $(x,x,e)$ into $(1,0,ex)$ and remains invariant.  The final state can only be $(1,0,g)$, so $g=\gcd(a,b)$.
-> (b) Once the rules (3)-(6) are executed, at least one coordinate of the new state is odd; the rule (7) terminates.  After that, it is impossible to "both coordinates are even" again, so rule (2) can only appear at the beginning.
-> (c) Always have $x,y>0$ before rule (7), examining the positive integer potential function $P=xy$.  The transfer block is divided into rules (2) to make $P$ become $P/4$ in one step, rules (3) and (4) to make $P$ become $P/2$ in one step.  If the next step is rule (5) and $x>y$, then $x,y$ is odd; after subtraction, $x-y$ is even and $y$ is odd, so the rule (3) must be executed immediately afterwards.  These two steps change the product to $((x-y)/2)y<xy/2$; the rule (6) is completely symmetric.  Thus, each block with at most two steps reduces the $P$ by at least half.  From an initial value of $P=ab$ and $P\ge1$ before termination, no more than $\log_2(ab)=\log_2a+\log_2b$ blocks.  Add the final rule (7), the number of transitions up to $1+2(\log_2a+\log_2b)$, of course, also meet the requirements of the subject's coarse upper bound $1+3(\log_2a+\log_2b)$.
+> (a) Use the invariant $e\gcd(x,y)=\gcd(a,b)$. It holds initially at $(a,b,1)$. If both numbers are even, $\gcd(x,y)=2\gcd(x/2,y/2)$. If exactly one is even, removing a factor of $2$ from that number does not change the gcd. Subtracting one odd number from another also preserves the gcd. Rule (7) sends $(x,x,e)$ to $(1,0,ex)$ while preserving the invariant. A terminal state has the form $(1,0,g)$, so $g=\gcd(a,b)$.
+> (b) After any application of rules (3)–(6), at least one coordinate is odd; rule (7) terminates the machine. Consequently, the state can never again have both coordinates even, so rule (2) can occur only at the beginning.
+> (c) Before rule (7), we have $x,y>0$. Consider the positive-integer potential $P=xy$. Rule (2) changes $P$ to $P/4$ in one step, while rules (3) and (4) change it to $P/2$. If rule (5) applies with $x>y$, then both $x$ and $y$ are odd. After subtraction, $x-y$ is even and $y$ is odd, so rule (3) must follow immediately. Together, the two steps change the product to $((x-y)/2)y<xy/2$; rule (6) is symmetric. Thus every block of at most two transitions reduces $P$ by at least half. Starting from $P=ab$ and maintaining $P\ge1$ before termination, there are at most $\log_2(ab)=\log_2a+\log_2b$ such blocks. Including the final rule (7), the number of transitions is at most $1+2(\log_2a+\log_2b)$, which also satisfies the requested looser bound $1+3(\log_2a+\log_2b)$.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP12 Problem 4：四个 gcd 性质
@@ -362,7 +334,7 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > (a) Bézout gives $g=sa+tb$; any common factor $d$ divides the right side, so $d\mid g$.
 > (b) If $a\mid bc$ and $\gcd(a,b)=1$, choose $x,y$ with $xa+yb=1$ and multiply the identity by $c$ to obtain $xac+ybc=c$. Both terms on the left are divisible by $a$, so $a\mid c$.
 > (c) Set $a=p$. If $p\nmid b$, then $\gcd(p,b)=1$, so part (b) gives $p\mid c$.
-> (d) Let $m=xa+yb$ be the least positive linear combination.  $g=\gcd(a,b)$ divides $m$.  Then write $a=qm+r$ with the division theorem, $r=a-q(xa+yb)$ is also a non-negative linear combination and $0\le r<m$; minimality forces $r=0$, so $m\mid a$.  Similarly, $m\mid b$, then $m\le g$, and $g\mid m$, then $g\le m$, so $m=g$.
+> (d) Let $m=xa+yb$ be the least positive integer expressible as a linear combination of $a$ and $b$, and let $g=\gcd(a,b)$. Every common divisor of $a$ and $b$ divides every linear combination, so $g\mid m$. By the division algorithm, write $a=qm+r$ with $0\le r<m$. Then $r=a-q(xa+yb)$ is also a linear combination of $a$ and $b$. The minimality of $m$ forces $r=0$, so $m\mid a$; the same argument gives $m\mid b$. Thus $m$ is a common divisor and $m\le g$. Since $g\mid m$ and both are positive, $g\le m$. Therefore $m=g$.
 > <!-- bilingual-en:end -->
 
 ### 易错点与三道自检
@@ -385,9 +357,6 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > <!-- bilingual-en:start -->
 > Use the Pulverizer (extended Euclidean algorithm) to express $\gcd(252,198)$ as a Bézout linear combination.
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > $252=198+54,198=3\cdot54+36,54=36+18$，故 $18=54-36=4\cdot54-198=4\cdot252-5\cdot198$。
 > <!-- bilingual-en:start -->
@@ -400,13 +369,10 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > <!-- bilingual-en:start -->
 > Why doesn't Euclidean algorithm need to know the prime factorization beforehand?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 每步只用除法定理和“共同因子集合不变”的证明；终止性来自严格下降余数，而不是唯一分解。
 > <!-- bilingual-en:start -->
-> In each step, we only use the division theorem and the proof that the set of common factors is invariant; the termination comes from the strict descending remainder, not from the unique decomposition.
+> Each step uses only the division algorithm and the fact that the set of common divisors is unchanged. Termination follows from the strictly decreasing remainders, not from unique factorization.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 3
@@ -415,9 +381,6 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > <!-- bilingual-en:start -->
 > If $d\mid a,b$, why is $d\mid\gcd(a,b)$ stronger than "$d\le\gcd(a,b)$"?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 后者只比较大小；前者还给出代数结构，可继续推出 $d$ 整除任何 Bézout 线性组合。
 > <!-- bilingual-en:start -->
@@ -426,7 +389,7 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 
 **知识链：**整除 → 共同因子 → Euclidean algorithm → Bézout → Euclid's lemma → 唯一素因数分解。
 <!-- bilingual-en:start -->
-**knowledge chain:**integer division→common factor→Euclidean algorithm→Bézout→Euclid's lemma→unique prime factorization.
+**Knowledge chain:** divisibility → common divisors → Euclidean algorithm → Bézout identity → Euclid's lemma → unique prime factorization.
 <!-- bilingual-en:end -->
 
 ---
@@ -440,12 +403,12 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 
 **问题。** 怎样把“余数相同”变成可代数运算的等价关系？什么时候模方程可以约分、除法或求逆？
 <!-- bilingual-en:start -->
-**The problem.**How do I turn the same remainder into an algebraic equivalence?  When can modular equations be reduced, divided, or inverted?
+**Questions.** How can “having the same remainder” be expressed as an algebraic equivalence relation? When may we cancel, divide, or take inverses in a congruence?
 <!-- bilingual-en:end -->
 
 ### 13.1 同余是等价关系
 <!-- bilingual-en:start -->
-*13.1 Congruence is equivalent*
+*13.1 Congruence is an equivalence relation*
 <!-- bilingual-en:end -->
 
 对模数 $n>1$，[[模运算、欧几里得算法与 RSA#同余与模运算|同余]]定义为
@@ -464,24 +427,24 @@ Equivalently, $a$ and $b$ have the same remainder when divided by $n$. By the di
 
 由定义立即验证自反、对称、传递，所以模 $n$ 同余把 $\mathbb Z$ 分成 $n$ 个余数类。
 <!-- bilingual-en:start -->
-The definition verifies reflexivity, symmetry, and transitivity immediately, so the modular $n$ congruence divides $\mathbb Z$ into $n$ remainder classes.
+The definition immediately verifies reflexivity, symmetry, and transitivity, so congruence modulo $n$ partitions $\mathbb Z$ into $n$ residue classes.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit02-modular-clock.png|900]]
 
 读图：时钟上相差整数圈的数落在同一余数位置，因而模 $n$ 运算可看成沿圆周前进后回绕。
 <!-- bilingual-en:start -->
-Reading: The number of distinct integer cycles on the clock falls in the same remainder position, so the modular $n$ operation can be viewed as going around the circle.
+How to read the diagram: integers that differ by a whole number of turns land at the same position on the clock. Arithmetic modulo $n$ can therefore be viewed as moving around a circle and wrapping around after $n$ steps.
 <!-- bilingual-en:end -->
 
 ### 13.2 同余运算规则
 <!-- bilingual-en:start -->
-*13.2 Congruent operation rules*
+*13.2 Arithmetic rules for congruences*
 <!-- bilingual-en:end -->
 
 若 $a\equiv b\pmod n$ 且 $c\equiv d\pmod n$，则
 <!-- bilingual-en:start -->
-If $a\equiv b\pmod n$ and $c\equiv d\pmod n$
+If $a\equiv b\pmod n$ and $c\equiv d\pmod n$, then
 <!-- bilingual-en:end -->
 
 $$
@@ -500,29 +463,29 @@ For multiplication, $ac-bd=a(c-d)+d(a-b)$, and both terms on the right are divis
 
 ### 13.3 模逆元
 <!-- bilingual-en:start -->
-*13.3 modular inverse*
+*13.3 Modular inverses*
 <!-- bilingual-en:end -->
 
 [[模运算、欧几里得算法与 RSA#同余与模运算|模逆元]] $k^{-1}$ 满足 $kk^{-1}\equiv1\pmod n$。
 <!-- bilingual-en:start -->
-[[模运算、欧几里得算法与 RSA#同余与模运算|modular inverse element]] $k^{-1}$ meets $kk^{-1}\equiv1\pmod n$.
+A [[模运算、欧几里得算法与 RSA#同余与模运算|modular inverse]] $k^{-1}$ satisfies $kk^{-1}\equiv1\pmod n$.
 <!-- bilingual-en:end -->
 
 **定理。** $k$ 模 $n$ 可逆，当且仅当 $\gcd(k,n)=1$。
 <!-- bilingual-en:start -->
-**theorem.**The $k$ mode $n$ is reversible if and only if $\gcd(k,n)=1$.
+**Theorem.** The residue class of $k$ is invertible modulo $n$ if and only if $\gcd(k,n)=1$.
 <!-- bilingual-en:end -->
 
 **证明。** 若可逆，则 $kk^{-1}-1=qn$，即 $kk^{-1}+n(-q)=1$，所以任何共同因子只能是 $1$。反过来，若 gcd 为 $1$，Bézout 给出 $sk+tn=1$，取模 $n$ 即 $sk\equiv1$，所以 $s$ 是逆元。
 <!-- bilingual-en:start -->
-**Proof.**If reversible, then $kk^{-1}-1=qn$, or $kk^{-1}+n(-q)=1$, so any common factor can only be $1$.  Conversely, if gcd is $1$, Bézout gives $sk+tn=1$, module $n$ is $sk\equiv1$, so $s$ is the inverse.
+**Proof.** If $k$ is invertible, then $kk^{-1}-1=qn$, or equivalently $kk^{-1}+n(-q)=1$, so every common divisor of $k$ and $n$ divides $1$. Conversely, if $\gcd(k,n)=1$, Bézout's identity gives $sk+tn=1$. Reducing modulo $n$ yields $sk\equiv1$, so $s$ is an inverse of $k$.
 <!-- bilingual-en:end -->
 
 ### 13.4 Chinese Remainder Theorem
 
 [[模运算、欧几里得算法与 RSA#同余与模运算|Chinese Remainder Theorem]]：若 $\gcd(a,b)=1$，对任意 $m,n$，方程
 <!-- bilingual-en:start -->
-[[模运算、欧几里得算法与 RSA#同余与模运算|Chinese Remainder Theorem]]: If $\gcd(a,b)=1$, for any $m,n$, the equation
+[[模运算、欧几里得算法与 RSA#同余与模运算|Chinese Remainder Theorem]]: If $\gcd(a,b)=1$, then for any residues $m,n$, the system
 <!-- bilingual-en:end -->
 
 $$
@@ -531,12 +494,12 @@ $$
 
 在模 $ab$ 意义下有唯一解。
 <!-- bilingual-en:start -->
-There is a unique solution in the sense of modulo $ab$.
+has a unique solution modulo $ab$.
 <!-- bilingual-en:end -->
 
 **构造。** 令 $b^{-1}$ 是 $b$ 模 $a$ 的逆元，$e_a=b^{-1}b$；同理 $e_b=a^{-1}a$。则
 <!-- bilingual-en:start -->
-**Construction.**Let $b^{-1}$ be the inverse of the $b$ module $a$, $e_a=b^{-1}b$; the same $e_b=a^{-1}a$.
+**Construction.** Let $b^{-1}$ denote the inverse of $b$ modulo $a$ and set $e_a=b^{-1}b$. Similarly, let $a^{-1}$ denote the inverse of $a$ modulo $b$ and set $e_b=a^{-1}a$.
 <!-- bilingual-en:end -->
 
 $$
@@ -551,7 +514,7 @@ So $x=me_a+ne_b$ satisfies both.
 
 **唯一性。** 若 $x,x'$ 都满足，则 $a\mid(x-x')$ 且 $b\mid(x-x')$。写 $x-x'=ak$。因为 $b\mid ak$ 且 $\gcd(a,b)=1$，Euclid's lemma 的互素版本给出 $b\mid k$，故 $ab\mid(x-x')$。
 <!-- bilingual-en:start -->
-**Uniqueness.**If all $x,x'$ are satisfied, $a\mid(x-x')$ and $b\mid(x-x')$.  Write $x-x'=ak$.  Because $b\mid ak$ and $\gcd(a,b)=1$, the mutual prime version of Euclid's lemma gives $b\mid k$, so $ab\mid(x-x')$.
+**Uniqueness.** If both $x$ and $x'$ satisfy the system, then $a\mid(x-x')$ and $b\mid(x-x')$. Write $x-x'=ak$. Since $b\mid ak$ and $\gcd(a,b)=1$, the coprime form of Euclid's lemma gives $b\mid k$, so $ab\mid(x-x')$.
 <!-- bilingual-en:end -->
 
 ### 官方顺序、资源与在线题
@@ -561,13 +524,10 @@ So $x=me_a+ne_b$ satisfies both.
 
 顺序为 Congruence mod $n$ → Divisibility and Congruence → Inverses mod $n$ → 约分条件 → Multiplicative Inverses → Inverses With Linear Combinations。
 <!-- bilingual-en:start -->
-The order is Congruence mod $n$ → Divisibility and Congruence → Inverses mod $n$ → approximate conditions → Multiplicative Inverses → Inverses With Linear Combinations.
+The order is Congruence mod $n$ → Divisibility and Congruence → Inverses mod $n$ → cancellation conditions → Multiplicative Inverses → Inverses With Linear Combinations.
 <!-- bilingual-en:end -->
 
 阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session13.pdf]]。视频讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/KvtLWgCTwn4.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/CAKSh3M0y8k.pdf]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_congruence.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_inverses_mod.pdf]]。
-<!-- bilingual-en:start -->
-Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session13.pdf|MIT6_042JS15_Session13]].  Video notes: [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/KvtLWgCTwn4.pdf|KvtLWgCTwn4]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/CAKSh3M0y8k.pdf|CAKSh3M0y8k]].  Slides:[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_congruence.pdf|MIT6_042JS15_congruence]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_inverses_mod.pdf|MIT6_042JS15_inverses_mod]].
-<!-- bilingual-en:end -->
 
 | block | prompt | 官方答案 |
 |---|---|---|
@@ -578,28 +538,22 @@ Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session13.pdf|
 | 2.2.6 Q1 | 由 $1=9(25)-7(32)$ 求 $32^{-1}\pmod{25}$ | $-7\equiv18$ |
 <!-- bilingual-en:start -->
 | block | prompt | Official Answer |
-|—|—|—|
-| 2.2.2 Q1 | Choose the $a\equiv b\pmod n$ equivalent from seven statements | Congruence; Same Remainder; $n\mid(a-b)$;$a=b+nk$;$a-b$ is a multiple of $n$ |
-| 2.2.4 Q1 | Why can't $2$ be approximated in $8\cdot2\equiv3\cdot2\pmod{10}$ | $2$ and $10$ have common factors |
-| 2.2.4 Q2 | What is required for the $k,n$ to be able to make an appointment to the $k$ | relatively prime |
-| 2.2.5 Q1 | Inverse of $2$-mode $7$ | $4$ |
+|---|---|---|
+| 2.2.2 Q1 | Select the statements equivalent to $a\equiv b\pmod n$ | Same residue; $n\mid(a-b)$; $a=b+nk$; $a-b$ is a multiple of $n$ |
+| 2.2.4 Q1 | Why can $2$ not be cancelled from $8\cdot2\equiv3\cdot2\pmod{10}$? | $2$ and $10$ have a common factor |
+| 2.2.4 Q2 | What condition on $k,n$ permits cancellation of $k$? | They must be relatively prime |
+| 2.2.5 Q1 | Inverse of $2$ modulo $7$ | $4$ |
 | 2.2.6 Q1 | $32^{-1}\pmod{25}$ from $1=9(25)-7(32)$ | $-7\equiv18$ |
 <!-- bilingual-en:end -->
 
 原始练习：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S13_2.2.2_divisibility-and-congruence.md|2.2.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S13_2.2.4_inverses-mod-n.md|2.2.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S13_2.2.5_multiplicative-inverses.md|2.2.5]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S13_2.2.6_inverses-with-linear-combinations.md|2.2.6]]
-<!-- bilingual-en:start -->
-Original Activity: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S13_2.2.2_divisibility-and-congruence.md|2.2.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S13_2.2.4_inverses-mod-n.md|2.2.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S13_2.2.5_multiplicative-inverses.md|2.2.5]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S13_2.2.6_inverses-with-linear-combinations.md|2.2.6]]
-<!-- bilingual-en:end -->
 
 ### 课堂题（非官方独立题解）
 <!-- bilingual-en:start -->
-*Classroom Questions (Unofficial Independent Questions)*
+*In-class questions (unofficial independent solutions)*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp13.pdf]]。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp13.pdf|MIT6_042JS15_cp13]].
-<!-- bilingual-en:end -->
 
 > [!example]- CP13 Problem 1：巨指数只看余数周期
 > 题式为 $9876^{3456789}(9^{99})^{5555}-6789^{3414259}$ 模 $14$。有 $9876\equiv6$，而 $6$ 的正幂在 $6,8$ 间交替；指数为奇数，故第一因子为 $6$。$9^3\equiv1$ 且 $99$ 被 $3$ 整除，故 $(9^{99})^{5555}\equiv1$。$6789\equiv-1$ 且指数为奇数，故末项为 $-1$。总和 $6-(-1)=7\pmod{14}$。
@@ -612,7 +566,7 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > (e) 逆命题成立且不需要互素：若 $x\equiv x'\pmod{ab}$，则 $ab\mid(x-x')$，自然有 $a\mid(x-x')$ 与 $b\mid(x-x')$。
 > <!-- bilingual-en:start -->
-> (a)-(d) is the construction and uniqueness proof of $e_a,e_b$.
+> Parts (a)–(d) are exactly the construction of $e_a,e_b$ and the uniqueness proof given above.
 > (e) The converse holds without assuming that $a$ and $b$ are coprime: if $x\equiv x'\pmod{ab}$, then $ab\mid(x-x')$, which immediately implies both $a\mid(x-x')$ and $b\mid(x-x')$.
 > <!-- bilingual-en:end -->
 
@@ -621,20 +575,20 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > (b) 设 $v=q(k)>1$。由 (a)，$k+tv\equiv k\pmod v$ 推出 $q(k+tv)\equiv q(k)=v\equiv0\pmod v$。正次数、正首项系数保证 $t$ 足够大时 $q(k+tv)$ 严格增长，故得到无限多个互异的 $v$ 的倍数。
 > <!-- bilingual-en:start -->
-> (a) Structural induction of recursively defined polynomials.  The identity function is obviously the same as the constant function.  If $r,s$ keeps the same, the addition compatibility is given to $(r+s)(j)\equiv(r+s)(k)$, and the multiplication compatibility is given to $(rs)(j)\equiv(rs)(k)$.  All structures are covered, and the conclusion is true.
-> (b) Suppose $v=q(k)>1$.  $q(k+tv)\equiv q(k)=v\equiv0\pmod v$ by (a), $k+tv\equiv k\pmod v$.  The positive number and the positive first term guarantee that $t$ is large enough for $q(k+tv)$ to grow strictly, so that infinite multiples of mutually different $v$ are obtained.
+> (a) Use structural induction on recursively defined polynomials. The identity and constant functions clearly preserve congruence. If $r$ and $s$ preserve congruence, compatibility with addition gives $(r+s)(j)\equiv(r+s)(k)$, and compatibility with multiplication gives $(rs)(j)\equiv(rs)(k)$. These cases cover every constructor, so the claim follows.
+> (b) Let $v=q(k)>1$. Since $k+tv\equiv k\pmod v$, part (a) gives $q(k+tv)\equiv q(k)=v\equiv0\pmod v$. Positive degree and a positive leading coefficient ensure that $q(k+tv)$ is strictly increasing for all sufficiently large $t$, producing infinitely many distinct multiples of $v$.
 > <!-- bilingual-en:end -->
 
 ### 易错点、自检与知识链
 <!-- bilingual-en:start -->
-*False Points, Self-Test and Knowledge Chain*
+*Common pitfalls, self-checks, and knowledge chain*
 <!-- bilingual-en:end -->
 
 - “$a\equiv b\pmod n$”是关于两数和模数的三元关系；$(\bmod n)$ 不是只修饰右边。
 - CRT 的模数互素保证模乘积唯一；不互素时需先检查余数在 gcd 模下相容。
 <!-- bilingual-en:start -->
-- "$a\equiv b\pmod n$" is a ternary relation between two numbers and modulus; $(\bmod n)$ does not just decorate the right side.
-The moduli of the CRT are mutually prime, which guarantees the uniqueness of the moduli product; when they are not mutually prime, the remainder should be checked for compatibility in the gcd moduli.
+- "$a\equiv b\pmod n$" is a ternary relation involving two integers and a modulus; $(\bmod n)$ does not modify only the right-hand side.
+- Coprime moduli make the CRT solution unique modulo their product. For non-coprime moduli, first check that the residues agree modulo the gcd.
 <!-- bilingual-en:end -->
 
 > [!question]- 自检 1
@@ -643,24 +597,18 @@ The moduli of the CRT are mutually prime, which guarantees the uniqueness of the
 > <!-- bilingual-en:start -->
 > Find $17^{-1}\pmod{43}$.
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > $43=2(17)+9,17=9+8,9=8+1$，反代 $1=2(43)-5(17)$，故逆元为 $-5\equiv38$。
 > <!-- bilingual-en:start -->
-> $43=2(17)+9,17=9+8,9=8+1$ and $1=2(43)-5(17)$, so the inverse element is $-5\equiv38$.
+> $43=2(17)+9,17=9+8,9=8+1$, and back-substitution gives $1=2(43)-5(17)$, so the inverse is $-5\equiv38$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 2
 > 解 $x\equiv2\pmod3, x\equiv3\pmod5$。
 >
 > <!-- bilingual-en:start -->
-> Answer $x\equiv2\pmod3, x\equiv3\pmod5$.
+> Solve $x\equiv2\pmod3$ and $x\equiv3\pmod5$.
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > $5^{-1}\equiv2\pmod3$，$3^{-1}\equiv2\pmod5$，故 $x\equiv2(2\cdot5)+3(2\cdot3)=38\equiv8\pmod{15}$。
 > <!-- bilingual-en:start -->
@@ -671,20 +619,17 @@ The moduli of the CRT are mutually prime, which guarantees the uniqueness of the
 > $6x\equiv6y\pmod{15}$ 能否约去 $6$？
 >
 > <!-- bilingual-en:start -->
-> Can $6x\equiv6y\pmod{15}$ make an appointment with $6$?
+> Can we cancel $6$ from $6x\equiv6y\pmod{15}$?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 不能直接约，因为 $\gcd(6,15)=3$。只能推出 $x\equiv y\pmod5$。
 > <!-- bilingual-en:start -->
-> Can't just ask 'cause $\gcd(6,15)=3$.  Only $x\equiv y\pmod5$ is available.
+> Not directly, because $\gcd(6,15)=3$. The congruence implies only $x\equiv y\pmod5$.
 > <!-- bilingual-en:end -->
 
 **知识链：**余数 → 同余等价类 → 运算兼容 → Bézout → 逆元 → CRT。
 <!-- bilingual-en:start -->
-**Knowledge Chain:**Remainder→Congruent Equivalence Class→Computational Compatibility→Bézout→Inverse→CRT.
+**Knowledge chain:** remainders → congruence classes → compatibility with arithmetic → Bézout identity → modular inverses → CRT.
 <!-- bilingual-en:end -->
 
 ---
@@ -693,12 +638,12 @@ The moduli of the CRT are mutually prime, which guarantees the uniqueness of the
 
 ### 14.1 Euler function 与单位群
 <!-- bilingual-en:start -->
-*14.1 Euler function and Unit Groups*
+*14.1 Euler's totient function and the group of units*
 <!-- bilingual-en:end -->
 
 [[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|Euler's totient function]]定义为
 <!-- bilingual-en:start -->
-[[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|Euler's totient function]] defined as
+The [[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|Euler's totient function]] is defined by
 <!-- bilingual-en:end -->
 
 $$
@@ -725,12 +670,12 @@ $$
 
 ### 14.2 Euler's Theorem 的完整证明
 <!-- bilingual-en:start -->
-*14.2 Full proof of Euler's Theorem*
+*14.2 Full proof of Euler's theorem*
 <!-- bilingual-en:end -->
 
 [[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|Euler's theorem]]：若 $\gcd(k,n)=1$，则
 <!-- bilingual-en:start -->
-[[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|Euler's theorem]]: If $\gcd(k,n)=1$
+[[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|Euler's theorem]]: if $\gcd(k,n)=1$, then
 <!-- bilingual-en:end -->
 
 $$
@@ -739,12 +684,12 @@ $$
 
 **构造。** 将 $\mathbb Z_n^*$ 中元素列为 $r_1,\ldots,r_{\varphi(n)}$。乘以 $k$ 后，$kr_i$ 仍可逆；若 $kr_i\equiv kr_j$，因 $k$ 可逆可约去，得 $r_i\equiv r_j$。有限集合上的单射是双射，因此 $kr_1,\ldots,kr_\varphi$ 只是原列表的重排。
 <!-- bilingual-en:start -->
-**Construction.**List the elements in the $\mathbb Z_n^*$ as $r_1,\ldots,r_{\varphi(n)}$.  Multiply $k$, $kr_i$ is still reversible; if $kr_i\equiv kr_j$, $k$ is reversible and reducible, $r_i\equiv r_j$.  The monojets on a finite set are bijective, so $kr_1,\ldots,kr_\varphi$ is just a rearrangement of the original list.
+**Construction.** List the elements of $\mathbb Z_n^*$ as $r_1,\ldots,r_{\varphi(n)}$. Multiplication by $k$ keeps each $kr_i$ invertible. If $kr_i\equiv kr_j$, the invertibility of $k$ permits cancellation, giving $r_i\equiv r_j$. Thus multiplication by $k$ is injective on a finite set and therefore bijective, so $kr_1,\ldots,kr_{\varphi(n)}$ is just a permutation of the original list.
 <!-- bilingual-en:end -->
 
 于是
 <!-- bilingual-en:start -->
-therefore
+Therefore,
 <!-- bilingual-en:end -->
 
 $$
@@ -753,13 +698,13 @@ $$
 
 $\prod_i r_i$ 仍可逆，约去后即得结论。若 $n=p$ 为素数，得到 [[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|Fermat's little theorem]]：$p\nmid k\Rightarrow k^{p-1}\equiv1\pmod p$。
 <!-- bilingual-en:start -->
-$\prod_i r_i$ is still reversible, and the conclusion is reached after the appointment.  If $n=p$ is a prime number, we get [[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|Fermat's little theorem]]:$p\nmid k\Rightarrow k^{p-1}\equiv1\pmod p$.
+$\prod_i r_i$ is invertible, so it may be cancelled to obtain the result. If $n=p$ is prime, this gives [[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|Fermat's little theorem]]: $p\nmid k\Rightarrow k^{p-1}\equiv1\pmod p$.
 <!-- bilingual-en:end -->
 
 > [!warning] 假设不可删除
 > 若 $\gcd(k,n)\ne1$，Euler theorem 不保证成立。例如 $2^{\varphi(4)}=4\not\equiv1\pmod4$。
 > <!-- bilingual-en:start -->
-> If $\gcd(k,n)\ne1$, Euler theorem is not guaranteed.  For example, $2^{\varphi(4)}=4\not\equiv1\pmod4$.
+> If $\gcd(k,n)\ne1$, Euler's theorem does not apply. For example, $2^{\varphi(4)}=4\not\equiv1\pmod4$.
 > <!-- bilingual-en:end -->
 
 ### 14.3 模指数的算法直觉
@@ -769,7 +714,7 @@ $\prod_i r_i$ is still reversible, and the conclusion is reached after the appoi
 
 不要先计算 $k^N$ 再取余。重复平方法将 $N$ 写成二进制；每次平方或乘法后立即取模。由于同余与乘法兼容，中间缩小数值不改变最终余数，复杂度只需 $O(\log N)$ 次模乘。
 <!-- bilingual-en:start -->
-Don't calculate $k^N$ before you balance.  The $N$ is written as binary by repeating the flattening method; the modulus is taken immediately after each square or multiplication.  Because congruence is compatible with multiplication, the middle reduced value does not change the final remainder, and the complexity only needs $O(\log N)$ submodular multiplication.
+Do not compute $k^N$ in full and reduce only at the end. Repeated squaring uses the binary expansion of $N$ and reduces modulo $n$ after every square or multiplication. Because congruence is compatible with multiplication, reducing intermediate values does not change the final residue, and only $O(\log N)$ modular multiplications are required.
 <!-- bilingual-en:end -->
 
 ### 官方顺序、资源与在线题（9 prompts）
@@ -778,9 +723,6 @@ Don't calculate $k^N$ before you balance.  The $N$ is written as binary by repea
 <!-- bilingual-en:end -->
 
 阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session14.pdf]]。讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/TeRYL7kkhqs.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/dZgI16nMuqE.pdf]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_ModularEuler.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_TheRingZn.pdf]]。
-<!-- bilingual-en:start -->
-Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session14.pdf|MIT6_042JS15_Session14]].  Statements: [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/TeRYL7kkhqs.pdf|TeRYL7kkhqs]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/dZgI16nMuqE.pdf|dZgI16nMuqE]].  Slides:[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_ModularEuler.pdf|MIT6_042JS15_ModularEuler]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_TheRingZn.pdf|MIT6_042JS15_TheRingZn]].
-<!-- bilingual-en:end -->
 
 | block | prompt | 官方答案 |
 |---|---|---|
@@ -793,43 +735,37 @@ Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session14.pdf|
 | 2.3.7 Q1–Q2 | $\varphi(175)$；$22^{12001}\bmod175$ | $120$；$22$ |
 <!-- bilingual-en:start -->
 | block | prompt | Official Answer |
-|—|—|—|
-| 2.3.2 Q1 | Which of the expressions is equal to $\varphi(300)$ | $\varphi(3)\varphi(100)$;$\varphi(4)\varphi(3)\varphi(25)$ |
-| 2.3.4 Q1 | The Constant Ring in $\mathbb Z_n$ | The Additive Exchange, the Multiplicative Combination, and the Distribution Law; In general, the factor cannot be reduced |
+|---|---|---|
+| 2.3.2 Q1 | Which expressions equal $\varphi(300)$? | $\varphi(3)\varphi(100)$; $\varphi(4)\varphi(3)\varphi(25)$ |
+| 2.3.4 Q1 | Ring laws that always hold in $\mathbb Z_n$ | Commutativity of addition, associativity of multiplication, and distributivity; cancellation does not hold in general |
 | 2.3.4 Q2 | $\mathbb Z_7^*$ | $1,2,3,4,5,6$ |
-| 2.3.5 Q1-Q2 | $9+12$ at $\mathbb Z_{13}$; $7\cdot5$ at $\mathbb Z_8$ | $8$; $3$ |
+| 2.3.5 Q1-Q2 | $9+12$ in $\mathbb Z_{13}$; $7\cdot5$ in $\mathbb Z_8$ | $8$; $3$ |
 | 2.3.5 Q3 | The effect of multiplying $\mathbb Z_n^*$ by one unit | The set of elements is the same, and the order may change |
 | 2.3.6 Q1 | $\operatorname{rem}(24^{78},79)$ | $1$ |
-| 2.3.7 Q1-Q2 | $\varphi(175)$;$22^{12001}\bmod175$ | $120$;$22$ |
+| 2.3.7 Q1-Q2 | $\varphi(175)$; $22^{12001}\bmod175$ | $120$; $22$ |
 <!-- bilingual-en:end -->
 
 原始练习：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S14_2.3.2_euler-s-totient-function.md|2.3.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S14_2.3.4_the-ring.md|2.3.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S14_2.3.5_z-mod-n.md|2.3.5]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S14_2.3.6_fermat-s-little-theorem.md|2.3.6]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S14_2.3.7_euler-s-theorem.md|2.3.7]]
-<!-- bilingual-en:start -->
-Original Activity: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S14_2.3.2_euler-s-totient-function.md|2.3.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S14_2.3.4_the-ring.md|2.3.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S14_2.3.5_z-mod-n.md|2.3.5]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S14_2.3.6_fermat-s-little-theorem.md|2.3.6]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S14_2.3.7_euler-s-theorem.md|2.3.7]]
-<!-- bilingual-en:end -->
 
 ### 课堂题（非官方独立题解）
 <!-- bilingual-en:start -->
-*Classroom Questions (Unofficial Independent Questions)*
+*In-class questions (unofficial independent solutions)*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp14.pdf]]。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp14.pdf|MIT6_042JS15_cp14]].
-<!-- bilingual-en:end -->
 
 > [!example]- CP14 Problem 1
 > $297=3^3\cdot11$，故 $\varphi(297)=18\cdot10=180$。又 $\gcd(26,297)=1$，且 $1818181=180(10101)+1$，所以
 > $$26^{1818181}\equiv(26^{180})^{10101}26\equiv26\pmod{297}.$$
 > <!-- bilingual-en:start -->
-> $297=3^3\cdot11$, hence $\varphi(297)=18\cdot10=180$.  And $\gcd(26,297)=1$, and $1818181=180(10101)+1$, so
+> Since $297=3^3\cdot11$, we have $\varphi(297)=18\cdot10=180$. Also, $\gcd(26,297)=1$ and $1818181=180(10101)+1$, so
 > $$26^{1818181}\equiv(26^{180})^{10101}26\equiv26\pmod{297}.$$
 > <!-- bilingual-en:end -->
 
 > [!example]- CP14 Problem 2
 > $2012\equiv10\pmod{77}$，而 $\gcd(10,77)=1$，所以 $2012$ 及其任何正幂都有逆元。(b) $77=7\cdot11$，$\varphi(77)=6\cdot10=60$。(c) $1200=20\varphi(77)$，故 $2012^{1200}\equiv1\pmod{77}$。
 > <!-- bilingual-en:start -->
-> $2012\equiv10\pmod{77}$, and $\gcd(10,77)=1$, so $2012$ and any positive power have inverse elements.  (b)$77=7\cdot11$,$\varphi(77)=6\cdot10=60$.  (c) $1200=20\varphi(77)$, hence $2012^{1200}\equiv1\pmod{77}$.
+> (a) Since $2012\equiv10\pmod{77}$ and $\gcd(10,77)=1$, the residue of $2012$, and hence every positive power of it, is invertible modulo $77$. (b) Since $77=7\cdot11$, $\varphi(77)=6\cdot10=60$. (c) Because $1200=20\varphi(77)$, Euler's theorem gives $2012^{1200}\equiv1\pmod{77}$.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP14 Problem 3
@@ -852,7 +788,7 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 
 ### 自检与知识链
 <!-- bilingual-en:start -->
-*Self-examination and Knowledge Chain*
+*Self-checks and knowledge chain*
 <!-- bilingual-en:end -->
 
 > [!question]- 自检 1
@@ -861,9 +797,6 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > <!-- bilingual-en:start -->
 > Find $\varphi(360)$.
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > $360=2^3 3^2 5$，故 $360(1-1/2)(1-1/3)(1-1/5)=96$。
 > <!-- bilingual-en:start -->
@@ -876,9 +809,6 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > <!-- bilingual-en:start -->
 > Find $7^{222}\bmod20$.
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > $\varphi(20)=8$，$222=27\cdot8+6$，而 $7^2\equiv9,7^4\equiv1$，故 $7^6\equiv9$。
 > <!-- bilingual-en:start -->
@@ -889,11 +819,8 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > Euler theorem 的“乘法重排”证明在哪一步使用了 $\gcd(k,n)=1$？
 >
 > <!-- bilingual-en:start -->
-> At which step does Euler theorem's Multiply Reorder proof use $\gcd(k,n)=1$?
+> At which steps does the multiplicative-permutation proof of Euler's theorem use $\gcd(k,n)=1$?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 两次：保证 $kr_i$ 仍在 $\mathbb Z_n^*$；保证从 $kr_i\equiv kr_j$ 约去 $k$，从而得到置换。
 > <!-- bilingual-en:start -->
@@ -902,7 +829,7 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 
 **知识链：**CRT → 单位集合 → $\varphi$ 乘法性 → 乘法置换 → Euler/FLT → 快速模指数。
 <!-- bilingual-en:start -->
-**knowledge chain:**CRT→set of units→$\varphi$ multiplicativity→multiplicative permutation→Euler/FLT→fast modulus index.
+**Knowledge chain:** CRT → units modulo $n$ → multiplicativity of $\varphi$ → multiplication as a permutation → Euler/FLT → fast modular exponentiation.
 <!-- bilingual-en:end -->
 
 ---
@@ -910,9 +837,6 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 ## Problem Set 5
 
 原题：[[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps5.pdf]]。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps5.pdf|MIT6_042JS15_ps5]].
-<!-- bilingual-en:end -->
 
 > [!example]- PS5 Problem 1：Binary Pulverizer
 > **预处理。** 若原输入 $A,B$ 同时为偶数，先重复提取共同因子 $2$，写成 $A=2^ra,B=2^rb$，使 $a,b$ 至少一个为奇数。以下先求 $\gcd(a,b)$ 的系数；最后因 $\gcd(A,B)=2^r\gcd(a,b)$，同一对系数也立即给出 $A,B$ 的 Bézout 组合。
@@ -925,11 +849,11 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps5.pdf|
 > $$(u-b)a+(v+a)b=ua+vb=z.$$
 > 因而 $z/2=((u-b)/2)a+((v+a)/2)b$。这给出所有除以 $2$ 的合法系数更新。算法终止时 $x$ 或 $y$ 为 gcd，相应系数就是 Bézout 系数。
 > <!-- bilingual-en:start -->
-> If the original input $A,B$ is also even, the common factor $2$ is extracted repeatedly and written as $A=2^ra,B=2^rb$, so that at least one of $a,b$ is odd.  The coefficients of $\gcd(a,b)$ are calculated first, and the Bézout combinations of $A,B$ are given immediately for the same pair of coefficients as $\gcd(A,B)=2^r\gcd(a,b)$.
-> **Objective.**binary gcd while maintaining
+> **Preprocessing.** If the original inputs $A,B$ are both even, repeatedly factor out their common power of $2$ and write $A=2^ra,B=2^rb$, where at least one of $a,b$ is odd. First compute coefficients for $\gcd(a,b)$. Because $\gcd(A,B)=2^r\gcd(a,b)$, the same coefficients immediately give a Bézout combination of $A,B$.
+> **Objective.** Run binary gcd while maintaining
 > $$x=u_xa+v_xb,\qquad y=u_ya+v_yb.$$
-> The initial coefficient is $(u_x,v_x)=(1,0),(u_y,v_y)=(0,1)$.  The rule $x\leftarrow x-y$ updates the $(u_x,v_x)\leftarrow(u_x-u_y,v_x-v_y)$ at the same time; the exchange is also the exchange factor.
-> If $z=ua+vb$ is even: if $u,v$ is even, divide each by $2$; otherwise, $u-b$ and $v+a$ are even.  There are three kinds of parity: if $a$ is odd or $b$ is even, then $ua+vb$ is even and $u$ is even, but "$u,v$ is not even" is odd and $v$ is even; if $a$ is even and $b$ is odd, then $u,v$ is even; if $a,b$ is odd, then $u+v$ is even and not even, then is odd.  In all three cases, $u-b,v+a$ is given to be even, and
+> Initially, $(u_x,v_x)=(1,0)$ and $(u_y,v_y)=(0,1)$. When $x\leftarrow x-y$, update $(u_x,v_x)\leftarrow(u_x-u_y,v_x-v_y)$ as well; swapping $x,y$ also swaps their coefficient pairs.
+> Suppose $z=ua+vb$ is even. If $u,v$ are both even, divide both coefficients by $2$. Otherwise, we must show that $u-b$ and $v+a$ are both even. There are three parity cases. If $a$ is odd and $b$ is even, the evenness of $ua+vb$ forces $u$ to be even; because $u,v$ are not both even, $v$ is odd. The case where $a$ is even and $b$ is odd is symmetric. If $a,b$ are both odd, then $u+v$ is even, so when $u,v$ are not both even they must both be odd. In every case, $u-b$ and $v+a$ are even, and
 > $$(u-b)a+(v+a)b=ua+vb=z.$$
 > Thus $z/2=((u-b)/2)a+((v+a)/2)b$. This gives the valid coefficient update when the current value is halved. When the algorithm terminates, the nonzero value is the gcd, and its stored coefficients are Bézout coefficients.
 > <!-- bilingual-en:end -->
@@ -940,8 +864,8 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps5.pdf|
 > (b) 在 $1,\ldots,p-1$ 中，每个元素有唯一逆元。除自逆元 $1,p-1$ 外，其余元素可成对配成 $a,a^{-1}$，每对乘积为 $1$。所以
 > $$(p-1)!\equiv1\cdot(p-1)\equiv-1\pmod p.$$
 > <!-- bilingual-en:start -->
-> (a) $k^2\equiv1\pmod p$ is equivalent to $p\mid(k-1)(k+1)$.  Because $p$ is prime, $p\mid k-1$ or $p\mid k+1$; within $0<k<p$, $k=1$ or $p-1$.  Reverse direct substitution.
-> (b) In $1,\ldots,p-1$, each element has a unique inverse.  Except for the self-inverse element $1,p-1$, the other elements can be paired into $a,a^{-1}$, and each pair of products is $1$.  therefore
+> (a) $k^2\equiv1\pmod p$ is equivalent to $p\mid(k-1)(k+1)$. Because $p$ is prime, $p\mid k-1$ or $p\mid k+1$; within $0<k<p$, this means $k=1$ or $k=p-1$. The converse follows by direct substitution.
+> (b) In $1,\ldots,p-1$, every element has a unique inverse. Apart from the self-inverse elements $1$ and $p-1$, the elements pair off as $a,a^{-1}$, with each pair contributing a product of $1$. Therefore,
 > $$(p-1)!\equiv1\cdot(p-1)\equiv-1\pmod p.$$
 > <!-- bilingual-en:end -->
 
@@ -955,11 +879,10 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps5.pdf|
 > (d) 将 $n=\prod_i p_i^{\alpha_i}$，反复应用乘法性与 $\varphi(p^\alpha)=p^\alpha-p^{\alpha-1}$：
 > $$\varphi(n)=\prod_i p_i^{\alpha_i}(1-1/p_i)=n\prod_i(1-1/p_i).$$
 > <!-- bilingual-en:start -->
-> Multiplicativity of**PS5 Problem 3:$\varphi$**
-> (a) CRT just shows that $f(x)=(x\bmod a,x\bmod b)$ from $[0,ab)$ to $[0,a)\times[0,b)$ is both inverse and unique, and thus bijective.
+> (a) The CRT says precisely that $f(x)=(x\bmod a,x\bmod b)$ maps $[0,ab)$ bijectively onto $[0,a)\times[0,b)$: every pair of residues has exactly one preimage modulo $ab$.
 > (b) $\gcd(x,ab)=1$ if and only if $\gcd(x,a)=\gcd(x,b)=1$; therefore the restriction of $f$ is a bijection $\mathbb Z_{ab}^*\to\mathbb Z_a^*\times\mathbb Z_b^*$.
-> (c) Base: $\varphi(ab)=\varphi(a)\varphi(b)$.
-> (d) $n=\prod_i p_i^{\alpha_i}$, repeated application of multiplicativity and $\varphi(p^\alpha)=p^\alpha-p^{\alpha-1}$:
+> (c) Taking cardinalities gives $\varphi(ab)=\varphi(a)\varphi(b)$.
+> (d) Write $n=\prod_i p_i^{\alpha_i}$ and repeatedly apply multiplicativity together with $\varphi(p^\alpha)=p^\alpha-p^{\alpha-1}$:
 > $$\varphi(n)=\prod_i p_i^{\alpha_i}(1-1/p_i)=n\prod_i(1-1/p_i).$$
 > <!-- bilingual-en:end -->
 
@@ -974,7 +897,7 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps5.pdf|
 
 **问题。** 不预先共享秘密的两个人怎样安全通信？RSA 的解密为什么对所有消息正确？哪些计算必须容易，哪个计算必须困难？
 <!-- bilingual-en:start -->
-**The problem.**How do two people communicate securely without sharing secrets beforehand?  Why is decryption by RSA correct for all messages?  Which calculations must be easy and which calculations must be difficult?
+**Questions.** How can two people communicate securely without first sharing a secret? Why does RSA decryption work for every message? Which computations must be easy, and which one must remain hard?
 <!-- bilingual-en:end -->
 
 ### 15.1 公钥与私钥的构造
@@ -984,7 +907,7 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps5.pdf|
 
 [[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|RSA public-key cryptosystem]]的数学核心如下。
 <!-- bilingual-en:start -->
-[[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|RSA public-key cryptosystem]]'s mathematical core is as follows.
+The mathematical core of the [[模运算、欧几里得算法与 RSA#Euler 定理与 RSA|RSA public-key cryptosystem]] is as follows.
 <!-- bilingual-en:end -->
 
 1. 选取不同大素数 $p,q$，令 $n=pq$，因而 $\varphi(n)=(p-1)(q-1)$。
@@ -993,11 +916,13 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps5.pdf|
 4. 公开 $(e,n)$，保密 $(d,n)$ 及 $p,q$。
 5. 消息 $m\in[0,n)$ 加密为 $c\equiv m^e\pmod n$；解密为 $c^d\pmod n$。
 <!-- bilingual-en:start -->
-1. Select different large primes $p,q$, let $n=pq$, and thus $\varphi(n)=(p-1)(q-1)$.
-2. Select $e$ to make $\gcd(e,\varphi(n))=1$.
-3. Obtain $d$ with Pulverizer to make $ed\equiv1\pmod{\varphi(n)}$.
-4. Disclosure of $(e,n)$, Confidential $(d,n)$ and $p,q$.
-5. Message $m\in[0,n)$ encrypted to $c\equiv m^e\pmod n$; decrypted to $c^d\pmod n$.
+
+&nbsp;
+**1.** Choose distinct large primes $p,q$ and set $n=pq$, so $\varphi(n)=(p-1)(q-1)$.<br>
+**2.** Choose $e$ with $\gcd(e,\varphi(n))=1$.<br>
+**3.** Use the Pulverizer to find $d$ such that $ed\equiv1\pmod{\varphi(n)}$.<br>
+**4.** Publish $(e,n)$; keep $(d,n)$ and the factors $p,q$ secret.<br>
+**5.** Encrypt a message $m\in[0,n)$ as $c\equiv m^e\pmod n$; decrypt it as $c^d\pmod n$.<br>
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit02-rsa-flow.png|900]]
@@ -1014,12 +939,12 @@ The public key lets anyone encrypt without revealing the inverse exponent $d$. A
 
 ### 15.2 正确性：不能偷用互素假设
 <!-- bilingual-en:start -->
-*15.2 Correctness: Mutual prime assumptions cannot be used secretly*
+*15.2 Correctness without an unjustified coprimality assumption*
 <!-- bilingual-en:end -->
 
 由 $ed\equiv1\pmod{(p-1)(q-1)}$，存在整数 $t$ 使
 <!-- bilingual-en:start -->
-By $ed\equiv1\pmod{(p-1)(q-1)}$, there is an integer $t$ that causes
+Since $ed\equiv1\pmod{(p-1)(q-1)}$, there is an integer $t$ such that
 <!-- bilingual-en:end -->
 
 $$
@@ -1035,12 +960,12 @@ If $\gcd(m,n)=1$, Euler's theorem immediately gives $m^{ed}\equiv m\pmod n$. How
 - 若 $p\nmid m$，则 $ed\equiv1\pmod{p-1}$，Fermat 给 $m^{ed}=m(m^{p-1})^k\equiv m\pmod p$。
 <!-- bilingual-en:start -->
 - If $p\mid m$, $m^{ed}\equiv0\equiv m\pmod p$;
-- If $p\nmid m$, $ed\equiv1\pmod{p-1}$, Fermat to $m^{ed}=m(m^{p-1})^k\equiv m\pmod p$.
+- If $p\nmid m$, then $ed\equiv1\pmod{p-1}$, and Fermat's little theorem gives $m^{ed}=m(m^{p-1})^k\equiv m\pmod p$.
 <!-- bilingual-en:end -->
 
 所以无论哪种情形都有 $m^{ed}\equiv m\pmod p$。同理模 $q$ 成立。$p,q$ 互素，CRT 推出
 <!-- bilingual-en:start -->
-So there's $m^{ed}\equiv m\pmod p$ in either case.  The empathetic model $q$ stands.  $p,q$ Interprime, CRT Launch
+Thus $m^{ed}\equiv m\pmod p$ in either case. The same argument works modulo $q$. Since $p$ and $q$ are coprime, the CRT gives
 <!-- bilingual-en:end -->
 
 $$
@@ -1073,7 +998,7 @@ $$
 
 $p,q$ 是方程 $X^2-(p+q)X+n=0$ 的两根，故也能因式分解 $n$。课程中的 “Reducing Factoring to SAT” 用来说明：一个具体计算问题可编码为布尔可满足性问题；它不等于证明 SAT 或 factoring 在经典计算上容易。
 <!-- bilingual-en:start -->
-$p,q$ is the two roots of equation $X^2-(p+q)X+n=0$, so it can factorize $n$.  The "Reducing Factoring to SAT" in the course is used to show that a specific computational problem can be encoded as a Boolean satisfiability problem; it is not equivalent to proving that SAT or factoring are computationally easy classically.
+The numbers $p,q$ are the two roots of $X^2-(p+q)X+n=0$, so this also factors $n$. The course segment “Reducing Factoring to SAT” shows that a concrete computational problem can be encoded as a Boolean satisfiability problem; it does not prove that SAT or factoring is easy on a classical computer.
 <!-- bilingual-en:end -->
 
 ### 官方顺序、资源与在线题（4 prompts）
@@ -1087,9 +1012,6 @@ Order: RSA Public Key Encryption → RSA Encryption → Reducing Factoring to SA
 <!-- bilingual-en:end -->
 
 阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session15.pdf]]。讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/ZUZ8VbX1YNQ.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/yWIQCewgfwY.pdf]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_RSA_Encytion.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_FactoringSAT.pdf]]。
-<!-- bilingual-en:start -->
-Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session15.pdf|MIT6_042JS15_Session15]].  Statements: [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/ZUZ8VbX1YNQ.pdf|ZUZ8VbX1YNQ]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/yWIQCewgfwY.pdf|yWIQCewgfwY]].  Slides:[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_RSA_Encytion.pdf|MIT6_042JS15_RSA_Encytion]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_FactoringSAT.pdf|MIT6_042JS15_FactoringSAT]].
-<!-- bilingual-en:end -->
 
 | block | prompt | 官方答案 |
 |---|---|---|
@@ -1099,35 +1021,29 @@ Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session15.pdf|
 | 2.4.5 Q2 | 为保证安全而应困难的计算 | 只知 $n$ 求 $p,q$，即分解 600 位合数 |
 <!-- bilingual-en:start -->
 | block | prompt | Official Answer |
-|—|—|—|
-| 2.4.2 Q1 | How to Obtain the Private Key Exponent $d$ | Find the Inverse Element of the Number $e$ of a Mutual Element with $(p-1)(q-1)$ under the Modulo $(p-1)(q-1)$ |
-| 2.4.4 Q1 | Number of $3780$ interleavers from $1$ to $3780$ | $3780=2^2 3^3 5\cdot7$, Answer $864$ |
-| 2.4.5 Q1 | RSA must be easy to calculate | prime test; calculate $pq$ and $\varphi(pq)$ (known $p,q$); random numbers/large primes; gcd, inverse; modular fast power |
-| 2.4.5 Q2 | Difficult calculations for security | Only $n$ for $p,q$, that is, decompose the 600-bit sum |
+|---|---|---|
+| 2.4.2 Q1 | How is the private exponent $d$ obtained? | Choose $e$ coprime to $(p-1)(q-1)$ and find its inverse modulo $(p-1)(q-1)$ |
+| 2.4.4 Q1 | How many integers from $1$ through $3780$ are coprime to $3780$? | $3780=2^2 3^3 5\cdot7$; the answer is $864$ |
+| 2.4.5 Q1 | Computations RSA requires to be easy | Primality testing; computing $pq$ and $\varphi(pq)$ when $p,q$ are known; generating random numbers and large primes; gcds, inverses, and fast modular exponentiation |
+| 2.4.5 Q2 | Computation that should be hard for security | Recovering $p,q$ from $n$ alone, i.e. factoring a 600-digit composite integer |
 <!-- bilingual-en:end -->
 
 原始练习：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S15_2.4.2_rsa-encryption.md|2.4.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S15_2.4.4_relative-primality.md|2.4.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S15_2.4.5_rsa-computations.md|2.4.5]]
-<!-- bilingual-en:start -->
-Original Activity: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S15_2.4.2_rsa-encryption.md|2.4.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S15_2.4.4_relative-primality.md|2.4.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S15_2.4.5_rsa-computations.md|2.4.5]]
-<!-- bilingual-en:end -->
 
 ### 课堂题（非官方独立题解）
 <!-- bilingual-en:start -->
-*Classroom Questions (Unofficial Independent Questions)*
+*In-class questions (unofficial independent solutions)*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp15.pdf]]。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp15.pdf|MIT6_042JS15_cp15]].
-<!-- bilingual-en:end -->
 
 > [!example]- CP15 Problem 1：完整的小型 RSA 演算
 > 选 $p=11,q=17$，则 $n=187,\varphi(n)=160$。选 $e=3$，因 $\gcd(3,160)=1$；$3\cdot107=321\equiv1\pmod{160}$，所以 $d=107$。公钥 $(3,187)$，私钥 $(107,187)$。
 >
 > 发送代码 $m=5$：$c=5^3\bmod187=125$。接收方计算 $125^{107}\bmod187=5$。最后一步应用重复平方法；结果回到区间 $[0,187)$ 中的原消息，完成验算。
 > <!-- bilingual-en:start -->
-> Select $p=11,q=17$, then $n=187,\varphi(n)=160$.  Select $e=3$, because $\gcd(3,160)=1$; $3\cdot107=321\equiv1\pmod{160}$, so $d=107$.  Public key $(3,187)$, private key $(107,187)$.
-> Send code $m=5$:$c=5^3\bmod187=125$.  The receiver calculates $125^{107}\bmod187=5$.  The final step is to apply the method of repeated flattening, and the result is returned to the original message in the interval $[0,187)$ to complete the checking.
+> Choose $p=11$ and $q=17$, giving $n=187$ and $\varphi(n)=160$. Choose $e=3$ because $\gcd(3,160)=1$. Since $3\cdot107=321\equiv1\pmod{160}$, take $d=107$. The public key is $(3,187)$, and the private key is $(107,187)$.
+> Send the encoded message $m=5$: $c=5^3\bmod187=125$. The receiver computes $125^{107}\bmod187=5$ by repeated squaring. The result is the original message in $[0,187)$, completing the check.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP15 Problem 2：知道 $\varphi(n)$ 就能破解
@@ -1136,8 +1052,8 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > (b) 若 $n=pq$，则 $\varphi(n)=pq-p-q+1=n-(p+q)+1$，故 $S=p+q=n-\varphi(n)+1$。判别式 $S^2-4n=(p-q)^2$，于是
 > $$p,q=\frac{S\pm\sqrt{S^2-4n}}2.$$
 > <!-- bilingual-en:start -->
-> (a) Decryption is achieved by requesting $d=e^{-1}\pmod{\varphi(n)}$ from the public $e$ and $\varphi(n)$.
-> (b) If $n=pq$, then $\varphi(n)=pq-p-q+1=n-(p+q)+1$, and hence $S=p+q=n-\varphi(n)+1$.  Discriminant $S^2-4n=(p-q)^2$, so
+> (a) Given the public exponent $e$ and $\varphi(n)$, compute $d=e^{-1}\pmod{\varphi(n)}$ and decrypt normally.
+> (b) If $n=pq$, then $\varphi(n)=pq-p-q+1=n-(p+q)+1$, and hence $S=p+q=n-\varphi(n)+1$. The discriminant is $S^2-4n=(p-q)^2$, so
 > $$p,q=\frac{S\pm\sqrt{S^2-4n}}2.$$
 > <!-- bilingual-en:end -->
 
@@ -1150,23 +1066,23 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > (d) $a\equiv1\pmod{\varphi(n)}$ 蕴含对每个 $p_i\mid n$ 都有 $a\equiv1\pmod{p_i-1}$。由 (b) 得 $m^a\equiv m\pmod{p_i}$，由 (c) 合并为模 $n$ 同余。取 $a=ed$ 即为 RSA 正确性。
 > <!-- bilingual-en:start -->
-> (a) $m^{ed}=m(m^{\varphi(n)})^t\equiv m$ for each other.
-> (b) If $a\equiv1\pmod{p-1}$: both sides are $0$ when $p\mid m$; otherwise, Fermat to $m^a=m(m^{p-1})^t\equiv m\pmod p$.
+> (a) When $\gcd(m,n)=1$, $m^{ed}=m(m^{\varphi(n)})^t\equiv m$.
+> (b) Suppose $a\equiv1\pmod{p-1}$. If $p\mid m$, both sides are $0$ modulo $p$; otherwise, Fermat's little theorem gives $m^a=m(m^{p-1})^t\equiv m\pmod p$.
 > (c) If the distinct primes $p_i$ all divide $a-b$, then, because they are pairwise coprime, their product also divides $a-b$. This repeatedly uses the fact that coprime divisors have a product that also divides the number.
-> (d) $a\equiv1\pmod{\varphi(n)}$ entails a $a\equiv1\pmod{p_i-1}$ for each $p_i\mid n$.  From (b) get $m^a\equiv m\pmod{p_i}$, from (c) merge into modular $n$ congruence.  $a=ed$ is the correctness of RSA.
+> (d) If $a\equiv1\pmod{\varphi(n)}$, then $a\equiv1\pmod{p_i-1}$ for every $p_i\mid n$. Part (b) gives $m^a\equiv m\pmod{p_i}$, and part (c) combines these congruences modulo $n$. Taking $a=ed$ proves RSA correctness.
 > <!-- bilingual-en:end -->
 
 ### 易错点、自检与知识链
 <!-- bilingual-en:start -->
-*False Points, Self-Test and Knowledge Chain*
+*Common pitfalls, self-checks, and knowledge chain*
 <!-- bilingual-en:end -->
 
 - RSA 正确性是定理；“分解大整数在经典计算上足够难”是安全假设，不是本课证明的数学定理。
 - 指数逆元是模 $(p-1)(q-1)$ 求，不是模 $pq$ 求。
 - 现代协议不直接加密任意长文本；先编码、分块并使用经过标准化的 padding。
 <!-- bilingual-en:start -->
-- RSA correctness is the theorem; "Decomposing large integers is hard enough in classical computing" is the security hypothesis, not the mathematical theorem proved in this lesson.
-The exponential inverse is a modular $(p-1)(q-1)$ solution, not a modular $pq$ solution.
+- RSA correctness is a theorem. The claim that factoring large integers is sufficiently hard on classical computers is a security assumption, not a mathematical theorem proved in this course.
+- The inverse exponent is computed modulo $(p-1)(q-1)$, not modulo $pq$.
 - Modern protocols do not directly encrypt any long text; encode, block, and use standardized padding.
 <!-- bilingual-en:end -->
 
@@ -1174,50 +1090,41 @@ The exponential inverse is a modular $(p-1)(q-1)$ solution, not a modular $pq$ s
 > 对 $p=5,q=11,e=3$，求 $d$。
 >
 > <!-- bilingual-en:start -->
-> Yes, $p=5,q=11,e=3$, ask $d$.
+> For $p=5,q=11,e=3$, find $d$.
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > $(p-1)(q-1)=40$，$3^{-1}\equiv27\pmod{40}$。
 > <!-- bilingual-en:start -->
-> $(p-1)(q-1)=40$,$3^{-1}\equiv27\pmod{40}$.
+> $(p-1)(q-1)=40$, and $3^{-1}\equiv27\pmod{40}$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 2
 > 为什么消息恰好被 $p$ 整除不会破坏解密？
 >
 > <!-- bilingual-en:start -->
-> Why is it that the message just happens to be $p$-ridden and doesn't destroy decryption?
+> Why does decryption still work when the message happens to be divisible by $p$?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 模 $p$ 时原消息与任意正幂均为 $0$；模 $q$ 使用 Fermat，最后由 CRT 合并。
 > <!-- bilingual-en:start -->
-> The original message and any positive power are $0$ when modulo $p$, and the modulo $q$ is Fermat and finally merged by CRT.
+> Modulo $p$, both the message and every positive power of it are $0$. Modulo $q$, use Fermat's little theorem, then combine the two congruences with the CRT.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 3
 > 已知 $n=55,\varphi(n)=40$，恢复 $p,q$。
 >
 > <!-- bilingual-en:start -->
-> Known $n=55,\varphi(n)=40$, restore $p,q$.
+> Given $n=55$ and $\varphi(n)=40$, recover $p,q$.
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > $p+q=55-40+1=16$，根为 $(16\pm\sqrt{256-220})/2=(16\pm6)/2$，即 $5,11$。
 > <!-- bilingual-en:start -->
-> $p+q=55-40+1=16$, the root is $(16\pm\sqrt{256-220})/2=(16\pm6)/2$, or $5,11$.
+> $p+q=55-40+1=16$, so the roots are $(16\pm\sqrt{256-220})/2=(16\pm6)/2$, namely $5$ and $11$.
 > <!-- bilingual-en:end -->
 
 **知识链：**逆元 + Euler/FLT + CRT → RSA 正确性；快速模指数 → 可行性；因式分解 → 安全边界。
 <!-- bilingual-en:start -->
-**knowledge chain:**inverse + Euler/FLT + CRT → RSA correctness; fast modulus exponent → feasibility; factorization → security boundary.
+**Knowledge chain:** modular inverses + Euler/FLT + CRT → RSA correctness; fast modular exponentiation → feasibility; factorization → security boundary.
 <!-- bilingual-en:end -->
 
 ---
@@ -1226,12 +1133,12 @@ The exponential inverse is a modular $(p-1)(q-1)$ solution, not a modular $pq$ s
 
 ### 16.1 定义必须分清
 <!-- bilingual-en:start -->
-*16.1 Definitions must be clarified*
+*16.1 Distinguishing the basic definitions*
 <!-- bilingual-en:end -->
 
 [[图的基本结构、路径与遍历#先声明你建的是什么图|有向图]] $G=(V,E)$ 中，边是有序对 $(u,v)$，记作 $u\to v$。允许自环与否、是否允许平行边必须由模型声明；本课程默认边集合，因此同方向平行边不重复。
 <!-- bilingual-en:start -->
-In [[图的基本结构、路径与遍历#先声明你建的是什么图|directed graph]] $G=(V,E)$, the edge is an ordered pair of $(u,v)$, which is called $u\to v$.  Allow self-loops or not, whether or not to allow parallel edges must be declared by the model; this course defaults to the set of edges, so parallel edges with the same direction do not repeat.
+In a [[图的基本结构、路径与遍历#先声明你建的是什么图|directed graph]] $G=(V,E)$, an edge is an ordered pair $(u,v)$, written $u\to v$. The model must state whether self-loops and parallel edges are allowed. This course treats $E$ as a set, so duplicate parallel edges in the same direction are not distinguished.
 <!-- bilingual-en:end -->
 
 - **walk**：$v_0,e_1,v_1,\ldots,e_k,v_k$，允许重复顶点和边；长度为 $k$。
@@ -1240,33 +1147,33 @@ In [[图的基本结构、路径与遍历#先声明你建的是什么图|directe
 - **cycle**：除首尾相同外不重复顶点的正长度 closed walk。
 - $u$ 到 $v$ 的距离 $\operatorname{dist}(u,v)$ 是最短 path 长度；不可达时记 $\infty$。
 <!-- bilingual-en:start -->
--**walk**:$v_0,e_1,v_1,\ldots,e_k,v_k$ to allow repeated vertices and edges; length is $k$.
--**path**: walk without repeating vertices; up to $|V|-1$ in length.
--**closed walk**:$v_0=v_k$; the actual motion is provided only for positive lengths.
--**cycle**: The positive length closed walk of the distinct vertex except for the same beginning and end.
-- $u$ to $v$ distance $\operatorname{dist}(u,v)$ is the shortest path length; unreachable hours are $\infty$.
+- **walk:** $v_0,e_1,v_1,\ldots,e_k,v_k$; vertices and edges may repeat, and the length is $k$.
+- **path:** a walk with no repeated vertices; its length is at most $|V|-1$.
+- **closed walk:** a walk with $v_0=v_k$; positive length is required for nontrivial movement.
+- **cycle:** a positive-length closed walk with no repeated vertices except the identical first and last vertex.
+- The distance $\operatorname{dist}(u,v)$ is the length of a shortest path from $u$ to $v$; it is $\infty$ when $v$ is unreachable from $u$.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit02-directed-walk.png|900]]
 
 读图：箭头限定可走方向，walk 可重复顶点，而 path 会把绕圈的重复段删去。
 <!-- bilingual-en:start -->
-Reading: Arrows define the direction to walk, walk repeats vertices, and path deletes the repeating segment of the loop.
+How to read the diagram: arrows restrict the direction of travel. A walk may revisit vertices, whereas a path is obtained by removing repeated detours.
 <!-- bilingual-en:end -->
 
 删除 walk 中两个相同顶点之间的片段可以消去“绕圈”，所以任何从 $u$ 到 $v$ 的 walk 都包含一条不更长的 path。正 closed walk 至少包含一个 cycle，但那个 cycle 不一定包含原 walk 的每个顶点。
 <!-- bilingual-en:start -->
-Deleting a fragment between two identical vertices in a walk eliminates "looping," so that any walk from $u$ to $v$ contains a path that is not longer.  A closed walk contains at least one cycle, but that cycle does not necessarily contain every vertex of the original walk.
+Deleting the segment between two occurrences of the same vertex removes a loop. Repeating this process shows that every walk from $u$ to $v$ contains a path no longer than the original walk. A positive-length closed walk contains at least one cycle, but that cycle need not contain every vertex of the original walk.
 <!-- bilingual-en:end -->
 
 ### 16.2 距离三角不等式
 <!-- bilingual-en:start -->
-*16.2 Distance Triangular Inequalities*
+*16.2 The triangle inequality for distance*
 <!-- bilingual-en:end -->
 
 若 $u\leadsto x$ 与 $x\leadsto v$，连接两条最短 path 得一个 walk，删环后不变长，所以
 <!-- bilingual-en:start -->
-If $u\leadsto x$ and $x\leadsto v$, join the shortest two path to get a walk, censored unchanged length, so
+If $u\leadsto x$ and $x\leadsto v$, concatenating shortest paths from $u$ to $x$ and from $x$ to $v$ gives a walk. Removing cycles cannot increase its length, so
 <!-- bilingual-en:end -->
 
 $$
@@ -1275,17 +1182,17 @@ $$
 
 等号成立当且仅当 $x$ 位于某条 $u$ 到 $v$ 的最短 path 上。注意这不是说 $x$ 位于**所有**最短 path 上。
 <!-- bilingual-en:start -->
-The equal sign is true if and only if the $x$ is on the shortest path from a $u$ to a $v$.  Note that this does not mean that the $x$ is on**all**the shortest path.
+Equality holds if and only if $x$ lies on some shortest path from $u$ to $v$. This does not mean that $x$ lies on **every** shortest path.
 <!-- bilingual-en:end -->
 
 ### 16.3 邻接矩阵与路径计数
 <!-- bilingual-en:start -->
-*16.3 Adjacency Matrix and Path Count*
+*16.3 Adjacency matrices and walk counting*
 <!-- bilingual-en:end -->
 
 给顶点编号 $1,\ldots,n$，[[图的基本结构、路径与遍历#先声明你建的是什么图|邻接矩阵]] $A$ 定义为 $A_{ij}=1$ 当且仅当 $i\to j$。矩阵乘法给
 <!-- bilingual-en:start -->
-The vertex is numbered $1,\ldots,n$, and [[图的基本结构、路径与遍历#先声明你建的是什么图|adjacency matrix]] $A$ is defined as $A_{ij}=1$ if and only if $i\to j$.  matrix multiplication
+Number the vertices $1,\ldots,n$. The [[图的基本结构、路径与遍历#先声明你建的是什么图|adjacency matrix]] $A$ is defined by $A_{ij}=1$ if and only if $i\to j$. Matrix multiplication gives
 <!-- bilingual-en:end -->
 
 $$
@@ -1300,7 +1207,7 @@ $$
 > [!warning] walk 不是 path
 > $A^k$ 计数允许重复顶点，不能直接计数简单 paths；后者通常困难得多。
 > <!-- bilingual-en:start -->
-> $A^k$ counting allows for repeated vertices and does not directly count simple paths; the latter is often much more difficult.
+> The entries of $A^k$ count walks, which may repeat vertices; they do not directly count simple paths, a substantially harder problem in general.
 > <!-- bilingual-en:end -->
 
 ### 16.4 Reachability 与 strongly connected
@@ -1310,7 +1217,7 @@ $$
 
 正 walk 关系 $E^+$ 表示存在正长度 walk；$E^*$ 还加入长度 $0$，所以是自反传递闭包。在有限图中，两点互相可达形成强连通分量。Web hyperlinks、控制流、依赖传播和状态迁移都自然产生 digraph。
 <!-- bilingual-en:start -->
-A positive walk relation $E^+$ indicates the existence of a positive length walk; $E^*$ also adds a length $0$, so it is a reflexive transitive closure.  In a finite graph, two points can reach each other to form a strongly connected component.  Web hyperlinks, control flow, dependency propagation and state transition all naturally generate digraph.
+The positive-walk relation $E^+$ records reachability by a walk of positive length. Adding length-$0$ walks gives $E^*$, the reflexive transitive closure. In a finite graph, mutual reachability partitions the vertices into strongly connected components. Web links, control flow, dependency propagation, and state transitions all naturally produce digraphs.
 <!-- bilingual-en:end -->
 
 ### 官方顺序、资源与在线题（8 prompts）
@@ -1319,9 +1226,6 @@ A positive walk relation $E^+$ indicates the existence of a positive length walk
 <!-- bilingual-en:end -->
 
 阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session16.pdf]]。讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/MX-mBxt6huU.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/QORX1OUabio.pdf]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_WalksPaths.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Concted_Vrtics.pdf]]。
-<!-- bilingual-en:start -->
-Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session16.pdf|MIT6_042JS15_Session16]].  Statements: [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/MX-mBxt6huU.pdf|MX-mBxt6huU]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/QORX1OUabio.pdf|QORX1OUabio]].  Slides:[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_WalksPaths.pdf|MIT6_042JS15_WalksPaths]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Concted_Vrtics.pdf|MIT6_042JS15_Concted_Vrtics]].
-<!-- bilingual-en:end -->
 
 | block | prompt | 官方答案 |
 |---|---|---|
@@ -1332,28 +1236,22 @@ Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session16.pdf|
 | 2.5.6 Q1–Q3 | 五点无自环 complete digraph：边数、最长无环 path、这类 Hamilton paths 数 | $20,4,120$ |
 <!-- bilingual-en:start -->
 | block | prompt | Official Answer |
-|—|—|—|
-| 2.5.2 Q1 | Maximum path given four-point digraph | $3$ |
+|---|---|---|
+| 2.5.2 Q1 | Longest path in the given four-vertex digraph | $3$ |
 | 2.5.2 Q2 | The sum of all the elements of the adjacency matrix is $6$ | The graph has $6$ directed edges |
-| 2.5.4 Q1-Q2 | longest path Maximum/Minimum Possible Value for 11-Point, 10-Edge Diagram | $10$;$1$ |
-| 2.5.5 Q1 | The must-be-true proposition of an adjacency matrix | $(A^2)_{ij}\ne0$ $A=A^T$ if and only if there is a 2 walk; undirected graph |
-| 2.5.6 Q1-Q3 | 5 points acyclic complete digraph: number of edges, longest acyclic path, number of such Hamilton paths | $20,4,120$ |
+| 2.5.4 Q1-Q2 | Maximum and minimum possible longest-path lengths in an 11-vertex, 10-edge graph | $10$; $1$ |
+| 2.5.5 Q1 | Statements that must hold for an adjacency matrix | $(A^2)_{ij}\ne0$ iff there is a length-$2$ walk; $A=A^T$ is guaranteed only for an undirected graph |
+| 2.5.6 Q1-Q3 | Loopless complete digraph on five vertices: edge count, longest simple path, and number of Hamilton paths | $20,4,120$ |
 <!-- bilingual-en:end -->
 
 原始练习：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S16_2.5.2_walks-and-paths.md|2.5.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S16_2.5.4_longest-path.md|2.5.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S16_2.5.5_adjacency-matrix.md|2.5.5]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S16_2.5.6_counting-paths.md|2.5.6]]
-<!-- bilingual-en:start -->
-Original Activity: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S16_2.5.2_walks-and-paths.md|2.5.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S16_2.5.4_longest-path.md|2.5.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S16_2.5.5_adjacency-matrix.md|2.5.5]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S16_2.5.6_counting-paths.md|2.5.6]]
-<!-- bilingual-en:end -->
 
 ### 课堂题（非官方独立题解）
 <!-- bilingual-en:start -->
-*Classroom Questions (Unofficial Independent Questions)*
+*In-class questions (unofficial independent solutions)*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp16.pdf]]。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp16.pdf|MIT6_042JS15_cp16]].
-<!-- bilingual-en:end -->
 
 > [!example]- CP16 Problem 1：closed walk 与 cycle
 > (a) 取一个有向 3-cycle，沿它走两圈得到长度 $6$ 的 closed walk，但图中仅有长度 $3$ 的 cycle。
@@ -1362,9 +1260,9 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > (c) 反复从 closed walk 中剪去两个相同内部顶点之间的 closed 子段，最终分解为 cycles。总长度为奇数，若每个 cycle 都为偶数则总和为偶数，矛盾；所以至少有一个奇 cycle，其顶点当然位于原 walk 上。
 > <!-- bilingual-en:start -->
-> (a) Take a directed 3-cycle and follow it two turns to get a closed walk of length $6$, but in the figure there is only a cycle of length $3$.
-> (b) Take the edge $v\to u,u\to v$, and add the ring at $u$.  The $v\to u\to u\to v$ length is $3$, but the unique cycle length with $v$ is $2$; the odd cycle is only $u$.
-> (c) Repeatedly pruning the closed sub-segment between two identical internal vertices from closed walk, and finally decomposing it into cycles.  The total length is odd, if each cycle is even then the total sum is even, contradictory; so there is at least one odd cycle whose vertex is on the original walk.
+> (a) Take a directed $3$-cycle and traverse it twice. This gives a closed walk of length $6$, although the graph contains only a cycle of length $3$.
+> (b) Take edges $v\to u$ and $u\to v$, and add a self-loop at $u$. The walk $v\to u\to u\to v$ has length $3$, but the only cycle containing $v$ has length $2$; the odd cycle is the loop at $u$.
+> (c) Repeatedly remove a closed subwalk between two repeated internal vertices. This eventually decomposes the closed walk into cycles. Since the total length is odd, not all of those cycles can have even length. Thus at least one odd cycle consists entirely of vertices from the original walk.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP16 Problem 2：距离等号
@@ -1382,10 +1280,10 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > (d) $B_k$ 顶点为 $\{0,1\}^k$，边 $x_1\cdots x_k\to x_2\cdots x_kb$。每点入度、出度均为 $2$；通过依次追加目标串的位，任意点在至多 $k$ 步到任意点。遍历 $2^{k+1}$ 条边产生最短 $(k+1)$-good string，长度为 $2^{k+1}+k$。
 > <!-- bilingual-en:start -->
-> (a) The eight consecutive three-bit windows of `0001011100` cover $000,001,010,101,011,111,110,100$ in turn.  The eight windows require at least $8+3-1=10$ bits and are the shortest.
-> (b) The vertex of the graph is a two-bit string; the edge $x_1x_2\to x_2b$ tag appends the bit $b$.  Each edge produces a new three-digit window, so 3-good string is obtained by traversing all eight edges.
-> (c) Every edge produces every three-bit string exactly once, and the length reaches the lower bound $10$.
-> (d) The $B_k$ vertex is $\{0,1\}^k$ and the edge is $x_1\cdots x_k\to x_2\cdots x_kb$.  The in-degree and out-degree of each point are all $2$; by sequentially adding the bits of the target string, any point steps to any point at most $k$.  Traversing $2^{k+1}$ edges yields the shortest $(k+1)$-good string of length $2^{k+1}+k$.
+> (a) The eight consecutive three-bit windows of `0001011100` are $000,001,010,101,011,111,110,100$. Eight windows require at least $8+3-1=10$ bits, so the string is shortest possible.
+> (b) The vertices are two-bit strings. An edge $x_1x_2\to x_2b$ represents appending the bit $b$. Each traversed edge creates one new three-bit window, so traversing all eight edges produces a 3-good string.
+> (c) Traversing every edge exactly once produces each three-bit string exactly once, and the resulting length attains the lower bound of $10$.
+> (d) The vertices of $B_k$ are $\{0,1\}^k$, with edges $x_1\cdots x_k\to x_2\cdots x_kb$. Every vertex has indegree and outdegree $2$. By successively appending the bits of a target string, any vertex reaches any other in at most $k$ steps. Traversing all $2^{k+1}$ edges produces a shortest $(k+1)$-good string of length $2^{k+1}+k$.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP16 Supplemental Problem 4：tournament ranking
@@ -1393,28 +1291,25 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > (b) 对顶点数归纳。删去新顶点 $v$，旧 tournament 有排名 $x_1\to\cdots\to x_n$。从左向右找第一个满足 $v\to x_i$ 的位置；把 $v$ 插在 $x_{i-1}$ 与 $x_i$ 间。此前若存在则有 $x_{i-1}\to v$，之后有 $v\to x_i$；若没有这样的 $i$，把 $v$ 放末尾。得到包含全部顶点的 path。
 > <!-- bilingual-en:start -->
-> (a) The three-point pass tournament $a\to b,a\to c,b\to c$ has at least a path $a,b,c$; if an appropriate direction is added to give multiple rankings, the three-cycle itself has three circularly shifted Hamilton paths.
-> (b) Summarization of the number of vertices.  Delete the new vertex $v$, and the old tournament has a ranking of $x_1\to\cdots\to x_n$.  From left to right, find the first location that satisfies $v\to x_i$; insert $v$ between $x_{i-1}$ and $x_i$.  If there is $x_{i-1}\to v$ before, then $v\to x_i$; if there is no such $i$, put $v$ at the end.  The path containing all the vertices is obtained.
+> (a) The transitive three-vertex tournament $a\to b,a\to c,b\to c$ has the Hamilton path $a,b,c$. Other tournaments may admit several rankings; a directed $3$-cycle itself has three cyclic shifts as Hamilton paths.
+> (b) Induct on the number of vertices. Remove a vertex $v$; the remaining tournament has a Hamilton path $x_1\to\cdots\to x_n$. Scan from left to right for the first $i$ such that $v\to x_i$. If $i=1$, place $v$ before $x_1$; otherwise, insert it between $x_{i-1}$ and $x_i$. By the minimality of $i$, $x_{i-1}\to v$, while $v\to x_i$ by construction. If no such $i$ exists, place $v$ at the end. The result is a path containing every vertex.
 > <!-- bilingual-en:end -->
 
 ### 自检与知识链
 <!-- bilingual-en:start -->
-*Self-examination and Knowledge Chain*
+*Self-checks and knowledge chain*
 <!-- bilingual-en:end -->
 
 > [!question]- 自检 1
 > 为什么“存在正 closed walk”不能直接说“这条 walk 是 cycle”？
 >
 > <!-- bilingual-en:start -->
-> Why can't "there's a positive closed walk" just say "this walk is cycle"?
+> Why does the existence of a positive-length closed walk not mean that the walk itself is a cycle?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > walk 可重复内部顶点和边；必须删去重复段才提取 cycle。
 > <!-- bilingual-en:start -->
-> walk repeats internal vertices and edges; repeating segments must be removed to extract cycle.
+> A walk may repeat internal vertices and edges. Repeated segments must be removed before a cycle can be extracted.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 2
@@ -1423,13 +1318,10 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > <!-- bilingual-en:start -->
 > If $A$ is an adjacency matrix, what does $(A^3)_{ii}>0$ say?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 存在从 $i$ 出发、三条边后回到 $i$ 的 closed walk；不必是三角形，因为可含自环或重复。
 > <!-- bilingual-en:start -->
-> There is a closed walk that starts from $i$ and returns to $i$ after three edges; it does not have to be a triangle because it can contain a self-loop or a repeat.
+> There is a length-$3$ closed walk from $i$ back to $i$. It need not be a triangle because the walk may contain a self-loop or repeated vertices.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 3
@@ -1438,18 +1330,15 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > <!-- bilingual-en:start -->
 > Why is the directed distance generally asymmetric?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > $u\to v$ 的边不自动提供 $v\to u$；甚至一向可达而反向距离为 $\infty$。
 > <!-- bilingual-en:start -->
-> Edges of $u\to v$ do not automatically provide $v\to u$; they are always reachable and the reverse distance is $\infty$.
+> An edge $u\to v$ does not automatically provide an edge or path from $v$ to $u$. One direction may be reachable while the reverse distance is $\infty$.
 > <!-- bilingual-en:end -->
 
 **知识链：**关系 → 有向边 → walk/path/cycle → 距离 → 邻接矩阵幂 → 可达闭包。
 <!-- bilingual-en:start -->
-**knowledge chain:**relation→directed edge→walk/path/cycle→distance→power of adjacency matrix→reachable closure.
+**Knowledge chain:** relations → directed edges → walks/paths/cycles → distance → powers of the adjacency matrix → reachability closure.
 <!-- bilingual-en:end -->
 
 ---
@@ -1457,18 +1346,15 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 ## Problem Set 6
 
 原题：[[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps6.pdf]]。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps6.pdf|MIT6_042JS15_ps6]].
-<!-- bilingual-en:end -->
 
 > [!example]- PS6 Problem 1：危险 RSA 消息比例
 > $[0,pq)$ 中 gcd 恰为 $p$ 的消息是 $p,2p,\ldots,(q-1)p$，共 $q-1$ 个；gcd 恰为 $q$ 的消息有 $p-1$ 个，两集合不交。因此比例
 > $$\frac{p+q-2}{pq}\approx\frac1p+\frac1q.$$
 > 当 $p,q$ 都约为 200 位时，量级为 $10^{-200}$（常数因子约 $2$ 不改变最近数量级）。
 > <!-- bilingual-en:start -->
-> In $[0,pq)$, the messages whose gcd is exactly $p$ are $p,2p,\ldots,(q-1)p$ of $q-1$, and the messages whose gcd is exactly $q$ are $p-1$ of which the two sets do not intersect.  so the ratio
+> In $[0,pq)$, the messages whose gcd with $pq$ is exactly $p$ are $p,2p,\ldots,(q-1)p$, giving $q-1$ messages. Similarly, $p-1$ messages have gcd exactly $q$, and the two sets are disjoint. Therefore, the proportion is
 > $$\frac{p+q-2}{pq}\approx\frac1p+\frac1q.$$
-> When $p,q$ are all about 200 bits, the magnitude is $10^{-200}$ (the constant factor of about $2$ does not change the most recent magnitude).
+> When $p$ and $q$ each have roughly $200$ decimal digits, this is on the order of $10^{-200}$; the constant factor of about $2$ does not affect the order-of-magnitude estimate.
 > <!-- bilingual-en:end -->
 
 > [!example]- PS6 Problem 2：互相可达与 cycle
@@ -1476,8 +1362,8 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps6.pdf|
 >
 > (b) 从任一由 $v$ 出发并回到 $v$ 的正 walk 开始。若内部顶点重复，删去两次出现之间的 closed 子段；持续操作直到内部无重复。首尾仍为 $v$，于是得到包含 $v$ 的 cycle。
 > <!-- bilingual-en:start -->
-> (a) Take three points $u,x,v$, the edge is $u\to x,x\to v,v\to x,x\to u$.  $u,v$ are mutually reachable, but any closed walk that passes through both must repeat the bottleneck $x$, so there is no cycle that contains both.
-> (b) Beginning with any of the positive walk departing from $v$ and returning to $v$.  If the inner vertex is repeated, delete the closed subsegment between the two occurrences; continue until there is no repetition inside.  The beginning and end are still $v$, so you get a cycle that contains $v$.
+> (a) Take three vertices $u,x,v$ with edges $u\to x,x\to v,v\to x,x\to u$. The vertices $u$ and $v$ are mutually reachable, but any closed walk through both must repeat the bottleneck $x$. Hence no cycle contains both vertices.
+> (b) Begin with any positive-length walk from $v$ back to $v$. If an internal vertex repeats, delete the closed subwalk between two occurrences. Continue until no internal vertex repeats. The walk still begins and ends at $v$, so it is a cycle containing $v$.
 > <!-- bilingual-en:end -->
 
 > [!example]- PS6 Problem 3：King Chicken Theorem
@@ -1487,9 +1373,9 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps6.pdf|
 >
 > (c) 设 $v$ 出度最大。对任意击败 $v$ 的 $u$，若不存在 $v\to w\to u$，则 $u$ 必击败 $v$ 的每个出邻居，再加上 $u\to v$，得到 $\deg^+(u)\ge\deg^+(v)+1$，与最大性矛盾。因此 $v$ 对每点均可在至多两步到达。
 > <!-- bilingual-en:start -->
-> (a) $v$ defeated only $w$ and $w$ defeated the remaining eight; the remaining edges were arbitrarily oriented.  So $v$ makes $1$, but $w$ gets to all the chickens in two steps.
-> (b) $i$ to defeat $i+1,i+2$ on $\mathbb Z_5$.  Each point beats two points directly, and passes through one point and two steps to the remaining two points, so it is all king.
-> (c) The maximum output of $v$ is assumed.  For the $u$ that arbitrarily defeated $v$, if there is no $v\to w\to u$, $u$ must defeat every outgoing neighbor of $v$, plus $u\to v$, to get $\deg^+(u)\ge\deg^+(v)+1$, contradicting with the maximality.  The $v$ pair can thus be reached in up to two steps at each point.
+> (a) Let $v$ defeat only $w$, and let $w$ defeat the other eight chickens; orient all remaining edges arbitrarily. Then $v$ has outdegree $1$ but can reach every chicken within two steps through $w$.
+> (b) On $\mathbb Z_5$, let $i$ defeat $i+1$ and $i+2$. Every vertex directly defeats two vertices and reaches the other two in two steps, so every vertex is a king.
+> (c) Let $v$ have maximum outdegree. For any $u$ that defeats $v$, suppose there were no path $v\to w\to u$. Then $u$ would have to defeat every out-neighbor of $v$, as well as $v$ itself, giving $\deg^+(u)\ge\deg^+(v)+1$, a contradiction. Thus $v$ reaches every vertex in at most two steps.
 > <!-- bilingual-en:end -->
 
 ---
@@ -1497,9 +1383,6 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps6.pdf|
 ## Midterm 2
 
 原题：[[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm2.pdf]]。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm2.pdf|MIT6_042JS15_midterm2]].
-<!-- bilingual-en:end -->
 
 > [!example]- Midterm 2 Problem 1：Structural Induction
 > 对 RAF 表达式 $h$ 定义 $P(h):\forall g\in RAF, h\circ g\in RAF$。
@@ -1510,11 +1393,11 @@ Original title: [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm2.pdf|MI
 > $$(h\circ g)(x)=f(g(x))\operatorname{op}k(g(x))=((f\circ g)\operatorname{op}(k\circ g))(x),$$
 > 由 RAF 构造规则得 $h\circ g\in RAF$。除法情形在分母非零的共同定义域上理解。
 > <!-- bilingual-en:start -->
-> Define a $P(h):\forall g\in RAF, h\circ g\in RAF$ for the RAF expression $h$.
-> **Basic example of identity:**$\operatorname{id}\circ g=g\in RAF$.**Constant Function base example:**$c\circ g=c$, still RAF constant function.
-> **Construct step:**If $h=f\operatorname{op}k$, where $\operatorname{op}\in\{+,\cdot,/\}$, the induction hypothesis is given to $f\circ g,k\circ g\in RAF$.  point-by-point calculation
+> For each RAF expression $h$, define $P(h):\forall g\in RAF,\ h\circ g\in RAF$.
+> **Identity base case:** $\operatorname{id}\circ g=g\in RAF$. **Constant-function base case:** $c\circ g=c$, which is still a constant RAF function.
+> **Constructor step:** Suppose $h=f\operatorname{op}k$, where $\operatorname{op}\in\{+,\cdot,/\}$. The induction hypothesis gives $f\circ g,k\circ g\in RAF$. Pointwise,
 > $$(h\circ g)(x)=f(g(x))\operatorname{op}k(g(x))=((f\circ g)\operatorname{op}(k\circ g))(x),$$
-> $h\circ g\in RAF$ from RAF construction rules.  The division case is understood on a common domain with a non-zero denominator.
+> so the RAF construction rules give $h\circ g\in RAF$. The division case is interpreted on the common domain where the denominator is nonzero.
 > <!-- bilingual-en:end -->
 
 > [!example]- Midterm 2 Problem 2：Buckets invariant
@@ -1522,7 +1405,7 @@ Original title: [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm2.pdf|MI
 >
 > (b) 取不变量“$b,l$ 都是 $5$ 的倍数”。初态 $(0,0)$ 成立。填满加入容量 $25$ 或 $10$；清空变 $0$；倒水只进行和、差 $10$，均保持 $5$ 的倍数。其余对称操作同理。因此所有可达状态的 $b$ 都被 $5$ 整除，而 $13$ 不是，$(13,x)$ 不可达。
 > <!-- bilingual-en:start -->
-> (a) Clear the keg: $(b,l)\to(b,0)$.  Bucket to bucket: If $b+l\le10$, go to $(0,b+l)$; if $b+l>10$, go to $(b+l-10,10)$.
+> (a) Empty the small bucket: $(b,l)\to(b,0)$. Pour the large bucket into the small one: if $b+l\le10$, move to $(0,b+l)$; if $b+l>10$, move to $(b+l-10,10)$.
 > (b) Use the invariant that both bucket amounts are multiples of $5$. It holds at the initial state $(0,0)$. Filling a 25- or 10-unit bucket, emptying a bucket, or pouring between the buckets preserves divisibility by $5$. Hence every reachable bucket amount is divisible by $5$; because $13$ is not, no state of the form $(13,x)$ is reachable.
 > <!-- bilingual-en:end -->
 
@@ -1539,6 +1422,14 @@ Original title: [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm2.pdf|MI
 > 由 $A\cap B=\varnothing$，三个分支的定义域两两不交；它们的像分别是 $\{a_{2i}\mid i\in\mathbb N\}$、$\{a_{2i+1}\mid i\in\mathbb N\}$ 与 $A\setminus\{a_i\mid i\in\mathbb N\}$，也两两不交且合并为 $A$。所以 $H$ 既单射又满射。取逆映射即得 $A\leftrightarrow A\cup B$ 的双射。
 > <!-- bilingual-en:start -->
 > The question also gives $A\cap B=\varnothing$. Enumerate $B=\{b_0,b_1,\ldots\}$ and choose distinct elements $a_0,a_1,\ldots$ from the infinite set $A$. Define $H:A\cup B\to A$:
+> $$
+> H(x)=
+> \begin{cases}
+> a_{2i},&x=b_i,\\
+> a_{2i+1},&x=a_i,\\
+> x,&x\in A\setminus\{a_0,a_1,\ldots\}.
+> \end{cases}
+> $$
 > Since $A\cap B=\varnothing$, the domains of the three branches are pairwise disjoint. Their images are respectively $\{a_{2i}\mid i\in\mathbb N\}$, $\{a_{2i+1}\mid i\in\mathbb N\}$, and $A\setminus\{a_i\mid i\in\mathbb N\}$; these are also pairwise disjoint and together cover $A$. Hence $H$ is both injective and surjective. Taking its inverse gives a bijection $A\leftrightarrow A\cup B$.
 > <!-- bilingual-en:end -->
 
@@ -1548,16 +1439,16 @@ Original title: [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm2.pdf|MI
 > $$\operatorname{lcm}(m,n,p)=2^9 3^4 5^{24}7^{6042}11^7 19^{30}.$$
 > 对非空 $A$，$\nu_k(\gcd A)=\min\nu_k(A)$；当 $p$ 为素数，$\nu_p(\operatorname{lcm}A)=\max\nu_p(A)$。复合底数不能把 lcm 的估值写成各估值最大值：$a=2,b=3$ 时 $\nu_6(a)=\nu_6(b)=0$，但 $\nu_6(\operatorname{lcm}(2,3))=1$。
 > <!-- bilingual-en:start -->
-> Take the exponential minimum/maximum in prime number:
+> Take the minimum or maximum exponent prime by prime:
 > $$\gcd(m,n,p)=2^3 7^4,$$
 > $$\operatorname{lcm}(m,n,p)=2^9 3^4 5^{24}7^{6042}11^7 19^{30}.$$
-> $A$, $\nu_k(\gcd A)=\min\nu_k(A)$; when $p$ is prime, $\nu_p(\operatorname{lcm}A)=\max\nu_p(A)$.  Compound floors cannot write the valuation of lcm as the maximum of each valuation: $\nu_6(a)=\nu_6(b)=0$ at $a=2,b=3$, but $\nu_6(\operatorname{lcm}(2,3))=1$.
+> For nonempty $A$, $\nu_k(\gcd A)=\min\nu_k(A)$. When $p$ is prime, $\nu_p(\operatorname{lcm}A)=\max\nu_p(A)$. This maximum rule fails for a composite base: for $a=2,b=3$, $\nu_6(a)=\nu_6(b)=0$, but $\nu_6(\operatorname{lcm}(2,3))=1$.
 > <!-- bilingual-en:end -->
 
 > [!example]- Midterm 2 Problem 5：合并同余
 > $14\mid(a-b)$ 且 $5\mid(a-b)$。因 $\gcd(14,5)=1$，互素因子乘积整除同一个数，故 $70\mid(a-b)$，即 $a\equiv b\pmod{70}$。
 > <!-- bilingual-en:start -->
-> $14\mid(a-b)$ and $5\mid(a-b)$.  Because $\gcd(14,5)=1$, the product of mutual prime factors divides the same number, so $70\mid(a-b)$, namely $a\equiv b\pmod{70}$.
+> We have $14\mid(a-b)$ and $5\mid(a-b)$. Since $\gcd(14,5)=1$, the product of these coprime divisors also divides $a-b$. Thus $70\mid(a-b)$, or $a\equiv b\pmod{70}$.
 > <!-- bilingual-en:end -->
 
 > [!example]- Midterm 2 Problem 6：$\varphi(k)$ 的奇偶
@@ -1566,7 +1457,7 @@ Original title: [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm2.pdf|MI
 > 对 $k>2$，在 $\mathbb Z_k^*$ 中将 $r$ 与 $-r$ 配对。两者都可逆；若它们相同，则 $2r\equiv0\pmod k$，因 $r$ 可逆可约去，得 $k\mid2$，与 $k>2$ 矛盾。因此没有固定点，单位集合被分成二元组，$\varphi(k)$ 为偶数。
 > <!-- bilingual-en:start -->
 > $\varphi(2)=1$; three examples of $\varphi(k)=2$ are $k=3,4,6$.
-> For $k>2$, pair $r$ with $-r$ in $\mathbb Z_k^*$.  Both are reversible; if they are the same, then $2r\equiv0\pmod k$, because $r$ is reversible and reducible, is $k\mid2$, which contradicts $k>2$.  So there is no fixed point, the set of units is divided into two groups, and $\varphi(k)$ is even.
+> For $k>2$, pair each $r$ with $-r$ in $\mathbb Z_k^*$. Both are units. If they were equal, then $2r\equiv0\pmod k$; cancelling the invertible $r$ would give $k\mid2$, contradicting $k>2$. Thus the pairing has no fixed point, so the units split into pairs and $\varphi(k)$ is even.
 > <!-- bilingual-en:end -->
 
 ---
@@ -1580,17 +1471,17 @@ Original title: [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_midterm2.pdf|MI
 
 [[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|directed acyclic graph, DAG]] 是没有有向 cycle 的 digraph。课程先用 prerequisites 建模：边 $u\to v$ 表示 $u$ 必须先完成；正 walk 关系给出间接先修关系。
 <!-- bilingual-en:start -->
-[[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|directed acyclic graph, DAG]] is a digraph without a cycle.  The course is first modeled with prerequisites: the edge $u\to v$ indicates that the $u$ must be completed first; the positive walk relation gives the indirect prerequisite relation.
+A [[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|directed acyclic graph, or DAG]] is a digraph with no directed cycle. The course first models prerequisites: an edge $u\to v$ means that $u$ must be completed before $v$, and the positive-walk relation records indirect prerequisites.
 <!-- bilingual-en:end -->
 
 **有限 DAG 必有入度为 $0$ 的顶点。** 反证：若每点都有入边，从任一点不断沿入边逆行。有限性保证某顶点重复，重复段形成有向 cycle，矛盾。对出度为 $0$ 的顶点同理。
 <!-- bilingual-en:start -->
-**A finite DAG must have a vertex with an in-degree of $0$.**Contrary to proof: If there is an edge at every point, keep going backward along the edge at any point.  Finite guarantee certain vertex repeats, the repetition segment forms directional cycle, contradiction.  The same is true for vertices with degress of $0$.
+**Every finite DAG has a vertex of indegree $0$.** Suppose instead that every vertex had an incoming edge. Starting from any vertex, repeatedly follow incoming edges backwards. Because the graph is finite, some vertex must repeat, and the repeated segment forms a directed cycle—a contradiction. The same argument, with directions reversed, gives a vertex of outdegree $0$.
 <!-- bilingual-en:end -->
 
 [[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|拓扑排序]]可由此递归构造：反复删除一个入度为 $0$ 的点并输出。每条边的起点必在终点之前。反过来，若图存在拓扑顺序，就不可能有 cycle，因为沿 cycle 每一步都要求位置严格增加，最后却回到起点。
 <!-- bilingual-en:start -->
-[[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|topological ordering]] can be recursively constructed by repeatedly deleting a point with a in-degree of $0$ and outputting.  The start of each edge must precede the end.  Conversely, if there is a topological order in the graph, there is no cycle, because each step along the cycle requires a strict increase in the position, and then it returns to the starting point.
+A [[无环图：树、生成树、DAG 与拓扑排序#DAG 与拓扑排序|topological ordering]] can therefore be constructed recursively: repeatedly output and delete a vertex of indegree $0$. The tail of every edge appears before its head. Conversely, a graph with a topological ordering cannot contain a cycle, because positions would have to increase strictly around the cycle and still return to the starting vertex.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit02-dag-topological-order.png|900]]
@@ -1603,7 +1494,7 @@ How to read the diagram: a topological order lays out every arrow of the DAG fro
 > [!theorem] 等价条件
 > 对有限 digraph，以下等价：无有向 cycle；存在拓扑排序；每个非空诱导子图都有 source；正 walk 关系是严格偏序。
 > <!-- bilingual-en:start -->
-> For finite digraph, the following equivalence exists: there is no directed cycle; there is a topological ordering; every nonempty induced subgraph has source; and the positive walk relation is strictly partial order.
+> For a finite digraph, the following conditions are equivalent: it has no directed cycle; it has a topological ordering; every nonempty induced subgraph has a source; and its positive-walk relation is a strict partial order.
 > <!-- bilingual-en:end -->
 
 ### 17.2 调度、chain 与 antichain
@@ -1637,12 +1528,12 @@ When tasks have durations $w(v)$, the total weight of a critical path remains a 
 
 ### 17.3 覆盖边与 transitive reduction
 <!-- bilingual-en:start -->
-*17.3 Covering Edges and transitive reduction*
+*17.3 Covering edges and transitive reduction*
 <!-- bilingual-en:end -->
 
 若 $a\to b$ 且所有 $a$ 到 $b$ 的 path 都必须用这条边，称它为 covering edge。有限 DAG 删除所有可由更长 path 替代的边后，仍保留同一正可达关系；所得 covering subgraph 是唯一的最小 transitive reduction。无环性很关键：有 cycle 时不同最小表示可能不唯一。
 <!-- bilingual-en:start -->
-If $a\to b$ and all path from $a$ to $b$ must use this edge, call it covering edge.  A finite DAG removes all edges that can be replaced by a longer path, but retains the same positive reachability; the resulting covering subgraph is the only minimal transitive reduction.  Acyclic is critical: different minimum representations may not be unique with cycle.
+If $a\to b$ and every path from $a$ to $b$ must use this edge, it is a covering edge. In a finite DAG, deleting every edge that can be replaced by a longer path preserves the same positive reachability relation. The resulting covering subgraph is the unique minimal transitive reduction. Acyclicity is essential: in a graph with cycles, distinct minimal representations may exist.
 <!-- bilingual-en:end -->
 
 ### 官方顺序、资源与在线题（13 prompts）
@@ -1651,9 +1542,6 @@ If $a\to b$ and all path from $a$ to $b$ must use this edge, call it covering ed
 <!-- bilingual-en:end -->
 
 阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session17.pdf]]。讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/Sdw8_0RDZuw.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/1TpzSCMLg08.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/cUYTlKA8jaw.pdf]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_DAGs.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Scheduling.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_TimeProcsors.pdf]]。
-<!-- bilingual-en:start -->
-Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session17.pdf|MIT6_042JS15_Session17]].  Statements: [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/Sdw8_0RDZuw.pdf|Sdw8_0RDZuw]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/1TpzSCMLg08.pdf|1TpzSCMLg08]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/cUYTlKA8jaw.pdf|cUYTlKA8jaw]].  Slides:[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_DAGs.pdf|MIT6_042JS15_DAGs]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Scheduling.pdf|MIT6_042JS15_Scheduling]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_TimeProcsors.pdf|MIT6_042JS15_TimeProcsors]].
-<!-- bilingual-en:end -->
 
 | block | prompt | 官方答案 |
 |---|---|---|
@@ -1679,27 +1567,21 @@ Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session17.pdf|
 | 2.6.4 Q2 | `18.01, 6.02, 6.004` | chain |
 | 2.6.4 Q3 | `6.042, 6.02, 6.034` | antichain |
 | 2.6.4 Q4–Q5 | Maximum antichain; semesters required under a topological schedule | $5$; $12$ |
-| 2.6.6 Q1 | Minimum semester for unlimited processors | maximum chain size |
-| 2.6.6 Q2 | Upper bound on maximum number of classes per session required for minimum duration | maximum antichain size |
-| 2.6.6 Q3 | Lower bounds on the same quantity | $\lceil n/\text{max-chain}\rceil$ |
-| 2.6.6 Q4 | Lower max chain | $n/\text{max-antichain}$ |
-| 2.6.7 Q1 | Add a dot $24$ on the divisibility DAG of $1,\ldots,12$ and add a minimum of cover edges | $2$, pointing from $8,12$ to $24$ |
+| 2.6.6 Q1 | Minimum number of semesters with unlimited processors | size of a maximum chain |
+| 2.6.6 Q2 | Upper bound on the per-semester course capacity needed to attain that minimum duration | size of a maximum antichain |
+| 2.6.6 Q3 | Lower bound on the same capacity | $\lceil n/\text{max-chain}\rceil$ |
+| 2.6.6 Q4 | Lower bound on the maximum chain size | $n/\text{max-antichain}$ |
+| 2.6.7 Q1 | Minimum number of cover edges needed after adding vertex $24$ to the divisibility DAG on $1,\ldots,12$ | $2$, directed from $8$ and $12$ to $24$ |
 <!-- bilingual-en:end -->
 
 原始练习：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S17_2.6.2_dags.md|2.6.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S17_2.6.4_scheduling-prerequisites.md|2.6.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S17_2.6.6_processor-time-bounds.md|2.6.6]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S17_2.6.7_the-divisibility-dag.md|2.6.7]]
-<!-- bilingual-en:start -->
-Original Activity: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S17_2.6.2_dags.md|2.6.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S17_2.6.4_scheduling-prerequisites.md|2.6.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S17_2.6.6_processor-time-bounds.md|2.6.6]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S17_2.6.7_the-divisibility-dag.md|2.6.7]]
-<!-- bilingual-en:end -->
 
 ### 课堂题（非官方独立题解）
 <!-- bilingual-en:start -->
-*Classroom Questions (Unofficial Independent Questions)*
+*In-class questions (unofficial independent solutions)*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp17.pdf]]。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp17.pdf|MIT6_042JS15_cp17]].
-<!-- bilingual-en:end -->
 
 > [!example]- CP17 Problem 1：课程 DAG 调度
 > (a) 最长 chain $18.01\to18.03\to6.002\to6.004\to6.033\to6.857$ 有六门，故至少六学期。按每期所有当前 sources 的 greedy schedule：
@@ -1719,17 +1601,17 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > (e) 三门上限时最长 chain 仍给 $6$。六期可行安排：$(18.01,8.01,6.001)$，$(6.042,18.03,8.02)$，$(18.02,6.046,6.002)$，$(6.840,6.034,6.004)$，$(6.003,6.033)$，$(6.857)$。
 > <!-- bilingual-en:start -->
-> (a) The maximum length of chain $18.01\to18.03\to6.002\to6.004\to6.033\to6.857$ is six schools and therefore at least six semesters.  greedy schedule for all current sources per issue:
-> 1. $18.01,8.01,6.001$;
-> 2. $6.042,18.02,18.03,8.02,6.034$;
-> 3. $6.046,6.002$;
-> 4. $6.840,6.003,6.004$;
-> 5. $6.033$;
-> 6. $6.857$.
-> (b) A five-door antichain without $18.03$ is $\{6.042,18.02,6.034,6.003,6.004\}$.  There are $9$ for the full enumeration: fixed $18.02,6.034,6.003$ and one for each of $\{6.042,6.046,6.840\}$ and $\{6.004,6.033,6.857\}$.
-> (c) Any topological order is sufficient, for example, to cover each of the six layers from left to right for a total of $15$ semesters.
-> (d) Up to two gates per issue, with a lower workload threshold of $\lceil15/2\rceil=8$.  Feasible arrangements for the eight phases are: $(18.01,8.01)$, $(6.042,18.02)$, $(18.03,6.046)$, $(6.840,8.02)$, $(6.001,6.002)$, $(6.034,6.004)$, $(6.003,6.033)$, $(6.857)$, and hence $8$.
-> (e) The maximum length of chain at the three-gate upper limit is still given to $6$.  Six viable arrangements: $(18.01,8.01,6.001)$, $(6.042,18.03,8.02)$, $(18.02,6.046,6.002)$, $(6.840,6.034,6.004)$, $(6.003,6.033)$, $(6.857)$.
+> (a) The chain $18.01\to18.03\to6.002\to6.004\to6.033\to6.857$ contains six courses, so at least six semesters are required. A greedy schedule that takes all current sources each semester is:
+> **1.** $18.01,8.01,6.001$;<br>
+> **2.** $6.042,18.02,18.03,8.02,6.034$;<br>
+> **3.** $6.046,6.002$;<br>
+> **4.** $6.840,6.003,6.004$;<br>
+> **5.** $6.033$;<br>
+> **6.** $6.857$.<br>
+> (b) One five-course antichain not containing $18.03$ is $\{6.042,18.02,6.034,6.003,6.004\}$. There are $9$ in total: fix $18.02,6.034,6.003$, then choose one course from $\{6.042,6.046,6.840\}$ and one from $\{6.004,6.033,6.857\}$.
+> (c) Any topological order works—for example, take the courses layer by layer from left to right, one per semester, for a total of $15$ semesters.
+> (d) With at most two courses per semester, the workload lower bound is $\lceil15/2\rceil=8$. A feasible eight-semester schedule is $(18.01,8.01)$, $(6.042,18.02)$, $(18.03,6.046)$, $(6.840,8.02)$, $(6.001,6.002)$, $(6.034,6.004)$, $(6.003,6.033)$, $(6.857)$, so the optimum is exactly $8$.
+> (e) With at most three courses per semester, the longest chain still gives a lower bound of $6$. The following six-semester schedule is feasible: $(18.01,8.01,6.001)$, $(6.042,18.03,8.02)$, $(18.02,6.046,6.002)$, $(6.840,6.034,6.004)$, $(6.003,6.033)$, $(6.857)$.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP17 Problem 2：征服银河系
@@ -1782,57 +1664,48 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 
 ### 自检与知识链
 <!-- bilingual-en:start -->
-*Self-examination and Knowledge Chain*
+*Self-checks and knowledge chain*
 <!-- bilingual-en:end -->
 
 > [!question]- 自检 1
 > 为什么“每点入度至少 1”在有限 DAG 中不可能？
 >
 > <!-- bilingual-en:start -->
-> Why is "at least 1 per penetration" not possible in a limited DAG?
+> Why is it impossible for every vertex of a finite DAG to have indegree at least $1$?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 不断逆着入边走，有限点集必重复，重复段构成 cycle。
 > <!-- bilingual-en:start -->
-> The finite point set must be repeated and the repeated segments constitute cycle.
+> Following incoming edges backwards forever in a finite vertex set must revisit a vertex, and the repeated segment forms a directed cycle.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 2
 > 12 个单位任务、最长 chain 为 5、3 个处理器，最短工期至少多少？
 >
 > <!-- bilingual-en:start -->
-> Twelve unit tasks, up to five or three chain processors, minimum duration at least?
+> There are $12$ unit-time tasks, the longest chain has length $5$, and there are $3$ processors. What is the lower bound on the makespan?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > $\max(5,\lceil12/3\rceil)=5$；这是下界，仍需具体 DAG 才能判断能否达到。
 > <!-- bilingual-en:start -->
-> $\max(5,\lceil12/3\rceil)=5$;This is the lower bound, and specific DAGs are still required to determine if it is achievable.
+> $\max(5,\lceil12/3\rceil)=5$. This is only a lower bound; the actual DAG is needed to determine whether it is attainable.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 3
 > 为什么 transitive reduction 在有环图中可能不唯一？
 >
 > <!-- bilingual-en:start -->
-> Why might transitive reduction not be unique in a ring diagram?
+> Why can a transitive reduction fail to be unique in a graph with cycles?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > cycle 内可用不同方向边组合互相替代；可达闭包不再唯一指出哪条原边不可替代。
 > <!-- bilingual-en:start -->
-> The combinations of edges in different directions can be substituted for each other in cycle; reachable closures no longer uniquely indicate which of the primary edges cannot be substituted.
+> Within a cycle, different combinations of directed edges can replace one another. The reachability closure therefore no longer determines a unique set of indispensable original edges.
 > <!-- bilingual-en:end -->
 
 **知识链：**无 cycle → source → topological sort → chain/antichain → 调度界 → transitive reduction。
 <!-- bilingual-en:start -->
-**Knowledge chain:**No cycle → source → topological sort → chain/antichain → Scheduling boundary → transitive reduction.
+**Knowledge chain:** no directed cycles → sources → topological sorting → chains/antichains → scheduling bounds → transitive reduction.
 <!-- bilingual-en:end -->
 
 ---
@@ -1841,7 +1714,7 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 
 ### 18.1 四组易混关系性质
 <!-- bilingual-en:start -->
-*18.1 Properties of Four Easy Mixing Relationships*
+*18.1 Four commonly confused properties of relations*
 <!-- bilingual-en:end -->
 
 对 $R\subseteq A\times A$：
@@ -1854,10 +1727,10 @@ For $R\subseteq A\times A$:
 - asymmetric：$aRb\Rightarrow\lnot(bRa)$；它蕴含 irreflexive；
 - transitive：$aRb\land bRc\Rightarrow aRc$。
 <!-- bilingual-en:start -->
-- reflexive:$\forall a,\ aRa$;irreflexive:$\forall a,\ \lnot(aRa)$;
-- symmetric:$aRb\Rightarrow bRa$;antisymmetric:$aRb\land bRa\Rightarrow a=b$;
-- asymmetric:$aRb\Rightarrow\lnot(bRa)$; asymmetry implies irreflexivity;
-- transitive:$aRb\land bRc\Rightarrow aRc$.
+- reflexive: $\forall a,\ aRa$; irreflexive: $\forall a,\ \lnot(aRa)$;
+- symmetric: $aRb\Rightarrow bRa$; antisymmetric: $aRb\land bRa\Rightarrow a=b$;
+- asymmetric: $aRb\Rightarrow\lnot(bRa)$; asymmetry implies irreflexivity;
+- transitive: $aRb\land bRc\Rightarrow aRc$.
 <!-- bilingual-en:end -->
 
 [[02_Structures#Session 18 — Partial Orders and Equivalence|弱偏序]]是 reflexive + antisymmetric + transitive；严格偏序是 irreflexive + transitive。由弱偏序 $\preceq$ 可定义 $a\prec b\iff a\preceq b\land a\ne b$；反向可用 $a\preceq b\iff a\prec b\lor a=b$。
@@ -1882,23 +1755,23 @@ Two elements in a partial order are comparable if $a\preceq b$ or $b\preceq a$. 
 
 [[02_Structures#Session 18 — Partial Orders and Equivalence|Hasse diagram]]只画 cover relation，并省略自环与由传递性可恢复的边。读图时“向上存在 path”才代表偏序，不应误认为只有画出的相邻边才相关。
 <!-- bilingual-en:start -->
-[[02_Structures#Session 18 — Partial Orders and Equivalence|Hasse diagram]] paints only cover relation and omits self-loops and edges that are resumable by transitivity.  path Up when reading the illustration is partial order and should not be mistaken for drawing adjacent edges.
+A [[02_Structures#Session 18 — Partial Orders and Equivalence|Hasse diagram]] shows only cover relations, omitting self-loops and edges implied by transitivity. An upward path represents the order relation; the relation is not limited to pairs joined by a drawn edge.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit02-partial-order-hasse.png|900]]
 
 读图：Hasse 图只留不能由中间元素推出的 cover edges，两点间只要存在向上路径就表示可比。
 <!-- bilingual-en:start -->
-Read: A Hasse diagram is a cover edges that cannot be pushed out by an intermediate element and is comparable as long as there is an upward path between two points.
+How to read the diagram: a Hasse diagram keeps only cover edges that cannot be inferred through an intermediate element. Two elements are comparable whenever an upward path connects them.
 <!-- bilingual-en:end -->
 
 - maximal element：没有严格更大的元素；可能有多个。
 - maximum：大于等于所有元素；至多一个，且一定 maximal。
 - minimal/minimum 对偶。
 <!-- bilingual-en:start -->
-- maximal element: No strictly larger elements; multiple possible.
-- maximum: greater than or equal to all elements; at most one, and some maximal.
-- minimal/minimum dual.
+- maximal element: an element with no strictly larger element above it; there may be several;
+- maximum: an element greater than or equal to every element; there is at most one, and it is necessarily maximal;
+- minimal and minimum are the dual notions.
 <!-- bilingual-en:end -->
 
 ### 18.3 product partial order 与 subset representation
@@ -1908,7 +1781,7 @@ Read: A Hasse diagram is a cover edges that cannot be pushed out by an intermedi
 
 若 $(A,\preceq_A),(B,\preceq_B)$ 为偏序，积偏序定义
 <!-- bilingual-en:start -->
-If $(A,\preceq_A),(B,\preceq_B)$ is partial order, the product partial order is defined
+If $(A,\preceq_A)$ and $(B,\preceq_B)$ are partially ordered sets, their product order is defined by
 <!-- bilingual-en:end -->
 
 $$
@@ -1931,9 +1804,6 @@ Every finite partial order can be represented by set inclusion via $x\mapsto D(x
 <!-- bilingual-en:end -->
 
 阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session18.pdf]]。讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/0w9luYcxHrw.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/bHvMYZvZp7Y.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/s-E5T3igntw.pdf]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_PartialOrder.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_ReprsentPrtal.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_EquivRelations.pdf]]。
-<!-- bilingual-en:start -->
-Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session18.pdf|MIT6_042JS15_Session18]].  Statements: [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/0w9luYcxHrw.pdf|0w9luYcxHrw]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/bHvMYZvZp7Y.pdf|bHvMYZvZp7Y]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/s-E5T3igntw.pdf|s-E5T3igntw]].  Slides:[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_PartialOrder.pdf|MIT6_042JS15_PartialOrder]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_ReprsentPrtal.pdf|MIT6_042JS15_ReprsentPrtal]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_EquivRelations.pdf|MIT6_042JS15_EquivRelations]].
-<!-- bilingual-en:end -->
 
 | block | prompt | 官方答案 |
 |---|---|---|
@@ -1950,40 +1820,34 @@ Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session18.pdf|
 | 2.7.7 Q3 | “年龄整除”作为人的关系 | none of the above |
 <!-- bilingual-en:start -->
 | block | prompt | Official Answer |
-|—|—|—|
-| 2.7.2 Q1 | linear | no two people are the same age |
-| 2.7.2 Q2 | Strict product relation nature of two linear orders | antisymmetric, asymmetric, transitive, acyclic; no guarantee of linear |
-| 2.7.5 Q1 | "Same Age" | reflexive, transitive (also symmetric) |
-| 2.7.5 Q2 | "Younger" | irreflexive, antisymmetric, transitive |
-| 2.7.5 Q3 | "Same Parent" | reflexive, transitive (also symmetric) |
-| 2.7.5 Q4 | "Is Descendant" | irreflexive, antisymmetric, transitive |
-| 2.7.5 Q5 | "At least one co-parent" | reflexive; typically not delivered |
-| 2.7.6 Q1 | Properties of Complementary/Intersection Relationships | Complementary symmetric of symmetric; Intersection reflexive of Two reflexive Relationships |
-| 2.7.7 Q1 | "Same Year" | equivalence relation |
-| 2.7.7 Q2 | "Age not less than" as a numeric relationship for age | total order |
-| 2.7.7 Q3 | Age Division as a Human Relation | none of the above |
+|---|---|---|
+| 2.7.2 Q1 | When is the given age-based relation linear? | when no two people have the same age |
+| 2.7.2 Q2 | Properties of the strict product relation formed from two linear orders | antisymmetric, asymmetric, transitive, and acyclic; not necessarily linear |
+| 2.7.5 Q1 | “Same age” | reflexive and transitive (also symmetric) |
+| 2.7.5 Q2 | “Is younger than” | irreflexive, antisymmetric, and transitive |
+| 2.7.5 Q3 | “Have the same parents” | reflexive and transitive (also symmetric) |
+| 2.7.5 Q4 | “Is a descendant of” | irreflexive, antisymmetric, and transitive |
+| 2.7.5 Q5 | “Share at least one parent” | reflexive; not transitive in general |
+| 2.7.6 Q1 | Properties of complements and intersections of relations | The complement of a symmetric relation is symmetric; the intersection of two reflexive relations is reflexive |
+| 2.7.7 Q1 | “Are the same age” | equivalence relation |
+| 2.7.7 Q2 | “Is at least as old as,” interpreted as a relation on numerical ages | total order |
+| 2.7.7 Q3 | “One person's age divides another's” as a relation on people | none of the above |
 <!-- bilingual-en:end -->
 
 原始练习：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S18_2.7.2_population-partial-order.md|2.7.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S18_2.7.5_relational-properties.md|2.7.5]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S18_2.7.6_properties-of-relations.md|2.7.6]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S18_2.7.7_equivalence-relations-and-partial-orders.md|2.7.7]]
-<!-- bilingual-en:start -->
-Original Activity: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S18_2.7.2_population-partial-order.md|2.7.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S18_2.7.5_relational-properties.md|2.7.5]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S18_2.7.6_properties-of-relations.md|2.7.6]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S18_2.7.7_equivalence-relations-and-partial-orders.md|2.7.7]]
-<!-- bilingual-en:end -->
 
 > [!warning] 定义域决定 antisymmetry
 > 几道 population 题在“人”与“年龄数值”之间切换。年龄数值上的 $\ge$ 是 total order；搬到人身上后，两位同龄者会双向相关却不相等，从而破坏 antisymmetry。做题时先写清元素究竟是什么。
 > <!-- bilingual-en:start -->
-> Several population questions toggle between "person" and "age value".  The $\ge$ on the age value is total order; after moving to a person, the two peers are bidirectionally related but not equal, destroying the antisymmetry.  When you do a question, you write down what the elements are.
+> Several population questions switch between people and numerical ages. The relation $\ge$ is a total order on age values. Applied to people, however, two distinct people of the same age are related in both directions, which destroys antisymmetry. Always state clearly what the elements of the domain are.
 > <!-- bilingual-en:end -->
 
 ### 课堂题（非官方独立题解）
 <!-- bilingual-en:start -->
-*Classroom Questions (Unofficial Independent Questions)*
+*In-class questions (unofficial independent solutions)*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp18.pdf]]。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp18.pdf|MIT6_042JS15_cp18]].
-<!-- bilingual-en:end -->
 
 > [!example]- CP18 Problem 1：逐项分类
 > (a) $\supseteq$：弱偏序，不 linear（如 $\{1\},\{2\}$ 不可比）。
@@ -2002,14 +1866,14 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > (h) $\mathbb Z$ 上整除：reflexive、transitive，但 $1\mid-1$ 且 $-1\mid1$ 而 $1\ne-1$，破坏 antisymmetry；也非 symmetric，故 none。
 > <!-- bilingual-en:start -->
-> (a) $\supseteq$: weak partial order, not linear (e.g. $\{1\},\{2\}$ is not comparable).
+> (a) $\supseteq$: a non-strict partial order, but not a linear order (for example, $\{1\}$ and $\{2\}$ are incomparable).
 > (b) Modular $8$ congruence: equivalence relation.
-> (c) Valid implication among formulas: reflexive, transitive, but the logical equivalence formulas with different syntax imply each other, breaking antisymmetry; nor symmetric, so none.
-> (d) Effective IFF: equivalence relation.
-> (e) Rock-Paper-Scissors's beats:irreflexive, asymmetric, but has three-cycle, non-transitive, hence none.
-> (f) Null relation in real numbers: strictly partial order, not linear.
-> (g) identity on integers: both equivalence and weak partial order; non-linear (different integers are not comparable).
-> (h) On $\mathbb Z$, divide: reflexive, transitive, but $1\mid-1$ and $-1\mid1$ and $1\ne-1$, breaking antisymmetry; nor symmetric, hence none.
+> (c) Valid implication between formulas: reflexive and transitive, but syntactically distinct yet logically equivalent formulas imply each other, violating antisymmetry. It is not symmetric either, so none of the listed classes applies.
+> (d) Logical equivalence (valid IFF): an equivalence relation.
+> (e) “Beats” in Rock–Paper–Scissors: irreflexive and asymmetric, but the directed $3$-cycle makes it nontransitive, so none.
+> (f) The empty relation on the reals: a strict partial order, but not linear.
+> (g) Equality on the integers: both an equivalence relation and a non-strict partial order, but not linear because distinct integers are incomparable.
+> (h) Divisibility on $\mathbb Z$: reflexive and transitive, but $1\mid-1$ and $-1\mid1$ while $1\ne-1$, so antisymmetry fails. It is not symmetric either, hence none.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP18 Problem 2：$\operatorname{pow}([1..6])$ 上的 $\subset$
@@ -2021,10 +1885,10 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > (d) 删除 $\varnothing$ 后，六个单元素集合都是 minimal，但没有 minimum；$[1..6]$ 仍是唯一 maximum。
 > <!-- bilingual-en:start -->
-> (a) maximal chain has $7$ collections, for example, $\varnothing\subset\{1\}\subset\{1,2\}\subset\cdots\subset[1..6]$.
-> (b) All ternary subsets make up a antichain of size $\binom63=20$; Sperner theorem indicates it is the largest.
+> (a) A maximal chain has $7$ sets, for example, $\varnothing\subset\{1\}\subset\{1,2\}\subset\cdots\subset[1..6]$.
+> (b) All three-element subsets form an antichain of size $\binom63=20$; Sperner's theorem shows that it is maximum.
 > (c) The only minimal/minimum is $\varnothing$ and the only maximal/maximum is $[1..6]$.
-> (d) After deleting $\varnothing$, the six element sets are all minimal, but there is no minimum; $[1..6]$ is still the only maximum.
+> (d) After deleting $\varnothing$, the six singleton sets are all minimal, but there is no minimum; $[1..6]$ remains the unique maximum.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP18 Problem 3：subsequence 与 product order
@@ -2036,10 +1900,10 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > (d) 对每个元素记录以它结尾的最长递增长度 $I$ 与最长递减长度 $D$。两个不同元素若在序列中有先后，则数值必一大一小，因而对应的 $I$ 或 $D$ 严格增加，所以 $(I,D)$ 对彼此不同。若最长递增不超过 $\sqrt n$ 且最长递减严格小于 $\sqrt n$，可用的整数对少于 $n$，与 $n$ 个互异元素矛盾。故递增长度 $>\sqrt n$ 或递减长度 $\ge\sqrt n$。
 > <!-- bilingual-en:start -->
-> (a) The maximum ascending subsequence is $1238,1258$; the maximum descending subsequence is $641,642,643,653,753,953$.
-> (b) Define $a\prec a'$ if and only if the number is smaller and earlier in the sequence.  The minimal of the example is $6,4,1$, and the maximal is $9,8$.  Point-by-point: minimal is not earlier and smaller, and maximal is not later and larger.
-> (c) chain is the ascending subsequence; antichain is the descending subsequence that the value must be descending when it is read in the order of occurrence.
-> (d) Record for each element the longest increasing degree $I$ and the longest decreasing length $D$ ending with it.  If two different elements are in the sequence first, then the value must be large and small, so the corresponding $I$ or $D$ strictly increase, so the $(I,D)$ pair is different from each other.  If the longest increment is no more than $\sqrt n$ and the longest decrement is strictly less than $\sqrt n$, the available pairs of integers are less than $n$, which contradicts $n$ distinct elements.  so that that increment is $>\sqrt n$ or the length is $\ge\sqrt n$.
+> (a) The longest increasing subsequences are $1238,1258$; the longest decreasing subsequences are $641,642,643,653,753,953$.
+> (b) Define $a\prec a'$ iff $a$ is numerically smaller and appears earlier in the sequence. The minimal elements are $6,4,1$, and the maximal elements are $9,8$. Directly, a minimal element has no earlier smaller element, while a maximal element has no later larger element.
+> (c) Chains are exactly increasing subsequences. When an antichain is read in order of occurrence, its values must decrease, so antichains are exactly decreasing subsequences.
+> (d) For each element, record the length $I$ of a longest increasing subsequence ending there and the length $D$ of a longest decreasing subsequence ending there. For any two elements in their order of appearance, one value is larger and the other smaller, forcing either $I$ or $D$ to increase strictly. Thus all pairs $(I,D)$ are distinct. If the longest increasing subsequence had length at most $\sqrt n$ and the longest decreasing subsequence had length strictly less than $\sqrt n$, fewer than $n$ integer pairs would be available for $n$ distinct elements—a contradiction. Hence the increasing length is $>\sqrt n$ or the decreasing length is $\ge\sqrt n$.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP18 Problem 4：函数的 kernel relation
@@ -2047,14 +1911,13 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > (b) 给定等价关系 $R$，令 $f(a)=R(a)=[a]$。若 $aRa'$，等价类相同；若 $[a]=[a']$，因 $a\in[a]=[a']$，得 $aRa'$。所以 $aRa'\iff f(a)=f(a')$，即 $R=\equiv_f$。
 > <!-- bilingual-en:start -->
-> of the function
-> (a) $a\equiv_fa'$ is defined as $f(a)=f(a')$.  The reflexive, symmetric and transitive properties of equal sign give directly three properties of equivalence relation.
-> (b) Given the equivalence relation $R$, let $f(a)=R(a)=[a]$.  If $aRa'$, the equivalence class is the same; if $[a]=[a']$, because $a\in[a]=[a']$, it is $aRa'$.  So $aRa'\iff f(a)=f(a')$, $R=\equiv_f$.
+> (a) Define $a\equiv_fa'$ by $f(a)=f(a')$. Reflexivity, symmetry, and transitivity of equality immediately give the three properties of an equivalence relation.
+> (b) Given an equivalence relation $R$, define $f(a)=R(a)=[a]$. If $aRa'$, then their equivalence classes are equal. Conversely, if $[a]=[a']$, then $a\in[a]=[a']$, so $aRa'$. Therefore $aRa'\iff f(a)=f(a')$, and $R=\equiv_f$.
 > <!-- bilingual-en:end -->
 
 ### 自检与知识链
 <!-- bilingual-en:start -->
-*Self-examination and Knowledge Chain*
+*Self-checks and knowledge chain*
 <!-- bilingual-en:end -->
 
 > [!question]- 自检 1
@@ -2063,28 +1926,22 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > <!-- bilingual-en:start -->
 > What is the fundamental difference between antisymmetric and asymmetric?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > antisymmetric 允许 $aRa$，只禁止不同元素双向相关；asymmetric 连自环也禁止，并要求一向成立时反向必不成立。
 > <!-- bilingual-en:start -->
-> antisymmetric allows $aRa$, which only forbids two-way correlations between different elements; asymmetric also forbids self-looping and requires that reversing is not always true when it is always true.
+> Antisymmetry allows $aRa$ and forbids only two-way relations between distinct elements. Asymmetry also forbids self-relations and requires $aRb$ to imply $\lnot(bRa)$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 2
 > 整除在正整数上与整数上为何分类不同？
 >
 > <!-- bilingual-en:start -->
-> Why is integer division different from integer division?
+> Why is divisibility classified differently on the positive integers and on all integers?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 正整数中 $a\mid b,b\mid a$ 推出 $a=b$；整数中还可能 $a=-b$，所以 antisymmetry 失败。
 > <!-- bilingual-en:start -->
-> $a=b$ was introduced by $a\mid b,b\mid a$ in positive integers; $a=-b$ may also be in integers, so antisymmetry failed.
+> On the positive integers, $a\mid b$ and $b\mid a$ imply $a=b$. On all integers, they may instead imply $a=-b$, so antisymmetry fails.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 3
@@ -2093,18 +1950,15 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > <!-- bilingual-en:start -->
 > Why can't equivalence classes partially overlap?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 若 $x\in[a]\cap[b]$，则 $aRx$ 且 $xRb$，传递得 $aRb$；再用对称与传递可证 $[a]=[b]$。
 > <!-- bilingual-en:start -->
-> If $x\in[a]\cap[b]$, then $aRx$ and $xRb$, pass $aRb$; then use symmetry and pass provable $[a]=[b]$.
+> If $x\in[a]\cap[b]$, then $aRx$ and $xRb$, so transitivity gives $aRb$. Symmetry and transitivity then show that every member of either class belongs to the other, hence $[a]=[b]$.
 > <!-- bilingual-en:end -->
 
 **知识链：**关系性质 → strict/weak partial order → chains/Hasse → equivalence classes → quotient/representation。
 <!-- bilingual-en:start -->
-**Knowledge Chain:**Relationship Properties → strict/weak partial order → chains/Hasse → equivalence classes → quotient/representation.
+**Knowledge chain:** relation properties → strict/non-strict partial orders → chains and Hasse diagrams → equivalence classes → quotients and representations.
 <!-- bilingual-en:end -->
 
 ---
@@ -2118,7 +1972,7 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 
 [[图的基本结构、路径与遍历#先声明你建的是什么图|简单图]] $G=(V,E)$ 的边是二元无序集合 $\{u,v\}$，无自环、无平行边。顶点 $v$ 的 degree $\deg(v)$ 是以它为端点的边数。
 <!-- bilingual-en:start -->
-The edge of [[图的基本结构、路径与遍历#先声明你建的是什么图|simple graph]] $G=(V,E)$ is a binary disordered set $\{u,v\}$, which has no self-loop and no parallel edge.  The degree $\deg(v)$ of the vertex $v$ is the number of edges for which it is the endpoint.
+An edge of a [[图的基本结构、路径与遍历#先声明你建的是什么图|simple graph]] $G=(V,E)$ is a two-element unordered set $\{u,v\}$. There are no self-loops or parallel edges. The degree $\deg(v)$ is the number of edges incident to vertex $v$.
 <!-- bilingual-en:end -->
 
 [[图的基本结构、路径与遍历#Walk、path、cycle 与可达性|Handshaking lemma]]：
@@ -2129,14 +1983,14 @@ $$
 
 **证明。** 对 incidence pairs $(v,e)$ 双重计数。按顶点先选得到左侧；按边先选，每条边有两个不同端点，得到右侧。
 <!-- bilingual-en:start -->
-**Proof.**Double count for incidence pairs $(v,e)$.  Left is selected by vertex, and right is selected by edge with two different endpoints.
+**Proof.** Double-count the incidence pairs $(v,e)$. Counting by vertex gives the left-hand side. Counting by edge gives the right-hand side because every edge has exactly two distinct endpoints.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit02-handshake-lemma.png|900]]
 
 读图：同一批“顶点–边关联对”按顶点数得 degree sum，按边数则每边恰贡献两次。
 <!-- bilingual-en:start -->
-Read: The same set of Vertex-Edge Associations contribute degree sum by vertex number, and each edge contributes exactly two times by edge number.
+How to read the diagram: counting the same vertex–edge incidence pairs by vertices gives the degree sum, while counting by edges makes every edge contribute exactly twice.
 <!-- bilingual-en:end -->
 
 推论：奇度顶点个数为偶数。因为总度数为偶数，偶度顶点贡献偶数；若有奇数个奇度顶点，它们的 degree 之和为奇数，矛盾。
@@ -2160,12 +2014,12 @@ $$
 
 同构保留所有只依赖邻接结构的性质：顶点/边数、degree multiset、walk/cycle 数、连通性、着色数。图纸上的坐标、边长、顶点名字不是图结构。
 <!-- bilingual-en:start -->
-The isomorphism preserves all properties that depend only on the adjacency structure: the number of vertices/edges, degree multiset, walk/cycle, connectivity, and coloring.  The coordinates, edge lengths, and vertex names on the drawing are not graph structures.
+An isomorphism preserves every property determined solely by adjacency: the numbers of vertices and edges, the degree multiset, counts of walks and cycles, connectivity, and chromatic number. Coordinates, drawn edge lengths, and vertex labels are not part of the graph's structure.
 <!-- bilingual-en:end -->
 
 **degree 被保留的证明。** $f$ 将 $u$ 的邻居集合双射到 $f(u)$ 的邻居集合；取基数得 $\deg_G(u)=\deg_H(f(u))$。因此 degree sequence 不同足以证明不同构，但相同 degree sequence 不保证同构。
 <!-- bilingual-en:start -->
-**The proof that degree is retained.**$f$ bijets $u$'s neighbor set to $f(u)$'s neighbor set; takes the cardinality to be $\deg_G(u)=\deg_H(f(u))$.  So that difference in degree sequence is sufficient to prove difference in structure, but the same degree sequence does not guarantee isomorphism.
+**Why degree is preserved.** The map $f$ restricts to a bijection from the neighbor set of $u$ to that of $f(u)$. Taking cardinalities gives $\deg_G(u)=\deg_H(f(u))$. Different degree sequences therefore prove non-isomorphism, but identical degree sequences do not guarantee isomorphism.
 <!-- bilingual-en:end -->
 
 ### 官方顺序、资源与在线题（8 prompts）
@@ -2174,9 +2028,6 @@ The isomorphism preserves all properties that depend only on the adjacency struc
 <!-- bilingual-en:end -->
 
 阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session19.pdf]]。讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/TIpnudrzvgg.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/hVerxuP4cFg.pdf]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Degrees.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Isomorphism.pdf]]。
-<!-- bilingual-en:start -->
-Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session19.pdf|MIT6_042JS15_Session19]].  Statements: [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/TIpnudrzvgg.pdf|TIpnudrzvgg]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/hVerxuP4cFg.pdf|hVerxuP4cFg]].  Slides:[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Degrees.pdf|MIT6_042JS15_Degrees]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Isomorphism.pdf|MIT6_042JS15_Isomorphism]].
-<!-- bilingual-en:end -->
 
 | block | prompt | 官方答案 |
 |---|---|---|
@@ -2189,30 +2040,24 @@ Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session19.pdf|
 | 2.8.7 Q1 | 可证明两图不同构的断言 | $H$ 有 degree-4 点而 $G$ 无；$G$ 有四个 degree-3 点而 $H$ 仅两个 |
 <!-- bilingual-en:start -->
 | block | prompt | Official Answer |
-|—|—|—|
-| 2.8.2 Q1 | Several Edges for a $4,3,3,2,2$ degrees Chart | $(4+3+3+2+2)/2=7$ |
-| 2.8.2 Q2 | All simple graphs must be true | Even for degree sum; Even for odd vertices |
-| 2.8.4 Q1 | Which similarities are in the triplet | Pair 2 and Pair 3 |
-| 2.8.4 Q2 | Properties not preserved isomorphic | "Numeric labels on vertices are not even" |
-| 2.8.5 Q1-Q2 | Minimum/Maximum Vertices for connected graph Total degree $44$ | $8$;$23$ |
-| 2.8.6 Q1 | Isotopes between two graphs | $10$ |
-| 2.8.7 Q1 | Assertions that Prove Different Structures of Two Graphs | $H$ has degree-4 points and $G$ has none; $G$ has four degree-3 points and $H$ has only two |
+|---|---|---|
+| 2.8.2 Q1 | Number of edges in a graph with degrees $4,3,3,2,2$ | $(4+3+3+2+2)/2=7$ |
+| 2.8.2 Q2 | Statements true of every simple graph | The degree sum is even; the number of odd-degree vertices is even |
+| 2.8.4 Q1 | Which of three pairs of graphs are isomorphic? | Pair 2 and Pair 3 |
+| 2.8.4 Q2 | Property not preserved by isomorphism | “All numerical vertex labels are odd” |
+| 2.8.5 Q1-Q2 | Minimum and maximum vertex counts for a connected graph with total degree $44$ | $8$; $23$ |
+| 2.8.6 Q1 | Number of isomorphisms between the two given graphs | $10$ |
+| 2.8.7 Q1 | Statements proving that two graphs are non-isomorphic | $H$ has a degree-$4$ vertex while $G$ has none; $G$ has four degree-$3$ vertices while $H$ has only two |
 <!-- bilingual-en:end -->
 
 原始练习：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S19_2.8.2_counting-degrees-and-edges.md|2.8.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S19_2.8.4_isomorphism.md|2.8.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S19_2.8.5_extreme-graphs.md|2.8.5]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S19_2.8.6_isomorphic-graphs.md|2.8.6]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S19_2.8.7_non-isomorphic-graphs.md|2.8.7]]
-<!-- bilingual-en:start -->
-Original Activity: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S19_2.8.2_counting-degrees-and-edges.md|2.8.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S19_2.8.4_isomorphism.md|2.8.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S19_2.8.5_extreme-graphs.md|2.8.5]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S19_2.8.6_isomorphic-graphs.md|2.8.6]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S19_2.8.7_non-isomorphic-graphs.md|2.8.7]]
-<!-- bilingual-en:end -->
 
 ### 课堂题（非官方独立题解）
 <!-- bilingual-en:start -->
-*Classroom Questions (Unofficial Independent Questions)*
+*In-class questions (unofficial independent solutions)*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp19.pdf]]。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp19.pdf|MIT6_042JS15_cp19]].
-<!-- bilingual-en:end -->
 
 > [!example]- CP19 Problem 1：异性伴侣平均数
 > 设组内关系边数为 $E$。男性平均 $E/m$，女性平均 $E/f$，前者高 $10\%$ 给 $E/m=1.1E/f$，故 $m=(10/11)f$。两个平均数的分母不同，所以“每条边有一男一女”不推出两个平均相等。
@@ -2221,10 +2066,10 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > $$\frac{E/(0.95m)}{E/(0.8f)}=\frac{16}{19}\frac fm,$$
 > 所以题设 $x=16/19$。又 $m<f$，不可能把每位女性单射配给不同男性。
 > <!-- bilingual-en:start -->
-> Sets the number of relationship edges within a group to $E$.  Men averaged $E/m$, and women $E/f$. The former was $10\%$ higher to $E/m=1.1E/f$, so $m=(10/11)f$.  The denominators of the two averages are different, so "one man and one woman on each side" does not produce two averages equal.
-> Excluding virgin, the number of males was $0.95m$, and the number of females was $0.8f$, with an average ratio of
+> Let $E$ be the number of relationship edges within the group. The male average is $E/m$ and the female average is $E/f$. If the former is $10\%$ higher, then $E/m=1.1E/f$, so $m=(10/11)f$. The averages have different denominators, so the fact that every edge has one male and one female endpoint does not make the averages equal.
+> After excluding people with no partners, the counts are $0.95m$ men and $0.8f$ women, so the ratio of the two averages is
 > $$\frac{E/(0.95m)}{E/(0.8f)}=\frac{16}{19}\frac fm,$$
-> So the question is $x=16/19$.  And $m<f$, it's impossible to single out every woman to a different man.
+> Thus $x=16/19$. Since $m<f$, it is impossible to assign every woman injectively to a distinct man.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP19 Problem 2：奇度点与 handshake sequence
@@ -2242,7 +2087,7 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > [!example]- CP19 Problem 4：哪些是同构不变量
 > (a) 是，本质为顶点数 $7$；(b) 是，Hamilton cycle；(c) 是，degree multiset；(d) 否，当前图纸上的边长；(e) 是，无桥/删任一边仍连通；(f) 是，两点不交 cycles；(g) 否，顶点标签的集合含义；(h) 是，若命题是“存在某种所有边等长的画法”，可沿同构搬运该画法；(i) 是，两个不变量的 OR 仍不变；(j) 是，不变量的否定仍不变。
 > <!-- bilingual-en:start -->
-> (a) Yes, essentially the number of vertices $7$; (b) Yes, Hamilton cycle; (c) Yes, degree multiset; (d) No, the length of the edges on the current drawing; (e) Yes, the bridges/deletions remain connected; (f) Yes, the two points do not intersect cycles; (g) No, the set meaning of the label of the vertex; (h) Yes, if the proposition is "there is some kind of drawing of equal length of all edges", the drawing can be carried along the isomorphism; (i) Yes, the OR of the two invariants remains unchanged; (j) Yes, the negation of the invariant remains unchanged.
+> (a) Yes: it is simply the number of vertices, $7$. (b) Yes: existence of a Hamilton cycle. (c) Yes: the degree multiset. (d) No: edge lengths in the current drawing. (e) Yes: having no bridge, equivalently remaining connected after any one edge is removed. (f) Yes: existence of two vertex-disjoint cycles. (g) No: the set-theoretic meanings of the vertex labels. (h) Yes: if the statement is “there exists a drawing in which all edges have equal length,” that drawing can be transported along an isomorphism. (i) Yes: the OR of two invariants is still invariant. (j) Yes: the negation of an invariant is still invariant.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP19 Supplemental Problem 5
@@ -2254,27 +2099,24 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > For any $h\in V(H)$:
 > $$h\in H(f(v))\iff(f(v),h)\in E(H)\iff(v,f^{-1}(h))\in E(G)$$
 > $$\iff f^{-1}(h)\in G(v)\iff h\in f(G(v)).$$
-> So, $f(G(v))=H(f(v))$.  $f$ then projects the outdegree-$k$ vertices to the outdegree-$k$ vertices, which have the same number of such vertices in both graphs.
+> Hence $f(G(v))=H(f(v))$. Therefore, $f$ bijects the outdegree-$k$ vertices of $G$ with the outdegree-$k$ vertices of $H$, so the two graphs contain the same number of such vertices.
 > <!-- bilingual-en:end -->
 
 ### 自检与知识链
 <!-- bilingual-en:start -->
-*Self-examination and Knowledge Chain*
+*Self-checks and knowledge chain*
 <!-- bilingual-en:end -->
 
 > [!question]- 自检 1
 > degree sequence 相同为何不能证明同构？
 >
 > <!-- bilingual-en:start -->
-> Why can't degree sequence be the same?
+> Why does an identical degree sequence not prove that two graphs are isomorphic?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > degree 只记录局部计数，不记录这些邻居如何彼此连接；可有相同 degrees 而 cycle/连通分量不同。
 > <!-- bilingual-en:start -->
-> degree records only local counts, not how these neighbors connect to each other; there can be the same degrees and cycle/connectivity components are different.
+> Degrees record only local neighbor counts, not how those neighbors connect to one another. Graphs may share the same degree sequence while differing in cycles or connected components.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 2
@@ -2283,9 +2125,6 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > <!-- bilingual-en:start -->
 > Is there a simple graph with exactly three odd-degree vertices?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 不存在，handshaking lemma 的奇度推论排除。
 > <!-- bilingual-en:start -->
@@ -2296,20 +2135,17 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > 顶点重命名后 adjacency matrix 为什么可能变化但图仍同构？
 >
 > <!-- bilingual-en:start -->
-> Why might adjacency matrix change after vertex renaming but the graph is still isomorphic?
+> Why can the adjacency matrix change after the vertices are renamed even though the graph remains isomorphic?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 重命名同时置换矩阵的行和列；数表位置变了，但邻接关系未变。
 > <!-- bilingual-en:start -->
-> Renames rows and columns of a permutation matrix at the same time; the table position changes, but the adjacency does not.
+> Renaming the vertices applies the same permutation to the rows and columns of the adjacency matrix. The entries move, but the underlying adjacency relation does not change.
 > <!-- bilingual-en:end -->
 
 **知识链：**无向边 → degree → double counting → handshaking → 邻接保持双射 → 图不变量。
 <!-- bilingual-en:start -->
-**Knowledge chain:**Undirected edge → degree → double counting → handshaking → Adjacency preserving bijective → Graph invariant.
+**Knowledge chain:** undirected edges → degree → double counting → handshaking lemma → adjacency-preserving bijections → graph invariants.
 <!-- bilingual-en:end -->
 
 ---
@@ -2317,9 +2153,6 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 ## Problem Set 7
 
 原题：[[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps7.pdf]]。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps7.pdf|MIT6_042JS15_ps7]].
-<!-- bilingual-en:end -->
 
 > [!example]- PS7 Problem 1：transitive relations 的运算
 > (a) $R^{-1}$ 必 transitive：$aR^{-1}b,bR^{-1}c$ 等价于 $bRa,cRb$；由 $cRa$ 得 $aR^{-1}c$。
@@ -2341,8 +2174,8 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps7.pdf|
 >
 > (b) 并不一定 transitive。令 $R_1$ 的非单点类为 $\{1,2\}$，$R_2$ 的非单点类为 $\{2,3\}$。并关系有 $1R2,2R3$，却无 $1R3$。
 > <!-- bilingual-en:start -->
-> (a) $R_1\cap R_2$ is still reflexive, symmetric, transitive, and therefore equivalent.
-> (b) Not necessarily transitive.  Let the non-unicast class of $R_1$ be $\{1,2\}$ and that of $R_2$ be $\{2,3\}$.  And there's $1R2,2R3$, but no $1R3$.
+> (a) $R_1\cap R_2$ remains reflexive, symmetric, and transitive, so it is an equivalence relation.
+> (b) The union need not be transitive. Let the only nonsingleton class of $R_1$ be $\{1,2\}$ and that of $R_2$ be $\{2,3\}$. Their union contains $1R2$ and $2R3$ but not $1R3$.
 > <!-- bilingual-en:end -->
 
 > [!example]- PS7 Problem 3：四张图的同构分类
@@ -2359,10 +2192,16 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps7.pdf|
 > $$
 > 直接检查 $G_1$ 的外五环、内五环及五条配对边，它们的端点像在 $G_4$ 中仍然相邻；又因 $f$ 是十个顶点上的双射，所以所有边且仅有边被保持。结论：唯一的非平凡同构类是 $\{G_1,G_4\}$，$G_2$ 与 $G_3$ 各自成类。
 > <!-- bilingual-en:start -->
-> It is not possible to judge by "picture-in-picture" that the invariants are used to exclude the real isomorphism.  The vertices $8,10$ of $G_3$ are all degree $4$, and the vertices of other three graphs are all degree $3$, so $G_3$ is a kind of its own.  $G_2$ contains 4-cycle, such as $2-3-8-7-2$; $G_1,G_4$ does not contain 4-cycle, so $G_2$ is not isomorphic to them.
-> The two exclusion criteria are indeed isomorphic invariants: the above proved isomorphism binds the neighbor set of each vertex to the neighbor set of the image vertex, thus preserving degree; if $v_1-v_2-v_3-v_4-v_1$ is 4-cycle, the adjacency preserving makes $f(v_1)-f(v_2)-f(v_3)-f(v_4)-f(v_1)$ still 4-cycle, and is the same for $f^{-1}$, thus preserving "existential 4-cycle" as well.
+> First use invariants to rule out possibilities, then exhibit any genuine isomorphism; visual resemblance is not enough. Vertices $8,10$ of $G_3$ have degree $4$, while every vertex of the other three graphs has degree $3$, so $G_3$ forms its own class. Graph $G_2$ contains a $4$-cycle, such as $2-3-8-7-2$, while $G_1$ and $G_4$ contain none, so $G_2$ is not isomorphic to either of them.
+> Both exclusion criteria are isomorphism invariants. As proved above, an isomorphism bijects each vertex's neighbor set with the neighbor set of its image, so it preserves degree. If $v_1-v_2-v_3-v_4-v_1$ is a $4$-cycle, adjacency preservation makes $f(v_1)-f(v_2)-f(v_3)-f(v_4)-f(v_1)$ another $4$-cycle; applying the same reasoning to $f^{-1}$ proves the converse. Thus existence of a $4$-cycle is also preserved.
 > A complete isomorphism of $G_1\to G_4$ is
-> Check the outer five-ring, inner five-ring and five paired edges of $G_1$ directly, their end points are still adjacent in $G_4$. And because $f$ is a bijection on ten vertices, all edges and only edges are preserved.  Conclusion: The only non-trivial isomorphism is $\{G_1,G_4\}$, $G_2$ and $G_3$.
+> $$
+> \begin{array}{c|cccccccccc}
+> v&1&2&3&4&5&6&7&8&9&10\\ \hline
+> f(v)&1&2&6&7&10&9&5&4&3&8
+> \end{array}
+> $$
+> Directly check the outer $5$-cycle, inner $5$-cycle, and five matching edges of $G_1$: their endpoint images are adjacent in $G_4$. Since $f$ is a bijection on ten vertices, it preserves exactly the edges. Thus the only nontrivial isomorphism class is $\{G_1,G_4\}$; $G_2$ and $G_3$ each form their own class.
 > <!-- bilingual-en:end -->
 
 > [!example]- PS7 Problem 4：two-ended 不推出 line graph
@@ -2370,8 +2209,8 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps7.pdf|
 >
 > (b) bogus proof 的第一处错误是声称所有 $G_{n+1}$ 都能由某个 two-ended $G_n$ 加一条边得到。对上述反例，无论删三角形边还是孤立单边，所得图都不再恰有两个 degree-1 点。归纳步只证明了某种构造保持性质，没有覆盖所有 $n+1$ 阶对象。
 > <!-- bilingual-en:start -->
-> (a) Take "a triangle and a single edge that do not intersect".  degree $1$ on either side, degree $2$ on the triangle, so two-ended; but the picture is not connected, not line graph.
-> (b) bogus proof's first mistake was to claim that all $G_{n+1}$ could be obtained by adding an edge to a two-ended $G_n$.  For the above counterexample, no matter deleting a triangle edge or isolating a single edge, the resulting graph no longer has exactly two degree-1 points.  The induction step only proves some kind of structure preserving property and does not cover all objects of $n+1$ order.
+> (a) Take the disjoint union of a triangle and a single edge. The endpoints of the isolated edge have degree $1$, while the three triangle vertices have degree $2$, so the graph is exactly two-ended. It is disconnected, however, and therefore is not a line graph in the sense of the problem.
+> (b) The bogus proof first goes wrong by claiming that every $G_{n+1}$ can be obtained by adding an edge to some two-ended $G_n$. In the counterexample above, deleting either a triangle edge or the isolated edge destroys the property of having exactly two degree-$1$ vertices. The induction step shows only that one particular construction preserves the property; it does not cover every graph on $n+1$ vertices.
 > <!-- bilingual-en:end -->
 
 ---
@@ -2380,12 +2219,12 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps7.pdf|
 
 ### 学习问题与前置知识
 <!-- bilingual-en:start -->
-*Learning Problems and Prerequisites*
+*Learning questions and prerequisites*
 <!-- bilingual-en:end -->
 
 本节回答三个常在算法中出现的问题：如何把“相互冲突的对象不能共用资源”翻译成图着色？如何用 odd cycle 完全判定二着色可能性？一张图在删掉多少顶点或边后仍能连通？前置知识是 Session 19 的 simple graph、path、cycle 和 degree。
 <!-- bilingual-en:start -->
-This section answers three questions that often arise in algorithms: How do I translate "conflicting objects cannot share resources" into a coloring map?  How can I fully determine the possibility of two shading with odd cycle?  How many vertices or edges can a graph still be connected after it is deleted?  The prerequisites are simple graph, path, cycle, and degree for Session 19.
+This section answers three questions common in algorithms: How is the rule “conflicting objects cannot share a resource” modeled by graph coloring? Why do odd cycles exactly characterize whether two colors suffice? How many vertices or edges can be removed before a graph becomes disconnected? Prerequisites are the notions of simple graph, path, cycle, and degree from Session 19.
 <!-- bilingual-en:end -->
 
 ### 20.1 proper coloring 与 chromatic number
@@ -2395,7 +2234,7 @@ This section answers three questions that often arise in algorithms: How do I tr
 
 给定 simple graph $G=(V,E)$，一个 **proper $k$-coloring** 是函数
 <!-- bilingual-en:start -->
-Given simple graph $G=(V,E)$, one**proper $k$-coloring**is a function
+Given a simple graph $G=(V,E)$, a **proper $k$-coloring** is a function
 <!-- bilingual-en:end -->
 
 $$
@@ -2404,7 +2243,7 @@ $$
 
 满足每条边 $\{u,v\}\in E$ 的两端颜色不同，即 $c(u)\ne c(v)$。图的 [[图着色与色数#如何证明 chromatic number|着色数]]
 <!-- bilingual-en:start -->
-Satisfies that each edge $\{u,v\}\in E$ has a different color at both ends, $c(u)\ne c(v)$.  [[图着色与色数#如何证明 chromatic number|Number of shades]] of Figure
+such that the endpoints of every edge $\{u,v\}\in E$ receive different colors: $c(u)\ne c(v)$. The [[图着色与色数#如何证明 chromatic number|chromatic number]] of the graph
 <!-- bilingual-en:end -->
 
 $$
@@ -2413,67 +2252,69 @@ $$
 
 是所需颜色数的最小值。它衡量的不是“图有多大”，而是冲突约束能够被多少类兼容资源承担。
 <!-- bilingual-en:start -->
-is the minimum number of colors required.  It is not a measure of "how big the graph", but of how many types of compatible resources conflict constraints can be borne.
+is the minimum number of colors required. It measures not the size of the graph, but the number of compatible resource classes needed to satisfy all conflict constraints.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/mathematics_for_computer_science/mit6_042j/unit02-graph-coloring.png|900]]
 
 读图：相邻顶点必用不同颜色，着色数就是满足全部冲突边所需的最少资源类别。
 <!-- bilingual-en:start -->
-Read: Adjacent vertices must have different colors, and the number of shades is the minimum number of resource classes required to satisfy all the conflicting edges.
+How to read the diagram: adjacent vertices must receive different colors, and the chromatic number is the minimum number of resource classes that can satisfy every conflict edge.
 <!-- bilingual-en:end -->
 
 三个立即可用的边界：
 <!-- bilingual-en:start -->
-Three immediate boundaries:
+Three immediately useful bounds:
 <!-- bilingual-en:end -->
 
 1. 若 $G$ 含 $K_r$ 作为子图，则 $\chi(G)\ge r$，因为这 $r$ 个顶点两两相邻。
 2. 若 $G$ 有至少一条边，则 $\chi(G)\ge2$；若无边且非空，则 $\chi(G)=1$。
 3. 贪心地按任意顶点顺序着色，每次选邻居未用的最小颜色，至多用 $\Delta(G)+1$ 色，因为当前顶点至多有 $\Delta(G)$ 种被邻居占用的颜色。
 <!-- bilingual-en:start -->
-1. If $G$ contains $K_r$ as a subgraph, then $\chi(G)\ge r$, because these $r$ vertices are two adjacent.
-2. $\chi(G)\ge2$ if the $G$ has at least one edge, $\chi(G)=1$ if there are no edges and are not empty.
-3. Greedily coloring in order of any vertex, each time select the smallest unused neighbor color, at most use $\Delta(G)+1$ color, because the current vertex has at most $\Delta(G)$ color occupied by the neighbor.
+
+&nbsp;
+**1.** If $G$ contains $K_r$ as a subgraph, then $\chi(G)\ge r$, because those $r$ vertices are pairwise adjacent.<br>
+**2.** If $G$ has at least one edge, then $\chi(G)\ge2$; if $G$ is nonempty and has no edges, then $\chi(G)=1$.<br>
+**3.** Greedy coloring in any vertex order uses at most $\Delta(G)+1$ colors: at each vertex, choose the smallest color not already used by a neighbor. At most $\Delta(G)$ colors can be forbidden.<br>
 <!-- bilingual-en:end -->
 
 > [!warning]
 > $\Delta(G)+1$ 是普适上界，不是下界。有 $n-1$ 最大度的 star graph 仍只需 $2$ 色。“某个点邻居多”并不意味着邻居之间也冲突。
 > <!-- bilingual-en:start -->
-> $\Delta(G)+1$ is a universal upper bound, not a lower bound.  star graph with $n-1$ max still only needs $2$ color.  "A certain point has many neighbors" does not mean that neighbors are also in conflict.
+> $\Delta(G)+1$ is a universal upper bound, not a lower bound. A star graph has maximum degree $n-1$ but still needs only $2$ colors. One vertex having many neighbors does not imply that those neighbors conflict with one another.
 > <!-- bilingual-en:end -->
 
 #### 从寄存器分配看建模
 <!-- bilingual-en:start -->
-*Modeling from Register Allocation*
+*Modeling register allocation*
 <!-- bilingual-en:end -->
 
 编译器中，每个变量是顶点；若两个变量的 **live ranges** 重叠，它们在某个时刻必须同时保存，就在两点间连边。一种颜色对应一个 register；同色顶点没有重叠 live range，可以安全重用该 register。因此最小寄存器数正是冲突图的 $\chi(G)$。
 <!-- bilingual-en:start -->
-In the compiler, each variable is a vertex; if the**live ranges**of the two variables overlap, they must be saved at some point simultaneously, just between the two points.  One color corresponds to a register; the same-color vertices do not overlap a live range, and the register can be safely reused.  So the minimum number of registers is just the $\chi(G)$ of conflict graph.
+In a compiler, each variable is a vertex. If two variables' **live ranges** overlap, they must be stored simultaneously at some point, so connect their vertices by an edge. A color represents a register. Vertices of the same color have nonoverlapping live ranges and may safely reuse that register. Thus the minimum number of registers is exactly $\chi(G)$ for the interference graph.
 <!-- bilingual-en:end -->
 
 ### 20.2 bipartite iff no odd cycle
 
 图 $G$ 是 [[图着色与色数#Bipartite、二着色与 odd cycle 是同一件事|二分图]]，若 $V$ 可分成不交集 $L,R$，且每条边都一端在 $L$、一端在 $R$。这等价于 $G$ 可 $2$-color。
 <!-- bilingual-en:start -->
-Figure $G$ is [[图着色与色数#Bipartite、二着色与 odd cycle 是同一件事|bipartite graph]], if $V$ can be divided into disjoint $L,R$, and each edge has one end at $L$ and one end at $R$.  This is equivalent to $G$ $2$-color.
+A graph $G$ is [[图着色与色数#Bipartite、二着色与 odd cycle 是同一件事|bipartite]] if $V$ can be partitioned into disjoint sets $L,R$ such that every edge has one endpoint in each set. This is equivalent to $G$ being $2$-colorable.
 <!-- bilingual-en:end -->
 
 > [!theorem] Odd-cycle characterization
 > 一张 finite simple graph 是 bipartite，当且仅当它不含奇数长度 cycle。
 > <!-- bilingual-en:start -->
-> A finite simple graph is bipartite if and only if it does not contain an odd length cycle.
+> A finite simple graph is bipartite if and only if it contains no odd-length cycle.
 > <!-- bilingual-en:end -->
 
 **必要性。** 假设 $G$ 已用两色着色。沿 cycle $v_0,v_1,\ldots,v_{m-1},v_0$ 前进时，每过一条边颜色必切换一次。回到 $v_0$ 时必须回到原颜色，所以切换次数 $m$ 为偶数。因此 odd cycle 不可能存在。
 <!-- bilingual-en:start -->
-**Necessity.**Assume that $G$ has been shaded with two colors.  As you advance along the cycle $v_0,v_1,\ldots,v_{m-1},v_0$, you must switch colors once for every edge you pass.  You must return to the original color when you return to $v_0$, so the number of transitions $m$ is even.  So odd cycle can't exist.
+**Necessity.** Suppose $G$ has a proper $2$-coloring. Along a cycle $v_0,v_1,\ldots,v_{m-1},v_0$, the color changes at every edge. Returning to $v_0$ must also return to its original color, so the number $m$ of changes is even. Therefore, no odd cycle can exist.
 <!-- bilingual-en:end -->
 
 **充分性。** 对每个 connected component 选根 $r$ 并建立一棵 BFS tree，把 BFS 距离 $d(r,v)$ 为偶数的点染蓝，为奇数的点染橙。需证每条边 $\{u,v\}$ 的两端奇偶性不同。反设 $d(r,u),d(r,v)$ 同奇偶，在 BFS tree 中取根到 $u,v$ 两条唯一 tree paths 的最后公共顶点 $z$。$z$ 之后的两段 tree path 内部顶点不交，再加边 $\{u,v\}$ 确实形成 simple cycle；其长度为
 <!-- bilingual-en:start -->
-**Sufficiency.**Choose a root $r$ for each connected component and build a BFS tree. Dye blue with even BFS distance $d(r,v)$, and dye orange with odd number.  Each edge $\{u,v\}$ has a different parity at both ends.  Inversely, the $d(r,u),d(r,v)$ is the same as the parity, rooted in the BFS tree to the last common vertex $z$ of the two unique tree paths of $u,v$.  After $z$, the two segments of tree path do not intersect each other, and the addition of edge $\{u,v\}$ does form simple cycle; its length is
+**Sufficiency.** Choose a root $r$ in each connected component and build a BFS tree. Color a vertex blue when its BFS distance $d(r,v)$ is even and orange when it is odd. We must show that every edge $\{u,v\}$ has endpoints of opposite parity. Suppose instead that $d(r,u)$ and $d(r,v)$ have the same parity. In the BFS tree, let $z$ be the last common vertex of the unique root-to-$u$ and root-to-$v$ paths. Beyond $z$, the two tree paths are internally disjoint; together with $\{u,v\}$ they form a simple cycle of length
 <!-- bilingual-en:end -->
 
 $$
@@ -2482,41 +2323,41 @@ $$
 
 前两项之和为偶数，故 cycle 为奇长，与假设矛盾。所以该着色 proper，$G$ bipartite。
 <!-- bilingual-en:start -->
-The sum of the first two terms is even, so cycle is odd length, which is inconsistent with the assumption.  proper, $G$ bipartite.
+The first two terms have an even sum, so the cycle has odd length, contradicting the hypothesis. Therefore the coloring is proper and $G$ is bipartite.
 <!-- bilingual-en:end -->
 
 这个证明同时给出线性时间算法：用 BFS 时可直接以最短距离奇偶性着色；用 DFS 时则沿搜索树的深度交替着色，不再把 DFS 深度解读为最短距离。若遇到同色边，搜索树中的两条路与该边就给出 odd-cycle certificate。
 <!-- bilingual-en:start -->
-This proof also gives a linear-time algorithm: when BFS is used, the coloring can be done directly by the parity of the shortest distance; when DFS is used, the coloring is alternated along the depth of the search tree, so the depth of DFS is no longer interpreted as the shortest distance.  If the same color edge is encountered, two paths in the tree and the edge are searched to give odd-cycle certificate.
+This proof also yields a linear-time algorithm. With BFS, color directly by the parity of shortest-path distance. With DFS, alternate colors by search-tree depth, without interpreting DFS depth as shortest distance. If an edge joins two vertices of the same color, the two tree paths plus that edge provide an odd-cycle certificate.
 <!-- bilingual-en:end -->
 
 ### 20.3 connectivity、components 与 cut
 <!-- bilingual-en:start -->
-*20.3 connectivity, components and cut*
+*20.3 connectivity, components, and cuts*
 <!-- bilingual-en:end -->
 
 两顶点之间有 path 时称其 **connected**。“存在 path”在顶点集上是等价关系：
 <!-- bilingual-en:start -->
-When there is path between two vertices, it is called**connected**.  Exists path is an equivalent relation on the vertex set:
+Two vertices are **connected** when a path joins them. “There exists a path” is an equivalence relation on the vertex set:
 <!-- bilingual-en:end -->
 
 - reflexive：长度 $0$ 的 path 连自己；
 - symmetric：反向读一条无向 path；
 - transitive：串接两条 walk，删掉重复段得 path。
 <!-- bilingual-en:start -->
-- reflexive: path with length $0$;
-- symmetric: Reverse read an undirected path;
-- transitive: Concatenate two walk's, removing the repeat segment to path.
+- reflexive: a length-$0$ path joins a vertex to itself;
+- symmetric: an undirected path may be read in reverse;
+- transitive: concatenate two paths to obtain a walk, then remove repeated segments to obtain a path.
 <!-- bilingual-en:end -->
 
 它的等价类就是 [[图的基本结构、路径与遍历#Walk、path、cycle 与可达性|连通分量]]。图 connected 当且仅当只有一个 component。
 <!-- bilingual-en:start -->
-Its equivalence class is [[图的基本结构、路径与遍历#Walk、path、cycle 与可达性|connected component]].  Figure connected if and only if there is only one component.
+Its equivalence classes are the [[图的基本结构、路径与遍历#Walk、path、cycle 与可达性|connected components]]. A graph is connected if and only if it has exactly one component.
 <!-- bilingual-en:end -->
 
 一条边 $e$ 是 **bridge/cut edge**，若删除 $e$ 后 component 数增加。一个顶点 $v$ 是 **cut vertex/articulation point**，若删除 $v$ 及其 incident edges 后 component 数增加（对原本 connected 的图，这就是删点后不再 connected）。边在某个 cycle 上当且仅当它不是 bridge：若在 cycle 上，删边后可绕行；若删边后两端仍有 path，该 path 加原边形成 cycle。
 <!-- bilingual-en:start -->
-One edge $e$ is**bridge/cut edge**, and the number of component increases if $e$ is deleted.  A vertex $v$ is**cut vertex/articulation point**, and if $v$ and its incident edges are deleted, the number of component increases (for the original graph of connected, this is no longer connected).  An edge is on a cycle if and only if it is not bridge: on a cycle, the trimmed edge can be wrapped; and if there is still path at both ends of the trimmed edge, the path plus the original edge forms cycle.
+An edge $e$ is a **bridge** or **cut edge** if deleting it increases the number of components. A vertex $v$ is a **cut vertex** or **articulation point** if deleting $v$ and its incident edges increases the number of components; for an initially connected graph, this means the remainder becomes disconnected. An edge lies on a cycle if and only if it is not a bridge. If it lies on a cycle, the remaining part of the cycle is a detour after deletion. Conversely, if its endpoints remain joined by a path after deletion, that path together with the original edge forms a cycle.
 <!-- bilingual-en:end -->
 
 ### 20.4 $k$-vertex-connectivity 与 $k$-edge-connectivity
@@ -2532,13 +2373,13 @@ For graphs with at least $k+1$ vertices:
 - $G$ 是 **$k$-vertex-connected**，若删掉任意少于 $k$ 个顶点后仍 connected；
 - $G$ 是 **$k$-edge-connected**，若删掉任意少于 $k$ 条边后仍 connected。
 <!-- bilingual-en:start -->
-- $G$ is**$k$-vertex-connected**, connected if any less than $k$ vertices are deleted;
-- $G$ is**$k$-edge-connected**and remains connected if any less than $k$ edges are deleted.
+- $G$ is **$k$-vertex-connected** if it remains connected after deleting any set of fewer than $k$ vertices;
+- $G$ is **$k$-edge-connected** if it remains connected after deleting any set of fewer than $k$ edges.
 <!-- bilingual-en:end -->
 
 其最大 $k$ 分别记为 vertex connectivity $\kappa(G)$ 与 edge connectivity $\lambda(G)$。对非平凡 connected graph，有
 <!-- bilingual-en:start -->
-The maximum $k$ is vertex connectivity $\kappa(G)$ and edge connectivity $\lambda(G)$ respectively.  Non-trivial connected graph, yes
+The largest such values of $k$ are the vertex connectivity $\kappa(G)$ and edge connectivity $\lambda(G)$, respectively. For a nontrivial connected graph,
 <!-- bilingual-en:end -->
 
 $$
@@ -2547,17 +2388,17 @@ $$
 
 其中 $\delta(G)$ 是最小 degree。右不等式因为删掉某个最小度顶点的所有 incident edges 会孤立它。左不等式的直观是：“删点”还会同时删掉该点的所有边，通常比单独删边更有破坏力。课程中用切集转换证明 $k$-vertex-connected $\Rightarrow k$-edge-connected。
 <!-- bilingual-en:start -->
-where $\delta(G)$ is the smallest degree.  The right inequality is isolated by deleting all incident edges of a certain minimum vertex.  The left inequality is intuitive: "pruning a point" also deletes all the edges of the point at the same time, often more destructive than pruning them individually.  The $k$-vertex-connected $\Rightarrow k$-edge-connected is proved in the course with a cut set transformation.
+where $\delta(G)$ is the minimum degree. The right inequality follows because deleting all edges incident to a minimum-degree vertex isolates it. The left inequality reflects that deleting a vertex also deletes all of its incident edges and is therefore usually more destructive than deleting a single edge. The course proves $k$-vertex-connected $\Rightarrow k$-edge-connected by converting an edge cut into a vertex cut.
 <!-- bilingual-en:end -->
 
 #### 为什么 $K_n$ 恰是 $(n-1)$-connected
 <!-- bilingual-en:start -->
-*Why? $K_n$ is $(n-1)$-connected.*
+*Why $K_n$ is exactly $(n-1)$-connected*
 <!-- bilingual-en:end -->
 
 删掉至多 $n-2$ 个顶点后，所余顶点仍两两相邻，因而 connected；删掉 $n-1$ 个顶点已超出通常连通度定义的非平凡范围。因此 $\kappa(K_n)=n-1$，同样 $\lambda(K_n)=n-1$。
 <!-- bilingual-en:start -->
-After deleting at most $n-2$ vertices, the remaining vertices are still two adjacent vertices, thus connected. Deleting $n-1$ vertices has exceeded the non-trivial range defined by the usual connectivity.  So $\kappa(K_n)=n-1$, also $\lambda(K_n)=n-1$.
+After deleting at most $n-2$ vertices, the remaining vertices are still pairwise adjacent and therefore connected. Deleting $n-1$ vertices lies outside the usual nontrivial range in the definition of connectivity. Hence $\kappa(K_n)=n-1$, and similarly $\lambda(K_n)=n-1$.
 <!-- bilingual-en:end -->
 
 ### 官方顺序、资源与在线题（8 prompts）
@@ -2566,9 +2407,6 @@ After deleting at most $n-2$ vertices, the remaining vertices are still two adja
 <!-- bilingual-en:end -->
 
 阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session20.pdf]]。讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/Penh4mv5gAg.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/TIQ3xN38jgM.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/5wCZqdCDafc.pdf]]。字幕：[[MIT_OCW_6.042J_Materials/04_Captions/Penh4mv5gAg.srt]]、[[MIT_OCW_6.042J_Materials/04_Captions/TIQ3xN38jgM.srt]]、[[MIT_OCW_6.042J_Materials/04_Captions/5wCZqdCDafc.srt]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Coloring.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_graphconnectivity.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_k-connectivity.pdf]]。
-<!-- bilingual-en:start -->
-Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session20.pdf|MIT6_042JS15_Session20]].  Statements: [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/Penh4mv5gAg.pdf|Penh4mv5gAg]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/TIQ3xN38jgM.pdf|TIQ3xN38jgM]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/5wCZqdCDafc.pdf|5wCZqdCDafc]].  Subtitles: [[MIT_OCW_6.042J_Materials/04_Captions/Penh4mv5gAg.srt|Penh4mv5gAg]], [[MIT_OCW_6.042J_Materials/04_Captions/TIQ3xN38jgM.srt|TIQ3xN38jgM]], [[MIT_OCW_6.042J_Materials/04_Captions/5wCZqdCDafc.srt|5wCZqdCDafc]].  Slides:[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Coloring.pdf|MIT6_042JS15_Coloring]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_graphconnectivity.pdf|MIT6_042JS15_graphconnectivity]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_k-connectivity.pdf|MIT6_042JS15_k-connectivity]].
-<!-- bilingual-en:end -->
 
 | block | prompt | 官方答案与核验 |
 |---|---|---|
@@ -2582,37 +2420,31 @@ Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session20.pdf|
 | 2.9.8 Q1 | 整数为顶点、$|i-j|=6$ 时连边，有几个 components | $6$；路径保持模 $6$ 余数，每个余数类内又可通过 $\pm6$ 到达 |
 <!-- bilingual-en:start -->
 | block | prompt | Official Answers and Checks |
-|—|—|—|
-| 2.9.2 Q1 | Whether maximum degree $k$ forces $\chi(G)\ge k$ | False; $n$-vertex star's $\Delta=n-1$, but $\chi=2$ |
-| 2.9.2 Q2 | The number of shades of the even vertex wheel graph | $3$;Under the courseware convention rim is even cycle, alternating with two colors, hub with the third color |
-| 2.9.2 Q3 | How many colors $K_n$ requires | $n$; adjacent at every two points |
-| 2.9.5 Q1 | An Effective Inference for $k$-edge/Vertex Connectivity | $k$-vertex-connected $\Rightarrow k$-edge-connected |
-| 2.9.5 Q2 | $K_n$ connectivity | $(n-1)$-connected |
-| 2.9.6 Q1 | chromatic number | $3$; Image contains triangle with outer circle alternating between two colors and center in third color |
-| 2.9.7 Q1 | chromatic number for acyclic graph | $2$ for edges; $1$ for non-empty graphs without edges |
-| 2.9.8 Q1 | edge with vertex integer, $|i-j|=6$, several components | $6$; path remains modular $6$ remainder, reachable within each remainder class by $\pm6$ |
+|---|---|---|
+| 2.9.2 Q1 | Does maximum degree $k$ force $\chi(G)\ge k$? | False; an $n$-vertex star has $\Delta=n-1$ but $\chi=2$ |
+| 2.9.2 Q2 | Chromatic number of a wheel graph with an even number of rim vertices | $3$; under the courseware convention, the rim is an even cycle colored alternately with two colors, and the hub uses a third |
+| 2.9.2 Q3 | Number of colors required by $K_n$ | $n$; every pair of vertices is adjacent |
+| 2.9.5 Q1 | Valid implication between $k$-vertex-connectivity and $k$-edge-connectivity | $k$-vertex-connected $\Rightarrow k$-edge-connected |
+| 2.9.5 Q2 | Connectivity of $K_n$ | $(n-1)$-connected |
+| 2.9.6 Q1 | Chromatic number of the pictured graph | $3$; the graph contains a triangle, while the outer cycle can alternate two colors and the center can use a third |
+| 2.9.7 Q1 | Chromatic number of an acyclic graph | $2$ if it has at least one edge; $1$ if it is nonempty and edgeless |
+| 2.9.8 Q1 | Integers as vertices, with an edge when $|i-j|=6$: how many components? | $6$; every path preserves residue modulo $6$, and vertices within one residue class are connected by steps of $\pm6$ |
 <!-- bilingual-en:end -->
 
 原始练习：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S20_2.9.2_chromatic-number.md|2.9.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S20_2.9.5_k-connected.md|2.9.5]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S20_2.9.6_graph-coloring-i.md|2.9.6]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S20_2.9.7_graph-coloring-ii.md|2.9.7]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S20_2.9.8_connected-components-in-integers.md|2.9.8]]
-<!-- bilingual-en:start -->
-Original Activity: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S20_2.9.2_chromatic-number.md|2.9.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S20_2.9.5_k-connected.md|2.9.5]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S20_2.9.6_graph-coloring-i.md|2.9.6]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S20_2.9.7_graph-coloring-ii.md|2.9.7]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S20_2.9.8_connected-components-in-integers.md|2.9.8]]
-<!-- bilingual-en:end -->
 
 > [!note]
 > Wheel 的符号约定在不同教材中不一：有的把 $W_n$ 的 $n$ 指总顶点数，有的指 rim 顶点数。上表保留本 OCW 题库的官方答案 $3$；真正判断规则是：rim 为偶 cycle 时 $\chi=3$，rim 为奇 cycle 时 $\chi=4$。
 > <!-- bilingual-en:start -->
-> The symbolic conventions of Wheel vary from textbook to textbook: some refer to $W_n$'s $n$ as the total number of vertices, and some refer to the number of rim vertices.  The above table retains the official answer $3$ of the OCW question bank; the real rule of judgment is: $\chi=3$ if rim is even cycle, $\chi=4$ if rim is odd cycle.
+> Notation for wheel graphs varies across textbooks: some use $n$ for the total number of vertices in $W_n$, while others use it for the number of rim vertices. The table retains the OCW question bank's official answer, $3$. The actual rule is that an even rim cycle gives $\chi=3$, while an odd rim cycle gives $\chi=4$.
 > <!-- bilingual-en:end -->
 
 ### 课堂题（非官方独立题解）
 <!-- bilingual-en:start -->
-*Classroom Questions (Unofficial Independent Questions)*
+*In-class questions (unofficial independent solutions)*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp20.pdf]]。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp20.pdf|MIT6_042JS15_cp20]].
-<!-- bilingual-en:end -->
 
 > [!example]- CP20 Problem 1：register allocation
 > **(a) 建图。** 每个变量 $a,b,c,d,e,f,g,h$ 是一个顶点。从某变量获得值到它最后一次被使用（若为 output，则到程序末）是它的 live interval；两个值必须同时保留时，对应顶点间连冲突边。例如 $a,b$ 同为 inputs，故相邻；$c,d$ 在 Step 2 之后都仍 live，也相邻；$b$ 在 Step 1 后已 dead，因而它的 register 可用来存新算出的 $c$。
@@ -2629,15 +2461,15 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > **(c) 变量被多次赋值。** 先做 SSA-style renaming：把两次 $t$ 分成 $t_1=r+s$ 与 $t_2=m-k$，并把各次读取改为对应版本，如 $u=t_1-3,v=t_2+u$。每个版本只有一个起点，live range 才不会被错误合并。
 > <!-- bilingual-en:start -->
-> Each variable $a,b,c,d,e,f,g,h$ is a vertex.  The value obtained from a variable until it was last used (output, then to the end of the program) is its live interval; when both values must be preserved, the corresponding vertex is connected to the conflict edge.  For example, $a,b$ is also inputs and thus adjacent; $c,d$ is still live after Step 2 and is also adjacent; $b$ is dead after Step 1, so its register can be used to store newly calculated $c$.
-> **(b) Minimal coloring.**Note first that the last use of $a$ was Step 2, so it was dead at the end of Step 3 and cannot be treated as $a,c,d,e$ $K_4$.  At the end of Step 5, $d,g$ are all outputs that must be reserved to the end of the program, and $f$ is also used in Step 6; therefore, $\{d,f,g\}$ all three live at the same time to form $K_3$, requiring at least $3$ registers.  Exactly $3$ are used for the following assignments:
-> | register | Variables Reused by Time |
-> |—|—|
+> **(a) Constructing the interference graph.** Each variable $a,b,c,d,e,f,g,h$ is a vertex. Its live interval runs from the time its value is produced until its last use; an output remains live until the end of the program. Join two vertices when their values must be retained at the same time. For example, the input variables $a$ and $b$ are adjacent; $c$ and $d$ are both still live after Step 2, so they are adjacent as well. By contrast, $b$ is dead after Step 1, so its register can be reused for the newly computed value of $c$.
+> **(b) Minimum coloring.** First note that $a$ is used for the last time in Step 2 and is therefore dead by the end of Step 3; consequently, $\{a,c,d,e\}$ is not a $K_4$. After Step 5, the output variables $d$ and $g$ must both remain live until the end of the program, while $f$ is still needed in Step 6. Thus $\{d,f,g\}$ is a $K_3$, establishing a lower bound of three registers. The following allocation uses exactly three:
+> | register | Variables assigned to it over time |
+> |---|---|
 > | $R_1$ | $d$ |
 > | $R_2$ | $a\rightarrow e\rightarrow g$ |
 > | $R_3$ | $b\rightarrow c\rightarrow f\rightarrow h$ |
-> Arrows indicate that register is overwritten by the latter only after the last reading of the former: Step 1 overwrites $b$ with $c$, Step 3 overwrites $a$ with $e$, Step 4 overwrites $c$ with $f$, Step 5 overwrites $g$ with $e$, and Step 6 overwrites $h$ with $f$.  This gives an upper bound of three coloring, and with the $K_3$ lower bound, it is $\chi(G)=3$, which requires at least $3$ registers.
-> **(c) The variable is assigned multiple times.**Do SSA-style renaming first: Divide the $t$ twice into $t_1=r+s$ and $t_2=m-k$, and change each read to a corresponding version, such as $u=t_1-3,v=t_2+u$.  Each version has only a starting point so that live range is not incorrectly merged.
+> Each arrow means that the register is overwritten only after the preceding variable's final read: Step 1 overwrites $b$ with $c$, Step 3 overwrites $a$ with $e$, Step 4 overwrites $c$ with $f$, Step 5 overwrites $e$ with $g$, and Step 6 overwrites $f$ with $h$. This is a three-coloring, so together with the $K_3$ lower bound it proves $\chi(G)=3$. Hence the minimum number of registers is $3$.
+> **(c) Variables assigned more than once.** First perform SSA-style renaming: replace the two assignments to $t$ by distinct versions, $t_1=r+s$ and $t_2=m-k$, and retarget every read to the appropriate version, for example $u=t_1-3$ and $v=t_2+u$. Each version then has a single definition point, preventing separate live ranges from being merged incorrectly.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP20 Problem 2：positive degree 不推出 connected
@@ -2646,7 +2478,7 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > **(b) 第一个非法步骤。** 归纳步从“任意一张满足前件的 $(n+1)$-顶点图”出发，应先删去一点得到仍满足前件的 $n$-顶点图。bogus proof 却从一张已知 connected 的 $n$-顶点图出发，再特别地添加 $x$。它只覆盖了“删掉 $x$ 后仍满足 positive degree”的图；若某顶点唯一邻居是 $x$，删 $x$ 后该点 degree 变 $0$，不能套 $P(n)$。
 > <!-- bilingual-en:start -->
 > **(a) Counterexample.** Take two disjoint edges. All four vertices have degree $1>0$, but the graph has two connected components.
-> **(b) First invalid step.** An induction step must start with an arbitrary $(n+1)$-vertex graph satisfying the hypothesis, delete a vertex, and obtain an $n$-vertex graph that still satisfies the hypothesis. The bogus proof instead starts with a connected $n$-vertex graph and adds a specially chosen vertex $x$. It therefore covers only graphs that retain positive degree after $x$ is deleted. If some vertex has $x$ as its only neighbour, deleting $x$ leaves that vertex with degree $0$, so $P(n)$ cannot be applied.
+> **(b) First invalid step.** An induction step must start with an arbitrary $(n+1)$-vertex graph satisfying the hypothesis, delete a vertex, and obtain an $n$-vertex graph that still satisfies the hypothesis. The bogus proof instead starts with a connected $n$-vertex graph and adds a specially chosen vertex $x$. It therefore covers only graphs that retain positive degree after $x$ is deleted. If some vertex has $x$ as its only neighbor, deleting $x$ leaves that vertex with degree $0$, so $P(n)$ cannot be applied.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP20 Problem 3：3-color OR/AND gadget
@@ -2667,17 +2499,17 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > **(c)** 把图中从颜色顶点 $T$ 指向左中间顶点的边，改成从 $F$ 指向该顶点；其余边不变。同样做四行排除，输出依次为 $F,F,F,T$，恰是 $P\land Q$。本题的关键是边的端点从 $T$ 改到 $F$，不是只换图上标签。
 > <!-- bilingual-en:start -->
-> Note that the three colors of the left triangle are $N,T,F$, and the dotted line is adjacent to $N$.
-> **(a)**Because $P,Q$ are both adjacent to $N$, they can only take $T$ or $F$ in valid $3$-coloring, so "colored" necessarily derives that neither is $N$.  Conversely, the inner vertices can be done by propagating colors one by one for the four $T/F$ inputs of $(P,Q)$; because there are only four rows, this exhaustive check constitutes a proof of sufficiency.
-> **(b) Truth table.**Excludes colors that have been occupied by neighboring points in turn along two triangle and diamond edges, resulting in
+> Denote the three colors on the left triangle by $N,T,F$; a dotted line means adjacency to $N$.
+> **(a)** Because both $P$ and $Q$ are adjacent to $N$, a valid $3$-coloring forces each to be either $T$ or $F$. Conversely, for each of the four possible $T/F$ inputs $(P,Q)$, colors can be propagated through all internal vertices. Since there are only four cases, this exhaustive check proves sufficiency.
+> **(b) Truth table.** Successively exclude the colors already used by adjacent vertices along the two triangles and the diamond. This gives
 > | $P$ | $Q$ | $P\lor Q$ |
-> |—|—|—|
+> |---|---|---|
 > | $F$ | $F$ | $F$ |
 > | $F$ | $T$ | $T$ |
 > | $T$ | $F$ | $T$ |
 > | $T$ | $T$ | $T$ |
-> Not only can each row "give" to the output, but the edge constraint also excludes another $T/F$ output, so gadget really enforces the OR semantics.
-> **(c)**Changes the edge of the graph from the color vertex $T$ to the left middle vertex from $F$; the remaining edges do not change.  Also do four lines of exclusion, the output in order is $F,F,F,T$, exactly $P\land Q$.  The key to this problem is to change the end of the edge from $T$ to $F$, not just change the labels on the diagram.
+> In every row, the constraints not only permit the stated output color but also rule out the other $T/F$ color, so the gadget truly enforces OR.
+> **(c)** Replace the edge from the color vertex $T$ to the middle-left vertex with an edge from $F$ to that vertex; leave every other edge unchanged. Repeating the four-case elimination gives outputs $F,F,F,T$, exactly the truth table of $P\land Q$. The endpoint of the edge must actually move from $T$ to $F$; merely relabeling the drawing is not enough.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP20 Problem 4：hypercube 的 connectivity
@@ -2703,15 +2535,15 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > 对 $H_n$，每点 degree $n$，故 $\kappa(H_n)\le n$。下界可将上述“用不同首次翻转位绕行”的构造推广成 $n$ 条内部顶点不交 path，再用 Menger 定理；因此 $\kappa(H_n)=n$。
 > <!-- bilingual-en:start -->
 > The vertices of $H_n$ are $n$-bit strings, with two vertices adjacent exactly when they differ in one bit. By XOR symmetry, it suffices in $H_3$ to start at $000$ and classify the other endpoint by Hamming distance.
-> **distance $1$, Ends with $100$:**
+> **Distance $1$, endpoint $100$:**
 > $$000-100,$$
 > $$000-010-110-100,$$
 > $$000-001-101-100.$$
-> **distance $2$, Ends with $110$:**
+> **Distance $2$, endpoint $110$:**
 > $$000-100-110,$$
 > $$000-010-110,$$
 > $$000-001-101-111-110.$$
-> **distance $3$, Ends with $111$:**
+> **Distance $3$, endpoint $111$:**
 > $$000-100-110-111,$$
 > $$000-010-011-111,$$
 > $$000-001-101-111.$$
@@ -2721,7 +2553,7 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 
 ### 边界情况与易错点
 <!-- bilingual-en:start -->
-*Boundary Condition and False Points*
+*Boundary cases and common pitfalls*
 <!-- bilingual-en:end -->
 
 - “有边的 forest 需两色”与“所有 acyclic graph 恰需两色”不完全相同；无边图只需一色。
@@ -2729,65 +2561,56 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 - 证明 $\chi(G)=k$ 必须同时给上界（一个 $k$-着色）和下界（例如 clique/odd cycle）。
 - register allocation 中边代表“生存期重叠”，不是“两个变量出现在同一条语句”这一更粗的条件。
 <!-- bilingual-en:start -->
-- " forest with edges requires two colors " is not identical to " All acyclic graph require two colors "; borderless drawings require only one color.
-- "Less than $k$" in $k$-connected is not "less than $k$"; the latter is the minimum cut size required to break connectivity.
-- Prove that $\chi(G)=k$ must give both an upper bound (a $k$-coloring) and a lower bound (for example, clique/odd cycle).
+- “A forest with at least one edge needs two colors” is not the same as “every acyclic graph needs exactly two colors”; an edgeless nonempty graph needs only one.
+- “Deleting fewer than $k$” in the definition of $k$-connected is not “deleting at least $k$.” The smallest number whose deletion can disconnect the graph is the cut size.
+- To prove $\chi(G)=k$, give both an upper bound (an explicit $k$-coloring) and a lower bound (for example, from a clique or odd cycle).
 - Edges in register allocation represent "overlap of lifetimes", not the coarser condition of "two variables in the same statement".
 <!-- bilingual-en:end -->
 
 ### 自检与知识链
 <!-- bilingual-en:start -->
-*Self-examination and Knowledge Chain*
+*Self-checks and knowledge chain*
 <!-- bilingual-en:end -->
 
 > [!question]- 自检 1
 > 为什么一个含 triangle 的图不可能 bipartite？
 >
 > <!-- bilingual-en:start -->
-> triangle bipartite?
+> Why can a graph containing a triangle not be bipartite?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > triangle 是长度 $3$ 的 odd cycle；二着色沿环交替三次后回到起点会要求起点同时取两色，矛盾。
 > <!-- bilingual-en:start -->
-> triangle is a odd cycle of length $3$. If two colors are alternately changed three times along the circle and then come back to the starting point, it is required to take two colors at the same time.
+> A triangle is an odd cycle of length $3$. Alternating two colors around it returns to the starting vertex after three changes and would force that vertex to have both colors, a contradiction.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 2
 > 已知 $\Delta(G)=20$，能否推出 $\chi(G)\ge20$？能推出什么？
 >
 > <!-- bilingual-en:start -->
-> Known $\Delta(G)=20$, can $\chi(G)\ge20$ be rolled out?  What can be launched?
+> Given $\Delta(G)=20$, can we conclude that $\chi(G)\ge20$? What can we conclude?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 不能，star 是反例。贪心着色只给出 $\chi(G)\le\Delta(G)+1=21$。
 > <!-- bilingual-en:start -->
-> No, star's the counterexample.  Greedy coloring gives only $\chi(G)\le\Delta(G)+1=21$.
+> No. A star is a counterexample: it can have maximum degree $20$ while requiring only two colors. Greedy coloring gives only the upper bound $\chi(G)\le\Delta(G)+1=21$.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 3
 > 为什么删掉 $H_n$ 某点的 $n$ 个邻居证明 $\kappa(H_n)\le n$？
 >
 > <!-- bilingual-en:start -->
-> Why does deleting the $n$ neighbours of a vertex in $H_n$ prove $\kappa(H_n)\le n$?
+> Why does deleting the $n$ neighbors of a vertex in $H_n$ prove $\kappa(H_n)\le n$?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 该点本身未被删，但它的所有 incident edges 都随邻居消失，于是它成为孤立 component，图不连通。
 > <!-- bilingual-en:start -->
-> The point itself is not deleted, but all of its incident edges disappears with its neighbors, so it becomes an isolated component with disconnected graph.
+> The vertex itself remains, but deleting all of its neighbors removes every incident edge. It becomes an isolated component, so the graph is disconnected.
 > <!-- bilingual-en:end -->
 
 **知识链：**冲突关系 → graph coloring → chromatic number → bipartite/odd cycle → components → vertex/edge cuts → $k$-connectivity。
 <!-- bilingual-en:start -->
-**Knowledge Chain:**Conflict Relationships → graph coloring → chromatic number → bipartite/odd cycle → components → vertex/edge cuts → $k$-connectivity.
+**Knowledge chain:** conflict relations → graph coloring → chromatic number → bipartite graphs and odd cycles → components → vertex and edge cuts → $k$-connectivity.
 <!-- bilingual-en:end -->
 
 ---
@@ -2796,22 +2619,22 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 
 ### 学习问题与前置知识
 <!-- bilingual-en:start -->
-*Learning Problems and Prerequisites*
+*Learning questions and prerequisites*
 <!-- bilingual-en:end -->
 
 本节把“连通”与“无环”压缩成一种最小骨架：tree。核心问题是：为什么 tree 有多种完全等价的定义？为什么 connected graph 一定含 spanning tree？带权时，为什么 Kruskal、Prim 和并行合并都可安全选取某条最轻边？前置知识是 path、cycle、component 与 coloring。
 <!-- bilingual-en:start -->
-This section compresses Connectivity and Acyclic into a minimal skeleton: tree.  The central question is: Why is there a number of fully equivalent definitions for tree?  Why does the connected graph include spanning tree?  When weighted, why is it safe to select a lightest edge for Kruskal, Prim, and parallel merges?  The prerequisites are path, cycle, component, and coloring.
+This section combines connectivity and acyclicity into a minimal skeleton: a tree. The central questions are: Why are several definitions of a tree equivalent? Why does every connected graph contain a spanning tree? In a weighted graph, why may Kruskal, Prim, and parallel component growth safely choose an appropriate lightest edge? Prerequisites are paths, cycles, components, and coloring.
 <!-- bilingual-en:end -->
 
 ### 21.1 tree 的等价刻画
 <!-- bilingual-en:start -->
-*21.1 Equivalent Characterization of tree*
+*21.1 Equivalent characterizations of trees*
 <!-- bilingual-en:end -->
 
 一张 finite simple graph $T=(V,E)$ 是 [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|树]]，若它 **connected 且 acyclic**。不要把这两个形容词当成互不相干的条件：它们联合后迫使 tree 恰好处在“保持全部顶点连通”的边数下界。
 <!-- bilingual-en:start -->
-A finite simple graph $T=(V,E)$ is a [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|tree]] if it is**connected and acyclic**.  Do not consider these adjectives as mutually irrelevant: their union forces tree to be exactly the lower bound of the number of edges "keeping all vertices connected."
+A finite simple graph $T=(V,E)$ is a [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|tree]] if it is **connected and acyclic**. These conditions are not independent accidents: together they force a tree to use the minimum number of edges needed to keep all vertices connected.
 <!-- bilingual-en:end -->
 
 > [!theorem] Tree 的常用等价定义
@@ -2824,13 +2647,13 @@ A finite simple graph $T=(V,E)$ is a [[无环图：树、生成树、DAG 与拓�
 > 5. $T$ acyclic，且加任意一条新边都产生 cycle；
 > 6. 若 $|V|=n$，则 $T$ connected 且 $|E|=n-1$。
 > <!-- bilingual-en:start -->
-> For finite simple graph $T$, the following conditions are equivalent:
-> 1. $T$ connected without cycle;
-> 2. There is a simple path between any two vertices;
-> 3. $T$ connected, and each edge is cut edge;
-> 4. $T$ is edge-minimal to "connected";
-> 5. $T$ acyclic, and any new edge produces cycle;
-> 6. If $|V|=n$, $T$ connected and $|E|=n-1$.
+> For a finite simple graph $T$, the following conditions are equivalent:
+> **1.** $T$ is connected and acyclic;<br>
+> **2.** every two vertices are joined by exactly one simple path;<br>
+> **3.** $T$ is connected and every edge is a cut edge;<br>
+> **4.** $T$ is edge-minimal among connected graphs on its vertex set;<br>
+> **5.** $T$ is acyclic, and adding any edge between two nonadjacent vertices creates a cycle;<br>
+> **6.** if $|V|=n$, then $T$ is connected and $|E|=n-1$.<br>
 > <!-- bilingual-en:end -->
 
 #### $1\Longleftrightarrow2$：唯一 path
@@ -2840,12 +2663,12 @@ A finite simple graph $T=(V,E)$ is a [[无环图：树、生成树、DAG 与拓�
 
 **$1\Rightarrow2$。** connected 保证任意 $u,v$ 间至少有一条 path。若有两条不同 simple paths，从 $u$ 同时沿它们前进，取第一个分叉点 $x$ 和分叉后第一个重会点 $y$。两条 $x$ 到 $y$ 的内部不交子路合成 cycle，与 acyclic 矛盾。因此 path 唯一。
 <!-- bilingual-en:start -->
-**$1\Rightarrow2$.**connected guarantees at least one path between any $u,v$.  If there are two different simple paths, from the $u$ simultaneously along them, take the first fork point $x$ and fork after the first reunion point $y$.  Two internal disjoint sub-paths from $x$ to $y$ synthesize cycle, which contradicts acyclic.  Therefore, path is unique.
+**$1\Rightarrow2$.** Connectivity guarantees at least one path between any $u,v$. If two distinct simple paths existed, follow them from $u$ to their first divergence point $x$ and then to their first reunion point $y$. The two internally disjoint $x$–$y$ subpaths would form a cycle, contradicting acyclicity. Hence the path is unique.
 <!-- bilingual-en:end -->
 
 **$2\Rightarrow1$。** “每两点有 path”直接给 connected。若有 cycle，取 cycle 上两点 $u,v$，沿 cycle 的顺、逆两个方向得两条不同 simple paths，违反唯一性。
 <!-- bilingual-en:start -->
-**$2\Rightarrow1$.**"path every two points" goes directly to connected.  If there is cycle, take two points $u,v$ on cycle, get two different simple paths along the cis and the reverse direction of cycle, violate uniqueness.
+**$2\Rightarrow1$.** Having a path between every two vertices gives connectivity. If a cycle existed, two vertices $u,v$ on it would be joined by two distinct simple paths going around the cycle in opposite directions, contradicting uniqueness.
 <!-- bilingual-en:end -->
 
 #### $1\Longleftrightarrow3\Longleftrightarrow4$：每条边都必不可少
@@ -2855,7 +2678,7 @@ A finite simple graph $T=(V,E)$ is a [[无环图：树、生成树、DAG 与拓�
 
 若 tree 中某边 $e=\{u,v\}$ 不是 cut edge，删它后 $u,v$ 仍有 path，该 path 加 $e$ 形成 cycle，矛盾。所以每边皆为 cut edge，即删任意边都破坏 connected，这正是 edge-minimal connected。
 <!-- bilingual-en:start -->
-If $e=\{u,v\}$ is not cut edge in tree, $u,v$ still has path after deleting it. The path plus $e$ forms cycle, contradictory.  So each edge is cut edge, that is, deleting any edge destroys connected, which is edge-minimal connected.
+If an edge $e=\{u,v\}$ of a tree were not a cut edge, then $u$ and $v$ would still be joined by a path after deleting it. That path together with $e$ would form a cycle, a contradiction. Thus every edge is a cut edge: deleting any edge destroys connectivity, which is exactly edge-minimal connectivity.
 <!-- bilingual-en:end -->
 
 反向，若 connected graph 含 cycle，删掉 cycle 上任意一边后，两端可沿 cycle 剩余部分绕行，图仍 connected。这同时违反“每边都是 cut edge”和“edge-minimal”。
@@ -2870,17 +2693,17 @@ Conversely, if a connected graph contains a cycle, deleting any edge of that cyc
 
 在 tree 的两个不相邻顶点 $u,v$ 之间加新边，原图中唯一的 $u$-$v$ path 与新边构成 cycle。反向，若 acyclic graph 不 connected，可取两个不同 components 中的点加边；新边两端原先无 path，所以不可能新增 cycle，与 edge-maximal acyclic 矛盾。
 <!-- bilingual-en:start -->
-A new edge is added between two non-adjacent vertices $u,v$ of tree. The only $u$-$v$ path in the original graph and the new edge constitute cycle.  Conversely, if the acyclic graph is not connected, you can add edges from two different points in the components; the new edge has no path at either end, so it is not possible to add a cycle that conflicts with the edge-maximal acyclic.
+Adding an edge between two nonadjacent vertices $u,v$ of a tree combines that edge with the unique original $u$–$v$ path to form a cycle. Conversely, if an acyclic graph is disconnected, join vertices from two different components. There was no path between the endpoints beforehand, so the new edge cannot create a cycle, contradicting edge-maximal acyclicity.
 <!-- bilingual-en:end -->
 
 #### $1\Longleftrightarrow6$：$n-1$ 条边
 <!-- bilingual-en:start -->
-*$1\Longleftrightarrow6$:$n-1$ edge*
+*$1\Longleftrightarrow6$: $n-1$ edges*
 <!-- bilingual-en:end -->
 
 先证 leaf lemma：至少两个顶点的 finite tree 有至少两片 [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|叶子]]（degree $1$ 顶点）。取一条最长 simple path $v_0,\ldots,v_m$。若 $v_0$ 还有不是 $v_1$ 的邻居 $w$，则 $w$ 若在路上会造成 cycle，若不在路上则 $w,v_0,\ldots,v_m$ 比原 path 更长；两者皆矛盾。故 $\deg(v_0)=1$，同理 $\deg(v_m)=1$。
 <!-- bilingual-en:start -->
-Prior leaf lemma: A finite tree with at least two vertices has at least two [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|leaf]] (degree $1$ vertices).  simple path $v_0,\ldots,v_m$.  If $v_0$ has $w$, which is not $v_1$'s neighbor, then $w$ causes cycle on the road, and $w,v_0,\ldots,v_m$ is longer than the original path if it is not on the road; both are contradictory.  So, $\deg(v_0)=1$, the same $\deg(v_m)=1$.
+First prove the leaf lemma: every finite tree with at least two vertices has at least two [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|leaves]] (vertices of degree $1$). Choose a longest simple path $v_0,\ldots,v_m$. If $v_0$ had a neighbor $w\ne v_1$, then either $w$ lies on the path, creating a cycle, or it lies off the path, making $w,v_0,\ldots,v_m$ a longer path. Both are impossible. Hence $\deg(v_0)=1$, and similarly $\deg(v_m)=1$.
 <!-- bilingual-en:end -->
 
 现对 $n$ 归纳证 tree 有 $n-1$ 边。$n=1$ 时无边。$n\ge2$ 时取 leaf $v$，删去 $v$ 及其唯一 incident edge；所得图仍 connected 且 acyclic，是 $n-1$ 顶点 tree。归纳假设给它 $n-2$ 边，加回一边得 $n-1$。
@@ -2896,17 +2719,17 @@ Conversely, start from any finite connected graph and delete one edge from a cyc
 > [!warning]
 > “$n$ 顶点、$n-1$ 边”单独不足以证明 tree。例如一个 triangle 加一个孤立点有 $4$ 顶点、$3$ 边，但它不 connected 且有 cycle。必须再知 connected 或 acyclic 其一。
 > <!-- bilingual-en:start -->
-> $n$ Vertex, $n-1$ Edge alone is not sufficient to prove tree.  For example, a triangle plus an isolated point has a $4$ vertex, a $3$ edge, but it is not connected and has a cycle.  One of connected or acyclic must be known.
+> Having $n$ vertices and $n-1$ edges is not by itself enough to prove that a graph is a tree. A triangle plus an isolated vertex has $4$ vertices and $3$ edges, yet it is disconnected and contains a cycle. One must also know either connectivity or acyclicity.
 > <!-- bilingual-en:end -->
 
 ### 21.2 forest、leaves 与二着色
 <!-- bilingual-en:start -->
-*21.2 forest, leaves and Dichrome*
+*21.2 Forests, leaves, and two-coloring*
 <!-- bilingual-en:end -->
 
 [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|森林]]是 acyclic graph，每个 connected component 都是 tree。若 forest 有 $n$ 个顶点、$c$ 个 components，则
 <!-- bilingual-en:start -->
-[[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|forest]] is acyclic graph, and each connected component is tree.  If the forest has $n$ vertices and $c$ components, then
+A [[无环图：树、生成树、DAG 与拓扑排序#Tree 的等价刻画|forest]] is an acyclic graph; every connected component is a tree. If a forest has $n$ vertices and $c$ components, then
 <!-- bilingual-en:end -->
 
 $$
@@ -2915,27 +2738,27 @@ $$
 
 因为第 $i$ 个 component 有 $n_i-1$ 边，求和得 $\sum_i(n_i-1)=n-c$。
 <!-- bilingual-en:start -->
-Because the $i$ component has a $n_i-1$ edge, the sum is $\sum_i(n_i-1)=n-c$.
+because component $i$ has $n_i-1$ edges, and summing gives $\sum_i(n_i-1)=n-c$.
 <!-- bilingual-en:end -->
 
 所有 tree 都 $2$-colorable。一种证法是 tree 无 odd cycle，应用 Session 20 定理；更构造性的证法是选根 $r$，按唯一 $r$-$v$ path 的长度奇偶染色。每条 tree edge 使深度变 $1$，因而两端颜色不同。
 <!-- bilingual-en:start -->
-All tree are $2$-colorable.  One is that tree has no odd cycle and applies the Session 20 theorem; the more constructive is that the root $r$ is chosen and dyed by odd-even of the length of the unique $r$-$v$ path.  Each tree edge changes the depth by $1$, so the colors on each end are different.
+Every tree is $2$-colorable. One proof applies the Session 20 theorem because a tree has no odd cycle. More constructively, choose a root $r$ and color each vertex by the parity of the unique $r$–$v$ path length. Every tree edge changes depth by $1$, so its endpoints receive different colors.
 <!-- bilingual-en:end -->
 
 按本课“leaf = degree-$1$ 顶点”的定义，边界必须分开：$n=1$ 时唯一顶点 degree $0$，没有 leaf；$n=2$ 时唯一的 tree 是 $K_2$，两个顶点都是 leaves。对 $n\ge3$，leaves 至少 $2$、至多 $n-1$：下界由 leaf lemma；若所有 $n\ge3$ 个顶点都 degree $1$，图只能是若干不交的单边，不可能 connected；star $K_{1,n-1}$ 达到上界 $n-1$。
 <!-- bilingual-en:start -->
-As defined in this lesson, "leaf = degree-$1$ vertices," the boundaries must be separated: the only vertex is degree $0$ for $n=1$ and no leaf; the only tree for $n=2$ is $K_2$ and both vertices are leaves.  For $n\ge3$, leaves is at least $2$ and at most $n-1$: the lower bound is leaf lemma; if all $n\ge3$ vertices are degree $1$, the graph can only be a number of disjoint one-sided, not connected; star $K_{1,n-1}$ reaches the upper bound $n-1$.
+Under this course's definition, a leaf has degree $1$, so the boundary cases must be separated. For $n=1$, the sole vertex has degree $0$ and there is no leaf. For $n=2$, the only tree is $K_2$, whose two vertices are both leaves. For $n\ge3$, a tree has at least $2$ and at most $n-1$ leaves. The leaf lemma gives the lower bound. If all $n\ge3$ vertices had degree $1$, the graph would be a disjoint union of edges and could not be connected. The star $K_{1,n-1}$ attains the upper bound.
 <!-- bilingual-en:end -->
 
 ### 21.3 spanning tree 与 MST
 <!-- bilingual-en:start -->
-*21.3 spanning tree and MST*
+*21.3 Spanning trees and minimum spanning trees*
 <!-- bilingual-en:end -->
 
 图 $G$ 的 **spanning subgraph** 保留 $G$ 的全部顶点，只可能删边。若该子图还是 tree，就是 [[无环图：树、生成树、DAG 与拓扑排序#生成树和最小生成树|生成树]]。一张 finite graph 有 spanning tree 当且仅当它 connected：
 <!-- bilingual-en:start -->
-The**spanning subgraph**of Figure $G$ preserves all vertices of the $G$, with only possible deletions.  If the subgraph is still tree, it is [[无环图：树、生成树、DAG 与拓扑排序#生成树和最小生成树|spanning tree]].  A finite graph has a spanning tree if and only if it connected:
+A **spanning subgraph** of $G$ retains every vertex of $G$ and may delete only edges. If that subgraph is a tree, it is a [[无环图：树、生成树、DAG 与拓扑排序#生成树和最小生成树|spanning tree]]. A finite graph has a spanning tree if and only if it is connected:
 <!-- bilingual-en:end -->
 
 - 有 spanning tree 则其中的 path 也是原图 path，原图 connected；
@@ -2954,7 +2777,7 @@ Reading the figure: a spanning tree keeps every vertex of the original graph and
 
 现令每条边 $e$ 有实数权重 $w(e)$。spanning tree $T$ 的总权重为
 <!-- bilingual-en:start -->
-Each edge $e$ is now given a real weight of $w(e)$.  The total weight of spanning tree $T$ is
+Now assign each edge $e$ a real weight $w(e)$. The total weight of a spanning tree $T$ is
 <!-- bilingual-en:end -->
 
 $$
@@ -2963,35 +2786,35 @@ $$
 
 [[无环图：树、生成树、DAG 与拓扑排序#生成树和最小生成树|最小生成树]]（MST）是总权重最小的 spanning tree。因 spanning trees 数量有限，connected finite weighted graph 一定存在 MST；权重相同时它可能不唯一。
 <!-- bilingual-en:start -->
-[[无环图：树、生成树、DAG 与拓扑排序#生成树和最小生成树|minimal spanning tree]] (MST) is the spanning tree with the smallest total weight.  Because of the limited number of spanning trees, there must be MST in connected finite weighted graph; it may not be unique with the same weight.
+A [[无环图：树、生成树、DAG 与拓扑排序#生成树和最小生成树|minimum spanning tree]] (MST) is a spanning tree of minimum total weight. A finite connected weighted graph has only finitely many spanning trees, so an MST exists. It need not be unique when edge weights tie.
 <!-- bilingual-en:end -->
 
 ### 21.4 cut/gray-edge lemma
 
 将顶点分成两个非空部分 $S$ 与 $V\setminus S$称为 cut；一端在 $S$、一端在补集的边称为 crossing/gray edge。
 <!-- bilingual-en:start -->
-Divide the vertex into two non-empty parts, $S$ and $V\setminus S$, called cut; one end at $S$, the other end at the edge of the complement called crossing/gray edge.
+A partition of the vertices into two nonempty sets $S$ and $V\setminus S$ is a cut. An edge with one endpoint in each part is a crossing, or gray, edge.
 <!-- bilingual-en:end -->
 
 > [!theorem] Cut property（gray-edge lemma）
 > 给定任意 cut，其上权重最小的 crossing edge $e$ 属于某个 MST。若 $e$ 是该 cut 上唯一最轻边，则它属于每个 MST。
 > <!-- bilingual-en:start -->
-> Given any cut, the crossing edge $e$ with the smallest weight on it belongs to a certain MST.  If $e$ is the only lightest edge on that cut, it belongs to each MST.
+> For any cut, a minimum-weight edge $e$ crossing that cut belongs to some MST. If $e$ is the unique lightest edge crossing the cut, it belongs to every MST.
 > <!-- bilingual-en:end -->
 
 **目标。** 把一个未必包含 $e$ 的 MST 交换成包含 $e$ 且不更重的 tree。
 <!-- bilingual-en:start -->
-**Objective.**Swap an MST that does not necessarily contain $e$ with a tree that contains $e$ and is not heavier.
+**Objective.** Transform an MST that may omit $e$ into a tree that contains $e$ without increasing its weight.
 <!-- bilingual-en:end -->
 
 **构造。** 取 MST $T$。若 $e\in T$ 已完成。否则在 $T$ 中加 $e$；由 tree 的唯一 path 性，恰产生一个 cycle $C$。$e$ 跨越 cut，cycle 每次进入 $S$ 最终必须离开 $S$，所以 $C$ 上还有另一条 crossing edge $f\in T$。
 <!-- bilingual-en:start -->
-**Construction.**Take MST $T$.  If $e\in T$ is complete.  Otherwise, add $e$ in $T$; by tree's unique path, just produce a cycle $C$.  $e$ crosses the cut, cycle enters $S$ each time and must eventually leave $S$, so there is another crossing edge $f\in T$ on the $C$.
+**Construction.** Take an MST $T$. If $e\in T$, there is nothing to prove. Otherwise, add $e$ to $T$. The unique-path property of a tree implies that exactly one cycle $C$ is created. Since $e$ crosses the cut, traversing $C$ enters one side of the cut and must later leave it, so $C$ contains another crossing edge $f\in T$.
 <!-- bilingual-en:end -->
 
 **逐步依据。** 删去 $f$，得 $T'=T+e-f$。删 cycle 上一边后仍 connected，且边数恢复 $n-1$，故 $T'$ 是 spanning tree。因 $e$ 是 cut 上最轻边，$w(e)\le w(f)$，于是
 <!-- bilingual-en:start -->
-**Step by step.**Delete $f$ and get $T'=T+e-f$.  cycle is still connected after the edge is deleted, and the number of edges is $n-1$, so $T'$ is spanning tree.  Because $e$ is the lightest edge on the cut, $w(e)\le w(f)$,
+**Step-by-step justification.** Delete $f$ to obtain $T'=T+e-f$. Removing one edge from the cycle leaves the graph connected, and the edge count returns to $n-1$, so $T'$ is a spanning tree. Since $e$ is a lightest edge across the cut, $w(e)\le w(f)$, and therefore
 <!-- bilingual-en:end -->
 
 $$
@@ -3005,7 +2828,7 @@ Because $T$ is already minimum, equality must hold and $T'$ is also an MST conta
 
 ### 21.5 Kruskal、Prim 与并行合并
 <!-- bilingual-en:start -->
-*21.5 Kruskal, Prim, and Concurrent Mergers*
+*21.5 Kruskal, Prim, and parallel component growth*
 <!-- bilingual-en:end -->
 
 **Kruskal.** 从空边集 $F$ 开始，按权重从小到大查看边；若加该边不产生 cycle就接受，否则跳过。当前 $F$ 始终是 forest。被接受的边连接两个不同 components，并是此时跨越对应 cut 的最轻可用边，因而由 cut property 是 safe edge。接受 $n-1$ 条后得 MST。
@@ -3025,13 +2848,10 @@ Because $T$ is already minimum, equality must hold and $T'$ is also an MST conta
 
 ### 官方顺序、资源与在线题（19 prompts）
 <!-- bilingual-en:start -->
-*Official Order, Resources, and Online Topics (19 prompts)*
+*Official order, resources, and online questions (19 prompts)*
 <!-- bilingual-en:end -->
 
 阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session21.pdf]]。讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/ZEsk64C0fJg.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/g2mOvmC1TKc.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/RqqzyWDVMA.pdf]]。字幕：[[MIT_OCW_6.042J_Materials/04_Captions/ZEsk64C0fJg.srt]]、[[MIT_OCW_6.042J_Materials/04_Captions/g2mOvmC1TKc.srt]]、[[MIT_OCW_6.042J_Materials/04_Captions/RqqzyWDVMA.srt]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_trees.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_treescoloring.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_SpaingTrees.pdf]]。
-<!-- bilingual-en:start -->
-Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session21.pdf|MIT6_042JS15_Session21]].  Statements: [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/ZEsk64C0fJg.pdf|ZEsk64C0fJg]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/g2mOvmC1TKc.pdf|g2mOvmC1TKc]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/RqqzyWDVMA.pdf|RqqzyWDVMA]].  Subtitles: [[MIT_OCW_6.042J_Materials/04_Captions/ZEsk64C0fJg.srt|ZEsk64C0fJg]], [[MIT_OCW_6.042J_Materials/04_Captions/g2mOvmC1TKc.srt|g2mOvmC1TKc]], [[MIT_OCW_6.042J_Materials/04_Captions/RqqzyWDVMA.srt|RqqzyWDVMA]].  Slides:[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_trees.pdf|MIT6_042JS15_trees]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_treescoloring.pdf|MIT6_042JS15_treescoloring]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_SpaingTrees.pdf|MIT6_042JS15_SpaingTrees]].
-<!-- bilingual-en:end -->
 
 | block | prompt | 官方答案与核验 |
 |---|---|---|
@@ -3056,42 +2876,36 @@ Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session21.pdf|
 | 2.10.10 Q6 | marked-edge subgraph 的 component 数 | strictly decreasing，每条新 marked edge 合并两分量 |
 <!-- bilingual-en:start -->
 | block | prompt | Official Answers and Checks |
-|—|—|—|
-| 2.10.2 Q1 | What can be defined as a tree | Six entries except "connected and vertex-minimal": connected acyclic; cut edge on each edge; edge-minimal connected; edge-maximal acyclic; connected and $n-1$ edges; unique path between two points |
+|---|---|---|
+| 2.10.2 Q1 | Which statements characterize a tree? | All six except “connected and vertex-minimal”: connected and acyclic; every edge a cut edge; edge-minimal connected; edge-maximal acyclic; connected with $n-1$ edges; a unique path between every two vertices |
 | 2.10.4 Q1 | "_____ trees are 2-colorable" | All |
 | 2.10.6 Q1 | Conditions that guarantee the existence of a spanning tree | connected |
-| 2.10.6 Q2 | What Subgraph Retains All $G$ Vertices | exact copy, spanning tree, spanning subgraph are, so all of the above |
+| 2.10.6 Q2 | Which subgraphs retain all vertices of $G$? | An exact copy, a spanning tree, and a spanning subgraph all do; therefore all of the above |
 | 2.10.6 Q3 | Any minimum _____ connected spanning _____ is spanning _____ | edge, graph, tree |
-| 2.10.6 Q4 | Two Blank gray-edge method | coloring**components**black/white, select**minimum-weight**gray edge |
-| 2.10.7 Q1 | Four Diagrams Which are trees | Graphs $2,4$; $1$ disconnected, $3$ with cycle |
-| 2.10.8 Q1 | All vertices are leaves's maximum number of tree vertices | $2$; no more connected |
-| 2.10.8 Q2 | $99$-vertex tree minimum leaves | $2$; path reached |
-| 2.10.8 Q3 | $99$-Vertex tree up to leaves | $98$; star up to |
-| 2.10.8 Q4 | $1000$-vertex forest up to leaves | $1000$; take $500$ disjoint $K_2$ componentss, each vertex degree $1$, so all $1000$ points are leaves |
-| 2.10.9 Q1 | Is the MST always unique | False; Equal weight triangle has three MSTs |
-| 2.10.9 Q2 | Assertion that the MST must be true when the edge weights are different | MST is unique; global minimum edge is in MST |
-| 2.10.10 Q1 | The edge selection algorithm starts with preserved invariant | marked edges is always acyclic |
-| 2.10.10 Q2 | Number of unmarked edges | strictly decreasing |
-| 2.10.10 Q3 | Number of marked edges | strictly increasing |
-| 2.10.10 Q4 | marked + unmarked Edges | constant |
-| 2.10.10 Q5 | marked $-$ unmarked Edges | strictly increasing, $2$ per increment |
-| 2.10.10 Q6 | marked-edge subgraph of component | strictly decreasing, two components per new marked edge |
+| 2.10.6 Q4 | Two blanks in the gray-edge method | Color **components** black/white and select a **minimum-weight** gray edge |
+| 2.10.7 Q1 | Which of the four diagrams are trees? | Graphs $2$ and $4$; graph $1$ is disconnected, and graph $3$ contains a cycle |
+| 2.10.8 Q1 | Maximum number of vertices in a tree whose every vertex is a leaf | $2$; with more vertices the graph cannot be connected |
+| 2.10.8 Q2 | Minimum number of leaves in a $99$-vertex tree | $2$; a path attains it |
+| 2.10.8 Q3 | Maximum number of leaves in a $99$-vertex tree | $98$; a star attains it |
+| 2.10.8 Q4 | Maximum number of leaves in a $1000$-vertex forest | $1000$; use $500$ disjoint $K_2$ components, so every vertex has degree $1$ |
+| 2.10.9 Q1 | Is an MST always unique? | False; an equal-weight triangle has three MSTs |
+| 2.10.9 Q2 | Statements guaranteed when all edge weights are distinct | The MST is unique; the globally lightest edge belongs to the MST |
+| 2.10.10 Q1 | Preserved invariant of the edge-selection algorithm | the marked edges always form an acyclic graph |
+| 2.10.10 Q2 | Number of unmarked edges | strictly decreases |
+| 2.10.10 Q3 | Number of marked edges | strictly increases |
+| 2.10.10 Q4 | Total number of marked and unmarked edges | remains constant |
+| 2.10.10 Q5 | Number of marked edges minus number of unmarked edges | strictly increases, by $2$ at each step |
+| 2.10.10 Q6 | Number of components in the marked-edge subgraph | strictly decreases, by one for each newly marked edge |
 <!-- bilingual-en:end -->
 
 原始练习：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S21_2.10.2_trees-many-definitions.md|2.10.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S21_2.10.4_2-colorable-trees.md|2.10.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S21_2.10.6_span-all-the-graphs.md|2.10.6]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S21_2.10.7_tree-or-not-tree.md|2.10.7]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S21_2.10.8_leaves.md|2.10.8]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S21_2.10.9_minimum-spanning-trees.md|2.10.9]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S21_2.10.10_graph-algorithm.md|2.10.10]]
-<!-- bilingual-en:start -->
-Original Activity: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S21_2.10.2_trees-many-definitions.md|2.10.2]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S21_2.10.4_2-colorable-trees.md|2.10.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S21_2.10.6_span-all-the-graphs.md|2.10.6]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S21_2.10.7_tree-or-not-tree.md|2.10.7]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S21_2.10.8_leaves.md|2.10.8]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S21_2.10.9_minimum-spanning-trees.md|2.10.9]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S21_2.10.10_graph-algorithm.md|2.10.10]]
-<!-- bilingual-en:end -->
 
 ### 课堂题（非官方独立题解）
 <!-- bilingual-en:start -->
-*Classroom Questions (Unofficial Independent Questions)*
+*In-class questions (unofficial independent solutions)*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp21.pdf]]。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp21.pdf|MIT6_042JS15_cp21]].
-<!-- bilingual-en:end -->
 
 > [!example]- CP21 Problem 1：$4\times4$ grid 的 MST
 > 水平边权为 $w(h_{i,j})=(4i+j)/100$，全部落在 $0$ 到 $0.11$；竖直边权为 $w(v_{j,i})=1+(i+4j)/100$，全部至少 $1$。因此 Kruskal 先选全部 $12$ 条水平边；它们把 $4$ 行分别连成 path，不产生 cycle。然后只需最轻的三条竖直边
@@ -3111,10 +2925,15 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > 本题所有边权互异，所以 MST 唯一；三种算法虽然选边顺序不同，最终都必得上述 $15$ 条边。
 > <!-- bilingual-en:start -->
-> for CP21 Problem 1:$4\times4$ grid
+> **CP21 Problem 1: the $4\times4$ grid.**
 > The horizontal edge weights are $w(h_{i,j})=(4i+j)/100$, ranging from $0$ to $0.11$; every vertical edge has weight $w(v_{j,i})=1+(i+4j)/100\ge1$. Thus Kruskal's algorithm first selects all 12 horizontal edges, joining each row into a path without creating a cycle. It then needs only the three lightest vertical edges:
 > $$v_{0,0},\quad v_{0,1},\quad v_{0,2}$$
 > These edges connect the four rows. There are $12+3=15=16-1$ edges in total, and the graph is connected, so they form a spanning tree. Its total weight is
+> $$
+> \sum_{i=0}^{2}\sum_{j=0}^{3}\frac{4i+j}{100}
+> +\sum_{i=0}^{2}\left(1+\frac{i}{100}\right)
+> =\frac{66}{100}+3.03=3.69.
+> $$
 > **Why Kruskal is correct.** At each step, the globally lightest edge that does not create a cycle joins two components of the current forest. Taking one component as a cut, the gray-edge lemma shows that this edge is safe.
 > **Why Prim is correct.** When the tree grows from $(1,2)$, each selected edge is the lightest gray edge between the current tree and the outside; the same lemma makes every such edge safe.
 > **Why the parallel method is correct.** Starting from the three singleton trees at $(0,0),(0,3),(2,3)$, each component can compute its lightest outgoing edge in parallel. All weights are distinct, and the problem requires a rollback-and-merge whenever candidate edges directly join two current trees, followed by recomputation for the merged component. Thus every edge actually accepted is the gray minimum across a current component cut, and the accepted set remains acyclic. Repeated application of the gray-edge lemma therefore yields an MST.
@@ -3126,8 +2945,8 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > **$\Leftarrow$：** 每两点有 path 给 connected。如果含 cycle，cycle 上两点可沿两个方向相连，得两条不同 path，违反唯一性。故无 cycle，是 tree。
 > <!-- bilingual-en:start -->
-> **$\Rightarrow$:**tree connected, so there is at least one path.  If there are two different path, take the first fork and the next meeting point, two segments of composite cycle, violate acyclic.
-> **$\Leftarrow$:**path to connected every two points.  If contain cycle, that two points on the cycle may be connected in two direction, resulting in two different path, violating uniqueness.  There is no cycle. It's tree.
+> **$\Rightarrow$:** A tree is connected, so at least one path joins every two vertices. If two distinct paths existed, their first divergence and next reunion would bound a cycle, contradicting acyclicity.
+> **$\Leftarrow$:** A path between every two vertices gives connectivity. If a cycle existed, two vertices on it would be joined by distinct paths in the two directions around the cycle, contradicting uniqueness. Hence the graph is acyclic and therefore a tree.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP21 Problem 3：唯一全局最小边必在 MST
@@ -3135,9 +2954,9 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > $$w(T')=w(T)+w(e)-w(f)<w(T),$$
 > 与 $T$ 最小矛盾。故任意 MST 均含 $e$。
 > <!-- bilingual-en:start -->
-> Let $e$ be the only minimum weight edge of the whole graph.  A MST $T$ does not contain a $e$.  Add exactly one cycle $C$ to $T$ and $e$; select any edge $f$ on $C\setminus\{e\}$.  From globally unique minimum, $w(e)<w(f)$.  $T'=T+e-f$ is still spanning tree, but
+> Let $e$ be the unique globally minimum-weight edge. Suppose an MST $T$ omitted $e$. Adding $e$ to $T$ creates exactly one cycle $C$; choose any edge $f\in C\setminus\{e\}$. Since $e$ is uniquely lightest in the whole graph, $w(e)<w(f)$. The graph $T'=T+e-f$ is still a spanning tree, but
 > $$w(T')=w(T)+w(e)-w(f)<w(T),$$
-> Minimal contradiction with $T$.  Thus, any MST contains $e$.
+> contradicting the minimality of $T$. Hence every MST contains $e$.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP21 Problem 4：width one iff forest
@@ -3147,14 +2966,14 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > **(b) finite tree $\Rightarrow$ width one。** 对顶点数归纳。单点情况显然。对 $n\ge2$，取 leaf $\ell$，删它后仍是 tree；由归纳假设，剩余顶点有 width-one 排序。把 $\ell$ 放到列表最后：它只有一个邻居，故至多有一个 earlier neighbor，而旧顶点的 earlier-neighbor 情况不变。归纳完成。对 forest 的每个 component 分别这样排，再串接列表；components 之间无边，仍 width one。
 > <!-- bilingual-en:start -->
-> The width of a graph is at most $1$, meaning that the vertices can be arranged as $v_1,\ldots,v_n$, with each $v_i$ at most adjacent to an earlier vertex.
-> **(a)width one $\Rightarrow$ forest.**Oppositely set a cycle in which the cycle selects the last ordered vertex, $v$.  The two different neighbors of $v$ on cycle are earlier than $v$, so $v$ has at least two earlier neighbors, contradictory.  So there's no cycle, it's forest.
-> **(b)finite tree $\Rightarrow$ width one.**Summarize the number of vertices.  What is clear is a single point.  For $n\ge2$, take leaf $\ell$, and delete it is still tree; by inductive hypothesis, the remaining vertices are sorted by width-one.  Put $\ell$ at the end of the list: it has only one neighbor, so it has at most one earlier neighbor, while the earlier-neighbor of the old vertex remains the same.  Inductive complete.  Arrange each component for forest in this order and then thread the list; there is no edge between components, but width one.
+> A graph has width at most $1$ if its vertices can be ordered $v_1,\ldots,v_n$ so that every $v_i$ has at most one earlier neighbor.
+> **(a) Width one $\Rightarrow$ forest.** Suppose a cycle existed and choose its latest vertex $v$ in the ordering. Its two distinct neighbors on the cycle would both occur earlier, giving $v$ at least two earlier neighbors—a contradiction. Thus the graph is acyclic and hence a forest.
+> **(b) Finite tree $\Rightarrow$ width one.** Induct on the number of vertices. The one-vertex case is immediate. For $n\ge2$, remove a leaf $\ell$; the remainder is still a tree and therefore has a width-one ordering by induction. Put $\ell$ last. Since it has only one neighbor, it has at most one earlier neighbor, while the earlier-neighbor counts of all old vertices are unchanged. This completes the induction. For a forest, order each component this way and concatenate the orders; no edges join different components, so width remains at most one.
 > <!-- bilingual-en:end -->
 
 ### 边界情况与易错点
 <!-- bilingual-en:start -->
-*Boundary Condition and False Points*
+*Boundary cases and common pitfalls*
 <!-- bilingual-en:end -->
 
 - MST 只对 connected weighted graph 是一棵 spanning tree；不 connected 时对应对象是 minimum spanning forest。
@@ -3162,65 +2981,56 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 - Prim 选的是“跨越当前 tree cut 的最轻边”，不是全图尚未使用的最轻边；后者是 Kruskal 的视角。
 - “加边产生 cycle”在 tree 中恰产生一个 cycle，因为新边两端原来只有一条 path。
 <!-- bilingual-en:start -->
-- MST is a spanning tree only for connected weighted graph; the corresponding object is minimum spanning forest when not connected.
+- An MST is a spanning tree only for a connected weighted graph; the corresponding object for a disconnected graph is a minimum spanning forest.
 - Distinct edge weights imply a unique MST. The converse is false: a graph may have repeated edge weights and still have a unique MST.
-- Prim chooses the lightest edge across the current tree cut, not the lightest edge not yet used by the entire diagram; the latter is the Kruskal perspective.
-- "Edge-adding produces cycle" produces exactly one cycle in the tree because there was originally only one path at each end of the new edge.
+- Prim chooses the lightest edge across the cut defined by the current tree, not the globally lightest unused edge; the latter is Kruskal's perspective.
+- Adding an edge to a tree creates exactly one cycle because its endpoints were previously joined by exactly one path.
 <!-- bilingual-en:end -->
 
 ### 自检与知识链
 <!-- bilingual-en:start -->
-*Self-examination and Knowledge Chain*
+*Self-checks and knowledge chain*
 <!-- bilingual-en:end -->
 
 > [!question]- 自检 1
 > 一张 $12$ 顶点、$11$ 边的 simple graph 一定是 tree 吗？
 >
 > <!-- bilingual-en:start -->
-> Must a simple graph on the $12$ vertex and $11$ side be a tree?
+> Must a simple graph with $12$ vertices and $11$ edges be a tree?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 不一定；还需 connected 或 acyclic。可用一个含 cycle 的 component 加其余树分量构造反例。
 > <!-- bilingual-en:start -->
-> Not necessarily; connected or acyclic required.  A counterexample can be constructed by a component with cycle and other tree components.
+> Not necessarily; connectivity or acyclicity is also required. A counterexample can combine one component containing a cycle with other tree components.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 2
 > 为什么 MST 的交换证明中，$T+e$ 一定含 cycle？
 >
 > <!-- bilingual-en:start -->
-> Why does the $T+e$ include cycle in the MST's exchange certificate?
+> Why must $T+e$ contain a cycle in the MST exchange proof?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > $T$ 中 $e$ 的两端已有唯一 path，新边 $e$ 与该 path 合成 cycle。
 > <!-- bilingual-en:start -->
-> In $T$, there is a unique path at both ends of the $e$, and the new edge $e$ and the path synthesize cycle.
+> In $T$, the endpoints of $e$ are already joined by a unique path. The new edge $e$ together with that path forms a cycle.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 3
 > forest 有 $40$ 个顶点、$7$ 个 components，有多少边？
 >
 > <!-- bilingual-en:start -->
-> forest has $40$ vertices, $7$ components, how many sides?
+> A forest has $40$ vertices and $7$ components. How many edges does it have?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > $40-7=33$，因每个 tree component 贡献 $n_i-1$ 边。
 > <!-- bilingual-en:start -->
-> $40-7=33$, because each tree component contributes a $n_i-1$ edge.
+> $40-7=33$, because each tree component contributes $n_i-1$ edges.
 > <!-- bilingual-en:end -->
 
 **知识链：**connected + acyclic → unique paths/leaves → $n-1$ edges → spanning tree → weighted spanning tree → cut property → Kruskal/Prim/Borůvka。
 <!-- bilingual-en:start -->
-**Knowledge Chain:**connected + acyclic → unique paths/leaves → $n-1$ edges → spanning tree → weighted spanning tree → cut property → Kruskal/Prim/Borůvka.
+**Knowledge chain:** connected and acyclic → unique paths and leaves → $n-1$ edges → spanning trees → weighted spanning trees → cut property → Kruskal, Prim, and Borůvka.
 <!-- bilingual-en:end -->
 
 ---
@@ -3229,7 +3039,7 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 
 ### 学习问题与前置知识
 <!-- bilingual-en:start -->
-*Learning Problems and Prerequisites*
+*Learning questions and prerequisites*
 <!-- bilingual-en:end -->
 
 一个“每人都有严格偏好”的双边分配问题，往往不是找总分最高的配对，而是排除任何一对双方都想背离当前结果的对象。本节问：Gale–Shapley/Mating Ritual 为什么必停、为什么稳定？“男方最优”究竟是定义还是定理？只给一张 bipartite graph 而没有偏好时，什么条件恰保证能完美匹配？前置知识是 invariant、bipartite graph、injection 与 path。
@@ -3239,7 +3049,7 @@ A two-sided allocation problem with strict preferences is usually not about maxi
 
 ### 22.1 matching、rogue pair 与 stability
 <!-- bilingual-en:start -->
-*22.1 matching, rogue pair and stability*
+*22.1 Matchings, rogue pairs, and stability*
 <!-- bilingual-en:end -->
 
 令两侧集合 $B$ 与 $G$ 各有 $n$ 人，每人对另侧所有人给出一个严格全序偏好。一个 **perfect matching** 是双射 $M:B\to G$；记 $M(b)$ 为 $b$ 的配偶，$M^{-1}(g)$ 为 $g$ 的配偶。
@@ -3249,7 +3059,7 @@ The two sets $B$ and $G$ each contain $n$ people, and each person has a strict t
 
 一对未在当前 matching 中的 $(b,g)$ 是 **rogue pair/blocking pair**，若
 <!-- bilingual-en:start -->
-A pair of $(b,g)$ that is not in the current matching is**rogue pair/blocking pair**if
+An unmatched pair $(b,g)$ is a **rogue pair**, or **blocking pair**, if
 <!-- bilingual-en:end -->
 
 $$
@@ -3267,7 +3077,7 @@ That is, $b$ prefers $g$ to their current partner, and $g$ prefers $b$ to their 
 
 读图：稳定匹配不要求每人获得首选，只要求不存在一条未选边使两端都想抛弃当前配偶。
 <!-- bilingual-en:start -->
-Read: A stable match does not require everyone to have a first choice, only that there is no unselected edge so that both sides want to abandon the current spouse.
+How to read the diagram: a stable matching need not give everyone their first choice. It requires only that no unmatched pair would both prefer to leave their current partners for each other.
 <!-- bilingual-en:end -->
 
 > [!note]
@@ -3289,11 +3099,13 @@ Take $B$ as the proposer side and $G$ as the receiver side. The algorithm is:
 4. 被 $g$ 拒绝的 $b$ 永久把 $g$ 从列表划去，下次改向更低的选择求婚。
 5. 无未暂定 proposer 时结束，输出所有暂定 pairs。
 <!-- bilingual-en:start -->
-1. Each $b$ initially lists every $g$ in decreasing order of preference.
-2. Whenever an unmatched $b$ has a nonempty list, $b$ proposes to the $g$ at the top of that list.
-3. Among a new proposer and any current tentative partner, $g$ keeps the one they prefer and rejects the others.
-4. A rejected $b$ permanently removes $g$ from the list and later proposes to the next choice.
-5. When no proposer remains unmatched, output all tentative pairs.
+
+&nbsp;
+**1.** Each $b$ initially lists every $g$ in decreasing order of preference.<br>
+**2.** Whenever an unmatched $b$ has a nonempty list, $b$ proposes to the $g$ at the top of that list.<br>
+**3.** Receiver $g$ compares the new proposer with any current tentative partner, keeps the one they prefer, and rejects the other.<br>
+**4.** A rejected $b$ permanently removes $g$ from the list and later proposes to the next choice.<br>
+**5.** When no proposer remains unmatched, output all tentative pairs.<br>
 <!-- bilingual-en:end -->
 
 “deferred acceptance”的意思是 receiver 对当前求婚只是暂留，以后可用更好 proposer 替换；一旦拒绝却不会反悔。
@@ -3345,7 +3157,7 @@ At termination, no unmatched proposer can have an empty list. If some $b$ had be
 
 ### 22.4 proposer-optimal 与 receiver-pessimal
 <!-- bilingual-en:start -->
-*22.4 proposer-optimal and receiver-pessimal*
+*22.4 Proposer-optimal and receiver-pessimal outcomes*
 <!-- bilingual-en:end -->
 
 对一个人 $x$，若存在某个 stable matching 将 $x$ 与 $y$ 配对，称 $y$ 是 $x$ 的 **feasible spouse**。$x$ 的 optimal feasible spouse 是其所有 feasible spouses 中偏好最高者，pessimal feasible spouse 则是最低者。
@@ -3391,7 +3203,7 @@ Thus the choice of proposer and receiver sides affects which stable matching the
 
 现在忘掉偏好，只保留一张 bipartite graph $G=(L\cup R,E)$；边表示“允许配对”。一个 [[二分图匹配与 Hall 定理#从允许关系到 matching|匹配]] 是顶点互不重复的边集。若它覆盖 $L$ 的每个顶点，就给出一个从 $L$ 到 $R$ 的 total injection；若 $|L|=|R|$，则这也是 perfect matching。
 <!-- bilingual-en:start -->
-Now forget your preferences and keep only one bipartite graph $G=(L\cup R,E)$; the edge says "allow pairing."  A [[二分图匹配与 Hall 定理#从允许关系到 matching|matching]] is a set of edges with distinct vertices.  If it covers every vertex of $L$, it gives a total injection from $L$ to $R$; if $|L|=|R|$, it is also perfect matching.
+Now discard the preferences and retain only a bipartite graph $G=(L\cup R,E)$, where an edge means that a pair is allowed. A [[二分图匹配与 Hall 定理#从允许关系到 matching|matching]] is a set of pairwise vertex-disjoint edges. If it covers every vertex of $L$, it defines a total injection from $L$ to $R$; if $|L|=|R|$, it is also a perfect matching.
 <!-- bilingual-en:end -->
 
 对 $S\subseteq L$，定义邻居集
@@ -3414,7 +3226,10 @@ If $|N(S)|<|S|$, then $S$ is a **bottleneck**: its $|S|$ left vertices have fewe
 > \forall S\subseteq L,\qquad |N(S)|\ge |S|.
 > $$
 > <!-- bilingual-en:start -->
-> finite bipartite graph $G=(L\cup R,E)$ has a matching that covers all $L$ if and only if
+> A finite bipartite graph $G=(L\cup R,E)$ has a matching that covers all of $L$ if and only if
+> $$
+> \forall S\subseteq L,\qquad |N(S)|\ge |S|.
+> $$
 > <!-- bilingual-en:end -->
 
 **必要性。** 若 matching $M$ 覆盖 $L$，则对每个 $\ell\in S$，其 matching partner $M(\ell)$ 均在 $N(S)$ 中；且 matching 使这些 partners 互异。因而 $S\to N(S)$ 有 injection，$|S|\le|N(S)|$。
@@ -3430,8 +3245,8 @@ If $|N(S)|<|S|$, then $S$ is a **bottleneck**: its $|S|$ left vertices have fewe
 - 从左向右只沿不在 $M$ 中的边；
 - 从右向左只沿 $M$ 中的匹配边。
 <!-- bilingual-en:start -->
-- Left-to-right only along edges that are not in the $M$;
-- Right to left only along the matching edge in the $M$.
+- Move left to right only along edges not in $M$;
+- move right to left only along matching edges in $M$.
 <!-- bilingual-en:end -->
 
 记搜到的左点为 $S$，右点为 $T$。若搜到某个未匹配右点，则从 $S_0$ 到它的 alternating path 两端未匹配；把路上“非 matching/matching”边互换，matching 边数增 $1$，与 $M$ 最大矛盾。故 $T$ 中每个右点均已匹配。
@@ -3450,7 +3265,7 @@ $$
 
 另一方面，$S$ 的所有邻居都会被 alternating search 到达，所以 $N(S)=T$。于是 $|N(S)|=|T|<|S|$，违反 Hall condition。反设不成立，$M$ 必覆盖所有 $L$。
 <!-- bilingual-en:start -->
-On the other hand, the alternating search reaches every neighbour of $S$, so $N(S)=T$. Hence $|N(S)|=|T|<|S|$, violating Hall's condition. The supposition was false, and $M$ must cover all of $L$.
+On the other hand, the alternating search reaches every neighbor of $S$, so $N(S)=T$. Hence $|N(S)|=|T|<|S|$, violating Hall's condition. The supposition was false, and $M$ must cover all of $L$.
 <!-- bilingual-en:end -->
 
 ### 官方顺序、资源与在线题（11 prompts）
@@ -3459,9 +3274,6 @@ On the other hand, the alternating search reaches every neighbour of $S$, so $N(
 <!-- bilingual-en:end -->
 
 阅读：[[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session22.pdf]]。讲稿：[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/RE5PmdGNgj0.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/6vgHIImFwHo.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/n4KKgKpp--0.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/HZLKDC9OSaQ.pdf]]、[[MIT_OCW_6.042J_Materials/03_Video_Transcripts/i5AWE-OoOsY.pdf]]。字幕：[[MIT_OCW_6.042J_Materials/04_Captions/RE5PmdGNgj0.srt]]、[[MIT_OCW_6.042J_Materials/04_Captions/6vgHIImFwHo.srt]]、[[MIT_OCW_6.042J_Materials/04_Captions/n4KKgKpp--0.srt]]、[[MIT_OCW_6.042J_Materials/04_Captions/HZLKDC9OSaQ.srt]]、[[MIT_OCW_6.042J_Materials/04_Captions/i5AWE-OoOsY.srt]]。Slides：[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_stablematchg.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Mating_ritual.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Optimal.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_bip_mtchig.pdf]]、[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_halls_thorem.pdf]]。
-<!-- bilingual-en:start -->
-Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session22.pdf|MIT6_042JS15_Session22]].  Speeches: [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/RE5PmdGNgj0.pdf|RE5PmdGNgj0]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/6vgHIImFwHo.pdf|6vgHIImFwHo]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/n4KKgKpp--0.pdf|n4KKgKpp--0]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/HZLKDC9OSaQ.pdf|HZLKDC9OSaQ]], [[MIT_OCW_6.042J_Materials/03_Video_Transcripts/i5AWE-OoOsY.pdf|i5AWE-OoOsY]].  Subtitles: [[MIT_OCW_6.042J_Materials/04_Captions/RE5PmdGNgj0.srt|RE5PmdGNgj0]], [[MIT_OCW_6.042J_Materials/04_Captions/6vgHIImFwHo.srt|6vgHIImFwHo]], [[MIT_OCW_6.042J_Materials/04_Captions/n4KKgKpp--0.srt|n4KKgKpp--0]], [[MIT_OCW_6.042J_Materials/04_Captions/HZLKDC9OSaQ.srt|HZLKDC9OSaQ]], [[MIT_OCW_6.042J_Materials/04_Captions/i5AWE-OoOsY.srt|i5AWE-OoOsY]].  Slides:[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_stablematchg.pdf|MIT6_042JS15_stablematchg]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Mating_ritual.pdf|MIT6_042JS15_Mating_ritual]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_Optimal.pdf|MIT6_042JS15_Optimal]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_bip_mtchig.pdf|MIT6_042JS15_bip_mtchig]],[[MIT_OCW_6.042J_Materials/02_Lecture_Slides/MIT6_042JS15_halls_thorem.pdf|MIT6_042JS15_halls_thorem]].
-<!-- bilingual-en:end -->
 
 | block | prompt | 官方答案与核验 |
 |---|---|---|
@@ -3478,40 +3290,34 @@ Read: [[MIT_OCW_6.042J_Materials/01_Session_Readings/MIT6_042JS15_Session22.pdf|
 | 2.11.13 Q1 | 八个断言中的 preserved invariants | $1,4,6,7,8$ |
 <!-- bilingual-en:start -->
 | block | prompt | Official Answers and Checks |
-|—|—|—|
-| 2.11.3 Q1 | receiver Current Best Choice rank | weakly increasing |
-| 2.11.3 Q2 | proposer's current best choice for rank | weakly decreasing |
-| 2.11.4 Q1 | The nature of the Mating Ritual | Official options: Generate the same proposer-optimal stable matching deterministically; this does not mean that the problem has only one stable matching |
-| 2.11.4 Q2 | Total names remaining on proposer list | weakly decreasing |
-| 2.11.6 Q1 | Definition of boy-optimal marriage | The boy is assigned to the highest ranking he may be assigned to in a stable matching, girl |
-| 2.11.8 Q1 | girls is less than boys to match each girl | total injection from girls to boys |
-| 2.11.10 Q1 | bottleneck Definition | $|S|>|N(S)|$ $E(S)$ |
-| 2.11.11 Q1 | Which bipartite | a;b,c have odd cycle | in a,b,c
-| 2.11.12 Q1 | perfect matching | $(a,3),(b,2),(c,4),(d,1)$ for a given edge set, and it is exactly the same |
-| 2.11.12 Q2 | The Real perfect matching Property in No bottleneck Graph | $3,5$:$\{b,c,d\}$ Only Two Neighbors; $\{3,4\}$ Only One Neighbor After Edge Rendering |
-| 2.11.13 Q1 | preserved invariants in eight assertions | $1,4,6,7,8$ |
+|---|---|---|
+| 2.11.3 Q1 | Rank of a receiver's current best proposal | weakly increasing |
+| 2.11.3 Q2 | Rank of a proposer's current best remaining option | weakly decreasing |
+| 2.11.4 Q1 | Property of the Mating Ritual | The official option says it deterministically produces the same proposer-optimal stable matching; this does not imply that the instance has only one stable matching |
+| 2.11.4 Q2 | Total number of names remaining on proposer lists | weakly decreasing |
+| 2.11.6 Q1 | Definition of a boy-optimal marriage | Each boy is paired with the highest-ranked girl he can receive in any stable matching |
+| 2.11.8 Q1 | With fewer girls than boys, what is needed to match every girl? | a total injection from girls to boys |
+| 2.11.10 Q1 | Definition of a bottleneck | $|S|>|N(S)|$; the prompt denotes the neighbor set by $E(S)$ |
+| 2.11.11 Q1 | Which of graphs a, b, and c are bipartite? | graph a; graphs b and c each contain an odd cycle |
+| 2.11.12 Q1 | Perfect matching in the given graph | $(a,3),(b,2),(c,4),(d,1)$, and it is unique |
+| 2.11.12 Q2 | Actual bottlenecks in the graph with no perfect matching | $3,5$: $\{b,c,d\}$ has only two neighbors; after changing the edge, $\{3,4\}$ has only one neighbor |
+| 2.11.13 Q1 | Which of the eight assertions are preserved invariants? | $1,4,6,7,8$ |
 <!-- bilingual-en:end -->
 
 原始练习：[[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.3_derived-variables.md|2.11.3]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.4_mating-ritual.md|2.11.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.6_boy-optimal.md|2.11.6]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.8_bipartite-equivalence-relation.md|2.11.8]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.10_bottleneck.md|2.11.10]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.11_bipartite-graphs.md|2.11.11]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.12_matching.md|2.11.12]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.13_stable-matching-invariants.md|2.11.13]]
-<!-- bilingual-en:start -->
-Original Activity: [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.3_derived-variables.md|2.11.3]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.4_mating-ritual.md|2.11.4]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.6_boy-optimal.md|2.11.6]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.8_bipartite-equivalence-relation.md|2.11.8]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.10_bottleneck.md|2.11.10]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.11_bipartite-graphs.md|2.11.11]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.12_matching.md|2.11.12]] · [[MIT_OCW_6.042J_Materials/08_Courseware_Exercises/S22_2.11.13_stable-matching-invariants.md|2.11.13]]
-<!-- bilingual-en:end -->
 
 > [!note]
 > 上表 rank 沿用本课题库的“数值越大表示越喜欢”约定，所以 receiver 最佳 rank 弱增、proposer 当前选项 rank 弱减。若另一本书用“$1$ 是第一选择”，单调方向会反过来，但偏好改善/恶化的实质不变。
 > <!-- bilingual-en:start -->
-> The ranking table uses the convention “larger number means more preferred.” Therefore each receiver's current partner rank weakly increases, while each proposer's current-option rank weakly decreases. If another text uses “rank 1 is best,” the numerical monotonicities reverse, but the substantive improvement and deterioration statements are unchanged.
+> The ranking table uses the convention “larger number means more preferred.” Therefore, the rank of each receiver's current partner weakly increases, while the rank of each proposer's best remaining option weakly decreases. If another text uses “rank 1 is best,” the numerical directions reverse, but the underlying improvement and deterioration statements remain unchanged.
 > <!-- bilingual-en:end -->
 
 ### 课堂题（非官方独立题解）
 <!-- bilingual-en:start -->
-*Classroom Questions (Unofficial Independent Questions)*
+*In-class questions (unofficial independent solutions)*
 <!-- bilingual-en:end -->
 
 原题：[[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp22.pdf]]。
-<!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp22.pdf|MIT6_042JS15_cp22]].
-<!-- bilingual-en:end -->
 
 > [!example]- CP22 Problem 1：Students 与 Companies
 > **(a) Students proposing。** 第一轮 Albert、Tasha 都向 HP，Sarah 向 AT&T，Elizabeth 向 Draper。HP 在 Albert/Tasha 中留 Tasha，Albert 被拒后改向 Bellcore，其余人保持。得
@@ -3528,10 +3334,16 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > **(b) 唯一性判定。** 分别让两侧 proposing，求得 $M_L,M_R$。若不同，已有两个 stable matchings，故不唯一。若相同，任何 stable matching 中每个左方人的配偶不能比左方最优结果更好，也不能比左方最差（即右方最优）结果更差；两个界相同时每人配偶被强制，故结果唯一。
 > <!-- bilingual-en:start -->
-> **(a)Students proposing.**First round Albert, Tasha to HP, Sarah to AT&T, Elizabeth to Draper.  HP leaves Tasha in Albert/Tasha, Albert rejects and moves to Bellcore, the remainder remains.
-> **Companies proposing.**AT&T and HP started with Elizabeth, Bellcore to Tasha, and Draper to Sarah.  Substitute one at a time per receivers preference: Elizabeth retains AT&T, HP replaces Tasha; Tasha replaces HP, Bellcore replaces Sarah; Sarah replaces Bellcore, Draper replaces Elizabeth; Elizabeth replaces Draper, AT&T replaces Albert.
+> **(a) Students proposing.** In the first round, Albert and Tasha both propose to HP, Sarah to AT&T, and Elizabeth to Draper. HP keeps Tasha and rejects Albert, who then proposes to Bellcore; the other tentative matches remain unchanged.
+> $$
+> \boxed{\text{Tasha--HP, Sarah--AT\&T, Elizabeth--Draper, Albert--Bellcore}}.
+> $$
+> **Companies proposing.** AT&T and HP both begin by proposing to Elizabeth, Bellcore to Tasha, and Draper to Sarah. Receivers replace tentative partners according to their preferences: Elizabeth first keeps AT&T, so HP moves to Tasha; Tasha switches to HP, so Bellcore moves to Sarah; Sarah switches to Bellcore, so Draper moves to Elizabeth; Elizabeth switches to Draper, so AT&T finally proposes to Albert.
+> $$
+> \boxed{\text{Elizabeth--Draper, Tasha--HP, Sarah--Bellcore, Albert--AT\&T}}.
+> $$
 > The two results are students-optimal and companies-optimal, and both are stable.
-> **(b) uniqueness determination.**proposing each side to get $M_L,M_R$.  If not, there are already two stable matchings, so it is not unique.  If the same, each left spouse in any stable matching can't be better than the left best result, and can't be worse than the left worst (i.e., the right best) result; if the two boundaries are the same, each spouse is forced to be, so the result is unique.
+> **(b) Testing uniqueness.** Run deferred acceptance with each side proposing to obtain $M_L$ and $M_R$. If they differ, the instance already has two stable matchings and is not unique. If they coincide, then in any stable matching each left-side participant's partner can be neither better than the left-optimal result nor worse than the left-pessimal result (equivalently, the right-optimal result). When these bounds coincide, every partner is forced, so the stable matching is unique.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP22 Problem 2：preserved invariants
@@ -3547,18 +3359,18 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > 因此 preserved invariants 是 **(a), (c), (d)**。注意“preserved”只要求一旦为真就不再变假，不要求它在初始状态就为真。
 > <!-- bilingual-en:start -->
-> Once Alice becomes the only word on the Harry list, it will not be added back to others; Alice rejects Harry, the Harry list is empty, but it is not possible to have an empty proposer list in a Ritual of equal size and complete preference on both sides.  So it's true. Keep it true.
-> **(b) No.**A girl currently has no suitor, and the next round can receive the proposer rejected by others, and the proposition is changed from true to false.
-> **(c) Yes.**"Alice is not on the Harry list" means Alice has rejected Harry; basic rejection invariant guarantees that she has a suitor that she likes more than Harry, both now and in the future.
-> **(d) Yes.**Alice is not added back after being scratched by Harry; Harry advances from high to low in preference, so his future suitors rank behind Alice.  Both parts of the conjunctive proposition are preserved.
-> **(e) No.**Alice's Harry list says she hasn't turned down Harry, not her preference for Harry.  She already has a suitor she likes better.
-> So preserved invariants is**(a), (c), (d)**.  Note that "preserved" only requires that once it is true it is not falsified, and that it is not required to be true in the initial state.
+> **(a) Yes.** Once Alice is the only name on Harry's list, no deleted names can return. If Alice later rejected Harry, his list would become empty, which cannot happen in the equal-size Mating Ritual with complete preferences. Thus, once true, the statement remains true.
+> **(b) No.** A receiver with no current suitor may receive a proposal in the next round from someone rejected elsewhere, so the statement can change from true to false.
+> **(c) Yes.** “Alice is not on Harry's list” means that Alice has rejected Harry. The basic rejection invariant guarantees that, from then on, she always holds a suitor whom she prefers to Harry.
+> **(d) Yes.** Once Harry removes Alice, she is never restored to his list. Harry proposes in decreasing order of preference, so everyone he approaches later ranks below Alice. Both parts of the conjunction are preserved.
+> **(e) No.** Alice remaining on Harry's list says only that she has not rejected him; it says nothing about how she ranks him. She may already hold a proposer she prefers to Harry.
+> Therefore, the preserved invariants are **(a), (c), and (d)**. “Preserved” means only that once a statement becomes true it never becomes false; it need not hold initially.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP22 Problem 3：由 invariant 证 stability
 > 设输出存在 rogue pair $(B,G)$。$B$ 比较喜欢 $G$ 而不是最终 wife，所以按列表顺序，$B$ 曾先向 $G$ 求婚，后来 $G$ 被从 $B$ 的列表划去。由题给 invariant，从那时起 $G$ 有一位她比 $B$ 更喜欢的 favorite suitor，而她以后的 favorite 只会改善。因而她最终 husband 也排在 $B$ 之上，不可能更喜欢 $B$。这与 rogue pair 的第二个条件矛盾，故输出 stable。
 > <!-- bilingual-en:start -->
-> Set output to have rogue pair $(B,G)$.  $B$ prefers $G$ over wife, so $B$ proposed to $G$ first, and $G$ was removed from $B$'s list.  It's given to invariant, and since then $G$ has a favorite suitor she likes more than $B$, and her favorite will only improve.  So she ended up husband over $B$, and couldn't have liked $B$ more.  This contradicts the second condition of rogue pair, so the output stable.
+> Suppose the output contained a rogue pair $(B,G)$. Because $B$ prefers $G$ to his final wife, he must have proposed to $G$ earlier, after which she rejected him and was removed from his list. By the stated invariant, from that moment onward $G$ always held a favorite suitor whom she preferred to $B$, and the quality of her tentative partner could only improve. She must therefore prefer her final husband to $B$, contradicting the second condition for $(B,G)$ to be a rogue pair. Hence the output matching is stable.
 > <!-- bilingual-en:end -->
 
 > [!example]- CP22 Problem 4：有容量的 hospital–student matching
@@ -3568,14 +3380,14 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 >
 > 稳定性改为：不存在 student $s$ 与 hospital $h$，使 $s$ 更喜欢 $h$ 而不是当前归宿，且 $h$ 有空 slot 或愿意用 $s$ 替换当前某位更低排名 student。若这样一对存在，它恰对应 cloned one-to-one 实例中的 rogue pair；所以算法输出稳定。
 > <!-- bilingual-en:start -->
-> For each hospital $h$ with a capacity of $q_h$, split into $q_h$ slots $h^{(1)},\ldots,h^{(q_h)}$.  All slots follow $h$'s preference for students; each student continuously emits slots of the same hospital and breaks the slots-to-tie in any fixed order.  Both hospital slots and students are now capacity $1$.
-> If the total number of sides is not equal, adding dummy participants:dummy student on the less side indicates empty bed, and dummy slot indicates student is not matched.  Real participants can rank dummy/outside option after all acceptable objects.  Run deferred acceptance on the extended equal-size instance and merge the slots of the same hospital and delete dummy pairs.
-> Stability changes to: No student $s$ and hospital $h$ exist, making $s$ prefer $h$ over current home, and $h$ has a slot available or is willing to replace a current lower ranking student with a $s$.  If such a pair exists, it corresponds to the rogue pair in the cloned one-to-one instance; so the output of the algorithm is stable.
+> For each hospital $h$ with capacity $q_h$, create $q_h$ slots $h^{(1)},\ldots,h^{(q_h)}$. Every slot inherits $h$'s ranking of students. Each student lists the slots of the same hospital consecutively and breaks ties among them in any fixed order. The problem is now a one-to-one matching instance between students and unit-capacity hospital slots.
+> If the two sides have different sizes, add dummy participants to the smaller side: a dummy student represents an empty bed, while a dummy slot represents an unmatched student. Real participants may rank the dummy or outside option below all acceptable partners. Run deferred acceptance on the enlarged equal-size instance, merge each hospital's slots afterward, and discard the dummy pairs.
+> Stability now means that there is no student $s$ and hospital $h$ such that $s$ prefers $h$ to their current assignment and $h$ either has a vacant slot or would replace a lower-ranked current student with $s$. Any such pair would correspond to a rogue pair in the cloned one-to-one instance. Since deferred acceptance produces no rogue pair there, the resulting hospital–student matching is stable.
 > <!-- bilingual-en:end -->
 
 ### 边界情况与易错点
 <!-- bilingual-en:start -->
-*Boundary Condition and False Points*
+*Boundary cases and common pitfalls*
 <!-- bilingual-en:end -->
 
 - proposer-optimal 是“在所有 stable matchings 中可能得到的最好配偶”，不是“每个 proposer 都得到偏好表第一名”。
@@ -3583,15 +3395,15 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 - Stable matching 与 graph perfect matching 不是同一层问题：前者使用完整偏好并排除 blocking pair；后者只问允许边中是否有不冲突的全覆盖。
 - 存在 ties 或 incomplete lists 时，“stable”可分 weak/strong/super stability；本节定理默认严格、完整偏好。
 <!-- bilingual-en:start -->
-- proposer-optimal is "the best possible spouse in all stable matchings", not "every proposer gets first place in the preference table".
-- Hall condition must check all $S\subseteq L$; it is not sufficient to check only the degree of a single vertex; multiple points may be crammed into too small a common neighbor set.
-- Stable matching is not a problem at the same level as graph perfect matching: the former uses the full preference and excludes blocking pair; the latter simply asks if there are unconflicting full overlays in the allowed edges.
-- "stable" divides weak/strong/super stability when ties or incomplete lists is present; this section theorem defaults to strict, complete preferences.
+- Proposer-optimal means “the best spouse attainable in any stable matching,” not “every proposer receives the first person on their preference list.”
+- Hall's condition must be checked for every $S\subseteq L$. Checking individual degrees is insufficient because several vertices may compete for the same undersized neighbor set.
+- Stable matching and perfect matching in a graph are different problems. The former uses complete preferences and excludes blocking pairs; the latter asks only whether allowed edges contain a conflict-free full cover.
+- With ties or incomplete lists, stability splits into weak, strong, and super stability. The theorems in this section assume strict, complete preferences.
 <!-- bilingual-en:end -->
 
 ### 自检与知识链
 <!-- bilingual-en:start -->
-*Self-examination and Knowledge Chain*
+*Self-checks and knowledge chain*
 <!-- bilingual-en:end -->
 
 > [!question]- 自检 1
@@ -3600,48 +3412,39 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 > <!-- bilingual-en:start -->
 > Why is it safe for receiver to permanently reject a proposer?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 拒绝时她已有更喜欢的暂留者，以后只会换成更好的人；强拒绝引理进一步证明该被拒绝 pair 不在任何 stable matching 中。
 > <!-- bilingual-en:start -->
-> The strong rejection lemma further proves that the rejected pair is not in any stable matching.
+> At the moment of rejection, the receiver already holds someone they prefer, and any later tentative partner can only be better. The strong rejection lemma further shows that the rejected pair belongs to no stable matching.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 2
 > Hall condition 中若 $|S|=5,|N(S)|=4$，为什么必无覆盖 $L$ 的 matching？
 >
 > <!-- bilingual-en:start -->
-> If $|S|=5,|N(S)|=4$ in Hall condition, why does matching not cover $L$?
+> If $|S|=5$ and $|N(S)|=4$, why can no matching cover all of $L$?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > $S$ 的五个点只能匹配给四个右点；matching 要求不同左点用不同右点，与 pigeonhole principle 矛盾。
 > <!-- bilingual-en:start -->
-> The five points of $S$ can only be matched to four right points; matching requires different right points for different left points, contradicting with pigeonhole principle.
+> The five vertices of $S$ have only four possible partners in $R$. A matching must assign distinct right vertices to distinct left vertices, contradicting the pigeonhole principle.
 > <!-- bilingual-en:end -->
 
 > [!question]- 自检 3
 > 把 proposer 与 receiver 交换后，结果一定相同吗？
 >
 > <!-- bilingual-en:start -->
-> Does it have to be the same after you swap proposer with receiver?
+> Must deferred acceptance produce the same matching after the proposer and receiver sides are swapped?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 不一定。原算法给原 proposer-optimal/receiver-pessimal，交换后给原 receiver-optimal/proposer-pessimal；只在极值 matching 恰重合等情况下相同。
 > <!-- bilingual-en:start -->
-> Not necessarily.  The original algorithm is given to the original proposer-optimal/receiver-pessimal, and then to the original receiver-optimal/proposer-pessimal after the exchange, and the same only when the extremum matching exactly coincides with each other.
+> Not necessarily. The original run yields the original proposer-optimal and receiver-pessimal matching; after swapping sides, it yields the original receiver-optimal and proposer-pessimal matching. The results agree only when these extremal matchings coincide.
 > <!-- bilingual-en:end -->
 
 **知识链：**preferences → proposals/rejections → preserved invariant → stable matching → proposer-optimal/receiver-pessimal → bipartite matching → Hall condition → augmenting paths。
 <!-- bilingual-en:start -->
-**Knowledge Chain:**preferences → proposals/rejections → preserved invariant → stable matching → proposer-optimal/receiver-pessimal → bipartite matching → Hall condition → augmenting paths.
+**Knowledge chain:** preferences → proposals and rejections → preserved invariants → stable matching → proposer-optimal and receiver-pessimal outcomes → bipartite matching → Hall's condition → augmenting paths.
 <!-- bilingual-en:end -->
 
 ---
@@ -3650,7 +3453,7 @@ Original title: [[MIT_OCW_6.042J_Materials/05_In_Class_Questions/MIT6_042JS15_cp
 
 原题：[[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps8.pdf]]。以下均为对原题的非官方独立完整解答。
 <!-- bilingual-en:start -->
-Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps8.pdf|MIT6_042JS15_ps8]].  Below are unofficial, independent, complete answers to the original questions.
+The solutions below are complete, unofficial, and independently derived.
 <!-- bilingual-en:end -->
 
 > [!example]- PS8 Problem 1：边权互异则 MST 唯一
@@ -3668,14 +3471,14 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps8.pdf|
 >
 > **边界检查。** 证明只用“互异”得到严格不等式；若允许等权，只能得 $w(e)\le w(f)$，交换后可能只是另一个同权 MST，无法推出唯一。
 > <!-- bilingual-en:start -->
-> **Known.**All edge weights for finite connected graph are distinct.
-> **Objective.**Prove that it is impossible to have two different MST $M,N$.
-> **Switching fabric.**Let $M\ne N$ be the inverse, and let $e$ be the edge with the minimum weight in the symmetry difference $M\triangle N$; let $e\in M\setminus N$ be the common assumption.  Adding a $e$ to a tree $N$ produces exactly one cycle $C$.  $M$ has no cycle, so $C$ cannot have all edges belonging to $M$; hence there is $f\in C\cap(N\setminus M)$.
-> The $e,f$ are all in the $M\triangle N$ and the $e$ is the lightest edge; and because of the different weights,
+> **Given.** All edge weights in a finite connected graph are distinct.
+> **Goal.** Prove that two distinct MSTs $M,N$ cannot exist.
+> **Exchange construction.** Suppose $M\ne N$. Choose the minimum-weight edge $e$ in the symmetric difference $M\triangle N$; without loss of generality, let $e\in M\setminus N$. Adding $e$ to the tree $N$ creates exactly one cycle $C$. Since $M$ is acyclic, not every edge of $C$ can belong to $M$, so some $f\in C\cap(N\setminus M)$ exists.
+> Both $e$ and $f$ lie in $M\triangle N$, and $e$ is its lightest edge. Since all weights are distinct,
 > $$w(e)<w(f).$$
-> Get $N'=N+e-f$.  After deleting the $f$ on the cycle, the $N'$ is still connected and has a $n-1$ edge, so it is spanning tree. However,
+> Let $N'=N+e-f$. Removing $f$ from the cycle leaves $N'$ connected and with $n-1$ edges, so it is a spanning tree. But
 > $$w(N')=w(N)+w(e)-w(f)<w(N),$$
-> Contradicted with $N$ as MST.  Therefore, MST is unique.
+> contradicting the assumption that $N$ is an MST. Therefore, the MST is unique.
 > **Boundary check.** Distinct edge weights are what make the inequality strict. With ties, one obtains only $w(e)\le w(f)$; the exchange may produce another MST of the same weight, so uniqueness does not follow.
 > <!-- bilingual-en:end -->
 
@@ -3699,14 +3502,21 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps8.pdf|
 >
 > 题面已指出该图 triangle-free，所以这也明确反驳“高着色数必来自同阶 clique”的逆命题。
 > <!-- bilingual-en:start -->
-> The problem uses the Mycielski construction applied to the 5-cycle $C_5$. To avoid relying on drawing coordinates, label the cycle vertices $v_1,\ldots,v_5$ cyclically, with subscripts taken modulo $5$. Let $u_1,\ldots,u_5$ be the corresponding shadow vertices, where $u_i$ is adjacent to the two cycle neighbours $v_{i-1}$ and $v_{i+1}$ of $v_i$. The eleventh vertex $w$ is adjacent to every $u_i$. This specifies the graph abstractly.
-> **(a)4-coloring.**The $C_5$ is available as a three-color proper color, which is recorded as $c(v_i)\in\{1,2,3\}$.  defined
+> The problem uses the Mycielski construction applied to the 5-cycle $C_5$. To avoid relying on drawing coordinates, label the cycle vertices $v_1,\ldots,v_5$ cyclically, with subscripts taken modulo $5$. Let $u_1,\ldots,u_5$ be the corresponding shadow vertices, where $u_i$ is adjacent to the two cycle neighbors $v_{i-1}$ and $v_{i+1}$ of $v_i$. The eleventh vertex $w$ is adjacent to every $u_i$. This specifies the graph abstractly.
+> **(a) A $4$-coloring.** Properly color $C_5$ with three colors, denoted $c(v_i)\in\{1,2,3\}$. Define
 > $$c(u_i)=c(v_i),\qquad c(w)=4.$$
-> There are two types of new edges to check: $u_i$ is only adjacent to $v_{i-1},v_{i+1}$, and $v_i$ is different from these two colors in $C_5$'s proper coloring, so $u_i$ replicates $v_i$ color-safe; $w$ uses the new color $4$, which is different from all $u_i$.  So, $\chi(G)\le4$.
-> **(b) Exclude 3-coloring.**Inversely, $G$ has three shades.  With $c(w)=3$, all $u_i$ adjacent to $w$ can only use the color $1,2$.  Now from this colored construct $C_5$'s two colored $c'$:
-> All $c'(v_i)$ are in $\{1,2\}$.  Check cycle edge $v_iv_{i+1}$: The native shading does not make both ends $3$.  If both ends are not $3$, the color is the same and the original is different; if $v_i$ was $3$, it is changed to $c(u_i)$, and $u_i$ is adjacent to $v_{i+1}$, so the new color is still different.  So $c'$ is proper 2-coloring of $C_5$, but odd cycle can't 2-color, contradiction.  So $\chi(G)\ge4$, combined with (a)
+> There are two kinds of new edges to check. Vertex $u_i$ is adjacent only to $v_{i-1}$ and $v_{i+1}$; in the proper coloring of $C_5$, $v_i$ differs in color from both, so assigning $u_i$ the color of $v_i$ is safe. Vertex $w$ receives the new color $4$, different from every $u_i$. Hence $\chi(G)\le4$.
+> **(b) Ruling out a $3$-coloring.** Suppose instead that $G$ has a proper $3$-coloring. Without loss of generality, let $c(w)=3$. Every $u_i$, being adjacent to $w$, must then use color $1$ or $2$. Construct a $2$-coloring $c'$ of $C_5$ as follows:
+> $$
+> c'(v_i)=
+> \begin{cases}
+> c(v_i),&c(v_i)\ne3,\\
+> c(u_i),&c(v_i)=3.
+> \end{cases}
+> $$
+> Every $c'(v_i)$ lies in $\{1,2\}$. Consider an edge $v_iv_{i+1}$ of the cycle. The original proper coloring cannot assign color $3$ to both endpoints. If neither endpoint has color $3$, their colors remain unchanged and distinct. If $v_i$ originally has color $3$, replace it by $c(u_i)$; since $u_i$ is adjacent to $v_{i+1}$, the new colors are still distinct. Thus $c'$ is a proper $2$-coloring of $C_5$, impossible for an odd cycle. Therefore $\chi(G)\ge4$; together with part (a),
 > $$\boxed{\chi(G)=4}.$$
-> The topic has pointed out that the graph triangle-free, so this also explicitly refutes the inverse proposition that "high coloring numbers must come from the same order clique".
+> The problem states that the graph is triangle-free, so this explicitly refutes the converse claim that a high chromatic number must come from a clique of the same size.
 > <!-- bilingual-en:end -->
 
 > [!example]- PS8 Problem 3：多个 stable assignments
@@ -3737,18 +3547,26 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps8.pdf|
 > $$2\cdot2\cdots2=\boxed{2^{n/2}}$$
 > 个互不相同的 stable matchings。
 > <!-- bilingual-en:start -->
-> **(a) stable for all unspecified preferences.**Inspect
+> **(a) Stable for every completion of the unspecified preferences.** Consider
 > $$M=\{(B_1,G_1),(B_2,G_2),(B_3,G_3),(B_4,G_4)\}.$$
-> In the first $2\times2$ block, $B_1,B_2$ were given their first choice, so they could not participate in rogue pair.  In the second block, $B_3$ prefers $G_4$, but $G_4$ currently gets his preferred $B_4$; $B_4$ prefers $G_3$, but $G_3$ currently prefers $B_3$.  So neither of the candidates, cross pairs, rogue.
-> Direction checking is required for pair across blocks and it cannot be assumed that all dash are after the written name.  $B_1,B_2$ has been given a first choice for the entire table separately, so does not want to move to $G_3,G_4$.  $B_3,B_4$ may prefer the top two $G_1,G_2$, but $G_1,G_2$'s top two are $B_1,B_2$, so they all reject $B_3,B_4$.  This conclusion has nothing to do with how each dash is ordered internally.  Thus, $M$ stable for any complement.
-> **(b) Neither boy-optimal nor boy-pessimal.**In the first block, $B_1,B_2$ has to choose first; in the second block, $B_3,B_4$ has to choose second.  Swapping two pairs within each block still yields stable matching, so the first two have a worse feasible spouses, and the second two have a better feasible spouses.  Therefore, the overall result is not that all boys are optimal at the same time, nor are they pessimal at the same time, and therefore neither of them will be Ritual outputs of proposer.
-> **(c) Construct at least $2^{n/2}$ stable matchings.**Assuming that $n$ is even, boys is divided into $n/2$ pair $(b_{i,1},b_{i,2})$ and girls is also divided into corresponding $n/2$ pair $(g_{i,1},g_{i,2})$.  Each person puts both of their block ahead of all external objects, and sets them in the $i$ block
-> Two stable options per block: diagonal
+> In the first $2\times2$ block, $B_1$ and $B_2$ each receive their first choice, so neither can participate in a blocking pair. In the second block, $B_3$ prefers $G_4$, but $G_4$ is paired with $B_4$, whom she prefers; similarly, $B_4$ prefers $G_3$, but $G_3$ prefers her current partner $B_3$. Neither cross-pair blocks.
+> Cross-block pairs must be checked in both directions; one cannot assume that every unspecified entry is ranked below every named entry. Boys $B_1,B_2$ already have their first choices in the entire table, so they do not prefer $G_3,G_4$. Boys $B_3,B_4$ may prefer $G_1,G_2$, but those girls rank $B_1,B_2$ in their top two positions and would reject $B_3,B_4$. This argument is independent of how the unspecified entries are ordered. Hence $M$ is stable under every completion.
+> **(b) Neither boy-optimal nor boy-pessimal.** In the first block, $B_1,B_2$ receive their first choices; in the second, $B_3,B_4$ receive their second choices. Swapping the two matches within either block still gives a stable matching, so the first two boys have worse feasible spouses and the latter two have better feasible spouses. Thus the displayed matching makes the boys neither jointly optimal nor jointly pessimal and cannot be the output with either side proposing.
+> **(c) Constructing at least $2^{n/2}$ stable matchings.** Assume $n$ is even. Divide the boys into $n/2$ pairs $(b_{i,1},b_{i,2})$ and the girls into corresponding pairs $(g_{i,1},g_{i,2})$. Every person ranks both members of their own block above everyone outside it. Within block $i$, use the preferences
+> $$
+> b_{i,1}:g_{i,1}\succ g_{i,2},\qquad
+> b_{i,2}:g_{i,2}\succ g_{i,1},
+> $$
+> $$
+> g_{i,1}:b_{i,2}\succ b_{i,1},\qquad
+> g_{i,2}:b_{i,1}\succ b_{i,2}.
+> $$
+> Each block has two stable options: the diagonal matching
 > $$D_i=\{(b_{i,1},g_{i,1}),(b_{i,2},g_{i,2})\}$$
-> with crossed
+> and the crossed matching
 > $$C_i=\{(b_{i,1},g_{i,2}),(b_{i,2},g_{i,1})\}.$$
-> For $D_i$, both boyss are the first choice; for $C_i$, each boy prefers the other girl, but the girl is paired with his preferred boy and has no rogue pair.  Across block, everyone prefers their current block spouse and doesn't rogue.
-> Thus, each block's $D_i/C_i$ can be independently selected from two, resulting in
+> Under $D_i$, both boys receive their first choices. Under $C_i$, each boy prefers the other girl, but that girl is paired with the boy she prefers, so no blocking pair arises. Across blocks, everyone prefers the current within-block partner, so no cross-block pair blocks.
+> Therefore, $D_i$ or $C_i$ may be chosen independently in every block, giving
 > $$2\cdot2\cdots2=\boxed{2^{n/2}}$$
 > different stable matchings.
 > <!-- bilingual-en:end -->
@@ -3757,12 +3575,12 @@ Original title: [[MIT_OCW_6.042J_Materials/06_Problem_Sets/MIT6_042JS15_ps8.pdf|
 
 ## Unit 2 结构回顾
 <!-- bilingual-en:start -->
-*Unit 2 Fabric Review*
+*Unit 2 structure review*
 <!-- bilingual-en:end -->
 
 本单元从整数结构走向关系与图，再落到可验证的算法：
 <!-- bilingual-en:start -->
-This unit goes from integer structure to relation and graph, and then to verifiable algorithm:
+This unit moves from integer structure to relations and graphs, then to verifiable algorithms:
 <!-- bilingual-en:end -->
 
 1. **Number theory：**gcd/Bezout 使模逆可计算；congruence 把无穷整数折叠成有限余数类；Euler/Fermat 给出指数周期；RSA 把这些结构组成公钥系统。
@@ -3770,41 +3588,37 @@ This unit goes from integer structure to relation and graph, and then to verifia
 3. **Undirected structure：**degree 与 handshaking 来自 double counting；isomorphism 区分结构与画法；coloring 处理冲突，connectivity 衡量网络的韧性。
 4. **Minimal skeleton and allocation：**tree 是 connected 的最小骨架，cut property 证明 MST 贪心选边安全；deferred acceptance 用拒绝 invariant 保证稳定，Hall 定理用 bottleneck/augmenting path 刻画 perfect matching 存在性。
 <!-- bilingual-en:start -->
-1.**Number theory:**gcd/Bezout makes modular inversion computable; congruence collapses infinite integers into finite remainder classes; Euler/Fermat gives exponential periods; RSA composes these structures into a public key system.
-2.**Relations and directed structure:**digraph distinguishes walk/path/cycle; DAG expresses dependency with topological order; equivalence relation divides collection and partial order/Hasse diagram expresses level.
-3. **Undirected structure:** Degree sums and the handshaking lemma come from double counting; isomorphism distinguishes structure from a particular drawing or labeling; coloring models conflicts, while connectivity measures a network's resilience.
-4.**Minimal skeleton and allocation:**tree is the smallest skeleton of connected. cut property proved that MST is greedy for edge selection; deferred acceptance guarantees stability by rejecting invariant, and Hall theorem describes the existence of perfect matching by bottleneck/augmenting path.
+
+&nbsp;
+**1.** **Number theory:** the GCD and Bézout's identity make modular inversion computable; congruence collapses the infinite set of integers into finitely many residue classes; Euler's and Fermat's theorems yield periods for modular exponentiation; RSA combines these structures into a public-key system.<br>
+**2.** **Relations and directed structure:** digraphs distinguish walks, paths, and cycles; DAGs express dependencies through topological order; equivalence relations partition sets, while partial orders and Hasse diagrams express hierarchy.<br>
+**3.** **Undirected structure:** degree sums and the handshaking lemma come from double counting; isomorphism distinguishes structure from a particular drawing or labeling; coloring models conflicts, while connectivity measures a network's resilience.<br>
+**4.** **Minimal skeletons and allocation:** a tree is the minimal skeleton of connectivity; the cut property justifies greedy edge choices for an MST; deferred acceptance guarantees stability through the rejection invariant; and Hall's theorem characterizes the existence of a perfect matching through bottlenecks and augmenting paths.<br>
 <!-- bilingual-en:end -->
 
 ### 单元级综合自检
 <!-- bilingual-en:start -->
-*integrated self-test at unit level*
+*Integrated unit-level self-check*
 <!-- bilingual-en:end -->
 
 > [!question]- 综合题 1
 > 为什么“存在性证明”在 MST 与 Hall 定理中都出现了交换 path/cycle？
 >
 > <!-- bilingual-en:start -->
-> Why does "proof of existence" appear in both MST and Hall theorems as commutative path/cycle?
+> Why do the existence proofs for MSTs and Hall's theorem both use exchanges along a path or cycle?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 两者都先取一个极值对象：MST 证明取已有最小 tree，Hall 证明取最大 matching。加一条边后，tree 中出现 cycle，matching 中出现 alternating path；沿该结构交换可保持可行性并改善目标，与极值性矛盾。
 > <!-- bilingual-en:start -->
-> Both of them take an extremum object: the MST proof has the smallest tree, and the Hall proof has the largest matching.  After adding an edge, cycle appears in tree and alternating path appears in matching. The exchange along this structure can maintain feasibility and improve the target, which is contradictory with extremum.
+> Both proofs begin with an extremal object: an existing minimum-weight tree in the MST proof and a maximum-cardinality matching in Hall's theorem. Adding or exposing one edge creates a cycle in the tree or an alternating path in the matching. Exchanging edges along that structure preserves feasibility while improving the objective, contradicting extremality.
 > <!-- bilingual-en:end -->
 
 > [!question]- 综合题 2
 > 某 dependency digraph 是 DAG，其 underlying undirected graph 是 tree。这两个性质分别告诉你什么？
 >
 > <!-- bilingual-en:start -->
-> A dependency digraph is a DAG and its underlying undirected graph is a tree.  What do these two properties tell you?
+> A dependency digraph is a DAG, and its underlying undirected graph is a tree. What do these two properties tell you?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > DAG 保证存在 topological order，可按依赖顺序执行；underlying tree 保证忽略方向后任意两任务间恰有一条 path，且有 $n-1$ 条依赖边。前者是方向/时序结构，后者是无向连接骨架，不可混为同一命题。
 > <!-- bilingual-en:start -->
@@ -3817,9 +3631,6 @@ This unit goes from integer structure to relation and graph, and then to verifia
 > <!-- bilingual-en:start -->
 > What proof pattern is shared by RSA correctness and the stability proof for the Mating Ritual algorithm?
 > <!-- bilingual-en:end -->
-<!-- bilingual-en:start -->
-
-<!-- bilingual-en:end -->
 > [!success]- 答案
 > 两者都不是只检查若干例子，而是先找全程保持的结构。RSA 分别在模 $p,q$ 下使用指数同余，再由 CRT 合并；Mating Ritual 使用“被划去的 receiver 永远持有更好 suitor”的 invariant，再排除 rogue pair。关键都是把最终目标转成可在每一步维持的性质。
 > <!-- bilingual-en:start -->

@@ -27,7 +27,7 @@
       "y": 150,
       "width": 310,
       "height": 100,
-      "text": "## Pretraining\n\n[[预训练、指令微调与偏好优化]]",
+      "text": "## Pretraining\n\n预训练、指令微调与偏好优化",
       "color": "5"
     },
     {
@@ -47,7 +47,7 @@
       "y": 450,
       "width": 310,
       "height": 100,
-      "text": "## Scaling Law\n\n[[规模化、MoE 与分布式训练]]",
+      "text": "## Scaling Law\n\n规模化、MoE 与分布式训练",
       "color": "6"
     },
     {
@@ -57,7 +57,7 @@
       "y": 600,
       "width": 310,
       "height": 100,
-      "text": "## Preference Optimization\n\n[[预训练、指令微调与偏好优化]]",
+      "text": "## Preference Optimization\n\n预训练、指令微调与偏好优化",
       "color": "4"
     },
     {
@@ -77,7 +77,7 @@
       "y": 900,
       "width": 310,
       "height": 100,
-      "text": "## Agent\n\n[[推理模型与 LLM Agent]]",
+      "text": "## Agent\n\n推理模型与 LLM Agent",
       "color": "3"
     },
     {

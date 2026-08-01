@@ -23,9 +23,11 @@ Before clustering, settle three questions:
 2. 变量是否需要标准化。
 3. 希望得到层级结构，还是固定数量的类别。
 <!-- bilingual-en:start -->
-1. How is distance defined?
-2. Do the variables need to be standardised?
-3. Is the goal a hierarchy or a fixed number of groups?
+
+&nbsp;
+**1.** How is distance defined?<br>
+**2.** Do the variables need to be standardised?<br>
+**3.** Is the goal a hierarchy or a fixed number of groups?<br>
 <!-- bilingual-en:end -->
 
 >[!attention] 尺度问题
@@ -49,10 +51,12 @@ Hierarchical clustering commonly follows an agglomerative procedure:
 3. 合并距离最近的两个簇。
 4. 重复直到所有样本合并成一棵树。
 <!-- bilingual-en:start -->
-1. Begin with each observation in its own cluster.
-2. Compute the distances between all clusters.
-3. Merge the two closest clusters.
-4. Repeat until all observations have been merged into one tree.
+
+&nbsp;
+**1.** Begin with each observation in its own cluster.<br>
+**2.** Compute the distances between all clusters.<br>
+**3.** Merge the two closest clusters.<br>
+**4.** Repeat until all observations have been merged into one tree.<br>
 <!-- bilingual-en:end -->
 
 ### 1.2.1. Linkage：簇间距离
@@ -104,10 +108,12 @@ The algorithm proceeds as follows:
 3. 按到中心距离最小原则，重新分配每个样本。
 4. 重复步骤 2-3，直到类别不再变化或目标函数收敛。
 <!-- bilingual-en:start -->
-1. Randomly initialise $K$ centres or randomly assign observations to clusters.
-2. Compute each cluster's centroid.
-3. Reassign each observation to its nearest centroid.
-4. Repeat steps 2–3 until assignments stop changing or the objective converges.
+
+&nbsp;
+**1.** Randomly initialise $K$ centres or randomly assign observations to clusters.<br>
+**2.** Compute each cluster's centroid.<br>
+**3.** Reassign each observation to its nearest centroid.<br>
+**4.** Repeat steps 2–3 until assignments stop changing or the objective converges.<br>
 <!-- bilingual-en:end -->
 
 目标函数为

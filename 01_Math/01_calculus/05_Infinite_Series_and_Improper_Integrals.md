@@ -16,28 +16,19 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 > [!abstract] 本章主线
 > “无穷”不是一个可代入的数，而是极限过程。本章先处理两个函数同时趋于 0 或无穷的比值，再定义无穷区间及奇点附近的积分，随后把“无限相加”精确定义为部分和的极限，最后用幂级数和 Taylor 公式把函数编码成多项式。
 > <!-- bilingual-en:start -->
-> "Infinity" is not a substitutable number but a limiting process.  In this chapter, we first deal with the two functions which are approaching to zero or infinite ratio at the same time, then define the infinite interval and the integral near the singular point, then define the "infinite addition" as the limit of the partial sum, finally encode the function into polynomial by power series and Taylor formula.
+> Infinity is not a number that can be substituted into a formula; it describes a limiting process. This chapter first studies ratios in which both functions approach zero or both grow without bound, then defines integrals over infinite intervals and near singularities. It next defines an infinite sum as the limit of its partial sums, and finally uses power series and Taylor's formula to represent functions by polynomials.
 > <!-- bilingual-en:end -->
 
 ## 阅读地图
-<!-- bilingual-en:start -->
-*Read the map*
-<!-- bilingual-en:end -->
 
 - Part A：Session 87–93，L’Hôpital 法则与反常积分
 - Part B：Session 94–101，无穷级数、幂级数和 Taylor 级数
 - 官网本单元没有 Problem Set；每节可用的 Exercise 已放回对应 Session
 - Session 102 的期末考试独立见 [[Final_Exam|Final Exam]]
-<!-- bilingual-en:start -->
-- Part A:Session 87-93, L’Hôpital's law and anomalous integral
-- Part B:Session 94-101, infinite series, power series, and Taylor series
-- Problem Set is not available in the official web module; Exercise available in each section is returned to the corresponding Session
-- Session 102 final exams are available independently in [[Final_Exam|Final Exam]]
-<!-- bilingual-en:end -->
 
 ## 使用极限工具前的判断顺序
 <!-- bilingual-en:start -->
-*The order of judgment before using the limit tool*
+*What to check before choosing a limit technique*
 <!-- bilingual-en:end -->
 
 1. 直接代入，确认是不是未定式；
@@ -46,11 +37,13 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 4. \(0\cdot\infty\)、\(\infty-\infty\)、\(0^0\)、\(1^\infty\)、\(\infty^0\) 要先改写；
 5. 得到答案后检查符号、增长阶和定义域。
 <!-- bilingual-en:start -->
-1. Substitute directly to confirm whether it is unstructured;
-2. Algebraic simplification, standard limit or equivalent infinitesimal;
-3. Use L’Hôpital only for \ (0/0\) or \ (\infty/\infty\) that meet the criteria;
-4. \(0\cdot\infty\), \(\infty-\infty\), \(0^0\), \(1^\infty\), \(\infty^0\) to override first;
-5. Check the symbols, growth order, and domain when you get the answer.
+
+&nbsp;
+**1.** Substitute directly and determine whether the result is an indeterminate form;<br>
+**2.** First try algebraic simplification, a standard limit, or an equivalent infinitesimal;<br>
+**3.** Use L’Hôpital’s rule only for $0/0$ or $\infty/\infty$ forms that satisfy its hypotheses;<br>
+**4.** Rewrite $0\cdot\infty$, $\infty-\infty$, $0^0$, $1^\infty$, and $\infty^0$ into a suitable form before proceeding;<br>
+**5.** Check the sign, order of growth, and domain of the final result.<br>
 <!-- bilingual-en:end -->
 
 ![[98_attachment/MIT18.01SC/unit05-growth-hierarchy.png|749]]
@@ -63,7 +56,7 @@ source: https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/p
 
 ### [[极限与连续#极限存在的检查顺序|洛必达法则]]：未定式与使用条件
 <!-- bilingual-en:start -->
-*[[极限与连续#极限存在的检查顺序|Lopita's law]]: undefined and usage conditions*
+*[[极限与连续#极限存在的检查顺序|L’Hôpital’s rule]]: indeterminate forms and hypotheses*
 <!-- bilingual-en:end -->
 
 设 \(f,g\) 在 \(a\) 的穿孔邻域可导，\(g'(x)\ne0\)，并且
@@ -77,7 +70,7 @@ $$
 
 或二者绝对值都趋于无穷。若
 <!-- bilingual-en:start -->
-or the absolute value of both tends to be infinity.
+or both absolute values tend to infinity. If
 <!-- bilingual-en:end -->
 
 $$
@@ -95,7 +88,7 @@ $$
 
 法则处理的是**比值的极限**，不是函数恒等式；一般不能写 \(f/g=f'/g'\)。
 <!-- bilingual-en:start -->
-The rule deals with the limit**of the ratio**, not the function identity; it cannot be written as \(f/g=f'/g'\).
+The rule concerns the **limit of a ratio**, not an identity between functions; in general, one may not write $f/g=f'/g'$.
 <!-- bilingual-en:end -->
 
 ### 为什么成立：Cauchy MVT
@@ -105,7 +98,7 @@ The rule deals with the limit**of the ratio**, not the function identity; it can
 
 先看 \(0/0\)，并暂设 \(f(a)=g(a)=0\)。对靠近 \(a\) 的 \(x\)，Cauchy 平均值定理保证在 \(a,x\) 之间存在 \(c\)：
 <!-- bilingual-en:start -->
-Look at \(0/0\) first and temporarily \(f(a)=g(a)=0\).  For \(x\) near \(a\), the Cauchy mean theorem guarantees the existence of \(c\) between \(a,x\):
+First consider the $0/0$ case and temporarily set $f(a)=g(a)=0$. For $x$ near $a$, the Cauchy mean value theorem guarantees some $c$ between $a$ and $x$ such that
 <!-- bilingual-en:end -->
 
 $$
@@ -115,7 +108,7 @@ $$
 
 左边就是 \(f(x)/g(x)\)。当 \(x\to a\)，夹在二者之间的 \(c\to a\)，所以若导数比趋于 \(L\)，原比值也趋于 \(L\)。
 <!-- bilingual-en:start -->
-On the left is \(f(x)/g(x)\).  When \(x\to a\) is sandwiched between \(c\to a\), so if the derivative ratio tends to \(L\), the original ratio also tends to \(L\).
+The left-hand side is $f(x)/g(x)$. Because $c$ lies between $a$ and $x$, taking $x\to a$ also forces $c\to a$. Hence, if the derivative ratio tends to $L$, so does the original ratio.
 <!-- bilingual-en:end -->
 
 > [!note] 严格性说明
@@ -126,7 +119,7 @@ On the left is \(f(x)/g(x)\).  When \(x\to a\) is sandwiched between \(c\to a\),
 
 ### 例
 <!-- bilingual-en:start -->
-*example*
+*Example*
 <!-- bilingual-en:end -->
 
 $$
@@ -136,7 +129,7 @@ $$
 
 这个极限也正是 \(e^x\) 在 0 的导数；识别导数定义比 L’Hôpital 更能解释其意义。
 <!-- bilingual-en:start -->
-This limit is also exactly the derivative of \(e^x\) at 0; the definition of the identification derivative explains its meaning more than L’Hôpital.
+This limit is precisely the derivative of $e^x$ at $0$. Recognizing the definition of a derivative explains its meaning more directly than applying L’Hôpital’s rule.
 <!-- bilingual-en:end -->
 
 ### 87a–87c：课件例题与证明流程
@@ -155,7 +148,7 @@ $$
 
 直接代入是 $0/0$，分子、分母分别求导后
 <!-- bilingual-en:start -->
-The direct substitution is $0/0$, after the numerator and the denominator are differentiated respectively
+Direct substitution gives $0/0$. Differentiating the numerator and denominator gives
 <!-- bilingual-en:end -->
 
 $$
@@ -164,7 +157,7 @@ $$
 
 代数法也给同一答案：约去 $x-1$ 后再代入。两种方法相符说明 L’Hôpital 没有在制造新函数，而是在提取分子与分母的**一阶主导变化**。
 <!-- bilingual-en:start -->
-Algebra also gives the same answer: about $x-1$ and then substitute.  The agreement between the two methods indicates that L’Hôpital is not making new functions, but extracting the**first-order dominant variation**of the numerator and denominator.
+Algebra gives the same answer: cancel the common factor $x-1$, then substitute. The agreement shows that L’Hôpital’s rule is not inventing a new function; it is extracting the **leading first-order change** in the numerator and denominator.
 <!-- bilingual-en:end -->
 
 证明时应把逻辑顺序写清：
@@ -177,15 +170,17 @@ The logical sequence should be clearly stated in the proof:
 3. 因 $c_x$ 位于 $a$ 与 $x$ 之间，$x\to a$ 强迫 $c_x\to a$；
 4. 只有已知 $f'(t)/g'(t)\to L$，才能把 $t=c_x$ 代入这一极限结论。
 <!-- bilingual-en:start -->
-1. The target is the limit of the original ratio $f(x)/g(x)$;
-2. Construct the middle point $c_x$ with Cauchy MVT, make the original ratio equal to a derivative ratio;
-3. Because $c_x$ lies between $a$ and $x$, $x\to a$ forces $c_x\to a$;
-4. Only when $f'(t)/g'(t)\to L$ is known can $t=c_x$ be substituted into this limiting conclusion.
+
+&nbsp;
+**1.** The target is the limit of the original ratio $f(x)/g(x)$;<br>
+**2.** Use the Cauchy MVT to construct an intermediate point $c_x$ at which the original ratio equals a derivative ratio;<br>
+**3.** Because $c_x$ lies between $a$ and $x$, $x\to a$ forces $c_x\to a$;<br>
+**4.** Only after establishing $f'(t)/g'(t)\to L$ may we apply that limit along the points $t=c_x$.<br>
 <!-- bilingual-en:end -->
 
 这也解释了为何“导数比的极限存在”是定理假设，而不是计算后的可选检查。
 <!-- bilingual-en:start -->
-This also explains why the "limit of derivative ratio exists" is a theorem hypothesis, not an optional check after calculation.
+This explains why existence of the derivative-ratio limit is a hypothesis of the theorem, not an optional check after the calculation.
 <!-- bilingual-en:end -->
 
 ### 本地材料与练习
@@ -236,16 +231,18 @@ This also explains why the "limit of derivative ratio exists" is a theorem hypot
 > 2. $\lim_{x\to2}(x^2-4)/(x-2)$ 可用，但先约分更直接，结果为 $4$。
 > 3. 不能写 $f/g=f'/g'$；例如 $x^2/x=x$，而导数比为 $2x$，只有符合条件时二者的极限才由定理联系。
 > <!-- bilingual-en:start -->
-> 1. $\lim_{x\to0}\sin x/x$ can be L’Hôpital and the result is $1$; however, if the sine derivative itself is proved by this limit, it will be proved in a cyclical way.
-> 2. $\lim_{x\to2}(x^2-4)/(x-2)$ is available, but the initial score is more direct, resulting in $4$.
-> 3. You cannot write $f/g=f'/g'$; for example, $x^2/x=x$, and the derivative ratio is $2x$, the limits of which are connected by theorems only if the conditions are met.
+>
+> &nbsp;
+> **1.** L’Hôpital’s rule may be used for $\lim_{x\to0}\sin x/x$, giving $1$; however, using it would be circular if the derivative of sine was itself established from this limit.<br>
+> **2.** L’Hôpital’s rule applies to $\lim_{x\to2}(x^2-4)/(x-2)$, but cancelling the common factor first is more direct; the limit is $4$.<br>
+> **3.** One may not assert that $f/g=f'/g'$. For example, $x^2/x=x$, whereas the derivative ratio is $2x$. L’Hôpital’s rule relates only their limits, and only under its hypotheses.<br>
 > <!-- bilingual-en:end -->
 
 ## Session 88：Examples of L’Hôpital’s Rule
 
 ### 重复使用
 <!-- bilingual-en:start -->
-*reuse*
+*Repeated applications*
 <!-- bilingual-en:end -->
 
 $$
@@ -254,7 +251,7 @@ $$
 
 第一次仍为 \(0/0\)：
 <!-- bilingual-en:start -->
-First time still \ (0/0\):
+The first application still leaves the form $0/0$:
 <!-- bilingual-en:end -->
 
 $$
@@ -263,7 +260,7 @@ $$
 
 第二次仍为 \(0/0\)：
 <!-- bilingual-en:start -->
-The second time remains \(0/0\):
+After differentiating once, the new ratio is still $0/0$:
 <!-- bilingual-en:end -->
 
 $$
@@ -272,12 +269,12 @@ $$
 
 每次使用前都重新确认未定式。
 <!-- bilingual-en:start -->
-Reconfirm unstyled before each use.
+Recheck that the expression is indeterminate before every application.
 <!-- bilingual-en:end -->
 
 ### 与 Taylor 近似比较
 <!-- bilingual-en:start -->
-*Comparison with Taylor Approximation*
+*Comparison with a Taylor approximation*
 <!-- bilingual-en:end -->
 
 $$
@@ -301,7 +298,7 @@ L’Hôpital gives the answer, and Taylor explains the order of the error.
 
 ### 扩展到无穷远
 <!-- bilingual-en:start -->
-*Extend to infinity*
+*Extension to limits at infinity*
 <!-- bilingual-en:end -->
 
 $$
@@ -321,7 +318,7 @@ This means that logarithmic growth is slower than linear growth.
 
 **一次使用：**
 <!-- bilingual-en:start -->
-**One-Time Use:**
+**One application:**
 <!-- bilingual-en:end -->
 
 $$
@@ -332,7 +329,7 @@ $$
 
 **重复使用：**
 <!-- bilingual-en:start -->
-**Reuse:**
+**Repeated applications:**
 <!-- bilingual-en:end -->
 
 $$
@@ -345,12 +342,12 @@ $$
 
 第二次之前，新的比值仍是 $0/0$；这一步确认不可省略。二次近似 $\cos x=1-x^2/2+O(x^4)$ 不仅给出 $-1/2$，还说明被忽略项是 $O(x^2)$。
 <!-- bilingual-en:start -->
-Before the second, the new margin was still $0/0$; this step confirmed that it was not optional.  The quadratic approximation $\cos x=1-x^2/2+O(x^4)$ not only gives $-1/2$, but also shows that the neglected term is $O(x^2)$.
+Before applying the rule a second time, verify that the new ratio is still $0/0$; this check is essential. The quadratic approximation $\cos x=1-x^2/2+O(x^4)$ not only gives $-1/2$, but also shows that the neglected error is $O(x^2)$.
 <!-- bilingual-en:end -->
 
 **无穷远版本：**把 $x\to\infty$ 看成在越来越长区间上比较增长。若分子分母都趋于无穷，且导数比有极限，才可使用相应版本。
 <!-- bilingual-en:start -->
-**Infinity:**Think of $x\to\infty$ as growing in a growing range.  If the numerator denominators tend to infinity, and derivative ratios have limits, the corresponding version can be used.
+**At infinity:** Think of $x\to\infty$ as comparing growth over ever larger inputs. The corresponding form of L’Hôpital’s rule applies when both numerator and denominator tend to infinity and the derivative ratio has the required limit.
 <!-- bilingual-en:end -->
 
 ### 本地材料与练习
@@ -365,7 +362,7 @@ Before the second, the new margin was still $0/0$; this step confirmed that it w
 > [!warning] 易错点
 > 若第一次求导后的极限已不是未定式，必须停止；不能为了“化简”继续求导。
 > <!-- bilingual-en:start -->
-> If the limit after the first derivation is no longer an indefinite form, it must be stopped; the derivation cannot be continued for the sake of "simplification".
+> If differentiating once removes the indeterminate form, stop. Do not keep differentiating merely to make the expression look simpler.
 > <!-- bilingual-en:end -->
 
 > [!example]- Exercise 088 完整题解：比较 $e^x$ 与 $x$
@@ -403,16 +400,18 @@ Before the second, the new margin was still $0/0$; this step confirmed that it w
 > 2. $\lim_{x\to\infty}x^3/e^x=0$，连续三次后成为 $6/e^x$。
 > 3. $\lim_{x\to0}(1+x)/x$ 不是未定式；右极限 $+\infty$、左极限 $-\infty$，不能再求导。
 > <!-- bilingual-en:start -->
-> 1. The $\lim_{x\to0}(e^x-1-x)/x^2=1/2$ is used twice in a row.
-> 2. $\lim_{x\to\infty}x^3/e^x=0$, which became $6/e^x$ three times in a row.
-> 3. $\lim_{x\to0}(1+x)/x$ is not an indefinite; the right limit $+\infty$, the left limit $-\infty$, can no longer be derived.
+>
+> &nbsp;
+> **1.** Applying L’Hôpital’s rule twice to $\lim_{x\to0}(e^x-1-x)/x^2$ gives $1/2$.<br>
+> **2.** Applying it three times to $\lim_{x\to\infty}x^3/e^x$ reduces the ratio to $6/e^x$, whose limit is $0$.<br>
+> **3.** $\lim_{x\to0}(1+x)/x$ is not an indeterminate form. Its one-sided limits are $+\infty$ and $-\infty$, so L’Hôpital’s rule does not apply.<br>
 > <!-- bilingual-en:end -->
 
 ## Session 89：Rates of Growth
 
 ### 增长层级
 <!-- bilingual-en:start -->
-*growth level*
+*Growth hierarchy*
 <!-- bilingual-en:end -->
 
 对任意固定 \(p>0\)、\(q>0\)：
@@ -432,7 +431,7 @@ The symbol \(f\ll g\) indicates \(f/g\to0\).
 
 证明 \(\ln x\ll x^p\)：
 <!-- bilingual-en:start -->
-Attestation\(\ln x\ll x^p\):
+To prove \(\ln x\ll x^p\),
 <!-- bilingual-en:end -->
 
 $$
@@ -443,7 +442,7 @@ $$
 
 证明多项式慢于指数：对整数 \(n\)，反复使用 L’Hôpital：
 <!-- bilingual-en:start -->
-Proof that the polynomial is slower than exponential: For integer \(n\), use L’Hôpital repeatedly:
+To prove that polynomial growth is slower than exponential growth, apply L’Hôpital's rule repeatedly for an integer \(n\):
 <!-- bilingual-en:end -->
 
 $$
@@ -470,7 +469,7 @@ $$
 
 虽然 $\ln x\to-\infty$，但 $x$ 趋零更快，所以乘积从负侧趋零。对 $p>0$，
 <!-- bilingual-en:start -->
-Although $\ln x\to-\infty$, $x$ goes to zero faster, so the product goes from negative to zero.  For $p>0$,
+Although $\ln x\to-\infty$, the factor $x$ tends to zero quickly enough that the product approaches $0$ from below. For $p>0$,
 <!-- bilingual-en:end -->
 
 $$
@@ -481,7 +480,7 @@ $$
 
 最后
 <!-- bilingual-en:start -->
-last
+Finally,
 <!-- bilingual-en:end -->
 
 $$
@@ -492,7 +491,7 @@ $$
 
 取倒数就把增长层级翻译为衰减层级；“谁增长更快”与“谁的倒数衰减更快”是同一判断。
 <!-- bilingual-en:start -->
-The reciprocal translates growth into attenuation; "who grows faster" is the same as "whose reciprocal decays faster."
+Taking reciprocals converts growth comparisons into decay comparisons: asking which function grows faster is equivalent to asking which reciprocal decays faster.
 <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -506,7 +505,11 @@ The reciprocal translates growth into attenuation; "who grows faster" is the sam
 >
 > 答：都趋于 0；第三个等于 \(x^5/e^x\)。
 > <!-- bilingual-en:start -->
-> 1. \(x^{100}/e^x\)?  2. \(\ln x/\sqrt x\)?  3. \(e^{-x}x^5\)?
+>
+> &nbsp;
+> **1.** \(x^{100}/e^x\)?<br>
+> **2.** \(\ln x/\sqrt x\)?<br>
+> **3.** \(e^{-x}x^5\)?<br>
 > Answer: All tend to 0; the third equals \(x^5/e^x\).
 > <!-- bilingual-en:end -->
 
@@ -514,12 +517,12 @@ The reciprocal translates growth into attenuation; "who grows faster" is the sam
 
 ### 幂型未定式
 <!-- bilingual-en:start -->
-*power-type uncertainty*
+*Indeterminate powers*
 <!-- bilingual-en:end -->
 
 若
 <!-- bilingual-en:start -->
-if
+Suppose
 <!-- bilingual-en:end -->
 
 $$
@@ -528,7 +531,7 @@ $$
 
 先取对数：
 <!-- bilingual-en:start -->
-Logarithm first:
+Take logarithms first:
 <!-- bilingual-en:end -->
 
 $$
@@ -537,12 +540,12 @@ $$
 
 求出右侧极限 \(A\) 后，再由指数连续性得到 \(y\to e^A\)。
 <!-- bilingual-en:start -->
-After the right limit \(A\) is obtained, the value of \(y\to e^A\) is obtained from the exponential continuity.
+Once the limit on the right is found to be \(A\), continuity of the exponential function gives \(y\to e^A\).
 <!-- bilingual-en:end -->
 
 ### 例：\(0^0\)
 <!-- bilingual-en:start -->
-*Example:\(0^0\)*
+*Example: $0^0$*
 <!-- bilingual-en:end -->
 
 $$
@@ -551,7 +554,7 @@ $$
 
 令 \(y=x^x\)：
 <!-- bilingual-en:start -->
-Make \(y=x^x\):
+Let $y=x^x$. Then
 <!-- bilingual-en:end -->
 
 $$
@@ -579,7 +582,7 @@ $$
 
 ### 其他改写
 <!-- bilingual-en:start -->
-*Other Overrides*
+*Other reformulations*
 <!-- bilingual-en:end -->
 
 $$
@@ -594,12 +597,12 @@ $$
 
 ### 90b–90c：最重要的反例——Look before you L’Hôp
 <!-- bilingual-en:start -->
-*90b-90c: The most important counterexample —Look before you L’Hôp*
+*90b–90c: The crucial warning—look before you L’Hôp*
 <!-- bilingual-en:end -->
 
 考虑
 <!-- bilingual-en:start -->
-consider
+Consider
 <!-- bilingual-en:end -->
 
 $$
@@ -608,7 +611,7 @@ $$
 
 第一次使用后得到 $\cos x/(2x)$。此时分子趋于 $1$、分母趋于 $0$，已经**不是** $0/0$；若错误地再次求导，会得到 $0$，与真实行为矛盾。由 $\sin x\sim x$：
 <!-- bilingual-en:start -->
-$\cos x/(2x)$ after first use.  At this point, the numerator tends to $1$, the denominator tends to $0$, and has been**not**$0/0$; if the derivative is wrong again, it will get $0$, which contradicts the real behavior.  By $\sin x\sim x$:
+After one application, the ratio becomes $\cos x/(2x)$. Its numerator tends to $1$ while its denominator tends to $0$, so it is **no longer** a $0/0$ form. Differentiating again would incorrectly produce $0$, contradicting the true behaviour. Since $\sin x\sim x$,
 <!-- bilingual-en:end -->
 
 $$
@@ -628,7 +631,7 @@ $$
 
 除以 $x^4$ 或比较最高次项立刻得 $+\infty$，比机械求导四次更清楚。
 <!-- bilingual-en:start -->
-Divide by $x^4$ or compare the highest order terms to obtain $+\infty$ immediately, which is clearer than mechanical derivation of the fourth order.
+Dividing by $x^4$, or simply comparing the leading terms, gives $+\infty$ immediately. This is clearer than differentiating four times mechanically.
 <!-- bilingual-en:end -->
 
 ### 本地材料与练习
@@ -676,21 +679,23 @@ Divide by $x^4$ or compare the highest order terms to obtain $+\infty$ immediate
 > 2. $\lim_{x\to\infty}x^2e^{-x}=0$：改写为 $x^2/e^x$。
 > 3. $\lim_{x\to0}(1/x-1/\sin x)=0$：先通分为 $(\sin x-x)/(x\sin x)$，再合法使用 L’Hôpital 或三阶近似。
 > <!-- bilingual-en:start -->
-> 1. $\lim_{x\to0^+}(1+x)^{1/x}=e$: take logarithms and study $\ln(1+x)/x\to1$.
-> 2. $\lim_{x\to\infty}x^2e^{-x}=0$: rewrite it as $x^2/e^x$.
-> 3. $\lim_{x\to0}(1/x-1/\sin x)=0$: first combine the fractions to obtain $(\sin x-x)/(x\sin x)$, then use L’Hôpital's rule when valid or a third-order approximation.
+>
+> &nbsp;
+> **1.** $\lim_{x\to0^+}(1+x)^{1/x}=e$: take logarithms and study $\ln(1+x)/x\to1$.<br>
+> **2.** $\lim_{x\to\infty}x^2e^{-x}=0$: rewrite it as $x^2/e^x$.<br>
+> **3.** $\lim_{x\to0}(1/x-1/\sin x)=0$: first combine the fractions to obtain $(\sin x-x)/(x\sin x)$, then use L’Hôpital's rule when valid or a third-order approximation.<br>
 > <!-- bilingual-en:end -->
 
 ## Session 91：Improper Integrals
 
 ### 无穷区间
 <!-- bilingual-en:start -->
-*infinite interval*
+*Infinite intervals*
 <!-- bilingual-en:end -->
 
 [[反常积分#反常积分|反常积分]]定义为
 <!-- bilingual-en:start -->
-[[反常积分#反常积分|anomalous integral]] defined as
+An [[反常积分#反常积分|improper integral]] over an infinite interval is defined by
 <!-- bilingual-en:end -->
 
 $$
@@ -705,7 +710,7 @@ If the finite-endpoint limit exists, the improper integral converges; otherwise 
 
 ### \(p\)-积分
 <!-- bilingual-en:start -->
-*\(p\) - Integral*
+*$p$-integrals*
 <!-- bilingual-en:end -->
 
 $$
@@ -726,9 +731,9 @@ $$
 - \(p<1\)：幂次非负，发散；
 - \(p=1\)：\(\ln b\to\infty\)，发散。
 <!-- bilingual-en:start -->
-- \(p>1\):\(b^{1-p}\to0\), integral converges to \(1/(p-1)\);
-- \(p<1\): Non-negative power, divergent;
-- \(p=1\):\(\ln b\to\infty\), diverging.
+- If $p>1$, then $b^{1-p}\to0$, and the integral converges to $1/(p-1)$;
+- if $p<1$, the nonnegative power of $b$ makes the integral diverge;
+- if $p=1$, then $\ln b\to\infty$, so the integral diverges.
 <!-- bilingual-en:end -->
 
 因此
@@ -760,7 +765,7 @@ $$
 
 $k>0$ 是必要条件；$k=0$ 时被积函数恒为 $1$，$k<0$ 时反而指数增长。物理上 $Ae^{-kt}$ 可描述衰变率，总累计量为 $A/k$。
 <!-- bilingual-en:start -->
-$k>0$ is a necessary condition; the integral function is constant $1$ for $k=0$, but increases exponentially for $k<0$.  The physical $Ae^{-kt}$ can describe the decay rate, and the total cumulative is $A/k$.
+The condition $k>0$ is necessary: when $k=0$ the integrand is constantly $1$, and when $k<0$ it grows exponentially. In applications, $Ae^{-kt}$ can model a decaying quantity, whose total accumulation is $A/k$.
 <!-- bilingual-en:end -->
 
 课件还指出高斯积分
@@ -774,7 +779,7 @@ $$
 
 本单元暂不推导精确值，但 Session 92 会用比较证明它至少收敛。与之相对，
 <!-- bilingual-en:start -->
-This unit does not derive an exact value for the time being, but Session 92 will show that it converges at least by comparison.  In contrast,
+This unit does not yet derive the exact value, but Session 92 will at least prove convergence by comparison. In contrast,
 <!-- bilingual-en:end -->
 
 $$
@@ -784,7 +789,7 @@ $$
 
 说明“函数趋于零”仍不足以保证尾面积有限；关键是趋零速度。
 <!-- bilingual-en:start -->
-It is shown that "function approaching zero" is still not enough to guarantee the finiteness of tail area; the key is the velocity of approaching zero.
+This shows that an integrand tending to zero is not enough to make the tail area finite; the rate of decay is decisive.
 <!-- bilingual-en:end -->
 
 ![[98_attachment/MIT18.01SC/unit05-improper-integrals.png]]
@@ -804,8 +809,12 @@ It is shown that "function approaching zero" is still not enough to guarantee th
 >
 > 答：收敛为 1；发散；不够，调和型尾部反例。
 > <!-- bilingual-en:start -->
-> 1. \(\int_1^\infty1/x^2\)?  2. \(\int_1^\infty1/x\)?  3. Is zeroing of integrand sufficient?
-> Answer: Convergence to 1; Divergence; Insufficient; Conciliatory tail counterexample.
+>
+> &nbsp;
+> **1.** What is $\int_1^\infty 1/x^2\,dx$?<br>
+> **2.** What happens to $\int_1^\infty 1/x\,dx$?<br>
+> **3.** Does an integrand tending to zero guarantee convergence?<br>
+> Answer: The first converges to $1$; the second diverges; no—$1/x$ is the standard counterexample.
 > <!-- bilingual-en:end -->
 
 > [!example]- Exercise 091 完整题解：$\displaystyle\int_1^\infty\frac{dx}{(5x+2)^2}$
@@ -844,7 +853,7 @@ It is shown that "function approaching zero" is still not enough to guarantee th
 
 设 \(0\le f(x)\le g(x)\) 对充分大的 \(x\) 成立：
 <!-- bilingual-en:start -->
-Let \(0\le f(x)\le g(x)\) be true for sufficiently large \(x\):
+Suppose $0\le f(x)\le g(x)$ for all sufficiently large $x$:
 <!-- bilingual-en:end -->
 
 - 若 \(\int g\) 收敛，则 \(\int f\) 收敛；
@@ -856,12 +865,12 @@ Let \(0\le f(x)\le g(x)\) be true for sufficiently large \(x\):
 
 方向来自面积大小，不能倒用。
 <!-- bilingual-en:start -->
-Orientation is from area size and cannot be reversed.
+The direction of each implication follows from the ordering of the areas and cannot be reversed.
 <!-- bilingual-en:end -->
 
 ### 极限比较
 <!-- bilingual-en:start -->
-*limit comparison*
+*Limit comparison*
 <!-- bilingual-en:end -->
 
 若 \(f,g>0\) 且
@@ -876,7 +885,7 @@ $$
 
 则二者同敛散。原因是当 \(x\) 足够大时，\(f\) 被两个正常数倍的 \(g\) 夹住。
 <!-- bilingual-en:start -->
-the two converge.  The reason is that when \(x\) is large enough, \(f\) is sandwiched by two normal multiple \(g\).
+the two improper integrals have the same convergence behaviour. For sufficiently large $x$, the function $f$ is bounded between two positive constant multiples of $g$.
 <!-- bilingual-en:end -->
 
 例：
@@ -890,7 +899,7 @@ $$
 
 故其从 1 到无穷的积分收敛。
 <!-- bilingual-en:start -->
-So it converges from 1 to infinity.
+Therefore, its integral from $1$ to infinity converges.
 <!-- bilingual-en:end -->
 
 ### 92a–92c：三个课件比较
@@ -909,12 +918,12 @@ $$
 
 所以 $\int_0^\infty dx/\sqrt{x^2+10}$ 的尾部发散。比较时从 $1$ 或任意正数开始，避免让 $1/x$ 在 $0$ 的奇点混入“无穷远尾部”问题。
 <!-- bilingual-en:start -->
-So $\int_0^\infty dx/\sqrt{x^2+10}$'s tail diverges.  The comparison begins with $1$ or any positive number and avoids the problem of "infinite far tail" that $1/x$ has mixed into the singularity of $0$.
+Hence the tail of $\int_0^\infty dx/\sqrt{x^2+10}$ diverges. Start the comparison at $1$, or at any other positive number, so that the singularity of $1/x$ at $0$ is not confused with the behaviour at infinity.
 <!-- bilingual-en:end -->
 
 **与 $p$-积分比较：**
 <!-- bilingual-en:start -->
-**Compared with $p$-integral:**
+**Comparison with a $p$-integral:**
 <!-- bilingual-en:end -->
 
 $$
@@ -928,7 +937,7 @@ Therefore, $\int_{10}^\infty dx/\sqrt{x^3+3}$ converges even though an elementar
 
 **普通比较而非极限比较：**当 $x\ge1$，$x^2\ge x$，所以
 <!-- bilingual-en:start -->
-**Normal comparison instead of limit comparison:**When $x\ge1$, $x^2\ge x$, so
+**Direct comparison rather than limit comparison:** When $x\ge1$, $x^2\ge x$, so
 <!-- bilingual-en:end -->
 
 $$
@@ -937,7 +946,7 @@ $$
 
 有限区间 $[0,1]$ 上连续函数积分有限，而 $\int_1^\infty e^{-x}dx$ 收敛，因此利用偶性可知整个高斯积分收敛。
 <!-- bilingual-en:start -->
-The integral of continuous function over finite interval $[0,1]$ is finite, but $\int_1^\infty e^{-x}dx$ converges, so the whole Gauss integral can converge by using the even property.
+The integral of a continuous function over the finite interval $[0,1]$ is finite, while $\int_1^\infty e^{-x}dx$ converges. By evenness, the full Gaussian integral therefore converges.
 <!-- bilingual-en:end -->
 
 ### 本地材料与练习
@@ -989,16 +998,18 @@ The integral of continuous function over finite interval $[0,1]$ is finite, but 
 > 2. $\int_1^\infty x/(x^2+1)dx$ 与 $1/x$ 极限比较，发散。
 > 3. 若 $0\le f\le g$ 且 $\int f$ 收敛，不能推出 $\int g$ 收敛；较大的尾部仍可能发散。
 > <!-- bilingual-en:start -->
-> 1. Compare $\int_1^\infty dx/\sqrt{x^4+1}$ with $1/x^2$ by limit comparison; it converges.
-> 2. Compare $\int_1^\infty x/(x^2+1)dx$ with $1/x$; it diverges.
-> 3. From $0\le f\le g$ and convergence of $\int f$, one cannot infer convergence of $\int g$; the larger tail may still diverge.
+>
+> &nbsp;
+> **1.** Compare $\int_1^\infty dx/\sqrt{x^4+1}$ with $1/x^2$ by limit comparison; it converges.<br>
+> **2.** Compare $\int_1^\infty x/(x^2+1)dx$ with $1/x$; it diverges.<br>
+> **3.** From $0\le f\le g$ and convergence of $\int f$, one cannot infer convergence of $\int g$; the larger tail may still diverge.<br>
 > <!-- bilingual-en:end -->
 
 ## Session 93：Singularities
 
 ### 有限端点奇点
 <!-- bilingual-en:start -->
-*finite endpoint singularity*
+*A singularity at a finite endpoint*
 <!-- bilingual-en:end -->
 
 若 \(f\) 在 \(a\) 无界，定义
@@ -1013,7 +1024,7 @@ $$
 
 典型：
 <!-- bilingual-en:start -->
-Typical:
+A standard case is
 <!-- bilingual-en:end -->
 
 $$
@@ -1023,17 +1034,17 @@ $$
 
 注意与无穷远的 \(p>1\) 条件正好相反。
 <!-- bilingual-en:start -->
-Note the opposite of the infinity \(p>1\) condition.
+This is exactly the reverse of the condition $p>1$ for convergence at infinity.
 <!-- bilingual-en:end -->
 
 ### 区间内部奇点
 <!-- bilingual-en:start -->
-*singular point in interval*
+*A singularity inside the interval*
 <!-- bilingual-en:end -->
 
 若 \(c\in(a,b)\) 是奇点，必须拆成两个独立反常积分：
 <!-- bilingual-en:start -->
-If \(c\in(a,b)\) is a singularity, it must be split into two independent anomalous integrals:
+If \(c\in(a,b)\) is a singularity, split the expression into two independent improper integrals:
 <!-- bilingual-en:end -->
 
 $$
@@ -1043,12 +1054,12 @@ $$
 
 只有两边都收敛，总积分才收敛。不能让左右无穷“相消”；那是 Cauchy 主值，不是通常反常积分。
 <!-- bilingual-en:start -->
-Only if both sides converge, does the total integral converge.  You can't have infinitely "offset" left and right; that's the Cauchy primary value, not the usual anomalous integral.
+The original improper integral converges only if both one-sided integrals converge separately. Divergences on the two sides may not be cancelled; doing so defines a Cauchy principal value, not an ordinary improper integral.
 <!-- bilingual-en:end -->
 
 ### 93a–93d：先找所有坏点，再逐个处理
 <!-- bilingual-en:start -->
-*93a-93d: Find all the bad spots and then deal with them one by one*
+*93a–93d: Locate every singular point, then handle each one separately*
 <!-- bilingual-en:end -->
 
 课件用一个“荒谬答案”警示跨奇点套原函数：
@@ -1081,12 +1092,12 @@ $$
 
 与无穷远模型恰好相反，因为 $x^{-p}$ 在 $0$ 附近随 $p$ 增大而更严重，在无穷远则随 $p$ 增大而衰减更快。
 <!-- bilingual-en:start -->
-Contrary to the infinity model, $x^{-p}$ is more serious with the increase of $p$ near $0$, and decays faster with the increase of $p$ at infinity.
+This is the reverse of the criterion at infinity: increasing $p$ makes the singularity of $x^{-p}$ more severe near $0$, but makes it decay faster as $x\to\infty$.
 <!-- bilingual-en:end -->
 
 对
 <!-- bilingual-en:start -->
-Yes
+For
 <!-- bilingual-en:end -->
 
 $$
@@ -1095,7 +1106,7 @@ $$
 
 既有无穷远端，又有内部奇点 $x=3$。必须在 $3$ 拆分；奇点附近与 $1/u^2$ 同型而发散，因此无论远端是否收敛，总积分都发散。
 <!-- bilingual-en:start -->
-$x=3$.  It must be split in $3$; near the singularity it is of the same type as $1/u^2$ and diverges, so that the total integral diverges regardless of whether the distal end converges or not.
+there is both an infinite endpoint and an interior singularity at $x=3$. Split the integral at $3$. Near that singularity the integrand behaves like $1/u^2$ and therefore diverges, so the entire integral diverges regardless of what happens at infinity.
 <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -1116,9 +1127,11 @@ $x=3$.  It must be split in $3$; near the singularity it is of the same type as 
 > 2. $\int_{-1}^{1}dx/x$ 作为通常反常积分发散；对称 Cauchy 主值为 $0$，两者不是同一概念。
 > 3. $\int_0^2dx/\sqrt{|x-1|}$ 要在 $1$ 拆开，两侧指数 $p=1/2<1$，所以都收敛。
 > <!-- bilingual-en:start -->
-> 1. $\int_0^1x^{-3/4}dx=4$, because of $3/4<1$.
-> 2. $\int_{-1}^{1}dx/x$ is distributed as a general anomalous product; the principal value of symmetric Cauchy is $0$, which is not the same concept.
-> 3. The $\int_0^2dx/\sqrt{|x-1|}$ will be unpacked in $1$, both sides of the index $p=1/2<1$, so convergence.
+>
+> &nbsp;
+> **1.** $\int_0^1x^{-3/4}\,dx=4$ because $3/4<1$.<br>
+> **2.** $\int_{-1}^{1}dx/x$ diverges as an ordinary improper integral. Its symmetric Cauchy principal value is $0$, which is a different concept.<br>
+> **3.** Split $\int_0^2dx/\sqrt{|x-1|}$ at $x=1$. On each side the exponent is $p=1/2<1$, so both improper integrals converge.<br>
 > <!-- bilingual-en:end -->
 
 ---
@@ -1129,7 +1142,7 @@ $x=3$.  It must be split in $3$; near the singularity it is of the same type as 
 
 ### 定义
 <!-- bilingual-en:start -->
-*defined*
+*Definition*
 <!-- bilingual-en:end -->
 
 [[无穷级数与幂级数#数项级数与必要条件|无穷级数]]
@@ -1140,7 +1153,7 @@ $$
 
 不是“把无穷多个数一次加完”，而是部分和序列
 <!-- bilingual-en:start -->
-Not "add infinitely many times at a time", but part and sequence
+does not mean adding infinitely many numbers all at once. It is defined through the sequence of partial sums
 <!-- bilingual-en:end -->
 
 $$
@@ -1149,12 +1162,12 @@ $$
 
 的极限。若 \(S_N\to S\)，称级数收敛到 \(S\)。
 <!-- bilingual-en:start -->
-The limits of.  If \ (S_N\to S\), the series converges to \ (S\).
+If $S_N\to S$, the series is said to converge to $S$.
 <!-- bilingual-en:end -->
 
 ### 必要条件
 <!-- bilingual-en:start -->
-*Prerequisites*
+*A necessary condition*
 <!-- bilingual-en:end -->
 
 若级数收敛，则
@@ -1168,12 +1181,12 @@ $$
 
 所以 \(a_n\not\to0\) 必发散；但 \(a_n\to0\) 不保证收敛。
 <!-- bilingual-en:start -->
-Therefore, \(a_n\not\to0\) must diverge; however, \(a_n\to0\) does not guarantee convergence.
+Therefore, if $a_n$ does not tend to zero, the series must diverge. The converse is false: $a_n\to0$ does not guarantee convergence.
 <!-- bilingual-en:end -->
 
 ### 几何级数
 <!-- bilingual-en:start -->
-*geometric series*
+*Geometric series*
 <!-- bilingual-en:end -->
 
 $$
@@ -1192,7 +1205,7 @@ $$
 
 有限和公式来自消项：$(1-r)S_N=1-r^{N+1}$。只有 $|r|<1$ 时余项 $r^{N+1}\to0$，才能得到无穷和。$r=1$ 时部分和无界，$r=-1$ 时在 $0,1$ 间振荡，$|r|>1$ 时单项不趋零；因此不能越过适用条件套用 $1/(1-r)$。
 <!-- bilingual-en:start -->
-The finite sum formula is derived from the elimination term: $(1-r)S_N=1-r^{N+1}$.  Only when $|r|<1$, the remainder term $r^{N+1}\to0$, can get infinite sum.  It is shown that the method is partially unbounded at $r=1$, oscillating between $0,1$ at $r=-1$, and non-zero at $|r|>1$. Therefore, $1/(1-r)$ cannot be applied beyond the applicable conditions.
+The finite-sum formula comes from cancellation in $(1-r)S_N=1-r^{N+1}$. An infinite sum follows only when $|r|<1$, because only then does the remainder $r^{N+1}$ tend to zero. At $r=1$ the partial sums are unbounded; at $r=-1$ they oscillate between $0$ and $1$; and when $|r|>1$ the terms do not tend to zero. Thus $1/(1-r)$ must not be used outside $|r|<1$.
 <!-- bilingual-en:end -->
 
 ### 本地材料与练习
@@ -1243,19 +1256,21 @@ The finite sum formula is derived from the elimination term: $(1-r)S_N=1-r^{N+1}
 > 2. $\sum_{n=0}^\infty(-1/2)^n=2/3$，部分和振荡但振幅趋零。
 > 3. $a_n\to0$ 只是必要条件；$\sum1/n$ 仍发散。
 > <!-- bilingual-en:start -->
-> 1. $\sum_{n=0}^\infty(1/3)^n=3/2$.
-> 2. $\sum_{n=0}^\infty(-1/2)^n=2/3$; its partial sums oscillate with shrinking amplitude.
-> 3. The condition $a_n\to0$ is necessary but not sufficient; $\sum1/n$ still diverges.
+>
+> &nbsp;
+> **1.** $\sum_{n=0}^\infty(1/3)^n=3/2$.<br>
+> **2.** $\sum_{n=0}^\infty(-1/2)^n=2/3$; its partial sums oscillate with shrinking amplitude.<br>
+> **3.** The condition $a_n\to0$ is necessary but not sufficient; $\sum1/n$ still diverges.<br>
 > <!-- bilingual-en:end -->
 
 ## Session 95：[[无穷级数与幂级数#判别与误差控制|级数收敛判别]]
 <!-- bilingual-en:start -->
-*Session 95:[[无穷级数与幂级数#判别与误差控制|series convergence discrimination]]*
+*Session 95: [[无穷级数与幂级数#判别与误差控制|tests for series convergence]]*
 <!-- bilingual-en:end -->
 
 对非负项级数：
 <!-- bilingual-en:start -->
-Non-negative series:
+For series with nonnegative terms:
 <!-- bilingual-en:end -->
 
 - \(0\le a_n\le b_n\)，若 \(\sum b_n\) 收敛，则 \(\sum a_n\) 收敛；
@@ -1267,7 +1282,7 @@ Non-negative series:
 
 极限比较：若
 <!-- bilingual-en:start -->
-Limits Comparison: If
+Limit comparison: if
 <!-- bilingual-en:end -->
 
 $$
@@ -1276,12 +1291,12 @@ $$
 
 则二者同敛散。
 <!-- bilingual-en:start -->
-the two converge.
+the two series either both converge or both diverge.
 <!-- bilingual-en:end -->
 
 ### 积分判别
 <!-- bilingual-en:start -->
-*integral discrimination*
+*The integral test*
 <!-- bilingual-en:end -->
 
 若 \(f\) 正、连续、递减且 \(a_n=f(n)\)，则
@@ -1304,7 +1319,7 @@ $$
 
 同敛散。矩形图说明级数与面积互相夹住。
 <!-- bilingual-en:start -->
-Disperse.  The rectangle diagram illustrates that the series and area are clamped.
+have the same convergence behaviour. A rectangle comparison shows how the sum and the integral bound one another.
 <!-- bilingual-en:end -->
 
 因此
@@ -1318,12 +1333,12 @@ $$
 
 ### Riemann 和证明与比值判别
 <!-- bilingual-en:start -->
-*Riemann sum and proof-to-ratio discrimination*
+*Riemann-sum bounds and the ratio test*
 <!-- bilingual-en:end -->
 
 对正递减 $f$，单位宽矩形给出积分与级数的上下夹逼。特别地，对调和部分和 $H_N$：
 <!-- bilingual-en:start -->
-For the rectangle with positive decreasing $f$ and unit width, the upper and lower clips of integral and series are given.  In particular, the reconciling part and the $H_N$:
+For a positive decreasing function $f$, unit-width rectangles give upper and lower bounds relating its integral to the corresponding series. In particular, for the harmonic partial sum $H_N$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1337,7 +1352,7 @@ So $H_N\to\infty$, and the growth order is $\ln N$.
 
 比值判别对一般符号级数使用绝对值：
 <!-- bilingual-en:start -->
-Ratio discrimination uses absolute values for the general symbolic series:
+For a series with terms of arbitrary sign, the ratio test uses absolute values:
 <!-- bilingual-en:end -->
 
 $$
@@ -1346,7 +1361,7 @@ $$
 
 $L<1$ 时绝对收敛，$L>1$ 时发散，$L=1$ 无结论。前者因为尾部可被公比 $q<1$ 的几何级数控制；后者因为单项不能趋零。
 <!-- bilingual-en:start -->
-It converges absolutely when $L<1$, it diverges when $L>1$, and $L=1$ has no conclusion.  The former is due to the tail being controlled by the geometric series of the common ratio $q<1$, and the latter is due to the fact that a single term cannot go to zero.
+The series converges absolutely when $L<1$, diverges when $L>1$, and the test is inconclusive when $L=1$. In the first case the tail is bounded by a geometric series with ratio $q<1$; in the second, the terms cannot tend to zero.
 <!-- bilingual-en:end -->
 
 ### 本地材料与练习
@@ -1404,16 +1419,18 @@ It converges absolutely when $L<1$, it diverges when $L>1$, and $L=1$ has no con
 > 2. $\sum1/n$ 的比值极限为 $1$，无结论而实际发散。
 > 3. 比值判别尤其适合阶乘和指数幂；有理式尾部常用比较判别。
 > <!-- bilingual-en:start -->
-> 1. The ratio limit of $\sum n/2^n$ is $1/2$, and it is convergent.
-> 2. The ratio limit of $\sum1/n$ is $1$, which is inconclusive but divergent.
-> 3. Ratio discrimination is especially suitable for factorial and exponential power;
+>
+> &nbsp;
+> **1.** For $\sum n/2^n$, the ratio-test limit is $1/2$, so the series converges.<br>
+> **2.** For $\sum1/n$, the ratio-test limit is $1$, so the test is inconclusive; the harmonic series nevertheless diverges.<br>
+> **3.** The ratio test is especially well suited to factorials and exponential powers. Rational-function tails are often handled more directly by comparison tests.<br>
 > <!-- bilingual-en:end -->
 
 ## Session 96：Stacking Blocks
 
 把长度相同的砖逐层向外伸。第 \(n\) 块相对下一块最多伸出
 <!-- bilingual-en:start -->
-Pull the same length brick out layer by layer.  Block \(n\) extends up to next block
+Stack identical bricks, shifting each layer outward. Brick \(n\) can extend beyond the brick below it by at most
 <!-- bilingual-en:end -->
 
 $$
@@ -1431,17 +1448,17 @@ $$
 
 调和级数发散，所以理论上可以伸出任意远，只是增长极慢。
 <!-- bilingual-en:start -->
-The harmonic series diverges, so it can theoretically stretch any distance, but only very slowly.
+Because the harmonic series diverges, the overhang can in principle exceed any prescribed distance, although it grows extremely slowly.
 <!-- bilingual-en:end -->
 
 若砖长为 $1$，上方 $n$ 块总质量为 $n$；使它们的共同重心恰落在下一支点上，新增最大偏移为 $1/(2n)$。所以每一项来自力矩平衡，而不是经验猜测。
 <!-- bilingual-en:start -->
-If the length of the brick is $1$, the total mass of the upper $n$ block is $n$; make their common center of gravity fall on the next fulcrum, the maximum added offset is $1/(2n)$.  So each item comes from a balance of moments, not empirical guesswork.
+If each brick has length $1$, the upper $n$ bricks have total mass $n$. Placing their combined centre of mass exactly above the next support gives a maximum additional offset of $1/(2n)$. Each term therefore comes from torque balance, not guesswork.
 <!-- bilingual-en:end -->
 
 ### [[无穷级数与幂级数#数项级数与必要条件|调和级数发散证明]]：分组法
 <!-- bilingual-en:start -->
-*[[无穷级数与幂级数#数项级数与必要条件|divergence proof of harmonic series]]*
+*[[无穷级数与幂级数#数项级数与必要条件|A grouping proof that the harmonic series diverges]]*
 <!-- bilingual-en:end -->
 
 $$
@@ -1452,7 +1469,7 @@ $$
 
 第 \(k\) 组有 \(2^{k-1}\) 项，每项至少 \(1/2^k\)，所以每组和至少 \(1/2\)。组数无限，部分和无界。
 <!-- bilingual-en:start -->
-Group \(k\) has \(2^{k-1}\), each at least \(1/2^k\), so each group has at least \(1/2\).  The number of groups is infinite, partial, and unbounded.
+The $k$th group contains $2^{k-1}$ terms, each at least $1/2^k$, so every group sums to at least $1/2$. Infinitely many such groups make the partial sums unbounded.
 <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -1465,8 +1482,12 @@ Group \(k\) has \(2^{k-1}\), each at least \(1/2^k\), so each group has at least
 >
 > 答：衰减太慢；项数乘最小项；不意味，任意有限块数伸出仍有限。
 > <!-- bilingual-en:start -->
-> 1. Why does the term zero still diverge?  2. What is the lower bound for each group \(1/2\)?  3. Does divergence mean infinite protrusion with finite\(N\)?
-> Answer: The attenuation is too slow; the number of terms multiplied by the minimum term; unintentionally, any finite number of blocks is still finite.
+>
+> &nbsp;
+> **1.** Why can a series diverge even though its terms tend to zero?<br>
+> **2.** Why is each group bounded below by $1/2$?<br>
+> **3.** Does divergence mean that a finite stack has infinite overhang?<br>
+> Answer: The terms decay too slowly; multiply the number of terms in a group by its smallest term; no, every finite stack has finite overhang.
 > <!-- bilingual-en:end -->
 
 ## Session 97：Power Series
@@ -1479,26 +1500,26 @@ $$
 
 固定 \(x\) 后它是数项级数。通常存在收敛半径 \(R\)：
 <!-- bilingual-en:start -->
-After fixing \(x\), it is a series.  There is usually a radius of convergence \(R\):
+For each fixed $x$, this becomes a numerical series. A power series has a radius of convergence $R$:
 <!-- bilingual-en:end -->
 
 - \(|x-a|<R\)：绝对收敛；
 - \(|x-a|>R\)：发散；
 - 端点必须另查。
 <!-- bilingual-en:start -->
-- \(|x-a|<R\): Absolute convergence;
-- \(|x-a|>R\): diverging;
-- Endpoints must be looked up separately.
+- it converges absolutely when $|x-a|<R$;
+- it diverges when $|x-a|>R$;
+- the endpoints must be tested separately.
 <!-- bilingual-en:end -->
 
 收敛区间以中心 $a$ 对称，是因为绝对收敛由 $|x-a|$ 控制；端点不在这段论证内，可能两端都收敛、都发散或只收敛一端。
 <!-- bilingual-en:start -->
-The convergence interval is symmetrical by the central $a$ because the absolute convergence is controlled by the $|x-a|$; the endpoint is not in this argument and may converge on both sides, diverge on both sides, or converge on only one side.
+The interval of convergence is symmetric about $a$ because absolute convergence is controlled by $|x-a|$. The endpoint cases are not covered by that argument: both may converge, both may diverge, or exactly one may converge.
 <!-- bilingual-en:end -->
 
 ### 比值法求半径
 <!-- bilingual-en:start -->
-*ratio method for radius*
+*Finding the radius with the ratio test*
 <!-- bilingual-en:end -->
 
 若极限存在：
@@ -1515,7 +1536,7 @@ $$
 
 要求小于 1，故 \(R=1/L\)。
 <!-- bilingual-en:start -->
-Requires less than 1, so \ (R=1/L\).
+Convergence requires $L|x-a|<1$, so $R=1/L$.
 <!-- bilingual-en:end -->
 
 例：
@@ -1529,7 +1550,7 @@ $$
 
 比值为 \(|x|/(n+1)\to0\)，对所有 \(x\) 收敛，\(R=\infty\)。
 <!-- bilingual-en:start -->
-The ratio is \(|x|/(n+1)\to 0\), converges to all \(x\), \(R=\infty\).
+The ratio is $|x|/(n+1)\to0$, so the series converges for every $x$ and $R=\infty$.
 <!-- bilingual-en:end -->
 
 ### 本地材料与练习
@@ -1566,9 +1587,11 @@ The ratio is \(|x|/(n+1)\to 0\), converges to all \(x\), \(R=\infty\).
 > 2. $\sum n!x^n$ 有 $R=0$。
 > 3. 求出半径后仍要逐个检查 $a\pm R$。
 > <!-- bilingual-en:start -->
-> 1. $\sum x^n/n!$ has radius $R=\infty$.
-> 2. $\sum n!x^n$ has radius $R=0$.
-> 3. After finding the radius, test the endpoints $a-R$ and $a+R$ separately.
+>
+> &nbsp;
+> **1.** $\sum x^n/n!$ has radius $R=\infty$.<br>
+> **2.** $\sum n!x^n$ has radius $R=0$.<br>
+> **3.** After finding the radius, test the endpoints $a-R$ and $a+R$ separately.<br>
 > <!-- bilingual-en:end -->
 
 ## Session 98：Taylor’s Series
@@ -1580,7 +1603,7 @@ The ratio is \(|x|/(n+1)\to 0\), converges to all \(x\), \(R=\infty\).
 
 若
 <!-- bilingual-en:start -->
-if
+Suppose
 <!-- bilingual-en:end -->
 
 $$
@@ -1589,7 +1612,7 @@ $$
 
 可逐项求导，代入 \(x=a\)：
 <!-- bilingual-en:start -->
-The derivation can be done one by one, and then it can be substituted into \(x=a\):
+Differentiate term by term and then set $x=a$:
 <!-- bilingual-en:end -->
 
 $$
@@ -1600,7 +1623,7 @@ $$
 
 一般地
 <!-- bilingual-en:start -->
-generally
+In general,
 <!-- bilingual-en:end -->
 
 $$
@@ -1609,7 +1632,7 @@ $$
 
 因此 [[无穷级数与幂级数#幂级数与 Taylor 级数|Taylor series]] 是
 <!-- bilingual-en:start -->
-So [[无穷级数与幂级数#幂级数与 Taylor 级数|Taylor series]] is
+Therefore, the [[无穷级数与幂级数#幂级数与 Taylor 级数|Taylor series]] is
 <!-- bilingual-en:end -->
 
 $$
@@ -1643,7 +1666,7 @@ $$
 
 其中 \(\xi\) 位于 \(a,x\) 之间。若该区间上
 <!-- bilingual-en:start -->
-where \ (\xi\) is between \(a,x\).  If this is the range
+where $\xi$ lies between $a$ and $x$. If, throughout that interval,
 <!-- bilingual-en:end -->
 
 $$
@@ -1698,9 +1721,11 @@ $$
 > 2. 系数由导数唯一确定，但函数等于级数还需 $R_N\to0$。
 > 3. 余项估计所用导数上界必须在连接展开中心与目标点的区间上成立。
 > <!-- bilingual-en:start -->
-> 1. The cubic Maclaurin polynomial for $e^x$ is $1+x+x^2/2+x^3/6$.
-> 2. Derivatives determine the coefficients uniquely, but equality between the function and its series also requires $R_N\to0$.
-> 3. The derivative bound used in a remainder estimate must hold on the entire interval joining the expansion center to the target point.
+>
+> &nbsp;
+> **1.** The cubic Maclaurin polynomial for $e^x$ is $1+x+x^2/2+x^3/6$.<br>
+> **2.** Derivatives determine the coefficients uniquely, but equality between the function and its series also requires $R_N\to0$.<br>
+> **3.** The derivative bound used in a remainder estimate must hold on the entire interval joining the expansion center to the target point.<br>
 > <!-- bilingual-en:end -->
 
 ## Session 99：Taylor’s Series, Continued
@@ -1724,7 +1749,7 @@ $$
 
 从几何级数
 <!-- bilingual-en:start -->
-secondary geometric series
+the geometric series
 <!-- bilingual-en:end -->
 
 $$
@@ -1733,7 +1758,7 @@ $$
 
 积分得到
 <!-- bilingual-en:start -->
-integral
+Integrating term by term gives
 <!-- bilingual-en:end -->
 
 $$
@@ -1748,7 +1773,7 @@ $$
 
 Taylor 系数由所有导数决定，但还需证明余项 \(R_n(x)\to0\)。存在光滑函数所有导数在一点都为零，却不在附近恒为零；所以“可无限求导”本身不够。
 <!-- bilingual-en:start -->
-The Taylor coefficients are determined by all the derivatives, but the remainder \(R_n(x)\to 0\) is also proved.  There exists a smooth function in which all derivatives are zero at one point but not always zero nearby, so the infinitely differentiable is not enough in itself.
+The Taylor coefficients are determined by the derivatives, but equality with the function also requires proving that the remainder $R_n(x)$ tends to zero. A smooth function can have every derivative equal to zero at one point without being identically zero nearby, so infinite differentiability alone is not enough.
 <!-- bilingual-en:end -->
 
 ### 本地材料
@@ -1764,22 +1789,24 @@ The Taylor coefficients are determined by all the derivatives, but the remainder
 >
 > 答：\(x^5/5!\)；它从半径为 1 的几何级数逐项积分而来；不保证，还需证明余项趋零。
 > <!-- bilingual-en:start -->
-> 1. What is the \(x^5\) entry for \(\sin x\)?
-> 2. Why is the series of \(\ln(1+x)\) guaranteed only \(|x|<1\) first?
-> 3. Does "all order derivatives exist" automatically guarantee that the Taylor series is equal to the function?
-> Answer:\(x^5/5!\); It is derived from the geometric series with radius 1. It is not guaranteed that the remainder tends to zero.
+>
+> &nbsp;
+> **1.** What is the $x^5$ term in the series for $\sin x$?<br>
+> **2.** Why is the series for $\ln(1+x)$ initially guaranteed only for $|x|<1$?<br>
+> **3.** Does the existence of derivatives of every order automatically guarantee that a Taylor series equals its function?<br>
+> Answer: $x^5/5!$; the logarithm series comes from termwise integration of a geometric series with radius $1$; no, one must also prove that the remainder tends to zero.
 > <!-- bilingual-en:end -->
 
 ## Session 100：Operations on Power Series
 
 在共同收敛区间内部，可像多项式一样逐项运算。
 <!-- bilingual-en:start -->
-Within the common convergence interval, it can be computed item by item like a polynomial.
+Within their common interval of convergence, power series may be manipulated term by term like polynomials.
 <!-- bilingual-en:end -->
 
 ### 乘法
 <!-- bilingual-en:start -->
-*multiplication*
+*Multiplication*
 <!-- bilingual-en:end -->
 
 Cauchy 乘积：
@@ -1796,7 +1823,7 @@ $$
 
 ### 求导与积分
 <!-- bilingual-en:start -->
-*Derivation and Integral*
+*Differentiation and integration*
 <!-- bilingual-en:end -->
 
 $$
@@ -1816,7 +1843,7 @@ The radius of convergence remains the same, but the endpoint behavior may change
 
 ### 代入与误差函数
 <!-- bilingual-en:start -->
-*Substitution and Error Functions*
+*Substitution and the error function*
 <!-- bilingual-en:end -->
 
 $$
@@ -1826,7 +1853,7 @@ $$
 
 逐项积分：
 <!-- bilingual-en:start -->
-Integrate item by item:
+Integrating term by term gives
 <!-- bilingual-en:end -->
 
 $$
@@ -1929,17 +1956,19 @@ $$
 >
 > 答：半径不变但端点可能改变；不同原函数相差常数；线性项为 \(5x\)。
 > <!-- bilingual-en:start -->
-> 1. What about the radius of convergence after derivation of power series?
-> 2. Why must constants be added after integration?
-> 3. What is the linearization term for \(\arctan(5x)\)?
-> Answer: The radius is constant but the endpoints may change; the difference constants between different primitive functions; the linear term is \(5x\).
+>
+> &nbsp;
+> **1.** What happens to the radius of convergence when a power series is differentiated?<br>
+> **2.** Why must an arbitrary constant be added after termwise integration?<br>
+> **3.** What is the linear term of $\arctan(5x)$?<br>
+> Answer: The radius is unchanged, although endpoint behaviour may change; antiderivatives differ by a constant; the linear term is $5x$.
 > <!-- bilingual-en:end -->
 
 ## Session 101：Conclusion
 
 ### 微积分的闭环
 <!-- bilingual-en:start -->
-*Closed Loop of Calculus*
+*The calculus loop*
 <!-- bilingual-en:end -->
 
 1. 导数把函数局部线性化；
@@ -1948,16 +1977,18 @@ $$
 4. Taylor 级数把局部导数信息组织成全阶多项式近似；
 5. 极限决定这些无限过程是否真正收敛。
 <!-- bilingual-en:start -->
-1. Derivatives linearize the function locally;
-2. Integrate the local contributions;
-3. FTC shows that they are reciprocal;
-4. The Taylor series organizes the local derivative information into a full order polynomial approximation;
-5. Limits determine whether these infinite processes actually converge.
+
+&nbsp;
+**1.** Derivatives linearize functions locally;<br>
+**2.** Integrals accumulate local contributions;<br>
+**3.** The FTC shows that differentiation and integration are inverse operations;<br>
+**4.** Taylor series organize local derivative information into polynomial approximations of all orders;<br>
+**5.** Limits determine whether these infinite processes actually converge.<br>
 <!-- bilingual-en:end -->
 
 ### 何时选哪件工具
 <!-- bilingual-en:start -->
-*When to Choose Which Tool*
+*Choosing the right tool*
 <!-- bilingual-en:end -->
 
 - \(0/0\)、\(\infty/\infty\)：先化简，再考虑 L’Hôpital；
@@ -1967,10 +1998,10 @@ $$
 - 没有初等原函数：定积分、数值法或幂级数仍然可用。
 <!-- bilingual-en:start -->
 - \(0/0\), \(\infty/\infty\): simplify before considering L’Hôpital;
-- Infinite interval or singular integral: write limits and compare;
-- Infinite sums: study partial sums rather than single terms;
-- Function approximation: Write Taylor polynomials and give the remainder bound;
-- No elementary primitive functions: Definite integral, numerical method, or power series are still available.
+- Infinite interval or singular integral: write the relevant limits and use comparison;
+- Infinite sum: study partial sums rather than individual terms;
+- Function approximation: write a Taylor polynomial and bound the remainder;
+- No elementary antiderivative: definite integration, numerical methods, or power series may still work.
 <!-- bilingual-en:end -->
 
 ### 本地材料与练习
@@ -2068,16 +2099,18 @@ $$
 >
 > 答：导数 \(\cosh x>0\)，所以严格递增；全体实数；提出 \(\sqrt{a^2}=|a|\) 时符号会影响化简。
 > <!-- bilingual-en:start -->
-> 1. Why is $\sinh x$ invertible?
-> 2. What is the domain of $\operatorname{arsinh}x$?
-> 3. Why must the sign of $a$ be stated in the integral above?
+>
+> &nbsp;
+> **1.** Why is $\sinh x$ invertible?<br>
+> **2.** What is the domain of $\operatorname{arsinh}x$?<br>
+> **3.** Why must the sign of $a$ be stated in the integral above?<br>
 >
 > Answer: Its derivative $\cosh x>0$, so it is strictly increasing; all real numbers; the sign affects simplification because $\sqrt{a^2}=|a|$.
 > <!-- bilingual-en:end -->
 
 ## 全章易错点总表
 <!-- bilingual-en:start -->
-*Summary of Fault-prone Points in the Full Chapter*
+*Chapter-wide checklist of common mistakes*
 <!-- bilingual-en:end -->
 
 | 情形 | 错误做法 | 正确检查 |
@@ -2090,6 +2123,18 @@ $$
 | 比较判别 | 把充分方向倒用 | 画大小关系并确认基准级数 |
 | 幂级数 | 忘记端点 | 半径内部、外部、端点分开 |
 | Taylor | 只写多项式不写误差 | 给适用区间与余项界 |
+<!-- bilingual-en:start -->
+| Situation | Common mistake | Correct check |
+|---|---|---|
+| L’Hôpital’s rule | Differentiating when the form is not indeterminate | Substitute again before every application |
+| Indeterminate powers | Treating $0^0$ as automatically equal to $1$ | Take logarithms and study the resulting product |
+| Improper integrals | Substituting $\infty$ as though it were an endpoint | Begin with a finite-endpoint limit |
+| Interior singularities | Cancelling divergences from the two sides | Require the two one-sided integrals to converge separately |
+| Infinite series | Inferring convergence solely from $a_n\to0$ | Study partial sums or apply a convergence test |
+| Comparison tests | Reversing a one-way implication | Write the size ordering and verify the benchmark series |
+| Power series | Forgetting the endpoints | Treat the interior, exterior, and endpoints separately |
+| Taylor approximation | Writing a polynomial without an error estimate | State the interval of validity and bound the remainder |
+<!-- bilingual-en:end -->
 
 ## 本章总结
 <!-- bilingual-en:start -->
@@ -2103,16 +2148,18 @@ $$
 5. Taylor 系数由导数唯一决定，但等于原函数还需余项趋零；
 6. 任何“无穷运算”都必须明确极限对象、收敛条件与误差。
 <!-- bilingual-en:start -->
-1. L’Hôpital is a conditional theorem supported by Cauchy MVT;
-2. The anomalous integral and the infinite series are both defined by the limit of the finite object.
-3. Comparison and discriminationCompare unknown objects with \(p\)-integral, \(p\)-series and other benchmarks;
-4. The power series is like infinite polynomials in the convergence interval.
-5. Taylor coefficients are uniquely determined by the derivatives, but equality with the underlying function still requires the remainder to tend to zero.
-6. Any "infinity operation" must specify the limit object, convergence conditions and errors.
+
+&nbsp;
+**1.** L’Hôpital's rule is a conditional theorem grounded in the Cauchy MVT.<br>
+**2.** Improper integrals and infinite series are both defined as limits of finite objects.<br>
+**3.** Comparison tests relate an unknown object to benchmarks such as $p$-integrals and $p$-series.<br>
+**4.** Within its interval of convergence, a power series behaves like an infinite polynomial.<br>
+**5.** Taylor coefficients are uniquely determined by the derivatives, but equality with the underlying function still requires the remainder to tend to zero.<br>
+**6.** Every calculation involving infinity must specify what finite object is tending to a limit, the conditions for convergence, and the relevant error.<br>
 <!-- bilingual-en:end -->
 
 > [!tip] 一遍读懂后的最低验收
 > 能说明 L’Hôpital 的证明骨架，判断 \(p\)-积分与 \(p\)-级数，解释调和级数为何发散，求幂级数半径和端点，并用 Taylor 余项给出可验证的近似误差。
 > <!-- bilingual-en:start -->
-> It can explain the proof skeleton of L’Hôpital, judge \(p\)-integral and \(p\)-series, explain why the harmonic series diverges, calculate the radius and end point of power series, and give the verifiable approximation error by Taylor remainder.
+> At minimum, you should be able to explain the proof strategy behind L’Hôpital's rule, determine convergence of $p$-integrals and $p$-series, explain why the harmonic series diverges, find the radius and endpoint behavior of a power series, and use a Taylor remainder to produce a verifiable error bound.
 > <!-- bilingual-en:end -->

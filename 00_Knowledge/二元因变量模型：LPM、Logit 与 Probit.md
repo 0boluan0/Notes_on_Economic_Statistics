@@ -92,9 +92,11 @@ The LPM has a transparent target, makes interactions and fixed effects easy to i
 2. 由于 $Var(Y\mid X)=p(X)[1-p(X)]$，误差方差随 $X$ 改变，经典同方差标准误不成立。
 3. 每个连续变量的边际效应被强制为常数，难以表达接近 0 或 1 时趋于平缓的概率曲线。
 <!-- bilingual-en:start -->
-1. $X'\hat\beta$ can be below zero or above one. Such values remain fitted values from a linear projection but are not valid probabilities.
-2. Because $Var(Y\mid X)=p(X)[1-p(X)]$, the error variance changes with $X$, invalidating homoskedastic standard errors.
-3. The marginal effect of each continuous regressor is forced to be constant, making it difficult to represent a probability curve that flattens near zero or one.
+
+&nbsp;
+**1.** $X'\hat\beta$ can be below zero or above one. Such values remain fitted values from a linear projection but are not valid probabilities.<br>
+**2.** Because $Var(Y\mid X)=p(X)[1-p(X)]$, the error variance changes with $X$, invalidating homoskedastic standard errors.<br>
+**3.** The marginal effect of each continuous regressor is forced to be constant, making it difficult to represent a probability curve that flattens near zero or one.<br>
 <!-- bilingual-en:end -->
 
 异方差稳健标准误是 LPM 推断的最低要求；有重复单位、学校或地区层级时还要按相关层级聚类。但稳健标准误只修复标准误估计，不会把越界预测拉回 $[0,1]$，也不会修复错误的条件均值形状。

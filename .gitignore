@@ -2,3 +2,4 @@
 !/00_inbox/
 !/00_inbox/**
 reports/linking/.state.json
+tmp/

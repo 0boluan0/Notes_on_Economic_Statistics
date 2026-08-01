@@ -104,10 +104,12 @@ The ellipsoid answers where the whole vector may lie; an interval answers where 
 3. 根据设计选择单样本、配对或两样本统计量，并说明正态与等协方差假设。
 4. 报告全局检验、效应方向、同时区间和敏感性分析，而不只报 $p$ 值。
 <!-- bilingual-en:start -->
-1. Define the response vector and contrasts from the research question; do not swap outcomes after seeing significance.
-2. Check pairing or independence, missingness, multivariate outliers, sample size, and the rank of $S$.
-3. Select a one-sample, paired, or two-sample statistic from the design and state normality and equal-covariance assumptions.
-4. Report the global test, effect directions, simultaneous intervals, and sensitivity analyses rather than only a p-value.
+
+&nbsp;
+**1.** Define the response vector and contrasts from the research question; do not swap outcomes after seeing significance.<br>
+**2.** Check pairing or independence, missingness, multivariate outliers, sample size, and the rank of $S$.<br>
+**3.** Select a one-sample, paired, or two-sample statistic from the design and state normality and equal-covariance assumptions.<br>
+**4.** Report the global test, effect directions, simultaneous intervals, and sensitivity analyses rather than only a p-value.<br>
 <!-- bilingual-en:end -->
 
 ## 最小自检

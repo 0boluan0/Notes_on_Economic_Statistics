@@ -76,12 +76,14 @@ For a finite simple undirected graph $T$, the following conditions are equivalen
 5. $T$ acyclic，且在任意两个不相邻顶点间加边都会产生 cycle；
 6. 若 $|V|=n$，则 $T$ connected 且 $|E|=n-1$；等价地，$T$ acyclic 且 $|E|=n-1$。
 <!-- bilingual-en:start -->
-1. $T$ is connected and acyclic.
-2. There is exactly one simple path between every pair of vertices.
-3. $T$ is connected and every edge is a bridge.
-4. $T$ is edge-minimal among connected graphs.
-5. $T$ is acyclic and adding an edge between any nonadjacent pair creates a cycle.
-6. If $|V|=n$, then $T$ is connected with $|E|=n-1$; equivalently, it is acyclic with $|E|=n-1$.
+
+&nbsp;
+**1.** $T$ is connected and acyclic.<br>
+**2.** There is exactly one simple path between every pair of vertices.<br>
+**3.** $T$ is connected and every edge is a bridge.<br>
+**4.** $T$ is edge-minimal among connected graphs.<br>
+**5.** $T$ is acyclic and adding an edge between any nonadjacent pair creates a cycle.<br>
+**6.** If $|V|=n$, then $T$ is connected with $|E|=n-1$; equivalently, it is acyclic with $|E|=n-1$.<br>
 <!-- bilingual-en:end -->
 
 “unique path”把 connected 与 acyclic 联在一起：connected 保证至少一条 path；若有两条不同 simple paths，它们从首次分叉到再次汇合的两段组成 cycle。反过来，cycle 上任意两点沿两个方向给出两条不同 paths。

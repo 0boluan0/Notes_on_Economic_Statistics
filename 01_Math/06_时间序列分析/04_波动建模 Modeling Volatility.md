@@ -11,9 +11,9 @@
 *1. Introduction*
 <!-- bilingual-en:end -->
 
-本节概览波动建模动机与事实特征，重点在第 2–3 节的 [[ARCH|ARCH]]/[[GARCH|GARCH]] 与拓展模型。~~没什么意义.~~
+本节概览波动建模动机与事实特征，重点在第 2–3 节的 [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|ARCH]]/[[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|GARCH]] 与拓展模型。~~没什么意义.~~
 <!-- bilingual-en:start -->
-This section surveys the motivation and stylized facts behind volatility modeling. The main material is in Sections 2–3, covering [[ARCH|ARCH]], [[GARCH|GARCH]], and their extensions. ~~Not especially useful.~~
+This section surveys the motivation and stylized facts behind volatility modeling. The main material is in Sections 2–3, covering [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|ARCH]], [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|GARCH]], and their extensions. ~~Not especially useful.~~
 <!-- bilingual-en:end -->
 
 ## 1.1. 为什么要进行波动建模
@@ -23,20 +23,22 @@ This section surveys the motivation and stylized facts behind volatility modelin
 
 [[条件异方差：ARCH 与 GARCH#条件方差与波动聚集|Volatility]] 就是条件二阶矩.
 <!-- bilingual-en:start -->
-[[条件异方差：ARCH 与 GARCH#条件方差与波动聚集|Volatility]] is the conditional second moment.
+[[条件异方差：ARCH 与 GARCH#条件方差与波动聚集|Volatility]] is described by the conditional second central moment—the conditional variance. For a mean-zero innovation, this is simply its conditional second moment.
 <!-- bilingual-en:end -->
 
 1. 金融和经济时间序列往往表现出**[[条件异方差：ARCH 与 GARCH#条件方差与波动聚集|条件异方差]]**（conditional heteroskedasticity）现象，即随着时间推移序列的**波动性**(volatility)并非恒定不变，而是呈现出集中的波动期和平稳期交替出现的特征。
 2. **波动性聚集现象**（volatility clustering） :波动性聚集是指金融时间序列中高波动时期往往紧随高波动时期，而低波动时期往往紧随低波动时期。换言之，剧烈波动的冲击往往簇集出现。
 <!-- bilingual-en:start -->
-1. Financial and economic time series often exhibit **[[条件异方差：ARCH 与 GARCH#条件方差与波动聚集|conditional heteroskedasticity]]**: volatility is not constant over time, but alternates between turbulent and calm periods.
-2. **Volatility clustering** means that high-volatility periods tend to be followed by high-volatility periods, while low-volatility periods tend to be followed by low-volatility periods. Large movements therefore arrive in clusters.
+
+&nbsp;
+**1.** Financial and economic time series often exhibit **[[条件异方差：ARCH 与 GARCH#条件方差与波动聚集|conditional heteroskedasticity]]**: volatility is not constant over time, but alternates between turbulent and calm periods.<br>
+**2.** **Volatility clustering** means that high-volatility periods tend to be followed by high-volatility periods, while low-volatility periods tend to be followed by low-volatility periods. Large movements therefore arrive in clusters.<br>
 <!-- bilingual-en:end -->
 
-对于波动建模,有三种方法  [[ARCH|ARCH]] [[GARCH|GARCH]] 和SV
+对于波动建模,有三种方法  [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|ARCH]] [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|GARCH]] 和SV
 除此之外,还有RV,是对于高频数据的建模.
 <!-- bilingual-en:start -->
-Three broad approaches to volatility modeling are [[ARCH|ARCH]], [[GARCH|GARCH]], and stochastic volatility (SV). Realized volatility (RV) provides another approach designed for high-frequency data.
+Three broad approaches to volatility modeling are [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|ARCH]], [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|GARCH]], and stochastic volatility (SV). Realized volatility (RV) provides another approach designed for high-frequency data.
 <!-- bilingual-en:end -->
 
 ## 1.2. 经济学领域的特征事实
@@ -48,20 +50,22 @@ Three broad approaches to volatility modeling are [[ARCH|ARCH]], [[GARCH|GARCH]]
  2. **许多时间序列的波动性并不恒定**，会随着时间发生变化。例如，美国实际GDP增速的波动在1984年左右明显下降，在2007年出现了一个大的负向波动尖峰，随后波动性有所稳定 。这表明方差存在结构性变化;
  3. 序列受到冲击后的影响可能具有高度**持久性**（persistence），即冲击的影响在序列中持续很长时间；
  4. 有些金融序列表现出类似随机游走的行为，没有均值回归趋势，例如汇率呈长时间升值或贬值的漫步状（见随机游走模型）；
- 5. 一些序列与其他序列存在共移动现象，例如短期和长期利率常常一起变动，体现**共同趋势**和**[[Cointegration|协整]]**关系；
+ 5. 一些序列与其他序列存在共移动现象，例如短期和长期利率常常一起变动，体现**共同趋势**和**[[协整与误差修正模型#协整与共同随机趋势|协整]]**关系；
  6. 某些序列存在**结构性突变**，例如金融危机后油价出现跳变。
 <!-- bilingual-en:start -->
-1. Many macroeconomic series have pronounced trends; for example, real US GDP trends upward.
-2. **The volatility of many time series is not constant** but changes over time. The volatility of US real-GDP growth, for instance, fell markedly around 1984, showed a large negative spike in 2007, and later stabilized. This pattern suggests structural changes in variance.
-3. The effects of shocks can be highly **persistent**, remaining in the series for a long time.
-4. Some financial series, such as exchange rates, behave like random walks and show no tendency to return to a fixed mean.
-5. Some series move together. Short- and long-term interest rates, for example, often share a **common trend** and a [[Cointegration|cointegrating]] relationship.
-6. Some series undergo **structural breaks**; oil prices, for example, may jump after a financial crisis.
+
+&nbsp;
+**1.** Many macroeconomic series have pronounced trends; for example, real US GDP trends upward.<br>
+**2.** **The volatility of many time series is not constant** but changes over time. The volatility of US real-GDP growth, for instance, fell markedly around 1984, showed a large negative spike in 2007, and later stabilized. This pattern suggests structural changes in variance.<br>
+**3.** The effects of shocks can be highly **persistent**, remaining in the series for a long time.<br>
+**4.** Some financial series, such as exchange rates, behave like random walks and show no tendency to return to a fixed mean.<br>
+**5.** Some series move together. Short- and long-term interest rates, for example, often share a **common trend** and a [[协整与误差修正模型#协整与共同随机趋势|cointegrating]] relationship.<br>
+**6.** Some series undergo **structural breaks**; oil prices, for example, may jump after a financial crisis.<br>
 <!-- bilingual-en:end -->
 
-# 2. [[ARCH|ARCH]],[[GARCH|GARCH]]
+# 2. [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|ARCH]],[[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|GARCH]]
 <!-- bilingual-en:start -->
-*2. [[ARCH|ARCH]] and [[GARCH|GARCH]]*
+*2. [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|ARCH]] and [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|GARCH]]*
 <!-- bilingual-en:end -->
 
 ~~加了条件异方差不影响是白噪声~~（说明：白噪声通常指无条件零均值、方差常数且相互不相关；存在条件异方差不影响“不相关”，但对“方差常数”的理解需区分“条件/无条件”层面，常用鞅差序列刻画条件零均值）
@@ -93,9 +97,9 @@ A state variable can be introduced to represent volatility clustering:
 If $x_t$ changes over time, the conditional variance of $y$ changes with it. A large $x_t$ produces a large $\sigma^2x_t^2$ and hence high volatility; a small $x_t$ produces low volatility. This gives a simple mechanism for modeling time-varying variance.
 <!-- bilingual-en:end -->
 
-## 2.2. [[ARCH]]
+## 2.2. [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|ARCH]]
 <!-- bilingual-en:start -->
-*2.2. [[ARCH]]*
+*2.2. [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|ARCH]]*
 <!-- bilingual-en:end -->
 
 >[!note] **ARCH(1)模型定义：**
@@ -133,9 +137,9 @@ It is therefore ==a martingale-difference sequence==: conditional on information
 ==The constant $\alpha_0$ cannot simply be removed. If the variance recursion were $h_t=\alpha_1\epsilon_{t-1}^2$, taking unconditional expectations on both sides would force $\alpha_1=1$ whenever the variance is positive and finite.==
 <!-- bilingual-en:end -->
 
-## 2.3. [[GARCH]]
+## 2.3. [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|GARCH]]
 <!-- bilingual-en:start -->
-*2.3. [[GARCH]]*
+*2.3. [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|GARCH]]*
 <!-- bilingual-en:end -->
 
 ARCH的N要取得比较大.所以发明了GARCH模型,在保持对条件异方差性建模能力的同时，用更少的参数捕捉长期的波动影响。
@@ -183,9 +187,6 @@ GARCH(1,1) is the specification used most often in empirical work.
 <!-- bilingual-en:end -->
 
 参见：[[条件异方差：ARCH 与 GARCH#ARCH-LM 与标准化残差|ARCH效应检验]]
-<!-- bilingual-en:start -->
-See [[条件异方差：ARCH 与 GARCH#ARCH-LM 与标准化残差|tests for ARCH effects]].
-<!-- bilingual-en:end -->
 
 在对时间序列进行建模时，我们首先常用ARMA模型拟合均值部分，然后需要判断残差序列中是否存在ARCH/GARCH效应（即条件异方差）。
 <!-- bilingual-en:start -->
@@ -198,7 +199,7 @@ Two common residual tests begin in the same way: fit an adequate ARMA model to t
 <!-- bilingual-en:end -->
 
 >[!note] [[条件异方差：ARCH 与 GARCH#ARCH-LM 与标准化残差|McLeod-Li检验]]
-> 拟合一个“最优”[[ARMA|ARMA模型]],得到残差序列 $\hat{\varepsilon}_t$
+> 拟合一个“最优”[[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|ARMA模型]],得到残差序列 $\hat{\varepsilon}_t$
 >
 >  对残差序列平方$\hat{\varepsilon}_t^2$，计算其样本自相关.定义第 i 阶自相关：
 > $$r_i = \frac{\sum_{t=i+1}^{T} (\hat{\varepsilon}_t^2 - \bar{\sigma}^2)(\hat{\varepsilon}_{t-i}^2 - \bar{\sigma}^2)}{\sum_{t=1}^{T} (\hat{\varepsilon}_t^2 - \bar{\sigma}^2)^2}$$
@@ -208,10 +209,10 @@ Two common residual tests begin in the same way: fit an adequate ARMA model to t
 >
 > $$Q = T(T+2) \sum_{i=1}^m \frac{r_i^2}{T - i} \quad \text{服从 } \chi^2_m \text{ 分布}$$
 >
-> - 如果显著 ⇒ 拒绝 $H_0$,即意味着残差序列中存在 [[ARCH|ARCH]] 效应
+> - 如果显著 ⇒ 拒绝 $H_0$,即意味着残差序列中存在 [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|ARCH]] 效应
 > - 若不显著 ⇒ 没有显著条件异方差
 > <!-- bilingual-en:start -->
-> Fit an adequate [[ARMA|ARMA model]] and obtain residuals $\hat{\varepsilon}_t$.
+> Fit an adequate [[ARMA 模型：识别、估计、诊断与预测#AR、MA 与 ARMA|ARMA model]] and obtain residuals $\hat{\varepsilon}_t$.
 >
 > Square the residuals and calculate their sample autocorrelations. The lag-$i$ autocorrelation is
 > $$r_i = \frac{\sum_{t=i+1}^{T} (\hat{\varepsilon}_t^2 - \bar{\sigma}^2)(\hat{\varepsilon}_{t-i}^2 - \bar{\sigma}^2)}{\sum_{t=1}^{T} (\hat{\varepsilon}_t^2 - \bar{\sigma}^2)^2},$$
@@ -223,7 +224,7 @@ Two common residual tests begin in the same way: fit an adequate ARMA model to t
 >
 > which is compared with a $\chi_m^2$ distribution under the null.
 >
-> - A significant result rejects $H_0$ and indicates [[ARCH|ARCH]] effects in the residuals.
+> - A significant result rejects $H_0$ and indicates [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|ARCH]] effects in the residuals.
 > - A nonsignificant result provides no evidence of conditional heteroskedasticity at the tested lags.
 > <!-- bilingual-en:end -->
 
@@ -255,9 +256,6 @@ Two common residual tests begin in the same way: fit an adequate ARMA model to t
 <!-- bilingual-en:end -->
 
 参见：[[条件异方差：ARCH 与 GARCH#估计与创新分布|极大似然估计]]
-<!-- bilingual-en:start -->
-See [[条件异方差：ARCH 与 GARCH#估计与创新分布|maximum-likelihood estimation]].
-<!-- bilingual-en:end -->
 
 根据正态密度函数写出条件似然：
 <!-- bilingual-en:start -->
@@ -306,9 +304,9 @@ That is the principle. In practice, the likelihood is optimized numerically rath
 Compute standardized residuals $s_t=\frac{\hat{\varepsilon}_t}{\sqrt{\hat h_t}}$ from the fitted ARMA–GARCH model, where $\hat{\varepsilon}_t$ is the estimated residual and $\hat h_t$ is its fitted conditional variance. If both the mean and volatility specifications are correct, $s_t$ should be i.i.d. standard normal under the assumed Gaussian innovation distribution.
 <!-- bilingual-en:end -->
 
-对标准化方差进行白噪声检验[[ARMA 模型：识别、估计、诊断与预测#识别、估计与诊断|03_平稳时间序列模型#4.5 白噪声检验]]
+对标准化方差进行白噪声检验[[ARMA 模型：识别、估计、诊断与预测#识别、估计与诊断|03_平稳时间序列模型 > 4.5 白噪声检验]]
 <!-- bilingual-en:start -->
-Apply white-noise diagnostics to the standardized residuals; see [[ARMA 模型：识别、估计、诊断与预测#识别、估计与诊断|Section 4.5, White-noise tests]].
+Apply white-noise diagnostics to the standardized residuals.
 <!-- bilingual-en:end -->
 
 ## 2.7. 预测方差
@@ -365,9 +363,6 @@ Multi-step forecasts are obtained recursively.
 <!-- bilingual-en:end -->
 
 参见：IGARCH
-<!-- bilingual-en:start -->
-See IGARCH.
-<!-- bilingual-en:end -->
 
 金融时间序列的一个典型特征是波动性的**高度持久**（persistent）。实证中，对许多资产回报率拟合GARCH(1,1)模型时，常常发现估计得到的$\hat{\alpha}_1 + \hat{\beta}_1$非常接近1。
 <!-- bilingual-en:start -->
@@ -387,8 +382,8 @@ A typical feature of financial time series is highly **persistent** volatility. 
 > An IGARCH(1,1) model is a GARCH(1,1) model satisfying $\alpha_1+\beta_1=1$. The equality removes one free parameter from the original model.
 >
 > Its main implications are:
-> 1. A finite unconditional variance does not exist.
-> 2. Forecast variance accumulates the effects of shocks rather than reverting to a finite long-run variance.
+> **1.** A finite unconditional variance does not exist.<br>
+> **2.** Forecast variance accumulates the effects of shocks rather than reverting to a finite long-run variance.<br>
 >
 > In short, past shocks leave a permanent imprint on forecast volatility.
 > <!-- bilingual-en:end -->
@@ -399,9 +394,6 @@ A typical feature of financial time series is highly **persistent** volatility. 
 <!-- bilingual-en:end -->
 
 参见：ARCH-M
-<!-- bilingual-en:start -->
-See ARCH-M.
-<!-- bilingual-en:end -->
 
 风险越大,要求的收益越高
 <!-- bilingual-en:start -->
@@ -418,13 +410,13 @@ Greater risk is associated with a higher required expected return.
 | ---------------------------------------------------- | -------------------------- |
 | $y_t = \mu_t + \varepsilon_t$                        | 观测值等于期望值 + 噪声              |
 | $\mu_t = \beta + \delta h_t$                         | **均值受到波动** $h_t$ **的正向影响** |
-| $h_t = \alpha_0 + \sum \alpha_i \varepsilon_{t-i}^2$ | 标准 [[ARCH|ARCH]](q) 波动结构            |
+| $h_t = \alpha_0 + \sum \alpha_i \varepsilon_{t-i}^2$ | 标准 [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|ARCH]](q) 波动结构            |
 <!-- bilingual-en:start -->
 | Equation | **Meaning** |
 | --- | --- |
 | $y_t=\mu_t+\varepsilon_t$ | The observation equals its conditional mean plus noise. |
 | $\mu_t=\beta+\delta h_t$ | **Volatility $h_t$ raises the conditional mean** when $\delta>0$. |
-| $h_t=\alpha_0+\sum\alpha_i\varepsilon_{t-i}^2$ | A standard [[ARCH|ARCH]]($q$) volatility equation. |
+| $h_t=\alpha_0+\sum\alpha_i\varepsilon_{t-i}^2$ | A standard [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|ARCH]]($q$) volatility equation. |
 <!-- bilingual-en:end -->
 
 ## 3.3. 带有解释变量的波动模型
@@ -462,7 +454,7 @@ Dummy variables or other covariates that affect volatility can be added to the v
 > The leverage effect is an **asymmetric volatility response**: negative news about a company often increases its volatility more than equally sized positive news.
 > <!-- bilingual-en:end -->
 
->[!note] TARCH ,门限GARCH效应 Threshold [[GARCH|GARCH]]
+>[!note] TARCH ,门限GARCH效应 Threshold [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|GARCH]]
 > TARCH通过在方差方程中引入一个针对负残差的指示变量来实现非对称效应。以TARCH(1,1)为例，其形式可写为：
 >
 > $$h_t = \alpha_0 + \alpha_1 \epsilon_{t-1}^2 + \lambda_1d_{t-1}\epsilon_{t-1}^2 + \beta_1 h_{t-1},$$
@@ -492,15 +484,12 @@ Dummy variables or other covariates that affect volatility can be added to the v
 > <!-- bilingual-en:end -->
 
 # 4. 关联卡片
-<!-- bilingual-en:start -->
-*4. Related cards*
-<!-- bilingual-en:end -->
 
 - Volatility Modeling-hub
 - [[条件异方差：ARCH 与 GARCH#条件方差与波动聚集|Conditional Heteroskedasticity]]
 - [[条件异方差：ARCH 与 GARCH#条件方差与波动聚集|Volatility Clustering]]
-- [[ARCH]]
-- [[GARCH]]
+- [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|ARCH]]
+- [[条件异方差：ARCH 与 GARCH#ARCH 与 GARCH|GARCH]]
 - [[条件异方差：ARCH 与 GARCH#ARCH-LM 与标准化残差|ARCH LM Test]]
 - [[条件异方差：ARCH 与 GARCH#ARCH-LM 与标准化残差|McLeod-Li Test]]
 - [[条件异方差：ARCH 与 GARCH#估计与创新分布|GARCH Model Estimation Steps]]
@@ -508,17 +497,3 @@ Dummy variables or other covariates that affect volatility can be added to the v
 - ARCH-M
 - [[条件异方差：ARCH 与 GARCH#扩展与边界|TARCH]]
 - [[条件异方差：ARCH 与 GARCH#扩展与边界|EGARCH]]
-<!-- bilingual-en:start -->
-- Volatility-modeling hub
-- [[条件异方差：ARCH 与 GARCH#条件方差与波动聚集|Conditional Heteroskedasticity]]
-- [[条件异方差：ARCH 与 GARCH#条件方差与波动聚集|Volatility Clustering]]
-- [[ARCH]]
-- [[GARCH]]
-- [[条件异方差：ARCH 与 GARCH#ARCH-LM 与标准化残差|ARCH LM Test]]
-- [[条件异方差：ARCH 与 GARCH#ARCH-LM 与标准化残差|McLeod-Li Test]]
-- [[条件异方差：ARCH 与 GARCH#估计与创新分布|GARCH Model Estimation Steps]]
-- [[条件异方差：ARCH 与 GARCH#多步波动预测|IGARCH]]
-- ARCH-M
-- [[条件异方差：ARCH 与 GARCH#扩展与边界|TARCH]]
-- [[条件异方差：ARCH 与 GARCH#扩展与边界|EGARCH]]
-<!-- bilingual-en:end -->

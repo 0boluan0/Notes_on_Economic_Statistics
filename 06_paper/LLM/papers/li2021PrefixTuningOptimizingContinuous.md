@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `03 对齐与偏好优化`，第一版用于连接 Instruction Tuning / RLHF, Open Models 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[预训练、指令微调与偏好优化]], [[开放模型生态]]
+预训练、指令微调与偏好优化, [[开放模型生态]]
 
 ## 来源
 - [Zotero item](zotero://select/library/items/UE4RWHPP)

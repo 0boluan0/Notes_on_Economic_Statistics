@@ -130,10 +130,12 @@ Using `time.time()`, the general approach is:
 3. 记录结束时间
 4. 相减得到耗时
 <!-- bilingual-en:start -->
-1. Record the start time.
-2. Run the function.
-3. Record the end time.
-4. Subtract to obtain the duration.
+
+&nbsp;
+**1.** Record the start time.<br>
+**2.** Run the function.<br>
+**3.** Record the end time.<br>
+**4.** Subtract to obtain the duration.<br>
 <!-- bilingual-en:end -->
 
 这在直觉上最容易理解，因为你直接看到“这段代码花了多久”。

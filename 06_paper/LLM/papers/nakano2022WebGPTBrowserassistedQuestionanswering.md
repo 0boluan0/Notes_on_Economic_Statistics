@@ -18,7 +18,7 @@ aliases:
 这篇论文位于 `05 RAG与知识增强`，第一版用于连接 RAG, Instruction Tuning / RLHF, Pretraining 路线；此笔记暂作索引，不做精读摘要。
 
 ## 路线
-[[RAG 与长上下文]], [[预训练、指令微调与偏好优化]]
+RAG 与长上下文, 预训练、指令微调与偏好优化
 
 ## 来源
 - [Zotero item](zotero://select/library/items/BNU6LVAY)

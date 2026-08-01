@@ -188,5 +188,5 @@ The risk-neutral measure supports no-arbitrage pricing, with drift governed by f
 - The vault's Financial Institutions and Risk Management course notes support course scope, classroom examples, and notation.
 - The [Basel Framework](https://www.bis.org/basel_framework/) verifies regulatory conventions for capital, market risk, credit risk, and CVA.
 - Hull, *Risk Management and Financial Institutions*, cross-checks VaR, ES, Greeks, interest-rate risk, credit risk, and simulation methods.
-- The delta–gamma example was checked against the Taylor expansion, and the purpose boundaries between risk-neutral pricing and real-world risk forecasting were reviewed separately.
+- The delta–gamma example was checked against the Taylor expansion, and the boundary between risk-neutral pricing and real-world risk forecasting was reviewed separately.
 <!-- bilingual-en:end -->
