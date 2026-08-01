@@ -1372,7 +1372,7 @@ Each term uses both the constant-times rule and the power rule.
 - `Exercise006` is not available in the local archive, so the self-checks in this section provide the missing practice component.
 <!-- bilingual-en:end -->
 
-**知识链：**特定导数公式 + 极限线性 → 常数、常数倍、和差法则 → 多项式逐项求导。
+**知识链：** 特定导数公式 + 极限线性 → 常数、常数倍、和差法则 → 多项式逐项求导。
 <!-- bilingual-en:start -->
 **Knowledge chain:** known derivative formulas plus linearity of limits → constant, constant-multiple, and sum/difference rules → term-by-term differentiation of polynomials.
 <!-- bilingual-en:end -->
@@ -1577,7 +1577,7 @@ Only in radians does an angle's numerical value equal the corresponding arc leng
 **Question:** Why do the two trigonometric limits used in the previous section hold, and what is their geometric basis?
 <!-- bilingual-en:end -->
 
-**前置知识：**单位圆、弧度、三角形面积、夹逼定理、共轭式。
+**前置知识：** 单位圆、弧度、三角形面积、夹逼定理、共轭式。
 <!-- bilingual-en:start -->
 **Prerequisites:** the unit circle, radians, triangle area, the squeeze theorem, and conjugate expressions.
 <!-- bilingual-en:end -->
