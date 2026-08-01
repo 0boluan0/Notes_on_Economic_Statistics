@@ -56,6 +56,28 @@
             }
           },
           {
+            "id": "0fb4f10a99307ed1",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.13.4"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.13.4"
+            }
+          },
+          {
+            "id": "f43cd937f6e699e4",
+            "type": "leaf",
+            "state": {
+              "type": "learning-progress-dashboard-view",
+              "state": {},
+              "icon": "map",
+              "title": "Learning Progress Dashboard"
+            }
+          },
+          {
             "id": "7e166a09329e6ffc",
             "type": "leaf",
             "state": {
@@ -80,7 +102,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -100,7 +122,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -326,13 +350,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Math/01_calculus/01_Differentiation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 01_Differentiation"
+              "title": "Outline"
             }
           },
           {
@@ -371,7 +394,7 @@
       "graph:Open graph view": false
     }
   },
-  "active": "f18be1d48f9ff5be",
+  "active": "f43cd937f6e699e4",
   "lastOpenFiles": [
     "tmp/polish_calc01_headings.py",
     "tmp/__pycache__/polish_calculus_english.cpython-312.pyc",
