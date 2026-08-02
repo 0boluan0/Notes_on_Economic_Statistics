@@ -6,34 +6,40 @@ tags:
   - workbench
 ---
 
-# 手头工作区
+# Workbench
 
-## 当前项目
+这里只看“各项目的下一步”和风险。课程完整清单留在各自计划文件，Today 只显示已经排进当天的任务。
 
-### LN905 Essay
-- [[LN905 Essay|打开项目页]]
-- [x] 今天：从未来课程的 Moodle、往年试卷或课程说明中收集 3 个候选问题，写入项目页 ✅ 2026-07-30
-- [x] 7 月 31 日：比较候选问题的课程相关性、2,000 字可行性和文献可得性，选定 1 个并起草理由 ✅ 2026-08-01
-- [ ] 8 月 1 日：将已选题目与理由提交 Moodle；如可行先请老师确认
+## 计划外记录
 
-## 暂停
+⌘+Enter 可把刚完成但没有预先安排的事情记录为一个已完成的真实任务；它会自动出现在当天的「今日已完成」。
 
-### [[MIT18.01SC_Single-Variable-Calculus|MIT 18.01 Single Variable Calculus]]
-- [ ] 补完 Lecture 2 后半
-- [ ] 记录 Lecture 2 当前卡点和核心概念
+## 当前下一步
 
-### MIT 6.100L
+```tasks
+not done
+tag regex matches /^#student-os\/task$/
+sort by function task.lineNumber
+group by function task.file.path + '｜' + task.heading
+limit groups 1
+hide tags
+hide backlinks
+hide edit button
+hide postpone button
+```
 
-- [[00_MIT OCW 18.06SC course map|MIT 18.06 Linear Algebra]]：未开始，等微积分和 Python 桌面稳定后启动
-- 机器学习主线：未开始，等数学和 Python 基础恢复后展开
+## 风险雷达
 
-## 最近会用到的文件
-- [[LN905 Essay]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/LN905 Week one materials 2026.pdf#page=19|Choosing an Essay Question]]
-- [[07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents|LN905 materials]]
-- [[MIT18.01SC_Single-Variable-Calculus]]
-- [[01_Differentiation]]
-- [[01_Introduction|6.100L Lecture 01]]
-- [[02_Strings,Input-Output and Branching|6.100L Lecture 02]]
+<!-- student-os:risk-radar:start -->
+- D-5｜2026-08-07 11:45｜LN905 Listening into Writing：Gender
+- D-5｜2026-08-07 15:00｜LN905 Reading into Writing：Gender
+- D-7｜2026-08-09｜LN905 Essay：提交注释书目
+- D-12｜2026-08-14 11:45｜LN905 Listening into Writing：Demographics
+- D-12｜2026-08-14 15:00｜LN905 Reading into Writing：Demographics
+<!-- student-os:risk-radar:end -->
+
+## 输入箱
+
+可以在这里随便写还没想清楚的事；它不是任务，除非之后明确整理成 checkbox。
 
 ## 今日完成

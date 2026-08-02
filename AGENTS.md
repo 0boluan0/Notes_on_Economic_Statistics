@@ -42,6 +42,8 @@
 - `⌘+Enter` is an alternative interface for completing or capturing against the same canonical task; it must not create another completion state.
 - `今日已完成` includes every task actually completed that day, including useful work that was not originally scheduled.
 - For formal submissions, “content complete” and “submitted” are separate states. Only a verified Moodle/Turnitin status or submission receipt closes the hard obligation.
+- Canonical work units use the exact tag `#student-os/task`; verified hard obligations use `#student-os/deadline`. Operational queries must filter these exact tags so course-note self-checks never enter the system.
+- Long sequential plans live under `99_学习情况记录/学习计划/`. Scheduled runs may change only Tasks scheduling metadata on their canonical task lines, not rewrite the task meaning.
 
 ### Learning tracks and progress
 
@@ -50,6 +52,18 @@
 - Multi-stage school projects may appear on the Dashboard as stage progress. One-off school tasks appear as recent accomplishments after completion rather than becoming permanent Dashboard cards.
 - Show school responsibilities and self-directed growth as distinct kinds of accomplishment.
 - For video courses, one lecture is one task. It is complete when the user has watched it and judges that they understood it. Do not add mandatory notes, exercises, tests, or mastery gates unless the agreed course plan explicitly includes them.
+
+### Daily planning and automation
+
+- Today's deadline radar shows every incomplete obligation from D-0 through D-14 inclusive. Also show a later deadline once work for it has been scheduled.
+- Near-deadline work takes capacity first. When that workload is heavy, omit important-but-not-urgent fillers; when it is light, advance confirmed self-directed courses from their first incomplete unit. Make ordinary scheduling choices autonomously.
+- Auto-schedule only from 09:00 through 19:30, reserve 19:30–20:00 for packing/buffer, and never place a generated block after 19:30. Use at most 70% of genuinely free weekday time and 50% on weekends.
+- A gap of at least 60 minutes may hold a 45-minute study block; 30–59 minutes may hold light administration; shorter gaps remain empty. Preserve travel and buffers. Target a 24-hour personal buffer for small assignments and 48 hours for major assignments.
+- Generated blocks live only in the writable Apple calendar `Study Plan`; all other calendars, including `LSE`, are read-only inputs. Sync all future generated blocks, not only today's.
+- If `LSE` is missing or unreadable, do not guess around an empty timetable: schedule only independently verified fixed windows and keep movable work unscheduled until the timetable source returns.
+- Morning generation is an idempotent heartbeat in the same local Codex task, never a worktree or a new recurring task. The first awake run reconciles the newest marked but unclosed daily note, then creates or updates Today. If the computer or app is off, the next heartbeat catches up; do not fabricate empty missed-day notes.
+- There is no fixed evening shutdown trigger. A manual shutdown request may reconcile early; otherwise the next morning does it. Preserve all user writing in Today.
+- Daily Student Hub/Moodle checks compare the visible timetable/deadlines when the logged-in source is reachable; the first Sunday run performs the fuller assignments/files/announcements audit. Never claim a source was checked when unavailable or expose a private calendar token.
 
 ### Maintenance contract
 

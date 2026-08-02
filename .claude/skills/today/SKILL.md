@@ -1,59 +1,75 @@
 ---
 name: today
-description: Generate today's journal note when the user says /today or asks for a daily log. Use template `00_inbox/日记模版.md` (fallback `00_inbox/日记模板.md`), create the note in `99_学习情况记录`, add a bilingual (Chinese + English) major-news section for the latest 24 hours (world, finance, technology), list unfinished tasks from existing notes in `99_学习情况记录`, and list today's tasks extracted from `Overview & Study Record.md` as markdown checkboxes.
+description: Generate or update the Student OS daily home in the Academic Obsidian vault. Use when the user says /today, asks for today's plan, or the Student OS heartbeat wakes. Reconcile the most recent unclosed daily note, audit deadlines and calendar, schedule canonical tasks without duplicating them, update the fixed-date Today views, and preserve all user-written text.
 ---
 
 # Today
 
-## Overview
+Build one calm, omission-resistant daily home. Make routine scheduling decisions yourself; ask only when a choice would materially change the result.
 
-Create one completed daily note with three ordered modules and save it to the study-log folder.
+## Canonical system
 
-Use this workflow every time the user asks for `/today`.
+- Overall: `99_学习情况记录/Overview & Study Record.md`; confirmed learning map, never a copied daily task list.
+- Plans: `99_学习情况记录/学习计划/`; long sequential courses and their canonical checkboxes.
+- Workbench: `99_学习情况记录/workbench.md`; standalone project tasks plus a dynamic next-action view.
+- Deadlines: `99_学习情况记录/deadlines.md`; hard obligations tagged `#student-os/deadline`.
+- Today: `99_学习情况记录/YYYY-MM-DD——ddd.md`; scheduled-task view, read-only deadline radar, completed-task view, and free writing.
+- Canonical work units are the only checkboxes tagged `#student-os/task`. Never copy one into Today or Workbench.
 
-## Workflow
+Use `00_inbox/日记模版.md` (fallback `00_inbox/日记模板.md`). Re-running for the same date updates the existing note and must not create duplicate sections, tasks, lessons, or calendar events.
 
-1. Resolve required paths.
-   - Prefer template `00_inbox/日记模版.md`.
-   - If missing, fallback to `00_inbox/日记模板.md`.
-   - Use output folder `99_学习情况记录`.
-   - Use overview file `Overview & Study Record.md`.
+## First-awake reconciliation
 
-2. Determine today's target filename.
-   - Format: `YYYY-MM-DD——<DayAbbrev>.md` (for example `2026-02-02——Mon.md`).
-   - If the file already exists, update it in place instead of creating a duplicate.
+1. Find the newest earlier daily note.
+2. Ignore legacy notes that have no `student-os:shutdown` marker.
+3. If the newest marked note is still `open`, reconcile its unfinished scheduled tasks before planning today:
+   - preserve every user-written line;
+   - do not invent a reflection or claim the user completed anything;
+   - move only still-open scheduling metadata and matching generated `Study Plan` events;
+   - mark the note `student-os:shutdown: reconciled YYYY-MM-DD` only after the writes succeed.
+4. Do not create empty notes for missed days.
 
-3. Build module 1 (news, bilingual).
-   - Search the web for major news in the latest 24 hours in three categories:
-     - World
-     - Finance
-     - Technology
-   - Keep 3 items per category.
-   - For each item, write one Chinese line and one English line.
-   - Include publish time and source.
-   - Follow `references/news-format.md`.
+A manual shutdown request may run the same reconciliation early. There is no fixed evening time and no “end today” button requirement.
 
-4. Build module 2 and module 3 (tasks) with the helper script.
-   - Run:
-     - `python3 .codex/skills/today/scripts/extract_today_tasks.py --date YYYY-MM-DD`
-   - Use the generated markdown block directly.
-   - If the script reports missing data, insert explicit placeholders instead of guessing.
+## Sources and deadline audit
 
-5. Compose the final note.
-   - Start from the resolved diary template content.
-   - Place module order exactly:
-     - Module 1: 24h News (bilingual)
-     - Module 2: Unfinished Tasks (from old diaries)
-     - Module 3: Today's Tasks (from overview plan)
-   - Use markdown checkboxes (`- [ ]`) for all task bullets.
+1. Read Overall, Workbench, Deadlines, all `student_os: learning-plan` files, and today's relevant course/project source files.
+2. Read Apple Calendar for fixed commitments. Treat every calendar except exact name `Study Plan` as read-only. If `LSE` exists, use it as the read-only timetable.
+   - If `LSE` is missing or the timetable cannot be read, do not place movable study blocks. Keep the next actions visible in Workbench, sync only independently verified fixed windows, and surface the source-check failure.
+3. Show every incomplete hard deadline from D-0 through D-14, inclusive, as plain non-checkbox lines in Today's managed deadline block. Also show a deadline beyond D-14 when work for it is already scheduled.
+4. Update Workbench's managed risk block from the same facts.
+5. Do a bounded daily Student Hub/Moodle comparison when the logged-in source is reachable. On the first Sunday run, inspect assignments, files and announcements in full. Never silently treat an unreachable source as checked, never expose or store an ICS token, and never close a submission without Moodle/Turnitin status or a receipt.
+6. Normal runs are quiet. Escalate only for a new D-14 deadline, an earlier deadline change, impossible capacity, repeated source-check failure, or an unresolved near-deadline obligation.
 
-6. Save and verify.
-   - Confirm file is under `99_学习情况记录`.
-   - Confirm all three modules exist.
-   - Confirm module 1 is bilingual and within latest 24 hours.
+## Scheduling
 
-## Notes
+- Schedule only canonical `#student-os/task` lines by adding or changing their Tasks `⏳ YYYY-MM-DD` metadata. Scheduled automation may edit only that metadata in plan files and Workbench task sources; do not rewrite their content.
+- Hard deadline rows remain separate verified obligations. “Content done” and “submitted” are distinct.
+- All generated calendar blocks go to `Study Plan`, for all future dates, never another calendar. Put a stable marker derived from source path plus task description in the event notes; update/delete only events carrying that marker.
+- Plan inside 09:00–19:30. Reserve 19:30–20:00 for packing/buffer and assume departure at 20:00. Never auto-schedule after 19:30.
+- Use at most 70% of genuinely free weekday time and 50% on weekends.
+- Preserve travel and buffers. A free gap of at least 60 minutes may hold a 45-minute study block; 30–59 minutes may hold light administration; under 30 minutes stays empty.
+- A small assignment should have a 24-hour personal buffer and a major assignment 48 hours.
+- D-14 work always remains visible. When near-deadline workload is heavy, suppress important-but-not-urgent fillers. When it is light, steadily advance confirmed self-directed courses by selecting their first incomplete lecture.
+- For video courses, one lecture is one task. It is complete only when the user watched it and personally judges it understood. Do not invent required notes, exercises, tests, or mastery gates.
+- Do not generate LN905 Listening into Writing or Reading into Writing drills until a detailed plan has been agreed and recorded in Overall or a linked plan.
 
-- Do not edit `.obsidian/` files.
-- Do not fabricate news. If data is insufficient, state that clearly in the note.
-- Keep wording concise and execution-focused.
+## Compose Today
+
+- Filename: `YYYY-MM-DD——ddd.md`.
+- Start from the template if missing.
+- Keep these sections once: `今日安排`, `临近 Deadline`, `今日已完成`, `随手写`, `收尾`.
+- Do not replace the Tasks query blocks. Their query date is derived from the daily filename, so historical pages stay fixed.
+- Replace only content between `student-os:deadline-radar:start/end`.
+- Preserve all text in `随手写`, `收尾`, and outside managed blocks.
+- Set `student-os:today-generated: YYYY-MM-DD` only after source tasks, Today, risk radar and calendar sync all succeed.
+
+## Verify
+
+- Each actionable item has one canonical checkbox.
+- Today and Workbench queries filter exact Student OS tags and do not include course-note self-checks.
+- Scheduled tasks and generated `Study Plan` events agree.
+- D-0 through D-14 obligations are all visible.
+- No generated block extends past 19:30.
+- No user-written text changed.
+- A second run makes no additional changes.

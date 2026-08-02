@@ -13,7 +13,7 @@
             "state": {
               "type": "learning-progress-dashboard-view",
               "state": {},
-              "icon": "map",
+              "icon": "sprout",
               "title": "Learning Progress Dashboard"
             }
           },
@@ -82,8 +82,7 @@
               "title": "Week1-Academic-Writing-moodle"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -294,19 +293,25 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "bf65994d7e208a51",
+  "active": "70c0343f5ae25f5e",
   "lastOpenFiles": [
+    "99_学习情况记录/学习计划/_Student OS 闭环测试.md",
+    "99_学习情况记录/Overview & Study Record——旧版计划归档 2026-06-17.md",
+    "99_学习情况记录/学习计划/LN905 timed submissions.md",
+    "05_tools/Obsidian/learning-progress-dashboard/styles.css",
+    "05_tools/Obsidian/learning-progress-dashboard/self-check.js",
+    "05_tools/Obsidian/learning-progress-dashboard/manifest.json",
+    "05_tools/Obsidian/learning-progress-dashboard/main.js",
+    "05_tools/Obsidian/learning-progress-dashboard/deploy.sh",
+    "05_tools/Obsidian/learning-progress-dashboard",
+    "99_学习情况记录/2026-08-02——Sun.md",
+    "99_学习情况记录/学习计划/MIT 6.100L Introduction to CS and Programming Using Python.md",
+    "99_学习情况记录/学习计划/MIT 18.06 Linear Algebra.md",
+    "99_学习情况记录/学习计划/MIT 18.01 Single Variable Calculus.md",
+    "99_学习情况记录/学习计划",
     "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening_into_Writing_AI_Feedback_Workbook.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Topic-Reading/3. Gender Reading.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Topic-Reading/3. Ellemers (2018) - Gender Stereotypes.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Topic-Listening/Listening Gender.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Topic-Listening/Gender - Listening Vocabulary.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Topic-Input-and-Discussion/Topic Input Gender.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Topic-Input-and-Discussion/1. Gender Topic Input.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Paper-B-Reading-into-Writing/Reading into Writing - Gender Essay Question and Submission.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Paper-A-Listening-into-Writing/Listening into Writing Submission - Gender.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Discussion-and-Debate/University Funding Scenario.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Discussion-and-Debate/Discussion Week 2 PPT.pdf",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Week1-Academic-Writing-moodle.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
@@ -337,12 +342,6 @@
     "tmp/pdfs/reading-into-writing/criteria-contact.png",
     "tmp/pdfs/reading-into-writing/workbook-26.png",
     "99_学习情况记录/2026-07-31——Fri.md",
-    "00_inbox/Evaluation.md",
-    "00_Knowledge/异常值、杠杆与影响诊断.md",
-    "00_Knowledge/多重共线性与设计矩阵诊断.md",
-    "00_Knowledge/回归模型设定与函数形式.md",
-    "00_Knowledge/回归模型比较与选择.md",
-    "00_Knowledge/回归系数推断与线性假设检验.md",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L Course Atlas.canvas",
     "03_Computer_Science/02_CS61A/CS61A Course Atlas.canvas",

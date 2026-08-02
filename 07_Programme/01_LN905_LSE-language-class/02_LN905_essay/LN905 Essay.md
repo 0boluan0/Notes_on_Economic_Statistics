@@ -2,21 +2,37 @@
 aliases:
   - LN905 writing assignment
   - LN905 写作作业
+student_os: learning-plan
+title: LN905 Essay
+track: school
+status: active
+kind: multi-stage-project
 ---
 
 # LN905 Essay
 
 > [!summary] 当前项目
-> 在 2026-08-26 前完成一篇与未来学位课程相关的 2,000 字论文（具体截止时间待核验）。当前阶段是确定题目并解释选题理由；最近的硬截止是 2026-08-02。
-> 2026-08-01 更新：题目已基本敲定；下一步是提交 Moodle，并开始准备 annotated bibliography。
+> 在 2026-08-26 前完成一篇与未来学位课程相关的 2,000 字论文（具体截止时间待核验）。题目与理由已于 2026-08-01 提交 Moodle，并核验为 Submitted for grading；当前阶段是 2026-08-09 前完成 annotated bibliography。
 >
 > <!-- bilingual-en:start -->
-> **Update, 1 August 2026:** The question is provisionally finalised. The next steps are to submit it on Moodle and begin the annotated bibliography.
+> **Update, 2 August 2026:** The question and rationale were submitted to Moodle on 1 August and verified as “Submitted for grading”. The current stage is the annotated bibliography due on 9 August.
 > <!-- bilingual-en:end -->
 
-## 当前行动
+## 执行清单
 
-![[workbench#LN905 Essay]]
+- [x] LN905 Essay｜收集 3 个候选问题 #student-os/task ✅ 2026-07-30
+- [x] LN905 Essay｜比较候选问题并选定 1 个、起草理由 #student-os/task ✅ 2026-08-01
+- [x] LN905 Essay｜在 Moodle 提交题目与选题理由 #student-os/task ✅ 2026-08-01
+- [ ] LN905 Essay｜检索候选学术文献并选出至少 6 篇与论证直接相关的来源 #student-os/task
+- [ ] LN905 Essay｜精读来源 1–3，提取核心 claim、证据、用途与局限 #student-os/task
+- [ ] LN905 Essay｜精读来源 4–6，提取核心 claim、证据、用途与局限 #student-os/task
+- [ ] LN905 Essay｜写完并统一格式化 annotated bibliography #student-os/task
+- [ ] LN905 Essay｜上传 annotated bibliography 并检查 Moodle submission status #student-os/task
+- [ ] LN905 Essay｜把文献关系整理成支持 thesis 的 argument map #student-os/task
+- [ ] LN905 Essay｜搭出 detailed essay plan：thesis、段落 claims 与顺序 #student-os/task
+- [ ] LN905 Essay｜为每段补上证据、引用与可能的反方观点 #student-os/task
+- [ ] LN905 Essay｜按作业要求修订并完成 detailed essay plan 内容 #student-os/task
+- [ ] LN905 Essay｜上传 detailed essay plan 并检查 Moodle submission status #student-os/task
 
 ## 里程碑
 
@@ -24,7 +40,7 @@ aliases:
 
 ## 选题工作区
 
-- 状态：基本敲定，尚未提交 Moodle。
+- 状态：已于 2026-08-01 提交 Moodle，并核验为 Submitted for grading。
 - 中文工作译名：复杂机器学习模型相对逻辑回归的预测提升，在多大程度上足以抵消消费者信用评分中可解释性的下降？
 
 <!-- bilingual-en:start -->
