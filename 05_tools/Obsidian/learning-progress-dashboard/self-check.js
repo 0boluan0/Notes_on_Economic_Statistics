@@ -19,6 +19,7 @@ Module._load = function load(request, parent, isMain) {
 const {
   isOngoingKind,
   locateTaskLine,
+  materializeTodayTemplate,
   parseCompletedRecords,
   parseOverviewTracks,
   parsePlanText,
@@ -80,5 +81,9 @@ const raw = "- [ ] Lecture 2 #student-os/task";
 assert.deepEqual(locateTaskLine(["heading", raw], 1, raw), { index: 1, reason: "exact" });
 assert.deepEqual(locateTaskLine(["moved", "text", raw], 1, raw), { index: 2, reason: "moved" });
 assert.equal(locateTaskLine([raw, raw], 8, raw).reason, "ambiguous");
+assert.equal(
+  materializeTodayTemplate("---\ndate: pending\n---\n", new Date(2026, 7, 3)),
+  "---\ndate: 2026-08-03\n---\n"
+);
 
 console.log("learning-progress-dashboard self-check: ok");

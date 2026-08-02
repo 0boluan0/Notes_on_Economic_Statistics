@@ -44,7 +44,7 @@ kind: multi-stage-project
 - 中文工作译名：复杂机器学习模型相对逻辑回归的预测提升，在多大程度上足以抵消消费者信用评分中可解释性的下降？
 
 <!-- bilingual-en:start -->
-- **Status:** Provisionally finalised; not yet submitted on Moodle.
+- **Status:** Submitted on Moodle on 1 August 2026 and verified as “Submitted for grading”.
 - **Final question:** To what extent do the predictive gains of complex machine-learning models over logistic regression justify reduced interpretability in consumer credit scoring?
 <!-- bilingual-en:end -->
 

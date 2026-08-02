@@ -19,8 +19,8 @@ tags:
 ```tasks
 not done
 tag regex matches /^#student-os\/task$/
-sort by function task.lineNumber
-group by function task.file.path + '｜' + task.heading
+sort by path
+group by path
 limit groups 1
 hide tags
 hide backlinks
@@ -36,10 +36,9 @@ hide postpone button
 - D-7｜2026-08-09｜LN905 Essay：提交注释书目
 - D-12｜2026-08-14 11:45｜LN905 Listening into Writing：Demographics
 - D-12｜2026-08-14 15:00｜LN905 Reading into Writing：Demographics
+- D-14｜2026-08-16｜LN905 Essay：提交 detailed essay plan
 <!-- student-os:risk-radar:end -->
 
 ## 输入箱
 
 可以在这里随便写还没想清楚的事；它不是任务，除非之后明确整理成 checkbox。
-
-## 今日完成

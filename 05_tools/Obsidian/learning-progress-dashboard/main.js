@@ -28,6 +28,10 @@ function todayNotePath(date = new Date()) {
   return `${DAILY_FOLDER}/${formatDate(date)}——${weekdays[date.getDay()]}.md`;
 }
 
+function materializeTodayTemplate(template, date = new Date()) {
+  return String(template).replace(/^date:\s*pending\s*$/m, `date: ${formatDate(date)}`);
+}
+
 function headingLevel(line) {
   const match = line.match(/^(#{1,6})\s+/);
   return match ? match[1].length : 0;
@@ -372,7 +376,8 @@ class WorkflowStore {
     if (existing) return existing;
     const template = (await this.readPath(DAILY_TEMPLATE)) || "# 今日\n";
     await this.ensureFolder(path);
-    return this.app.vault.create(path, template.endsWith("\n") ? template : `${template}\n`);
+    const content = materializeTodayTemplate(template);
+    return this.app.vault.create(path, content.endsWith("\n") ? content : `${content}\n`);
   }
 
   resolveOverviewLink(target) {
@@ -860,6 +865,7 @@ module.exports = LearningProgressDashboardPlugin;
 module.exports.__test = {
   isOngoingKind,
   locateTaskLine,
+  materializeTodayTemplate,
   parseCompletedRecords,
   parseFrontmatter,
   parseOverviewTracks,

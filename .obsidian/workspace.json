@@ -81,8 +81,33 @@
               "icon": "lucide-file",
               "title": "Week1-Academic-Writing-moodle"
             }
+          },
+          {
+            "id": "d16798fb57800a95",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "99_学习情况记录/2026-08-02——Sun.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-08-02——Sun"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -204,7 +229,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Week1-Academic-Writing-moodle.md",
+                "file": "99_学习情况记录/2026-08-02——Sun.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -293,7 +318,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "70c0343f5ae25f5e",
+  "active": "d16798fb57800a95",
   "lastOpenFiles": [
     "99_学习情况记录/学习计划/_Student OS 闭环测试.md",
     "99_学习情况记录/Overview & Study Record——旧版计划归档 2026-06-17.md",

@@ -59,7 +59,7 @@ A manual shutdown request may run the same reconciliation early. There is no fix
 - Filename: `YYYY-MM-DD——ddd.md`.
 - Start from the template if missing.
 - Keep these sections once: `今日安排`, `临近 Deadline`, `今日已完成`, `随手写`, `收尾`.
-- Do not replace the Tasks query blocks. Their query date is derived from the daily filename, so historical pages stay fixed.
+- Set the note's `date` property to the actual `YYYY-MM-DD` date. Do not replace the native Tasks query blocks; they read that fixed property so historical pages stay fixed without enabling Tasks JavaScript queries.
 - Replace only content between `student-os:deadline-radar:start/end`.
 - Preserve all text in `随手写`, `收尾`, and outside managed blocks.
 - Set `student-os:today-generated: YYYY-MM-DD` only after source tasks, Today, risk radar and calendar sync all succeed.
