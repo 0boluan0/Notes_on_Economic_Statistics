@@ -35,4 +35,4 @@ tags:
 - 2026-08-02｜Moodle 全量核对完成：Assignments、课程文件目录与 Announcements 已检查；Announcements 当前为空。
 - 2026-08-02｜Essay Question & Rationale 已核验为 Submitted for grading，提交时间为 2026-08-01 20:34。
 - 2026-08-02｜Gender Listening 已核验开放窗口 10:00–11:45；Gender Reading 已核验开放窗口 12:45–15:00。
-- Student Hub 的私有日历入口已定位，但 `LSE` 只读订阅尚未写入 Calendar；在此之前系统不会猜测 timetable 空档。
+- Student Hub 的“全部日历”已作为 iCloud 下的只读订阅 `LSE` 接入 Apple Calendar；Apple Calendar 每小时自动刷新，系统只读取它并继续仅向 `Study Plan` 写入规划事件。

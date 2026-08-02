@@ -72,6 +72,9 @@ Do not hand-edit `.obsidian/`.
 - Morning generation is an idempotent heartbeat in the same local Codex task, never a worktree or a new recurring task. The first awake run reconciles the newest marked but unclosed daily note, then creates or updates Today. If the computer or app is off, the next heartbeat catches up; do not fabricate empty missed-day notes.
 - There is no fixed evening shutdown trigger. A manual shutdown request may reconcile early; otherwise the next morning does it. Preserve all user writing in Today.
 - Daily Student Hub/Moodle checks compare the visible timetable/deadlines when the logged-in source is reachable; the first Sunday run performs the fuller assignments/files/announcements audit. Never claim a source was checked when unavailable or expose a private calendar token.
+- The active LN905 capability sequence lives in `99_学习情况记录/学习计划/LN905 Listening and Reading Practice.md`. Listening and Reading remain separate canonical tasks with fixed session paths; Today displays them only through the normal task query.
+- Every LN905 Listening session uses a previously unused official TED YouTube talk, preferably 15–20 minutes, with a verified TED transcript. Every Reading session uses three previously unused peer-reviewed papers that form a real debate; it preserves a LaTeX source, compiles and visually checks a printable PDF containing only the question and three adapted extracts, and keeps the guided response in a separate Markdown file. Never reuse a YouTube video ID, DOI, or canonical paper URL already present in the vault's lesson/source ledger.
+- LN905 content preparation is distinct from scheduling. For an already-planned canonical session, a Today run may create its fixed artifacts and append verified source identifiers, but it must not add or rewrite the task checkbox. Scheduling automation remains limited to scheduling metadata.
 
 ### Maintenance contract
 

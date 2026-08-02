@@ -52,7 +52,19 @@ A manual shutdown request may run the same reconciliation early. There is no fix
 - A small assignment should have a 24-hour personal buffer and a major assignment 48 hours.
 - D-14 work always remains visible. When near-deadline workload is heavy, suppress important-but-not-urgent fillers. When it is light, steadily advance confirmed self-directed courses by selecting their first incomplete lecture.
 - For video courses, one lecture is one task. It is complete only when the user watched it and personally judges it understood. Do not invent required notes, exercises, tests, or mastery gates.
-- Do not generate LN905 Listening into Writing or Reading into Writing drills until a detailed plan has been agreed and recorded in Overall or a linked plan.
+- Generate LN905 materials only for canonical sessions already defined in `99_学习情况记录/学习计划/LN905 Listening and Reading Practice.md`; never invent an extra daily checkbox or change a session's meaning.
+
+## LN905 planned material preparation
+
+Run this content-preparation pass before composing Today whenever an LN905 practice task is scheduled for today.
+
+1. Read the linked session path, focus, weekly topic, source ledger, latest completed output and any teacher feedback. Sync Reading `NOTES.md`'s `current_week_topic` to the plan's current weekly topic. Use evidence to tune the scaffold without changing the task's meaning. The task line and its link must already exist; material generation never creates a second task.
+2. If the linked artifact is already marked ready and its companion files pass basic checks, reuse the artifact itself. Do not regenerate it and do not reuse any of its sources in another session.
+3. For Listening, select one previously unused video from the verified official TED YouTube channel, preferably 15–20 minutes, and verify the matching TED transcript. Create the HTML at the task's fixed path with one-pass rules, timer, autosave, word count, a structure-aware notes area, one agreed training focus, and post-completion transcript access. Do not reveal a model structure before the first response.
+4. For Reading, select three previously unused peer-reviewed papers that genuinely answer different parts of one debatable question. Create accurate exam-style adapted extracts rather than copying long passages. At the task's fixed basename, preserve the `.tex`, compile the printable `.pdf`, and create the response `.md`. The PDF contains only the question, three extracts and their source attributions; the Markdown contains the source matrix, reasoning support, response area and marking-criteria check. Render every PDF page and inspect it before marking the session ready.
+5. Treat every existing lesson, source pack, `RESOURCES.md` entry and ledger identifier as used. Compare YouTube video IDs and paper DOI/canonical URLs. Append new identifiers to the plan ledger only after all session files verify successfully.
+6. This pass may create the fixed session artifacts and append verified source identifiers. It may not add, duplicate, complete or rewrite a canonical checkbox; the scheduling pass remains limited to Tasks scheduling metadata.
+7. If source verification, compilation or rendering fails, keep the task canonical but report the broken preparation explicitly and do not set `student-os:today-generated`.
 
 ## Compose Today
 

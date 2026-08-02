@@ -1,0 +1,128 @@
+<!doctype html>
+<!-- student-os:session-ready: true -->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LN905 Listening · Gender structure</title>
+  <style>
+    :root { color-scheme:light dark; --accent:#59359a; --muted:#69707a; --card:#f5f6f8; }
+    * { box-sizing:border-box; }
+    body { max-width:900px; margin:auto; padding:32px 20px 64px; font:16px/1.6 system-ui,sans-serif; }
+    header,section { margin-bottom:28px; }
+    .meta,.hint { color:var(--muted); }
+    .card { padding:18px; border:1px solid #aeb4bb; border-radius:12px; background:var(--card); }
+    a.button,button { padding:9px 13px; border:0; border-radius:8px; background:var(--accent); color:#fff; text-decoration:none; cursor:pointer; }
+    button.secondary { background:#555d68; }
+    textarea { width:100%; min-height:210px; padding:12px; border:1px solid #9da3aa; border-radius:8px; font:15px/1.5 ui-monospace,monospace; }
+    #summary { min-height:360px; }
+    .timer { margin:12px 0; font:700 34px/1 ui-monospace,monospace; }
+    .controls { display:flex; flex-wrap:wrap; gap:8px; }
+    label { display:block; margin:7px 0; }
+    @media (prefers-color-scheme:dark) { :root { --card:#20242a; --muted:#abb2bd; } }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="meta">2026-08-03 · Gender · Session G-L1 · 约 60 分钟</p>
+    <h1>从隐含结构到 critical summary</h1>
+    <p><strong>唯一训练重点：</strong>当讲者没有报出“一、二、三”时，仍能判断每一段在整场论证中承担什么功能。</p>
+    <p><a class="button" href="https://www.youtube.com/watch?v=7n9IOH0NvyY" target="_blank" rel="noreferrer">打开 TED 官方 YouTube（15:58）</a></p>
+  </header>
+
+  <section class="card">
+    <h2>计时器</h2>
+    <div id="timer" class="timer">15:58</div>
+    <div class="controls">
+      <button data-seconds="958">听力 15:58</button>
+      <button data-seconds="300">结构恢复 5:00</button>
+      <button data-seconds="2400">写作 40:00</button>
+      <button id="pause" class="secondary">暂停／继续</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>1｜第一次听：只记录论证动作</h2>
+    <p>关闭字幕，不暂停、不回放。不要逐句抄。每当你感觉讲者“换了一步”，另起一行；不知道这一段有什么作用就写 <code>?</code>。</p>
+    <textarea id="notes" aria-label="听力笔记" placeholder="Overall claim（≤15 words）:
+
+Move 1
+Function（problem / claim / reason / example / qualification / solution / conclusion）:
+Key content:
+Support used:
+Connection to previous move:
+
+Move 2:
+
+Move 3:
+
+Move 4:
+
+Possible evaluation（evidence / scope / missing link）:"></textarea>
+  </section>
+
+  <section>
+    <h2>2｜五分钟恢复结构</h2>
+    <p>不看 transcript，只完成下面三件事：</p>
+    <ol>
+      <li>用一句话写讲者最终希望听众接受的结论。</li>
+      <li>把刚才的 moves 合并成 2–4 个真正的主块；例子不能自己成为主块。</li>
+      <li>决定采用 linear summary 还是 thematic summary，并写出选择理由。</li>
+    </ol>
+    <textarea id="map" aria-label="结构恢复" placeholder="Final claim:
+
+Block 1 — job in the argument:
+Block 2 — job in the argument:
+Block 3 — job in the argument:
+
+Linear / thematic, because:"></textarea>
+  </section>
+
+  <section>
+    <h2>3｜40 分钟 critical summary</h2>
+    <p><strong>Task:</strong> Critically summarise Michael Kimmel’s argument that gender equality benefits men as well as women. Show how the argument develops and assess whether the evidence supports the breadth of his conclusion.</p>
+    <p>目标 <strong>300–380 词</strong>。至少展开两个主点：每个主点都要写清 claim、reasoning 和 support 的作用。只保留能解释论证的例子。评价必须针对 evidence、warrant 或 scope，不写脱离演讲的个人立场。</p>
+    <textarea id="summary" aria-label="critical summary"></textarea>
+    <p><strong>Words:</strong> <span id="words">0</span></p>
+  </section>
+
+  <section>
+    <h2>4｜写完后核对</h2>
+    <details>
+      <summary>完成成文后再打开 transcript</summary>
+      <p><a href="https://www.ted.com/talks/michael_kimmel_why_gender_equality_is_good_for_everyone_men_included?view=transcript" target="_blank" rel="noreferrer">TED 官方 transcript</a></p>
+      <p class="hint">用 transcript 核对遗漏和关系，不要把它改写成第二篇答案。把真正漏掉的主块记入下方复盘。</p>
+    </details>
+    <label><input type="checkbox"> 我的段落顺序表达了真实的论证关系，而不只是 Firstly / Moreover 的并列清单</label>
+    <label><input type="checkbox"> 每个主要观点都说明了讲者如何支持它</label>
+    <label><input type="checkbox"> 评价准确指向某项证据、推理连接或适用范围</label>
+    <label><input type="checkbox"> 没有把故事或例子误写成普遍性证据</label>
+    <label><input type="checkbox"> 没有连续照搬超过四个词，字数为 300–380</label>
+  </section>
+
+  <section class="card">
+    <h2>复盘</h2>
+    <textarea id="reflection" aria-label="练习复盘" placeholder="Transcript 核对后，我漏掉或接错的结构：
+
+我写不长的具体位置：
+
+我的 evaluation 是否真的有依据：
+
+下一次只修一个问题："></textarea>
+    <p class="hint">页面自动保存在本机浏览器。需要反馈时，把 notes、map、summary 和复盘一起发给 Codex。</p>
+  </section>
+
+  <footer class="meta">Sources: <a href="https://www.youtube.com/watch?v=7n9IOH0NvyY">TED YouTube</a> · <a href="https://www.ted.com/talks/michael_kimmel_why_gender_equality_is_good_for_everyone_men_included?view=transcript">TED transcript</a> · <a href="../../../../07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Marking-Criteria/Paper%20A_Marking%20Criteria_Listening%20into%20Writing.pdf">LN905 criteria</a></footer>
+
+  <script>
+    const key="liw-2026-08-03-gender-", fields=["notes","map","summary","reflection"];
+    function count(){const value=document.getElementById("summary").value.trim();document.getElementById("words").textContent=value?value.split(/\s+/).length:0;}
+    for(const id of fields){const el=document.getElementById(id);el.value=localStorage.getItem(key+id)||"";el.addEventListener("input",()=>{localStorage.setItem(key+id,el.value);if(id==="summary")count();});} count();
+    let remaining=958, handle=null; const display=document.getElementById("timer");
+    function render(){display.textContent=`${String(Math.floor(remaining/60)).padStart(2,"0")}:${String(remaining%60).padStart(2,"0")}`;}
+    function start(seconds){clearInterval(handle);remaining=seconds;render();handle=setInterval(()=>{if(remaining>0){remaining--;render();}else{clearInterval(handle);handle=null;}},1000);}
+    document.querySelectorAll("[data-seconds]").forEach(button=>button.addEventListener("click",()=>start(Number(button.dataset.seconds))));
+    document.getElementById("pause").addEventListener("click",()=>{if(handle){clearInterval(handle);handle=null;}else start(remaining);});
+  </script>
+</body>
+</html>

@@ -21,8 +21,9 @@ tags:
 - 当前项目：[[LN905 Essay]]
 - 计划：[[LN905 Essay]]
 - Timed submissions：[[学习计划/LN905 timed submissions]]
-- Listening into Writing：确认需要持续提高；具体训练方案暂缓，商量完成后再建立计划并自动进入 Today。
-- Reading into Writing：确认需要持续提高；具体训练方案暂缓，商量完成后再建立计划并自动进入 Today。
+- Listening into Writing：进行中；当前优先修复隐含结构恢复、主点展开与有依据的 evaluation。
+- Reading into Writing：进行中；当前优先修复跨文本结构、段落展开与 evidence evaluation。
+- 两项训练计划：[[学习计划/LN905 Listening and Reading Practice]]；每个 session 使用全新 TED 或论文材料，并通过 canonical task 进入 Today。
 
 ## 自主成长
 
@@ -72,4 +73,4 @@ tags:
 - 新确认的学习线先加入本文件；只要产生可执行 checkbox，就放进对应的计划或项目文件并从这里链接，避免出现两套进度。
 - 有限课程的当前位置是计划中第一个未完成单元，不另写一份可漂移的进度。
 - 视频课一讲一个任务；只有你看完并判断理解后才完成。
-- LN905 两项能力训练在方案确定前不自动生成每日练习。
+- LN905 只为链接计划中已经存在并排到当天的 canonical task 生成材料；Today 不另造 checkbox，也不复用已经出现过的 TED 或论文。
