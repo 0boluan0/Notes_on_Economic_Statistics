@@ -15,14 +15,14 @@ tags:
 > [!info] 课程来源与本页定位
 > 本页对应 MIT OCW 18.06SC Fall 2011 的 **Final Course Review** 与 **Final Exam**。它不是公式清单，而是把前三个 Unit 的结构压缩成一套可以实际用于判断、计算与验算的复习系统，并完整解答本地期末试卷的九道题。
 >
-> - 课程总览：[[00_课程总览|MIT 18.06SC course map]]
+> - 课程总览：[[01_Math/02_linear algebra/00_课程总览|MIT 18.06SC course map]]
 > - Unit I：[[线性方程组与四个基本子空间]]
 > - Unit II：[[正交投影与最小二乘]]
 > - Unit III：[[对称矩阵与正定二次型|对称矩阵、正定性]]与[[奇异值分解与低秩近似|奇异值分解]]
 > - 资料索引：[[MIT_OCW_18.06SC_PDF/index|MIT 18.06SC PDF index]]
 > <!-- bilingual-en:start -->
 > This page covers the **Final Course Review** and **Final Exam** for MIT OCW 18.06SC Fall 2011. It is not merely a formula sheet: it condenses the structure of the first three units into a practical system for choosing methods, carrying out calculations, and checking results, and it provides complete solutions to the nine questions in the locally stored final exam.
-> - Course Overview: [[00_课程总览|MIT 18.06SC course map]]
+> - Course Overview: [[01_Math/02_linear algebra/00_课程总览|MIT 18.06SC course map]]
 > - Unit I:[[线性方程组与四个基本子空间|Linear Equations and Four Basic Subspaces]]
 > - Unit II: [[正交投影与最小二乘|Orthogonal Projections and Least Squares]]
 > - Unit III: [[对称矩阵与正定二次型|Symmetric matrices and positive definiteness]], and [[奇异值分解与低秩近似|singular value decomposition]]

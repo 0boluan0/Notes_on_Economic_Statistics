@@ -7,6 +7,7 @@ aliases:
 
 ## Current project
 
+- [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/00_课程总览|LN905 course overview and Week 2–4 notes]]
 - [[LN905 Essay]]
 
 ## 00 Course info

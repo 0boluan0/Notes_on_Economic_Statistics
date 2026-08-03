@@ -23,14 +23,14 @@ tags:
 *Resources and how to use them*
 <!-- bilingual-en:end -->
 
-- 课程总览：[[00_课程总览|MIT 6.042J course map]]
+- 课程总览：[[01_Math/07-Mathematics for Computer Science/00_课程总览|MIT 6.042J course map]]
 - 原题：[[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_finalexam.pdf#page=1|Final Exam p.1]]
 - Unit 1：[[数学证明方法]]
 - Unit 2：[[模运算、欧几里得算法与 RSA|数论、RSA]] 与 [[图的基本结构、路径与遍历|图结构]]
 - Unit 3：[[组合计数原理|计数]]、[[渐近记号与算法复杂度|渐近]]与[[组合计数原理|组合原理]]
 - Unit 4：[[概率空间、条件概率与 Bayes 法则|离散概率]]
 <!-- bilingual-en:start -->
-- Course overview: [[00_课程总览|MIT 6.042J course map]]
+- Course overview: [[01_Math/07-Mathematics for Computer Science/00_课程总览|MIT 6.042J course map]]
 - Original exam: [[MIT_OCW_6.042J_Materials/07_Exams/MIT6_042JS15_finalexam.pdf#page=1|Final Exam p.1]]
 - Unit 1: [[数学证明方法|Methods of mathematical proof]]
 - Unit 2: [[模运算、欧几里得算法与 RSA|Number theory and RSA]], and [[图的基本结构、路径与遍历|graph structures]]

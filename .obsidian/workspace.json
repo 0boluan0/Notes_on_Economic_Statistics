@@ -86,12 +86,24 @@
             "id": "d16798fb57800a95",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/2026 WEEK TWO Assignment Booklet LN905.pdf"
+                "file": "07_Programme/01_LN905_LSE-language-class/01_LN905_note/00_课程总览.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "2026 WEEK TWO Assignment Booklet LN905"
+              "icon": "lucide-file",
+              "title": "00_课程总览"
             }
           }
         ],
@@ -217,7 +229,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/2026 WEEK TWO Assignment Booklet LN905.pdf",
+                "file": "07_Programme/01_LN905_LSE-language-class/01_LN905_note/00_课程总览.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -306,20 +318,30 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "d16798fb57800a95",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/2026 WEEK TWO Assignment Booklet LN905.pdf",
+    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/00_课程总览.md",
+    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Week 4 - Climate Change.md",
+    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Week 3 - Demographics.md",
+    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Week 2 - Gender.md",
+    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Week 2-4 - Paper A and B AI Feedback.md",
+    "tmp/pdfs/ln905-notes.CFDNXj/rendered/lesson12-p49.png",
+    "tmp/pdfs/ln905-notes.CFDNXj/rendered/lesson12-p44.png",
+    "tmp/pdfs/ln905-notes.CFDNXj/rendered/lesson12-p40.png",
+    "tmp/pdfs/ln905-notes.CFDNXj/rendered/lesson12-p36.png",
+    "tmp/pdfs/ln905-notes.CFDNXj/rendered",
+    "tmp/pdfs/ln905-notes.CFDNXj/colored-text.json",
+    "tmp/pdfs/ln905-notes.CFDNXj/colors/cd6874363c39.xml",
+    "tmp/pdfs/ln905-notes.CFDNXj/colors/d7f0409c14c7.xml",
+    "tmp/pdfs/ln905-notes.CFDNXj/colors/d961e3cbbe39.xml",
+    "tmp/pdfs/ln905-notes.CFDNXj/colors/de312cb0dee1.xml",
+    "tmp/pdfs/ln905-notes.CFDNXj/colors/04a0cbdd2ad9.xml",
+    "tmp/pdfs/ln905-notes.CFDNXj/colors/2a773f581048.xml",
+    "tmp/pdfs/ln905-notes.CFDNXj/colors/0139a6715a8c.xml",
+    "tmp/pdfs/ln905-notes.CFDNXj/colors/ca54d7600e50.xml",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Social Media and Well-Being 中文逐段翻译与 summary.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-2-Gender/Reading into Writing - Gender Essay Question and Submission.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/2-minute-presentations/Week One_LN905.pdf",
     "99_学习情况记录/2026-08-03——Mon.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-1/The Dinner Party.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-1/Guess Who_ Profile Templates.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-1/Discussion Week 1 PPT.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-1",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/Week One Lesson Two.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/Week One Lesson Three.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/LN905 Week one materials 2026 - B completed.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/LN905 Week one materials 2026.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-1-Social-Media/Input-and-Discussion/Social Media and Well-Being 中文逐段翻译与 summary.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
     "99_学习情况记录/teach/reading-into-writing/practice/2026-08-03-gender-structure-response.md",
@@ -339,22 +361,12 @@
     "00_Knowledge/极限与连续.md",
     "01_Math/01_calculus/00_课程总览.md",
     "Excalidraw/Drawing 2026-08-01 17.48.37.excalidraw.md",
-    "01_Math/01_calculus/05_Infinite_Series_and_Improper_Integrals.md",
-    "02_Economy/07_金融机构与风险管理/01_引言.md",
-    "02_Economy/07_金融机构与风险管理/17_OTC衍生产品市场的监管.md",
-    "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
-    "01_Math/01_calculus/02_Applications_of_Differentiation.md",
-    "04_Fragments/How to fix your entire life in 1 day - 2026-03-28.md",
     "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-6.jpg",
     "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-5.jpg",
     "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-4.jpg",
     "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-3.jpg",
     "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-2.jpg",
     "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-1.jpg",
-    "tmp/pdfs/reading-into-writing/workbook-contact.png",
-    "tmp/pdfs/reading-into-writing/intro-contact.png",
-    "tmp/pdfs/reading-into-writing/criteria-contact.png",
-    "tmp/pdfs/reading-into-writing/workbook-26.png",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L Course Atlas.canvas",
     "03_Computer_Science/02_CS61A/CS61A Course Atlas.canvas",
