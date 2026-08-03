@@ -23,16 +23,16 @@ kind: multi-stage-project
 - [x] LN905 Essay｜收集 3 个候选问题 #student-os/task ✅ 2026-07-30
 - [x] LN905 Essay｜比较候选问题并选定 1 个、起草理由 #student-os/task ✅ 2026-08-01
 - [x] LN905 Essay｜在 Moodle 提交题目与选题理由 #student-os/task ✅ 2026-08-01
-- [ ] LN905 Essay｜检索候选学术文献并选出至少 6 篇与论证直接相关的来源 #student-os/task
-- [ ] LN905 Essay｜精读来源 1–3，提取核心 claim、证据、用途与局限 #student-os/task
-- [ ] LN905 Essay｜精读来源 4–6，提取核心 claim、证据、用途与局限 #student-os/task
-- [ ] LN905 Essay｜写完并统一格式化 annotated bibliography #student-os/task
-- [ ] LN905 Essay｜上传 annotated bibliography 并检查 Moodle submission status #student-os/task
-- [ ] LN905 Essay｜把文献关系整理成支持 thesis 的 argument map #student-os/task
-- [ ] LN905 Essay｜搭出 detailed essay plan：thesis、段落 claims 与顺序 #student-os/task
-- [ ] LN905 Essay｜为每段补上证据、引用与可能的反方观点 #student-os/task
-- [ ] LN905 Essay｜按作业要求修订并完成 detailed essay plan 内容 #student-os/task
-- [ ] LN905 Essay｜上传 detailed essay plan 并检查 Moodle submission status #student-os/task
+- [ ] LN905 Essay｜检索候选学术文献并选出至少 6 篇与论证直接相关的来源 #student-os/task ⏳ 2026-08-03
+- [ ] LN905 Essay｜精读来源 1–3，提取核心 claim、证据、用途与局限 #student-os/task ⏳ 2026-08-04
+- [ ] LN905 Essay｜精读来源 4–6，提取核心 claim、证据、用途与局限 #student-os/task ⏳ 2026-08-05
+- [ ] LN905 Essay｜写完并统一格式化 annotated bibliography #student-os/task ⏳ 2026-08-06
+- [ ] LN905 Essay｜上传 annotated bibliography 并检查 Moodle submission status #student-os/task ⏳ 2026-08-08
+- [ ] LN905 Essay｜把文献关系整理成支持 thesis 的 argument map #student-os/task ⏳ 2026-08-09
+- [ ] LN905 Essay｜搭出 detailed essay plan：thesis、段落 claims 与顺序 #student-os/task ⏳ 2026-08-10
+- [ ] LN905 Essay｜为每段补上证据、引用与可能的反方观点 #student-os/task ⏳ 2026-08-11
+- [ ] LN905 Essay｜按作业要求修订并完成 detailed essay plan 内容 #student-os/task ⏳ 2026-08-12
+- [ ] LN905 Essay｜上传 detailed essay plan 并检查 Moodle submission status #student-os/task ⏳ 2026-08-13
 
 ## 里程碑
 

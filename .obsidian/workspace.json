@@ -88,7 +88,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
+                "file": "99_学习情况记录/2026-08-03——Mon.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -103,7 +103,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Week1 Listen to writing social media"
+              "title": "2026-08-03——Mon"
             }
           }
         ],
@@ -229,7 +229,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
+                "file": "99_学习情况记录/2026-08-03——Mon.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -320,6 +320,8 @@
   },
   "active": "d16798fb57800a95",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
+    "99_学习情况记录/2026-08-03——Mon.md",
     "99_学习情况记录/teach/reading-into-writing/practice/2026-08-03-gender-structure-source-pack.pdf",
     "99_学习情况记录/teach/reading-into-writing/practice/2026-08-03-gender-structure-source-pack.out",
     "99_学习情况记录/teach/reading-into-writing/practice/2026-08-03-gender-structure-source-pack.aux",
@@ -329,7 +331,6 @@
     "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-03-gender-structure.html",
     "99_学习情况记录/学习计划/LN905 Listening and Reading Practice.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Reading to Writing social media.md",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Week1-Academic-Writing-moodle.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay.md",
     "99_学习情况记录/2026-08-02——Sun.md",
@@ -340,7 +341,6 @@
     "05_tools/Obsidian/learning-progress-dashboard/self-check.js",
     "05_tools/Obsidian/learning-progress-dashboard/manifest.json",
     "05_tools/Obsidian/learning-progress-dashboard/main.js",
-    "05_tools/Obsidian/learning-progress-dashboard/deploy.sh",
     "99_学习情况记录/学习计划/MIT 6.100L Introduction to CS and Programming Using Python.md",
     "99_学习情况记录/学习计划/MIT 18.06 Linear Algebra.md",
     "99_学习情况记录/学习计划/MIT 18.01 Single Variable Calculus.md",

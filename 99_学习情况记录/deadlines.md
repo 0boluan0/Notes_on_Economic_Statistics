@@ -32,6 +32,8 @@ tags:
 
 ## 核验状态
 
+- 2026-08-03｜Moodle 日常核对完成：Announcements 仍为空；Gender Listening 开放 10:00、截止 11:45，Gender Reading 开放 12:45、截止 15:00，均未提前；Annotated Bibliography 与 Essay Plan 当前均为未提交，页面未显示独立 due 字段，继续以 workbook 日期为准。
+- 2026-08-03｜Apple Calendar 的只读 `LSE` 已与 Moodle 近期项目比较；8 月 7 日与 14 日的四个截止点没有提前或新增。
 - 2026-08-02｜Moodle 全量核对完成：Assignments、课程文件目录与 Announcements 已检查；Announcements 当前为空。
 - 2026-08-02｜Essay Question & Rationale 已核验为 Submitted for grading，提交时间为 2026-08-01 20:34。
 - 2026-08-02｜Gender Listening 已核验开放窗口 10:00–11:45；Gender Reading 已核验开放窗口 12:45–15:00。
