@@ -81,21 +81,9 @@
               "icon": "lucide-file",
               "title": "Week1-Academic-Writing-moodle"
             }
-          },
-          {
-            "id": "d16798fb57800a95",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/09_References/oscola_4th_edn_hart_2012.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "oscola_4th_edn_hart_2012"
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -306,7 +294,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "d16798fb57800a95",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
     "07_Programme/01_LN905_LSE-language-class/PDF/09_References/Citing-and-Referencing-Powerpoint.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/09_References/APA-6th-style-for-referencing.pdf",
