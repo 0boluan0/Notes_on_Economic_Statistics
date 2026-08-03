@@ -88,10 +88,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/Topic Input Gender.pdf"
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/09_References/oscola_4th_edn_hart_2012.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Topic Input Gender"
+              "title": "oscola_4th_edn_hart_2012"
             }
           }
         ],
@@ -217,7 +217,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/Topic Input Gender.pdf",
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/09_References/oscola_4th_edn_hart_2012.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -308,12 +308,17 @@
   },
   "active": "d16798fb57800a95",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/PDF/09_References/Citing-and-Referencing-Powerpoint.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/09_References/APA-6th-style-for-referencing.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/09_References/Academic_Vocabulary_in_Use.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/09_References/10-types-of-plagiarism.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/09_References/10 types of plagiarism Turnitin video.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/1. Gender Topic Input.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/Topic Input Gender.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/2026 WEEK TWO Assignment Booklet LN905.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 3.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/2-minute-presentations/Week One_LN905.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Annotated Bibliography.pdf",
     "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Week 2 - Gender.md",
     "99_学习情况记录/2026-08-03——Mon.md",
@@ -325,11 +330,6 @@
     "tmp/pdfs/ln905-notes.CFDNXj/rendered/lesson12-p44.png",
     "tmp/pdfs/ln905-notes.CFDNXj/rendered/lesson12-p40.png",
     "tmp/pdfs/ln905-notes.CFDNXj/rendered/lesson12-p36.png",
-    "tmp/pdfs/ln905-notes.CFDNXj/rendered",
-    "tmp/pdfs/ln905-notes.CFDNXj/colored-text.json",
-    "tmp/pdfs/ln905-notes.CFDNXj/colors/cd6874363c39.xml",
-    "tmp/pdfs/ln905-notes.CFDNXj/colors/d7f0409c14c7.xml",
-    "tmp/pdfs/ln905-notes.CFDNXj/colors/d961e3cbbe39.xml",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Social Media and Well-Being 中文逐段翻译与 summary.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-1-Social-Media/Input-and-Discussion/Social Media and Well-Being 中文逐段翻译与 summary.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
