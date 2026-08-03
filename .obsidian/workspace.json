@@ -40,7 +40,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay.md",
+                "file": "99_学习情况记录/2026-08-03——Mon.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -55,7 +55,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "LN905 Essay"
+              "title": "2026-08-03——Mon"
             }
           },
           {
@@ -64,7 +64,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_Math/01_calculus/01_Differentiation.md",
+                "file": "02_Economy/01_Econometrics/05_多元回归模型的矩阵表达.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -79,11 +79,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01_Differentiation"
+              "title": "05_多元回归模型的矩阵表达"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -195,7 +195,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_Math/01_calculus/01_Differentiation.md",
+                "file": "99_学习情况记录/2026-08-03——Mon.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -294,24 +294,29 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "bf65994d7e208a51",
+  "active": "3dbeee1aced477c5",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/01_Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/05_Fuster et al. (2022) - Predictably unequal.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/04_Buecker et al. (2022) - Transparency auditability explainability (author preprint).pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/03_Rudin (2019) - Stop explaining black-box models (author preprint).pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/02_Khandani et al. (2010) - Consumer credit-risk ML models.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/Unconfirmed 384289.crdownload",
+    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/06_Bracke et al. (2019) - ML explainability in finance.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring",
+    "02_Economy/01_Econometrics/05_多元回归模型的矩阵表达.md",
+    "02_Economy/01_Econometrics/02_一元线性回归.md",
     "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-03-gender-structure.html",
     "99_学习情况记录/2026-08-03——Mon.md",
+    "01_Math/02_linear algebra/02_Least Squares, Determinants and Eigenvalues.md",
+    "01_Math/02_linear algebra/00_MIT OCW 18.06SC course map.md",
+    "01_Math/01_calculus/01_Differentiation.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Week 3 - Demographics.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Week 4 - Climate Change.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Week 2-4 - Paper A and B AI Feedback.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Week 2 - Gender.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/1. Gender Topic Input.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/Topic Input Gender.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/09_References/oscola_4th_edn_hart_2012.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/09_References/Citing-and-Referencing-Powerpoint.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/09_References/APA-6th-style-for-referencing.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/09_References/Academic_Vocabulary_in_Use.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/09_References/10-types-of-plagiarism.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/09_References/10 types of plagiarism Turnitin video.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/2026 WEEK TWO Assignment Booklet LN905.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 3.pdf",
     "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/00_课程总览.md",
     "tmp/pdfs/ln905-notes.CFDNXj/rendered/lesson12-p49.png",
@@ -325,18 +330,12 @@
     "99_学习情况记录/学习计划/LN905 Listening and Reading Practice.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Reading to Writing social media.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Week1-Academic-Writing-moodle.md",
-    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay.md",
     "99_学习情况记录/2026-08-02——Sun.md",
     "99_学习情况记录/学习计划/_Student OS 闭环测试.md",
     "99_学习情况记录/Overview & Study Record——旧版计划归档 2026-06-17.md",
     "99_学习情况记录/学习计划/LN905 timed submissions.md",
     "99_学习情况记录/学习计划/MIT 6.100L Introduction to CS and Programming Using Python.md",
-    "99_学习情况记录/学习计划/MIT 18.06 Linear Algebra.md",
-    "99_学习情况记录/学习计划/MIT 18.01 Single Variable Calculus.md",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
-    "01_Math/01_calculus/01_Differentiation.md",
-    "00_Knowledge/极限与连续.md",
-    "01_Math/01_calculus/00_课程总览.md",
     "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-6.jpg",
     "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-5.jpg",
     "98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-4.jpg",
