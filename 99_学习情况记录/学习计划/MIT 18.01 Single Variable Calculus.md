@@ -16,7 +16,7 @@ source: https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/vid
 - [x] MIT 18.01｜Lecture 1: Rate of Change #student-os/task
 - [x] MIT 18.01｜Lecture 2: Limits #student-os/task
 - [x] MIT 18.01｜Lecture 3: Derivatives #student-os/task
-- [ ] MIT 18.01｜Lecture 4: Chain Rule #student-os/task
+- [x] MIT 18.01｜Lecture 4: Chain Rule #student-os/task ✅ 2026-08-03
 - [ ] MIT 18.01｜Lecture 5: Implicit Differentiation #student-os/task
 - [ ] MIT 18.01｜Lecture 6: Exponential and Log #student-os/task
 - [ ] MIT 18.01｜Lecture 7: Exam 1 Review #student-os/task

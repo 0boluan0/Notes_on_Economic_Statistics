@@ -19,17 +19,20 @@ time_limit_minutes: 55
 **Question:** *“Gender bias at work is sustained mainly by organisations rather than by individuals.” To what extent do you agree?*
 
 > [!important] 今日唯一重点
-> 不按 Extract 1、2、3 依次摘要。先形成自己的段落判断，再让至少两篇材料发生明确关系，并用第三篇材料限定这个判断。
+> 不按 Extract 1、2、3 依次摘要。这是 AI 引导练习，不是完整模拟：你先完成自己的 evidence map 和 reasoning chain，再与我完成一次成文前诊断；初稿后再闭环一次 revision。我不会提前给 thesis 或代写段落。
 
 ## 55 分钟路线
 
 | 时间 | 必须产出 |
 |---|---|
 | 0–15 分钟 | 打印阅读；每篇只标 `C` claim、`E` evidence、`L` limitation、`X` cross-text link |
-| 15–25 分钟 | 完成下面的三文压缩和关系判断 |
-| 25–30 分钟 | 写出一个可争论的 paragraph claim |
+| 15–30 分钟 | 完成三文压缩、关系判断和 paragraph reasoning chain |
+| AI checkpoint 1 | 回答追问、改回本页，直到收到“可以成文” |
 | 30–50 分钟 | 写 180–220 词 analytical paragraph |
-| 50–55 分钟 | 检查来源关系、evaluation 和句子准确性 |
+| AI checkpoint 2 | 获得一个 revision target，修改并回传确认 |
+| 50–55 分钟 | 最终检查并记录复盘 |
+
+AI 等待时间不计入 55 分钟主动练习时间。
 
 ## 1｜三文压缩
 
@@ -64,8 +67,28 @@ time_limit_minutes: 55
 5. **Source C / qualification — 它如何修正我的判断：**
 6. **Link back to the question：**
 
+## AI checkpoint 1｜成文前
+
+保存文件，然后在当前 Codex 对话发：`LN905 Reading checkpoint 1｜2026-08-03-gender-structure`。我会读取本页和链接的 source pack，检验 source roles、evidence–claim scope 和推理连接，最多问三个问题；不会给 thesis、重写 chain 或提供示范段落。
+
+在聊天里回答问题，把修改写回本页，然后回复 `已改`。我会重读文件；只有收到我明确回复 `可以成文` 后才继续。
+
 ## Response（180–220 words）
 
+
+
+## AI checkpoint 2｜初稿后
+
+保存文件，然后发：`LN905 Reading checkpoint 2｜2026-08-03-gender-structure`。我会引用你的原句、对应 LN905 criteria，并只选一个最高价值的 revision target；不会替你重写整段。
+
+修改 Response 并填写下面的 Revision，然后回复 `已改`。我会重读文件；收到我明确回复 `本次练习完成` 后再结束。
+
+## Revision
+
+- **AI 选出的 revision target：**
+- **修改前：**
+- **修改后：**
+- **为什么这样改：**
 
 
 ## 最后五分钟
@@ -75,6 +98,7 @@ time_limit_minutes: 55
 - 我没有把相关性、理论模型或短视频实验写成普遍因果证明。
 - evaluation 紧跟它评价的 evidence，没有漂成个人观点。
 - 最后一句明确回答 organisations 与 individuals 的相对作用。
+- 两个 AI checkpoint 都已闭环，最终 revision 已获确认。
 
 ## 写完记录
 
@@ -82,7 +106,7 @@ time_limit_minutes: 55
 - 我在哪一句开始没东西可写：
 - 下次只修一个问题：
 
-完成后把三文压缩、reasoning chain 和 Response 一起发给 Codex；反馈将引用你的原句并对应 LN905 marking criteria，不替你重写。
+收到最终确认后，再到 Today 勾选原来的同一个任务。两个 checkpoint 都属于这一次练习，不生成新的 checkbox。
 
 ## 材料依据
 
@@ -90,4 +114,3 @@ time_limit_minutes: 55
 - [Zedlacher & Yanagida (2023)](https://doi.org/10.3389/fpsyg.2023.1161735)
 - [Gygax, Garnham & Doehren (2016)](https://doi.org/10.3389/fpsyg.2016.01036)
 - [[07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Marking-Criteria/Paper B_Marking Criteria_Reading into Writing.pdf|LN905 Paper B marking criteria]]
-

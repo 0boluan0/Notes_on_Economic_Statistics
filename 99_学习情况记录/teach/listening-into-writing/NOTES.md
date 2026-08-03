@@ -16,12 +16,16 @@ topic: "LN905 Listening into Writing"
 - 对排到当天的 canonical task，`/today` 使用任务中固定的 session 路径准备练习页；每次选择一条未使用过的 TED 官方 YouTube，并核验官方 transcript。
 - 练习视频优先 15–20 分钟；主题必须匹配同周 Reading 练习和下一次 timed test。
 - 已有 HTML、`RESOURCES.md` 与计划中的 YouTube video ID 都属于去重账本，不复用。
+- 除明确标为完整模拟的 session 外，练习在 revised map 和 draft 后各调用一次 AI；页面用同一按钮发送当前字段，修改后可再次发送复核，不等到全部写完才获得反馈。
+- 每份 guided HTML 同时是永久复盘档案：浏览器 localStorage 只保存工作草稿，`student-os:ai-review` 标记区才是 canonical review archive。每次 checkpoint 回答前按时间追加用户字段快照、AI 诊断与问题、用户修订和放行结果，不覆盖旧记录，也不重复追加完全相同的最新快照；最终回传包含 notes、map、response、revision 和 reflection。
 
 ## 教学注意事项
 - 先降低听与记的同步负担，再增加完整 40 分钟模拟。
 - 反馈必须对应课程评分标准，不把“写满 400 词”当作成功标准。
 - 每日只设一个训练重点；完整 40 分钟写作模拟每周最多两次，除非用户另行要求。
 - 当前优先训练：隐含论证结构、主要观点的深度展开，以及 evidence 是否足以支持 claim 的 evaluation。
+- 成文前 checkpoint 只做诊断和最多三个追问，不泄露完整结构或 model answer；用户修改并再次发送后，AI 明确确认能否成文。最终 checkpoint 对应评分标准，只指定一个最高价值 revision，并在用户回传修改后确认是否解决。
+- 完整模拟计时期间不介入；结束后才读取原始作答并反馈。
 
 ## 当前证据
 

@@ -12,12 +12,16 @@
     header,section { margin-bottom:28px; }
     .meta,.hint { color:var(--muted); }
     .card { padding:18px; border:1px solid #aeb4bb; border-radius:12px; background:var(--card); }
+    .checkpoint { margin-top:16px; padding:14px; border-left:4px solid var(--accent); background:var(--card); }
     a.button,button { padding:9px 13px; border:0; border-radius:8px; background:var(--accent); color:#fff; text-decoration:none; cursor:pointer; }
     button.secondary { background:#555d68; }
     textarea { width:100%; min-height:210px; padding:12px; border:1px solid #9da3aa; border-radius:8px; font:15px/1.5 ui-monospace,monospace; }
     #summary { min-height:360px; }
     .timer { margin:12px 0; font:700 34px/1 ui-monospace,monospace; }
     .controls { display:flex; flex-wrap:wrap; gap:8px; }
+    .copy-status { margin-left:8px; color:var(--muted); }
+    .review-entry { margin-top:18px; padding-top:18px; border-top:1px solid #aeb4bb; }
+    pre { white-space:pre-wrap; overflow-wrap:anywhere; }
     label { display:block; margin:7px 0; }
     @media (prefers-color-scheme:dark) { :root { --card:#20242a; --muted:#abb2bd; } }
   </style>
@@ -27,6 +31,7 @@
     <p class="meta">2026-08-03 · Gender · Session G-L1 · 约 60 分钟</p>
     <h1>从隐含结构到 critical summary</h1>
     <p><strong>唯一训练重点：</strong>当讲者没有报出“一、二、三”时，仍能判断每一段在整场论证中承担什么功能。</p>
+    <p><strong>这是 AI 引导练习，不是完整模拟。</strong>你先留下自己的判断；成文前和初稿后各与我完成一次闭环对话。我不会提前给结构或代写答案。</p>
     <p><a class="button" href="https://www.youtube.com/watch?v=7n9IOH0NvyY" target="_blank" rel="noreferrer">打开 TED 官方 YouTube（15:58）</a></p>
   </header>
 
@@ -35,10 +40,12 @@
     <div id="timer" class="timer">15:58</div>
     <div class="controls">
       <button data-seconds="958">听力 15:58</button>
-      <button data-seconds="300">结构恢复 5:00</button>
-      <button data-seconds="2400">写作 40:00</button>
+      <button data-seconds="480">结构修订 8:00</button>
+      <button data-seconds="1200">引导写作 20:00</button>
+      <button data-seconds="480">针对性修订 8:00</button>
       <button id="pause" class="secondary">暂停／继续</button>
     </div>
+    <p class="hint">AI 等待时间不计入 60 分钟主动练习时间。</p>
   </section>
 
   <section>
@@ -76,18 +83,38 @@ Block 2 — job in the argument:
 Block 3 — job in the argument:
 
 Linear / thematic, because:"></textarea>
+    <div class="checkpoint">
+      <h3>AI checkpoint 1｜成文前</h3>
+      <p>第一次发送后，在聊天里回答我的问题；按反馈改回 map，再点同一按钮发送新版。收到我明确回复“可以成文”后才继续。</p>
+      <button data-copy="checkpoint1">复制 checkpoint 1／再次发送复核</button><span id="checkpoint1-status" class="copy-status" aria-live="polite"></span>
+    </div>
   </section>
 
   <section>
-    <h2>3｜40 分钟 critical summary</h2>
+    <h2>3｜20 分钟 guided critical summary</h2>
     <p><strong>Task:</strong> Critically summarise Michael Kimmel’s argument that gender equality benefits men as well as women. Show how the argument develops and assess whether the evidence supports the breadth of his conclusion.</p>
-    <p>目标 <strong>300–380 词</strong>。至少展开两个主点：每个主点都要写清 claim、reasoning 和 support 的作用。只保留能解释论证的例子。评价必须针对 evidence、warrant 或 scope，不写脱离演讲的个人立场。</p>
+    <p>目标 <strong>180–250 词</strong>。至少展开两个主点：每个主点都要写清 claim、reasoning 和 support 的作用。只保留能解释论证的例子。评价必须针对 evidence、warrant 或 scope，不写脱离演讲的个人立场。</p>
     <textarea id="summary" aria-label="critical summary"></textarea>
     <p><strong>Words:</strong> <span id="words">0</span></p>
+    <div class="checkpoint">
+      <h3>AI checkpoint 2｜初稿后</h3>
+      <p>先发送初稿。我只选一个最高价值 revision；修改 summary，并填写下方 Revision 与复盘后，再点同一按钮回传完整快照。收到我确认后，这次练习才完成。</p>
+      <button data-copy="checkpoint2">复制 checkpoint 2／再次发送复核</button><span id="checkpoint2-status" class="copy-status" aria-live="polite"></span>
+    </div>
   </section>
 
   <section>
-    <h2>4｜写完后核对</h2>
+    <h2>4｜根据反馈只改一处</h2>
+    <p>直接修改上面的 summary，并在这里留下那一处修改；然后回到 checkpoint 2 再点一次按钮让我复核。</p>
+    <textarea id="revision" aria-label="针对性修订" placeholder="AI 选出的 revision target：
+
+修改前：
+
+修改后：
+
+为什么这样改："></textarea>
+
+    <h2>5｜修订后核对</h2>
     <details>
       <summary>完成成文后再打开 transcript</summary>
       <p><a href="https://www.ted.com/talks/michael_kimmel_why_gender_equality_is_good_for_everyone_men_included?view=transcript" target="_blank" rel="noreferrer">TED 官方 transcript</a></p>
@@ -97,7 +124,8 @@ Linear / thematic, because:"></textarea>
     <label><input type="checkbox"> 每个主要观点都说明了讲者如何支持它</label>
     <label><input type="checkbox"> 评价准确指向某项证据、推理连接或适用范围</label>
     <label><input type="checkbox"> 没有把故事或例子误写成普遍性证据</label>
-    <label><input type="checkbox"> 没有连续照搬超过四个词，字数为 300–380</label>
+    <label><input type="checkbox"> 两个 AI checkpoint 都已闭环，最终 revision 已获确认</label>
+    <label><input type="checkbox"> 没有连续照搬超过四个词，字数为 180–250</label>
   </section>
 
   <section class="card">
@@ -109,13 +137,49 @@ Linear / thematic, because:"></textarea>
 我的 evaluation 是否真的有依据：
 
 下一次只修一个问题："></textarea>
-    <p class="hint">页面自动保存在本机浏览器。需要反馈时，把 notes、map、summary 和复盘一起发给 Codex。</p>
+    <p class="hint">输入框自动保存在本机浏览器；AI 协作记录会写回这份 HTML。收到最终确认后，再到 Today 勾选原来的同一个任务。</p>
+  </section>
+
+  <section class="card" id="ai-review-log">
+    <h2>AI 协作记录</h2>
+    <p class="hint">这里按时间追加每次输入、AI 诊断、你的修订和放行结果。刷新页面即可看到新记录；刷新不会清空上面的浏览器草稿。</p>
+    <!-- student-os:ai-review:start -->
+    <article class="review-entry">
+      <h3>Checkpoint 1 · Round 1 · 2026-08-03 · 待修改</h3>
+      <details>
+        <summary>提交时的 notes 与 map</summary>
+        <h4>Notes</h4>
+        <pre>man support gender equality
+graduate school study group.11woman and this guy. two women, white  said all women face the same sisterhood. but black not believe racist is visible. privilage is visible for those who have that. mideele calss white man.
+colleage guess lecture. oh finally an objective opinion. you are woman,making gender visible is the first step to make gender equlity.
+why was that your job. resist gender equality. the history of the word . fair right just. out inteset for man. get the life we want to live. more gender equal companies are , lo
+gender inequlity cost too many,
+younger man family and work banlance, happier both male and female.win win
+share! housework with wife good for kid and female.
+not win lose is win win . fullly empower man need to let woman live the life women what .
+for men to be free</pre>
+        <h4>Map</h4>
+        <pre>1. privillage is visible only for those who do not have that. For example, black people always recognize as black, white people are just people.
+2. man and women both will be better when we reach the gender equilty.</pre>
+      </details>
+      <h4>AI 诊断</h4>
+      <p><strong>抓对的点：</strong>Block 1 不是背景故事，而是在说明 privilege 对拥有它的人往往不可见；“making gender visible”就是它在论证中的作用。</p>
+      <p><strong>当前连接问题：</strong>Block 2 仍是一个总结果，把 workplace、family、housework、children 和 win-win 合在一起，尚未显示 evidence 如何支持 conclusion。</p>
+      <ol>
+        <li>Block 1 与 Block 2 之间缺的桥是什么？男人为什么会抵触 gender equality，而“看见 privilege”为什么能改变这种抵触？</li>
+        <li><code>companies/work</code> 与 <code>family/housework/children</code> 是同一项理由，还是两个不同的 supporting blocks？分别用不超过 10 个英文词写出其功能。</li>
+        <li>现有证据能支持 “all men and women will be better”，还是只能支持更窄的 “gender equality can benefit men in work and family life”？为什么？</li>
+      </ol>
+      <p><strong>下一步：</strong>先在聊天里回答这三个问题，不开始成文，也暂时不用处理拼写。</p>
+      <p><strong>状态：</strong>等待你的回答与 revised map；尚未放行成文。</p>
+    </article>
+    <!-- student-os:ai-review:end -->
   </section>
 
   <footer class="meta">Sources: <a href="https://www.youtube.com/watch?v=7n9IOH0NvyY">TED YouTube</a> · <a href="https://www.ted.com/talks/michael_kimmel_why_gender_equality_is_good_for_everyone_men_included?view=transcript">TED transcript</a> · <a href="../../../../07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Marking-Criteria/Paper%20A_Marking%20Criteria_Listening%20into%20Writing.pdf">LN905 criteria</a></footer>
 
   <script>
-    const key="liw-2026-08-03-gender-", fields=["notes","map","summary","reflection"];
+    const key="liw-2026-08-03-gender-", fields=["notes","map","summary","revision","reflection"];
     function count(){const value=document.getElementById("summary").value.trim();document.getElementById("words").textContent=value?value.split(/\s+/).length:0;}
     for(const id of fields){const el=document.getElementById(id);el.value=localStorage.getItem(key+id)||"";el.addEventListener("input",()=>{localStorage.setItem(key+id,el.value);if(id==="summary")count();});} count();
     let remaining=958, handle=null; const display=document.getElementById("timer");
@@ -123,6 +187,17 @@ Linear / thematic, because:"></textarea>
     function start(seconds){clearInterval(handle);remaining=seconds;render();handle=setInterval(()=>{if(remaining>0){remaining--;render();}else{clearInterval(handle);handle=null;}},1000);}
     document.querySelectorAll("[data-seconds]").forEach(button=>button.addEventListener("click",()=>start(Number(button.dataset.seconds))));
     document.getElementById("pause").addEventListener("click",()=>{if(handle){clearInterval(handle);handle=null;}else start(remaining);});
+    const value=id=>document.getElementById(id).value.trim();
+    const prompts={
+      checkpoint1:()=>`LN905 Listening guided checkpoint 1｜2026-08-03-gender-structure。检验 final claim、各 block 的功能和 evidence/warrant/scope。第一次收到时，先确认一个正确点并最多问我 3 个针对性问题，不给完整结构或 model answer；我回答并修改后会再次发送。收到新版时，若问题已解决请明确回复“可以成文”，否则只指出一个仍需修的连接。\n\nRECORD TARGET\n99_学习情况记录/teach/listening-into-writing/lessons/2026-08-03-gender-structure.html#student-os:ai-review\n在回复前，把本次输入、你的反馈、我的后续回答与放行结果写入该 HTML；不能只留在聊天或 localStorage。\n\nNOTES\n${value("notes")}\n\nMAP\n${value("map")}`,
+      checkpoint2:()=>`LN905 Listening guided checkpoint 2｜2026-08-03-gender-structure。第一次收到时，请引用我的原句、对应 LN905 criteria，并只选一个最高价值 revision target，不要整段重写；我修改后会再次发送。收到含 revision record 的新版时，请核对修改是否解决问题：若已解决明确回复“本次练习完成”，否则只指出一个尚未解决的问题。\n\nRECORD TARGET\n99_学习情况记录/teach/listening-into-writing/lessons/2026-08-03-gender-structure.html#student-os:ai-review\n在回复前，把本次完整快照、你的反馈、我的修订与确认结果写入该 HTML；不能只留在聊天或 localStorage。\n\nNOTES\n${value("notes")}\n\nMAP\n${value("map")}\n\nSUMMARY\n${value("summary")}\n\nREVISION RECORD\n${value("revision")}\n\nREFLECTION\n${value("reflection")}`
+    };
+    async function copyCheckpoint(name){
+      const text=prompts[name](), status=document.getElementById(`${name}-status`);
+      try{await navigator.clipboard.writeText(text);}catch{const el=document.createElement("textarea");el.value=text;document.body.appendChild(el);el.select();document.execCommand("copy");el.remove();}
+      status.textContent="已复制；粘贴到当前 Codex 对话";
+    }
+    document.querySelectorAll("[data-copy]").forEach(button=>button.addEventListener("click",()=>copyCheckpoint(button.dataset.copy)));
   </script>
 </body>
 </html>

@@ -21,12 +21,15 @@ previous_week_topic: "social media"
 - 论文可以压缩和改写为 exam-style adapted extracts，但必须保留原文的主张、证据、限制与来源，不复制大段原文或虚构结论。
 - Source matrix、提纲和最终约 600 词作文放在独立 Markdown 文件中，用电脑完成。
 - 电脑答题文件不能只是空白矩阵：必须依次引导审题立场、材料压缩与取舍、跨文本关系、段落推理链、600 词字数预算和按评分标准检查；提供过程支架，但不预写可直接提交的答案。
+- 除明确标为完整模拟的 session 外，在 revised reasoning chain 和 draft 后各设置一次 AI checkpoint；用户必须在成文前获得诊断并修正推理，而不是写完整篇后才让 AI 批改。
 
 ## 教学注意事项
 - 在看到原答案前，不把用户“感觉很差”直接解释成某项已确认的语言缺陷。
 - 先解决审题、选材和跨文本 synthesis，再处理高级词汇与句式。
 - 反馈应引用用户原句并对应 Paper B 评分标准，不直接代写整篇答案。
 - 已有 source packs、`RESOURCES.md` 与计划中的 DOI/canonical URL 都属于去重账本，不复用。
+- 成文前 checkpoint 只指出证据与 claim 的匹配问题、追问最多三个关键问题并等待用户修正，不提供 thesis 或 model paragraph；修改后 AI 重读文件并明确确认能否成文。最终反馈引用用户原句、对应评分标准，只指定一个最高价值 revision，并在用户回传修改后确认是否解决。
+- 完整模拟计时期间不介入；结束后才读取原始作答并反馈。
 
 ## 当前证据
 
