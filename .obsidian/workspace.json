@@ -69,6 +69,20 @@
               "icon": "lucide-file-text",
               "title": "1. Gender Topic Input"
             }
+          },
+          {
+            "id": "8ddc7a680f90d40a",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://d25d2506sfb94s.cloudfront.net/cumulus_uploads/document/iopahgu564/InternalResults_180205_Feminism_Suffragettes_w.pdf",
+                "title": "InternalResults_180205_Feminism_Suffragettes_w.pdf",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "InternalResults_180205_Feminism_Suffragettes_w.pdf"
+            }
           }
         ],
         "currentTab": 3
