@@ -20,9 +20,9 @@ topic: "LN905 Listening into Writing"
   核对正式题型、时间、字数，以及课程推荐的笔记、结构、criticality 和语言策略。
 - [[07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Marking-Criteria/Paper A_Marking Criteria_Listening into Writing.pdf|LSE Paper A marking criteria]]
   练习后按 accuracy、paraphrasing、length、content and focus、range、accuracy、style and structure 自评。
-- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Listening/Topic Listening - Student worksheet.pdf|Social Media listening student worksheet]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-1-Social-Media/Listening/Topic Listening - Student worksheet.pdf|Social Media listening student worksheet]]
   课程现成的分项听力练习；用问题检查是否抓住讲者目的、主张、证据和结论。
-- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Listening/Topic Listening - Ts copy.pdf|Social Media listening teacher copy]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-1-Social-Media/Listening/Topic Listening - Ts copy.pdf|Social Media listening teacher copy]]
   完成练习后核对遗漏与误听，不在第一次播放前阅读。
 - [Oxford: Reading, note-taking and library skills](https://www.ox.ac.uk/students/academic/guidance/skills/research)
   用于训练只记录主点和有用证据、避免逐字抄录，并在听后压缩成极短概述。

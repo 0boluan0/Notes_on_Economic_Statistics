@@ -81,6 +81,6 @@ This essay will argue that complex models are justified only when their out-of-s
 
 ## 来源
 
-- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/LN905 Week one materials 2026.pdf#page=3|Week 1 workbook · assignment and deadlines]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/LN905 Week one materials 2026.pdf#page=19|Week 1 workbook · choosing an essay question]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/LN905 Week one materials 2026.pdf#page=20|Week 1 workbook · essay question proposal]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/LN905 Week one materials 2026.pdf#page=3|Week 1 workbook · assignment and deadlines]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/LN905 Week one materials 2026.pdf#page=19|Week 1 workbook · choosing an essay question]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/LN905 Week one materials 2026.pdf#page=20|Week 1 workbook · essay question proposal]]

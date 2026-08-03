@@ -40,42 +40,109 @@ aliases:
 
 ## 02 Academic writing
 
-- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week One Lesson One.pdf|Week 1 · Lesson 1]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week One Lesson Two.pdf|Week 1 · Lesson 2]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week One Lesson Three.pdf|Week 1 · Lesson 3]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/LN905 Week one materials 2026.pdf|Week 1 workbook]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/LN905 Week one materials 2026 - B completed.pdf|Completed workbook example]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Session 2 - Simon.pdf|Session 2 · Introductions and Conclusions]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Examples.pdf|Writing examples]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Essay-Question-Rationale/Description Essay Question & Rationale.pdf|Essay question rationale]]
+### Week 1
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/Week One Lesson One.pdf|Lesson 1]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/Week One Lesson Two.pdf|Lesson 2]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/Week One Lesson Three.pdf|Lesson 3]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/LN905 Week one materials 2026.pdf|Week 1 workbook]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/LN905 Week one materials 2026 - B completed.pdf|Completed workbook example]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/Session 2 - Simon.pdf|Introductions and Conclusions]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/Examples.pdf|Writing examples]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/Description Essay Question & Rationale.pdf|Essay question and rationale]]
+
+### Week 2 · Gender
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/2026 WEEK TWO Assignment Booklet LN905.pdf|Assignment booklet]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week Two Lessons One and Two.pdf|Lessons 1–2]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 3.pdf|Lesson 3]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf|Lesson 4]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Annotated Bibliography.pdf|Annotated Bibliography submission]]
+
+### Week 3 · Demographics
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Essay Plan.pdf|Essay Plan submission]]
+
+### Week 4 · Climate change
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Essay Draft - Turnitin report.pdf|Essay Draft and Turnitin submission]]
 
 ## 03 Paper A · Listening into Writing
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening into Writing Introduction.pdf|Introduction]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening_into_Writing_AI_Feedback_Workbook.pdf|AI feedback workbook]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Listening into Writing Submission - Gender.pdf|Week 2 · Gender submission]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Listening into Writing Submission - Demographics.pdf|Week 3 · Demographics submission]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-4-Climate-Change/Listening into Writing Submission - Climate Change.pdf|Week 4 · Climate change submission]]
 
 ## 04 Paper B · Reading into Writing
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading into Writing.pdf|Introduction]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading_into_Writing_AI_Feedback_Workbook.pdf|AI feedback workbook]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-2-Gender/Reading into Writing - Gender Essay Question and Submission.pdf|Week 2 · Gender question and submission]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-3-Demographics/Reading into Writing - Demographics Essay Question and Submission.pdf|Week 3 · Demographics question and submission]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change/Reading into Writing - Climate Change Essay Question and Submission.pdf|Week 4 · Climate change question and submission]]
 
 ## 05 Paper C · Speaking and Listening
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/2-minute-presentations/Week One_LN905.pdf|Week 1 · Two-minute presentation]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Presentation Guide - Timestamped Transcript.pdf|Presentation guide transcript]]
+- [[07_Programme/01_LN905_LSE-language-class/Media/05_Paper-C-Speaking-and-Listening/Presentation Guide.mp4|Presentation guide video]]
 
 ## 06 Academic interaction
 
+### Core
+
 - [[07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Academic Interaction.pdf|Academic Interaction]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Academic Interaction Roles.pdf|Interaction roles]]
+
+### Week 2 · Gender
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-2-Gender/Academic Interaction - Gender.pdf|Slides]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-2-Gender/5. Haines et al. (2016) The Times They Are a-Changing - Or Are They Not. A Comparison of Gender Stereotypes 1983-2014.pdf|Haines et al. (2016) · Gender stereotypes]]
+
+### Week 3 · Demographics
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-3-Demographics/Academic Interaction - Demographics.pdf|Slides]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-3-Demographics/Demographics Academic Interaction.pdf|Reading]]
+
+### Week 4 · Climate change
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-4-Climate-Change/Academic Interaction - Climate Change.pdf|Slides]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-4-Climate-Change/Thinking about climate change look up and look around.pdf|Thinking About Climate Change · Look Up and Look Around]]
 
 ## 07 Language skills
 
 ### Discussion and debate
 
-- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Discussion Week 1 PPT.pdf|Discussion and Debate · Week 1]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Guess Who_ Profile Templates.pdf|Guess Who? profile templates]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/The Dinner Party.pdf|The Dinner Party]]
+#### Week 1
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-1/Discussion Week 1 PPT.pdf|Week 1 slides]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-1/Guess Who_ Profile Templates.pdf|Guess Who? profile templates]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-1/The Dinner Party.pdf|The Dinner Party]]
+
+#### Week 2 · Gender
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-2-Gender/Discussion Week 2 PPT.pdf|Slides]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-2-Gender/Discussion Challenge Card Prompts.pdf|Challenge cards]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-2-Gender/University Funding Scenario.pdf|University funding scenario]]
+
+#### Week 3 · Demographics
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-3-Demographics/Balloon Debate.pdf|Balloon Debate slides]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-3-Demographics/Balloon Debate Info.pdf|Balloon Debate guide]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-3-Demographics/Pyramid Discussion.pdf|Pyramid Discussion]]
+
+#### Week 4 · Climate change
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-4-Climate-Change/Role Play.pdf|Role-play slides]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-4-Climate-Change/Details of role play.pdf|Role-play details]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-4-Climate-Change/pre tasks and phrases.pdf|Pre-tasks and phrases]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-4-Climate-Change/Role A.pdf|Role A]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-4-Climate-Change/Role B.pdf|Role B]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-4-Climate-Change/Role C.pdf|Role C]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-4-Climate-Change/Role D.pdf|Role D]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-4-Climate-Change/Role E.pdf|Role E]]
 
 ### Everyday English
 
@@ -86,25 +153,87 @@ aliases:
 - [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Hong Shao Rou.pdf|Hong Shao Rou]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Transcript.pdf|Transcript]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/th sounds.pdf|Voiced and unvoiced “th” sounds]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Interactive/Session 1 - The Sounds of English.pdf|Interactive 1 · The Sounds of English]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Interactive/Session 2 - The Schwa.pdf|Interactive 2 · The Schwa]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Interactive/Session 3 - Connected Speech.pdf|Interactive 3 · Connected Speech]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Interactive/Session 4 - Sentence & Word Stress.pdf|Interactive 4 · Sentence and Word Stress]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Interactive/Session 1 - The Sounds of English.pdf|Session 1 · The Sounds of English]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Interactive/Session 2 - The Schwa.pdf|Session 2 · The Schwa]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Interactive/Session 3 - Connected Speech.pdf|Session 3 · Connected Speech]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Interactive/Session 4 - Sentence & Word Stress.pdf|Session 4 · Sentence and Word Stress]]
+- [[07_Programme/01_LN905_LSE-language-class/Media/07_Language-Skills/Pronunciation/Interactive/phonemic-table-6562.h5p|Interactive · Phonemic table]]
+- [[07_Programme/01_LN905_LSE-language-class/Media/07_Language-Skills/Pronunciation/Interactive/the-schwa-6563.h5p|Interactive · The Schwa]]
+- [[07_Programme/01_LN905_LSE-language-class/Media/07_Language-Skills/Pronunciation/Interactive/connected-speech-6564.h5p|Interactive · Connected Speech]]
+- [[07_Programme/01_LN905_LSE-language-class/Media/07_Language-Skills/Pronunciation/Interactive/sentence-word-stress-6565.h5p|Interactive · Sentence and Word Stress]]
+- [[07_Programme/01_LN905_LSE-language-class/Media/07_Language-Skills/Pronunciation/voiced th.m4a|Audio · Voiced “th”]]
+- [[07_Programme/01_LN905_LSE-language-class/Media/07_Language-Skills/Pronunciation/unvoiced th.m4a|Audio · Unvoiced “th”]]
 
-## 08 Topic · Social media
+## 08 Topics
 
-### Input and discussion
+### Shared
 
-- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/Module1-Framing.pdf|Module 1 · Framing]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/PIIS1364661320302515 social media and well being article.pdf|Social media and well-being article]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/Topic Input Social Media.pdf|Topic input slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/Topic Input Social Media Worksheet.pdf|Topic input worksheet]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Shared/Module1-Framing.pdf|Module 1 · Framing]]
 
-### Listening
+### Week 1 · Social media
 
-- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Listening/Listening Social Media.pdf|Listening slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Listening/Topic Listening - Student worksheet.pdf|Student worksheet]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Listening/Topic Listening - Ts copy.pdf|Teacher's copy]]
+#### Input and discussion
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-1-Social-Media/Input-and-Discussion/PIIS1364661320302515 social media and well being article.pdf|Social media and well-being article]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-1-Social-Media/Input-and-Discussion/Topic Input Social Media.pdf|Topic input slides]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-1-Social-Media/Input-and-Discussion/Topic Input Social Media Worksheet.pdf|Topic input worksheet]]
+
+#### Listening
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-1-Social-Media/Listening/Listening Social Media.pdf|Listening slides]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-1-Social-Media/Listening/Topic Listening - Student worksheet.pdf|Student worksheet]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-1-Social-Media/Listening/Topic Listening - Ts copy.pdf|Teacher's copy]]
+
+### Week 2 · Gender
+
+#### Input and discussion
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/Topic Input Gender.pdf|Topic input slides]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/1. Gender Topic Input.pdf|Topic input worksheet]]
+
+#### Listening
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Listening/Listening Gender.pdf|Listening slides]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Listening/Gender - Listening Vocabulary.pdf|Listening vocabulary]]
+
+#### Reading
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Reading/3. Ellemers (2018) - Gender Stereotypes.pdf|Ellemers (2018) · Gender Stereotypes]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Reading/3. Gender Reading.pdf|Reading questions]]
+
+### Week 3 · Demographics
+
+#### Input and discussion
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-3-Demographics/Input-and-Discussion/Topic Input Demographics.pdf|Topic input slides]]
+
+#### Listening
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-3-Demographics/Listening/Listening Demographics.pdf|Listening slides]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-3-Demographics/Listening/Topic Listening_Worksheet.pdf|Listening worksheet]]
+
+#### Reading
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-3-Demographics/Reading/The unbearable weight of aging.pdf|The Unbearable Weight of Aging]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-3-Demographics/Reading/Topic Reading_Questions.pdf|Reading questions]]
+
+### Week 4 · Climate change
+
+#### Input and discussion
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Input-and-Discussion/Topic Input Climate Change.pdf|Topic input slides]]
+
+#### Listening
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Listening/Topic Listening.pdf|Listening slides]]
+- [[07_Programme/01_LN905_LSE-language-class/Media/08_Topics/Week-4-Climate-Change/Listening/TheReithLectures-20201223-FromClimateCrisisToRealProsperity.mp3|Reith Lecture · From Climate Crisis to Real Prosperity]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Listening/Reith_2020_Lecture_4_transcript_V2.pdf|Reith Lecture transcript]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Listening/Video Links.pdf|Video links]]
+
+#### Reading
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Reading/Climate Change Text - Lewandowski - Climate Change Disinformation and how to Combat it.pdf|Lewandowsky · Climate change disinformation]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Reading/Topic Reading.pdf|Reading slides]]
 
 ## 09 References
 
@@ -114,121 +243,3 @@ aliases:
 - [[07_Programme/01_LN905_LSE-language-class/PDF/09_References/Academic_Vocabulary_in_Use.pdf|Academic Vocabulary in Use]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/09_References/Citing-and-Referencing-Powerpoint.pdf|Citing and Referencing]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/09_References/oscola_4th_edn_hart_2012.pdf|OSCOLA 4th edition]]
-
-## 10 Week 2 · Gender
-
-### Academic writing
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Academic-Writing/2026 WEEK TWO Assignment Booklet LN905.pdf|Week 2 assignment booklet]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Academic-Writing/Week Two Lessons One and Two.pdf|Lessons 1–2 slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Academic-Writing/Week 2 Lesson 3.pdf|Lesson 3 slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Academic-Writing/Week 2 Lesson 4.pdf|Lesson 4 slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Academic-Writing/Annotated Bibliography.pdf|Annotated Bibliography submission page]]
-
-### Topic input and discussion
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Topic-Input-and-Discussion/Topic Input Gender.pdf|Gender topic input slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Topic-Input-and-Discussion/1. Gender Topic Input.pdf|Gender topic input worksheet]]
-
-### Topic listening
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Topic-Listening/Listening Gender.pdf|Gender listening slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Topic-Listening/Gender - Listening Vocabulary.pdf|Gender listening vocabulary]]
-
-### Topic reading
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Topic-Reading/3. Ellemers (2018) - Gender Stereotypes.pdf|Ellemers (2018) · Gender Stereotypes]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Topic-Reading/3. Gender Reading.pdf|Gender reading questions]]
-
-### Academic interaction
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Academic-Interaction/Academic Interaction - Gender.pdf|Gender academic interaction slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Academic-Interaction/5. Haines et al. (2016) The Times They Are a-Changing - Or Are They Not. A Comparison of Gender Stereotypes 1983-2014.pdf|Haines et al. (2016) · Gender stereotypes]]
-
-### Discussion, pronunciation and papers
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Discussion-and-Debate/Discussion Week 2 PPT.pdf|Discussion Week 2 slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Discussion-and-Debate/Discussion Challenge Card Prompts.pdf|Discussion challenge cards]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Discussion-and-Debate/University Funding Scenario.pdf|University funding scenario]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Interactive/Session 2 - The Schwa.pdf|Pronunciation · Session 2 · The Schwa]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Paper-A-Listening-into-Writing/Listening into Writing Submission - Gender.pdf|Paper A · Gender submission page]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Week-2-Gender/Paper-B-Reading-into-Writing/Reading into Writing - Gender Essay Question and Submission.pdf|Paper B · Gender question and submission page]]
-
-## 11 Week 3 · Demographics
-
-### Academic writing
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/11_Week-3-Demographics/Academic-Writing/Essay Plan.pdf|Essay Plan submission page]]
-
-### Topic input and listening
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/11_Week-3-Demographics/Topic-Input-and-Discussion/Topic Input Demographics.pdf|Demographics topic input slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/11_Week-3-Demographics/Topic-Listening/Listening Demographics.pdf|Demographics listening slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/11_Week-3-Demographics/Topic-Listening/Topic Listening_Worksheet.pdf|Demographics listening worksheet]]
-
-### Topic reading
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/11_Week-3-Demographics/Topic-Reading/The unbearable weight of aging.pdf|The Unbearable Weight of Aging]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/11_Week-3-Demographics/Topic-Reading/Topic Reading_Questions.pdf|Demographics reading questions]]
-
-### Academic interaction
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/11_Week-3-Demographics/Academic-Interaction/Academic Interaction - Demographics.pdf|Demographics academic interaction slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/11_Week-3-Demographics/Academic-Interaction/Demographics Academic Interaction.pdf|Demographics academic interaction text]]
-
-### Discussion, pronunciation and papers
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/11_Week-3-Demographics/Discussion-and-Debate/Balloon Debate.pdf|Balloon Debate slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/11_Week-3-Demographics/Discussion-and-Debate/Pyramid Discussion.pdf|Pyramid Discussion slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/11_Week-3-Demographics/Discussion-and-Debate/Balloon Debate Info.pdf|Balloon Debate guide]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Interactive/Session 3 - Connected Speech.pdf|Pronunciation · Session 3 · Connected Speech]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/11_Week-3-Demographics/Paper-A-Listening-into-Writing/Listening into Writing Submission - Demographics.pdf|Paper A · Demographics submission page]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/11_Week-3-Demographics/Paper-B-Reading-into-Writing/Reading into Writing - Demographics Essay Question and Submission.pdf|Paper B · Demographics question and submission page]]
-
-## 12 Week 4 · Climate change
-
-### Academic writing
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Academic-Writing/Essay Draft - Turnitin report.pdf|Essay Draft and Turnitin submission page]]
-
-### Topic input and listening
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Topic-Input-and-Discussion/Topic Input Climate Change.pdf|Climate change topic input slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topic-Social-Media/Input-and-Discussion/Module1-Framing.pdf|Framing article]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Topic-Listening/Topic Listening.pdf|Climate change listening slides]]
-- [[07_Programme/01_LN905_LSE-language-class/Media/12_Week-4-Climate-Change/Topic-Listening/TheReithLectures-20201223-FromClimateCrisisToRealProsperity.mp3|Reith Lecture · From Climate Crisis to Real Prosperity (audio)]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Topic-Listening/Reith_2020_Lecture_4_transcript_V2.pdf|Reith Lecture transcript]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Topic-Listening/Video Links.pdf|Climate change video links]]
-
-### Topic reading
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Topic-Reading/Climate Change Text - Lewandowski - Climate Change Disinformation and how to Combat it.pdf|Lewandowsky · Climate change disinformation]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Topic-Reading/Topic Reading.pdf|Climate change reading slides]]
-
-### Academic interaction
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Academic-Interaction/Academic Interaction - Climate Change.pdf|Climate change academic interaction slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Academic-Interaction/Thinking about climate change look up and look around.pdf|Thinking About Climate Change · Look Up and Look Around]]
-
-### Discussion and debate
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Discussion-and-Debate/Role Play.pdf|Role-play slides]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Discussion-and-Debate/Details of role play.pdf|Role-play details]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Discussion-and-Debate/pre tasks and phrases.pdf|Pre-tasks and phrases]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Discussion-and-Debate/Role A.pdf|Role A]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Discussion-and-Debate/Role B.pdf|Role B]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Discussion-and-Debate/Role C.pdf|Role C]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Discussion-and-Debate/Role D.pdf|Role D]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Discussion-and-Debate/Role E.pdf|Role E]]
-
-### Pronunciation and papers
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Interactive/Session 4 - Sentence & Word Stress.pdf|Pronunciation · Session 4 · Sentence and Word Stress]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Paper-A-Listening-into-Writing/Listening into Writing Submission - Climate Change.pdf|Paper A · Climate change submission page]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/12_Week-4-Climate-Change/Paper-B-Reading-into-Writing/Reading into Writing - Climate Change Essay Question and Submission.pdf|Paper B · Climate change question and submission page]]
-
-## Superseded · 2026-07-29
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/_Superseded/2026-07-29/00_Course-Info/Week-1/Wk1 Group 2.pdf|Week 1 · Group 2 timetable · previous version]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/_Superseded/2026-07-29/01_Assessment/Marking-Criteria/Paper A_Marking Criteria_Listening into Writing.pdf|Paper A marking criteria · previous version]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/_Superseded/2026-07-29/03_Paper-A-Listening-into-Writing/Listening into Writing Introduction.pdf|Listening into Writing introduction · previous version]]
