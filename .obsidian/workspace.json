@@ -62,24 +62,12 @@
             "id": "bf65994d7e208a51",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Week1-Academic-Writing-moodle.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/1. Gender Topic Input.pdf"
               },
-              "icon": "lucide-file",
-              "title": "Week1-Academic-Writing-moodle"
+              "icon": "lucide-file-text",
+              "title": "1. Gender Topic Input"
             }
           }
         ],
@@ -112,22 +100,12 @@
             }
           },
           {
-            "id": "2a658727394b251b",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "recent-files"
-            }
-          },
-          {
             "id": "68e022ef2943b75b",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "li z",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -205,7 +183,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/09_References/oscola_4th_edn_hart_2012.pdf",
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/1. Gender Topic Input.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -294,19 +272,19 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "bf65994d7e208a51",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/1. Gender Topic Input.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/Topic Input Gender.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/09_References/oscola_4th_edn_hart_2012.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/09_References/Citing-and-Referencing-Powerpoint.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/09_References/APA-6th-style-for-referencing.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/09_References/Academic_Vocabulary_in_Use.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/09_References/10-types-of-plagiarism.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/09_References/10 types of plagiarism Turnitin video.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/1. Gender Topic Input.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/Topic Input Gender.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/2026 WEEK TWO Assignment Booklet LN905.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 3.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/2-minute-presentations/Week One_LN905.pdf",
     "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Week 2 - Gender.md",
     "99_学习情况记录/2026-08-03——Mon.md",
