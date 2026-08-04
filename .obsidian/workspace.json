@@ -16,21 +16,8 @@
               "icon": "sprout",
               "title": "Learning Progress Dashboard"
             }
-          },
-          {
-            "id": "501fcdd26a18e73a",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 2.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Wk 2-4 Group 2"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -142,7 +129,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 2.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -241,15 +227,17 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "501fcdd26a18e73a",
+  "active": "70c0343f5ae25f5e",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 4.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 3.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 2.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/2026 WEEK TWO Assignment Booklet LN905.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/10_Dumitrescu et al. (2022) - Interpretable ML credit scoring (author preprint).pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/09_Martens et al. (2007) - Comprehensible credit scoring via SVM rule extraction.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/08_Sadhwani et al. (2021) - Deep learning for mortgage risk (author preprint).pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/07_Bono et al. (2021) - Algorithmic fairness in credit scoring.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 3.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 2.pdf",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/00_课程总览.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/01_Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.pdf",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
@@ -265,8 +253,6 @@
     "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/01_LN905_note/Week 2 - Gender.md",
     "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/01_LN905_note/00_课程总览.md",
     "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/02_LN905_essay",
-    "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/01_LN905_note",
-    "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Academic Writing.md",
     "tmp/pdfs/ln905-rebuild.evXQ0d/rendered/workbook-16.png",
     "tmp/pdfs/ln905-rebuild.evXQ0d/rendered/workbook-15.png",
