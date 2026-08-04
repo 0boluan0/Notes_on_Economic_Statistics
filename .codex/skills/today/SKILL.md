@@ -13,14 +13,16 @@ Build one calm, omission-resistant daily home. Make routine scheduling decisions
 - Plans: `99_学习情况记录/学习计划/`; long sequential courses and their canonical checkboxes.
 - Workbench: `99_学习情况记录/workbench.md`; standalone project tasks plus a dynamic next-action view.
 - Deadlines: `99_学习情况记录/deadlines.md`; hard obligations tagged `#student-os/deadline`.
-- Today: `99_学习情况记录/YYYY-MM-DD——ddd.md`; scheduled-task view, read-only deadline radar, completed-task view, and free writing.
+- Today: active notes live at `99_学习情况记录/YYYY-MM-DD——ddd.md`; after a completed weekly review, closed notes move unchanged to `99_学习情况记录/archive/daily/YYYY-Www/`.
 - Canonical work units are the only checkboxes tagged `#student-os/task`. Never copy one into Today or Workbench.
 
 Use `00_inbox/日记模版.md` (fallback `00_inbox/日记模板.md`). Re-running for the same date updates the existing note and must not create duplicate sections, tasks, lessons, or calendar events.
 
 ## First-awake reconciliation
 
-1. Find the newest earlier daily note.
+1. Find the newest earlier daily note across the active root and `99_学习情况记录/archive/daily/`.
+   - Archived notes are closed historical evidence. Never reschedule from, rewrite, or move an archived note during a Today run.
+   - An archived note with an open shutdown marker is an integrity failure: report it instead of silently treating it as closed.
 2. Ignore legacy notes that have no `student-os:shutdown` marker.
 3. If the newest marked note is still `open`, reconcile its unfinished scheduled tasks before planning today:
    - preserve every user-written line;
@@ -74,7 +76,8 @@ Run this content-preparation pass before composing Today whenever an LN905 pract
 
 ## Compose Today
 
-- Filename: `YYYY-MM-DD——ddd.md`.
+- Before creating or updating, search both the active root and daily archive for the same date. If that date is already archived, stop without changes; never recreate an archived date at the root.
+- Active filename: `99_学习情况记录/YYYY-MM-DD——ddd.md`.
 - Start from the template if missing.
 - Keep these sections once: `今日安排`, `临近 Deadline`, `今日已完成`, `随手写`, `收尾`.
 - Set the note's `date` property to the actual `YYYY-MM-DD` date. Do not replace the native Tasks query blocks; they read that fixed property so historical pages stay fixed without enabling Tasks JavaScript queries.
@@ -91,5 +94,6 @@ Run this content-preparation pass before composing Today whenever an LN905 pract
 - D-0 through D-14 obligations are all visible.
 - No generated block extends past 19:30.
 - A reconciled prior note contains one factual shutdown-summary block and no invented completion or reflection.
+- No daily filename exists in both the active root and archive, and an archived same-date note is never recreated.
 - No user-written text changed.
 - A second run makes no additional changes.

@@ -33,10 +33,10 @@ Listening 与 Reading 是两个独立任务。这里是唯一 canonical checkbox
 
 ## Gender｜测试 2026-08-07
 
-- [ ] LN905 Listening｜Gender 1：AI 分段结构诊断 + 180–250 词 critical summary（约 60 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-03-gender-structure.html|练习页]] #student-os/task ⏳ 2026-08-04 📅 2026-08-06
-- [ ] LN905 Reading｜Gender 1：AI 分段论证诊断 + 180–220 词 synthesis paragraph（约 55 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-03-gender-structure-response|答题页]] #student-os/task ⏳ 2026-08-04 📅 2026-08-06
-- [ ] LN905 Listening｜Gender 2：选择性笔记 + evidence role（约 50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-04-gender-selection.html|练习页]] #student-os/task ⏳ 2026-08-04 📅 2026-08-06
-- [ ] LN905 Reading｜Gender 2：限定 thesis + 三段 argument map（约 50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-04-gender-argument-map-response|答题页]] #student-os/task ⏳ 2026-08-04 📅 2026-08-06
+- [ ] LN905 Listening｜Gender 1：AI 分段结构诊断 + 180–250 词 critical summary（约 60 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-03-gender-structure.html|练习页]] #student-os/task ⏳ 2026-08-05 📅 2026-08-06
+- [ ] LN905 Reading｜Gender 1：AI 分段论证诊断 + 180–220 词 synthesis paragraph（约 55 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-03-gender-structure-response|答题页]] #student-os/task ⏳ 2026-08-05 📅 2026-08-06
+- [ ] LN905 Listening｜Gender 2：选择性笔记 + evidence role（约 50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-04-gender-selection.html|练习页]] #student-os/task ⏳ 2026-08-05 📅 2026-08-06
+- [ ] LN905 Reading｜Gender 2：限定 thesis + 三段 argument map（约 50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-04-gender-argument-map-response|答题页]] #student-os/task ⏳ 2026-08-05 📅 2026-08-06
 - [ ] LN905 Listening｜Gender 3：完整模拟：40 分钟、300–400 词（约 65 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-05-gender-full.html|练习页]] #student-os/task ⏳ 2026-08-05 📅 2026-08-06
 - [ ] LN905 Reading｜Gender 3：两来源展开 + evidence evaluation（约 45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-05-gender-evaluation-response|答题页]] #student-os/task ⏳ 2026-08-05 📅 2026-08-06
 - [ ] LN905 Listening｜Gender 4：coverage 与 evaluation 精准修复（约 40 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-06-gender-precision.html|练习页]] #student-os/task ⏳ 2026-08-06 📅 2026-08-06

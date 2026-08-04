@@ -1,4 +1,4 @@
 interface:
   display_name: "Weekly Review"
-  short_description: "Interactive weekly review for the Academic vault"
-  default_prompt: "Run a weekly learning review from this week’s daily notes."
+  short_description: "Review the week and archive its closed daily notes"
+  default_prompt: "Use $weekly-review to review this week, write its weekly note, and archive its closed daily notes."
