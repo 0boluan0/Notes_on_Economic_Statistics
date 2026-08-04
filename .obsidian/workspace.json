@@ -16,8 +16,21 @@
               "icon": "sprout",
               "title": "Learning Progress Dashboard"
             }
+          },
+          {
+            "id": "7882162f78a84ff0",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Listening/Listening Gender.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Listening Gender"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -129,6 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Listening/Listening Gender.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -227,19 +241,20 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "70c0343f5ae25f5e",
+  "active": "7882162f78a84ff0",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Listening/Gender - Listening Vocabulary.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/Topic Input Gender.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/1. Gender Topic Input.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/2-minute-presentations/Week One_LN905.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-3-Demographics/Reading into Writing - Demographics Essay Question and Submission.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-2-Gender/Reading into Writing - Gender Essay Question and Submission.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 3.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Listening into Writing Submission - Gender.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 4.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 3.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 2.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/2026 WEEK TWO Assignment Booklet LN905.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/10_Dumitrescu et al. (2022) - Interpretable ML credit scoring (author preprint).pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/09_Martens et al. (2007) - Comprehensible credit scoring via SVM rule extraction.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/08_Sadhwani et al. (2021) - Deep learning for mortgage risk (author preprint).pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/07_Bono et al. (2021) - Algorithmic fairness in credit scoring.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 3.pdf",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/00_课程总览.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/01_Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.pdf",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/02_Speaking into Writing.md",
@@ -252,7 +267,6 @@
     "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/01_LN905_note/Week 3 - Demographics.md",
     "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/01_LN905_note/Week 2 - Gender.md",
     "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/01_LN905_note/00_课程总览.md",
-    "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/02_LN905_essay",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Academic Writing.md",
     "tmp/pdfs/ln905-rebuild.evXQ0d/rendered/workbook-16.png",
     "tmp/pdfs/ln905-rebuild.evXQ0d/rendered/workbook-15.png",
