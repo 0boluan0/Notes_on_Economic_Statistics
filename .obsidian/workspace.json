@@ -28,9 +28,33 @@
               "icon": "lucide-file-text",
               "title": "Listening Gender"
             }
+          },
+          {
+            "id": "ac39b2bde8d1f933",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00_inbox/listening week2.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "listening week2"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -142,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Listening/Listening Gender.pdf",
+                "file": "00_inbox/listening week2.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -198,7 +222,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 3
       },
       {
         "id": "b6e2d525de78b465",
@@ -241,8 +265,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7882162f78a84ff0",
+  "active": "ac39b2bde8d1f933",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Listening/Listening Gender.pdf",
+    "00_inbox/listening week2.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Listening/Gender - Listening Vocabulary.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/Topic Input Gender.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/1. Gender Topic Input.pdf",
@@ -252,8 +278,6 @@
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 3.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Listening into Writing Submission - Gender.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 4.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 3.pdf",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/00_课程总览.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing.md",
@@ -289,7 +313,6 @@
     "99_学习情况记录/2026-08-03——Mon.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Social Media and Well-Being 中文逐段翻译与 summary.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Week 2-4 - Paper A and B AI Feedback.md",
-    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Week 4 - Climate Change.md",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L Course Atlas.canvas",
     "03_Computer_Science/02_CS61A/CS61A Course Atlas.canvas",
