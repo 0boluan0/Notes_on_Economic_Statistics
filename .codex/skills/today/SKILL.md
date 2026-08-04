@@ -25,11 +25,13 @@ Use `00_inbox/日记模版.md` (fallback `00_inbox/日记模板.md`). Re-running
 3. If the newest marked note is still `open`, reconcile its unfinished scheduled tasks before planning today:
    - preserve every user-written line;
    - do not invent a reflection or claim the user completed anything;
+   - before moving metadata, collect that date's canonical completions, still-open scheduled tasks, and existing user-written notes;
+   - create or update the previous note's `student-os:shutdown-summary:start/end` block with a factual recap: distinguish planned from additional completions, identify unfinished work and its carry date, and include only reminders the user actually wrote; use plain lines, never new checkboxes;
    - move only still-open scheduling metadata and matching generated `Study Plan` events;
-   - mark the note `student-os:shutdown: reconciled YYYY-MM-DD` only after the writes succeed.
+   - mark the note `student-os:shutdown: reconciled YYYY-MM-DD` only after the summary, task metadata and calendar writes all succeed.
 4. Do not create empty notes for missed days.
 
-A manual shutdown request may run the same reconciliation early. There is no fixed evening time and no “end today” button requirement.
+A manual shutdown request may run the same factual-summary and reconciliation flow early. There is no fixed evening time and no “end today” button requirement.
 
 ## Sources and deadline audit
 
@@ -77,6 +79,7 @@ Run this content-preparation pass before composing Today whenever an LN905 pract
 - Keep these sections once: `今日安排`, `临近 Deadline`, `今日已完成`, `随手写`, `收尾`.
 - Set the note's `date` property to the actual `YYYY-MM-DD` date. Do not replace the native Tasks query blocks; they read that fixed property so historical pages stay fixed without enabling Tasks JavaScript queries.
 - Replace only content between `student-os:deadline-radar:start/end`.
+- Keep one `student-os:shutdown-summary:start/end` block under `收尾`; replace only that block during shutdown reconciliation.
 - Preserve all text in `随手写`, `收尾`, and outside managed blocks.
 - Set `student-os:today-generated: YYYY-MM-DD` only after source tasks, Today, risk radar and calendar sync all succeed.
 
@@ -87,5 +90,6 @@ Run this content-preparation pass before composing Today whenever an LN905 pract
 - Scheduled tasks and generated `Study Plan` events agree.
 - D-0 through D-14 obligations are all visible.
 - No generated block extends past 19:30.
+- A reconciled prior note contains one factual shutdown-summary block and no invented completion or reflection.
 - No user-written text changed.
 - A second run makes no additional changes.

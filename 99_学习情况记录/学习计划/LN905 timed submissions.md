@@ -23,4 +23,6 @@ kind: scheduled-assessments
 
 - Gender Listening：2026-08-07 10:00 opens；11:45 due。
 - Gender Reading：2026-08-07 12:45 opens；15:00 due。
-- 其余场次的 due time 已记录在 [[deadlines]]；开放时间等待下一次 Moodle 核验，不提前臆测。
+- Demographics Listening：2026-08-14 10:00 opens；11:45 due。
+- Demographics Reading：2026-08-14 12:45 opens；15:00 due。
+- Climate Change 的 due time 已记录在 [[deadlines]]；开放时间等待下一次 Moodle 核验，不提前臆测。

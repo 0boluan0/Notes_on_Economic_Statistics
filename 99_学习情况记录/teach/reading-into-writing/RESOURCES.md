@@ -22,8 +22,8 @@ topic: "LN905 Reading into Writing"
   用户完成草稿后，用于按周检查 thesis、source synthesis、paragraph structure 和 language accuracy；不让 AI 代写。
 - [[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-1-Social-Media/Input-and-Discussion/PIIS1364661320302515 social media and well being article.pdf|Kross et al. (2021) original article]]
   用于核对 social comparison、social support、cyberbullying 等机制及其证据边界。
-- [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/Social Media and Well-Being 中文逐段翻译与 summary|Kross et al. (2021) bilingual study note]]
-  用于课后恢复论证结构与术语；限时练习时仍应直接处理英文 extracts。
+- [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing|LN905 Reading into Writing skills and solved exercises]]
+  用于恢复预读、SQ3R、source map、synthesis、secondary citation 与限时作答流程；主题论文笔记已退出活动路径。
 
 ## Gaps
 

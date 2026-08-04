@@ -14,11 +14,14 @@ kind: multi-stage-project
 > [!summary] 当前项目
 > 在 2026-08-26 前完成一篇与未来学位课程相关的 2,000 字论文（具体截止时间待核验）。题目与理由已于 2026-08-01 提交 Moodle，并核验为 Submitted for grading；当前阶段是 2026-08-09 前完成 annotated bibliography。
 > 六篇核心来源已于 2026-08-03 选定、下载并核验；下一步是精读来源 1–3。
+> 2026-08-04 又补充 4 篇高质量来源，当前文献池共 10 篇。
 >
 > <!-- bilingual-en:start -->
 > **Update, 2 August 2026:** The question and rationale were submitted to Moodle on 1 August and verified as “Submitted for grading”. The current stage is the annotated bibliography due on 9 August.
 >
 > **Update, 3 August 2026:** Six core sources have been selected, downloaded and checked. The next step is close reading of sources 1–3.
+>
+> **Update, 4 August 2026:** Four further high-quality sources have been added, bringing the research pool to ten papers.
 > <!-- bilingual-en:end -->
 
 ## 执行清单
@@ -114,6 +117,43 @@ This essay will argue that complex models are justified only when their out-of-s
 
 <!-- bilingual-en:start -->
 **Argument use:** Applies a Shapley-value-based explanation framework to a real mortgage-default model while documenting variation across loans and residual model uncertainty. It helps define what post-hoc explanation can and cannot solve.
+<!-- bilingual-en:end -->
+
+## 补充的四篇高质量来源
+
+<!-- bilingual-en:start -->
+*Four additional high-quality sources*
+<!-- bilingual-en:end -->
+
+> [!info] 补充逻辑
+> 这四篇不是为了凑数量，而是补强原组合中的关键缺口：英国消费者信用评分中的公平性实证、深度学习相对逻辑回归的超大样本增益、从黑箱提取可理解规则的经典方案，以及兼顾内生可解释性与非线性预测力的混合模型。
+>
+> <!-- bilingual-en:start -->
+> These papers fill four specific gaps rather than merely increasing the count: UK evidence on fairness in consumer credit scoring, large-scale gains from deep learning over logistic regression, a classic rule-extraction approach to making a black box comprehensible, and a hybrid model that combines intrinsic interpretability with nonlinear predictive power.
+> <!-- bilingual-en:end -->
+
+**7.** [[07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/07_Bono et al. (2021) - Algorithmic fairness in credit scoring.pdf|Bono, Croxson and Giles (2021)]] · [DOI](https://doi.org/10.1093/oxrep/grab020)：使用 80 万名英国借款人的信用档案，直接模拟从逻辑回归切换到集成机器学习。结果表明机器学习整体更准确，但既没有恶化、也没有消除不同群体之间已有的公平性问题，因此可用来反驳“复杂模型必然更不公平”以及“准确率提升自然会解决公平问题”这两个过度推断。
+
+<!-- bilingual-en:start -->
+**Argument use:** Uses credit-file data for 800,000 UK borrowers to simulate a switch from logistic regression to ensemble machine learning. The models are more accurate overall but neither worsen nor remove existing subgroup disparities, challenging both the claim that complexity is necessarily less fair and the claim that greater accuracy automatically resolves fairness concerns.
+<!-- bilingual-en:end -->
+
+**8.** [[07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/08_Sadhwani et al. (2021) - Deep learning for mortgage risk (author preprint).pdf|Sadhwani, Giesecke and Sirignano (2021) · author preprint]] · [published DOI](https://doi.org/10.1093/jjfinec/nbaa025)：基于超过 1.2 亿笔美国抵押贷款，将深度神经网络与线性逻辑模型进行样本外比较，并把预测提升连接到贷款组合与投资表现。它提供一个强有力的正面案例：当数据规模巨大且真实关系高度非线性时，复杂度带来的收益可能具有实际意义。
+
+<!-- bilingual-en:start -->
+**Argument use:** Compares a deep neural network with a linear logistic formulation out of sample using more than 120 million US mortgages and links the predictive gains to portfolio and investment performance. It supplies a strong positive case that model complexity can deliver materially useful gains when the dataset is exceptionally large and the underlying relationships are highly nonlinear.
+<!-- bilingual-en:end -->
+
+**9.** [[07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/09_Martens et al. (2007) - Comprehensible credit scoring via SVM rule extraction.pdf|Martens et al. (2007)]] · [DOI](https://doi.org/10.1016/j.ejor.2006.04.051)：比较多种从支持向量机提取符号规则的方法，发现可理解规则只损失少量黑箱模型的预测表现。它为论文提供一个早期但直接的中间立场：实际选择并非只能是透明的逻辑回归或完全不透明的复杂模型，不过其较旧且较小的数据也适合用作方法局限的批判点。
+
+<!-- bilingual-en:start -->
+**Argument use:** Compares methods for extracting symbolic rules from support vector machines and finds that comprehensible rules retain most of the black-box model's predictive performance. It provides an early but direct middle position between transparent logistic regression and a wholly opaque complex model, while its older and smaller datasets also make it suitable for critical discussion of methodological limits.
+<!-- bilingual-en:end -->
+
+**10.** [[07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/10_Dumitrescu et al. (2022) - Interpretable ML credit scoring (author preprint).pdf|Dumitrescu et al. (2022) · author preprint]] · [published DOI](https://doi.org/10.1016/j.ejor.2021.06.053)：提出 penalised logistic tree regression，用浅层决策树生成可解释规则，再由惩罚逻辑回归完成评分。在四个真实违约数据集上，它显著优于标准逻辑回归并与随机森林具有竞争力，因此直接挑战题目中“预测性能与可解释性只能二选一”的隐含前提。
+
+<!-- bilingual-en:start -->
+**Argument use:** Introduces penalised logistic tree regression, which derives interpretable rules from shallow decision trees and estimates the final score through penalised logistic regression. Across four real credit-default datasets, it significantly outperforms standard logistic regression and is competitive with random forests, directly challenging the premise that predictive performance and interpretability must be traded off as mutually exclusive goals.
 <!-- bilingual-en:end -->
 
 ## 作业要求

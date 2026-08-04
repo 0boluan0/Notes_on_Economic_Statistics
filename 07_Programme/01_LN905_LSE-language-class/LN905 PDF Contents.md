@@ -7,7 +7,11 @@ aliases:
 
 ## Current project
 
-- [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/00_课程总览|LN905 course overview and Week 2–4 notes]]
+- [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/00_课程总览|LN905 course overview]]
+- [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/01_Listening into Writing|Listening into Writing]]
+- [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/02_Speaking into Writing|Speaking into Writing]]
+- [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing|Reading into Writing]]
+- [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing|Academic Writing and solved exercises]]
 - [[LN905 Essay]]
 
 ## 00 Course info
@@ -58,7 +62,6 @@ aliases:
 - [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week Two Lessons One and Two.pdf|Lessons 1–2]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 3.pdf|Lesson 3]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf|Lesson 4]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Annotated Bibliography.pdf|Annotated Bibliography submission]]
 
 ### Week 3 · Demographics
 

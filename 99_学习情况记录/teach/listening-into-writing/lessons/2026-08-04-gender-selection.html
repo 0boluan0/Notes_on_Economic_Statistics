@@ -1,0 +1,174 @@
+<!doctype html>
+<!-- student-os:session-ready: true -->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LN905 Listening · Gender selection</title>
+  <style>
+    :root { color-scheme:light dark; --accent:#59359a; --muted:#69707a; --card:#f5f6f8; }
+    * { box-sizing:border-box; }
+    body { max-width:900px; margin:auto; padding:32px 20px 64px; font:16px/1.6 system-ui,sans-serif; }
+    header,section { margin-bottom:28px; }
+    .meta,.hint { color:var(--muted); }
+    .card { padding:18px; border:1px solid #aeb4bb; border-radius:12px; background:var(--card); }
+    .checkpoint { margin-top:16px; padding:14px; border-left:4px solid var(--accent); background:var(--card); }
+    a.button,button { padding:9px 13px; border:0; border-radius:8px; background:var(--accent); color:#fff; text-decoration:none; cursor:pointer; }
+    button.secondary { background:#555d68; }
+    textarea { width:100%; min-height:210px; padding:12px; border:1px solid #9da3aa; border-radius:8px; font:15px/1.5 ui-monospace,monospace; }
+    #summary { min-height:330px; }
+    .timer { margin:12px 0; font:700 34px/1 ui-monospace,monospace; }
+    .controls { display:flex; flex-wrap:wrap; gap:8px; }
+    .copy-status { margin-left:8px; color:var(--muted); }
+    .review-entry { margin-top:18px; padding-top:18px; border-top:1px solid #aeb4bb; }
+    pre { white-space:pre-wrap; overflow-wrap:anywhere; }
+    label { display:block; margin:7px 0; }
+    @media (prefers-color-scheme:dark) { :root { --card:#20242a; --muted:#abb2bd; } }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="meta">2026-08-04 · Gender · Session G-L2 · 约 50 分钟</p>
+    <h1>选择性笔记：证据在论证里做什么</h1>
+    <p><strong>唯一训练重点：</strong>不追求记下所有细节；只保留能恢复主张、推理连接和 evidence role 的内容。</p>
+    <p><strong>这是 AI 引导练习，不是完整模拟。</strong>你先独立听、选材和判断证据作用；成文前与初稿后各完成一次闭环 checkpoint。我不会提前给结构或 model answer。</p>
+    <p><a class="button" href="https://www.youtube.com/watch?v=akOe5-UsQ2o" target="_blank" rel="noreferrer">打开 TED 官方 YouTube（18:49）</a></p>
+  </header>
+
+  <section class="card">
+    <h2>计时器</h2>
+    <div id="timer" class="timer">18:49</div>
+    <div class="controls">
+      <button data-seconds="1129">听力 18:49</button>
+      <button data-seconds="420">选材与 map 7:00</button>
+      <button data-seconds="960">短成文 16:00</button>
+      <button data-seconds="300">针对性修订 5:00</button>
+      <button id="pause" class="secondary">暂停／继续</button>
+    </div>
+    <p class="hint">AI 等待时间不计入 50 分钟主动练习时间。</p>
+  </section>
+
+  <section>
+    <h2>1｜第一次听：先记内容，再标作用</h2>
+    <p>关闭字幕，不暂停、不回放。每出现一个可能有用的论证动作就另起一项；不确定作用时写 <code>?</code>。人名和故事细节只有在承担论证功能时才保留。</p>
+    <textarea id="notes" aria-label="听力笔记" placeholder="Working claim（≤15 words）:
+
+Moment 1 — key content:
+Possible role（demonstration / case / analogy-warrant / application / call to action / ?）:
+Keep or drop, because:
+
+Moment 2:
+
+Moment 3:
+
+Moment 4:
+
+Possible evaluation（what the evidence can / cannot establish）:"></textarea>
+  </section>
+
+  <section>
+    <h2>2｜七分钟选择与 evidence map</h2>
+    <p>不看 transcript。把 notes 压缩为 2–4 个主块；每个 block 必须写清它在推进什么，而不是复述发生了什么。</p>
+    <textarea id="map" aria-label="选择与证据图" placeholder="Final claim:
+
+Block 1 — job in the argument:
+Evidence kept — what claim does it support?:
+
+Block 2 — job in the argument:
+Evidence kept — what claim does it support?:
+
+Block 3 — job in the argument:
+Evidence kept — what claim does it support?:
+
+One detail I dropped, and why it is not needed:
+
+Scope: the evidence supports ___, but does not by itself prove ___"></textarea>
+    <div class="checkpoint">
+      <h3>AI checkpoint 1｜成文前</h3>
+      <p>第一次发送后回答我的问题，把修订写回 map，再点同一按钮发送新版。收到我明确回复“可以成文”后才继续。</p>
+      <button data-copy="checkpoint1">复制 checkpoint 1／再次发送复核</button><span id="checkpoint1-status" class="copy-status" aria-live="polite"></span>
+    </div>
+  </section>
+
+  <section>
+    <h2>3｜16 分钟 guided critical summary</h2>
+    <p><strong>Task:</strong> Critically summarise Kimberlé Crenshaw’s argument that intersectional framing is necessary to make overlapping forms of disadvantage visible. Explain how her evidence functions, and assess the scope of what it establishes.</p>
+    <p>目标 <strong>170–220 词</strong>。只使用支持论证链的材料；至少准确说明两种 evidence role。评价必须指向 evidence、warrant 或 scope。</p>
+    <textarea id="summary" aria-label="critical summary"></textarea>
+    <p><strong>Words:</strong> <span id="words">0</span></p>
+    <div class="checkpoint">
+      <h3>AI checkpoint 2｜初稿后</h3>
+      <p>先发送初稿。我只选一个最高价值 revision；修改 summary、填写 Revision 与复盘，再点同一按钮回传完整快照。收到我确认后才完成。</p>
+      <button data-copy="checkpoint2">复制 checkpoint 2／再次发送复核</button><span id="checkpoint2-status" class="copy-status" aria-live="polite"></span>
+    </div>
+  </section>
+
+  <section>
+    <h2>4｜根据反馈只改一处</h2>
+    <textarea id="revision" aria-label="针对性修订" placeholder="AI 选出的 revision target：
+
+修改前：
+
+修改后：
+
+为什么这样改："></textarea>
+
+    <h2>5｜修订后核对</h2>
+    <details>
+      <summary>完成成文后再打开 transcript</summary>
+      <p><a href="https://www.ted.com/talks/kimberle_crenshaw_the_urgency_of_intersectionality/transcript" target="_blank" rel="noreferrer">TED 官方 transcript</a></p>
+      <p class="hint">只核对遗漏、误听和 evidence role；不要把 transcript 改写成另一篇答案。</p>
+    </details>
+    <label><input type="checkbox"> final claim 回答了讲者真正要改变的认识或行动</label>
+    <label><input type="checkbox"> 每个保留的例子都说明了它支持哪项 claim</label>
+    <label><input type="checkbox"> 我区分了 demonstration、case、analogy、application 与 call to action</label>
+    <label><input type="checkbox"> 我没有把感染力强的结尾当成新的经验性证明</label>
+    <label><input type="checkbox"> 两个 AI checkpoint 已闭环，最终 revision 已获确认</label>
+    <label><input type="checkbox"> 没有连续照搬超过四个词，字数为 170–220</label>
+  </section>
+
+  <section class="card">
+    <h2>复盘</h2>
+    <textarea id="reflection" aria-label="练习复盘" placeholder="Transcript 核对后，我遗漏或误判作用的证据：
+
+我记了但其实不需要的细节：
+
+最能推进论证的一条 evidence：
+
+下一次只修一个问题："></textarea>
+    <p class="hint">localStorage 只保存本机工作草稿；每轮 AI 协作记录会追加写回本 HTML。收到最终确认后，再到 Today 勾选原任务。</p>
+  </section>
+
+  <section class="card" id="ai-review-log">
+    <h2>AI 协作记录</h2>
+    <p class="hint">这里按时间追加每轮输入、AI 诊断、你的修订和放行结果；刷新不会清空浏览器草稿。</p>
+    <!-- student-os:ai-review:start -->
+    <!-- student-os:ai-review:end -->
+  </section>
+
+  <footer class="meta">Sources: <a href="https://www.youtube.com/watch?v=akOe5-UsQ2o">TED YouTube</a> · <a href="https://www.ted.com/talks/kimberle_crenshaw_the_urgency_of_intersectionality/transcript">TED transcript</a> · <a href="../../../../07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Marking-Criteria/Paper%20A_Marking%20Criteria_Listening%20into%20Writing.pdf">LN905 criteria</a></footer>
+
+  <script>
+    const key="liw-2026-08-04-gender-selection-", fields=["notes","map","summary","revision","reflection"];
+    function count(){const value=document.getElementById("summary").value.trim();document.getElementById("words").textContent=value?value.split(/\s+/).length:0;}
+    for(const id of fields){const el=document.getElementById(id);el.value=localStorage.getItem(key+id)||"";el.addEventListener("input",()=>{localStorage.setItem(key+id,el.value);if(id==="summary")count();});} count();
+    let remaining=1129, handle=null; const display=document.getElementById("timer");
+    function render(){display.textContent=`${String(Math.floor(remaining/60)).padStart(2,"0")}:${String(remaining%60).padStart(2,"0")}`;}
+    function start(seconds){clearInterval(handle);remaining=seconds;render();handle=setInterval(()=>{if(remaining>0){remaining--;render();}else{clearInterval(handle);handle=null;}},1000);}
+    document.querySelectorAll("[data-seconds]").forEach(button=>button.addEventListener("click",()=>start(Number(button.dataset.seconds))));
+    document.getElementById("pause").addEventListener("click",()=>{if(handle){clearInterval(handle);handle=null;}else start(remaining);});
+    const value=id=>document.getElementById(id).value.trim();
+    const recordTarget="99_学习情况记录/teach/listening-into-writing/lessons/2026-08-04-gender-selection.html#student-os:ai-review";
+    const prompts={
+      checkpoint1:()=>`LN905 Listening guided checkpoint 1｜2026-08-04-gender-selection。检验选择是否服务 final claim、每条 evidence 的作用，以及 evidence/warrant/scope。第一次收到时，先确认一个正确点并最多问我 3 个针对性问题，不给完整结构或 model answer；我回答并修改后会再次发送。收到新版时，若问题已解决请明确回复“可以成文”，否则只指出一个仍需修的连接。\n\nRECORD TARGET\n${recordTarget}\n在回复前，把本次输入、你的反馈、我的后续回答与放行结果追加写入该 HTML；不能只留在聊天或 localStorage。\n\nNOTES\n${value("notes")}\n\nMAP\n${value("map")}`,
+      checkpoint2:()=>`LN905 Listening guided checkpoint 2｜2026-08-04-gender-selection。第一次收到时，请引用我的原句、对应 LN905 criteria，并只选一个最高价值 revision target，不要整段重写；我修改后会再次发送。收到含 revision record 的新版时，请核对修改是否解决问题：若已解决明确回复“本次练习完成”，否则只指出一个尚未解决的问题。\n\nRECORD TARGET\n${recordTarget}\n在回复前，把本次完整快照、你的反馈、我的修订与确认结果追加写入该 HTML；不能只留在聊天或 localStorage。\n\nNOTES\n${value("notes")}\n\nMAP\n${value("map")}\n\nSUMMARY\n${value("summary")}\n\nREVISION RECORD\n${value("revision")}\n\nREFLECTION\n${value("reflection")}`
+    };
+    async function copyCheckpoint(name){
+      const text=prompts[name](), status=document.getElementById(`${name}-status`);
+      try{await navigator.clipboard.writeText(text);}catch{const el=document.createElement("textarea");el.value=text;document.body.appendChild(el);el.select();document.execCommand("copy");el.remove();}
+      status.textContent="已复制；粘贴到当前 Codex 对话";
+    }
+    document.querySelectorAll("[data-copy]").forEach(button=>button.addEventListener("click",()=>copyCheckpoint(button.dataset.copy)));
+  </script>
+</body>
+</html>

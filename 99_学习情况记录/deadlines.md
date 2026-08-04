@@ -32,6 +32,8 @@ tags:
 
 ## 核验状态
 
+- 2026-08-04｜Moodle 日常核对完成：Gender 与 Demographics 的 Listening/Reading 开放及截止时间均未提前；四项当前均显示未提交。Annotated Bibliography 与 Essay Plan 仍未提交，页面仍未显示独立 due 字段，继续以 workbook 日期为准。
+- 2026-08-04｜Apple Calendar 的只读 `LSE` 读取成功：今天无固定课程或行程；8 月 7、14、21 日的 Listening/Reading 截止点与记录一致，重复订阅的 Reading 条目已按标题与时间去重。
 - 2026-08-03｜Moodle 日常核对完成：Announcements 仍为空；Gender Listening 开放 10:00、截止 11:45，Gender Reading 开放 12:45、截止 15:00，均未提前；Annotated Bibliography 与 Essay Plan 当前均为未提交，页面未显示独立 due 字段，继续以 workbook 日期为准。
 - 2026-08-03｜Apple Calendar 的只读 `LSE` 已与 Moodle 近期项目比较；8 月 7 日与 14 日的四个截止点没有提前或新增。
 - 2026-08-02｜Moodle 全量核对完成：Assignments、课程文件目录与 Announcements 已检查；Announcements 当前为空。
