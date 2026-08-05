@@ -38,17 +38,17 @@ Listening 与 Reading 是两个独立任务。这里是唯一 canonical checkbox
 
 - [ ] LN905 Listening｜Gender 1：AI 分段结构诊断 + 180–250 词 critical summary（约 60 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-03-gender-structure.html|练习页]] #student-os/task ⏳ 2026-08-05 📅 2026-08-06
 - [ ] LN905 Reading｜Gender 1：AI 分段论证诊断 + 180–220 词 synthesis paragraph（约 55 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-03-gender-structure-response|答题页]] #student-os/task ⏳ 2026-08-05 📅 2026-08-06
-- [ ] LN905 Listening｜Gender 2：选择性笔记 + evidence role（约 50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-04-gender-selection.html|练习页]] #student-os/task ⏳ 2026-08-05 📅 2026-08-06
-- [ ] LN905 Reading｜Gender 2：限定 thesis + 三段 argument map（约 50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-04-gender-argument-map-response|答题页]] #student-os/task ⏳ 2026-08-05 📅 2026-08-06
-- [ ] LN905 Listening｜Gender 3：完整模拟：40 分钟、300–400 词（约 65 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-05-gender-full.html|练习页]] #student-os/task ⏳ 2026-08-05 📅 2026-08-06
-- [ ] LN905 Reading｜Gender 3：两来源展开 + evidence evaluation（约 45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-05-gender-evaluation-response|答题页]] #student-os/task ⏳ 2026-08-06 📅 2026-08-06
-- [ ] LN905 Listening｜Gender 4：coverage 与 evaluation 精准修复（约 40 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-06-gender-precision.html|练习页]] #student-os/task ⏳ 2026-08-06 📅 2026-08-06
-- [ ] LN905 Reading｜Gender 4：完整模拟：120 分钟、约 600 词｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-06-gender-full-response|答题页]] #student-os/task ⏳ 2026-08-06 📅 2026-08-06
+- [ ] LN905 Listening｜Gender 2：选择性笔记 + evidence role（约 50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-04-gender-selection.html|练习页]] #student-os/task ⏳ 2026-08-06 📅 2026-08-06
+- [ ] LN905 Reading｜Gender 2：限定 thesis + 三段 argument map（约 50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-04-gender-argument-map-response|答题页]] #student-os/task ⏳ 2026-08-06 📅 2026-08-06
+- [ ] LN905 Listening｜Gender 3：完整模拟：40 分钟、300–400 词（约 65 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-05-gender-full.html|练习页]] #student-os/task
+- [ ] LN905 Reading｜Gender 3：两来源展开 + evidence evaluation（约 45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-05-gender-evaluation-response|答题页]] #student-os/task
+- [ ] LN905 Listening｜Gender 4：coverage 与 evaluation 精准修复（约 40 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-06-gender-precision.html|练习页]] #student-os/task
+- [ ] LN905 Reading｜Gender 4：完整模拟：120 分钟、约 600 词｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-06-gender-full-response|答题页]] #student-os/task
 
 ## Demographics｜测试 2026-08-14
 
-- [ ] LN905 Listening｜Demographics 0A：新主题结构迁移 + 220–280 词 summary（约 45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-08-demographics-transfer.html|练习页]] #student-os/task ⏳ 2026-08-08 📅 2026-08-13
-- [ ] LN905 Reading｜Demographics 0A：审题 + 三篇来源的 argument roles（约 40 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-08-demographics-transfer-response|答题页]] #student-os/task ⏳ 2026-08-08 📅 2026-08-13
+- [ ] LN905 Listening｜Demographics 0A：新主题结构迁移 + 220–280 词 summary（约 45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-08-demographics-transfer.html|练习页]] #student-os/task ⏳ 2026-08-09 📅 2026-08-13
+- [ ] LN905 Reading｜Demographics 0A：审题 + 三篇来源的 argument roles（约 40 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-08-demographics-transfer-response|答题页]] #student-os/task ⏳ 2026-08-09 📅 2026-08-13
 - [ ] LN905 Listening｜Demographics 0B：主张、理由与 evidence map（约 35 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-09-demographics-map.html|练习页]] #student-os/task ⏳ 2026-08-09 📅 2026-08-13
 - [ ] LN905 Reading｜Demographics 0B：限定 thesis + 一个跨文关系（约 35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-09-demographics-thesis-response|答题页]] #student-os/task ⏳ 2026-08-09 📅 2026-08-13
 - [ ] LN905 Listening｜Demographics 1：隐含结构图 + 分层概括（约 55 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-10-demographics-structure.html|练习页]] #student-os/task ⏳ 2026-08-10 📅 2026-08-13
@@ -57,13 +57,13 @@ Listening 与 Reading 是两个独立任务。这里是唯一 canonical checkbox
 - [ ] LN905 Reading｜Demographics 2：因果、机制与适用范围的跨文关系（约 50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-11-demographics-scope-response|答题页]] #student-os/task ⏳ 2026-08-11 📅 2026-08-13
 - [ ] LN905 Listening｜Demographics 3：完整模拟：40 分钟、300–400 词（约 65 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-12-demographics-full.html|练习页]] #student-os/task ⏳ 2026-08-12 📅 2026-08-13
 - [ ] LN905 Reading｜Demographics 3：两来源 synthesis + 限定结论（约 45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-12-demographics-evaluation-response|答题页]] #student-os/task ⏳ 2026-08-12 📅 2026-08-13
-- [ ] LN905 Listening｜Demographics 4：accuracy、coverage 与 evaluation 修复（约 40 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-13-demographics-precision.html|练习页]] #student-os/task ⏳ 2026-08-13 📅 2026-08-13
+- [ ] LN905 Listening｜Demographics 4：accuracy、coverage 与 evaluation 修复（约 40 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-13-demographics-precision.html|练习页]] #student-os/task
 - [ ] LN905 Reading｜Demographics 4：完整模拟：120 分钟、约 600 词｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-13-demographics-full-response|答题页]] #student-os/task ⏳ 2026-08-13 📅 2026-08-13
 
 ## Climate Change｜测试 2026-08-21
 
-- [ ] LN905 Listening｜Climate Change 0A：新主题结构迁移 + 220–280 词 summary（约 45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-15-climate-transfer.html|练习页]] #student-os/task ⏳ 2026-08-15 📅 2026-08-20
-- [ ] LN905 Reading｜Climate Change 0A：审题 + 三篇来源的 argument roles（约 40 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-15-climate-transfer-response|答题页]] #student-os/task ⏳ 2026-08-15 📅 2026-08-20
+- [ ] LN905 Listening｜Climate Change 0A：新主题结构迁移 + 220–280 词 summary（约 45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-15-climate-transfer.html|练习页]] #student-os/task ⏳ 2026-08-16 📅 2026-08-20
+- [ ] LN905 Reading｜Climate Change 0A：审题 + 三篇来源的 argument roles（约 40 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-15-climate-transfer-response|答题页]] #student-os/task ⏳ 2026-08-16 📅 2026-08-20
 - [ ] LN905 Listening｜Climate Change 0B：主张、理由与 evidence map（约 35 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-map.html|练习页]] #student-os/task ⏳ 2026-08-16 📅 2026-08-20
 - [ ] LN905 Reading｜Climate Change 0B：限定 thesis + 一个跨文关系（约 35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-16-climate-thesis-response|答题页]] #student-os/task ⏳ 2026-08-16 📅 2026-08-20
 - [ ] LN905 Listening｜Climate Change 1：隐含结构图 + 分层概括（约 55 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-17-climate-structure.html|练习页]] #student-os/task ⏳ 2026-08-17 📅 2026-08-20
@@ -72,7 +72,7 @@ Listening 与 Reading 是两个独立任务。这里是唯一 canonical checkbox
 - [ ] LN905 Reading｜Climate Change 2：共识、机制与政策含义的跨文关系（约 50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-18-climate-scope-response|答题页]] #student-os/task ⏳ 2026-08-18 📅 2026-08-20
 - [ ] LN905 Listening｜Climate Change 3：完整模拟：40 分钟、300–400 词（约 65 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-19-climate-full.html|练习页]] #student-os/task ⏳ 2026-08-19 📅 2026-08-20
 - [ ] LN905 Reading｜Climate Change 3：两来源 synthesis + evidence evaluation（约 45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-19-climate-evaluation-response|答题页]] #student-os/task ⏳ 2026-08-19 📅 2026-08-20
-- [ ] LN905 Listening｜Climate Change 4：accuracy、coverage 与 evaluation 修复（约 40 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-20-climate-precision.html|练习页]] #student-os/task ⏳ 2026-08-20 📅 2026-08-20
+- [ ] LN905 Listening｜Climate Change 4：accuracy、coverage 与 evaluation 修复（约 40 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-20-climate-precision.html|练习页]] #student-os/task
 - [ ] LN905 Reading｜Climate Change 4：完整模拟：120 分钟、约 600 词｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-20-climate-full-response|答题页]] #student-os/task ⏳ 2026-08-20 📅 2026-08-20
 
 ## 来源去重账本

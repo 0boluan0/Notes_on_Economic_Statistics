@@ -65,7 +65,7 @@ Do not hand-edit `.obsidian/`.
 
 - Today's deadline radar shows every incomplete obligation from D-0 through D-14 inclusive. Also show a later deadline once work for it has been scheduled.
 - Near-deadline work takes capacity first. When that workload is heavy, omit important-but-not-urgent fillers; when it is light, advance confirmed self-directed courses from their first incomplete unit. Make ordinary scheduling choices autonomously.
-- Auto-schedule only from 09:00 through 19:30, reserve 19:30–20:00 for packing/buffer, and never place a generated block after 19:30. Use at most 70% of genuinely free weekday time and 50% on weekends.
+- On weekdays, movable study blocks start no earlier than 15:30 and end by 19:30. On weekends, movable blocks may start at 09:00 and end by 19:30. Reserve 19:30–20:00 for packing/buffer. Fixed classes, travel, appointments and timed assessments may occur earlier; a required preparation block tied directly to a fixed assessment may immediately precede it. Use at most 70% of genuinely free weekday time and 50% on weekends.
 - A gap of at least 60 minutes may hold a 45-minute study block; 30–59 minutes may hold light administration; shorter gaps remain empty. Preserve travel and buffers. Target a 24-hour personal buffer for small assignments and 48 hours for major assignments.
 - Generated blocks live only in the writable Apple calendar `Study Plan`; all other calendars, including `LSE`, are read-only inputs. Sync all future generated blocks, not only today's.
 - If `LSE` is missing or unreadable, do not guess around an empty timetable: schedule only independently verified fixed windows and keep movable work unscheduled until the timetable source returns.

@@ -50,7 +50,7 @@ A manual shutdown request may run the same factual-summary and reconciliation fl
 - Schedule only canonical `#student-os/task` lines by adding or changing their Tasks `⏳ YYYY-MM-DD` metadata. Scheduled automation may edit only that metadata in plan files and Workbench task sources; do not rewrite their content.
 - Hard deadline rows remain separate verified obligations. “Content done” and “submitted” are distinct.
 - All generated calendar blocks go to `Study Plan`, for all future dates, never another calendar. Put a stable marker derived from source path plus task description in the event notes; update/delete only events carrying that marker.
-- Plan inside 09:00–19:30. Reserve 19:30–20:00 for packing/buffer and assume departure at 20:00. Never auto-schedule after 19:30.
+- On weekdays, place movable study blocks only from 15:30 through 19:30. On weekends, movable blocks may start at 09:00. Reserve 19:30–20:00 for packing/buffer and assume departure at 20:00. Fixed classes, travel, appointments and timed assessments may occur earlier; a preparation block tied directly to a fixed assessment may immediately precede it. Never auto-schedule movable work before the applicable start time or after 19:30.
 - Use at most 70% of genuinely free weekday time and 50% on weekends.
 - Preserve travel and buffers. A free gap of at least 60 minutes may hold a 45-minute study block; 30–59 minutes may hold light administration; under 30 minutes stays empty.
 - A small assignment should have a 24-hour personal buffer and a major assignment 48 hours.
@@ -93,7 +93,7 @@ Run this content-preparation pass before composing Today whenever an LN905 pract
 - Today and Workbench queries filter exact Student OS tags and do not include course-note self-checks.
 - Scheduled tasks and generated `Study Plan` events agree.
 - D-0 through D-14 obligations are all visible.
-- No generated block extends past 19:30.
+- No movable weekday block starts before 15:30, no movable weekend block starts before 09:00, and no generated block extends past 19:30. Earlier fixed commitments and their directly attached preparation blocks are the only exceptions.
 - A reconciled prior note contains one factual shutdown-summary block and no invented completion or reflection.
 - No daily filename exists in both the active root and archive, and an archived same-date note is never recreated.
 - No user-written text changed.
