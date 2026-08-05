@@ -20,13 +20,16 @@
   "inputPrompt": "multi-line",
   "persistInputPromptDrafts": true,
   "useSelectionAsCaptureValue": true,
+  "searchNestedChoices": true,
+  "templateFolderLauncherRow": "bottom",
   "devMode": false,
-  "templateFolderPath": "",
+  "templateFolderPaths": [],
   "announceUpdates": "all",
-  "version": "2.12.3",
+  "version": "2.21.0",
   "globalVariables": {},
   "onePageInputEnabled": false,
   "disableOnlineFeatures": false,
+  "enableUriCallbacks": false,
   "enableRibbonIcon": false,
   "showCaptureNotification": true,
   "showInputCancellationNotification": false,
@@ -59,7 +62,9 @@
           },
           {
             "name": "gpt-3.5-turbo",
-            "maxTokens": 4096
+            "maxTokens": 16385,
+            "maxOutputTokens": 4096,
+            "supportsTemperature": true
           },
           {
             "name": "gpt-3.5-turbo-16k",
@@ -71,32 +76,239 @@
           },
           {
             "name": "gpt-4",
-            "maxTokens": 8192
-          },
-          {
-            "name": "gpt-4-32k",
-            "maxTokens": 32768
-          },
-          {
-            "name": "gpt-4-1106-preview",
-            "maxTokens": 128000
+            "maxTokens": 8192,
+            "maxOutputTokens": 8192,
+            "supportsTemperature": true
           },
           {
             "name": "gpt-4-turbo",
-            "maxTokens": 128000
+            "maxTokens": 128000,
+            "maxOutputTokens": 4096,
+            "supportsTemperature": true
           },
           {
             "name": "gpt-4o",
-            "maxTokens": 128000
+            "maxTokens": 128000,
+            "maxOutputTokens": 16384,
+            "supportsTemperature": true
           },
           {
             "name": "gpt-4o-mini",
-            "maxTokens": 128000
+            "maxTokens": 128000,
+            "maxOutputTokens": 16384,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gpt-5.5",
+            "maxTokens": 1050000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.4",
+            "maxTokens": 1050000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.4-mini",
+            "maxTokens": 400000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.4-nano",
+            "maxTokens": 400000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-4.1",
+            "maxTokens": 1047576,
+            "maxOutputTokens": 32768,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gpt-4.1-mini",
+            "maxTokens": 1047576,
+            "maxOutputTokens": 32768,
+            "supportsTemperature": true
+          },
+          {
+            "name": "o3",
+            "maxTokens": 200000,
+            "maxOutputTokens": 100000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "o4-mini",
+            "maxTokens": 200000,
+            "maxOutputTokens": 100000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.2-pro",
+            "maxTokens": 400000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.5-pro",
+            "maxTokens": 1050000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.3-codex-spark",
+            "maxTokens": 128000,
+            "maxOutputTokens": 32000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.4-pro",
+            "maxTokens": 1050000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.6-sol",
+            "maxTokens": 1050000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-4.1-nano",
+            "maxTokens": 1047576,
+            "maxOutputTokens": 32768,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gpt-5.2-chat-latest",
+            "maxTokens": 128000,
+            "maxOutputTokens": 16384,
+            "supportsTemperature": false
+          },
+          {
+            "name": "o3-mini",
+            "maxTokens": 200000,
+            "maxOutputTokens": 100000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "o3-pro",
+            "maxTokens": 200000,
+            "maxOutputTokens": 100000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5",
+            "maxTokens": 400000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-realtime-2.1",
+            "maxTokens": 128000,
+            "maxOutputTokens": 32000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-4o-2024-05-13",
+            "maxTokens": 128000,
+            "maxOutputTokens": 4096,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gpt-4o-2024-11-20",
+            "maxTokens": 128000,
+            "maxOutputTokens": 16384,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gpt-5.3-chat-latest",
+            "maxTokens": 128000,
+            "maxOutputTokens": 16384,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gpt-5-pro",
+            "maxTokens": 400000,
+            "maxOutputTokens": 272000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "o1",
+            "maxTokens": 200000,
+            "maxOutputTokens": 100000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.6-luna",
+            "maxTokens": 1050000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.2",
+            "maxTokens": 400000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.3-codex",
+            "maxTokens": 400000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5-mini",
+            "maxTokens": 400000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "o1-pro",
+            "maxTokens": 200000,
+            "maxOutputTokens": 100000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.6",
+            "maxTokens": 1050000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.1",
+            "maxTokens": 400000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-4o-2024-08-06",
+            "maxTokens": 128000,
+            "maxOutputTokens": 16384,
+            "supportsTemperature": true
+          },
+          {
+            "name": "gpt-5-nano",
+            "maxTokens": 400000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
+          },
+          {
+            "name": "gpt-5.6-terra",
+            "maxTokens": 1050000,
+            "maxOutputTokens": 128000,
+            "supportsTemperature": false
           }
         ],
-        "modelSource": "auto"
+        "modelSource": "modelsDev",
+        "autoSyncModels": true,
+        "id": "openai"
       }
-    ]
+    ],
+    "lastModelAutoSyncAt": 1785928567451
   },
   "migrations": {
     "migrateToMacroIDFromEmbeddedMacro": true,
@@ -111,7 +323,10 @@
     "backfillFileOpeningDefaults": true,
     "setProviderModelDiscoveryMode": true,
     "migrateProviderApiKeysToSecretStorage": true,
-    "repairTemplateFileExistsBehavior": true
+    "repairTemplateFileExistsBehavior": true,
+    "migrateToMultipleTemplateFolders": true,
+    "refreshStaleDefaultModelSeeds": true,
+    "pinAiModelRefs": true
   },
   "macros": []
 }

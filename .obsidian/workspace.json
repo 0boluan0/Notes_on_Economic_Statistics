@@ -18,15 +18,27 @@
             }
           },
           {
-            "id": "c910edb32a6e5a8a",
+            "id": "20751f0b62e1b65e",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/Everyday English lesson 2026.pdf"
+                "file": "99_学习情况记录/2026-08-05——Wed.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "Everyday English lesson 2026"
+              "icon": "lucide-file",
+              "title": "2026-08-05——Wed"
             }
           }
         ],
@@ -142,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/Everyday English lesson 2026.pdf",
+                "file": "99_学习情况记录/2026-08-05——Wed.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -238,37 +250,42 @@
       "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian-kanban:Create new board": false,
       "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "c910edb32a6e5a8a",
+  "active": "20751f0b62e1b65e",
   "lastOpenFiles": [
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Listening/Listening Gender.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/Everyday English lesson 2026.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 2.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 1.pdf",
+    "98_attachment/Pasted image 20250628205522.png",
+    "98_attachment/截屏 2024-10-10 20.04.51.jpeg",
+    "98_attachment/截屏 2024-10-11 22.32.26.jpeg",
+    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/02_Speaking into Writing.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 5.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 4.pdf",
+    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/00_课程总览.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 3.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Listening/Listening Gender.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/2026 WEEK TWO Assignment Booklet LN905.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 3.pdf",
     "99_学习情况记录/2026-08-05——Wed.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/2-minute-presentations/Week One_LN905.pdf",
     "99_学习情况记录/2026-02-16——Mon.md",
-    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-05-gender-full.html",
     "99_学习情况记录/2026-02-11——Wed.md",
     "99_学习情况记录/2026-02-06——Fri.md",
     "99_学习情况记录/2026-02-04——Wed.md",
     "99_学习情况记录/2026-02-03——Tue.md",
     "99_学习情况记录/2026-02-02——Mon.md",
     "99_学习情况记录/teach/reading-into-writing/practice/2026-08-03-gender-structure-response.md",
-    "99_学习情况记录/teach/reading-into-writing/practice/2026-08-03-gender-structure-source-pack.pdf",
     "99_学习情况记录/2026-08-04——Tue.md",
-    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-03-gender-structure.html",
     "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/week2 listening.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Listening/Gender - Listening Vocabulary.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/Topic Input Gender.pdf",
-    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/00_课程总览.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing.md",
-    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/02_Speaking into Writing.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/01_Listening into Writing.md",
     "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/01_LN905_note/LN905 核心技法.md",
     "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/02_LN905_essay/Week1-Academic-Writing-moodle.md",
@@ -286,9 +303,6 @@
     "tmp/pdfs/ln905-rebuild.evXQ0d/rendered/intro-contact.jpg",
     "tmp/pdfs/ln905-rebuild.evXQ0d/rendered/annotated-contact.jpg",
     "tmp/pdfs/ln905-rebuild.evXQ0d/rendered/synthesis-contact.jpg",
-    "tmp/pdfs/ln905-rebuild.evXQ0d/rendered/intro-10.png",
-    "tmp/pdfs/ln905-rebuild.evXQ0d/rendered/intro-09.png",
-    "tmp/pdfs/ln905-rebuild.evXQ0d/rendered/intro-08.png",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L Course Atlas.canvas",

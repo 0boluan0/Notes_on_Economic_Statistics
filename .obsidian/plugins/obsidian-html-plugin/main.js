@@ -1053,6 +1053,7 @@ var OP_MODE_INFO_HTML = `
 
 <details>
 <summary>Comparison</summary>
+<div style="overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch;">
 <table id="ophCompTable">
   <thead>
   <tr>
@@ -1119,6 +1120,7 @@ var OP_MODE_INFO_HTML = `
   </tr>
   <tbody>
 </table>
+</div>
 
 <div><b>*</b>: <a href="https://web.dev/declarative-shadow-dom/">Declarative Shadow DOM</a></div>
 <div><b>#</b>: <a href="https://en.wikipedia.org/wiki/Content_Security_Policy">Content Security Policy</a></div>
@@ -1175,7 +1177,7 @@ var HtmlSettingTab = class extends import_obsidian.PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
     containerEl.createEl("h1", { text: "HTML Reader Settings" });
-    containerEl.createEl("pre", { text: "\u203B Remember to reload the file after changing any setting." }).setAttribute("style", "color:red");
+    containerEl.createEl("pre", { text: "\u203B Remember to reload the file after changing any setting." }).setAttribute("style", "color:red; white-space: pre-wrap; word-break: break-word;");
     containerEl.createEl("h2", { text: "General Settings" });
     const opModeSetting = new import_obsidian.Setting(containerEl);
     opModeSetting.setName("Operating Mode").setDesc("Set operating mode for this plugin to protect user and app.").addDropdown((dropdown) => {
@@ -23119,13 +23121,19 @@ async function sanitizeAndApplyPatches(doc) {
 }
 function applyUserInteractivePatches(doc) {
   if (!doc.body.style) {
-    doc.body.setAttribute("style", "overflow: auto; user-select: text;");
+    doc.body.setAttribute("style", "overflow-x: hidden; overflow-y: auto; user-select: text; max-width: 100%; word-wrap: break-word;");
     return;
   }
-  if (doc.body.style.overflow === "")
-    doc.body.style.overflow = "auto";
+  if (doc.body.style.overflow === "") {
+    doc.body.style.overflowX = "hidden";
+    doc.body.style.overflowY = "auto";
+  }
+  if (doc.body.style.maxWidth === "")
+    doc.body.style.maxWidth = "100%";
   if (doc.body.style.userSelect === "")
     doc.body.style.userSelect = "text";
+  if (doc.documentElement.style.overflowX === "")
+    doc.documentElement.style.overflowX = "hidden";
 }
 async function removeScriptTagsAndExtScripts(doc) {
   let allNodes = doc.querySelectorAll("script");
@@ -23663,7 +23671,7 @@ var MAINVIEW_HTML = `
   </div>
 </div>
 
-<iframe style="border: none; flex-grow: 1; width: 100%; overflow: hidden;" loading="eager" margin="0" padding="0"  width="100%" height="100%" id="ohpIframe">
+<iframe style="border: none; flex-grow: 1; width: 100%; overflow-x: hidden; overflow-y: auto;" loading="eager" margin="0" padding="0"  width="100%" height="100%" id="ohpIframe">
 </iframe>
 `;
 var HIGHLIGHT_STYLE = `

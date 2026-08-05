@@ -6,6 +6,7 @@
   "exposeInternalModules": true,
   "focusOnNewInstance": true,
   "hideStatusBar": "focused",
+  "showTerminalTabPrefix": false,
   "interceptKeysWhenFocused": true,
   "interceptLogging": true,
   "keymappings": [
@@ -132,6 +133,7 @@
   ],
   "language": "",
   "macOSOptionKeyPassthrough": true,
+  "rightClickAction": "copyPaste",
   "newInstanceBehavior": "newHorizontalSplit",
   "noticeTimeout": 5,
   "openChangelogOnUpdate": true,
