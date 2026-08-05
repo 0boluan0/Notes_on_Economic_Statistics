@@ -1,0 +1,147 @@
+.pdf-writer-toolbar {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 5px;
+	background-color: var(--background-secondary);
+	color: var(--text-normal);
+	border-bottom: 1px solid var(--background-modifier-border);
+	z-index: 1000;
+	gap: 0.5rem;
+	margin-right: 1rem;
+}
+
+.pdf-writer-toolbar-button {
+	margin: 0 5px;
+	padding: 5px 10px;
+	background-color: var(--interactive-normal);
+	color: var(--text-normal);
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.pdf-writer-toolbar-button:hover {
+	background-color: var(--interactive-hover);
+}
+
+/* Styles for the color picker */
+.pdf-text-color-picker {
+	margin-left: 10px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+.pdf-writer-text-overlay {
+	z-index: 10;
+	pointer-events: auto;
+	font-size: 14px;
+	resize: none;
+	background-color: rgba(255, 255, 255, 0.8); /* Apparence semi-transparente */
+	border: 2px dashed #0078d7; /* Contour en pointillé bleu */
+	border-radius: 4px; /* Coins arrondis */
+	cursor: default; /* Icône de déplacement */
+	position: absolute;
+	left: var(--pdf-overlay-left, 30%); /* Utilisation d'une variable CSS */
+	top: var(--pdf-overlay-top, 30%);
+	padding: 5px;
+	font-family: Arial, serif;
+	color: var(--pdf-text-color, black);
+
+}
+
+/* Styles for the text overlay when editing */
+.pdf-writer-text-overlay-editing {
+	border: 2px dashed #0078d7;
+	background-color: rgba(255, 255, 255, 0.8);
+	cursor: text !important;
+	user-select: text !important;
+}
+.pdf-writer-text-overlay-finalize-editing {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	cursor: move !important;
+}
+
+.pdf-writer-delete-button {
+	position: absolute;
+	top: -20px; /* Ajuste selon ton design */
+	right: -20px; /* Ajuste selon ton design */
+	background-color: #ff4d4d; /* Couleur de fond du bouton */
+	color: white; /* Couleur de l'icône */
+	border: none; /* Supprime la bordure */
+	border-radius: 20%; /* Rendre le bouton rond */
+	cursor: pointer; /* Curseur de la souris */
+	width: 30px; /* Largeur du bouton */
+	height: 30px; /* Hauteur du bouton */
+	display: flex; /* Utiliser Flexbox */
+	justify-content: center; /* Centrer horizontalement l'icône */
+	align-items: center; /* Centrer verticalement l'icône */
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Ombre pour un effet 3D */
+	transition: transform 0.2s, box-shadow 0.2s; /* Animations */
+	font-size: 16px; /* Taille de l'icône */
+	line-height: 1; /* Empêcher tout décalage */
+}
+
+.pdf-writer-delete-button:hover {
+	transform: scale(1.2); /* Agrandir légèrement au survol */
+	box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Augmenter l'ombre */
+	background: #ff0000; /* Couleur rouge plus vive */
+}
+
+.pdf-writer-delete-button:active {
+	transform: scale(1); /* Réduction lors du clic */
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Ombre réduite */
+}
+
+/* Classe pour masquer le bouton */
+.pdf-writer-delete-button-hidden {
+	display: none;
+}
+
+/* Classe pour afficher le bouton */
+.pdf-writer-delete-button-visible {
+	display: block;
+}
+/* Classes pour les tailles de police */
+.pdf-text-overlay-font-size-12 { font-size: 12px; }
+.pdf-text-overlay-font-size-14 { font-size: 14px; }
+.pdf-text-overlay-font-size-16 { font-size: 16px; }
+.pdf-text-overlay-font-size-18 { font-size: 18px; }
+.pdf-text-overlay-font-size-20 { font-size: 20px; }
+.pdf-text-overlay-font-size-24 { font-size: 24px; }
+
+/* Classes pour les familles de police */
+.pdf-text-overlay-font-family-arial {
+	font-family: Arial, serif; }
+.pdf-text-overlay-font-family-verdana {
+	font-family: Verdana, serif; }
+.pdf-text-overlay-font-family-times {
+	font-family: "Times New Roman", serif; }
+.pdf-text-overlay-font-family-courier {
+	font-family: "Courier New", serif; }
+.pdf-text-overlay-font-family-georgia {
+	font-family: Georgia, serif; }
+
+.pdf-text-color-modified {
+	color: var(--pdf-text-color, black); /* Utilisation de la variable CSS */
+}
+
+.pdf-writer-placement-hint {
+	position: fixed;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #222;
+	color: white;
+	padding: 6px 10px;
+	border-radius: 6px;
+	font-size: 14px;
+	z-index: 99999;
+	opacity: 0.9;
+	pointer-events: none;
+}
+
+
+

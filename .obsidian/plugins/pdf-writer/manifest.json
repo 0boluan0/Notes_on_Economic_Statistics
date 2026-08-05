@@ -1,0 +1,10 @@
+{
+	"id": "pdf-writer",
+	"name": "PDF Writer",
+	"version": "0.12.1",
+	"minAppVersion": "1.5.8",
+	"description": "To write and fill a PDF.",
+	"author": "Jobelin Kom",
+	"authorUrl": "https://github.com/jkom4",
+	"isDesktopOnly": false
+}
