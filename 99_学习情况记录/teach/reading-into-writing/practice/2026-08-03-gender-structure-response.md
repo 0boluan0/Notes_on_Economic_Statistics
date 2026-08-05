@@ -18,6 +18,10 @@ time_limit_minutes: 55
 
 **Question:** *“Gender bias at work is sustained mainly by organisations rather than by individuals.” To what extent do you agree?*
 
+## 0｜词灵生词预习（15 分钟）
+
+先在词灵学习：`unconscious bias`、`gender inequality`、`organisational structure`、`underrepresentation`、`subtle discrimination`、`institutional practice`、`accountability`、`intervention`、`prevalence`、`inequity`。只学词义和常见搭配，然后再打开 source pack。
+
 > [!important] 今日唯一重点
 > 不按 Extract 1、2、3 依次摘要。这是 AI 引导练习，不是完整模拟：你先完成自己的 evidence map 和 reasoning chain，再与我完成一次成文前诊断；初稿后再闭环一次 revision。我不会提前给 thesis 或代写段落。
 

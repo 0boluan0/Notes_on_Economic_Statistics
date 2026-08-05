@@ -18,6 +18,10 @@ time_limit_minutes: 50
 
 **Question:** *To what extent does evidence from Norway show that mandatory corporate-board gender quotas are an effective way to advance workplace gender equality?*
 
+## 0｜词灵生词预习（15 分钟）
+
+先在词灵学习：`board quota`、`shareholder value`、`treatment effect`、`confounding`、`causal inference`、`counterfactual`、`statistically significant`、`spillover`、`selection bias`、`external validity`。只学词义和常见搭配，然后再打开 source pack。
+
 > [!important] 今日唯一重点
 > 先限定“effective”到底指 firm value、board representation，还是 wider workplace equality；再让三个段落分别承担不同功能。这是 AI 引导练习，不是完整模拟，我不会提前给 thesis 或 model paragraph。
 

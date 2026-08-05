@@ -13,6 +13,8 @@ assessment_horizon: 2026-08-21
 
 Listening 与 Reading 是两个独立任务。这里是唯一 canonical checkbox 来源；Today 只显示排到当天的任务。
 
+每项练习开始前先用 15 分钟在词灵学习本次材料的核心生词；这个准备块属于同一个任务，不增加 checkbox。正式 timed test 前只复习主题词汇，不提前接触测试材料。
+
 ## 完成标准
 
 - **普通 Listening**：第一次播放不看字幕或 transcript、不暂停、不回放；完成真实 notes 和 map 后让 AI 做结构诊断，按追问修正并取得“可以成文”确认，再完成短成文；回传一个关键 revision，并在全部协作记录写回同一 HTML、由 AI 确认后才打勾。
@@ -27,6 +29,7 @@ Listening 与 Reading 是两个独立任务。这里是唯一 canonical checkbox
 - 每个非测试日都保留一项 Listening 和一项 Reading；遇到 8 月 9 日、16 日的其他硬截止，安排缩短版而不是完整模拟。
 - 每次 Listening 都换一场未使用过的 TED 官方 YouTube；优先 15–20 分钟，并核验官方 transcript。
 - 每次 Reading 都换三篇未使用过的论文，围绕一个真正可比较的问题制作 adapted extracts。
+- 每次主练习前紧接一个 15 分钟词灵生词预习块；练习材料在 HTML 或 response 页提供精简词表。
 - 普通练习只练一个主问题；成文前和初稿后各经过一次闭环 AI checkpoint，AI 只诊断、追问和校验推理，不提前给 model answer。
 - 完整模拟才按正式时间和字数独立运行；AI 只在计时结束后参与复盘和 revision。
 - 所有 checkpoint 都属于同一个 canonical task，不另造 checkbox。
@@ -38,7 +41,7 @@ Listening 与 Reading 是两个独立任务。这里是唯一 canonical checkbox
 - [ ] LN905 Listening｜Gender 2：选择性笔记 + evidence role（约 50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-04-gender-selection.html|练习页]] #student-os/task ⏳ 2026-08-05 📅 2026-08-06
 - [ ] LN905 Reading｜Gender 2：限定 thesis + 三段 argument map（约 50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-04-gender-argument-map-response|答题页]] #student-os/task ⏳ 2026-08-05 📅 2026-08-06
 - [ ] LN905 Listening｜Gender 3：完整模拟：40 分钟、300–400 词（约 65 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-05-gender-full.html|练习页]] #student-os/task ⏳ 2026-08-05 📅 2026-08-06
-- [ ] LN905 Reading｜Gender 3：两来源展开 + evidence evaluation（约 45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-05-gender-evaluation-response|答题页]] #student-os/task ⏳ 2026-08-05 📅 2026-08-06
+- [ ] LN905 Reading｜Gender 3：两来源展开 + evidence evaluation（约 45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-05-gender-evaluation-response|答题页]] #student-os/task ⏳ 2026-08-06 📅 2026-08-06
 - [ ] LN905 Listening｜Gender 4：coverage 与 evaluation 精准修复（约 40 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-06-gender-precision.html|练习页]] #student-os/task ⏳ 2026-08-06 📅 2026-08-06
 - [ ] LN905 Reading｜Gender 4：完整模拟：120 分钟、约 600 词｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-06-gender-full-response|答题页]] #student-os/task ⏳ 2026-08-06 📅 2026-08-06
 
@@ -97,3 +100,7 @@ Listening 与 Reading 是两个独立任务。这里是唯一 canonical checkbox
 - Reading：Ahern & Dittmar (2012), DOI `10.1093/qje/qjr049`
 - Reading：Eckbo, Nygaard & Thorburn (2022), DOI `10.1287/mnsc.2021.4031`
 - Reading：Bertrand et al. (2019), DOI `10.1093/restud/rdy032`
+
+### 2026-08-05 已准备
+
+- Listening：`IfOqyuxb5S0`｜Sara Sanford, *How to Design Gender Bias Out of Your Workplace*

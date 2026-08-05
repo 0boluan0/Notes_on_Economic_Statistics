@@ -1,0 +1,110 @@
+<!doctype html>
+<!-- student-os:session-ready: true -->
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LN905 Listening · Gender full simulation</title>
+  <style>
+    :root { color-scheme:light dark; --accent:#59359a; --muted:#69707a; --card:#f5f6f8; }
+    * { box-sizing:border-box; }
+    body { max-width:900px; margin:auto; padding:32px 20px 64px; font:16px/1.6 system-ui,sans-serif; }
+    header,section { margin-bottom:28px; }
+    .meta,.hint { color:var(--muted); }
+    .card { padding:18px; border:1px solid #aeb4bb; border-radius:12px; background:var(--card); }
+    a.button,button { padding:9px 13px; border:0; border-radius:8px; background:var(--accent); color:#fff; text-decoration:none; cursor:pointer; }
+    button.secondary { background:#555d68; }
+    textarea { width:100%; min-height:220px; padding:12px; border:1px solid #9da3aa; border-radius:8px; font:15px/1.5 ui-monospace,monospace; }
+    #response { min-height:420px; }
+    .timer { margin:12px 0; font:700 34px/1 ui-monospace,monospace; }
+    .controls { display:flex; flex-wrap:wrap; gap:8px; }
+    .copy-status { margin-left:8px; color:var(--muted); }
+    .review-entry { margin-top:18px; padding-top:18px; border-top:1px solid #aeb4bb; }
+    pre { white-space:pre-wrap; overflow-wrap:anywhere; }
+    label { display:block; margin:7px 0; }
+    @media (prefers-color-scheme:dark) { :root { --card:#20242a; --muted:#abb2bd; } }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="meta">2026-08-05 · Gender · Session G-L3 · 完整模拟</p>
+    <h1>Listening into Writing：完整模拟</h1>
+    <p><strong>Task:</strong> Critically summarise Sara Sanford's argument that organisations should redesign workplace systems, rather than rely on good intentions, to reduce gender bias. Evaluate how far the evidence presented supports this argument.</p>
+    <p><strong>300–400 words。</strong>计时阶段不使用 AI，不看 transcript，不暂停、不回放。</p>
+  </header>
+
+  <section class="card">
+    <h2>0｜词灵生词预习（15 分钟）</h2>
+    <p>先在词灵学习：<strong>gender parity, unconscious bias, accountability, recruitment, promotion, retention, benchmark, metric, systemic, intervention, equitable, workplace culture</strong>。</p>
+    <p class="hint">只学词义和常见搭配；不要先看 transcript、结构提示或内容概述。</p>
+  </section>
+
+  <section class="card">
+    <h2>计时器</h2>
+    <div id="timer" class="timer">13:16</div>
+    <div class="controls">
+      <button data-seconds="796">一次播放 13:16</button>
+      <button data-seconds="2400">独立成文 40:00</button>
+      <button data-seconds="600">反馈后修订 10:00</button>
+      <button id="pause" class="secondary">暂停／继续</button>
+    </div>
+    <p><a class="button" href="https://www.youtube.com/watch?v=IfOqyuxb5S0" target="_blank" rel="noreferrer">打开 TED 官方 YouTube</a></p>
+  </section>
+
+  <section>
+    <h2>1｜原始笔记</h2>
+    <p>只记录你真实听到的内容；不要使用外部资料。</p>
+    <textarea id="notes" aria-label="原始听力笔记"></textarea>
+
+    <h2>2｜原始作答</h2>
+    <textarea id="response" aria-label="完整模拟作答"></textarea>
+    <p><strong>Words:</strong> <span id="words">0</span></p>
+    <p>时间结束前不要向 AI 求助。结束后点下面按钮，把原始作答交给 AI。</p>
+    <button id="copy-review">复制模拟复盘／再次发送复核</button><span id="copy-status" class="copy-status" aria-live="polite"></span>
+  </section>
+
+  <section>
+    <h2>3｜计时结束后的反馈与一次修订</h2>
+    <textarea id="feedback" aria-label="AI 反馈" placeholder="AI diagnosis 与唯一 revision target："></textarea>
+    <textarea id="revision" aria-label="针对性修订" placeholder="修改前：\n\n修改后：\n\n为什么这样改："></textarea>
+    <details>
+      <summary>计时结束后才打开 transcript</summary>
+      <p><a href="https://www.ted.com/talks/sara_sanford_how_to_design_gender_bias_out_of_your_workplace/transcript" target="_blank" rel="noreferrer">TED 官方 transcript</a></p>
+    </details>
+    <label><input type="checkbox"> 原始 response 是在无 AI、无 transcript、无回放条件下完成</label>
+    <label><input type="checkbox"> 评价明确指向 evidence、warrant 或 scope</label>
+    <label><input type="checkbox"> revision 已获 AI 确认</label>
+  </section>
+
+  <section class="card">
+    <h2>复盘</h2>
+    <textarea id="reflection" aria-label="练习复盘" placeholder="最影响理解的生词：\n\nTranscript 核对后发现的误听或遗漏：\n\n下一次只修一个问题："></textarea>
+  </section>
+
+  <section class="card" id="ai-review-log">
+    <h2>AI 协作记录</h2>
+    <p class="hint">只记录计时结束后的诊断、修订和确认；按时间追加，不覆盖。</p>
+    <!-- student-os:ai-review:start -->
+    <!-- student-os:ai-review:end -->
+  </section>
+
+  <footer class="meta">Sources: <a href="https://www.youtube.com/watch?v=IfOqyuxb5S0">TED YouTube</a> · <a href="https://www.ted.com/talks/sara_sanford_how_to_design_gender_bias_out_of_your_workplace/transcript">TED transcript</a> · <a href="../../../../07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Marking-Criteria/Paper%20A_Marking%20Criteria_Listening%20into%20Writing.pdf">LN905 criteria</a></footer>
+
+  <script>
+    const key="liw-2026-08-05-gender-full-", fields=["notes","response","feedback","revision","reflection"];
+    const value=id=>document.getElementById(id).value.trim();
+    function count(){const text=value("response");document.getElementById("words").textContent=text?text.split(/\s+/).length:0;}
+    for(const id of fields){const el=document.getElementById(id);el.value=localStorage.getItem(key+id)||"";el.addEventListener("input",()=>{localStorage.setItem(key+id,el.value);if(id==="response")count();});} count();
+    let remaining=796, handle=null; const display=document.getElementById("timer");
+    function render(){display.textContent=`${String(Math.floor(remaining/60)).padStart(2,"0")}:${String(remaining%60).padStart(2,"0")}`;}
+    function start(seconds){clearInterval(handle);remaining=seconds;render();handle=setInterval(()=>{if(remaining>0){remaining--;render();}else{clearInterval(handle);handle=null;}},1000);}
+    document.querySelectorAll("[data-seconds]").forEach(button=>button.addEventListener("click",()=>start(Number(button.dataset.seconds))));
+    document.getElementById("pause").addEventListener("click",()=>{if(handle){clearInterval(handle);handle=null;}else start(remaining);});
+    document.getElementById("copy-review").addEventListener("click",async()=>{
+      const prompt=`LN905 Listening 完整模拟复盘｜2026-08-05-gender-full。计时已经结束。第一次收到时，请按 LN905 criteria 诊断我的原始作答，并只选一个最高价值 revision target，不要整段重写；我修改后会再次发送。收到新版时，若问题解决请明确回复“本次练习完成”，否则只指出一个仍未解决的问题。\n\nRECORD TARGET\n99_学习情况记录/teach/listening-into-writing/lessons/2026-08-05-gender-full.html#student-os:ai-review\n回复前把原始快照、你的反馈、我的修订和确认结果追加写入该 HTML。\n\nNOTES\n${value("notes")}\n\nORIGINAL RESPONSE\n${value("response")}\n\nAI FEEDBACK\n${value("feedback")}\n\nREVISION\n${value("revision")}\n\nREFLECTION\n${value("reflection")}`;
+      try{await navigator.clipboard.writeText(prompt);}catch{const el=document.createElement("textarea");el.value=prompt;document.body.appendChild(el);el.select();document.execCommand("copy");el.remove();}
+      document.getElementById("copy-status").textContent="已复制；粘贴到当前 Codex 对话";
+    });
+  </script>
+</body>
+</html>
