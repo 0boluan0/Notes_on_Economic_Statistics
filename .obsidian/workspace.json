@@ -40,12 +40,24 @@
             "id": "20751f0b62e1b65e",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Reading/3. Gender Reading.pdf"
+                "file": "99_学习情况记录/2026-08-06——Thu.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "3. Gender Reading"
+              "icon": "lucide-file",
+              "title": "2026-08-06——Thu"
             }
           }
         ]
@@ -264,6 +276,9 @@
   },
   "active": "77c42b07088ac630",
   "lastOpenFiles": [
+    "99_学习情况记录/2026-08-06——Thu.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Reading/3. Gender Reading.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/2026 WEEK TWO Assignment Booklet LN905.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/Topic Input Gender.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/1. Gender Topic Input.pdf",
@@ -272,10 +287,6 @@
     "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/file.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-1-Social-Media/Input-and-Discussion/PIIS1364661320302515 social media and well being article.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/02_Khandani et al. (2010) - Consumer credit-risk ML models.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/01_Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-2-Gender/5. Haines et al. (2016) The Times They Are a-Changing - Or Are They Not. A Comparison of Gender Stereotypes 1983-2014.pdf",
-    "99_学习情况记录/2026-08-06——Thu.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-2-Gender/Academic Interaction - Gender.pdf",
     "99_学习情况记录/2026-08-05——Wed.md",
     "98_attachment/Pasted image 20250628205522.png",
     "98_attachment/截屏 2024-10-10 20.04.51.jpeg",
