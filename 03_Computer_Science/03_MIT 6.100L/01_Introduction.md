@@ -145,8 +145,8 @@ The instructor immediately turns the declarative square-root statement into an e
 > 于是先给一个初始 guess，例如 `g = 3`：
 > 1. 如果 `g*g` 已经离 16 足够近，就停下。
 > 2. 否则把新猜测更新成 `(g + x/g) / 2`。
-> 3. 用新 guess 重复这个过程。
-> <!-- bilingual-en:start -->
+> 3. 用新 guess 重复这个过程。  
+>
 > To find `sqrt(16)` without knowing that the answer is 4, begin with a guess such as `g = 3`:
 > **1.** Stop if `g*g` is sufficiently close to 16.<br>
 > **2.** Otherwise update the guess to `(g + x/g) / 2`.<br>
