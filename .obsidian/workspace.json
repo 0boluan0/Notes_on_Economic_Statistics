@@ -18,31 +18,37 @@
             }
           },
           {
-            "id": "20751f0b62e1b65e",
+            "id": "77c42b07088ac630",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "99_学习情况记录/2026-08-05——Wed.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf"
               },
-              "icon": "lucide-file",
-              "title": "2026-08-05——Wed"
+              "icon": "lucide-file-text",
+              "title": "Week 2 Lesson 4"
             }
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "a0187bd96af2ac99",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "20751f0b62e1b65e",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Reading/3. Gender Reading.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "3. Gender Reading"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -154,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/2026-08-05——Wed.md",
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -250,22 +256,26 @@
       "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian-kanban:Create new board": false,
       "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "20751f0b62e1b65e",
+  "active": "77c42b07088ac630",
   "lastOpenFiles": [
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Reading/3. Gender Reading.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Reading/3. Ellemers (2018) - Gender Stereotypes.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Listening into Writing Submission - Gender.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/2026 WEEK TWO Assignment Booklet LN905.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week Two Lessons One and Two.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 3.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/e-Exams-Guide-for-LSE-students.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Marking-Criteria/Paper B_Marking Criteria_Reading into Writing.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Marking-Criteria/Paper A_Marking Criteria_Listening into Writing.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Marking-Criteria/Assignment Marking Criteria.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/Topic Input Gender.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Input-and-Discussion/1. Gender Topic Input.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Shared/Module1-Framing.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/week2-4 group2.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/file.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-1-Social-Media/Input-and-Discussion/PIIS1364661320302515 social media and well being article.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/02_Khandani et al. (2010) - Consumer credit-risk ML models.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/01_Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-2-Gender/5. Haines et al. (2016) The Times They Are a-Changing - Or Are They Not. A Comparison of Gender Stereotypes 1983-2014.pdf",
+    "99_学习情况记录/2026-08-06——Thu.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-2-Gender/Academic Interaction - Gender.pdf",
     "99_学习情况记录/2026-08-05——Wed.md",
     "98_attachment/Pasted image 20250628205522.png",
     "98_attachment/截屏 2024-10-10 20.04.51.jpeg",
@@ -293,7 +303,6 @@
     "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/01_LN905_note/Week 3 - Demographics.md",
     "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/01_LN905_note/Week 2 - Gender.md",
     "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/01_LN905_note/00_课程总览.md",
-    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/Academic Writing.md",
     "tmp/pdfs/ln905-rebuild.evXQ0d/rendered/workbook-16.png",
     "tmp/pdfs/ln905-rebuild.evXQ0d/rendered/workbook-15.png",
     "tmp/pdfs/ln905-aw-audit.A5ixmc/criteria-2.png",
