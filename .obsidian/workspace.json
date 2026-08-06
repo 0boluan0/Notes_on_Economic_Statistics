@@ -18,19 +18,7 @@
             }
           },
           {
-            "id": "77c42b07088ac630",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/05_Fuster et al. (2022) - Predictably unequal.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "05_Fuster et al. (2022) - Predictably unequal"
-            }
-          },
-          {
-            "id": "30f01772e9fafd77",
+            "id": "3ac6d23783c7807e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -54,7 +42,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -166,7 +154,6 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -220,9 +207,54 @@
               "icon": "code",
               "title": "Code outline"
             }
+          },
+          {
+            "id": "ebd03aa7239d6044",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "terminal:terminal",
+              "state": {
+                "terminal:terminal": {
+                  "cwd": "/Users/fengyihang/Library/Mobile Documents/iCloud~md~obsidian/Documents/Academic",
+                  "focus": false,
+                  "profile": {
+                    "args": [
+                      "--login"
+                    ],
+                    "environment": [],
+                    "executable": "/bin/zsh",
+                    "followTheme": true,
+                    "name": "",
+                    "platforms": {
+                      "darwin": true
+                    },
+                    "pythonExecutable": "python3",
+                    "restoreHistory": false,
+                    "rightClickAction": "copyPaste",
+                    "successExitCodes": [
+                      "0",
+                      "SIGINT",
+                      "SIGTERM"
+                    ],
+                    "terminalOptions": {
+                      "documentOverride": null
+                    },
+                    "type": "integrated",
+                    "useWin32Conhost": true
+                  },
+                  "profileSourceId": "darwinIntegratedDefault",
+                  "serial": null,
+                  "userTitle": ""
+                }
+              },
+              "pinned": true,
+              "icon": "terminal",
+              "title": "zsh"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 8
       },
       {
         "id": "b6e2d525de78b465",
@@ -243,7 +275,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 294.7796630859375
+    "width": 651.770263671875
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -268,11 +300,15 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "30f01772e9fafd77",
+  "active": "ebd03aa7239d6044",
   "lastOpenFiles": [
+    "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
+    "03_Computer_Science/01_CS50/00_课程总览.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/05_Fuster et al. (2022) - Predictably unequal.pdf",
+    "00_inbox/Untitled Kanban.md",
     "03_Computer_Science/untitled folder",
     "03_Computer_Science/03_MIT 6.100L/MIT 6.100L-code/chapter 02/chapter2.py",
-    "03_Computer_Science/01_CS50/00_课程总览.md",
     "03_Computer_Science/01_CS50/CS50 Course Atlas.canvas",
     "00_Knowledge/LLM Agent 与工具调用.md",
     "00_Knowledge/CAPM、系统风险与资本成本.md",
@@ -290,10 +326,7 @@
     "00_inbox/Untitled.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/2-minute-presentations/Week One_LN905.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Presentation Guide - Timestamped Transcript.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/05_Fuster et al. (2022) - Predictably unequal.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf",
     "99_学习情况记录/2026-08-06——Thu.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-2-Gender/Reading/3. Gender Reading.pdf",
     "99_学习情况记录/2026-08-05——Wed.md",
     "98_attachment/Pasted image 20250628205522.png",
     "98_attachment/截屏 2024-10-10 20.04.51.jpeg",
@@ -308,8 +341,6 @@
     "99_学习情况记录/2026-02-02——Mon.md",
     "99_学习情况记录/teach/reading-into-writing/practice/2026-08-03-gender-structure-response.md",
     "99_学习情况记录/2026-08-04——Tue.md",
-    "01_Math/02_linear algebra/01_Ax = b and the Four Subspaces.md",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/week2 listening.md",
     "tmp/pdfs/ln905-rebuild.evXQ0d/rendered/workbook-16.png",
     "tmp/pdfs/ln905-rebuild.evXQ0d/rendered/workbook-15.png",
     "tmp/pdfs/ln905-aw-audit.A5ixmc/criteria-2.png",
