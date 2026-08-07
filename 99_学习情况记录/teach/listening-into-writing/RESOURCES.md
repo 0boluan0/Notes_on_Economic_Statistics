@@ -12,6 +12,8 @@ topic: "LN905 Listening into Writing"
 
 ## Knowledge
 
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening_into_Writing_AI_Feedback_Workbook.pdf|Listening into Writing — AI Feedback Workbook]]
+  LN905 AI feedback 的首要流程依据：AI 只指出问题、解释原因并提问，引用学生原句并对应 criteria；不给分，也不改写 summary、段落或句子。
 - [Sherry Turkle: Connected, but alone? (TED YouTube)](https://www.youtube.com/watch?v=t7Xr3AsBEK4)
   第一周 social media 主题练习；用于识别中心论点、观察性例证和因果主张之间的差别。
 - [TED official transcript](https://www.ted.com/talks/sherry_turkle_connected_but_alone?view=transcript)
