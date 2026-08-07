@@ -13,7 +13,7 @@ source: "[[03_Computer_Science/03_MIT 6.100L/00_课程总览|MIT 6.100L course o
 
 ## 课程清单
 
-- [ ] MIT 6.100L｜Lecture 01: [[03_Computer_Science/03_MIT 6.100L/01_Introduction|Introduction]] #student-os/task
+- [x] MIT 6.100L｜Lecture 01: [[03_Computer_Science/03_MIT 6.100L/01_Introduction|Introduction]] #student-os/task ✅ 2026-08-07
 - [ ] MIT 6.100L｜Lecture 02: [[03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching|Strings, Input-Output and Branching]] #student-os/task
 - [ ] MIT 6.100L｜Lecture 03: [[03_Computer_Science/03_MIT 6.100L/03_Iteration|Iteration]] #student-os/task
 - [ ] MIT 6.100L｜Lecture 04: [[03_Computer_Science/03_MIT 6.100L/04_Loops over strings, Guess-and-check and Binary|Loops over Strings, Guess-and-check and Binary]] #student-os/task
