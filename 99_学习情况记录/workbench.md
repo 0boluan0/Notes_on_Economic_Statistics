@@ -31,8 +31,6 @@ hide postpone button
 ## 风险雷达
 
 <!-- student-os:risk-radar:start -->
-- D-0｜2026-08-07 11:45｜LN905 Listening into Writing：Gender
-- D-0｜2026-08-07 15:00｜LN905 Reading into Writing：Gender
 - D-2｜2026-08-09｜LN905 Essay：提交注释书目
 - D-7｜2026-08-14 11:45｜LN905 Listening into Writing：Demographics
 - D-7｜2026-08-14 15:00｜LN905 Reading into Writing：Demographics
