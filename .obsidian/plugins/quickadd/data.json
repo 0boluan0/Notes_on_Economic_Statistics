@@ -308,7 +308,7 @@
         "id": "openai"
       }
     ],
-    "lastModelAutoSyncAt": 1785928567451
+    "lastModelAutoSyncAt": 1786044463595
   },
   "migrations": {
     "migrateToMacroIDFromEmbeddedMacro": true,

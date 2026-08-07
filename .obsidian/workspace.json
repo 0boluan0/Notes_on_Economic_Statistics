@@ -21,24 +21,12 @@
             "id": "3ac6d23783c7807e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "code-space-view",
               "state": {
-                "file": "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-03-gender-structure.html"
               },
               "icon": "lucide-file",
-              "title": "01_Introduction"
+              "title": "2026-08-03-gender-structure.html"
             }
           }
         ],
@@ -154,6 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-03-gender-structure.html",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -300,8 +289,9 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "ebd03aa7239d6044",
+  "active": "3ac6d23783c7807e",
   "lastOpenFiles": [
+    "99_学习情况记录/2026-08-06——Thu.md",
     "03_Computer_Science/03_MIT 6.100L/01_Introduction.md",
     "03_Computer_Science/01_CS50/00_课程总览.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf",
@@ -326,7 +316,6 @@
     "00_inbox/Untitled.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/2-minute-presentations/Week One_LN905.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Presentation Guide - Timestamped Transcript.pdf",
-    "99_学习情况记录/2026-08-06——Thu.md",
     "99_学习情况记录/2026-08-05——Wed.md",
     "98_attachment/Pasted image 20250628205522.png",
     "98_attachment/截屏 2024-10-10 20.04.51.jpeg",
