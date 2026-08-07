@@ -24,7 +24,7 @@ lecture: 02
 > - print 这一段真正想说的是：在 shell 里看到表达式结果，不等于你已经学会了给用户输出。
 > - input 这一段最关键的结论是：用户输入无论看起来像什么，进程序时都先是 string。
 > - Newton cube-root 例子不是为了教数值方法本身，而是为了说明：即使现在还不会循环，也已经能写出“一步更新”的数值程序。
-> - branching 先从 Boolean expression 和 ` == ` / ` != ` 讲起，再进入 `if`、`elif`、`else`；老师是在先铺“条件”，再铺“分支”。
+> - branching 先从 Boolean expression 和  ==  / ` != ` 讲起，再进入 `if`、`elif`、`else`；老师是在先铺“条件”，再铺“分支”。
 > - 本讲结尾的所有 bug 都围着三件事转：缩进、条件覆盖顺序、以及把多个独立 `if` 错当成 `elif` 链。
 > <!-- bilingual-en:start -->
 > - The lecture begins by revisiting the memory diagram because strings, input, and branching all depend on the same model of names bound to objects.
@@ -35,8 +35,8 @@ lecture: 02
 > - The point of `print` is that seeing an expression's value in the shell is not the same as producing output for a program's user.
 > - No matter what a user's input looks like, `input()` initially returns it as a string.
 > - The Newton cube-root example is not intended to teach the full numerical method; it shows that input, expressions, and output already suffice to implement one update step before loops are available.
-> - Branching is built from Boolean expressions and comparisons such as `==` and `!=` before introducing `if`, `elif`, and `else`: conditions come before branches.
-> - The closing bugs concern indentation, the order and coverage of conditions, and the difference between independent `if` statements and an `elif` chain.
+> - Branching is built from Boolean expressions and comparisons such as == and != before introducing `if`, elif, and else : conditions come before branches.
+> - The closing bugs concern indentation, the order and coverage of conditions, and the difference between independent if statements and an elif chain.
 > <!-- bilingual-en:end -->
 
 ## Lecture flow
