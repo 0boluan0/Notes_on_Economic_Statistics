@@ -12,6 +12,8 @@ topic: "LN905 Reading into Writing"
 
 ## Knowledge
 
+- [[98_attachment/LN905/reading-into-writing/2026-08-07-gender-official/page-01.jpg|2026-08-07 Gender official source pack]]
+  本周已提交的课堂 Reading into Writing 真实题目与三篇 extracts，共六页；后续用来复盘审题、source mapping、synthesis 与原答案。
 - [[98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-1.jpg|2026-07-31 Social Media source pack]]
   本次课堂测试的六页 extracts；用于第一次引导式重练和后续对照原答案。
 - [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading into Writing.pdf|LSE Reading into Writing introduction]]

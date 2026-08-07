@@ -35,7 +35,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Reading to Writing social media.md",
+                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2 listening into writing.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -50,11 +50,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Week1 Reading to Writing social media"
+              "title": "Week2 listening into writing"
+            }
+          },
+          {
+            "id": "cf6636a3d33a5a74",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2Reading-into-writing.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Week2Reading-into-writing"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -166,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Reading to Writing social media.md",
+                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2Reading-into-writing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -313,8 +337,22 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "e78a4fe7a2b61879",
+  "active": "cf6636a3d33a5a74",
   "lastOpenFiles": [
+    "99_学习情况记录/teach/reading-into-writing/learning-records/0003-gender-feedback-loop.md",
+    "99_学习情况记录/teach/reading-into-writing/learning-records/0002-gender-source-mechanisms.md",
+    "99_学习情况记录/teach/reading-into-writing/GLOSSARY.md",
+    "98_attachment/LN905/reading-into-writing/2026-08-07-gender-official/page-06.jpg",
+    "98_attachment/LN905/reading-into-writing/2026-08-07-gender-official/page-05.jpg",
+    "98_attachment/LN905/reading-into-writing/2026-08-07-gender-official/page-04.jpg",
+    "98_attachment/LN905/reading-into-writing/2026-08-07-gender-official/page-03.jpg",
+    "98_attachment/LN905/reading-into-writing/2026-08-07-gender-official/page-02.jpg",
+    "98_attachment/LN905/reading-into-writing/2026-08-07-gender-official/page-01.jpg",
+    "98_attachment/LN905/reading-into-writing/2026-08-07-gender-official",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2 listening into writing.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2Reading-into-writing.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/week2 listening.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Reading to Writing social media.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
     "99_学习情况记录/teach/reading-into-writing/learning-records/0001-social-media-self-assessment.md",
     "99_学习情况记录/teach/reading-into-writing/learning-records",
@@ -323,16 +361,9 @@
     "tmp/pdfs/social_media_week1/page-6.png",
     "tmp/pdfs/social_media_week1/page-5.png",
     "tmp/pdfs/social_media_week1/page-4.png",
-    "tmp/pdfs/social_media_week1/page-3.png",
-    "tmp/pdfs/social_media_week1/page-2.png",
-    "tmp/pdfs/social_media_week1/page-1.png",
     "tmp/pdfs/social_media_week1",
-    "tmp/pdfs/reading_into_writing_workbook/contact-4.jpg",
-    "tmp/pdfs/reading_into_writing_workbook/contact-3.jpg",
-    "tmp/pdfs/reading_into_writing_workbook/contact-2.jpg",
     "tmp/pdfs/reading_into_writing_workbook",
     "tmp/pdfs/ln905-ai-feedback-workbook",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2 listening into writing.md",
     "tmp/pdfs/ln905-criteria-check",
     "99_学习情况记录/archive/daily/2026-W31/2026-08-02——Sun.md",
     "99_学习情况记录/archive/daily/2026-W31/2026-07-31——Fri.md",
@@ -345,7 +376,6 @@
     "99_学习情况记录/archive/daily/2026-W28",
     "99_学习情况记录/archive/daily/2026-W27/2026-06-29——Mon.md",
     "99_学习情况记录/archive/daily/2026-W27/2026-07-03——Fri.md",
-    "99_学习情况记录/archive/daily/2026-W27",
     "99_学习情况记录/archive/daily/2026-W19/2026-05-09——Sat.md",
     "99_学习情况记录/archive/daily/2026-W16/2026-04-13——Mon.md",
     "99_学习情况记录/archive/daily/2026-W16/2026-04-14——Tue.md",
@@ -355,12 +385,6 @@
     "99_学习情况记录/archive/daily/2026-W15/2026-04-09——Thu.md",
     "99_学习情况记录/archive/daily/2026-W15/2026-04-08——Wed.md",
     "99_学习情况记录/archive/daily/2026-W15/2026-04-07——Tue.md",
-    "99_学习情况记录/archive/daily/2026-W15/2026-04-06——Mon.md",
-    "99_学习情况记录/archive/daily/2026-W14/2026-04-05——Sun.md",
-    "99_学习情况记录/archive/daily/2026-W14/2026-04-04——Sat.md",
-    "99_学习情况记录/archive/daily/2026-W14/2026-04-03——Fri.md",
-    "99_学习情况记录/archive/daily/2026-W14/2026-04-01——Wed.md",
-    "99_学习情况记录/archive/daily/2026-W14/2026-04-02——Thu.md",
     "03_Computer_Science/01_CS50/CS50 Course Atlas.canvas",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",
