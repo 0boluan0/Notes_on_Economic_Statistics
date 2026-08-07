@@ -31,14 +31,14 @@ hide postpone button
 ## 风险雷达
 
 <!-- student-os:risk-radar:start -->
-- D-1｜2026-08-07 11:45｜LN905 Listening into Writing：Gender
-- D-1｜2026-08-07 15:00｜LN905 Reading into Writing：Gender
-- D-3｜2026-08-09｜LN905 Essay：提交注释书目
-- D-8｜2026-08-14 11:45｜LN905 Listening into Writing：Demographics
-- D-8｜2026-08-14 15:00｜LN905 Reading into Writing：Demographics
-- D-10｜2026-08-16｜LN905 Essay：提交 detailed essay plan
-- D-15｜2026-08-21 11:45｜LN905 Listening into Writing：Climate Change（已有准备任务）
-- D-15｜2026-08-21 15:00｜LN905 Reading into Writing：Climate Change（已有准备任务）
+- D-0｜2026-08-07 11:45｜LN905 Listening into Writing：Gender
+- D-0｜2026-08-07 15:00｜LN905 Reading into Writing：Gender
+- D-2｜2026-08-09｜LN905 Essay：提交注释书目
+- D-7｜2026-08-14 11:45｜LN905 Listening into Writing：Demographics
+- D-7｜2026-08-14 15:00｜LN905 Reading into Writing：Demographics
+- D-9｜2026-08-16｜LN905 Essay：提交 detailed essay plan
+- D-14｜2026-08-21 11:45｜LN905 Listening into Writing：Climate Change
+- D-14｜2026-08-21 15:00｜LN905 Reading into Writing：Climate Change
 <!-- student-os:risk-radar:end -->
 
 ## 输入箱
