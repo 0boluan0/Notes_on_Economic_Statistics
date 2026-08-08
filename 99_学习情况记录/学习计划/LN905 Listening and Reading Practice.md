@@ -47,10 +47,10 @@ Listening 与 Reading 是两个独立任务。这里是唯一 canonical checkbox
 
 ## Demographics｜测试 2026-08-14
 
-- [ ] LN905 Listening｜Demographics 0A：新主题结构迁移 + 220–280 词 summary（约 45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-08-demographics-transfer.html|练习页]] #student-os/task ⏳ 2026-08-09 📅 2026-08-13
-- [ ] LN905 Reading｜Demographics 0A：审题 + 三篇来源的 argument roles（约 40 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-08-demographics-transfer-response|答题页]] #student-os/task ⏳ 2026-08-09 📅 2026-08-13
-- [ ] LN905 Listening｜Demographics 0B：主张、理由与 evidence map（约 35 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-09-demographics-map.html|练习页]] #student-os/task ⏳ 2026-08-09 📅 2026-08-13
-- [ ] LN905 Reading｜Demographics 0B：限定 thesis + 一个跨文关系（约 35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-09-demographics-thesis-response|答题页]] #student-os/task ⏳ 2026-08-09 📅 2026-08-13
+- [ ] LN905 Listening｜Demographics 0A：新主题结构迁移 + 220–280 词 summary（约 45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-08-demographics-transfer.html|练习页]] #student-os/task 📅 2026-08-13
+- [ ] LN905 Reading｜Demographics 0A：审题 + 三篇来源的 argument roles（约 40 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-08-demographics-transfer-response|答题页]] #student-os/task 📅 2026-08-13
+- [ ] LN905 Listening｜Demographics 0B：主张、理由与 evidence map（约 35 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-09-demographics-map.html|练习页]] #student-os/task 📅 2026-08-13
+- [ ] LN905 Reading｜Demographics 0B：限定 thesis + 一个跨文关系（约 35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-09-demographics-thesis-response|答题页]] #student-os/task 📅 2026-08-13
 - [ ] LN905 Listening｜Demographics 1：隐含结构图 + 分层概括（约 55 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-10-demographics-structure.html|练习页]] #student-os/task ⏳ 2026-08-10 📅 2026-08-13
 - [ ] LN905 Reading｜Demographics 1：三文 claim–evidence–scope map（约 55 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-10-demographics-structure-response|答题页]] #student-os/task ⏳ 2026-08-10 📅 2026-08-13
 - [ ] LN905 Listening｜Demographics 2：主点展开 + supporting detail 取舍（约 50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-depth.html|练习页]] #student-os/task ⏳ 2026-08-11 📅 2026-08-13
