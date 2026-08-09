@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LN905 · 从 summary 到 annotated bibliography</title>
+  <style>
+    :root {
+      --ink: #18231f;
+      --muted: #5d6b65;
+      --paper: #fbfaf6;
+      --card: #ffffff;
+      --line: #d9dfda;
+      --green: #1d6b50;
+      --green-soft: #e7f2ed;
+      --gold: #b56a16;
+      --gold-soft: #fff2df;
+      --blue: #2c5f91;
+      --blue-soft: #eaf2fb;
+      --red: #a33b31;
+      --shadow: 0 12px 30px rgba(29, 50, 42, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, #edf4ef 0, transparent 34rem),
+        var(--paper);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.62;
+    }
+
+    main { width: min(1020px, calc(100% - 32px)); margin: 0 auto; padding: 38px 0 80px; }
+    h1, h2, h3 { line-height: 1.2; letter-spacing: -.025em; }
+    h1 { max-width: 780px; margin: 8px 0 16px; font-size: clamp(2.2rem, 6vw, 4.6rem); }
+    h2 { margin: 0 0 14px; font-size: clamp(1.55rem, 3vw, 2.25rem); }
+    h3 { margin: 0 0 8px; }
+    p { margin: 0 0 14px; }
+    code { padding: .12em .35em; border-radius: 5px; background: #eef1ee; }
+
+    .eyebrow {
+      display: inline-flex;
+      padding: 6px 10px;
+      border: 1px solid #aac7b8;
+      border-radius: 999px;
+      color: var(--green);
+      background: rgba(255,255,255,.65);
+      font-size: .82rem;
+      font-weight: 750;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .lead { max-width: 760px; color: #394841; font-size: 1.12rem; }
+    .hero { padding: 26px 0 36px; }
+    .hero-note { margin-top: 22px; padding: 16px 18px; border-left: 4px solid var(--green); background: var(--green-soft); }
+
+    section {
+      margin-top: 28px;
+      padding: clamp(22px, 4vw, 38px);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.92);
+      box-shadow: var(--shadow);
+    }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .card { padding: 18px; border: 1px solid var(--line); border-radius: 13px; background: var(--card); }
+    .card.summary { border-top: 5px solid var(--blue); }
+    .card.evaluation { border-top: 5px solid var(--gold); }
+    .card.use { border-top: 5px solid var(--green); }
+    .label { font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .summary .label { color: var(--blue); }
+    .evaluation .label { color: var(--gold); }
+    .use .label { color: var(--green); }
+
+    .formula {
+      margin: 18px 0;
+      padding: 18px;
+      border-radius: 13px;
+      background: #17251f;
+      color: #f7faf8;
+      font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+      text-align: center;
+    }
+
+    .budget { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 4px; margin: 18px 0 8px; }
+    .budget div { padding: 13px 10px; text-align: center; color: white; font-weight: 750; }
+    .budget .b1 { border-radius: 10px 0 0 10px; background: var(--blue); }
+    .budget .b2 { background: var(--gold); }
+    .budget .b3 { border-radius: 0 10px 10px 0; background: var(--green); }
+
+    .tip, .warning { margin-top: 16px; padding: 14px 16px; border-radius: 10px; }
+    .tip { background: var(--green-soft); }
+    .warning { background: #fff0ed; border-left: 4px solid var(--red); }
+
+    .steps { counter-reset: step; display: grid; gap: 10px; padding: 0; list-style: none; }
+    .steps li { position: relative; padding: 14px 14px 14px 54px; border: 1px solid var(--line); border-radius: 11px; }
+    .steps li::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 14px;
+      top: 12px;
+      display: grid;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border-radius: 50%;
+      color: white;
+      background: var(--green);
+      font-weight: 800;
+    }
+
+    .model { display: grid; gap: 10px; margin-top: 18px; }
+    .sentence { padding: 13px 15px; border-left: 5px solid; border-radius: 7px; background: #f7f8f7; }
+    .sentence.summary { border-color: var(--blue); }
+    .sentence.evaluation { border-color: var(--gold); }
+    .sentence.use { border-color: var(--green); }
+    .sentence small { display: block; margin-bottom: 4px; color: var(--muted); font-weight: 800; text-transform: uppercase; }
+
+    .quiz-item { margin: 14px 0; padding: 14px; border: 1px solid var(--line); border-radius: 10px; }
+    .quiz-options { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 9px; }
+    label { cursor: pointer; }
+    button {
+      border: 0;
+      border-radius: 9px;
+      padding: 11px 16px;
+      color: white;
+      background: var(--green);
+      font: inherit;
+      font-weight: 780;
+      cursor: pointer;
+    }
+    button.secondary { color: var(--ink); background: #e8ece9; }
+    button:hover { filter: brightness(.95); }
+    .feedback { min-height: 28px; margin-top: 12px; font-weight: 700; }
+    .good { color: var(--green); }
+    .needs-work { color: var(--red); }
+
+    textarea {
+      width: 100%;
+      min-height: 118px;
+      margin-top: 7px;
+      padding: 12px;
+      resize: vertical;
+      border: 1px solid #bfc9c3;
+      border-radius: 9px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+    }
+    textarea:focus { outline: 3px solid #c9e3d7; border-color: var(--green); }
+    .builder { display: grid; gap: 14px; }
+    .builder-block { padding: 15px; border: 1px solid var(--line); border-radius: 11px; }
+    .builder-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .counter { margin-left: auto; font-weight: 800; }
+    .counter.ok { color: var(--green); }
+    .counter.bad { color: var(--red); }
+    .output { min-height: 130px; white-space: pre-wrap; }
+
+    .checklist { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .checklist label { padding: 12px 14px; border: 1px solid var(--line); border-radius: 9px; background: #fafbfa; }
+
+    .source-list { color: var(--muted); font-size: .92rem; }
+    footer { margin-top: 28px; color: var(--muted); text-align: center; }
+
+    @media (max-width: 760px) {
+      .grid, .checklist { grid-template-columns: 1fr; }
+      .budget { grid-template-columns: 1fr; }
+      .budget .b1, .budget .b2, .budget .b3 { border-radius: 7px; }
+      .counter { width: 100%; margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <span class="eyebrow">LN905 · 15–25 min lesson</span>
+    <h1>Annotated bibliography 不是摘要：它是一份“带判断的来源档案”</h1>
+    <p class="lead">你已经有十篇中文梗概。现在真正要学的是：怎样把其中三篇压缩成正式、客观、能服务自己论证的 100–300 词英文 annotation。</p>
+    <div class="hero-note"><strong>今天的可见成果：</strong>看懂一个 Lessmann worked example，并独立搭出 Khandani 的第一版 annotation。</div>
+  </header>
+
+  <section>
+    <h2>1. 你到底在写什么？</h2>
+    <p>每一项由两部分构成：先给完整 reference，再给一段短 annotation。annotation 不只是回答“这篇文章说了什么”，还必须回答“我为什么相信/限制它，以及我会拿它做什么”。</p>
+    <div class="formula">Reference + Summary → Evaluation → Intended use</div>
+    <div class="grid">
+      <article class="card summary">
+        <span class="label">Summary</span>
+        <h3>它做了什么？</h3>
+        <p>问题、方法/数据、核心发现。只选与你 essay question 直接相关的部分。</p>
+      </article>
+      <article class="card evaluation">
+        <span class="label">Evaluation</span>
+        <h3>证据有多强？</h3>
+        <p>一个具体 strength，加一个具体 limitation，并说明这个 limitation 限制了哪种结论。</p>
+      </article>
+      <article class="card use">
+        <span class="label">Intended use</span>
+        <h3>我为什么需要它？</h3>
+        <p>它将 support、challenge 或 qualify 你哪一个精确判断，并和哪篇来源形成对话。</p>
+      </article>
+    </div>
+    <div class="budget" aria-label="recommended word budget">
+      <div class="b1">约 45% Summary</div>
+      <div class="b2">约 35% Evaluation</div>
+      <div class="b3">约 20% Use</div>
+    </div>
+    <p><strong>建议目标：</strong>先写 160–220 词。这样足够覆盖课程标准，又不容易把段落写成 mini essay。上面的比例是写作策略，不是课程硬性评分比例。</p>
+    <div class="warning"><strong>最常见误区：</strong>把论文 abstract 换几个词，再加一句 “This source is useful.” 这仍然只是 description，因为它没有独立评价，也没有说明具体用途。</div>
+  </section>
+
+  <section>
+    <h2>2. 用六句话完成第一稿</h2>
+    <ol class="steps">
+      <li><strong>身份 + 范围：</strong>作者从什么专业位置、面向什么受众，研究什么问题？</li>
+      <li><strong>方法 + 数据：</strong>用什么设计、数据或理论来回答？</li>
+      <li><strong>核心发现：</strong>只写最能回答你 essay question 的结果。</li>
+      <li><strong>具体优势：</strong>哪一个设计特征提高了可信度？为什么？</li>
+      <li><strong>具体局限：</strong>缺陷是什么，因此你不能得出什么结论？</li>
+      <li><strong>精确用途：</strong>它将 support / challenge / qualify 你的哪一段判断？和谁一起读？</li>
+    </ol>
+    <div class="tip"><strong>判断一句 evaluation 是否合格：</strong>如果把文章标题换掉，这句话还适用于几乎所有论文（如 “the sample is large” 或 “the paper is useful”），它就还不够具体。</div>
+  </section>
+
+  <section>
+    <h2>3. Lessmann：把仓库梗概压缩成 annotation</h2>
+    <p><strong>Reference</strong><br>Lessmann, S., Baesens, B., Seow, H.-V., &amp; Thomas, L. C. (2015). Benchmarking state-of-the-art classification algorithms for credit scoring: An update of research. <em>European Journal of Operational Research, 247</em>(1), 124–136. https://doi.org/10.1016/j.ejor.2015.05.030</p>
+    <div class="model">
+      <div class="sentence summary"><small>Summary · scope and authority</small>Written by credit-scoring researchers and published in the <em>European Journal of Operational Research</em>, Lessmann et al. (2015) examine whether advanced classification methods consistently outperform logistic regression for credit scoring.</div>
+      <div class="sentence summary"><small>Summary · method</small>They compare 41 classifiers across eight real datasets using repeated cross-validation, six performance measures and simulated misclassification costs.</div>
+      <div class="sentence summary"><small>Summary · finding</small>Several advanced methods outperform logistic regression, but rankings vary with the metric and cost structure, so the statistically most accurate model is not always the most valuable.</div>
+      <div class="sentence evaluation"><small>Evaluation · strength</small>The breadth of the benchmark is a major strength because it makes the reported gains less dependent on one dataset, algorithm or evaluation measure.</div>
+      <div class="sentence evaluation"><small>Evaluation · limitation + consequence</small>However, the cost analysis is a simplified simulation that excludes interpretability, governance, maintenance and regulatory costs; the study therefore cannot show that its best-performing model should automatically be deployed.</div>
+      <div class="sentence use"><small>Intended use</small>I will use this source to define when predictive gains are material and stable, while reading it alongside Rudin (2019), who places the burden on complex-model advocates to show that no similarly accurate interpretable alternative exists.</div>
+    </div>
+    <div class="tip"><strong>注意逻辑：</strong>这里不是“先夸再挑刺”。strength 和 limitation 都在回答同一个问题：这篇文献能在多大程度上支持“复杂模型值得牺牲可解释性”。</div>
+  </section>
+
+  <section>
+    <h2>4. 快速判断：每句话在干什么？</h2>
+    <p>把每句归类为 Summary、Evaluation 或 Intended use。答完再检查。</p>
+    <form id="quiz">
+      <div class="quiz-item" data-answer="summary">
+        <strong>A.</strong> The authors use transaction, balance and credit-bureau data from one commercial bank to predict serious delinquency.
+        <div class="quiz-options">
+          <label><input type="radio" name="q1" value="summary"> Summary</label>
+          <label><input type="radio" name="q1" value="evaluation"> Evaluation</label>
+          <label><input type="radio" name="q1" value="use"> Intended use</label>
+        </div>
+      </div>
+      <div class="quiz-item" data-answer="evaluation">
+        <strong>B.</strong> Because the data come from a single bank during the financial crisis, the estimated gains may not generalise to other lenders or periods.
+        <div class="quiz-options">
+          <label><input type="radio" name="q2" value="summary"> Summary</label>
+          <label><input type="radio" name="q2" value="evaluation"> Evaluation</label>
+          <label><input type="radio" name="q2" value="use"> Intended use</label>
+        </div>
+      </div>
+      <div class="quiz-item" data-answer="use">
+        <strong>C.</strong> I will use the paper to provide an economic scale for a material predictive gain, while qualifying the claim that algorithmic complexity alone produced that gain.
+        <div class="quiz-options">
+          <label><input type="radio" name="q3" value="summary"> Summary</label>
+          <label><input type="radio" name="q3" value="evaluation"> Evaluation</label>
+          <label><input type="radio" name="q3" value="use"> Intended use</label>
+        </div>
+      </div>
+      <button type="button" id="checkQuiz">检查答案</button>
+      <div id="quizFeedback" class="feedback" aria-live="polite"></div>
+    </form>
+  </section>
+
+  <section>
+    <h2>5. 现在轮到你：Khandani 第一稿</h2>
+    <p>不要照抄中文梗概。先从中只选能回答 essay question 的事实，再写三个功能块。点击“合并草稿”后检查词数与逻辑。</p>
+    <div class="builder">
+      <div class="builder-block">
+        <label for="draftSummary"><strong>Summary（问题 + 方法/数据 + 一项关键发现）</strong></label>
+        <textarea id="draftSummary" placeholder="Khandani et al. (2010) examine ... Using ... they find ..."></textarea>
+      </div>
+      <div class="builder-block">
+        <label for="draftEvaluation"><strong>Evaluation（一个 specific strength + 一个 limitation 及其后果）</strong></label>
+        <textarea id="draftEvaluation" placeholder="A major strength is ... because ... However, ... which means that the study cannot establish ..."></textarea>
+      </div>
+      <div class="builder-block">
+        <label for="draftUse"><strong>Intended use（paragraph job + relationship）</strong></label>
+        <textarea id="draftUse" placeholder="I will use this source to ... while qualifying/contrasting it with ..."></textarea>
+      </div>
+      <div class="builder-actions">
+        <button type="button" id="combine">合并草稿</button>
+        <button type="button" id="clear" class="secondary">清空</button>
+        <span id="count" class="counter bad">0 words · 需要 100–300</span>
+      </div>
+      <div class="builder-block output" id="output" aria-live="polite">你的合并草稿会出现在这里。</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>6. 提交前的七项检查</h2>
+    <div class="checklist">
+      <label><input type="checkbox"> Reference 完整，三篇格式一致</label>
+      <label><input type="checkbox"> 正文独立满足 100–300 词</label>
+      <label><input type="checkbox"> 方法/数据与关键 finding 准确</label>
+      <label><input type="checkbox"> Strength 说明了“为什么增强可信度”</label>
+      <label><input type="checkbox"> Limitation 说明了“因此不能推出什么”</label>
+      <label><input type="checkbox"> Intended use 指向 essay 的具体判断</label>
+      <label><input type="checkbox"> 使用客观 reporting verbs，避免 “proves”</label>
+      <label><input type="checkbox"> 三篇能形成支持、挑战或限定关系</label>
+    </div>
+    <div class="warning"><strong>最后两项待核验：</strong>课程采用的具体 referencing style；reference 是否计入词数。仓库现有材料没有确认这两点，不应凭习惯猜。</div>
+  </section>
+
+  <section>
+    <h2>一句话模板，只在卡住时用</h2>
+    <p><code>[Author] examines [problem/context] using [method/data]. The study finds/argues [central claim]. Its main strength is [specific strength] because [reason], although [specific limitation] restricts [scope/inference]. This source will support/challenge/qualify [precise paragraph job] and will be read alongside [source + relationship].</code></p>
+    <p>模板是用来检查功能是否齐全的，不是要求每篇都写成相同句型。理论/评论型来源（如 Rudin）应把 “method/data” 换成论证材料与案例基础。</p>
+  </section>
+
+  <section class="source-list">
+    <h2>本课依据</h2>
+    <p>LN905 Week 2 Assignment Booklet（Annotated Bibliographies 与 Task 页面）；Week 2 Lesson 4；仓库中的 <em>04_Academic Writing</em> 第 14 节；Lessmann、Khandani 与 Rudin 三篇已核对梗概。推荐的段落比例与六句话流程是基于课程要求设计的写作脚手架，不是课程原文规定。</p>
+  </section>
+
+  <footer>下一步：完成上面的 Khandani 草稿，然后交给 Codex 做“功能与证据”反馈；在你修订前，不直接替换成最终答案。</footer>
+</main>
+
+<script>
+  const quizButton = document.getElementById('checkQuiz');
+  const feedback = document.getElementById('quizFeedback');
+
+  quizButton.addEventListener('click', () => {
+    const items = [...document.querySelectorAll('.quiz-item')];
+    let correct = 0;
+    let answered = 0;
+    items.forEach((item, index) => {
+      const selected = item.querySelector(`input[name="q${index + 1}"]:checked`);
+      item.style.borderColor = '#d9dfda';
+      if (selected) {
+        answered += 1;
+        if (selected.value === item.dataset.answer) {
+          correct += 1;
+          item.style.borderColor = '#1d6b50';
+        } else {
+          item.style.borderColor = '#a33b31';
+        }
+      }
+    });
+    if (answered < items.length) {
+      feedback.className = 'feedback needs-work';
+      feedback.textContent = `还差 ${items.length - answered} 题。先全部选择，再检查。`;
+    } else if (correct === items.length) {
+      feedback.className = 'feedback good';
+      feedback.textContent = '3/3。你已经能区分“复述来源”“评价证据”和“安排用途”。';
+    } else {
+      feedback.className = 'feedback needs-work';
+      feedback.textContent = `${correct}/3。提示：出现方法/发现通常是 Summary；出现局限的推论后果是 Evaluation；出现 “I will use” 是 Intended use。`;
+    }
+  });
+
+  const inputs = ['draftSummary', 'draftEvaluation', 'draftUse'].map(id => document.getElementById(id));
+  const output = document.getElementById('output');
+  const count = document.getElementById('count');
+
+  function combinedText() {
+    return inputs.map(input => input.value.trim()).filter(Boolean).join('\n\n');
+  }
+
+  function wordCount(text) {
+    const matches = text.trim().match(/\b[\w’'-]+\b/g);
+    return matches ? matches.length : 0;
+  }
+
+  function updateCount() {
+    const words = wordCount(combinedText());
+    count.textContent = `${words} words · ${words >= 100 && words <= 300 ? '范围合格' : '需要 100–300'}`;
+    count.className = `counter ${words >= 100 && words <= 300 ? 'ok' : 'bad'}`;
+  }
+
+  inputs.forEach(input => input.addEventListener('input', updateCount));
+
+  document.getElementById('combine').addEventListener('click', () => {
+    const text = combinedText();
+    output.textContent = text || '先完成至少一个功能块。';
+    updateCount();
+  });
+
+  document.getElementById('clear').addEventListener('click', () => {
+    inputs.forEach(input => { input.value = ''; });
+    output.textContent = '你的合并草稿会出现在这里。';
+    updateCount();
+  });
+</script>
+</body>
+</html>

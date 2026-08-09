@@ -57,16 +57,46 @@
             "id": "cf6636a3d33a5a74",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/09_References/10-types-of-plagiarism.pdf"
+                "file": "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/01 Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "10-types-of-plagiarism"
+              "icon": "lucide-file",
+              "title": "01 Lessmann et al. (2015) - Benchmarking credit-scoring algorithms"
             }
           }
         ],
         "currentTab": 3
+      },
+      {
+        "id": "c91fc0f5fee59df1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "45be2c9c9cff528a",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/01_Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "01_Lessmann et al. (2015) - Benchmarking credit-scoring algorithms"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -178,7 +208,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/09_References/10-types-of-plagiarism.pdf",
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/01_Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -300,7 +330,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 651.770263671875
+    "width": 651.770263671875,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -325,11 +356,20 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "8ef6c153e7a4ed38",
+  "active": "45be2c9c9cff528a",
   "lastOpenFiles": [
-    "99_学习情况记录/2026-08-09——Sun.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/09_References/10 types of plagiarism Turnitin video.pdf",
+    "99_学习情况记录/teach/annotated-bibliography/lessons/0001-from-summary-to-annotation.html",
+    "99_学习情况记录/teach/annotated-bibliography/RESOURCES.md",
+    "99_学习情况记录/teach/annotated-bibliography/MISSION.md",
+    "99_学习情况记录/teach/annotated-bibliography/lessons",
+    "99_学习情况记录/teach/annotated-bibliography",
+    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/01 Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.md",
+    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/00_文章梗概索引.md",
+    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay.md",
     "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
+    "99_学习情况记录/2026-08-09——Sun.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/09_References/10-types-of-plagiarism.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/09_References/10 types of plagiarism Turnitin video.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/04_Buecker et al. (2022) - Transparency auditability explainability (author preprint).pdf",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/10 Dumitrescu et al. (2022) - PLTR credit scoring.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/09 Martens et al. (2007) - SVM rule extraction.md",
@@ -340,8 +380,6 @@
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/04 Bücker et al. (2022) - TAX4CS.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/03 Rudin (2019) - Stop explaining black-box models.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/02 Khandani et al. (2010) - Consumer credit-risk ML models.md",
-    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/01 Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.md",
-    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/00_文章梗概索引.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography",
     "tmp/pdfs/ln905-annotated-bib-review/contact-08-10.png",
     "tmp/pdfs/ln905-annotated-bib-review/contact-05-07.png",
@@ -360,19 +398,12 @@
     "03_Computer_Science/03_MIT 6.100L/03_Iteration.md",
     "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
     "99_学习情况记录/2026-08-08——Sat.md",
-    "03_Computer_Science/03_MIT 6.100L/you-try-it.ipynb",
-    "03_Computer_Science/03_MIT 6.100L/you-try-it",
     "99_学习情况记录/2026-08-07——Fri.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2Reading-into-writing.md",
     "99_学习情况记录/teach/reading-into-writing/learning-records/0003-gender-feedback-loop.md",
     "99_学习情况记录/teach/reading-into-writing/learning-records/0002-gender-source-mechanisms.md",
     "99_学习情况记录/teach/reading-into-writing/GLOSSARY.md",
-    "98_attachment/LN905/reading-into-writing/2026-08-07-gender-official",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2 listening into writing.md",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/week2 listening.md",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Reading to Writing social media.md",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
-    "99_学习情况记录/teach/reading-into-writing/learning-records/0001-social-media-self-assessment.md",
     "03_Computer_Science/01_CS50/CS50 Course Atlas.canvas",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",
