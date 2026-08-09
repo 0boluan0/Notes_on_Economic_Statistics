@@ -21,9 +21,9 @@ tags:
 - 当前项目：[[LN905 Essay]]
 - 计划：[[LN905 Essay]]
 - Timed submissions：[[学习计划/LN905 timed submissions]]
-- Listening into Writing：进行中；当前优先修复隐含结构恢复、主点展开与有依据的 evaluation。
-- Reading into Writing：进行中；当前优先修复跨文本结构、段落展开与 evidence evaluation。
-- 两项训练计划：[[学习计划/LN905 Listening and Reading Practice]]；每个 session 使用全新 TED 或论文材料，并通过 canonical task 进入 Today。
+- Listening into Writing：正式 timed submissions 继续；旧的复合练习序列已暂停，先分开诊断词汇理解、材料理解、论证组织和英文成句。
+- Reading into Writing：正式 timed submissions 继续；旧的三文矩阵加长段落序列已暂停，替代练法尚待共同确认。
+- 暂停记录：[[学习计划/LN905 Listening and Reading Practice]]；在替代设计确认前不进入 Today，也不生成新的练习材料。
 
 ## 自主成长
 

@@ -2,12 +2,15 @@
 student_os: learning-plan
 title: LN905 Listening and Reading Practice
 track: school
-status: active
+status: paused
 kind: capability-practice
 assessment_horizon: 2026-08-21
 ---
 
 # LN905 Listening and Reading Practice
+
+> [!warning] 当前序列已暂停
+> 2026-08-09 起不再安排或生成下面这套复合练习。用户明确反馈：它在尚未稳定解决词汇理解、材料理解、论证组织和英文成句之前，就要求独立完成结构恢复与较长写作，明显打击信心并加重拖延。正式 timed submissions 与硬截止仍由独立计划保留；替代训练要在完成分层诊断并共同确认后再建立。
 
 这份计划覆盖 2026-08-03 至 2026-08-21 的三轮 timed tests。训练针对真实手稿暴露出的共同瓶颈：先恢复论证结构，再把主要观点展开到合适深度，最后把 evidence 与 claim 的匹配程度写成有依据的 evaluation。
 
@@ -36,44 +39,44 @@ Listening 与 Reading 是两个独立任务。这里是唯一 canonical checkbox
 
 ## Gender｜测试 2026-08-07
 
-- [ ] LN905 Listening｜Gender 1：AI 分段结构诊断 + 180–250 词 critical summary（约 60 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-03-gender-structure.html|练习页]] #student-os/task 📅 2026-08-06
-- [ ] LN905 Reading｜Gender 1：AI 分段论证诊断 + 180–220 词 synthesis paragraph（约 55 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-03-gender-structure-response|答题页]] #student-os/task 📅 2026-08-06
-- [ ] LN905 Listening｜Gender 2：选择性笔记 + evidence role（约 50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-04-gender-selection.html|练习页]] #student-os/task 📅 2026-08-06
-- [ ] LN905 Reading｜Gender 2：限定 thesis + 三段 argument map（约 50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-04-gender-argument-map-response|答题页]] #student-os/task 📅 2026-08-06
-- [ ] LN905 Listening｜Gender 3：完整模拟：40 分钟、300–400 词（约 65 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-05-gender-full.html|练习页]] #student-os/task
-- [ ] LN905 Reading｜Gender 3：两来源展开 + evidence evaluation（约 45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-05-gender-evaluation-response|答题页]] #student-os/task
-- [ ] LN905 Listening｜Gender 4：coverage 与 evaluation 精准修复（约 40 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-06-gender-precision.html|练习页]] #student-os/task
-- [ ] LN905 Reading｜Gender 4：完整模拟：120 分钟、约 600 词｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-06-gender-full-response|答题页]] #student-os/task
+- [ ] LN905 Listening｜Gender 1：AI 分段结构诊断 + 180–250 词 critical summary（约 60 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-03-gender-structure.html|练习页]] #student-os/paused 📅 2026-08-06
+- [ ] LN905 Reading｜Gender 1：AI 分段论证诊断 + 180–220 词 synthesis paragraph（约 55 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-03-gender-structure-response|答题页]] #student-os/paused 📅 2026-08-06
+- [ ] LN905 Listening｜Gender 2：选择性笔记 + evidence role（约 50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-04-gender-selection.html|练习页]] #student-os/paused 📅 2026-08-06
+- [ ] LN905 Reading｜Gender 2：限定 thesis + 三段 argument map（约 50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-04-gender-argument-map-response|答题页]] #student-os/paused 📅 2026-08-06
+- [ ] LN905 Listening｜Gender 3：完整模拟：40 分钟、300–400 词（约 65 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-05-gender-full.html|练习页]] #student-os/paused
+- [ ] LN905 Reading｜Gender 3：两来源展开 + evidence evaluation（约 45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-05-gender-evaluation-response|答题页]] #student-os/paused
+- [ ] LN905 Listening｜Gender 4：coverage 与 evaluation 精准修复（约 40 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-06-gender-precision.html|练习页]] #student-os/paused
+- [ ] LN905 Reading｜Gender 4：完整模拟：120 分钟、约 600 词｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-06-gender-full-response|答题页]] #student-os/paused
 
 ## Demographics｜测试 2026-08-14
 
-- [ ] LN905 Listening｜Demographics 0A：新主题结构迁移 + 220–280 词 summary（约 45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-08-demographics-transfer.html|练习页]] #student-os/task 📅 2026-08-13
-- [ ] LN905 Reading｜Demographics 0A：审题 + 三篇来源的 argument roles（约 40 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-08-demographics-transfer-response|答题页]] #student-os/task 📅 2026-08-13
-- [ ] LN905 Listening｜Demographics 0B：主张、理由与 evidence map（约 35 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-09-demographics-map.html|练习页]] #student-os/task 📅 2026-08-13
-- [ ] LN905 Reading｜Demographics 0B：限定 thesis + 一个跨文关系（约 35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-09-demographics-thesis-response|答题页]] #student-os/task 📅 2026-08-13
-- [ ] LN905 Listening｜Demographics 1：隐含结构图 + 分层概括（约 55 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-10-demographics-structure.html|练习页]] #student-os/task ⏳ 2026-08-10 📅 2026-08-13
-- [ ] LN905 Reading｜Demographics 1：三文 claim–evidence–scope map（约 55 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-10-demographics-structure-response|答题页]] #student-os/task ⏳ 2026-08-10 📅 2026-08-13
-- [ ] LN905 Listening｜Demographics 2：主点展开 + supporting detail 取舍（约 50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-depth.html|练习页]] #student-os/task ⏳ 2026-08-11 📅 2026-08-13
-- [ ] LN905 Reading｜Demographics 2：因果、机制与适用范围的跨文关系（约 50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-11-demographics-scope-response|答题页]] #student-os/task ⏳ 2026-08-11 📅 2026-08-13
-- [ ] LN905 Listening｜Demographics 3：完整模拟：40 分钟、300–400 词（约 65 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-12-demographics-full.html|练习页]] #student-os/task ⏳ 2026-08-12 📅 2026-08-13
-- [ ] LN905 Reading｜Demographics 3：两来源 synthesis + 限定结论（约 45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-12-demographics-evaluation-response|答题页]] #student-os/task ⏳ 2026-08-12 📅 2026-08-13
-- [ ] LN905 Listening｜Demographics 4：accuracy、coverage 与 evaluation 修复（约 40 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-13-demographics-precision.html|练习页]] #student-os/task
-- [ ] LN905 Reading｜Demographics 4：完整模拟：120 分钟、约 600 词｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-13-demographics-full-response|答题页]] #student-os/task ⏳ 2026-08-13 📅 2026-08-13
+- [ ] LN905 Listening｜Demographics 0A：新主题结构迁移 + 220–280 词 summary（约 45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-08-demographics-transfer.html|练习页]] #student-os/paused 📅 2026-08-13
+- [ ] LN905 Reading｜Demographics 0A：审题 + 三篇来源的 argument roles（约 40 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-08-demographics-transfer-response|答题页]] #student-os/paused 📅 2026-08-13
+- [ ] LN905 Listening｜Demographics 0B：主张、理由与 evidence map（约 35 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-09-demographics-map.html|练习页]] #student-os/paused 📅 2026-08-13
+- [ ] LN905 Reading｜Demographics 0B：限定 thesis + 一个跨文关系（约 35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-09-demographics-thesis-response|答题页]] #student-os/paused 📅 2026-08-13
+- [ ] LN905 Listening｜Demographics 1：隐含结构图 + 分层概括（约 55 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-10-demographics-structure.html|练习页]] #student-os/paused 📅 2026-08-13
+- [ ] LN905 Reading｜Demographics 1：三文 claim–evidence–scope map（约 55 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-10-demographics-structure-response|答题页]] #student-os/paused 📅 2026-08-13
+- [ ] LN905 Listening｜Demographics 2：主点展开 + supporting detail 取舍（约 50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-depth.html|练习页]] #student-os/paused 📅 2026-08-13
+- [ ] LN905 Reading｜Demographics 2：因果、机制与适用范围的跨文关系（约 50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-11-demographics-scope-response|答题页]] #student-os/paused 📅 2026-08-13
+- [ ] LN905 Listening｜Demographics 3：完整模拟：40 分钟、300–400 词（约 65 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-12-demographics-full.html|练习页]] #student-os/paused 📅 2026-08-13
+- [ ] LN905 Reading｜Demographics 3：两来源 synthesis + 限定结论（约 45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-12-demographics-evaluation-response|答题页]] #student-os/paused 📅 2026-08-13
+- [ ] LN905 Listening｜Demographics 4：accuracy、coverage 与 evaluation 修复（约 40 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-13-demographics-precision.html|练习页]] #student-os/paused
+- [ ] LN905 Reading｜Demographics 4：完整模拟：120 分钟、约 600 词｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-13-demographics-full-response|答题页]] #student-os/paused 📅 2026-08-13
 
 ## Climate Change｜测试 2026-08-21
 
-- [ ] LN905 Listening｜Climate Change 0A：新主题结构迁移 + 220–280 词 summary（约 45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-15-climate-transfer.html|练习页]] #student-os/task ⏳ 2026-08-16 📅 2026-08-20
-- [ ] LN905 Reading｜Climate Change 0A：审题 + 三篇来源的 argument roles（约 40 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-15-climate-transfer-response|答题页]] #student-os/task ⏳ 2026-08-16 📅 2026-08-20
-- [ ] LN905 Listening｜Climate Change 0B：主张、理由与 evidence map（约 35 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-map.html|练习页]] #student-os/task ⏳ 2026-08-16 📅 2026-08-20
-- [ ] LN905 Reading｜Climate Change 0B：限定 thesis + 一个跨文关系（约 35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-16-climate-thesis-response|答题页]] #student-os/task ⏳ 2026-08-16 📅 2026-08-20
-- [ ] LN905 Listening｜Climate Change 1：隐含结构图 + 分层概括（约 55 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-17-climate-structure.html|练习页]] #student-os/task ⏳ 2026-08-17 📅 2026-08-20
-- [ ] LN905 Reading｜Climate Change 1：三文 claim–evidence–scope map（约 55 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-17-climate-structure-response|答题页]] #student-os/task ⏳ 2026-08-17 📅 2026-08-20
-- [ ] LN905 Listening｜Climate Change 2：主点展开 + evidence role（约 50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-18-climate-depth.html|练习页]] #student-os/task ⏳ 2026-08-18 📅 2026-08-20
-- [ ] LN905 Reading｜Climate Change 2：共识、机制与政策含义的跨文关系（约 50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-18-climate-scope-response|答题页]] #student-os/task ⏳ 2026-08-18 📅 2026-08-20
-- [ ] LN905 Listening｜Climate Change 3：完整模拟：40 分钟、300–400 词（约 65 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-19-climate-full.html|练习页]] #student-os/task ⏳ 2026-08-19 📅 2026-08-20
-- [ ] LN905 Reading｜Climate Change 3：两来源 synthesis + evidence evaluation（约 45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-19-climate-evaluation-response|答题页]] #student-os/task ⏳ 2026-08-19 📅 2026-08-20
-- [ ] LN905 Listening｜Climate Change 4：accuracy、coverage 与 evaluation 修复（约 40 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-20-climate-precision.html|练习页]] #student-os/task
-- [ ] LN905 Reading｜Climate Change 4：完整模拟：120 分钟、约 600 词｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-20-climate-full-response|答题页]] #student-os/task ⏳ 2026-08-20 📅 2026-08-20
+- [ ] LN905 Listening｜Climate Change 0A：新主题结构迁移 + 220–280 词 summary（约 45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-15-climate-transfer.html|练习页]] #student-os/paused 📅 2026-08-20
+- [ ] LN905 Reading｜Climate Change 0A：审题 + 三篇来源的 argument roles（约 40 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-15-climate-transfer-response|答题页]] #student-os/paused 📅 2026-08-20
+- [ ] LN905 Listening｜Climate Change 0B：主张、理由与 evidence map（约 35 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-map.html|练习页]] #student-os/paused 📅 2026-08-20
+- [ ] LN905 Reading｜Climate Change 0B：限定 thesis + 一个跨文关系（约 35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-16-climate-thesis-response|答题页]] #student-os/paused 📅 2026-08-20
+- [ ] LN905 Listening｜Climate Change 1：隐含结构图 + 分层概括（约 55 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-17-climate-structure.html|练习页]] #student-os/paused 📅 2026-08-20
+- [ ] LN905 Reading｜Climate Change 1：三文 claim–evidence–scope map（约 55 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-17-climate-structure-response|答题页]] #student-os/paused 📅 2026-08-20
+- [ ] LN905 Listening｜Climate Change 2：主点展开 + evidence role（约 50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-18-climate-depth.html|练习页]] #student-os/paused 📅 2026-08-20
+- [ ] LN905 Reading｜Climate Change 2：共识、机制与政策含义的跨文关系（约 50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-18-climate-scope-response|答题页]] #student-os/paused 📅 2026-08-20
+- [ ] LN905 Listening｜Climate Change 3：完整模拟：40 分钟、300–400 词（约 65 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-19-climate-full.html|练习页]] #student-os/paused 📅 2026-08-20
+- [ ] LN905 Reading｜Climate Change 3：两来源 synthesis + evidence evaluation（约 45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-19-climate-evaluation-response|答题页]] #student-os/paused 📅 2026-08-20
+- [ ] LN905 Listening｜Climate Change 4：accuracy、coverage 与 evaluation 修复（约 40 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-20-climate-precision.html|练习页]] #student-os/paused
+- [ ] LN905 Reading｜Climate Change 4：完整模拟：120 分钟、约 600 词｜[[99_学习情况记录/teach/reading-into-writing/practice/2026-08-20-climate-full-response|答题页]] #student-os/paused 📅 2026-08-20
 
 ## 来源去重账本
 

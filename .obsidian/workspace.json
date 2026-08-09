@@ -6,6 +6,7 @@
       {
         "id": "869e028558261b8d",
         "type": "tabs",
+        "dimension": 20.737327188940093,
         "children": [
           {
             "id": "70c0343f5ae25f5e",
@@ -83,17 +84,30 @@
       {
         "id": "c91fc0f5fee59df1",
         "type": "tabs",
+        "dimension": 79.26267281105991,
         "children": [
           {
             "id": "45be2c9c9cff528a",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/01_Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.pdf"
+                "file": "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/Chinese Drafts/01 Lessmann et al. (2015) - 中文 annotation.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "01_Lessmann et al. (2015) - Benchmarking credit-scoring algorithms"
+              "icon": "lucide-file",
+              "title": "01 Lessmann et al. (2015) - 中文 annotation"
             }
           }
         ]
@@ -208,7 +222,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/01_Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.pdf",
+                "file": "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/Chinese Drafts/01 Lessmann et al. (2015) - 中文 annotation.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -358,13 +372,23 @@
   },
   "active": "45be2c9c9cff528a",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/English Drafts/03 Rudin (2019) - English annotation.md",
+    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/English Drafts/02 Khandani et al. (2010) - English annotation.md",
+    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/English Drafts/01 Lessmann et al. (2015) - English annotation.md",
+    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/English Drafts",
+    "99_学习情况记录/teach/reading-into-writing/learning-records/0004-overall-and-within-group-difference.md",
+    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/Chinese Drafts/02 Khandani et al. (2010) - 中文 annotation.md",
+    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/00_文章梗概索引.md",
+    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/Chinese Drafts/01 Lessmann et al. (2015) - 中文 annotation.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/01_Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.pdf",
+    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/Chinese Drafts/03 Rudin (2019) - 中文 annotation.md",
+    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/Chinese Drafts",
     "99_学习情况记录/teach/annotated-bibliography/lessons/0001-from-summary-to-annotation.html",
     "99_学习情况记录/teach/annotated-bibliography/RESOURCES.md",
     "99_学习情况记录/teach/annotated-bibliography/MISSION.md",
     "99_学习情况记录/teach/annotated-bibliography/lessons",
     "99_学习情况记录/teach/annotated-bibliography",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/01 Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.md",
-    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/00_文章梗概索引.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay.md",
     "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
     "99_学习情况记录/2026-08-09——Sun.md",
@@ -391,19 +415,9 @@
     "tmp/pdfs/ln905-annotated-bib-review/09-p1.png",
     "tmp/pdfs/ln905-annotated-bib-review/08-p34.png",
     "tmp/pdfs/ln905-annotated-bib-review/08-p31.png",
-    "tmp/pdfs/ln905-annotated-bib-review",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/03_Rudin (2019) - Stop explaining black-box models (author preprint).pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/02_Khandani et al. (2010) - Consumer credit-risk ML models.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/01_Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.pdf",
     "03_Computer_Science/03_MIT 6.100L/03_Iteration.md",
     "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
     "99_学习情况记录/2026-08-08——Sat.md",
-    "99_学习情况记录/2026-08-07——Fri.md",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2Reading-into-writing.md",
-    "99_学习情况记录/teach/reading-into-writing/learning-records/0003-gender-feedback-loop.md",
-    "99_学习情况记录/teach/reading-into-writing/learning-records/0002-gender-source-mechanisms.md",
-    "99_学习情况记录/teach/reading-into-writing/GLOSSARY.md",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2 listening into writing.md",
     "03_Computer_Science/01_CS50/CS50 Course Atlas.canvas",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",
