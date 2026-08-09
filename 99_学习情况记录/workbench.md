@@ -16,7 +16,7 @@ tags:
 
 ## 一次性任务
 
-- [ ] 职业｜尽可能修改 CV，并尝试给陈教授发邮件 #student-os/task 📅 2026-08-09
+- [ ] 职业｜尽可能修改 CV，并尝试给陈教授发邮件 #student-os/task ⏳ 2026-08-09 📅 2026-08-09
 - [ ] 生活行政｜弄清楚怎么办银行卡（软截止） #student-os/task 📅 2026-08-09
 - [ ] 生活行政｜弄清楚怎么办签证（软截止） #student-os/task 📅 2026-08-09
 
@@ -37,12 +37,12 @@ hide postpone button
 ## 风险雷达
 
 <!-- student-os:risk-radar:start -->
-- D-1｜2026-08-09｜LN905 Essay：提交注释书目
-- D-6｜2026-08-14 11:45｜LN905 Listening into Writing：Demographics
-- D-6｜2026-08-14 15:00｜LN905 Reading into Writing：Demographics
-- D-8｜2026-08-16｜LN905 Essay：提交 detailed essay plan
-- D-13｜2026-08-21 11:45｜LN905 Listening into Writing：Climate Change
-- D-13｜2026-08-21 15:00｜LN905 Reading into Writing：Climate Change
+- D-0｜2026-08-09｜LN905 Essay：提交注释书目
+- D-5｜2026-08-14 11:45｜LN905 Listening into Writing：Demographics
+- D-5｜2026-08-14 15:00｜LN905 Reading into Writing：Demographics
+- D-7｜2026-08-16｜LN905 Essay：提交 detailed essay plan
+- D-12｜2026-08-21 11:45｜LN905 Listening into Writing：Climate Change
+- D-12｜2026-08-21 15:00｜LN905 Reading into Writing：Climate Change
 <!-- student-os:risk-radar:end -->
 
 ## 输入箱

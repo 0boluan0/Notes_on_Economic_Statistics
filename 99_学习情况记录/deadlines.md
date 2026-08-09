@@ -32,6 +32,8 @@ tags:
 
 ## 核验状态
 
+- 2026-08-09｜Moodle Sunday 全量核对完成：18 个课程区段、13 个 assignment 页面及 107 个课程文件/资源均已检查，Announcements 仍为空。Gender、Social Media 与 Essay Question/Rationale 已提交；Annotated Bibliography、Essay Plan、Essay Draft、Final Submission、Demographics Listening/Reading 与 Climate Change Listening/Reading 均未提交。四个 essay assignment 页面未显示独立 due 字段，继续以 workbook 日期为准；未发现更早或新增的硬截止。
+- 2026-08-09｜Apple Calendar 的只读 `LSE` 读取成功：今天没有固定课程或行程；8 月 14、21 日 Listening/Reading 的四个截止点与 Moodle 和现有记录一致。
 - 2026-08-08｜Moodle 日常核对完成：Annotated Bibliography、Essay Plan、Demographics Listening/Reading 与 Climate Change Listening/Reading 均未提交；Moodle 未显示 Annotated Bibliography 与 Essay Plan 的独立 due 字段，现有截止日期不变。
 - 2026-08-08｜Apple Calendar 的只读 `LSE` 读取成功：今天与明天没有固定课程或行程；8 月 14、21 日 Listening/Reading 的截止点与现有记录一致。
 - 2026-08-07｜Moodle shutdown 核对完成：Gender Listening 于 11:02 提交、Reading 于 14:51 提交，两项均显示 Submitted for grading，已关闭对应硬截止。
