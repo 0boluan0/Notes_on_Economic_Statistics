@@ -7,6 +7,7 @@ authors:
 year: 2010
 doi: 10.1016/j.jbankfin.2010.06.001
 status: ready-for-user-review
+voice: student-voice
 source_chinese_draft: "[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/Chinese Drafts/02 Khandani et al. (2010) - 中文 annotation]]"
 ---
 
@@ -17,8 +18,7 @@ source_chinese_draft: "[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay
 
 ## English annotation
 
-Khandani, Kim and Lo (2010), writing for researchers and practitioners in consumer credit risk, investigate whether detailed banking transactions and machine learning can identify serious delinquency earlier than conventional credit scores. Using proprietary customer data from a large commercial bank between 2005 and 2009, they combine account transactions, balances and credit-bureau information in boosted classification trees to predict serious delinquency three to twelve months ahead. Rolling out-of-sample tests identify warning signals such as declining income. Under the authors’ cost-benefit assumptions, using these predictions to reduce credit limits on high-risk accounts could save an amount equal to 6–25% of total losses. A key strength is the use of granular, timely banking data and the conversion of predictive improvement into an economically meaningful measure. However, the evidence comes from one bank and includes the financial crisis, while the savings estimate depends on several simulation assumptions. More importantly, the study does not compare machine learning and logistic regression using identical predictors, so the improvement cannot be attributed entirely to model complexity; richer and timelier data may also drive performance. I will use this source as a positive example of material economic gains while qualifying the claim that sophisticated algorithms alone produced those gains.
+Khandani, Kim and Lo (2010) study whether detailed bank data and machine-learning methods can predict serious payment problems earlier than traditional credit scores. The article was published in the *Journal of Banking & Finance* and is relevant to researchers and practitioners in banking and credit risk. The authors use data from one large commercial bank between 2005 and 2009. The data include customer transactions, account balances and credit-bureau information. They use boosted classification trees to predict serious delinquency three to twelve months in advance. The results show that changes such as a fall in income can be useful warning signs. Under the authors’ assumptions, reducing credit limits for predicted high-risk customers could save 6%–25% of total losses. A strength of the study is that it uses detailed real banking data and connects prediction accuracy with possible financial savings. However, the data come from only one bank and the savings depend on simulation assumptions. The study also does not compare machine learning with logistic regression using exactly the same variables. I will use it to show that complex models may bring important economic gains, but some gains may come from richer data rather than model complexity.
 
 > [!warning] Before submission
 > Verify the referencing style required by LN905 and whether the reference is included in the word limit. The annotation body already satisfies the stated 100–300-word range independently.
-

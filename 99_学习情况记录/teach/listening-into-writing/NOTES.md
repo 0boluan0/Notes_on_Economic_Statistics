@@ -31,7 +31,7 @@ topic: "LN905 Listening into Writing"
 - 先降低听与记的同步负担，再增加完整 40 分钟模拟。
 - 用户不理解反馈动作时，暂停抽象术语与多空填充；先给一个基于其原始笔记的具体选择或提取动作，一次只推进一步。
 - 反馈必须对应课程评分标准，不把“写满 400 词”当作成功标准。
-- 每日只设一个训练重点；完整 40 分钟写作模拟每周最多两次，除非用户另行要求。
+- 每天可以组合词汇、理解、summary、evaluation 与英文成句，但只保留少量清晰产出；不机械限制“每天一层”。完整 40 分钟写作模拟每周最多两次，除非用户另行要求。
 - 当前优先训练：隐含论证结构、主要观点的深度展开，以及 evidence 是否足以支持 claim 的 evaluation。
 - 成文前 checkpoint 只做诊断和最多三个追问，不泄露完整结构或 model answer；用户修改并再次发送后，AI 明确确认能否成文。最终 checkpoint 对应评分标准，只指定一个最高价值 revision，并在用户回传修改后确认是否解决。
 - 完整模拟计时期间不介入；结束后才读取原始作答并反馈。
@@ -42,3 +42,5 @@ topic: "LN905 Listening into Writing"
 - 成文约 216 词。教师肯定了 main ideas 与表面 signposting，同时指出篇幅和展开不足、内容主要是 description，并要求判断论证是否 convincing、evidence 是否支持 claims。
 - 因此不把问题简单定性为“没听懂”或“英语写不出”；先训练把听到的内容组织成 claim–reasoning–support–evaluation，再根据后续真实输出调整。
 - 2026-08-09 用户补充了更高优先级的自我观察：首先因大量生词而看不懂；即使理解内容，也不知道如何组织写作；即使形成想法，也难以转换为英文句子。旧序列将这三层同时作为前提，现已暂停，下一步先做分层诊断而非继续完整输出。
+- Gender timed output 使用了 AI，因此只能作为受辅助表现，不能直接当成独立考试基线。后续普通练习允许 AI 教学；完整模拟与正式 timed submission 必须到计时结束后才调用 AI。
+- Gender Listening 教师确认：能识别 central argument、privilege、resistance 与 equality benefits，也已经尝试 critical evaluation。最高优先级不是“增加批判”，而是 evaluation accuracy：评价前必须承认 speaker 同时使用的 personal experience、research evidence 与 data，不能把混合证据误写成只有 anecdotes。另需持续修 grammar、word form 与 academic expression。

@@ -21,9 +21,9 @@ tags:
 - 当前项目：[[LN905 Essay]]
 - 计划：[[LN905 Essay]]
 - Timed submissions：[[学习计划/LN905 timed submissions]]
-- Listening into Writing：正式 timed submissions 继续；旧的复合练习序列已暂停，先分开诊断词汇理解、材料理解、论证组织和英文成句。
-- Reading into Writing：正式 timed submissions 继续；旧的三文矩阵加长段落序列已暂停，替代练法尚待共同确认。
-- 暂停记录：[[学习计划/LN905 Listening and Reading Practice]]；在替代设计确认前不进入 Today，也不生成新的练习材料。
+- Listening into Writing：两周强化计划已启用；保留 central claim 与 evaluation 基础，重点提升 evidence inventory、evaluation accuracy、独立完成与英文准确性。
+- Reading into Writing：两周强化计划已启用；保留跨来源连接和整体组织优势，重点提升 source accuracy、synthesis depth、时间管理与 academic expression。
+- 当前训练：[[学习计划/LN905 Listening and Reading Practice]]；`词灵`每天并行，普通练习由 AI 主动教学，完整模拟与正式 timed submission 独立完成。
 
 ## 自主成长
 

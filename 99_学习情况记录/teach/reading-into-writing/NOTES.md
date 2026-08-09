@@ -43,3 +43,5 @@ previous_week_topic: "social media"
 - 已能提出基本立场并找到来源观点，但正文主要按来源依次报告，跨文本关系、证据评价和段落推理链尚未展开。
 - 当前没有 Reading 教师批注；后续判断继续以真实 timed output 和教师反馈为准，不从这一份短文推断固定语言缺陷。
 - 2026-08-09 用户明确报告：最先卡在生词与材料理解；理解后仍不会安排论证；形成想法后又难以转换成英文句子。旧练习把这三层压成一次长输出，不能据此把迟迟未开始解释为投入不足。
+- Gender timed output 使用了 AI，因此显示的是受辅助能力，不直接等同于独立考试基线。后续普通练习允许 AI 教学；完整模拟与正式 timed submission 必须到计时结束后才调用 AI。
+- Gender Reading 教师确认两项真实优势：能使用全部三份来源并连接 ideas，而非逐篇报告；整体 argument 清楚且组织基本有逻辑。改进重点是把 sources 如何共同作用写得更明确、提高 source accuracy 与 synthesis depth、预留时间完成 conclusion 并达到最低字数，以及修 grammar、sentence structure 与 academic word choice。
