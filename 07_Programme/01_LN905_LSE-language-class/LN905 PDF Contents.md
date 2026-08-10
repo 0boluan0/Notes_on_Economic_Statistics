@@ -23,12 +23,7 @@ aliases:
 - [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-1/Wk1 Group 4.pdf|Week 1 · Group 4]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-1/Wk1 Group 5.pdf|Week 1 · Group 5]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-1/Wk1 Group 6.pdf|Week 1 · Group 6]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 1.pdf|Weeks 2–4 · Group 1]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 2.pdf|Weeks 2–4 · Group 2]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 3.pdf|Weeks 2–4 · Group 3]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 4.pdf|Weeks 2–4 · Group 4]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 5.pdf|Weeks 2–4 · Group 5]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/Wk 2-4 Group 6.pdf|Weeks 2–4 · Group 6]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/week2-4 group2.pdf|Weeks 2–4 · Group 2]]
 
 ## 01 Assessment
 
@@ -59,37 +54,55 @@ aliases:
 ### Week 2 · Gender
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/2026 WEEK TWO Assignment Booklet LN905.pdf|Assignment booklet]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Description vs Analysis vs Evaluation.pdf|Description vs Analysis vs Evaluation]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week Two Lessons One and Two.pdf|Lessons 1–2]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 3.pdf|Lesson 3]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf|Lesson 4]]
 
 ### Week 3 · Demographics
 
-- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Essay Plan.pdf|Essay Plan submission]]
-
-### Week 4 · Climate change
-
-- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Essay Draft - Turnitin report.pdf|Essay Draft and Turnitin submission]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 1.pdf|Lesson 1]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay - Annotated.pdf|Sample essay · Annotated]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf|Sample essay]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 2.pdf|Lesson 2]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 3.pdf|Lesson 3]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 4.pdf|Lesson 4]]
 
 ## 03 Paper A · Listening into Writing
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening into Writing Introduction.pdf|Introduction]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening_into_Writing_AI_Feedback_Workbook.pdf|AI feedback workbook]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Listening into Writing Submission - Gender.pdf|Week 2 · Gender submission]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Listening into Writing Submission - Demographics.pdf|Week 3 · Demographics submission]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-4-Climate-Change/Listening into Writing Submission - Climate Change.pdf|Week 4 · Climate change submission]]
+
+### Week 1 · Social media
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-1-Social-Media/Instructions for the Social Media Task.pdf|Task instructions]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-1-Social-Media/Sample Summaries Task.pdf|Sample summaries]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-1-Social-Media/Transcript.pdf|Transcript]]
+
+### Week 2 · Gender
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Listening into Writing - Feedback from Week One.pdf|Feedback from Week 1]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Listening into Writing - Gender.pdf|Gender task]]
 
 ## 04 Paper B · Reading into Writing
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading into Writing.pdf|Introduction]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading_into_Writing_AI_Feedback_Workbook.pdf|AI feedback workbook]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-2-Gender/Reading into Writing - Gender Essay Question and Submission.pdf|Week 2 · Gender question and submission]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-3-Demographics/Reading into Writing - Demographics Essay Question and Submission.pdf|Week 3 · Demographics question and submission]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change/Reading into Writing - Climate Change Essay Question and Submission.pdf|Week 4 · Climate change question and submission]]
+
+### Week 1 · Social media
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-1-Social-Media/Reading into Writing - Social Media Extracts.pdf|Social media extracts]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-1-Social-Media/Feedback for Week One.pdf|Feedback from Week 1]]
+
+### Week 2 · Gender
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-2-Gender/Gender Extracts.pdf|Gender extracts]]
 
 ## 05 Paper C · Speaking and Listening
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/2-minute-presentations/Week One_LN905.pdf|Week 1 · Two-minute presentation]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Practice of Part 3.pdf|Practice · Part 3]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Discussion Language - 12 Functions.pdf|Discussion language · 12 functions]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Presentation Guide - Timestamped Transcript.pdf|Presentation guide transcript]]
 - [[07_Programme/01_LN905_LSE-language-class/Media/05_Paper-C-Speaking-and-Listening/Presentation Guide.mp4|Presentation guide video]]
 
@@ -136,6 +149,8 @@ aliases:
 - [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-3-Demographics/Balloon Debate.pdf|Balloon Debate slides]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-3-Demographics/Balloon Debate Info.pdf|Balloon Debate guide]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-3-Demographics/Pyramid Discussion.pdf|Pyramid Discussion]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-3-Demographics/No Easy Answer.pdf|No Easy Answer]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-3-Demographics/WWYD.pdf|What Would You Do?]]
 
 #### Week 4 · Climate change
 
@@ -151,6 +166,7 @@ aliases:
 ### Everyday English
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/Everyday English lesson 2026.pdf|Everyday English lesson]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/Food and Drink Worksheet.pdf|Food and Drink worksheet]]
 
 ### Pronunciation
 

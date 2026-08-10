@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LN905 Listening｜Gender evidence calibration</title>
+  <!-- student-os:material-ready: 2026-08-10 -->
+  <style>
+    :root { color-scheme: light dark; --accent:#3158a6; --card:#f4f6fb; --ink:#1d2433; --muted:#667085; --line:#c8ceda; }
+    @media (prefers-color-scheme:dark){:root{--card:#202738;--ink:#eef2f8;--muted:#aab4c3;--line:#465166}}
+    *{box-sizing:border-box} body{max-width:900px;margin:auto;padding:28px 20px 64px;font:16px/1.6 system-ui,sans-serif;color:var(--ink)}
+    header,section{margin-bottom:24px}.meta,.hint{color:var(--muted)}.card{padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+    .flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:center;text-align:center}.arrow{font-size:22px;color:var(--accent)}
+    textarea{width:100%;min-height:145px;padding:12px;border:1px solid var(--line);border-radius:8px;font:15px/1.55 ui-monospace,monospace;background:transparent;color:inherit}
+    #inventory{min-height:250px}button{padding:9px 13px;border:0;border-radius:8px;background:var(--accent);color:#fff;cursor:pointer}.secondary{background:#596273}
+    .checkpoint{margin-top:14px;padding:14px;border-left:4px solid var(--accent);background:var(--card)}.timer{font:700 2rem ui-monospace,monospace}.status{margin-left:9px;color:var(--muted)}
+    code{background:var(--card);padding:.1em .35em;border-radius:4px}label{display:block;margin:7px 0}
+    @media(max-width:650px){.flow{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}}
+  </style>
+</head>
+<body>
+  <header>
+    <p class="meta">2026-08-10 · Gender feedback repair · 45 分钟 · AI 教学练习</p>
+    <h1>先把 evidence 盘点准确，再评价</h1>
+    <p><strong>今天不重听整场、不重写整篇。</strong>唯一产出是：一份完整 evidence inventory，加一段范围准确的 evaluation。</p>
+    <p>教师已经确认你抓到了 central argument、privilege、resistance 和 gender equality 的 benefits。今天只修这句的事实前提：</p>
+    <blockquote>“The evidence used to support his opinion were just from personal experiences.”</blockquote>
+  </header>
+
+  <section class="card">
+    <h2>先理解为什么这句会让 evaluation 失效</h2>
+    <div class="flow">
+      <div>先陈述 speaker 实际用了什么证据</div><div class="arrow">→</div><div>判断这些证据能支持多宽的 claim</div><div class="arrow">→</div><div>再指出 strength / limitation</div>
+    </div>
+    <p>如果第一步把 research 和 data 漏掉，后面的批判即使英文通顺，也是在评价一个 speaker 没有做出的论证。你不需要“批判得更狠”，而需要<strong>先准确、再批判</strong>。</p>
+    <details>
+      <summary>术语卡住时再打开</summary>
+      <ul>
+        <li><strong>anecdote / personal experience</strong>：个人经历或故事；能说明可能性，但通常不能单独证明普遍规律。</li>
+        <li><strong>research evidence</strong>：讲者引用研究发现；要问研究对象、方法和适用范围。</li>
+        <li><strong>data / comparison</strong>：数字、跨国家或组织比较；要问相关性是否足以支持因果或普遍结论。</li>
+      </ul>
+    </details>
+  </section>
+
+  <section class="card">
+    <h2>计时器</h2>
+    <div class="timer" id="timer">45:00</div>
+    <button data-seconds="2700">开始 45 分钟</button>
+    <button class="secondary" id="pause">暂停／继续</button>
+    <button class="secondary" data-seconds="600">最后 10 分钟</button>
+  </section>
+
+  <section>
+    <h2>1｜Evidence inventory（约 20 分钟）</h2>
+    <p>可以打开 <a href="https://www.ted.com/talks/michael_kimmel_why_gender_equality_is_good_for_everyone_men_included?view=transcript" target="_blank" rel="noreferrer">TED transcript</a> 核对。这是 feedback repair，不是模拟。每一项都写四件事：具体 evidence、类型、它支持哪个 claim、它不能证明什么。</p>
+    <textarea id="inventory" aria-label="Evidence inventory" placeholder="A. Personal experience / anecdote
+Concrete example:
+Claim it supports:
+Limit / scope:
+
+B. Research evidence
+Concrete finding cited by the speaker:
+Claim it supports:
+Limit / scope:
+
+C. Data or comparison
+Concrete data/comparison:
+Claim it supports:
+Limit / scope:
+
+D. Any additional example or evidence type I initially missed:"></textarea>
+  </section>
+
+  <section>
+    <h2>2｜写一段 calibrated evaluation（约 15 分钟）</h2>
+    <p>先填关系，再成句。不要写完整 summary，也不要评价你是否同意 gender equality。</p>
+    <textarea id="reasoning" aria-label="Evaluation reasoning" placeholder="The breadth of the claim I am evaluating:
+
+The evidence types the speaker actually uses:
+
+What this mixed evidence supports reasonably well:
+
+What still limits the claim (representativeness / causality / scope / missing detail):"></textarea>
+    <textarea id="evaluation" aria-label="Evaluation paragraph" placeholder="Write 2–4 English sentences. Acknowledge the mixed evidence before stating one precise limitation."></textarea>
+    <p><strong>Words:</strong> <span id="words">0</span></p>
+    <div class="checkpoint">
+      <h3>AI checkpoint｜盘点与评价复核</h3>
+      <p>第一次发送时，AI 会主动解释遗漏或分类错误，并最多问两个真正需要你判断的问题；不会给可直接粘贴的 replacement paragraph。修改后再次发送，直到收到“本次练习完成”。</p>
+      <button data-copy="review">复制并发送给 AI／再次复核</button><span class="status" id="review-status"></span>
+    </div>
+  </section>
+
+  <section>
+    <h2>3｜只记录这一处修订</h2>
+    <textarea id="revision" aria-label="Revision record" placeholder="AI 指出的最高价值问题：
+
+修改前：
+
+修改后：
+
+为什么现在更准确："></textarea>
+    <textarea id="reflection" aria-label="Reflection" placeholder="今天我原先漏掉的 evidence type：
+
+下次写 evaluation 前我会先检查："></textarea>
+  </section>
+
+  <section class="card">
+    <h2>完成条件</h2>
+    <label><input type="checkbox"> inventory 同时包含 personal experience、research evidence 和 data/comparison</label>
+    <label><input type="checkbox"> 每项 evidence 都连接到它实际支持的 claim</label>
+    <label><input type="checkbox"> evaluation 先承认 mixed evidence，再提出一个有范围的 limitation</label>
+    <label><input type="checkbox"> AI 已确认“本次练习完成”</label>
+    <p class="hint">完成后只在 Today 勾选原来的一个 canonical task；本页不产生第二个任务。</p>
+  </section>
+
+  <section class="card" id="ai-review-log">
+    <h2>AI 协作记录</h2>
+    <p class="hint">聊天只是入口；每轮输入、教学反馈、修订与放行结果都必须追加写回这里。</p>
+    <!-- student-os:ai-review:start -->
+    <!-- student-os:ai-review:end -->
+  </section>
+
+  <footer class="meta">Evidence basis: Gender timed submission, teacher feedback baseline, Michael Kimmel TED transcript and LN905 Paper A criteria.</footer>
+
+  <script>
+    const storageKey="student-os-liw-2026-08-10-gender-evidence-";
+    const fieldIds=["inventory","reasoning","evaluation","revision","reflection"];
+    const value=id=>document.getElementById(id).value.trim();
+    function countWords(){const v=value("evaluation");document.getElementById("words").textContent=v?v.split(/\s+/).length:0;}
+    for(const id of fieldIds){const el=document.getElementById(id);el.value=localStorage.getItem(storageKey+id)||"";el.addEventListener("input",()=>{localStorage.setItem(storageKey+id,el.value);if(id==="evaluation")countWords();});}countWords();
+    let remaining=2700,timerHandle=null;const timer=document.getElementById("timer");
+    function render(){timer.textContent=`${String(Math.floor(remaining/60)).padStart(2,"0")}:${String(remaining%60).padStart(2,"0")}`;}
+    function start(seconds){clearInterval(timerHandle);remaining=seconds;render();timerHandle=setInterval(()=>{if(remaining>0){remaining--;render();}else{clearInterval(timerHandle);timerHandle=null;}},1000);}
+    document.querySelectorAll("[data-seconds]").forEach(b=>b.addEventListener("click",()=>start(Number(b.dataset.seconds))));
+    document.getElementById("pause").addEventListener("click",()=>{if(timerHandle){clearInterval(timerHandle);timerHandle=null;}else start(remaining);});
+    const prompt=()=>`LN905 Listening teaching checkpoint｜2026-08-10-gender-evidence-calibration。This is guided teaching, not a simulation. Check whether I inventoried the speaker's personal experience, research evidence and data/comparison accurately before evaluating the claim. On the first round, explicitly teach any missing distinction in Chinese and ask at most two genuinely diagnostic questions; do not write a replacement evaluation paragraph. On a revised round, if the evidence premise, claim-evidence link and scope are accurate, reply exactly “本次练习完成”; otherwise identify only one remaining high-value problem.\n\nRECORD TARGET\n99_学习情况记录/teach/listening-into-writing/lessons/2026-08-10-gender-evidence-calibration.html#student-os:ai-review\nBefore replying, append the timestamped full snapshot, your teaching/diagnosis, my later revision and the gate decision inside student-os:ai-review. Chat and localStorage are not the record.\n\nEVIDENCE INVENTORY\n${value("inventory")}\n\nREASONING\n${value("reasoning")}\n\nEVALUATION\n${value("evaluation")}\n\nREVISION\n${value("revision")}\n\nREFLECTION\n${value("reflection")}`;
+    document.querySelector('[data-copy="review"]').addEventListener("click",async()=>{const text=prompt(),status=document.getElementById("review-status");try{await navigator.clipboard.writeText(text);}catch{const el=document.createElement("textarea");el.value=text;document.body.appendChild(el);el.select();document.execCommand("copy");el.remove();}status.textContent="已复制";setTimeout(()=>status.textContent="",1800);});
+  </script>
+</body>
+</html>

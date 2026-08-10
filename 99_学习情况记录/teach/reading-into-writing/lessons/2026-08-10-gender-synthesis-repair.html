@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LN905 Reading｜Gender synthesis and conclusion repair</title>
+  <!-- student-os:material-ready: 2026-08-10 -->
+  <style>
+    :root{color-scheme:light dark;--accent:#7b3fa1;--card:#f8f3fb;--ink:#251d2b;--muted:#6e6473;--line:#d2c6d8}
+    @media(prefers-color-scheme:dark){:root{--card:#2a2130;--ink:#f4eef7;--muted:#c3b5ca;--line:#5a4863}}
+    *{box-sizing:border-box}body{max-width:920px;margin:auto;padding:28px 20px 64px;font:16px/1.6 system-ui,sans-serif;color:var(--ink)}
+    header,section{margin-bottom:24px}.meta,.hint{color:var(--muted)}.card{padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+    .chain{display:flex;gap:8px;align-items:stretch;flex-wrap:wrap}.chain span{flex:1 1 155px;padding:12px;border:1px solid var(--line);border-radius:9px;background:var(--card)}.chain b{color:var(--accent)}
+    textarea{width:100%;min-height:145px;padding:12px;border:1px solid var(--line);border-radius:8px;font:15px/1.55 ui-monospace,monospace;background:transparent;color:inherit}#map{min-height:250px}#conclusion{min-height:210px}
+    button{padding:9px 13px;border:0;border-radius:8px;background:var(--accent);color:#fff;cursor:pointer}.secondary{background:#62596a}.checkpoint{margin-top:14px;padding:14px;border-left:4px solid var(--accent);background:var(--card)}
+    .timer{font:700 2rem ui-monospace,monospace}.status{margin-left:9px;color:var(--muted)}label{display:block;margin:7px 0}blockquote{border-left:3px solid var(--line);margin-left:0;padding-left:14px}
+  </style>
+</head>
+<body>
+  <header>
+    <p class="meta">2026-08-10 · Gender feedback repair · 45 分钟 · AI 教学练习</p>
+    <h1>把三个机制写成一条因果链，并把 conclusion 写完</h1>
+    <p>教师已经确认你会使用三份来源、会连接 ideas，而且整体 argument 清楚。今天不从零重写 essay，只把已有连接说清楚，并修复未完成的结尾。</p>
+  </header>
+
+  <section class="card">
+    <h2>先看机制各自做什么</h2>
+    <div class="chain">
+      <span><b>Communication</b><br>反复传递哪些 gender expectations 看起来“正常”。</span>
+      <span><b>Confirmation bias</b><br>让观察者优先注意符合 stereotypes 的证据，忽略反例。</span>
+      <span><b>Backlash</b><br>惩罚 counter-stereotypical behaviour，使人更可能按期待行动。</span>
+      <span><b>Feedback loop</b><br>被改变的行为又成为 stereotypes “正确”的表面证据。</span>
+    </div>
+    <p>这不是四个并列原因。更准确的关系是：communication 传递内容；confirmation bias 和 backlash 解释这些内容为什么在现实角色变化后仍被维持。</p>
+  </section>
+
+  <section class="card">
+    <h2>计时器</h2>
+    <div class="timer" id="timer">45:00</div>
+    <button data-seconds="2700">开始 45 分钟</button>
+    <button class="secondary" id="pause">暂停／继续</button>
+    <button class="secondary" data-seconds="600">Conclusion 10 分钟</button>
+  </section>
+
+  <section>
+    <h2>1｜把箭头写清楚（约 15 分钟）</h2>
+    <p>先用中文或短英文完成关系，不要求漂亮句子。每个箭头必须写出“前一机制改变了什么”。</p>
+    <textarea id="map" aria-label="Mechanism map" placeholder="Writer-led claim（不按 Extract 1/2/3 排列，≤20 English words）:
+
+Communication → what expectations become available/repeated?
+
+Confirmation bias → what evidence is noticed or ignored?
+
+Backlash → whose behaviour changes, and in what direction?
+
+Changed behaviour → how does it feed the original stereotype?
+
+Source relationship in one line:"></textarea>
+    <div class="checkpoint">
+      <h3>AI checkpoint 1｜关系复核</h3>
+      <p>AI 会主动讲清仍断开的箭头，并最多问两个问题。修改 map 后再次发送；收到“可以写 conclusion”再进入下一步。</p>
+      <button data-copy="map">复制关系图给 AI／再次复核</button><span class="status" id="map-status"></span>
+    </div>
+  </section>
+
+  <section>
+    <h2>2｜把关系压成 3–4 句英文（约 10 分钟）</h2>
+    <p>可以使用句框，但内容必须由你的 map 提供：</p>
+    <ul>
+      <li><code>Everyday communication transmits …, while confirmation bias …</code></li>
+      <li><code>Backlash further maintains these expectations by …</code></li>
+      <li><code>Together, these mechanisms create a feedback loop in which …</code></li>
+    </ul>
+    <textarea id="synthesis" aria-label="Synthesis unit" placeholder="Write your 3–4 sentence synthesis unit here."></textarea>
+  </section>
+
+  <section>
+    <h2>3｜限时补全 conclusion（10 分钟）</h2>
+    <p>你原稿停在：<q>Consequently, changing the</q>。保留你自己的论点，用 3–4 句完成，不加入正文没有解释的新原因。</p>
+    <textarea id="conclusion" aria-label="Conclusion" placeholder="In conclusion, gender stereotypes are both beliefs about gender differences and rules limiting behaviour. They persist because ...
+
+Complete the conclusion in 3–4 sentences: answer both what stereotypes are and why they persist; synthesise the mechanisms; end with a bounded implication rather than a new argument."></textarea>
+    <p><strong>Synthesis words:</strong> <span id="synthesis-words">0</span> · <strong>Conclusion words:</strong> <span id="conclusion-words">0</span></p>
+    <div class="checkpoint">
+      <h3>AI checkpoint 2｜完成度与 synthesis</h3>
+      <p>AI 只选择一个最高价值 revision target。修改后再次发送；收到“本次练习完成”后再勾选 Today。</p>
+      <button data-copy="final">复制完整结果给 AI／再次复核</button><span class="status" id="final-status"></span>
+    </div>
+  </section>
+
+  <section>
+    <h2>4｜修订记录与复盘</h2>
+    <textarea id="revision" aria-label="Revision record" placeholder="AI 指出的最高价值问题：
+
+修改前：
+
+修改后：
+
+为什么现在的 source relationship / conclusion 更清楚："></textarea>
+    <textarea id="reflection" aria-label="Reflection" placeholder="今天我真正学会的一个 relationship：
+
+下次限时写作我会在何时开始 conclusion："></textarea>
+  </section>
+
+  <section class="card">
+    <h2>完成条件</h2>
+    <label><input type="checkbox"> map 说明 communication、confirmation bias 和 backlash 的不同功能</label>
+    <label><input type="checkbox"> synthesis 写出了机制之间的关系，而不是三个术语并列</label>
+    <label><input type="checkbox"> conclusion 已完整回答题目，没有停在半句</label>
+    <label><input type="checkbox"> AI 已确认“本次练习完成”</label>
+    <p class="hint">本页复用已提交的 Gender source pack 和你的原稿进行 feedback repair，因此不创建新 source pack、来源编号或第二个 checkbox。</p>
+  </section>
+
+  <section class="card" id="ai-review-log">
+    <h2>AI 协作记录</h2>
+    <p class="hint">每轮输入、教学反馈、修订和放行结果按时间追加写回这里。</p>
+    <!-- student-os:ai-review:start -->
+    <!-- student-os:ai-review:end -->
+  </section>
+
+  <footer class="meta">Evidence basis: submitted Gender response, official Gender source pack, teacher feedback baseline and LN905 Paper B criteria.</footer>
+
+  <script>
+    const storageKey="student-os-riw-2026-08-10-gender-synthesis-";
+    const fieldIds=["map","synthesis","conclusion","revision","reflection"];
+    const value=id=>document.getElementById(id).value.trim();
+    function words(id){const v=value(id);return v?v.split(/\s+/).length:0;}
+    function counts(){document.getElementById("synthesis-words").textContent=words("synthesis");document.getElementById("conclusion-words").textContent=words("conclusion");}
+    for(const id of fieldIds){const el=document.getElementById(id);el.value=localStorage.getItem(storageKey+id)||"";el.addEventListener("input",()=>{localStorage.setItem(storageKey+id,el.value);counts();});}counts();
+    let remaining=2700,timerHandle=null;const timer=document.getElementById("timer");
+    function render(){timer.textContent=`${String(Math.floor(remaining/60)).padStart(2,"0")}:${String(remaining%60).padStart(2,"0")}`;}
+    function start(seconds){clearInterval(timerHandle);remaining=seconds;render();timerHandle=setInterval(()=>{if(remaining>0){remaining--;render();}else{clearInterval(timerHandle);timerHandle=null;}},1000);}
+    document.querySelectorAll("[data-seconds]").forEach(b=>b.addEventListener("click",()=>start(Number(b.dataset.seconds))));
+    document.getElementById("pause").addEventListener("click",()=>{if(timerHandle){clearInterval(timerHandle);timerHandle=null;}else start(remaining);});
+    const base=`RECORD TARGET\n99_学习情况记录/teach/reading-into-writing/lessons/2026-08-10-gender-synthesis-repair.html#student-os:ai-review\nBefore replying, append the timestamped snapshot, your teaching/feedback, my later revision and the gate decision inside student-os:ai-review. Chat and localStorage are not the record.`;
+    const prompts={
+      map:()=>`LN905 Reading teaching checkpoint 1｜2026-08-10-gender-synthesis-repair。This is guided teaching. Check whether my arrows correctly distinguish how communication transmits stereotypes, confirmation bias filters evidence and backlash changes behaviour to maintain stereotypes. Actively explain any broken link in Chinese and ask at most two genuinely diagnostic questions; do not write a model paragraph. On a revised round, if the causal chain is accurate, reply exactly “可以写 conclusion”; otherwise identify only one remaining broken link.\n\n${base}\n\nMECHANISM MAP\n${value("map")}`,
+      final:()=>`LN905 Reading teaching checkpoint 2｜2026-08-10-gender-synthesis-repair。Use the teacher targets: explicit source relationship, source accuracy, synthesis depth and completion. Quote my exact wording and choose only one highest-value revision target; do not replace my paragraph or conclusion. On a revised round, if that target is resolved and the conclusion is complete, reply exactly “本次练习完成”; otherwise identify one remaining issue.\n\n${base}\n\nMECHANISM MAP\n${value("map")}\n\nSYNTHESIS UNIT\n${value("synthesis")}\n\nCONCLUSION\n${value("conclusion")}\n\nREVISION\n${value("revision")}\n\nREFLECTION\n${value("reflection")}`
+    };
+    document.querySelectorAll("[data-copy]").forEach(button=>button.addEventListener("click",async()=>{const name=button.dataset.copy,text=prompts[name](),status=document.getElementById(`${name}-status`);try{await navigator.clipboard.writeText(text);}catch{const el=document.createElement("textarea");el.value=text;document.body.appendChild(el);el.select();document.execCommand("copy");el.remove();}status.textContent="已复制";setTimeout(()=>status.textContent="",1800);}));
+  </script>
+</body>
+</html>

@@ -18,11 +18,11 @@ previous_week_topic: "social media"
 - 用中文解释方法，但所有应试输出和改写练习保留英文。
 - 优先提供短时、能立即核对的 source-matrix 和 paragraph-synthesis 练习。
 - 训练序列与日期由 [[99_学习情况记录/学习计划/LN905 Listening and Reading Practice]] 决定；当前主题为 Gender，之后依次是 Demographics 与 Climate Change。
-- 对排到当天的 canonical task，`/today` 使用固定 session 路径准备材料；每次选取三篇未使用过、围绕同一可争论问题的论文，不按相同关键词机械拼接。
-- Reading source pack 固定用 LaTeX 排版并保留 `.tex`，编译为接近课堂试卷版式的 PDF；PDF 只放题目及三篇论文/节选，供打印后纸笔阅读和批注。
+- 对排到当天的 canonical task，`/today` 使用固定 session 路径准备材料。新来源练习按任务要求选择未使用过的论文：窄理解可用一篇、显式 synthesis 可用两篇、完整模拟通常用三篇；feedback repair 复用原提交与原 source pack，不另造来源。
+- 新 Reading source pack 用 LaTeX 排版并保留 `.tex`，编译为接近课堂试卷版式的 PDF；PDF 只放题目、任务要求数量的论文节选与来源，供打印后纸笔阅读和批注。
 - 论文可以压缩和改写为 exam-style adapted extracts，但必须保留原文的主张、证据、限制与来源，不复制大段原文或虚构结论。
-- Source matrix、提纲和最终约 600 词作文放在独立 Markdown 文件中，用电脑完成。
-- 电脑答题文件不能只是空白矩阵：必须依次引导审题立场、材料压缩与取舍、跨文本关系、段落推理链、600 词字数预算和按评分标准检查；提供过程支架，但不预写可直接提交的答案。
+- Source/evidence fields、提纲和成文统一放在当次独立 HTML 中，用电脑完成并自动保存。
+- HTML 不能只是空白矩阵：必须按 canonical task 的目标提供恰当支架，并把每轮 AI 教学、用户输入、revision 与 gate decision 追加保存到 `student-os:ai-review`；完整模拟才固定使用完整字数预算与无帮助约束。
 - 除明确标为完整模拟的 session 外，在 revised reasoning chain 和 draft 后各设置一次 AI checkpoint；用户必须在成文前获得诊断并修正推理，而不是写完整篇后才让 AI 批改。
 
 ## 教学注意事项
