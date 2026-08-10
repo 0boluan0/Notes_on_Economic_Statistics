@@ -26,12 +26,12 @@ assessment_horizon: 2026-08-21
 - `词灵`每天单独作为一个可完成的真实任务，直接给出分钟数。普通日使用默认学习队列；正式 timed submission 当天只复习主题词汇，不提前接触测试材料。
 - 材料理解、accurate summary、evidence-grounded evaluation 与英文成句可以在同一天组合，不设“每天只能练一层”。当天只保留对下一次 submission 最有价值的输出，AI 根据上一任务的真实表现决定支架强度。
 - 每个普通练习只要求一个清晰产出，不把完整讲座、三篇长材料、结构恢复和长文一次压在同一个起点上。若用户在当前动作上卡住，AI 立即教学；若已经掌握，则缩短支架并进入相邻环节。
-- 所有 AI 教学、用户输入、反馈和 revision 必须追加保存在当次 HTML 的 `student-os:ai-review` 区域。聊天和 localStorage 不能替代复盘记录。
+- 每个 daily part 都有自己的 Markdown、自己的 init prompt 和自己的 Codex 教学会话；不得用一个总 prompt 连续处理多个 part。该会话只处理对应 canonical task，完成后停止。首轮必须先说明“今天在学什么、为什么、怎样算学会、已经会什么”，以后每轮都说明当前动作在能力地图中的位置。所有 AI 教学、用户输入、反馈和 revision 必须逐轮追加保存在当次 Markdown 的 `student-os:learning-log` 区域；每轮保留一个约 5–10 分钟的有意义学习动作，不拆成连续填空、照抄或意外的材料回忆测试。
 - `/today` 只为已经排到当天的 task 准备固定路径中的材料，不新增 checkbox，不复用来源账本中的 TED、DOI 或 canonical URL。
 
 ## 每日词灵｜2026-08-10 至 2026-08-23
 
-- [ ] 词灵｜2026-08-10：20 分钟 #student-os/task ⏳ 2026-08-10
+- [x] 词灵｜2026-08-10：20 分钟 #student-os/task ⏳ 2026-08-10 ✅ 2026-08-10
 - [ ] 词灵｜2026-08-11：20 分钟 #student-os/task ⏳ 2026-08-11
 - [ ] 词灵｜2026-08-12：20 分钟 #student-os/task ⏳ 2026-08-12
 - [ ] 词灵｜2026-08-13：20 分钟 #student-os/task ⏳ 2026-08-13
@@ -48,29 +48,29 @@ assessment_horizon: 2026-08-21
 
 ## Demographics｜教学与测试 2026-08-10 至 2026-08-15
 
-- [ ] LN905 Listening｜Gender feedback repair：完整盘点 speaker 的全部 evidence 后写 1 个准确 evaluation（45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-10-gender-evidence-calibration.html|练习页]] #student-os/task ⏳ 2026-08-10
-- [ ] LN905 Reading｜Gender feedback repair：明确 communication、confirmation bias 与 backlash 如何共同维持 stereotypes，并限时补全 conclusion（45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-10-gender-synthesis-repair.html|练习页]] #student-os/task ⏳ 2026-08-10
-- [ ] LN905 Listening｜Demographics 1：6–8 分钟首听笔记 → transcript repair → 3 句准确 summary（45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension.html|练习页]] #student-os/task ⏳ 2026-08-11
-- [ ] LN905 Reading｜Demographics 1：短材料中保留 observation、claim 与 scope，并转成 4 句英文 summary（45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.html|练习页]] #student-os/task ⏳ 2026-08-11
-- [ ] LN905 English production｜用本人 Gender 原句修复 6 个 grammar / word-form patterns，再放回两段真实文本（35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-gender-sentence-clinic.html|练习页]] #student-os/task ⏳ 2026-08-11
-- [ ] LN905 Listening｜Demographics 2：区分 anecdote、research 与 data，完成 evidence inventory 和 calibrated critique（50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-12-demographics-evidence.html|练习页]] #student-os/task ⏳ 2026-08-12
-- [ ] LN905 Reading｜Demographics 2：用 writer-led claim 连接两份来源，并准确写出 relation 与 limitation（50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-12-demographics-synthesis.html|练习页]] #student-os/task ⏳ 2026-08-12
-- [ ] LN905 Listening｜Demographics 3：10–12 分钟单次播放 + 180–250 词 partial simulation；结束后 AI 只修一个最高价值问题（50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-13-demographics-partial.html|练习页]] #student-os/task ⏳ 2026-08-13
-- [ ] LN905 Reading｜Demographics 3：两份 extracts + 250–350 词 partial simulation；明确跨文关系并写完结尾（60 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-13-demographics-partial.html|练习页]] #student-os/task ⏳ 2026-08-13
-- [ ] LN905｜Demographics readiness check：只核对 source/evidence accuracy、synthesis、完成度和 recurring language errors（30 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-13-demographics-readiness.html|检查页]] #student-os/task ⏳ 2026-08-13
-- [ ] LN905 Listening｜Demographics timed output：按 criteria 自检并修 1 个 evidence-evaluation 问题（30 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-15-demographics-review.html|复盘页]] #student-os/task ⏳ 2026-08-15
-- [ ] LN905 Reading｜Demographics timed output：按教师四项目标自检并修 1 个 source-synthesis 或 completion 问题（30 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-15-demographics-review.html|复盘页]] #student-os/task ⏳ 2026-08-15
+- [ ] LN905 Listening｜Gender feedback repair：在 AI 逐步教学下识别 mixed evidence，并把原评价修成 1–2 句准确英文（45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-10-gender-evidence-calibration|学习记录]] #student-os/task ⏳ 2026-08-10
+- [ ] LN905 Reading｜Gender feedback repair：在 AI 逐步教学下弄懂三个机制的关系，再共同补完 conclusion（45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-10-gender-synthesis-repair|学习记录]] #student-os/task ⏳ 2026-08-10
+- [ ] LN905 Listening｜Demographics 1：6–8 分钟首听笔记 → transcript repair → 3 句准确 summary（45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension|学习记录]] #student-os/task ⏳ 2026-08-11
+- [ ] LN905 Reading｜Demographics 1：短材料中保留 observation、claim 与 scope，并转成 4 句英文 summary（45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy|学习记录]] #student-os/task ⏳ 2026-08-11
+- [ ] LN905 English production｜用本人 Gender 原句修复 6 个 grammar / word-form patterns，再放回两段真实文本（35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-gender-sentence-clinic|学习记录]] #student-os/task ⏳ 2026-08-11
+- [ ] LN905 Listening｜Demographics 2：区分 anecdote、research 与 data，完成 evidence inventory 和 calibrated critique（50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-12-demographics-evidence|学习记录]] #student-os/task ⏳ 2026-08-12
+- [ ] LN905 Reading｜Demographics 2：用 writer-led claim 连接两份来源，并准确写出 relation 与 limitation（50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-12-demographics-synthesis|学习记录]] #student-os/task ⏳ 2026-08-12
+- [ ] LN905 Listening｜Demographics 3：10–12 分钟单次播放 + 180–250 词 partial simulation；结束后 AI 只修一个最高价值问题（50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-13-demographics-partial|学习记录]] #student-os/task ⏳ 2026-08-13
+- [ ] LN905 Reading｜Demographics 3：两份 extracts + 250–350 词 partial simulation；明确跨文关系并写完结尾（60 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-13-demographics-partial|学习记录]] #student-os/task ⏳ 2026-08-13
+- [ ] LN905｜Demographics readiness check：只核对 source/evidence accuracy、synthesis、完成度和 recurring language errors（30 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-13-demographics-readiness|学习记录]] #student-os/task ⏳ 2026-08-13
+- [ ] LN905 Listening｜Demographics timed output：按 criteria 自检并修 1 个 evidence-evaluation 问题（30 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-15-demographics-review|学习记录]] #student-os/task ⏳ 2026-08-15
+- [ ] LN905 Reading｜Demographics timed output：按教师四项目标自检并修 1 个 source-synthesis 或 completion 问题（30 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-15-demographics-review|学习记录]] #student-os/task ⏳ 2026-08-15
 
 ## Climate Change｜教学与测试 2026-08-17 至 2026-08-22
 
-- [ ] LN905 Listening｜Climate 1：6–8 分钟首听笔记 → transcript repair → 3 句准确 summary（45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-17-climate-comprehension.html|练习页]] #student-os/task ⏳ 2026-08-17
-- [ ] LN905 Reading｜Climate 1：短材料中保留 evidence、mechanism 与 scope，并转成 4 句英文 summary（45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-17-climate-accuracy.html|练习页]] #student-os/task ⏳ 2026-08-17
-- [ ] LN905 English production｜用 Demographics timed output 修复 6 个 recurring sentence patterns（35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-17-demographics-sentence-clinic.html|练习页]] #student-os/task ⏳ 2026-08-17
-- [ ] LN905 Listening｜Climate 2：完整 evidence inventory 后再判断 claim strength 与 scope（50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-18-climate-evidence.html|练习页]] #student-os/task ⏳ 2026-08-18
-- [ ] LN905 Reading｜Climate 2：用 writer-led claim 综合两份来源，并展开 agreement / tension / limitation（50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-synthesis.html|练习页]] #student-os/task ⏳ 2026-08-18
-- [ ] LN905 Listening｜Climate 完整模拟：20–25 分钟一次播放 + 40 分钟独立成文；结束后 AI feedback 与 1 次 revision（100 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-19-climate-full.html|模拟页]] #student-os/task ⏳ 2026-08-19
-- [ ] LN905 Reading｜Climate 完整模拟：120 分钟独立完成约 600 词；结束后 AI feedback 与 1 次 revision（145 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-20-climate-full.html|模拟页]] #student-os/task ⏳ 2026-08-20
-- [ ] LN905｜比较 Gender、Demographics 与 Climate timed outputs：确认两项真实进步和下一项最高风险（45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-22-three-test-comparison.html|复盘页]] #student-os/task ⏳ 2026-08-22
+- [ ] LN905 Listening｜Climate 1：6–8 分钟首听笔记 → transcript repair → 3 句准确 summary（45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-17-climate-comprehension|学习记录]] #student-os/task ⏳ 2026-08-17
+- [ ] LN905 Reading｜Climate 1：短材料中保留 evidence、mechanism 与 scope，并转成 4 句英文 summary（45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-17-climate-accuracy|学习记录]] #student-os/task ⏳ 2026-08-17
+- [ ] LN905 English production｜用 Demographics timed output 修复 6 个 recurring sentence patterns（35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-17-demographics-sentence-clinic|学习记录]] #student-os/task ⏳ 2026-08-17
+- [ ] LN905 Listening｜Climate 2：完整 evidence inventory 后再判断 claim strength 与 scope（50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-18-climate-evidence|学习记录]] #student-os/task ⏳ 2026-08-18
+- [ ] LN905 Reading｜Climate 2：用 writer-led claim 综合两份来源，并展开 agreement / tension / limitation（50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-synthesis|学习记录]] #student-os/task ⏳ 2026-08-18
+- [ ] LN905 Listening｜Climate 完整模拟：20–25 分钟一次播放 + 40 分钟独立成文；结束后 AI feedback 与 1 次 revision（100 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-19-climate-full|学习记录]] #student-os/task ⏳ 2026-08-19
+- [ ] LN905 Reading｜Climate 完整模拟：120 分钟独立完成约 600 词；结束后 AI feedback 与 1 次 revision（145 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-20-climate-full|学习记录]] #student-os/task ⏳ 2026-08-20
+- [ ] LN905｜比较 Gender、Demographics 与 Climate timed outputs：确认两项真实进步和下一项最高风险（45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-22-three-test-comparison|学习记录]] #student-os/task ⏳ 2026-08-22
 
 ## 旧序列｜已取消，不执行
 
@@ -119,7 +119,7 @@ assessment_horizon: 2026-08-21
 
 ## 来源去重账本
 
-生成材料前检查本节、两个 teach 工作区的 `RESOURCES.md`、已有 HTML 与已有 source-pack。YouTube video ID、论文 DOI 或 canonical URL 任一重复，都视为已经使用。
+生成材料前检查本节、两个 teach 工作区的 `RESOURCES.md`、全部 lesson records（包括历史 HTML）与已有 source-pack。YouTube video ID、论文 DOI 或 canonical URL 任一重复，都视为已经使用。
 
 ### 已使用或排除
 

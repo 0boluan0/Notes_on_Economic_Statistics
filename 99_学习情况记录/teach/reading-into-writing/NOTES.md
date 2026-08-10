@@ -21,9 +21,10 @@ previous_week_topic: "social media"
 - 对排到当天的 canonical task，`/today` 使用固定 session 路径准备材料。新来源练习按任务要求选择未使用过的论文：窄理解可用一篇、显式 synthesis 可用两篇、完整模拟通常用三篇；feedback repair 复用原提交与原 source pack，不另造来源。
 - 新 Reading source pack 用 LaTeX 排版并保留 `.tex`，编译为接近课堂试卷版式的 PDF；PDF 只放题目、任务要求数量的论文节选与来源，供打印后纸笔阅读和批注。
 - 论文可以压缩和改写为 exam-style adapted extracts，但必须保留原文的主张、证据、限制与来源，不复制大段原文或虚构结论。
-- Source/evidence fields、提纲和成文统一放在当次独立 HTML 中，用电脑完成并自动保存。
-- HTML 不能只是空白矩阵：必须按 canonical task 的目标提供恰当支架，并把每轮 AI 教学、用户输入、revision 与 gate decision 追加保存到 `student-os:ai-review`；完整模拟才固定使用完整字数预算与无帮助约束。
-- 除明确标为完整模拟的 session 外，在 revised reasoning chain 和 draft 后各设置一次 AI checkpoint；用户必须在成文前获得诊断并修正推理，而不是写完整篇后才让 AI 批改。
+- 2026-08-10 起停止生成 guided-practice HTML。每个 daily part 使用独立 Markdown 作为永久学习记录，并在文件内提供只属于这个 part 的 init prompt；一个新 Codex 教学会话只推进这一项，完成后停止，不得自动进入当天下一项。新 Reading source pack 仍可保留供打印的 `.tex` 与 `.pdf`。
+- 普通教学首轮先给出清晰能力地图：今天在学什么、为什么与真实反馈相关、怎样算学会、已经会什么；后续每轮简短标明当前动作训练哪项能力。每轮只保留一个约 5–10 分钟的有意义动作，可包含完整解释与一次应用；禁止连续填空、让用户照抄 AI 已给出的句子、用用户看不到的 source 细节意外测试记忆，或在聊天中反复使用 `gate/未放行`。每次回复前把用户原始输入、AI 教学或反馈、能力地图位置、本轮下一动作和内部继续判断追加到 `student-os:learning-log`。
+- 用户表示“不知道在学什么”时立即暂停，不再出题；先解释能力、被放弃的动作为什么无效，以及什么证据才算真正学会，待方向重新清楚后再继续。
+- 用户不需要先独立完成一整层再获得 checkpoint。AI 每一步都根据刚收到的回答教学、核对并决定下一步；完整模拟才固定使用完整字数预算与无帮助约束。
 
 ## 教学注意事项
 - 必须明确区分三个阶段：诊断与课程设计、正式教学练习、完整模拟。诊断题只用于定位单一层级，不在反馈后顺势追加改写练习，也不生成每日任务；从诊断切换到教学前要明确说明并取得确认。
@@ -34,7 +35,7 @@ previous_week_topic: "social media"
 - 先解决审题、选材和跨文本 synthesis，再处理高级词汇与句式。
 - 反馈应引用用户原句并对应 Paper B 评分标准，不直接代写整篇答案。
 - 已有 source packs、`RESOURCES.md` 与计划中的 DOI/canonical URL 都属于去重账本，不复用。
-- 成文前 checkpoint 只指出证据与 claim 的匹配问题、追问最多三个关键问题并等待用户修正，不提供 thesis 或 model paragraph；修改后 AI 重读文件并明确确认能否成文。最终反馈引用用户原句、对应评分标准，只指定一个最高价值 revision，并在用户回传修改后确认是否解决。
+- 普通教学不等待“成文前 checkpoint”才介入；AI 引用用户原句，按 Paper B 标准一次教清一个连接或共同修一句英文，不提供可直接替换的整段或 model answer。只有完整模拟才在计时结束后统一进入 feedback 与 revision。
 - 完整模拟计时期间不介入；结束后才读取原始作答并反馈。
 
 ## 当前证据

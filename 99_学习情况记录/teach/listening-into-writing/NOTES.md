@@ -16,11 +16,12 @@ topic: "LN905 Listening into Writing"
 - 每次 LN905 feedback 先遵守 [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening_into_Writing_AI_Feedback_Workbook.pdf|Listening into Writing — AI Feedback Workbook]]：AI 是 mirror，不是 marker；只 point、explain、question，不给分，也不提供可直接放进 summary 的句子、段落或全文。
 - 优先使用短时、可当天完成并立即核对的练习。
 - 训练序列与日期由 [[99_学习情况记录/学习计划/LN905 Listening and Reading Practice]] 决定；Today 不临时创造另一份任务。
-- 对排到当天的 canonical task，`/today` 使用任务中固定的 session 路径准备练习页；每次选择一条未使用过的 TED 官方 YouTube，并核验官方 transcript。
+- 对排到当天的 canonical task，`/today` 使用任务中固定的 session 路径准备 Markdown 教学记录；每次选择一条未使用过的 TED 官方 YouTube，并核验官方 transcript。
 - 练习视频优先 15–20 分钟；主题必须匹配同周 Reading 练习和下一次 timed test。
-- 已有 HTML、`RESOURCES.md` 与计划中的 YouTube video ID 都属于去重账本，不复用。
-- 除明确标为完整模拟的 session 外，练习在 revised map 和 draft 后各调用一次 AI；页面用同一按钮发送当前字段，修改后可再次发送复核，不等到全部写完才获得反馈。
-- 每份 guided HTML 同时是永久复盘档案：浏览器 localStorage 只保存工作草稿，`student-os:ai-review` 标记区才是 canonical review archive。每次 checkpoint 回答前按时间追加用户字段快照、AI 诊断与问题、用户修订和放行结果，不覆盖旧记录，也不重复追加完全相同的最新快照；最终回传包含 notes、map、response、revision 和 reflection。
+- 已有 lesson records（包括历史 HTML）、`RESOURCES.md` 与计划中的 YouTube video ID 都属于去重账本，不复用。
+- 2026-08-10 起停止生成 guided-practice HTML。每个 daily part 使用独立 Markdown 作为永久学习记录，并在文件内提供只属于这个 part 的 init prompt；一个新 Codex 教学会话只推进这一项，完成后停止，不得自动进入当天下一项。
+- 普通教学首轮先给出清晰能力地图：今天在学什么、为什么与真实反馈相关、怎样算学会、已经会什么；后续每轮简短标明当前动作训练哪项能力。每轮只保留一个约 5–10 分钟的有意义动作，可包含完整解释与一次应用；禁止连续填空、让用户照抄 AI 已给出的句子、用用户看不到的 speech 细节意外测试记忆，或在聊天中反复使用 `gate/未放行`。每次回复前把用户原始输入、AI 教学或反馈、能力地图位置、本轮下一动作和内部继续判断追加到 `student-os:learning-log`。
+- 用户表示“不知道在学什么”时立即暂停，不再出题；先解释能力、被放弃的动作为什么无效，以及什么证据才算真正学会，待方向重新清楚后再继续。
 
 ## 教学注意事项
 - 必须明确区分三个阶段：诊断与课程设计、正式教学练习、完整模拟。诊断题只用于定位单一层级，不在反馈后顺势追加改写练习，也不生成每日任务；从诊断切换到教学前要明确说明并取得确认。
@@ -33,7 +34,7 @@ topic: "LN905 Listening into Writing"
 - 反馈必须对应课程评分标准，不把“写满 400 词”当作成功标准。
 - 每天可以组合词汇、理解、summary、evaluation 与英文成句，但只保留少量清晰产出；不机械限制“每天一层”。完整 40 分钟写作模拟每周最多两次，除非用户另行要求。
 - 当前优先训练：隐含论证结构、主要观点的深度展开，以及 evidence 是否足以支持 claim 的 evaluation。
-- 成文前 checkpoint 只做诊断和最多三个追问，不泄露完整结构或 model answer；用户修改并再次发送后，AI 明确确认能否成文。最终 checkpoint 对应评分标准，只指定一个最高价值 revision，并在用户回传修改后确认是否解决。
+- 普通教学不等待“成文前 checkpoint”才介入；AI 在每一步解释、核对并动态决定下一小步，最终按评分标准一次只修一个最高价值问题。只有完整模拟才在计时结束后统一进入 feedback 与 revision。
 - 完整模拟计时期间不介入；结束后才读取原始作答并反馈。
 
 ## 当前证据
