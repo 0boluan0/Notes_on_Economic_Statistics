@@ -21,16 +21,48 @@
             "id": "5e7c5a64d1cf447b",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-3-Demographics/Listening/Topic Listening_Worksheet.pdf"
+                "file": "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "Topic Listening_Worksheet"
+              "icon": "lucide-file",
+              "title": "2026-08-11-demographics-accuracy"
             }
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "f503d95e9a2fe9cd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "57cebaa33e43365a",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://www.youtube.com/watch?v=fTznEIZRkLg&t=180s",
+                "title": "Hans Rosling: Global population growth, box by box",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "Hans Rosling: Global population growth, box by box"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -142,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/随手记.md",
+                "file": "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -288,7 +320,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 829.543701171875
+    "width": 829.543701171875,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -313,17 +346,17 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "30f6502409000f89",
+  "active": "5e7c5a64d1cf447b",
   "lastOpenFiles": [
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-3-Demographics/Listening/Topic Listening_Worksheet.pdf",
+    "99_学习情况记录/2026-08-11——Tue.md",
+    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension.md",
     "00_inbox/随手记.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-3-Demographics/Listening/Topic Listening_Worksheet.pdf",
     "00_inbox/日记模版.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-3-Demographics/Listening/Listening Demographics.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-3-Demographics/Input-and-Discussion/Topic Input Demographics.pdf",
     "99_学习情况记录/Overview & Study Record.md",
     "99_学习情况记录/Overview & Study Record——旧版计划归档 2026-06-17.md",
-    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension.md",
-    "99_学习情况记录/2026-08-11——Tue.md",
     "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2Reading-into-writing.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2 listening into writing.md",

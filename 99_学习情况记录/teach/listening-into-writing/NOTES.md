@@ -18,6 +18,7 @@ topic: "LN905 Listening into Writing"
 - 训练序列与日期由 [[99_学习情况记录/学习计划/LN905 Listening and Reading Practice]] 决定；Today 不临时创造另一份任务。
 - 对排到当天的 canonical task，`/today` 使用任务中固定的 session 路径准备 Markdown 教学记录；每次选择一条未使用过的 TED 官方 YouTube，并核验官方 transcript。
 - 练习视频优先 15–20 分钟；主题必须匹配同周 Reading 练习和下一次 timed test。
+- 2026-08-11 起，guided Listening 材料必须保留完整论证，不得为了缩短时长从一条完整演讲的论证中途起播或在结论前截断。如果当天只适合短练习，改选更短但自成一体、完整保留 framing、central claim、supporting structure 与 qualifications 的材料。
 - 已有 lesson records（包括历史 HTML）、`RESOURCES.md` 与计划中的 YouTube video ID 都属于去重账本，不复用。
 - 2026-08-10 起停止生成 guided-practice HTML。每个 daily part 使用独立 Markdown 作为永久学习记录，并在文件内提供只属于这个 part 的 init prompt；一个新 Codex 教学会话只推进这一项，完成后停止，不得自动进入当天下一项。
 - 普通教学首轮先给出清晰能力地图：今天在学什么、为什么与真实反馈相关、怎样算学会、已经会什么；后续每轮简短标明当前动作训练哪项能力。每轮只保留一个约 5–10 分钟的有意义动作，可包含完整解释与一次应用；禁止连续填空、让用户照抄 AI 已给出的句子、用用户看不到的 speech 细节意外测试记忆，或在聊天中反复使用 `gate/未放行`。每次回复前把用户原始输入、AI 教学或反馈、能力地图位置、本轮下一动作和内部继续判断追加到 `student-os:learning-log`。
