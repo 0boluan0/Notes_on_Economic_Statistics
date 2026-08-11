@@ -21,7 +21,7 @@ tags:
 - [x] 2026-08-02｜[[LN905 Essay]]｜确定论文题目并简要说明选题理由｜硬截止｜来源：Moodle 已核验 Submitted for grading #student-os/deadline 📅 2026-08-02 ✅ 2026-08-01
 - [x] 2026-08-07 11:45｜[[LN905 PDF Contents|LN905]]｜提交 Listening into Writing：Gender｜硬截止｜来源：Moodle 已核验 Submitted for grading #student-os/deadline 📅 2026-08-07 ✅ 2026-08-07
 - [x] 2026-08-07 15:00｜[[LN905 PDF Contents|LN905]]｜提交 Reading into Writing：Gender Essay Question and Submission｜硬截止｜来源：Moodle 已核验 Submitted for grading #student-os/deadline 📅 2026-08-07 ✅ 2026-08-07
-- [ ] 2026-08-09｜[[LN905 Essay]]｜提交注释书目（Annotated bibliography）｜硬截止｜来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/LN905 Week one materials 2026.pdf#page=3|Week 1 workbook]] #student-os/deadline 📅 2026-08-09
+- [x] 2026-08-09｜[[LN905 Essay]]｜提交注释书目（Annotated bibliography）｜硬截止｜来源：Moodle 已核验 Submitted for grading #student-os/deadline 📅 2026-08-09 ✅ 2026-08-09
 - [ ] 2026-08-14 11:45｜[[LN905 PDF Contents|LN905]]｜提交 Listening into Writing：Demographics｜硬截止｜来源：Student Hub（Moodle dates） #student-os/deadline 📅 2026-08-14
 - [ ] 2026-08-14 15:00｜[[LN905 PDF Contents|LN905]]｜提交 Reading into Writing：Demographics Essay Question and Submission｜硬截止｜来源：Student Hub（Moodle dates） #student-os/deadline 📅 2026-08-14
 - [ ] 2026-08-16｜[[LN905 Essay]]｜提交详细论文计划（Detailed essay plan）｜硬截止｜来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/LN905 Week one materials 2026.pdf#page=3|Week 1 workbook]] #student-os/deadline 📅 2026-08-16
@@ -32,7 +32,7 @@ tags:
 
 ## 核验状态
 
-- 2026-08-11｜Moodle 日常核对未完成：访问课程站时显示未登录；没有据此改变任何截止日期或提交状态。Annotated Bibliography 仍等待 Moodle 状态或回执核验。
+- 2026-08-11｜Moodle 核验完成：Annotated Bibliography 显示 Submitted for grading；提交文件最后修改于 2026-08-09 20:32，已关闭对应硬截止。
 - 2026-08-11｜Apple Calendar 的只读 `LSE` 读取成功：今天没有固定课程或行程；8 月 14 日 Listening 11:45 与 Reading 15:00 的截止点与现有记录一致。
 - 2026-08-10｜Moodle 日常核对未完成：已登录会话已超时，备用浏览器连接也未能打开课程页；没有据此改变任何截止日期或提交状态。用户已报告 Annotated Bibliography 提交系统，仍等待 Moodle 状态或回执核验后关闭硬截止。
 - 2026-08-10｜Apple Calendar 的只读 `LSE` 读取成功：今天没有固定课程或行程；8 月 14、21 日 Listening/Reading 的四个截止点与现有记录一致。

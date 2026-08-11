@@ -37,7 +37,6 @@ hide postpone button
 ## 风险雷达
 
 <!-- student-os:risk-radar:start -->
-- 逾期 2 天·待核验｜2026-08-09｜LN905 Essay：Annotated bibliography（用户报告已提交；Moodle 未登录，尚未核验状态）
 - D-3｜2026-08-14 11:45｜LN905 Listening into Writing：Demographics
 - D-3｜2026-08-14 15:00｜LN905 Reading into Writing：Demographics
 - D-5｜2026-08-16｜LN905 Essay：提交 detailed essay plan
