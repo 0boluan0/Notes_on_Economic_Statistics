@@ -12,16 +12,20 @@ topic: "LN905 Listening into Writing"
 
 ## 学习偏好
 - 2026-08-09 起暂停原有复合练习序列。用户明确反馈：在词汇与理解尚不稳定时，直接要求独立听完整材料、恢复论证结构并成文会显著打击信心并强化拖延。
-- 后续教学必须把词汇访问、材料理解、论证组织和英文成句分开诊断、分层训练。普通学习练习由 AI 主动教学，一次只推进一个极小动作，可使用中文解释、选项、示范、句框、回放与 transcript；只有明确的完整模拟或正式 timed submission 才保留无帮助的考试约束。
-- 每次 LN905 feedback 先遵守 [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening_into_Writing_AI_Feedback_Workbook.pdf|Listening into Writing — AI Feedback Workbook]]：AI 是 mirror，不是 marker；只 point、explain、question，不给分，也不提供可直接放进 summary 的句子、段落或全文。
+- 后续教学必须把词汇访问、材料理解、论证组织和英文成句分开诊断、分层训练。普通学习练习由 AI 主动教学，每轮推进一个足以产生迁移的完整学习动作，可使用中文解释、选项、示范、句框、回放与 transcript；不得把完整能力拆成围绕同一句话的连续微小纠错。只有明确的完整模拟或正式 timed submission 才保留无帮助的考试约束。
+- 对正式 timed submission 或 assessed-answer feedback，遵守 [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening_into_Writing_AI_Feedback_Workbook.pdf|Listening into Writing — AI Feedback Workbook]]：AI 是 mirror，不是 marker。普通 guided teaching 可以主动解释、示范和共同练习，但示范不能冒充用户的 assessed answer。
 - 优先使用短时、可当天完成并立即核对的练习。
 - 训练序列与日期由 [[99_学习情况记录/学习计划/LN905 Listening and Reading Practice]] 决定；Today 不临时创造另一份任务。
+- [[99_学习情况记录/teach/LN905 Exam Playbook|LN905 考试总纲]] 是 Paper A 的顶层方法。正式 assessment introduction、marking criteria 与 Academic Writing 课件定义能力和成功标准；教师反馈决定优先级。每次练习明确总纲能力、考试位置、当日产出、学会证据与整合动作，结束时留下一个 `遇到 X → 做 Y` 的考试口令；不确定时回看课件，不自行发明考试规则。
+- Listening 只在把时间流中的输入还原成 meaning/evidence map 之前拥有独立技能；map 之后与 Reading 共用总纲中的 W1–W9 Writing 能力树。普通日默认只选一个最高价值 guided part，不因名称不同自动同时安排 Listening 和 Reading；`词灵`不计入该限制。
+- 每周五课堂 Listening/Reading 测试是主要独立校准样本。下一次 Student OS 运行只读检查 `07_Programme/01_LN905_LSE-language-class/00_inbox/` 中的新原稿，分别判断两种 input route，再联合判断 shared Writing；同一 Writing 节点连续两次真实输出无提升时，随后两个 guided parts 优先练它。校准不得移动、改写或删除 Inbox 原稿。
 - 对排到当天的 canonical task，`/today` 使用任务中固定的 session 路径准备 Markdown 教学记录；每次选择一条未使用过的 TED 官方 YouTube，并核验官方 transcript。
 - 练习视频优先 15–20 分钟；主题必须匹配同周 Reading 练习和下一次 timed test。
 - 2026-08-11 起，guided Listening 材料必须保留完整论证，不得为了缩短时长从一条完整演讲的论证中途起播或在结论前截断。如果当天只适合短练习，改选更短但自成一体、完整保留 framing、central claim、supporting structure 与 qualifications 的材料。
 - 已有 lesson records（包括历史 HTML）、`RESOURCES.md` 与计划中的 YouTube video ID 都属于去重账本，不复用。
 - 2026-08-10 起停止生成 guided-practice HTML。每个 daily part 使用独立 Markdown 作为永久学习记录，并在文件内提供只属于这个 part 的 init prompt；一个新 Codex 教学会话只推进这一项，完成后停止，不得自动进入当天下一项。
-- 普通教学首轮先给出清晰能力地图：今天在学什么、为什么与真实反馈相关、怎样算学会、已经会什么；后续每轮简短标明当前动作训练哪项能力。每轮只保留一个约 5–10 分钟的有意义动作，可包含完整解释与一次应用；禁止连续填空、让用户照抄 AI 已给出的句子、用用户看不到的 speech 细节意外测试记忆，或在聊天中反复使用 `gate/未放行`。每次回复前把用户原始输入、AI 教学或反馈、能力地图位置、本轮下一动作和内部继续判断追加到 `student-os:learning-log`。
+- 普通教学首轮先给出清晰能力地图：今天在学什么、它解决人类写作中的什么真实问题、考试哪里调用、怎样算学会、已经会什么，并写清当日产出与整合动作。要求任何动作前，先解释为什么要做、眼前信息会怎样被转换、完成后能作出哪个下一步写作决定；必要时先给 worked contrast。“老师或 criteria 要求”本身不算解释。后续每轮简短标明当前动作训练哪项能力。每轮只保留一个约 5–10 分钟的有意义动作，可包含完整解释与一次应用；禁止连续填空、让用户照抄 AI 已给出的句子、用用户看不到的 speech 细节意外测试记忆，或在聊天中反复使用 `gate/未放行`。每次回复前把用户原始输入、AI 教学或反馈、能力地图位置、本轮下一动作和内部继续判断追加到 `student-os:learning-log`。
+- 优先速度与迁移，不追求当前文本逐字完美。只当场修复会破坏本次目标能力的 meaning、relationship、evidence 或 scope；反复语言问题记入 sentence clinic，一次性用词、拼写、风格和小语法直接放过。同一问题只允许一次独立 revision；仍未解决时直接给对比或示范并进入整体应用。非 English-production part 最多一次 whole-output revision。
 - 用户表示“不知道在学什么”时立即暂停，不再出题；先解释能力、被放弃的动作为什么无效，以及什么证据才算真正学会，待方向重新清楚后再继续。
 
 ## 教学注意事项
@@ -31,11 +35,11 @@ topic: "LN905 Listening into Writing"
 - 不用能靠题型语气或荒谬干扰项猜中的“送分式”选择题。选择题只有在所有选项都真正可能、必须理解材料才能区分时才有诊断价值；否则改用一句中文说明、标箭头或极短 constructed response。无效题上的正确选择不记作能力证据。
 - 反馈必须引用用户的确切原句并对应 Listening 或 Writing criteria；让用户自己修订。语言问题按 recurring patterns 归类，只说明规则和一个例子；progress feedback 要回看此前 target。
 - 先降低听与记的同步负担，再增加完整 40 分钟模拟。
-- 用户不理解反馈动作时，暂停抽象术语与多空填充；先给一个基于其原始笔记的具体选择或提取动作，一次只推进一步。
+- 用户不理解反馈动作时，暂停抽象术语与多空填充；直接用其原始笔记做对比或示范，然后让用户完成一个能推进整体目标的应用。
 - 反馈必须对应课程评分标准，不把“写满 400 词”当作成功标准。
 - 每天可以组合词汇、理解、summary、evaluation 与英文成句，但只保留少量清晰产出；不机械限制“每天一层”。完整 40 分钟写作模拟每周最多两次，除非用户另行要求。
 - 当前优先训练：隐含论证结构、主要观点的深度展开，以及 evidence 是否足以支持 claim 的 evaluation。
-- 普通教学不等待“成文前 checkpoint”才介入；AI 在每一步解释、核对并动态决定下一小步，最终按评分标准一次只修一个最高价值问题。只有完整模拟才在计时结束后统一进入 feedback 与 revision。
+- 普通教学不等待“成文前 checkpoint”才介入；AI 动态教学，但反馈针对整份产出一次分流，不把“最高价值问题”误用成逐轮发现一个新细节。核心能力达到后即推进或完成；只有完整模拟才在计时结束后统一进入 feedback 与 revision。
 - 完整模拟计时期间不介入；结束后才读取原始作答并反馈。
 
 ## 当前证据
