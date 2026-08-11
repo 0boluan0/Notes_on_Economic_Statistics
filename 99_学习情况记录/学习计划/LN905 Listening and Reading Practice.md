@@ -48,11 +48,11 @@ assessment_horizon: 2026-08-21
 
 ## Demographics｜教学与测试 2026-08-10 至 2026-08-15
 
-- [ ] LN905 Listening｜Gender feedback repair：在 AI 逐步教学下识别 mixed evidence，并把原评价修成 1–2 句准确英文（45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-10-gender-evidence-calibration|学习记录]] #student-os/task ⏳ 2026-08-10
-- [ ] LN905 Reading｜Gender feedback repair：在 AI 逐步教学下弄懂三个机制的关系，再共同补完 conclusion（45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-10-gender-synthesis-repair|学习记录]] #student-os/task ⏳ 2026-08-10
+- [ ] LN905 Listening｜Gender feedback repair：在 AI 逐步教学下识别 mixed evidence，并把原评价修成 1–2 句准确英文（45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-10-gender-evidence-calibration|学习记录]] #student-os/task ⏳ 2026-08-16
+- [ ] LN905 Reading｜Gender feedback repair：在 AI 逐步教学下弄懂三个机制的关系，再共同补完 conclusion（45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-10-gender-synthesis-repair|学习记录]] #student-os/task ⏳ 2026-08-16
 - [ ] LN905 Listening｜Demographics 1：6–8 分钟首听笔记 → transcript repair → 3 句准确 summary（45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension|学习记录]] #student-os/task ⏳ 2026-08-11
 - [ ] LN905 Reading｜Demographics 1：短材料中保留 observation、claim 与 scope，并转成 4 句英文 summary（45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy|学习记录]] #student-os/task ⏳ 2026-08-11
-- [ ] LN905 English production｜用本人 Gender 原句修复 6 个 grammar / word-form patterns，再放回两段真实文本（35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-gender-sentence-clinic|学习记录]] #student-os/task ⏳ 2026-08-11
+- [ ] LN905 English production｜用本人 Gender 原句修复 6 个 grammar / word-form patterns，再放回两段真实文本（35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-gender-sentence-clinic|学习记录]] #student-os/task ⏳ 2026-08-16
 - [ ] LN905 Listening｜Demographics 2：区分 anecdote、research 与 data，完成 evidence inventory 和 calibrated critique（50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-12-demographics-evidence|学习记录]] #student-os/task ⏳ 2026-08-12
 - [ ] LN905 Reading｜Demographics 2：用 writer-led claim 连接两份来源，并准确写出 relation 与 limitation（50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-12-demographics-synthesis|学习记录]] #student-os/task ⏳ 2026-08-12
 - [ ] LN905 Listening｜Demographics 3：10–12 分钟单次播放 + 180–250 词 partial simulation；结束后 AI 只修一个最高价值问题（50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-13-demographics-partial|学习记录]] #student-os/task ⏳ 2026-08-13
@@ -146,3 +146,8 @@ assessment_horizon: 2026-08-21
 ### 2026-08-05 已准备
 
 - Listening：`IfOqyuxb5S0`｜Sara Sanford, *How to Design Gender Bias Out of Your Workplace*
+
+### 2026-08-11 已准备
+
+- Listening：`fTznEIZRkLg`｜Hans Rosling, *Global Population Growth, Box by Box*（使用 03:00–09:15 片段）
+- Reading：Gerland et al. (2014), DOI `10.1126/science.1257469`

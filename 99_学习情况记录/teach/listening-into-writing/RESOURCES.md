@@ -32,6 +32,10 @@ topic: "LN905 Listening into Writing"
   用于区分讲者是在解释、论证、举例还是总结，并建立个人缩写与结构标记。
 - [University of Edinburgh: Lecture Listening and Note-taking](https://www.ed.ac.uk/files/atoms/files/lecture_listening_and_note-taking_units_1-4.pdf)
   提供约 18 分钟的独立练习和 transcript，可用于第一次无暂停作答、第二次核对。
+- [Hans Rosling: Global population growth, box by box (TED YouTube)](https://www.youtube.com/watch?v=fTznEIZRkLg&t=180s)
+  Demographics comprehension 练习使用 03:00–09:15 片段；先听后再核对 transcript。
+- [TED official transcript](https://www.ted.com/talks/hans_rosling_global_population_growth_box_by_box?view=transcript)
+  用于首听后核对 central claim、supporting blocks 与 scope，不在首听前打开。
 
 ## Gaps
 

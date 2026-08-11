@@ -32,6 +32,8 @@ tags:
 
 ## 核验状态
 
+- 2026-08-11｜Moodle 日常核对未完成：访问课程站时显示未登录；没有据此改变任何截止日期或提交状态。Annotated Bibliography 仍等待 Moodle 状态或回执核验。
+- 2026-08-11｜Apple Calendar 的只读 `LSE` 读取成功：今天没有固定课程或行程；8 月 14 日 Listening 11:45 与 Reading 15:00 的截止点与现有记录一致。
 - 2026-08-10｜Moodle 日常核对未完成：已登录会话已超时，备用浏览器连接也未能打开课程页；没有据此改变任何截止日期或提交状态。用户已报告 Annotated Bibliography 提交系统，仍等待 Moodle 状态或回执核验后关闭硬截止。
 - 2026-08-10｜Apple Calendar 的只读 `LSE` 读取成功：今天没有固定课程或行程；8 月 14、21 日 Listening/Reading 的四个截止点与现有记录一致。
 - 2026-08-09｜Moodle Sunday 全量核对完成：18 个课程区段、13 个 assignment 页面及 107 个课程文件/资源均已检查，Announcements 仍为空。Gender、Social Media 与 Essay Question/Rationale 已提交；Annotated Bibliography、Essay Plan、Essay Draft、Final Submission、Demographics Listening/Reading 与 Climate Change Listening/Reading 均未提交。四个 essay assignment 页面未显示独立 due 字段，继续以 workbook 日期为准；未发现更早或新增的硬截止。

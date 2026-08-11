@@ -26,6 +26,8 @@ topic: "LN905 Reading into Writing"
   用于核对 social comparison、social support、cyberbullying 等机制及其证据边界。
 - [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing|LN905 Reading into Writing skills and solved exercises]]
   用于恢复预读、SQ3R、source map、synthesis、secondary citation 与限时作答流程；主题论文笔记已退出活动路径。
+- [Gerland et al. (2014), *World population stabilization unlikely this century*](https://doi.org/10.1126/science.1257469)
+  Demographics accuracy 练习的单来源材料；用于区分数据与方法、概率预测、解释以及适用范围。
 
 ## Gaps
 
