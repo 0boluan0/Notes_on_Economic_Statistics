@@ -18,7 +18,7 @@ topic: "Annotated Bibliography"
   核验正式提交数量为三篇文本。
 - [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf|Week 2 Lesson 4]]
   提供 student extracts 与教师对 description、evaluation、usefulness 和 intended use 的颜色拆解。
-- [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#14. Annotated bibliography：summary + evaluation + intended use|Academic Writing note · section 14]]
+- [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#Annotated bibliography：summary + evaluation + intended use|Academic Writing note · annotated bibliography]]
   仓库内的已核对课程总结和可复用句子结构。
 
 ## Current essay and source pool
@@ -38,4 +38,3 @@ topic: "Annotated Bibliography"
 
 - Moodle 或教师说明中采用的具体 referencing style 尚未在项目笔记中确认。
 - Reference 是否计入单篇 100–300 词尚未确认；在核验前，annotation 正文本身应独立满足词数要求。
-

@@ -33,7 +33,6 @@ topic: "Annotated Bibliography"
 
 ## 相关笔记
 
-- [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#14. Annotated bibliography：summary + evaluation + intended use|LN905 annotated bibliography 课程笔记]]
+- [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#Annotated bibliography：summary + evaluation + intended use|LN905 annotated bibliography 课程笔记]]
 - [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay|LN905 Essay 项目]]
 - [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/00_文章梗概索引|十篇文献梗概索引]]
-
