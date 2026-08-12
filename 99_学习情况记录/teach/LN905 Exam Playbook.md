@@ -148,7 +148,7 @@ AI 在要求任何动作前，必须用普通人能理解的方式讲清：
 - 如果 meaning/evidence map 已经准确，但成文仍卡在 thesis、选材、结构、推理、synthesis/evaluation、英文实现或完成度，下一项直接训练共同 Writing 树；不因为材料来自 Listening 或 Reading 就把输入再练一遍。
 - 如果 map 本身遗漏 central claim、evidence、source ownership 或 scope，才回到对应的输入入口。
 - 如果同一个 Writing 节点在连续两份可比输出中没有改善，接下来两个 guided parts 优先增加该 Writing 节点的时间，并用不同材料做迁移；直到下一份整合输出出现改善，再恢复其他薄弱项。
-- 普通日默认只选择一个最高价值的 AI-guided LN905 part，词灵不计入这个数量。不得为了形式对称自动安排 Listening 和 Reading 各一项；只有临近两个独立正式测试、确有两个输入瓶颈且当天容量允许时才可以并列。
+- 普通日只选择一条最高价值训练 lane：一个 standalone Shared Writing part，或一组使用同一材料的 `input → Shared Writing` 相邻 pair；词灵不计入。不得为了形式对称自动安排 Listening 和 Reading 各一项。真正 input 练习得到 map 后，当天趁记忆新鲜用独立 Writing part 接上；若只能练 Writing，就由导师提供足够使用的事实条目或短学术材料。
 - 固定的是正式 assessment、必要的完整模拟和每日词汇底线；普通练习的日期、输入入口与支架强度由最新证据动态决定。
 
 ### 每周五真实校准
@@ -164,8 +164,8 @@ AI 在要求任何动作前，必须用普通人能理解的方式讲清：
 | 训练类型 | 当天主要推进 | 必须怎样接回考试 |
 |---|---|---|
 | 词灵 | lexical access | 给出具体分钟数；不替代理解、组织或写作 |
-| Listening input | 一次性时间流中的选择、笔记和 speaker/source ownership | 产出共同 meaning/evidence map，然后进入一个 Writing 动作 |
-| Reading input | question-led 取舍、单篇准确性和跨文关系识别 | 产出同一类 map，然后进入一个 Writing 动作 |
+| Listening input | 一次性时间流中的选择、笔记和 speaker/source ownership | 独立产出共同 meaning/evidence map；同日相邻的 Shared Writing part 使用它 |
+| Reading input | 正式测试量级的三篇学术 extracts 中 question-led 取舍、准确性和跨文关系识别 | 独立产出同一类 map；同日相邻的 Shared Writing part 使用它 |
 | Shared Writing | `W1–W7` 的答案、选材、转述、结构、推理、synthesis/evaluation | 用 Listening 或 Reading 任一可用 map 产出 plan、summary 或 paragraph |
 | English production | `W8` | 只修本人输出中反复出现的模式，再放回真实 summary/essay |
 | Partial simulation | 相邻输入与 Writing 节点整合 | 在缩小材料或字数的情况下走完一段连续流程 |

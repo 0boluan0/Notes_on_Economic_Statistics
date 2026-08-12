@@ -8,12 +8,15 @@ mode: guided-teaching
 status: active
 ---
 
-# Demographics reading accuracy
+# Demographics top-down paragraph
 
 <!-- student-os:material-ready: 2026-08-11 -->
 
 > [!summary] 本次在总纲中的位置
-> **总纲能力**：Reading input route「把文本还原成 meaning/evidence map」，再接入共享 Writing W4「准确转述」。**考试位置**：Paper B 读单篇 extract 时恢复 `claim/evidence/scope`，再把准确材料送入 thesis 与 paragraph。**当日产出**：4 句 integrated summary。**整合动作**：把 source map 一次转成可进入后续 synthesis 的英文材料。
+> **总纲能力**：Shared Writing W1–W3、W5–W6「先回答题目，再安排段落功能与 evidence role」。**考试位置**：Paper B 读完材料后、写正文前的 writer-led planning。**当日产出**：一份 `answer → paragraph function → evidence roles` 小计划和一段 4–6 句正文。**整合动作**：只选择能服务自己答案的 source proposition，不按来源顺序复述。
+
+> [!warning] 旧训练路径已停止
+> 下面学习日志完整保留此前的 source-summary 与逐词纠错过程；它证明这种路径没有直接训练真实 essay source use。新版 principal 不要求四句 source summary，也不把普通换词或句式变化当成错误。
 
 ## 材料
 
@@ -23,44 +26,46 @@ status: active
 
 ## 完成证据
 
-你能用自己的英文写出 4 句，分别交代数据/方法、核心预测、主要解释和不确定性/适用范围；不把 probability 写成 certainty，也不添加来源没有说的因果关系。
+面对问题 `Why is global population growth unlikely to stop during the twenty-first century?`，你能先写出直接答案、说明本段要证明什么、给所选 evidence 分配功能，再写成一段 4–6 句正文。正文由自己的 point 驱动，只使用服务该 point 的材料，并解释 evidence 为什么支持答案；不要求复述 source 的全部 method、数字或 scope。
 
 <!-- student-os:mentor-brief:start
-今日 principal: 完成一份 source-accurate 的 4 句 integrated summary；不再逐句钻数字、措辞或语法细节。
-起点证据: learning log 已显示学习者在提示后能识别 Bayesian method、80% probability、9.6–12.3 billion、2100 和 working-age/older ratio；尚无一次完整独立输出。
-本次产出: 方法、预测、解释、uncertainty/scope 各承担明确功能的 4 句英文 summary。
-刻意练习链: 简短重建 method/claim/scope 的用途 → 直接完成 4 句整合输出 → 按核心准确性给一次反馈 → 必要时只做一次整份 revision。
-允许支架: 显示完成输出所需的 source facts；可用中文解释或一个非本题对比；不得提供可照抄的本题四句答案。
-静默交织观察: 无。EP-01 正在本次首次教学，今天的成功只能记 guided，不能宣布 mastered/stable。
-反馈优先级: 只优先 method、probability/claim、explanation、scope/uncertainty；孤立语法、拼写和风格不阻挡完成。
-完成证据: 一次完整 4 句输出保留来源的核心含义与范围；至多一次整体 revision 后达到即可关闭 session task。
-停止边界: 助教不得新增句式课、进入 synthesis/Essay、安排未来复习、编辑本 brief 或技能账本、宣布长期掌握；本 part 完成后停止。
+今日 principal: 教会并练习 writer-led 的自上而下段落安排：question → provisional answer → paragraph function → evidence roles/selection → prose。
+起点证据: 学习者已理解材料的主要人口预测与 Africa fertility explanation；旧日志表明瓶颈不是继续抽取 source facts，而是不知道这些事实如何由自己的答案选择并进入真实 paragraph。
+本次产出: 针对 `Why is global population growth unlikely to stop during the twenty-first century?` 的一份三行 writer plan（direct answer / paragraph function / evidence roles）和一段 4–6 句正文。
+刻意练习链: 用非人口 worked example 演示 source-led 与 writer-led 的区别 → 学习者完成三行 plan → 助教只反馈 answer/function/evidence-role alignment → 学习者一次成段 → 必要时只做一次整段 revision。
+允许支架: 可解释题目类型、展示非人口完整示范、显示本材料已核验的 source propositions、帮助区分 support/explain/qualify；不得替学习者写本题 thesis、三行 plan 或整段答案。
+静默交织观察: EP-01；收到整段前不提醒 hedging/probability。整段后只记录是否自主保留预测性质；无提示失败不阻断今天的 W-01 主目标，只在段后反馈中批量指出。
+反馈优先级: 先看是否直接回答题目、段落功能是否服务答案、证据角色和 warrant 是否清楚；看完整段落后，只有 source ownership、certainty、scope、causality 或 evidence relationship 被实质改变时才介入。普通词汇替换、句法变化、语气和小语法不打断。
+完成证据: 三行 plan 逻辑对齐，随后一段正文能看出 writer point → selective source use → reasoning/link back；允许语言不完美，至多一次整段 revision。
+停止边界: 助教不得恢复四句 source summary、逐词比较原文、另教输入抓取、进入多来源 synthesis/Essay、安排未来复习、编辑本 brief 或技能账本、宣布长期掌握；本 part 完成后停止。
 student-os:mentor-brief:end -->
 
 ## Init prompt｜复制到一个新的 Codex 会话
 
 ```text
-你是执行助教，不是课程导师。你只负责一个 part：`LN905 Reading｜Demographics 1`。本文件 `student-os:mentor-brief:start/end` 是今天不可修改的唯一 principal；你只能批当前作业，并在其中规定的刻意练习链内给下一步 5–10 分钟作业。不得自己换技能、重排路线、安排未来任务、编辑技能账本或宣布长期掌握。只在当前 Academic vault 和这一个任务中工作，不创建 worktree，不推进 Listening、Essay 或今天的其他 part。
+你是执行助教，不是课程导师。你只负责一个 part：`LN905 Shared Writing｜Demographics top-down paragraph`。本文件 `student-os:mentor-brief:start/end` 是今天不可修改的唯一 principal；你只能批当前作业，并在其中规定的刻意练习链内给下一步 5–10 分钟作业。不得自己换技能、重排路线、安排未来任务、编辑技能账本或宣布长期掌握。只在当前 Academic vault 和这一个任务中工作，不创建 worktree，不推进 Listening、Essay 或今天的其他 part。
 
 先完整读取根目录 AGENTS.md、CLAUDE.md、`99_学习情况记录/teach/LN905 Exam Playbook.md`、`99_学习情况记录/teach/reading-into-writing/MISSION.md`、`99_学习情况记录/teach/reading-into-writing/NOTES.md` 和本次唯一记录：
 `99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md`
 
 这是教学练习，不是完整模拟。第一次回复先给我五项定位：
-- `今天在学`：把研究依据、作者 claim 和 scope 分开，避免 summary 把概率预测夸成事实。
-- `为什么`：写作者不能直接把一段原文塞进文章。先分清「作者凭什么说、到底说了什么、说到什么范围」，才能判断这条材料能支持 thesis 的哪一部分；否则后面的 synthesis 和 evaluation 都会建立在错误前提上。
-- `考试位置`：Paper B 读取阶段把文本变成 meaning/evidence map；随后与 Listening 共用 Writing W4–W7，把准确内容送入 thesis、paragraph 与 synthesis。默认约 30 分钟只是训练建议。
-- `学会的样子`：我能用 4 句说清方法、预测、解释和范围，不多说也不少说。
-- `你已经会`：我能使用多份来源并连接 ideas；今天先把每份来源本身说准。
+- `今天在学`：自上而下安排一段文章——先回答题目，再决定本段功能和每条 evidence 的作用，最后才写句子。
+- `为什么`：真实 essay 不是把 source 换词复述。没有自己的 answer 和 paragraph function，材料再准确也只是堆积；先作出写作决策，才知道什么该用、什么该删、用完要解释什么。
+- `考试位置`：Paper B 的 W1–W3、W5–W6；读完材料、写正文前先形成 writer-led plan，随后成段。
+- `学会的样子`：我能先交出逻辑对齐的 direct answer、paragraph function 和 evidence roles，再写出一段由自己的 point 控制的 4–6 句正文。
+- `你已经会`：我已经理解这份人口材料的主要预测和 Africa fertility explanation，不需要再做一次完整信息抽取。
 
-要求任何动作前，先用中文说清：眼前信息现在是什么形态、这个动作会把它变成什么、完成后我能作出哪个下一步写作决定；必要时先给一个与人口无关的 worked contrast。不要只说“教师说要提高 source accuracy”。
+先用一个与人口无关的完整 worked example，展示同一组 source facts 怎样先被 question 筛选，再变成 `direct answer → paragraph function → evidence roles`；同时对比 source-led 摘要为什么不是 paragraph plan。这个示范必须展示思考过程，但不能替我完成本题。
 
-先检查本文件的 learning log。若为空，先用一个与人口无关的两句小例子讲清「数据/方法 ≠ 作者的 claim ≠ claim 的 scope」，不要用送分 ABC 题；紧接着让我边看内嵌短 PDF，写一个三行 map：`researchers used`、`they project`、`the claim is limited by/to`，允许中文、英文或箭头。若已有记录，不得重新开始，也不得继续逐句修人口预测；现有记录已经证明我能识别 Bayesian method、概率预测、人口区间和 working-age/older ratio。先直接说明此前围绕同一句连续纠错为什么低效，再显示完成整体输出所需的 source facts，让我一次完成 4 句 integrated summary。
+然后只给第一个动作。显示题目 `Why is global population growth unlikely to stop during the twenty-first century?`，让我提交三行：`direct answer`、`this paragraph must prove`、`evidence roles`。允许中文、英文或箭头；`evidence roles` 只需从已显示材料中选择哪些 proposition 用作 support、explanation 或 qualification，不写正文。不得让我先摘要原文，也不得要求列齐 method、数字、scope。
 
-收到整份输出后一次分流反馈：只当场处理会破坏 method、claim、scope 或 uncertainty 的核心错误；反复语言模式留给 sentence clinic，一次性用词、拼写、风格和小语法不阻挡本任务。同一核心问题修一次仍未解决，就用对比或示范教清；本 part 最多要求一次 4 句整体 revision。不做连续填空，不让我照抄你写好的本题答案，不一次扔出整份 worksheet。
+收到三行 plan 后，只判断 answer 是否直接回应 why、paragraph function 是否服务 answer、每条 evidence 是否有明确角色。若逻辑可用，立即让我依据该 plan 写一段 4–6 句正文：writer point → selective source use → commentary/reasoning → link back。不要逐句批准，也不要规定必须使用 source 的原词。
+
+收到完整段落后再一次性反馈。Paraphrasing 的标准是 proposition 可用，不是词汇相似：允许更换 vocabulary、syntax、voice 和 information order。只有 source ownership、certainty、scope、causality 或 evidence relationship 被实质写反、写大或捏造时才要求修正；普通强弱差异、措辞、风格、拼写和小语法在主反馈后批量记录，不得围绕单词连续追问。本 part 至多要求一次整段 revision。
 
 每次回复我之前，必须在本文件 `student-os:learning-log:start/end` 之间追加时间、我的原始输入、你的教学或反馈、当前能力地图位置、下一个有意义动作和内部继续判断。只追加，不覆盖；写入失败就立即告诉我。如果我说不知道在学什么，立即停止出题，重新解释能力和完成证据。
 
-当 4 句 summary 已经正确区分 method、claim、explanation 与 uncertainty/scope 时，即使仍有小语法或措辞问题，也把本任务的 canonical checkbox 标记完成并添加实际完成日期，记录需留给 sentence clinic 的 recurring pattern，并留下一个 `遇到 X → 做 Y` 的 Paper B 考试口令。只说本次 session 完成，不得声称该技能已经长期掌握；明确回复「本次练习完成」，然后停止。
+当三行 plan 对齐，且一段 4–6 句正文展示 writer point、选择性 source use、reasoning 和 link back 时，即使仍有小语法或措辞问题，也把本任务的 canonical checkbox 标记完成并添加实际完成日期，记录需留给 sentence clinic 的 recurring pattern，并留下考试口令 `遇到 source pack → 先回答题目并给段落定功能，再选 evidence`。只说本次 session 完成，不得声称该技能已经长期掌握；明确回复「本次练习完成」，然后停止。
 ```
 
 ## 学习记录
@@ -407,4 +412,184 @@ Reading meaning/evidence map → W4 准确转述：把已识别的 source facts 
 **内部继续判断**
 
 继续本 part，等待完整四句后一次分流反馈。只处理会改变 method、claim、explanation 或 uncertainty/scope 的核心错误；至多要求一次整份 revision。当前没有新的完整四句证据，不标记 canonical task，不编辑技能账本，也不推进其他 part。
+
+### 2026-08-12T16:39:02+01:00
+
+**学习者原始输入**
+
+对先前回复中的 `scope` 提问：「这是什么」。
+
+Gerland and colleagues forecasted an incoming rocketing of world population from 7.2 billion in 2012 to roughly 9.6 to 12.3 billion by 2100, using a Bayesian probabilistic method. And the majority part of this rising is predicted to happen in Africa, which mainly bases on high birth rate there.
+
+**AI 教学或反馈**
+
+- 当前能力地图位置：Reading meaning/evidence map → W4 准确转述；现有两句尝试覆盖 method/claim 与 explanation，尚缺完整的四句产出和 uncertainty/scope。
+- 解释 `scope`：它是作者 claim 能成立到哪里的边界，包括时间、地点/对象、结论强度与不确定性。本来源的边界是：预测基于截至 2012 年的数据与模型假设，描述到 2100 年的 global/regional likely futures，不保证每个国家都会出现同样结果。非人口对比：`A survey suggests that London commuters may prefer later trains` 只能支持 London survey respondents 的可能偏好，不能扩成 `People prefer later trains`。
+- 眼前两句仍是部分 summary；下一动作要把它们与缺失的范围信息变成一次完整四句，使学习者随后能判断这份来源能支持多强、多广的 paragraph claim。
+- 只指出会改变来源含义的核心问题，不修小语法：第一句遗漏 80% probability，且 `rocketing` 比来源的 `rise` 更强；第二句的 `majority` 与 `mainly` 分别强于来源的 `much` 与 `partly`，并把两个 fertility-related mechanisms 缩成了 high birth rate，遗漏 fertility decline 最近放缓。
+- 不要求单独重写这两句；要求学习者在下一次完整四句中一次校准这些强度与机制，并用第四句明确 scope。
+
+**当前能力地图位置**
+
+Reading meaning/evidence map → W4 准确转述：`method → probabilistic claim → explanation → uncertainty/scope`；正在理解第四项 scope 如何限制 claim，尚未进入 synthesis 或 essay。
+
+**下一个有意义动作**
+
+用 5–10 分钟提交一次恰好四句的完整英文 summary：方法、带 80% probability 的预测、来源给出的 Africa 解释、uncertainty/scope 各一句。可以保留现有思路，但不单独逐句修补。
+
+**内部继续判断**
+
+继续本 part；当前输入只有两句，不视为已收到完整四句，也不消耗最终整份 revision。等待完整输出后一次分流反馈，只处理 method、claim、explanation 与 uncertainty/scope 的核心准确性；不标记 canonical task，不编辑技能账本，不推进其他 part。
+
+### 2026-08-12T16:41:12+01:00
+
+**学习者原始输入**
+
+我还是没懂我写这个干啥
+
+**AI 教学或反馈**
+
+- 立即暂停四句输出，不再要求修改或提交练习。
+- 承认先前解释仍把四句当成任务清单，没有展示它替真实 essay 写作完成的工作，因此看起来像为了总结而总结。
+- 澄清：Paper B 不会要求写这份四句小摘要；四句只是一个训练容器。它把一段 source 变成四块可安全使用的 evidence：`method` 决定应多谨慎地相信，`claim` 决定能支持 paragraph 的哪一点，`explanation` 提供 claim 与 paragraph point 之间的 reasoning，`scope` 限制结论能写多强、多广。这个转换完成后，写作者才能决定“用这份 source 支持什么，以及不能拿它证明什么”。
+- 用学习者当前输出说明真实后果：`world population will rocket mainly because of high African birth rates` 会把概率预测写成确定且剧烈的事实，并把 `partly + 两个 fertility mechanisms` 压成单一主因；如果直接放进 essay，后续 thesis、synthesis 和 evaluation 会建立在来源没有提出的命题上。问题不是英语不漂亮，而是 evidence 已被换成另一个意思。
+- 澄清与 paraphrasing 的关系：paraphrasing 是“换表达而不换命题”的生成方法；四句不是另一种考试文体，而是检查改写后 method、claim、explanation 与 scope 是否仍在。先前路径低效，是因为只纠正结果，却没有先展示 `source → 可用 evidence → paragraph decision` 这条用途链。
+- 可见完成证据：学习者能够在查看 source 时，用不同句法表达同一命题，同时保留 source ownership、probability、数字、机制和边界，并据此说清该 source 能支持什么、不能支持什么；不是把当前文字修到零语法错误。
+
+**当前能力地图位置**
+
+教学练习暂停；正在重新定位 `source → 准确 paraphrase → 可用 evidence → paragraph decision`，尚未恢复四句输出，也未进入 synthesis 或 essay。
+
+**下一个有意义动作**
+
+当前不布置任何练习。只等待学习者确认：四句是把 source 处理成 essay 可安全使用的 evidence，而不是考试中要交的小摘要；若仍不清楚，继续解释用途，不要求输出。
+
+**内部继续判断**
+
+暂停教学，不标记任务完成，不要求 revision，不推进 Africa、scope、synthesis、Essay 或其他 part。只有学习者表示用途已经清楚后，才在 mentor brief 的同一四句整合链内恢复一次完整输出。
+
+### 2026-08-12T16:46:45+01:00
+
+**学习者原始输入**
+
+清楚你要干啥了,但是我不觉得这个训练很实用,因为真正我在文章中转述的时候是这么转述的吗?
+
+**AI 教学或反馈**
+
+- 明确回答：真实 Paper B essay 中通常不会按 `method → claim → explanation → scope` 连写四句来介绍一个来源，也不应把这四句当成可直接搬进正文的 paragraph 模板。
+- 真实转述由自己的 paragraph point 驱动：先写自己的判断，只选择该判断需要的 source proposition，用 reporting/paraphrase 保留来源归属与确定程度，然后解释它为何支持或限定 paragraph point；method 只有在判断证据可靠性时才需要出现，scope 往往通过 hedging、对象或时间限制嵌入同一句，其他未被 paragraph 使用的 source facts 应省略。
+- 四句练习只是 source-accuracy 的隔离诊断：它检查学习者能否在换句法时保留四类信息，但不训练 W3 selection、W6 paragraph reasoning 或 W7 synthesis。因此学习者指出了真实的迁移缺口：这个练习能检查一个前置零件，却不能代表文章中的实际 source use。
+- 给出非本题的结构对比，不代写人口答案：内部 source map 可能记录 survey method、commuter preference、possible reason 与 London-only scope；真实 paragraph 只会按自己的 point 选择，例如 `自己的 point → source 的相关发现 → why it matters → 必要限定/另一来源关系`，而不是把 source map 四项全部写进正文。
+- 当前 mentor brief 固定的完成产物仍是四句 source-accurate summary；执行助教不能把它改成 paragraph 或 synthesis 练习。因学习者尚未认可该隔离练习的实用价值，继续暂停，不用“这是前置训练”掩盖它没有直接练真实 paragraph use 的限制。
+
+**当前能力地图位置**
+
+用途定位已经清楚；正在区分“内部 source-accuracy map”与“真实 essay 中 point-driven、selective source use”。本 part 仍暂停，尚未恢复四句产出，也未进入 paragraph/synthesis。
+
+**下一个有意义动作**
+
+当前不布置练习。等待学习者决定是否仍愿意把本 part 仅作为一次短 source-accuracy 诊断完成；若不愿意，保持暂停，由课程导师而非执行助教决定是否更换训练设计。
+
+**内部继续判断**
+
+暂停教学，不标记 canonical task，不要求 revision，不自行进入更真实但越界的 paragraph/synthesis 练习，不编辑技能账本或安排未来任务。
+
+### 2026-08-12T16:51:41+01:00｜课程导师更换 principal
+
+**学习者原始输入**
+
+`你能理解自上而下arrange吗? 咱能不能学习一点自上而下安排写作的东西,还是说今天就是练习从文章中抽取信息,毕竟今天你新搞的那个还是很烂.我觉得还是在强迫我使用原本的词汇练习,随便换点词他就很敏感说不对表达的意思不一致,那能一致吗我请问了`
+
+`对的对的对的,这样才对,然后listening和reading的抓取信息的练习就是另外的.`
+
+**AI 教学或反馈**
+
+- 导师同意诊断：旧 principal 把 source-accuracy 隔离练习误当成 Writing，助教继而围绕局部词汇强度守门，没有训练真实 essay 的 writer-led decision。
+- 正式分开两类任务：Listening/Reading input drill 只到 meaning/evidence map；Shared Writing drill 从题目和自己的答案开始，按 paragraph function 与 evidence role 取舍信息后才成文。
+- 本文件保留全部旧日志，但旧的四句 source summary principal 作废。新 principal 是 `question → provisional answer → paragraph function → evidence roles/selection → prose`。
+- Paraphrasing 改按 proposition 判断：允许词汇、句法、语态和信息顺序改变；助教收到完整段落后才核验意义，只拦截实质改变 source ownership、certainty、scope、causality 或 evidence relationship 的错误，不再为普通换词打断。
+
+**当前能力地图位置**
+
+Shared Writing W1–W3、W5–W6：从来源驱动转为 writer-led planning；尚未开始新版三行 plan。
+
+**下一个有意义动作**
+
+使用文件顶部新版 init prompt 开始：先看一个非人口的完整自上而下 worked example，再针对给定 Demographics 问题提交 `direct answer / paragraph function / evidence roles` 三行 plan。
+
+**内部继续判断**
+
+旧练习保持暂停且不算完成；导师已授权新 principal。下一助教只能执行新版 mentor brief，不得恢复四句 summary、逐词纠错或把 input acquisition 混回 Writing。
+
+### 2026-08-12T16:59:39+01:00
+
+**学习者原始输入**
+
+你是执行助教，不是课程导师。你只负责一个 part：`LN905 Shared Writing｜Demographics top-down paragraph`。本文件 `student-os:mentor-brief:start/end` 是今天不可修改的唯一 principal；你只能批当前作业，并在其中规定的刻意练习链内给下一步 5–10 分钟作业。不得自己换技能、重排路线、安排未来任务、编辑技能账本或宣布长期掌握。只在当前 Academic vault 和这一个任务中工作，不创建 worktree，不推进 Listening、Essay 或今天的其他 part。
+
+先完整读取根目录 AGENTS.md、CLAUDE.md、`99_学习情况记录/teach/LN905 Exam Playbook.md`、`99_学习情况记录/teach/reading-into-writing/MISSION.md`、`99_学习情况记录/teach/reading-into-writing/NOTES.md` 和本次唯一记录：
+`99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md`
+
+这是教学练习，不是完整模拟。第一次回复先给我五项定位：
+- `今天在学`：自上而下安排一段文章——先回答题目，再决定本段功能和每条 evidence 的作用，最后才写句子。
+- `为什么`：真实 essay 不是把 source 换词复述。没有自己的 answer 和 paragraph function，材料再准确也只是堆积；先作出写作决策，才知道什么该用、什么该删、用完要解释什么。
+- `考试位置`：Paper B 的 W1–W3、W5–W6；读完材料、写正文前先形成 writer-led plan，随后成段。
+- `学会的样子`：我能先交出逻辑对齐的 direct answer、paragraph function 和 evidence roles，再写出一段由自己的 point 控制的 4–6 句正文。
+- `你已经会`：我已经理解这份人口材料的主要预测和 Africa fertility explanation，不需要再做一次完整信息抽取。
+
+先用一个与人口无关的完整 worked example，展示同一组 source facts 怎样先被 question 筛选，再变成 `direct answer → paragraph function → evidence roles`；同时对比 source-led 摘要为什么不是 paragraph plan。这个示范必须展示思考过程，但不能替我完成本题。
+
+然后只给第一个动作。显示题目 `Why is global population growth unlikely to stop during the twenty-first century?`，让我提交三行：`direct answer`、`this paragraph must prove`、`evidence roles`。允许中文、英文或箭头；`evidence roles` 只需从已显示材料中选择哪些 proposition 用作 support、explanation 或 qualification，不写正文。不得让我先摘要原文，也不得要求列齐 method、数字、scope。
+
+收到三行 plan 后，只判断 answer 是否直接回应 why、paragraph function 是否服务 answer、每条 evidence 是否有明确角色。若逻辑可用，立即让我依据该 plan 写一段 4–6 句正文：writer point → selective source use → commentary/reasoning → link back。不要逐句批准，也不要规定必须使用 source 的原词。
+
+收到完整段落后再一次性反馈。Paraphrasing 的标准是 proposition 可用，不是词汇相似：允许更换 vocabulary、syntax、voice 和 information order。只有 source ownership、certainty、scope、causality 或 evidence relationship 被实质写反、写大或捏造时才要求修正；普通强弱差异、措辞、风格、拼写和小语法在主反馈后批量记录，不得围绕单词连续追问。本 part 至多要求一次整段 revision。
+
+每次回复我之前，必须在本文件 `student-os:learning-log:start/end` 之间追加时间、我的原始输入、你的教学或反馈、当前能力地图位置、下一个有意义动作和内部继续判断。只追加，不覆盖；写入失败就立即告诉我。如果我说不知道在学什么，立即停止出题，重新解释能力和完成证据。
+
+当三行 plan 对齐，且一段 4–6 句正文展示 writer point、选择性 source use、reasoning 和 link back 时，即使仍有小语法或措辞问题，也把本任务的 canonical checkbox 标记完成并添加实际完成日期，记录需留给 sentence clinic 的 recurring pattern，并留下考试口令 `遇到 source pack → 先回答题目并给段落定功能，再选 evidence`。只说本次 session 完成，不得声称该技能已经长期掌握；明确回复「本次练习完成」，然后停止。
+
+**AI 教学或反馈**
+
+- 五项定位：今天学 writer-led 的自上而下段落安排；真实 essay 必须由 answer 和 paragraph function 控制选材与推理；考试位置为 Paper B 的 W1–W3、W5–W6；完成证据是逻辑对齐的三行 plan 与一段 4–6 句 writer-led 正文；已有基础是理解人口预测与 Africa fertility explanation。
+- 用非人口的“考试周图书馆延长开放”例子完整演示：question 先排除无关信息；direct answer 决定段落要证明“在考试周定向延长开放合理”；使用深夜使用量上升作 support、通勤生时间限制作 explanation、单校样本与成本上升作 qualification。对比指出，按来源顺序列完所有 facts 只是 source-led summary，没有为每条 evidence 分配服务 answer 的角色。
+- 显示本题和已核验 propositions：模型给出 80% 概率的 2100 人口上升区间；预期增长很大一部分发生在 Africa；该 pattern 的来源解释是较高 fertility 与 fertility decline 最近放缓；这是基于数据与模型的 global/regional 概率预测，不是各国的确定结果。
+- 只要求第一个动作：学习者用中文、英文或箭头提交 `direct answer / this paragraph must prove / evidence roles` 三行；不写正文，不做 source summary，不必列齐 method、数字或 scope。
+
+**当前能力地图位置**
+
+Shared Writing `question → provisional answer → paragraph function → evidence roles/selection → prose`；当前只进行前四步的三行 writer plan，尚未成段。
+
+**下一个有意义动作**
+
+根据已显示的 Demographics propositions，提交三行 plan：直接回答 why、说明本段必须证明什么、为选中的 evidence 标明 support/explanation/qualification 角色。
+
+**内部继续判断**
+
+继续新 principal；等待三行 plan。下一轮只判断 answer/function/evidence-role alignment；若逻辑可用，立即进入一次 4–6 句成段。不恢复四句 source summary，不标记任务完成，不推进其他 part。
+
+### 2026-08-12T17:08:09+01:00
+
+**学习者原始输入**
+
+你讲的完全不够细,而且也不是自上而下的,你整个文章不应该先尝试回答问题也就是回答 Why should a university keep its library open later during examination week? 然后再围绕答案进行对于structure的安排,决定到底用什么结构,都有几段,每一段中心句是什么.然后才进入某一个段落,写这个段落的几句话,不应该是这样的吗?
+
+**AI 教学或反馈**
+
+- 确认学习者的顺序正确：完整的自上而下写作应为 `question → direct answer/thesis → whole-essay structure → paragraph functions/topic sentences → 某段 evidence roles → sentence sequence → prose`。上一轮从 direct answer 直接跳到单段，让 paragraph function 没有从全文结构中产生，因此示范不完整。
+- 用同一个非人口题重做完整示范：先形成带理由和限定的全文答案；据此选择 `justification with qualification` 结构；安排 introduction、需求证据段、access mechanism 段、成本/适用范围限定段和 conclusion；为每段写 writer-led 中心句；再下钻到 access 段，按 `point → evidence → reasoning → link back` 安排句子。
+- 区分两层：全文自上而下是 W1–W3/W5；段落自上而下是选定 paragraph function 后的 W3/W6。今天的 mentor brief 只要求一段成品，但不能把它伪装成完整 essay planning；示范必须先让学习者看到该段在全文中的来源与位置。
+- 暂不要求学习者提交原三行 Demographics plan；先用纠正后的完整示范重建能力地图，然后再进入 mentor brief 规定的单段输出。
+
+**当前能力地图位置**
+
+Shared Writing 的全局层：`question → direct answer/thesis → whole-essay structure → paragraph functions/topic sentences`；当前先修正全局与局部层级，尚未恢复 Demographics 三行 plan。
+
+**下一个有意义动作**
+
+不立即要求书面产出。先展示非人口题从全文答案、结构、各段中心句到单段句序的完整推导，并说明本次单段练习处于这条链的何处。
+
+**内部继续判断**
+
+继续同一 Shared Writing part，不更换技能或产出；用更完整的非人口示范修复教学解释。本轮不推进 Listening、Essay 或其他 part，不标记任务完成，不要求新作业。
 <!-- student-os:learning-log:end -->

@@ -17,7 +17,7 @@ topic: "LN905 Listening into Writing"
 - 优先使用短时、可当天完成并立即核对的练习。
 - 训练序列与日期由 [[99_学习情况记录/学习计划/LN905 Listening and Reading Practice]] 决定；Today 不临时创造另一份任务。
 - [[99_学习情况记录/teach/LN905 Exam Playbook|LN905 考试总纲]] 是 Paper A 的顶层方法。正式 assessment introduction、marking criteria 与 Academic Writing 课件定义能力和成功标准；教师反馈决定优先级。每次练习明确总纲能力、考试位置、当日产出、学会证据与整合动作，结束时留下一个 `遇到 X → 做 Y` 的考试口令；不确定时回看课件，不自行发明考试规则。
-- Listening 只在把时间流中的输入还原成 meaning/evidence map 之前拥有独立技能；map 之后与 Reading 共用总纲中的 W1–W9 Writing 能力树。普通日默认只选一个最高价值 guided part，不因名称不同自动同时安排 Listening 和 Reading；`词灵`不计入该限制。
+- Listening 只在把时间流中的输入还原成 meaning/evidence map 之前拥有独立技能；真正 input 训练通常在同一天紧接一个独立 Shared Writing part，趁 map 仍新鲜时进入共用 W1–W9。两项分别使用 checkbox、Markdown、init prompt；不因名称不同自动同时安排 Listening 和 Reading 两种入口，`词灵`不计入该 lane 限制。
 - 每周五课堂 Listening/Reading 测试是主要独立校准样本。下一次 Student OS 运行只读检查 `07_Programme/01_LN905_LSE-language-class/00_inbox/` 中的新原稿，分别判断两种 input route，再联合判断 shared Writing；同一 Writing 节点连续两次真实输出无提升时，随后两个 guided parts 优先练它。校准不得移动、改写或删除 Inbox 原稿。
 - 对排到当天的 canonical task，`/today` 使用任务中固定的 session 路径准备 Markdown 教学记录；每次选择一条未使用过的 TED 官方 YouTube，并核验官方 transcript。
 - 练习视频优先 15–20 分钟；主题必须匹配同周 Reading 练习和下一次 timed test。

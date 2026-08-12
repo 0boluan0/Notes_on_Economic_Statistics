@@ -13,7 +13,7 @@ status: active
 <!-- student-os:material-ready: 2026-08-11 -->
 
 > [!summary] 本次在总纲中的位置
-> **总纲能力**：Listening input route「把时间流中的讲座还原成 meaning/evidence map」，再接入共享 Writing W4「准确转述」。**考试位置**：Paper A 听讲时选择 key points，写作开始时用地图决定 summary 写什么。**当日产出**：3 句 integrated summary。**整合动作**：把 central claim 与两个 supporting blocks 直接转成可供写作使用的材料，而不是停在笔记辨认。
+> **总纲能力**：Listening input route「把时间流中的讲座还原成 meaning/evidence map」。**考试位置**：Paper A 听讲时选择 key points，供后续独立 Shared Writing 使用。**当日产出**：一个 central claim、两个 supporting blocks 及关键 evidence/qualification 的信息图。**停止位置**：地图可用即完成，不强迫写成 prose。
 
 ## 材料
 
@@ -28,18 +28,18 @@ more child will survive and less children will every women give birth. populatio
 
 ## 完成证据
 
-你能根据 transcript 核对后，用自己的英文写出 3 句：一句 central claim，两句 supporting blocks；不把预测写成已经发生的事实，不把某个地区的情况写成所有国家都一样。
+你能根据完整演讲与 transcript 核对，用中文、英文、关键词或箭头留下一个 central claim、两个 supporting blocks 以及各自最重要的 evidence/qualification。信息足以交给后续 Writing drill 使用即可，不要求英文 summary。
 
 <!-- student-os:mentor-brief:start
-今日 principal: 把完整演讲恢复成一个 central claim 加两个 supporting blocks，并完成 3 句 integrated summary。
+今日 principal: 把完整演讲恢复成一个可供写作使用的 meaning/evidence map；不进入成文。
 起点证据: 旧截断首听缺失 framing，不能作为失败证据；learning log 已确认不再重听截断片段，需用完整 transcript 地图接回写作。
-本次产出: 一句 central claim 加两句 supporting blocks 的英文 summary。
-刻意练习链: 助教先给完整论证地图 → 学习者完成 3 句整合输出 → 按 claim/relationship/scope 给一次反馈 → 必要时只做一次整份 revision。
-允许支架: 直接显示所需 transcript facts、中文解释和一个无关主题对比；不得给可照抄的本题三句答案。
+本次产出: 一个 central claim、两个 supporting blocks 及关键 evidence/qualification 的 map，可用中文、英文、关键词或箭头。
+刻意练习链: 完整首听笔记已存在则直接用 transcript 补全 framing → 学习者重建整张 map → 助教只按 claim/block/evidence/qualification 的结构给一次反馈 → 必要时只做一次整图 revision。
+允许支架: 直接显示所需 transcript facts、中文解释和一个无关主题 map；不得要求把 map 改写成 summary。
 静默交织观察: 无；EP-01 留到 2026-08-14 timed output 无提示核验。
-反馈优先级: central claim、两个 supporting blocks 的功能和 scope；孤立语言错误不阻挡完成。
-完成证据: 3 句输出准确覆盖总论点与两个支撑关系；至多一次整体 revision。
-停止边界: 助教不得另选视频、另教句式、进入 Reading/Essay、安排未来复习、编辑本 brief 或技能账本、宣布长期掌握；本 part 完成后停止。
+反馈优先级: central claim、两个 supporting blocks 的功能、关键 evidence 与 qualification；不评价英文句式或要求 prose。
+完成证据: 一张 map 准确覆盖总论点、两个支撑关系和必要限定；至多一次整图 revision。
+停止边界: 助教不得另选视频、要求英文 summary、另教句式、进入 Shared Writing/Reading/Essay、安排未来复习、编辑本 brief 或技能账本、宣布长期掌握；map 可用后停止。
 student-os:mentor-brief:end -->
 
 ## Init prompt｜复制到一个新的 Codex 会话
@@ -51,21 +51,21 @@ student-os:mentor-brief:end -->
 `99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension.md`
 
 这是教学练习，不是完整模拟。第一次回复先给我五项定位：
-- `今天在学`：听出 central claim 和两个 supporting blocks，再把它们压缩成 3 句准确 summary。
+- `今天在学`：听出 central claim、两个 supporting blocks 和必要 evidence/qualification，整理成可供写作使用的信息图。
 - `为什么`：人不能直接拿零散、按时间出现的听课笔记安排文章。先把它变成「一个总答案 + 两块支撑」，才能决定 summary 的三句话各承担什么功能，避免遗漏或扩大 claim。
-- `考试位置`：Paper A 听取阶段把时间流输入转成 meaning/evidence map；随后与 Reading 共用 Writing W4，把地图准确变成句子。默认约 5 分钟只是训练建议。
-- `学会的样子`：我能指出讲者的一个总答案和两块支撑，并不把预测写成事实。
+- `考试位置`：Paper A 听取阶段把时间流输入转成 meaning/evidence map；地图完成后本任务停止，后续另由 Shared Writing 使用。
+- `学会的样子`：我能用关键词或箭头指出讲者的总答案、两块支撑、关键 evidence 和限定。
 - `你已经会`：我之前能抓住 Gender 讲座的 main argument 和关键 concepts；今天把这个优势迁移到新主题。
 
 要求任何动作前，先用中文说清：眼前信息现在是什么形态、这个动作会把它变成什么、完成后我能作出哪个下一步写作决定；必要时先给一个与本题无关的 worked contrast。不要只说“考试或老师要求这样做”。
 
-先检查本文件的 learning log。若为空，只给第一个完整动作：让我从头到尾听完整演讲一次，发来粗糙笔记，包含「讲者想纠正的一个误解」和「两个支撑点」；可以用中文、英文或箭头，不评分笔记外观，第一次不打开 transcript。若已有记录，不得让我重做已失败的截断首听，也不得继续卡在 `1960 → 2010` 这一行；直接承认原材料边界错误，用 transcript 给出简洁的完整论证地图，然后让我一次写出 3 句 integrated summary。
+先检查本文件的 learning log。若为空，只给第一个完整动作：让我从头到尾听完整演讲一次，发来粗糙笔记，包含「讲者想纠正的一个误解」和「两个支撑点」；可以用中文、英文或箭头，不评分笔记外观，第一次不打开 transcript。若已有记录，不得让我重做已失败的截断首听，也不得继续卡在 `1960 → 2010` 这一行；直接承认原材料边界错误，显示所需 transcript facts，然后让我一次重建完整 meaning/evidence map，不要求 prose。
 
 我发来后，你自己打开官方 transcript，直接显示当轮需要的短片段，不要考我对 speech 细节的记忆。优先让完整能力向前推进：只拦截会改变 central claim、supporting relationship 或 scope 的错误；把反复语言问题留给 sentence clinic，一次性用词、拼写和小语法不阻挡本任务。同一问题修一次仍未解决，就用对比或示范教清并进入整体输出；本 part 最多要求一次 3 句整体 revision。不做连续填空，不让我照抄你写好的句子，不一次扔出整份 worksheet。
 
 每次回复我之前，必须在本文件 `student-os:learning-log:start/end` 之间追加时间、我的原始输入、你的教学或反馈、当前能力地图位置、下一个有意义动作和内部继续判断。只追加，不覆盖；写入失败就立即告诉我。如果我说不知道在学什么，立即停止出题，重新解释能力和完成证据。
 
-当 3 句 summary 已经展示 central claim、两块支撑和范围控制时，即使仍有小语法或措辞问题，也把本任务的 canonical checkbox 标记完成并添加实际完成日期，记录需留给 sentence clinic 的 recurring pattern，并留下一个 `遇到 X → 做 Y` 的 Paper A 考试口令。只说本次 session 完成，不得声称该技能已经长期掌握；明确回复「本次练习完成」，然后停止。
+当 map 已经展示 central claim、两块支撑、关键 evidence 和必要 qualification 时，把本任务的 canonical checkbox 标记完成并添加实际完成日期，留下一个 `遇到完整 lecture → 先找总答案和分块，再挂 evidence/qualification` 的 Paper A 考试口令。不要要求英文 summary，也不得评价语言质量。只说本次 session 完成，不得声称该技能已经长期掌握；明确回复「本次练习完成」，然后停止。
 ```
 
 ## 学习记录

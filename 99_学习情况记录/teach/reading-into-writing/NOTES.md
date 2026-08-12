@@ -16,12 +16,12 @@ previous_week_topic: "social media"
 - 2026-08-09 起暂停原有复合练习序列。用户明确反馈：三篇材料、source matrix、thesis、evaluation 与英文段落同时出现时，起点过高，会显著打击信心并强化拖延。
 - 后续教学必须把词汇访问、句子/段落理解、论证组织和英文成句分开诊断、分层训练。普通学习练习由 AI 主动教学，每轮推进一个有迁移价值的完整学习动作，可使用中文解释、选项、示范、句框和共同成文；不得把完整能力原子化为连续微调同一句话。只有明确的完整模拟或正式 timed submission 才保留无帮助的考试约束。
 - 用中文解释方法，但所有应试输出和改写练习保留英文。
-- 优先提供短时、能立即核对的 source-matrix 和 paragraph-synthesis 练习。
+- Reading input 与 Writing 分开：真正 Reading input 用正式测试量级的材料练 question-led 信息获取；短事实条目或短文只用于 standalone Shared Writing，不得称为 Reading 训练。
 - 训练序列与日期由 [[99_学习情况记录/学习计划/LN905 Listening and Reading Practice]] 决定；当前主题为 Gender，之后依次是 Demographics 与 Climate Change。
 - [[99_学习情况记录/teach/LN905 Exam Playbook|LN905 考试总纲]] 是 Paper B 的顶层方法。正式 assessment introduction、marking criteria 与 Academic Writing 课件定义能力和成功标准；教师反馈决定优先级。每次练习明确总纲能力、考试位置、当日产出、学会证据与整合动作，结束时留下一个 `遇到 X → 做 Y` 的考试口令；不确定时回看课件，不自行发明考试规则。
-- Reading 只在把多篇文本输入还原成 meaning/evidence map 之前拥有独立技能；map 之后与 Listening 共用总纲中的 W1–W9 Writing 能力树。普通日默认只选一个最高价值 guided part，不因名称不同自动同时安排 Listening 和 Reading；`词灵`不计入该限制。
+- Reading 只在把多篇文本输入还原成 meaning/evidence map 之前拥有独立技能；真正 input 训练通常在同一天紧接一个独立 Shared Writing part，趁 map 仍新鲜时进入共用 W1–W9。两项分别使用 checkbox、Markdown、init prompt；不因名称不同自动同时安排 Listening 和 Reading 两种入口，`词灵`不计入该 lane 限制。
 - 每周五课堂 Listening/Reading 测试是主要独立校准样本。下一次 Student OS 运行只读检查 `07_Programme/01_LN905_LSE-language-class/00_inbox/` 中的新原稿，分别判断两种 input route，再联合判断 shared Writing；同一 Writing 节点连续两次真实输出无提升时，随后两个 guided parts 优先练它。校准不得移动、改写或删除 Inbox 原稿。
-- 对排到当天的 canonical task，`/today` 使用固定 session 路径准备材料。新来源练习按任务要求选择未使用过的论文：窄理解可用一篇、显式 synthesis 可用两篇、完整模拟通常用三篇；feedback repair 复用原提交与原 source pack，不另造来源。
+- 对排到当天的 canonical task，`/today` 使用固定 session 路径准备材料。真正 Reading input 使用三篇未用过的可信学术来源，改编为单篇约 425–610 正文词、总正文至少 1,650 词的 Paper B 风格 extracts，语言、论证密度和跨文关系不得低于已完成的 Gender / Social Media 测试；feedback repair 复用原提交与原 source pack，不另造来源。短材料只能放进明确标注的 standalone Shared Writing part。
 - 新 Reading source pack 用 LaTeX 排版并保留 `.tex`，编译为接近课堂试卷版式的 PDF；PDF 只放题目、任务要求数量的论文节选与来源，供打印后纸笔阅读和批注。
 - 论文可以压缩和改写为 exam-style adapted extracts，但必须保留原文的主张、证据、限制与来源，不复制大段原文或虚构结论。
 - 2026-08-10 起停止生成 guided-practice HTML。每个 daily part 使用独立 Markdown 作为永久学习记录，并在文件内提供只属于这个 part 的 init prompt；一个新 Codex 教学会话只推进这一项，完成后停止，不得自动进入当天下一项。新 Reading source pack 仍可保留供打印的 `.tex` 与 `.pdf`。

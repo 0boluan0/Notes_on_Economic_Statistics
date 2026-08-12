@@ -16,6 +16,10 @@ assessment_horizon: 2026-08-21
 
 所有训练都从 [[99_学习情况记录/teach/LN905 Exam Playbook|LN905 考试总纲]] 自上而下安排。Listening 与 Reading 是不同的信息获取入口；形成可用 meaning/evidence map 后，共用同一棵 Writing 技能树。正式 assessment introductions、marking criteria 与 Academic Writing 课件定义能力和成功标准；教师反馈与真实输出决定下一项。每个 daily part 必须标明总纲能力、考试位置、当日产出、学会证据和整合动作，结束后回到总流程并留下一个 `遇到 X → 做 Y` 的考试口令；不得脱离总纲变成孤立纠错。
 
+信息获取与写作安排是两种独立练习：Listening / Reading input drill 的终点是可用的 meaning/evidence map，不强迫写成 prose；Shared Writing drill 使用已经可用的信息，严格按 `题目 → 暂定答案/thesis → 段落功能 → evidence role 与取舍 → 成文` 推进。Paraphrasing 允许更换词汇、句法、语态与信息顺序；助教看完整产出后才核验意义，不为普通措辞差异打断写作，只拦截会实质改变 source ownership、certainty、scope、causality 或证据关系的错误。
+
+真正的 Listening / Reading input 训练后，通常在同一天紧接一个独立的 Shared Writing part，直接使用刚形成的 map；两项分别保留 checkbox、Markdown 与 init prompt。若当天只练 Writing，导师提供够写作决策使用的事实条目或短学术材料，不把它伪装成 Reading 训练。真正的 Reading input 以已完成的 Paper B 为标尺：三篇学术 extracts，单篇处在已观察到的约 425–610 正文词范围，总正文至少达到更长的一套（目前约 1,650 词），语言、论证密度与跨文关系不得低于 Gender / Social Media 测试。
+
 ## 两周可观察目标
 
 - **Listening 输入**：从一次输入中恢复 speaker 的 central claim、主要 supporting blocks、每类 evidence 与限定，并交给共同 Writing 树使用。
@@ -40,7 +44,7 @@ assessment_horizon: 2026-08-21
 2. meaning/evidence map 不可靠时，选择对应的 Listening 或 Reading 输入任务。
 3. map 已经可靠但成文仍弱时，选择共同 Writing 任务；材料从任一入口取得即可。
 4. 同一 Writing 节点连续两份可比输出没有改善时，接下来两个 guided parts 优先增加该节点的练习时间，再用下一份整合输出检验。
-5. 普通日默认只排一个 AI-guided LN905 part，词灵不计入；不得为了形式对称同时安排 Listening 与 Reading。两个独立正式测试都临近且当天容量足够时才例外。
+5. 普通日只选一条训练 lane：一个 standalone Shared Writing part，或一组使用同一材料的 `input → Shared Writing` 相邻 pair；词灵不计入。不得为了形式对称同时安排 Listening 与 Reading 两种入口。
 6. 每周五正式 Listening 与 Reading 测试已经承担完整整合和状态校准，不再默认叠加另一套完整模拟。只有周五文件缺失、测试使用了 AI、或需要验证一个明确的考试条件问题时，才启用备用完整模拟。
 
 ## 导师—助教协议与技能调用账本
@@ -52,6 +56,7 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 | ID | 可迁移技能 / 触发条件 | 首次刻意练习证据 | 无提示调用证据 | 下一观察窗口 | 状态 |
 |---|---|---|---|---|---|
 | EP-01 | 来源表达概率、预测或不确定性时，用 reporting/hedging 结构保留 epistemic status，不把 `may / probability / forecast` 写成无条件 `will` | 2026-08-11 Demographics Reading：在逐步提示后把 80% probability 放回预测句；尚未形成完整独立输出 | 暂无 | 2026-08-14 Friday timed outputs：不预先提醒，检查 Paper A/B 是否自主保留概率与范围 | guided |
+| W-01 | 写作开始时先完成 `题目要求 → 暂定答案 → 段落功能 → evidence role`，再写 prose | 2026-08-12 Demographics Shared Writing：计划进行第一次导师示范与段落整合 | 暂无 | 2026-08-14 Paper B timed output：检查是否先形成 writer-led structure | planned |
 
 ## 周五校准｜真实进度的主要依据
 
@@ -64,8 +69,8 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 ## 动态执行规则
 
 - `词灵`每天单独作为一个可完成的真实任务，直接给出分钟数。普通日使用默认学习队列；正式 timed submission 当天只复习主题词汇，不提前接触测试材料。
-- 材料理解、accurate summary、evidence-grounded evaluation 与英文成句可以在同一个 part 内自然衔接，但不要求同一天覆盖整条链。当天只保留对下一次 submission 最有价值的输出；Student OS 导师根据上一任务的真实表现决定节点、输入入口和支架强度，助教只执行当日处方。
-- 每个普通练习只要求一个清晰产出，不把完整讲座、三篇长材料、结构恢复和长文一次压在同一个起点上。若用户在当前动作上卡住，AI 立即教学；若已经掌握，则缩短支架并进入相邻环节。
+- 输入与 Writing 可以同日相邻，但不混成一个 prompt：input part 只留下 map，随后 Writing part 趁记忆新鲜使用它完成一个明确写作产出。Student OS 导师根据上一任务的真实表现决定节点、输入入口和支架强度，助教只执行当日处方。
+- 真正的 Reading input 训练使用正式测试量级的三篇学术 extracts；短事实条目或短文只服务 standalone Shared Writing。每个 part 内仍只要求一个清晰产出，不把完整材料、全套结构恢复和长文塞进同一个 prompt。若用户卡住，AI 立即教学；若已经掌握，则缩短支架并进入相邻环节。
 - 教学以最快获得可迁移能力为首要目标，不追求把当前文本逐字修到完美。只有会破坏本次核心能力的 meaning、relationship、evidence 或 scope 错误才当场拦截；反复出现的语言模式集中留给 sentence clinic，一次性的用词、拼写、风格和小语法不阻挡推进。同一句或同一微小区别失败一次后，AI 直接用对比或示范教清并进入整合应用；除非任务本身就是 English production，每个 part 最多要求一次整体 revision。
 - 每个 part 开始前先展示“两个输入入口 → 共同 Writing 树”的全流程，再高亮本次 `考试位置`。在要求任何动作前，先解释人面对的真实问题、为什么这样做、信息会如何变化以及它解锁的下一步；不能只用“教师要求”或“评分标准”代替方法解释。结束时不只记录“答对了什么”，还要让用户知道正式考试遇到同类情况时下一步具体做什么。
 - 每个 daily part 都有自己的 Markdown、自己的 init prompt 和自己的 Codex 教学会话；不得用一个总 prompt 连续处理多个 part。该会话只处理对应 canonical task，完成后停止。首轮必须先说明“今天在学什么、为什么、考试哪里调用、怎样算学会、已经会什么”，并写清当日产出与整合动作；以后每轮都说明当前动作在能力地图中的位置。所有 AI 教学、用户输入、反馈和 revision 必须逐轮追加保存在当次 Markdown 的 `student-os:learning-log` 区域；每轮保留一个约 5–10 分钟的有意义学习动作，不拆成连续填空、照抄或意外的材料回忆测试。
@@ -75,7 +80,7 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 
 - [x] 词灵｜2026-08-10：20 分钟 #student-os/task ⏳ 2026-08-10 ✅ 2026-08-10
 - [x] 词灵｜2026-08-11：20 分钟 #student-os/task ⏳ 2026-08-11 ✅ 2026-08-11
-- [ ] 词灵｜2026-08-12：20 分钟 #student-os/task ⏳ 2026-08-12
+- [x] 词灵｜2026-08-12：20 分钟 #student-os/task ⏳ 2026-08-12 ✅ 2026-08-12
 - [ ] 词灵｜2026-08-13：20 分钟 #student-os/task ⏳ 2026-08-13
 - [ ] 词灵｜2026-08-14：Demographics 主题词汇复习 30 分钟（两次 15 分钟） #student-os/task ⏳ 2026-08-14
 - [ ] 词灵｜2026-08-15：25 分钟 #student-os/task ⏳ 2026-08-15
@@ -90,15 +95,15 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 
 ## Demographics｜教学与测试 2026-08-10 至 2026-08-15
 
-> [!note] 2026-08-11 过渡例外
-> Listening 与 Reading 两项都在新规则确认前已经启动，因此保留原排期，不作为以后自动成对安排的先例；从 2026-08-12 起恢复“普通日最多一个 guided part”。
+> [!note] 2026-08-12 规则校正
+> 不再追求每天各练 Listening 与 Reading。训练 lane 只能是 standalone Writing，或同一材料的 input → Shared Writing；2026-08-13 的 Listening 与 Shared Writing 是第一组正式 pair。
 
 - [ ] LN905 Listening input｜Gender feedback repair：识别 mixed evidence，并把可用信息交给共同 Writing 树（45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-10-gender-evidence-calibration|学习记录]] #student-os/task
 - [ ] LN905 Shared Writing｜Gender：弄懂三个机制的关系，再共同补完 conclusion（材料入口：Reading，45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-10-gender-synthesis-repair|学习记录]] #student-os/task
-- [ ] LN905 Listening｜Demographics 1：完整短演讲首听笔记 → transcript repair → 3 句准确 summary（45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension|学习记录]] #student-os/task ⏳ 2026-08-13
-- [ ] LN905 Reading｜Demographics 1：短材料中保留 observation、claim 与 scope，并转成 4 句英文 summary（45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy|学习记录]] #student-os/task ⏳ 2026-08-12
+- [ ] LN905 Listening input｜Demographics 1：完整短演讲首听笔记 → transcript repair → meaning/evidence map（50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension|学习记录]] #student-os/task ⏳ 2026-08-13
+- [ ] LN905 Shared Writing｜Demographics：题目 → 暂定答案 → 段落功能 → evidence role → 一段成文（材料入口：Reading，45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy|学习记录]] #student-os/task ⏳ 2026-08-12
 - [ ] LN905 English production｜用本人 Gender 原句修复 6 个 grammar / word-form patterns，再放回两段真实文本（35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-gender-sentence-clinic|学习记录]] #student-os/task
-- [ ] LN905 Shared Writing｜Demographics 2：用 lecture evidence 完成 evidence inventory → claim fit → calibrated critique（材料入口：Listening，50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-12-demographics-evidence|学习记录]] #student-os/task
+- [ ] LN905 Shared Writing｜Demographics 2：紧接 Listening map，自上而下安排 critical summary 的 central answer、两块功能与 evidence/evaluation role，再完成 180–250 词（50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-12-demographics-evidence|学习记录]] #student-os/task ⏳ 2026-08-13
 - [ ] LN905 Shared Writing｜Demographics 2：从 question 定 writer-led claim，再连接两份来源并准确写出 relation 与 limitation（材料入口：Reading，50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-12-demographics-synthesis|学习记录]] #student-os/task
 - [ ] LN905 Paper A partial simulation｜Demographics 3：10–12 分钟完整演讲单次播放 → meaning/evidence map → 选择 linear/thematic → 180–250 词成文（50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-13-demographics-partial|学习记录]] #student-os/task
 - [ ] LN905 Paper B partial simulation｜Demographics 3：question → thesis → paragraph functions → 两份 extracts → 250–350 词成文；写完结尾（60 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-13-demographics-partial|学习记录]] #student-os/task
@@ -109,7 +114,7 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 ## Climate Change｜教学与测试 2026-08-17 至 2026-08-22
 
 - [ ] LN905 Listening input｜Climate 1：完整短演讲首听笔记 → transcript repair → 共同 meaning/evidence map（45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-17-climate-comprehension|学习记录]] #student-os/task
-- [ ] LN905 Reading input｜Climate 1：短材料中保留 evidence、mechanism 与 scope，并形成共同 meaning/evidence map（45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-17-climate-accuracy|学习记录]] #student-os/task
+- [ ] LN905 Reading input｜Climate 1：三篇正式测试量级学术 extracts（单篇约 425–610 词，总正文至少 1,650 词）→ question-led meaning/evidence map（60 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-17-climate-accuracy|学习记录]] #student-os/task
 - [ ] LN905 English production｜用 Demographics timed output 修复 6 个 recurring sentence patterns（35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-17-demographics-sentence-clinic|学习记录]] #student-os/task
 - [ ] LN905 Shared Writing｜Climate 2：用 lecture evidence 判断 claim strength 与 scope（材料入口：Listening，50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-18-climate-evidence|学习记录]] #student-os/task
 - [ ] LN905 Shared Writing｜Climate 2：从 question 定 thesis 与 paragraph functions，再综合两份来源并展开 agreement / tension / limitation（材料入口：Reading，50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-synthesis|学习记录]] #student-os/task
