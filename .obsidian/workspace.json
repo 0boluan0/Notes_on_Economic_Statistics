@@ -21,9 +21,21 @@
             "id": "5e7c5a64d1cf447b",
             "type": "leaf",
             "state": {
+              "type": "pdf",
+              "state": {
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 3.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Week 3 Lesson 3"
+            }
+          },
+          {
+            "id": "f829fb540ce45f70",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
+                "file": "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -38,7 +50,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Week1 Listen to writing social media"
+              "title": "2026-08-11-demographics-accuracy"
             }
           }
         ],
@@ -154,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 3.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -329,6 +341,8 @@
   "active": "5e7c5a64d1cf447b",
   "lastOpenFiles": [
     "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md",
+    "99_学习情况记录/2026-08-12——Wed.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 3.pdf",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
     "99_学习情况记录/teach/LN905 Exam Playbook.md",
     "99_学习情况记录/2026-08-11——Tue.md",
@@ -349,7 +363,6 @@
     "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy-source-pack.pdf",
     "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy-source-pack.tex",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 3.pdf",
     "03_Computer_Science/03_MIT 6.100L/02_Strings,Input-Output and Branching.md",
     "03_Computer_Science/03_MIT 6.100L/03_Iteration.md",
     "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-10-gender-evidence-calibration.md",
@@ -372,8 +385,6 @@
     "tmp/pdfs/ln905-new.1d7Hhl/converted_pptx/qa/week3_lesson3/sheets/sheet_46-46.png",
     "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/09 Martens et al. (2007) - SVM rule extraction.md",
-    "99_学习情况记录/archive/daily/2026-W32/2026-08-09——Sun.md",
-    "99_学习情况记录/archive/daily/2026-W32/2026-08-08——Sat.md",
     "03_Computer_Science/01_CS50/CS50 Course Atlas.canvas",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",

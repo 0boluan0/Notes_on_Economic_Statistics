@@ -38,8 +38,8 @@ A manual shutdown request may run the same factual-summary and reconciliation fl
 ## Sources and deadline audit
 
 1. Read Overall, Workbench, Deadlines, all `student_os: learning-plan` files, and today's relevant course/project source files.
-2. Read Apple Calendar for fixed commitments. Treat every calendar except exact name `Study Plan` as read-only. If `LSE` exists, use it as the read-only timetable.
-   - If `LSE` is missing or the timetable cannot be read, do not place movable study blocks. Keep the next actions visible in Workbench, sync only independently verified fixed windows, and surface the source-check failure.
+2. Read the applicable downloaded Moodle timetable for the user's LN905 Group 2 before scheduling: Week 1 is `07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-1/Wk1 Group 2.pdf`; Weeks 2–4 are `07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/week2-4 group2.pdf`. Treat its class periods as fixed commitments. Then read Apple Calendar; every calendar except exact name `Study Plan` is read-only, and `LSE` is a supplemental source for deadlines or changes, not proof that an empty day has no class.
+   - If neither the applicable Group 2 PDF nor another verified timetable source can be read, do not place movable study blocks. Keep the next actions visible in Workbench, sync only independently verified fixed windows, and surface the source-check failure.
 3. Show every incomplete hard deadline from D-0 through D-14, inclusive, as plain non-checkbox lines in Today's managed deadline block. Also show a deadline beyond D-14 when work for it is already scheduled.
 4. Update Workbench's managed risk block from the same facts.
 5. Do a bounded daily Student Hub/Moodle comparison when the logged-in source is reachable. On the first Sunday run, inspect assignments, files and announcements in full. Never silently treat an unreachable source as checked, never expose or store an ICS token, and never close a submission without Moodle/Turnitin status or a receipt.

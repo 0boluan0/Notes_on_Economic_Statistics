@@ -85,8 +85,8 @@ assessment_horizon: 2026-08-21
 
 - [ ] LN905 Listening input｜Gender feedback repair：识别 mixed evidence，并把可用信息交给共同 Writing 树（45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-10-gender-evidence-calibration|学习记录]] #student-os/task
 - [ ] LN905 Shared Writing｜Gender：弄懂三个机制的关系，再共同补完 conclusion（材料入口：Reading，45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-10-gender-synthesis-repair|学习记录]] #student-os/task
-- [ ] LN905 Listening｜Demographics 1：完整短演讲首听笔记 → transcript repair → 3 句准确 summary（45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension|学习记录]] #student-os/task ⏳ 2026-08-11
-- [ ] LN905 Reading｜Demographics 1：短材料中保留 observation、claim 与 scope，并转成 4 句英文 summary（45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy|学习记录]] #student-os/task ⏳ 2026-08-11
+- [ ] LN905 Listening｜Demographics 1：完整短演讲首听笔记 → transcript repair → 3 句准确 summary（45 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension|学习记录]] #student-os/task ⏳ 2026-08-13
+- [ ] LN905 Reading｜Demographics 1：短材料中保留 observation、claim 与 scope，并转成 4 句英文 summary（45 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy|学习记录]] #student-os/task ⏳ 2026-08-12
 - [ ] LN905 English production｜用本人 Gender 原句修复 6 个 grammar / word-form patterns，再放回两段真实文本（35 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-gender-sentence-clinic|学习记录]] #student-os/task
 - [ ] LN905 Shared Writing｜Demographics 2：用 lecture evidence 完成 evidence inventory → claim fit → calibrated critique（材料入口：Listening，50 分钟）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-12-demographics-evidence|学习记录]] #student-os/task
 - [ ] LN905 Shared Writing｜Demographics 2：从 question 定 writer-led claim，再连接两份来源并准确写出 relation 与 limitation（材料入口：Reading，50 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-12-demographics-synthesis|学习记录]] #student-os/task
