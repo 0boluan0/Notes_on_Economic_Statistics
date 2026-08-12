@@ -35,7 +35,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md",
+                "file": "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -50,11 +50,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-08-11-demographics-accuracy"
+              "title": "04_Academic Writing"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -166,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 3.pdf",
+                "file": "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -312,8 +312,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 829.543701171875,
-    "collapsed": true
+    "width": 829.543701171875
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -338,16 +337,16 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "5e7c5a64d1cf447b",
+  "active": "f829fb540ce45f70",
   "lastOpenFiles": [
+    "00_inbox/随手记.md",
     "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md",
-    "99_学习情况记录/2026-08-12——Wed.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 3.pdf",
+    "99_学习情况记录/2026-08-12——Wed.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
     "99_学习情况记录/teach/LN905 Exam Playbook.md",
     "99_学习情况记录/2026-08-11——Tue.md",
     "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension.md",
-    "00_inbox/随手记.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-3-Demographics/Listening/Topic Listening_Worksheet.pdf",
     "00_inbox/日记模版.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-3-Demographics/Listening/Listening Demographics.pdf",

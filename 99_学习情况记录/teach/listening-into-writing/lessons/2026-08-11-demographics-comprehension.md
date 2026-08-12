@@ -30,10 +30,22 @@ more child will survive and less children will every women give birth. populatio
 
 你能根据 transcript 核对后，用自己的英文写出 3 句：一句 central claim，两句 supporting blocks；不把预测写成已经发生的事实，不把某个地区的情况写成所有国家都一样。
 
+<!-- student-os:mentor-brief:start
+今日 principal: 把完整演讲恢复成一个 central claim 加两个 supporting blocks，并完成 3 句 integrated summary。
+起点证据: 旧截断首听缺失 framing，不能作为失败证据；learning log 已确认不再重听截断片段，需用完整 transcript 地图接回写作。
+本次产出: 一句 central claim 加两句 supporting blocks 的英文 summary。
+刻意练习链: 助教先给完整论证地图 → 学习者完成 3 句整合输出 → 按 claim/relationship/scope 给一次反馈 → 必要时只做一次整份 revision。
+允许支架: 直接显示所需 transcript facts、中文解释和一个无关主题对比；不得给可照抄的本题三句答案。
+静默交织观察: 无；EP-01 留到 2026-08-14 timed output 无提示核验。
+反馈优先级: central claim、两个 supporting blocks 的功能和 scope；孤立语言错误不阻挡完成。
+完成证据: 3 句输出准确覆盖总论点与两个支撑关系；至多一次整体 revision。
+停止边界: 助教不得另选视频、另教句式、进入 Reading/Essay、安排未来复习、编辑本 brief 或技能账本、宣布长期掌握；本 part 完成后停止。
+student-os:mentor-brief:end -->
+
 ## Init prompt｜复制到一个新的 Codex 会话
 
 ```text
-你只负责一个 part：`LN905 Listening｜Demographics 1`。只在当前 Academic vault 和这一个任务中工作，不创建 worktree，不推进 Reading、Essay 或今天的其他 part。
+你是执行助教，不是课程导师。你只负责一个 part：`LN905 Listening｜Demographics 1`。本文件 `student-os:mentor-brief:start/end` 是今天不可修改的唯一 principal；你只能批当前作业，并在其中规定的刻意练习链内给下一步 5–10 分钟作业。不得自己换技能、重排路线、安排未来任务、编辑技能账本或宣布长期掌握。只在当前 Academic vault 和这一个任务中工作，不创建 worktree，不推进 Reading、Essay 或今天的其他 part。
 
 先完整读取根目录 AGENTS.md、CLAUDE.md、`99_学习情况记录/teach/LN905 Exam Playbook.md`、`99_学习情况记录/teach/listening-into-writing/MISSION.md`、`99_学习情况记录/teach/listening-into-writing/NOTES.md` 和本次唯一记录：
 `99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension.md`
@@ -53,7 +65,7 @@ more child will survive and less children will every women give birth. populatio
 
 每次回复我之前，必须在本文件 `student-os:learning-log:start/end` 之间追加时间、我的原始输入、你的教学或反馈、当前能力地图位置、下一个有意义动作和内部继续判断。只追加，不覆盖；写入失败就立即告诉我。如果我说不知道在学什么，立即停止出题，重新解释能力和完成证据。
 
-当 3 句 summary 已经展示 central claim、两块支撑和范围控制时，即使仍有小语法或措辞问题，也把本任务的 canonical checkbox 标记完成并添加 `✅ 2026-08-11`，记录需留给 sentence clinic 的 recurring pattern，并留下一个 `遇到 X → 做 Y` 的 Paper A 考试口令；这就是把能力树 2–3 接回写作的整合证据。明确回复「本次练习完成」，然后停止。
+当 3 句 summary 已经展示 central claim、两块支撑和范围控制时，即使仍有小语法或措辞问题，也把本任务的 canonical checkbox 标记完成并添加实际完成日期，记录需留给 sentence clinic 的 recurring pattern，并留下一个 `遇到 X → 做 Y` 的 Paper A 考试口令。只说本次 session 完成，不得声称该技能已经长期掌握；明确回复「本次练习完成」，然后停止。
 ```
 
 ## 学习记录

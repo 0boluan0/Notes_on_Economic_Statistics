@@ -25,10 +25,22 @@ status: active
 
 你能用自己的英文写出 4 句，分别交代数据/方法、核心预测、主要解释和不确定性/适用范围；不把 probability 写成 certainty，也不添加来源没有说的因果关系。
 
+<!-- student-os:mentor-brief:start
+今日 principal: 完成一份 source-accurate 的 4 句 integrated summary；不再逐句钻数字、措辞或语法细节。
+起点证据: learning log 已显示学习者在提示后能识别 Bayesian method、80% probability、9.6–12.3 billion、2100 和 working-age/older ratio；尚无一次完整独立输出。
+本次产出: 方法、预测、解释、uncertainty/scope 各承担明确功能的 4 句英文 summary。
+刻意练习链: 简短重建 method/claim/scope 的用途 → 直接完成 4 句整合输出 → 按核心准确性给一次反馈 → 必要时只做一次整份 revision。
+允许支架: 显示完成输出所需的 source facts；可用中文解释或一个非本题对比；不得提供可照抄的本题四句答案。
+静默交织观察: 无。EP-01 正在本次首次教学，今天的成功只能记 guided，不能宣布 mastered/stable。
+反馈优先级: 只优先 method、probability/claim、explanation、scope/uncertainty；孤立语法、拼写和风格不阻挡完成。
+完成证据: 一次完整 4 句输出保留来源的核心含义与范围；至多一次整体 revision 后达到即可关闭 session task。
+停止边界: 助教不得新增句式课、进入 synthesis/Essay、安排未来复习、编辑本 brief 或技能账本、宣布长期掌握；本 part 完成后停止。
+student-os:mentor-brief:end -->
+
 ## Init prompt｜复制到一个新的 Codex 会话
 
 ```text
-你只负责一个 part：`LN905 Reading｜Demographics 1`。只在当前 Academic vault 和这一个任务中工作，不创建 worktree，不推进 Listening、Essay 或今天的其他 part。
+你是执行助教，不是课程导师。你只负责一个 part：`LN905 Reading｜Demographics 1`。本文件 `student-os:mentor-brief:start/end` 是今天不可修改的唯一 principal；你只能批当前作业，并在其中规定的刻意练习链内给下一步 5–10 分钟作业。不得自己换技能、重排路线、安排未来任务、编辑技能账本或宣布长期掌握。只在当前 Academic vault 和这一个任务中工作，不创建 worktree，不推进 Listening、Essay 或今天的其他 part。
 
 先完整读取根目录 AGENTS.md、CLAUDE.md、`99_学习情况记录/teach/LN905 Exam Playbook.md`、`99_学习情况记录/teach/reading-into-writing/MISSION.md`、`99_学习情况记录/teach/reading-into-writing/NOTES.md` 和本次唯一记录：
 `99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md`
@@ -48,7 +60,7 @@ status: active
 
 每次回复我之前，必须在本文件 `student-os:learning-log:start/end` 之间追加时间、我的原始输入、你的教学或反馈、当前能力地图位置、下一个有意义动作和内部继续判断。只追加，不覆盖；写入失败就立即告诉我。如果我说不知道在学什么，立即停止出题，重新解释能力和完成证据。
 
-当 4 句 summary 已经正确区分 method、claim、explanation 与 uncertainty/scope 时，即使仍有小语法或措辞问题，也把本任务的 canonical checkbox 标记完成并添加 `✅ 2026-08-11`，记录需留给 sentence clinic 的 recurring pattern，并留下一个 `遇到 X → 做 Y` 的 Paper B 考试口令；这就是把能力树 2–3 接回后续 synthesis 的整合证据。明确回复「本次练习完成」，然后停止。
+当 4 句 summary 已经正确区分 method、claim、explanation 与 uncertainty/scope 时，即使仍有小语法或措辞问题，也把本任务的 canonical checkbox 标记完成并添加实际完成日期，记录需留给 sentence clinic 的 recurring pattern，并留下一个 `遇到 X → 做 Y` 的 Paper B 考试口令。只说本次 session 完成，不得声称该技能已经长期掌握；明确回复「本次练习完成」，然后停止。
 ```
 
 ## 学习记录
@@ -349,4 +361,50 @@ lexical chain/指代追踪 → **等义 paraphrase（当前：改变 surface for
 **内部继续判断**
 
 恢复教学；学习者已理解新的训练目的。本轮只检验两个句子是否在结构变化后仍保持同一个 probabilistic claim，不逐词追错、不进入 Africa、scope 或其他 part。尚无最终四句完成证据，不标记任务完成。
+
+### 2026-08-12T10:36:42+01:00
+
+**学习者原始输入**
+
+你是执行助教，不是课程导师。你只负责一个 part：`LN905 Reading｜Demographics 1`。本文件 `student-os:mentor-brief:start/end` 是今天不可修改的唯一 principal；你只能批当前作业，并在其中规定的刻意练习链内给下一步 5–10 分钟作业。不得自己换技能、重排路线、安排未来任务、编辑技能账本或宣布长期掌握。只在当前 Academic vault 和这一个任务中工作，不创建 worktree，不推进 Listening、Essay 或今天的其他 part。
+
+先完整读取根目录 AGENTS.md、CLAUDE.md、`99_学习情况记录/teach/LN905 Exam Playbook.md`、`99_学习情况记录/teach/reading-into-writing/MISSION.md`、`99_学习情况记录/teach/reading-into-writing/NOTES.md` 和本次唯一记录：
+`99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md`
+
+这是教学练习，不是完整模拟。第一次回复先给我五项定位：
+- `今天在学`：把研究依据、作者 claim 和 scope 分开，避免 summary 把概率预测夸成事实。
+- `为什么`：写作者不能直接把一段原文塞进文章。先分清「作者凭什么说、到底说了什么、说到什么范围」，才能判断这条材料能支持 thesis 的哪一部分；否则后面的 synthesis 和 evaluation 都会建立在错误前提上。
+- `考试位置`：Paper B 读取阶段把文本变成 meaning/evidence map；随后与 Listening 共用 Writing W4–W7，把准确内容送入 thesis、paragraph 与 synthesis。默认约 30 分钟只是训练建议。
+- `学会的样子`：我能用 4 句说清方法、预测、解释和范围，不多说也不少说。
+- `你已经会`：我能使用多份来源并连接 ideas；今天先把每份来源本身说准。
+
+要求任何动作前，先用中文说清：眼前信息现在是什么形态、这个动作会把它变成什么、完成后我能作出哪个下一步写作决定；必要时先给一个与人口无关的 worked contrast。不要只说“教师说要提高 source accuracy”。
+
+先检查本文件的 learning log。若为空，先用一个与人口无关的两句小例子讲清「数据/方法 ≠ 作者的 claim ≠ claim 的 scope」，不要用送分 ABC 题；紧接着让我边看内嵌短 PDF，写一个三行 map：`researchers used`、`they project`、`the claim is limited by/to`，允许中文、英文或箭头。若已有记录，不得重新开始，也不得继续逐句修人口预测；现有记录已经证明我能识别 Bayesian method、概率预测、人口区间和 working-age/older ratio。先直接说明此前围绕同一句连续纠错为什么低效，再显示完成整体输出所需的 source facts，让我一次完成 4 句 integrated summary。
+
+收到整份输出后一次分流反馈：只当场处理会破坏 method、claim、scope 或 uncertainty 的核心错误；反复语言模式留给 sentence clinic，一次性用词、拼写、风格和小语法不阻挡本任务。同一核心问题修一次仍未解决，就用对比或示范教清；本 part 最多要求一次 4 句整体 revision。不做连续填空，不让我照抄你写好的本题答案，不一次扔出整份 worksheet。
+
+每次回复我之前，必须在本文件 `student-os:learning-log:start/end` 之间追加时间、我的原始输入、你的教学或反馈、当前能力地图位置、下一个有意义动作和内部继续判断。只追加，不覆盖；写入失败就立即告诉我。如果我说不知道在学什么，立即停止出题，重新解释能力和完成证据。
+
+当 4 句 summary 已经正确区分 method、claim、explanation 与 uncertainty/scope 时，即使仍有小语法或措辞问题，也把本任务的 canonical checkbox 标记完成并添加实际完成日期，记录需留给 sentence clinic 的 recurring pattern，并留下一个 `遇到 X → 做 Y` 的 Paper B 考试口令。只说本次 session 完成，不得声称该技能已经长期掌握；明确回复「本次练习完成」，然后停止。
+
+**AI 教学或反馈**
+
+- 五项定位：今天把研究依据、作者 claim 与 scope 分开；这是为了让 source material 在进入 thesis、paragraph、synthesis 和 evaluation 前保持准确；考试中位于 Paper B 的 meaning/evidence map，并接入共享 Writing W4–W7；完成证据是四句分别承担方法、预测、解释与范围；已有优势是能使用多份来源并连接 ideas。
+- 直接说明旧路径低效：此前围绕同一人口预测连续修正变量、动词、概率、数字和句法，把完整的 `method → claim → explanation → scope` 拆散成了局部文字维修。学习者虽已识别 Bayesian method、概率、区间和 ratio，却没有一次看见整张 map 怎样变成可供后续写作选择的完整材料。
+- 眼前信息是来源中的分散事实；本轮把它们压缩成四个功能明确的句子。完成后，学习者可以判断这份来源能为 thesis 或 paragraph 提供哪条预测、哪项解释，以及结论最多能写多强、多广。
+- 显示本轮所需 source facts：研究者分析截至 2012 年的 UN population data，并用 Bayesian probabilistic method 估计可能结果范围；模型给出 80% probability，世界人口将从约 7.2 billion 上升到 9.6–12.3 billion by 2100，并据此认为本世纪内全球人口增长不太可能停止；预期增长很大一部分发生在 Africa，部分原因是 fertility 较高且 fertility decline 的速度最近放缓；这些是基于数据和模型假设的概率预测，描述 global/regional likely futures，并非每个国家的确定结果。本轮四句不需要另加 ratio 句。
+- 要求学习者直接查看 PDF，用自己的英文一次写恰好四句 integrated summary，不提供本题可照抄的答案。
+
+**当前能力地图位置**
+
+Reading meaning/evidence map → W4 准确转述：把已识别的 source facts 一次整合为 `method → probabilistic claim → explanation → uncertainty/scope` 四句；尚未进入 synthesis 或 essay。
+
+**下一个有意义动作**
+
+用 5–10 分钟写恰好四句英文 integrated summary：方法、预测、解释、范围各一句；允许直接查看 PDF，结构与措辞自行选择。
+
+**内部继续判断**
+
+继续本 part，等待完整四句后一次分流反馈。只处理会改变 method、claim、explanation 或 uncertainty/scope 的核心错误；至多要求一次整份 revision。当前没有新的完整四句证据，不标记 canonical task，不编辑技能账本，也不推进其他 part。
 <!-- student-os:learning-log:end -->
