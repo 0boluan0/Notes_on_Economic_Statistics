@@ -73,7 +73,7 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 - [x] 词灵｜2026-08-10：20 分钟 #student-os/task ⏳ 2026-08-10 ✅ 2026-08-10
 - [x] 词灵｜2026-08-11：20 分钟 #student-os/task ⏳ 2026-08-11 ✅ 2026-08-11
 - [x] 词灵｜2026-08-12：20 分钟 #student-os/task ⏳ 2026-08-12 ✅ 2026-08-12
-- [ ] 词灵｜2026-08-13：20 分钟 #student-os/task ⏳ 2026-08-13
+- [x] 词灵｜2026-08-13：20 分钟 #student-os/task ⏳ 2026-08-13 ✅ 2026-08-13
 - [ ] 词灵｜2026-08-14：Demographics 主题词汇复习 30 分钟（两次 15 分钟） #student-os/task ⏳ 2026-08-14
 - [ ] 词灵｜2026-08-15：25 分钟 #student-os/task ⏳ 2026-08-15
 - [ ] 词灵｜2026-08-16：15 分钟 #student-os/task ⏳ 2026-08-16
@@ -90,12 +90,12 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 > [!note] 2026-08-13 规则校正
 > 今天已经开始的 Listening 记录直接升级为一个 Paper A 端到端 unit，不重听、不重做；16:00 和 17:00 的日历块只是同一任务的两个续作时段。
 
-- [ ] LN905 Paper A guided end-to-end｜Demographics：完整演讲 → 笔记/transcript repair → meaning/evidence map → top-down plan → 200–400 词 critical summary → 整篇反馈/修订（可跨天）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension|学习记录]] #student-os/task ⏳ 2026-08-13
+- [x] LN905 Paper A guided end-to-end｜Demographics：完整演讲 → 笔记/transcript repair → meaning/evidence map → top-down plan → 200–400 词 critical summary → 整篇反馈/修订（可跨天）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension|学习记录]] #student-os/task ⏳ 2026-08-13 ✅ 2026-08-13
 
 ## Climate Change｜端到端训练与测试
 
 - [ ] LN905 Paper A guided end-to-end｜Climate Change：完整演讲 → 笔记/transcript repair → map → top-down plan → 200–400 词 critical summary → 整篇反馈/修订（可跨天）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end|学习记录]] #student-os/task
-- [ ] LN905 Paper B guided end-to-end｜Climate Change：三篇正式量级 extracts → map → thesis/paragraph jobs → 约 600 词 essay → 整篇反馈/修订（可跨天；Paper A 完成后开始）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-end-to-end|学习记录]] #student-os/task
+- [ ] LN905 Paper B guided end-to-end｜Climate Change：三篇正式量级 extracts → map → thesis/paragraph jobs → 约 600 词 essay → 整篇反馈/修订（可跨天）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-end-to-end|学习记录]] #student-os/task
 
 ## 旧序列｜已取消，不执行
 
@@ -176,3 +176,9 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 
 - Listening：`fTznEIZRkLg`｜Hans Rosling, *Global Population Growth, Box by Box*（完整演讲，从开头到结尾）
 - Reading：Gerland et al. (2014), DOI `10.1126/science.1257469`
+
+### 2026-08-13 已准备
+
+- Reading：Diffenbaugh & Burke (2019), DOI `10.1073/pnas.1816020116`
+- Reading：Carleton et al. (2022), DOI `10.1093/qje/qjac020`
+- Reading：Berrang-Ford et al. (2021), DOI `10.1038/s41558-021-01170-y`

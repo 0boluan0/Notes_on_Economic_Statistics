@@ -5,7 +5,7 @@ tags:
   - learning/listening-into-writing
 date: 2026-08-11
 mode: guided-teaching
-status: active
+status: completed
 ---
 
 # Demographics Paper A guided end-to-end
@@ -233,5 +233,21 @@ All in all, he represent a enjoyable way to describe and illustrate the history 
 - **当前能力地图位置**：首次完整 Paper A critical summary 已完成；PA-04 / AW-16 的 linear organization 和全文完成度已出现。当前进入唯一一次 whole-output revision，重点修 PA-03 source scope、PA-05 evidence-grounded evaluation 与 AW-15 prediction certainty；不再拆成局部句子练习。
 - **下一个有意义动作**：保留现有四段结构，完成唯一一次整篇 revision：修正 gap、poorest group、lower-middle movement、country-bubble evidence 与 `stabilise vs decline` 五个核心关系；删除基于“未按国家分析”的评价，并把评价贴到 country-level trend 的支持力度与九十亿预测的条件性上。仍保持 200–400 词，允许小语法错误。
 - **内部继续判断**：任务尚未完成；这次 revision 后不再追加第二次全文改写。若 revised summary 准确覆盖 central argument、主要支撑、条件性预测并含一处合法 evidence-based evaluation，则写回重点技能证据、关闭 canonical checkbox、记录实际完成日期与考试口令后停止；否则用简短模型教清残余核心错误并按允许的小语言错误完成。
+
+### 2026-08-13 17:19:12 BST
+
+- **学习者原始输入**：
+
+```text
+Buy using a vivld way to show the progress of population the world, classified as their wealth, the speaker claimed that, helping poorest people out of poverty is an effective way to reduce the growth of world population.
+Firstly, he used boxes to present the changing of populations from 1960 to 2010, then predicted the change in 2050. He mentioned that there was a significant gap between industrialised countries and developing countries. After 50 years, in 2010, this gap between two kinds of countries narrowed, but the gap between the poorest and richest people even became wider. The  poorest population was predicted to rise from 2 billions  to about 3 to 4  billions, although the lower middle class of people would moving to a higher class and the number of whom is going to rise, depending on the development of green technology and affordable energy. This data supported his claim that the world would not stop to have  more people on it if we do not try to get the poorest people out of poverty. But in this part he only considered to classifier human beings using the money the have, ignoring the different cultures, countries, or races.
+Then he tried to use a intuitive figure to explain the relation between the family size and the baby survival rate. According to all countries it seemed to be that one with higher baby survival rate tend to have relatively smaller families.  With the past 50 years development (from 1960 to 2010), the a majority trend of the world is that the death probability of baby went down, therefore the average family size got smaller. But he also mentioned that there are still some countries have relatively high baby death rate, which brings to a higher family size compared with those in other countries. So the question has not solved.
+All in all, he represent a enjoyable way to describe and illustrate the history and the prediction of population changes, and he also alarmed that poverty need to be eradicated if we what the number of the world's individuals going down.
+```
+
+- **AI 教学或反馈**：唯一一次整篇 revision 已完成。学习者成功修正了两个关键 scope：旧 West / Developing World 二分空档缩小或消失，同时最贫富距离扩大；最贫困人口不是“保持相同数量”，而是被预测由二十亿增至三十亿、四十亿。全文仍保持 200–400 词、linear organization 和两个主要 supporting blocks。三处已提示的核心错误仍保留，因此不要求第二次整篇改写，改用短模型教清：① lower-middle group 的**经济位置**可能上升，speaker 没有说其人数上升；② speaker 后半段使用 country bubbles，所以不能评价为忽略 countries，合法评价是 country-level historical pattern 支持 child-survival / family-size 关系，但九十亿预测仍依赖减贫、教育、绿色技术与 global governance；③结论是人口增长停止、总人口约在九十亿稳定，不是绝对人口下降。其余 verb form、agreement、拼写和固定数量表达作为次要语言问题，不阻挡本 unit 完成。
+- **当前能力地图位置**：Demographics Paper A guided end-to-end 已走完完整 listening / transcript repair → map → top-down linear plan → 200–400 词 critical summary → 整篇反馈 → 唯一一次整篇 revision。PA-03、PA-04 与 AW-16 留下受支持的 guided 证据；PA-05 因重复批错 evidence 保持 `repair`；AW-15 因仍把稳定写成下降，不增加状态。
+- **下一个有意义动作**：本 unit 内无下一动作；不再要求第二次全文 revision，不进入 Reading、Essay 或另一项训练。
+- **内部继续判断**：canonical task 实际完成于 2026-08-13。Paper A 考试口令：`遇到完整 lecture → 先恢复 map，再由 central answer 安排全文并让评价贴住 evidence`。本次只完成 session，不宣称 PA-05 或整套 Paper A 能力已长期掌握。
 
 <!-- student-os:learning-log:end -->
