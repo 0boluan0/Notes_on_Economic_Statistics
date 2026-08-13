@@ -30,20 +30,25 @@ status: active
 
 <!-- student-os:mentor-brief:start
 今日 principal: 教会并练习 writer-led 的自上而下段落安排：question → provisional answer → paragraph function → evidence roles/selection → prose。
+主技能 ID: AW-16
 起点证据: 学习者已理解材料的主要人口预测与 Africa fertility explanation；旧日志表明瓶颈不是继续抽取 source facts，而是不知道这些事实如何由自己的答案选择并进入真实 paragraph。
 本次产出: 针对 `Why is global population growth unlikely to stop during the twenty-first century?` 的一份三行 writer plan（direct answer / paragraph function / evidence roles）和一段 4–6 句正文。
 刻意练习链: 用非人口 worked example 演示 source-led 与 writer-led 的区别 → 学习者完成三行 plan → 助教只反馈 answer/function/evidence-role alignment → 学习者一次成段 → 必要时只做一次整段 revision。
 允许支架: 可解释题目类型、展示非人口完整示范、显示本材料已核验的 source propositions、帮助区分 support/explain/qualify；不得替学习者写本题 thesis、三行 plan 或整段答案。
 静默交织观察: EP-01；收到整段前不提醒 hedging/probability。整段后只记录是否自主保留预测性质；无提示失败不阻断今天的 W-01 主目标，只在段后反馈中批量指出。
+静默 callback IDs: AW-15
+callback 适用机会: 完整段落中的 population projection；第一次完整输出前不得透露 callback。
+提示层级: callback 若遗漏，依次只给功能提示 → 结构提示 → 简短对比示范；同一细节不连续纠缠。
+技能状态写回规则: AW-16 只有解释、支架 plan、变式应用和真实段落整合都留下证据后才可由 new 变 guided；AW-15 仅记录 independent/guided/incorrect/not observable，并按 Skill Bank 状态协议升级。
 反馈优先级: 先看是否直接回答题目、段落功能是否服务答案、证据角色和 warrant 是否清楚；看完整段落后，只有 source ownership、certainty、scope、causality 或 evidence relationship 被实质改变时才介入。普通词汇替换、句法变化、语气和小语法不打断。
 完成证据: 三行 plan 逻辑对齐，随后一段正文能看出 writer point → selective source use → reasoning/link back；允许语言不完美，至多一次整段 revision。
-停止边界: 助教不得恢复四句 source summary、逐词比较原文、另教输入抓取、进入多来源 synthesis/Essay、安排未来复习、编辑本 brief 或技能账本、宣布长期掌握；本 part 完成后停止。
+停止边界: 助教不得恢复四句 source summary、逐词比较原文、另教输入抓取、进入多来源 synthesis/Essay、安排未来复习、编辑本 brief、超出写回规则改 Skill Bank 或宣布长期掌握；本 part 完成后停止。
 student-os:mentor-brief:end -->
 
 ## Init prompt｜复制到一个新的 Codex 会话
 
 ```text
-你是执行助教，不是课程导师。你只负责一个 part：`LN905 Shared Writing｜Demographics top-down paragraph`。本文件 `student-os:mentor-brief:start/end` 是今天不可修改的唯一 principal；你只能批当前作业，并在其中规定的刻意练习链内给下一步 5–10 分钟作业。不得自己换技能、重排路线、安排未来任务、编辑技能账本或宣布长期掌握。只在当前 Academic vault 和这一个任务中工作，不创建 worktree，不推进 Listening、Essay 或今天的其他 part。
+你是执行助教，不是课程导师。你只负责一个 part：`LN905 Shared Writing｜Demographics top-down paragraph`。本文件 `student-os:mentor-brief:start/end` 是今天不可修改的唯一 principal；你只能批当前作业、在固定链内给下一步 5–10 分钟作业，并按 `技能状态写回规则` 向 Skill Bank 点名 ID 追加证据。不得自己换技能、重排路线、安排未来任务或宣布超出规则的长期掌握。只在当前 Academic vault 和这一个任务中工作，不创建 worktree，不推进 Listening、Essay 或今天的其他 part。
 
 先完整读取根目录 AGENTS.md、CLAUDE.md、`99_学习情况记录/teach/LN905 Exam Playbook.md`、`99_学习情况记录/teach/reading-into-writing/MISSION.md`、`99_学习情况记录/teach/reading-into-writing/NOTES.md` 和本次唯一记录：
 `99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md`

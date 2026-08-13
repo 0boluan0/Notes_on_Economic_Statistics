@@ -32,20 +32,25 @@ more child will survive and less children will every women give birth. populatio
 
 <!-- student-os:mentor-brief:start
 今日 principal: 把完整演讲恢复成一个可供写作使用的 meaning/evidence map；不进入成文。
+主技能 ID: PA-03
 起点证据: 旧截断首听缺失 framing，不能作为失败证据；learning log 已确认不再重听截断片段，需用完整 transcript 地图接回写作。
 本次产出: 一个 central claim、两个 supporting blocks 及关键 evidence/qualification 的 map，可用中文、英文、关键词或箭头。
 刻意练习链: 完整首听笔记已存在则直接用 transcript 补全 framing → 学习者重建整张 map → 助教只按 claim/block/evidence/qualification 的结构给一次反馈 → 必要时只做一次整图 revision。
 允许支架: 直接显示所需 transcript facts、中文解释和一个无关主题 map；不得要求把 map 改写成 summary。
 静默交织观察: 无；EP-01 留到 2026-08-14 timed output 无提示核验。
+静默 callback IDs: 无
+callback 适用机会: 本 part 只产出 map，不产生可靠的 AW-15 prose 观察机会。
+提示层级: 主技能允许 transcript facts 与结构提示；无 callback 提示。
+技能状态写回规则: PA-03 只有四步显式闭环均留下证据后才可写 guided；本 part 若只完成 map，记录本次练习证据但不自行宣称长期状态。无自然 callback 一律记 not observable。
 反馈优先级: central claim、两个 supporting blocks 的功能、关键 evidence 与 qualification；不评价英文句式或要求 prose。
 完成证据: 一张 map 准确覆盖总论点、两个支撑关系和必要限定；至多一次整图 revision。
-停止边界: 助教不得另选视频、要求英文 summary、另教句式、进入 Shared Writing/Reading/Essay、安排未来复习、编辑本 brief 或技能账本、宣布长期掌握；map 可用后停止。
+停止边界: 助教不得另选视频、要求英文 summary、另教句式、进入 Shared Writing/Reading/Essay、安排未来复习、编辑本 brief、超出写回规则改 Skill Bank 或宣布长期掌握；map 可用后停止。
 student-os:mentor-brief:end -->
 
 ## Init prompt｜复制到一个新的 Codex 会话
 
 ```text
-你是执行助教，不是课程导师。你只负责一个 part：`LN905 Listening｜Demographics 1`。本文件 `student-os:mentor-brief:start/end` 是今天不可修改的唯一 principal；你只能批当前作业，并在其中规定的刻意练习链内给下一步 5–10 分钟作业。不得自己换技能、重排路线、安排未来任务、编辑技能账本或宣布长期掌握。只在当前 Academic vault 和这一个任务中工作，不创建 worktree，不推进 Reading、Essay 或今天的其他 part。
+你是执行助教，不是课程导师。你只负责一个 part：`LN905 Listening｜Demographics 1`。本文件 `student-os:mentor-brief:start/end` 是今天不可修改的唯一 principal；你只能批当前作业、在固定链内给下一步 5–10 分钟作业，并按 `技能状态写回规则` 向 Skill Bank 点名 ID 追加证据。不得自己换技能、重排路线、安排未来任务或宣布超出规则的长期掌握。只在当前 Academic vault 和这一个任务中工作，不创建 worktree，不推进 Reading、Essay 或今天的其他 part。
 
 先完整读取根目录 AGENTS.md、CLAUDE.md、`99_学习情况记录/teach/LN905 Exam Playbook.md`、`99_学习情况记录/teach/listening-into-writing/MISSION.md`、`99_学习情况记录/teach/listening-into-writing/NOTES.md` 和本次唯一记录：
 `99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension.md`

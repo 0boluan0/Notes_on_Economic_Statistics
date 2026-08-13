@@ -46,17 +46,22 @@ assessment_horizon: 2026-08-21
 4. 同一 Writing 节点连续两份可比输出没有改善时，接下来两个 guided parts 优先增加该节点的练习时间，再用下一份整合输出检验。
 5. 普通日只选一条训练 lane：一个 standalone Shared Writing part，或一组使用同一材料的 `input → Shared Writing` 相邻 pair；词灵不计入。不得为了形式对称同时安排 Listening 与 Reading 两种入口。
 6. 每周五正式 Listening 与 Reading 测试已经承担完整整合和状态校准，不再默认叠加另一套完整模拟。只有周五文件缺失、测试使用了 AI、或需要验证一个明确的考试条件问题时，才启用备用完整模拟。
+7. Shared Writing 的近期首批显式教学优先覆盖 Skill Bank 的 writer-voice cluster `AW-08`–`AW-11`；一次 part 仍只有一个主技能，其余技能只能在各自后续自然 task 中成为主技能或保持静默观察，不能为了打卡塞进同一次练习。
 
-## 导师—助教协议与技能调用账本
+## 导师—助教协议与 Skill Bank
 
 Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写定 `今日 principal`、刻意练习链、当日完成证据与未来交织观察。新 Codex 会话只是当日助教：批当前作业，并在导师处方内给下一步 5–10 分钟作业；不得换目标、重排课程、创建未来任务或宣布长期掌握。
 
-新技能或句式首次出现时，当天必须完成 `理解用途与触发条件 → 有支架练习 → 变式输出 → 放回真实 summary/paragraph`。以后在适合的新材料中静默观察，不提前点名提醒。当天被提示后会用只算 `guided`；不同材料中至少两次无提示正确调用，且其中一次来自 timed/Friday 样本时，才记为 `stable`。交织观察嵌入原任务，不新增 checkbox。
+所有跨会话技能状态、显式教学证据、callback 历史与下一观察窗口只保存在 [[99_学习情况记录/teach/LN905 Skill Bank|LN905 Skill Bank]]。本计划不再维护第二套状态。legacy `EP-01` 已无损迁移为 `AW-15`；legacy `W-01` 因只有计划、没有完成证据，迁移为 `AW-16 new`。
 
-| ID | 可迁移技能 / 触发条件 | 首次刻意练习证据 | 无提示调用证据 | 下一观察窗口 | 状态 |
-|---|---|---|---|---|---|
-| EP-01 | 来源表达概率、预测或不确定性时，用 reporting/hedging 结构保留 epistemic status，不把 `may / probability / forecast` 写成无条件 `will` | 2026-08-11 Demographics Reading：在逐步提示后把 80% probability 放回预测句；尚未形成完整独立输出 | 暂无 | 2026-08-14 Friday timed outputs：不预先提醒，检查 Paper A/B 是否自主保留概率与范围 | guided |
-| W-01 | 写作开始时先完成 `题目要求 → 暂定答案 → 段落功能 → evidence role`，再写 prose | 2026-08-12 Demographics Shared Writing：计划进行第一次导师示范与段落整合 | 暂无 | 2026-08-14 Paper B timed output：检查是否先形成 writer-led structure | planned |
+新技能或句式首次教学时必须完成 `理解用途与触发条件 → 有支架练习 → 变式输出 → 放回真实 summary/paragraph`。每个练习只有一个主技能，但导师可选择任何数量、且与当前材料真正自然适用的旧技能作静默 callback；第一次完整输出前不透露。没有自然机会记 `not observable`，不能算失败；遗漏后依次只给功能提示、结构提示、简短对比示范，不让细枝末节劫持主任务。
+
+## 按功能聚合的 skill clinics
+
+这些是真实 canonical practice units，不为每个句型或词汇另建 checkbox。只有某个高优先级 `new/repair` 技能近期没有自然适用的普通 task 时才排入 Today；已有 Shared Writing、Paper A/B/C 或课后任务能完成闭环时，优先嵌入原任务。
+
+- [ ] LN905 Paper C & Academic Interaction skill clinic｜完成 contribution、floor management、listen-and-build 与 discussion-to-writing 的一轮显式整合（55 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/LN905-paper-c-interaction-skill-clinic|学习记录]] #student-os/task
+- [ ] LN905 Academic Pronunciation skill clinic｜用一段学术 contribution 完成 intelligibility、schwa/connected speech 与 stress/chunking 的一轮显式整合（40 分钟）｜[[99_学习情况记录/teach/reading-into-writing/lessons/LN905-academic-pronunciation-skill-clinic|学习记录]] #student-os/task
 
 ## 周五校准｜真实进度的主要依据
 

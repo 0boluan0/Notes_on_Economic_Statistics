@@ -27,14 +27,19 @@ Use the meaning/evidence map from Hans Rosling's *Global population growth, box 
 
 <!-- student-os:mentor-brief:start
 今日 principal: 用刚完成的 Listening map 自上而下安排并完成一篇 Paper A critical summary；先作写作决定，再写句子。
+主技能 ID: AW-16
 起点证据: 学习者能抓住 main argument 和关键 concepts；此前最大问题是 AI 让其围绕局部措辞纠错，却没有教清人如何从题目、答案和功能安排全文。本 part 紧接同日 Listening input，不重新考材料记忆。
 本次产出: 三行 writer-led plan（central answer；两块内容功能；对应 evidence/evaluation role）+ 180–250 词 critical summary。
 刻意练习链: 用一个无关主题 worked example 示范 question → central answer → functions → evidence roles → 给学习者刚完成的 map 和本题，让其一次提交三行 plan → 助教只核验功能是否共同服务 central answer，并用一次具体教学修正 → 学习者据 plan 完成 180–250 词 → 助教看完整成品后给一次整体验证或一次最高价值 revision。
 允许支架: 中文解释、完整展示刚完成的 map、一个无关主题 worked example、sentence frames、共同讨论结构；不得替学习者预先写出 Demographics 的完整 plan 或 model answer。
 静默交织观察: W-01 是否能在第二轮独立维持 writer-led 顺序；EP-01 留到正式 Friday sample，不提前提醒。
+静默 callback IDs: 无；legacy W-01 已迁移为本次主技能 AW-16，AW-15 留到正式 Friday sample。
+callback 适用机会: 本次所有可观察证据属于 AW-16 的显式教学，不把同日表现误记为 callback。
+提示层级: 主技能可用 worked example、功能提示与结构提示；不对 AW-15 提前提示或计分。
+技能状态写回规则: AW-16 完成解释、支架 plan、变式决定与 180–250 词整合后只可写 guided；同日提示成功不能写 independent。AW-15 本次记 not observable。
 反馈优先级: central answer → section functions → evidence/evaluation 是否服务答案 → source meaning；普通同义替换、句法变化、措辞强弱、拼写和小语法不逐句拦截。
 完成证据: 三行 plan 可执行，且 180–250 词成品完整覆盖 central argument、两块支撑和至少一处依附于具体 evidence 的评价；允许 minor language errors，至多一次 whole-output revision。
-停止边界: 助教不得重新测试 Listening、要求重听、另教 Reading、扩展到另一任务、安排未来训练、编辑本 brief 或技能账本、宣布长期掌握；本成品达到完成证据后停止。
+停止边界: 助教不得重新测试 Listening、要求重听、另教 Reading、扩展到另一任务、安排未来训练、编辑本 brief、超出写回规则改 Skill Bank 或宣布长期掌握；本成品达到完成证据后停止。
 student-os:mentor-brief:end -->
 
 ## Init prompt｜复制到一个新的 Codex 会话
