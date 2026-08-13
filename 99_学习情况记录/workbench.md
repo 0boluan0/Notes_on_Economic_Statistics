@@ -37,13 +37,13 @@ hide postpone button
 ## 风险雷达
 
 <!-- student-os:risk-radar:start -->
-- D-2｜2026-08-14 11:45｜LN905 Listening into Writing：Demographics
-- D-2｜2026-08-14 15:00｜LN905 Reading into Writing：Demographics
-- D-4｜2026-08-16｜LN905 Essay：提交 detailed essay plan
-- D-9｜2026-08-21 11:45｜LN905 Listening into Writing：Climate Change
-- D-9｜2026-08-21 15:00｜LN905 Reading into Writing：Climate Change
-- D-11｜2026-08-23｜LN905 Essay：提交 first draft
-- D-14·已有工作排期｜2026-08-26｜LN905 Essay：提交 final assignment
+- D-1｜2026-08-14 11:45｜LN905 Listening into Writing：Demographics
+- D-1｜2026-08-14 15:00｜LN905 Reading into Writing：Demographics
+- D-3｜2026-08-16｜LN905 Essay：提交 detailed essay plan
+- D-8｜2026-08-21 11:45｜LN905 Listening into Writing：Climate Change
+- D-8｜2026-08-21 15:00｜LN905 Reading into Writing：Climate Change
+- D-10｜2026-08-23｜LN905 Essay：提交 first draft
+- D-13·已有工作排期｜2026-08-26｜LN905 Essay：提交 final assignment
 <!-- student-os:risk-radar:end -->
 
 ## 输入箱
