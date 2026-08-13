@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md",
+                "file": "99_学习情况记录/2026-08-12——Wed.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -38,11 +38,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-08-11-demographics-accuracy"
+              "title": "2026-08-12——Wed"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "614c1edc10d7124f",
@@ -184,7 +183,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md",
+                "file": "00_inbox/随手记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -330,8 +329,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 829.543701171875,
-    "collapsed": true
+    "width": 829.543701171875
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -356,11 +354,12 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "2bafce246e07bb23",
+  "active": "30f6502409000f89",
   "lastOpenFiles": [
-    "99_学习情况记录/teach/LN905 Skill Bank.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
+    "99_学习情况记录/2026-08-12——Wed.md",
     "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md",
+    "99_学习情况记录/teach/LN905 Skill Bank.md",
     "99_学习情况记录/2026-08-13——Thu.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/00_文章梗概索引.md",
@@ -376,7 +375,6 @@
     "07_Programme/01_LN905_LSE-language-class/PDF/09_References/Academic_Vocabulary_in_Use.pdf",
     "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension.md",
     "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-12-demographics-evidence.md",
-    "99_学习情况记录/2026-08-12——Wed.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-3-Demographics/Reading/The unbearable weight of aging.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-3-Demographics/Reading/Topic Reading_Questions.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 3.pdf",
