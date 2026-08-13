@@ -12,6 +12,9 @@ neath_sync: synced
 > [!summary] 用法
 > 这是 LN905 唯一的跨会话技能状态源。课程笔记保存完整解释；[[99_学习情况记录/学习计划/LN905 Listening and Reading Practice|练习计划]]只保存 canonical tasks；每个 guided Markdown 只保存本次处方与逐轮证据。导师从这里选主技能和自然适用的静默 callback，助教不得自行换目标。
 
+> [!important] 当前训练约束
+> learner-facing 练习只使用 Social Media、Gender、Demographics、Climate Change。技能仍可分开诊断和记录，但只能在一条 Paper A/B 端到端 unit 内教学、callback 和写回证据；不再为单项技能建立 clinic、短练或独立 checkbox。
+
 ## 状态协议
 
 - `new`：已从已上课程材料核验，但尚未留下完整的显式教学证据。
@@ -39,7 +42,7 @@ neath_sync: synced
 | Discussion & Debate Weeks 1–3 | 功能语言已提取；人物游戏、challenge cards、balloon/pyramid 场景本身不作为技能 | 合并到 `DISC-01`–`DISC-02`；课堂游戏明确排除 |
 | Pronunciation sessions、transcript、TH materials 与 H5P | 已提取 intelligibility 所需的音位、schwa、connected speech、stress/chunking | 合并到 `PRON-01`–`PRON-03` |
 | Social Media、Gender、Demographics topic input/listening/reading | 可迁移主题词已提取；逐题答案和一次性事实不作为技能 | 合并到 `LEX-02`–`LEX-04` 和词汇同步区 |
-| Week 4 Climate Change 全部材料 | 文件已下载但尚未实际授课 | **未激活**：不建 skill 状态、不导入词汇；上课后增量提取 |
+| Week 4 Climate Change 全部材料 | 用户已确认属于 Week 5 考试范围 | 仅预载 `LEX-05` 与词汇；其余 skill 状态仍等待实际授课 |
 | Everyday English、课堂行政、课程游戏规则 | 与学术考核迁移无直接关系 | 明确排除 |
 | *Academic Vocabulary in Use* | 仅作参考书 | 不批量导入；只收课堂实际教授、反复出现或真实输出需要的词 |
 | LN905 Essay 原始论文 | 是练习/写作证据，不是技能课件 | 不从论文主题批量制造 skill；真实输出可作为 callback 证据 |
@@ -47,7 +50,7 @@ neath_sync: synced
 ## Academic Writing
 
 > [!important] 首批教学优先级
-> `AW-16` 自上而下写作程序继续作为当前主轴；接下来的 Shared Writing 优先让 `AW-08` writer-led topic sentence、`AW-09` reporting noun/gerund、`AW-10` literature-as-evidence 和 `AW-11` evaluative language 分别完成一次显式闭环。不要在同一 part 同时把四项都当主技能。
+> `AW-16` 自上而下写作程序继续作为当前主轴；`AW-08`–`AW-11` 只在端到端 unit 的真实计划、成文与整篇反馈中教学和观察，不再创建 clinic 或短练。
 
 ### AW-01 · 把题目变成可执行任务
 - 状态：`new`
@@ -58,7 +61,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#二、先把题目变成写作任务|Academic Writing：读题]]；Assignment criteria。
 - 适用：Paper B、Assignment；planning、introduction、whole essay。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：下一次 Shared Writing 开始前静默看是否先写任务要求。
+- 下一观察：下一次 Paper B end-to-end unit 开始前静默看是否先写任务要求。
 
 ### AW-02 · 控制性答案 / thesis
 - 状态：`new`
@@ -69,7 +72,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#三、用 thesis 固定全文的答案|Academic Writing：thesis]]。
 - 适用：Paper B、Assignment；thesis、introduction、conclusion。
 - 证据/Callback：起点证据显示能形成 overall argument，但尚无系统四步闭环。
-- 下一观察：Demographics Shared Writing 的 provisional answer。
+- 下一观察：下一次 Paper B end-to-end unit 的 provisional answer。
 
 ### AW-03 · 选择宏观结构
 - 状态：`new`
@@ -102,7 +105,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#六、用 Toulmin 检查论证能否站住|Academic Writing：Toulmin]]。
 - 适用：Paper A/B、Assignment；analysis、evaluation、paragraph development。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：下一次 evidence-role paragraph。
+- 下一观察：下一份端到端成品中的 evidence-role paragraph。
 
 ### AW-06 · Description → Analysis → Evaluation
 - 状态：`new`
@@ -113,7 +116,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Description vs Analysis vs Evaluation.pdf|Description vs Analysis vs Evaluation]]。
 - 适用：Paper A/B、Assignment；critical summary、essay paragraph。
 - 证据/Callback：教师反馈确认已经尝试 evaluation，但 Listening 中误判了 evidence composition。
-- 下一观察：下一次 mixed-evidence evaluation。
+- 下一观察：下一份 Paper A 端到端成品中的 mixed-evidence evaluation。
 
 ### AW-07 · Source evaluation 与 intended use
 - 状态：`new`
@@ -135,7 +138,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 4.pdf|Week 3 Lesson 4：Effective topic sentences]]。
 - 适用：Paper B、Assignment；topic sentence、paragraph opening。
 - 证据/Callback：Lesson 4 已上课；尚无系统显式闭环。
-- 下一观察：下一次自然适用的 Shared Writing；近期没有合适 task 时才用按功能聚合的 clinic。
+- 下一观察：下一份自然适用的 Paper B 端到端成品。
 
 ### AW-09 · Reporting noun / gerund 留出主句给自己
 - 状态：`new`
@@ -146,7 +149,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 4.pdf|Week 3 Lesson 4：Using verbs to present your voice]]。
 - 适用：Paper A/B、Assignment；source integration、evaluation sentence。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：下一次自然适用的 Shared Writing；近期没有合适 task 时才用按功能聚合的 clinic。
+- 下一观察：下一份自然适用的 Paper A/B 端到端成品。
 
 ### AW-10 · `As Author argues...` 与 literature-as-evidence
 - 状态：`new`
@@ -157,7 +160,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 4.pdf|Week 3 Lesson 4：Using literature to support claims]]。
 - 适用：Paper B、Assignment；claim support、synthesis。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：下一次自然适用的 Shared Writing；近期没有合适 task 时才用按功能聚合的 clinic。
+- 下一观察：下一份自然适用的 Paper B 端到端成品。
 
 ### AW-11 · 精确 evaluative language
 - 状态：`new`
@@ -168,7 +171,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 4.pdf|Week 3 Lesson 4：Evaluative adjectives]]。
 - 适用：Paper A/B、Assignment；evaluation、literature review。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：下一次自然适用的 Shared Writing；近期没有合适 task 时才用按功能聚合的 clinic，之后再静默观察 lexical choice。
+- 下一观察：下一份自然适用的 Paper A/B 端到端成品，之后再静默观察 lexical choice。
 
 ### AW-12 · Cohesion 与 reference chains
 - 状态：`new`
@@ -236,7 +239,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/01_Listening into Writing#听前：把纸设计成筛选器|Listening：听前]]。
 - 适用：Paper A；pre-listening、notes。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：下一次 Listening input。
+- 下一观察：下一次 Paper A end-to-end unit 的听前节点。
 
 ### PA-02 · 结构信号与选择性笔记
 - 状态：`new`
@@ -257,8 +260,8 @@ neath_sync: synced
 - 边界：personal experience、research、data 必须分别识别；不完整 evidence map 不进入评价。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/01_Listening into Writing#听后：先把笔记变成地图|Listening：听后]]。
 - 适用：Paper A；notes-to-map、pre-writing。
-- 证据/Callback：教师反馈：main argument 理解清楚，但把 personal experience 当成全部 evidence，漏掉 research/data。
-- 下一观察：Gender feedback repair 或下一次 mixed-evidence talk。
+- 证据/Callback：教师反馈：main argument 理解清楚，但把 personal experience 当成全部 evidence，漏掉 research/data。2026-08-13 Demographics：在 transcript facts 与结构提示支持下完成可用 map，准确恢复“减贫 / child survival 改善 → family size 下降 → 人口增长趋停”，并用最贫困人口二十亿将增至三十亿、四十亿作为 demographic-momentum evidence；本次只记受支持证据，状态不变。
+- 下一观察：当前 Demographics Paper A end-to-end unit 的 map 节点。
 
 ### PA-04 · Critical summary 的组织选择
 - 状态：`new`
@@ -269,7 +272,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/01_Listening into Writing#写作：先报告，再评价|Listening：写作]]。
 - 适用：Paper A；200–400 word critical summary。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：下一份 Paper A partial/timed output。
+- 下一观察：当前 Demographics Paper A end-to-end unit 的完整成品。
 
 ### PA-05 · 针对 evidence 的评价
 - 状态：`new`
@@ -280,7 +283,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/01_Listening into Writing#Criticality 的五层问题|Listening：criticality]]；Paper A criteria。
 - 适用：Paper A；critical comment。
 - 证据/Callback：用户已经尝试 critical evaluation；准确性不足。
-- 下一观察：完成 PA-03 后的同材料 Writing part。
+- 下一观察：完成 PA-03 后继续同一端到端 unit 成文。
 
 ## Paper B · Reading into Writing
 
@@ -293,7 +296,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing#第一步：在读文本前拆 question|Reading：question]]。
 - 适用：Paper B；pre-reading、source selection。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：下一次 genuine Reading input。
+- 下一观察：下一次 Paper B end-to-end unit 的 question-led reading 节点。
 
 ### PB-02 · 三源 meaning/evidence map
 - 状态：`new`
@@ -304,7 +307,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing#第二步：把三篇材料压成一张 source map|Reading：source map]]。
 - 适用：Paper B；reading notes、pre-writing。
 - 证据/Callback：教师反馈认可使用全部三源并连接 ideas，但要求更准确说明 sources 如何共同工作。
-- 下一观察：下一套正式量级三 extracts。
+- 下一观察：下一次 Paper B end-to-end unit 的正式量级三 extracts。
 
 ### PB-03 · Writer-led synthesis
 - 状态：`new`
@@ -315,7 +318,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing#第四步：让 synthesis 在段落里可见|Reading：synthesis]]。
 - 适用：Paper B、Assignment；synthesis paragraph。
 - 证据/Callback：起点强项是连接来源；尚未完成系统显式闭环。
-- 下一观察：Demographics synthesis task。
+- 下一观察：下一份 Paper B end-to-end essay 的 synthesis 段。
 
 ### PB-04 · Quote、paraphrase、summary 与 citation 分工
 - 状态：`new`
@@ -350,7 +353,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/02_Speaking into Writing#两分钟 presentation：先选结构|Speaking：presentation]]。
 - 适用：Paper C；individual presentation。
 - 证据/Callback：课堂材料已学；尚无显式闭环。
-- 下一观察：Paper C skill clinic。
+- 下一观察：下一次正式 Paper C / Academic Interaction 四话题活动。
 
 ### PC-02 · 高质量 contribution 的最小单位
 - 状态：`new`
@@ -361,7 +364,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/02_Speaking into Writing#一次高质量 contribution 的最小单位|Speaking：contribution]]。
 - 适用：Paper C、Academic Interaction；discussion turn。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：Paper C/Interaction skill clinic。
+- 下一观察：下一次正式 Paper C / Academic Interaction 四话题活动。
 
 ### PC-03 · Gain、maintain、yield the floor
 - 状态：`new`
@@ -372,7 +375,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/02_Speaking into Writing#Gain、maintain、yield the floor|Speaking：floor]]。
 - 适用：Paper C、Academic Interaction；turn management。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：Paper C/Interaction skill clinic。
+- 下一观察：下一次正式 Paper C / Academic Interaction 四话题活动。
 
 ### PC-04 · Listen–Build–Challenge–Repair
 - 状态：`new`
@@ -383,7 +386,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/02_Speaking into Writing#口头功能库：按作用记，不按句子背|Speaking：functions]]；Paper C criteria。
 - 适用：Paper C；discussion response。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：Paper C/Interaction skill clinic。
+- 下一观察：下一次正式 Paper C / Academic Interaction 四话题活动。
 
 ### AI-01 · Roles 与 co-construction
 - 状态：`new`
@@ -394,7 +397,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/02_Speaking into Writing#Academic Interaction：共同建构，不是轮流汇报|Speaking：Academic Interaction]]。
 - 适用：Academic Interaction、Paper C；group work。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：Paper C/Interaction skill clinic。
+- 下一观察：下一次正式 Paper C / Academic Interaction 四话题活动。
 
 ### AI-02 · Evaluator 五问
 - 状态：`new`
@@ -427,7 +430,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Discussion-and-Debate/Week-1/Discussion Week 1 PPT.pdf|Discussion Week 1]]。
 - 适用：Paper C、Academic Interaction；discussion management。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：Paper C/Interaction skill clinic。
+- 下一观察：下一次正式 Paper C / Academic Interaction 四话题活动。
 
 ### DISC-02 · Qualify disagreement 与 build consensus
 - 状态：`new`
@@ -438,7 +441,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/02_Speaking into Writing#Discussion drills：把技巧练到可调用|Speaking：discussion drills]]。
 - 适用：Paper C、Academic Interaction；challenge、rebuttal、consensus。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：Paper C/Interaction skill clinic。
+- 下一观察：下一次正式 Paper C / Academic Interaction 四话题活动。
 
 ## Pronunciation for academic interaction
 
@@ -451,7 +454,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Interactive/Session 1 - The Sounds of English.pdf|Sounds of English]]；[[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/th sounds.pdf|TH sounds]]。
 - 适用：Paper C、Academic Interaction；spoken academic output。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：Pronunciation skill clinic。
+- 下一观察：下一次正式 Paper C / Academic Interaction 四话题口头活动。
 
 ### PRON-02 · Schwa 与 connected speech
 - 状态：`new`
@@ -462,7 +465,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Interactive/Session 2 - The Schwa.pdf|Schwa]]；[[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Interactive/Session 3 - Connected Speech.pdf|Connected Speech]]。
 - 适用：Paper C、Listening；delivery、segmentation。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：Pronunciation skill clinic。
+- 下一观察：下一次正式 Paper C / Academic Interaction 四话题口头活动。
 
 ### PRON-03 · Sentence stress、chunking 与 stance
 - 状态：`new`
@@ -473,7 +476,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Pronunciation/Interactive/Session 4 - Sentence & Word Stress.pdf|Sentence & Word Stress]]。
 - 适用：Paper C、Academic Interaction；presentation、discussion。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：Pronunciation skill clinic 或下一次 presentation。
+- 下一观察：下一次正式 Paper C / Academic Interaction 四话题口头活动。
 
 ## Lexical access
 
@@ -521,15 +524,23 @@ neath_sync: synced
 - 证据/Callback：Week 3 已上课；AW-15 暴露 prediction certainty 风险。
 - 下一观察：每日词灵 + 2026-08-14 Friday outputs。
 
-> [!warning] Climate Change 尚未激活
-> 远端 `LN905 Climate Change` 词书可以存在为空，但 Week 4 实际上课前不创建 `LEX` skill、不导入 topic vocabulary，也不把已下载课件当作“已学”。
+### LEX-05 · Climate Change topic vocabulary
+- 状态：`new`
+- 触发/功能：讨论 climate science、mitigation、framing、disinformation 与 just transition 时准确识别和调用主题概念。
+- 为什么：Week 5 考试范围已由用户确认为四个 topic；提前建立识别词汇可减少正式材料中的 lexical blockage。
+- 动作/框架：词灵 retrieval → collocation/example → source-map/claim 中自然调用。
+- 边界：预载词汇不代表已经学会 Week 4 的其他能力；misinformation、disinformation、denial 与 scepticism 必须区分。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Input-and-Discussion/Topic Input Climate Change.pdf|Climate Change topic input]]；[[07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Reading/Climate Change Text - Lewandowski - Climate Change Disinformation and how to Combat it.pdf|Lewandowsky reading]]；Week 4 listening materials。
+- 适用：Paper A/B/C；Climate Change。
+- 证据/Callback：词汇为考试范围预载；尚无显式闭环。
+- 下一观察：词灵复现或 Climate Change timed output。
 
 ## Callback 与写回协议
 
-1. 每个 guided part 只有一个主技能；导师可选择任意数量、但必须与当前材料自然适用且已到观察时机的旧技能作为静默 callback。
+1. 每个 guided end-to-end unit 有一组按风险排序的重点技能；导师可选择任意数量、但必须与当前材料自然适用且已到观察时机的旧技能作为静默 callback。重点技能和 callback 都不生成独立练习或 checkbox。
 2. 第一次完整输出前不得透露 callback ID、功能提示或检查项。没有自然机会写 `not observable`。
 3. 自主正确写 `independent`；出现机会但误用写 `incorrect`；给过任何提示后正确只写 `guided`。
-4. 缺失时依次只用：功能提示 → 结构提示 → 简短对比示范。同一细节不连续纠缠，次要语言问题在完整输出后批量反馈。
+4. 缺失时在完整输出后依次只用：功能提示 → 结构提示 → 四话题内简短对比示范；再回到整篇 revision。同一细节不连续纠缠。
 5. Friday/timed output 测试前不提醒；测试后把证据写回对应 skill。一次自主正确只到 `independent-1`；第二次且包含 timed/Friday 才到 `stable`。
 6. `new` 只有在解释、支架应用、变式应用、真实输出整合四步均有记录后才可变 `guided`。
 7. 当日助教只能按 mentor brief 的 `技能状态写回规则` 追加本次证据，并对 brief 点名的 ID 执行合法状态转换；不得选新技能、改下一观察策略或把普通语言反馈写成 mastery evidence。
@@ -549,7 +560,7 @@ neath_sync: synced
     {"name": "LN905 Social Media", "description": "LN905 Week 1 Social Media vocabulary"},
     {"name": "LN905 Gender", "description": "LN905 Week 2 Gender vocabulary"},
     {"name": "LN905 Demographics", "description": "LN905 Week 3 Demographics vocabulary"},
-    {"name": "LN905 Climate Change", "description": "LN905 Week 4 vocabulary; kept empty until the class is taught"}
+    {"name": "LN905 Climate Change", "description": "LN905 Week 4 Climate Change exam-topic vocabulary"}
   ],
   "entries": [
     {"word": "argue", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "提出并支持一个可争辩的立场；不等同于 report", "collocations": ["argue that", "argue for/against"], "sentence": "The authors argue that the observed association requires a causal explanation."},
@@ -592,7 +603,196 @@ neath_sync: synced
     {"word": "population decline", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "人口总量随时间减少", "collocations": ["experience population decline"], "sentence": "Some countries are more concerned about population decline than rapid growth."},
     {"word": "population implosion", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "对快速、持续人口收缩的强调性说法", "collocations": ["risk of population implosion"], "sentence": "The phrase population implosion frames demographic decline as an urgent threat."},
     {"word": "population projection", "collection": "LN905 Demographics", "topics": ["demographics", "academic-core"], "meaning": "基于假设和模型对未来人口的估计，不是确定事实", "collocations": ["long-term population projection"], "sentence": "A population projection should retain its assumptions and uncertainty."},
-    {"word": "carrying capacity", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "环境在既定条件下可持续支持的人口或生物数量", "collocations": ["planetary carrying capacity"], "sentence": "Debates about carrying capacity depend on assumptions about technology and consumption."}
+    {"word": "carrying capacity", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "环境在既定条件下可持续支持的人口或生物数量", "collocations": ["planetary carrying capacity"], "sentence": "Debates about carrying capacity depend on assumptions about technology and consumption."},
+    {"word": "central claim", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "一篇材料或全文试图成立的核心主张", "collocations": ["identify the central claim", "support a central claim"], "sentence": "The essay should state a central claim that directly answers the question."},
+    {"word": "supporting evidence", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "用来支撑 claim 的数据、研究、例子或理由", "collocations": ["provide supporting evidence", "evaluate supporting evidence"], "sentence": "Each paragraph needs supporting evidence that is relevant to its point."},
+    {"word": "source attribution", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "清楚标明观点、数据或判断属于哪个来源", "collocations": ["accurate source attribution", "maintain source attribution"], "sentence": "Accurate source attribution prevents the writer's view from being confused with the author's claim."},
+    {"word": "paraphrase", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "在保持原意、范围与确定性的同时改换词汇和句法", "collocations": ["paraphrase accurately", "paraphrase a source"], "sentence": "A good paraphrase changes the language without changing the source meaning."},
+    {"word": "synthesis", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "围绕自己的问题或判断组织多个来源之间的关系", "collocations": ["cross-text synthesis", "synthesis of sources"], "sentence": "Synthesis explains how two sources support, qualify, or challenge the same point."},
+    {"word": "thesis statement", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "直接回答题目并概括全文主要理由和限定的句子", "collocations": ["clear thesis statement", "develop a thesis statement"], "sentence": "The thesis statement gives the essay a clear answer and direction."},
+    {"word": "topic sentence", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "表明本段主张及其在全文中作用的句子", "collocations": ["write a topic sentence", "clear topic sentence"], "sentence": "A topic sentence should make the paragraph's contribution to the thesis clear."},
+    {"word": "writer's voice", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "写作者用自己的判断统领来源和论证的声音", "collocations": ["maintain the writer's voice", "strong writer's voice"], "sentence": "A clear writer's voice uses sources to support an argument rather than merely listing them."},
+    {"word": "counterargument", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "对当前立场提出的有意义反方理由", "collocations": ["address a counterargument", "consider a counterargument"], "sentence": "The essay addresses the counterargument before explaining why its thesis still holds."},
+    {"word": "limitation", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "限制证据强度、适用范围或解释力的条件", "collocations": ["acknowledge a limitation", "methodological limitation"], "sentence": "The small sample is a limitation on how widely the finding can be applied."},
+    {"word": "implication", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "一项发现对题目、政策或后续判断意味着什么", "collocations": ["policy implication", "implication for the argument"], "sentence": "The implication is that the same policy may not work equally well in every context."},
+    {"word": "causal relationship", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "一个因素的变化导致另一个因素变化的关系", "collocations": ["establish a causal relationship", "claim a causal relationship"], "sentence": "The survey identifies an association but does not establish a causal relationship."},
+    {"word": "correlation", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "两个变量共同变化的统计关系，本身不证明因果", "collocations": ["positive correlation", "correlation between variables"], "sentence": "A correlation between social media use and anxiety does not by itself prove causation."},
+    {"word": "be associated with", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "与某结果存在联系，但不自动表示造成该结果", "collocations": ["be strongly associated with", "be associated with an outcome"], "sentence": "Lower fertility is often associated with changes in education and health."},
+    {"word": "contribute to", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "作为多个因素之一促成某结果", "collocations": ["contribute to inequality", "contribute to change"], "sentence": "Repeated expectations can contribute to the persistence of stereotypes."},
+    {"word": "result from", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "由某个原因或机制产生", "collocations": ["result from social pressure", "result from changes in"], "sentence": "The decline may result from several demographic and economic changes."},
+    {"word": "lead to", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "导致或推动某个后果，使用时需要足够因果依据", "collocations": ["lead to an increase", "lead to unintended consequences"], "sentence": "Poorly designed regulation may lead to unintended consequences."},
+    {"word": "account for", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "在解释中纳入并说明某因素或差异", "collocations": ["account for variation", "account for the effect"], "sentence": "A convincing explanation must account for differences between age groups."},
+    {"word": "be consistent with", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "与某解释相符，但未必唯一证明该解释", "collocations": ["be consistent with the evidence", "be consistent with the claim"], "sentence": "The observed pattern is consistent with the proposed mechanism but does not prove it."},
+    {"word": "support the claim", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "为某个具体主张提供相关依据", "collocations": ["evidence supports the claim", "adequately support the claim"], "sentence": "The data support the claim that population ageing is uneven across countries."},
+    {"word": "challenge the assumption", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "用理由或证据质疑论证中的隐含前提", "collocations": ["challenge the underlying assumption"], "sentence": "The later study challenges the assumption that the effect is universal."},
+    {"word": "qualify the claim", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "通过条件、范围或确定性限制使主张更准确", "collocations": ["carefully qualify the claim"], "sentence": "The writer should qualify the claim because the evidence comes from one country."},
+    {"word": "draw a distinction between", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "明确区分两个容易混淆但意义不同的概念", "collocations": ["draw a clear distinction between"], "sentence": "The article draws a distinction between misinformation and deliberate disinformation."},
+    {"word": "acknowledge", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "明确承认相关的反例、限制或另一种观点", "collocations": ["acknowledge a limitation", "acknowledge that"], "sentence": "The conclusion acknowledges uncertainty without abandoning the main argument."},
+    {"word": "contrast", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "比较并突出两个来源、群体或结果之间的差异", "collocations": ["contrast two accounts", "in sharp contrast"], "sentence": "The paragraph contrasts financial and real-resource explanations of ageing."},
+    {"word": "evaluate", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "依据明确标准判断证据、解释或方案的强弱", "collocations": ["evaluate the evidence", "critically evaluate"], "sentence": "Students must evaluate whether the evidence is strong enough for the conclusion."},
+    {"word": "generalise", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "把研究结果推广到原样本以外的人群或情境", "collocations": ["generalise beyond the sample", "cannot be generalised"], "sentence": "Findings from one platform may not generalise to all social media use."},
+    {"word": "representative sample", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "在关键特征上能合理代表目标人群的样本", "collocations": ["nationally representative sample"], "sentence": "A representative sample strengthens claims about the wider population."},
+    {"word": "longitudinal study", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "在一段时间内重复观察同一批对象的研究", "collocations": ["conduct a longitudinal study"], "sentence": "A longitudinal study can track whether changes persist over time."},
+    {"word": "cross-sectional study", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "在一个时间点比较不同对象或变量的观察研究", "collocations": ["cross-sectional data", "cross-sectional study design"], "sentence": "The cross-sectional study cannot determine which variable changed first."},
+    {"word": "statistically significant", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "统计检验显示结果不太可能仅由随机波动产生，不等于实际影响很大", "collocations": ["statistically significant difference"], "sentence": "A statistically significant result may still have a small practical effect."},
+    {"word": "underlying mechanism", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "解释观察结果为何发生的底层过程", "collocations": ["identify the underlying mechanism"], "sentence": "The sources agree on the pattern but propose different underlying mechanisms."},
+    {"word": "to some extent", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "表示主张在有限程度上成立的限定表达", "collocations": ["agree to some extent"], "sentence": "The policy addresses the problem to some extent but leaves major inequalities unchanged."},
+    {"word": "in contrast", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "引出与前述来源、情况或趋势形成对照的内容", "collocations": ["in contrast to", "by contrast"], "sentence": "One source reports a decline; in contrast, another finds little change."},
+    {"word": "social media platform", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "允许用户创建、分享和互动内容的具体线上平台", "collocations": ["use a social media platform", "platform design"], "sentence": "Each social media platform encourages a different pattern of communication."},
+    {"word": "personal information", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "能够识别个人或描述其生活、行为与偏好的数据", "collocations": ["collect personal information", "protect personal information"], "sentence": "Users may not know how much personal information a platform collects."},
+    {"word": "informed consent", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "在理解数据用途、风险和选择后作出的同意", "collocations": ["obtain informed consent", "meaningful informed consent"], "sentence": "Data collection is difficult to justify without informed consent."},
+    {"word": "confidentiality", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "限制私人信息被未经授权披露的原则", "collocations": ["protect confidentiality", "breach of confidentiality"], "sentence": "Private messaging services must protect the confidentiality of users' conversations."},
+    {"word": "data protection", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "规范个人数据收集、保存、处理与共享的保护制度", "collocations": ["data protection law", "strengthen data protection"], "sentence": "Effective data protection requires clear limits on how platforms reuse personal data."},
+    {"word": "anonymity", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "线上身份无法或不易与现实个人对应的状态", "collocations": ["online anonymity", "preserve anonymity"], "sentence": "Anonymity can protect vulnerable users but may also reduce accountability."},
+    {"word": "pseudonym", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "代替真实姓名使用的化名或网名", "collocations": ["use a pseudonym", "allow pseudonyms"], "sentence": "A pseudonym lets users participate without displaying their legal names."},
+    {"word": "privacy settings", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "控制谁能看到、获取或分享个人内容的账户选项", "collocations": ["adjust privacy settings", "default privacy settings"], "sentence": "Clear privacy settings help users control who can view their posts."},
+    {"word": "audience selection", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "选择哪些人可以看到特定内容的功能或行为", "collocations": ["control audience selection"], "sentence": "Audience selection gives users more control over personal disclosure."},
+    {"word": "real-name policy", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "要求账户使用现实身份姓名的平台规定", "collocations": ["enforce a real-name policy"], "sentence": "A real-name policy may increase accountability but reduce safety for some users."},
+    {"word": "content moderation", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "平台审查、限制或移除用户内容的制度与过程", "collocations": ["content moderation policy", "moderate harmful content"], "sentence": "Content moderation must balance safety, consistency, and freedom of expression."},
+    {"word": "online harassment", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "通过数字平台持续威胁、羞辱或骚扰他人的行为", "collocations": ["experience online harassment", "prevent online harassment"], "sentence": "Private profiles do not always protect users from online harassment."},
+    {"word": "cyberbullying", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "利用电子媒介反复攻击难以保护自己的对象", "collocations": ["victim of cyberbullying", "prevent cyberbullying"], "sentence": "Cyberbullying can continue beyond school and reach a large online audience."},
+    {"word": "cybercrime", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "利用计算机、网络或数字身份实施的犯罪", "collocations": ["risk of cybercrime", "combat cybercrime"], "sentence": "Fake accounts may be used for fraud and other forms of cybercrime."},
+    {"word": "fake identity", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "为欺骗、隐瞒或操纵而创建的虚假线上身份", "collocations": ["create a fake identity", "fall for a fake identity"], "sentence": "A fake identity can make users trust someone they have never met."},
+    {"word": "social media addiction", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "对社交媒体形成难以控制并造成损害的持续使用模式", "collocations": ["signs of social media addiction"], "sentence": "Social media addiction may interfere with sleep, study, and relationships."},
+    {"word": "compulsive use", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "即使不符合个人目标仍难以停止的重复使用", "collocations": ["compulsive social media use"], "sentence": "Fear of missing out can encourage compulsive use of social media."},
+    {"word": "screen time", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "使用手机、电脑等屏幕设备的时间", "collocations": ["limit screen time", "daily screen time"], "sentence": "Screen time alone does not reveal what users are doing online."},
+    {"word": "digital footprint", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "个人在线活动留下的可追踪数据记录", "collocations": ["leave a digital footprint", "manage a digital footprint"], "sentence": "Posts and searches can create a lasting digital footprint."},
+    {"word": "platform regulation", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "政府或机构对平台数据、设计和内容责任的规则", "collocations": ["strengthen platform regulation"], "sentence": "Platform regulation may require companies to explain how their systems affect users."},
+    {"word": "algorithmic recommendation", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "系统根据数据预测并推送用户可能关注的内容", "collocations": ["algorithmic recommendation system"], "sentence": "Algorithmic recommendation can amplify engaging but misleading content."},
+    {"word": "psychological well-being", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "包含情绪、生活满意度和心理功能的整体健康状态", "collocations": ["affect psychological well-being"], "sentence": "The effect of social media on psychological well-being varies across users and activities."},
+    {"word": "mental health", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "与情绪、认知和社会功能有关的心理健康状态", "collocations": ["mental health outcome", "protect mental health"], "sentence": "Researchers disagree about the average effect of social media on mental health."},
+    {"word": "self-presentation", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "选择并管理自己向他人展示何种形象的过程", "collocations": ["online self-presentation", "manage self-presentation"], "sentence": "Social media makes selective self-presentation easier than many offline settings."},
+    {"word": "impression management", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "主动影响他人如何看待自己的行为", "collocations": ["engage in impression management"], "sentence": "Impression management can improve confidence but also create pressure to appear perfect."},
+    {"word": "social comparison", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "通过与他人比较来判断自身表现或处境的过程", "collocations": ["make a social comparison", "social comparison process"], "sentence": "Social comparison can shape how users evaluate their own lives."},
+    {"word": "upward social comparison", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "把自己与看起来表现更好的人比较", "collocations": ["engage in upward social comparison"], "sentence": "Upward social comparison may increase envy and dissatisfaction."},
+    {"word": "self-esteem", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "个人对自身价值和能力的总体评价", "collocations": ["low self-esteem", "increase self-esteem"], "sentence": "Viewing one's own profile may temporarily increase self-esteem."},
+    {"word": "body image dissatisfaction", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "对自己身体外貌产生持续不满的状态", "collocations": ["experience body image dissatisfaction"], "sentence": "Idealised images may contribute to body image dissatisfaction among some users."},
+    {"word": "anxiety", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "持续担忧、紧张或不安的心理状态", "collocations": ["social anxiety", "increase anxiety"], "sentence": "Constant feedback and comparison may increase anxiety for vulnerable users."},
+    {"word": "depression", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "以持续低落、兴趣下降等为特征的心理健康状况", "collocations": ["symptoms of depression", "risk of depression"], "sentence": "A reported association with depression does not establish that social media caused it."},
+    {"word": "suicidality", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "与自杀想法、计划或行为有关的风险状态", "collocations": ["increased suicidality", "measure suicidality"], "sentence": "Claims about suicidality require careful evidence and should not be overstated."},
+    {"word": "active social media use", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "发布、交流或直接与他人互动的社交媒体使用", "collocations": ["engage in active social media use"], "sentence": "Active social media use may provide support when it involves meaningful interaction."},
+    {"word": "passive social media use", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "主要浏览他人内容而较少直接互动的使用方式", "collocations": ["passive social media use"], "sentence": "Passive social media use can have different effects depending on what users view."},
+    {"word": "perceived social support", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "相信需要时能够得到他人帮助的主观感受", "collocations": ["increase perceived social support"], "sentence": "Online interaction may increase perceived social support even without immediate practical help."},
+    {"word": "emotional support", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "通过关心、理解和安慰帮助他人处理情绪", "collocations": ["provide emotional support"], "sentence": "Private online groups can provide emotional support during difficult periods."},
+    {"word": "moral outrage", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "面对被认为违反道德的行为时产生的愤怒与震惊", "collocations": ["express moral outrage", "amplify moral outrage"], "sentence": "Platforms may amplify moral outrage because highly emotional posts attract attention."},
+    {"word": "trolling", "collection": "LN905 Social Media", "topics": ["social-media"], "meaning": "故意发布煽动性内容以激怒他人或制造冲突", "collocations": ["online trolling", "respond to trolling"], "sentence": "Trolling can turn a discussion into personal conflict."},
+    {"word": "gender stereotype", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "关于不同 gender 通常怎样或应该怎样的概括性信念", "collocations": ["reinforce a gender stereotype", "challenge gender stereotypes"], "sentence": "A gender stereotype can describe expected behaviour and also prescribe it."},
+    {"word": "gender equality", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "不同 gender 在权利、机会和待遇上的平等", "collocations": ["promote gender equality", "barrier to gender equality"], "sentence": "Gender equality benefits individuals, families, organisations, and societies."},
+    {"word": "gender inequality", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "不同 gender 在资源、权力、机会或待遇上的系统性不平等", "collocations": ["reduce gender inequality", "persistent gender inequality"], "sentence": "Invisible privilege can make gender inequality harder to recognise."},
+    {"word": "feminism", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "主张不同 gender 在社会、政治和经济上平等的理念与行动", "collocations": ["define feminism", "support feminism"], "sentence": "The speaker defines feminism as a commitment to gender equality."},
+    {"word": "feminist", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "支持或倡导 gender equality 的人或立场", "collocations": ["identify as a feminist", "feminist movement"], "sentence": "Stereotypes about a feminist can discourage people from using the label."},
+    {"word": "masculinity", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "社会与文化中被视为男性化的特征和行为规范", "collocations": ["rigid masculinity", "perform masculinity"], "sentence": "Rigid masculinity can pressure boys to hide vulnerability."},
+    {"word": "femininity", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "社会与文化中被视为女性化的特征和行为规范", "collocations": ["traditional femininity", "expectations of femininity"], "sentence": "Expectations of femininity may reward warmth while discouraging authority."},
+    {"word": "gender role", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "社会依据 gender 分配的行为、责任和身份期待", "collocations": ["traditional gender role", "change gender roles"], "sentence": "Changing family roles do not always remove traditional gender roles."},
+    {"word": "social norm", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "群体对何种行为正常、可接受或应当发生的共同期待", "collocations": ["challenge a social norm", "powerful social norms"], "sentence": "A social norm can influence behaviour even without a formal rule."},
+    {"word": "male privilege", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "男性因社会结构而通常无需主动争取便获得的优势", "collocations": ["recognise male privilege", "invisible male privilege"], "sentence": "Male privilege may remain invisible to those who benefit from it."},
+    {"word": "descriptive stereotype", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "关于某个 gender 通常具有什么特征的描述性信念", "collocations": ["descriptive gender stereotype"], "sentence": "A descriptive stereotype claims that women are more caring than men."},
+    {"word": "prescriptive stereotype", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "关于某个 gender 应当如何表现的规范性要求", "collocations": ["prescriptive gender stereotype"], "sentence": "A prescriptive stereotype tells people how they should behave."},
+    {"word": "implicit bias", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "在未被清楚意识到时自动影响判断和行为的偏见", "collocations": ["measure implicit bias", "reduce implicit bias"], "sentence": "Implicit bias can affect hiring even when people support equality."},
+    {"word": "unconscious bias", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "个人未自觉察觉但会影响决定的刻板联想或偏见", "collocations": ["unconscious gender bias", "bias training"], "sentence": "Unconscious bias may shape which candidates are seen as leadership material."},
+    {"word": "discrimination", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "依据身份特征给予不平等或不利待遇", "collocations": ["gender discrimination", "experience discrimination"], "sentence": "Discrimination can persist through informal decisions as well as formal rules."},
+    {"word": "anti-discrimination", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "旨在防止或纠正基于身份的不平等待遇", "collocations": ["anti-discrimination policy", "anti-discrimination training"], "sentence": "Anti-discrimination training may fail if organisational incentives remain unchanged."},
+    {"word": "occupational segregation", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "不同 gender 集中在不同职业、岗位或等级的现象", "collocations": ["gender-based occupational segregation"], "sentence": "Occupational segregation contributes to persistent differences in pay and status."},
+    {"word": "gender quota", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "要求某组织或职位达到特定 gender representation 的制度", "collocations": ["mandatory gender quota", "introduce a gender quota"], "sentence": "A gender quota can increase representation without automatically changing workplace culture."},
+    {"word": "female representation", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "女性在组织、职业或决策职位中的参与比例", "collocations": ["increase female representation"], "sentence": "Female representation on boards does not by itself prove wider workplace equality."},
+    {"word": "backlash", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "对违反 gender expectations 或平等改革者的负面反应和惩罚", "collocations": ["face backlash", "backlash against equality"], "sentence": "Backlash can discourage people from behaving counter to gender expectations."},
+    {"word": "confirmation bias", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "更容易注意和接受符合既有信念的信息而忽视反例", "collocations": ["reinforce confirmation bias"], "sentence": "Confirmation bias makes stereotype-consistent examples easier to remember."},
+    {"word": "essentialist thinking", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "把群体差异视为天生、固定且不可改变的思维方式", "collocations": ["biological essentialist thinking"], "sentence": "Essentialist thinking treats social differences as natural and permanent."},
+    {"word": "cultural lag", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "社会信念和规范变化慢于现实角色或制度变化", "collocations": ["explain through cultural lag"], "sentence": "Cultural lag may explain why stereotypes persist after work and family roles change."},
+    {"word": "status quo", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "当前既有的权力关系、规则或社会安排", "collocations": ["challenge the status quo", "maintain the status quo"], "sentence": "People who benefit from the status quo may resist equality policies."},
+    {"word": "self-efficacy", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "个人相信自己能够完成某项任务或应对情境的程度", "collocations": ["perceived self-efficacy", "reduce self-efficacy"], "sentence": "Stereotype-inconsistent roles can reduce perceived self-efficacy."},
+    {"word": "counter-stereotypical", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "与普遍 gender stereotype 不一致的特征或行为", "collocations": ["counter-stereotypical choice", "counter-stereotypical behaviour"], "sentence": "Counter-stereotypical behaviour may attract social penalties."},
+    {"word": "agency", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "自主行动、影响结果和实现目标的能力或特质", "collocations": ["display agency", "individual agency"], "sentence": "Leadership stereotypes often associate agency more strongly with men."},
+    {"word": "communality", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "关怀、合作并维持关系的倾向或特质", "collocations": ["expectations of communality"], "sentence": "Women are often expected to display communality in professional settings."},
+    {"word": "egalitarian", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "支持权利、机会和地位平等的", "collocations": ["egalitarian values", "egalitarian society"], "sentence": "Egalitarian beliefs do not always remove implicit gender expectations."},
+    {"word": "binary categorisation", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "把复杂差异划分为两个互相对立类别的分类方式", "collocations": ["binary gender categorisation"], "sentence": "Binary categorisation can exaggerate differences between men and women."},
+    {"word": "gender salience", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "gender 在某情境中变得特别显眼并影响判断的程度", "collocations": ["increase gender salience"], "sentence": "Gender salience can make people interpret behaviour through stereotypes."},
+    {"word": "polarisation", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "观点、群体或类别被推向更明显对立的过程", "collocations": ["gender polarisation", "increase polarisation"], "sentence": "Repeated comparison can increase polarisation between gender categories."},
+    {"word": "conform to expectations", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "按照社会或群体对身份角色的要求调整行为", "collocations": ["pressure to conform to expectations"], "sentence": "Fear of punishment can make individuals conform to gender expectations."},
+    {"word": "stereotype threat", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "担心证实负面刻板印象而影响表现的心理压力", "collocations": ["experience stereotype threat"], "sentence": "Stereotype threat can reduce performance even when ability is unchanged."},
+    {"word": "benevolent sexism", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "以保护、赞美或传统礼貌形式表达但仍限制女性角色的性别偏见", "collocations": ["benevolent sexist belief"], "sentence": "Benevolent sexism appears positive but can reinforce dependency and traditional roles."},
+    {"word": "leadership", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "引导群体、作出决定并承担责任的角色或能力", "collocations": ["leadership position", "leadership stereotype"], "sentence": "Historical male dominance still shapes expectations about leadership."},
+    {"word": "caregiving", "collection": "LN905 Gender", "topics": ["gender"], "meaning": "照顾儿童、老人或其他需要支持者的劳动与责任", "collocations": ["unpaid caregiving", "share caregiving responsibilities"], "sentence": "Unequal caregiving responsibilities can restrict women's career opportunities."},
+    {"word": "population growth", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "一定时期内人口总量增加的过程", "collocations": ["rapid population growth", "slow population growth"], "sentence": "Rapid population growth can strain housing, education, and health services."},
+    {"word": "population explosion", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "对人口在较短时期快速增长的强调性说法", "collocations": ["fear of a population explosion"], "sentence": "Earlier debates treated a population explosion as the main demographic threat."},
+    {"word": "population collapse", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "人口因长期低生育或其他因素快速、持续收缩", "collocations": ["risk of population collapse"], "sentence": "Some countries now worry more about population collapse than overpopulation."},
+    {"word": "birth rate", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "一定时期和人口规模中的出生频率", "collocations": ["declining birth rate", "raise the birth rate"], "sentence": "A declining birth rate changes the future age structure of a population."},
+    {"word": "mortality rate", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "一定时期和人口规模中的死亡频率", "collocations": ["reduce the mortality rate", "age-specific mortality rate"], "sentence": "Lower mortality rates allow more people to survive into old age."},
+    {"word": "life expectancy", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "按当前死亡水平估计一个人平均可存活的年数", "collocations": ["rising life expectancy", "average life expectancy"], "sentence": "Rising life expectancy increases the number of years many people spend in retirement."},
+    {"word": "ageing population", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "老年人口占比上升、人口年龄结构整体变老的人群", "collocations": ["rapidly ageing population"], "sentence": "An ageing population raises questions about care, work, and public provision."},
+    {"word": "population ageing", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "人口年龄结构中老年人口比重持续上升的过程", "collocations": ["pace of population ageing"], "sentence": "Population ageing results from lower fertility and longer lives."},
+    {"word": "age structure", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "一个人口中不同年龄组的数量和比例构成", "collocations": ["changing age structure", "population age structure"], "sentence": "The same population size can create different challenges depending on its age structure."},
+    {"word": "dependency ratio", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "通常用非工作年龄人口与工作年龄人口之比衡量潜在供养负担", "collocations": ["total dependency ratio", "rising dependency ratio"], "sentence": "The dependency ratio should be interpreted alongside productivity and labour participation."},
+    {"word": "old-age dependency ratio", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "老年人口相对于工作年龄人口的比例", "collocations": ["higher old-age dependency ratio"], "sentence": "A rising old-age dependency ratio does not measure worker productivity."},
+    {"word": "youth dependency ratio", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "儿童和青年人口相对于工作年龄人口的比例", "collocations": ["falling youth dependency ratio"], "sentence": "A falling youth dependency ratio can partly offset the cost of population ageing."},
+    {"word": "working-age population", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "通常被统计为具备劳动年龄的人口", "collocations": ["shrinking working-age population"], "sentence": "A shrinking working-age population may create labour shortages."},
+    {"word": "labour force", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "正在就业或积极寻找工作的人员总和", "collocations": ["enter the labour force", "labour-force shortage"], "sentence": "Immigration can increase the labour force even when the domestic population ages."},
+    {"word": "worker productivity", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "每名劳动者在一定时间内创造产品或服务的能力", "collocations": ["increase worker productivity"], "sentence": "Higher worker productivity may offset a lower number of workers per retiree."},
+    {"word": "retirement age", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "个人通常或依法退出全职工作的年龄", "collocations": ["raise the retirement age", "statutory retirement age"], "sentence": "Raising the retirement age is one proposed response to longer life expectancy."},
+    {"word": "pension system", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "在退休后向个人提供定期收入的公共或私人制度", "collocations": ["public pension system", "reform the pension system"], "sentence": "A pension system depends on policy choices as well as demographic trends."},
+    {"word": "Social Security", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "美国为退休者等群体提供收入保障的公共项目", "collocations": ["Social Security benefits", "Social Security system"], "sentence": "The article questions whether Social Security should be framed only as a financial problem."},
+    {"word": "health-care costs", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "个人或社会为医疗服务承担的支出", "collocations": ["rising health-care costs"], "sentence": "Population ageing may increase health-care costs, but the effect depends on health and policy."},
+    {"word": "elder care", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "为老年人提供的日常照顾、医疗和社会支持", "collocations": ["provide elder care", "elder-care services"], "sentence": "Cuts to public elder care can shift the burden onto families."},
+    {"word": "longevity", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "个人或人群寿命较长的状态和趋势", "collocations": ["rising longevity", "increase longevity"], "sentence": "Rising longevity is an achievement as well as a policy challenge."},
+    {"word": "demographic transition", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "社会从高出生高死亡逐步转向低出生低死亡的人口变化过程", "collocations": ["complete the demographic transition"], "sentence": "The demographic transition changes both population growth and age structure."},
+    {"word": "population momentum", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "即使生育率改变，既有年龄结构仍使人口继续增长或收缩的惯性", "collocations": ["positive population momentum"], "sentence": "Population momentum can sustain growth after fertility begins to fall."},
+    {"word": "replacement-level fertility", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "在没有迁移时使一代人口数量大致替代上一代的生育水平", "collocations": ["below replacement-level fertility"], "sentence": "Persistent below replacement-level fertility can eventually reduce population size."},
+    {"word": "total fertility rate", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "按当前各年龄生育率估计一名女性一生平均生育子女数", "collocations": ["low total fertility rate"], "sentence": "The total fertility rate is a period estimate rather than a certain prediction of family size."},
+    {"word": "one-child policy", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "中国过去长期限制多数家庭生育一个孩子的人口政策", "collocations": ["legacy of the one-child policy"], "sentence": "The one-child policy contributed to China's rapid change in age structure."},
+    {"word": "family planning", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "帮助个人自主决定生育时间和子女数量的服务与措施", "collocations": ["voluntary family planning", "access to family planning"], "sentence": "Voluntary family planning can reduce unintended pregnancies while protecting reproductive choice."},
+    {"word": "sterilisation", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "通过医疗程序永久阻止生育的做法", "collocations": ["sterilisation programme", "forced sterilisation"], "sentence": "Population policy involving sterilisation raises serious questions about consent."},
+    {"word": "immigration", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "人员进入另一个国家或地区长期居住的过程", "collocations": ["increase immigration", "immigration policy"], "sentence": "Immigration can slow workforce decline but does not remove all ageing pressures."},
+    {"word": "labour-force participation", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "工作年龄人口中就业或积极求职者所占比例", "collocations": ["raise labour-force participation"], "sentence": "Higher labour-force participation can increase the number of workers without changing population size."},
+    {"word": "resource scarcity", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "可用食物、水、能源或其他资源相对需求不足", "collocations": ["fear of resource scarcity"], "sentence": "Claims about resource scarcity depend on consumption, technology, and distribution."},
+    {"word": "food security", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "所有人都能稳定获得足够、安全且有营养食物的状态", "collocations": ["threaten food security", "improve food security"], "sentence": "Population growth can affect food security, but production and access also matter."},
+    {"word": "human capital", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "人口拥有的教育、技能、知识和健康能力", "collocations": ["invest in human capital"], "sentence": "Investment in human capital can raise productivity in an ageing society."},
+    {"word": "demographic time bomb", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "把人口老龄化或收缩描述为未来突然爆发危机的修辞框架", "collocations": ["warning of a demographic time bomb"], "sentence": "The phrase demographic time bomb may exaggerate a gradual and manageable change."},
+    {"word": "silver tsunami", "collection": "LN905 Demographics", "topics": ["demographics"], "meaning": "把大量人口进入老年比作席卷社会浪潮的强调性说法", "collocations": ["describe ageing as a silver tsunami"], "sentence": "Calling ageing a silver tsunami frames older people mainly as a burden."},
+    {"word": "climate change", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "全球或区域气候模式在较长时期发生的显著变化，当前主要由人为温室气体排放推动", "collocations": ["address climate change", "impacts of climate change"], "sentence": "Climate change affects agriculture, health, economies, and natural systems."},
+    {"word": "climate crisis", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "强调气候变化已经造成严重且紧迫风险的表达", "collocations": ["respond to the climate crisis"], "sentence": "The term climate crisis creates a stronger sense of urgency than climate change."},
+    {"word": "climate catastrophe", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "强调若行动失败可能出现极端破坏性后果的表达", "collocations": ["avoid climate catastrophe"], "sentence": "Climate catastrophe is emotionally stronger and less neutral than climate change."},
+    {"word": "climate emergency", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "把气候问题框定为需要立即行动的紧急状态", "collocations": ["declare a climate emergency"], "sentence": "Declaring a climate emergency signals that ordinary policy responses are insufficient."},
+    {"word": "global warming", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "地球平均表面温度长期上升的过程", "collocations": ["limit global warming", "human-caused global warming"], "sentence": "Global warming is one central component of wider climate change."},
+    {"word": "global heating", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "比 global warming 更强调持续升温及其危险性的表达", "collocations": ["accelerating global heating"], "sentence": "Some communicators prefer global heating because it sounds more urgent."},
+    {"word": "carbon emissions", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "人类活动释放到大气中的二氧化碳等含碳排放", "collocations": ["cut carbon emissions", "rising carbon emissions"], "sentence": "Cutting carbon emissions requires changes in energy, transport, and land use."},
+    {"word": "greenhouse-gas emissions", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "释放二氧化碳、甲烷等会增强温室效应气体的排放", "collocations": ["reduce greenhouse-gas emissions"], "sentence": "Greenhouse-gas emissions include more than carbon dioxide alone."},
+    {"word": "fossil-fuel emissions", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "燃烧煤、石油和天然气产生的温室气体排放", "collocations": ["historical fossil-fuel emissions"], "sentence": "A large share of historical fossil-fuel emissions has been produced in recent decades."},
+    {"word": "fossil fuels", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "由远古有机物形成的煤、石油和天然气能源", "collocations": ["burn fossil fuels", "phase out fossil fuels"], "sentence": "Burning fossil fuels is the main source of human carbon dioxide emissions."},
+    {"word": "renewable energy", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "来自太阳、风、水等可自然补充来源的能源", "collocations": ["invest in renewable energy", "renewable energy source"], "sentence": "Renewable energy can replace part of a fossil-fuel-based energy system."},
+    {"word": "atmosphere", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "包围地球并影响天气和气候的气体层", "collocations": ["release into the atmosphere"], "sentence": "Greenhouse gases accumulate in the atmosphere and trap additional heat."},
+    {"word": "mitigation", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "通过减排或增强吸收来限制气候变化程度的行动", "collocations": ["climate mitigation", "mitigation policy"], "sentence": "Mitigation aims to reduce future warming by cutting emissions."},
+    {"word": "adaptation", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "调整社会或自然系统以降低已经发生或预期气候影响的损害", "collocations": ["climate adaptation", "adaptation strategy"], "sentence": "Adaptation can reduce harm from floods and heatwaves but cannot replace mitigation."},
+    {"word": "net zero", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "人为温室气体排放与人为移除在总体上达到平衡", "collocations": ["reach net zero", "net-zero target"], "sentence": "A credible net-zero target requires real emissions cuts as well as limited removals."},
+    {"word": "carbon pricing", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "通过税或市场机制给温室气体排放设定价格", "collocations": ["introduce carbon pricing"], "sentence": "Carbon pricing aims to make high-emission choices more costly."},
+    {"word": "carbon tax", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "根据燃料或活动产生的碳排放征收的税", "collocations": ["impose a carbon tax", "carbon-tax revenue"], "sentence": "A carbon tax can encourage low-carbon behaviour but may affect groups unequally."},
+    {"word": "emission cuts", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "相对于既有水平减少温室气体排放", "collocations": ["deep emission cuts", "deliver emission cuts"], "sentence": "Offsets cannot substitute for sustained emission cuts."},
+    {"word": "climate risk", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "气候影响或转型变化给社会、生态与资产带来的潜在损失", "collocations": ["manage climate risk", "disclose climate risk"], "sentence": "Financial institutions need comparable information about climate risk."},
+    {"word": "climate resilience", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "系统承受、适应并从气候冲击中恢复的能力", "collocations": ["build climate resilience"], "sentence": "Climate resilience requires infrastructure, planning, and support for vulnerable communities."},
+    {"word": "biodiversity", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "基因、物种和生态系统层面的生命多样性", "collocations": ["protect biodiversity", "biodiversity loss"], "sentence": "Climate change and land-use change both threaten biodiversity."},
+    {"word": "natural disaster", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "由自然危险事件与社会脆弱性共同造成的严重破坏", "collocations": ["risk of natural disasters"], "sentence": "Climate change can increase the frequency or severity of some natural disasters."},
+    {"word": "extreme weather", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "明显偏离某地通常范围的强烈天气事件", "collocations": ["extreme weather event", "increase extreme weather"], "sentence": "Extreme weather can make climate risks more visible to the public."},
+    {"word": "climate justice", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "关注气候责任、损害与转型成本如何在不同群体之间公平分配", "collocations": ["climate-justice funding", "principle of climate justice"], "sentence": "Climate justice asks who caused the problem and who bears its greatest costs."},
+    {"word": "just transition", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "在低碳转型中保护劳动者、社区和弱势群体的公平过程", "collocations": ["support a just transition"], "sentence": "A just transition helps workers and regions adapt to the decline of fossil-fuel industries."},
+    {"word": "public engagement", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "公众理解、讨论并参与气候问题与行动的过程", "collocations": ["increase public engagement"], "sentence": "Effective framing can increase public engagement with climate policy."},
+    {"word": "scientific consensus", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "相关领域专家基于证据形成的高度共同判断", "collocations": ["highlight the scientific consensus"], "sentence": "The scientific consensus is that human emissions are altering the climate."},
+    {"word": "scientific agreement", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "科学家对某项结论存在的共同认可程度", "collocations": ["level of scientific agreement"], "sentence": "The public often underestimates the level of scientific agreement on climate change."},
+    {"word": "climate sceptic", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "对气候结论或政策表示怀疑的人；语气通常弱于 denier", "collocations": ["self-described climate sceptic"], "sentence": "The label climate sceptic can imply doubt rather than outright rejection."},
+    {"word": "climate denier", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "拒绝充分证据支持的人为气候变化结论的人", "collocations": ["prominent climate denier"], "sentence": "Calling someone a climate denier is stronger than calling them a sceptic."},
+    {"word": "climate denial", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "因政治、身份或其他动机拒绝气候科学证据的现象", "collocations": ["drivers of climate denial"], "sentence": "Climate denial is associated with worldviews and elite political cues."},
+    {"word": "climate misinformation", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "关于气候问题的错误信息，不一定包含故意欺骗", "collocations": ["spread climate misinformation", "counter climate misinformation"], "sentence": "Climate misinformation can reduce public acceptance of effective policies."},
+    {"word": "climate disinformation", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "为误导公众而故意制造或传播的错误气候信息", "collocations": ["organised climate disinformation"], "sentence": "Climate disinformation has been used to delay political action."},
+    {"word": "conspiracy thinking", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "倾向于用秘密协调的恶意集团解释重大事件的思维方式", "collocations": ["conspiracy thinking about climate science"], "sentence": "Conspiracy thinking can make corrective information less persuasive."},
+    {"word": "elite cues", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "政治或社会精英向公众传递的立场信号", "collocations": ["follow elite cues", "partisan elite cues"], "sentence": "Elite cues can shape public acceptance of climate science."},
+    {"word": "political polarisation", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "政治群体在观点和身份上逐渐形成更强对立", "collocations": ["increase political polarisation"], "sentence": "Political polarisation can turn climate evidence into an identity conflict."},
+    {"word": "inoculation", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "在接触误导信息前先揭示其操纵手法以建立抵抗力的传播策略", "collocations": ["inoculation against misinformation"], "sentence": "Inoculation warns audiences about misleading techniques before they encounter a false claim."},
+    {"word": "debunking", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "在错误信息出现后用证据和解释进行澄清反驳", "collocations": ["effective debunking", "debunking technique"], "sentence": "Effective debunking explains both why a claim is false and what is true instead."},
+    {"word": "culturally aligned message", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "与目标受众价值观和身份不直接冲突的传播信息", "collocations": ["use a culturally aligned message"], "sentence": "A culturally aligned message may reach audiences who distrust the usual messenger."},
+    {"word": "gain frame", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "强调采取行动能够获得哪些益处的表达框架", "collocations": ["use a gain frame"], "sentence": "A gain frame may be effective when encouraging climate mitigation."},
+    {"word": "loss frame", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "强调不行动将失去什么或遭受何种损害的表达框架", "collocations": ["use a loss frame"], "sentence": "A loss frame can make adaptation risks feel more immediate."},
+    {"word": "collective action", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "由群体、机构或社会共同协调实施的行动", "collocations": ["mobilise collective action"], "sentence": "Collective action is necessary when emissions result from shared systems."},
+    {"word": "individual action", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "个人通过消费、出行、投票或倡议采取的气候行动", "collocations": ["encourage individual action"], "sentence": "Individual action matters but cannot replace institutional change."},
+    {"word": "greenwashing", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "通过误导性宣传让产品或组织显得比实际更环保", "collocations": ["accusation of greenwashing", "prevent greenwashing"], "sentence": "Comparable climate reporting can make greenwashing more difficult."},
+    {"word": "nature-based solutions", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "通过保护、恢复或管理生态系统应对气候与社会问题的措施", "collocations": ["invest in nature-based solutions"], "sentence": "Nature-based solutions can store carbon but require safeguards for integrity and communities."}
   ]
 }
 ```
@@ -601,4 +801,6 @@ neath_sync: synced
 ## 维护记录
 
 - 2026-08-13：完成 Weeks 1–3 初次回溯；迁移 legacy `EP-01` → `AW-15`、`W-01` → `AW-16`；Week 4 保持未激活。
-- 2026-08-13：首次建立 Academic Core、Social Media、Gender、Demographics 词汇清单；Climate Change 仅保留空集合。
+- 2026-08-13：首次建立 Academic Core、Social Media、Gender、Demographics 词汇清单。
+- 2026-08-13：用户确认 Week 5 考试只从四个 topic 出题；按过线优先策略把五个词书扩展为约 230 条高价值词汇，并提前启用 Climate Change 词汇。
+- 2026-08-13：普通练习改为四话题内 Paper A/B 端到端 unit；旧短练退役，技能继续分层记录但不再产生独立 checkbox。

@@ -21,12 +21,24 @@
             "id": "3e4f2421442c1126",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-2-Gender/Academic Interaction - Gender.pdf"
+                "file": "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "Academic Interaction - Gender"
+              "icon": "lucide-file",
+              "title": "2026-08-11-demographics-comprehension"
             }
           }
         ],
@@ -142,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00_inbox/随手记.md",
+                "file": "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -288,7 +300,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 829.543701171875
+    "width": 829.543701171875,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -313,10 +326,12 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "30f6502409000f89",
+  "active": "3e4f2421442c1126",
   "lastOpenFiles": [
-    "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-2-Gender/Academic Interaction - Gender.pdf",
+    "99_学习情况记录/2026-08-13——Thu.md",
+    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension.md",
     "00_inbox/随手记.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-2-Gender/Academic Interaction - Gender.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-4-Climate-Change/Thinking about climate change look up and look around.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-4-Climate-Change/Academic Interaction - Climate Change.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Academic Interaction Roles.pdf",
@@ -326,20 +341,17 @@
     "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/2-minute-presentations/Week One_LN905.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Discussion Language - 12 Functions.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Practice of Part 3.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Presentation Guide - Timestamped Transcript.pdf",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
     "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
     "99_学习情况记录/2026-08-12——Wed.md",
     "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md",
     "99_学习情况记录/teach/LN905 Skill Bank.md",
-    "99_学习情况记录/2026-08-13——Thu.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/00_文章梗概索引.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/01 Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/02 Khandani et al. (2010) - Consumer credit-risk ML models.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/Chinese Drafts/02 Khandani et al. (2010) - 中文 annotation.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/Chinese Drafts/01 Lessmann et al. (2015) - 中文 annotation.md",
-    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension.md",
     "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-12-demographics-evidence.md",
     "tmp/pdfs/ln905-official-sample/plain/page-3.png",
     "tmp/pdfs/ln905-official-sample/plain/page-2.png",

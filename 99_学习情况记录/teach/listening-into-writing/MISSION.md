@@ -19,7 +19,8 @@ Listening 的独立难点到“把时间流中的讲座还原成可用的 meanin
 - 在 40 分钟内完成 200–400 词的 critical summary；内容准确、覆盖关键点、主要用自己的表达，并整合至少一处有依据的评价。
 
 ## Constraints
-- 当前课堂测试感觉非常吃力，需要优先采用短时、高反馈但能接回完整流程的练习，而不是每天完整模考。
+- 普通 guided unit 必须从完整 listening 走到完整 critical summary 与整篇反馈/修订；可以跨天，并由 AI 每轮提供短时高反馈教学，但 map、句型或 evaluation 不单独成任务或完成状态。
+- learner-facing 材料只使用 Social Media、Gender、Demographics、Climate Change。
 - 正式任务不能依赖暂停、回放或边听边看 transcript。
 - Guided teaching 可在首轮粗笔记后使用 transcript 教学；完整模拟与正式任务在计时结束前不得使用 transcript 或 AI。
 

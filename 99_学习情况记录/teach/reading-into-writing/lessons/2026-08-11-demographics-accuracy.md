@@ -5,7 +5,7 @@ tags:
   - learning/reading-into-writing
 date: 2026-08-11
 mode: guided-teaching
-status: active
+status: retired
 ---
 
 # Demographics top-down paragraph
@@ -622,4 +622,31 @@ Shared Writing：全局层级已理解；当前进入本次缩小的 `question �
 **内部继续判断**
 
 继续同一 Shared Writing part；等待三行 plan。下一轮只判断 answer 是否回应 why、paragraph function 是否服务 answer、evidence roles 是否明确。逻辑可用即进入 4–6 句成段；不恢复 source summary，不标记完成，不推进其他 part。
+
+### 2026-08-13T16:01:45+01:00
+
+**学习者原始输入**
+
+direct answer: That is because the birth rate still remain higher than the natural birth rate.
+this paragraph must prove: birth rate still too high
+evidence roles: the decline of fertility rate in Africa getting slower.
+
+**AI 教学或反馈**
+
+- `direct answer` 已采用 `because` 直接回应 why，方向正确；但 `natural birth rate` 不是已显示材料的 proposition，也没有一个已给定的“自然出生率”阈值可供比较，因此当前答案加入了 evidence 不能证明的标准。
+- `this paragraph must prove: birth rate still too high` 大致服务于 answer，但 `too high` 只是强度判断，没有写出必须建立的关系：这种 fertility pattern 怎样使人口增长在本世纪继续。
+- `evidence roles` 中选择的“Africa fertility decline 最近放缓”是可用 proposition，但尚未分配 role，而且它只能解释 fertility 为什么会更久地保持，不能单独证明“高于 natural birth rate”。
+- 用关系线索而非代写修正：`Africa 较高 fertility` 可作 **support**；`fertility decline 放缓` 可作 **explanation**；两者都应服务同一个“为什么增长将持续”的答案，不必引入材料没有给定的阈值。
+
+**当前能力地图位置**
+
+Shared Writing `question → direct answer → paragraph function → evidence roles`；当前在校准三者是否建立同一条因果链，尚未进入 prose。
+
+**下一个有意义动作**
+
+重写同一个三行 plan：删除无材料依据的 `natural birth rate`；让 answer 直接说明 fertility pattern 为什么导致本世纪增长持续；让 paragraph function 写出需证明的关系；将选中 propositions 明确标为 support 或 explanation。
+
+**内部继续判断**
+
+继续同一 principal，不进入正文。当前 plan 回应了 why，但 answer 引入未被 evidence 支持的阈值，paragraph function 没有建立持续增长的因果关系，evidence 也没有明确 role，因此尚未对齐。等待修订后再只检查三项 alignment；不标记完成，不编辑 Skill Bank，不推进其他 part。
 <!-- student-os:learning-log:end -->

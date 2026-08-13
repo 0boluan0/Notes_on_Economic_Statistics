@@ -5,7 +5,7 @@ tags:
   - learning/listening-into-writing
 date: 2026-08-13
 mode: guided-teaching
-status: active
+status: retired
 ---
 
 # Demographics top-down critical summary

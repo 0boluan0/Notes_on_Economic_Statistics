@@ -19,8 +19,8 @@ Reading 的独立难点到“把多篇 extracts 还原成可用的 meaning/evide
 - 在两小时内完成约 600 词的 essay；正文由自己的 points 驱动，准确选择、转述并综合多份文本，写清材料怎样共同支撑、解释、限定或挑战论点。
 
 ## Constraints
-- 当前课堂测试主观感受很差，需要先定位是审题、选材、synthesis、结构、paraphrasing 还是语言速度造成的。
-- 普通教学按真实输出与教师反馈选择当日最高价值瓶颈；完整模拟仍保留无帮助的考试条件。
+- 普通 guided unit 必须从正式量级三 extracts 走到完整 essay 与整篇反馈/修订；可以跨天，并由 AI 在当前瓶颈增加教学，但 map、句型或 synthesis 不单独成任务或完成状态。
+- learner-facing 材料只使用 Social Media、Gender、Demographics、Climate Change；完整模拟仍保留无帮助的考试条件。
 
 ## Out of scope
 - Listening 的讲座信息获取继续保留在独立学习项目中；map 之后复用同一套 Writing 方法。

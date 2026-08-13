@@ -13,6 +13,9 @@ source_checked: 2026-08-11
 > [!summary] 这门训练最终要让我会什么
 > Listening 和 Reading 只是两种获取信息的入口。信息被整理成可用的 meaning/evidence map 后，后面的选材、判断、结构、论证、英文实现和检查共用同一棵 Writing 技能树。每天依据最近的真实输出选择当前瓶颈，不固定轮流练两个入口，也不能把练习变成无限纠正同一句话。
 
+> [!important] 当前考试沙盒与训练单位
+> 新的 learner-facing 材料、示范、callback 和模拟只使用 **Social Media、Gender、Demographics、Climate Change**。每个普通练习都是一条完整 Paper A 或 Paper B 链，可以跨天，但从输入一直走到完整成品和整篇反馈/修订后才完成；map、plan、句型和 evaluation 只是在同一条链中的教学节点，不再单独结算。
+
 ## 课件定义的终点
 
 | | Paper A｜Listening into Writing | Paper B｜Reading into Writing |
@@ -131,25 +134,16 @@ AI 在要求任何动作前，必须用普通人能理解的方式讲清：
 - 材料太多：只保留能支撑、改变或限定 thesis/paragraph claim 的内容。
 - 来不及：先完成所有段落的判断与 conclusion，不在单句上反复打磨。
 
-## 每天的训练怎样真正推进
+## 每次训练怎样真正推进
 
-每个 guided part 必须明确以下五件事：
+一个 ordinary guided unit 只有一个 checkbox、一个 Markdown、一个助教会话和一个最终成品。它可以跨天暂停、续做，但不能在中间节点结算：
 
-1. **总纲能力**：明确是 Listening/Reading 输入入口，还是共同 Writing 树的 `W1–W9` 节点。
-2. **考试位置**：正式考试的哪一步会调用它。
-3. **当日产出**：今天留下什么完整、可检查的小产物。
-4. **学会证据**：看到什么就说明能力已经出现，而不是要求文本完美。
-5. **整合动作**：把刚学的动作放回一次 summary、paragraph 或 plan，并留下 `遇到 X → 做 Y` 的考试口令。
-
-每天练什么不预先锁死，而是由同一个控制回路决定：
-
-`看最近的完整产出 → 判断瓶颈在输入入口还是共同 Writing 树 → 练当前最高价值瓶颈 → 立即做小型整合 → 与上一份可比输出比较 → 再决定下一项`
-
-- 如果 meaning/evidence map 已经准确，但成文仍卡在 thesis、选材、结构、推理、synthesis/evaluation、英文实现或完成度，下一项直接训练共同 Writing 树；不因为材料来自 Listening 或 Reading 就把输入再练一遍。
-- 如果 map 本身遗漏 central claim、evidence、source ownership 或 scope，才回到对应的输入入口。
-- 如果同一个 Writing 节点在连续两份可比输出中没有改善，接下来两个 guided parts 优先增加该 Writing 节点的时间，并用不同材料做迁移；直到下一份整合输出出现改善，再恢复其他薄弱项。
-- 普通日只选择一条最高价值训练 lane：一个 standalone Shared Writing part，或一组使用同一材料的 `input → Shared Writing` 相邻 pair；词灵不计入。不得为了形式对称自动安排 Listening 和 Reading 各一项。真正 input 练习得到 map 后，当天趁记忆新鲜用独立 Writing part 接上；若只能练 Writing，就由导师提供足够使用的事实条目或短学术材料。
-- 固定的是正式 assessment、必要的完整模拟和每日词汇底线；普通练习的日期、输入入口与支架强度由最新证据动态决定。
+- **Paper A**：完整 listening → 原始笔记 → transcript-assisted repair / meaning-evidence map → 自上而下 plan → 200–400 词 critical summary → 整篇反馈与至多一次整篇 revision。
+- **Paper B**：正式量级三 extracts → question-led notes / meaning-evidence map → thesis 与 paragraph jobs → 约 600 词 essay → 整篇反馈与至多一次整篇 revision。
+- `词灵`仍是独立的每日词汇底线；它不替代端到端 unit。
+- AI 每轮仍只给一个清楚、可完成的下一动作，并可在薄弱节点增加解释、示范和支架；区别只是所有动作都推进同一个最终成品。
+- map、plan、句型、evaluation、readiness 和 sentence repair 不再成为 standalone task。技能证据写入 Skill Bank，但 task 只在完整成品达到标准后关闭。
+- 开始新 unit 前先续做最新未完成 unit。最近输出暴露的弱点决定下一 unit 内的教学重点，而不是制造一条新的局部练习。
 
 ### 每周五真实校准
 
@@ -161,15 +155,12 @@ AI 在要求任何动作前，必须用普通人能理解的方式讲清：
 4. 如果同一个共同 Writing 节点连续两周五仍无改善，下周提高该节点的训练占比；如果只有一个输入入口退步，则只补那个入口。
 5. 校准只读取 Inbox 并把结论写入学习计划/周复盘；不得在 Student OS 校准中移动、删除或改写 Inbox 原始文件。课程 Inbox 的正式整理与清理属于独立课后处理流程。
 
-| 训练类型 | 当天主要推进 | 必须怎样接回考试 |
+| 训练类型 | 推进内容 | 完成边界 |
 |---|---|---|
-| 词灵 | lexical access | 给出具体分钟数；不替代理解、组织或写作 |
-| Listening input | 一次性时间流中的选择、笔记和 speaker/source ownership | 独立产出共同 meaning/evidence map；同日相邻的 Shared Writing part 使用它 |
-| Reading input | 正式测试量级的三篇学术 extracts 中 question-led 取舍、准确性和跨文关系识别 | 独立产出同一类 map；同日相邻的 Shared Writing part 使用它 |
-| Shared Writing | `W1–W7` 的答案、选材、转述、结构、推理、synthesis/evaluation | 用 Listening 或 Reading 任一可用 map 产出 plan、summary 或 paragraph |
-| English production | `W8` | 只修本人输出中反复出现的模式，再放回真实 summary/essay |
-| Partial simulation | 相邻输入与 Writing 节点整合 | 在缩小材料或字数的情况下走完一段连续流程 |
-| Complete simulation | 输入入口 + `W1–W9` | 无 AI 帮助完成计时输出；计时后才诊断与定向 revision |
+| 词灵 | lexical access | 达到当日剂量即可；不替代端到端训练 |
+| Guided Paper A | Listening 入口 + `W1–W9` | 完整 critical summary 与整篇反馈/修订 |
+| Guided Paper B | Reading 入口 + `W1–W9` | 完整 essay 与整篇反馈/修订 |
+| Timed Paper A/B | 无 AI 的完整流程 | 计时输出结束后才诊断与定向 revision |
 
 ## AI 反馈优先级
 

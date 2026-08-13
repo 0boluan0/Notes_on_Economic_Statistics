@@ -5,7 +5,7 @@ tags:
   - learning/reading-into-writing
 date: 2026-08-10
 mode: guided-teaching
-status: active
+status: retired
 ---
 
 # Gender reading feedback repair
