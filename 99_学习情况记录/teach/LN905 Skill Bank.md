@@ -214,18 +214,18 @@ neath_sync: synced
 - 边界：不得把 `may / 80% probability / forecast` 写成无条件 `will/is`。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing#第三步：先定 thesis，再给每段一个 job|Reading into Writing]]；Paper B criteria。
 - 适用：Paper A/B、Assignment；paraphrase、summary、evaluation。
-- 证据/Callback：2026-08-11 Demographics Reading：逐步提示后把 80% probability 放回预测句；`guided`，无独立证据。
+- 证据/Callback：2026-08-11 Demographics Reading：逐步提示后把 80% probability 放回预测句；`guided`，无独立证据。2026-08-13 Demographics Paper A 首稿：能用 `predicted / would` 标记部分预测，但结论把约九十亿稳定改成绝对人口下降，并遗漏绿色技术、减贫与治理条件；本次写前已有条件性提示，记录为 `incorrect`，状态暂不提升。
 - 下一观察：2026-08-14 Friday timed output；测试前不提醒。
 
 ### AW-16 · 自上而下写作程序（legacy `W-01`）
-- 状态：`new`
+- 状态：`guided`
 - 触发/功能：写作开始时先完成 `题目要求 → 暂定答案 → 段落功能 → evidence role` 再写 prose。
 - 为什么：避免从某个来源或某个漂亮句子出发，最后才发现全文没有答案。
 - 动作/框架：task → provisional answer → paragraph jobs → evidence roles/selection → prose。
 - 边界：不能把完整 source extraction 当作 writer planning；短材料只为写作决策服务时不能冒充 Reading practice。
 - 来源：[[99_学习情况记录/teach/LN905 Exam Playbook|LN905 Exam Playbook]]；[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#四、先搭论证结构，再写句子|Academic Writing：plan]]。
 - 适用：Paper A/B、Assignment；planning、integrated writing。
-- 证据/Callback：原账本只记录“2026-08-12 Demographics Shared Writing 计划首次示范”，没有实际四步证据，因此合法迁移为 `new`。
+- 证据/Callback：原账本只记录“2026-08-12 Demographics Shared Writing 计划首次示范”，没有实际四步证据。2026-08-13 Demographics Paper A：在明确结构提示下完成 `central answer → linear paragraph jobs → evidence roles → 200–400 词 prose`，全文骨架与完成度成立；同日受支持证据，记为 `guided`。
 - 下一观察：先完成显式闭环；之后再看 2026-08-14 或下一次 Friday output。
 
 ## Paper A · Listening into Writing
@@ -264,25 +264,25 @@ neath_sync: synced
 - 下一观察：当前 Demographics Paper A end-to-end unit 的 map 节点。
 
 ### PA-04 · Critical summary 的组织选择
-- 状态：`new`
+- 状态：`guided`
 - 触发/功能：map 可靠后，在 linear/thematic 结构中选择最能保留 speaker argument 的组织。
 - 为什么：summary 必须压缩而不破坏论证结构。
 - 动作/框架：central answer → 2–3 blocks → evidence/qualification → integrated comment。
 - 边界：不能逐点堆 notes；不能把自己的评价混成 speaker claim。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/01_Listening into Writing#写作：先报告，再评价|Listening：写作]]。
 - 适用：Paper A；200–400 word critical summary。
-- 证据/Callback：尚无显式闭环。
+- 证据/Callback：2026-08-13 Demographics Paper A：在结构提示下选择 linear summary，并完成 opening central claim → historical/demographic block → child-survival mechanism → conclusion 的完整初稿；source scope 仍需一次整篇修订，组织选择记为 `guided`。
 - 下一观察：当前 Demographics Paper A end-to-end unit 的完整成品。
 
 ### PA-05 · 针对 evidence 的评价
-- 状态：`new`
+- 状态：`repair`
 - 触发/功能：评价 speaker argument 时，先承认 evidence composition，再判断 relevance、quality、scope 与 inference。
 - 为什么：批错 evidence 会使评价本身失真。
 - 动作/框架：`The speaker uses A/B/C; this supports X because...; however, it remains limited to Y...`。
 - 边界：不能只凭 personal relevance 判断证据强弱，也不能忽略研究/data。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/01_Listening into Writing#Criticality 的五层问题|Listening：criticality]]；Paper A criteria。
 - 适用：Paper A；critical comment。
-- 证据/Callback：用户已经尝试 critical evaluation；准确性不足。
+- 证据/Callback：用户已经尝试 critical evaluation；准确性不足。2026-08-13 Demographics Paper A 首稿再次在未承认实际 evidence composition 时评价：称 speaker 忽略 country differences，但其动态图明确以 country bubbles 为单位；记录为 `incorrect`，进入 `repair`，整篇 revision 须把评价贴回 country-level trend 与预测条件。
 - 下一观察：完成 PA-03 后继续同一端到端 unit 成文。
 
 ## Paper B · Reading into Writing

@@ -40,8 +40,6 @@ developing country ,  year pass more child survive. less child per women, but we
 
 it can be down. old eurpe is the foundation of the new world, nothing more ,nothing loss
 
-
-
 ## 完成证据
 
 - map 准确覆盖 central claim、主要 supporting blocks、关键 evidence/qualification 与 source ownership。
@@ -219,5 +217,21 @@ Explore
 - **当前能力地图位置**：PA-04 / AW-16 的 linear top-down plan 已出现并经 facts repair 变得可执行；即将进入 W8 英文实现与完整 critical summary。评价必须贴住实际 evidence，不得批评讲者没有使用其事实上已经使用的 country-level data。
 - **下一个有意义动作**：用校正后的 plan 开始 10 分钟连续英文初稿：不回头逐句打磨，目标是完成 200–400 词；若 10 分钟结束仍未写完，提交已有全文并标明停点，下一轮只续完缺失部分。Introduction 只需 speaker/topic/central claim；随后按 linear 顺序写 historical shift + demographic momentum，再写 child-survival mechanism + 条件性评价。
 - **内部继续判断**：任务尚未完成。完整初稿出现前不逐句反馈，也不观察 AW-15 callback；收到全文后才统一核验 accuracy、coverage、organization、evaluation、completion 与 recurring language，并决定是否需要唯一一次 whole-output revision。
+
+### 2026-08-13 17:05:58 BST
+
+- **学习者原始输入**：
+
+```text
+Buy using a vivld way to show the progress of population the world, classified as their wealth, the speaker claimed that, helping poorest people out of poverty is an effective way to reduce the growth of world population.
+Firstly, he used boxes to present the changing of populations from 1960 to 2010, then predicted the change in 2050. He mentioned that there was a significant gap between industrialised countries and developing countries. After 50 years, in 2010, this gap narrowed, but the poorest population remain roughly the same, and was predicted to rise to about 3 to 4  billions, although the lower middle class of people would moving to a higher class and the number of whom is going to rocket. This data supported his claim that the world would not stop to have  more people on it if we do not try to get the poorest people out of poverty. But in this part he only considered to classifier human beings using the money the have, ignoring the different cultures, countries, ot races.
+Then he tried to use a intuitive figure to explain the relation between the family size and the baby survival rate. According to all countries it seemed to be that one with higher baby survival rate tend to have relatively smaller families.  With the past 50 years development (from 1960 to 2010), the a majority trend of the world is that the death probability of baby went down, therefore the average family size got smaller. But he also mentioned that there are still some countries have relatively high baby death rate, which brings to a higher family size compared with those in other countries. So the question has not solved.
+All in all, he represent a enjoyable way to describe and illustrate the history and the prediction of population changes, and he also alarmed that poverty need to be eradicated if we what the number of the world's individuals going down.
+```
+
+- **AI 教学或反馈**：完整初稿已达到 200–400 词范围并完成 linear structure：opening central claim → historical/demographic block → child-survival mechanism → conclusion，因此 completion 与组织骨架成立。统一反馈只要求一次 whole-output revision，因为仍有会改变 source meaning 的问题：`this gap narrowed` 应区分“West / Developing World 的二分空档消失”与“最贫到最富距离更宽”；`the poorest population remain roughly the same` 应写其生活水平仍几乎同样贫困，而人口规模预计由二十亿增至三十亿、四十亿；lower-middle groups 是经济上移，不是人数 `rocket`；`ignoring ... countries` 与 speaker 的 country bubbles 直接冲突，评价无效；`baby survival` 应归一化为 child survival；结论应是人口增长趋停 / 约九十亿稳定，不是绝对人口下降。有效评价应承认 country-level historical pattern 对 child survival 与 smaller families 关系的支持，同时限定九十亿预测依赖减贫、教育、绿色技术与 global governance。Recurring language 集中为 verb form/agreement 与固定数量表达（`would move`、`he represents`、`poverty needs`、`three to four billion`）；小拼写与一次性措辞不阻挡完成。
+- **当前能力地图位置**：首次完整 Paper A critical summary 已完成；PA-04 / AW-16 的 linear organization 和全文完成度已出现。当前进入唯一一次 whole-output revision，重点修 PA-03 source scope、PA-05 evidence-grounded evaluation 与 AW-15 prediction certainty；不再拆成局部句子练习。
+- **下一个有意义动作**：保留现有四段结构，完成唯一一次整篇 revision：修正 gap、poorest group、lower-middle movement、country-bubble evidence 与 `stabilise vs decline` 五个核心关系；删除基于“未按国家分析”的评价，并把评价贴到 country-level trend 的支持力度与九十亿预测的条件性上。仍保持 200–400 词，允许小语法错误。
+- **内部继续判断**：任务尚未完成；这次 revision 后不再追加第二次全文改写。若 revised summary 准确覆盖 central argument、主要支撑、条件性预测并含一处合法 evidence-based evaluation，则写回重点技能证据、关闭 canonical checkbox、记录实际完成日期与考试口令后停止；否则用简短模型教清残余核心错误并按允许的小语言错误完成。
 
 <!-- student-os:learning-log:end -->
