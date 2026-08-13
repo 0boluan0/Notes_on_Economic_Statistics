@@ -76,6 +76,14 @@ I have chosen this question because it connects the statistical modelling and ma
 This essay will argue that complex models are justified only when their out-of-sample predictive gains are material and stable and when they remain sufficiently transparent for model validation, fairness review and regulatory accountability; otherwise, logistic regression remains the more appropriate baseline.
 <!-- bilingual-en:end -->
 
+## 文献精读入口
+
+十篇文献现已按“现象与张力 → 中心判断 → section 功能 → 关键段落组 → 可迁移写法”重做结构拆解：[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/00_文章梗概索引|十篇文献成文结构索引]]。
+
+<!-- bilingual-en:start -->
+The ten source notes have been reorganised as top-down composition maps: phenomenon and tension, central claim, section functions, key paragraph moves, and transferable writing patterns. Start from the [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/00_文章梗概索引|ten-paper composition index]].
+<!-- bilingual-en:end -->
+
 ## 六篇核心来源
 
 <!-- bilingual-en:start -->

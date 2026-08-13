@@ -592,4 +592,29 @@ Shared Writing 的全局层：`question → direct answer/thesis → whole-essay
 **内部继续判断**
 
 继续同一 Shared Writing part，不更换技能或产出；用更完整的非人口示范修复教学解释。本轮不推进 Listening、Essay 或其他 part，不标记任务完成，不要求新作业。
+
+### 2026-08-13T10:35:15+01:00
+
+**学习者原始输入**
+
+我看懂了你的example
+
+**AI 教学或反馈**
+
+- 确认全局与局部的自上而下层级已重新对齐，现在可以回到 Demographics 题。
+- 明确本 part 的缩小边界：不要求规划一篇 600 词 essay，而是在完整链条中取出一个单段微型论证。先对给定 why-question 形成直接答案；该答案决定这个单段必须证明什么；然后才为所选 propositions 分配 support、explanation 或 qualification 角色。
+- 重新显示必需材料：P1 模型给出约 80% 概率，世界人口将在 2100 年达到 9.6–12.3 billion；P2 预期增长很大一部分发生在 Africa；P3 较高 fertility 与 fertility decline 最近放缓部分解释该 pattern；P4 这是 global/regional 的概率预测，不是各国的确定结果。
+- 要求一次提交 mentor brief 规定的三行 writer plan，不写正文：`direct answer` 必须直接回应 why；`this paragraph must prove` 把该答案转成段落任务；`evidence roles` 只选能完成任务的 propositions 并标明角色。
+
+**当前能力地图位置**
+
+Shared Writing：全局层级已理解；当前进入本次缩小的 `question → direct answer → single-paragraph function → evidence roles`，尚未写 prose。
+
+**下一个有意义动作**
+
+针对 `Why is global population growth unlikely to stop during the twenty-first century?` 提交三行 plan：`direct answer / this paragraph must prove / evidence roles`。可使用中文、英文或箭头，不写正文。
+
+**内部继续判断**
+
+继续同一 Shared Writing part；等待三行 plan。下一轮只判断 answer 是否回应 why、paragraph function 是否服务 answer、evidence roles 是否明确。逻辑可用即进入 4–6 句成段；不恢复 source summary，不标记完成，不推进其他 part。
 <!-- student-os:learning-log:end -->
