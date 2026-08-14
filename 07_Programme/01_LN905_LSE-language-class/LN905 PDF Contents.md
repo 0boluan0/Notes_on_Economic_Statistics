@@ -24,6 +24,7 @@ aliases:
 - [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-1/Wk1 Group 5.pdf|Week 1 · Group 5]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-1/Wk1 Group 6.pdf|Week 1 · Group 6]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/week2-4 group2.pdf|Weeks 2–4 · Group 2]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Week 5.pdf|Week 5 timetable]]
 
 ## 01 Assessment
 
@@ -68,6 +69,10 @@ aliases:
 - [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 3.pdf|Lesson 3]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 4.pdf|Lesson 4]]
 
+### Week 4 · Climate change
+
+- No downloadable Academic Writing file is available yet.
+
 ## 03 Paper A · Listening into Writing
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening into Writing Introduction.pdf|Introduction]]
@@ -83,6 +88,15 @@ aliases:
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Listening into Writing - Feedback from Week One.pdf|Feedback from Week 1]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Listening into Writing - Gender.pdf|Gender task]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Kimmel Transcript.pdf|Kimmel transcript]]
+
+### Week 3 · Demographics
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Listening into Writing - Feedback from Week Two.pdf|Feedback from Week 2]]
+
+### Week 4 · Climate change
+
+- No downloadable Paper A file is available yet.
 
 ## 04 Paper B · Reading into Writing
 
@@ -92,11 +106,20 @@ aliases:
 ### Week 1 · Social media
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-1-Social-Media/Reading into Writing - Social Media Extracts.pdf|Social media extracts]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-1-Social-Media/Feedback for Week One.pdf|Feedback from Week 1]]
 
 ### Week 2 · Gender
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-2-Gender/Gender Extracts.pdf|Gender extracts]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-2-Gender/Feedback for Week One.pdf|Feedback from Week 1]]
+
+### Week 3 · Demographics
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-3-Demographics/Feedback for Week Two.pdf|Feedback from Week 2]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-3-Demographics/Demographics Extracts.pdf|Demographics extracts]]
+
+### Week 4 · Climate change
+
+- No downloadable Paper B file is available yet.
 
 ## 05 Paper C · Speaking and Listening
 
@@ -104,6 +127,10 @@ aliases:
 - [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Practice of Part 3.pdf|Practice · Part 3]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Discussion Language - 12 Functions.pdf|Discussion language · 12 functions]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Presentation Guide - Timestamped Transcript.pdf|Presentation guide transcript]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Voice and Vocabulary.pdf|Voice and vocabulary]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Putting it all Together.pdf|Putting it all together]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Instructions for Examiners.pdf|Instructions for examiners]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Practice.pdf|Practice]]
 - [[07_Programme/01_LN905_LSE-language-class/Media/05_Paper-C-Speaking-and-Listening/Presentation Guide.mp4|Presentation guide video]]
 
 ## 06 Academic interaction

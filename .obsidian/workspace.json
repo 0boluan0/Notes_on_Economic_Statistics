@@ -69,12 +69,24 @@
             "id": "d7bdd813f0bfb221",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Listening into Writing - Feedback from Week One.pdf"
+                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "Listening into Writing - Feedback from Week One"
+              "icon": "lucide-file",
+              "title": "week3reading-into-writing"
             }
           }
         ],
@@ -112,7 +124,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file:feed",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -123,8 +135,7 @@
               "title": "Search"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -191,7 +202,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Listening into Writing - Feedback from Week One.pdf",
+                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -365,26 +376,26 @@
   },
   "active": "d7bdd813f0bfb221",
   "lastOpenFiles": [
-    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening_into_Writing_AI_Feedback_Workbook.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading_into_Writing_AI_Feedback_Workbook.pdf",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-2-Gender/Feedback for Week One.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Practice.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Instructions for Examiners.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Putting it all Together.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Voice and Vocabulary.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-3-Demographics/Demographics Extracts.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-3-Demographics/Feedback for Week Two.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Listening into Writing - Feedback from Week Two.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Kimmel Transcript.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Week 5.pdf",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2Reading-into-writing.md",
     "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/01_LN905_note/Week 2-4 - Paper A and B AI Feedback.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Listening into Writing - Feedback from Week One.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-1-Social-Media/Feedback for Week One.pdf",
     "99_学习情况记录/teach/reading-into-writing/learning-records/0005-gender-timed-teacher-feedback.md",
     "99_学习情况记录/teach/reading-into-writing/learning-records/0003-gender-feedback-loop.md",
     "99_学习情况记录/teach/listening-into-writing/learning-records/0001-gender-timed-teacher-feedback.md",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2Reading-into-writing.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay - Annotated.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/Examples.pdf",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
-    "00_inbox/week3reading-into-writing.md",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing.md",
     "99_学习情况记录/teach/listening-into-writing/learning-records/0002-demographics-friday-timed.md",
     "99_学习情况记录/2026-08-14——Fri.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening into Writing Introduction.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-1-Social-Media/Transcript.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-1-Social-Media/Sample Summaries Task.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-1-Social-Media/Instructions for the Social Media Task.pdf",
     "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/02_Speaking into Writing.md",
