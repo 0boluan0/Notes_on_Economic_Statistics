@@ -78,6 +78,13 @@ student-os:mentor-brief:end -->
 ## Learning log
 
 <!-- student-os:learning-log:start -->
+### 2026-08-14 15:53 BST｜赛后 orientation 与 Extract Two source-map 审计
+
+- **Learner 原始输入 / Inbox 证据**：[[07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing|独立 timed 原稿]]；本轮尚无新的 learner 作答。
+- **AI 教学 / 反馈**：已完整核对原题、三篇正式 extracts 与全文。原稿已经使用三源、形成同时处理 ageing 与 low fertility 的总立场、组织三个功能段并完成 conclusion；首要断点不是局部语法，而是 source transformation：Bloom et al. 支持把老年人视为 experience/knowledge/leadership 资源，并提出多种 behavioural/policy changes，但没有提供“older workers have relatively low labour-force cost”这一依据。
+- **当前端到端节点**：`question → three-source map`；先审计 Extract Two 的 `claim / evidence-mechanism / scope`，尚未进入 thesis、段落计划或语言修改。
+- **本轮唯一下一动作**：learner 用 3 行完成 Bloom et al. source card，并判断原稿中的 `relatively low labour force cost` 应保留、限定还是删除；预计 5–10 分钟。
+- **Continuation decision**：等待 learner 的 Extract Two map；下一轮先核验 meaning、ownership、certainty 与 scope，再继续同一张三源 map，不转入逐句修改。
 <!-- student-os:learning-log:end -->
 
 ## 依据
