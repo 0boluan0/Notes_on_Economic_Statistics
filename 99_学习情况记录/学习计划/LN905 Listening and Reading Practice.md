@@ -182,3 +182,7 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 - Reading：Diffenbaugh & Burke (2019), DOI `10.1073/pnas.1816020116`
 - Reading：Carleton et al. (2022), DOI `10.1093/qje/qjac020`
 - Reading：Berrang-Ford et al. (2021), DOI `10.1038/s41558-021-01170-y`
+
+### 2026-08-14 Friday 正式材料
+
+- Listening：`PImDVT8fb-I`｜Jennifer D. Sciubba, *The Truth About Human Population Decline*（Paper A · Demographics timed output；测试后再校准）
