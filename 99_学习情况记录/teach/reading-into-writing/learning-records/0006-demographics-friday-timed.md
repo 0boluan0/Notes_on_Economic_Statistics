@@ -71,6 +71,200 @@ student-os:mentor-brief:end -->
 
 ## Whole-output feedback and targeted revision
 
+### 逐句审计｜2026-08-14
+
+> [!info] 判定说明
+> **A**：改变 task、source meaning、ownership、certainty、scope、causality 或 evidence relationship，targeted revision 必须处理。
+>
+> **B**：论证或 recurring English production 明显影响清晰度，whole-output feedback 中批量处理。
+>
+> **C**：句子功能基本成立，只需局部润色。
+
+#### Introduction
+
+1. **B｜**“Due to the births rates declined later than the death rate, the gap between those two rates brought more and more people in a certain generation.”
+   - **功能**：尝试交代 demographic transition 的背景。
+   - **Meaning/source**：死亡率先下降、生育率后下降会推动人口增长，这一方向与 Extract One 相符；但 “more and more people in a certain generation” 把总体人口增长误写成某一代人口增加。
+   - **English**：Due to 后不能直接接完整谓语从句；births rates 应为 birth rate/birth rates；brought 时态和因果表达不自然。
+   - **最小修正方向**：保留 death rates fell before birth rates 的时序，只写 population growth 或 changing age structure，不引入 certain generation。
+
+2. **B｜**“Low brith rate and aging population is described as ‘[T]he most fundamental shift to take place in modern human history’ by Sciuba.”
+   - **功能**：准确引入题目中的核心 framing。
+   - **Meaning/source**：引语与题面一致，source ownership 清楚；没有实质性来源错误。
+   - **English**：brith 拼写错误；并列主语需要复数动词；名词形式宜保持 low fertility and population ageing。
+   - **最小修正方向**：只修拼写、主谓一致和题面术语，不改变内容。
+
+3. **C｜**“How to react with this phenomenon remains a problem for all the governments all over the world.”
+   - **功能**：把背景转入政策问题，作用成立。
+   - **Meaning/source**：没有依赖某一 extract，但 all governments/all over the world 重复并扩大范围。
+   - **English**：应是 respond to/react to a phenomenon；all the governments all over the world 冗余。
+   - **最小修正方向**：压缩为 governments face the question of how to respond。
+
+4. **A｜**“This essay claim that governments may need to publish policies aiming at both part to thoroughly solving this problem.”
+   - **功能**：承担 thesis，但答案仍过于抽象。
+   - **Task fulfilment**：both part 没有明确指出 ageing 与 low fertility 各自需要什么政策；may need 使立场过弱，publish policies 也不是自然政策动作。
+   - **English**：essay claims；both parts；aimed at addressing/aim to address；solve 不能用 solving。
+   - **最小修正方向**：thesis 必须直接命名两条政府反应，并给出必要限定，而不是只说“发布政策”。
+
+5. **A｜**“Considering elder citizen as skilled workers and experienced leaders and involved them into work is an efficient way to deal with the aging societies, and enhancing the life quality is also proved as an useful way to increase birth rate.”
+   - **功能**：尝试预告两个主体方向。
+   - **Meaning/source**：前半与 Bloom et al. 把 older people 视为经验、知识和领导力资源的主张相符；后半把 Bloom 关于 older people’s quality of life 与 Jones 关于 fertility 的 work/family/gender/financial conditions 混成“提高生活质量会提高生育率”，来源机制被串错。
+   - **Certainty**：proved 和 efficient 都强于 extracts；Jones 只说政策影响有限，结构性改变后才有 chance 提高 fertility。
+   - **English**：elder citizen、involved、involve into、aging societies、an useful 均有问题。
+   - **最小修正方向**：拆清 ageing response 与 fertility response，删除 proved，并保留 Jones 的条件性。
+
+#### Paragraph 1｜Older people as a resource
+
+6. **B｜**“Firstly, although elder individuals are often considered as a heavy burden to pension and health care fundings, involving them into industries and make a good use of their wise is a win-win, which not only can increase the quality of their retirement lives, but also boost the development of industries.”
+   - **功能**：writer-led topic sentence 成立，清楚提出“从负担转为资源”的段落工作。
+   - **Meaning/source**：与 Bloom et al. 的核心方向一致；但 boost the development of industries 比原文的 more effective workforce/offset labour shortages 更强。
+   - **Style/English**：win-win 偏口语；elder individuals、fundings、their wise、involve into、平行结构均不自然；句子承载过多动作。
+   - **最小修正方向**：保留 burden → resource 的对照，把产业收益限定为 workforce effectiveness/labour shortages。
+
+7. **B｜**“Bloom & Lubet's opinion also supported this claim (Bloom & Lubet', 2015).”
+   - **功能**：想把 writer claim 与来源连接，但句子只说 supported，没有交代具体支持关系。
+   - **Ownership/citation**：正式来源是 Bloom, Canning, and Lubet；遗漏 Canning，作者名和所有格标点错误。
+   - **Style**：opinion 太笼统；时态应与学术 reporting 保持一致。
+   - **最小修正方向**：把 citation 直接嵌入下一句的具体 proposition，本句可删除，避免空泛重复。
+
+8. **B｜**“According to their opinion, especially in a globalized world, old people are more likely to have more experience in certain areas and have more leadership, which is valuable for companies.”
+   - **功能**：提供经验与 leadership 作为 evidence，方向正确。
+   - **Meaning/source**：Bloom et al. 确实说 older people 保存 work experience、knowledge、culture，并且 older workers’ experience 有价值；more likely 的比较对象不明，have more leadership 也把 leadership role/qualities 写成可计量属性。
+   - **English/style**：According to their opinion 冗余；old people 可改为 older people；which 指代不清。
+   - **最小修正方向**：准确列出 experience/knowledge/leadership，并说明它们怎样支持 workforce，而不制造模糊比较。
+
+9. **C｜**“Re-employing them may benefit both employers and employees.”
+   - **功能**：作为 writer inference 简洁有效，并保留 may。
+   - **Scope**：re-employing 暗示对象已经退休，而来源更宽泛地说 increased labour supply from older people；略微缩窄范围但未反转意思。
+   - **最小修正方向**：若继续使用，明确这是 writer inference，或换成 enabling older people to remain in work。
+
+10. **A｜**“On the one hand, companies have the chance to hire skilled workers with a relatively low labour force cost.”
+   - **功能**：尝试说明 employer benefit。
+   - **Evidence**：三篇 extracts 都没有说 older workers 的 labour cost 较低；这是无来源新增 evidence。
+   - **Implication**：该句直接损害 paraphrasing/source adaptation 分数，不能靠 citation 补救。
+   - **最小修正方向**：删除 low-cost 理由，只使用来源提供的 experience、knowledge、leadership 与 labour-shortage 机制。
+
+11. **A｜**“On the other hand, returning to workplaces would let retired people gain a feeling that they are needed, which would have benefits for their both mental and physical health (Bloom & Lubet', 2015).”
+   - **功能**：尝试说明 employee/older-person benefit。
+   - **Meaning/source**：Bloom et al. 说 social integration、positive perceptions 和 reduced ageism may benefit quality of life，并说 subjective well-being 与 physical health/longer survival 有关联；来源没有直接证明 return to work → feeling needed → mental and physical health 这条因果链。
+   - **Certainty/ownership**：would 把 writer inference 写成来源确定结论；作者 citation 仍遗漏 Canning。
+   - **English**：their both mental and physical health 语序错误；workplaces 范围也比 social integration 更窄。
+   - **最小修正方向**：把“工作带来被需要感”明确标成有限推论，并把来源真正支持的 integration/well-being relation 保留下来。
+
+#### Paragraph 2｜Fertility policy
+
+12. **B｜**“Secondly, rapidly decreasing birth rate alarms governments that they need to take some actions to deal with this trend.”
+   - **功能**：清楚开启 fertility 段并连接题目。
+   - **Meaning/scope**：rapidly decreasing 比题面 low fertility 更强；本段材料主要限定于 East Asia，不应无提示推广到所有政府。
+   - **English/style**：birth rate 需要冠词或复数；alarms governments that 搭配生硬；take some actions 信息量低。
+   - **最小修正方向**：用 ultra-low/declining fertility，并尽早标明 East Asian scope。
+
+13. **A｜**“According to the arguments of Jones (2019), the poor condition, especially for young females would be the main reason of the decline of fertility rate.”
+   - **功能**：尝试概括 Jones 的 causal diagnosis。
+   - **Meaning/source**：Jones 没有提出单一 main reason；他列出 entrenched cultural, institutional and familial arrangements，包括工作文化、gender roles、育儿与住房成本、教育压力。
+   - **Scope/ownership**：especially for young females 把“生育与养育负担主要落在 mothers/women”压缩成模糊的女性处境，并忽略 men、employers 与 institutions。
+   - **English**：poor condition 含义不明；reason for 而不是 reason of；fertility rate 的冠词/数不稳。
+   - **最小修正方向**：恢复多因素机制和 East Asian 范围，不能写成一个女性主因。
+
+14. **A｜**“Work take the majority part of most of the young generation's people's lives, so that they do not have time and energy to develop a deep relationship with others.”
+   - **功能**：想展开 work-culture mechanism。
+   - **Meaning/source**：Jones 说 long/irregular working hours 使 combining work and family rearing 困难；没有说年轻人缺少发展 deep relationship 的时间和精力。
+   - **Causality**：把 marriage/childbearing conditions 改写成 general relationship formation，是实质性 source transformation。
+   - **English**：Work takes；the majority part、young generation's people、so that 均不自然。
+   - **最小修正方向**：只保留 long working hours → difficulty combining work and family/childbearing 的来源机制。
+
+15. **A｜**“To change this phenomenon, publishing a series of policy can be the only way to get out of this situation, including shaping a better work culture to make it easier for every workers to maintain work-life balance, offering financial support to the parents to let the have the confidence to raise their children, declining the stereotype of women to let the have more freedom of give birth to their children or try to reduce the competitive culture in east Asia to let parents especially mother to have confidence to raise children.”
+   - **功能**：材料选择较好，覆盖 Jones 的四个政策方向。
+   - **Certainty/source**：the only way 与 Jones 的 “no one policy can deal with all the unresolved issues” 冲突；Jones 主张组合性、困难且条件性的改革，不保证成功。
+   - **Selection**：work culture、financial support、gender-role change、educational pressure 都相关；这是本句最强之处。
+   - **English/style**：单句过载；policy/worker/parent/mother 数不一致；let the、freedom of give birth、declining stereotype、east Asia 等多处错误使 reader strain 很高。
+   - **最小修正方向**：保留四项材料，但先写“需要组合改革且效果受结构条件限制”，再分组表达，不逐项堆在一个句子中。
+
+16. **A｜**“Those policy can shape a better circumstance to suitable age couples, and let them have more willing to have more children.”
+   - **功能**：尝试把政策拉回 fertility outcome。
+   - **Certainty/source**：Jones 只说这些 developments 发生后 there is a chance 改变生育选择；本句把 chance 写成直接政策结果。
+   - **Scope/style**：suitable age couples 既不自然也带规范性；East Asian scope 丢失。
+   - **English**：Those policies；circumstances for；be more willing/have greater willingness。
+   - **最小修正方向**：恢复 chance/may，并说明政策改善的是 work-family conditions，而不是直接“让人多生”。
+
+#### Paragraph 3｜Immigration synthesis
+
+17. **A｜**“However, immigration is proved as an ineffective way to react toward the low birth rate.”
+   - **功能**：topic sentence 明确，但提前给出来源无法支持的绝对结论。
+   - **Meaning/source**：Ezeh et al. 把 immigration 视为重要政策选项；Jones 认为中国规模使其影响有限，但在日本和韩国，若 substantial migration 在政治上可接受，它 could make a real difference。
+   - **Certainty**：proved ineffective 同时抹掉 option、conditional effectiveness 和 political feasibility。
+   - **最小修正方向**：把判断改为 immigration may help but is unlikely to be sufficient or feasible as a sole response。
+
+18. **B｜**“Although immigration is suggested in Ezeh, Bongaarts & Mberu's essay as a potential policy option to addressing low birth rate, especially developed countries (Ezeh, Bongaarts & Mberu, 2012).”
+   - **功能**：准确引入 Ezeh et al. 的一侧，但 Although 从句没有主句，语法上是 fragment。
+   - **Meaning/source**：potential policy option 与 economically advanced countries 的 scope 基本准确。
+   - **English/citation**：option for addressing；especially in developed countries；可用 Ezeh et al. 简化作者。
+   - **最小修正方向**：把该从句与后面的 limitation 放在同一个完整关系句中。
+
+19. **A｜**“They claimed that for those developed countries, it is vital to select immigrations who had high skills rather than rarely educated people.”
+   - **功能**：想提取 high-skilled migration 的 selection point。
+   - **Meaning/source**：Ezeh et al. 说高收入低生育国家的政策正在 converging on attracting increasing numbers of highly skilled workers，并提到限制 unskilled migration；没有说这是 vital，也没有用“rarely educated people”这种二分。
+   - **Certainty/English**：claimed/vital 增强强度；immigrations 不能指人；had 应为 have；rarely educated 不自然且带贬义。
+   - **最小修正方向**：保留政策趋势与 highly skilled workers，不添加必要性或价值判断。
+
+20. **A｜**“What's more, they also mentioned that a large amount of workers from other countries were needed to provide enough working age people in those countries.”
+   - **功能**：想说明 migration 所需规模。
+   - **Ownership/certainty**：原文是 some researchers estimate，不是作者无条件断言；且是 hundreds of millions may be needed to keep the ratio of working-age people to dependants constant。
+   - **Meaning**：provide enough working-age people 丢失了 dependency-ratio 这一精确目的；a large amount 也模糊掉原文数量级。
+   - **English/style**：workers 是可数名词，应为 a large number；What's more 偏口语且 they also mentioned 弱。
+   - **最小修正方向**：恢复 estimate、数量级和 constant ratio 三个限定。
+
+21. **A｜**“But the paper about the ultra-low fertility east Asia countries written by Jones held an opposite opinion (Jones, 2019).”
+   - **功能**：尝试建立跨文关系，这是 synthesis 意识的证据。
+   - **Evidence relationship**：Jones 不是 opposite；他对不同国家给出 qualification：China 规模不足，日本/韩国在 substantial 且 politically acceptable 时可能有效，但不足以单独停止下降。
+   - **English/style**：East Asian；paper written by Jones held an opinion 拟人且笨重。
+   - **最小修正方向**：关系词应是 qualifies/limits，而不是 opposes。
+
+22. **A｜**“This essay argued that immigration should not be a useful way to deal with the low birth rates, both for big countries and small countries.”
+   - **Meaning/source**：这是本段最严重的 source distortion。Jones 没有按 big/small 得出“都无效”；他明确说 substantial migration could make a real difference in Japan and South Korea if politically acceptable。
+   - **Ownership**：This essay 指代可能被读成 learner 自己的 essay，而非 Jones 的 article。
+   - **English**：should not be a useful way 逻辑和情态不自然；birth rates 的范围不清。
+   - **最小修正方向**：分别保留 China 的 scale limit 与 Japan/Korea 的 conditional potential/political limit。
+
+23. **A｜**“For big counties like China, the number of accepted foreigners would be ridiculous if the government what to use immigrants to fill the gap between the number of needed workers and domestic workers.”
+   - **Meaning/source**：China 的规模限制方向正确，但 ridiculous 是 learner 新增的情绪评价；原文只是 unlikely that net migration could be large enough to greatly affect growth or decline。
+   - **Scope**：原文谈 population growth/decline，不是精确的 needed workers vs domestic workers gap。
+   - **English/style**：counties/countries；what/wants；accepted foreigners 不自然；句子带有不必要的贬义。
+   - **最小修正方向**：回到“净迁移规模不太可能足以显著改变中国人口趋势”。
+
+24. **A｜**“For those small countries like Japan, strong resist will appear if their government accepts too many immigrants.”
+   - **Meaning/source**：Jones 没有把 Japan 定义为 small country；他报告 Japanese public already showed strong resistance，并把 substantial migration 的 political acceptability 作为条件。
+   - **Certainty/time**：will appear 把已观察的政治阻力改成未来必然结果；too many 也是 writer 的价值判断。
+   - **English**：resist 应为 resistance；government 与代词/数需统一。
+   - **最小修正方向**：保留 public resistance 与 political support 缺失，不使用 small/too many/will。
+
+25. **A｜**“So immigration can not be the main solution to the lack of working age people.”
+   - **功能**：作为 writer conclusion 有潜力，试图把两个来源收束到自己的判断。
+   - **Evidence relationship**：如果改成“不能单独解决、但可能部分缓解”，可以由两源共同支持；当前 can not/main solution 仍过于绝对，并且前面的 source map 已失真。
+   - **Scope**：题目是 low fertility and population ageing，不只是 lack of working-age people。
+   - **最小修正方向**：写成 insufficient as a sole response，并连接它与 broader policy mix 的角色。
+
+#### Conclusion
+
+26. **A｜**“All in all, the ‘fundamental shift’ mentioned by Sciuba is the unavoidable process all countries should and would face.”
+   - **功能**：回扣题面，具备 conclusion 的收束动作。
+   - **Scope/certainty**：材料强调地区差异；all countries should and would face 把 shift 写成普遍、必然且规范性的同一过程。should face 语义尤其不成立。
+   - **English**：an unavoidable process；which/all countries will face；但仍需 qualifier。
+   - **最小修正方向**：承认这是 broad global shift，同时保留各国人口结构与政策可行性不同。
+
+27. **A｜**“Treating aged people properly to let them consume less and produce more remain the pension and health caring funds safe, and using proper policy to improve the quality of lives, especially to young generation, is the other side of the solution to this shift.”
+   - **功能**：尝试重述 ageing + fertility 的双重答案，结构意图正确。
+   - **Meaning/source**：consume less and produce more、keep funds safe 都不是 Bloom et al. 的命题，而且把 older people 工具化；第二半再次把 fertility response 模糊成 general quality of life，遗漏 Jones 的 work culture、gender roles、financial/housing/education conditions。
+   - **Reasoning**：没有总结 immigration 的有限角色，也没有保留 policy mix 与 contextual variation。
+   - **English**：aged people、remain ... safe、health caring funds、quality of lives、to young generation 等多处搭配和结构错误。
+   - **最小修正方向**：结论只重述两条受来源支持的回答：促进 healthy/integrated older-age participation；用多项结构改革改善 work-family conditions，并承认 migration 与 pro-birth policy 的限制。
+
+### Whole-output diagnosis
+
+- **最强部分**：第 6、9、12、21、25 句显示 writer-led paragraph thinking；你不是按三个作者各写一段，而且完成了 introduction、三个主体段与 conclusion。
+- **Reading 的首要失分点**：第 5、10–11、13–17、19–25、27 句改变或新增了 source proposition、certainty、scope 或 source relationship。
+- **Writing 的 recurring patterns**：主谓一致与单复数；verb pattern；可数/不可数名词；academic collocation；超长并列句；模糊 reporting language；citation author accuracy。
+- **Targeted revision 原则**：不逐句重写全文。先修 immigration 段的两源关系，因为它同时影响 PB-02、PB-03、PB-04 与 AW-15；之后再用一次 whole-output revision 把同类 source-fidelity 问题统一修正。
 
 ## Skill evidence
 
@@ -85,6 +279,30 @@ student-os:mentor-brief:end -->
 - **当前端到端节点**：`question → three-source map`；先审计 Extract Two 的 `claim / evidence-mechanism / scope`，尚未进入 thesis、段落计划或语言修改。
 - **本轮唯一下一动作**：learner 用 3 行完成 Bloom et al. source card，并判断原稿中的 `relatively low labour force cost` 应保留、限定还是删除；预计 5–10 分钟。
 - **Continuation decision**：等待 learner 的 Extract Two map；下一轮先核验 meaning、ownership、certainty 与 scope，再继续同一张三源 map，不转入逐句修改。
+
+### 2026-08-14 17:28 BST｜按正式 Paper B criteria 估分
+
+- **Learner 原始输入**：`不不不你现按照仓库里的评价标准给我的这次打分`
+- **AI 教学 / 反馈**：按仓库正式 rubric 的 Reading 60% / Writing 40% 加权，当前独立原稿的中心估分为 **52/100（合理区间 50–55）**。Reading 约为 rubric 的 `50 or below` 上沿：三源均被用于 writer-led points，但 Bloom、Jones 与 Ezeh/Jones 的转述多次新增 evidence、增强 certainty 或压平 scope，跨文关系虽出现但含义不准，折算约 **30/60**。Writing 介于 `50 or below` 与 `60–65`：题目得到直接回应，722 词全文、三个功能段和 conclusion 完成，结构接近 60 档；但高频 grammar、word form、collocation 与 sentence-structure 问题持续造成阅读负担，综合折算约 **22/40**。这是依据 descriptor 的赛后估分，不冒充教师正式成绩。
+- **当前端到端节点**：`essay → prioritized whole-output assessment`；应 learner 要求暂时先完成总评，尚未改变原定 source-map 修复顺序。
+- **本轮唯一下一动作**：回到 Extract Two，用 3 行写出 `claim / evidence-mechanism / scope`，并处理原稿中无来源依据的 `relatively low labour force cost`；预计 5–10 分钟。
+- **Continuation decision**：评分已交付；等待 learner 完成同一 source-card 动作后继续三源 map，不展开逐句语法批改。
+
+### 2026-08-14 17:40 BST｜27 句 whole-output audit
+
+- **Learner 原始输入**：给我每一句的精细评价。
+- **AI 教学 / 反馈**：已按正式 extracts 与 Paper B criteria 审计原稿全部 27 句，并写入 Whole-output feedback and targeted revision。每句均区分 task/function、source meaning/ownership/certainty/scope、English production 与最小修正方向；没有代写完整 revision。最集中的高影响问题位于第 17–25 句：原稿有 synthesis 意识，但把 Ezeh et al. 与 Jones 的 qualification 写成 opposite，并把 immigration 的 conditional/partial usefulness 压成“大小国家都无效”。语言问题已批量归类，不要求 serial sentence correction。
+- **当前端到端节点**：essay → prioritized whole-output diagnosis → return to three-source map。
+- **本轮唯一下一动作**：learner 用四行重建 immigration evidence relation：Ezeh role / Jones-China / Jones-Japan & South Korea / writer conclusion；每行只写 proposition 与 qualifier，预计 5–10 分钟。
+- **Continuation decision**：等待 immigration mini-map；核验准确后再进入 top-down reconstruction，不逐句修完 27 句。
+
+### 2026-08-14 17:56 BST｜自上而下重启：question → task representation
+
+- **Learner 原始输入**：`端到端训练也要自上而下来做,你有了对我的写作水平的判断之后就开始从头带练吧.从分析题目开始,要循循善诱`
+- **AI 教学 / 反馈**：按 learner 要求从正式题面重启同一条端到端链，不从 immigration 局部修复或英文句子开始。题目的 command 是 `How should governments react`，要求形成有理由、有限定的政策判断，而不是描述人口变化；必须同时处理 `low fertility` 与 `population ageing`，Sciuba 引语只提供重要性 framing，不替代 evidence。由于原稿已经显示能写完整结构，本轮重点是把 task 在阅读前固定，避免 sources 再次被各自压成方便但失真的结论。
+- **当前端到端节点**：`question → task representation`；尚未读 sources、定 thesis 或分段。
+- **本轮唯一下一动作**：learner 不看 extracts，用中文写一个两句 task brief：第一句说明文章究竟必须判断什么；第二句说明合格答案必须同时完成哪两部分、不能只做什么。预计 5–10 分钟。
+- **Continuation decision**：等待 learner 的两句 task brief；先核验 command、双对象与 required judgement，再进入 provisional answer，不提前提供 thesis。
 <!-- student-os:learning-log:end -->
 
 ## 依据

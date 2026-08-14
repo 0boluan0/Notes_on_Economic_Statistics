@@ -79,10 +79,34 @@ student-os:mentor-brief:end -->
 
 ## Whole-output feedback and targeted revision
 
+### 2026-08-14｜官方 criteria 对照下的 provisional scoring
+
+评分依据：只读 submitted response（373 words）、TED 官方 transcript 与 Paper A Assessment Criteria；原始 notes 已遗失，因此 notes quality 不进入分数。官方 rubric 只给 `50 or below / 60–65 / 70–75 / 80+` 四档，括号内单点分是助教为便于比较所作的 best-fit 估算，不是课程公布的子项权重。
+
+| 官方 criterion | Best-fit 档位 | 估算分 | 主要证据 |
+|---|---:|---:|---|
+| Lecture-content accuracy | 60–65 | 62 | central argument、older/smaller shift、三种 possible worlds 和若干措施总体正确；但把 possible worlds 写成 2100 的三种 probability，把 fearful-world coercion 写成政府 “no choice”，并扩大了 immigration 提案的 scope。 |
+| Paraphrasing | 70–75 | 72 | 没有明显连续照抄，主要用自己的句法恢复内容；部分重述因 certainty/scope 变化而不够准确，所以不到 80+。 |
+| Length | 80+ | 80 | 373 words，位于 Paper A 200–400 words 范围内。 |
+| Key-point coverage | 60–65 | 62 | 覆盖 central argument 和 status quo / fearful / resilient 三个主 block；但遗漏 status quo 的 social-safety-net / labour-cost / military consequences、fearful world 的 Romania evidence 与 global-cooperation consequence、resilient world 的 technology / health / consumption / older-worker resource 等。 |
+| Detail and depth | 60–65 | 60 | 有 South Korea、forced-birth policy、immigration、longer work 等具体内容，但 evidence type、机制、限定与后果常未展开。 |
+| Grammar/vocabulary range | 60–65 | 62 | 能尝试复杂从句，并调用 fertility、ageing、resilience、immigration、zero-sum game 等主题词；抽象关系有时超出当前可稳定控制的句法。 |
+| Grammar/vocabulary accuracy | 50 or below | 50 | article、单复数、主谓一致、word form、collocation、介词和 comma splice 频繁出现；多数句意仍可恢复，但错误不是偶发。 |
+| Academic style | 60–65 | 60 | 整体保持 summary/evaluation 语气；`etc.`、模糊指代、过强预测和若干不自然搭配降低正式度与精确度。 |
+| Supported, integrated critical comments | 50 or below | 50 | projection-assumption critique 有合理方向，但 AI/agriculture/war 未与 speaker 的具体 projection claim 建立充分 warrant；immigration critique 有相关性，却误把 speaker 的过渡性、区域性方案当作解决全球总人口下降的方案；结尾 `more practical` 无依据。 |
+| Structure and cohesion | 60–65 | 64 | opening 给出 central argument，正文按 forecast → three worlds，结尾回到行动主张；但三种 worlds 挤在一个超长段落，关系标记有限，评价与报告的边界有时不清。 |
+
+**综合 best-fit：60–65 档，暂估 61/100。** Listening content 高于 Writing accuracy/criticality；主要失分不是篇幅或缺少总体结构，而是 key-point/evidence coverage、scope fidelity、critical comment 的 target，以及高频语言错误。教师可能按整体表现给出相邻档位；该估分等待 teacher feedback 校准。
+
+### Learner self-report 后的因果校准
+
+2026-08-14 17:58 BST，learner 报告 timed listening 时手写草稿很少，并主观判断听取阶段出错更多。该报告与成文“保留 central argument 和三个 macro blocks、但缺少 evidence / mechanism / qualifier”的模式一致，因此当前训练优先解释改为：**实时选择与记录 supporting information 是首要高风险点；notes-to-map recovery 与 Writing accuracy/criticality 是后续风险。** 但由于原始便签遗失，不能反向确定主因究竟是 acoustic/lexical access、processing speed、选择性笔记还是听后恢复；正式分数暂不因主观报告改动。
+
 
 ## Skill evidence
 
 - 2026-08-14 timed output silent callback（第一次完整独立成文已读）：AW-15 = `incorrect`（成文保留了部分 `predicted / would`，但把 fearful world 的条件性可能场景写成政府“no choice”的 forecast，并在 immigration critique 中扩大了 speaker 提案的 scope）；AW-16 = `not observable`（成文有 central claim、三世界线性结构与结论，但原始 notes/plan 已遗失，无法据成文反推写前程序）。暂不改 Skill Bank 状态，等待整篇复盘完成后统一写回。
+- 2026-08-14 learner self-report：PA-02 的风险提高（timed listening 手写内容很少；成文仍保留 central claim 与三段 signposting，但 supporting evidence/qualifier 稀疏）。由于原始 notes 不可恢复，本次只记录 qualitative risk，不把 PA-02 写成 `incorrect`，也不改变 Skill Bank 状态。
 
 ## Learning log
 
@@ -102,6 +126,22 @@ student-os:mentor-brief:end -->
 - 当前端到端节点：`独立原始证据 → accuracy/coverage audit`；聚焦 source ownership 与 conditional/scope 边界。
 - 本轮唯一下一动作：learner 只依据自己的 submitted response，把六个核心 idea 标为 `S`（speaker claim）、`E`（speaker evidence/example）、`Y`（learner evaluation）或 `?`（不确定），每项附一条不超过 12 个词的依据。
 - continuation decision：收到分类后，用完成该判断所需的最短 transcript 段核验；随后修复 meaning/evidence map，不进入句子润色。
+
+### 2026-08-14 17:41 BST｜逐项 provisional scoring
+
+- learner 原始输入 / Inbox 证据：learner 要求“给我每一项的精细评分”；评分对象仍为 [[07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing|course Inbox submitted response]]，373 words。
+- AI 教学/反馈：按 Paper A 官方四档 rubric 分别评估 accuracy、paraphrasing、length、coverage、detail/depth、language range、language accuracy、style、critical comments 与 structure/cohesion；综合 best-fit 为 `60–65`，暂估 `61/100`。最强项是合规篇幅、宏观结构和主要 block 识别；最高价值问题是 scope/source fidelity、evidence coverage、critical target 与频繁语言错误。
+- 当前端到端节点：`accuracy/coverage audit → provisional whole-output diagnosis`；评分已给出，但 meaning/evidence map、top-down reconstruction 与 targeted revision 尚未完成。
+- 本轮唯一下一动作：learner 用 `speaker claim → intended role of immigration → defensible limitation` 三格重建 immigration map；不得直接润色原句。
+- continuation decision：下一轮核验该三格是否保留 speaker 的 uneven-timing scope；成立后并入完整 meaning/evidence map，再选一次整篇 revision 的最高价值目标。
+
+### 2026-08-14 17:58 BST｜Listening 断点再定位
+
+- learner 原始输入 / Inbox 证据：learner 报告“听力草稿听到的不多，而且都是手写”，并认为听取部分出错较多；原始便签仍不可恢复，submitted response 保持只读。
+- AI 教学/反馈：该自我报告与成文的证据模式一致：central argument 与三个 worlds 被保留，supporting evidence、mechanism 和 qualifier 大量缺失。因此把实时信息选择/记录列为首要风险，但不把它误写成已证实的听觉解码失败；当前材料无法区分没听清、听懂但来不及记、笔记无法恢复或写作阶段舍弃。
+- 当前端到端节点：`accuracy/coverage audit → Listening input-acquisition diagnosis`；只区分断点，不立即修订原文。
+- 本轮唯一下一动作：learner 按真实考试体验，从 A `词/短语没有识别出来`、B `当时理解但来不及手写`、C `写下碎片但之后无法恢复关系`、D `笔记有内容但成文时没有选入` 中选一个 primary、可选一个 secondary，并各给一句具体体验依据。
+- continuation decision：根据 learner 的过程证据确定 PA-02 内部瓶颈；随后回到 transcript-assisted meaning/evidence map，不制造独立听力小练习。
 
 <!-- student-os:learning-log:end -->
 
