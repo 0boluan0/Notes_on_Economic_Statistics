@@ -192,8 +192,8 @@ neath_sync: synced
 - 边界：不能引入新论点；不能因时间不足省略正式任务的 conclusion。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#十、Introduction 与 conclusion 要回答同一个问题|Academic Writing：introduction/conclusion]]。
 - 适用：Paper B、Assignment；introduction、conclusion、timed completion。
-- 证据/Callback：Reading teacher feedback：文章略低于最低字数并未完成 conclusion。
-- 下一观察：下一份 Friday/timed Paper B。
+- 证据/Callback：Reading teacher feedback：Week 2 文章略低于最低字数并未完成 conclusion。2026-08-14 Friday Paper B：约 722 词，introduction 提出应同时处理 aging 与 low fertility，conclusion 回到同一个两部分答案；本次无提示完成，记为 `independent`，但尚未完成该技能的显式教学闭环，状态不跳级。
+- 下一观察：下一份 Friday/timed Paper B 是否继续在时限内对齐 thesis 与 conclusion。
 
 ### AW-14 · 按论证影响排序修改
 - 状态：`new`
@@ -207,15 +207,15 @@ neath_sync: synced
 - 下一观察：下一次 guided output 的反馈顺序。
 
 ### AW-15 · Epistemic fidelity（legacy `EP-01`）
-- 状态：`guided`
+- 状态：`repair`
 - 触发/功能：来源表达 probability、forecast、may/tend 或有限范围时，保留其 epistemic status。
 - 为什么：把预测写成事实会改变 source meaning。
 - 动作/框架：先标 certainty/scope → 选匹配 reporting/hedging → 完句后反查是否变强。
 - 边界：不得把 `may / 80% probability / forecast` 写成无条件 `will/is`。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing#第三步：先定 thesis，再给每段一个 job|Reading into Writing]]；Paper B criteria。
 - 适用：Paper A/B、Assignment；paraphrase、summary、evaluation。
-- 证据/Callback：2026-08-11 Demographics Reading：逐步提示后把 80% probability 放回预测句；`guided`，无独立证据。2026-08-13 Demographics Paper A 首稿：能用 `predicted / would` 标记部分预测，但结论把约九十亿稳定改成绝对人口下降，并遗漏绿色技术、减贫与治理条件；本次写前已有条件性提示，记录为 `incorrect`，状态暂不提升。
-- 下一观察：2026-08-14 Friday timed output；测试前不提醒。
+- 证据/Callback：2026-08-11 Demographics Reading：逐步提示后把 80% probability 放回预测句；`guided`，无独立证据。2026-08-13 Demographics Paper A 首稿：能用 `predicted / would` 标记部分预测，但结论把约九十亿稳定改成绝对人口下降，并遗漏绿色技术、减贫与治理条件；本次写前已有条件性提示，记录为 `incorrect`。2026-08-14 Friday Paper B 再次在真正适用情境改变原文命题：无据增加“老年劳动力成本较低”；把条件性的移民规模/政治可行性判断改成“大小国家都无效”；把多项组合干预改成 policy 是 `the only way`。本次记为 `incorrect`；连续两个适用输出失真，状态转 `repair`。
+- 下一观察：下一条 Paper B end-to-end unit 中的完整 source map 和整篇转述；重点检查是否自行新增 cost、causality、certainty 或消除地区/政治条件。
 
 ### AW-16 · 自上而下写作程序（legacy `W-01`）
 - 状态：`guided`
@@ -225,8 +225,8 @@ neath_sync: synced
 - 边界：不能把完整 source extraction 当作 writer planning；短材料只为写作决策服务时不能冒充 Reading practice。
 - 来源：[[99_学习情况记录/teach/LN905 Exam Playbook|LN905 Exam Playbook]]；[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#四、先搭论证结构，再写句子|Academic Writing：plan]]。
 - 适用：Paper A/B、Assignment；planning、integrated writing。
-- 证据/Callback：原账本只记录“2026-08-12 Demographics Shared Writing 计划首次示范”，没有实际四步证据。2026-08-13 Demographics Paper A：在明确结构提示下完成 `central answer → linear paragraph jobs → evidence roles → 200–400 词 prose`，全文骨架与完成度成立；同日受支持证据，记为 `guided`。
-- 下一观察：先完成显式闭环；之后再看 2026-08-14 或下一次 Friday output。
+- 证据/Callback：原账本只记录“2026-08-12 Demographics Shared Writing 计划首次示范”，没有实际四步证据。2026-08-13 Demographics Paper A：在明确结构提示下完成 `central answer → linear paragraph jobs → evidence roles → 200–400 词 prose`，全文骨架与完成度成立；同日受支持证据，记为 `guided`。2026-08-14 Friday Paper B 的成品呈现出“同时处理 aging/fertility 的总答案 → 老年劳动参与 / 生育环境 / 移民限制三个段落工作 → conclusion”的外显结构，但原始文件没有保留计划过程，内部四步调用记为 `not observable`，状态不提升。
+- 下一观察：下一条 Paper B guided end-to-end unit 中的显式 `task → provisional answer → paragraph jobs → evidence roles`。
 
 ## Paper A · Listening into Writing
 
@@ -295,7 +295,7 @@ neath_sync: synced
 - 边界：不能只因关键词相同就认定段落相关。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing#第一步：在读文本前拆 question|Reading：question]]。
 - 适用：Paper B；pre-reading、source selection。
-- 证据/Callback：尚无显式闭环。
+- 证据/Callback：2026-08-14 Friday Paper B 的 Inbox 只有完整成文，没有阅读笔记或 source audit；是否使用 question-led reading 记为 `not observable`。
 - 下一观察：下一次 Paper B end-to-end unit 的 question-led reading 节点。
 
 ### PB-02 · 三源 meaning/evidence map
@@ -306,7 +306,7 @@ neath_sync: synced
 - 边界：不能丢 source ownership、certainty 或研究范围。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing#第二步：把三篇材料压成一张 source map|Reading：source map]]。
 - 适用：Paper B；reading notes、pre-writing。
-- 证据/Callback：教师反馈认可使用全部三源并连接 ideas，但要求更准确说明 sources 如何共同工作。
+- 证据/Callback：教师反馈认可使用全部三源并连接 ideas，但要求更准确说明 sources 如何共同工作。2026-08-14 Friday Paper B 使用 Ezeh et al.、Bloom et al. 与 Jones 全部三源，但成文中数次改变 claim 的 evidence、scope 或 certainty；可用 map 的完整性记为 `incorrect`。
 - 下一观察：下一次 Paper B end-to-end unit 的正式量级三 extracts。
 
 ### PB-03 · Writer-led synthesis
@@ -317,7 +317,7 @@ neath_sync: synced
 - 边界：不能虚构 agreement；并列 citation 不自动等于 synthesis。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing#第四步：让 synthesis 在段落里可见|Reading：synthesis]]。
 - 适用：Paper B、Assignment；synthesis paragraph。
-- 证据/Callback：起点强项是连接来源；尚未完成系统显式闭环。
+- 证据/Callback：起点强项是连接来源。2026-08-14 Friday Paper B 的移民段在同一个 writer claim 下对照 Ezeh et al. 与 Jones，但把前者的大规模/高技能移民选项和后者的国家规模/政治限定压平为“移民被证明无效”；跨文关系可见但含义不准，记为 `incorrect`。
 - 下一观察：下一份 Paper B end-to-end essay 的 synthesis 段。
 
 ### PB-04 · Quote、paraphrase、summary 与 citation 分工
@@ -328,7 +328,7 @@ neath_sync: synced
 - 边界：换词不等于 paraphrase；citation 不能修复 meaning distortion 或 patchwriting。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing#Quote、paraphrase、summary 的分工|Reading：source transformation]]。
 - 适用：Paper B、Assignment；evidence sentence、reference。
-- 证据/Callback：教师认可有 paraphrase attempt；准确性仍需结合 AW-15 观察。
+- 证据/Callback：教师认可有 paraphrase attempt；准确性仍需结合 AW-15 观察。2026-08-14 Friday Paper B 能用自己的句法压缩来源并附 citation，但多处 transformation 新增了原文未有的 cost/causality 或消除 qualifier；本次准确转述记为 `incorrect`。
 - 下一观察：下一份完整 paragraph 后批量核验。
 
 ### PB-05 · Figure description 与 implication 分开

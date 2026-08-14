@@ -28,11 +28,11 @@ learner-facing 材料、示范、callback 与模拟只使用 **Social Media、Ge
 
 ## 当前起点｜来自真实输出与教师反馈
 
-- **已经有的能力**：能抓住 Listening 的 main argument 和关键 concepts；Reading 能使用三份来源、连接 ideas，并形成整体论证和基本逻辑组织。
-- **最高优先级 1｜输入准确**：Listening 评价前必须完整识别 personal experience、research 与 data；Reading 必须保留 source claim 的 probability、scope、mechanism 和 source ownership。
-- **最高优先级 2｜自上而下成文**：先决定 thesis / central argument 和段落功能，再选择材料；Reading 要把来源怎样共同工作写明，Listening 要把评价嵌回具体 evidence。
-- **最高优先级 3｜完成度**：在时限内写完 conclusion，并避免因局部句子耗尽写作时间。
-- **并行基础｜词汇与英文实现**：词灵每日持续；grammar、word form、sentence structure 和 academic expression 只从反复出现的真实模式中集中训练。
+- **已经有的能力**：能抓住 Listening 的 main argument 和关键 concepts。2026-08-14 Friday Paper B 在时限内使用全部三份来源，以 writer-led claims 组织三个主体段，并完成约 722 词全文与 conclusion；完成度相比 Week 2 明显改善。
+- **最高优先级 1｜来源含义准确**：Reading 必须保留 source claim 的 certainty、scope、causality 和 ownership。本次把“老年人经验有价值”扩成“老年劳动力成本较低”，并把 Jones 对移民规模与政治可行性的限定改成“大小国家都无效”；Listening 评价前同样必须完整识别 personal experience、research 与 data。
+- **最高优先级 2｜准确的跨文综合**：本次只在移民段明显连接 Ezeh et al. 与 Jones，但连接时压平了两者的限定。下一条 Paper B 完整链先建准确 map，再写明 agreement、qualification 或 tension 对自己答案的作用。
+- **最高优先级 3｜保住限时完成**：本次已写完 conclusion，下周继续保留这个节奏，不用额外完整模拟重复验证。
+- **并行基础｜词汇与英文实现**：词灵每日持续；本次反复出现的 agreement、word form、collocation 和 citation form 只在下一条完整成品的整篇反馈中集中处理。
 
 ## 动态控制回路｜不锁死每天的内部进度
 
@@ -186,3 +186,4 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 ### 2026-08-14 Friday 正式材料
 
 - Listening：`PImDVT8fb-I`｜Jennifer D. Sciubba, *The Truth About Human Population Decline*（Paper A · Demographics timed output；测试后再校准）
+- Reading：[[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-3-Demographics/Demographics Extracts.pdf|Demographics Extracts]]｜Ezeh et al. (2012)、Bloom et al. (2015)、Jones (2019)；三篇正文约 594 / 536 / 653 词，合计约 1,783 词｜[[07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing|原始限时成文]]约 722 词；教师反馈尚未到达。

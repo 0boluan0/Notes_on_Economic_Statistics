@@ -15,7 +15,7 @@ kind: scheduled-assessments
 - [x] LN905｜Listening into Writing：Gender timed attempt（10:00–11:45） #student-os/task ⏳ 2026-08-07 📅 2026-08-07 ✅ 2026-08-07
 - [x] LN905｜Reading into Writing：Gender timed attempt（12:45–15:00） #student-os/task ⏳ 2026-08-07 📅 2026-08-07 ✅ 2026-08-07
 - [x] LN905｜Listening into Writing：Demographics timed attempt｜[[99_学习情况记录/teach/listening-into-writing/learning-records/0002-demographics-friday-timed|赛后端到端记录]] #student-os/task ⏳ 2026-08-14 📅 2026-08-14 ✅ 2026-08-14
-- [ ] LN905｜Reading into Writing：Demographics timed attempt #student-os/task ⏳ 2026-08-14 📅 2026-08-14
+- [x] LN905｜Reading into Writing：Demographics timed attempt｜[[99_学习情况记录/teach/reading-into-writing/learning-records/0006-demographics-friday-timed|赛后端到端记录]] #student-os/task ⏳ 2026-08-14 📅 2026-08-14 ✅ 2026-08-14
 - [ ] LN905｜Listening into Writing：Climate Change timed attempt #student-os/task ⏳ 2026-08-21 📅 2026-08-21
 - [ ] LN905｜Reading into Writing：Climate Change timed attempt #student-os/task ⏳ 2026-08-21 📅 2026-08-21
 
