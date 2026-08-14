@@ -7,7 +7,7 @@ tags:
 date: "2026-08-14"
 source_type: "teach"
 topic: "LN905 Listening into Writing"
-status: "locked-during-assessment"
+status: "active-post-test"
 assessment: "Paper A"
 phase: "complete-simulation"
 source_id: "PImDVT8fb-I"
@@ -66,10 +66,13 @@ student-os:mentor-brief:end -->
 
 ## Independent timed evidence（只读）
 
-等待 11:45 后链接今天 course Inbox 中的原始笔记与已提交成文；不得复制替换或修改原文件。
+已提交成文：[[07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing|2026-08-14 Demographics Friday Paper A submitted response]]（Inbox 原文件只读）。
+
+原始听讲笔记：learner 于 2026-08-14 12:48 BST 确认使用临时便签且已遗失，无法补齐。后续把实时 notes 质量与 notes-to-map 恢复能力记为 `not observable`，不把缺失本身当作能力失败；以只读已提交成文作为独立基线继续。
 
 ## Transcript-assisted meaning/evidence map
 
+核验来源：[TED 官方 transcript｜Jennifer D. Sciubba, *The Truth About Human Population Decline*](https://www.ted.com/talks/jennifer_d_sciubba_the_truth_about_human_population_decline?view=transcript)。仅按当前动作需要显示短段，不在记录中复制整篇 transcript。
 
 ## Top-down reconstruction
 
@@ -79,10 +82,27 @@ student-os:mentor-brief:end -->
 
 ## Skill evidence
 
+- 2026-08-14 timed output silent callback（第一次完整独立成文已读）：AW-15 = `incorrect`（成文保留了部分 `predicted / would`，但把 fearful world 的条件性可能场景写成政府“no choice”的 forecast，并在 immigration critique 中扩大了 speaker 提案的 scope）；AW-16 = `not observable`（成文有 central claim、三世界线性结构与结论，但原始 notes/plan 已遗失，无法据成文反推写前程序）。暂不改 Skill Bank 状态，等待整篇复盘完成后统一写回。
 
 ## Learning log
 
 <!-- student-os:learning-log:start -->
+### 2026-08-14 12:40 BST｜赛后证据入口审计
+
+- learner 原始输入 / Inbox 证据：learner 在当前对话贴出完整成文；同文已保存于 [[07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing|course Inbox submitted response]]。今天的原始听讲笔记尚未出现。
+- AI 教学/反馈：只完成证据完整性审计；尚未核对 transcript，也未评价成文，以免在缺少 notes 时混淆听取、信息恢复与写作决策的断点。
+- 当前端到端节点：`独立原始证据 → accuracy/coverage audit` 的入口；原始证据尚未齐全。
+- 本轮唯一下一动作：learner 将今天 timed attempt 的原始听讲笔记原样放入 course Inbox。
+- continuation decision：等待原始笔记出现；出现后先完整审计 notes 与成文，再决定所需的最小 transcript 核验范围。
+
+### 2026-08-14 12:48 BST｜原始便签遗失后的证据边界与第一步审计
+
+- learner 原始输入 / Inbox 证据：learner 确认“那个不见了，我用的便签”；原始 notes 无法恢复。独立成文仍保留于 [[07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing|course Inbox submitted response]]。
+- AI 教学/反馈：把实时 notes 与 notes-to-map 质量记为 `not observable`，不把证据缺失当作听力失败。已核对 TED 官方 transcript；完整成文显示 central claim、三种 possible worlds 与 conclusion 均存在，现阶段先分清 speaker claim/evidence 与 learner evaluation，暂不处理普通语言错误。
+- 当前端到端节点：`独立原始证据 → accuracy/coverage audit`；聚焦 source ownership 与 conditional/scope 边界。
+- 本轮唯一下一动作：learner 只依据自己的 submitted response，把六个核心 idea 标为 `S`（speaker claim）、`E`（speaker evidence/example）、`Y`（learner evaluation）或 `?`（不确定），每项附一条不超过 12 个词的依据。
+- continuation decision：收到分类后，用完成该判断所需的最短 transcript 段核验；随后修复 meaning/evidence map，不进入句子润色。
+
 <!-- student-os:learning-log:end -->
 
 ## 依据
@@ -90,4 +110,3 @@ student-os:mentor-brief:end -->
 - [[99_学习情况记录/teach/LN905 Exam Playbook#Paper A｜进考场后怎么做|Paper A top-down procedure]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening into Writing Introduction.pdf|Paper A Introduction]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Marking-Criteria/Paper A_Marking Criteria_Listening into Writing.pdf|Paper A Marking Criteria]]
-

@@ -64,9 +64,21 @@
               "icon": "lucide-file",
               "title": "week3listening-into- writing"
             }
+          },
+          {
+            "id": "d7bdd813f0bfb221",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Listening into Writing - Feedback from Week One.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Listening into Writing - Feedback from Week One"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -100,7 +112,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "file:feed",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -111,7 +123,8 @@
               "title": "Search"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -178,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing.md",
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Listening into Writing - Feedback from Week One.pdf",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -350,24 +363,30 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "1163ba1c21eaf22c",
+  "active": "d7bdd813f0bfb221",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening_into_Writing_AI_Feedback_Workbook.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading_into_Writing_AI_Feedback_Workbook.pdf",
+    "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/01_LN905_note/Week 2-4 - Paper A and B AI Feedback.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-2-Gender/Listening into Writing - Feedback from Week One.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-1-Social-Media/Feedback for Week One.pdf",
+    "99_学习情况记录/teach/reading-into-writing/learning-records/0005-gender-timed-teacher-feedback.md",
+    "99_学习情况记录/teach/reading-into-writing/learning-records/0003-gender-feedback-loop.md",
+    "99_学习情况记录/teach/listening-into-writing/learning-records/0001-gender-timed-teacher-feedback.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2Reading-into-writing.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay - Annotated.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/Examples.pdf",
+    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
+    "00_inbox/week3reading-into-writing.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing.md",
+    "99_学习情况记录/teach/listening-into-writing/learning-records/0002-demographics-friday-timed.md",
+    "99_学习情况记录/2026-08-14——Fri.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening into Writing Introduction.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-1-Social-Media/Transcript.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-1-Social-Media/Sample Summaries Task.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-1-Social-Media/Instructions for the Social Media Task.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 2.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 1.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay - Annotated.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 4.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Description vs Analysis vs Evaluation.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 3.pdf",
     "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing.md",
-    "99_学习情况记录/teach/listening-into-writing/learning-records/0002-demographics-friday-timed.md",
-    "99_学习情况记录/2026-08-14——Fri.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/02_Speaking into Writing.md",
     "tmp/pdfs/climate-end-to-end/page-7.png",
     "tmp/pdfs/climate-end-to-end/page-6.png",
@@ -380,7 +399,6 @@
     "99_学习情况记录/2026-08-13——Thu.md",
     "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-11-demographics-comprehension.md",
     "00_inbox/随手记.md",
-    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
     "99_学习情况记录/2026-08-12——Wed.md",
     "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-11-demographics-accuracy.md",
     "99_学习情况记录/teach/LN905 Skill Bank.md",
@@ -389,15 +407,9 @@
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/01 Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/02 Khandani et al. (2010) - Consumer credit-risk ML models.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/Chinese Drafts/02 Khandani et al. (2010) - 中文 annotation.md",
-    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/Chinese Drafts/01 Lessmann et al. (2015) - 中文 annotation.md",
-    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-12-demographics-evidence.md",
     "tmp/pdfs/ln905-official-sample/plain/page-3.png",
     "tmp/pdfs/ln905-official-sample/plain/page-2.png",
     "tmp/pdfs/ln905-official-sample/plain/page-1.png",
-    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.rewrite.md",
-    "99_学习情况记录/teach/annotated-bibliography/RESOURCES.md",
-    "99_学习情况记录/teach/LN905 Exam Playbook.md",
-    "99_学习情况记录/2026-08-11——Tue.md",
     "03_Computer_Science/01_CS50/CS50 Course Atlas.canvas",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",
