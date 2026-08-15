@@ -74,6 +74,9 @@ student-os:mentor-brief:end -->
 
 核验来源：[TED 官方 transcript｜Jennifer D. Sciubba, *The Truth About Human Population Decline*](https://www.ted.com/talks/jennifer_d_sciubba_the_truth_about_human_population_decline?view=transcript)。仅按当前动作需要显示短段，不在记录中复制整篇 transcript。
 
+> [!warning] Transcript 的边界
+> Transcript 只能在赛后定位漏听内容、区分 lexical/access 与 map 错误、修复同一材料的 meaning/evidence map；它绕过实时语音输入，因此不能训练或证明 one-pass listening 已改善。看过 transcript 后，本材料也不能再作为独立 Listening retest。
+
 ## Top-down reconstruction
 
 
@@ -153,6 +156,14 @@ student-os:mentor-brief:end -->
 - 当前端到端节点：`Listening input-acquisition diagnosis → transcript-assisted meaning/evidence map repair`；仍属于 complete simulation 的赛后重建。
 - 本轮唯一下一动作：learner 使用助教提供的三组 transcript-derived content，为 status quo / fearful / resilient 各写一条中文或箭头式 `world → response → consequence/goal`，不写完整英文 summary。
 - continuation decision：三条关系准确后，把 country/example evidence 接入同一 map；随后进入 top-down reconstruction，不另开词汇或听力小练习。
+
+### 2026-08-15 17:26 BST｜暂停练习并纠正 transcript 定位
+
+- learner 原始输入 / Inbox 证据：learner 追问“transcript解决问题吗我请问了”，指出上一轮 transcript-derived map 动作没有回答 Listening 问题本身。
+- AI 教学/反馈：承认上一轮把“赛后修复 map”误表述成“处理 Listening 断点”。Transcript 不解决 timed one-pass listening；它只帮助定位漏听、解释词组并重建意义。真正的 Listening 改善必须在未见 transcript 的 audio-first 完整输入与原始 notes 中出现，当前已看过 transcript 的 talk 无法证明改善。
+- 当前端到端节点：orientation reset；暂停 `transcript-assisted map repair` 动作，先恢复“诊断工具 ≠ 能力训练”的共同理解。
+- 本轮唯一下一动作：不发新练习；只澄清 transcript 能诊断/修复当前成品，但不能治疗或验证实时听取能力。
+- continuation decision：在 learner 明确理解该边界前不继续 map、revision 或新材料；当前 Friday record 保持未完成赛后重建状态。
 
 <!-- student-os:learning-log:end -->
 
