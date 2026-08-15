@@ -303,6 +303,22 @@ student-os:mentor-brief:end -->
 - **当前端到端节点**：`question → task representation`；尚未读 sources、定 thesis 或分段。
 - **本轮唯一下一动作**：learner 不看 extracts，用中文写一个两句 task brief：第一句说明文章究竟必须判断什么；第二句说明合格答案必须同时完成哪两部分、不能只做什么。预计 5–10 分钟。
 - **Continuation decision**：等待 learner 的两句 task brief；先核验 command、双对象与 required judgement，再进入 provisional answer，不提前提供 thesis。
+
+### 2026-08-15 15:35 BST｜Task brief 第一次应用
+
+- **Learner 原始输入**：`必须判断政府能够用哪些手段对两个情况进行调控和具体的限制 . 一个合格的答案必须同时回答aging 和 低生育水平两方面`
+- **AI 教学 / 反馈**：learner 已准确抓住政府作为行动主体、ageing 与 low fertility 两个对象，并主动意识到政策限制；这是有效的 task representation 骨架。当前唯一关键缺口是把 `should` 弱化成了“政府能够用哪些手段”：后者只要求列政策库存，前者要求 writer 判断政府应选择怎样的回应、为什么、分别解决什么，以及在何种条件和限制下成立。第二句虽覆盖双对象，但尚未写出“不能只列政策或假设同一方案普遍有效”。不纠正中文措辞细节。
+- **当前端到端节点**：`question → task representation`；command 已部分成立，双对象与 limitation 已出现，required judgement 尚需一次整合。
+- **本轮唯一下一动作**：learner 用自己的话把两句压成一句“考场自我指令”，必须包含 `should judgement + ageing + low fertility + policy role/limitation`，并明确不能只做政策罗列；预计 5 分钟。
+- **Continuation decision**：本轮只要求一次整合性修订；收到后无论措辞是否漂亮，都将教清剩余差异并进入 question-led source reading，不在同一句上继续循环。
+
+### 2026-08-15 15:42 BST｜暂停练习并重做方向说明
+
+- **Learner 原始输入**：`啥意思,你说话能不能尝试更像人类一点,你现在说的有些句子我是看不懂或者不能确定我理解的对不对的`
+- **AI 教学 / 反馈**：立即暂停“考场自我指令”改写。上一轮把简单的审题能力包装成 `should judgement / policy role / task representation` 等压缩术语，反而让 learner 无法确认自己是否理解；该动作没有增加学习证据。learner 之前已经说出“政府用哪些手段”“同时回答 ageing 和低生育”“具体限制”，足以证明已抓住题目的主体、双对象和政策限制。此处真正只需补一句普通解释：文章不能只列政策名称，还要说明政策为什么有用、能解决哪一部分、有什么做不到。教学偏好已写入 NOTES：今后优先自然中文、短句和具体例子，不用未解释的流程术语。
+- **当前端到端节点**：仍在题目分析；练习暂停，先恢复对学习目的的确定感。
+- **本轮唯一下一动作**：不出题、不要求改写；只请 learner 确认这句普通解释是否清楚，或指出仍不清楚的具体词句。
+- **Continuation decision**：只有 learner 明确表示方向已懂，才进入第一篇 source 的 question-led reading；若仍不清楚，继续解释，不发新任务。
 <!-- student-os:learning-log:end -->
 
 ## 依据

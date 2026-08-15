@@ -102,11 +102,14 @@ student-os:mentor-brief:end -->
 
 2026-08-14 17:58 BST，learner 报告 timed listening 时手写草稿很少，并主观判断听取阶段出错更多。该报告与成文“保留 central argument 和三个 macro blocks、但缺少 evidence / mechanism / qualifier”的模式一致，因此当前训练优先解释改为：**实时选择与记录 supporting information 是首要高风险点；notes-to-map recovery 与 Writing accuracy/criticality 是后续风险。** 但由于原始便签遗失，不能反向确定主因究竟是 acoustic/lexical access、processing speed、选择性笔记还是听后恢复；正式分数暂不因主观报告改动。
 
+2026-08-15 15:34 BST，learner 进一步区分：讲座前段主要是 B（当时理解但手写跟不上），进入三种 worlds 后主要是 A（词/短语在语流中没有识别出来）。当前最可信的过程模型因此是 `前段 processing/recording overload → 后段 auditory lexical access failure`。成文仍能保留三种 worlds 的标签，说明 signpost / macro-structure detection 并未完全失效；主要丢失发生在各 block 内部的 evidence、mechanism 与 qualifier。
+
 
 ## Skill evidence
 
 - 2026-08-14 timed output silent callback（第一次完整独立成文已读）：AW-15 = `incorrect`（成文保留了部分 `predicted / would`，但把 fearful world 的条件性可能场景写成政府“no choice”的 forecast，并在 immigration critique 中扩大了 speaker 提案的 scope）；AW-16 = `not observable`（成文有 central claim、三世界线性结构与结论，但原始 notes/plan 已遗失，无法据成文反推写前程序）。暂不改 Skill Bank 状态，等待整篇复盘完成后统一写回。
 - 2026-08-14 learner self-report：PA-02 的风险提高（timed listening 手写内容很少；成文仍保留 central claim 与三段 signposting，但 supporting evidence/qualifier 稀疏）。由于原始 notes 不可恢复，本次只记录 qualitative risk，不把 PA-02 写成 `incorrect`，也不改变 Skill Bank 状态。
+- 2026-08-15 learner process evidence：PA-02 内部表现分化为 `前段 B：理解但记录速度不足；后三世界 A：语流中的词/短语未识别`。三种 world 标签进入成文，支持 signpost detection 存在；block-internal detail capture 高风险。原始 notes 缺失，仍不作正式状态转换。
 
 ## Learning log
 
@@ -142,6 +145,14 @@ student-os:mentor-brief:end -->
 - 当前端到端节点：`accuracy/coverage audit → Listening input-acquisition diagnosis`；只区分断点，不立即修订原文。
 - 本轮唯一下一动作：learner 按真实考试体验，从 A `词/短语没有识别出来`、B `当时理解但来不及手写`、C `写下碎片但之后无法恢复关系`、D `笔记有内容但成文时没有选入` 中选一个 primary、可选一个 secondary，并各给一句具体体验依据。
 - continuation decision：根据 learner 的过程证据确定 PA-02 内部瓶颈；随后回到 transcript-assisted meaning/evidence map，不制造独立听力小练习。
+
+### 2026-08-15 15:34 BST｜PA-02 内部断点确认并回到 map repair
+
+- learner 原始输入 / Inbox 证据：learner 报告“前段部分算是 B，但是后半段进入三种世界之后就是 A”；submitted response 中确实保留 status quo / fearful / resilient 标签，但各 block 内 supporting content 稀疏。
+- AI 教学/反馈：将 Listening 断点确认为阶段性转换，而非笼统“听力差”：前半段理解速度高于手写带宽；后半段 policy/economy 语流的 lexical access 下降。能够保留三个 signposts 是已存在能力，当前只需恢复它们内部的 `response → consequence` 关系。
+- 当前端到端节点：`Listening input-acquisition diagnosis → transcript-assisted meaning/evidence map repair`；仍属于 complete simulation 的赛后重建。
+- 本轮唯一下一动作：learner 使用助教提供的三组 transcript-derived content，为 status quo / fearful / resilient 各写一条中文或箭头式 `world → response → consequence/goal`，不写完整英文 summary。
+- continuation decision：三条关系准确后，把 country/example evidence 接入同一 map；随后进入 top-down reconstruction，不另开词汇或听力小练习。
 
 <!-- student-os:learning-log:end -->
 
