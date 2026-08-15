@@ -32,6 +32,7 @@ tags:
 
 ## 核验状态
 
+- 2026-08-15｜Group 2 Weeks 2–4 课表 PDF 可读，周六没有固定课程；Apple 只读日历未显示今日行程或新截止。Moodle 会话已超时，未完成网页比较；Demographics Listening/Reading 提交因此继续保留为待核验，未据此改变任何截止。
 - 2026-08-13｜Group 2 的 Weeks 2–4 Moodle 课表 PDF 已核验：周四固定课程为 10:00–11:15 Academic Writing & Assignment、11:45–13:00 Paper C Speaking & Listening、14:00–15:15 Academic Interaction，地点 OLD.1.16。Apple `LSE` 显示 8 月 14 日 Listening 11:45 与 Reading 15:00 截止点，与现有记录一致；Moodle 登录会话已过期，未声称完成网页比较。
 - 2026-08-12｜Group 2 的 Weeks 2–4 Moodle 课表 PDF 已核验：周一至周四在 OLD.1.16 上课，固定时段为 10:00–11:15、11:45–13:00、14:00–15:15；周五 Listening 10:00–11:45、Reading 12:45–15:00。Apple `LSE` 订阅只显示了部分 deadline，不再用它的空白判定“没课”。Moodle 会话已过期，未声称完成当日网页比较。
 - 更正｜2026-08-03—2026-08-11 中“Apple `LSE` 没有固定课程”仅描述该订阅当时的显示内容，不代表 Group 2 实际无课；实际固定课程以对应周的 Group 2 Moodle 课表为准。
