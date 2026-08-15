@@ -72,6 +72,13 @@ student-os:mentor-brief:end -->
 - **两文关系与 writer use**：Jones 具体说明并限制 Ezeh et al. 的一般政策选项。可用结论是：immigration 可以作为政策组合的一部分，但作用取决于国家规模、移民数量和政治可行性，不能写成普遍无效或单独足以解决问题。
 - **本项证据状态**：learner 在两次提示后保留了日本/韩国的条件性作用与接受度限制，但仍把两文关系判断为“直接反对”；以上关系为 AI 短模型，记为 `guided`，不作为独立证据。
 
+### Low-fertility policy｜guided reconstruction
+
+- **Extract One｜Ezeh et al.**：提出 birth bonuses、subsidised childcare、family tax reductions、paid parental leave 等措施，通过降低生育和育儿成本、帮助女性兼顾职业与家庭来提高生育率；研究显示这些政策有作用，但幅度有限，且效果随制度、文化和经济环境而变。
+- **Extract Three｜Jones**：认可 childcare、parental leave、work–life balance、monthly child allowances，但指出这些政策在东亚目前效果很小，因为长工时、性别分工、住房与教育压力等长期形成的文化、制度和家庭安排没有同步改变；单一政策不能解决全部问题。
+- **两文关系与 writer use**：Jones 解释并具体化 Ezeh et al. 所说的“效果有限且受环境影响”。可用结论是政府应把经济与育儿支持同工作文化、性别分工、住房和教育压力改革结合；只能说有机会提高生育率，不能保证。
+- **本项证据状态**：learner 独立把共同措施归为家庭经济支持与改善 work–life balance；`entrenched` 未知造成词汇阻塞，中文解释后准确恢复“深层条件未变 → 政策效果有限”的机制；记为 `guided`。
+
 ## Top-down reconstruction
 
 
@@ -390,6 +397,14 @@ student-os:mentor-brief:end -->
 - **当前端到端节点**：低生育政策的措施分组已完成；正在把 Extract Three 的深层限制恢复成可用于题目判断的意思。
 - **本轮唯一下一动作**：在重新展示的原文例子支持下，learner 用自己的中文解释为什么仅靠发钱、产假或托育支持仍可能不足，并至少指出一个长期存在的工作、家庭或文化障碍。预计 3–5 分钟。
 - **Continuation decision**：等待 learner 的机制解释；若能保留“表层政策 + 深层安排未变 → 效果有限”，即写入三源材料整理并转入 ageing，不把一次词汇未知误判为阅读推理失败。
+
+### 2026-08-15 17:51 BST｜低生育政策机制成立并转入 ageing
+
+- **Learner 原始输入**：`因为短期的政策不能扭转人们内心的一些偏见,或者已经固定的生活习惯,非常快速的,所以说可能不是那么有效。`
+- **AI 教学 / 反馈**：learner 已恢复核心机制：补贴等政策若不能改变长期形成的条件，提升生育率的效果会受限。需要保留的边界是：Jones 不只说个人内心的偏见或生活习惯，也说外部的工作制度、家庭分工、教育与住房压力；原文也没有把效果有限简单归因于“政策短期”，而是强调单项支持未能同步改变深层安排。低生育材料关系已写入 Three-source meaning/evidence map，并标记为 `guided`。
+- **当前端到端节点**：low-fertility policy map 完成；开始 Extract Two 的 ageing 定向细读。
+- **本轮唯一下一动作**：阅读本轮展示的 Extract Two 必要段落，用中文分开写两条：一条是就业/劳动力方面的政府办法及作用，另一条是健康/独立生活方面的政府办法及作用；最后写一个限制。不要把“工作”和“健康”写成同一条因果链。预计 5–10 分钟。
+- **Continuation decision**：等待 learner 的 ageing 两条政策路径与限制；只核对材料支持的因果和范围，成立后写入 map，再进入完整三源关系整理。
 <!-- student-os:learning-log:end -->
 
 ## 依据
