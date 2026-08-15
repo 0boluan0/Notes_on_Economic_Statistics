@@ -8,7 +8,7 @@ authors:
 year: 2022
 doi: 10.1016/j.ejor.2021.06.053
 status: summary-draft
-source_pdf: "[[07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/10_Dumitrescu et al. (2022) - Interpretable ML credit scoring (author preprint).pdf]]"
+source_pdf: "[[07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/09_Dumitrescu et al. (2022) - Interpretable ML credit scoring (author preprint).pdf]]"
 ---
 
 # Dumitrescu et al. (2022)：PLTR 混合信用评分模型
@@ -82,5 +82,5 @@ source_pdf: "[[07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scor
 
 ## 原文
 
-- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/10_Dumitrescu et al. (2022) - Interpretable ML credit scoring (author preprint).pdf|Author preprint]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/09_Dumitrescu et al. (2022) - Interpretable ML credit scoring (author preprint).pdf|Author preprint]]
 - [Published article](https://doi.org/10.1016/j.ejor.2021.06.053)

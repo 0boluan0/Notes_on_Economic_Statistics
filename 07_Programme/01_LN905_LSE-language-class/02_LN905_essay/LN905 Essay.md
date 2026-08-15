@@ -12,9 +12,8 @@ kind: multi-stage-project
 # LN905 Essay
 
 > [!summary] 当前项目
-> 在 2026-08-26 前完成一篇与未来学位课程相关的 2,000 字论文（具体截止时间待核验）。题目与理由已于 2026-08-01 提交 Moodle，并核验为 Submitted for grading；当前阶段是 2026-08-09 前完成 annotated bibliography。
-> 六篇核心来源已于 2026-08-03 选定、下载并核验；下一步是精读来源 1–3。
-> 2026-08-04 又补充 4 篇高质量来源，当前文献池共 10 篇。
+> 在 2026-08-26 前完成一篇与未来学位课程相关的 2,000 字论文（具体截止时间待核验）。题目与理由已于 2026-08-01 提交 Moodle，并核验为 Submitted for grading。
+> Annotated bibliography 已于 2026-08-09 提交并核验。2026-08-15 已按 Week 3 要求完成 detailed essay plan，包括 3 个 sections、5 个正文段落、topic sentences、证据、评价和反方回应。当前文献池保留 9 篇；下一步是在 Moodle 上传并核验提交状态。
 >
 > <!-- bilingual-en:start -->
 > **Update, 2 August 2026:** The question and rationale were submitted to Moodle on 1 August and verified as “Submitted for grading”. The current stage is the annotated bibliography due on 9 August.
@@ -22,6 +21,8 @@ kind: multi-stage-project
 > **Update, 3 August 2026:** Six core sources have been selected, downloaded and checked. The next step is close reading of sources 1–3.
 >
 > **Update, 4 August 2026:** Four further high-quality sources have been added, bringing the research pool to ten papers.
+>
+> **Update, 15 August 2026:** The annotated bibliography was submitted and verified on 9 August. The detailed essay plan is now complete, with three sections, five body paragraphs, topic sentences, evidence, evaluation and counterarguments. The current research pool contains nine sources. The remaining step is to upload the plan to Moodle and verify the submission status.
 > <!-- bilingual-en:end -->
 
 ## 执行清单
@@ -34,11 +35,11 @@ kind: multi-stage-project
 - [x] LN905 Essay｜精读来源 4–6，提取核心 claim、证据、用途与局限 #student-os/task ⏳ 2026-08-09 ✅ 2026-08-09
 - [x] LN905 Essay｜写完并统一格式化 annotated bibliography #student-os/task ⏳ 2026-08-09 ✅ 2026-08-09
 - [x] LN905 Essay｜上传 annotated bibliography 并检查 Moodle submission status #student-os/task ⏳ 2026-08-09 ✅ 2026-08-09
-- [ ] LN905 Essay｜把文献关系整理成支持 thesis 的 argument map #student-os/task ⏳ 2026-08-15
-- [ ] LN905 Essay｜搭出 detailed essay plan：thesis、段落 claims 与顺序 #student-os/task ⏳ 2026-08-15
-- [ ] LN905 Essay｜为每段补上证据、引用与可能的反方观点 #student-os/task ⏳ 2026-08-15
-- [ ] LN905 Essay｜按作业要求修订并完成 detailed essay plan 内容 #student-os/task ⏳ 2026-08-15
-- [ ] LN905 Essay｜上传 detailed essay plan 并检查 Moodle submission status #student-os/task ⏳ 2026-08-15
+- [x] LN905 Essay｜把文献关系整理成支持 thesis 的 argument map #student-os/task ⏳ 2026-08-15 ✅ 2026-08-15
+- [x] LN905 Essay｜搭出 detailed essay plan：thesis、段落 claims 与顺序 #student-os/task ⏳ 2026-08-15 ✅ 2026-08-15
+- [x] LN905 Essay｜为每段补上证据、引用与可能的反方观点 #student-os/task ⏳ 2026-08-15 ✅ 2026-08-15
+- [x] LN905 Essay｜按作业要求修订并完成 detailed essay plan 内容 #student-os/task ⏳ 2026-08-15 ✅ 2026-08-15
+- [x] LN905 Essay｜上传 detailed essay plan 并检查 Moodle submission status #student-os/task ⏳ 2026-08-15 ✅ 2026-08-15
 - [ ] LN905 Essay｜把 detailed plan 转成 first draft 的 section skeleton 与 2,000 词预算 #student-os/task ⏳ 2026-08-18
 - [ ] LN905 Essay｜写出一个 anchor body paragraph，验证 claim–evidence–evaluation 链 #student-os/task ⏳ 2026-08-19
 - [ ] LN905 Essay｜完成 first draft 前半部分正文 #student-os/task ⏳ 2026-08-22
@@ -70,31 +71,39 @@ I have chosen this question because it connects the statistical modelling and ma
 
 ### 暂定论点
 
-本文将主张：复杂模型只有在样本外预测提升显著且稳定，并且能够满足模型验证、公平性审查和监管问责要求时才值得采用；否则，逻辑回归仍是更合理的基准模型。
+本文将主张：复杂机器学习模型的预测提升只在部分情况下足以抵消可解释性的下降。只有当它在样本外测试中明显且稳定地优于逻辑回归、提升对真实贷款决策有用，并且模型仍能接受解释、公平性和模型风险检查时，复杂模型才值得采用。如果可解释模型能给出相近结果，就应优先使用逻辑回归或其他可解释模型。
 
 <!-- bilingual-en:start -->
-This essay will argue that complex models are justified only when their out-of-sample predictive gains are material and stable and when they remain sufficiently transparent for model validation, fairness review and regulatory accountability; otherwise, logistic regression remains the more appropriate baseline.
+This essay argues that the predictive gains of complex machine-learning models only justify lower interpretability in some situations. They should be used when they perform clearly and consistently better than logistic regression in out-of-sample tests, and when the gain is important for real lending decisions. The model must also be possible to explain and check for fairness and model risk. If an interpretable model gives similar results, logistic regression or another interpretable model should be preferred.
+<!-- bilingual-en:end -->
+
+## Detailed essay plan
+
+已完成的提交版结构：[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Detailed Essay Plan|LN905 Detailed Essay Plan]]。它使用 thematic structure，以“预测提升是否足够 → 是否存在可解释替代方案 → 黑箱能否被检查 → 群体影响是否可接受”的顺序推进。
+
+<!-- bilingual-en:start -->
+The submission-ready structure is available at [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Detailed Essay Plan|LN905 Detailed Essay Plan]]. It uses a thematic structure and moves from the size of the predictive gain to interpretable alternatives, black-box checks and subgroup effects.
 <!-- bilingual-en:end -->
 
 ## 文献精读入口
 
-十篇文献现已按“现象与张力 → 中心判断 → section 功能 → 关键段落组 → 可迁移写法”重做结构拆解：[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/00_文章梗概索引|十篇文献成文结构索引]]。
+九篇文献现已按“现象与张力 → 中心判断 → section 功能 → 关键段落组 → 可迁移写法”重做结构拆解：[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/00_文章梗概索引|九篇文献成文结构索引]]。
 
 <!-- bilingual-en:start -->
-The ten source notes have been reorganised as top-down composition maps: phenomenon and tension, central claim, section functions, key paragraph moves, and transferable writing patterns. Start from the [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/00_文章梗概索引|ten-paper composition index]].
+The nine source notes have been reorganised as top-down composition maps: phenomenon and tension, central claim, section functions, key paragraph moves, and transferable writing patterns. Start from the [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/00_文章梗概索引|nine-paper composition index]].
 <!-- bilingual-en:end -->
 
-## 六篇核心来源
+## 九篇主要来源
 
 <!-- bilingual-en:start -->
-*Six core sources*
+*Nine main sources*
 <!-- bilingual-en:end -->
 
 > [!info] 选择逻辑
-> 这组来源共同覆盖论证所需的四个环节：预测性能、经济收益、可解释性与审计，以及公平和分配后果。其中两份本地 PDF 是作者预印本；项目页同时保留正式发表版本的 DOI。
+> 这组来源共同覆盖论证所需的四个环节：预测性能、经济收益、可解释性与审计，以及公平和分配后果。其中四份本地 PDF 是作者预印本；项目页同时保留正式发表版本的 DOI。
 >
 > <!-- bilingual-en:start -->
-> Together, these sources cover the four parts of the argument: predictive performance, economic value, interpretability and auditability, and fairness and distributional consequences. Two local PDFs are author preprints; the DOI of the published version is retained here in each case.
+> Together, these sources cover the four parts of the argument: predictive performance, economic value, interpretability and auditability, and fairness and distributional consequences. Four local PDFs are author preprints; the DOI of the published version is retained here in each case.
 > <!-- bilingual-en:end -->
 
 **1.** [[07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/01_Lessmann et al. (2015) - Benchmarking credit-scoring algorithms.pdf|Lessmann et al. (2015)]] · [DOI](https://doi.org/10.1016/j.ejor.2015.05.030)：大规模比较 8 个真实信用评分数据集上的 41 个分类器，用来判断复杂模型相对逻辑回归的提升是否稳定、是否随评估指标和误分类成本而变化。
@@ -133,19 +142,6 @@ The ten source notes have been reorganised as top-down composition maps: phenome
 **Argument use:** Applies a Shapley-value-based explanation framework to a real mortgage-default model while documenting variation across loans and residual model uncertainty. It helps define what post-hoc explanation can and cannot solve.
 <!-- bilingual-en:end -->
 
-## 补充的四篇高质量来源
-
-<!-- bilingual-en:start -->
-*Four additional high-quality sources*
-<!-- bilingual-en:end -->
-
-> [!info] 补充逻辑
-> 这四篇不是为了凑数量，而是补强原组合中的关键缺口：英国消费者信用评分中的公平性实证、深度学习相对逻辑回归的超大样本增益、从黑箱提取可理解规则的经典方案，以及兼顾内生可解释性与非线性预测力的混合模型。
->
-> <!-- bilingual-en:start -->
-> These papers fill four specific gaps rather than merely increasing the count: UK evidence on fairness in consumer credit scoring, large-scale gains from deep learning over logistic regression, a classic rule-extraction approach to making a black box comprehensible, and a hybrid model that combines intrinsic interpretability with nonlinear predictive power.
-> <!-- bilingual-en:end -->
-
 **7.** [[07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/07_Bono et al. (2021) - Algorithmic fairness in credit scoring.pdf|Bono, Croxson and Giles (2021)]] · [DOI](https://doi.org/10.1093/oxrep/grab020)：使用 80 万名英国借款人的信用档案，直接模拟从逻辑回归切换到集成机器学习。结果表明机器学习整体更准确，但既没有恶化、也没有消除不同群体之间已有的公平性问题，因此可用来反驳“复杂模型必然更不公平”以及“准确率提升自然会解决公平问题”这两个过度推断。
 
 <!-- bilingual-en:start -->
@@ -158,13 +154,7 @@ The ten source notes have been reorganised as top-down composition maps: phenome
 **Argument use:** Compares a deep neural network with a linear logistic formulation out of sample using more than 120 million US mortgages and links the predictive gains to portfolio and investment performance. It supplies a strong positive case that model complexity can deliver materially useful gains when the dataset is exceptionally large and the underlying relationships are highly nonlinear.
 <!-- bilingual-en:end -->
 
-**9.** [[07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/09_Martens et al. (2007) - Comprehensible credit scoring via SVM rule extraction.pdf|Martens et al. (2007)]] · [DOI](https://doi.org/10.1016/j.ejor.2006.04.051)：比较多种从支持向量机提取符号规则的方法，发现可理解规则只损失少量黑箱模型的预测表现。它为论文提供一个早期但直接的中间立场：实际选择并非只能是透明的逻辑回归或完全不透明的复杂模型，不过其较旧且较小的数据也适合用作方法局限的批判点。
-
-<!-- bilingual-en:start -->
-**Argument use:** Compares methods for extracting symbolic rules from support vector machines and finds that comprehensible rules retain most of the black-box model's predictive performance. It provides an early but direct middle position between transparent logistic regression and a wholly opaque complex model, while its older and smaller datasets also make it suitable for critical discussion of methodological limits.
-<!-- bilingual-en:end -->
-
-**10.** [[07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/10_Dumitrescu et al. (2022) - Interpretable ML credit scoring (author preprint).pdf|Dumitrescu et al. (2022) · author preprint]] · [published DOI](https://doi.org/10.1016/j.ejor.2021.06.053)：提出 penalised logistic tree regression，用浅层决策树生成可解释规则，再由惩罚逻辑回归完成评分。在四个真实违约数据集上，它显著优于标准逻辑回归并与随机森林具有竞争力，因此直接挑战题目中“预测性能与可解释性只能二选一”的隐含前提。
+**9.** [[07_Programme/01_LN905_LSE-language-class/PDF/10_Essay-Credit-Scoring/09_Dumitrescu et al. (2022) - Interpretable ML credit scoring (author preprint).pdf|Dumitrescu et al. (2022) · author preprint]] · [published DOI](https://doi.org/10.1016/j.ejor.2021.06.053)：提出 penalised logistic tree regression，用浅层决策树生成可解释规则，再由惩罚逻辑回归完成评分。在四个真实违约数据集上，它显著优于标准逻辑回归并与随机森林具有竞争力，因此直接挑战题目中“预测性能与可解释性只能二选一”的隐含前提。
 
 <!-- bilingual-en:start -->
 **Argument use:** Introduces penalised logistic tree regression, which derives interpretable rules from shallow decision trees and estimates the final score through penalised logistic regression. Across four real credit-default datasets, it significantly outperforms standard logistic regression and is competitive with random forests, directly challenging the premise that predictive performance and interpretability must be traded off as mutually exclusive goals.

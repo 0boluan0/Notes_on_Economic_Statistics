@@ -24,9 +24,9 @@ topic: "Annotated Bibliography"
 ## Current essay and source pool
 
 - [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay|LN905 Essay project]]
-  提供 essay question、暂定 thesis、正式里程碑与十篇来源在论证中的角色。
+  提供 essay question、暂定 thesis、正式里程碑与九篇来源在论证中的角色。
 - [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/00_文章梗概索引|Annotated Bibliography 文章梗概索引]]
-  用于从十篇候选来源中选择能形成清楚对话的三篇。
+  用于从九篇候选来源中选择能形成清楚对话的三篇。
 - [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/01 Lessmann et al. (2015) - Benchmarking credit-scoring algorithms|Lessmann et al. (2015) summary draft]]
   本课的 worked example；训练如何把 benchmark 的问题、方法、发现、局限与 essay 用途压缩进一则 annotation。
 - [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/02 Khandani et al. (2010) - Consumer credit-risk ML models|Khandani et al. (2010) summary draft]]
