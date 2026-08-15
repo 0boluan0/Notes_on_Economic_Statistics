@@ -37,8 +37,6 @@ hide postpone button
 ## 风险雷达
 
 <!-- student-os:risk-radar:start -->
-- 逾期 1 天·待核验｜2026-08-14 11:45｜LN905 Listening into Writing：Demographics
-- 逾期 1 天·待核验｜2026-08-14 15:00｜LN905 Reading into Writing：Demographics
 - D-1｜2026-08-16｜LN905 Essay：提交 detailed essay plan
 - D-6｜2026-08-21 11:45｜LN905 Listening into Writing：Climate Change
 - D-6｜2026-08-21 15:00｜LN905 Reading into Writing：Climate Change
