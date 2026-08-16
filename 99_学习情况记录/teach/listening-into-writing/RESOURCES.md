@@ -36,6 +36,10 @@ topic: "LN905 Listening into Writing"
   Demographics comprehension 练习使用完整演讲，从开头到结尾；首轮粗笔记后再用 transcript 教学核对。
 - [TED official transcript](https://www.ted.com/talks/hans_rosling_global_population_growth_box_by_box?view=transcript)
   用于首听后核对 central claim、supporting blocks 与 scope，不在首听前打开。
+- [Johan Rockström: The Tipping Points of Climate Change — and Where We Stand (TED YouTube)](https://www.youtube.com/watch?v=Vl6VhCAeEfQ)
+  Climate Change Paper A guided end-to-end 使用的 18:36 完整演讲；第一次播放不看字幕、不暂停，之后再做 transcript-assisted repair。
+- [TED official transcript](https://www.ted.com/talks/johan_rockstrom_the_tipping_points_of_climate_change_and_where_we_stand?view=transcript)
+  用于首听后核对 tipping-risk evidence、certainty、scope 与完整结论，不在首听前打开。
 
 ## Gaps
 

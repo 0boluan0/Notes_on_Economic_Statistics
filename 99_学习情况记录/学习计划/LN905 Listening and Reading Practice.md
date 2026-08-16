@@ -94,7 +94,7 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 
 ## Climate Change｜端到端训练与测试
 
-- [ ] LN905 Paper A guided end-to-end｜Climate Change：完整演讲 → 笔记/transcript repair → map → top-down plan → 200–400 词 critical summary → 整篇反馈/修订（可跨天）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end|学习记录]] #student-os/task
+- [ ] LN905 Paper A guided end-to-end｜Climate Change：完整演讲 → 笔记/transcript repair → map → top-down plan → 200–400 词 critical summary → 整篇反馈/修订（可跨天）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end|学习记录]] #student-os/task ⏳ 2026-08-16
 - [ ] LN905 Paper B guided end-to-end｜Climate Change：三篇正式量级 extracts → map → thesis/paragraph jobs → 约 600 词 essay → 整篇反馈/修订（可跨天）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-end-to-end|学习记录]] #student-os/task
 
 ## 旧序列｜已取消，不执行
@@ -187,3 +187,7 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 
 - Listening：`PImDVT8fb-I`｜Jennifer D. Sciubba, *The Truth About Human Population Decline*（Paper A · Demographics timed output；测试后再校准）
 - Reading：[[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-3-Demographics/Demographics Extracts.pdf|Demographics Extracts]]｜Ezeh et al. (2012)、Bloom et al. (2015)、Jones (2019)；三篇正文约 594 / 536 / 653 词，合计约 1,783 词｜[[07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing|原始限时成文]]约 722 词；教师反馈尚未到达。
+
+### 2026-08-16 已准备
+
+- Listening：`Vl6VhCAeEfQ`｜Johan Rockström, *The Tipping Points of Climate Change — and Where We Stand*（TED 官方完整演讲，18:36；英文字幕覆盖开头至结论）

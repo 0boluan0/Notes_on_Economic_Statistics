@@ -24,7 +24,7 @@ tags:
 - [x] 2026-08-09｜[[LN905 Essay]]｜提交注释书目（Annotated bibliography）｜硬截止｜来源：Moodle 已核验 Submitted for grading #student-os/deadline 📅 2026-08-09 ✅ 2026-08-09
 - [x] 2026-08-14 11:45｜[[LN905 PDF Contents|LN905]]｜提交 Listening into Writing：Demographics｜硬截止｜来源：Moodle 已核验 Submitted for grading #student-os/deadline 📅 2026-08-14 ✅ 2026-08-14
 - [x] 2026-08-14 15:00｜[[LN905 PDF Contents|LN905]]｜提交 Reading into Writing：Demographics Essay Question and Submission｜硬截止｜来源：Moodle 已核验 Submitted for grading #student-os/deadline 📅 2026-08-14 ✅ 2026-08-14
-- [ ] 2026-08-16｜[[LN905 Essay]]｜提交详细论文计划（Detailed essay plan）｜硬截止｜来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/LN905 Week one materials 2026.pdf#page=3|Week 1 workbook]] #student-os/deadline 📅 2026-08-16
+- [x] 2026-08-16｜[[LN905 Essay]]｜提交详细论文计划（Detailed essay plan）｜硬截止｜来源：Moodle 已核验 Submitted for grading #student-os/deadline 📅 2026-08-16 ✅ 2026-08-15
 - [ ] 2026-08-21 11:45｜[[LN905 PDF Contents|LN905]]｜提交 Listening into Writing：Climate Change｜硬截止｜来源：Student Hub（Moodle dates） #student-os/deadline 📅 2026-08-21
 - [ ] 2026-08-21 15:00｜[[LN905 PDF Contents|LN905]]｜提交 Reading into Writing：Climate Change Essay Question and Submission｜硬截止｜来源：Student Hub（Moodle dates） #student-os/deadline 📅 2026-08-21
 - [ ] 2026-08-23｜[[LN905 Essay]]｜提交初稿（First draft）｜硬截止｜来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/LN905 Week one materials 2026.pdf#page=3|Week 1 workbook]] #student-os/deadline 📅 2026-08-23
@@ -32,6 +32,8 @@ tags:
 
 ## 核验状态
 
+- 2026-08-16｜Moodle Sunday 全量核对完成：13 个 assignment 页面、课程资源索引和 Announcements 已检查。Essay Plan 于 2026-08-15 20:05 提交并显示 Submitted for grading，已关闭对应硬截止；Essay Draft、Final Submission 与两项 Climate Change submission 仍未提交。Climate Listening 10:00 开放、11:45 截止，Reading 12:45 开放、15:00 截止；未发现更早或新增的硬截止，Announcements 仍为空。
+- 2026-08-16｜Group 2 Weeks 2–4 课表 PDF 可读，周日没有固定课程；Apple 只读日历今日没有固定行程，`LSE` 的 8 月 21 日两项截止与 Moodle 一致。
 - 2026-08-15｜Moodle 已核验：Demographics Listening 于 2026-08-14 11:19 提交、Reading 于 14:49 提交，两项均显示 Submitted for grading；已关闭对应硬截止。
 - 2026-08-15｜Group 2 Weeks 2–4 课表 PDF 可读，周六没有固定课程；Apple 只读日历未显示今日行程或新截止。Moodle 会话已超时，未完成网页比较；Demographics Listening/Reading 提交因此继续保留为待核验，未据此改变任何截止。
 - 2026-08-13｜Group 2 的 Weeks 2–4 Moodle 课表 PDF 已核验：周四固定课程为 10:00–11:15 Academic Writing & Assignment、11:45–13:00 Paper C Speaking & Listening、14:00–15:15 Academic Interaction，地点 OLD.1.16。Apple `LSE` 显示 8 月 14 日 Listening 11:45 与 Reading 15:00 截止点，与现有记录一致；Moodle 登录会话已过期，未声称完成网页比较。

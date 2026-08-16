@@ -13,7 +13,7 @@ kind: multi-stage-project
 
 > [!summary] 当前项目
 > 在 2026-08-26 前完成一篇与未来学位课程相关的 2,000 字论文（具体截止时间待核验）。题目与理由已于 2026-08-01 提交 Moodle，并核验为 Submitted for grading。
-> Annotated bibliography 已于 2026-08-09 提交并核验。2026-08-15 已按 Week 3 要求完成 detailed essay plan，包括 3 个 sections、5 个正文段落、topic sentences、证据、评价和反方回应。当前文献池保留 9 篇；下一步是在 Moodle 上传并核验提交状态。
+> Annotated bibliography 已于 2026-08-09 提交并核验。Detailed essay plan 已于 2026-08-15 上传 Moodle，并在 2026-08-16 核验为 Submitted for grading；它包括 3 个 sections、5 个正文段落、topic sentences、证据、评价和反方回应。当前文献池保留 9 篇；下一步是把 plan 转成 first draft 的 section skeleton 与 2,000 词预算。
 >
 > <!-- bilingual-en:start -->
 > **Update, 2 August 2026:** The question and rationale were submitted to Moodle on 1 August and verified as “Submitted for grading”. The current stage is the annotated bibliography due on 9 August.
@@ -22,7 +22,7 @@ kind: multi-stage-project
 >
 > **Update, 4 August 2026:** Four further high-quality sources have been added, bringing the research pool to ten papers.
 >
-> **Update, 15 August 2026:** The annotated bibliography was submitted and verified on 9 August. The detailed essay plan is now complete, with three sections, five body paragraphs, topic sentences, evidence, evaluation and counterarguments. The current research pool contains nine sources. The remaining step is to upload the plan to Moodle and verify the submission status.
+> **Update, 16 August 2026:** The detailed essay plan was uploaded on 15 August and verified as “Submitted for grading” on 16 August. It contains three sections, five body paragraphs, topic sentences, evidence, evaluation and counterarguments. The next step is to convert the plan into a section skeleton and a 2,000-word budget for the first draft.
 > <!-- bilingual-en:end -->
 
 ## 执行清单
