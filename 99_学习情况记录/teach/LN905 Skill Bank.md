@@ -56,9 +56,9 @@ neath_sync: synced
 
 ### AW-01 · 把题目变成可执行任务
 - 状态：`new`
-- 触发/功能：拿到 essay、Paper B 或 assignment question 时，先确定 command、scope、concepts 与 source requirement。
+- 触发/功能：拿到 essay、Paper B 或 assignment question 时，按 Week 1 question-analysis prompts 读清任务。
 - 为什么：不先读清任务，后面的好句子也可能回答错问题。
-- 动作/框架：圈 command → 定义关键词 → 写限制范围 → 写一句“我必须证明什么”。
+- 动作/框架：`what do you have to do → number/equal importance of parts → restrictions → terms needing definition → problematic vocabulary → your view → possible structure`。
 - 边界：不能偷换 command、扩大 population/time/context，或把讨论题写成描述题。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#一、先把题目变成写作任务|Academic Writing：读题]]；Assignment criteria。
 - 适用：Paper B、Assignment；planning、introduction、whole essay。
@@ -69,7 +69,7 @@ neath_sync: synced
 - 状态：`new`
 - 触发/功能：材料很多但不知道全文到底要说什么时，形成可争辩、有限定的答案。
 - 为什么：thesis 是选材和段落取舍的上位标准。
-- 动作/框架：`Although X, this essay argues Y because A and B, within Z.` 可变形，不要求照抄。
+- 动作/框架：检查 thesis 是否 `directly answers the question`、通常可在 introduction 出现并在 conclusion 重申、`specific and focused`；排除 `non-thesis / overly broad / no structure thesis`。
 - 边界：certainty、scope、causality 必须受来源支持；不能先列作者再拼答案。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#二、用 thesis 固定全文的答案|Academic Writing：thesis]]。
 - 适用：Paper B、Assignment；thesis、introduction、conclusion。
@@ -78,33 +78,33 @@ neath_sync: synced
 
 ### AW-03 · 选择宏观结构
 - 状态：`new`
-- 触发/功能：已有答案后，按论证逻辑选择 thematic、causal、problem–solution 或 comparative structure。
+- 触发/功能：已有 thesis 后，按 Week 3 课程结构选择 Justification、Rebuttal、Synthesis 或 Thematic。
 - 为什么：人类写作者先安排读者理解路径，再写句子。
-- 动作/框架：把 thesis 拆成 2–4 个必须依次完成的 reasoning jobs。
-- 边界：结构服务答案；不能因为来源有三篇就写成三个作者段。
+- 动作/框架：`Justification: claim→reasons→restatement`；`Rebuttal: claim→counter-claim→rebuttal→restatement`；`Synthesis: claim→A→B→synthesis→restatement`；`Thematic: claim→themes→restatement`；再用 thesis 与 topic sentences 检查结构是否可见。
+- 边界：Justification 防 one-sided；Rebuttal 防弱回应；Synthesis 必须 evaluate A/B 而非只 describe；Thematic 防 fragment argument。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#三、先搭论证结构，再写句子|Academic Writing：结构]]。
 - 适用：Paper A/B、Assignment；outline、whole text。
 - 证据/Callback：Listening teacher feedback 认可整体理解；Reading feedback 认可基本逻辑组织，但未完成结论。
 - 下一观察：下一份 250+ 词 integrated output。
 
-### AW-04 · 给每段一个 writer job
+### AW-04 · Effective topic sentence 与段落功能
 - 状态：`new`
-- 触发/功能：从 thesis 进入 paragraph plan 时，先写该段对全文答案的功能。
-- 为什么：段落不是材料容器，而是完成一个推理动作的小论证。
-- 动作/框架：`段落功能 → writer claim → evidence role → warrant/implication → link back`。
+- 触发/功能：从 thesis 进入 paragraph plan 时，用 topic sentence 让本段在 essay structure 中的作用可见。
+- 为什么：Week 3 要求段落 `Begin ... with YOUR voice`，而不是让 scholar 的名字控制段首。
+- 动作/框架：writer-led topic sentence → literature support → writer comment；Student OS 的 `paragraph job` 仅是 paragraph function 的管理简称。
 - 边界：一个段落不能同时承担互不相干的多个 job。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#五、让每一段成为一个小论证|Academic Writing：段落]]。
 - 适用：Paper A/B、Assignment；outline、paragraph。
 - 证据/Callback：尚无显式闭环。
 - 下一观察：AW-16 显式教学后的下一篇新材料。
 
-### AW-05 · Claim–Evidence–Warrant 推理
+### AW-05 · Toulmin six-part argumentation
 - 状态：`new`
-- 触发/功能：段落有 claim 和 citation，但读者仍不知道证据为什么支持判断时补 warrant。
-- 为什么：引用不会自动完成推理。
-- 动作/框架：先标 claim/ground，再问“这项 evidence 允许我得出哪一步、为什么”。
-- 边界：warrant 不能发明机制；qualifier/rebuttal 不能被省略成绝对结论。
-- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#检查 evidence 到 claim 的桥：Toulmin|Academic Writing：Toulmin]]。
+- 触发/功能：evaluating 或 developing argument 时，检查 Toulmin 的六部分是否成立。
+- 为什么：grounds 不会自动推出 claim；warrant、backing、qualifier 和 rebuttal 决定论证强度。
+- 动作/框架：`claim → grounds → warrant → backing → qualifier → rebuttal`；检查 grounds 是否 true/believable，warrant 是否 explicit/implicit 且 robust，是否需要 backing、qualification 与 valid counter-view。
+- 边界：warrant 不能发明机制；backing 必须真正支持 warrant；qualifier/rebuttal 不能被省略成绝对结论。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#Toulmin：六部分 argumentation model|Academic Writing：Toulmin]]。
 - 适用：Paper A/B、Assignment；analysis、evaluation、paragraph development。
 - 证据/Callback：尚无显式闭环。
 - 下一观察：下一份端到端成品中的 evidence-role paragraph。
@@ -203,7 +203,7 @@ neath_sync: synced
 - 为什么：细枝末节不能劫持主技能和整篇完成度。
 - 动作/框架：task fulfilment → meaning/source accuracy → structure/reasoning → recurring language → isolated errors。
 - 边界：会改变 meaning、source ownership、certainty、scope、causality 的语言问题仍须立即修。
-- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#七、按“影响论证的程度”修改|Academic Writing：revision]]。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#七、用 Assignment Marking Criteria 修改|Academic Writing：revision]]。
 - 适用：Paper A/B、Assignment；revision、AI feedback。
 - 证据/Callback：用户明确反馈旧 prompt 纠缠细枝末节；系统规则已修正，技能尚待显式闭环。
 - 下一观察：下一次 guided output 的反馈顺序。
@@ -232,10 +232,10 @@ neath_sync: synced
 
 ### AW-17 · 用 evidence 强度校准 claim
 - 状态：`new`
-- 触发/功能：从研究 finding 或一组 evidence 推出自己的 claim 时，决定能说多强、能推广到哪里。
+- 触发/功能：根据 evidence 提出 `an assertion/argument` 时，选择合适的 hedging 或 boosting 强度。
 - 为什么：避免把样本结果写成普遍事实，也避免把有力证据机械写弱。
-- 动作/框架：保留 sample-specific finding → 判断可推广的 population/context 与 evidence strength → 选择 `may/might/could be argued`、`suggest/indicate` 或 `show/demonstrate` → 用现在时写 claim 并保留必要限定。
-- 边界：时态变化本身不能证明推广成立；必须保留 source ownership、sample scope、certainty、causality。Hedge 不是装饰性模糊，booster 需要足够 evidence；`prove` 通常不适合课程写作。
+- 动作/框架：判断 sample/coverage 与 evidence strength → 按讲义 continuum 选择 `may/might/could be argued`、`seem/appear to suggest`、`suggest/indicate`、`seem/appear to show`、`show/demonstrate/illustrate` 或 `clearly show`。
+- 边界：`prove that` 在讲义中标为 very strong / not recommended；小样本必须保留 `some` 等 population qualifier，不得删除 source ownership、scope、certainty 或 causality。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#Week 4：让 claim 的力度与 evidence 匹配|Academic Writing：making claims]]；[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 1.pdf|Week 4 Lesson 1]]。
 - 适用：Paper A/B、Assignment；finding → interpretation、summary、evaluation、paragraph claim。
 - 证据/Callback：2026-08-17 已从课堂 Lesson 1 核验；尚未完成系统内的显式教学闭环。
