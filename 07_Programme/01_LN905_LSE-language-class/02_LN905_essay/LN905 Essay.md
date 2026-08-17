@@ -44,8 +44,8 @@ kind: multi-stage-project
 - [ ] LN905 Essay｜写出一个 anchor body paragraph，验证 claim–evidence–evaluation 链 #student-os/task ⏳ 2026-08-19
 - [ ] LN905 Essay｜完成 first draft 前半部分正文 #student-os/task ⏳ 2026-08-22
 - [ ] LN905 Essay｜完成 first draft 后半部分正文、introduction 与 conclusion #student-os/task ⏳ 2026-08-22
-- [ ] LN905 Essay｜通读修订 argument、source accuracy、cohesion 与 recurring language errors #student-os/task ⏳ 2026-08-23
-- [ ] LN905 Essay｜统一引用与格式，上传 first draft 并检查 Moodle submission status #student-os/task ⏳ 2026-08-23
+- [ ] LN905 Essay｜通读修订 argument、source accuracy、cohesion 与 recurring language errors #student-os/task ⏳ 2026-08-22
+- [ ] LN905 Essay｜统一引用与格式，上传 first draft 并检查 Moodle submission status #student-os/task ⏳ 2026-08-22
 
 ## 里程碑
 
