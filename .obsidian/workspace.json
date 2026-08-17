@@ -43,6 +43,26 @@
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "dd2891467b1d3b3d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "16773f94709e9e2b",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://www.youtube.com/watch?v=Vl6VhCAeEfQ",
+                "title": "The Tipping Points of Climate Change — and Where We Stand | Johan Rockström | TED",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "The Tipping Points of Climate Change — and Where We Stand | Johan Rockström | TED"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -300,7 +320,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 563.0968017578125
+    "width": 563.0968017578125,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -322,8 +343,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "65c78033535cb705",
+  "active": "16773f94709e9e2b",
   "lastOpenFiles": [
+    "99_学习情况记录/teach/academic-writing/lessons/2026-08-17-academic-writing-from-zero.md",
+    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end.md",
     "99_学习情况记录/teach/academic-writing/lessons/2026-08-17-credit-scoring-essay-end-to-end.md",
     "99_学习情况记录/teach/academic-writing/RESOURCES.md",
     "99_学习情况记录/teach/academic-writing/MISSION.md",
@@ -367,9 +390,7 @@
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Detailed Essay Plan.md",
     "99_学习情况记录/2026-08-15——Sat.md",
     "99_学习情况记录/2026-08-16——Sun.md",
-    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing.md",
-    "00_inbox/LN905-essay-structure.md",
     "03_Computer_Science/01_CS50/CS50 Course Atlas.canvas",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",

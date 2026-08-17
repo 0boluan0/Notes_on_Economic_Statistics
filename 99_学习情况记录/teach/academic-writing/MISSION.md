@@ -12,30 +12,29 @@ topic: "LN905 Academic Writing"
 
 ## Why
 
-用 LN905 Weeks 1–4 的讲义方法和当前 credit-scoring essay，真正学会从题目走到完整学术论文。重点不是让 AI 代写，而是让学习者能亲自完成每个决定，并把同一条写作链迁移到以后课程的 essay。
+把学习者当作从未上过 Academic Writing，从最基本的“学术写作在做什么”开始，重新学习 LN905 已更新讲义中的完整课程。目标不是记住术语，而是能解释、应用并在隔了一段教学后仍然调用这些方法。
 
 ## Success looks like
 
-- 能独立把 essay question 变成明确任务，写出直接、具体、有限定的 thesis，并选择能证明它的结构。
-- 能让每个正文段落由自己的 claim 驱动，准确使用来源，写清 evidence、reasoning、evaluation 与必要限定。
-- 能完成约 2,000 词的当前 essay，并按正式 marking criteria 从整篇论证到语言完成一次有优先级的修改。
+- 面对新的 essay question，能独立完成 question analysis、thesis、结构与段落功能，而不是复述课堂例子。
+- 能把可靠来源准确变成 evidence，并写出 `claim → evidence → reasoning/evaluation` 的正文段落。
+- 能在后续混合测验中重新调用早先内容，最后把全部步骤整合进一份新的 essay-style output，再迁移到真实 assignment。
 
 ## Constraints
 
-- 当前正式 essay 已有 question、working thesis、thematic detailed plan 与九篇来源；教学从头核对能力，但不假装这些已有产物不存在。
-- 每轮只推进一个约 5–10 分钟的真实写作决定；中文短句解释，必要英文术语立即说明。
-- 整条链保存在一个 Markdown 教学记录中；中间的 map、plan、句子和反馈都不是新的任务或完成状态。
+- 不根据现有 AI 整理稿、detailed plan 或以前的成文推断“已经会”；它们不能替代从零教学和新的学习证据。
+- 每轮采用 `讲一个小块 → 看例子 → 做一道短构造题 → 讲评/纠正 → 再继续`，暂不要求英文时就允许用中文证明理解。
+- 一个概念首次掌握后，在后续第 `+1、+3、+7` 个教学块复测；从第二块开始，测验最多混入一道到期旧题，结课再做累计应用。
+- 整门课使用一个持续 Markdown 记录和 review queue；测验不是新的 Student OS task 或 checkbox。
 - Week 4 目前只把实际上过的 Lesson 1 Making Claims 作为已激活内容；Lessons 2–4 暂不当作已学内容。
 
 ## Out of scope
 
-- 不建立孤立的语法、句型或单项技能练习。
+- 基础课程结束前，不以当前 credit-scoring essay 或 detailed plan 为教学主线；它们只用于后续迁移。
 - 不替代 Reading into Writing、Listening into Writing 或 Annotated Bibliography 的独立 mission。
 
 ## 相关笔记
 
 - [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing|Academic Writing：新手从题目走到成稿的顺序]]
-- [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay|LN905 Essay]]
-- [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Detailed Essay Plan|LN905 Detailed Essay Plan]]
+- [[07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents|LN905 PDF Contents]]
 - [[99_学习情况记录/teach/LN905 Skill Bank|LN905 Skill Bank]]
-

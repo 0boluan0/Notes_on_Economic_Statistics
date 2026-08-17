@@ -120,8 +120,17 @@ def check_remote(data: dict) -> None:
         raise ValueError(f"missing Neath collections: {missing_notebooks}")
     checked = 0
     for spec in data["collections"]:
+        wanted = [item for item in data["entries"] if item["collection"] == spec["name"]]
+        wanted_keys = {item["word"].strip().casefold() for item in wanted}
+        extras = sorted(
+            item["word"]
+            for item in remote_words[spec["name"]]
+            if item["word"].strip().casefold() not in wanted_keys
+        )
+        if extras:
+            raise ValueError(f"unmanaged words remain in {spec['name']}: {extras}")
         by_word = {item["word"].strip().casefold(): item for item in remote_words[spec["name"]]}
-        for entry in (item for item in data["entries"] if item["collection"] == spec["name"]):
+        for entry in wanted:
             remote = by_word.get(entry["word"].strip().casefold())
             if remote is None:
                 raise ValueError(f"word missing from Neath: {entry['word']!r}")

@@ -7,13 +7,17 @@ tags:
 date: "2026-08-17"
 source_type: "teach"
 topic: "LN905 Academic Writing"
-status: "active"
+status: "superseded"
 course: "LN905"
 record_type: "guided-end-to-end"
 phase: "teaching-practice"
+superseded_by: "[[2026-08-17-academic-writing-from-zero]]"
 ---
 
 # Credit-scoring essay：从题目到完整论文
+
+> [!warning] 已停用
+> 这份记录来自对用户目标的错误理解：它把“重新上 Academic Writing”误成了“直接推进当前 essay”。保留它只为保存历史，不得继续教学。请转到 [[2026-08-17-academic-writing-from-zero|Academic Writing 从零重学]]。
 
 > [!summary] 本次方向
 > 用当前正式 essay 走完一条真实学术写作链。已有 question、thesis、plan 和 sources 是起点材料；每个关键判断仍由学习者亲自完成，不能由 AI 静默代做。
@@ -80,5 +84,13 @@ student-os:mentor-brief:end -->
 - **当前 skill-map 位置**：整条链为 `AW-16`；当前节点为 `AW-01`。已有计划产物，但没有独立 question-analysis 证据。`AW-15` 的来源含义准确性风险将在后续 source/paragraph 阶段贯穿处理。
 - **单一下一动作**：学习者用 2–3 句中文解释当前题目要求的判断，包含比较对象、`justify` 的证据标准与 `to what extent` 对答案形式的限制。
 - **internal continuation decision**：收到回答后先判断 task、scope 与 required judgment 是否准确；若成立，进入 provisional thesis；若不成立，用一次简短对比教清后回到同一完整链，不另开练习。
+
+### 2026-08-17 16:54 BST
+
+- **学习者输入**：明确纠正：应把学习者当作没有上过 Academic Writing 的小白，根据仓库讲义重新授课；每教一部分就考一部分，并在以后定期抽查很早以前的内容。
+- **AI teaching/feedback**：确认上一版目标理解错误；本记录停止。新的课程改为小块教学、即时构造题、讲评纠正与间隔复习，不以 credit-scoring essay 为主线。
+- **当前 skill-map 位置**：旧 `AW-16 → current essay` 路线取消；回到 Academic Writing foundations。
+- **单一下一动作**：转入新课程记录，从“问题 → 答案 → 证据 → reasoning”开始第一小课和即时检查。
+- **internal continuation decision**：不得续用本文件；所有后续输入、教学、复习队列和证据写入 superseding course record。
 
 <!-- student-os:learning-log:end -->
