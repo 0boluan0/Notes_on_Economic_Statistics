@@ -32,6 +32,8 @@ tags:
 
 ## 核验状态
 
+- 2026-08-17｜Moodle 日常核对完成：Climate Change Listening 仍为 10:00 开放、11:45 截止，Reading 仍为 12:45 开放、15:00 截止；两项均未提交，Announcements 仍为空，未发现更早或新增的硬截止。
+- 2026-08-17｜Group 2 Weeks 2–4 课表 PDF 可读：周一固定课程为 10:00–11:15 Academic Writing & Assignment、11:45–13:00 Discussion & Debate、14:00–15:15 Topic Input & Discussion，地点 OLD.1.16。Apple `LSE` 的 8 月 21 日两项截止与 Moodle 一致。
 - 2026-08-16｜Moodle Sunday 全量核对完成：13 个 assignment 页面、课程资源索引和 Announcements 已检查。Essay Plan 于 2026-08-15 20:05 提交并显示 Submitted for grading，已关闭对应硬截止；Essay Draft、Final Submission 与两项 Climate Change submission 仍未提交。Climate Listening 10:00 开放、11:45 截止，Reading 12:45 开放、15:00 截止；未发现更早或新增的硬截止，Announcements 仍为空。
 - 2026-08-16｜Group 2 Weeks 2–4 课表 PDF 可读，周日没有固定课程；Apple 只读日历今日没有固定行程，`LSE` 的 8 月 21 日两项截止与 Moodle 一致。
 - 2026-08-15｜Moodle 已核验：Demographics Listening 于 2026-08-14 11:19 提交、Reading 于 14:49 提交，两项均显示 Submitted for grading；已关闭对应硬截止。
