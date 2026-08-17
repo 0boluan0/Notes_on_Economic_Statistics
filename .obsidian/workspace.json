@@ -21,12 +21,24 @@
             "id": "65c78033535cb705",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 1.pdf"
+                "file": "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "Lesson 1"
+              "icon": "lucide-file",
+              "title": "04_Academic Writing"
             }
           }
         ],
@@ -310,8 +322,9 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "30f6502409000f89",
+  "active": "65c78033535cb705",
   "lastOpenFiles": [
+    "00_inbox/随手记.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 1.pdf",
     "tmp/pdfs/ln905-week4-aw/render.f23JwD/booklet-contact.png",
     "tmp/pdfs/ln905-week4-aw/render.f23JwD/booklet-page-13.png",
@@ -332,7 +345,6 @@
     "tmp/pdfs/ln905-week4-aw",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 4.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Week 4 Booklet.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 4.pdf",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay.md",
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Detailed Essay Plan.md",
     "99_学习情况记录/2026-08-17——Mon.md",

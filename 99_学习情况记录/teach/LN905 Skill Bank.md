@@ -60,7 +60,7 @@ neath_sync: synced
 - 为什么：不先读清任务，后面的好句子也可能回答错问题。
 - 动作/框架：圈 command → 定义关键词 → 写限制范围 → 写一句“我必须证明什么”。
 - 边界：不能偷换 command、扩大 population/time/context，或把讨论题写成描述题。
-- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#二、先把题目变成写作任务|Academic Writing：读题]]；Assignment criteria。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#一、先把题目变成写作任务|Academic Writing：读题]]；Assignment criteria。
 - 适用：Paper B、Assignment；planning、introduction、whole essay。
 - 证据/Callback：尚无显式闭环。
 - 下一观察：下一次 Paper B end-to-end unit 开始前静默看是否先写任务要求。
@@ -71,7 +71,7 @@ neath_sync: synced
 - 为什么：thesis 是选材和段落取舍的上位标准。
 - 动作/框架：`Although X, this essay argues Y because A and B, within Z.` 可变形，不要求照抄。
 - 边界：certainty、scope、causality 必须受来源支持；不能先列作者再拼答案。
-- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#三、用 thesis 固定全文的答案|Academic Writing：thesis]]。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#二、用 thesis 固定全文的答案|Academic Writing：thesis]]。
 - 适用：Paper B、Assignment；thesis、introduction、conclusion。
 - 证据/Callback：起点证据显示能形成 overall argument，但尚无系统四步闭环。
 - 下一观察：下一次 Paper B end-to-end unit 的 provisional answer。
@@ -82,7 +82,7 @@ neath_sync: synced
 - 为什么：人类写作者先安排读者理解路径，再写句子。
 - 动作/框架：把 thesis 拆成 2–4 个必须依次完成的 reasoning jobs。
 - 边界：结构服务答案；不能因为来源有三篇就写成三个作者段。
-- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#四、先搭论证结构，再写句子|Academic Writing：结构]]。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#三、先搭论证结构，再写句子|Academic Writing：结构]]。
 - 适用：Paper A/B、Assignment；outline、whole text。
 - 证据/Callback：Listening teacher feedback 认可整体理解；Reading feedback 认可基本逻辑组织，但未完成结论。
 - 下一观察：下一份 250+ 词 integrated output。
@@ -104,7 +104,7 @@ neath_sync: synced
 - 为什么：引用不会自动完成推理。
 - 动作/框架：先标 claim/ground，再问“这项 evidence 允许我得出哪一步、为什么”。
 - 边界：warrant 不能发明机制；qualifier/rebuttal 不能被省略成绝对结论。
-- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#六、用 Toulmin 检查论证能否站住|Academic Writing：Toulmin]]。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#检查 evidence 到 claim 的桥：Toulmin|Academic Writing：Toulmin]]。
 - 适用：Paper A/B、Assignment；analysis、evaluation、paragraph development。
 - 证据/Callback：尚无显式闭环。
 - 下一观察：下一份端到端成品中的 evidence-role paragraph。
@@ -126,7 +126,7 @@ neath_sync: synced
 - 为什么：可靠来源也不一定适合当前论点。
 - 动作/框架：currency/relevance/authority/accuracy/purpose → precise intended use。
 - 边界：不能用作者声望替代对 evidence 与 question fit 的判断。
-- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#七、把资料变成自己的论证|Academic Writing：source use]]；Assignment criteria。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#四、把资料变成可用证据|Academic Writing：source use]]；Assignment criteria。
 - 适用：Assignment、annotated bibliography；source selection、annotation。
 - 证据/Callback：Annotated bibliography 已提交；教师反馈认可 sources 与 connections，但要求更准确 synthesis。
 - 下一观察：下一次 essay source decision。
@@ -181,7 +181,7 @@ neath_sync: synced
 - 为什么：cohesion 来自 proposition 的连续发展，不是连接词数量。
 - 动作/框架：relation → connector/reference chain/given-to-new order。
 - 边界：不能用 `therefore` 制造不存在的因果，也不能用模糊 `this` 隐藏指代对象。
-- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#九、Cohesion 是关系清楚，不是连接词越多越好|Academic Writing：cohesion]]。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#写完段落后：Cohesion 是关系清楚，不是连接词越多越好|Academic Writing：cohesion]]。
 - 适用：Paper A/B、Assignment；paragraph、whole-text flow。
 - 证据/Callback：教师反馈认可整体逻辑，但要求更清楚说明 sources 如何共同工作。
 - 下一观察：下一份 synthesis paragraph。
@@ -192,7 +192,7 @@ neath_sync: synced
 - 为什么：结尾证明全文完成了任务，而不是机械重复。
 - 动作/框架：restate answer at higher level → synthesise reasons → implication；不加新 evidence。
 - 边界：不能引入新论点；不能因时间不足省略正式任务的 conclusion。
-- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#十、Introduction 与 conclusion 要回答同一个问题|Academic Writing：introduction/conclusion]]。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#六、Introduction 与 conclusion 要回答同一个问题|Academic Writing：introduction/conclusion]]。
 - 适用：Paper B、Assignment；introduction、conclusion、timed completion。
 - 证据/Callback：Reading teacher feedback：Week 2 文章略低于最低字数并未完成 conclusion。2026-08-14 Friday Paper B：约 722 词，introduction 提出应同时处理 aging 与 low fertility，conclusion 回到同一个两部分答案；本次无提示完成，记为 `independent`，但尚未完成该技能的显式教学闭环，状态不跳级。
 - 下一观察：下一份 Friday/timed Paper B 是否继续在时限内对齐 thesis 与 conclusion。
@@ -203,7 +203,7 @@ neath_sync: synced
 - 为什么：细枝末节不能劫持主技能和整篇完成度。
 - 动作/框架：task fulfilment → meaning/source accuracy → structure/reasoning → recurring language → isolated errors。
 - 边界：会改变 meaning、source ownership、certainty、scope、causality 的语言问题仍须立即修。
-- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#十一、按“影响论证的程度”修改|Academic Writing：revision]]。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#七、按“影响论证的程度”修改|Academic Writing：revision]]。
 - 适用：Paper A/B、Assignment；revision、AI feedback。
 - 证据/Callback：用户明确反馈旧 prompt 纠缠细枝末节；系统规则已修正，技能尚待显式闭环。
 - 下一观察：下一次 guided output 的反馈顺序。
@@ -225,7 +225,7 @@ neath_sync: synced
 - 为什么：避免从某个来源或某个漂亮句子出发，最后才发现全文没有答案。
 - 动作/框架：task → provisional answer → paragraph jobs → evidence roles/selection → prose。
 - 边界：不能把完整 source extraction 当作 writer planning；短材料只为写作决策服务时不能冒充 Reading practice。
-- 来源：[[99_学习情况记录/teach/LN905 Exam Playbook|LN905 Exam Playbook]]；[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#四、先搭论证结构，再写句子|Academic Writing：plan]]。
+- 来源：[[99_学习情况记录/teach/LN905 Exam Playbook|LN905 Exam Playbook]]；[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#三、先搭论证结构，再写句子|Academic Writing：plan]]。
 - 适用：Paper A/B、Assignment；planning、integrated writing。
 - 证据/Callback：原账本只记录“2026-08-12 Demographics Shared Writing 计划首次示范”，没有实际四步证据。2026-08-13 Demographics Paper A：在明确结构提示下完成 `central answer → linear paragraph jobs → evidence roles → 200–400 词 prose`，全文骨架与完成度成立；同日受支持证据，记为 `guided`。2026-08-14 Friday Paper B 的成品呈现出“同时处理 aging/fertility 的总答案 → 老年劳动参与 / 生育环境 / 移民限制三个段落工作 → conclusion”的外显结构，但原始文件没有保留计划过程，内部四步调用记为 `not observable`，状态不提升。
 - 下一观察：下一条 Paper B guided end-to-end unit 中的显式 `task → provisional answer → paragraph jobs → evidence roles`。
@@ -876,7 +876,48 @@ neath_sync: synced
     {"word": "environmental degradation", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "空气、水、土壤或生态系统质量因人类活动而持续下降", "collocations": ["prevent environmental degradation"], "sentence": "Climate change can interact with pollution and environmental degradation."},
     {"word": "deforestation", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "大面积长期清除森林并转为其他土地用途的过程", "collocations": ["reduce deforestation", "deforestation rate"], "sentence": "Deforestation releases carbon and removes an important carbon sink."},
     {"word": "reforestation", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "在曾经有森林但已退化或清除的土地上重新建立森林", "collocations": ["large-scale reforestation"], "sentence": "Reforestation can store carbon but should not replace rapid fossil-fuel reductions."},
-    {"word": "climate vulnerability", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "个人、社区或系统容易受到气候危害并缺少应对能力的程度", "collocations": ["assess climate vulnerability"], "sentence": "Climate vulnerability depends on exposure, sensitivity, resources, and institutions."}
+    {"word": "climate vulnerability", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "个人、社区或系统容易受到气候危害并缺少应对能力的程度", "collocations": ["assess climate vulnerability"], "sentence": "Climate vulnerability depends on exposure, sensitivity, resources, and institutions."},
+    {"word": "claim", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "以证据为基础、可以被支持或质疑的主张", "collocations": ["make a claim", "support a claim"], "sentence": "The claim should be no stronger than the available evidence allows."},
+    {"word": "hedging", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "用 may、suggest、appear 等表达限制主张的确定性或适用范围", "collocations": ["use hedging", "appropriate hedging"], "sentence": "Hedging is necessary when a small sample supports only a cautious conclusion."},
+    {"word": "boosting", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "用 clearly、demonstrate、certainly 等表达加强主张的确定性", "collocations": ["use boosting", "boosting expression"], "sentence": "Boosting is appropriate only when the evidence strongly supports the claim."},
+    {"word": "tentative claim", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "因证据有限而保留不确定性的暂时性主张", "collocations": ["make a tentative claim"], "sentence": "The interviews support a tentative claim about some students, not the whole population."},
+    {"word": "cautious language", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "避免把有限证据写成绝对结论的谨慎用语", "collocations": ["use cautious language"], "sentence": "Cautious language keeps the conclusion consistent with the strength of the evidence."},
+    {"word": "speculate", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "在证据不完整时提出可能的解释，不表示已被证明", "collocations": ["speculate that", "speculate about"], "sentence": "The authors speculate that social norms may explain the difference."},
+    {"word": "appear to", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "根据当前证据看来似乎如此，但仍保留不确定性", "collocations": ["appear to indicate", "appear to reduce"], "sentence": "Supportive management appears to reduce strain among some employees."},
+    {"word": "on the basis of", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "以某项证据、信息或理由为依据", "collocations": ["on the basis of the findings"], "sentence": "On the basis of these findings, it may be argued that context affects the outcome."},
+    {"word": "be liable to", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "容易或很可能经历某种结果，尤其是不利结果", "collocations": ["be liable to experience", "be liable to cause"], "sentence": "Workers with little support may be liable to experience greater strain."},
+    {"word": "reach a consensus", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "经过讨论后就某个问题达成普遍接受的一致意见", "collocations": ["reach a scientific consensus", "fail to reach a consensus"], "sentence": "Researchers have not reached a consensus on the size of the effect."},
+    {"word": "passive voice", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "让承受动作的对象或结果做主语，必要时可省略动作执行者的语态", "collocations": ["use the passive voice"], "sentence": "The passive voice can foreground the result when the actor is already obvious."},
+    {"word": "foreground", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "把最重要的信息放在醒目位置并作为句子焦点", "collocations": ["foreground the issue", "foreground the result"], "sentence": "The topic sentence foregrounds climate risk rather than the people discussing it."},
+    {"word": "nominalisation", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "把动词或形容词转成名词或名词短语的写作方式", "collocations": ["use nominalisation", "nominalised form"], "sentence": "Nominalisation changes 'emissions increased' into 'the increase in emissions'."},
+    {"word": "concision", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "在不损失必要意思的前提下用更少的词清楚表达", "collocations": ["improve concision", "clarity and concision"], "sentence": "Concision gives the writer more space to explain evidence and reasoning."},
+    {"word": "redundant expression", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "重复已经表达的意思、因而可以删减的词或短语", "collocations": ["remove a redundant expression"], "sentence": "'Future prediction' is a redundant expression because a prediction already concerns the future."},
+    {"word": "parallel structure", "collection": "LN905 Academic Core", "topics": ["academic-core"], "meaning": "并列的单词、短语或分句使用一致语法形式的结构", "collocations": ["use parallel structure"], "sentence": "Parallel structure makes a list of causes easier to read and compare."},
+    {"word": "carbon dioxide", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "由化石燃料燃烧、森林破坏等活动释放的主要长寿命温室气体", "collocations": ["atmospheric carbon dioxide", "carbon dioxide concentration"], "sentence": "Atmospheric carbon dioxide has risen sharply since industrialisation."},
+    {"word": "greenhouse effect", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "大气中某些气体吸收并重新辐射热量、使地表保持温暖的过程", "collocations": ["enhanced greenhouse effect"], "sentence": "Human emissions strengthen the natural greenhouse effect and raise global temperatures."},
+    {"word": "greenhouse gas", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "能够在大气中吸收并重新辐射热量的气体，如二氧化碳和甲烷", "collocations": ["major greenhouse gas", "greenhouse-gas concentration"], "sentence": "Methane is a powerful greenhouse gas even though it remains in the atmosphere for less time than carbon dioxide."},
+    {"word": "anthropogenic climate change", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "主要由人类活动引起的气候变化", "collocations": ["evidence of anthropogenic climate change"], "sentence": "The scientific consensus attributes most recent warming to anthropogenic climate change."},
+    {"word": "pre-industrial levels", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "大规模工业化和化石燃料使用之前的气候基准水平", "collocations": ["above pre-industrial levels"], "sentence": "Global temperature is commonly measured relative to pre-industrial levels."},
+    {"word": "emissions reduction", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "降低排放到大气中的温室气体数量", "collocations": ["rapid emissions reduction", "emissions-reduction target"], "sentence": "Rapid emissions reduction requires changes in energy, transport, industry, and land use."},
+    {"word": "climate policy", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "政府或机构为减少排放、适应影响或分配气候成本制定的政策", "collocations": ["effective climate policy", "climate-policy failure"], "sentence": "An effective climate policy must consider both emissions and distributional effects."},
+    {"word": "climate communication", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "向公众解释气候科学、风险和应对方案的传播过程", "collocations": ["effective climate communication"], "sentence": "Effective climate communication connects scientific evidence with risks people can understand."},
+    {"word": "public scepticism", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "公众对某项科学结论、政策或机构保持怀疑的态度", "collocations": ["increase public scepticism"], "sentence": "Unclear reporting can increase public scepticism about climate policy."},
+    {"word": "sustainable economy", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "在长期内尽量不损害环境、资源和后代福利的经济体系", "collocations": ["transition to a sustainable economy"], "sentence": "The transition to a sustainable economy will reshape energy, transport, and employment."},
+    {"word": "clean energy", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "生产和使用过程中温室气体及污染较少的能源", "collocations": ["invest in clean energy", "clean-energy technology"], "sentence": "Clean energy investment can cut emissions while creating new industries."},
+    {"word": "extreme weather event", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "在某地区强度或频率异常的天气事件，如极端高温、暴雨或风暴", "collocations": ["frequent extreme weather events"], "sentence": "Climate change can increase the likelihood or severity of some extreme weather events."},
+    {"word": "heatwave", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "持续多日且显著高于当地常态的极端高温天气", "collocations": ["prolonged heatwave", "heatwave mortality"], "sentence": "A prolonged heatwave can increase deaths, energy demand, and pressure on hospitals."},
+    {"word": "drought", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "长时间降水不足并导致水资源短缺的状态", "collocations": ["severe drought", "drought-prone region"], "sentence": "Severe drought can reduce crop yields and intensify competition for water."},
+    {"word": "flooding", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "水超出河道、排水系统或海岸容量并淹没土地的现象", "collocations": ["coastal flooding", "risk of flooding"], "sentence": "Sea-level rise increases the risk of coastal flooding during storms."},
+    {"word": "wildfire", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "在森林、草地等自然植被中失控蔓延的火灾", "collocations": ["wildfire season", "wildfire risk"], "sentence": "Hotter and drier conditions can increase wildfire risk in some regions."},
+    {"word": "water scarcity", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "可用水资源不足以满足生活、农业、产业和生态需求的状态", "collocations": ["severe water scarcity"], "sentence": "Climate change can worsen water scarcity by altering rainfall and increasing evaporation."},
+    {"word": "food insecurity", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "个人或家庭无法稳定获得足够、安全且有营养食物的状态", "collocations": ["increase food insecurity"], "sentence": "Crop failures and higher prices can increase food insecurity among vulnerable households."},
+    {"word": "ocean acidification", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "海洋吸收二氧化碳后化学性质改变、pH 下降的过程", "collocations": ["effects of ocean acidification"], "sentence": "Ocean acidification threatens corals and organisms that build shells."},
+    {"word": "habitat loss", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "自然生境被破坏、缩小或变得无法支持原有物种的过程", "collocations": ["prevent habitat loss"], "sentence": "Climate change and land conversion can combine to accelerate habitat loss."},
+    {"word": "species extinction", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "某一物种的所有成员消失、使该物种永久不复存在", "collocations": ["risk of species extinction"], "sentence": "Rapid warming can raise the risk of species extinction when organisms cannot move or adapt."},
+    {"word": "carbon budget", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "在不超过某一升温目标的前提下仍可累计排放的二氧化碳总量", "collocations": ["remaining carbon budget"], "sentence": "Delaying action uses up the remaining carbon budget more quickly."},
+    {"word": "climate projection", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "基于气候模型和特定排放假设对未来气候的条件性估计", "collocations": ["long-term climate projection"], "sentence": "A climate projection depends on assumptions about future emissions and policy."},
+    {"word": "climate finance", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "用于减排、适应、技术转型和气候损失支持的公共或私人资金", "collocations": ["provide climate finance", "climate-finance commitment"], "sentence": "Climate finance can help lower-income countries adapt without abandoning development goals."},
+    {"word": "low-carbon economy", "collection": "LN905 Climate Change", "topics": ["climate-change"], "meaning": "依靠较低温室气体排放完成生产、交通和能源供应的经济体系", "collocations": ["transition to a low-carbon economy"], "sentence": "A low-carbon economy requires both clean technology and changes in infrastructure."}
   ]
 }
 ```
@@ -890,3 +931,4 @@ neath_sync: synced
 - 2026-08-13：进一步补入课件未必明写、但四个 topic 考试中高概率出现的词汇；五个词书共 301 条。同步器开始把本地中文 `meaning` 写入匿词缺失的远端释义，并以远端可显示释义作为验收条件。
 - 2026-08-13：普通练习改为四话题内 Paper A/B 端到端 unit；旧短练退役，技能继续分层记录但不再产生独立 checkbox。
 - 2026-08-17：Week 4 Academic Writing 讲义已开放；实际教授的 Lesson 1 激活为 `AW-17`，Lessons 2–4 等对应课堂结束后再增量激活。
+- 2026-08-17：按新开放的 Week 4 Academic Writing 材料与气候主题全套材料交叉检查，增补 16 个 Academic Core 表达和 25 个 Climate Change 高概率内容词；已同步并通过远端可显示释义验收。

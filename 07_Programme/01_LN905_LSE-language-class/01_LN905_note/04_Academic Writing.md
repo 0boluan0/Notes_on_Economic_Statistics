@@ -5,487 +5,342 @@ aliases:
   - 学术写作技术总览
 ---
 
-# Academic Writing：从题目到成稿的技术
+# Academic Writing：新手从题目走到成稿的顺序
 
-> [!summary] 快速恢复
-> 学术写作不是把句子写得很“论文腔”，而是一直让读者知道：**你在回答什么、你的答案是什么、为什么可信。** 先读准题目，用 thesis 亮出答案；之后每一段只推进这个答案的一步。资料负责提供 evidence，你负责解释它说明了什么、有什么限制，以及它怎样改变全文的判断。
+> [!summary] 先记住这一件事
+> 学术写作不是“把知道的东西写出来”，而是**用可靠资料证明一个自己提出的答案**。
 >
-> 最短流程：**Question → Thesis → Structure → Paragraph claim → Evidence → Commentary/Evaluation → Conclusion**。一段话如果停在“某作者说了什么”，还只是读书笔记；补上“所以呢、为什么、在什么条件下”，才变成你的论证。
+> 所以不要从句子开始。真正的顺序是：
+>
+> **读清题目 → 写暂定答案 → 安排段落工作 → 为每段选择证据 → 写正文小论证 → 写开头和结尾 → 从大到小修改。**
 >
 > <!-- bilingual-en:start -->
-> Academic writing is controlled by the writer: interpret the question precisely, answer it with a defensible thesis, and make every paragraph advance that answer through a claim. Sources supply evidence; the writer explains why that evidence supports the claim, where it is limited, and what judgment follows. The shortest workflow is Question → Thesis → Structure → Paragraph claim → Evidence → Commentary/Evaluation → Conclusion.
+> Academic writing uses reliable evidence to establish a defensible answer. Work from task to thesis, paragraph jobs, evidence, body paragraphs, introduction and conclusion, then revision.
 > <!-- bilingual-en:end -->
 
-## 课程进度与本笔记边界
+## 这篇笔记怎么用
 
-| 周次 | 已开放内容 | 本笔记保留的技术 |
+这不是按上课周次整理的知识点清单，而是一条每次写 essay 都能照着走的工作流。第一次先顺着七个步骤读完；真正写作时，只打开你当前所在的步骤。
+
+研究和写作会来回修正：新 evidence 可能迫使你改变 thesis，写段落时也可能发现原计划站不住。可以返回上一步，但不能跳过上一步的产物，直接靠“边写边想”碰运气。
+
+<!-- bilingual-en:start -->
+Use this note as a workflow rather than a lecture archive. Research may change the thesis or plan, but each stage still needs a visible output before drafting continues.
+<!-- bilingual-en:end -->
+
+## 一页工作台：每一步要留下什么
+
+| 顺序      | 你在回答的问题                   | 必须留下的产物                           |
+| ------- | ------------------------- | --------------------------------- |
+| 1. 读题   | 题目究竟要我判断什么？               | 一句 task statement                 |
+| 2. 定答案  | 我目前认为答案是什么？               | 一句 provisional thesis             |
+| 3. 排路线  | 读者要经过哪几步才会相信我？            | 按顺序排列的 paragraph jobs             |
+| 4. 配证据  | 每一步靠什么研究站住？               | evidence map：内容、范围、作用             |
+| 5. 写正文  | claim、evidence 和你的解释怎样组成小论证？ | 含 source synthesis 与清楚衔接的 body paragraphs |
+| 6. 首尾封口 | 开头承诺和结尾答案是否一致？            | introduction 与 conclusion         |
+| 7. 修改   | 什么问题最影响整篇成立？              | 先论证、后语言的 revision                 |
+
+<!-- bilingual-en:start -->
+Every stage has a concrete product: task statement, provisional thesis, paragraph route, evidence map, body paragraphs, opening and closing, and finally revision. Source synthesis and cohesion belong inside body drafting.
+<!-- bilingual-en:end -->
+
+## 一、先把题目变成写作任务
+
+拿到题目时先别搜资料，也别想高级句式。先把题目翻译成一项明确的工作。
+
+你只需要确定四件事：
+
+1. **动作**：`describe` 是说明；`analyse` 是解释关系和机制；`evaluate` 是按标准判断；`critically discuss` 是结合证据形成自己的有限判断。
+2. **对象**：你到底要判断哪一个现象、主张或政策？
+3. **范围**：题目限制了哪些群体、地点、时间、理论或材料？
+4. **必须完成的部分**：题目是否同时要求原因、影响、比较、反方或建议？
+
+把它写成一句人话：
+
+> **This essay must judge whether / how / to what extent X, within Y, using Z.**
+
+> [!example] Social Media 题目
+> 题目问“大量人口使用 social media 是否值得担忧”。真正任务不是介绍 social media，而是判断：**用户数量能否证明社会危害；如果不能，什么 evidence 才能支持 concern。**
+
+> [!check] 进入下一步前
+> 你能不能用一句中文说清楚：我要判断什么，而不是“我要写关于什么”？如果不能，就还没有读完题。
+
+<!-- bilingual-en:start -->
+Translate the prompt into an action, object, scope and required components. The task statement must say what judgment the essay will make, not merely name its topic.
+<!-- bilingual-en:end -->
+
+## 二、用 thesis 固定全文的答案
+
+**Thesis** 就是全文的一句话答案。刚开始时它只是暂定答案，可以被研究修正；但没有它，你无法判断一篇资料该不该用、一个段落该不该写。
+
+合格 thesis 至少做到三件事：
+
+- 直接回答题目，而不是写 `This essay will discuss...`；
+- 给出主要理由、机制或判断标准；
+- 保留 evidence 要求的条件和范围，不把有限结论写成普遍事实。
+
+你可以先用这个骨架思考，但不必照抄：
+
+> **Although X, this essay argues Y because A and B, particularly when Z.**
+
+> [!example] 从主题变成答案
+> 不是：`This essay will discuss the effects of social media.`
+>
+> 而是：`Widespread social media use is not itself evidence of social harm, because average effects conceal differences between users and depend on particular patterns of use.`
+
+> [!check] 进入下一步前
+> 遮住题目和正文，只看 thesis。别人能否知道你的答案、核心理由和重要限制？
+
+<!-- bilingual-en:start -->
+A thesis is a provisional but contestable answer. It states the judgment, central reasoning and necessary limits, and it becomes the standard for selecting evidence and paragraphs.
+<!-- bilingual-en:end -->
+
+## 三、先搭论证结构，再写句子
+
+现在不要写正文。先问：**读者要经过哪几步，才有理由接受 thesis？** 每一段只承担一个 **paragraph job**，也就是“这一段必须为全文完成什么工作”。
+
+写 plan 时只需要三列：
+
+| Paragraph job | 本段要证明的 claim | 需要哪类 evidence |
 |---|---|---|
-| Week 1 | Assignment expectations；question analysis；introduction、thesis、conclusion | 从题目得到中心答案，并让开头与结尾围绕同一个答案工作 |
-| Week 2 | Finding/evaluating sources；paraphrase；quotation；plagiarism；synthesis；annotated bibliography | 选择、转换、引用、综合和评价资料 |
-| Week 3 | Structure；paragraphs；argumentation；cohesion；academic voice；essay plan | 把答案变成有顺序、能站住、读得顺的论证 |
-| Week 4 | Lesson 1：making claims；Lessons 2–4 讲义已开放、待实际上课 | 从 finding 推到 claim，并让 certainty 与 scope 匹配 evidence；其余内容课后增量启用 |
+| 建立问题 | 为什么这个 concern 值得认真对待 | 能证明风险存在的研究 |
+| 限定问题 | 为什么 headline figure 不能直接证明 harm | aggregate effect、causality 或 scope evidence |
+| 解释差异 | 什么机制导致不同结果 | platform、behaviour 或 user-level evidence |
+| 得出判断 | 前面 evidence 合起来允许什么结论 | 综合与限制，不加入新资料 |
+
+只读 paragraph jobs 和 topic claims，它们应该已经像一篇缩短的 essay：前一段留下的问题由后一段继续解决。如果任何两段随便互换都没影响，你目前拥有的是几个主题，不是一条论证。
+
+> [!note]- 课程里的四种常见路线
+> - **Justification**：答案 → 几个支持理由 → 结论。
+> - **Rebuttal**：先承认强反方 → 用 evidence 回应 → 得到有限答案。
+> - **Synthesis**：不同解释或来源 → 比较关系 → 形成自己的综合判断。
+> - **Thematic**：按多个维度推进。适合长 essay，但限时写作中容易失控。
+
+> [!check] 进入下一步前
+> 每一段能否用一个动词说明工作，例如“建立、限制、解释、比较、评价、回应”？“介绍 X”通常还不够具体。
 
 <!-- bilingual-en:start -->
-Weeks 1–3 cover the path from task interpretation to planning, argument, source use and revision. Week 4 Lesson 1 adds evidence-calibrated claims. Lessons 2–4 are available but remain inactive until they are actually taught.
+Plan the reader's route before writing prose. Give every paragraph one argumentative job, one claim and one evidence need. The ordered topic claims should reconstruct the whole argument.
 <!-- bilingual-en:end -->
 
-> [!note] 贯穿例子：学校提供的范文
-> **题目：** *Is More Than Half the World's Population Using Social Media Cause for Concern?*
->
-> 下文的例子来自学校提供的 [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf|Sample Essay]]；连接词和指代链按 [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay - Annotated.pdf|annotated version]] 的颜色核对。这里只分析写法，不要求记住 social media 议题本身。
->
-> <!-- bilingual-en:start -->
-> **Running example:** the school-provided sample essay, *Is More Than Half the World's Population Using Social Media Cause for Concern?* The topic itself is not learning content; the essay is used to trace task interpretation, thesis, paragraph progression, synthesis, commentary and cohesion.
-> <!-- bilingual-en:end -->
+## 四、把资料变成可用证据
 
-## 一、判断句子究竟在做什么
+阅读不是收集“与主题有关的信息”。每份来源都要进入 evidence map，并回答：它能为我的哪一步论证做什么？
 
-先分清句子在干什么。Description 并不是坏东西，它负责交代读者必须知道的背景；问题在于很多文章交代完背景就结束了。真正拉开差距的是后面的 analysis 和 evaluation。
+每份来源只记五件事：
 
-| 层次 | 它回答什么 | 作者实际在做什么 | 合格产物 |
-|---|---|---|---|
-| **Description** | who / what / where / when / how much? | 报告事实、定义、数据或已有观点 | 准确且与问题相关的背景 |
-| **Analysis** | how / why / what if? | 拆分问题，解释因果、关系、差异或机制 | 有逻辑和证据支撑的解释性 claim |
-| **Evaluation** | so what / to what extent / what next? | 按明确标准衡量重要性、有效性、可信度或局限 | 带标准、条件和理由的 verdict |
+1. 作者真正提出了什么 claim 或 finding？
+2. 依据是什么：数据、方法、案例、理论还是综述？
+3. 它只适用于谁、哪里、什么时候？
+4. 它的 certainty 和 limitation 是什么？
+5. 它在我的 essay 中负责 support、contrast、qualify 还是 challenge 哪个 claim？
 
-> [!example] 同一材料的三种处理
-> - **Description**：范文报告，不同研究发现 social media 对 well-being 的平均影响较小，而且结果并不一致。
-> - **Analysis**：范文接着指出，平均值可能掩盖个体差异：有人受益、有人受损，还有人几乎不受影响。
-> - **Evaluation**：因此，单看“全球有多少用户”不足以判断危害；更有意义的问题是谁受到伤害、通过什么机制、在什么条件下受到伤害。
+如果第五个问题答不出来，这份来源目前只是背景阅读，还不是可用 evidence。
 
-<!-- bilingual-en:start -->
-Description reports what is present; analysis explains relationships and mechanisms; evaluation reaches a reasoned judgment against a stated criterion. Strong academic writing uses description as necessary groundwork, then spends its effort on explanation and judgment.
-<!-- bilingual-en:end -->
+### Paraphrase 不是换同义词
 
-## 二、先把题目变成写作任务
+先理解来源的完整命题，再换词汇和句法；不能改变作者、因果、确定性或范围。技术词应该保留。只换几个词或调整词序仍是 patchwriting，即使加 citation 也不够。
 
-先别急着搜资料。题目没有拆清楚时，找到的资料越多，越容易把文章写成“关于这个主题我知道什么”。
+直接 quotation 只在原话本身重要时使用，例如精确定义或无法无损改写的独特措辞。大多数时候，paraphrase 和 summary 更能让资料服从你的论证。
 
-### 读题的六个问题
+### Annotated bibliography：summary + evaluation + intended use
 
-1. **Task word** 要求什么动作？`discuss` / `critically discuss` 不是罗列正反观点，而是结合研究形成并论证自己的判断。
-2. 题目有几个 **parts**？各部分是否同等重要？
-3. 有哪些 **restrictions**：时间、地点、群体、案例、理论或资料类型？
-4. 哪些关键词必须先 **define**，哪些词本身存在争议？
-5. 你的暂定 **answer/view** 是什么？答案不是“我要讨论……”，而是一个可以反对的判断。
-6. 什么 **structure** 能让读者看见这个判断如何一步步成立？
+Annotated bibliography 是 source preparation，不是缩小版 essay。每一条通常完成：
 
-> [!example] 看范文怎样重新解释题目
-> - **表面问题**：全球一半以上人口使用 social media，是否值得担忧？
-> - **必须定义的词**：`cause for concern` 到底指用户数量大、平均危害大，还是某些人在特定条件下受害？
-> - **范文的关键转向**：用户数量只说明 adoption，不能直接说明 harm。
-> - **Provisional view**：不应因数字本身恐慌；应检查具体 practices、platform features 和 user beliefs 如何影响 well-being。
->
-> <!-- bilingual-en:start -->
-> The sample distinguishes adoption from harm. Instead of treating a large user count as evidence of danger, it redefines the task around which users are harmed, by which mechanisms, and under what conditions.
-> <!-- bilingual-en:end -->
+1. **Summary**：研究问题、方法或理论、主要 finding 和范围。
+2. **Evaluation**：按 relevance、authority、method、evidence 和 limitation 判断质量。
+3. **Intended use**：它将支持、限制或挑战你哪一个 claim。
 
-### 选题时先查可行性
-
-- 范围是否能在字数内解释清楚？太宽会变成概述，太窄会只剩单一案例。
-- 是否有足够且可获得的学术资料？
-- 题目是否允许分析和评价，而不只是回忆事实？
-- 你是否真正理解关键词与争议？兴趣重要，但不能替代可研究性。
+> [!check] 进入下一步前
+> 你的 plan 中每一个 paragraph job 是否已经有相关 evidence？每份 evidence 的范围和用途是否写得出来？
 
 <!-- bilingual-en:start -->
-Turn the prompt into six decisions: task, component parts, scope restrictions, terms needing definition, provisional answer, and the structure that will prove it. Choose a question only when its scope is manageable, relevant literature is available, and it permits analysis rather than factual recall.
-<!-- bilingual-en:end -->
-
-## 三、用 thesis 固定全文的答案
-
-### Thesis 的最低标准
-
-Thesis 是全文的答案，不是目录。一个有效 thesis 应该：
-
-- **直接回答题目**，而不是宣布“本文将讨论什么”；
-- **具体且聚焦**，读者能预见主要理由或机制；
-- **可辩护**，不是无争议事实；
-- 必要时带 **qualification**，说明结论在什么条件或范围内成立；
-- 在 introduction 中明确出现，并在 conclusion 中以综合后的形式重申。
-
-> [!example] 从活动说明变成中心答案
-> 弱写法：*This essay will discuss whether widespread social media use is concerning.*
->
-> 范文的 thesis：*“Widespread social media use is not, in itself, a cause for concern.”* 随后马上限定：真正需要关心的是 specific practices、platform features 和 user beliefs。
->
-> 这比“本文将讨论……”多了两样东西：清楚的**答案**，以及决定答案的**条件**。正文因此知道该证明什么。
-
-### 一句话压力测试
-
-遮住正文，只读 thesis：能不能说出答案、主要理由和重要限制？如果不能，正文十有八九会变成围绕主题堆资料。
-
-<!-- bilingual-en:start -->
-A thesis is a specific, contestable answer, not an announcement of topics. It should reveal the central reasoning and, where necessary, its conditions or limits. A reader who sees only the thesis should still understand what the essay is trying to prove.
-<!-- bilingual-en:end -->
-
-## 四、先搭论证结构，再写句子
-
-### 四种宏观结构
-
-| 结构 | 基本路径 | 最适合 | 主要风险 |
-|---|---|---|---|
-| **Justification** | claim → reasons → restated claim | 答案明确、理由可分层展开 | 容易显得单边；应承认限制或替代解释 |
-| **Rebuttal** | claim → counterclaim → rebuttal → restated claim | 存在一个强而明确的反方论证 | 反方占篇幅过多，或 rebuttal 只是否定没有证据 |
-| **Synthesis** | claim → position A → position B → synthesis → restated claim | 文献中存在需要整合的分歧 | A/B 各写一段却不比较，最后变成折中而非判断 |
-| **Thematic** | claim → theme 1 → theme 2 → theme 3 → restated claim | 结论取决于多个条件或维度 | 主题彼此断裂；短时写作中规划成本高 |
-
-不要问哪个模板“更高级”，只问哪个最容易把 thesis 证明清楚。较长 coursework 可以承受 thematic structure；限时写作则要小心，结构太复杂会吃掉写作时间。
-
-### Essay plan 的最小可用形式
-
-1. 决定全文有哪些 sections，以及每一部分如何服务 thesis。
-2. 决定每段的 **paragraph job**，先写 topic sentence。
-3. 在每个 topic sentence 下放 supporting idea、evidence 和要做的 commentary。
-4. 只读 topic sentences：它们是否组成一条有顺序的“essay narrative”？若调换两段完全没影响，结构通常还没有真正建立。
-
-> [!example] 一个能看出推进关系的 plan
-> 范文不是列出几个 social media 的利弊，而是逐步拆掉“用户多 = 危害大”这个推论：
->
-> 1. 先承认担忧不是凭空出现的，确有负面证据。
-> 2. 再说明 aggregate figure 会误导：因果可能双向，平均效应也很小。
-> 3. 接着指出平均值会掩盖明显的个体差异。
-> 4. 然后转向真正解释差异的 mechanisms：platform design 与 patterns of behaviour。
-> 5. 最后加入 users' beliefs，说明 agency 和 valence 也会改变体验。
-> 6. Conclusion 据此重写问题：不要只问多少人使用，而要问谁受害、为何受害、在什么条件下受害。
->
-> 每一段都改写了上一段留下的问题，所以段落不能随意换位。这就是 essay narrative。
->
-> <!-- bilingual-en:start -->
-> The sample progresses by first acknowledging evidence of harm, then challenging aggregate figures, exposing individual variation, examining mechanisms and adding user beliefs. Its conclusion can therefore replace a broad population question with a more precise question about who is harmed, how and under what conditions.
-> <!-- bilingual-en:end -->
-
-<!-- bilingual-en:start -->
-Choose the macrostructure that most clearly proves the thesis: justification, rebuttal, synthesis or thematic organization. Then plan sections, write one topic sentence for every paragraph, and attach evidence and commentary beneath it. Read the topic sentences alone; together they should reconstruct the essay’s reasoning.
+Convert each source into an evidence map: proposition, basis, scope, certainty or limitation, and role in the essay. Paraphrase preserves the complete proposition rather than swapping synonyms. An annotated bibliography adds evaluation and intended use to an accurate summary.
 <!-- bilingual-en:end -->
 
 ## 五、让每一段成为一个小论证
 
-### 段落骨架
+正文段落不是装 citation 的盒子。每一段都要让读者完成一次小型推理：
 
-一段不是装 citation 的盒子，而是一个小论证：
+1. **Claim**：这一段要读者接受什么？
+2. **Explanation**：这个 claim 的意思或机制是什么？
+3. **Evidence**：哪项研究支持它？
+4. **Commentary**：这份 evidence 为什么支持 claim、能支持到什么程度、有什么限制？
+5. **Link**：这一段得到什么，下一段为什么要继续？
 
-**Topic claim → Explanation → Evidence → Commentary on the evidence → Concluding link / transition**
+最常见的问题是写完 evidence 就停。Citation 只能回答“谁说的”，不能替你回答“所以呢”。Evidence 后面至少要让读者看见：**它证明了什么、为什么相关、还不能证明什么。**
 
-- **Topic claim**：提出本段要证明的判断，并与题目或 thesis 建立清楚联系；不是事实，也不是“本段将讨论……”。
-- **Explanation**：说明 claim 的含义、机制或逻辑步骤。
-- **Evidence**：提供可追溯的研究、数据、案例或理论。
-- **Commentary**：解释 evidence 为什么支持 claim、可信度如何、有什么条件或局限；这是作者声音最常出现的位置。
-- **Concluding link**：收束本段所得，并为下一步论证建立关系。
+### Description、analysis、evaluation 在段落中的位置
 
-### 三个质量标准
+- **Description** 交代研究发现、定义或背景。
+- **Analysis** 解释关系、机制或 evidence 怎样推出 claim。
+- **Evaluation** 判断 evidence 的强弱、范围、局限和最终意义。
 
-- **Unity**：一段只推进一个中心焦点；每句都与它有关。
-- **Coherence**：句子和段落按可解释的顺序排列，指代和连接关系明确。
-- **Adequate development**：claim 得到足够解释、细节和 evidence，而不是点到即止。
+Description 是必要起点，但不能成为终点。一个合格段落通常从 description 进入 analysis，再在需要时给出 evaluation。
 
-课件给出的经验值是每段约 **4–6 句**；它不是硬规则。真正的警报是单句成段、段落超过一页，或一段承担多个互不相同的工作。
+### 检查 evidence 到 claim 的桥：Toulmin
 
-> [!example] Evidence 后面必须有你的一句
-> **Topic claim**：平均效应可能掩盖不同用户之间的重要差异。
->
-> **Evidence**：范文引用 Beyens et al. 的结果：26% 的青少年 well-being 改善，28% 下降，45% 没有明显变化；三者平均后接近零。
->
-> **Commentary**：范文没有停在数字上，而是得出两个判断：`small effect` 可能掩盖显著的个体差异；把 concern 指向全体用户会错过真正的问题。
->
-> 这就是 evidence 后面的“所以呢”：同一组数字先被解释，再被用来改变全文接下来要问的问题。
->
-> <!-- bilingual-en:start -->
-> The sample does not leave the percentages uninterpreted. It explains that a near-zero average can hide substantial individual differences, then uses that insight to redirect concern from the whole population to particular users and conditions.
-> <!-- bilingual-en:end -->
+不需要背六个术语。卡住时只问五句话：
 
-<!-- bilingual-en:start -->
-A paragraph is a mini-argument: make a topic claim, explain it, provide evidence, comment on what the evidence establishes or fails to establish, and link the result forward. Judge paragraphs by unity, coherent order and adequate development, not by mechanically hitting a sentence count.
-<!-- bilingual-en:end -->
+1. 我的 claim 是什么？
+2. 我的 evidence 是什么？
+3. **为什么这份 evidence 能推出这个 claim？** 这一步就是 warrant，意为中间的推理桥。
+4. 我能说多肯定、能推广到哪里？
+5. 是否有真正重要的例外或替代解释？
 
-## 六、用 Toulmin 检查论证能否站住
+如果第 3 句答不出来，先补推理，不要本能地再塞一篇 citation。
 
-| 部件 | 要问的问题 |
-|---|---|
-| **Claim** | 你要读者接受什么？ |
-| **Grounds** | 哪些事实或 evidence 支持它？这些证据可靠吗？ |
-| **Warrant** | 从 grounds 到 claim 隐含了什么推理或假设？ |
-| **Backing** | 什么进一步支持这个 warrant？ |
-| **Qualifier** | 结论在哪些范围或条件下成立？是否应使用 `may`、`often`、`in some cases`？ |
-| **Rebuttal** | 有哪些真正有效的例外、替代解释或反方？你如何回应？ |
+### Week 4：让 claim 的力度与 evidence 匹配
 
-这套模型最有用的地方，是抓出论证里的“跳步”。最常见的问题不是没有引用，而是 **warrant 没写出来**：作者摆出一个事实，下一句就宣布结论。此时该补的往往不是另一篇文献，而是“为什么这个事实能推出这个结论”。
+研究 **finding** 是某项研究在特定样本和方法下观察到的结果；你的 **claim** 是根据它形成的解释。转换时必须保留四条边界：谁的观点、样本范围、确定性和因果关系。
 
-> [!example] 找出藏起来的 warrant
-> - **Grounds**：large datasets 和 meta-analyses 显示 social media 对 well-being 的平均效应很小且不一致。
-> - **Claim**：庞大的用户数量本身不等于 social crisis。
-> - **Warrant**：判断社会危害应看 effect 的性质和大小，不能只看 exposure 的人数。
-> - **Qualifier**：平均效应小不代表没有人受到明显伤害；个体差异仍然重要。
-> - **Rebuttal**：范文先承认公众担忧有证据支持，再说明这些证据不足以支撑“所有用户都面临同样风险”。
->
-> <!-- bilingual-en:start -->
-> The sample’s warrant is that social harm must be judged by the nature and magnitude of effects, not exposure numbers alone. It qualifies this reasoning by preserving substantial individual harms even when the average effect is small.
-> <!-- bilingual-en:end -->
+一个实用顺序是：
 
-<!-- bilingual-en:start -->
-Toulmin analysis separates claim, grounds, warrant, backing, qualifier and rebuttal. The most common gap is an unstated or weak warrant: evidence is presented, but the reasoning that connects it to the conclusion is missing. Repair the inferential link before adding more sources.
-<!-- bilingual-en:end -->
+1. 先写清 sample-specific finding，通常用过去时报告研究发现。
+2. 判断 evidence 可以推广到谁、什么情境以及多大确定性。
+3. 选择匹配的强度：`may / might / could be argued` → `suggest / indicate` → `show / demonstrate`。`prove` 通常过强。
+4. 再写现在时 claim，并保留必要的 qualifier，也就是范围或条件限制。
 
-## 七、把资料变成自己的论证
-
-### 1. 找资料与判断资料
-
-优先从 LSE Library、学科数据库、reading list 和 Google Scholar 寻找学术来源。引用格式按所属 department 的要求；若没有指定，选择一种格式并保持一致。文献管理软件生成的引用仍需人工核对。
-
-用 **CRAAP** 做初筛：
-
-- **Currency**：时间是否适合这个问题？更新频率是否重要？
-- **Relevance**：它是否真正回答你的研究问题，层次和范围是否合适？
-- **Authority**：作者、机构、出版渠道是否具备相应专业性？
-- **Accuracy**：论据、方法和引用能否核验？是否与其他可靠来源一致？
-- **Purpose**：目的是研究、教育、商业、宣传还是说服？利益与立场如何影响内容？
-
-### 2. Paraphrase、quotation 与 plagiarism
-
-Paraphrase 不是同义词替换游戏。你需要真正理解原句，再用新的词汇和句法把同一个意思说出来，同时引用思想来源。只换几个词、调一下顺序或把原句剪贴重组，仍然是 patchwriting；加上 citation 也救不了复制来的措辞。技术术语反而应该保留，不要为了显得“改写过”把意思改坏。
-
-直接引用只在原话本身重要时使用，例如定义、无法无损改写的精确短语或独特措辞。引文必须准确，省略和补充分别用 ellipsis 与 brackets；直接引语通常要给页码。长引文即使引用正确，也可能只是逃避概括和分析。
-
-> [!warning] 这篇范文不能用来核验 paraphrase 准确性
-> 范文展示了引用如何进入段落，却没有附上各篇原文，因而无法比较“原句 → paraphrase”。这里不编造原句来做示范。Paraphrase 的正反例应回到 Week 2 课件中有原文对照的练习。
->
-> <!-- bilingual-en:start -->
-> The sample shows how citations function inside paragraphs, but it does not reproduce the underlying source passages. It therefore cannot verify paraphrase accuracy. Use the Week 2 source-and-paraphrase comparisons for that purpose.
-> <!-- bilingual-en:end -->
-
-### 3. Synthesis：不要按作者分段
-
-Synthesis 也不是让作者们排队发言——“A 说完，B 接着说”。应该先由你提出本段要解决的问题，再把多个来源放进同一条推理里：
-
-1. 用 writer-led topic sentence 确定本段判断。
-2. 按**共同主题、分歧、因果或证据强弱**组织来源，而不是按作者排列。
-3. 主要使用 paraphrase / summary；只有措辞本身重要时才 quote。
-4. 明说来源之间的关系：agreement、contrast、extension、qualification 或 contradiction。
-5. 以作者的 concluding sentence 说明综合后能得出什么。
-
-可混合 integral citation（作者进入句子）和 non-integral citation（作者放在括号中）；选择取决于你要突出研究者还是突出结论，不是为了表面变化。
-
-> [!example] Summary 和 synthesis 的差别
-> **如果只按作者汇报**：Ortiz-Ospina 讨论双向因果；Lee and Hancock 讨论 large datasets；其他 meta-analyses 报告小而不一致的效应。到这里读者只知道三组文献各说了什么。
->
-> **范文的 synthesis**：它先把这些研究放进同一个问题——headline figure 能否证明危害——再用 `Taken together, this evidence suggests ...` 得出作者判断：庞大用户基数和很小的平均效应同时存在，并不自动构成 social crisis。
->
-> Synthesis 的关键就是最后这一步：多篇文献放在一起后，作者能说出什么单篇文献没有直接说出的结论。
->
-> <!-- bilingual-en:start -->
-> Source-by-source reporting would leave three findings separate. The sample puts them under one question and uses “Taken together” to infer that a vast user base combined with a minimal average effect does not automatically amount to a social crisis.
-> <!-- bilingual-en:end -->
-
-### Annotated bibliography：summary + evaluation + intended use
-
-每条 annotation 通常用 **100–300 words** 完成三件事：
-
-1. **Summary**：研究问题/主张、方法或理论、主要发现与范围。
-2. **Evaluation**：相关性、权威性、证据与方法的强弱、限制或偏向；评价必须说明标准，不能只写 `useful`。
-3. **Intended use**：它将在论文哪一部分支持、限定或挑战哪一个 claim。
-
-完整条目还需要正确 reference，并可简要说明作者权威和预期读者。风格保持正式、客观、一致；reporting verb 应准确表达来源真正做了什么。
-
-<!-- bilingual-en:start -->
-Find sources through appropriate academic systems and evaluate them for currency, relevance, authority, accuracy and purpose. A real paraphrase changes wording and structure while preserving meaning and citing the source; patchwriting remains plagiarism even when a citation is added. Synthesis organizes several sources around the writer’s question and explicitly explains their relationships. An annotated bibliography combines an accurate reference with summary, evaluation against stated criteria, and a precise account of how the source will be used.
-<!-- bilingual-en:end -->
-
-## 八、让作者声音出现在证据之间
-
-“自己的声音”不等于少引用，也不等于不停写 `I think`。真正的作者声音是：读者一直看得见**哪一句是你的 claim、来源在其中提供什么、你对这份 evidence 怎么判断。**
-
-### 从 source-led 改为 writer-led
-
-- 只汇报会写成：`Beyens et al. found three different patterns of effect.`
-- 范文先提出自己的段落判断：个体体验存在显著差异；随后才用 Beyens et al. 的数据支撑，最后由作者说明这个差异怎样改变对 headline statistic 的理解。
-
-一个很实用的办法，是把 reporting verb 变成 noun / gerund，把主句最有力量的位置留给你的判断：
-
-- `The suggestion that X ... is important because ...`
-- `Author's explanation of X is persuasive only when ...`
-- `By treating X as ..., Author clarifies ... but overlooks ...`
-
-作者声音常通过功能明确的语言出现：
-
-| 功能 | 可用动作 |
-|---|---|
-| 说明意义 | means, indicates, illustrates, suggests |
-| 连接因果 | results from, leads to, contributes to |
-| 判断强弱 | convincing, rigorous, limited, simplistic, comprehensive |
-| 标出相关性 | is relevant because, provides a basis for, highlights the need to |
-| 限定范围 | may, tends to, in this context, only when |
-
-这些词不是论文装饰。尤其 reporting verbs 必须和原作者真正做的事匹配：`argues`、`suggests`、`demonstrates`、`reports` 不是为了避免重复而随便轮换的同义词。
-
-<!-- bilingual-en:start -->
-Academic voice is the visible pattern of the writer’s claims and judgments around source material. Lead with the paragraph’s claim, use literature as evidence, and reserve the main clause for explaining significance, relevance, strength or limitation. Reporting verbs and evaluative language must describe what the source genuinely does rather than merely sound formal.
-<!-- bilingual-en:end -->
-
-## 九、Cohesion 是关系清楚，不是连接词越多越好
-
-### 先确定逻辑关系，再选表达
-
-- addition / continuation
-- contrast / concession
-- example / specification
-- cause / result / logical development
-- emphasis / stance
-- sequence / structure
-
-先问两句话到底是什么关系，再选连接词。几个高频易错点：
-
-- `However` 可置于新句开头，或放在分号后；不要用逗号把两个完整句硬连起来。
-- `despite + noun / gerund`；不是 `despite of`，也不直接接完整 clause。
-- `In contrast` 比较不同对象或观点；`On the contrary` 否定并纠正前一个说法。
-- `besides` 通常不适合作为正式学术连接词。
-- 连接词过密会遮住真实逻辑；若两句关系不清，先修内容，不要先加 `therefore`。
-
-### 三种比连接词更重要的衔接
-
-1. **Reference chain**：用 `This / These / Such + precise noun`，如 `this finding`、`this assumption`、`this limitation`，避免读者猜 `this` 指什么。
-2. **Parallelism**：并列项目和比较对象使用相同语法形式。
-3. **Lexical chain**：围绕同一概念使用准确、稳定的关键词。技术词必要时直接重复，不要用不准确的“同义词”制造变化。
-
-> [!example] 别让 `this` 悬在空中
-> Annotated sample 用蓝色标出了完整的 reference chains：`this figure`、`such concerns`、`these anxieties`、`this evidence`、`these processes`、`these outcomes`、`this finding`、`such a comparison`。
->
-> 例如，范文先给出 26% / 28% / 45% 三种结果，随后用 `This finding` 接回整组 evidence；它没有只写一个孤零零的 `This`。
->
-> 这些 precise nouns 不只完成指代，还提前告诉读者下一句要怎样处理前文：figure、concern、evidence、process、outcome、finding 和 comparison 各自指向不同的信息类型。
->
-> <!-- bilingual-en:start -->
-> The annotated sample marks precise reference chains such as “this figure,” “this evidence,” “these processes” and “this finding.” The noun identifies both the referent and the kind of information being carried into the next sentence.
-> <!-- bilingual-en:end -->
-
-<!-- bilingual-en:start -->
-Cohesion comes from explicit logical relations, precise reference chains, parallel grammar and accurate lexical continuity. Choose a connector only after identifying the relation it expresses. Repeating a technical term is often clearer than replacing it with a misleading synonym.
-<!-- bilingual-en:end -->
-
-## 十、Introduction 与 conclusion 要回答同一个问题
-
-### Introduction：由宽到窄，约占全文 10%
-
-1. 建立与题目直接相关的 academic / real-world context，必要时指出文献中的问题或 gap。
-2. 给出 thesis：本文对题目的中心答案。
-3. 说明 approach：结构、理论、资料或案例如何用来证明答案。
-
-Hook 不是必需品；只有它真的把读者带到题目时才值得留。回顾截至目前的研究常用 present perfect，预告本文结构可用 present simple 或 future。要不要用第一人称取决于学科规范，但不管写 `I` 还是 `This essay`，都不能代替清楚的 thesis。
-
-### Conclusion：不引入新论点
-
-1. 综合主要论证，不是逐段机械复述。
-2. 用新的措辞重申 thesis，明确回答题目。
-3. 说明 implication、recommendation、prediction 或 future research，但必须从正文结论自然推出。
-
-> [!example] 范文怎样做到首尾相接
-> **Introduction** 先交代 3.96 billion 这个令人担忧的 headline figure，马上指出它衡量的是 adoption 而不是 effects；随后给出 thesis，并预告将检查 anxiety、aggregate measures、mechanisms 和 attitudes。
->
-> **Conclusion** 回到同一个区别：原题问得太宽，用户数量本身不是 harm。因为正文已经证明平均值、个体差异和具体机制的重要性，结尾才能自然把研究问题改成：**who is harmed, by what mechanisms, and under what conditions?**
->
-> 结尾不是突然“升华”，而是把正文一步步赚来的结论压缩成更准确的问题。
->
-> <!-- bilingual-en:start -->
-> The sample introduction distinguishes adoption from effects, states its answer and previews the route of inquiry. The conclusion returns to the same distinction and, on the basis of the intervening argument, reframes the question around who is harmed, through which mechanisms and under what conditions.
-> <!-- bilingual-en:end -->
-
-<!-- bilingual-en:start -->
-An introduction moves from relevant context to a clear thesis and a brief account of the approach. A conclusion synthesizes the reasoning, restates the answer and draws only those implications that the body has earned. Both sections must answer the same question; neither a hook nor first-person wording can substitute for a thesis.
-<!-- bilingual-en:end -->
-
-## 十一、按“影响论证的程度”修改
-
-修改时不要一上来就抓拼写。先修会让整篇文章站不住的问题，再修句子表面：
-
-1. **Task fulfilment**：是否完整回答题目所有部分，并遵守范围？
-2. **Thesis**：中心答案是否明确、具体、可辩护？
-3. **Progression**：结构是否有逻辑顺序，topic sentences 能否独立组成论证路线？
-4. **Paragraph argument**：每段是否有 claim、credible grounds、清楚 warrant 和必要 qualification / rebuttal？
-5. **Source use**：资料是否相关且足够广；是否准确 paraphrase、summary、quote 和 synthesize？
-6. **Voice and evaluation**：作者是否解释 evidence 的意义、限制和判断，而不是连续汇报来源？
-7. **Cohesion**：连接关系、指代、parallelism 和关键词链是否清楚？
-8. **Language accuracy**：最后再修语法、词汇、标点、格式和 bibliography。
-
-这和课程 marking criteria 的高分方向是一致的：题目答完整，论证一步步向前走，段落和衔接清楚，资料选得对并且能互相联系，语言准确灵活。低分文章往往不是“知道得太少”，而是描述多、推进少，或者文献很多却始终没有变成作者自己的答案。
-
-<!-- bilingual-en:start -->
-Revise in order of argumentative impact: task fulfilment, thesis, progression, paragraph reasoning, source use, writer judgment, cohesion, and only then sentence-level accuracy and formatting. This order mirrors the course criteria: a strong essay completes the task, progresses logically, handles relevant literature purposefully and communicates with controlled language.
-<!-- bilingual-en:end -->
-
-> [!info]- 本课程 assignment 的提交底线
-> 课件说明的常规要求包括：约 2,000 words、至少 6 个 academic references、明确 thesis、结构化段落、conclusion、单独 bibliography，以及完整 cover sheet / formatting。具体要求以当次 Moodle 页面和题目为准；本笔记不保留可能过期的日期。
->
-> <!-- bilingual-en:start -->
-> The slides describe a typical assignment of about 2,000 words, at least six academic references, a clear thesis, structured paragraphs, a conclusion, a separate bibliography, and complete formatting or cover-sheet requirements. Always verify the current Moodle task; dates are intentionally not copied here.
-> <!-- bilingual-en:end -->
-
-## Week 4：让 claim 的力度与 evidence 匹配
-
-### Lesson 1 · 从研究 finding 推出有限定的 claim
-
-研究 **finding** 是某项研究在特定样本、时间和方法下得到的结果；自己的 **claim** 是你根据这些结果提出的解释或主张。两者不能直接画等号。
-
-一个实用转换流程是：
-
-1. 先保留 finding 的样本和情境，通常用过去时报告研究实际发现了什么。
-2. 再判断 evidence 能推广到谁、什么条件和多大确定性。
-3. 选择与证据强度相符的 claim 动词或 hedge：`may / might / could be argued` → `suggest / indicate` → `show / demonstrate`。`prove` 通常过强。
-4. 用现在时写出解释性 claim，同时保留必要的 population、context、条件和不确定性。
-
-> [!example] finding 与 claim 不是同一句话换时态
+> [!example] finding 不能直接升级成普遍事实
 > **Finding：** `In this sample, women reported greater concern about climate change than men.`
 >
-> **合格 claim：** `The findings suggest that gender may influence climate concern in this context.`
+> **Claim：** `The findings suggest that gender may influence climate concern in this context.`
 >
-> 第二句没有把一个样本写成“所有女性都比所有男性更关心气候”。`suggest`、`may` 和 `in this context` 分别控制证据力度、因果确定性和适用范围。
+> `suggest`、`may` 和 `in this context` 分别限制 evidence 强度、因果确定性和适用范围。
+
+> [!check] 这一段写完后
+> 只看 claim、evidence 和 commentary：读者能否看见三者之间的逻辑，而不是只能看见一条观点和一个括号 citation？
 
 <!-- bilingual-en:start -->
-A finding reports what a particular study observed; a claim states the writer's interpretation of that evidence. Move from finding to claim by preserving the sample and context, judging how far the evidence can travel, selecting an appropriate strength from may/suggest to show/demonstrate, and retaining any necessary qualification. Tense alone does not make a generalisation valid.
+A body paragraph is a mini-argument: claim, explanation, evidence, commentary and link. Commentary states why the evidence matters and where it stops. When moving from a study finding to a broader claim, preserve ownership, sample scope, certainty and causality.
 <!-- bilingual-en:end -->
 
-> [!warning] Hedge 不是“把句子写得模糊”
-> `suggest`、`may` 和 `appears to` 都是在说明证据允许你说到哪一步。证据强时也不应机械塞满 hedge；证据弱或范围有限时，也不能用 booster 把它写成普遍事实。
->
-> <!-- bilingual-en:start -->
-> Hedging is evidence calibration, not decorative vagueness. Stronger claims require stronger evidence; limited evidence requires visible limits on certainty and scope.
-> <!-- bilingual-en:end -->
+### 写正文时：让作者声音出现在证据之间
 
-> [!note] 已开放但尚未激活
-> Lessons 2–4 的主题是 passive voice、nominalisation 和 concise writing。系统已确认讲义存在，但在实际上课前不把它们记成“已学技能”，也不提前制造 recall 项。每次课后只加入老师真正教到、且能迁移到考试写作的动作。
->
-> <!-- bilingual-en:start -->
-> Lessons 2–4 cover passive voice, nominalisation and concise writing. Their files are available, but their recall states remain inactive until the corresponding classes have been taught.
-> <!-- bilingual-en:end -->
+Academic voice 不是多写 `I think`，也不是少引用。它是读者始终知道：**这一段是谁的判断、来源在其中扮演什么角色、你怎样处理来源之间的关系。**
+
+### 先写你的段落判断，再安排作者
+
+Source-led 写法常常是：`Author A says... Author B says... Author C says...`。读者看见了三个人，却不知道你为什么把他们放在一起。
+
+Writer-led 写法先提出本段 claim，再安排资料：
+
+- A 和 B 是否 agreement？
+- B 是否解释了 A 的 mechanism？
+- C 是否限制了前两者的 scope？
+- 哪一份 evidence 更强，为什么？
+- 三份资料合起来允许你得出什么新判断？
+
+这就是 **synthesis**：不是把多个 summary 放在同一段，而是说明来源之间的关系，并让关系服务于你的 claim。
+
+几个真正有功能的句子动作：
+
+- `X suggests that ...`：报告有限结论。
+- `This evidence matters because ...`：解释意义。
+- `Taken together, these findings indicate ...`：形成综合判断。
+- `However, this conclusion is limited to ...`：限制范围。
+- `While A explains X, B shows that ...`：建立来源关系。
+
+Reporting verb 必须准确：`reports`、`suggests`、`argues`、`demonstrates` 不是为了避免重复而轮换的装饰词。
+
+<!-- bilingual-en:start -->
+Writer voice comes from controlling the paragraph's claim, assigning roles to sources and judging what their relationship establishes. Synthesis makes agreement, contrast, extension or qualification explicit rather than listing authors.
+<!-- bilingual-en:end -->
+
+### 写完段落后：Cohesion 是关系清楚，不是连接词越多越好
+
+第一稿的论证成立后，再让读者更容易跟上。先确定两句之间到底是什么关系，再选择连接方式；不要靠 `therefore`、`however` 和 `moreover` 掩盖本来就没有建立的逻辑。
+
+优先检查三件事：
+
+1. **Reference chain**：写 `this finding`、`this limitation`、`these results`，不要让孤零零的 `this` 逼读者猜。
+2. **Parallelism**：并列的原因、结果和比较对象使用相同语法形式。
+3. **Lexical chain**：关键技术词保持准确和稳定；必要的重复比错误同义替换更好。
+
+连接词只是最后一步：它负责显示已经存在的 addition、contrast、cause、result 或 concession，不能替你制造关系。
+
+> [!note] 已开放但尚未激活的 Week 4 内容
+> Passive voice、nominalisation 和 concise writing 的讲义已经开放，但尚未实际授课。对应课堂结束后，这些内容会放回这里，作为“怎样选择句子焦点”和“怎样压缩表达”的工具，而不是独立的语法收藏。
+
+<!-- bilingual-en:start -->
+Cohesion makes existing relationships visible through precise reference, parallel grammar and stable terminology. Connectors label logic; they cannot create missing logic. Later Week 4 language tools remain inactive until taught.
+<!-- bilingual-en:end -->
+
+## 六、Introduction 与 conclusion 要回答同一个问题
+
+对新手来说，正文计划稳定后再定稿 introduction，通常比一开始憋一个漂亮开头更可靠。
+
+### Introduction 做三件事
+
+1. 给出与题目直接有关的 context，不写空泛 hook。
+2. 明确 thesis，也就是全文答案。
+3. 简要告诉读者这篇文章会怎样证明它。
+
+### Conclusion 做三件事
+
+1. 综合正文已经证明的主要理由，不逐段复制。
+2. 用新的措辞重新回答题目。
+3. 只写正文已经赚到的 implication、recommendation 或 limitation，不加入新 evidence。
+
+开头作出的承诺必须由正文兑现，结尾必须回答同一个问题。如果 conclusion 只能总结主题，却不能明确说答案，通常说明 thesis 或正文路线仍不稳定。
+
+<!-- bilingual-en:start -->
+The introduction establishes relevant context, states the thesis and previews the route. The conclusion synthesizes the completed reasoning, answers the same question and adds no new evidence.
+<!-- bilingual-en:end -->
+
+## 七、按“影响论证的程度”修改
+
+不要从拼写开始。按下面顺序修改；前一层没站住，后一层修得再漂亮也救不了文章。
+
+1. **Task**：是否回答了题目所有部分，并遵守 scope？
+2. **Thesis**：答案是否明确、可辩护，并与 evidence 强度匹配？
+3. **Route**：paragraph jobs 是否一步步证明 thesis？
+4. **Paragraph reasoning**：每段是否有 claim、evidence、warrant 和 commentary？
+5. **Source accuracy**：是否改变了作者、certainty、scope 或 causality？来源关系是否清楚？
+6. **Completion**：introduction、conclusion 和所有必需部分是否完成？
+7. **Language**：最后才批量修 recurring grammar、word form、cohesion、拼写、格式和 bibliography。
+
+> [!info]- 本课程 assignment 的常规提交底线
+> 课件说明通常包括约 2,000 words、至少 6 个 academic references、明确 thesis、结构化段落、conclusion、单独 bibliography，以及完整 cover sheet / formatting。具体要求仍以当次 Moodle 页面为准。
+
+<!-- bilingual-en:start -->
+Revise from argument to language: task, thesis, route, paragraph reasoning, source accuracy, completion, and only then sentence-level accuracy and formatting.
+<!-- bilingual-en:end -->
 
 ## 最小自检
 
-1. 为什么“有 citation 的来源汇报”仍可能不是学术论证？
-2. 面对一个 `critically discuss` 题目，动笔前必须确定哪六件事？
-3. 只读 topic sentences 时，怎样判断 essay plan 是否成立？
-4. 一段有 claim 和 evidence 却仍显得跳跃，最可能缺少 Toulmin 的哪一部分？
-5. 怎样把一个 sample-specific finding 变成 claim，而不把 evidence 说得过强或推广得过远？
+1. 在写第一句正文前，你应该已经留下哪四样东西？
+2. Evidence 后面为什么必须有 commentary？
+3. 从一个研究 finding 推到自己的 claim 时，哪四条边界不能改变？
+4. Source-led paragraph 和 writer-led paragraph 的根本差别是什么？
+5. 修改为什么不能从拼写和单句语法开始？
 
 > [!answer]- 参考答案
-> **1.** Citation 只标明来源；作者仍需提出自己的 claim，并解释证据的意义、相关性、限制和推论。<br>
-> **2.** Task、parts、restrictions、definitions、provisional answer/view、structure。<br>
-> **3.** 它们应按顺序组成一条能证明 thesis 的论证路线；每段有独立工作，顺序不能随意互换。<br>
-> **4.** Warrant，即 evidence 如何推出 claim 的推理或假设。<br>
-> **5.** 先保留 finding 的样本和情境，再判断证据强度与可推广范围；最后选择匹配的 hedge/booster，并在 claim 中保留必要的 certainty、scope 和条件。只把过去时改成现在时并不能使推广成立。
+> **1.** Task statement、provisional thesis、按顺序排列的 paragraph jobs，以及标明内容/范围/用途的 evidence map。<br>
+> **2.** Evidence 只告诉读者材料是什么；commentary 解释它为什么支持 claim、能支持到哪里、有什么限制。<br>
+> **3.** Source ownership、sample/scope、certainty 和 causality。<br>
+> **4.** Source-led paragraph 按作者排列信息；writer-led paragraph 由作者自己的 claim 控制资料，并解释来源之间的关系。<br>
+> **5.** 如果 task、thesis、结构或 evidence relationship 不成立，语言修饰只会让错误论证更流畅；应先修决定整篇是否成立的问题。
 >
 > <!-- bilingual-en:start -->
-> &nbsp;
->
-> **1.** A citation identifies a source; it does not supply the writer’s claim, interpretation or judgment.<br>
-> **2.** Identify the task, parts, restrictions, definitions, provisional answer and structure.<br>
-> **3.** The topic sentences should form an ordered line of reasoning that proves the thesis, with a distinct job for every paragraph.<br>
-> **4.** The warrant: the reasoning or assumption that connects evidence to the claim.<br>
-> **5.** Preserve the study-specific finding, judge the strength and reach of the evidence, and then write a claim whose hedge, scope and conditions match that evidence. A tense change alone does not justify generalisation.
+> Before prose, retain a task statement, provisional thesis, paragraph route and evidence map. Commentary explains the inferential value and limits of evidence. Preserve ownership, scope, certainty and causality. Writer-led paragraphs organize sources around a claim. Revision begins with the argument because sentence polish cannot repair a failed task or structure.
 > <!-- bilingual-en:end -->
+
+## 课程覆盖与当前边界
+
+| 周次 | 已纳入这条流程的内容 |
+|---|---|
+| Week 1 | 读题、选题、thesis、introduction、conclusion、assignment expectations |
+| Week 2 | 寻找与评价来源、paraphrase、quotation、plagiarism、synthesis、annotated bibliography |
+| Week 3 | structure、paragraph jobs、argument、writer voice、cohesion、essay plan |
+| Week 4 | Lesson 1 making claims 已纳入；Lessons 2–4 待实际上课后激活 |
 
 ## 来源与核验
 
-本笔记按已开放的 Week 1–4 课件重建。Week 4 只激活实际上课的 Lesson 1；Lessons 2–4 仅登记为已开放。笔记保留课程教授的可迁移写作技术，删除课堂议题、逐题作答和重复示例。示例优先采用学校提供的 Sample Essay；annotated version 中，黄色用于逻辑连接，蓝色用于 reference chains。颜色只帮助恢复写作功能，不作为需要背诵的知识点。范文没有附原始文献全文，因此不把它当作 paraphrase 准确性的核验材料。
+本笔记按已开放的 Week 1–4 课件重建，并按真实写作顺序去重。Week 4 只激活实际上课的 Lesson 1；Lessons 2–4 仅登记为已开放。学校 Sample Essay 用于核验 structure、paragraph progression、voice 和 cohesion；由于原始文献未附在范文中，不用它核验 paraphrase 准确性。
 
 <!-- bilingual-en:start -->
-This note was rebuilt from the available Week 1–4 Academic Writing materials. Only the taught Week 4 Lesson 1 is active; Lessons 2–4 are registered as available but not yet learned. Examples prioritize the school-provided sample essay. In the annotated version, yellow identifies logical linking and blue identifies reference chains. Because the source articles are not reproduced, the sample is not used to verify paraphrase accuracy.
+This workflow is reconstructed from the available Week 1–4 materials. Only the taught Week 4 Lesson 1 is active. The sample essay supports analysis of structure and voice, but not source-to-paraphrase accuracy because its source passages are absent.
 <!-- bilingual-en:end -->
 
 ### Week 1
