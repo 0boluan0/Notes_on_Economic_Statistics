@@ -62,8 +62,8 @@ neath_sync: synced
 - 边界：不能偷换 command、扩大 population/time/context，或把讨论题写成描述题。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#一、先把题目变成写作任务|Academic Writing：读题]]；Assignment criteria。
 - 适用：Paper B、Assignment；planning、introduction、whole essay。
-- 证据/Callback：尚无显式闭环。
-- 下一观察：下一次 Paper B end-to-end unit 开始前静默看是否先写任务要求。
+- 证据/Callback：2026-08-17 Academic Writing course replay Block 1B：在 Climate Change 新题中正确把 topic 与 task 分开，并说明需要判断“宣布净零目标是否足以证明政策有效”；这是明确支架后的首次 supported application。Block 1C：能识别 immigration/population-ageing 题的两个 parts、中心判断、UK 与未来二十年，但把 `fiscal pressures` 误读成“社会压力”，topic 也遗漏了 immigration-response 关系和 fiscal problem scope。Block 1D：正确识别 Social Media 题中 `this` 的 prevalence/intensity 两种读法，但 `cause for concern` 仍定义为宽泛的严重社会问题或任何少数人坏处，尚不能稳定筛选 evidence；状态保持 `new`。
+- 下一观察：Block 1E 用 Gender 新题复测完整 question analysis，并检查 provisional view/possible structure。
 
 ### AW-02 · 控制性答案 / thesis
 - 状态：`new`
@@ -216,8 +216,8 @@ neath_sync: synced
 - 边界：不得把 `may / 80% probability / forecast` 写成无条件 `will/is`。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing#第三步：先定 thesis，再给每段一个 job|Reading into Writing]]；Paper B criteria。
 - 适用：Paper A/B、Assignment；paraphrase、summary、evaluation。
-- 证据/Callback：2026-08-11 Demographics Reading：逐步提示后把 80% probability 放回预测句；`guided`，无独立证据。2026-08-13 Demographics Paper A 首稿：能用 `predicted / would` 标记部分预测，但结论把约九十亿稳定改成绝对人口下降，并遗漏绿色技术、减贫与治理条件；本次写前已有条件性提示，记录为 `incorrect`。2026-08-14 Friday Paper B 再次在真正适用情境改变原文命题：无据增加“老年劳动力成本较低”；把条件性的移民规模/政治可行性判断改成“大小国家都无效”；把多项组合干预改成 policy 是 `the only way`。本次记为 `incorrect`；连续两个适用输出失真，状态转 `repair`。
-- 下一观察：下一条 Paper B end-to-end unit 中的完整 source map 和整篇转述；重点检查是否自行新增 cost、causality、certainty 或消除地区/政治条件。
+- 证据/Callback：2026-08-11 Demographics Reading：逐步提示后把 80% probability 放回预测句；`guided`，无独立证据。2026-08-13 Demographics Paper A 首稿：能用 `predicted / would` 标记部分预测，但结论把约九十亿稳定改成绝对人口下降，并遗漏绿色技术、减贫与治理条件；本次写前已有条件性提示，记录为 `incorrect`。2026-08-14 Friday Paper B 再次在真正适用情境改变原文命题：无据增加“老年劳动力成本较低”；把条件性的移民规模/政治可行性判断改成“大小国家都无效”；把多项组合干预改成 policy 是 `the only way`。本次记为 `incorrect`；连续两个适用输出失真，状态转 `repair`。2026-08-17 Academic Writing replay Block 1D：给定材料只报告 weak average association 与特定群体的 larger negative association，成文时无据加入监管/保护不足和“不小概率”，并把 weak association 改成 no clear evidence/趋向无害；本次记为 `incorrect`，状态保持 `repair`。
+- 下一观察：Academic Writing replay 的 source-use 阶段和下一条 Paper B end-to-end unit；重点检查是否自行新增机制、概率、因果、certainty 或 scope。
 
 ### AW-16 · 自上而下写作程序（legacy `W-01`）
 - 状态：`guided`
@@ -227,8 +227,8 @@ neath_sync: synced
 - 边界：不能把完整 source extraction 当作 writer planning；短材料只为写作决策服务时不能冒充 Reading practice。
 - 来源：[[99_学习情况记录/teach/LN905 Exam Playbook|LN905 Exam Playbook]]；[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#三、先搭论证结构，再写句子|Academic Writing：plan]]。
 - 适用：Paper A/B、Assignment；planning、integrated writing。
-- 证据/Callback：原账本只记录“2026-08-12 Demographics Shared Writing 计划首次示范”，没有实际四步证据。2026-08-13 Demographics Paper A：在明确结构提示下完成 `central answer → linear paragraph jobs → evidence roles → 200–400 词 prose`，全文骨架与完成度成立；同日受支持证据，记为 `guided`。2026-08-14 Friday Paper B 的成品呈现出“同时处理 aging/fertility 的总答案 → 老年劳动参与 / 生育环境 / 移民限制三个段落工作 → conclusion”的外显结构，但原始文件没有保留计划过程，内部四步调用记为 `not observable`，状态不提升。
-- 下一观察：下一条 Paper B guided end-to-end unit 中的显式 `task → provisional answer → paragraph jobs → evidence roles`。
+- 证据/Callback：原账本只记录“2026-08-12 Demographics Shared Writing 计划首次示范”，没有实际四步证据。2026-08-13 Demographics Paper A：在明确结构提示下完成 `central answer → linear paragraph jobs → evidence roles → 200–400 词 prose`，全文骨架与完成度成立；同日受支持证据，记为 `guided`。2026-08-14 Friday Paper B 的成品呈现出“同时处理 aging/fertility 的总答案 → 老年劳动参与 / 生育环境 / 移民限制三个段落工作 → conclusion”的外显结构，但原始文件没有保留计划过程，内部四步调用记为 `not observable`，状态不提升。2026-08-17 Academic Writing course replay Block 1A：在明确三句结构支持下，用 Gender 新情境完成 `claim → evidence → reasoning`，记为 `guided`；有一处把“占比更高未缩小晋升差距”扩大成“占比对晋升影响很小”，已在讲评中收紧。Block 1B：在 Climate Change 新题完成 +1 结构复现；task、claim、两项 evidence 与 reasoning 都出现，但 `完全取决于` 和 `导致` 仍超过比较证据。Block 1D：在 Social Media 新题完成 +3 结构复现，claim–evidence–reasoning 均出现；但 source fidelity 仍有新增监管/保护、概率和扩大 weak association 的问题，结构记为 `guided`，状态保持 `guided`。
+- 下一观察：Academic Writing course replay 第 +7 教学块；之后仍需在完整 essay-style output 中观察 `task → provisional answer → paragraph jobs → evidence roles`。
 
 ### AW-17 · 用 evidence 强度校准 claim
 - 状态：`new`
