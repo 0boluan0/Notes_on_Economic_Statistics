@@ -71,7 +71,11 @@ aliases:
 
 ### Week 4 · Climate change
 
-- No downloadable Academic Writing file is available yet.
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Week 4 Booklet.pdf|Assignment booklet]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 1.pdf|Lesson 1 · Making claims]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 2.pdf|Lesson 2 · Passive voice]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 3.pdf|Lesson 3 · Nominalisation]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 4.pdf|Lesson 4 · Writing concisely]]
 
 ## 03 Paper A · Listening into Writing
 

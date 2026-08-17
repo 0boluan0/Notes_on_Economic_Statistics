@@ -3,7 +3,7 @@ student_os: ln905-skill-bank
 title: LN905 Skill Bank
 status: active
 course: LN905
-last_source_audit: 2026-08-13
+last_source_audit: 2026-08-17
 neath_sync: synced
 ---
 
@@ -42,7 +42,9 @@ neath_sync: synced
 | Discussion & Debate Weeks 1–3 | 功能语言已提取；人物游戏、challenge cards、balloon/pyramid 场景本身不作为技能 | 合并到 `DISC-01`–`DISC-02`；课堂游戏明确排除 |
 | Pronunciation sessions、transcript、TH materials 与 H5P | 已提取 intelligibility 所需的音位、schwa、connected speech、stress/chunking | 合并到 `PRON-01`–`PRON-03` |
 | Social Media、Gender、Demographics topic input/listening/reading | 可迁移主题词已提取；逐题答案和一次性事实不作为技能 | 合并到 `LEX-02`–`LEX-04` 和词汇同步区 |
-| Week 4 Climate Change 全部材料 | 用户已确认属于 Week 5 考试范围 | 仅预载 `LEX-05` 与词汇；其余 skill 状态仍等待实际授课 |
+| Week 4 Academic Writing · Lesson 1 Making Claims | 已核验并提取 finding → claim、hedging/boosting、scope calibration | 合并到 `AW-17` |
+| Week 4 Academic Writing · Lessons 2–4 | 讲义已开放，尚未实际授课 | 不建立 skill 状态；对应课程结束后增量激活 |
+| Week 4 Climate Change topic input | 用户已确认属于 Week 5 考试范围 | 预载 `LEX-05` 与词汇；其他未授课技能不激活 |
 | Everyday English、课堂行政、课程游戏规则 | 与学术考核迁移无直接关系 | 明确排除 |
 | *Academic Vocabulary in Use* | 仅作参考书 | 不批量导入；只收课堂实际教授、反复出现或真实输出需要的词 |
 | LN905 Essay 原始论文 | 是练习/写作证据，不是技能课件 | 不从论文主题批量制造 skill；真实输出可作为 callback 证据 |
@@ -227,6 +229,17 @@ neath_sync: synced
 - 适用：Paper A/B、Assignment；planning、integrated writing。
 - 证据/Callback：原账本只记录“2026-08-12 Demographics Shared Writing 计划首次示范”，没有实际四步证据。2026-08-13 Demographics Paper A：在明确结构提示下完成 `central answer → linear paragraph jobs → evidence roles → 200–400 词 prose`，全文骨架与完成度成立；同日受支持证据，记为 `guided`。2026-08-14 Friday Paper B 的成品呈现出“同时处理 aging/fertility 的总答案 → 老年劳动参与 / 生育环境 / 移民限制三个段落工作 → conclusion”的外显结构，但原始文件没有保留计划过程，内部四步调用记为 `not observable`，状态不提升。
 - 下一观察：下一条 Paper B guided end-to-end unit 中的显式 `task → provisional answer → paragraph jobs → evidence roles`。
+
+### AW-17 · 用 evidence 强度校准 claim
+- 状态：`new`
+- 触发/功能：从研究 finding 或一组 evidence 推出自己的 claim 时，决定能说多强、能推广到哪里。
+- 为什么：避免把样本结果写成普遍事实，也避免把有力证据机械写弱。
+- 动作/框架：保留 sample-specific finding → 判断可推广的 population/context 与 evidence strength → 选择 `may/might/could be argued`、`suggest/indicate` 或 `show/demonstrate` → 用现在时写 claim 并保留必要限定。
+- 边界：时态变化本身不能证明推广成立；必须保留 source ownership、sample scope、certainty、causality。Hedge 不是装饰性模糊，booster 需要足够 evidence；`prove` 通常不适合课程写作。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#Week 4：让 claim 的力度与 evidence 匹配|Academic Writing：making claims]]；[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 1.pdf|Week 4 Lesson 1]]。
+- 适用：Paper A/B、Assignment；finding → interpretation、summary、evaluation、paragraph claim。
+- 证据/Callback：2026-08-17 已从课堂 Lesson 1 核验；尚未完成系统内的显式教学闭环。
+- 下一观察：当前 Climate Change Paper A unit 在 meaning/evidence map 进入 summary 时显式教学；之后在 Friday/timed output 中静默观察。
 
 ## Paper A · Listening into Writing
 
@@ -876,3 +889,4 @@ neath_sync: synced
 - 2026-08-13：用户确认 Week 5 考试只从四个 topic 出题；按过线优先策略先扩展五个词书，并提前启用 Climate Change 词汇。
 - 2026-08-13：进一步补入课件未必明写、但四个 topic 考试中高概率出现的词汇；五个词书共 301 条。同步器开始把本地中文 `meaning` 写入匿词缺失的远端释义，并以远端可显示释义作为验收条件。
 - 2026-08-13：普通练习改为四话题内 Paper A/B 端到端 unit；旧短练退役，技能继续分层记录但不再产生独立 checkbox。
+- 2026-08-17：Week 4 Academic Writing 讲义已开放；实际教授的 Lesson 1 激活为 `AW-17`，Lessons 2–4 等对应课堂结束后再增量激活。

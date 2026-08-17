@@ -23,10 +23,10 @@ aliases:
 | Week 1 | Assignment expectations；question analysis；introduction、thesis、conclusion | 从题目得到中心答案，并让开头与结尾围绕同一个答案工作 |
 | Week 2 | Finding/evaluating sources；paraphrase；quotation；plagiarism；synthesis；annotated bibliography | 选择、转换、引用、综合和评价资料 |
 | Week 3 | Structure；paragraphs；argumentation；cohesion；academic voice；essay plan | 把答案变成有顺序、能站住、读得顺的论证 |
-| Week 4 | **尚未开放** | **留空；不推测、不补写** |
+| Week 4 | Lesson 1：making claims；Lessons 2–4 讲义已开放、待实际上课 | 从 finding 推到 claim，并让 certainty 与 scope 匹配 evidence；其余内容课后增量启用 |
 
 <!-- bilingual-en:start -->
-Weeks 1–3 currently cover the complete path from interpreting the task to planning, arguing, using sources and revising. Week 4 has not been released, so it is deliberately left blank rather than reconstructed from guesswork.
+Weeks 1–3 cover the path from task interpretation to planning, argument, source use and revision. Week 4 Lesson 1 adds evidence-calibrated claims. Lessons 2–4 are available but remain inactive until they are actually taught.
 <!-- bilingual-en:end -->
 
 > [!note] 贯穿例子：学校提供的范文
@@ -417,13 +417,42 @@ Revise in order of argumentative impact: task fulfilment, thesis, progression, p
 > The slides describe a typical assignment of about 2,000 words, at least six academic references, a clear thesis, structured paragraphs, a conclusion, a separate bibliography, and complete formatting or cover-sheet requirements. Always verify the current Moodle task; dates are intentionally not copied here.
 > <!-- bilingual-en:end -->
 
-## Week 4（尚未开放）
+## Week 4：让 claim 的力度与 evidence 匹配
 
-> [!todo] 留空
-> 当前是 Week 3，Week 4 的 Academic Writing 资料尚未开放。本节不根据旧资料或常识补写；开放后只加入课程实际教授的新技术，并与上面的流程去重。
+### Lesson 1 · 从研究 finding 推出有限定的 claim
+
+研究 **finding** 是某项研究在特定样本、时间和方法下得到的结果；自己的 **claim** 是你根据这些结果提出的解释或主张。两者不能直接画等号。
+
+一个实用转换流程是：
+
+1. 先保留 finding 的样本和情境，通常用过去时报告研究实际发现了什么。
+2. 再判断 evidence 能推广到谁、什么条件和多大确定性。
+3. 选择与证据强度相符的 claim 动词或 hedge：`may / might / could be argued` → `suggest / indicate` → `show / demonstrate`。`prove` 通常过强。
+4. 用现在时写出解释性 claim，同时保留必要的 population、context、条件和不确定性。
+
+> [!example] finding 与 claim 不是同一句话换时态
+> **Finding：** `In this sample, women reported greater concern about climate change than men.`
+>
+> **合格 claim：** `The findings suggest that gender may influence climate concern in this context.`
+>
+> 第二句没有把一个样本写成“所有女性都比所有男性更关心气候”。`suggest`、`may` 和 `in this context` 分别控制证据力度、因果确定性和适用范围。
+
+<!-- bilingual-en:start -->
+A finding reports what a particular study observed; a claim states the writer's interpretation of that evidence. Move from finding to claim by preserving the sample and context, judging how far the evidence can travel, selecting an appropriate strength from may/suggest to show/demonstrate, and retaining any necessary qualification. Tense alone does not make a generalisation valid.
+<!-- bilingual-en:end -->
+
+> [!warning] Hedge 不是“把句子写得模糊”
+> `suggest`、`may` 和 `appears to` 都是在说明证据允许你说到哪一步。证据强时也不应机械塞满 hedge；证据弱或范围有限时，也不能用 booster 把它写成普遍事实。
 >
 > <!-- bilingual-en:start -->
-> Week 4 materials are not yet available. This section is intentionally blank and will contain only techniques verified from the released course material.
+> Hedging is evidence calibration, not decorative vagueness. Stronger claims require stronger evidence; limited evidence requires visible limits on certainty and scope.
+> <!-- bilingual-en:end -->
+
+> [!note] 已开放但尚未激活
+> Lessons 2–4 的主题是 passive voice、nominalisation 和 concise writing。系统已确认讲义存在，但在实际上课前不把它们记成“已学技能”，也不提前制造 recall 项。每次课后只加入老师真正教到、且能迁移到考试写作的动作。
+>
+> <!-- bilingual-en:start -->
+> Lessons 2–4 cover passive voice, nominalisation and concise writing. Their files are available, but their recall states remain inactive until the corresponding classes have been taught.
 > <!-- bilingual-en:end -->
 
 ## 最小自检
@@ -432,14 +461,14 @@ Revise in order of argumentative impact: task fulfilment, thesis, progression, p
 2. 面对一个 `critically discuss` 题目，动笔前必须确定哪六件事？
 3. 只读 topic sentences 时，怎样判断 essay plan 是否成立？
 4. 一段有 claim 和 evidence 却仍显得跳跃，最可能缺少 Toulmin 的哪一部分？
-5. paraphrase、synthesis 和 evaluation 各自改变了什么？
+5. 怎样把一个 sample-specific finding 变成 claim，而不把 evidence 说得过强或推广得过远？
 
 > [!answer]- 参考答案
 > **1.** Citation 只标明来源；作者仍需提出自己的 claim，并解释证据的意义、相关性、限制和推论。<br>
 > **2.** Task、parts、restrictions、definitions、provisional answer/view、structure。<br>
 > **3.** 它们应按顺序组成一条能证明 thesis 的论证路线；每段有独立工作，顺序不能随意互换。<br>
 > **4.** Warrant，即 evidence 如何推出 claim 的推理或假设。<br>
-> **5.** Paraphrase 重新表达一个来源而不改变意思；synthesis 围绕作者的问题组织多个来源并说明关系；evaluation 按明确标准形成有理由、有限定的判断。
+> **5.** 先保留 finding 的样本和情境，再判断证据强度与可推广范围；最后选择匹配的 hedge/booster，并在 claim 中保留必要的 certainty、scope 和条件。只把过去时改成现在时并不能使推广成立。
 >
 > <!-- bilingual-en:start -->
 > &nbsp;
@@ -448,15 +477,15 @@ Revise in order of argumentative impact: task fulfilment, thesis, progression, p
 > **2.** Identify the task, parts, restrictions, definitions, provisional answer and structure.<br>
 > **3.** The topic sentences should form an ordered line of reasoning that proves the thesis, with a distinct job for every paragraph.<br>
 > **4.** The warrant: the reasoning or assumption that connects evidence to the claim.<br>
-> **5.** Paraphrase re-expresses one source accurately; synthesis organizes several sources around the writer’s problem; evaluation reaches a reasoned and qualified judgment against stated criteria.
+> **5.** Preserve the study-specific finding, judge the strength and reach of the evidence, and then write a claim whose hedge, scope and conditions match that evidence. A tense change alone does not justify generalisation.
 > <!-- bilingual-en:end -->
 
 ## 来源与核验
 
-本笔记按已开放的 Week 1–3 课件重建，保留课程教授的可迁移写作技术，删除课堂议题、逐题作答和重复示例。示例优先采用学校提供的 Sample Essay；annotated version 中，黄色用于逻辑连接，蓝色用于 reference chains。颜色只帮助恢复写作功能，不作为需要背诵的知识点。范文没有附原始文献全文，因此不把它当作 paraphrase 准确性的核验材料。
+本笔记按已开放的 Week 1–4 课件重建。Week 4 只激活实际上课的 Lesson 1；Lessons 2–4 仅登记为已开放。笔记保留课程教授的可迁移写作技术，删除课堂议题、逐题作答和重复示例。示例优先采用学校提供的 Sample Essay；annotated version 中，黄色用于逻辑连接，蓝色用于 reference chains。颜色只帮助恢复写作功能，不作为需要背诵的知识点。范文没有附原始文献全文，因此不把它当作 paraphrase 准确性的核验材料。
 
 <!-- bilingual-en:start -->
-This note was rebuilt from all currently available Week 1–3 Academic Writing materials. Examples now prioritize the school-provided sample essay. In the annotated version, yellow identifies logical linking and blue identifies reference chains. Because the source articles are not reproduced, the sample is not used to verify paraphrase accuracy.
+This note was rebuilt from the available Week 1–4 Academic Writing materials. Only the taught Week 4 Lesson 1 is active; Lessons 2–4 are registered as available but not yet learned. Examples prioritize the school-provided sample essay. In the annotated version, yellow identifies logical linking and blue identifies reference chains. Because the source articles are not reproduced, the sample is not used to verify paraphrase accuracy.
 <!-- bilingual-en:end -->
 
 ### Week 1
@@ -486,6 +515,14 @@ This note was rebuilt from all currently available Week 1–3 Academic Writing m
 - [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 4.pdf|Week 3 Lesson 4]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay - Annotated.pdf|Sample Essay – Annotated]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf|Sample Essay]]
+
+### Week 4
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Week 4 Booklet.pdf|Week 4 Booklet]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 1.pdf|Lesson 1 – Making Claims]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 2.pdf|Lesson 2 – Passive Voice（待实际上课）]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 3.pdf|Lesson 3 – Nominalisation（待实际上课）]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 4.pdf|Lesson 4 – Writing Concisely（待实际上课）]]
 
 ### Assessment criteria
 
