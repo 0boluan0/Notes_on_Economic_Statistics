@@ -179,7 +179,7 @@ neath_sync: synced
 - 状态：`new`
 - 触发/功能：段落关系不清或连接词堆积时，先确定真实逻辑关系再表达。
 - 为什么：cohesion 来自 proposition 的连续发展，不是连接词数量。
-- 动作/框架：relation → connector/reference chain/given-to-new order。
+- 动作/框架：relation → connector/reference chain/given-to-new order；转移论证焦点可用 `shifting the perspective away from A and toward B`，例如 `This reframes the issue, shifting the perspective away from model complexity and toward decision quality.`
 - 边界：不能用 `therefore` 制造不存在的因果，也不能用模糊 `this` 隐藏指代对象。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#写完段落后：Cohesion 是关系清楚，不是连接词越多越好|Academic Writing：cohesion]]。
 - 适用：Paper A/B、Assignment；paragraph、whole-text flow。
