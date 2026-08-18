@@ -94,7 +94,7 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 
 ## Climate Change｜端到端训练与测试
 
-- [ ] LN905 Paper A guided end-to-end｜Climate Change：完整演讲 → 笔记/transcript repair → map → top-down plan → 200–400 词 critical summary → 整篇反馈/修订（可跨天）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end|学习记录]] #student-os/task ⏳ 2026-08-17
+- [ ] LN905 Paper A guided end-to-end｜Climate Change：完整演讲 → 笔记/transcript repair → map → top-down plan → 200–400 词 critical summary → 整篇反馈/修订（可跨天）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end|学习记录]] #student-os/task ⏳ 2026-08-18
 - [ ] LN905 Paper B guided end-to-end｜Climate Change：三篇正式量级 extracts → map → thesis/paragraph jobs → 约 600 词 essay → 整篇反馈/修订（可跨天）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-end-to-end|学习记录]] #student-os/task
 
 ## 旧序列｜已取消，不执行
