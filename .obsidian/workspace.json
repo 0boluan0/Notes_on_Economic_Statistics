@@ -21,16 +21,48 @@
             "id": "65c78033535cb705",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Listening/Topic Listening.pdf"
+                "file": "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "Topic Listening"
+              "icon": "lucide-file",
+              "title": "2026-08-16-climate-end-to-end"
             }
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "7915de0c13f63845",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d32c2fbbaaf0daa4",
+            "type": "leaf",
+            "state": {
+              "type": "webviewer",
+              "state": {
+                "url": "https://www.youtube.com/watch?v=Vl6VhCAeEfQ",
+                "title": "The Tipping Points of Climate Change — and Where We Stand | Johan Rockström | TED",
+                "mode": "webview"
+              },
+              "icon": "globe-2",
+              "title": "The Tipping Points of Climate Change — and Where We Stand | Johan Rockström | TED"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -288,7 +320,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 858.4984130859375
+    "width": 858.4984130859375,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -310,18 +343,18 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "30f6502409000f89",
+  "active": "d32c2fbbaaf0daa4",
   "lastOpenFiles": [
+    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end.md",
+    "99_学习情况记录/2026-08-18——Tue.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Listening/Topic Listening.pdf",
     "00_inbox/随手记.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Listening/Video Links.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Listening/Reith_2020_Lecture_4_transcript_V2.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Input-and-Discussion/Topic Input Climate Change.pdf",
-    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end.md",
     "99_学习情况记录/2026-08-17——Mon.md",
     "99_学习情况记录/deadlines.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 2.pdf",
-    "99_学习情况记录/2026-08-18——Tue.md",
     "99_学习情况记录/teach/academic-writing/lessons/2026-08-18-credit-scoring-first-draft.md",
     "99_学习情况记录/teach/academic-writing/lessons/2026-08-17-academic-writing-from-zero.md",
     "99_学习情况记录/teach/academic-writing/lessons/2026-08-17-credit-scoring-essay-end-to-end.md",
