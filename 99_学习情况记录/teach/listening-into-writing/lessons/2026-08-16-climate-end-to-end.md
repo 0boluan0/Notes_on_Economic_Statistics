@@ -131,4 +131,12 @@ student-os:mentor-brief:end -->
 - 本轮唯一下一动作：使用新纸从 00:00 连续听完 18:36，关闭字幕、不暂停；随后原样提交整张笔记。
 - continuation decision：等待完整播放证据；收到后进入 transcript-assisted notes-to-map repair。
 
+### 2026-08-18 17:05 BST
+
+- 学习者原始输入：上传完整播放后的手写笔记图片 `codex-clipboard-fa97434b-5518-40bb-add7-ff9ce692b359.png`；原图已在本轮聊天中保留，未整理或改写。
+- 助教教学/反馈：把图片按一次从开场到结尾的完整播放证据处理。仅作输入层初诊：相较中断尝试，learner 已主动标出 `C`，并留下趋势、数值、经济影响、碳汇/海洋机制、不确定性、tipping point 与结尾行动痕迹；不在此时核验整页准确性或纠正拼写。首播条件满足后开始使用 TED 官方 transcript。开场核验显示 learner 的 `C: plante change faster` 抓住了核心方向，但还缺 `than expected → risks underestimated` 这一关系；明确区分该判断是 claim，而温度与增速数字是随后 supporting evidence。
+- 当前端到端节点：完整首听与原始笔记完成 → transcript-assisted notes-to-map repair；正在恢复 central claim。
+- 本轮唯一下一动作：依据显示的开场短 transcript，用 learner 自己的话写一行 map `C`，保留讲者归属、变化速度相对预期的比较，以及此前风险判断被低估；暂不加入数字或评价。
+- continuation decision：收到可用的 central-claim 行后，继续恢复第一个 supporting block 的 evidence/mechanism/qualifier；不提前展开整场结构。
+
 <!-- student-os:learning-log:end -->

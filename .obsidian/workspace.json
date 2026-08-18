@@ -43,26 +43,6 @@
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "7915de0c13f63845",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "d32c2fbbaaf0daa4",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://www.youtube.com/watch?v=Vl6VhCAeEfQ",
-                "title": "The Tipping Points of Climate Change — and Where We Stand | Johan Rockström | TED",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "The Tipping Points of Climate Change — and Where We Stand | Johan Rockström | TED"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -343,7 +323,7 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "d32c2fbbaaf0daa4",
+  "active": "65c78033535cb705",
   "lastOpenFiles": [
     "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end.md",
     "99_学习情况记录/2026-08-18——Tue.md",
