@@ -11,7 +11,7 @@ status: "active"
 course: "LN905"
 record_type: "guided-assignment-draft"
 phase: "teaching-practice"
-current_stage: "minimal-model"
+current_stage: "question-analysis-task"
 canonical_task: "[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay#执行清单]]"
 draft_source: "[[00_inbox/LN905-essay-structure]]"
 ---
@@ -37,7 +37,7 @@ starting evidence：学习者明确表示“我在最开头”，并确认仓库
 complete output：学习者亲自完成约 2,000 词 essay，使用至少 6 篇 academic sources，包含直接 thesis、writer-led body paragraphs、conclusion 与 bibliography；随后按 official criteria 完成一次整篇 revision。
 end-to-end teaching chain：academic essay 最小模型 → question analysis → 学习者的 provisional answer/thesis → paragraph jobs → source roles/selection → section skeleton/word budget → P1–P5 → introduction/conclusion → criteria-led whole-output feedback/revision。
 allowed support：自然中文解释、完整显示当前所需来源信息、关系箭头、局部 sentence frame、对比和协作讨论。AI 不得替学习者静默选择或改写 thesis、paragraph jobs、evidence roles 或完整段落。
-pace contract：快速推进；对会改变 task、source meaning、ownership、certainty、scope 或 causality 的错误立即介入，小语法、拼写和局部措辞暂不打断。
+pace contract：快速推进；对会改变 task、source meaning、ownership、certainty、scope 或 causality 的错误立即介入。小语法、拼写和局部措辞由 AI 直接修好并告知学习者，不要求其停下重写。
 silent callback IDs：AW-12、AW-13；首次完整输出前不向学习者透露 callback ID 或追加检查清单。
 hint ladder：重显题目/当前 paragraph job/完整来源信息 → 指出要判断的 relation → 用不同内容给正反对比 → 给局部 sentence frame → 一次未成功后用简短 model 教清并回到完整段落。
 feedback priority：task/meaning/source accuracy → reasoning/structure/completion → recurring language → isolated wording or grammar。首次完整 draft 前不逐句润色。
@@ -48,7 +48,7 @@ student-os:mentor-brief:end -->
 
 ## 完整路线与当前位置
 
-**`Academic writing 在做什么`** → `Question analysis` → `你的 provisional thesis` → `你的 paragraph jobs` → `Source roles` → `P1–P5` → `Introduction / Conclusion` → `Whole revision`
+`Academic writing 在做什么 ✓` → **`Question analysis`** → `你的 provisional thesis` → `你的 paragraph jobs` → `Source roles` → `P1–P5` → `Introduction / Conclusion` → `Whole revision`
 
 ## Step 0｜Academic writing 的最小模型
 
@@ -69,7 +69,7 @@ student-os:mentor-brief:end -->
 >
 > **Reasoning**：这表明人数结构不会自动改变晋升结果，制度规则也可能是重要条件。
 
-### 当前唯一动作｜约 3 分钟
+### 已完成的检查
 
 现在换一个 Climate Change 情境：
 
@@ -84,6 +84,29 @@ student-os:mentor-brief:end -->
 3. 说明 evidence 为什么支持你的答案。
 
 不用英文，不用润色。
+
+> [!success] 结果
+> Claim、evidence 和 reasoning 三部分都成立，且没有把比较结果写成确定因果。只修一处措辞：`仅仅凭一个政策` 应改为 `仅凭净零目标的宣布`，因为题目比较的是“政策声明”与“具体实施措施”，不是“一个政策”与“多个政策”。
+
+修正后的表达：
+
+> 现有信息不足以证明该城市的气候政策有效。只宣布目标而没有强制措施的城市，排放趋势变化很小；相比之下，实行强制排放标准或碳定价的城市减排幅度更大。因此，仅凭净零目标的宣布不能判断政策有效性，还必须检查目标是否被具体措施落实。
+
+## Step 1｜读懂真实 essay question
+
+> [!quote] Essay question
+> *To what extent do the predictive gains of complex machine-learning models over logistic regression justify reduced interpretability in consumer credit scoring?*
+
+- **比较对象**：complex machine-learning models（复杂机器学习模型）与 logistic regression（逻辑回归）。
+- **Predictive gains**：复杂模型带来的预测能力提升。
+- **Reduced interpretability**：模型的决策逻辑更难被银行、监管者或借款人理解和检查。
+- **Justify**：判断这些预测收益是否大到足以接受可解释性下降的代价。
+- **To what extent**：答案必须说明程度和条件，不能只写“是/否”，也不能只列优缺点。
+- **情境限定**：consumer credit scoring（消费者信用评分）。
+
+### 当前唯一动作｜约 2 分钟
+
+用 **1–2 句中文**说明：这道题究竟要你作出什么判断？为什么不能只写“复杂模型更准”？
 
 ## Working word budget
 
@@ -171,5 +194,13 @@ student-os:mentor-brief:end -->
 - **当前 skill-map 位置**：`AW-16` 的最小单元；尚未进入真实 assignment question analysis。
 - **单一下一动作**：在 Climate Change 新情境中用自己的中文写三句：direct answer、准确 evidence、reasoning。
 - **internal continuation decision**：若三部分成立且没有改变 evidence，立即进入真实 essay 的 question analysis；若漏掉一部分或改变含义，用一次简短对比修正后继续，不重复整题。
+
+### 2026-08-18 14:33 BST
+
+- **学习者输入**：`现有信息不足以证明其气候政策有效.  因为没有强制措施只有目标的城市排放量趋势变化小,相反,有强制排放标准和碳定价的城市减排幅度大. 所以说仅仅凭一个政策不能说明气候政策有效`。并注明：小语法和措辞由 AI 修改后直接告知。
+- **AI teaching/feedback**：claim、两条 evidence 与 reasoning 全部成立，且未把比较结果写成确定因果。直接修正 `仅仅凭一个政策` 为 `仅凭净零目标的宣布`，并重写为更准确、自然的三句链。不要求学习者重写。
+- **当前 skill-map 位置**：Academic writing 最小模型的支架应用成立；进入 `AW-01` question analysis 的 task / required judgment。
+- **单一下一动作**：用 1–2 句中文解释真实 essay question 要求作出什么判断，以及为什么“复杂模型更准”本身不足以回答题目。
+- **internal continuation decision**：若学习者抓住 predictive gain 与 interpretability loss 的权衡、程度/条件判断和 consumer credit scoring 限定，立即进入 provisional thesis；若只复述单边好处或代价，用一次短对比修正后继续。
 
 <!-- student-os:learning-log:end -->
