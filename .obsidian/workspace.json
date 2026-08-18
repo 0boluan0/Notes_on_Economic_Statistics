@@ -28,23 +28,9 @@
               "icon": "lucide-file-text",
               "title": "Topic Listening"
             }
-          },
-          {
-            "id": "0603d4134224a14e",
-            "type": "leaf",
-            "state": {
-              "type": "webviewer",
-              "state": {
-                "url": "https://www.youtube.com/watch?v=298KK-i7Npk",
-                "title": "LSE100: Energy Transition",
-                "mode": "webview"
-              },
-              "icon": "globe-2",
-              "title": "LSE100: Energy Transition"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -324,10 +310,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "0603d4134224a14e",
+  "active": "30f6502409000f89",
   "lastOpenFiles": [
-    "00_inbox/随手记.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Listening/Topic Listening.pdf",
+    "00_inbox/随手记.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Listening/Video Links.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Listening/Reith_2020_Lecture_4_transcript_V2.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Input-and-Discussion/Topic Input Climate Change.pdf",
