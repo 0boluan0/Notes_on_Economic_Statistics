@@ -13,7 +13,11 @@ kind: multi-stage-project
 
 > [!summary] 当前项目
 > 在 2026-08-26 前完成一篇与未来学位课程相关的 2,000 字论文（具体截止时间待核验）。题目与理由已于 2026-08-01 提交 Moodle，并核验为 Submitted for grading。
-> Annotated bibliography 已于 2026-08-09 提交并核验。Detailed essay plan 已于 2026-08-15 上传 Moodle，并在 2026-08-16 核验为 Submitted for grading；它包括 3 个 sections、5 个正文段落、topic sentences、证据、评价和反方回应。当前文献池保留 9 篇；下一步是把 plan 转成 first draft 的 section skeleton 与 2,000 词预算。
+> Annotated bibliography 已于 2026-08-09 提交并核验。Detailed essay plan 已于 2026-08-15 上传 Moodle，并在 2026-08-16 核验为 Submitted for grading；它包括 3 个 sections、5 个正文段落、topic sentences、证据、评价和反方回应。当前文献池保留 9 篇。2026-08-18 已固定 first-draft section skeleton 与 2,000 词 working budget；当前从第一个正文段开始成文。
+
+> [!warning] 产物进度 ≠ 学习进度
+> 2026-08-18，学习者确认当前题目、thesis、文献笔记、detailed plan 与 skeleton 均由 AI 生成，并不清楚整体进度。上述已完成 checkbox 仅表示文件或 submission 状态，不作为其已理解或会独立写作的证据。当前无学习者亲自写出的正文段落。
+> 学习者随后明确将自己定位为“最开头”。指导将从 academic writing 最小模型和 question analysis 开始，不从 AI 写好的 thesis 或正文句子开始。
 >
 > <!-- bilingual-en:start -->
 > **Update, 2 August 2026:** The question and rationale were submitted to Moodle on 1 August and verified as “Submitted for grading”. The current stage is the annotated bibliography due on 9 August.
@@ -23,6 +27,8 @@ kind: multi-stage-project
 > **Update, 4 August 2026:** Four further high-quality sources have been added, bringing the research pool to ten papers.
 >
 > **Update, 16 August 2026:** The detailed essay plan was uploaded on 15 August and verified as “Submitted for grading” on 16 August. It contains three sections, five body paragraphs, topic sentences, evidence, evaluation and counterarguments. The next step is to convert the plan into a section skeleton and a 2,000-word budget for the first draft.
+>
+> **Update, 18 August 2026:** The first-draft section skeleton and a 2,000-word working budget are now fixed. Drafting starts with the first body paragraph.
 > <!-- bilingual-en:end -->
 
 ## 执行清单
@@ -40,7 +46,7 @@ kind: multi-stage-project
 - [x] LN905 Essay｜为每段补上证据、引用与可能的反方观点 #student-os/task ⏳ 2026-08-15 ✅ 2026-08-15
 - [x] LN905 Essay｜按作业要求修订并完成 detailed essay plan 内容 #student-os/task ⏳ 2026-08-15 ✅ 2026-08-15
 - [x] LN905 Essay｜上传 detailed essay plan 并检查 Moodle submission status #student-os/task ⏳ 2026-08-15 ✅ 2026-08-15
-- [ ] LN905 Essay｜把 detailed plan 转成 first draft 的 section skeleton 与 2,000 词预算 #student-os/task ⏳ 2026-08-18
+- [x] LN905 Essay｜把 detailed plan 转成 first draft 的 section skeleton 与 2,000 词预算 #student-os/task ⏳ 2026-08-18 ✅ 2026-08-18
 - [ ] LN905 Essay｜写出一个 anchor body paragraph，验证 claim–evidence–evaluation 链 #student-os/task ⏳ 2026-08-19
 - [ ] LN905 Essay｜完成 first draft 前半部分正文 #student-os/task ⏳ 2026-08-22
 - [ ] LN905 Essay｜完成 first draft 后半部分正文、introduction 与 conclusion #student-os/task ⏳ 2026-08-22
@@ -84,6 +90,24 @@ This essay argues that the predictive gains of complex machine-learning models o
 <!-- bilingual-en:start -->
 The submission-ready structure is available at [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Detailed Essay Plan|LN905 Detailed Essay Plan]]. It uses a thematic structure and moves from the size of the predictive gain to interpretable alternatives, black-box checks and subgroup effects.
 <!-- bilingual-en:end -->
+
+## First-draft skeleton and working word budget
+
+> [!info] 预算不是每段硬上限
+> 先用对称预算避免前两段吃掉全文篇幅；完成草稿后可在段落间小幅调整。Bibliography 和 cover sheet 单独处理。
+
+| 部分 | 工作 | Working budget |
+|---|---|---:|
+| Introduction | context → definitions → thesis → route | 200 |
+| Body paragraph 1 | 多大、多稳定、多有用的 gain 才足够 | 320 |
+| Body paragraph 2 | 什么数据条件下 complex model 最有价值 | 320 |
+| Body paragraph 3 | 是否存在可解释或 hybrid alternative | 320 |
+| Body paragraph 4 | post-hoc explanation 能与不能解决什么 | 320 |
+| Body paragraph 5 | 整体准确率提升是否在群体间可接受 | 320 |
+| Conclusion | 回答 extent → 合并三组理由 → decision rule | 200 |
+| **Total** | | **2,000** |
+
+成文顺序：`P1 → P2 → P3 → P4 → P5 → Introduction → Conclusion`。当前指导记录：[[99_学习情况记录/teach/academic-writing/lessons/2026-08-18-credit-scoring-first-draft|Credit-scoring essay first draft]]。
 
 ## 文献精读入口
 

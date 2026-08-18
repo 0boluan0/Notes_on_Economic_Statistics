@@ -52,12 +52,24 @@
             "id": "16773f94709e9e2b",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 2.pdf"
+                "file": "99_学习情况记录/2026-08-18——Tue.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "Lesson 2"
+              "icon": "lucide-file",
+              "title": "2026-08-18——Tue"
             }
           }
         ]
@@ -343,8 +355,9 @@
   },
   "active": "16773f94709e9e2b",
   "lastOpenFiles": [
-    "99_学习情况记录/2026-08-18——Tue.md",
+    "99_学习情况记录/teach/academic-writing/lessons/2026-08-18-credit-scoring-first-draft.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 2.pdf",
+    "99_学习情况记录/2026-08-18——Tue.md",
     "99_学习情况记录/2026-08-17——Mon.md",
     "99_学习情况记录/deadlines.md",
     "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end.md",

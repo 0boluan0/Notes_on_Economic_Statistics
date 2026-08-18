@@ -7,17 +7,22 @@ tags:
 date: "2026-08-17"
 source_type: "teach"
 topic: "LN905 Academic Writing"
-status: "active"
+status: "paused"
 course: "LN905"
 record_type: "foundation-course"
 phase: "teaching-practice"
 current_block: "1E"
+paused_on: "2026-08-18"
+paused_for: "[[2026-08-18-credit-scoring-first-draft]]"
 ---
 
 # Academic Writing 从零重学
 
 > [!summary] 教学约定
 > 把学习者当作没有上过 Academic Writing。每次只教一个完整小点，立即用一道短构造题检查；讲评后再进入下一点。从第二个教学块开始，测验会混入一道到期旧题，确保不仅当场听懂，也能过一段时间再次调用。
+
+> [!info] 当前暂停
+> 2026-08-18，学习者明确决定开始真实 2,000 词 assignment draft。本课停在 Block 1E，不视为完成；当前转入 [[2026-08-18-credit-scoring-first-draft|作业草稿记录]]。
 
 <!-- student-os:mentor-brief:start
 今日 principal：建立 Academic Writing 的最小心智模型：问题 → 自己的答案/claim → evidence → reasoning，并用新情境完成一次三句应用。
@@ -32,7 +37,7 @@ hint ladder：重显必要材料 → 问缺失的是答案、证据还是关系 
 feedback priority：先判断概念和逻辑关系是否成立，再看 source meaning，最后才处理语言；当前阶段不因英文或术语阻挡理解。
 completion evidence：每个重点先通过当前构造题，再在到期旧题和最终累计应用中无提示复现；仅听过或看过不算掌握。
 writeback rule：每次教学回复前追加 learning log，并更新本文件 review queue；只有新的可观察证据才写入 LN905 Skill Bank。课程测验不创建 checkbox。
-stop boundary：完成已激活课程内容和累计应用后停止并总结；在此之前不切换到 credit-scoring essay 代写或 Paper A/B 训练。
+stop boundary：本课已按学习者 2026-08-18 的明确决定暂停，不得假定已完成；真实 assignment 阶段结束后，只在学习者要求时从 Block 1E 恢复。
 student-os:mentor-brief:end -->
 
 ## 课程地图
@@ -298,5 +303,13 @@ claim–evidence–reasoning 的结构再次成立，但材料边界有三处变
 - **当前 skill-map 位置**：Block 1E；教学 `AW-01` 的 provisional view/possible structure，并用 Gender 新题复测完整 question analysis。`AW-16` 的 +3 结构复现已记录，source fidelity 风险保留到 AW-15/AW-17 正式教学。
 - **单一下一动作**：对 gender-quota 题完成完整审题，给出一句暂定答案，再安排两个或三个 paragraph jobs。
 - **internal continuation decision**：若审题范围完整、暂定答案直接回应 extent/limitations、段落工作由答案驱动，则完成 AW-01 的本轮 supported chain 并进入 AW-02 thesis；若仍把 task 写成 mechanism 或定义不能影响 evidence selection，用 Climate Change 新题简短重测后再进入 thesis。
+
+### 2026-08-18 10:56 BST
+
+- **学习者输入**：`我要开始写LN905的作业的2000字的草稿了.你带着我一步一步搞`
+- **AI teaching/feedback**：把这视为学习者对昨日 stop boundary 的明确更新。基础课停在 Block 1E，不宣称已完成；转入真实 assignment 的独立指导记录。
+- **当前 skill-map 位置**：`AW-01` 的基础课检查仍停在 Block 1E；无新的学习证据，Skill Bank 不更新。
+- **单一下一动作**：在 [[2026-08-18-credit-scoring-first-draft|作业草稿记录]] 中完成 working budget，随后开始第一个正文段的 evidence–reasoning chain。
+- **internal continuation decision**：只有学习者之后明确要求恢复基础课，才回到 Block 1E；不与真实 assignment 记录并行发题。
 
 <!-- student-os:learning-log:end -->
