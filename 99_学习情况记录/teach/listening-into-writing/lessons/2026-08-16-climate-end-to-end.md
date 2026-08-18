@@ -139,4 +139,12 @@ student-os:mentor-brief:end -->
 - 本轮唯一下一动作：依据显示的开场短 transcript，用 learner 自己的话写一行 map `C`，保留讲者归属、变化速度相对预期的比较，以及此前风险判断被低估；暂不加入数字或评价。
 - continuation decision：收到可用的 central-claim 行后，继续恢复第一个 supporting block 的 evidence/mechanism/qualifier；不提前展开整场结构。
 
+### 2026-08-18 17:16 BST
+
+- 学习者原始输入：`第一个claim是这个scientist说this planet change faster,相比于以前更快,然后说明此前的风险判断是相对较慢的。下一个claim是关于tipping point,就是本来海洋和森林可以储存一部分的排放的二氧化碳,被燃烧的这种化石燃料排放的二氧化碳,在这个你排得越多,它存得越多,所以实际的排到大气的增量是比较少的。但是现在它们逐渐到了一个tipping point,由于室温的上升,它们到了一个tipping point,就是从对人类有益变得对人类不那么有益了。然后再一个是,这是我们需要很长时间把排放减到底,但是已经在空气中的排放还得需要更多时间来处理。`
+- 助教教学/反馈：确认 learner 已从碎片恢复出 central claim、Earth-system buffering/tipping 与减排后 overshoot 三条真实论证线。立即修正三处会改变原意的关系：开场比较首先是 `faster than scientists expected → risks were underestimated`，不是“风险判断较慢”；讲者只报告自然系统迄今吸收了部分排放并警告其能力出现裂缝，不支持 `排得越多 → 存得越多`；`buffering capacity` 与 `tipping-point risk` 是两个相连但不同的 block，且驱动变量是全球平均地表升温与其他压力，不是室温。第三条应保留“必须立即减排，但既有温室气体造成很可能持续 30–40 年的 overshoot”，而不是笼统写成空气中的排放等待处理。
+- 当前端到端节点：transcript-assisted notes-to-map repair；central claim 基本成立，正在拆分 buffering-capacity block 与 tipping-point block。
+- 本轮唯一下一动作：依据显示的官方事实，把 `B1 缓冲能力` 与 `B2 临界点风险` 各压成一条关系链；B1 必须含 evidence 与能力变弱的 qualifier，B2 必须含从稳定/缓冲转为自我放大变暖的机制与不确定性，禁止写 `排得越多 → 存得越多`。
+- continuation decision：两条关系链准确后，再恢复 carbon-budget / overshoot block；本轮不进入 prose 或评价。
+
 <!-- student-os:learning-log:end -->
