@@ -11,7 +11,7 @@ status: "active"
 course: "LN905"
 record_type: "guided-assignment-draft"
 phase: "teaching-practice"
-current_stage: "not-started-question-orientation"
+current_stage: "minimal-model"
 canonical_task: "[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay#执行清单]]"
 draft_source: "[[00_inbox/LN905-essay-structure]]"
 ---
@@ -37,6 +37,7 @@ starting evidence：学习者明确表示“我在最开头”，并确认仓库
 complete output：学习者亲自完成约 2,000 词 essay，使用至少 6 篇 academic sources，包含直接 thesis、writer-led body paragraphs、conclusion 与 bibliography；随后按 official criteria 完成一次整篇 revision。
 end-to-end teaching chain：academic essay 最小模型 → question analysis → 学习者的 provisional answer/thesis → paragraph jobs → source roles/selection → section skeleton/word budget → P1–P5 → introduction/conclusion → criteria-led whole-output feedback/revision。
 allowed support：自然中文解释、完整显示当前所需来源信息、关系箭头、局部 sentence frame、对比和协作讨论。AI 不得替学习者静默选择或改写 thesis、paragraph jobs、evidence roles 或完整段落。
+pace contract：快速推进；对会改变 task、source meaning、ownership、certainty、scope 或 causality 的错误立即介入，小语法、拼写和局部措辞暂不打断。
 silent callback IDs：AW-12、AW-13；首次完整输出前不向学习者透露 callback ID 或追加检查清单。
 hint ladder：重显题目/当前 paragraph job/完整来源信息 → 指出要判断的 relation → 用不同内容给正反对比 → 给局部 sentence frame → 一次未成功后用简短 model 教清并回到完整段落。
 feedback priority：task/meaning/source accuracy → reasoning/structure/completion → recurring language → isolated wording or grammar。首次完整 draft 前不逐句润色。
@@ -48,6 +49,41 @@ student-os:mentor-brief:end -->
 ## 完整路线与当前位置
 
 **`Academic writing 在做什么`** → `Question analysis` → `你的 provisional thesis` → `你的 paragraph jobs` → `Source roles` → `P1–P5` → `Introduction / Conclusion` → `Whole revision`
+
+## Step 0｜Academic writing 的最小模型
+
+学术写作不是“把我知道的全部写出来”，而是：
+
+`question → 你的答案（claim） → evidence → reasoning`
+
+- **Claim**：你希望读者接受的答案。
+- **Evidence**：可信的数据、研究或其他资料。
+- **Reasoning**：你解释 evidence 为什么让 claim 更可信。
+
+> [!example] 完整的三句链
+> **问题**：提高女性员工比例，是否足以消除晋升中的性别不平等？
+>
+> **Claim**：提高女性比例本身可能不足以缩小晋升差距。
+>
+> **Evidence**：一项假设研究发现，女性占比超过 40% 的公司并没有更小的晋升差距，而公开晋升标准的部门差距更小。
+>
+> **Reasoning**：这表明人数结构不会自动改变晋升结果，制度规则也可能是重要条件。
+
+### 当前唯一动作｜约 3 分钟
+
+现在换一个 Climate Change 情境：
+
+> **问题**：一个城市宣布 2035 年前实现 net-zero（净零排放），是否足以证明它的气候政策有效？
+>
+> **假设比较**：只宣布目标、没有强制措施的城市，排放趋势变化很小；同时实施 carbon pricing（碳定价）或强制排放标准的城市，减排幅度更大。
+
+用你自己的话写 **3 句中文**：
+
+1. 直接回答问题。
+2. 准确使用两条 evidence。
+3. 说明 evidence 为什么支持你的答案。
+
+不用英文，不用润色。
 
 ## Working word budget
 
@@ -127,5 +163,13 @@ student-os:mentor-brief:end -->
 - **当前 skill-map 位置**：第 0 步：理解 `question → writer's answer → evidence → reasoning`。尚未进入当前 assignment 的 question analysis，更未进入 thesis、structure 或 drafting。
 - **单一下一动作**：本轮只确认新起点与之后的正确顺序，不发写作练习。
 - **internal continuation decision**：下一轮从 academic writing 最小模型开始，用一个非当前 assignment 的简单例子讲清；学习者理解后才进入真实题目。
+
+### 2026-08-18 11:42 BST
+
+- **学习者输入**：`来来来,但是得快一点,你有必要介入的时候就积极介入`
+- **AI teaching/feedback**：设定快速介入合同：仅在会改变 task、source meaning、ownership、certainty、scope 或 causality 时立即打断；小语法和措辞暂不打断。教学 Step 0 的 `question → claim → evidence → reasoning`，用 Gender 假设研究展示一条完整三句链。
+- **当前 skill-map 位置**：`AW-16` 的最小单元；尚未进入真实 assignment question analysis。
+- **单一下一动作**：在 Climate Change 新情境中用自己的中文写三句：direct answer、准确 evidence、reasoning。
+- **internal continuation decision**：若三部分成立且没有改变 evidence，立即进入真实 essay 的 question analysis；若漏掉一部分或改变含义，用一次简短对比修正后继续，不重复整题。
 
 <!-- student-os:learning-log:end -->
