@@ -8,12 +8,14 @@ date: 2026-08-13
 source_type: teach
 topic: Climate Change
 session_id: 2026-08-18-climate-end-to-end
-status: ready
-ready: true
+status: active
+ready: false
 assessment: Paper B
 mode: guided-end-to-end
 target_words: 600
 scheduled: false
+started_on: 2026-08-19
+current_stage: source-1-question-led-reading
 ---
 
 # Climate Change｜Paper B guided end-to-end
@@ -24,6 +26,19 @@ scheduled: false
 **Source pack**：[[2026-08-18-climate-end-to-end-source-pack.pdf|PDF 试卷版]] · [[2026-08-18-climate-end-to-end-source-pack.tex|LaTeX 源文件]]
 
 **Essay question**：*To what extent can adaptation prevent climate change from widening global inequality?*
+
+## 材料难度核验
+
+2026-08-19 对照三套正式使用过的 Paper B extracts。下列为 PDF page text 的近似词数，包含少量标题、题目与来源信息，因此用于量级比较，不当作精确正文统计。
+
+| Source pack | 三篇近似词数 | 总阅读量 | 观察 |
+|---|---:|---:|---|
+| Social Media | 589 / 591 / 582 | 1,762 | 句法长度约 20.4 words/sentence；技术词较少 |
+| Gender | 544 / 598 / 424 | 1,566 | 篇幅最低；理论词汇较多 |
+| Demographics | 648 / 660 / 570 | 1,878 | 目前正式材料中最长、信息关系最复杂的一套 |
+| 本 Climate Change pack | 617 / 640 / 639 | 1,896（不含独立题目页） | 每篇均在正式观察范围内；句子平均更短，但技术词与方法限定更密 |
+
+结论：本 pack 与 Demographics 的总阅读量几乎相同，三篇长度都落在此前正式材料约 424–660 词的范围内。它不是与每套材料“完全一样”：相对 Social Media/Gender 明显更长，词汇和研究方法略难；相对 Demographics 属于同一档、略偏难。四页排版也比正式六页版更密，但这不增加正文量。
 
 <!-- student-os:mentor-brief:start
 今日 principal：source-accurate synthesis。先用 PB-02 保住每篇来源的命题和限定，再用 AW-15/PB-04 准确转换，最后由 PB-03 写出真实的 support、explain、qualify 或 challenge；不从零重教 thesis 或总体结构。
@@ -73,6 +88,13 @@ student-os:mentor-brief:end -->
 
 ### Question reading
 
+- **Command**：`to what extent` 要求判断 adaptation 能在多大程度、哪些条件下阻止 inequality 扩大，并处理其不足；不要求给一个机械百分比。
+- **Correct relation**：`climate change → widening global inequality`；`adaptation ┤ may prevent or limit that widening`。学习者随后明确表示不理解 `prevent A from B`，因此首次倒置记录为 lexical parsing gap，不单独判为逻辑误解。
+- **Language point**：`prevent A from B` = 阻止 A 做/发生 B；本题中 `A = climate change`，`B = widening global inequality`，即“阻止气候变化扩大全球不平等”。
+- **Working definitions**：
+  - `adaptation`：针对已经发生或预期发生的气候影响作出的调整，以减少伤害；不同于通过减排减缓气候变化的 mitigation。
+  - `global inequality`：国家、地区或群体之间的经济、健康或脆弱性差距；具体范围要由三篇 extracts 支持。
+  - `prevent widening`：阻止差距继续扩大，比“减少总伤害”更强。所有群体都少受一点伤害，不代表差距已经缩小。
 
 ### Three-source meaning/evidence map
 
@@ -92,6 +114,29 @@ student-os:mentor-brief:end -->
 ## Learning log
 
 <!-- student-os:learning-log:start -->
+### 2026-08-19 16:49 BST
+
+- **学习者输入**：`这样不好,零零碎碎的,要不你直接设计一个包含3篇文章和一个问题的真实模拟,然后手把手带着我完成整个写作流程,从发卷子下来到最终写完提交`
+- **AI teaching/feedback**：确认本文件和已核验的四页 PDF source pack 正好满足要求：三篇正式量级 adapted academic extracts、一个 question、约 600 词完整 essay 与一次 whole-output revision。将状态从 ready 改为 active；说明这是有支架的 guided simulation，而不是禁止帮助的 timed attempt。没有再创建重复材料。
+- **当前端到端节点**：`收到试卷 → question reading`。尚未阅读三篇 extract，也没有形成 thesis 或 paragraph plan。
+- **本轮唯一下一动作**：只拆解 question 的 command、核心判断关系和必须限定的概念；解释这一步如何控制后续三文阅读。
+- **internal continuation decision**：若学习者能说明 `to what extent` 要求程度/条件判断、识别 adaptation 与 widening inequality 的关系，并指出至少两个待定义词，立即展示 Extract 1 的相关原文并开始 question-led reading；否则用一句对比澄清后继续，不另开练习。
+
+### 2026-08-19 16:57 BST
+
+- **学习者输入**：`1. 就是回答adaptation能在prevent climate change from widening global inequality 中起多少作用又有多少不足. 2. widening global inequality 导致了climate change,然后adaptation对这个链路有阻碍作用 3. adaptation在这里是有专门的意义的我觉得. widening global inquality也应该看看具体是什么`
+- **AI teaching/feedback**：确认对 `to what extent` 的理解成立：需要判断作用程度、条件和不足。立即纠正会控制全文的因果方向：不是 inequality 导致 climate change，而是题目要求判断 climate change 是否会扩大 inequality，以及 adaptation 能否阻止这种扩大。把学习者识别出的两个关键词转为 working definitions，并补充 `prevent` 与 merely reducing total harm 的区别。
+- **当前端到端节点**：审题完成到足以开始 question-led reading；进入 Extract 1。尚未形成 thesis。
+- **本轮唯一下一动作**：阅读试卷第 2 页 Extract 1，只提取它对题目的 source claim、两项最强 evidence、边界和 essay role，不做逐段摘要。
+- **internal continuation decision**：若能保留 `estimated / roughly 90% probability / between-country / historical` 等限定，并识别该文建立的是 inequality baseline 而非 adaptation effectiveness，写入 source map 后进入 Extract 2；若改变 certainty、scope 或把它当作 adaptation 证据，当场用原句对比修正再继续。
+
+### 2026-08-19 17:08 BST
+
+- **学习者输入**：询问 `你确定这三个文章的难度和之前正式练习一致吗?`；并要求记录自己不理解 `prevent A from B`。
+- **AI teaching/feedback**：将此前因果倒置重新归因为尚未掌握该句型的 lexical parsing gap，不把它单独当作逻辑能力问题。对照正式使用过的 Social Media、Gender、Demographics 三套六页 extracts 与当前 pack：当前三篇约 617/640/639 词，全部落在正式观察范围 424–660 内，总阅读量最接近 Demographics；平均句长更短，但长词比例、研究方法和限定信息略高，四页排版也更密。因此结论是“正式范围内、与 Demographics 同档但略偏难”，不能声称与每套材料完全一致。
+- **当前端到端节点**：材料难度审核完成；仍停在 Extract 1 question-led reading，没有形成 thesis。
+- **本轮唯一下一动作**：先确认保留当前上限难度的 pack，再按既定四项读取 Extract 1；若学习者要求严格匹配 Gender/Social Media，再调整材料而不改变端到端流程。
+- **internal continuation decision**：默认保留当前 pack，因为它与最近、最长的 Demographics 正式练习量级一致且有 guided support；不得把 `prevent A from B` 再当作已经掌握的语言结构，后续在 essay 中自然复现。
 <!-- student-os:learning-log:end -->
 
 ## 课程依据与材料来源

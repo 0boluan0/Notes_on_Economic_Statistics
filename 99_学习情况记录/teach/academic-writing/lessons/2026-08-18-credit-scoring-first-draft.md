@@ -7,16 +7,21 @@ tags:
 date: "2026-08-18"
 source_type: "teach"
 topic: "LN905 Academic Writing"
-status: "active"
+status: "paused"
 course: "LN905"
 record_type: "guided-assignment-draft"
 phase: "teaching-practice"
 current_stage: "body-paragraph-1-khandani-link"
+paused_on: "2026-08-19"
+paused_for: "[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-end-to-end]]"
 canonical_task: "[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay#执行清单]]"
 draft_source: "[[00_inbox/LN905-essay-structure]]"
 ---
 
 # Credit-scoring essay first draft
+
+> [!info] 当前暂停
+> 2026-08-19，学习者决定先通过一份三文本真实模拟学习从发卷到提交的完整写作流程。本 essay 保留当前位置，不与模拟并行；只有学习者之后明确要求时才恢复。
 
 > [!summary] Orientation card
 > - **这次完整产出**：约 2,000 词 first draft，再根据 Assignment Marking Criteria 完成一次整篇 revision。
@@ -263,5 +268,13 @@ student-os:mentor-brief:end -->
 - **当前 skill-map 位置**：Body paragraph 1 的 Lessmann evaluation 已完成；继续 Khandani 的经济价值与限制。
 - **单一下一动作**：继续上一轮动作，用一句英文写 Khandani 的 6%–25% 潜在节约及其对丰富数据和作者假设的依赖。
 - **internal continuation decision**：以后遇到“单项收益不足以证明更强结论”的自然位置时，主动提醒这个结构；为避免机械重复，必要时提示同义变体，但不提前替学习者写完整段落。
+
+### 2026-08-19 16:49 BST
+
+- **学习者输入**：`这样不好,零零碎碎的,要不你直接设计一个包含3篇文章和一个问题的真实模拟,然后手把手带着我完成整个写作流程,从发卷子下来到最终写完提交`
+- **AI teaching/feedback**：接受对教学形式的明确更新。暂停 credit-scoring essay，不丢失当前 P1 位置；复用仓库中尚未开始的 Climate Change 三文本正式量级 source pack，转入单一端到端 guided simulation。该模拟允许逐阶段讲解和介入，因此属于 teaching practice，不按无帮助的完整模拟处理。
+- **当前 skill-map 位置**：从真实试卷的 `question reading` 重新开始；旧 essay 的 Khandani 句子不继续。
+- **单一下一动作**：在 Climate Change 模拟记录中完成 orientation，并只分析 essay question 的 command、核心判断关系和待定义概念。
+- **internal continuation decision**：在三文本 essay 完成、整篇 revision 和 submission check 前，不恢复本 credit-scoring essay；不并行发题。
 
 <!-- student-os:learning-log:end -->

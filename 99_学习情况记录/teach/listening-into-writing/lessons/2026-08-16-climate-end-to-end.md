@@ -243,4 +243,36 @@ selective repair 后，每轮只给一个约 5–10 分钟的有意义动作：�
 - 本轮唯一下一动作：用中文重写一句 central answer，包含 `讲者归属 → 气候变化快于预期并威胁地球稳定/缓冲系统 → 快速减排 + 保护自然系统，同时准备近期影响`；不加入数字或证据清单。
 - continuation decision：这次修订后不再停留 central answer；若仍缺项，助教给出短模型并直接进入 structure / paragraph jobs。
 
+### 2026-08-19 16:39 BST
+
+- 学习者原始输入：`Focusstorm,气候变化的快速与气平救护一切地球影响,buffer,capture,和特别风速两点的,可以快速减排,并且保护载系统加上准备对气的影响进行。`
+- 助教教学/反馈：语音转写严重失真，但仍可观察到 learner 试图纳入 speaker name、快速变化、buffering / tipping、快速减排、保护系统和准备影响；不把 ASR 噪声误判为概念失败。按既定停止规则不要求第三次 central-answer 改写，直接给出短中文模型固定控制句：`Rockström 认为，气候变化快于预期，正在削弱地球的缓冲能力并增加临界点风险，因此人类必须迅速减排、保护自然系统，并为近期难以避免的影响做好准备。` 此模型只作为后续 plan 的控制句，不算 learner 独立产出。
+- 当前端到端节点：central answer 以短模型固定 → structure / paragraph jobs。
+- 本轮唯一下一动作：基于控制句，为 200–400 词 critical summary 设计三个中文 paragraph jobs；每段只写“这一段必须完成什么”，不写英文正文或具体句子。
+- continuation decision：收到三段 jobs 后，核验是否由 central answer 控制、是否覆盖风险诊断/核心机制/回应与 criticality；可用后进入 evidence roles/selection，并在 prose 前显式教授 finding 与 claim、由 learner 选择 hedge/booster。
+
+### 2026-08-19 16:42 BST
+
+- 学习者原始输入：`p1: 气候变化快于预期\np2:buffering/tipping point\np3:人类怎么做`
+- 助教教学/反馈：三段分组顺序与 central answer 一致，宏观结构可用；但三项目前是 topic labels，只说明“谈什么”，没有说明段落要替全文完成的论证工作、证据角色或评价功能。显式教授 distinction：`topic = 本段材料领域`；`paragraph job = 本段要让读者理解/相信什么，以及材料在此承担何种作用`。要求一次整体修订，每段用功能动词开头，并在 P3 留出对 speaker response 的有依据评价，而不是只罗列行动。
+- 当前端到端节点：structure 分组可用 → paragraph jobs 功能化修订。
+- 本轮唯一下一动作：把 P1–P3 各改成一条完整中文 job：P1 回答风险为何紧迫及用何类证据建立；P2 回答 buffering 与 tipping 如何构成机制/风险及用何证据支撑；P3 回答 speaker 提出什么回应，并具体评价其回应的哪一处依据或限制。暂不写正文。
+- continuation decision：这次 jobs 修订后不再停留在结构标签；若仍为 topic labels，助教给出短模型并进入 evidence roles/selection。随后教授 finding 与 claim、hedge/booster，再写完整初稿。
+
+### 2026-08-19 16:45 BST
+
+- 学习者原始输入：`我记不清文章内容了怎么办`
+- 助教教学/反馈：立即移除不必要的 memory demand；ordinary guided practice 此节点训练组织与写作决策，不训练短期记忆，也不要求重听整篇。重新显示只服务 P1–P3 jobs 的紧凑 source card：P1 可用变暖速度由每十年 0.18°C 加速至 0.26°C，以及经济/人类影响；P2 可用自然系统吸收约 53% CO₂、部分亚马孙由 sink 转 source、海洋已吸收约 90% 热量但 2023 异常原因仍不确定、16 个 tipping elements 中 5 个很可能在约 1.5°C 越界且精确阈值不确定；P3 可用剩余约 2000 亿吨 CO₂ 对比每年约 400 亿吨、每年至少减排 7% 与 2050 net zero、2030–2035 很可能暂时突破 1.5°C 并在最好情况下 overshoot 约 30–40 年、同时保护自然系统。强调 source card 是 transcript 支架，不是 Listening evidence。
+- 当前端到端节点：paragraph jobs 功能化修订；source card 常驻可见，不再测试材料回忆。
+- 本轮唯一下一动作：看着 source card 把 P1–P3 各写成一条完整中文 job；每段说明要建立/解释/呈现并评价什么，可选择证据类型，但不写英文正文。
+- continuation decision：收到 jobs 后按既定停止规则直接进入 evidence roles/selection，不再要求第二次结构修订；随后教授 finding 与 claim、hedge/booster，并要求完整 200–400 词初稿。
+
+### 2026-08-19 16:52 BST
+
+- 学习者原始输入：`1. 气候变化的速度超过科学家的预期, 数据证明这些变化已经对人类产生了损失\n2. buffering 和 tipping point即将来临,这也许会导致16个大型生态系统中的一部分从对人类有益转为对人类有害.\n3. 本世纪的碳预算已经非常有限,碳排放的转型必须尽快完成`
+- 助教教学/反馈：P1 已具备 job 功能：用趋势/影响证据建立风险紧迫性。P2 已尝试从机制解释风险，但立即修正三处 scope/relationship：buffering capacity 不是“即将来临”，而是在减弱；16 个对象是气候调节 tipping elements，不是 16 个大型生态系统；越界风险是其中 5 个在约 1.5°C 很可能发生且精确阈值不确定。P3 已建立预算紧迫性与快速转型方向，但仍需覆盖讲者的第二回应“保护自然系统”及 critical-summary 的评价功能。依停止规则不要求再次改写 jobs，给短模型固定为：P1 建立加速与损失的紧迫性；P2 解释缓冲能力减弱和临界点风险如何威胁稳定，并保留不确定性；P3 呈现快速减排与保护自然系统的双重回应，并评价论证证据或实施细节。
+- 当前端到端节点：structure / paragraph jobs 固定完成 → evidence roles / selection。
+- 本轮唯一下一动作：从常驻 source card 中选择 5 个 evidence units，并按 `P1 一项 / P2 两项 / P3 两项` 分配；只写证据名称与它的作用（支持紧迫性、说明机制、限定范围、支持回应或提供评价依据），不写英文句子。
+- continuation decision：收到 evidence allocation 后，立即显式教授 finding 与 claim 的区别，并让 learner 对当前证据自行选择与强度/scope 匹配的 hedge/booster；随后要求完整 200–400 词初稿，不再做局部规划回合。
+
 <!-- student-os:learning-log:end -->

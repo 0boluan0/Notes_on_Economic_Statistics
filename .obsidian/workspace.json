@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing.md",
+                "file": "99_学习情况记录/2026-08-19——Wed.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -38,7 +38,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "week3reading-into-writing"
+              "title": "2026-08-19——Wed"
             }
           }
         ],
@@ -322,8 +322,22 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "30f6502409000f89",
+  "active": "7563b8600441276b",
   "lastOpenFiles": [
+    "tmp/pdfs/current.txt",
+    "tmp/pdfs/demographics.txt",
+    "tmp/pdfs/gender.txt",
+    "tmp/pdfs/social.txt",
+    "00_inbox/随手记.md",
+    "tmp/pdfs/final-4.png",
+    "tmp/pdfs/final-3.png",
+    "tmp/pdfs/final-2.png",
+    "tmp/pdfs/final-1.png",
+    "tmp/pdfs/check-3.png",
+    "tmp/pdfs/2026-08-18-climate-end-to-end-source-pack.pdf",
+    "tmp/pdfs/2026-08-18-climate-end-to-end-source-pack.out",
+    "tmp/pdfs/2026-08-18-climate-end-to-end-source-pack.aux",
+    "tmp/pdfs/2026-08-18-climate-end-to-end-source-pack.log",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing.md",
     "98_attachment/Pasted image 20260819151621.png",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2Reading-into-writing.md",
@@ -337,24 +351,12 @@
     "07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing.md",
     "98_attachment/Pasted image 20260819150507.png",
     "98_attachment/Pasted image 20260819150258.png",
-    "00_inbox/随手记.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/News.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/Travel.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Week 5.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Sample Summary - Demographics Annotated.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Sample Summary - Demographics.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Listening into Writing - Demographics.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change/Feedback for Week Three.pdf",
     "99_学习情况记录/2026-08-19——Wed.md",
     "99_学习情况记录/2026-08-18——Tue.md",
     "99_学习情况记录/2026-08-17——Mon.md",
     "99_学习情况记录/week-review/2026-W33.md",
     "99_学习情况记录/week-review/2026-W32.md",
     "tmp/pdfs/academic-writing-source-audit/toulmin-24.png",
-    "tmp/pdfs/academic-writing-source-audit/toulmin-22.png",
-    "tmp/pdfs/academic-writing-source-audit/claims-06.png",
-    "tmp/pdfs/academic-writing-source-audit/claims-05.png",
-    "tmp/pdfs/academic-writing-source-audit/claims-04.png",
     "README.md",
     "CLAUDE.md",
     "AGENTS.md",
@@ -367,7 +369,6 @@
     "99_学习情况记录/teach/academic-writing/lessons/2026-08-17-credit-scoring-essay-end-to-end.md",
     "99_学习情况记录/teach/academic-writing/RESOURCES.md",
     "99_学习情况记录/teach/academic-writing/MISSION.md",
-    "tmp/pdfs/academic-writing-check/lesson3-04.png",
     "99_学习情况记录/archive/daily/2026-W33/2026-08-10——Mon.md",
     "03_Computer_Science/01_CS50/CS50 Course Atlas.canvas",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
