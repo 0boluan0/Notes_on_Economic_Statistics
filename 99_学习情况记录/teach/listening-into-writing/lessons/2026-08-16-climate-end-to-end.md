@@ -195,4 +195,12 @@ student-os:mentor-brief:end -->
 - 本轮唯一下一动作：不做内容题；learner 只决定是否采用这条协议：`完整首听一次 + 只修复 1–2 个关键短片段 + transcript 补全其余 source map + 继续规划与完整写作`。
 - continuation decision：若 learner 接受，下一轮立即用含 `resilience` 的代表性片段运行一次完整最小闭环；若不接受，继续讨论训练效果与成本，不进入内容练习。
 
+### 2026-08-19 10:46 BST
+
+- 学习者原始输入：`ok,但是resilience只是我举的小例子,并不比真正当作这轮应该修的东西`
+- 助教教学/反馈：确认 `resilience` 只是一项由 learner 提出的通用 lexical-gap 例证，不把它擅自升级为本轮 repair target，也不依据助教刚解释过的词制造虚假成功。回到本轮真实证据选点：原始笔记已留下 `buffering capacity`、`sink`、`tipping point` 等词，但后续口头 map 把 buffering-capacity decline 与 tipping-point risk 混成同一个“都会变成 CO₂ 排放源”的机制；因此当前最有价值的实际缺口是 speaker 用 `first issue / second / both` 划分两个相关但不同的论证块。选择官方 transcript 对应约 04:40–05:00 的短片段进行 relationship-signpost repair，而非词汇练习。
+- 当前端到端节点：方向修复完成 → selective sound-to-meaning repair；目标是一个由真实输出证明的结构关系缺口。
+- 本轮唯一下一动作：关闭字幕，只播放原演讲约 04:40–05:00 一次；不猜、不整理，原样报告实际听到的词、短语或空白。
+- continuation decision：收到第一次短听原始输入后，显示对应必要短 transcript，只解释 `first issue / second / both` 如何划分结构及必要声音特征；随后撤掉文字再听一次并恢复关系。若仍未听出，助教示范后结束该片段，补全其余 map 并继续写作链。
+
 <!-- student-os:learning-log:end -->
