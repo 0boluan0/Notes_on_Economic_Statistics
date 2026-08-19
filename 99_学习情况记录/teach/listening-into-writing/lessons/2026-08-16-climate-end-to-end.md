@@ -171,4 +171,28 @@ student-os:mentor-brief:end -->
 - 本轮唯一下一动作：只重写 B3 后半条，明确 `年度排放开始下降 ≠ 累积温室气体立即消失 → 全球平均温度仍很可能在 2030–2035 暂时突破工业化前 +1.5°C → 最好情况下 overshoot 约 30–40 年`。
 - continuation decision：本次 B3 修订后不再停留于该局部；若仍混淆，助教给出短模型并结束 map repair，随后进入 central answer / structure / paragraph jobs。
 
+### 2026-08-19 10:15 BST
+
+- 学习者原始输入：`我不觉得你这样带着我改我没有听到的东西是有意义的,我都没听到我改了也就是知道我没听到`
+- 助教教学/反馈：立即暂停 B3 改写与 source-map 推进，承认当前教学动作失配：助教先补给 transcript 事实、再要求 learner 改写，只能练 source accuracy / relationship reconstruction，不能改善 learner 没有把声音解码成词组与关系的 listening bottleneck；它也无法区分是词汇声音未识别、连续语流切分失败，还是听见词但没保留关系。重新说明本阶段真正能力：把 transcript 中看得懂的短语重新连接到真实音流，并在短回放中抓到少量 audible anchors 与关系信号，从而恢复 `speaker claim → evidence/mechanism → qualifier`。可观察的学习证据不是复述助教提供的事实，而是在短 transcript 支持逐步撤除后，learner 能从同一短回放独立指出听到的信号并恢复关系。
+- 当前端到端节点：暂停 transcript-assisted map repair；回到 input acquisition 与 notes-to-map 之间缺失的 sound-to-meaning bridge，已完成的完整首听与原始笔记仍保留。
+- 本轮唯一下一动作：不做新练习；learner 只判断“把看得懂的 transcript 接回耳朵实际听到的声音和关系”是否是有意义的目标，并指出若仍不对，问题在哪里。
+- continuation decision：只有 learner 确认方向清楚后，才使用本演讲一个约 20–30 秒的原声片段进行 `先听 → 显示必要短 transcript 并解释连读/重音与关系信号 → 再听 → 恢复关系`；不再让 learner 改写从未听到的事实，也不另开材料或阶段文件。
+
+### 2026-08-19 10:27 BST
+
+- 学习者原始输入：`也许是有的,至少之前那种告诉我我漏听了然后又让我复述你给我的补充要好.实际上我比较困惑我第一遍练习听力之后我该做什么?是知道哪里缺少了之后直接进入下一篇还是说我重复听没听懂的地方.而且我发现很多时候我是因为单词不知道导致的,例如上一会考试我就不知道resilience所以一大块都听不懂`
+- 助教教学/反馈：继续暂停内容练习，先回答首听后的训练逻辑。说明完整首听用于取得真实表现与定位高价值缺口，不应发现缺口后立刻换下一篇，也不应无目标地重听整篇；应在同一材料中只修复会阻断 central argument / major block 的短片段，然后回到完整 end-to-end 链。将缺口分成三类：词本身未知是 lexical knowledge gap，直接解释词义并回到关系，单纯重听无效；词在阅读中认识但音流中认不出是 sound-recognition gap，用短 transcript 对齐声音后再听；词能听出但关系丢失是 mapping/attention gap，寻找转折、因果和限定信号。用 learner 提出的 `resilience` 当场解释为“系统受冲击后仍能维持功能、吸收压力或恢复的能力”；在本演讲中指陆地/海洋继续吸收 CO₂ 或热量、而不转入不利状态的能力。说明该词若完全未知，整个 block 失去中心标签是合理的诊断结果，不应要求 learner 靠重复播放猜出词义。
+- 当前端到端节点：方向修复；正在建立完整首听后的固定 repair loop，尚未恢复 B3 或 prose。
+- 本轮唯一下一动作：不做内容题；learner 只确认这条流程是否可执行：`完整首听 → 用 notes/map 找出阻断主论证的缺口 → 判断是未知词/声音识别/关系丢失 → 对一个短片段做 transcript-assisted replay → 撤掉文字再听并更新 map → 继续同一篇的写作链`。
+- continuation decision：方向确认后，从当前演讲选择含 `resilience` 的一个短片段示范完整 repair loop；只解释当轮必要词义，不另开词汇练习。若 learner 仍认为流程无效，继续澄清目标，不发新练习。
+
+### 2026-08-19 10:33 BST
+
+- 学习者原始输入：`我觉得凑活,是否有更好的更高效的练习方式但是不损失效果`
+- 助教教学/反馈：不强行采用 learner 只认为“凑活”的流程，提出更短的 minimum effective loop，并显式拆开两个目标：听力训练只修复 1–2 个阻断主论证的代表性片段；为了完成本篇写作，其他内容可用 transcript 补全 source map，但不把这种补全冒充 listening evidence。每个选中片段最多执行 `原声一次 → 立即显示短 transcript，只处理 1 个阻断词或 1 个关系信号 → 撤掉文字再听一次 → 用中文恢复关系`；若第二次仍无法听出，助教示范后移动，不反复磨同一段。这样保留 diagnosis、repair、verification 与 end-to-end integration 四个必要效果，同时省去整篇重听、逐词查漏和复述助教补充事实。
+- 当前端到端节点：方向修复；已提出高效率的 selective repair protocol，尚未恢复 source map 或写作。
+- 本轮唯一下一动作：不做内容题；learner 只决定是否采用这条协议：`完整首听一次 + 只修复 1–2 个关键短片段 + transcript 补全其余 source map + 继续规划与完整写作`。
+- continuation decision：若 learner 接受，下一轮立即用含 `resilience` 的代表性片段运行一次完整最小闭环；若不接受，继续讨论训练效果与成本，不进入内容练习。
+
 <!-- student-os:learning-log:end -->
