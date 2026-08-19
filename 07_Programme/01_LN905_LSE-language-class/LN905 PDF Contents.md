@@ -23,8 +23,23 @@ aliases:
 - [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-1/Wk1 Group 4.pdf|Week 1 · Group 4]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-1/Wk1 Group 5.pdf|Week 1 · Group 5]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-1/Wk1 Group 6.pdf|Week 1 · Group 6]]
-- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Weeks-2-4/week2-4 group2.pdf|Weeks 2–4 · Group 2]]
+- [[week2-4 group2.pdf|Weeks 2–4 · Group 2]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Week 5.pdf|Week 5 timetable]]
+
+### Week 5 · Tutorials
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Tutorials/Class 1 Week 5 Tutorials.pdf|Class 1]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Tutorials/Class 2 Week 5 Tutorials.pdf|Class 2]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Tutorials/Class 3 Week 5 Tutorials.pdf|Class 3]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Tutorials/Class 4 Week 5 Tutorials.pdf|Class 4]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Tutorials/Class 5 Week 5 Tutorials.pdf|Class 5]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Tutorials/Class 6 Week 5 Tutorials.pdf|Class 6]]
+
+### Week 5 · Practice speaking and listening
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Practice-Speaking-and-Listening/Classes 1 and 5.pdf|Classes 1 and 5]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Practice-Speaking-and-Listening/Classes 2 and 6.pdf|Classes 2 and 6]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Practice-Speaking-and-Listening/Classes 3 and 4.pdf|Classes 3 and 4]]
 
 ## 01 Assessment
 
@@ -97,6 +112,9 @@ aliases:
 ### Week 3 · Demographics
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Listening into Writing - Feedback from Week Two.pdf|Feedback from Week 2]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Listening into Writing - Demographics.pdf|Demographics task]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Sample Summary - Demographics.pdf|Sample summary]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Sample Summary - Demographics Annotated.pdf|Sample summary · Annotated]]
 
 ### Week 4 · Climate change
 
@@ -123,7 +141,7 @@ aliases:
 
 ### Week 4 · Climate change
 
-- No downloadable Paper B file is available yet.
+- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change/Feedback for Week Three.pdf|Feedback from Week 3]]
 
 ## 05 Paper C · Speaking and Listening
 
@@ -198,6 +216,8 @@ aliases:
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/Everyday English lesson 2026.pdf|Everyday English lesson]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/Food and Drink Worksheet.pdf|Food and Drink worksheet]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/News.pdf|News]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/Travel.pdf|Travel]]
 
 ### Pronunciation
 

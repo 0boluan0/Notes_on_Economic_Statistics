@@ -133,6 +133,10 @@ student-os:mentor-brief:end -->
 
 五段共同形成一个判断：`性能门槛 → 适用条件 → 可解释替代方案 → 可审计性 → 公平性`。复杂模型通过这些检验后，降低可解释性才可能合理。
 
+## 本文可复用表达
+
+- `suggesting that X alone does not justify Y`：用于“证据支持 X 有一定作用，但 X 单独不足以推出 Y”的评价。学习者要求后文在适用位置主动提醒；不要机械重复原句。
+
 ## Working word budget
 
 | 部分 | 工作 | 预算 |
@@ -251,5 +255,13 @@ student-os:mentor-brief:end -->
 - **当前 skill-map 位置**：Body paragraph 1 的 Lessmann `evidence → evaluation` 链已在直接语言支架下完成；现在进入 Khandani 的经济价值证据及其数据/假设限制。
 - **单一下一动作**：根据直接提供的 Khandani 信息写一句英文：先报告 6%–25% 的潜在损失节约，再在同一句中说明该数字依赖丰富交易数据和作者假设，不能全部归因于模型复杂度。
 - **internal continuation decision**：收到后直接修正语言与任何来源范围问题；若经济价值和限制均出现，就补段尾判断并完成 P1，不要求学习者分析论文或重写 Lessmann 两句。
+
+### 2026-08-19 12:19 BST
+
+- **学习者输入**：`suggesting that average gains alone do not justify sacrificing interpretability. 这种表达我觉得不错,我要记下来,后面要提醒我用`
+- **AI teaching/feedback**：将 `suggesting that X alone does not justify Y` 记入本篇可复用表达。直接解释其功能是“承认一部分证据，同时限制结论强度”，而不只是漂亮措辞。
+- **当前 skill-map 位置**：Body paragraph 1 的 Lessmann evaluation 已完成；继续 Khandani 的经济价值与限制。
+- **单一下一动作**：继续上一轮动作，用一句英文写 Khandani 的 6%–25% 潜在节约及其对丰富数据和作者假设的依赖。
+- **internal continuation decision**：以后遇到“单项收益不足以证明更强结论”的自然位置时，主动提醒这个结构；为避免机械重复，必要时提示同义变体，但不提前替学习者写完整段落。
 
 <!-- student-os:learning-log:end -->
