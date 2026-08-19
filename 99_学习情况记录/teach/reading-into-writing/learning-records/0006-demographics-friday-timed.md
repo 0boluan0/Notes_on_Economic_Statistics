@@ -279,7 +279,20 @@ student-os:mentor-brief:end -->
 - **Writing 的 recurring patterns**：主谓一致与单复数；verb pattern；可数/不可数名词；academic collocation；超长并列句；模糊 reporting language；citation author accuracy。
 - **Targeted revision 原则**：不逐句重写全文。先修 immigration 段的两源关系，因为它同时影响 PB-02、PB-03、PB-04 与 AW-15；之后再用一次 whole-output revision 把同类 source-fidelity 问题统一修正。
 
+### 2026-08-19｜教师反馈校准
+
+> [!info] 这是定性档，不是总分
+> 教师在 Turnitin 选择 Reading `60/65`、Writing `55 or below`；页面明确说明该 rubric 不会生成 score。learning log 中的 `52/100` 与 `Reading 50 or below` 保留为当时的 AI provisional estimate，但已被教师反馈校准，不再作为当前能力判断。
+
+- **教师确认的强项**：使用全部三份来源并选择 relevant ideas；有 clear overall argument；按 population ageing → fertility → immigration 逻辑推进；conclusion 回到主要 solutions。客观诊断因此不是“没有自己的答案”。
+- **教师确认的高影响错误**：`immigration is proved as an ineffective way` 过强。Ezeh et al. 与 Jones 共同支持的是：immigration 在部分情境可能有帮助，但不能单独解决 low fertility，作用受国家规模、所需人数与政治接受度限制。
+- **英文实现**：`Bloom & Lubet's opinion`、`...essay` 等 attribution 不够正式；整篇反馈中批量改用能准确反映来源作用的 reporting verbs，并检查 referencing、introduction 段界与 recurring grammar。
+- **续接方式**：不从零重建 controlling answer。继续 learning log 最新的 ageing map；完成全三源关系后，只用 plan 检查来源怎样服务已有总体答案，再做一次 source-fidelity + paragraph/reporting 的整篇 revision。反馈到达不关闭本记录。
+
 ## Skill evidence
+
+- 2026-08-19 teacher strength evidence：overall answer、宏观推进与 conclusion 在独立成品中可见；具体写前 AW-16 程序仍为 `not observable`。
+- 2026-08-19 teacher correction：PB-02/PB-03/AW-15 = `incorrect`（移民的 conditional relationship 被写成普遍无效）；PB-04/LEX-01 留下 reporting/referencing 与 academic-style baseline。状态统一写回 Skill Bank，不在本记录另建第二套状态。
 
 
 ## Learning log

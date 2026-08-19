@@ -107,12 +107,23 @@ student-os:mentor-brief:end -->
 
 2026-08-15 15:34 BST，learner 进一步区分：讲座前段主要是 B（当时理解但手写跟不上），进入三种 worlds 后主要是 A（词/短语在语流中没有识别出来）。当前最可信的过程模型因此是 `前段 processing/recording overload → 后段 auditory lexical access failure`。成文仍能保留三种 worlds 的标签，说明 signpost / macro-structure detection 并未完全失效；主要丢失发生在各 block 内部的 evidence、mechanism 与 qualifier。
 
+### 2026-08-19｜教师反馈校准
+
+> [!info] 这是定性档，不是总分
+> 教师在 Turnitin 选择 Listening `60/65`、Writing `55 or below`；页面明确说明该 rubric 不会生成 score。上面的 `61/100` 保留为当时的 AI provisional estimate，不再作为教师成绩或当前能力判断。
+
+- **教师确认的强项**：准确识别 status quo、fearful、resilient 三种 possible futures，并抓住 governments should adapt rather than simply try to increase fertility 的主旨；也已经尝试评价讲者观点。
+- **教师确认的高影响错误**：Sciubba 没有预测 forced-birth policies 必然发生；coercion 只是 fearful world 的一种可能特征，Romania 是 supporting example。
+- **评价对象校准**：下一次评价应先贴住讲者实际提出的 longer working lives、human capital、technology 与 health，再判断其 strength/limitation；不再用宽泛的 immigration 判断替代对核心 responses 的评价。
+- **证据边界**：教师只评价成品，不能据此反推遗失的原始 notes 或 one-pass listening 过程。现有 input-acquisition 诊断继续保留，记录也不会因反馈到达自动完成。
+
 
 ## Skill evidence
 
 - 2026-08-14 timed output silent callback（第一次完整独立成文已读）：AW-15 = `incorrect`（成文保留了部分 `predicted / would`，但把 fearful world 的条件性可能场景写成政府“no choice”的 forecast，并在 immigration critique 中扩大了 speaker 提案的 scope）；AW-16 = `not observable`（成文有 central claim、三世界线性结构与结论，但原始 notes/plan 已遗失，无法据成文反推写前程序）。暂不改 Skill Bank 状态，等待整篇复盘完成后统一写回。
 - 2026-08-14 learner self-report：PA-02 的风险提高（timed listening 手写内容很少；成文仍保留 central claim 与三段 signposting，但 supporting evidence/qualifier 稀疏）。由于原始 notes 不可恢复，本次只记录 qualitative risk，不把 PA-02 写成 `incorrect`，也不改变 Skill Bank 状态。
 - 2026-08-15 learner process evidence：PA-02 内部表现分化为 `前段 B：理解但记录速度不足；后三世界 A：语流中的词/短语未识别`。三种 world 标签进入成文，支持 signpost detection 存在；block-internal detail capture 高风险。原始 notes 缺失，仍不作正式状态转换。
+- 2026-08-19 teacher evidence：PA-04 = `independent`（新材料中无提示保留 central answer、three-worlds 组织与 conclusion）；PA-05 = `incorrect`（评价偏离 speaker 实际 responses）；AW-15 = `incorrect`（possible coercion 被写成 prediction）。rubric 的 Writing 档只作整体语言风险，不反推其他单项状态。
 
 ## Learning log
 

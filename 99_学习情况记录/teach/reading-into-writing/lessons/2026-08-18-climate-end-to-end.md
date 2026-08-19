@@ -26,17 +26,17 @@ scheduled: false
 **Essay question**：*To what extent can adaptation prevent climate change from widening global inequality?*
 
 <!-- student-os:mentor-brief:start
-今日 principal：PB-03 writer-led synthesis。让自己的限定答案控制三篇来源的组合，明确来源之间怎样 support、explain、qualify 或 challenge，而不是依次摘要三篇。
-重点技能 IDs：PB-01、PB-02、PB-03、AW-01、AW-02、AW-04、AW-05。
-起点证据：教师确认 learner 能使用全部三份来源、连接 ideas，并形成清楚的 overall argument；最高风险是没有清楚解释 sources 如何共同工作、source accuracy/depth 不足、未写完 conclusion。AW-16 已有 guided 证据，AW-15 仍需观察 certainty/scope。
+今日 principal：source-accurate synthesis。先用 PB-02 保住每篇来源的命题和限定，再用 AW-15/PB-04 准确转换，最后由 PB-03 写出真实的 support、explain、qualify 或 challenge；不从零重教 thesis 或总体结构。
+重点技能 IDs：PB-02、PB-03、PB-04、AW-15、AW-12、LEX-01。
+起点证据：Week 3 独立作答的教师定性档为 Reading `60/65`、Writing `55 or below`。教师确认 learner 使用全部三源、选择相关信息、有清楚的 overall argument，按 ageing → fertility → immigration 推进并完成 conclusion。当前风险是把有条件、部分有效的 immigration 写成 `proved ineffective`，informal/inconsistent reporting 与 referencing，以及 introduction 段界不清；不是“没有自己的答案”或“不会完成结论”。
 完整产出：约 600 词、直接回答 question、使用全部三篇 extracts、writer-led paragraphs、至少一处清楚的跨来源 synthesis、完整 conclusion；随后按整篇最高价值问题完成至多一次 whole-output revision。
 端到端教学链：完整读题与三文 → question-led notes → 三源 meaning/evidence map → provisional thesis → paragraph jobs/evidence roles → 约 600 词 essay → whole-output feedback → whole-output revision → 写回证据。
 允许支架：中文解释；worked contrast；把当前 source 原文直接显示给 learner；关键词、箭头或不完整英文；function cue；structure cue；短对比示范；共同修正 map/plan。不得给 model thesis、完整 paragraph plan 或可直接提交的 model essay。
-静默 callback IDs：AW-15、AW-16、AW-08、AW-10、AW-12。
-callback 适用机会：AW-15 在 source forecasts、probability 与 scope；AW-16 在是否先形成 answer/paragraph jobs；AW-08/AW-10 在自然出现的正文段首和 literature-as-evidence；AW-12 在跨文 relation 与 paragraph flow。第一次完整 essay 前不得透露这些 callback。
+静默 callback IDs：AW-02、AW-03、AW-08、AW-16。
+callback 适用机会：AW-02/AW-03 只观察已有 answer 与宏观结构能否在新材料维持；AW-08 观察正文是否继续由 writer claim 开头；AW-16 观察是否按 task → answer → paragraph jobs → evidence roles 进入 prose。第一次完整 essay 前不得透露这些 callback。
 提示层级：先解释功能与人类写作问题 → function cue → structure cue → 四话题内短对比示范；同一细节不连续纠缠。若 map/plan 的错误会让整篇建立在错误 source relation 上，当场修；其他局部语言等完整 essay 后批量反馈。
-反馈优先级：task fulfilment → source meaning/ownership/certainty/scope → top-down organization → reasoning/synthesis/evaluation → completion → recurring language。一次性拼写、措辞和小语法不得压过主技能。
-完成证据：三篇来源均被准确且有目的地使用；essay 直接回答题目；段落由 writer claims 而非作者顺序驱动；至少一处写明来源关系及其对答案的意义；conclusion 完成；最高价值整篇 revision 已处理。中间 map、thesis、plan 或单段不得关闭任务。
+反馈优先级：task fulfilment → 每源命题/ownership/certainty/scope → 真实的跨文 relation 及其对答案的作用 → reasoning/synthesis/evaluation → completion → 完整 essay 后批量处理 reporting verbs、referencing、paragraph boundary 与 recurring grammar。一次性拼写、措辞和小语法不得压过主技能。
+完成证据：三篇来源均被准确且有目的地使用；essay 直接回答题目；段落由 writer claims 而非作者顺序驱动；至少一处写明准确的来源关系及其对答案的意义；conclusion 完成；整篇 revision 修复最高价值的 source-fidelity 问题，并批量处理 1–2 个反复语言模式。中间 map、thesis、plan 或单段不得关闭任务。
 技能状态写回规则：每轮只向本文件 learning log 追加过程；完成整篇后，把 brief 点名技能的真实证据追加到 LN905 Skill Bank。callback 只记录 independent、guided、incorrect 或 not observable。new 只有四步证据齐全才能变 guided；一次无提示使用最多 independent-1，stable 仍需另一份材料且含 Friday/timed 证据。
 停止边界：只有完整 essay、整篇反馈、至多一次整篇 revision 和 Skill Bank 写回完成后，才把 canonical task 标记完成并写实际日期，然后明确回复“本次端到端练习完成”。不得推进 Paper A、Essay project、未来任务或安排日期。
 student-os:mentor-brief:end -->
@@ -58,10 +58,10 @@ student-os:mentor-brief:end -->
 - `为什么走完整链`：说明 Reading 把三文变成可用信息，Writing 再由答案控制选材和关系；
 - `考试流程`：question-led reading → map → thesis/paragraph jobs → essay → whole-output feedback/revision；
 - `完成标准`：直接回答问题、准确使用三文、writer-led synthesis、完整 conclusion；
-- `你已经会`：能使用三份来源、连接 ideas、形成 overall argument；
+- `你已经会`：能使用三份来源、连接 ideas、形成 overall argument，并完成 conclusion；
 - `当前节点`：读题，不是开始写漂亮句子。
 
-然后只给一个 5–10 分钟的有意义动作：让我先用中文、英文关键词或箭头拆出 question 的 command、核心判断对象和必须限定的概念，并解释这个动作会怎样控制后续阅读。不要给选项，不要提前给 thesis，也不要一次展示整张 worksheet。每次收到我的回答，先基于它教学，再只给链内下一个动作。需要 source 细节时直接把相关段落显示出来，不意外测试记忆。
+然后只给一个 5–10 分钟的有意义动作：让我先用中文、英文关键词或箭头拆出 question 的 command、核心判断对象和必须限定的概念，并解释这个动作会怎样控制后续阅读。不要给选项，不要提前给 thesis，也不要一次展示整张 worksheet。审题、provisional answer 和 paragraph jobs 仍由 learner 亲自完成；但如果答案已经直接、有限定且能控制段落，就立即接受并推进，不反复改写，也不从零重教结构。需要 source 细节时直接把相关段落显示出来，不意外测试记忆。
 
 每次回复前，必须在本文件 `student-os:learning-log:start/end` 之间追加：时间、我的原始输入、你的教学/反馈、当前端到端节点、本轮唯一下一动作和内部 continuation decision。第一次完整 essay 之后才可追加静默 callback evidence。只追加，不覆盖，不重复最新一轮；写入失败必须明确告诉我记录未保存。
 

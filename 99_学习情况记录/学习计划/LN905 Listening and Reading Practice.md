@@ -28,11 +28,12 @@ learner-facing 材料、示范、callback 与模拟只使用 **Social Media、Ge
 
 ## 当前起点｜来自真实输出与教师反馈
 
-- **已经有的能力**：能抓住 Listening 的 main argument 和关键 concepts。2026-08-14 Friday Paper B 在时限内使用全部三份来源，以 writer-led claims 组织三个主体段，并完成约 722 词全文与 conclusion；完成度相比 Week 2 明显改善。
-- **最高优先级 1｜来源含义准确**：Reading 必须保留 source claim 的 certainty、scope、causality 和 ownership。本次把“老年人经验有价值”扩成“老年劳动力成本较低”，并把 Jones 对移民规模与政治可行性的限定改成“大小国家都无效”；Listening 评价前同样必须完整识别 personal experience、research 与 data。
-- **最高优先级 2｜准确的跨文综合**：本次只在移民段明显连接 Ezeh et al. 与 Jones，但连接时压平了两者的限定。下一条 Paper B 完整链先建准确 map，再写明 agreement、qualification 或 tension 对自己答案的作用。
-- **最高优先级 3｜保住限时完成**：本次已写完 conclusion，下周继续保留这个节奏，不用额外完整模拟重复验证。
-- **并行基础｜词汇与英文实现**：词灵每日持续；本次反复出现的 agreement、word form、collocation 和 citation form 只在下一条完整成品的整篇反馈中集中处理。
+- **教师校准说明**：Turnitin 中选中的是定性描述档，不会生成总分。Week 2 与 Week 3 Paper A 都是 Listening `60/65`、Writing `55 or below`；两周 Paper B 的 Reading 都是 `60/65`，Writing 从 Week 2 的 `60/65` 到 Week 3 的 `55 or below`。但 Week 2 使用过 AI，Week 3 是独立作答，条件不同，不能据此判定退步。
+- **已经有的能力**：教师在三周反馈中反复确认 main argument、clear thesis/topic sentences、overall argument 与 logical organisation。2026-08-14 Friday Paper B 独立使用全部三份来源，按 ageing → fertility → immigration 推进，并完成约 722 词全文与 conclusion。控制性答案和宏观结构不再作为从零重教的主问题。
+- **最高优先级 1｜跨 Paper A/B 的来源准确性**：先保留 evidence composition、ownership、certainty、scope 与 causality，再评价或综合。具体风险包括：把 mixed evidence 写成只有个人经历；把 fearful-world 的 possible coercion 写成 speaker prediction；把“移民在部分情境有帮助、但不能单独解决”写成普遍无效。
+- **最高优先级 2｜准确评价与跨文关系**：你已经会连接 ideas；现在要修的是连接是否真实。Paper A 的评价要贴住 speaker 实际提出的 longer working lives、human capital、technology、health 等回应；Paper B 要明确来源之间是 support、explain、qualify 还是 challenge，以及这对自己的答案有什么作用。
+- **最高优先级 3｜英文实现**：Paper A/B 的独立 Week 3 成品都落在 Writing `55 or below` 描述档。完整初稿后只批量处理反复出现的 grammar、word form、academic reporting/referencing、collocation 与 paragraph boundary，不另建 grammar clinic。
+- **守住而非重教｜限时完成与宏观结构**：Week 3 已完成规定篇幅和 conclusion。后续把它们作为每篇成品的检查项，不为重复验证再加完整模拟。
 
 ## 动态控制回路｜不锁死每天的内部进度
 
@@ -47,7 +48,7 @@ learner-facing 材料、示范、callback 与模拟只使用 **Social Media、Ge
 
 Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写定 `今日 principal`、刻意练习链、当日完成证据与未来交织观察。新 Codex 会话只是当日助教：批当前作业，并在导师处方内给下一步 5–10 分钟作业；不得换目标、重排课程、创建未来任务或宣布长期掌握。
 
-所有跨会话技能状态、显式教学证据、callback 历史与下一观察窗口只保存在 [[99_学习情况记录/teach/LN905 Skill Bank|LN905 Skill Bank]]。本计划不再维护第二套状态。legacy `EP-01` 已无损迁移为 `AW-15`；legacy `W-01` 因只有计划、没有完成证据，迁移为 `AW-16 new`。
+所有跨会话技能状态、显式教学证据、callback 历史与下一观察窗口只保存在 [[99_学习情况记录/teach/LN905 Skill Bank|LN905 Skill Bank]]。本计划不再维护第二套状态。legacy `EP-01` 已无损迁移为 `AW-15`；legacy `W-01` 已迁移为 `AW-16`，当前状态以 Skill Bank 为准。
 
 新技能或句式首次教学仍完成 `理解用途与触发条件 → 有支架练习 → 变式输出 → 放回真实 summary/essay`，但全部嵌在端到端 unit 内。导师按风险排序重点技能并选择自然适用的静默 callback；第一次完整输出前不透露，也不为它们制造额外练习。
 
@@ -185,8 +186,8 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 
 ### 2026-08-14 Friday 正式材料
 
-- Listening：`PImDVT8fb-I`｜Jennifer D. Sciubba, *The Truth About Human Population Decline*（Paper A · Demographics timed output；测试后再校准）
-- Reading：[[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-3-Demographics/Demographics Extracts.pdf|Demographics Extracts]]｜Ezeh et al. (2012)、Bloom et al. (2015)、Jones (2019)；三篇正文约 594 / 536 / 653 词，合计约 1,783 词｜[[07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing|原始限时成文]]约 722 词；教师反馈尚未到达。
+- Listening：`PImDVT8fb-I`｜Jennifer D. Sciubba, *The Truth About Human Population Decline*｜[[07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing|原始限时成文与教师反馈]]；教师定性档为 Listening `60/65`、Writing `55 or below`。
+- Reading：[[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-3-Demographics/Demographics Extracts.pdf|Demographics Extracts]]｜Ezeh et al. (2012)、Bloom et al. (2015)、Jones (2019)；三篇正文约 594 / 536 / 653 词，合计约 1,783 词｜[[07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing|原始限时成文与教师反馈]]约 722 词；教师定性档为 Reading `60/65`、Writing `55 or below`。
 
 ### 2026-08-16 已准备
 

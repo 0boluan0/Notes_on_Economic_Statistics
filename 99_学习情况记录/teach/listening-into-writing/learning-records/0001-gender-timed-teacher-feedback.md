@@ -27,6 +27,10 @@ status: "active"
 - 普通教学可使用 AI、transcript 和中文解释；完整模拟与正式 timed submission 计时期间不使用 AI。
 - 语言修复只处理本人文本中重复出现的 grammar、word form 与 academic-expression patterns，并要求用户自己完成 revision。
 
+## 2026-08-19｜Rubric 校准
+
+教师在 Turnitin 选择的定性档为 Listening `60/65`、Writing `55 or below`。该 rubric 明确不会生成总分，因此这里只记录描述档，不折算成绩。由于本次作答使用过 AI，它只能作为受辅助表现；不能与 Week 3 独立作答直接比较，也不升级任何 independent 状态。
+
 ## Related notes
 
 - [[99_学习情况记录/teach/listening-into-writing/NOTES]]

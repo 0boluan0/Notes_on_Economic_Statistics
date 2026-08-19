@@ -26,16 +26,16 @@ source_id: Vl6VhCAeEfQ
 
 <!-- student-os:mentor-brief:start
 阶段：teaching practice；guided AI-in-the-loop，不是完整模拟。
-今日 principal：在一份完整演讲中，用 signposts 和极简选择性笔记保住每个主要 block 内的 evidence、mechanism 与 qualifier；解决 Friday 前段“理解但手写跟不上”、后段“语流中词或短语未识别”的断点。
-重点技能 IDs：PA-02、PA-03、PA-05、AW-15、AW-16、AW-17。
-起点证据：2026-08-14 Friday Paper A 能独立抓 central argument 和三个 macro blocks，但 supporting evidence、mechanism 与 qualifier 稀疏；前段主要是记录带宽不足，后段主要是 auditory lexical access failure。PA-03、PA-04、AW-16 已有 guided 证据；PA-05 与 AW-15 处于 repair。
+今日 principal：完整首听后，只修复由原始输出证明、会阻断主论证的代表性声音缺口。repair clip 可用 transcript 把声音与已知短语对齐，但不再用已经泄露的内容问题制造“成功”；真正的迁移证据只来自另一段未预告答案的短片段。其余内容可用 transcript 补全 map，但不得冒充 Listening 改善。始终从 learning log 最新节点继续，不重开首听。
+重点技能 IDs：PA-02、PA-03、PA-05、AW-15、AW-17、LEX-01。
+起点证据：Week 3 教师定性档为 Listening `60/65`、Writing `55 or below`；教师确认 learner 抓住三种 futures、主旨与评价意图。反复风险是漏掉或误判 evidence composition、把 possibility 写成 prediction、评价偏离 speaker 实际 responses，以及 grammar、word form 与 academic expression。当前 Climate 首听也显示 macro direction 可恢复，但 block 内声音识别与关系保留仍不稳定；PA-05 与 AW-15 处于 repair。
 完整产出：一次不暂停、不看字幕的完整首听及原始笔记；transcript-assisted meaning/evidence map；central answer 控制的 top-down plan；200–400 词完整 critical summary；整篇反馈；至多一次整篇 revision；真实技能证据写回 Skill Bank。
-端到端教学链：听前纸面筛选器 → 完整首听与原始笔记 → transcript/replay 辅助 repair → claim/blocks/evidence/mechanism/qualifier map → central answer 与结构选择 → paragraph jobs/evidence roles → finding 与 claim 的强度/范围校准 → 完整 critical summary → whole-output feedback → 至多一次整篇 revision → evidence writeback。
-允许支架：第一次完整播放后，可用中文解释、必要的 transcript 短段、回放、词义解释、关系箭头、worked contrast、句框和共同修正。不得在首听前泄露演讲结构或 transcript，也不得替 learner 写完整 summary/revision。
+端到端教学链：听前纸面筛选器 → 完整首听与原始笔记 → 一个代表性 repair clip 的声音对齐 → 一个未预告答案的 transfer clip → transcript 补全其余 claim/blocks/evidence/mechanism/qualifier map → central answer 与结构选择 → paragraph jobs/evidence roles → finding 与 claim 的强度/范围校准 → 完整 critical summary → whole-output feedback → 至多一次整篇 revision → evidence writeback。
+允许支架：repair clip 可用中文解释、必要的短 transcript、词义和声音特征，但揭示答案后只问哪些声音现在能识别，不再测试同一内容。transfer clip 必须先收 learner 的第一次原始听取，再显示 transcript 和反馈；显示后不要求复述已给答案。未知词直接解释；已知词在音流中认不出才做声音对齐；关系丢失则找 signpost。不得替 learner 写完整 summary/revision。
 静默 callback IDs：AW-15、AW-16。适用机会：AW-15 在转述 warming rate、GDP loss、carbon budget、tipping risk 与 uncertainty 时观察；AW-16 在 map 进入 prose 前的 top-down plan 中观察。第一次完整输出前不得向 learner 透露 callback ID 或检查清单。
 提示层级：先解释当前信息为什么需要转换 → 功能提示 → 结构提示 → 基于本材料的短对比或短模型；同一局部问题最多要求一次修改，然后回到整篇。
-反馈优先级：central argument / key-point coverage → evidence composition 与 source ownership → certainty、scope、causality → top-down organization/completion → evidence-grounded criticality → recurring language；一次性拼写和小语法不阻挡推进。
-完成证据：原始笔记得到保留；map 恢复 central claim、主要 blocks、各自关键 evidence/mechanism/qualifier；plan 由 central answer 控制；learner 至少把一项具体 finding 转成与 evidence 强度和 scope 匹配的 claim；summary 在 200–400 词内完成并含贴住具体 evidence 的 critical comment；整篇反馈与规定 revision 完成。中间节点都不得关闭 task。
+反馈优先级：central argument / key-point coverage → evidence composition 与 source ownership → certainty、scope、causality → 评价是否针对 speaker 实际 evidence/response → top-down organization/completion → 完整初稿后的 recurring grammar、word form 与 academic expression；一次性拼写和小语法不阻挡推进。
+完成证据：原始笔记得到保留；repair clip 只记录为受支持的声音对齐，另一个未预告答案的短片段留下首次听取的真实 transfer evidence；transcript 补全的其余内容只算 map 支架；map 恢复 central claim、主要 blocks、各自关键 evidence/mechanism/qualifier；plan 由 central answer 控制；learner 至少把一项具体 finding 转成与 evidence 强度和 scope 匹配的 claim；summary 在 200–400 词内完成并含贴住 speaker 实际 response 的 critical comment；整篇反馈与规定 revision 完成。中间节点都不得关闭 task。
 写回规则：每轮只向本文件 learning log 追加进度；只把真实 `independent`、`guided`、`incorrect` 或 `not observable` 证据写回 Skill Bank。一次有提示的成功最多支持 guided；未出现自然机会不算失败。Task 只有完整成品、整篇反馈和规定 revision 全部完成后才能勾选并记录实际日期。
 停止边界：完成整条 Paper A 链、Skill Bank 写回并明确回复“本次练习完成”后停止；不得启动 Paper B、Essay、未来任务或另一项练习。
 student-os:mentor-brief:end -->
@@ -46,7 +46,7 @@ student-os:mentor-brief:end -->
 
 开始前完整读取根目录 `AGENTS.md`、`CLAUDE.md`、本文件、`99_学习情况记录/teach/LN905 Exam Playbook.md` 和 `99_学习情况记录/teach/LN905 Skill Bank.md`。本文件的 mentor brief 是不可修改的 principal；从 learning log 的最新节点继续，不能另开阶段文件或会话。
 
-第一条教学回复必须给我一个很短的定位卡：
+若 learning log 为空，第一条教学回复必须给我一个很短的定位卡；若已有记录，直接从最后一条的“本轮唯一下一动作”继续，不重复 orientation 或重开首听：
 
 - `这次完整产出`：从完整听讲一直到 200–400 词 critical summary 和整篇 revision；
 - `为什么走完整链`：为了看清听取、记录、map、写作决策和英文实现分别在哪里断，而不是把一句话修漂亮；
@@ -55,9 +55,9 @@ student-os:mentor-brief:end -->
 - `你已经会`：能抓住 main argument 和 macro signposts，并完成过独立 timed output；
 - `当前节点`：先建立一个只服务于选择性笔记的纸面筛选器，然后完整首听。
 
-首听前不要告诉我演讲的 central claim、分块、数字、例子或评价点。先用自然中文解释：我不是要抄下演讲，而是要留下足够信息，让听后能恢复 `speaker claim → block → evidence/mechanism → qualifier`。然后给一个最小纸面格式，并让我关闭字幕、不要暂停，从头到尾听完整个 18:36 演讲；原始笔记必须原样贴回本文件或聊天，不能先美化。
+本 unit 的完整首听和原始笔记已经完成，不得要求重听整篇。始终以 learning log 最后一条为准，不能执行较早记录中已经被后续证据撤销的动作。repair clip 揭示 transcript 后只用于把模糊音流与已知短语对齐，不再要求 learner 回答已给出的意义；唯一 transfer check 使用同一演讲中尚未展示 transcript 或答案的短片段，先收第一次原始听取，再反馈。完成后立即结束听力 repair，用 transcript 补全其余 map，并明确这部分不是 Listening improvement evidence。
 
-第一次完整播放结束后，才可用 TED 官方 transcript、字幕和回放教学。每轮只给一个约 5–10 分钟的有意义动作：先把原始笔记恢复为可用 map，再从 task/central answer 选择结构和 paragraph jobs；进入 prose 前，用当前材料显式教一次 finding 与 claim 的区别，并让 learner 自己选择与 evidence 强度和 scope 匹配的 hedge/booster，随后写完整 200–400 词 summary。需要 source detail 时直接显示当轮必要的短 transcript 片段，不考我的短期记忆。若 lexical access 卡住，直接解释词义并回到关系；不要另开词汇小练习。
+selective repair 后，每轮只给一个约 5–10 分钟的有意义动作：完成可用 map，再从 task/central answer 选择结构和 paragraph jobs；进入 prose 前，用当前材料显式教一次 finding 与 claim 的区别，并让 learner 自己选择与 evidence 强度和 scope 匹配的 hedge/booster，随后写完整 200–400 词 summary。未知词直接解释并回到关系，不另开词汇小练习。
 
 完整初稿出现前，不逐句纠错，也不透露 silent callbacks。收到完整初稿后，才统一核验 source accuracy、coverage、organization、evaluation、completion 与 recurring language。只立即拦截会改变 ownership、certainty、scope、causality 或 evidence relationship 的问题；其他措辞、拼写和小语法批量处理。至多要求一次整篇 revision；同一核心错误修一次仍未解决，就用简短对比或模型教清，并按 mentor brief 的完成标准结束。
 
@@ -202,5 +202,45 @@ student-os:mentor-brief:end -->
 - 当前端到端节点：方向修复完成 → selective sound-to-meaning repair；目标是一个由真实输出证明的结构关系缺口。
 - 本轮唯一下一动作：关闭字幕，只播放原演讲约 04:40–05:00 一次；不猜、不整理，原样报告实际听到的词、短语或空白。
 - continuation decision：收到第一次短听原始输入后，显示对应必要短 transcript，只解释 `first issue / second / both` 如何划分结构及必要声音特征；随后撤掉文字再听一次并恢复关系。若仍未听出，助教示范后结束该片段，补全其余 map 并继续写作链。
+
+### 2026-08-19 16:09 BST
+
+- 学习者原始输入：`buffer capacity , tipping point both moving on the wrong way, buffer capacity is the ?后面听不懂了`
+- 助教教学/反馈：记录为第一次 20 秒短听原始证据。learner 已从音流中抓到两个 block 标签、`both` 这一回指词和共同方向判断，说明本片段最重要的宏观结构实际可听取；断点出现在 definition line 的 `is the ...` 之后。显示不超过当轮所需的短 transcript：`The first issue is buffering capacity. The second is the risk of crossing tipping points.` 与关键词组 `ability to dampen shocks and stress`。解释 `first / second` 建立两个并列且不同的问题，`both` 只赋予共同方向，不把两者合成同一机制；`dampen` 是“减弱冲击”，`system's ability` 在音流中紧连，`to` 弱读，重音落在 `ability / dampen / shocks / stress`。不要求逐字复述。
+- 当前端到端节点：selective sound-to-meaning repair；第一次原声诊断完成 → transcript/声音对齐 → 一次撤文验证。
+- 本轮唯一下一动作：移开 transcript，再播放 04:40–05:00 一次；只用一句中文报告两个问题的关系，以及 buffering capacity 是什么能力，不复述英文原句。
+- continuation decision：第二次短听若能恢复“两个并列问题 + 缓冲能力定义”，即结束本片段并把证据用于 map；若仍无法恢复，助教给出简短模型后移动，不作第三次重听。随后用 transcript 补全其余 map 并进入 central answer / structure / paragraph jobs。
+
+### 2026-08-19 16:13 BST
+
+- 学习者原始输入：`两个是并列关系,是减弱冲击和紧张\n但是你这答案都在前面讲的时候都漏完了我练什么`
+- 助教教学/反馈：确认 learner 的质疑成立，并撤销把本次中文回答当作听力验证的判断。助教在第二次播放前已显示 transcript、中文含义和目标关系，再要求 learner 报告相同内容，主要测到短期记忆，不能作为独立 sound-to-meaning evidence。澄清 transcript-supported repair 与 transfer verification 的不同：同一片段揭示 transcript 后，唯一可练的是把先前模糊的音流重新切分并与已知短语绑定，验证问题应是“哪些声音现在能听见、哪些仍模糊”，而不是再次回答已给出的意义；真正的迁移证据必须来自另一个未预告答案的短片段，要求 learner 首次听取时自行抓结构信号。当前回答不写为独立成功，也不要求继续重听已泄露答案的片段。
+- 当前端到端节点：暂停 selective repair；正在修正 repair 与 verification 的证据设计，首个片段只保留为有支持的声音对齐经历。
+- 本轮唯一下一动作：不做新内容题；learner 只确认是否接受修正版：`片段 A 用 transcript 修复声音，不测试内容；片段 B 不预告答案，只测试同类结构信号能否迁移`。
+- continuation decision：若方向获确认，选择同一演讲中一个尚未给出 transcript 或答案的短片段作唯一 transfer check；先收原始听取，再反馈，不提前透露结构内容。若仍不认可，继续澄清训练目标，不发片段。
+
+### 2026-08-19 16:17 BST
+
+- 学习者原始输入：`OK,`
+- 助教教学/反馈：learner 接受 `repair clip ≠ transfer check` 的修正版。选择同一演讲后段一个约 20 秒、此前未向 learner 展示 transcript 或讲解答案的片段作为唯一迁移检查；为避免泄露，不在本轮 learning log 预写其内容或关系答案。只提供精确播放范围，不提示该段的观点、结构数量或评价方向。
+- 当前端到端节点：selective sound-to-meaning repair 完成 → unpreviewed transfer check。
+- 本轮唯一下一动作：关闭字幕，只播放 15:03–15:23 一次，不暂停；原样回传实际听到的词、短语、数字或关系词，听不到处写 `?`，不猜意思。
+- continuation decision：收到原始短听后，先依据未预告的 audible anchors / relationship signals 判断 transfer evidence，再显示必要短 transcript 与一次反馈；不要求 learner 复述已给答案。随后结束听力 repair，用 transcript 补全 source map 并继续 central answer / structure / paragraph jobs。
+
+### 2026-08-19 16:23 BST
+
+- 学习者原始输入：`window is closing`
+- 助教教学/反馈：记录为唯一未预告 transfer clip 的首次原始听取。learner 独立抓到该段第一个高重音内容锚点与紧迫方向，但未留下其后的 contrast / expansion signals；因此证据是 content-anchor detection 可见，关系转向在新片段中仍未稳定保留。按协议显示必要短 transcript：`The window is rapidly closing, but there is still some light in the window.` 与 `not only in terms of risk, but also in terms of opportunity`；解释 learner 抓到的不是错答案，而是不完整答案：遗漏的 `but` 把“窗口关闭”限定为仍有行动可能，`not only ... but also` 把风险扩展到转型机会。不要求复述，不作第二次 transfer 播放，也不把 transcript 补充记为 Listening 改善。
+- 当前端到端节点：unpreviewed transfer check 完成；结束 selective listening repair → transcript-assisted source map consolidation → central answer。
+- 本轮唯一下一动作：阅读当轮展示的完整、紧凑 source map，用中文写一句 central answer；必须由 learner 自己决定如何把 speaker 的风险判断、核心机制与回应方向统摄起来，不堆数字。
+- continuation decision：收到 central answer 后，只核验是否控制完整论证与 speaker ownership；可用即进入 structure / paragraph jobs，不再返回 listening replay。
+
+### 2026-08-19 16:26 BST
+
+- 学习者原始输入：`气候变化的速度快于科学家预期,人类应该大幅降低碳排放并做好应对困难的准备`
+- 助教教学/反馈：central answer 已建立 `风险判断 → 行动` 主轴，且没有堆砌数字；但目前仍像 learner 自己的政策主张，缺少 `Rockström argues` 的 speaker ownership，并把演讲回应压缩成“减排 + 准备困难”，遗漏贯穿 buffering / tipping blocks 的必要条件：同时保护自然系统的缓冲能力、避免跨越临界点。要求一次整体修订，只补 ownership、核心机制与双重回应，不处理中文措辞细节。
+- 当前端到端节点：source map consolidated → central answer 第一次整体修订。
+- 本轮唯一下一动作：用中文重写一句 central answer，包含 `讲者归属 → 气候变化快于预期并威胁地球稳定/缓冲系统 → 快速减排 + 保护自然系统，同时准备近期影响`；不加入数字或证据清单。
+- continuation decision：这次修订后不再停留 central answer；若仍缺项，助教给出短模型并直接进入 structure / paragraph jobs。
 
 <!-- student-os:learning-log:end -->

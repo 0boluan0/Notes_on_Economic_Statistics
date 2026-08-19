@@ -29,6 +29,10 @@ status: "active"
 - 语言反馈只选择本人文本中一个高价值 recurring pattern，让用户自行修改并写回复盘 HTML。
 - 完整模拟与正式 timed submission 计时期间不使用 AI；结束后才进入 feedback 与 revision。
 
+## 2026-08-19｜Rubric 校准
+
+教师在 Turnitin 选择的定性档为 Reading `60/65`、Writing `60/65`。该 rubric 明确不会生成总分，因此这里只记录描述档，不折算成绩。由于本次作答使用过 AI，它只能作为受辅助表现。Week 3 独立作答已经完成规定篇幅与 conclusion，所以 completion 从当前主攻点降为整篇 guardrail；source relationship、准确转换和英文实现继续作为教学重点。
+
 ## Related notes
 
 - [[99_学习情况记录/teach/reading-into-writing/NOTES]]

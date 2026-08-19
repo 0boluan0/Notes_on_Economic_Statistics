@@ -24,7 +24,14 @@ status: "active"
 - 先训练 thesis 如何控制每个主体段的 claim、analysis 与 link to question。
 - 暂不把高级词汇或复杂句式作为首要目标。
 
+## 2026-08-19｜教师反馈校准
+
+教师后来明确认可这篇原稿有 clear thesis statement 和 clear topic sentences；因此上面的 Implications 只保留为当时基于 learner 自评作出的 provisional 判断，不再把“从零建立 thesis/段落结构”作为当前教学主轴。
+
+正式反馈暴露的优先问题是：在时限内完成 conclusion，以及使用准确的 reporting verbs，使所选动词真正反映作者的意思。本周没有可比的 rubric 截图，不能补写档位。
+
 ## Related notes
 
 - [[99_学习情况记录/teach/reading-into-writing/practice/0001-social-media-response]]
+- [[07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Reading to Writing social media|Week 1 原稿与教师反馈]]
 - [[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing]]
