@@ -11,7 +11,7 @@ status: "active"
 course: "LN905"
 record_type: "guided-assignment-draft"
 phase: "teaching-practice"
-current_stage: "body-paragraph-1-lessmann-chain"
+current_stage: "body-paragraph-1-khandani-link"
 canonical_task: "[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay#执行清单]]"
 draft_source: "[[00_inbox/LN905-essay-structure]]"
 ---
@@ -243,5 +243,13 @@ student-os:mentor-brief:end -->
 - **当前 skill-map 位置**：`AW-04/AW-05/AW-06` 的 Body paragraph 1：从 writer claim 进入 Lessmann evidence，再解释 evidence 对 `justify` 门槛的含义；`AW-15` 继续作为来源准确性边界。
 - **单一下一动作**：保留既有 topic sentence，学习者只写两句英文：一句报告 Lessmann 的设计与有用 finding，一句解释为何平均优势不能直接证明值得牺牲可解释性。
 - **internal continuation decision**：收到后立即修正任何 source-meaning、scope 或 certainty 问题；小语法和措辞由 AI 直接改并告知。论证关系成立后继续同一段的 Khandani evidence，不另开分析问答。
+
+### 2026-08-19 10:59 BST
+
+- **学习者输入**：`Comparing 41 models in 8 credit valuing dataset, Lessmann et al. found that a part of complex model performed better than the logistic regression, with a slightly improve in average cost, However, after changing  后面不会写了`
+- **AI teaching/feedback**：研究设计、比较方向和转折位置都正确。直接把 `credit valuing dataset` 修为 `credit-scoring datasets`，把 `a part of complex model` 修为 `several complex models`，并用原文数字替换含义模糊的 `a slightly improve`。学习者已主动开启评价转折；AI 用已教授的评价逻辑补全：模型排名随评价指标或误判成本改变，因此平均收益不能单独证明值得牺牲可解释性。修正后的两句已保存到 working draft，不要求重写。
+- **当前 skill-map 位置**：Body paragraph 1 的 Lessmann `evidence → evaluation` 链已在直接语言支架下完成；现在进入 Khandani 的经济价值证据及其数据/假设限制。
+- **单一下一动作**：根据直接提供的 Khandani 信息写一句英文：先报告 6%–25% 的潜在损失节约，再在同一句中说明该数字依赖丰富交易数据和作者假设，不能全部归因于模型复杂度。
+- **internal continuation decision**：收到后直接修正语言与任何来源范围问题；若经济价值和限制均出现，就补段尾判断并完成 P1，不要求学习者分析论文或重写 Lessmann 两句。
 
 <!-- student-os:learning-log:end -->

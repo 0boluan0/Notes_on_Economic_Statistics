@@ -8,6 +8,8 @@ section 1   How large and useful are the prediction gains? Decide how much impro
 
 Firstly, the prediction gain should be large, stable and useful in real lending decisions before it can justify a less interpretable model.
 
+Comparing 41 classifiers across eight credit-scoring datasets, Lessmann et al. (2015) found that several complex models outperformed logistic regression, with average simulated cost improvements of 3.4% for neural networks, 5.7% for random forests and 4.8% for HCES-Bag. However, model rankings changed when the evaluation metric or misclassification costs changed, suggesting that average gains alone do not justify sacrificing interpretability.
+
 Complex models are most useful when the dataset is very large and the relationships between variables are strongly nonlinear, but these situations may not represent all consumer credit scoring.
 
 Section 2   Can the loss of interpretability be avoided or controlled? Compare complex models with interpretable alternatives and discuss post-hoc explanation.
