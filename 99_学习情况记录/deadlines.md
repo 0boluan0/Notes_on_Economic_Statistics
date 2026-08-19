@@ -32,6 +32,8 @@ tags:
 
 ## 核验状态
 
+- 2026-08-19｜Moodle 登录会话已超时，无法完成今日网页比较；没有据此改变任何截止或提交状态。最近一次完整 Moodle 核验仍为 2026-08-18。
+- 2026-08-19｜Group 2 Weeks 2–4 课表 PDF 可读：周三固定课程为 10:00–11:15 Academic Writing & Assignment、11:45–13:00 Everyday English、14:00–15:15 Topic Reading。最近官方课程邮件仍是 Alison Standring 2026-08-14 的 Week 4 教室通知，周一至周五统一为 CKK.2.09；今日未发现更新邮件。Apple `LSE` 的 8 月 21 日两项截止与现有记录一致，未显示额外固定行程。
 - 2026-08-18｜Moodle 日常核对完成：Climate Change Listening 仍为 10:00 开放、11:45 截止，Reading 仍为 12:45 开放、15:00 截止；两项及 Essay Draft、Final Submission 均未提交，未发现截止提前。
 - 2026-08-18｜Group 2 Weeks 2–4 课表 PDF 可读：周二固定课程为 10:00–11:15 Academic Writing & Assignment、11:45–13:00 Pronunciation、14:00–15:15 Topic Listening。Alison Standring 2026-08-14 的官方邮件已覆盖 PDF 地点：Week 4 周一至周五统一改到 CKK.2.09。Apple `LSE` 的 8 月 21 日两项截止与 Moodle 一致，今日没有额外固定行程。
 - 2026-08-17｜Moodle 日常核对完成：Climate Change Listening 仍为 10:00 开放、11:45 截止，Reading 仍为 12:45 开放、15:00 截止；两项均未提交，Announcements 仍为空，未发现更早或新增的硬截止。
