@@ -98,6 +98,13 @@ student-os:mentor-brief:end -->
 
 ### Three-source meaning/evidence map
 
+#### Extract 1｜Diffenbaugh and Burke (2019)
+
+- **Source claim**：
+- **Evidence 1**：
+- **Evidence 2**：
+- **Boundary**：
+- **Essay role**：
 
 ### Provisional answer and paragraph jobs
 
@@ -137,6 +144,14 @@ student-os:mentor-brief:end -->
 - **当前端到端节点**：材料难度审核完成；仍停在 Extract 1 question-led reading，没有形成 thesis。
 - **本轮唯一下一动作**：先确认保留当前上限难度的 pack，再按既定四项读取 Extract 1；若学习者要求严格匹配 Gender/Social Media，再调整材料而不改变端到端流程。
 - **internal continuation decision**：默认保留当前 pack，因为它与最近、最长的 Demographics 正式练习量级一致且有 guided support；不得把 `prevent A from B` 再当作已经掌握的语言结构，后续在 essay 中自然复现。
+
+### 2026-08-19 17:23 BST
+
+- **学习者输入**：`然后下来我干什么?`
+- **AI teaching/feedback**：明确下一步不是 thesis 或英文正文，而是对 Extract 1 做 question-led reading，把 source claim、两项最强 evidence、boundary 和 essay role 变成三文证据地图的第一部分。这是同一篇 essay 的下一节点，不是独立小测。
+- **当前端到端节点**：Extract 1 question-led reading。
+- **本轮唯一下一动作**：打开 source pack 第 2 页，按五行模板完成 Extract 1 source map；可用中文，并保留原文数字和限定词。
+- **internal continuation decision**：若学习者保留 `estimated / roughly 90% probability / between-country / 1961–2010` 等 certainty、scope 和 period 限定，并正确判断该文主要建立 inequality baseline，写入 map 后进入 Extract 2；若扭曲 certainty、scope 或 adaptation role，显示对应原句并修正一次后继续。
 <!-- student-os:learning-log:end -->
 
 ## 课程依据与材料来源
