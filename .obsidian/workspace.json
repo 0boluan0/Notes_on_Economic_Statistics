@@ -6,6 +6,7 @@
       {
         "id": "869e028558261b8d",
         "type": "tabs",
+        "dimension": 11.52073732718894,
         "children": [
           {
             "id": "70c0343f5ae25f5e",
@@ -23,14 +24,33 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/News.pdf"
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Reading/Topic Reading.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "News"
+              "title": "Topic Reading"
             }
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "ed5aa91b85c364bf",
+        "type": "tabs",
+        "dimension": 88.47926267281106,
+        "children": [
+          {
+            "id": "f2e321c45fa262d2",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Reading/Climate Change Text - Lewandowski - Climate Change Disinformation and how to Combat it.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Climate Change Text - Lewandowski - Climate Change Disinformation and how to Combat it"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -288,7 +308,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 469.71240234375
+    "width": 633.8499755859375
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -310,9 +330,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7563b8600441276b",
+  "active": "f2e321c45fa262d2",
   "lastOpenFiles": [
     "00_inbox/随手记.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Reading/Topic Reading.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Reading/Climate Change Text - Lewandowski - Climate Change Disinformation and how to Combat it.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/News.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/07_Language-Skills/Everyday-English/Travel.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Week 5.pdf",
@@ -321,8 +343,6 @@
     "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Listening into Writing - Demographics.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change/Feedback for Week Three.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change",
-    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Practice-Speaking-and-Listening/Classes 3 and 4.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Practice-Speaking-and-Listening/Classes 2 and 6.pdf",
     "99_学习情况记录/2026-08-19——Wed.md",
     "99_学习情况记录/2026-08-18——Tue.md",
     "99_学习情况记录/2026-08-17——Mon.md",
