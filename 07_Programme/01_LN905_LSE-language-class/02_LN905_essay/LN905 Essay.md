@@ -17,7 +17,7 @@ kind: multi-stage-project
 
 > [!warning] 产物进度 ≠ 学习进度
 > 2026-08-18，学习者确认当前题目、thesis、文献笔记、detailed plan 与 skeleton 均由 AI 生成，并不清楚整体进度。上述已完成 checkbox 仅表示文件或 submission 状态，不作为其已理解或会独立写作的证据。当前无学习者亲自写出的正文段落。
-> 学习者随后明确将自己定位为“最开头”。指导将从 academic writing 最小模型和 question analysis 开始，不从 AI 写好的 thesis 或正文句子开始。
+> 学习者随后明确将自己定位为“最开头”。2026-08-20，P1 已由学习者在来源支架下写出 Lessmann 与 Khandani 的 evidence/evaluation，并经 source-accuracy 修正完成；当前进入 P2。
 >
 > <!-- bilingual-en:start -->
 > **Update, 2 August 2026:** The question and rationale were submitted to Moodle on 1 August and verified as “Submitted for grading”. The current stage is the annotated bibliography due on 9 August.
@@ -47,7 +47,7 @@ kind: multi-stage-project
 - [x] LN905 Essay｜按作业要求修订并完成 detailed essay plan 内容 #student-os/task ⏳ 2026-08-15 ✅ 2026-08-15
 - [x] LN905 Essay｜上传 detailed essay plan 并检查 Moodle submission status #student-os/task ⏳ 2026-08-15 ✅ 2026-08-15
 - [x] LN905 Essay｜把 detailed plan 转成 first draft 的 section skeleton 与 2,000 词预算 #student-os/task ⏳ 2026-08-18 ✅ 2026-08-18
-- [ ] LN905 Essay｜写出一个 anchor body paragraph，验证 claim–evidence–evaluation 链 #student-os/task
+- [x] LN905 Essay｜写出一个 anchor body paragraph，验证 claim–evidence–evaluation 链 #student-os/task ✅ 2026-08-20
 - [ ] LN905 Essay｜完成 first draft 前半部分正文 #student-os/task ⏳ 2026-08-22
 - [ ] LN905 Essay｜完成 first draft 后半部分正文、introduction 与 conclusion #student-os/task ⏳ 2026-08-22
 - [ ] LN905 Essay｜通读修订 argument、source accuracy、cohesion 与 recurring language errors #student-os/task ⏳ 2026-08-22
@@ -92,6 +92,8 @@ The submission-ready structure is available at [[07_Programme/01_LN905_LSE-langu
 <!-- bilingual-en:end -->
 
 ## First-draft skeleton and working word budget
+
+**Working draft**：[[00_inbox/LN905-essay-structure|LN905 essay working draft]]。课堂中每次修正完成的句子或段落直接保存到这里，后续据此形成提交稿。
 
 > [!info] 预算不是每段硬上限
 > 先用对称预算避免前两段吃掉全文篇幅；完成草稿后可在段落间小幅调整。Bibliography 和 cover sheet 单独处理。

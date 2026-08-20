@@ -31,7 +31,7 @@ topic: "LN905 Academic Writing"
 
 ## Out of scope
 
-- 当前 credit-scoring essay 在本模拟结束前暂停，不与模拟并行。
+- Credit-scoring essay 是独立的正式作业，不计入本模拟的完成度；它可在每天专属的课堂/草稿时间并行推进，并使用独立记录与 working draft。
 - 本模拟复用已经准备好的 Climate Change Paper B 三文本试卷；它同时是 Reading into Writing 和 Academic Writing 全流程的教学载体，不另造重复材料。
 
 ## 相关笔记

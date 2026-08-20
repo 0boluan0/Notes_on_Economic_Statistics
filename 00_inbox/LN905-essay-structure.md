@@ -10,6 +10,10 @@ Firstly, the prediction gain should be large, stable and useful in real lending 
 
 Comparing 41 classifiers across eight credit-scoring datasets, Lessmann et al. (2015) found that several complex models outperformed logistic regression, with average simulated cost improvements of 3.4% for neural networks, 5.7% for random forests and 4.8% for HCES-Bag. However, model rankings changed when the evaluation metric or misclassification costs changed, suggesting that average gains alone do not justify sacrificing interpretability.
 
+Khandani et al. (2010) estimate that using machine-learning predictions to reduce credit limits for high-risk accounts could save 6–25% of total losses under the authors' simulated assumptions. However, this estimate depends on richer transaction data and cost assumptions set by the authors, suggesting that not all of the estimated benefit can be attributed to model complexity.
+
+Although even a modest predictive improvement may have substantial economic value for a large lender, this does not by itself justify using a less interpretable model. Therefore, reduced interpretability is justified only when the predictive gain remains stable in out-of-sample tests, across evaluation measures and under realistic cost assumptions.
+
 Complex models are most useful when the dataset is very large and the relationships between variables are strongly nonlinear, but these situations may not represent all consumer credit scoring.
 
 Section 2   Can the loss of interpretability be avoided or controlled? Compare complex models with interpretable alternatives and discuss post-hoc explanation.

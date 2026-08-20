@@ -3,17 +3,26 @@ student_os: ln905-skill-bank
 title: LN905 Skill Bank
 status: active
 course: LN905
-last_source_audit: 2026-08-19
+last_source_audit: 2026-08-20
 neath_sync: synced
 ---
 
 # LN905 Skill Bank
 
 > [!summary] 用法
-> 这是 LN905 唯一的跨会话技能状态源。课程笔记保存完整解释；[[99_学习情况记录/学习计划/LN905 Listening and Reading Practice|练习计划]]只保存 canonical tasks；每个 guided Markdown 只保存本次处方与逐轮证据。导师从这里选择主技能、guided prose 中自然适用的即时提示项目，以及只留给独立/限时输出的无提示观察项目；助教不得自行换目标。
+> 这份目录与它链接的 `LN905 Skill Bank/Cards/` 共同构成 LN905 唯一的跨会话技能状态源。本文件保留能力地图和规则；每个可复用句式、搭配或小型写作判断单独成卡，解释、例句、复习日期和每次表现只写在卡片里。[[99_学习情况记录/学习计划/LN905 Listening and Reading Practice|练习计划]]只保存 canonical tasks。
 
 > [!important] 当前训练约束
 > learner-facing 练习只使用 Social Media、Gender、Demographics、Climate Change。技能仍可分开诊断和记录，但只能在一条 Paper A/B 端到端 unit 内教学、callback 和写回证据；不再为单项技能建立 clinic、短练或独立 checkbox。
+
+## 卡片目录
+
+[[99_学习情况记录/teach/LN905 Skill Bank/Cards Index|打开 LN905 Skill Cards Index]]
+
+- 当前共 45 张卡：critical-writing 判断 1 张、Academic reporting/argument words 9 张、source use 与 writer voice 10 张、claim strength 3 张、复杂句与 cohesion 8 张、信息焦点与 concise writing 6 张、academic interaction 8 张。
+- 每张卡的正面、反面、课件来源、Recall 日期与学习记录都只保存在卡片文件里；本页不复制第二份卡片内容。
+
+卡片只用于真正值得反复调用的内容，不把每个课堂术语或一次性修改都制成卡片。同一知识点只有一张卡；新证据与 Recall 记录追加到原卡，不新建同义卡。
 
 ## 状态协议
 
@@ -43,7 +52,7 @@ neath_sync: synced
 | Pronunciation sessions、transcript、TH materials 与 H5P | 已提取 intelligibility 所需的音位、schwa、connected speech、stress/chunking | 合并到 `PRON-01`–`PRON-03` |
 | Social Media、Gender、Demographics topic input/listening/reading | 可迁移主题词已提取；逐题答案和一次性事实不作为技能 | 合并到 `LEX-02`–`LEX-04` 和词汇同步区 |
 | Week 4 Academic Writing · Lesson 1 Making Claims | 已核验并提取 finding → claim、hedging/boosting、scope calibration | 合并到 `AW-17` |
-| Week 4 Academic Writing · Lessons 2–4 | 讲义已开放，尚未实际授课 | 不建立 skill 状态；对应课程结束后增量激活 |
+| Week 4 Academic Writing · Lessons 2–4 | 2026-08-20 按用户确认的“课件里教的内容”完成回溯；已提取 passive focus、nominalisation、concise writing | 合并到 `AW-18`–`AW-20`；只记为 `new`，卡片初始化不算掌握证据 |
 | Week 4 Climate Change topic input | 用户已确认属于 Week 5 考试范围 | 预载 `LEX-05` 与词汇；其他未授课技能不激活 |
 | Everyday English、课堂行政、课程游戏规则 | 与学术考核迁移无直接关系 | 明确排除 |
 | *Academic Vocabulary in Use* | 仅作参考书 | 不批量导入；只收课堂实际教授、反复出现或真实输出需要的词 |
@@ -172,7 +181,7 @@ neath_sync: synced
 - 边界：评价词必须有可观察依据；`systematic` 与 `systemic`、`comprehensive` 与 `wide-ranging` 不可随意互换。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 4.pdf|Week 3 Lesson 4：Evaluative adjectives]]。
 - 适用：Paper A/B、Assignment；evaluation、literature review。
-- 证据/Callback：尚无显式闭环。
+- 证据/Callback：已建立 [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-R01 - suggesting that X alone does not justify Y|AW-11-R01]]；学习与 Recall 细节只在卡片中追加。`AW-11` 整体显式闭环尚未完成。
 - 下一观察：下一份 guided Paper A/B 需要评价来源时即时提示评价对象与可选词；之后在 Friday/timed output 中无提示观察 lexical choice。
 
 ### AW-12 · Cohesion 与 reference chains
@@ -216,7 +225,7 @@ neath_sync: synced
 - 边界：不得把 `may / 80% probability / forecast` 写成无条件 `will/is`。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing#第三步：先定 thesis，再给每段一个 job|Reading into Writing]]；Paper B criteria。
 - 适用：Paper A/B、Assignment；paraphrase、summary、evaluation。
-- 证据/Callback：2026-08-11 Demographics Reading：逐步提示后把 80% probability 放回预测句；`guided`，无独立证据。2026-08-13 Demographics Paper A 首稿：能用 `predicted / would` 标记部分预测，但结论把约九十亿稳定改成绝对人口下降，并遗漏绿色技术、减贫与治理条件；本次写前已有条件性提示，记录为 `incorrect`。2026-08-14 Friday Paper B 再次在真正适用情境改变原文命题：无据增加“老年劳动力成本较低”；把条件性的移民规模/政治可行性判断改成“大小国家都无效”；把多项组合干预改成 policy 是 `the only way`。本次记为 `incorrect`；连续两个适用输出失真，状态转 `repair`。2026-08-17 Academic Writing replay Block 1D：给定材料只报告 weak average association 与特定群体的 larger negative association，成文时无据加入监管/保护不足和“不小概率”，并把 weak association 改成 no clear evidence/趋向无害；本次记为 `incorrect`，状态保持 `repair`。2026-08-19 收到的教师反馈独立确认两类失真：Paper A 把 fearful-world 中 possible coercion（Romania 为例）写成 speaker forecast；Paper B 把 context-dependent、不能单独解决问题的 immigration 写成 `proved ineffective`。两项都与既有 `incorrect` 判定一致，状态保持 `repair`。
+- 证据/Callback：2026-08-11 Demographics Reading：逐步提示后把 80% probability 放回预测句；`guided`，无独立证据。2026-08-13 Demographics Paper A 首稿：能用 `predicted / would` 标记部分预测，但结论把约九十亿稳定改成绝对人口下降，并遗漏绿色技术、减贫与治理条件；本次写前已有条件性提示，记录为 `incorrect`。2026-08-14 Friday Paper B 再次在真正适用情境改变原文命题：无据增加“老年劳动力成本较低”；把条件性的移民规模/政治可行性判断改成“大小国家都无效”；把多项组合干预改成 policy 是 `the only way`。本次记为 `incorrect`；连续两个适用输出失真，状态转 `repair`。2026-08-17 Academic Writing replay Block 1D：给定材料只报告 weak average association 与特定群体的 larger negative association，成文时无据加入监管/保护不足和“不小概率”，并把 weak association 改成 no clear evidence/趋向无害；本次记为 `incorrect`，状态保持 `repair`。2026-08-19 收到的教师反馈独立确认两类失真：Paper A 把 fearful-world 中 possible coercion（Romania 为例）写成 speaker forecast；Paper B 把 context-dependent、不能单独解决问题的 immigration 写成 `proved ineffective`。两项都与既有 `incorrect` 判定一致，状态保持 `repair`。2026-08-20 在已给出 Khandani 来源含义和句框后，把潜在损失节约写成 `loss may be brought by machine learning`，语言使经济效果方向反转；限制与归因意图正确，但 source meaning 仍需直接修正，本次记为 `incorrect`，状态保持 `repair`。
 - 下一观察：Academic Writing replay 的 source-use 阶段和下一条 Paper B end-to-end unit；重点检查是否自行新增 mechanism、ownership、certainty、scope 或 causality。
 
 ### AW-16 · 自上而下写作程序（legacy `W-01`）
@@ -240,6 +249,39 @@ neath_sync: synced
 - 适用：Paper A/B、Assignment；finding → interpretation、summary、evaluation、paragraph claim。
 - 证据/Callback：2026-08-17 已从课堂 Lesson 1 核验。Lesson 1 之前的 Friday 基线已有两次 claim-strength 失配：把 possible coercion 写成 prediction；把 conditional/partial immigration usefulness 写成 `proved ineffective`。这些是教学前的 `incorrect` baseline，不算 Lesson 1 后失败；尚未完成系统内的显式教学闭环。
 - 下一观察：当前 Climate Change Paper A unit 在 meaning/evidence map 进入 summary 时显式教学；之后在 Friday/timed output 中静默观察。
+
+### AW-18 · 用 passive voice 选择信息焦点
+- 状态：`new`
+- 触发/功能：当 issue、process 或 result 比 agent 更重要时，用 passive 把它放在句首；当责任或 source ownership 重要时保留 active agent。
+- 为什么：passive 的价值是管理读者注意力，不是让所有句子听起来更“academic”。
+- 动作/框架：先问“这一句要让读者先看见谁/什么” → agent 次要时使用 passive → agent 影响责任或归属时使用 active。
+- 边界：不得用无主被动隐藏作者、研究者或政策主体；也不得为了形式把清楚的 active sentence 机械改写。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 2.pdf|Week 4 Lesson 2]]。
+- 适用：Paper A/B、Assignment；topic sentence、claim、process/result description、revision。
+- 证据/Callback：2026-08-20 完成课件回溯并建立 `AW-18` 卡片；尚无主动回忆或真实输出证据，状态保持 `new`。
+- 下一观察：下一次 guided prose 中先提示信息焦点，再让学习者自行选择 active/passive。
+
+### AW-19 · 用 nominalisation 压缩已知行动并建立 topic
+- 状态：`new`
+- 触发/功能：当一个 action、quality 或 process 本身成为讨论对象时，把它转为 noun，使句子能继续分析该对象。
+- 为什么：适量 nominalisation 可以压缩前文并形成清楚的 topic；过量则产生难读的 noun pile。
+- 动作/框架：找出要讨论的 action/quality → 判断它是否真是本句 topic → 转为 noun → 检查 agent、causality 与可读性是否仍清楚。
+- 边界：不能为“显得学术”连续堆叠抽象名词；若读者要反复还原动作，就改回动词句。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 3.pdf|Week 4 Lesson 3]]。
+- 适用：Paper A/B、Assignment；topic sentence、cohesion、concise revision。
+- 证据/Callback：2026-08-20 完成课件回溯并建立 `AW-19` 卡片；尚无主动回忆或真实输出证据，状态保持 `new`。
+- 下一观察：下一次需要把前句 process 变成后句 topic 时，在动笔前提示选择 nominalisation。
+
+### AW-20 · Concise writing：删空话但保留意义边界
+- 状态：`new`
+- 触发/功能：整篇 revision 时删除 redundant/empty phrases，使用准确动词、清楚的 modifiers 与 parallel structures。
+- 为什么：考试时间和字数有限；简洁能让 claim、evidence 与 reasoning 更容易被读者看见。
+- 动作/框架：删重复 → 用 `because/if/to` 等直接形式替换空短语 → 检查 passive/continuous/relative clause 是否必要 → 检查并列结构 → 复核 scope、certainty、source ownership 与 causality。
+- 边界：concise 不等于把限定词、citation 或 reasoning 删掉；意义一旦改变就不是有效压缩。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 4.pdf|Week 4 Lesson 4]]。
+- 适用：Paper A/B、Assignment；whole-output revision。
+- 证据/Callback：2026-08-20 完成课件回溯并建立 `AW-20` 卡片；尚无主动回忆或真实输出证据，状态保持 `new`。
+- 下一观察：下一次整篇修改时只处理反复出现且影响清晰度的冗余，不在首稿逐句纠缠。
 
 ## Paper A · Listening into Writing
 
@@ -557,6 +599,15 @@ neath_sync: synced
 5. Friday/timed output 测试前不提醒；测试后把证据写回对应 skill。一次自主正确只到 `independent-1`；第二次且包含 timed/Friday 才到 `stable`。
 6. `new` 只有在解释、支架应用、变式应用、真实输出整合四步均有记录后才可变 `guided`。
 7. 当日助教只能按 mentor brief 的 `技能状态写回规则` 追加本次证据，并对 brief 点名的 ID 执行合法状态转换；不得选新技能、改下一观察策略或把普通语言反馈写成 mastery evidence。
+
+## 每日嵌入式 Recall
+
+1. 一个可复用知识点第一次被正式教学或实际使用时，幂等 upsert 一张卡片。正面只放句式/词/知识点；折叠反面放功能、适用时机、边界、例句和可用变体；`学习记录` 只追加不覆盖。
+2. 卡片 frontmatter 保存 `learned_on`、`recall_stage`、`next_recall`、`last_recall` 和 `last_result`。Today 只扫描到期卡，不在别处再建一份复习队列。
+3. 首次学习后在当日 shutdown 回忆；成功后按 `+1 天 → +3 天 → +7 天 → +14 天 → +30 天` 递增。部分正确或错误则第二天重现；未作答不算失败，保留原到期日。
+4. 每日开场与 shutdown 各只出 1 道 2–3 分钟的主动回忆：优先当日新学/实际用到的卡，否则选最早到期的卡。换一个四大考试话题中的新语境，不只要求背原句。
+5. 先让学习者作答，再显示卡片反面并给一次简短对照。Recall 表现追加到卡片并更新下次日期，但不自动改变上面的技能 mastery 状态。
+6. Recall 是 Today 笔记内的一步，不是 canonical task，不建 checkbox，不建日历时间块，也不复活旧的独立 `+1/+3/+7` 复习队列。
 
 ## 词汇同步区
 
@@ -914,3 +965,4 @@ neath_sync: synced
 - 2026-08-17：按新开放的 Week 4 Academic Writing 材料与气候主题全套材料交叉检查，增补 16 个 Academic Core 表达和 25 个 Climate Change 高概率内容词；已同步并通过远端可显示释义验收。
 - 2026-08-17：词库纠偏为考试实用标准；21 个只用于讲解写作方法或课堂流程的术语退出活跃练习，主题理解词和可直接写入答案的表达保留。严格远端对齐另发现 17 张从未进入本地真源的 legacy 卡，一并移入不练归档；无删除。
 - 2026-08-19：纳入 Weeks 1–3 六份教师文字反馈与四张定性 rubric；确认 thesis、topic sentences 与宏观组织是相对强项，当前风险集中在 source fidelity、评价对象、跨文限定和英语准确性。PA-04 依据新材料中的独立组织证据升为 `independent-1`；其余状态不因反馈到达而跳级。
+- 2026-08-20：完成首轮卡片盒初始化。按可复用功能从已学 Academic Writing、claim-strength 与 discussion 课件中去重建立 45 张卡；Week 4 Lessons 2–4 激活为 `AW-18`–`AW-20`。所有回溯卡均从 `queued/new` 开始，不把建卡当成 mastery evidence。

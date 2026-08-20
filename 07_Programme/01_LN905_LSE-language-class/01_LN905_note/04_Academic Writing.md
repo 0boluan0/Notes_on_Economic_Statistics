@@ -300,11 +300,11 @@ Sample Essay 中的课堂例句显示不同功能：`The figure, however, descri
 
 `This / These / Such + Noun` 也必须指向明确对象。讲义用 `This finding = ...` 让学生恢复其所指的完整前文；因此应写 `this finding`、`this evidence`、`these outcomes`，而不是让孤立的 `this` 迫使读者猜测。
 
-> [!note] 已开放但尚未激活的 Week 4 内容
-> Passive voice、nominalisation 和 concise writing 的讲义已经开放，但尚未实际授课。对应课堂结束后，这些内容会放回这里，作为“怎样选择句子焦点”和“怎样压缩表达”的工具，而不是独立的语法收藏。
+> [!note] Week 4 的句子工具
+> Lesson 2 的 passive voice 用来选择信息焦点；Lesson 3 的 nominalisation 把需要继续分析的 action/process 变成 topic；Lesson 4 的 concise writing 删除空短语、冗余和不平行结构。它们已经按课堂内容进入 [[99_学习情况记录/teach/LN905 Skill Bank/Cards Index|Skill Cards]]，但建卡不等于已经掌握。
 
 <!-- bilingual-en:start -->
-Week 3 Lesson 2 teaches linking words by function and precise `This / These / Such + Noun` reference. Later Week 4 language tools remain inactive until taught.
+Week 3 Lesson 2 teaches linking words by function and precise `This / These / Such + Noun` reference. Week 4 Lessons 2–4 add passive focus, nominalisation and concise writing; their card initialization is not mastery evidence.
 <!-- bilingual-en:end -->
 
 ## 六、Introduction 与 conclusion 要回答同一个问题
@@ -385,14 +385,14 @@ Use the official Reading and Writing criteria: literature, adaptation of source 
 | Week 1 | 读题、选题、thesis、introduction、conclusion、assignment expectations |
 | Week 2 | 寻找与评价来源、paraphrase、quotation、plagiarism、synthesis、annotated bibliography |
 | Week 3 | structure、paragraph jobs、argument、writer voice、cohesion、essay plan |
-| Week 4 | Lesson 1 making claims 已纳入；Lessons 2–4 待实际上课后激活 |
+| Week 4 | Lesson 1 making claims；Lesson 2 passive focus；Lesson 3 nominalisation；Lesson 4 concise writing |
 
 ## 来源与核验
 
-本笔记按已开放的 Week 1–4 课件重建，并按真实写作顺序去重。Week 4 只激活实际上课的 Lesson 1；Lessons 2–4 仅登记为已开放。学校 Sample Essay 用于核验 structure、paragraph progression、voice 和 cohesion；由于原始文献未附在范文中，不用它核验 paraphrase 准确性。
+本笔记按 Week 1–4 课件重建，并按真实写作顺序去重。2026-08-20 已把 Week 4 Lessons 2–4 的句子工具纳入 Skill Cards；它们仍需在真实输出中教学和复现，不能因建卡直接算作掌握。学校 Sample Essay 用于核验 structure、paragraph progression、voice 和 cohesion；由于原始文献未附在范文中，不用它核验 paraphrase 准确性。
 
 <!-- bilingual-en:start -->
-This workflow is reconstructed from the available Week 1–4 materials. Only the taught Week 4 Lesson 1 is active. The sample essay supports analysis of structure and voice, but not source-to-paraphrase accuracy because its source passages are absent.
+This workflow is reconstructed from the Week 1–4 materials. Week 4 Lessons 2–4 are now represented as recall cards, but card creation is not evidence of mastery. The sample essay supports analysis of structure and voice, but not source-to-paraphrase accuracy because its source passages are absent.
 <!-- bilingual-en:end -->
 
 ### Week 1

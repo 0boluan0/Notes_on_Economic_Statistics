@@ -7,21 +7,19 @@ tags:
 date: "2026-08-18"
 source_type: "teach"
 topic: "LN905 Academic Writing"
-status: "paused"
+status: "active"
 course: "LN905"
 record_type: "guided-assignment-draft"
 phase: "teaching-practice"
-current_stage: "body-paragraph-1-khandani-link"
-paused_on: "2026-08-19"
-paused_for: "[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-end-to-end]]"
+current_stage: "body-paragraph-2-sadhwani-evidence"
 canonical_task: "[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay#执行清单]]"
 draft_source: "[[00_inbox/LN905-essay-structure]]"
 ---
 
 # Credit-scoring essay first draft
 
-> [!info] 当前暂停
-> 2026-08-19，学习者决定先通过一份三文本真实模拟学习从发卷到提交的完整写作流程。本 essay 保留当前位置，不与模拟并行；只有学习者之后明确要求时才恢复。
+> [!info] 与完整模拟并行
+> 2026-08-20，学习者确认本 essay 每天有课堂专属草稿时间，因此可与 Climate Change 三文本 guided simulation 分开并行。两者保留独立记录；本 essay 每次修正完成的句子或段落立即写入 working draft，供后续提交。
 
 > [!summary] Orientation card
 > - **这次完整产出**：约 2,000 词 first draft，再根据 Assignment Marking Criteria 完成一次整篇 revision。
@@ -29,7 +27,7 @@ draft_source: "[[00_inbox/LN905-essay-structure]]"
 > - **写作流程**：`section skeleton / budget → P1–P5 正文 → introduction / conclusion → 整篇 criteria check / revision`。
 > - **完成标准**：直接回答 `to what extent`；约 2,000 词；至少 6 篇 academic sources；每段由 writer claim 推进；准确保留来源的 ownership、certainty、scope 和 causality；有 introduction、conclusion 和独立 bibliography。
 > - **你已经会**：已提交 question/rationale、annotated bibliography 和 detailed plan；已有 thesis、thematic structure、5 个 topic sentences、evidence、evaluation/counterargument 与 9 篇来源。
-> - **当前起点**：暂停成文，先恢复对题目、thesis 和 5 个 paragraph jobs 的整体控制。学习者已确认现有仓库内容均由 AI 生成，不能当作其已理解或掌握的证据。
+> - **当前起点**：Body paragraph 1 已写入 Lessmann 与 Khandani 的 evidence/evaluation；下一步完成本段的 closing evaluation。学习者已确认旧有仓库内容均由 AI 生成，不能当作其已理解或掌握的证据。
 
 **Canonical project**：[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay|LN905 Essay]]  
 **Detailed plan**：[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Detailed Essay Plan|LN905 Detailed Essay Plan]]  
@@ -54,7 +52,7 @@ student-os:mentor-brief:end -->
 
 ## 完整路线与当前位置
 
-`Academic writing 在做什么 ✓` → `Question analysis（已直接教授）` → `Submitted thesis 解释` → `Paragraph jobs（已直接教授）` → **`P1 drafting`** → `P2–P5` → `Introduction / Conclusion` → `Whole revision`
+`Academic writing 在做什么 ✓` → `Question analysis（已直接教授）` → `Submitted thesis 解释` → `Paragraph jobs（已直接教授）` → `P1 ✓` → **`P2 drafting`** → `P3–P5` → `Introduction / Conclusion` → `Whole revision`
 
 ## Step 0｜Academic writing 的最小模型
 
@@ -140,7 +138,7 @@ student-os:mentor-brief:end -->
 
 ## 本文可复用表达
 
-- `suggesting that X alone does not justify Y`：用于“证据支持 X 有一定作用，但 X 单独不足以推出 Y”的评价。学习者要求后文在适用位置主动提醒；不要机械重复原句。
+- [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-R01 - suggesting that X alone does not justify Y|suggesting that X alone does not justify Y]]：解释、例句和后续 Recall 历史统一保存在卡片中。
 
 ## Working word budget
 
@@ -161,13 +159,13 @@ student-os:mentor-brief:end -->
 |---|---|---|
 | 学校流程 | question/rationale、annotated bibliography、detailed plan 已上传并核验 | 这些 submission 节点确已完成 |
 | AI 准备 | 题目、working thesis、9 篇来源笔记、3 sections / 5 paragraphs、topic sentences 和字数预算已存在 | 素材与路线已被 AI 搭好，不等于学习者会用 |
-| 学习者证据 | 只在明确支架下练过 claim–evidence–reasoning 和部分 question analysis；仍会改变 source scope、certainty 或 causality | 基础课停在 Block 1E，没有完成 thesis、structure 和 source-use 的系统学习 |
-| 真实草稿 | 现有 skeleton 约 291 词，但只是 AI 写的 thesis、headings 和 topic sentences；没有学习者写的正文段落 | 按学习者自己的作品计，**正文进度为 0/5 段** |
+| 学习者证据 | 在直接提供来源信息和句框后，已亲自写出 Lessmann 与 Khandani 的 evidence/evaluation 关系；仍会因英文表达改变收益方向或 source meaning | 论证关系可在支架下建立，`AW-15` source fidelity 仍需即时纠正 |
+| 真实草稿 | P1 已保存 topic sentence、Lessmann 与 Khandani evidence/evaluation，以及 closing judgment | **P1 完成；正文进度 1/5 段** |
 
-> [!warning] 为什么上一个动作失败
-> 上一轮直接让学习者在 Lessmann 后写两句英文，默认了 AI 写的 thesis、paragraph job 和 evidence role 已经被学习者理解。这个前提不成立，所以动作虽然小，却没有明确的学习目标。现在暂停它。
+> [!info] 当前协作方式
+> AI 直接讲清来源的 claim、evidence、scope、limitation 和本段用途；学习者亲自成句。会改变来源含义的错误立即纠正，小语法由 AI 直接修改；修正后的可交文本马上保存。
 
-## 当前阶段｜Body paragraph 1
+## 已完成｜Body paragraph 1
 
 **Paragraph job**：证明“复杂模型更准”还不够；只有增益同时大、稳定并能转化为真实贷款价值，才有可能抵偿可解释性下降。
 
@@ -175,25 +173,32 @@ student-os:mentor-brief:end -->
 
 > Firstly, the prediction gain should be large, stable and useful in real lending decisions before it can justify a less interpretable model.
 
-**当前只需要的 Lessmann et al. (2015) 信息**：
+### 完成结果
 
-- 在 8 个真实信用评分数据集上比较 41 种分类方法，并使用 6 类性能指标。
-- 多种先进方法整体上优于 logistic regression，但最复杂或最新的方法并不自动胜出。
-- 在简化成本模拟中，neural networks、random forests 和 HCES-Bag 相对 logistic regression 的平均成本改善约为 3.4%、5.7% 和 4.8%。
-- 改变评价指标或误分类成本时，模型排名和经济价值的判断可能变化；当坏客户误判成本提高时，HCES-Bag 的优势会消失。
-- 这是 benchmark 与简化成本模拟；作者也提醒，实验室比较可能高估先进方法的优势，而监管与组织接受度会限制实际采用。
+已形成完整的 `writer claim → Lessmann evidence/evaluation → Khandani economic value/limitation → closing judgment`。修正后的段落已保存到 working draft，并关闭 anchor body paragraph canonical task。
+
+## 当前阶段｜Body paragraph 2
+
+**Paragraph job**：说明复杂模型在超大数据和强非线性关系中理由最强，但这种收益不能自动推广到所有 consumer credit-scoring 场景。
+
+**已有 topic sentence**：
+
+> Complex models are most useful when the dataset is very large and the relationships between variables are strongly nonlinear, but these situations may not represent all consumer credit scoring.
+
+**当前只需要的 Sadhwani et al. (2021) 信息**：
+
+- 超过 1.2 亿笔美国抵押贷款、约 35 亿条 monthly observations，并按时间划分 train/validation/test。
+- 比较多层神经网络与零隐藏层 logistic model；深度模型能捕捉非线性和变量交互。
+- 在作者设定的损失假设下，五层网络选出的 20,000 笔贷款组合一年损失比线性模型组合低 46%。
+- 这是超大规模美国抵押贷款和模拟投资组合结果，不是一般消费者贷款申请，也没有计入可解释性、公平性或监管部署成本。
 
 ### 当前动作
 
-直接在 topic sentence 后写两句英文：
+写两句：一句报告研究设计和 46% 结果；一句说明这是复杂模型最强的适用情境之一，但不能直接推广到普通信用评分。
 
-1. 一句准确报告 Lessmann 的设计与对当前论点最有用的 finding。
-2. 一句解释它对 `justify` 意味着什么：为什么不能从“平均更准”直接跳到“值得牺牲可解释性”。
+`Using data on ..., Sadhwani et al. (2021) find that ... .`
 
-可以用局部框架，但关键内容由学习者决定：
-
-`Lessmann et al. (2015) compare ... and find ..., although ... .`  
-`This variation suggests that ... rather than ... .`
+`This provides a strong case for complex models when ..., although ... .`
 
 <!-- student-os:learning-log:start -->
 
@@ -276,5 +281,29 @@ student-os:mentor-brief:end -->
 - **当前 skill-map 位置**：从真实试卷的 `question reading` 重新开始；旧 essay 的 Khandani 句子不继续。
 - **单一下一动作**：在 Climate Change 模拟记录中完成 orientation，并只分析 essay question 的 command、核心判断关系和待定义概念。
 - **internal continuation decision**：在三文本 essay 完成、整篇 revision 和 submission check 前，不恢复本 credit-scoring essay；不并行发题。
+
+### 2026-08-20 11:06 BST
+
+- **学习者输入**：`Khandani et al. (2010) estimate that 6%-25% of potential loss may be brought by machine learning methods , but this figure depends on more generate trading data and assumption of cost which set by the authors, suggesting that can not all reason in complex model.`
+- **AI teaching/feedback**：学习者正确选择了“经济收益 → 数据/假设限制 → 不能全归因于模型复杂度”的论证关系，但英文 `loss may be brought by machine learning` 把来源含义反转为“机器学习造成损失”。直接修正为“使用预测削减高风险账户额度，在作者模拟假设下可能节约总损失的 6%–25%”；并把 `trading data` 修为 `transaction data`、把模糊的归因表达修为 `not all of the benefit can be attributed to model complexity`。由于本记录已在 2026-08-19 明确暂停，本轮只提供反馈，不继续 P1。
+- **当前 skill-map 位置**：暂停的 credit-scoring P1，Khandani evidence/evaluation 已得到一次 guided 修正；当前 active chain 仍是 Climate Change 三文本 guided simulation。
+- **单一下一动作**：确认是否明确取消/暂停 Climate Change 模拟并恢复 credit-scoring assignment。
+- **internal continuation decision**：未收到明确路线变更前，不把修正版加入 paused working draft，也不发 P1 的下一句；若恢复则从 P1 段尾判断继续，若不恢复则回到 Climate Change 当前阶段。
+
+### 2026-08-20 11:13 BST
+
+- **学习者输入**：`不不不这俩不冲突其实,因为我每天都有上课的专门的时间来写2000字论文的草稿,这个时间干不了别的,这俩能够同时推进的,所以该记录就记录.然后把咱俩写完的草稿及时记录,我后面要拿这个交作业的`
+- **AI teaching/feedback**：接受并落实新的并行边界：Climate Change 三文本模拟负责完整流程训练；credit-scoring 正式作业在每天专属课堂/草稿时间独立推进。恢复本记录为 active，并把已修正的 Khandani 两句写入 working draft。明确以后每次修正完成的 assignment 句子或段落立即保存，working draft 是后续提交文本，不只是教学示例。
+- **当前 skill-map 位置**：Body paragraph 1 已完成 topic sentence、Lessmann evidence/evaluation 与 Khandani evidence/limitation；当前缺 closing evaluation。
+- **单一下一动作**：写两句 P1 收尾：先承认小幅提升对大型贷款机构也可能重要，再给出只有稳定且现实可用的收益才足以抵偿可解释性下降的判断。
+- **internal continuation decision**：收到后直接纠正 source meaning 和小语法并写入 working draft；若两句完成 paragraph job，则关闭 anchor paragraph task 并进入 P2，不把 Climate Change 模拟状态算入本作业。
+
+### 2026-08-20 11:28 BST
+
+- **学习者输入**：`Although small rises may have economic values for big loan institutions, only the income is stable and suffered from realistic cost challenge can cover the decline of reasonablity.`
+- **AI teaching/feedback**：反方承认与条件性判断均出现，P1 的论证功能成立。直接修正会改变题目含义的词：`small rises` → `modest predictive improvement`，`income` → `predictive gain`，`realistic cost challenge` → `under realistic cost assumptions`，`decline of reasonability` → `reduced interpretability`；同时拆为两句，使 concession 与 paragraph judgment 清楚分开。修正文本已保存到 working draft。
+- **当前 skill-map 位置**：Body paragraph 1 的 claim–evidence–evaluation 链完成，anchor paragraph canonical task 于 2026-08-20 关闭；现在进入 Body paragraph 2 的 Sadhwani evidence。
+- **单一下一动作**：根据直接显示的 Sadhwani 信息写两句：研究设计与 46% 结果，以及为什么这只构成超大、强非线性抵押贷款环境中的强案例，不能自动推广。
+- **internal continuation decision**：收到后先检查 46% 的 ownership、portfolio scope、loss assumptions 和 generalisation；小语法直接修正并保存。关系成立后加入 Bracke 的较小增益作为对照，继续完成 P2。
 
 <!-- student-os:learning-log:end -->
