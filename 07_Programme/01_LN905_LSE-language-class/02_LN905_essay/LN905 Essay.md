@@ -47,7 +47,7 @@ kind: multi-stage-project
 - [x] LN905 Essay｜按作业要求修订并完成 detailed essay plan 内容 #student-os/task ⏳ 2026-08-15 ✅ 2026-08-15
 - [x] LN905 Essay｜上传 detailed essay plan 并检查 Moodle submission status #student-os/task ⏳ 2026-08-15 ✅ 2026-08-15
 - [x] LN905 Essay｜把 detailed plan 转成 first draft 的 section skeleton 与 2,000 词预算 #student-os/task ⏳ 2026-08-18 ✅ 2026-08-18
-- [ ] LN905 Essay｜写出一个 anchor body paragraph，验证 claim–evidence–evaluation 链 #student-os/task ⏳ 2026-08-19
+- [ ] LN905 Essay｜写出一个 anchor body paragraph，验证 claim–evidence–evaluation 链 #student-os/task
 - [ ] LN905 Essay｜完成 first draft 前半部分正文 #student-os/task ⏳ 2026-08-22
 - [ ] LN905 Essay｜完成 first draft 后半部分正文、introduction 与 conclusion #student-os/task ⏳ 2026-08-22
 - [ ] LN905 Essay｜通读修订 argument、source accuracy、cohesion 与 recurring language errors #student-os/task ⏳ 2026-08-22
