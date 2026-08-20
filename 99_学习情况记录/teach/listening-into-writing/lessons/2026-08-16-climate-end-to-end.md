@@ -283,4 +283,13 @@ selective repair 后，每轮只给一个约 5–10 分钟的有意义动作：�
 - 本轮唯一下一动作：learner 先从 `C+E` 或 `D+E` 中选定 P2 证据对，再使用 `This finding suggests/indicates that ... may/could ...` 或 `On the basis of this finding, it may/could be argued that ...` 自行写一句由 E 支撑的英文 claim；不提供完成句。
 - continuation decision：若证据对同时覆盖 buffering/tipping 且英文 claim 保留 E 的概率、范围和阈值不确定性，则记为 AW-17/LEX-01 的 guided use，不再增加规划回合，下一轮直接进入完整 200–400 词初稿；若仍扩大 certainty/scope，给一次简短对比后也进入完整初稿。
 
+### 2026-08-20 17:18 BST
+
+- 学习者原始输入：`C+E This finding suggests that with the rising of global temperature, the tipping points crisis are more likely to happen.`
+- 助教教学/反馈：`C+E` 现在分别覆盖 buffering-capacity decline 与 tipping-point risk，P2 的 evidence composition 可用。句子使用了已提示的 `This finding suggests that` 和概率表达 `more likely`，没有写成确定崩溃；但将有限 finding（16 个气候调节系统中 5 个很可能在约 1.5°C 越界，精确阈值不确定）概括成了笼统的 `the tipping points crisis`，遗失对象范围和关键阈值。依约不再要求局部重写，用一次对比固定：`tipping-point crises are more likely` 过于笼统；可靠的 proposition core 是 `some key climate-regulating systems may cross tipping points at around 1.5°C`。`with the rising of` 与主谓一致属于可在整篇反馈中批量处理的语言问题，不在初稿前逐句纠正。
+- 当前端到端节点：finding/claim 校准完成 → 完整 200–400 词 critical-summary 初稿。
+- 本轮唯一下一动作：learner 看着当轮完整 source/plan card，一次写完并贴回 200–400 词英文初稿；不逐段发送，不先打磨局部句子。
+- continuation decision：收到完整初稿后，才统一核验 source accuracy、coverage、organization、evaluation、completion 和 recurring language；只立即拦截会改变 ownership/certainty/scope/causality/evidence relationship 的问题，然后最多要求一次整篇 revision。
+- 本轮即时提示/观察证据：AW-17-C01/LEX-01-C01 为 prompted guided use；learner 能用 `suggests` 与概率表达避免确定化，但 AW-15 的 population/system scope 仍需 repair，不记为 independent evidence。
+
 <!-- student-os:learning-log:end -->
