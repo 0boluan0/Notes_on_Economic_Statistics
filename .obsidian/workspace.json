@@ -18,15 +18,27 @@
             }
           },
           {
-            "id": "9d6d698e84980004",
+            "id": "2a57a409b927a6bd",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-4-Climate-Change/Thinking about climate change look up and look around.pdf"
+                "file": "99_学习情况记录/2026-08-20——Thu.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-file-text",
-              "title": "Thinking about climate change look up and look around"
+              "icon": "lucide-file",
+              "title": "2026-08-20——Thu"
             }
           }
         ],
@@ -79,7 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 370.0171928405762
+    "width": 242.02500534057617
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -310,10 +322,11 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "9d6d698e84980004",
+  "active": "2a57a409b927a6bd",
   "lastOpenFiles": [
-    "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Academic Interaction.pdf",
+    "00_inbox/随手记.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-4-Climate-Change/Academic Interaction - Climate Change.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Academic Interaction.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-4-Climate-Change/Thinking about climate change look up and look around.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Reading/Topic Reading.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Reading/Climate Change Text - Lewandowski - Climate Change Disinformation and how to Combat it.pdf",
@@ -346,8 +359,6 @@
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/PRON-02-C01 - schwa-is-the-common-short-vowel-in-unstressed-syllables.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/PRON-01-C05 - distinguish-e-and.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/PRON-01-C04 - l-and-r-require-different-tongue-positions.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/PRON-01-C03 - as-in-think-as-in-this.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Instructions for Examiners.pdf",
     "tmp/pdfs/final-4.png",
     "tmp/pdfs/final-3.png",
     "tmp/pdfs/final-2.png",
