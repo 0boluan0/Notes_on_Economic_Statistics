@@ -19,7 +19,7 @@ neath_sync: synced
 
 [[99_学习情况记录/teach/LN905 Skill Bank/Cards Index|打开 LN905 Skill Cards Index]]
 
-- 当前共 45 张卡：critical-writing 判断 1 张、Academic reporting/argument words 9 张、source use 与 writer voice 10 张、claim strength 3 张、复杂句与 cohesion 8 张、信息焦点与 concise writing 6 张、academic interaction 8 张。
+- 当前共 **275 张卡**。Academic Writing、Paper A/B/C、Academic Interaction、Discussion、Pronunciation 与 Academic Core 的完整目录见 [[99_学习情况记录/teach/LN905 Skill Bank/Cards Index|Cards Index]]；逐课件处置见 [[99_学习情况记录/teach/LN905 Skill Bank/Course Coverage|Course Coverage]]。
 - 每张卡的正面、反面、课件来源、Recall 日期与学习记录都只保存在卡片文件里；本页不复制第二份卡片内容。
 
 卡片只用于真正值得反复调用的内容，不把每个课堂术语或一次性修改都制成卡片。同一知识点只有一张卡；新证据与 Recall 记录追加到原卡，不新建同义卡。
@@ -36,27 +36,9 @@ neath_sync: synced
 
 ## 来源覆盖
 
-完整文件清单由 [[07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents|LN905 PDF Contents]] 保存；这里记录每组已学材料的提取结果，不按页码复制技能。
+完整文件清单由 [[07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents|LN905 PDF Contents]] 保存；本次逐文件审计与课程重建见 [[99_学习情况记录/teach/LN905 Skill Bank/Course Coverage|LN905 Course Coverage]]。本页只保留能力状态，不复制卡片或课件。
 
-覆盖继承规则：清单中位于下列材料组内的每个文件都继承该行的“合并/排除/未激活”结果；今后 Moodle 新出现、尚未进入清单或无法判断是否已上课的文件保持待核验，不自动当作已学。
-
-| 材料组 | 覆盖结果 | 处理 |
-|---|---|---|
-| Assessment Information 与 Paper A/B/C、Assignment marking criteria | 已提取任务约束、评分维度与 band 分水岭 | 合并到 `PA`、`PB`、`PC`、`AW` |
-| Academic Writing Weeks 1–3 全部课件、workbook、sample essay | 已提取题目、thesis、结构、段落、Toulmin、source use、synthesis、voice、cohesion、revision | 合并到 `AW-01`–`AW-16` |
-| Paper A introduction、AI workbook、Social Media/Gender practice 与 feedback | 已提取 selective notes、meaning/evidence map、summary、evaluation | 合并到 `PA-01`–`PA-05` |
-| Paper B introduction、AI workbook、Social Media/Gender extracts 与 feedback | 已提取 question-led reading、source map、synthesis、citation | 合并到 `PB-01`–`PB-05` |
-| Paper C presentation、discussion functions、Part 3、marking criteria | 已提取 presentation、contribution、floor、response | 合并到 `PC-01`–`PC-04` |
-| Academic Interaction core、Gender、Demographics | 已提取 roles、co-construction、evaluation 与 speaking-to-writing | 合并到 `AI-01`–`AI-03` |
-| Discussion & Debate Weeks 1–3 | 功能语言已提取；人物游戏、challenge cards、balloon/pyramid 场景本身不作为技能 | 合并到 `DISC-01`–`DISC-02`；课堂游戏明确排除 |
-| Pronunciation sessions、transcript、TH materials 与 H5P | 已提取 intelligibility 所需的音位、schwa、connected speech、stress/chunking | 合并到 `PRON-01`–`PRON-03` |
-| Social Media、Gender、Demographics topic input/listening/reading | 可迁移主题词已提取；逐题答案和一次性事实不作为技能 | 合并到 `LEX-02`–`LEX-04` 和词汇同步区 |
-| Week 4 Academic Writing · Lesson 1 Making Claims | 已核验并提取 finding → claim、hedging/boosting、scope calibration | 合并到 `AW-17` |
-| Week 4 Academic Writing · Lessons 2–4 | 2026-08-20 按用户确认的“课件里教的内容”完成回溯；已提取 passive focus、nominalisation、concise writing | 合并到 `AW-18`–`AW-20`；只记为 `new`，卡片初始化不算掌握证据 |
-| Week 4 Climate Change topic input | 用户已确认属于 Week 5 考试范围 | 预载 `LEX-05` 与词汇；其他未授课技能不激活 |
-| Everyday English、课堂行政、课程游戏规则 | 与学术考核迁移无直接关系 | 明确排除 |
-| *Academic Vocabulary in Use* | 仅作参考书 | 不批量导入；只收课堂实际教授、反复出现或真实输出需要的词 |
-| LN905 Essay 原始论文 | 是练习/写作证据，不是技能课件 | 不从论文主题批量制造 skill；真实输出可作为 callback 证据 |
+本轮核验覆盖 Weeks 1–4 的 Assessment、Academic Writing、Paper A/B/C、Academic Interaction、Discussion、Pronunciation 与四个 topic streams。每一份材料在 Course Coverage 中都有单独一行，明确标为“制卡”“进入词库/材料证据”“只作课堂示范”或“排除”。今后出现的新文件保持待核验，不能靠所在文件夹自动算作已学。
 
 ## Academic Writing
 
@@ -282,6 +264,39 @@ neath_sync: synced
 - 适用：Paper A/B、Assignment；whole-output revision。
 - 证据/Callback：2026-08-20 完成课件回溯并建立 `AW-20` 卡片；尚无主动回忆或真实输出证据，状态保持 `new`。
 - 下一观察：下一次整篇修改时只处理反复出现且影响清晰度的冗余，不在首稿逐句纠缠。
+
+### AW-21 · Paraphrase 与 quotation
+- 状态：`new`
+- 触发/功能：把 source proposition 准确转成自己的句法，或在 exact wording 本身重要时选择 direct quotation。
+- 为什么：paraphrase 不是“换几个同义词”；它必须同时展示理解、保留意义边界并避免复制原句结构。
+- 动作/框架：先理解 proposition → 离开原句重组 syntax 与 information order → 保留必要 technical terms → 复核 ownership、certainty、scope、causality；definition/precise/unique wording 才考虑 quote。
+- 边界：word-form change、逐词 synonym substitution、改变 reporting strength 或把 source syntax 原样搬走都不合格；quotation 不能替代自己的解释。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week 2 Lesson 3.pdf|Week 2 Lesson 3]]；[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week Two Lessons One and Two.pdf|Week Two Lessons One and Two]]。
+- 适用：Paper A/B、Assignment；source transformation、whole-output review。
+- 证据/Callback：课程已教；现有 Friday outputs 显示能够大体改写，但 source certainty/scope 偶有漂移。系统内四步显式闭环尚未完成。
+- 下一观察：下一份 guided Paper A/B 在 source proposition 进入 prose 前即时提示四项 fidelity 检查；timed output 不提示。
+
+### AW-22 · Synthesis 与 source relations
+- 状态：`new`
+- 触发/功能：把来源按 agreement、difference、complementarity、sequence、qualification 或 tension 组织进 writer argument。
+- 为什么：使用三份来源不等于 synthesis；阅卷人要看见它们如何共同支持、限制或改变你的答案。
+- 动作/框架：先写 writer proposition → 标明每个 source 的 evidence role → 写清 source relation → 用 writer inference 收束；必要时交替 integral/non-integral citations 或 grouped citations。
+- 边界：不能为了合并而抹平来源差异，也不能把不同 level/method 误判成 contradiction；grouped citation 只用于真正支持同一 proposition 的来源。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-2-Gender/Week Two Lessons One and Two.pdf|Week Two Lessons One and Two]]；[[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading into Writing.pdf|Reading into Writing]]。
+- 适用：Paper B、Assignment；source map、paragraph planning、whole essay。
+- 证据/Callback：教师反馈认可已使用并连接所有来源，但反复要求更清楚说明 sources 如何共同工作；状态保持 `new`。
+- 下一观察：下一份 Paper B map 中显式写 proposition-level relation，再在整段 prose 中即时提示可用 synthesis frame。
+
+### AW-23 · Academic style 与 convention
+- 状态：`new`
+- 触发/功能：在不牺牲准确性的前提下保持清楚、正式、一致的 academic register。
+- 为什么：academic style 的核心不是难词或被动堆积，而是读者可以准确判断 claim、source、relation 与 limitation。
+- 动作/框架：准确词优先于 thesaurus → 排除 idiom/cliché/contraction/slang → acronym 首次定义 → active/passive 按信息焦点选择 → precise reference nouns → citation style 一致。
+- 边界：Paper C 的口头语域可使用课程教过的 discussion idioms；Paper A/B/Assignment 不沿用该口语规则。
+- 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/Session 2 - Simon.pdf|Session 2 - Simon]]；[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/Week One Lesson Two.pdf|Week One Lesson Two]]。
+- 适用：Paper A/B、Assignment；drafting、proofreading。
+- 证据/Callback：教师多次认可总体 organisation，但持续指出 grammar、word form、academic word choice 与 informal attribution；状态保持 `new`。
+- 下一观察：整篇 revision 的 language pass 批量处理 recurring patterns；不在首稿为单次 wording 中断主任务。
 
 ## Paper A · Listening into Writing
 
@@ -608,6 +623,7 @@ neath_sync: synced
 4. 每日开场与 shutdown 各只出 1 道 2–3 分钟的主动回忆：优先当日新学/实际用到的卡，否则选最早到期的卡。换一个四大考试话题中的新语境，不只要求背原句。
 5. 先让学习者作答，再显示卡片反面并给一次简短对照。Recall 表现追加到卡片并更新下次日期，但不自动改变上面的技能 mastery 状态。
 6. Recall 是 Today 笔记内的一步，不是 canonical task，不建 checkbox，不建日历时间块，也不复活旧的独立 `+1/+3/+7` 复习队列。
+7. 课件回溯新建的卡先处于 `queued`，按每日最多开场 1 张、shutdown 1 张的容量错峰进入；“被课件教过”和“已经主动回忆/能独立使用”严格分开，不能因批量入库制造虚假掌握。
 
 ## 词汇同步区
 
