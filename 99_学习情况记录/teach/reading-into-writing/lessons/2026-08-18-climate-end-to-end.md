@@ -15,7 +15,7 @@ mode: guided-end-to-end
 target_words: 600
 scheduled: false
 started_on: 2026-08-19
-current_stage: source-1-question-led-reading
+current_stage: source-1-first-pass-skimming
 ---
 
 # Climate Change｜Paper B guided end-to-end
@@ -154,6 +154,24 @@ student-os:mentor-brief:end -->
 - **当前端到端节点**：Extract 1 question-led reading。
 - **本轮唯一下一动作**：打开 source pack 第 2 页，按五行模板完成 Extract 1 source map；可用中文，并保留原文数字和限定词。
 - **internal continuation decision**：若学习者保留 `estimated / roughly 90% probability / between-country / 1961–2010` 等 certainty、scope 和 period 限定，并正确判断该文主要建立 inequality baseline，写入 map 后进入 Extract 2；若扭曲 certainty、scope 或 adaptation role，显示对应原句并修正一次后继续。
+
+### 2026-08-20 16:43 BST
+
+- **学习者输入**：`不是你这extract1也不是带我读啊`
+- **AI teaching/feedback**：接受纠正。上一轮只给了读完后的五项产出，没有显示原文、拆句或示范如何判断信息用途，因此不算手把手带读。改为直接显示 Extract 1 第一段，解释 `convergence`、`anthropogenic warming`、`counterfactual`，并逐句标出背景、研究范围和比较逻辑；暂不要求整篇 source map。
+- **当前技能图位置**：Extract 1 第一遍 question-led reading——先确认研究问题与证据边界，再进入方法和结果。
+- **本轮唯一下一动作**：学习者根据已经拆解的第一段，只写一句中文页边笔记，必须包含研究对象、1961–2010 和现实世界/无人为变暖世界的比较。
+- **internal continuation decision**：若页边笔记保留时间、between-country/national economic growth 范围和 counterfactual 比较，立即带读第二、三段并区分 method 与 result；若遗漏关键边界，直接指出一处并给出短语框架后继续，不要求重读整段。
+- **即时提示或无提示观察**：本轮为 guided；即时解释三个阅读关键词，并给页边笔记的三个信息槽，不提供完成句。
+
+### 2026-08-20 16:47 BST
+
+- **学习者输入**：`太具体了,你直接开始给我答案了,你现在是老师的话,不应该教我第一步是速读然后扫关键信息吗?`
+- **AI teaching/feedback**：确认教学顺序再次过度介入：逐句解释虽然显示了原文，却替学习者完成了第一遍阅读判断。把当前节点退回 Extract 1 的 first-pass reading，并明确三层顺序：先 `skim` 速读结构和大意，再 `scan` 扫描与题目有关的词及信号，最后才 `close read` 精读证据、范围和限制。
+- **当前技能图位置**：Extract 1 first-pass skimming；尚未开始提取 evidence，也未形成 source map。
+- **本轮唯一下一动作**：用 90 秒只看标题、每段首句和末段，不查词、不读数字；读后仅报告这篇来源大致研究什么，以及最值得回看的是哪两段。
+- **internal continuation decision**：先检查学习者是否能从结构定位文章主旨和候选结果/限制段；定位可用后再教 scanning，不纠正措辞、不提前揭示具体研究结论。若定位困难，示范如何从一个段首句判断段落功能，然后继续同一轮扫描。
+- **即时提示或无提示观察**：本轮为 guided；提供 `skim → scan → close read` 的阅读顺序和 90 秒操作规则，不解释 Extract 1 的具体内容。
 <!-- student-os:learning-log:end -->
 
 ## 课程依据与材料来源

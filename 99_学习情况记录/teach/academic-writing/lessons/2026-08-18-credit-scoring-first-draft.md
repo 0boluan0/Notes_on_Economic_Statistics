@@ -11,7 +11,7 @@ status: "active"
 course: "LN905"
 record_type: "guided-assignment-draft"
 phase: "teaching-practice"
-current_stage: "body-paragraph-2-sadhwani-evidence"
+current_stage: "body-paragraph-2-bracke-contrast"
 canonical_task: "[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay#执行清单]]"
 draft_source: "[[00_inbox/LN905-essay-structure]]"
 ---
@@ -185,20 +185,24 @@ student-os:mentor-brief:end -->
 
 > Complex models are most useful when the dataset is very large and the relationships between variables are strongly nonlinear, but these situations may not represent all consumer credit scoring.
 
-**当前只需要的 Sadhwani et al. (2021) 信息**：
+**已使用的 Sadhwani et al. (2021) 信息**：
 
 - 超过 1.2 亿笔美国抵押贷款、约 35 亿条 monthly observations，并按时间划分 train/validation/test。
 - 比较多层神经网络与零隐藏层 logistic model；深度模型能捕捉非线性和变量交互。
 - 在作者设定的损失假设下，五层网络选出的 20,000 笔贷款组合一年损失比线性模型组合低 46%。
 - 这是超大规模美国抵押贷款和模拟投资组合结果，不是一般消费者贷款申请，也没有计入可解释性、公平性或监管部署成本。
 
-### 当前动作
+### 当前动作｜Bracke 对照
 
-写两句：一句报告研究设计和 46% 结果；一句说明这是复杂模型最强的适用情境之一，但不能直接推广到普通信用评分。
+- Bracke et al. (2019) 使用约 583 万笔英国抵押贷款，比较 gradient tree boosting 与 logistic regression。
+- ROC-AUC 约从 0.78 提升到 0.81；precision-recall AUC 约从 0.16 提升到 0.19，增益比 Sadhwani 的组合结果温和。
+- 训练与测试使用随机切分，不是真正的 out-of-time test；研究仍限于 mortgages。
 
-`Using data on ..., Sadhwani et al. (2021) find that ... .`
+现在写两句：第一句用 `In contrast` 报告 Bracke 的较小增益；第二句综合两项研究，判断复杂模型的收益依赖数据规模和非线性程度，而不是普遍存在。
 
-`This provides a strong case for complex models when ..., although ... .`
+`In contrast, Bracke et al. (2019) report ... .`
+
+第二句可用 `Taken together, ... suggest that ...`；也可调用已记录的 `X alone does not justify Y`，但不要机械重复 Lessmann 原句。
 
 <!-- student-os:learning-log:start -->
 
@@ -305,5 +309,13 @@ student-os:mentor-brief:end -->
 - **当前 skill-map 位置**：Body paragraph 1 的 claim–evidence–evaluation 链完成，anchor paragraph canonical task 于 2026-08-20 关闭；现在进入 Body paragraph 2 的 Sadhwani evidence。
 - **单一下一动作**：根据直接显示的 Sadhwani 信息写两句：研究设计与 46% 结果，以及为什么这只构成超大、强非线性抵押贷款环境中的强案例，不能自动推广。
 - **internal continuation decision**：收到后先检查 46% 的 ownership、portfolio scope、loss assumptions 和 generalisation；小语法直接修正并保存。关系成立后加入 Bracke 的较小增益作为对照，继续完成 P2。
+
+### 2026-08-20 16:38 BST
+
+- **学习者输入**：`Using data on over 120 million American mortgage, Sadhwani et al. (2021) find that 20000 loan combination selected by the deep learning models have 46%declined on year loss comparing with the linear models. This provides a strong case for complex models when facing extremely big mortgage , although it can not be simply applied in ordinary credit scoring.`
+- **AI teaching/feedback**：研究规模、46%结果、强适用情境和不能直接推广四项关系均正确。直接修正来源归属与搭配：`American mortgage` → `US mortgages`；`20,000 loan combination` → `a portfolio of 20,000 loans`；明确是五层神经网络选择的组合相对线性模型组合具有 `46% lower one-year losses`，并保留 `under the authors' loss assumptions`；把 `cannot be simply applied` 改为 `cannot be directly generalised`。修正后的两句已保存到 working draft。
+- **当前 skill-map 位置**：Body paragraph 2 的 Sadhwani strong-case evidence/evaluation 已完成；现在加入 Bracke 的较小预测增益，建立跨来源对照与综合判断。
+- **单一下一动作**：写两句 Bracke：用 `In contrast` 报告 ROC-AUC 0.78→0.81 与 precision-recall AUC 0.16→0.19，再用 `Taken together` 或 `X alone does not justify Y` 综合两项研究。
+- **internal continuation decision**：收到后检查 metric、magnitude、mortgage scope 与 random-split limitation；小语法直接修正并保存。若对照与综合关系成立，就补 P2 closing judgment 并完成本段。
 
 <!-- student-os:learning-log:end -->

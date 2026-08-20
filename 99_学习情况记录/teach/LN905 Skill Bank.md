@@ -19,7 +19,7 @@ neath_sync: synced
 
 [[99_学习情况记录/teach/LN905 Skill Bank/Cards Index|打开 LN905 Skill Cards Index]]
 
-- 当前共 **275 张卡**。Academic Writing、Paper A/B/C、Academic Interaction、Discussion、Pronunciation 与 Academic Core 的完整目录见 [[99_学习情况记录/teach/LN905 Skill Bank/Cards Index|Cards Index]]；逐课件处置见 [[99_学习情况记录/teach/LN905 Skill Bank/Course Coverage|Course Coverage]]。
+- 当前共 **276 张卡**。Academic Writing、Paper A/B/C、Academic Interaction、Discussion、Pronunciation 与 Academic Core 的完整目录见 [[99_学习情况记录/teach/LN905 Skill Bank/Cards Index|Cards Index]]；逐课件处置见 [[99_学习情况记录/teach/LN905 Skill Bank/Course Coverage|Course Coverage]]。
 - 每张卡的正面、反面、课件来源、Recall 日期与学习记录都只保存在卡片文件里；本页不复制第二份卡片内容。
 
 卡片只用于真正值得反复调用的内容，不把每个课堂术语或一次性修改都制成卡片。同一知识点只有一张卡；新证据与 Recall 记录追加到原卡，不新建同义卡。

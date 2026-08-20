@@ -32,3 +32,4 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
+- 2026-08-20｜Credit-scoring P2 guided application｜在给定 `..., although ...` 框架后，学习者正确把 strong case 与 generalisability limitation 放在同一句中；语言经直接修正后写入草稿。记录为 `guided`。

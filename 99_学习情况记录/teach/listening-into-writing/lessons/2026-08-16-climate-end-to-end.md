@@ -275,4 +275,12 @@ selective repair 后，每轮只给一个约 5–10 分钟的有意义动作：�
 - 本轮唯一下一动作：从常驻 source card 中选择 5 个 evidence units，并按 `P1 一项 / P2 两项 / P3 两项` 分配；只写证据名称与它的作用（支持紧迫性、说明机制、限定范围、支持回应或提供评价依据），不写英文句子。
 - continuation decision：收到 evidence allocation 后，立即显式教授 finding 与 claim 的区别，并让 learner 对当前证据自行选择与强度/scope 匹配的 hedge/booster；随后要求完整 200–400 词初稿，不再做局部规划回合。
 
+### 2026-08-20 16:57 BST
+
+- 学习者原始输入：`P1 A P2 cd P3 G H2`
+- 助教教学/反馈：P1 选 A（变暖速率由每十年 0.18°C 加速至 0.26°C），能支撑“风险为何紧迫”；P3 选 G（可能 overshoot 且需保护自然系统）+ H2（实施证据少于风险诊断），能同时承担回应与有依据的评价。P2 的 C（陆地/海洋吸收约 53% CO₂，部分亚马孙由 sink 转 source）和 D（海洋吸收约 90% 热量，但 2023 异常原因仍不确定）都属于 buffering 证据，没有支撑该段承诺的 tipping-point risk；因此 P2 需在 C 或 D 中保留一项，并加入 E（16 个气候调节 tipping elements 中 5 个很可能在约 1.5°C 越界，精确阈值不确定）。显式教授 prose 前的区别：`finding` 是来源报告的有边界结果/观察；`claim` 是写作者根据 finding 推出的段落判断，不得强于 finding。由于 E 含 `likely` 且阈值不确定，应选 `suggests/indicates` 与 `may/could` 一类 hedge，不应用 `proves/clearly shows/will` 类 booster 把概率与范围扩大。
+- 当前端到端节点：evidence allocation 修正 → finding/claim 区分与 claim-strength 选择。
+- 本轮唯一下一动作：learner 先从 `C+E` 或 `D+E` 中选定 P2 证据对，再使用 `This finding suggests/indicates that ... may/could ...` 或 `On the basis of this finding, it may/could be argued that ...` 自行写一句由 E 支撑的英文 claim；不提供完成句。
+- continuation decision：若证据对同时覆盖 buffering/tipping 且英文 claim 保留 E 的概率、范围和阈值不确定性，则记为 AW-17/LEX-01 的 guided use，不再增加规划回合，下一轮直接进入完整 200–400 词初稿；若仍扩大 certainty/scope，给一次简短对比后也进入完整初稿。
+
 <!-- student-os:learning-log:end -->

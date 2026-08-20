@@ -16,6 +16,8 @@ Although even a modest predictive improvement may have substantial economic valu
 
 Complex models are most useful when the dataset is very large and the relationships between variables are strongly nonlinear, but these situations may not represent all consumer credit scoring.
 
+Using data on more than 120 million US mortgages, Sadhwani et al. (2021) found that a portfolio of 20,000 loans selected by a five-layer neural network had 46% lower one-year losses than a portfolio selected by the linear model under the authors' loss assumptions. This provides a strong case for complex models when datasets are extremely large and relationships are strongly nonlinear, although the result cannot be directly generalised to ordinary consumer credit scoring.
+
 Section 2   Can the loss of interpretability be avoided or controlled? Compare complex models with interpretable alternatives and discuss post-hoc explanation.
 
 However, lower interpretability may not always be necessary because some interpretable or hybrid models can also learn nonlinear relationships.

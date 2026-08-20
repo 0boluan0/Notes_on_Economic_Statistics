@@ -2,7 +2,7 @@
 student_os: ln905-skill-card-index
 title: LN905 Skill Cards Index
 last_rebuilt: 2026-08-20
-card_count: 275
+card_count: 276
 ---
 
 # LN905 Skill Cards Index
@@ -10,7 +10,7 @@ card_count: 275
 > [!summary] 用法
 > 这里是卡片盒目录，不是第二套技能状态。正面用于主动回忆；反面解释功能、适用条件、意义边界、例子和课件来源。学习与 Recall 证据只追加在原卡。完整课程审计见 [[99_学习情况记录/teach/LN905 Skill Bank/Course Coverage|LN905 Course Coverage]]。
 
-共 **275** 张。课件回溯初始化只表示“课程教过且已入库”，不表示已经掌握。
+共 **276** 张。课件回溯初始化只表示“课程教过且已入库”，不表示已经掌握。
 
 ## Academic Writing
 
@@ -52,6 +52,7 @@ card_count: 275
 - `AW-10-C01` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-10-C01 - as-author-points-out|As Author argues / points out, X.]] · `AW-10`
 - `AW-10-C02` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-10-C02 - writer-led-claim-with-citation|[Writer-led claim] (Author, Year).]] · `AW-08`, `AW-10`
 - `AW-10-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-10-C03 - this-finding-supports-previous-research|This finding supports previous research by Author, who found that X.]] · `AW-10`, `AW-13`
+- `AW-10-C04` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-10-C04 - using-data-on-X-author-finds-Y|Using data on X, Author (Year) found that Y.]] · `AW-10`, `AW-17`
 - `AW-11-C01` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-C01 - convincing-persuasive-rigorous-comprehensive|convincing / persuasive / rigorous / comprehensive]] · `AW-11`
 - `AW-11-C02` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-C02 - overlooks-or-fails-to-take-into-account|X overlooks / fails to take into account Y.]] · `AW-11`
 - `AW-11-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-C03 - in-claiming-X-author-fails-to-Y|In claiming that X, Author fails to Y.]] · `AW-11`

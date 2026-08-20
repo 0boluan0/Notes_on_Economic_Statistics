@@ -33,6 +33,6 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
-
+- 2026-08-20｜Credit-scoring P2 guided application｜在给定 `provides a strong case for` 句框后，学习者将 Sadhwani 作为复杂模型在超大抵押贷款数据中的强案例，并同时限制推广范围。记录为 `guided`；尚未独立调用。
 
 

@@ -32,3 +32,4 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
+- 2026-08-20｜Credit-scoring P2 guided application｜在已提示“不能直接推广”的功能后，学习者主动写出 `cannot be simply applied in ordinary credit scoring`；scope 限制正确，AI 将搭配修为 `cannot be directly generalised to ordinary consumer credit scoring`。记录为 `guided`，不算独立调用。
