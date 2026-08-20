@@ -24,7 +24,7 @@ last_result:
 >
 > **边界**：评价时要区分 anecdote、research data 与 general claim。
 >
-> **例句/例子**：One employee’s experience illustrates workplace bias but cannot establish its prevalence.
+> **例句/例子**：One employee’s account of gender bias illustrates workplace inequality but cannot establish its prevalence.
 >
 > **可替换形式或操作提示**：可写 `This example illustrates..., although it does not establish...`。
 >
@@ -33,6 +33,5 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
-
 
 

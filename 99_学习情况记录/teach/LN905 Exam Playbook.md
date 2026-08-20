@@ -13,8 +13,8 @@ source_checked: 2026-08-11
 > [!summary] 这门训练最终要让我会什么
 > Listening 和 Reading 只是两种获取信息的入口。信息被整理成可用的 meaning/evidence map 后，后面的选材、判断、结构、论证、英文实现和检查共用同一棵 Writing 技能树。每天依据最近的真实输出选择当前瓶颈，不固定轮流练两个入口，也不能把练习变成无限纠正同一句话。
 
-> [!important] 当前考试沙盒与训练单位
-> 新的 learner-facing 材料、示范、callback 和模拟只使用 **Social Media、Gender、Demographics、Climate Change**。每个普通练习都是一条完整 Paper A 或 Paper B 链，可以跨天，但从输入一直走到完整成品和整篇反馈/修订后才完成；map、plan、句型和 evaluation 只是在同一条链中的教学节点，不再单独结算。
+> [!important] 最终考试完整范围与训练单位
+> 最终考试的 topic 只有 **Social Media、Gender、Demographics、Climate Change**；这是穷尽列表，不是训练沙盒或示例集。新的 learner-facing 材料、示范、recall、callback 和模拟只能使用这四个 topic。每个普通练习都是一条完整 Paper A 或 Paper B 链，可以跨天，但从输入一直走到完整成品和整篇反馈/修订后才完成；map、plan、句型和 evaluation 只是在同一条链中的教学节点，不再单独结算。
 
 ## 课件定义的终点
 

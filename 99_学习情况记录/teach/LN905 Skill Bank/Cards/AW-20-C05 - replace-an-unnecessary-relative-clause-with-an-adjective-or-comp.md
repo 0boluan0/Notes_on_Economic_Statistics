@@ -24,7 +24,7 @@ last_result:
 >
 > **边界**：若 relative clause 有重要 qualification，不能为短而删。
 >
-> **例句/例子**：`workers who are based in offices` → `office-based workers`。
+> **例句/例子**：`climate policies that are based on market incentives` → `market-based climate policies`。
 >
 > **可替换形式或操作提示**：保持可读性，避免过密 noun cluster。
 >
@@ -33,6 +33,5 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
-
 
 

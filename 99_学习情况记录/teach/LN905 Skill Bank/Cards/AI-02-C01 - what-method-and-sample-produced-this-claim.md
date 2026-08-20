@@ -24,7 +24,7 @@ last_result:
 >
 > **边界**：不能只看结论是否符合直觉。
 >
-> **例句/例子**：A survey of one university cannot automatically represent all adults.
+> **例句/例子**：A social-media survey conducted at one university cannot automatically represent all adults.
 >
 > **可替换形式或操作提示**：继续问 measurement 与 comparison。
 >
@@ -33,6 +33,5 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
-
 
 

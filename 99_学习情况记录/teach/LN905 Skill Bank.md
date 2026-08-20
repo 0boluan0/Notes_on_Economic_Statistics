@@ -13,7 +13,7 @@ neath_sync: synced
 > 这份目录与它链接的 `LN905 Skill Bank/Cards/` 共同构成 LN905 唯一的跨会话技能状态源。本文件保留能力地图和规则；每个可复用句式、搭配或小型写作判断单独成卡，解释、例句、复习日期和每次表现只写在卡片里。[[99_学习情况记录/学习计划/LN905 Listening and Reading Practice|练习计划]]只保存 canonical tasks。
 
 > [!important] 当前训练约束
-> learner-facing 练习只使用 Social Media、Gender、Demographics、Climate Change。技能仍可分开诊断和记录，但只能在一条 Paper A/B 端到端 unit 内教学、callback 和写回证据；不再为单项技能建立 clinic、短练或独立 checkbox。
+> LN905 最终考试的完整内容范围只有 **Social Media、Gender、Demographics、Climate Change**；这是穷尽列表，不是举例。技能仍可分开诊断和记录，但 learner-facing 的练习、例句、recall、callback 和模拟都只能在这四个 topic 内进行，并且只能在一条 Paper A/B 端到端 unit 内教学和写回证据；不再为单项技能建立 clinic、短练或独立 checkbox。
 
 ## 卡片目录
 

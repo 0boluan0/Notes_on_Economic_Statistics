@@ -24,7 +24,7 @@ last_result:
 >
 > **边界**：不能因 scope limited 就说研究“没用”；应缩小 claim。
 >
-> **例句/例子**：Evidence from middle-class Western workplaces may not generalise to all labour markets.
+> **例句/例子**：Evidence about gender equality from middle-class Western workplaces may not generalise to all labour markets.
 >
 > **可替换形式或操作提示**：`informative but limited in scope`。
 >
@@ -33,6 +33,5 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
-
 
 

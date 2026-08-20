@@ -24,7 +24,7 @@ last_result:
 >
 > **边界**：不要把所有 evidence 归为“personal experience”，也不要把 correlation 当 causation。
 >
-> **例句/例子**：A personal story illustrates privilege; company data may support association; neither alone proves a universal causal effect.
+> **例句/例子**：A personal story illustrates gendered privilege; company data may support an association with equality; neither alone proves a universal causal effect.
 >
 > **可替换形式或操作提示**：先承认每类 evidence 的真实作用，再指出 ceiling。
 >
@@ -33,6 +33,5 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
-
 
 

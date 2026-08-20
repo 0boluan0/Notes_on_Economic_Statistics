@@ -16,7 +16,7 @@ assessment_horizon: 2026-08-21
 
 所有训练都从 [[99_学习情况记录/teach/LN905 Exam Playbook|LN905 考试总纲]] 自上而下安排。Listening 与 Reading 是不同的信息获取入口，但每个 unit 都必须继续走过共同 Writing 树，直到完整应试成品。AI 可在每个节点教学、示范、共同修正并跨天续做；节点只是进度，不是独立任务。
 
-learner-facing 材料、示范、callback 与模拟只使用 **Social Media、Gender、Demographics、Climate Change**。新来源与论证可以变化，但不得引入第五个话题。LN905 Essay 仍按正式题目推进，因为它是课程硬义务；其 credit-scoring 内容不拿来充当普通 LN905 技能练习话题。
+最终考试的完整 topic 范围只有 **Social Media、Gender、Demographics、Climate Change**；这是穷尽列表。learner-facing 材料、示范、recall、callback 与模拟都只能使用这四个 topic，不得引入第五个话题。LN905 Essay 仍按正式题目推进，因为它是课程硬义务；其 credit-scoring 内容不拿来充当普通 LN905 技能练习话题。
 
 ## 两周可观察目标
 

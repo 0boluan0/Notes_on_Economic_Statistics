@@ -24,7 +24,7 @@ last_result:
 >
 > **边界**：相关数据可能不支持所声称的机制。
 >
-> **例句/例子**：Higher profits in more equal companies do not alone show that equality caused the profits.
+> **例句/例子**：Higher profits in more gender-equal companies do not alone show that gender equality caused the profits.
 >
 > **可替换形式或操作提示**：区分 grounds criticism 与 warrant criticism。
 >
@@ -33,6 +33,5 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
-
 
 

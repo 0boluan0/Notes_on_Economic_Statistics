@@ -25,7 +25,7 @@ last_result:
 >
 > **边界**：不能为反对而反对；X 必须可能改变结论。
 >
-> **例句/例子**：`But have we considered how the policy would affect lower-income families?`
+> **例句/例子**：`But have we considered how this climate policy would affect lower-income families?`
 >
 > **可替换形式或操作提示**：`Can I challenge that assumption?`。
 >
@@ -34,6 +34,5 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
-
 
 

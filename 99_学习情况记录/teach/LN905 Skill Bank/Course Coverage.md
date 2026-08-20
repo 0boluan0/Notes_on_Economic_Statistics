@@ -10,6 +10,9 @@ source_count: 116
 > [!summary] 结论
 > Weeks 1–4 并不是只教了少量“万能句”。课程同时训练了四层：**获得信息**（Listening/Reading）、**把信息变成 meaning/evidence map**、**用 writer-led argument 写作**、**在口头 interaction 中清楚表达和共同建构**。本次共核验 116 份相关材料，并把真正可复用的动作和语言重建为 275 张卡。主题事实、课堂活动和技能卡分开保存，避免把卡片盒灌成课件目录。
 
+> [!important] 最终考试内容范围（穷尽列表）
+> 只有 **Social Media、Gender、Demographics、Climate Change** 四个 topic。它们不是四个例子，而是完整范围；之后新建的练习材料、卡片例句、callback、recall 和模拟都必须落在其中一个 topic 内。课件审计表可以保留其他课堂载体或正式 coursework 的历史名称，但它们不得进入最终考试训练。官方 [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Instructions for Examiners.pdf|Instructions for Examiners]] 也明确列出这四个 topic。
+
 ## 课程真正教了什么
 
 ### Week 1 · 从“会写句子”进入“回答学术问题”
@@ -113,7 +116,7 @@ source_count: 116
 | 050 | [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change/Feedback for Week Three.pdf|Feedback for Week Three]] | Paper B | 提取 Week 3 feedback：question parts、source use、organisation、language patterns 与 timed completion。 |
 | 051 | [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/2-minute-presentations/Week One_LN905.pdf|Week One_LN905]] | Paper C | 提取 2-minute Justification/Synthesis/Rebuttal structures 与 claim/evidence/reassert language。 |
 | 052 | [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Discussion Language - 12 Functions.pdf|Discussion Language - 12 Functions]] | Paper C | 提取 12 discussion functions：agree/disagree/clarify/example/challenge/summarise/hedge/invite/complexity/evidence/build/follow-up。 |
-| 053 | [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Instructions for Examiners.pdf|Instructions for Examiners]] | Paper C | 提取 examiner 不主持、30–60 秒 contribution、self-management、develop/respond/include 的正式考试要求。 |
+| 053 | [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Instructions for Examiners.pdf|Instructions for Examiners]] | Paper C | 官方指引明确列出 Social Media、Gender、Demographics、Climate Change 四个 topic；同时提取 examiner 不主持、30–60 秒 contribution、self-management、develop/respond/include 的正式考试要求。 |
 | 054 | [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Practice of Part 3.pdf|Practice of Part 3]] | Paper C | 提取 Part 3 discussion practice 与 24 个有独立功能的口头 idioms；场景题不制卡。 |
 | 055 | [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Practice.pdf|Practice]] | Paper C | presentation/discussion practice 作为应用证据；题目与课堂答案不制卡。 |
 | 056 | [[07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Presentation Guide - Timestamped Transcript.pdf|Presentation Guide - Timestamped Transcript]] | Paper C | 提取 presentation planning、signposting、notes-not-script、pacing、pause 与 audience-facing delivery。 |
