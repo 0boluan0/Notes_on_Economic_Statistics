@@ -44,9 +44,9 @@ end-to-end teaching chain：academic essay 最小模型 → question analysis �
 allowed support：自然中文解释、完整显示当前所需来源信息、关系箭头、局部 sentence frame、对比和协作讨论。AI 不得替学习者静默选择或改写 thesis、paragraph jobs、evidence roles 或完整段落。
 pace contract：快速推进；对会改变 task、source meaning、ownership、certainty、scope 或 causality 的错误立即介入。小语法、拼写和局部措辞由 AI 直接修好并告知学习者，不要求其停下重写。
 source-handling contract：学习者不阅读完整论文。AI 负责从已核验的本地 PDF 和精读笔记中提取并直接教授 source claim、evidence、scope、limitation 与 essay role，不再要求学习者完成审题或文献分析问答。成文前必须显示当前所需的完整来源信息；学习者仍亲自写段落。
-silent callback IDs：AW-12、AW-13；首次完整输出前不向学习者透露 callback ID 或追加检查清单。
+即时提示规则：进入段落成文后，下一句若自然适合 AW-08–AW-13、AW-17 或 LEX-01 中已教/正在教的句式、词汇搭配或写作原则，先说明句子功能、适用理由并给少量可复用选项，再由 learner 自己成句；不得直接代写完整句。提示后的使用只记 `guided`。AW-12、AW-13 的真正无提示观察留给后续独立/限时输出。
 hint ladder：重显题目/当前 paragraph job/完整来源信息 → 指出要判断的 relation → 用不同内容给正反对比 → 给局部 sentence frame → 一次未成功后用简短 model 教清并回到完整段落。
-feedback priority：task/meaning/source accuracy → reasoning/structure/completion → recurring language → isolated wording or grammar。首次完整 draft 前不逐句润色。
+feedback priority：task/meaning/source accuracy → reasoning/structure/completion → recurring language → isolated wording or grammar。首次完整 draft 前不做事后逐句润色，但必须在自然适用的句子动笔前执行即时提示。
 completion evidence：学习者亲自写出 5 个正文段、introduction 和 conclusion，并在整篇 revision 中修复最高影响问题；来源的 ownership、certainty、scope 与 causality 经回查未被改变。
 writeback rule：每轮回复前追加 learning log；只有可观察证据才更新 LN905 Skill Bank；canonical task 只按真实产出关闭。
 stop boundary：约 2,000 词完整草稿与一次整篇 revision 完成后停止；不另开 remedial drill、不换题、不代替学习者上传。

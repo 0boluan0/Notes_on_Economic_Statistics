@@ -47,12 +47,12 @@ current_stage: source-1-question-led-reading
 完整产出：约 600 词、直接回答 question、使用全部三篇 extracts、writer-led paragraphs、至少一处清楚的跨来源 synthesis、完整 conclusion；随后按整篇最高价值问题完成至多一次 whole-output revision。
 端到端教学链：完整读题与三文 → question-led notes → 三源 meaning/evidence map → provisional thesis → paragraph jobs/evidence roles → 约 600 词 essay → whole-output feedback → whole-output revision → 写回证据。
 允许支架：中文解释；worked contrast；把当前 source 原文直接显示给 learner；关键词、箭头或不完整英文；function cue；structure cue；短对比示范；共同修正 map/plan。不得给 model thesis、完整 paragraph plan 或可直接提交的 model essay。
-静默 callback IDs：AW-02、AW-03、AW-08、AW-16。
-callback 适用机会：AW-02/AW-03 只观察已有 answer 与宏观结构能否在新材料维持；AW-08 观察正文是否继续由 writer claim 开头；AW-16 观察是否按 task → answer → paragraph jobs → evidence roles 进入 prose。第一次完整 essay 前不得透露这些 callback。
+即时提示技能/语言：写到 prose 时，若下一句自然适合 AW-08、AW-09、AW-10、AW-11、AW-12、AW-17 或 LEX-01，先说明这句话的功能和适用理由，再给少量可复用 frame、reporting verb、collocation 或 evaluative word，由 learner 自己成句；不得直接给完整句。提示后的表现只记 `guided`。
+独立观察机会：本 unit 是 teaching practice，不把上述语言项目静默等待到全文结束。AW-02、AW-03、AW-16 的既有宏观能力可自然观察，但只有真正无提示的表现才能记 `independent`；正式 Friday/timed output 前不提醒。
 提示层级：先解释功能与人类写作问题 → function cue → structure cue → 四话题内短对比示范；同一细节不连续纠缠。若 map/plan 的错误会让整篇建立在错误 source relation 上，当场修；其他局部语言等完整 essay 后批量反馈。
 反馈优先级：task fulfilment → 每源命题/ownership/certainty/scope → 真实的跨文 relation 及其对答案的作用 → reasoning/synthesis/evaluation → completion → 完整 essay 后批量处理 reporting verbs、referencing、paragraph boundary 与 recurring grammar。一次性拼写、措辞和小语法不得压过主技能。
 完成证据：三篇来源均被准确且有目的地使用；essay 直接回答题目；段落由 writer claims 而非作者顺序驱动；至少一处写明准确的来源关系及其对答案的意义；conclusion 完成；整篇 revision 修复最高价值的 source-fidelity 问题，并批量处理 1–2 个反复语言模式。中间 map、thesis、plan 或单段不得关闭任务。
-技能状态写回规则：每轮只向本文件 learning log 追加过程；完成整篇后，把 brief 点名技能的真实证据追加到 LN905 Skill Bank。callback 只记录 independent、guided、incorrect 或 not observable。new 只有四步证据齐全才能变 guided；一次无提示使用最多 independent-1，stable 仍需另一份材料且含 Friday/timed 证据。
+技能状态写回规则：每轮只向本文件 learning log 追加过程；完成整篇后，把 brief 点名技能的真实证据追加到 LN905 Skill Bank。即时提示后的使用记 `guided`；真正无提示的观察才可记 `independent`，其余仍只用 `incorrect` 或 `not observable`。new 只有四步证据齐全才能变 guided；一次无提示使用最多 independent-1，stable 仍需另一份材料且含 Friday/timed 证据。
 停止边界：只有完整 essay、整篇反馈、至多一次整篇 revision 和 Skill Bank 写回完成后，才把 canonical task 标记完成并写实际日期，然后明确回复“本次端到端练习完成”。不得推进 Paper A、Essay project、未来任务或安排日期。
 student-os:mentor-brief:end -->
 
@@ -78,7 +78,9 @@ student-os:mentor-brief:end -->
 
 然后只给一个 5–10 分钟的有意义动作：让我先用中文、英文关键词或箭头拆出 question 的 command、核心判断对象和必须限定的概念，并解释这个动作会怎样控制后续阅读。不要给选项，不要提前给 thesis，也不要一次展示整张 worksheet。审题、provisional answer 和 paragraph jobs 仍由 learner 亲自完成；但如果答案已经直接、有限定且能控制段落，就立即接受并推进，不反复改写，也不从零重教结构。需要 source 细节时直接把相关段落显示出来，不意外测试记忆。
 
-每次回复前，必须在本文件 `student-os:learning-log:start/end` 之间追加：时间、我的原始输入、你的教学/反馈、当前端到端节点、本轮唯一下一动作和内部 continuation decision。第一次完整 essay 之后才可追加静默 callback evidence。只追加，不覆盖，不重复最新一轮；写入失败必须明确告诉我记录未保存。
+进入 prose 后，不要静默等待我自己想起好用的学术句式、词汇搭配或写作原则。每当下一句自然适合 Skill Bank 中已经教过或本次点名的项目，先告诉我：这句话要完成什么功能、为什么该项目适合、有哪些少量可复用表达；然后让我自己写句子。不要给我一整句可直接抄的答案。提示后的使用记为 `guided`；只有明确独立/限时输出才静默观察。
+
+每次回复前，必须在本文件 `student-os:learning-log:start/end` 之间追加：时间、我的原始输入、你的教学/反馈、当前端到端节点、本轮唯一下一动作、内部 continuation decision，以及本轮使用的即时提示或真正无提示的观察证据。只追加，不覆盖，不重复最新一轮；写入失败必须明确告诉我记录未保存。
 
 如果我说“不知道在学什么”，立即暂停动作，用中文解释当前能力、上一步为什么无效、什么证据才算学会；在我理解前不要继续出题。不要纠缠局部同义词或单句精修；不同表达只要 proposition、source ownership、certainty、scope、causality 和 evidence relationship 保持可用，就接受并推进。
 

@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2026-08-19——Wed.md",
+                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -38,7 +38,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-08-19——Wed"
+              "title": "week3reading-into-writing"
             }
           }
         ],
@@ -91,7 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 293.4000053405762
+    "width": 370.0171928405762
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -322,9 +322,21 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "7563b8600441276b",
+  "active": "8ef6c153e7a4ed38",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Reading/Climate Change Text - Lewandowski - Climate Change Disinformation and how to Combat it.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Reading/Topic Reading.pdf",
+    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/Annotated Bibliography/04 Bücker et al. (2022) - TAX4CS.md",
+    "99_学习情况记录/teach/reading-into-writing/learning-records/0006-demographics-friday-timed.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-3-Demographics/Demographics Extracts.pdf",
+    "99_学习情况记录/teach/listening-into-writing/learning-records/0002-demographics-friday-timed.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2Reading-into-writing.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Reading to Writing social media.md",
+    "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-end-to-end.md",
     "99_学习情况记录/2026-08-20——Thu.md",
+    "99_学习情况记录/2026-08-19——Wed.md",
     "tmp/pdfs/current.txt",
     "tmp/pdfs/demographics.txt",
     "tmp/pdfs/gender.txt",
@@ -339,19 +351,12 @@
     "tmp/pdfs/2026-08-18-climate-end-to-end-source-pack.out",
     "tmp/pdfs/2026-08-18-climate-end-to-end-source-pack.aux",
     "tmp/pdfs/2026-08-18-climate-end-to-end-source-pack.log",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing.md",
     "98_attachment/Pasted image 20260819151621.png",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2Reading-into-writing.md",
     "98_attachment/Pasted image 20260819151130.png",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Reading to Writing social media.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Reading/Topic Reading.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Reading/Climate Change Text - Lewandowski - Climate Change Disinformation and how to Combat it.pdf",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week1 Listen to writing social media.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/Week2 listening into writing.md",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing.md",
     "98_attachment/Pasted image 20260819150507.png",
     "98_attachment/Pasted image 20260819150258.png",
-    "99_学习情况记录/2026-08-19——Wed.md",
     "99_学习情况记录/2026-08-18——Tue.md",
     "99_学习情况记录/2026-08-17——Mon.md",
     "99_学习情况记录/week-review/2026-W33.md",
@@ -365,11 +370,6 @@
     "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Detailed Essay Plan.md",
     "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end.md",
     "99_学习情况记录/deadlines.md",
-    "99_学习情况记录/teach/academic-writing/lessons/2026-08-17-academic-writing-from-zero.md",
-    "99_学习情况记录/teach/academic-writing/lessons/2026-08-17-credit-scoring-essay-end-to-end.md",
-    "99_学习情况记录/teach/academic-writing/RESOURCES.md",
-    "99_学习情况记录/teach/academic-writing/MISSION.md",
-    "99_学习情况记录/archive/daily/2026-W33/2026-08-10——Mon.md",
     "03_Computer_Science/01_CS50/CS50 Course Atlas.canvas",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",

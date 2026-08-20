@@ -32,7 +32,7 @@ source_id: Vl6VhCAeEfQ
 完整产出：一次不暂停、不看字幕的完整首听及原始笔记；transcript-assisted meaning/evidence map；central answer 控制的 top-down plan；200–400 词完整 critical summary；整篇反馈；至多一次整篇 revision；真实技能证据写回 Skill Bank。
 端到端教学链：听前纸面筛选器 → 完整首听与原始笔记 → 一个代表性 repair clip 的声音对齐 → 一个未预告答案的 transfer clip → transcript 补全其余 claim/blocks/evidence/mechanism/qualifier map → central answer 与结构选择 → paragraph jobs/evidence roles → finding 与 claim 的强度/范围校准 → 完整 critical summary → whole-output feedback → 至多一次整篇 revision → evidence writeback。
 允许支架：repair clip 可用中文解释、必要的短 transcript、词义和声音特征，但揭示答案后只问哪些声音现在能识别，不再测试同一内容。transfer clip 必须先收 learner 的第一次原始听取，再显示 transcript 和反馈；显示后不要求复述已给答案。未知词直接解释；已知词在音流中认不出才做声音对齐；关系丢失则找 signpost。不得替 learner 写完整 summary/revision。
-静默 callback IDs：AW-15、AW-16。适用机会：AW-15 在转述 warming rate、GDP loss、carbon budget、tipping risk 与 uncertainty 时观察；AW-16 在 map 进入 prose 前的 top-down plan 中观察。第一次完整输出前不得向 learner 透露 callback ID 或检查清单。
+即时提示技能/语言：进入 prose 后，在转述 warming rate、GDP loss、carbon budget、tipping risk、uncertainty 或评价 evidence/response 前，先说明这句话的功能、需要保留的 certainty/scope，以及 AW-15、AW-17、PA-05 或 LEX-01 中自然适用的少量 frame/word choices，再由 learner 自己成句；不得给完整句。提示后的使用记 `guided`。AW-16 的 top-down plan 可自然观察，但只有真正无提示的表现才记 `independent`。
 提示层级：先解释当前信息为什么需要转换 → 功能提示 → 结构提示 → 基于本材料的短对比或短模型；同一局部问题最多要求一次修改，然后回到整篇。
 反馈优先级：central argument / key-point coverage → evidence composition 与 source ownership → certainty、scope、causality → 评价是否针对 speaker 实际 evidence/response → top-down organization/completion → 完整初稿后的 recurring grammar、word form 与 academic expression；一次性拼写和小语法不阻挡推进。
 完成证据：原始笔记得到保留；repair clip 只记录为受支持的声音对齐，另一个未预告答案的短片段留下首次听取的真实 transfer evidence；transcript 补全的其余内容只算 map 支架；map 恢复 central claim、主要 blocks、各自关键 evidence/mechanism/qualifier；plan 由 central answer 控制；learner 至少把一项具体 finding 转成与 evidence 强度和 scope 匹配的 claim；summary 在 200–400 词内完成并含贴住 speaker 实际 response 的 critical comment；整篇反馈与规定 revision 完成。中间节点都不得关闭 task。
@@ -59,9 +59,9 @@ student-os:mentor-brief:end -->
 
 selective repair 后，每轮只给一个约 5–10 分钟的有意义动作：完成可用 map，再从 task/central answer 选择结构和 paragraph jobs；进入 prose 前，用当前材料显式教一次 finding 与 claim 的区别，并让 learner 自己选择与 evidence 强度和 scope 匹配的 hedge/booster，随后写完整 200–400 词 summary。未知词直接解释并回到关系，不另开词汇小练习。
 
-完整初稿出现前，不逐句纠错，也不透露 silent callbacks。收到完整初稿后，才统一核验 source accuracy、coverage、organization、evaluation、completion 与 recurring language。只立即拦截会改变 ownership、certainty、scope、causality 或 evidence relationship 的问题；其他措辞、拼写和小语法批量处理。至多要求一次整篇 revision；同一核心错误修一次仍未解决，就用简短对比或模型教清，并按 mentor brief 的完成标准结束。
+完整初稿出现前，不做事后逐句纠错；但下一句自然适合已教的学术句式、词汇搭配或写作原则时，必须在 learner 动笔前按 mentor brief 即时提示。收到完整初稿后，再统一核验 source accuracy、coverage、organization、evaluation、completion 与 recurring language。只立即拦截会改变 ownership、certainty、scope、causality 或 evidence relationship 的问题；其他措辞、拼写和小语法批量处理。至多要求一次整篇 revision；同一核心错误修一次仍未解决，就用简短对比或模型教清，并按 mentor brief 的完成标准结束。
 
-每次教学回复前，在下方「学习记录」的两个隐藏边界之间追加时间、我的原始输入、你的教学/反馈、当前端到端节点、本轮唯一下一动作与 continuation decision。第一次完整输出后再追加 callback 证据。只追加，不覆盖，不重复最新一轮；写入失败必须立即告诉我记录没有保存。
+每次教学回复前，在下方「学习记录」的两个隐藏边界之间追加时间、我的原始输入、你的教学/反馈、当前端到端节点、本轮唯一下一动作、continuation decision，以及本轮即时提示或真正无提示的观察证据。只追加，不覆盖，不重复最新一轮；写入失败必须立即告诉我记录没有保存。
 
 ## 学习记录
 

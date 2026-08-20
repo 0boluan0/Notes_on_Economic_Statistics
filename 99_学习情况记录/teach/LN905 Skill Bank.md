@@ -10,7 +10,7 @@ neath_sync: synced
 # LN905 Skill Bank
 
 > [!summary] 用法
-> 这是 LN905 唯一的跨会话技能状态源。课程笔记保存完整解释；[[99_学习情况记录/学习计划/LN905 Listening and Reading Practice|练习计划]]只保存 canonical tasks；每个 guided Markdown 只保存本次处方与逐轮证据。导师从这里选主技能和自然适用的静默 callback，助教不得自行换目标。
+> 这是 LN905 唯一的跨会话技能状态源。课程笔记保存完整解释；[[99_学习情况记录/学习计划/LN905 Listening and Reading Practice|练习计划]]只保存 canonical tasks；每个 guided Markdown 只保存本次处方与逐轮证据。导师从这里选择主技能、guided prose 中自然适用的即时提示项目，以及只留给独立/限时输出的无提示观察项目；助教不得自行换目标。
 
 > [!important] 当前训练约束
 > learner-facing 练习只使用 Social Media、Gender、Demographics、Climate Change。技能仍可分开诊断和记录，但只能在一条 Paper A/B 端到端 unit 内教学、callback 和写回证据；不再为单项技能建立 clinic、短练或独立 checkbox。
@@ -140,7 +140,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 4.pdf|Week 3 Lesson 4：Effective topic sentences]]。
 - 适用：Paper B、Assignment；topic sentence、paragraph opening。
 - 证据/Callback：Lesson 4 已上课。Week 1 教师认可 clear topic sentences；Week 2/3 原稿主体段通常以 writer claim 而非作者姓名开头。最新问题是 introduction 边界与 informal attribution，不是缺少 writer-led opening；仍无系统显式闭环，状态保持 `new`。
-- 下一观察：下一份 Paper B 端到端成品中作为静默 callback，不作为 principal。
+- 下一观察：下一份 guided Paper B 写 topic sentence 前即时提示其功能和可选框架；之后在 Friday/timed Paper B 中无提示观察。
 
 ### AW-09 · Reporting noun / gerund 留出主句给自己
 - 状态：`new`
@@ -173,7 +173,7 @@ neath_sync: synced
 - 来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Week 3 Lesson 4.pdf|Week 3 Lesson 4：Evaluative adjectives]]。
 - 适用：Paper A/B、Assignment；evaluation、literature review。
 - 证据/Callback：尚无显式闭环。
-- 下一观察：下一份自然适用的 Paper A/B 端到端成品，之后再静默观察 lexical choice。
+- 下一观察：下一份 guided Paper A/B 需要评价来源时即时提示评价对象与可选词；之后在 Friday/timed output 中无提示观察 lexical choice。
 
 ### AW-12 · Cohesion 与 reference chains
 - 状态：`new`
@@ -550,10 +550,10 @@ neath_sync: synced
 
 ## Callback 与写回协议
 
-1. 每个 guided end-to-end unit 有一组按风险排序的重点技能；导师可选择任意数量、但必须与当前材料自然适用且已到观察时机的旧技能作为静默 callback。重点技能和 callback 都不生成独立练习或 checkbox。
-2. 第一次完整输出前不得透露 callback ID、功能提示或检查项。没有自然机会写 `not observable`。
-3. 自主正确写 `independent`；出现机会但误用写 `incorrect`；给过任何提示后正确只写 `guided`。
-4. 缺失时在完整输出后依次只用：功能提示 → 结构提示 → 四话题内简短对比示范；再回到整篇 revision。同一细节不连续纠缠。
+1. 每个 guided end-to-end unit 有一组按风险排序的重点技能。导师选择与当前材料自然适用的已学/正在学句式、词汇搭配和写作原则作为即时提示项目；它们都留在同一完整产出中，不生成独立练习或 checkbox。
+2. 在 guided prose 中，下一句或段落决定一旦自然适用某项技能，助教在 learner 动笔前说明句子功能、适用理由和少量可复用表达，再让 learner 自己写；不得直接给完整答案。没有自然机会写 `not observable`。
+3. 即时提示后正确写 `guided`；真正无提示且正确才写 `independent`；出现机会但误用写 `incorrect`。不得把有提示表现冒充自主调用。
+4. 无提示 observation 只用于明确的完整模拟、Friday/timed output，或导师在已有受支持使用之后指定的独立复现。测试前不提醒；guided unit 不得为了测 callback 而静默扣住本来应该教的表达。
 5. Friday/timed output 测试前不提醒；测试后把证据写回对应 skill。一次自主正确只到 `independent-1`；第二次且包含 timed/Friday 才到 `stable`。
 6. `new` 只有在解释、支架应用、变式应用、真实输出整合四步均有记录后才可变 `guided`。
 7. 当日助教只能按 mentor brief 的 `技能状态写回规则` 追加本次证据，并对 brief 点名的 ID 执行合法状态转换；不得选新技能、改下一观察策略或把普通语言反馈写成 mastery evidence。

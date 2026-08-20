@@ -142,6 +142,7 @@ AI 在要求任何动作前，必须用普通人能理解的方式讲清：
 - **Paper B**：正式量级三 extracts → question-led notes / meaning-evidence map → thesis 与 paragraph jobs → 约 600 词 essay → 整篇反馈与至多一次整篇 revision。
 - `词灵`仍是独立的每日词汇底线；它不替代端到端 unit。
 - AI 每轮仍只给一个清楚、可完成的下一动作，并可在薄弱节点增加解释、示范和支架；区别只是所有动作都推进同一个最终成品。
+- Guided practice 写到 prose 时采用即时提示：若下一句自然适合课程教过的学术句式、词汇搭配或写作原则，AI 先说明句子功能、适用理由并给少量可复用表达，再由学习者亲自成句；不得静默等到全文结束才指出，也不得直接代写完整句。无提示观察只留给明确的独立/限时输出。
 - map、plan、句型、evaluation、readiness 和 sentence repair 不再成为 standalone task。技能证据写入 Skill Bank，但 task 只在完整成品达到标准后关闭。
 - 开始新 unit 前先续做最新未完成 unit。最近输出暴露的弱点决定下一 unit 内的教学重点，而不是制造一条新的局部练习。
 
