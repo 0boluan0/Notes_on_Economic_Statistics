@@ -13,8 +13,8 @@
             "state": {
               "type": "learning-progress-dashboard-view",
               "state": {},
-              "icon": "sprout",
-              "title": "Learning Progress Dashboard"
+              "icon": "lucide-ghost",
+              "title": "learning-progress-dashboard-view"
             }
           },
           {
@@ -50,9 +50,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false,
-                "showSearch": false,
-                "searchQuery": ""
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -171,8 +169,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           },
           {
@@ -216,8 +214,8 @@
                 }
               },
               "pinned": true,
-              "icon": "terminal",
-              "title": "zsh"
+              "icon": "lucide-ghost",
+              "title": "terminal:terminal"
             }
           },
           {
@@ -238,8 +236,8 @@
             "state": {
               "type": "code-space-outline",
               "state": {},
-              "icon": "code",
-              "title": "Code outline"
+              "icon": "lucide-ghost",
+              "title": "code-space-outline"
             }
           },
           {
@@ -280,8 +278,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "lucide-ghost",
+              "title": "calendar"
             }
           }
         ]
@@ -292,26 +290,18 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "media-extended:Open media library": false,
-      "media-extended:Open media quick switcher": false,
-      "code-space:Open code space dashboard": false,
-      "terminal:Open terminal": false,
-      "learning-progress-dashboard:Learning Progress Dashboard": false,
       "canvas:Create new canvas": false,
       "graph:Open graph view": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "workspaces:Manage workspace layouts": false,
-      "bases:Create new base": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian-kanban:Create new board": false,
-      "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false
+      "bases:Create new base": false
     }
   },
-  "active": "2a57a409b927a6bd",
+  "active": "30f6502409000f89",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Assessment-Information/LSE English Language Assessment - Information.pdf",
     "99_学习情况记录/2026-08-20——Thu.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-10-C04 - using-data-on-X-author-finds-Y.md",
     "00_inbox/随手记.md",
@@ -347,7 +337,6 @@
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/PRON-02-C03 - the-a-an-n-in-unstressed-speech.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/PRON-02-C02 - content-words-are-usually-stressed-function-words-are-usually-re.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/PRON-02-C01 - schwa-is-the-common-short-vowel-in-unstressed-syllables.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/PRON-01-C05 - distinguish-e-and.md",
     "tmp/pdfs/final-4.png",
     "tmp/pdfs/final-3.png",
     "tmp/pdfs/final-2.png",
