@@ -11,7 +11,7 @@ status: "active"
 course: "LN905"
 record_type: "guided-assignment-draft"
 phase: "teaching-practice"
-current_stage: "body-paragraph-2-bracke-contrast"
+current_stage: "body-paragraph-2-bracke-limitation-synthesis"
 canonical_task: "[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay#执行清单]]"
 draft_source: "[[00_inbox/LN905-essay-structure]]"
 ---
@@ -354,5 +354,13 @@ student-os:mentor-brief:end -->
 - **当前 skill-map 位置**：完整路线中的 `P2 drafting`；Sadhwani strong-case evidence 已保存，当前完成 Bracke contrast → cross-source synthesis → paragraph judgment。
 - **单一下一动作**：学习者用英文、中文或中英混合写一个 3–4 句 rough paragraph：Bracke 的较小增益和 random-split 限制 → 与 Sadhwani 的对照 → 复杂度只在特定环境带来稳定且实质收益时更合理。
 - **internal continuation decision**：收到后一次性检查 metric、magnitude、mortgage scope 与 random-split limitation，在已表达命题范围内编辑为连贯英文并立即保存；若段落功能成立，完成 P2 并进入 P3。
+
+### 2026-08-21 17:11 BST
+
+- **学习者输入**：`In contrast, Bracke et al. (2019) found that even including 5.83 million UK loan, ROC-AUC rised slitly from 0.78 to 0.81,&#x20;`
+- **AI teaching/feedback**：Bracke 与 Sadhwani 的对照方向正确：即使样本很大，Bracke 报告的 ROC-AUC 提升仍较小。直接修正 `including` → `using data on`、`UK loan` → `UK mortgages`、`rised slitly` → `improved ... only slightly`，并明确比较双方为 gradient tree boosting 与 logistic regression。修正版已保存到 working draft，不要求重写。
+- **当前 skill-map 位置**：P2 的 Sadhwani strong case 与 Bracke smaller-gain contrast 已保存；当前缺 Bracke random-split limitation 和跨来源段尾综合。
+- **单一下一动作**：写两句 rough meaning：一句说明随机切分使结果弱于真正 out-of-time test；一句用 `Taken together` 判断复杂度只有在特定数据环境产生稳定、实质收益时才更合理。
+- **internal continuation decision**：收到后一次性编辑并保存；若 limitation 与 conditional judgment 均成立，则完成 P2 并把当前位置移到 P3 interpretable alternatives。
 
 <!-- student-os:learning-log:end -->
