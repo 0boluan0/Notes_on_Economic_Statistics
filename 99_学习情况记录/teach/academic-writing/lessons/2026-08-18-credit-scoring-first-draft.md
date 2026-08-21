@@ -27,7 +27,7 @@ draft_source: "[[00_inbox/LN905-essay-structure]]"
 > - **写作流程**：`section skeleton / budget → P1–P5 正文 → introduction / conclusion → 整篇 criteria check / revision`。
 > - **完成标准**：直接回答 `to what extent`；约 2,000 词；至少 6 篇 academic sources；每段由 writer claim 推进；准确保留来源的 ownership、certainty、scope 和 causality；有 introduction、conclusion 和独立 bibliography。
 > - **你已经会**：已提交 question/rationale、annotated bibliography 和 detailed plan；已有 thesis、thematic structure、5 个 topic sentences、evidence、evaluation/counterargument 与 9 篇来源。
-> - **当前起点**：Body paragraph 1 已写入 Lessmann 与 Khandani 的 evidence/evaluation；下一步完成本段的 closing evaluation。学习者已确认旧有仓库内容均由 AI 生成，不能当作其已理解或掌握的证据。
+> - **当前起点**：P1 已完成；P2 已保存 Sadhwani 的 strong-case evidence/evaluation，当前加入 Bracke 对照并完成整段。学习者已确认旧有仓库内容均由 AI 生成，不能当作其已理解或掌握的证据。
 
 **Canonical project**：[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay|LN905 Essay]]  
 **Detailed plan**：[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Detailed Essay Plan|LN905 Detailed Essay Plan]]  
@@ -41,6 +41,7 @@ complete output：学习者亲自完成约 2,000 词 essay，使用至少 6 篇 
 end-to-end teaching chain：academic essay 最小模型 → question analysis → 学习者的 provisional answer/thesis → paragraph jobs → source roles/selection → section skeleton/word budget → P1–P5 → introduction/conclusion → criteria-led whole-output feedback/revision。
 allowed support：自然中文解释、完整显示当前所需来源信息、关系箭头、局部 sentence frame、对比和协作讨论。AI 不得替学习者静默选择或改写 thesis、paragraph jobs、evidence roles 或完整段落。
 pace contract：快速推进；对会改变 task、source meaning、ownership、certainty、scope 或 causality 的错误立即介入。小语法、拼写和局部措辞由 AI 直接修好并告知学习者，不要求其停下重写。
+drafting granularity contract：从 2026-08-21 起改为段落级快写。AI 一次提供整段所需来源、关系与句型提示；学习者用英文、中文或中英混合交付整段 rough meaning，AI 只在这些已表达的命题范围内完成英文编辑并立即保存。不再逐句往返，也不由 AI 独立生成学习者未作出的段落判断或整篇可提交 prose。
 source-handling contract：学习者不阅读完整论文。AI 负责从已核验的本地 PDF 和精读笔记中提取并直接教授 source claim、evidence、scope、limitation 与 essay role，不再要求学习者完成审题或文献分析问答。成文前必须显示当前所需的完整来源信息；学习者仍亲自写段落。
 即时提示规则：进入段落成文后，下一句若自然适合 AW-08–AW-13、AW-17 或 LEX-01 中已教/正在教的句式、词汇搭配或写作原则，先说明句子功能、适用理由并给少量可复用选项，再由 learner 自己成句；不得直接代写完整句。提示后的使用只记 `guided`。AW-12、AW-13 的真正无提示观察留给后续独立/限时输出。
 hint ladder：重显题目/当前 paragraph job/完整来源信息 → 指出要判断的 relation → 用不同内容给正反对比 → 给局部 sentence frame → 一次未成功后用简短 model 教清并回到完整段落。
@@ -198,7 +199,11 @@ student-os:mentor-brief:end -->
 - ROC-AUC 约从 0.78 提升到 0.81；precision-recall AUC 约从 0.16 提升到 0.19，增益比 Sadhwani 的组合结果温和。
 - 训练与测试使用随机切分，不是真正的 out-of-time test；研究仍限于 mortgages。
 
-现在写两句：第一句用 `In contrast` 报告 Bracke 的较小增益；第二句综合两项研究，判断复杂模型的收益依赖数据规模和非线性程度，而不是普遍存在。
+改为段落级快写：学习者一次写出下面三项 rough meaning，可用英文、中文或中英混合；AI 随后统一编辑并保存，不再逐句往返。
+
+1. Bracke 的两个指标只出现较小提升，而且测试为随机切分。
+2. 与 Sadhwani 对照后，说明复杂模型的收益取决于数据规模和非线性程度。
+3. P2 判断：只有具体数据环境能产生稳定且实质性的收益时，复杂度才更可能合理。
 
 `In contrast, Bracke et al. (2019) report ... .`
 
@@ -317,5 +322,37 @@ student-os:mentor-brief:end -->
 - **当前 skill-map 位置**：Body paragraph 2 的 Sadhwani strong-case evidence/evaluation 已完成；现在加入 Bracke 的较小预测增益，建立跨来源对照与综合判断。
 - **单一下一动作**：写两句 Bracke：用 `In contrast` 报告 ROC-AUC 0.78→0.81 与 precision-recall AUC 0.16→0.19，再用 `Taken together` 或 `X alone does not justify Y` 综合两项研究。
 - **internal continuation decision**：收到后检查 metric、magnitude、mortgage scope 与 random-split limitation；小语法直接修正并保存。若对照与综合关系成立，就补 P2 closing judgment 并完成本段。
+
+### 2026-08-21 16:44 BST
+
+- **学习者输入**：`算了你帮我写完吧`
+- **AI teaching/feedback**：识别到逐句往返造成负担，立即切换为段落级快写；但明确保留提交作业的作者边界：AI 不独立生成整篇可直接提交的 final prose。AI 继续承担文献阅读、证据核验、段落关系、即时句型提示、英文编辑与保存；学习者只需一次性交付整段的 rough meaning，可使用中文、英文或中英混合。
+- **当前 skill-map 位置**：P1 完成；P2 已完成 Sadhwani 部分，当前需把 Bracke 对照、跨来源综合与 paragraph judgment 一次写完。
+- **单一下一动作**：用一个中英混合段落表达 Bracke 的较小增益/随机切分限制、与 Sadhwani 的对照，以及 P2 的条件性判断；不要求先润色英文。
+- **internal continuation decision**：收到 rough paragraph 后，只在学习者已表达的命题范围内一次性编辑为连贯英文，核验 source fidelity 并保存；不再要求逐句重写。P2 功能成立后立即进入 P3 的整段 evidence brief。
+
+### 2026-08-21 16:48 BST
+
+- **学习者输入**：`写完吧,我累了,写完了之后我再看看积累积累改一改`
+- **AI teaching/feedback**：确认学习者已经疲劳，停止要求其继续当场写作。再次说明正式提交作业的作者边界：不能由 AI 独立补写尚未由学习者作出判断的全部正文；可以把学习者已经表达的内容整合、纠错和保存，也可以把后续每段的来源信息、论证关系与局部句框一次准备好，等学习者用中文、英文或中英混合给出段落判断后统一编辑。
+- **当前 skill-map 位置**：P1 已完成；P2 的 Sadhwani 部分已完成，Bracke 对照与综合判断尚无学习者 rough meaning，因此不伪记为草稿完成。
+- **单一下一动作**：本轮停止写作并保留现有进度；下次从 P2 的一个段落级 rough response 继续，不再逐句往返。
+- **internal continuation decision**：不因疲劳把 AI 生成的缺失段落冒充学习者草稿；现有 working draft 保持不变。恢复时先直接展示 P2 所需证据、关系和可选句框，学习者只提供整段判断，随后一次性编辑并保存。
+
+### 2026-08-21 16:53 BST
+
+- **学习者输入**：`你可以,你可以,你生成的是我用来参考的,我不会直接交的,`
+- **AI teaching/feedback**：接受“只作参考、不直接提交”的用途说明。为最大限度降低后续负担，在已有 detailed plan 中加入完整逐段 drafting blueprint：覆盖 introduction、P1–P5、conclusion 的写作顺序、核验过的文献数字、跨来源关系、局限、段尾判断和局部英文句框。蓝图明确标注为 reference map，不作为 learner-authored prose，也不写入正式 working draft。
+- **当前 skill-map 位置**：完整 essay 的证据与论证路线已经具备；真实 learner draft 仍是 P1 完成、P2 完成 Sadhwani 部分。
+- **单一下一动作**：学习者休息。恢复时可直接选择蓝图中的一整段，用中文、英文或中英混合改写；AI 随后一次性编辑并保存，不再逐句往返。
+- **internal continuation decision**：reference blueprint 不作为能力证据或草稿完成度；只有学习者改写后的 prose 才进入 working draft。后续优先从尚未完成的 P2 开始。
+
+### 2026-08-21 16:54 BST
+
+- **学习者输入**：`来吧来吧继续吧,你是对的`
+- **AI teaching/feedback**：恢复 P2 段落级快写。直接重显 Sadhwani 与 Bracke 的对照关系，并在动笔前提示 `In contrast`、`Taken together` 与条件性段尾判断的功能；不要求学习者重新分析论文。
+- **当前 skill-map 位置**：完整路线中的 `P2 drafting`；Sadhwani strong-case evidence 已保存，当前完成 Bracke contrast → cross-source synthesis → paragraph judgment。
+- **单一下一动作**：学习者用英文、中文或中英混合写一个 3–4 句 rough paragraph：Bracke 的较小增益和 random-split 限制 → 与 Sadhwani 的对照 → 复杂度只在特定环境带来稳定且实质收益时更合理。
+- **internal continuation decision**：收到后一次性检查 metric、magnitude、mortgage scope 与 random-split limitation，在已表达命题范围内编辑为连贯英文并立即保存；若段落功能成立，完成 P2 并进入 P3。
 
 <!-- student-os:learning-log:end -->

@@ -98,6 +98,123 @@ If a model does not meet one of these conditions, logistic regression or an inte
 - Give the final decision process: start with a strong logistic regression model; compare it with interpretable nonlinear and hybrid models; use a black box only when its extra gain is clear and stable and it passes explanation, stress-testing and fairness checks.
 - Conclude that complex models can be useful, but they should not automatically replace logistic regression in consumer credit scoring.
 
+## Fast drafting blueprint｜完整参考蓝图
+
+> [!warning] 使用边界
+> 这是逐段改写用的论证蓝图，不是可直接提交的英文成稿。数字、来源关系和限制已经核对；正式正文仍需用自己的表达重写，并保留对每段判断的控制。
+
+### Introduction｜约 200 词
+
+按下面顺序写，不从文献数字开始：
+
+1. **背景**：consumer credit scoring 是高风险决策；logistic regression 容易理解和审计，复杂机器学习可以捕捉 nonlinear relationships 与 interactions。
+2. **问题张力**：更高预测表现可能减少违约损失，但更低可解释性会增加审计、监管、模型风险和借款人挑战决定的困难。
+3. **定义 predictive gains**：不是单个指标偶尔上升，而是在真正样本外测试中保持稳定，并改善实际 lending decisions 的增益。
+4. **定义 interpretability**：银行、监管者和借款人能理解并检查模型怎样得出决定；post-hoc explanation 是对黑箱结果的事后近似，不等于模型本身透明。
+5. **直接回答程度**：复杂模型的收益只在部分情境足以抵偿可解释性下降。
+6. **路线**：依次检查增益是否实质稳定、是否存在表现相近的可解释替代方案、黑箱能否被可靠审计，以及不同借款群体是否获得可接受的结果。
+
+可调用句框：
+
+- `In consumer credit scoring, the choice between ... is important because ...`
+- `In this essay, predictive gains refer to ... rather than ...`
+- `Interpretability refers to ..., whereas post-hoc explanation ...`
+- `This essay argues that reduced interpretability is justified only when ...`
+
+### P1｜收益必须实质、稳定并能改变真实决策｜约 320 词
+
+这段已有学习者正文，改稿时只检查下面的完整链：
+
+1. **Writer claim**：预测提升必须 large、stable、useful，才可能补偿透明度损失。
+2. **Lessmann evidence**：41 个分类器、8 个 credit-scoring datasets；神经网络、随机森林和 HCES-Bag 相对 logistic regression 的平均模拟成本改善约 3.4%、5.7% 和 4.8%。
+3. **Lessmann evaluation**：模型排名随评价指标和误分类成本变化；研究是 benchmark 与简化成本模拟，没有计入治理、解释、维护和监管成本。
+4. **Khandani evidence**：利用更丰富的交易、余额和征信数据进行滚动样本外预测；在作者假设下，削减高风险账户额度可能节约总损失的 6%–25%。
+5. **Khandani limitation**：单一银行、金融危机时期、成本收益假设；收益来自及时数据、特征构造和模型的组合，不能全部归因于算法复杂度。
+6. **段尾判断**：小幅增益对大型机构也可能有价值，但 `average gains alone do not justify sacrificing interpretability`；增益必须跨样本外测试、指标和现实成本设定保持稳定。
+
+### P2｜复杂度在超大规模和强非线性环境中理由最强｜约 320 词
+
+1. **Writer claim**：复杂模型最有价值的情况，是数据极大且线性模型会遗漏重要阈值、交互和非线性关系；这不是所有消费者信用评分的默认情况。
+2. **Sadhwani evidence**：超过 1.2 亿笔美国 mortgages、约 35 亿条 loan-month observations，并使用真正的时间切分；五层神经网络能捕捉 prepayment、FICO、LTV、利率和宏观变量之间的非线性与交互。
+3. **Sadhwani decision value**：在作者损失假设下，神经网络选择的 20,000 笔贷款组合一年损失比线性模型组合低 46%。
+4. **Sadhwani limitation**：这是 mortgage/MBS 风险和模拟投资组合，不是普通贷款申请 scorecard；没有直接计入公平性、解释和监管部署成本。
+5. **Bracke contrast**：约 583 万笔英国 mortgages；gradient tree boosting 相对 logistic regression 的 ROC-AUC 约从 0.78 增至 0.81，precision-recall AUC 约从 0.16 增至 0.19，提升明显温和。
+6. **Bracke limitation**：训练与测试随机切分，不是真正 out-of-time；违约率约 2.5%，precision 仍有限，范围仍是 mortgages。
+7. **跨来源综合**：Sadhwani 是复杂度可能产生实质价值的边界强案例；Bracke 表明即使数据规模很大，增益也可能较小且受测试方法限制。
+8. **段尾判断**：复杂度只有在具体数据环境持续产生 material and stable gains 时才更可能合理；两项研究都不能支持所有信用评分默认替换 logistic regression。
+
+可调用句框：
+
+- `In contrast, Bracke et al. (2019) report ...`
+- `Taken together, the two studies suggest that ...`
+- `The scale of the data alone does not justify ... because ...`
+
+### P3｜接受黑箱前，先比较强可解释替代方案｜约 320 词
+
+1. **Writer claim**：题目不应被处理成“基础 logistic regression 或高准确率黑箱”的二选一。
+2. **Rudin principle**：高风险决策中不存在普遍、必然的 accuracy–interpretability trade-off；采用者应先证明没有表现相近的 intrinsically interpretable model。
+3. **Rudin limitation**：这是跨领域理论与评论文章，不是统一的消费者信用评分 benchmark，因此适合提供举证原则，不适合单独证明具体性能差距。
+4. **Bücker evidence**：在 10,459 个 HELOC 样本上，比较 scorecard、逻辑回归、spline logistic regression 与多种复杂模型；最佳测试结果来自 spline logistic regression。
+5. **Bücker limitation**：单个公共数据集、随机切分，没有真正 out-of-time 测试；但它证明精心构造的可解释模型可能接近或超过黑箱。
+6. **Dumitrescu evidence**：PLTR 用浅层树生成阈值/交互规则，再由 adaptive-lasso logistic regression 选择；四个数据集都优于标准 logistic regression。Kaggle 数据上 PLTR AUC 为 0.8568，略高于 random forest 的 0.8529，并明显高于线性 logistic regression 的 0.6983。
+7. **Dumitrescu counterpoint**：Housing 数据上 random forest 仍明显更好；PLTR 的可解释性主要由规则数量和长度推断，未由真实借款人或监管者测试。
+8. **段尾判断**：黑箱只能用它相对 strong scorecard、spline model 和 interpretable hybrid 的额外增益来辩护，而不能只通过击败最基础的 logistic regression 来辩护。
+
+可调用句框：
+
+- `This comparison weakens the assumption that ...`
+- `Rather than comparing a black box only with ..., lenders should ...`
+- `A loss of interpretability is therefore justified only by the additional gain that remains after ...`
+
+### P4｜事后解释有用，但不能把黑箱变成透明模型｜约 320 词
+
+1. **Writer claim**：如果黑箱仍明显更准，post-hoc explanation 可以减轻治理问题，但不能完全消除黑箱的不确定性。
+2. **Bracke positive evidence**：QII/Shapley 方法能够显示总体与个体预测的重要变量；current LTV 和 current interest rate 等结果符合 mortgage 风险知识，局部解释还能展示不同贷款的异质性。
+3. **Bracke boundary**：压力情景中变量影响排序明显变化；普通测试集中的合理解释不能证明模型在新状态仍可靠。解释描述预测关系，不建立因果。
+4. **Bücker governance evidence**：TAX4CS 要求按 stakeholder、model lifetime、explanation need 和 XAI method 组织完整审计；一次 SHAP 图不等于治理。
+5. **Bücker boundary**：该框架说明复杂模型可以被系统检查，但没有证明所有解释都忠实，也没有直接测量真实银行的维护成本或监管接受度。
+6. **Rudin counterargument**：事后解释是对黑箱的近似，只要它更简单，就可能遗漏或歪曲原模型在部分输入区域的逻辑；看似合理不等于 faithful。
+7. **让步**：解释工具与 validation、stress testing 和领域知识结合时，确实能支持异常诊断和 stakeholder communication。
+8. **段尾判断**：post-hoc explanation reduces rather than removes the interpretability cost；黑箱仍需持续验证、压力测试、稳定性检查和明确责任。
+
+可调用句框：
+
+- `Post-hoc tools can reveal ..., but they cannot establish that ...`
+- `A plausible explanation is not necessarily a faithful account of ...`
+- `Therefore, explainability should be treated as part of ..., rather than as ...`
+
+### P5｜总体更准不代表各群体同等受益｜约 320 词
+
+1. **Writer claim**：模型不能只凭 overall accuracy 选择，因为预测增益和贷款后果可能在群体间分配不均。
+2. **Bono evidence**：80 万名英国借款人、444 个信用特征；extra trees 和 XGBoost 的样本外 AUROC 高于 penalised logistic regression，但切换到 ensemble models 既没有系统性扩大，也没有消除既有公平差异。
+3. **Bono implication**：logistic regression 本身也可能有群体误差差异，因此“简单模型天然公平”和“复杂模型天然不公平”都不成立。
+4. **Bono limitation**：gender 和 demographic clusters 是代理变量；约 32% 的 thin files 被排除；研究只检查统计公平性，没有观察银行如何把分数转化为价格、准入和福利。
+5. **Fuster evidence**：接近 1,000 万笔美国 mortgages；random forest 的 AUC 为 0.8602，对比 nonlinear logistic regression 的 0.8537，average precision 约提高 5.1%，R² 约提高 14.3%。
+6. **Fuster distributional result**：Black 与 White Hispanic borrowers 较少获得更低的预测违约概率；简化市场模型中，他们的利率和群体内部利率离散度增加更多。
+7. **Fuster limitation**：只观察已经获贷者，存在选择问题；利率和借款行为不是随机的，市场反事实依赖强假设，不能当成精确政策预测。
+8. **段尾判断**：总体预测收益必须与 group-specific errors、定价和准入结果一起审计；较低可解释性若同时降低发现和挑战不平等影响的能力，就需要更高而不是更低的收益门槛。
+
+可调用句框：
+
+- `Higher overall accuracy does not imply that ...`
+- `This does not show that complex models are inherently unfair; rather, it shows that ...`
+- `Accordingly, lenders should evaluate ... instead of inferring fairness from ...`
+
+### Conclusion｜约 200 词
+
+不要增加新文献或新论点，完成四步：
+
+1. **直接回答 extent**：预测增益只在有限、可证明的条件下足以抵偿可解释性下降，不构成普遍采用理由。
+2. **合并理由**：增益随数据结构、评价指标和成本设定变化；强可解释模型有时能得到相近表现；事后解释不能保证忠实或未见状态稳定；平均改善还可能掩盖群体差异。
+3. **给出模型选择顺序**：先建立强 logistic regression baseline；再测试 spline、scorecard 和 interpretable hybrid；只有黑箱仍有 clear, stable and decision-relevant extra gain 时才进入审计、压力测试和公平性检查。
+4. **最终判断**：complex models can be justified as an exception supported by evidence, not as an automatic replacement for logistic regression。
+
+可调用句框：
+
+- `Overall, the evidence supports a limited rather than general justification for ...`
+- `The appropriate decision rule is to begin with ..., compare ..., and adopt ... only if ...`
+- `Complex models should therefore be treated as ..., not as ...`
+
 ## Provisional references
 
 Bono, T., Croxson, K., & Giles, A. (2021). Algorithmic fairness in credit scoring. *Oxford Review of Economic Policy, 37*(3), 585–617. https://doi.org/10.1093/oxrep/grab020
