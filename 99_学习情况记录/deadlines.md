@@ -28,10 +28,12 @@ tags:
 - [ ] 2026-08-21 11:45｜[[LN905 PDF Contents|LN905]]｜提交 Listening into Writing：Climate Change｜硬截止｜来源：Student Hub（Moodle dates） #student-os/deadline 📅 2026-08-21
 - [ ] 2026-08-21 15:00｜[[LN905 PDF Contents|LN905]]｜提交 Reading into Writing：Climate Change Essay Question and Submission｜硬截止｜来源：Student Hub（Moodle dates） #student-os/deadline 📅 2026-08-21
 - [ ] 2026-08-23｜[[LN905 Essay]]｜提交初稿（First draft）｜硬截止｜来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/LN905 Week one materials 2026.pdf#page=3|Week 1 workbook]] #student-os/deadline 📅 2026-08-23
-- [ ] 2026-08-26｜[[LN905 Essay]]｜提交最终写作作业｜硬截止｜时间待核验｜来源：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/LN905 Week one materials 2026.pdf#page=3|Week 1 workbook]] #student-os/deadline 📅 2026-08-26
+- [ ] 2026-08-26 12:00｜[[LN905 Essay]]｜提交最终写作作业｜硬截止｜来源：Moodle 已核验 #student-os/deadline 📅 2026-08-26
 
 ## 核验状态
 
+- 2026-08-21｜Moodle 日常核对完成：Climate Change Listening 10:00 开放、11:45 截止，Reading 12:45 开放、15:00 截止；核对时两项均显示 No submissions have been made yet。Essay Draft 仍未提交且页面没有独立 due 字段；Final Submission 仍未提交，正式截止已核验为 2026-08-26 12:00。
+- 2026-08-21｜Alison Standring 的官方 Week 5 邮件与附件已核验：周一 10:00 信息说明会在 MAR.1.10；Group 2 周一、周三、周四固定安排已读取。周二 Paper C 与周五 tutorial 的个人时间仍需各自 Moodle 文件才能确认，本次没有围绕这两个未确认窗口安排 movable work。Apple `LSE` 的今日两项截止与 Moodle 一致，其他只读日历未显示今日额外固定行程。
 - 2026-08-20｜Moodle 登录会话再次超时，无法完成今日网页比较；没有据此改变任何截止或提交状态。最近一次完整 Moodle 核验仍为 2026-08-18。
 - 2026-08-20｜Group 2 Weeks 2–4 课表 PDF 可读：周四固定课程为 10:00–11:15 Academic Writing & Assignment、11:45–13:00 Paper C Speaking & Listening、14:00–15:15 Academic Interaction。Alison Standring 2026-08-14 的官方邮件继续覆盖 PDF 地点，Week 4 周一至周五为 CKK.2.09；未发现更新教室或时间的邮件。Apple `LSE` 的 8 月 21 日两项截止与现有记录一致。Neil Ashford 2026-08-20 的新邮件补充了 Paper A 的 SEES critical-summary structure，但未改变时间、地点或截止。
 - 2026-08-19｜Moodle 登录会话已超时，无法完成今日网页比较；没有据此改变任何截止或提交状态。最近一次完整 Moodle 核验仍为 2026-08-18。

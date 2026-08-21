@@ -52,6 +52,8 @@ kind: multi-stage-project
 - [ ] LN905 Essay｜完成 first draft 后半部分正文、introduction 与 conclusion #student-os/task ⏳ 2026-08-22
 - [ ] LN905 Essay｜通读修订 argument、source accuracy、cohesion 与 recurring language errors #student-os/task ⏳ 2026-08-22
 - [ ] LN905 Essay｜统一引用与格式，上传 first draft 并检查 Moodle submission status #student-os/task ⏳ 2026-08-22
+- [ ] LN905 Essay｜根据 Monday Academic Writing 课堂要求完成 final revision #student-os/task ⏳ 2026-08-24
+- [ ] LN905 Essay｜最终核对 argument、source accuracy、语言、引用与格式，提交 final assignment 并检查 Moodle submission status #student-os/task ⏳ 2026-08-24
 
 ## 里程碑
 
