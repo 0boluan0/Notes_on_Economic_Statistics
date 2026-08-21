@@ -39,8 +39,8 @@ A manual shutdown request may run the same factual-summary and reconciliation fl
 
 - Treat `99_学习情况记录/teach/LN905 Skill Bank/Cards/` as the atomic-card store linked from `LN905 Skill Bank.md`. A reusable sentence frame, collocation or small writing decision has one card with front, collapsed back, append-only learning history and recall metadata; upsert the existing card instead of creating a synonym duplicate.
 - When a reusable item is first taught or actually used, set its first recall for that day's shutdown. After a correct recall, advance by `+1, +3, +7, +14, +30` days; after a partial or incorrect recall, show it the next day; no answer leaves the due date unchanged and is not failure.
-- At daily opening, place one active-recall prompt from the earliest due card in `student-os:opening-recall:start/end`. At manual shutdown, place one prompt in `student-os:shutdown-recall:start/end`, preferring something learned or used that day and otherwise the earliest due card. If automatic next-morning reconciliation cannot obtain an answer, write the prompt without blocking shutdown or Today generation.
-- Each prompt takes about 2–3 minutes and uses a new Social Media, Gender, Demographics or Climate Change context. Ask the learner to retrieve the function, boundary or usable wording before showing the card back. After the learner attempts it, append the result to the card and update `last_recall`, `last_result`, `recall_stage` and `next_recall`.
+- At daily opening, place every card with `next_recall` on or before today in the single `student-os:opening-recall:start/end` block. At manual shutdown, place every card still due or overdue plus every card newly learned or used since opening whose first recall is due that day in the single `student-os:shutdown-recall:start/end` block. Never sample, cap the count or select only the earliest card. A card answered and rescheduled at opening is not repeated at shutdown unless new evidence explicitly makes another same-day recall due. If automatic next-morning reconciliation cannot obtain an answer, keep the unanswered cards due without blocking shutdown or Today generation.
+- Keep each item brief and use a fresh Social Media, Gender, Demographics or Climate Change context. The total time follows the number of cards actually due; do not drop items to preserve a fixed duration. Ask the learner to retrieve the function, boundary or usable wording before showing each card back. After each attempt, append the result to that card and update `last_recall`, `last_result`, `recall_stage` and `next_recall`.
 - Opening/shutdown recall is a managed note step, not a canonical task: never create a checkbox, task, deadline or calendar event. It may appear on Sunday because it adds no scheduled work block. Recall evidence does not by itself change a skill's `new/guided/independent-1/stable/repair` state.
 
 ## Sources and deadline audit
@@ -106,7 +106,7 @@ On the first Student OS run after a Friday course test appears in `07_Programme/
 - Keep these sections once: `开场 Recall`, `今日安排`, `临近 Deadline`, `今日已完成`, `随手写`, `收尾`; keep one `Shutdown Recall` subsection under `收尾`.
 - Set the note's `date` property to the actual `YYYY-MM-DD` date. Do not replace the native Tasks query blocks; they read that fixed property so historical pages stay fixed without enabling Tasks JavaScript queries.
 - Replace only content between `student-os:deadline-radar:start/end`.
-- Replace only the due prompt between `student-os:opening-recall:start/end`; learner answers stay outside that managed block. Replace only the prompt between `student-os:shutdown-recall:start/end` during shutdown; its learner answer also stays outside the managed block.
+- Replace only the complete due-item set between `student-os:opening-recall:start/end`; learner answers stay outside that managed block. Replace only the complete due-item set between `student-os:shutdown-recall:start/end` during shutdown; its learner answers also stay outside the managed block.
 - Keep one `student-os:shutdown-summary:start/end` block under `收尾`; replace only that block during shutdown reconciliation.
 - Preserve all text in `随手写`, `收尾`, and outside managed blocks.
 - Set `student-os:today-generated: YYYY-MM-DD` only after source tasks, Today, risk radar and calendar sync all succeed.
@@ -123,7 +123,7 @@ On the first Student OS run after a Friday course test appears in `07_Programme/
 - D-0 through D-14 obligations are all visible.
 - No movable weekday block starts before 15:30, no movable Saturday block starts before 09:00, no movable block exists on Sunday, and no generated block extends past 19:30. Earlier fixed commitments and their directly attached preparation blocks are the only exceptions.
 - A reconciled prior note contains one factual shutdown-summary block and no invented completion or reflection.
-- Today contains exactly one opening-recall block and one shutdown-recall block. Neither contains a checkbox or creates a calendar event. Every surfaced card exists once, has a unique `card_id`, and carries parseable recall dates; a repeated run does not duplicate the prompt or learning-log entry.
+- Today contains exactly one opening-recall block and one shutdown-recall block. Each contains every card due at that checkpoint exactly once, with no sampling; neither contains a checkbox or creates a calendar event. Every surfaced card exists once, has a unique `card_id`, and carries parseable recall dates; a repeated run does not duplicate a due item or learning-log entry.
 - No daily filename exists in both the active root and archive, and an archived same-date note is never recreated.
 - No user-written text changed.
 - A second run makes no additional changes.
