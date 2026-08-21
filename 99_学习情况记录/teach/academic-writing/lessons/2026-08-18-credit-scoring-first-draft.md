@@ -11,7 +11,7 @@ status: "active"
 course: "LN905"
 record_type: "guided-assignment-draft"
 phase: "teaching-practice"
-current_stage: "body-paragraph-2-bracke-limitation-synthesis"
+current_stage: "body-paragraphs-1-2-expansion"
 canonical_task: "[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay#执行清单]]"
 draft_source: "[[00_inbox/LN905-essay-structure]]"
 ---
@@ -27,7 +27,7 @@ draft_source: "[[00_inbox/LN905-essay-structure]]"
 > - **写作流程**：`section skeleton / budget → P1–P5 正文 → introduction / conclusion → 整篇 criteria check / revision`。
 > - **完成标准**：直接回答 `to what extent`；约 2,000 词；至少 6 篇 academic sources；每段由 writer claim 推进；准确保留来源的 ownership、certainty、scope 和 causality；有 introduction、conclusion 和独立 bibliography。
 > - **你已经会**：已提交 question/rationale、annotated bibliography 和 detailed plan；已有 thesis、thematic structure、5 个 topic sentences、evidence、evaluation/counterargument 与 9 篇来源。
-> - **当前起点**：P1 已完成；P2 已保存 Sadhwani 的 strong-case evidence/evaluation，当前加入 Bracke 对照并完成整段。学习者已确认旧有仓库内容均由 AI 生成，不能当作其已理解或掌握的证据。
+> - **当前起点**：实测正文共 521 词；P1 为 186 词、P2 为 188 词，两段论证骨架成立但尚未达到约 320 词的工作预算。当前先扩展 P1–P2 的机制解释、来源限制和反方回应，再进入 P3。学习者已确认旧有仓库内容均由 AI 生成，不能当作其已理解或掌握的证据。
 
 **Canonical project**：[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay|LN905 Essay]]  
 **Detailed plan**：[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Detailed Essay Plan|LN905 Detailed Essay Plan]]  
@@ -53,7 +53,7 @@ student-os:mentor-brief:end -->
 
 ## 完整路线与当前位置
 
-`Academic writing 在做什么 ✓` → `Question analysis（已直接教授）` → `Submitted thesis 解释` → `Paragraph jobs（已直接教授）` → `P1 ✓` → **`P2 drafting`** → `P3–P5` → `Introduction / Conclusion` → `Whole revision`
+`Academic writing 在做什么 ✓` → `Question analysis（已直接教授）` → `Submitted thesis 解释` → `Paragraph jobs（已直接教授）` → **`P1–P2 expansion`** → `P3–P5` → `Introduction / Conclusion` → `Whole revision`
 
 ## Step 0｜Academic writing 的最小模型
 
@@ -166,7 +166,7 @@ student-os:mentor-brief:end -->
 > [!info] 当前协作方式
 > AI 直接讲清来源的 claim、evidence、scope、limitation 和本段用途；学习者亲自成句。会改变来源含义的错误立即纠正，小语法由 AI 直接修改；修正后的可交文本马上保存。
 
-## 已完成｜Body paragraph 1
+## 论证骨架已完成｜Body paragraph 1
 
 **Paragraph job**：证明“复杂模型更准”还不够；只有增益同时大、稳定并能转化为真实贷款价值，才有可能抵偿可解释性下降。
 
@@ -176,9 +176,9 @@ student-os:mentor-brief:end -->
 
 ### 完成结果
 
-已形成完整的 `writer claim → Lessmann evidence/evaluation → Khandani economic value/limitation → closing judgment`。修正后的段落已保存到 working draft，并关闭 anchor body paragraph canonical task。
+已形成 `writer claim → Lessmann evidence/evaluation → Khandani economic value/limitation → closing judgment`。修正后的 186 词骨架已保存到 working draft，并关闭 anchor body paragraph canonical task；为达到整篇字数和解释深度，仍需约 120–140 词机制解释与反方回应。
 
-## 当前阶段｜Body paragraph 2
+## 论证骨架已完成｜Body paragraph 2
 
 **Paragraph job**：说明复杂模型在超大数据和强非线性关系中理由最强，但这种收益不能自动推广到所有 consumer credit-scoring 场景。
 
@@ -193,21 +193,43 @@ student-os:mentor-brief:end -->
 - 在作者设定的损失假设下，五层网络选出的 20,000 笔贷款组合一年损失比线性模型组合低 46%。
 - 这是超大规模美国抵押贷款和模拟投资组合结果，不是一般消费者贷款申请，也没有计入可解释性、公平性或监管部署成本。
 
-### 当前动作｜Bracke 对照
+### 完成结果
 
-- Bracke et al. (2019) 使用约 583 万笔英国抵押贷款，比较 gradient tree boosting 与 logistic regression。
-- ROC-AUC 约从 0.78 提升到 0.81；precision-recall AUC 约从 0.16 提升到 0.19，增益比 Sadhwani 的组合结果温和。
-- 训练与测试使用随机切分，不是真正的 out-of-time test；研究仍限于 mortgages。
+已形成 `writer claim → Sadhwani strong case/scope limit → Bracke smaller gain/random-split limit → cross-source conditional judgment`，修正后的 188 词骨架已保存到 working draft；仍需约 120–140 词解释非线性机制、评价指标和外推限制。
 
-改为段落级快写：学习者一次写出下面三项 rough meaning，可用英文、中文或中英混合；AI 随后统一编辑并保存，不再逐句往返。
+## 当前阶段｜P1–P2 paragraph expansion
 
-1. Bracke 的两个指标只出现较小提升，而且测试为随机切分。
-2. 与 Sadhwani 对照后，说明复杂模型的收益取决于数据规模和非线性程度。
-3. P2 判断：只有具体数据环境能产生稳定且实质性的收益时，复杂度才更可能合理。
+实际正文词数（不含标题和结构提示）：
 
-`In contrast, Bracke et al. (2019) report ... .`
+| 部分 | 当前 | 目标 | 缺口 |
+|---|---:|---:|---:|
+| Introduction | 76 | 200 | 124 |
+| P1 | 186 | 320 | 134 |
+| P2 | 188 | 320 | 132 |
+| P3 | 19 | 320 | 301 |
+| P4 | 28 | 320 | 292 |
+| P5 | 24 | 320 | 296 |
+| Conclusion | 0 | 200 | 200 |
+| **Total** | **521** | **2,000** | **1,479** |
 
-第二句可用 `Taken together, ... suggest that ...`；也可调用已记录的 `X alone does not justify Y`，但不要机械重复 Lessmann 原句。
+先扩展最新的 P2，不靠重复数字凑字：
+
+1. 解释 Sadhwani 中非线性为什么重要：FICO、LTV、利率、失业率与 prepayment/default 的关系包含阈值和交互，线性模型需要人工指定，深度模型可以从超大样本学习。
+2. 解释 Bracke 的指标：ROC-AUC 只小幅上升，precision-recall AUC 也仅从约 0.16 到 0.19；低违约率环境下，排序改善不等于能准确识别大量真正违约者。
+3. 加入公平性、解释和部署成本未被 Sadhwani 的 46% 模拟收益直接计入，因此 portfolio gain 不能直接回答整道 `justify` 问题。
+4. 给出反方回应：即使如此，若这些非线性关系会改变重大贷款/投资决策，复杂模型仍可能合理；但需要在相同输入、时间外数据和完整成本下证明额外收益。
+
+## 下一阶段｜Body paragraph 3
+
+**Paragraph job**：证明选择不一定是“基础 logistic regression 或高准确率黑箱”；在牺牲可解释性前，必须先测试 strong interpretable or hybrid alternatives。
+
+**当前来源关系**：
+
+- Rudin (2019)：高风险决策中不存在必然的 accuracy–interpretability trade-off；采用者应先证明没有表现相近的内生可解释模型。
+- Bücker et al. (2022)：10,459 个 HELOC 样本中，spline logistic regression 得到最佳测试表现；但只有单个公共数据集和随机切分。
+- Dumitrescu et al. (2022)：PLTR 用浅树生成阈值/交互规则，再由稀疏 logistic regression 组合；四个数据集均优于标准 logistic regression，且常接近 random forest，但 Housing 数据上 random forest 仍更好。
+
+**当前动作**：学习者用英文、中文或中英混合写一个 rough paragraph，完成 `Rudin principle → Bücker example → Dumitrescu hybrid evidence → black-box extra-gain judgment`；AI 一次性编辑并保存。
 
 <!-- student-os:learning-log:start -->
 
@@ -362,5 +384,21 @@ student-os:mentor-brief:end -->
 - **当前 skill-map 位置**：P2 的 Sadhwani strong case 与 Bracke smaller-gain contrast 已保存；当前缺 Bracke random-split limitation 和跨来源段尾综合。
 - **单一下一动作**：写两句 rough meaning：一句说明随机切分使结果弱于真正 out-of-time test；一句用 `Taken together` 判断复杂度只有在特定数据环境产生稳定、实质收益时才更合理。
 - **internal continuation decision**：收到后一次性编辑并保存；若 limitation 与 conditional judgment 均成立，则完成 P2 并把当前位置移到 P3 interpretable alternatives。
+
+### 2026-08-21 17:51 BST
+
+- **学习者输入**：`` `However, because the study used a random train-test split rather than` time series split, that means nothing. Taken together, Sadhwani and Bracke suggest that complex models do have potential to create giant iicome, but big data itself do not justify the income itself ``
+- **AI teaching/feedback**：跨来源判断成立：Sadhwani 与 Bracke 共同说明复杂模型可能产生实质价值，但大样本本身不保证这种收益。立即修正两处含义强度：随机切分只使“随时间稳定”的证据较弱，不能推出研究毫无意义；`income` 改为 `substantial economic value/material predictive gains`，并把最终交换对象明确为 `reduced interpretability`。修正后的两句已保存到 working draft。
+- **当前 skill-map 位置**：P2 的完整 claim–evidence–evaluation–judgment 链完成；进入 P3 interpretable alternatives。
+- **单一下一动作**：根据直接提供的 Rudin、Bücker 与 Dumitrescu 关系写一个段落级 rough response，证明黑箱应与强可解释/混合模型比较，而不应只与基础 logistic regression 比较。
+- **internal continuation decision**：收到后一次性编辑 source ownership、scope、comparison 与英文表达并保存；P3 judgment 成立后进入 P4 post-hoc explanation。
+
+### 2026-08-21 17:54 BST
+
+- **学习者输入**：`这样写完够2000字吗.这每一段都有点太短了`
+- **AI teaching/feedback**：停止继续 P3 并实测 working draft。正文当前共 521 词：Introduction 76、P1 186、P2 188、P3 19、P4 28、P5 24、Conclusion 0；学习者正确发现 P1/P2 远低于各约 320 词预算。纠正此前把“论证骨架成立”表述成“整段完成”的进度错误。
+- **当前 skill-map 位置**：从 P3 暂时回到 `P1–P2 paragraph expansion`；目标不是重复证据凑字，而是补 mechanism、metric meaning、counterargument、scope limitation 与 link back to justify。
+- **单一下一动作**：先扩展最新的 P2。学习者用中文、英文或中英混合表达四项 rough meaning：Sadhwani 非线性机制、Bracke precision-recall/低违约率含义、46% 未计入治理成本、在完整测试下仍可能合理的条件。
+- **internal continuation decision**：收到后一次性整合并保存约 120–140 词扩展；随后同样扩展 P1，再恢复 P3。此后每完成一段都实际计数，目标区间为约 280–330 词，不再把 180 词骨架标成完整段落。
 
 <!-- student-os:learning-log:end -->

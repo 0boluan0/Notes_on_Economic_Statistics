@@ -7,10 +7,10 @@ parent_skills:
   - AW-17
 card_type: academic-word
 learned_on: 2026-08-20
-recall_stage: queued
-next_recall: 2026-08-21
-last_recall:
-last_result:
+recall_stage: retry-next-day
+next_recall: 2026-08-22
+last_recall: 2026-08-21
+last_result: incorrect
 ---
 
 # `suggest / suggest that ...`
@@ -34,3 +34,4 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
+- 2026-08-21｜Shutdown Recall｜回答“表述某个人的观点”。这混同了 reporting：`suggest` 的核心是证据让某个解释或结论变得合理，但没有证明它；记为 incorrect，2026-08-22 重现。

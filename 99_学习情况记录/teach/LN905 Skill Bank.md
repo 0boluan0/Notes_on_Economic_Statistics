@@ -53,8 +53,8 @@ neath_sync: synced
 - 边界：不能偷换 command、扩大 population/time/context，或把讨论题写成描述题。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#一、先把题目变成写作任务|Academic Writing：读题]]；Assignment criteria。
 - 适用：Paper B、Assignment；planning、introduction、whole essay。
-- 证据/Callback：2026-08-17 Academic Writing course replay Block 1B：在 Climate Change 新题中正确把 topic 与 task 分开，并说明需要判断“宣布净零目标是否足以证明政策有效”；这是明确支架后的首次 supported application。Block 1C：能识别 immigration/population-ageing 题的两个 parts、中心判断、UK 与未来二十年，但把 `fiscal pressures` 误读成“社会压力”，topic 也遗漏了 immigration-response 关系和 fiscal problem scope。Block 1D：正确识别 Social Media 题中 `this` 的 prevalence/intensity 两种读法，但 `cause for concern` 仍定义为宽泛的严重社会问题或任何少数人坏处，尚不能稳定筛选 evidence；状态保持 `new`。
-- 下一观察：Block 1E 用 Gender 新题复测完整 question analysis，并检查 provisional view/possible structure。
+- 证据/Callback：2026-08-17 Academic Writing course replay Block 1B：在 Climate Change 新题中正确把 topic 与 task 分开，并说明需要判断“宣布净零目标是否足以证明政策有效”；这是明确支架后的首次 supported application。Block 1C：能识别 immigration/population-ageing 题的两个 parts、中心判断、UK 与未来二十年，但把 `fiscal pressures` 误读成“社会压力”，topic 也遗漏了 immigration-response 关系和 fiscal problem scope。Block 1D：正确识别 Social Media 题中 `this` 的 prevalence/intensity 两种读法，但 `cause for concern` 仍定义为宽泛的严重社会问题或任何少数人坏处。2026-08-21 系统曾错误地把 task analysis 放进每日 Recall；该回答不计 Recall 成绩，只保留为后续端到端教学参考。同日 Friday Paper B 明确包含 why 与 solutions 两问；成文用了约 499 词充分展开三项原因，却只用两句无来源支撑的文字处理 solutions，第二问未充分完成。task identification 与篇幅分配仍需要在端到端写作中继续教学，状态保持 `new`。
+- 下一观察：下一份 guided Paper B 在读材料前显式完成 `task verb → parts → weight → restrictions`；之后在新的 Friday/timed question 中静默观察两问是否都获得足够篇幅与证据。
 
 ### AW-02 · 控制性答案 / thesis
 - 状态：`new`
@@ -218,8 +218,8 @@ neath_sync: synced
 - 边界：不能把完整 source extraction 当作 writer planning；短材料只为写作决策服务时不能冒充 Reading practice。
 - 来源：[[99_学习情况记录/teach/LN905 Exam Playbook|LN905 Exam Playbook]]；[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing#三、先搭论证结构，再写句子|Academic Writing：plan]]。
 - 适用：Paper A/B、Assignment；planning、integrated writing。
-- 证据/Callback：原账本只记录“2026-08-12 Demographics Shared Writing 计划首次示范”，没有实际四步证据。2026-08-13 Demographics Paper A：在明确结构提示下完成 `central answer → linear paragraph jobs → evidence roles → 200–400 词 prose`，全文骨架与完成度成立；同日受支持证据，记为 `guided`。2026-08-14 Friday Paper B 的成品呈现出“同时处理 aging/fertility 的总答案 → 老年劳动参与 / 生育环境 / 移民限制三个段落工作 → conclusion”的外显结构，2026-08-19 教师反馈也确认 overall argument、logical progression 与 conclusion 回扣；但原始文件没有保留计划过程，内部四步调用仍记为 `not observable`，状态不提升。2026-08-17 Academic Writing course replay Block 1A：在明确三句结构支持下，用 Gender 新情境完成 `claim → evidence → reasoning`，记为 `guided`；有一处把“占比更高未缩小晋升差距”扩大成“占比对晋升影响很小”，已在讲评中收紧。Block 1B：在 Climate Change 新题完成 +1 结构复现；task、claim、两项 evidence 与 reasoning 都出现，但 `完全取决于` 和 `导致` 仍超过比较证据。Block 1D：在 Social Media 新题完成 +3 结构复现，claim–evidence–reasoning 均出现；但 source fidelity 仍有新增监管/保护、概率和扩大 weak association 的问题，结构记为 `guided`，状态保持 `guided`。
-- 下一观察：Academic Writing course replay 第 +7 教学块；之后仍需在完整 essay-style output 中观察 `task → provisional answer → paragraph jobs → evidence roles`。
+- 证据/Callback：原账本只记录“2026-08-12 Demographics Shared Writing 计划首次示范”，没有实际四步证据。2026-08-13 Demographics Paper A：在明确结构提示下完成 `central answer → linear paragraph jobs → evidence roles → 200–400 词 prose`，全文骨架与完成度成立；同日受支持证据，记为 `guided`。2026-08-14 Friday Paper B 的成品呈现出“同时处理 aging/fertility 的总答案 → 老年劳动参与 / 生育环境 / 移民限制三个段落工作 → conclusion”的外显结构，2026-08-19 教师反馈也确认 overall argument、logical progression 与 conclusion 回扣；但原始文件没有保留计划过程，内部四步调用仍记为 `not observable`，状态不提升。2026-08-17 Academic Writing course replay Block 1A：在明确三句结构支持下，用 Gender 新情境完成 `claim → evidence → reasoning`，记为 `guided`；有一处把“占比更高未缩小晋升差距”扩大成“占比对晋升影响很小”，已在讲评中收紧。Block 1B：在 Climate Change 新题完成 +1 结构复现；task、claim、两项 evidence 与 reasoning 都出现，但 `完全取决于` 和 `导致` 仍超过比较证据。Block 1D：在 Social Media 新题完成 +3 结构复现，claim–evidence–reasoning 均出现；但 source fidelity 仍有新增监管/保护、概率和扩大 weak association 的问题，结构记为 `guided`。2026-08-21 Friday Paper B 无提示形成“总答案 → deliberate disinformation / worldview / social-media transmission 三个原因段 → solutions”的可见上位结构，但第二问最终只有两句未展开的 solutions，约 499 词即结束；完整链的 task coverage 记为 `incorrect`，状态保持 `guided`。
+- 下一观察：下一份 guided Paper B 在 prose 前把题目每一部分各自绑定 paragraph jobs 与 evidence roles；之后在完整 timed essay 中静默观察是否执行到结尾。
 
 ### AW-17 · 用 evidence 强度校准 claim
 - 状态：`new`
@@ -334,15 +334,15 @@ neath_sync: synced
 - 下一观察：当前 Climate Paper A 的完整 map；检查 claim、block、evidence owner/type 与 qualifier。
 
 ### PA-04 · Critical summary 的组织选择
-- 状态：`independent-1`
+- 状态：`stable`
 - 触发/功能：map 可靠后，在 linear/thematic 结构中选择最能保留 speaker argument 的组织。
 - 为什么：summary 必须压缩而不破坏论证结构。
 - 动作/框架：central answer → 2–3 blocks → evidence/qualification → integrated comment。
 - 边界：不能逐点堆 notes；不能把自己的评价混成 speaker claim。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/01_Listening into Writing#写作：先报告，再评价|Listening：写作]]。
 - 适用：Paper A；200–400 word critical summary。
-- 证据/Callback：2026-08-13 Demographics Paper A：在结构提示下选择 linear summary，并完成 opening central claim → historical/demographic block → child-survival mechanism → conclusion 的完整初稿与一次整篇 revision；组织选择和完成度成立，同日受支持证据记为 `guided`。2026-08-14 Friday Sciubba 新材料中无提示保留 central answer、forecast/three-worlds 主体结构与 conclusion；教师明确确认 three possible futures 和 main idea。虽有段落过长与内容精度问题，但 summary 的宏观组织成立，本次记为 `independent`，状态升为 `independent-1`。
-- 下一观察：下一份不同材料的 Friday/timed Paper A；再次无提示保留 central answer、2–3 个主要 blocks 与 qualification 后才可到 `stable`。
+- 证据/Callback：2026-08-13 Demographics Paper A：在结构提示下选择 linear summary，并完成 opening central claim → historical/demographic block → child-survival mechanism → conclusion 的完整初稿与一次整篇 revision；组织选择和完成度成立，同日受支持证据记为 `guided`。2026-08-14 Friday Sciubba 新材料中无提示保留 central answer、forecast/three-worlds 主体结构与 conclusion；教师明确确认 three possible futures 和 main idea。虽有段落过长与内容精度问题，但 summary 的宏观组织成立，本次记为 `independent`，状态升为 `independent-1`。2026-08-21 Friday Climate Change 新材料中再次无提示完成约 262 词成品，按 problem framing → four disinformation tactics → political/social-media/youth responses → balanced close 组织，central argument 与主要 blocks 可恢复；本次记为 `independent`。已在不同材料中两次无提示调用且两次均为 Friday/timed output，状态升为 `stable`。
+- 下一观察：后续 Friday/timed Paper A 只作维持性观察；教学时间优先给 PA-05 evidence-specific evaluation。
 
 ### PA-05 · 针对 evidence 的评价
 - 状态：`repair`
@@ -352,8 +352,8 @@ neath_sync: synced
 - 边界：不能只凭 personal relevance 判断证据强弱，也不能忽略研究/data。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/01_Listening into Writing#Criticality 的五层问题|Listening：criticality]]；Paper A criteria。
 - 适用：Paper A；critical comment。
-- 证据/Callback：Week 1 成品主要是 descriptive。Week 2 已尝试评价，但把 personal experience 当成全部 evidence。2026-08-13 Demographics Paper A 又在未承认实际 evidence composition 时批评 speaker 忽略 country differences，而其动态图明确以 country bubbles 为单位；整篇 revision 后仍保留该错误，本次记为 `incorrect`。2026-08-14 Friday 教师确认已有评价意图，但 broad immigration critique 偏离讲者实际回应；更合适的对象是 longer working lives、human capital、technology 与 health。重复失准，状态保持 `repair`。
-- 下一观察：当前 Climate 完整成品中，先准确写 speaker 的 evidence/proposal，再对其中一项给出有 warrant 的 strength/limitation；不另开 drill。
+- 证据/Callback：Week 1 成品主要是 descriptive。Week 2 已尝试评价，但把 personal experience 当成全部 evidence。2026-08-13 Demographics Paper A 又在未承认实际 evidence composition 时批评 speaker 忽略 country differences，而其动态图明确以 country bubbles 为单位；整篇 revision 后仍保留该错误，本次记为 `incorrect`。2026-08-14 Friday 教师确认已有评价意图，但 broad immigration critique 偏离讲者实际回应；更合适的对象是 longer working lives、human capital、technology 与 health。2026-08-21 Friday Climate Change 成品评价说 speaker 使用 figures 与 celebrities' words/actions，因此“generally convincing”，随后又泛称其没有解释 disinformation wars 的更深原因；评价没有把一项具体 evidence 或 proposal 与 claim、warrant、scope 连起来，记为 `incorrect`。状态保持 `repair`。
+- 下一观察：下一份 guided Paper A 在成品中先准确点名一项 evidence/proposal，再写它支持哪一层 claim、为何支持及仍受什么 scope 限制；之后在 timed output 静默观察。
 
 ## Paper B · Reading into Writing
 
@@ -376,8 +376,8 @@ neath_sync: synced
 - 边界：不能丢 source ownership、certainty 或研究范围。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing#第二步：把三篇材料压成一张 source map|Reading：source map]]。
 - 适用：Paper B；reading notes、pre-writing。
-- 证据/Callback：Week 2（AI-assisted）成品使用三源并连接 ideas，但教师要求更准确说明 sources 如何共同工作。2026-08-14 Friday 独立成品使用 Ezeh et al.、Bloom et al. 与 Jones 全部三源并选择 relevant ideas，教师 Reading 定性档为 `60/65`；但 immigration 等 claim 的 scope/certainty 被改变，成品 map fidelity 记为 `incorrect`。2026-08-15 赛后只完成部分 guided repair，完整三源 map 与整篇 revision 尚未闭环，状态保持 `new`。
-- 下一观察：继续现有 [[99_学习情况记录/teach/reading-into-writing/learning-records/0006-demographics-friday-timed|Demographics Friday Paper B 复盘]]：完成 ageing → 全三源关系图 → 同一整篇 revision；不要先开新 pack。
+- 证据/Callback：Week 2（AI-assisted）成品使用三源并连接 ideas，但教师要求更准确说明 sources 如何共同工作。2026-08-14 Friday 独立成品使用 Ezeh et al.、Bloom et al. 与 Jones 全部三源并选择 relevant ideas，教师 Reading 定性档为 `60/65`；但 immigration 等 claim 的 scope/certainty 被改变，成品 map fidelity 记为 `incorrect`。2026-08-15 赛后只完成部分 guided repair，完整三源 map 与整篇 revision 尚未闭环。2026-08-21 Friday Climate Change 成品再次使用全部三源，并把它们分配给 deliberate disinformation、worldviews/ideology 与 internet transmission 三个原因主题；原始 Inbox 仍没有保留 map，map-building 过程与 proposition-level fidelity 记为 `not observable`，状态保持 `new`。
+- 下一观察：继续当前 Climate Change Paper B guided unit，先完整写出每源 claim/evidence/mechanism/scope/use，再把今日 timed essay 中未展开的 solutions 纳入 map；不另开新 pack。
 
 ### PB-03 · Writer-led synthesis
 - 状态：`new`
@@ -387,8 +387,8 @@ neath_sync: synced
 - 边界：不能虚构 agreement；并列 citation 不自动等于 synthesis。
 - 来源：[[07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing#第四步：让 synthesis 在段落里可见|Reading：synthesis]]。
 - 适用：Paper B、Assignment；synthesis paragraph。
-- 证据/Callback：Week 2 教师认可 source connection，但该稿使用过 AI。2026-08-14 Friday Paper B 的移民段在同一个 writer claim 下对照 Ezeh et al. 与 Jones；教师确认 overall argument 清楚，同时指出 `proved ineffective` 过强。2026-08-15 赛后初答仍把两文写成 direct opposition，提示后才恢复为 Jones 对 Ezeh 的具体限制/细化；局部关系为 `guided`，尚未整合回全文，状态保持 `new`。
-- 下一观察：继续同一 Demographics 三源 map 与整篇 revision；之后才在新 Paper B 材料中观察迁移。
+- 证据/Callback：Week 2 教师认可 source connection，但该稿使用过 AI。2026-08-14 Friday Paper B 的移民段在同一个 writer claim 下对照 Ezeh et al. 与 Jones；教师确认 overall argument 清楚，同时指出 `proved ineffective` 过强。2026-08-15 赛后初答仍把两文写成 direct opposition，提示后才恢复为 Jones 对 Ezeh 的具体限制/细化；局部关系为 `guided`，尚未整合回全文。2026-08-21 Friday Climate Change 成品无提示以 writer-led causes 组织来源：第一段把 survey gap、fossil-fuel disinformation 与 misinformation effects 放在同一 claim 下，第二、三段也按 worldview 与 transmission mechanism 组合来源；这是自然 synthesis 机会中的 `independent` 证据。但 solutions 没有接入来源或展开 relation，且完整显式闭环尚未完成，状态保持 `new`。
+- 下一观察：当前 Climate Change guided unit 显式完成 proposition-level source relations，并确保 reasons 与 solutions 两部分都由 writer claim、evidence roles 和 writer inference 驱动；之后再在新 timed output 静默观察。
 
 ### PB-04 · Quote、paraphrase、summary 与 citation 分工
 - 状态：`new`
@@ -617,13 +617,13 @@ neath_sync: synced
 
 ## 每日嵌入式 Recall
 
-1. 一个可复用知识点第一次被正式教学或实际使用时，幂等 upsert 一张卡片。正面只放句式/词/知识点；折叠反面放功能、适用时机、边界、例句和可用变体；`学习记录` 只追加不覆盖。
-2. 卡片 frontmatter 保存 `learned_on`、`recall_stage`、`next_recall`、`last_recall` 和 `last_result`。Today 只扫描到期卡，不在别处再建一份复习队列。
-3. 首次学习后在当日 shutdown 回忆；成功后按 `+1 天 → +3 天 → +7 天 → +14 天 → +30 天` 递增。部分正确或错误则第二天重现；未作答不算失败，保留原到期日。
-4. 每日开场与 shutdown 各只出 1 道 2–3 分钟的主动回忆：优先当日新学/实际用到的卡，否则选最早到期的卡。换一个四大考试话题中的新语境，不只要求背原句。
-5. 先让学习者作答，再显示卡片反面并给一次简短对照。Recall 表现追加到卡片并更新下次日期，但不自动改变上面的技能 mastery 状态。
-6. Recall 是 Today 笔记内的一步，不是 canonical task，不建 checkbox，不建日历时间块，也不复活旧的独立 `+1/+3/+7` 复习队列。
-7. 课件回溯新建的卡先处于 `queued`，按每日最多开场 1 张、shutdown 1 张的容量错峰进入；“被课件教过”和“已经主动回忆/能独立使用”严格分开，不能因批量入库制造虚假掌握。
+1. 每日 Recall 只抽取能直接理解或产出的语言：考试词汇、短语、搭配、sentence/discussion/cohesion frames、简短 grammar/editing/style rules，以及 pronunciation/delivery targets。它与 Anki 的 production-practice subset 使用同一筛选边界。
+2. task analysis、source mapping、evidence selection、paragraph planning、note-taking、Reading/Listening strategy 等程序性能力卡不得进入每日 Recall；它们只在端到端练习或 timed calibration 中教学和观察。
+3. 正面直接显示原词、搭配或句框，例如 `fail to account for`；问题只要求回忆中文意思/功能和通常何时使用，不要求造句。实际产出能力留到端到端写作中观察；不得把 Recall 改造成 essay scenario、材料分析或技能诊断。
+4. 合格卡片的 frontmatter 保存 `learned_on`、`recall_stage`、`next_recall`、`last_recall` 和 `last_result`。Today 只扫描到期的合格语言卡，不在别处再建复习队列。
+5. 首次学习后在当日 shutdown 回忆；每个 checkpoint 展示所有到期或逾期的合格语言卡，shutdown 还加入当日新学或实际使用且首次到期的合格语言卡，不抽样、不设上限。正确后按 `+1 天 → +3 天 → +7 天 → +14 天 → +30 天` 递增；部分正确或错误则第二天重现；未作答不算失败，保留原到期日。
+6. 先让学习者作答，再显示卡片反面并给一次简短对照。Recall 表现追加到卡片并更新下次日期，但不自动改变技能 mastery 状态。
+7. Recall 是 Today 笔记内的一步，不是 canonical task，不建 checkbox，不建日历时间块，也不复活旧的独立复习队列。“被课件教过”和“已经主动回忆/能独立使用”必须严格分开。
 
 ## 词汇同步区
 

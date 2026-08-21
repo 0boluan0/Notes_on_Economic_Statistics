@@ -20,6 +20,8 @@ Using data on more than 120 million US mortgages, Sadhwani et al. (2021) found t
 
 In contrast, using data on 5.83 million UK mortgages, Bracke et al. (2019) found that gradient tree boosting improved ROC-AUC only slightly, from 0.78 for logistic regression to 0.81.
 
+However, because the study used a random train-test split rather than a genuine out-of-time test, the reported gain provides weaker evidence of performance over time. Taken together, Sadhwani and Bracke suggest that complex models can generate substantial economic value in some settings, but a large dataset alone neither guarantees material predictive gains nor justifies reduced interpretability.
+
 Section 2   Can the loss of interpretability be avoided or controlled? Compare complex models with interpretable alternatives and discuss post-hoc explanation.
 
 However, lower interpretability may not always be necessary because some interpretable or hybrid models can also learn nonlinear relationships.

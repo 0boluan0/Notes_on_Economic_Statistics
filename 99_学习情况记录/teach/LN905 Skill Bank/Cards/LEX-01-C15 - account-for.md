@@ -1,25 +1,25 @@
 ---
 student_os: ln905-skill-card
 card_id: LEX-01-C15
-card_title: "account for"
+card_title: "account for / fail to account for"
 parent_skills:
   - LEX-01
   - AW-11
 card_type: lexical-choice
 learned_on: 2026-08-20
-recall_stage: queued
-next_recall: 2026-12-11
-last_recall: 
-last_result: 
+recall_stage: "+1"
+next_recall: 2026-08-22
+last_recall: 2026-08-21
+last_result: correct
 ---
 
-# `account for`
+# `account for / fail to account for`
 
 > [!question] 正面
-> `account for`
+> `account for / fail to account for`
 
 > [!answer]- 反面
-> **功能**：在解释中纳入并说明一个 factor 或 variation。
+> **功能**：`account for` 是“在解释中纳入并说明某个因素或差异”；`fail to account for` 是“没有把某个重要因素或差异考虑进解释”。
 >
 > **适用时机**：评价 explanation 是否完整时。
 >
@@ -34,6 +34,5 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
-
-
+- 2026-08-21｜Shutdown Recall｜对 `fail to account for` 回答“没考虑某方面”，准确取回核心意思；记为 correct，下次 2026-08-22。
 

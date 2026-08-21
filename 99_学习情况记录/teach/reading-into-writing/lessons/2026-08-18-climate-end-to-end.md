@@ -41,9 +41,9 @@ current_stage: source-1-first-pass-skimming
 结论：本 pack 与 Demographics 的总阅读量几乎相同，三篇长度都落在此前正式材料约 424–660 词的范围内。它不是与每套材料“完全一样”：相对 Social Media/Gender 明显更长，词汇和研究方法略难；相对 Demographics 属于同一档、略偏难。四页排版也比正式六页版更密，但这不增加正文量。
 
 <!-- student-os:mentor-brief:start
-今日 principal：source-accurate synthesis。先用 PB-02 保住每篇来源的命题和限定，再用 AW-15/PB-04 准确转换，最后由 PB-03 写出真实的 support、explain、qualify 或 challenge；不从零重教 thesis 或总体结构。
-重点技能 IDs：PB-02、PB-03、PB-04、AW-15、AW-12、LEX-01。
-起点证据：Week 3 独立作答的教师定性档为 Reading `60/65`、Writing `55 or below`。教师确认 learner 使用全部三源、选择相关信息、有清楚的 overall argument，按 ageing → fertility → immigration 推进并完成 conclusion。当前风险是把有条件、部分有效的 immigration 写成 `proved ineffective`，informal/inconsistent reporting 与 referencing，以及 introduction 段界不清；不是“没有自己的答案”或“不会完成结论”。
+今日 principal：task-complete、source-accurate synthesis。先用 AW-01/AW-16 把题目每一部分绑定到 paragraph jobs 与 evidence roles，再用 PB-02 保住每篇来源的命题和限定，用 AW-15/PB-04 准确转换，最后由 PB-03 写出真实的 support、explain、qualify 或 challenge；不从零重教 thesis。
+重点技能 IDs：AW-01、AW-16、PB-02、PB-03、PB-04、AW-15、AW-12、LEX-01。
+起点证据：Week 3 独立作答的教师定性档为 Reading `60/65`、Writing `55 or below`；教师确认 learner 使用全部三源、选择相关信息、有清楚的 overall argument。2026-08-21 Climate Change Friday Paper B 又无提示形成三个清楚的原因段，并在各段按 writer claim 组合来源，但约 499 词即结束，第二问 solutions 只剩两句且没有来源展开。当前首要风险因此从单纯 source relation 扩展为“上位结构可见，但未把题目的每一部分执行到完整成品”；同时仍须防止改变 source certainty、scope 与 causality。
 完整产出：约 600 词、直接回答 question、使用全部三篇 extracts、writer-led paragraphs、至少一处清楚的跨来源 synthesis、完整 conclusion；随后按整篇最高价值问题完成至多一次 whole-output revision。
 端到端教学链：完整读题与三文 → question-led notes → 三源 meaning/evidence map → provisional thesis → paragraph jobs/evidence roles → 约 600 词 essay → whole-output feedback → whole-output revision → 写回证据。
 允许支架：中文解释；worked contrast；把当前 source 原文直接显示给 learner；关键词、箭头或不完整英文；function cue；structure cue；短对比示范；共同修正 map/plan。不得给 model thesis、完整 paragraph plan 或可直接提交的 model essay。

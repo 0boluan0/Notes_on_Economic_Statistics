@@ -6,10 +6,10 @@ parent_skills:
   - AW-01
 card_type: decision
 learned_on: 2026-08-20
-recall_stage: queued
-next_recall: 2026-08-20
-last_recall: 
-last_result: 
+recall_stage: capability-only
+next_recall:
+last_recall:
+last_result: not-applicable
 ---
 
 # `What exactly does the task verb require me to do?`
@@ -33,6 +33,5 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
-
-
-
+- 2026-08-21｜开场 Recall｜学习者回答“evaluate 有预设正确答案，预设后面的说法都对”。这与课程定义不符：`evaluate` 要求依据 criteria 与 evidence 作出 judgement，并不预设命题正确；记为 incorrect，次日再回忆。
+- 2026-08-21｜系统纠正｜这是一张程序性 task-analysis 卡，不属于每日语言 Recall；取消次日 Recall。上条回答只保留为端到端教学参考，不作为每日 Recall 表现。

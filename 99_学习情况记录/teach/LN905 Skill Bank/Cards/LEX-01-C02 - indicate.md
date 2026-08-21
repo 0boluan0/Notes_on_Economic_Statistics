@@ -7,10 +7,10 @@ parent_skills:
   - AW-17
 card_type: academic-word
 learned_on: 2026-08-20
-recall_stage: queued
-next_recall: 2026-08-21
-last_recall:
-last_result:
+recall_stage: retry-next-day
+next_recall: 2026-08-22
+last_recall: 2026-08-21
+last_result: partial
 ---
 
 # `indicate / indicate that ...`
@@ -34,3 +34,4 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
+- 2026-08-21｜Shutdown Recall｜回答“推断”，接近“由证据指向结论”，但 `indicate` 本身是“表明/显示/指向”，不是推断这个动作；记为 partial，2026-08-22 重现。

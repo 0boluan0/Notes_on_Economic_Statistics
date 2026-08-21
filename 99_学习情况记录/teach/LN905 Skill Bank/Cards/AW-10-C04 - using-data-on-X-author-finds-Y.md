@@ -7,10 +7,10 @@ parent_skills:
   - AW-17
 card_type: sentence-frame
 learned_on: 2026-08-20
-recall_stage: queued
-next_recall: 2026-08-21
-last_recall:
-last_result:
+recall_stage: "+1"
+next_recall: 2026-08-22
+last_recall: 2026-08-21
+last_result: correct
 ---
 
 # `Using data on X, Author (Year) found that Y.`
@@ -32,3 +32,4 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜Credit-scoring P2 guided application｜在给定句框后，学习者正确用数据规模引出 Sadhwani 的 finding；sample noun、portfolio comparison 与时态由 AI 直接修正后写入草稿。记录为 `guided`，不算独立调用。
+- 2026-08-21｜Shutdown Recall｜回答“使用什么的数据，作者发现”，准确取回了“先交代数据范围，再报告作者 finding”的核心功能；记为 correct，下次 2026-08-22。

@@ -6,10 +6,10 @@ parent_skills:
   - AW-17
 card_type: sentence-frame
 learned_on: 2026-08-19
-recall_stage: retry-next-day
-next_recall: 2026-08-21
-last_recall: 2026-08-20
-last_result: partial
+recall_stage: "+1"
+next_recall: 2026-08-22
+last_recall: 2026-08-21
+last_result: correct
 ---
 
 # `suggesting that X alone does not justify Y`
@@ -35,3 +35,4 @@ last_result: partial
 - 2026-08-19｜首次学习｜在 credit-scoring essay 中识别并收藏该结构；已理解其功能是“承认证据，但限制结论强度”。当次句子由 AI 直接语言支架补全，不计自主使用。
 - 2026-08-20｜待回忆｜Today 开场使用新语境反向提示，等待学习者作答。
 - 2026-08-20｜开场 Recall｜回答保留了 `X itself does not justify Y` 的限制逻辑，但把 performance gain / interpretability 写成 income / responsibility，关键意义没有准确实现；记为 partial，次日再回忆。
+- 2026-08-21｜Shutdown Recall｜回答“X 不够证明 Y”，准确取回了 `X alone` 不足以支持更强结论 `Y` 的核心限制逻辑；记为 correct，下次 2026-08-22。
