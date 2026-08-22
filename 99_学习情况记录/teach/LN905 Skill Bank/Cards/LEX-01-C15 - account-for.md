@@ -7,10 +7,10 @@ parent_skills:
   - AW-11
 card_type: lexical-choice
 learned_on: 2026-08-20
-recall_stage: "+1"
-next_recall: 2026-08-22
-last_recall: 2026-08-21
-last_result: correct
+recall_stage: retry-next-day
+next_recall: 2026-08-23
+last_recall: 2026-08-22
+last_result: incorrect
 ---
 
 # `account for / fail to account for`
@@ -35,4 +35,4 @@ last_result: correct
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
 - 2026-08-21｜Shutdown Recall｜对 `fail to account for` 回答“没考虑某方面”，准确取回核心意思；记为 correct，下次 2026-08-22。
-
+- 2026-08-22｜开场 Recall｜明确回答“不记得”；揭示 `account for / fail to account for` 的“纳入解释／未纳入解释”功能，记为 incorrect，2026-08-23 重现。

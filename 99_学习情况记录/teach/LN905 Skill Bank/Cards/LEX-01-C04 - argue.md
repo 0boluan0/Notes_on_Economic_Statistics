@@ -7,10 +7,10 @@ parent_skills:
   - AW-10
 card_type: academic-word
 learned_on: 2026-08-20
-recall_stage: queued
-next_recall: 2026-08-22
-last_recall:
-last_result:
+recall_stage: retry-next-day
+next_recall: 2026-08-23
+last_recall: 2026-08-22
+last_result: incorrect
 ---
 
 # `argue / argue that ...`
@@ -34,3 +34,4 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
+- 2026-08-22｜开场 Recall｜明确回答“不记得”；揭示 `argue / argue that ...` 用于归属作者的可争辩主张，记为 incorrect，2026-08-23 重现。

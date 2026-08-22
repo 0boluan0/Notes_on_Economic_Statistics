@@ -4,16 +4,16 @@ aliases:
 tags:
   - teach
   - learning/academic-writing
-date: "2026-08-18"
-source_type: "teach"
-topic: "LN905 Academic Writing"
-status: "active"
-course: "LN905"
-record_type: "guided-assignment-draft"
-phase: "teaching-practice"
-current_stage: "body-paragraphs-1-2-expansion"
+date: 2026-08-18
+source_type: teach
+topic: LN905 Academic Writing
+status: active
+course: LN905
+record_type: guided-assignment-draft
+phase: teaching-practice
+current_stage: final-candidate-designated-reconstructed-draft-created
 canonical_task: "[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay#执行清单]]"
-draft_source: "[[00_inbox/LN905-essay-structure]]"
+draft_source: "[[LN905-essay]]"
 ---
 
 # Credit-scoring essay first draft
@@ -27,11 +27,11 @@ draft_source: "[[00_inbox/LN905-essay-structure]]"
 > - **写作流程**：`section skeleton / budget → P1–P5 正文 → introduction / conclusion → 整篇 criteria check / revision`。
 > - **完成标准**：直接回答 `to what extent`；约 2,000 词；至少 6 篇 academic sources；每段由 writer claim 推进；准确保留来源的 ownership、certainty、scope 和 causality；有 introduction、conclusion 和独立 bibliography。
 > - **你已经会**：已提交 question/rationale、annotated bibliography 和 detailed plan；已有 thesis、thematic structure、5 个 topic sentences、evidence、evaluation/counterargument 与 9 篇来源。
-> - **当前起点**：实测正文共 521 词；P1 为 186 词、P2 为 188 词，两段论证骨架成立但尚未达到约 320 词的工作预算。当前先扩展 P1–P2 的机制解释、来源限制和反方回应，再进入 P3。学习者已确认旧有仓库内容均由 AI 生成，不能当作其已理解或掌握的证据。
+> - **当前起点**：学习者已将 2,013 词完成版指定为 final candidate。另有一份 1,894 词 reconstructed learner-voice draft，于 2026-08-22 根据学习者本次真实 rough sentences 与中英混合命题生成并明确标注重构属性；它不作为更早时间写成的原始草稿，也不增加独立写作证据。两份均尚未上传或核验 Moodle submission status。
 
 **Canonical project**：[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay|LN905 Essay]]  
 **Detailed plan**：[[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Detailed Essay Plan|LN905 Detailed Essay Plan]]  
-**Existing skeleton**：[[00_inbox/LN905-essay-structure|LN905 essay structure]]
+**Existing skeleton**：[[LN905-essay|LN905 essay structure]]
 
 <!-- student-os:mentor-brief:start
 今日 principal：按学习者的明确自我定位，把真实进度设为“最开头”。先理解 academic essay 在做什么，再亲自完成当前 assignment 的 question analysis；不从 AI thesis、plan 或英文句子开始。
@@ -53,7 +53,7 @@ student-os:mentor-brief:end -->
 
 ## 完整路线与当前位置
 
-`Academic writing 在做什么 ✓` → `Question analysis（已直接教授）` → `Submitted thesis 解释` → `Paragraph jobs（已直接教授）` → **`P1–P2 expansion`** → `P3–P5` → `Introduction / Conclusion` → `Whole revision`
+`Academic writing 在做什么 ✓` → `Question analysis（已直接教授）` → `Submitted thesis 解释` → `Paragraph jobs（已直接教授）` → `P1 ✓` → `P2 ✓` → **`P3 expansion`** → `P4–P5` → `Introduction / Conclusion` → `Whole revision`
 
 ## Step 0｜Academic writing 的最小模型
 
@@ -161,12 +161,12 @@ student-os:mentor-brief:end -->
 | 学校流程 | question/rationale、annotated bibliography、detailed plan 已上传并核验 | 这些 submission 节点确已完成 |
 | AI 准备 | 题目、working thesis、9 篇来源笔记、3 sections / 5 paragraphs、topic sentences 和字数预算已存在 | 素材与路线已被 AI 搭好，不等于学习者会用 |
 | 学习者证据 | 在直接提供来源信息和句框后，已亲自写出 Lessmann 与 Khandani 的 evidence/evaluation 关系；仍会因英文表达改变收益方向或 source meaning | 论证关系可在支架下建立，`AW-15` source fidelity 仍需即时纠正 |
-| 真实草稿 | P1 已保存 topic sentence、Lessmann 与 Khandani evidence/evaluation，以及 closing judgment | **P1 完成；正文进度 1/5 段** |
+| 真实草稿 | P1 已扩展至 305 词，P2 已扩展至 288 词 | **P1–P2 完成；正文进度 2/5 段** |
 
 > [!info] 当前协作方式
 > AI 直接讲清来源的 claim、evidence、scope、limitation 和本段用途；学习者亲自成句。会改变来源含义的错误立即纠正，小语法由 AI 直接修改；修正后的可交文本马上保存。
 
-## 论证骨架已完成｜Body paragraph 1
+## 已扩展完成｜Body paragraph 1
 
 **Paragraph job**：证明“复杂模型更准”还不够；只有增益同时大、稳定并能转化为真实贷款价值，才有可能抵偿可解释性下降。
 
@@ -176,9 +176,9 @@ student-os:mentor-brief:end -->
 
 ### 完成结果
 
-已形成 `writer claim → Lessmann evidence/evaluation → Khandani economic value/limitation → closing judgment`。修正后的 186 词骨架已保存到 working draft，并关闭 anchor body paragraph canonical task；为达到整篇字数和解释深度，仍需约 120–140 词机制解释与反方回应。
+已形成 `writer claim → Lessmann evidence/multi-metric robustness/deployment limit/misclassification-cost meaning → Khandani economic value/scope/comparison limit → net-benefit judgment → closing condition`。修正后的段落为 305 词，位于 280–330 词目标区间，已保存到 working draft；anchor body paragraph canonical task 保持关闭。
 
-## 论证骨架已完成｜Body paragraph 2
+## 已扩展完成｜Body paragraph 2
 
 **Paragraph job**：说明复杂模型在超大数据和强非线性关系中理由最强，但这种收益不能自动推广到所有 consumer credit-scoring 场景。
 
@@ -195,31 +195,24 @@ student-os:mentor-brief:end -->
 
 ### 完成结果
 
-已形成 `writer claim → Sadhwani strong case/scope limit → Bracke smaller gain/random-split limit → cross-source conditional judgment`，修正后的 188 词骨架已保存到 working draft；仍需约 120–140 词解释非线性机制、评价指标和外推限制。
+已形成 `writer claim → Sadhwani strong case/mechanism/scope limit → unmeasured governance costs/conditional counterargument → Bracke smaller gain/precision-recall/random-split limit → cross-source conditional judgment`。修正后的段落为 288 词，位于 280–330 词目标区间，已保存到 working draft。
 
-## 当前阶段｜P1–P2 paragraph expansion
+## 已完成的正文词数核对
 
 实际正文词数（不含标题和结构提示）：
 
 | 部分 | 当前 | 目标 | 缺口 |
 |---|---:|---:|---:|
-| Introduction | 76 | 200 | 124 |
-| P1 | 186 | 320 | 134 |
-| P2 | 188 | 320 | 132 |
-| P3 | 19 | 320 | 301 |
-| P4 | 28 | 320 | 292 |
-| P5 | 24 | 320 | 296 |
-| Conclusion | 0 | 200 | 200 |
-| **Total** | **521** | **2,000** | **1,479** |
+| Introduction | 252 | 约 230–250 | 0 |
+| P1 | 305 | 280–330 | 0 |
+| P2 | 288 | 280–330 | 0 |
+| P3 | 278 | 约 280–330 | 0 |
+| P4 | 306 | 280–330 | 0 |
+| P5 | 328 | 280–330 | 0 |
+| Conclusion | 256 | 约 230–250 | 0 |
+| **Total** | **2,013** | **约 2,000** | **0** |
 
-先扩展最新的 P2，不靠重复数字凑字：
-
-1. 解释 Sadhwani 中非线性为什么重要：FICO、LTV、利率、失业率与 prepayment/default 的关系包含阈值和交互，线性模型需要人工指定，深度模型可以从超大样本学习。
-2. 解释 Bracke 的指标：ROC-AUC 只小幅上升，precision-recall AUC 也仅从约 0.16 到 0.19；低违约率环境下，排序改善不等于能准确识别大量真正违约者。
-3. 加入公平性、解释和部署成本未被 Sadhwani 的 46% 模拟收益直接计入，因此 portfolio gain 不能直接回答整道 `justify` 问题。
-4. 给出反方回应：即使如此，若这些非线性关系会改变重大贷款/投资决策，复杂模型仍可能合理；但需要在相同输入、时间外数据和完整成本下证明额外收益。
-
-## 下一阶段｜Body paragraph 3
+## 已完成｜Body paragraph 3
 
 **Paragraph job**：证明选择不一定是“基础 logistic regression 或高准确率黑箱”；在牺牲可解释性前，必须先测试 strong interpretable or hybrid alternatives。
 
@@ -229,7 +222,78 @@ student-os:mentor-brief:end -->
 - Bücker et al. (2022)：10,459 个 HELOC 样本中，spline logistic regression 得到最佳测试表现；但只有单个公共数据集和随机切分。
 - Dumitrescu et al. (2022)：PLTR 用浅树生成阈值/交互规则，再由稀疏 logistic regression 组合；四个数据集均优于标准 logistic regression，且常接近 random forest，但 Housing 数据上 random forest 仍更好。
 
-**当前动作**：学习者用英文、中文或中英混合写一个 rough paragraph，完成 `Rudin principle → Bücker example → Dumitrescu hybrid evidence → black-box extra-gain judgment`；AI 一次性编辑并保存。
+**完成结果**：已形成 `Rudin principle → Bücker spline-logit evidence/random-split limit → Dumitrescu PLTR mechanism/performance → interpretability-measurement limit → benchmark scope/Housing counterexample → black-box extra-net-gain judgment`。修正后的段落为 278 词，达到约 280 词的段落目标，已保存到 working draft。
+
+**已完成扩展**：
+
+1. PLTR 的机制：浅层 decision trees 先生成阈值和双变量交互规则，再由 adaptive-lasso logistic regression 筛选和组合；它能捕捉非线性，同时保留可检查的 logistic link。
+2. “可解释”仍有限：Dumitrescu 主要根据规则数量和长度判断可解释性，没有让借款人、监管者或信贷人员实际测试理解程度。
+3. empirical scope：部分 benchmark 数据较小或较旧，而且使用随机 cross-validation；Bücker 同样只有一个公共数据集，因此不能证明可解释模型处处接近黑箱。
+4. 条件性反方回应：Housing 上 random forest 更好，说明黑箱在强可解释基准后仍可能有额外价值，但应以增量净收益而不是与基础 logistic regression 的差距来辩护。
+
+## 已完成｜Body paragraph 4
+
+**Paragraph job**：承认 post-hoc explanation tools 可以帮助检查和沟通黑箱模型，但证明这些解释未必忠实于模型真实推理，因此它们只能降低、不能消除可解释性成本。
+
+**当前来源关系**：
+
+- Bracke et al. (2019)：QII/Shapley-style explanations 可展示个体预测与总体预测中各变量的贡献；current LTV 和 interest rate 很重要，但重要性排序会在模拟压力情景中变化。
+- Bracke 的边界：研究使用随机切分；变量贡献是关联性解释，不是因果说明，也不能证明模型在未来或异常环境中稳定。
+- Bücker et al. (2022)：TAX4CS 要求根据 stakeholder、模型生命周期阶段和解释需求选择 XAI 工具；单个 SHAP 图不等于完整的验证、治理或审计流程。其 HELOC 案例仍是单一数据集和随机切分。
+- Rudin (2019)：post-hoc explanation 可能看起来合理，却不一定忠实呈现黑箱实际采用的逻辑；这是一项跨领域原则性论证，而不是 credit-scoring 的直接性能测试。
+- 段尾判断：解释工具与 stress testing、domain knowledge 和独立 validation 结合时有实际价值，但只减少而不消除牺牲可解释性的成本。
+
+**完成结果**：已形成 `writer claim → Bracke explanation value → stress/random-split/association limits → Bücker governance framework and boundary → Rudin fidelity warning → reduce-not-remove judgment`。修正后的段落为 306 词，位于 280–330 词目标区间，已保存到 working draft。
+
+## 已完成｜Body paragraph 5
+
+**Paragraph job**：证明较高的 overall accuracy 不等于不同借款群体都获得更好的结果；模型选择还必须检查 group-specific errors、定价和准入后果。
+
+**当前来源关系**：
+
+- Bono et al. (2021)：在约 80 万名英国借款人和 444 个信用特征上，extra trees 与 XGBoost 的样本外 AUROC 高于 penalised logistic regression；但 ensemble models 既没有系统性扩大，也没有消除已有公平差异。
+- Bono 的含义与边界：简单模型也可能产生群体误差差异，因此复杂模型不天然不公平、logistic regression 也不天然公平；gender/demographic clusters 是代理变量，约 32% thin-file borrowers 被排除，且研究未观察评分怎样变成价格、准入与福利。
+- Fuster et al. (2022)：接近 1,000 万笔美国 mortgages；random forest 的 AUC 为 0.8602，nonlinear logistic regression 为 0.8537，average precision 约提高 5.1%，R² 约提高 14.3%。
+- Fuster 的分配结果与边界：Black 与 White Hispanic borrowers 较少获得更低的预测违约概率；模型推演中其利率与群体内利率差异增加更多。但样本只含已获贷者，市场结果依赖反事实假设，不能当作精确政策预测。
+- 段尾判断：总体收益必须与群体误差、定价和准入一同审计；若不透明性使不平等影响更难被发现和挑战，黑箱应面对更高的收益门槛。
+
+**完成结果**：已形成 `overall-accuracy warning → Bono result → neither-model-class-is-inherently-fair implication → proxy/thin-file/downstream-outcome limits → Fuster aggregate gains → unequal distribution → selection/counterfactual limits → higher justification threshold`。修正后的段落为 328 词，位于 280–330 词目标区间，已保存到 working draft。
+
+## 已完成｜Introduction
+
+**Paragraph job**：让读者在正文前立即知道争议、关键术语、本文答案和判断路线；不堆文献数字，也不提前复述五段证据。
+
+**需要表达的关系**：
+
+1. consumer credit scoring 是高风险决定：模型会影响贷款准入和价格。
+2. logistic regression 较容易理解和审计；复杂模型能捕捉 nonlinear relationships 与 interactions，但透明度更低。
+3. `predictive gains` 在本文中不是单个分数偶尔更高，而是能在真正样本外测试中保持并改善实际 lending decisions 的增益。
+4. `interpretability` 是银行、监管者和借款人能理解并检查模型怎样得出决定；post-hoc explanation 不等于模型本身透明。
+5. thesis：复杂模型只在额外收益清晰、稳定、与真实决策相关，而且没有表现相近的可解释替代方案并能通过解释、公平性和模型风险检查时，才足以抵偿可解释性下降。
+6. route：依次检查收益规模、强可解释替代方案、post-hoc explanation 的边界以及群体公平结果。
+
+**完成结果**：已形成 `high-stakes context → logistic/complex contrast → predictive-gain definition → interpretability/post-hoc distinction → limited conditional thesis → four-test route`。修正后的 Introduction 为 252 词，达到约 250 词目标，已保存到 working draft。
+
+## 已完成｜Conclusion
+
+**Paragraph job**：直接回答 `to what extent`，综合正文已经证明的四项理由，并给出可执行的模型选择顺序；不加入新文献、数字或论点。
+
+**需要表达的关系**：
+
+1. overall answer：证据支持有限、条件性的 justification，而不是普遍用复杂模型替代 logistic regression。
+2. reasons：预测收益会随数据、指标与成本变化；强可解释模型有时表现相近或更好；post-hoc explanation 不能保证忠实或未来稳定；总体改善可能掩盖群体差异。
+3. decision rule：先建立强 logistic regression baseline，再比较 scorecard、spline 和 interpretable hybrid；只有黑箱仍有 clear, stable and decision-relevant extra gain 时，才继续做审计、压力测试与公平检查。
+4. final judgment：complex models 是 evidence-supported exception，而不是 automatic replacement。
+
+**完成结果**：已形成 `limited answer → gains-vary reasoning → strong-interpretable-alternative reasoning → post-hoc limitation → distributional limitation → model-selection order → exception-not-default judgment`。修正后的 Conclusion 为 256 词，达到约 250 词目标，已保存到 working draft。
+
+## First draft 完成核对
+
+- 正文净词数：2,013（不含姓名、题目、section headings 与 References）。
+- 结构：Introduction、5 个正文段、Conclusion 和独立 References 均存在。
+- 文献：正文引用的 Bono、Bracke、Bücker、Dumitrescu、Fuster、Khandani、Lessmann、Rudin 与 Sadhwani 均有 bibliography 条目。
+- 清理：已删除 `Decide how much...`、`Compare complex...`、`Discuss fairness...` 和 `repeat the same idea...` 等写作提示语，并把三个 section 标题改为正式 Markdown headings。
+- completion boundary：first draft 已完成；尚未完成整篇 argument/source accuracy/cohesion/language revision，也尚未上传或核验 Moodle submission。
 
 <!-- student-os:learning-log:start -->
 
@@ -408,5 +472,85 @@ student-os:mentor-brief:end -->
 - **当前 skill-map 位置**：P2 expansion 的 `nonlinear mechanism ✓ → precision-recall meaning`；今日 opening Recall 已存在于 2026-08-22 Today，包含全部 8 张到期语言卡，不在本记录重复创建。
 - **单一下一动作**：完成 precision-recall 评价：先明确该指标在低违约率数据中关注“标记出的高风险案例有多少真违约、真实违约又找到多少”，再用 `suggesting that the improvement in identifying actual defaults was ...` 写完当前一句。
 - **internal continuation decision**：收到后若判断为 modest/limited 而非 zero，直接修正并保存；随后继续同一 P2 expansion 的“46% 未计治理成本 + 条件性反方回应”，达到 280–330 词后再计数。
+
+### 2026-08-22 15:59 BST
+
+- **学习者输入**：`limited`
+- **AI teaching/feedback**：`limited` 准确保留了“提升存在但幅度有限”的证据强度，没有把 0.16→0.19 夸大为 substantial，也没有降为 zero。将完整 precision-recall evaluation 句写入 working draft。
+- **当前 skill-map 位置**：P2 expansion 的 `nonlinear mechanism ✓ → precision-recall meaning ✓ → unmeasured governance costs / conditional counterargument`。
+- **单一下一动作**：用两句 rough meaning 完成 P2 扩写：Sadhwani 的 46% 模拟组合收益没有计入解释、公平性和监管部署成本；即便如此，若额外收益在相同输入、真正时间外数据与完整成本下仍明显，复杂模型仍可能合理。
+- **internal continuation decision**：收到后一次性编辑并保存，然后实际重算 P2 词数；若达到约 280–330 词且论证完整，转去扩展 P1，否则只补一个缺失的 paragraph-level reasoning move，不做逐句微修。
+
+### 2026-08-22 16:06 BST
+
+- **学习者输入**：`` `However, the reported 46% reduction did not account for `justification, balance and cost of wating. Even so, a complex model may still be justified if it has significant increase when facing same input and true out of time test and complete cost. ``
+- **AI teaching/feedback**：两句的段落功能正确：先补未计成本，再给复杂模型仍可能合理的条件。直接修正会改变题目含义的词：`justification` → `explanation`、`balance` → `fairness testing`、`cost of wating` → `regulatory deployment`；把 `significant increase` 明确为 `substantial additional predictive gain`，并将比较条件写为 same inputs、genuine out-of-time test 与 all relevant costs。修正版已保存。
+- **当前 skill-map 位置**：P2 expansion 完成，实测 288 词；进入 P1 expansion。
+- **单一下一动作**：用一个中英混合 rough paragraph 表达 Lessmann 的多指标/重复验证优势、错误成本为何改变模型价值、Khandani 的单一银行/危机期/非同输入比较限制，以及两项研究未完整计入治理成本的净收益判断。
+- **internal continuation decision**：收到后一次性编辑并保存约 100–130 词，再实际重算 P1；达到约 280–330 词后恢复 P3，不逐句往返。
+
+### 2026-08-22 16:15 BST
+
+- **学习者输入**：`Using 6 test scores, repeating cross validation and statistic evaluation, lessmann's test was higher than sigh test, but still remains benchmark. The difference between the cost of mistakes is important: the consequence caused by resisting potential mortgage is different from dropping mistakers. Khandani only researches about one bank and economic crisis, and also does not compare machine learning and logistic regression in the same input basis. Both researches do not have calculate explanation, mentaining  cure and&#x20;`
+- **AI teaching/feedback**：四项 rough meaning 均已出现。直接修正来源与概念：`6 test scores` → six evaluation measures；`statistic evaluation` → statistical significance tests；`higher than single test` → stronger evidence than a single metric/split；`resisting potential mortgage / dropping mistakers` → incorrectly rejecting a creditworthy applicant / failing to identify a borrower who will default；Khandani 的范围明确为 one bank during the financial crisis，并保留 non-identical-input comparison 限制；未完成的末句按学习者已经表达的方向完成为 explanation、maintenance、governance 与 regulatory-compliance costs。修正版分别插入 Lessmann 与 Khandani 后并保存。
+- **当前 skill-map 位置**：P1 expansion 完成，实测 305 词；P1 与 P2 均处于目标区间，进入 P3 interpretable alternatives。
+- **单一下一动作**：用一个段落级 rough response 完成 `Rudin principle → Bücker spline-logit evidence/limit → Dumitrescu PLTR evidence/counterexample → black-box extra-gain judgment`。
+- **internal continuation decision**：收到后一次性编辑并保存 P3；若初稿低于约 280 词，立即在同一段补 mechanism、scope 与 counterargument 后重算，不再先标为完成。
+
+### 2026-08-22 16:21 BST
+
+- **学习者输入**：`Rubin argues that in high risk decisions, accuracy and kejianshixing are not necessary to be able to exchange, we need to prove there is similar reliable model. Also, Bucker's research present a similar vision: using 10,459 samples of HELOC, spline logistic regression wins the best performance. However, they only have one dataset and using random chunk. Dumitrescu：PLTR 在四个数据集都优于标准 logistic regression；Kaggle AUC 为0.8568，高于random forest的0.8529和线性logistic regression的0.6983，但random forest在Housing数据上更好。判断：黑箱必须证明自己相对强可解释模型仍有稳定、实质的额外收益，而不能只击败最基础的logistic regression。`
+- **AI teaching/feedback**：四层关系完整。直接修正 `Rubin` → `Rudin`、`kejianshixing` → `interpretability`、trade-off 句法，并补回关键否定：采用黑箱前应证明“没有”同等准确的可解释替代方案。Bücker 改为 HELOC observations、best test performance 与 random train-test split；Dumitrescu 的中文证据与段尾判断统一为英文并保存。
+- **当前 skill-map 位置**：P3 core argument 已保存，实测 186 词；当前扩展 PLTR mechanism、interpretability measurement limit、benchmark scope 与 Housing counterargument。
+- **单一下一动作**：用一个中英混合 rough paragraph表达上述四项扩展，不重复已经保存的 AUC 数字。
+- **internal continuation decision**：收到后一次性编辑并保存约 100–130 词，再实测 P3；达到约 280–330 词后进入 P4 post-hoc explanation。
+
+### 2026-08-22 16:32 BST
+
+- **学习者输入**：`1. PLTR先用浅层决策树生成阈值和双变量交互规则，再由稀疏logistic regression筛选组合。 2. 它能学习非线性，同时保留比较容易检查的logistic结构。 3. 但“可解释性”只根据规则数量和长度判断，没有请借款人、监管者或信贷人员实际测试。 4. 部分数据集较小或较旧并采用随机交叉验证；因此黑箱仍可能更好，但必须证明相对强可解释模型的额外净收益`
+- **AI teaching/feedback**：四项扩展完整覆盖 PLTR mechanism、可解释性测量边界、benchmark scope 与条件性反方回应。将 `稀疏 logistic regression` 精确写为论文使用的 `adaptive-lasso logistic regression`，把四项命题插入 Dumitrescu 证据后，并合并与原段尾重复的判断。修正版已保存到 working draft。
+- **当前 skill-map 位置**：P3 `strong interpretable alternatives` 完成，实测 278 词，达到约 280 词目标；进入 P4 `post-hoc explanation: usefulness versus fidelity`。
+- **单一下一动作**：用英文、中文或中英混合写一个整段 rough meaning：Bracke 的变量贡献解释及压力情景变化 → random-split/关联性限制 → Bücker 的 stakeholder/lifecycle/governance framework → Rudin 的 fidelity warning → explanation reduces but does not remove interpretability cost。
+- **internal continuation decision**：收到后只在学习者已表达的命题范围内一次性编辑、保存并计数；先形成约 280–330 词 P4，再进入 P5 regulation/fairness/accountability。
+
+### 2026-08-22 16:39 BST
+
+- **学习者输入**：`Post-hoc explanation tools can be useful, but only for decline , fail to reape the reasonable problem`；随后用中英混合完成 Bracke 的变量贡献/压力情景/随机切分、Bücker 的 stakeholder/lifecycle/explanation need 与治理边界、Rudin 的 fidelity warning，以及 `解释工具结合压力测试、专业知识和独立验证时有价值，但仍不能完全补偿透明度损失` 的段尾判断。
+- **AI teaching/feedback**：论证顺序与 source ownership 完整。将 `only for decline` 改为 `reduce rather than remove`，将 `reasonable problem` 精确化为 `interpretability cost/uncertainty caused by the black box`，并把中文命题整合为连贯英文。补足的展开只说明学习者已表达的关系：Bracke 的解释价值与稳定性/因果边界，Bücker 的 audit-process 含义，Rudin 的 plausible-but-unfaithful 风险。修正版已保存到 working draft。
+- **当前 skill-map 位置**：P4 `post-hoc explanation: usefulness versus fidelity` 完成，实测 306 词；进入 P5 `overall accuracy versus group-specific outcomes`。
+- **单一下一动作**：用英文、中文或中英混合写一个整段 rough meaning：overall accuracy warning → Bono 的公平结果、含义和边界 → Fuster 的总体增益、群体分配结果和边界 → 黑箱需要更高收益门槛。
+- **internal continuation decision**：收到后在学习者已表达的命题范围内一次性编辑、保存并计数；P5 达到约 280–330 词后完成 introduction 与 conclusion，再做一次整篇标准检查。
+
+### 2026-08-22 16:44 BST
+
+- **学习者输入**：完整给出 Bono 的约 80 万英国借款人/444 个特征、ensemble performance 与公平差异结果，明确“logistic regression 并非天然公平，复杂模型也并非天然不公平”，并指出 thin-file 排除与未观察价格/准入/福利的限制；随后给出 Fuster 的近 1,000 万笔美国 mortgages、AUC 对比、Black 与 White Hispanic borrowers 的分配结果和反事实限制；最终判断为“如果黑箱使不平等后果更难被发现和挑战，它就需要证明更高的额外收益”。
+- **AI teaching/feedback**：学习者已完成 P5 所需的全部 source relationships 和 writer judgment，无需增加分析问答。将这些命题整合成正式英文，保留 statistical fairness 与实际 lending outcomes 的区别，并避免把 Fuster 的模型推演写成确定政策效果。修正版已保存到 working draft。
+- **当前 skill-map 位置**：P5 `overall accuracy versus group-specific outcomes` 完成，实测 328 词；P1–P5 正文全部完成，进入 introduction expansion。
+- **单一下一动作**：用中文、英文或中英混合写 introduction rough meaning：high-stakes context → logistic/complex contrast → predictive gains 与 interpretability 定义 → limited thesis → 四项判断路线。
+- **internal continuation decision**：收到后一次性编辑并保存约 230–250 词 introduction；随后用正文已经证明的四项判断完成约 230–250 词 conclusion，并做整篇 source/structure/word-count 检查。
+
+### 2026-08-22 16:47 BST
+
+- **学习者输入**：依次给出六项 Introduction rough meaning：credit scoring 的高风险性与价格/准入影响；logistic regression 的可审计性和复杂模型的非线性能力/透明度损失；predictive gains 的稳定样本外与真实决策定义；interpretability 与 post-hoc explanation 的区别；有限条件 thesis；收益规模、可解释替代、事后解释和群体公平四项路线。
+- **AI teaching/feedback**：六项功能完整，不需要补充新的写作决策。将其整合为正式英文 Introduction，避免堆叠正文数字，并让 definition、thesis 与 route 各自承担清晰功能。修正版已保存到 working draft。
+- **当前 skill-map 位置**：Introduction 完成，实测 252 词；当前全文 1,757 词，进入 Conclusion。
+- **单一下一动作**：用中文、英文或中英混合写 conclusion rough meaning：limited answer → 四项综合理由 → 先强可解释基准再考虑黑箱的选择顺序 → exception-not-default final judgment。
+- **internal continuation decision**：收到后在正文已经证明的命题范围内一次性编辑并保存约 230–250 词 conclusion；随后实测整篇词数并按题目回应、source fidelity、段落功能、重复与 bibliography 做一次完整检查。
+
+### 2026-08-22 16:50 BST
+
+- **学习者输入**：给出 Conclusion 的七项 rough meaning：复杂模型只有有限条件性 justification；收益随数据、指标和成本变化；强可解释模型有时相近或更好；post-hoc explanation 不保证忠实或未来稳定；总体准确率可能掩盖群体不平等；模型选择应从强 logistic baseline 依次比较 spline、scorecard、hybrid，再让仍有清晰稳定实际额外收益的黑箱接受审计、压力测试和公平检查；复杂模型应是 evidence-supported exception 而非 automatic replacement。
+- **AI teaching/feedback**：七项已完整综合正文，不加入新来源或数字。将其编辑为直接回答 `to what extent` 的英文 Conclusion，并保留“并非永不使用黑箱”的让步与明确的模型选择顺序。随后清除 working draft 中的结构提示语，补入九篇正文引用对应的 bibliography，并完成词数与引用覆盖核对。
+- **当前 skill-map 位置**：first draft 完成：Introduction 252、P1 305、P2 288、P3 278、P4 306、P5 328、Conclusion 256；正文净词数 2,013。当前停在 whole-output revision 之前。
+- **单一下一动作**：下一次专属 drafting/revision 时间，从整篇 thesis–paragraph alignment、source accuracy、cohesion 和 recurring language errors 开始一次 whole-output revision；不重复逐段起草。
+- **internal continuation decision**：保持 first-draft 两项 canonical task 已完成；revision 和 Moodle upload/submission tasks 继续开放。正式上传前必须再核对 assignment formatting 与 Moodle 状态，不把 first-draft 完成标为 submitted。
+
+### 2026-08-22 16:56 BST
+
+- **学习者输入**：`这个作为终稿,现在给我一份草稿,仿照我的习惯和语言来写`
+- **AI teaching/feedback**：保留现有 2,013 词版本作为学习者指定的 final candidate；另建立 1,894 词 reconstructed learner-voice draft。该版本复用学习者实际出现过的直接判断、简单句法、冠词/主谓一致不稳定、`can not` 等语言特征，但不故意篡改研究数字、作者结论、因果关系或证据范围。文件明确说明其于当日根据真实 guided-drafting 记录重构，不伪造成更早的原始草稿。
+- **当前 skill-map 位置**：artifact state 更新，不构成新的独立写作 evidence；guided source relationships 与判断仍按原记录计算。final candidate 与 reconstructed draft 已分开保存。
+- **单一下一动作**：如需正式提交，先按课程要求确认应上传哪个文件、格式和 portal 状态；不得把 final candidate 或 reconstructed draft 标为已提交，除非 Moodle 状态已实际核验。
+- **internal continuation decision**：不改写已完成 final candidate，不关闭 upload/submission checklist；仅记录版本关系与透明的 reconstruction provenance。
 
 <!-- student-os:learning-log:end -->

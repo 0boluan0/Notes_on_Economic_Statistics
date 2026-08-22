@@ -6,9 +6,9 @@ parent_skills:
   - AW-17
 card_type: sentence-frame
 learned_on: 2026-08-19
-recall_stage: "+1"
-next_recall: 2026-08-22
-last_recall: 2026-08-21
+recall_stage: "+3"
+next_recall: 2026-08-25
+last_recall: 2026-08-22
 last_result: correct
 ---
 
@@ -36,3 +36,4 @@ last_result: correct
 - 2026-08-20｜待回忆｜Today 开场使用新语境反向提示，等待学习者作答。
 - 2026-08-20｜开场 Recall｜回答保留了 `X itself does not justify Y` 的限制逻辑，但把 performance gain / interpretability 写成 income / responsibility，关键意义没有准确实现；记为 partial，次日再回忆。
 - 2026-08-21｜Shutdown Recall｜回答“X 不够证明 Y”，准确取回了 `X alone` 不足以支持更强结论 `Y` 的核心限制逻辑；记为 correct，下次 2026-08-22。
+- 2026-08-22｜开场 Recall｜以 `X itself cannot justify Y` 取回了“X 单独不足以支持 Y”的核心句型；无需逐字复原，记为 correct，下次 2026-08-25。

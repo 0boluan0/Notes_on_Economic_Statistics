@@ -6,10 +6,10 @@ parent_skills:
   - AW-02
 card_type: sentence-frame
 learned_on: 2026-08-20
-recall_stage: queued
-next_recall: 2026-08-22
-last_recall: 
-last_result: 
+recall_stage: retry-next-day
+next_recall: 2026-08-23
+last_recall: 2026-08-22
+last_result: partial
 ---
 
 # `This essay argues that X because A and B.`
@@ -33,6 +33,6 @@ last_result:
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
-
+- 2026-08-22｜开场 Recall｜取回 `argues that ... because A and B`，但漏掉 `This essay` 与 controlling answer 的 `X`；记为 partial，2026-08-23 重现。
 
 

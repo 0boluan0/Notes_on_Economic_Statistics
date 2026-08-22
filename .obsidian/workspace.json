@@ -47,7 +47,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/week4reading-into-writing.md",
+                "file": "99_学习情况记录/2026-08-22——Sat.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -62,11 +62,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "week4reading-into-writing"
+              "title": "2026-08-22——Sat"
+            }
+          },
+          {
+            "id": "8b990f1b88ca368f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "99_学习情况记录/2026-08-22——Sat.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-08-22——Sat"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -346,16 +370,26 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "30f6502409000f89",
+  "active": "8b990f1b88ca368f",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-essay.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-credit-scoring-draft.md",
+    "00_inbox/add_done_item.md",
+    "00_inbox/quickadd记录推进.js",
+    "00_inbox/quickadd任务添加.js",
+    "00_inbox/超级专注力课程.md",
+    "00_inbox/插入批注.md",
+    "00_inbox/周记模版.md",
+    "00_inbox/LLM Big Picture.md",
+    "99_学习情况记录/学习计划/MIT 6.100L Introduction to CS and Programming Using Python.md",
+    "99_学习情况记录/2026-08-22——Sat.md",
+    "00_inbox/随手记.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/week4reading-into-writing.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/week4listening into writing.md",
     "98_attachment/Pasted image 20260822145206.png",
-    "99_学习情况记录/2026-08-22——Sat.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/AI-01-C01 - leader-open-the-task-keep-the-group-focused-and-invite-contribut.md",
     "99_学习情况记录/2026-08-21——Fri.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf",
-    "00_inbox/随手记.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Voice and Vocabulary.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Putting it all Together.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Presentation Guide - Timestamped Transcript.pdf",
@@ -363,8 +397,6 @@
     "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Practice.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Discussion Language - 12 Functions.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Instructions for Examiners.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/2-minute-presentations/Week One_LN905.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading_into_Writing_AI_Feedback_Workbook.pdf",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing.md",
     "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-10-gender-synthesis-repair.md",
@@ -377,13 +409,6 @@
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/LEX-01-C16 - x-is-consistent-with-y-but-does-not-prove-it.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/LEX-01-C15 - account-for.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/LEX-01-C14 - highlight.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/LEX-01-C13 - acknowledge-admit.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/LEX-01-C12 - find-suggest.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/LEX-01-C11 - contend-maintain.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/LEX-01-C10 - claim-argue-report.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/PRON-03-C05 - intelligibility-comes-before-accent-imitation-or-grammatical-com.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/PRON-03-C04 - chunk-speech-by-meaning-not-by-every-written-word.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/PRON-03-C03 - sentence-stress-marks-focus-moving-stress-changes-the-implied-co.md",
     "tmp/pdfs/final-4.png",
     "tmp/pdfs/final-3.png",
     "tmp/pdfs/final-2.png",
