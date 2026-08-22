@@ -13,8 +13,8 @@
             "state": {
               "type": "learning-progress-dashboard-view",
               "state": {},
-              "icon": "sprout",
-              "title": "Learning Progress Dashboard"
+              "icon": "lucide-ghost",
+              "title": "learning-progress-dashboard-view"
             }
           },
           {
@@ -28,45 +28,9 @@
               "icon": "lucide-file-text",
               "title": "LSE English Language Assessment - Information"
             }
-          },
-          {
-            "id": "07fe837e5a2c8f8c",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Sample Essay"
-            }
-          },
-          {
-            "id": "08e56363c464b9d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "99_学习情况记录/2026-08-21——Fri.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2026-08-21——Fri"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,9 +50,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false,
-                "showSearch": false,
-                "searchQuery": ""
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -115,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 293.4375114440918
+    "width": 242.02500534057617
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -207,8 +169,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           },
           {
@@ -252,8 +214,8 @@
                 }
               },
               "pinned": true,
-              "icon": "terminal",
-              "title": "zsh"
+              "icon": "lucide-ghost",
+              "title": "terminal:terminal"
             }
           },
           {
@@ -274,8 +236,8 @@
             "state": {
               "type": "code-space-outline",
               "state": {},
-              "icon": "code",
-              "title": "Code outline"
+              "icon": "lucide-ghost",
+              "title": "code-space-outline"
             }
           },
           {
@@ -316,8 +278,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "lucide-ghost",
+              "title": "calendar"
             }
           }
         ]
@@ -328,47 +290,38 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "media-extended:Open media library": false,
-      "media-extended:Open media quick switcher": false,
-      "code-space:Open code space dashboard": false,
-      "terminal:Open terminal": false,
-      "learning-progress-dashboard:Learning Progress Dashboard": false,
       "canvas:Create new canvas": false,
       "graph:Open graph view": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "workspaces:Manage workspace layouts": false,
-      "bases:Create new base": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian-kanban:Create new board": false,
-      "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false
+      "bases:Create new base": false
     }
   },
-  "active": "08e56363c464b9d0",
+  "active": "30f6502409000f89",
   "lastOpenFiles": [
+    "99_学习情况记录/2026-08-22——Sat.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/week4reading-into-writing.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf",
-    "00_inbox/随手记.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Voice and Vocabulary.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Putting it all Together.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Presentation Guide - Timestamped Transcript.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Practice of Part 3.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Practice.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Discussion Language - 12 Functions.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/Instructions for Examiners.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/05_Paper-C-Speaking-and-Listening/2-minute-presentations/Week One_LN905.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading_into_Writing_AI_Feedback_Workbook.pdf",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing.md",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing.md",
-    "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-10-gender-synthesis-repair.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-15-C01 - preserve-source-ownership-who-made-which-claim.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-15-C02 - preserve-certainty-scope-causality-and-source-ownership-when-par.md",
-    "99_学习情况记录/2026-08-21——Fri.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/week4-reading-into-writing.md",
+    "00_inbox/week4-reading-into-writing.md",
+    "00_inbox/Untitled.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/week4listening into writing.md",
+    "00_inbox/week4listening into writing.md",
+    "99_学习情况记录/2026-08-21——Fri.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Assessment-Information/LSE English Language Assessment - Information.pdf",
     "99_学习情况记录/2026-08-20——Thu.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-10-C04 - using-data-on-X-author-finds-Y.md",
+    "00_inbox/随手记.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-4-Climate-Change/Academic Interaction - Climate Change.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Academic Interaction.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/06_Academic-Interaction/Week-4-Climate-Change/Thinking about climate change look up and look around.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Reading/Topic Reading.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Reading/Climate Change Text - Lewandowski - Climate Change Disinformation and how to Combat it.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Listening/Video Links.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Listening/Topic Listening.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Listening/Reith_2020_Lecture_4_transcript_V2.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/08_Topics/Week-4-Climate-Change/Input-and-Discussion/Topic Input Climate Change.pdf",
     "99_学习情况记录/teach/LN905 Skill Bank/Course Coverage.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/LEX-01-C17 - limitation-implication.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/LEX-01-C16 - x-is-consistent-with-y-but-does-not-prove-it.md",
@@ -383,6 +336,7 @@
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/PRON-03-C03 - sentence-stress-marks-focus-moving-stress-changes-the-implied-co.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/PRON-03-C02 - acronyms-often-stress-the-final-element-compounds-often-stress-t.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/PRON-03-C01 - two-syllable-nouns-adjectives-often-stress-the-first-syllable-ve.md",
+    "99_学习情况记录/teach/LN905 Skill Bank/Cards/PRON-02-C08 - gemination-holds-one-consonant-across-a-word-boundary-when-ident.md",
     "tmp/pdfs/final-4.png",
     "tmp/pdfs/final-3.png",
     "tmp/pdfs/final-2.png",
