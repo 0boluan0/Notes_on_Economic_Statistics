@@ -401,4 +401,12 @@ student-os:mentor-brief:end -->
 - **单一下一动作**：先扩展最新的 P2。学习者用中文、英文或中英混合表达四项 rough meaning：Sadhwani 非线性机制、Bracke precision-recall/低违约率含义、46% 未计入治理成本、在完整测试下仍可能合理的条件。
 - **internal continuation decision**：收到后一次性整合并保存约 120–140 词扩展；随后同样扩展 P1，再恢复 P3。此后每完成一段都实际计数，目标区间为约 280–330 词，不再把 180 词骨架标成完整段落。
 
+### 2026-08-22 15:42 BST
+
+- **学习者输入**：`According to Sadhwani, there are a complex non linear interaction between FICO LTV  利率和 unemployment ratio. The precision-recall AUC only rises from 0.16 to 0.19, 说明 that the 　`
+- **AI teaching/feedback**：第一项机制判断正确，但需恢复来源的准确关系：不是泛称这些变量彼此都有 interaction，而是 deep-learning model 捕捉到 unemployment rate 与 FICO、LTV、interest rate 等借款人/贷款特征之间的复杂非线性交互。直接修正 `there are a ... interaction`、`non linear`、`unemployment ratio` 和变量全称，并用 study-specific past tense 保存到 P2。第二句未完成，暂不代替学习者补出 evaluation。
+- **当前 skill-map 位置**：P2 expansion 的 `nonlinear mechanism ✓ → precision-recall meaning`；今日 opening Recall 已存在于 2026-08-22 Today，包含全部 8 张到期语言卡，不在本记录重复创建。
+- **单一下一动作**：完成 precision-recall 评价：先明确该指标在低违约率数据中关注“标记出的高风险案例有多少真违约、真实违约又找到多少”，再用 `suggesting that the improvement in identifying actual defaults was ...` 写完当前一句。
+- **internal continuation decision**：收到后若判断为 modest/limited 而非 zero，直接修正并保存；随后继续同一 P2 expansion 的“46% 未计治理成本 + 条件性反方回应”，达到 280–330 词后再计数。
+
 <!-- student-os:learning-log:end -->

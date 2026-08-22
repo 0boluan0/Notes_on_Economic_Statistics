@@ -16,7 +16,7 @@ Although even a modest predictive improvement may have substantial economic valu
 
 Complex models are most useful when the dataset is very large and the relationships between variables are strongly nonlinear, but these situations may not represent all consumer credit scoring.
 
-Using data on more than 120 million US mortgages, Sadhwani et al. (2021) found that a portfolio of 20,000 loans selected by a five-layer neural network had 46% lower one-year losses than a portfolio selected by the linear model under the authors' loss assumptions. This provides a strong case for complex models when datasets are extremely large and relationships are strongly nonlinear, although the result cannot be directly generalised to ordinary consumer credit scoring.
+Using data on more than 120 million US mortgages, Sadhwani et al. (2021) found that a portfolio of 20,000 loans selected by a five-layer neural network had 46% lower one-year losses than a portfolio selected by the linear model under the authors' loss assumptions. They also found that the deep-learning model captured complex nonlinear interactions between unemployment rates and borrower or loan characteristics such as FICO scores, loan-to-value ratios and interest rates. This provides a strong case for complex models when datasets are extremely large and relationships are strongly nonlinear, although the result cannot be directly generalised to ordinary consumer credit scoring.
 
 In contrast, using data on 5.83 million UK mortgages, Bracke et al. (2019) found that gradient tree boosting improved ROC-AUC only slightly, from 0.78 for logistic regression to 0.81.
 
