@@ -25,6 +25,8 @@ aliases:
 - [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-1/Wk1 Group 6.pdf|Week 1 · Group 6]]
 - [[week2-4 group2.pdf|Weeks 2–4 · Group 2]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Week 5.pdf|Week 5 timetable]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Information Session.pdf|Week 5 information session]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Topic Review.pdf|Week 5 topic review]]
 
 ### Week 5 · Tutorials
 
@@ -92,6 +94,16 @@ aliases:
 - [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 3.pdf|Lesson 3 · Nominalisation]]
 - [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-4-Climate-Change/Lesson 4.pdf|Lesson 4 · Writing concisely]]
 
+### Week 5
+
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Academic Writing & Assignment - Week 5.pdf|Academic Writing & Assignment]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Academic Writing Discussion & Reflection.pdf|Discussion & Reflection]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Check List.pdf|Check list]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Peer Checking.pdf|Peer checking]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Commas.pdf|Commas]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Commonly Confused Words.pdf|Commonly confused words]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Phrasal Verbs and Dependent Prepositions.pdf|Phrasal verbs and dependent prepositions]]
+
 ## 03 Paper A · Listening into Writing
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening into Writing Introduction.pdf|Introduction]]
@@ -118,7 +130,10 @@ aliases:
 
 ### Week 4 · Climate change
 
-- No downloadable Paper A file is available yet.
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-4-Climate-Change/Listening into Writing - Feedback from Week Three.pdf|Feedback from Week 3]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-4-Climate-Change/Listening into Writing - Climate Change.pdf|Climate change task]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-4-Climate-Change/Transcript.pdf|Transcript]]
+- [[07_Programme/01_LN905_LSE-language-class/Media/03_Paper-A-Listening-into-Writing/Week-4-Climate-Change/Lecture Link - Climate Change.mp3|Lecture audio]]
 
 ## 04 Paper B · Reading into Writing
 
@@ -142,6 +157,7 @@ aliases:
 ### Week 4 · Climate change
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change/Feedback for Week Three.pdf|Feedback from Week 3]]
+- [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change/Reading into Writing - Climate Change Extracts.pdf|Climate change extracts]]
 
 ## 05 Paper C · Speaking and Listening
 
