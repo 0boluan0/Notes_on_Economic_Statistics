@@ -569,4 +569,12 @@ student-os:mentor-brief:end -->
 - **单一下一动作**：保留完整原题作为 essay title，并让 thesis 直接回答“只在有限且可证明的条件下”。
 - **internal continuation decision**：不改题；只有老师明确要求短标题或指出范围过宽时才另行调整。
 
+### 2026-08-24 12:19 BST
+
+- **学习者输入**：附上 References 页面截图并问 `这个是什么格式,规范吗`。
+- **AI teaching/feedback**：识别为 APA author–date 参考文献格式，整体条目结构接近 APA 7：作者姓与首字母、年份括号、文章标题 sentence case、期刊名与卷号斜体、DOI 使用 URL，且条目按作者姓氏字母顺序排列。页面尚未完全符合标准 APA 排版：缺少 0.5 英寸 hanging indent；当前更像单倍行距并在条目间加大段距，而 APA 要求全页双倍行距且不额外空行；References 应另起一页。深色背景通常只是 Word dark mode，最终 PDF/打印应确认白底黑字。红色波浪线只是拼写检查，不属于论文格式错误。
+- **当前 skill-map 位置**：submission formatting / reference-list conventions；不构成新的独立写作证据。
+- **单一下一动作**：把全部参考文献设为 0.5 英寸悬挂缩进、双倍行距、段前段后 0，并确认独立 References 页和统一字体。
+- **internal continuation decision**：课程记录显示若院系未指定格式，可选一种并保持一致；现有资料包含 APA 6 指南，但仅凭文件存在不能断定其为强制要求。正式上传前以 Moodle/teacher 的当次说明优先。
+
 <!-- student-os:learning-log:end -->
