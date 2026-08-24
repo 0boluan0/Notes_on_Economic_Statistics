@@ -15,7 +15,7 @@ mode: guided-end-to-end
 target_words: 600
 scheduled: false
 started_on: 2026-08-19
-current_stage: exam-sprint-frame-bank-thesis-application
+current_stage: exam-sprint-extent-thesis-slots
 ---
 
 # Climate Change｜Paper B guided end-to-end
@@ -43,9 +43,19 @@ current_stage: exam-sprint-frame-bank-thesis-application
 
 ### 八股的正确用法
 
-顺序固定为：`分析题目和来源 → 先填中文逻辑槽 → 选择功能句架 → 写成英文 → 复核来源含义`。句架只负责语法和论证功能，不负责替你决定答案。
+顺序固定为：`识别题型与 parts → 决定 thesis 要完成的工作 → 分配正文篇幅 → 分析来源 → 填中文逻辑槽 → 选择匹配句架 → 写成英文 → 复核来源含义`。句架只负责语法和论证功能，不负责替你决定答案。
 
-最小句架库只背下面这些，不背整篇范文：
+#### 先分题型，再选 thesis
+
+| 题目信号 | Thesis 必须完成的工作 | 安全骨架 |
+|---|---|---|
+| `Is X...? / Is this cause for concern?` | 给判断，并说明判断标准或主要理由 | `While A, X is / is not Y because B and C.` |
+| `What is X and why...?` | 先定义 X，再给最重要的原因；通常用两句 | `X refers to D. Among the reasons for X, the most significant are A and B.` |
+| `How should governments react/respond?` | 给政策组合、优先级与辅助措施 | `Governments should respond to X through A and B, while C should play only a supporting role.`（[[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C06 - governments-should-respond-to-X-through-A-and-B|AW-02-C06]]） |
+| `Why...? What can be done?` | 同时回答 causes 和 solutions，并为两部分保留正文篇幅 | `X occurs mainly because A and B; addressing it therefore requires C and D.`（[[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C07 - X-occurs-mainly-because-A-and-B-addressing-it-requires-C-and-D|AW-02-C07]]） |
+| `To what extent...? / How effective...?` | 给程度、成立条件和主要限制 | `X can Y to a [limited/moderate/considerable] extent, particularly when A, although B limits its effectiveness.` |
+
+选完题型后，再调用下面的 introduction/正文功能句架。第 1 项只适用于 extent/effectiveness 题，不是万能 thesis：
 
 1. **条件性 thesis**：`This essay contends that X to a [limited/moderate/considerable] extent, particularly when Y, although Z limits its effectiveness.`（[[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C05 - this-essay-contends-that-x-in-cases-where-y-because-z|AW-02-C05]]）
 2. **路线**：`This essay first examines X before evaluating Y.`（[[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-13-C02 - this-essay-first-examines-x-before-evaluating-y|AW-13-C02]]）
@@ -233,6 +243,24 @@ student-os:mentor-brief:end -->
 - **本轮唯一下一动作**：针对当前 Climate Change question，先用中文写出 thesis 句架的 `X（核心答案）/程度词/Y（成立条件）/Z（主要限制）`，再据此写一条英文 thesis。
 - **internal continuation decision**：若 thesis 直接回答 extent、条件来自来源且没有绝对化，接受后立即用 roadmap 句架完成 Introduction；若意义或范围漂移，只修正一个关键槽位，不做语言精修。
 - **即时提示或无提示观察**：本轮为 guided；明确八股的使用顺序并提供现有八项最小句架库，提示 `AW-02-C05` 的 extent 变体。
+
+### 2026-08-24 16:38 BST
+
+- **学习者输入**：`我觉得不好,因为你得先对题目进行划分,比如问why的和to what extend的题的thesis statement肯定不一样的啊`
+- **AI teaching/feedback**：确认纠正成立：此前虽要求先分析内容，却仍把一个 extent thesis 放在整个句架库首位，容易造成“万能 thesis”错觉。依据 Week 1 question analysis 和四周正式 Paper B questions，把入口改为题型分流：judgement、definition+cause、recommendation、cause+solution、extent/effectiveness；每类分别规定 thesis job 和正文 coverage。复用 AW-02-C01/C02/C03/C05，并只为缺失的 recommendation 与 cause+solution 新增 AW-02-C06/C07。
+- **当前技能图位置**：question-type routing 已完成；学习者已经明确区分 why 与 extent thesis，当前模拟进入 extent-thesis 中文内容槽。
+- **本轮唯一下一动作**：当前题已识别为 extent/effectiveness；学习者只填写 `degree / conditions / limitations` 三个中文槽，暂不写英文 thesis。
+- **internal continuation decision**：若学习者答出 degree、conditions 与 limitations，立即进入当前题的中文 thesis slots 和英文成句；若把 why/recommendation 内容误当作 extent 的必要槽，只用题型对照纠正一次。
+- **即时提示或无提示观察**：本轮为 guided；展示五类真实 Paper B 题型与对应 thesis job，不提供当前题的具体答案。
+
+### 2026-08-24 16:46 BST
+
+- **学习者输入**：`还有可能给什么问题,简单猜猜`
+- **AI teaching/feedback**：在已确认的五类入口之外，只按 Week 1 task categories 做保守预测：同一任务可能换成 `compare and contrast`、`critically evaluate/assess`、`under what circumstances`、`what are the consequences` 或 `which response should be prioritised` 等措辞。强调这些通常仍可归入比较、评价程度/有效性、条件判断、后果分析或政策建议，不需要为每个 wording 再背一套完整句架；预测不当作正式考题事实。
+- **当前技能图位置**：exam sprint question-type routing 的边界扩展；主线仍停在当前 extent-thesis 中文内容槽。
+- **本轮唯一下一动作**：看完可能措辞后回到当前题，填写 `degree / conditions / limitations` 三个中文槽。
+- **internal continuation decision**：不为猜测题目创建新任务或新卡；若用户能把新 wording 归回现有 thesis job，立即继续当前 thesis 和完整 essay。
+- **即时提示或无提示观察**：本轮只给简短可能性与归类，不提供任何新题的答案或范文。
 <!-- student-os:learning-log:end -->
 
 ## 课程依据与材料来源
