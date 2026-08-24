@@ -553,4 +553,20 @@ student-os:mentor-brief:end -->
 - **单一下一动作**：如需正式提交，先按课程要求确认应上传哪个文件、格式和 portal 状态；不得把 final candidate 或 reconstructed draft 标为已提交，除非 Moodle 状态已实际核验。
 - **internal continuation decision**：不改写已完成 final candidate，不关闭 upload/submission checklist；仅记录版本关系与透明的 reconstruction provenance。
 
+### 2026-08-24 12:02 BST
+
+- **学习者输入**：`我的题目就用这个吗`
+- **AI teaching/feedback**：核对 canonical project record。该问题已作为 Final question 于 2026-08-01 提交 Moodle，并核验为 `Submitted for grading`；因此正文顶部继续使用完整原题，不另造短标题或改写措辞。
+- **当前 skill-map 位置**：submission formatting clarification；不产生新的写作能力证据。
+- **单一下一动作**：将完整题目作为 essay title 保留：`To what extent do the predictive gains of complex machine-learning models over logistic regression justify reduced interpretability in consumer credit scoring?`
+- **internal continuation decision**：除非课程模板明确要求单独的创意标题，否则不新增副标题；上传前只核对封面、姓名/学号、文件格式和 Moodle 状态。
+
+### 2026-08-24 12:04 BST
+
+- **学习者输入**：`这个作为一个论文题目合适吗`
+- **AI teaching/feedback**：按 LN905 要求判断题目本身。它是可论证的 `to what extent` 评价题，明确给出比较对象（complex machine-learning models 与 logistic regression）、核心权衡（predictive gains 与 interpretability）和具体范围（consumer credit scoring）；范围能够由约 2,000 词与至少 6 篇学术来源承载。题目较长，但作为已提交的 assignment question 合适；无需为了像期刊标题而缩短。
+- **当前 skill-map 位置**：question suitability / task interpretation clarification；不构成新的独立写作证据。
+- **单一下一动作**：保留完整原题作为 essay title，并让 thesis 直接回答“只在有限且可证明的条件下”。
+- **internal continuation decision**：不改题；只有老师明确要求短标题或指出范围过宽时才另行调整。
+
 <!-- student-os:learning-log:end -->

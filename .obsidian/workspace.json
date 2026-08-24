@@ -45,24 +45,12 @@
             "id": "08e56363c464b9d0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/week4reading-into-writing.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Academic Writing & Assignment - Week 5.pdf"
               },
-              "icon": "lucide-file",
-              "title": "week4reading-into-writing"
+              "icon": "lucide-file-text",
+              "title": "Academic Writing & Assignment - Week 5"
             }
           }
         ],
@@ -100,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "file:format",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -348,6 +336,21 @@
   },
   "active": "08e56363c464b9d0",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Academic Writing Discussion & Reflection.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Phrasal Verbs and Dependent Prepositions.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Commonly Confused Words.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Peer Checking.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Commas.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Check List.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Practice-Speaking-and-Listening/Classes 2 and 6.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Practice-Speaking-and-Listening/Classes 1 and 5.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Tutorials/Class 2 Week 5 Tutorials.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Tutorials/Class 1 Week 5 Tutorials.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Week 5.pdf",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-credit-scoring-draft.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-essay.md",
+    "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/week4reading-into-writing.md",
     "99_学习情况记录/2026-08-22——Sat.md",
     "99_学习情况记录/archive/daily/2026-W34/2026-08-22——Sat.md",
     "99_学习情况记录/archive/daily/2026-W34/2026-08-21——Fri.md",
@@ -355,23 +358,10 @@
     "99_学习情况记录/archive/daily/2026-W34/2026-08-19——Wed.md",
     "99_学习情况记录/archive/daily/2026-W34/2026-08-17——Mon.md",
     "99_学习情况记录/archive/daily/2026-W34/2026-08-18——Tue.md",
-    "99_学习情况记录/archive/daily/2026-W34",
     "99_学习情况记录/week-review/2026-W34.md",
-    "07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/e-Exams-Guide-for-LSE-students.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change/Reading into Writing - Climate Change Extracts.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Topic Review.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Information Session.pdf",
-    "07_Programme/01_LN905_LSE-language-class/Media/03_Paper-A-Listening-into-Writing/Week-4-Climate-Change/Lecture Link - Climate Change.mp3",
-    "07_Programme/01_LN905_LSE-language-class/Media/03_Paper-A-Listening-into-Writing/Week-4-Climate-Change",
-    "07_Programme/01_LN905_LSE-language-class/Media/03_Paper-A-Listening-into-Writing",
-    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-4-Climate-Change/Transcript.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-4-Climate-Change/Listening into Writing - Feedback from Week Three.pdf",
     "00_inbox/随手记.md",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/week4reading-into-writing.md",
     "99_学习情况记录/2026-08-24——Mon.md",
     "98_attachment/Pasted image 20260823103347.png",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-essay.md",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-credit-scoring-draft.md",
     "00_inbox/add_done_item.md",
     "00_inbox/超级专注力课程.md",
     "00_inbox/插入批注.md",
@@ -384,8 +374,6 @@
     "99_学习情况记录/2026-08-21——Fri.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/week3reading-into-writing.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/week3listening-into- writing.md",
-    "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-10-gender-synthesis-repair.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-15-C01 - preserve-source-ownership-who-made-which-claim.md",
     "tmp/pdfs/final-4.png",
     "tmp/pdfs/final-3.png",
     "tmp/pdfs/final-2.png",
