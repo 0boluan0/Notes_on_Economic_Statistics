@@ -17,7 +17,7 @@ topic: "LN905 Reading into Writing"
 - [[98_attachment/LN905/reading-into-writing/2026-07-31-social-media/page-1.jpg|2026-07-31 Social Media source pack]]
   本次课堂测试的六页 extracts；用于第一次引导式重练和后续对照原答案。
 - [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading into Writing.pdf|LSE Reading into Writing introduction]]
-  核对 Paper B 的两小时时间、约 600 词要求、三份文本的引用方式，以及 secondary referencing。
+  核对 Paper B 的 90 分钟作答时间、约 600 词要求、三份文本的引用方式，以及 secondary referencing；课表中的两小时窗口只作布置与意外缓冲。
 - [[07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Marking-Criteria/Paper B_Marking Criteria_Reading into Writing.pdf|LSE Paper B marking criteria]]
   用于按 text use、synthesis、selection、paraphrasing、task fulfilment、structure 和 language 检查练习。
 - [[07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Reading_into_Writing_AI_Feedback_Workbook.pdf|LSE Reading into Writing AI Feedback Workbook]]

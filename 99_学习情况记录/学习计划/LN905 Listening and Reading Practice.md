@@ -12,6 +12,9 @@ assessment_horizon: 2026-09-02
 > [!success] 端到端考试训练已启用
 > 2026-08-13 起，旧短练、skill clinic、input/Shared Writing 拆分 checkbox 已移出 active task pool；已有 Markdown 和 learning log 保留为 `retired` 历史，底部更早的旧序列继续保留 `#student-os/paused`。新 ordinary practice 只有 Paper A / Paper B 端到端 unit；允许跨天，但只能在完整成品与整篇反馈/修订完成后打勾。
 
+> [!danger] 2026-08-25 至 2026-08-31 七天冲刺入口
+> 全部日期、材料、模式路由、记忆剂量、AI 反馈和完成标准只看 [[99_学习情况记录/teach/LN905 7-Day Exam Sprint|LN905 Paper A/B 七天通关流水线]]。正式 Week 5 Practice 与 final 仍由 [[LN905 timed submissions]] 保管，不能在这里复制 checkbox。
+
 这里是 LN905 Listening / Reading 教学练习与每日词灵训练的唯一 canonical checkbox 来源。正式 timed submissions 继续由 [[LN905 timed submissions]] 管理；Essay 里程碑继续由 [[07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay]] 管理。
 
 所有训练都从 [[99_学习情况记录/teach/LN905 Exam Playbook|LN905 考试总纲]] 自上而下安排。Listening 与 Reading 是不同的信息获取入口，但每个 unit 都必须继续走过共同 Writing 树，直到完整应试成品。AI 可在每个节点教学、示范、共同修正并跨天续做；节点只是进度，不是独立任务。
@@ -42,7 +45,7 @@ assessment_horizon: 2026-09-02
 3. Paper B unit 固定走完 `三篇正式量级 extracts → map → thesis/paragraph jobs → 约 600 词 essay → 整篇反馈/修订`。
 4. 最近真实输出的瓶颈只决定同一 unit 内哪里多教、多示范、多留时间；不再生成 map、句型、evaluation、readiness 或 sentence clinic 短练。
 5. 每周五正式 Listening 与 Reading 测试承担无帮助的完整整合和状态校准；同周不叠加重复完整模拟。
-6. `词灵`是唯一继续单独打勾的并行底座。
+6. 常规周的 `词灵`是唯一单独打勾的词汇底座；2026-08-25 至 2026-08-31 七天冲刺按用户最新决定，临时由本页三档 Anki 任务替代，不能同日再生成词灵任务。
 
 ## 导师—助教协议与 Skill Bank
 
@@ -62,12 +65,30 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 
 ## 动态执行规则
 
-- `词灵`每天单独作为一个可完成的真实任务，直接给出分钟数；timed submission 当天不提前接触测试材料。
+- 常规周的 `词灵`每天单独作为一个可完成的真实任务，直接给出分钟数；2026-08-25 至 2026-08-31 改用本页定量 Anki 冲刺任务且不叠加词灵。timed submission 当天不提前接触测试材料。
 - 一个 end-to-end unit 使用同一个 Markdown、init prompt、Codex 助教会话和 canonical checkbox。跨天时读取 learning log 直接继续当前节点。
 - AI 每轮仍给一个约 5–10 分钟的有意义动作，并在用户卡住时主动教学；但每轮动作必须朝同一完整成品推进，不能退化为孤立句型操练或局部纠错。
 - 反馈先看完整成品，再按 task fulfilment、source accuracy、top-down organization、reasoning/synthesis/evaluation、completion 和 recurring language 分流；最多一次整篇 revision。
 - 一个 canonical task 可以在不同日期拥有多个 `Study Plan` 工作块；这些只是工作时段，不是新任务或完成状态。
 - `/today` 只为已经排到当天的 task 准备固定路径中的材料，不新增 checkbox，不复用来源账本中的 TED、DOI 或 canonical URL。
+
+## Paper A/B 七天冲刺｜2026-08-25 至 2026-08-31
+
+### 每日主动提取底座
+
+- [ ] LN905 冲刺 Anki｜2026-08-25：Core 54 首次提取＋Recognition 20 辨义，45–60 分钟 #student-os/task ⏳ 2026-08-25
+- [ ] LN905 冲刺 Anki｜2026-08-26：到期卡＋Extension 前 12，25–30 分钟 #student-os/task ⏳ 2026-08-26
+- [ ] LN905 冲刺 Anki｜2026-08-27：到期卡＋Extension 后 12，25–30 分钟 #student-os/task ⏳ 2026-08-27
+- [ ] LN905 冲刺 Anki｜2026-08-28：全部到期卡与错卡，20–25 分钟 #student-os/task ⏳ 2026-08-28
+- [ ] LN905 冲刺 Anki｜2026-08-29：全部到期卡，20–25 分钟 #student-os/task ⏳ 2026-08-29
+- [ ] LN905 冲刺 Anki｜2026-08-31：只做到期卡，15–20 分钟 #student-os/task ⏳ 2026-08-31
+
+### Clean route 与最终彩排
+
+- [ ] LN905 adaptive clean unit 1｜按七天总入口的红灯规则选择较弱 Paper；完成一条 guided 全链、整篇反馈与至多一次 revision｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 4｜Fri 28 Aug｜较弱项 guided clean unit|路由入口]] #student-os/task ⏳ 2026-08-28
+- [ ] LN905 adaptive clean unit 2｜使用另一科 clean material 独立限时成文；整篇反馈与至多一次 revision｜[[99_学习情况记录/teach/LN905 7-Day Exam Sprint#Day 5｜Sat 29 Aug｜另一项 independent clean unit|路由入口]] #student-os/task ⏳ 2026-08-29
+- [ ] LN905 Paper A 完整模拟｜未见演讲一次播放＋notes＋40 分钟 200–400 词 critical summary；A/B 都结束前无 AI｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-31-paper-a-dress-rehearsal|sealed record]] #student-os/task ⏳ 2026-08-31
+- [ ] LN905 Paper B 完整模拟｜未见三文＋90 分钟约 600 词 essay；与 A 联合 readiness audit｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-31-paper-b-dress-rehearsal|sealed record]] #student-os/task ⏳ 2026-08-31
 
 ## 每日词灵｜2026-08-10 至 2026-08-23
 
@@ -80,7 +101,7 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 - [-] 词灵｜2026-08-16：15 分钟 #student-os/task ⏳ 2026-08-16 ❌ 2026-08-17
 - [x] 词灵｜2026-08-17：20 分钟 #student-os/task ⏳ 2026-08-17 ✅ 2026-08-17
 - [x] 词灵｜2026-08-18：20 分钟 #student-os/task ⏳ 2026-08-18 ✅ 2026-08-18
-- [ ] 词灵｜2026-08-19：20 分钟 #student-os/task ⏳ 2026-08-19
+- [-] 词灵｜2026-08-19：20 分钟（过期未做；由 Paper A/B 七天 Anki 冲刺取代，不补做） #student-os/cancelled ⏳ 2026-08-19 ❌ 2026-08-24
 - [x] 词灵｜2026-08-20：20 分钟 #student-os/task ⏳ 2026-08-20 ✅ 2026-08-20
 - [x] 词灵｜2026-08-21：Climate Change 主题词汇复习 30 分钟（两次 15 分钟） #student-os/task ⏳ 2026-08-21 ✅ 2026-08-21
 - [x] 词灵｜2026-08-22：25 分钟 #student-os/task ⏳ 2026-08-22 ✅ 2026-08-22
@@ -95,8 +116,8 @@ Student OS 是导师：每天根据课程总纲、真实输出和 deadline 写�
 
 ## Climate Change｜端到端训练与测试
 
-- [ ] LN905 Paper A guided end-to-end｜Climate Change：完整演讲 → 笔记/transcript repair → map → top-down plan → 200–400 词 critical summary → 整篇反馈/修订（可跨天）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end|学习记录]] #student-os/task
-- [ ] LN905 Paper B guided end-to-end｜Climate Change：三篇正式量级 extracts → map → thesis/paragraph jobs → 约 600 词 essay → 整篇反馈/修订（可跨天）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-end-to-end|学习记录]] #student-os/task ⏳ 2026-08-27
+- [ ] LN905 Paper A guided end-to-end｜Climate Change：完整演讲 → 笔记/transcript repair → map → top-down plan → 200–400 词 critical summary → 整篇反馈/修订（可跨天）｜[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end|学习记录]] #student-os/task ⏳ 2026-08-25
+- [ ] LN905 Paper B guided end-to-end｜Climate Change：三篇正式量级 extracts → map → thesis/paragraph jobs → 约 600 词 essay → 整篇反馈/修订（可跨天）｜[[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-end-to-end|学习记录]] #student-os/task ⏳ 2026-08-25
 
 ## 旧序列｜已取消，不执行
 

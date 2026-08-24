@@ -18,8 +18,8 @@ kind: scheduled-assessments
 - [x] LN905｜Reading into Writing：Demographics timed attempt｜[[99_学习情况记录/teach/reading-into-writing/learning-records/0006-demographics-friday-timed|赛后端到端记录]] #student-os/task ⏳ 2026-08-14 📅 2026-08-14 ✅ 2026-08-14
 - [x] LN905｜Listening into Writing：Climate Change timed attempt #student-os/task ⏳ 2026-08-21 📅 2026-08-21 ✅ 2026-08-21
 - [x] LN905｜Reading into Writing：Climate Change timed attempt #student-os/task ⏳ 2026-08-21 📅 2026-08-21 ✅ 2026-08-21
-- [ ] LN905｜Week 5 Practice Paper A：无 AI 限时作答 → 赛后诊断/至多一次整篇 revision（14:00–15:15） #student-os/task ⏳ 2026-08-26 📅 2026-08-26
-- [ ] LN905｜Week 5 Practice Paper B：无 AI 限时作答 → 赛后诊断/至多一次整篇 revision（10:00–12:00；作答仍按 90 分钟目标） #student-os/task ⏳ 2026-08-27 📅 2026-08-27
+- [ ] LN905｜Week 5 Practice Paper A：无 AI 限时作答 → 赛后诊断/至多一次整篇 revision（14:00–15:15；实质口径约 20 分钟听＋40 分钟写）｜[[99_学习情况记录/teach/listening-into-writing/learning-records/2026-08-26-week5-practice-paper-a|校准记录]] #student-os/task ⏳ 2026-08-26 📅 2026-08-26
+- [ ] LN905｜Week 5 Practice Paper B：无 AI 限时作答 → 赛后诊断/至多一次整篇 revision（10:00–12:00；实质作答 90 分钟）｜[[99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b|校准记录]] #student-os/task ⏳ 2026-08-27 📅 2026-08-27
 - [ ] LN905｜Paper A final assessment（10:00–11:30） #student-os/task ⏳ 2026-09-02 📅 2026-09-02
 - [ ] LN905｜Paper B final assessment（12:30–14:30） #student-os/task ⏳ 2026-09-02 📅 2026-09-02
 
