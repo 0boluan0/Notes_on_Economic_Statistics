@@ -288,6 +288,24 @@ student-os:mentor-brief:end -->
 - **本轮唯一下一动作**：生成并核验 Paper A/B Hacking Manual PDF，同时建立与它一致的最小 Anki 集。
 - **internal continuation decision**：先并行审计 Paper A、Paper B 与 Anki P0 清单，再由导师合并去重；不在 PDF 中加入第五主题、预测答案、固定立场或需要反向套材料的万能 thesis。完成后再讨论七天如何分配，不预建每日任务。
 - **即时提示或无提示观察**：本轮是脚手架制作，没有独立学习者输出，不记 mastery 证据。
+
+### 2026-08-24 21:10 BST
+
+- **学习者输入**：`现在OK了继续吧`
+- **AI teaching/feedback**：完成并验收 27 页 `LN905 Paper A + Paper B Hacking Manual`。唯一闭卷集合收敛为 16 个功能句架、8 个表达精度规则和 30 个 P0 词汇；其余主题词只作 Listening/Reading recognition。讲义纳入官方 A/B 条件、题型分流、Paper A evidence ownership 与 EVAL-4、Paper B 90 分钟分段、五把意义锁、四主题概念链、主动回忆页和 A/B 速查页，并以全文文本检查和 27 页逐页渲染复核。AnkiConnect 已安装并完成幂等同步：tag `ln905::sprint::paper-ab-2026` 精确命中 54 张，原有 41 张、新增 13 张；Skill Cards 24 张，五个来源词汇子牌组 30 张，父牌组仍为 0；extent 变体与 `pre-bunking` 别名已更新。Neath 远端连接失败，保持 `pending`，不影响本地或 Anki。
+- **当前技能图位置**：diagnostic/course design → exam-sprint scaffold ready；当前 Climate Paper B 练习仍暂停，制作与同步不构成独立 mastery 证据。
+- **本轮唯一下一动作**：把 PDF 交给学习者；等待学习者基于这套固定内容决定七天如何分配，再进入记忆、输入提速和完整模拟，不预建每日任务。
+- **internal continuation decision**：不因讲义与 Anki 完成而宣称已具备通过能力。只有无 AI 的完整 Paper A live-format output 与完整 90 分钟 Paper B output 达到 readiness 标准后，才形成通过能力证据。
+- **即时提示或无提示观察**：本轮是脚手架交付与质量验收，没有独立学习者输出，不更新 skill mastery。
+
+### 2026-08-24 21:40 BST
+
+- **学习者输入**：认为原有词汇与句型数量偏保守，要求适度扩充主动层，并新增从 Week 1–4 海量课件精筛的第三档词汇：相对重要但只需认识、不要求拼写或主动产出；举例 `debunk`，同时要求数量克制。
+- **AI teaching/feedback**：重新审计 73 份 Paper A/B、topic 与相关课件（约 18 万词），把讲义与 Anki 统一为三档：Core 54；Extension 24（7 个高收益句架／控制项 + 17 个主动主题词）；Recognition-only 20。第三档只保留不认识会截断论证、但七天内练到主动拼写收益偏低的术语；`debunk / debunking` 纳入并标明是事后纠错、与 `pre-bunking` 相反。完成 32 页 v1.2 PDF 的全文检查和逐页渲染复核；Anki 三个互斥 tag 精确为 54/24/20，主动卡为中文功能 → 英文，识别卡为英文 → 中文核心义。
+- **当前技能图位置**：diagnostic/course design → exam-sprint scaffold v1.2 ready；当前 Climate Paper B 练习仍暂停，材料制作不构成 mastery 证据。
+- **本轮唯一下一动作**：交付 v1.2 唯一背诵讲义；由学习者先确认三档边界，再决定七天学习分配，不预建更多任务。
+- **internal continuation decision**：第三档在 20 词停止，不从参考文献、专有名词或一次性细节继续扩充。下一阶段的边际收益应转向主动提取、完整输入提速和无 AI 的完整 Paper A/B 输出；未见正式限时证据前不宣称已具备通过能力。
+- **即时提示或无提示观察**：本轮是脚手架扩充与同步，没有独立学习者输出，不更新 skill mastery。Neath 远端重试失败并保持 `pending`，不影响本地或 Anki。
 <!-- student-os:learning-log:end -->
 
 ## 课程依据与材料来源
