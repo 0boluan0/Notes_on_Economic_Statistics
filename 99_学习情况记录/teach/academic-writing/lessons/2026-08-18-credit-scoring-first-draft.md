@@ -577,4 +577,12 @@ student-os:mentor-brief:end -->
 - **单一下一动作**：把全部参考文献设为 0.5 英寸悬挂缩进、双倍行距、段前段后 0，并确认独立 References 页和统一字体。
 - **internal continuation decision**：课程记录显示若院系未指定格式，可选一种并保持一致；现有资料包含 APA 6 指南，但仅凭文件存在不能断定其为强制要求。正式上传前以 Moodle/teacher 的当次说明优先。
 
+### 2026-08-24 12:29 BST
+
+- **学习者输入**：`帮我改正`
+- **AI teaching/feedback**：已直接在当前 Word 文档中修正 References 页面排版：九条参考文献统一设为 1.27 cm hanging indent、双倍行距、段前段后 0 pt，并关闭文档网格对齐；标题 `References` 从 14 pt 改为与正文一致的 Times New Roman 12 pt，保留粗体、居中，标题段同样设为双倍行距和段前段后 0 pt；删除标题与首条文献之间的多余空段落。最终页面视觉检查通过，DOI 链接、文献文字和红色拼写提示未改动。
+- **当前 skill-map 位置**：submission formatting / APA reference-list conventions 已完成实际应用；不构成新的独立写作能力证据。
+- **单一下一动作**：当前文件仍是未保存的 `Document1`；关闭 Word 前用目标文件名和位置保存，并在导出 PDF 后确认 References 仍独立成页。
+- **internal continuation decision**：不代替学习者选择未知的保存位置和文件名，不上传 Moodle，不改文献内容；正式提交状态继续保持未核验。
+
 <!-- student-os:learning-log:end -->
