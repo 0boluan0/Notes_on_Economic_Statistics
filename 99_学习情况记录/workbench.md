@@ -39,8 +39,8 @@ hide postpone button
 ## 风险雷达
 
 <!-- student-os:risk-radar:start -->
-- D-1｜2026-08-23｜LN905 Essay：提交 first draft
-- D-4｜2026-08-26 12:00｜LN905 Essay：提交 final assignment
+- D+1｜2026-08-23｜LN905 Essay：提交 first draft（Moodle 待核验）
+- D-2｜2026-08-26 12:00｜LN905 Essay：提交 final assignment
 <!-- student-os:risk-radar:end -->
 
 ## 输入箱

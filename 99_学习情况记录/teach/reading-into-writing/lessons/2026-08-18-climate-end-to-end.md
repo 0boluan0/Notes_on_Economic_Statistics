@@ -15,7 +15,7 @@ mode: guided-end-to-end
 target_words: 600
 scheduled: false
 started_on: 2026-08-19
-current_stage: source-1-first-pass-skimming
+current_stage: exam-sprint-template-introduction
 ---
 
 # Climate Change｜Paper B guided end-to-end
@@ -26,6 +26,32 @@ current_stage: source-1-first-pass-skimming
 **Source pack**：[[2026-08-18-climate-end-to-end-source-pack.pdf|PDF 试卷版]] · [[2026-08-18-climate-end-to-end-source-pack.tex|LaTeX 源文件]]
 
 **Essay question**：*To what extent can adaptation prevent climate change from widening global inequality?*
+
+## 一周冲刺固定骨架
+
+**考试节奏**：90 分钟；前 30 分钟审题、读三文和列计划，后 60 分钟完成约 600 词并检查。
+
+| 部分 | 词数 | 固定工作 |
+|---|---:|---|
+| Introduction | 70–90 | 一句引题；一句直接 thesis（程度 + 条件 + 限制）；一句路线 |
+| Body 1 | 130–150 | 建立题目中的问题或机制，说明为什么需要判断该政策 |
+| Body 2 | 130–150 | 论证政策能发挥的作用及其条件 |
+| Body 3 | 130–150 | 综合限制并作权衡，回答为什么作用不是无限的 |
+| Conclusion | 60–80 | 重申程度判断；概括最关键条件和限制；不加新证据 |
+
+**正文段固定循环**：`你的 claim → 来源证据 → 解释为什么支持 claim → 连接/对比另一来源 → 回扣题目作小判断`。不能写成“Source 1 说……Source 2 说……”的资料清单。
+
+**本题来源角色**：
+
+- Extract 1：历史基线——气候变化是否已经扩大国家间经济差距。
+- Extract 2：作用与条件——适应能够减少温度相关死亡，但保护能力和剩余风险分布不均。
+- Extract 3：现实限制——已有适应多为局部、零散、渐进式，实际降低风险和不平等的证据有限。
+
+**本题三个 paragraph jobs**：
+
+1. 先证明气候变化扩大不平等是一个真实且累积的问题。
+2. 再判断 adaptation 在有资源和有效措施时能够减少多少伤害。
+3. 最后综合资源差距、实施规模和效果证据，判断它为什么不能单独完全阻止不平等扩大。
 
 ## 材料难度核验
 
@@ -172,6 +198,15 @@ student-os:mentor-brief:end -->
 - **本轮唯一下一动作**：用 90 秒只看标题、每段首句和末段，不查词、不读数字；读后仅报告这篇来源大致研究什么，以及最值得回看的是哪两段。
 - **internal continuation decision**：先检查学习者是否能从结构定位文章主旨和候选结果/限制段；定位可用后再教 scanning，不纠正措辞、不提前揭示具体研究结论。若定位困难，示范如何从一个段首句判断段落功能，然后继续同一轮扫描。
 - **即时提示或无提示观察**：本轮为 guided；提供 `skim → scan → close read` 的阅读顺序和 90 秒操作规则，不解释 Extract 1 的具体内容。
+
+### 2026-08-24 10:05 BST
+
+- **学习者输入**：`来不及了,我只有1周了,给我八股结构,让我学咋写,然后让我直接练习,一切以通过考试为导向`
+- **AI teaching/feedback**：接受时间约束并切换为一周 Paper B 冲刺。停止慢速发现式阅读教学，按正式 90 分钟、约 600 词要求，先给五段固定骨架、正文段循环、本题三份来源角色和三个 paragraph jobs，然后立即进入 Introduction 写作。评分优先级固定为：直接回答题目、准确使用三文、跨文 synthesis、清楚段落、写完并检查；复杂语言居后。
+- **当前技能图位置**：exam sprint template → guided Introduction；不再停留在 Extract 1 skimming。
+- **本轮唯一下一动作**：学习者按 `引题 → 程度/条件/限制 thesis → 路线` 写 70–90 词英文 Introduction，不需要引用来源。
+- **internal continuation decision**：若 Introduction 明确回答 extent，包含至少一个条件和一个限制，并预告三个正文工作，立即进入 Body 1；只纠正会破坏题意或结构的错误，不做逐句美化。完成 guided 全文后，下一次整篇转为限时练习。
+- **即时提示或无提示观察**：本轮为 guided；提供五段骨架、段落功能、来源角色和 Introduction 句架，但不代写完整 Introduction。
 <!-- student-os:learning-log:end -->
 
 ## 课程依据与材料来源

@@ -12,20 +12,20 @@ topic: "LN905 Academic Writing"
 
 ## Why
 
-通过一场完整、真实量级的三文本 guided simulation，从“收到试卷”一路学到“全文修改并达到可提交状态”。Academic Writing 的概念只在这条真实写作链中讲解和使用，不再拆成零散小课。
+在考试前一周，用一套可背、可套但仍能直接回答题目的 Paper B 结构，尽快完成从 guided essay 到限时整篇练习。所有教学以通过考试所需的 task fulfilment、准确用文、synthesis、结构和可读语言为优先。
 
 ## Success looks like
 
-- 面对一份新的三文本试卷，能亲自完成 question analysis、question-led reading、source map、thesis、paragraph jobs 与 evidence roles。
-- 能准确使用三份来源，由自己的 claim 组织 synthesis，并完成约 600 词 essay、conclusion 和一次整篇 revision。
-- 能解释从发卷到提交检查的完整流程，并把同一流程迁移到真实 assignment。
+- 能在 90 分钟内完成约 600 词 Paper B，阅读/计划约 30 分钟，写作约 60 分钟。
+- 能用固定五段结构直接回答题目，准确使用三份来源，并至少自然连接两份来源形成 synthesis。
+- 能完成 thesis、三个功能明确的正文段、conclusion 和最后检查，不因追求复杂表达而写不完。
 
 ## Constraints
 
-- 使用一个正式量级的三篇 adapted academic extracts、一个 essay question、一个持续 Markdown 记录和一个最终成品；不另开独立小测或 review queue。
-- 这是有老师介入的 `teaching practice`，不是无帮助的限时模拟。AI 解释当前阶段、直接显示所需原文并及时纠正会改变 task 或 source meaning 的错误；学习者亲自完成所有写作决策和最终 prose。
+- 使用一个正式量级的三篇 adapted academic extracts、一个 essay question、一个持续 Markdown 记录和一个最终成品；第一篇 guided essay 完成后优先做完整限时练习和整篇反馈。
+- 第一篇 guided essay 允许 AI 直接给固定段落工作、来源角色和可复用句架；学习者仍亲自选择 thesis 的程度判断、改写证据并写出全部最终 prose。
 - 当下一句自然适合课程教过的句式、词汇搭配或学术写作原则时，AI 在学习者动笔前说明句子功能、为什么适合，并提供少量可复用选项；学习者据此自己成句。这里不静默等待自主调用，也不直接给出可提交的完整句子；提示后的使用只算 `guided`。
-- 每轮只推进完整链中的一个有意义阶段，但始终显示它在 `收卷 → 审题 → 阅读/map → thesis/plan → draft → revision → submission check` 中的位置。
+- 不再用多轮慢速探索来教授 skimming 或逐段发现结构；除非错误会改变题意或来源含义，否则直接按考试骨架推进到成文。
 - 不根据 AI 生成的 plan、旧稿或历史成文推断“已经会”；只记录学习者在本模拟中的真实决定和产出。
 - Week 4 目前只把实际上过的 Lesson 1 Making Claims 作为已激活内容；Lessons 2–4 暂不当作已学内容。
 

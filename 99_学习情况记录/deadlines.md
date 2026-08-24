@@ -32,6 +32,7 @@ tags:
 
 ## 核验状态
 
+- 2026-08-24｜Moodle 重新核验未完成：已登录会话过期，First draft 与 Final Submission 的当前提交状态均未据此改写。First draft 继续保留为待核验；Final Submission 的已核验截止仍为 2026-08-26 12:00。
 - 2026-08-22｜Moodle 日常核对完成：Essay Draft 仍显示 No submissions have been made yet，页面没有独立 due 字段；Final Submission 仍未提交，开放时间为 2026-08-24 00:00，正式截止仍为 2026-08-26 12:00。Week 5 的个人安排已核验：Paper C Practice Listening & Speaking Assessment 为 2026-08-25 15:30–16:00、PAR.2.03；Group 2 tutorial 为 2026-08-28 12:20–12:40、PEL.6.01N。两项已写入 `Study Plan` 并设置开始时提醒。最近官方 LN905 邮件仍为 2026-08-21 的 Week 5 通知；Apple 只读日历未显示 8 月 22 日额外固定行程。
 - 2026-08-21｜Moodle shutdown 核验完成：Climate Change Listening 于 11:21、Reading 于 14:45 提交，两项均显示 Submitted for grading；已关闭对应硬截止。
 - 2026-08-21｜Moodle 日常核对完成：Climate Change Listening 10:00 开放、11:45 截止，Reading 12:45 开放、15:00 截止；核对时两项均显示 No submissions have been made yet。Essay Draft 仍未提交且页面没有独立 due 字段；Final Submission 仍未提交，正式截止已核验为 2026-08-26 12:00。
