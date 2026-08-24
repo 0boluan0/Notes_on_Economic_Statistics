@@ -10,6 +10,11 @@ topic: "LN905 Listening into Writing"
 
 # LN905 Listening into Writing resources
 
+## Exposure ledger
+
+- [[LN905 四主题随手听清单]]
+  2026-08-24 建立的休闲泛听库。该页已显示标题与论证骨架，整页材料均视为已暴露；只可用于自由收听或已知材料复盘，不得用于第一次盲听、独立模拟或新的 guided end-to-end unit。
+
 ## Knowledge
 
 - [[07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Listening_into_Writing_AI_Feedback_Workbook.pdf|Listening into Writing — AI Feedback Workbook]]

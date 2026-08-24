@@ -21,9 +21,9 @@ tags:
 - 当前项目：[[LN905 Essay]]
 - 计划：[[LN905 Essay]]
 - Timed submissions：[[学习计划/LN905 timed submissions]]
-- Listening into Writing：两周强化计划已启用；保留 central claim 与 evaluation 基础，重点提升 evidence inventory、evaluation accuracy、独立完成与英文准确性。
-- Reading into Writing：两周强化计划已启用；保留跨来源连接和整体组织优势，重点提升 source accuracy、synthesis depth、时间管理与 academic expression。
-- 当前训练：[[学习计划/LN905 Listening and Reading Practice]]；`词灵`每天并行，普通练习由 AI 主动教学，完整模拟与正式 timed submission 独立完成。
+- Listening into Writing：七天 `hacking` 方法已确认，但尚未分配到具体日期。现有证据显示，应优先补 supporting-detail accuracy、source ownership 和基于具体 evidence 的 evaluation。
+- Reading into Writing：七天 `hacking` 方法已确认，但尚未分配到具体日期。现有证据显示，应优先补全部 task parts 的覆盖、约 600 词完整产出、source fidelity 与明确的 cross-text synthesis。
+- 当前训练：[[学习计划/LN905 Listening and Reading Practice]]；顺序为“最小脚手架并记忆 → 完整材料上的听读提速/提准 → 全真限时模拟与整篇纠错”。暂不新增可选任务或学习日程，只保留校方固定 Practice A/B 与正式考试。
 
 ## 自主成长
 

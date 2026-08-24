@@ -2,7 +2,7 @@
 student_os: ln905-skill-card-index
 title: LN905 Skill Cards Index
 last_rebuilt: 2026-08-24
-card_count: 278
+card_count: 280
 ---
 
 # LN905 Skill Cards Index
@@ -10,7 +10,7 @@ card_count: 278
 > [!summary] 用法
 > 这里是卡片盒目录，不是第二套技能状态。正面用于主动回忆；反面解释功能、适用条件、意义边界、例子和课件来源。学习与 Recall 证据只追加在原卡。完整课程审计见 [[99_学习情况记录/teach/LN905 Skill Bank/Course Coverage|LN905 Course Coverage]]。
 
-共 **278** 张。课件回溯初始化只表示“课程教过且已入库”，不表示已经掌握。
+共 **280** 张。课件回溯初始化只表示“课程教过且已入库”，不表示已经掌握。
 
 ## Academic Writing
 
@@ -26,6 +26,7 @@ card_count: 278
 - `AW-02-C05` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C05 - this-essay-contends-that-x-in-cases-where-y-because-z|This essay contends that X in cases where Y because Z.]] · `AW-02`
 - `AW-02-C06` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C06 - governments-should-respond-to-X-through-A-and-B|Governments should respond to X through A and B, while C should play only a supporting role.]] · `AW-02`
 - `AW-02-C07` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C07 - X-occurs-mainly-because-A-and-B-addressing-it-requires-C-and-D|X occurs mainly because A and B; addressing it therefore requires C and D.]] · `AW-02`
+- `AW-02-C08` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C08 - in-this-context-X-refers-to-features-it-persists-mainly-because-A-and-B|In this context, X refers to [defining features]; it persists mainly because A and B.]] · `AW-01`, `AW-02`
 - `AW-03-C01` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-03-C01 - justification-claim-reasons-evidence-restatement|Justification: claim → reasons/evidence → restatement.]] · `AW-03`
 - `AW-03-C02` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-03-C02 - rebuttal-claim-counter-claim-rebuttal-restatement|Rebuttal: claim → counter-claim → rebuttal → restatement.]] · `AW-03`
 - `AW-03-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-03-C03 - synthesis-claim-position-a-position-b-writer-synthesis|Synthesis: claim → position A → position B → writer synthesis.]] · `AW-03`
@@ -163,6 +164,7 @@ card_count: 278
 - `PA-03-C01` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/PA-03-C01 - every-map-item-records-proposition-owner-role|Every map item records proposition + owner + role.]] · `PA-03`
 - `PA-03-C02` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/PA-03-C02 - separate-speaker-claims-from-quoted-people-studies-and-your-eval|Separate speaker claims from quoted people, studies and your evaluation.]] · `PA-03`
 - `PA-03-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/PA-03-C03 - route-each-evidence-item-to-the-exact-claim-it-supports|Route each evidence item to the exact claim it supports.]] · `PA-03`
+- `PA-03-C04` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/PA-03-C04 - the-speaker-cites-evidence-type-to-support-the-claim-that-X|The speaker cites [a study/data/an example/personal experience] to support the claim that X.]] · `PA-03`, `PA-04`
 - `PA-04-C01` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/PA-04-C01 - a-central-point-in-the-lecture-is-that-x|A central point in the lecture is that X.]] · `PA-04`
 - `PA-04-C02` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/PA-04-C02 - another-important-aspect-of-the-argument-is-x|Another important aspect of the argument is X.]] · `PA-04`
 - `PA-04-C03` · [[99_学习情况记录/teach/LN905 Skill Bank/Cards/PA-04-C03 - this-is-persuasive-because-x-however-y|This is persuasive because X; however, Y.]] · `PA-04`

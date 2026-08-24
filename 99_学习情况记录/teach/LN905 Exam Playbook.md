@@ -5,7 +5,7 @@ tags:
   - teach
   - learning/ln905
 status: active
-source_checked: 2026-08-11
+source_checked: 2026-08-24
 ---
 
 # LN905 Exam Playbook
@@ -21,9 +21,22 @@ source_checked: 2026-08-11
 | | Paper A｜Listening into Writing | Paper B｜Reading into Writing |
 |---|---|---|
 | 输入 | 20–25 分钟现场讲座，只能依靠当场笔记 | 三篇 text extracts 与一个 essay question |
-| 输出 | 40 分钟内写 200–400 词 critical summary | 2 小时内写约 600 词 essay |
+| 输出 | 40 分钟内写 200–400 词 critical summary | 90 分钟内完成约 600 词 essay：约 30 分钟阅读/计划 + 60 分钟写作 |
 | 内容标准 | 准确、成功 paraphrase、覆盖 key points、detail/depth 合适 | 用材料支撑自己的 points、按写作目的改造材料、跨文 synthesis、selection 与 paraphrase |
 | 写作标准 | 评价有依据并融入 summary；结构清楚、语言与风格合适 | 回答题目；逻辑推进、有效段落与 cohesion；语言准确且符合 academic style |
+
+## 七天 `hacking` 方法｜先定顺序，不排日期
+
+1. **脚手架与记忆**：只背能直接上场的题型入口、结构、功能句架和高频词；先判断题型与材料内容，再选择句架填入，不背固定结论。
+2. **输入提速与提准**：Paper A 在一次完整 listening 中留下可恢复的 `owner → claim → evidence → qualifier`；Paper B 在约 30 分钟内把三篇 extracts 压成带 source relation 的一张 map。训练材料必须完整，但这一阶段不另拆 checkbox。
+3. **全真输出与校正**：按正式条件完成整份 Paper A/B；先修题意、来源、scope、causality 和完成度，再批量修反复出现的语言错误。每份成品至多做一次整篇 revision。
+
+“已经具备通过能力”不能只靠背过或感觉判断，要由无 AI 的完整限时输出证明：
+
+| Paper | 最低可观察证据 |
+|---|---|
+| A | 40 分钟内交出 200–400 词；central argument 与 key points 可恢复；speaker/source ownership 基本准确；至少一处评价明确钉住实际 evidence；没有改变材料主张的重大错误 |
+| B | 90 分钟内交出约 600 词；题目每一部分都有足够篇幅；准确使用三篇 extracts；至少一处写清跨文关系及其对自己答案的意义；有 conclusion；没有重大 source distortion |
 
 ## 两个输入入口，一棵共同 Writing 树
 
@@ -125,7 +138,7 @@ AI 在要求任何动作前，必须用普通人能理解的方式讲清：
 5. 按 `task fulfilment → text use/selection → synthesis/source accuracy → structure/completion → recurring language` 的顺序检查。
 
 > [!tip] 默认时间节奏｜训练建议，不是课程硬性规定
-> 前约 30 分钟审题和读三篇 extracts，约 15 分钟建关系与计划，约 60 分钟成文，最后约 15 分钟检查。课程没有规定固定三段正文或各段字数；段落数量由题目和 thesis 决定。
+> 前约 30 分钟完成审题、三篇阅读、关系图与计划；后约 60 分钟成文，其中最后约 5 分钟检查。课程没有规定固定三段正文或各段字数；段落数量由题目和 thesis 决定。
 
 ### 卡住时
 

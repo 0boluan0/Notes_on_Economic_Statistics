@@ -261,6 +261,33 @@ student-os:mentor-brief:end -->
 - **本轮唯一下一动作**：看完可能措辞后回到当前题，填写 `degree / conditions / limitations` 三个中文槽。
 - **internal continuation decision**：不为猜测题目创建新任务或新卡；若用户能把新 wording 归回现有 thesis job，立即继续当前 thesis 和完整 essay。
 - **即时提示或无提示观察**：本轮只给简短可能性与归类，不提供任何新题的答案或范文。
+
+### 2026-08-24 17:21 BST
+
+- **学习者输入**：`我没时间了,我需要7天速通paper A和paper B.`；随后确认 `现在一切以通过考试为目标.我准备完全以应试的角度来完成这次准备,帮我准备必要的脚手架,例如帮我想好可能能用得上的万能句式,跟这次考试相关的必背的词汇也同步加入到我的anki里面.还有什么我没想到的吗`；并说明 `digiexam你不管了,这个今天上课已经调试好了`。
+- **AI teaching/feedback**：把目标扩展为 Paper A + Paper B 七天通过导向冲刺，但不重开已有 unit。今天 final assignment 本身计入 Reading/Writing 评分，因此仍先完成它；2026-08-25 再续做当前 Paper B，完成后才恢复 Paper A。脚手架限于按题型/功能索引的句架、考试可用词汇、整篇时间分配和高价值复核；不背固定结论、不做脱离完整成品的小练习。Digiexam 已由学习者确认调试完成，从计划中移除相关任务/提醒。
+- **当前技能图位置**：exam sprint scaffolding 已确认；本 Paper B 主线仍停在 extent question 的 `degree / conditions / limitations` 中文内容槽，未开始新的内容练习。
+- **本轮唯一下一动作**：今天返回 final assignment 最终核对/提交；2026-08-25 恢复本 unit 时，直接填 `degree / conditions / limitations` 三槽，然后在同一次续作中进入约 600 词完整 essay。
+- **internal continuation decision**：不在 final-assignment 时段内发新 Paper A/B 题。下次若三槽可用，立即完成 thesis/roadmap 并进入全文；只拦截会改变题意或 source meaning 的错误。Anki 只 upsert 能直接用于考试输入/产出的词汇和功能句架，不删除卡片，不同步 procedural cards。
+- **即时提示或无提示观察**：本轮是导师层排程与脚手架决策，没有学习者产出，不记 mastery 证据。
+
+### 2026-08-24 17:28 BST
+
+- **学习者输入**：`先别排太多任务了,我还有没决定好这7天咋学学啥呢`；随后明确方法：`因为我觉得考试的形式和topic已经明确告诉我了,我可以进行应试准备,我管这个叫做hacking,我需要准备这些便捷的脚手架,然后学习并记忆.在这之后我要保证阅读和听力的提速和提升准确率,然后进行完整全真模拟和训练.最后能够完全具备通过的能力`。
+- **AI teaching/feedback**：撤回按日期拆分的可选冲刺安排，保留校方固定 Practice A/B 与正式考试。把七天方法确认为不绑定日期的三阶段 `hacking`：①最小脚手架库并主动回忆；②用完整材料训练 Listening/Reading 速度与准确率，输入阶段必须产出可用 evidence map；③完整限时 Paper A/B 模拟、整篇诊断与至多一次 revision。阶段二不拆成一堆独立任务，阶段三以真实完整输出作为通过能力证据。
+- **当前技能图位置**：导师层的冲刺方法已确认；具体日程尚未启用；当前 Climate Paper B 的练习位置仍是 extent thesis 的 `degree / conditions / limitations` 内容槽。
+- **本轮唯一下一动作**：先给学习者一页式三阶段框架、最小脚手架清单与“具备通过能力”的可观测标准，由学习者确认内容边界后再安排七天。
+- **internal continuation decision**：暂不新建可选学习任务或日历块，也不继续当前 essay 练习。句架只复用现有高回报卡并补真正缺口；Anki 不全量灌入，先核对最小考试集的既有状态与安全同步路径。
+- **即时提示或无提示观察**：本轮是 diagnostic/course design，没有独立学习者产出，不记 mastery 证据。
+
+### 2026-08-24 17:39 BST
+
+- **学习者输入**：要求在澄清所有关键不确定性后制作一份唯一需要背诵的高质量语句脚手架 PDF，目标是以最短时间掌握 Paper A/B 所需句式与技能，并确认：final 只从 Week 1–4 的 Social Media、Gender、Demographics、Climate Change 四主题出；闭卷；未来七天可全部投入；A/B 需要分别达到理论 IELTS 6.5 水平，并按 7.0 准备、兼顾速度；允许安装 AnkiConnect。
+- **AI teaching/feedback**：把交付物锁定为一份闭卷记忆手册，而不是百科式课程笔记。内容按 `上场动作 → 可调用句架 → 意义边界 → 四主题高频词 → 个人高危错误 → 主动回忆 → 全真 readiness` 组织；以官方评分标准、四周真实材料和教师反馈交叉核验。复杂词与华丽变体只有在能提高准确性或速度时才保留。PDF 完成前逐页渲染检查；Anki 仅同步手册的生产语言子集，不全量镜像 Skill Bank。
+- **当前技能图位置**：diagnostic/course design 完成，进入 exam-sprint scaffold authoring；当前 Climate Paper B 练习继续暂停，不把制作用时算作学习 mastery。
+- **本轮唯一下一动作**：生成并核验 Paper A/B Hacking Manual PDF，同时建立与它一致的最小 Anki 集。
+- **internal continuation decision**：先并行审计 Paper A、Paper B 与 Anki P0 清单，再由导师合并去重；不在 PDF 中加入第五主题、预测答案、固定立场或需要反向套材料的万能 thesis。完成后再讨论七天如何分配，不预建每日任务。
+- **即时提示或无提示观察**：本轮是脚手架制作，没有独立学习者输出，不记 mastery 证据。
 <!-- student-os:learning-log:end -->
 
 ## 课程依据与材料来源

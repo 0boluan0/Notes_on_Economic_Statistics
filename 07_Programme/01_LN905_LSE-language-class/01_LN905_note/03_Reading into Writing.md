@@ -22,13 +22,13 @@ aliases:
 | 项目 | 正式要求 |
 |---|---|
 | 输入 | 一个 essay question + 三篇 adapted extracts |
-| 输出 | 两小时内约 600 词 response |
+| 输出 | 90 分钟内约 600 词 response：约 30 分钟阅读/计划 + 60 分钟写作 |
 | Reading 权重 | 60/90：text use、synthesis、selection、paraphrasing |
 | Writing 权重 | 40/90：task fulfilment、structure、style/range、accuracy |
 | 最高档特征 | 围绕写作目的改造材料；识别文内与跨文 links；选材精确；quote/paraphrase/summary 熟练；结构推进清楚 |
 
 <!-- bilingual-en:start -->
-Paper B provides an essay question and three adapted extracts for a roughly 600-word response in two hours. Reading is judged through text use, synthesis, selection and paraphrasing; writing through task fulfilment, structure, style and range, and accuracy.
+Paper B provides an essay question and three adapted extracts for a roughly 600-word response in 90 minutes: approximately 30 minutes for reading and planning, then 60 minutes for writing. Reading is judged through text use, synthesis, selection and paraphrasing; writing through task fulfilment, structure, style and range, and accuracy.
 <!-- bilingual-en:end -->
 
 ### Band 分水岭

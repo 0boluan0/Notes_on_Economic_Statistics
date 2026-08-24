@@ -16,45 +16,8 @@
               "icon": "sprout",
               "title": "Learning Progress Dashboard"
             }
-          },
-          {
-            "id": "2a57a409b927a6bd",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/01_Assessment/Assessment-Information/LSE English Language Assessment - Information.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "LSE English Language Assessment - Information"
-            }
-          },
-          {
-            "id": "07fe837e5a2c8f8c",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Sample Essay"
-            }
-          },
-          {
-            "id": "08e56363c464b9d0",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Tutorials/Class 2 Week 5 Tutorials.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Class 2 Week 5 Tutorials"
-            }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -334,8 +297,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "08e56363c464b9d0",
+  "active": "70c0343f5ae25f5e",
   "lastOpenFiles": [
+    "99_学习情况记录/teach/listening-into-writing/LN905 四主题随手听清单.md",
+    "99_学习情况记录/teach/LN905 Skill Bank/Cards/PA-03-C04 - the-speaker-cites-evidence-type-to-support-the-claim-that-X.md",
+    "99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C08 - in-this-context-X-refers-to-features-it-persists-mainly-because-A-and-B.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Tutorials/Class 2 Week 5 Tutorials.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Practice-Speaking-and-Listening/Classes 2 and 6.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Peer Checking.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Phrasal Verbs and Dependent Prepositions.pdf",
@@ -347,8 +314,6 @@
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C07 - X-occurs-mainly-because-A-and-B-addressing-it-requires-C-and-D.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C06 - governments-should-respond-to-X-through-A-and-B.md",
     "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Practice-Speaking-and-Listening/Classes 1 and 5.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Tutorials/Class 2 Week 5 Tutorials.pdf",
-    "07_Programme/01_LN905_LSE-language-class/PDF/00_Course-Info/Week-5/Tutorials/Class 1 Week 5 Tutorials.pdf",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-credit-scoring-draft.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-essay.md",
     "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
@@ -372,8 +337,6 @@
     "99_学习情况记录/学习计划/MIT 6.100L Introduction to CS and Programming Using Python.md",
     "07_Programme/01_LN905_LSE-language-class/00_inbox/week4listening into writing.md",
     "98_attachment/Pasted image 20260822145206.png",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/AI-01-C01 - leader-open-the-task-keep-the-group-focused-and-invite-contribut.md",
-    "99_学习情况记录/2026-08-21——Fri.md",
     "tmp/pdfs/final-4.png",
     "tmp/pdfs/final-3.png",
     "tmp/pdfs/final-2.png",

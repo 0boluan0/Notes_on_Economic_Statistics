@@ -4,7 +4,7 @@ title: LN905 Listening and Reading Practice
 track: school
 status: active
 kind: capability-practice
-assessment_horizon: 2026-08-21
+assessment_horizon: 2026-09-02
 ---
 
 # LN905 Listening and Reading Practice
