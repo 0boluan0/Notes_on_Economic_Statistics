@@ -26,13 +26,12 @@ last_result:
 >
 > **例句/例子**：`This essay contends that climate framing is effective where it matches audience values because message reception is context-dependent.`
 >
-> **可替换形式或操作提示**：`X is most likely when Y, since Z.`。
+> **可替换形式或操作提示**：`X is most likely when Y, since Z.`；回答 extent 题时可用 `This essay contends that X to a [limited/moderate/considerable] extent, particularly when Y, although Z limits its effectiveness.`。
 >
 > **课件来源**：[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/Examples.pdf|Examples]]；[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/LN905 Week one materials 2026 - B completed.pdf|LN905 Week one materials 2026 - B completed]]；[[07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-1/Week One Lesson One.pdf|Week One Lesson One]]
 
 ## 学习记录
 
 - 2026-08-20｜课件回溯初始化｜已从已上 LN905 课件整理成卡片并加入 Recall 队列；尚未留下主动回忆或独立使用证据，不视为掌握。
-
-
+- 2026-08-24｜Paper B 一周冲刺教学｜把原条件性 thesis 句架扩展为 extent-question 变体；尚待学习者在 Climate Change introduction 中 guided 使用。
 

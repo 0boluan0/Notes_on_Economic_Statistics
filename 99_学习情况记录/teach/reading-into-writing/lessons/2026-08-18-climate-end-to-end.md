@@ -15,7 +15,7 @@ mode: guided-end-to-end
 target_words: 600
 scheduled: false
 started_on: 2026-08-19
-current_stage: exam-sprint-template-introduction
+current_stage: exam-sprint-frame-bank-thesis-application
 ---
 
 # Climate Change｜Paper B guided end-to-end
@@ -40,6 +40,23 @@ current_stage: exam-sprint-template-introduction
 | Conclusion | 60–80 | 重申程度判断；概括最关键条件和限制；不加新证据 |
 
 **正文段固定循环**：`你的 claim → 来源证据 → 解释为什么支持 claim → 连接/对比另一来源 → 回扣题目作小判断`。不能写成“Source 1 说……Source 2 说……”的资料清单。
+
+### 八股的正确用法
+
+顺序固定为：`分析题目和来源 → 先填中文逻辑槽 → 选择功能句架 → 写成英文 → 复核来源含义`。句架只负责语法和论证功能，不负责替你决定答案。
+
+最小句架库只背下面这些，不背整篇范文：
+
+1. **条件性 thesis**：`This essay contends that X to a [limited/moderate/considerable] extent, particularly when Y, although Z limits its effectiveness.`（[[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C05 - this-essay-contends-that-x-in-cases-where-y-because-z|AW-02-C05]]）
+2. **路线**：`This essay first examines X before evaluating Y.`（[[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-13-C02 - this-essay-first-examines-x-before-evaluating-y|AW-13-C02]]）
+3. **段首**：`topic + arguable controlling idea`，不能以作者姓名控制段落（[[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-04-C01 - topic-sentence-topic-arguable-controlling-idea|AW-04-C01]]）
+4. **报告 evidence**：`Using data on X, Author (Year) found that Y.`（[[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-10-C04 - using-data-on-X-author-finds-Y|AW-10-C04]]）
+5. **解释 evidence**：`This evidence illustrates / supports / qualifies the claim that X.`（[[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-08-C03 - this-evidence-illustrates-supports-qualifies-the-claim-that-x|AW-08-C03]]）
+6. **补 reasoning**：`This is important / relevant / problematic because X.`（[[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-11-C05 - this-is-relevant-or-problematic-because|AW-11-C05]]）
+7. **对比来源**：`While Source A shows X, Source B shows Y.`（[[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-12-C07 - while-source-A-X-source-B-Y|AW-12-C07]]）
+8. **综合来源**：`Taken together, X and Y suggest that Z.`（[[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-12-C05 - taken-together-X-and-Y-suggest-Z|AW-12-C05]]）
+
+Conclusion 复用第 1 个 thesis 骨架，以 `Overall, ...` 开头，并根据正文证据精确化判断；不引入新证据（[[99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-13-C03 - conclusion-synthesise-the-argument-and-restate-the-thesis-in-lig|AW-13-C03]]）。
 
 **本题来源角色**：
 
@@ -72,7 +89,7 @@ current_stage: exam-sprint-template-introduction
 起点证据：Week 3 独立作答的教师定性档为 Reading `60/65`、Writing `55 or below`；教师确认 learner 使用全部三源、选择相关信息、有清楚的 overall argument。2026-08-21 Climate Change Friday Paper B 又无提示形成三个清楚的原因段，并在各段按 writer claim 组合来源，但约 499 词即结束，第二问 solutions 只剩两句且没有来源展开。当前首要风险因此从单纯 source relation 扩展为“上位结构可见，但未把题目的每一部分执行到完整成品”；同时仍须防止改变 source certainty、scope 与 causality。
 完整产出：约 600 词、直接回答 question、使用全部三篇 extracts、writer-led paragraphs、至少一处清楚的跨来源 synthesis、完整 conclusion；随后按整篇最高价值问题完成至多一次 whole-output revision。
 端到端教学链：完整读题与三文 → question-led notes → 三源 meaning/evidence map → provisional thesis → paragraph jobs/evidence roles → 约 600 词 essay → whole-output feedback → whole-output revision → 写回证据。
-允许支架：中文解释；worked contrast；把当前 source 原文直接显示给 learner；关键词、箭头或不完整英文；function cue；structure cue；短对比示范；共同修正 map/plan。不得给 model thesis、完整 paragraph plan 或可直接提交的 model essay。
+允许支架：中文解释；worked contrast；把当前 source 原文直接显示给 learner；关键词、箭头或不完整英文；function cue；structure cue；短对比示范；共同修正 map/plan。一周冲刺的第一篇 guided essay 可直接给固定五段骨架、paragraph jobs、source roles 和句架 skeleton，但不得替 learner 选择 thesis 程度、改写全部 evidence 或给可直接提交的 model essay。
 即时提示技能/语言：写到 prose 时，若下一句自然适合 AW-08、AW-09、AW-10、AW-11、AW-12、AW-17 或 LEX-01，先说明这句话的功能和适用理由，再给少量可复用 frame、reporting verb、collocation 或 evaluative word，由 learner 自己成句；不得直接给完整句。提示后的表现只记 `guided`。
 独立观察机会：本 unit 是 teaching practice，不把上述语言项目静默等待到全文结束。AW-02、AW-03、AW-16 的既有宏观能力可自然观察，但只有真正无提示的表现才能记 `independent`；正式 Friday/timed output 前不提醒。
 提示层级：先解释功能与人类写作问题 → function cue → structure cue → 四话题内短对比示范；同一细节不连续纠缠。若 map/plan 的错误会让整篇建立在错误 source relation 上，当场修；其他局部语言等完整 essay 后批量反馈。
@@ -102,7 +119,7 @@ student-os:mentor-brief:end -->
 - `你已经会`：能使用三份来源、连接 ideas、形成 overall argument，并完成 conclusion；
 - `当前节点`：读题，不是开始写漂亮句子。
 
-然后只给一个 5–10 分钟的有意义动作：让我先用中文、英文关键词或箭头拆出 question 的 command、核心判断对象和必须限定的概念，并解释这个动作会怎样控制后续阅读。不要给选项，不要提前给 thesis，也不要一次展示整张 worksheet。审题、provisional answer 和 paragraph jobs 仍由 learner 亲自完成；但如果答案已经直接、有限定且能控制段落，就立即接受并推进，不反复改写，也不从零重教结构。需要 source 细节时直接把相关段落显示出来，不意外测试记忆。
+恢复时以 frontmatter 的 `current_stage` 为准，不重新执行已经完成的 orientation 或慢速审题。一周冲刺的第一篇 guided essay 可直接提供固定 paragraph jobs、source roles 和功能句架；learner 亲自选择 thesis 的程度、把来源转成自己的表达并写全部最终 prose。需要 source 细节时直接显示相关原文，不意外测试记忆。
 
 进入 prose 后，不要静默等待我自己想起好用的学术句式、词汇搭配或写作原则。每当下一句自然适合 Skill Bank 中已经教过或本次点名的项目，先告诉我：这句话要完成什么功能、为什么该项目适合、有哪些少量可复用表达；然后让我自己写句子。不要给我一整句可直接抄的答案。提示后的使用记为 `guided`；只有明确独立/限时输出才静默观察。
 
@@ -207,6 +224,15 @@ student-os:mentor-brief:end -->
 - **本轮唯一下一动作**：学习者按 `引题 → 程度/条件/限制 thesis → 路线` 写 70–90 词英文 Introduction，不需要引用来源。
 - **internal continuation decision**：若 Introduction 明确回答 extent，包含至少一个条件和一个限制，并预告三个正文工作，立即进入 Body 1；只纠正会破坏题意或结构的错误，不做逐句美化。完成 guided 全文后，下一次整篇转为限时练习。
 - **即时提示或无提示观察**：本轮为 guided；提供五段骨架、段落功能、来源角色和 Introduction 句架，但不代写完整 Introduction。
+
+### 2026-08-24 16:18 BST
+
+- **学习者输入**：`八股是对的,我是不是先背足够用的八股句子然后上场分析完直接往里填空`
+- **AI teaching/feedback**：确认总体策略，但限定为“背功能句架，不背固定内容”。正确流程是先把现场题目和来源分析成 X/Y/Z、paragraph claim、evidence、relation 与 limitation，再选择句架承载这些内容；不得为了套句而改变 source ownership、certainty、scope 或 causality。复用现有 Skill Bank 卡片组成八项最小句架库，不另造同义卡。
+- **当前技能图位置**：exam sprint sentence-frame bank → conditional thesis 的 guided application。
+- **本轮唯一下一动作**：针对当前 Climate Change question，先用中文写出 thesis 句架的 `X（核心答案）/程度词/Y（成立条件）/Z（主要限制）`，再据此写一条英文 thesis。
+- **internal continuation decision**：若 thesis 直接回答 extent、条件来自来源且没有绝对化，接受后立即用 roadmap 句架完成 Introduction；若意义或范围漂移，只修正一个关键槽位，不做语言精修。
+- **即时提示或无提示观察**：本轮为 guided；明确八股的使用顺序并提供现有八项最小句架库，提示 `AW-02-C05` 的 extent 变体。
 <!-- student-os:learning-log:end -->
 
 ## 课程依据与材料来源
