@@ -364,4 +364,31 @@ selective repair 后，每轮只给一个约 5–10 分钟的有意义动作：�
 - continuation decision：收到 P3 后把 opening、P1、P2、P3 视为完整初稿，统一进行 whole-output feedback，并至多要求一次整篇 revision；不回到 P2 做局部重写。
 - 本轮即时提示/观察证据：learner 能组织 C+E 并作综合推论；E 的阈值 uncertainty 与 scope 仍需 guided correction，AW-15 保持 repair。
 
+### 2026-08-25 21:30 BST
+
+- 学习者原始输入：`In response, Rockstrom calls for the urgency of decline the emission fast. However, even if the`
+- 助教教学/反馈：输入在 `However, even if the` 处明显中断，因此不把半句话当作完整 P3，也不提前评价或替 learner 补写。第一句已显露 response job：快速减排；语言问题留待完整初稿后的整篇反馈。
+- 当前端到端节点：完整初稿 P3 正在写；response 已起笔，overshoot 因果、保护自然系统与 evidence-specific evaluation 尚未完成。
+- 本轮唯一下一动作：learner 从原句 `However, even if the...` 继续写完 P3 并整段提交；需要保留的关系是 `年度排放开始下降 ≠ 累积温室气体立即消失 → 温度仍可能暂时 overshoot`，随后加入保护自然系统和 H2 评价。
+- continuation decision：等待 P3 完整段落；收到后将 opening、P1、P2、P3 合并视为完整初稿并进行 whole-output feedback，不对当前半句单独纠错。
+- 本轮即时提示/观察证据：本轮输入不完整，不产生新的技能证据。
+
+### 2026-08-25 21:33 BST
+
+- 学习者原始输入：`However, even if the emission decline from now, the green house gas would not disappear, therefore the global temperature may rise 1.5 degree centigrade`
+- 助教教学/反馈：learner 已恢复正确的 flow/stock 主关系：年度排放开始下降不等于累积温室气体立即消失，因此温度仍可能继续受到上升压力。立即拦截一个会改变 scope/baseline 的表述：材料不是“从现在再上升 1.5°C”，而是全球平均温度仍可能暂时超过相对工业化前水平的 `+1.5°C` 门槛；同时需要 `accumulated greenhouse gases` 与 `immediately` 保留累积量和时间关系。语法、拼写与标点留待整篇反馈。
+- 当前端到端节点：完整初稿 P3；response + overshoot causality 已出现 → 保护自然系统 + H2 evidence-specific evaluation。
+- 本轮唯一下一动作：继续补完 P3 的最后两项：讲者要求保护自然系统；风险诊断有具体数字支撑，但实施方案细节相对不足。用末句完成评价和全文收束，随后提交完整 P3。
+- continuation decision：不要求当前句单独重写；收到 P3 完整段落后合并全文并进行 whole-output feedback，最多要求一次整篇 revision。
+- 本轮即时提示/观察证据：flow/stock causality 可见；1.5°C baseline/scope 仍需 guided correction，AW-15 保持 repair。
+
+### 2026-08-25 21:37 BST
+
+- 学习者原始输入：完成 P3：`Based on this phenomenon, he ask the audience to protect the nature. To sum up, the diagnoses of the risk are supported by the data, which makes his claim convincing. However, his speech fails to account for the detail tasks about the solution toward global warming.`；连同此前 opening、P1、P2 与 P3 前半，完整初稿共约 255 词。
+- 助教教学/反馈：完整初稿满足 200–400 词要求，并形成 `central answer → acceleration evidence → buffering / tipping mechanisms → response → critical evaluation` 的完整链。覆盖方面已有 central claim、A、C、E、G 与 H2；组织清楚，全文完成度成立。整篇修订只处理两项高影响问题。第一，source fidelity：把 `incoming tipping points` 恢复为 crossing risk；把 Amazon scope 收紧为 `parts of the Amazon`；把 `1.5°C` 写为相对工业化前水平的临时越界门槛并保留精确阈值不确定；把累积温室气体不会 `immediately` 消失写清。第二，evaluation：`data makes his claim convincing` 仍太笼统，需点名 warming-rate / carbon-sink / tipping evidence 支持 risk diagnosis；`fails to account for` 强于现有依据，收紧为 implementation route / feasibility details 相对不足。语言只批量处理两个 recurring pattern：正确 word form / verb form（`is accelerating`, `weakening`, `emissions decline`, `he asks`），以及可数名词与固定搭配（`emissions`, `0.18°C`, `protect natural systems`, `detailed measures`）。不要求局部多轮改写。
+- 当前端到端节点：完整 255 词 critical-summary 初稿完成 → whole-output feedback 完成 → 唯一一次整篇 revision。
+- 本轮唯一下一动作：learner 在原全文上一次性修订并整篇提交，重点修复上述 source fidelity 与 evidence-specific evaluation，同时批量清理两个语言模式；不得逐句发送。
+- continuation decision：收到整篇 revision 后不再要求第二次全文修订；按 completion evidence 判断本 unit 是否完成，允许不影响核心意义的少量语言错误，并写回 Skill Bank / canonical task。
+- 本轮即时提示/观察证据：PA-04 的完整组织与 completion 成立；PA-05 已有评价意图但对象仍泛；AW-15 在 tipping certainty、Amazon scope、1.5°C baseline 与评价强度上仍需 repair；LEX-01 / AW-17 的 `notes / suggests / may` guided use 已整合进入成品。
+
 <!-- student-os:learning-log:end -->
