@@ -16,8 +16,33 @@
               "icon": "sprout",
               "title": "Learning Progress Dashboard"
             }
+          },
+          {
+            "id": "ba5b6fb25bb7a1d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "04_Academic Writing"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -297,8 +322,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "70c0343f5ae25f5e",
+  "active": "ba5b6fb25bb7a1d4",
   "lastOpenFiles": [
+    "tmp/pdfs/current_manual_layout.txt",
+    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
+    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing.md",
+    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/01_Listening into Writing.md",
+    "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/02_LN905_essay/Week1-Academic-Writing-moodle.md",
+    "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
+    "00_inbox/随手记.md",
     "tmp/pdfs/ln905_final_postflight/page-27.png",
     "tmp/pdfs/ln905_final_postflight/page-02.png",
     "tmp/pdfs/ln905_final_postflight",
@@ -327,7 +359,6 @@
     "tmp/ln905_official_text/Reading_into_Writing_AI_Feedback_Workbook.txt",
     "tmp/ln905_official_text/Reading_into_Writing.txt",
     "tmp/ln905_official_text/Listening_into_Writing_AI_Feedback_Workbook.txt",
-    "tmp/pdfs/ln905_v12_raster/page-27.png",
     "tmp/ln905_markitdown/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change/Feedback for Week Three.md",
     "tmp/ln905_markitdown/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change/Reading into Writing - Climate Change Extracts.md",
     "tmp/ln905_markitdown/04_Paper-B-Reading-into-Writing/Week-1-Social-Media/Reading into Writing - Social Media Extracts.md",
@@ -339,12 +370,6 @@
     "tmp/ln905_markitdown/04_Paper-B-Reading-into-Writing/Week-2-Gender/Gender Extracts.md",
     "tmp/ln905_markitdown/04_Paper-B-Reading-into-Writing/Week-2-Gender/Feedback for Week One.md",
     "tmp/ln905_markitdown/03_Paper-A-Listening-into-Writing/Week-4-Climate-Change/Transcript.md",
-    "tmp/ln905_markitdown/03_Paper-A-Listening-into-Writing/Week-4-Climate-Change/Listening into Writing - Feedback from Week Three.md",
-    "tmp/ln905_markitdown/03_Paper-A-Listening-into-Writing/Week-4-Climate-Change/Listening into Writing - Climate Change.md",
-    "tmp/ln905_markitdown/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Sample Summary - Demographics Annotated.md",
-    "tmp/ln905_markitdown/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Listening into Writing - Feedback from Week Two.md",
-    "tmp/ln905_markitdown/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Sample Summary - Demographics.md",
-    "tmp/ln905_markitdown/03_Paper-A-Listening-into-Writing/Week-3-Demographics/Listening into Writing - Demographics.md",
     "03_Computer_Science/01_CS50/CS50 Course Atlas.canvas",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",
