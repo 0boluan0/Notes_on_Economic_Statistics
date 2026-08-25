@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
+                "file": "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -38,11 +38,29 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "04_Academic Writing"
+              "title": "2026-08-16-climate-end-to-end"
             }
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "4422376f4f324202",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "312f584b41c4ea3a",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "output/pdf/LN905_Paper_A_B_Hacking_Manual.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "LN905_Paper_A_B_Hacking_Manual"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -300,7 +318,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 633.8499755859375
+    "width": 633.8499755859375,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -324,28 +343,31 @@
   },
   "active": "ba5b6fb25bb7a1d4",
   "lastOpenFiles": [
+    "tmp/pdfs/LN905_Paper_A_B_Walkthrough_candidate.txt",
+    "tmp/pdfs/ln905_walkthrough_render.6HvyZY/contact-3.jpg",
+    "tmp/pdfs/ln905_walkthrough_render.6HvyZY/contact-2.jpg",
+    "tmp/pdfs/ln905_walkthrough_render.6HvyZY/contact-1.jpg",
+    "tmp/pdfs/ln905_walkthrough_render.6HvyZY/page-29.png",
+    "tmp/pdfs/ln905_walkthrough_render.6HvyZY/page-28.png",
+    "tmp/pdfs/ln905_walkthrough_render.6HvyZY/page-27.png",
+    "tmp/pdfs/ln905_walkthrough_render.6HvyZY/page-26.png",
+    "tmp/pdfs/ln905_walkthrough_render.6HvyZY/page-25.png",
+    "tmp/pdfs/ln905_walkthrough_render.6HvyZY/page-24.png",
+    "tmp/pdfs/ln905_walkthrough_render.6HvyZY/page-23.png",
+    "tmp/pdfs/ln905_walkthrough_render.6HvyZY",
+    "tmp/pdfs/LN905_Paper_A_B_Walkthrough_candidate.pdf",
+    "tmp/pdfs/__pycache__/build_ln905_clear_manual.cpython-312.pyc",
+    "tmp/pdfs/build_ln905_walkthrough_manual.py",
+    "tmp/pdfs/paper_b_audit",
+    "99_学习情况记录/teach/LN905 7-Day Exam Sprint.md",
+    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end.md",
+    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay.md",
+    "output/pdf/LN905_Paper_A_B_Hacking_Manual.pdf",
+    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
     "tmp/anki/ln905_before_clear_v13.json",
     "tmp/anki/rebuild_ln905_cards_v13.py",
     "tmp/anki",
     "tmp/pdfs/__pycache__/sync_ln905_sprint_v12.cpython-311.pyc",
-    "tmp/pdfs/__pycache__",
-    "tmp/pdfs/ln905_final_smoke/page-02.png",
-    "tmp/pdfs/ln905_final_smoke/page-01.png",
-    "tmp/pdfs/ln905_final_smoke",
-    "tmp/pdfs/LN905_Paper_A_B_Clear_candidate.txt",
-    "tmp/pdfs/ln905_clear_render/contact-4.jpg",
-    "tmp/pdfs/ln905_clear_render/contact-3.jpg",
-    "tmp/pdfs/ln905_clear_render/contact-2.jpg",
-    "tmp/pdfs/ln905_clear_render/contact-1.jpg",
-    "tmp/pdfs/ln905_clear_render/page-23.png",
-    "tmp/pdfs/ln905_clear_render/page-22.png",
-    "tmp/pdfs/ln905_clear_render/page-21.png",
-    "tmp/pdfs/ln905_clear_render/page-20.png",
-    "tmp/pdfs/ln905_clear_render",
-    "tmp/pdfs/LN905_Paper_A_B_Clear_candidate.pdf",
-    "tmp/pdfs/build_ln905_clear_manual.py",
-    "tmp/pdfs/current_manual_layout.txt",
-    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing.md",
     "07_Programme/01_LN905_LSE-language-class/01_LN905_note/01_Listening into Writing.md",
     "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/02_LN905_essay/Week1-Academic-Writing-moodle.md",
@@ -358,7 +380,6 @@
     "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-28-paper-b-clean-route.md",
     "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-31-paper-a-dress-rehearsal.md",
     "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-28-paper-a-clean-route.md",
-    "99_学习情况记录/teach/LN905 7-Day Exam Sprint.md",
     "tmp/ln905_markitdown/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change/Feedback for Week Three.md",
     "tmp/ln905_markitdown/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change/Reading into Writing - Climate Change Extracts.md",
     "tmp/ln905_markitdown/04_Paper-B-Reading-into-Writing/Week-1-Social-Media/Reading into Writing - Social Media Extracts.md",
@@ -368,8 +389,6 @@
     "tmp/ln905_markitdown/03_Paper-A-Listening-into-Writing/Week-1-Social-Media/Transcript.md",
     "tmp/ln905_markitdown/03_Paper-A-Listening-into-Writing/Week-1-Social-Media/Sample Summaries Task.md",
     "tmp/ln905_markitdown/04_Paper-B-Reading-into-Writing/Week-2-Gender/Gender Extracts.md",
-    "tmp/ln905_markitdown/04_Paper-B-Reading-into-Writing/Week-2-Gender/Feedback for Week One.md",
-    "tmp/ln905_markitdown/03_Paper-A-Listening-into-Writing/Week-4-Climate-Change/Transcript.md",
     "03_Computer_Science/01_CS50/CS50 Course Atlas.canvas",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",

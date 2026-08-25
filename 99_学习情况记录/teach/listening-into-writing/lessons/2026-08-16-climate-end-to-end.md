@@ -292,4 +292,76 @@ selective repair 后，每轮只给一个约 5–10 分钟的有意义动作：�
 - continuation decision：收到完整初稿后，才统一核验 source accuracy、coverage、organization、evaluation、completion 和 recurring language；只立即拦截会改变 ownership/certainty/scope/causality/evidence relationship 的问题，然后最多要求一次整篇 revision。
 - 本轮即时提示/观察证据：AW-17-C01/LEX-01-C01 为 prompted guided use；learner 能用 `suggests` 与概率表达避免确定化，但 AW-15 的 population/system scope 仍需 repair，不记为 independent evidence。
 
+### 2026-08-25 14:47 BST
+
+- 学习者原始输入：`我要接着2026-08-16-climate-end-to-end继续做,告诉我现在到哪里了`
+- 助教教学/反馈：依据 learning log 最新节点恢复进度，不重开首听或规划。确认完整首听、selective listening repair、transcript-assisted source map、central answer、三段 paragraph jobs、evidence allocation 和 finding-to-claim 的强度校准均已完成；当前尚未产出 200–400 词英文 critical-summary 初稿，因此整个 canonical task 仍未完成。
+- 当前端到端节点：finding/claim 校准完成 → 完整 200–400 词 critical-summary 初稿。
+- 本轮唯一下一动作：learner 看着既有 source/plan card，一次写完并贴回 200–400 词英文初稿；不逐段发送，不先打磨局部句子。
+- continuation decision：收到完整初稿后统一核验 source accuracy、coverage、organization、evaluation、completion 与 recurring language，然后至多进行一次整篇 revision；不返回听力重播或新增规划回合。
+- 本轮即时提示/观察证据：本轮仅恢复状态，没有新的技能调用证据，不写回 Skill Bank。
+
+### 2026-08-25 14:48 BST
+
+- 学习者原始输入：针对已完成的 `完整听讲和原始笔记 → 关键听力片段修复 → source map / central answer → paragraph jobs → evidence allocation → finding / claim 校准`，要求：`把这些打在对话框里,我照着写`；随后明确：`给我我要的`。
+- 助教教学/反馈：把既有 source/plan card 直接重新显示在对话中，避免 learner 回忆材料或翻找文件。卡片只提供已完成的控制句、三段 jobs、选定 evidence、必须保留的 certainty/scope 和可复用句架，不提供写好的完整 summary。
+- 当前端到端节点：finding/claim 校准完成 → 完整 200–400 词 critical-summary 初稿。
+- 本轮唯一下一动作：learner 依照对话中的 source/plan card，一次写完并贴回 200–400 词英文初稿；不逐段发送，不先打磨局部句子。
+- continuation decision：收到完整初稿后统一进行 whole-output feedback，再至多要求一次整篇 revision；本轮不添加新规划步骤。
+- 本轮即时提示/观察证据：本轮显示的 frames 属于写前 guided support；后续使用不能记为 independent evidence。
+
+### 2026-08-25 14:54 BST
+
+- 学习者原始输入：`This speech claims that climate change is faster than prediction, which is declining the resilience of the earth and enhance the risk of tipping points. Therefore, human beings must decrease emission immediately to protect the environment and prepare for the incoming climate changes.`
+- 助教教学/反馈：开头已包含完整控制链：变化快于预期 → 地球系统韧性减弱 / 临界点风险上升 → 立即减排、保护与准备。立即提示四处会影响准确表达的修正方向：用 `faster than scientists predicted/expected` 保留比较对象；用 `weakening ... and increasing ...` 保留两个并列结果；用 `cut emissions` 表达减排；把笼统的 `protect the environment / incoming climate changes` 收紧为 `protect natural systems / unavoidable near-term impacts`。不要求单独重写这句，避免停留在局部。
+- 当前端到端节点：完整 200–400 词 critical-summary 初稿；opening controlling claim 已出现，全文尚未提交。
+- 本轮唯一下一动作：保留原句作为草稿并继续一次写完整篇，接着完成 P1 的变暖速率 evidence、P2 的 C+E、P3 的 G+H2，达到 200–400 词后整篇提交。
+- continuation decision：完整初稿出现前不逐句修改；收到全文后统一做 whole-output feedback，并至多进行一次整篇 revision。
+- 本轮即时提示/观察证据：central relationship 与行动方向可见；本轮提供的词组替换属于 guided support，不记为 independent language evidence。
+
+### 2026-08-25 14:58 BST
+
+- 学习者原始输入：`Using the data of the accelerating speed of global warming, Rockstrom claims that the speed and risks of global warming may be predicted lower than the fact.`
+- 助教教学/反馈：learner 已加入 speaker ownership、数据角色与“此前判断偏低”的主关系。立即修正会影响 source accuracy 的表达：材料不是说 speed/risk 现在“可能被预测得低于事实”，而是实际 warming rate 比 scientists previously expected 更快，因此 earlier assessments underestimated the risks。`may` 会把讲者已有判断重新弱化为可能性；`lower than the fact` 也不是英语中的可靠比较。给出 proposition-level model 后不要求重写该句，直接推进全文。
+- 当前端到端节点：完整初稿 P1；opening 与 acceleration evidence 的作用已出现 → P2 buffering / tipping。
+- 本轮唯一下一动作：继续写 P2，依次使用 C（约 53% CO₂、部分 Amazon sink → source）与 E（16 个系统中 5 个很可能在约 1.5°C 越界、阈值不确定），保留 `suggests / may / could` 的范围和概率。
+- continuation decision：不再逐句处理 P1；learner 继续完成 P2、P3，并在 200–400 词后整篇提交，届时统一 whole-output feedback。
+- 本轮即时提示/观察证据：speaker ownership 与 evidence role 可见；source certainty/time relation 仍需 guided correction，AW-15 保持 repair。
+
+### 2026-08-25 15:00 BST
+
+- 学习者原始输入：`不对,我意思是这里写的就不好,我感觉我把握不好到底该写多长或者多短.`
+- 助教教学/反馈：立即暂停 P2 和逐句措辞反馈。确认 learner 当前缺少的不是另一条替换句，而是 whole-output scale：200–400 词内每段、每句应承担多少信息。解释上一轮直接给 proposition model 仍未回答“写到什么粒度”的问题。为本篇固定可执行尺度：目标约 250–300 词；P1 约 60–80 词、P2 约 90–110 词、P3 约 80–100 词；每句只承担一个主要 job，P1 用 `controlling claim → one finding → implication` 三句即可，不把数据引入、比较、风险结论和评价全部塞进一句。
+- 当前端到端节点：完整初稿暂停；先恢复 whole-output / paragraph / sentence scale，再继续 P1–P3。
+- 本轮唯一下一动作：learner 只确认 `250–300 total；P1 60–80 / P2 90–110 / P3 80–100；一句一个主要 job` 是否已经足以判断长短；暂不写新句。
+- continuation decision：尺度确认后，保留 learner 已有 opening 的意思，按三句 P1 结构继续完整初稿；若仍不清楚，先用空白 job slots 展示长度，不发新的材料内容或要求改写。
+- 本轮即时提示/观察证据：本轮为方向与尺度教学，不产生 mastery evidence。
+
+### 2026-08-25 15:06 BST
+
+- 学习者原始输入：澄清 `This speech claims ... incoming climate changes.` 是独立开头段，`Using the data of the accelerating speed of global warming ...` 才是正文第一段第一句。
+- 助教教学/反馈：撤销上一轮把两部分合并为 P1 约 70 词的判断。按 learner 的实际结构重新定位为 `opening paragraph → P1 urgency / acceleration → P2 buffering + tipping → P3 response + evaluation`。开头约 43 词，长度可用；P1 首句约 27 词，长度本身也可用，问题是把 evidence introduction、speaker claim、speed 与 risk comparison 同时塞入一句，却尚未展示具体数据。解释 P1 可用三句完成：topic claim 约 15–25 词；0.18°C → 0.26°C data 约 20–25 词；risk implication 约 15–20 词。全文以约 260–330 词为可执行目标，不另加独立 conclusion，P3 末句完成 closing evaluation。
+- 当前端到端节点：完整初稿 opening paragraph 已写；正在写 P1 第一句，whole-output scale 已按四段实际结构重新校准。
+- 本轮唯一下一动作：learner 只确认修正后的结构与尺度是否符合自己的写作意图；暂不继续 P1，直到层级理解一致。
+- continuation decision：确认后从 P1 的 `topic claim → numerical finding → implication` 继续；不再把 opening 与 P1 合并，也不要求重写 opening 后才推进。
+- 本轮即时提示/观察证据：本轮为结构层级澄清，不产生新的独立技能证据。
+
+### 2026-08-25 15:11 BST
+
+- 学习者原始输入：`Using recent warming-rate data, Rockström claims that climate change is acceleration faster than scientists previously expected. He notes that the rate increased from 0.18 degree per decade to 0.26 degree per decade. This finding suggests that earlier assessments may have underestimated the associated risks.`；并询问 `He notes that` 是什么用法、是否需要记忆。
+- 助教教学/反馈：P1 已按 `判断 → 数据 → 意义` 完成，长度约 46 词，粒度合适；speaker ownership、数字证据及保留 `suggests / may have underestimated` 的强度关系均成立。只需在整篇 revision 批量修正 `is acceleration faster` 为 `is accelerating faster / is accelerating more rapidly`，并把温度单位写成 `0.18°C / 0.26°C per decade`。即时教授 reporting-verb 分工：`argues that` 用于带理由的主张，`notes that` 用于指出一个值得注意的事实、观察或数字，不自动表示强推论；因此本段先 `argues` 总判断，再 `notes` 数据，搭配自然。该框架值得记为 `Author notes that + factual finding/figure`，但应并入现有 reporting-verb distinction，而不是孤立背成万能替换词；本 unit 完成时再统一写回 Skill Bank。
+- 当前端到端节点：完整初稿 opening + P1 已完成 → P2 buffering / tipping。
+- 本轮唯一下一动作：继续写 P2，使用 C 与 E 完成约 90–110 词，不回头重写 P1；完整初稿结束后统一处理语言。
+- continuation decision：P2 前先让 learner 理解 `notes that` 的功能边界；随后继续整篇，不创建独立 reporting-verb drill。
+- 本轮即时提示/观察证据：`argues → notes → suggests` 的 source-action ladder 为本轮显式指导；当前使用属于 guided，不记 independent。
+
+### 2026-08-25 15:20 BST
+
+- 学习者原始输入：`After that, he mentions the weaken buffer capacity and incoming tipping points. For the former one, although land and sea can absorb roughly half of the human CO2 emissions, this buffer capacity is declining nowadays, with the evidence of some of the amazon forests have turned from carbon sink into carbon source. For the latter one, 5 of the 16 climate-regulation tipping elements may cross the tipping point in 1.5 degree centigrades. Taken together, this two facts illustrate that the resilience ability of nature is weaken.`
+- 助教教学/反馈：P2 已形成约 93 词的完整链：并列两个 block → C 的吸收 / Amazon 证据 → E 的 tipping evidence → 综合意义，长度与段落 job 合适。只立即锁定三处 source-accuracy 边界，留待整篇 revision 表达：不是 `incoming tipping points`，而是 `risk of crossing tipping points`；scope 是 `parts of the Amazon` 已从 sink 转 source；E 应保留 `5 of 16 are likely to cross at around 1.5°C, while the precise thresholds remain uncertain`，不能把 1.5°C 写成精确必然阈值。结尾把两项证据统摄为自然系统 resilience 正在减弱，推论方向成立。`weaken / former one / with the evidence of / this two / is weaken` 等语言问题不在完整初稿前逐项修正。
+- 当前端到端节点：完整初稿 opening + P1 + P2 已完成 → P3 response + evidence-specific evaluation。
+- 本轮唯一下一动作：一次写完 P3，包含 G（快速减排、保护自然系统、近期 overshoot / impacts）与 H2（风险证据强，但实施细节相对少）；用 P3 末句同时完成评价与全文收束，不另写独立 conclusion。
+- continuation decision：收到 P3 后把 opening、P1、P2、P3 视为完整初稿，统一进行 whole-output feedback，并至多要求一次整篇 revision；不回到 P2 做局部重写。
+- 本轮即时提示/观察证据：learner 能组织 C+E 并作综合推论；E 的阈值 uncertainty 与 scope 仍需 guided correction，AW-15 保持 repair。
+
 <!-- student-os:learning-log:end -->
