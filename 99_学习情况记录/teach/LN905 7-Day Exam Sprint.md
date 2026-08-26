@@ -60,9 +60,9 @@ topics:
 - Recognition：20 张全部过一遍，只说核心义和边界。
 - Extension 今天不追新卡。
 
-### Paper A｜续做，不重听
+### Paper A｜本轮结束
 
-打开 [[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end|Climate Paper A 当前记录]]。直接从记录末尾继续：按已有 map 和 paragraph jobs，**40 分钟**写完 200–400 词；随后让同一助教做整篇反馈，最多一次修订。不要重做已经完成的首听、map 或 plan。
+[[99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end|Climate Paper A 记录]]保留已有听力、map、初稿与反馈；后续 Paper A 训练从新的当前记录开始。
 
 ### Paper B｜续做，不换包
 
@@ -91,6 +91,13 @@ topics:
 ### 正式练习后
 
 打开 [[99_学习情况记录/teach/listening-into-writing/learning-records/2026-08-26-week5-practice-paper-a|Week 5 Paper A 校准记录]]，保存原始 notes、完整 summary、实际写作时间和词数。不要先自行改句；把原始版本交给 AI 做整篇诊断，然后最多一次 revision。今天不再开新材料。
+
+### Paper B｜一整套
+
+- **16:50–18:20**：使用 [[99_学习情况记录/teach/reading-into-writing/lessons/2026-08-18-climate-end-to-end-source-pack.pdf|Climate Change 三文包]] 完成 90 分钟整套练习。`0–5` 拆题，`5–22` 读三文并做 map，`22–30` 定 thesis、paragraph jobs 和 evidence route，`30–83` 写全文，`83–90` 补 conclusion 并检查含义。
+- **18:20–18:25**：离开屏幕休息。
+- **18:25–19:00**：保留原始 map 和 essay，写上实际用时与词数；做整篇诊断，然后只修订一次。
+- **19:00–19:30**：Anki 到期卡＋Extension 前 12，到点即停。
 
 ## Day 3｜Thu 27 Aug｜官方 Practice Paper B
 

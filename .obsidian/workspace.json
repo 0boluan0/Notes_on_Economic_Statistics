@@ -13,8 +13,8 @@
             "state": {
               "type": "learning-progress-dashboard-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "learning-progress-dashboard-view"
+              "icon": "sprout",
+              "title": "Learning Progress Dashboard"
             }
           }
         ]
@@ -37,7 +37,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -265,8 +267,8 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "calendar"
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
         ]
@@ -277,6 +279,15 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "media-extended:Open media library": false,
+      "media-extended:Open media quick switcher": false,
+      "obsidian-git:Open Git source control": false,
+      "obsidian-kanban:Create new board": false,
+      "templater-obsidian:Templater": false,
+      "code-space:Open code space dashboard": false,
+      "terminal:Open terminal": false,
+      "learning-progress-dashboard:Learning Progress Dashboard": false,
       "canvas:Create new canvas": false,
       "graph:Open graph view": false,
       "daily-notes:Open today's daily note": false,
@@ -288,6 +299,20 @@
   },
   "active": "30f6502409000f89",
   "lastOpenFiles": [
+    "04_Fragments/韩语 Naver：2023 LSE Pre-sessional 考试摘要线索 - 2026-08-26.md",
+    "04_Fragments/激推し LSE Pre-sessional：第二份 2024 日语亲历记录 - 2026-08-26.md",
+    "04_Fragments/韩语 Brunch：约 2022 年 LSE 五周 Pre-sessional 训练记录 - 2026-08-26.md",
+    "04_Fragments/LSE语言班五周分享（LLM版）：约 2023 年考试回忆 - 2026-08-26.md",
+    "04_Fragments/LN905 Standard 5-week intensive English for Academic Purposes（2025-26 官方课纲） - 2026-08-26.md",
+    "04_Fragments/LSE语言班经验帖：2023 课程主题线索 - 2026-08-26.md",
+    "04_Fragments/25 Fall LSE最全语言班攻略（一）：2024 周主题 - 2026-08-26.md",
+    "04_Fragments/LSE大学院記：2024 Pre-sessional 亲历记录 - 2026-08-26.md",
+    "04_Fragments/2025 LSE语言班亲历：新制考试结构 - 2026-08-26.md",
+    "04_Fragments/25 Fall LSE最全语言班攻略（二）：2024 期末结构 - 2026-08-26.md",
+    "04_Fragments/LSE 传媒专业解析中的语言班旧制考试传闻 - 2026-08-26.md",
+    "04_Fragments/LSE语言班考核与学习内容（二）：旧制 Paper A B C 结构 - 2026-08-26.md",
+    "output/pdf/LN905_Paper_B_Climate_Change_Simulation.pdf",
+    "99_学习情况记录/teach/reading-into-writing/lessons/lse-logo.jpg",
     "07_Programme/02_LSE_MSc_Data_Science/01_全球多语种评价检索.md",
     "07_Programme/02_LSE_MSc_Data_Science/00_课程总览.md",
     "07_Programme/02_LSE_MSc_Data_Science",
@@ -300,7 +325,6 @@
     "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-5-Review",
     "99_学习情况记录/2026-08-26——Wed.md",
     "output/pdf/LN905_Paper_A_B_Pocket_Booklet.pdf",
-    "final_surface_terms_tmp.txt",
     "99_学习情况记录/2026-08-25——Tue.md",
     "99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b.md",
     "99_学习情况记录/teach/listening-into-writing/learning-records/2026-08-26-week5-practice-paper-a.md",
@@ -312,19 +336,7 @@
     "99_学习情况记录/teach/listening-into-writing/LN905 四主题随手听清单.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C08 - in-this-context-X-refers-to-features-it-persists-mainly-because-A-and-B.md",
     "99_学习情况记录/teach/LN905 Skill Bank/Cards/PA-03-C04 - the-speaker-cites-evidence-type-to-support-the-claim-that-X.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C07 - X-occurs-mainly-because-A-and-B-addressing-it-requires-C-and-D.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C06 - governments-should-respond-to-X-through-A-and-B.md",
-    "99_学习情况记录/archive/daily/2026-W34/2026-08-22——Sat.md",
-    "99_学习情况记录/archive/daily/2026-W34/2026-08-21——Fri.md",
-    "99_学习情况记录/archive/daily/2026-W34/2026-08-20——Thu.md",
-    "99_学习情况记录/archive/daily/2026-W34/2026-08-19——Wed.md",
-    "99_学习情况记录/archive/daily/2026-W34/2026-08-18——Tue.md",
-    "99_学习情况记录/archive/daily/2026-W34/2026-08-17——Mon.md",
-    "99_学习情况记录/week-review/2026-W34.md",
-    "99_学习情况记录/2026-08-24——Mon.md",
     "98_attachment/Pasted image 20260823103347.png",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-essay.md",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-credit-scoring-draft.md",
     "98_attachment/Pasted image 20260822145206.png",
     "tmp/pdfs/final-4.png",
     "tmp/pdfs/final-3.png",
@@ -333,7 +345,6 @@
     "tmp/pdfs/check-3.png",
     "98_attachment/Pasted image 20260819151621.png",
     "98_attachment/Pasted image 20260819151130.png",
-    "98_attachment/Pasted image 20260819150507.png",
     "03_Computer_Science/01_CS50/CS50 Course Atlas.canvas",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",

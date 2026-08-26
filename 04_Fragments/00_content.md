@@ -10,18 +10,51 @@ created_by: "fragments"
 # Fragments
 
 > [!summary] 导航
-> 共 16 篇 fragment。按来源类型分组，摘要取自 `## 一句话总结`。
+> 共 29 篇 fragment。按来源类型分组，摘要取自 `## 一句话总结`。
+
+> [!warning] 待补信息
+
+> - [[LSE 传媒专业解析中的语言班旧制考试传闻 - 2026-08-26|LSE 传媒专业解析中的语言班旧制考试传闻]]：source_author
+> - [[超级专注力课程|专注力基础]]：source_type, source_author, 一句话总结
+
+## article
+
+| 标题 | 作者/频道 | 日期 | 标签 | 一句话总结 |
+|---|---|---|---|---|
+| [[LSE 传媒专业解析中的语言班旧制考试传闻 - 2026-08-26\|LSE 传媒专业解析中的语言班旧制考试传闻]] | 未标注 | 2019 | source/article, course/ln905, evidence/rumor | 一篇约 2019 年的中文二手文章声称五周班第四周 mock 使用上一年 final paper，是目前最关键但尚未证实的“旧题复用”线索。 |
+| [[LSE大学院記：2024 Pre-sessional 亲历记录 - 2026-08-26\|LSE大学院記：2024 Pre-sessional 亲历记录]] | Tamaki | 2024-09-05 | source/article, course/ln905 | 2024 年五周班学生记录了 Higher Education、Gender、Demography 等周主题，以及三篇短文综合写作、2000 字论文和 final test。 |
+| [[激推し LSE Pre-sessional：第二份 2024 日语亲历记录 - 2026-08-26\|激推し LSE Pre-sessional：第二份 2024 日语亲历记录]] | Miki Kamiya | 2024-12-12 | source/article, course/ln905, language/japanese | 另一位 2024 学员独立列出 Education、SNS、Gender、Demography 四个周主题，并确认最后提交 2000 词 essay。 |
+| [[韩语 Brunch：约 2022 年 LSE 五周 Pre-sessional 训练记录 - 2026-08-26\|韩语 Brunch：约 2022 年 LSE 五周 Pre-sessional 训练记录]] | 도망친 곳의 낙원 | 2022-09-19 | source/article, course/ln905, language/korean | 韩语亲历者记录了每周阅读三篇 20 页以上论文、周五一小时手写约 600 词 timed writing 的旧制训练强度。 |
+| [[韩语 Naver：2023 LSE Pre-sessional 考试摘要线索 - 2026-08-26\|韩语 Naver：2023 LSE Pre-sessional 考试摘要线索]] | say international | 2023-09-06 | source/article, course/ln905, language/korean, evidence/index-only | Naver 索引中的 2023 帖子称考试要求用提前一周学习的论文和听力材料准确引用来支撑论证，但正文访问受平台限制。 |
 
 ## note
 
 | 标题 | 作者/频道 | 日期 | 标签 | 一句话总结 |
 |---|---|---|---|---|
-| [[Learning method\|学习方法]] | 自写整理 | 2026-07-09 | source/note, learning/method, knowledge-management | 这篇笔记把学习拆成“能做、能长期记住、能迁移”三层目标，并用工作记忆、长期记忆和主动调用解释学习失败与训练流程。 |
+| [[Learning method\|学习方法]] | 自写整理 | 2026-07-09 | source/note, learning/method, knowledge-management | 这篇笔记把学习拆成“能做、能长期记住、能迁移”三层目标，并用工作记忆、长期记忆和主动调用来解释为什么学习会失败，以及如何把知识整理成可复用结构。 |
+
+## thread
+
+| 标题 | 作者/频道 | 日期 | 标签 | 一句话总结 |
+|---|---|---|---|---|
+| [[2025 LSE语言班亲历：新制考试结构 - 2026-08-26\|2025 LSE语言班亲历：新制考试结构]] | 空天咕咕鸡 | 2025-09-03 | source/thread, course/ln905, platform/xiaohongshu | 2025 届亲历者确认了当前新制：20 多分钟教授 lecture 摘要、三人固定题讨论、三篇论文两小时完成 600 字以上综合写作。 |
+| [[25 Fall LSE最全语言班攻略（一）：2024 周主题 - 2026-08-26\|25 Fall LSE最全语言班攻略（一）：2024 周主题]] | 江心秋月白 | 2025-03-04 | source/thread, course/ln905, platform/xiaohongshu | 作者明确回忆 2024 四个周主题为 Education、Social Media、Gender、Demography，并称它们成为期末口语题库。 |
+| [[25 Fall LSE最全语言班攻略（二）：2024 期末结构 - 2026-08-26\|25 Fall LSE最全语言班攻略（二）：2024 期末结构]] | 江心秋月白 | 2025-03-05 | source/thread, course/ln905, platform/xiaohongshu | 2024 期末约分两天完成；Listening Summary 和 Reading into Writing 使用全新主题，口语则从课堂主题抽取。 |
+| [[LSE语言班五周分享（LLM版）：约 2023 年考试回忆 - 2026-08-26\|LSE语言班五周分享（LLM版）：约 2023 年考试回忆]] | MillerH | 2024-01-18 | source/thread, course/ln905, platform/xiaohongshu | 一位 LLM 学生回忆每周主题阅读、500 字限时写作，以及三天完成听说读写考试的旧制流程。 |
+| [[LSE语言班经验帖：2023 课程主题线索 - 2026-08-26\|LSE语言班经验帖：2023 课程主题线索]] | Lindsey | 2024-10-31 | source/thread, course/ln905, platform/xiaohongshu | 该帖截图给出 2023 课程主题 Social Media、Gender、AI、Population，并说明口语从周主题随机抽取。 |
+| [[LSE语言班考核与学习内容（二）：旧制 Paper A B C 结构 - 2026-08-26\|LSE语言班考核与学习内容（二）：旧制 Paper A B C 结构]] | Sophia | 2024-06-28 | source/thread, course/ln905, platform/xiaohongshu | Sophia 的 2024 帖子详细记录了旧制 Paper A/B/C，但更像 2023 或更早格式，不能直接套到 2026。 |
+
+## unknown
+
+| 标题 | 作者/频道 | 日期 | 标签 | 一句话总结 |
+|---|---|---|---|---|
+| [[超级专注力课程\|专注力基础]] | 未标注 | 未标注 | 未标注 | 暂无一句话总结。 |
 
 ## web
 
 | 标题 | 作者/频道 | 日期 | 标签 | 一句话总结 |
 |---|---|---|---|---|
+| [[LN905 Standard 5-week intensive English for Academic Purposes（2025-26 官方课纲） - 2026-08-26\|LN905 Standard 5-week intensive English for Academic Purposes（2025/26 官方课纲）]] | London School of Economics and Political Science | 2026-08-26 | source/web, course/ln905 | LSE 官方只公开考核类别，没有公开往年试题或具体主题。 |
 | [[Textream - 2026-04-20\|Textream]] | Fatih Kadir Akin | 2026-04-20 | source/web, tool/teleprompter, macos/app, creator/workflow | Textream 是一个免费、开源的 macOS 提词器应用，把脚本以 Dynamic Island 风格提示层、浮窗、全屏或 Sidecar iPad 的形式放在说话者视线附近，并通过实时语音跟踪、经典自动滚动、语音触发滚动来减少直播、访谈、演讲、播客录制时的视线偏移和流程中断。 |
 
 ## youtube
@@ -42,3 +75,4 @@ created_by: "fragments"
 | [[The Future Of Work (& The New High-Income Skill Stack) - 2026-03-28\|The Future Of Work (& The New High-Income Skill Stack)]] | Dan Koe | 2026-02-12 | source/youtube, creator/dan-koe, work/future-of-work, ai/meaning | 这支视频的核心不是“AI 会抢走工作”这种常规讨论，而是更进一步地说：当信息和执行越来越便宜，真正稀缺的会变成意义、判断、品味和能把人组织到某个方向上的能力；Dan Koe 把这套新价值结构压缩成一个层级式技能栈：agency、taste、perspective、persuasion、technical know-how。 |
 | [[The Most Important Skill To Learn Right Now - 2026-03-28\|The Most Important Skill To Learn Right Now]] | Dan Koe | 2025-12-21 | source/youtube, creator/dan-koe, mindset/agency, ai/adaptation | Dan Koe 在这支视频里把“agency”提升为未来最重要的元技能：真正决定你能否适应 AI 和变化世界的，不是某项具体技术，而是你能否在没有外部许可的情况下反复试错、把人生当实验、主动脱离默认路径，并借助 AI 与互联网放大这种能力。 |
 | [[The top 1% Think on Paper. Here’s How To Do It - 2026-05-05\|The top 1% Think on Paper. Here’s How To Do It.]] | Justin Sung and iCanStudy | 2026-02-14 | source/youtube, learning/study, method/note-taking, learning/self-regulated-learning | Justin Sung 把“think on paper”讲成一种学习与理解方法：不要把信息、关系和疑问都塞在脑子里，而是先把关键词与关系外化到纸面，再用“先允许错、再压缩、再重组”的循环，把混乱的信息加工成更稳定的理解。 |
+

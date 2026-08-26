@@ -1,36 +1,60 @@
-\documentclass[10pt,a4paper]{article}
-\usepackage[margin=18mm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\documentclass[11pt,a4paper]{article}
+\usepackage[left=25mm,right=25mm,top=14mm,bottom=16mm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Arial}
+\usepackage{graphicx}
 \usepackage{microtype}
 \usepackage[hidelinks]{hyperref}
-\usepackage{parskip}
+\usepackage{mdframed}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{1pt plus 0.5pt minus 0.5pt}
-\pagestyle{plain}
+\setlength{\parskip}{7pt plus 1pt minus 1pt}
+\linespread{1.38}
+\pagestyle{empty}
+\raggedbottom
+\setlength{\emergencystretch}{2em}
 
 \newcommand{\sourceheading}[2]{%
-  \section*{#1}
-  \textbf{#2}\par\medskip
+  {\large\bfseries #1:}\par
+  \vspace{5mm}
+  \begin{center}
+    \bfseries #2
+  \end{center}
+  \vspace{4mm}
 }
+
+\newcommand{\lseheader}{%
+  \noindent\includegraphics[width=58mm]{lse-logo.jpg}\par
+  \vspace{1mm}
+}
+
+\newmdenv[
+  linewidth=0.5pt,
+  linecolor=black,
+  backgroundcolor=white,
+  skipabove=2mm,
+  skipbelow=0pt,
+  innerleftmargin=2.5mm,
+  innerrightmargin=2.5mm,
+  innertopmargin=0mm,
+  innerbottommargin=2mm,
+  splittopskip=2mm,
+  splitbottomskip=2mm
+]{extractbox}
 
 \begin{document}
 
+\lseheader
+
 \begin{center}
-  {\Large\bfseries LN905 Reading into Writing Practice}\par
-  \vspace{4pt}
-  {\large Climate Change - End-to-End Paper B Unit}
+  {\Large\bfseries Reading into Writing - Climate Change}\par
+  \vspace{4mm}
+  {\large\bfseries To what extent can adaptation prevent climate change from widening global inequality?}\par
+  \vspace{2mm}
+  Write an essay of approximately 600 words, using information and ideas from all three extracts.
 \end{center}
 
-\section*{Question}
-
-\textbf{To what extent can adaptation prevent climate change from widening global inequality?}
-
-Write an essay of approximately 600 words. Use all three extracts to develop your own qualified answer. The extracts are exam-style adaptations of the cited academic papers. Their wording has been condensed and paraphrased while preserving the studies' central claims, evidence and limitations.
-
-\newpage
-
-\sourceheading{Extract 1}{Adapted from Diffenbaugh and Burke (2019), ``Global Warming Has Increased Global Economic Inequality''}
+\begin{extractbox}
+\sourceheading{Extract One}{Adapted from: Diffenbaugh, N. S., and Burke, M. (2019). ``Global Warming Has Increased Global Economic Inequality.'' \textit{Proceedings of the National Academy of Sciences, 116}(20), 9808-9813.}
 
 Economic inequality between countries has declined over recent decades, but this overall trend does not reveal whether climate change altered the speed or distribution of that convergence. Diffenbaugh and Burke investigate whether anthropogenic warming changed national economic growth between 1961 and 2010. Their question is historical and counterfactual: how different would countries' output have been if human activity had not raised temperatures?
 
@@ -48,11 +72,13 @@ The authors test alternative climate-model simulations, economic specifications 
 
 The study supports a strong claim about the likely direction of historical between-country inequality, but its exact magnitudes remain model-dependent. The economic response function is estimated from historical temperature variation and aggregate national output; it cannot identify every pathway through agriculture, health or labour productivity, and it does not measure inequality within countries. Some temperate countries also have uncertain effects. The analysis shows that warming probably widened international economic gaps; it does not establish that adaptation policies alone can reverse those accumulated losses.
 
-{\itshape Source: Proceedings of the National Academy of Sciences, 116(20), 9808-9813.\par DOI: \href{https://doi.org/10.1073/pnas.1816020116}{10.1073/pnas.1816020116}.}
+\end{extractbox}
 
-\newpage
+\clearpage
+\lseheader
 
-\sourceheading{Extract 2}{Adapted from Carleton et al. (2022), ``Valuing the Global Mortality Consequences of Climate Change Accounting for Adaptation Costs and Benefits''}
+\begin{extractbox}
+\sourceheading{Extract Two}{Adapted from: Carleton, T. et al. (2022). ``Valuing the Global Mortality Consequences of Climate Change Accounting for Adaptation Costs and Benefits.'' \textit{Quarterly Journal of Economics, 137}(4), 2037-2105.}
 
 Carleton and colleagues examine one important channel through which climate change may create unequal losses: temperature-related mortality. They aim to combine the global scale of long-run climate models with the empirical detail of local mortality data. Their dataset contains annual subnational mortality statistics from forty countries covering 38\% of the world's population. The analysis estimates age-specific relationships between daily temperature and death rates, then allows those relationships to vary with long-run climate and income. The resulting model is used to project outcomes for 24,378 regions under alternative climate and socioeconomic scenarios.
 
@@ -68,11 +94,13 @@ To include those costs, the authors infer adaptation expenditure from observed d
 
 Several limits matter for using this evidence. Future mortality depends on emissions, income, demographics and technologies that cannot be known with certainty. The observed relationship between income or long-run climate and mortality sensitivity is cross-sectional, so the authors treat it as associational rather than definitively causal. Their cost model also assumes optimizing agents and relatively frictionless markets. Finally, mortality is only one consequence of climate change; storms, conflict, migration and many other outcomes are outside this partial calculation. The findings nevertheless indicate that adaptation can greatly reduce harm while leaving large, uneven residual risks.
 
-{\itshape Source: Quarterly Journal of Economics, 137(4), 2037-2105.\par DOI: \href{https://doi.org/10.1093/qje/qjac020}{10.1093/qje/qjac020}.}
+\end{extractbox}
 
-\newpage
+\clearpage
+\lseheader
 
-\sourceheading{Extract 3}{Adapted from Berrang-Ford et al. (2021), ``A Systematic Global Stocktake of Evidence on Human Adaptation to Climate Change''}
+\begin{extractbox}
+\sourceheading{Extract Three}{Adapted from: Berrang-Ford, L. et al. (2021). ``A Systematic Global Stocktake of Evidence on Human Adaptation to Climate Change.'' \textit{Nature Climate Change, 11}, 989-1000.}
 
 Research frequently models what adaptation could achieve, but policy also depends on what governments, firms, communities and households have actually implemented. Berrang-Ford and a large international team review empirical studies of observed human responses to climate change. Machine-learning methods were used to screen 48,816 peer-reviewed articles published between 2013 and 2019. A network of 126 researchers then coded the 1,682 articles that met the inclusion criteria, asking who was responding, which hazards motivated action, what form the response took, whether it reduced climate risk and whether it was transformational.
 
@@ -88,6 +116,6 @@ Scale and coordination are therefore central. Local experiments may offer protec
 
 The review also has important boundaries. It maps what peer-reviewed studies document, not every adaptation occurring in the world. Activities that are unpublished, described in non-English or non-academic sources, or difficult to observe may be underrepresented. Publication counts do not measure investment or effectiveness, and the scarcity of risk-reduction evidence does not prove that adaptation has failed; it may instead reflect weak monitoring and evaluation. Even so, the stocktake challenges the assumption that recognising a risk will naturally produce adaptation at sufficient scale. Preventing climate change from deepening inequality requires not only more responses but evidence that they reduce vulnerability, reach disadvantaged groups and remain effective under greater warming.
 
-{\itshape Source: Nature Climate Change, 11, 989-1000.\par DOI: \href{https://doi.org/10.1038/s41558-021-01170-y}{10.1038/s41558-021-01170-y}.}
+\end{extractbox}
 
 \end{document}

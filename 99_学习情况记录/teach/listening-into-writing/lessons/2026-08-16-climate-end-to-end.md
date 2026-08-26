@@ -7,7 +7,7 @@ tags:
 date: 2026-08-16
 source_type: teach
 topic: Climate Change
-status: ready
+status: cancelled
 assessment: Paper A
 phase: teaching-practice
 source_id: Vl6VhCAeEfQ
@@ -390,5 +390,14 @@ selective repair 后，每轮只给一个约 5–10 分钟的有意义动作：�
 - 本轮唯一下一动作：learner 在原全文上一次性修订并整篇提交，重点修复上述 source fidelity 与 evidence-specific evaluation，同时批量清理两个语言模式；不得逐句发送。
 - continuation decision：收到整篇 revision 后不再要求第二次全文修订；按 completion evidence 判断本 unit 是否完成，允许不影响核心意义的少量语言错误，并写回 Skill Bank / canonical task。
 - 本轮即时提示/观察证据：PA-04 的完整组织与 completion 成立；PA-05 已有评价意图但对象仍泛；AW-15 在 tipping certainty、Amazon scope、1.5°C baseline 与评价强度上仍需 repair；LEX-01 / AW-17 的 `notes / suggests / may` guided use 已整合进入成品。
+
+### 2026-08-26 16:23 BST
+
+- 学习者原始输入：`别搞了,这没啥意义了,这都这会儿了听的内容早都忘完了,现在搞意义不大了.这个就揭过吧`
+- 助教教学/反馈：按 learner 的明确决定立即结束本 unit，不再要求整篇 revision。保留完整首听、map、plan、255 词初稿与 whole-output feedback 作为历史学习证据；不把缺失的 revision 或 task completion 补造为已完成。
+- 当前端到端节点：完整初稿与整篇反馈已产生；learner 在唯一一次整篇 revision 前结束本 unit。
+- 本轮唯一下一动作：无；本记录收口。
+- continuation decision：canonical task 取消，本记录不再进入 Today、Workbench 或冲刺续作；未来如有 Paper A 训练，从新的当前记录开始。
+- 本轮即时提示/观察证据：本轮没有新的技能表现；此前已记录的真实证据继续保留。
 
 <!-- student-os:learning-log:end -->
