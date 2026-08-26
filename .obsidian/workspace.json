@@ -16,8 +16,45 @@
               "icon": "sprout",
               "title": "Learning Progress Dashboard"
             }
+          },
+          {
+            "id": "3012d6a687c063a0",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Sample Essay"
+            }
+          },
+          {
+            "id": "e346d9b58cf9d33a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/PaperB exercise- climate change.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "PaperB exercise- climate change"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -51,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "file:sample",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -158,8 +195,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           },
           {
@@ -203,8 +240,8 @@
                 }
               },
               "pinned": true,
-              "icon": "lucide-ghost",
-              "title": "terminal:terminal"
+              "icon": "terminal",
+              "title": "zsh"
             }
           },
           {
@@ -235,7 +272,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00_inbox/随手记.md",
+                "file": "99_学习情况记录/2026-08-26——Wed.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -250,11 +287,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "随手记"
+              "title": "2026-08-26——Wed"
             }
           }
         ],
-        "currentTab": 9
+        "currentTab": 6
       },
       {
         "id": "b6e2d525de78b465",
@@ -297,24 +334,31 @@
       "bases:Create new base": false
     }
   },
-  "active": "30f6502409000f89",
+  "active": "e346d9b58cf9d33a",
   "lastOpenFiles": [
+    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/LN905 历年考试内容公开线索汇总.md",
+    "04_Fragments/2025 LSE语言班亲历：新制考试结构 - 2026-08-26.md",
+    "04_Fragments/25 Fall LSE最全语言班攻略（二）：2024 期末结构 - 2026-08-26.md",
+    "04_Fragments/25 Fall LSE最全语言班攻略（一）：2024 周主题 - 2026-08-26.md",
+    "07_Programme/02_LSE_MSc_Data_Science/01_全球多语种评价检索.md",
+    "07_Programme/02_LSE_MSc_Data_Science/00_课程总览.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-3-Demographics/Sample Essay.pdf",
+    "tmp/ln905_markitdown/02_Academic-Writing/Week-3-Demographics/Sample Essay - Annotated.md",
+    "tmp/ln905_markitdown/02_Academic-Writing/Week-3-Demographics/Sample Essay.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/PaperB exercise- climate change.md",
+    "99_学习情况记录/2026-08-26——Wed.md",
+    "00_inbox/随手记.md",
     "04_Fragments/韩语 Naver：2023 LSE Pre-sessional 考试摘要线索 - 2026-08-26.md",
     "04_Fragments/激推し LSE Pre-sessional：第二份 2024 日语亲历记录 - 2026-08-26.md",
     "04_Fragments/韩语 Brunch：约 2022 年 LSE 五周 Pre-sessional 训练记录 - 2026-08-26.md",
     "04_Fragments/LSE语言班五周分享（LLM版）：约 2023 年考试回忆 - 2026-08-26.md",
     "04_Fragments/LN905 Standard 5-week intensive English for Academic Purposes（2025-26 官方课纲） - 2026-08-26.md",
     "04_Fragments/LSE语言班经验帖：2023 课程主题线索 - 2026-08-26.md",
-    "04_Fragments/25 Fall LSE最全语言班攻略（一）：2024 周主题 - 2026-08-26.md",
     "04_Fragments/LSE大学院記：2024 Pre-sessional 亲历记录 - 2026-08-26.md",
-    "04_Fragments/2025 LSE语言班亲历：新制考试结构 - 2026-08-26.md",
-    "04_Fragments/25 Fall LSE最全语言班攻略（二）：2024 期末结构 - 2026-08-26.md",
     "04_Fragments/LSE 传媒专业解析中的语言班旧制考试传闻 - 2026-08-26.md",
     "04_Fragments/LSE语言班考核与学习内容（二）：旧制 Paper A B C 结构 - 2026-08-26.md",
     "output/pdf/LN905_Paper_B_Climate_Change_Simulation.pdf",
     "99_学习情况记录/teach/reading-into-writing/lessons/lse-logo.jpg",
-    "07_Programme/02_LSE_MSc_Data_Science/01_全球多语种评价检索.md",
-    "07_Programme/02_LSE_MSc_Data_Science/00_课程总览.md",
     "07_Programme/02_LSE_MSc_Data_Science",
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Assignment Cover Sheet.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-5-Review/Listening into Writing - Feedback from Week Four.pdf",
@@ -323,19 +367,12 @@
     "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/LN905 Assignment Format.pdf",
     "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-5-Review",
     "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-5-Review",
-    "99_学习情况记录/2026-08-26——Wed.md",
-    "output/pdf/LN905_Paper_A_B_Pocket_Booklet.pdf",
     "99_学习情况记录/2026-08-25——Tue.md",
     "99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b.md",
     "99_学习情况记录/teach/listening-into-writing/learning-records/2026-08-26-week5-practice-paper-a.md",
     "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-31-paper-b-dress-rehearsal.md",
     "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-28-paper-b-clean-route.md",
     "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-28-paper-a-clean-route.md",
-    "99_学习情况记录/teach/LN905 7-Day Exam Sprint.md",
-    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-31-paper-a-dress-rehearsal.md",
-    "99_学习情况记录/teach/listening-into-writing/LN905 四主题随手听清单.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C08 - in-this-context-X-refers-to-features-it-persists-mainly-because-A-and-B.md",
-    "99_学习情况记录/teach/LN905 Skill Bank/Cards/PA-03-C04 - the-speaker-cites-evidence-type-to-support-the-claim-that-X.md",
     "98_attachment/Pasted image 20260823103347.png",
     "98_attachment/Pasted image 20260822145206.png",
     "tmp/pdfs/final-4.png",
