@@ -23,7 +23,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "99_学习情况记录/2026-08-25——Tue.md",
+                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/week4reading-into-writing.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -38,29 +38,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-08-25——Tue"
+              "title": "week4reading-into-writing"
             }
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "4422376f4f324202",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "312f584b41c4ea3a",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "output/pdf/LN905_Paper_A_B_Hacking_Manual.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "LN905_Paper_A_B_Hacking_Manual"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -343,6 +325,19 @@
   },
   "active": "ba5b6fb25bb7a1d4",
   "lastOpenFiles": [
+    "output/pdf/LN905_Paper_A_B_Hacking_Manual.pdf",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/week4reading-into-writing.md",
+    "99_学习情况记录/2026-08-26——Wed.md",
+    "99_学习情况记录/学习计划/MIT 18.06 Linear Algebra.md",
+    "99_学习情况记录/学习计划/MIT 6.100L Introduction to CS and Programming Using Python.md",
+    "99_学习情况记录/学习计划/MIT 18.01 Single Variable Calculus.md",
+    "99_学习情况记录/学习计划/LN905 timed submissions.md",
+    "99_学习情况记录/学习计划/LN905 Listening and Reading Practice.md",
+    "99_学习情况记录/teach/academic-writing/lessons/2026-08-17-academic-writing-from-zero.md",
+    "99_学习情况记录/teach/academic-writing/lessons/2026-08-17-credit-scoring-essay-end-to-end.md",
+    "99_学习情况记录/teach/academic-writing/lessons/2026-08-18-credit-scoring-first-draft.md",
+    "99_学习情况记录/teach/academic-writing/MISSION.md",
+    "99_学习情况记录/2026-08-25——Tue.md",
     "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/contact.jpg",
     "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/page-12.png",
     "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/page-11.png",
@@ -353,7 +348,6 @@
     "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/page-06.png",
     "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/page-05.png",
     "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/page-04.png",
-    "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/page-03.png",
     "tmp/pdfs/ln905_pocket_examples_render.5IRvkp",
     "tmp/pdfs/__pycache__/build_ln905_pocket_booklet.cpython-312.pyc",
     "output/pdf/LN905_Paper_A_B_Pocket_Booklet.pdf",
@@ -361,7 +355,6 @@
     "tmp/pdfs/LN905_Paper_A_B_Pocket_Booklet_candidate.pdf",
     "tmp/pdfs/build_ln905_pocket_booklet.py",
     "99_学习情况记录/2026-08-24——Mon.md",
-    "99_学习情况记录/2026-08-25——Tue.md",
     "final_surface_terms_tmp.txt",
     "final_paper_fix_tmp.py",
     "review_refs_terms_tmp.txt",
@@ -378,17 +371,6 @@
     "99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b.md",
     "99_学习情况记录/teach/listening-into-writing/learning-records/2026-08-26-week5-practice-paper-a.md",
     "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-31-paper-b-dress-rehearsal.md",
-    "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-28-paper-b-clean-route.md",
-    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-31-paper-a-dress-rehearsal.md",
-    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-28-paper-a-clean-route.md",
-    "tmp/ln905_markitdown/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change/Feedback for Week Three.md",
-    "tmp/ln905_markitdown/04_Paper-B-Reading-into-Writing/Week-4-Climate-Change/Reading into Writing - Climate Change Extracts.md",
-    "tmp/ln905_markitdown/04_Paper-B-Reading-into-Writing/Week-1-Social-Media/Reading into Writing - Social Media Extracts.md",
-    "tmp/ln905_markitdown/04_Paper-B-Reading-into-Writing/Week-3-Demographics/Demographics Extracts.md",
-    "tmp/ln905_markitdown/04_Paper-B-Reading-into-Writing/Week-3-Demographics/Feedback for Week Two.md",
-    "tmp/ln905_markitdown/03_Paper-A-Listening-into-Writing/Week-1-Social-Media/Instructions for the Social Media Task.md",
-    "tmp/ln905_markitdown/03_Paper-A-Listening-into-Writing/Week-1-Social-Media/Transcript.md",
-    "tmp/ln905_markitdown/03_Paper-A-Listening-into-Writing/Week-1-Social-Media/Sample Summaries Task.md",
     "03_Computer_Science/01_CS50/CS50 Course Atlas.canvas",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",
