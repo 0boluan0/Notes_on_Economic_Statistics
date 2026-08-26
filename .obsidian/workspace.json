@@ -13,36 +13,11 @@
             "state": {
               "type": "learning-progress-dashboard-view",
               "state": {},
-              "icon": "sprout",
-              "title": "Learning Progress Dashboard"
-            }
-          },
-          {
-            "id": "ba5b6fb25bb7a1d4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "07_Programme/01_LN905_LSE-language-class/00_inbox/week4reading-into-writing.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "week4reading-into-writing"
+              "icon": "lucide-ghost",
+              "title": "learning-progress-dashboard-view"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -62,9 +37,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false,
-                "showSearch": false,
-                "searchQuery": ""
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -76,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "file:format",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -91,7 +64,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 293.4375114440918
+    "width": 242.02500534057617
   },
   "right": {
     "id": "e65120feb84dace3",
@@ -183,8 +156,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "插件不再活动"
+              "icon": "lucide-ghost",
+              "title": "git-view"
             }
           },
           {
@@ -228,8 +201,8 @@
                 }
               },
               "pinned": true,
-              "icon": "terminal",
-              "title": "zsh"
+              "icon": "lucide-ghost",
+              "title": "terminal:terminal"
             }
           },
           {
@@ -250,8 +223,8 @@
             "state": {
               "type": "code-space-outline",
               "state": {},
-              "icon": "code",
-              "title": "Code outline"
+              "icon": "lucide-ghost",
+              "title": "code-space-outline"
             }
           },
           {
@@ -292,85 +265,75 @@
             "state": {
               "type": "calendar",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "lucide-ghost",
+              "title": "calendar"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 633.8499755859375,
-    "collapsed": true
+    "width": 633.8499755859375
   },
   "left-ribbon": {
     "hiddenItems": {
-      "media-extended:Open media library": false,
-      "media-extended:Open media quick switcher": false,
-      "code-space:Open code space dashboard": false,
-      "terminal:Open terminal": false,
-      "learning-progress-dashboard:Learning Progress Dashboard": false,
       "canvas:Create new canvas": false,
       "graph:Open graph view": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "workspaces:Manage workspace layouts": false,
-      "bases:Create new base": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian-kanban:Create new board": false,
-      "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false
+      "bases:Create new base": false
     }
   },
-  "active": "ba5b6fb25bb7a1d4",
+  "active": "30f6502409000f89",
   "lastOpenFiles": [
-    "output/pdf/LN905_Paper_A_B_Hacking_Manual.pdf",
-    "07_Programme/01_LN905_LSE-language-class/00_inbox/week4reading-into-writing.md",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/Assignment Cover Sheet.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-5-Review/Listening into Writing - Feedback from Week Four.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-5-Review/Paper A Week 4 Feedback.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-5-Review/Feedback for Week Four.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/02_Academic-Writing/Week-5/LN905 Assignment Format.pdf",
+    "07_Programme/01_LN905_LSE-language-class/PDF/03_Paper-A-Listening-into-Writing/Week-5-Review",
+    "07_Programme/01_LN905_LSE-language-class/PDF/04_Paper-B-Reading-into-Writing/Week-5-Review",
     "99_学习情况记录/2026-08-26——Wed.md",
-    "99_学习情况记录/学习计划/MIT 18.06 Linear Algebra.md",
-    "99_学习情况记录/学习计划/MIT 6.100L Introduction to CS and Programming Using Python.md",
-    "99_学习情况记录/学习计划/MIT 18.01 Single Variable Calculus.md",
-    "99_学习情况记录/学习计划/LN905 timed submissions.md",
-    "99_学习情况记录/学习计划/LN905 Listening and Reading Practice.md",
-    "99_学习情况记录/teach/academic-writing/lessons/2026-08-17-academic-writing-from-zero.md",
-    "99_学习情况记录/teach/academic-writing/lessons/2026-08-17-credit-scoring-essay-end-to-end.md",
-    "99_学习情况记录/teach/academic-writing/lessons/2026-08-18-credit-scoring-first-draft.md",
-    "99_学习情况记录/teach/academic-writing/MISSION.md",
-    "99_学习情况记录/2026-08-25——Tue.md",
-    "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/contact.jpg",
-    "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/page-12.png",
-    "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/page-11.png",
-    "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/page-10.png",
-    "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/page-09.png",
-    "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/page-08.png",
-    "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/page-07.png",
-    "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/page-06.png",
-    "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/page-05.png",
-    "tmp/pdfs/ln905_pocket_examples_render.5IRvkp/page-04.png",
-    "tmp/pdfs/ln905_pocket_examples_render.5IRvkp",
-    "tmp/pdfs/__pycache__/build_ln905_pocket_booklet.cpython-312.pyc",
     "output/pdf/LN905_Paper_A_B_Pocket_Booklet.pdf",
-    "tmp/pdfs/ln905_pocket_render.lEBsim",
-    "tmp/pdfs/LN905_Paper_A_B_Pocket_Booklet_candidate.pdf",
-    "tmp/pdfs/build_ln905_pocket_booklet.py",
-    "99_学习情况记录/2026-08-24——Mon.md",
     "final_surface_terms_tmp.txt",
     "final_paper_fix_tmp.py",
     "review_refs_terms_tmp.txt",
-    "review_refs_tmp.py",
-    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-16-climate-end-to-end.md",
-    "99_学习情况记录/teach/LN905 7-Day Exam Sprint.md",
-    "07_Programme/01_LN905_LSE-language-class/02_LN905_essay/LN905 Essay.md",
-    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/04_Academic Writing.md",
-    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/03_Reading into Writing.md",
-    "07_Programme/01_LN905_LSE-language-class/01_LN905_note/01_Listening into Writing.md",
-    "07_Programme/01_LN905_LSE-language-class/Archive/Previous-Notes/2026-08-04/02_LN905_essay/Week1-Academic-Writing-moodle.md",
-    "07_Programme/01_LN905_LSE-language-class/LN905 PDF Contents.md",
-    "00_inbox/随手记.md",
+    "99_学习情况记录/2026-08-25——Tue.md",
     "99_学习情况记录/teach/reading-into-writing/learning-records/2026-08-27-week5-practice-paper-b.md",
     "99_学习情况记录/teach/listening-into-writing/learning-records/2026-08-26-week5-practice-paper-a.md",
     "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-31-paper-b-dress-rehearsal.md",
+    "99_学习情况记录/teach/reading-into-writing/lessons/2026-08-28-paper-b-clean-route.md",
+    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-28-paper-a-clean-route.md",
+    "99_学习情况记录/teach/LN905 7-Day Exam Sprint.md",
+    "99_学习情况记录/teach/listening-into-writing/lessons/2026-08-31-paper-a-dress-rehearsal.md",
+    "99_学习情况记录/teach/listening-into-writing/LN905 四主题随手听清单.md",
+    "99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C08 - in-this-context-X-refers-to-features-it-persists-mainly-because-A-and-B.md",
+    "99_学习情况记录/teach/LN905 Skill Bank/Cards/PA-03-C04 - the-speaker-cites-evidence-type-to-support-the-claim-that-X.md",
+    "99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C07 - X-occurs-mainly-because-A-and-B-addressing-it-requires-C-and-D.md",
+    "99_学习情况记录/teach/LN905 Skill Bank/Cards/AW-02-C06 - governments-should-respond-to-X-through-A-and-B.md",
+    "99_学习情况记录/archive/daily/2026-W34/2026-08-22——Sat.md",
+    "99_学习情况记录/archive/daily/2026-W34/2026-08-21——Fri.md",
+    "99_学习情况记录/archive/daily/2026-W34/2026-08-20——Thu.md",
+    "99_学习情况记录/archive/daily/2026-W34/2026-08-19——Wed.md",
+    "99_学习情况记录/archive/daily/2026-W34/2026-08-18——Tue.md",
+    "99_学习情况记录/archive/daily/2026-W34/2026-08-17——Mon.md",
+    "99_学习情况记录/week-review/2026-W34.md",
+    "99_学习情况记录/2026-08-24——Mon.md",
+    "98_attachment/Pasted image 20260823103347.png",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-essay.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-credit-scoring-draft.md",
+    "07_Programme/01_LN905_LSE-language-class/00_inbox/LN905-credit-scoring-reconstructed-draft.md",
+    "98_attachment/Pasted image 20260822145206.png",
+    "tmp/pdfs/final-4.png",
+    "tmp/pdfs/final-3.png",
+    "tmp/pdfs/final-2.png",
+    "tmp/pdfs/final-1.png",
+    "tmp/pdfs/check-3.png",
+    "98_attachment/Pasted image 20260819151621.png",
+    "98_attachment/Pasted image 20260819151130.png",
+    "98_attachment/Pasted image 20260819150507.png",
     "03_Computer_Science/01_CS50/CS50 Course Atlas.canvas",
     "01_Math/01_calculus/单变量微积分 Course Atlas.canvas",
     "02_Economy/01_Econometrics/计量经济学 Course Atlas.canvas",
